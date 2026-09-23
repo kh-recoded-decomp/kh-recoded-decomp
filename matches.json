@@ -96,6 +96,29 @@
         "source": "src/calls/func_0202716c.c",
         "license": "CC0-1.0"
       }
+    },
+    {
+      "name": "ModelAnimation_BlendJointScale",
+      "behavior": "Smooths a model joint's changing size between animation frames and across a looping animation boundary.",
+      "evidence": "Interpolates paired scale values using fractional frame time; the animation loop flag selects the first key after the final frame.",
+      "uncertainty": "Shared model-animation code. Callers have not yet established which characters, enemies, or scenery use this copy.",
+      "domain": "model_animation",
+      "origin": "recovered Nitro G3D middleware C",
+      "understanding": "subsystem",
+      "module": "arm9",
+      "symbol": "func_020395a8",
+      "language": "c",
+      "source": "src/arm9/model_animation/ModelAnimation_BlendJointScale_020395a8.c",
+      "source_symbol": "ModelAnimation_BlendJointScale_020395a8",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {},
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/calls/func_0202716c.c",
+        "license": "CC0-1.0"
+      }
     }
   ]
 }
