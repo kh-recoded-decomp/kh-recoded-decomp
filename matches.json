@@ -27,6 +27,29 @@
         "source": "src/calls/func_02027300.c",
         "license": "CC0-1.0"
       }
+    },
+    {
+      "name": "ModelAnimation_SampleJointScale",
+      "behavior": "Samples how much a model joint grows or shrinks at an animation frame, together with its inverse scale.",
+      "evidence": "Track flags select full, half, or quarter-rate scale keyframes and 16-bit or 32-bit paired values. Missing frames are interpolated.",
+      "uncertainty": "Shared model-animation code. Callers have not yet established which characters, enemies, or scenery use this copy.",
+      "domain": "model_animation",
+      "origin": "recovered Nitro G3D middleware C",
+      "understanding": "subsystem",
+      "module": "arm9",
+      "symbol": "func_0201b758",
+      "language": "c",
+      "source": "src/arm9/model_animation/ModelAnimation_SampleJointScale_0201b758.c",
+      "source_symbol": "ModelAnimation_SampleJointScale_0201b758",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {},
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/auto/func_02026f84.c",
+        "license": "CC0-1.0"
+      }
     }
   ]
 }
