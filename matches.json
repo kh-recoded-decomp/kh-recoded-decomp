@@ -165,6 +165,29 @@
         "source": "src/calls/func_02026e28.c",
         "license": "CC0-1.0"
       }
+    },
+    {
+      "name": "ModelAnimation_SampleJointTranslation",
+      "behavior": "Samples one direction of a model joint's movement, filling gaps between stored animation keyframes.",
+      "evidence": "Reads a scalar translation track with full, half, or quarter-rate key spacing and 16-bit or 32-bit values.",
+      "uncertainty": "Shared model-animation code. Callers have not yet established which characters, enemies, or scenery use this copy.",
+      "domain": "model_animation",
+      "origin": "recovered Nitro G3D middleware C",
+      "understanding": "subsystem",
+      "module": "arm9",
+      "symbol": "func_0201b4b4",
+      "language": "c",
+      "source": "src/arm9/model_animation/ModelAnimation_SampleJointTranslation_0201b4b4.c",
+      "source_symbol": "ModelAnimation_SampleJointTranslation_0201b4b4",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {},
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/auto/func_02026cd0.c",
+        "license": "CC0-1.0"
+      }
     }
   ]
 }
