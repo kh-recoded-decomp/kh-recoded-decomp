@@ -45,8 +45,8 @@ each time. `khrecoded.cmd` is a Windows shortcut for the Python command.
 | `strict` | `full` plus `dsd check modules --fail` when linked module binaries exist | Yes |
 
 Run `python tools/khrecoded.py check --profile strict`. If there are no linked
-source modules yet, the final `dsd` step is reported as unavailable rather than
-misreported as a pass. `build` repacks the extracted baseline into
+source modules yet, the strict gate exits with an error explaining that it is unavailable. It does
+not report a complete source build as passing. `build` repacks the extracted baseline into
 `build/bk9e/rebuilt.nds` and verifies exact equality.
 
 ## Progress and correctness
@@ -60,6 +60,8 @@ not as decompiled code.
 
 Only a function compiled from an authored file during the progress command and
 byte-matched against the appropriate extracted module contributes C/C++ bytes.
+All 109 reference binaries are independently pinned by SHA-256, so modified
+extracted bytes cannot silently become a new matching target.
 Shared middleware recovered as C is included, with its origin recorded.
 Original SDK binaries and assembly add no C coverage. `matches.json` records
 fixed compiler settings, linker bindings, and human-readable explanations.
@@ -72,6 +74,14 @@ The `dsd` repack initially differs at header offsets `0x6C–0x6D` and
 `0x15E–0x15F`. The build script checks that **only** those four header bytes
 changed, restores them from the exact-hash input ROM, and compares every byte
 of the 256 MiB result. Any other difference fails the build.
+
+## Connected Ghidra analysis
+
+A persistent project imports the function boundaries, ARM/Thumb modes, named
+overlay address spaces, cross-references, and reviewed gameplay types. The first
+connected investigation follows actor model transparency and related script
+commands. See [analysis/README.md](analysis/README.md) for the project, evidence,
+shared types, and next leads.
 
 ## Scope and future versions
 

@@ -371,18 +371,18 @@
       }
     },
     {
-      "name": "classifyPackedShapeFlags",
-      "behavior": "Maps two packed two-bit end codes to a shape flag.",
-      "evidence": "Switches on masked bits 31..30 and 15..14 and returns one of four constants.",
-      "uncertainty": "The wider caller meaning of the returned shape flags is unknown.",
-      "domain": "geometry",
+      "name": "Sprite_GetHeightFromOamAttributes",
+      "behavior": "Returns the pixel height of a sprite, such as a menu icon, from its stored shape and size settings.",
+      "evidence": "All 12 OAM shape/size cases agree with NNSi_objSizeHTbl in khdays-decomp/libs/nns/g2d/auto/g2d_oam_size_tables.c.",
+      "uncertainty": "The height calculation is established; specific icons or characters using this helper have not been traced.",
+      "domain": "sprites",
       "origin": "recovered shared engine/middleware C",
       "understanding": "subsystem",
       "module": "arm9",
       "symbol": "func_0204e0a4",
       "language": "c",
-      "source": "src/arm9/geometry/classifyPackedShapeFlags_0204e0a4.c",
-      "source_symbol": "classifyPackedShapeFlags_0204e0a4",
+      "source": "src/arm9/sprites/Sprite_GetHeightFromOamAttributes_0204e0a4.c",
+      "source_symbol": "Sprite_GetHeightFromOamAttributes_0204e0a4",
       "compiler": "mwccarm-4.0-1036",
       "mode": "arm",
       "bindings": {},
@@ -466,6 +466,3229 @@
         "project": "Yokimitsuro/khdays-decomp",
         "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
         "source": "src/calls/func_0202accc.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "FixedPointAtan2",
+      "behavior": "Computes a fixed-point direction angle with 0 along the positive horizontal component and a quarter-turn along positive vertical; angles use 1/65536-turn units.",
+      "evidence": "Axis special cases and quadrant branches in src/calls/FX_Atan2.c establish the zero and quarter-turn directions.",
+      "uncertainty": "Caller-specific coordinate convention is not established.",
+      "domain": "Fixed-point math",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "arm9",
+      "symbol": "func_020062bc",
+      "language": "c",
+      "source": "src/arm9/fixed_point_math/FixedPointAtan2_020062bc.c",
+      "source_symbol": "FixedPointAtan2_020062bc",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "FX_Inv": "0x1ff9c84",
+        "atan_lookup_table": "0x20527f0"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/calls/FX_Atan2.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "QuaternionToRotationMatrix",
+      "behavior": "Converts a fixed-point quaternion into a 3x3 rotation matrix.",
+      "evidence": "Source implementation directly performs the described operations; see src/calls/func_0202ec2c.c.",
+      "uncertainty": "No material uncertainty for the stated operation; game-specific use may depend on callers.",
+      "domain": "Runtime data utilities",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "arm9",
+      "symbol": "func_0202f808",
+      "language": "c",
+      "source": "src/arm9/runtime_data_utilities/QuaternionToRotationMatrix_0202f808.c",
+      "source_symbol": "QuaternionToRotationMatrix_0202f808",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {},
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/calls/func_0202ec2c.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "SetupSubScreenForMovie",
+      "behavior": "Configures the lower screen graphics engine and layers for movie playback.",
+      "evidence": "Source implementation directly performs the described operations; see src/overlays/ov024/calls/func_ov024_02083f44.c.",
+      "uncertainty": "No material uncertainty for the stated operation; game-specific use may depend on callers.",
+      "domain": "Video playback",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "ov022",
+      "symbol": "func_ov022_020a7c58",
+      "language": "c",
+      "source": "src/ov022/video_playback/SetupSubScreenForMovie_020a7c58.c",
+      "source_symbol": "SetupSubScreenForMovie_020a7c58",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "GX_SetBankForSubBG": "0x2008a98",
+        "GX_SetBankForSubOBJ": "0x2008b34",
+        "GXS_SetGraphicsMode": "0x200672c",
+        "func_020a7a18": "0x20a7a18",
+        "MTX_Identity22_": "0x2005930",
+        "G2x_SetBGyAffine_": "0x20067b0"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/overlays/ov024/calls/func_ov024_02083f44.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "func_020190b0",
+      "behavior": "Initializes graphics state values and identity matrices; several field meanings remain unknown.",
+      "evidence": "Source implementation directly performs the described operations; see src/calls/func_02015630.c.",
+      "uncertainty": "The exact game-specific role is unresolved.",
+      "domain": "Graphics and transforms",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "unknown",
+      "module": "arm9",
+      "symbol": "func_020190b0",
+      "language": "c",
+      "source": "src/arm9/graphics_and_transforms/func_020190b0.c",
+      "source_symbol": "func_020190b0",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "MTX_Identity43_": "0x1ff9480",
+        "MTX_Identity44_": "0x20059a8",
+        "MTX_Identity33_": "0x1ff90ec",
+        "graphics_state": "0x205a924",
+        "view_matrix": "0x205a970",
+        "projection_matrix": "0x205a92c",
+        "rotation_matrix": "0x205a9b8"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/calls/func_02015630.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "SampleTweenValue",
+      "behavior": "Samples a started tween, updates its completion state, and optionally writes its interpolated value.",
+      "evidence": "Source implementation directly performs the described operations; see src/calls/func_0203602c.c.",
+      "uncertainty": "No material uncertainty for the stated operation; game-specific use may depend on callers.",
+      "domain": "Runtime data utilities",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "arm9",
+      "symbol": "func_0205258c",
+      "language": "c",
+      "source": "src/arm9/runtime_data_utilities/SampleTweenValue_0205258c.c",
+      "source_symbol": "SampleTweenValue_0205258c",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_02003fd4": "0x2003fd4",
+        "func_02023d54": "0x2023d54",
+        "func_02052378": "0x2052378"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/calls/func_0203602c.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "ScaleVector4ByReciprocalMagnitude",
+      "behavior": "Scales a four-component destination vector by the reciprocal magnitude of a source vector, returning the source magnitude; clears the destination when that magnitude is zero.",
+      "evidence": "func_0202f430 computes magnitude from the second pointer; this body scales or clears the first pointer.",
+      "uncertainty": "Whether callers pass the same vector for both pointers depends on call sites.",
+      "domain": "Fixed-point math",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "arm9",
+      "symbol": "func_0202fc50",
+      "language": "c",
+      "source": "src/arm9/fixed_point_math/ScaleVector4ByReciprocalMagnitude_0202fc50.c",
+      "source_symbol": "ScaleVector4ByReciprocalMagnitude_0202fc50",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_0202fbdc": "0x202fbdc",
+        "func_01ff9cd0": "0x1ff9cd0"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/calls/func_0202f4a4.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "ReadPackedBitField",
+      "behavior": "Extracts a requested-width field from an MSB-first packed word array.",
+      "evidence": "Source implementation directly performs the described operations; see src/auto/func_020256b8.c.",
+      "uncertainty": "No material uncertainty for the stated operation; game-specific use may depend on callers.",
+      "domain": "Runtime data utilities",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "arm9",
+      "symbol": "func_0202d4c4",
+      "language": "c",
+      "source": "src/arm9/runtime_data_utilities/ReadPackedBitField_0202d4c4.c",
+      "source_symbol": "ReadPackedBitField_0202d4c4",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {},
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/auto/func_020256b8.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "ReleaseResourceGroup",
+      "behavior": "Decrements a resource-group count and releases entries from a tagged section when it reaches zero.",
+      "evidence": "Source implementation directly performs the described operations; see src/calls/func_0202552c.c.",
+      "uncertainty": "No material uncertainty for the stated operation; game-specific use may depend on callers.",
+      "domain": "Runtime data utilities",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "arm9",
+      "symbol": "func_0202d338",
+      "language": "c",
+      "source": "src/arm9/runtime_data_utilities/ReleaseResourceGroup_0202d338.c",
+      "source_symbol": "ReleaseResourceGroup_0202d338",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_02019e60": "0x2019e60"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/calls/func_0202552c.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "ClearOverlayLoadQueues",
+      "behavior": "Clears pending and completed overlay load queues, settling pending I/O before freeing nodes.",
+      "evidence": "Source implementation directly performs the described operations; see src/overlays/ov002/calls/func_ov002_020529cc.c.",
+      "uncertainty": "No material uncertainty for the stated operation; game-specific use may depend on callers.",
+      "domain": "Overlay handling",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "ov027",
+      "symbol": "func_ov027_020ba074",
+      "language": "c",
+      "source": "src/ov027/overlay_handling/ClearOverlayLoadQueues_020ba074.c",
+      "source_symbol": "ClearOverlayLoadQueues_020ba074",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "thumb",
+      "bindings": {
+        "NNS_FndGetNextListObject": "0x2012a38",
+        "func_0202c438": "0x202c438",
+        "NNSi_FndFreeFromDefaultHeap": "0x202a1c4",
+        "NNS_FndRemoveListObject": "0x20129d8",
+        "func_020ba1e0": "0x20ba1e0",
+        "overlay_load_queues": "0x20ba3c4"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/overlays/ov002/calls/func_ov002_020529cc.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "DestroyRegisteredObject",
+      "behavior": "Calls an optional object destructor, unregisters the object, and frees its buffers and allocation.",
+      "evidence": "Source implementation directly performs the described operations; see src/calls/func_02023a4c.c.",
+      "uncertainty": "No material uncertainty for the stated operation; game-specific use may depend on callers.",
+      "domain": "Runtime data utilities",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "arm9",
+      "symbol": "func_0202a5b4",
+      "language": "c",
+      "source": "src/arm9/runtime_data_utilities/DestroyRegisteredObject_0202a5b4.c",
+      "source_symbol": "DestroyRegisteredObject_0202a5b4",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_0202a134": "0x202a134",
+        "func_0202a3a8": "0x202a3a8",
+        "NNSi_FndFreeFromDefaultHeap": "0x202a1c4",
+        "func_0202a240": "0x202a240",
+        "object_registry": "0x20603c8",
+        "default_heap": "0x2060394"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/calls/func_02023a4c.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "InitializeArchiveBackend",
+      "behavior": "Publishes a 14-entry archive callback table and seeds a random generator.",
+      "evidence": "Source implementation directly performs the described operations; see src/calls/func_020285f0.c.",
+      "uncertainty": "No material uncertainty for the stated operation; game-specific use may depend on callers.",
+      "domain": "Archive startup",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "arm9",
+      "symbol": "func_0203a858",
+      "language": "c",
+      "source": "src/arm9/archive_startup/InitializeArchiveBackend_0203a858.c",
+      "source_symbol": "InitializeArchiveBackend_0203a858",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "thumb",
+      "bindings": {
+        "func_02039d54": "0x2039d54",
+        "archive_backend_callbacks": "0x27e01f8",
+        "srand_0x02016284": "0x1ffa1f4",
+        "func_02039d7c": "0x2039d7c",
+        "func_01ffe280": "0x1ffe280",
+        "func_01ffe394": "0x1ffe394",
+        "func_01ffe3d8": "0x1ffe3d8",
+        "func_01ffe8a0": "0x1ffe8a0",
+        "func_01ffe934": "0x1ffe934",
+        "func_02039da4": "0x2039da4",
+        "func_02039fec": "0x2039fec",
+        "func_01ffec28": "0x1ffec28",
+        "func_0203a28c": "0x203a28c",
+        "func_01fff374": "0x1fff374",
+        "func_0203a2f4": "0x203a2f4",
+        "func_0203a574": "0x203a574"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/calls/func_020285f0.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "ResetGraphicsTransform",
+      "behavior": "Resets global translation, scale and rotation state, then submits a graphics command.",
+      "evidence": "Source implementation directly performs the described operations; see src/calls/func_02028768.c.",
+      "uncertainty": "No material uncertainty for the stated operation; game-specific use may depend on callers.",
+      "domain": "Graphics and transforms",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "arm9",
+      "symbol": "func_0202fdf4",
+      "language": "c",
+      "source": "src/arm9/graphics_and_transforms/ResetGraphicsTransform_0202fdf4.c",
+      "source_symbol": "ResetGraphicsTransform_0202fdf4",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "MTX_Identity33_": "0x1ff90ec",
+        "func_02019188": "0x2019188",
+        "func_01ffa37c": "0x1ffa37c",
+        "func_01ff80e4": "0x1ff80e4",
+        "graphics_state": "0x205a924",
+        "rotation_matrix": "0x205a9b8"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/calls/func_02028768.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "func_ov027_020b7d58",
+      "behavior": "Initializes a container from configuration and allocates three zeroed arrays; array purposes are unknown.",
+      "evidence": "Source implementation directly performs the described operations; see src/overlays/ov002/calls/func_ov002_020543b8.c.",
+      "uncertainty": "The exact game-specific role is unresolved.",
+      "domain": "Overlay handling",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "unknown",
+      "module": "ov027",
+      "symbol": "func_ov027_020b7d58",
+      "language": "c",
+      "source": "src/ov027/overlay_handling/func_ov027_020b7d58.c",
+      "source_symbol": "func_ov027_020b7d58",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "thumb",
+      "bindings": {
+        "MI_CpuFill8": "0x1ff8830",
+        "NNS_FndInitList": "0x201288c",
+        "NNSi_FndAllocFromDefaultExpHeap": "0x202a178"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/overlays/ov002/calls/func_ov002_020543b8.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "DispatchOverlayEventPairA",
+      "behavior": "Tries one selected overlay handler for an event, then a second handler if the first returns unhandled.",
+      "evidence": "Source implementation directly performs the described operations; see src/overlays/ov008/calls/func_ov008_02051578.c.",
+      "uncertainty": "No material uncertainty for the stated operation; game-specific use may depend on callers.",
+      "domain": "Overlay event dispatch",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "ov039",
+      "symbol": "func_ov039_020bd0fc",
+      "language": "c",
+      "source": "src/ov039/overlay_event_dispatch/DispatchOverlayEventPairA_020bd0fc.c",
+      "source_symbol": "DispatchOverlayEventPairA_020bd0fc",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_020bcd98": "0x20bcd98",
+        "active_handler_indices": "0x20bea84",
+        "primary_handler_table": "0x20be930",
+        "secondary_handler_table": "0x20be8d0"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/overlays/ov008/calls/func_ov008_02051578.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "DispatchOverlayEventPairB",
+      "behavior": "Tries one selected overlay handler for an event, then a second handler if the first returns unhandled.",
+      "evidence": "Source implementation directly performs the described operations; see src/overlays/ov008/calls/func_ov008_020516e0.c.",
+      "uncertainty": "No material uncertainty for the stated operation; game-specific use may depend on callers.",
+      "domain": "Overlay event dispatch",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "ov039",
+      "symbol": "func_ov039_020bd264",
+      "language": "c",
+      "source": "src/ov039/overlay_event_dispatch/DispatchOverlayEventPairB_020bd264.c",
+      "source_symbol": "DispatchOverlayEventPairB_020bd264",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_020bcd98": "0x20bcd98",
+        "active_handler_indices": "0x20bea84",
+        "primary_handler_table": "0x20be930",
+        "secondary_handler_table": "0x20be8d0"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/overlays/ov008/calls/func_ov008_020516e0.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "DispatchOverlayEventPairC",
+      "behavior": "Tries one selected overlay handler for an event, then a second handler if the first returns unhandled.",
+      "evidence": "Source implementation directly performs the described operations; see src/overlays/ov008/calls/func_ov008_02051848.c.",
+      "uncertainty": "No material uncertainty for the stated operation; game-specific use may depend on callers.",
+      "domain": "Overlay event dispatch",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "ov039",
+      "symbol": "func_ov039_020bd3cc",
+      "language": "c",
+      "source": "src/ov039/overlay_event_dispatch/DispatchOverlayEventPairC_020bd3cc.c",
+      "source_symbol": "DispatchOverlayEventPairC_020bd3cc",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_020bcd98": "0x20bcd98",
+        "active_handler_indices": "0x20bea84",
+        "primary_handler_table": "0x20be930",
+        "secondary_handler_table": "0x20be8d0"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/overlays/ov008/calls/func_ov008_02051848.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "DispatchOverlayEventPairD",
+      "behavior": "Tries one selected overlay handler for an event, then a second handler if the first returns unhandled.",
+      "evidence": "Source implementation directly performs the described operations; see src/overlays/ov008/calls/func_ov008_020519b0.c.",
+      "uncertainty": "No material uncertainty for the stated operation; game-specific use may depend on callers.",
+      "domain": "Overlay event dispatch",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "ov039",
+      "symbol": "func_ov039_020bd534",
+      "language": "c",
+      "source": "src/ov039/overlay_event_dispatch/DispatchOverlayEventPairD_020bd534.c",
+      "source_symbol": "DispatchOverlayEventPairD_020bd534",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_020bcd98": "0x20bcd98",
+        "active_handler_indices": "0x20bea84",
+        "primary_handler_table": "0x20be930",
+        "secondary_handler_table": "0x20be8d0"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/overlays/ov008/calls/func_ov008_020519b0.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "MeasureVector4Length",
+      "behavior": "Computes the fixed-point length of a four-component vector.",
+      "evidence": "Source implementation directly performs the described operations; see src/calls/func_0202f430.c.",
+      "uncertainty": "No material uncertainty for the stated operation; game-specific use may depend on callers.",
+      "domain": "Fixed-point math",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "arm9",
+      "symbol": "func_0202fbdc",
+      "language": "c",
+      "source": "src/arm9/fixed_point_math/MeasureVector4Length_0202fbdc.c",
+      "source_symbol": "MeasureVector4Length_0202fbdc",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "FX_Sqrt": "0x1ff9cfc"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/calls/func_0202f430.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "func_ov027_020b7e5c",
+      "behavior": "Allocates and fills a fixed-size record and marks it active; field purposes are unknown.",
+      "evidence": "Source implementation directly performs the described operations; see src/overlays/ov000/calls/func_ov000_0205657c.c.",
+      "uncertainty": "The exact game-specific role is unresolved.",
+      "domain": "Overlay handling",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "unknown",
+      "module": "ov027",
+      "symbol": "func_ov027_020b7e5c",
+      "language": "c",
+      "source": "src/ov027/overlay_handling/func_ov027_020b7e5c.c",
+      "source_symbol": "func_ov027_020b7e5c",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_020b78ec": "0x20b78ec",
+        "MI_CpuFill8": "0x1ff8830",
+        "func_020b789c": "0x20b789c"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/overlays/ov000/calls/func_ov000_0205657c.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "StopSoundTimers",
+      "behavior": "Invalidates selected alarm IDs and queues a sound timer stop command.",
+      "evidence": "Source implementation directly performs the described operations; see src/calls/SND_StopTimer.c.",
+      "uncertainty": "No material uncertainty for the stated operation; game-specific use may depend on callers.",
+      "domain": "Audio",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "arm9",
+      "symbol": "func_0200eafc",
+      "language": "c",
+      "source": "src/arm9/audio/StopSoundTimers_0200eafc.c",
+      "source_symbol": "StopSoundTimers_0200eafc",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "SNDi_IncAlarmId": "0x200f508",
+        "PushCommand_impl": "0x200ed4c"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/calls/SND_StopTimer.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "StopMovieAudio",
+      "behavior": "Mutes and releases the movie audio channel, waiting for queued sound commands.",
+      "evidence": "Source implementation directly performs the described operations; see src/overlays/ov024/calls/func_ov024_020841c4.c.",
+      "uncertainty": "No material uncertainty for the stated operation; game-specific use may depend on callers.",
+      "domain": "Video playback",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "ov022",
+      "symbol": "func_ov022_020a7ed8",
+      "language": "c",
+      "source": "src/ov022/video_playback/StopMovieAudio_020a7ed8.c",
+      "source_symbol": "StopMovieAudio_020a7ed8",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "SND_SetChannelVolume": "0x200ebe0",
+        "func_0200f288": "0x200f288",
+        "func_0200f080": "0x200f080",
+        "SND_WaitForCommandProc": "0x200f21c",
+        "SND_StopTimer": "0x200eafc",
+        "SND_UnlockChannel": "0x200ebc0"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/overlays/ov024/calls/func_ov024_020841c4.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "LoadDefaultProjectionValues",
+      "behavior": "Fills a 14-word block with fixed-point projection and clipping defaults.",
+      "evidence": "Source implementation directly performs the described operations; see src/auto/func_02023c60.c.",
+      "uncertainty": "No material uncertainty for the stated operation; game-specific use may depend on callers.",
+      "domain": "Graphics and transforms",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "arm9",
+      "symbol": "func_0202a7b4",
+      "language": "c",
+      "source": "src/arm9/graphics_and_transforms/LoadDefaultProjectionValues_0202a7b4.c",
+      "source_symbol": "LoadDefaultProjectionValues_0202a7b4",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {},
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/auto/func_02023c60.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "FindNextNamedEntry",
+      "behavior": "Searches a fixed-size name table from a caller index and returns the next match.",
+      "evidence": "Source implementation directly performs the described operations; see src/overlays/ov002/calls/func_ov002_020713cc.c.",
+      "uncertainty": "No material uncertainty for the stated operation; game-specific use may depend on callers.",
+      "domain": "Overlay handling",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "ov001",
+      "symbol": "func_ov001_020670b4",
+      "language": "c",
+      "source": "src/ov001/overlay_handling/FindNextNamedEntry_020670b4.c",
+      "source_symbol": "FindNextNamedEntry_020670b4",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "thumb",
+      "bindings": {
+        "strncmp": "0x20220bc"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/overlays/ov002/calls/func_ov002_020713cc.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "func_0202d3fc",
+      "behavior": "Resolves a type-7 resource and passes a computed span to a helper; exact resource role unknown.",
+      "evidence": "Source implementation directly performs the described operations; see src/calls/func_020255f0.c.",
+      "uncertainty": "The exact game-specific role is unresolved.",
+      "domain": "Runtime data utilities",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "unknown",
+      "module": "arm9",
+      "symbol": "func_0202d3fc",
+      "language": "c",
+      "source": "src/arm9/runtime_data_utilities/func_0202d3fc.c",
+      "source_symbol": "func_0202d3fc",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_0202d3e0": "0x202d3e0",
+        "func_0201ac70": "0x201ac70",
+        "func_0202a280": "0x202a280"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/calls/func_020255f0.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "ReadValidatedRecordByte",
+      "behavior": "Validates a compact header and reads a byte from its referenced record unless flagged.",
+      "evidence": "Source implementation directly performs the described operations; see src/auto/func_0202a1b8.c.",
+      "uncertainty": "No material uncertainty for the stated operation; game-specific use may depend on callers.",
+      "domain": "Runtime data utilities",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "arm9",
+      "symbol": "func_0202e804",
+      "language": "c",
+      "source": "src/arm9/runtime_data_utilities/ReadValidatedRecordByte_0202e804.c",
+      "source_symbol": "ReadValidatedRecordByte_0202e804",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {},
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/auto/func_0202a1b8.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "SetFrameProcessingMode",
+      "behavior": "Stores and applies a frame-processing mode, optionally installing two callbacks.",
+      "evidence": "Source implementation directly performs the described operations; see src/calls/func_02011174.c.",
+      "uncertainty": "No material uncertainty for the stated operation; game-specific use may depend on callers.",
+      "domain": "Runtime data utilities",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "arm9",
+      "symbol": "func_02013bcc",
+      "language": "c",
+      "source": "src/arm9/runtime_data_utilities/SetFrameProcessingMode_02013bcc.c",
+      "source_symbol": "SetFrameProcessingMode_02013bcc",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_02013d74": "0x2013d74",
+        "frame_processing_state": "0x205a8c4",
+        "func_02013c18": "0x2013c18",
+        "frame_callback_primary": "0x2055c54",
+        "func_02013d34": "0x2013d34",
+        "frame_callback_secondary": "0x2055c58"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/calls/func_02011174.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "SeedSharedRandomState",
+      "behavior": "Initializes shared random state and its linear-congruential constants.",
+      "evidence": "Source implementation directly performs the described operations; see src/auto/func_02023e34.c.",
+      "uncertainty": "No material uncertainty for the stated operation; game-specific use may depend on callers.",
+      "domain": "Runtime data utilities",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "arm9",
+      "symbol": "func_0202a984",
+      "language": "c",
+      "source": "src/arm9/runtime_data_utilities/SeedSharedRandomState_0202a984.c",
+      "source_symbol": "SeedSharedRandomState_0202a984",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "shared_rng_state": "0x20604d8"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/auto/func_02023e34.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "PopSoundCommand",
+      "behavior": "Pops and returns the first node from a free list with interrupts disabled.",
+      "evidence": "Source implementation directly performs the described operations; see src/calls/func_02008ba4.c.",
+      "uncertainty": "No material uncertainty for the stated operation; game-specific use may depend on callers.",
+      "domain": "Audio",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "arm9",
+      "symbol": "func_0200f448",
+      "language": "c",
+      "source": "src/arm9/audio/PopSoundCommand_0200f448.c",
+      "source_symbol": "PopSoundCommand_0200f448",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "OS_DisableInterrupts": "0x2004938",
+        "OS_RestoreInterrupts": "0x200494c",
+        "sound_command_manager": "0x2057c50"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/calls/func_02008ba4.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "func_0202ce18",
+      "behavior": "Selects a tile-map entry from a packed coordinate and returns its high bit; game meaning unknown.",
+      "evidence": "Source implementation directly performs the described operations; see src/auto/func_02025074.c.",
+      "uncertainty": "The exact game-specific role is unresolved.",
+      "domain": "Runtime data utilities",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "unknown",
+      "module": "arm9",
+      "symbol": "func_0202ce18",
+      "language": "c",
+      "source": "src/arm9/runtime_data_utilities/func_0202ce18.c",
+      "source_symbol": "func_0202ce18",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {},
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/auto/func_02025074.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "QueueTypedMessage",
+      "behavior": "Fills a typed message with an ID and two values, then sends it to a queue.",
+      "evidence": "Source implementation directly performs the described operations; see src/calls/func_0201f70c.c.",
+      "uncertainty": "No material uncertainty for the stated operation; game-specific use may depend on callers.",
+      "domain": "Runtime data utilities",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "arm9",
+      "symbol": "func_0202ca88",
+      "language": "c",
+      "source": "src/arm9/runtime_data_utilities/QueueTypedMessage_0202ca88.c",
+      "source_symbol": "QueueTypedMessage_0202ca88",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_0202b810": "0x202b810",
+        "OS_SendMessage": "0x2002f64",
+        "message_queue": "0x2060584"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/calls/func_0201f70c.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "func_0204d7f4",
+      "behavior": "Updates a 16-bit value in a type-3 record or creates/sets a record when absent.",
+      "evidence": "Source implementation directly performs the described operations; see src/calls/func_020336a4.c.",
+      "uncertainty": "The exact game-specific role is unresolved.",
+      "domain": "Runtime data utilities",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "unknown",
+      "module": "arm9",
+      "symbol": "func_0204d7f4",
+      "language": "c",
+      "source": "src/arm9/runtime_data_utilities/func_0204d7f4.c",
+      "source_symbol": "func_0204d7f4",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_0204cf58": "0x204cf58",
+        "func_0204ce84": "0x204ce84"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/calls/func_020336a4.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "func_01ffe394",
+      "behavior": "Conditionally emits a text-related operation from flags and advances a byte cursor; exact encoding unknown.",
+      "evidence": "Source implementation directly performs the described operations; see src/calls/func_01ffbbac.c.",
+      "uncertainty": "The exact game-specific role is unresolved.",
+      "domain": "Runtime data utilities",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "unknown",
+      "module": "itcm",
+      "symbol": "func_01ffe394",
+      "language": "c",
+      "source": "src/itcm/runtime_data_utilities/func_01ffe394.c",
+      "source_symbol": "func_01ffe394",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_01ffcedc": "0x1ffcedc"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/calls/func_01ffbbac.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "func_ov027_020b965c",
+      "behavior": "Runs a helper on the first configured ID that is not -1, or returns zero.",
+      "evidence": "Source implementation directly performs the described operations; see src/overlays/ov005/calls/func_ov005_0204e378.c.",
+      "uncertainty": "The exact game-specific role is unresolved.",
+      "domain": "Overlay handling",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "unknown",
+      "module": "ov027",
+      "symbol": "func_ov027_020b965c",
+      "language": "c",
+      "source": "src/ov027/overlay_handling/func_ov027_020b965c.c",
+      "source_symbol": "func_ov027_020b965c",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_0204f228": "0x204f228"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/overlays/ov005/calls/func_ov005_0204e378.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "func_ov003_02064764",
+      "behavior": "Processes up to three typed record slots and forwards the first result.",
+      "evidence": "Source implementation directly performs the described operations; see src/overlays/ov012/calls/func_ov012_0205b940.c.",
+      "uncertainty": "The exact game-specific role is unresolved.",
+      "domain": "Overlay handling",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "unknown",
+      "module": "ov003",
+      "symbol": "func_ov003_02064764",
+      "language": "c",
+      "source": "src/ov003/overlay_handling/func_ov003_02064764.c",
+      "source_symbol": "func_ov003_02064764",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "thumb",
+      "bindings": {
+        "func_02025dac": "0x2025dad",
+        "func_02063e94": "0x2063e94"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/overlays/ov012/calls/func_ov012_0205b940.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "GetCachedInverseViewMatrix",
+      "behavior": "Lazily computes and returns a cached inverse 4x3 matrix.",
+      "evidence": "Source implementation directly performs the described operations; see src/calls/func_020158e0.c.",
+      "uncertainty": "No material uncertainty for the stated operation; game-specific use may depend on callers.",
+      "domain": "Graphics and transforms",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "arm9",
+      "symbol": "func_02019378",
+      "language": "c",
+      "source": "src/arm9/graphics_and_transforms/GetCachedInverseViewMatrix_02019378.c",
+      "source_symbol": "GetCachedInverseViewMatrix_02019378",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "MTX_Inverse43": "0x1ff954c",
+        "graphics_state": "0x205a924",
+        "view_matrix": "0x205a970",
+        "inverse_view_matrix": "0x205a9fc"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/calls/func_020158e0.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "CheckCommandProcessorReady",
+      "behavior": "Checks whether the sub-processor can accept another command.",
+      "evidence": "Source implementation directly performs the described operations; see src/calls/IsCommandAvailable.c.",
+      "uncertainty": "No material uncertainty for the stated operation; game-specific use may depend on callers.",
+      "domain": "Processor communication",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "arm9",
+      "symbol": "func_0200f490",
+      "language": "c",
+      "source": "src/arm9/processor_communication/CheckCommandProcessorReady_0200f490.c",
+      "source_symbol": "CheckCommandProcessorReady_0200f490",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_02002f24": "0x2002f24",
+        "OS_DisableInterrupts": "0x2004938",
+        "OS_RestoreInterrupts": "0x200494c"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/calls/IsCommandAvailable.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "DropDecodedMovieFrame",
+      "behavior": "Drops the next decoded movie frame by advancing a counter and ring index.",
+      "evidence": "Source implementation directly performs the described operations; see src/overlays/ov024/calls/func_ov024_02085c3c.c.",
+      "uncertainty": "No material uncertainty for the stated operation; game-specific use may depend on callers.",
+      "domain": "Video playback",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "ov022",
+      "symbol": "func_ov022_020a9f18",
+      "language": "c",
+      "source": "src/ov022/video_playback/DropDecodedMovieFrame_020a9f18.c",
+      "source_symbol": "DropDecodedMovieFrame_020a9f18",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {},
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/overlays/ov024/calls/func_ov024_02085c3c.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "DispatchActiveOverlayCallback",
+      "behavior": "Calls the callback at the active overlay index, or returns the default success value.",
+      "evidence": "Source implementation directly performs the described operations; see src/overlays/ov008/calls/func_ov008_0205137c.c.",
+      "uncertainty": "No material uncertainty for the stated operation; game-specific use may depend on callers.",
+      "domain": "Overlay handling",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "ov039",
+      "symbol": "func_ov039_020bceb0",
+      "language": "c",
+      "source": "src/ov039/overlay_handling/DispatchActiveOverlayCallback_020bceb0.c",
+      "source_symbol": "DispatchActiveOverlayCallback_020bceb0",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "active_handler_indices": "0x20bea84",
+        "handler_table": "0x20be930"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/overlays/ov008/calls/func_ov008_0205137c.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "DecodeMovieFrameIntoRing",
+      "behavior": "Decodes a movie chunk into a ring buffer and advances six cursors.",
+      "evidence": "Source implementation directly performs the described operations; see src/overlays/ov024/calls/func_ov024_020859d4.c.",
+      "uncertainty": "No material uncertainty for the stated operation; game-specific use may depend on callers.",
+      "domain": "Video playback",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "ov022",
+      "symbol": "func_ov022_020a9cb0",
+      "language": "c",
+      "source": "src/ov022/video_playback/DecodeMovieFrameIntoRing_020a9cb0.c",
+      "source_symbol": "DecodeMovieFrameIntoRing_020a9cb0",
+      "compiler": "mwccarm-3.0-139",
+      "mode": "arm",
+      "bindings": {},
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/overlays/ov024/calls/func_ov024_020859d4.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "GetCachedMovieDecodeTable",
+      "behavior": "Returns a decoder table, caching a fast-memory copy when the arena has enough space.",
+      "evidence": "Source implementation directly performs the described operations; see src/overlays/ov024/calls/func_ov024_0208669c.c.",
+      "uncertainty": "No material uncertainty for the stated operation; game-specific use may depend on callers.",
+      "domain": "Video playback",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "ov022",
+      "symbol": "func_ov022_020aa978",
+      "language": "c",
+      "source": "src/ov022/video_playback/GetCachedMovieDecodeTable_020aa978.c",
+      "source_symbol": "GetCachedMovieDecodeTable_020aa978",
+      "compiler": "mwccarm-3.0-139",
+      "mode": "arm",
+      "bindings": {
+        "MIi_CpuCopyFast": "0x1ff878c",
+        "decoder_cache_arena": "0x20b7df4",
+        "movie_decode_table": "0x20aeaa0"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/overlays/ov024/calls/func_ov024_0208669c.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "GetCachedPixelClampTable",
+      "behavior": "Returns a pixel clamp table, caching a fast-memory copy when the arena has enough space.",
+      "evidence": "Source implementation directly performs the described operations; see src/overlays/ov024/calls/func_ov024_0208677c.c.",
+      "uncertainty": "No material uncertainty for the stated operation; game-specific use may depend on callers.",
+      "domain": "Video playback",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "ov022",
+      "symbol": "func_ov022_020aaa58",
+      "language": "c",
+      "source": "src/ov022/video_playback/GetCachedPixelClampTable_020aaa58.c",
+      "source_symbol": "GetCachedPixelClampTable_020aaa58",
+      "compiler": "mwccarm-3.0-139",
+      "mode": "arm",
+      "bindings": {
+        "MIi_CpuCopyFast": "0x1ff878c",
+        "decoder_cache_arena": "0x20b7df4",
+        "pixel_clamp_table": "0x20b7688"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/overlays/ov024/calls/func_ov024_0208677c.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "SeekBitstreamCursor",
+      "behavior": "Settles an asynchronous read, seeks a file, and updates the cursor position on success.",
+      "evidence": "Source implementation directly performs the described operations; see src/overlays/ov024/calls/func_ov024_02085e8c.c.",
+      "uncertainty": "No material uncertainty for the stated operation; game-specific use may depend on callers.",
+      "domain": "Video playback",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "ov022",
+      "symbol": "func_ov022_020aa168",
+      "language": "c",
+      "source": "src/ov022/video_playback/SeekBitstreamCursor_020aa168.c",
+      "source_symbol": "SeekBitstreamCursor_020aa168",
+      "compiler": "mwccarm-3.0-139",
+      "mode": "arm",
+      "bindings": {
+        "FS_WaitAsync": "0x200b1e4",
+        "FS_SeekFile": "0x200b648"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/overlays/ov024/calls/func_ov024_02085e8c.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "audio_flush_reserved_commands",
+      "behavior": "Submits the reserved sound command list to the ARM7, including interrupt-protected queue handling, cache flush, bounded in-flight blocks, and optional command processing.",
+      "evidence": "NitroSDK sound command manager layout, PXI send/reply calls, and queue state transitions in the source; Nintendo DS NitroSDK pattern.",
+      "uncertainty": "Queue fields and protocol behavior are strongly supported; exact local game integration is middleware.",
+      "domain": "audio",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "arm9",
+      "symbol": "func_0200f080",
+      "language": "c",
+      "source": "src/arm9/audio/audio_flush_reserved_commands_0200f080.c",
+      "source_symbol": "audio_flush_reserved_commands_0200f080",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "OS_DisableInterrupts": "0x2004938",
+        "OS_RestoreInterrupts": "0x200494c",
+        "func_0200eec0": "0x200eec0",
+        "DC_FlushRange": "0x200344c",
+        "func_0200e30c": "0x200e30d",
+        "RequestCommandProc": "0x200f420",
+        "data_02057c50": "0x2057c50",
+        "data_02057f20": "0x2057f20",
+        "data_02057c74": "0x2057c74"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/calls/func_020087c0.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "movie_frame_alarm_callback",
+      "behavior": "Services one movie frame alarm, advances consumed-frame state, chooses or releases a decode buffer, and schedules the next frame deadline.",
+      "evidence": "MobiClip frame timer fields, front-buffer callback, frame counters, time base, and OS alarm calls in source.",
+      "uncertainty": "Decoder callback argument meanings are inferred from surrounding MobiClip code; preserve opaque callees.",
+      "domain": "movie",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "ov022",
+      "symbol": "func_ov022_020a7f3c",
+      "language": "c",
+      "source": "src/ov022/movie/movie_frame_alarm_callback_020a7f3c.c",
+      "source_symbol": "movie_frame_alarm_callback_020a7f3c",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_020a935c": "0x20a935c",
+        "OS_SetAlarm": "0x200433c",
+        "func_020a9338": "0x20a9338",
+        "func_02003fd4": "0x2003fd4",
+        "_ll_udiv": "0x2023d54"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/overlays/ov024/calls/func_ov024_0208421c.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "movie_video_hardware_setup",
+      "behavior": "Configures graphics memory banks, backgrounds, affine state, and display registers for movie playback.",
+      "evidence": "Direct GX bank, background register, affine matrix, and display control writes in source.",
+      "uncertainty": "Movie setup role is source-comment supported; unnamed callees remain opaque.",
+      "domain": "movie",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "ov022",
+      "symbol": "func_ov022_020a7b3c",
+      "language": "c",
+      "source": "src/ov022/movie/movie_video_hardware_setup_020a7b3c.c",
+      "source_symbol": "movie_video_hardware_setup_020a7b3c",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "GX_SetBankForBG": "0x2008358",
+        "GX_SetBankForOBJ": "0x200855c",
+        "func_020066c4": "0x20066c4",
+        "func_020a7a18": "0x20a7a18",
+        "GX_SetBankForBGExtPltt": "0x200868c",
+        "MTX_Identity22_": "0x2005930",
+        "G2x_SetBGyAffine_": "0x20067b0"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/overlays/ov024/calls/func_ov024_02083e28.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "get_sprite_width_from_oam_attributes",
+      "behavior": "Returns a sprite pixel width from packed DS OAM shape and size attributes.",
+      "evidence": "The code reads attribute bits 14-15 and 30-31; local NitroSystem g2d_oam_size_tables.c provides matching height and width tables indexed by shape and size, and the return grouping matches the width table.",
+      "uncertainty": "The target caller should confirm which attribute word is supplied.",
+      "domain": "sprites",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "arm9",
+      "symbol": "func_0204e190",
+      "language": "c",
+      "source": "src/arm9/sprites/get_sprite_width_from_oam_attributes_0204e190.c",
+      "source_symbol": "get_sprite_width_from_oam_attributes_0204e190",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {},
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/auto/func_02031730.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "camera_commit_explicit_projection",
+      "behavior": "Updates where the camera looks and how much scene fits on screen, using an explicit frustum and the camera near/far clip distances.",
+      "evidence": "The local projection helper takes top, bottom, left, right, near, and far in that order; the look-at helper receives camera position, up vector, and target, then cached vectors and GX dirty flags are updated.",
+      "uncertainty": "Frustum values use the engine fixed-point units.",
+      "domain": "graphics",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "arm9",
+      "symbol": "func_0202a8c4",
+      "language": "c",
+      "source": "src/arm9/graphics/camera_commit_explicit_projection_0202a8c4.c",
+      "source_symbol": "camera_commit_explicit_projection_0202a8c4",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_02005f10": "0x2005f10",
+        "func_01ff9b70": "0x1ff9b70",
+        "data_0205a92c": "0x205a92c",
+        "data_0205a924": "0x205a924",
+        "data_0205ab3c": "0x205ab3c",
+        "data_0205ab48": "0x205ab48",
+        "data_0205ab54": "0x205ab54",
+        "data_0205a970": "0x205a970"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/calls/func_02023d70.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "camera_commit_projection",
+      "behavior": "Updates where the camera looks and how much scene fits on screen using its perspective values and near/far clips.",
+      "evidence": "The local perspective helper takes vertical-FOV sine/cosine, aspect ratio, near clip, and far clip; the look-at helper receives position, up vector, and target, then cached vectors and GX dirty flags are updated.",
+      "uncertainty": "Projection values use the engine fixed-point units.",
+      "domain": "graphics",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "arm9",
+      "symbol": "func_0202a814",
+      "language": "c",
+      "source": "src/arm9/graphics/camera_commit_projection_0202a814.c",
+      "source_symbol": "camera_commit_projection_0202a814",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_02005dc4": "0x2005dc4",
+        "func_01ff9b70": "0x1ff9b70",
+        "data_0205a92c": "0x205a92c",
+        "data_0205a924": "0x205a924",
+        "data_0205a970": "0x205a970"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/calls/func_02023cc0.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "measure_next_allowed_wireless_channel",
+      "behavior": "Finds the first allowed wireless channel at or above the requested channel, reports radio/state errors, and asks the wireless manager to measure it.",
+      "evidence": "Allowed-channel bitmask scan, explicit error-state transitions, and channel-measure helper call in source.",
+      "uncertainty": "Radio availability and channel mask values follow the wireless manager protocol.",
+      "domain": "wireless",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "ov015",
+      "symbol": "func_ov015_020749b8",
+      "language": "c",
+      "source": "src/ov015/wireless/measure_next_allowed_wireless_channel_020749b8.c",
+      "source_symbol": "measure_next_allowed_wireless_channel_020749b8",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_020115ac": "0x20115ad",
+        "func_020737d4": "0x20737d4",
+        "func_020737c4": "0x20737c4",
+        "func_02074b04": "0x2074b04",
+        "func_02074a58": "0x2074a58"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/overlays/ov105/calls/func_ov105_020bf33c.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "attach_child_object",
+      "behavior": "Detaches the destination from its old parent if needed, copies initialization data from the source, and links the destination into the source object tree.",
+      "evidence": "Parent/child/sibling pointer updates, initialization block copy, and source/destination offsets in function body.",
+      "uncertainty": "The short value stored at destination +0xc8 comes from an opaque resource lookup.",
+      "domain": "runtime",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "arm9",
+      "symbol": "func_0202f500",
+      "language": "c",
+      "source": "src/arm9/runtime/attach_child_object_0202f500.c",
+      "source_symbol": "attach_child_object_0202f500",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_0202ee1c": "0x202ee1c",
+        "INITi_CpuClear32_0x01ff86fc": "0x1ff86fc",
+        "func_02021e60": "0x2021e60",
+        "func_0201aafc": "0x201aafc",
+        "data_02060770": "0x2060770"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/calls/func_0202af3c.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "reset_geometry_matrix_stack",
+      "behavior": "Resets the geometry engine matrix stack and restores its matrix mode/state.",
+      "evidence": "GXSTAT and geometry matrix register writes in source.",
+      "uncertainty": "SDK alias suffix is link-level only.",
+      "domain": "graphics",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "arm9",
+      "symbol": "func_02006b00",
+      "language": "c",
+      "source": "src/arm9/graphics/reset_geometry_matrix_stack_02006b00.c",
+      "source_symbol": "reset_geometry_matrix_stack_02006b00",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "G3X_GetMtxStackLevelPV": "0x2006ce4",
+        "G3X_GetMtxStackLevelPJ": "0x2006d10"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/calls/G3X_ResetMtxStack_2.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "detach_object_tree_node",
+      "behavior": "Unlinks an object from its parent child list and clears parent links from its children.",
+      "evidence": "Parent/first-child/next-sibling offsets and unlink operations in source.",
+      "uncertainty": "Object type is generic engine tree node.",
+      "domain": "runtime",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "arm9",
+      "symbol": "func_0202ee1c",
+      "language": "c",
+      "source": "src/arm9/runtime/detach_object_tree_node_0202ee1c.c",
+      "source_symbol": "detach_object_tree_node_0202ee1c",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {},
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/auto/func_0202a6d8.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "unlink_object_registry_node",
+      "behavior": "Removes a node from the object registry list and hash bucket chain.",
+      "evidence": "List pointers and key-based hash bucket operations in source.",
+      "uncertainty": "Registry key identity is inferred from 16-bit field at +0x10.",
+      "domain": "graphics",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "arm9",
+      "symbol": "func_0202a3a8",
+      "language": "c",
+      "source": "src/arm9/graphics/unlink_object_registry_node_0202a3a8.c",
+      "source_symbol": "unlink_object_registry_node_0202a3a8",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "data_020603c8": "0x20603c8",
+        "data_020603d8": "0x20603d8"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/calls/func_02023890.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "initialize_shared_sound_work",
+      "behavior": "Initializes shared sound work slots and flushes the resulting memory range for inter-processor use.",
+      "evidence": "Shared work struct and cache flush call in source.",
+      "uncertainty": "The undocumented slot payload semantics remain unknown.",
+      "domain": "audio",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "arm9",
+      "symbol": "func_0200f62c",
+      "language": "c",
+      "source": "src/arm9/audio/initialize_shared_sound_work_0200f62c.c",
+      "source_symbol": "initialize_shared_sound_work_0200f62c",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "DC_FlushRange": "0x200344c"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/calls/SNDi_InitSharedWork.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "dispatch_input_handler_pair_14",
+      "behavior": "Dispatches two optional context pointers to selected handler methods at offsets +0x14 and +0x10, trying the second callback when the first returns zero.",
+      "evidence": "The Re:coded caller obtains two enabled handler objects and invokes this callback family under input-source/button-mask checks; the function forwards each nonnull context pointer to the selected method.",
+      "uncertainty": "The handler objects exact UI or page identity is not established by this function.",
+      "domain": "input",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "ov039",
+      "symbol": "func_ov039_020bd084",
+      "language": "c",
+      "source": "src/ov039/input/dispatch_input_handler_pair_14_020bd084.c",
+      "source_symbol": "dispatch_input_handler_pair_14_020bd084",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_020bcd98": "0x20bcd98",
+        "data_020bea84": "0x20bea84",
+        "data_020be930": "0x20be930",
+        "data_020be8d0": "0x20be8d0"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/overlays/ov008/calls/func_ov008_02051500.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "dispatch_input_handler_pair_20",
+      "behavior": "Dispatches two optional context pointers to selected handler methods at offsets +0x20 and +0x1c, trying the second callback when the first returns zero.",
+      "evidence": "The Re:coded caller obtains two enabled handler objects and invokes this callback family under input-source/button-mask checks; the function forwards each nonnull context pointer to the selected method.",
+      "uncertainty": "The handler objects exact UI or page identity is not established by this function.",
+      "domain": "input",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "ov039",
+      "symbol": "func_ov039_020bd1ec",
+      "language": "c",
+      "source": "src/ov039/input/dispatch_input_handler_pair_20_020bd1ec.c",
+      "source_symbol": "dispatch_input_handler_pair_20_020bd1ec",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_020bcd98": "0x20bcd98",
+        "data_020bea84": "0x20bea84",
+        "data_020be930": "0x20be930",
+        "data_020be8d0": "0x20be8d0"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/overlays/ov008/calls/func_ov008_02051668.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "dispatch_input_handler_pair_2c",
+      "behavior": "Dispatches two optional context pointers to selected handler methods at offsets +0x2c and +0x28, trying the second callback when the first returns zero.",
+      "evidence": "The Re:coded caller obtains two enabled handler objects and invokes this callback family under input-source/button-mask checks; the function forwards each nonnull context pointer to the selected method.",
+      "uncertainty": "The handler objects exact UI or page identity is not established by this function.",
+      "domain": "input",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "ov039",
+      "symbol": "func_ov039_020bd354",
+      "language": "c",
+      "source": "src/ov039/input/dispatch_input_handler_pair_2c_020bd354.c",
+      "source_symbol": "dispatch_input_handler_pair_2c_020bd354",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_020bcd98": "0x20bcd98",
+        "data_020bea84": "0x20bea84",
+        "data_020be930": "0x20be930",
+        "data_020be8d0": "0x20be8d0"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/overlays/ov008/calls/func_ov008_020517d0.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "dispatch_input_handler_pair_38",
+      "behavior": "Dispatches two optional context pointers to selected handler methods at offsets +0x38 and +0x34, trying the second callback when the first returns zero.",
+      "evidence": "The Re:coded caller obtains two enabled handler objects and invokes this callback family under input-source/button-mask checks; the function forwards each nonnull context pointer to the selected method.",
+      "uncertainty": "The handler objects exact UI or page identity is not established by this function.",
+      "domain": "input",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "ov039",
+      "symbol": "func_ov039_020bd4bc",
+      "language": "c",
+      "source": "src/ov039/input/dispatch_input_handler_pair_38_020bd4bc.c",
+      "source_symbol": "dispatch_input_handler_pair_38_020bd4bc",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_020bcd98": "0x20bcd98",
+        "data_020bea84": "0x20bea84",
+        "data_020be930": "0x20be930",
+        "data_020be8d0": "0x20be8d0"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/overlays/ov008/calls/func_ov008_02051938.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "func_01ffa5b0",
+      "behavior": "Runs matrix-processing helper calls on selected blocks according to three flag bits.",
+      "evidence": "Bit tests and helper call block indices/counts in source.",
+      "uncertainty": "Underlying block formats are opaque.",
+      "domain": "graphics",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "unknown",
+      "module": "itcm",
+      "symbol": "func_01ffa5b0",
+      "language": "c",
+      "source": "src/itcm/graphics/func_01ffa5b0.c",
+      "source_symbol": "func_01ffa5b0",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_01ffa37c": "0x1ffa37c"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/calls/func_01ffa13c.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "initialize_frame_timer",
+      "behavior": "Initializes timer 0, its interrupt callback, and associated shared timer state once.",
+      "evidence": "Timer register writes, reserved timer setup, IRQ registration, and active guard in source.",
+      "uncertainty": "Timer state fields beyond active are only identified by their reset behavior.",
+      "domain": "runtime",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "arm9",
+      "symbol": "func_02003eec",
+      "language": "c",
+      "source": "src/arm9/runtime/initialize_frame_timer_02003eec.c",
+      "source_symbol": "initialize_frame_timer_02003eec",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "OSi_SetTimerReserved": "0x2003ea4",
+        "OS_SetIrqFunction": "0x2001d90",
+        "OS_EnableIrqMask": "0x2001f5c",
+        "data_02056e94": "0x2056e94",
+        "func_02003f6c": "0x2003f6c"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/calls/func_020030e4.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "build_scaled_inverse_matrix",
+      "behavior": "Concatenates two matrices, applies the shared scale vector, and computes the inverse matrix.",
+      "evidence": "Matrix operation calls and data flow in source.",
+      "uncertainty": "Purpose of the resulting matrix in callers is not established.",
+      "domain": "graphics",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "arm9",
+      "symbol": "func_020195f4",
+      "language": "c",
+      "source": "src/arm9/graphics/build_scaled_inverse_matrix_020195f4.c",
+      "source_symbol": "build_scaled_inverse_matrix_020195f4",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "MTX_Concat43": "0x1ff98c0",
+        "MTX_ScaleApply43": "0x1ff94dc",
+        "MTX_Inverse43": "0x1ff954c",
+        "data_0205aa2c": "0x205aa2c",
+        "data_0205a9b8": "0x205a9b8",
+        "data_0205a970": "0x205a970",
+        "data_0205a924": "0x205a924",
+        "data_0205aa5c": "0x205aa5c"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/calls/func_02015b70.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "apply_all_pending_entry_edits",
+      "behavior": "Applies the supplied edits to each listed entry and then commits the currently selected entry.",
+      "evidence": "Count, entry pointer array, selected index, and two helper calls in source.",
+      "uncertainty": "Exact edited property is opaque to this function.",
+      "domain": "runtime",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "ov027",
+      "symbol": "func_ov027_020b84f4",
+      "language": "c",
+      "source": "src/ov027/runtime/apply_all_pending_entry_edits_020b84f4.c",
+      "source_symbol": "apply_all_pending_entry_edits_020b84f4",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_020b81e8": "0x20b81e8",
+        "func_020b8210": "0x20b8210"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/overlays/ov002/calls/func_ov002_02054bcc.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "geometry_fifo_dma_complete",
+      "behavior": "Restores geometry FIFO interrupt state after DMA completion, clears busy state, and dispatches the saved completion callback.",
+      "evidence": "Saved callback fields, IRQ restoration, GXSTAT bits, and callback dispatch in source.",
+      "uncertainty": "SDK callback association is established by the source comment; opaque shared-work layout remains partly offset-based.",
+      "domain": "audio",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "arm9",
+      "symbol": "func_02005584",
+      "language": "c",
+      "source": "src/arm9/audio/geometry_fifo_dma_complete_02005584.c",
+      "source_symbol": "geometry_fifo_dma_complete_02005584",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "OS_DisableIrqMask": "0x2001f8c",
+        "OS_SetIrqFunction": "0x2001d90",
+        "data_02056ee8": "0x2056ee8"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/calls/MIi_DMACallback.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "random_next_scaled",
+      "behavior": "Advances the shared 64-bit linear congruential random state and returns its high word, optionally scaled to the requested range.",
+      "evidence": "LCG state fields and 64-bit arithmetic in source.",
+      "uncertainty": "The source claim that this is the game-wide generator is caller-supported in reference; target callers should confirm.",
+      "domain": "graphics",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "arm9",
+      "symbol": "func_0202aa04",
+      "language": "c",
+      "source": "src/arm9/graphics/random_next_scaled_0202aa04.c",
+      "source_symbol": "random_next_scaled_0202aa04",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "data_020604d8": "0x20604d8"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/calls/func_02023eb4.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "sound_command_tag_reached",
+      "behavior": "Compares a requested tag with the current sound command tag using wraparound-aware unsigned sequence ordering.",
+      "evidence": "Interrupt-protected read of command manager tag and half-range comparisons in source.",
+      "uncertainty": "Return convention is boolean-like but callers determine its label.",
+      "domain": "audio",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "arm9",
+      "symbol": "func_0200f2b4",
+      "language": "c",
+      "source": "src/arm9/audio/sound_command_tag_reached_0200f2b4.c",
+      "source_symbol": "sound_command_tag_reached_0200f2b4",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "OS_DisableInterrupts": "0x2004938",
+        "OS_RestoreInterrupts": "0x200494c",
+        "data_02057c50": "0x2057c50"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/calls/func_02008a14.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "copy_padded_utf16_string",
+      "behavior": "Copies up to a fixed number of 16-bit units, then zero-fills remaining units after a copied terminator.",
+      "evidence": "Loop, terminator check, padding, and return value in source.",
+      "uncertainty": "This is a bounded UTF-16 style copy; callers define whether units are text.",
+      "domain": "runtime",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "arm9",
+      "symbol": "func_02022a74",
+      "language": "c",
+      "source": "src/arm9/runtime/copy_padded_utf16_string_02022a74.c",
+      "source_symbol": "copy_padded_utf16_string_02022a74",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {},
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/auto/func_02020104.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "func_0204f58c",
+      "behavior": "Clears a record, copies two nonnegative limits from an optional source with defaults, and clears the remaining short body.",
+      "evidence": "Clear sizes, source tests, defaults, and short stores in source.",
+      "uncertainty": "Meaning of the two limits is not established.",
+      "domain": "runtime",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "unknown",
+      "module": "arm9",
+      "symbol": "func_0204f58c",
+      "language": "c",
+      "source": "src/arm9/runtime/func_0204f58c.c",
+      "source_symbol": "func_0204f58c",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "thumb",
+      "bindings": {
+        "MI_CpuFill8": "0x1ff8830",
+        "MIi_CpuClear16": "0x1ff8684"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/calls/func_02036298.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "sound_setup_pcm_channel",
+      "behavior": "Packs PCM channel parameters into sound command words and queues the setup command.",
+      "evidence": "Parameter packing and command id `0xe` in source.",
+      "uncertainty": "Field encodings follow the NitroSDK sound command format.",
+      "domain": "audio",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "arm9",
+      "symbol": "func_0200ec28",
+      "language": "c",
+      "source": "src/arm9/audio/sound_setup_pcm_channel_0200ec28.c",
+      "source_symbol": "sound_setup_pcm_channel_0200ec28",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "PushCommand_impl": "0x200ed4c"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/calls/SND_SetupChannelPcm.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "set_frame_texture_vram_slot_order",
+      "behavior": "Sets the five frame texture VRAM slot pointers to the requested entries.",
+      "evidence": "Re:coded caller func_0201389c initializes the frame texture VRAM manager, selecting one of two fixed five-index orderings based on its requested slot count.",
+      "uncertainty": "The five entries internal fields remain opaque; no party or character meaning is established.",
+      "domain": "graphics",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "arm9",
+      "symbol": "func_020137b0",
+      "language": "c",
+      "source": "src/arm9/graphics/set_frame_texture_vram_slot_order_020137b0.c",
+      "source_symbol": "set_frame_texture_vram_slot_order_020137b0",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "data_02055c78": "0x2055c78",
+        "data_02055c5c": "0x2055c5c"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/calls/func_02010e38.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "set_engine_alpha_blend",
+      "behavior": "Sets alpha blend registers on one of two engines according to an object mode field.",
+      "evidence": "Mode read at +0x4604 and distinct register constants in source.",
+      "uncertainty": "The mode-to-engine mapping is direct; alpha range depends on caller.",
+      "domain": "graphics",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "arm9",
+      "symbol": "func_0204f400",
+      "language": "c",
+      "source": "src/arm9/graphics/set_engine_alpha_blend_0204f400.c",
+      "source_symbol": "set_engine_alpha_blend_0204f400",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "G2x_SetBlendAlpha_": "0x2006850"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/calls/func_02032798.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "apply_pending_display_vram_mode",
+      "behavior": "Marks a pending display configuration as consumed and updates DISPCNT bits 16-17 from the queued value or default bit.",
+      "evidence": "Global pending values and DISPCNT bit operations in source.",
+      "uncertainty": "Exact queued mode encoding is SDK-defined.",
+      "domain": "graphics",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "arm9",
+      "symbol": "func_02006680",
+      "language": "c",
+      "source": "src/arm9/graphics/apply_pending_display_vram_mode_02006680.c",
+      "source_symbol": "apply_pending_display_vram_mode_02006680",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "data_02056f08": "0x2056f08",
+        "data_02055c18": "0x2055c18"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/calls/func_0200566c.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "func_0202d204",
+      "behavior": "Calls the registered callback with a payload address and two values decoded from a record, then marks the record flag.",
+      "evidence": "Callback pointer, field offsets, shifts, and flag bit in source.",
+      "uncertainty": "Payload format and units remain unknown.",
+      "domain": "runtime",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "unknown",
+      "module": "arm9",
+      "symbol": "func_0202d204",
+      "language": "c",
+      "source": "src/arm9/runtime/func_0202d204.c",
+      "source_symbol": "func_0202d204",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "data_02060574": "0x2060574"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/calls/func_02025420.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "func_0202b5d4",
+      "behavior": "Starts a resource operation, selects operation 2, and returns whether its status query is zero.",
+      "evidence": "Three helper calls and returned comparison in source.",
+      "uncertainty": "Exact resource operation is opaque.",
+      "domain": "runtime",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "unknown",
+      "module": "arm9",
+      "symbol": "func_0202b5d4",
+      "language": "c",
+      "source": "src/arm9/runtime/func_0202b5d4.c",
+      "source_symbol": "func_0202b5d4",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_0200fdd8": "0x200fdd9",
+        "func_0201018c": "0x201018d",
+        "func_0201019c": "0x201019d",
+        "data_02060534": "0x2060534"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/calls/func_02024d68.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "Script_SetActorAnimationFrame",
+      "behavior": "Sets an actor's selected animation track to a requested frame, wrapping once past the clip's end.",
+      "evidence": "Actual Re:coded ITCM 0x01ffb2f8 selects an animation track, writes its frame, reads the clip duration, and subtracts it once when needed. Entity-ID helper 0x02025960 passes the operand through.",
+      "uncertainty": "Which actor or animation layer each script operand selects remains untraced. Frame values far beyond the duration are not repeatedly wrapped.",
+      "domain": "actor_animation",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "gameplay",
+      "module": "ov001",
+      "symbol": "func_ov001_0208df04",
+      "language": "c",
+      "source": "src/ov001/actor_animation/Script_SetActorAnimationFrame_0208df04.c",
+      "source_symbol": "Script_SetActorAnimationFrame_0208df04",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "thumb",
+      "bindings": {
+        "func_02025de4": "0x2025de5",
+        "func_02025df8": "0x2025df9",
+        "func_02025960": "0x2025961",
+        "func_02036240": "0x2036240",
+        "Animation_SetFrameWithSingleWrap": "0x1ffb2f8"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/overlays/ov023/calls/func_ov023_020862e8.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "func_ov027_020b96a0",
+      "behavior": "Checks two record fields and forwards each value that is not -1 with the supplied context and mode.",
+      "evidence": "Indices 5 and 6 and sentinel check in source.",
+      "uncertainty": "Meaning of the two record entries and helper operation are not established.",
+      "domain": "runtime",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "unknown",
+      "module": "ov027",
+      "symbol": "func_ov027_020b96a0",
+      "language": "c",
+      "source": "src/ov027/runtime/func_ov027_020b96a0.c",
+      "source_symbol": "func_ov027_020b96a0",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_0204f204": "0x204f204"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/overlays/ov000/calls/func_ov000_02055e10.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "func_ov027_020b97b8",
+      "behavior": "Checks two record fields and forwards each value that is not -1 with the supplied context and mode.",
+      "evidence": "Indices 5 and 6 and sentinel check in source.",
+      "uncertainty": "Meaning of the two record entries and helper operation are not established.",
+      "domain": "runtime",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "unknown",
+      "module": "ov027",
+      "symbol": "func_ov027_020b97b8",
+      "language": "c",
+      "source": "src/ov027/runtime/func_ov027_020b97b8.c",
+      "source_symbol": "func_ov027_020b97b8",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_0204f480": "0x204f480"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/overlays/ov000/calls/func_ov000_02055e10.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "initialize_irq_backed_timer_state",
+      "behavior": "Initializes shared timer state once, masks timer IRQs, and clears the related counters.",
+      "evidence": "State guard, counter writes, and IRQ mask call in source.",
+      "uncertainty": "Timer subsystem association is inferred from nearby sibling routines.",
+      "domain": "runtime",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "arm9",
+      "symbol": "func_02004528",
+      "language": "c",
+      "source": "src/arm9/runtime/initialize_irq_backed_timer_state_02004528.c",
+      "source_symbol": "initialize_irq_backed_timer_state_02004528",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "OS_DisableIrqMask": "0x2001f8c",
+        "data_02056eb0": "0x2056eb0"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/calls/func_020037a0.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "func_0202c438",
+      "behavior": "Conditionally invokes a helper on an embedded block based on resource state and an object flag.",
+      "evidence": "Global state checks and computed pointer offsets in source.",
+      "uncertainty": "Specific resource and operation are not established.",
+      "domain": "runtime",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "unknown",
+      "module": "arm9",
+      "symbol": "func_0202c438",
+      "language": "c",
+      "source": "src/arm9/runtime/func_0202c438.c",
+      "source_symbol": "func_0202c438",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_02002aa8": "0x2002aa8",
+        "data_02060564": "0x2060564"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/calls/func_0201ef58.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "unlink_intrusive_list_node",
+      "behavior": "Removes a doubly linked node from a list, updating its neighbors and head when needed, then clears the node links.",
+      "evidence": "Pointer rewiring operations in source.",
+      "uncertainty": "The two-word node layout and head pointer are directly visible.",
+      "domain": "runtime",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "arm9",
+      "symbol": "func_0204e904",
+      "language": "c",
+      "source": "src/arm9/runtime/unlink_intrusive_list_node_0204e904.c",
+      "source_symbol": "unlink_intrusive_list_node_0204e904",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {},
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/auto/func_02031df0.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "advance_wireless_task_step",
+      "behavior": "Runs task step 3, waits while its asynchronous subtask is pending, then performs completion and advances to step 9.",
+      "evidence": "State calls and asynchronous status comparison in source.",
+      "uncertainty": "Task purpose is not evident from this small wrapper.",
+      "domain": "wireless",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "ov015",
+      "symbol": "func_ov015_020737f0",
+      "language": "c",
+      "source": "src/ov015/wireless/advance_wireless_task_step_020737f0.c",
+      "source_symbol": "advance_wireless_task_step_020737f0",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_020737c4": "0x20737c4",
+        "func_02011738": "0x2011739",
+        "func_020737d4": "0x20737d4",
+        "func_02073830": "0x2073830",
+        "data_0207ea20": "0x207ea20"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/overlays/ov105/calls/func_ov105_020be4c8.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "end_key_share_and_register_result",
+      "behavior": "Ends a key-sharing operation, then passes its returned object to two follow-up helpers and returns it.",
+      "evidence": "Call sequence and result flow in source.",
+      "uncertainty": "Exact role of the two follow-up calls is opaque.",
+      "domain": "wireless",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "ov004",
+      "symbol": "func_ov004_02063558",
+      "language": "c",
+      "source": "src/ov004/wireless/end_key_share_and_register_result_02063558.c",
+      "source_symbol": "end_key_share_and_register_result_02063558",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "WM_EndKeySharing_0x02032444": "0x204f0b4",
+        "func_0204f480": "0x204f480",
+        "func_0204f378": "0x204f378"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/overlays/ov011/calls/func_ov011_0205d664.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "get_cached_movie_decoder_code",
+      "behavior": "Returns a cached decoder code pointer, copying the embedded code into a fast-memory arena when capacity permits.",
+      "evidence": "Cache slots, size `0x659c`, copy call, and fallback path in source.",
+      "uncertainty": "Fast-memory arena layout is opaque outside the movie module.",
+      "domain": "movie",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "ov022",
+      "symbol": "func_ov022_020aa8fc",
+      "language": "c",
+      "source": "src/ov022/movie/get_cached_movie_decoder_code_020aa8fc.c",
+      "source_symbol": "get_cached_movie_decoder_code_020aa8fc",
+      "compiler": "mwccarm-3.0-139",
+      "mode": "arm",
+      "bindings": {
+        "MIi_CpuCopyFast": "0x1ff878c",
+        "data_020b7df4": "0x20b7df4",
+        "data_020b0ba0": "0x20b0ba0"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/overlays/ov024/calls/func_ov024_02086620.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "get_cached_movie_saturation_table",
+      "behavior": "Returns a cached movie saturation table, copying its 0x300 bytes into a fast-memory arena when possible.",
+      "evidence": "Cache slot, byte count, copy, and fallback path in source.",
+      "uncertainty": "Table interpretation comes from read-only local reference analysis.",
+      "domain": "movie",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "ov022",
+      "symbol": "func_ov022_020aa9e8",
+      "language": "c",
+      "source": "src/ov022/movie/get_cached_movie_saturation_table_020aa9e8.c",
+      "source_symbol": "get_cached_movie_saturation_table_020aa9e8",
+      "compiler": "mwccarm-3.0-139",
+      "mode": "arm",
+      "bindings": {
+        "MIi_CpuCopyFast": "0x1ff878c",
+        "data_020b7df4": "0x20b7df4",
+        "data_020b7808": "0x20b7808"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/overlays/ov024/calls/func_ov024_0208670c.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "build_and_place_record_sprites",
+      "behavior": "Walks variable-stride records, maps each kind to a priority, creates a sprite, and places it at the record coordinates.",
+      "evidence": "Record count/stride, kind lookup, sprite constructor, and placement helper in source.",
+      "uncertainty": "Exact record type and sprite semantic role remain unknown.",
+      "domain": "runtime",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "ov027",
+      "symbol": "func_ov027_020b77c0",
+      "language": "c",
+      "source": "src/ov027/runtime/build_and_place_record_sprites_020b77c0.c",
+      "source_symbol": "build_and_place_record_sprites_020b77c0",
+      "compiler": "mwccarm-3.0-139",
+      "mode": "thumb",
+      "bindings": {
+        "func_020b7e5c": "0x20b7e5c",
+        "func_020b81e8": "0x20b81e8",
+        "data_020ba368": "0x20ba368",
+        "data_020ba364": "0x20ba364"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/overlays/ov000/calls/func_ov000_02055ee4.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "G3X_InitMtxStack",
+      "behavior": "Resets the hardware 3D matrix stacks and matrix mode.",
+      "evidence": "Enables stack status, waits for projection/vector stack levels, then pops and loads identity matrices.",
+      "uncertainty": "Hardware register meaning follows Nitro 3D register names; no game-specific behavior.",
+      "domain": "graphics",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "arm9",
+      "symbol": "func_02006a68",
+      "language": "c",
+      "source": "src/arm9/graphics/G3X_InitMtxStack_02006a68.c",
+      "source_symbol": "G3X_InitMtxStack_02006a68",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "G3X_GetMtxStackLevelPV": "0x2006ce4",
+        "G3X_GetMtxStackLevelPJ": "0x2006d10"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/calls/G3X_InitMtxStack.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "func_0202eaf4",
+      "behavior": "Releases lists of shared resources and clears one associated state field.",
+      "evidence": "Walks five count/pointer slots in reverse, ends sharing for their entries, frees the last nonzero allocation found, then releases and clears slot 3.",
+      "uncertainty": "The exact resource type behind the sharing calls and final release helpers is not established.",
+      "domain": "resource management",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "unknown",
+      "module": "arm9",
+      "symbol": "func_0202eaf4",
+      "language": "c",
+      "source": "src/arm9/resource_management/func_0202eaf4.c",
+      "source_symbol": "func_0202eaf4",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "NNSi_FndGetAllocatorForDefaultHeap": "0x202a268",
+        "WM_EndKeySharing_0x0201696c": "0x201a3b8",
+        "NNSi_FndFreeFromDefaultHeap": "0x202a1c4",
+        "func_0202ca18": "0x202ca18",
+        "func_0202c8a8": "0x202c8a8"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/calls/func_0202a440.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "findSharedResourceByName",
+      "behavior": "Searches a packed table for a name matching the supplied string.",
+      "evidence": "Gets the string length, derives the entry list after a variable-sized header, and returns the first matching entry index or -1.",
+      "uncertainty": "Table entry layout and the compared key encoding are only partially known.",
+      "domain": "resource management",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "arm9",
+      "symbol": "func_0202cd8c",
+      "language": "c",
+      "source": "src/arm9/resource_management/findSharedResourceByName_0202cd8c.c",
+      "source_symbol": "findSharedResourceByName_0202cd8c",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "strlen": "0x2021e44",
+        "WM_EndKeySharing_0x0202019c": "0x2022ae4"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/calls/func_02024fe8.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "findLargestAlignedHeapBlock",
+      "behavior": "Finds the largest available aligned span among heap blocks.",
+      "evidence": "Walks the block list, aligns each payload start, and tracks the largest remaining size, preferring less padding on ties.",
+      "uncertainty": "Heap block header offsets are inferred from this traversal; the function returns size, not a block pointer.",
+      "domain": "memory",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "arm9",
+      "symbol": "func_02013304",
+      "language": "c",
+      "source": "src/arm9/memory/findLargestAlignedHeapBlock_02013304.c",
+      "source_symbol": "findLargestAlignedHeapBlock_02013304",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "abs": "0x202198c"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/calls/func_020109c8.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "updateActorTransitionParameterRampCommand",
+      "behavior": "Updates a script command that ramps an actor transition parameter over several frames.",
+      "evidence": "Reads actor/from/to/frame operands, decrements remaining frames, interpolates the transition parameter, requeues until complete, and returns completion status.",
+      "uncertainty": "A script-driven actor transition is supported by the matching helpers and argument pattern; the virtual method selector 1 implementation and parameter meaning are not established.",
+      "domain": "scripted actor behavior",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "gameplay",
+      "module": "ov001",
+      "symbol": "func_ov001_0208cb14",
+      "language": "c",
+      "source": "src/ov001/scripted_actor_behavior/updateActorTransitionParameterRampCommand_0208cb14.c",
+      "source_symbol": "updateActorTransitionParameterRampCommand_0208cb14",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "thumb",
+      "bindings": {
+        "func_02025de4": "0x2025de5",
+        "func_02025df8": "0x2025df9",
+        "func_02036240": "0x2036240",
+        "func_02036198": "0x2036198",
+        "func_02025718": "0x2025719",
+        "func_020257b0": "0x20257b1",
+        "func_02025e18": "0x2025e19"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/overlays/ov023/calls/func_ov023_020845a0.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "openFileFromNitroRomArchive",
+      "behavior": "Opens a file directly from a Nitro ROM archive table.",
+      "evidence": "Decodes archive base, file index, start sector and stored length, then calls FS_OpenFileDirect.",
+      "uncertainty": "ROM header offsets and bit fields follow the Nintendo DS archive layout; archive identity is not known.",
+      "domain": "filesystem",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "arm9",
+      "symbol": "func_0202ce60",
+      "language": "c",
+      "source": "src/arm9/filesystem/openFileFromNitroRomArchive_0202ce60.c",
+      "source_symbol": "openFileFromNitroRomArchive_0202ce60",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "FS_OpenFileDirect": "0x200b494"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/calls/func_020250bc.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "setStopwatchHeld",
+      "behavior": "Toggles a stopwatch between running and held states while preserving elapsed ticks.",
+      "evidence": "On a state transition, subtracts the stored tick value from the current hardware tick count and updates the held bit.",
+      "uncertainty": "The structure's unrelated fields are unknown; elapsed-tick interpretation follows both subtraction branches.",
+      "domain": "timing",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "arm9",
+      "symbol": "func_02052648",
+      "language": "c",
+      "source": "src/arm9/timing/setStopwatchHeld_02052648.c",
+      "source_symbol": "setStopwatchHeld_02052648",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_02003fd4": "0x2003fd4"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/calls/func_02036104.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "dispatchMenuHandlerPairAt1c",
+      "behavior": "Tries two currently selected menu handler methods in order.",
+      "evidence": "Calls the first handler when its argument is nonzero; if unhandled, calls the second handler when its argument is nonzero.",
+      "uncertainty": "The handler method offsets and tables are known, but event meaning is not.",
+      "domain": "menu dispatch",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "ov039",
+      "symbol": "func_ov039_020bd174",
+      "language": "c",
+      "source": "src/ov039/menu_dispatch/dispatchMenuHandlerPairAt1c_020bd174.c",
+      "source_symbol": "dispatchMenuHandlerPairAt1c_020bd174",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_020bcd98": "0x20bcd98",
+        "data_020bea84": "0x20bea84",
+        "data_020be930": "0x20be930",
+        "data_020be8d0": "0x20be8d0"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/overlays/ov008/calls/func_ov008_020515f0.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "dispatchMenuHandlerPairAt28",
+      "behavior": "Tries two currently selected menu handler methods in order.",
+      "evidence": "Calls the first handler when its argument is nonzero; if unhandled, calls the second handler when its argument is nonzero.",
+      "uncertainty": "The handler method offsets and tables are known, but event meaning is not.",
+      "domain": "menu dispatch",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "ov039",
+      "symbol": "func_ov039_020bd2dc",
+      "language": "c",
+      "source": "src/ov039/menu_dispatch/dispatchMenuHandlerPairAt28_020bd2dc.c",
+      "source_symbol": "dispatchMenuHandlerPairAt28_020bd2dc",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_020bcd98": "0x20bcd98",
+        "data_020bea84": "0x20bea84",
+        "data_020be930": "0x20be930",
+        "data_020be8d0": "0x20be8d0"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/overlays/ov008/calls/func_ov008_02051758.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "dispatchMenuHandlerPairAt34",
+      "behavior": "Tries two currently selected menu handler methods in order.",
+      "evidence": "Calls the first handler when its argument is nonzero; if unhandled, calls the second handler when its argument is nonzero.",
+      "uncertainty": "The handler method offsets and tables are known, but event meaning is not.",
+      "domain": "menu dispatch",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "ov039",
+      "symbol": "func_ov039_020bd444",
+      "language": "c",
+      "source": "src/ov039/menu_dispatch/dispatchMenuHandlerPairAt34_020bd444.c",
+      "source_symbol": "dispatchMenuHandlerPairAt34_020bd444",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_020bcd98": "0x20bcd98",
+        "data_020bea84": "0x20bea84",
+        "data_020be930": "0x20be930",
+        "data_020be8d0": "0x20be8d0"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/overlays/ov008/calls/func_ov008_020518c0.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "dispatchMenuHandlerPairAt40",
+      "behavior": "Tries two currently selected menu handler methods in order.",
+      "evidence": "Calls the first handler when its argument is nonzero; if unhandled, calls the second handler when its argument is nonzero.",
+      "uncertainty": "The handler method offsets and tables are known, but event meaning is not.",
+      "domain": "menu dispatch",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "ov039",
+      "symbol": "func_ov039_020bd5ac",
+      "language": "c",
+      "source": "src/ov039/menu_dispatch/dispatchMenuHandlerPairAt40_020bd5ac.c",
+      "source_symbol": "dispatchMenuHandlerPairAt40_020bd5ac",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_020bcd98": "0x20bcd98",
+        "data_020bea84": "0x20bea84",
+        "data_020be930": "0x20be930",
+        "data_020be8d0": "0x20be8d0"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/overlays/ov008/calls/func_ov008_02051a28.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "func_ov027_020b79bc",
+      "behavior": "Copies an eight-byte value into an available record selected from a four-entry list.",
+      "evidence": "Scans records backward for a zero marker and copies to that entry, falling back to the last entry.",
+      "uncertainty": "Record marker and list helper semantics are unknown; argument a is unused by the recovered body.",
+      "domain": "record management",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "unknown",
+      "module": "ov027",
+      "symbol": "func_ov027_020b79bc",
+      "language": "c",
+      "source": "src/ov027/record_management/func_ov027_020b79bc.c",
+      "source_symbol": "func_ov027_020b79bc",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_0202b6d0": "0x202b6d0",
+        "MI_CpuCopy8": "0x1ff89a8"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/overlays/ov000/calls/func_ov000_020560d0.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "getCachedConcatenatedMatrix",
+      "behavior": "Lazily composes two matrices and returns the cached result.",
+      "evidence": "When the cache flag is clear, expands a 4 by 3 matrix, concatenates it with another matrix, sets the flag, and returns the result buffer.",
+      "uncertainty": "Matrix order follows the call arguments; the associated transform's purpose is unknown.",
+      "domain": "graphics",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "arm9",
+      "symbol": "func_020196c0",
+      "language": "c",
+      "source": "src/arm9/graphics/getCachedConcatenatedMatrix_020196c0.c",
+      "source_symbol": "getCachedConcatenatedMatrix_020196c0",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_02019378": "0x2019378",
+        "func_020195b4": "0x20195b4",
+        "MTX_Copy43To44_": "0x1ff94a8",
+        "MTX_Concat44": "0x2005a08",
+        "data_0205a924": "0x205a924",
+        "data_0205aafc": "0x205aafc"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/calls/func_02015c38.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "advanceTextStringCursor",
+      "behavior": "Advances a text cursor past one encoded glyph or control token.",
+      "evidence": "Advances by one, two or three bytes based on the lead byte; control code 3 consumes one extra byte and returns a line-break indicator.",
+      "uncertainty": "Encoding is a limited UTF-8-like scheme with control tokens, not a full Unicode decoder.",
+      "domain": "text rendering",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "ov001",
+      "symbol": "func_ov001_0208c474",
+      "language": "c",
+      "source": "src/ov001/text_rendering/advanceTextStringCursor_0208c474.c",
+      "source_symbol": "advanceTextStringCursor_0208c474",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "thumb",
+      "bindings": {},
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/overlays/ov002/auto/func_ov002_020754bc.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "GX_InitGXState",
+      "behavior": "Clears the software VRAM bank state and disables the VRAM bank registers.",
+      "evidence": "Zeros thirteen halfwords in the state mirror and clears VRAM control registers A through I.",
+      "uncertainty": "The software fields' individual meanings are not established by this function.",
+      "domain": "graphics",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "arm9",
+      "symbol": "func_02008f90",
+      "language": "c",
+      "source": "src/arm9/graphics/GX_InitGXState_02008f90.c",
+      "source_symbol": "GX_InitGXState_02008f90",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "data_02056f48": "0x2056f48"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/calls/GX_InitGXState.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "addScaledVector",
+      "behavior": "Adds a scaled fixed point vector to a base vector.",
+      "evidence": "For each axis computes base + (scale times vector shifted by 27).",
+      "uncertainty": "The unusual shift is preserved exactly; interpretation as a normalized scale depends on caller units.",
+      "domain": "math",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "arm9",
+      "symbol": "func_020301ac",
+      "language": "c",
+      "source": "src/arm9/math/addScaledVector_020301ac.c",
+      "source_symbol": "addScaledVector_020301ac",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {},
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/calls/func_01ffd0e8.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "Script_MakeActorTranslucentAndClearVerticalOffset",
+      "behavior": "A script command makes an actor's model translucent and clears its node offset's Y component.",
+      "evidence": "Reads an entity index directly, preserves node offset X/Z and clears Y, sets all material alpha values to 8, and sets all model polygon IDs to 0x3f.",
+      "uncertainty": "The reason for combining the vertical offset reset with the model render settings is unknown.",
+      "domain": "scripted actor behavior",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "gameplay",
+      "module": "ov001",
+      "symbol": "func_ov001_0208deb0",
+      "language": "c",
+      "source": "src/ov001/scripted_actor_behavior/Script_MakeActorTranslucentAndClearVerticalOffset_0208deb0.c",
+      "source_symbol": "Script_MakeActorTranslucentAndClearVerticalOffset_0208deb0",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "thumb",
+      "bindings": {
+        "func_02025de4": "0x2025de5",
+        "func_02025960": "0x2025961",
+        "func_02036240": "0x2036240",
+        "Model_SetAllMaterialAlpha": "0x201a900",
+        "Model_SetAllPolygonIds": "0x201a8c0"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/overlays/ov023/calls/func_ov023_020860b4.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "nextRandom12",
+      "behavior": "Advances the global 64-bit linear congruential generator and returns twelve high bits.",
+      "evidence": "Updates seed = seed times multiplier plus increment, then returns the new seed's top twelve bits.",
+      "uncertainty": "The state fields are structurally clear; callers' random-number use is unknown.",
+      "domain": "random number generation",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "arm9",
+      "symbol": "func_0202aa58",
+      "language": "c",
+      "source": "src/arm9/random_number_generation/nextRandom12_0202aa58.c",
+      "source_symbol": "nextRandom12_0202aa58",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "data_020604d8": "0x20604d8"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/auto/func_02023f08.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "func_ov027_020b789c",
+      "behavior": "Searches an entry array for an active item with the requested identifier.",
+      "evidence": "Checks the active marker and ID, then returns the matching slot or the one-past-end slot when absent.",
+      "uncertainty": "Return-on-miss behavior follows the loop and is not a null result.",
+      "domain": "record management",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "unknown",
+      "module": "ov027",
+      "symbol": "func_ov027_020b789c",
+      "language": "c",
+      "source": "src/ov027/record_management/func_ov027_020b789c.c",
+      "source_symbol": "func_ov027_020b789c",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {},
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/overlays/ov000/auto/func_ov000_02055fc0.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "func_ov027_020b8558",
+      "behavior": "Searches an entry array for an active item with the requested identifier.",
+      "evidence": "Checks the active marker and ID, then returns the matching slot or the one-past-end slot when absent.",
+      "uncertainty": "Return-on-miss behavior follows the loop and is not a null result.",
+      "domain": "record management",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "unknown",
+      "module": "ov027",
+      "symbol": "func_ov027_020b8558",
+      "language": "c",
+      "source": "src/ov027/record_management/func_ov027_020b8558.c",
+      "source_symbol": "func_ov027_020b8558",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {},
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/overlays/ov000/auto/func_ov000_02055fc0.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "setMaterialColorScale",
+      "behavior": "Unpacks a 15-bit RGB value into three material color scale channels.",
+      "evidence": "Sets an enable word and extracts three five-bit channels, storing each plus one.",
+      "uncertainty": "Meaning of the enable word is inferred from adjacent material state, not present here.",
+      "domain": "graphics",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "itcm",
+      "symbol": "func_01fff67c",
+      "language": "c",
+      "source": "src/itcm/graphics/setMaterialColorScale_01fff67c.c",
+      "source_symbol": "setMaterialColorScale_01fff67c",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "data_027e01f0": "0x27e01f0",
+        "data_027e01ec": "0x27e01ec"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/calls/func_01ffcec0.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "func_ov027_020b7934",
+      "behavior": "Returns the first array entry whose second one-bit flag is clear.",
+      "evidence": "Scans up to the stored entry count and returns the first entry with b1 clear, or the end slot.",
+      "uncertainty": "The flag's application-level meaning and miss handling are unknown.",
+      "domain": "record management",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "unknown",
+      "module": "ov027",
+      "symbol": "func_ov027_020b7934",
+      "language": "c",
+      "source": "src/ov027/record_management/func_ov027_020b7934.c",
+      "source_symbol": "func_ov027_020b7934",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {},
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/overlays/ov000/auto/func_ov000_02056050.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "func_02052514",
+      "behavior": "Clears a 0x1c-byte record, stores four supplied values, and clears three low flag bits.",
+      "evidence": "The body performs a zero-fill, four field assignments, and three bit clears.",
+      "uncertainty": "Record field purposes are unknown; field layout is retained from the source.",
+      "domain": "record management",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "unknown",
+      "module": "arm9",
+      "symbol": "func_02052514",
+      "language": "c",
+      "source": "src/arm9/record_management/func_02052514.c",
+      "source_symbol": "func_02052514",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "MI_CpuFill8": "0x1ff8830"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/calls/func_02035fb0.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "hasAngleBracketTerminator",
+      "behavior": "Checks whether a zero-terminated 16-bit string starts with '<' or ends with '>'.",
+      "evidence": "Returns true for leading 0x3c, otherwise scans to NUL and checks trailing 0x3e, with a mode-2 override.",
+      "uncertainty": "The string's format and the override mode meaning are unknown.",
+      "domain": "text processing",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "ov004",
+      "symbol": "func_ov004_02062d78",
+      "language": "c",
+      "source": "src/ov004/text_processing/hasAngleBracketTerminator_02062d78.c",
+      "source_symbol": "hasAngleBracketTerminator_02062d78",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {},
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/overlays/ov011/auto/func_ov011_0205cfa8.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "func_0204f0c0",
+      "behavior": "Releases one indexed 0x8c-byte record when its active bit is set.",
+      "evidence": "Rejects negative index or inactive record, calls a release helper, then clears the active bit.",
+      "uncertainty": "Record layout and release-helper semantics are only known from offsets.",
+      "domain": "record management",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "unknown",
+      "module": "arm9",
+      "symbol": "func_0204f0c0",
+      "language": "c",
+      "source": "src/arm9/record_management/func_0204f0c0.c",
+      "source_symbol": "func_0204f0c0",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_0204e904": "0x204e904"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/calls/func_02032450.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "func_0204d7b0",
+      "behavior": "Stores a value in an existing pending record or asks a helper to create/update that record.",
+      "evidence": "When state is absent or has a different tag, calls a helper; otherwise writes byte 1, then returns success.",
+      "uncertainty": "The record tag and value's meaning are unknown.",
+      "domain": "state management",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "unknown",
+      "module": "arm9",
+      "symbol": "func_0204d7b0",
+      "language": "c",
+      "source": "src/arm9/state_management/func_0204d7b0.c",
+      "source_symbol": "func_0204d7b0",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_0204cf58": "0x204cf58",
+        "func_0204ce84": "0x204ce84"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/calls/func_02033660.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "readInvalidatedHalfwordEntry",
+      "behavior": "Invalidates the cache for and reads one halfword from a two-dimensional table.",
+      "evidence": "Computes base + 0x20 + row*0x24 + column*2, invalidates two bytes, then reads a signed halfword.",
+      "uncertainty": "The table's semantic fields are unknown.",
+      "domain": "data access",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "arm9",
+      "symbol": "func_0200f5c4",
+      "language": "c",
+      "source": "src/arm9/data_access/readInvalidatedHalfwordEntry_0200f5c4.c",
+      "source_symbol": "readInvalidatedHalfwordEntry_0200f5c4",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "DC_InvalidateRange": "0x2003414",
+        "data_02059780": "0x2059780"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/calls/func_02008d1c.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "func_ov027_020b80f0",
+      "behavior": "Allocates a record, initializes its key and owner, registers it, and marks it active.",
+      "evidence": "Gets a record, zeroes 16 bytes, stores two values, registers its embedded field, sets the active word, and returns its address.",
+      "uncertainty": "Record field roles are suggested by use but allocation/registration subsystem is not established.",
+      "domain": "record management",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "unknown",
+      "module": "ov027",
+      "symbol": "func_ov027_020b80f0",
+      "language": "c",
+      "source": "src/ov027/record_management/func_ov027_020b80f0.c",
+      "source_symbol": "func_ov027_020b80f0",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_020b7980": "0x20b7980",
+        "MI_CpuFill8": "0x1ff8830",
+        "func_02014dd0": "0x2014dd0"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/overlays/ov000/calls/func_ov000_0205677c.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "allocateAndOptionallyClearBuffer",
+      "behavior": "Obtains a buffer from an object and clears it when a flag requests initialization.",
+      "evidence": "Calls an allocator/helper with an embedded field address; on non-null result, conditionally zeroes the returned buffer for the stored size.",
+      "uncertainty": "The object fields' higher-level meaning is unknown; helper identifiers remain address based.",
+      "domain": "memory",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "arm9",
+      "symbol": "func_02013624",
+      "language": "c",
+      "source": "src/arm9/memory/allocateAndOptionallyClearBuffer_02013624.c",
+      "source_symbol": "allocateAndOptionallyClearBuffer_02013624",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_0201360c": "0x201360c",
+        "INITi_CpuClear32_0x01ff86fc": "0x1ff86fc"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/calls/func_02010ce4.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "getCachedMatrix43",
+      "behavior": "Lazily fills and returns a cached matrix buffer.",
+      "evidence": "If a global state bit is clear, calls a matrix helper to populate the buffer and sets the bit.",
+      "uncertainty": "Exact matrix form and transform meaning are inferred from names/size only.",
+      "domain": "graphics",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "arm9",
+      "symbol": "func_020195b4",
+      "language": "c",
+      "source": "src/arm9/graphics/getCachedMatrix43_020195b4.c",
+      "source_symbol": "getCachedMatrix43_020195b4",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_020193b8": "0x20193b8",
+        "data_0205a924": "0x205a924",
+        "data_0205a92c": "0x205a92c",
+        "data_0205aabc": "0x205aabc"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/calls/func_02015b2c.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "compareByteStrings",
+      "behavior": "Compares two byte sequences lexicographically for a specified length.",
+      "evidence": "Returns zero when all bytes match, otherwise -1 or 1 based on the first differing unsigned byte.",
+      "uncertainty": "This is a bounded byte comparison; it does not look for NUL terminators.",
+      "domain": "utility",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "arm9",
+      "symbol": "func_02021c54",
+      "language": "c",
+      "source": "src/arm9/utility/compareByteStrings_02021c54.c",
+      "source_symbol": "compareByteStrings_02021c54",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {},
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/auto/func_0201f844.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "openVideoStreamFromHeader",
+      "behavior": "Prepares a local video header copy and passes it to a stream-opening helper.",
+      "evidence": "Calls a header conversion helper into an eight-halfword local array, then forwards it with the context and other arguments.",
+      "uncertainty": "Video stream interpretation comes from nearby media functions; helper internals are not included.",
+      "domain": "video playback",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "ov003",
+      "symbol": "func_ov003_02064934",
+      "language": "c",
+      "source": "src/ov003/video_playback/openVideoStreamFromHeader_02064934.c",
+      "source_symbol": "openVideoStreamFromHeader_02064934",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_02064864": "0x2064864",
+        "func_02001494": "0x2001495"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/overlays/ov024/calls/func_ov024_02083590.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "openVideoStreamFromHeader",
+      "behavior": "Prepares a local video header copy and passes it to a stream-opening helper.",
+      "evidence": "Calls a header conversion helper into an eight-halfword local array, then forwards it with the context and other arguments.",
+      "uncertainty": "Video stream interpretation comes from nearby media functions; helper internals are not included.",
+      "domain": "video playback",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "ov022",
+      "symbol": "func_ov022_020a8a04",
+      "language": "c",
+      "source": "src/ov022/video_playback/openVideoStreamFromHeader_020a8a04.c",
+      "source_symbol": "openVideoStreamFromHeader_020a8a04",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_020a8934": "0x20a8934",
+        "func_02001494": "0x2001495"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/overlays/ov024/calls/func_ov024_02083590.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "dispatchSelectedMenuCallback",
+      "behavior": "Calls the currently selected menu callback when a valid selection exists.",
+      "evidence": "Uses dispatch index 1 to select a table entry; returns 1 for no selection, otherwise callback result.",
+      "uncertainty": "Callback semantics are unknown; table and selected index are identified from code structure.",
+      "domain": "menu dispatch",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "ov039",
+      "symbol": "func_ov039_020bcfcc",
+      "language": "c",
+      "source": "src/ov039/menu_dispatch/dispatchSelectedMenuCallback_020bcfcc.c",
+      "source_symbol": "dispatchSelectedMenuCallback_020bcfcc",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "data_020bea84": "0x20bea84",
+        "data_020be8d0": "0x20be8d0"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/overlays/ov008/calls/func_ov008_02051458.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "beginAlignedFileReadAhead",
+      "behavior": "Starts an asynchronous file read covering sector-aligned bytes around a cursor range.",
+      "evidence": "Seeks to the containing 512-byte boundary, rounds length up, starts async read, advances logical cursor by requested bytes, and marks read-ahead active.",
+      "uncertainty": "The stream/cursor fields are inferred from accesses; return value is leading byte skew, or zero on issue failure.",
+      "domain": "filesystem",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "ov022",
+      "symbol": "func_ov022_020aa224",
+      "language": "c",
+      "source": "src/ov022/filesystem/beginAlignedFileReadAhead_020aa224.c",
+      "source_symbol": "beginAlignedFileReadAhead_020aa224",
+      "compiler": "mwccarm-3.0-139",
+      "mode": "arm",
+      "bindings": {
+        "FS_SeekFile": "0x200b648",
+        "FS_ReadFileAsync": "0x200b6c8"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/overlays/ov024/calls/func_ov024_02085f48.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "readStreamBytesSynchronously",
+      "behavior": "Completes any pending read-ahead, restores the file cursor, then reads the requested bytes.",
+      "evidence": "Waits and seeks when the pending flag is set, performs a blocking file read, advances cursor on success, and returns status.",
+      "uncertainty": "One read function keeps its address-based identifier because its SDK identity is unresolved.",
+      "domain": "filesystem",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "ov022",
+      "symbol": "func_ov022_020aa1b4",
+      "language": "c",
+      "source": "src/ov022/filesystem/readStreamBytesSynchronously_020aa1b4.c",
+      "source_symbol": "readStreamBytesSynchronously_020aa1b4",
+      "compiler": "mwccarm-3.0-139",
+      "mode": "arm",
+      "bindings": {
+        "FS_WaitAsync": "0x200b1e4",
+        "FS_SeekFile": "0x200b648",
+        "OS_UnlockByWord_0x0200ae4c": "0x200b674"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/overlays/ov024/calls/func_ov024_02085ed8.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "func_ov027_020b7a30",
+      "behavior": "Copies an eight-byte pending record to a target or registers the target for later updates.",
+      "evidence": "Checks two state bits, copies and clears one flag for ready records, returns failure for stale records, otherwise conditionally registers the target.",
+      "uncertainty": "The bit meanings and object relationship are inferred from branches; no actor identity is established.",
+      "domain": "record management",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "unknown",
+      "module": "ov027",
+      "symbol": "func_ov027_020b7a30",
+      "language": "c",
+      "source": "src/ov027/record_management/func_ov027_020b7a30.c",
+      "source_symbol": "func_ov027_020b7a30",
+      "compiler": "mwccarm-3.0-139",
+      "mode": "arm",
+      "bindings": {
+        "MI_CpuCopy8": "0x1ff89a8",
+        "func_020b9f7c": "0x20b9f7d",
+        "func_020b79bc": "0x20b79bc"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/overlays/ov000/calls/func_ov000_02056144.c",
         "license": "CC0-1.0"
       }
     }

@@ -1,0 +1,1994 @@
+{
+  "version": 1,
+  "profile": "bk9e",
+  "types": "analysis/types/actor_model.h",
+  "scope": "Actor model appearance and adjacent script commands. Static evidence; emulator observations pending.",
+  "functions": [
+    {
+      "module": "arm9",
+      "address": "0x02036240",
+      "name": "Actor_GetById",
+      "prototype": "ActorNode *Actor_GetById(u32 actorId);",
+      "behavior": "Finds the requested actor in the shared actor registry.",
+      "evidence": "ARM9 0x02036240 loads g_actorRegistry, adds actorId*4, reads ActorStorage* at +0x20, and returns its actor at +0x10. These are the actual six instructions, not an inferred extra pointer dereference. There are 218 direct callsites.",
+      "uncertainty": "Registry capacity and unobserved header fields are unknown; specific actor IDs depend on game state.",
+      "callers": [
+        {
+          "module": "arm9",
+          "callsite": "0x020369d8",
+          "call_kind": "arm_call",
+          "caller_address": "0x020369c8",
+          "caller": "func_020369c8"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x0207f7e4",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x0207f7c0",
+          "caller": "func_ov001_0207f7c0"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x02080b0e",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x02080aa4",
+          "caller": "func_ov001_02080aa4"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x02080bba",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x02080b88",
+          "caller": "func_ov001_02080b88"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x02080f2c",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x02080ea8",
+          "caller": "func_ov001_02080ea8"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x0208115e",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020810c8",
+          "caller": "func_ov001_020810c8"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x020811c6",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020810c8",
+          "caller": "func_ov001_020810c8"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x02081280",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x02081234",
+          "caller": "func_ov001_02081234"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x020814e2",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020814d0",
+          "caller": "func_ov001_020814d0"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x0208158e",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x02081524",
+          "caller": "func_ov001_02081524"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x02081f12",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x02081ea8",
+          "caller": "func_ov001_02081ea8"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x020820e2",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x02082070",
+          "caller": "func_ov001_02082070"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x0208233c",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x02082330",
+          "caller": "func_ov001_02082330"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x020824e6",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x02082468",
+          "caller": "func_ov001_02082468"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x0208295a",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020828f0",
+          "caller": "func_ov001_020828f0"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x02082bf2",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x02082bd8",
+          "caller": "func_ov001_02082bd8"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x02082cbc",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x02082c50",
+          "caller": "func_ov001_02082c50"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x020831bc",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020831a8",
+          "caller": "func_ov001_020831a8"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x0208379a",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x02083730",
+          "caller": "func_ov001_02083730"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x02083c1c",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x02083c04",
+          "caller": "func_ov001_02083c04"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x020848aa",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020848a0",
+          "caller": "func_ov001_020848a0"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x02084c36",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x02084bcc",
+          "caller": "func_ov001_02084bcc"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x02084dc4",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x02084dac",
+          "caller": "func_ov001_02084dac"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x02084df6",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x02084de8",
+          "caller": "func_ov001_02084de8"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x02085d80",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x02085d74",
+          "caller": "func_ov001_02085d74"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x02085fdc",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x02085f3c",
+          "caller": "func_ov001_02085f3c"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x02086096",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x02086068",
+          "caller": "func_ov001_02086068"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x02086398",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x02086384",
+          "caller": "func_ov001_02086384"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x0208644a",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x02086434",
+          "caller": "func_ov001_02086434"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x02086638",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x02086618",
+          "caller": "func_ov001_02086618"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x02086ba0",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x02086b1c",
+          "caller": "func_ov001_02086b1c"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x020887e8",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x0208877c",
+          "caller": "func_ov001_0208877c"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x02088adc",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x02088a90",
+          "caller": "func_ov001_02088a90"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x02088aee",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x02088a90",
+          "caller": "func_ov001_02088a90"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x02088b2e",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x02088b28",
+          "caller": "func_ov001_02088b28"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x02088baa",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x02088b58",
+          "caller": "func_ov001_02088b58"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x02089dd2",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x02089db0",
+          "caller": "func_ov001_02089db0"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x0208afd2",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x0208afb8",
+          "caller": "func_ov001_0208afb8"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x0208b14c",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x0208b0d8",
+          "caller": "func_ov001_0208b0d8"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x0208b1e8",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x0208b0d8",
+          "caller": "func_ov001_0208b0d8"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x0208b2fa",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x0208b0d8",
+          "caller": "func_ov001_0208b0d8"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x0208b8de",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x0208b8a4",
+          "caller": "func_ov001_0208b8a4"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x0208bbca",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x0208babc",
+          "caller": "func_ov001_0208babc"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x0208bbe6",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x0208babc",
+          "caller": "func_ov001_0208babc"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x0208c152",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x0208c13c",
+          "caller": "func_ov001_0208c13c"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x0208c58a",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x0208c534",
+          "caller": "func_ov001_0208c534"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x0208c616",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x0208c534",
+          "caller": "func_ov001_0208c534"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x0208c854",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x0208c7e8",
+          "caller": "func_ov001_0208c7e8"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x0208c8b2",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x0208c8a4",
+          "caller": "func_ov001_0208c8a4"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x0208c97e",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x0208c918",
+          "caller": "func_ov001_0208c918"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x0208c98c",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x0208c918",
+          "caller": "func_ov001_0208c918"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x0208cadc",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x0208ca94",
+          "caller": "func_ov001_0208ca94"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x0208cb4a",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x0208cb14",
+          "caller": "func_ov001_0208cb14"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x0208cbe8",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x0208cbb4",
+          "caller": "func_ov001_0208cbb4"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x0208cd46",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x0208ccbc",
+          "caller": "func_ov001_0208ccbc"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x0208cdc2",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x0208cd9c",
+          "caller": "func_ov001_0208cd9c"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x0208ce9a",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x0208cdf4",
+          "caller": "func_ov001_0208cdf4"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x0208cf64",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x0208cf44",
+          "caller": "func_ov001_0208cf44"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x0208cf92",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x0208cf44",
+          "caller": "func_ov001_0208cf44"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x0208d334",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x0208d274",
+          "caller": "func_ov001_0208d274"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x0208d92a",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x0208d738",
+          "caller": "func_ov001_0208d738"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x0208dd5a",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x0208dd24",
+          "caller": "func_ov001_0208dd24"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x0208ddf0",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x0208ddc8",
+          "caller": "func_ov001_0208ddc8"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x0208dec6",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x0208deb0",
+          "caller": "func_ov001_0208deb0"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x0208df34",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x0208df04",
+          "caller": "func_ov001_0208df04"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x0208df8e",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x0208df48",
+          "caller": "func_ov001_0208df48"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x0208e010",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x0208df48",
+          "caller": "func_ov001_0208df48"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x0208e0fe",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x0208e0ec",
+          "caller": "func_ov001_0208e0ec"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x0208e32c",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x0208e320",
+          "caller": "func_ov001_0208e320"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x0208e43e",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x0208e408",
+          "caller": "func_ov001_0208e408"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x0208e4fa",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x0208e4bc",
+          "caller": "func_ov001_0208e4bc"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x0208e562",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x0208e524",
+          "caller": "func_ov001_0208e524"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x0208ed60",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x0208ed2c",
+          "caller": "func_ov001_0208ed2c"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x0208ee5c",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x0208ee40",
+          "caller": "func_ov001_0208ee40"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x0208eef6",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x0208eef0",
+          "caller": "func_ov001_0208eef0"
+        },
+        {
+          "module": "ov006",
+          "callsite": "0x020a06f4",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a06e8",
+          "caller": "func_ov006_020a06e8"
+        },
+        {
+          "module": "ov006",
+          "callsite": "0x020a070a",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a06e8",
+          "caller": "func_ov006_020a06e8"
+        },
+        {
+          "module": "ov006",
+          "callsite": "0x020a092c",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a07b4",
+          "caller": "func_ov006_020a07b4"
+        },
+        {
+          "module": "ov006",
+          "callsite": "0x020a0cd4",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a0cc8",
+          "caller": "func_ov006_020a0cc8"
+        },
+        {
+          "module": "ov007",
+          "callsite": "0x020a0f36",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a0ecc",
+          "caller": "func_ov007_020a0ecc"
+        },
+        {
+          "module": "ov008",
+          "callsite": "0x020a0736",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a06dc",
+          "caller": "func_ov008_020a06dc"
+        },
+        {
+          "module": "ov008",
+          "callsite": "0x020a0944",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a092c",
+          "caller": "func_ov008_020a092c"
+        },
+        {
+          "module": "ov008",
+          "callsite": "0x020a0a12",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a0a08",
+          "caller": "func_ov008_020a0a08"
+        },
+        {
+          "module": "ov008",
+          "callsite": "0x020a0cce",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a0c64",
+          "caller": "func_ov008_020a0c64"
+        },
+        {
+          "module": "ov008",
+          "callsite": "0x020a0d70",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a0d58",
+          "caller": "func_ov008_020a0d58"
+        },
+        {
+          "module": "ov009",
+          "callsite": "0x020a07e2",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a0778",
+          "caller": "func_ov009_020a0778"
+        },
+        {
+          "module": "ov009",
+          "callsite": "0x020a0916",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a08f4",
+          "caller": "func_ov009_020a08f4"
+        },
+        {
+          "module": "ov009",
+          "callsite": "0x020a092e",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a08f4",
+          "caller": "func_ov009_020a08f4"
+        },
+        {
+          "module": "ov009",
+          "callsite": "0x020a0998",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a0980",
+          "caller": "func_ov009_020a0980"
+        },
+        {
+          "module": "ov010",
+          "callsite": "0x020a070e",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a069c",
+          "caller": "func_ov010_020a069c"
+        },
+        {
+          "module": "ov010",
+          "callsite": "0x020a07ce",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a079c",
+          "caller": "func_ov010_020a079c"
+        },
+        {
+          "module": "ov010",
+          "callsite": "0x020a0a36",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a09c4",
+          "caller": "func_ov010_020a09c4"
+        },
+        {
+          "module": "ov010",
+          "callsite": "0x020a0b1a",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a0af0",
+          "caller": "func_ov010_020a0af0"
+        },
+        {
+          "module": "ov010",
+          "callsite": "0x020a0bac",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a0b90",
+          "caller": "func_ov010_020a0b90"
+        },
+        {
+          "module": "ov011",
+          "callsite": "0x020a0894",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a07bc",
+          "caller": "func_ov011_020a07bc"
+        },
+        {
+          "module": "ov011",
+          "callsite": "0x020a097a",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a0954",
+          "caller": "func_ov011_020a0954"
+        },
+        {
+          "module": "ov011",
+          "callsite": "0x020a0d32",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a0d24",
+          "caller": "func_ov011_020a0d24"
+        },
+        {
+          "module": "ov011",
+          "callsite": "0x020a10ea",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a10c4",
+          "caller": "func_ov011_020a10c4"
+        },
+        {
+          "module": "ov016",
+          "callsite": "0x020a2566",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a2558",
+          "caller": "func_ov016_020a2558"
+        },
+        {
+          "module": "ov016",
+          "callsite": "0x020a25cc",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a25c4",
+          "caller": "func_ov016_020a25c4"
+        },
+        {
+          "module": "ov016",
+          "callsite": "0x020a26b8",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a2668",
+          "caller": "func_ov016_020a2668"
+        },
+        {
+          "module": "ov016",
+          "callsite": "0x020a27e4",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a27ac",
+          "caller": "func_ov016_020a27ac"
+        },
+        {
+          "module": "ov016",
+          "callsite": "0x020a2c14",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a2c0c",
+          "caller": "func_ov016_020a2c0c"
+        },
+        {
+          "module": "ov016",
+          "callsite": "0x020a2c28",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a2c0c",
+          "caller": "func_ov016_020a2c0c"
+        },
+        {
+          "module": "ov016",
+          "callsite": "0x020a2c58",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a2c44",
+          "caller": "func_ov016_020a2c44"
+        },
+        {
+          "module": "ov016",
+          "callsite": "0x020a2cd8",
+          "call_kind": "arm_call",
+          "caller_address": "0x020a2ca4",
+          "caller": "func_ov016_020a2ca4"
+        },
+        {
+          "module": "ov016",
+          "callsite": "0x020a346c",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a3418",
+          "caller": "func_ov016_020a3418"
+        },
+        {
+          "module": "ov016",
+          "callsite": "0x020a350a",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a34fc",
+          "caller": "func_ov016_020a34fc"
+        },
+        {
+          "module": "ov016",
+          "callsite": "0x020a3946",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a393c",
+          "caller": "func_ov016_020a393c"
+        },
+        {
+          "module": "ov016",
+          "callsite": "0x020a3c98",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a3c50",
+          "caller": "func_ov016_020a3c50"
+        },
+        {
+          "module": "ov016",
+          "callsite": "0x020a4106",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a40e0",
+          "caller": "func_ov016_020a40e0"
+        },
+        {
+          "module": "ov016",
+          "callsite": "0x020a42d2",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a4210",
+          "caller": "func_ov016_020a4210"
+        },
+        {
+          "module": "ov016",
+          "callsite": "0x020a4354",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a4210",
+          "caller": "func_ov016_020a4210"
+        },
+        {
+          "module": "ov016",
+          "callsite": "0x020a453a",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a446c",
+          "caller": "func_ov016_020a446c"
+        },
+        {
+          "module": "ov016",
+          "callsite": "0x020a4a36",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a49d8",
+          "caller": "func_ov016_020a49d8"
+        },
+        {
+          "module": "ov016",
+          "callsite": "0x020a4aae",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a4a94",
+          "caller": "func_ov016_020a4a94"
+        },
+        {
+          "module": "ov016",
+          "callsite": "0x020a4d1a",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a4d10",
+          "caller": "func_ov016_020a4d10"
+        },
+        {
+          "module": "ov016",
+          "callsite": "0x020a4f10",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a4dd8",
+          "caller": "func_ov016_020a4dd8"
+        },
+        {
+          "module": "ov016",
+          "callsite": "0x020a5186",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a5130",
+          "caller": "func_ov016_020a5130"
+        },
+        {
+          "module": "ov016",
+          "callsite": "0x020a5348",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a5340",
+          "caller": "func_ov016_020a5340"
+        },
+        {
+          "module": "ov016",
+          "callsite": "0x020a53d6",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a537c",
+          "caller": "func_ov016_020a537c"
+        },
+        {
+          "module": "ov016",
+          "callsite": "0x020a59ae",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a596c",
+          "caller": "func_ov016_020a596c"
+        },
+        {
+          "module": "ov016",
+          "callsite": "0x020a60c2",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a6064",
+          "caller": "func_ov016_020a6064"
+        },
+        {
+          "module": "ov016",
+          "callsite": "0x020a6998",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a6968",
+          "caller": "func_ov016_020a6968"
+        },
+        {
+          "module": "ov016",
+          "callsite": "0x020a6a24",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a69fc",
+          "caller": "func_ov016_020a69fc"
+        },
+        {
+          "module": "ov016",
+          "callsite": "0x020a6c72",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a6afc",
+          "caller": "func_ov016_020a6afc"
+        },
+        {
+          "module": "ov016",
+          "callsite": "0x020a6cdc",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a6cc4",
+          "caller": "func_ov016_020a6cc4"
+        },
+        {
+          "module": "ov017",
+          "callsite": "0x020a26b2",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a2640",
+          "caller": "func_ov017_020a2640"
+        },
+        {
+          "module": "ov017",
+          "callsite": "0x020a276e",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a2754",
+          "caller": "func_ov017_020a2754"
+        },
+        {
+          "module": "ov017",
+          "callsite": "0x020a2876",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a286c",
+          "caller": "func_ov017_020a286c"
+        },
+        {
+          "module": "ov017",
+          "callsite": "0x020a2c86",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a2bd0",
+          "caller": "func_ov017_020a2bd0"
+        },
+        {
+          "module": "ov017",
+          "callsite": "0x020a2fe6",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a2f08",
+          "caller": "func_ov017_020a2f08"
+        },
+        {
+          "module": "ov017",
+          "callsite": "0x020a2ffa",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a2f08",
+          "caller": "func_ov017_020a2f08"
+        },
+        {
+          "module": "ov017",
+          "callsite": "0x020a3108",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a30e4",
+          "caller": "func_ov017_020a30e4"
+        },
+        {
+          "module": "ov017",
+          "callsite": "0x020a328c",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a3284",
+          "caller": "func_ov017_020a3284"
+        },
+        {
+          "module": "ov017",
+          "callsite": "0x020a3322",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a32bc",
+          "caller": "func_ov017_020a32bc"
+        },
+        {
+          "module": "ov017",
+          "callsite": "0x020a35b6",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a3554",
+          "caller": "func_ov017_020a3554"
+        },
+        {
+          "module": "ov017",
+          "callsite": "0x020a3690",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a3610",
+          "caller": "func_ov017_020a3610"
+        },
+        {
+          "module": "ov017",
+          "callsite": "0x020a36ca",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a3610",
+          "caller": "func_ov017_020a3610"
+        },
+        {
+          "module": "ov017",
+          "callsite": "0x020a3854",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a3610",
+          "caller": "func_ov017_020a3610"
+        },
+        {
+          "module": "ov017",
+          "callsite": "0x020a3e20",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a3e10",
+          "caller": "func_ov017_020a3e10"
+        },
+        {
+          "module": "ov017",
+          "callsite": "0x020a40f4",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a40dc",
+          "caller": "func_ov017_020a40dc"
+        },
+        {
+          "module": "ov017",
+          "callsite": "0x020a46b8",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a466c",
+          "caller": "func_ov017_020a466c"
+        },
+        {
+          "module": "ov017",
+          "callsite": "0x020a4974",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a48cc",
+          "caller": "func_ov017_020a48cc"
+        },
+        {
+          "module": "ov017",
+          "callsite": "0x020a531c",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a5288",
+          "caller": "func_ov017_020a5288"
+        },
+        {
+          "module": "ov017",
+          "callsite": "0x020a54ca",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a5454",
+          "caller": "func_ov017_020a5454"
+        },
+        {
+          "module": "ov017",
+          "callsite": "0x020a54de",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a5454",
+          "caller": "func_ov017_020a5454"
+        },
+        {
+          "module": "ov017",
+          "callsite": "0x020a5778",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a574c",
+          "caller": "func_ov017_020a574c"
+        },
+        {
+          "module": "ov017",
+          "callsite": "0x020a57ea",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a574c",
+          "caller": "func_ov017_020a574c"
+        },
+        {
+          "module": "ov017",
+          "callsite": "0x020a5824",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a574c",
+          "caller": "func_ov017_020a574c"
+        },
+        {
+          "module": "ov017",
+          "callsite": "0x020a5890",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a5854",
+          "caller": "func_ov017_020a5854"
+        },
+        {
+          "module": "ov017",
+          "callsite": "0x020a59a6",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a58e0",
+          "caller": "func_ov017_020a58e0"
+        },
+        {
+          "module": "ov017",
+          "callsite": "0x020a5a06",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a58e0",
+          "caller": "func_ov017_020a58e0"
+        },
+        {
+          "module": "ov017",
+          "callsite": "0x020a5ad6",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a5a90",
+          "caller": "func_ov017_020a5a90"
+        },
+        {
+          "module": "ov017",
+          "callsite": "0x020a5b38",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a5a90",
+          "caller": "func_ov017_020a5a90"
+        },
+        {
+          "module": "ov018",
+          "callsite": "0x020a204e",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a1ef8",
+          "caller": "func_ov018_020a1ef8"
+        },
+        {
+          "module": "ov018",
+          "callsite": "0x020a2332",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a229c",
+          "caller": "func_ov018_020a229c"
+        },
+        {
+          "module": "ov018",
+          "callsite": "0x020a2346",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a229c",
+          "caller": "func_ov018_020a229c"
+        },
+        {
+          "module": "ov018",
+          "callsite": "0x020a243c",
+          "call_kind": "arm_call",
+          "caller_address": "0x020a2400",
+          "caller": "func_ov018_020a2400"
+        },
+        {
+          "module": "ov018",
+          "callsite": "0x020a2648",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a2640",
+          "caller": "func_ov018_020a2640"
+        },
+        {
+          "module": "ov018",
+          "callsite": "0x020a2686",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a267c",
+          "caller": "func_ov018_020a267c"
+        },
+        {
+          "module": "ov018",
+          "callsite": "0x020a2970",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a2968",
+          "caller": "func_ov018_020a2968"
+        },
+        {
+          "module": "ov018",
+          "callsite": "0x020a2a0c",
+          "call_kind": "arm_call",
+          "caller_address": "0x020a29e0",
+          "caller": "func_ov018_020a29e0"
+        },
+        {
+          "module": "ov018",
+          "callsite": "0x020a2c34",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a2bf8",
+          "caller": "func_ov018_020a2bf8"
+        },
+        {
+          "module": "ov018",
+          "callsite": "0x020a2cb4",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a2c84",
+          "caller": "func_ov018_020a2c84"
+        },
+        {
+          "module": "ov018",
+          "callsite": "0x020a2fc2",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a2c84",
+          "caller": "func_ov018_020a2c84"
+        },
+        {
+          "module": "ov018",
+          "callsite": "0x020a33a2",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a333c",
+          "caller": "func_ov018_020a333c"
+        },
+        {
+          "module": "ov018",
+          "callsite": "0x020a3422",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a3404",
+          "caller": "func_ov018_020a3404"
+        },
+        {
+          "module": "ov018",
+          "callsite": "0x020a3492",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a3484",
+          "caller": "func_ov018_020a3484"
+        },
+        {
+          "module": "ov018",
+          "callsite": "0x020a354a",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a3530",
+          "caller": "func_ov018_020a3530"
+        },
+        {
+          "module": "ov018",
+          "callsite": "0x020a36fc",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a35b8",
+          "caller": "func_ov018_020a35b8"
+        },
+        {
+          "module": "ov019",
+          "callsite": "0x020a23d0",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a23b0",
+          "caller": "func_ov019_020a23b0"
+        },
+        {
+          "module": "ov019",
+          "callsite": "0x020a23e6",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a23b0",
+          "caller": "func_ov019_020a23b0"
+        },
+        {
+          "module": "ov019",
+          "callsite": "0x020a24c0",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a2418",
+          "caller": "func_ov019_020a2418"
+        },
+        {
+          "module": "ov019",
+          "callsite": "0x020a25ec",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a2418",
+          "caller": "func_ov019_020a2418"
+        },
+        {
+          "module": "ov019",
+          "callsite": "0x020a2864",
+          "call_kind": "arm_call",
+          "caller_address": "0x020a2774",
+          "caller": "func_ov019_020a2774"
+        },
+        {
+          "module": "ov019",
+          "callsite": "0x020a287c",
+          "call_kind": "arm_call",
+          "caller_address": "0x020a2774",
+          "caller": "func_ov019_020a2774"
+        },
+        {
+          "module": "ov019",
+          "callsite": "0x020a29b0",
+          "call_kind": "arm_call",
+          "caller_address": "0x020a2774",
+          "caller": "func_ov019_020a2774"
+        },
+        {
+          "module": "ov019",
+          "callsite": "0x020a2cec",
+          "call_kind": "arm_call",
+          "caller_address": "0x020a2c4c",
+          "caller": "func_ov019_020a2c4c"
+        },
+        {
+          "module": "ov019",
+          "callsite": "0x020a2e64",
+          "call_kind": "arm_call",
+          "caller_address": "0x020a2e08",
+          "caller": "func_ov019_020a2e08"
+        },
+        {
+          "module": "ov019",
+          "callsite": "0x020a2f64",
+          "call_kind": "arm_call",
+          "caller_address": "0x020a2ecc",
+          "caller": "func_ov019_020a2ecc"
+        },
+        {
+          "module": "ov019",
+          "callsite": "0x020a2fec",
+          "call_kind": "arm_call",
+          "caller_address": "0x020a2ecc",
+          "caller": "func_ov019_020a2ecc"
+        },
+        {
+          "module": "ov019",
+          "callsite": "0x020a311c",
+          "call_kind": "arm_call",
+          "caller_address": "0x020a2ecc",
+          "caller": "func_ov019_020a2ecc"
+        },
+        {
+          "module": "ov020",
+          "callsite": "0x020a2104",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a2090",
+          "caller": "func_ov020_020a2090"
+        },
+        {
+          "module": "ov020",
+          "callsite": "0x020a2358",
+          "call_kind": "arm_call",
+          "caller_address": "0x020a2348",
+          "caller": "func_ov020_020a2348"
+        },
+        {
+          "module": "ov020",
+          "callsite": "0x020a2364",
+          "call_kind": "arm_call",
+          "caller_address": "0x020a2348",
+          "caller": "func_ov020_020a2348"
+        },
+        {
+          "module": "ov020",
+          "callsite": "0x020a29b6",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a2904",
+          "caller": "func_ov020_020a2904"
+        },
+        {
+          "module": "ov020",
+          "callsite": "0x020a2b40",
+          "call_kind": "arm_call",
+          "caller_address": "0x020a2ad8",
+          "caller": "func_ov020_020a2ad8"
+        },
+        {
+          "module": "ov020",
+          "callsite": "0x020a2b58",
+          "call_kind": "arm_call",
+          "caller_address": "0x020a2ad8",
+          "caller": "func_ov020_020a2ad8"
+        },
+        {
+          "module": "ov020",
+          "callsite": "0x020a2ee8",
+          "call_kind": "arm_call",
+          "caller_address": "0x020a2ebc",
+          "caller": "func_ov020_020a2ebc"
+        },
+        {
+          "module": "ov020",
+          "callsite": "0x020a2f3c",
+          "call_kind": "arm_call",
+          "caller_address": "0x020a2ef8",
+          "caller": "func_ov020_020a2ef8"
+        },
+        {
+          "module": "ov020",
+          "callsite": "0x020a3038",
+          "call_kind": "arm_call",
+          "caller_address": "0x020a2f98",
+          "caller": "func_ov020_020a2f98"
+        },
+        {
+          "module": "ov020",
+          "callsite": "0x020a30a0",
+          "call_kind": "arm_call",
+          "caller_address": "0x020a2f98",
+          "caller": "func_ov020_020a2f98"
+        },
+        {
+          "module": "ov020",
+          "callsite": "0x020a3190",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a3150",
+          "caller": "func_ov020_020a3150"
+        },
+        {
+          "module": "ov020",
+          "callsite": "0x020a31e4",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a3150",
+          "caller": "func_ov020_020a3150"
+        },
+        {
+          "module": "ov020",
+          "callsite": "0x020a33c4",
+          "call_kind": "arm_call",
+          "caller_address": "0x020a3398",
+          "caller": "func_ov020_020a3398"
+        },
+        {
+          "module": "ov020",
+          "callsite": "0x020a3500",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a349c",
+          "caller": "func_ov020_020a349c"
+        },
+        {
+          "module": "ov020",
+          "callsite": "0x020a3734",
+          "call_kind": "arm_call",
+          "caller_address": "0x020a3724",
+          "caller": "func_ov020_020a3724"
+        },
+        {
+          "module": "ov020",
+          "callsite": "0x020a3858",
+          "call_kind": "arm_call",
+          "caller_address": "0x020a37d8",
+          "caller": "func_ov020_020a37d8"
+        },
+        {
+          "module": "ov021",
+          "callsite": "0x020ac27e",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020ac264",
+          "caller": "func_ov021_020ac264"
+        },
+        {
+          "module": "ov021",
+          "callsite": "0x020ae464",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020ae3f0",
+          "caller": "func_ov021_020ae3f0"
+        },
+        {
+          "module": "ov021",
+          "callsite": "0x020ae5b2",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020ae3f0",
+          "caller": "func_ov021_020ae3f0"
+        },
+        {
+          "module": "ov032",
+          "callsite": "0x020bbcd4",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020bbcc4",
+          "caller": "func_ov032_020bbcc4"
+        },
+        {
+          "module": "ov032",
+          "callsite": "0x020bbd72",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020bbd60",
+          "caller": "func_ov032_020bbd60"
+        },
+        {
+          "module": "ov032",
+          "callsite": "0x020bc1f2",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020bc1e8",
+          "caller": "func_ov032_020bc1e8"
+        },
+        {
+          "module": "ov032",
+          "callsite": "0x020bc1fe",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020bc1e8",
+          "caller": "func_ov032_020bc1e8"
+        },
+        {
+          "module": "ov032",
+          "callsite": "0x020be0da",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020be0c8",
+          "caller": "func_ov032_020be0c8"
+        },
+        {
+          "module": "ov032",
+          "callsite": "0x020be470",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020be454",
+          "caller": "func_ov032_020be454"
+        },
+        {
+          "module": "ov032",
+          "callsite": "0x020bfa52",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020bf9dc",
+          "caller": "func_ov032_020bf9dc"
+        },
+        {
+          "module": "ov052",
+          "callsite": "0x020c751e",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020c7460",
+          "caller": "func_ov052_020c7460"
+        },
+        {
+          "module": "ov056",
+          "callsite": "0x020d616a",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020d5f7c",
+          "caller": "func_ov056_020d5f7c"
+        },
+        {
+          "module": "ov056",
+          "callsite": "0x020d6224",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020d5f7c",
+          "caller": "func_ov056_020d5f7c"
+        },
+        {
+          "module": "ov059",
+          "callsite": "0x020c7b78",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020c7acc",
+          "caller": "func_ov059_020c7acc"
+        },
+        {
+          "module": "ov059",
+          "callsite": "0x020cecd8",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020cec8c",
+          "caller": "func_ov059_020cec8c"
+        },
+        {
+          "module": "ov059",
+          "callsite": "0x020cf0bc",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020cf0a4",
+          "caller": "func_ov059_020cf0a4"
+        },
+        {
+          "module": "ov059",
+          "callsite": "0x020cf136",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020cf100",
+          "caller": "func_ov059_020cf100"
+        },
+        {
+          "module": "ov059",
+          "callsite": "0x020cfb44",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020cf9f8",
+          "caller": "func_ov059_020cf9f8"
+        },
+        {
+          "module": "ov063",
+          "callsite": "0x020d8472",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020d8298",
+          "caller": "func_ov063_020d8298"
+        }
+      ]
+    },
+    {
+      "module": "arm9",
+      "address": "0x0201a900",
+      "name": "Model_SetAllMaterialAlpha",
+      "prototype": "void Model_SetAllMaterialAlpha(ModelResource *modelResource, int opacity);",
+      "behavior": "Iterates model->materialCount and calls the per-material setter with the same alpha.",
+      "evidence": "ARM loop reads byte [model+0x18] as loop bound; each iteration calls 0x0201a64c(model,index,alpha). Direct callsites are listed per module/function.",
+      "uncertainty": "Material-field operations are established statically; particular scenes and actors using them have not been observed in an emulator.",
+      "callers": [
+        {
+          "module": "ov001",
+          "callsite": "0x0207efe2",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x0207efac",
+          "caller": "func_ov001_0207efac"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x0208240c",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020823a0",
+          "caller": "func_ov001_020823a0"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x02082432",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020823a0",
+          "caller": "func_ov001_020823a0"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x02082a84",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020828f0",
+          "caller": "func_ov001_020828f0"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x02082ccc",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x02082c50",
+          "caller": "func_ov001_02082c50"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x0208def0",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x0208deb0",
+          "caller": "func_ov001_0208deb0"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x0208e36c",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x0208e320",
+          "caller": "func_ov001_0208e320"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x0208e37e",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x0208e320",
+          "caller": "func_ov001_0208e320"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x0208e398",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x0208e320",
+          "caller": "func_ov001_0208e320"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x0208f828",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x0208f760",
+          "caller": "func_ov001_0208f760"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x02090c10",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020909e4",
+          "caller": "func_ov001_020909e4"
+        },
+        {
+          "module": "ov007",
+          "callsite": "0x020a16b0",
+          "call_kind": "arm_call",
+          "caller_address": "0x020a15a8",
+          "caller": "func_ov007_020a15a8"
+        },
+        {
+          "module": "ov007",
+          "callsite": "0x020a16ec",
+          "call_kind": "arm_call",
+          "caller_address": "0x020a15a8",
+          "caller": "func_ov007_020a15a8"
+        },
+        {
+          "module": "ov018",
+          "callsite": "0x020a27f0",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a267c",
+          "caller": "func_ov018_020a267c"
+        },
+        {
+          "module": "ov018",
+          "callsite": "0x020a27fe",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a267c",
+          "caller": "func_ov018_020a267c"
+        },
+        {
+          "module": "ov019",
+          "callsite": "0x020a2d40",
+          "call_kind": "arm_call",
+          "caller_address": "0x020a2c4c",
+          "caller": "func_ov019_020a2c4c"
+        },
+        {
+          "module": "ov019",
+          "callsite": "0x020a2d60",
+          "call_kind": "arm_call",
+          "caller_address": "0x020a2c4c",
+          "caller": "func_ov019_020a2c4c"
+        },
+        {
+          "module": "ov021",
+          "callsite": "0x020ab88e",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020ab854",
+          "caller": "func_ov021_020ab854"
+        },
+        {
+          "module": "ov035",
+          "callsite": "0x020bb774",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020bb758",
+          "caller": "func_ov035_020bb758"
+        },
+        {
+          "module": "ov052",
+          "callsite": "0x020cc0f0",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020cc0d8",
+          "caller": "func_ov052_020cc0d8"
+        },
+        {
+          "module": "ov052",
+          "callsite": "0x020cc110",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020cc0d8",
+          "caller": "func_ov052_020cc0d8"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "module": "arm9",
+      "address": "0x0201a64c",
+      "name": "Model_SetMaterialAlpha",
+      "prototype": "void Model_SetMaterialAlpha(ModelResource *modelResource, u32 materialIndex, int opacity);",
+      "behavior": "Resolves one material record and replaces bits 16..20 of its word at +0x0c with alpha low bits.",
+      "evidence": "ARM code computes a material record via model+*(u32*)(model+8), table entries, and a relative record pointer; loads [record+0x0c], clears 0x001f0000, ORs alpha<<16, stores. A function name from parent analysis identifies this as alpha; exact material-table layout remains partial. Includes calls from all modules and internal loop/helpers.",
+      "uncertainty": "Material-field operations are established statically; particular scenes and actors using them have not been observed in an emulator.",
+      "callers": [
+        {
+          "module": "arm9",
+          "callsite": "0x0201a928",
+          "call_kind": "arm_call",
+          "caller_address": "0x0201a900",
+          "caller": "func_0201a900"
+        },
+        {
+          "module": "arm9",
+          "callsite": "0x02036c28",
+          "call_kind": "arm_call",
+          "caller_address": "0x02036b80",
+          "caller": "func_02036b80"
+        },
+        {
+          "module": "arm9",
+          "callsite": "0x02036c80",
+          "call_kind": "arm_call",
+          "caller_address": "0x02036b80",
+          "caller": "func_02036b80"
+        },
+        {
+          "module": "ov035",
+          "callsite": "0x020bb46a",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020bb448",
+          "caller": "func_ov035_020bb448"
+        }
+      ],
+      "confidence": "high for bitfield write"
+    },
+    {
+      "module": "arm9",
+      "address": "0x0201a8c0",
+      "name": "Model_SetAllPolygonIds",
+      "prototype": "void Model_SetAllPolygonIds(ModelResource *modelResource, int polygonId);",
+      "behavior": "Iterates model->materialCount and calls the per-material polygon-ID setter.",
+      "evidence": "ARM loop reads byte [model+0x18] as loop bound; each iteration calls 0x0201a5d4(model,index,polygonId). Direct callsites are listed per module/function.",
+      "uncertainty": "Material-field operations are established statically; particular scenes and actors using them have not been observed in an emulator.",
+      "callers": [
+        {
+          "module": "ov001",
+          "callsite": "0x0207f620",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x0207f508",
+          "caller": "func_ov001_0207f508"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x0207f97a",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x0207f8fc",
+          "caller": "func_ov001_0207f8fc"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x0208caf4",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x0208ca94",
+          "caller": "func_ov001_0208ca94"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x0208def8",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x0208deb0",
+          "caller": "func_ov001_0208deb0"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x0208f830",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x0208f760",
+          "caller": "func_ov001_0208f760"
+        },
+        {
+          "module": "ov001",
+          "callsite": "0x02090c22",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020909e4",
+          "caller": "func_ov001_020909e4"
+        },
+        {
+          "module": "ov007",
+          "callsite": "0x020a16bc",
+          "call_kind": "arm_call",
+          "caller_address": "0x020a15a8",
+          "caller": "func_ov007_020a15a8"
+        },
+        {
+          "module": "ov007",
+          "callsite": "0x020a16f8",
+          "call_kind": "arm_call",
+          "caller_address": "0x020a15a8",
+          "caller": "func_ov007_020a15a8"
+        },
+        {
+          "module": "ov019",
+          "callsite": "0x020a2d4c",
+          "call_kind": "arm_call",
+          "caller_address": "0x020a2c4c",
+          "caller": "func_ov019_020a2c4c"
+        },
+        {
+          "module": "ov019",
+          "callsite": "0x020a2d6c",
+          "call_kind": "arm_call",
+          "caller_address": "0x020a2c4c",
+          "caller": "func_ov019_020a2c4c"
+        },
+        {
+          "module": "ov021",
+          "callsite": "0x020a9870",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a9814",
+          "caller": "func_ov021_020a9814"
+        },
+        {
+          "module": "ov021",
+          "callsite": "0x020a99ee",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020a998c",
+          "caller": "func_ov021_020a998c"
+        },
+        {
+          "module": "ov041",
+          "callsite": "0x020c1b0c",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020c18cc",
+          "caller": "func_ov041_020c18cc"
+        },
+        {
+          "module": "ov041",
+          "callsite": "0x020c2194",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020c1d18",
+          "caller": "func_ov041_020c1d18"
+        },
+        {
+          "module": "ov052",
+          "callsite": "0x020c7556",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020c7460",
+          "caller": "func_ov052_020c7460"
+        },
+        {
+          "module": "ov059",
+          "callsite": "0x020c7bb0",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020c7acc",
+          "caller": "func_ov059_020c7acc"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "module": "arm9",
+      "address": "0x0201a5d4",
+      "name": "Model_SetPolygonId",
+      "prototype": "void Model_SetPolygonId(ModelResource *modelResource, u32 materialIndex, int polygonId);",
+      "behavior": "Resolves one material record and replaces bits 24..29 of its word at +0x0c with polygonId low bits.",
+      "evidence": "ARM code resolves the same record path as 0x0201a64c; loads [record+0x0c], clears 0x3f000000, ORs polygonId<<24, stores. Direct callers include internal loop/helpers and overlays.",
+      "uncertainty": "Material-field operations are established statically; particular scenes and actors using them have not been observed in an emulator.",
+      "callers": [
+        {
+          "module": "arm9",
+          "callsite": "0x0201a8e8",
+          "call_kind": "arm_call",
+          "caller_address": "0x0201a8c0",
+          "caller": "func_0201a8c0"
+        },
+        {
+          "module": "arm9",
+          "callsite": "0x02036c04",
+          "call_kind": "arm_call",
+          "caller_address": "0x02036b80",
+          "caller": "func_02036b80"
+        },
+        {
+          "module": "arm9",
+          "callsite": "0x02036c60",
+          "call_kind": "arm_call",
+          "caller_address": "0x02036b80",
+          "caller": "func_02036b80"
+        },
+        {
+          "module": "ov021",
+          "callsite": "0x020ae92a",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020ae924",
+          "caller": "func_ov021_020ae924"
+        },
+        {
+          "module": "ov035",
+          "callsite": "0x020bb474",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020bb448",
+          "caller": "func_ov035_020bb448"
+        },
+        {
+          "module": "ov058",
+          "callsite": "0x020d78dc",
+          "call_kind": "arm_call",
+          "caller_address": "0x020d78bc",
+          "caller": "func_ov058_020d78bc"
+        },
+        {
+          "module": "ov059",
+          "callsite": "0x020cdba2",
+          "call_kind": "thumb_call_arm",
+          "caller_address": "0x020cda14",
+          "caller": "func_ov059_020cda14"
+        }
+      ],
+      "confidence": "high for bitfield write"
+    },
+    {
+      "module": "arm9",
+      "address": "0x02025de4",
+      "name": "Script_ReadInteger",
+      "prototype": "int Script_ReadInteger(void *scriptContext, const ScriptOperand *operand);",
+      "behavior": "Reads an integer argument for a game script command.",
+      "evidence": "Repeated integer operand reads in the three matched actor commands.",
+      "uncertainty": "Full operand encoding and all conversion cases remain under analysis."
+    },
+    {
+      "module": "arm9",
+      "address": "0x02025df8",
+      "name": "Script_ReadFixed",
+      "prototype": "fx32 Script_ReadFixed(void *scriptContext, const ScriptOperand *operand);",
+      "behavior": "Reads a fixed-point argument for a game script command.",
+      "evidence": "Animation-frame and vector script operands use this helper; values feed 20.12 fixed-point operations.",
+      "uncertainty": "Full operand encoding and all conversion cases remain under analysis."
+    },
+    {
+      "module": "arm9",
+      "address": "0x02025960",
+      "name": "Script_PassThroughActorId",
+      "prototype": "int Script_PassThroughActorId(void *scriptContext, int actorId);",
+      "behavior": "Passes this script actor identifier through unchanged.",
+      "evidence": "Re:coded instructions return the second argument without remapping it.",
+      "uncertainty": "The wrapper may support other engine uses; the name describes its use in the reviewed commands."
+    },
+    {
+      "module": "ov001",
+      "address": "0x0208deb0",
+      "name": "Script_MakeActorTranslucentAndClearVerticalOffset",
+      "prototype": "int Script_MakeActorTranslucentAndClearVerticalOffset(void *scriptContext, const ScriptOperand *commandOperands);",
+      "behavior": "Sets an actor model opacity to 8 of 31, assigns polygon ID 63, and clears its vertical offset.",
+      "evidence": "Reads actorNode.modelResource at +0x7c; preserves offset X/Z at +0xb4/+0xbc and zeroes Y at +0xb8; calls actual material-alpha and polygon-ID helpers. All 84 function bytes independently compile and match.",
+      "uncertainty": "The reason for these settings and the scenes or actors that trigger the command have not been observed in an emulator.",
+      "local_names": {
+        "pAVar2": "actorNode",
+        "uVar1": "resolvedActorId"
+      }
+    },
+    {
+      "module": "ov001",
+      "address": "0x0208df04",
+      "name": "Script_SetActorAnimationFrame",
+      "prototype": "int Script_SetActorAnimationFrame(void *scriptContext, const ScriptOperand *commandOperands);",
+      "behavior": "Sets a selected actor animation track to a requested frame, wrapping once at the clip end.",
+      "evidence": "Calls ITCM 0x01ffb2f8 on actorNode+4; helper writes the frame and subtracts one duration when it reaches the clip end. Matched C is registered separately.",
+      "uncertainty": "Actor animation state at +4 is not yet given a shared structure; track meanings depend on the script.",
+      "local_names": {
+        "uVar1": "animationTrack",
+        "fVar2": "animationFrame",
+        "uVar3": "resolvedActorId",
+        "pAVar4": "actorNode"
+      }
+    }
+  ],
+  "globals": [
+    {
+      "module": "arm9",
+      "address": "0x0206083c",
+      "name": "g_actorRegistry",
+      "pointee_type": "ActorRegistry",
+      "pointer_depth": 1,
+      "evidence": "Actual instructions load this registry pointer, compute registry+actorId*4, load ActorStorage* from +0x20, and return storage+0x10. The pointer array starts at registry+0x20; entries are not a second-level registry object."
+    }
+  ]
+}
