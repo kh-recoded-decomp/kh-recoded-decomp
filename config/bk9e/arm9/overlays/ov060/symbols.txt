@@ -1,0 +1,2 @@
+func_ov060_020c7460 kind:function(arm,size=0x14) addr:0x020c7460
+func_ov060_020c7474 kind:function(arm,size=0x24) addr:0x020c7474

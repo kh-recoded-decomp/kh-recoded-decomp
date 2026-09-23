@@ -1,0 +1,21 @@
+# User-supplied game content and generated artifacts must never enter Git.
+*.nds
+*.srl
+*.rom
+*.sav
+*.bin
+*.elf
+*.o
+*.a
+*.map
+*.d
+*.png
+*.ml1
+build/
+.tools/
+local.json
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+

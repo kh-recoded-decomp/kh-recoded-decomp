@@ -1,0 +1,762 @@
+rom_config: ../../../build/bk9e/extract/config.yaml
+build_path: ../../../build/bk9e/delinked
+delinks_path: ../../../build/bk9e/delinked/delinks
+enable_dsprot: true
+main_module:
+  name: main
+  object: ../../../build/bk9e/delinked/build/arm9.bin
+  hash: 29ad90f1b60d7bb4
+  delinks: delinks.txt
+  symbols: symbols.txt
+  relocations: relocs.txt
+autoloads:
+  - kind: Itcm
+    name: itcm
+    object: ../../../build/bk9e/delinked/build/itcm.bin
+    hash: 48f81347497b3cb9
+    delinks: itcm/delinks.txt
+    symbols: itcm/symbols.txt
+    relocations: itcm/relocs.txt
+  - kind: Dtcm
+    name: dtcm
+    object: ../../../build/bk9e/delinked/build/dtcm.bin
+    hash: 56eab2e67c85cd95
+    delinks: dtcm/delinks.txt
+    symbols: dtcm/symbols.txt
+    relocations: dtcm/relocs.txt
+overlays:
+  - id: 0
+    name: ov000
+    object: ../../../build/bk9e/delinked/build/arm9_ov000.bin
+    hash: 5e5c6c77e56a43ff
+    delinks: overlays/ov000/delinks.txt
+    symbols: overlays/ov000/symbols.txt
+    relocations: overlays/ov000/relocs.txt
+  - id: 1
+    name: ov001
+    object: ../../../build/bk9e/delinked/build/arm9_ov001.bin
+    hash: af7de4a68e2620ef
+    delinks: overlays/ov001/delinks.txt
+    symbols: overlays/ov001/symbols.txt
+    relocations: overlays/ov001/relocs.txt
+  - id: 2
+    name: ov002
+    object: ../../../build/bk9e/delinked/build/arm9_ov002.bin
+    hash: 7ccf6e7a53c6bd0b
+    delinks: overlays/ov002/delinks.txt
+    symbols: overlays/ov002/symbols.txt
+    relocations: overlays/ov002/relocs.txt
+  - id: 3
+    name: ov003
+    object: ../../../build/bk9e/delinked/build/arm9_ov003.bin
+    hash: b674b446171408e3
+    delinks: overlays/ov003/delinks.txt
+    symbols: overlays/ov003/symbols.txt
+    relocations: overlays/ov003/relocs.txt
+  - id: 4
+    name: ov004
+    object: ../../../build/bk9e/delinked/build/arm9_ov004.bin
+    hash: b5c9c174012b2537
+    delinks: overlays/ov004/delinks.txt
+    symbols: overlays/ov004/symbols.txt
+    relocations: overlays/ov004/relocs.txt
+  - id: 5
+    name: ov005
+    object: ../../../build/bk9e/delinked/build/arm9_ov005.bin
+    hash: c1be3731b7a614d6
+    delinks: overlays/ov005/delinks.txt
+    symbols: overlays/ov005/symbols.txt
+    relocations: overlays/ov005/relocs.txt
+  - id: 6
+    name: ov006
+    object: ../../../build/bk9e/delinked/build/arm9_ov006.bin
+    hash: 784a4bd6072651ad
+    delinks: overlays/ov006/delinks.txt
+    symbols: overlays/ov006/symbols.txt
+    relocations: overlays/ov006/relocs.txt
+  - id: 7
+    name: ov007
+    object: ../../../build/bk9e/delinked/build/arm9_ov007.bin
+    hash: b1b1d00c21bbf165
+    delinks: overlays/ov007/delinks.txt
+    symbols: overlays/ov007/symbols.txt
+    relocations: overlays/ov007/relocs.txt
+  - id: 8
+    name: ov008
+    object: ../../../build/bk9e/delinked/build/arm9_ov008.bin
+    hash: fd4abdfe0476db26
+    delinks: overlays/ov008/delinks.txt
+    symbols: overlays/ov008/symbols.txt
+    relocations: overlays/ov008/relocs.txt
+  - id: 9
+    name: ov009
+    object: ../../../build/bk9e/delinked/build/arm9_ov009.bin
+    hash: aca25e3732427a4c
+    delinks: overlays/ov009/delinks.txt
+    symbols: overlays/ov009/symbols.txt
+    relocations: overlays/ov009/relocs.txt
+  - id: 10
+    name: ov010
+    object: ../../../build/bk9e/delinked/build/arm9_ov010.bin
+    hash: 8f6feeed5bdf5141
+    delinks: overlays/ov010/delinks.txt
+    symbols: overlays/ov010/symbols.txt
+    relocations: overlays/ov010/relocs.txt
+  - id: 11
+    name: ov011
+    object: ../../../build/bk9e/delinked/build/arm9_ov011.bin
+    hash: 4f4a1b095e91b7d0
+    delinks: overlays/ov011/delinks.txt
+    symbols: overlays/ov011/symbols.txt
+    relocations: overlays/ov011/relocs.txt
+  - id: 12
+    name: ov012
+    object: ../../../build/bk9e/delinked/build/arm9_ov012.bin
+    hash: 263a851f73bdab4a
+    delinks: overlays/ov012/delinks.txt
+    symbols: overlays/ov012/symbols.txt
+    relocations: overlays/ov012/relocs.txt
+  - id: 13
+    name: ov013
+    object: ../../../build/bk9e/delinked/build/arm9_ov013.bin
+    hash: 2fc021c7133c8eef
+    delinks: overlays/ov013/delinks.txt
+    symbols: overlays/ov013/symbols.txt
+    relocations: overlays/ov013/relocs.txt
+  - id: 14
+    name: ov014
+    object: ../../../build/bk9e/delinked/build/arm9_ov014.bin
+    hash: a2d91a81c5230054
+    delinks: overlays/ov014/delinks.txt
+    symbols: overlays/ov014/symbols.txt
+    relocations: overlays/ov014/relocs.txt
+  - id: 15
+    name: ov015
+    object: ../../../build/bk9e/delinked/build/arm9_ov015.bin
+    hash: d694603df31450f8
+    delinks: overlays/ov015/delinks.txt
+    symbols: overlays/ov015/symbols.txt
+    relocations: overlays/ov015/relocs.txt
+  - id: 16
+    name: ov016
+    object: ../../../build/bk9e/delinked/build/arm9_ov016.bin
+    hash: fd7b3f8f3ebd6d69
+    delinks: overlays/ov016/delinks.txt
+    symbols: overlays/ov016/symbols.txt
+    relocations: overlays/ov016/relocs.txt
+  - id: 17
+    name: ov017
+    object: ../../../build/bk9e/delinked/build/arm9_ov017.bin
+    hash: d676c36ff09503dc
+    delinks: overlays/ov017/delinks.txt
+    symbols: overlays/ov017/symbols.txt
+    relocations: overlays/ov017/relocs.txt
+  - id: 18
+    name: ov018
+    object: ../../../build/bk9e/delinked/build/arm9_ov018.bin
+    hash: a29dec52e08cd929
+    delinks: overlays/ov018/delinks.txt
+    symbols: overlays/ov018/symbols.txt
+    relocations: overlays/ov018/relocs.txt
+  - id: 19
+    name: ov019
+    object: ../../../build/bk9e/delinked/build/arm9_ov019.bin
+    hash: c6ca721df70b814a
+    delinks: overlays/ov019/delinks.txt
+    symbols: overlays/ov019/symbols.txt
+    relocations: overlays/ov019/relocs.txt
+  - id: 20
+    name: ov020
+    object: ../../../build/bk9e/delinked/build/arm9_ov020.bin
+    hash: ea99c53562aa1413
+    delinks: overlays/ov020/delinks.txt
+    symbols: overlays/ov020/symbols.txt
+    relocations: overlays/ov020/relocs.txt
+  - id: 21
+    name: ov021
+    object: ../../../build/bk9e/delinked/build/arm9_ov021.bin
+    hash: 5fd936cc64a0927f
+    delinks: overlays/ov021/delinks.txt
+    symbols: overlays/ov021/symbols.txt
+    relocations: overlays/ov021/relocs.txt
+  - id: 22
+    name: ov022
+    object: ../../../build/bk9e/delinked/build/arm9_ov022.bin
+    hash: 01c40fed19d3752e
+    delinks: overlays/ov022/delinks.txt
+    symbols: overlays/ov022/symbols.txt
+    relocations: overlays/ov022/relocs.txt
+  - id: 23
+    name: ov023
+    object: ../../../build/bk9e/delinked/build/arm9_ov023.bin
+    hash: 5a79ef041ab2fb64
+    delinks: overlays/ov023/delinks.txt
+    symbols: overlays/ov023/symbols.txt
+    relocations: overlays/ov023/relocs.txt
+  - id: 24
+    name: ov024
+    object: ../../../build/bk9e/delinked/build/arm9_ov024.bin
+    hash: b414074a1a2948d0
+    delinks: overlays/ov024/delinks.txt
+    symbols: overlays/ov024/symbols.txt
+    relocations: overlays/ov024/relocs.txt
+  - id: 25
+    name: ov025
+    object: ../../../build/bk9e/delinked/build/arm9_ov025.bin
+    hash: 13c15e8bb99af834
+    delinks: overlays/ov025/delinks.txt
+    symbols: overlays/ov025/symbols.txt
+    relocations: overlays/ov025/relocs.txt
+  - id: 26
+    name: ov026
+    object: ../../../build/bk9e/delinked/build/arm9_ov026.bin
+    hash: f09e4328878c4a90
+    delinks: overlays/ov026/delinks.txt
+    symbols: overlays/ov026/symbols.txt
+    relocations: overlays/ov026/relocs.txt
+  - id: 27
+    name: ov027
+    object: ../../../build/bk9e/delinked/build/arm9_ov027.bin
+    hash: ba589af6b0d3a3b1
+    delinks: overlays/ov027/delinks.txt
+    symbols: overlays/ov027/symbols.txt
+    relocations: overlays/ov027/relocs.txt
+  - id: 28
+    name: ov028
+    object: ../../../build/bk9e/delinked/build/arm9_ov028.bin
+    hash: 819729f25a6b6b3f
+    delinks: overlays/ov028/delinks.txt
+    symbols: overlays/ov028/symbols.txt
+    relocations: overlays/ov028/relocs.txt
+  - id: 29
+    name: ov029
+    object: ../../../build/bk9e/delinked/build/arm9_ov029.bin
+    hash: 388deb896e92db38
+    delinks: overlays/ov029/delinks.txt
+    symbols: overlays/ov029/symbols.txt
+    relocations: overlays/ov029/relocs.txt
+  - id: 30
+    name: ov030
+    object: ../../../build/bk9e/delinked/build/arm9_ov030.bin
+    hash: 046151287bd6c8b5
+    delinks: overlays/ov030/delinks.txt
+    symbols: overlays/ov030/symbols.txt
+    relocations: overlays/ov030/relocs.txt
+  - id: 31
+    name: ov031
+    object: ../../../build/bk9e/delinked/build/arm9_ov031.bin
+    hash: e039d5784b527332
+    delinks: overlays/ov031/delinks.txt
+    symbols: overlays/ov031/symbols.txt
+    relocations: overlays/ov031/relocs.txt
+  - id: 32
+    name: ov032
+    object: ../../../build/bk9e/delinked/build/arm9_ov032.bin
+    hash: 9357fca5c8fc1503
+    delinks: overlays/ov032/delinks.txt
+    symbols: overlays/ov032/symbols.txt
+    relocations: overlays/ov032/relocs.txt
+  - id: 33
+    name: ov033
+    object: ../../../build/bk9e/delinked/build/arm9_ov033.bin
+    hash: 49fd64286eef01fd
+    delinks: overlays/ov033/delinks.txt
+    symbols: overlays/ov033/symbols.txt
+    relocations: overlays/ov033/relocs.txt
+  - id: 34
+    name: ov034
+    object: ../../../build/bk9e/delinked/build/arm9_ov034.bin
+    hash: 94279a121726b30c
+    delinks: overlays/ov034/delinks.txt
+    symbols: overlays/ov034/symbols.txt
+    relocations: overlays/ov034/relocs.txt
+  - id: 35
+    name: ov035
+    object: ../../../build/bk9e/delinked/build/arm9_ov035.bin
+    hash: 915a7400b6c19d23
+    delinks: overlays/ov035/delinks.txt
+    symbols: overlays/ov035/symbols.txt
+    relocations: overlays/ov035/relocs.txt
+  - id: 36
+    name: ov036
+    object: ../../../build/bk9e/delinked/build/arm9_ov036.bin
+    hash: a575eb89a265d5a7
+    delinks: overlays/ov036/delinks.txt
+    symbols: overlays/ov036/symbols.txt
+    relocations: overlays/ov036/relocs.txt
+  - id: 37
+    name: ov037
+    object: ../../../build/bk9e/delinked/build/arm9_ov037.bin
+    hash: 52185ca50ea2cffe
+    delinks: overlays/ov037/delinks.txt
+    symbols: overlays/ov037/symbols.txt
+    relocations: overlays/ov037/relocs.txt
+  - id: 38
+    name: ov038
+    object: ../../../build/bk9e/delinked/build/arm9_ov038.bin
+    hash: 421008e8c63aa202
+    delinks: overlays/ov038/delinks.txt
+    symbols: overlays/ov038/symbols.txt
+    relocations: overlays/ov038/relocs.txt
+  - id: 39
+    name: ov039
+    object: ../../../build/bk9e/delinked/build/arm9_ov039.bin
+    hash: a4bcf45e72b87bc6
+    delinks: overlays/ov039/delinks.txt
+    symbols: overlays/ov039/symbols.txt
+    relocations: overlays/ov039/relocs.txt
+  - id: 40
+    name: ov040
+    object: ../../../build/bk9e/delinked/build/arm9_ov040.bin
+    hash: a755de6f7b0a5c1b
+    delinks: overlays/ov040/delinks.txt
+    symbols: overlays/ov040/symbols.txt
+    relocations: overlays/ov040/relocs.txt
+  - id: 41
+    name: ov041
+    object: ../../../build/bk9e/delinked/build/arm9_ov041.bin
+    hash: 0d950dbf02069309
+    delinks: overlays/ov041/delinks.txt
+    symbols: overlays/ov041/symbols.txt
+    relocations: overlays/ov041/relocs.txt
+  - id: 42
+    name: ov042
+    object: ../../../build/bk9e/delinked/build/arm9_ov042.bin
+    hash: 305042bb7dd64fb4
+    delinks: overlays/ov042/delinks.txt
+    symbols: overlays/ov042/symbols.txt
+    relocations: overlays/ov042/relocs.txt
+  - id: 43
+    name: ov043
+    object: ../../../build/bk9e/delinked/build/arm9_ov043.bin
+    hash: bb7fe135b8168978
+    delinks: overlays/ov043/delinks.txt
+    symbols: overlays/ov043/symbols.txt
+    relocations: overlays/ov043/relocs.txt
+  - id: 44
+    name: ov044
+    object: ../../../build/bk9e/delinked/build/arm9_ov044.bin
+    hash: 982f6b30b89f34a9
+    delinks: overlays/ov044/delinks.txt
+    symbols: overlays/ov044/symbols.txt
+    relocations: overlays/ov044/relocs.txt
+  - id: 45
+    name: ov045
+    object: ../../../build/bk9e/delinked/build/arm9_ov045.bin
+    hash: 4879f5ab8cbb6fdd
+    delinks: overlays/ov045/delinks.txt
+    symbols: overlays/ov045/symbols.txt
+    relocations: overlays/ov045/relocs.txt
+  - id: 46
+    name: ov046
+    object: ../../../build/bk9e/delinked/build/arm9_ov046.bin
+    hash: 34d2802556376c73
+    delinks: overlays/ov046/delinks.txt
+    symbols: overlays/ov046/symbols.txt
+    relocations: overlays/ov046/relocs.txt
+  - id: 47
+    name: ov047
+    object: ../../../build/bk9e/delinked/build/arm9_ov047.bin
+    hash: 34ab711aeb817e0e
+    delinks: overlays/ov047/delinks.txt
+    symbols: overlays/ov047/symbols.txt
+    relocations: overlays/ov047/relocs.txt
+  - id: 48
+    name: ov048
+    object: ../../../build/bk9e/delinked/build/arm9_ov048.bin
+    hash: 1e0b61fed2d121a7
+    delinks: overlays/ov048/delinks.txt
+    symbols: overlays/ov048/symbols.txt
+    relocations: overlays/ov048/relocs.txt
+  - id: 49
+    name: ov049
+    object: ../../../build/bk9e/delinked/build/arm9_ov049.bin
+    hash: 9ee761f08adf5505
+    delinks: overlays/ov049/delinks.txt
+    symbols: overlays/ov049/symbols.txt
+    relocations: overlays/ov049/relocs.txt
+  - id: 50
+    name: ov050
+    object: ../../../build/bk9e/delinked/build/arm9_ov050.bin
+    hash: 1cc597ac4c74104f
+    delinks: overlays/ov050/delinks.txt
+    symbols: overlays/ov050/symbols.txt
+    relocations: overlays/ov050/relocs.txt
+  - id: 51
+    name: ov051
+    object: ../../../build/bk9e/delinked/build/arm9_ov051.bin
+    hash: f7fac22e4cbce5ce
+    delinks: overlays/ov051/delinks.txt
+    symbols: overlays/ov051/symbols.txt
+    relocations: overlays/ov051/relocs.txt
+  - id: 52
+    name: ov052
+    object: ../../../build/bk9e/delinked/build/arm9_ov052.bin
+    hash: 24150ab47e966a54
+    delinks: overlays/ov052/delinks.txt
+    symbols: overlays/ov052/symbols.txt
+    relocations: overlays/ov052/relocs.txt
+  - id: 53
+    name: ov053
+    object: ../../../build/bk9e/delinked/build/arm9_ov053.bin
+    hash: 9796394a9c215eca
+    delinks: overlays/ov053/delinks.txt
+    symbols: overlays/ov053/symbols.txt
+    relocations: overlays/ov053/relocs.txt
+  - id: 54
+    name: ov054
+    object: ../../../build/bk9e/delinked/build/arm9_ov054.bin
+    hash: b992d4a874b7aef7
+    delinks: overlays/ov054/delinks.txt
+    symbols: overlays/ov054/symbols.txt
+    relocations: overlays/ov054/relocs.txt
+  - id: 55
+    name: ov055
+    object: ../../../build/bk9e/delinked/build/arm9_ov055.bin
+    hash: 3fbe1c63c1db4a20
+    delinks: overlays/ov055/delinks.txt
+    symbols: overlays/ov055/symbols.txt
+    relocations: overlays/ov055/relocs.txt
+  - id: 56
+    name: ov056
+    object: ../../../build/bk9e/delinked/build/arm9_ov056.bin
+    hash: 178187e8655262f1
+    delinks: overlays/ov056/delinks.txt
+    symbols: overlays/ov056/symbols.txt
+    relocations: overlays/ov056/relocs.txt
+  - id: 57
+    name: ov057
+    object: ../../../build/bk9e/delinked/build/arm9_ov057.bin
+    hash: 466c56cea4ea56a5
+    delinks: overlays/ov057/delinks.txt
+    symbols: overlays/ov057/symbols.txt
+    relocations: overlays/ov057/relocs.txt
+  - id: 58
+    name: ov058
+    object: ../../../build/bk9e/delinked/build/arm9_ov058.bin
+    hash: bd27865a35894a62
+    delinks: overlays/ov058/delinks.txt
+    symbols: overlays/ov058/symbols.txt
+    relocations: overlays/ov058/relocs.txt
+  - id: 59
+    name: ov059
+    object: ../../../build/bk9e/delinked/build/arm9_ov059.bin
+    hash: 1fc092f45ce56c85
+    delinks: overlays/ov059/delinks.txt
+    symbols: overlays/ov059/symbols.txt
+    relocations: overlays/ov059/relocs.txt
+  - id: 60
+    name: ov060
+    object: ../../../build/bk9e/delinked/build/arm9_ov060.bin
+    hash: c0454319307f9c8a
+    delinks: overlays/ov060/delinks.txt
+    symbols: overlays/ov060/symbols.txt
+    relocations: overlays/ov060/relocs.txt
+  - id: 61
+    name: ov061
+    object: ../../../build/bk9e/delinked/build/arm9_ov061.bin
+    hash: 50aee6d6393417d8
+    delinks: overlays/ov061/delinks.txt
+    symbols: overlays/ov061/symbols.txt
+    relocations: overlays/ov061/relocs.txt
+  - id: 62
+    name: ov062
+    object: ../../../build/bk9e/delinked/build/arm9_ov062.bin
+    hash: e9e5ae3c7049eeec
+    delinks: overlays/ov062/delinks.txt
+    symbols: overlays/ov062/symbols.txt
+    relocations: overlays/ov062/relocs.txt
+  - id: 63
+    name: ov063
+    object: ../../../build/bk9e/delinked/build/arm9_ov063.bin
+    hash: 53b450bc57aa63db
+    delinks: overlays/ov063/delinks.txt
+    symbols: overlays/ov063/symbols.txt
+    relocations: overlays/ov063/relocs.txt
+  - id: 64
+    name: ov064
+    object: ../../../build/bk9e/delinked/build/arm9_ov064.bin
+    hash: 9499e4293e4b16d8
+    delinks: overlays/ov064/delinks.txt
+    symbols: overlays/ov064/symbols.txt
+    relocations: overlays/ov064/relocs.txt
+  - id: 65
+    name: ov065
+    object: ../../../build/bk9e/delinked/build/arm9_ov065.bin
+    hash: d66847fa105ad3fd
+    delinks: overlays/ov065/delinks.txt
+    symbols: overlays/ov065/symbols.txt
+    relocations: overlays/ov065/relocs.txt
+  - id: 66
+    name: ov066
+    object: ../../../build/bk9e/delinked/build/arm9_ov066.bin
+    hash: 043bddaa161bfb15
+    delinks: overlays/ov066/delinks.txt
+    symbols: overlays/ov066/symbols.txt
+    relocations: overlays/ov066/relocs.txt
+  - id: 67
+    name: ov067
+    object: ../../../build/bk9e/delinked/build/arm9_ov067.bin
+    hash: bf21254e3cac351d
+    delinks: overlays/ov067/delinks.txt
+    symbols: overlays/ov067/symbols.txt
+    relocations: overlays/ov067/relocs.txt
+  - id: 68
+    name: ov068
+    object: ../../../build/bk9e/delinked/build/arm9_ov068.bin
+    hash: 5fe62c9e2bf7a4e6
+    delinks: overlays/ov068/delinks.txt
+    symbols: overlays/ov068/symbols.txt
+    relocations: overlays/ov068/relocs.txt
+  - id: 69
+    name: ov069
+    object: ../../../build/bk9e/delinked/build/arm9_ov069.bin
+    hash: 89a6a969f2b29d82
+    delinks: overlays/ov069/delinks.txt
+    symbols: overlays/ov069/symbols.txt
+    relocations: overlays/ov069/relocs.txt
+  - id: 70
+    name: ov070
+    object: ../../../build/bk9e/delinked/build/arm9_ov070.bin
+    hash: c7de30f37c93cbb1
+    delinks: overlays/ov070/delinks.txt
+    symbols: overlays/ov070/symbols.txt
+    relocations: overlays/ov070/relocs.txt
+  - id: 71
+    name: ov071
+    object: ../../../build/bk9e/delinked/build/arm9_ov071.bin
+    hash: dc639557340d2b0a
+    delinks: overlays/ov071/delinks.txt
+    symbols: overlays/ov071/symbols.txt
+    relocations: overlays/ov071/relocs.txt
+  - id: 72
+    name: ov072
+    object: ../../../build/bk9e/delinked/build/arm9_ov072.bin
+    hash: 16755ac54c283516
+    delinks: overlays/ov072/delinks.txt
+    symbols: overlays/ov072/symbols.txt
+    relocations: overlays/ov072/relocs.txt
+  - id: 73
+    name: ov073
+    object: ../../../build/bk9e/delinked/build/arm9_ov073.bin
+    hash: 5e599a769c013568
+    delinks: overlays/ov073/delinks.txt
+    symbols: overlays/ov073/symbols.txt
+    relocations: overlays/ov073/relocs.txt
+  - id: 74
+    name: ov074
+    object: ../../../build/bk9e/delinked/build/arm9_ov074.bin
+    hash: f1c443b7f8dcbca1
+    delinks: overlays/ov074/delinks.txt
+    symbols: overlays/ov074/symbols.txt
+    relocations: overlays/ov074/relocs.txt
+  - id: 75
+    name: ov075
+    object: ../../../build/bk9e/delinked/build/arm9_ov075.bin
+    hash: 324a8b6ba06e122e
+    delinks: overlays/ov075/delinks.txt
+    symbols: overlays/ov075/symbols.txt
+    relocations: overlays/ov075/relocs.txt
+  - id: 76
+    name: ov076
+    object: ../../../build/bk9e/delinked/build/arm9_ov076.bin
+    hash: 159d43c81e60d2d1
+    delinks: overlays/ov076/delinks.txt
+    symbols: overlays/ov076/symbols.txt
+    relocations: overlays/ov076/relocs.txt
+  - id: 77
+    name: ov077
+    object: ../../../build/bk9e/delinked/build/arm9_ov077.bin
+    hash: 25f37489dfdf3b16
+    delinks: overlays/ov077/delinks.txt
+    symbols: overlays/ov077/symbols.txt
+    relocations: overlays/ov077/relocs.txt
+  - id: 78
+    name: ov078
+    object: ../../../build/bk9e/delinked/build/arm9_ov078.bin
+    hash: 1d6e5038e0b9d7ee
+    delinks: overlays/ov078/delinks.txt
+    symbols: overlays/ov078/symbols.txt
+    relocations: overlays/ov078/relocs.txt
+  - id: 79
+    name: ov079
+    object: ../../../build/bk9e/delinked/build/arm9_ov079.bin
+    hash: 77e747a266328aff
+    delinks: overlays/ov079/delinks.txt
+    symbols: overlays/ov079/symbols.txt
+    relocations: overlays/ov079/relocs.txt
+  - id: 80
+    name: ov080
+    object: ../../../build/bk9e/delinked/build/arm9_ov080.bin
+    hash: bdff0059a274703c
+    delinks: overlays/ov080/delinks.txt
+    symbols: overlays/ov080/symbols.txt
+    relocations: overlays/ov080/relocs.txt
+  - id: 81
+    name: ov081
+    object: ../../../build/bk9e/delinked/build/arm9_ov081.bin
+    hash: 330797d0d2f3cc8a
+    delinks: overlays/ov081/delinks.txt
+    symbols: overlays/ov081/symbols.txt
+    relocations: overlays/ov081/relocs.txt
+  - id: 82
+    name: ov082
+    object: ../../../build/bk9e/delinked/build/arm9_ov082.bin
+    hash: a50cd01e733c913e
+    delinks: overlays/ov082/delinks.txt
+    symbols: overlays/ov082/symbols.txt
+    relocations: overlays/ov082/relocs.txt
+  - id: 83
+    name: ov083
+    object: ../../../build/bk9e/delinked/build/arm9_ov083.bin
+    hash: 84432d3b1d93db17
+    delinks: overlays/ov083/delinks.txt
+    symbols: overlays/ov083/symbols.txt
+    relocations: overlays/ov083/relocs.txt
+  - id: 84
+    name: ov084
+    object: ../../../build/bk9e/delinked/build/arm9_ov084.bin
+    hash: 4e5bb84fca0d3443
+    delinks: overlays/ov084/delinks.txt
+    symbols: overlays/ov084/symbols.txt
+    relocations: overlays/ov084/relocs.txt
+  - id: 85
+    name: ov085
+    object: ../../../build/bk9e/delinked/build/arm9_ov085.bin
+    hash: 8c08f5e35d14b3ab
+    delinks: overlays/ov085/delinks.txt
+    symbols: overlays/ov085/symbols.txt
+    relocations: overlays/ov085/relocs.txt
+  - id: 86
+    name: ov086
+    object: ../../../build/bk9e/delinked/build/arm9_ov086.bin
+    hash: 73188a34588fb28c
+    delinks: overlays/ov086/delinks.txt
+    symbols: overlays/ov086/symbols.txt
+    relocations: overlays/ov086/relocs.txt
+  - id: 87
+    name: ov087
+    object: ../../../build/bk9e/delinked/build/arm9_ov087.bin
+    hash: a057d20156e422f2
+    delinks: overlays/ov087/delinks.txt
+    symbols: overlays/ov087/symbols.txt
+    relocations: overlays/ov087/relocs.txt
+  - id: 88
+    name: ov088
+    object: ../../../build/bk9e/delinked/build/arm9_ov088.bin
+    hash: 1f6e8a192038430f
+    delinks: overlays/ov088/delinks.txt
+    symbols: overlays/ov088/symbols.txt
+    relocations: overlays/ov088/relocs.txt
+  - id: 89
+    name: ov089
+    object: ../../../build/bk9e/delinked/build/arm9_ov089.bin
+    hash: da699f7dcdc6b701
+    delinks: overlays/ov089/delinks.txt
+    symbols: overlays/ov089/symbols.txt
+    relocations: overlays/ov089/relocs.txt
+  - id: 90
+    name: ov090
+    object: ../../../build/bk9e/delinked/build/arm9_ov090.bin
+    hash: 7e2980d73bbce50d
+    delinks: overlays/ov090/delinks.txt
+    symbols: overlays/ov090/symbols.txt
+    relocations: overlays/ov090/relocs.txt
+  - id: 91
+    name: ov091
+    object: ../../../build/bk9e/delinked/build/arm9_ov091.bin
+    hash: 9ccc7c22a4dfc4a1
+    delinks: overlays/ov091/delinks.txt
+    symbols: overlays/ov091/symbols.txt
+    relocations: overlays/ov091/relocs.txt
+  - id: 92
+    name: ov092
+    object: ../../../build/bk9e/delinked/build/arm9_ov092.bin
+    hash: 7e2980d73bbce50d
+    delinks: overlays/ov092/delinks.txt
+    symbols: overlays/ov092/symbols.txt
+    relocations: overlays/ov092/relocs.txt
+  - id: 93
+    name: ov093
+    object: ../../../build/bk9e/delinked/build/arm9_ov093.bin
+    hash: c8d2bb01374b2fe9
+    delinks: overlays/ov093/delinks.txt
+    symbols: overlays/ov093/symbols.txt
+    relocations: overlays/ov093/relocs.txt
+  - id: 94
+    name: ov094
+    object: ../../../build/bk9e/delinked/build/arm9_ov094.bin
+    hash: 7e2980d73bbce50d
+    delinks: overlays/ov094/delinks.txt
+    symbols: overlays/ov094/symbols.txt
+    relocations: overlays/ov094/relocs.txt
+  - id: 95
+    name: ov095
+    object: ../../../build/bk9e/delinked/build/arm9_ov095.bin
+    hash: 935e40e4690d96dd
+    delinks: overlays/ov095/delinks.txt
+    symbols: overlays/ov095/symbols.txt
+    relocations: overlays/ov095/relocs.txt
+  - id: 96
+    name: ov096
+    object: ../../../build/bk9e/delinked/build/arm9_ov096.bin
+    hash: 7e2980d73bbce50d
+    delinks: overlays/ov096/delinks.txt
+    symbols: overlays/ov096/symbols.txt
+    relocations: overlays/ov096/relocs.txt
+  - id: 97
+    name: ov097
+    object: ../../../build/bk9e/delinked/build/arm9_ov097.bin
+    hash: 4fe01115d7c75214
+    delinks: overlays/ov097/delinks.txt
+    symbols: overlays/ov097/symbols.txt
+    relocations: overlays/ov097/relocs.txt
+  - id: 98
+    name: ov098
+    object: ../../../build/bk9e/delinked/build/arm9_ov098.bin
+    hash: 7e2980d73bbce50d
+    delinks: overlays/ov098/delinks.txt
+    symbols: overlays/ov098/symbols.txt
+    relocations: overlays/ov098/relocs.txt
+  - id: 99
+    name: ov099
+    object: ../../../build/bk9e/delinked/build/arm9_ov099.bin
+    hash: 5e253341970a01ac
+    delinks: overlays/ov099/delinks.txt
+    symbols: overlays/ov099/symbols.txt
+    relocations: overlays/ov099/relocs.txt
+  - id: 100
+    name: ov100
+    object: ../../../build/bk9e/delinked/build/arm9_ov100.bin
+    hash: 7e2980d73bbce50d
+    delinks: overlays/ov100/delinks.txt
+    symbols: overlays/ov100/symbols.txt
+    relocations: overlays/ov100/relocs.txt
+  - id: 101
+    name: ov101
+    object: ../../../build/bk9e/delinked/build/arm9_ov101.bin
+    hash: 1d50860ebb4b692b
+    delinks: overlays/ov101/delinks.txt
+    symbols: overlays/ov101/symbols.txt
+    relocations: overlays/ov101/relocs.txt
+  - id: 102
+    name: ov102
+    object: ../../../build/bk9e/delinked/build/arm9_ov102.bin
+    hash: 7e2980d73bbce50d
+    delinks: overlays/ov102/delinks.txt
+    symbols: overlays/ov102/symbols.txt
+    relocations: overlays/ov102/relocs.txt
+  - id: 103
+    name: ov103
+    object: ../../../build/bk9e/delinked/build/arm9_ov103.bin
+    hash: 2492d192b13c437f
+    delinks: overlays/ov103/delinks.txt
+    symbols: overlays/ov103/symbols.txt
+    relocations: overlays/ov103/relocs.txt
+  - id: 104
+    name: ov104
+    object: ../../../build/bk9e/delinked/build/arm9_ov104.bin
+    hash: ab5c5a38a7cab1e5
+    delinks: overlays/ov104/delinks.txt
+    symbols: overlays/ov104/symbols.txt
+    relocations: overlays/ov104/relocs.txt

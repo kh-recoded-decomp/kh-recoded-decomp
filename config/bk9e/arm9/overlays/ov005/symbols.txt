@@ -1,0 +1,2 @@
+func_ov005_020a0520 kind:function(thumb,size=0x40) addr:0x020a0520
+data_ov005_020a0580 kind:data(any) addr:0x020a0580

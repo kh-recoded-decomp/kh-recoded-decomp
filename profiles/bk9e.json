@@ -1,0 +1,12 @@
+{
+  "id": "bk9e",
+  "name": "Kingdom Hearts Re:coded (North America, revision 0)",
+  "game_code": "BK9E",
+  "maker_code": "GD",
+  "revision": 0,
+  "rom_size": 268435456,
+  "rom_sha256": "929f36f1e09b6b0962ac718332033bbd519f2edede18a3ab65f425ddc66e3fd3",
+  "dsd_version": "0.12.1",
+  "dsd_windows_sha256": "5917df26bffc05d4752276a2e0b1edd21bd6e920aabe1992be8a50efc9d10932",
+  "header_restore_offsets": [108, 109, 350, 351]
+}
