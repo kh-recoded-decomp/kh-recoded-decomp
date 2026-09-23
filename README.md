@@ -10,12 +10,11 @@ extracted game binaries and assets stay on the owner's machine and are ignored b
 - `dsd` 0.12.1 extracts ARM9, ITCM, DTCM, ARM7, 105 ARM9 overlays, and 805 data files.
 - A baseline ROM can be repacked and matched byte for byte to the input ROM.
 - ARM9 symbols, relocation metadata, and module profiles are initialized in `config/bk9e/arm9/`.
-- **No game function has been decompiled from C/C++ yet.** See [PROGRESS.md](PROGRESS.md).
+- A pinned compiler and ARMv5 relocation pipeline verify C functions independently. See [PROGRESS.md](PROGRESS.md) for freshly rebuilt coverage and [matches.json](matches.json) for behavior and uncertainty.
 
 The baseline rebuild proves that extraction and packing are reproducible. It
-does **not** prove that any game code has been recovered as source. A source
-replacement build still needs the correct compiler, flags, linker, and verified
-function implementations. ARM7 has been extracted but its function analysis has
+does **not** prove that any game code has been recovered as source. Whole-module source linking remains unfinished; the current C check builds and
+relocates individual functions at their original addresses. ARM7 has been extracted but its function analysis has
 not been bootstrapped by `dsd`.
 
 ## Quick start on Windows
@@ -25,6 +24,8 @@ Python 3.12 or newer is required. `setup` downloads a pinned Windows build of
 into the ignored `.tools/` directory and checks its SHA-256.
 
 ```powershell
+python -m pip install -r requirements.txt
+python tools/compile_match.py install
 python tools/khrecoded.py setup --rom "C:\path\to\recoded.nds"
 python tools/khrecoded.py check --profile full
 python tools/khrecoded.py progress
@@ -40,7 +41,7 @@ each time. `khrecoded.cmd` is a Windows shortcut for the Python command.
 |---|---|---|
 | `ci` | ROM-free unit tests and committed module inventory | No |
 | `quick` | `ci` checks, exact ROM identity, extraction inventory | Yes |
-| `full` | `quick`, exact baseline ROM rebuild, all registered C/ASM/SDK match recipes, regenerated progress | Yes |
+| `full` | `quick`, exact baseline ROM rebuild, all registered C/C++ matches, regenerated progress | Yes |
 | `strict` | `full` plus `dsd check modules --fail` when linked module binaries exist | Yes |
 
 Run `python tools/khrecoded.py check --profile strict`. If there are no linked
@@ -59,9 +60,12 @@ not as decompiled code.
 
 Only a function compiled from an authored file during the progress command and
 byte-matched against the appropriate extracted module contributes C/C++ bytes.
-Assembly and identified SDK code have separate totals. `matches.json` starts
-empty and must contain reproducible per-function build commands before progress
-increases. A copied ROM, delinked object, renamed symbol, or unchanged binary
+Shared middleware recovered as C is included, with its origin recorded.
+Original SDK binaries and assembly add no C coverage. `matches.json` records
+fixed compiler settings, linker bindings, and human-readable explanations.
+Every relocation and literal-pool byte participates in the comparison; no byte
+masks or size trimming are allowed. Understanding is reported separately from
+matching, distinguishing proven gameplay roles from generic engine subsystems. A copied ROM, delinked object, renamed symbol, or unchanged binary
 does not count. See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 The `dsd` repack initially differs at header offsets `0x6C–0x6D` and
@@ -79,3 +83,13 @@ within BK9E include ARM9 main, ITCM, DTCM, all 105 overlays, and ARM7.
 The proprietary game ROM, assets, and original toolchain are not included.
 Contributors must supply their own copy of the game and any required compiler.
 
+## License
+
+The project's original code, tooling, and documentation are available under
+the [MIT License](LICENSE), to the extent that contributors hold the relevant
+rights. This permits reuse and modification with the copyright and license
+notice retained.
+
+This license grants no rights to the original game's ROM, assets, trademarks,
+or proprietary SDK and compiler binaries. Third-party material retains its
+existing license and copyright notices; importing it does not relicense it.

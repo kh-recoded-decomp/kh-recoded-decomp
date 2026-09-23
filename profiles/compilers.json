@@ -1,0 +1,16 @@
+{
+  "archive_url": "https://github.com/decompme/compilers/releases/download/compilers/mwccarm.zip",
+  "archive_sha256": "dc386e37b2176e960954a733de928337d9b7e7620b9e94228008c31774339ace",
+  "license": ".tools/mwccarm/mwccarm/license.dat",
+  "variants": {
+    "mwccarm-4.0-1036": {
+      "executable": ".tools/mwccarm/mwccarm/dsi/1.3p1/mwccarm.exe",
+      "sha256": "968c7e88bd049ddd4941861b12d599d993f1040921b6fa1b0a39f4ed049a16bf"
+    },
+    "mwccarm-3.0-139": {
+      "executable": ".tools/mwccarm/mwccarm/2.0/sp2p4/mwccarm.exe",
+      "sha256": "6026d180647c2edce21901135e638960567277f615db318ec461be7e2d23c914"
+    }
+  },
+  "flags": ["-c", "-O4,p", "-proc", "arm946e", "-interworking", "-lang", "c99", "-enum", "int", "-char", "signed", "-inline", "on,noauto", "-Cpp_exceptions", "off", "-gccext,on"]
+}

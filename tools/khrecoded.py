@@ -234,28 +234,25 @@ def verify_matches(inv: dict[str, dict]) -> dict:
         if key in seen or module not in inv or symbol not in inv[module]["symbols"]:
             raise RuntimeError(f"Duplicate or unknown match: {key}")
         seen.add(key)
-        if language not in ("c", "cpp", "asm", "sdk"):
+        if language not in ("c", "cpp"):
             raise RuntimeError(f"Unknown language for {key}: {language}")
         source = (ROOT / entry["source"]).resolve()
         if not source.is_relative_to(ROOT / "src") or not source.is_file():
             raise RuntimeError(f"Missing or external source for {key}: {source}")
         if language == "c" and source.suffix.lower() != ".c":
             raise RuntimeError(f"C match must point to a .c file: {key}")
-        commands = entry.get("build")
-        if not isinstance(commands, list) or not commands or not any(
-                "{source}" in token for cmd in commands for token in cmd):
-            raise RuntimeError(f"Match needs a source-consuming build recipe: {key}")
+        for field in ("name", "behavior", "evidence", "uncertainty", "domain", "origin"):
+            if not isinstance(entry.get(field), str) or not entry[field].strip():
+                raise RuntimeError(f"Missing {field} for {key}")
+        if entry.get("understanding") not in ("gameplay", "subsystem", "unknown"):
+            raise RuntimeError(f"Invalid understanding level for {key}")
+        if "build" in entry:
+            raise RuntimeError("Arbitrary build recipes cannot count as verified C")
+        function = inv[module]["symbols"][symbol]
         with tempfile.TemporaryDirectory(prefix="candidate-", dir=ROOT / "build") as temp:
-            paths = {"source": str(source), "output": str(Path(temp) / "candidate.bin"),
-                     "object": str(Path(temp) / "candidate.o"), "workdir": str(ROOT)}
-            for cmd in commands:
-                if not isinstance(cmd, list) or not cmd:
-                    raise RuntimeError(f"Invalid build command: {key}")
-                subprocess.run([token.format(**paths) for token in cmd], cwd=ROOT, check=True)
-            candidate = Path(paths["output"])
-            if not candidate.is_file():
-                raise RuntimeError(f"Build recipe did not create candidate.bin: {key}")
-            function = inv[module]["symbols"][symbol]
+            from compile_match import compile_entry
+            candidate = Path(temp) / "candidate.bin"
+            build_proof = compile_entry(entry, function["address"], candidate)
             offset = function["address"] - inv[module]["base"]
             if offset < 0 or offset + function["size"] > inv[module]["binary_bytes"]:
                 raise RuntimeError(f"Function span outside {module}: {symbol}")
@@ -266,11 +263,16 @@ def verify_matches(inv: dict[str, dict]) -> dict:
             with inv[module]["binary"].open("rb") as f:
                 f.seek(offset)
                 expected = f.read(function["size"])
-            if candidate.read_bytes() != expected:
-                raise RuntimeError(f"Byte mismatch for {module}:{symbol}")
+            actual = candidate.read_bytes()
+            if actual != expected:
+                first = next((i for i, (a, b) in enumerate(zip(actual, expected)) if a != b), None)
+                raise RuntimeError(f"Byte mismatch for {module}:{symbol}: compiled={len(actual)}, "
+                                   f"expected={len(expected)}, first_difference={first}")
             verified.append({"module": module, "symbol": symbol, "language": language,
                              "bytes": function["size"], "source": entry["source"],
-                             "source_sha256": sha256(source)})
+                             **{field: entry[field] for field in (
+                                 "name", "behavior", "evidence", "uncertainty", "domain", "origin", "understanding")},
+                             **build_proof})
     return {"verified": verified}
 
 
@@ -300,16 +302,24 @@ def progress(write: bool = True) -> dict:
             "ARM9 overlays" if name.startswith("ov") else "ARM9 core/autoload")
         for field in groups[group]:
             groups[group][field] += row[field] or 0
-    result = {"profile": "bk9e", "rom_sha256": profile()["rom_sha256"],
+    understanding = {level: {"functions": sum(m["understanding"] == level for m in proof["verified"]),
+                              "bytes": sum(m["bytes"] for m in proof["verified"] if m["understanding"] == level)}
+                     for level in ("gameplay", "subsystem", "unknown")}
+    result = {"profile": "bk9e", "rom_sha256": profile()["rom_sha256"], "understanding": understanding,
               "groups": dict(groups), "modules": module_rows, "matches": proof["verified"],
               "assets": {"extracted_files": 805, "decompiled_files": 0}}
     if write:
         out = ROOT / "build" / "progress.json"
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
+        total_c = sum(g["matched_c_bytes"] for g in groups.values())
+        total_code = sum(g["code_bytes"] for g in groups.values())
         lines = ["# Progress — BK9E revision 0", "", "Generated by `python tools/khrecoded.py progress`.", "",
+                 f"**Verified C/C++: {total_c:,} / {total_code:,} analysed ARM9 code bytes "
+                 f"({100 * total_c / total_code if total_code else 0:.3f}%).**", "",
                  "C/C++ progress counts only functions rebuilt from source during this command and byte-matched "
-                 "against the extracted ROM. Assembly and SDK matches are separate. No extracted binary, "
+                 "against the extracted ROM, including resolved relocations and literal pools. Recovered middleware "
+                 "C is included and labelled by origin; original SDK binaries are never counted. No extracted binary, "
                  "delinked object, renamed symbol, or repacked ROM counts as decompiled source.", "",
                  "| Target | C bytes / analysed code bytes | Identified function bytes | "
                  "C functions / identified functions | Assembly bytes | SDK bytes | Binary container bytes |",
@@ -322,7 +332,20 @@ def progress(write: bool = True) -> dict:
                          f"{data['matched_asm_bytes']:,} | {data['matched_sdk_bytes']:,} | "
                          f"{data['binary_bytes']:,} |")
         lines += ["", "ARM7 is included in the project but has no function inventory yet. The binary container "
-                  "column includes code and data; it is not a source progress denominator.", "",
+                  "column includes code and data; it is not a source progress denominator. This percentage is "
+                  "ARM9 code coverage, not completion of the entire game or a fully linked source build.", "",
+                  "## Understanding", "", "Names and explanations do not add matching bytes. A subsystem name "
+                  "describes a shared operation such as model animation; a gameplay label requires evidence of "
+                  "the particular in-game feature or actor.", "",
+                  "| Evidence level | Matched functions | Matched bytes |", "|---|---:|---:|"]
+        for level, data in understanding.items():
+            lines.append(f"| {level} | {data['functions']} | {data['bytes']:,} |")
+        lines += ["", "## What the matched code does", "", "| Function | Player-facing role | Scope | Bytes |",
+                  "|---|---|---|---:|"]
+        for match in proof["verified"]:
+            lines.append(f"| [{match['name']}]({match['source']}) ({match['module']}:{match['symbol']}) | "
+                         f"{match['behavior'].replace('|', '/')} | {match['understanding']} | {match['bytes']} |")
+        lines += ["",
                   "## Per-module status", "", "| Module | C bytes | Analysed code bytes | "
                   "Identified function bytes | Identified functions | Container bytes |",
                   "|---|---:|---:|---:|---:|---:|"]
