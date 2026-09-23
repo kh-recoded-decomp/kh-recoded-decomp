@@ -286,6 +286,29 @@
         "source": "src/calls/func_02026adc.c",
         "license": "CC0-1.0"
       }
+    },
+    {
+      "name": "multiplyFixedPointQuaternions",
+      "behavior": "Combines two 3D turns into one orientation, using fixed-point quaternion math.",
+      "evidence": "Four component products and sums implement the Hamilton product; all fields are staged before writing the output.",
+      "uncertainty": "Quaternion composition is clear; callers and its exact gameplay use are not established.",
+      "domain": "math",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "arm9",
+      "symbol": "func_0202f93c",
+      "language": "c",
+      "source": "src/arm9/math/multiplyFixedPointQuaternions_0202f93c.c",
+      "source_symbol": "multiplyFixedPointQuaternions_0202f93c",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {},
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/calls/func_0202ef54.c",
+        "license": "CC0-1.0"
+      }
     }
   ]
 }
