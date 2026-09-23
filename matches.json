@@ -442,6 +442,32 @@
         "source": "src/overlays/ov024/calls/func_ov024_0208437c.c",
         "license": "CC0-1.0"
       }
+    },
+    {
+      "name": "selectJointAnimationBlend",
+      "behavior": "Switches a model to the selected animation and restarts it at the beginning at normal speed.",
+      "evidence": "Skips empty or unchanged selections, unbinds the old object, binds the indexed target, and writes frame zero and speed one.",
+      "uncertainty": "Render object and animation object layouts are inferred from offsets; blend semantics beyond selecting a track entry are unknown.",
+      "domain": "animation",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "arm9",
+      "symbol": "func_0202f2cc",
+      "language": "c",
+      "source": "src/arm9/animation/selectJointAnimationBlend_0202f2cc.c",
+      "source_symbol": "selectJointAnimationBlend_0202f2cc",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_02018850": "0x2018850",
+        "func_0201875c": "0x201875c"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/calls/func_0202accc.c",
+        "license": "CC0-1.0"
+      }
     }
   ]
 }
