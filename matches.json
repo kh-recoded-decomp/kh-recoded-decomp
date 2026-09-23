@@ -369,6 +369,29 @@
         "source": "src/overlays/ov024/calls/func_ov024_020840a4.c",
         "license": "CC0-1.0"
       }
+    },
+    {
+      "name": "classifyPackedShapeFlags",
+      "behavior": "Maps two packed two-bit end codes to a shape flag.",
+      "evidence": "Switches on masked bits 31..30 and 15..14 and returns one of four constants.",
+      "uncertainty": "The wider caller meaning of the returned shape flags is unknown.",
+      "domain": "geometry",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "arm9",
+      "symbol": "func_0204e0a4",
+      "language": "c",
+      "source": "src/arm9/geometry/classifyPackedShapeFlags_0204e0a4.c",
+      "source_symbol": "classifyPackedShapeFlags_0204e0a4",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {},
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/auto/func_02031644.c",
+        "license": "CC0-1.0"
+      }
     }
   ]
 }
