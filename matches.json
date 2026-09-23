@@ -337,6 +337,38 @@
         "source": "src/calls/func_02004d60.c",
         "license": "CC0-1.0"
       }
+    },
+    {
+      "name": "startStereoPcmStream",
+      "behavior": "Starts left and right movie-audio playback buffers and schedules their sound timer.",
+      "evidence": "Sets up two looping sound channels, flushes both buffers, and starts a periodic alarm/timer.",
+      "uncertainty": "The refill callback behavior is outside this function; exact stream format constants are opaque.",
+      "domain": "audio",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "ov022",
+      "symbol": "func_ov022_020a7db4",
+      "language": "c",
+      "source": "src/ov022/audio/startStereoPcmStream_020a7db4.c",
+      "source_symbol": "startStereoPcmStream_020a7db4",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_02023fc8": "0x2023fc8",
+        "DC_StoreRange": "0x2003430",
+        "SND_LockChannel": "0x200eba0",
+        "SND_SetupChannelPcm": "0x200ec28",
+        "SND_SetupAlarm": "0x200eb60",
+        "SND_StartTimer": "0x200ead4",
+        "func_0200f080": "0x200f080",
+        "func_020a7d94": "0x20a7d94"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/overlays/ov024/calls/func_ov024_020840a4.c",
+        "license": "CC0-1.0"
+      }
     }
   ]
 }
