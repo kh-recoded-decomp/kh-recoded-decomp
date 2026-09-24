@@ -4368,6 +4368,26 @@
         "source": "build/ghidra/decompiled/ov039_func_ov039_020baaf8.c",
         "license": "independent reconstruction"
       }
+    },
+    {
+      "symbol": "func_ov001_0206dd84",
+      "name": "SetOverlayObjectFactory",
+      "source": "src/ov001/object_creation/SetOverlayObjectFactory_0206dd84.c",
+      "source_symbol": "SetOverlayObjectFactory_0206dd84",
+      "domain": "object_creation",
+      "understanding": "subsystem",
+      "behavior": "Stores the supplied callback in the shared overlay-object factory slot at 0x020a04a0. Overlay 60 registers its creation routine through this setter; the objects created in-game remain unidentified.",
+      "evidence": "At ov001:0x0206dd84, Ghidra disassembly loads the BSS base at 0x020a049c and stores argument r0 at base+4 (0x020a04a0). The overlay-loading caller evidence identifies ov060\u2019s CreateOverlay060Object as the supplied factory. All 12 function bytes compile and match.",
+      "uncertainty": "The later factory consumer and the specific gameplay role of the created object are not established.",
+      "origin": "recovered original-game C",
+      "module": "ov001",
+      "language": "c",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "thumb",
+      "bindings": {
+        "data_ov001_020a049c": "0x020a049c"
+      },
+      "size_bytes": 12
     }
   ]
 }
