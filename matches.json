@@ -339,38 +339,6 @@
       }
     },
     {
-      "name": "startStereoPcmStream",
-      "behavior": "Starts left and right movie-audio playback buffers and schedules their sound timer.",
-      "evidence": "Sets up two looping sound channels, flushes both buffers, and starts a periodic alarm/timer.",
-      "uncertainty": "The refill callback behavior is outside this function; exact stream format constants are opaque.",
-      "domain": "audio",
-      "origin": "recovered shared engine/middleware C",
-      "understanding": "subsystem",
-      "module": "ov022",
-      "symbol": "func_ov022_020a7db4",
-      "language": "c",
-      "source": "src/ov022/audio/startStereoPcmStream_020a7db4.c",
-      "source_symbol": "startStereoPcmStream_020a7db4",
-      "compiler": "mwccarm-4.0-1036",
-      "mode": "arm",
-      "bindings": {
-        "func_02023fc8": "0x2023fc8",
-        "DC_StoreRange": "0x2003430",
-        "SND_LockChannel": "0x200eba0",
-        "SND_SetupChannelPcm": "0x200ec28",
-        "SND_SetupAlarm": "0x200eb60",
-        "SND_StartTimer": "0x200ead4",
-        "func_0200f080": "0x200f080",
-        "func_020a7d94": "0x20a7d94"
-      },
-      "provenance": {
-        "project": "Yokimitsuro/khdays-decomp",
-        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
-        "source": "src/overlays/ov024/calls/func_ov024_020840a4.c",
-        "license": "CC0-1.0"
-      }
-    },
-    {
       "name": "Sprite_GetHeightFromOamAttributes",
       "behavior": "Returns the pixel height of a sprite, such as a menu icon, from its stored shape and size settings.",
       "evidence": "All 12 OAM shape/size cases agree with NNSi_objSizeHTbl in khdays-decomp/libs/nns/g2d/auto/g2d_oam_size_tables.c.",
@@ -413,33 +381,6 @@
         "project": "Yokimitsuro/khdays-decomp",
         "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
         "source": "src/auto/func_02014874.c",
-        "license": "CC0-1.0"
-      }
-    },
-    {
-      "name": "flushPendingStereoAudioBlocks",
-      "behavior": "Feeds decoded movie sound into the left and right audio playback buffers.",
-      "evidence": "Queries pending block count, invokes the per-channel block helper, flushes corresponding cache ranges, and wraps a ring cursor.",
-      "uncertainty": "Ring field meanings are derived from access patterns; concrete decoder format is not established.",
-      "domain": "audio",
-      "origin": "recovered shared engine/middleware C",
-      "understanding": "subsystem",
-      "module": "ov022",
-      "symbol": "func_ov022_020a809c",
-      "language": "c",
-      "source": "src/ov022/audio/flushPendingStereoAudioBlocks_020a809c.c",
-      "source_symbol": "flushPendingStereoAudioBlocks_020a809c",
-      "compiler": "mwccarm-4.0-1036",
-      "mode": "arm",
-      "bindings": {
-        "func_020a9380": "0x20a9380",
-        "func_020a9398": "0x20a9398",
-        "DC_StoreRange": "0x2003430"
-      },
-      "provenance": {
-        "project": "Yokimitsuro/khdays-decomp",
-        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
-        "source": "src/overlays/ov024/calls/func_ov024_0208437c.c",
         "license": "CC0-1.0"
       }
     },
@@ -1028,36 +969,6 @@
       }
     },
     {
-      "name": "StopMovieAudio",
-      "behavior": "Mutes and releases the movie audio channel, waiting for queued sound commands.",
-      "evidence": "Source implementation directly performs the described operations; see src/overlays/ov024/calls/func_ov024_020841c4.c.",
-      "uncertainty": "No material uncertainty for the stated operation; game-specific use may depend on callers.",
-      "domain": "Video playback",
-      "origin": "recovered shared engine/middleware C",
-      "understanding": "subsystem",
-      "module": "ov022",
-      "symbol": "func_ov022_020a7ed8",
-      "language": "c",
-      "source": "src/ov022/video_playback/StopMovieAudio_020a7ed8.c",
-      "source_symbol": "StopMovieAudio_020a7ed8",
-      "compiler": "mwccarm-4.0-1036",
-      "mode": "arm",
-      "bindings": {
-        "SND_SetChannelVolume": "0x200ebe0",
-        "func_0200f288": "0x200f288",
-        "func_0200f080": "0x200f080",
-        "SND_WaitForCommandProc": "0x200f21c",
-        "SND_StopTimer": "0x200eafc",
-        "SND_UnlockChannel": "0x200ebc0"
-      },
-      "provenance": {
-        "project": "Yokimitsuro/khdays-decomp",
-        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
-        "source": "src/overlays/ov024/calls/func_ov024_020841c4.c",
-        "license": "CC0-1.0"
-      }
-    },
-    {
       "name": "LoadDefaultProjectionValues",
       "behavior": "Fills a 14-word block with fixed-point projection and clipping defaults.",
       "evidence": "Source implementation directly performs the described operations; see src/auto/func_02023c60.c.",
@@ -1513,60 +1424,6 @@
         "project": "Yokimitsuro/khdays-decomp",
         "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
         "source": "src/overlays/ov024/calls/func_ov024_020859d4.c",
-        "license": "CC0-1.0"
-      }
-    },
-    {
-      "name": "GetCachedMovieDecodeTable",
-      "behavior": "Returns a decoder table, caching a fast-memory copy when the arena has enough space.",
-      "evidence": "Source implementation directly performs the described operations; see src/overlays/ov024/calls/func_ov024_0208669c.c.",
-      "uncertainty": "No material uncertainty for the stated operation; game-specific use may depend on callers.",
-      "domain": "Video playback",
-      "origin": "recovered shared engine/middleware C",
-      "understanding": "subsystem",
-      "module": "ov022",
-      "symbol": "func_ov022_020aa978",
-      "language": "c",
-      "source": "src/ov022/video_playback/GetCachedMovieDecodeTable_020aa978.c",
-      "source_symbol": "GetCachedMovieDecodeTable_020aa978",
-      "compiler": "mwccarm-3.0-139",
-      "mode": "arm",
-      "bindings": {
-        "MIi_CpuCopyFast": "0x1ff878c",
-        "decoder_cache_arena": "0x20b7df4",
-        "movie_decode_table": "0x20aeaa0"
-      },
-      "provenance": {
-        "project": "Yokimitsuro/khdays-decomp",
-        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
-        "source": "src/overlays/ov024/calls/func_ov024_0208669c.c",
-        "license": "CC0-1.0"
-      }
-    },
-    {
-      "name": "GetCachedPixelClampTable",
-      "behavior": "Returns a pixel clamp table, caching a fast-memory copy when the arena has enough space.",
-      "evidence": "Source implementation directly performs the described operations; see src/overlays/ov024/calls/func_ov024_0208677c.c.",
-      "uncertainty": "No material uncertainty for the stated operation; game-specific use may depend on callers.",
-      "domain": "Video playback",
-      "origin": "recovered shared engine/middleware C",
-      "understanding": "subsystem",
-      "module": "ov022",
-      "symbol": "func_ov022_020aaa58",
-      "language": "c",
-      "source": "src/ov022/video_playback/GetCachedPixelClampTable_020aaa58.c",
-      "source_symbol": "GetCachedPixelClampTable_020aaa58",
-      "compiler": "mwccarm-3.0-139",
-      "mode": "arm",
-      "bindings": {
-        "MIi_CpuCopyFast": "0x1ff878c",
-        "decoder_cache_arena": "0x20b7df4",
-        "pixel_clamp_table": "0x20b7688"
-      },
-      "provenance": {
-        "project": "Yokimitsuro/khdays-decomp",
-        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
-        "source": "src/overlays/ov024/calls/func_ov024_0208677c.c",
         "license": "CC0-1.0"
       }
     },
@@ -2616,60 +2473,6 @@
         "project": "Yokimitsuro/khdays-decomp",
         "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
         "source": "src/overlays/ov011/calls/func_ov011_0205d664.c",
-        "license": "CC0-1.0"
-      }
-    },
-    {
-      "name": "get_cached_movie_decoder_code",
-      "behavior": "Returns a cached decoder code pointer, copying the embedded code into a fast-memory arena when capacity permits.",
-      "evidence": "Cache slots, size `0x659c`, copy call, and fallback path in source.",
-      "uncertainty": "Fast-memory arena layout is opaque outside the movie module.",
-      "domain": "movie",
-      "origin": "recovered shared engine/middleware C",
-      "understanding": "subsystem",
-      "module": "ov022",
-      "symbol": "func_ov022_020aa8fc",
-      "language": "c",
-      "source": "src/ov022/movie/get_cached_movie_decoder_code_020aa8fc.c",
-      "source_symbol": "get_cached_movie_decoder_code_020aa8fc",
-      "compiler": "mwccarm-3.0-139",
-      "mode": "arm",
-      "bindings": {
-        "MIi_CpuCopyFast": "0x1ff878c",
-        "data_020b7df4": "0x20b7df4",
-        "data_020b0ba0": "0x20b0ba0"
-      },
-      "provenance": {
-        "project": "Yokimitsuro/khdays-decomp",
-        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
-        "source": "src/overlays/ov024/calls/func_ov024_02086620.c",
-        "license": "CC0-1.0"
-      }
-    },
-    {
-      "name": "get_cached_movie_saturation_table",
-      "behavior": "Returns a cached movie saturation table, copying its 0x300 bytes into a fast-memory arena when possible.",
-      "evidence": "Cache slot, byte count, copy, and fallback path in source.",
-      "uncertainty": "Table interpretation comes from read-only local reference analysis.",
-      "domain": "movie",
-      "origin": "recovered shared engine/middleware C",
-      "understanding": "subsystem",
-      "module": "ov022",
-      "symbol": "func_ov022_020aa9e8",
-      "language": "c",
-      "source": "src/ov022/movie/get_cached_movie_saturation_table_020aa9e8.c",
-      "source_symbol": "get_cached_movie_saturation_table_020aa9e8",
-      "compiler": "mwccarm-3.0-139",
-      "mode": "arm",
-      "bindings": {
-        "MIi_CpuCopyFast": "0x1ff878c",
-        "data_020b7df4": "0x20b7df4",
-        "data_020b7808": "0x20b7808"
-      },
-      "provenance": {
-        "project": "Yokimitsuro/khdays-decomp",
-        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
-        "source": "src/overlays/ov024/calls/func_ov024_0208670c.c",
         "license": "CC0-1.0"
       }
     },
@@ -5012,6 +4815,319 @@
       "evidence": "The ARM instructions establish the MAC halfword loads, frame-counter word load, generator constants 69069 and 12345, state transitions, and exact channel-selection calls. The complete linked C function is compared against all 196 target bytes.",
       "uncertainty": "Specific multiplayer UI callers are unverified.",
       "domain": "wireless_channel_selection",
+      "origin": "independent C reconstruction",
+      "understanding": "subsystem"
+    },
+    {
+      "name": "startStereoPcmStream",
+      "behavior": "Starts left and right movie-audio playback buffers and schedules their sound timer.",
+      "evidence": "Sets up two looping sound channels, flushes both buffers, and starts a periodic alarm/timer.",
+      "uncertainty": "The refill callback behavior is outside this function; exact stream format constants are opaque.",
+      "domain": "audio",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "ov022",
+      "symbol": "func_ov022_020a7db4",
+      "language": "c",
+      "source": "src/ov022/audio/startStereoPcmStream_020a7db4.c",
+      "source_symbol": "startStereoPcmStream_020a7db4",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_02023fc8": "0x2023fc8",
+        "DC_StoreRange": "0x2003430",
+        "SND_LockChannel": "0x200eba0",
+        "SND_SetupChannelPcm": "0x200ec28",
+        "SND_SetupAlarm": "0x200eb60",
+        "SND_StartTimer": "0x200ead4",
+        "func_0200f080": "0x200f080",
+        "func_020a7d94": "0x20a7d94"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/overlays/ov024/calls/func_ov024_020840a4.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "flushPendingStereoAudioBlocks",
+      "behavior": "Feeds decoded movie sound into the left and right audio playback buffers.",
+      "evidence": "Queries pending block count, invokes the per-channel block helper, flushes corresponding cache ranges, and wraps a ring cursor.",
+      "uncertainty": "Ring field meanings are derived from access patterns; concrete decoder format is not established.",
+      "domain": "audio",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "ov022",
+      "symbol": "func_ov022_020a809c",
+      "language": "c",
+      "source": "src/ov022/audio/flushPendingStereoAudioBlocks_020a809c.c",
+      "source_symbol": "flushPendingStereoAudioBlocks_020a809c",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_020a9380": "0x20a9380",
+        "func_020a9398": "0x20a9398",
+        "DC_StoreRange": "0x2003430"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/overlays/ov024/calls/func_ov024_0208437c.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "StopMovieAudio",
+      "behavior": "Mutes and releases the movie audio channel, waiting for queued sound commands.",
+      "evidence": "Source implementation directly performs the described operations; see src/overlays/ov024/calls/func_ov024_020841c4.c.",
+      "uncertainty": "No material uncertainty for the stated operation; game-specific use may depend on callers.",
+      "domain": "Video playback",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "ov022",
+      "symbol": "func_ov022_020a7ed8",
+      "language": "c",
+      "source": "src/ov022/video_playback/StopMovieAudio_020a7ed8.c",
+      "source_symbol": "StopMovieAudio_020a7ed8",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "SND_SetChannelVolume": "0x200ebe0",
+        "func_0200f288": "0x200f288",
+        "func_0200f080": "0x200f080",
+        "SND_WaitForCommandProc": "0x200f21c",
+        "SND_StopTimer": "0x200eafc",
+        "SND_UnlockChannel": "0x200ebc0"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/overlays/ov024/calls/func_ov024_020841c4.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "GetCachedMovieDecodeTable",
+      "behavior": "Returns a decoder table, caching a fast-memory copy when the arena has enough space.",
+      "evidence": "Source implementation directly performs the described operations; see src/overlays/ov024/calls/func_ov024_0208669c.c.",
+      "uncertainty": "No material uncertainty for the stated operation; game-specific use may depend on callers.",
+      "domain": "Video playback",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "ov022",
+      "symbol": "func_ov022_020aa978",
+      "language": "c",
+      "source": "src/ov022/video_playback/GetCachedMovieDecodeTable_020aa978.c",
+      "source_symbol": "GetCachedMovieDecodeTable_020aa978",
+      "compiler": "mwccarm-3.0-139",
+      "mode": "arm",
+      "bindings": {
+        "MIi_CpuCopyFast": "0x1ff878c",
+        "decoder_cache_arena": "0x20b7df4",
+        "movie_decode_table": "0x20aeaa0"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/overlays/ov024/calls/func_ov024_0208669c.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "GetCachedPixelClampTable",
+      "behavior": "Returns a pixel clamp table, caching a fast-memory copy when the arena has enough space.",
+      "evidence": "Source implementation directly performs the described operations; see src/overlays/ov024/calls/func_ov024_0208677c.c.",
+      "uncertainty": "No material uncertainty for the stated operation; game-specific use may depend on callers.",
+      "domain": "Video playback",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "ov022",
+      "symbol": "func_ov022_020aaa58",
+      "language": "c",
+      "source": "src/ov022/video_playback/GetCachedPixelClampTable_020aaa58.c",
+      "source_symbol": "GetCachedPixelClampTable_020aaa58",
+      "compiler": "mwccarm-3.0-139",
+      "mode": "arm",
+      "bindings": {
+        "MIi_CpuCopyFast": "0x1ff878c",
+        "decoder_cache_arena": "0x20b7df4",
+        "pixel_clamp_table": "0x20b7688"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/overlays/ov024/calls/func_ov024_0208677c.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "get_cached_movie_decoder_code",
+      "behavior": "Returns a cached decoder code pointer, copying the embedded code into a fast-memory arena when capacity permits.",
+      "evidence": "Cache slots, size `0x659c`, copy call, and fallback path in source.",
+      "uncertainty": "Fast-memory arena layout is opaque outside the movie module.",
+      "domain": "movie",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "ov022",
+      "symbol": "func_ov022_020aa8fc",
+      "language": "c",
+      "source": "src/ov022/movie/get_cached_movie_decoder_code_020aa8fc.c",
+      "source_symbol": "get_cached_movie_decoder_code_020aa8fc",
+      "compiler": "mwccarm-3.0-139",
+      "mode": "arm",
+      "bindings": {
+        "MIi_CpuCopyFast": "0x1ff878c",
+        "data_020b7df4": "0x20b7df4",
+        "data_020b0ba0": "0x20b0ba0"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/overlays/ov024/calls/func_ov024_02086620.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "get_cached_movie_saturation_table",
+      "behavior": "Returns a cached movie saturation table, copying its 0x300 bytes into a fast-memory arena when possible.",
+      "evidence": "Cache slot, byte count, copy, and fallback path in source.",
+      "uncertainty": "Table interpretation comes from read-only local reference analysis.",
+      "domain": "movie",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "ov022",
+      "symbol": "func_ov022_020aa9e8",
+      "language": "c",
+      "source": "src/ov022/movie/get_cached_movie_saturation_table_020aa9e8.c",
+      "source_symbol": "get_cached_movie_saturation_table_020aa9e8",
+      "compiler": "mwccarm-3.0-139",
+      "mode": "arm",
+      "bindings": {
+        "MIi_CpuCopyFast": "0x1ff878c",
+        "data_020b7df4": "0x20b7df4",
+        "data_020b7808": "0x20b7808"
+      },
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/overlays/ov024/calls/func_ov024_0208670c.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "name": "getMovieDecoderCodeSize_020aa8a0",
+      "behavior": "Returns the byte length used for the embedded movie decoder code.",
+      "evidence": "Returns 0x659c; the adjacent movie decoder cache helper uses 0x659c as its copy size.",
+      "uncertainty": "Decoder internals are outside this constant getter.",
+      "domain": "movie_playback",
+      "origin": "recovered shared engine/middleware C",
+      "understanding": "subsystem",
+      "module": "ov022",
+      "symbol": "func_ov022_020aa8a0",
+      "language": "c",
+      "source": "src/ov022/movie/getMovieDecoderCodeSize_020aa8a0.c",
+      "source_symbol": "getMovieDecoderCodeSize_020aa8a0",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {},
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/overlays/ov024/auto/func_ov024_020865c4.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "module": "ov022",
+      "symbol": "func_ov022_020a7d94",
+      "language": "c",
+      "source": "src/ov022/reviewed_helpers/func_ov022_020a7d94.c",
+      "source_symbol": "EnableMovieAudioChannels_020a7d94",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_0200ebe0": "0x200ebe0",
+        "func_0200f080": "0x200f080"
+      },
+      "name": "EnableMovieAudioChannels",
+      "behavior": "Raises both movie PCM channel volumes to 127 and flushes the queued sound commands.",
+      "evidence": "The stereo PCM start routine binds this function as the sound alarm callback. Its first helper is the same channel-volume command used by StopMovieAudio, with channel mask 3, volume 127 and shift 0; its second helper flushes commands.",
+      "uncertainty": "The callback operation is established; specific movie content is not identified.",
+      "domain": "audio",
+      "origin": "recovered CC0 shared C",
+      "understanding": "subsystem",
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/overlays/ov024/calls/func_ov024_02084084.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "module": "ov022",
+      "symbol": "func_ov022_020aa8b4",
+      "language": "c",
+      "source": "src/ov022/reviewed_helpers/func_ov022_020aa8b4.c",
+      "source_symbol": "ResetMovieDecoderCodeArena_020aa8b4",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "movieCacheArena": "0x020b7df4"
+      },
+      "name": "ResetMovieDecoderCodeArena",
+      "behavior": "Sets the decoder-code copy cursor and four-byte-aligned remaining capacity, then clears the cached code pointer.",
+      "evidence": "At global 0x020b7df4, this function writes +0x18 (copy cursor), +0x14 (remaining byte count), and clears +0x08. The decoder-code getter at 0x020aa8fc reads and advances those same fields while caching the code pointer. All 32 function bytes match after the typed rewrite.",
+      "uncertainty": "The arena is a shared buffer for copying a fixed decoder-code payload; its allocator owner and memory-region identity remain unverified.",
+      "domain": "movie_cache",
+      "origin": "recovered CC0 shared C",
+      "understanding": "subsystem",
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/overlays/ov024/calls/func_ov024_020865d8.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "module": "ov022",
+      "symbol": "func_ov022_020aa8d4",
+      "language": "c",
+      "source": "src/ov022/reviewed_helpers/func_ov022_020aa8d4.c",
+      "source_symbol": "ResetMovieLookupTableArena_020aa8d4",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "movieCacheArena": "0x020b7df4"
+      },
+      "name": "ResetMovieLookupTableArena",
+      "behavior": "Sets the lookup-table copy cursor and aligned remaining capacity, then clears the cached decode, saturation, and pixel-clamp table pointers.",
+      "evidence": "At global 0x020b7df4, this function writes +0x10 and +0x0c and clears +0x04, +0x00, and +0x20. The getters at 0x020aa978, 0x020aa9e8, and 0x020aaa58 read and update those exact cache slots and arena fields. All 40 function bytes match after the typed rewrite.",
+      "uncertainty": "The three cache slots and their byte allocations are observed; table internals and the arena\u2019s owning allocation remain outside this function\u2019s evidence.",
+      "domain": "movie_cache",
+      "origin": "recovered CC0 shared C",
+      "understanding": "subsystem",
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "src/overlays/ov024/calls/func_ov024_020865f8.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "module": "ov022",
+      "symbol": "func_ov022_020aa8ac",
+      "language": "c",
+      "source": "src/ov022/leaf_research/func_ov022_020aa8ac.c",
+      "source_symbol": "GetMovieCacheTableArenaCapacity_020aa8ac",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {},
+      "name": "GetMovieCacheTableArenaCapacity",
+      "behavior": "Returns the 0x2580-byte capacity used by the copied lookup-table arena.",
+      "evidence": "The function returns 0x2580. This equals the observed allocation sizes of the movie decode table (0x2100), saturation table (0x300), and pixel clamp table (0x180); the table-arena resetter uses this capacity. The function compiles to the full original 8 bytes.",
+      "uncertainty": "The capacity is established by its return value and the three cache getter sizes; the tables\u2019 higher-level decoding role is not inferred here.",
+      "domain": "movie_cache",
       "origin": "independent C reconstruction",
       "understanding": "subsystem"
     }

@@ -177,16 +177,6 @@
               ]
             },
             {
-              "id": "audio",
-              "name": "Movie audio",
-              "evidence": "Matched source bodies start/flush stereo PCM or stop movie audio; source paths and exact compilation are recorded in matches.json.",
-              "symbols": [
-                "func_ov022_020a7db4",
-                "func_ov022_020a7ed8",
-                "func_ov022_020a809c"
-              ]
-            },
-            {
               "id": "decode",
               "name": "Movie stream decoding and frame conversion",
               "evidence": "Matched routines decode frame slots, drop frames, convert planes, and process chunks. Ghidra call chain and typed field evidence are recorded in analysis/movie_playback.json; helper roles are based on exact source or explicit helper arguments. Ghidra shows 020a9398 forwarding to the chunk processor; the processor directly dispatches its chunk types to 020aaac8, 020aaadc, 020aac34 and 020ab5f4. These related unmatched handlers remain in this denominator; individual codec semantics are unconfirmed.",
@@ -197,7 +187,6 @@
                 "func_ov022_020a9f18",
                 "func_ov022_020a9f68",
                 "func_ov022_020aa2e0",
-                "func_ov022_020aa8a0",
                 "func_ov022_020a9398",
                 "func_ov022_020aaac8",
                 "func_ov022_020aaadc",
@@ -229,15 +218,32 @@
               ]
             },
             {
-              "id": "decoder_resources",
-              "name": "Decoder and conversion resources",
-              "evidence": "Exact matched cache helpers load decoder or pixel conversion tables used by the initialization and conversion paths in Ghidra evidence.",
+              "id": "audio",
+              "name": "Movie PCM channel control",
+              "evidence": "Stereo PCM start configures two channels and installs 0x020a7d94 as its sound alarm callback; that callback restores both channel volumes. The stop operation mutes/releases the same channel mask, and the buffer update operation flushes both channel buffers. These four routines form the observed channel-control scope; decoding and stream object lifetime remain in their own subsections.",
               "symbols": [
+                "func_ov022_020a7d94",
+                "func_ov022_020a7db4",
+                "func_ov022_020a7ed8",
+                "func_ov022_020a809c"
+              ],
+              "uncertainty": "Specific movie content and encoded-audio decoding are outside this channel-control scope."
+            },
+            {
+              "id": "decoder_resources",
+              "name": "Movie decoder cache arenas and loaders",
+              "evidence": "Eight routines share the cache state at 0x020b7df4: code/table arena size queries, two arena initializers, and four cached resource getters. Word offsets 0/4/8/32 are resource pointers; the two initializer routines reset exactly the cache slots read by the associated getters. The 0x2580 table arena requirement equals 0x2100 + 0x300 + 0x180. Relationships are documented in analysis/movie_cache_resources.json.",
+              "symbols": [
+                "func_ov022_020aa8a0",
+                "func_ov022_020aa8ac",
+                "func_ov022_020aa8b4",
+                "func_ov022_020aa8d4",
                 "func_ov022_020aa8fc",
                 "func_ov022_020aa978",
                 "func_ov022_020aa9e8",
                 "func_ov022_020aaa58"
-              ]
+              ],
+              "uncertainty": "Only arena setup and resource retrieval are in this subsection. The embedded decoder implementation, frame conversion and movie object lifetime are separate code paths."
             }
           ]
         }

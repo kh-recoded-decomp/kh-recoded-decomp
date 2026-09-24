@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "profile": "bk9e",
+  "module": "ov022",
+  "scope": "Decoder cache arenas and resource loaders; exact coverage is computed by the normal build verifier.",
+  "state_address": "0x020b7df4",
+  "members": [
+    "func_ov022_020aa8a0",
+    "func_ov022_020aa8ac",
+    "func_ov022_020aa8b4",
+    "func_ov022_020aa8d4",
+    "func_ov022_020aa8fc",
+    "func_ov022_020aa978",
+    "func_ov022_020aa9e8",
+    "func_ov022_020aaa58"
+  ],
+  "layout": {
+    "0x00": "saturation table cache",
+    "0x04": "decoder table cache",
+    "0x08": "decoder code cache",
+    "0x0c": "remaining table arena bytes",
+    "0x10": "next table arena address",
+    "0x14": "remaining code arena bytes",
+    "0x18": "next code arena address",
+    "0x1c": "unobserved word",
+    "0x20": "pixel clamp table cache"
+  },
+  "relationships": [
+    {
+      "functions": [
+        "func_ov022_020aa8a0",
+        "func_ov022_020aa8ac",
+        "func_ov022_020aa8b4",
+        "func_ov022_020aa8d4"
+      ],
+      "evidence": "The size queries return 0x659c code bytes and 0x2580 table bytes. Initializers round available sizes down to four-byte multiples and clear the associated cache slots."
+    },
+    {
+      "functions": [
+        "func_ov022_020aa8fc",
+        "func_ov022_020aa978",
+        "func_ov022_020aa9e8",
+        "func_ov022_020aaa58"
+      ],
+      "evidence": "Getters return an existing cache, copy the corresponding embedded resource into the appropriate arena when space remains, or return the original embedded resource address."
+    }
+  ],
+  "resource_bytes": {
+    "decoder_code": 26012,
+    "decoder_table": 8448,
+    "saturation_table": 768,
+    "pixel_clamp_table": 384
+  },
+  "uncertainty": "These functions copy or return embedded decoder resources. Their matching status does not establish recovery of the decoder code they reference."
+}
