@@ -1,0 +1,755 @@
+{
+  "version": 1,
+  "profile": "bk9e",
+  "systems": [
+    {
+      "id": "core_runtime",
+      "name": "Core runtime",
+      "evidence": "Original ARM9 main and autoload modules; internal systems remain unclassified until their function relationships are reviewed.",
+      "modules": [
+        {
+          "module": "arm9",
+          "subsections": []
+        },
+        {
+          "module": "itcm",
+          "subsections": []
+        },
+        {
+          "module": "dtcm",
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "id": "game_runtime",
+      "name": "Shared game runtime",
+      "evidence": "analysis/actor_model.json and the ov005 script handler establish script-to-actor calls into ov001. Only reviewed function roles receive named subsections.",
+      "modules": [
+        {
+          "module": "ov001",
+          "subsections": [
+            {
+              "id": "actor_animation",
+              "name": "Actor animation",
+              "evidence": "Confirmed actor animation setup/frame operations in the reviewed actor_model evidence and exact-matched source entries; visible clip identity remains unknown. See analysis/actor_model.json.",
+              "symbols": [
+                "func_ov001_0208a848",
+                "func_ov001_0208de3c",
+                "func_ov001_0208df04"
+              ]
+            },
+            {
+              "id": "actor_state_appearance",
+              "name": "Actor state and appearance",
+              "evidence": "Confirmed script-driven actor parameter, translucency and node-offset operations. The user-visible appearance for each command is not fully established. See analysis/actor_model.json.",
+              "symbols": [
+                "func_ov001_0208a2fc",
+                "func_ov001_0208cbb4",
+                "func_ov001_0208deb0"
+              ]
+            },
+            {
+              "id": "script_commands",
+              "name": "Script commands",
+              "evidence": "Confirmed operand-reading/dispatch handlers for actor commands; actual game semantics stay bounded by each function evidence. See analysis/actor_model.json.",
+              "symbols": [
+                "func_ov001_0208cb14",
+                "func_ov001_0208df48"
+              ]
+            },
+            {
+              "id": "object_creation",
+              "name": "Object creation",
+              "evidence": "analysis/overlay_loading.json: SetOverlayObjectFactory stores the factory callback at 0x020a04a0; ov060 registers CreateOverlay060Object through it. This establishes factory registration, not the created object's gameplay class.",
+              "symbols": [
+                "func_ov001_0206dd84"
+              ]
+            }
+          ]
+        },
+        {
+          "module": "ov005",
+          "subsections": [
+            {
+              "id": "script_commands",
+              "name": "Script commands",
+              "evidence": "One exact-matched command handler; its downstream game-facing effect is unresolved. See analysis/actor_model.json.",
+              "symbols": [
+                "func_ov005_020a0520"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "movie_playback",
+      "name": "Movie playback",
+      "evidence": "analysis/movie_playback.json records the ov022 movie context, decoder and stream callers. ov003 contains the corresponding movie stream opener, established by exact recovered shared source.",
+      "modules": [
+        {
+          "module": "ov003",
+          "subsections": [
+            {
+              "id": "stream_io",
+              "name": "Movie stream I/O",
+              "evidence": "Matched routines open, seek, or read movie stream data; the ov003/ov022 open-stream sources have matching behavior, and ov022 aligned read-ahead is explicitly filesystem I/O.",
+              "symbols": [
+                "func_ov003_02064934"
+              ]
+            }
+          ]
+        },
+        {
+          "module": "ov022",
+          "subsections": [
+            {
+              "id": "movie_initialization",
+              "name": "Movie stream initialization",
+              "evidence": "Ghidra body at ov022:0x020a9430 validates movie headers and allocates decoder, plane, and startup stream state; analysis/movie_playback.json records the direct calls. Ghidra records its caller at 020a9194, contained in the inventoried wrapper 020a9170; the wrapper is included as an unmatched initialization dependency.",
+              "symbols": [
+                "func_ov022_020a9430",
+                "func_ov022_020a9170"
+              ]
+            },
+            {
+              "id": "audio",
+              "name": "Movie audio",
+              "evidence": "Matched source bodies start/flush stereo PCM or stop movie audio; source paths and exact compilation are recorded in matches.json.",
+              "symbols": [
+                "func_ov022_020a7db4",
+                "func_ov022_020a7ed8",
+                "func_ov022_020a809c"
+              ]
+            },
+            {
+              "id": "decode",
+              "name": "Movie stream decoding and frame conversion",
+              "evidence": "Matched routines decode frame slots, drop frames, convert planes, and process chunks. Ghidra call chain and typed field evidence are recorded in analysis/movie_playback.json; helper roles are based on exact source or explicit helper arguments. Ghidra shows 020a9398 forwarding to the chunk processor; the processor directly dispatches its chunk types to 020aaac8, 020aaadc, 020aac34 and 020ab5f4. These related unmatched handlers remain in this denominator; individual codec semantics are unconfirmed.",
+              "symbols": [
+                "func_ov022_020a9b54",
+                "func_ov022_020a9cb0",
+                "func_ov022_020a9d94",
+                "func_ov022_020a9f18",
+                "func_ov022_020a9f68",
+                "func_ov022_020aa2e0",
+                "func_ov022_020aa8a0",
+                "func_ov022_020a9398",
+                "func_ov022_020aaac8",
+                "func_ov022_020aaadc",
+                "func_ov022_020aac34",
+                "func_ov022_020ab5f4"
+              ]
+            },
+            {
+              "id": "frame_presentation",
+              "name": "Frame timing and presentation setup",
+              "evidence": "Matched movie timer/hardware routines plus Ghidra frame wrapper and plane helper. These functions update frame request/ring state or configure the movie display path; the output-to-display path remains partly unknown.",
+              "symbols": [
+                "func_ov022_020a7b3c",
+                "func_ov022_020a7c58",
+                "func_ov022_020a7f3c",
+                "func_ov022_020a9338",
+                "func_ov022_020b713c"
+              ]
+            },
+            {
+              "id": "stream_io",
+              "name": "Movie stream I/O",
+              "evidence": "Matched routines open, seek, or read movie stream data; the ov003/ov022 open-stream sources have matching behavior, and ov022 aligned read-ahead is explicitly filesystem I/O.",
+              "symbols": [
+                "func_ov022_020a8a04",
+                "func_ov022_020aa168",
+                "func_ov022_020aa1b4",
+                "func_ov022_020aa224"
+              ]
+            },
+            {
+              "id": "decoder_resources",
+              "name": "Decoder and conversion resources",
+              "evidence": "Exact matched cache helpers load decoder or pixel conversion tables used by the initialization and conversion paths in Ghidra evidence.",
+              "symbols": [
+                "func_ov022_020aa8fc",
+                "func_ov022_020aa978",
+                "func_ov022_020aa9e8",
+                "func_ov022_020aaa58"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "display_sessions",
+      "name": "Display sessions and panels",
+      "evidence": "analysis/display_session.json and analysis/panel_state.json establish display-session state and panel calls through the ov039 shared context and resource helpers. Specific scenes and menus remain unknown.",
+      "modules": [
+        {
+          "module": "ov026",
+          "subsections": [
+            {
+              "id": "display_session",
+              "name": "Display session",
+              "evidence": "All eight functions in ov026 are included; display-session lifecycle is established, scene identity is unknown. See analysis/display_session.json.",
+              "symbols": [
+                "func_ov026_020b5800",
+                "func_ov026_020b5848",
+                "func_ov026_020b58c8",
+                "func_ov026_020b58d8",
+                "func_ov026_020b590c",
+                "func_ov026_020b59c0",
+                "func_ov026_020b5a18",
+                "func_ov026_020b5a84"
+              ]
+            }
+          ]
+        },
+        {
+          "module": "ov039",
+          "subsections": [
+            {
+              "id": "state_field_c9c4",
+              "name": "ov039 state field access",
+              "evidence": "Both functions access the same global state pointer at 0x020BEA00 and the same word at offset 0xC9C4; one stores its argument and the other returns the word.",
+              "uncertainty": "The word's runtime meaning is not established. These two functions form a confirmed pair, but do not define the larger state/setup subsystem.",
+              "symbols": [
+                "func_ov039_020baae0",
+                "func_ov039_020baaf8"
+              ]
+            },
+            {
+              "id": "overlay_resource_handle_helpers",
+              "name": "Overlay resource handle and object helpers",
+              "evidence": "Ghidra call sites show 0x020BC220 called from each of the five neighboring helpers. It reads a handle at state+0xCAB4+group*4 and packs that handle with the low nine bits of the supplied index. The callers pass the result into ARM9 resource/object routines and subsequently operate on returned objects.",
+              "uncertainty": "The identities of the resource groups and the rendered/game objects are not known; the five clients appear related by the shared helper but may have distinct purposes.",
+              "symbols": [
+                "func_ov039_020bc220",
+                "func_ov039_020bc26c",
+                "func_ov039_020bc318",
+                "func_ov039_020bc414",
+                "func_ov039_020bc488",
+                "func_ov039_020bc55c"
+              ]
+            },
+            {
+              "id": "overlay_callback_dispatch",
+              "name": "Overlay callback and event dispatch",
+              "evidence": "The lifecycle functions load/unload IDs from parallel tables and maintain active indices; the hook wrappers dispatch through table record pointers. The callback utility calls a nonnull function pointer. The 12 120-byte wrappers at 0x020BD084\u20130x020BD5AC repeatedly select callback slots from handler records and are called as input/event dispatch paths. This group intentionally includes unmatched lifecycle and hook neighbors around the exact-match wrappers.",
+              "uncertainty": "The primary/secondary callback tables' semantic event names and the overlay's user-facing role are unresolved; record fields should remain address/offset based.",
+              "symbols": [
+                "func_ov039_020bcd98",
+                "func_ov039_020bce34",
+                "func_ov039_020bce6c",
+                "func_ov039_020bceb0",
+                "func_ov039_020bcef0",
+                "func_ov039_020bcf20",
+                "func_ov039_020bcf50",
+                "func_ov039_020bcf88",
+                "func_ov039_020bcfcc",
+                "func_ov039_020bd00c",
+                "func_ov039_020bd054",
+                "func_ov039_020bd084",
+                "func_ov039_020bd0fc",
+                "func_ov039_020bd174",
+                "func_ov039_020bd1ec",
+                "func_ov039_020bd264",
+                "func_ov039_020bd2dc",
+                "func_ov039_020bd354",
+                "func_ov039_020bd3cc",
+                "func_ov039_020bd444",
+                "func_ov039_020bd4bc",
+                "func_ov039_020bd534",
+                "func_ov039_020bd5ac"
+              ]
+            },
+            {
+              "id": "selection_input_processing",
+              "name": "Selection and input state processing",
+              "evidence": "These adjacent functions read and update the shared ov039 state, and Ghidra pseudocode for the larger routines checks input/state flags, updates indices and coordinates, and calls neighboring helpers. Together they form the stateful update path surrounding the callback-dispatch layer.",
+              "uncertainty": "Specific key meanings, coordinate units, and visible-menu identity remain unknown; grouping is provisional pending verified full call-graph review.",
+              "symbols": [
+                "func_ov039_020bd694",
+                "func_ov039_020bd700",
+                "func_ov039_020bd750",
+                "func_ov039_020bd7b0",
+                "func_ov039_020bd868",
+                "func_ov039_020bdc28",
+                "func_ov039_020bde84",
+                "func_ov039_020bdf10",
+                "func_ov039_020be0c4",
+                "func_ov039_020be138",
+                "func_ov039_020be234",
+                "func_ov039_020be2c8",
+                "func_ov039_020be358"
+              ]
+            }
+          ]
+        },
+        {
+          "module": "ov088",
+          "subsections": [
+            {
+              "id": "panel_state",
+              "name": "Panel state",
+              "evidence": "All ten functions in ov088 are included; display/resource/table state setup is known, menu/scene identity is unknown. See analysis/panel_state.json.",
+              "symbols": [
+                "func_ov088_020beaa0",
+                "func_ov088_020beaec",
+                "func_ov088_020bebc8",
+                "func_ov088_020bebdc",
+                "func_ov088_020becf4",
+                "func_ov088_020bed0c",
+                "func_ov088_020bedd0",
+                "func_ov088_020bedec",
+                "func_ov088_020bee18",
+                "func_ov088_020bee38"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "overlay_objects",
+      "name": "Overlay object loading",
+      "evidence": "analysis/overlay_loading.json records ov051 loading ov060, its initialization callback, and registration of the ov060 factory with ov001.",
+      "modules": [
+        {
+          "module": "ov051",
+          "subsections": [
+            {
+              "id": "overlay_loading",
+              "name": "Overlay loading",
+              "evidence": "All six functions in ov051 are included; static overlay selections and factory registrations are known, gameplay class identity is unknown. See analysis/overlay_loading.json.",
+              "symbols": [
+                "func_ov051_020c72c0",
+                "func_ov051_020c72d8",
+                "func_ov051_020c72f0",
+                "func_ov051_020c7358",
+                "func_ov051_020c7370",
+                "func_ov051_020c73a4"
+              ]
+            }
+          ]
+        },
+        {
+          "module": "ov060",
+          "subsections": [
+            {
+              "id": "object_creation",
+              "name": "Object creation",
+              "evidence": "Both functions in ov060 are included; factory allocation/init chain is established, object gameplay role is unknown. See analysis/overlay_loading.json.",
+              "symbols": [
+                "func_ov060_020c7460",
+                "func_ov060_020c7474"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "unclassified",
+      "name": "Unclassified systems",
+      "evidence": "No reviewed system ownership is assigned to these overlays yet. Their original IDs, complete inventories and analysed denominators are retained.",
+      "modules": [
+        {
+          "module": "ov000",
+          "subsections": []
+        },
+        {
+          "module": "ov002",
+          "subsections": []
+        },
+        {
+          "module": "ov004",
+          "subsections": []
+        },
+        {
+          "module": "ov006",
+          "subsections": []
+        },
+        {
+          "module": "ov007",
+          "subsections": []
+        },
+        {
+          "module": "ov008",
+          "subsections": []
+        },
+        {
+          "module": "ov009",
+          "subsections": []
+        },
+        {
+          "module": "ov010",
+          "subsections": []
+        },
+        {
+          "module": "ov011",
+          "subsections": []
+        },
+        {
+          "module": "ov012",
+          "subsections": []
+        },
+        {
+          "module": "ov013",
+          "subsections": []
+        },
+        {
+          "module": "ov014",
+          "subsections": []
+        },
+        {
+          "module": "ov015",
+          "subsections": []
+        },
+        {
+          "module": "ov016",
+          "subsections": []
+        },
+        {
+          "module": "ov017",
+          "subsections": []
+        },
+        {
+          "module": "ov018",
+          "subsections": []
+        },
+        {
+          "module": "ov019",
+          "subsections": []
+        },
+        {
+          "module": "ov020",
+          "subsections": []
+        },
+        {
+          "module": "ov021",
+          "subsections": []
+        },
+        {
+          "module": "ov023",
+          "subsections": []
+        },
+        {
+          "module": "ov024",
+          "subsections": []
+        },
+        {
+          "module": "ov025",
+          "subsections": []
+        },
+        {
+          "module": "ov027",
+          "subsections": []
+        },
+        {
+          "module": "ov028",
+          "subsections": []
+        },
+        {
+          "module": "ov029",
+          "subsections": []
+        },
+        {
+          "module": "ov030",
+          "subsections": []
+        },
+        {
+          "module": "ov031",
+          "subsections": []
+        },
+        {
+          "module": "ov032",
+          "subsections": []
+        },
+        {
+          "module": "ov033",
+          "subsections": []
+        },
+        {
+          "module": "ov034",
+          "subsections": []
+        },
+        {
+          "module": "ov035",
+          "subsections": []
+        },
+        {
+          "module": "ov036",
+          "subsections": []
+        },
+        {
+          "module": "ov037",
+          "subsections": []
+        },
+        {
+          "module": "ov038",
+          "subsections": []
+        },
+        {
+          "module": "ov040",
+          "subsections": []
+        },
+        {
+          "module": "ov041",
+          "subsections": []
+        },
+        {
+          "module": "ov042",
+          "subsections": []
+        },
+        {
+          "module": "ov043",
+          "subsections": []
+        },
+        {
+          "module": "ov044",
+          "subsections": []
+        },
+        {
+          "module": "ov045",
+          "subsections": []
+        },
+        {
+          "module": "ov046",
+          "subsections": []
+        },
+        {
+          "module": "ov047",
+          "subsections": []
+        },
+        {
+          "module": "ov048",
+          "subsections": []
+        },
+        {
+          "module": "ov049",
+          "subsections": []
+        },
+        {
+          "module": "ov050",
+          "subsections": []
+        },
+        {
+          "module": "ov052",
+          "subsections": []
+        },
+        {
+          "module": "ov053",
+          "subsections": []
+        },
+        {
+          "module": "ov054",
+          "subsections": []
+        },
+        {
+          "module": "ov055",
+          "subsections": []
+        },
+        {
+          "module": "ov056",
+          "subsections": []
+        },
+        {
+          "module": "ov057",
+          "subsections": []
+        },
+        {
+          "module": "ov058",
+          "subsections": []
+        },
+        {
+          "module": "ov059",
+          "subsections": []
+        },
+        {
+          "module": "ov061",
+          "subsections": []
+        },
+        {
+          "module": "ov062",
+          "subsections": []
+        },
+        {
+          "module": "ov063",
+          "subsections": []
+        },
+        {
+          "module": "ov064",
+          "subsections": []
+        },
+        {
+          "module": "ov065",
+          "subsections": []
+        },
+        {
+          "module": "ov066",
+          "subsections": []
+        },
+        {
+          "module": "ov067",
+          "subsections": []
+        },
+        {
+          "module": "ov068",
+          "subsections": []
+        },
+        {
+          "module": "ov069",
+          "subsections": []
+        },
+        {
+          "module": "ov070",
+          "subsections": []
+        },
+        {
+          "module": "ov071",
+          "subsections": []
+        },
+        {
+          "module": "ov072",
+          "subsections": []
+        },
+        {
+          "module": "ov073",
+          "subsections": []
+        },
+        {
+          "module": "ov074",
+          "subsections": []
+        },
+        {
+          "module": "ov075",
+          "subsections": []
+        },
+        {
+          "module": "ov076",
+          "subsections": []
+        },
+        {
+          "module": "ov077",
+          "subsections": []
+        },
+        {
+          "module": "ov078",
+          "subsections": []
+        },
+        {
+          "module": "ov079",
+          "subsections": []
+        },
+        {
+          "module": "ov080",
+          "subsections": []
+        },
+        {
+          "module": "ov081",
+          "subsections": []
+        },
+        {
+          "module": "ov082",
+          "subsections": []
+        },
+        {
+          "module": "ov083",
+          "subsections": []
+        },
+        {
+          "module": "ov084",
+          "subsections": []
+        },
+        {
+          "module": "ov085",
+          "subsections": []
+        },
+        {
+          "module": "ov086",
+          "subsections": []
+        },
+        {
+          "module": "ov087",
+          "subsections": []
+        },
+        {
+          "module": "ov089",
+          "subsections": []
+        },
+        {
+          "module": "ov090",
+          "subsections": []
+        },
+        {
+          "module": "ov091",
+          "subsections": []
+        },
+        {
+          "module": "ov092",
+          "subsections": []
+        },
+        {
+          "module": "ov093",
+          "subsections": []
+        },
+        {
+          "module": "ov094",
+          "subsections": []
+        },
+        {
+          "module": "ov095",
+          "subsections": []
+        },
+        {
+          "module": "ov096",
+          "subsections": []
+        },
+        {
+          "module": "ov097",
+          "subsections": []
+        },
+        {
+          "module": "ov098",
+          "subsections": []
+        },
+        {
+          "module": "ov099",
+          "subsections": []
+        },
+        {
+          "module": "ov100",
+          "subsections": []
+        },
+        {
+          "module": "ov101",
+          "subsections": []
+        },
+        {
+          "module": "ov102",
+          "subsections": []
+        },
+        {
+          "module": "ov103",
+          "subsections": []
+        },
+        {
+          "module": "ov104",
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "id": "arm7",
+      "name": "ARM7",
+      "evidence": "The original ARM7 processor module has no analysed function inventory yet; its code denominator remains unknown.",
+      "modules": [
+        {
+          "module": "arm7",
+          "subsections": []
+        }
+      ]
+    }
+  ]
+}

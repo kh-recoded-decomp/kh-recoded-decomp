@@ -18,7 +18,7 @@ public class ExportBK9E extends GhidraScript {
         JsonArray results=new JsonArray();DecompInterface decompiler=new DecompInterface();
         DecompileOptions options=new DecompileOptions();options.setRespectReadOnly(true);decompiler.setOptions(options);
         decompiler.openProgram(currentProgram);
-        for(String knowledgeFile:new String[]{"analysis/actor_model.json","analysis/overlay_loading.json","analysis/movie_playback.json","analysis/display_session.json"}) {
+        for(String knowledgeFile:new String[]{"analysis/actor_model.json","analysis/overlay_loading.json","analysis/movie_playback.json","analysis/display_session.json","analysis/panel_state.json"}) {
           Path knowledgePath=root.resolve(knowledgeFile);if(!Files.exists(knowledgePath))continue;
           JsonObject knowledge=JsonParser.parseString(Files.readString(knowledgePath)).getAsJsonObject();
           for(JsonElement item:knowledge.getAsJsonArray("functions")) {
@@ -38,10 +38,12 @@ public class ExportBK9E extends GhidraScript {
                 }
                 if(changed) {decompiler.flushCache();result=decompiler.decompileFunction(function,60,monitor);}
             }
-            JsonObject record=new JsonObject();record.addProperty("knowledge_file",knowledgeFile);record.addProperty("module",module);record.addProperty("address",address.toString());record.addProperty("name",function.getName());record.addProperty("decompiled",result.decompileCompleted());
+            String decompiledText=result.decompileCompleted()?result.getDecompiledFunction().getC():"";
+            boolean usable=result.decompileCompleted() && !decompiledText.contains("halt_baddata()") && !decompiledText.contains("Bad instruction - Truncating control flow");
+            JsonObject record=new JsonObject();record.addProperty("knowledge_file",knowledgeFile);record.addProperty("module",module);record.addProperty("address",address.toString());record.addProperty("name",function.getName());record.addProperty("decompiler_completed",result.decompileCompleted());record.addProperty("decompiled",usable);
             record.addProperty("prototype",function.getSignature().getPrototypeString());
-            if(result.decompileCompleted())Files.writeString(output.resolve(module+"_"+function.getName()+".c"),result.getDecompiledFunction().getC());
-            else record.addProperty("error",result.getErrorMessage());
+            if(result.decompileCompleted())Files.writeString(output.resolve(module+"_"+function.getName()+".c"),decompiledText);
+            if(!usable)record.addProperty("error",result.decompileCompleted()?"Decompiler output contains bad instruction control flow":result.getErrorMessage());
             JsonArray callers=new JsonArray();ReferenceIterator references=currentProgram.getReferenceManager().getReferencesTo(address);
             while(references.hasNext()) {Reference reference=references.next();if(reference.getReferenceType().isCall())callers.add(reference.getFromAddress().toString());}
             record.add("call_sites",callers);results.add(record);
@@ -60,9 +62,11 @@ public class ExportBK9E extends GhidraScript {
                     if(function==null) {function=getFunctionContaining(address);containingFunction=function!=null;}
                     if(function==null)throw new IOException("No function at requested address");
                     DecompileResults result=decompiler.decompileFunction(function,60,monitor);
-                    record.addProperty("address",function.getEntryPoint().toString());record.addProperty("name",function.getName());record.addProperty("requested_address_is_function_entry",!containingFunction);record.addProperty("decompiled",result.decompileCompleted());record.addProperty("prototype",function.getSignature().getPrototypeString());
-                    if(result.decompileCompleted())Files.writeString(output.resolve(module+"_"+function.getName()+".c"),result.getDecompiledFunction().getC());
-                    else record.addProperty("error",result.getErrorMessage());
+                    String decompiledText=result.decompileCompleted()?result.getDecompiledFunction().getC():"";
+                    boolean usable=result.decompileCompleted() && !decompiledText.contains("halt_baddata()") && !decompiledText.contains("Bad instruction - Truncating control flow");
+                    record.addProperty("address",function.getEntryPoint().toString());record.addProperty("name",function.getName());record.addProperty("requested_address_is_function_entry",!containingFunction);record.addProperty("decompiler_completed",result.decompileCompleted());record.addProperty("decompiled",usable);record.addProperty("prototype",function.getSignature().getPrototypeString());
+                    if(result.decompileCompleted())Files.writeString(output.resolve(module+"_"+function.getName()+".c"),decompiledText);
+                    if(!usable)record.addProperty("error",result.decompileCompleted()?"Decompiler output contains bad instruction control flow":result.getErrorMessage());
                     JsonArray callers=new JsonArray();ReferenceIterator references=currentProgram.getReferenceManager().getReferencesTo(function.getEntryPoint());
                     while(references.hasNext()) {Reference reference=references.next();if(reference.getReferenceType().isCall())callers.add(reference.getFromAddress().toString());}
                     record.add("call_sites",callers);

@@ -21,9 +21,12 @@ typedef struct ModelResource {
 } ModelResource;
 
 typedef struct ActorNode {
-    u8 unknown_000[0x7c];
+    u32 flags_000;
+    u16 flags_004;
+    u8 unknown_006[0x76];
     ModelResource *modelResource;
-    u8 unknown_080[0x34];
+    u16 halfword_080;
+    u8 unknown_082[0x32];
     VecFx32 offset;
 } ActorNode;
 

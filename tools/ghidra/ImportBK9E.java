@@ -114,6 +114,38 @@ public class ImportBK9E extends GhidraScript {
                 Reference reference=manager.addMemoryReference(from,to,type,SourceType.USER_DEFINED,0);manager.setPrimary(reference,true);importedReferences++;
             }
         }
+        // These five ARM veneers load a relocated function pointer into ip and tail-branch with bx ip.
+        // The literal relocation alone is only a DATA reference, so Ghidra otherwise sees an
+        // unresolved indirect jump (and may emit halt_baddata). Recover an edge only for the exact
+        // observed instruction bytes and one unambiguous relocated literal that targets a function.
+        byte[] armOverlayVeneer = new byte[]{0x14,0x20,(byte)0x9f,(byte)0xe5,0x00,0x10,(byte)0xa0,(byte)0xe1,
+            0x00,0x00,(byte)0x92,(byte)0xe5,0x0c,(byte)0xc0,(byte)0x9f,(byte)0xe5,(byte)0x9a,0x0e,(byte)0x80,(byte)0xe2,
+            0x03,0x09,(byte)0x80,(byte)0xe2,0x1c,(byte)0xff,0x2f,(byte)0xe1};
+        for(JsonObject module:modules) {
+            String name=module.get("name").getAsString();
+            if(!name.equals("ov039"))continue;
+            for(JsonElement item:module.getAsJsonArray("functions")) {
+                JsonObject f=item.getAsJsonObject();
+                if(!f.get("mode").getAsString().equals("arm") || f.get("size").getAsInt()!=0x24)continue;
+                Address start=address(name,f.get("address").getAsLong());
+                byte[] actual=new byte[armOverlayVeneer.length];currentProgram.getMemory().getBytes(start,actual);
+                if(!Arrays.equals(actual,armOverlayVeneer))continue;
+                Instruction branch=currentProgram.getListing().getInstructionAt(start.add(0x18));
+                if(branch==null)continue;
+                Set<Address> literalTargets=new HashSet<>();
+                for(Reference ref:currentProgram.getReferenceManager().getReferencesFrom(start.add(0x20)))
+                    if(ref.isMemoryReference())literalTargets.add(ref.getToAddress());
+                if(literalTargets.size()!=1)continue;
+                Address target=literalTargets.iterator().next();
+                if(getFunctionAt(target)==null)continue;
+                ReferenceManager manager=currentProgram.getReferenceManager();
+                boolean found=false;
+                for(Reference old:manager.getReferencesFrom(branch.getAddress()))
+                    if(old.isMemoryReference() && old.getToAddress().equals(target) && old.getReferenceType().isCall())found=true;
+                if(!found)manager.addMemoryReference(branch.getAddress(),target,RefType.UNCONDITIONAL_CALL,SourceType.USER_DEFINED,0);
+                branch.setFlowOverride(FlowOverride.CALL_RETURN);
+            }
+        }
         if(cpu.equals("arm9"))applyKnowledge();
         JsonObject report=new JsonObject();report.addProperty("program",currentProgram.getName());report.addProperty("modules",modules.size());
         report.addProperty("functions",importedFunctions);report.addProperty("references",importedReferences);report.addProperty("ambiguous_overlay_references",ambiguousReferences);
@@ -123,7 +155,7 @@ public class ImportBK9E extends GhidraScript {
     }
 
     private void applyKnowledge() throws Exception {
-        for(String relative:new String[]{"analysis/actor_model.json","analysis/overlay_loading.json","analysis/movie_playback.json","analysis/display_session.json"}) {
+        for(String relative:new String[]{"analysis/actor_model.json","analysis/overlay_loading.json","analysis/movie_playback.json","analysis/display_session.json","analysis/panel_state.json"}) {
             Path knowledgePath=root.resolve(relative);if(!Files.exists(knowledgePath))continue;
             JsonObject knowledge=JsonParser.parseString(Files.readString(knowledgePath)).getAsJsonObject();
             CParser parser=new CParser(currentProgram.getDataTypeManager(),true,null);

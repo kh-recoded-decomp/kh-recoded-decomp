@@ -1,0 +1,34 @@
+/* Loads the palette and graphics resources used by this overlay and selects a resource entry.
+ * Resolves resource pairs (2,0x12), (3,1), (2,0x14); uploads extracted data via the palette/graphics transfer helpers, frees temporary allocations, and selects entry1000 in shared overlay27 state.
+ * The particular menu or scene shown by this overlay and the meaning of the eighteen stored state bits remain unconfirmed. No specific collectible, world or enemy is assigned.
+ * Recovered from the persistent Ghidra caller chain and disassembly. */
+typedef struct Overlay088PaletteResource { unsigned int unknown[2]; unsigned int size; void *data; } Overlay088PaletteResource;
+typedef struct Overlay088ImageResource { unsigned int unknown[4]; unsigned int size; void *data; } Overlay088ImageResource;
+typedef struct Overlay088ResourceView { unsigned int unknown[2]; Overlay088PaletteResource *palette; } Overlay088ResourceView;
+extern void *func_ov039_020bc1a4(void);
+extern int func_ov039_020bc220(int group, int index);
+extern void *func_0202c48c(int resourceId, int kind);
+extern void func_0202b554(Overlay088ResourceView *view, void *resource, int first, int second, int flags);
+extern void func_020072b4(const void *data, unsigned offset, unsigned size);
+extern void func_0202a1c4(void *buffer);
+extern void func_02014d38(void *resource, Overlay088ImageResource **image);
+extern void func_02007be0(const void *data, unsigned offset, unsigned size);
+extern void func_ov027_020b7e24(void *context, int resourceId);
+extern int func_ov027_020b8184(void *context, int id);
+extern void func_ov027_020b8210(void *context, int resource);
+void LoadOverlay088Graphics(void *unusedContext) {
+    void *context = func_ov039_020bc1a4();
+    void *resource;
+    Overlay088ResourceView view;
+    Overlay088ImageResource *image;
+    resource = func_0202c48c(func_ov039_020bc220(2, 0x12), 0xe);
+    func_0202b554(&view, resource, -1, -1, 0);
+    func_020072b4(view.palette->data, 0, view.palette->size);
+    func_0202a1c4(resource);
+    resource = func_0202c48c(func_ov039_020bc220(3, 1), 0xe);
+    func_02014d38(resource, &image);
+    func_02007be0(image->data, 0, image->size);
+    func_0202a1c4(resource);
+    func_ov027_020b7e24(context, func_ov039_020bc220(2, 0x14));
+    func_ov027_020b8210(context, func_ov027_020b8184(context, 1000));
+}

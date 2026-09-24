@@ -1,0 +1,124 @@
+{
+  "version": 1,
+  "profile": "bk9e",
+  "types": "analysis/types/panel_state.h",
+  "scope": "Overlay88 display, resource and six-by-three entry state setup connected to overlay39 state getters and overlay27 operations. Actual scene/menu identity remains unknown.",
+  "functions": [
+    {
+      "module": "ov088",
+      "address": "0x020beaa0",
+      "name": "ConfigureOverlay088Display",
+      "prototype": "void ConfigureOverlay088Display(void);",
+      "behavior": "Configures background layers and enables the display layers used by overlay 88.",
+      "evidence": "Writes the secondary-engine BG2/BG3 control fields while preserving bits0x43, then selects display layers0x1c00.",
+      "uncertainty": "The particular menu or scene shown by this overlay and the meaning of the eighteen stored state bits remain unconfirmed. No specific collectible, world or enemy is assigned."
+    },
+    {
+      "module": "ov088",
+      "address": "0x020beaec",
+      "name": "LoadOverlay088Graphics",
+      "prototype": "void LoadOverlay088Graphics(void *unusedContext);",
+      "behavior": "Loads the palette and graphics resources used by this overlay and selects a resource entry.",
+      "evidence": "Resolves resource pairs (2,0x12), (3,1), (2,0x14); uploads extracted data via the palette/graphics transfer helpers, frees temporary allocations, and selects entry1000 in shared overlay27 state.",
+      "uncertainty": "The particular menu or scene shown by this overlay and the meaning of the eighteen stored state bits remain unconfirmed. No specific collectible, world or enemy is assigned."
+    },
+    {
+      "module": "ov088",
+      "address": "0x020bebc8",
+      "name": "ReleaseOverlay088Graphics",
+      "prototype": "void ReleaseOverlay088Graphics(void);",
+      "behavior": "Runs the graphics-resource cleanup operation for the shared state used by overlay 88.",
+      "evidence": "Gets the same ov039:020bc1a4 state used by resource loading, then invokes ov027:020b7f8c with argument0 during the shutdown chain.",
+      "uncertainty": "The particular menu or scene shown by this overlay and the meaning of the eighteen stored state bits remain unconfirmed. No specific collectible, world or enemy is assigned."
+    },
+    {
+      "module": "ov088",
+      "address": "0x020bebdc",
+      "name": "ApplyOverlay088GridStates",
+      "prototype": "void ApplyOverlay088GridStates(void *unusedContext);",
+      "behavior": "Initializes a six-by-three collection of entries and applies one stored state bit to each entry.",
+      "evidence": "Reads eighteen packed bits using state ID0x1e05, then maps bits17 down to0 to entry IDs6 through23 in six rows of three. Each entry is selected and receives its zero/one state through ov027 helpers.",
+      "uncertainty": "The particular menu or scene shown by this overlay and the meaning of the eighteen stored state bits remain unconfirmed. No specific collectible, world or enemy is assigned."
+    },
+    {
+      "module": "ov088",
+      "address": "0x020becf4",
+      "name": "ClearOverlay088Grid",
+      "prototype": "void ClearOverlay088Grid(void *unusedContext);",
+      "behavior": "Runs both cleanup steps for the shared entry collection.",
+      "evidence": "Calls ov027:020b900c and 020b903c with the collection from ov039:020bc1cc; shutdown invokes this after graphics-resource cleanup.",
+      "uncertainty": "The particular menu or scene shown by this overlay and the meaning of the eighteen stored state bits remain unconfirmed. No specific collectible, world or enemy is assigned."
+    },
+    {
+      "module": "ov088",
+      "address": "0x020bed0c",
+      "name": "func_ov088_020bed0c",
+      "prototype": "void func_ov088_020bed0c(void *context);",
+      "behavior": "Initializes an embedded state block and configures its shared handler with a four-pair settings block.",
+      "evidence": "Copies four pairs of16-bit settings, resolves handler0x1a, initializes context+0x34, supplies constants6,4,2,0x209 to shared setup functions, and marks handler0x1a.",
+      "uncertainty": "The particular menu or scene shown by this overlay and the meaning of the eighteen stored state bits remain unconfirmed. No specific collectible, world or enemy is assigned."
+    },
+    {
+      "module": "ov088",
+      "address": "0x020bedd0",
+      "name": "func_ov088_020bedd0",
+      "prototype": "void func_ov088_020bedd0(void *context);",
+      "behavior": "Releases the embedded state at context+0x34 and then performs shared context cleanup.",
+      "evidence": "Calls ov027:020ba294 on the embedded state and arm9:020014f0 on its parent context during the shutdown chain.",
+      "uncertainty": "The particular menu or scene shown by this overlay and the meaning of the eighteen stored state bits remain unconfirmed. No specific collectible, world or enemy is assigned."
+    },
+    {
+      "module": "ov088",
+      "address": "0x020bedec",
+      "name": "InitializeOverlay088",
+      "prototype": "int InitializeOverlay088(void *context);",
+      "behavior": "Sets up the overlay display, loads its graphics, applies entry states and initializes its handler.",
+      "evidence": "The first callback at ov088:020bee60 calls the four setup stages in order and returns1.",
+      "uncertainty": "The particular menu or scene shown by this overlay and the meaning of the eighteen stored state bits remain unconfirmed. No specific collectible, world or enemy is assigned."
+    },
+    {
+      "module": "ov088",
+      "address": "0x020bee18",
+      "name": "ShutdownOverlay088",
+      "prototype": "void ShutdownOverlay088(void *context);",
+      "behavior": "Releases the overlay graphics, entry collection and embedded handler state.",
+      "evidence": "The second callback at ov088:020bee64 calls the three cleanup stages in order.",
+      "uncertainty": "The particular menu or scene shown by this overlay and the meaning of the eighteen stored state bits remain unconfirmed. No specific collectible, world or enemy is assigned."
+    },
+    {
+      "module": "ov088",
+      "address": "0x020bee38",
+      "name": "func_ov088_020bee38",
+      "prototype": "void func_ov088_020bee38(void);",
+      "behavior": "Returns immediately without changing any state.",
+      "evidence": "The third callback at ov088:020bee68 consists solely of BX LR.",
+      "uncertainty": "The particular menu or scene shown by this overlay and the meaning of the eighteen stored state bits remain unconfirmed. No specific collectible, world or enemy is assigned."
+    }
+  ],
+  "globals": [
+    {
+      "module": "ov088",
+      "address": "0x020bee3c",
+      "name": "defaultPairSettings",
+      "pointee_type": "Overlay088PairSettings",
+      "pointer_depth": 0,
+      "evidence": "Copied as four pairs of16-bit settings before common handler setup. Values alone do not establish coordinates or input meanings."
+    },
+    {
+      "module": "ov088",
+      "address": "0x020bee4c",
+      "name": "defaultGridSettings",
+      "pointee_type": "Overlay088GridSettings",
+      "pointer_depth": 0,
+      "evidence": "Four words copied for collection setup; the first is replaced with a resolved resource before the call."
+    },
+    {
+      "module": "ov088",
+      "address": "0x020beea0",
+      "name": "gridEntryIds",
+      "pointee_type": "Overlay088GridEntryIds",
+      "pointer_depth": 0,
+      "evidence": "Six rows of three entry IDs,6 through23, traversed while applying bits17 through0 from the saved eighteen-bit value."
+    }
+  ]
+}

@@ -224,11 +224,11 @@ def inventory() -> dict[str, dict]:
             (config_dir / "delinks.txt").read_text(encoding="utf-8"))]
         result[name] = {"binary": binary, "base": base, "binary_bytes": binary.stat().st_size,
                         "code_bytes": union_size(code_ranges), "identified_function_bytes": union_size(ranges),
-                        "symbols": symbols}
+                        "code_ranges": code_ranges, "symbols": symbols}
     arm7 = EXTRACT / "arm7" / "arm7.bin"
     result["arm7"] = {"binary": arm7, "base": scalar_yaml(EXTRACT / "arm7" / "arm7.yaml", "base_address"),
                       "binary_bytes": arm7.stat().st_size, "code_bytes": None,
-                      "identified_function_bytes": 0, "symbols": {}}
+                      "identified_function_bytes": 0, "code_ranges": [], "symbols": {}}
     return result
 
 
@@ -287,8 +287,12 @@ def verify_matches(inv: dict[str, dict]) -> dict:
 
 
 def progress(write: bool = True) -> dict:
+    from organization import build_hierarchy, markdown
+
     inv = inventory()
     proof = verify_matches(inv)
+    hierarchy = build_hierarchy(inv, proof["verified"], json.loads(
+        (ROOT / "config/bk9e/organization.json").read_text(encoding="utf-8")))
     by_module = defaultdict(list)
     for match in proof["verified"]:
         by_module[match["module"]].append(match)
@@ -318,6 +322,7 @@ def progress(write: bool = True) -> dict:
     result = {"profile": "bk9e", "rom_sha256": profile()["rom_sha256"], "understanding": understanding,
               "verified_at_utc": datetime.now(timezone.utc).isoformat(),
               "groups": dict(groups), "modules": module_rows, "matches": proof["verified"],
+              "organization": hierarchy,
               "assets": {"extracted_files": 805, "decompiled_files": 0}}
     if write:
         out = ROOT / "build" / "progress.json"
@@ -352,10 +357,15 @@ def progress(write: bool = True) -> dict:
                   "| Evidence level | Matched functions | Matched bytes |", "|---|---:|---:|"]
         for level, data in understanding.items():
             lines.append(f"| {level} | {data['functions']} | {data['bytes']:,} |")
-        lines += ["", "## What the matched code does", "", "| Function | Player-facing role | Scope | Bytes |",
-                  "|---|---|---|---:|"]
+        lines += [""] + markdown(hierarchy)
+        owners = {(module["module"], f["symbol"]): f"{system['id']} / {module['module']} / {section['id']}"
+                  for system in hierarchy["systems"] for module in system["modules"]
+                  for section in module["subsections"] for f in section["functions"]}
+        lines += ["", "## What the matched code does", "", "| Function | Owning subsection | Player-facing role | Scope | Bytes |",
+                  "|---|---|---|---|---:|"]
         for match in proof["verified"]:
             lines.append(f"| [{match['name']}]({match['source']}) ({match['module']}:{match['symbol']}) | "
+                         f"{owners[(match['module'], match['symbol'])]} | "
                          f"{match['behavior'].replace('|', '/')} | {match['understanding']} | {match['bytes']} |")
         lines += ["",
                   "## Per-module status", "", "| Module | C bytes | Analysed code bytes | "
@@ -409,6 +419,11 @@ def main() -> int:
         command.add_argument("--rom", help="Path to the user's BK9E revision 0 ROM")
         if name == "check":
             command.add_argument("--profile", choices=("ci", "quick", "full", "strict"), default="full")
+        if name == "progress":
+            command.add_argument("--system", help="Show a system ID from the organization catalog")
+            command.add_argument("--module", help="Show one original overlay/module ID, e.g. ov001")
+            command.add_argument("--subsection", help="Show one subsection ID, e.g. actor_animation")
+            command.add_argument("--functions", action="store_true", help="List matched and unmatched functions")
     args = parser.parse_args()
     try:
         rom = None if args.command == "check" and args.profile == "ci" else rom_path(args.rom)
@@ -418,7 +433,10 @@ def main() -> int:
             build_baseline(rom)
         elif args.command == "progress":
             validate_rom(rom)
-            progress()
+            result = progress()
+            if args.system or args.module or args.subsection or args.functions:
+                from organization import print_tree
+                print_tree(result["organization"], args.system, args.module, args.subsection, args.functions)
         else:
             check(args.profile, rom)
         return 0

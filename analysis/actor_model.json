@@ -1979,6 +1979,83 @@
         "uVar3": "resolvedActorId",
         "pAVar4": "actorNode"
       }
+    },
+    {
+      "module": "ov001",
+      "address": "0x0208cbb4",
+      "name": "func_ov001_0208cbb4",
+      "prototype": "int func_ov001_0208cbb4(void *scriptContext, ScriptOperand *commandOperands);",
+      "behavior": "Reads an actor identifier and integer operand, converts the value through an engine helper, and writes the resulting halfword to ActorNode+0x80 when ActorNode flags bit 0x20 is clear. For an associated live object, it also copies the value to fields at +0xef8 and +0xefc when the object passes the observed checks.",
+      "evidence": "Ghidra decompilation and ARM Thumb instructions at ov001:0x0208cbb4 show operand reads at command offsets 0 and +8, actor lookup via Actor_GetById, a bit test of the actor word at +0 and halfword update at +0x80, then object fields +0xef8/+0xefc and helper call at 0x0208a2fc under nonzero-object and field/flag conditions.",
+      "uncertainty": "The conversion helper's units, the meaning of ActorNode bit 0x20, and the visible gameplay effect are unknown. No scene or actor is assigned to this command.",
+      "local_names": {
+        "iVar2": "actorId",
+        "iVar3": "scriptValue",
+        "uVar4": "resolvedActorId",
+        "uVar1": "convertedValue",
+        "pAVar5": "actorNode"
+      }
+    },
+    {
+      "module": "ov001",
+      "address": "0x0208de3c",
+      "name": "func_ov001_0208de3c",
+      "prototype": "int func_ov001_0208de3c(void *scriptContext, ScriptOperand *commandOperands);",
+      "behavior": "Reads an actor ID, a non-integer operand, two integer operands, and a boolean flag, resolves the actor ID, then calls the actor's animation/state routine with those values.",
+      "evidence": "Thumb call sequence at ov001:0x0208de42\u20130x0208de8c reads operand offsets 0, +8, +0x10, +0x18; passes the ID through 0x02025960; indexes the current script actor table at context+0x1c8 -> +0x4c; and invokes 0x0208a848 with the actor pointer and three values.",
+      "uncertainty": "The second operand conversion and the precise animation track/state meanings are unresolved. The function name remains address-based; no particular actor or scene is inferred.",
+      "local_names": {
+        "param_1": "scriptContext",
+        "param_2": "commandOperands",
+        "iVar1": "actorId",
+        "uVar2": "animationArgument",
+        "iVar3": "animationIndex",
+        "iVar4": "modeValue"
+      }
+    },
+    {
+      "module": "ov001",
+      "address": "0x0208a2fc",
+      "name": "func_ov001_0208a2fc",
+      "prototype": "void func_ov001_0208a2fc(void *actorObject, unsigned short convertedValue);",
+      "behavior": "Copies a converted value to two observed 32-bit object fields at +0xef8 and +0xefc. It follows a nested pointer at +0xd18 and, when that actor node lacks flag bit 0x20, writes the value to its halfword at +0x80 and sets bit 0x20 in its +4 halfword.",
+      "evidence": "Ghidra decompilation, Thumb instructions and exact C match show the two object stores, two pointer dereferences from object +0xd18, the bit test at the nested actor node, and conditional halfword/flag writes. Script command ov001:0x0208cbb4 calls this helper after checking the associated object and its fields/flags. All 44 function bytes independently compile and match.",
+      "uncertainty": "The meanings and units of the object fields and flag bit remain unknown; this describes storage effects only.",
+      "local_names": {
+        "param_1": "actorObject",
+        "param_2": "convertedValue"
+      }
+    },
+    {
+      "module": "arm9",
+      "address": "0x02023dbc",
+      "name": "func_02023dbc",
+      "prototype": "int func_02023dbc(int dividend, int divisor);",
+      "behavior": "Computes the signed integer quotient of its two inputs through an ARM integer-division routine.",
+      "evidence": "The 0x20c-byte ARM function separates and restores the sign, takes input magnitudes, compares and scales them, then iteratively constructs quotient bits in r0 before returning. The actor script command at ov001:0x0208cbb4 calls it with the script value shifted left 16 and divisor 360, then stores the low 16 bits in ActorNode+0x80.",
+      "uncertainty": "The meaning and units of particular call-site operands remain caller-specific. The divide-by-zero result is not classified as a gameplay behavior.",
+      "local_names": {
+        "param_1": "dividend",
+        "param_2": "divisor"
+      }
+    },
+    {
+      "module": "ov001",
+      "address": "0x0208df48",
+      "name": "func_ov001_0208df48",
+      "prototype": "int func_ov001_0208df48(void *scriptContext, ScriptOperand *commandOperands);",
+      "behavior": "Reads two actor identifiers and fixed-point values, constructs a position vector using the selected actor node and a table-indexed orientation value, then sends that vector to the actor position helper. It copies the orientation value into the target actor halfword at +0x80 and calls the actor object update helper.",
+      "evidence": "Thumb instructions and Ghidra decompilation read operand offsets 0, +8, +0x10 and optional +0x18; obtain three words from ov001:0x0208bcf8; derive sine/cosine lookups from `data_0205356c` using the low 16 bits of its first word; read the selected actor vector at ActorNode+0xa8; pass the transformed vector to arm9:0x020359f8; store the same low 16-bit word into the target ActorNode+0x80; and call arm9:0x02036120 and ov001:0x0208c2c4. This corroborates that ActorNode+0x80 participates in a rotation/position update path.",
+      "uncertainty": "The relation between the two actor operands, the script values and visible in-game action remains unknown. The field at +0x80 is kept neutrally named until the full object consumer is confirmed.",
+      "local_names": {
+        "param_1": "scriptContext",
+        "param_2": "commandOperands",
+        "iVar1": "targetActorId",
+        "uVar2": "orientationSourceActorId",
+        "fVar3": "distanceOrOffset",
+        "uVar4": "resolvedTargetActorId",
+        "pAVar6": "actorNode"
+      }
     }
   ],
   "globals": [

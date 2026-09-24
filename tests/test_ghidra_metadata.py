@@ -33,6 +33,10 @@ class GhidraMetadataTests(unittest.TestCase):
         self.assertIsNotNone(configured,'ImportBK9E knowledge file list is missing')
         knowledge_files=re.findall(r'"(analysis/[^\"]+\.json)"',configured.group(1))
         self.assertTrue(knowledge_files,'ImportBK9E has no reviewed knowledge files')
+        exporter=(ROOT/'tools/ghidra/ExportBK9E.java').read_text()
+        exported=re.search(r'new String\[\]\{([^}]+)\}',exporter)
+        self.assertIsNotNone(exported,'ExportBK9E knowledge file list is missing')
+        self.assertEqual(knowledge_files,re.findall(r'"(analysis/[^\"]+\.json)"',exported.group(1)))
         for relative in knowledge_files:
             path=ROOT/relative
             if not path.exists():

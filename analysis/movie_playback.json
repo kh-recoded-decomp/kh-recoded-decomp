@@ -1,0 +1,154 @@
+{
+  "version": 1,
+  "profile": "bk9e",
+  "types": "analysis/types/movie_playback.h",
+  "scope": "MobiClip movie initialization, decoded-frame conversion, and frame-ring bookkeeping. Static Ghidra evidence and exact C recovery; specific video assets and display presentation remain unobserved.",
+  "functions": [
+    {
+      "module": "ov022",
+      "address": "0x020a9d94",
+      "name": "renderDecodedMovieFrame_020a9d94",
+      "prototype": "int renderDecodedMovieFrame_020a9d94(MovieDecodeContextObserved *context, unsigned int outputBuffer, int sourceLine, int mode);",
+      "behavior": "Prepares a decoded movie frame for pixel conversion and advances the consumed-frame count and ring cursor.",
+      "evidence": "The wrapper at ov022:0x020a9338 calls this routine at 0x020a9348; that wrapper is itself called from 0x020a7fc8. It returns zero when +0x9c is greater than or equal to +0xa0. For nonzero mode it lazily allocates working buffers at +0x68/+0x6c, packages nine words for ov022:0x020b713c, then selects those buffers. Mode zero selects entries from the tables at +0x5c and +0x60. Both paths set conversion request words at +0x3c through +0x48, call the packed-pixel converter at 0x020aa2e0, increment +0x9c and advance/wrap the ring cursor at +0xc4. Exact output: 388 bytes with mwccarm-3.0-139, including all relocated calls.",
+      "uncertainty": "The caller\u2019s mode values, auxiliary plane table at +0x64, remaining conversion fields, and path from the output buffer to the display are not established.",
+      "callers": [
+        {
+          "module": "ov022",
+          "callsite": "0x020a9348",
+          "caller": "func_ov022_020a9338",
+          "caller_direct_callers": [
+            "ov022:0x020a7fc8"
+          ]
+        }
+      ],
+      "local_names": {
+        "param_1": "context",
+        "param_2": "outputBuffer",
+        "param_3": "sourceLine",
+        "param_4": "mode"
+      }
+    },
+    {
+      "module": "ov022",
+      "address": "0x020aa2e0",
+      "name": "func_ov022_020aa2e0",
+      "prototype": "void func_ov022_020aa2e0(MoviePixelConvertContext *context);",
+      "behavior": "Converts source plane samples through lookup tables and writes packed pixel words to the output buffer.",
+      "evidence": "Ghidra decompilation reads source addresses and output address from the conversion context, performs repeated lookup-table combinations for each pixel, and stores packed 32-bit words. renderDecodedMovieFrame_020a9d94 calls it after preparing the context.",
+      "uncertainty": "The lookup-table channel mapping and pixel format interpretation are not fully established.",
+      "callers": [
+        {
+          "module": "ov022",
+          "callsite": "0x020a9ee0",
+          "caller": "renderDecodedMovieFrame_020a9d94"
+        }
+      ]
+    },
+    {
+      "module": "ov022",
+      "address": "0x020a9430",
+      "name": "func_ov022_020a9430",
+      "prototype": "int func_ov022_020a9430(MovieDecodeContextObserved *context, int stream, unsigned int frameRingCapacity, int mode);",
+      "behavior": "Validates a movie stream header and initializes decoder state, caches, plane buffers, and startup bitstream data.",
+      "evidence": "Ghidra decompilation checks the MODS signature and N3 extension, allocates a 0x454-byte decoder state and plane/ring buffers, fills working buffers, and initializes the startup read. It calls the cached decoder and lookup-table helpers used elsewhere in ov022.",
+      "uncertainty": "Several decoder fields and mode meanings remain address-based; failure cleanup and resource ownership are not established by this routine."
+    },
+    {
+      "module": "ov022",
+      "address": "0x020a9b54",
+      "name": "movieFrameBufferStatus_020a9b54",
+      "prototype": "int movieFrameBufferStatus_020a9b54(const void *movieContext);",
+      "behavior": "Returns zero when a context word at +0x20 is zero; otherwise returns 0x80 or 0x100 according to the word at +0x28.",
+      "evidence": "Recovered Days C source directly implements the two field checks and three return values.",
+      "uncertainty": "The two field roles and meaning of the returned values are unknown."
+    },
+    {
+      "module": "ov022",
+      "address": "0x020a9f58",
+      "name": "func_ov022_020a9f58",
+      "prototype": "int func_ov022_020a9f58(const void *context);",
+      "behavior": "Returns the word selected by the index at +0x90 from a table based at +0x88.",
+      "evidence": "Recovered Days C source directly loads the index at +0x90 and returns the selected 32-bit table word.",
+      "uncertainty": "The table contents and higher-level role are unknown."
+    },
+    {
+      "module": "ov022",
+      "address": "0x020aa8a0",
+      "name": "getMovieDecoderCodeSize_020aa8a0",
+      "prototype": "int getMovieDecoderCodeSize_020aa8a0(void);",
+      "behavior": "Returns 0x659c, the byte length used for the embedded movie decoder code.",
+      "evidence": "Recovered Days C source returns 0x659c; the nearby decoder cache helper copies 0x659c bytes.",
+      "uncertainty": "Decoder internals are outside this constant helper."
+    },
+    {
+      "module": "ov022",
+      "address": "0x020a9f68",
+      "name": "processMovieStreamChunk_020a9f68",
+      "prototype": "int processMovieStreamChunk_020a9f68(MovieDecodeContextObserved *context, unsigned int outputBuffer, int unusedArgument, int copyOption);",
+      "behavior": "Processes one pending movie-stream chunk, advances the stream cursor by its handler\u2019s size, and advances or resets the frame-slot index.",
+      "evidence": "Ghidra identifies a call from ov022:0x020a9398 at 0x020a93a8. The routine returns zero when the completed chunk count at +0xcc equals the limit at +0xc8 or the 16-bit type at +0x1c is zero. It writes the stream address and output buffer to a 0x14f8-byte slot at +0x58, dispatches types 1\u20133 to address-based handlers and other nonzero types to a 0x200-byte copy path, advances the slot index at +0xd0, resets it and state +0xa4 at the header count (+0x1e), then increments +0xcc. The full 432-byte body compiles exactly with mwccarm-3.0-139.",
+      "uncertainty": "Chunk type meanings, handler internals, and how the output buffer reaches the display are unknown.",
+      "callers": [
+        {
+          "module": "ov022",
+          "callsite": "0x020a93a8",
+          "caller": "func_ov022_020a9398"
+        }
+      ],
+      "local_names": {
+        "param_1": "movieContext",
+        "param_2": "outputBuffer",
+        "param_3": "unusedArgument",
+        "param_4": "copyOption"
+      }
+    },
+    {
+      "module": "ov022",
+      "address": "0x020a9338",
+      "name": "func_ov022_020a9338",
+      "prototype": "int func_ov022_020a9338(MovieDecodeContextObserved *context, unsigned int outputBuffer, int sourceLine, int mode);",
+      "behavior": "Checks for a nonnull movie context, delegates one frame to the conversion routine, and returns whether it succeeded.",
+      "evidence": "Ghidra decompilation calls renderDecodedMovieFrame_020a9d94 at +0x10 and returns whether its result equals 1. This wrapper is called from ov022:0x020a7fc8.",
+      "uncertainty": "The caller\u2019s higher-level display behavior remains unknown.",
+      "callers": [
+        {
+          "module": "ov022",
+          "callsite": "0x020a9348",
+          "caller": "func_ov022_020a9338"
+        }
+      ]
+    }
+  ],
+  "call_chains": [
+    {
+      "path": [
+        "ov022:0x020a7fc8",
+        "ov022:0x020a9338",
+        "ov022:0x020a9d94",
+        "ov022:0x020aa2e0"
+      ],
+      "behavior": "The movie playback path requests frame conversion; the frame routine chooses plane buffers, converts packed pixels, and advances consumed/ring state.",
+      "evidence": "Ghidra callsites show 0x020a7fc8 calling wrapper 0x020a9338, which calls 0x020a9d94; the frame routine calls 0x020aa2e0."
+    },
+    {
+      "path": [
+        "ov022:0x020a9398",
+        "ov022:0x020a9f68"
+      ],
+      "behavior": "A stream wrapper requests processing of the next chunk; the handler dispatches by a type word, advances the stream cursor, and rotates frame-slot state.",
+      "evidence": "Ghidra records callsite 0x020a93a8 from 0x020a9398 to 0x020a9f68; the complete 432-byte C body is exact."
+    },
+    {
+      "path": [
+        "ov022:0x020a9430",
+        "ov022:0x020aa8fc",
+        "ov022:0x020aa978",
+        "ov022:0x020aaa58",
+        "ov022:0x020aa9e8"
+      ],
+      "behavior": "Movie stream initialization prepares decoder state and requests cached decoder code and lookup tables.",
+      "evidence": "Direct calls visible in Ghidra decompilation and exact source matches for the cache helpers."
+    }
+  ]
+}
