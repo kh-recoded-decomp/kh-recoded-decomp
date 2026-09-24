@@ -9,7 +9,36 @@
       "modules": [
         {
           "module": "arm9",
-          "subsections": []
+          "subsections": [
+            {
+              "id": "material_attribute_setters",
+              "name": "Material polygon-attribute setters",
+              "evidence": "Ghidra callsites and shared material dictionary layout identify these property routines. The setters replace polygon-attribute fields; the getters read them. See analysis/material_attributes.json and the exact C entries in matches.json.",
+              "uncertainty": "Completion applies to these explicitly reviewed property routines; broader model rendering and specific scenes remain separate.",
+              "symbols": [
+                "func_0201a46c",
+                "func_0201a4e4",
+                "func_0201a55c",
+                "func_0201a5d4",
+                "func_0201a64c",
+                "func_0201a880",
+                "func_0201a8c0",
+                "func_0201a900"
+              ]
+            },
+            {
+              "id": "material_attribute_getters",
+              "name": "Material polygon-attribute getters",
+              "evidence": "Ghidra callsites and shared material dictionary layout identify these property routines. The setters replace polygon-attribute fields; the getters read them. See analysis/material_attributes.json and the exact C entries in matches.json.",
+              "uncertainty": "Completion applies to these explicitly reviewed property routines; broader model rendering and specific scenes remain separate.",
+              "symbols": [
+                "func_0201a6c4",
+                "func_0201a730",
+                "func_0201a7a0",
+                "func_0201a810"
+              ]
+            }
+          ]
         },
         {
           "module": "itcm",

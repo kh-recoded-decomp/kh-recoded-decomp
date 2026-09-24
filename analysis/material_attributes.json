@@ -1,0 +1,123 @@
+{
+  "version": 1,
+  "profile": "bk9e",
+  "proposal": "material_polygon_attributes",
+  "module": "arm9",
+  "understanding": "subsystem",
+  "scope": "Eight material polygon-attribute setters and four separately owned getters.",
+  "evidence": [
+    "The five leaf routines at 0x0201a46c, 0x0201a4e4, 0x0201a55c, 0x0201a5d4, and 0x0201a64c all resolve a material by index and update the material polygon-attribute word. Their masks and shifts target light-enable bits, polygon mode, cull mode, polygon ID, and alpha respectively.",
+    "The three 0x40-byte loops at 0x0201a880, 0x0201a8c0, and 0x0201a900 iterate the model material count at +0x18 and call the corresponding per-material cull, polygon-ID, and alpha setter. Ghidra callsites include callers in ov001 and several other overlays.",
+    "All eight proposed members have exact C matches in the current match inventory. The wrappers call the leaf APIs directly; the remaining two leaf APIs are part of the same per-material polygon-attribute editing interface, though this binary has no all-material wrapper for them in the adjacent interval."
+  ],
+  "subsections": [
+    {
+      "name": "per_material_polygon_attribute_setters",
+      "members": [
+        {
+          "symbol": "func_0201a46c",
+          "address": "0x0201a46c",
+          "size": 120,
+          "name": "SetMaterialLightMask",
+          "property": "polygon-attribute light-enable mask",
+          "evidence": "Updates the selected material's polygon-attribute word with mask 0x0000000f."
+        },
+        {
+          "symbol": "func_0201a4e4",
+          "address": "0x0201a4e4",
+          "size": 120,
+          "name": "SetMaterialPolygonMode",
+          "property": "polygon mode",
+          "evidence": "Replaces bits 4-5 of the selected material polygon-attribute word."
+        },
+        {
+          "symbol": "func_0201a55c",
+          "address": "0x0201a55c",
+          "size": 120,
+          "name": "SetMaterialCullMode",
+          "property": "cull mode",
+          "evidence": "Replaces bits 6-7 of the selected material polygon-attribute word; wrapper caller at 0x0201a8a8."
+        },
+        {
+          "symbol": "func_0201a5d4",
+          "address": "0x0201a5d4",
+          "size": 120,
+          "name": "SetMaterialPolygonId",
+          "property": "polygon ID",
+          "evidence": "Replaces polygon-ID bits in the selected material polygon-attribute word; wrapper caller at 0x0201a8e8."
+        },
+        {
+          "symbol": "func_0201a64c",
+          "address": "0x0201a64c",
+          "size": 120,
+          "name": "SetMaterialAlpha",
+          "property": "alpha",
+          "evidence": "Replaces the alpha field in the selected material polygon-attribute word; wrapper caller at 0x0201a928."
+        }
+      ]
+    },
+    {
+      "name": "all_material_polygon_attribute_setters",
+      "members": [
+        {
+          "symbol": "func_0201a880",
+          "address": "0x0201a880",
+          "size": 64,
+          "name": "Model_SetAllMaterialCullMode_0201a880",
+          "property": "cull mode",
+          "calls": "func_0201a55c",
+          "evidence": "Iterates the model material count at +0x18 and sets each material; Ghidra callers include ov001, ov052, and other model logic."
+        },
+        {
+          "symbol": "func_0201a8c0",
+          "address": "0x0201a8c0",
+          "size": 64,
+          "name": "Model_SetAllPolygonIds_0201a8c0",
+          "property": "polygon ID",
+          "calls": "func_0201a5d4",
+          "evidence": "Iterates the model material count at +0x18 and sets each material; Ghidra callers span ov001 and multiple overlays."
+        },
+        {
+          "symbol": "func_0201a900",
+          "address": "0x0201a900",
+          "size": 64,
+          "name": "Model_SetAllMaterialAlpha_0201a900",
+          "property": "alpha",
+          "calls": "func_0201a64c",
+          "evidence": "Iterates the model material count at +0x18 and sets each material; Ghidra callers span ov001 and multiple overlays."
+        }
+      ]
+    }
+  ],
+  "boundary_note": "Setters and getters use the same material dictionary resolver and polygon-attribute word, but have separate owning subsections. Every listed function has a verified C implementation; the matching report recomputes completion.",
+  "related_getters": [
+    {
+      "symbol": "func_0201a6c4",
+      "address": "0x0201a6c4",
+      "size": 108,
+      "role": "getter",
+      "evidence": "Returns the low light-enable bits from the material polygon-attribute word; callers include 0x01fff874."
+    },
+    {
+      "symbol": "func_0201a730",
+      "address": "0x0201a730",
+      "size": 112,
+      "role": "getter",
+      "evidence": "Returns the polygon-mode field (bits 4-5); caller includes 0x01fff884."
+    },
+    {
+      "symbol": "func_0201a7a0",
+      "address": "0x0201a7a0",
+      "size": 112,
+      "role": "getter",
+      "evidence": "Reads the polygon ID with mask 0x3f000000 and shift 24. Callers include 0x01fff864 and overlays ov007/ov019."
+    },
+    {
+      "symbol": "func_0201a810",
+      "address": "0x0201a810",
+      "size": 112,
+      "role": "getter",
+      "evidence": "Reads alpha with mask 0x001f0000 and shift 16. Callers include overlays ov007/ov019/ov035."
+    }
+  ]
+}

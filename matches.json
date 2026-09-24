@@ -4388,6 +4388,288 @@
         "data_ov001_020a049c": "0x020a049c"
       },
       "size_bytes": 12
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_0201a55c",
+      "language": "c",
+      "source": "src/arm9/library_nns_g3d/func_0201a55c.c",
+      "source_symbol": "SetMaterialCullMode_0201a55c",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {},
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "libs/nns/g3d/auto/func_02016ae8.c",
+        "license": "CC0-1.0"
+      },
+      "name": "SetMaterialCullMode",
+      "behavior": "Replaces polygon culling bits with the requested cull mode.",
+      "evidence": "The exact-verified 120-byte body at arm9:func_0201a55c is recovered from libs/nns/g3d/auto/func_02016ae8.c (ab832f38b943c15f461228968a89002e1a99c03e); Masks the back/front cull fields in one material polygon attribute and inserts the supplied mode.",
+      "uncertainty": "The middleware operation is supported by this body; its caller-specific use and any higher-level game meaning are not established here.",
+      "domain": "nns_g3d",
+      "origin": "recovered CC0 library C",
+      "understanding": "subsystem"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_0201a4e4",
+      "language": "c",
+      "source": "src/arm9/library_nns_g3d/func_0201a4e4.c",
+      "source_symbol": "SetMaterialPolygonMode_0201a4e4",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {},
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "libs/nns/g3d/auto/func_02016a70.c",
+        "license": "CC0-1.0"
+      },
+      "name": "SetMaterialPolygonMode",
+      "behavior": "Replaces polygon mode bits in one material polygon attribute.",
+      "evidence": "The exact-verified 120-byte body at arm9:func_0201a4e4 is recovered from libs/nns/g3d/auto/func_02016a70.c (ab832f38b943c15f461228968a89002e1a99c03e); Masks REG_G3 polygon mode and inserts the supplied GX polygon mode.",
+      "uncertainty": "The middleware operation is supported by this body; its caller-specific use and any higher-level game meaning are not established here.",
+      "domain": "nns_g3d",
+      "origin": "recovered CC0 library C",
+      "understanding": "subsystem"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_0201a5d4",
+      "language": "c",
+      "source": "src/arm9/library_nns_g3d/func_0201a5d4.c",
+      "source_symbol": "SetMaterialPolygonId_0201a5d4",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {},
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "libs/nns/g3d/auto/func_02016b60.c",
+        "license": "CC0-1.0"
+      },
+      "name": "SetMaterialPolygonId",
+      "behavior": "Replaces polygon ID bits in one material polygon attribute.",
+      "evidence": "The exact-verified 120-byte body at arm9:func_0201a5d4 is recovered from libs/nns/g3d/auto/func_02016b60.c (ab832f38b943c15f461228968a89002e1a99c03e); Masks the polygon ID field and inserts the supplied ID.",
+      "uncertainty": "The middleware operation is supported by this body; its caller-specific use and any higher-level game meaning are not established here.",
+      "domain": "nns_g3d",
+      "origin": "recovered CC0 library C",
+      "understanding": "subsystem"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_0201a64c",
+      "language": "c",
+      "source": "src/arm9/library_nns_g3d/func_0201a64c.c",
+      "source_symbol": "SetMaterialAlpha_0201a64c",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {},
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "libs/nns/g3d/auto/func_02016bd8.c",
+        "license": "CC0-1.0"
+      },
+      "name": "SetMaterialAlpha",
+      "behavior": "Replaces alpha bits in one material polygon attribute.",
+      "evidence": "The exact-verified 120-byte body at arm9:func_0201a64c is recovered from libs/nns/g3d/auto/func_02016bd8.c (ab832f38b943c15f461228968a89002e1a99c03e); Masks the polygon alpha field and inserts the supplied value.",
+      "uncertainty": "The middleware operation is supported by this body; its caller-specific use and any higher-level game meaning are not established here.",
+      "domain": "nns_g3d",
+      "origin": "recovered CC0 library C",
+      "understanding": "subsystem"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_0201a46c",
+      "language": "c",
+      "source": "src/arm9/library_nns_g3d/func_0201a46c.c",
+      "source_symbol": "SetMaterialLightMask_0201a46c",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {},
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "libs/nns/g3d/auto/func_020169f8.c",
+        "license": "CC0-1.0"
+      },
+      "name": "SetMaterialLightMask",
+      "behavior": "Replaces enabled-light bits in one material polygon attribute.",
+      "evidence": "The exact-verified 120-byte body at arm9:func_0201a46c is recovered from libs/nns/g3d/auto/func_020169f8.c (ab832f38b943c15f461228968a89002e1a99c03e); Masks the polygon light-enable field and inserts the supplied mask.",
+      "uncertainty": "The middleware operation is supported by this body; its caller-specific use and any higher-level game meaning are not established here.",
+      "domain": "nns_g3d",
+      "origin": "recovered CC0 library C",
+      "understanding": "subsystem"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_0201a880",
+      "language": "c",
+      "source": "src/arm9/library_nns_g3d/Model_SetAllMaterialCullMode_0201a880.c",
+      "source_symbol": "Model_SetAllMaterialCullMode_0201a880",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "SetMaterialCullMode_0201a55c": "0x201a55c"
+      },
+      "name": "Model_SetAllMaterialCullMode_0201a880",
+      "behavior": "Applies one culling mode to every material in a model.",
+      "evidence": "The target iterates the material count at model offset 0x18 and calls the per-material cull-mode setter for each index.",
+      "uncertainty": "The precise rendering effect follows the SDK cull-mode parameter; this wrapper only establishes the all-material application.",
+      "domain": "nns_g3d",
+      "origin": "recovered CC0 library C",
+      "understanding": "subsystem",
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "libs/nns/g3d/calls/func_02016c90.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_0201a8c0",
+      "language": "c",
+      "source": "src/arm9/library_nns_g3d/Model_SetAllPolygonIds_0201a8c0.c",
+      "source_symbol": "Model_SetAllPolygonIds_0201a8c0",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "SetMaterialPolygonId_0201a5d4": "0x201a5d4"
+      },
+      "name": "Model_SetAllPolygonIds_0201a8c0",
+      "behavior": "Sets the polygon ID for every material in a model.",
+      "evidence": "The target iterates the material count at model offset 0x18 and calls the per-material polygon-ID setter for each index.",
+      "uncertainty": "The function changes each material's polygon ID field; downstream graphics-engine interpretation is not encoded here.",
+      "domain": "nns_g3d",
+      "origin": "recovered CC0 library C",
+      "understanding": "subsystem",
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "libs/nns/g3d/calls/func_02016cd0.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_0201a900",
+      "language": "c",
+      "source": "src/arm9/library_nns_g3d/Model_SetAllMaterialAlpha_0201a900.c",
+      "source_symbol": "Model_SetAllMaterialAlpha_0201a900",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "SetMaterialAlpha_0201a64c": "0x201a64c"
+      },
+      "name": "Model_SetAllMaterialAlpha_0201a900",
+      "behavior": "Sets the alpha value for every material in a model.",
+      "evidence": "The target iterates the material count at model offset 0x18 and calls the per-material alpha setter for each index.",
+      "uncertainty": "The setter's value range and blending policy are determined by the graphics engine.",
+      "domain": "nns_g3d",
+      "origin": "recovered CC0 library C",
+      "understanding": "subsystem",
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "libs/nns/g3d/calls/func_02016d10.c",
+        "license": "CC0-1.0"
+      }
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_0201a6c4",
+      "language": "c",
+      "source": "src/arm9/library_nns_g3d/GetMaterialLightMask_0201a6c4.c",
+      "source_symbol": "GetMaterialLightMask_0201a6c4",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {},
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "libs/nns/g3d/auto/func_020169f8.c",
+        "license": "CC0-1.0"
+      },
+      "name": "GetMaterialLightMask",
+      "behavior": "Returns the material polygon-attribute field selected by mask 0x0000000f and shift 0.",
+      "evidence": "Ghidra and ARM disassembly show the same verified resource dictionary lookup as the material setters, followed by the stated mask and shift. Full compiled code matches the getter bytes.",
+      "uncertainty": "The material property is established; its visual use in a specific scene is unverified.",
+      "domain": "nns_g3d",
+      "origin": "adapted CC0 library C",
+      "understanding": "subsystem"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_0201a730",
+      "language": "c",
+      "source": "src/arm9/library_nns_g3d/GetMaterialPolygonMode_0201a730.c",
+      "source_symbol": "GetMaterialPolygonMode_0201a730",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {},
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "libs/nns/g3d/auto/func_02016a70.c",
+        "license": "CC0-1.0"
+      },
+      "name": "GetMaterialPolygonMode",
+      "behavior": "Returns the material polygon-attribute field selected by mask 0x00000030 and shift 4.",
+      "evidence": "Ghidra and ARM disassembly show the same verified resource dictionary lookup as the material setters, followed by the stated mask and shift. Full compiled code matches the getter bytes.",
+      "uncertainty": "The material property is established; its visual use in a specific scene is unverified.",
+      "domain": "nns_g3d",
+      "origin": "adapted CC0 library C",
+      "understanding": "subsystem"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_0201a7a0",
+      "language": "c",
+      "source": "src/arm9/library_nns_g3d/GetMaterialPolygonId_0201a7a0.c",
+      "source_symbol": "GetMaterialPolygonId_0201a7a0",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {},
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "libs/nns/g3d/auto/func_02016b60.c",
+        "license": "CC0-1.0"
+      },
+      "name": "GetMaterialPolygonId",
+      "behavior": "Returns the material polygon-attribute field selected by mask 0x3f000000 and shift 24.",
+      "evidence": "Ghidra and ARM disassembly show the same verified resource dictionary lookup as the material setters, followed by the stated mask and shift. Full compiled code matches the getter bytes.",
+      "uncertainty": "The material property is established; its visual use in a specific scene is unverified.",
+      "domain": "nns_g3d",
+      "origin": "adapted CC0 library C",
+      "understanding": "subsystem"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_0201a810",
+      "language": "c",
+      "source": "src/arm9/library_nns_g3d/GetMaterialAlpha_0201a810.c",
+      "source_symbol": "GetMaterialAlpha_0201a810",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {},
+      "provenance": {
+        "project": "Yokimitsuro/khdays-decomp",
+        "revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+        "source": "libs/nns/g3d/auto/func_02016bd8.c",
+        "license": "CC0-1.0"
+      },
+      "name": "GetMaterialAlpha",
+      "behavior": "Returns the material polygon-attribute field selected by mask 0x001f0000 and shift 16.",
+      "evidence": "Ghidra and ARM disassembly show the same verified resource dictionary lookup as the material setters, followed by the stated mask and shift. Full compiled code matches the getter bytes.",
+      "uncertainty": "The material property is established; its visual use in a specific scene is unverified.",
+      "domain": "nns_g3d",
+      "origin": "adapted CC0 library C",
+      "understanding": "subsystem"
     }
   ]
 }
