@@ -3840,6 +3840,46 @@
       "origin": "Re:coded overlay loader recovered from disassembly and persistent Ghidra caller analysis",
       "understanding": "subsystem",
       "language": "c"
+    },
+    {
+      "module": "ov060",
+      "symbol": "func_ov060_020c7460",
+      "source": "src/ov060/object_factory/RegisterOverlay060Factory.c",
+      "source_symbol": "RegisterOverlay060Factory",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "CreateOverlay060Object": "0x020c7474",
+        "SetOverlayObjectFactory": "0x0206dd85"
+      },
+      "name": "RegisterOverlay060Factory",
+      "behavior": "Installs the creation callback used to allocate the object implemented by overlay 60.",
+      "evidence": "The 20-byte function passes ov060:020c7474 to ov001:0206dd84. The latter stores the factory pointer at ov001:020a04a0. The ov051 mode -1 path loads overlay60 before invoking this entry.",
+      "uncertainty": "The object's specific game role has not been established; no enemy or battle-system identity is assigned.",
+      "domain": "object_factory",
+      "language": "c",
+      "understanding": "subsystem",
+      "origin": "Re:coded overlay object factory recovered from disassembly and persistent Ghidra caller analysis"
+    },
+    {
+      "module": "ov060",
+      "symbol": "func_ov060_020c7474",
+      "source": "src/ov060/object_factory/CreateOverlay060Object.c",
+      "source_symbol": "CreateOverlay060Object",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_0202a178": "0x0202a178",
+        "InitializeOverlayObject": "0x020a75a5"
+      },
+      "name": "CreateOverlay060Object",
+      "behavior": "Allocates and initializes the object used by overlay 60 with variant 1 and selection index 0.",
+      "evidence": "Allocates 0x230 bytes through arm9:0202a178, calls ov021:020a75a4 with (object,1,0), and returns the same allocation. That initializer clears 0x230 bytes and stores the variant, option, shared selection, and update callback.",
+      "uncertainty": "Variant 1 and selection index 0 are observed values; their in-game meanings remain unproven.",
+      "domain": "object_factory",
+      "language": "c",
+      "understanding": "subsystem",
+      "origin": "Re:coded overlay object factory recovered from disassembly and persistent Ghidra caller analysis"
     }
   ]
 }
