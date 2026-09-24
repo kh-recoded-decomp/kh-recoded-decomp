@@ -18,7 +18,7 @@ public class ExportBK9E extends GhidraScript {
         JsonArray results=new JsonArray();DecompInterface decompiler=new DecompInterface();
         DecompileOptions options=new DecompileOptions();options.setRespectReadOnly(true);decompiler.setOptions(options);
         decompiler.openProgram(currentProgram);
-        for(String knowledgeFile:new String[]{"analysis/actor_model.json","analysis/overlay_loading.json","analysis/movie_playback.json","analysis/display_session.json","analysis/panel_state.json"}) {
+        for(String knowledgeFile:new String[]{"analysis/actor_model.json","analysis/overlay_loading.json","analysis/movie_playback.json","analysis/display_session.json","analysis/panel_state.json","analysis/wireless_channel_selection.json","analysis/material_attributes.json","analysis/alarm_scheduler.json"}) {
           Path knowledgePath=root.resolve(knowledgeFile);if(!Files.exists(knowledgePath))continue;
           JsonObject knowledge=JsonParser.parseString(Files.readString(knowledgePath)).getAsJsonObject();
           for(JsonElement item:knowledge.getAsJsonArray("functions")) {

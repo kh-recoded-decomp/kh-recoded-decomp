@@ -1,0 +1,99 @@
+{
+  "version": 1,
+  "profile": "bk9e",
+  "types": "analysis/types/alarm_scheduler.h",
+  "scope": "Alarm API and queue/timer routines. The separate interrupt bridge at 0x0200442c remains unmatched. Split tick parameters describe the observed r1/r2 ABI without imposing eight-byte parameter alignment.",
+  "functions": [
+    {
+      "module": "arm9",
+      "address": "0x0200417c",
+      "name": "InitializeAlarmSystem",
+      "prototype": "void InitializeAlarmSystem(void);",
+      "behavior": "Initializes the alarm scheduler once, reserves timer 1, clears the queue head and tail, and disables its interrupt until an alarm is queued.",
+      "evidence": "The shared state at 0x02056ea4 is also used by the verified alarm insertion, dispatch, cancellation, and timer routines. The pointer fields are the queue head and tail.",
+      "uncertainty": "Specific game alarm callbacks remain unclassified."
+    },
+    {
+      "module": "arm9",
+      "address": "0x020041b8",
+      "name": "EndAlarmSystem",
+      "prototype": "void EndAlarmSystem(void);",
+      "behavior": "Releases timer 1 and clears the alarm-system active flag while interrupts are disabled.",
+      "evidence": "Shared alarm record and queue fields are established by the exact scheduler C; ARM instructions establish API-specific control flow and target call addresses.",
+      "uncertainty": "Specific gameplay callbacks are unclassified."
+    },
+    {
+      "module": "arm9",
+      "address": "0x020041f4",
+      "name": "IsAlarmSystemActive",
+      "prototype": "unsigned short IsAlarmSystemActive(void);",
+      "behavior": "Returns whether the shared alarm scheduler is active.",
+      "evidence": "Shared alarm record and queue fields are established by the exact scheduler C; ARM instructions establish API-specific control flow and target call addresses.",
+      "uncertainty": "Specific gameplay callbacks are unclassified."
+    },
+    {
+      "module": "arm9",
+      "address": "0x02004204",
+      "name": "CreateAlarm",
+      "prototype": "void CreateAlarm(AlarmRecord *alarm);",
+      "behavior": "Clears the alarm handler and tag words in the supplied alarm record.",
+      "evidence": "Stores zero to record words 0 and 2.",
+      "uncertainty": "The source name is retained, but this short body only establishes initialization of those two words."
+    },
+    {
+      "module": "arm9",
+      "address": "0x0200433c",
+      "name": "SetOneShotAlarm",
+      "prototype": "void SetOneShotAlarm(AlarmRecord *alarm, unsigned int delayLow, unsigned int delayHigh, AlarmCallback handler, void *argument);",
+      "behavior": "Sets the handler and argument, then queues a one-shot alarm relative to the current tick.",
+      "evidence": "Shared alarm record and queue fields are established by the exact scheduler C; ARM instructions establish API-specific control flow and target call addresses.",
+      "uncertainty": "Specific gameplay callbacks are unclassified."
+    },
+    {
+      "module": "arm9",
+      "address": "0x020043a8",
+      "name": "CancelAlarm",
+      "prototype": "void CancelAlarm(AlarmRecord *alarm);",
+      "behavior": "Unlinks an active alarm, rearms the timer if the queue head changes, and clears its handler and period.",
+      "evidence": "Shared alarm record and queue fields are established by the exact scheduler C; ARM instructions establish API-specific control flow and target call addresses.",
+      "uncertainty": "Specific gameplay callbacks are unclassified."
+    },
+    {
+      "module": "arm9",
+      "address": "0x020040f4",
+      "name": "SetAlarmTimer",
+      "prototype": "void SetAlarmTimer(AlarmRecord *alarm);",
+      "behavior": "Programs timer 1 for the next alarm deadline, installs its callback, and enables its interrupt.",
+      "evidence": "The timer 1 register writes, shared alarm queue at 0x02056ea4, 64-bit deadlines, links, and callback invocation establish the alarm subsystem. All call/global relocations resolve to BK9E addresses and every compiled byte matches.",
+      "uncertainty": "The scheduling mechanism is understood; game-specific uses of each registered alarm remain unclassified."
+    },
+    {
+      "module": "arm9",
+      "address": "0x02004214",
+      "name": "InsertAlarmByDeadline",
+      "prototype": "void InsertAlarmByDeadline(AlarmRecord *alarm, unsigned int fireLow, unsigned int fireHigh);",
+      "behavior": "Computes the next periodic deadline and inserts an alarm into the doubly linked queue in deadline order.",
+      "evidence": "The timer 1 register writes, shared alarm queue at 0x02056ea4, 64-bit deadlines, links, and callback invocation establish the alarm subsystem. All call/global relocations resolve to BK9E addresses and every compiled byte matches.",
+      "uncertainty": "The scheduling mechanism is understood; game-specific uses of each registered alarm remain unclassified."
+    },
+    {
+      "module": "arm9",
+      "address": "0x0200443c",
+      "name": "DispatchDueAlarm",
+      "prototype": "void DispatchDueAlarm(void);",
+      "behavior": "Removes a due alarm from the queue, calls its handler, reinserts periodic alarms, and schedules the next deadline.",
+      "evidence": "The timer 1 register writes, shared alarm queue at 0x02056ea4, 64-bit deadlines, links, and callback invocation establish the alarm subsystem. All call/global relocations resolve to BK9E addresses and every compiled byte matches.",
+      "uncertainty": "The scheduling mechanism is understood; game-specific uses of each registered alarm remain unclassified."
+    }
+  ],
+  "globals": [
+    {
+      "module": "arm9",
+      "address": "0x02056ea4",
+      "name": "g_alarmScheduler",
+      "pointee_type": "AlarmSchedulerState",
+      "pointer_depth": 0,
+      "evidence": "The initializer writes active/head/tail at offsets 0/4/8; exact queue insertion, dispatch, cancellation and availability routines share these fields."
+    }
+  ]
+}

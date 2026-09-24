@@ -119,5 +119,80 @@
       "role": "getter",
       "evidence": "Reads alpha with mask 0x001f0000 and shift 16. Callers include overlays ov007/ov019/ov035."
     }
+  ],
+  "types": "analysis/types/material_attributes.h",
+  "functions": [
+    {
+      "module": "arm9",
+      "address": "0x0201a46c",
+      "name": "SetMaterialLightMask",
+      "prototype": "void SetMaterialLightMask(ModelResource *modelResource, u32 materialIndex, int lightMask);",
+      "behavior": "Replaces the selected material light-enable bits in its polygon-attribute word.",
+      "evidence": "Ghidra target body resolves the material by model and index, then replaces the low four bits at material data +0x0c.",
+      "uncertainty": "The supported light bit mask follows the SDK field definition; caller intent is not inferred."
+    },
+    {
+      "module": "arm9",
+      "address": "0x0201a4e4",
+      "name": "SetMaterialPolygonMode",
+      "prototype": "void SetMaterialPolygonMode(ModelResource *modelResource, u32 materialIndex, int polygonMode);",
+      "behavior": "Replaces the selected material polygon-mode field.",
+      "evidence": "Target code resolves material data and updates polygon-attribute bits 4-5.",
+      "uncertainty": "The mode meaning is an SDK enum; this signature records it as an integer."
+    },
+    {
+      "module": "arm9",
+      "address": "0x0201a55c",
+      "name": "SetMaterialCullMode",
+      "prototype": "void SetMaterialCullMode(ModelResource *modelResource, u32 materialIndex, int cullMode);",
+      "behavior": "Replaces the selected material cull-mode field.",
+      "evidence": "Target code resolves material data and updates polygon-attribute bits 6-7; all-material wrapper at 0x0201a880 calls this function.",
+      "uncertainty": "Cull mode is recorded as an integer because the project has no shared SDK enum definition."
+    },
+    {
+      "module": "arm9",
+      "address": "0x0201a880",
+      "name": "Model_SetAllMaterialCullMode",
+      "prototype": "void Model_SetAllMaterialCullMode(ModelResource *modelResource, int cullMode);",
+      "behavior": "Applies one cull mode to each material in the model.",
+      "evidence": "Target iterates the byte material count at model +0x18 and calls 0x0201a55c for each index.",
+      "uncertainty": "Cull mode is recorded as an integer SDK enum."
+    },
+    {
+      "module": "arm9",
+      "address": "0x0201a6c4",
+      "name": "GetMaterialLightMask",
+      "prototype": "u32 GetMaterialLightMask(ModelResource *modelResource, u32 materialIndex);",
+      "behavior": "Returns the selected material light-enable bits.",
+      "evidence": "Target resolves material data and extracts the low four bits from polygon attributes at +0x0c.",
+      "uncertainty": "The getter assumes a valid model and material index, matching target behavior."
+    },
+    {
+      "module": "arm9",
+      "address": "0x0201a730",
+      "name": "GetMaterialPolygonMode",
+      "prototype": "u32 GetMaterialPolygonMode(ModelResource *modelResource, u32 materialIndex);",
+      "behavior": "Returns the selected material polygon-mode field.",
+      "evidence": "Target resolves material data and extracts polygon-attribute bits 4-5.",
+      "uncertainty": "The getter assumes a valid model and material index, matching target behavior."
+    },
+    {
+      "module": "arm9",
+      "address": "0x0201a7a0",
+      "name": "GetMaterialPolygonId",
+      "prototype": "u32 GetMaterialPolygonId(ModelResource *modelResource, u32 materialIndex);",
+      "behavior": "Returns the selected material polygon ID.",
+      "evidence": "Target resolves material data and extracts mask 0x3f000000 shifted by 24.",
+      "uncertainty": "The getter assumes a valid model and material index, matching target behavior."
+    },
+    {
+      "module": "arm9",
+      "address": "0x0201a810",
+      "name": "GetMaterialAlpha",
+      "prototype": "u32 GetMaterialAlpha(ModelResource *modelResource, u32 materialIndex);",
+      "behavior": "Returns the selected material alpha field.",
+      "evidence": "Target resolves material data and extracts mask 0x001f0000 shifted by 16.",
+      "uncertainty": "The getter assumes a valid model and material index, matching target behavior."
+    }
   ]
 }

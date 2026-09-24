@@ -37,6 +37,40 @@
                 "func_0201a7a0",
                 "func_0201a810"
               ]
+            },
+            {
+              "id": "alarm_api",
+              "name": "Alarm scheduler API",
+              "evidence": "Shared AlarmRecord fields, the scheduler at 0x02056ea4, and calls between initialization, queue insertion, timer setup, dispatch and cancellation establish this boundary. See analysis/alarm_scheduler.json.",
+              "uncertainty": "The interrupt bridge retains its original assembly and is owned separately; specific game callbacks are unclassified.",
+              "symbols": [
+                "func_0200417c",
+                "func_020041b8",
+                "func_020041f4",
+                "func_02004204",
+                "func_0200433c",
+                "func_020043a8"
+              ]
+            },
+            {
+              "id": "alarm_queue",
+              "name": "Alarm queue and timer dispatch",
+              "evidence": "Shared AlarmRecord fields, the scheduler at 0x02056ea4, and calls between initialization, queue insertion, timer setup, dispatch and cancellation establish this boundary. See analysis/alarm_scheduler.json.",
+              "uncertainty": "The interrupt bridge retains its original assembly and is owned separately; specific game callbacks are unclassified.",
+              "symbols": [
+                "func_020040f4",
+                "func_02004214",
+                "func_0200443c"
+              ]
+            },
+            {
+              "id": "alarm_interrupt_bridge",
+              "name": "Alarm interrupt bridge",
+              "evidence": "Shared AlarmRecord fields, the scheduler at 0x02056ea4, and calls between initialization, queue insertion, timer setup, dispatch and cancellation establish this boundary. See analysis/alarm_scheduler.json.",
+              "uncertainty": "The interrupt bridge retains its original assembly and is owned separately; specific game callbacks are unclassified.",
+              "symbols": [
+                "func_0200442c"
+              ]
             }
           ]
         },
@@ -379,6 +413,32 @@
       ]
     },
     {
+      "id": "wireless_communication",
+      "name": "Wireless communication",
+      "evidence": "ov015 contains the measured wireless-channel API chain and its connection-state callers; remaining routines retain unclassified ownership.",
+      "modules": [
+        {
+          "module": "ov015",
+          "subsections": [
+            {
+              "id": "channel_selection",
+              "name": "Wireless channel measurement and selection",
+              "evidence": "The six contiguous routines from 0x020748f4 through 0x02074b4c share occupancy tracking and random selection state at 0x0207e980. Calls establish a complete measurement/selection chain; see analysis/wireless_channel_selection.json.",
+              "uncertainty": "Other wireless initialization and connection logic in ov015 remain unclassified.",
+              "symbols": [
+                "func_ov015_020748f4",
+                "func_ov015_020749b8",
+                "func_ov015_02074a58",
+                "func_ov015_02074b04",
+                "func_ov015_02074b24",
+                "func_ov015_02074b4c"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "unclassified",
       "name": "Unclassified systems",
       "evidence": "No reviewed system ownership is assigned to these overlays yet. Their original IDs, complete inventories and analysed denominators are retained.",
@@ -429,10 +489,6 @@
         },
         {
           "module": "ov014",
-          "subsections": []
-        },
-        {
-          "module": "ov015",
           "subsections": []
         },
         {

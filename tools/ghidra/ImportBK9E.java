@@ -155,7 +155,7 @@ public class ImportBK9E extends GhidraScript {
     }
 
     private void applyKnowledge() throws Exception {
-        for(String relative:new String[]{"analysis/actor_model.json","analysis/overlay_loading.json","analysis/movie_playback.json","analysis/display_session.json","analysis/panel_state.json"}) {
+        for(String relative:new String[]{"analysis/actor_model.json","analysis/overlay_loading.json","analysis/movie_playback.json","analysis/display_session.json","analysis/panel_state.json","analysis/wireless_channel_selection.json","analysis/material_attributes.json","analysis/alarm_scheduler.json"}) {
             Path knowledgePath=root.resolve(relative);if(!Files.exists(knowledgePath))continue;
             JsonObject knowledge=JsonParser.parseString(Files.readString(knowledgePath)).getAsJsonObject();
             CParser parser=new CParser(currentProgram.getDataTypeManager(),true,null);

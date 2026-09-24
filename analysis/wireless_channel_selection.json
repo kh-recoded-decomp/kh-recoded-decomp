@@ -1,0 +1,126 @@
+{
+  "version": 1,
+  "profile": "bk9e",
+  "types": "analysis/types/wireless_channel_selection.h",
+  "scope": "Wireless channel measurement and selection. Ghidra field knowledge does not count as matching C.",
+  "functions": [
+    {
+      "module": "ov015",
+      "address": "0x020748f4",
+      "name": "BeginWirelessChannelMeasurement",
+      "prototype": "int BeginWirelessChannelMeasurement(void);",
+      "behavior": "Seeds selection from MAC halfwords and the shared frame count, resets the best occupancy to 101, and starts channel measurement.",
+      "evidence": "The ARM body calls 0x02004ac8 and reads the shared counter at 0x02fffc3c. It writes randomState at +0x38, selectedChannel at +6, and minimumOccupancy at +4 before calling 0x020749b8.",
+      "uncertainty": "Static wireless mechanism; the specific multiplayer UI flow remains unverified.",
+      "callers": [
+        {
+          "module": "ov015",
+          "callsite": "0x20730f8",
+          "call_kind": "arm_call",
+          "caller": "func_ov015_020730ac"
+        }
+      ]
+    },
+    {
+      "module": "ov015",
+      "address": "0x020749b8",
+      "name": "MeasureNextAllowedWirelessChannel",
+      "prototype": "u16 MeasureNextAllowedWirelessChannel(u16 channel);",
+      "behavior": "Finds the next allowed channel and requests asynchronous measurement.",
+      "evidence": "Exact C calls the allowed-channel mask provider at 0x020115ac, the state/error helpers, and the request helper at 0x02074b04.",
+      "uncertainty": "Static wireless mechanism; the specific multiplayer UI flow remains unverified.",
+      "callers": [
+        {
+          "module": "ov015",
+          "callsite": "0x207495c",
+          "call_kind": "arm_call",
+          "caller": "func_ov015_020748f4"
+        },
+        {
+          "module": "ov015",
+          "callsite": "0x2074ad4",
+          "call_kind": "arm_call",
+          "caller": "func_ov015_02074a58"
+        }
+      ]
+    },
+    {
+      "module": "ov015",
+      "address": "0x02074a58",
+      "name": "RecordWirelessChannelMeasurement",
+      "prototype": "void RecordWirelessChannelMeasurement(WirelessChannelMeasurement *result);",
+      "behavior": "Keeps the lowest occupancy and a bitmap of tied channels, then advances measurement.",
+      "evidence": "Exact C; callback+8/+10 are channel/occupancy and global+4/+12 are best occupancy/bitmap.",
+      "uncertainty": "Static wireless mechanism; the specific multiplayer UI flow remains unverified.",
+      "callers": [
+        {
+          "module": "ov015",
+          "callsite": "0x2074a54",
+          "call_kind": "load",
+          "caller": "func_ov015_020749b8"
+        }
+      ]
+    },
+    {
+      "module": "ov015",
+      "address": "0x02074b04",
+      "name": "RequestWirelessChannelMeasurement",
+      "prototype": "int RequestWirelessChannelMeasurement(WirelessChannelCallback callback, u16 channel);",
+      "behavior": "Requests a channel measurement through the wireless manager.",
+      "evidence": "The next-channel routine passes its result callback and channel; this function forwards fixed options 3, 17 and 30 to the core routine at 0x020122d8 and returns its status.",
+      "uncertainty": "The three fixed option meanings and the specific multiplayer UI flow remain unverified.",
+      "callers": [
+        {
+          "module": "ov015",
+          "callsite": "0x2074a44",
+          "call_kind": "arm_call",
+          "caller": "func_ov015_020749b8"
+        }
+      ]
+    },
+    {
+      "module": "ov015",
+      "address": "0x02074b24",
+      "name": "FinishWirelessChannelSelection",
+      "prototype": "u16 FinishWirelessChannelSelection(void);",
+      "behavior": "Selects from the tied bitmap, stores the selected channel, and returns it after setting idle state.",
+      "evidence": "Exact C calls 0x020737c4 with state 1, reads the bitmap at global +0x0c, calls 0x02074b4c, then writes and reads selectedChannel at +6.",
+      "uncertainty": "Static wireless mechanism; the specific multiplayer UI flow remains unverified.",
+      "callers": [
+        {
+          "module": "ov015",
+          "callsite": "0x2073100",
+          "call_kind": "arm_call",
+          "caller": "func_ov015_020730ac"
+        }
+      ]
+    },
+    {
+      "module": "ov015",
+      "address": "0x02074b4c",
+      "name": "SelectWirelessChannelFromBitmap",
+      "prototype": "short SelectWirelessChannelFromBitmap(u16 channels);",
+      "behavior": "Selects the only set channel or randomly selects among ties.",
+      "evidence": "Exact C iterates the sixteen-bit channel bitmap and advances the generator state at global +0x38 with coefficients 69069 and 12345.",
+      "uncertainty": "Static wireless mechanism; the specific multiplayer UI flow remains unverified.",
+      "callers": [
+        {
+          "module": "ov015",
+          "callsite": "0x2074b38",
+          "call_kind": "arm_call",
+          "caller": "func_ov015_02074b24"
+        }
+      ]
+    }
+  ],
+  "globals": [
+    {
+      "module": "ov015",
+      "address": "0x0207e980",
+      "name": "g_wirelessChannelState",
+      "evidence": "Exact callback, selector, begin and finish C agree on fields at +4, +6, +0x0c and +0x38. Other state fields remain opaque.",
+      "pointee_type": "WirelessChannelState",
+      "pointer_depth": 0
+    }
+  ]
+}
