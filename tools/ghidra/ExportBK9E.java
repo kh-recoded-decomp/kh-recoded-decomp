@@ -18,7 +18,7 @@ public class ExportBK9E extends GhidraScript {
         JsonArray results=new JsonArray();DecompInterface decompiler=new DecompInterface();
         DecompileOptions options=new DecompileOptions();options.setRespectReadOnly(true);decompiler.setOptions(options);
         decompiler.openProgram(currentProgram);
-        for(String knowledgeFile:new String[]{"analysis/actor_model.json","analysis/overlay_loading.json","analysis/movie_playback.json"}) {
+        for(String knowledgeFile:new String[]{"analysis/actor_model.json","analysis/overlay_loading.json","analysis/movie_playback.json","analysis/display_session.json"}) {
           Path knowledgePath=root.resolve(knowledgeFile);if(!Files.exists(knowledgePath))continue;
           JsonObject knowledge=JsonParser.parseString(Files.readString(knowledgePath)).getAsJsonObject();
           for(JsonElement item:knowledge.getAsJsonArray("functions")) {
@@ -56,13 +56,14 @@ public class ExportBK9E extends GhidraScript {
                 try {
                     AddressSpace space=module.startsWith("ov")?currentProgram.getAddressFactory().getAddressSpace(module):currentProgram.getAddressFactory().getDefaultAddressSpace();
                     if(space==null)throw new IOException("No imported address space for module "+module);
-                    Address address=space.getAddress(Long.decode(requested));Function function=getFunctionAt(address);
+                    Address address=space.getAddress(Long.decode(requested));Function function=getFunctionAt(address);boolean containingFunction=false;
+                    if(function==null) {function=getFunctionContaining(address);containingFunction=function!=null;}
                     if(function==null)throw new IOException("No function at requested address");
                     DecompileResults result=decompiler.decompileFunction(function,60,monitor);
-                    record.addProperty("address",address.toString());record.addProperty("name",function.getName());record.addProperty("decompiled",result.decompileCompleted());record.addProperty("prototype",function.getSignature().getPrototypeString());
+                    record.addProperty("address",function.getEntryPoint().toString());record.addProperty("name",function.getName());record.addProperty("requested_address_is_function_entry",!containingFunction);record.addProperty("decompiled",result.decompileCompleted());record.addProperty("prototype",function.getSignature().getPrototypeString());
                     if(result.decompileCompleted())Files.writeString(output.resolve(module+"_"+function.getName()+".c"),result.getDecompiledFunction().getC());
                     else record.addProperty("error",result.getErrorMessage());
-                    JsonArray callers=new JsonArray();ReferenceIterator references=currentProgram.getReferenceManager().getReferencesTo(address);
+                    JsonArray callers=new JsonArray();ReferenceIterator references=currentProgram.getReferenceManager().getReferencesTo(function.getEntryPoint());
                     while(references.hasNext()) {Reference reference=references.next();if(reference.getReferenceType().isCall())callers.add(reference.getFromAddress().toString());}
                     record.add("call_sites",callers);
                 } catch(Exception failure) {record.addProperty("decompiled",false);record.addProperty("error",failure.getMessage());}

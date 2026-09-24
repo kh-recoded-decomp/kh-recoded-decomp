@@ -1,0 +1,98 @@
+{
+  "version": 1,
+  "profile": "bk9e",
+  "types": "analysis/types/display_session.h",
+  "scope": "Overlay26 display-session lifecycle and callback/brightness/layer-state flow, connected to overlay27. In-game scene identity remains unconfirmed.",
+  "functions": [
+    {
+      "module": "ov026",
+      "address": "0x20b5800",
+      "name": "RunOverlayDisplayUpdate",
+      "prototype": "void RunOverlayDisplayUpdate(void);",
+      "behavior": "Updates the active display session once, preventing recursive updates.",
+      "evidence": "Checks the global session pointer and +0x6494 guard, sets the guard around the shared update, then clears it.",
+      "uncertainty": "The display-state operations are established. The session's particular menu, scene or gameplay purpose and the shared display-setting meaning remain unknown."
+    },
+    {
+      "module": "ov026",
+      "address": "0x20b5848",
+      "name": "BeginOverlayDisplaySession",
+      "prototype": "DisplaySessionCallback BeginOverlayDisplaySession(void);",
+      "behavior": "Starts a display session, prepares its initial palette value and installs its update callback.",
+      "evidence": "Obtains the current session, publishes it, initializes it with alternate-update mode 1, registers RunOverlayDisplayUpdate, stores the registration at +0x6498, and returns a callback that reports zero.",
+      "uncertainty": "The display-state operations are established. The session's particular menu, scene or gameplay purpose and the shared display-setting meaning remain unknown."
+    },
+    {
+      "module": "ov026",
+      "address": "0x20b58c8",
+      "name": "func_ov026_020b58c8",
+      "prototype": "int func_ov026_020b58c8(void);",
+      "behavior": "Calls the shared current-context getter and returns zero to the session caller.",
+      "evidence": "The complete function calls arm9:0202a764 then returns 0; BeginOverlayDisplaySession returns this callback address.",
+      "uncertainty": "The display-state operations are established. The session's particular menu, scene or gameplay purpose and the shared display-setting meaning remain unknown."
+    },
+    {
+      "module": "ov026",
+      "address": "0x20b58d8",
+      "name": "EndOverlayDisplaySession",
+      "prototype": "void EndOverlayDisplaySession(void);",
+      "behavior": "Removes the session update callback and restores its saved display state.",
+      "evidence": "Unregisters the handle at +0x6498 through ov001:020715ac, invokes the restore path and clears the global session pointer.",
+      "uncertainty": "The display-state operations are established. The session's particular menu, scene or gameplay purpose and the shared display-setting meaning remain unknown."
+    },
+    {
+      "module": "ov026",
+      "address": "0x20b590c",
+      "name": "InitializeOverlayDisplaySession",
+      "prototype": "void InitializeOverlayDisplaySession(OverlayDisplaySession *session, int *alternateUpdate);",
+      "behavior": "Saves the secondary display state before initializing a temporary display session.",
+      "evidence": "Saves enabled-layer bits from 0x04001000, cached secondary brightness and a shared display setting. Records the requested update path and initial-update flag, selects a palette value when brightness is +16, and passes a six-word settings block to ov027 initialization.",
+      "uncertainty": "The display-state operations are established. The session's particular menu, scene or gameplay purpose and the shared display-setting meaning remain unknown."
+    },
+    {
+      "module": "ov026",
+      "address": "0x20b59c0",
+      "name": "RestoreOverlayDisplayState",
+      "prototype": "void RestoreOverlayDisplayState(OverlayDisplaySession *session);",
+      "behavior": "Restores secondary display layers and the shared display setting after the session ends.",
+      "evidence": "Calls the ov027 teardown, restores brightness to +16 or -16 according to the saved flag, writes the saved layer mask to 0x04001000, and passes the saved setting to arm9:02029f28.",
+      "uncertainty": "The display-state operations are established. The session's particular menu, scene or gameplay purpose and the shared display-setting meaning remain unknown."
+    },
+    {
+      "module": "ov026",
+      "address": "0x20b5a18",
+      "name": "UpdateOverlayDisplaySession",
+      "prototype": "void UpdateOverlayDisplaySession(OverlayDisplaySession *session);",
+      "behavior": "Configures the display on the first update and forwards each update to the selected session handler.",
+      "evidence": "On the first update it enables only layer bit 0x1000, sets secondary brightness to zero and clears the first-update flag. It then calls ov027:020b8c94 or 020b8c80 according to the stored update mode.",
+      "uncertainty": "The display-state operations are established. The session's particular menu, scene or gameplay purpose and the shared display-setting meaning remain unknown."
+    },
+    {
+      "module": "ov026",
+      "address": "0x20b5a84",
+      "name": "ShouldRestorePositiveBrightness",
+      "prototype": "int ShouldRestorePositiveBrightness(OverlayDisplaySession *session);",
+      "behavior": "Reports whether the display session was marked for positive full-brightness restoration.",
+      "evidence": "Returns the word at +0x6484, which initialization sets when the incoming secondary brightness equals +16.",
+      "uncertainty": "The display-state operations are established. The session's particular menu, scene or gameplay purpose and the shared display-setting meaning remain unknown."
+    }
+  ],
+  "globals": [
+    {
+      "module": "ov026",
+      "address": "0x020b5b00",
+      "name": "currentDisplaySession",
+      "pointee_type": "OverlayDisplaySession",
+      "pointer_depth": 1,
+      "evidence": "Published at session start, checked by the update callback and cleared by teardown."
+    },
+    {
+      "module": "ov026",
+      "address": "0x020b5a90",
+      "name": "defaultDisplaySessionSettings",
+      "pointee_type": "DisplaySessionSettings",
+      "pointer_depth": 0,
+      "evidence": "Copied as six words into a stack record before being passed to ov027:020b8bd4. The individual setting meanings remain unknown."
+    }
+  ]
+}

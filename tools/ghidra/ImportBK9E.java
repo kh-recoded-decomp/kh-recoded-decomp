@@ -123,7 +123,7 @@ public class ImportBK9E extends GhidraScript {
     }
 
     private void applyKnowledge() throws Exception {
-        for(String relative:new String[]{"analysis/actor_model.json","analysis/overlay_loading.json","analysis/movie_playback.json"}) {
+        for(String relative:new String[]{"analysis/actor_model.json","analysis/overlay_loading.json","analysis/movie_playback.json","analysis/display_session.json"}) {
             Path knowledgePath=root.resolve(relative);if(!Files.exists(knowledgePath))continue;
             JsonObject knowledge=JsonParser.parseString(Files.readString(knowledgePath)).getAsJsonObject();
             CParser parser=new CParser(currentProgram.getDataTypeManager(),true,null);
@@ -140,7 +140,7 @@ public class ImportBK9E extends GhidraScript {
                 function.setParentNamespace(namespaces.get(module));
                 function.setComment(spec.get("behavior").getAsString()+"\nEvidence: "+spec.get("evidence").getAsString()+"\nUncertainty: "+spec.get("uncertainty").getAsString());
             }
-            for(JsonElement item:knowledge.getAsJsonArray("globals")) {
+            for(JsonElement item:knowledge.has("globals")?knowledge.getAsJsonArray("globals"):new JsonArray()) {
                 JsonObject spec=item.getAsJsonObject();Address at=address(spec.get("module").getAsString(),Long.decode(spec.get("address").getAsString()));
                 DataType type=currentProgram.getDataTypeManager().getDataType("/"+spec.get("pointee_type").getAsString());
                 if(type==null)throw new IOException("Missing global pointee type "+spec);
