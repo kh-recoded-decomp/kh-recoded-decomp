@@ -3691,6 +3691,27 @@
         "source": "src/overlays/ov000/calls/func_ov000_02056144.c",
         "license": "CC0-1.0"
       }
+    },
+    {
+      "name": "func_ov005_020a0520",
+      "behavior": "Reads a script operation and three position-like fixed-point values, passes them as a vector to a shared handler, and reports completion.",
+      "evidence": "The established Script_ReadInteger and Script_ReadFixed helpers read operands at +0, +8, +0x10 and +0x18. The vector and operation are passed to ov001:020725dc; ov001 data at 0209d8d8 references its single-entry dispatch table.",
+      "uncertainty": "The visible effect of ov001:020725dc is unresolved; no specific spawn, movement, particle or actor action is claimed.",
+      "domain": "script_commands",
+      "origin": "Re:coded script code recovered from disassembly and connected script-operand analysis",
+      "understanding": "unknown",
+      "module": "ov005",
+      "symbol": "func_ov005_020a0520",
+      "language": "c",
+      "source": "src/ov005/script_commands/func_ov005_020a0520.c",
+      "source_symbol": "func_ov005_020a0520",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "thumb",
+      "bindings": {
+        "Script_ReadInteger": "0x02025de5",
+        "Script_ReadFixed": "0x02025df9",
+        "func_ov001_020725dc": "0x020725dd"
+      }
     }
   ]
 }
