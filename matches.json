@@ -3712,6 +3712,134 @@
         "Script_ReadFixed": "0x02025df9",
         "func_ov001_020725dc": "0x020725dd"
       }
+    },
+    {
+      "module": "ov051",
+      "symbol": "func_ov051_020c72c0",
+      "source": "src/ov051/overlay_loading/LoadOverlay053.c",
+      "source_symbol": "LoadOverlay053",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "thumb",
+      "bindings": {
+        "OverlayId053": "0x35",
+        "LoadOverlay": "0x02029f78",
+        "Initialize_ov053_020d21e0": "0x020d21e0"
+      },
+      "name": "LoadOverlay053",
+      "behavior": "Loads overlay 53 and runs its initializer as the default branch of this loading system.",
+      "evidence": "The wrapper supplies overlay ID 53 to arm9:02029f78 and calls the entry at 020d21e0; its loaded module is therefore ov053, resolving the ambiguous static address.",
+      "uncertainty": "The loading operation is established, but the selection and mode meanings and the created object's specific in-game role are not yet known.",
+      "domain": "overlay_loading",
+      "origin": "Re:coded overlay loader recovered from disassembly and persistent Ghidra caller analysis",
+      "understanding": "subsystem",
+      "language": "c"
+    },
+    {
+      "module": "ov051",
+      "symbol": "func_ov051_020c72d8",
+      "source": "src/ov051/overlay_loading/LoadOverlay059.c",
+      "source_symbol": "LoadOverlay059",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "thumb",
+      "bindings": {
+        "OverlayId059": "0x3b",
+        "LoadOverlay": "0x02029f78",
+        "Initialize_ov059_020c7460": "0x020c7460"
+      },
+      "name": "LoadOverlay059",
+      "behavior": "Loads overlay 59 and runs its initializer for loading mode 1.",
+      "evidence": "The wrapper supplies overlay ID 59 to arm9:02029f78 and calls the entry at 020c7460; its loaded module is ov059.",
+      "uncertainty": "The loading operation is established, but the selection and mode meanings and the created object's specific in-game role are not yet known.",
+      "domain": "overlay_loading",
+      "origin": "Re:coded overlay loader recovered from disassembly and persistent Ghidra caller analysis",
+      "understanding": "subsystem",
+      "language": "c"
+    },
+    {
+      "module": "ov051",
+      "symbol": "func_ov051_020c7358",
+      "source": "src/ov051/overlay_loading/LoadOverlay060.c",
+      "source_symbol": "LoadOverlay060",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "thumb",
+      "bindings": {
+        "OverlayId060": "0x3c",
+        "LoadOverlay": "0x02029f78",
+        "Initialize_ov060_020c7460": "0x020c7460"
+      },
+      "name": "LoadOverlay060",
+      "behavior": "Loads overlay 60 and registers its object factory for loading mode -1.",
+      "evidence": "The wrapper supplies overlay ID 60 then calls ov060:020c7460, which passes its allocation factory to ov001:0206dd84.",
+      "uncertainty": "The loading operation is established, but the selection and mode meanings and the created object's specific in-game role are not yet known.",
+      "domain": "overlay_loading",
+      "origin": "Re:coded overlay loader recovered from disassembly and persistent Ghidra caller analysis",
+      "understanding": "subsystem",
+      "language": "c"
+    },
+    {
+      "module": "ov051",
+      "symbol": "func_ov051_020c72f0",
+      "source": "src/ov051/overlay_loading/LoadNextOverlayForSelection.c",
+      "source_symbol": "LoadNextOverlayForSelection",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "thumb",
+      "bindings": {
+        "LoadOverlay": "0x02029f78",
+        "availableOverlayIds": "0x020c7400",
+        "overlayInitializers": "0x020c73d0",
+        "loadedOverlayIds": "0x020c7440",
+        "GetOverlaySelectionRecord": "0x0204f769"
+      },
+      "name": "LoadNextOverlayForSelection",
+      "behavior": "Chooses the last available slot for the current selection, loads its overlay, and runs its initializer.",
+      "evidence": "Three tracked slots are checked from index 2 down to 0 against a selection-specific ID table and initializer table. The selected ID is recorded before the load.",
+      "uncertainty": "The loading operation is established, but the selection and mode meanings and the created object's specific in-game role are not yet known. Callers must provide an eligible slot; the original function has no valid fallback when all slots fail.",
+      "domain": "overlay_loading",
+      "origin": "Re:coded overlay loader recovered from disassembly and persistent Ghidra caller analysis",
+      "understanding": "subsystem",
+      "language": "c"
+    },
+    {
+      "module": "ov051",
+      "symbol": "func_ov051_020c7370",
+      "source": "src/ov051/overlay_loading/LoadOverlayForMode.c",
+      "source_symbol": "LoadOverlayForMode",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "thumb",
+      "bindings": {
+        "LoadOverlay053": "0x020c72c1",
+        "LoadOverlay059": "0x020c72d9",
+        "LoadOverlay060": "0x020c7359",
+        "LoadNextOverlayForSelection": "0x020c72f1"
+      },
+      "name": "LoadOverlayForMode",
+      "behavior": "Selects one of four overlay-loading paths from the requested mode.",
+      "evidence": "Modes -1, 1 and 2 call the ov060, ov059 and selection-dependent paths; zero and other modes load ov053. The selection index is forwarded.",
+      "uncertainty": "The loading operation is established, but the selection and mode meanings and the created object's specific in-game role are not yet known.",
+      "domain": "overlay_loading",
+      "origin": "Re:coded overlay loader recovered from disassembly and persistent Ghidra caller analysis",
+      "understanding": "subsystem",
+      "language": "c"
+    },
+    {
+      "module": "ov051",
+      "symbol": "func_ov051_020c73a4",
+      "source": "src/ov051/overlay_loading/UnloadTrackedOverlay.c",
+      "source_symbol": "UnloadTrackedOverlay",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "thumb",
+      "bindings": {
+        "UnloadOverlay": "0x02029f98",
+        "loadedOverlayIds": "0x020c7440"
+      },
+      "name": "UnloadTrackedOverlay",
+      "behavior": "Unloads an overlay and frees its first matching tracked slot so it can be used again.",
+      "evidence": "The function calls arm9:02029f98 then scans the three IDs at ov051:020c7440, replacing the first matching entry with -1.",
+      "uncertainty": "The loading operation is established, but the selection and mode meanings and the created object's specific in-game role are not yet known.",
+      "domain": "overlay_loading",
+      "origin": "Re:coded overlay loader recovered from disassembly and persistent Ghidra caller analysis",
+      "understanding": "subsystem",
+      "language": "c"
     }
   ]
 }

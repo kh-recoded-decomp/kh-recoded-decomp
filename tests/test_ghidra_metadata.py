@@ -27,16 +27,27 @@ class GhidraMetadataTests(unittest.TestCase):
             self.assertGreater(pin['size'],0)
 
     def test_knowledge_addresses_refer_to_imported_functions(self):
-        knowledge=json.loads((ROOT/'analysis/actor_model.json').read_text())
         seen=set()
-        for function in knowledge['functions']:
-            module=function['module'];address=int(function['address'],0)
-            folder=gp.CONFIG if module=='arm9' else gp.CONFIG/module if module in ('itcm','dtcm') else gp.CONFIG/'overlays'/module
-            addresses={int(m[4],16) for line in (folder/'symbols.txt').read_text().splitlines() if (m:=gp.FUNCTION.match(line))}
-            self.assertIn(address,addresses)
-            self.assertNotIn((module,address),seen);seen.add((module,address))
-            self.assertTrue(function['evidence']);self.assertTrue(function['uncertainty'])
-            self.assertIn(function['name']+'(',function['prototype'])
+        importer=(ROOT/'tools/ghidra/ImportBK9E.java').read_text()
+        configured=re.search(r'new String\[\]\{([^}]+)\}',importer)
+        self.assertIsNotNone(configured,'ImportBK9E knowledge file list is missing')
+        knowledge_files=re.findall(r'"(analysis/[^\"]+\.json)"',configured.group(1))
+        self.assertTrue(knowledge_files,'ImportBK9E has no reviewed knowledge files')
+        for relative in knowledge_files:
+            path=ROOT/relative
+            if not path.exists():
+                continue
+            knowledge=json.loads(path.read_text())
+            types_path=ROOT/knowledge['types']
+            self.assertTrue(types_path.is_file(),f'missing types header for {relative}: {types_path}')
+            for function in knowledge['functions']:
+                module=function['module'];address=int(function['address'],0)
+                folder=gp.CONFIG if module=='arm9' else gp.CONFIG/module if module in ('itcm','dtcm') else gp.CONFIG/'overlays'/module
+                addresses={int(m[4],16) for line in (folder/'symbols.txt').read_text().splitlines() if (m:=gp.FUNCTION.match(line))}
+                self.assertIn(address,addresses)
+                self.assertNotIn((module,address),seen,f'duplicate knowledge target in {relative}: {module}:{address:#x}');seen.add((module,address))
+                self.assertTrue(function['evidence']);self.assertTrue(function['uncertainty'])
+                self.assertIn(function['name']+'(',function['prototype'])
 
     def test_registered_sources_remain_self_contained_c(self):
         entries=json.loads((ROOT/'matches.json').read_text())['matches']

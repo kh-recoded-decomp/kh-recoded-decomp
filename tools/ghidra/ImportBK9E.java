@@ -123,29 +123,34 @@ public class ImportBK9E extends GhidraScript {
     }
 
     private void applyKnowledge() throws Exception {
-        CParser parser=new CParser(currentProgram.getDataTypeManager(),true,null);
-        parser.parse(Files.readString(root.resolve("analysis/types/actor_model.h")));
-        JsonObject knowledge=JsonParser.parseString(Files.readString(root.resolve("analysis/actor_model.json"))).getAsJsonObject();
-        for(JsonElement item:knowledge.getAsJsonArray("functions")) {
-            JsonObject spec=item.getAsJsonObject();String module=spec.get("module").getAsString();
-            Address at=address(module,Long.decode(spec.get("address").getAsString()));Function function=getFunctionAt(at);
-            if(function==null)throw new IOException("No imported function for knowledge entry "+at);
-            DataType parsed=parser.parse(spec.get("prototype").getAsString());
-            if(!(parsed instanceof FunctionDefinition))throw new IOException("Expected function signature for "+at);
-            ApplyFunctionSignatureCmd command=new ApplyFunctionSignatureCmd(at,(FunctionDefinition)parsed,SourceType.USER_DEFINED,true,true);
-            if(!command.applyTo(currentProgram,monitor))throw new IOException(command.getStatusMsg());
-            function.setCallingConvention(currentProgram.getCompilerSpec().getDefaultCallingConvention().getName());
-            function.setParentNamespace(namespaces.get(module));
-            function.setComment(spec.get("behavior").getAsString()+"\nEvidence: "+spec.get("evidence").getAsString()+"\nUncertainty: "+spec.get("uncertainty").getAsString());
-        }
-        for(JsonElement item:knowledge.getAsJsonArray("globals")) {
-            JsonObject spec=item.getAsJsonObject();Address at=address(spec.get("module").getAsString(),Long.decode(spec.get("address").getAsString()));
-            DataType type=currentProgram.getDataTypeManager().getDataType("/"+spec.get("pointee_type").getAsString());
-            if(type==null)throw new IOException("Missing global pointee type "+spec);
-            for(int depth=0;depth<spec.get("pointer_depth").getAsInt();depth++)type=new PointerDataType(type,4);
-            clearListing(at,at.add(3));createData(at,type);
-            Symbol symbol=currentProgram.getSymbolTable().createLabel(at,spec.get("name").getAsString(),namespaces.get(spec.get("module").getAsString()),SourceType.USER_DEFINED);
-            symbol.setPrimary();setEOLComment(at,spec.get("evidence").getAsString());
+        for(String relative:new String[]{"analysis/actor_model.json","analysis/overlay_loading.json","analysis/movie_playback.json"}) {
+            Path knowledgePath=root.resolve(relative);if(!Files.exists(knowledgePath))continue;
+            JsonObject knowledge=JsonParser.parseString(Files.readString(knowledgePath)).getAsJsonObject();
+            CParser parser=new CParser(currentProgram.getDataTypeManager(),true,null);
+            parser.parse(Files.readString(root.resolve(knowledge.get("types").getAsString())));
+            for(JsonElement item:knowledge.getAsJsonArray("functions")) {
+                JsonObject spec=item.getAsJsonObject();String module=spec.get("module").getAsString();
+                Address at=address(module,Long.decode(spec.get("address").getAsString()));Function function=getFunctionAt(at);
+                if(function==null)throw new IOException("No imported function for "+relative+" entry "+at);
+                DataType parsed=parser.parse(spec.get("prototype").getAsString());
+                if(!(parsed instanceof FunctionDefinition))throw new IOException("Expected function signature for "+at);
+                ApplyFunctionSignatureCmd command=new ApplyFunctionSignatureCmd(at,(FunctionDefinition)parsed,SourceType.USER_DEFINED,true,true);
+                if(!command.applyTo(currentProgram,monitor))throw new IOException(command.getStatusMsg());
+                function.setCallingConvention(currentProgram.getCompilerSpec().getDefaultCallingConvention().getName());
+                function.setParentNamespace(namespaces.get(module));
+                function.setComment(spec.get("behavior").getAsString()+"\nEvidence: "+spec.get("evidence").getAsString()+"\nUncertainty: "+spec.get("uncertainty").getAsString());
+            }
+            for(JsonElement item:knowledge.getAsJsonArray("globals")) {
+                JsonObject spec=item.getAsJsonObject();Address at=address(spec.get("module").getAsString(),Long.decode(spec.get("address").getAsString()));
+                DataType type=currentProgram.getDataTypeManager().getDataType("/"+spec.get("pointee_type").getAsString());
+                if(type==null)throw new IOException("Missing global pointee type "+spec);
+                for(int depth=0;depth<spec.get("pointer_depth").getAsInt();depth++)type=new PointerDataType(type,4);
+                clearListing(at,at.add(Math.max(1,type.getLength())-1));createData(at,type);
+                Symbol symbol=currentProgram.getSymbolTable().getPrimarySymbol(at);
+                if(symbol==null)symbol=currentProgram.getSymbolTable().createLabel(at,spec.get("name").getAsString(),namespaces.get(spec.get("module").getAsString()),SourceType.USER_DEFINED);
+                else symbol.setName(spec.get("name").getAsString(),SourceType.USER_DEFINED);
+                symbol.setPrimary();setEOLComment(at,spec.get("evidence").getAsString());
+            }
         }
     }
 }

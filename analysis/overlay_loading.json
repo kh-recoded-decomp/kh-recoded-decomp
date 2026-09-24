@@ -1,0 +1,159 @@
+{
+  "version": 1,
+  "profile": "bk9e",
+  "types": "analysis/types/overlay_loading.h",
+  "scope": "Overlay selection, load/init/unload paths and shared object-factory layout. Static evidence and exact C matches; specific gameplay roles remain unknown.",
+  "functions": [
+    {
+      "module": "ov051",
+      "address": "0x020c72c0",
+      "name": "LoadOverlay053",
+      "prototype": "int LoadOverlay053(unsigned int selectionIndex);",
+      "behavior": "Loads overlay 53 and runs its initializer as the default branch of this loading system.",
+      "evidence": "The wrapper supplies overlay ID 53 to arm9:02029f78 and calls the entry at 020d21e0; its loaded module is therefore ov053, resolving the ambiguous static address.",
+      "uncertainty": "The loading operation is established, but the selection and mode meanings and the created object's specific in-game role are not yet known."
+    },
+    {
+      "module": "ov051",
+      "address": "0x020c72d8",
+      "name": "LoadOverlay059",
+      "prototype": "int LoadOverlay059(unsigned int selectionIndex);",
+      "behavior": "Loads overlay 59 and runs its initializer for loading mode 1.",
+      "evidence": "The wrapper supplies overlay ID 59 to arm9:02029f78 and calls the entry at 020c7460; its loaded module is ov059.",
+      "uncertainty": "The loading operation is established, but the selection and mode meanings and the created object's specific in-game role are not yet known."
+    },
+    {
+      "module": "ov051",
+      "address": "0x020c7358",
+      "name": "LoadOverlay060",
+      "prototype": "int LoadOverlay060(unsigned int selectionIndex);",
+      "behavior": "Loads overlay 60 and registers its object factory for loading mode -1.",
+      "evidence": "The wrapper supplies overlay ID 60 then calls ov060:020c7460, which passes its allocation factory to ov001:0206dd84.",
+      "uncertainty": "The loading operation is established, but the selection and mode meanings and the created object's specific in-game role are not yet known."
+    },
+    {
+      "module": "ov051",
+      "address": "0x020c72f0",
+      "name": "LoadNextOverlayForSelection",
+      "prototype": "int LoadNextOverlayForSelection(unsigned int selectionIndex);",
+      "behavior": "Chooses the last available slot for the current selection, loads its overlay, and runs its initializer.",
+      "evidence": "Three tracked slots are checked from index 2 down to 0 against a selection-specific ID table and initializer table. The selected ID is recorded before the load.",
+      "uncertainty": "The loading operation is established, but the selection and mode meanings and the created object's specific in-game role are not yet known. Callers must provide an eligible slot; the original function has no valid fallback when all slots fail."
+    },
+    {
+      "module": "ov051",
+      "address": "0x020c7370",
+      "name": "LoadOverlayForMode",
+      "prototype": "int LoadOverlayForMode(unsigned int selectionIndex, int mode);",
+      "behavior": "Selects one of four overlay-loading paths from the requested mode.",
+      "evidence": "Modes -1, 1 and 2 call the ov060, ov059 and selection-dependent paths; zero and other modes load ov053. The selection index is forwarded.",
+      "uncertainty": "The loading operation is established, but the selection and mode meanings and the created object's specific in-game role are not yet known."
+    },
+    {
+      "module": "ov051",
+      "address": "0x020c73a4",
+      "name": "UnloadTrackedOverlay",
+      "prototype": "void UnloadTrackedOverlay(int overlayId);",
+      "behavior": "Unloads an overlay and frees its first matching tracked slot so it can be used again.",
+      "evidence": "The function calls arm9:02029f98 then scans the three IDs at ov051:020c7440, replacing the first matching entry with -1.",
+      "uncertainty": "The loading operation is established, but the selection and mode meanings and the created object's specific in-game role are not yet known."
+    },
+    {
+      "module": "arm9",
+      "address": "0x02029f78",
+      "name": "LoadOverlay",
+      "prototype": "void LoadOverlay(int processor, int overlayId);",
+      "behavior": "Loads executable overlay code before its initializer can run.",
+      "evidence": "Ghidra shows an ITCM synchronization helper followed by arm9:0200bd64. That function loads overlay info, loads its image and starts it; ov051 passes the numeric overlay IDs and calls entry points in those modules. Shared Days wrapper src/calls/func_0201e470.c identifies the corresponding operation as FS_LoadOverlay.",
+      "uncertainty": "The exact purpose of the preceding ITCM synchronization helper is not established here."
+    },
+    {
+      "module": "arm9",
+      "address": "0x02029f98",
+      "name": "UnloadOverlay",
+      "prototype": "void UnloadOverlay(int processor, int overlayId);",
+      "behavior": "Unloads executable overlay code when its tracked slot is released.",
+      "evidence": "Paired with LoadOverlay by ov051:020c73a4; the underlying arm9:0200bdb8 loads overlay info then invokes its unload helper before the caller clears the tracked ID.",
+      "uncertainty": "Overlay lifetime is controlled by callers; this wrapper does not itself clear ov051 tracking slots."
+    },
+    {
+      "module": "ov060",
+      "address": "0x020c7460",
+      "name": "RegisterOverlay060Factory",
+      "prototype": "void RegisterOverlay060Factory(void);",
+      "behavior": "Installs the creation callback used to allocate the object implemented by overlay 60.",
+      "evidence": "The 20-byte function passes ov060:020c7474 to ov001:0206dd84. The latter stores the factory pointer at ov001:020a04a0. The ov051 mode -1 path loads overlay60 before invoking this entry.",
+      "uncertainty": "The object's specific game role has not been established; no enemy or battle-system identity is assigned."
+    },
+    {
+      "module": "ov060",
+      "address": "0x020c7474",
+      "name": "CreateOverlay060Object",
+      "prototype": "OverlayObject *CreateOverlay060Object(void);",
+      "behavior": "Allocates and initializes the object used by overlay 60 with variant 1 and selection index 0.",
+      "evidence": "Allocates 0x230 bytes through arm9:0202a178, calls ov021:020a75a4 with (object,1,0), and returns the same allocation. That initializer clears 0x230 bytes and stores the variant, option, shared selection, and update callback.",
+      "uncertainty": "Variant 1 and selection index 0 are observed values; their in-game meanings remain unproven."
+    },
+    {
+      "module": "ov001",
+      "address": "0x0206dd84",
+      "name": "SetOverlayObjectFactory",
+      "prototype": "void SetOverlayObjectFactory(OverlayObjectFactory factory);",
+      "behavior": "Remembers the currently selected overlay-object creation callback.",
+      "evidence": "The complete function stores its first argument at ov001:020a04a0. ov060 supplies CreateOverlay060Object.",
+      "uncertainty": "The later factory consumer and object's specific game role still need investigation."
+    },
+    {
+      "module": "ov021",
+      "address": "0x020a75a4",
+      "name": "InitializeOverlayObject",
+      "prototype": "void InitializeOverlayObject(OverlayObject *object, int variant, int selectionIndex);",
+      "behavior": "Clears and initializes a shared object with its variant, selection index, selection record and update callback.",
+      "evidence": "Disassembly and Ghidra show a 0x230-byte clear, stores at +0, +0x1d4, +0x1d8 and +0x1f4. Callers include ov052, ov059 and ov060. The callback address is ov021:020a7a40, stored with its Thumb bit. The selection-record getter takes the index and returns data_02060b50 + index * 0x144.",
+      "uncertainty": "The object class, selection byte meanings and callback's game effect are unresolved; fields beyond the observed writes remain reserved."
+    },
+    {
+      "module": "arm9",
+      "address": "0x0204f768",
+      "name": "GetOverlaySelectionRecord",
+      "prototype": "OverlaySelectionRecord *GetOverlaySelectionRecord(unsigned int selectionIndex);",
+      "behavior": "Returns the shared selection record whose first byte selects an overlay set.",
+      "evidence": "The complete 16-byte Thumb function returns 0x02060b50 + selectionIndex * 0x144. ov051:020c72f0 reads its first byte and uses it as the row index in parallel overlay-ID and initializer tables. ov021 initialization stores the returned record pointer.",
+      "uncertainty": "The specific meaning and allowed range of the selection index and the rest of each record remain unknown."
+    }
+  ],
+  "globals": [
+    {
+      "module": "ov051",
+      "address": "0x020c7400",
+      "name": "availableOverlayIds",
+      "pointee_type": "OverlayIdTable",
+      "pointer_depth": 0,
+      "evidence": "Three rows of three signed overlay IDs select ov054, ov055 or ov057; -1 marks absent entries. The load function uses a 12-byte row stride."
+    },
+    {
+      "module": "ov051",
+      "address": "0x020c73d0",
+      "name": "overlayInitializers",
+      "pointee_type": "OverlayInitializerTable",
+      "pointer_depth": 0,
+      "evidence": "A parallel three-by-three callback table is checked before a slot is selected and invoked after loading its module."
+    },
+    {
+      "module": "ov051",
+      "address": "0x020c7440",
+      "name": "loadedOverlayIds",
+      "pointee_type": "OverlayTrackedIds",
+      "pointer_depth": 0,
+      "evidence": "Three signed IDs initialized to -1. Loading records a chosen overlay, and unloading resets its first matching slot to -1."
+    },
+    {
+      "module": "ov001",
+      "address": "0x020a04a0",
+      "name": "currentOverlayObjectFactory",
+      "pointee_type": "OverlayObjectFactory",
+      "pointer_depth": 0,
+      "evidence": "SetOverlayObjectFactory stores its callback argument here; ov060 supplies its 0x230-byte allocation function."
+    }
+  ]
+}
