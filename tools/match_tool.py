@@ -20,6 +20,7 @@ import functools
 import io
 import json
 import re
+import shutil
 import sys
 import tempfile
 from pathlib import Path
@@ -30,6 +31,7 @@ import khrecoded as kh  # noqa: E402
 
 ROOT = kh.ROOT
 PENDING = ROOT / "build" / "pending"
+SNAPSHOTS = ROOT / "build" / "registered"  # verified copies of registered sources
 DECOMP = ROOT / "build" / "ghidra" / "decomp"
 RELOC_LINE = re.compile(r"^from:0x([0-9a-f]+) kind:(\S+) to:0x([0-9a-f]+) module:(\S+)", re.I)
 FUNCTION_LINE = re.compile(r"^(\S+) kind:function\((arm|thumb),size=0x([0-9a-f]+)\) addr:0x([0-9a-f]+)", re.I)
@@ -337,7 +339,19 @@ def cmd_merge(_args) -> int:
         i = inv[m["module"]]["symbols"][m["symbol"]]
         spans.setdefault(m["module"], []).append((i["address"], i["address"] + i["size"]))
     added = rejected = 0
-    for fragment in sorted(PENDING.glob("*.json")) if PENDING.exists() else []:
+    fragments = sorted(PENDING.glob("*.json")) if PENDING.exists() else []
+    restaged = {tuple(p.stem.split("__", 1)) for p in fragments}
+    for m in list(manifest["matches"]):  # sources that vanished after registration
+        source, snapshot = ROOT / m["source"], SNAPSHOTS / f"{m['module']}__{m['symbol']}{Path(m['source']).suffix}"
+        if source.exists() or (m["module"], m["symbol"]) in restaged:
+            continue
+        if snapshot.exists():
+            source.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(snapshot, source)
+        else:
+            manifest["matches"].remove(m)
+            claimed.discard((m["module"], m["symbol"]))
+    for fragment in fragments:
         record = json.loads(fragment.read_text(encoding="utf-8"))
         key = (record["module"], record["symbol"])
         stale = next((m for m in manifest["matches"] if (m["module"], m["symbol"]) == key
@@ -368,6 +382,20 @@ def cmd_merge(_args) -> int:
         else:
             rejected += 1
             fragment.rename(fragment.with_suffix(".rejected"))
+            snapshot = SNAPSHOTS / f"{key[0]}__{key[1]}{Path(stale['source']).suffix}" if stale else None
+            if stale is not None and snapshot.exists():  # keep the verified original
+                (ROOT / stale["source"]).parent.mkdir(parents=True, exist_ok=True)
+                shutil.copyfile(snapshot, ROOT / stale["source"])
+                manifest["matches"].append(stale)
+                claimed.add(key)
+                spans[key[0]].append((start, stop))
+    # Snapshot every registered source so a later rename or delete can be undone.
+    SNAPSHOTS.mkdir(parents=True, exist_ok=True)
+    for m in manifest["matches"]:
+        source = ROOT / m["source"]
+        snapshot = SNAPSHOTS / f"{m['module']}__{m['symbol']}{source.suffix}"
+        if source.exists() and (not snapshot.exists() or snapshot.read_bytes() != source.read_bytes()):
+            shutil.copyfile(source, snapshot)
     path.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
     print(f"Merged {added} staged matches; rejected {rejected}")
     return 0
