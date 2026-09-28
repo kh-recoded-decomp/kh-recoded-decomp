@@ -211,6 +211,18 @@ def cmd_show(args) -> None:
     for offset, text in disassemble(code, info["address"], mode):
         note = relocs.get(offset, "")
         print(f"  {offset:04x}: {text:<40} {('; ' + note) if note else ''}")
+    # Callees and globals that already have matched C: reuse their names and struct types.
+    matched = {}
+    for m in json.loads((ROOT / "matches.json").read_text(encoding="utf-8"))["matches"]:
+        address = inventory()[m["module"]]["symbols"][m["symbol"]]["address"]
+        matched.setdefault(address, []).append(m)
+    targets = sorted({int(re.search(r"0x([0-9a-f]+)|_([0-9a-f]{8}) ", n + " ").group(0).strip().split("_")[-1], 16)
+                      for n in relocs.values() if re.search(r"0x([0-9a-f]+)|_([0-9a-f]{8}) ", n + " ")})
+    known = [(a, m) for a in targets for m in matched.get(a, [])[:1]]
+    if known:
+        print("\nAlready matched callees (reuse their names/types):")
+        for address, m in known:
+            print(f"  0x{address:08x} {m['name']} -> {m['source_symbol']} in {m['source']}")
     similar_path = ROOT / "build" / "days_port" / "similar.json"
     if similar_path.exists():
         import days_port
@@ -324,6 +336,13 @@ def cmd_merge(_args) -> int:
     for fragment in sorted(PENDING.glob("*.json")) if PENDING.exists() else []:
         record = json.loads(fragment.read_text(encoding="utf-8"))
         key = (record["module"], record["symbol"])
+        stale = next((m for m in manifest["matches"] if (m["module"], m["symbol"]) == key
+                      and not (ROOT / m["source"]).exists()), None)
+        if stale is not None:  # the agent renamed its file after staging: replace the entry
+            manifest["matches"].remove(stale)
+            claimed.discard(key)
+            info = inv[stale["module"]]["symbols"][stale["symbol"]]
+            spans[stale["module"]].remove((info["address"], info["address"] + info["size"]))
         info = inv[record["module"]]["symbols"][record["symbol"]]
         start, stop = info["address"], info["address"] + info["size"]
         ok = key not in claimed and all(isinstance(record.get(f), str) and record[f].strip() for f in REQUIRED)

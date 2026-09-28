@@ -13,7 +13,7 @@ public class DecompileTargetsBK9E extends GhidraScript {
         String[] args=getScriptArgs();
         Path root=Paths.get(args[0]);
         JsonArray targets=JsonParser.parseString(Files.readString(root.resolve("build/ghidra/decompile_targets.json"))).getAsJsonArray();
-        Path output=root.resolve("build/ghidra/decomp");
+        Path output=root.resolve(args.length>1?args[1]:"build/ghidra/decomp");
         DecompInterface decompiler=new DecompInterface();
         DecompileOptions options=new DecompileOptions();options.setRespectReadOnly(true);decompiler.setOptions(options);
         decompiler.openProgram(currentProgram);

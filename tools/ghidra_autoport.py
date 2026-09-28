@@ -26,6 +26,7 @@ import match_tool as mt  # noqa: E402
 
 ROOT = mt.ROOT
 OUT = ROOT / "build" / "ghidra_auto"
+DECOMP_DIR = ROOT / "build" / "ghidra" / "decomp"
 SCRATCH = ROOT / "src" / ".port_scratch"
 PRELUDE = """typedef unsigned char undefined;
 typedef unsigned char undefined1;
@@ -82,7 +83,7 @@ def convert(text: str, symbol: str, int_type: str) -> str | None:
 
 def attempt(target: dict) -> dict | None:
     module, symbol = target["module"], target["symbol"]
-    view = ROOT / "build" / "ghidra" / "decomp" / module / f"{symbol}.c"
+    view = DECOMP_DIR / module / f"{symbol}.c"
     if not view.exists():
         return None
     raw = view.read_text(encoding="utf-8")
@@ -120,7 +121,8 @@ def attempt(target: dict) -> dict | None:
         return None
     dest = OUT / "near" / module / f"{symbol}.c"
     dest.parent.mkdir(parents=True, exist_ok=True)
-    dest.write_text(best[2], encoding="utf-8")
+    if not dest.exists():  # agents may already be working from an earlier near miss
+        dest.write_text(best[2], encoding="utf-8")
     return {"status": "near", "module": module, "symbol": symbol, "size": info["size"], "compiler": best[1],
             "differing_halfwords": best[0], "source": dest.relative_to(ROOT).as_posix()}
 
@@ -209,13 +211,17 @@ def main() -> int:
     parser.add_argument("--limit", type=int)
     parser.add_argument("--max-size", type=int, default=4096)
     parser.add_argument("--jobs", type=int, default=16)
+    parser.add_argument("--decomp", help="directory of Ghidra views (default build/ghidra/decomp)")
     args = parser.parse_args()
+    global DECOMP_DIR
+    if args.decomp:
+        DECOMP_DIR = ROOT / args.decomp
     if args.command == "clean":
         clean(args.jobs)
         return 0
     inv = mt.inventory()
     matched = {(m["module"], m["symbol"]) for m in json.loads((ROOT / "matches.json").read_text())["matches"]}
-    done = {p.stem for p in OUT.rglob("*.c")} if OUT.exists() else set()
+    done = {p.stem for p in OUT.glob("*/*.c") if p.parent.name != "near"} if OUT.exists() else set()
     targets = [{"module": module, "symbol": s} for module, data in inv.items() if module not in ("arm7", "dtcm")
                for s, i in data["symbols"].items()
                if (module, s) not in matched and s not in done and i["size"] <= args.max_size]
@@ -231,7 +237,8 @@ def main() -> int:
     index = OUT / "index.json"
     previous = json.loads(index.read_text()) if index.exists() else []
     index.write_text(json.dumps(previous + results, indent=1))
-    (OUT / "near.json").write_text(json.dumps(sorted(near, key=lambda r: r["differing_halfwords"]), indent=1))
+    (OUT / f"near{'_' + DECOMP_DIR.name if args.decomp else ''}.json").write_text(
+        json.dumps(sorted(near, key=lambda r: r["differing_halfwords"]), indent=1))
     print(f"Tried {len(targets)}; Ghidra C matched {len(results)} ({sum(r['size'] for r in results):,} bytes); "
           f"{len(near)} same-size near misses")
     return 0

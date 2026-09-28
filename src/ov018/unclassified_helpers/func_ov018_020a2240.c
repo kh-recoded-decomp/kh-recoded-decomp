@@ -1,0 +1,21 @@
+#include "nitro/types.h"
+
+extern void func_ov021_020a8a68(int channel);
+extern void func_0202eaf4(int *resourceState);
+
+void func_ov018_020a2240(int object)
+{
+    func_ov021_020a8a68((int)*(s16 *)(object + 0x470));
+    if (*(int *)(object + 0xd4) != 0) {
+        func_0202eaf4((int *)(object + 0x138));
+    }
+    if (*(int *)(object + 0x1d8) != 0) {
+        func_0202eaf4((int *)(object + 0x23c));
+    }
+    if (*(int *)(object + 0x2dc) != 0) {
+        func_0202eaf4((int *)(object + 0x340));
+    }
+    if (*(int *)(object + 0x3e0) != 0) {
+        func_0202eaf4((int *)(object + 0x444));
+    }
+}
