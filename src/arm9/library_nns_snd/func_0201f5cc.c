@@ -1,9 +1,3 @@
-/* Loads or resolves a wave archive according to flags and its existing loaded state, optionally returning its pointer.
- * Uncertainty: The wave archive contents are unknown. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/snd/calls/func_0201be70.c.
- * Original routine: func_0201be70. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,7 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
 
 #define NNS_SND_ARC_LOAD_WAVE (1 << 2)
 #define NNS_SND_ARC_WAVEARC_SINGLE_LOAD (1 << 0)
@@ -103,7 +96,6 @@ extern SNDWaveArc * func_0201f8a4(u32 fileId, NNSSndHeapHandle heap, BOOL bSetAd
 extern SNDWaveArc * func_0201f838 (u32 fileId, NNSSndHeapHandle heap, BOOL bSetAddr);
 extern SNDWaveArc * func_0201f8a4 (u32 fileId, NNSSndHeapHandle heap, BOOL bSetAddr);
 
-/* func_0201f5cc -- NitroSystem sndarc_loader.c: NNSi_SndArcLoadWaveArc. */
 NNSSndArcLoadResult func_0201f5cc (int waveArcNo, u32 loadFlag, NNSSndHeapHandle heap, BOOL bSetAddr, struct SNDWaveArc ** pData)
 {
     const NNSSndArcWaveArcInfo * waveArcInfo;

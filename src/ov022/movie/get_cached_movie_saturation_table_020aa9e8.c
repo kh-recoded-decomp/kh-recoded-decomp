@@ -1,8 +1,3 @@
-/* Returns a cached movie saturation table, copying its 0x300 bytes into a fast-memory arena when possible.
- * Evidence: Cache slot, byte count, copy, and fallback path in source.
- * Uncertainty: Table interpretation comes from read-only local reference analysis.
- * Source: src/overlays/ov024/calls/func_ov024_0208670c.c from khdays-decomp, CC0, commit ab832f38b943c15f461228968a89002e1a99c03e. */
-
 extern void MIi_CpuCopyFast(const void *src, void *dest, unsigned int size);
 extern int data_020b7df4[];
 extern unsigned char data_020b7808[];

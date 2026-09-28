@@ -1,10 +1,3 @@
-/* Waits for texture DMA, restores saved bank mapping, and clears load-session state.
- * This is a reusable Nitro/NitroSystem subsystem operation; a specific Re:coded gameplay caller or use is not inferred. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nitro/gx/calls/GX_EndLoadTex.c.
- * Original routine: GX_EndLoadTex. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
-/* Waits for the texture upload DMA and restores the released banks. */
 extern void MI_WaitDma(int ch);
 extern void GX_SetBankForTex(int mask);
 extern int data_02055c1c[];

@@ -1,9 +1,3 @@
-/* Pushes a task to a nonfull VRAM-transfer queue, advances rear index, increments count, and reports success.
- * This is a reusable Nitro/NitroSystem subsystem operation; a specific Re:coded gameplay caller or use is not inferred. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/gfd/calls/func_020114fc.c.
- * Original routine: func_020114fc. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,9 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
-
-
 
 typedef enum {
     TP_REQUEST_COMMAND_SAMPLING         = 0x0,
@@ -172,7 +163,6 @@ typedef struct NNSGfdVramTransferTaskQueue {
 extern u16 func_02013d90 (const NNSGfdVramTransferTaskQueue * pQueue, u16 idx);
 extern BOOL func_02013db0 (const NNSGfdVramTransferTaskQueue * pQueue);
 
-/* NNSi_GfdPushVramTransferTaskQueue_02013f38 -- NitroSystem gfd_VramTransferManager.c: NNSi_GfdPushVramTransferTaskQueue. */
 BOOL NNSi_GfdPushVramTransferTaskQueue_02013f38 (NNSGfdVramTransferTaskQueue * pQueue)
 {
 

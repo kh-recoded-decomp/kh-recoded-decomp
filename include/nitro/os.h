@@ -1,10 +1,8 @@
-/* OS: threads, mutexes, messages, alarms, interrupts, arenas and heaps (the NitroSDK names). */
 #ifndef NITRO_OS_H
 #define NITRO_OS_H
 
 #include "nitro/os_types.h"
 
-/* --- generated from the library sources' declarations --- */
 #include "nitro/types.h"
 #include "nitro/hw.h"
 #include "nitro/cp.h"
@@ -211,9 +209,9 @@ typedef struct OSiExContext OSiExContext;
 typedef void (*OSExceptionHandler)(void *context, void *arg);
 
 typedef struct OSiExceptionStatics {
-    void *debuggerHandler;                  /* OSi_DebuggerHandler */
-    void *userExceptionHandlerArg;          /* OSi_UserExceptionHandlerArg */
-    OSExceptionHandler userExceptionHandler;   /* OSi_UserExceptionHandler */
+    void *debuggerHandler;
+    void *userExceptionHandlerArg;
+    OSExceptionHandler userExceptionHandler;
 } OSiExceptionStatics;
 
 typedef int OSHeapHandle;
@@ -221,11 +219,11 @@ typedef int OSHeapHandle;
 typedef struct HeapDesc HeapDesc;
 
 typedef struct {
-    volatile OSHeapHandle currentHeap;   /* 0x00 */
-    int numHeaps;                 /* 0x04 */
-    void *arenaStart;             /* 0x08 */
-    void *arenaEnd;               /* 0x0c */
-    HeapDesc *heapArray;          /* 0x10 */
+    volatile OSHeapHandle currentHeap;
+    int numHeaps;
+    void *arenaStart;
+    void *arenaEnd;
+    HeapDesc *heapArray;
 } OSHeapInfo;
 
 #define OSi_CONSOLE_NOT_DETECT 0xffffffff
@@ -278,25 +276,25 @@ typedef enum {
 #define OS_THREAD_SPECIFIC_MAX 3
 
 struct OSThread {
-    u8 context[0x64];             /* 0x00: OSContext */
-    OSThreadState state;          /* 0x64 */
-    OSThread *next;               /* 0x68 */
-    u32 id;                       /* 0x6c */
-    u32 priority;                 /* 0x70 */
-    void *profiler;               /* 0x74 */
-    OSThreadQueue *queue;         /* 0x78 */
-    OSThreadLink link;            /* 0x7c */
-    void *mutex;                  /* 0x84 */
-    OSMutexQueue mutexQueue;      /* 0x88 */
-    u32 stackTop;                 /* 0x90 */
-    u32 stackBottom;              /* 0x94 */
-    u32 stackWarningOffset;       /* 0x98 */
-    OSThreadQueue joinQueue;      /* 0x9c */
-    void *specific[OS_THREAD_SPECIFIC_MAX];   /* 0xa4 */
-    void *alarmForSleep;          /* 0xb0 */
-    void (*destructor)(void *);   /* 0xb4 */
-    void *userParameter;          /* 0xb8 */
-    int systemErrno;              /* 0xbc */
+    u8 context[0x64];
+    OSThreadState state;
+    OSThread *next;
+    u32 id;
+    u32 priority;
+    void *profiler;
+    OSThreadQueue *queue;
+    OSThreadLink link;
+    void *mutex;
+    OSMutexQueue mutexQueue;
+    u32 stackTop;
+    u32 stackBottom;
+    u32 stackWarningOffset;
+    OSThreadQueue joinQueue;
+    void *specific[OS_THREAD_SPECIFIC_MAX];
+    void *alarmForSleep;
+    void (*destructor)(void *);
+    void *userParameter;
+    int systemErrno;
 };
 
 #define OSi_IDLE_CHECKNUM_SIZE (sizeof(u32) * 2 + HW_SVC_STACK_SIZE)
@@ -328,34 +326,34 @@ typedef struct {
 #define OS_LOW_ENTROPY_DATA_SIZE 32
 
 typedef struct {
-    u8 bootCheckInfo[0x20];       /* 0x000 */
-    u32 resetParameter;           /* 0x020 */
-    u8 padding5[0x8];             /* 0x024 */
-    u32 romBaseOffset;            /* 0x02c */
-    u8 cartridgeModuleInfo[12];   /* 0x030 */
-    u32 vblankCount;              /* 0x03c */
-    u8 wmBootBuf[0x40];           /* 0x040 */
-    u8 nvramUserInfo[0x100];      /* 0x080 */
-    u8 isd_reserved1[0x20];       /* 0x180 */
-    u8 arenaInfo[0x48];           /* 0x1a0 */
-    u8 real_time_clock[8];        /* 0x1e8 */
-    u32 dmaClearBuf[4];           /* 0x1f0 */
-    u8 rom_header[0x160];         /* 0x200 */
-    u8 isd_reserved2[32];         /* 0x360 */
-    u32 pxiSignalParam[2];        /* 0x380 */
-    u32 pxiHandleChecker[2];      /* 0x388 */
-    u32 mic_last_address;         /* 0x390 */
-    u16 mic_sampling_data;        /* 0x394 */
-    u16 wm_callback_control;      /* 0x396 */
-    u16 wm_rssi_pool;             /* 0x398 */
-    u8 ctrdg_SetModuleInfoFlag;   /* 0x39a */
-    u8 ctrdg_IsExisting;          /* 0x39b */
-    u32 component_param;          /* 0x39c */
-    void *threadinfo_mainp;       /* 0x3a0 */
-    void *threadinfo_subp;        /* 0x3a4 */
-    u16 button_XY;                /* 0x3a8 */
-    u8 touch_panel[4];            /* 0x3aa */
-    u16 autoloadSync;             /* 0x3ae */
+    u8 bootCheckInfo[0x20];
+    u32 resetParameter;
+    u8 padding5[0x8];
+    u32 romBaseOffset;
+    u8 cartridgeModuleInfo[12];
+    u32 vblankCount;
+    u8 wmBootBuf[0x40];
+    u8 nvramUserInfo[0x100];
+    u8 isd_reserved1[0x20];
+    u8 arenaInfo[0x48];
+    u8 real_time_clock[8];
+    u32 dmaClearBuf[4];
+    u8 rom_header[0x160];
+    u8 isd_reserved2[32];
+    u32 pxiSignalParam[2];
+    u32 pxiHandleChecker[2];
+    u32 mic_last_address;
+    u16 mic_sampling_data;
+    u16 wm_callback_control;
+    u16 wm_rssi_pool;
+    u8 ctrdg_SetModuleInfoFlag;
+    u8 ctrdg_IsExisting;
+    u32 component_param;
+    void *threadinfo_mainp;
+    void *threadinfo_subp;
+    u16 button_XY;
+    u8 touch_panel[4];
+    u16 autoloadSync;
 } OSSystemWork;
 
 #define OS_GetSystemWork() ((OSSystemWork *)HW_MAIN_MEM_SYSTEM)
@@ -415,7 +413,7 @@ struct OSiAlarmQueue {
 typedef struct {
     u8 reserved[0x3fc0];
     u8 sysrv[0x38];
-    vu32 intr_check;              /* 0x3ff8: HW_INTR_CHECK_BUF */
+    vu32 intr_check;
 } OSDtcm;
 
 typedef void (*OSSwitchThreadCallback)(void *from, void *to);

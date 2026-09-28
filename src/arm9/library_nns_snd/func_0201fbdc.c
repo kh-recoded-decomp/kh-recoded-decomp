@@ -1,9 +1,3 @@
-/* Loads wave data referenced by matching PCM bank instruments into the selected heap and associates the loaded data with its archive.
- * Uncertainty: Only the format-level loading behavior is known; instrument use is caller-selected. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/snd/calls/func_0201c464.c.
- * Original routine: func_0201c464. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,9 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
-
-
 
 typedef struct CPContext {
     u64 div_numer;
@@ -375,12 +366,10 @@ struct SNDWaveArc;
 extern BOOL func_0201fb14(SNDWaveArc * waveArc, int waveNo, u32 fileId, NNSSndHeapHandle heap);
 extern BOOL func_0201fb14 (SNDWaveArc * waveArc, int waveNo, u32 fileId, NNSSndHeapHandle heap);
 
-/* func_0201fbdc -- NitroSystem sndarc_loader.c: LoadSingleWaves. */
 BOOL func_0201fbdc (SNDWaveArc * waveArc, const SNDBankData * bank, int waveArcNo, u32 fileId, NNSSndHeapHandle heap)
 {
     SNDInstPos pos = SND_GetFirstInstDataPos(bank);
     SNDInstData inst;
-
 
     if (bank == NULL) {
         return FALSE;

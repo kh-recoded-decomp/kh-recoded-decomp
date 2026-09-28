@@ -1,12 +1,6 @@
-/* Behavior: Clears the software VRAM bank state and disables the VRAM bank registers.
- * Inputs/outputs and evidence: Zeros thirteen halfwords in the state mirror and clears VRAM control registers A through I.
- * Uncertainty: The software fields' individual meanings are not established by this function.
- * Source: khdays-decomp/src/calls/GX_InitGXState_02008f90.c; CC0, commit ab832f38b943c15f461228968a89002e1a99c03e.
- */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
-
 
 typedef struct {
     u16 bankA;
@@ -41,7 +35,6 @@ void GX_InitGXState_02008f90(void) {
     bankState->reserved14 = 0;
     bankState->reserved16 = 0;
     bankState->reserved18 = 0;
-
 
     *(volatile u32 *)0x04000240 = 0;
 

@@ -1,8 +1,3 @@
-/* Updates active archive stream players: handles exhausted completion counters, promotes prepared starts to playing, advances faders, recalculates effective volume, and stops players after fade completion.
- * The BK9E player layout has two unknown words after the embedded stream object.
- * Adapted from CC0 Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/snd/calls/func_0201cc50.c.
- * Target code and relocation values were checked against the BK9E binary. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -22,7 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
 
 #define NNS_SND_STRM_PLAYER_NUM 4
 
@@ -575,12 +569,10 @@ extern NNSSndStrmPlayer data_0205e6e0[4 ];
 extern void func_02020810(NNSSndStrmPlayer * player);
 extern void func_02020810 (NNSSndStrmPlayer * player);
 
-/* khdays: shared-bss */
-NNSSndStrmThread * sPrepareThread = 0;   /* sPrepareThread */
-BOOL data_0204ad8c = 0;   /* initialized$3434 */
-u8 * sDecodeBuffer = 0;   /* sDecodeBuffer */
+NNSSndStrmThread * sPrepareThread = 0;
+BOOL data_0204ad8c = 0;
+u8 * sDecodeBuffer = 0;
 
-/* UpdateArchiveStreamPlayers_02020388 -- NitroSystem sndarc_stream.c: NNSi_SndArcStrmMain. */
 void UpdateArchiveStreamPlayers_02020388 (void)
 {
     NNSSndStrmPlayer * player;

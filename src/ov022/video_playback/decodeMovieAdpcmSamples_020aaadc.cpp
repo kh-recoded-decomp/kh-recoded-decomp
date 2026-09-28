@@ -1,19 +1,3 @@
-/* Adapted from CC0-1.0 source Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e,
- * src/overlays/ov024/calls/func_ov024_02086800.cpp.
- * Decodes the low and high IMA ADPCM nibbles from each input byte, updates
- * the predictor and step index, clamps them, and packs two samples per word.
- */
-/* MobiClip: IMA ADPCM, two nibbles per input byte.
- *
- * Standard four-bit IMA: the low three bits scale the current step by
- * 1/8 + 1/2 + 1/4 + 1, bit 3 is the sign, and the index walks the step table
- * by the table of deltas, clamped to 0..0x58. The predictor is clamped to
- * signed 16 bits.
- *
- * Each input byte yields two samples, packed low half first into one output
- * word, so the caller gets a stereo-shaped pair per byte.
- */
 typedef unsigned char u8;
 typedef signed char s8;
 typedef short s16;

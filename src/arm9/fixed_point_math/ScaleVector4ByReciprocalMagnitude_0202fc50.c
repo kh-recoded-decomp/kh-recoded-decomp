@@ -1,4 +1,3 @@
-/* Scales a four-component destination vector by the reciprocal magnitude of a source vector, returning the source magnitude; clears the destination when that magnitude is zero. Evidence: func_0202fbdc computes magnitude from the second pointer and the body scales or clears the first pointer. Uncertainty: Whether callers pass the same vector for both pointers depends on call sites. Recovered from Days source src/calls/func_0202f4a4.c; CC0, commit ab832f38b943c15f461228968a89002e1a99c03e. */
 extern int func_0202fbdc(int *source_vector);
 extern long long func_01ff9cd0(int unknown_argument_x);
 

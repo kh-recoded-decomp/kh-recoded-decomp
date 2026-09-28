@@ -1,7 +1,3 @@
-/* Copies selected fields and UTF-16-sized blocks from the shared settings record at 0x02fffc80 into a caller buffer.
- * The BK9E literal is 0x02fffc80; fixed field loads, bit masks, and two 16-bit copy calls establish the copy operation.
- * Adapted CC0 C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, src/calls/func_02003a20.c. */
 extern void func_01ff869c(const void *src, void *dst, unsigned int size);
 
 typedef struct {

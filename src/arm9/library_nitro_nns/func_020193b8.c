@@ -1,9 +1,3 @@
-/* Computes a fixed-point 4x4 matrix inverse and determinant/status.
- * The middleware operation is supported by this body; its caller-specific use and any higher-level game meaning are not established here. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nitro/nns/calls/func_02015924.c.
- * Original routine: func_02015924. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef long s32;
 typedef long fx32;
 typedef long long fx64;

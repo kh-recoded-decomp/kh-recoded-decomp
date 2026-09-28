@@ -1,9 +1,3 @@
-/* Builds a rotated texture transform with offsets derived from original image dimensions.
- * The middleware operation is supported by this body; its caller-specific use and any higher-level game meaning are not established here. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/g3d/calls/func_02019948.c.
- * Original routine: func_02019948. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,7 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
 
 #define FX32_SHIFT 12
 
@@ -627,7 +620,6 @@ typedef struct NNSG3dMatAnmResult_ {
     fx32 magW, magH;
 } NNSG3dMatAnmResult;
 
-/* BuildTextureTransformVariantC_0201d010 -- NitroSystem 3dsmax.c: texmtxCalc_flagT_. */
 void BuildTextureTransformVariantC_0201d010 (MtxFx44 * m, const NNSG3dMatAnmResult * anm)
 {
     fx32 p, q;

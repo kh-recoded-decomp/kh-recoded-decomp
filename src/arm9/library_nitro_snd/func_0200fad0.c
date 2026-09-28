@@ -1,9 +1,3 @@
-/* Reads a wave archive’s wave-data address under the mutex, resolving either a relative offset or an absolute pointer.
- * Uncertainty: The archive and wave content are caller-selected. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nitro/snd/calls/SND_GetWaveDataAddress.c.
- * Original routine: SND_GetWaveDataAddress. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,12 +17,10 @@ typedef unsigned char vu8;
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
 
-
-/* NitroSDK SND library (ARM9 side): command interface to the ARM7 sound driver. */
 typedef struct SNDCommand {
-    struct SNDCommand *next;      /* 0x00 */
-    u32 id;                       /* 0x04 */
-    u32 arg[4];                   /* 0x08 */
+    struct SNDCommand *next;
+    u32 id;
+    u32 arg[4];
 } SNDCommand;
 
 enum {
@@ -69,10 +61,10 @@ typedef struct SNDWaveArcLink {
 typedef struct SNDWaveArc {
     SNDBinaryFileHeader fileHeader;
     SNDBinaryBlockHeader blockHeader;
-    SNDWaveArcLink *topLink;      /* 0x18 */
+    SNDWaveArcLink *topLink;
     u32 reserved[7];
-    u32 waveCount;                /* 0x38 */
-    u32 waveOffset[0];            /* 0x3c */
+    u32 waveCount;
+    u32 waveOffset[0];
 } SNDWaveArc;
 
 typedef struct SNDWaveData SNDWaveData;
@@ -81,19 +73,17 @@ typedef struct SNDWaveData SNDWaveData;
 typedef struct SNDBankData {
     SNDBinaryFileHeader fileHeader;
     SNDBinaryBlockHeader blockHeader;
-    SNDWaveArcLink waveArcLink[SND_BANK_TO_WAVEARC_MAX];   /* 0x18 */
-    u32 instCount;                /* 0x38 */
-    u32 instOffset[0];            /* 0x3c */
+    SNDWaveArcLink waveArcLink[SND_BANK_TO_WAVEARC_MAX];
+    u32 instCount;
+    u32 instOffset[0];
 } SNDBankData;
 
-extern void func_0200edc8(void);   /* SNDi_LockMutex */
-extern void func_0200eddc(void);   /* SNDi_UnlockMutex */
+extern void func_0200edc8(void);
+extern void func_0200eddc(void);
 #define SNDi_LockMutex func_0200edc8
 #define SNDi_UnlockMutex func_0200eddc
 extern void DC_StoreRange(void *addr, u32 size);
 
-/* func_0200fad0 -- the wave data of entry `index` of the archive: an offset
- * below main RAM is relative to the archive, anything else is an absolute address. */
 const SNDWaveData *func_0200fad0(const SNDWaveArc *waveArc, int index)
 {
     const SNDWaveData *wave;

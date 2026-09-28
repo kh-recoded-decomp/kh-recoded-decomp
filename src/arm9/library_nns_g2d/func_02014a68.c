@@ -1,9 +1,3 @@
-/* Converts animation-bank sequence, frame, content and optional attribute offsets to pointers in the loaded resource.
- * Uncertainty: This identifies a shared library operation; the particular scene, asset or gameplay caller using it is not established. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/g2d/auto/func_020116f0.c.
- * Original routine: func_020116f0. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -76,11 +70,9 @@ typedef struct NNSG2dUserExAnimAttrBank {
     NNSG2dUserExAnimSequenceAttr * pAnmSeqAttrArray;
 } NNSG2dUserExAnimAttrBank;
 
-/* G2D_UnpackAnimationBank_02014a68 -- NitroSystem g2d_NAN_load.c: NNS_G2dUnpackNAN. */
 void G2D_UnpackAnimationBank_02014a68 (NNSG2dAnimBankData * pData)
 {
     u16 i, j;
-
 
     pData->pSequenceArrayHead = NNS_G2D_UNPACK_OFFSET_PTR(pData->pSequenceArrayHead, pData);
     pData->pFrameArrayHead = NNS_G2D_UNPACK_OFFSET_PTR(pData->pFrameArrayHead, pData);

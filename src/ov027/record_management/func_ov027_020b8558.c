@@ -1,8 +1,3 @@
-/* Behavior: Searches an entry array for an active item with the requested identifier.
- * Inputs/outputs and evidence: Checks the active marker and ID, then returns the matching slot or the one-past-end slot when absent.
- * Uncertainty: Return-on-miss behavior follows the loop and is not a null result.
- * Source: khdays-decomp/src/overlays/ov000/auto/func_ov000_02055fc0.c; CC0, commit ab832f38b943c15f461228968a89002e1a99c03e.
- */
 struct Entry {
     unsigned short entryId;
     short padding;

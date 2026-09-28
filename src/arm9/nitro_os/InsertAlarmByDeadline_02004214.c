@@ -1,7 +1,3 @@
-/* Computes the next periodic deadline and inserts an alarm into the doubly linked queue in deadline order.
- * Adapted CC0 C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nitro/os/calls/func_02003410.c.
- * Built with the project pinned flags, without source pragmas. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -21,8 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
-
 
 typedef u64 OSTick;
 typedef int OSTimer;
@@ -66,7 +60,6 @@ static inline void OS_SetTimerControl(OSTimer id, u16 control)
     *((vu16 *)((u32)REG_TM0CNT_H_ADDR + id * 4)) = control;
 }
 
-
 typedef struct {
     u8 reserved[0x3fc0];
     u8 sysrv[0x38];
@@ -91,7 +84,6 @@ extern struct { u16 useAlarm; u16 pad; struct OSiAlarmQueue queue; } data_02056e
 extern void OSi_SetTimer(OSAlarm *alarm);
 extern void InsertAlarmByDeadline_02004214(OSAlarm *alarm, OSTick fire);
 #define OSi_InsertAlarm InsertAlarmByDeadline_02004214
-
 
 void InsertAlarmByDeadline_02004214 (OSAlarm * alarm, OSTick fire)
 {

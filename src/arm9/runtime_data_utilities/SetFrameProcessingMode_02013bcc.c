@@ -1,4 +1,3 @@
-/* Stores and applies a frame-processing mode, optionally installing two callbacks. Evidence: Source implementation directly performs the described operations; see src/calls/func_02011174.c. Uncertainty: No material uncertainty for the stated operation; game-specific use may depend on callers. Recovered from Days source src/calls/func_02011174.c; CC0, commit ab832f38b943c15f461228968a89002e1a99c03e. */
 extern int frame_processing_state[];
 extern void *frame_callback_primary;
 extern void *frame_callback_secondary;

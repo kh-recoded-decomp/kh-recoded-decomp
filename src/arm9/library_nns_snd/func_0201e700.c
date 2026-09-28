@@ -1,9 +1,3 @@
-/* Initializes capture buffers, clears and flushes channel buffers, then starts the capture timer.
- * Uncertainty: Capture parameters are supplied by surrounding configuration. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/snd/calls/func_0201b0ec.c.
- * Original routine: func_0201b0ec. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,9 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
-
-
 
 void func_01ff86fc(u32 data, void * destp, u32 size);
 static inline void MI_CpuFill32 (void * dest, u32 data, u32 size)
@@ -76,7 +67,6 @@ typedef struct CaptureParam {
 } CaptureParam;
 extern CaptureParam data_0205e290;
 
-/* func_0201e700 -- NitroSystem capture.c: NNSi_SndCaptureEndSleep. */
 void func_0201e700 (void)
 {
     CaptureParam * cap;

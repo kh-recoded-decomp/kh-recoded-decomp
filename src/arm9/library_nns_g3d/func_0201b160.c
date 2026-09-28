@@ -1,9 +1,3 @@
-/* Samples tagged joint translation, rotation, and scale streams for a fixed-point frame, honoring identity/base/constant and interpolation flags.
- * The middleware operation is supported by this body; its caller-specific use and any higher-level game meaning are not established here. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/g3d/calls/func_02017584.c.
- * Original routine: func_02017584. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -24,8 +18,7 @@ typedef volatile unsigned char vu8;
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
 
-
-#define FX32_ONE ((fx32) 0x0000000000001000L)         // 1.000000000000
+#define FX32_ONE ((fx32) 0x0000000000001000L)
 
 typedef struct CPContext {
     u64 div_numer;
@@ -900,7 +893,6 @@ extern void func_0201baac (MtxFx33 * pRot, fx32 Frame, const u32 * pData, const 
 extern void func_0201beb0 (MtxFx33 * pRot, fx32 Frame, const u32 * pData, const NNSG3dResJntAnm * pJntAnm);
 extern BOOL func_0201c1e8 (MtxFx33 * pRot, const void * pArrayRot3, const void * pArrayRot5, NNSG3dJntAnmRIdx info);
 
-/* SampleJointAnimationSRT_0201b160 -- NitroSystem nsbca.c: getJntSRTAnmResult_. */
 void SampleJointAnimationSRT_0201b160 (const NNSG3dResJntAnm * pJntAnm, u32 dataIdx, fx32 Frame, NNSG3dJntAnmResult * pResult)
 {
     NNSG3dResJntAnmSRTTag * pAnmSRTTag;
@@ -908,7 +900,6 @@ void SampleJointAnimationSRT_0201b160 (const NNSG3dResJntAnm * pJntAnm, u32 data
     const u32 * pData;
     BOOL IsDecimalFrame;
     fx32 pS_invS[6];
-
 
     {
         const u16 * ofsTag = (const u16 *)((u8 *) pJntAnm + sizeof(NNSG3dResJntAnm));

@@ -1,5 +1,3 @@
-/* CC0 source: Yokimitsuro/khdays-decomp, revision ab832f38b943c15f461228968a89002e1a99c03e, libs/nitro/os/auto/OSi_RemoveLinkFromQueue.c. */
-/* Pops the head of an OS thread queue; the links live at +0x7c/+0x80 inside the object. */
 void *OSi_RemoveLinkFromQueue(void **queue) {
     char *head = (char *)queue[0];
     if (head != 0) {

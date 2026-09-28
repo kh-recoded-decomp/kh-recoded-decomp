@@ -1,11 +1,3 @@
-/* Smoothly turns a model joint between animation poses and keeps its rotation axes normalized.
- * Decodes compressed joint rotations, blends two keyframes, and normalizes or reconstructs matrix basis vectors.
- * Inputs use 20.12 fixed-point values where applicable; output is the sampled joint pose.
- * Uncertainty: Shared model-animation code. Callers have not yet established which characters, enemies, or scenery use this copy.
- * Adapted from khdays-decomp/src/calls/func_02027300.c (CC0-1.0),
- * revision ab832f38b943c15f461228968a89002e1a99c03e. See THIRD_PARTY.md.
- */
-
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned long u32;

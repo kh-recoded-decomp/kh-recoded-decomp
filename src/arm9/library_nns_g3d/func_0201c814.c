@@ -1,9 +1,3 @@
-/* Samples texture S/T translation, rotation, and scale at a frame and updates result flags.
- * The middleware operation is supported by this body; its caller-specific use and any higher-level game meaning are not established here. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/g3d/calls/func_02018cec.c.
- * Original routine: func_02018cec. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -24,8 +18,7 @@ typedef volatile unsigned char vu8;
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
 
-
-#define FX32_ONE ((fx32) 0x0000000000001000L)         // 1.000000000000
+#define FX32_ONE ((fx32) 0x0000000000001000L)
 
 typedef s32 fx32;
 typedef s16 fx16;
@@ -130,7 +123,6 @@ inline void * NNS_G3dGetResDataByIdx (const NNSG3dResDict * dict, u32 idx)
 extern fx32 func_0201c614 (const NNSG3dResTexSRTAnm * pTexAnm, u32 info, u32 data, u32 frame);
 extern u32 func_0201c708 (const NNSG3dResTexSRTAnm * pTexAnm, u32 info, u32 data, u32 frame);
 
-/* EvaluateTextureSRTAnimation_0201c814 -- NitroSystem nsbta.c: GetTexSRTAnm_. */
 void EvaluateTextureSRTAnimation_0201c814 (const NNSG3dResTexSRTAnm * pTexAnm, u16 idx, u32 frame, NNSG3dMatAnmResult * pResult)
 {
 

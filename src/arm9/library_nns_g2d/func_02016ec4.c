@@ -1,9 +1,3 @@
-/* Copies nonzero source glyph pixels into a clipped 8-by-8 destination character, handling four-bit or eight-bit destination pixels.
- * Uncertainty: This identifies a shared library operation; the particular scene, asset or gameplay caller using it is not established. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/g2d/calls/func_02013a38.c.
- * Original routine: func_02013a38. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -690,7 +684,6 @@ typedef struct LC_INFO {
     u32 cl;
 } LC_INFO;
 
-/* G2D_BlitGlyphTile_02016ec4 -- NitroSystem g2d_CharCanvas.c: LetterChar. */
 void G2D_BlitGlyphTile_02016ec4 (LC_INFO * i)
 {
     const u8 * pSrc;
@@ -699,8 +692,6 @@ void G2D_BlitGlyphTile_02016ec4 (LC_INFO * i)
     u32 y_st;
     u32 y_ed;
     u32 offset;
-
-
 
     {
         u32 bit_y_begin;
@@ -715,7 +706,6 @@ void G2D_BlitGlyphTile_02016ec4 (LC_INFO * i)
 
         pSrc = i->src;
     }
-
 
     {
         u32 x;
@@ -754,7 +744,6 @@ void G2D_BlitGlyphTile_02016ec4 (LC_INFO * i)
             u32 * pDst = (u32 *)((u64 *)i->dst + y_st);
             u32 * const pDstEnd = (u32 *)((u64 *)i->dst + y_ed);
             u32 cl = i->cl;
-
 
             for ( ; pDst < pDstEnd; pDst += 2) {
                 NNSiG2dBitReader reader;

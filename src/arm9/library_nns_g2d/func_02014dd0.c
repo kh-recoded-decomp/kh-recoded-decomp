@@ -1,9 +1,3 @@
-/* Finds the screen-data block in a binary resource and returns its payload or a null result.
- * Uncertainty: This identifies a shared library operation; the particular scene, asset or gameplay caller using it is not established. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/g2d/calls/func_02011a6c.c.
- * Original routine: func_02011a6c. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -54,7 +48,6 @@ typedef struct NNSG2dScreenDataBlock {
 } NNSG2dScreenDataBlock;
 NNSG2dBinaryBlockHeader * func_02014e00(NNSG2dBinaryFileHeader * pBinFileHeader, u32 signature);
 
-/* G2D_GetScreenFromFile_02014dd0 -- NitroSystem g2d_NSC_load.c: NNS_G2dGetUnpackedScreenData. */
 BOOL G2D_GetScreenFromFile_02014dd0 (void * pNscrFile, NNSG2dScreenData ** ppScrData)
 {
 

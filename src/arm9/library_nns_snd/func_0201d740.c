@@ -1,9 +1,3 @@
-/* Sets a valid handle’s player volume fade unless that player is already fading out.
- * Uncertainty: The supplied duration parameter is not assigned a wall-clock unit. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/snd/calls/func_0201a124.c.
- * Original routine: func_0201a124. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,7 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
 
 #define FADER_SHIFT 8
 
@@ -189,7 +182,6 @@ typedef struct NNSSndPlayerHeap {
     int playerNo;
 } NNSSndPlayerHeap;
 
-/* func_0201d740 -- NitroSystem player.c: NNS_SndPlayerMoveVolume. */
 void func_0201d740 (NNSSndHandle * handle, int targetVolume, int frames)
 {
 

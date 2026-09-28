@@ -1,9 +1,3 @@
-/* Initializes animation-object state and dispatches by the resource animation category.
- * The middleware operation is supported by this body; its caller-specific use and any higher-level game meaning are not established here. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/g3d/calls/func_02014abc.c.
- * Original routine: func_02014abc. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -24,8 +18,7 @@ typedef volatile unsigned char vu8;
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
 
-
-#define FX32_ONE ((fx32) 0x0000000000001000L)         // 1.000000000000
+#define FX32_ONE ((fx32) 0x0000000000001000L)
 
 typedef struct {
     void (*func) (void *);
@@ -235,12 +228,10 @@ typedef struct {
 extern u32 data_02055cf0;
 extern NNSG3dAnmObjInitFunc data_02055d14[10 ];
 
-/* InitializeAnimationObject_02018554 -- NitroSystem kernel.c: NNS_G3dAnmObjInit. */
 void InitializeAnimationObject_02018554 (NNSG3dAnmObj * pAnmObj, void * pResAnm, const NNSG3dResMdl * pResMdl, const NNSG3dResTex * pResTex)
 {
     const NNSG3dResAnmHeader * hdr;
     u32 i;
-
 
     pAnmObj->frame = 0;
     pAnmObj->resAnm = (void *)pResAnm;

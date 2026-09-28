@@ -1,9 +1,3 @@
-/* Resolves the cell array, per-cell OAM arrays, optional VRAM-transfer data and extended cell attributes in a loaded resource.
- * Uncertainty: This identifies a shared library operation; the particular scene, asset or gameplay caller using it is not established. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/g2d/calls/func_020118ec.c.
- * Original routine: func_020118ec. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -68,7 +62,6 @@ extern void * func_02014bc0 (NNSG2dCellDataBank * pCellBank);
 extern void func_02014bdc (void * pExData);
 extern const NNSG2dCellData * func_02014c28 (const NNSG2dCellDataBank * pCellData, u16 idx);
 
-/* G2D_UnpackCellBank_02014c50 -- NitroSystem g2d_NOB_load.c: NNS_G2dUnpackNCE. */
 void G2D_UnpackCellBank_02014c50 (NNSG2dCellDataBank * pCellData)
 {
     {

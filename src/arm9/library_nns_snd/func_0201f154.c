@@ -1,9 +1,3 @@
-/* Checks frame-heap state and advances to a new sound-heap section or rolls back when section allocation cannot proceed.
- * Uncertainty: The underlying allocator policy is not inferred. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/snd/calls/func_0201ba08.c.
- * Original routine: func_0201ba08. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -25,8 +19,6 @@ typedef volatile unsigned char vu8;
 #define HW_MAIN_MEM 0x02000000
 
 #define offsetof(type, member) ((u32)&(((type *)0)->member))
-
-
 
 typedef struct {
     void * prevObject;
@@ -62,11 +54,9 @@ typedef struct NNSSndHeap {
 extern BOOL func_0201f2bc(NNSSndHeap * heap);
 extern BOOL func_0201f2bc (NNSSndHeap * heap);
 
-/* func_0201f154 -- NitroSystem heap.c: NNS_SndHeapSaveState. */
 int func_0201f154 (NNSSndHeapHandle heap)
 {
     BOOL result;
-
 
     if (!func_02013568(heap->handle, heap->sectionList.numObjects)) {
         return -1;

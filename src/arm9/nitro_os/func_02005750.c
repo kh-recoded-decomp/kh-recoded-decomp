@@ -1,4 +1,3 @@
-/* CC0 source: Yokimitsuro/khdays-decomp, revision ab832f38b943c15f461228968a89002e1a99c03e, libs/nitro/mi/auto/func_0200443c.c. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -21,8 +20,6 @@ typedef volatile unsigned char vu8;
 
 #define offsetof(type, member) ((u32)&(((type *)0)->member))
 
-
-
 typedef struct {
     u32 compParam :4;
     u32 compType :4;
@@ -41,7 +38,6 @@ typedef struct {
     u8 _padding[1];
 } MIUncompContextLZ;
 
-/* func_0200443c -- NitroSDK mi_uncomp_stream.c: MI_InitUncompContextLZ. */
 void func_0200443c (MIUncompContextLZ * context, u8 * dest, const MICompressionHeader * header)
 {
     context->destp = dest;

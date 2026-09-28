@@ -1,8 +1,3 @@
-/* Clears a resource container, chooses a budget from global mode, initializes its internal list, and optionally applies template data.
- * The BK9E container and tail fields are 0x19fc bytes larger than in the shared reference implementation.
- * Adapted CC0 C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, src/overlays/ov026/calls/func_ov026_02083e30.c. */
-
 extern void func_01ff8830(void *dst, int val, unsigned int n);
 extern int func_02023dbc(int a, int b);
 extern void func_020524e8(void *p);

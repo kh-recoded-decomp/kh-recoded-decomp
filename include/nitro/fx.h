@@ -1,10 +1,8 @@
-/* Fixed-point math (the NitroSDK names). */
 #ifndef NITRO_FX_H
 #define NITRO_FX_H
 
 #include "nitro/fx_types.h"
 
-/* --- generated from the library sources' declarations --- */
 #include "nitro/types.h"
 
 struct Mtx22;
@@ -45,7 +43,7 @@ typedef union {
     }
     MtxFx32;
 
-#define FX32_ONE ((fx32) 0x0000000000001000L)         // 1.000000000000
+#define FX32_ONE ((fx32) 0x0000000000001000L)
 
 typedef union {
         struct {

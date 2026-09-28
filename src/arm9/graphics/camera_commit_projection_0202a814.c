@@ -1,12 +1,4 @@
-/* Updates where the camera looks and how much scene fits on screen using its perspective values and near/far clips.
- * Evidence: The perspective helper takes vertical-FOV sine/cosine, aspect ratio, near clip, and far clip; the look-at
- * helper receives position, up vector, and target, after which cached vectors and GX dirty flags are updated.
- * Uncertainty: Projection values use the engine's fixed-point units.
- * Source: src/calls/func_02023cc0.c from khdays-decomp, CC0, commit ab832f38b943c15f461228968a89002e1a99c03e. */
-
-
 typedef struct { int x, y, z; } VecFx32;
-
 
 typedef struct {
     int     perspectiveParams[4];
@@ -15,7 +7,6 @@ typedef struct {
     VecFx32 pos;
     VecFx32 up;
 } CamActor;
-
 
 extern struct {
     char    _p00[0xd4];

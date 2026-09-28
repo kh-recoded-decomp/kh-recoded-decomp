@@ -1,11 +1,3 @@
-/* Smooths a model joint's changing size between animation frames and across a looping animation boundary.
- * Interpolates paired scale values using fractional frame time; the animation loop flag selects the first key after the final frame.
- * Inputs use 20.12 fixed-point values where applicable; output is the sampled joint pose.
- * Uncertainty: Shared model-animation code. Callers have not yet established which characters, enemies, or scenery use this copy.
- * Adapted from khdays-decomp/src/calls/func_0202716c.c (CC0-1.0),
- * revision ab832f38b943c15f461228968a89002e1a99c03e. See THIRD_PARTY.md.
- */
-
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned long u32;

@@ -1,7 +1,3 @@
-/* Increments an occupied record count or initializes its metadata and payload at offset 0x14.
- * The direct store and payload helper pointer both use 0x14. The upstream SND_RegisterSeq alias does not establish sound semantics.
- * Adapted CC0 C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nitro/snd/calls/SND_RegisterSeq.c. */
 extern void *func_0202c6cc(int a, int b);
 extern int func_0202c478(int a, int b);
 extern void func_02021e60(void *dst, int src);

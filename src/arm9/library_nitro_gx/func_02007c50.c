@@ -1,9 +1,3 @@
-/* Resets main BG extended-palette mapping and records LCDC bank and palette offset.
- * This is a reusable Nitro/NitroSystem subsystem operation; a specific Re:coded gameplay caller or use is not inferred. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nitro/gx/calls/GX_BeginLoadBGExtPltt.c.
- * Original routine: GX_BeginLoadBGExtPltt. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -24,8 +18,6 @@ typedef volatile unsigned char vu8;
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
 
-
-/* NitroSDK GX VRAM loaders (gx_load2d.c / gx_load3d.c, gxdma.h). */
 typedef void (*MIDmaCallback)(void *);
 #define GX_DMA_NOT_USE      ((u32) ~0)
 #define GX_CPU_FASTER32_SIZE 0x30
@@ -48,19 +40,18 @@ typedef enum {
 } GXVRamOBJExtPltt;
 typedef int GXVRamTex;
 
-extern u32 data_020422b8;   /* GXi_DmaId */
+extern u32 data_020422b8;
 #define GXi_DmaId data_020422b8
 extern void MI_DmaCopy32(u32 dmaNo, const void *src, void *dest, u32 size);
 extern void MI_DmaCopy32Async(u32 dmaNo, const void *src, void *dest, u32 size, MIDmaCallback callback, void *arg);
 extern void MIi_CpuCopy32(const void *src, void *dest, u32 size);
 #define MI_CpuCopy32 MIi_CpuCopy32
-/* This SDK names the bank-release helpers GX_DisableBankFor*; 4.x calls them GX_ResetBankFor*. */
+
 extern GXVRamBGExtPltt GX_DisableBankForBGExtPltt(void);
 #define GX_ResetBankForBGExtPltt GX_DisableBankForBGExtPltt
 extern GXVRamOBJExtPltt GX_DisableBankForOBJExtPltt(void);
 #define GX_ResetBankForOBJExtPltt GX_DisableBankForOBJExtPltt
-/* Real inline functions, as in the SDK headers: the value they return stays a variable (`ptr`
- * lands in ip and feeds both branches) where a macro constant would fold into each add. */
+
 static inline void *G2_GetOBJCharPtr(void) { return (void *)HW_OBJ_VRAM; }
 static inline void *G2S_GetOBJCharPtr(void) { return (void *)HW_DB_OBJ_VRAM; }
 #define GX_RegionCheck_OBJ(a, b)
@@ -85,15 +76,15 @@ static inline void GXi_DmaCopy32Async(u32 dmaNo, const void *src, void *dest, u3
         MI_CpuCopy32(src, dest, size);
     }
 }
-/* gx_load2d.c statics, one .bss block (data_02056f0c): the extended-palette upload state. */
+
 extern struct {
-    u32 sSubBGExtPltt;            /* 0x00 */
-    u32 sOBJExtPlttLCDCBlk;       /* 0x04 */
-    GXVRamOBJExtPltt sOBJExtPltt; /* 0x08 */
-    u32 sBGExtPlttLCDCOffset;     /* 0x0c */
-    u32 sBGExtPlttLCDCBlk;        /* 0x10 */
-    GXVRamBGExtPltt sBGExtPltt;   /* 0x14 */
-    u32 sSubOBJExtPltt;           /* 0x18 */
+    u32 sSubBGExtPltt;
+    u32 sOBJExtPlttLCDCBlk;
+    GXVRamOBJExtPltt sOBJExtPltt;
+    u32 sBGExtPlttLCDCOffset;
+    u32 sBGExtPlttLCDCBlk;
+    GXVRamBGExtPltt sBGExtPltt;
+    u32 sSubOBJExtPltt;
 } data_02056f0c;
 #define sOBJExtPlttLCDCBlk data_02056f0c.sOBJExtPlttLCDCBlk
 #define sOBJExtPltt data_02056f0c.sOBJExtPltt
@@ -101,7 +92,6 @@ extern struct {
 #define sBGExtPlttLCDCBlk data_02056f0c.sBGExtPlttLCDCBlk
 #define sBGExtPltt data_02056f0c.sBGExtPltt
 
-/* GX_BeginLoadBGExtPltt_02007c50 -- NitroSDK gx_load2d.c. */
 void GX_BeginLoadBGExtPltt_02007c50 (void)
 {
 

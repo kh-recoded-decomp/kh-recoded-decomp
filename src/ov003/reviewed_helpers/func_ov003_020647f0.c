@@ -1,8 +1,3 @@
-/* Returns true for an inactive state; otherwise requires a nonzero threshold reached by a helper-reported position.
- * Higher-level purpose remains unclassified. Recovered CC0 C from
- * Yokimitsuro/khdays-decomp, ab832f38b943c15f461228968a89002e1a99c03e,
- * src/overlays/ov024/calls/func_ov024_02083414.c. */
-
 extern int func_02063fe4(void);
 extern int func_020a8918(void);
 

@@ -1,9 +1,3 @@
-/* Drains queued sound commands, updates sequence players and capture state, optionally updates streams, then processes one command.
- * Uncertainty: Stream update is conditional on build configuration. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/snd/calls/func_02019bf0.c.
- * Original routine: func_02019bf0. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,7 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
 
 #define SND_COMMAND_NOBLOCK 0
 
@@ -74,7 +67,6 @@ void func_0201e544(void);
 void func_0201d974(void);
 void func_02020388(void);
 
-/* func_0201d290 -- NitroSystem main.c: NNS_SndMain. */
 void func_0201d290 (void)
 {
     while (func_0200eec0(SND_COMMAND_NOBLOCK) != NULL) {

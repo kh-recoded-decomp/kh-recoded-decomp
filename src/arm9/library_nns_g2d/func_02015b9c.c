@@ -1,9 +1,3 @@
-/* Returns the first of four size records that fits the requested width and height, falling back to the last record.
- * Uncertainty: This identifies a shared library operation; the particular scene, asset or gameplay caller using it is not established. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/g2d/auto/func_02012880.c.
- * Original routine: func_02012880. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -25,8 +19,6 @@ typedef volatile unsigned char vu8;
 #define HW_MAIN_MEM 0x02000000
 
 #define offsetof(type, member) ((u32)&(((type *)0)->member))
-
-
 
 typedef struct NNSG2dCharWidths {
     s8 left;
@@ -100,7 +92,6 @@ typedef struct ScreenSizeMap {
     u16 scnSize;
 } ScreenSizeMap;
 
-/* G2D_FindScreenSize_02015b9c -- NitroSystem g2d_Screen.c: SelectScnSize. */
 const ScreenSizeMap * G2D_FindScreenSize_02015b9c (const ScreenSizeMap tbl[4], int w, int h)
 {
     int i;

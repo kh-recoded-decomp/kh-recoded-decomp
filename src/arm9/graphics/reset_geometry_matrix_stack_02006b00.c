@@ -1,7 +1,3 @@
-/* Resets the geometry engine matrix stack and restores its matrix mode/state.
- * Evidence: GXSTAT and geometry matrix register writes in source.
- * Uncertainty: SDK alias suffix is link-level only.
- * Source: src/calls/G3X_ResetMtxStack_2.c from khdays-decomp, CC0, commit ab832f38b943c15f461228968a89002e1a99c03e. */
 typedef unsigned int u32;
 typedef volatile u32 REGType32v;
 

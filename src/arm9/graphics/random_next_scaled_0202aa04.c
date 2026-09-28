@@ -1,9 +1,3 @@
-/* Advances the shared 64-bit linear congruential random state and returns its high word, optionally scaled to the requested range.
- * Evidence: LCG state fields and 64-bit arithmetic in source.
- * Uncertainty: The source claim that this is the game-wide generator is caller-supported in reference; target callers should confirm.
- * Source: src/calls/func_02023eb4.c from khdays-decomp, CC0, commit ab832f38b943c15f461228968a89002e1a99c03e. */
-
-
 typedef struct {
     char pad0[0xc];
     long long seed;

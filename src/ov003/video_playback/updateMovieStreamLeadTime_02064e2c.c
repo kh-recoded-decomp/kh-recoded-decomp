@@ -1,13 +1,3 @@
-/* updateMovieStreamLeadTime_02064e2c: update a movie stream's presentation lead according to its synchronization mode.
- *
- * Mode 0 clears the lead; mode 1 either adopts the shared lead or computes half of the
- * difference between the stream stamp and current clock, clamped at zero; mode 2 uses the full
- * stamp-to-clock difference. Observed BK9E fields are mode +0x64, follower flag +0x50, stream
- * stamp +0x34, and lead +0x4c.
- *
- * Adapted from CC0 MobiClip source in Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, src/overlays/ov024/calls/func_ov024_02083a9c.c.
- */
 extern int func_ov003_02064c10(int stream);
 extern int data_ov003_020658c4[];
 

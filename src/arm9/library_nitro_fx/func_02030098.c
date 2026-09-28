@@ -1,9 +1,3 @@
-/* Normalizes a 3D fixed-point vector into 16-bit components using hardware division and square root.
- * The exact public SDK symbol is not established from the body, so the target address-based name is retained; behavior is limited to the implemented operation. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nitro/fx/auto/func_01ffcfd0.c.
- * Original routine: func_01ffcfd0. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef signed short s16;
 typedef unsigned short u16;
 typedef signed int s32;

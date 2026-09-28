@@ -1,9 +1,3 @@
-/* Initializes the VRAM-location fields of an image palette proxy.
- * Uncertainty: This identifies a shared library operation; the particular scene, asset or gameplay caller using it is not established. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/g2d/auto/func_02011f68.c.
- * Original routine: func_02011f68. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,9 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
-
-
 
 typedef enum {
     GX_TEXFMT_NONE       = 0,
@@ -61,7 +52,6 @@ static inline void InitializeVRamLocation_ (NNSG2dVRamLocation * pVramLocation)
     }
 }
 
-/* G2D_InitializePaletteProxy_020152b8 -- NitroSystem g2d_Image.c: NNS_G2dInitImagePaletteProxy. */
 void G2D_InitializePaletteProxy_020152b8 (NNSG2dImagePaletteProxy * pImg)
 {
     InitializeVRamLocation_(&pImg->vramLocation);

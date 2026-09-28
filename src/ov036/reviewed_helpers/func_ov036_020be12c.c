@@ -1,7 +1,3 @@
-/* Evaluates two argument records eight bytes apart, forwards both results to a helper, and returns one.
- * Higher-level purpose remains unclassified. Recovered CC0 C from
- * Yokimitsuro/khdays-decomp, ab832f38b943c15f461228968a89002e1a99c03e,
- * src/calls/func_02022460.c. */
 extern int func_02025de4(int a, void *b);
 extern void func_020bcf70(int a, int b);
 

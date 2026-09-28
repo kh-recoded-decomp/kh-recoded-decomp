@@ -1,11 +1,3 @@
-/* Smooths one direction of a model joint's movement between animation frames, including a looping animation.
- * Fractional interpolation of a scalar translation track; the animation loop flag wraps the final key to the first.
- * Inputs use 20.12 fixed-point values where applicable; output is the sampled joint pose.
- * Uncertainty: Shared model-animation code. Callers have not yet established which characters, enemies, or scenery use this copy.
- * Adapted from khdays-decomp/src/calls/func_02026e28.c (CC0-1.0),
- * revision ab832f38b943c15f461228968a89002e1a99c03e. See THIRD_PARTY.md.
- */
-
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned long u32;

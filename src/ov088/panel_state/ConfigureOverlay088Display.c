@@ -1,7 +1,3 @@
-/* Configures background layers and enables the display layers used by overlay 88.
- * Writes the secondary-engine BG2/BG3 control fields while preserving bits0x43, then selects display layers0x1c00.
- * The particular menu or scene shown by this overlay and the meaning of the eighteen stored state bits remain unconfirmed. No specific collectible, world or enemy is assigned.
- * Recovered from the persistent Ghidra caller chain and disassembly. */
 extern void func_0200672c(int enabled);
 void ConfigureOverlay088Display(void) {
     func_0200672c(0);

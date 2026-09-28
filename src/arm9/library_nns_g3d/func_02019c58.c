@@ -1,9 +1,3 @@
-/* Combines callback visibility values for enabled animation entries mapped to a node.
- * The middleware operation is supported by this body; its caller-specific use and any higher-level game meaning are not established here. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/g3d/auto/func_020161dc.c.
- * Original routine: func_020161dc. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,9 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
-
-
 
 typedef struct CPContext {
     u64 div_numer;
@@ -671,7 +662,6 @@ typedef struct NNSG3dVisAnmResult_ {
 } NNSG3dVisAnmResult;
 typedef void (*NNSG3dFuncAnmVis)(NNSG3dVisAnmResult *, const NNSG3dAnmObj *, u32);
 
-/* EvaluateVisibilityAnimationChain_02019c58 -- NitroSystem anm.c: NNSi_G3dAnmBlendVis. */
 BOOL EvaluateVisibilityAnimationChain_02019c58 (NNSG3dVisAnmResult * pResult, const NNSG3dAnmObj * pAnmObj, u32 nodeID)
 {
     BOOL rval = FALSE;

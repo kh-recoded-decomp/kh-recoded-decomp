@@ -1,5 +1,3 @@
-/* Seeds the channel-selection generator from MAC words and the shared frame counter, resets measurement state, and starts the first allowed channel.
- * Independently reconstructed from BK9E ARM instructions and call relocations. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;

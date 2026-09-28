@@ -1,5 +1,3 @@
-/* Returns whether the shared alarm scheduler is active.
- * Reconstructed from BK9E instructions using the verified CC0 alarm layout. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;

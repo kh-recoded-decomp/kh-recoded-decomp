@@ -1,9 +1,3 @@
-/* Clears frame and sequence pointers, initializes the callback, and sets active forward playback at unit speed.
- * Uncertainty: This identifies a shared library operation; the particular scene, asset or gameplay caller using it is not established. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/g2d/calls/func_02011e74.c.
- * Original routine: func_02011e74. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -24,8 +18,7 @@ typedef volatile unsigned char vu8;
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
 
-
-#define FX32_ONE ((fx32) 0x0000000000001000L)         // 1.000000000000
+#define FX32_ONE ((fx32) 0x0000000000001000L)
 
 typedef s32 fx32;
 typedef enum {
@@ -189,7 +182,6 @@ typedef struct NNSG2dAnimController {
 void func_020151f4(NNSG2dAnimCallBackFunctor * pCallBack);
 extern void func_020151f4 (NNSG2dCallBackFunctor * pCallBack);
 
-/* G2D_InitializeAnimationController_020151b4 -- NitroSystem g2d_Animation.c: NNS_G2dInitAnimCtrl. */
 void G2D_InitializeAnimationController_020151b4 (NNSG2dAnimController * pAnimCtrl)
 {
 

@@ -1,9 +1,3 @@
-/* Rounds palette allocation size, selects low/high allocator, and returns an encoded key or error.
- * The middleware operation is supported by this body; its caller-specific use and any higher-level game meaning are not established here. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nitro/nns/calls/func_020111c0.c.
- * Original routine: func_020111c0. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned long u32;
 typedef int BOOL;
 

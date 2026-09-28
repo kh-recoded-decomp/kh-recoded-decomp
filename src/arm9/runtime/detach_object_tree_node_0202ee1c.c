@@ -1,8 +1,3 @@
-/* Unlinks an object from its parent child list and clears parent links from its children.
- * Evidence: Parent/first-child/next-sibling offsets and unlink operations in source.
- * Uncertainty: Object type is generic engine tree node.
- * Source: src/auto/func_0202a6d8.c from khdays-decomp, CC0, commit ab832f38b943c15f461228968a89002e1a99c03e. */
-
 void detach_object_tree_node_0202ee1c(int node) {
     int child, previousChild;
     if (*(int *)(node + 0xbc) != 0) {

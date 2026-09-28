@@ -1,4 +1,3 @@
-/* NitroSystem 2D graphics, as the library sources declare them (the NitroSDK / NitroSystem names). */
 #ifndef NNSYS_G2D_H
 #define NNSYS_G2D_H
 

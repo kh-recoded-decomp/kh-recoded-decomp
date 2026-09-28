@@ -1,4 +1,3 @@
-/* Decrements a resource-group count and releases entries from a tagged section when it reaches zero. Evidence: Source implementation directly performs the described operations; see src/calls/func_0202552c.c. Uncertainty: No material uncertainty for the stated operation; game-specific use may depend on callers. Recovered from Days source src/calls/func_0202552c.c; CC0, commit ab832f38b943c15f461228968a89002e1a99c03e. */
 typedef struct {
     int group_tag;
     int reference_count;

@@ -1,9 +1,3 @@
-/* Configures sound players from archive player metadata and allocates their configured heaps; returns false when setup fails.
- * Uncertainty: Archive-specific player roles are not established. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/snd/calls/func_0201c524.c.
- * Original routine: func_0201c524. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,7 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
 
 #define NNS_FND_HEAP_INVALID_HANDLE NULL
 #define NNS_SND_HEAP_INVALID_HANDLE NNS_FND_HEAP_INVALID_HANDLE
@@ -385,13 +378,11 @@ void func_0201d414(int playerNo, int seqCount);
 void func_0201d434(int playerNo, u32 chBitFlag);
 BOOL func_0201d44c(int playerNo, NNSSndHeapHandle heap, u32 size);
 
-/* func_0201fc9c -- NitroSystem sndarc_player.c: NNS_SndArcPlayerSetup. */
 BOOL func_0201fc9c (NNSSndHeapHandle heap)
 {
     NNSSndArc * arc = func_0201e9f0();
     int playerNo;
     const NNSSndArcPlayerInfo * playerInfo;
-
 
     for (playerNo = 0; playerNo < NNS_SND_PLAYER_NUM; ++playerNo) {
         playerInfo = func_0201ebf4(playerNo);

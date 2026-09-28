@@ -1,9 +1,3 @@
-/* Computes fixed-point arctangent(y/x) with quadrant handling and a lookup table.
- * This is a reusable Nitro/NitroSystem subsystem operation; a specific Re:coded gameplay caller or use is not inferred. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nitro/fx/calls/func_020050b4.c.
- * Original routine: func_020050b4. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -26,14 +20,11 @@ typedef volatile unsigned char vu8;
 
 #define offsetof(type, member) ((u32)&(((type *)0)->member))
 
-
-
 typedef s32 fx32;
 typedef s16 fx16;
 fx32 FX_Inv(fx32 numer, fx32 denom);
 extern const fx16 data_020526ec[128 + 1];
 
-/* FX_Atan2_02006124 -- NitroSDK fx_atan.c: FX_Atan2. */
 fx16 FX_Atan2_02006124 (fx32 y, fx32 x)
 {
 	fx32 a, b, c;

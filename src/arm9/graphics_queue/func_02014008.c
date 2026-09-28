@@ -1,5 +1,3 @@
-/* Based on src/calls/func_020115b8.c from Yokimitsuro/khdays-decomp, revision ab832f38b943c15f461228968a89002e1a99c03e (CC0-1.0). */
-/* Drains the queue; the budget unit and command formats remain unknown. */
 extern int *func_02013f74(int *queueState);
 extern int func_02013f94(int *queueState);
 extern void func_02013ee4(int *command, int underBudget);

@@ -1,9 +1,3 @@
-/* Temporarily switches the active sound archive and evicts matching cached file data when the freed memory overlaps the cache entry.
- * Uncertainty: The broader archive ownership policy is outside this routine. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/snd/calls/func_0201c254.c.
- * Original routine: func_0201c254. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,9 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
-
-
 
 extern OSIntrMode OS_DisableInterrupts(void);
 extern OSIntrMode OS_RestoreInterrupts(OSIntrMode state);
@@ -354,7 +345,6 @@ NNSSndArc * SND_SetActiveSlotSwap(NNSSndArc * arc);
 void * func_0201ee28(u32 fileId);
 void func_0201ee50(u32 fileId, void * address);
 
-/* func_0201f9cc -- NitroSystem sndarc_loader.c: DisposeCallback. */
 void func_0201f9cc (void * mem, NNSSndArc * arc, u32 fileId)
 {
     NNSSndArc * oldArc;

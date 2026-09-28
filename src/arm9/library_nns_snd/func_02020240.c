@@ -1,9 +1,3 @@
-/* Resolves stream metadata and opens the requested stream using its configured player, priority and start offset.
- * Uncertainty: No specific stream content is known. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/snd/calls/func_0201cac0.c.
- * Original routine: func_0201cac0. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,9 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
-
-
 
 typedef struct CPContext {
     u64 div_numer;
@@ -571,16 +562,13 @@ typedef struct NNSSndStrmPlayer {
 extern BOOL func_0202054c(NNSSndStrmHandle * handle, const NNSSndArcStrmInfo * strmInfo, int playerNo, int playerPrio, int strmNo, u32 offset, NNSSndStrmCallback strmCallback, void * strmCallbackArg, NNSSndArcStrmCallback sndArcStrmCallback, void * sndArcStrmCallbackArg);
 extern BOOL func_0202054c (struct NNSSndStrmHandle * handle, const NNSSndArcStrmInfo * strmInfo, int playerNo, int playerPrio, int strmNo, u32 offset, NNSSndStrmCallback strmCallback, void * strmCallbackArg, NNSSndArcStrmCallback sndArcStrmCallback, void * sndArcStrmCallbackArg);
 
-/* khdays: shared-bss */
-NNSSndStrmThread * sPrepareThread = 0;   /* sPrepareThread */
-BOOL data_0204ad8c = 0;   /* initialized$3434 */
-u8 * sDecodeBuffer = 0;   /* sDecodeBuffer */
+NNSSndStrmThread * sPrepareThread = 0;
+BOOL data_0204ad8c = 0;
+u8 * sDecodeBuffer = 0;
 
-/* func_02020240 -- NitroSystem sndarc_stream.c: NNS_SndArcStrmPrepare. */
 BOOL func_02020240 (struct NNSSndStrmHandle * handle, int strmNo, u32 offset)
 {
     const NNSSndArcStrmInfo * strmInfo;
-
 
     strmInfo = func_0201eb90(strmNo);
     if (strmInfo == NULL) return FALSE;

@@ -1,4 +1,3 @@
-/* Pops and returns the first node from a free list with interrupts disabled. Evidence: Source implementation directly performs the described operations; see src/calls/func_02008ba4.c. Uncertainty: No material uncertainty for the stated operation; game-specific use may depend on callers. Recovered from Days source src/calls/func_02008ba4.c; CC0, commit ab832f38b943c15f461228968a89002e1a99c03e. */
 extern int OS_DisableInterrupts();
 extern void OS_RestoreInterrupts(int interrupt_state);
 extern int *sound_command_manager[];

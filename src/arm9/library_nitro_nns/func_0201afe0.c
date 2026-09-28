@@ -1,9 +1,3 @@
-/* Builds a node base transform according to translation/rotation/scale and compensation flags.
- * The middleware operation is supported by this body; its caller-specific use and any higher-level game meaning are not established here. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nitro/nns/calls/func_02017404.c.
- * Original routine: func_02017404. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned long u32;
@@ -71,8 +65,7 @@ typedef struct NNSG3dRS {
 } NNSG3dRS;
 
 extern NNSG3dRS *data_0205ab60;
-/* pivotUtil_[9][4] (g3d_nsbca_pivot_table.c): the four off-pivot cells of a pivot-compressed
- * rotation, read one column at a time */
+
 extern const u8 data_020530f4[];
 #define data_02041ae1 (data_020530f4 + 1)
 #define data_02041ae2 (data_020530f4 + 2)

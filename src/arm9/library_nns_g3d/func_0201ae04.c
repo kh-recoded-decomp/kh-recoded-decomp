@@ -1,9 +1,3 @@
-/* Initializes a joint animation object map against model nodes.
- * The middleware operation is supported by this body; its caller-specific use and any higher-level game meaning are not established here. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/g3d/calls/func_02017224.c.
- * Original routine: func_02017224. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,9 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
-
-
 
 void MIi_CpuClear16(u16 data, void * destp, u32 size);
 static inline void MI_CpuFill16 (void * dest, u16 data, u32 size)
@@ -239,14 +230,12 @@ inline NNSG3dResNodeInfo * NNS_G3dGetNodeInfo (const NNSG3dResMdl * mdl)
         return NULL ;
 }
 
-/* InitializeJointAnimationMap_0201ae04 -- NitroSystem nsbca.c: NNSi_G3dAnmObjInitNsBca. */
 void InitializeJointAnimationMap_0201ae04 (NNSG3dAnmObj * pAnmObj, void * pResAnm, const NNSG3dResMdl * pResMdl)
 {
     u32 i;
     u16 * ofsArray;
     NNSG3dResJntAnm * jntAnm;
     const NNSG3dResNodeInfo * jnt;
-
 
     pAnmObj->resAnm = pResAnm;
     jntAnm = (NNSG3dResJntAnm *)pResAnm;
@@ -257,7 +246,6 @@ void InitializeJointAnimationMap_0201ae04 (NNSG3dAnmObj * pAnmObj, void * pResAn
     MI_CpuClear16(&pAnmObj->mapData[0], sizeof(u16) * pAnmObj->numMapData);
 
     ofsArray = (u16 *)((u8 *)jntAnm + sizeof(NNSG3dResJntAnm));
-
 
     for (i = 0; i < jntAnm->numNode; ++i)
     {

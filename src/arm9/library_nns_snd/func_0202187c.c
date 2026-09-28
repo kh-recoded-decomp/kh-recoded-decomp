@@ -1,9 +1,3 @@
-/* Returns a sequence-archive entry only when its index is in range and not the invalid sentinel.
- * Uncertainty: The archive and entry contents are unspecified. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/snd/auto/func_0201e0ec.c.
- * Original routine: func_0201e0ec. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,7 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
 
 #define NNS_SND_SEQ_ARC_INVALID_OFFSET 0xffffffff
 
@@ -59,7 +52,6 @@ typedef struct NNSSndSeqArc {
     NNSSndSeqArcSeqInfo info[0];
 } NNSSndSeqArc;
 
-/* func_0202187c -- NitroSystem seqdata.c: NNSi_SndSeqArcGetSeqInfo. */
 const NNSSndSeqArcSeqInfo * func_0202187c (const NNSSndSeqArc * seqArc, int index)
 {
 

@@ -1,9 +1,3 @@
-/* Returns indexed texture-pattern dictionary payload.
- * The middleware operation is supported by this body; its caller-specific use and any higher-level game meaning are not established here. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/g3d/auto/func_020171f0.c.
- * Original routine: func_020171f0. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,9 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
-
-
 
 typedef s16 fx16;
 typedef int (*MIDeviceReadFunction)(void * userdata, void * buffer, u32 offset, u32 length);
@@ -105,7 +96,6 @@ inline void * NNS_G3dGetResDataByIdx (const NNSG3dResDict * dict, u32 idx)
     }
 }
 
-/* GetTexturePatternAnimationEntry_0201add0 -- NitroSystem res_struct_accessor_anm.c: NNSi_G3dGetTexPatAnmDataByIdx. */
 const NNSG3dResDictTexPatAnmData * GetTexturePatternAnimationEntry_0201add0 (const NNSG3dResTexPatAnm * pPatAnm, u32 idx)
 {
     return (const NNSG3dResDictTexPatAnmData *)NNS_G3dGetResDataByIdx(&pPatAnm->dict, idx);

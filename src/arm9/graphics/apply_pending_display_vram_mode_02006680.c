@@ -1,8 +1,3 @@
-/* Marks a pending display configuration as consumed and updates DISPCNT bits 16-17 from the queued value or default bit.
- * Evidence: Global pending values and DISPCNT bit operations in source.
- * Uncertainty: Exact queued mode encoding is SDK-defined.
- * Source: src/calls/func_0200566c.c from khdays-decomp, CC0, commit ab832f38b943c15f461228968a89002e1a99c03e. */
-
 extern unsigned short data_02056f08;
 extern short data_02055c18;
 void apply_pending_display_vram_mode_02006680(void) {

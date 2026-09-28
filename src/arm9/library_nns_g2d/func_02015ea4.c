@@ -1,9 +1,3 @@
-/* Derives a background extended-palette slot from the background selector and its control-register palette-slot bit.
- * Uncertainty: This identifies a shared library operation; the particular scene, asset or gameplay caller using it is not established. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/g2d/calls/func_02012b6c.c.
- * Original routine: func_02012b6c. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -27,7 +21,7 @@ typedef volatile unsigned char vu8;
 #define offsetof(type, member) ((u32)&(((type *)0)->member))
 
 #define HW_IOREG 0x04000000
-#define HW_REG_BASE HW_IOREG        // alias
+#define HW_REG_BASE HW_IOREG
 #define REG_BG0CNT_OFFSET 0x008
 #define REG_BG1CNT_OFFSET 0x00a
 #define REG_G2_BG0CNT_BGPLTTSLOT_MASK 0x2000
@@ -56,10 +50,8 @@ typedef enum NNSG2dBGExtPlttSlot {
     NNS_G2D_BGEXTPLTTSLOT_SUB3
 } NNSG2dBGExtPlttSlot;
 
-/* the function's addrTable[]: the BGnCNT register offsets, owned by g2d_screen_tables.c */
 extern const u16 data_02052ffc[8];
 
-/* G2D_GetExtendedPaletteSlot_02015ea4 -- NitroSystem g2d_Screen.c: GetBGExtPlttSlot. */
 NNSG2dBGExtPlttSlot G2D_GetExtendedPaletteSlot_02015ea4 (NNSG2dBGSelect bg)
 {
     u32 addr;

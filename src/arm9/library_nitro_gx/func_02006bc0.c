@@ -1,10 +1,3 @@
-/* Reads the 3D vector matrix if geometry is idle; returns -1 while busy.
- * This is a reusable Nitro/NitroSystem subsystem operation; a specific Re:coded gameplay caller or use is not inferred. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nitro/gx/calls/G3X_GetVectorMtx.c.
- * Original routine: G3X_GetVectorMtx. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
-/* Reads back the vector matrix, but only while the geometry engine is idle; -1 otherwise. */
 extern void MI_Copy36B(const void *src, void *dst);
 
 int G3X_GetVectorMtx_02006bc0(void *dst) {

@@ -1,7 +1,3 @@
-/* Initializes a six-by-three collection of entries and applies one stored state bit to each entry.
- * Reads eighteen packed bits using state ID 0x1e05, then maps bits 17 down to 0 to entry IDs 6 through 23 in six rows of three. Each entry is selected and receives its zero/one state through ov027 helpers.
- * The particular menu or scene shown by this overlay and the meaning of the eighteen stored state bits remain unconfirmed. No specific collectible, world or enemy is assigned.
- * Recovered from the persistent Ghidra caller chain and disassembly. */
 typedef struct Overlay088GridSettings { int resource; int unknown[3]; } Overlay088GridSettings;
 extern const Overlay088GridSettings defaultGridSettings;
 extern const int gridEntryIds[6][3];

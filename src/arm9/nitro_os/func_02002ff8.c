@@ -1,11 +1,9 @@
-/* CC0 source: Yokimitsuro/khdays-decomp, revision ab832f38b943c15f461228968a89002e1a99c03e, libs/nitro/os/calls/OS_ReceiveMessage.c. */
 extern int OS_DisableInterrupts(void);
 extern void OS_RestoreInterrupts(int state);
 extern void func_02001f10(void *queue);
 extern void OS_WakeupThread(void *queue);
 extern long long func_02020400(int a, int b);
 
-/* Pops the oldest message. Without the blocking flag an empty queue fails instead of waiting. */
 int OS_ReceiveMessage(char *q, void **out, int flags) {
     int enabled = OS_DisableInterrupts();
     while (*(int *)(q + 0x1c) == 0) {

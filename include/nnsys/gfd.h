@@ -1,4 +1,3 @@
-/* NitroSystem graphics foundation: VRAM managers, as the library sources declare them (the NitroSDK / NitroSystem names). */
 #ifndef NNSYS_GFD_H
 #define NNSYS_GFD_H
 

@@ -1,7 +1,3 @@
-/* Removes a due alarm from the queue, calls its handler, reinserts periodic alarms, and schedules the next deadline.
- * Adapted CC0 C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nitro/os/calls/func_020036b0.c.
- * Built with the project pinned flags, without source pragmas. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -21,8 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
-
 
 typedef u64 OSTick;
 typedef int OSTimer;
@@ -66,7 +60,6 @@ static inline void OS_SetTimerControl(OSTimer id, u16 control)
     *((vu16 *)((u32)REG_TM0CNT_H_ADDR + id * 4)) = control;
 }
 
-
 extern u32 data_027e0000;
 #define HW_INTR_CHECK_BUF ((char *)&data_027e0000 + 0x3ff8)
 static inline void OS_SetIrqCheckFlag(OSIrqMask intr)
@@ -87,7 +80,6 @@ extern struct { u16 useAlarm; u16 pad; struct OSiAlarmQueue queue; } data_02056e
 extern void OSi_SetTimer(OSAlarm *alarm);
 extern void func_02004214(OSAlarm *alarm, OSTick fire);
 #define OSi_InsertAlarm func_02004214
-
 
 void DispatchDueAlarm_0200443c (void)
 {

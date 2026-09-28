@@ -1,9 +1,3 @@
-/* Evaluates mapped joint animation objects and combines their results by blend ratios.
- * The middleware operation is supported by this body; its caller-specific use and any higher-level game meaning are not established here. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nitro/nns/calls/func_02015df0.c.
- * Original routine: func_02015df0. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned long u32;

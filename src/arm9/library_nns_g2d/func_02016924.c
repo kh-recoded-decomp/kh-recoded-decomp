@@ -1,9 +1,3 @@
-/* Maps a character code to a glyph index through a direct offset, lookup table, or binary search.
- * Uncertainty: This identifies a shared library operation; the particular scene, asset or gameplay caller using it is not established. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/g2d/auto/func_020135e8.c.
- * Original routine: func_020135e8. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,7 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
 
 #define NNS_G2D_GLYPH_INDEX_NOT_FOUND 0xFFFF
 
@@ -54,11 +47,9 @@ typedef struct NNSG2dFontCodeMap {
     u16 mapInfo[];
 } NNSG2dFontCodeMap;
 
-/* G2D_MapCharacterCode_02016924 -- NitroSystem g2d_Font.c: GetGlyphIndex. */
 u16 G2D_MapCharacterCode_02016924 (const NNSG2dFontCodeMap * pMap, u16 c)
 {
     u16 index = NNS_G2D_GLYPH_INDEX_NOT_FOUND;
-
 
     switch (pMap->mappingMethod) {
     case NNS_G2D_MAPMETHOD_DIRECT:

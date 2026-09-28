@@ -1,9 +1,3 @@
-/* Clears texture and palette binding state on every model in a model set.
- * The middleware operation is supported by this body; its caller-specific use and any higher-level game meaning are not established here. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/g3d/calls/func_0201559c.c.
- * Original routine: func_0201559c. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,9 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
-
-
 
 typedef s32 fx32;
 typedef s16 fx16;
@@ -149,7 +140,6 @@ inline NNSG3dResMdl * NNS_G3dGetMdlByIdx (const NNSG3dResMdlSet * mdlSet, u32 id
 extern void func_02018c84 (NNSG3dResMdl * pMdl);
 extern void func_02018ee8 (NNSG3dResMdl * pMdl);
 
-/* ClearModelSetBindings_0201901c -- NitroSystem kernel.c: NNS_G3dReleaseMdlSet. */
 void ClearModelSetBindings_0201901c (NNSG3dResMdlSet * pMdlSet)
 {
     u32 i;

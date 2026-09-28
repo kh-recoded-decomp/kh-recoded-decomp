@@ -1,4 +1,3 @@
-/* Adapted from CC0 khdays-decomp, revision ab832f38b943c15f461228968a89002e1a99c03e. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -20,8 +19,6 @@ typedef volatile unsigned char vu8;
 #define HW_MAIN_MEM 0x02000000
 
 #define offsetof(type, member) ((u32)&(((type *)0)->member))
-
-
 
 typedef enum {
     NNS_SND_CAPTURE_FORMAT_PCM16,
@@ -61,10 +58,8 @@ typedef struct CaptureParam {
 } CaptureParam;
 extern CaptureParam data_0205e290;
 
-/* khdays: shared-bss */
 extern volatile BOOL data_0205e248;
 
-/* func_0201e524 -- NitroSystem capture.c: NNSi_SndCaptureInit. */
 void func_0201e524 (void)
 {
     data_0205e248 = FALSE;

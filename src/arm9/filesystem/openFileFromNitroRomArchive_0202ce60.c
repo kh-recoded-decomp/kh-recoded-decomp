@@ -1,8 +1,3 @@
-/* Behavior: Opens a file directly from a Nitro ROM archive table.
- * Inputs/outputs and evidence: Decodes archive base, file index, start sector and stored length, then calls FS_OpenFileDirect.
- * Uncertainty: ROM header offsets and bit fields follow the Nintendo DS archive layout; archive identity is not known.
- * Source: khdays-decomp/src/calls/func_020250bc.c; CC0, commit ab832f38b943c15f461228968a89002e1a99c03e.
- */
 typedef int BOOL;
 typedef int s32;
 typedef short s16;

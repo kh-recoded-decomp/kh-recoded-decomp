@@ -1,7 +1,3 @@
-/* Initializes an embedded state block and configures its shared handler with a four-pair settings block.
- * Copies four pairs of16-bit settings, resolves handler0x1a, initializes context+0x34, supplies constants6,4,2,0x209 to shared setup functions, and marks handler0x1a.
- * The particular menu or scene shown by this overlay and the meaning of the eighteen stored state bits remain unconfirmed. No specific collectible, world or enemy is assigned.
- * Recovered from the persistent Ghidra caller chain and disassembly. */
 typedef struct Overlay088Pair { short first, second; } Overlay088Pair;
 typedef struct Overlay088PairSettings { Overlay088Pair entries[4]; } Overlay088PairSettings;
 extern const Overlay088PairSettings defaultPairSettings;

@@ -1,8 +1,3 @@
-/* Visits sixteen-byte records whose word at offset twelve is nonzero and invokes their cleanup helper.
- * Higher-level purpose remains unclassified. Recovered CC0 C from
- * Yokimitsuro/khdays-decomp, ab832f38b943c15f461228968a89002e1a99c03e,
- * src/overlays/ov026/calls/func_ov026_02083504.c. */
-
 extern void func_020b8134(int ctx, int element);
 struct Elem2 { unsigned char _pad[0xc]; int field_c; };
 struct Ctx2 { unsigned char _0[0x14]; struct Elem2 *items; unsigned char _1[0x20]; int count; };

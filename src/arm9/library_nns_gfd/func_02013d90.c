@@ -1,9 +1,3 @@
-/* Returns next circular-queue index, incrementing and wrapping at queue length.
- * This small internal queue helper computes the wraparound index; its original SDK identifier is uncertain, so the target address-based name is retained. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/gfd/calls/func_02011358.c.
- * Original routine: func_02011358. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,9 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
-
-
 
 typedef enum {
     TP_REQUEST_COMMAND_SAMPLING         = 0x0,
@@ -170,7 +161,6 @@ typedef struct NNSGfdVramTransferTaskQueue {
     u32 totalSize;
 } NNSGfdVramTransferTaskQueue;
 
-/* func_02013d90 -- NitroSystem gfd_VramTransferManager.c: GetNextIndex_. */
 u16 func_02013d90 (const NNSGfdVramTransferTaskQueue * pQueue, u16 idx)
 {
     return (u16)((idx + 1) % pQueue->lengthOfArray);

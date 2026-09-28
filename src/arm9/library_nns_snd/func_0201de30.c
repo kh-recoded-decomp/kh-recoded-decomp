@@ -1,9 +1,3 @@
-/* Releases a sequence player’s handle and heap/list associations, stops its active state and returns it to the free-player list.
- * Uncertainty: No game-facing player identity is known. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/snd/calls/func_0201a80c.c.
- * Original routine: func_0201a80c. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,9 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
-
-
 
 typedef enum {
     SND_DUTY_1_8,
@@ -188,11 +179,9 @@ typedef struct NNSSndPlayerHeap {
 extern NNSFndList data_0205d8ac;
 extern NNSFndList data_0205d8a0;
 
-/* func_0201de30 -- NitroSystem player.c: ShutdownPlayer. */
 void func_0201de30 (NNSSndSeqPlayer * seqPlayer)
 {
     NNSSndPlayer * player;
-
 
     if (seqPlayer->handle != NULL) {
         seqPlayer->handle->player = NULL;

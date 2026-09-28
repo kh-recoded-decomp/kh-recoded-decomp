@@ -1,15 +1,7 @@
-/* Unlinks cleanup records whose callback or argument lies inside the overlay image, invokes the collected callbacks, and repeats until none remain.
- * Uncertainty: This identifies a shared library operation; the particular scene, asset or gameplay caller using it is not established. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nitro/fs/calls/FS_EndOverlay.c.
- * Original routine: FS_EndOverlay. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 extern int OS_DisableInterrupts(void);
 extern void OS_RestoreInterrupts(int state);
 extern char *data_0205fdc0;
 
-/* Runs (and unregisters) every destructor whose entry lives inside the overlay being unloaded.
- * Rescans from scratch after each pass because a destructor may register more of them. */
 void FS_RunOverlayCleanupCallbacks_0200bc64(char *overlay) {
     char *collected;
     char *last;

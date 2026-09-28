@@ -1,9 +1,3 @@
-/* Sets DISPCNT display/background modes and BG0 2D/3D selection, respecting display-enabled state.
- * This is a reusable Nitro/NitroSystem subsystem operation; a specific Re:coded gameplay caller or use is not inferred. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nitro/gx/calls/func_020056b4.c.
- * Original routine: func_020056b4. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -28,7 +22,7 @@ typedef volatile unsigned char vu8;
 
 #define GX_DISPMODE_OFF ((GXDispMode)0x00)
 #define HW_IOREG 0x04000000
-#define HW_REG_BASE HW_IOREG        // alias
+#define HW_REG_BASE HW_IOREG
 #define REG_DISPCNT_OFFSET 0x000
 #define REG_DISPCNT_ADDR (HW_REG_BASE + REG_DISPCNT_OFFSET)
 #define reg_GX_DISPCNT (*( REGType32v *) REG_DISPCNT_ADDR)
@@ -65,11 +59,9 @@ typedef enum {
 extern u16 data_02056f08;
 extern u16 data_02055c18;
 
-/* GX_SetGraphicsMode_020066c4 -- NitroSDK gx.c: GX_SetGraphicsMode. */
 void GX_SetGraphicsMode_020066c4 (GXDispMode dispMode, GXBGMode bgMode, GXBG0As bg0_2d3d)
 {
 	u32 cnt = reg_GX_DISPCNT;
-
 
 	data_02056f08 = (u16)dispMode;
 	if (!data_02055c18) {

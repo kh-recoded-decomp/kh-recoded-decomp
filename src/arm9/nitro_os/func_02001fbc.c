@@ -1,5 +1,3 @@
-/* CC0 source: Yokimitsuro/khdays-decomp, revision ab832f38b943c15f461228968a89002e1a99c03e, libs/nitro/os/auto/OS_ResetRequestIrqMask.c. */
-/* IME is read back before being restored: the hardware needs the read to settle. */
 static inline unsigned OS_DisableInterrupts(void) {
     volatile unsigned short *ime = (volatile unsigned short *)0x04000208;
     unsigned old = *ime;

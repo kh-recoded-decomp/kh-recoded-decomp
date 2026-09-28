@@ -1,18 +1,3 @@
-/* runMovieSlotState_020a8730: advance one MobiClip movie slot by one state-machine step.
- *
- * The routine handles startup, decode refill, queue drain and final alarm shutdown. It returns
- * nonzero when the slot reports completion. The stop flag read from the shared movie globals is
- * at byte offset +0x58 in this overlay copy (the adapted CC0 reference used +0xe4).
- *
- * Adapted from CC0 MobiClip source in Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, src/overlays/ov024/calls/func_ov024_02084c24.c.
- *
- * MobiClip: run one slot's state machine, one call per turn.
- *
- * The states are: 0 idle, 1 starting, 2 decoding, 3 catching up, 4 draining,
- * 5 waiting for the last frame, 6 finished. Reports non-zero only when the
- * slot has nothing left to do, which is what the teardown polls for.
- */
 typedef unsigned char u8;
 typedef unsigned int u32;
 typedef unsigned long long u64;
@@ -100,7 +85,6 @@ int runMovieSlotState_020a8730(struct MobiClipFrameTimer *pTimer)
         }
         pTimer->nState = 2;
         OS_SetAlarm(pTimer->alarm, 0, (void *)&func_ov024_0208421c, pTimer);
-        /* fall through */
 
     case 2:
         if (func_ov024_02085014(pTimer->pStream) == 0
@@ -113,7 +97,6 @@ int runMovieSlotState_020a8730(struct MobiClipFrameTimer *pTimer)
             return 0;
         }
         pTimer->nState = 3;
-        /* fall through */
 
     case 3:
         if (pTimer->nDecoded - pTimer->nConsumed < QUEUE_DEPTH) {

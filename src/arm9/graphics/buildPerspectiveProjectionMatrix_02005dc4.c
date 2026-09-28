@@ -1,15 +1,9 @@
-/* Behavior: Builds the 3D camera perspective: field of view, screen proportions, and near/far visibility limits.
- * Inputs/outputs and evidence: Computes leftFactor cotangent from sine/cosine, uses aspect and near/far values, and fills leftFactor 4 by 4 projection matrix.
- * Uncertainty: The exact projection convention and scaleW purpose are inferred from matrix equations; some helper names remain address based.
- * Source: khdays-decomp/src/calls/func_02004d60.c; CC0, commit ab832f38b943c15f461228968a89002e1a99c03e.
- */
 typedef signed int s32;
 typedef unsigned int u32;
 typedef signed long long s64;
 typedef unsigned long long u64;
 typedef s32 fx32;
 typedef s64 fx64c;
-
 
 extern fx32 FX_Inv(fx32 numerator, fx32 denominator);
 extern fx64c func_01ff9d30(void);
@@ -22,7 +16,6 @@ typedef struct {
     fx32 _20, _21, _22, _23;
     fx32 _30, _31, _32, _33;
 } MtxFx44;
-
 
 static inline void CP_SetDivImm64_64_NS_(u64 numerator, u64 denominator)
 {

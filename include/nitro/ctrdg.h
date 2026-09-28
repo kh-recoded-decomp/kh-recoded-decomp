@@ -1,4 +1,3 @@
-/* The cartridge slot, as the library sources declare them (the NitroSDK / NitroSystem names). */
 #ifndef NITRO_CTRDG_H
 #define NITRO_CTRDG_H
 
@@ -20,19 +19,19 @@ struct CTRDGWork;
 #define CTRDG_PXI_COMMAND_INIT_MODULE_INFO 0x0001
 
 typedef struct {
-    u32 startAddress;             /* 0x00 */
-    u8 nintendoLogo[0x9c];        /* 0x04 */
-    char titleName[12];           /* 0xa0 */
-    u32 gameCode;                 /* 0xac */
-    u16 makerCode;                /* 0xb0 */
-    u8 isRomCode;                 /* 0xb2 */
-    u8 machineCode;               /* 0xb3 */
-    u8 deviceType;                /* 0xb4 */
-    u8 exLsiID[3];                /* 0xb5 */
-    u8 reserved_A[4];             /* 0xb8 */
-    u8 softVersion;               /* 0xbc */
-    u8 complement;                /* 0xbd */
-    u16 moduleID;                 /* 0xbe */
+    u32 startAddress;
+    u8 nintendoLogo[0x9c];
+    char titleName[12];
+    u32 gameCode;
+    u16 makerCode;
+    u8 isRomCode;
+    u8 machineCode;
+    u8 deviceType;
+    u8 exLsiID[3];
+    u8 reserved_A[4];
+    u8 softVersion;
+    u8 complement;
+    u16 moduleID;
 } CTRDGHeader;
 
 typedef struct {
@@ -48,13 +47,13 @@ typedef struct {
 } CTRDGModuleID;
 
 typedef struct {
-    CTRDGModuleID moduleID;       /* 0x00 */
-    u8 exLsiID[3];                /* 0x02 */
-    u8 isAgbCartridge :1;         /* 0x05 bit 0 */
-    u8 detectPullOut :1;          /* 0x05 bit 1 */
+    CTRDGModuleID moduleID;
+    u8 exLsiID[3];
+    u8 isAgbCartridge :1;
+    u8 detectPullOut :1;
     u8 :0;
-    u16 makerCode;                /* 0x06 */
-    u32 gameCode;                 /* 0x08 */
+    u16 makerCode;
+    u32 gameCode;
 } CTRDGModuleInfo;
 
 typedef struct CTRDGRomCycle {

@@ -1,9 +1,3 @@
-/* Initializes sound-heap section list state, stores the backing frame-heap handle and creates the initial section.
- * Uncertainty: The heap’s allocated asset types are unknown. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/snd/calls/func_0201bb38.c.
- * Original routine: func_0201bb38. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -64,7 +58,6 @@ typedef struct NNSSndHeapSection {
 extern BOOL func_0201f2bc(NNSSndHeap * heap);
 extern BOOL func_0201f2bc (NNSSndHeap * heap);
 
-/* func_0201f288 -- NitroSystem heap.c: InitHeap. */
 BOOL func_0201f288 (NNSSndHeap * heap, NNSFndHeapHandle handle)
 {
     NNS_FND_INIT_LIST(&heap->sectionList, NNSSndHeapSection, link);

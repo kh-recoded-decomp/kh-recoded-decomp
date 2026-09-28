@@ -1,4 +1,3 @@
-/* The real-time clock, as the library sources declare them (the NitroSDK / NitroSystem names). */
 #ifndef NITRO_RTC_H
 #define NITRO_RTC_H
 
@@ -34,10 +33,10 @@ typedef void (*RTCCallback) (RTCResult result, void * arg);
 typedef int RTCWeek;
 
 typedef struct RTCDate {
-    u32 year;                     /* 0x00: since 2000 */
-    u32 month;                    /* 0x04 */
-    u32 day;                      /* 0x08 */
-    RTCWeek week;                 /* 0x0c */
+    u32 year;
+    u32 month;
+    u32 day;
+    RTCWeek week;
 } RTCDate;
 
 typedef int RTCPxiResult;
@@ -164,14 +163,14 @@ typedef union RTCRawData {
 } RTCRawData;
 
 typedef struct RTCWork {
-    u32 lock;                     /* 0x00 */
-    RTCCallback callback;         /* 0x04 */
-    void *buffer[2];              /* 0x08 */
-    void *callbackArg;            /* 0x10 */
-    u32 sequence;                 /* 0x14 */
-    u32 index;                    /* 0x18 */
-    RTCInterrupt interrupt;       /* 0x1c */
-    RTCResult commonResult;       /* 0x20 */
+    u32 lock;
+    RTCCallback callback;
+    void *buffer[2];
+    void *callbackArg;
+    u32 sequence;
+    u32 index;
+    RTCInterrupt interrupt;
+    RTCResult commonResult;
 } RTCWork;
 
 #endif

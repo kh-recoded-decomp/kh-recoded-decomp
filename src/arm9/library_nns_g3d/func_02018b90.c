@@ -1,9 +1,3 @@
-/* Matches model texture names to resource entries and applies texture parameters and VRAM keys.
- * The middleware operation is supported by this body; its caller-specific use and any higher-level game meaning are not established here. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/g3d/calls/func_020150f4.c.
- * Original routine: func_020150f4. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,9 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
-
-
 
 typedef s32 fx32;
 typedef s16 fx16;
@@ -296,14 +287,12 @@ inline NNSG3dResDictTexData * NNS_G3dGetTexDataByName (const NNSG3dResTex * tex,
 }
 extern void func_020189a8 (NNSG3dResMat * pMat, NNSG3dResDictTexToMatIdxData * pBindData, const NNSG3dResTex * pTex, const NNSG3dResDictTexData * pTexData);
 
-/* BindTexturesForModel_02018b90 -- NitroSystem kernel.c: NNS_G3dBindMdlTex. */
 BOOL BindTexturesForModel_02018b90 (NNSG3dResMdl * pMdl, const NNSG3dResTex * pTex)
 {
     NNSG3dResMat * mat;
     NNSG3dResDict * dictTex;
     u32 i;
     BOOL result = TRUE;
-
 
     mat = NNS_G3dGetMat(pMdl);
     dictTex = (NNSG3dResDict *)((u8 *)mat + mat->ofsDictTexToMatList);

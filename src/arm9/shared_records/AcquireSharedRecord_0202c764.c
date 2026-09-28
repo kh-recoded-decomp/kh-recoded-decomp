@@ -1,7 +1,3 @@
-/* Reuses an occupied record by incrementing its count or initializes a record and stores its payload at offset 0x14.
- * Two target address calculations use payload offset 0x14 rather than the Days offset 0x10; the related acquire routine has the same layout.
- * Adapted CC0 C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, src/calls/func_0201f468.c. */
 extern void *func_0202c6cc(int a, int b);
 extern int func_0202c364(int a, int b);
 extern void func_02021e60(void *dst, int src);

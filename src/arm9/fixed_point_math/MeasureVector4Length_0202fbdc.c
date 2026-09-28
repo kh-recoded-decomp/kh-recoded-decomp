@@ -1,4 +1,3 @@
-/* Computes the fixed-point length of a four-component vector. Evidence: Source implementation directly performs the described operations; see src/calls/func_0202f430.c. Uncertainty: No material uncertainty for the stated operation; game-specific use may depend on callers. Recovered from Days source src/calls/func_0202f430.c; CC0, commit ab832f38b943c15f461228968a89002e1a99c03e. */
 extern int FX_Sqrt(int unknown_argument_x);
 
 int MeasureVector4Length_0202fbdc(int *vector)

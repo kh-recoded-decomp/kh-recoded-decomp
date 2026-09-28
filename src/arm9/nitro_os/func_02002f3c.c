@@ -1,4 +1,3 @@
-/* CC0 source: Yokimitsuro/khdays-decomp, revision ab832f38b943c15f461228968a89002e1a99c03e, libs/nitro/os/auto/OS_InitMessageQueue.c. */
 void OS_InitMessageQueue(int *r0, int r1, int r2)
 {
     r0[1] = 0;

@@ -1,9 +1,3 @@
-/* Clears render-object state and assigns blend callbacks and model pointer.
- * The middleware operation is supported by this body; its caller-specific use and any higher-level game meaning are not established here. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/g3d/calls/func_02014b5c.c.
- * Original routine: func_02014b5c. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -25,8 +19,6 @@ typedef volatile unsigned char vu8;
 #define HW_MAIN_MEM 0x02000000
 
 #define offsetof(type, member) ((u32)&(((type *)0)->member))
-
-
 
 void func_01ff86fc(u32 data, void * destp, u32 size);
 static inline void MI_CpuFill32 (void * dest, u32 data, u32 size)
@@ -247,7 +239,6 @@ extern NNSG3dFuncAnmBlendMat data_02055d10;
 extern NNSG3dFuncAnmBlendJnt data_02055d0c;
 extern NNSG3dFuncAnmBlendVis data_02055d08;
 
-/* InitializeRenderObject_020185ec -- NitroSystem kernel.c: NNS_G3dRenderObjInit. */
 void InitializeRenderObject_020185ec (NNSG3dRenderObj * pRenderObj, NNSG3dResMdl * pResMdl)
 {
 

@@ -1,5 +1,3 @@
-/* Independent reconstruction of a straight-line leaf from BK9E instructions.
- * Higher-level field and return meanings remain unclassified. */
 typedef unsigned int u32;
 u32 BindMovieReaderToFileContext_020aa130(u32 reader, u32 fileContext) {
     *(u32 *)((reader + 0xcU)) = fileContext;

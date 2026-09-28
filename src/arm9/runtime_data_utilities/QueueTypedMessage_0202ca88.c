@@ -1,4 +1,3 @@
-/* Fills a typed message with an ID and two values, then sends it to a queue. Evidence: Source implementation directly performs the described operations; see src/calls/func_0201f70c.c. Uncertainty: No material uncertainty for the stated operation; game-specific use may depend on callers. Recovered from Days source src/calls/func_0201f70c.c; CC0, commit ab832f38b943c15f461228968a89002e1a99c03e. */
 extern void *func_0202b810(void);
 extern void OS_SendMessage(void *queue, void *message, int flags);
 

@@ -1,7 +1,3 @@
-/* Runs matrix-processing helper calls on selected blocks according to three flag bits.
- * Evidence: Bit tests and helper call block indices/counts in source.
- * Uncertainty: Underlying block formats are opaque.
- * Source: src/calls/func_01ffa13c.c from khdays-decomp, CC0, commit ab832f38b943c15f461228968a89002e1a99c03e. */
 extern void func_01ffa37c();
 void func_01ffa5b0(unsigned int *blocks)
 {

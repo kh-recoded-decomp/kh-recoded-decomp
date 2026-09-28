@@ -1,7 +1,3 @@
-/* Passes an output buffer and a helper-selected resource to another helper, then returns the buffer.
- * Higher-level purpose remains unclassified. Recovered CC0 C from
- * Yokimitsuro/khdays-decomp, ab832f38b943c15f461228968a89002e1a99c03e,
- * src/overlays/ov025/calls/func_ov025_02089908.c. */
 extern int func_020ba2a8();
 extern void func_0202e09c();
 

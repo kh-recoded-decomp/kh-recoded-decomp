@@ -1,4 +1,3 @@
-/* Memory interface: copies, fills, DMA, as the library sources declare them (the NitroSDK / NitroSystem names). */
 #ifndef NITRO_MI_H
 #define NITRO_MI_H
 
@@ -118,14 +117,14 @@ typedef struct {
     } while (0)
 
 typedef struct {
-    volatile BOOL isBusy;         /* 0x00 */
-    u32 dmaNo;                    /* 0x04 */
-    u32 src;                      /* 0x08 */
-    u32 length;                   /* 0x0c */
-    MIDmaCallback callback;       /* 0x10 */
-    void *arg;                    /* 0x14 */
-    int fifoCond;                 /* 0x18: GXFifoIntrCond */
-    void (*fifoFunc)(void);       /* 0x1c */
+    volatile BOOL isBusy;
+    u32 dmaNo;
+    u32 src;
+    u32 length;
+    MIDmaCallback callback;
+    void *arg;
+    int fifoCond;
+    void (*fifoFunc)(void);
 } MIiGXDmaParams;
 
 #define MINOBJSIZE      (HEADERSIZE + ALIGNMENT)

@@ -1,9 +1,3 @@
-/* Fills a rectangular area within a character tile while preserving pixels outside it, using four-bit or eight-bit packed color masks.
- * Uncertainty: This identifies a shared library operation; the particular scene, asset or gameplay caller using it is not established. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/g2d/calls/func_02013900.c.
- * Original routine: func_02013900. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -123,7 +117,6 @@ typedef struct NNSG2dCharCanvas {
     const NNSiG2dCharCanvasVTable * vtable;
 } NNSG2dCharCanvas;
 
-/* G2D_FillCharacterRectangle_02016d94 -- NitroSystem g2d_CharCanvas.c: ClearChar. */
 void G2D_FillCharacterRectangle_02016d94 (void * pChar, int x, int y, int w, int h, u32 cl8, int bpp)
 {
 

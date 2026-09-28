@@ -1,4 +1,3 @@
-/* Tries one selected handler for an event, then a second handler if the first returns unhandled. Evidence: Source implementation directly performs the described operations; see src/overlays/ov008/calls/func_ov008_020519b0.c. Uncertainty: No material uncertainty for the stated operation; game-specific use may depend on callers. Recovered from Days source src/overlays/ov008/calls/func_ov008_020519b0.c; CC0, commit ab832f38b943c15f461228968a89002e1a99c03e. */
 extern int func_020bcd98(void *method, int handler_argument);
 extern int active_handler_indices[];
 struct ov008_disp { char *obj; int _pad; };

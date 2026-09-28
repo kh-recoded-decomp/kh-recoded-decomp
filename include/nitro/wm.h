@@ -1,4 +1,3 @@
-/* The wireless manager, as the library sources declare them (the NitroSDK / NitroSystem names). */
 #ifndef NITRO_WM_H
 #define NITRO_WM_H
 
@@ -149,29 +148,29 @@ enum {
 typedef int WMApiid;
 
 typedef struct WMParentParam {
-    u16 *userGameInfo;            /* 0x00 */
-    u16 userGameInfoLength;       /* 0x04 */
-    u16 padding;                  /* 0x06 */
-    u32 ggid;                     /* 0x08 */
-    u16 tgid;                     /* 0x0c */
-    u16 entryFlag;                /* 0x0e */
-    u16 maxEntry;                 /* 0x10 */
-    u16 multiBootFlag;            /* 0x12 */
-    u16 KS_Flag;                  /* 0x14 */
-    u16 CS_Flag;                  /* 0x16 */
-    u16 beaconPeriod;             /* 0x18 */
-    u16 rsv1[8];                  /* 0x1a */
-    u16 rsv2[4];                  /* 0x2a */
-    u16 channel;                  /* 0x32 */
-    u16 parentMaxSize;            /* 0x34 */
-    u16 childMaxSize;             /* 0x36 */
-    u16 rsv[4];                   /* 0x38 */
+    u16 *userGameInfo;
+    u16 userGameInfoLength;
+    u16 padding;
+    u32 ggid;
+    u16 tgid;
+    u16 entryFlag;
+    u16 maxEntry;
+    u16 multiBootFlag;
+    u16 KS_Flag;
+    u16 CS_Flag;
+    u16 beaconPeriod;
+    u16 rsv1[8];
+    u16 rsv2[4];
+    u16 channel;
+    u16 parentMaxSize;
+    u16 childMaxSize;
+    u16 rsv[4];
 } WMParentParam;
 
 #define WM_PARENT_PARAM_SIZE 64
 
 typedef struct WMBssDesc {
-    u16 length;                   /* 0x00: in halfwords */
+    u16 length;
     u16 rssi;
     u8 bssid[6];
     u16 ssidLength;
@@ -189,10 +188,10 @@ typedef struct WMBssDesc {
 } WMBssDesc;
 
 typedef struct WMScanParam {
-    WMBssDesc *scanBuf;           /* 0x00 */
-    u16 channel;                  /* 0x04 */
-    u16 maxChannelTime;           /* 0x06 */
-    u8 bssid[6];                  /* 0x08 */
+    WMBssDesc *scanBuf;
+    u16 channel;
+    u16 maxChannelTime;
+    u8 bssid[6];
     u16 rsv[9];
 } WMScanParam;
 
@@ -215,78 +214,78 @@ typedef struct WMStartConnectReq {
 } WMStartConnectReq;
 
 typedef struct WMStatus {
-    u16 state;                    /* 0x000 */
-    u16 BusyApiid;                /* 0x002 */
-    BOOL apiBusy;                 /* 0x004 */
-    BOOL scan_continue;           /* 0x008 */
-    BOOL mp_flag;                 /* 0x00c */
-    BOOL dcf_flag;                /* 0x010 */
-    BOOL ks_flag;                 /* 0x014 */
-    BOOL dcf_sendFlag;            /* 0x018 */
-    BOOL VSyncFlag;               /* 0x01c */
-    u8 wlVersion[8];              /* 0x020 */
-    u16 macVersion;               /* 0x028 */
-    u16 rfVersion;                /* 0x02a */
-    u16 bbpVersion[2];            /* 0x02c */
-    u16 mp_parentSize;            /* 0x030 */
-    u16 mp_childSize;             /* 0x032 */
-    u16 mp_parentMaxSize;         /* 0x034 */
-    u16 mp_childMaxSize;          /* 0x036 */
-    u16 mp_sendSize;              /* 0x038 */
-    u16 mp_recvSize;              /* 0x03a */
-    u16 mp_maxSendSize;           /* 0x03c */
-    u16 mp_maxRecvSize;           /* 0x03e */
+    u16 state;
+    u16 BusyApiid;
+    BOOL apiBusy;
+    BOOL scan_continue;
+    BOOL mp_flag;
+    BOOL dcf_flag;
+    BOOL ks_flag;
+    BOOL dcf_sendFlag;
+    BOOL VSyncFlag;
+    u8 wlVersion[8];
+    u16 macVersion;
+    u16 rfVersion;
+    u16 bbpVersion[2];
+    u16 mp_parentSize;
+    u16 mp_childSize;
+    u16 mp_parentMaxSize;
+    u16 mp_childMaxSize;
+    u16 mp_sendSize;
+    u16 mp_recvSize;
+    u16 mp_maxSendSize;
+    u16 mp_maxRecvSize;
     u8 reserved40[0x72 - 0x40];
-    u16 mp_recvBufSize;           /* 0x072 */
-    void *mp_recvBuf[2];          /* 0x074 */
-    u32 *mp_sendBuf;              /* 0x07c */
-    u16 mp_sendBufSize;           /* 0x080 */
-    u16 mp_ackTime;               /* 0x082 */
-    u16 mp_waitAckFlag;           /* 0x084 */
-    u16 mp_readyBitmap;           /* 0x086 */
+    u16 mp_recvBufSize;
+    void *mp_recvBuf[2];
+    u32 *mp_sendBuf;
+    u16 mp_sendBufSize;
+    u16 mp_ackTime;
+    u16 mp_waitAckFlag;
+    u16 mp_readyBitmap;
     u8 reserved88[0x9c - 0x88];
-    u16 mp_ignoreSizePrecheckMode;   /* 0x09c */
+    u16 mp_ignoreSizePrecheckMode;
     u8 reserved9e[0xbc - 0x9e];
-    u16 linkLevel;                /* 0x0bc */
-    u16 minRssi;                  /* 0x0be */
-    u16 rssiCounter;              /* 0x0c0 */
-    u16 beaconIndicateFlag;       /* 0x0c2 */
-    u16 wepKeyId;                 /* 0x0c4 */
-    u16 pwrMgtMode;               /* 0x0c6 */
+    u16 linkLevel;
+    u16 minRssi;
+    u16 rssiCounter;
+    u16 beaconIndicateFlag;
+    u16 wepKeyId;
+    u16 pwrMgtMode;
     u8 reservedc8[0xe0 - 0xc8];
-    u8 MacAddress[6];             /* 0x0e0 */
-    u16 mode;                     /* 0x0e6 */
-    WMParentParam pparam;         /* 0x0e8 */
-    u8 childMacAddress[15][6];    /* 0x128 */
-    u16 child_bitmap;             /* 0x182 */
-    void *pInfoBuf;               /* 0x184 */
-    u16 aid;                      /* 0x188 */
-    u8 parentMacAddress[6];       /* 0x18a */
-    u16 scan_channel;             /* 0x190 */
+    u8 MacAddress[6];
+    u16 mode;
+    WMParentParam pparam;
+    u8 childMacAddress[15][6];
+    u16 child_bitmap;
+    void *pInfoBuf;
+    u16 aid;
+    u8 parentMacAddress[6];
+    u16 scan_channel;
     u8 reserved192[0x800 - 0x192];
 } WMStatus;
 
 typedef struct WMArm7Buf {
-    WMStatus *status;             /* 0x00 */
+    WMStatus *status;
     u8 reserved_a[4];
-    u32 *fifo7to9;                /* 0x08 */
+    u32 *fifo7to9;
     u8 reserved_b[0x2f4];
 } WMArm7Buf;
 
 typedef struct WMArm9Buf {
-    WMArm7Buf *WM7;               /* 0x000 */
-    WMStatus *status;             /* 0x004 */
-    u32 *indbuf;                  /* 0x008 */
-    u32 *fifo9to7;                /* 0x00c */
-    u32 *fifo7to9;                /* 0x010 */
-    u16 dmaNo;                    /* 0x014 */
-    u16 scanOnlyFlag;             /* 0x016 */
-    WMCallbackFunc CallbackTable[WM_NUM_OF_CALLBACK];   /* 0x018 */
-    WMCallbackFunc indCallback;                         /* 0x0c8 */
-    WMCallbackFunc portCallbackTable[WM_NUM_OF_PORT];   /* 0x0cc */
-    void *portCallbackArgument[WM_NUM_OF_PORT];         /* 0x10c */
-    u32 connectedAidBitmap;                             /* 0x14c */
-    u16 myAid;                                          /* 0x150 */
+    WMArm7Buf *WM7;
+    WMStatus *status;
+    u32 *indbuf;
+    u32 *fifo9to7;
+    u32 *fifo7to9;
+    u16 dmaNo;
+    u16 scanOnlyFlag;
+    WMCallbackFunc CallbackTable[WM_NUM_OF_CALLBACK];
+    WMCallbackFunc indCallback;
+    WMCallbackFunc portCallbackTable[WM_NUM_OF_PORT];
+    void *portCallbackArgument[WM_NUM_OF_PORT];
+    u32 connectedAidBitmap;
+    u16 myAid;
 } WMArm9Buf;
 
 typedef struct WMMpRecvBuf {
@@ -408,42 +407,42 @@ typedef struct WMMeasureChannelReq {
 #define WM_DEFAULT_SCAN_PERIOD 30
 
 typedef struct WMCallback {
-    u16 apiid;                    /* 0x00 */
-    u16 errcode;                  /* 0x02 */
+    u16 apiid;
+    u16 errcode;
 } WMCallback;
 
 typedef struct WMStartParentCallback {
-    u16 apiid;                    /* 0x00 */
-    u16 errcode;                  /* 0x02 */
-    u16 wlCmdID;                  /* 0x04 */
-    u16 wlResult;                 /* 0x06 */
-    u16 state;                    /* 0x08 */
-    u8 macAddress[6];             /* 0x0a */
-    u16 aid;                      /* 0x10 */
-    u16 reason;                   /* 0x12 */
-    u8 ssid[24];                  /* 0x14 */
-    u16 parentSize;               /* 0x2c */
-    u16 childSize;                /* 0x2e */
+    u16 apiid;
+    u16 errcode;
+    u16 wlCmdID;
+    u16 wlResult;
+    u16 state;
+    u8 macAddress[6];
+    u16 aid;
+    u16 reason;
+    u8 ssid[24];
+    u16 parentSize;
+    u16 childSize;
 } WMStartParentCallback;
 
 typedef struct WMStartConnectCallback {
-    u16 apiid;                    /* 0x00 */
-    u16 errcode;                  /* 0x02 */
-    u16 wlCmdID;                  /* 0x04 */
-    u16 wlResult;                 /* 0x06 */
-    u16 state;                    /* 0x08 */
-    u16 aid;                      /* 0x0a */
-    u16 reason;                   /* 0x0c */
-    u16 reserved;                 /* 0x0e */
-    u8 macAddress[6];             /* 0x10 */
-    u16 parentSize;               /* 0x16 */
-    u16 childSize;                /* 0x18 */
+    u16 apiid;
+    u16 errcode;
+    u16 wlCmdID;
+    u16 wlResult;
+    u16 state;
+    u16 aid;
+    u16 reason;
+    u16 reserved;
+    u8 macAddress[6];
+    u16 parentSize;
+    u16 childSize;
 } WMStartConnectCallback;
 
 typedef struct WMStartMPCallback {
-    u16 apiid;                    /* 0x00 */
-    u16 errcode;                  /* 0x02 */
-    u16 state;                    /* 0x04 */
+    u16 apiid;
+    u16 errcode;
+    u16 state;
 } WMStartMPCallback;
 
 #define WM_SIZE_SYSTEM_GAMEINFO 16
@@ -455,50 +454,50 @@ typedef struct WMStartMPCallback {
 #define WM_ATTR_FLAG_MB 0x02
 
 typedef struct WMMeasureChannelCallback {
-    u16 apiid;                    /* 0x00 */
-    u16 errcode;                  /* 0x02 */
-    u16 wlCmdID;                  /* 0x04 */
-    u16 wlResult;                 /* 0x06 */
-    u16 channel;                  /* 0x08 */
-    u16 ccaBusyRatio;             /* 0x0a */
+    u16 apiid;
+    u16 errcode;
+    u16 wlCmdID;
+    u16 wlResult;
+    u16 channel;
+    u16 ccaBusyRatio;
 } WMMeasureChannelCallback;
 
 typedef struct WMPortRecvCallback {
-    u16 apiid;                    /* 0x00 */
-    u16 errcode;                  /* 0x02 */
-    u16 state;                    /* 0x04 */
-    u16 port;                     /* 0x06 */
-    u16 *recvBuf;                 /* 0x08 */
-    u16 *data;                    /* 0x0c */
-    u16 length;                   /* 0x10 */
-    u16 aid;                      /* 0x12 */
-    u8 macAddress[6];             /* 0x14 */
-    u16 seqNo;                    /* 0x1a */
-    void *arg;                    /* 0x1c */
-    u16 myAid;                    /* 0x20 */
-    u16 connectedAidBitmap;       /* 0x22 */
-    u8 ssid[24];                  /* 0x24 */
-    u16 reason;                   /* 0x3c */
-    u16 reserved;                 /* 0x3e */
-    u16 maxSendDataSize;          /* 0x40 */
-    u16 maxRecvDataSize;          /* 0x42 */
+    u16 apiid;
+    u16 errcode;
+    u16 state;
+    u16 port;
+    u16 *recvBuf;
+    u16 *data;
+    u16 length;
+    u16 aid;
+    u8 macAddress[6];
+    u16 seqNo;
+    void *arg;
+    u16 myAid;
+    u16 connectedAidBitmap;
+    u8 ssid[24];
+    u16 reason;
+    u16 reserved;
+    u16 maxSendDataSize;
+    u16 maxRecvDataSize;
 } WMPortRecvCallback;
 
 typedef struct WMPortSendCallback {
-    u16 apiid;                    /* 0x00 */
-    u16 errcode;                  /* 0x02 */
-    u16 state;                    /* 0x04 */
-    u16 port;                     /* 0x06 */
-    u16 destBitmap;               /* 0x08 */
-    u16 restBitmap;               /* 0x0a */
-    u16 sentBitmap;               /* 0x0c */
-    u16 reserved;                 /* 0x0e */
-    u16 *data;                    /* 0x10 */
-    u16 length;                   /* 0x14 */
-    u16 seqNo;                    /* 0x16 */
-    u32 reserved2;                /* 0x18 */
-    WMCallbackFunc callback;      /* 0x1c */
-    void *arg;                    /* 0x20: the helper passes its WhSendCallbackFunc here */
+    u16 apiid;
+    u16 errcode;
+    u16 state;
+    u16 port;
+    u16 destBitmap;
+    u16 restBitmap;
+    u16 sentBitmap;
+    u16 reserved;
+    u16 *data;
+    u16 length;
+    u16 seqNo;
+    u32 reserved2;
+    WMCallbackFunc callback;
+    void *arg;
 } WMPortSendCallback;
 
 #define WM_ERRCODE_FLASH_ERROR 19
@@ -506,11 +505,11 @@ typedef struct WMPortSendCallback {
 #define WM_SIZE_MACADDR 6
 
 typedef struct WMStartMPCallbackFull {
-    u16 apiid;                    /* 0x00 */
-    u16 errcode;                  /* 0x02 */
-    u16 state;                    /* 0x04 */
-    u16 reserved;                 /* 0x06 */
-    u16 *recvBuf;                 /* 0x08 */
+    u16 apiid;
+    u16 errcode;
+    u16 state;
+    u16 reserved;
+    u16 *recvBuf;
 } WMStartMPCallbackFull;
 
 #endif

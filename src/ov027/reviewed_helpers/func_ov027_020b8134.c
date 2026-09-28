@@ -1,7 +1,3 @@
-/* Clears a record word at offset twelve, releases its nonnull pointer at offset four, and clears that pointer.
- * Higher-level purpose remains unclassified. Recovered CC0 C from
- * Yokimitsuro/khdays-decomp, ab832f38b943c15f461228968a89002e1a99c03e,
- * src/overlays/ov026/calls/func_ov026_020834d8.c. */
 extern int func_0202a1c4();
 
 struct S {

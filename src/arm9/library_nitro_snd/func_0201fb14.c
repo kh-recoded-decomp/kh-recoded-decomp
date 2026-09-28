@@ -1,9 +1,3 @@
-/* Loads a wave’s byte range from a file into a sound heap and installs its data address if it is not already loaded.
- * Uncertainty: Wave identity is caller-provided; audio content is unknown. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nitro/snd/calls/func_0201c39c.c.
- * Original routine: func_0201c39c. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned short u16;
 typedef unsigned int u32;
 typedef int s32;

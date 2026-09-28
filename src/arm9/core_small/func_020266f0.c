@@ -1,4 +1,3 @@
-/* CC0 Yokimitsuro/khdays-decomp revision ab832f38b943c15f461228968a89002e1a99c03e. */
 extern int func_0204da48(void);
 extern void func_0204d73c(unsigned a);
 extern unsigned char data_02055e00;

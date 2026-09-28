@@ -1,9 +1,3 @@
-/* Stops a sequence player and releases it, setting its minimum output level first when the stop uses a fade.
- * Uncertainty: No particular playback content is identified. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/snd/calls/func_0201a76c.c.
- * Original routine: func_0201a76c. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,7 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
 
 #define SND_VOLUME_DB_MIN (-723)
 
@@ -189,7 +182,6 @@ typedef struct NNSSndPlayerHeap {
 extern void func_0201de30(NNSSndSeqPlayer * seqPlayer);
 extern void func_0201de30 (NNSSndSeqPlayer * seqPlayer);
 
-/* func_0201dd8c -- NitroSystem player.c: ForceStopSeq. */
 void func_0201dd8c (NNSSndSeqPlayer * seqPlayer)
 {
     if (seqPlayer->status == NNS_SND_SEQ_PLAYER_STATUS_FADEOUT) {

@@ -1,8 +1,3 @@
-/* Behavior: Starts left and right movie-audio playback buffers and schedules their sound timer.
- * Inputs/outputs and evidence: Sets up two looping sound channels, flushes both buffers, and starts a periodic alarm/timer.
- * Uncertainty: The refill callback behavior is outside this function; exact stream format constants are opaque.
- * Source: khdays-decomp/src/overlays/ov024/calls/func_ov024_020840a4.c; CC0, commit ab832f38b943c15f461228968a89002e1a99c03e.
- */
 typedef unsigned int u32;
 
 struct StereoPcmStream {

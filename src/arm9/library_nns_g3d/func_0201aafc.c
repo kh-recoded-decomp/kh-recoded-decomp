@@ -1,9 +1,3 @@
-/* Returns the index for a four-word dictionary name, or -1 if absent.
- * The middleware operation is supported by this body; its caller-specific use and any higher-level game meaning are not established here. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/g3d/auto/func_02016f10.c.
- * Original routine: func_02016f10. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,9 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
-
-
 
 typedef struct CPContext {
     u64 div_numer;
@@ -626,7 +617,6 @@ inline const NNSG3dResName * NNS_G3dGetResNameByIdx (const NNSG3dResDict * dict,
     }
 }
 
-/* FindResourceIndexByName_0201aafc -- NitroSystem res_struct_accessor.c: NNS_G3dGetResDictIdxByName. */
 int FindResourceIndexByName_0201aafc (const NNSG3dResDict * dict, const NNSG3dResName * name)
 {
 

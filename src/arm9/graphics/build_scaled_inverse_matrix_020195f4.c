@@ -1,7 +1,3 @@
-/* Concatenates two matrices, applies the shared scale vector, and computes the inverse matrix.
- * Evidence: Matrix operation calls and data flow in source.
- * Uncertainty: Purpose of the resulting matrix in callers is not established.
- * Source: src/calls/func_02015b70.c from khdays-decomp, CC0, commit ab832f38b943c15f461228968a89002e1a99c03e. */
 extern void MTX_Concat43(const void *inputMatrixA, const void *inputMatrixB, void *outputMatrix);
 extern void MTX_ScaleApply43(const void *sourceMatrix, void *destinationMatrix, int scaleX, int scaleY, int scaleZ);
 extern void MTX_Inverse43(const void *sourceMatrix, void *inverseMatrix);

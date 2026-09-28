@@ -1,9 +1,3 @@
-/* Copies five region head/tail address pairs from caller state into the manager.
- * This is a reusable Nitro/NitroSystem subsystem operation; a specific Re:coded gameplay caller or use is not inferred. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/gfd/calls/func_02011134.c.
- * Original routine: func_02011134. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -24,7 +18,6 @@ typedef volatile unsigned char vu8;
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
 
-
 #define NNS_GFD_NUM_TEX_VRAM_REGION 5
 
 typedef struct NNSGfdFrmTexVramState {
@@ -42,7 +35,6 @@ typedef struct NNSGfdFrmTexRegionState {
 } NNSGfdFrmTexRegionState;
 extern NNSGfdFrmTexRegionState data_02055c78[5 ];
 
-/* NNS_GfdSetFrmTexVramState_02013b50 -- NitroSystem gfd_FrameTexVramMan.c: NNS_GfdSetFrmTexVramState. */
 void NNS_GfdSetFrmTexVramState_02013b50 (const NNSGfdFrmTexVramState * pState)
 {
     int i;

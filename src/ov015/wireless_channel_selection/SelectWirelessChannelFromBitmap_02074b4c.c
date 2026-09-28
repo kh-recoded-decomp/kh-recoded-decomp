@@ -1,7 +1,3 @@
-/* Selects the only channel in a bitmap or chooses among multiple set channels using the low byte of a linear-congruential generator.
- * BK9E stores the generator state at global offset 0x38 instead of 0x18; the 69069/12345 generator and bitmap walk are unchanged.
- * Adapted CC0 C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, src/overlays/ov105/calls/func_ov105_020bf4cc.c. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -15,7 +11,6 @@ typedef void (*WMCallbackFunc)(void *arg);
 #define NULL ((void *)0)
 #define TRUE 1
 #define FALSE 0
-
 
 #define WM_FIFO_BUF_SIZE        256
 #define WM_ARM9WM_BUF_SIZE      512
@@ -153,7 +148,6 @@ typedef struct WMStartConnectReq {
     u16 authMode;
 } WMStartConnectReq;
 
-
 typedef struct WMStatus {
     u16 state;
     u16 BusyApiid;
@@ -229,7 +223,6 @@ typedef struct WMArm9Buf {
     u16 myAid;
 } WMArm9Buf;
 
-
 typedef struct WMMpRecvBuf {
     u16 rsv1[3];
     u16 length;
@@ -267,11 +260,9 @@ typedef struct WMMpRecvHeader {
     WMMpRecvData data[1];
 } WMMpRecvHeader;
 
-
 extern u16 data_ov105_020bfa20;
 #define wmInitialized data_ov105_020bfa20
 #define wm9buf (*(WMArm9Buf **)((u8 *)&data_ov105_020bfa20 + 4))
-
 
 typedef enum WHSysState {
     WH_SYSSTATE_STOP = 0,
@@ -324,7 +315,6 @@ enum {
 #define WH_DMA_NO                2
 #define WH_BITMAP_EMPTY          0
 #define WH_CHANNEL_MAX           16
-
 
 typedef struct WMCallback {
     u16 apiid;
@@ -426,7 +416,6 @@ typedef BOOL (*WhJudgeAcceptFunc)(WMStartParentCallback *pCb);
 typedef u16 (*WhParentWEPKeyGeneratorFunc)(u16 *pWepKey, const WMParentParam *pParentParam);
 typedef u16 (*WhChildWEPKeyGeneratorFunc)(u16 *pWepKey, const WMBssDesc *pBssDesc);
 
-
 typedef struct WhStatics { u8 opaque00[4]; u16 nChannelBusyRatio; u8 opaque06[6]; u16 nChannelBitmap; u8 opaque0e[0x2a]; u32 nRand; } WhStatics;
 
 extern WhStatics data_0207e980;
@@ -487,7 +476,6 @@ extern void *data_0204c024;
 #define WH_RAND_INIT(x) (sWh.nRand = (u32)(x))
 #define WH_RAND()       (sWh.nRand = sWh.nRand * 69069UL + 12345)
 #define WH_MATH_MIN(a, b) (((a) < (b)) ? (a) : (b))
-
 
 s16 SelectWirelessChannelFromBitmap_02074b4c(u16 bitmap)
 {

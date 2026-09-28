@@ -1,9 +1,3 @@
-/* Searches free blocks forward for aligned allocation, using configured fit strategy.
- * The middleware operation is supported by this body; its caller-specific use and any higher-level game meaning are not established here. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nitro/nns/calls/AllocFromHead.c.
- * Original routine: AllocFromHead. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef signed int s32;
 typedef unsigned int u32;
 typedef unsigned short u16;

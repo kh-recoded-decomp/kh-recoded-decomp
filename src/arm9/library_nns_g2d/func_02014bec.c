@@ -1,9 +1,3 @@
-/* Finds and unpacks a cell-bank resource block, returning its pointer or a null result when absent.
- * Uncertainty: This identifies a shared library operation; the particular scene, asset or gameplay caller using it is not established. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/g2d/calls/func_02011888.c.
- * Original routine: func_02011888. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -83,11 +77,8 @@ void func_02014c50(NNSG2dCellDataBank * pCellData);
 NNSG2dBinaryBlockHeader * func_02014e00(NNSG2dBinaryFileHeader * pBinFileHeader, u32 signature);
 extern void func_02014c50 (NNSG2dCellDataBank * pCellData);
 
-/* G2D_GetCellBankFromFile_02014bec -- NitroSystem g2d_NOB_load.c: NNS_G2dGetUnpackedCellBank. */
 BOOL G2D_GetCellBankFromFile_02014bec (void * pNcerFile, NNSG2dCellDataBank ** ppCellBank)
 {
-
-
 
     {
         NNSG2dBinaryFileHeader * pBinFile = (NNSG2dBinaryFileHeader *)pNcerFile;

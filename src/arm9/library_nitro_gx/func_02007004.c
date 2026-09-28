@@ -1,11 +1,3 @@
-/* Returns sub BG3 screen-map address from mode and BG3CNT, selecting tiled/bitmap spacing.
- * This is a reusable Nitro/NitroSystem subsystem operation; a specific Re:coded gameplay caller or use is not inferred. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nitro/gx/auto/G2S_GetBG3ScrPtr.c.
- * Original routine: G2S_GetBG3ScrPtr. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
-/* BG3's screen base moves with the BG mode: tiled modes use the 2K slot, mode 5 uses the 16K one
- * when BG3 is a bitmap, and from mode 6 up BG3 has no screen at all. */
 void *G2S_GetBG3ScrPtr_02007004(void) {
     int mode = *(volatile unsigned *)0x04001000 & 7;
     unsigned cnt = *(volatile unsigned short *)0x0400100e;

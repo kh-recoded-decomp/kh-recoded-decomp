@@ -1,9 +1,3 @@
-/* Stops the capture timer and waits for the associated sound command to complete.
- * Uncertainty: No capture source or content is identified. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/snd/calls/func_0201b094.c.
- * Original routine: func_0201b094. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,7 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
 
 #define SND_COMMAND_BLOCK (1 << 0)
 
@@ -69,7 +62,6 @@ typedef struct CaptureParam {
 } CaptureParam;
 extern CaptureParam data_0205e290;
 
-/* func_0201e6a8 -- NitroSystem capture.c: NNSi_SndCaptureBeginSleep. */
 void func_0201e6a8 (void)
 {
     CaptureParam * cap;

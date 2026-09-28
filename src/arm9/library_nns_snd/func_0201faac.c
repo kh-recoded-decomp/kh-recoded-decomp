@@ -1,9 +1,3 @@
-/* Evicts archive cache data for disposed memory and destroys the associated wave archive.
- * Uncertainty: The archive contents and ownership context are unspecified. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/snd/calls/func_0201c334.c.
- * Original routine: func_0201c334. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,9 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
-
-
 
 typedef struct CPContext {
     u64 div_numer;
@@ -366,7 +357,6 @@ typedef struct NNSSndArc {
 extern void func_0201f9cc(void * mem, NNSSndArc * arc, u32 fileId);
 extern void func_0201f9cc (void * mem, NNSSndArc * arc, u32 fileId);
 
-/* func_0201faac -- NitroSystem sndarc_loader.c: WaveArcTableDisposeCallback. */
 void func_0201faac (void * mem, u32 size, u32 data1, u32 data2)
 {
     SNDWaveArc * waveArc = (SNDWaveArc *)mem;

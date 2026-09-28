@@ -1,5 +1,3 @@
-/* Projects a world position through observed projection and camera matrices, scales the normalized x/y results into the bounds returned by func_02019728, writes screen coordinates, and returns -1 when either normalized coordinate is outside [0, 0x1000], otherwise 0. The caller-facing use is unknown.
- * Adapted CC0 source: Yokimitsuro/khdays-decomp, revision ab832f38b943c15f461228968a89002e1a99c03e, libs/nitro/nns/calls/func_0201653c.c. */
 typedef signed long fx32;
 typedef signed long long fx64;
 typedef signed long long fx64c;

@@ -1,9 +1,3 @@
-/* Returns an indexed palette name when the resource and index are valid.
- * The middleware operation is supported by this body; its caller-specific use and any higher-level game meaning are not established here. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/g3d/auto/func_02017150.c.
- * Original routine: func_02017150. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,9 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
-
-
 
 typedef struct NNSG3dResDictTreeNode_ {
     u8 refBit;
@@ -60,7 +51,6 @@ typedef struct NNSG3dResTexPatAnm_ {
     NNSG3dResDict dict;
 } NNSG3dResTexPatAnm;
 
-/* GetTexturePatternPaletteName_0201ad34 -- NitroSystem res_struct_accessor_anm.c: NNSi_G3dGetTexPatAnmPlttNameByIdx. */
 const NNSG3dResName * GetTexturePatternPaletteName_0201ad34 (const NNSG3dResTexPatAnm * pPatAnm, u8 plttIdx)
 {
 

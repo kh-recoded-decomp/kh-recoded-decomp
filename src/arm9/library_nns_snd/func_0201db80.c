@@ -1,9 +1,3 @@
-/* Prepares a sequence player with sequence data and bank state, then updates its command tag and prepared status.
- * Uncertainty: Sequence content is caller-supplied. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/snd/calls/func_0201a568.c.
- * Original routine: func_0201a568. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,9 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
-
-
 
 u32 func_0200f288(void);
 typedef enum {
@@ -226,11 +217,9 @@ typedef struct NNSSndPlayerHeap {
 extern void func_0201dca0(NNSSndSeqPlayer * seqPlayer);
 extern void func_0201dca0 (NNSSndSeqPlayer * seqPlayer);
 
-/* func_0201db80 -- NitroSystem player.c: NNSi_SndPlayerStartSeq. */
 void func_0201db80 (NNSSndSeqPlayer * seqPlayer, const void * seqDataBase, u32 seqDataOffset, const SNDBankData * bank)
 {
     NNSSndPlayer * player;
-
 
     player = seqPlayer->player;
 

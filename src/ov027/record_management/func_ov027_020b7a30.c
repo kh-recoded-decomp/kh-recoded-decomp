@@ -1,8 +1,3 @@
-/* Behavior: Copies an eight-byte pending record to a target or registers the target for later updates.
- * Inputs/outputs and evidence: Checks two state bits, copies and clears one flag for ready records, returns failure for stale records, otherwise conditionally registers the target.
- * Uncertainty: The bit meanings and object relationship are inferred from branches; no actor identity is established.
- * Source: khdays-decomp/src/overlays/ov000/calls/func_ov000_02056144.c; CC0, commit ab832f38b943c15f461228968a89002e1a99c03e.
- */
 extern void MI_CpuCopy8(void *src, void *dst, int size);
 extern int func_020b9f7c(int target);
 extern void func_020b79bc(int self, int target);

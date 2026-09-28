@@ -1,4 +1,3 @@
-/* Adapted from the CC0 khdays-decomp source at revision ab832f38b943c15f461228968a89002e1a99c03e. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -21,8 +20,6 @@ typedef volatile unsigned char vu8;
 #define HW_MAIN_MEM 0x02000000
 
 #define offsetof(type, member) ((u32)&(((type *)0)->member))
-
-
 
 typedef struct CPContext {
     u64 div_numer;
@@ -347,20 +344,15 @@ typedef struct NNSSndArc {
     BOOL file_open;
     FSFile file;
     FSFileID fileId;
-    u32 unknownAfterFileId[3]; /* Target archive-state pointers are 0x0c bytes beyond the reference layout. */
+    u32 unknownAfterFileId[3];
     struct NNSSndArcFat * fat;
     struct NNSSndArcSymbol * symbol;
     struct NNSSndArcInfo * info;
     s32 loadBlockSize;
 } NNSSndArc;
 
-/* khdays: shared-bss */
-extern NNSSndArc * data_0205e2e4;   /* data_0205e2e4 */
+extern NNSSndArc * data_0205e2e4;
 
-
-
-/* func_0201ed3c -- NitroSystem sndarc.c: NNS_SndArcReadFile. The game's build waits for the card
- * thread (func_01ff8140) before every FS_ReadFile of a block. */
 s32 func_0201ed3c (u32 fileId, void * buffer, s32 size, s32 offset)
 {
 #ifndef SDK_SMALL_BUILD
@@ -373,7 +365,6 @@ s32 func_0201ed3c (u32 fileId, void * buffer, s32 size, s32 offset)
     s32 currentOffset;
     s32 requestSize;
     u8 * destAddress;
-
 
     if (fileId >= arc->fat->count) return -1;
     file = &arc->fat->files[ fileId ];

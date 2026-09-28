@@ -1,9 +1,3 @@
-/* Initializes a character canvas with the observed operation table and a row stride equal to its width.
- * Uncertainty: This identifies a shared library operation; the particular scene, asset or gameplay caller using it is not established. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/g2d/calls/func_02014148.c.
- * Original routine: func_02014148. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -25,8 +19,6 @@ typedef volatile unsigned char vu8;
 #define HW_MAIN_MEM 0x02000000
 
 #define offsetof(type, member) ((u32)&(((type *)0)->member))
-
-
 
 typedef struct NNSG2dCharWidths {
     s8 left;
@@ -101,7 +93,6 @@ typedef struct NNSG2dCharCanvas {
 extern const NNSiG2dCharCanvasVTable data_0205309c;
 extern void func_020178e8 (NNSG2dCharCanvas * pCC, void * charBase, int areaWidth, int areaHeight, NNSG2dCharaColorMode colorMode, const NNSiG2dCharCanvasVTable * vtable, u32 param);
 
-/* G2D_InitializeLinearCanvas_02017a2c -- NitroSystem g2d_CharCanvas.c: NNS_G2dCharCanvasInitForBG. */
 void G2D_InitializeLinearCanvas_02017a2c (NNSG2dCharCanvas * pCC, void * charBase, int areaWidth, int areaHeight, NNSG2dCharaColorMode colorMode)
 {
 

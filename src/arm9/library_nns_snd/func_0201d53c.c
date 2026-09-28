@@ -1,9 +1,3 @@
-/* Begins a fade and stops active handles matching a sequence-archive number and item index.
- * Uncertainty: The matched archive items are not identified. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/snd/calls/func_02019f08.c.
- * Original routine: func_02019f08. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,7 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
 
 #define SND_PLAYER_NUM 16
 
@@ -192,7 +185,6 @@ typedef struct NNSSndPlayerHeap {
 extern NNSSndSeqPlayer data_0205d8b8[ 16 ];
 extern void func_0201dbd0 (NNSSndSeqPlayer * seqPlayer, int fadeFrame);
 
-/* func_0201d53c -- NitroSystem player.c: NNS_SndPlayerStopSeqBySeqArcIdx. */
 void func_0201d53c (int seqArcNo, int index, int fadeFrame)
 {
     NNSSndSeqPlayer * seqPlayer;

@@ -1,7 +1,3 @@
-/* Initializes timer 0, its interrupt callback, and associated shared timer state once.
- * Evidence: Timer register writes, reserved timer setup, IRQ registration, and active guard in source.
- * Uncertainty: Timer state fields beyond active are only identified by their reset behavior.
- * Source: src/calls/func_020030e4.c from khdays-decomp, CC0, commit ab832f38b943c15f461228968a89002e1a99c03e. */
 extern void OSi_SetTimerReserved(unsigned short timer);
 extern void OS_SetIrqFunction(unsigned int mask, void (*callback)(void));
 extern unsigned int OS_EnableIrqMask(unsigned int mask);

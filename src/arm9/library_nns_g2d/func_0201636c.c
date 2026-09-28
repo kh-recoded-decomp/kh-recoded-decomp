@@ -1,9 +1,3 @@
-/* Dispatches background setup according to text, affine, or extended-affine screen format.
- * Uncertainty: This identifies a shared library operation; the particular scene, asset or gameplay caller using it is not established. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/g2d/calls/func_02013020.c.
- * Original routine: func_02013020. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -25,8 +19,6 @@ typedef volatile unsigned char vu8;
 #define HW_MAIN_MEM 0x02000000
 
 #define offsetof(type, member) ((u32)&(((type *)0)->member))
-
-
 
 typedef enum {
     GX_BG_COLORMODE_16 = 0,
@@ -106,7 +98,6 @@ extern void func_0201605c (NNSG2dBGSelect bg, GXBGColorMode colorMode, int scree
 extern void func_0201609c (NNSG2dBGSelect bg, int screenWidth, int screenHeight, GXBGScrBase scnBase, GXBGCharBase chrBase);
 extern void func_020160dc (NNSG2dBGSelect bg, int screenWidth, int screenHeight, GXBGScrBase scnBase, GXBGCharBase chrBase);
 
-/* G2D_SetBackgroundScreenFormat_0201636c -- NitroSystem g2d_Screen.c: SetBGControlAuto. */
 void G2D_SetBackgroundScreenFormat_0201636c (NNSG2dBGSelect bg, NNSG2dScreenFormat screenFormat, GXBGColorMode colorMode, int screenWidth, int screenHeight, GXBGScrBase scnBase, GXBGCharBase chrBase)
 {
     switch (screenFormat) {

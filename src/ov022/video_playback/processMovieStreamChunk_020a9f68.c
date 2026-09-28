@@ -1,8 +1,3 @@
-/* Processes one pending movie-stream chunk and advances its stream and frame-slot cursors.
- * Evidence: Checks the pending/read counts at +0xcc/+0xc8, dispatches on the 16-bit type at +0x1c, records the current stream address and output buffer in the 0x14f8-byte slot table at +0x58, and advances the stream cursor by a type-specific size. When the slot index reaches the header count at +0x1e it resets the slot index and state word at +0xa4.
- * Uncertainty: Type meanings, helper internals, and the output buffer's eventual display path are not established here.
- * Source: Reconstructed from the BK9E Ghidra decompilation at build/ghidra/decompiled/ov022_func_ov022_020a9f68.c. No upstream C body was copied.
- */
 typedef unsigned int u32;
 typedef unsigned short u16;
 enum MovieContextByteOffset {

@@ -1,9 +1,3 @@
-/* Initializes map entries by matching texture-pattern animation names to model materials.
- * The middleware operation is supported by this body; its caller-specific use and any higher-level game meaning are not established here. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/g3d/calls/func_02018f04.c.
- * Original routine: func_02018f04. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,9 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
-
-
 
 void MIi_CpuClear16(u16 data, void * destp, u32 size);
 static inline void MI_CpuFill16 (void * dest, u16 data, u32 size)
@@ -246,13 +237,11 @@ inline NNSG3dResMat * NNS_G3dGetMat (const NNSG3dResMdl * mdl)
         return NULL ;
 }
 
-/* InitializeTexturePatternMap_0201ca3c -- NitroSystem nsbtp.c: NNSi_G3dAnmObjInitNsBtp. */
 void InitializeTexturePatternMap_0201ca3c (NNSG3dAnmObj * pAnmObj, void * pResAnm, const NNSG3dResMdl * pResMdl)
 {
     u32 i;
     NNSG3dResTexPatAnm * tpAnm = (NNSG3dResTexPatAnm *)pResAnm;
     const NNSG3dResMat * mat = NNS_G3dGetMat(pResMdl);
-
 
     pAnmObj->funcAnm = (void *) data_02055d00;
     pAnmObj->numMapData = pResMdl->info.numMat;

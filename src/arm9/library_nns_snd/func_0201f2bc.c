@@ -1,9 +1,3 @@
-/* Creates and links a new section in the sound frame heap, returning failure if section creation fails.
- * Uncertainty: Allocation policy is delegated to the frame heap. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/snd/calls/func_0201bb6c.c.
- * Original routine: func_0201bb6c. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -67,7 +61,6 @@ typedef struct NNSSndHeapSection {
 extern void NNS_FndInitListWithOffset0(NNSSndHeapSection * section);
 extern void NNS_FndInitListWithOffset0 (NNSSndHeapSection * section);
 
-/* func_0201f2bc -- NitroSystem heap.c: NewSection. */
 BOOL func_0201f2bc (NNSSndHeap * heap)
 {
     NNSSndHeapSection * section;

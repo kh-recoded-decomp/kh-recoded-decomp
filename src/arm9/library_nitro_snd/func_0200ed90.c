@@ -1,9 +1,3 @@
-/* Performs one-time sound initialization by creating the mutex and initializing command/alarm state.
- * Uncertainty: Initialization is limited to this sound subsystem. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nitro/snd/calls/SND_Init.c.
- * Original routine: SND_Init. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,12 +17,10 @@ typedef unsigned char vu8;
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
 
-
-/* NitroSDK SND library (ARM9 side): command interface to the ARM7 sound driver. */
 typedef struct SNDCommand {
-    struct SNDCommand *next;      /* 0x00 */
-    u32 id;                       /* 0x04 */
-    u32 arg[4];                   /* 0x08 */
+    struct SNDCommand *next;
+    u32 id;
+    u32 arg[4];
 } SNDCommand;
 
 enum {
@@ -49,15 +41,13 @@ extern void PushCommand_impl(int command, u32 arg0, u32 arg1, u32 arg2, u32 arg3
 
 typedef struct OSMutex OSMutex;
 extern void OS_InitMutex(OSMutex *mutex);
-extern void func_0200edf0(void);              /* SND_CommandInit */
+extern void func_0200edf0(void);
 extern void SND_AlarmInit(void);
-extern BOOL data_02057c34;                    /* initialized */
-extern OSMutex data_02057c38;                 /* sSndMutex */
+extern BOOL data_02057c34;
+extern OSMutex data_02057c38;
 #define initialized data_02057c34
 #define sSndMutex data_02057c38
 
-/* func_0200ed90 -- bring up the ARM9 sound library once: the driver mutex, the command
- * pool and the alarm callbacks. */
 void func_0200ed90(void)
 {
     {

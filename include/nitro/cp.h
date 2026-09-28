@@ -1,4 +1,3 @@
-/* The divider and square-root coprocessor, as the library sources declare them (the NitroSDK / NitroSystem names). */
 #ifndef NITRO_CP_H
 #define NITRO_CP_H
 

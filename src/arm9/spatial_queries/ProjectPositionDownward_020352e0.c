@@ -1,7 +1,3 @@
-/* Tests a downward vector from an object position; writes the scaled hit position when a result exists, otherwise copies the original position.
- * Target result scalar is at offset 0x2c, established by LDR and the scale/add helper call; specific collision surface is unknown.
- * Adapted CC0 C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, src/calls/func_0202b0b8.c. */
 typedef struct VecFx32 {
     int x;
     int y;

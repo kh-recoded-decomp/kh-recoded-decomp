@@ -1,9 +1,3 @@
-/* Stops capture and finalizes its timer/command state.
- * Uncertainty: The capture configuration is outside this routine. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/snd/calls/func_02019c74.c.
- * Original routine: func_02019c74. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,7 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
 
 #define SND_COMMAND_BLOCK (1 << 0)
 
@@ -55,7 +48,6 @@ typedef enum {
 typedef void (*PXIFifoCallback) (PXIFifoTag tag, u32 data, BOOL err);
 void func_0201e6a8(void);
 
-/* func_0201d2c0 -- NitroSystem main.c: BeginSleep. */
 void func_0201d2c0 (void *)
 {
     u32 commandTag;

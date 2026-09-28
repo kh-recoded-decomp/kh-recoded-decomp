@@ -1,9 +1,3 @@
-/* Stores canvas dimensions, destination bit depth, character buffer, operation table and layout parameter.
- * Uncertainty: This identifies a shared library operation; the particular scene, asset or gameplay caller using it is not established. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/g2d/auto/func_02013ffc.c.
- * Original routine: func_02013ffc. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -25,8 +19,6 @@ typedef volatile unsigned char vu8;
 #define HW_MAIN_MEM 0x02000000
 
 #define offsetof(type, member) ((u32)&(((type *)0)->member))
-
-
 
 typedef struct NNSG2dCharWidths {
     s8 left;
@@ -99,7 +91,6 @@ typedef struct NNSG2dCharCanvas {
     const NNSiG2dCharCanvasVTable * vtable;
 } NNSG2dCharCanvas;
 
-/* G2D_SetCanvasLayout_020178e8 -- NitroSystem g2d_CharCanvas.c: InitCharCanvas. */
 void G2D_SetCanvasLayout_020178e8 (NNSG2dCharCanvas * pCC, void * charBase, int areaWidth, int areaHeight, NNSG2dCharaColorMode colorMode, const NNSiG2dCharCanvasVTable * vtable, u32 param)
 {
 

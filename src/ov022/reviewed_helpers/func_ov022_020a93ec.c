@@ -1,6 +1,3 @@
-/* Ghidra-derived original C for ov022:0x020a93ec.
- * Initializes the observed stream/decoder pointer fields before setup.
- */
 typedef unsigned char MovieU8;
 typedef struct MovieStreamResourceHeads {
     void *reader_000;

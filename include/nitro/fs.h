@@ -1,4 +1,3 @@
-/* The file system: archives, files, overlays, as the library sources declare them (the NitroSDK / NitroSystem names). */
 #ifndef NITRO_FS_H
 #define NITRO_FS_H
 
@@ -307,21 +306,21 @@ typedef u32 FSOverlayID;
 typedef void (*FSOverlayInitFunc)(void);
 
 typedef struct {
-    u32 id;                       /* 0x00 */
-    u8 *ram_address;              /* 0x04 */
-    u32 ram_size;                 /* 0x08 */
-    u32 bss_size;                 /* 0x0c */
-    FSOverlayInitFunc *sinit_init;        /* 0x10 */
-    FSOverlayInitFunc *sinit_init_end;    /* 0x14 */
-    u32 file_id;                  /* 0x18 */
-    u32 compressed : 24;          /* 0x1c */
+    u32 id;
+    u8 *ram_address;
+    u32 ram_size;
+    u32 bss_size;
+    FSOverlayInitFunc *sinit_init;
+    FSOverlayInitFunc *sinit_init_end;
+    u32 file_id;
+    u32 compressed : 24;
     u32 flag : 8;
 } FSOverlayInfoHeader;
 
 typedef struct {
-    FSOverlayInfoHeader header;   /* 0x00 */
-    MIProcessor target;           /* 0x20 */
-    CARDRomRegion file_pos;       /* 0x24 */
+    FSOverlayInfoHeader header;
+    MIProcessor target;
+    CARDRomRegion file_pos;
 } FSOverlayInfo;
 
 #define FS_OVERLAY_FLAG_COMP      0x0001

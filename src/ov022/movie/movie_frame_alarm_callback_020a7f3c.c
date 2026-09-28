@@ -1,8 +1,3 @@
-/* Services one movie frame alarm, advances consumed-frame state, chooses or releases a decode buffer, and schedules the next frame deadline.
- * Evidence: MobiClip frame timer fields, front-buffer callback, frame counters, time base, and OS alarm calls in source.
- * Uncertainty: Decoder callback argument meanings are inferred from surrounding MobiClip code; preserve opaque callees.
- * Source: src/overlays/ov024/calls/func_ov024_0208421c.c from khdays-decomp, CC0, commit ab832f38b943c15f461228968a89002e1a99c03e. */
-
 typedef unsigned char u8;
 typedef signed char s8;
 typedef unsigned int u32;

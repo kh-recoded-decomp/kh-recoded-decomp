@@ -1,9 +1,3 @@
-/* Initializes visibility animation callback/resource and maps each model node.
- * The middleware operation is supported by this body; its caller-specific use and any higher-level game meaning are not established here. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/g3d/calls/func_02019194.c.
- * Original routine: func_02019194. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,9 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
-
-
 
 typedef s32 fx32;
 typedef s16 fx16;
@@ -160,7 +151,6 @@ inline NNSG3dResNodeInfo * NNS_G3dGetNodeInfo (const NNSG3dResMdl * mdl)
         return NULL ;
 }
 
-/* InitializeVisibilityAnimationMap_0201ccd8 -- NitroSystem nsbva.c: NNSi_G3dAnmObjInitNsBva. */
 void InitializeVisibilityAnimationMap_0201ccd8 (NNSG3dAnmObj * pAnmObj, void * pResAnm, const NNSG3dResMdl * pResMdl)
 {
     u32 i;

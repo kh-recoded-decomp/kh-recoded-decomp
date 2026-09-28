@@ -1,8 +1,3 @@
-/* Removes the next command from a load-command list under interrupt masking, decrements its stream player command count when a command exists, restores interrupts, and returns the command.
- * The BK9E player layout has two unknown words after the embedded stream object.
- * Adapted from CC0 Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/snd/calls/func_0201d308.c.
- * Target code and relocation values were checked against the BK9E binary. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -22,9 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
-
-
 
 extern OSIntrMode func_02004938(void);
 extern OSIntrMode func_0200494c(OSIntrMode state);
@@ -573,12 +565,10 @@ typedef struct LoadCommand {
     u32 bufLen;
 } LoadCommand;
 
-/* khdays: shared-bss */
-NNSSndStrmThread * sPrepareThread = 0;   /* sPrepareThread */
-BOOL data_0204ad8c = 0;   /* initialized$3434 */
-u8 * sDecodeBuffer = 0;   /* sDecodeBuffer */
+NNSSndStrmThread * sPrepareThread = 0;
+BOOL data_0204ad8c = 0;
+u8 * sDecodeBuffer = 0;
 
-/* DequeueStreamLoadCommand_02020a44 -- NitroSystem sndarc_stream.c: ReadCommandBuffer. */
 LoadCommand * DequeueStreamLoadCommand_02020a44 (NNSFndList * commandList)
 {
     OSIntrMode old;

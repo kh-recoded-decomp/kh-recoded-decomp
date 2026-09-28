@@ -1,4 +1,3 @@
-/* Extracts a requested-width field from an MSB-first packed word array. Evidence: Source implementation directly performs the described operations; see src/auto/func_020256b8.c. Uncertainty: No material uncertainty for the stated operation; game-specific use may depend on callers. Recovered from Days source src/auto/func_020256b8.c; CC0, commit ab832f38b943c15f461228968a89002e1a99c03e. */
 typedef unsigned int u32;
 u32 ReadPackedBitField_0202d4c4(u32 *words, u32 start_bit, u32 field_width)
 {

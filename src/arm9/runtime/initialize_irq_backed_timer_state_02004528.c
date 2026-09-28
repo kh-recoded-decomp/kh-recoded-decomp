@@ -1,7 +1,3 @@
-/* Initializes shared timer state once, masks timer IRQs, and clears the related counters.
- * Evidence: State guard, counter writes, and IRQ mask call in source.
- * Uncertainty: Timer subsystem association is inferred from nearby sibling routines.
- * Source: src/calls/func_020037a0.c from khdays-decomp, CC0, commit ab832f38b943c15f461228968a89002e1a99c03e. */
 extern void OS_DisableIrqMask();
 
 extern struct {

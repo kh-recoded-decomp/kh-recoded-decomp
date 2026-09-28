@@ -1,9 +1,3 @@
-/* Applies independent x/y/z fixed-point scales to rows of a 3x3 matrix.
- * This is a reusable Nitro/NitroSystem subsystem operation; a specific Re:coded gameplay caller or use is not inferred. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nitro/mtx/auto/MTX_ScaleApply33.c.
- * Original routine: MTX_ScaleApply33. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef signed long fx32;
 typedef signed long long fx64;
 

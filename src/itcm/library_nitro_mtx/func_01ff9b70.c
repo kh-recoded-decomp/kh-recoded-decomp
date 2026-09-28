@@ -1,9 +1,3 @@
-/* Builds a 4x3 view matrix from camera position, up direction, and target via normalize, cross, and dot operations.
- * The exact public SDK symbol is not established from the body, so the target address-based name is retained; behavior is limited to the implemented operation. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nitro/mtx/calls/func_01ff9c04.c.
- * Original routine: func_01ff9c04. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef signed long fx32;
 
 typedef struct VecFx32 {

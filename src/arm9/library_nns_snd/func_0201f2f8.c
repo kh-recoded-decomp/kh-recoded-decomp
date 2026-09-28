@@ -1,9 +1,3 @@
-/* Submits a blocking sound command and waits until its command tag has completed.
- * Uncertainty: The operation represented by the submitted command depends on queue state. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/snd/calls/func_0201bba8.c.
- * Original routine: func_0201bba8. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -24,14 +18,12 @@ typedef volatile unsigned char vu8;
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
 
-
 #define SND_COMMAND_BLOCK (1 << 0)
 
 BOOL func_0200f080(u32 flags);
 void SND_WaitForCommandProc(u32 tag);
 u32 func_0200f288(void);
 
-/* func_0201f2f8 -- NitroSystem heap.c: EraseSync. */
 void func_0201f2f8 (void)
 {
     u32 commandTag;

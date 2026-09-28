@@ -1,8 +1,3 @@
-/* Configures graphics memory banks, backgrounds, affine state, and display registers for movie playback.
- * Evidence: Direct GX bank, background register, affine matrix, and display control writes in source.
- * Uncertainty: Movie setup role is source-comment supported; unnamed callees remain opaque.
- * Source: src/overlays/ov024/calls/func_ov024_02083e28.c from khdays-decomp, CC0, commit ab832f38b943c15f461228968a89002e1a99c03e. */
-
 typedef unsigned short u16;
 typedef unsigned int u32;
 

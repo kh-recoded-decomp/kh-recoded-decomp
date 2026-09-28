@@ -1,9 +1,3 @@
-/* Selects the appropriate main or sub background mode and extended-palette slot, then programs text-background size, color and memory bases.
- * Uncertainty: This identifies a shared library operation; the particular scene, asset or gameplay caller using it is not established. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/g2d/calls/func_02012b98.c.
- * Original routine: func_02012b98. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -25,8 +19,6 @@ typedef volatile unsigned char vu8;
 #define HW_MAIN_MEM 0x02000000
 
 #define offsetof(type, member) ((u32)&(((type *)0)->member))
-
-
 
 typedef vu16 REGType16v;
 typedef enum {
@@ -167,7 +159,6 @@ extern const u8 data_02053064[4][8];
 extern void func_02015bdc (const u8 modeTable[]);
 extern void func_02015c20 (const u8 modeTable[]);
 
-/* G2D_SetTextBackgroundControl_02015ed0 -- NitroSystem g2d_Screen.c: SetBGnControlToText. */
 void G2D_SetTextBackgroundControl_02015ed0 (NNSG2dBGSelect n, GXBGScrSizeText size, GXBGColorMode cmode, GXBGScrBase scnBase, GXBGCharBase chrBase)
 {
     const int bgNo = GetBGNo(n);

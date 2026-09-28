@@ -1,4 +1,3 @@
-/* SPI devices: touch panel, power management, microphone, as the library sources declare them (the NitroSDK / NitroSystem names). */
 #ifndef NITRO_SPI_H
 #define NITRO_SPI_H
 
@@ -87,16 +86,16 @@ struct PMiSleepCallbackInfo {
 #define SPI_PXI_COMMAND_PM_REG4VALUE        0x0074
 
 typedef struct {
-    BOOL lock;                    /* 0x00 */
-    PMCallback callback;          /* 0x04 */
-    void *callbackArg;            /* 0x08 */
-    void *work;                   /* 0x0c */
+    BOOL lock;
+    PMCallback callback;
+    void *callbackArg;
+    void *work;
 } PMiWork;
 
 typedef struct {
-    u16 flag;                     /* 0x00 */
+    u16 flag;
     u16 pad;
-    u16 *buffer;                  /* 0x04 */
+    u16 *buffer;
 } PMData16;
 
 typedef u32 PMWakeUpTrigger;

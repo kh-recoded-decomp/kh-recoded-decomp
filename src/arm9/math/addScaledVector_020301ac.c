@@ -1,8 +1,3 @@
-/* Behavior: Adds a scaled fixed point vector to a base vector.
- * Inputs/outputs and evidence: For each axis computes base + (scale times vector shifted by 27).
- * Uncertainty: The unusual shift is preserved exactly; interpretation as a normalized scale depends on caller units.
- * Source: khdays-decomp/src/calls/func_01ffd0e8.c; CC0, commit ab832f38b943c15f461228968a89002e1a99c03e.
- */
 typedef int fx32;
 typedef long long fx64;
 

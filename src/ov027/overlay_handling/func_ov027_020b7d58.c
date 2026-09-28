@@ -1,4 +1,3 @@
-/* Initializes a container from configuration and allocates three zeroed arrays; array purposes are unknown. Evidence: Source implementation directly performs the described operations; see src/overlays/ov002/calls/func_ov002_020543b8.c. Uncertainty: The exact game-specific role is unresolved. Recovered from Days source src/overlays/ov002/calls/func_ov002_020543b8.c; CC0, commit ab832f38b943c15f461228968a89002e1a99c03e. */
 extern void MI_CpuFill8(void *destination, int fill_value, int byte_count);
 extern void NNS_FndInitList(int list, int offset);
 extern int NNSi_FndAllocFromDefaultExpHeap(int byte_count);

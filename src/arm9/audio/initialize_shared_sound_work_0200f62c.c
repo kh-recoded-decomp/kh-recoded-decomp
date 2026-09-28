@@ -1,7 +1,3 @@
-/* Initializes shared sound work slots and flushes the resulting memory range for inter-processor use.
- * Evidence: Shared work struct and cache flush call in source.
- * Uncertainty: The undocumented slot payload semantics remain unknown.
- * Source: src/calls/SNDi_InitSharedWork.c from khdays-decomp, CC0, commit ab832f38b943c15f461228968a89002e1a99c03e. */
 extern void DC_FlushRange(void *address, unsigned int size);
 
 typedef struct SndSharedWorkSlot {

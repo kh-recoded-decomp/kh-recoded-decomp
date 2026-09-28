@@ -1,9 +1,3 @@
-/* Finds and unpacks an animation-bank resource block, returning its pointer or a null result when absent.
- * Uncertainty: This identifies a shared library operation; the particular scene, asset or gameplay caller using it is not established. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/g2d/calls/func_020116a8.c.
- * Original routine: func_020116a8. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -77,7 +71,6 @@ void func_02014a68(NNSG2dAnimBankData * pData);
 NNSG2dBinaryBlockHeader * func_02014e00(NNSG2dBinaryFileHeader * pBinFileHeader, u32 signature);
 extern void func_02014a68 (NNSG2dAnimBankData * pData);
 
-/* G2D_GetAnimationBankFromFile_02014a20 -- NitroSystem g2d_NAN_load.c: GetUnpackedAnimBankImpl_. */
 BOOL G2D_GetAnimationBankFromFile_02014a20 (void * pNanrFile, NNSG2dAnimBankData ** ppAnimBank)
 {
     {

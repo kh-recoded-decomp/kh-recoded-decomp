@@ -1,5 +1,3 @@
-/* Unlinks an active alarm, rearms the timer if the queue head changes, and clears its handler and period.
- * Reconstructed from BK9E instructions using the verified CC0 alarm layout. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;

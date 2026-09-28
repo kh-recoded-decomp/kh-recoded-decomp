@@ -1,9 +1,3 @@
-/* Adapted from CC0-1.0 source Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e,
- * src/overlays/ov024/calls/func_ov024_02085700.cpp.
- * Releases movie reader and decoder allocations. Some stored pointers are
- * cleared afterward; the frame-state pointer is released but not cleared.
- */
 typedef unsigned char u8;
 typedef unsigned int u32;
 

@@ -1,5 +1,3 @@
-/* Copies an actor parameter into the associated object's pair of observed
- * fields and, if the nested actor flags permit, mirrors it into ActorNode+0x80. */
 typedef unsigned short u16;
 typedef unsigned int u32;
 typedef unsigned char u8;

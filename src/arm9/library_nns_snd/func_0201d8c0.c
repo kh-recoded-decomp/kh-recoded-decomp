@@ -1,9 +1,3 @@
-/* Initializes sound-player bookkeeping, including free/player lists and default status, identifier and priority fields.
- * Uncertainty: No game-level player roles are identified. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/snd/calls/func_0201a2ac.c.
- * Original routine: func_0201a2ac. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -193,7 +187,6 @@ extern NNSSndPlayer data_0205dcf8[ 32 ];
 extern NNSFndList data_0205d8ac;
 extern NNSFndList data_0205d8a0;
 
-/* func_0201d8c0 -- NitroSystem player.c: NNSi_SndPlayerInit. */
 void func_0201d8c0 (void)
 {
     NNSSndPlayer * player;

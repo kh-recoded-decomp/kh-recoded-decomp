@@ -1,9 +1,3 @@
-/* Enqueues a pan operation for the selected hardware-channel bit mask.
- * Uncertainty: Pan scale and channel identity are caller-defined. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nitro/snd/calls/SND_SetChannelPan.c.
- * Original routine: SND_SetChannelPan. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,12 +17,10 @@ typedef unsigned char vu8;
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
 
-
-/* NitroSDK SND library (ARM9 side): command interface to the ARM7 sound driver. */
 typedef struct SNDCommand {
-    struct SNDCommand *next;      /* 0x00 */
-    u32 id;                       /* 0x04 */
-    u32 arg[4];                   /* 0x08 */
+    struct SNDCommand *next;
+    u32 id;
+    u32 arg[4];
 } SNDCommand;
 
 enum {
@@ -47,7 +39,6 @@ enum {
 extern void PushCommand_impl(int command, u32 arg0, u32 arg1, u32 arg2, u32 arg3);
 #define PushCommand(c, a0, a1, a2, a3) PushCommand_impl((c), (u32)(a0), (u32)(a1), (u32)(a2), (u32)(a3))
 
-/* func_0200ec08 -- queue a CHANNEL_PAN command for the channels in the bit mask. */
 void func_0200ec08(u32 chBitMask, int pan)
 {
     PushCommand(SND_COMMAND_CHANNEL_PAN, chBitMask, pan, 0, 0);

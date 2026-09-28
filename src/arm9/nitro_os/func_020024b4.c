@@ -1,18 +1,14 @@
-/* CC0 source: Yokimitsuro/khdays-decomp, revision ab832f38b943c15f461228968a89002e1a99c03e, libs/nitro/os/auto/OSi_InsertLinkToQueue.c. */
 #define NULL ((void *)0)
 
 typedef unsigned char u8;
 typedef unsigned int u32;
 
-/* Threads carry their queue links inline: the scheduler never allocates nodes.
-   Only the three fields this file touches are named; the rest of the thread
-   record is not this function's business. */
 typedef struct OSThread {
     u8 _reserved0[0x70];
-    u32 priority;              /* 0x70, lower value means it runs sooner */
+    u32 priority;
     u8 _reserved74[0x8];
-    struct OSThread *prev;     /* 0x7c */
-    struct OSThread *next;     /* 0x80 */
+    struct OSThread *prev;
+    struct OSThread *next;
 } OSThread;
 
 typedef struct OSThreadQueue {
@@ -20,8 +16,6 @@ typedef struct OSThreadQueue {
     OSThread *tail;
 } OSThreadQueue;
 
-/* Insert a thread into a priority-ordered queue, keeping equal priorities in
-   arrival order. A thread already on the queue is left where it is. */
 void OSi_InsertLinkToQueue(OSThreadQueue *queue, OSThread *thread)
 {
     OSThread *pAfter;

@@ -1,5 +1,3 @@
-/* Independent reconstruction of a straight-line leaf from BK9E instructions.
- * Higher-level field and return meanings remain unclassified. */
 typedef unsigned int u32;
 void ConfigureOverlay036BackgroundControls(void) {
     u32 value0 = 0x400000aU;

@@ -1,4 +1,3 @@
-/* Invalidates selected alarm IDs and queues a sound timer stop command. Evidence: Source implementation directly performs the described operations; see src/calls/SND_StopTimer.c. Uncertainty: No material uncertainty for the stated operation; game-specific use may depend on callers. Recovered from Days source src/calls/SND_StopTimer.c; CC0, commit ab832f38b943c15f461228968a89002e1a99c03e. */
 extern void SNDi_IncAlarmId(int unknown_argument_n);
 extern void PushCommand_impl(int cmd, int unknown_argument_a, int unknown_argument_b, int unknown_argument_c, int unknown_argument_d);
 

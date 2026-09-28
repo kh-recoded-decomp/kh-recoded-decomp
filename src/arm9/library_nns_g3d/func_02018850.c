@@ -1,9 +1,3 @@
-/* Attempts removal from material, joint, or visibility list and invalidates hints on success.
- * The middleware operation is supported by this body; its caller-specific use and any higher-level game meaning are not established here. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/g3d/calls/func_02014dc4.c.
- * Original routine: func_02014dc4. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,7 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
 
 #define NNS_G3D_WARNING SDK_WARNING
 #define SDK_WARNING(exp, ...) (void) ((exp) || (OSi_Warning(__FILE__, __LINE__, __VA_ARGS__), 0))
@@ -227,7 +220,6 @@ typedef struct NNSG3dVisAnmResult_ {
 } NNSG3dVisAnmResult;
 extern BOOL func_020187dc (NNSG3dAnmObj ** l, NNSG3dAnmObj * item);
 
-/* RemoveAnimationFromRenderObject_02018850 -- NitroSystem kernel.c: NNS_G3dRenderObjRemoveAnmObj. */
 void RemoveAnimationFromRenderObject_02018850 (NNSG3dRenderObj * pRenderObj, NNSG3dAnmObj * pAnmObj)
 {
 

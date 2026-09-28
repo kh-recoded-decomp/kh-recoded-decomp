@@ -1,4 +1,3 @@
-/* Converts a fixed-point quaternion into a 3x3 rotation matrix. Evidence: Source implementation directly performs the described operations; see src/calls/func_0202ec2c.c. Uncertainty: No material uncertainty for the stated operation; game-specific use may depend on callers. Recovered from Days source src/calls/func_0202ec2c.c; CC0, commit ab832f38b943c15f461228968a89002e1a99c03e. */
 typedef int fx32;
 
 typedef struct QuatFx32 {
@@ -16,7 +15,6 @@ static inline fx32 Fx32Multiply(fx32 left_operand, fx32 right_operand)
 {
     return (fx32)(((long long)left_operand * right_operand + 0x800) >> 12);
 }
-
 
 void QuaternionToRotationMatrix_0202f808(MtxFx33 *matrix, const QuatFx32 *quaternion)
 {

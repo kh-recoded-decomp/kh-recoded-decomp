@@ -1,9 +1,3 @@
-/* Loads and prepares sequence data for a player, configures player volume/channel priority, and records the sequence on the handle.
- * Uncertainty: No particular sequence identity or playback context is established. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/snd/calls/func_0201c734.c.
- * Original routine: func_0201c734. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,7 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
 
 #define NNS_SND_ARC_LOAD_SEQ (1 << 0)
 #define NNS_SND_ARC_LOAD_BANK (1 << 1)
@@ -255,7 +248,6 @@ typedef enum NNSSndArcLoadResult {
 NNSSndArcLoadResult func_0201f3a8(int seqNo, u32 loadFlag, NNSSndHeapHandle heap, BOOL bSetAddr, struct NNSSndSeqData ** pData);
 NNSSndArcLoadResult func_0201f48c(int bankNo, u32 loadFlag, NNSSndHeapHandle heap, BOOL bSetAddr, struct SNDBankData ** pData);
 
-/* func_0201fea8 -- NitroSystem sndarc_player.c: StartSeq. */
 BOOL func_0201fea8 (NNSSndHandle * handle, int playerNo, int bankNo, int playerPrio, const NNSSndArcSeqInfo * info, int seqNo)
 {
     NNSSndSeqPlayer * player;
@@ -263,7 +255,6 @@ BOOL func_0201fea8 (NNSSndHandle * handle, int playerNo, int bankNo, int playerP
     NNSSndSeqData * seq;
     SNDBankData * bank;
     NNSSndArcLoadResult result;
-
 
     player = func_0201dad8(handle, playerNo, playerPrio);
     if (player == NULL) return FALSE;

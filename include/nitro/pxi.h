@@ -1,9 +1,7 @@
-/* PXI: the FIFO between the ARM9 and the ARM7, as the library sources declare them (the NitroSDK / NitroSystem names). */
 #ifndef NITRO_PXI_H
 #define NITRO_PXI_H
 
 #include "nitro/types.h"
-
 
 typedef enum {
     PXI_FIFO_TAG_EX = 0,

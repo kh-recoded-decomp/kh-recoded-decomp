@@ -1,9 +1,3 @@
-/* Starts a fade for every active sequence player.
- * Uncertainty: No specific sequence selection is performed. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/snd/calls/func_02019f6c.c.
- * Original routine: func_02019f6c. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,7 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
 
 #define SND_PLAYER_NUM 16
 
@@ -187,7 +180,6 @@ typedef struct NNSSndPlayerHeap {
 extern NNSSndSeqPlayer data_0205d8b8[ 16 ];
 extern void func_0201dbd0 (NNSSndSeqPlayer * seqPlayer, int fadeFrame);
 
-/* func_0201d5a0 -- NitroSystem player.c: NNS_SndPlayerStopSeqAll. */
 void func_0201d5a0 (int fadeFrame)
 {
     NNSSndSeqPlayer * seqPlayer;

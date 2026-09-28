@@ -1,9 +1,3 @@
-/* Initializes cell animation from a sequence and cell bank without a valid cell-transfer handle.
- * Uncertainty: This identifies a shared library operation; the particular scene, asset or gameplay caller using it is not established. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/g2d/calls/func_02012444.c.
- * Original routine: func_02012444. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -320,7 +314,6 @@ static inline void InitCellAnimationImpl_ (NNSG2dCellAnimation * pCellAnim, cons
 }
 extern void func_0201579c (NNSG2dCellAnimation * pCellAnim, const NNSG2dAnimSequence * pAnimSeq);
 
-/* G2D_InitializeCellAnimation_02015760 -- NitroSystem g2d_CellAnimation.c: NNS_G2dInitCellAnimation. */
 void G2D_InitializeCellAnimation_02015760 (NNSG2dCellAnimation * pCellAnim, const NNSG2dAnimSequence * pAnimSeq, const NNSG2dCellDataBank * pCellDataBank)
 {
 

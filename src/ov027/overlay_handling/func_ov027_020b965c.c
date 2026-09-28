@@ -1,4 +1,3 @@
-/* Runs a helper on the first configured ID that is not -1, or returns zero. Evidence: Source implementation directly performs the described operations; see src/overlays/ov005/calls/func_ov005_0204e378.c. Uncertainty: The exact game-specific role is unresolved. Recovered from Days source src/overlays/ov005/calls/func_ov005_0204e378.c; CC0, commit ab832f38b943c15f461228968a89002e1a99c03e. */
 extern int func_0204f228(int owner, int unknown_argument_b);
 int func_ov027_020b965c(int owner, int *configured_ids) {
     int slot_index;

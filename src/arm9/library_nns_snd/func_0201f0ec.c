@@ -1,9 +1,3 @@
-/* Allocates an aligned heap block and records its disposal callback and callback data in the active sound-heap section.
- * Uncertainty: Callback payload meaning is specific to the caller. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/snd/calls/func_0201b9a0.c.
- * Original routine: func_0201b9a0. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -76,12 +70,10 @@ typedef struct NNSSndHeapSection {
     NNSFndLink link;
 } NNSSndHeapSection;
 
-/* func_0201f0ec -- NitroSystem heap.c: NNS_SndHeapAlloc. */
 void * func_0201f0ec (NNSSndHeapHandle heap, u32 size, NNSSndHeapDisposeCallback callback, u32 data1, u32 data2)
 {
     NNSSndHeapSection * section;
     NNSSndHeapBlock * block;
-
 
     block = (NNSSndHeapBlock *)func_02013508(
         heap->handle, sizeof(NNSSndHeapBlock) + ROUNDUP(size, HEAP_ALIGN), HEAP_ALIGN);
@@ -94,7 +86,6 @@ void * func_0201f0ec (NNSSndHeapHandle heap, u32 size, NNSSndHeapDisposeCallback
     block->data1 = data1;
     block->data2 = data2;
     NNS_FndAppendListObject(&section->blockList, block);
-
 
     return block->buffer;
 }

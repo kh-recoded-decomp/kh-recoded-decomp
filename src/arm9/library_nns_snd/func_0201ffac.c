@@ -1,9 +1,3 @@
-/* Starts a sequence-archive entry after resolving its sequence, bank and wave requirements, then configures the selected player and handle.
- * Uncertainty: Archive entry contents and game meaning are not established. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/snd/calls/func_0201c830.c.
- * Original routine: func_0201c830. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,7 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
 
 #define NNS_SND_ARC_LOAD_BANK (1 << 1)
 #define NNS_SND_ARC_LOAD_WAVE (1 << 2)
@@ -254,14 +247,12 @@ typedef enum NNSSndArcLoadResult {
 } NNSSndArcLoadResult;
 NNSSndArcLoadResult func_0201f48c(int bankNo, u32 loadFlag, NNSSndHeapHandle heap, BOOL bSetAddr, struct SNDBankData ** pData);
 
-/* func_0201ffac -- NitroSystem sndarc_player.c: StartSeqArc. */
 BOOL func_0201ffac (NNSSndHandle * handle, int playerNo, int bankNo, int playerPrio, const NNSSndSeqArcSeqInfo * sound, const NNSSndSeqArc * seqArc, int seqArcNo, int index)
 {
     NNSSndSeqPlayer * player;
     NNSSndHeapHandle heap;
     SNDBankData * bank;
     NNSSndArcLoadResult result;
-
 
     player = func_0201dad8(handle, playerNo, playerPrio);
     if (player == NULL) return FALSE;

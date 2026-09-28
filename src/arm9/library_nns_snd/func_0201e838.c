@@ -1,4 +1,3 @@
-/* Adapted from the CC0 khdays-decomp source at revision ab832f38b943c15f461228968a89002e1a99c03e. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -18,7 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
 
 #define NNS_FND_HEAP_INVALID_HANDLE NULL
 #define NNS_SND_HEAP_INVALID_HANDLE NNS_FND_HEAP_INVALID_HANDLE
@@ -370,7 +368,7 @@ typedef struct NNSSndArc {
     BOOL file_open;
     FSFile file;
     FSFileID fileId;
-    u32 unknownAfterFileId[3]; /* Target archive-state pointers are 0x0c bytes beyond the reference layout. */
+    u32 unknownAfterFileId[3];
     struct NNSSndArcFat * fat;
     struct NNSSndArcSymbol * symbol;
     struct NNSSndArcInfo * info;
@@ -383,12 +381,10 @@ extern void func_0201ef80 (void * mem, u32 size, u32 data1, u32 data2);
 extern void func_0201ef8c (void * mem, u32 size, u32 data1, u32 data2);
 extern void func_0201ef98 (void * mem, u32 size, u32 data1, u32 data2);
 
-/* func_0201e838 -- NitroSystem sndarc.c: NNS_SndArcSetup. */
 BOOL func_0201e838 (NNSSndArc * arc, NNSSndHeapHandle heap, BOOL symbolLoadFlag)
 {
     BOOL result;
     s32 readSize;
-
 
     result = FS_SeekFile(&arc->file, 0, FS_SEEK_SET);
     if (!result) return FALSE;

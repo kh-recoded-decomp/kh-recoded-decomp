@@ -1,20 +1,3 @@
-/* Adapted from CC0-1.0 source Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e,
- * src/overlays/ov024/calls/func_ov024_0208589c.cpp.
- * Advances the buffered frame stream, prepares the next read, and binds the
- * selected luma/chroma planes into the current frame state.
- */
-/* MobiClip: hand the next frame to the decoder and queue the one after it.
- *
- * Flips the double-buffered read parity, waits for the read that was already
- * in flight, and splits the word at the head of that buffer into the next
- * frame's size and its offset. The frame state is pointed at the payload, the
- * six reference planes are rebound through the lead table, and -- unless this
- * was the last frame -- the read for the following frame is started into the
- * other buffer.
- *
- * Reports zero once the frame index has caught up with the frame count.
- */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;

@@ -1,8 +1,3 @@
-/* Behavior: Finds the largest available aligned span among heap blocks.
- * Inputs/outputs and evidence: Walks the block list, aligns each payload start, and tracks the largest remaining size, preferring less padding on ties.
- * Uncertainty: Heap block header offsets are inferred from this traversal; the function returns size, not a block pointer.
- * Source: khdays-decomp/src/calls/func_020109c8.c; CC0, commit ab832f38b943c15f461228968a89002e1a99c03e.
- */
 extern int abs(int);
 
 typedef struct Block {

@@ -1,9 +1,3 @@
-/* Enqueues an unlock operation for the selected hardware-channel bit mask.
- * Uncertainty: Channel ownership policy is managed elsewhere. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nitro/snd/calls/SND_UnlockChannel.c.
- * Original routine: SND_UnlockChannel. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,12 +17,10 @@ typedef unsigned char vu8;
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
 
-
-/* NitroSDK SND library (ARM9 side): command interface to the ARM7 sound driver. */
 typedef struct SNDCommand {
-    struct SNDCommand *next;      /* 0x00 */
-    u32 id;                       /* 0x04 */
-    u32 arg[4];                   /* 0x08 */
+    struct SNDCommand *next;
+    u32 id;
+    u32 arg[4];
 } SNDCommand;
 
 enum {
@@ -47,7 +39,6 @@ enum {
 extern void PushCommand_impl(int command, u32 arg0, u32 arg1, u32 arg2, u32 arg3);
 #define PushCommand(c, a0, a1, a2, a3) PushCommand_impl((c), (u32)(a0), (u32)(a1), (u32)(a2), (u32)(a3))
 
-/* func_0200ebc0 -- queue an UNLOCK_CHANNEL command for the channels in the bit mask. */
 void func_0200ebc0(u32 chBitMask, u32 flags)
 {
     PushCommand(SND_COMMAND_UNLOCK_CHANNEL, chBitMask, flags, 0, 0);

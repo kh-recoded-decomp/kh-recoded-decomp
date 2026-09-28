@@ -1,11 +1,3 @@
-/* advanceMovieStreamWindow_020649a8: move the movie stream window forward and request more data when the window limit is
- * exceeded. The routine computes a step from the base step plus a stream-header value, rolls
- * back and requests refill if the new position exceeds the limit, then updates stream lead time.
- * Observed stream fields in this overlay are limit +0x38, base step +0x48 and position +0x50.
- *
- * Adapted from CC0 MobiClip source in Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, src/overlays/ov024/calls/func_ov024_02083600.c.
- */
 typedef unsigned char u8;
 
 typedef struct MobiClipStream {

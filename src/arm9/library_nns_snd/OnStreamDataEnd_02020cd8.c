@@ -18,9 +18,6 @@ typedef volatile unsigned char vu8;
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
 
-
-
-
 typedef struct CPContext {
     u64 div_numer;
     u64 div_denom;
@@ -571,17 +568,10 @@ typedef struct NNSSndStrmPlayer {
 extern void func_0202161c(NNSSndStrmPlayer * player, u32 fileId);
 extern void func_0202161c (NNSSndStrmPlayer * player, u32 fileId);
 
-/* khdays: shared-bss */
-NNSSndStrmThread * sPrepareThread = 0;   /* sPrepareThread */
-BOOL data_0204ad8c = 0;   /* initialized$3434 */
-u8 * sDecodeBuffer = 0;   /* sDecodeBuffer */
+NNSSndStrmThread * sPrepareThread = 0;
+BOOL data_0204ad8c = 0;
+u8 * sDecodeBuffer = 0;
 
-/* Handles the end of an archive stream and, when requested by its callback,
- * opens a compatible next stream at the supplied offset.
- * The target player layout has two unknown words after the stream subobject.
- * Adapted from CC0 Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/snd/calls/func_0201d598.c.
- * Target field offsets and external addresses were checked against BK9E. */
 void OnStreamDataEnd_02020cd8 (NNSSndStrmPlayer * player)
 {
     NNSSndArcStrmCallbackInfo info;

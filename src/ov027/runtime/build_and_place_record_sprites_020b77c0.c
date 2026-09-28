@@ -1,8 +1,3 @@
-/* Walks variable-stride records, maps each kind to a priority, creates a sprite, and places it at the record coordinates.
- * Evidence: Record count/stride, kind lookup, sprite constructor, and placement helper in source.
- * Uncertainty: Exact record type and sprite semantic role remain unknown.
- * Source: src/overlays/ov000/calls/func_ov000_02055ee4.c from khdays-decomp, CC0, commit ab832f38b943c15f461228968a89002e1a99c03e. */
-
 extern int func_020b7e5c(int spriteContext, int recordField06, int recordField04, int recordField0c,
                                int recordField0e, int recordField10, int recordField12, int priority);
 extern void func_020b81e8(int self, int spriteHandle, int x, int y);

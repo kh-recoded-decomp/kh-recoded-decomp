@@ -1,9 +1,3 @@
-/* Consumes the requested bits from a buffered byte, reloading and combining another byte when necessary.
- * Uncertainty: This identifies a shared library operation; the particular scene, asset or gameplay caller using it is not established. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/g2d/calls/func_02014950.c.
- * Original routine: func_02014950. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -25,8 +19,6 @@ typedef volatile unsigned char vu8;
 #define HW_MAIN_MEM 0x02000000
 
 #define offsetof(type, member) ((u32)&(((type *)0)->member))
-
-
 
 typedef struct CPContext {
     u64 div_numer;
@@ -601,12 +593,10 @@ static inline void BitReaderReload (NNSiG2dBitReader * reader)
     reader->availableBits = 8;
 }
 
-/* G2D_ReadPackedBits_020183ec -- NitroSystem g2di_BitReader.c: NNSi_G2dBitReaderRead. */
 u32 G2D_ReadPackedBits_020183ec (NNSiG2dBitReader * reader, int nBits)
 {
     u32 val = reader->bits;
     int nAvlBits = reader->availableBits;
-
 
     if (nAvlBits < nBits) {
         int lack = nBits - nAvlBits;

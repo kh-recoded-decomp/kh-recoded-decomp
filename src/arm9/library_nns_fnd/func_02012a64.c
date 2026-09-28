@@ -1,9 +1,3 @@
-/* Walks a foundation list to the requested zero-based object index, returning null when the list ends first.
- * Uncertainty: This identifies a shared library operation; the particular scene, asset or gameplay caller using it is not established. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/fnd/calls/func_02010154.c.
- * Original routine: func_02010154. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -24,9 +18,6 @@ typedef volatile unsigned char vu8;
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
 
-
-
-
 typedef struct {
     void * prevObject;
     void * nextObject;
@@ -40,12 +31,10 @@ typedef struct {
 void * NNS_FndGetNextListObject(NNSFndList * list, void * object);
 extern void * NNS_FndGetNextListObject (NNSFndList * list, void * object);
 
-/* FND_GetListObjectByIndex_02012a64 -- NitroSystem list.c: NNS_FndGetNthListObject. */
 void * FND_GetListObjectByIndex_02012a64 (NNSFndList * list, u16 index)
 {
     int count = 0;
     NNSFndLink * object = NULL;
-
 
     while ((object = NNS_FndGetNextListObject(list, object)) != NULL)
     {

@@ -1,9 +1,3 @@
-/* Appends a node to a null-terminated doubly linked chain.
- * The middleware operation is supported by this body; its caller-specific use and any higher-level game meaning are not established here. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nitro/nns/calls/NNS_FndAppendDoubleListObject.c.
- * Original routine: NNS_FndAppendDoubleListObject. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 struct Node {
     struct Node *prev;
     struct Node *next;

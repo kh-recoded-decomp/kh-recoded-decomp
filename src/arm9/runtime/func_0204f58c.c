@@ -1,8 +1,3 @@
-/* Clears a record, copies two nonnegative limits from an optional source with defaults, and clears the remaining short body.
- * Evidence: Clear sizes, source tests, defaults, and short stores in source.
- * Uncertainty: Meaning of the two limits is not established.
- * Source: src/calls/func_02036298.c from khdays-decomp, CC0, commit ab832f38b943c15f461228968a89002e1a99c03e. */
-
 extern void MI_CpuFill8(void *p, int v, unsigned int n);
 extern void MIi_CpuClear16(int v, void *p, unsigned int n);
 

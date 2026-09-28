@@ -1,13 +1,3 @@
-/* Adapted from CC0-1.0 source Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e,
- * src/overlays/ov024/calls/func_ov024_02084ec4.cpp.
- * Constructs the reader and stream objects around an already-open file,
- * releasing partially-created objects on initialization failure.
- */
-/* The reader is bound to the file before the stream receives the reader and
- * frame-slot count. Its virtual deleting destructor handles reader-binding
- * failure. Both objects use the movie overlay's allocation wrappers.
- */
 typedef unsigned int u32;
 
 struct MobiClipReaderRaw {

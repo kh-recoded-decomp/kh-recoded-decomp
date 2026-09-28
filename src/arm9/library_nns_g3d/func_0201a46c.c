@@ -1,9 +1,3 @@
-/* Replaces enabled-light bits in one material polygon attribute.
- * The middleware operation is supported by this body; its caller-specific use and any higher-level game meaning are not established here. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/g3d/auto/func_020169f8.c.
- * Original routine: func_020169f8. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -164,7 +158,6 @@ inline NNSG3dResMatData * NNS_G3dGetMatDataByIdx (const NNSG3dResMat * mat, u32 
     return NULL ;
 }
 
-/* SetMaterialLightMask_0201a46c -- NitroSystem model.c: NNS_G3dMdlSetMdlLightEnableFlag. */
 void SetMaterialLightMask_0201a46c (NNSG3dResMdl * pMdl, u32 matID, int light)
 {
     NNSG3dResMatData * data;

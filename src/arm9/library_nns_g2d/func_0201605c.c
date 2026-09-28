@@ -1,9 +1,3 @@
-/* Selects a screen-size record large enough for the requested dimensions and configures a text background.
- * Uncertainty: This identifies a shared library operation; the particular scene, asset or gameplay caller using it is not established. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/g2d/calls/func_02012d24.c.
- * Original routine: func_02012d24. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -25,8 +19,6 @@ typedef volatile unsigned char vu8;
 #define HW_MAIN_MEM 0x02000000
 
 #define offsetof(type, member) ((u32)&(((type *)0)->member))
-
-
 
 typedef enum {
     GX_BG_SCRSIZE_TEXT_256x256 = 0,
@@ -176,11 +168,9 @@ extern const ScreenSizeMap data_0205304c[4];
 extern const ScreenSizeMap * func_02015b9c (const ScreenSizeMap tbl[4], int w, int h);
 extern void func_02015ed0 (NNSG2dBGSelect n, GXBGScrSizeText size, GXBGColorMode cmode, GXBGScrBase scnBase, GXBGCharBase chrBase);
 
-/* G2D_ConfigureTextScreen_0201605c -- NitroSystem g2d_Screen.c: SetBGControlText. */
 void G2D_ConfigureTextScreen_0201605c (NNSG2dBGSelect bg, GXBGColorMode colorMode, int screenWidth, int screenHeight, GXBGScrBase scnBase, GXBGCharBase chrBase)
 {
     const ScreenSizeMap * pSizeMap;
-
 
     pSizeMap = func_02015b9c(data_0205304c, screenWidth, screenHeight);
 

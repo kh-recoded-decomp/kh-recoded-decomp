@@ -1,9 +1,3 @@
-/* Changes a sequence player’s priority and reorders it in its owning player list and the global priority list.
- * Uncertainty: Priority values have no documented game-facing interpretation here. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/snd/calls/func_0201a8e0.c.
- * Original routine: func_0201a8e0. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,9 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
-
-
 
 typedef enum {
     SND_DUTY_1_8,
@@ -185,11 +176,9 @@ extern void func_0201dd38(NNSSndSeqPlayer * seqPlayer);
 extern void func_0201dce8 (NNSSndPlayer * player, NNSSndSeqPlayer * seqPlayer);
 extern void func_0201dd38 (NNSSndSeqPlayer * seqPlayer);
 
-/* func_0201df00 -- NitroSystem player.c: SetPlayerPriority. */
 void func_0201df00 (NNSSndSeqPlayer * seqPlayer, int priority)
 {
     NNSSndPlayer * player;
-
 
     player = seqPlayer->player;
 

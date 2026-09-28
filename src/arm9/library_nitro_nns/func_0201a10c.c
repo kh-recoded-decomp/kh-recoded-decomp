@@ -1,9 +1,3 @@
-/* Transforms screen coordinates to near/far world-space points from viewport and matrix state.
- * The middleware operation is supported by this body; its caller-specific use and any higher-level game meaning are not established here. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nitro/nns/calls/func_020166c4.c.
- * Original routine: func_020166c4. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef signed long fx32;
 typedef signed long long fx64;
 typedef signed long long fx64c;

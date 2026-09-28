@@ -1,9 +1,3 @@
-/* Selects an in-range sequence frame and updates the active frame when its duration is nonzero.
- * Uncertainty: This identifies a shared library operation; the particular scene, asset or gameplay caller using it is not established. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/g2d/auto/func_02011c44.c.
- * Original routine: func_02011c44. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,9 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
-
-
 
 typedef s32 fx32;
 typedef enum {
@@ -187,7 +178,6 @@ typedef struct NNSG2dAnimController {
     NNSG2dAnimCallBackFunctor callbackFunctor;
 } NNSG2dAnimController;
 
-/* G2D_SetAnimationFrame_02014fa0 -- NitroSystem g2d_Animation.c: SetAnimCtrlCurrentFrameImpl_. */
 BOOL G2D_SetAnimationFrame_02014fa0 (NNSG2dAnimController * pAnimCtrl, u16 index)
 {
 

@@ -1,6 +1,3 @@
-/* Reads a script operation and a fixed-point vector, then invokes the shared
- * ov001 handler. The handler's visible in-game effect is still unresolved.
- * Operand readers are established by analysis/actor_model.json. */
 typedef struct ScriptVector {
     int x;
     int y;

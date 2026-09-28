@@ -1,4 +1,3 @@
-/* Calls an optional object destructor, unregisters the object, and frees its buffers and allocation. Evidence: Source implementation directly performs the described operations; see src/calls/func_02023a4c.c. Uncertainty: No material uncertainty for the stated operation; game-specific use may depend on callers. Recovered from Days source src/calls/func_02023a4c.c; CC0, commit ab832f38b943c15f461228968a89002e1a99c03e. */
 extern int  func_0202a134(int arena);
 extern void func_0202a3a8(int node);
 extern void NNSi_FndFreeFromDefaultHeap(void *unknown_argument_p);

@@ -1,9 +1,3 @@
-/* Allocates a saved-state record, captures the frame heap allocation boundaries and tag, and links it as the newest state.
- * Uncertainty: This identifies a shared library operation; the particular scene, asset or gameplay caller using it is not established. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/fnd/calls/func_02010c2c.c.
- * Original routine: func_02010c2c. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -80,7 +74,6 @@ static inline NNSiFndFrmHeapHead * GetFrmHeapHeadPtrFromHeapHead (NNSiFndHeapHea
 }
 extern void * NNSi_AllocFromHeadOfExpHeap (NNSiFndFrmHeapHead * pFrmHeapHd, u32 size, int alignment);
 
-/* FND_RecordFrameHeapState_02013568 -- NitroSystem frameheap.c: NNS_FndRecordStateForFrmHeap. */
 BOOL FND_RecordFrameHeapState_02013568 (NNSFndHeapHandle heap, u32 tagName)
 {
 

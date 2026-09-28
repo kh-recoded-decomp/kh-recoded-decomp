@@ -1,9 +1,3 @@
-/* Removes pending load commands associated with a stream player while interrupts are disabled, then requeues commands for later processing.
- * Uncertainty: The semantics of individual load commands are not inferred. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/snd/calls/func_0201d298.c.
- * Original routine: func_0201d298. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,9 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
-
-
 
 extern OSIntrMode OS_DisableInterrupts(void);
 extern OSIntrMode OS_RestoreInterrupts(OSIntrMode state);
@@ -575,12 +566,10 @@ typedef struct LoadCommand {
 extern void func_02020ad8(LoadCommand * command);
 extern void func_02020ad8 (LoadCommand * command);
 
-/* khdays: shared-bss */
-NNSSndStrmThread * sPrepareThread = 0;   /* sPrepareThread */
-BOOL data_0204ad8c = 0;   /* initialized$3434 */
-u8 * sDecodeBuffer = 0;   /* sDecodeBuffer */
+NNSSndStrmThread * sPrepareThread = 0;
+BOOL data_0204ad8c = 0;
+u8 * sDecodeBuffer = 0;
 
-/* func_020209d4 -- NitroSystem sndarc_stream.c: RemoveCommandByPlayer. */
 void func_020209d4 (NNSFndList * commandList, const NNSSndStrmPlayer * player)
 {
     OSIntrMode old;

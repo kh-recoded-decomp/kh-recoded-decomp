@@ -1,8 +1,3 @@
-/* Behavior: Feeds decoded movie sound into the left and right audio playback buffers.
- * Inputs/outputs and evidence: Queries pending block count, invokes the per-channel block helper, flushes corresponding cache ranges, and wraps a ring cursor.
- * Uncertainty: Ring field meanings are derived from access patterns; concrete decoder format is not established.
- * Source: khdays-decomp/src/overlays/ov024/calls/func_ov024_0208437c.c; CC0, commit ab832f38b943c15f461228968a89002e1a99c03e.
- */
 extern unsigned int func_020a9380(int chan);
 extern void func_020a9398(int chan, int buf);
 extern void DC_StoreRange(void *addr, unsigned int len);

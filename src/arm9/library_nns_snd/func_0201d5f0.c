@@ -1,9 +1,3 @@
-/* Sets or clears pause state for all sequence players belonging to the specified player.
- * Uncertainty: The player number is caller-supplied. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/snd/calls/func_02019fbc.c.
- * Original routine: func_02019fbc. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,9 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
-
-
 
 typedef enum {
     SND_DUTY_1_8,
@@ -183,12 +174,10 @@ typedef struct NNSSndPlayerHeap {
 extern NNSSndPlayer data_0205dcf8[ 32 ];
 extern void func_0201dc20 (NNSSndSeqPlayer * seqPlayer, BOOL flag);
 
-/* func_0201d5f0 -- NitroSystem player.c: NNS_SndPlayerPauseByPlayerNo. */
 void func_0201d5f0 (int playerNo, BOOL flag)
 {
     NNSSndSeqPlayer * seqPlayer;
     NNSSndSeqPlayer * next;
-
 
     for (seqPlayer = (NNSSndSeqPlayer *)NNS_FndGetNextListObject(&data_0205dcf8[ playerNo ].playerList, NULL);
          seqPlayer != NULL; seqPlayer = next) {

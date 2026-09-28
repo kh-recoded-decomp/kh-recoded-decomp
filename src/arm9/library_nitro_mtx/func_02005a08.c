@@ -1,19 +1,3 @@
-/* Multiplies two 4x4 fixed-point matrices and writes the product, using a temporary for right-input aliasing.
- * This is a reusable Nitro/NitroSystem subsystem operation; a specific Re:coded gameplay caller or use is not inferred. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nitro/mtx/auto/MTX_Concat44.c.
- * Original routine: MTX_Concat44. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
-/*
- * 4x4 fixed-point matrix concatenation (ab = a * b).
- *
- * Written against this tree's own already-matched sibling
- * libs/nitro/mtx/auto/MTX_Concat43.c; the row/column evaluation ORDER (which
- * product is emitted when, and which column of b is cached in locals across
- * two rows) was cross-checked against pret/pokediamond's matched
- * arm9/lib/NitroSDK/src/FX_mtx44.c, which reproduces the same SDK routine.
- * Verified byte-exact against this ROM: 1636 bytes, 0 relocs.
- */
 typedef signed long fx32;
 typedef signed long long fx64;
 

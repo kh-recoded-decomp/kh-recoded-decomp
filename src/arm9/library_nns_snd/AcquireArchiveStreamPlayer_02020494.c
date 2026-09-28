@@ -1,8 +1,3 @@
-/* Validates an existing stream handle, selects the requested player, rejects unavailable buffers or insufficient priority, stops an already active player when replacement is allowed, and associates the selected player with the handle.
- * The BK9E player layout has two unknown words after the embedded stream object.
- * Adapted from CC0 Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/snd/calls/func_0201cd60.c.
- * Target code and relocation values were checked against the BK9E binary. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -22,9 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
-
-
 
 typedef struct CPContext {
     u64 div_numer;
@@ -570,16 +562,13 @@ extern void func_02020810(NNSSndStrmPlayer * player);
 extern void func_02020308 (NNSSndStrmHandle * handle);
 extern void func_02020810 (NNSSndStrmPlayer * player);
 
-/* khdays: shared-bss */
-NNSSndStrmThread * sPrepareThread = 0;   /* sPrepareThread */
-BOOL data_0204ad8c = 0;   /* initialized$3434 */
-u8 * sDecodeBuffer = 0;   /* sDecodeBuffer */
+NNSSndStrmThread * sPrepareThread = 0;
+BOOL data_0204ad8c = 0;
+u8 * sDecodeBuffer = 0;
 
-/* AcquireArchiveStreamPlayer_02020494 -- NitroSystem sndarc_stream.c: AllocPlayer. */
 NNSSndStrmPlayer * AcquireArchiveStreamPlayer_02020494 (NNSSndStrmHandle * handle, int playerNo, int prio)
 {
     NNSSndStrmPlayer * player;
-
 
     if (NNS_SndStrmHandleIsValid(handle)) {
         func_02020308(handle);

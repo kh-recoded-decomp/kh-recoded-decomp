@@ -1,9 +1,3 @@
-/* Applies normal or reverse sequence-edge handling and validates the resulting current frame.
- * Uncertainty: This identifies a shared library operation; the particular scene, asset or gameplay caller using it is not established. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/g2d/calls/func_02011b30.c.
- * Original routine: func_02011b30. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,9 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
-
-
 
 typedef s32 fx32;
 typedef enum {
@@ -264,7 +255,6 @@ static inline void ValidateAnimFrame_ (NNSG2dAnimController * pAnimCtrl, const N
 }
 extern void func_0201520c (NNSG2dAnimController * pAnimCtrl);
 
-/* G2D_HandleAnimationSequenceEdge_02014e90 -- NitroSystem g2d_Animation.c: SequenceEdgeHandle_. */
 void G2D_HandleAnimationSequenceEdge_02014e90 (NNSG2dAnimController * pAnimCtrl)
 {
 

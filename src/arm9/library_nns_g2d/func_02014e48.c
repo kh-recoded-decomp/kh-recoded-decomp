@@ -1,9 +1,3 @@
-/* Resolves the extended cell-attribute array and each cell attribute pointer from resource-relative offsets.
- * Uncertainty: This identifies a shared library operation; the particular scene, asset or gameplay caller using it is not established. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/g2d/auto/func_02011ae8.c.
- * Original routine: func_02011ae8. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -37,7 +31,6 @@ typedef struct NNSG2dUserExCellAttrBank {
     NNSG2dUserExCellAttr * pCellAttrArray;
 } NNSG2dUserExCellAttrBank;
 
-/* G2D_UnpackCellAttributes_02014e48 -- NitroSystem g2d_Load.c: NNSi_G2dUnpackUserExCellAttrBank. */
 void G2D_UnpackCellAttributes_02014e48 (NNSG2dUserExCellAttrBank * pCellAttrBank)
 {
     u16 i;

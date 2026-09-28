@@ -1,7 +1,3 @@
-/* Configures the display on the first update and forwards each update to the selected session handler.
- * On the first update it enables only layer bit 0x1000, sets secondary brightness to zero and clears the first-update flag. It then calls ov027:020b8c94 or 020b8c80 according to the stored update mode.
- * The display-state operations are established. The session's particular menu, scene or gameplay purpose and the shared display-setting meaning remain unknown.
- * Recovered from the persistent Ghidra caller chain and verified disassembly. */
 typedef struct OverlayDisplaySession {
     unsigned char sharedState[0x647c];
     int alternateUpdate;

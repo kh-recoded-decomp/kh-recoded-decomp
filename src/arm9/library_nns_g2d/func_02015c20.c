@@ -1,9 +1,3 @@
-/* Maps the current sub-engine background mode through a table and programs the resulting graphics mode.
- * Uncertainty: This identifies a shared library operation; the particular scene, asset or gameplay caller using it is not established. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/g2d/calls/func_02012904.c.
- * Original routine: func_02012904. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -44,7 +38,6 @@ inline GXBGMode GetBGModeSub (void)
     return (GXBGMode)(((*( REGType32v *) (0x04000000 + 0x1000)) & 0x00000007 ) >> 0 );
 }
 
-/* G2D_ChangeSubBackgroundMode_02015c20 -- NitroSystem g2d_Screen.c: ChangeBGModeByTableSub. */
 void G2D_ChangeSubBackgroundMode_02015c20 (const u8 modeTable[])
 {
     GXBGMode mode = (GXBGMode)modeTable[GetBGModeSub()];

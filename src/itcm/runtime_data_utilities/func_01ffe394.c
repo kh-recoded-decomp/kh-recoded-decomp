@@ -1,4 +1,3 @@
-/* Conditionally emits a text-related operation from flags and advances a byte cursor; exact encoding unknown. Evidence: Source implementation directly performs the described operations; see src/calls/func_01ffbbac.c. Uncertainty: The exact game-specific role is unresolved. Recovered from Days source src/calls/func_01ffbbac.c; CC0, commit ab832f38b943c15f461228968a89002e1a99c03e. */
 extern void func_01ffcedc(int operation, unsigned char encoded_byte);
 
 void func_01ffe394(int *text_cursor) {

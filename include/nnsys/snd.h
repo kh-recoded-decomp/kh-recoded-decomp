@@ -1,4 +1,3 @@
-/* NitroSystem sound: archive, players, heaps, streams, as the library sources declare them (the NitroSDK / NitroSystem names). */
 #ifndef NNSYS_SND_H
 #define NNSYS_SND_H
 

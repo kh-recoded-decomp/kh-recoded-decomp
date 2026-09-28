@@ -1,9 +1,3 @@
-/* Chooses extended-palette or normal-palette loading for a selected background.
- * Uncertainty: This identifies a shared library operation; the particular scene, asset or gameplay caller using it is not established. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/g2d/calls/func_02012de4.c.
- * Original routine: func_02012de4. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -25,8 +19,6 @@ typedef volatile unsigned char vu8;
 #define HW_MAIN_MEM 0x02000000
 
 #define offsetof(type, member) ((u32)&(((type *)0)->member))
-
-
 
 typedef enum {
     GX_TEXFMT_NONE       = 0,
@@ -74,7 +66,6 @@ extern void func_02015c48 (NNSG2dBGExtPlttSlot slot, const NNSG2dPaletteData * p
 extern void func_02015d78 (NNSG2dBGSelect bg, const NNSG2dPaletteData * pPltData, const NNSG2dPaletteCompressInfo * pCmpInfo);
 extern NNSG2dBGExtPlttSlot func_02015ea4 (NNSG2dBGSelect bg);
 
-/* G2D_LoadBackgroundPalette_0201611c -- NitroSystem g2d_Screen.c: LoadBGPaletteSelect. */
 void G2D_LoadBackgroundPalette_0201611c (NNSG2dBGSelect bg, BOOL bToExtPltt, const NNSG2dPaletteData * pPltData, const NNSG2dPaletteCompressInfo * pCmpInfo)
 {
 

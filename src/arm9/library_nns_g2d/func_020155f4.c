@@ -1,9 +1,3 @@
-/* Enables translation and stores X/Y offsets when the control record uses the scale/rotation/translation layout.
- * Uncertainty: This identifies a shared library operation; the particular scene, asset or gameplay caller using it is not established. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/g2d/auto/func_020122b8.c.
- * Original routine: func_020122b8. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,9 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
-
-
 
 typedef s32 fx32;
 typedef enum {
@@ -166,7 +157,6 @@ inline void NNSi_G2dSrtcAffineFlagON (NNSG2dSRTControl * pSRT, u16 newFlag)
     pSRT->srtData.SRT_EnableFlag |= (u16)newFlag;
 }
 
-/* G2D_SetTranslation_020155f4 -- NitroSystem g2d_SRTControl.c: NNSi_G2dSrtcSetTrans. */
 void G2D_SetTranslation_020155f4 (NNSG2dSRTControl * pCtrl, s16 x, s16 y)
 {
     if (pCtrl->type == NNS_G2D_SRTCONTROLTYPE_SRT) {

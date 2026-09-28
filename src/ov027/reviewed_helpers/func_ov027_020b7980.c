@@ -1,7 +1,3 @@
-/* Finds the first sixteen-byte array record whose word at offset twelve is zero, or returns the end pointer.
- * Higher-level purpose remains unclassified. Recovered CC0 C from
- * Yokimitsuro/khdays-decomp, ab832f38b943c15f461228968a89002e1a99c03e,
- * src/overlays/ov026/auto/func_ov026_02082dac.c. */
 struct Element {
     int unk0;
     int unk4;

@@ -1,5 +1,3 @@
-/* A free eligible slot must exist. The original code does not supply a valid
- * overlay ID or slot on the no-slot path; callers must uphold this contract. */
 extern const unsigned char *GetOverlaySelectionRecord(unsigned int selectionIndex);
 extern void LoadOverlay(int processor, int overlayId);
 extern int availableOverlayIds[][3];

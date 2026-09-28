@@ -1,5 +1,3 @@
-/* CC0 source: Yokimitsuro/khdays-decomp, revision ab832f38b943c15f461228968a89002e1a99c03e, libs/nitro/os/calls/OS_AllocFromArenaLo.c. */
-/* Bump-allocates `size` bytes with `align` alignment out of the low end of the arena. */
 extern char *OS_GetArenaLo(int arena);
 extern char *OS_GetArenaHi(int arena);
 extern void OS_SetArenaLo(int arena, char *lo);

@@ -1,11 +1,9 @@
-/* CC0 source: Yokimitsuro/khdays-decomp, revision ab832f38b943c15f461228968a89002e1a99c03e, libs/nitro/os/calls/OS_FreeToHeap.c. */
 extern int OS_DisableInterrupts(void);
 extern void OS_RestoreInterrupts(int state);
 extern void *DLExtract(void *list, void *node);
 extern void *DLInsert(void *list, void *node);
 extern char *data_02044590[];
 
-/* Returns a block to its heap: unlink it from the allocated list and merge it into the free list. */
 void OS_FreeToHeap(int arena, int heap, void *ptr) {
     char *info;
     char *cell;

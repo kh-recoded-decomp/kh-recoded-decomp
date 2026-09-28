@@ -1,9 +1,3 @@
-/* Frees heap sections and their registered allocations, then recreates the sound heap section state.
- * Uncertainty: The owning subsystem and asset policy are not identified beyond sound-heap management. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/snd/calls/func_0201b8e4.c.
- * Original routine: func_0201b8e4. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -81,14 +75,12 @@ extern void func_0201f2f8(void);
 extern BOOL func_0201f2bc (NNSSndHeap * heap);
 extern void func_0201f2f8 (void);
 
-/* func_0201f030 -- NitroSystem heap.c: NNS_SndHeapClear. */
 void func_0201f030 (NNSSndHeapHandle heap)
 {
     NNSSndHeapSection * section = NULL;
     void * object;
     BOOL result;
     BOOL doCallback = FALSE;
-
 
     while ((section = (NNSSndHeapSection *)NNS_FndGetPrevListObject(&heap->sectionList, NULL)) != NULL) {
 

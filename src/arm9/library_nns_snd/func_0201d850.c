@@ -1,9 +1,3 @@
-/* Reads a sequence variable for a valid handle, returning the sound-system default before playback is active.
- * Uncertainty: Variable meaning is defined by the sequence/caller. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/snd/calls/func_0201a238.c.
- * Original routine: func_0201a238. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,7 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
 
 #define SND_DEFAULT_VARIABLE -1
 
@@ -184,11 +177,9 @@ typedef struct NNSSndPlayerHeap {
     int playerNo;
 } NNSSndPlayerHeap;
 
-/* func_0201d850 -- NitroSystem player.c: NNS_SndPlayerReadVariable. */
 BOOL func_0201d850 (NNSSndHandle * handle, int varNo, s16 * var)
 {
     NNSSndSeqPlayer * seqPlayer;
-
 
     if (!NNS_SndHandleIsValid(handle)) return FALSE;
 

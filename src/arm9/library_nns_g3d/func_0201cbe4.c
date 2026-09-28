@@ -1,9 +1,3 @@
-/* Resolves a palette name and writes its VRAM-relative palette base to animation result.
- * The middleware operation is supported by this body; its caller-specific use and any higher-level game meaning are not established here. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/g3d/calls/func_020190b8.c.
- * Original routine: func_020190b8. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,7 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
 
 #define NNS_GFD_TEXKEY_ADDR_SHIFT 3
 
@@ -134,7 +127,6 @@ inline NNSG3dResDictPlttData * NNS_G3dGetPlttDataByName (const NNSG3dResTex * te
     }
 }
 
-/* SetPaletteAnimationResult_0201cbe4 -- NitroSystem nsbtp.c: SetPlttParamaters_. */
 void SetPaletteAnimationResult_0201cbe4 (const NNSG3dResTex * pTex, const NNSG3dResName * pPlttName, NNSG3dMatAnmResult * pResult)
 {
 
@@ -143,7 +135,6 @@ void SetPaletteAnimationResult_0201cbe4 (const NNSG3dResTex * pTex, const NNSG3d
         const NNSG3dResDictPlttData * pPlttData = NNS_G3dGetPlttDataByName(pTex, pPlttName);
         u16 plttBase = pPlttData->offset;
         u16 vramOffset = (u16)(NNS_GfdGetTexKeyAddr(pTex->plttInfo.vramKey) >> NNS_GFD_TEXKEY_ADDR_SHIFT);
-
 
         if (!(pPlttData->flag & 1)) {
 

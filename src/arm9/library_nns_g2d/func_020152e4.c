@@ -1,9 +1,3 @@
-/* Configures object-character mapping, uploads character data to the selected VRAM target, and fills the image proxy.
- * Uncertainty: This identifies a shared library operation; the particular scene, asset or gameplay caller using it is not established. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/g2d/calls/func_02011f94.c.
- * Original routine: func_02011f94. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,9 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
-
-
 
 typedef vu32 REGType32v;
 void DC_FlushRange(const void * startAddr, u32 nBytes);
@@ -298,7 +289,6 @@ static inline void SetupImageProxyPrams_ (const NNSG2dCharacterData * pSrcData, 
 }
 extern void func_020152a8 (NNSG2dImageProxy * pImg, NNS_G2D_VRAM_TYPE type, u32 addr);
 
-/* G2D_LoadCharacterImage_020152e4 -- NitroSystem g2d_Image.c: NNS_G2dLoadImage1DMapping. */
 void G2D_LoadCharacterImage_020152e4 (const NNSG2dCharacterData * pSrcData, u32 baseAddr, NNS_G2D_VRAM_TYPE type, NNSG2dImageProxy * pImgProxy)
 {
 

@@ -1,8 +1,3 @@
-/* Installs the open, close, read, and cancel callbacks on a stream player, choosing file-backed or memory-backed implementations based on whether the requested file is already cached.
- * The BK9E player layout has two unknown words after the embedded stream object.
- * Adapted from CC0 Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/snd/calls/func_0201df04.c.
- * Target code and relocation values were checked against the BK9E binary. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -22,9 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
-
-
 
 typedef struct CPContext {
     u64 div_numer;
@@ -578,12 +570,10 @@ extern void func_020217fc (NNSSndStrmPlayer * player);
 extern s32 func_02021800 (NNSSndStrmPlayer * player, void * dest, u32 size, u32 offset);
 extern void func_0202181c (NNSSndStrmPlayer * player);
 
-/* khdays: shared-bss */
-NNSSndStrmThread * sPrepareThread = 0;   /* sPrepareThread */
-BOOL data_0204ad8c = 0;   /* initialized$3434 */
-u8 * sDecodeBuffer = 0;   /* sDecodeBuffer */
+NNSSndStrmThread * sPrepareThread = 0;
+BOOL data_0204ad8c = 0;
+u8 * sDecodeBuffer = 0;
 
-/* SelectArchiveStreamCallbacks_0202161c -- NitroSystem sndarc_stream.c: SetupStreamFunction. */
 void SelectArchiveStreamCallbacks_0202161c (NNSSndStrmPlayer * player, u32 fileId)
 {
     if (func_0201ee28(fileId) == NULL) {

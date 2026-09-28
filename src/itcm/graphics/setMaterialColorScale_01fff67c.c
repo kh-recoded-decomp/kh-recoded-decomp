@@ -1,8 +1,3 @@
-/* Behavior: Unpacks a 15-bit RGB value into three material color scale channels.
- * Inputs/outputs and evidence: Sets an enable word and extracts three five-bit channels, storing each plus one.
- * Uncertainty: Meaning of the enable word is inferred from adjacent material state, not present here.
- * Source: khdays-decomp/src/calls/func_01ffcec0.c; CC0, commit ab832f38b943c15f461228968a89002e1a99c03e.
- */
 typedef unsigned short u16;
 
 typedef struct MaterialColorScale {

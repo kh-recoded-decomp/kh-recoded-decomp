@@ -1,9 +1,3 @@
-/* Resets five frame-texture VRAM regions, sets active flags from slot count, and resets head/tail bounds.
- * This is a reusable Nitro/NitroSystem subsystem operation; a specific Re:coded gameplay caller or use is not inferred. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/gfd/calls/func_02010f08.c.
- * Original routine: func_02010f08. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,7 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
 
 #define NNS_GFD_NUM_TEX_VRAM_REGION 5
 
@@ -53,14 +46,12 @@ static inline void ResetRegionHalf_ (NNSGfdFrmTexRegionState * pRegion)
     pRegion->tail = 0x20000 / 2;
 }
 
-/* NNS_GfdResetFrmTexVramState_0201391c -- NitroSystem gfd_FrameTexVramMan.c: NNS_GfdResetFrmTexVramState. */
 void NNS_GfdResetFrmTexVramState_0201391c (void)
 {
     int i;
     u16 numSlot = data_0205a8c0.numSlot;
 
     const numRegion = (numSlot > 1) ? numSlot + 1 : numSlot + 0;
-
 
     for (i = 0; i < NNS_GFD_NUM_TEX_VRAM_REGION; i++) {
         if ( i < numRegion ) {

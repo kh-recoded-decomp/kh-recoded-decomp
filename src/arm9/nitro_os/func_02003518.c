@@ -1,10 +1,5 @@
-/* CC0 source: Yokimitsuro/khdays-decomp, revision ab832f38b943c15f461228968a89002e1a99c03e, libs/nitro/os/calls/OS_InitArena.c. */
 typedef int BOOL;
 
-/* Arena ids, in the order NitroSDK declares them. Id 1 is the sub-processor's
-   private slice of main memory and is not touched here; id 2 is the extended
-   main memory, which retail hardware does not have, so it is emptied instead
-   of being seeded from the linker's figures. */
 #define OS_ARENA_MAIN       0
 #define OS_ARENA_MAINEX     2
 #define OS_ARENA_ITCM       3
@@ -12,15 +7,11 @@ typedef int BOOL;
 #define OS_ARENA_SHARED     5
 #define OS_ARENA_WRAM_MAIN  6
 
-/* The two getters return the boundaries the linker laid down for an arena;
-   the setters publish them as the live allocation window. */
 extern void *func_020029d0(int nArena);
 extern void *func_02002ab4(int nArena);
 extern void OS_SetArenaHi(int nArena, void *pAddress);
 extern void OS_SetArenaLo(int nArena, void *pAddress);
 
-/* Set once, so a second call is a no-op rather than a reset that would strand
-   everything already allocated. */
 extern BOOL data_02044588;
 
 void OS_InitArena(void)

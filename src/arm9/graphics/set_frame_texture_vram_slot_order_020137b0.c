@@ -1,9 +1,3 @@
-/* Sets the five frame texture VRAM slot pointers to the requested entries.
- * Evidence: The Re:coded caller initializes the frame texture VRAM manager and calls this with
- * two fixed five-index orderings based on its requested slot count.
- * Uncertainty: The five entries' internal fields are opaque here; no party or character meaning is established.
- * Source: src/calls/func_02010e38.c from khdays-decomp, CC0, commit ab832f38b943c15f461228968a89002e1a99c03e. */
-
 typedef struct {
     char bytes[0x18];
 } FrameTextureEntry;

@@ -1,9 +1,3 @@
-/* Changes a sequence player’s pause state only when the requested flag differs from its stored state.
- * Uncertainty: No particular player or sequence role is known. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/snd/calls/func_0201a604.c.
- * Original routine: func_0201a604. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,9 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
-
-
 
 typedef enum {
     SND_DUTY_1_8,
@@ -180,7 +171,6 @@ typedef struct NNSSndPlayerHeap {
     int playerNo;
 } NNSSndPlayerHeap;
 
-/* func_0201dc20 -- NitroSystem player.c: NNSi_SndPlayerPause. */
 void func_0201dc20 (NNSSndSeqPlayer * seqPlayer, BOOL flag)
 {
     if (seqPlayer == NULL) return;

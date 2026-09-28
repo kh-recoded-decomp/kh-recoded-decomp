@@ -1,9 +1,3 @@
-/* Waits for geometry idle, resets geometry/matrix-stack state, restores default polygon/texture state, and resets texture-palette base.
- * The exact public SDK symbol is not established from the body, so the target address-based name is retained; behavior is limited to the implemented operation. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nitro/gx/calls/G3X_ResetMtxStack.c.
- * Original routine: G3X_ResetMtxStack. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -24,8 +18,6 @@ typedef volatile unsigned char vu8;
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
 
-
-/* NitroSDK GX 3D engine registers (g3x.h / g3imm.h inlines, ioreg_G3X.h). */
 typedef volatile u16 REGType16v;
 typedef volatile u32 REGType32v;
 #define REG_DISP3DCNT_ADDR      0x04000060
@@ -94,16 +86,16 @@ typedef enum { GX_TEXPLTTCOLOR0_USE = 0 } GXTexPlttColor0;
 #define REG_G3_POLYGON_ATTR_ID_SHIFT 24
 typedef void (*MIDmaCallback)(void *);
 
-extern u32 data_020422b8;   /* GXi_DmaId */
+extern u32 data_020422b8;
 #define GXi_DmaId data_020422b8
 extern void G3X_ClearFifo(void);
 extern void G3X_InitMtxStack(void);
 extern void G3X_InitTable(void);
-/* This SDK's func_020069d8 (4.x name) sits at G3X_ResetMtxStack_2 in the symbol map. */
+
 extern void G3X_ResetMtxStack_2(void);
 extern void MI_DmaFill32Async(u32 dmaNo, void *dest, u32 data, u32 size, MIDmaCallback callback, void *arg);
 extern void MI_DmaFill32(u32 dmaNo, void *dest, u32 data, u32 size);
-extern void INITi_CpuClear32_0x01ff86fc(u32 data, void *destp, u32 size);   /* MIi_CpuClear32 */
+extern void INITi_CpuClear32_0x01ff86fc(u32 data, void *destp, u32 size);
 #define MI_CpuFill32(dest, data, size) INITi_CpuClear32_0x01ff86fc((data), (dest), (size))
 
 static inline BOOL G3X_IsGeometryBusy(void)
@@ -155,8 +147,7 @@ static inline void G3X_AlphaTest(BOOL enable, int ref)
                                   REG_G3X_DISP3DCNT_ATE_MASK);
         reg_G3X_ALPHA_TEST_REF = (u16)ref;
     } else {
-        /* the 16-bit mask (a second pool word) is this SDK's spelling; a 32-bit ~mask would be
-         * derived from SetShading's by `sub #2` */
+
         reg_G3X_DISP3DCNT = (u16)(reg_G3X_DISP3DCNT &
                                   (u16)~(REG_G3X_DISP3DCNT_RO_MASK | REG_G3X_DISP3DCNT_GO_MASK |
                                          REG_G3X_DISP3DCNT_ATE_MASK));
@@ -201,7 +192,6 @@ static inline void G3_TexImageParam(GXTexFmt texFmt, GXTexGen texGen, GXTexSizeS
 #define G2_BLENDTYPE_FADEOUT 0x00c0
 #define REG_G2_BLDCNT_EFFECT_MASK 0x00c0
 
-/* func_020069d8 -- NitroSDK g3x.c: G3X_Reset (the symbol map calls this func_020069d8; the SDK's func_020069d8 is G3X_ResetMtxStack_2). */
 void func_020069d8 (void)
 {
 

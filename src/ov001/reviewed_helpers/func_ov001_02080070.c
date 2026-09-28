@@ -1,7 +1,3 @@
-/* Evaluates two arguments and a local value, invokes a helper using the second value truncated to sixteen bits, and forwards its result.
- * Higher-level purpose remains unclassified. Recovered CC0 C from
- * Yokimitsuro/khdays-decomp, ab832f38b943c15f461228968a89002e1a99c03e,
- * src/overlays/ov020/calls/func_ov020_0207fa40.c. */
 extern int func_02025de4(void *a, int b);
 extern int func_02025de4_alias(void *a, int b);
 extern int func_02081da8(unsigned short a, int *b);

@@ -1,9 +1,3 @@
-/* Inverts a 4x3 fixed-point affine matrix, returning failure for zero determinant and using the hardware divider for the reciprocal.
- * This is a reusable Nitro/NitroSystem subsystem operation; a specific Re:coded gameplay caller or use is not inferred. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nitro/mtx/calls/MTX_Inverse43.c.
- * Original routine: MTX_Inverse43. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef signed long fx32;
 typedef signed long long fx64;
 

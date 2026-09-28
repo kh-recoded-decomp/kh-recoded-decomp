@@ -1,11 +1,3 @@
-/* Applies a model joint's default size through the renderer's scale handler.
- * Skips optional node translation/rotation fields to locate scale data and calls the current render state scale callback.
- * Inputs use 20.12 fixed-point values where applicable; output is the sampled joint pose.
- * Uncertainty: Shared model-animation code. Callers have not yet established which characters, enemies, or scenery use this copy.
- * Adapted from khdays-decomp/src/calls/func_02026adc.c (CC0-1.0),
- * revision ab832f38b943c15f461228968a89002e1a99c03e. See THIRD_PARTY.md.
- */
-
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned long u32;
@@ -99,7 +91,6 @@ static inline const NNSG3dResNodeData *NNS_G3dGetNodeDataByIdx(const NNSG3dResNo
     }
     return 0;
 }
-
 
 void ModelAnimation_ApplyDefaultJointScale_02038f3c(NNSG3dJntAnmResult *jointPose)
 {

@@ -1,9 +1,3 @@
-/* Removes and returns the first pending load command while interrupts are disabled.
- * Uncertainty: The command’s operation is not decoded here. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/snd/calls/func_0201d358.c.
- * Original routine: func_0201d358. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,9 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
-
-
 
 extern OSIntrMode OS_DisableInterrupts(void);
 extern OSIntrMode OS_RestoreInterrupts(OSIntrMode state);
@@ -574,12 +565,10 @@ typedef struct LoadCommand {
 } LoadCommand;
 extern NNSFndList data_0205e330;
 
-/* khdays: shared-bss */
-NNSSndStrmThread * sPrepareThread = 0;   /* sPrepareThread */
-BOOL data_0204ad8c = 0;   /* initialized$3434 */
-u8 * sDecodeBuffer = 0;   /* sDecodeBuffer */
+NNSSndStrmThread * sPrepareThread = 0;
+BOOL data_0204ad8c = 0;
+u8 * sDecodeBuffer = 0;
 
-/* func_02020a94 -- NitroSystem sndarc_stream.c: AllocCommandBuffer. */
 LoadCommand * func_02020a94 (void)
 {
     OSIntrMode old;

@@ -1,9 +1,3 @@
-/* Updates tracked OBJ extended-palette bank state, programs E/F/G control registers, and returns other banks to LCDC.
- * This is a reusable Nitro/NitroSystem subsystem operation; a specific Re:coded gameplay caller or use is not inferred. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nitro/gx/calls/GX_BeginLoadOBJExtPltt.c.
- * Original routine: GX_BeginLoadOBJExtPltt. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -33,7 +27,7 @@ void GX_BeginLoadOBJExtPltt_02008998(int bank) {
         break;
     case 0x60:
         writeG(0x8b);
-        /* fallthrough */
+
     case 0x20:
         writeF(0x83);
         break;
@@ -42,10 +36,10 @@ void GX_BeginLoadOBJExtPltt_02008998(int bank) {
         break;
     case 0x70:
         writeG(0x9b);
-        /* fallthrough */
+
     case 0x30:
         writeF(0x93);
-        /* fallthrough */
+
     case 0x10:
         writeE(0x83);
         break;

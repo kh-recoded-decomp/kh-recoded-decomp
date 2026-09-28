@@ -1,9 +1,3 @@
-/* Advances active sequence-player fades and state; updates player volume and starts prepared sequences when their transition conditions are met.
- * Uncertainty: The specific sequences and game contexts are not identified. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/snd/calls/func_0201a360.c.
- * Original routine: func_0201a360. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,7 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
 
 #define FADER_SHIFT 8
 
@@ -203,7 +196,6 @@ extern void func_0201dd8c(NNSSndSeqPlayer * seqPlayer);
 extern void func_0201dd8c (NNSSndSeqPlayer * seqPlayer);
 extern void func_0201de30 (NNSSndSeqPlayer * seqPlayer);
 
-/* func_0201d974 -- NitroSystem player.c: NNSi_SndPlayerMain. */
 void func_0201d974 (void)
 {
     NNSSndSeqPlayer * seqPlayer;

@@ -1,9 +1,3 @@
-/* Uses the current main-engine mode as an index into a mode table and updates graphics mode while preserving the background-zero 2D/3D choice.
- * Uncertainty: This identifies a shared library operation; the particular scene, asset or gameplay caller using it is not established. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/g2d/calls/func_020128c0.c.
- * Original routine: func_020128c0. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -60,7 +54,6 @@ inline GXBGMode GetBGModeMain (void)
     return (GXBGMode)(((*( REGType32v *) (0x04000000 + 0x000)) & 0x00000007 ) >> 0 );
 }
 
-/* G2D_ChangeMainBackgroundMode_02015bdc -- NitroSystem g2d_Screen.c: ChangeBGModeByTableMain. */
 void G2D_ChangeMainBackgroundMode_02015bdc (const u8 modeTable[])
 {
     GXBGMode mode = (GXBGMode)modeTable[GetBGModeMain()];

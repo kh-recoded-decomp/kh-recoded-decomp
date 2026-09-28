@@ -1,9 +1,3 @@
-/* Loads or resolves a sequence archive using the requested flags and optionally returns the archive pointer.
- * Uncertainty: Archive identity and contents are not established. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/snd/calls/func_0201bcd0.c.
- * Original routine: func_0201bcd0. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,7 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
 
 #define NNS_SND_ARC_LOAD_SEQARC (1 << 3)
 
@@ -105,7 +98,6 @@ void * func_0201ee28(u32 fileId);
 extern NNSSndSeqArc * func_0201f760(u32 fileId, NNSSndHeapHandle heap, BOOL bSetAddr);
 extern NNSSndSeqArc * func_0201f760 (u32 fileId, NNSSndHeapHandle heap, BOOL bSetAddr);
 
-/* func_0201f42c -- NitroSystem sndarc_loader.c: NNSi_SndArcLoadSeqArc. */
 NNSSndArcLoadResult func_0201f42c (int seqArcNo, u32 loadFlag, NNSSndHeapHandle heap, BOOL bSetAddr, struct NNSSndSeqArc ** pData)
 {
     const NNSSndArcSeqArcInfo * seqArcInfo;

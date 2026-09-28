@@ -1,4 +1,3 @@
-/* CC0 source: Yokimitsuro/khdays-decomp, revision ab832f38b943c15f461228968a89002e1a99c03e, libs/nitro/os/auto/DLInsert.c. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -18,8 +17,6 @@ typedef volatile unsigned char vu8;
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
 
-
-/* NitroSDK os_alloc.c: the arena heap allocator (free-list cells of 32-byte-aligned blocks). */
 typedef int OSArenaId;
 typedef int OSHeapHandle;
 #define OS_ARENA_MAX 9
@@ -36,33 +33,32 @@ typedef struct Cell Cell;
 typedef struct HeapDesc HeapDesc;
 
 struct Cell {
-    Cell *prev;                   /* 0x00 */
-    Cell *next;                   /* 0x04 */
-    long size;                    /* 0x08 */
+    Cell *prev;
+    Cell *next;
+    long size;
 };
 
 struct HeapDesc {
-    long size;                    /* 0x00 */
-    Cell *free;                   /* 0x04 */
-    Cell *allocated;              /* 0x08 */
+    long size;
+    Cell *free;
+    Cell *allocated;
 };
 
 typedef struct {
-    volatile OSHeapHandle currentHeap;   /* 0x00 */
-    int numHeaps;                 /* 0x04 */
-    void *arenaStart;             /* 0x08 */
-    void *arenaEnd;               /* 0x0c */
-    HeapDesc *heapArray;          /* 0x10 */
+    volatile OSHeapHandle currentHeap;
+    int numHeaps;
+    void *arenaStart;
+    void *arenaEnd;
+    HeapDesc *heapArray;
 } OSHeapInfo;
 
-extern void *data_02044590[OS_ARENA_MAX];   /* OSiHeapInfo */
+extern void *data_02044590[OS_ARENA_MAX];
 #define OSiHeapInfo data_02044590
 extern OSIntrMode OS_DisableInterrupts(void);
 extern OSIntrMode OS_RestoreInterrupts(OSIntrMode state);
 extern Cell *DLAddFront(Cell *list, Cell *cell);
 extern Cell *DLExtract(Cell *list, Cell *cell);
 
-/* DLInsert -- NitroSDK os_alloc.c. */
 Cell * DLInsert (Cell * list, Cell * cell)
 {
     Cell * prev;

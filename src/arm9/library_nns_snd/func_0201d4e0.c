@@ -1,9 +1,3 @@
-/* Fades all active sequence players assigned to the requested player number.
- * Uncertainty: Caller-selected player scope; timing is expressed only by the supplied frame argument. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/snd/calls/func_02019eac.c.
- * Original routine: func_02019eac. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,7 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
 
 #define SND_PLAYER_NUM 16
 
@@ -188,12 +181,10 @@ extern NNSSndSeqPlayer data_0205d8b8[ 16 ];
 extern NNSSndPlayer data_0205dcf8[ 32 ];
 extern void func_0201dbd0 (NNSSndSeqPlayer * seqPlayer, int fadeFrame);
 
-/* func_0201d4e0 -- NitroSystem player.c: NNS_SndPlayerStopSeqByPlayerNo. */
 void func_0201d4e0 (int playerNo, int fadeFrame)
 {
     NNSSndSeqPlayer * seqPlayer;
     int i;
-
 
     for (i = 0; i < SND_PLAYER_NUM; i++) {
         seqPlayer = &data_0205d8b8[ i ];

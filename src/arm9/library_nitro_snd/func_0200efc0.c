@@ -1,9 +1,3 @@
-/* Obtains an available sound command slot, optionally waiting and processing queued commands when blocking allocation is requested.
- * Uncertainty: Queue scheduling policy is outside this allocator. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nitro/snd/calls/SND_AllocCommand.c.
- * Original routine: SND_AllocCommand. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,12 +17,10 @@ typedef unsigned char vu8;
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
 
-
-/* NitroSDK SND library (ARM9 side): command interface to the ARM7 sound driver. */
 typedef struct SNDCommand {
-    struct SNDCommand *next;      /* 0x00 */
-    u32 id;                       /* 0x04 */
-    u32 arg[4];                   /* 0x08 */
+    struct SNDCommand *next;
+    u32 id;
+    u32 arg[4];
 } SNDCommand;
 
 enum {
@@ -48,15 +40,12 @@ extern void PushCommand_impl(int command, u32 arg0, u32 arg1, u32 arg2, u32 arg3
 #define PushCommand(c, a0, a1, a2, a3) PushCommand_impl((c), (u32)(a0), (u32)(a1), (u32)(a2), (u32)(a3))
 
 extern BOOL IsCommandAvailable(void);
-extern SNDCommand *func_0200f448(void);       /* AllocCommand */
+extern SNDCommand *func_0200f448(void);
 extern int SND_CountWaitingCommand(void);
-extern const SNDCommand *func_0200eec0(u32 flags);   /* SND_RecvCommandReply */
-extern BOOL func_0200f080(u32 flags);         /* SND_FlushCommand */
+extern const SNDCommand *func_0200eec0(u32 flags);
+extern BOOL func_0200f080(u32 flags);
 extern void RequestCommandProc(void);
 
-/* func_0200efc0 -- take a free command slot; with SND_COMMAND_BLOCK the caller waits,
- * first reaping finished command lists, else flushing the reserve list, and then
- * blocking on replies until a slot frees up. */
 SNDCommand *func_0200efc0(u32 flags)
 {
     SNDCommand *command;

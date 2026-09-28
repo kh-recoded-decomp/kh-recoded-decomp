@@ -1,4 +1,3 @@
-/* NitroSystem foundation: lists, heaps, allocators, as the library sources declare them (the NitroSDK / NitroSystem names). */
 #ifndef NNSYS_FND_H
 #define NNSYS_FND_H
 

@@ -1,4 +1,3 @@
-/* Selects a tile-map entry from a packed coordinate and returns its high bit; game meaning unknown. Evidence: Source implementation directly performs the described operations; see src/auto/func_02025074.c. Uncertainty: The exact game-specific role is unresolved. Recovered from Days source src/auto/func_02025074.c; CC0, commit ab832f38b943c15f461228968a89002e1a99c03e. */
 unsigned int func_0202ce18(unsigned int packed_coordinate) {
     unsigned int coordinate_mask = 0xfffffc;
     unsigned int map_row_address = (packed_coordinate >> 7 & coordinate_mask) + 0x1ff8000;

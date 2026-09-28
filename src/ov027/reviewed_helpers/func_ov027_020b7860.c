@@ -1,7 +1,3 @@
-/* Tests whether a point lies inside inclusive bounds stored as four bytes at offsets 0x1c through 0x1f.
- * Higher-level purpose remains unclassified. Recovered CC0 C from
- * Yokimitsuro/khdays-decomp, ab832f38b943c15f461228968a89002e1a99c03e,
- * src/overlays/ov026/auto/func_ov026_02082c9c.c. */
 struct Box {
     unsigned char pad[0x1c];
     unsigned char x;

@@ -1,9 +1,3 @@
-/* Selects a free sequence player or reclaims an eligible active player by priority, then updates priority ordering.
- * Uncertainty: The call-site reason for requesting a player is unknown. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/snd/calls/func_0201a7a4.c.
- * Original routine: func_0201a7a4. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,9 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
-
-
 
 typedef enum {
     SND_DUTY_1_8,
@@ -187,11 +178,9 @@ extern void func_0201dd38(NNSSndSeqPlayer * seqPlayer);
 extern void func_0201dd38 (NNSSndSeqPlayer * seqPlayer);
 extern void func_0201dd8c (NNSSndSeqPlayer * seqPlayer);
 
-/* func_0201ddc4 -- NitroSystem player.c: AllocSeqPlayer. */
 NNSSndSeqPlayer * func_0201ddc4 (int prio)
 {
     NNSSndSeqPlayer * seqPlayer;
-
 
     seqPlayer = (NNSSndSeqPlayer *)NNS_FndGetNextListObject(&data_0205d8a0, NULL);
     if (seqPlayer == NULL) {

@@ -1,9 +1,3 @@
-/* Removes a node from the object registry list and hash bucket chain.
- * Evidence: List pointers and key-based hash bucket operations in source.
- * Uncertainty: Registry key identity is inferred from 16-bit field at +0x10.
- * Source: src/calls/func_02023890.c from khdays-decomp, CC0, commit ab832f38b943c15f461228968a89002e1a99c03e. */
-
-
 extern int data_020603c8[];
 extern int data_020603d8[];
 

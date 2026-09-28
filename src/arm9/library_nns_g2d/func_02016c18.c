@@ -1,9 +1,3 @@
-/* Measures the widest text line and total height using font line spacing plus caller-supplied horizontal and vertical spacing.
- * Uncertainty: This identifies a shared library operation; the particular scene, asset or gameplay caller using it is not established. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/g2d/calls/func_0201386c.c.
- * Original routine: func_0201386c. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,9 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
-
-
 
 typedef struct NNSG2dCharWidths {
     s8 left;
@@ -82,12 +73,10 @@ inline s8 NNS_G2dFontGetLineFeed (const NNSG2dFont * pFont)
 int func_02016aa0(const NNSG2dFont * pFont, int hSpace, const void * str, const void ** pPos);
 extern int func_02016aa0 (const NNSG2dFont * pFont, int hSpace, const void * str, const void ** pPos);
 
-/* G2D_MeasureTextRectangle_02016c18 -- NitroSystem g2d_Font.c: NNSi_G2dFontGetTextRect. */
 NNSG2dTextRect G2D_MeasureTextRectangle_02016c18 (const NNSG2dFont * pFont, int hSpace, int vSpace, const void * txt)
 {
     int lines = 1;
     NNSG2dTextRect rect = {0, 0};
-
 
     while (txt != NULL) {
         const int width = func_02016aa0(pFont, hSpace, txt, &txt);

@@ -1,4 +1,3 @@
-/* Initializes graphics state values and identity matrices; several field meanings remain unknown. Evidence: Source implementation directly performs the described operations; see src/calls/func_02015630.c. Uncertainty: The exact game-specific role is unresolved. Recovered from Days source src/calls/func_02015630.c; CC0, commit ab832f38b943c15f461228968a89002e1a99c03e. */
 extern void MTX_Identity33_(void *matrix_input);
 extern void MTX_Identity43_(void *matrix_input);
 extern void MTX_Identity44_(void *matrix_input);

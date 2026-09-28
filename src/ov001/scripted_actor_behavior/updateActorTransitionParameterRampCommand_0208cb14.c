@@ -1,8 +1,3 @@
-/* Behavior: Updates a script command that ramps an actor transition parameter over several frames.
- * Inputs/outputs and evidence: Reads actor/from/to/frame operands, decrements remaining frames, interpolates the parameter, requeues until complete, and returns completion status.
- * Uncertainty: Script operands and callees identify a script-driven actor transition; the meaning of mode 1 is not established.
- * Source: khdays-decomp/src/overlays/ov023/calls/func_ov023_020845a0.c; CC0, commit ab832f38b943c15f461228968a89002e1a99c03e.
- */
 typedef unsigned char  u8;
 typedef unsigned short u16;
 typedef signed short   s16;

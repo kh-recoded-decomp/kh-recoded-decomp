@@ -1,5 +1,3 @@
-/* Releases timer 1 and clears the alarm-system active flag while interrupts are disabled.
- * Reconstructed from BK9E instructions using the verified CC0 alarm layout. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;

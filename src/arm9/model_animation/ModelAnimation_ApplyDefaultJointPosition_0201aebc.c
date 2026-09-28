@@ -1,11 +1,3 @@
-/* Restores a model joint's default position when using its stored model pose.
- * Reads the current model node from the render command; copies its three translation values or marks zero translation.
- * Inputs use 20.12 fixed-point values where applicable; output is the sampled joint pose.
- * Uncertainty: Shared model-animation code. Callers have not yet established which characters, enemies, or scenery use this copy.
- * Adapted from khdays-decomp/src/calls/func_02026a44.c (CC0-1.0),
- * revision ab832f38b943c15f461228968a89002e1a99c03e. See THIRD_PARTY.md.
- */
-
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned long u32;

@@ -1,9 +1,3 @@
-/* Rejects sizes larger than the unit-heap block size and otherwise requests one fixed-size block.
- * Uncertainty: This identifies a shared library operation; the particular scene, asset or gameplay caller using it is not established. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/fnd/calls/func_02010d70.c.
- * Original routine: func_02010d70. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -82,7 +76,6 @@ struct NNSFndAllocator {
     u32 heapParam2;
 };
 
-/* FND_AllocateUnitHeapBlock_020136b0 -- NitroSystem allocator.c: AllocatorAllocForUnitHeap. */
 void * FND_AllocateUnitHeapBlock_020136b0 (NNSFndAllocator * pAllocator, u32 size)
 {
     NNSFndHeapHandle const heap = pAllocator->pHeap;

@@ -1,8 +1,3 @@
-/* Behavior: Tries two currently selected menu handler methods in order.
- * Inputs/outputs and evidence: Calls the first handler when its argument is nonzero; if unhandled, calls the second handler when its argument is nonzero.
- * Uncertainty: The handler method offsets and tables are known, but event meaning is not.
- * Source: khdays-decomp/src/overlays/ov008/calls/func_ov008_02051a28.c; CC0, commit ab832f38b943c15f461228968a89002e1a99c03e.
- */
 extern int func_020bcd98(void *method, int event);
 extern int data_020bea84[];
 struct MenuHandlerEntry { char *object; int padding; };

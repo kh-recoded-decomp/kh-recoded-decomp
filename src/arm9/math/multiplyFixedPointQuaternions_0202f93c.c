@@ -1,8 +1,3 @@
-/* Behavior: Combines two 3D turns into one orientation, using fixed-point quaternion math.
- * Inputs/outputs and evidence: Four component products and sums implement the Hamilton product; all fields are staged before writing the output.
- * Uncertainty: Quaternion composition is clear; callers and its exact gameplay use are not established.
- * Source: khdays-decomp/src/calls/func_0202ef54.c; CC0, commit ab832f38b943c15f461228968a89002e1a99c03e.
- */
 typedef struct FixedPointQuaternion {
     int w;
     int x;
@@ -19,7 +14,6 @@ static inline int multiplyFixedPoint(int leftFactor, int rightFactor)
 {
     return truncateFixedPointProduct(((long long)leftFactor * rightFactor + 0x800LL) >> 12);
 }
-
 
 void multiplyFixedPointQuaternions_0202f93c(FixedPointQuaternion *resultQuaternion, const FixedPointQuaternion *leftQuaternion, const FixedPointQuaternion *rightQuaternion)
 {

@@ -1,9 +1,3 @@
-/* Allocates a sound-heap buffer for a file, reads the file bytes into it and flushes the data cache; returns failure as null.
- * Uncertainty: The file type depends on the caller. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/snd/calls/func_0201befc.c.
- * Original routine: func_0201befc. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,7 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
 
 #define NNS_FND_HEAP_INVALID_HANDLE NULL
 #define NNS_SND_HEAP_INVALID_HANDLE NNS_FND_HEAP_INVALID_HANDLE
@@ -60,7 +53,6 @@ void * func_0201f0ec(NNSSndHeapHandle heap, u32 size, NNSSndHeapDisposeCallback 
 s32 func_0201ed3c(u32 fileId, void * buffer, s32 size, s32 offset);
 u32 func_0201ed14(u32 fileId);
 
-/* func_0201f650 -- NitroSystem sndarc_loader.c: NNSi_SndArcLoadFile. */
 void * func_0201f650 (u32 fileId, NNSSndHeapDisposeCallback callback, u32 data1, u32 data2, NNSSndHeapHandle heap)
 {
     void * buffer;

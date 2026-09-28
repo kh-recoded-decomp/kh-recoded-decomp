@@ -1,4 +1,3 @@
-/* Initializes shared random state and its linear-congruential constants. Evidence: Source implementation directly performs the described operations; see src/auto/func_02023e34.c. Uncertainty: No material uncertainty for the stated operation; game-specific use may depend on callers. Recovered from Days source src/auto/func_02023e34.c; CC0, commit ab832f38b943c15f461228968a89002e1a99c03e. */
 extern int shared_rng_state[];
 
 void SeedSharedRandomState_0202a984(int seed_word_0, int seed_word_1, int seed_word_2) {

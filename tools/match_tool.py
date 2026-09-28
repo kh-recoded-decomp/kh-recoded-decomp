@@ -259,7 +259,27 @@ def cmd_try(args) -> int:
     return 1
 
 
+GHIDRA_NAME = re.compile(r"\b(?:[a-z]{1,5}Var\d+|param_\d+|local_[0-9a-fA-F]+|(?:in|unaff|extraout)_\w+|"
+                         r"(?:DAT|FUN|PTR|LAB|SUB)_[0-9a-fA-F]+|[a-z]*Stack_[0-9a-fA-F]+|undefined\d?)\b")
+
+
+def style_problems(text: str) -> list[str]:
+    """Readable names and at most one short comment per source."""
+    comments = re.findall(r"/\*.*?\*/|//[^\n]*", text, flags=re.S)
+    code = re.sub(r"/\*.*?\*/|//[^\n]*", "", text, flags=re.S)
+    problems = [f"decompiler-style name `{m}`" for m in sorted(set(GHIDRA_NAME.findall(code)))]
+    if len(comments) > 1:
+        problems.append(f"{len(comments)} comments (at most one allowed)")
+    problems += [f"comment too long ({len(re.findall(r'[A-Za-z0-9]+', c))} words, max 12)"
+                 for c in comments if len(re.findall(r"[A-Za-z0-9]+", c)) > 12]
+    return problems
+
+
 def cmd_stage(args) -> int:
+    problems = style_problems(Path(args.source).read_text(encoding="utf-8"))
+    if problems:
+        print("ERROR: fix style before staging: " + "; ".join(problems))
+        return 1
     name, info, target = target_bytes(args.module, args.symbol)
     mode = args.mode or inventory()[args.module]["modes"][name]
     actual, entry, error = compile_candidate(args.module, name, Path(args.source), args.compiler, mode,

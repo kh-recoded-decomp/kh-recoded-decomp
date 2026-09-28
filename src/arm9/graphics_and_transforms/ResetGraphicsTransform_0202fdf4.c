@@ -1,4 +1,3 @@
-/* Resets global translation, scale and rotation state, then submits a graphics command. Evidence: Source implementation directly performs the described operations; see src/calls/func_02028768.c. Uncertainty: No material uncertainty for the stated operation; game-specific use may depend on callers. Recovered from Days source src/calls/func_02028768.c; CC0, commit ab832f38b943c15f461228968a89002e1a99c03e. */
 typedef struct { int identity_matrix[3][3]; } MtxFx33;
 
 extern void MTX_Identity33_(MtxFx33 *mtx);

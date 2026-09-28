@@ -1,9 +1,3 @@
-/* Applies palette base and VRAM address to materials in a palette binding record.
- * The middleware operation is supported by this body; its caller-specific use and any higher-level game meaning are not established here. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/g3d/auto/func_02015280.c.
- * Original routine: func_02015280. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,7 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
 
 #define NNS_GFD_TEXKEY_ADDR_SHIFT 3
 
@@ -174,14 +167,12 @@ inline NNSG3dResMatData * NNS_G3dGetMatDataByIdx (const NNSG3dResMat * mat, u32 
     return NULL ;
 }
 
-/* ApplyPaletteBindingToMaterials_02018d10 -- NitroSystem kernel.c: bindMdlPltt_Internal_. */
 void ApplyPaletteBindingToMaterials_02018d10 (NNSG3dResMat * pMat, NNSG3dResDictPlttToMatIdxData * pBindData, const NNSG3dResTex * pTex, const NNSG3dResDictPlttData * pPlttData)
 {
     u8 * base = (u8 *)pMat + pBindData->offset;
     u16 plttBase = pPlttData->offset;
     u16 vramOffset = (u16)(NNS_GfdGetTexKeyAddr(pTex->plttInfo.vramKey) >> NNS_GFD_TEXKEY_ADDR_SHIFT);
     u32 j;
-
 
     if (!(pPlttData->flag & 1)) {
         plttBase >>= 1;

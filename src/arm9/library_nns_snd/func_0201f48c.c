@@ -1,9 +1,3 @@
-/* Loads or resolves bank data and, when requested, associated wave archives; reports load failure and optionally returns the bank pointer.
- * Uncertainty: The caller chooses the bank and archive identifiers; their content is unknown. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/snd/calls/func_0201bd30.c.
- * Original routine: func_0201bd30. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,7 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
 
 #define NNS_SND_ARC_LOAD_BANK (1 << 1)
 #define NNS_SND_ARC_LOAD_WAVE (1 << 2)
@@ -125,7 +118,6 @@ extern NNSSndArcLoadResult func_0201f5cc (int waveArcNo, u32 loadFlag, NNSSndHea
 extern SNDBankData * func_0201f7cc (u32 fileId, NNSSndHeapHandle heap, BOOL bSetAddr);
 extern BOOL func_0201fbdc (SNDWaveArc * waveArc, const SNDBankData * bank, int waveArcNo, u32 fileId, NNSSndHeapHandle heap);
 
-/* func_0201f48c -- NitroSystem sndarc_loader.c: NNSi_SndArcLoadBank. */
 NNSSndArcLoadResult func_0201f48c (int bankNo, u32 loadFlag, NNSSndHeapHandle heap, BOOL bSetAddr, struct SNDBankData ** pData)
 {
     const NNSSndArcBankInfo * bankInfo;

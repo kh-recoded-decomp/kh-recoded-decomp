@@ -1,7 +1,3 @@
-/* Starts a display session, prepares its initial palette value and installs its update callback.
- * Obtains the current session, publishes it, initializes it with alternate-update mode 1, registers RunOverlayDisplayUpdate, stores the registration at +0x6498, and returns a callback that reports zero.
- * The display-state operations are established. The session's particular menu, scene or gameplay purpose and the shared display-setting meaning remain unknown.
- * Recovered from the persistent Ghidra caller chain and verified disassembly. */
 typedef struct OverlayDisplaySession {
     unsigned char sharedState[0x647c];
     int alternateUpdate;

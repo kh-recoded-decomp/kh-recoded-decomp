@@ -1,4 +1,3 @@
-/* CC0 Yokimitsuro/khdays-decomp revision ab832f38b943c15f461228968a89002e1a99c03e. */
 extern void func_0202f808(void *mtx);
 extern void MTX_MultVec33(void *out, void *mtx, void *in);
 

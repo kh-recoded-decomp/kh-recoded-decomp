@@ -1,4 +1,3 @@
-/* The game card and its backup memory, as the library sources declare them (the NitroSDK / NitroSystem names). */
 #ifndef NITRO_CARD_H
 #define NITRO_CARD_H
 
@@ -102,33 +101,33 @@ typedef enum { CARD_TARGET_NONE, CARD_TARGET_ROM, CARD_TARGET_BACKUP } CARDTarge
 #define CARD_ROM_PAGE_SIZE 512
 
 typedef struct CARDiCommandArg {
-    int result;                   /* 0x00: CARDResult */
-    int type;                     /* 0x04 */
-    u32 id;                       /* 0x08 */
-    u32 src;                      /* 0x0c */
-    u32 dst;                      /* 0x10 */
-    u32 len;                      /* 0x14 */
+    int result;
+    int type;
+    u32 id;
+    u32 src;
+    u32 dst;
+    u32 len;
 } CARDiCommandArg;
 
 typedef struct CARDiCommon {
-    CARDiCommandArg *cmd;         /* 0x00 */
-    int command;                  /* 0x04 */
-    volatile CARDiOwner lock_owner;   /* 0x08 */
-    volatile int lock_ref;        /* 0x0c */
-    OSThreadQueue lock_queue[1];  /* 0x10 */
-    CARDTargetMode lock_target;   /* 0x18 */
-    u32 src;                      /* 0x1c */
-    u32 dst;                      /* 0x20 */
-    u32 len;                      /* 0x24 */
-    u32 dma;                      /* 0x28 */
+    CARDiCommandArg *cmd;
+    int command;
+    volatile CARDiOwner lock_owner;
+    volatile int lock_ref;
+    OSThreadQueue lock_queue[1];
+    CARDTargetMode lock_target;
+    u32 src;
+    u32 dst;
+    u32 len;
+    u32 dma;
 } CARDiCommon;
 
 typedef struct CARDRomStat {
-    void (*read_func)(struct CARDRomStat *);   /* 0x00 */
-    u32 ctrl;                     /* 0x04 */
-    u8 *cache_page;               /* 0x08 */
-    u32 dummy[5];                 /* 0x0c */
-    u8 cache_buf[CARD_ROM_PAGE_SIZE];   /* 0x20 */
+    void (*read_func)(struct CARDRomStat *);
+    u32 ctrl;
+    u8 *cache_page;
+    u32 dummy[5];
+    u8 cache_buf[CARD_ROM_PAGE_SIZE];
 } CARDRomStat;
 
 #define CARD_DATA_READY         0x00800000

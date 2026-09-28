@@ -1,9 +1,3 @@
-/* Dispatches two optional context pointers to selected handler methods at offsets +0x14 and +0x10.
- * Evidence: The Re:coded caller obtains two enabled handler objects and invokes this callback family
- * under input-source/button-mask checks; this function tries the second callback when the first returns zero.
- * Uncertainty: The handler objects' exact UI/page identity is not established by this function.
- * Source: src/overlays/ov008/calls/func_ov008_02051500.c from khdays-decomp, CC0, commit ab832f38b943c15f461228968a89002e1a99c03e. */
-
 extern int func_020bcd98(void *method, int arg);
 extern int data_020bea84[];
 struct HandlerTableEntry { char *handlerObject; int _pad; };

@@ -1,4 +1,3 @@
-/* Searches a fixed-size name table from a caller index and returns the next match. Evidence: Source implementation directly performs the described operations; see src/overlays/ov002/calls/func_ov002_020713cc.c. Uncertainty: No material uncertainty for the stated operation; game-specific use may depend on callers. Recovered from Days source src/overlays/ov002/calls/func_ov002_020713cc.c; CC0, commit ab832f38b943c15f461228968a89002e1a99c03e. */
 typedef unsigned short u16;
 
 extern int strncmp(const char *unknown_argument_a, const char *unknown_argument_b, int unknown_argument_n);

@@ -1,5 +1,3 @@
-/* Selects a channel from the tied-channel bitmap, records it, and returns it after selecting idle state.
- * Independently reconstructed from BK9E ARM instructions and call relocations. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;

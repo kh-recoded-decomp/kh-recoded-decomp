@@ -1,9 +1,3 @@
-/* Writes sequential character indices and a palette number into a rectangular 16-bit screen map.
- * Uncertainty: This identifies a shared library operation; the particular scene, asset or gameplay caller using it is not established. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/g2d/auto/func_02014224.c.
- * Original routine: func_02014224. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -25,8 +19,6 @@ typedef volatile unsigned char vu8;
 #define HW_MAIN_MEM 0x02000000
 
 #define offsetof(type, member) ((u32)&(((type *)0)->member))
-
-
 
 typedef struct NNSG2dCharWidths {
     s8 left;
@@ -101,13 +93,11 @@ typedef struct NNSG2dCharCanvas {
     const NNSiG2dCharCanvasVTable * vtable;
 } NNSG2dCharCanvas;
 
-/* G2D_MapSequentialCharacters_02017b8c -- NitroSystem g2d_CharCanvas.c: NNS_G2dMapScrToChar256x16Pltt. */
 void G2D_MapSequentialCharacters_02017b8c (void * areaBase, int areaWidth, int areaHeight, NNSG2d256x16PlttBGWidth scnWidth, int charNo, int cplt)
 {
     u16 * pScrBase;
     int x, y;
     const u16 cplt_sft = (u16)(cplt << 12);
-
 
     pScrBase = areaBase;
 

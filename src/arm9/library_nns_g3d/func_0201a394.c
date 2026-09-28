@@ -1,9 +1,3 @@
-/* Computes model/animation region-table size and allocates storage through NNS allocator.
- * The middleware operation is supported by this body; its caller-specific use and any higher-level game meaning are not established here. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/g3d/calls/func_02016948.c.
- * Original routine: func_02016948. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,9 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
-
-
 
 typedef s32 fx32;
 typedef s16 fx16;
@@ -144,7 +135,6 @@ struct NNSFndAllocator {
 };
 void * NNS_FndAllocFromAllocator(NNSFndAllocator * pAllocator, u32 size);
 
-/* AllocateAnimationObjectStorage_0201a394 -- NitroSystem mem.c: NNS_G3dAllocAnmObj. */
 NNSG3dAnmObj * AllocateAnimationObjectStorage_0201a394 (NNSFndAllocator * pAlloc, const void * pAnm, const NNSG3dResMdl * pMdl)
 {
     u32 sz;

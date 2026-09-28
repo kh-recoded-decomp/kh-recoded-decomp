@@ -1,6 +1,3 @@
-/* Stores a converted script value in the selected actor's observed +0x80
- * halfword and, under object state checks, mirrors it through an ov001 helper.
- * The value's units and visible gameplay effect remain unknown. */
 typedef struct ScriptOperand { short type; unsigned char payload[6]; } ScriptOperand;
 typedef struct ActorNode {
     unsigned int flags_000;

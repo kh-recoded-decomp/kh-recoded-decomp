@@ -1,8 +1,3 @@
-/* Selects the first eligible entry containing the current probe point, dispatches its callbacks, and refreshes the probe snapshot.
- * The target branch continues on a set entry flag rather than a clear entry flag; the helper and snapshot structures are otherwise unchanged.
- * Adapted CC0 C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, src/overlays/ov026/auto/func_ov026_0208306c.c. */
-
 typedef void (*fn0)(void);
 typedef void (*fn1)(int);
 struct key { unsigned short a, b, c, d; };

@@ -1,9 +1,3 @@
-/* Obtains a sequence player for a handle, replacing an eligible lower-priority player when capacity is exhausted.
- * Uncertainty: Replacement policy is explicit, but caller-specific priority meanings are unknown. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/snd/calls/func_0201a4c4.c.
- * Original routine: func_0201a4c4. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,9 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
-
-
 
 typedef enum {
     SND_DUTY_1_8,
@@ -193,12 +184,10 @@ extern void func_0201dce8 (NNSSndPlayer * player, NNSSndSeqPlayer * seqPlayer);
 extern void func_0201dd8c (NNSSndSeqPlayer * seqPlayer);
 extern NNSSndSeqPlayer * func_0201ddc4 (int prio);
 
-/* func_0201dad8 -- NitroSystem player.c: NNSi_SndPlayerAllocSeqPlayer. */
 NNSSndSeqPlayer * func_0201dad8 (NNSSndHandle * handle, int playerNo, int prio)
 {
     NNSSndSeqPlayer * seqPlayer;
     NNSSndPlayer * player;
-
 
     player = &data_0205dcf8[ playerNo ];
 

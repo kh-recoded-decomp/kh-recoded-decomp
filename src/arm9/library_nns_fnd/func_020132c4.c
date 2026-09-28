@@ -1,9 +1,3 @@
-/* Removes a block from the expanded heap used list and returns its memory region to the free-region manager.
- * Uncertainty: This identifies a shared library operation; the particular scene, asset or gameplay caller using it is not established. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/fnd/calls/func_0201098c.c.
- * Original routine: func_0201098c. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -25,8 +19,6 @@ typedef volatile unsigned char vu8;
 #define HW_MAIN_MEM 0x02000000
 
 #define offsetof(type, member) ((u32)&(((type *)0)->member))
-
-
 
 typedef int (*MIDeviceReadFunction)(void * userdata, void * buffer, u32 offset, u32 length);
 typedef int (*MIDeviceWriteFunction)(void * userdata, const void * buffer, u32 offset, u32 length);
@@ -107,7 +99,6 @@ extern void GetRegionOfMBlock (NNSiMemRegion * region, NNSiFndExpHeapMBlockHead 
 extern NNSiFndExpHeapMBlockHead * RemoveMBlock (NNSiFndExpMBlockList * list, NNSiFndExpHeapMBlockHead * block);
 extern BOOL RecycleRegion (NNSiFndExpHeapHead * pEHHead, const NNSiMemRegion * pRegion);
 
-/* FND_FreeExpandedHeapBlock_020132c4 -- NitroSystem expheap.c: NNS_FndFreeToExpHeap. */
 void FND_FreeExpandedHeapBlock_020132c4 (NNSFndHeapHandle heap, void * memBlock)
 {
 
@@ -116,7 +107,6 @@ void FND_FreeExpandedHeapBlock_020132c4 (NNSFndHeapHandle heap, void * memBlock)
         NNSiFndExpHeapHead * pExpHeapHd = GetExpHeapHeadPtrFromHandle(pHeapHd);
         NNSiFndExpHeapMBlockHead * pMBHead = GetMBlockHeadPtr(memBlock);
         NNSiMemRegion region;
-
 
         GetRegionOfMBlock(&region, pMBHead);
         (void)RemoveMBlock(&pExpHeapHd->mbUsedList, pMBHead);

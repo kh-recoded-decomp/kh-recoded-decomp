@@ -1,6 +1,3 @@
-/* Reads one actor ID and three script values, then forwards the selected actor
- * and values to its ov001 animation/state routine. The specific animation mode
- * represented by the operands is not established. */
 typedef struct ScriptOperand { short type; unsigned char payload[6]; } ScriptOperand;
 extern int func_02025de4(void *scriptContext, ScriptOperand *operand);
 extern int func_02025dac(void *scriptContext, ScriptOperand *operand);

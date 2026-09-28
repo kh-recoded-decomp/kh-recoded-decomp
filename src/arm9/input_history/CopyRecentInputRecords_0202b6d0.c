@@ -1,9 +1,4 @@
-/* When shared status bit 15 is clear, copies four converted eight-byte records from a five-entry circular history.
- * The BK9E status address is 0x02ffffa8; body uses an index provider and four wrap-adjusted copies. Upstream GX alias is not trusted.
- * Adapted CC0 C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, src/calls/func_02024da4.c. */
 typedef unsigned short u16;
-
 
 typedef struct {
     u16 field_00;

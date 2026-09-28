@@ -1,4 +1,3 @@
-/* Computes a fixed-point direction angle with 0 along the positive horizontal component and a quarter-turn along positive vertical. Components use 1/65536-turn units. Evidence: axis special cases and quadrant branches in src/calls/FX_Atan2.c. Uncertainty: Caller-specific coordinate convention is not established. Recovered from Days source src/calls/FX_Atan2.c; CC0, commit ab832f38b943c15f461228968a89002e1a99c03e. */
 extern int FX_Inv(int numerator, int denominator);
 extern const short atan_lookup_table[130];
 

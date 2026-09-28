@@ -1,8 +1,3 @@
-/* Behavior: Starts an asynchronous file read covering sector-aligned bytes around a cursor range.
- * Inputs/outputs and evidence: Seeks to the containing 512-byte boundary, rounds length up, starts async read, advances logical cursor by requested bytes, and marks read-ahead active.
- * Uncertainty: The stream/cursor fields are inferred from accesses; return value is leading byte skew, or zero on issue failure.
- * Source: khdays-decomp/src/overlays/ov024/calls/func_ov024_02085f48.c; CC0, commit ab832f38b943c15f461228968a89002e1a99c03e.
- */
 extern int FS_SeekFile(int file, int filePosition, int whence);
 extern int FS_ReadFileAsync(int file, void *destination, unsigned int requestedLength);
 

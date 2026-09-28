@@ -1,9 +1,3 @@
-/* Rewinds a sound heap to a requested level, runs disposal callbacks for discarded allocations, and rebuilds the current heap section.
- * Uncertainty: The higher-level asset lifetime policy is caller-controlled. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/snd/calls/func_0201ba54.c.
- * Original routine: func_0201ba54. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -25,8 +19,6 @@ typedef volatile unsigned char vu8;
 #define HW_MAIN_MEM 0x02000000
 
 #define offsetof(type, member) ((u32)&(((type *)0)->member))
-
-
 
 typedef struct {
     void * prevObject;
@@ -82,14 +74,12 @@ extern void func_0201f030 (NNSSndHeapHandle heap);
 extern BOOL func_0201f2bc (NNSSndHeap * heap);
 extern void func_0201f2f8 (void);
 
-/* func_0201f1a4 -- NitroSystem heap.c: NNS_SndHeapLoadState. */
 void func_0201f1a4 (NNSSndHeapHandle heap, int level)
 {
     NNSSndHeapSection * section;
     void * object = NULL;
     BOOL result;
     BOOL doCallback = FALSE;
-
 
     if (level == 0) {
         func_0201f030(heap);

@@ -1,9 +1,7 @@
-/* Hardware registers and the memory map, as the library sources declare them (the NitroSDK / NitroSystem names). */
 #ifndef NITRO_HW_H
 #define NITRO_HW_H
 
 #include "nitro/types.h"
-
 
 enum {
     HW_ITCM = 0x01ff8000,
@@ -403,7 +401,7 @@ enum {
 
 #define REG_PXI_FIFO_CNT_SEND_FULL_MASK 0x0002
 
-#define HW_RTC_BUF                  0x027ffde8   /* OSSystemWork.real_time_clock[8] */
+#define HW_RTC_BUF                  0x027ffde8
 
 #define REG_POWCNT_OFFSET 0x304
 
@@ -427,7 +425,7 @@ enum {
 
 #define REG_PMIC_OP_CTL_ADDR 2
 
-#define HW_TOUCHPANEL_BUF   0x027fffaa   /* this SDK: the touch sample in the system work at HW_SYS_WORK + 0xaa */
+#define HW_TOUCHPANEL_BUF   0x027fffaa
 
 #define REG_DIVCNT_ADDR     0x04000280
 

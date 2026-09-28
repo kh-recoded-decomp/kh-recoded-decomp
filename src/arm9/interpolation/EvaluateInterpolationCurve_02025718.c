@@ -1,9 +1,3 @@
-/* Computes one of four fixed-point interpolation curves using division and a signed 16-bit sine table.
- * BK9E indexes the sine table at two bytes per entry, unlike the paired sine/cosine reference table.
- * Adapted CC0 C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, src/calls/func_0202136c.c. */
-
-
 typedef struct {
     short sin;
     short cos;

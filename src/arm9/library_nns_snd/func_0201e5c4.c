@@ -1,9 +1,3 @@
-/* Stops the capture timer and waits for pending sound commands; clears capture channel state and restores capture output configuration.
- * Uncertainty: Capture source and intended audio content are unknown. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/snd/calls/func_0201afac.c.
- * Original routine: func_0201afac. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,7 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
 
 #define OS_MESSAGE_NOBLOCK 0
 #define SND_COMMAND_BLOCK (1 << 0)
@@ -184,7 +177,6 @@ typedef struct CaptureParam {
 extern CaptureParam data_0205e290;
 extern OSMessageQueue data_0205e250;
 
-/* func_0201e5c4 -- NitroSystem capture.c: NNSi_SndCaptureStop. */
 void func_0201e5c4 (void)
 {
     CaptureParam * cap = &data_0205e290;

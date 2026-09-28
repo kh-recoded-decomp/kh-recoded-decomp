@@ -1,9 +1,3 @@
-/* Finds a sequence-archive entry and selects its default or caller-supplied player, bank and priority before starting playback.
- * Uncertainty: The entry content and caller policy are unknown. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/snd/calls/func_0201c688.c.
- * Original routine: func_0201c688. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,9 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
-
-
 
 typedef enum {
     SND_DUTY_1_8,
@@ -213,13 +204,11 @@ struct NNSSndSeqArc;
 extern BOOL func_0201ffac(NNSSndHandle * handle, int playerNo, int bankNo, int playerPrio, const NNSSndSeqArcSeqInfo * sound, const NNSSndSeqArc * seqArc, int seqArcNo, int index);
 extern BOOL func_0201ffac (NNSSndHandle * handle, int playerNo, int bankNo, int playerPrio, const NNSSndSeqArcSeqInfo * sound, const NNSSndSeqArc * seqArc, int seqArcNo, int index);
 
-/* func_0201fdfc -- NitroSystem sndarc_player.c: NNS_SndArcPlayerStartSeqArcEx. */
 BOOL func_0201fdfc (NNSSndHandle * handle, int playerNo, int bankNo, int playerPrio, int seqArcNo, int index)
 {
     const NNSSndArcSeqArcInfo * info;
     const NNSSndSeqArc * seqArc;
     const NNSSndSeqArcSeqInfo * sound;
-
 
     info = func_0201ea64(seqArcNo);
     if (info == NULL) return FALSE;

@@ -1,9 +1,3 @@
-/* Initializes frame-texture VRAM manager, selects region order by slot count, resets state, and optionally installs default alloc/free callbacks.
- * This is a reusable Nitro/NitroSystem subsystem operation; a specific Re:coded gameplay caller or use is not inferred. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/gfd/calls/func_02010e80.c.
- * Original routine: func_02010e80. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -24,9 +18,6 @@ typedef volatile unsigned char vu8;
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
 
-
-
-
 typedef u32 NNSGfdTexKey;
 typedef NNSGfdTexKey (*NNSGfdFuncAllocTexVram)(u32 szByte, BOOL is4x4comp, u32 opt);
 typedef int (*NNSGfdFuncFreeTexVram)(NNSGfdTexKey key);
@@ -45,7 +36,6 @@ extern void func_0201391c (void);
 extern NNSGfdTexKey func_0201399c (u32 szByte, BOOL is4x4comp, u32 opt);
 extern int func_02013b04 (NNSGfdTexKey texKey);
 
-/* NNS_GfdInitFrmTexVramManager_0201389c -- NitroSystem gfd_FrameTexVramMan.c: NNS_GfdInitFrmTexVramManager. */
 void NNS_GfdInitFrmTexVramManager_0201389c (u16 numSlot, BOOL useAsDefault)
 {
 

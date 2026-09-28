@@ -1,5 +1,3 @@
-/* Selects one of four overlay-loading paths from the requested mode.
- * See analysis/overlay_loading.json for the connected caller evidence. */
 extern int LoadOverlay053(unsigned int selectionIndex);
 extern int LoadOverlay059(unsigned int selectionIndex);
 extern int LoadOverlay060(unsigned int selectionIndex);

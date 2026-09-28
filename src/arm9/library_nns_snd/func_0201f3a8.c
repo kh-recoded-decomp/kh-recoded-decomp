@@ -1,9 +1,3 @@
-/* Loads or resolves sequence metadata and sequence bytes according to flags, optionally returning the resolved data pointer.
- * Uncertainty: The target sequence is chosen by the caller. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/snd/calls/func_0201bc4c.c.
- * Original routine: func_0201bc4c. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,7 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
 
 #define NNS_SND_ARC_LOAD_SEQ (1 << 0)
 
@@ -128,7 +121,6 @@ extern NNSSndSeqData * func_0201f6f4(u32 fileId, NNSSndHeapHandle heap, BOOL bSe
 extern NNSSndArcLoadResult func_0201f48c (int bankNo, u32 loadFlag, NNSSndHeapHandle heap, BOOL bSetAddr, struct SNDBankData ** pData);
 extern NNSSndSeqData * func_0201f6f4 (u32 fileId, NNSSndHeapHandle heap, BOOL bSetAddr);
 
-/* func_0201f3a8 -- NitroSystem sndarc_loader.c: NNSi_SndArcLoadSeq. */
 NNSSndArcLoadResult func_0201f3a8 (int seqNo, u32 loadFlag, NNSSndHeapHandle heap, BOOL bSetAddr, struct NNSSndSeqData ** pData)
 {
     const NNSSndArcSeqInfo * seqInfo;

@@ -1,9 +1,3 @@
-/* Disposes a player heap allocation by destroying its frame heap and clearing or removing the player’s heap association.
- * Uncertainty: Callback data ownership is internal to sound heap management. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/snd/calls/func_0201a890.c.
- * Original routine: func_0201a890. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,7 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
 
 #define NNS_FND_HEAP_INVALID_HANDLE NULL
 #define NNS_SND_HEAP_INVALID_HANDLE NNS_FND_HEAP_INVALID_HANDLE
@@ -184,7 +177,6 @@ typedef struct NNSSndPlayerHeap {
 } NNSSndPlayerHeap;
 extern NNSSndPlayer data_0205dcf8[ 32 ];
 
-/* func_0201deb0 -- NitroSystem player.c: PlayerHeapDisposeCallback. */
 void func_0201deb0 (void * mem, u32, u32, u32)
 {
     NNSSndPlayerHeap * heap = (NNSSndPlayerHeap *)mem;

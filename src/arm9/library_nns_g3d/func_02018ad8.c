@@ -1,9 +1,3 @@
-/* Restores mapped material texture defaults and clears the binding-active flag.
- * The middleware operation is supported by this body; its caller-specific use and any higher-level game meaning are not established here. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/g3d/auto/func_0201503c.c.
- * Original routine: func_0201503c. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -24,8 +18,7 @@ typedef volatile unsigned char vu8;
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
 
-
-#define FX32_ONE ((fx32) 0x0000000000001000L)         // 1.000000000000
+#define FX32_ONE ((fx32) 0x0000000000001000L)
 #define REG_G3_TEXIMAGE_PARAM_TGEN_MASK 0xc0000000
 #define REG_G3_TEXIMAGE_PARAM_FT_MASK 0x00080000
 #define REG_G3_TEXIMAGE_PARAM_FS_MASK 0x00040000
@@ -131,7 +124,6 @@ inline NNSG3dResMatData * NNS_G3dGetMatDataByIdx (const NNSG3dResMat * mat, u32 
     return NULL ;
 }
 
-/* ClearTextureBinding_02018ad8 -- NitroSystem kernel.c: releaseMdlTex_Internal_. */
 void ClearTextureBinding_02018ad8 (NNSG3dResMat * pMat, NNSG3dResDictTexToMatIdxData * pData)
 {
     u8 * base = (u8 *)pMat + pData->offset;

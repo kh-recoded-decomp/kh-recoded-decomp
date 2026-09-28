@@ -1,4 +1,3 @@
-/* Calls the callback at the active overlay index, or returns the default success value. Evidence: Source implementation directly performs the described operations; see src/overlays/ov008/calls/func_ov008_0205137c.c. Uncertainty: No material uncertainty for the stated operation; game-specific use may depend on callers. Recovered from Days source src/overlays/ov008/calls/func_ov008_0205137c.c; CC0, commit ab832f38b943c15f461228968a89002e1a99c03e. */
 typedef int (*OverlayEventCallback)(int event_argument);
 
 typedef struct {

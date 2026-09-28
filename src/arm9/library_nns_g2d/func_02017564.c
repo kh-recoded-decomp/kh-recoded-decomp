@@ -1,9 +1,3 @@
-/* Divides a rectangular character-canvas fill into tile-sized pieces and fills each covered portion.
- * Uncertainty: This identifies a shared library operation; the particular scene, asset or gameplay caller using it is not established. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/g2d/calls/func_02013e60.c.
- * Original routine: func_02013e60. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -116,7 +110,6 @@ static inline u32 SpreadColor32 (const NNSG2dCharCanvas * pCC, int cl)
 }
 extern void func_02016d94 (void * pChar, int x, int y, int w, int h, u32 cl8, int bpp);
 
-/* G2D_FillCanvasRectangle_02017564 -- NitroSystem g2d_CharCanvas.c: ClearAreaLine. */
 void G2D_FillCanvasRectangle_02017564 (const NNSG2dCharCanvas * pCC, int cl, int x, int y, int w, int h)
 {
     int ix, iy;
@@ -124,7 +117,6 @@ void G2D_FillCanvasRectangle_02017564 (const NNSG2dCharCanvas * pCC, int cl, int
     const int xw = x + w;
     const int yh = y + h;
     u32 cl8;
-
 
     cl8 = SpreadColor32(pCC, cl);
 

@@ -1,9 +1,3 @@
-/* Clips a font glyph to the character canvas and draws its pixels across the destination tiles.
- * Uncertainty: This identifies a shared library operation; the particular scene, asset or gameplay caller using it is not established. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/g2d/calls/func_02013c78.c.
- * Original routine: func_02013c78. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -686,7 +680,6 @@ static inline int GetCharacterSize (const NNSG2dCharCanvas * pCC)
 }
 extern void func_02016ec4 (LC_INFO * i);
 
-/* G2D_DrawGlyphOnCanvas_020170f8 -- NitroSystem g2d_CharCanvas.c: DrawGlyphLine. */
 void G2D_DrawGlyphOnCanvas_020170f8 (const NNSG2dCharCanvas * pCC, const NNSG2dFont * pFont, int x, int y, int cl, const NNSG2dGlyph * pGlyph)
 {
     int ofs_x_base;
@@ -699,7 +692,6 @@ void G2D_DrawGlyphOnCanvas_020170f8 (const NNSG2dCharCanvas * pCC, const NNSG2dF
     u8 glyphWidth;
     u8 charHeight;
     int charSize;
-
 
     charSize = GetCharacterSize(pCC);
 

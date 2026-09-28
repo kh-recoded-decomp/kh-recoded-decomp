@@ -1,9 +1,3 @@
-/* Submits the reserved sound command list to the ARM7, including interrupt-protected queue handling, cache flush, bounded in-flight blocks, and optional command processing.
- * Evidence: NitroSDK sound command manager layout, PXI send/reply calls, and queue state transitions in the source; Nintendo DS NitroSDK pattern.
- * Uncertainty: Queue fields and protocol behavior are strongly supported; exact local game integration is middleware.
- * Source: src/calls/func_020087c0.c from khdays-decomp, CC0, commit ab832f38b943c15f461228968a89002e1a99c03e. */
-
-
 typedef struct SNDCommand {
     struct SNDCommand *next;
     unsigned int id;

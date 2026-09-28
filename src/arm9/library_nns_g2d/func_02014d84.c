@@ -1,9 +1,3 @@
-/* Finds and unpacks the palette-data block in a binary resource, or returns a null result.
- * Uncertainty: This identifies a shared library operation; the particular scene, asset or gameplay caller using it is not established. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/g2d/calls/func_02011a20.c.
- * Original routine: func_02011a20. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -64,7 +58,6 @@ void func_02014dc0(NNSG2dPaletteData * pPlttData);
 NNSG2dBinaryBlockHeader * func_02014e00(NNSG2dBinaryFileHeader * pBinFileHeader, u32 signature);
 extern void func_02014dc0 (NNSG2dPaletteData * pPlttData);
 
-/* G2D_GetPaletteFromFile_02014d84 -- NitroSystem g2d_NCL_load.c: NNS_G2dGetUnpackedPaletteData. */
 BOOL G2D_GetPaletteFromFile_02014d84 (void * pNclrFile, NNSG2dPaletteData ** ppPltData)
 {
 
@@ -72,7 +65,6 @@ BOOL G2D_GetPaletteFromFile_02014d84 (void * pNclrFile, NNSG2dPaletteData ** ppP
         const NNSG2dBinaryFileHeader * pBinFile = pNclrFile;
 
     }
-
 
     {
         NNSG2dBinaryFileHeader * pBinFile = (NNSG2dBinaryFileHeader *)pNclrFile;

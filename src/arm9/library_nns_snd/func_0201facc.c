@@ -1,9 +1,3 @@
-/* Clears a wave-data address when the disposed memory owns it and invalidates the corresponding wave-data cache range.
- * Uncertainty: The associated archive/wave content is unknown. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/snd/calls/func_0201c354.c.
- * Original routine: func_0201c354. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,9 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
-
-
 
 typedef struct SNDWaveParam {
         u8 format;
@@ -70,7 +61,6 @@ const SNDWaveData * SND_GetWaveDataAddress(const struct SNDWaveArc * waveArc, in
 typedef void (*NNSSndHeapDisposeCallback)(void * mem, u32 size, u32 data1, u32 data2);
 struct SNDWaveArc;
 
-/* func_0201facc -- NitroSystem sndarc_loader.c: SingleWaveDisposeCallback. */
 void func_0201facc (void * mem, u32 size, u32 data1, u32 data2)
 {
     SNDWaveArc * waveArc = (SNDWaveArc *)data1;

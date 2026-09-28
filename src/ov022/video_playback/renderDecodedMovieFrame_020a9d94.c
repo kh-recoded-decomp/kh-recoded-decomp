@@ -1,8 +1,3 @@
-/* Advances one decoded movie frame through the pixel conversion path.
- * Evidence: Reads decoded and consumed counts at +0xa0/+0x9c, selects plane tables at +0x5c/+0x60, prepares working buffers for nonzero modes, calls setup helper 0x020b713c, converts the frame, and advances the ring cursor at +0xc4. The converter at 0x020aa2e0 writes packed pixels. Named word indices document byte offsets divided by four.
- * Uncertainty: Exact meanings of mode values, buffer fields, and the frame's visible destination are not established by this routine alone.
- * Source: Reconstructed from the BK9E Ghidra decompilation at build/ghidra/decompiled/ov022_func_ov022_020a9d94.c. No upstream C body was copied.
- */
 typedef unsigned int u32;
 enum MovieContextWord {
     MOVIE_CONTEXT_FRAME_WIDTH = 4,

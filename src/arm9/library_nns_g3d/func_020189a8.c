@@ -1,9 +1,3 @@
-/* Applies texture VRAM address and image parameters to materials listed in one binding record.
- * The middleware operation is supported by this body; its caller-specific use and any higher-level game meaning are not established here. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/g3d/calls/func_02014f0c.c.
- * Original routine: func_02014f0c. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -24,10 +18,9 @@ typedef volatile unsigned char vu8;
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
 
-
 #define NNS_GFD_TEXKEY_ADDR_SHIFT 3
 #define FX32_SHIFT 12
-#define FX32_ONE ((fx32) 0x0000000000001000L)         // 1.000000000000
+#define FX32_ONE ((fx32) 0x0000000000001000L)
 #define REG_G3_TEXIMAGE_PARAM_TEXFMT_SHIFT 26
 #define REG_G3_TEXIMAGE_PARAM_TEXFMT_MASK 0x1c000000
 
@@ -197,13 +190,11 @@ inline NNSG3dResMatData * NNS_G3dGetMatDataByIdx (const NNSG3dResMat * mat, u32 
     return NULL ;
 }
 
-/* ApplyTextureBindingToMaterials_020189a8 -- NitroSystem kernel.c: bindMdlTex_Internal_. */
 void ApplyTextureBindingToMaterials_020189a8 (NNSG3dResMat * pMat, NNSG3dResDictTexToMatIdxData * pBindData, const NNSG3dResTex * pTex, const NNSG3dResDictTexData * pTexData)
 {
     u8 * base = (u8 *)pMat + pBindData->offset;
     u32 vramOffset;
     u32 j;
-
 
     if ((pTexData->texImageParam & REG_G3_TEXIMAGE_PARAM_TEXFMT_MASK) !=
         (GX_TEXFMT_COMP4x4 << REG_G3_TEXIMAGE_PARAM_TEXFMT_SHIFT)) {

@@ -1,9 +1,3 @@
-/* Stops immediately when no fade is requested, or begins fade-out and updates the player’s priority state.
- * Uncertainty: The duration unit is not asserted beyond the parameter’s frame-oriented name. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/snd/calls/func_0201a5b8.c.
- * Original routine: func_0201a5b8. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,9 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
-
-
 
 typedef enum {
     SND_DUTY_1_8,
@@ -189,7 +180,6 @@ extern void func_0201df00(NNSSndSeqPlayer * seqPlayer, int priority);
 extern void func_0201dd8c (NNSSndSeqPlayer * seqPlayer);
 extern void func_0201df00 (NNSSndSeqPlayer * seqPlayer, int priority);
 
-/* func_0201dbd0 -- NitroSystem player.c: NNSi_SndPlayerStopSeq. */
 void func_0201dbd0 (NNSSndSeqPlayer * seqPlayer, int fadeFrame)
 {
     if (seqPlayer == NULL) return;

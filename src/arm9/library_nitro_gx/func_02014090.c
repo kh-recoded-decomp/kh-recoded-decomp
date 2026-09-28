@@ -1,9 +1,3 @@
-/* Queues a graphics command and arguments, updates queued byte count, and fails when full.
- * This is a reusable Nitro/NitroSystem subsystem operation; a specific Re:coded gameplay caller or use is not inferred. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nitro/gx/calls/GFXi_EnqueueCommand.c.
- * Original routine: GFXi_EnqueueCommand. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 extern int func_02013db0(void *q);
 extern void *func_02013f84(void *q);
 extern void func_02013f38(void *q);

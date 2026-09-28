@@ -1,8 +1,3 @@
-/* Decrements the stream channel-allocation count and frees the stream channels when the count reaches zero.
- * The BK9E player layout has two unknown words after the embedded stream object.
- * Adapted from CC0 Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/snd/calls/func_0201d214.c.
- * Target code and relocation values were checked against the BK9E binary. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -22,9 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
-
-
 
 typedef struct CPContext {
     u64 div_numer;
@@ -562,12 +554,10 @@ typedef struct NNSSndStrmPlayer {
     CancelStreamFunc cancelStreamFunc;
 } NNSSndStrmPlayer;
 
-/* khdays: shared-bss */
-NNSSndStrmThread * sPrepareThread = 0;   /* sPrepareThread */
-BOOL data_0204ad8c = 0;   /* initialized$3434 */
-u8 * sDecodeBuffer = 0;   /* sDecodeBuffer */
+NNSSndStrmThread * sPrepareThread = 0;
+BOOL data_0204ad8c = 0;
+u8 * sDecodeBuffer = 0;
 
-/* ReleaseStreamChannels_02020948 -- NitroSystem sndarc_stream.c: FreeChannel. */
 void ReleaseStreamChannels_02020948 (NNSSndStrmPlayer * player)
 {
 

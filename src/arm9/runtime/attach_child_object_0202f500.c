@@ -1,7 +1,3 @@
-/* Detaches the destination from its old parent if needed, copies initialization data from the source, and links the destination into the source object tree.
- * Evidence: Parent/child/sibling pointer updates, initialization block copy, and source/destination offsets in function body.
- * Uncertainty: The short value stored at destination +0xc8 comes from an opaque resource lookup.
- * Source: src/calls/func_0202af3c.c from khdays-decomp, CC0, commit ab832f38b943c15f461228968a89002e1a99c03e. */
 extern void INITi_CpuClear32_0x01ff86fc(unsigned int data, void *dst, unsigned int size);
 extern void func_0202ee1c(void *child);
 extern void func_02021e60(void *dst, void *src);

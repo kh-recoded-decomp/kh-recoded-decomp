@@ -1,9 +1,3 @@
-/* Returns the maximum measured width among the lines of a text string.
- * Uncertainty: This identifies a shared library operation; the particular scene, asset or gameplay caller using it is not established. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/g2d/calls/func_02013814.c.
- * Original routine: func_02013814. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,9 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
-
-
 
 typedef struct NNSG2dCharWidths {
     s8 left;
@@ -74,11 +65,9 @@ typedef struct NNSG2dFont {
 int func_02016aa0(const NNSG2dFont * pFont, int hSpace, const void * str, const void ** pPos);
 extern int func_02016aa0 (const NNSG2dFont * pFont, int hSpace, const void * str, const void ** pPos);
 
-/* G2D_MeasureTextWidth_02016bc0 -- NitroSystem g2d_Font.c: NNSi_G2dFontGetTextWidth. */
 int G2D_MeasureTextWidth_02016bc0 (const NNSG2dFont * pFont, int hSpace, const void * txt)
 {
     int width = 0;
-
 
     while (txt != NULL) {
         const int line_width = func_02016aa0(pFont, hSpace, txt, &txt);

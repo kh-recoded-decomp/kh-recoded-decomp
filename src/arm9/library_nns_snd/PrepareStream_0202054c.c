@@ -18,7 +18,6 @@ typedef volatile unsigned char vu8;
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
 
-
 #define NNS_SND_ARC_STRM_FORCE_STEREO (1 << 0)
 #define BLOCK_NUM 4
 
@@ -585,18 +584,10 @@ extern void func_02020948 (NNSSndStrmPlayer * player);
 extern void func_02020b9c (NNSSndStrmCallbackStatus status, int numChannels, void * buffer[], u32 len, NNSSndStrmFormat, void * arg);
 extern void func_0202161c (NNSSndStrmPlayer * player, u32 fileId);
 
-/* khdays: shared-bss */
-NNSSndStrmThread * sPrepareThread = 0;   /* sPrepareThread */
-BOOL data_0204ad8c = 0;   /* initialized$3434 */
-u8 * sDecodeBuffer = 0;   /* sDecodeBuffer */
+NNSSndStrmThread * sPrepareThread = 0;
+BOOL data_0204ad8c = 0;
+u8 * sDecodeBuffer = 0;
 
-/* Configures a stream player, allocates output channels, and installs stream callbacks.
- * The play/start flags remain clear here; the periodic update path starts playback after preparation.
- * The target player layout has two additional words after its stream subobject;
- * their meaning is not established, so they remain explicitly unknown here.
- * Adapted from CC0 Yokimitsuro/khdays-decomp at revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/snd/calls/func_0201ce18.c.
- * Target field offsets and helper addresses were checked against BK9E Ghidra export. */
 BOOL PrepareStream_0202054c (struct NNSSndStrmHandle * handle, const NNSSndArcStrmInfo * strmInfo, int playerNo, int playerPrio, int strmNo, u32 offset, NNSSndStrmCallback strmCallback, void * strmCallbackArg, NNSSndArcStrmCallback sndArcStrmCallback, void * sndArcStrmCallbackArg)
 {
     NNSSndStrmPlayer * player;
@@ -604,7 +595,6 @@ BOOL PrepareStream_0202054c (struct NNSSndStrmHandle * handle, const NNSSndArcSt
     int numChannels;
     u64 tmpU64;
     BOOL ret;
-
 
     player = func_02020494(handle, playerNo, playerPrio);
     if (player == NULL) return FALSE;

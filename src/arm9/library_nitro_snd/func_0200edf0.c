@@ -1,4 +1,3 @@
-/* Adapted from CC0 khdays-decomp, revision ab832f38b943c15f461228968a89002e1a99c03e. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -19,14 +18,12 @@ typedef volatile unsigned char vu8;
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
 
-
-/* NitroSDK SND library (ARM9 side, snd_command.c): the command queue to the ARM7 sound driver. */
 typedef int PXIFifoTag;
 typedef struct SNDCommand {
-    struct SNDCommand *next;      /* 0x00 */
-    u32 id;                       /* 0x04 */
-    u32 arg[4];                   /* 0x08 */
-} SNDCommand;                     /* 0x18 */
+    struct SNDCommand *next;
+    u32 id;
+    u32 arg[4];
+} SNDCommand;
 typedef struct SNDSharedWork SNDSharedWork;
 #define SND_COMMAND_NUM 256
 #define SND_PXI_FIFO_MESSAGE_BUFSIZE 8
@@ -61,7 +58,7 @@ extern SNDSharedWork *data_02059780;
 
 extern OSIntrMode OS_DisableInterrupts(void);
 extern OSIntrMode OS_RestoreInterrupts(OSIntrMode state);
-extern void func_0200386c(u32 cycles);   /* OS_SpinWait */
+extern void func_0200386c(u32 cycles);
 #define OS_SpinWait func_0200386c
 extern void PXI_SetFifoRecvCallback(int fifotag, void (*callback)(PXIFifoTag, u32, BOOL));
 extern BOOL PXI_IsCallbackReady(int fifotag, int proc);
@@ -71,20 +68,17 @@ extern void func_0200f3bc(void);
 extern void func_0200f62c(SNDSharedWork *work);
 extern u32 SNDi_GetFinishedCommandTag(void);
 extern SNDCommand *func_0200efc0(u32 flags);
-extern void func_0200f048(SNDCommand *command);   /* SND_PushCommand */
+extern void func_0200f048(SNDCommand *command);
 #define SND_PushCommand func_0200f048
-extern BOOL func_0200f080(u32 flags);              /* SND_FlushCommand */
+extern BOOL func_0200f080(u32 flags);
 #define SND_FlushCommand func_0200f080
 
-/* func_0200edf0 -- NitroSDK snd_command.c: SND_CommandInit. */
 void func_0200edf0 (void)
 {
     SNDCommand * command;
     int i;
 
-
     func_0200f3bc();
-
 
     sFreeList = &sCommandArray[0];
     for (i = 0; i < SND_COMMAND_NUM - 1; i++) {

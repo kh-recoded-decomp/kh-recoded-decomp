@@ -1,9 +1,3 @@
-/* Copies a named texture resource’s image parameters and VRAM address into the animation result.
- * The middleware operation is supported by this body; its caller-specific use and any higher-level game meaning are not established here. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/g3d/calls/func_02018fe0.c.
- * Original routine: func_02018fe0. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -24,10 +18,9 @@ typedef volatile unsigned char vu8;
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
 
-
 #define NNS_GFD_TEXKEY_ADDR_SHIFT 3
 #define FX32_SHIFT 12
-#define FX32_ONE ((fx32) 0x0000000000001000L)         // 1.000000000000
+#define FX32_ONE ((fx32) 0x0000000000001000L)
 #define REG_G3_TEXIMAGE_PARAM_TGEN_MASK 0xc0000000
 #define REG_G3_TEXIMAGE_PARAM_TEXFMT_SHIFT 26
 #define REG_G3_TEXIMAGE_PARAM_TEXFMT_MASK 0x1c000000
@@ -155,7 +148,6 @@ inline NNSG3dResDictTexData * NNS_G3dGetTexDataByName (const NNSG3dResTex * tex,
         return NULL ;
 }
 
-/* SetTextureAnimationResult_0201cb0c -- NitroSystem nsbtp.c: SetTexParamaters_. */
 void SetTextureAnimationResult_0201cb0c (const NNSG3dResTex * pTex, const NNSG3dResName * pTexName, NNSG3dMatAnmResult * pResult)
 {
     {

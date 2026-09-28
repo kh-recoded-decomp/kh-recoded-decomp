@@ -1,7 +1,3 @@
-/* Restores secondary display layers and the shared display setting after the session ends.
- * Calls the ov027 teardown, restores brightness to +16 or -16 according to the saved flag, writes the saved layer mask to 0x04001000, and passes the saved setting to arm9:02029f28.
- * The display-state operations are established. The session's particular menu, scene or gameplay purpose and the shared display-setting meaning remain unknown.
- * Recovered from the persistent Ghidra caller chain and verified disassembly. */
 typedef struct OverlayDisplaySession {
     unsigned char sharedState[0x647c];
     int alternateUpdate;

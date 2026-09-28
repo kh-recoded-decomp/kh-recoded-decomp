@@ -1,4 +1,3 @@
-/* Graphics: the 2D and 3D engines and the VRAM banks, as the library sources declare them (the NitroSDK / NitroSystem names). */
 #ifndef NITRO_GX_H
 #define NITRO_GX_H
 

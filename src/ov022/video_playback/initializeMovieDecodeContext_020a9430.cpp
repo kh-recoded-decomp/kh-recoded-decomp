@@ -1,18 +1,3 @@
-/* Adapted from CC0-1.0 source Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e,
- * src/overlays/ov024/calls/func_ov024_02085154.cpp.
- * This initializes a movie decoder from a reader: validates MODS/N2 or N3,
- * allocates decoder/frame/audio/index state, and reads startup chunks.
- * Target helper and data bindings are listed in the research entry.
- */
-/* MobiClip: read a container header and lay out everything the decoder needs.
- *
- * Checks the "MODSN" signature and the version -- 2 or 3, where 3 carries a
- * chunk directory that is walked until the "HE" terminator -- then allocates
- * the frame state, the per-slot luma and chroma planes, the two scratch
- * buffers, the audio ring when the stream has sound, and the frame index.
- * Reports zero on the first read or allocation that fails.
- */
 typedef unsigned char u8;
 typedef signed char s8;
 typedef unsigned short u16;

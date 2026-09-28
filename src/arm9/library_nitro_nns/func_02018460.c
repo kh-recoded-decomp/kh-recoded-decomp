@@ -1,9 +1,3 @@
-/* Returns BG plane dimensions from BG type, display mode and size-control bits.
- * The middleware operation is supported by this body; its caller-specific use and any higher-level game meaning are not established here. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nitro/nns/calls/func_020149c4.c.
- * Original routine: func_020149c4. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned short u16;
 typedef unsigned long u32;
 typedef int BOOL;

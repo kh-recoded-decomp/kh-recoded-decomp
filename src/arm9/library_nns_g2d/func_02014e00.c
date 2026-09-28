@@ -1,9 +1,3 @@
-/* Walks a binary resource file by block sizes and returns the block with the requested signature.
- * Uncertainty: This identifies a shared library operation; the particular scene, asset or gameplay caller using it is not established. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/g2d/auto/func_02011aa0.c.
- * Original routine: func_02011aa0. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -26,8 +20,6 @@ typedef volatile unsigned char vu8;
 
 #define offsetof(type, member) ((u32)&(((type *)0)->member))
 
-
-
 typedef struct NNSG2dBinaryFileHeader {
     u32 signature;
     u16 byteOrder;
@@ -41,7 +33,6 @@ typedef struct NNSG2dBinaryBlockHeader {
     u32 size;
 } NNSG2dBinaryBlockHeader;
 
-/* G2D_FindResourceBlock_02014e00 -- NitroSystem g2d_Load.c: NNS_G2dFindBinaryBlock. */
 NNSG2dBinaryBlockHeader * G2D_FindResourceBlock_02014e00 (NNSG2dBinaryFileHeader * pBinFileHeader, u32 signature)
 {
 
@@ -50,7 +41,6 @@ NNSG2dBinaryBlockHeader * G2D_FindResourceBlock_02014e00 (NNSG2dBinaryFileHeader
 
         u16 count = 0;
         while (count < pBinFileHeader->dataBlocks) {
-
 
             if (pCursor->kind == signature) {
                 return pCursor;

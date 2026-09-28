@@ -1,9 +1,3 @@
-/* Moves to the appropriate start or end frame for the playback direction, clears elapsed time, and updates the controller.
- * Uncertainty: This identifies a shared library operation; the particular scene, asset or gameplay caller using it is not established. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/g2d/calls/func_02011ecc.c.
- * Original routine: func_02011ecc. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,9 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
-
-
 
 typedef s32 fx32;
 typedef enum {
@@ -201,7 +192,6 @@ static inline BOOL IsAnimCtrlMovingForward_ (const NNSG2dAnimController * pAnimC
 }
 extern BOOL func_02014fe4 (NNSG2dAnimController * pAnimCtrl, fx32 frames);
 
-/* G2D_ResetAnimationFrame_0201520c -- NitroSystem g2d_Animation.c: NNS_G2dResetAnimCtrlState. */
 void G2D_ResetAnimationFrame_0201520c (NNSG2dAnimController * pAnimCtrl)
 {
 

@@ -1,9 +1,3 @@
-/* Allocates backing memory for a player heap, initializes its frame heap and links it into that player’s heap list.
- * Uncertainty: The lifetime is managed by surrounding sound code. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/snd/calls/func_02019e08.c.
- * Original routine: func_02019e08. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,7 +17,6 @@ typedef volatile unsigned char vu8;
 #define TRUE 1
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
-
 
 #define NNS_FND_HEAP_INVALID_HANDLE NULL
 #define NNS_SND_HEAP_INVALID_HANDLE NNS_FND_HEAP_INVALID_HANDLE
@@ -187,13 +180,11 @@ extern NNSSndPlayer data_0205dcf8[ 32 ];
 extern void func_0201deb0(void * mem, u32 size, u32 data1, u32 data2);
 extern void func_0201deb0 (void * mem, u32, u32, u32);
 
-/* func_0201d44c -- NitroSystem player.c: NNS_SndPlayerCreateHeap. */
 BOOL func_0201d44c (int playerNo, NNSSndHeapHandle heap, u32 size)
 {
     NNSSndHeapHandle playerHeapHandle;
     NNSSndPlayerHeap * playerHeap;
     void * buffer;
-
 
     buffer = func_0201f0ec(heap, sizeof(NNSSndPlayerHeap) + size, func_0201deb0, 0, 0);
     if (buffer == NULL) {

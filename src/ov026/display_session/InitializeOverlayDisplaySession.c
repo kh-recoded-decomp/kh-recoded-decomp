@@ -1,7 +1,3 @@
-/* Saves the secondary display state before initializing a temporary display session.
- * Saves enabled-layer bits from 0x04001000, cached secondary brightness and a shared display setting. Records the requested update path and initial-update flag, selects a palette value when brightness is +16, and passes a six-word settings block to ov027 initialization.
- * The display-state operations are established. The session's particular menu, scene or gameplay purpose and the shared display-setting meaning remain unknown.
- * Recovered from the persistent Ghidra caller chain and verified disassembly. */
 typedef struct OverlayDisplaySession {
     unsigned char sharedState[0x647c];
     int alternateUpdate;

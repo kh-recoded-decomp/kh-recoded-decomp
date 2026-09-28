@@ -1,14 +1,8 @@
-/* Computes an inner/outer padded keyed hash through a caller-supplied hash-operation table.
- * Target conditional branches compare lengths as unsigned throughout the key shortening and pad loops.
- * Adapted CC0 C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, src/calls/func_0200bb80.c. */
-
-
 typedef struct {
-    unsigned int digestSize;   
-    unsigned int blockSize;    
-    void *self;       
-    void *digestBuf;  
+    unsigned int digestSize;
+    unsigned int blockSize;
+    void *self;
+    void *digestBuf;
     void (*reset)(void *self);
     void (*update)(void *self, const void *data, unsigned int len);
     void (*finish)(void *self, void *out);

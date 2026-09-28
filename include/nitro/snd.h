@@ -1,4 +1,3 @@
-/* Sound: the ARM9's side of the sound driver, as the library sources declare them (the NitroSDK / NitroSystem names). */
 #ifndef NITRO_SND_H
 #define NITRO_SND_H
 
@@ -96,9 +95,9 @@ typedef struct SNDInstPos {
 #define SND_VOLUME_TABLE_SIZE (SND_VOLUME_DB_MAX - SND_VOLUME_DB_MIN + 1)
 
 typedef struct SNDCommand {
-    struct SNDCommand *next;      /* 0x00 */
-    u32 id;                       /* 0x04 */
-    u32 arg[4];                   /* 0x08 */
+    struct SNDCommand *next;
+    u32 id;
+    u32 arg[4];
 } SNDCommand;
 
 typedef struct SNDSharedWork SNDSharedWork;

@@ -1,4 +1,3 @@
-/* Adapted from CC0 khdays-decomp, revision ab832f38b943c15f461228968a89002e1a99c03e. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -19,10 +18,7 @@ typedef volatile unsigned char vu8;
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
 
-
 #define SND_ALARM_NUM 8
-
-
 
 typedef struct NNSCaptureLockState {
     u32 captureLock;
@@ -33,7 +29,6 @@ extern NNSCaptureLockState data_0205d894;
 #define sAlarmLock data_0205d894.alarmLock
 #define sChannelLock data_0205d894.channelLock
 
-/* func_0201d394 -- NitroSystem resource_mgr.c: NNS_SndAllocAlarm. */
 int func_0201d394 (void)
 {
     int alarmNo;

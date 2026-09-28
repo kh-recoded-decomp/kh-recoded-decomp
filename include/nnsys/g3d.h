@@ -1,4 +1,3 @@
-/* NitroSystem 3D graphics, as the library sources declare them (the NitroSDK / NitroSystem names). */
 #ifndef NNSYS_G3D_H
 #define NNSYS_G3D_H
 
@@ -741,9 +740,9 @@ typedef struct NNSG3dResJntAnmSRTTag_ {
 
 typedef struct NNSG3dGlb {
     char pad00[0x4c];
-    MtxFx43 cameraMtx;                  /* +0x4c */
+    MtxFx43 cameraMtx;
     char pad7c[0xd4 - 0x7c];
-    u32 flag;                           /* +0xd4 */
+    u32 flag;
 } NNSG3dGlb;
 
 #define NNS_G3D_SBCFLG_001 0x20

@@ -1,9 +1,3 @@
-/* Clears stored bank assignment, disables mapping registers, unlocks those banks, and returns released mask.
- * The exact public SDK symbol is not established from the body, so the target address-based name is retained; behavior is limited to the implemented operation. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nitro/gx/calls/disableBankForX_.c.
- * Original routine: disableBankForX_. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,7 +17,6 @@ typedef unsigned char vu8;
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
 
-/* NitroSDK gx_vramcnt.c: VRAM bank control (gx_vramcnt.h enums and the bank register values). */
 typedef enum {
 	GX_VRAM_A = 0x1,
 	GX_VRAM_B = 0x2,
@@ -52,7 +45,6 @@ typedef enum {
 	GX_VRAM_LCDC_ALL = GX_VRAM_ALL
 } GXVRamLCDC;
 
-
 typedef enum {
 	GX_VRAM_BG_NONE        = 0x0000,
 	GX_VRAM_BG_16_F        = GX_VRAM_F,
@@ -79,9 +71,6 @@ typedef enum {
 	GX_VRAM_BG_384_ACD     = GX_VRAM_A | GX_VRAM_C | GX_VRAM_D
 } GXVRamBG;
 
-
-
-
 typedef enum {
 	GX_VRAM_OBJ_NONE      = 0x0000,
 	GX_VRAM_OBJ_16_F      = GX_VRAM_F,
@@ -96,14 +85,12 @@ typedef enum {
 	GX_VRAM_OBJ_256_AB    = GX_VRAM_A | GX_VRAM_B
 } GXVRamOBJ;
 
-
 typedef enum {
 	GX_VRAM_ARM7_NONE      = 0x0000,
 	GX_VRAM_ARM7_128_C     = GX_VRAM_C,
 	GX_VRAM_ARM7_128_D     = GX_VRAM_D,
 	GX_VRAM_ARM7_256_CD    = GX_VRAM_C | GX_VRAM_D
 } GXVRamARM7;
-
 
 typedef enum {
 	GX_VRAM_TEX_NONE         = 0x0000,
@@ -124,7 +111,6 @@ typedef enum {
 	GX_VRAM_TEX_012_ACD      = GX_VRAM_A | GX_VRAM_C | GX_VRAM_D
 } GXVRamTex;
 
-
 typedef enum {
 	GX_VRAM_CLEARIMAGE_NONE      = 0x0000,
 	GX_VRAM_CLEARIMAGE_256_AB    = GX_VRAM_A | GX_VRAM_B,
@@ -134,7 +120,6 @@ typedef enum {
 	GX_VRAM_CLEARDEPTH_128_C     = GX_VRAM_C,
 	GX_VRAM_CLEARDEPTH_128_D     = GX_VRAM_D
 } GXVRamClearImage;
-
 
 typedef enum {
 	GX_VRAM_TEXPLTT_NONE          = 0x0000,
@@ -146,7 +131,6 @@ typedef enum {
 	GX_VRAM_TEXPLTT_012345_EFG    = GX_VRAM_E | GX_VRAM_F | GX_VRAM_G
 } GXVRamTexPltt;
 
-
 typedef enum {
 	GX_VRAM_BGEXTPLTT_NONE       = 0x0000,
 	GX_VRAM_BGEXTPLTT_01_F       = GX_VRAM_F,
@@ -154,7 +138,6 @@ typedef enum {
 	GX_VRAM_BGEXTPLTT_0123_E     = GX_VRAM_E,
 	GX_VRAM_BGEXTPLTT_0123_FG    = GX_VRAM_F | GX_VRAM_G
 } GXVRamBGExtPltt;
-
 
 #define GX_VRAM_OBJEXTPLTT_8_F    GX_VRAM_OBJEXTPLTT_0_F
 #define GX_VRAM_OBJEXTPLTT_8_G    GX_VRAM_OBJEXTPLTT_0_G
@@ -165,7 +148,6 @@ typedef enum {
 	GX_VRAM_OBJEXTPLTT_0_G     = GX_VRAM_G
 } GXVRamOBJExtPltt;
 
-
 typedef enum {
 	GX_VRAM_SUB_BG_NONE     = 0x0000,
 	GX_VRAM_SUB_BG_128_C    = GX_VRAM_C,
@@ -173,13 +155,11 @@ typedef enum {
 	GX_VRAM_SUB_BG_48_HI    = GX_VRAM_H | GX_VRAM_I
 } GXVRamSubBG;
 
-
 typedef enum {
 	GX_VRAM_SUB_OBJ_NONE     = 0x0000,
 	GX_VRAM_SUB_OBJ_128_D    = GX_VRAM_D,
 	GX_VRAM_SUB_OBJ_16_I     = GX_VRAM_I
 } GXVRamSubOBJ;
-
 
 #define GX_VRAM_SUB_BGEXTPLTT_32_H GX_VRAM_SUB_BGEXTPLTT_0123_H
 
@@ -187,7 +167,6 @@ typedef enum {
 	GX_VRAM_SUB_BGEXTPLTT_NONE = 0x0000,
 	GX_VRAM_SUB_BGEXTPLTT_0123_H = GX_VRAM_H
 } GXVRamSubBGExtPltt;
-
 
 #define GX_VRAM_SUB_OBJEXTPLTT_16_I GX_VRAM_SUB_OBJEXTPLTT_0_I
 
@@ -372,7 +351,7 @@ typedef struct {
     GX_VRAMCnt_ vramCnt;
 } GX_State;
 
-extern GX_State data_020446d4;   /* gGXState */
+extern GX_State data_020446d4;
 #define gGXState data_020446d4
 extern void GX_VRAMCNT_SetLCDC_(int lcdc);
 
@@ -865,11 +844,10 @@ static inline void GX_VRAMCNT_SetSubOBJExtPltt_ (GXVRamSubOBJExtPltt objExtPltt)
 	}
 }
 
-
 extern void OSi_UnlockVram(u16 vramMap, u16 lockId);
-extern vu16 data_02056f0a;   /* GXi_VRamLockId */
+extern vu16 data_02056f0a;
 #define GXi_VRamLockId data_02056f0a
-/* func_02008d9c -- NitroSDK gx_vramcnt.c: disable the banks of one use and unlock them for other libraries. */
+
 int func_02008d9c (u16 *g3bit)
 {
 	int rval = *g3bit;

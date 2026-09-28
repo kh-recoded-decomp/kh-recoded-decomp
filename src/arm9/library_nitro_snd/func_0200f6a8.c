@@ -1,9 +1,3 @@
-/* Clamps a dB input, looks up its encoded volume value and combines it with the selected channel data-shift field.
- * Uncertainty: The hardware encoding is evident; perceptual calibration is not inferred. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nitro/snd/calls/SND_CalcChannelVolume.c.
- * Original routine: SND_CalcChannelVolume. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -23,12 +17,10 @@ typedef unsigned char vu8;
 #define FALSE 0
 #define HW_MAIN_MEM 0x02000000
 
-
-/* NitroSDK SND library (ARM9 side): command interface to the ARM7 sound driver. */
 typedef struct SNDCommand {
-    struct SNDCommand *next;      /* 0x00 */
-    u32 id;                       /* 0x04 */
-    u32 arg[4];                   /* 0x08 */
+    struct SNDCommand *next;
+    u32 id;
+    u32 arg[4];
 } SNDCommand;
 
 enum {
@@ -57,11 +49,9 @@ typedef int SNDChannelDataShift;
 #define SND_VOLUME_SHIFT_2_MIN (-240)
 #define SND_VOLUME_SHIFT_1_MIN (-120)
 #define SND_VOLUME_SHIFT_0_MIN (-60)
-extern const u8 data_02052c08[];              /* VolumeTable, indexed from -723 dB */
+extern const u8 data_02052c08[];
 #define VolumeTable data_02052c08
 
-/* func_0200f6a8 -- turn a decibel level (-723..0, in 1/10 dB) into the channel
- * volume register value: the 7-bit table volume and the data shift that scales it. */
 u16 func_0200f6a8(int dB)
 {
     SNDChannelDataShift shift;

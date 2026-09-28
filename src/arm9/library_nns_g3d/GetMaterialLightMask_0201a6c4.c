@@ -1,8 +1,3 @@
-/* Returns the material polygon-attribute field selected by mask 0x0000000f and shift 0.
- * Reconstructed using the verified CC0 material resolver layout and BK9E
- * getter instructions; source attribution is recorded in matches.json. */
-
-
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -162,7 +157,6 @@ inline NNSG3dResMatData * NNS_G3dGetMatDataByIdx (const NNSG3dResMat * mat, u32 
     }
     return NULL ;
 }
-
 
 u32 GetMaterialLightMask_0201a6c4(NNSG3dResMdl *model, u32 materialIndex) {
     NNSG3dResMatData *material;

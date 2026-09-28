@@ -1,9 +1,3 @@
-/* Aligns caller-provided memory, reserves heap metadata and initializes the sound heap and its first section.
- * Uncertainty: The caller determines memory range and allocation lifetime. */
-/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
- * ab832f38b943c15f461228968a89002e1a99c03e, libs/nns/snd/calls/func_0201b85c.c.
- * Original routine: func_0201b85c. External references are
- * rebound to BK9E; subsystem identity is reviewed separately from matching. */
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -66,13 +60,11 @@ typedef struct NNSSndHeap {
 extern BOOL func_0201f288(NNSSndHeap * heap, NNSFndHeapHandle handle);
 extern BOOL func_0201f288 (NNSSndHeap * heap, NNSFndHeapHandle handle);
 
-/* func_0201efa4 -- NitroSystem heap.c: NNS_SndHeapCreate. */
 NNSSndHeapHandle func_0201efa4 (void * startAddress, u32 size)
 {
     NNSSndHeap * heap;
     void * endAddress;
     NNSFndHeapHandle handle;
-
 
     endAddress = (u8 *)startAddress + size;
     startAddress = (void *)ROUNDUP(startAddress, 4);

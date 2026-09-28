@@ -1,7 +1,3 @@
-/* Loads the palette and graphics resources used by this overlay and selects a resource entry.
- * Resolves resource pairs (2,0x12), (3,1), (2,0x14); uploads extracted data via the palette/graphics transfer helpers, frees temporary allocations, and selects entry1000 in shared overlay27 state.
- * The particular menu or scene shown by this overlay and the meaning of the eighteen stored state bits remain unconfirmed. No specific collectible, world or enemy is assigned.
- * Recovered from the persistent Ghidra caller chain and disassembly. */
 typedef struct Overlay088PaletteResource { unsigned int unknown[2]; unsigned int size; void *data; } Overlay088PaletteResource;
 typedef struct Overlay088ImageResource { unsigned int unknown[4]; unsigned int size; void *data; } Overlay088ImageResource;
 typedef struct Overlay088ResourceView { unsigned int unknown[2]; Overlay088PaletteResource *palette; } Overlay088ResourceView;
