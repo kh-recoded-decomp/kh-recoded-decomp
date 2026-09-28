@@ -89,6 +89,8 @@ def main() -> int:
             address = target["address"]
             base_name = SUFFIX.match(donor["source_symbol"])
             stem = base_name.group(1) if base_name and base_name.group(1) and not base_name.group(1).startswith("func") else None
+            if set(bindings.values()) != set(old_bindings.values()):
+                stem = None  # same pattern, different callees: the donor's name is not evidence
             source_symbol = f"{stem}_{address:08x}" if stem else target["symbol"]
             renames = {donor["source_symbol"]: source_symbol}
             new_bindings = {}
@@ -114,6 +116,10 @@ def main() -> int:
                       "name": source_symbol.rsplit("_", 1)[0] if source_symbol != target["symbol"] else source_symbol,
                       "evidence": (f"Same code as verified {donor['module']}:{donor['symbol']} with its own "
                                    f"calls and globals; rebuilt C matches all {len(target['bytes'])} bytes.")})
+        if source_symbol == target["symbol"] and donor["source_symbol"] != donor["symbol"]:
+            entry.update({"behavior": f"Same instruction pattern as {donor['name']} but with its own call "
+                                      "targets; purpose not reviewed.", "understanding": "unknown",
+                          "uncertainty": "Shares only a generic instruction pattern with the donor."})
         if Path(entry["source"]).suffix != ".c":
             return None
         base, blob = blobs[target["module"]]

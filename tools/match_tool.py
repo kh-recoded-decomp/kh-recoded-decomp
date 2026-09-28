@@ -16,6 +16,7 @@ from __future__ import annotations
 
 import argparse
 import difflib
+import functools
 import io
 import json
 import re
@@ -32,7 +33,7 @@ PENDING = ROOT / "build" / "pending"
 DECOMP = ROOT / "build" / "ghidra" / "decomp"
 RELOC_LINE = re.compile(r"^from:0x([0-9a-f]+) kind:(\S+) to:0x([0-9a-f]+) module:(\S+)", re.I)
 FUNCTION_LINE = re.compile(r"^(\S+) kind:function\((arm|thumb),size=0x([0-9a-f]+)\) addr:0x([0-9a-f]+)", re.I)
-ADDRESS_SUFFIX = re.compile(r"(?:^|_)([0-9a-fA-F]{8})$")
+ADDRESS_SUFFIX = re.compile(r"(?:^|_|Ram)([0-9a-fA-F]{8})$")
 REQUIRED = ("name", "behavior", "evidence", "uncertainty", "domain", "origin", "understanding")
 
 
@@ -47,8 +48,8 @@ _inv = None
 def inventory() -> dict:
     global _inv
     if _inv is None:
-        _inv = kh.inventory()
-        for module, data in _inv.items():
+        inv = kh.inventory()
+        for module, data in inv.items():
             if module == "arm7":
                 continue
             data["modes"] = {}
@@ -56,6 +57,7 @@ def inventory() -> dict:
                 m = FUNCTION_LINE.match(line)
                 if m:
                     data["modes"][m.group(1)] = m.group(2)
+        _inv = inv  # publish only once complete; worker threads share it
     return _inv
 
 
@@ -70,6 +72,7 @@ def resolve_function(module: str, symbol: str) -> tuple[str, dict]:
     raise SystemExit(f"Unknown function {module}:{symbol}")
 
 
+@functools.lru_cache(maxsize=None)
 def thumb_addresses() -> set[int]:
     result = set()
     for module, data in inventory().items():
@@ -81,6 +84,7 @@ def thumb_addresses() -> set[int]:
     return result
 
 
+@functools.lru_cache(maxsize=None)
 def known_names() -> dict[str, int]:
     names: dict[str, set[int]] = {}
     for module, data in inventory().items():
@@ -213,6 +217,10 @@ def cmd_show(args) -> None:
         for hit in json.loads(similar_path.read_text(encoding="utf-8")).get(f"{args.module}:{name}", []):
             print(f"\nSimilar KH Days C (score {hit['score']}, {hit['days_size']} bytes): "
                   f"{days_port.DAYS / hit['days_source']} :: {hit['days_name']}")
+    near = ROOT / "build" / "ghidra_auto" / "near" / args.module / f"{name}.c"
+    if near.exists():
+        print(f"\nCompilable Ghidra C with the right size (only a few instructions differ): "
+              f"{near.relative_to(ROOT)} — copy it, rename, and fix the differing slots.")
     decomp = DECOMP / args.module / f"{name}.c"
     if decomp.exists():
         print(f"\nGhidra view ({decomp.relative_to(ROOT)}):\n" + decomp.read_text(encoding="utf-8"))
@@ -225,9 +233,10 @@ def diff_report(target: bytes, actual: bytes, address: int, mode: str, relocs: d
         bad = [o for o in range(0, len(target), 2 if mode == "thumb" else 4)
                if target[o:o + 4] != actual[o:o + 4]]
         lines = []
-        wmap, gmap = dict(want), dict(got)
-        for offset, text in want:
-            mark = "  " if all(target[i] == actual[i] for i in range(offset, min(offset + 4, len(target)))) else "!!"
+        gmap = dict(got)
+        ends = [o for o, _ in want[1:]] + [len(target)]
+        for (offset, text), end in zip(want, ends):
+            mark = "  " if target[offset:end] == actual[offset:end] else "!!"
             other = gmap.get(offset, "")
             lines.append(f"{mark} {offset:04x}: {text:<38} | {other:<38} {relocs.get(offset, '')}")
         return f"same size; {len(bad)} differing slots\n" + "\n".join(lines)
