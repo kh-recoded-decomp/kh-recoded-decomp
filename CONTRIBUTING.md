@@ -3,9 +3,13 @@
 1. Run `python -m pip install -r requirements.txt` and
    `python tools/compile_match.py install` on Windows. Compiler archives and
    executables are pinned by SHA-256 in `profiles/compilers.json`.
-2. Read the module symbols and ranges under `config/bk9e/arm9/`. Add reviewed,
-   self-contained C/C++ under `src/`. Inline assembly, binary inclusions, and
-   arbitrary build recipes cannot count as C matches. Credit reused source.
+2. Read the module symbols and ranges under `config/bk9e/arm9/`. Add reviewed
+   C/C++ under `src/`. Sources may include shared type headers from `include/`
+   and use compiler optimization pragmas. Inline assembly (also inside headers),
+   other includes, binary inclusions, and arbitrary build recipes cannot count as
+   C matches. Credit reused source. Use clear variable names and at most one
+   short comment per function. `python tools/match_tool.py show|try|stage`
+   prints the target, diffs a candidate, and queues a verified match.
 3. Register the original module/symbol, source path, descriptive `source_symbol`,
    compiler variant, ARM/Thumb `mode`, and external address `bindings` in
    `matches.json`. The fixed compiler wrapper produces an ELF object, selects

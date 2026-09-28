@@ -75,6 +75,26 @@ The `dsd` repack initially differs at header offsets `0x6C–0x6D` and
 changed, restores them from the exact-hash input ROM, and compares every byte
 of the 256 MiB result. Any other difference fails the build.
 
+## How functions get matched
+
+Every counted function is C that rebuilds to the exact original bytes. Three routes produce it:
+
+1. **Shared code from KH 358/2 Days** (`tools/days_port.py`). Re:coded reuses the Days
+   engine and the same Nitro middleware. Every CC0 Days source is compiled with both pinned
+   compilers, in ARM and Thumb state. A compiled Days function whose bytes equal a Re:coded
+   function once relocated words (calls, pointers) are masked is a candidate. Each relocation is
+   solved against the Re:coded instruction to find the real callee or global, the source is
+   renamed to Re:coded addresses, and it is kept only if the rebuild matches every byte.
+2. **Copies inside Re:coded** (`tools/twin_port.py`). Overlays carry duplicate helpers; a
+   verified source is re-bound to each byte-identical copy and verified again.
+3. **Manual matching** (`tools/match_tool.py`). `show` prints the target disassembly with
+   resolved relocations, the Ghidra decompiler view (`tools/ghidra/DecompileTargetsBK9E.java`)
+   and the most similar Days function; `try` compiles a candidate and prints an aligned diff;
+   `stage` queues a verified match and `merge` adds it to `matches.json`.
+
+`python tools/khrecoded.py progress` recompiles every registered function from scratch, so a
+match counts only while its source still rebuilds exactly.
+
 ## Connected Ghidra analysis
 
 A persistent project imports the function boundaries, ARM/Thumb modes, named

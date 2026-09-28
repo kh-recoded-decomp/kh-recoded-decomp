@@ -19,3 +19,4 @@ __pycache__/
 .pytest_cache/
 .venv/
 
+src/.port_scratch/

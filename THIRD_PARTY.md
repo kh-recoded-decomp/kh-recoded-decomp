@@ -3,12 +3,13 @@
 ## Kingdom Hearts 358/2 Days matching decompilation
 
 Some shared engine and middleware functions are adapted from
-[Yokimitsuro/khdays-decomp](https://github.com/Yokimitsuro/khdays-decomp),
-revision `ab832f38b943c15f461228968a89002e1a99c03e`, distributed under
+[Yokimitsuro/khdays-decomp](https://github.com/Yokimitsuro/khdays-decomp)
+(revisions `ab832f38b943c15f461228968a89002e1a99c03e` and later), distributed under
 CC0 1.0 Universal. The full license text is in
-[`licenses/khdays-CC0.txt`](licenses/khdays-CC0.txt).
+[`licenses/khdays-CC0.txt`](licenses/khdays-CC0.txt). The NitroSDK/NitroSystem
+type headers under `include/nitro/` and `include/nnsys/` come from the same project.
 
-Each adapted function records its source path and revision in its comment and
+Each adapted function records its source path and revision in
 `matches.json`. Names and variable names are reviewed for the Re:coded context.
 Every counted function must independently compile and match Re:coded bytes;
 sharing an implementation or name with Days is not sufficient evidence.

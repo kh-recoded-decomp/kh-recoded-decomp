@@ -43,6 +43,16 @@ class RelocationTests(unittest.TestCase):
             source.write_text('/* asm is forbidden */ int f(void) { return 1; }')
             cm.validate_c_source(source)
 
+    def test_only_project_headers_and_optimizer_pragmas_are_allowed(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            source = Path(tmp) / 'function.c'
+            source.write_text('#include "nitro/types.h"\n#pragma opt_propagation off\nu32 f(void) { return 1; }')
+            cm.validate_c_source(source)
+            for code in ['#include "../tools/khrecoded.py"', '#include <stdio.h>', '#pragma section ".data"']:
+                source.write_text(code)
+                with self.assertRaises(RuntimeError):
+                    cm.validate_c_source(source)
+
 
 class AccountingTests(unittest.TestCase):
     def test_mismatch_truncation_overlap_and_duplicate_are_rejected(self):

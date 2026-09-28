@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import functools
 import hashlib
 import io
 import json
@@ -43,13 +44,33 @@ def install() -> None:
     print("Pinned compiler variants installed under .tools/ (ignored by Git)")
 
 
-def validate_c_source(source: Path) -> None:
+INCLUDE_DIR = ROOT / "include"
+# Compiler switches only; the byte comparison still decides ARM/Thumb state.
+ALLOWED_PRAGMA = re.compile(
+    r"#\s*pragma\s+(?:push|pop|(?:opt_[a-z_]+|optimize_for_size|explicit_zero_data|scheduling|"
+    r"peephole|dont_inline|always_inline|thumb)\s+(?:on|off|reset)|optimization_level\s+\d|"
+    r"inline_max_size\(\d+\)|pack\(\d*\)|unused\(\w+(?:,\s*\w+)*\))\s*$")
+
+
+def validate_c_source(source: Path, seen: set[Path] | None = None) -> None:
+    """Reject assembly anywhere in a source or the project headers it includes."""
+    seen = set() if seen is None else seen
+    if source in seen:
+        return
+    seen.add(source)
     text = source.read_text(encoding="utf-8")
     clean = re.sub(r"/\*.*?\*/|//[^\n]*", "", text, flags=re.S)
     if re.search(r"\b(?:asm|__asm|__asm__|INCLUDE_ASM|INLINE_ASM)\b", clean):
         raise RuntimeError("Inline assembly cannot count as C progress")
-    if re.search(r"(?m)^\s*#\s*(?:include|pragma)\b", clean):
-        raise RuntimeError("C matches currently require self-contained source without includes or pragmas")
+    for line in re.findall(r"(?m)^\s*#\s*pragma\b.*$", clean):
+        if not ALLOWED_PRAGMA.fullmatch(line.strip()):
+            raise RuntimeError(f"Unsupported pragma: {line.strip()}")
+    for line in re.findall(r"(?m)^\s*#\s*include\b.*$", clean):
+        header = re.fullmatch(r'\s*#\s*include\s+"([A-Za-z0-9_./]+)"\s*', line)
+        path = (INCLUDE_DIR / header.group(1)).resolve() if header else None
+        if path is None or not path.is_relative_to(INCLUDE_DIR.resolve()) or not path.is_file():
+            raise RuntimeError(f"Only project headers under include/ may be included: {line.strip()}")
+        validate_c_source(path, seen)
 
 
 def relocate_word(word: int, kind: int, symbol: int, addend: int, place: int) -> int:
@@ -117,7 +138,9 @@ def link_function(obj: bytes, function_name: str, address: int, bindings: dict[s
             raise RuntimeError("Only explicit-addend RELA relocations are supported")
         for relocation in reloc_section.iter_relocations():
             offset = relocation['r_offset'] - start
-            if not 0 <= offset <= len(result) - 4:
+            if not 0 <= offset < len(result):
+                continue  # belongs to another function in the same source file
+            if offset > len(result) - 4:
                 raise RuntimeError("Relocation lies outside the compiled function")
             symbol = symtab.get_symbol(relocation['r_info_sym'])
             if symbol['st_shndx'] == index:
@@ -136,7 +159,13 @@ def link_function(obj: bytes, function_name: str, address: int, bindings: dict[s
     return bytes(result)
 
 
+@functools.lru_cache(maxsize=None)
+def executable_digest(executable: Path, mtime_ns: int) -> str:
+    return digest(executable)
+
+
 def compile_entry(entry: dict, address: int, output: Path) -> dict:
+    """Compile, link at address into output; the object stays at output.with_suffix('.o')."""
     source = (ROOT / entry['source']).resolve()
     if not source.is_relative_to(ROOT / 'src') or source.suffix not in ('.c', '.cpp'):
         raise RuntimeError("C/C++ source must be inside src/")
@@ -146,12 +175,12 @@ def compile_entry(entry: dict, address: int, output: Path) -> dict:
     executable = ROOT / variant['executable']
     if not executable.exists():
         raise RuntimeError("Compiler missing: run python tools/compile_match.py install")
-    if digest(executable) != variant['sha256']:
+    if executable_digest(executable, executable.stat().st_mtime_ns) != variant['sha256']:
         raise RuntimeError("Compiler executable SHA-256 mismatch")
     mode = entry['mode']
     if mode not in ('arm', 'thumb'):
         raise RuntimeError("Function mode must be arm or thumb")
-    flags = list(config['flags'])
+    flags = list(config['flags']) + ['-i', str(INCLUDE_DIR)]
     if source.suffix == '.cpp':
         flags[flags.index('c99')] = 'c++'
     if mode == 'thumb':
