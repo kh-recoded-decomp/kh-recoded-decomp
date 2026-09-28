@@ -19,10 +19,13 @@ import difflib
 import functools
 import io
 import json
+import os
 import re
 import shutil
+import stat
 import sys
 import tempfile
+import time
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -323,81 +326,160 @@ def cmd_stage(args) -> int:
               "understanding": args.understanding}
     if args.provenance:
         record["provenance"] = json.loads(args.provenance)
+    record["source_text"] = Path(args.source).read_text(encoding="utf-8")  # exactly what was verified
     PENDING.mkdir(parents=True, exist_ok=True)
     (PENDING / f"{args.module}__{name}.json").write_text(json.dumps(record, indent=2) + "\n", encoding="utf-8")
     print(f"STAGED {args.module}:{name}")
     return 0
 
 
+def snapshot_path(entry: dict) -> Path:
+    return SNAPSHOTS / f"{entry['module']}__{entry['symbol']}{Path(entry['source']).suffix}"
+
+
+def write_source(path: Path, data: bytes) -> None:
+    """Write a registered source and mark it read-only so parallel agents leave it alone."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    if path.exists():
+        os.chmod(path, stat.S_IWRITE | stat.S_IREAD)
+    path.write_bytes(data)
+    os.chmod(path, stat.S_IREAD)
+
+
 def cmd_merge(_args) -> int:
+    """Register staged matches. Serialized by a lock; fragments are removed only after
+    matches.json is written; registered sources are restored from verified snapshots."""
+    PENDING.mkdir(parents=True, exist_ok=True)
+    lock = PENDING / ".merge.lock"
+    try:
+        handle = os.open(lock, os.O_CREAT | os.O_EXCL | os.O_WRONLY)
+    except FileExistsError:
+        if time.time() - lock.stat().st_mtime < 1800:
+            print("Another merge is running; skipped")
+            return 1
+        lock.unlink()
+        handle = os.open(lock, os.O_CREAT | os.O_EXCL | os.O_WRONLY)
+    try:
+        return merge_locked()
+    finally:
+        os.close(handle)
+        lock.unlink()
+
+
+def merge_locked() -> int:
     path = ROOT / "matches.json"
     manifest = json.loads(path.read_text(encoding="utf-8"))
-    claimed = {(m["module"], m["symbol"]) for m in manifest["matches"]}
+    by_key = {(m["module"], m["symbol"]): m for m in manifest["matches"]}
     inv = inventory()
-    spans = {}
-    for m in manifest["matches"]:
-        i = inv[m["module"]]["symbols"][m["symbol"]]
-        spans.setdefault(m["module"], []).append((i["address"], i["address"] + i["size"]))
-    added = rejected = 0
-    fragments = sorted(PENDING.glob("*.json")) if PENDING.exists() else []
-    restaged = {tuple(p.stem.split("__", 1)) for p in fragments}
-    for m in list(manifest["matches"]):  # sources that vanished after registration
-        source, snapshot = ROOT / m["source"], SNAPSHOTS / f"{m['module']}__{m['symbol']}{Path(m['source']).suffix}"
-        if source.exists() or (m["module"], m["symbol"]) in restaged:
+    SNAPSHOTS.mkdir(parents=True, exist_ok=True)
+    for entry in manifest["matches"]:  # entries registered before snapshots existed
+        source, snapshot = ROOT / entry["source"], snapshot_path(entry)
+        if not snapshot.exists() and source.exists():
+            shutil.copyfile(source, snapshot)
+    accepted, refused = [], []
+    for fragment in sorted(PENDING.glob("*.json")):
+        try:
+            record = json.loads(fragment.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
             continue
-        if snapshot.exists():
-            source.parent.mkdir(parents=True, exist_ok=True)
-            shutil.copyfile(snapshot, source)
-        else:
-            manifest["matches"].remove(m)
-            claimed.discard((m["module"], m["symbol"]))
-    for fragment in fragments:
-        record = json.loads(fragment.read_text(encoding="utf-8"))
+        text = record.pop("source_text", None)
         key = (record["module"], record["symbol"])
-        stale = next((m for m in manifest["matches"] if (m["module"], m["symbol"]) == key
-                      and not (ROOT / m["source"]).exists()), None)
-        if stale is not None:  # the agent renamed its file after staging: replace the entry
-            manifest["matches"].remove(stale)
-            claimed.discard(key)
-            info = inv[stale["module"]]["symbols"][stale["symbol"]]
-            spans[stale["module"]].remove((info["address"], info["address"] + info["size"]))
-        info = inv[record["module"]]["symbols"][record["symbol"]]
+        source = ROOT / record["source"]
+        if text is not None and (not source.exists() or source.read_text(encoding="utf-8") != text):
+            write_source(source, text.encode("utf-8"))
+        info = inv[key[0]]["symbols"][key[1]]
         start, stop = info["address"], info["address"] + info["size"]
-        ok = key not in claimed and all(isinstance(record.get(f), str) and record[f].strip() for f in REQUIRED)
-        ok = ok and not any(start < b and a < stop for a, b in spans.get(record["module"], []))
+        ok = source.exists() and all(isinstance(record.get(f), str) and record[f].strip() for f in REQUIRED)
+        for other in manifest["matches"]:
+            if other["module"] == key[0] and (other["module"], other["symbol"]) != key:
+                o = inv[other["module"]]["symbols"][other["symbol"]]
+                if start < o["address"] + o["size"] and o["address"] < stop:
+                    ok = False
+                    break
         if ok:
-            name, _, target = target_bytes(*key)
+            _, _, target = target_bytes(*key)
             with tempfile.TemporaryDirectory(prefix="merge-", dir=ROOT / "build") as temp:
                 try:
                     cm.compile_entry(record, start, Path(temp) / "o.bin")
                     ok = (Path(temp) / "o.bin").read_bytes() == target
                 except RuntimeError:
                     ok = False
-        if ok:
-            manifest["matches"].append(record)
-            claimed.add(key)
-            spans.setdefault(record["module"], []).append((start, stop))
-            added += 1
-            fragment.unlink()
-        else:
-            rejected += 1
-            fragment.rename(fragment.with_suffix(".rejected"))
-            snapshot = SNAPSHOTS / f"{key[0]}__{key[1]}{Path(stale['source']).suffix}" if stale else None
-            if stale is not None and snapshot.exists():  # keep the verified original
-                (ROOT / stale["source"]).parent.mkdir(parents=True, exist_ok=True)
-                shutil.copyfile(snapshot, ROOT / stale["source"])
-                manifest["matches"].append(stale)
-                claimed.add(key)
-                spans[key[0]].append((start, stop))
-    # Snapshot every registered source so a later rename or delete can be undone.
-    SNAPSHOTS.mkdir(parents=True, exist_ok=True)
-    for m in manifest["matches"]:
-        source = ROOT / m["source"]
-        snapshot = SNAPSHOTS / f"{m['module']}__{m['symbol']}{source.suffix}"
-        if source.exists() and (not snapshot.exists() or snapshot.read_bytes() != source.read_bytes()):
-            shutil.copyfile(source, snapshot)
-    path.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
-    print(f"Merged {added} staged matches; rejected {rejected}")
+        if not ok:
+            refused.append(fragment)
+            continue
+        if key in by_key:  # a verified re-stage replaces the earlier entry
+            manifest["matches"].remove(by_key[key])
+        manifest["matches"].append(record)
+        by_key[key] = record
+        shutil.copyfile(source, snapshot_path(record))
+        accepted.append(fragment)
+    restored = 0
+    for entry in manifest["matches"]:  # undo later edits, renames and deletions
+        source, snapshot = ROOT / entry["source"], snapshot_path(entry)
+        if snapshot.exists() and (not source.exists() or source.read_bytes() != snapshot.read_bytes()):
+            write_source(source, snapshot.read_bytes())
+            restored += 1
+        elif source.exists() and os.access(source, os.W_OK):
+            os.chmod(source, stat.S_IREAD)
+    temp_path = path.with_suffix(".json.tmp")
+    temp_path.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
+    os.replace(temp_path, path)
+    for fragment in accepted:
+        fragment.unlink()
+    for fragment in refused:
+        fragment.replace(fragment.with_suffix(".rejected"))
+    print(f"Merged {len(accepted)} staged matches; rejected {len(refused)}; restored {restored} edited sources")
+    return 0
+
+
+def cmd_batch(args) -> int:
+    """Print the still-open functions of one batch (skips anything matched or staged)."""
+    lines = json.loads((ROOT / args.file).read_text(encoding="utf-8"))[args.index]
+    matched = {(m["module"], m["symbol"]) for m in json.loads((ROOT / "matches.json").read_text(encoding="utf-8"))["matches"]}
+    for line in lines:
+        module, symbol = line.split()[:2]
+        if (module, symbol) not in matched and not (PENDING / f"{module}__{symbol}.json").exists():
+            print(line)
+    return 0
+
+
+def cmd_verify(args) -> int:
+    """Rebuild every registered match in parallel; with --repair, restore broken sources from
+    the last commit (or drop the entry) so progress verification passes."""
+    import subprocess
+    from concurrent.futures import ThreadPoolExecutor
+
+    manifest = json.loads((ROOT / "matches.json").read_text(encoding="utf-8"))
+    inventory()
+
+    def check(entry: dict) -> str | None:
+        name, info, target = target_bytes(entry["module"], entry["symbol"])
+        with tempfile.TemporaryDirectory(prefix="verify-", dir=ROOT / "build") as temp:
+            try:
+                cm.compile_entry(entry, info["address"], Path(temp) / "o.bin")
+                return None if (Path(temp) / "o.bin").read_bytes() == target else "bytes differ"
+            except (RuntimeError, OSError) as error:
+                return str(error).strip().splitlines()[-1][:160] if str(error).strip() else "error"
+
+    with ThreadPoolExecutor(args.jobs) as pool:
+        problems = [(e, p) for e, p in zip(manifest["matches"], pool.map(check, manifest["matches"])) if p]
+    print(f"{len(manifest['matches']) - len(problems)} verified, {len(problems)} broken")
+    for entry, problem in problems:
+        print(f"  {entry['module']}:{entry['symbol']} {entry['source']}: {problem}")
+    if not args.repair or not problems:
+        return 1 if problems else 0
+    dropped = 0
+    for entry, _ in problems:
+        committed = subprocess.run(["git", "show", f"HEAD:{entry['source']}"], cwd=ROOT, capture_output=True)
+        if committed.returncode == 0:
+            write_source(ROOT / entry["source"], committed.stdout.replace(b"\r\n", b"\n"))
+            if check(entry) is None:
+                shutil.copyfile(ROOT / entry["source"], snapshot_path(entry))
+                continue
+        manifest["matches"].remove(entry)
+        dropped += 1
+    (ROOT / "matches.json").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
+    print(f"Repaired {len(problems) - dropped} from the last commit; dropped {dropped}")
     return 0
 
 
@@ -425,8 +507,15 @@ def main() -> int:
             p.add_argument("--understanding", default="unknown", choices=("gameplay", "subsystem", "unknown"))
             p.add_argument("--provenance", help="JSON object when adapted from another project")
     sub.add_parser("merge")
+    batch = sub.add_parser("batch")
+    batch.add_argument("file")
+    batch.add_argument("index", type=int)
+    verify = sub.add_parser("verify")
+    verify.add_argument("--repair", action="store_true")
+    verify.add_argument("--jobs", type=int, default=16)
     args = parser.parse_args()
-    return {"show": cmd_show, "try": cmd_try, "stage": cmd_stage, "merge": cmd_merge}[args.command](args) or 0
+    return {"show": cmd_show, "try": cmd_try, "stage": cmd_stage, "merge": cmd_merge,
+            "verify": cmd_verify, "batch": cmd_batch}[args.command](args) or 0
 
 
 if __name__ == "__main__":

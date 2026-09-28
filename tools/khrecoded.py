@@ -14,6 +14,7 @@ import sys
 import tempfile
 import urllib.request
 from collections import defaultdict
+from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -258,31 +259,40 @@ def verify_matches(inv: dict[str, dict]) -> dict:
             raise RuntimeError(f"Invalid understanding level for {key}")
         if "build" in entry:
             raise RuntimeError("Arbitrary build recipes cannot count as verified C")
-        function = inv[module]["symbols"][symbol]
+
+    def build(entry: dict) -> tuple[dict, bytes]:
+        from compile_match import compile_entry
+        function = inv[entry["module"]]["symbols"][entry["symbol"]]
         with tempfile.TemporaryDirectory(prefix="candidate-", dir=ROOT / "build") as temp:
-            from compile_match import compile_entry
             candidate = Path(temp) / "candidate.bin"
-            build_proof = compile_entry(entry, function["address"], candidate)
-            offset = function["address"] - inv[module]["base"]
-            if offset < 0 or offset + function["size"] > inv[module]["binary_bytes"]:
-                raise RuntimeError(f"Function span outside {module}: {symbol}")
-            start, stop = function["address"], function["address"] + function["size"]
-            if any(start < old_stop and old_start < stop for old_start, old_stop in claimed_ranges[module]):
-                raise RuntimeError(f"Overlapping verified spans in {module}: {symbol}")
-            claimed_ranges[module].append((start, stop))
-            with inv[module]["binary"].open("rb") as f:
-                f.seek(offset)
-                expected = f.read(function["size"])
-            actual = candidate.read_bytes()
-            if actual != expected:
-                first = next((i for i, (a, b) in enumerate(zip(actual, expected)) if a != b), None)
-                raise RuntimeError(f"Byte mismatch for {module}:{symbol}: compiled={len(actual)}, "
-                                   f"expected={len(expected)}, first_difference={first}")
-            verified.append({"module": module, "symbol": symbol, "language": language,
-                             "bytes": function["size"], "source": entry["source"],
-                             **{field: entry[field] for field in (
-                                 "name", "behavior", "evidence", "uncertainty", "domain", "origin", "understanding")},
-                             **build_proof})
+            return compile_entry(entry, function["address"], candidate), candidate.read_bytes()
+
+    # Every function is rebuilt from scratch; compiles run in parallel, checks stay in manifest order.
+    jobs = int(os.environ.get("KH_JOBS", max(1, min(8, (os.cpu_count() or 2) - 2))))
+    with ThreadPoolExecutor(jobs) as pool:
+        builds = list(pool.map(build, manifest["matches"]))
+    for entry, (build_proof, actual) in zip(manifest["matches"], builds):
+        module, symbol, language = entry["module"], entry["symbol"], entry["language"]
+        function = inv[module]["symbols"][symbol]
+        offset = function["address"] - inv[module]["base"]
+        if offset < 0 or offset + function["size"] > inv[module]["binary_bytes"]:
+            raise RuntimeError(f"Function span outside {module}: {symbol}")
+        start, stop = function["address"], function["address"] + function["size"]
+        if any(start < old_stop and old_start < stop for old_start, old_stop in claimed_ranges[module]):
+            raise RuntimeError(f"Overlapping verified spans in {module}: {symbol}")
+        claimed_ranges[module].append((start, stop))
+        with inv[module]["binary"].open("rb") as f:
+            f.seek(offset)
+            expected = f.read(function["size"])
+        if actual != expected:
+            first = next((i for i, (a, b) in enumerate(zip(actual, expected)) if a != b), None)
+            raise RuntimeError(f"Byte mismatch for {module}:{symbol}: compiled={len(actual)}, "
+                               f"expected={len(expected)}, first_difference={first}")
+        verified.append({"module": module, "symbol": symbol, "language": language,
+                         "bytes": function["size"], "source": entry["source"],
+                         **{field: entry[field] for field in (
+                             "name", "behavior", "evidence", "uncertainty", "domain", "origin", "understanding")},
+                         **build_proof})
     return {"verified": verified}
 
 
@@ -358,15 +368,6 @@ def progress(write: bool = True) -> dict:
         for level, data in understanding.items():
             lines.append(f"| {level} | {data['functions']} | {data['bytes']:,} |")
         lines += [""] + markdown(hierarchy)
-        owners = {(module["module"], f["symbol"]): f"{system['id']} / {module['module']} / {section['id']}"
-                  for system in hierarchy["systems"] for module in system["modules"]
-                  for section in module["subsections"] for f in section["functions"]}
-        lines += ["", "## What the matched code does", "", "| Function | Owning subsection | Player-facing role | Scope | Bytes |",
-                  "|---|---|---|---|---:|"]
-        for match in proof["verified"]:
-            lines.append(f"| [{match['name']}]({match['source']}) ({match['module']}:{match['symbol']}) | "
-                         f"{owners[(match['module'], match['symbol'])]} | "
-                         f"{match['behavior'].replace('|', '/')} | {match['understanding']} | {match['bytes']} |")
         lines += ["",
                   "## Per-module status", "", "| Module | C bytes | Analysed code bytes | "
                   "Identified function bytes | Identified functions | Container bytes |",
