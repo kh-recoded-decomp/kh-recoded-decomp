@@ -1,0 +1,92 @@
+/* Selects palette loading mode from screen/palette formats and delegates resource load.
+ * The middleware operation is supported by this body; its caller-specific use and any higher-level game meaning are not established here. */
+/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
+ * ab832f38b943c15f461228968a89002e1a99c03e, libs/nitro/nns/calls/func_02012e1c.c.
+ * Original routine: func_02012e1c. External references are
+ * rebound to BK9E; subsystem identity is reviewed separately from matching. */
+typedef unsigned short u16;
+typedef unsigned long u32;
+typedef int BOOL;
+
+typedef enum GXTexFmt {
+    GX_TEXFMT_NONE = 0,
+    GX_TEXFMT_A3I5 = 1,
+    GX_TEXFMT_PLTT4 = 2,
+    GX_TEXFMT_PLTT16 = 3,
+    GX_TEXFMT_PLTT256 = 4
+} GXTexFmt;
+
+typedef enum NNSG2dBGSelect {
+    NNS_G2D_BGSELECT_MAIN0,
+    NNS_G2D_BGSELECT_MAIN1,
+    NNS_G2D_BGSELECT_MAIN2,
+    NNS_G2D_BGSELECT_MAIN3,
+    NNS_G2D_BGSELECT_SUB0,
+    NNS_G2D_BGSELECT_SUB1,
+    NNS_G2D_BGSELECT_SUB2,
+    NNS_G2D_BGSELECT_SUB3
+} NNSG2dBGSelect;
+
+typedef struct NNSG2dPaletteData {
+    GXTexFmt fmt;
+    BOOL bExtendedPlt;
+    u32 szByte;
+    void *pRawData;
+} NNSG2dPaletteData;
+
+typedef struct NNSG2dScreenData {
+    u16 screenWidth;
+    u16 screenHeight;
+    u16 colorMode;
+    u16 screenFormat;
+    u32 szByte;
+    u32 rawData[1];
+} NNSG2dScreenData;
+
+typedef struct NNSG2dPaletteCompressInfo {
+    u16 numPalette;
+    u16 pad16;
+    void *pPlttIdxTbl;
+} NNSG2dPaletteCompressInfo;
+
+extern void func_0201611c(NNSG2dBGSelect bg, BOOL useExtended,
+                          const NNSG2dPaletteData *pPltData,
+                          const NNSG2dPaletteCompressInfo *pCmpInfo);
+
+static inline BOOL IsMainBG(NNSG2dBGSelect bg)
+{
+    return bg <= NNS_G2D_BGSELECT_MAIN3;
+}
+
+static inline BOOL IsBGUseExtPlttMain(void)
+{
+    return (*(volatile u32 *)0x04000000 & 0x40000000) != 0;
+}
+
+static inline BOOL IsBGUseExtPlttSub(void)
+{
+    return (*(volatile u32 *)0x04001000 & 0x40000000) != 0;
+}
+
+static inline BOOL IsBGUseExtPltt(NNSG2dBGSelect bg)
+{
+    return IsMainBG(bg) ? IsBGUseExtPlttMain() : IsBGUseExtPlttSub();
+}
+
+void LoadBackgroundPalette_02016154(NNSG2dBGSelect bg,
+                   const NNSG2dPaletteData *pPltData,
+                   const NNSG2dScreenData *pScreenData,
+                   const NNSG2dPaletteCompressInfo *pCmpInfo)
+{
+    const u16 screenFormat = pScreenData->screenFormat;
+
+    if (screenFormat == 0 && pScreenData->colorMode == 1) {
+        func_0201611c(bg, IsBGUseExtPltt(bg),
+                      pPltData, pCmpInfo);
+        return;
+    }
+
+    func_0201611c(bg,
+                  pPltData->fmt != GX_TEXFMT_PLTT16 && screenFormat != 1,
+                  pPltData, pCmpInfo);
+}

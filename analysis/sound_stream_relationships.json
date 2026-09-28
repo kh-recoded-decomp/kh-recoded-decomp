@@ -1,0 +1,127 @@
+{
+  "version": 1,
+  "profile": "bk9e",
+  "module": "arm9",
+  "scope": "Archive stream players: shared layout, lifecycle and file/memory callbacks. Matching status is recomputed from complete C/C++ builds.",
+  "layout_evidence": "The exact PrepareStream, player update, player acquisition, channel-count, and data-end implementations agree on two additional 32-bit words immediately after the embedded NNSSndStrm subobject. Their purpose remains unknown.",
+  "members": [
+    "func_02020178",
+    "func_02020388",
+    "func_02020494",
+    "func_02020520",
+    "func_0202054c",
+    "func_02020810",
+    "func_02020910",
+    "func_02020948",
+    "func_02020a44",
+    "func_02020b04",
+    "func_02020b9c",
+    "func_02020cd8",
+    "func_0202161c",
+    "func_02021684",
+    "func_0202177c",
+    "func_0202178c",
+    "func_020217c4",
+    "func_020217d4",
+    "func_020217fc",
+    "func_02021800",
+    "func_0202181c"
+  ],
+  "relationships": [
+    {
+      "caller": "func_0202054c",
+      "source": "src/arm9/library_nns_snd/PrepareStream_0202054c.c",
+      "evidence": "Looks up the requested stream player, opens and positions the stream, initializes playback state and volume, chooses and allocates channels, and configures stream callbacks. It leaves the play/start flags clear; the periodic update path starts playback after preparation. It sets stereo pan when two channels are active.",
+      "bound_stream_functions": [
+        "func_02020494",
+        "func_0202161c",
+        "func_02020520",
+        "func_02020910",
+        "func_02020948",
+        "func_02020b9c"
+      ]
+    },
+    {
+      "caller": "func_02020cd8",
+      "source": "src/arm9/library_nns_snd/OnStreamDataEnd_02020cd8.c",
+      "evidence": "Passes stream identity and an initial offset to the archive callback. When the callback requests a next stream, resolves its metadata, closes and reopens the stream, rejects incompatible sample-rate or PCM8 transitions, then updates the stream number, sample position, ADPCM dirty flag, and completion state.",
+      "bound_stream_functions": [
+        "func_0202161c"
+      ]
+    },
+    {
+      "caller": "func_02020178",
+      "source": "src/arm9/library_nns_snd/ConfigureArchiveStreamPlayers_02020178.c",
+      "evidence": "Reads configuration for each archive stream player, copies its channel list, and when a valid heap is supplied allocates the player buffer, resets its playback state, and stores the buffer and size.",
+      "bound_stream_functions": [
+        "func_02020810",
+        "func_02020b04"
+      ]
+    },
+    {
+      "caller": "func_02020388",
+      "source": "src/arm9/library_nns_snd/UpdateArchiveStreamPlayers_02020388.c",
+      "evidence": "Updates active archive stream players: handles exhausted completion counters, promotes prepared starts to playing, advances faders, recalculates effective volume, and stops players after fade completion.",
+      "bound_stream_functions": [
+        "func_02020810"
+      ]
+    },
+    {
+      "caller": "func_02020494",
+      "source": "src/arm9/library_nns_snd/AcquireArchiveStreamPlayer_02020494.c",
+      "evidence": "Validates an existing stream handle, selects the requested player, rejects unavailable buffers or insufficient priority, stops an already active player when replacement is allowed, and associates the selected player with the handle.",
+      "bound_stream_functions": [
+        "func_02020810"
+      ]
+    },
+    {
+      "caller": "func_02020910",
+      "source": "src/arm9/library_nns_snd/AcquireStreamChannels_02020910.c",
+      "evidence": "Allocates the requested stream channels on the first reference and increments the player channel-allocation count after success; returns false if the initial channel allocation fails.",
+      "bound_stream_functions": []
+    },
+    {
+      "caller": "func_02020948",
+      "source": "src/arm9/library_nns_snd/ReleaseStreamChannels_02020948.c",
+      "evidence": "Decrements the stream channel-allocation count and frees the stream channels when the count reaches zero.",
+      "bound_stream_functions": []
+    },
+    {
+      "caller": "func_02020a44",
+      "source": "src/arm9/library_nns_snd/DequeueStreamLoadCommand_02020a44.c",
+      "evidence": "Removes the next command from a load-command list under interrupt masking, decrements its stream player command count when a command exists, restores interrupts, and returns the command.",
+      "bound_stream_functions": []
+    },
+    {
+      "caller": "func_0202161c",
+      "source": "src/arm9/library_nns_snd/SelectArchiveStreamCallbacks_0202161c.c",
+      "evidence": "Installs the open, close, read, and cancel callbacks on a stream player, choosing file-backed or memory-backed implementations based on whether the requested file is already cached.",
+      "bound_stream_functions": [
+        "func_02021684",
+        "func_0202177c",
+        "func_0202178c",
+        "func_020217c4",
+        "func_020217d4",
+        "func_020217fc",
+        "func_02021800",
+        "func_0202181c"
+      ]
+    }
+  ],
+  "callback_selection": {
+    "caller": "func_0202161c",
+    "evidence": "SelectArchiveStreamCallbacks uses the archive cache result to install the open, close, read and cancel function pointers on the same player object.",
+    "file_backed": [
+      "func_02021684",
+      "func_0202177c",
+      "func_0202178c",
+      "func_020217c4"
+    ],
+    "memory_backed": [
+      "func_020217d4",
+      "func_020217fc",
+      "func_02021800",
+      "func_0202181c"
+    ]
+  }
+}

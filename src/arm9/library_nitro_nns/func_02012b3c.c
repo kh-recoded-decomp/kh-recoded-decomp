@@ -1,0 +1,58 @@
+/* Initializes heap signature/range/options and child list, then links it to containing heap.
+ * The middleware operation is supported by this body; its caller-specific use and any higher-level game meaning are not established here. */
+/* Recovered CC0 library C from Yokimitsuro/khdays-decomp, revision
+ * ab832f38b943c15f461228968a89002e1a99c03e, libs/nitro/nns/calls/NNSi_FndInitHeapHead.c.
+ * Original routine: NNSi_FndInitHeapHead. External references are
+ * rebound to BK9E; subsystem identity is reviewed separately from matching. */
+typedef unsigned int u32;
+typedef unsigned short u16;
+typedef signed long s32;
+
+struct NNSFndLink {
+    void *prev_object;
+    void *next_object;
+};
+
+struct NNSFndList {
+    void *head_object;
+    void *tail_object;
+    u16 num_objects;
+    u16 offset;
+};
+
+struct NNSiFndHeapHead {
+    u32 signature;
+    struct NNSFndLink link;
+    struct NNSFndList child_list;
+    void *heap_start;
+    void *heap_end;
+    u32 attribute;
+};
+
+extern int data_0205a8b0;
+extern struct NNSFndList data_0205a8b4;
+
+extern void NNS_FndInitList(struct NNSFndList *list, s32 linkOffset);
+extern struct NNSFndList *FindListContainHeap(const void *memoryBlock);
+extern void NNS_FndAppendListObject(struct NNSFndList *list, void *object);
+
+void InitializeHeapHead_02012b3c(
+    struct NNSiFndHeapHead *head,
+    u32 signature,
+    void *heapStart,
+    void *heapEnd,
+    u16 optionFlag)
+{
+    head->signature = signature;
+    head->heap_start = heapStart;
+    head->heap_end = heapEnd;
+    head->attribute = 0;
+    head->attribute &= ~0xff;
+    head->attribute |= optionFlag & 0xff;
+    NNS_FndInitList(&head->child_list, 4);
+    if (!data_0205a8b0) {
+        NNS_FndInitList(&data_0205a8b4, 4);
+        data_0205a8b0 = 1;
+    }
+    NNS_FndAppendListObject(FindListContainHeap(head), head);
+}

@@ -1,35 +1,3 @@
-# Actor model appearance: connected analysis
-
-The first connected investigation follows the command that makes an actor's
-model partly transparent and clears its vertical offset. Shared structures and
-signatures are applied to the persistent Ghidra project so they improve related
-callers as well.
-
-## What is established
-
-- `ov001:0208deb0` reads a script actor ID, finds the actor, clears `offset.y`,
-  sets all model material alpha values to 8, and sets polygon IDs to 63.
-- `ActorNode.modelResource` is at `+0x7c`; the offset vector is at `+0xb4`.
-- `ModelResource.materialCount` is at `+0x18`; its material table offset is at `+8`.
-- `Actor_GetById` has 218 direct callsites. Its registry has a pointer array
-  beginning at `+0x20`; each pointer addresses storage with the actor at `+0x10`.
-- The material alpha setter changes bits 16–20. The polygon-ID setter changes
-  bits 24–29. Both operations are corroborated by the recovered shared model API.
-
-The scenes and actors that trigger this command remain unobserved. No specific
-enemy, disappearance event, or fading effect is assigned to neighboring code
-without further evidence.
-
-## Persistent knowledge
-
-- [actor_model.json](actor_model.json): reviewed function signatures, names,
-  local-variable names, evidence, uncertainty, and module-qualified callers.
-- [types/actor_model.h](types/actor_model.h): partial shared structures. Reserved
-  fields explicitly preserve unknown areas. These are 32-bit ARM layouts.
-- The Ghidra project is local at `build/ghidra/project/BK9E.gpr`.
-- Ghidra reports, the full generated import graph, and pseudocode are local under
-  `build/ghidra/`. Pseudocode is not added to matching coverage.
-
 ## Create or update the project
 
 After the regular ROM setup, with JDK 21 or newer available:

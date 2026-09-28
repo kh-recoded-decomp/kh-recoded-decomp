@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "profile": "bk9e",
+  "module": "ov022",
+  "scope": "Stream construction, initialization, and cleanup; matching status is recomputed from source, never inferred from these relationships.",
+  "members": [
+    "func_ov022_020a9170",
+    "func_ov022_020a91a0",
+    "func_ov022_020a9288",
+    "func_ov022_020a93d4",
+    "func_ov022_020a93e0",
+    "func_ov022_020a93ec",
+    "func_ov022_020a941c",
+    "func_ov022_020a9430",
+    "func_ov022_020a99dc",
+    "func_ov022_020aa130"
+  ],
+  "relationships": [
+    {
+      "caller": "func_ov022_020a91a0",
+      "callee": "func_ov022_020aa130",
+      "evidence": "Factory binds its new reader to the supplied file context."
+    },
+    {
+      "caller": "func_ov022_020a91a0",
+      "callee": "func_ov022_020a9170",
+      "evidence": "Factory checks initialization status and performs cleanup on failure."
+    },
+    {
+      "caller": "func_ov022_020a9170",
+      "callee": "func_ov022_020a9430",
+      "evidence": "Wrapper runs the pre-init hook and returns decoder initialization status."
+    },
+    {
+      "caller": "func_ov022_020a91a0",
+      "callee": "func_ov022_020a93ec",
+      "evidence": "Factory initializes resource pointers after allocating the context."
+    },
+    {
+      "caller": "func_ov022_020a91a0",
+      "callee": "func_ov022_020a941c",
+      "evidence": "Factory failure path releases context resources before freeing the context."
+    },
+    {
+      "caller": "func_ov022_020a9288",
+      "callee": "func_ov022_020a941c",
+      "evidence": "Null-checked destruction wrapper releases resources and calls the deallocation veneer."
+    },
+    {
+      "caller": "func_ov022_020a941c",
+      "callee": "func_ov022_020a99dc",
+      "evidence": "Teardown wrapper calls decoder cleanup."
+    },
+    {
+      "functions": [
+        "func_ov022_020a9430",
+        "func_ov022_020a99dc"
+      ],
+      "evidence": "Initialization allocates reader/frame-state, plane arrays, scratch buffers, frame index and audio resources; cleanup releases the corresponding fields."
+    }
+  ],
+  "pending": [
+    {
+      "symbol": "func_ov022_020a93d4",
+      "size": 12,
+      "reason": "Original ARM allocation tail-call veneer; ordinary C candidate is 20 bytes."
+    },
+    {
+      "symbol": "func_ov022_020a93e0",
+      "size": 12,
+      "reason": "Original ARM deallocation tail-call veneer; ordinary C candidate is 20 bytes."
+    }
+  ],
+  "boundary_note": "The frame queue at 0x020a9b78 belongs to streaming, and ADPCM decoding at 0x020aaadc belongs to audio. These are not included just because their C matches were recovered in the same batch."
+}

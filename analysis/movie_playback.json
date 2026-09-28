@@ -2,15 +2,227 @@
   "version": 1,
   "profile": "bk9e",
   "types": "analysis/types/movie_playback.h",
-  "scope": "MobiClip movie initialization, decoded-frame conversion, and frame-ring bookkeeping. Static Ghidra evidence and exact C recovery; specific video assets and display presentation remain unobserved.",
+  "scope": "Movie stream-reader construction and binding, decoder initialization and cleanup, queued frame state, pixel conversion, and embedded audio decoding. Types and caller links record observed fields and direct Ghidra evidence; the display path and several mode or asset meanings remain unobserved.",
   "functions": [
+    {
+      "module": "ov022",
+      "address": "0x020a9170",
+      "name": "initializeMovieStreamWrapper_020a9170",
+      "prototype": "int initializeMovieStreamWrapper_020a9170(MovieDecodeContextObserved *context, MovieReaderObserved *reader, MovieU32 frameRingCapacity);",
+      "behavior": "Runs a pre-initialization hook using the static object at 0x02000bc4 and returns the decoder initializer result.",
+      "evidence": "The exact 48-byte C wrapper calls func_02000b64 with 0x02000bc4 then returns initializeMovieDecodeContext_020a9430\u2019s result. The stream factory checks that result and tears down the context on failure. Direct caller: 0x020a9238 in createMovieStream_020a91a0.",
+      "uncertainty": "The pre-initialization hook\u2019s effect is unknown. Ghidra propagates a fourth argument in one view, but this wrapper\u2019s exact caller and compiled body forward the three established arguments.",
+      "callers": [
+        {
+          "module": "ov022",
+          "callsite": "0x020a9238",
+          "caller": "createMovieStream_020a91a0"
+        }
+      ]
+    },
+    {
+      "module": "ov022",
+      "address": "0x020a91a0",
+      "name": "createMovieStream_020a91a0",
+      "prototype": "void *createMovieStream_020a91a0(void *fileContext, MovieU32 frameSlotCount);",
+      "behavior": "Allocates and initializes a reader, constructs a movie stream context, and returns it only after decoder initialization succeeds.",
+      "evidence": "The exact 212-byte C++ function allocates a 0x14-byte reader, installs its observed vtable and initial fields, binds it to the file context, allocates and constructs a 0xd8-byte stream, then checks the initialization result. On failure it calls the stream teardown path and releases the stream allocation; the reader initialization failure path uses its virtual deleting destructor. Direct caller: ov022:0x020a83d8.",
+      "uncertainty": "The reader/file ownership contract and the upper-level caller\u2019s frame-slot-count policy are not established.",
+      "callers": [
+        {
+          "module": "ov022",
+          "callsite": "0x020a83d8",
+          "caller": "func_ov022_020a83d8"
+        }
+      ],
+      "local_names": {
+        "param_1": "fileContext",
+        "param_2": "frameSlotCount"
+      }
+    },
+    {
+      "module": "ov022",
+      "address": "0x020a9288",
+      "name": "func_ov022_020a9288",
+      "prototype": "void func_ov022_020a9288(MovieDecodeContextObserved *context);",
+      "behavior": "For a nonnull context, calls the decoder teardown wrapper and then the stream deallocation veneer.",
+      "evidence": "Its matched 32-byte C body tests the context pointer, calls destroyMovieStreamContext_020a941c, then calls func_ov022_020a93e0.",
+      "uncertainty": "The higher-level caller and reason for the duplicated null test are not established."
+    },
+    {
+      "module": "ov022",
+      "address": "0x020a92f0",
+      "name": "func_ov022_020a92f0",
+      "prototype": "undefined func_ov022_020a92f0(void);",
+      "behavior": "Contains a direct call to queueNextMovieFrame_020a9b78.",
+      "evidence": "The function boundary in config/bk9e/arm9/overlays/ov022/symbols.txt contains the direct callsite at 0x020a9300 to ov022:0x020a9b78.",
+      "uncertainty": "Its arguments, return behavior, and higher-level role are not yet typed from a complete Ghidra body."
+    },
+    {
+      "module": "ov022",
+      "address": "0x020a9338",
+      "name": "func_ov022_020a9338",
+      "prototype": "int func_ov022_020a9338(MovieDecodeContextObserved *context, MovieU32 outputBuffer, int sourceLine, int mode);",
+      "behavior": "Checks for a nonnull movie context, delegates one frame to the conversion routine, and returns whether it succeeded.",
+      "evidence": "Ghidra decompilation calls renderDecodedMovieFrame_020a9d94 at +0x10 and returns whether its result equals 1. This wrapper is called from ov022:0x020a7fc8.",
+      "uncertainty": "The caller\u2019s higher-level display behavior remains unknown.",
+      "callers": [
+        {
+          "module": "ov022",
+          "callsite": "0x020a9348",
+          "caller": "func_ov022_020a9338"
+        }
+      ]
+    },
+    {
+      "module": "ov022",
+      "address": "0x020a9398",
+      "name": "processMovieStreamChunkIfContextPresent_020a9398",
+      "prototype": "int processMovieStreamChunkIfContextPresent_020a9398(MovieDecodeContextObserved *context, MovieU32 outputBuffer, int unusedArgument, int copyOption);",
+      "behavior": "When a stream context is nonnull, delegates one pending chunk to the chunk processor and reports whether it succeeded.",
+      "evidence": "Its exact 36-byte C body checks the context, calls processMovieStreamChunk_020a9f68 and returns whether its result is 1. Ghidra records callers at ov022:0x020a80d4 and 0x020a80e8.",
+      "uncertainty": "The higher-level meanings of the output buffer and the final two arguments remain unknown.",
+      "callers": [
+        {
+          "module": "ov022",
+          "callsite": "0x020a80d4",
+          "caller": "func_ov022_020a7fc8"
+        },
+        {
+          "module": "ov022",
+          "callsite": "0x020a80e8",
+          "caller": "func_ov022_020a7fc8"
+        }
+      ]
+    },
+    {
+      "module": "ov022",
+      "address": "0x020a93d4",
+      "name": "func_ov022_020a93d4",
+      "prototype": "void *func_ov022_020a93d4(MovieU32 allocationSize);",
+      "behavior": "A 12-byte ARM literal-branch veneer reached by the factory when allocating a 0xd8-byte stream context.",
+      "evidence": "The instruction sequence loads the literal target 0x0202a19c and branches through it; the factory calls this veneer at 0x020a9218 with 0xd8. It remains unmatched by self-contained C.",
+      "uncertainty": "The exact destination API signature and allocation-heap semantics are unresolved."
+    },
+    {
+      "module": "ov022",
+      "address": "0x020a93e0",
+      "name": "func_ov022_020a93e0",
+      "prototype": "void func_ov022_020a93e0(void *block);",
+      "behavior": "A 12-byte ARM literal-branch veneer reached by stream-factory and context-destroy failure/cleanup paths.",
+      "evidence": "The instruction sequence loads the literal target 0x0202a1c4 and branches through it; callers include 0x020a9258, 0x020a92a0 and func_ov022_020a9288. It remains unmatched by self-contained C.",
+      "uncertainty": "The exact destination API signature and allocation-heap semantics are unresolved."
+    },
+    {
+      "module": "ov022",
+      "address": "0x020a93ec",
+      "name": "initializeMovieStreamResources_020a93ec",
+      "prototype": "MovieDecodeContextObserved *initializeMovieStreamResources_020a93ec(MovieDecodeContextObserved *stream);",
+      "behavior": "Returns the stream context after setting the observed reader, audio-track, plane-array, scaler, scratch-buffer, and index pointers to zero.",
+      "evidence": "The exact 48-byte C constructor writes zero to context offsets +0x00, +0x58, +0x5c, +0x60, +0x64, +0x68, +0x6c, +0x70, +0x74 and +0x94, then returns the original pointer. Called by createMovieStream_020a91a0 at 0x020a9224.",
+      "uncertainty": "Only these pointer-like fields are initialized here; the remainder of the context is initialized by later routines.",
+      "callers": [
+        {
+          "module": "ov022",
+          "callsite": "0x020a9224",
+          "caller": "createMovieStream_020a91a0"
+        }
+      ]
+    },
+    {
+      "module": "ov022",
+      "address": "0x020a941c",
+      "name": "destroyMovieStreamContext_020a941c",
+      "prototype": "MovieDecodeContextObserved *destroyMovieStreamContext_020a941c(MovieDecodeContextObserved *context);",
+      "behavior": "Delegates to decoder cleanup and returns the original context pointer.",
+      "evidence": "The exact 20-byte C wrapper calls releaseMovieDecodeContext_020a99dc at 0x020a9424, then returns its incoming pointer. Callers are the stream factory\u2019s failure path at 0x020a9250 and the context destroy wrapper at 0x020a9298.",
+      "uncertainty": "This wrapper\u2019s return value and ownership semantics outside the observed callers are unknown.",
+      "callers": [
+        {
+          "module": "ov022",
+          "callsite": "0x020a9250",
+          "caller": "createMovieStream_020a91a0"
+        },
+        {
+          "module": "ov022",
+          "callsite": "0x020a9298",
+          "caller": "func_ov022_020a9288"
+        }
+      ]
+    },
+    {
+      "module": "ov022",
+      "address": "0x020a9430",
+      "name": "initializeMovieDecodeContext_020a9430",
+      "prototype": "int initializeMovieDecodeContext_020a9430(MovieDecodeContextObserved *context, MovieReaderObserved *reader, MovieU32 frameRingCapacity, int mode);",
+      "behavior": "Validates the movie stream header, allocates decoder and per-slot frame resources, and initializes index and startup-read state.",
+      "evidence": "Ghidra checks the MODS signature, version and header word count at +0x04 through +0x0a; reads width/height at +0x10/+0x14 and audio kind/track count at +0x1c/+0x1e; allocates the frame state at +0x34, slot tables at +0x5c/+0x60/+0x64, working planes at +0x68/+0x6c, scratch buffers at +0x70/+0x74 and the frame index at +0x94. The exact 1,452-byte C++ body compiles with mwccarm-3.0-139, including relocations and literal pools. Called by the stream-init wrapper at 0x020a9194.",
+      "uncertainty": "The fourth argument is not assigned a stable role by callers; audio-kind values, cleanup on partial failure, and the lifetime owner of each allocation remain partly unknown.",
+      "callers": [
+        {
+          "module": "ov022",
+          "callsite": "0x020a9194",
+          "caller": "initializeMovieStreamWrapper_020a9170"
+        }
+      ]
+    },
+    {
+      "module": "ov022",
+      "address": "0x020a99dc",
+      "name": "releaseMovieDecodeContext_020a99dc",
+      "prototype": "void releaseMovieDecodeContext_020a99dc(MovieDecodeContextObserved *context);",
+      "behavior": "Closes and deletes the reader, releases frame, plane, scaler, scratch, index, and audio allocations, then clears several stored pointers.",
+      "evidence": "The exact 360-byte C++ body closes and deletes the reader, frees the frame state at +0x34 and the allocations referenced at +0x58, +0x5c, +0x60, +0x64, +0x68, +0x6c, +0x70, +0x74 and +0x94. It clears the reader, slot-table, scaler, audio and index fields and the two scratch pointers, but does not clear the frame-state pointer after freeing it. Called by destroyMovieStreamContext_020a941c at 0x020a9424.",
+      "uncertainty": "The allocator ownership contract and whether all pointers are valid on each failure path are not established; the frame-state pointer remains stored after release.",
+      "callers": [
+        {
+          "module": "ov022",
+          "callsite": "0x020a9424",
+          "caller": "destroyMovieStreamContext_020a941c"
+        }
+      ]
+    },
+    {
+      "module": "ov022",
+      "address": "0x020a9b54",
+      "name": "movieFrameBufferStatus_020a9b54",
+      "prototype": "int movieFrameBufferStatus_020a9b54(const void *movieContext);",
+      "behavior": "Returns zero when a context word at +0x20 is zero; otherwise returns 0x80 or 0x100 according to the word at +0x28.",
+      "evidence": "Recovered Days C source directly implements the two field checks and three return values.",
+      "uncertainty": "The two field roles and meaning of the returned values are unknown."
+    },
+    {
+      "module": "ov022",
+      "address": "0x020a9b78",
+      "name": "queueNextMovieFrame_020a9b78",
+      "prototype": "int queueNextMovieFrame_020a9b78(MovieDecodeContextObserved *context);",
+      "behavior": "Advances the double-buffer read parity, waits for the pending stream read, prepares the next payload/read, and maps six luma/chroma slots into the frame state.",
+      "evidence": "The exact 312-byte C++ routine increments the movie frame index at +0x98, toggles parity at +0x90, splits the next chunk size/offset, updates the frame-state payload at +0x34, queues another reader operation when frames remain, maps luma/chroma pointers through the lead-offset table at +0xac, and updates the sample count. Ghidra records callsite 0x020a9300 inside func_ov022_020a92f0 as a direct caller.",
+      "uncertainty": "The units of the stored frame and audio-sample counters remain uncertain.",
+      "callers": [
+        {
+          "module": "ov022",
+          "callsite": "0x020a9300",
+          "caller": "func_ov022_020a92f0"
+        }
+      ]
+    },
+    {
+      "module": "ov022",
+      "address": "0x020a9cb0",
+      "name": "DecodeMovieFrameIntoRing",
+      "prototype": "int DecodeMovieFrameIntoRing(MovieDecodeContextObserved *context);",
+      "behavior": "Skips an optional frame header, decodes the next movie chunk into a selected plane slot, clears per-chunk counters, advances six lead offsets, and increments the decoded-frame count.",
+      "evidence": "The exact CC0-derived C source writes the decoder result through the frame-state function at +0x38, stores a plane address through the auxiliary table at +0x64, resets +0xcc/+0xd0, advances the six offsets at +0xac, and increments +0xa0.",
+      "uncertainty": "The payload format\u2019s higher-level media meaning and relationship to the display remain unobserved."
+    },
     {
       "module": "ov022",
       "address": "0x020a9d94",
       "name": "renderDecodedMovieFrame_020a9d94",
       "prototype": "int renderDecodedMovieFrame_020a9d94(MovieDecodeContextObserved *context, unsigned int outputBuffer, int sourceLine, int mode);",
       "behavior": "Prepares a decoded movie frame for pixel conversion and advances the consumed-frame count and ring cursor.",
-      "evidence": "The wrapper at ov022:0x020a9338 calls this routine at 0x020a9348; that wrapper is itself called from 0x020a7fc8. It returns zero when +0x9c is greater than or equal to +0xa0. For nonzero mode it lazily allocates working buffers at +0x68/+0x6c, packages nine words for ov022:0x020b713c, then selects those buffers. Mode zero selects entries from the tables at +0x5c and +0x60. Both paths set conversion request words at +0x3c through +0x48, call the packed-pixel converter at 0x020aa2e0, increment +0x9c and advance/wrap the ring cursor at +0xc4. Exact output: 388 bytes with mwccarm-3.0-139, including all relocated calls.",
+      "evidence": "The wrapper at ov022:0x020a9338 calls this routine at 0x020a9348; that wrapper is itself called from 0x020a7fc8. It returns zero when +0x9c is greater than or equal to +0xa0. For nonzero mode it lazily allocates working buffers at +0x68/+0x6c, packages nine words for ov022:0x020b713c, then selects those buffers. Mode zero selects entries from the luma and chroma slot tables at +0x5c and +0x60. Both paths set conversion request words at +0x3c through +0x48, call the packed-pixel converter at 0x020aa2e0, increment +0x9c and advance/wrap the ring cursor at +0xc4. Exact output: 388 bytes with mwccarm-3.0-139, including all relocated calls.",
       "uncertainty": "The caller\u2019s mode values, auxiliary plane table at +0x64, remaining conversion fields, and path from the output buffer to the display are not established.",
       "callers": [
         {
@@ -31,37 +243,12 @@
     },
     {
       "module": "ov022",
-      "address": "0x020aa2e0",
-      "name": "func_ov022_020aa2e0",
-      "prototype": "void func_ov022_020aa2e0(MoviePixelConvertContext *context);",
-      "behavior": "Converts source plane samples through lookup tables and writes packed pixel words to the output buffer.",
-      "evidence": "Ghidra decompilation reads source addresses and output address from the conversion context, performs repeated lookup-table combinations for each pixel, and stores packed 32-bit words. renderDecodedMovieFrame_020a9d94 calls it after preparing the context.",
-      "uncertainty": "The lookup-table channel mapping and pixel format interpretation are not fully established.",
-      "callers": [
-        {
-          "module": "ov022",
-          "callsite": "0x020a9ee0",
-          "caller": "renderDecodedMovieFrame_020a9d94"
-        }
-      ]
-    },
-    {
-      "module": "ov022",
-      "address": "0x020a9430",
-      "name": "func_ov022_020a9430",
-      "prototype": "int func_ov022_020a9430(MovieDecodeContextObserved *context, int stream, unsigned int frameRingCapacity, int mode);",
-      "behavior": "Validates a movie stream header and initializes decoder state, caches, plane buffers, and startup bitstream data.",
-      "evidence": "Ghidra decompilation checks the MODS signature and N3 extension, allocates a 0x454-byte decoder state and plane/ring buffers, fills working buffers, and initializes the startup read. It calls the cached decoder and lookup-table helpers used elsewhere in ov022.",
-      "uncertainty": "Several decoder fields and mode meanings remain address-based; failure cleanup and resource ownership are not established by this routine."
-    },
-    {
-      "module": "ov022",
-      "address": "0x020a9b54",
-      "name": "movieFrameBufferStatus_020a9b54",
-      "prototype": "int movieFrameBufferStatus_020a9b54(const void *movieContext);",
-      "behavior": "Returns zero when a context word at +0x20 is zero; otherwise returns 0x80 or 0x100 according to the word at +0x28.",
-      "evidence": "Recovered Days C source directly implements the two field checks and three return values.",
-      "uncertainty": "The two field roles and meaning of the returned values are unknown."
+      "address": "0x020a9f18",
+      "name": "DropDecodedMovieFrame",
+      "prototype": "int DropDecodedMovieFrame(MovieDecodeContextObserved *context);",
+      "behavior": "Marks one decoded movie frame as consumed and advances or wraps the frame-ring cursor.",
+      "evidence": "The exact CC0-derived body compares consumed and decoded counters at +0x9c/+0xa0, increments +0x9c, then increments and wraps the cursor at +0xc4 against capacity +0xa8.",
+      "uncertainty": "The caller\u2019s reason for dropping a frame is not established."
     },
     {
       "module": "ov022",
@@ -74,18 +261,9 @@
     },
     {
       "module": "ov022",
-      "address": "0x020aa8a0",
-      "name": "getMovieDecoderCodeSize_020aa8a0",
-      "prototype": "int getMovieDecoderCodeSize_020aa8a0(void);",
-      "behavior": "Returns 0x659c, the byte length used for the embedded movie decoder code.",
-      "evidence": "Recovered Days C source returns 0x659c; the nearby decoder cache helper copies 0x659c bytes.",
-      "uncertainty": "Decoder internals are outside this constant helper."
-    },
-    {
-      "module": "ov022",
       "address": "0x020a9f68",
       "name": "processMovieStreamChunk_020a9f68",
-      "prototype": "int processMovieStreamChunk_020a9f68(MovieDecodeContextObserved *context, unsigned int outputBuffer, int unusedArgument, int copyOption);",
+      "prototype": "int processMovieStreamChunk_020a9f68(MovieDecodeContextObserved *context, MovieU32 outputBuffer, int unusedArgument, int copyOption);",
       "behavior": "Processes one pending movie-stream chunk, advances the stream cursor by its handler\u2019s size, and advances or resets the frame-slot index.",
       "evidence": "Ghidra identifies a call from ov022:0x020a9398 at 0x020a93a8. The routine returns zero when the completed chunk count at +0xcc equals the limit at +0xc8 or the 16-bit type at +0x1c is zero. It writes the stream address and output buffer to a 0x14f8-byte slot at +0x58, dispatches types 1\u20133 to address-based handlers and other nonzero types to a 0x200-byte copy path, advances the slot index at +0xd0, resets it and state +0xa4 at the header count (+0x1e), then increments +0xcc. The full 432-byte body compiles exactly with mwccarm-3.0-139.",
       "uncertainty": "Chunk type meanings, handler internals, and how the output buffer reaches the display are unknown.",
@@ -105,17 +283,58 @@
     },
     {
       "module": "ov022",
-      "address": "0x020a9338",
-      "name": "func_ov022_020a9338",
-      "prototype": "int func_ov022_020a9338(MovieDecodeContextObserved *context, unsigned int outputBuffer, int sourceLine, int mode);",
-      "behavior": "Checks for a nonnull movie context, delegates one frame to the conversion routine, and returns whether it succeeded.",
-      "evidence": "Ghidra decompilation calls renderDecodedMovieFrame_020a9d94 at +0x10 and returns whether its result equals 1. This wrapper is called from ov022:0x020a7fc8.",
-      "uncertainty": "The caller\u2019s higher-level display behavior remains unknown.",
+      "address": "0x020aa130",
+      "name": "BindMovieReaderToFileContext",
+      "prototype": "MovieU32 BindMovieReaderToFileContext(MovieReaderObserved *reader, const void *fileContext);",
+      "behavior": "Stores a file-context pointer and derived size/position values in a reader object, clears its state byte, and returns success.",
+      "evidence": "The exact 56-byte C body stores the context at reader +0x0c, subtracts file-context words at +0x24/+0x28 and +0x2c/+0x24 into reader +0x04/+0x08, then clears byte +0x10 and returns 1. Direct caller: stream factory at 0x020a91e8.",
+      "uncertainty": "The meanings and units of the file-context words are not established.",
       "callers": [
         {
           "module": "ov022",
-          "callsite": "0x020a9348",
-          "caller": "func_ov022_020a9338"
+          "callsite": "0x020a91e8",
+          "caller": "createMovieStream_020a91a0"
+        }
+      ]
+    },
+    {
+      "module": "ov022",
+      "address": "0x020aa2e0",
+      "name": "func_ov022_020aa2e0",
+      "prototype": "void func_ov022_020aa2e0(MoviePixelConvertContext *context);",
+      "behavior": "Converts source plane samples through lookup tables and writes packed pixel words to the output buffer.",
+      "evidence": "Ghidra decompilation reads source addresses and output address from the conversion context, performs repeated lookup-table combinations for each pixel, and stores packed 32-bit words. renderDecodedMovieFrame_020a9d94 calls it after preparing the context.",
+      "uncertainty": "The lookup-table channel mapping and pixel format interpretation are not fully established.",
+      "callers": [
+        {
+          "module": "ov022",
+          "callsite": "0x020a9ee0",
+          "caller": "renderDecodedMovieFrame_020a9d94"
+        }
+      ]
+    },
+    {
+      "module": "ov022",
+      "address": "0x020aa8a0",
+      "name": "getMovieDecoderCodeSize_020aa8a0",
+      "prototype": "int getMovieDecoderCodeSize_020aa8a0(void);",
+      "behavior": "Returns 0x659c, the byte length used for the embedded movie decoder code.",
+      "evidence": "Recovered Days C source returns 0x659c; the nearby decoder cache helper copies 0x659c bytes.",
+      "uncertainty": "Decoder internals are outside this constant helper."
+    },
+    {
+      "module": "ov022",
+      "address": "0x020aaadc",
+      "name": "decodeMovieAdpcmSamples_020aaadc",
+      "prototype": "void decodeMovieAdpcmSamples_020aaadc(MovieAdpcmStateObserved *state, const MovieU8 *source, int inputByteCount, MovieU32 *packedSamples);",
+      "behavior": "Decodes the low and high IMA ADPCM nibbles from each byte, updates a predictor and step index, clamps them, and packs two samples per output word.",
+      "evidence": "The exact 344-byte C++ routine uses the step-index deltas at 0x020b7b08 and step table at 0x020b7b18, clamps the index to 0..0x58 and predictor to signed 16-bit range, then writes both samples in one word. Ghidra records callsite 0x020aa0a8 inside processMovieStreamChunk_020a9f68.",
+      "uncertainty": "The higher-level interpretation of the packed sample pairs and the input-count units are not established.",
+      "callers": [
+        {
+          "module": "ov022",
+          "callsite": "0x020aa0a8",
+          "caller": "processMovieStreamChunk_020a9f68"
         }
       ]
     }
@@ -149,6 +368,219 @@
       ],
       "behavior": "Movie stream initialization prepares decoder state and requests cached decoder code and lookup tables.",
       "evidence": "Direct calls visible in Ghidra decompilation and exact source matches for the cache helpers."
+    },
+    {
+      "path": [
+        "ov022:0x020a83d8",
+        "ov022:0x020a91a0"
+      ],
+      "behavior": "The movie-open caller delegates stream creation to the reader/stream factory.",
+      "evidence": "Ghidra records callsite 0x020a83d8 to createMovieStream_020a91a0."
+    },
+    {
+      "path": [
+        "ov022:0x020a91a0",
+        "ov022:0x020aa130"
+      ],
+      "behavior": "Stream creation binds the new reader object to the already-open file context.",
+      "evidence": "Direct call at 0x020a91e8 from the exact factory body."
+    },
+    {
+      "path": [
+        "ov022:0x020a91a0",
+        "ov022:0x020a93ec"
+      ],
+      "behavior": "Stream creation initializes observed resource pointers before stream setup.",
+      "evidence": "Direct call at 0x020a9224 from the exact factory body."
+    },
+    {
+      "path": [
+        "ov022:0x020a91a0",
+        "ov022:0x020a9170",
+        "ov022:0x020a9430"
+      ],
+      "behavior": "The factory initializes a stream, runs the static pre-init hook, and returns the decoder-initialization status.",
+      "evidence": "Direct callsites 0x020a9238 and 0x020a9194; all three C/C++ bodies are exact."
+    },
+    {
+      "path": [
+        "ov022:0x020a91a0",
+        "ov022:0x020a941c",
+        "ov022:0x020a99dc"
+      ],
+      "behavior": "On stream-init failure, the factory tears down the decoder context before releasing the stream allocation.",
+      "evidence": "Factory callsite 0x020a9250 enters the 941c wrapper; that wrapper calls 99dc at 0x020a9424."
+    },
+    {
+      "path": [
+        "ov022:0x020a9288",
+        "ov022:0x020a941c",
+        "ov022:0x020a99dc"
+      ],
+      "behavior": "The destroy wrapper delegates resource release to the decoder cleanup routine.",
+      "evidence": "The matched 9288 wrapper calls 941c; callsite 0x020a9298 in 9288 calls the teardown wrapper, which calls 99dc."
+    },
+    {
+      "path": [
+        "ov022:0x020a92f0",
+        "ov022:0x020a9b78"
+      ],
+      "behavior": "A movie stream routine requests advancement of the buffered frame queue.",
+      "evidence": "Ghidra records callsite 0x020a9300 inside symbol 020a92f0 to queueNextMovieFrame_020a9b78."
+    },
+    {
+      "path": [
+        "ov022:0x020a9f68",
+        "ov022:0x020aaadc"
+      ],
+      "behavior": "The movie chunk-processing path reaches the IMA ADPCM sample decoder.",
+      "evidence": "Ghidra records direct callsite 0x020aa0a8 inside 020a9f68 to the 020aaadc decoder."
     }
-  ]
+  ],
+  "ownership_proposal": {
+    "system": "movie_playback",
+    "subsections": [
+      {
+        "id": "stream_lifecycle",
+        "name": "Stream and decoder lifecycle",
+        "members": [
+          {
+            "module": "ov022",
+            "address": "0x020a91a0",
+            "symbol": "createMovieStream_020a91a0",
+            "coverage": "verified_c"
+          },
+          {
+            "module": "ov022",
+            "address": "0x020a93ec",
+            "symbol": "initializeMovieStreamResources_020a93ec",
+            "coverage": "verified_c"
+          },
+          {
+            "module": "ov022",
+            "address": "0x020aa130",
+            "symbol": "BindMovieReaderToFileContext",
+            "coverage": "verified_c"
+          },
+          {
+            "module": "ov022",
+            "address": "0x020a9170",
+            "symbol": "initializeMovieStreamWrapper_020a9170",
+            "coverage": "verified_c"
+          },
+          {
+            "module": "ov022",
+            "address": "0x020a9430",
+            "symbol": "initializeMovieDecodeContext_020a9430",
+            "coverage": "verified_c"
+          },
+          {
+            "module": "ov022",
+            "address": "0x020a941c",
+            "symbol": "destroyMovieStreamContext_020a941c",
+            "coverage": "verified_c"
+          },
+          {
+            "module": "ov022",
+            "address": "0x020a99dc",
+            "symbol": "releaseMovieDecodeContext_020a99dc",
+            "coverage": "verified_c"
+          },
+          {
+            "module": "ov022",
+            "address": "0x020a9288",
+            "symbol": "func_ov022_020a9288",
+            "coverage": "verified_c"
+          },
+          {
+            "module": "ov022",
+            "address": "0x020a93d4",
+            "symbol": "func_ov022_020a93d4",
+            "coverage": "unmatched"
+          },
+          {
+            "module": "ov022",
+            "address": "0x020a93e0",
+            "symbol": "func_ov022_020a93e0",
+            "coverage": "unmatched"
+          }
+        ],
+        "evidence": "Direct calls connect stream creation to resource initialization and reader binding, then to the init wrapper and decoder initializer. Factory failure paths call the teardown wrapper; the destroy wrapper also delegates to cleanup. The 93d4/e0 members are 12-byte literal-branch veneers and remain unmatched by self-contained C.",
+        "uncertainty": "The outer movie-open caller policy and the precise allocation/free API contracts remain unresolved.",
+        "status": "partial"
+      },
+      {
+        "id": "frame_decode_buffering",
+        "name": "Frame decode and buffering",
+        "members": [
+          {
+            "module": "ov022",
+            "address": "0x020a92f0",
+            "symbol": "func_ov022_020a92f0",
+            "coverage": "unmatched"
+          },
+          {
+            "module": "ov022",
+            "address": "0x020a9398",
+            "symbol": "func_ov022_020a9398",
+            "coverage": "verified_c"
+          },
+          {
+            "module": "ov022",
+            "address": "0x020a9b78",
+            "symbol": "func_ov022_020a9b78",
+            "coverage": "verified_c"
+          },
+          {
+            "module": "ov022",
+            "address": "0x020a9cb0",
+            "symbol": "func_ov022_020a9cb0",
+            "coverage": "verified_c"
+          },
+          {
+            "module": "ov022",
+            "address": "0x020a9d94",
+            "symbol": "func_ov022_020a9d94",
+            "coverage": "verified_c"
+          },
+          {
+            "module": "ov022",
+            "address": "0x020a9f18",
+            "symbol": "func_ov022_020a9f18",
+            "coverage": "verified_c"
+          },
+          {
+            "module": "ov022",
+            "address": "0x020a9f68",
+            "symbol": "func_ov022_020a9f68",
+            "coverage": "verified_c"
+          },
+          {
+            "module": "ov022",
+            "address": "0x020aa2e0",
+            "symbol": "func_ov022_020aa2e0",
+            "coverage": "unmatched"
+          }
+        ],
+        "evidence": "The context wrapper delegates chunk dispatch; the chunk processor advances stream and slot state; DecodeMovieFrameIntoRing updates payload and plane-slot state; queueNextMovieFrame prepares another read; renderDecodedMovieFrame selects planes and calls the packed-pixel converter. These routines are grouped by direct caller/callee links and shared context offsets.",
+        "uncertainty": "Some chunk, reader and frame-decoder edges are indirect, and the exact presentation endpoint is not established. The packed-pixel converter at 0x020aa2e0 remains unmatched by self-contained C.",
+        "status": "partial"
+      },
+      {
+        "id": "embedded_audio_decode",
+        "name": "Embedded movie audio decode",
+        "members": [
+          {
+            "module": "ov022",
+            "address": "0x020aaadc",
+            "symbol": "decodeMovieAdpcmSamples_020aaadc",
+            "coverage": "verified_c"
+          }
+        ],
+        "evidence": "The exact body implements two-nibble IMA ADPCM decoding with the movie overlay\u2019s step tables. Ghidra records a callsite at 0x020aa0a8.",
+        "uncertainty": "The caller\u2019s exact track and output-channel interpretation remains unknown.",
+        "status": "partial"
+      }
+    ]
+  }
 }

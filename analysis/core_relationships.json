@@ -1,0 +1,1702 @@
+{
+  "version": 1,
+  "profile": "bk9e",
+  "method": "Correspondence from resolved call relocations in full-byte-matched C; unmatched correspondence is organizational evidence only and adds no verified bytes.",
+  "reference_revision": "ab832f38b943c15f461228968a89002e1a99c03e",
+  "unmatched_related_callees": [
+    {
+      "module": "arm9",
+      "symbol": "func_02004ba0",
+      "address": 33573792,
+      "size": 132,
+      "reference": "OSi_UnlockVram",
+      "source": "libs/nitro/os/calls/OSi_UnlockVram.c",
+      "evidence": {
+        "caller": "arm9:func_02008d9c",
+        "reference_caller": "libs/nitro/gx/calls/disableBankForX_.c",
+        "offset": 140
+      },
+      "owning_subsection": "operating_system"
+    },
+    {
+      "module": "itcm",
+      "symbol": "func_01ff869c",
+      "address": 33523356,
+      "size": 28,
+      "reference": "MIi_CpuCopy16",
+      "source": "libs/nitro/mi/asm_stubs/auto/MIi_CpuCopy16.c",
+      "evidence": {
+        "caller": "arm9:func_0201668c",
+        "reference_caller": "libs/nns/g2d/calls/func_02013340.c",
+        "offset": 80
+      },
+      "owning_subsection": "memory_transfer"
+    },
+    {
+      "module": "itcm",
+      "symbol": "func_01ff89a8",
+      "address": 33524136,
+      "size": 304,
+      "reference": "MI_CpuCopy8",
+      "source": "libs/nitro/mi/asm_stubs/auto/MI_CpuCopy8.c",
+      "evidence": {
+        "caller": "arm9:func_02016624",
+        "reference_caller": "libs/nns/g2d/calls/func_020132d8.c",
+        "offset": 76
+      },
+      "owning_subsection": "memory_transfer"
+    },
+    {
+      "module": "itcm",
+      "symbol": "func_01ff9d54",
+      "address": 33529172,
+      "size": 52,
+      "reference": "FX_GetDivResult",
+      "source": "libs/nitro/fx/auto/FX_GetDivResult.c",
+      "evidence": {
+        "caller": "arm9:func_0201cd74",
+        "reference_caller": "libs/nns/g3d/calls/func_02019690.c",
+        "offset": 112
+      },
+      "owning_subsection": "fixed_point_math"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_0201eb90",
+      "address": 33680272,
+      "size": 100,
+      "reference": "func_0201b578",
+      "source": "libs/nns/snd/calls/func_0201b578.c",
+      "evidence": {
+        "caller": "arm9:func_02020240",
+        "reference_caller": "libs/nns/snd/calls/func_0201cac0.c",
+        "offset": 24
+      },
+      "owning_subsection": "sound_resources"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_0202054c",
+      "address": 33686860,
+      "size": 620,
+      "reference": "func_0201ce18",
+      "source": "libs/nns/snd/calls/func_0201ce18.c",
+      "evidence": {
+        "caller": "arm9:func_02020240",
+        "reference_caller": "libs/nns/snd/calls/func_0201cac0.c",
+        "offset": 80
+      },
+      "owning_subsection": "sound_resources"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_02012a38",
+      "address": 33630776,
+      "size": 24,
+      "reference": "NNS_FndGetNextListObject",
+      "source": "libs/nitro/nns/auto/NNS_FndGetNextListObject.c",
+      "evidence": {
+        "caller": "arm9:func_020209d4",
+        "reference_caller": "libs/nns/snd/calls/func_0201d298.c",
+        "offset": 28
+      },
+      "owning_subsection": "intrusive_lists"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_0202029c",
+      "address": 33686172,
+      "size": 28,
+      "reference": "func_0201cb1c",
+      "source": "libs/nns/snd/auto/func_0201cb1c.c",
+      "evidence": {
+        "caller": "arm9:func_020202b8",
+        "reference_caller": "libs/nns/snd/calls/func_0201cb3c.c",
+        "offset": 28
+      },
+      "owning_subsection": "sound_resources"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_0201ebf4",
+      "address": 33680372,
+      "size": 100,
+      "reference": "func_0201b5dc",
+      "source": "libs/nns/snd/calls/func_0201b5dc.c",
+      "evidence": {
+        "caller": "arm9:func_0201fc9c",
+        "reference_caller": "libs/nns/snd/calls/func_0201c524.c",
+        "offset": 24
+      },
+      "owning_subsection": "sound_resources"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_0201d434",
+      "address": 33674292,
+      "size": 24,
+      "reference": "func_02019df0",
+      "source": "libs/nns/snd/calls/func_02019df0.c",
+      "evidence": {
+        "caller": "arm9:func_0201fc9c",
+        "reference_caller": "libs/nns/snd/calls/func_0201c524.c",
+        "offset": 56
+      },
+      "owning_subsection": "sound_resources"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_0201564c",
+      "address": 33642060,
+      "size": 16,
+      "reference": "func_0201231c",
+      "source": "libs/nns/g2d/calls/func_0201231c.c",
+      "evidence": {
+        "caller": "arm9:func_02015760",
+        "reference_caller": "libs/nns/g2d/calls/func_02012444.c",
+        "offset": 32
+      },
+      "owning_subsection": "graphics_2d"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_0201579c",
+      "address": 33642396,
+      "size": 24,
+      "reference": "func_02012480",
+      "source": "libs/nns/g2d/calls/func_02012480.c",
+      "evidence": {
+        "caller": "arm9:func_02015760",
+        "reference_caller": "libs/nns/g2d/calls/func_02012444.c",
+        "offset": 52
+      },
+      "owning_subsection": "graphics_2d"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_0201ac60",
+      "address": 33664096,
+      "size": 16,
+      "reference": "func_02017078",
+      "source": "libs/nns/g3d/auto/func_02017078.c",
+      "evidence": {
+        "caller": "arm9:func_02019e60",
+        "reference_caller": "libs/nns/g3d/calls/func_020163f4.c",
+        "offset": 112
+      },
+      "owning_subsection": "model_animation_rendering"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_02008050",
+      "address": 33587280,
+      "size": 332,
+      "reference": "GX_LoadTex",
+      "source": "libs/nitro/gx/calls/GX_LoadTex.c",
+      "evidence": {
+        "caller": "arm9:func_020152e4",
+        "reference_caller": "libs/nns/g2d/calls/func_02011f94.c",
+        "offset": 148
+      },
+      "owning_subsection": "display_hardware"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_02007488",
+      "address": 33584264,
+      "size": 100,
+      "reference": "GX_LoadOBJ",
+      "source": "libs/nitro/gx/calls/GX_LoadOBJ.c",
+      "evidence": {
+        "caller": "arm9:func_020152e4",
+        "reference_caller": "libs/nns/g2d/calls/func_02011f94.c",
+        "offset": 172
+      },
+      "owning_subsection": "display_hardware"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_020074ec",
+      "address": 33584364,
+      "size": 100,
+      "reference": "GXS_LoadOBJ",
+      "source": "libs/nitro/gx/calls/GXS_LoadOBJ.c",
+      "evidence": {
+        "caller": "arm9:func_020152e4",
+        "reference_caller": "libs/nns/g2d/calls/func_02011f94.c",
+        "offset": 192
+      },
+      "owning_subsection": "display_hardware"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_0200f8c8",
+      "address": 33618120,
+      "size": 32,
+      "reference": "SND_GetFirstInstDataPos",
+      "source": "libs/nitro/snd/auto/SND_GetFirstInstDataPos.c",
+      "evidence": {
+        "caller": "arm9:func_0201fbdc",
+        "reference_caller": "libs/nns/snd/calls/func_0201c464.c",
+        "offset": 32
+      },
+      "owning_subsection": "sound_commands"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_02006c30",
+      "address": 33582128,
+      "size": 180,
+      "reference": "G3X_InitTable",
+      "source": "libs/nitro/gx/calls/G3X_InitTable.c",
+      "evidence": {
+        "caller": "arm9:func_020068d4",
+        "reference_caller": "libs/nitro/gx/calls/G3X_Init.c",
+        "offset": 204
+      },
+      "owning_subsection": "display_hardware"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_0201e9d8",
+      "address": 33679832,
+      "size": 24,
+      "reference": "SND_SetActiveSlotSwap",
+      "source": "libs/nitro/snd/calls/SND_SetActiveSlotSwap.c",
+      "evidence": {
+        "caller": "arm9:func_0201f9cc",
+        "reference_caller": "libs/nns/snd/calls/func_0201c254.c",
+        "offset": 32
+      },
+      "owning_subsection": "sound_commands"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_0201ee28",
+      "address": 33680936,
+      "size": 40,
+      "reference": "func_0201b7e0",
+      "source": "libs/nns/snd/calls/func_0201b7e0.c",
+      "evidence": {
+        "caller": "arm9:func_0201f9cc",
+        "reference_caller": "libs/nns/snd/calls/func_0201c254.c",
+        "offset": 44
+      },
+      "owning_subsection": "sound_resources"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_0201ee50",
+      "address": 33680976,
+      "size": 28,
+      "reference": "func_0201b808",
+      "source": "libs/nns/snd/calls/func_0201b808.c",
+      "evidence": {
+        "caller": "arm9:func_0201f9cc",
+        "reference_caller": "libs/nns/snd/calls/func_0201c254.c",
+        "offset": 64
+      },
+      "owning_subsection": "sound_resources"
+    },
+    {
+      "module": "itcm",
+      "symbol": "func_01ff8740",
+      "address": 33523520,
+      "size": 76,
+      "reference": "MIi_CpuClearFast",
+      "source": "libs/nitro/mi/asm_stubs/auto/MIi_CpuClearFast.c",
+      "evidence": {
+        "caller": "arm9:func_02019868",
+        "reference_caller": "libs/nitro/nns/calls/func_02015df0.c",
+        "offset": 324
+      },
+      "owning_subsection": "memory_transfer"
+    },
+    {
+      "module": "itcm",
+      "symbol": "func_01ff8710",
+      "address": 33523472,
+      "size": 24,
+      "reference": "MIi_CpuCopy32",
+      "source": "libs/nitro/mi/asm_stubs/auto/MIi_CpuCopy32.c",
+      "evidence": {
+        "caller": "arm9:func_02019868",
+        "reference_caller": "libs/nitro/nns/calls/func_02015df0.c",
+        "offset": 436
+      },
+      "owning_subsection": "memory_transfer"
+    },
+    {
+      "module": "itcm",
+      "symbol": "func_01ff9c84",
+      "address": 33528964,
+      "size": 16,
+      "reference": "FX_Inv",
+      "source": "libs/nitro/fx/calls/FX_Inv.c",
+      "evidence": {
+        "caller": "arm9:func_02019868",
+        "reference_caller": "libs/nitro/nns/calls/func_02015df0.c",
+        "offset": 476
+      },
+      "owning_subsection": "fixed_point_math"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_020197f8",
+      "address": 33658872,
+      "size": 112,
+      "reference": "func_02015d80",
+      "source": "libs/nns/g3d/auto/func_02015d80.c",
+      "evidence": {
+        "caller": "arm9:func_02019868",
+        "reference_caller": "libs/nitro/nns/calls/func_02015df0.c",
+        "offset": 504
+      },
+      "owning_subsection": "model_animation_rendering"
+    },
+    {
+      "module": "itcm",
+      "symbol": "func_01ff9f88",
+      "address": 33529736,
+      "size": 276,
+      "reference": "func_01ff8d18",
+      "source": "libs/nitro/fx/auto/func_01ff8d18.c",
+      "evidence": {
+        "caller": "arm9:func_02019868",
+        "reference_caller": "libs/nitro/nns/calls/func_02015df0.c",
+        "offset": 916
+      },
+      "owning_subsection": "fixed_point_math"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_0201d72c",
+      "address": 33675052,
+      "size": 20,
+      "reference": "func_0201a110",
+      "source": "libs/nns/snd/auto/func_0201a110.c",
+      "evidence": {
+        "caller": "arm9:func_0201fea8",
+        "reference_caller": "libs/nns/snd/calls/func_0201c734.c",
+        "offset": 220
+      },
+      "owning_subsection": "sound_resources"
+    },
+    {
+      "module": "itcm",
+      "symbol": "func_01ff8684",
+      "address": 33523332,
+      "size": 24,
+      "reference": "MIi_CpuClear16",
+      "source": "libs/nitro/mi/asm_stubs/auto/MIi_CpuClear16.c",
+      "evidence": {
+        "caller": "arm9:func_0201ca3c",
+        "reference_caller": "libs/nns/g3d/calls/func_02018f04.c",
+        "offset": 72
+      },
+      "owning_subsection": "memory_transfer"
+    },
+    {
+      "module": "itcm",
+      "symbol": "func_01ff86fc",
+      "address": 33523452,
+      "size": 20,
+      "reference": "INITi_CpuClear32_0x01ff86fc",
+      "source": "libs/nitro/os/asm_stubs/auto/INITi_CpuClear32_0x01ff86fc.c",
+      "evidence": {
+        "caller": "arm9:func_020185ec",
+        "reference_caller": "libs/nns/g3d/calls/func_02014b5c.c",
+        "offset": 24
+      },
+      "owning_subsection": "operating_system"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_02021930",
+      "address": 33691952,
+      "size": 24,
+      "reference": "func_0201e1a0",
+      "source": "libs/nns/snd/auto/func_0201e1a0.c",
+      "evidence": {
+        "caller": "arm9:func_0201d974",
+        "reference_caller": "libs/nns/snd/calls/func_0201a360.c",
+        "offset": 136
+      },
+      "owning_subsection": "sound_resources"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_02021948",
+      "address": 33691976,
+      "size": 24,
+      "reference": "func_0201e1b8",
+      "source": "libs/nns/snd/auto/func_0201e1b8.c",
+      "evidence": {
+        "caller": "arm9:func_0201d974",
+        "reference_caller": "libs/nns/snd/calls/func_0201a360.c",
+        "offset": 280
+      },
+      "owning_subsection": "sound_resources"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_020186f8",
+      "address": 33654520,
+      "size": 100,
+      "reference": "func_02014c68",
+      "source": "libs/nns/g3d/auto/func_02014c68.c",
+      "evidence": {
+        "caller": "arm9:func_0201875c",
+        "reference_caller": "libs/nns/g3d/calls/func_02014cd0.c",
+        "offset": 60
+      },
+      "owning_subsection": "model_animation_rendering"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_0201ea64",
+      "address": 33679972,
+      "size": 100,
+      "reference": "func_0201b44c",
+      "source": "libs/nns/snd/calls/func_0201b44c.c",
+      "evidence": {
+        "caller": "arm9:func_0201fdfc",
+        "reference_caller": "libs/nns/snd/calls/func_0201c688.c",
+        "offset": 28
+      },
+      "owning_subsection": "sound_resources"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_020151f4",
+      "address": 33640948,
+      "size": 24,
+      "reference": "func_02011eb4",
+      "source": "libs/nns/g2d/auto/func_02011eb4.c",
+      "evidence": {
+        "caller": "arm9:func_020151b4",
+        "reference_caller": "libs/nns/g2d/calls/func_02011e74.c",
+        "offset": 12
+      },
+      "owning_subsection": "graphics_2d"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_0201eac8",
+      "address": 33680072,
+      "size": 100,
+      "reference": "func_0201b4b0",
+      "source": "libs/nns/snd/calls/func_0201b4b0.c",
+      "evidence": {
+        "caller": "arm9:func_0201f48c",
+        "reference_caller": "libs/nns/snd/calls/func_0201bd30.c",
+        "offset": 20
+      },
+      "owning_subsection": "sound_resources"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_0201f7cc",
+      "address": 33683404,
+      "size": 108,
+      "reference": "func_0201c074",
+      "source": "libs/nns/snd/calls/func_0201c074.c",
+      "evidence": {
+        "caller": "arm9:func_0201f48c",
+        "reference_caller": "libs/nns/snd/calls/func_0201bd30.c",
+        "offset": 60
+      },
+      "owning_subsection": "sound_resources"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_0201eb2c",
+      "address": 33680172,
+      "size": 100,
+      "reference": "func_0201b514",
+      "source": "libs/nns/snd/calls/func_0201b514.c",
+      "evidence": {
+        "caller": "arm9:func_0201f48c",
+        "reference_caller": "libs/nns/snd/calls/func_0201bd30.c",
+        "offset": 120
+      },
+      "owning_subsection": "sound_resources"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_0201288c",
+      "address": 33630348,
+      "size": 24,
+      "reference": "NNS_FndInitList",
+      "source": "libs/nitro/nns/auto/NNS_FndInitList.c",
+      "evidence": {
+        "caller": "arm9:func_0201d8c0",
+        "reference_caller": "libs/nns/snd/calls/func_0201a2ac.c",
+        "offset": 16
+      },
+      "owning_subsection": "intrusive_lists"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_0201d6a4",
+      "address": 33674916,
+      "size": 28,
+      "reference": "func_0201a070",
+      "source": "libs/nns/snd/auto/func_0201a070.c",
+      "evidence": {
+        "caller": "arm9:func_0201dad8",
+        "reference_caller": "libs/nns/snd/calls/func_0201a4c4.c",
+        "offset": 36
+      },
+      "owning_subsection": "sound_resources"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_0201d378",
+      "address": 33674104,
+      "size": 28,
+      "reference": "func_02019d30",
+      "source": "libs/nns/snd/calls/func_02019d30.c",
+      "evidence": {
+        "caller": "arm9:func_0201e5c4",
+        "reference_caller": "libs/nns/snd/calls/func_0201afac.c",
+        "offset": 144
+      },
+      "owning_subsection": "sound_resources"
+    },
+    {
+      "module": "itcm",
+      "symbol": "func_01ffcf74",
+      "address": 33542004,
+      "size": 524,
+      "reference": "func_01ffa7fc",
+      "source": "libs/nitro/fx/auto/func_01ffa7fc.c",
+      "evidence": {
+        "caller": "itcm:func_01ffd180",
+        "reference_caller": "libs/nitro/nns/calls/func_01ffaa14.c",
+        "offset": 336
+      },
+      "owning_subsection": "fixed_point_math"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_02008f80",
+      "address": 33591168,
+      "size": 16,
+      "reference": "GX_GetBankForBGExtPltt",
+      "source": "libs/nitro/gx/calls/GX_GetBankForBGExtPltt.c",
+      "evidence": {
+        "caller": "arm9:func_02015ed0",
+        "reference_caller": "libs/nns/g2d/calls/func_02012b98.c",
+        "offset": 36
+      },
+      "owning_subsection": "display_hardware"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_02013dc8",
+      "address": 33635784,
+      "size": 20,
+      "reference": "func_02011390",
+      "source": "libs/nns/gfd/auto/func_02011390.c",
+      "evidence": {
+        "caller": "arm9:func_02013f94",
+        "reference_caller": "libs/nns/gfd/calls/func_02011558.c",
+        "offset": 8
+      },
+      "owning_subsection": "vram_allocation"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_02013db0",
+      "address": 33635760,
+      "size": 24,
+      "reference": "func_02011378",
+      "source": "libs/nns/gfd/auto/func_02011378.c",
+      "evidence": {
+        "caller": "arm9:func_02013f38",
+        "reference_caller": "libs/nns/gfd/calls/func_020114fc.c",
+        "offset": 8
+      },
+      "owning_subsection": "vram_allocation"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_02012c54",
+      "address": 33631316,
+      "size": 44,
+      "reference": "InitMBlock",
+      "source": "libs/nitro/nns/auto/InitMBlock.c",
+      "evidence": {
+        "caller": "arm9:func_02012cf8",
+        "reference_caller": "libs/nitro/nns/calls/func_020103e4.c",
+        "offset": 108
+      },
+      "owning_subsection": "heap_management"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_0201f018",
+      "address": 33681432,
+      "size": 24,
+      "reference": "func_0201b8cc",
+      "source": "libs/nns/snd/calls/func_0201b8cc.c",
+      "evidence": {
+        "caller": "arm9:func_0201deb0",
+        "reference_caller": "libs/nns/snd/calls/func_0201a890.c",
+        "offset": 20
+      },
+      "owning_subsection": "sound_resources"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_0201ea00",
+      "address": 33679872,
+      "size": 100,
+      "reference": "func_0201b3e8",
+      "source": "libs/nns/snd/calls/func_0201b3e8.c",
+      "evidence": {
+        "caller": "arm9:func_0201f3a8",
+        "reference_caller": "libs/nns/snd/calls/func_0201bc4c.c",
+        "offset": 16
+      },
+      "owning_subsection": "sound_resources"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_0201f6f4",
+      "address": 33683188,
+      "size": 108,
+      "reference": "func_0201bf9c",
+      "source": "libs/nns/snd/calls/func_0201bf9c.c",
+      "evidence": {
+        "caller": "arm9:func_0201f3a8",
+        "reference_caller": "libs/nns/snd/calls/func_0201bc4c.c",
+        "offset": 88
+      },
+      "owning_subsection": "sound_resources"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_020218bc",
+      "address": 33691836,
+      "size": 24,
+      "reference": "func_0201e12c",
+      "source": "libs/nns/snd/auto/func_0201e12c.c",
+      "evidence": {
+        "caller": "arm9:func_0201dca0",
+        "reference_caller": "libs/nns/snd/calls/func_0201a680.c",
+        "offset": 48
+      },
+      "owning_subsection": "sound_resources"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_0200ea90",
+      "address": 33614480,
+      "size": 28,
+      "reference": "SND_SetTrackPan",
+      "source": "libs/nitro/snd/calls/SND_SetTrackPan.c",
+      "evidence": {
+        "caller": "arm9:func_0201d7bc",
+        "reference_caller": "libs/nns/snd/calls/func_0201a1a0.c",
+        "offset": 24
+      },
+      "owning_subsection": "sound_commands"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_0200ea34",
+      "address": 33614388,
+      "size": 24,
+      "reference": "SND_SetPlayerChannelPriority",
+      "source": "libs/nitro/snd/calls/SND_SetPlayerChannelPriority.c",
+      "evidence": {
+        "caller": "arm9:func_0201d76c",
+        "reference_caller": "libs/nns/snd/calls/func_0201a150.c",
+        "offset": 24
+      },
+      "owning_subsection": "sound_commands"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_02008cdc",
+      "address": 33590492,
+      "size": 36,
+      "reference": "GX_DisableBankForBGExtPltt",
+      "source": "libs/nitro/gx/calls/GX_DisableBankForBGExtPltt.c",
+      "evidence": {
+        "caller": "arm9:func_02007c50",
+        "reference_caller": "libs/nitro/gx/calls/GX_BeginLoadBGExtPltt.c",
+        "offset": 4
+      },
+      "owning_subsection": "display_hardware"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_02008d00",
+      "address": 33590528,
+      "size": 36,
+      "reference": "GX_DisableBankForOBJExtPltt",
+      "source": "libs/nitro/gx/calls/GX_DisableBankForOBJExtPltt.c",
+      "evidence": {
+        "caller": "arm9:func_02007d90",
+        "reference_caller": "libs/nitro/gx/calls/GX_BeginLoadOBJExtPltt_0x02007b64.c",
+        "offset": 4
+      },
+      "owning_subsection": "display_hardware"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_0201f838",
+      "address": 33683512,
+      "size": 108,
+      "reference": "func_0201c0e0",
+      "source": "libs/nns/snd/calls/func_0201c0e0.c",
+      "evidence": {
+        "caller": "arm9:func_0201f5cc",
+        "reference_caller": "libs/nns/snd/calls/func_0201be70.c",
+        "offset": 80
+      },
+      "owning_subsection": "sound_resources"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_0200edc8",
+      "address": 33615304,
+      "size": 20,
+      "reference": "SNDi_UnlockMutex_0x020084f4",
+      "source": "libs/nitro/snd/calls/SNDi_UnlockMutex_0x020084f4.c",
+      "evidence": {
+        "caller": "arm9:func_0200f718",
+        "reference_caller": "libs/nitro/snd/calls/SND_AssignWaveArc.c",
+        "offset": 16
+      },
+      "owning_subsection": "sound_commands"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_0200eddc",
+      "address": 33615324,
+      "size": 20,
+      "reference": "SNDi_UnlockMutex_0x02008508",
+      "source": "libs/nitro/snd/calls/SNDi_UnlockMutex_0x02008508.c",
+      "evidence": {
+        "caller": "arm9:func_0200f718",
+        "reference_caller": "libs/nitro/snd/calls/SND_AssignWaveArc.c",
+        "offset": 44
+      },
+      "owning_subsection": "sound_commands"
+    },
+    {
+      "module": "itcm",
+      "symbol": "func_01ff90dc",
+      "address": 33525980,
+      "size": 14,
+      "reference": "MI_Zero36B",
+      "source": "libs/nitro/mi/asm_stubs/auto/MI_Zero36B.c",
+      "evidence": {
+        "caller": "arm9:func_0201afe0",
+        "reference_caller": "libs/nitro/nns/calls/func_02017404.c",
+        "offset": 152
+      },
+      "owning_subsection": "memory_transfer"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_0201609c",
+      "address": 33644700,
+      "size": 64,
+      "reference": "func_02012d64",
+      "source": "libs/nns/g2d/calls/func_02012d64.c",
+      "evidence": {
+        "caller": "arm9:func_0201636c",
+        "reference_caller": "libs/nns/g2d/calls/func_02013020.c",
+        "offset": 100
+      },
+      "owning_subsection": "graphics_2d"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_020160dc",
+      "address": 33644764,
+      "size": 64,
+      "reference": "func_02012da4",
+      "source": "libs/nns/g2d/calls/func_02012da4.c",
+      "evidence": {
+        "caller": "arm9:func_0201636c",
+        "reference_caller": "libs/nns/g2d/calls/func_02013020.c",
+        "offset": 132
+      },
+      "owning_subsection": "graphics_2d"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_0201f760",
+      "address": 33683296,
+      "size": 108,
+      "reference": "func_0201c008",
+      "source": "libs/nns/snd/calls/func_0201c008.c",
+      "evidence": {
+        "caller": "arm9:func_0201f42c",
+        "reference_caller": "libs/nns/snd/calls/func_0201bcd0.c",
+        "offset": 52
+      },
+      "owning_subsection": "sound_resources"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_02013718",
+      "address": 33634072,
+      "size": 20,
+      "reference": "NNS_FndAllocFromAllocator",
+      "source": "libs/nitro/nns/calls/NNS_FndAllocFromAllocator.c",
+      "evidence": {
+        "caller": "arm9:func_0201a394",
+        "reference_caller": "libs/nns/g3d/calls/func_02016948.c",
+        "offset": 28
+      },
+      "owning_subsection": "heap_management"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_02012a50",
+      "address": 33630800,
+      "size": 20,
+      "reference": "NNS_FndGetPrevListObject",
+      "source": "libs/nitro/nns/auto/NNS_FndGetPrevListObject.c",
+      "evidence": {
+        "caller": "arm9:func_0201f1a4",
+        "reference_caller": "libs/nns/snd/calls/func_0201ba54.c",
+        "offset": 60
+      },
+      "owning_subsection": "intrusive_lists"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_02014bc0",
+      "address": 33639360,
+      "size": 28,
+      "reference": "func_02011858",
+      "source": "libs/nns/g2d/auto/func_02011858.c",
+      "evidence": {
+        "caller": "arm9:func_02014c50",
+        "reference_caller": "libs/nns/g2d/calls/func_020118ec.c",
+        "offset": 20
+      },
+      "owning_subsection": "graphics_2d"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_02014bdc",
+      "address": 33639388,
+      "size": 16,
+      "reference": "func_02011878",
+      "source": "libs/nns/g2d/calls/func_02011878.c",
+      "evidence": {
+        "caller": "arm9:func_02014c50",
+        "reference_caller": "libs/nns/g2d/calls/func_020118ec.c",
+        "offset": 148
+      },
+      "owning_subsection": "graphics_2d"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_020161c4",
+      "address": 33644996,
+      "size": 220,
+      "reference": "func_02012e90",
+      "source": "libs/nns/g2d/calls/func_02012e90.c",
+      "evidence": {
+        "caller": "arm9:func_020166f8",
+        "reference_caller": "libs/nns/g2d/calls/func_020133ac.c",
+        "offset": 64
+      },
+      "owning_subsection": "graphics_2d"
+    },
+    {
+      "module": "itcm",
+      "symbol": "func_01ff80e4",
+      "address": 33521892,
+      "size": 92,
+      "reference": "func_01ff80b8",
+      "source": "libs/nitro/gx/calls/func_01ff80b8.c",
+      "evidence": {
+        "caller": "arm9:func_02019d00",
+        "reference_caller": "libs/nns/g3d/calls/func_02016294.c",
+        "offset": 16
+      },
+      "owning_subsection": "display_hardware"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_020059d4",
+      "address": 33577428,
+      "size": 52,
+      "reference": "MTX_Copy44To43_",
+      "source": "libs/nitro/mtx/asm_stubs/auto/MTX_Copy44To43_.c",
+      "evidence": {
+        "caller": "arm9:func_02019d00",
+        "reference_caller": "libs/nns/g3d/calls/func_02016294.c",
+        "offset": 76
+      },
+      "owning_subsection": "fixed_point_math"
+    },
+    {
+      "module": "itcm",
+      "symbol": "func_01ff87e0",
+      "address": 33523680,
+      "size": 36,
+      "reference": "MI_Copy48B",
+      "source": "libs/nitro/mi/asm_stubs/auto/MI_Copy48B.c",
+      "evidence": {
+        "caller": "itcm:func_01ff954c",
+        "reference_caller": "libs/nitro/mtx/calls/MTX_Inverse43.c",
+        "offset": 868
+      },
+      "owning_subsection": "memory_transfer"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_0200fa94",
+      "address": 33618580,
+      "size": 8,
+      "reference": "SND_GetWaveDataCount",
+      "source": "libs/nitro/snd/auto/SND_GetWaveDataCount.c",
+      "evidence": {
+        "caller": "arm9:func_0201fb14",
+        "reference_caller": "libs/nitro/snd/calls/func_0201c39c.c",
+        "offset": 40
+      },
+      "owning_subsection": "sound_commands"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_0200f37c",
+      "address": 33616764,
+      "size": 28,
+      "reference": "SND_CountWaitingCommand",
+      "source": "libs/nitro/snd/calls/SND_CountWaitingCommand.c",
+      "evidence": {
+        "caller": "arm9:func_0200efc0",
+        "reference_caller": "libs/nitro/snd/calls/SND_AllocCommand.c",
+        "offset": 48
+      },
+      "owning_subsection": "sound_commands"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_02016aa0",
+      "address": 33647264,
+      "size": 172,
+      "reference": "func_02013768",
+      "source": "libs/nns/g2d/calls/func_02013768.c",
+      "evidence": {
+        "caller": "arm9:func_02016c18",
+        "reference_caller": "libs/nns/g2d/calls/func_0201386c.c",
+        "offset": 72
+      },
+      "owning_subsection": "graphics_2d"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_02014dc0",
+      "address": 33639872,
+      "size": 16,
+      "reference": "func_02011a5c",
+      "source": "libs/nns/g2d/auto/func_02011a5c.c",
+      "evidence": {
+        "caller": "arm9:func_02014d84",
+        "reference_caller": "libs/nns/g2d/calls/func_02011a20.c",
+        "offset": 36
+      },
+      "owning_subsection": "graphics_2d"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_0201f278",
+      "address": 33682040,
+      "size": 16,
+      "reference": "NNS_FndInitListWithOffset0",
+      "source": "libs/nitro/nns/calls/NNS_FndInitListWithOffset0.c",
+      "evidence": {
+        "caller": "arm9:func_0201f2bc",
+        "reference_caller": "libs/nns/snd/calls/func_0201bb6c.c",
+        "offset": 36
+      },
+      "owning_subsection": "intrusive_lists"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_02015d78",
+      "address": 33643896,
+      "size": 300,
+      "reference": "func_02012a5c",
+      "source": "libs/nitro/nns/calls/func_02012a5c.c",
+      "evidence": {
+        "caller": "arm9:func_0201611c",
+        "reference_caller": "libs/nns/g2d/calls/func_02012de4.c",
+        "offset": 48
+      },
+      "owning_subsection": "graphics_2d"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_0201ed14",
+      "address": 33680660,
+      "size": 40,
+      "reference": "func_0201b6cc",
+      "source": "libs/nns/snd/calls/func_0201b6cc.c",
+      "evidence": {
+        "caller": "arm9:func_0201f650",
+        "reference_caller": "libs/nns/snd/calls/func_0201befc.c",
+        "offset": 24
+      },
+      "owning_subsection": "sound_resources"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_02020388",
+      "address": 33686408,
+      "size": 268,
+      "reference": "func_0201cc50",
+      "source": "libs/nns/snd/calls/func_0201cc50.c",
+      "evidence": {
+        "caller": "arm9:func_0201d290",
+        "reference_caller": "libs/nns/snd/calls/func_02019bf0.c",
+        "offset": 32
+      },
+      "owning_subsection": "sound_resources"
+    },
+    {
+      "module": "itcm",
+      "symbol": "func_01ff878c",
+      "address": 33523596,
+      "size": 56,
+      "reference": "MIi_CpuCopyFast",
+      "source": "libs/nitro/mi/asm_stubs/auto/MIi_CpuCopyFast.c",
+      "evidence": {
+        "caller": "itcm:func_01ffa204",
+        "reference_caller": "libs/nitro/nns/calls/func_01ff9d90.c",
+        "offset": 76
+      },
+      "owning_subsection": "memory_transfer"
+    },
+    {
+      "module": "itcm",
+      "symbol": "func_01ff8728",
+      "address": 33523496,
+      "size": 24,
+      "reference": "MIi_CpuSend32",
+      "source": "libs/nitro/mi/asm_stubs/auto/MIi_CpuSend32.c",
+      "evidence": {
+        "caller": "itcm:func_01ffa204",
+        "reference_caller": "libs/nitro/nns/calls/func_01ff9d90.c",
+        "offset": 148
+      },
+      "owning_subsection": "memory_transfer"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_020055e4",
+      "address": 33576420,
+      "size": 188,
+      "reference": "MI_SendGXCommandAsyncFast",
+      "source": "libs/nitro/mi/calls/MI_SendGXCommandAsyncFast.c",
+      "evidence": {
+        "caller": "itcm:func_01ffa204",
+        "reference_caller": "libs/nitro/nns/calls/func_01ff9d90.c",
+        "offset": 304
+      },
+      "owning_subsection": "memory_transfer"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_020053e4",
+      "address": 33575908,
+      "size": 236,
+      "reference": "MI_SendGXCommandAsync",
+      "source": "libs/nitro/mi/calls/MI_SendGXCommandAsync.c",
+      "evidence": {
+        "caller": "itcm:func_01ffa204",
+        "reference_caller": "libs/nitro/nns/calls/func_01ff9d90.c",
+        "offset": 340
+      },
+      "owning_subsection": "memory_transfer"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_02003134",
+      "address": 33567028,
+      "size": 36,
+      "reference": "OS_InitMutex",
+      "source": "libs/nitro/os/auto/OS_InitMutex.c",
+      "evidence": {
+        "caller": "arm9:func_0200ed90",
+        "reference_caller": "libs/nitro/snd/calls/SND_Init.c",
+        "offset": 32
+      },
+      "owning_subsection": "operating_system"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_0200f4d0",
+      "address": 33617104,
+      "size": 56,
+      "reference": "SND_AlarmInit",
+      "source": "libs/nitro/snd/calls/SND_AlarmInit.c",
+      "evidence": {
+        "caller": "arm9:func_0200ed90",
+        "reference_caller": "libs/nitro/snd/calls/SND_Init.c",
+        "offset": 40
+      },
+      "owning_subsection": "sound_commands"
+    },
+    {
+      "module": "itcm",
+      "symbol": "func_01ff8804",
+      "address": 33523716,
+      "size": 44,
+      "reference": "MI_Copy64B",
+      "source": "libs/nitro/mi/asm_stubs/auto/MI_Copy64B.c",
+      "evidence": {
+        "caller": "arm9:func_020193b8",
+        "reference_caller": "libs/nitro/nns/calls/func_02015924.c",
+        "offset": 16
+      },
+      "owning_subsection": "memory_transfer"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_020059a8",
+      "address": 33577384,
+      "size": 44,
+      "reference": "MTX_Identity44_",
+      "source": "libs/nitro/mtx/asm_stubs/auto/MTX_Identity44_.c",
+      "evidence": {
+        "caller": "arm9:func_020193b8",
+        "reference_caller": "libs/nitro/nns/calls/func_02015924.c",
+        "offset": 24
+      },
+      "owning_subsection": "fixed_point_math"
+    },
+    {
+      "module": "itcm",
+      "symbol": "func_01ff9cd0",
+      "address": 33529040,
+      "size": 44,
+      "reference": "func_01ff8a50",
+      "source": "libs/nitro/fx/calls/func_01ff8a50.c",
+      "evidence": {
+        "caller": "arm9:func_020193b8",
+        "reference_caller": "libs/nitro/nns/calls/func_02015924.c",
+        "offset": 208
+      },
+      "owning_subsection": "fixed_point_math"
+    },
+    {
+      "module": "itcm",
+      "symbol": "func_01ffd6ac",
+      "address": 33543852,
+      "size": 648,
+      "reference": "func_01ffaf9c",
+      "source": "libs/nitro/nns/calls/func_01ffaf9c.c",
+      "evidence": {
+        "caller": "itcm:func_01ffd934",
+        "reference_caller": "libs/nitro/nns/calls/func_01ffb234.c",
+        "offset": 144
+      },
+      "owning_subsection": "model_animation_rendering"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_02013b04",
+      "address": 33635076,
+      "size": 8,
+      "reference": "func_020110ec",
+      "source": "libs/nns/gfd/auto/func_020110ec.c",
+      "evidence": {
+        "caller": "arm9:func_0201389c",
+        "reference_caller": "libs/nns/gfd/calls/func_02010e80.c",
+        "offset": 120
+      },
+      "owning_subsection": "vram_allocation"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_02008d24",
+      "address": 33590564,
+      "size": 20,
+      "reference": "SNDi_UnlockMutex",
+      "source": "libs/nitro/snd/calls/SNDi_UnlockMutex.c",
+      "evidence": {
+        "caller": "arm9:func_02007ff4",
+        "reference_caller": "libs/nitro/gx/calls/GX_BeginLoadTex.c",
+        "offset": 4
+      },
+      "owning_subsection": "sound_commands"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_0200672c",
+      "address": 33580844,
+      "size": 28,
+      "reference": "GXS_SetGraphicsMode",
+      "source": "libs/nitro/gx/auto/GXS_SetGraphicsMode.c",
+      "evidence": {
+        "caller": "arm9:func_02015c20",
+        "reference_caller": "libs/nns/g2d/calls/func_02012904.c",
+        "offset": 36
+      },
+      "owning_subsection": "display_hardware"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_02013f84",
+      "address": 33636228,
+      "size": 16,
+      "reference": "func_02011548",
+      "source": "libs/nns/gfd/auto/func_02011548.c",
+      "evidence": {
+        "caller": "arm9:func_02014090",
+        "reference_caller": "libs/nitro/gx/calls/GFXi_EnqueueCommand.c",
+        "offset": 48
+      },
+      "owning_subsection": "vram_allocation"
+    },
+    {
+      "module": "itcm",
+      "symbol": "func_01ff8830",
+      "address": 33523760,
+      "size": 148,
+      "reference": "MI_CpuFill8",
+      "source": "libs/nitro/mi/asm_stubs/auto/MI_CpuFill8.c",
+      "evidence": {
+        "caller": "arm9:func_0200b7e8",
+        "reference_caller": "libs/nitro/fs/calls/FS_ClearOverlayImage.c",
+        "offset": 52
+      },
+      "owning_subsection": "memory_transfer"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_02005218",
+      "address": 33575448,
+      "size": 92,
+      "reference": "MI_WaitDma",
+      "source": "libs/nitro/mi/calls/MI_WaitDma.c",
+      "evidence": {
+        "caller": "arm9:func_02007d50",
+        "reference_caller": "libs/nitro/gx/calls/GX_EndLoadBGExtPltt.c",
+        "offset": 20
+      },
+      "owning_subsection": "memory_transfer"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_02008d38",
+      "address": 33590584,
+      "size": 20,
+      "reference": "SNDi_UnlockMutex_0x020063d0",
+      "source": "libs/nitro/snd/calls/SNDi_UnlockMutex_0x020063d0.c",
+      "evidence": {
+        "caller": "arm9:func_020081e0",
+        "reference_caller": "libs/nitro/gx/calls/GX_BeginLoadTexPltt.c",
+        "offset": 4
+      },
+      "owning_subsection": "sound_commands"
+    },
+    {
+      "module": "itcm",
+      "symbol": "func_01ff87c4",
+      "address": 33523652,
+      "size": 28,
+      "reference": "MI_Copy36B",
+      "source": "libs/nitro/mi/asm_stubs/auto/MI_Copy36B.c",
+      "evidence": {
+        "caller": "arm9:func_02006bc0",
+        "reference_caller": "libs/nitro/gx/calls/G3X_GetVectorMtx.c",
+        "offset": 32
+      },
+      "owning_subsection": "memory_transfer"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_0200b178",
+      "address": 33599864,
+      "size": 108,
+      "reference": "FS_NotifyArchiveAsyncEnd",
+      "source": "libs/nitro/fs/calls/FS_NotifyArchiveAsyncEnd.c",
+      "evidence": {
+        "caller": "arm9:func_0200d2b4",
+        "reference_caller": "libs/nitro/fs/calls/FSi_OnRomReadDone.c",
+        "offset": 28
+      },
+      "owning_subsection": "filesystem"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_02006d4c",
+      "address": 33582412,
+      "size": 148,
+      "reference": "GXi_NopClearFifo128_",
+      "source": "libs/nitro/gx/asm_stubs/auto/GXi_NopClearFifo128_.c",
+      "evidence": {
+        "caller": "arm9:func_02006a44",
+        "reference_caller": "libs/nitro/gx/calls/G3X_ClearFifo.c",
+        "offset": 12
+      },
+      "owning_subsection": "display_hardware"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_02005930",
+      "address": 33577264,
+      "size": 24,
+      "reference": "MTX_Identity22_",
+      "source": "libs/nitro/mtx/asm_stubs/auto/MTX_Identity22_.c",
+      "evidence": {
+        "caller": "ov022:func_ov022_020a7b3c",
+        "reference_caller": "src/overlays/ov024/calls/func_ov024_02083e28.c",
+        "offset": 144
+      },
+      "owning_subsection": "fixed_point_math"
+    },
+    {
+      "module": "itcm",
+      "symbol": "func_01ff9480",
+      "address": 33526912,
+      "size": 40,
+      "reference": "MTX_Identity43_",
+      "source": "libs/nitro/mtx/asm_stubs/auto/MTX_Identity43_.c",
+      "evidence": {
+        "caller": "arm9:func_020190b0",
+        "reference_caller": "src/calls/func_02015630.c",
+        "offset": 48
+      },
+      "owning_subsection": "fixed_point_math"
+    },
+    {
+      "module": "itcm",
+      "symbol": "func_01ff90ec",
+      "address": 33525996,
+      "size": 36,
+      "reference": "MTX_Identity33_",
+      "source": "libs/nitro/mtx/asm_stubs/auto/MTX_Identity33_.c",
+      "evidence": {
+        "caller": "arm9:func_020190b0",
+        "reference_caller": "src/calls/func_02015630.c",
+        "offset": 104
+      },
+      "owning_subsection": "fixed_point_math"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_0200433c",
+      "address": 33571644,
+      "size": 108,
+      "reference": "OS_SetAlarm",
+      "source": "libs/nitro/os/calls/OS_SetAlarm.c",
+      "evidence": {
+        "caller": "ov022:func_ov022_020a7f3c",
+        "reference_caller": "src/overlays/ov024/calls/func_ov024_0208421c.c",
+        "offset": 96
+      },
+      "owning_subsection": "operating_system"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_02003fd4",
+      "address": 33570772,
+      "size": 160,
+      "reference": "func_020031d4",
+      "source": "libs/nitro/os/calls/func_020031d4.c",
+      "evidence": {
+        "caller": "ov022:func_ov022_020a7f3c",
+        "reference_caller": "src/overlays/ov024/calls/func_ov024_0208421c.c",
+        "offset": 216
+      },
+      "owning_subsection": "operating_system"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_0202a1c4",
+      "address": 33726916,
+      "size": 32,
+      "reference": "NNSi_FndFreeFromDefaultHeap",
+      "source": "libs/nitro/nns/calls/NNSi_FndFreeFromDefaultHeap.c",
+      "evidence": {
+        "caller": "ov027:func_ov027_020ba074",
+        "reference_caller": "src/overlays/ov002/calls/func_ov002_020529cc.c",
+        "offset": 46
+      },
+      "owning_subsection": "heap_management"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_02013f74",
+      "address": 33636212,
+      "size": 16,
+      "reference": "func_02011538",
+      "source": "libs/nns/gfd/auto/func_02011538.c",
+      "evidence": {
+        "caller": "arm9:func_02014008",
+        "reference_caller": "src/calls/func_020115b8.c",
+        "offset": 12
+      },
+      "owning_subsection": "vram_allocation"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_0202a178",
+      "address": 33726840,
+      "size": 36,
+      "reference": "NNSi_FndAllocFromDefaultExpHeap",
+      "source": "libs/nitro/nns/calls/NNSi_FndAllocFromDefaultExpHeap.c",
+      "evidence": {
+        "caller": "ov027:func_ov027_020b7d58",
+        "reference_caller": "src/overlays/ov002/calls/func_ov002_020543b8.c",
+        "offset": 50
+      },
+      "owning_subsection": "heap_management"
+    },
+    {
+      "module": "itcm",
+      "symbol": "func_01ffe280",
+      "address": 33546880,
+      "size": 276,
+      "reference": "func_01ffba90",
+      "source": "libs/nitro/nns/auto/func_01ffba90.c",
+      "evidence": {
+        "caller": "arm9:func_0203a858",
+        "reference_caller": "src/calls/func_020285f0.c",
+        "offset": 80
+      },
+      "owning_subsection": "model_animation_rendering"
+    },
+    {
+      "module": "itcm",
+      "symbol": "func_01ffe3d8",
+      "address": 33547224,
+      "size": 1224,
+      "reference": "func_01ffbbf0",
+      "source": "libs/nitro/nns/calls/func_01ffbbf0.c",
+      "evidence": {
+        "caller": "arm9:func_0203a858",
+        "reference_caller": "src/calls/func_020285f0.c",
+        "offset": 88
+      },
+      "owning_subsection": "model_animation_rendering"
+    },
+    {
+      "module": "itcm",
+      "symbol": "func_01ffe934",
+      "address": 33548596,
+      "size": 756,
+      "reference": "func_01ffc164",
+      "source": "libs/nitro/nns/calls/func_01ffc164.c",
+      "evidence": {
+        "caller": "arm9:func_0203a858",
+        "reference_caller": "src/calls/func_020285f0.c",
+        "offset": 96
+      },
+      "owning_subsection": "model_animation_rendering"
+    },
+    {
+      "module": "itcm",
+      "symbol": "func_01ffec28",
+      "address": 33549352,
+      "size": 1868,
+      "reference": "func_01ffc450",
+      "source": "libs/nitro/nns/calls/func_01ffc450.c",
+      "evidence": {
+        "caller": "arm9:func_0203a858",
+        "reference_caller": "src/calls/func_020285f0.c",
+        "offset": 108
+      },
+      "owning_subsection": "model_animation_rendering"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_02001d90",
+      "address": 33562000,
+      "size": 136,
+      "reference": "OS_SetIrqFunction",
+      "source": "libs/nitro/os/calls/OS_SetIrqFunction.c",
+      "evidence": {
+        "caller": "arm9:func_02005584",
+        "reference_caller": "src/calls/MIi_DMACallback.c",
+        "offset": 52
+      },
+      "owning_subsection": "operating_system"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_0200b494",
+      "address": 33600660,
+      "size": 64,
+      "reference": "FS_OpenFileDirect",
+      "source": "libs/nitro/fs/calls/FS_OpenFileDirect.c",
+      "evidence": {
+        "caller": "arm9:func_0202ce60",
+        "reference_caller": "src/calls/func_020250bc.c",
+        "offset": 108
+      },
+      "owning_subsection": "filesystem"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_02003ea4",
+      "address": 33570468,
+      "size": 36,
+      "reference": "OSi_SetTimerReserved",
+      "source": "libs/nitro/os/calls/OSi_SetTimerReserved.c",
+      "evidence": {
+        "caller": "arm9:func_02003eec",
+        "reference_caller": "src/calls/func_020030e4.c",
+        "offset": 36
+      },
+      "owning_subsection": "operating_system"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_02003f6c",
+      "address": 33570668,
+      "size": 104,
+      "reference": "func_0200316c",
+      "source": "libs/nitro/os/calls/func_0200316c.c",
+      "evidence": {
+        "caller": "arm9:func_02003eec",
+        "reference_caller": "src/calls/func_020030e4.c",
+        "offset": 108
+      },
+      "owning_subsection": "operating_system"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_0202a268",
+      "address": 33727080,
+      "size": 24,
+      "reference": "NNSi_FndGetAllocatorForDefaultHeap",
+      "source": "libs/nitro/nns/calls/NNSi_FndGetAllocatorForDefaultHeap.c",
+      "evidence": {
+        "caller": "arm9:func_0202eaf4",
+        "reference_caller": "src/calls/func_0202a440.c",
+        "offset": 44
+      },
+      "owning_subsection": "heap_management"
+    },
+    {
+      "module": "itcm",
+      "symbol": "func_01ff94a8",
+      "address": 33526952,
+      "size": 52,
+      "reference": "MTX_Copy43To44_",
+      "source": "libs/nitro/mtx/asm_stubs/auto/MTX_Copy43To44_.c",
+      "evidence": {
+        "caller": "arm9:func_020196c0",
+        "reference_caller": "src/calls/func_02015c38.c",
+        "offset": 52
+      },
+      "owning_subsection": "fixed_point_math"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_0201360c",
+      "address": 33633804,
+      "size": 24,
+      "reference": "func_02010ccc",
+      "source": "libs/nns/fnd/auto/func_02010ccc.c",
+      "evidence": {
+        "caller": "arm9:func_02013624",
+        "reference_caller": "src/calls/func_02010ce4.c",
+        "offset": 12
+      },
+      "owning_subsection": "heap_management"
+    },
+    {
+      "module": "itcm",
+      "symbol": "func_01ff9cfc",
+      "address": 33529084,
+      "size": 52,
+      "reference": "FX_Sqrt",
+      "source": "libs/nitro/fx/calls/FX_Sqrt.c",
+      "evidence": {
+        "caller": "arm9:func_0202fbdc",
+        "reference_caller": "src/calls/func_0202f430.c",
+        "offset": 108
+      },
+      "owning_subsection": "fixed_point_math"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_02002aa8",
+      "address": 33565352,
+      "size": 80,
+      "reference": "func_02001f10",
+      "source": "libs/nitro/os/calls/func_02001f10.c",
+      "evidence": {
+        "caller": "arm9:func_0202c438",
+        "reference_caller": "src/calls/func_0201ef58.c",
+        "offset": 48
+      },
+      "owning_subsection": "operating_system"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_02006850",
+      "address": 33581136,
+      "size": 28,
+      "reference": "G2x_SetBlendAlpha_",
+      "source": "libs/nitro/gx/auto/G2x_SetBlendAlpha_.c",
+      "evidence": {
+        "caller": "arm9:func_0204f400",
+        "reference_caller": "src/calls/func_02032798.c",
+        "offset": 40
+      },
+      "owning_subsection": "display_hardware"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_0200b1e4",
+      "address": 33599972,
+      "size": 164,
+      "reference": "FS_WaitAsync",
+      "source": "libs/nitro/fs/calls/FS_WaitAsync.c",
+      "evidence": {
+        "caller": "ov022:func_ov022_020aa1b4",
+        "reference_caller": "src/overlays/ov024/calls/func_ov024_02085ed8.c",
+        "offset": 32
+      },
+      "owning_subsection": "filesystem"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_0200b674",
+      "address": 33601140,
+      "size": 84,
+      "reference": "OS_UnlockByWord_0x0200ae4c",
+      "source": "libs/nitro/fs/calls/OS_UnlockByWord_0x0200ae4c.c",
+      "evidence": {
+        "caller": "ov022:func_ov022_020aa1b4",
+        "reference_caller": "src/overlays/ov024/calls/func_ov024_02085ed8.c",
+        "offset": 72
+      },
+      "owning_subsection": "filesystem"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_0200b6c8",
+      "address": 33601224,
+      "size": 120,
+      "reference": "FS_ReadFileAsync",
+      "source": "libs/nitro/fs/calls/FS_ReadFileAsync.c",
+      "evidence": {
+        "caller": "ov022:func_ov022_020aa224",
+        "reference_caller": "src/overlays/ov024/calls/func_ov024_02085f48.c",
+        "offset": 76
+      },
+      "owning_subsection": "filesystem"
+    }
+  ]
+}

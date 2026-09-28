@@ -1,0 +1,141 @@
+{
+  "version": 1,
+  "subsection_id": "subtitle_streams",
+  "name": "Movie subtitle and stream timing",
+  "profile": "bk9e",
+  "evidence": "Connected recovered C bodies and ov003/ov022 Ghidra callsites identify the code-unit reader, control dispatcher, stream-window refill, and timing helpers. Actual matching status is computed by fresh verification in the progress command.",
+  "modules": [
+    {
+      "module": "ov003",
+      "members": [
+        {
+          "symbol": "func_ov003_02064ac0",
+          "address": "0x02064ac0",
+          "size": 336,
+          "role": "Reads one UTF-8 code unit from primary/alternate text streams.",
+          "callers": [
+            "0x02064ed4"
+          ]
+        },
+        {
+          "symbol": "func_ov003_020649fc",
+          "address": "0x020649fc",
+          "size": 196,
+          "role": "Dispatches subtitle control events and updates stream state/cursors.",
+          "callers": [
+            "0x02064b44"
+          ]
+        },
+        {
+          "symbol": "func_ov003_02064980",
+          "address": "0x02064980",
+          "size": 32,
+          "role": "Related stream-state reset helper reached by the control dispatcher.",
+          "callers": [
+            "control dispatcher"
+          ]
+        },
+        {
+          "symbol": "func_ov003_020649a8",
+          "address": "0x020649a8",
+          "size": 84,
+          "role": "Advances the stream window, requests refill when needed, and updates its timing lead.",
+          "callers": [
+            "control dispatcher"
+          ]
+        },
+        {
+          "symbol": "func_ov003_02064e2c",
+          "address": "0x02064e2c",
+          "size": 152,
+          "role": "Computes stream lead time from mode, stamp, clock, and shared state.",
+          "callers": [
+            "0x020649f0",
+            "0x02065034"
+          ]
+        },
+        {
+          "symbol": "func_ov003_02064ec4",
+          "address": "0x02064ec4",
+          "size": 276,
+          "role": "Direct caller of the code-unit reader at 0x02064ed4; behavior not yet reviewed.",
+          "callers": []
+        },
+        {
+          "symbol": "func_ov003_02065028",
+          "address": "0x02065028",
+          "size": 84,
+          "role": "Direct caller of stream lead-time update at 0x02065034; behavior not yet reviewed.",
+          "callers": []
+        }
+      ]
+    },
+    {
+      "module": "ov022",
+      "members": [
+        {
+          "symbol": "func_ov022_020a8b90",
+          "address": "0x020a8b90",
+          "size": 336,
+          "role": "Reads one UTF-8 code unit from primary/alternate text streams.",
+          "callers": [
+            "0x020a8fa4"
+          ]
+        },
+        {
+          "symbol": "func_ov022_020a8acc",
+          "address": "0x020a8acc",
+          "size": 196,
+          "role": "Dispatches subtitle control events and updates stream state/cursors.",
+          "callers": [
+            "0x020a8c14"
+          ]
+        },
+        {
+          "symbol": "func_ov022_020a8a50",
+          "address": "0x020a8a50",
+          "size": 32,
+          "role": "Related stream-state reset helper reached by the control dispatcher.",
+          "callers": [
+            "control dispatcher"
+          ]
+        },
+        {
+          "symbol": "func_ov022_020a8a78",
+          "address": "0x020a8a78",
+          "size": 84,
+          "role": "Advances the stream window, requests refill when needed, and updates its timing lead.",
+          "callers": [
+            "control dispatcher",
+            "0x020a8ac0"
+          ]
+        },
+        {
+          "symbol": "func_ov022_020a8efc",
+          "address": "0x020a8efc",
+          "size": 152,
+          "role": "Computes stream lead time from mode, stamp, clock, and shared state.",
+          "callers": [
+            "0x020a8ac0",
+            "0x020a9104"
+          ]
+        },
+        {
+          "symbol": "func_ov022_020a8f94",
+          "address": "0x020a8f94",
+          "size": 276,
+          "role": "Direct caller of the code-unit reader at 0x020a8fa4; behavior not yet reviewed.",
+          "callers": []
+        },
+        {
+          "symbol": "func_ov022_020a90f8",
+          "address": "0x020a90f8",
+          "size": 84,
+          "role": "Direct caller of stream lead-time update at 0x020a9104; behavior not yet reviewed.",
+          "callers": []
+        }
+      ]
+    }
+  ],
+  "uncertainty": "The direct callers' higher-level presentation behavior has not been reviewed, and the lead-time unit/consumer is not confirmed to be subtitle-only. The control dispatcher and reset helper are not exact yet."
+}
