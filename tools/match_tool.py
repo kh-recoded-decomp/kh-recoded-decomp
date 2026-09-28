@@ -229,8 +229,12 @@ def cmd_show(args) -> None:
         for hit in json.loads(similar_path.read_text(encoding="utf-8")).get(f"{args.module}:{name}", []):
             print(f"\nSimilar KH Days C (score {hit['score']}, {hit['days_size']} bytes): "
                   f"{days_port.DAYS / hit['days_source']} :: {hit['days_name']}")
+    exact = ROOT / "build" / "ghidra_auto" / args.module / f"{name}.c"
     near = ROOT / "build" / "ghidra_auto" / "near" / args.module / f"{name}.c"
-    if near.exists():
+    if exact.exists():
+        print(f"\nGhidra C that ALREADY MATCHES byte-exact: {exact.relative_to(ROOT)} — copy it, give it clean "
+              f"names/types, `try` (both compilers if needed), stage.")
+    elif near.exists():
         print(f"\nCompilable Ghidra C with the right size (only a few instructions differ): "
               f"{near.relative_to(ROOT)} — copy it, rename, and fix the differing slots.")
     decomp = DECOMP / args.module / f"{name}.c"
