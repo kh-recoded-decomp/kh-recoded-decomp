@@ -103,11 +103,63 @@ def known_names() -> dict[str, int]:
     return {name: next(iter(v)) for name, v in names.items() if len(v) == 1}
 
 
-def bind(name: str, thumbs: set[int], names: dict[str, int]) -> int | None:
+@functools.lru_cache(maxsize=None)
+def function_modes() -> dict[str, dict[int, str]]:
+    return {module: {info["address"]: data["modes"][symbol]
+                     for symbol, info in data["symbols"].items() if symbol in data.get("modes", {})}
+            for module, data in inventory().items()}
+
+
+@functools.lru_cache(maxsize=None)
+def target_modes(module: str, start: int, stop: int) -> dict[int, frozenset[str]]:
+    """Keep overlay identity when resolving calls and function pointers."""
+    modes: dict[int, set[str]] = {}
+    functions = function_modes()
+    call_modes = {"arm_call": "arm", "arm_call_thumb": "thumb",
+                  "thumb_call": "thumb", "thumb_call_arm": "arm"}
+    for line in (config_dir(module) / "relocs.txt").read_text(encoding="utf-8").splitlines():
+        relocation = RELOC_LINE.match(line)
+        if not relocation or not start <= int(relocation[1], 16) < stop:
+            continue
+        address, kind, destination = int(relocation[3], 16), relocation[2], relocation[4]
+        if kind in call_modes:
+            modes.setdefault(address, set()).add(call_modes[kind])
+            continue
+        overlays = re.fullmatch(r"overlays?\(([0-9,]+)\)", destination)
+        modules = ([f"ov{int(n):03}" for n in overlays[1].split(",")] if overlays else
+                   ["arm9" if destination == "main" else destination])
+        for owner in modules:
+            mode = functions.get(owner, {}).get(address)
+            if mode:
+                modes.setdefault(address, set()).add(mode)
+    return {address: frozenset(values) for address, values in modes.items()}
+
+
+def bind(name: str, thumbs: set[int], names: dict[str, int], *, module: str | None = None,
+         referenced_modes: dict[int, frozenset[str]] | None = None) -> int | None:
     m = ADDRESS_SUFFIX.search(name)
     address = int(m.group(1), 16) if m else names.get(name)
     if address is None:
         return None
+    if address & 1 or re.match(r"_*data_(?:ov\d{3}_)?[0-9a-fA-F]{8}$", name):
+        return address
+    if module is not None:
+        functions = function_modes()
+        explicit = re.search(r"(?:^|_)(ov\d{3}|arm9|itcm|dtcm)_", name)
+        if explicit:
+            mode = functions.get(explicit[1], {}).get(address)
+            return address | (mode == "thumb")
+        candidates = (referenced_modes or {}).get(address)
+        if candidates is None:
+            # Core addresses do not overlap overlays. Overlay-local names have priority.
+            mode = functions.get(module, {}).get(address)
+            if mode is not None:
+                candidates = frozenset([mode])
+            else:
+                candidates = frozenset(values[address] for values in functions.values() if address in values)
+        if len(candidates) > 1:
+            return None  # An unqualified overlay alias needs an explicit target name.
+        return address | (candidates == frozenset(["thumb"]))
     return address | 1 if address in thumbs else address
 
 
@@ -154,8 +206,10 @@ def compile_candidate(module: str, symbol: str, source: Path, compiler: str, mod
         if not obj.exists():
             return None, entry, message
         missing = []
-        for ext in undefined_symbols(obj.read_bytes(), source_symbol):
-            value = bind(ext, thumbs, names)
+        object_bytes = obj.read_bytes()
+        for ext in undefined_symbols(object_bytes, source_symbol):
+            value = bind(ext, thumbs, names, module=module,
+                         referenced_modes=target_modes(module, info["address"], info["address"] + info["size"]))
             if value is None:
                 missing.append(ext)
             else:
@@ -163,8 +217,8 @@ def compile_candidate(module: str, symbol: str, source: Path, compiler: str, mod
         if missing:
             return None, entry, "Cannot bind externals (add an _<address> suffix): " + ", ".join(missing)
         try:
-            cm.compile_entry(entry, info["address"], out)
-            return out.read_bytes(), entry, ""
+            bindings = {name: int(value, 16) for name, value in entry["bindings"].items()}
+            return cm.link_function(object_bytes, source_symbol, info["address"], bindings), entry, ""
         except RuntimeError as error:
             return None, entry, str(error)
 

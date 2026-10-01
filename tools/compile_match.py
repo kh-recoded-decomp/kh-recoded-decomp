@@ -130,6 +130,8 @@ def link_function(obj: bytes, function_name: str, address: int, bindings: dict[s
     result = bytearray(section.data()[start:start + size])
     if len(result) != size or not size:
         raise RuntimeError("Invalid compiled function size")
+    mapping = sorted((s['st_value'] & ~1, s.name) for s in symtab.iter_symbols()
+                     if s['st_shndx'] == index and s.name in ('$a', '$t', '$d'))
     used = set()
     for reloc_section in elf.iter_sections():
         if reloc_section['sh_type'] not in ('SHT_REL', 'SHT_RELA') or reloc_section['sh_info'] != index:
@@ -145,6 +147,11 @@ def link_function(obj: bytes, function_name: str, address: int, bindings: dict[s
             symbol = symtab.get_symbol(relocation['r_info_sym'])
             if symbol['st_shndx'] == index:
                 value = address + symbol['st_value'] - start
+                # MWCC marks Thumb functions with $t even when st_value is even.
+                if symbol['st_info']['type'] == 'STT_FUNC' and not symbol.name.startswith('$'):
+                    marks = [name for offset, name in mapping if offset <= (symbol['st_value'] & ~1)]
+                    if marks and marks[-1] == '$t':
+                        value |= 1
             elif symbol['st_shndx'] == 'SHN_UNDEF' and symbol.name in bindings:
                 value = bindings[symbol.name]
                 used.add(symbol.name)

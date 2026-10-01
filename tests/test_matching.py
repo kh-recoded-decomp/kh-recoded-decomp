@@ -2,6 +2,7 @@
 
 import sys
 import json
+import struct
 import tempfile
 import unittest
 from pathlib import Path
@@ -14,6 +15,45 @@ import khrecoded as kh
 
 
 class RelocationTests(unittest.TestCase):
+    def test_local_thumb_calls_and_function_pointers_use_elf_mapping(self):
+        # A tiny ARM ELF fixture, independent of the compiler and reference ROM.
+        names = b'\0$t\0$d\0recursive\0pool\0'
+        section_names = b'\0.text\0.symtab\0.strtab\0.rela.text\0.shstrtab\0'
+        symbol = lambda name, value, size, info: struct.pack('<IIIBBH', name, value, size, info, 0, 1)
+        symbols = (bytes(16) + symbol(1, 0, 0, 2) + symbol(4, 4, 0, 2)
+                   + symbol(7, 0, 12, 0x12) + symbol(17, 8, 4, 1))
+        relocations = b''.join(struct.pack('<IIi', offset, (index << 8) | kind, addend)
+                               for offset, index, kind, addend in
+                               [(0, 3, 10, -4), (4, 3, 2, 0), (8, 4, 2, 0)])
+        parts = [struct.pack('<III', 0xFFFEF7FF, 0, 0), symbols, names,
+                 relocations, section_names]
+        body = bytearray(52)
+        offsets = []
+        for part in parts:
+            body.extend(bytes((-len(body)) % 4))
+            offsets.append(len(body))
+            body.extend(part)
+        body.extend(bytes((-len(body)) % 4))
+        section_offset = len(body)
+        body.extend(bytes(40))
+        specs = [(1, 1, 6, 0, 0, 0), (7, 2, 0, 3, 3, 16),
+                 (15, 3, 0, 0, 0, 0), (23, 4, 0, 2, 1, 12),
+                 (34, 3, 0, 0, 0, 0)]
+        for offset, part, (name, kind, flags, link, info, entsize) in zip(offsets, parts, specs):
+            body.extend(struct.pack('<IIIIIIIIII', name, kind, flags, 0, offset,
+                                    len(part), link, info, 4, entsize))
+        ident = b'\x7fELF\x01\x01\x01' + bytes(9)
+        body[:52] = struct.pack('<16sHHIIIIIHHHHHH', ident, 1, 40, 1, 0, 0,
+                               section_offset, 0, 52, 0, 0, 40, 6, 5)
+        linked = cm.link_function(bytes(body), 'recursive', 0x02000100, {})
+        self.assertEqual(struct.unpack('<III', linked),
+                         (0xFFFEF7FF, 0x02000101, 0x02000108))
+        import days_port
+        function = days_port.read_functions(bytes(body))[0]
+        self.assertEqual([r[5] for r in function['relocs']], [1, 1, 8])
+        self.assertEqual(days_port.try_candidate(function,
+                         {'address': 0x02000100, 'bytes': linked}), ({}, 'ok'))
+
     def test_arm_calls_and_interworking(self):
         self.assertEqual(cm.relocate_word(0xEBFFFFFE, 1, 0x02000200, -8, 0x02000100), 0xEB00003E)
         self.assertEqual(cm.relocate_word(0xEBFFFFFE, 1, 0x02000203, -8, 0x02000100), 0xFB00003E)

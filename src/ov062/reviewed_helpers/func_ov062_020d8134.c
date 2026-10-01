@@ -1,0 +1,13 @@
+#include "nitro/types.h"
+
+extern unsigned int func_0202a1c4();
+extern unsigned int func_0202cd78();
+extern unsigned int func_020c2f90();
+extern unsigned int func_ov021_020adfb8();
+
+void func_ov062_020d8134(int work,unsigned int value) {
+  func_0202cd78(*(unsigned int *)(work + 0x88));
+  func_ov021_020adfb8(work,value);
+  func_020c2f90(*(unsigned int *)(work + 0x90));
+  func_0202a1c4(*(unsigned int *)(work + 0x90));
+}

@@ -90,8 +90,14 @@ def read_functions(obj: bytes) -> list[dict]:
                 shndx = sym["st_shndx"]
                 where = ("undef" if shndx == "SHN_UNDEF" else "text" if shndx == text_index
                          else elf.get_section(shndx).name if isinstance(shndx, int) else str(shndx))
+                value = sym["st_value"]
+                if (where == "text" and sym["st_info"]["type"] == "STT_FUNC"
+                        and not sym.name.startswith("$")):
+                    marks = [name for offset, name in mapping if offset <= (value & ~1)]
+                    if marks and marks[-1] == "$t":
+                        value |= 1
                 relocs.append((r["r_offset"], r["r_info_type"], sym.name, r["r_addend"], where,
-                               sym["st_value"]))
+                               value))
     functions = []
     for s in symtab.iter_symbols():
         if (s["st_info"]["type"] != "STT_FUNC" or s["st_shndx"] != text_index or not s["st_size"]

@@ -41,6 +41,8 @@ typedef unsigned long long ulonglong;
 typedef unsigned long long undefined8;
 typedef int bool;
 typedef void code();
+#define false 0
+#define true 1
 """
 KEYWORDS = {"if", "while", "for", "switch", "return", "sizeof", "do", "else", "case", "goto"}
 RAM_TYPES = {"i": "int", "u": "UNDEF4", "pc": "code *", "p": "void *", "pu": "UNDEF4 *", "pi": "int *",
@@ -57,6 +59,10 @@ UNSUPPORTED = re.compile(r"\b(?:CONCAT\d+|SUB\d+|ZEXT\d+|SEXT\d+|CARRY\d|SCARRY\
 def convert(text: str, symbol: str, int_type: str) -> str | None:
     text = re.sub(r"/\*.*?\*/", "", text, flags=re.S)
     text = re.sub(r"\b(?:arm9|itcm|dtcm|ov\d{3})::", "", text)
+    # Local goto labels are ordinary C; external code addresses are not.
+    labels = set(re.findall(r"(?m)^\s*(LAB_[0-9a-fA-F]+)\s*:", text))
+    for label in labels:
+        text = re.sub(rf"\b{label}\b", label.replace("LAB_", "branch_"), text)
     if UNSUPPORTED.search(text) or symbol not in text:
         return None
     text = text.replace("undefined4", "UNDEF4")
@@ -129,7 +135,7 @@ def attempt(target: dict) -> dict | None:
 
 TYPE_NAMES = {"uint": "u32", "ushort": "u16", "uchar": "u8", "byte": "u8", "undefined1": "u8",
               "undefined2": "u16", "undefined": "u8", "undefined8": "u64", "ulonglong": "u64",
-              "longlong": "s64", "bool": "BOOL", "ulong": "u32"}
+              "longlong": "s64", "bool": "BOOL", "ulong": "u32", "true": "TRUE", "false": "FALSE"}
 
 
 def tidy(text: str, int_type: str, unsigned: str) -> str:
