@@ -100,7 +100,20 @@ def known_names() -> dict[str, int]:
         if info:
             names.setdefault(m["name"], set()).add(info["address"])
             names.setdefault(m["source_symbol"], set()).add(info["address"])
+    for name, address in RUNTIME_HELPERS.items():
+        names.setdefault(name, set()).add(address)
     return {name: next(iter(v)) for name, v in names.items() if len(v) == 1}
+
+
+# Compiler runtime calls emitted for `/`, `%` and 64-bit arithmetic.
+RUNTIME_HELPERS = {
+    "_s32_div_f": 0x02023DBC,
+    "_u32_div_f": 0x02023FC8,
+    "_ll_mul": 0x02023D9C,
+    "_ll_udiv": 0x02023D54,
+    "_ll_sdiv": 0x02023BA4,
+    "__strtoul": 0x02022128,
+}
 
 
 @functools.lru_cache(maxsize=None)
