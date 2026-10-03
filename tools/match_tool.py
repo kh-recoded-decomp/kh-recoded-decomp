@@ -373,6 +373,10 @@ def style_problems(text: str) -> list[str]:
 
 
 def cmd_stage(args) -> int:
+    source_path = Path(args.source).as_posix()
+    if any(part in source_path for part in (".port_scratch", "scratch", "tmp", "/_w", "_wip")):
+        print("ERROR: stage from src/<module>/<domain>/, not a scratch folder (scratch files are not committed).")
+        return 1
     problems = style_problems(Path(args.source).read_text(encoding="utf-8"))
     if problems:
         print("ERROR: fix style before staging: " + "; ".join(problems))
