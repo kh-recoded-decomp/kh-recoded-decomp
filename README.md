@@ -25,8 +25,9 @@ placed yet (shared data sections, ambiguous overlay targets) stay delinked and a
 Data sections are reconstructed the same way. Each `.rodata`, `.data` or `.bss` range in
 `data_matches.json` is C that `tools/data_match.py` compiles, relocates and compares byte for byte
 (`.bss` by size and symbol layout), and `link` places it in the ROM. `tools/gen_bss.py` generates
-`.bss` layout files (one sized global per known symbol); progress reports those bytes separately
-from hand-typed data. ARM7 has been extracted but its function analysis has
+`.bss` layout files (one sized global per known symbol) and `tools/gen_data_tables.py` generates
+pointer tables whose every entry names its target; progress reports both separately from hand-typed
+data. ARM7 has been extracted but its function analysis has
 not been bootstrapped by `dsd`.
 
 ## Quick start on Windows

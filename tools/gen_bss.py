@@ -54,7 +54,7 @@ def write_unit(module: str, run: list[tuple[int, str, int]]) -> dict:
     for address, name, size in reversed(run):
         lines.append(declaration(name, address, size))
     start, end = run[0][0], run[-1][0] + run[-1][2]
-    source = ROOT / "src" / module / "data" / f"Bss_{start:08x}.c"
+    source = ROOT / "src" / module / "data" / f"Bss_{module}_{start:08x}.c"
     source.parent.mkdir(parents=True, exist_ok=True)
     source.write_text("\n".join(lines) + "\n", encoding="utf-8", newline="\n")
     return {"module": module, "section": ".bss", "start": f"{start:#010x}", "end": f"{end:#010x}",
