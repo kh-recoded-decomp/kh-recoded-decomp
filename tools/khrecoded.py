@@ -193,7 +193,9 @@ def link_rom(rom: Path) -> Path:
     run(dsd(), "lcf", "--config-path", config)
     # Objects carry their own alignment; a blanket ALIGNALL(4) would shift 2-aligned data units.
     lcf = delinked / "arm9.lcf"
-    lcf.write_text(lcf.read_text(encoding="utf-8").replace("ALIGNALL(4);", ""), encoding="utf-8")
+    absolutes = (config.parent / "absolutes.txt").read_text(encoding="utf-8")
+    text = lcf.read_text(encoding="utf-8").replace("ALIGNALL(4);", "")
+    lcf.write_text(text.replace("SECTIONS {\n", "SECTIONS {\n" + absolutes, 1), encoding="utf-8")
     elf = delinked / "arm9.elf"
     args = [str(linker), "-proc", "arm946e", "-nostdlib", "-interworking", "-nodead", "-m", "Entry",
             "-map", "closure,unused", "-o", str(elf), f"@{delinked / 'objects.txt'}", str(delinked / "arm9.lcf")]

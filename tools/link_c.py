@@ -181,6 +181,10 @@ def prepare(entry: dict, info: dict, canonical: dict, relocs: dict, addresses: d
             resolved = set(options[:1])
             if not resolved:
                 return None, f"ambiguous target for {name}"
+        if not resolved and not any(lo <= raw < hi for lo, hi in RANGES.values()):
+            # Outside every module: an SDK constant or fixed memory address, defined absolutely.
+            ABSOLUTES.setdefault(name, raw)
+            continue
         if not resolved:
             order = (module, "arm9", "itcm", "dtcm")
             owners = [m for m in order if any((m, c) in canonical for c in candidates)]
@@ -236,6 +240,7 @@ THUMB: set = set()
 SPANS: dict[str, dict[str, list]] = {}
 RANGES: dict[str, tuple[int, int]] = {}
 EXTRAS: dict = {}
+ABSOLUTES: dict[str, int] = {}
 
 
 def module_bytes(module: str) -> tuple[int, bytes]:
@@ -382,6 +387,8 @@ def main() -> int:
                 text += f"\n{source}:\n    complete\n    {section} start:{start:#010x} end:{end:#010x}\n"
             (folder / "delinks.txt").write_text(text, encoding="utf-8")
     total = sum(size for units in linked.values() for _, size, _, section in units if section == ".text")
+    (LINK_CONFIG / "absolutes.txt").write_text(
+        "".join(f"{name} = {value:#010x};\n" for name, value in sorted(ABSOLUTES.items())), encoding="utf-8")
     report = ROOT / "build" / "bk9e" / "link_skipped.txt"
     report.write_text("".join(f"{m} {s} {why}\n" for m, s, why in sorted(skipped)), encoding="utf-8")
     print(f"C objects linked: {len(results) - len(skipped)} functions ({total:,} bytes), "
