@@ -1,0 +1,43 @@
+#include "nitro/types.h"
+#include "nitro/fx_types.h"
+#include "nitro/fx.h"
+
+typedef struct HitResult {
+    s32 target;
+    s32 side;
+    s32 strength;
+    u8 pad_0c[0xc8];
+} HitResult;
+
+typedef struct HitUnit {
+    u8 pad_000[2];
+    s8 phase;
+    u8 pad_003;
+    fx32 progress;
+    u8 pad_008[0xd4 - 8];
+    VecFx32 position;
+} HitUnit;
+
+extern HitResult FindStrongestHit_020ab0c8(void *attacker, HitUnit *unit, VecFx32 *position, VecFx32 *offset);
+extern s16 AdvanceOwnerAnimation_020ab41c(HitUnit *owner, fx32 step);
+extern void AdvanceToSecondPhase_020ab5f0(HitUnit *unit);
+
+BOOL AdvanceHitUnit_020d3008(void *attacker, HitUnit *unit, fx32 step)
+{
+    VecFx32 position = unit->position;
+    VecFx32 offset;
+    offset.z = 0;
+    offset.y = 0;
+    offset.x = 0;
+    unit->progress += step;
+    if (unit->progress == FX32_ONE) {
+        FindStrongestHit_020ab0c8(attacker, unit, &position, &offset);
+    }
+    if (unit->phase == 1 && AdvanceOwnerAnimation_020ab41c(unit, step)) {
+        AdvanceToSecondPhase_020ab5f0(unit);
+    }
+    if (unit->phase == -1) {
+        return TRUE;
+    }
+    return FALSE;
+}

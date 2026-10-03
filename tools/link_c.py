@@ -52,6 +52,14 @@ def reloc_module(text: str) -> str | None:
     return f"ov{int(found.group(1)):03d}" if found else None
 
 
+def reloc_modules(text: str) -> list[str]:
+    found = re.fullmatch(r"overlays\(([\d,\s]+)\)", text)
+    if found:
+        return [f"ov{int(n):03d}" for n in found.group(1).split(",")]
+    single = reloc_module(text)
+    return [single] if single else []
+
+
 def load_symbols(module: str) -> list[list]:
     rows = []
     for line in (CONFIG / module_dir(module) / "symbols.txt").read_text(encoding="utf-8").splitlines():
@@ -167,14 +175,19 @@ def prepare(entry: dict, info: dict, canonical: dict, relocs: dict, addresses: d
         target_modules.discard(None)
         resolved = {reloc_module(m) for m in target_modules}
         if None in resolved or len(resolved) > 1:
-            return None, f"ambiguous target for {name}"
+            # Overlays sharing an address: any one defining a symbol there yields the same bytes.
+            options = [m for text in target_modules for m in reloc_modules(text)]
+            options = [m for m in options if any((m, c) in canonical for c in candidates)]
+            resolved = set(options[:1])
+            if not resolved:
+                return None, f"ambiguous target for {name}"
         if not resolved:
             order = (module, "arm9", "itcm", "dtcm")
             owners = [m for m in order if any((m, c) in canonical for c in candidates)]
             owners = owners or [m for m in order if RANGES[m][0] <= raw < RANGES[m][1]]
-            resolved = set(owners[:1]) or {m for (m, a) in canonical if a in candidates}
+            resolved = set(owners[:1]) or set(sorted(m for (m, a) in canonical if a in candidates)[:1])
             if len(resolved) != 1:
-                return None, f"no unique owner for {name}"
+                return None, f"no owner for {name}"
         owner = resolved.pop()
         target = raw & ~1 if raw & 1 and (owner, raw & ~1) in THUMB else raw
         new = canonical.get((owner, target))
