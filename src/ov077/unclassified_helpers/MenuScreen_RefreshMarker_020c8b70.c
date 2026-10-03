@@ -1,0 +1,42 @@
+#include "nitro/types.h"
+
+typedef struct MarkerInfo {
+    u8 pad_00[3];
+    u8 visible;
+    u16 x;
+    u16 y;
+} MarkerInfo;
+
+typedef struct Widget {
+    u8 pad_00[0x14];
+    int handle;
+} Widget;
+
+typedef struct MenuScreen {
+    u8 pad_00000[0x18];
+    void *container;
+    u8 pad_0001C[0x11c04 - 0x1c];
+    MarkerInfo *marker;
+} MenuScreen;
+
+extern void DrawDialogText_020c89d4(MenuScreen *screen);
+extern Widget *func_ov027_020b90a4(void *container, int elementId);
+extern void func_ov027_020b91c8(void *container, Widget *element, const s32 *position, int mode);
+extern void func_0204f204(void *scene, int handle, int paletteId);
+extern void func_ov027_020b9580(void *container, Widget *element, BOOL visible);
+
+void MenuScreen_RefreshMarker_020c8b70(MenuScreen *screen)
+{
+    DrawDialogText_020c89d4(screen);
+    if (screen->marker->visible) {
+        Widget *marker = func_ov027_020b90a4(screen->container, 0x2a);
+        s32 position[2];
+
+        position[0] = screen->marker->x << 12;
+        position[1] = screen->marker->y << 12;
+        func_ov027_020b91c8(screen->container, marker, position, 0);
+        func_0204f204(screen->container, marker->handle, 0);
+        func_ov027_020b9580(screen->container, marker, TRUE);
+    }
+}
+
