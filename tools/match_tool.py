@@ -113,6 +113,21 @@ RUNTIME_HELPERS = {
     "_ll_udiv": 0x02023D54,
     "_ll_sdiv": 0x02023BA4,
     "__strtoul": 0x02022128,
+    # Single-precision soft-float helpers, identified from their code.
+    "_fadd": 0x020245E8,
+    "_fsub": 0x02024818,
+    "_fmul": 0x02024408,
+    "_fdiv": 0x02024A9C,
+    "_fflt": 0x02023A98,
+    "_ffltu": 0x02023AE0,
+    "_ffix": 0x020241AC,
+    "_ffixu": 0x020241E0,
+    "_feq": 0x02023934,
+    "_fgeq": 0x020237B8,
+    "_fgr": 0x02023814,
+    "_fleq": 0x02023870,
+    "_fls": 0x020238D8,
+    "_f2d": 0x0202399C,
 }
 
 

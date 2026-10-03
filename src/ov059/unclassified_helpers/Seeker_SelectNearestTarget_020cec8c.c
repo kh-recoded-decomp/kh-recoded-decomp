@@ -1,0 +1,123 @@
+#include "nitro/types.h"
+#include "nitro/fx_types.h"
+
+typedef struct ObjectInfo {
+    u8 pad_00[0x5a];
+    u8 category;
+} ObjectInfo;
+
+typedef struct FieldObject {
+    struct FieldObject *next;
+    ObjectInfo *info;
+    u8 pad_08[0x32 - 0x8];
+    u8 actorId;
+} FieldObject;
+
+typedef struct TargetRef {
+    union {
+        FieldObject *object;
+        struct {
+            u16 eventId;
+            u16 subId;
+        } event;
+    } u;
+    int type;
+} TargetRef;
+
+typedef struct ActorBody {
+    u8 pad_00[0x18];
+    VecFx32 position;
+} ActorBody;
+
+typedef struct ActorNode {
+    u8 pad_000[0x10c];
+    ActorBody body;
+} ActorNode;
+
+typedef struct LockOn {
+    u8 pad_00[0x10];
+    TargetRef target;
+} LockOn;
+
+typedef struct Seeker {
+    u8 pad_000[0xd4];
+    VecFx32 position;
+    u8 pad_0e0[0x150 - 0xe0];
+    LockOn *lock;
+} Seeker;
+
+extern FieldObject *func_ov001_0208723c(void);
+extern BOOL IsTargetInVerticalRange_020cf100(TargetRef *ref);
+extern ActorNode *func_02036240(u32 actorId);
+extern void VEC_Subtract_01ff9e3c(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
+extern fx32 VEC_DotProduct_01ff9e6c(const VecFx32 *a, const VecFx32 *b);
+extern u16 func_ov001_02087928(void);
+extern u16 func_ov001_02087944(u16 startIndex);
+extern int QueryStageEventPlacement_02087bec(u32 id, int arg, VecFx32 *position, u16 *next);
+
+void Seeker_SelectNearestTarget_020cec8c(Seeker *seeker) {
+    VecFx32 eventPos;
+    VecFx32 diff;
+    VecFx32 offset;
+    VecFx32 eventDiff;
+    VecFx32 eventOffset;
+    TargetRef ref;
+    TargetRef eventRef;
+    TargetRef candidate;
+    TargetRef eventCandidate;
+    u16 next;
+    VecFx32 *origin;
+    fx64 best;
+    LockOn *lock = seeker->lock;
+    FieldObject *object;
+    u16 event;
+    u16 sub;
+
+    origin = &seeker->position;
+    best = 0x7fffffffffffffffLL;
+    lock->target.type = 0;
+    for (object = func_ov001_0208723c(); object != NULL; object = object->next) {
+        if (object->info->category == 6) {
+            candidate.u.object = object;
+            candidate.type = 1;
+            ref = candidate;
+            if (IsTargetInVerticalRange_020cf100(&ref)) {
+                fx64 dist;
+                ActorBody *body = &func_02036240(object->actorId)->body;
+                VEC_Subtract_01ff9e3c(&body->position, origin, &diff);
+                offset = diff;
+                dist = VEC_DotProduct_01ff9e6c(&offset, &offset);
+                if (dist < best) {
+                    best = dist;
+                    lock->target = candidate;
+                }
+            }
+        }
+    }
+    for (event = func_ov001_02087928(); event != 0; event = func_ov001_02087944(event)) {
+        BOOL found;
+        sub = 0;
+        found = QueryStageEventPlacement_02087bec(event, 0, &eventPos, &next);
+        while (found) {
+            eventCandidate.u.event.eventId = event;
+            eventCandidate.u.event.subId = sub;
+            eventCandidate.type = 2;
+            eventRef = eventCandidate;
+            if (IsTargetInVerticalRange_020cf100(&eventRef)) {
+                fx64 dist;
+                VEC_Subtract_01ff9e3c(&eventPos, origin, &eventDiff);
+                eventOffset = eventDiff;
+                dist = VEC_DotProduct_01ff9e6c(&eventOffset, &eventOffset);
+                if (dist < best) {
+                    best = dist;
+                    lock->target = eventCandidate;
+                }
+            }
+            if (sub >= next) {
+                break;
+            }
+            sub = next;
+            found = QueryStageEventPlacement_02087bec(event, sub, &eventPos, &next);
+        }
+    }
+}
