@@ -329,8 +329,14 @@ def verify_matches(inv: dict[str, dict]) -> dict:
 def progress(write: bool = True) -> dict:
     from organization import build_hierarchy, markdown
 
+    import data_match
+
     inv = inventory()
     proof = verify_matches(inv)
+    data_verified, data_failures = data_match.verify_all()
+    data_total = data_match.totals()
+    for failure in data_failures:
+        print(f"Data source not verified: {failure}", file=sys.stderr)
     hierarchy = build_hierarchy(inv, proof["verified"], json.loads(
         (ROOT / "config/bk9e/organization.json").read_text(encoding="utf-8")))
     by_module = defaultdict(list)
@@ -363,7 +369,8 @@ def progress(write: bool = True) -> dict:
               "verified_at_utc": datetime.now(timezone.utc).isoformat(),
               "groups": dict(groups), "modules": module_rows, "matches": proof["verified"],
               "organization": hierarchy,
-              "assets": {"extracted_files": 805, "decompiled_files": 0}}
+              "assets": {"extracted_files": 805, "decompiled_files": 0},
+              "data": {"verified": data_verified, "total": data_total}}
     if write:
         out = ROOT / "build" / "progress.json"
         out.parent.mkdir(parents=True, exist_ok=True)
@@ -378,6 +385,12 @@ def progress(write: bool = True) -> dict:
                  "against the extracted ROM, including resolved relocations and literal pools. Recovered middleware "
                  "C is included and labelled by origin; original SDK binaries are never counted. No extracted binary, "
                  "delinked object, renamed symbol, or repacked ROM counts as decompiled source.", "",
+                 f"**Reconstructed data: {sum(data_verified.values()):,} / {sum(data_total.values()):,} "
+                 f"ARM9 data bytes** (rodata {data_verified['rodata']:,} / {data_total['rodata']:,}, "
+                 f"data {data_verified['data']:,} / {data_total['data']:,}, "
+                 f"bss {data_verified['bss']:,} / {data_total['bss']:,}). Each range is C in "
+                 "`data_matches.json`, compiled and compared byte for byte (.bss by size and symbol layout), "
+                 "and linked into the ROM by `link`.", "",
                  "| Target | C bytes / analysed code bytes | Identified function bytes | "
                  "C functions / identified functions | Assembly bytes | SDK bytes | Binary container bytes |",
                  "|---|---:|---:|---:|---:|---:|---:|"]
@@ -414,6 +427,7 @@ def progress(write: bool = True) -> dict:
     total_code = sum(g["code_bytes"] for g in groups.values())
     print(f"Verified C/C++: {total_c:,} / {total_code:,} analysed ARM9 code bytes "
           f"({100 * total_c / total_code if total_code else 0:.3f}%)")
+    print(f"Reconstructed data: {sum(data_verified.values()):,} / {sum(data_total.values()):,} ARM9 data bytes")
     print(f"Profiles: {len(module_rows)} modules; 105 overlays, ARM9 core/autoloads, ARM7")
     return result
 

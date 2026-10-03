@@ -24,6 +24,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "tools"))
 import compile_match  # noqa: E402
+import data_match  # noqa: E402
 
 CONFIG = ROOT / "config" / "bk9e" / "arm9"
 LINK_CONFIG = ROOT / "build" / "linkcfg" / "arm9"
@@ -193,6 +194,18 @@ def prepare(entry: dict, info: dict, canonical: dict, relocs: dict, addresses: d
     return data, "ok"
 
 
+def defined_globals(data: bytes, section_name: str) -> list[tuple[str, int]]:
+    _, _, sections = read_elf(data)
+    index = next(i for i, s in enumerate(sections) if s[10] == section_name)
+    return [(name, value) for _, name, value, _, info, shndx in symbols_of(data, sections)[2]
+            if shndx == index and info >> 4 == 1 and name]
+
+
+def undefined_names(data: bytes) -> list[str]:
+    _, _, sections = read_elf(data)
+    return [name for _, name, _, _, _, shndx in symbols_of(data, sections)[2] if shndx == 0 and name]
+
+
 MODULE_BYTES: dict[str, tuple[int, bytes]] = {}
 THUMB: set = set()
 SPANS: dict[str, dict[str, list]] = {}
@@ -244,6 +257,18 @@ def main() -> int:
         entry["_link_name"] = name if owners[name] == entry["module"] else f"{name}_{entry['module']}"
         if id(entry) in infos:
             infos[id(entry)]["row"][0] = entry["_link_name"]
+    data_entries = data_match.load()
+    data_names = {}
+    for entry in data_entries:
+        start = int(entry["start"], 16)
+        for name, offset in defined_globals(data_match.compile_source(entry), entry["section"]):
+            data_names[(entry["module"], start + offset)] = name
+    data_renamed = {}
+    for m in modules:
+        for row in symbols[m]:
+            if row[0] and (m, row[2]) in data_names and row[1] in ("data", "bss"):
+                data_renamed[(m, row[0])] = data_names[(m, row[2])]
+                row[0] = data_names[(m, row[2])]
     canonical = {(m, row[2]): row[0] for m in modules for row in symbols[m] if row[0] and row[1] != "label"}
     relocs = {m: load_relocs(m) for m in modules}
     THUMB.update((m, row[2]) for m in modules for row in symbols[m] if row[0] and "function(thumb" in row[3])
@@ -282,8 +307,30 @@ def main() -> int:
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_bytes(data)
         info = infos[id(entry)]
-        linked.setdefault(entry["module"], []).append((info["address"], info["size"], unit.as_posix()))
+        linked.setdefault(entry["module"], []).append((info["address"], info["size"], unit.as_posix(), ".text"))
+    index = data_match.symbol_index()
+    data_bytes = 0
+    for entry in data_entries:
+        data = data_match.compile_source(entry)
+        renames = {}
+        for name in undefined_names(data):
+            owner, target, _ = data_match.resolve(name, entry["module"], index)
+            new = canonical.get((owner, target), name)
+            if new != name:
+                renames[name] = new
+        if renames:
+            data = rename_symbols(data, renames)
+        unit = Path(entry["source"])
+        out = DELINKED / unit.with_suffix(".o")
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_bytes(data)
+        start, end = int(entry["start"], 16), int(entry["end"], 16)
+        linked.setdefault(entry["module"], []).append((start, end - start, unit.as_posix(), entry["section"]))
+        data_bytes += end - start
+        if not any(row[2] == end for row in symbols[entry["module"]] if row[0]):
+            EXTRAS.setdefault((entry["module"], end), f"data_{entry['module']}_{end:08x}")
     renamed = {(e["module"], e["symbol"]): e["_link_name"] for e in entries if id(e) in infos}
+    renamed.update(data_renamed)
     for module in modules:
         folder = LINK_CONFIG / module_dir(module)
         lines = []
@@ -300,14 +347,15 @@ def main() -> int:
         units = sorted(linked.get(module, []))
         if units:
             text = (CONFIG / module_dir(module) / "delinks.txt").read_text(encoding="utf-8").rstrip("\n") + "\n"
-            for start, size, source in units:
-                end = padded_end(module, start + size, symbols[module])
-                text += f"\n{source}:\n    complete\n    .text start:{start:#010x} end:{end:#010x}\n"
+            for start, size, source, section in units:
+                end = padded_end(module, start + size, symbols[module]) if section == ".text" else start + size
+                text += f"\n{source}:\n    complete\n    {section} start:{start:#010x} end:{end:#010x}\n"
             (folder / "delinks.txt").write_text(text, encoding="utf-8")
-    total = sum(size for units in linked.values() for _, size, _ in units)
+    total = sum(size for units in linked.values() for _, size, _, section in units if section == ".text")
     report = ROOT / "build" / "bk9e" / "link_skipped.txt"
     report.write_text("".join(f"{m} {s} {why}\n" for m, s, why in sorted(skipped)), encoding="utf-8")
-    print(f"C objects linked: {sum(map(len, linked.values()))} ({total:,} bytes); skipped {len(skipped)} -> {report}")
+    print(f"C objects linked: {len(results) - len(skipped)} functions ({total:,} bytes), "
+          f"{len(data_entries)} data units ({data_bytes:,} bytes); skipped {len(skipped)} -> {report}")
     return 0
 
 

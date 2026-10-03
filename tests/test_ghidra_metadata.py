@@ -61,4 +61,13 @@ class GhidraMetadataTests(unittest.TestCase):
             cm.validate_c_source(ROOT/entry['source'])
             self.assertIn(entry['understanding'],('gameplay','subsystem','unknown'))
 
+    def test_registered_data_sources_remain_self_contained_c(self):
+        path=ROOT/'data_matches.json'
+        entries=json.loads(path.read_text())['data'] if path.exists() else []
+        for entry in entries:
+            self.assertIn(entry['section'],('.rodata','.data','.bss'))
+            self.assertIn(entry['compiler'],cm.compiler_config()['variants'])
+            self.assertLess(int(entry['start'],16),int(entry['end'],16))
+            cm.validate_c_source(ROOT/entry['source'])
+
 if __name__=='__main__':unittest.main()
