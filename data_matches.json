@@ -135,6 +135,50 @@
     {
       "module": "arm9",
       "section": ".data",
+      "start": "0x02055c28",
+      "end": "0x02055c2c",
+      "source": "src/arm9/data/DataStrings_arm9_02055c28.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "arm9 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "arm9",
+      "section": ".data",
+      "start": "0x02055c2c",
+      "end": "0x02055c30",
+      "source": "src/arm9/data/DataStrings_arm9_02055c2c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "arm9 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "arm9",
+      "section": ".data",
+      "start": "0x02055c30",
+      "end": "0x02055c34",
+      "source": "src/arm9/data/DataStrings_arm9_02055c30.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "arm9 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "arm9",
+      "section": ".data",
+      "start": "0x02055c34",
+      "end": "0x02055c40",
+      "source": "src/arm9/data/DataStrings_arm9_02055c34.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "arm9 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "arm9",
+      "section": ".data",
       "start": "0x02055c40",
       "end": "0x02055c44",
       "source": "src/arm9/data/Data_arm9_02055c40.c",
@@ -311,6 +355,127 @@
     {
       "module": "arm9",
       "section": ".data",
+      "start": "0x02055f38",
+      "end": "0x02055f54",
+      "source": "src/arm9/data/DataStrings_arm9_02055f38.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "arm9 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "arm9",
+      "section": ".data",
+      "start": "0x02055f54",
+      "end": "0x02055f7c",
+      "source": "src/arm9/data/DataStrings_arm9_02055f54.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "arm9 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "arm9",
+      "section": ".data",
+      "start": "0x02055f7c",
+      "end": "0x02055f94",
+      "source": "src/arm9/data/DataStrings_arm9_02055f7c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "arm9 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "arm9",
+      "section": ".data",
+      "start": "0x02055f94",
+      "end": "0x02055fac",
+      "source": "src/arm9/data/DataStrings_arm9_02055f94.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "arm9 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "arm9",
+      "section": ".data",
+      "start": "0x02055fdc",
+      "end": "0x02055fe0",
+      "source": "src/arm9/data/DataStrings_arm9_02055fdc.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "arm9 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "arm9",
+      "section": ".data",
+      "start": "0x02055fe0",
+      "end": "0x02055fe4",
+      "source": "src/arm9/data/DataStrings_arm9_02055fe0.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "arm9 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "arm9",
+      "section": ".data",
+      "start": "0x02055fe4",
+      "end": "0x02055fe8",
+      "source": "src/arm9/data/DataStrings_arm9_02055fe4.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "arm9 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "arm9",
+      "section": ".data",
+      "start": "0x02055fe8",
+      "end": "0x02055fec",
+      "source": "src/arm9/data/DataStrings_arm9_02055fe8.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "arm9 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "arm9",
+      "section": ".data",
+      "start": "0x02055fec",
+      "end": "0x02055ff0",
+      "source": "src/arm9/data/DataStrings_arm9_02055fec.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "arm9 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "arm9",
+      "section": ".data",
+      "start": "0x02055ff0",
+      "end": "0x02055ff4",
+      "source": "src/arm9/data/DataStrings_arm9_02055ff0.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "arm9 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "arm9",
+      "section": ".data",
+      "start": "0x02055ff4",
+      "end": "0x02055ff8",
+      "source": "src/arm9/data/DataStrings_arm9_02055ff4.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "arm9 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "arm9",
+      "section": ".data",
       "start": "0x02055ff8",
       "end": "0x02056014",
       "source": "src/arm9/data/Data_arm9_02055ff8.c",
@@ -322,6 +487,61 @@
     {
       "module": "arm9",
       "section": ".data",
+      "start": "0x02056050",
+      "end": "0x02056054",
+      "source": "src/arm9/data/DataStrings_arm9_02056050.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "arm9 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "arm9",
+      "section": ".data",
+      "start": "0x02056134",
+      "end": "0x02056148",
+      "source": "src/arm9/data/DataStrings_arm9_02056134.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "arm9 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "arm9",
+      "section": ".data",
+      "start": "0x02056148",
+      "end": "0x0205614c",
+      "source": "src/arm9/data/DataStrings_arm9_02056148.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "arm9 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "arm9",
+      "section": ".data",
+      "start": "0x0205614c",
+      "end": "0x02056150",
+      "source": "src/arm9/data/DataStrings_arm9_0205614c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "arm9 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "arm9",
+      "section": ".data",
+      "start": "0x02056150",
+      "end": "0x0205615c",
+      "source": "src/arm9/data/DataStrings_arm9_02056150.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "arm9 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "arm9",
+      "section": ".data",
       "start": "0x0205615c",
       "end": "0x0205616c",
       "source": "src/arm9/data/Data_arm9_0205615c.c",
@@ -329,6 +549,50 @@
       "name": "arm9 pointer tables",
       "origin": "generated table",
       "behavior": "Tables of function and data pointers, each entry named by its target."
+    },
+    {
+      "module": "arm9",
+      "section": ".data",
+      "start": "0x0205616c",
+      "end": "0x02056188",
+      "source": "src/arm9/data/DataStrings_arm9_0205616c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "arm9 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "arm9",
+      "section": ".data",
+      "start": "0x02056188",
+      "end": "0x02056198",
+      "source": "src/arm9/data/DataStrings_arm9_02056188.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "arm9 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "arm9",
+      "section": ".data",
+      "start": "0x02056198",
+      "end": "0x020561a4",
+      "source": "src/arm9/data/DataStrings_arm9_02056198.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "arm9 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "arm9",
+      "section": ".data",
+      "start": "0x020561a4",
+      "end": "0x020561ac",
+      "source": "src/arm9/data/DataStrings_arm9_020561a4.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "arm9 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
     },
     {
       "module": "arm9",
@@ -1916,6 +2180,50 @@
     },
     {
       "module": "ov000",
+      "section": ".data",
+      "start": "0x02063938",
+      "end": "0x02063964",
+      "source": "src/ov000/data/DataStrings_ov000_02063938.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov000 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov000",
+      "section": ".data",
+      "start": "0x02063964",
+      "end": "0x0206397c",
+      "source": "src/ov000/data/DataStrings_ov000_02063964.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov000 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov000",
+      "section": ".data",
+      "start": "0x0206397c",
+      "end": "0x02063998",
+      "source": "src/ov000/data/DataStrings_ov000_0206397c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov000 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov000",
+      "section": ".data",
+      "start": "0x02063998",
+      "end": "0x020639a4",
+      "source": "src/ov000/data/DataStrings_ov000_02063998.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov000 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov000",
       "section": ".bss",
       "start": "0x02063a00",
       "end": "0x02063a04",
@@ -1938,6 +2246,17 @@
     },
     {
       "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209e5f4",
+      "end": "0x0209e604",
+      "source": "src/ov001/data/RodataStrings_ov001_0209e5f4.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov001",
       "section": ".data",
       "start": "0x0209e680",
       "end": "0x0209e6b4",
@@ -1946,6 +2265,94 @@
       "name": "ov001 pointer tables",
       "origin": "generated table",
       "behavior": "Tables of function and data pointers, each entry named by its target."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209e6b4",
+      "end": "0x0209e6c4",
+      "source": "src/ov001/data/DataStrings_ov001_0209e6b4.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209e6c4",
+      "end": "0x0209e6d0",
+      "source": "src/ov001/data/DataStrings_ov001_0209e6c4.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209e6d0",
+      "end": "0x0209e6d4",
+      "source": "src/ov001/data/DataStrings_ov001_0209e6d0.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209e6d4",
+      "end": "0x0209e6d8",
+      "source": "src/ov001/data/DataStrings_ov001_0209e6d4.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209e6d8",
+      "end": "0x0209e6dc",
+      "source": "src/ov001/data/DataStrings_ov001_0209e6d8.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209e6dc",
+      "end": "0x0209e6f0",
+      "source": "src/ov001/data/DataStrings_ov001_0209e6dc.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209e6f0",
+      "end": "0x0209e6f4",
+      "source": "src/ov001/data/DataStrings_ov001_0209e6f0.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209e6f4",
+      "end": "0x0209e6f8",
+      "source": "src/ov001/data/DataStrings_ov001_0209e6f4.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
     },
     {
       "module": "ov001",
@@ -1961,6 +2368,358 @@
     {
       "module": "ov001",
       "section": ".data",
+      "start": "0x0209e9f0",
+      "end": "0x0209e9fc",
+      "source": "src/ov001/data/DataStrings_ov001_0209e9f0.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209ea14",
+      "end": "0x0209ea1c",
+      "source": "src/ov001/data/DataStrings_ov001_0209ea14.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209ea1c",
+      "end": "0x0209ea24",
+      "source": "src/ov001/data/DataStrings_ov001_0209ea1c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209ea24",
+      "end": "0x0209ea2c",
+      "source": "src/ov001/data/DataStrings_ov001_0209ea24.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209ea2c",
+      "end": "0x0209ea34",
+      "source": "src/ov001/data/DataStrings_ov001_0209ea2c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209ea34",
+      "end": "0x0209ea3c",
+      "source": "src/ov001/data/DataStrings_ov001_0209ea34.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209ea3c",
+      "end": "0x0209ea44",
+      "source": "src/ov001/data/DataStrings_ov001_0209ea3c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209ea44",
+      "end": "0x0209ea4c",
+      "source": "src/ov001/data/DataStrings_ov001_0209ea44.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209ea4c",
+      "end": "0x0209ea54",
+      "source": "src/ov001/data/DataStrings_ov001_0209ea4c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209ea54",
+      "end": "0x0209ea5c",
+      "source": "src/ov001/data/DataStrings_ov001_0209ea54.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209ea5c",
+      "end": "0x0209ea70",
+      "source": "src/ov001/data/DataStrings_ov001_0209ea5c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209ea70",
+      "end": "0x0209ea78",
+      "source": "src/ov001/data/DataStrings_ov001_0209ea70.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209ea78",
+      "end": "0x0209ea8c",
+      "source": "src/ov001/data/DataStrings_ov001_0209ea78.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209ea8c",
+      "end": "0x0209ea98",
+      "source": "src/ov001/data/DataStrings_ov001_0209ea8c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209ea98",
+      "end": "0x0209eaac",
+      "source": "src/ov001/data/DataStrings_ov001_0209ea98.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209eaac",
+      "end": "0x0209eab0",
+      "source": "src/ov001/data/DataStrings_ov001_0209eaac.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209eae0",
+      "end": "0x0209eae4",
+      "source": "src/ov001/data/DataStrings_ov001_0209eae0.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209eae4",
+      "end": "0x0209eae8",
+      "source": "src/ov001/data/DataStrings_ov001_0209eae4.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209eb00",
+      "end": "0x0209eb0c",
+      "source": "src/ov001/data/DataStrings_ov001_0209eb00.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209eb0c",
+      "end": "0x0209eb18",
+      "source": "src/ov001/data/DataStrings_ov001_0209eb0c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209eb2c",
+      "end": "0x0209eb3c",
+      "source": "src/ov001/data/DataStrings_ov001_0209eb2c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209eb50",
+      "end": "0x0209eb64",
+      "source": "src/ov001/data/DataStrings_ov001_0209eb50.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209eb64",
+      "end": "0x0209eb74",
+      "source": "src/ov001/data/DataStrings_ov001_0209eb64.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209eb74",
+      "end": "0x0209eb80",
+      "source": "src/ov001/data/DataStrings_ov001_0209eb74.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209eb80",
+      "end": "0x0209eb8c",
+      "source": "src/ov001/data/DataStrings_ov001_0209eb80.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209eb8c",
+      "end": "0x0209eb98",
+      "source": "src/ov001/data/DataStrings_ov001_0209eb8c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209eb98",
+      "end": "0x0209ebb4",
+      "source": "src/ov001/data/DataStrings_ov001_0209eb98.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209ebb4",
+      "end": "0x0209ebc4",
+      "source": "src/ov001/data/DataStrings_ov001_0209ebb4.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209ebc4",
+      "end": "0x0209ebd4",
+      "source": "src/ov001/data/DataStrings_ov001_0209ebc4.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209ebd4",
+      "end": "0x0209ebe4",
+      "source": "src/ov001/data/DataStrings_ov001_0209ebd4.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209ebe4",
+      "end": "0x0209ebf4",
+      "source": "src/ov001/data/DataStrings_ov001_0209ebe4.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209ebf4",
+      "end": "0x0209ec04",
+      "source": "src/ov001/data/DataStrings_ov001_0209ebf4.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
       "start": "0x0209ec18",
       "end": "0x0209ec3c",
       "source": "src/ov001/data/Data_ov001_0209ec18.c",
@@ -1968,6 +2727,17 @@
       "name": "ov001 pointer tables",
       "origin": "generated table",
       "behavior": "Tables of function and data pointers, each entry named by its target."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209ec3c",
+      "end": "0x0209ec40",
+      "source": "src/ov001/data/DataStrings_ov001_0209ec3c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
     },
     {
       "module": "ov001",
@@ -2049,6 +2819,94 @@
     {
       "module": "ov001",
       "section": ".data",
+      "start": "0x0209ed0c",
+      "end": "0x0209ed24",
+      "source": "src/ov001/data/DataStrings_ov001_0209ed0c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209ed24",
+      "end": "0x0209ed3c",
+      "source": "src/ov001/data/DataStrings_ov001_0209ed24.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209ed3c",
+      "end": "0x0209ed54",
+      "source": "src/ov001/data/DataStrings_ov001_0209ed3c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209ed54",
+      "end": "0x0209ed6c",
+      "source": "src/ov001/data/DataStrings_ov001_0209ed54.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209ed70",
+      "end": "0x0209ed94",
+      "source": "src/ov001/data/DataStrings_ov001_0209ed70.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209ed94",
+      "end": "0x0209eda8",
+      "source": "src/ov001/data/DataStrings_ov001_0209ed94.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209eda8",
+      "end": "0x0209edb8",
+      "source": "src/ov001/data/DataStrings_ov001_0209eda8.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209edb8",
+      "end": "0x0209edc4",
+      "source": "src/ov001/data/DataStrings_ov001_0209edb8.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
       "start": "0x0209eeb0",
       "end": "0x0209eec8",
       "source": "src/ov001/data/Data_ov001_0209eeb0.c",
@@ -2093,6 +2951,61 @@
     {
       "module": "ov001",
       "section": ".data",
+      "start": "0x0209efd4",
+      "end": "0x0209efe4",
+      "source": "src/ov001/data/DataStrings_ov001_0209efd4.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209efe4",
+      "end": "0x0209efec",
+      "source": "src/ov001/data/DataStrings_ov001_0209efe4.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209efec",
+      "end": "0x0209eff0",
+      "source": "src/ov001/data/DataStrings_ov001_0209efec.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209f018",
+      "end": "0x0209f020",
+      "source": "src/ov001/data/DataStrings_ov001_0209f018.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209f020",
+      "end": "0x0209f028",
+      "source": "src/ov001/data/DataStrings_ov001_0209f020.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
       "start": "0x0209f028",
       "end": "0x0209f160",
       "source": "src/ov001/data/Data_ov001_0209f028.c",
@@ -2100,6 +3013,61 @@
       "name": "ov001 pointer tables",
       "origin": "generated table",
       "behavior": "Tables of function and data pointers, each entry named by its target."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209f160",
+      "end": "0x0209f174",
+      "source": "src/ov001/data/DataStrings_ov001_0209f160.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209f2e0",
+      "end": "0x0209f2f0",
+      "source": "src/ov001/data/DataStrings_ov001_0209f2e0.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209f2f0",
+      "end": "0x0209f2f4",
+      "source": "src/ov001/data/DataStrings_ov001_0209f2f0.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209f2f4",
+      "end": "0x0209f304",
+      "source": "src/ov001/data/DataStrings_ov001_0209f2f4.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209f318",
+      "end": "0x0209f324",
+      "source": "src/ov001/data/DataStrings_ov001_0209f318.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
     },
     {
       "module": "ov001",
@@ -2126,6 +3094,17 @@
     {
       "module": "ov001",
       "section": ".data",
+      "start": "0x020a0274",
+      "end": "0x020a0278",
+      "source": "src/ov001/data/DataStrings_ov001_020a0274.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
       "start": "0x020a0278",
       "end": "0x020a02a8",
       "source": "src/ov001/data/Data_ov001_020a0278.c",
@@ -2133,6 +3112,105 @@
       "name": "ov001 pointer tables",
       "origin": "generated table",
       "behavior": "Tables of function and data pointers, each entry named by its target."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x020a02dc",
+      "end": "0x020a02f4",
+      "source": "src/ov001/data/DataStrings_ov001_020a02dc.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x020a03d4",
+      "end": "0x020a03e4",
+      "source": "src/ov001/data/DataStrings_ov001_020a03d4.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x020a03e4",
+      "end": "0x020a03f4",
+      "source": "src/ov001/data/DataStrings_ov001_020a03e4.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x020a03f4",
+      "end": "0x020a0404",
+      "source": "src/ov001/data/DataStrings_ov001_020a03f4.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x020a0404",
+      "end": "0x020a0414",
+      "source": "src/ov001/data/DataStrings_ov001_020a0404.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x020a0414",
+      "end": "0x020a0418",
+      "source": "src/ov001/data/DataStrings_ov001_020a0414.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x020a0418",
+      "end": "0x020a041c",
+      "source": "src/ov001/data/DataStrings_ov001_020a0418.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x020a041c",
+      "end": "0x020a0438",
+      "source": "src/ov001/data/DataStrings_ov001_020a041c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x020a043c",
+      "end": "0x020a0460",
+      "source": "src/ov001/data/DataStrings_ov001_020a043c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov001 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
     },
     {
       "module": "ov001",
@@ -2423,6 +3501,39 @@
     {
       "module": "ov002",
       "section": ".data",
+      "start": "0x0206c290",
+      "end": "0x0206c2a0",
+      "source": "src/ov002/data/DataStrings_ov002_0206c290.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov002 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov002",
+      "section": ".data",
+      "start": "0x0206c2a0",
+      "end": "0x0206c2c4",
+      "source": "src/ov002/data/DataStrings_ov002_0206c2a0.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov002 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov002",
+      "section": ".data",
+      "start": "0x0206c2d8",
+      "end": "0x0206c2ec",
+      "source": "src/ov002/data/DataStrings_ov002_0206c2d8.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov002 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov002",
+      "section": ".data",
       "start": "0x0206c2ec",
       "end": "0x0206c2f0",
       "source": "src/ov002/data/Data_ov002_0206c2ec.c",
@@ -2456,6 +3567,17 @@
     {
       "module": "ov002",
       "section": ".data",
+      "start": "0x0206c35c",
+      "end": "0x0206c364",
+      "source": "src/ov002/data/DataStrings_ov002_0206c35c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov002 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov002",
+      "section": ".data",
       "start": "0x0206c364",
       "end": "0x0206c374",
       "source": "src/ov002/data/Data_ov002_0206c364.c",
@@ -2463,6 +3585,39 @@
       "name": "ov002 pointer tables",
       "origin": "generated table",
       "behavior": "Tables of function and data pointers, each entry named by its target."
+    },
+    {
+      "module": "ov002",
+      "section": ".data",
+      "start": "0x0206c374",
+      "end": "0x0206c388",
+      "source": "src/ov002/data/DataStrings_ov002_0206c374.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov002 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov002",
+      "section": ".data",
+      "start": "0x0206c388",
+      "end": "0x0206c39c",
+      "source": "src/ov002/data/DataStrings_ov002_0206c388.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov002 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov002",
+      "section": ".data",
+      "start": "0x0206c39c",
+      "end": "0x0206c3c8",
+      "source": "src/ov002/data/DataStrings_ov002_0206c39c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov002 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
     },
     {
       "module": "ov002",
@@ -2485,6 +3640,28 @@
       "name": "ov002 pointer tables",
       "origin": "generated table",
       "behavior": "Tables of function and data pointers, each entry named by its target."
+    },
+    {
+      "module": "ov002",
+      "section": ".data",
+      "start": "0x0206c410",
+      "end": "0x0206c41c",
+      "source": "src/ov002/data/DataStrings_ov002_0206c410.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov002 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov002",
+      "section": ".data",
+      "start": "0x0206c438",
+      "end": "0x0206c460",
+      "source": "src/ov002/data/DataStrings_ov002_0206c438.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov002 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
     },
     {
       "module": "ov002",
@@ -2544,6 +3721,39 @@
     {
       "module": "ov003",
       "section": ".data",
+      "start": "0x02065854",
+      "end": "0x02065868",
+      "source": "src/ov003/data/DataStrings_ov003_02065854.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov003 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov003",
+      "section": ".data",
+      "start": "0x02065868",
+      "end": "0x02065874",
+      "source": "src/ov003/data/DataStrings_ov003_02065868.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov003 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov003",
+      "section": ".data",
+      "start": "0x02065874",
+      "end": "0x02065880",
+      "source": "src/ov003/data/DataStrings_ov003_02065874.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov003 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov003",
+      "section": ".data",
       "start": "0x02065880",
       "end": "0x020658a8",
       "source": "src/ov003/data/Data_ov003_02065880.c",
@@ -2584,6 +3794,39 @@
       "name": "ov004 pointer tables",
       "origin": "generated table",
       "behavior": "Tables of function and data pointers, each entry named by its target."
+    },
+    {
+      "module": "ov004",
+      "section": ".data",
+      "start": "0x02064544",
+      "end": "0x02064564",
+      "source": "src/ov004/data/DataStrings_ov004_02064544.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov004 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov004",
+      "section": ".data",
+      "start": "0x02064564",
+      "end": "0x02064575",
+      "source": "src/ov004/data/DataStrings_ov004_02064564.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov004 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov004",
+      "section": ".data",
+      "start": "0x02064578",
+      "end": "0x0206459d",
+      "source": "src/ov004/data/DataStrings_ov004_02064578.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov004 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
     },
     {
       "module": "ov004",
@@ -2631,6 +3874,17 @@
     },
     {
       "module": "ov008",
+      "section": ".rodata",
+      "start": "0x020a1394",
+      "end": "0x020a13a4",
+      "source": "src/ov008/data/RodataStrings_ov008_020a1394.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov008 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov008",
       "section": ".data",
       "start": "0x020a13c0",
       "end": "0x020a13e0",
@@ -2639,6 +3893,17 @@
       "name": "ov008 pointer tables",
       "origin": "generated table",
       "behavior": "Tables of function and data pointers, each entry named by its target."
+    },
+    {
+      "module": "ov008",
+      "section": ".data",
+      "start": "0x020a1408",
+      "end": "0x020a1420",
+      "source": "src/ov008/data/DataStrings_ov008_020a1408.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov008 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
     },
     {
       "module": "ov009",
@@ -2661,6 +3926,28 @@
       "name": "ov010 pointer tables",
       "origin": "generated table",
       "behavior": "Tables of function and data pointers, each entry named by its target."
+    },
+    {
+      "module": "ov010",
+      "section": ".data",
+      "start": "0x020a1da0",
+      "end": "0x020a1db0",
+      "source": "src/ov010/data/DataStrings_ov010_020a1da0.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov010 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov010",
+      "section": ".data",
+      "start": "0x020a1db0",
+      "end": "0x020a1dc0",
+      "source": "src/ov010/data/DataStrings_ov010_020a1db0.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov010 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
     },
     {
       "module": "ov010",
@@ -2731,6 +4018,61 @@
     {
       "module": "ov013",
       "section": ".data",
+      "start": "0x02074b58",
+      "end": "0x02074b6c",
+      "source": "src/ov013/data/DataStrings_ov013_02074b58.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov013 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov013",
+      "section": ".data",
+      "start": "0x02074b6c",
+      "end": "0x02074b80",
+      "source": "src/ov013/data/DataStrings_ov013_02074b6c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov013 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov013",
+      "section": ".data",
+      "start": "0x02074b80",
+      "end": "0x02074b94",
+      "source": "src/ov013/data/DataStrings_ov013_02074b80.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov013 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov013",
+      "section": ".data",
+      "start": "0x02074b94",
+      "end": "0x02074ba8",
+      "source": "src/ov013/data/DataStrings_ov013_02074b94.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov013 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov013",
+      "section": ".data",
+      "start": "0x02074ba8",
+      "end": "0x02074bbc",
+      "source": "src/ov013/data/DataStrings_ov013_02074ba8.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov013 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov013",
+      "section": ".data",
       "start": "0x02074bbc",
       "end": "0x02074bc0",
       "source": "src/ov013/data/Data_ov013_02074bbc.c",
@@ -2749,6 +4091,39 @@
       "name": "ov013 pointer tables",
       "origin": "generated table",
       "behavior": "Tables of function and data pointers, each entry named by its target."
+    },
+    {
+      "module": "ov013",
+      "section": ".data",
+      "start": "0x02074c4c",
+      "end": "0x02074c58",
+      "source": "src/ov013/data/DataStrings_ov013_02074c4c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov013 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov013",
+      "section": ".data",
+      "start": "0x02074c58",
+      "end": "0x02074c64",
+      "source": "src/ov013/data/DataStrings_ov013_02074c58.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov013 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov013",
+      "section": ".data",
+      "start": "0x02074c64",
+      "end": "0x02074c70",
+      "source": "src/ov013/data/DataStrings_ov013_02074c64.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov013 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
     },
     {
       "module": "ov013",
@@ -2785,6 +4160,39 @@
     },
     {
       "module": "ov014",
+      "section": ".data",
+      "start": "0x0206f91c",
+      "end": "0x0206f940",
+      "source": "src/ov014/data/DataStrings_ov014_0206f91c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov014 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov014",
+      "section": ".data",
+      "start": "0x0206f940",
+      "end": "0x0206f954",
+      "source": "src/ov014/data/DataStrings_ov014_0206f940.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov014 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov014",
+      "section": ".data",
+      "start": "0x0206f960",
+      "end": "0x0206f9a0",
+      "source": "src/ov014/data/DataStrings_ov014_0206f960.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov014 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov014",
       "section": ".bss",
       "start": "0x0206f9a0",
       "end": "0x0206f9c0",
@@ -2808,6 +4216,50 @@
     {
       "module": "ov015",
       "section": ".data",
+      "start": "0x0207e730",
+      "end": "0x0207e744",
+      "source": "src/ov015/data/DataStrings_ov015_0207e730.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov015 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov015",
+      "section": ".data",
+      "start": "0x0207e744",
+      "end": "0x0207e758",
+      "source": "src/ov015/data/DataStrings_ov015_0207e744.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov015 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov015",
+      "section": ".data",
+      "start": "0x0207e758",
+      "end": "0x0207e76c",
+      "source": "src/ov015/data/DataStrings_ov015_0207e758.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov015 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov015",
+      "section": ".data",
+      "start": "0x0207e76c",
+      "end": "0x0207e780",
+      "source": "src/ov015/data/DataStrings_ov015_0207e76c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov015 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov015",
+      "section": ".data",
       "start": "0x0207e780",
       "end": "0x0207e784",
       "source": "src/ov015/data/Data_ov015_0207e780.c",
@@ -2826,6 +4278,39 @@
       "name": "ov015 pointer tables",
       "origin": "generated table",
       "behavior": "Tables of function and data pointers, each entry named by its target."
+    },
+    {
+      "module": "ov015",
+      "section": ".data",
+      "start": "0x0207e7e0",
+      "end": "0x0207e7ec",
+      "source": "src/ov015/data/DataStrings_ov015_0207e7e0.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov015 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov015",
+      "section": ".data",
+      "start": "0x0207e7ec",
+      "end": "0x0207e7f8",
+      "source": "src/ov015/data/DataStrings_ov015_0207e7ec.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov015 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov015",
+      "section": ".data",
+      "start": "0x0207e7f8",
+      "end": "0x0207e804",
+      "source": "src/ov015/data/DataStrings_ov015_0207e7f8.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov015 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
     },
     {
       "module": "ov015",
@@ -2859,6 +4344,28 @@
       "name": "ov015 pointer tables",
       "origin": "generated table",
       "behavior": "Tables of function and data pointers, each entry named by its target."
+    },
+    {
+      "module": "ov015",
+      "section": ".data",
+      "start": "0x0207e8ac",
+      "end": "0x0207e8c8",
+      "source": "src/ov015/data/DataStrings_ov015_0207e8ac.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov015 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov015",
+      "section": ".data",
+      "start": "0x0207e8c8",
+      "end": "0x0207e8d8",
+      "source": "src/ov015/data/DataStrings_ov015_0207e8c8.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov015 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
     },
     {
       "module": "ov015",
@@ -2993,6 +4500,17 @@
       "behavior": "Uninitialised globals, one per known symbol, sized by layout."
     },
     {
+      "module": "ov016",
+      "section": ".data",
+      "start": "0x020a6ea8",
+      "end": "0x020a6ec0",
+      "source": "src/ov016/data/DataStrings_ov016_020a6ea8.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov016 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
       "module": "ov017",
       "section": ".rodata",
       "start": "0x020a5e04",
@@ -3037,6 +4555,17 @@
       "behavior": "Tables of function and data pointers, each entry named by its target."
     },
     {
+      "module": "ov017",
+      "section": ".data",
+      "start": "0x020a5f18",
+      "end": "0x020a5f40",
+      "source": "src/ov017/data/DataStrings_ov017_020a5f18.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov017 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
       "module": "ov018",
       "section": ".data",
       "start": "0x020a3840",
@@ -3046,6 +4575,17 @@
       "name": "ov018 pointer tables",
       "origin": "generated table",
       "behavior": "Tables of function and data pointers, each entry named by its target."
+    },
+    {
+      "module": "ov018",
+      "section": ".data",
+      "start": "0x020a3850",
+      "end": "0x020a3860",
+      "source": "src/ov018/data/DataStrings_ov018_020a3850.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov018 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
     },
     {
       "module": "ov019",
@@ -3059,6 +4599,17 @@
       "behavior": "Tables of function and data pointers, each entry named by its target."
     },
     {
+      "module": "ov019",
+      "section": ".data",
+      "start": "0x020a3690",
+      "end": "0x020a36a0",
+      "source": "src/ov019/data/DataStrings_ov019_020a3690.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov019 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
       "module": "ov020",
       "section": ".data",
       "start": "0x020a3a40",
@@ -3068,6 +4619,61 @@
       "name": "ov020 pointer tables",
       "origin": "generated table",
       "behavior": "Tables of function and data pointers, each entry named by its target."
+    },
+    {
+      "module": "ov021",
+      "section": ".rodata",
+      "start": "0x020b4fc8",
+      "end": "0x020b4fd8",
+      "source": "src/ov021/data/RodataStrings_ov021_020b4fc8.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov021 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov021",
+      "section": ".rodata",
+      "start": "0x020b4fe4",
+      "end": "0x020b4ff4",
+      "source": "src/ov021/data/RodataStrings_ov021_020b4fe4.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov021 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov021",
+      "section": ".data",
+      "start": "0x020b51e0",
+      "end": "0x020b51ec",
+      "source": "src/ov021/data/DataStrings_ov021_020b51e0.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov021 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov021",
+      "section": ".data",
+      "start": "0x020b51ec",
+      "end": "0x020b51f4",
+      "source": "src/ov021/data/DataStrings_ov021_020b51ec.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov021 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov021",
+      "section": ".data",
+      "start": "0x020b51f4",
+      "end": "0x020b51fc",
+      "source": "src/ov021/data/DataStrings_ov021_020b51f4.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov021 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
     },
     {
       "module": "ov021",
@@ -3083,6 +4689,61 @@
     {
       "module": "ov021",
       "section": ".data",
+      "start": "0x020b5208",
+      "end": "0x020b5218",
+      "source": "src/ov021/data/DataStrings_ov021_020b5208.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov021 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov021",
+      "section": ".data",
+      "start": "0x020b5218",
+      "end": "0x020b5228",
+      "source": "src/ov021/data/DataStrings_ov021_020b5218.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov021 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov021",
+      "section": ".data",
+      "start": "0x020b5228",
+      "end": "0x020b5238",
+      "source": "src/ov021/data/DataStrings_ov021_020b5228.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov021 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov021",
+      "section": ".data",
+      "start": "0x020b5238",
+      "end": "0x020b5248",
+      "source": "src/ov021/data/DataStrings_ov021_020b5238.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov021 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov021",
+      "section": ".data",
+      "start": "0x020b5248",
+      "end": "0x020b5258",
+      "source": "src/ov021/data/DataStrings_ov021_020b5248.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov021 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov021",
+      "section": ".data",
       "start": "0x020b5258",
       "end": "0x020b5274",
       "source": "src/ov021/data/Data_ov021_020b5258.c",
@@ -3090,6 +4751,28 @@
       "name": "ov021 pointer tables",
       "origin": "generated table",
       "behavior": "Tables of function and data pointers, each entry named by its target."
+    },
+    {
+      "module": "ov021",
+      "section": ".data",
+      "start": "0x020b5274",
+      "end": "0x020b5284",
+      "source": "src/ov021/data/DataStrings_ov021_020b5274.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov021 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov021",
+      "section": ".data",
+      "start": "0x020b5284",
+      "end": "0x020b5290",
+      "source": "src/ov021/data/DataStrings_ov021_020b5284.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov021 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
     },
     {
       "module": "ov021",
@@ -3226,6 +4909,17 @@
     {
       "module": "ov022",
       "section": ".data",
+      "start": "0x020b7ccc",
+      "end": "0x020b7ce0",
+      "source": "src/ov022/data/DataStrings_ov022_020b7ccc.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov022 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov022",
+      "section": ".data",
       "start": "0x020b7ce0",
       "end": "0x020b7d10",
       "source": "src/ov022/data/Data_ov022_020b7ce0.c",
@@ -3233,6 +4927,17 @@
       "name": "ov022 pointer tables",
       "origin": "generated table",
       "behavior": "Tables of function and data pointers, each entry named by its target."
+    },
+    {
+      "module": "ov022",
+      "section": ".data",
+      "start": "0x020b7d10",
+      "end": "0x020b7d28",
+      "source": "src/ov022/data/DataStrings_ov022_020b7d10.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov022 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
     },
     {
       "module": "ov022",
@@ -3280,6 +4985,17 @@
     },
     {
       "module": "ov023",
+      "section": ".data",
+      "start": "0x020b6f20",
+      "end": "0x020b6f60",
+      "source": "src/ov023/data/DataStrings_ov023_020b6f20.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov023 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov023",
       "section": ".bss",
       "start": "0x020b6f60",
       "end": "0x020b6f64",
@@ -3299,6 +5015,61 @@
       "name": "ov023 .bss layout",
       "origin": "generated layout",
       "behavior": "Uninitialised globals, one per known symbol, sized by layout."
+    },
+    {
+      "module": "ov024",
+      "section": ".rodata",
+      "start": "0x020b7384",
+      "end": "0x020b7388",
+      "source": "src/ov024/data/RodataStrings_ov024_020b7384.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov024 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov024",
+      "section": ".data",
+      "start": "0x020b7494",
+      "end": "0x020b74ac",
+      "source": "src/ov024/data/DataStrings_ov024_020b7494.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov024 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov024",
+      "section": ".data",
+      "start": "0x020b74ac",
+      "end": "0x020b74c4",
+      "source": "src/ov024/data/DataStrings_ov024_020b74ac.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov024 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov024",
+      "section": ".data",
+      "start": "0x020b74c4",
+      "end": "0x020b74e8",
+      "source": "src/ov024/data/DataStrings_ov024_020b74c4.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov024 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov024",
+      "section": ".data",
+      "start": "0x020b74e8",
+      "end": "0x020b7520",
+      "source": "src/ov024/data/DataStrings_ov024_020b74e8.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov024 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
     },
     {
       "module": "ov024",
@@ -3324,6 +5095,17 @@
     },
     {
       "module": "ov025",
+      "section": ".data",
+      "start": "0x020b773c",
+      "end": "0x020b7760",
+      "source": "src/ov025/data/DataStrings_ov025_020b773c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov025 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov025",
       "section": ".bss",
       "start": "0x020b7760",
       "end": "0x020b7780",
@@ -3332,6 +5114,17 @@
       "name": "ov025 .bss layout",
       "origin": "generated layout",
       "behavior": "Uninitialised globals, one per known symbol, sized by layout."
+    },
+    {
+      "module": "ov026",
+      "section": ".data",
+      "start": "0x020b5ad8",
+      "end": "0x020b5b00",
+      "source": "src/ov026/data/DataStrings_ov026_020b5ad8.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov026 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
     },
     {
       "module": "ov026",
@@ -3444,6 +5237,17 @@
     },
     {
       "module": "ov032",
+      "section": ".data",
+      "start": "0x020c0020",
+      "end": "0x020c0030",
+      "source": "src/ov032/data/DataStrings_ov032_020c0020.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov032 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov032",
       "section": ".bss",
       "start": "0x020c0060",
       "end": "0x020c0080",
@@ -3510,6 +5314,83 @@
     },
     {
       "module": "ov034",
+      "section": ".data",
+      "start": "0x020bf970",
+      "end": "0x020bf972",
+      "source": "src/ov034/data/DataStrings_ov034_020bf970.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov034 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov034",
+      "section": ".data",
+      "start": "0x020c0e88",
+      "end": "0x020c0e98",
+      "source": "src/ov034/data/DataStrings_ov034_020c0e88.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov034 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov034",
+      "section": ".data",
+      "start": "0x020c0e9c",
+      "end": "0x020c0ec8",
+      "source": "src/ov034/data/DataStrings_ov034_020c0e9c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov034 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov034",
+      "section": ".data",
+      "start": "0x020c0ec8",
+      "end": "0x020c0edc",
+      "source": "src/ov034/data/DataStrings_ov034_020c0ec8.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov034 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov034",
+      "section": ".data",
+      "start": "0x020c0edc",
+      "end": "0x020c0ef0",
+      "source": "src/ov034/data/DataStrings_ov034_020c0edc.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov034 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov034",
+      "section": ".data",
+      "start": "0x020c0ef0",
+      "end": "0x020c0f00",
+      "source": "src/ov034/data/DataStrings_ov034_020c0ef0.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov034 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov034",
+      "section": ".data",
+      "start": "0x020c0f44",
+      "end": "0x020c0f80",
+      "source": "src/ov034/data/DataStrings_ov034_020c0f44.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov034 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov034",
       "section": ".bss",
       "start": "0x020c0f80",
       "end": "0x020c1020",
@@ -3529,6 +5410,28 @@
       "name": "ov035 pointer tables",
       "origin": "generated table",
       "behavior": "Tables of function and data pointers, each entry named by its target."
+    },
+    {
+      "module": "ov035",
+      "section": ".data",
+      "start": "0x020bc4a0",
+      "end": "0x020bc4a8",
+      "source": "src/ov035/data/DataStrings_ov035_020bc4a0.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov035 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov035",
+      "section": ".data",
+      "start": "0x020bc4a9",
+      "end": "0x020bc4b8",
+      "source": "src/ov035/data/DataStrings_ov035_020bc4a9.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov035 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
     },
     {
       "module": "ov035",
@@ -3555,6 +5458,17 @@
     {
       "module": "ov036",
       "section": ".rodata",
+      "start": "0x020c340c",
+      "end": "0x020c340e",
+      "source": "src/ov036/data/RodataStrings_ov036_020c340c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov036 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov036",
+      "section": ".rodata",
       "start": "0x020c3434",
       "end": "0x020c346c",
       "source": "src/ov036/data/Rodata_ov036_020c3434.c",
@@ -3577,6 +5491,39 @@
     {
       "module": "ov036",
       "section": ".data",
+      "start": "0x020c36f8",
+      "end": "0x020c3714",
+      "source": "src/ov036/data/DataStrings_ov036_020c36f8.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov036 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov036",
+      "section": ".data",
+      "start": "0x020c3714",
+      "end": "0x020c3724",
+      "source": "src/ov036/data/DataStrings_ov036_020c3714.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov036 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov036",
+      "section": ".data",
+      "start": "0x020c3724",
+      "end": "0x020c373c",
+      "source": "src/ov036/data/DataStrings_ov036_020c3724.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov036 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov036",
+      "section": ".data",
       "start": "0x020c373c",
       "end": "0x020c383c",
       "source": "src/ov036/data/Data_ov036_020c373c.c",
@@ -3584,6 +5531,28 @@
       "name": "ov036 pointer tables",
       "origin": "generated table",
       "behavior": "Tables of function and data pointers, each entry named by its target."
+    },
+    {
+      "module": "ov036",
+      "section": ".data",
+      "start": "0x020c383c",
+      "end": "0x020c3840",
+      "source": "src/ov036/data/DataStrings_ov036_020c383c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov036 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov036",
+      "section": ".data",
+      "start": "0x020c3840",
+      "end": "0x020c3844",
+      "source": "src/ov036/data/DataStrings_ov036_020c3840.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov036 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
     },
     {
       "module": "ov036",
@@ -3617,6 +5586,39 @@
       "name": "ov036 pointer tables",
       "origin": "generated table",
       "behavior": "Tables of function and data pointers, each entry named by its target."
+    },
+    {
+      "module": "ov036",
+      "section": ".data",
+      "start": "0x020c38c4",
+      "end": "0x020c38dc",
+      "source": "src/ov036/data/DataStrings_ov036_020c38c4.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov036 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov036",
+      "section": ".data",
+      "start": "0x020c38dc",
+      "end": "0x020c38f4",
+      "source": "src/ov036/data/DataStrings_ov036_020c38dc.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov036 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov036",
+      "section": ".data",
+      "start": "0x020c38f4",
+      "end": "0x020c390c",
+      "source": "src/ov036/data/DataStrings_ov036_020c38f4.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov036 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
     },
     {
       "module": "ov036",
@@ -3708,6 +5710,61 @@
     },
     {
       "module": "ov037",
+      "section": ".data",
+      "start": "0x020bb6e4",
+      "end": "0x020bb6f4",
+      "source": "src/ov037/data/DataStrings_ov037_020bb6e4.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov037 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov037",
+      "section": ".data",
+      "start": "0x020bb6f4",
+      "end": "0x020bb704",
+      "source": "src/ov037/data/DataStrings_ov037_020bb6f4.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov037 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov037",
+      "section": ".data",
+      "start": "0x020bb704",
+      "end": "0x020bb728",
+      "source": "src/ov037/data/DataStrings_ov037_020bb704.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov037 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov037",
+      "section": ".data",
+      "start": "0x020bb728",
+      "end": "0x020bb750",
+      "source": "src/ov037/data/DataStrings_ov037_020bb728.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov037 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov037",
+      "section": ".data",
+      "start": "0x020bb750",
+      "end": "0x020bb760",
+      "source": "src/ov037/data/DataStrings_ov037_020bb750.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov037 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov037",
       "section": ".bss",
       "start": "0x020bb760",
       "end": "0x020bb780",
@@ -3752,6 +5809,17 @@
     },
     {
       "module": "ov038",
+      "section": ".data",
+      "start": "0x020bbdbc",
+      "end": "0x020bbdf8",
+      "source": "src/ov038/data/DataStrings_ov038_020bbdbc.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov038 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov038",
       "section": ".bss",
       "start": "0x020bd140",
       "end": "0x020bd160",
@@ -3782,6 +5850,83 @@
       "name": "ov039 pointer tables",
       "origin": "generated table",
       "behavior": "Tables of function and data pointers, each entry named by its target."
+    },
+    {
+      "module": "ov039",
+      "section": ".data",
+      "start": "0x020be7fc",
+      "end": "0x020be818",
+      "source": "src/ov039/data/DataStrings_ov039_020be7fc.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov039 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov039",
+      "section": ".data",
+      "start": "0x020be818",
+      "end": "0x020be840",
+      "source": "src/ov039/data/DataStrings_ov039_020be818.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov039 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov039",
+      "section": ".data",
+      "start": "0x020be840",
+      "end": "0x020be858",
+      "source": "src/ov039/data/DataStrings_ov039_020be840.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov039 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov039",
+      "section": ".data",
+      "start": "0x020be858",
+      "end": "0x020be870",
+      "source": "src/ov039/data/DataStrings_ov039_020be858.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov039 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov039",
+      "section": ".data",
+      "start": "0x020be870",
+      "end": "0x020be8a4",
+      "source": "src/ov039/data/DataStrings_ov039_020be870.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov039 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov039",
+      "section": ".data",
+      "start": "0x020be8cc",
+      "end": "0x020be8d0",
+      "source": "src/ov039/data/DataStrings_ov039_020be8cc.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov039 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov039",
+      "section": ".data",
+      "start": "0x020be92c",
+      "end": "0x020be930",
+      "source": "src/ov039/data/DataStrings_ov039_020be92c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov039 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
     },
     {
       "module": "ov039",
@@ -3818,6 +5963,50 @@
     },
     {
       "module": "ov040",
+      "section": ".data",
+      "start": "0x020be20c",
+      "end": "0x020be218",
+      "source": "src/ov040/data/DataStrings_ov040_020be20c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov040 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov040",
+      "section": ".data",
+      "start": "0x020be218",
+      "end": "0x020be220",
+      "source": "src/ov040/data/DataStrings_ov040_020be218.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov040 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov040",
+      "section": ".data",
+      "start": "0x020be220",
+      "end": "0x020be234",
+      "source": "src/ov040/data/DataStrings_ov040_020be220.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov040 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov040",
+      "section": ".data",
+      "start": "0x020be234",
+      "end": "0x020be260",
+      "source": "src/ov040/data/DataStrings_ov040_020be234.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov040 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov040",
       "section": ".bss",
       "start": "0x020be260",
       "end": "0x020be280",
@@ -3826,6 +6015,347 @@
       "name": "ov040 .bss layout",
       "origin": "generated layout",
       "behavior": "Uninitialised globals, one per known symbol, sized by layout."
+    },
+    {
+      "module": "ov041",
+      "section": ".rodata",
+      "start": "0x020cf45c",
+      "end": "0x020cf460",
+      "source": "src/ov041/data/RodataStrings_ov041_020cf45c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov041 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov041",
+      "section": ".rodata",
+      "start": "0x020cf464",
+      "end": "0x020cf468",
+      "source": "src/ov041/data/RodataStrings_ov041_020cf464.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov041 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov041",
+      "section": ".rodata",
+      "start": "0x020cf468",
+      "end": "0x020cf46c",
+      "source": "src/ov041/data/RodataStrings_ov041_020cf468.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov041 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov041",
+      "section": ".rodata",
+      "start": "0x020cf46c",
+      "end": "0x020cf470",
+      "source": "src/ov041/data/RodataStrings_ov041_020cf46c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov041 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov041",
+      "section": ".rodata",
+      "start": "0x020cf470",
+      "end": "0x020cf474",
+      "source": "src/ov041/data/RodataStrings_ov041_020cf470.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov041 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov041",
+      "section": ".rodata",
+      "start": "0x020cf474",
+      "end": "0x020cf478",
+      "source": "src/ov041/data/RodataStrings_ov041_020cf474.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov041 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov041",
+      "section": ".rodata",
+      "start": "0x020cf478",
+      "end": "0x020cf47c",
+      "source": "src/ov041/data/RodataStrings_ov041_020cf478.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov041 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov041",
+      "section": ".rodata",
+      "start": "0x020cf47c",
+      "end": "0x020cf480",
+      "source": "src/ov041/data/RodataStrings_ov041_020cf47c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov041 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov041",
+      "section": ".rodata",
+      "start": "0x020cf5b4",
+      "end": "0x020cf5b8",
+      "source": "src/ov041/data/RodataStrings_ov041_020cf5b4.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov041 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov041",
+      "section": ".rodata",
+      "start": "0x020cf5c4",
+      "end": "0x020cf5c8",
+      "source": "src/ov041/data/RodataStrings_ov041_020cf5c4.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov041 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov041",
+      "section": ".rodata",
+      "start": "0x020cf6f0",
+      "end": "0x020cf700",
+      "source": "src/ov041/data/RodataStrings_ov041_020cf6f0.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov041 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov041",
+      "section": ".rodata",
+      "start": "0x020cf700",
+      "end": "0x020cf710",
+      "source": "src/ov041/data/RodataStrings_ov041_020cf700.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov041 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov041",
+      "section": ".rodata",
+      "start": "0x020cf710",
+      "end": "0x020cf720",
+      "source": "src/ov041/data/RodataStrings_ov041_020cf710.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov041 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov041",
+      "section": ".rodata",
+      "start": "0x020cf740",
+      "end": "0x020cf750",
+      "source": "src/ov041/data/RodataStrings_ov041_020cf740.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov041 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov041",
+      "section": ".rodata",
+      "start": "0x020cf750",
+      "end": "0x020cf760",
+      "source": "src/ov041/data/RodataStrings_ov041_020cf750.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov041 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov041",
+      "section": ".rodata",
+      "start": "0x020cf760",
+      "end": "0x020cf770",
+      "source": "src/ov041/data/RodataStrings_ov041_020cf760.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov041 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov041",
+      "section": ".rodata",
+      "start": "0x020cf770",
+      "end": "0x020cf780",
+      "source": "src/ov041/data/RodataStrings_ov041_020cf770.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov041 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov041",
+      "section": ".data",
+      "start": "0x020cf91c",
+      "end": "0x020cf938",
+      "source": "src/ov041/data/DataStrings_ov041_020cf91c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov041 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov041",
+      "section": ".data",
+      "start": "0x020cf938",
+      "end": "0x020cf948",
+      "source": "src/ov041/data/DataStrings_ov041_020cf938.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov041 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov041",
+      "section": ".data",
+      "start": "0x020cf948",
+      "end": "0x020cf958",
+      "source": "src/ov041/data/DataStrings_ov041_020cf948.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov041 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov041",
+      "section": ".data",
+      "start": "0x020cf9d8",
+      "end": "0x020cf9e8",
+      "source": "src/ov041/data/DataStrings_ov041_020cf9d8.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov041 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov041",
+      "section": ".data",
+      "start": "0x020cf9e8",
+      "end": "0x020cf9f8",
+      "source": "src/ov041/data/DataStrings_ov041_020cf9e8.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov041 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov041",
+      "section": ".data",
+      "start": "0x020cf9f8",
+      "end": "0x020cfa00",
+      "source": "src/ov041/data/DataStrings_ov041_020cf9f8.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov041 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov041",
+      "section": ".data",
+      "start": "0x020cfa00",
+      "end": "0x020cfa24",
+      "source": "src/ov041/data/DataStrings_ov041_020cfa00.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov041 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov041",
+      "section": ".data",
+      "start": "0x020cfa24",
+      "end": "0x020cfa34",
+      "source": "src/ov041/data/DataStrings_ov041_020cfa24.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov041 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov041",
+      "section": ".data",
+      "start": "0x020cfa34",
+      "end": "0x020cfa58",
+      "source": "src/ov041/data/DataStrings_ov041_020cfa34.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov041 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov041",
+      "section": ".data",
+      "start": "0x020cfa58",
+      "end": "0x020cfa6c",
+      "source": "src/ov041/data/DataStrings_ov041_020cfa58.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov041 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov041",
+      "section": ".data",
+      "start": "0x020cfa6c",
+      "end": "0x020cfa80",
+      "source": "src/ov041/data/DataStrings_ov041_020cfa6c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov041 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov041",
+      "section": ".data",
+      "start": "0x020cfa80",
+      "end": "0x020cfa90",
+      "source": "src/ov041/data/DataStrings_ov041_020cfa80.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov041 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov041",
+      "section": ".data",
+      "start": "0x020cfa90",
+      "end": "0x020cfaa0",
+      "source": "src/ov041/data/DataStrings_ov041_020cfa90.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov041 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov041",
+      "section": ".data",
+      "start": "0x020cfaa0",
+      "end": "0x020cfaa8",
+      "source": "src/ov041/data/DataStrings_ov041_020cfaa0.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov041 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
     },
     {
       "module": "ov041",
@@ -3884,6 +6414,39 @@
     },
     {
       "module": "ov045",
+      "section": ".data",
+      "start": "0x020c0814",
+      "end": "0x020c0838",
+      "source": "src/ov045/data/DataStrings_ov045_020c0814.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov045 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov045",
+      "section": ".data",
+      "start": "0x020c0838",
+      "end": "0x020c085c",
+      "source": "src/ov045/data/DataStrings_ov045_020c0838.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov045 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov045",
+      "section": ".data",
+      "start": "0x020c085c",
+      "end": "0x020c086c",
+      "source": "src/ov045/data/DataStrings_ov045_020c085c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov045 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov045",
       "section": ".bss",
       "start": "0x020c0880",
       "end": "0x020c08a0",
@@ -3905,6 +6468,17 @@
       "behavior": "Uninitialised globals, one per known symbol, sized by layout."
     },
     {
+      "module": "ov047",
+      "section": ".rodata",
+      "start": "0x020c7284",
+      "end": "0x020c7288",
+      "source": "src/ov047/data/RodataStrings_ov047_020c7284.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov047 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
       "module": "ov049",
       "section": ".data",
       "start": "0x020c46e0",
@@ -3914,6 +6488,28 @@
       "name": "ov049 pointer tables",
       "origin": "generated table",
       "behavior": "Tables of function and data pointers, each entry named by its target."
+    },
+    {
+      "module": "ov052",
+      "section": ".data",
+      "start": "0x020d2140",
+      "end": "0x020d2148",
+      "source": "src/ov052/data/DataStrings_ov052_020d2140.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov052 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov052",
+      "section": ".data",
+      "start": "0x020d2148",
+      "end": "0x020d216c",
+      "source": "src/ov052/data/DataStrings_ov052_020d2148.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov052 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
     },
     {
       "module": "ov052",
@@ -3928,6 +6524,39 @@
     },
     {
       "module": "ov052",
+      "section": ".data",
+      "start": "0x020d217c",
+      "end": "0x020d2190",
+      "source": "src/ov052/data/DataStrings_ov052_020d217c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov052 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov052",
+      "section": ".data",
+      "start": "0x020d2190",
+      "end": "0x020d21a4",
+      "source": "src/ov052/data/DataStrings_ov052_020d2190.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov052 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov052",
+      "section": ".data",
+      "start": "0x020d21a4",
+      "end": "0x020d21c0",
+      "source": "src/ov052/data/DataStrings_ov052_020d21a4.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov052 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov052",
       "section": ".bss",
       "start": "0x020d21c0",
       "end": "0x020d21e0",
@@ -3936,6 +6565,83 @@
       "name": "ov052 .bss layout",
       "origin": "generated layout",
       "behavior": "Uninitialised globals, one per known symbol, sized by layout."
+    },
+    {
+      "module": "ov053",
+      "section": ".data",
+      "start": "0x020d2b60",
+      "end": "0x020d2b74",
+      "source": "src/ov053/data/DataStrings_ov053_020d2b60.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov053 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov053",
+      "section": ".data",
+      "start": "0x020d2b74",
+      "end": "0x020d2b84",
+      "source": "src/ov053/data/DataStrings_ov053_020d2b74.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov053 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov053",
+      "section": ".data",
+      "start": "0x020d2b84",
+      "end": "0x020d2ba8",
+      "source": "src/ov053/data/DataStrings_ov053_020d2b84.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov053 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov053",
+      "section": ".data",
+      "start": "0x020d2ba8",
+      "end": "0x020d2bbc",
+      "source": "src/ov053/data/DataStrings_ov053_020d2ba8.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov053 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov053",
+      "section": ".data",
+      "start": "0x020d2bbc",
+      "end": "0x020d2be0",
+      "source": "src/ov053/data/DataStrings_ov053_020d2bbc.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov053 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov053",
+      "section": ".data",
+      "start": "0x020d2be0",
+      "end": "0x020d2bf4",
+      "source": "src/ov053/data/DataStrings_ov053_020d2be0.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov053 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov053",
+      "section": ".data",
+      "start": "0x020d2bf4",
+      "end": "0x020d2c20",
+      "source": "src/ov053/data/DataStrings_ov053_020d2bf4.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov053 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
     },
     {
       "module": "ov053",
@@ -3950,6 +6656,50 @@
     },
     {
       "module": "ov054",
+      "section": ".data",
+      "start": "0x020d36a0",
+      "end": "0x020d36b4",
+      "source": "src/ov054/data/DataStrings_ov054_020d36a0.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov054 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov054",
+      "section": ".data",
+      "start": "0x020d36b4",
+      "end": "0x020d36c8",
+      "source": "src/ov054/data/DataStrings_ov054_020d36b4.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov054 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov054",
+      "section": ".data",
+      "start": "0x020d36c8",
+      "end": "0x020d36d8",
+      "source": "src/ov054/data/DataStrings_ov054_020d36c8.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov054 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov054",
+      "section": ".data",
+      "start": "0x020d36dd",
+      "end": "0x020d3700",
+      "source": "src/ov054/data/DataStrings_ov054_020d36dd.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov054 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov054",
       "section": ".bss",
       "start": "0x020d3700",
       "end": "0x020d3720",
@@ -3958,6 +6708,28 @@
       "name": "ov054 .bss layout",
       "origin": "generated layout",
       "behavior": "Uninitialised globals, one per known symbol, sized by layout."
+    },
+    {
+      "module": "ov055",
+      "section": ".data",
+      "start": "0x020d3ec0",
+      "end": "0x020d3ed4",
+      "source": "src/ov055/data/DataStrings_ov055_020d3ec0.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov055 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov055",
+      "section": ".data",
+      "start": "0x020d3ed4",
+      "end": "0x020d3f00",
+      "source": "src/ov055/data/DataStrings_ov055_020d3ed4.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov055 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
     },
     {
       "module": "ov055",
@@ -3983,6 +6755,28 @@
     },
     {
       "module": "ov057",
+      "section": ".data",
+      "start": "0x020d44a0",
+      "end": "0x020d44b4",
+      "source": "src/ov057/data/DataStrings_ov057_020d44a0.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov057 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov057",
+      "section": ".data",
+      "start": "0x020d44b4",
+      "end": "0x020d44e0",
+      "source": "src/ov057/data/DataStrings_ov057_020d44b4.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov057 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov057",
       "section": ".bss",
       "start": "0x020d44e0",
       "end": "0x020d4500",
@@ -3991,6 +6785,28 @@
       "name": "ov057 .bss layout",
       "origin": "generated layout",
       "behavior": "Uninitialised globals, one per known symbol, sized by layout."
+    },
+    {
+      "module": "ov058",
+      "section": ".data",
+      "start": "0x020d89e0",
+      "end": "0x020d89f4",
+      "source": "src/ov058/data/DataStrings_ov058_020d89e0.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov058 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov058",
+      "section": ".data",
+      "start": "0x020d89f4",
+      "end": "0x020d8a20",
+      "source": "src/ov058/data/DataStrings_ov058_020d89f4.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov058 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
     },
     {
       "module": "ov058",
@@ -4027,6 +6843,72 @@
     },
     {
       "module": "ov059",
+      "section": ".rodata",
+      "start": "0x020cfe20",
+      "end": "0x020cfe30",
+      "source": "src/ov059/data/RodataStrings_ov059_020cfe20.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov059 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov059",
+      "section": ".rodata",
+      "start": "0x020cfe30",
+      "end": "0x020cfe40",
+      "source": "src/ov059/data/RodataStrings_ov059_020cfe30.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov059 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov059",
+      "section": ".rodata",
+      "start": "0x020cfe40",
+      "end": "0x020cfe50",
+      "source": "src/ov059/data/RodataStrings_ov059_020cfe40.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov059 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov059",
+      "section": ".rodata",
+      "start": "0x020cfe50",
+      "end": "0x020cfe60",
+      "source": "src/ov059/data/RodataStrings_ov059_020cfe50.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov059 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov059",
+      "section": ".data",
+      "start": "0x020cfee0",
+      "end": "0x020cfee8",
+      "source": "src/ov059/data/DataStrings_ov059_020cfee0.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov059 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov059",
+      "section": ".data",
+      "start": "0x020cfee8",
+      "end": "0x020cfef0",
+      "source": "src/ov059/data/DataStrings_ov059_020cfee8.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov059 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov059",
       "section": ".data",
       "start": "0x020cfef0",
       "end": "0x020cfefc",
@@ -4035,6 +6917,61 @@
       "name": "ov059 pointer tables",
       "origin": "generated table",
       "behavior": "Tables of function and data pointers, each entry named by its target."
+    },
+    {
+      "module": "ov059",
+      "section": ".data",
+      "start": "0x020cfefc",
+      "end": "0x020cff0c",
+      "source": "src/ov059/data/DataStrings_ov059_020cfefc.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov059 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov059",
+      "section": ".data",
+      "start": "0x020cff0c",
+      "end": "0x020cff3c",
+      "source": "src/ov059/data/DataStrings_ov059_020cff0c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov059 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov059",
+      "section": ".data",
+      "start": "0x020cff3c",
+      "end": "0x020cff50",
+      "source": "src/ov059/data/DataStrings_ov059_020cff3c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov059 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov059",
+      "section": ".data",
+      "start": "0x020cff50",
+      "end": "0x020cff64",
+      "source": "src/ov059/data/DataStrings_ov059_020cff50.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov059 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov059",
+      "section": ".data",
+      "start": "0x020cff64",
+      "end": "0x020cffa0",
+      "source": "src/ov059/data/DataStrings_ov059_020cff64.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov059 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
     },
     {
       "module": "ov059",
@@ -4048,6 +6985,204 @@
       "behavior": "Uninitialised globals, one per known symbol, sized by layout."
     },
     {
+      "module": "ov061",
+      "section": ".data",
+      "start": "0x020d8520",
+      "end": "0x020d8549",
+      "source": "src/ov061/data/DataStrings_ov061_020d8520.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov061 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov062",
+      "section": ".data",
+      "start": "0x020d8520",
+      "end": "0x020d8549",
+      "source": "src/ov062/data/DataStrings_ov062_020d8520.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov062 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov063",
+      "section": ".data",
+      "start": "0x020d8700",
+      "end": "0x020d8720",
+      "source": "src/ov063/data/DataStrings_ov063_020d8700.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov063 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov064",
+      "section": ".data",
+      "start": "0x020d8860",
+      "end": "0x020d8880",
+      "source": "src/ov064/data/DataStrings_ov064_020d8860.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov064 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov065",
+      "section": ".data",
+      "start": "0x020d85e0",
+      "end": "0x020d8620",
+      "source": "src/ov065/data/DataStrings_ov065_020d85e0.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov065 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov066",
+      "section": ".data",
+      "start": "0x020d8760",
+      "end": "0x020d87a0",
+      "source": "src/ov066/data/DataStrings_ov066_020d8760.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov066 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov067",
+      "section": ".data",
+      "start": "0x020d8549",
+      "end": "0x020d8580",
+      "source": "src/ov067/data/DataStrings_ov067_020d8549.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov067 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov068",
+      "section": ".data",
+      "start": "0x020d8680",
+      "end": "0x020d8690",
+      "source": "src/ov068/data/DataStrings_ov068_020d8680.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov068 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov068",
+      "section": ".data",
+      "start": "0x020d8690",
+      "end": "0x020d86c0",
+      "source": "src/ov068/data/DataStrings_ov068_020d8690.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov068 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov069",
+      "section": ".data",
+      "start": "0x020d8a20",
+      "end": "0x020d8a30",
+      "source": "src/ov069/data/DataStrings_ov069_020d8a20.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov069 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov069",
+      "section": ".data",
+      "start": "0x020d8a30",
+      "end": "0x020d8a60",
+      "source": "src/ov069/data/DataStrings_ov069_020d8a30.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov069 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov070",
+      "section": ".data",
+      "start": "0x020d8a40",
+      "end": "0x020d8a60",
+      "source": "src/ov070/data/DataStrings_ov070_020d8a40.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov070 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov071",
+      "section": ".data",
+      "start": "0x020d96a0",
+      "end": "0x020d96b0",
+      "source": "src/ov071/data/DataStrings_ov071_020d96a0.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov071 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov071",
+      "section": ".data",
+      "start": "0x020d96b0",
+      "end": "0x020d96c0",
+      "source": "src/ov071/data/DataStrings_ov071_020d96b0.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov071 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov072",
+      "section": ".data",
+      "start": "0x020d9c00",
+      "end": "0x020d9c10",
+      "source": "src/ov072/data/DataStrings_ov072_020d9c00.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov072 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov072",
+      "section": ".data",
+      "start": "0x020d9c10",
+      "end": "0x020d9c20",
+      "source": "src/ov072/data/DataStrings_ov072_020d9c10.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov072 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov073",
+      "section": ".data",
+      "start": "0x020c4188",
+      "end": "0x020c41b4",
+      "source": "src/ov073/data/DataStrings_ov073_020c4188.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov073 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov073",
+      "section": ".data",
+      "start": "0x020c41bc",
+      "end": "0x020c41cc",
+      "source": "src/ov073/data/DataStrings_ov073_020c41bc.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov073 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
       "module": "ov073",
       "section": ".bss",
       "start": "0x020c4240",
@@ -4057,6 +7192,72 @@
       "name": "ov073 .bss layout",
       "origin": "generated layout",
       "behavior": "Uninitialised globals, one per known symbol, sized by layout."
+    },
+    {
+      "module": "ov074",
+      "section": ".rodata",
+      "start": "0x020c5920",
+      "end": "0x020c5930",
+      "source": "src/ov074/data/RodataStrings_ov074_020c5920.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov074 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov074",
+      "section": ".rodata",
+      "start": "0x020c5930",
+      "end": "0x020c5940",
+      "source": "src/ov074/data/RodataStrings_ov074_020c5930.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov074 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov074",
+      "section": ".data",
+      "start": "0x020c59c4",
+      "end": "0x020c59cc",
+      "source": "src/ov074/data/DataStrings_ov074_020c59c4.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov074 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov074",
+      "section": ".data",
+      "start": "0x020c59cc",
+      "end": "0x020c59ec",
+      "source": "src/ov074/data/DataStrings_ov074_020c59cc.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov074 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov074",
+      "section": ".data",
+      "start": "0x020c59ec",
+      "end": "0x020c59fc",
+      "source": "src/ov074/data/DataStrings_ov074_020c59ec.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov074 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov074",
+      "section": ".data",
+      "start": "0x020c59fc",
+      "end": "0x020c5a40",
+      "source": "src/ov074/data/DataStrings_ov074_020c59fc.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov074 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
     },
     {
       "module": "ov075",
@@ -4082,6 +7283,105 @@
     },
     {
       "module": "ov075",
+      "section": ".rodata",
+      "start": "0x020d1548",
+      "end": "0x020d1560",
+      "source": "src/ov075/data/RodataStrings_ov075_020d1548.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov075 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov075",
+      "section": ".data",
+      "start": "0x020d1824",
+      "end": "0x020d1838",
+      "source": "src/ov075/data/DataStrings_ov075_020d1824.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov075 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov075",
+      "section": ".data",
+      "start": "0x020d1838",
+      "end": "0x020d184c",
+      "source": "src/ov075/data/DataStrings_ov075_020d1838.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov075 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov075",
+      "section": ".data",
+      "start": "0x020d184c",
+      "end": "0x020d1858",
+      "source": "src/ov075/data/DataStrings_ov075_020d184c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov075 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov075",
+      "section": ".data",
+      "start": "0x020d185c",
+      "end": "0x020d1868",
+      "source": "src/ov075/data/DataStrings_ov075_020d185c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov075 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov075",
+      "section": ".data",
+      "start": "0x020d1870",
+      "end": "0x020d188c",
+      "source": "src/ov075/data/DataStrings_ov075_020d1870.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov075 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov075",
+      "section": ".data",
+      "start": "0x020d188c",
+      "end": "0x020d18a0",
+      "source": "src/ov075/data/DataStrings_ov075_020d188c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov075 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov075",
+      "section": ".data",
+      "start": "0x020d18a0",
+      "end": "0x020d18b4",
+      "source": "src/ov075/data/DataStrings_ov075_020d18a0.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov075 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov075",
+      "section": ".data",
+      "start": "0x020d18b4",
+      "end": "0x020d18e0",
+      "source": "src/ov075/data/DataStrings_ov075_020d18b4.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov075 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov075",
       "section": ".bss",
       "start": "0x020d18e0",
       "end": "0x020d1ae4",
@@ -4104,6 +7404,105 @@
     },
     {
       "module": "ov076",
+      "section": ".data",
+      "start": "0x020cd26c",
+      "end": "0x020cd278",
+      "source": "src/ov076/data/DataStrings_ov076_020cd26c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov076 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov076",
+      "section": ".data",
+      "start": "0x020cd278",
+      "end": "0x020cd284",
+      "source": "src/ov076/data/DataStrings_ov076_020cd278.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov076 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov076",
+      "section": ".data",
+      "start": "0x020cd328",
+      "end": "0x020cd33c",
+      "source": "src/ov076/data/DataStrings_ov076_020cd328.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov076 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov076",
+      "section": ".data",
+      "start": "0x020cd33c",
+      "end": "0x020cd350",
+      "source": "src/ov076/data/DataStrings_ov076_020cd33c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov076 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov076",
+      "section": ".data",
+      "start": "0x020cd35c",
+      "end": "0x020cd368",
+      "source": "src/ov076/data/DataStrings_ov076_020cd35c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov076 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov076",
+      "section": ".data",
+      "start": "0x020cd370",
+      "end": "0x020cd38c",
+      "source": "src/ov076/data/DataStrings_ov076_020cd370.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov076 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov076",
+      "section": ".data",
+      "start": "0x020cd38c",
+      "end": "0x020cd3a0",
+      "source": "src/ov076/data/DataStrings_ov076_020cd38c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov076 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov076",
+      "section": ".data",
+      "start": "0x020cd3a0",
+      "end": "0x020cd3b4",
+      "source": "src/ov076/data/DataStrings_ov076_020cd3a0.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov076 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov076",
+      "section": ".data",
+      "start": "0x020cd3b4",
+      "end": "0x020cd3e0",
+      "source": "src/ov076/data/DataStrings_ov076_020cd3b4.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov076 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov076",
       "section": ".bss",
       "start": "0x020cd3e0",
       "end": "0x020cd400",
@@ -4112,6 +7511,83 @@
       "name": "ov076 .bss layout",
       "origin": "generated layout",
       "behavior": "Uninitialised globals, one per known symbol, sized by layout."
+    },
+    {
+      "module": "ov077",
+      "section": ".data",
+      "start": "0x020ca2d0",
+      "end": "0x020ca2e4",
+      "source": "src/ov077/data/DataStrings_ov077_020ca2d0.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov077 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov077",
+      "section": ".data",
+      "start": "0x020ca2e4",
+      "end": "0x020ca2f8",
+      "source": "src/ov077/data/DataStrings_ov077_020ca2e4.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov077 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov077",
+      "section": ".data",
+      "start": "0x020ca2f8",
+      "end": "0x020ca304",
+      "source": "src/ov077/data/DataStrings_ov077_020ca2f8.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov077 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov077",
+      "section": ".data",
+      "start": "0x020ca30c",
+      "end": "0x020ca328",
+      "source": "src/ov077/data/DataStrings_ov077_020ca30c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov077 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov077",
+      "section": ".data",
+      "start": "0x020ca328",
+      "end": "0x020ca33c",
+      "source": "src/ov077/data/DataStrings_ov077_020ca328.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov077 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov077",
+      "section": ".data",
+      "start": "0x020ca33c",
+      "end": "0x020ca350",
+      "source": "src/ov077/data/DataStrings_ov077_020ca33c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov077 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov077",
+      "section": ".data",
+      "start": "0x020ca350",
+      "end": "0x020ca380",
+      "source": "src/ov077/data/DataStrings_ov077_020ca350.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov077 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
     },
     {
       "module": "ov077",
@@ -4126,6 +7602,39 @@
     },
     {
       "module": "ov078",
+      "section": ".data",
+      "start": "0x020c5148",
+      "end": "0x020c515c",
+      "source": "src/ov078/data/DataStrings_ov078_020c5148.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov078 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov078",
+      "section": ".data",
+      "start": "0x020c515c",
+      "end": "0x020c5170",
+      "source": "src/ov078/data/DataStrings_ov078_020c515c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov078 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov078",
+      "section": ".data",
+      "start": "0x020c5170",
+      "end": "0x020c5198",
+      "source": "src/ov078/data/DataStrings_ov078_020c5170.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov078 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov078",
       "section": ".bss",
       "start": "0x020c51c0",
       "end": "0x020c51e0",
@@ -4134,6 +7643,28 @@
       "name": "ov078 .bss layout",
       "origin": "generated layout",
       "behavior": "Uninitialised globals, one per known symbol, sized by layout."
+    },
+    {
+      "module": "ov079",
+      "section": ".data",
+      "start": "0x020c4c84",
+      "end": "0x020c4ca0",
+      "source": "src/ov079/data/DataStrings_ov079_020c4c84.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov079 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov080",
+      "section": ".data",
+      "start": "0x020c5dc4",
+      "end": "0x020c5ddc",
+      "source": "src/ov080/data/DataStrings_ov080_020c5dc4.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov080 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
     },
     {
       "module": "ov080",
@@ -4170,6 +7701,39 @@
     },
     {
       "module": "ov081",
+      "section": ".data",
+      "start": "0x020c5ce4",
+      "end": "0x020c5d10",
+      "source": "src/ov081/data/DataStrings_ov081_020c5ce4.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov081 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov081",
+      "section": ".data",
+      "start": "0x020c5d10",
+      "end": "0x020c5d28",
+      "source": "src/ov081/data/DataStrings_ov081_020c5d10.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov081 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov081",
+      "section": ".data",
+      "start": "0x020c5d28",
+      "end": "0x020c5d40",
+      "source": "src/ov081/data/DataStrings_ov081_020c5d28.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov081 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov081",
       "section": ".bss",
       "start": "0x020c5d80",
       "end": "0x020c5da0",
@@ -4189,6 +7753,28 @@
       "name": "ov082 .bss layout",
       "origin": "generated layout",
       "behavior": "Uninitialised globals, one per known symbol, sized by layout."
+    },
+    {
+      "module": "ov083",
+      "section": ".data",
+      "start": "0x020bf6c0",
+      "end": "0x020bf6d8",
+      "source": "src/ov083/data/DataStrings_ov083_020bf6c0.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov083 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov084",
+      "section": ".data",
+      "start": "0x020bfcc4",
+      "end": "0x020bfce0",
+      "source": "src/ov084/data/DataStrings_ov084_020bfcc4.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov084 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
     },
     {
       "module": "ov085",
@@ -4213,6 +7799,50 @@
       "behavior": "Tables of function and data pointers, each entry named by its target."
     },
     {
+      "module": "ov085",
+      "section": ".data",
+      "start": "0x020c2384",
+      "end": "0x020c239c",
+      "source": "src/ov085/data/DataStrings_ov085_020c2384.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov085 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov085",
+      "section": ".data",
+      "start": "0x020c23a4",
+      "end": "0x020c23e0",
+      "source": "src/ov085/data/DataStrings_ov085_020c23a4.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov085 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov086",
+      "section": ".data",
+      "start": "0x020c2fc4",
+      "end": "0x020c2fc8",
+      "source": "src/ov086/data/DataStrings_ov086_020c2fc4.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov086 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov086",
+      "section": ".data",
+      "start": "0x020c2fd8",
+      "end": "0x020c3000",
+      "source": "src/ov086/data/DataStrings_ov086_020c2fd8.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov086 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
       "module": "ov086",
       "section": ".bss",
       "start": "0x020c3000",
@@ -4233,6 +7863,39 @@
       "name": "ov087 pointer tables",
       "origin": "generated table",
       "behavior": "Tables of function and data pointers, each entry named by its target."
+    },
+    {
+      "module": "ov087",
+      "section": ".data",
+      "start": "0x020c7e7c",
+      "end": "0x020c7ea0",
+      "source": "src/ov087/data/DataStrings_ov087_020c7e7c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov087 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov088",
+      "section": ".data",
+      "start": "0x020beee8",
+      "end": "0x020bef00",
+      "source": "src/ov088/data/DataStrings_ov088_020beee8.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov088 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov089",
+      "section": ".data",
+      "start": "0x020c063c",
+      "end": "0x020c0654",
+      "source": "src/ov089/data/DataStrings_ov089_020c063c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov089 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
     },
     {
       "module": "ov091",
@@ -4266,6 +7929,50 @@
       "name": "ov091 pointer tables",
       "origin": "generated table",
       "behavior": "Tables of function and data pointers, each entry named by its target."
+    },
+    {
+      "module": "ov091",
+      "section": ".data",
+      "start": "0x020c2a5c",
+      "end": "0x020c2a70",
+      "source": "src/ov091/data/DataStrings_ov091_020c2a5c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov091 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov091",
+      "section": ".data",
+      "start": "0x020c2a70",
+      "end": "0x020c2ab8",
+      "source": "src/ov091/data/DataStrings_ov091_020c2a70.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov091 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov091",
+      "section": ".data",
+      "start": "0x020c2c44",
+      "end": "0x020c2c5c",
+      "source": "src/ov091/data/DataStrings_ov091_020c2c44.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov091 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov091",
+      "section": ".data",
+      "start": "0x020c2ca5",
+      "end": "0x020c2ca8",
+      "source": "src/ov091/data/DataStrings_ov091_020c2ca5.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov091 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
     },
     {
       "module": "ov091",
@@ -4324,6 +8031,72 @@
     },
     {
       "module": "ov093",
+      "section": ".data",
+      "start": "0x020c3e9c",
+      "end": "0x020c3eb4",
+      "source": "src/ov093/data/DataStrings_ov093_020c3e9c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov093 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov093",
+      "section": ".data",
+      "start": "0x020c3eb4",
+      "end": "0x020c3ee8",
+      "source": "src/ov093/data/DataStrings_ov093_020c3eb4.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov093 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov093",
+      "section": ".data",
+      "start": "0x020c3ee8",
+      "end": "0x020c3f28",
+      "source": "src/ov093/data/DataStrings_ov093_020c3ee8.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov093 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov093",
+      "section": ".data",
+      "start": "0x020c3f28",
+      "end": "0x020c3f74",
+      "source": "src/ov093/data/DataStrings_ov093_020c3f28.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov093 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov093",
+      "section": ".data",
+      "start": "0x020c4d34",
+      "end": "0x020c4d58",
+      "source": "src/ov093/data/DataStrings_ov093_020c4d34.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov093 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov093",
+      "section": ".data",
+      "start": "0x020c4d68",
+      "end": "0x020c4d6c",
+      "source": "src/ov093/data/DataStrings_ov093_020c4d68.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov093 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov093",
       "section": ".bss",
       "start": "0x020c50e0",
       "end": "0x020c5100",
@@ -4354,6 +8127,50 @@
       "name": "ov095 pointer tables",
       "origin": "generated table",
       "behavior": "Tables of function and data pointers, each entry named by its target."
+    },
+    {
+      "module": "ov095",
+      "section": ".data",
+      "start": "0x020c17d0",
+      "end": "0x020c1818",
+      "source": "src/ov095/data/DataStrings_ov095_020c17d0.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov095 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov095",
+      "section": ".data",
+      "start": "0x020c1818",
+      "end": "0x020c1834",
+      "source": "src/ov095/data/DataStrings_ov095_020c1818.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov095 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov095",
+      "section": ".data",
+      "start": "0x020c1834",
+      "end": "0x020c1850",
+      "source": "src/ov095/data/DataStrings_ov095_020c1834.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov095 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov095",
+      "section": ".data",
+      "start": "0x020c2888",
+      "end": "0x020c28ac",
+      "source": "src/ov095/data/DataStrings_ov095_020c2888.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov095 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
     },
     {
       "module": "ov095",
@@ -4401,6 +8218,50 @@
     },
     {
       "module": "ov097",
+      "section": ".data",
+      "start": "0x020c1dd8",
+      "end": "0x020c1e20",
+      "source": "src/ov097/data/DataStrings_ov097_020c1dd8.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov097 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov097",
+      "section": ".data",
+      "start": "0x020c1e20",
+      "end": "0x020c1e3c",
+      "source": "src/ov097/data/DataStrings_ov097_020c1e20.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov097 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov097",
+      "section": ".data",
+      "start": "0x020c1e41",
+      "end": "0x020c1e80",
+      "source": "src/ov097/data/DataStrings_ov097_020c1e41.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov097 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov097",
+      "section": ".data",
+      "start": "0x020c24f4",
+      "end": "0x020c2520",
+      "source": "src/ov097/data/DataStrings_ov097_020c24f4.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov097 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov097",
       "section": ".bss",
       "start": "0x020c2520",
       "end": "0x020c2540",
@@ -4435,6 +8296,39 @@
     {
       "module": "ov099",
       "section": ".data",
+      "start": "0x020c22c0",
+      "end": "0x020c2308",
+      "source": "src/ov099/data/DataStrings_ov099_020c22c0.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov099 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov099",
+      "section": ".data",
+      "start": "0x020c2308",
+      "end": "0x020c2324",
+      "source": "src/ov099/data/DataStrings_ov099_020c2308.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov099 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov099",
+      "section": ".data",
+      "start": "0x020c2340",
+      "end": "0x020c2348",
+      "source": "src/ov099/data/DataStrings_ov099_020c2340.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov099 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov099",
+      "section": ".data",
       "start": "0x020c2360",
       "end": "0x020c238c",
       "source": "src/ov099/data/Data_ov099_020c2360.c",
@@ -4442,6 +8336,94 @@
       "name": "ov099 pointer tables",
       "origin": "generated table",
       "behavior": "Tables of function and data pointers, each entry named by its target."
+    },
+    {
+      "module": "ov099",
+      "section": ".data",
+      "start": "0x020c2754",
+      "end": "0x020c277c",
+      "source": "src/ov099/data/DataStrings_ov099_020c2754.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov099 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov099",
+      "section": ".data",
+      "start": "0x020c286c",
+      "end": "0x020c2884",
+      "source": "src/ov099/data/DataStrings_ov099_020c286c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov099 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov099",
+      "section": ".data",
+      "start": "0x020c2884",
+      "end": "0x020c28a0",
+      "source": "src/ov099/data/DataStrings_ov099_020c2884.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov099 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov099",
+      "section": ".data",
+      "start": "0x020c28a0",
+      "end": "0x020c28a8",
+      "source": "src/ov099/data/DataStrings_ov099_020c28a0.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov099 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov099",
+      "section": ".data",
+      "start": "0x020c28a8",
+      "end": "0x020c28b0",
+      "source": "src/ov099/data/DataStrings_ov099_020c28a8.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov099 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov099",
+      "section": ".data",
+      "start": "0x020c28b0",
+      "end": "0x020c28c4",
+      "source": "src/ov099/data/DataStrings_ov099_020c28b0.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov099 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov099",
+      "section": ".data",
+      "start": "0x020c28c4",
+      "end": "0x020c28cc",
+      "source": "src/ov099/data/DataStrings_ov099_020c28c4.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov099 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov099",
+      "section": ".data",
+      "start": "0x020c28cc",
+      "end": "0x020c28e0",
+      "source": "src/ov099/data/DataStrings_ov099_020c28cc.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov099 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
     },
     {
       "module": "ov099",
@@ -4478,6 +8460,50 @@
     },
     {
       "module": "ov101",
+      "section": ".data",
+      "start": "0x020c0de0",
+      "end": "0x020c0df0",
+      "source": "src/ov101/data/DataStrings_ov101_020c0de0.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov101 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov101",
+      "section": ".data",
+      "start": "0x020c0df0",
+      "end": "0x020c0e54",
+      "source": "src/ov101/data/DataStrings_ov101_020c0df0.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov101 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov101",
+      "section": ".data",
+      "start": "0x020c0e54",
+      "end": "0x020c0e9c",
+      "source": "src/ov101/data/DataStrings_ov101_020c0e54.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov101 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov101",
+      "section": ".data",
+      "start": "0x020c1378",
+      "end": "0x020c139c",
+      "source": "src/ov101/data/DataStrings_ov101_020c1378.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov101 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov101",
       "section": ".bss",
       "start": "0x020c4d20",
       "end": "0x020c4d40",
@@ -4508,6 +8534,61 @@
       "name": "ov103 pointer tables",
       "origin": "generated table",
       "behavior": "Tables of function and data pointers, each entry named by its target."
+    },
+    {
+      "module": "ov103",
+      "section": ".data",
+      "start": "0x020c050c",
+      "end": "0x020c0524",
+      "source": "src/ov103/data/DataStrings_ov103_020c050c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov103 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov103",
+      "section": ".data",
+      "start": "0x020c0524",
+      "end": "0x020c053c",
+      "source": "src/ov103/data/DataStrings_ov103_020c0524.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov103 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov103",
+      "section": ".data",
+      "start": "0x020c054c",
+      "end": "0x020c0580",
+      "source": "src/ov103/data/DataStrings_ov103_020c054c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov103 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov103",
+      "section": ".data",
+      "start": "0x020c0580",
+      "end": "0x020c05a4",
+      "source": "src/ov103/data/DataStrings_ov103_020c0580.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov103 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
+    },
+    {
+      "module": "ov103",
+      "section": ".data",
+      "start": "0x020c06d8",
+      "end": "0x020c0700",
+      "source": "src/ov103/data/DataStrings_ov103_020c06d8.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ov103 strings",
+      "origin": "generated strings",
+      "behavior": "Text strings referenced by this module's code."
     },
     {
       "module": "ov103",

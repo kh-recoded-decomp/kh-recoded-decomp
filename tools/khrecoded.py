@@ -342,6 +342,8 @@ def progress(write: bool = True) -> dict:
                          if e.get("origin") == "generated layout")
     data_tables = sum(int(e["end"], 16) - int(e["start"], 16) for e in data_match.load()
                       if e.get("origin") == "generated table")
+    data_strings = sum(int(e["end"], 16) - int(e["start"], 16) for e in data_match.load()
+                       if e.get("origin") == "generated strings")
     for failure in data_failures:
         print(f"Data source not verified: {failure}", file=sys.stderr)
     hierarchy = build_hierarchy(inv, proof["verified"], json.loads(
@@ -396,8 +398,9 @@ def progress(write: bool = True) -> dict:
                  f"ARM9 data bytes** (rodata {data_verified['rodata']:,} / {data_total['rodata']:,}, "
                  f"data {data_verified['data']:,} / {data_total['data']:,}, "
                  f"bss {data_verified['bss']:,} / {data_total['bss']:,}). Of these, {data_generated:,} bytes are "
-                 f"generated .bss layout (one sized global per known symbol) and {data_tables:,} bytes are "
-                 "generated pointer tables (every entry named by its target); the rest is hand-typed. Each range is C in "
+                 f"generated .bss layout (one sized global per known symbol), {data_tables:,} bytes are "
+                 f"generated pointer tables (every entry named by its target) and {data_strings:,} bytes are "
+                 "generated strings; the rest is hand-typed. Each range is C in "
                  "`data_matches.json`, compiled and compared byte for byte (.bss by size and symbol layout), "
                  "and linked into the ROM by `link`.", "",
                  "| Target | C bytes / analysed code bytes | Identified function bytes | "
@@ -437,7 +440,7 @@ def progress(write: bool = True) -> dict:
     print(f"Verified C/C++: {total_c:,} / {total_code:,} analysed ARM9 code bytes "
           f"({100 * total_c / total_code if total_code else 0:.3f}%)")
     print(f"Reconstructed data: {sum(data_verified.values()):,} / {sum(data_total.values()):,} ARM9 data bytes "
-          f"({data_generated:,} generated .bss layout, {data_tables:,} generated pointer tables)")
+          f"({data_generated:,} generated .bss layout, {data_tables:,} pointer tables, {data_strings:,} strings)")
     print(f"Profiles: {len(module_rows)} modules; 105 overlays, ARM9 core/autoloads, ARM7")
     return result
 
