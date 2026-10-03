@@ -15,9 +15,12 @@ extracted game binaries and assets stay on the owner's machine and are ignored b
 The public-release milestone is **30% verified ARM9 C/C++ code coverage**. Keep
 the repository private until a fresh progress check confirms that threshold.
 
-The baseline rebuild proves that extraction and packing are reproducible. It
-does **not** prove that any game code has been recovered as source. Whole-module source linking remains unfinished; the current C check builds and
-relocates individual functions at their original addresses. ARM7 has been extracted but its function analysis has
+The baseline rebuild proves that extraction and packing are reproducible. `link` goes further:
+every registered C match is compiled to an object and linked with `mwldarm` in place of its
+original bytes, the remaining code and data come from `dsd` delinked objects, and all 108 ARM9
+modules plus the packed ROM must equal the original exactly. Functions whose objects cannot be
+placed yet (shared data sections, ambiguous overlay targets) stay delinked and are listed in
+`build/bk9e/link_skipped.txt`. ARM7 has been extracted but its function analysis has
 not been bootstrapped by `dsd`.
 
 ## Quick start on Windows
@@ -45,12 +48,12 @@ each time. `khrecoded.cmd` is a Windows shortcut for the Python command.
 | `ci` | ROM-free unit tests and committed module inventory | No |
 | `quick` | `ci` checks, exact ROM identity, extraction inventory | Yes |
 | `full` | `quick`, exact baseline ROM rebuild, all registered C/C++ matches, regenerated progress | Yes |
-| `strict` | `full` plus `dsd check modules --fail` when linked module binaries exist | Yes |
+| `strict` | `full` plus the linked build: C objects and delinked objects linked into every module, `dsd check modules --fail`, exact ROM | Yes |
 
-Run `python tools/khrecoded.py check --profile strict`. If there are no linked
-source modules yet, the strict gate exits with an error explaining that it is unavailable. It does
-not report a complete source build as passing. `build` repacks the extracted baseline into
-`build/bk9e/rebuilt.nds` and verifies exact equality.
+Run `python tools/khrecoded.py check --profile strict`. `build` repacks the extracted baseline into
+`build/bk9e/rebuilt.nds`; `link` links the ROM from objects into `build/bk9e/linked.nds`. Both
+verify exact equality with the original. dsd 0.12.1 zeroes two unused header bytes and recomputes
+the header CRC, so both restore exactly those four header bytes before comparing.
 
 ## Progress and correctness
 

@@ -156,6 +156,12 @@ def build_baseline(rom: Path) -> Path:
     check_extract()
     output = ROOT / "build" / "bk9e" / "rebuilt.nds"
     run(dsd(), "rom", "build", "--config", EXTRACT / "config.yaml", "--rom", output)
+    restore_header_and_compare(rom, output)
+    print(f"Exact baseline ROM match: {sha256(output)}")
+    return output
+
+
+def restore_header_and_compare(rom: Path, output: Path) -> None:
     # dsd 0.12.1 zeroes two unused header bytes, then recalculates the header CRC.
     # Restore precisely these four known bytes. Every other byte must already match.
     with rom.open("rb") as f:
@@ -172,7 +178,31 @@ def build_baseline(rom: Path) -> Path:
     mismatches, first = compare_files(rom, output)
     if mismatches:
         raise RuntimeError(f"Rebuilt ROM differs at {mismatches} bytes; first: {[hex(x) for x in first]}")
-    print(f"Exact baseline ROM match: {sha256(output)}")
+
+
+def link_rom(rom: Path) -> Path:
+    """Link every ARM9 module from matched C objects plus delinked gaps, verify, pack and compare."""
+    validate_rom(rom)
+    check_extract()
+    delinked = ROOT / "build" / "bk9e" / "delinked"
+    compilers = json.loads((ROOT / "profiles" / "compilers.json").read_text(encoding="utf-8"))
+    linker = ROOT / Path(compilers["variants"]["mwccarm-4.0-1036"]["executable"]).with_name("mwldarm.exe")
+    run(sys.executable, ROOT / "tools" / "link_c.py")
+    config = ROOT / "build" / "linkcfg" / "arm9" / "config.yaml"
+    run(dsd(), "delink", "--config-path", config)
+    run(dsd(), "lcf", "--config-path", config)
+    elf = delinked / "arm9.elf"
+    args = [str(linker), "-proc", "arm946e", "-nostdlib", "-interworking", "-nodead", "-m", "Entry",
+            "-map", "closure,unused", "-o", str(elf), f"@{delinked / 'objects.txt'}", str(delinked / "arm9.lcf")]
+    print("+", " ".join(args))
+    env = dict(os.environ, LM_LICENSE_FILE=str(ROOT / compilers["license"]))
+    subprocess.run(args, cwd=ROOT, check=True, env=env)
+    run(dsd(), "check", "modules", "--config-path", config, "--fail")
+    run(dsd(), "rom", "config", "--elf", elf, "--config", config)
+    output = ROOT / "build" / "bk9e" / "linked.nds"
+    run(dsd(), "rom", "build", "--config", delinked / "build" / "rom_config.yaml", "--rom", output)
+    restore_header_and_compare(rom, output)
+    print(f"Exact linked ROM match: {sha256(output)}")
     return output
 
 
@@ -405,17 +435,13 @@ def check(level: str, rom: Path | None) -> None:
         build_baseline(rom)
         progress()
     if level == "strict":
-        built = ROOT / "build" / "bk9e" / "delinked" / "build"
-        if not built.exists() or not list(built.glob("*.bin")):
-            raise RuntimeError("DSD linked-module check unavailable: whole source modules are not linked yet")
-        else:
-            run(dsd(), "check", "modules", "--config-path", DSD_CONFIG, "--fail")
+        link_rom(rom)
 
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     sub = parser.add_subparsers(dest="command", required=True)
-    for name in ("setup", "build", "progress", "check"):
+    for name in ("setup", "build", "link", "progress", "check"):
         command = sub.add_parser(name)
         command.add_argument("--rom", help="Path to the user's BK9E revision 0 ROM")
         if name == "check":
@@ -432,6 +458,8 @@ def main() -> int:
             setup(rom)
         elif args.command == "build":
             build_baseline(rom)
+        elif args.command == "link":
+            link_rom(rom)
         elif args.command == "progress":
             validate_rom(rom)
             result = progress()
