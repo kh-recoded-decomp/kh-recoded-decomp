@@ -138,6 +138,10 @@ def verify(entry: dict, index: dict) -> int:
     index_of = elf.get_section_index(section_name)
     defined = {start + s["st_value"] for s in symtab.iter_symbols()
                if s["st_shndx"] == index_of and s["st_info"]["bind"] == "STB_GLOBAL"}
+    for symbol in symtab.iter_symbols():
+        suffix = re.search(r"_([0-9a-f]{8})$", symbol.name)
+        if suffix and symbol["st_shndx"] == index_of and int(suffix.group(1), 16) != start + symbol["st_value"]:
+            raise RuntimeError(f"{symbol.name} lands at {start + symbol['st_value']:#x}")
     for line in (module_dir(module) / "symbols.txt").read_text(encoding="utf-8").splitlines():
         found = SYMBOL_LINE.match(line)
         if found and found.group(2) in ("data", "bss") and start <= int(found.group(5), 16) < end:

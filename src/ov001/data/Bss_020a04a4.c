@@ -1,0 +1,3 @@
+#include "nitro/types.h"
+
+u32 data_ov001_020a04a4[2];

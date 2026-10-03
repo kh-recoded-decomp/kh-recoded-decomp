@@ -20,7 +20,13 @@ every registered C match is compiled to an object and linked with `mwldarm` in p
 original bytes, the remaining code and data come from `dsd` delinked objects, and all 108 ARM9
 modules plus the packed ROM must equal the original exactly. Functions whose objects cannot be
 placed yet (shared data sections, ambiguous overlay targets) stay delinked and are listed in
-`build/bk9e/link_skipped.txt`. ARM7 has been extracted but its function analysis has
+`build/bk9e/link_skipped.txt`.
+
+Data sections are reconstructed the same way. Each `.rodata`, `.data` or `.bss` range in
+`data_matches.json` is C that `tools/data_match.py` compiles, relocates and compares byte for byte
+(`.bss` by size and symbol layout), and `link` places it in the ROM. `tools/gen_bss.py` generates
+`.bss` layout files (one sized global per known symbol); progress reports those bytes separately
+from hand-typed data. ARM7 has been extracted but its function analysis has
 not been bootstrapped by `dsd`.
 
 ## Quick start on Windows

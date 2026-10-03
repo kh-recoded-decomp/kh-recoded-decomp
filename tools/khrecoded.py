@@ -191,6 +191,9 @@ def link_rom(rom: Path) -> Path:
     config = ROOT / "build" / "linkcfg" / "arm9" / "config.yaml"
     run(dsd(), "delink", "--config-path", config)
     run(dsd(), "lcf", "--config-path", config)
+    # Objects carry their own alignment; a blanket ALIGNALL(4) would shift 2-aligned data units.
+    lcf = delinked / "arm9.lcf"
+    lcf.write_text(lcf.read_text(encoding="utf-8").replace("ALIGNALL(4);", ""), encoding="utf-8")
     elf = delinked / "arm9.elf"
     args = [str(linker), "-proc", "arm946e", "-nostdlib", "-interworking", "-nodead", "-m", "Entry",
             "-map", "closure,unused", "-o", str(elf), f"@{delinked / 'objects.txt'}", str(delinked / "arm9.lcf")]
@@ -335,6 +338,8 @@ def progress(write: bool = True) -> dict:
     proof = verify_matches(inv)
     data_verified, data_failures = data_match.verify_all()
     data_total = data_match.totals()
+    data_generated = sum(int(e["end"], 16) - int(e["start"], 16) for e in data_match.load()
+                         if e.get("origin") == "generated layout")
     for failure in data_failures:
         print(f"Data source not verified: {failure}", file=sys.stderr)
     hierarchy = build_hierarchy(inv, proof["verified"], json.loads(
@@ -370,7 +375,7 @@ def progress(write: bool = True) -> dict:
               "groups": dict(groups), "modules": module_rows, "matches": proof["verified"],
               "organization": hierarchy,
               "assets": {"extracted_files": 805, "decompiled_files": 0},
-              "data": {"verified": data_verified, "total": data_total}}
+              "data": {"verified": data_verified, "total": data_total, "generated_layout": data_generated}}
     if write:
         out = ROOT / "build" / "progress.json"
         out.parent.mkdir(parents=True, exist_ok=True)
@@ -388,7 +393,8 @@ def progress(write: bool = True) -> dict:
                  f"**Reconstructed data: {sum(data_verified.values()):,} / {sum(data_total.values()):,} "
                  f"ARM9 data bytes** (rodata {data_verified['rodata']:,} / {data_total['rodata']:,}, "
                  f"data {data_verified['data']:,} / {data_total['data']:,}, "
-                 f"bss {data_verified['bss']:,} / {data_total['bss']:,}). Each range is C in "
+                 f"bss {data_verified['bss']:,} / {data_total['bss']:,}); {data_generated:,} of these bytes are "
+                 "generated .bss layout (one sized global per known symbol), the rest is hand-typed. Each range is C in "
                  "`data_matches.json`, compiled and compared byte for byte (.bss by size and symbol layout), "
                  "and linked into the ROM by `link`.", "",
                  "| Target | C bytes / analysed code bytes | Identified function bytes | "
@@ -427,7 +433,8 @@ def progress(write: bool = True) -> dict:
     total_code = sum(g["code_bytes"] for g in groups.values())
     print(f"Verified C/C++: {total_c:,} / {total_code:,} analysed ARM9 code bytes "
           f"({100 * total_c / total_code if total_code else 0:.3f}%)")
-    print(f"Reconstructed data: {sum(data_verified.values()):,} / {sum(data_total.values()):,} ARM9 data bytes")
+    print(f"Reconstructed data: {sum(data_verified.values()):,} / {sum(data_total.values()):,} ARM9 data bytes "
+          f"({data_generated:,} generated .bss layout)")
     print(f"Profiles: {len(module_rows)} modules; 105 overlays, ARM9 core/autoloads, ARM7")
     return result
 

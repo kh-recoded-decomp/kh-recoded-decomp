@@ -201,6 +201,18 @@ def defined_globals(data: bytes, section_name: str) -> list[tuple[str, int]]:
             if shndx == index and info >> 4 == 1 and name]
 
 
+def lower_alignment(data: bytes, section_name: str, address: int) -> bytes:
+    """MWCC marks data sections 4-aligned; a unit at a 2- or 1-aligned address needs less."""
+    shoff, shentsize, sections = read_elf(data)
+    index = next(i for i, s in enumerate(sections) if s[10] == section_name)
+    align = sections[index][8]
+    while align > 1 and address % align:
+        align //= 2
+    patched = bytearray(data)
+    struct.pack_into("<I", patched, shoff + index * shentsize + 32, align)
+    return bytes(patched)
+
+
 def undefined_names(data: bytes) -> list[str]:
     _, _, sections = read_elf(data)
     return [name for _, name, _, _, _, shndx in symbols_of(data, sections)[2] if shndx == 0 and name]
@@ -270,6 +282,10 @@ def main() -> int:
                 data_renamed[(m, row[0])] = data_names[(m, row[2])]
                 row[0] = data_names[(m, row[2])]
     canonical = {(m, row[2]): row[0] for m in modules for row in symbols[m] if row[0] and row[1] != "label"}
+    for key, name in data_names.items():
+        if key not in canonical:
+            canonical[key] = name
+            EXTRAS[key] = name
     relocs = {m: load_relocs(m) for m in modules}
     THUMB.update((m, row[2]) for m in modules for row in symbols[m] if row[0] and "function(thumb" in row[3])
     for m in modules:
@@ -320,6 +336,7 @@ def main() -> int:
                 renames[name] = new
         if renames:
             data = rename_symbols(data, renames)
+        data = lower_alignment(data, entry["section"], int(entry["start"], 16))
         unit = Path(entry["source"])
         out = DELINKED / unit.with_suffix(".o")
         out.parent.mkdir(parents=True, exist_ok=True)
