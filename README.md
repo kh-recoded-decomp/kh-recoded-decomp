@@ -12,8 +12,9 @@ extracted game binaries and assets stay on the owner's machine and are ignored b
 - ARM9 symbols, relocation metadata, and module profiles are initialized in `config/bk9e/arm9/`.
 - A pinned compiler and ARMv5 relocation pipeline verify C functions independently. See [PROGRESS.md](PROGRESS.md) for freshly rebuilt coverage and [matches.json](matches.json) for behavior and uncertainty.
 
-The public-release milestone is **30% verified ARM9 C/C++ code coverage**. Keep
-the repository private until a fresh progress check confirms that threshold.
+**Progress (2026-10-04): 60.3% verified ARM9 C/C++ code** (1,065,416 / 1,768,220 bytes,
+9,108 functions) and 93,751 / 228,140 ARM9 data bytes reconstructed. See
+[PROGRESS.md](PROGRESS.md) for the per-module breakdown.
 
 The baseline rebuild proves that extraction and packing are reproducible. `link` goes further:
 every registered C match is compiled to an object and linked with `mwldarm` in place of its
