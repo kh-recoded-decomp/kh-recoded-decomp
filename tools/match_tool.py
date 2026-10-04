@@ -206,7 +206,10 @@ def undefined_symbols(obj: bytes, function_name: str) -> list[str]:
             for r in section.iter_relocations():
                 if start <= r["r_offset"] < start + size:
                     sym = symtab.get_symbol(r["r_info_sym"])
-                    if sym["st_shndx"] == "SHN_UNDEF" and sym.name not in used:
+                    outside = sym["st_shndx"] == "SHN_UNDEF" or (
+                        sym["st_shndx"] != index and isinstance(sym["st_shndx"], int)
+                        and sym["st_info"]["type"] == "STT_FUNC")
+                    if outside and sym.name not in used:
                         used.append(sym.name)
     return used
 

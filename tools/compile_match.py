@@ -152,7 +152,9 @@ def link_function(obj: bytes, function_name: str, address: int, bindings: dict[s
                     marks = [name for offset, name in mapping if offset <= (symbol['st_value'] & ~1)]
                     if marks and marks[-1] == '$t':
                         value |= 1
-            elif symbol['st_shndx'] == 'SHN_UNDEF' and symbol.name in bindings:
+            elif symbol.name in bindings and (symbol['st_shndx'] == 'SHN_UNDEF' or (
+                    isinstance(symbol['st_shndx'], int) and symbol['st_info']['type'] == 'STT_FUNC')):
+                # An inline helper emitted in its own section binds to the original copy like an external.
                 value = bindings[symbol.name]
                 used.add(symbol.name)
             else:

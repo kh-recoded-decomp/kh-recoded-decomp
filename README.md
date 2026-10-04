@@ -10,10 +10,10 @@ Every counted function is C that compiles to the original bytes exactly.
 
 | | Matched | Total | % |
 |---|---:|---:|---:|
-| **ARM9 code (C bytes)** | **1,106,556** | 1,768,220 | **62.6%** |
-| ARM9 core + autoloads | 277,018 | 370,004 | 74.9% |
-| ARM9 overlays (105) | 829,538 | 1,398,216 | 59.3% |
-| Functions | 9,282 | 10,359 | 89.6% |
+| **ARM9 code (C bytes)** | **1,139,270** | 1,768,220 | **64.4%** |
+| ARM9 core + autoloads | 290,746 | 370,004 | 78.6% |
+| ARM9 overlays (105) | 848,524 | 1,398,216 | 60.7% |
+| Functions | 9,364 | 10,359 | 90.4% |
 | Data bytes (.rodata/.data/.bss) | 93,751 | 228,140 | 41.1% |
 
 Updated 2026-10-04. Per-module numbers are in [PROGRESS.md](PROGRESS.md).
