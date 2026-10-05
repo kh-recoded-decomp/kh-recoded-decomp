@@ -5,7 +5,9 @@ Needs only tracked files: the dsd symbol and delink tables in config/bk9e/arm9,
 matches.json and data_matches.json. Every entry in those manifests has passed the
 byte-for-byte check of `khrecoded.py progress`, so a function counts as 100% matched
 when it is registered and 0% otherwise. Each ARM9 module (main, ITCM, DTCM and every
-overlay) becomes one report unit.
+overlay) becomes one report unit. A matched function counts as fully linked when
+linked.txt lists it: `khrecoded.py link` writes that file only after the ROM built
+from the C objects is byte-identical to the original.
 """
 
 from __future__ import annotations
@@ -56,7 +58,8 @@ def percent(part: int, whole: int) -> float:
 
 
 def measures(code: int, matched_code: int, data: int, matched_data: int,
-             functions: int, matched_functions: int, units: int) -> dict:
+             functions: int, matched_functions: int, units: int,
+             complete_code: int = 0, complete_units: int = 0) -> dict:
     return {"fuzzy_match_percent": percent(matched_code, code),
             "total_code": code, "matched_code": matched_code,
             "matched_code_percent": percent(matched_code, code),
@@ -64,22 +67,32 @@ def measures(code: int, matched_code: int, data: int, matched_data: int,
             "matched_data_percent": percent(matched_data, data),
             "total_functions": functions, "matched_functions": matched_functions,
             "matched_functions_percent": percent(matched_functions, functions),
-            "complete_code": 0, "complete_code_percent": 0.0,
+            "complete_code": complete_code, "complete_code_percent": percent(complete_code, code),
             "complete_data": 0, "complete_data_percent": 0.0,
-            "total_units": units, "complete_units": 0}
+            "total_units": units, "complete_units": complete_units}
 
 
 def sum_measures(items: list[dict]) -> dict:
-    keys = ("total_code", "matched_code", "total_data", "matched_data", "total_functions", "matched_functions")
+    keys = ("total_code", "matched_code", "total_data", "matched_data", "total_functions", "matched_functions",
+            "complete_code", "total_units", "complete_units")
     total = {key: sum(item[key] for item in items) for key in keys}
     return measures(total["total_code"], total["matched_code"], total["total_data"], total["matched_data"],
-                    total["total_functions"], total["matched_functions"], sum(i["total_units"] for i in items))
+                    total["total_functions"], total["matched_functions"], total["total_units"],
+                    total["complete_code"], total["complete_units"])
+
+
+def load_linked() -> set[tuple[str, str]]:
+    path = ROOT / "linked.txt"
+    if not path.exists():
+        return set()
+    return {tuple(line.split()[:2]) for line in path.read_text(encoding="utf-8").splitlines() if line.strip()}
 
 
 def build_report() -> dict:
     matches = {(m["module"], m["symbol"]): m
                for m in json.loads((ROOT / "matches.json").read_text(encoding="utf-8"))["matches"]}
     data_matches = json.loads((ROOT / "data_matches.json").read_text(encoding="utf-8"))["data"]
+    linked = load_linked()
     units = []
     for module, config_dir in module_dirs():
         spans = header_spans(config_dir)
@@ -102,6 +115,8 @@ def build_report() -> dict:
         functions.sort(key=lambda f: f["metadata"]["virtual_address"])
         code = union_size(code_ranges)
         matched_code = sum(f["size"] for f in functions if f["fuzzy_match_percent"])
+        linked_code = sum(f["size"] for f in functions
+                          if f["fuzzy_match_percent"] and (module, f["name"]) in linked)
         sections = [{"name": ".text", "size": code, "fuzzy_match_percent": percent(matched_code, code),
                      "address": 0, "metadata": {"virtual_address": base}}]
         data_total = data_matched = 0
@@ -118,13 +133,14 @@ def build_report() -> dict:
             sections.append({"name": f".{kind}", "size": total, "fuzzy_match_percent": percent(done, total),
                              "address": start - base, "metadata": {"virtual_address": start}})
         category = "overlays" if module.startswith("ov") else "core"
-        metadata = {"complete": False, "module_name": module,
+        metadata = {"complete": bool(code) and linked_code == code, "module_name": module,
                     "progress_categories": [category], "auto_generated": True}
         if module.startswith("ov"):
             metadata["module_id"] = int(module[2:])
         units.append({"name": module,
                       "measures": measures(code, matched_code, data_total, data_matched, len(functions),
-                                           sum(1 for f in functions if f["fuzzy_match_percent"]), 1),
+                                           sum(1 for f in functions if f["fuzzy_match_percent"]), 1,
+                                           linked_code, int(bool(code) and linked_code == code)),
                       "sections": sections, "functions": functions, "metadata": metadata})
     categories = [{"id": cid, "name": name,
                    "measures": sum_measures([u["measures"] for u in units
@@ -143,6 +159,7 @@ def main() -> int:
     args.output.write_text(json.dumps(report, separators=(",", ":")) + "\n", encoding="utf-8")
     m = report["measures"]
     print(f"{args.output}: code {m['matched_code']:,} / {m['total_code']:,} ({m['matched_code_percent']:.3f}%), "
+          f"linked {m['complete_code']:,} ({m['complete_code_percent']:.3f}%), "
           f"data {m['matched_data']:,} / {m['total_data']:,}, functions "
           f"{m['matched_functions']:,} / {m['total_functions']:,}, {m['total_units']} units")
     return 0

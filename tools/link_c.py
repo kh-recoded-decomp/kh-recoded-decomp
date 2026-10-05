@@ -391,6 +391,9 @@ def main() -> int:
         "".join(f"{name} = {value:#010x};\n" for name, value in sorted(ABSOLUTES.items())), encoding="utf-8")
     report = ROOT / "build" / "bk9e" / "link_skipped.txt"
     report.write_text("".join(f"{m} {s} {why}\n" for m, s, why in sorted(skipped)), encoding="utf-8")
+    linked_functions = sorted((e["module"], e["symbol"]) for e, data, _ in results if data is not None)
+    (ROOT / "build" / "bk9e" / "link_linked.txt").write_text(
+        "".join(f"{m} {s}\n" for m, s in linked_functions), encoding="utf-8")
     print(f"C objects linked: {len(results) - len(skipped)} functions ({total:,} bytes), "
           f"{len(data_entries)} data units ({data_bytes:,} bytes); skipped {len(skipped)} -> {report}")
     return 0

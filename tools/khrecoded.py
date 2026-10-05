@@ -208,6 +208,8 @@ def link_rom(rom: Path) -> Path:
     run(dsd(), "rom", "build", "--config", delinked / "build" / "rom_config.yaml", "--rom", output)
     restore_header_and_compare(rom, output)
     print(f"Exact linked ROM match: {sha256(output)}")
+    # Only a verified ROM may update the tracked list that decomp.dev reads as fully linked.
+    shutil.copyfile(ROOT / "build" / "bk9e" / "link_linked.txt", ROOT / "linked.txt")
     return output
 
 
