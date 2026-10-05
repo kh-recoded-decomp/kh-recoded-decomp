@@ -1,9 +1,5 @@
-extern void GX_BeginLoadTexPltt(void);
-extern void GX_LoadTexPltt(void *src, unsigned offset, unsigned size);
-extern void GX_EndLoadTexPltt(void);
-
-void func_0202c1f4(void *src, unsigned offset, unsigned size) {
-    GX_BeginLoadTexPltt();
-    GX_LoadTexPltt(src, offset, size);
-    GX_EndLoadTexPltt();
-}
+#define GX_BeginLoadTex GX_BeginLoadTexPltt
+#define GX_EndLoadTex GX_EndLoadTexPltt
+#define GX_LoadTex GX_LoadTexPltt
+#define func_0202c1e0 func_0202c1f4
+#include "src/arm9/core_small/func_0202c1e0.c"

@@ -1,18 +1,5 @@
-typedef int BOOL;
-typedef unsigned short u16;
-
-#define REG_OS_IME (*(volatile u16 *)0x04000208)
-
-extern BOOL OS_IsResetOccurred(void);
-extern void OSi_ReloadRomData(BOOL isTwl);
-extern void OSi_DoBoot(void);
-
-void OSi_DoResetSystem(void)
-{
-    while (!OS_IsResetOccurred()) {
-    }
-
-    REG_OS_IME = 0;
-    OSi_ReloadRomData(0);
-    OSi_DoBoot();
-}
+#define OSi_DoResetSystem_01ff8310 OSi_DoResetSystem
+#define func_01ff833c OSi_DoBoot
+#define func_01ff8420 OSi_ReloadRomData
+#define func_0200201c OS_IsResetOccurred
+#include "src/itcm/library_nitro_os/OSi_DoResetSystem_01ff8310.c"

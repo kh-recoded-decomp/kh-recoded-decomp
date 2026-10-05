@@ -1,6 +1,2 @@
-#include "nitro/types.h"
-
-void *func_ov001_02090f2c(void *object)
-{
-    return (u8 *)object + 0x2c0;
-}
+#define func_ov001_02090f04 func_ov001_02090f2c
+#include "src/ov001/leaf_research/func_ov001_02090f04.c"

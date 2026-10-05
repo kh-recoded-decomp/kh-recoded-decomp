@@ -1,5 +1,3 @@
-extern int MovieScene_IsFlag8b9Clear();
-int func_ov003_02064850(void) {
-    if (MovieScene_IsFlag8b9Clear() != 0) return 1;
-    return 0;
-}
+#define Ov012_IsGlobalByte8be1Clear MovieScene_IsFlag8b9Clear
+#define thumbStep_02064850 func_ov003_02064850
+#include "src/ov003/shared_engine/thumbStep_02064850.c"

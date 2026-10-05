@@ -1,5 +1,2 @@
-extern int data_02060394;
-
-int Heap_GetCurrent(void) {
-    return *(int *)((char *)&data_02060394 + 4);
-}
+#define func_0202a158 Heap_GetCurrent
+#include "src/arm9/shared_engine/func_0202a158.c"

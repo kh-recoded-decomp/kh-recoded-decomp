@@ -1,8 +1,3 @@
-extern int ScriptVm_ReadOperandInt();
-extern int ShowSessionNameEntry();
-
-int func_ov001_02065438(int arg0) {
-    ScriptVm_ReadOperandInt(arg0);
-    ShowSessionNameEntry();
-    return 1;
-}
+#define Ov002_EnterPhase ShowSessionNameEntry
+#define ScriptCmd_EnterPhase_02065438 func_ov001_02065438
+#include "src/ov001/shared_engine/ScriptCmd_EnterPhase_02065438.c"

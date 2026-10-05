@@ -1,8 +1,4 @@
-extern int ByteCode_ResolveOperand();
-extern int LoadCameraParams();
-
-int func_ov001_02065638(int arg0) {
-    ByteCode_ResolveOperand(arg0);
-    LoadCameraParams();
-    return 1;
-}
+#define Ov002_EnterPhase LoadCameraParams
+#define ScriptCmd_EnterPhase_02065638 func_ov001_02065638
+#define ScriptVm_ReadOperandInt ByteCode_ResolveOperand
+#include "src/ov001/shared_engine/ScriptCmd_EnterPhase_02065638.c"

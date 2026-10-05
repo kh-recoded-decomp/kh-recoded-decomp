@@ -1,6 +1,2 @@
-#include "nitro/types.h"
-
-s32 func_ov073_020c1ce0(const s32 *left, const s32 *right)
-{
-    return *left - *right;
-}
+#define func_ov073_020c1cc0 func_ov073_020c1ce0
+#include "src/ov073/leaf_research/func_ov073_020c1cc0.c"

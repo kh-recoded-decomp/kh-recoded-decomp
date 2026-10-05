@@ -1,8 +1,2 @@
-#include "libs/nitro/fs/fs_internal.h"
-
-BOOL FSi_IsUnreadableRomOffset(FSArchive *archive, u32 offset)
-{
-    (void)archive;
-    (void)offset;
-    return 0;
-}
+#define func_0200d2ac FSi_IsUnreadableRomOffset
+#include "src/arm9/leaf_research/func_0200d2ac.c"

@@ -1,12 +1,2 @@
-#include "nnsys/snd.h"
-
-extern void SND_SetPlayerChannelPriority(int playerNo, int priority);
-
-void NNS_SndPlayerSetChannelPriority(NNSSndHandle *handle, int priority)
-{
-    if (!NNS_SndHandleIsValid(handle)) {
-        return;
-    }
-
-    SND_SetPlayerChannelPriority(handle->player->playerNo, priority);
-}
+#define func_0201d76c NNS_SndPlayerSetChannelPriority
+#include "src/arm9/library_nns_snd/func_0201d76c.c"

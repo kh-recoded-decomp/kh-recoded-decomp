@@ -125,7 +125,10 @@ def verify(entry: dict, index: dict) -> int:
     module, section_name = entry["module"], entry["section"]
     start, end = int(entry["start"], 16), int(entry["end"], 16)
     kind = SECTIONS[section_name]
-    if not any(a <= start and end <= b for a, b in section_spans(module).get(kind, [])):
+    header = (module_dir(module) / "delinks.txt").read_text(encoding="utf-8")
+    named = [(int(a, 16), int(b, 16)) for name, a, b in
+             re.findall(r"^\s*(\S+)\s+start:0x([0-9a-f]+) end:0x([0-9a-f]+) kind:", header, re.M) if name == section_name]
+    if not any(a <= start and end <= b for a, b in named):
         raise RuntimeError(f"{start:#x}-{end:#x} is not inside {module} {section_name}")
     elf = ELFFile(io.BytesIO(compile_source(entry)))
     allocated = [s for s in elf.iter_sections() if s["sh_flags"] & 2 and s["sh_size"]]

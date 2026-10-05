@@ -1,17 +1,4 @@
-#include "libs/nitro/os/os_event_internal.h"
-
-extern OSIntrMode OS_DisableInterrupts(void);
-extern OSIntrMode OS_RestoreInterrupts(OSIntrMode state);
-extern void OS_WakeupThread(OSThreadQueue *queue);
-
-void OS_SignalEvent(OSEvent *event, u32 setPattern)
-{
-    OSIntrMode enabled = OS_DisableInterrupts();
-
-    if (setPattern) {
-        event->flag |= setPattern;
-        OS_WakeupThread(&event->queue);
-    }
-
-    OS_RestoreInterrupts(enabled);
-}
+#define SetFlagsAndWake_02004df8 OS_SignalEvent
+#define func_02004938 OS_DisableInterrupts
+#define func_0200494c OS_RestoreInterrupts
+#include "src/arm9/state_management/SetFlagsAndWake_02004df8.c"

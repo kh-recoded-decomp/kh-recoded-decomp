@@ -1,16 +1,4 @@
-#include "libs/nitro/fs/fs_internal.h"
-
-BOOL FS_MountArchive(FSArchive *archive, void *userdata,
-                     const FSArchiveInterface *interface, u32 reserved)
-{
-    FSFile file;
-
-    (void)reserved;
-    archive->userdata = userdata;
-    archive->interface = interface;
-    FS_InitFile(&file);
-    file.archive = archive;
-    (void)FSi_InvokeCommand(&file, FS_COMMAND_MOUNT);
-    archive->flags |= FS_ARCHIVE_FLAG_LOADED;
-    return 1;
-}
+#define FS_MountArchive_0200b044 FS_MountArchive
+#define func_0200a2fc FSi_InvokeCommand
+#define func_0200b394 FS_InitFile
+#include "src/arm9/library_nitro_fs/FS_MountArchive_0200b044.c"

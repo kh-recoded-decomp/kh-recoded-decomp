@@ -1,28 +1,4 @@
-typedef unsigned long u32;
-typedef struct OSExceptionState {
-    void *handler;
-    u32 reserved04;
-    void *originalHandler;
-    u32 exceptionOccurred;
-} OSExceptionState;
-extern OSExceptionState OSi_ExceptionState;
-extern void OSi_ExceptionHandler(void);
-
-void OSi_InstallExceptionVector(void)
-{
-    volatile void **exceptionVector = (volatile void **)0x02fffd9c;
-    void *handler = *exceptionVector;
-
-    OSi_ExceptionState.originalHandler = handler;
-    OSi_ExceptionState.handler =
-        ((u32)handler >= 0x02600000 && (u32)handler < 0x02800000)
-            ? handler
-            : 0;
-
-    if (OSi_ExceptionState.handler == 0) {
-        *exceptionVector = OSi_ExceptionHandler;
-        *(volatile void **)((u32)exceptionVector & ~0x00800000) = OSi_ExceptionHandler;
-    }
-
-    OSi_ExceptionState.exceptionOccurred = 0;
-}
+#define OS_InitException_02003ca8 OSi_InstallExceptionVector
+#define data_02056df0 OSi_ExceptionState
+#define func_02003d20 OSi_ExceptionHandler
+#include "src/arm9/library_nitro_os/OS_InitException_02003ca8.c"

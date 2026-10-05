@@ -1,16 +1,2 @@
-typedef unsigned int u32;
-typedef unsigned char u8;
-
-typedef struct NNSSndArc {
-    u8 reserved[0x90];
-    void *fat;
-    void *symbol;
-    void *info;
-} NNSSndArc;
-
-void SymbolDisposeCallback(void *mem, u32 size, u32 data1, u32 data2)
-{
-    NNSSndArc *arc = (NNSSndArc *)data1;
-
-    arc->symbol = 0;
-}
+#define func_0201ef98 SymbolDisposeCallback
+#include "src/arm9/leaf_research/func_0201ef98.c"

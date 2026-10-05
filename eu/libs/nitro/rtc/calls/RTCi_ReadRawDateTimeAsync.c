@@ -1,6 +1,3 @@
-#include "libs/nitro/rtc/rtc_internal.h"
-
-BOOL RTCi_ReadRawDateTimeAsync(void)
-{
-    return RtcSendPxiCommand(RTC_PXI_COMMAND_READ_DATETIME);
-}
+#define ClearGlobalArrayInt RtcSendPxiCommand
+#define func_0200e8e4 RTCi_ReadRawDateTimeAsync
+#include "src/arm9/shared_engine/func_0200e8e4.c"

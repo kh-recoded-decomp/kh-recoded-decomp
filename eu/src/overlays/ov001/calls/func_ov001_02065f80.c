@@ -1,6 +1,3 @@
-extern int ResetGaugeDisplay();
-
-int func_ov001_02065f80(int arg0) {
-    ResetGaugeDisplay(arg0);
-    return 1;
-}
+#define FS_EndOverlay ResetGaugeDisplay
+#define FS_UnloadOverlayImage_02065f80 func_ov001_02065f80
+#include "src/ov001/library_nitro_fs/FS_UnloadOverlayImage_02065f80.c"

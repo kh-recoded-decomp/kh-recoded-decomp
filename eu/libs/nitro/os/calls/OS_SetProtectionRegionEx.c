@@ -1,10 +1,3 @@
-#include "libs/nitro/os/os_protection_region_internal.h"
-
-void OS_SetProtectionRegionEx(OSProtectionRegion region, u32 address, u32 size)
-{
-    u32 shift = (size - 0x16) >> 1;
-    u32 mask = (u32)-0x1000 << shift;
-    u32 parameter = (address & mask) | size | 1;
-
-    OSi_SetProtectionRegion(region, parameter);
-}
+#define CallTableFunc_02003be4 OSi_SetProtectionRegion
+#define ConfigureProtectionRegion_02003c80 OS_SetProtectionRegionEx
+#include "src/arm9/nitro_os/ConfigureProtectionRegion_02003c80.c"

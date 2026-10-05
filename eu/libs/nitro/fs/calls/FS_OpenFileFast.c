@@ -1,27 +1,3 @@
-#include "libs/nitro/fs/fs_internal.h"
-
-typedef struct FSArgumentForOpenFileFast {
-    u32 id;
-    u32 mode;
-} FSArgumentForOpenFileFast;
-
-#define FS_COMMAND_OPENFILEFAST 6UL
-
-extern BOOL FSi_SendCommand(FSFile *file, FSCommandType command,
-                            BOOL blocking);
-
-BOOL FS_OpenFileFast(FSFile *file, FSFileID id)
-{
-    BOOL result = 0;
-
-    if (id.archive) {
-        FSArgumentForOpenFileFast argument[1];
-
-        file->archive = id.archive;
-        file->argument = argument;
-        argument->id = id.fileId;
-        argument->mode = 0;
-        result = FSi_SendCommand(file, FS_COMMAND_OPENFILEFAST, 1);
-    }
-    return result;
-}
+#define OpenFileFast_0200b4d4 FS_OpenFileFast
+#define func_0200a930 FSi_SendCommand
+#include "src/arm9/library_nitro_fs/OpenFileFast_0200b4d4.c"

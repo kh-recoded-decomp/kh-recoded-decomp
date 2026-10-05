@@ -1,8 +1,3 @@
-#include "nitro/types.h"
-
-extern void SetBrightnessAndSyncMain(int value);
-
-void SetMainBrightnessFromFx(s32 value)
-{
-    SetBrightnessAndSyncMain(value >> 12);
-}
+#define func_02029e7c SetBrightnessAndSyncMain
+#define func_ov001_02066df4 SetMainBrightnessFromFx
+#include "src/ov001/unclassified_helpers/func_ov001_02066df4.c"

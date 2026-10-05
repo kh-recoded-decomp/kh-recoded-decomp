@@ -1,21 +1,9 @@
-#include "libs/nitro/fs/fs_overlay_internal.h"
-
-extern u32 FSi_GetOverlayBinarySize(const FSOverlayInfo *info);
-extern void FS_ClearOverlayImage(FSOverlayInfo *info);
-
-BOOL FS_LoadOverlayImage(FSOverlayInfo *info)
-{
-    BOOL result = 0;
-    FSFile file[1];
-
-    FS_InitFile(file);
-    if (FS_OpenFileFast(file, FS_GetOverlayFileID(info))) {
-        s32 size = FSi_GetOverlayBinarySize(info);
-        FS_ClearOverlayImage(info);
-        if (FS_ReadFile(file, FS_GetOverlayAddress(info), size) == size) {
-            result = 1;
-        }
-        (void)FS_CloseFile(file);
-    }
-    return result;
-}
+#define FS_InitializeOverlayMemory_0200b7e8 FS_ClearOverlayImage
+#define FSi_GetOverlayBinarySize_0200b7cc FSi_GetOverlayBinarySize
+#define LoadAndVerifyOverlay_0200ba34 FS_LoadOverlayImage
+#define MakeTypeTagPair_0200b824 FS_GetOverlayFileID
+#define func_0200b394 FS_InitFile
+#define func_0200b4d4 FS_OpenFileFast
+#define func_0200b5b0 FS_CloseFile
+#define func_0200b674 FS_ReadFile
+#include "src/arm9/library_nitro_fs/LoadAndVerifyOverlay_0200ba34.c"

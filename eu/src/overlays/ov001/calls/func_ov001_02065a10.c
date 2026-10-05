@@ -1,5 +1,3 @@
-extern int IsSceneFlag10Clear();
-int func_ov001_02065a10(void) {
-    if (IsSceneFlag10Clear() != 0) return 1;
-    return 0;
-}
+#define Ov012_IsGlobalByte8be1Clear IsSceneFlag10Clear
+#define thumbStep_02065a10 func_ov001_02065a10
+#include "src/ov001/shared_engine/thumbStep_02065a10.c"

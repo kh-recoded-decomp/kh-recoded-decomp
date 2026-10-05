@@ -1,6 +1,4 @@
-extern int func_ov081_020c544c(void);
-extern void DrawListPageCounter(void *, int);
-void func_ov081_020c5660(void *obj)
-{
-    DrawListPageCounter(obj, func_ov081_020c544c());
-}
+#define BindDescriptor0_020c5640 func_ov081_020c5660
+#define Ov008_GetDescriptor0 func_ov081_020c544c
+#define Ov008_SetWord0And20 DrawListPageCounter
+#include "src/ov081/shared_engine/BindDescriptor0_020c5640.c"

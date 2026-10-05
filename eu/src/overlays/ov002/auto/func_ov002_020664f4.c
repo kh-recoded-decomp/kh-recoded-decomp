@@ -1,8 +1,2 @@
-#include "nitro/types.h"
-
-extern u32 PostPanelEventOn();
-
-u32 func_ov002_020664f4(void *object)
-{
-    return PostPanelEventOn(object, 12288);
-}
+#define NNS_FndInitList_02066530 PostPanelEventOn
+#include "src/ov002/constant_variants/func_ov002_020664f4.c"

@@ -1,7 +1,2 @@
-#include "nitro/types.h"
-
-u16 func_ov025_020b7650(const void *table, u32 index)
-{
-    const u8 *entry = *(const u8 *const *)((const u8 *)table + index * 4 + 0x70);
-    return *(const u16 *)(entry + 4);
-}
+#define func_ov025_020b7630 func_ov025_020b7650
+#include "src/ov025/leaf_research/func_ov025_020b7630.c"

@@ -1,20 +1,7 @@
-#include "libs/nitro/spi/pm_power_internal.h"
-
-void PM_Init(void)
-{
-    if (PMi_Bss.isInitialized) {
-        return;
-    }
-
-    PMi_Bss.isInitialized = 1;
-    PMi_Bss.work.lock = FALSE;
-    PMi_Bss.work.callback = 0;
-
-    PXI_Init();
-    while (!PXI_IsCallbackReady(PXI_FIFO_TAG_PM, PXI_PROC_ARM7)) {
-        WaitByLoop(100);
-    }
-    PXI_SetFifoRecvCallback(PXI_FIFO_TAG_PM, PMi_CommonCallback);
-
-    PMi_Bss.lcdCount = PMi_Bss.displayOffCount = OS_VBLANK_COUNT;
-}
+#define PM_Init_0201023c PM_Init
+#define PMi_CommonCallback_02010298 PMi_CommonCallback
+#define PXI_Init_0200e1ec PXI_Init
+#define PXI_IsCallbackReady_0200e2e8 PXI_IsCallbackReady
+#define PXI_SetFifoRecvCallback_0200e29c PXI_SetFifoRecvCallback
+#define data_020597c0 PMi_Bss
+#include "src/arm9/library_nitro_spi/PM_Init_0201023c.c"

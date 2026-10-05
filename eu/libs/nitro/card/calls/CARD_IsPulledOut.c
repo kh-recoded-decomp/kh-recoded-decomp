@@ -1,15 +1,3 @@
-typedef unsigned long u32;
-typedef int BOOL;
-
-typedef struct CARDPulledOutState {
-    u32 slotResetCount;
-    BOOL isPulledOut;
-    BOOL (*userCallback)(void);
-} CARDPulledOutState;
-
-extern CARDPulledOutState sCardPullOutState;
-
-BOOL CARD_IsPulledOut(void)
-{
-    return sCardPullOutState.isPulledOut;
-}
+#define data_020578e0 sCardPullOutState
+#define func_0200a0c4 CARD_IsPulledOut
+#include "src/arm9/shared_engine/func_0200a0c4.c"

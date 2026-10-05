@@ -1,8 +1,3 @@
-extern int ScriptVm_ReadOperandInt();
-extern int LoadCenteredScreenSprite();
-
-int func_ov001_02065910(int arg0) {
-    ScriptVm_ReadOperandInt(arg0);
-    LoadCenteredScreenSprite();
-    return 1;
-}
+#define Ov002_EnterPhase LoadCenteredScreenSprite
+#define ScriptCmd_EnterPhase_02065910 func_ov001_02065910
+#include "src/ov001/shared_engine/ScriptCmd_EnterPhase_02065910.c"

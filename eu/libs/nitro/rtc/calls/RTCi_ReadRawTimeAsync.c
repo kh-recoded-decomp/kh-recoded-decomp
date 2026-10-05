@@ -1,6 +1,2 @@
-#include "libs/nitro/rtc/rtc_internal.h"
-
-BOOL RTCi_ReadRawTimeAsync(void)
-{
-    return RtcSendPxiCommand(RTC_PXI_COMMAND_READ_TIME);
-}
+#define RTCi_ReadRawTimeAsync_0200e8fc RTCi_ReadRawTimeAsync
+#include "src/arm9/library_nitro_rtc/RTCi_ReadRawTimeAsync_0200e8fc.c"

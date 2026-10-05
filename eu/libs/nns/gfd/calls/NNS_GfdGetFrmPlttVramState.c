@@ -1,20 +1,3 @@
-typedef unsigned int u32;
-
-typedef struct NNSGfdFrmPlttVramManager {
-    u32 lowAddress;
-    u32 highAddress;
-    u32 totalSize;
-} NNSGfdFrmPlttVramManager;
-
-typedef struct NNSGfdFrmPlttVramState {
-    u32 lowAddress;
-    u32 highAddress;
-} NNSGfdFrmPlttVramState;
-
-extern NNSGfdFrmPlttVramManager sFrmPlttVramManager;
-
-void NNS_GfdGetFrmPlttVramState(NNSGfdFrmPlttVramState *state)
-{
-    state->lowAddress = sFrmPlttVramManager.lowAddress;
-    state->highAddress = sFrmPlttVramManager.highAddress;
-}
+#define GFXi_SaveStateTo_02013d3c NNS_GfdGetFrmPlttVramState
+#define data_0205a8c4 sFrmPlttVramManager
+#include "src/arm9/library_nitro_gx/GFXi_SaveStateTo_02013d3c.c"

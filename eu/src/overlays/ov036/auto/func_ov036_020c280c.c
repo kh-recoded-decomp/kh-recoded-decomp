@@ -1,1 +1,2 @@
-int func_ov036_020c280c(char *self) { return *(int *)(self + 0x8); }
+#define func_ov036_020c27ec func_ov036_020c280c
+#include "src/ov036/leaf_research/func_ov036_020c27ec.c"

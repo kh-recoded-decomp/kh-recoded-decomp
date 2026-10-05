@@ -1,8 +1,3 @@
-#include "nnsys/snd.h"
-
-extern void NNSi_SndPlayerStopSeq(NNSSndSeqPlayer *sequencePlayer, int fadeFrames);
-
-void NNS_SndPlayerStopSeq(NNSSndHandle *handle, int fadeFrames)
-{
-    NNSi_SndPlayerStopSeq(handle->player, fadeFrames);
-}
+#define NNS_SndPlayerPause_0201d4d0 NNS_SndPlayerStopSeq
+#define NNSi_SndPlayerPause NNSi_SndPlayerStopSeq
+#include "src/arm9/library_nns_snd/NNS_SndPlayerPause_0201d4d0.c"

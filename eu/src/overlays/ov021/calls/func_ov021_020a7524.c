@@ -1,5 +1,3 @@
-extern int GetSubModeState();
-
-int func_ov021_020a7524(int arg0) {
-    return GetSubModeState(arg0, 1);
-}
+#define AlarmCallback_020a7504 func_ov021_020a7524
+#define StrmCallback GetSubModeState
+#include "src/ov021/library_nns_snd/AlarmCallback_020a7504.c"

@@ -1,10 +1,5 @@
-extern int ScriptVm_ReadOperandInt();
-extern int func_ov001_0207f050();
-extern int FieldObjects_ResetAllAndShuffle();
-
-int func_ov011_020a06c4(int arg0) {
-    ScriptVm_ReadOperandInt(arg0);
-    func_ov001_0207f050();
-    FieldObjects_ResetAllAndShuffle();
-    return 1;
-}
+#define Ov002_PostCrawlScoreLine FieldObjects_ResetAllAndShuffle
+#define Ov022_GetEntryField66 func_ov001_0207f050
+#define QueryActiveStateOrDelegate ScriptVm_ReadOperandInt
+#define ScriptCmd_PostCrawlScoreLine_020a06a4 func_ov011_020a06c4
+#include "src/ov011/shared_engine/ScriptCmd_PostCrawlScoreLine_020a06a4.c"

@@ -1,14 +1,7 @@
-#include "libs/nitro/spi/pm_power_internal.h"
-
-u32 PMi_ForceToPowerOff(void)
-{
-    while (PM_ForceToPowerOff() != PM_SUCCESS) {
-        OS_SpinWait(PMi_ARM9_CLOCK_DIV_100);
-    }
-
-    (void)OS_DisableInterrupts();
-    MI_StopAllDma();
-    while (1) {
-        OS_Halt();
-    }
-}
+#define ForcePowerOffAndHalt_0201057c PMi_ForceToPowerOff
+#define PM_ForceToPowerOffSync_02010550 PM_ForceToPowerOff
+#define ResetFourChannels_020052dc MI_StopAllDma
+#define func_02004938 OS_DisableInterrupts
+#define func_020049b4 OS_SpinWait
+#define func_02004d30 OS_Halt
+#include "src/arm9/library_nitro_spi/ForcePowerOffAndHalt_0201057c.c"

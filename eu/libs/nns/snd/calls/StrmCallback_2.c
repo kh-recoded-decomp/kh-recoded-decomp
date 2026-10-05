@@ -1,56 +1,11 @@
-#include "libs/nns/snd/sndarc_stream_internal.h"
-
-void StrmCallback_2(
-    NNSSndStrmCallbackStatus status,
-    int numChannels,
-    void *buffers[],
-    u32 length,
-    NNSSndStrmFormat format,
-    void *argument)
-{
-    NNSSndStrmPlayer *player = argument;
-    NNSSndStrmCommand *command;
-    NNSSndStrmThread *thread;
-    int channel;
-
-    if (player->commandCount >= NNS_SND_STRM_BLOCK_NUM - 2) {
-        command = NULL;
-        while ((command = NNS_FndGetNextListObject(
-                    &sPrepareStreamThread.commandList,
-                    command)) != NULL) {
-            if (command->player == player) {
-                break;
-            }
-        }
-
-        for (channel = 0; channel < command->numChannels; channel++) {
-            MI_CpuFill8(
-                command->buffers[channel],
-                0,
-                command->bufferLength);
-        }
-
-        NNS_FndRemoveListObject(&sPrepareStreamThread.commandList, command);
-        player->commandCount--;
-        FreeCommandBuffer(command);
-    }
-
-    command = AllocCommandBuffer();
-    command->player = player;
-    command->status = status;
-    command->numChannels = numChannels;
-    for (channel = 0; channel < numChannels; channel++) {
-        command->buffers[channel] = buffers[channel];
-    }
-    command->bufferLength = length;
-
-    thread = &sPrepareStreamThread;
-    if (status == NNS_SND_STRM_CALLBACK_SETUP &&
-        sSoundArcStreamState.prepareThread != NULL) {
-        thread = sSoundArcStreamState.prepareThread;
-    }
-
-    player->commandCount++;
-    NNS_FndAppendListObject(&thread->commandList, command);
-    OS_WakeupThread(&thread->threadQueue);
-}
+#define AllocLoadCommand_02020a94 AllocCommandBuffer
+#define AppendIntrusiveListObject_020128d0 NNS_FndAppendListObject
+#define FreeLoadCommand_02020ad8 FreeCommandBuffer
+#define MI_CpuFill8_01ff8830 MI_CpuFill8
+#define NNS_FndGetNextListObject_02012a38 NNS_FndGetNextListObject
+#define OS_WakeupThread_02002af8 OS_WakeupThread
+#define RemoveIntrusiveListObject_020129d8 NNS_FndRemoveListObject
+#define StrmCallback_02020b9c StrmCallback_2
+#define g_strmStatics_0205e324 sSoundArcStreamState
+#define g_strmThread_0205ecd0 sPrepareStreamThread
+#include "src/arm9/library_nns_snd/StrmCallback_02020b9c.c"

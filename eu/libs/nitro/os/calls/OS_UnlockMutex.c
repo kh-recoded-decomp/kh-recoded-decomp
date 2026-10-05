@@ -1,8 +1,3 @@
-#include "libs/nitro/os/os_mutex_internal.h"
-
-extern void OSi_UnlockMutexCore(OSMutex *mutex, u32 type);
-
-void OS_UnlockMutex(OSMutex *mutex)
-{
-    OSi_UnlockMutexCore(mutex, OS_MUTEX_TYPE_STD);
-}
+#define ReleaseSyncObject_020031a8 OS_UnlockMutex
+#define func_02003294 OSi_UnlockMutexCore
+#include "src/arm9/nitro_os/ReleaseSyncObject_020031a8.c"

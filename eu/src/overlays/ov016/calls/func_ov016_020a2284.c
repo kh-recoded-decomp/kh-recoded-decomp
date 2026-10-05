@@ -1,6 +1,3 @@
-extern int ResourceCache_FreeAll();
-
-int func_ov016_020a2284(int arg0) {
-    ResourceCache_FreeAll(arg0);
-    return 1;
-}
+#define FS_EndOverlay ResourceCache_FreeAll
+#define FS_UnloadOverlayImage_020a2264 func_ov016_020a2284
+#include "src/ov016/library_nitro_fs/FS_UnloadOverlayImage_020a2264.c"

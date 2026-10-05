@@ -1,15 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct LinkedEntry {
-    u8 kind;
-    u8 flags;
-    u16 value;
-    struct LinkedEntry *next;
-} LinkedEntry;
-
-extern LinkedEntry *FindLinkedEntryTail(LinkedEntry *entry);
-
-LinkedEntry *GetLinkedEntryAfterTail(LinkedEntry *entry)
-{
-    return FindLinkedEntryTail(entry)->next;
-}
+#define func_ov017_020a4ee0 FindLinkedEntryTail
+#define func_ov017_020a50d8 GetLinkedEntryAfterTail
+#include "src/ov017/unclassified_helpers/func_ov017_020a50d8.c"

@@ -1,9 +1,2 @@
-#include "nitro/types.h"
-
-int IntMin(int a, int b)
-{
-    if (a > b) {
-        a = b;
-    }
-    return a;
-}
+#define Min_02049910 IntMin
+#include "src/arm9/math/Min_02049910.c"

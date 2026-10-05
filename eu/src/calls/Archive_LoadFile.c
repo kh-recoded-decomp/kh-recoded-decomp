@@ -1,6 +1,3 @@
-extern void *FileLoader_LoadAlloc(void *file, int offset, int heap);
-
-void *Archive_LoadFile(void *file, int heap)
-{
-    return FileLoader_LoadAlloc(file, 0, heap);
-}
+#define func_0202bde4 FileLoader_LoadAlloc
+#define func_0202c478 Archive_LoadFile
+#include "src/arm9/filesystem/func_0202c478.c"

@@ -1,8 +1,3 @@
-#include "libs/nns/snd/snd_internal.h"
-
-void SndCapture_Reset(void)
-{
-    sSndResourceLocks.channel = 0;
-    sSndResourceLocks.capture = 0;
-    sSndResourceLocks.alarm = 0;
-}
+#define SndCapture_Reset_0201d3f8 SndCapture_Reset
+#define data_0205d894 sSndResourceLocks
+#include "src/arm9/library_nitro_snd/SndCapture_Reset_0201d3f8.c"

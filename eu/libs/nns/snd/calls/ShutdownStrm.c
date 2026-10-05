@@ -1,11 +1,5 @@
-#include "libs/nns/snd/strm_internal.h"
-
-extern void SND_ClearChannelBit(int alarmNo);
-extern void NNS_FndRemoveListObject(NNSFndList *list, void *object);
-
-void ShutdownStrm(NNSSndStrm *stream)
-{
-    SND_ClearChannelBit(stream->alarmNo);
-    NNS_FndRemoveListObject(&sSndStrmList, stream);
-    stream->activeFlag = FALSE;
-}
+#define RemoveIntrusiveListObject_020129d8 NNS_FndRemoveListObject
+#define ShutdownStrm_0201e378 ShutdownStrm
+#define data_0205e17c sSndStrmList
+#define func_0201d3d8 SND_ClearChannelBit
+#include "src/arm9/library_nns_snd/ShutdownStrm_0201e378.c"

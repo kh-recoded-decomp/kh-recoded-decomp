@@ -1,8 +1,2 @@
-int G3X_GetMtxStackLevelPJ(int *level)
-{
-    if ((*(volatile unsigned int *)0x04000600 & 0x4000) != 0) {
-        return -1;
-    }
-    *level = (*(volatile unsigned int *)0x04000600 & 0x2000) >> 13;
-    return 0;
-}
+#define G3X_GetMtxStackLevelPJ_02006d10 G3X_GetMtxStackLevelPJ
+#include "src/arm9/library_nitro_gx/func_02006d10.c"

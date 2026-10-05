@@ -1,7 +1,2 @@
-#include "libs/nitro/fs/fs_internal.h"
-
-BOOL FSi_OverrideRomArchive(FSArchive *archive)
-{
-    (void)archive;
-    return 0;
-}
+#define func_0200d3b4 FSi_OverrideRomArchive
+#include "src/arm9/leaf_research/func_0200d3b4.c"

@@ -1,4 +1,3 @@
-extern int SpawnSourceRewardOrbs(int a, int b, int c);
-int func_ov059_020cd3d8(int param_1, int param_2) {
-    return SpawnSourceRewardOrbs(param_1, param_2, 0);
-}
+#define Ov000_UpdateWidgetLayer SpawnSourceRewardOrbs
+#define UpdateWidgetLayerDefault_020cd3b8 func_ov059_020cd3d8
+#include "src/ov059/shared_engine/UpdateWidgetLayerDefault_020cd3b8.c"

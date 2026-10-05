@@ -1,17 +1,7 @@
-#include "libs/nitro/card/card_rom_internal.h"
-
-extern int OSi_IsThreadInitialized;
-extern int OS_IsAlarmAvailable(void);
-extern void OS_Sleep(u32 msec);
-
-void CARDi_RefreshRom(u32 warningMask)
-{
-    if (CARDi_ReadRomStatusCore() & warningMask) {
-        CARDi_RefreshRomCore();
-        while (!(CARDi_ReadRomStatusCore() & 0x20)) {
-            if (OSi_IsThreadInitialized && OS_IsAlarmAvailable()) {
-                OS_Sleep(1);
-            }
-        }
-    }
-}
+#define IsAlarmSystemActive OS_IsAlarmAvailable
+#define OS_Sleep_02002c78 OS_Sleep
+#define data_02056b5c OSi_IsThreadInitialized
+#define func_02009b7c CARDi_ReadRomStatusCore
+#define func_02009bd0 CARDi_RefreshRom
+#define func_02009c14 CARDi_RefreshRomCore
+#include "src/arm9/library_nitro_os/func_02009bd0.c"

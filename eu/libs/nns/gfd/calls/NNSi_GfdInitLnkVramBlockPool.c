@@ -1,15 +1,2 @@
-#include "libs/nns/gfd/gfdi_LinkedListVramMan_Common.h"
-
-NNSiGfdLnkVramBlock *NNSi_GfdInitLnkVramBlockPool(NNSiGfdLnkVramBlock *blocks, u32 length)
-{
-    {
-        int i;
-        for (i = 0; i < length - 1; i++) {
-            blocks[i].next = &blocks[i + 1];
-            blocks[i + 1].previous = &blocks[i];
-        }
-        blocks[0].previous = GFD_NULL;
-        (blocks + length - 1)->next = GFD_NULL;
-    }
-    return &blocks[0];
-}
+#define NNSi_GfdInitLnkVramBlockPool_020141e8 NNSi_GfdInitLnkVramBlockPool
+#include "src/arm9/library_nns_gfd/NNSi_GfdInitLnkVramBlockPool_020141e8.c"

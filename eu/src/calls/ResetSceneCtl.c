@@ -1,9 +1,4 @@
-#include "src/calls/scene_control.h"
-
-extern void MI_CpuFill8(void *dest, u32 value, u32 size);
-
-s32 ResetSceneCtl(void)
-{
-    MI_CpuFill8(&gSceneController, 0, sizeof(gSceneController));
-    return 1;
-}
+#define ResetSceneCtl_02025550 ResetSceneCtl
+#define func_01ff8830 MI_CpuFill8
+#define g_sceneCtl_0205fdec gSceneController
+#include "src/arm9/scene_dispatch/ResetSceneCtl_02025550.c"

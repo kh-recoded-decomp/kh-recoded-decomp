@@ -1,13 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad_000[0x194];
-    void *slotBuffers;
-} ShotEntity;
-
-extern void NNSi_FndFreeFromDefaultHeap(void *block);
-
-void FreeSlotBuffers_020d641c(ShotEntity *entity)
-{
-    NNSi_FndFreeFromDefaultHeap(entity->slotBuffers);
-}
+#define FreeSlotBuffers_020d63fc FreeSlotBuffers_020d641c
+#define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
+#include "src/ov056/unclassified_helpers/FreeSlotBuffers_020d63fc.c"

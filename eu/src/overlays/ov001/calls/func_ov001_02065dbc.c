@@ -1,6 +1,3 @@
-extern int CommitChapterClearRecords();
-
-int func_ov001_02065dbc(int arg0) {
-    CommitChapterClearRecords(arg0);
-    return 1;
-}
+#define FS_EndOverlay CommitChapterClearRecords
+#define FS_UnloadOverlayImage_02065dbc func_ov001_02065dbc
+#include "src/ov001/library_nitro_fs/FS_UnloadOverlayImage_02065dbc.c"

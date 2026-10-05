@@ -1,14 +1,2 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad[0x1110c];
-    int mode;
-    int timer;
-    int step;
-} PanelWork;
-
-void SetPanelMode_020c1210(int mode, PanelWork *work) {
-    work->mode = mode;
-    work->timer = 0;
-    work->step = 0;
-}
+#define SetPanelMode_020c11f0 SetPanelMode_020c1210
+#include "src/ov095/panel_state/SetPanelMode_020c11f0.c"

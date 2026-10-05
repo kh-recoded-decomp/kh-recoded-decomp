@@ -1,4 +1,2 @@
-const void *CARD_GetOwnRomHeader(void)
-{
-    return (const void *)0x02fffe00;
-}
+#define func_0200913c CARD_GetOwnRomHeader
+#include "src/arm9/leaf_research/func_0200913c.c"

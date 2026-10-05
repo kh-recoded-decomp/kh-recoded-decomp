@@ -1,9 +1,3 @@
-#include "libs/nitro/card/card_event_internal.h"
-
-extern int OS_TryLockCard(u16 lockID);
-
-BOOL CARDi_LockBusCondition(void *userdata)
-{
-    u16 lockID = *(const u16 *)userdata;
-    return OS_TryLockCard(lockID) == 0;
-}
+#define IsResultZero_02009028 CARDi_LockBusCondition
+#define func_0200234c OS_TryLockCard
+#include "src/arm9/unclassified_helpers/IsResultZero_02009028.c"

@@ -1,12 +1,3 @@
-extern void FX_InvAsync(int denominator);
-
-long long FX_InvFx64c(int denominator)
-{
-    volatile unsigned short *divisionControl =
-        (volatile unsigned short *)0x04000280;
-
-    FX_InvAsync(denominator);
-    while (*divisionControl & 0x8000) {
-    }
-    return *(long long *)0x040002a0;
-}
+#define FX_DivAsync FX_InvAsync
+#define FX_DivFx64c_01ff9cd0 FX_InvFx64c
+#include "src/itcm/library_nitro_fx/FX_DivFx64c_01ff9cd0.c"

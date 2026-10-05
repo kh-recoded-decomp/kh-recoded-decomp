@@ -1,9 +1,4 @@
-extern void PXI_Init_0202a64c(int arg);
-
-extern int data_ov001_0209ead0;
-
-void ReleaseServiceInstance(void) {
-    if (data_ov001_0209ead0 == -1) return;
-    PXI_Init_0202a64c(data_ov001_0209ead0);
-    data_ov001_0209ead0 = -1;
-}
+#define ReleaseServiceInstance_02068e64 ReleaseServiceInstance
+#define data_0209eab0 data_ov001_0209ead0
+#define func_0202a638 PXI_Init_0202a64c
+#include "src/ov001/shared_engine/ReleaseServiceInstance_02068e64.c"

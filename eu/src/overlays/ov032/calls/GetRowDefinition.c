@@ -1,6 +1,2 @@
-#include "src/overlays/ov032/row_definition.h"
-
-RowDefinition *GetRowDefinition(RowOwner *owner, s32 index)
-{
-    return &owner->definitions[owner->rows[index].definitionIndex];
-}
+#define func_ov032_020bbbd4 GetRowDefinition
+#include "src/ov032/leaf_research/func_ov032_020bbbd4.c"

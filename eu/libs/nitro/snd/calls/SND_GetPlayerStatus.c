@@ -1,8 +1,3 @@
-#include "libs/nitro/snd/snd_work_internal.h"
-
-u32 SND_GetPlayerStatus(void)
-{
-    DC_InvalidateRange((void *)&SNDi_SharedWork->playerStatus,
-                       sizeof(SNDi_SharedWork->playerStatus));
-    return SNDi_SharedWork->playerStatus;
-}
+#define data_02059780 SNDi_SharedWork
+#define func_0200f59c SND_GetPlayerStatus
+#include "src/arm9/library_nitro_snd/func_0200f59c.c"

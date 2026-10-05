@@ -52,15 +52,18 @@ ALLOWED_PRAGMA = re.compile(
     r"inline_max_size\(\d+\)|pack\(\d*\)|unused\(\w+(?:,\s*\w+)*\))\s*$")
 
 
-def validate_c_source(source: Path, seen: set[Path] | None = None) -> None:
-    """Reject assembly anywhere in a source or the project headers it includes."""
+def validate_c_source(source: Path, seen: set[Path] | None = None, allow_asm: bool = False) -> None:
+    """Reject assembly anywhere in a source or the project headers it includes.
+
+    Verified original assembly (asm_matches.json) passes allow_asm and is never counted as C.
+    """
     seen = set() if seen is None else seen
     if source in seen:
         return
     seen.add(source)
     text = source.read_text(encoding="utf-8")
     clean = re.sub(r"/\*.*?\*/|//[^\n]*", "", text, flags=re.S)
-    if re.search(r"\b(?:asm|__asm|__asm__|INCLUDE_ASM|INLINE_ASM)\b", clean):
+    if not allow_asm and re.search(r"\b(?:asm|__asm|__asm__|INCLUDE_ASM|INLINE_ASM)\b", clean):
         raise RuntimeError("Inline assembly cannot count as C progress")
     for line in re.findall(r"(?m)^\s*#\s*pragma\b.*$", clean):
         if not ALLOWED_PRAGMA.fullmatch(line.strip()):
@@ -70,7 +73,7 @@ def validate_c_source(source: Path, seen: set[Path] | None = None) -> None:
         path = (INCLUDE_DIR / header.group(1)).resolve() if header else None
         if path is None or not path.is_relative_to(INCLUDE_DIR.resolve()) or not path.is_file():
             raise RuntimeError(f"Only project headers under include/ may be included: {line.strip()}")
-        validate_c_source(path, seen)
+        validate_c_source(path, seen, allow_asm)
 
 
 def relocate_word(word: int, kind: int, symbol: int, addend: int, place: int) -> int:
@@ -178,7 +181,7 @@ def compile_entry(entry: dict, address: int, output: Path) -> dict:
     source = (ROOT / entry['source']).resolve()
     if not source.is_relative_to(ROOT / 'src') or source.suffix not in ('.c', '.cpp'):
         raise RuntimeError("C/C++ source must be inside src/")
-    validate_c_source(source)
+    validate_c_source(source, allow_asm=entry.get('language') == 'asm')
     config = compiler_config()
     variant = config['variants'][entry['compiler']]
     executable = ROOT / variant['executable']

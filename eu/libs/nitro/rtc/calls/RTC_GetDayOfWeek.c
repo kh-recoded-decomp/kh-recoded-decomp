@@ -1,21 +1,2 @@
-#include "libs/nitro/rtc/rtc_internal.h"
-
-RTCWeek RTC_GetDayOfWeek(RTCDate *date)
-{
-    int century;
-    int year = 2000 + (int)date->year;
-    int month = (int)date->month;
-    int day = (int)date->day;
-
-    month -= 2;
-    if (month < 1) {
-        month += 12;
-        --year;
-    }
-
-    century = year / 100;
-    year %= 100;
-    return (RTCWeek)(
-        ((26 * month - 2) / 10 + day + year + year / 4 +
-         century / 4 + 5 * century) % 7);
-}
+#define RTC_GetDayOfWeek_0200e934 RTC_GetDayOfWeek
+#include "src/arm9/library_nitro_rtc/RTC_GetDayOfWeek_0200e934.c"

@@ -1,12 +1,3 @@
-typedef struct DefaultHeapState {
-    void *reserved;
-    void **currentHeap;
-} DefaultHeapState;
-
-extern DefaultHeapState data_02060394;
-extern void *NNS_FndAllocFromExpHeapEx(void *heap, unsigned int size, int alignment);
-
-void *NNS_FndAllocFromDefaultExpHeapEx(unsigned int size, int alignment)
-{
-    return NNS_FndAllocFromExpHeapEx(*data_02060394.currentHeap, size, alignment);
-}
+#define AllocateFromExpandedHeapEx_02013134 NNS_FndAllocFromExpHeapEx
+#define NNSi_FndAllocFromDefaultHeapEx_0202a19c NNS_FndAllocFromDefaultExpHeapEx
+#include "src/arm9/shared_engine/NNSi_FndAllocFromDefaultHeapEx_0202a19c.c"

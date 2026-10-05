@@ -1,0 +1,9 @@
+#include "nitro/types.h"
+
+const u8 data_ov001_0209ddd0[7] = {
+    0x0C, 0x0C, 0x0D, 0x0D, 0x0E, 0x0E, 0x0F,
+};
+
+const u16 data_ov001_0209ddca[3] = {
+    0x0000, 0x0000, 0x0000,
+};

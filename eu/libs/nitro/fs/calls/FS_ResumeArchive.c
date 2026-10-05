@@ -1,21 +1,6 @@
-#include "libs/nitro/fs/fs_internal.h"
-
-BOOL FS_ResumeArchive(FSArchive *archive)
-{
-    BOOL wasActive;
-    OSIntrMode interruptState = OS_DisableInterrupts();
-
-    wasActive = !FS_IsArchiveSuspended(archive);
-    if (!wasActive) {
-        archive->flags &= ~FS_ARCHIVE_FLAG_SUSPEND;
-    }
-    (void)OS_RestoreInterrupts(interruptState);
-
-    {
-        FSFile *file = FSi_NextCommand(archive, 1);
-        if (file) {
-            FSi_ExecuteAsyncCommand(file);
-        }
-    }
-    return wasActive;
-}
+#define FS_ResumeArchive_0200b11c FS_ResumeArchive
+#define func_02004938 OS_DisableInterrupts
+#define func_0200494c OS_RestoreInterrupts
+#define func_0200a67c FSi_NextCommand
+#define func_0200a828 FSi_ExecuteAsyncCommand
+#include "src/arm9/library_nitro_fs/FS_ResumeArchive_0200b11c.c"

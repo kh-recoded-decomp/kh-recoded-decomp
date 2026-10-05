@@ -1,6 +1,3 @@
-extern int ActorChannel_ResetAndInvalidate();
-
-int func_ov001_0208d55c(int arg0) {
-    ActorChannel_ResetAndInvalidate(arg0);
-    return 1;
-}
+#define FS_EndOverlay ActorChannel_ResetAndInvalidate
+#define FS_UnloadOverlayImage_0208d534 func_ov001_0208d55c
+#include "src/ov001/library_nitro_fs/FS_UnloadOverlayImage_0208d534.c"

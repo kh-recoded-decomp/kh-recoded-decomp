@@ -1,29 +1,6 @@
-#include "libs/nitro/spi/pm_power_internal.h"
-
-u32 PMi_TryToSendPxiData(
-    u32 *sendData,
-    int count,
-    u16 *returnValue,
-    PMCallback callback,
-    void *argument)
-{
-    int index;
-    OSIntrMode interruptMode = OS_DisableInterrupts();
-
-    if (PMi_Bss.work.lock) {
-        (void)OS_RestoreInterrupts(interruptMode);
-        return PM_BUSY;
-    }
-
-    PMi_Bss.work.lock = 1;
-    PMi_Bss.work.work = returnValue;
-    PMi_Bss.work.callback = callback;
-    PMi_Bss.work.callbackArgument = argument;
-
-    for (index = 0; index < count; index++) {
-        PMi_SendPxiData(sendData[index]);
-    }
-
-    (void)OS_RestoreInterrupts(interruptMode);
-    return PM_SUCCESS;
-}
+#define PMi_SendPxiCommandArray_02010300 PMi_TryToSendPxiData
+#define PMi_SendPxiData_0201060c PMi_SendPxiData
+#define data_020597c0 PMi_Bss
+#define func_02004938 OS_DisableInterrupts
+#define func_0200494c OS_RestoreInterrupts
+#include "src/arm9/library_nitro_spi/PMi_SendPxiCommandArray_02010300.c"

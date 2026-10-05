@@ -1,12 +1,4 @@
-extern void func_ov027_020b8208(void *context, void *entry, int arg2, int arg3);
-extern void func_ov027_020b8230(void *context, void *entry);
-
-void func_ov027_020b824c(void *context, void *entry, int arg2, int arg3)
-{
-    int x = *(short *)((char *)entry + 2);
-    int y = *(short *)((char *)entry + 4);
-
-    func_ov027_020b8208(context, entry, arg2, arg3);
-    func_ov027_020b8230(context, entry);
-    func_ov027_020b8208(context, entry, x, y);
-}
+#define func_020b81e8 func_ov027_020b8208
+#define func_020b8210 func_ov027_020b8230
+#define func_ov027_020b822c func_ov027_020b824c
+#include "src/ov027/reviewed_helpers/func_ov027_020b822c.c"

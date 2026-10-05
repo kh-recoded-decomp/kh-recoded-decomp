@@ -1,9 +1,3 @@
-#include "libs/nitro/snd/snd_work_internal.h"
-
-s16 SND_GetPlayerLocalVariable(int playerNumber, int variableNumber)
-{
-    DC_InvalidateRange(
-        (void *)&SNDi_SharedWork->player[playerNumber].variable[variableNumber],
-        sizeof(SNDi_SharedWork->player[playerNumber].variable[variableNumber]));
-    return SNDi_SharedWork->player[playerNumber].variable[variableNumber];
-}
+#define data_02059780 SNDi_SharedWork
+#define readInvalidatedHalfwordEntry_0200f5c4 SND_GetPlayerLocalVariable
+#include "src/arm9/data_access/readInvalidatedHalfwordEntry_0200f5c4.c"

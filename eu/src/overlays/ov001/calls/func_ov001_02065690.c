@@ -1,8 +1,3 @@
-extern int ScriptVm_ReadOperandInt();
-extern int SetSceneLock();
-
-int func_ov001_02065690(int arg0) {
-    ScriptVm_ReadOperandInt(arg0);
-    SetSceneLock();
-    return 1;
-}
+#define Ov002_EnterPhase SetSceneLock
+#define ScriptCmd_EnterPhase_02065690 func_ov001_02065690
+#include "src/ov001/shared_engine/ScriptCmd_EnterPhase_02065690.c"

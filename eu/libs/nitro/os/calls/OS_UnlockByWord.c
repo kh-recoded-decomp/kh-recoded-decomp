@@ -1,5 +1,3 @@
-extern void *OSi_DoUnlockByWord();
-
-void *OS_UnlockByWord(int id, void *word, void *callback) {
-    return OSi_DoUnlockByWord(id, word, callback, 0);
-}
+#define FS_ReadFile_02002228 OS_UnlockByWord
+#define FSi_ReadFileCore OSi_DoUnlockByWord
+#include "src/arm9/library_nitro_fs/FS_ReadFile_02002228.c"

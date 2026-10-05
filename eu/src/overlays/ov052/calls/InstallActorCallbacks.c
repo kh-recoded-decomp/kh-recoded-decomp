@@ -1,87 +1,23 @@
-#include "nitro/types.h"
-
-typedef void (*ActorCallback)(void);
-
-typedef struct Actor {
-    u8 pad_000[0x1e0];
-    ActorCallback onFree;
-    ActorCallback onUpdate;
-    ActorCallback onDraw;
-    ActorCallback onAnimate;
-    ActorCallback onSurfaceSound;
-    u8 pad_1f4[4];
-    ActorCallback onRequestMode;
-    ActorCallback onSetAnimationFrame;
-    ActorCallback onSetDisplayMode;
-    ActorCallback onSetAlpha;
-    ActorCallback onIncomingHit;
-    ActorCallback onSetModeEnabled;
-    ActorCallback onSetLinkedAngle;
-    ActorCallback callback214;
-    u8 pad_218[4];
-    ActorCallback onBuildStatusFlags;
-    ActorCallback onBuildHitSphere;
-    ActorCallback callback224;
-    ActorCallback onQueryTargetPosition;
-    ActorCallback onGetState;
-    u8 pad_230[0x9b4 - 0x230];
-    u8 selectionIndex;
-    u8 pad_9b5[0x10e8 - 0x9b5];
-    s32 slotState;
-    ActorCallback onSlotEvent;
-    s32 slotParam0;
-    s32 slotParam1;
-    s32 slotParam2;
-    ActorCallback trySlotAction;
-} Actor;
-
-extern void func_ov021_020a75c4(Actor *actor, int variant, int selectionIndex);
-extern void RefreshActorState(void);
-extern void DestroyActorResources(void);
-extern void DrawActor(void);
-extern void UpdateActorAnimation(void);
-extern void RequestActorMode(void);
-extern void SetAnimationFrameAll(void);
-extern void ApplyIncomingHit(void);
-extern void PlayActorContextSound(void);
-extern void BuildActorStatusFlags(void);
-extern void SetEntityModeEnabled(void);
-extern void func_ov052_020ccfa0(void);
-extern void SetLinkedAngleIfUnlocked(void);
-extern void SetModelsAlpha(void);
-extern void BuildSlot3HitSphere(void);
-extern void func_ov052_020ccfbc(void);
-extern void QueryTargetPosition(void);
-extern void SetSlotDisplayMode(void);
-extern void GetStateUnlessBlocked(void);
-extern void EnterActorState(void);
-extern void DispatchSlotAction(void);
-
-void InstallActorCallbacks(Actor *actor)
-{
-    func_ov021_020a75c4(actor, 0, actor->selectionIndex);
-    actor->onUpdate = RefreshActorState;
-    actor->onFree = DestroyActorResources;
-    actor->onDraw = DrawActor;
-    actor->onAnimate = UpdateActorAnimation;
-    actor->onRequestMode = RequestActorMode;
-    actor->onSetAnimationFrame = SetAnimationFrameAll;
-    actor->onIncomingHit = ApplyIncomingHit;
-    actor->onSurfaceSound = PlayActorContextSound;
-    actor->onBuildStatusFlags = BuildActorStatusFlags;
-    actor->onSetModeEnabled = SetEntityModeEnabled;
-    actor->callback214 = func_ov052_020ccfa0;
-    actor->onSetLinkedAngle = SetLinkedAngleIfUnlocked;
-    actor->onSetAlpha = SetModelsAlpha;
-    actor->onBuildHitSphere = BuildSlot3HitSphere;
-    actor->callback224 = func_ov052_020ccfbc;
-    actor->onQueryTargetPosition = QueryTargetPosition;
-    actor->onSetDisplayMode = SetSlotDisplayMode;
-    actor->onGetState = GetStateUnlessBlocked;
-    actor->onSlotEvent = EnterActorState;
-    actor->slotState = 0;
-    actor->slotParam0 = 0;
-    actor->slotParam1 = 0;
-    actor->slotParam2 = 0;
-    actor->trySlotAction = DispatchSlotAction;
-}
+#define ApplyIncomingHit_020ce2e8 ApplyIncomingHit
+#define BuildActorStatusFlags_020ce5d4 BuildActorStatusFlags
+#define BuildSlot3HitSphere_020cbff8 BuildSlot3HitSphere
+#define DestroyActorResources_020ccc60 DestroyActorResources
+#define DispatchSlotAction_020ced20 DispatchSlotAction
+#define DrawActor_020ccd24 DrawActor
+#define GetStateUnlessBlocked_020ca8d4 GetStateUnlessBlocked
+#define InstallActorCallbacks_020cce6c InstallActorCallbacks
+#define PlayActorContextSound_020ce188 PlayActorContextSound
+#define QueryTargetPosition_020cc068 QueryTargetPosition
+#define RefreshActorState_020cce08 RefreshActorState
+#define RequestActorMode_020cde20 RequestActorMode
+#define SetAnimationFrameAll_020cdfc0 SetAnimationFrameAll
+#define SetEntityModeEnabled_020ce7a0 SetEntityModeEnabled
+#define SetLinkedAngleIfUnlocked_020ceb94 SetLinkedAngleIfUnlocked
+#define SetModelsAlpha_020cc0d8 SetModelsAlpha
+#define SetSlotDisplayMode_020ca7d0 SetSlotDisplayMode
+#define UpdateActorAnimation_020cea48 UpdateActorAnimation
+#define func_ov021_020a75a4 func_ov021_020a75c4
+#define func_ov052_020ccf80 func_ov052_020ccfa0
+#define func_ov052_020ccf9c func_ov052_020ccfbc
+#define func_ov052_020cd338 EnterActorState
+#include "src/ov052/unclassified_helpers/InstallActorCallbacks_020cce6c.c"

@@ -1,10 +1,6 @@
-#include "libs/nitro/rtc/rtc_internal.h"
-
-RTCResult RTC_GetTime(RTCTime *time)
-{
-    RTCi_Bss.work.commonResult = RTC_GetTimeAsync(time, RtcGetResultCallback, NULL);
-    if (RTCi_Bss.work.commonResult == RTC_RESULT_SUCCESS) {
-        RtcWaitBusy();
-    }
-    return RTCi_Bss.work.commonResult;
-}
+#define RTC_GetTimeAsync_0200e4d4 RTC_GetTimeAsync
+#define RTC_GetTime_0200e520 RTC_GetTime
+#define data_02057c0c RTCi_Bss
+#define func_0200e8c0 RtcGetResultCallback
+#define func_0200e8cc RtcWaitBusy
+#include "src/arm9/library_nitro_rtc/RTC_GetTime_0200e520.c"

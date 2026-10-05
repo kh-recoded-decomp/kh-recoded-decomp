@@ -1,1 +1,2 @@
-int func_ov001_02082c74(void){ return 0; }
+#define FSi_CloseFileCommand_02082c4c func_ov001_02082c74
+#include "src/ov001/library_nitro_fs/FSi_CloseFileCommand_02082c4c.c"

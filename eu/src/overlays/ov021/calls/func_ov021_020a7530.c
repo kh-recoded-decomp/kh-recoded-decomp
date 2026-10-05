@@ -1,5 +1,3 @@
-extern int GetSubModeState();
-
-int func_ov021_020a7530(int arg0) {
-    return GetSubModeState(arg0, 0);
-}
+#define NNS_FndInitList GetSubModeState
+#define NNS_FndInitListWithOffset0_020a7510 func_ov021_020a7530
+#include "src/ov021/library_nitro_nns/NNS_FndInitListWithOffset0_020a7510.c"

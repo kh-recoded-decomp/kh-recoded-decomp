@@ -1,13 +1,3 @@
-#include "libs/nitro/gx/gx_state_internal.h"
-
-extern void GX_VRAMCNT_SetLCDC_(u32 banks);
-
-int resetBankForX_(u16 *assignment)
-{
-    int banks = *assignment;
-
-    *assignment = 0;
-    gGXState.vram.lcdc |= (u16)banks;
-    GX_VRAMCNT_SetLCDC_(banks);
-    return banks;
-}
+#define data_02056f48 gGXState
+#define func_02008ca4 resetBankForX_
+#include "src/arm9/library_nitro_gx/func_02008ca4.c"

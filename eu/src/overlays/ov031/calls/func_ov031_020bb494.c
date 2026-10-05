@@ -1,7 +1,5 @@
-extern int func_0202a45c(void *desc, int arg);
-extern int data_ov031_020bc7a4;
-extern int data_ov031_020bc7a0;
-
-void func_ov031_020bb494(int arg) {
-    data_ov031_020bc7a0 = func_0202a45c(&data_ov031_020bc7a4, arg);
-}
+#define InstantiateClass func_0202a45c
+#define MobiClip_SrcOpen_020bb474 func_ov031_020bb494
+#define data_020bc780 data_ov031_020bc7a0
+#define func_020bc784 data_ov031_020bc7a4
+#include "src/ov031/shared_engine/MobiClip_SrcOpen_020bb474.c"

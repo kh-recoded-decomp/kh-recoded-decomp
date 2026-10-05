@@ -1,12 +1,3 @@
-#include "libs/nitro/fs/fs_internal.h"
-
-FSResult FSi_SeekDirDirect(FSFile *file, u32 directoryId)
-{
-    FSSeekDirInfo *argument = (FSSeekDirInfo *)file->reserved2;
-
-    argument->position.archive = file->archive;
-    argument->position.ownId = directoryId;
-    argument->position.index = 0;
-    argument->position.position = 0;
-    return FSi_TranslateCommand(file, FS_COMMAND_SEEKDIR, 1);
-}
+#define SetFieldAndDispatch_0200be64 FSi_SeekDirDirect
+#define func_0200c6fc FSi_TranslateCommand
+#include "src/arm9/unclassified_helpers/SetFieldAndDispatch_0200be64.c"

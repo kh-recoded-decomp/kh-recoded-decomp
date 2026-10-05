@@ -1,6 +1,2 @@
-#include "src/overlays/ov021/auto/shared_object_record.h"
-
-u16 SharedObject_GetId(SharedObjectRecord *record)
-{
-    return record->id;
-}
+#define GetId10_020a755c SharedObject_GetId
+#include "src/ov021/shared_engine/GetId10_020a755c.c"

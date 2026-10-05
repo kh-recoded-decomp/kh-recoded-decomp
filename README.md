@@ -17,26 +17,28 @@ maintained by [@ricky074game](https://github.com/ricky074game) and [@Yokimitsuro
 <!-- regions:start -->
 | Region | C code bytes | % | Functions |
 |---|---:|---:|---:|
-| **US** `BK9E` | 1,222,994 / 1,768,220 | **69.2%** | 9,603 / 10,359 |
+| **US** `BK9E` | 1,228,960 / 1,768,220 | **69.5%** | 9,655 / 10,359 |
 | **EU** `BK9P` | 1,021,292 / 1,657,824 | **61.6%** | 8,012 / 10,423 |
-| **Shared** (same function, matched in both) | 913,240 | 55.1% of EU | 6,215 |
+| US verified original assembly (not C) | 5,394 | 0.3% | 89 |
+| **Shared** (same function, matched in both) | 998,526 | 60.2% of EU | 7,768 |
 
-6,170 shared functions are stored once in `src/` and built for both regions; 45 still have separate EU copies. 3,388 matched functions are US-only so far and 1,797 are EU-only. EU numbers come from `eu/tools/audit_progress.py`; per-module EU detail is in [eu/PROGRESS.md](eu/PROGRESS.md).
+7,724 shared functions are stored once in `src/` and built for both regions; 44 still have separate EU copies. 1,887 matched functions are US-only so far and 244 are EU-only. EU numbers come from `eu/tools/audit_progress.py`; per-module EU detail is in [eu/PROGRESS.md](eu/PROGRESS.md).
 <!-- regions:end -->
 
 US detail:
 
 | | Matched | Total | % |
 |---|---:|---:|---:|
-| **ARM9 code (C bytes)** | **1,222,994** | 1,768,220 | **69.2%** |
-| ARM9 core + autoloads | 296,938 | 370,004 | 80.3% |
-| ARM9 overlays (105) | 926,056 | 1,398,216 | 66.2% |
-| Functions | 9,603 | 10,359 | 92.7% |
-| Data bytes (.rodata/.data/.bss) | 93,751 | 228,140 | 41.1% |
+| **ARM9 code (C bytes)** | **1,228,960** | 1,768,220 | **69.5%** |
+| ARM9 core + autoloads | 300,168 | 370,004 | 81.1% |
+| ARM9 overlays (105) | 928,792 | 1,398,216 | 66.4% |
+| Functions | 9,655 | 10,359 | 93.2% |
+| Data bytes (.rodata/.data/.bss) | 228,100 | 228,140 | 99.98% |
 
 Updated 2026-10-05. Per-module numbers are in [PROGRESS.md](PROGRESS.md).
 
-- Only C that rebuilds byte-for-byte counts. Assembly, SDK binaries and renamed symbols count for nothing.
+- Only C that rebuilds byte-for-byte counts as C. Original SDK/MSL assembly that rebuilds byte-for-byte is listed in its own row (`asm_matches.json`) and never added to the C numbers.
+- Data counts when the C data objects link byte-exact. Most of it is generated arrays and pointer tables still waiting for real types and names.
 - `link` rebuilds all 108 ARM9 modules from objects and packs a ROM identical to the original.
 - ARM7 is extracted but not analysed yet, so it is not counted.
 

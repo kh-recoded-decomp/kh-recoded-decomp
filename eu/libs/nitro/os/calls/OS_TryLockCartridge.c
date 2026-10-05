@@ -1,7 +1,3 @@
-extern void *OSi_DoTryLockByWord();
-extern void OSi_AllocateCartridgeBus(void);
-
-void *OS_TryLockCartridge(int id)
-{
-    return OSi_DoTryLockByWord(id, (void *)0x02ffffe8, OSi_AllocateCartridgeBus, 1);
-}
+#define OS_TryLockCartridge_020022e0 OS_TryLockCartridge
+#define OSi_DoTryLockByWord_02002238 OSi_DoTryLockByWord
+#include "src/arm9/library_nitro_os/OS_TryLockCartridge_020022e0.c"

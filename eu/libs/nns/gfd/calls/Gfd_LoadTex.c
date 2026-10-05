@@ -1,9 +1,2 @@
-extern void GX_BeginLoadTex(void);
-extern void GX_LoadTex(void *src, unsigned offset, unsigned size);
-extern void GX_EndLoadTex(void);
-
-void Gfd_LoadTex(void *src, unsigned offset, unsigned size) {
-    GX_BeginLoadTex();
-    GX_LoadTex(src, offset, size);
-    GX_EndLoadTex();
-}
+#define func_02013ddc Gfd_LoadTex
+#include "src/arm9/core_small/func_02013ddc.c"

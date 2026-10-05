@@ -1,26 +1,2 @@
-#include "nitro/types.h"
-
-/* Adds with overflow check */
-BOOL TryAddInt32B(s32 *value, s32 addend)
-{
-    s32 current = *value;
-
-    if (addend < 0) {
-        if (current < 0) {
-            s32 limit = (s32)0x80000000 - current;
-            if (addend < limit) {
-                return FALSE;
-            }
-        }
-    } else {
-        if (current > 0) {
-            s32 limit = 0x7fffffff - current;
-            if (addend > limit) {
-                return FALSE;
-            }
-        }
-    }
-
-    *value = current + addend;
-    return TRUE;
-}
+#define TryAddInt32_02021a50 TryAddInt32B
+#include "src/arm9/unclassified_helpers/TryAddInt32_02021a50.c"

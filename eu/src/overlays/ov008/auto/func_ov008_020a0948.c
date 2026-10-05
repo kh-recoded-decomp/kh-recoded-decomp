@@ -1,6 +1,2 @@
-#include "nitro/types.h"
-
-void *func_ov008_020a0948(void *object)
-{
-    return (u8 *)object + 0x40;
-}
+#define func_ov008_020a0928 func_ov008_020a0948
+#include "src/ov008/unclassified_helpers/func_ov008_020a0928.c"

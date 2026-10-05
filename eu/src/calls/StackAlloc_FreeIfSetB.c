@@ -1,5 +1,3 @@
-extern int OSi_FreeStackAlloc();
-
-int StackAlloc_FreeIfSetB(int a) {
-    if (a) OSi_FreeStackAlloc(a);
-}
+#define StackAlloc_FreeIfSet OSi_FreeStackAlloc
+#define StackAlloc_FreeIfSetB_02021978 StackAlloc_FreeIfSetB
+#include "src/arm9/library_msl_c/StackAlloc_FreeIfSetB_02021978.c"

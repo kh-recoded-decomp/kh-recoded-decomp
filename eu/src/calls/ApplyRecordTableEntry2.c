@@ -1,9 +1,4 @@
-#include "nitro/types.h"
-
-extern void ActivateEntrySubobject(void *entry, int a1, int a2, int a3);
-extern u8 *gActorRegistry;
-
-void ApplyRecordTableEntry2(int index, int a1, int a2, int a3) {
-    void **slots = (void **)(gActorRegistry + 0x20);
-    ActivateEntrySubobject(slots[index], a1, a2, a3);
-}
+#define func_020358b0 ApplyRecordTableEntry2
+#define func_02035930 ActivateEntrySubobject
+#define g_recordTablePtr_0206083c gActorRegistry
+#include "src/arm9/shared_engine/func_020358b0.c"

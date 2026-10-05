@@ -1,14 +1,2 @@
-#include "libs/nitro/os/os_types_internal.h"
-
-s32 GX_VBlankIntr(BOOL enable)
-{
-    volatile u16 *displayStatus = (volatile u16 *)0x04000004;
-    s32 previous = *displayStatus & 8;
-
-    if (enable) {
-        *displayStatus |= 8;
-    } else {
-        *displayStatus &= (u16)~8;
-    }
-    return previous;
-}
+#define GX_VBlankIntr_020065f8 GX_VBlankIntr
+#include "src/arm9/library_nitro_gx/func_020065f8.c"

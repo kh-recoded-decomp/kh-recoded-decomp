@@ -1,19 +1,4 @@
-#include "libs/nitro/fs/fs_internal.h"
-
-#define FS_ARCHIVE_FLAG_CANCELING 0x00000020UL
-
-static inline BOOL FS_IsBusy(volatile const FSFile *file)
-{
-    return (file->status & FS_FILE_STATUS_BUSY) != 0;
-}
-
-void FS_CancelFile(FSFile *file)
-{
-    OSIntrMode interruptState = OS_DisableInterrupts();
-
-    if (FS_IsBusy(file)) {
-        file->status |= FS_FILE_STATUS_CANCEL;
-        file->archive->flags |= FS_ARCHIVE_FLAG_CANCELING;
-    }
-    (void)OS_RestoreInterrupts(interruptState);
-}
+#define CancelFile_0200b3c0 FS_CancelFile
+#define func_02004938 OS_DisableInterrupts
+#define func_0200494c OS_RestoreInterrupts
+#include "src/arm9/library_nitro_fs/CancelFile_0200b3c0.c"

@@ -1,8 +1,2 @@
-#include "nitro/types.h"
-
-void SetDialogInputDisabled_020c73dc(int context,int value)
-
-{
-  *(u8 *)(context + 0xc) = value == 0;
-  return;
-}
+#define SetDialogInputDisabled_020c73bc SetDialogInputDisabled_020c73dc
+#include "src/ov077/reviewed_helpers/SetDialogInputDisabled_020c73bc.c"

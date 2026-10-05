@@ -1,17 +1,3 @@
-typedef int BOOL;
-
-typedef struct CARDiCommon {
-    void *command;
-    volatile int flags;
-} CARDiCommon;
-
-enum {
-    CARD_STAT_BUSY = 4
-};
-
-extern CARDiCommon cardi_common;
-
-BOOL CARDi_TryWaitAsync(void)
-{
-    return !(cardi_common.flags & CARD_STAT_BUSY);
-}
+#define data_02056fe0 cardi_common
+#define func_020092a0 CARDi_TryWaitAsync
+#include "src/arm9/unclassified_helpers/func_020092a0.c"

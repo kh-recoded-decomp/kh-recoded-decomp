@@ -1,13 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad_00[0x1c8];
-    void *buffer;
-} Ov070Context;
-
-extern int ZeroHalfThenFree(void *buffer);
-
-void FreeOv070ContextBuffer(Ov070Context *ctx)
-{
-    ZeroHalfThenFree(ctx->buffer);
-}
+#define ZeroHalfThenFree_0202cd78 ZeroHalfThenFree
+#define func_ov070_020d828c FreeOv070ContextBuffer
+#include "src/ov070/unclassified_helpers/func_ov070_020d828c.c"

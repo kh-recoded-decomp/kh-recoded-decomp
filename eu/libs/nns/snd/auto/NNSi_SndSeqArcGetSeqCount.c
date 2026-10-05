@@ -1,6 +1,2 @@
-#include "libs/nns/snd/sndarc_internal.h"
-
-u32 NNSi_SndSeqArcGetSeqCount(const NNSSndSeqArc *seqArc)
-{
-    return seqArc->count;
-}
+#define func_02021874 NNSi_SndSeqArcGetSeqCount
+#include "src/arm9/leaf_research/func_02021874.c"

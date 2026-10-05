@@ -1,6 +1,3 @@
-#include "libs/nitro/os/os_timer_internal.h"
-
-void OSi_UnsetTimerReserved(int timerNum)
-{
-    OSi_TimerReserved &= (u16)~(1 << timerNum);
-}
+#define OSi_ClearAlarmBit_02003ec8 OSi_UnsetTimerReserved
+#define data_02056e90 OSi_TimerReserved
+#include "src/arm9/library_nitro_os/OSi_ClearAlarmBit_02003ec8.c"

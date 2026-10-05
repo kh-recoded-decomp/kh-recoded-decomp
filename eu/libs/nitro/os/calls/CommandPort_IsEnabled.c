@@ -1,6 +1,3 @@
-extern unsigned int OS_GetConsoleType(void);
-
-int CommandPort_IsEnabled(void)
-{
-    return (OS_GetConsoleType() & 0x10000000) != 0;
-}
+#define TestStatusBit28_02002f24 CommandPort_IsEnabled
+#define func_02002ed8 OS_GetConsoleType
+#include "src/arm9/unclassified_helpers/TestStatusBit28_02002f24.c"

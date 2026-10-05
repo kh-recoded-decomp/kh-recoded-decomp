@@ -1,7 +1,2 @@
-#include "nitro/types.h"
-
-int
-GetFieldOffset40_02082354(int self)
-{
-    return self + 0x40;
-}
+#define GetFieldOffset40_0208232c GetFieldOffset40_02082354
+#include "src/ov001/unclassified_helpers/GetFieldOffset40_0208232c.c"

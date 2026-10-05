@@ -1,5 +1,3 @@
-extern int func_ov001_0207b77c();
-int func_ov001_0208efe0(void) {
-    if (func_ov001_0207b77c() != 0) return 1;
-    return 0;
-}
+#define Ov012_IsGlobalByte8be1Clear func_ov001_0207b77c
+#define thumbStep_0208efb8 func_ov001_0208efe0
+#include "src/ov001/shared_engine/thumbStep_0208efb8.c"

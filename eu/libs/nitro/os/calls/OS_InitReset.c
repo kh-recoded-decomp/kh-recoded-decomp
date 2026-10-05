@@ -1,20 +1,7 @@
-#include "libs/nitro/os/os_reset_internal.h"
-
-extern volatile u16 OSi_IsInitReset;
-extern void PXI_Init(void);
-extern int PXI_IsCallbackReady(int fifoNo, int kind);
-extern void PXI_SetFifoRecvCallback(int fifoNo, void (*callback)(int, unsigned int));
-extern void OSi_CommonCallback(int, unsigned int);
-
-void OS_InitReset(void)
-{
-    if (OSi_IsInitReset != 0) {
-        return;
-    }
-    OSi_IsInitReset = 1;
-
-    PXI_Init();
-    while (!PXI_IsCallbackReady(12, 1)) {
-    }
-    PXI_SetFifoRecvCallback(12, OSi_CommonCallback);
-}
+#define InitOsPxiChannel_02004a0c OS_InitReset
+#define PXI_Init_0200e1ec PXI_Init
+#define PXI_IsCallbackReady_0200e2e8 PXI_IsCallbackReady
+#define PXI_SetFifoRecvCallback_0200e29c PXI_SetFifoRecvCallback
+#define func_0200202c OSi_CommonCallback
+#define g_pxiOsChannelReady_02056ec4 OSi_IsInitReset
+#include "src/arm9/library_nitro_pxi/InitOsPxiChannel_02004a0c.c"

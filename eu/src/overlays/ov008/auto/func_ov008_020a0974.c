@@ -1,1 +1,2 @@
-int func_ov008_020a0974(void){ return 1; }
+#define DefaultStepDone_020a0954 func_ov008_020a0974
+#include "src/ov008/library_nitro_fs/DefaultStepDone_020a0954.c"

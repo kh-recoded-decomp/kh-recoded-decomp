@@ -1,8 +1,3 @@
-extern int ScriptVm_ReadOperandInt();
-extern int LoadSceneTable();
-
-int func_ov001_02064ecc(int arg0) {
-    ScriptVm_ReadOperandInt(arg0);
-    LoadSceneTable();
-    return 1;
-}
+#define Ov002_EnterPhase LoadSceneTable
+#define ScriptCmd_EnterPhase_02064ecc func_ov001_02064ecc
+#include "src/ov001/shared_engine/ScriptCmd_EnterPhase_02064ecc.c"

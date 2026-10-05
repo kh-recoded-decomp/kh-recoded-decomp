@@ -1,12 +1,4 @@
-#include "libs/nitro/gx/gx_internal.h"
-
-void GX_DispOn(void)
-{
-    gGXDataState.isDisplayOn = TRUE;
-    if (gGXBssState.displayMode != GX_DISPMODE_OFF) {
-        REG_GX_DISPCNT = (REG_GX_DISPCNT & ~GX_DISPCNT_DISPLAY_MODE_MASK)
-                       | (gGXBssState.displayMode << 16);
-    } else {
-        REG_GX_DISPCNT |= GX_DISPMODE_GRAPHICS << 16;
-    }
-}
+#define apply_pending_display_vram_mode_02006680 GX_DispOn
+#define data_02055c18 gGXDataState
+#define data_02056f08 gGXBssState
+#include "src/arm9/graphics/apply_pending_display_vram_mode_02006680.c"

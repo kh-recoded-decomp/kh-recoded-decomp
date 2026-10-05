@@ -1,16 +1,3 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-typedef struct CameraView {
-    VecFx32 position;
-    VecFx32 offset;
-    VecFx32 up;
-    s32 angle;
-} CameraView;
-
-extern CameraView *func_ov046_020c0d58(void);
-
-VecFx32 *GetCameraViewUpVector(void)
-{
-    return &func_ov046_020c0d58()->up;
-}
+#define func_ov046_020c0d38 func_ov046_020c0d58
+#define func_ov048_020c384c GetCameraViewUpVector
+#include "src/ov048/library_nitro_pxi/func_ov048_020c384c.c"

@@ -1,6 +1,2 @@
-extern void *NNS_FndFreeToUnitHeap(void *heap, void *block);
-
-void *AllocatorFreeForUnitHeap(void **allocator, void *block)
-{
-    return NNS_FndFreeToUnitHeap(allocator[1], block);
-}
+#define AllocatorFreeForUnitHeap_020136d0 AllocatorFreeForUnitHeap
+#include "src/arm9/library_nns_fnd/AllocatorFreeForUnitHeap_020136d0.c"

@@ -1,6 +1,2 @@
-#include "libs/nitro/rtc/rtc_internal.h"
-
-BOOL RTCi_WriteRawStatus2Async(void)
-{
-    return RtcSendPxiCommand(RTC_PXI_COMMAND_WRITE_STATUS2);
-}
+#define RTCi_WriteRawStatus2Async_0200e908 RTCi_WriteRawStatus2Async
+#include "src/arm9/library_nitro_rtc/RTCi_WriteRawStatus2Async_0200e908.c"

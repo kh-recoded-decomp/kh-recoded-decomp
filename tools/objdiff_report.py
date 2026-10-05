@@ -91,6 +91,11 @@ def load_linked() -> set[tuple[str, str]]:
 def build_report() -> dict:
     matches = {(m["module"], m["symbol"]): m
                for m in json.loads((ROOT / "matches.json").read_text(encoding="utf-8"))["matches"]}
+    # Verified original assembly counts as matched code on decomp.dev, never as C (README keeps it apart).
+    asm_path = ROOT / "asm_matches.json"
+    if asm_path.exists():
+        for m in json.loads(asm_path.read_text(encoding="utf-8"))["matches"]:
+            matches.setdefault((m["module"], m["symbol"]), m)
     data_matches = json.loads((ROOT / "data_matches.json").read_text(encoding="utf-8"))["data"]
     linked = load_linked()
     units = []

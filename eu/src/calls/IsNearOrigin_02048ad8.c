@@ -1,10 +1,4 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-extern const VecFx32 data_0205344c;
-extern BOOL AreVecsWithinRange16(const VecFx32 *a, const VecFx32 *b);
-
-BOOL IsNearOrigin_02048ad8(const VecFx32 *point)
-{
-    return AreVecsWithinRange16(point, &data_0205344c);
-}
+#define IsNearOrigin_02048ac4 IsNearOrigin_02048ad8
+#define IsVecNear_0204a8f4 AreVecsWithinRange16
+#define data_02053438 data_0205344c
+#include "src/arm9/math/IsNearOrigin_02048ac4.c"

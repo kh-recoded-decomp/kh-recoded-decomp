@@ -1,8 +1,3 @@
-extern int ScriptVm_ReadOperandInt();
-extern int FrameCameraOnActor();
-
-int func_ov001_0208ee58(int arg0) {
-    ScriptVm_ReadOperandInt(arg0);
-    FrameCameraOnActor();
-    return 1;
-}
+#define Ov002_EnterPhase FrameCameraOnActor
+#define ScriptCmd_EnterPhase_0208ee30 func_ov001_0208ee58
+#include "src/ov001/shared_engine/ScriptCmd_EnterPhase_0208ee30.c"

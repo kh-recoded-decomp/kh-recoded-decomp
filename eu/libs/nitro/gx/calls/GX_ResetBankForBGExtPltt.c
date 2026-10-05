@@ -1,9 +1,3 @@
-extern void *resetBankForX_();
-extern unsigned short sGXBgExtPlttBank;
-
-void *GX_ResetBankForBGExtPltt(void)
-{
-    volatile unsigned int *dispcnt = (volatile unsigned int *)0x04000000;
-    *dispcnt = *dispcnt & ~0x40000000u;
-    return resetBankForX_(&sGXBgExtPlttBank);
-}
+#define GX_ResetBankForBGExtPltt_02008cdc GX_ResetBankForBGExtPltt
+#define data_02056f56 sGXBgExtPlttBank
+#include "src/arm9/library_nitro_gx/GX_ResetBankForBGExtPltt_02008cdc.c"

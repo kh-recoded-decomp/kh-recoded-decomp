@@ -1,8 +1,2 @@
-#include "libs/nitro/spi/pm_power_internal.h"
-
-void PMi_SendPxiData(u32 data)
-{
-    while (PXI_SendWordByFifo(PXI_FIFO_TAG_PM, data, FALSE) !=
-           PXI_FIFO_SUCCESS) {
-    }
-}
+#define PMi_SendPxiData_0201060c PMi_SendPxiData
+#include "src/arm9/library_nitro_spi/PMi_SendPxiData_0201060c.c"

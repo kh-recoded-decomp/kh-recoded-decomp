@@ -1,15 +1,5 @@
-#include "libs/nitro/fs/fs_overlay_internal.h"
-
-BOOL FS_LoadOverlay(MIProcessor target, FSOverlayID id)
-{
-    BOOL result = 0;
-    FSOverlayInfo info;
-
-    if (FS_LoadOverlayInfo(&info, target, id)) {
-        if (FS_LoadOverlayImage(&info)) {
-            FS_StartOverlay(&info);
-            result = 1;
-        }
-    }
-    return result;
-}
+#define func_0200b850 FS_LoadOverlayInfo
+#define func_0200ba34 FS_LoadOverlayImage
+#define func_0200bb74 FS_StartOverlay
+#define func_0200bd64 FS_LoadOverlay
+#include "src/arm9/unclassified_helpers/func_0200bd64.c"

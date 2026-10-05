@@ -1,6 +1,3 @@
-#include "src/overlays/ov032/row_definition.h"
-
-s32 GetRowTurnLimit(RowOwner *owner, s32 index)
-{
-    return GetRowDefinition(owner, index)->turnLimit;
-}
+#define func_ov032_020bbbd4 GetRowDefinition
+#define func_ov032_020bbbf0 GetRowTurnLimit
+#include "src/ov032/leaf_research/func_ov032_020bbbf0.c"

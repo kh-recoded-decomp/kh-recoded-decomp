@@ -1,5 +1,2 @@
-extern int data_02060388;
-
-int func_02029f7c(void) {
-    return *(int *)((char *)&data_02060388 + 8);
-}
+#define func_02029f68 func_02029f7c
+#include "src/arm9/shared_engine/func_02029f68.c"

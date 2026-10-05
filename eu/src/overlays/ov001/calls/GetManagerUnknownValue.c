@@ -1,13 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct ActorManager {
-    u8 pad_000[0x3F1C];
-    u32 field_3f1c;
-} ActorManager;
-
-extern ActorManager *data_ov001_020a0500;
-
-u32 GetManagerUnknownValue(void)
-{
-    return data_ov001_020a0500->field_3f1c;
-}
+#define func_ov001_02088960 GetManagerUnknownValue
+#define g_actorManager_020a04e0 data_ov001_020a0500
+#include "src/ov001/object_creation/func_ov001_02088960.c"

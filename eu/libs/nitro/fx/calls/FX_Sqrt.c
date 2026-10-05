@@ -1,14 +1,3 @@
-typedef unsigned int u32;
-typedef unsigned long long u64;
-
-extern int FX_GetSqrtResult(void);
-
-int FX_Sqrt(int x)
-{
-    if (x > 0) {
-        *(volatile unsigned short *)0x040002b0 = 1;
-        *(volatile u64 *)0x040002b8 = (u64)(u32)x << 32;
-        return FX_GetSqrtResult();
-    }
-    return 0;
-}
+#define FX_GetSqrtResult_01ff9db8 FX_GetSqrtResult
+#define FX_Sqrt_01ff9cfc FX_Sqrt
+#include "src/itcm/library_nitro_fx/FX_Sqrt_01ff9cfc.c"

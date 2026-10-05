@@ -1,30 +1,7 @@
-#include "libs/nitro/fs/fs_internal.h"
-
-extern FSResult FSi_InvokeCommand(FSFile *file, FSCommandType command);
-extern FSFile *FSi_NextCommand(FSArchive *archive, BOOL owner);
-
-void FSi_ExecuteAsyncCommand(FSFile *file)
-{
-    FSArchive *const archive = file->archive;
-
-    while (file) {
-        {
-            OSIntrMode interruptState = OS_DisableInterrupts();
-
-            file->status |= FS_FILE_STATUS_OPERATING;
-            if ((file->status & FS_FILE_STATUS_BLOCKING) != 0) {
-                OS_WakeupThread(file->queue);
-                file = 0;
-            }
-            (void)OS_RestoreInterrupts(interruptState);
-        }
-        if (!file) {
-            break;
-        } else if (FSi_InvokeCommand(file, FSi_GetCurrentCommand(file)) ==
-                   FS_RESULT_PROC_ASYNC) {
-            break;
-        } else {
-            file = FSi_NextCommand(archive, 1);
-        }
-    }
-}
+#define func_02002af8 OS_WakeupThread
+#define func_02004938 OS_DisableInterrupts
+#define func_0200494c OS_RestoreInterrupts
+#define func_0200a2fc FSi_InvokeCommand
+#define func_0200a67c FSi_NextCommand
+#define func_0200a828 FSi_ExecuteAsyncCommand
+#include "src/arm9/unclassified_helpers/func_0200a828.c"

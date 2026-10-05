@@ -1,8 +1,3 @@
-extern int ScriptVm_ReadOperandInt();
-extern int OpenFieldMenuMode();
-
-int func_ov001_02065680(int arg0) {
-    ScriptVm_ReadOperandInt(arg0);
-    OpenFieldMenuMode();
-    return 1;
-}
+#define Ov002_EnterPhase OpenFieldMenuMode
+#define ScriptCmd_EnterPhase_02065680 func_ov001_02065680
+#include "src/ov001/shared_engine/ScriptCmd_EnterPhase_02065680.c"

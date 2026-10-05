@@ -1,1 +1,2 @@
-int func_ov043_020bc8d4(void){ return 0; }
+#define func_ov043_020bc8b4 func_ov043_020bc8d4
+#include "src/ov043/leaf_research/func_ov043_020bc8b4.c"

@@ -1,6 +1,3 @@
-extern void func_0204d994(void *p);
-
-int FS_UnloadOverlayImage_02026a90(void *p) {
-    func_0204d994(p);
-    return 1;
-}
+#define FS_EndOverlay func_0204d994
+#define FS_UnloadOverlayImage_02026a7c FS_UnloadOverlayImage_02026a90
+#include "src/arm9/library_nitro_fs/FS_UnloadOverlayImage_02026a7c.c"

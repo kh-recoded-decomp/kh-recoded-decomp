@@ -1,8 +1,2 @@
-int func_ov022_020a9b74(int p)
-{
-    if (*(int *)(p + 0x20) == 0)
-        return 0;
-    if (*(int *)(p + 0x28) != 0)
-        return 0x80;
-    return 0x100;
-}
+#define movieFrameBufferStatus_020a9b54 func_ov022_020a9b74
+#include "src/ov022/video_playback/movieFrameBufferStatus_020a9b54.c"

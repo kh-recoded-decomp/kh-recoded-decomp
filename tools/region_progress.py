@@ -99,7 +99,15 @@ def pct(part: int, whole: int) -> str:
 def main() -> int:
     sys.path.insert(0, str(ROOT / "tools"))
     import objdiff_report
-    us_measures = objdiff_report.build_report()["measures"]
+    report = objdiff_report.build_report()
+    us_measures = report["measures"]
+    sizes = {(unit["name"], f["name"]): f["size"] for unit in report["units"] for f in unit["functions"]}
+    asm_path = ROOT / "asm_matches.json"
+    asm_entries = json.loads(asm_path.read_text(encoding="utf-8"))["matches"] if asm_path.exists() else []
+    asm_bytes = sum(sizes.get((m["module"], m["symbol"]), 0) for m in asm_entries)
+    # The report counts assembly as matched; the C figures below exclude it.
+    us_measures = dict(us_measures, matched_code=us_measures["matched_code"] - asm_bytes,
+                       matched_functions=us_measures["matched_functions"] - len(asm_entries))
     us = us_functions()
     eu, eu_summary = eu_functions()
     from dedupe_regions import pairs
@@ -130,6 +138,8 @@ def main() -> int:
         f"| {u['matched_functions']:,} / {u['total_functions']:,} |",
         f"| **EU** `BK9P` | {e['matched_code']:,} / {e['total_code']:,} | **{pct(e['matched_code'], e['total_code'])}** "
         f"| {e['matched_functions']:,} / {e['total_functions']:,} |",
+        f"| US verified original assembly (not C) | {asm_bytes:,} | {pct(asm_bytes, u['total_code'])} "
+        f"| {len(asm_entries):,} |",
         f"| **Shared** (same function, matched in both) | {s['bytes']:,} | {pct(s['bytes'], e['total_code'])} of EU "
         f"| {s['functions']:,} |",
         "",

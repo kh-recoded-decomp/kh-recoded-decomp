@@ -1,12 +1,2 @@
-#include "libs/nitro/fs/fs_internal.h"
-
-FSResult FSi_EmptyArchiveProc(FSFile *file, FSCommandType command)
-{
-    (void)file;
-    switch (command) {
-    case FS_COMMAND_WRITEFILE:
-        return FS_RESULT_UNSUPPORTED;
-    default:
-        return FS_RESULT_PROC_UNKNOWN;
-    }
-}
+#define SelectModeCode_0200d390 FSi_EmptyArchiveProc
+#include "src/arm9/unclassified_helpers/SelectModeCode_0200d390.c"

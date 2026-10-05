@@ -1,6 +1,3 @@
-extern int func_0204de64();
-
-int ScriptCmd_RestorePanel(void) {
-    func_0204de64(0);
-    return 1;
-}
+#define Ov002_SuspendOrRestorePanel func_0204de64
+#define ScriptCmd_RestorePanel_02026ab0 ScriptCmd_RestorePanel
+#include "src/arm9/shared_engine/ScriptCmd_RestorePanel_02026ab0.c"

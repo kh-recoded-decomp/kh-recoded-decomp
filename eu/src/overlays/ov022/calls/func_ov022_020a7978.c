@@ -1,26 +1,6 @@
-extern int ScriptVm_ReadOperandInt(int owner, void *entry);
-extern int ScriptCmd_SetElemField(int owner, int handle);
-extern int func_ov022_020a73f8(int handle);
-extern int GetSubtitleStreamFrame(void);
-
-int func_ov022_020a7978(int owner, void *entry) {
-    int len;
-    int pos;
-
-    len = ScriptVm_ReadOperandInt(owner, entry);
-    if (func_ov022_020a73f8(ScriptCmd_SetElemField(owner, len)) == 0) {
-        return 1;
-    }
-    if (len == 0) {
-        return 0;
-    }
-
-    pos = GetSubtitleStreamFrame();
-    if (pos < len) {
-        return 0;
-    }
-    if (pos >= len) {
-        return 1;
-    }
-    return 1;
-}
+#define func_02025de4 ScriptVm_ReadOperandInt
+#define func_02025e18 ScriptCmd_SetElemField
+#define func_020a73d8 func_ov022_020a73f8
+#define func_020a8918 GetSubtitleStreamFrame
+#define func_ov022_020a7958 func_ov022_020a7978
+#include "src/ov022/reviewed_helpers/func_ov022_020a7958.c"

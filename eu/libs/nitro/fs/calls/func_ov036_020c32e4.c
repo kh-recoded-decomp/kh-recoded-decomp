@@ -1,7 +1,3 @@
-/* Ends the overlay and always reports success. */
-extern void UpdatePanelPromptInput(void *p);
-
-int func_ov036_020c32e4(void *p) {
-    UpdatePanelPromptInput(p);
-    return 1;
-}
+#define FS_EndOverlay UpdatePanelPromptInput
+#define FS_UnloadOverlayImage_020c32c4 func_ov036_020c32e4
+#include "src/ov036/library_nitro_fs/FS_UnloadOverlayImage_020c32c4.c"

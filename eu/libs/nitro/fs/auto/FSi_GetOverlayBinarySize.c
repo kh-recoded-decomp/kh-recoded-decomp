@@ -1,8 +1,2 @@
-#include "libs/nitro/fs/fs_overlay_internal.h"
-
-u32 FSi_GetOverlayBinarySize(const FSOverlayInfo *info)
-{
-    return (info->header.flags & FS_OVERLAY_FLAG_COMPRESSED)
-               ? info->header.compressedSize
-               : info->header.ramSize;
-}
+#define FSi_GetOverlayBinarySize_0200b7cc FSi_GetOverlayBinarySize
+#include "src/arm9/library_nitro_fs/FSi_GetOverlayBinarySize_0200b7cc.c"

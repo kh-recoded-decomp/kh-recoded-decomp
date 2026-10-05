@@ -1,9 +1,5 @@
-extern int LookupPairValue(void *ptr, unsigned short arg1, unsigned short arg2);
-extern void (*gBgExtendedControlDispatch[])(int value, int arg1, int arg2);
-extern char data_02055590;
-
-void Gfx_DispatchByPairKeyA_0202b384(int index, unsigned short *args, int arg1, int arg2) {
-    int value = LookupPairValue(&data_02055590, args[0], args[1]);
-
-    gBgExtendedControlDispatch[index](value, arg1, arg2);
-}
+#define Gfx_DispatchByPairKeyA_0202b370 Gfx_DispatchByPairKeyA_0202b384
+#define LookupPairKey LookupPairValue
+#define data_0205557c data_02055590
+#define data_02055644 gBgExtendedControlDispatch
+#include "src/arm9/shared_engine/Gfx_DispatchByPairKeyA_0202b370.c"

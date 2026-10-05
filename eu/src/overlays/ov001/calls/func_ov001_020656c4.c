@@ -1,8 +1,3 @@
-extern int ScriptVm_ReadOperandInt();
-extern int ClearSceneEntry();
-
-int func_ov001_020656c4(int arg0) {
-    ScriptVm_ReadOperandInt(arg0);
-    ClearSceneEntry();
-    return 1;
-}
+#define Ov002_EnterPhase ClearSceneEntry
+#define ScriptCmd_EnterPhase_020656c4 func_ov001_020656c4
+#include "src/ov001/shared_engine/ScriptCmd_EnterPhase_020656c4.c"

@@ -1,5 +1,3 @@
-extern int func_ov022_020a9b6c(int arg);
-int func_ov022_020a92e0(int param_1) {
-    if (param_1 == 0) return 0;
-    return func_ov022_020a9b6c(param_1);
-}
+#define Ov024_GetWord20 func_ov022_020a9b6c
+#define ReleaseIfSet_020a92c0 func_ov022_020a92e0
+#include "src/ov022/shared_engine/ReleaseIfSet_020a92c0.c"

@@ -1,32 +1,8 @@
-#include "libs/nns/snd/sndarc_stream_internal.h"
-
-void DisposeCallback_2(
-    void *memory,
-    u32 size,
-    u32 playerAddress,
-    u32 unused)
-{
-    NNSSndStrmPlayer *player = (NNSSndStrmPlayer *)playerAddress;
-
-    if (memory == player->buffer) {
-        OS_LockMutex(sSoundArcStreamMutex);
-        if (sSoundArcStreamState.prepareThread != NULL) {
-            OS_LockMutex(sSoundArcStreamState.prepareThread->mutex);
-        }
-
-        ForceStopStrm_2(player);
-
-        player->buffer = NULL;
-        player->bufferSize = 0;
-        player->numChannels = 0;
-        if (player->allocChannelCount > 0) {
-            NNS_SndStrmFreeChannel(&player->stream);
-            player->allocChannelCount = 0;
-        }
-
-        OS_UnlockMutex(sSoundArcStreamMutex);
-        if (sSoundArcStreamState.prepareThread != NULL) {
-            OS_UnlockMutex(sSoundArcStreamState.prepareThread->mutex);
-        }
-    }
-}
+#define DisposeStreamPlayerBuffer_02020b04 DisposeCallback_2
+#define NNS_SndStrmFreeChannel_0201e030 NNS_SndStrmFreeChannel
+#define func_02003158 OS_LockMutex
+#define func_020031a8 OS_UnlockMutex
+#define func_02020810 ForceStopStrm_2
+#define g_prepareThreadHolder_0205e324 sSoundArcStreamState
+#define g_streamMutex_0205fd98 sSoundArcStreamMutex
+#include "src/arm9/library_nns_snd/DisposeStreamPlayerBuffer_02020b04.c"

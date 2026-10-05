@@ -1,10 +1,6 @@
-#include "libs/nitro/rtc/rtc_internal.h"
-
-RTCResult RTC_GetDate(RTCDate *date)
-{
-    RTCi_Bss.work.commonResult = RTC_GetDateAsync(date, RtcGetResultCallback, NULL);
-    if (RTCi_Bss.work.commonResult == RTC_RESULT_SUCCESS) {
-        RtcWaitBusy();
-    }
-    return RTCi_Bss.work.commonResult;
-}
+#define RTCi_RunAsyncCommandAndWait_0200e4b0 RTC_GetDate
+#define RTCi_StartAsyncCommand_0200e468 RTC_GetDateAsync
+#define data_02057c0c RTCi_Bss
+#define func_0200e8c0 RtcGetResultCallback
+#define func_0200e8cc RtcWaitBusy
+#include "src/arm9/library_nitro_rtc/RTCi_RunAsyncCommandAndWait_0200e4b0.c"

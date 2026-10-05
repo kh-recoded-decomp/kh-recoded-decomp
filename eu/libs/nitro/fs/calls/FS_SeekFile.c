@@ -1,21 +1,3 @@
-typedef struct FSFile {
-    unsigned char reserved[0x10];
-    void *commandArgument;
-} FSFile;
-
-typedef struct FSSeekFileArgument {
-    int offset;
-    int origin;
-} FSSeekFileArgument;
-
-extern int FSi_SendCommand(FSFile *file, int command, int synchronous);
-
-int FS_SeekFile(FSFile *file, int offset, int origin)
-{
-    FSSeekFileArgument argument;
-
-    file->commandArgument = &argument;
-    argument.offset = offset;
-    argument.origin = origin;
-    return FSi_SendCommand(file, 14, 1);
-}
+#define SendSyncMessageArgs2_0200b648 FS_SeekFile
+#define func_0200a930 FSi_SendCommand
+#include "src/arm9/unclassified_helpers/SendSyncMessageArgs2_0200b648.c"

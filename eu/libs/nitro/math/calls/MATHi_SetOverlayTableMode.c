@@ -1,20 +1,6 @@
-typedef void (*MATHSHA1ProcessBlockFunc)(void *context);
-
-extern int MATHi_OverlayTableMode;
-extern MATHSHA1ProcessBlockFunc MATHi_SHA1ProcessMessageBlockFunc;
-extern void MATHi_SHA1ProcessBlockForOverlay(void *context);
-extern void MATHi_SHA1ProcessBlock(void *context);
-
-int MATHi_SetOverlayTableMode(int flag)
-{
-    int previousMode = MATHi_OverlayTableMode;
-
-    MATHi_OverlayTableMode = flag;
-    if (flag) {
-        MATHi_SHA1ProcessMessageBlockFunc = MATHi_SHA1ProcessBlockForOverlay;
-    } else {
-        MATHi_SHA1ProcessMessageBlockFunc = MATHi_SHA1ProcessBlock;
-    }
-
-    return previousMode;
-}
+#define SetModeAndCallback_0200d694 MATHi_SetOverlayTableMode
+#define data_02055c40 MATHi_SHA1ProcessMessageBlockFunc
+#define data_02057b84 MATHi_OverlayTableMode
+#define func_0200d5d8 MATHi_SHA1ProcessBlockForOverlay
+#define func_0200ded0 MATHi_SHA1ProcessBlock
+#include "src/arm9/unclassified_helpers/SetModeAndCallback_0200d694.c"

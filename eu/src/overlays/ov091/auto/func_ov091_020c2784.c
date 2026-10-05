@@ -1,6 +1,2 @@
-#include "nitro/types.h"
-
-void func_ov091_020c2784(void *object, u32 mask)
-{
-    *(u32 *)((u8 *)object + 4) &= ~mask;
-}
+#define func_ov091_020c2764 func_ov091_020c2784
+#include "src/ov091/leaf_research/func_ov091_020c2764.c"

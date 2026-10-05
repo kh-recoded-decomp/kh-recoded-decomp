@@ -1,30 +1,7 @@
-#include "libs/nns/snd/capture_internal.h"
-
-extern void SND_SetChannelVolume(u32 channelMask, int volume, int shift);
-extern int NNSi_SndFaderGet(const NNSSndFader *fader);
-extern void NNSi_SndFaderUpdate(NNSSndFader *fader);
-extern BOOL NNSi_SndFaderIsFinished(const NNSSndFader *fader);
-extern void NNSi_SndCaptureStop(void);
-
-void NNSi_SndCaptureMain(void)
-{
-    NNSSndCaptureState *capture = &sSndCaptureState;
-    NNSSndFader *fader;
-    int volume;
-
-    if (capture->active && capture->type == NNS_SND_CAPTURE_TYPE_REVERB) {
-        fader = &capture->fader;
-        NNSi_SndFaderUpdate(fader);
-
-        if (capture->fadingOut && NNSi_SndFaderIsFinished(fader)) {
-            NNSi_SndCaptureStop();
-            return;
-        }
-
-        volume = NNSi_SndFaderGet(fader) >> 8;
-        if (volume != capture->volume) {
-            SND_SetChannelVolume(capture->playingChannelMask, volume, 0);
-            capture->volume = volume;
-        }
-    }
-}
+#define data_0205e290 sSndCaptureState
+#define func_0201e544 NNSi_SndCaptureMain
+#define func_0201e5c4 NNSi_SndCaptureStop
+#define func_020218fc NNSi_SndFaderGet
+#define func_02021930 NNSi_SndFaderUpdate
+#define func_02021948 NNSi_SndFaderIsFinished
+#include "src/arm9/library_nns_snd/func_0201e544.c"

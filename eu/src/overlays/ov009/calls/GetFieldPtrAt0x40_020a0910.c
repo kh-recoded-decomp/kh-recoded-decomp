@@ -1,5 +1,2 @@
-#include "nitro/types.h"
-
-int GetFieldPtrAt0x40_020a0910(int base) {
-    return base + 0x40;
-}
+#define GetFieldPtrAt0x40_020a08f0 GetFieldPtrAt0x40_020a0910
+#include "src/ov009/unclassified_helpers/GetFieldPtrAt0x40_020a08f0.c"

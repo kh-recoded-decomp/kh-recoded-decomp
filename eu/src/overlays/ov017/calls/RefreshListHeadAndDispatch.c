@@ -1,17 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad_00[0x60];
-    void *listHead;
-} OverlayObject;
-
-extern void *GetLinkedEntryAfterTail(void *entry);
-extern void DispatchListHeadCallback(OverlayObject *obj);
-
-void RefreshListHeadAndDispatch(OverlayObject *obj)
-{
-    if (obj->listHead != 0) {
-        obj->listHead = GetLinkedEntryAfterTail(obj->listHead);
-        DispatchListHeadCallback(obj);
-    }
-}
+#define RefreshListHeadAndDispatch_020a423c RefreshListHeadAndDispatch
+#define func_ov017_020a4100 DispatchListHeadCallback
+#define func_ov017_020a50d8 GetLinkedEntryAfterTail
+#include "src/ov017/unclassified_helpers/RefreshListHeadAndDispatch_020a423c.c"

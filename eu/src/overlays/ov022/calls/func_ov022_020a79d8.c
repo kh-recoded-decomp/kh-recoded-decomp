@@ -1,8 +1,4 @@
-extern int ByteCode_ResolveOperand();
-extern int SetMovieStateText();
-
-int func_ov022_020a79d8(int arg0) {
-    ByteCode_ResolveOperand(arg0);
-    SetMovieStateText();
-    return 1;
-}
+#define Ov002_EnterPhase SetMovieStateText
+#define ScriptCmd_EnterPhase_020a79b8 func_ov022_020a79d8
+#define ScriptVm_ReadOperandInt ByteCode_ResolveOperand
+#include "src/ov022/shared_engine/ScriptCmd_EnterPhase_020a79b8.c"

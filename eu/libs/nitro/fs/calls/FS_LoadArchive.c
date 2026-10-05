@@ -1,31 +1,6 @@
-#include "libs/nitro/fs/fs_internal.h"
-
-extern const FSArchiveInterface FSiArchiveProcInterface;
-extern FSResult FSi_ReadMemCallback(FSArchive *archive, void *destination,
-                                    u32 position, u32 size);
-extern FSResult FSi_WriteMemCallback(FSArchive *archive, const void *source,
-                                     u32 position, u32 size);
-extern BOOL FS_MountArchive(FSArchive *archive, void *userdata,
-                            const FSArchiveInterface *interface,
-                            u32 flags);
-
-BOOL FS_LoadArchive(FSArchive *archive, u32 base, u32 fat, u32 fatSize,
-                    u32 fnt, u32 fntSize, FSArchiveReadFunction readFunction,
-                    FSArchiveWriteFunction writeFunction)
-{
-    FSROMFATArchiveContext *context =
-        (FSROMFATArchiveContext *)archive->reserved;
-
-    context->base = base;
-    context->fatSize = fatSize;
-    context->fat = fat;
-    context->fatBackup = fat;
-    context->fntSize = fntSize;
-    context->fnt = fnt;
-    context->fntBackup = fnt;
-    context->readFunction = readFunction ? readFunction : FSi_ReadMemCallback;
-    context->writeFunction = writeFunction ? writeFunction : FSi_WriteMemCallback;
-    context->loadedTables = 0;
-
-    return FS_MountArchive(archive, context, &FSiArchiveProcInterface, 0);
-}
+#define FS_LoadArchive_0200cfb0 FS_LoadArchive
+#define FS_MountArchive_0200b044 FS_MountArchive
+#define data_020529e0 FSiArchiveProcInterface
+#define func_0200cf5c FSi_ReadMemCallback
+#define func_0200cf84 FSi_WriteMemCallback
+#include "src/arm9/library_nitro_fs/FS_LoadArchive_0200cfb0.c"

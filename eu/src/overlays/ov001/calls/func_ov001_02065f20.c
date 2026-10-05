@@ -1,6 +1,3 @@
-extern int ClearFieldCounters();
-
-int func_ov001_02065f20(int arg0) {
-    ClearFieldCounters(arg0);
-    return 1;
-}
+#define FS_EndOverlay ClearFieldCounters
+#define FS_UnloadOverlayImage_02065f20 func_ov001_02065f20
+#include "src/ov001/library_nitro_fs/FS_UnloadOverlayImage_02065f20.c"

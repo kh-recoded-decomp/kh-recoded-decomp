@@ -1,7 +1,2 @@
-#include "libs/nitro/fs/fs_overlay_internal.h"
-
-BOOL FS_UnloadOverlayImage(FSOverlayInfo *info)
-{
-    FS_EndOverlay(info);
-    return 1;
-}
+#define FS_UnloadOverlayImage_0200bd54 FS_UnloadOverlayImage
+#include "src/arm9/library_nitro_fs/FS_UnloadOverlayImage_0200bd54.c"

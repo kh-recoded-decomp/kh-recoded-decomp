@@ -1,8 +1,3 @@
-extern int ScriptVm_ReadOperandInt();
-extern int SetMenuHighlight();
-
-int func_ov001_02065a54(int arg0) {
-    ScriptVm_ReadOperandInt(arg0);
-    SetMenuHighlight();
-    return 1;
-}
+#define Ov002_EnterPhase SetMenuHighlight
+#define ScriptCmd_EnterPhase_02065a54 func_ov001_02065a54
+#include "src/ov001/shared_engine/ScriptCmd_EnterPhase_02065a54.c"

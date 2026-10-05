@@ -1,8 +1,3 @@
-extern int GetPanelFlag40();
-
-int func_ov036_020be7e0(int arg0) {
-    if (GetPanelFlag40(arg0) != 0) {
-        return 0;
-    }
-    return 1;
-}
+#define Game_PollSceneAlive GetPanelFlag40
+#define IsSceneState0_020be7c0 func_ov036_020be7e0
+#include "src/ov036/shared_engine/IsSceneState0_020be7c0.c"

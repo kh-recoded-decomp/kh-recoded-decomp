@@ -1,6 +1,4 @@
-extern int data_ov025_020b7780;
-extern int ApplyModeAndNotify();
-
-int LookupChannelEntry_020b62ac(int arg0) {
-    return ApplyModeAndNotify(*(int *)&data_ov025_020b7780 + 25844, arg0);
-}
+#define LookupChannelEntry_020b628c LookupChannelEntry_020b62ac
+#define ParseSlotQuantityId ApplyModeAndNotify
+#define data_020b7760 data_ov025_020b7780
+#include "src/ov025/shared_variants/LookupChannelEntry_020b628c.c"

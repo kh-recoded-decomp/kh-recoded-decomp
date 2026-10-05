@@ -1,9 +1,3 @@
-extern void *resetBankForX_();
-extern unsigned short sGXSubObjExtPlttBank;
-
-void *GX_ResetBankForSubOBJExtPltt(void)
-{
-    volatile unsigned int *dispcnt = (volatile unsigned int *)0x04001000;
-    *dispcnt = *dispcnt & ~0x80000000u;
-    return resetBankForX_(&sGXSubObjExtPlttBank);
-}
+#define GX_ResetBankForSubOBJExtPltt_02008d74 GX_ResetBankForSubOBJExtPltt
+#define data_02056f60 sGXSubObjExtPlttBank
+#include "src/arm9/library_nitro_gx/GX_ResetBankForSubOBJExtPltt_02008d74.c"

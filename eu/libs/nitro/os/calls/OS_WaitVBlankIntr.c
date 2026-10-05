@@ -1,10 +1,2 @@
-#include "libs/nitro/os/os_types_internal.h"
-
-extern void WaitByLoop(s32 count);
-extern void OS_WaitIrq(BOOL clear, u32 irqFlags);
-
-void OS_WaitVBlankIntr(void)
-{
-    WaitByLoop(1);
-    OS_WaitIrq(1, 1);
-}
+#define OS_WaitVBlankIntr_020049d0 OS_WaitVBlankIntr
+#include "src/arm9/library_nitro_os/OS_WaitVBlankIntr_020049d0.c"

@@ -1,14 +1,4 @@
-#include "libs/nitro/fs/fs_overlay_internal.h"
-
-BOOL FS_UnloadOverlay(MIProcessor target, FSOverlayID id)
-{
-    BOOL result = 0;
-    FSOverlayInfo info;
-
-    if (FS_LoadOverlayInfo(&info, target, id)) {
-        if (FS_UnloadOverlayImage(&info)) {
-            result = 1;
-        }
-    }
-    return result;
-}
+#define FS_UnloadOverlayImage_0200bd54 FS_UnloadOverlayImage
+#define func_0200b850 FS_LoadOverlayInfo
+#define func_0200bdb8 FS_UnloadOverlay
+#include "src/arm9/library_nitro_fs/func_0200bdb8.c"

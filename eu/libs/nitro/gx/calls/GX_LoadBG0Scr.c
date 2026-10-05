@@ -1,9 +1,6 @@
-#include "libs/nitro/gx/gx_load_internal.h"
-
-extern void *G2_GetBG0ScrPtr(void);
-
-void GX_LoadBG0Scr(const void *source, u32 offset, u32 size)
-{
-    u32 base = (u32)G2_GetBG0ScrPtr();
-    GXi_DmaCopy16(GXi_DmaId, source, (void *)(base + offset), size);
-}
+#define G2_GetBG0ScrPtr_02006de0 G2_GetBG0ScrPtr
+#define GX_LoadBG0Scr_02007550 GX_LoadBG0Scr
+#define data_02055c1c GXi_DmaId
+#define func_01ff869c MIi_CpuCopy16
+#define func_02004f6c MIi_DmaCopy16
+#include "src/arm9/library_nitro_gx/GX_LoadBG0Scr_02007550.c"

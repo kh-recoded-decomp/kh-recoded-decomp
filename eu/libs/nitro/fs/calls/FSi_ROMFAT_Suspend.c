@@ -1,10 +1,4 @@
-#include "libs/nitro/fs/fs_internal.h"
-
-void FSi_ROMFAT_Suspend(FSArchive *archive)
-{
-    FSFile file[1];
-
-    FS_InitFile(file);
-    file->archive = archive;
-    (void)FSi_TranslateCommand(file, FS_COMMAND_SUSPEND, 0);
-}
+#define func_0200b394 FS_InitFile
+#define func_0200c6fc FSi_TranslateCommand
+#define func_0200cbd8 FSi_ROMFAT_Suspend
+#include "src/arm9/unclassified_helpers/func_0200cbd8.c"

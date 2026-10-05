@@ -1,13 +1,6 @@
-#include "libs/nitro/os/os_valarm_internal.h"
-
-extern void OS_SetIrqFunction(u32 mask, void (*function)(void));
-extern void GX_SetVCountEqVal(s16 vcount);
-extern u32 OS_EnableIrqMask(u32 mask);
-
-void OSi_SetNextVAlarm(OSVAlarm *alarm)
-{
-    OS_SetIrqFunction(4, (void (*)(void))OSi_VAlarmHandler);
-    GX_SetVCountEqVal(alarm->fire);
-    *(volatile u16 *)0x04000004 |= 0x20;
-    OS_EnableIrqMask(4);
-}
+#define GX_SetVCountEqVal_020065d0 GX_SetVCountEqVal
+#define OS_EnableIrqMask_02001f5c OS_EnableIrqMask
+#define OS_SetIrqFunction_02001d90 OS_SetIrqFunction
+#define OSi_VAlarmHandler_02004734 OSi_VAlarmHandler
+#define OSi_VAlarmSetTimer_020046f4 OSi_SetNextVAlarm
+#include "src/arm9/library_nitro_os/OSi_VAlarmSetTimer_020046f4.c"

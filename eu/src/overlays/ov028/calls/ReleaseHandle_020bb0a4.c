@@ -1,10 +1,4 @@
-#include "nitro/types.h"
-
-extern u32 data_ov028_020bb320;
-extern void PXI_Init_0202a64c(u32 handle);
-
-void ReleaseHandle_020bb0a4(void)
-{
-    PXI_Init_0202a64c(data_ov028_020bb320);
-    data_ov028_020bb320 = 0xffffffff;
-}
+#define PXI_Init_0202a638 PXI_Init_0202a64c
+#define ReleaseHandle_020bb084 ReleaseHandle_020bb0a4
+#define g_handle_020bb300 data_ov028_020bb320
+#include "src/ov028/unclassified_helpers/ReleaseHandle_020bb084.c"

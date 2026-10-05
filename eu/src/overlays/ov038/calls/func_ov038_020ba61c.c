@@ -1,7 +1,5 @@
-extern int func_0202a45c(void *desc, int arg);
-extern int data_ov038_020bbda4;
-extern int data_ov038_020bbda0;
-
-void func_ov038_020ba61c(int arg) {
-    data_ov038_020bbda0 = func_0202a45c(&data_ov038_020bbda4, arg);
-}
+#define data_020bbd80 data_ov038_020bbda0
+#define data_020bbd84 data_ov038_020bbda4
+#define func_0202a448 func_0202a45c
+#define func_ov038_020ba5fc func_ov038_020ba61c
+#include "src/ov038/reviewed_helpers/func_ov038_020ba5fc.c"

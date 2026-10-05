@@ -1,9 +1,4 @@
-#include "nitro/types.h"
-
-extern u32 data_ov035_020bc480;
-extern void *PXI_Init_0202a64c(u32 handle);
-
-void MobiClip_SrcClose_020ba9e0(void) {
-    PXI_Init_0202a64c(data_ov035_020bc480);
-    data_ov035_020bc480 = 0xffffffff;
-}
+#define MobiClip_SrcClose_020ba9c0 MobiClip_SrcClose_020ba9e0
+#define PXI_Init_0202a638 PXI_Init_0202a64c
+#define data_ov035_020bc460 data_ov035_020bc480
+#include "src/ov035/shared_engine/MobiClip_SrcClose_020ba9c0.c"

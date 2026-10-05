@@ -1,16 +1,5 @@
-extern void SetPanelTransitionMode(int mode);
-extern int WM_EndMP(void *cb);
-extern void WH_SetError(int result);
-extern void func_ov015_02074664(void);
-
-int func_ov015_02074634(void) {
-    int r;
-
-    SetPanelTransitionMode(3);
-    r = WM_EndMP(&func_ov015_02074664);
-    if (r == 2) {
-        return 1;
-    }
-    WH_SetError(r);
-    return 0;
-}
+#define func_02011c78 WM_EndMP
+#define func_020737c4 SetPanelTransitionMode
+#define func_020737d4 WH_SetError
+#define func_02074664 func_ov015_02074664
+#include "src/ov015/reviewed_helpers/func_ov015_02074634.c"

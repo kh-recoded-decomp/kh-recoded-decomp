@@ -1,5 +1,3 @@
-extern int queueNextMovieFrame(int arg);
-int func_ov022_020a9310(int param_1) {
-    if (param_1 == 0) return 0;
-    return queueNextMovieFrame(param_1) == 1;
-}
+#define func_020a9b78 queueNextMovieFrame
+#define func_ov022_020a92f0 func_ov022_020a9310
+#include "src/ov022/reviewed_helpers/func_ov022_020a92f0.c"

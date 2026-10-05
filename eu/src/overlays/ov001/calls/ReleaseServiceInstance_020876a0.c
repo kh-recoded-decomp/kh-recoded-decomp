@@ -1,9 +1,4 @@
-extern void ReleaseStageManager(int arg);
-
-extern int data_ov001_0209f2e8;
-
-void ReleaseServiceInstance_020876a0(void) {
-    if (data_ov001_0209f2e8 == -1) return;
-    ReleaseStageManager(data_ov001_0209f2e8);
-    data_ov001_0209f2e8 = -1;
-}
+#define ReleaseServiceInstance_02087678 ReleaseServiceInstance_020876a0
+#define data_0209f2c8 data_ov001_0209f2e8
+#define func_0209b8c4 ReleaseStageManager
+#include "src/ov001/shared_engine/ReleaseServiceInstance_02087678.c"

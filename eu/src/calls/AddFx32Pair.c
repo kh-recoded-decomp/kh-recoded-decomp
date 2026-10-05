@@ -1,13 +1,3 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-typedef struct Vec2Fx32 { fx32 x; fx32 y; } Vec2Fx32;
-
-extern void Vec2Add(const Vec2Fx32 *a, const Vec2Fx32 *b, Vec2Fx32 *out);
-
-void AddFx32Pair(Vec2Fx32 *out, const Vec2Fx32 *a, const Vec2Fx32 *b)
-{
-    Vec2Fx32 tmp;
-    Vec2Add(a, b, &tmp);
-    *out = tmp;
-}
+#define AddFx32Pair_02040b98 AddFx32Pair
+#define func_0204a2e0 Vec2Add
+#include "src/arm9/math/AddFx32Pair_02040b98.c"

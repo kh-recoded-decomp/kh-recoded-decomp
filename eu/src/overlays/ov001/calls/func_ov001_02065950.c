@@ -1,6 +1,3 @@
-extern int AdvanceRecordStep();
-
-int func_ov001_02065950(int arg0) {
-    AdvanceRecordStep(arg0);
-    return 1;
-}
+#define FS_EndOverlay AdvanceRecordStep
+#define FS_UnloadOverlayImage_02065950 func_ov001_02065950
+#include "src/ov001/library_nitro_fs/FS_UnloadOverlayImage_02065950.c"

@@ -1,12 +1,4 @@
-extern int ScriptVm_ReadOperandInt(void *self, void *desc);
-extern void StartActorSlotAlphaFade(int a, int b, int c, int d);
-
-int func_ov036_020be170(void *self, char *descs) {
-    int a = ScriptVm_ReadOperandInt(self, descs);
-    int b = ScriptVm_ReadOperandInt(self, descs + 8);
-    int c = ScriptVm_ReadOperandInt(self, descs + 0x10);
-    int d = ScriptVm_ReadOperandInt(self, descs + 0x18);
-
-    StartActorSlotAlphaFade(a, b, c, d);
-    return 1;
-}
+#define func_02025de4 ScriptVm_ReadOperandInt
+#define func_020bcfcc StartActorSlotAlphaFade
+#define func_ov036_020be150 func_ov036_020be170
+#include "src/ov036/reviewed_helpers/func_ov036_020be150.c"

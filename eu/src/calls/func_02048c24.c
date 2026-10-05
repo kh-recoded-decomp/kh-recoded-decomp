@@ -1,11 +1,3 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-extern void DivideVecByLength(VecFx32 *vec, s32 sign);
-
-void func_02048c24(VecFx32 *out, const VecFx32 *v, s32 sign)
-{
-    VecFx32 tmp = *v;
-    DivideVecByLength(&tmp, sign);
-    *out = tmp;
-}
+#define NegateVecFx32IfNegative_0204a6ac DivideVecByLength
+#define func_02048c10 func_02048c24
+#include "src/arm9/math/func_02048c10.c"

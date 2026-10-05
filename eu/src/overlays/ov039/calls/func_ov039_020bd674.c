@@ -1,11 +1,4 @@
-struct ov008_ptr_slot {
-    char *ptr;
-    int _pad;
-};
-
-extern int data_ov039_020beaa4[];
-extern struct ov008_ptr_slot data_ov039_020be950[];
-int func_ov039_020bd674(void)
-{
-    return *(int *)(data_ov039_020be950[data_ov039_020beaa4[0]].ptr + 0x10);
-}
+#define data_020be930 data_ov039_020be950
+#define data_020bea84 data_ov039_020beaa4
+#define func_ov039_020bd654 func_ov039_020bd674
+#include "src/ov039/reviewed_helpers/func_ov039_020bd654.c"

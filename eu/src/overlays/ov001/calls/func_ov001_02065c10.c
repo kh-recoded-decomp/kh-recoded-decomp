@@ -1,8 +1,3 @@
-extern int ScriptVm_ReadOperandInt();
-extern int ApplyAreaSoundEntry();
-
-int func_ov001_02065c10(int arg0) {
-    ScriptVm_ReadOperandInt(arg0);
-    ApplyAreaSoundEntry();
-    return 1;
-}
+#define Ov002_EnterPhase ApplyAreaSoundEntry
+#define ScriptCmd_EnterPhase_02065c10 func_ov001_02065c10
+#include "src/ov001/shared_engine/ScriptCmd_EnterPhase_02065c10.c"

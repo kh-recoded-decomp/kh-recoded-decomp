@@ -1,9 +1,3 @@
-#include "nitro/types.h"
-#include "nnsys/snd.h"
-
-extern void FreeExpandedHeapBlock(NNSSndSeqPlayer *seqPlayer, BOOL flag);
-
-void NNS_SndPlayerPause_0202a294(NNSSndHandle *handle, BOOL flag)
-{
-    FreeExpandedHeapBlock(handle->player, flag);
-}
+#define NNS_SndPlayerPause_0202a280 NNS_SndPlayerPause_0202a294
+#define NNSi_SndPlayerPause FreeExpandedHeapBlock
+#include "src/arm9/library_nns_snd/NNS_SndPlayerPause_0202a280.c"

@@ -1,22 +1,5 @@
-#include "libs/nitro/fs/fs_internal.h"
-
-extern void CARD_LockRom(u16 lockId);
-extern void CARD_UnlockRom(u16 lockId);
-
-FSResult FSi_RomArchiveProc(FSFile *file, FSCommandType command)
-{
-    (void)file;
-
-    switch (command) {
-    case FS_COMMAND_ACTIVATE:
-        CARD_LockRom((u16)fsi_rom_archive_state.cardLockId);
-        return FS_RESULT_SUCCESS;
-    case FS_COMMAND_IDLE:
-        CARD_UnlockRom((u16)fsi_rom_archive_state.cardLockId);
-        return FS_RESULT_SUCCESS;
-    case FS_COMMAND_WRITEFILE:
-        return FS_RESULT_UNSUPPORTED;
-    default:
-        return FS_RESULT_PROC_UNKNOWN;
-    }
-}
+#define CARD_UnlockRom_02009198 CARD_UnlockRom
+#define SelectAndDispatchRomOp_0200d320 FSi_RomArchiveProc
+#define data_02057b1c fsi_rom_archive_state
+#define func_02009150 CARD_LockRom
+#include "src/arm9/library_nitro_card/SelectAndDispatchRomOp_0200d320.c"

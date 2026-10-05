@@ -1,7 +1,4 @@
-extern void func_ov002_020629b8(int x);
-extern int func_ov002_02062b10(void);
-
-int func_ov002_020629a8(int x) {
-    func_ov002_020629b8(x);
-    return func_ov002_02062b10();
-}
+#define FX_DivAsync func_ov002_020629b8
+#define FX_Div_020629a8 func_ov002_020629a8
+#define FX_GetDivResult func_ov002_02062b10
+#include "src/ov002/library_nitro_fx/FX_Div_020629a8.c"

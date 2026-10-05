@@ -1,20 +1,7 @@
-#include "libs/nns/snd/sndarc_stream_internal.h"
-
-void ShutdownStreamPlayer(NNSSndStrmPlayer *player)
-{
-    if (!player->activeFlag) {
-        return;
-    }
-
-    FreeChannel(player);
-    player->closeStream(player);
-    RemoveCommandByPlayer(&sStreamCommandList, player);
-
-    if (sSoundArcStreamState.prepareThread != NULL) {
-        RemoveCommandByPlayer(
-            &sSoundArcStreamState.prepareThread->commandList,
-            player);
-    }
-
-    FreePlayer(player);
-}
+#define ReleaseStreamChannels_02020948 FreeChannel
+#define StopStreamPlayer_020208a8 ShutdownStreamPlayer
+#define data_0205e324 sSoundArcStreamState
+#define data_0205fdb0 sStreamCommandList
+#define func_02020520 FreePlayer
+#define func_020209d4 RemoveCommandByPlayer
+#include "src/arm9/library_nns_snd/StopStreamPlayer_020208a8.c"

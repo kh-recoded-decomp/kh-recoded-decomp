@@ -1,10 +1,4 @@
-typedef unsigned int u32;
-typedef void (*NNSGfdFrmPlttVramDebugDumpCallBack)(u32, u32, u32, u32);
-
-extern void FrmPlttVramDebugDumpCallBack_(u32, u32, u32, u32);
-extern void NNS_GfdDumpFrmPlttVramManagerEx(NNSGfdFrmPlttVramDebugDumpCallBack callback);
-
-void NNS_GfdDumpFrmPlttVramManager(void)
-{
-    NNS_GfdDumpFrmPlttVramManagerEx(FrmPlttVramDebugDumpCallBack_);
-}
+#define CreateOverlay060Object_02013b94 FrmPlttVramDebugDumpCallBack_
+#define SetOverlayObjectFactory_02013bac NNS_GfdDumpFrmPlttVramManagerEx
+#define func_02013b98 NNS_GfdDumpFrmPlttVramManager
+#include "src/arm9/object_factory/func_02013b98.c"

@@ -1,6 +1,3 @@
-#include "libs/nitro/fs/fs_internal.h"
-
-u32 FS_GetLength(FSFile *file)
-{
-    return FS_GetFileLength(file);
-}
+#define PXI_InitFifo FS_GetFileLength
+#define PXI_Init_0200b750 FS_GetLength
+#include "src/arm9/library_nitro_pxi/PXI_Init_0200b750.c"

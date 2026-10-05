@@ -1,18 +1,4 @@
-typedef unsigned int u32;
-typedef int BOOL;
-
-typedef struct NNSSndStrmPlayer {
-    unsigned char reserved0[0xac];
-    u32 fileOffset;
-    unsigned char info[0x40];
-} NNSSndStrmPlayer;
-
-extern void MI_CpuCopy8(const void *source, void *destination, u32 size);
-extern void *NNS_SndArcGetFileAddress(u32 fileId);
-
-BOOL OpenMemoryStream(NNSSndStrmPlayer *player, u32 fileId)
-{
-    player->fileOffset = (u32)NNS_SndArcGetFileAddress(fileId);
-    MI_CpuCopy8((const void *)player->fileOffset, &player->info, sizeof(player->info));
-    return 1;
-}
+#define MI_CpuCopy8_01ff89a8 MI_CpuCopy8
+#define OpenMemoryStream_020217d4 OpenMemoryStream
+#define func_0201ee28 NNS_SndArcGetFileAddress
+#include "src/arm9/audio/OpenMemoryStream_020217d4.c"

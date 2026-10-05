@@ -1,6 +1,2 @@
-#include "nitro/types.h"
-
-u32 func_ov091_020c27b4(const void *object)
-{
-    return *(const u32 *)((const u8 *)object + 0x0);
-}
+#define func_ov091_020c2794 func_ov091_020c27b4
+#include "src/ov091/leaf_research/func_ov091_020c2794.c"

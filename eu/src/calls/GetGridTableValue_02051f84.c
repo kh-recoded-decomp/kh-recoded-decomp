@@ -1,30 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct GridTable {
-    int rowStart[10];
-    int values[1];
-} GridTable;
-
-typedef struct GridTables {
-    u8 pad_00[0x20];
-    GridTable *table;
-} GridTables;
-
-extern GridTables *gRecordManager;
-
-int GetGridTableValue_02051f84(int row, int column)
-{
-    GridTables *tables = gRecordManager;
-    GridTable *table = tables->table;
-    int index;
-
-    if (tables == NULL || table == NULL) {
-        return 0;
-    }
-    if (column >= 0) {
-        index = table->rowStart[row] + column;
-    } else {
-        index = row;
-    }
-    return table->values[index];
-}
+#define GetGridTableValue_02051f70 GetGridTableValue_02051f84
+#define data_020613d0 gRecordManager
+#include "src/arm9/data_access/GetGridTableValue_02051f70.c"

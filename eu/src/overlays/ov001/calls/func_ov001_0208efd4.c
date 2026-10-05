@@ -1,6 +1,3 @@
-extern int func_ov001_02073718();
-
-int func_ov001_0208efd4(int arg0) {
-    func_ov001_02073718(arg0);
-    return 1;
-}
+#define FS_EndOverlay func_ov001_02073718
+#define FS_UnloadOverlayImage_0208efac func_ov001_0208efd4
+#include "src/ov001/library_nitro_fs/FS_UnloadOverlayImage_0208efac.c"

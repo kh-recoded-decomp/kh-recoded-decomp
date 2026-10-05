@@ -1,1 +1,2 @@
-int func_ov040_020bd748(void){ return -1; }
+#define Gfd_DefaultFreeTexVram_020bd728 func_ov040_020bd748
+#include "src/ov040/library_nns_gfd/Gfd_DefaultFreeTexVram_020bd728.c"

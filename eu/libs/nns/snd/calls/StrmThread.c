@@ -1,26 +1,8 @@
-#include "libs/nns/snd/sndarc_stream_internal.h"
-
-void StrmThread(void *argument)
-{
-    NNSSndStrmThread *thread = argument;
-    NNSSndStrmCommand *command;
-
-    while (TRUE) {
-        OS_SleepThread(&thread->threadQueue);
-
-        while (TRUE) {
-            OS_LockMutex(thread->mutex);
-
-            command = (NNSSndStrmCommand *)ReadCommandBuffer(
-                &thread->commandList);
-            if (command == NULL) {
-                OS_UnlockMutex(thread->mutex);
-                break;
-            }
-
-            NNSi_SndArcStrm_MakeWaveData(command);
-            FreeCommandBuffer(command);
-            OS_UnlockMutex(thread->mutex);
-        }
-    }
-}
+#define DequeueStreamLoadCommand_02020a44 ReadCommandBuffer
+#define ReleaseSyncObject_020031a8 OS_UnlockMutex
+#define SleepCurrentThread_02002aa8 OS_SleepThread
+#define StrmThread_02021820 StrmThread
+#define func_02003158 OS_LockMutex
+#define func_02020ad8 FreeCommandBuffer
+#define func_02020e14 NNSi_SndArcStrm_MakeWaveData
+#include "src/arm9/library_nns_snd/StrmThread_02021820.c"

@@ -1,6 +1,3 @@
-extern int ForwardSubModeStart();
-
-int func_ov001_02065a64(int arg0) {
-    ForwardSubModeStart(arg0);
-    return 1;
-}
+#define FS_EndOverlay ForwardSubModeStart
+#define FS_UnloadOverlayImage_02065a64 func_ov001_02065a64
+#include "src/ov001/library_nitro_fs/FS_UnloadOverlayImage_02065a64.c"

@@ -1,5 +1,3 @@
-extern int MultiplyTwoPercentFractions(int arg);
-extern int data_0205fe0c;
-int ArmObject(void) {
-    return MultiplyTwoPercentFractions(*(int *)&data_0205fe0c);
-}
+#define ArmObject_0205115c ArmObject
+#define SetWordAt0x588To1 MultiplyTwoPercentFractions
+#include "src/arm9/shared_engine/ArmObject_0205115c.c"

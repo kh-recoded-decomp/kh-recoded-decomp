@@ -1,5 +1,2 @@
-extern int NNS_FndInitList();
-
-int NNS_FndInitListWithOffset0(int arg0) {
-    return NNS_FndInitList(arg0, 0);
-}
+#define NNS_FndInitListWithOffset0_0201f278 NNS_FndInitListWithOffset0
+#include "src/arm9/library_nitro_nns/NNS_FndInitListWithOffset0_0201f278.c"

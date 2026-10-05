@@ -1,6 +1,4 @@
-#include "libs/nitro/spi/calls/pm_callback_internal.h"
-
-void PMi_InsertPreSleepCallbackEx(PMGenCallbackInfo *info, int priority)
-{
-    PMi_InsertList(&PMi_PreSleepCallbackList, info, priority, PMi_COMPARE_GT);
-}
+#define PMi_InsertPreSleepCallback_02010aec PMi_InsertPreSleepCallbackEx
+#define data_020597d0 PMi_PreSleepCallbackList
+#define func_02010a1c PMi_InsertList
+#include "src/arm9/library_nitro_spi/PMi_InsertPreSleepCallback_02010aec.c"

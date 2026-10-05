@@ -1,16 +1,8 @@
-#include "libs/nns/gfd/gfd_LinkedListVramMan_Types.h"
-
-void NNS_GfdInitLnkTexVramManager(u32 size, u32 compressedSize, void *work, u32 workSize, BOOL useAsDefault)
-{
-    sLnkTexVramManager.size = size;
-    sLnkTexVramManager.compressedSize = compressedSize;
-    sLnkTexVramManager.work = work;
-    sLnkTexVramManager.workSize = workSize;
-
-    NNS_GfdResetLnkTexVramState();
-
-    if (useAsDefault) {
-        sDefaultAllocTexVramFunc = NNS_GfdAllocLnkTexVram;
-        sDefaultFreeTexVramFunc = NNS_GfdFreeLnkTexVram;
-    }
-}
+#define InitRangeManagerConfig_020144f0 NNS_GfdInitLnkTexVramManager
+#define data_02055c4c sDefaultAllocTexVramFunc
+#define data_02055c50 sDefaultFreeTexVramFunc
+#define func_02014548 NNS_GfdAllocLnkTexVram
+#define func_020145cc NNS_GfdFreeLnkTexVram
+#define func_02014638 NNS_GfdResetLnkTexVramState
+#define g_rangeManagerConfig_0205a8e4 sLnkTexVramManager
+#include "src/arm9/resource_management/InitRangeManagerConfig_020144f0.c"

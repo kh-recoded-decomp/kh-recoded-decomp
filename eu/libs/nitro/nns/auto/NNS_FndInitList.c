@@ -1,7 +1,2 @@
-void NNS_FndInitList(void *list, unsigned short offset)
-{
-    ((int *)list)[0] = 0;
-    ((int *)list)[1] = 0;
-    ((unsigned short *)list)[4] = 0;
-    ((unsigned short *)list)[5] = offset;
-}
+#define func_0201288c NNS_FndInitList
+#include "src/arm9/leaf_research/func_0201288c.c"

@@ -1,10 +1,3 @@
-#include "libs/nitro/fs/fs_overlay_internal.h"
-
-FSFileID FS_GetOverlayFileID(const FSOverlayInfo *info)
-{
-    FSFileID result;
-
-    result.archive = FSiOverlayContext.archive;
-    result.fileId = info->header.fileId;
-    return result;
-}
+#define MakeTypeTagPair_0200b824 FS_GetOverlayFileID
+#define data_02057b00 FSiOverlayContext
+#include "src/arm9/unclassified_helpers/MakeTypeTagPair_0200b824.c"

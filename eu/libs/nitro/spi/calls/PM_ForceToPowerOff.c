@@ -1,18 +1,6 @@
-#include "libs/nitro/spi/pm_power_internal.h"
-
-u32 PM_ForceToPowerOff(void)
-{
-    u32 commandResult;
-    u32 sendResult = PM_ForceToPowerOffAsync(
-        PMi_DummyCallback,
-        &commandResult);
-
-    if (sendResult == PM_SUCCESS) {
-        PMi_WaitBusyMethod = PMi_WAITBUSY_METHOD_CPSR |
-                             PMi_WAITBUSY_METHOD_IME;
-        PMi_WaitBusy();
-        PMi_WaitBusyMethod = PMi_WAITBUSY_METHOD_CPUMODE;
-        return commandResult;
-    }
-    return sendResult;
-}
+#define AssignIfNotNull_020101fc PMi_DummyCallback
+#define PM_ForceToPowerOffAsync_02010534 PM_ForceToPowerOffAsync
+#define PM_ForceToPowerOffSync_02010550 PM_ForceToPowerOff
+#define data_02055c44 PMi_WaitBusyMethod
+#define func_020101a8 PMi_WaitBusy
+#include "src/arm9/library_nitro_spi/PM_ForceToPowerOffSync_02010550.c"

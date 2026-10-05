@@ -1,8 +1,3 @@
-extern int ScriptVm_ReadOperandInt();
-extern int func_ov001_02087e44();
-
-int func_ov001_020659c8(int arg0) {
-    unsigned short x = ScriptVm_ReadOperandInt(arg0);
-    func_ov001_02087e44(x);
-    return 1;
-}
+#define Ov002_NotifyNodesOfKind func_ov001_02087e44
+#define ScriptCmd_NotifyNodesOfKind_020659c8 func_ov001_020659c8
+#include "src/ov001/shared_engine/ScriptCmd_NotifyNodesOfKind_020659c8.c"

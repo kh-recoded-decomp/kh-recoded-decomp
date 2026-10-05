@@ -1,5 +1,3 @@
-extern int UnlinkDoublyLinkedNode();
-
-int func_020367d4(int arg0) {
-    return UnlinkDoublyLinkedNode(arg0 + 0x10);
-}
+#define func_0202fdcc UnlinkDoublyLinkedNode
+#define func_020367c0 func_020367d4
+#include "src/arm9/shared_engine/func_020367c0.c"

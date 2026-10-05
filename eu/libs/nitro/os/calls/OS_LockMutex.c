@@ -1,24 +1,7 @@
-#include "libs/nitro/os/os_mutex_internal.h"
-
-extern OSIntrMode OS_DisableInterrupts(void);
-extern OSIntrMode OS_RestoreInterrupts(OSIntrMode state);
-extern BOOL OS_TryLockMutex(OSMutex *mutex);
-extern void OS_SleepThread(OSThreadQueue *queue);
-
-void OS_LockMutex(OSMutex *mutex)
-{
-    OSIntrMode enabled = OS_DisableInterrupts();
-    OSThread *current = OSi_ThreadInfo.current;
-    OSMutex *none = 0;
-
-    for (;;) {
-        if (OS_TryLockMutex(mutex)) {
-            break;
-        }
-        current->mutex = mutex;
-        OS_SleepThread(&mutex->queue);
-        current->mutex = none;
-    }
-
-    OS_RestoreInterrupts(enabled);
-}
+#define LockSyncObjectRetry_02003158 OS_LockMutex
+#define SleepCurrentThread_02002aa8 OS_SleepThread
+#define data_02056b6c OSi_ThreadInfo
+#define func_02003200 OS_TryLockMutex
+#define func_02004938 OS_DisableInterrupts
+#define func_0200494c OS_RestoreInterrupts
+#include "src/arm9/nitro_os/LockSyncObjectRetry_02003158.c"

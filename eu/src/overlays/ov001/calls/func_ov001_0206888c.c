@@ -1,5 +1,3 @@
-extern int FindPairByValue();
-int func_ov001_0206888c(void) {
-    if (FindPairByValue() != 0) return 1;
-    return 0;
-}
+#define Ov012_IsGlobalByte8be1Clear FindPairByValue
+#define thumbStep_0206888c func_ov001_0206888c
+#include "src/ov001/shared_engine/thumbStep_0206888c.c"

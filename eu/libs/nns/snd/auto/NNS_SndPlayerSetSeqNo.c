@@ -1,11 +1,2 @@
-#include "nnsys/snd.h"
-
-void NNS_SndPlayerSetSeqNo(NNSSndHandle *handle, int sequenceNo)
-{
-    if (!NNS_SndHandleIsValid(handle)) {
-        return;
-    }
-
-    handle->player->seqType = NNS_SND_PLAYER_SEQ_TYPE_SEQ;
-    handle->player->seqNo = (u16)sequenceNo;
-}
+#define func_0201d7dc NNS_SndPlayerSetSeqNo
+#include "src/arm9/library_nns_snd/func_0201d7dc.c"

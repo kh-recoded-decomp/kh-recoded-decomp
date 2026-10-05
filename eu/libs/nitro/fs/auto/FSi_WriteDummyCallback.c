@@ -1,11 +1,2 @@
-#include "libs/nitro/fs/fs_internal.h"
-
-FSResult FSi_WriteDummyCallback(FSArchive *archive, const void *source,
-                                u32 destination, u32 length)
-{
-    (void)archive;
-    (void)source;
-    (void)destination;
-    (void)length;
-    return FS_RESULT_UNSUPPORTED;
-}
+#define func_0200d3ac FSi_WriteDummyCallback
+#include "src/arm9/leaf_research/func_0200d3ac.c"

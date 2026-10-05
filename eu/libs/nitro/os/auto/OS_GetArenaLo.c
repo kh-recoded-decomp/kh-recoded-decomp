@@ -1,4 +1,2 @@
-void *OS_GetArenaLo(int arena)
-{
-    return *(void **)(0x02fff000 + (arena << 2) + 3488);
-}
+#define GetTableBEntry_02003690 OS_GetArenaLo
+#include "src/arm9/unclassified_helpers/GetTableBEntry_02003690.c"

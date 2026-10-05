@@ -1,6 +1,2 @@
-#include "libs/nitro/fx/fx_types_internal.h"
-
-fx32 FX_Mul(fx32 left, fx32 right)
-{
-    return (fx32)(((fx64c)left * right + 0x800) >> 12);
-}
+#define FixedPointMultiply12 FX_Mul
+#include "src/arm9/fixed_point/FixedPointMultiply12.c"

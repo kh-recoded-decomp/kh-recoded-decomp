@@ -1,4 +1,2 @@
-void NNS_G2dSetImagePaletteLocation(int *a, int i, int v)
-{
-    (a + i)[2] = v;
-}
+#define func_020152d8 NNS_G2dSetImagePaletteLocation
+#include "src/arm9/leaf_research/func_020152d8.c"

@@ -1,7 +1,1 @@
-#include "libs/nitro/os/os_alarm_internal.h"
-
-void OS_CreateAlarm(OSAlarm *alarm)
-{
-    alarm->handler = 0;
-    alarm->tag = 0;
-}
+#include "src/arm9/nitro_os/func_02004204.c"

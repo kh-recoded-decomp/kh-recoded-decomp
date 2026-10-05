@@ -1,8 +1,3 @@
-#include "libs/nns/gfd/gfdi_LinkedListVramMan_Common.h"
-
-extern BOOL NNSi_GfdAllocLnkVramAligned(NNSiGfdLnkVramMan *, NNSiGfdLnkVramBlock **, u32 *, u32, u32);
-
-BOOL NNSi_GfdAllocLnkVram(NNSiGfdLnkVramMan *manager, NNSiGfdLnkVramBlock **blockPoolList, u32 *resultAddress, u32 size)
-{
-    return NNSi_GfdAllocLnkVramAligned(manager, blockPoolList, resultAddress, size, 0);
-}
+#define Ov002_PanelDrawCounter NNSi_GfdAllocLnkVramAligned
+#define Panel_DrawCounter_02014288 NNSi_GfdAllocLnkVram
+#include "src/arm9/shared_engine/Panel_DrawCounter_02014288.c"

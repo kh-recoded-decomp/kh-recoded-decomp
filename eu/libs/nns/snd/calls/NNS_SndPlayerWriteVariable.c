@@ -1,13 +1,3 @@
-#include "nnsys/snd.h"
-
-extern void func_0200ea60(int playerNo, int variableNo, s16 value);
-
-BOOL NNS_SndPlayerWriteVariable(NNSSndHandle *handle, int variableNo, s16 value)
-{
-    if (!NNS_SndHandleIsValid(handle)) {
-        return FALSE;
-    }
-
-    func_0200ea60(handle->player->playerNo, variableNo, value);
-    return TRUE;
-}
+#define func_0200ea4c func_0200ea60
+#define func_0201d898 NNS_SndPlayerWriteVariable
+#include "src/arm9/library_nns_snd/func_0201d898.c"

@@ -1,9 +1,2 @@
-#include "libs/nns/g3d/g3d_kernel_internal.h"
-
-int NNS_G3dMdlGetMdlLightEnableFlag(const NNSG3dResMdl *model, u32 materialId)
-{
-    NNSG3dResMatData *material;
-
-    material = NNS_G3dGetMatDataByIdx(NNS_G3dGetMat(model), materialId);
-    return material->polyAttr & 0xf;
-}
+#define GetMaterialLightMask_0201a6c4 NNS_G3dMdlGetMdlLightEnableFlag
+#include "src/arm9/library_nns_g3d/GetMaterialLightMask_0201a6c4.c"

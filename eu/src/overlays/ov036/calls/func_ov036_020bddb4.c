@@ -1,8 +1,3 @@
-extern int GetSceneWorkValue10d8();
-
-int func_ov036_020bddb4(int arg0) {
-    if (GetSceneWorkValue10d8(arg0) != 0) {
-        return 0;
-    }
-    return 1;
-}
+#define Game_PollSceneAlive GetSceneWorkValue10d8
+#define IsSceneState0_020bdd94 func_ov036_020bddb4
+#include "src/ov036/shared_engine/IsSceneState0_020bdd94.c"

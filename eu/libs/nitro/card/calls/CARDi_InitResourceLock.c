@@ -1,11 +1,3 @@
-#include "libs/nitro/card/card_rom_internal.h"
-
-void CARDi_InitResourceLock(void)
-{
-    CARDiCommon *const common = &cardi_common;
-
-    common->lockOwner = -3;
-    common->lockCount = 0;
-    common->lockTarget = 0;
-    common->lockQueue.head = common->lockQueue.tail = 0;
-}
+#define CARDi_InitResourceLock_020092b8 CARDi_InitResourceLock
+#define data_02056fe0 cardi_common
+#include "src/arm9/library_nitro_card/CARDi_InitResourceLock_020092b8.c"

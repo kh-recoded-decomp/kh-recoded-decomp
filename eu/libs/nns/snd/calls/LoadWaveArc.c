@@ -1,25 +1,4 @@
-#include "libs/nns/snd/sndarc_loader_internal.h"
-
-SNDWaveArc *LoadWaveArc(
-    u32 fileId,
-    NNSSndHeapHandle heap,
-    BOOL setAddress)
-{
-    void *buffer;
-
-    buffer = NNS_SndArcGetFileAddress(fileId);
-    if (buffer == NULL) {
-        buffer = NNSi_SndArcLoadFile(
-            fileId,
-            WaveArcDisposeCallback,
-            setAddress ? (u32)NNS_SndArcGetCurrent() : 0,
-            fileId,
-            heap);
-
-        if (setAddress && buffer != NULL) {
-            NNS_SndArcSetFileAddress(fileId, buffer);
-        }
-    }
-
-    return buffer;
-}
+#define LoadSeq_0201f838 LoadWaveArc
+#define SeqDisposeCallback WaveArcDisposeCallback
+#define func_0201e9f0 NNS_SndArcGetCurrent
+#include "src/arm9/library_nns_snd/LoadSeq_0201f838.c"

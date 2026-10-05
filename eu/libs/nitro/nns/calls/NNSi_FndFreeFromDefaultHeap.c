@@ -1,12 +1,3 @@
-typedef struct DefaultHeapState {
-    void *heap;
-    void **currentHeap;
-} DefaultHeapState;
-
-extern DefaultHeapState data_02060394;
-extern void NNS_FndFreeToExpHeap(void *heap, void *memory);
-
-void NNSi_FndFreeFromDefaultHeap(void *memory)
-{
-    NNS_FndFreeToExpHeap(*data_02060394.currentHeap, memory);
-}
+#define FND_FreeExpandedHeapBlock_020132c4 NNS_FndFreeToExpHeap
+#define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
+#include "src/arm9/shared_engine/NNSi_FndFreeFromDefaultHeap_0202a1c4.c"

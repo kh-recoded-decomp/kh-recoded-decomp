@@ -1,6 +1,4 @@
-extern int RunEventScriptFrame(int arg);
-extern void func_ov001_02088570(int arg);
-int func_ov001_02088580(int param_1) {
-    func_ov001_02088570(RunEventScriptFrame(param_1));
-    return 0;
-}
+#define CmdOpenDialog_02088558 func_ov001_02088580
+#define Ov023_OpenDialog func_ov001_02088570
+#define ScriptVm_ReadOperandInt RunEventScriptFrame
+#include "src/ov001/shared_engine/CmdOpenDialog_02088558.c"

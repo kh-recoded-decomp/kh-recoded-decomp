@@ -1,5 +1,3 @@
-extern void *WM_InitializeEx();
-
-void *FS_ReadFile_020116b0(int a, void *b, void *c) {
-    return WM_InitializeEx(a, b, c, 0);
-}
+#define FS_ReadFile_0201169c FS_ReadFile_020116b0
+#define FSi_ReadFileCore WM_InitializeEx
+#include "src/arm9/library_nitro_fs/FS_ReadFile_0201169c.c"

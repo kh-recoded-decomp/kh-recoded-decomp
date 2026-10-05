@@ -1,6 +1,4 @@
-extern int ByteCode_ResolveOperand(int arg);
-extern void StartSessionScene(int arg);
-int func_ov001_020651f0(int param_1) {
-    StartSessionScene(ByteCode_ResolveOperand(param_1));
-    return 0;
-}
+#define CmdOpenDialog_020651f0 func_ov001_020651f0
+#define Ov023_OpenDialog StartSessionScene
+#define ScriptVm_ReadOperandInt ByteCode_ResolveOperand
+#include "src/ov001/shared_engine/CmdOpenDialog_020651f0.c"

@@ -1,44 +1,5 @@
-#include "libs/nns/snd/sndarc_internal.h"
-
-static inline const void *GetSoundArchivePointer(
-    const void *base,
-    u32 offset)
-{
-    if (offset == 0) {
-        return NULL;
-    }
-    return (const u8 *)base + offset;
-}
-
-const char *NNS_SndArcGetSeqArcIdxSymbol(int seqArcNo, int index)
-{
-    NNSSndArc *arc = sCurrentSoundArchive;
-    const NNSSndArcSeqArcSymbolTable *table;
-    const NNSSndArcOffsetTable *symbolTable;
-
-    if (arc->symbol == NULL) {
-        return sNullSoundArchiveSymbol;
-    }
-
-    table = GetSoundArchivePointer(
-        arc->symbol,
-        arc->symbol->seqArcOffset);
-    if (table == NULL) {
-        return sNullSoundArchiveSymbol;
-    }
-    if (seqArcNo < 0) {
-        return sNullSoundArchiveSymbol;
-    }
-    if ((u32)seqArcNo >= table->count) {
-        return sNullSoundArchiveSymbol;
-    }
-
-    symbolTable = GetSoundArchivePointer(
-        arc->symbol,
-        table->entries[seqArcNo].tableOffset);
-    if (symbolTable == NULL) {
-        return sNullSoundArchiveSymbol;
-    }
-
-    return GetSoundArchiveSymbol(symbolTable, index, arc->symbol);
-}
+#define GetOffsetTableEntryOrDefault_0201ef40 GetSoundArchiveSymbol
+#define GetSymbolGroupEntry_0201ee80 NNS_SndArcGetSeqArcIdxSymbol
+#define data_02053118 sNullSoundArchiveSymbol
+#define data_0205e2e4 sCurrentSoundArchive
+#include "src/arm9/library_nns_snd/GetSymbolGroupEntry_0201ee80.c"

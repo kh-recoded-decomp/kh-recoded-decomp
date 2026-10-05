@@ -1,28 +1,5 @@
-#include "libs/nitro/fs/fs_internal.h"
-
-extern BOOL FS_SuspendArchive(FSArchive *archive);
-extern BOOL FS_ResumeArchive(FSArchive *archive);
-
-void *FS_UnloadArchiveTables(FSArchive *archive)
-{
-    void *memory = 0;
-
-    if (FS_IsArchiveLoaded(archive)) {
-        FSROMFATArchiveContext *context =
-            (FSROMFATArchiveContext *)archive->userdata;
-        BOOL wasActive = FS_SuspendArchive(archive);
-
-        if (FS_IsArchiveTableLoaded(archive)) {
-            archive->flags &= ~FS_ARCHIVE_FLAG_TABLE_LOAD;
-            memory = context->loadedTables;
-            context->fat = context->fatBackup;
-            context->fnt = context->fntBackup;
-            context->loadedTables = 0;
-        }
-        if (wasActive) {
-            (void)FS_ResumeArchive(archive);
-        }
-    }
-
-    return memory;
-}
+#define ResetInnerFieldsIfFlagSet_0200d1fc FS_UnloadArchiveTables
+#define func_0200b08c FS_SuspendArchive
+#define func_0200b11c FS_ResumeArchive
+#define func_0200d290 FS_IsArchiveTableLoaded
+#include "src/arm9/unclassified_helpers/ResetInnerFieldsIfFlagSet_0200d1fc.c"

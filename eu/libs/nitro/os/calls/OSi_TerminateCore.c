@@ -1,10 +1,3 @@
-extern void OS_DisableInterrupts(void);
-extern void OS_Halt(void);
-
-void OSi_TerminateCore(void)
-{
-    OS_DisableInterrupts();
-    for (;;) {
-        OS_Halt();
-    }
-}
+#define OS_EnableInterrupts OS_DisableInterrupts
+#define OSi_IdleThreadProc_02004d20 OSi_TerminateCore
+#include "src/arm9/library_nitro_os/OSi_IdleThreadProc_02004d20.c"

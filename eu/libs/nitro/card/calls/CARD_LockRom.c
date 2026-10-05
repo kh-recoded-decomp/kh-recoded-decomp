@@ -1,16 +1,8 @@
-#include "libs/nitro/card/card_event_internal.h"
-
-extern void CARDi_LockResource(u16 lockID, u32 target);
-
-void CARD_LockRom(u16 lockID)
-{
-    CARDEventListener listener[1];
-
-    CARDi_LockResource(lockID, 1);
-    OS_InitEvent(listener->event);
-    OS_CreateVAlarm(listener->valarm);
-    listener->Condition = CARDi_LockBusCondition;
-    listener->userdata = &lockID;
-    CARDi_PeekEventListener(listener);
-    OS_WaitEventEx(listener->event, 1, OS_EVENT_MODE_AND, 1);
-}
+#define CARD_LockRom_02009150 CARD_LockRom
+#define CARDi_LockResource_020091d4 CARDi_LockResource
+#define IsResultZero_02009028 CARDi_LockBusCondition
+#define OS_CreateAlarm_02004654 OS_CreateVAlarm
+#define OS_InitEvent_02004d3c OS_InitEvent
+#define OS_WaitEventEx_02004d50 OS_WaitEventEx
+#define PollTaskAndReschedule_02008ff0 CARDi_PeekEventListener
+#include "src/arm9/library_nitro_card/CARD_LockRom_02009150.c"

@@ -1,6 +1,3 @@
-extern int RestoreSavedCameraState();
-
-int func_ov001_0208d568(int arg0) {
-    RestoreSavedCameraState(arg0);
-    return 1;
-}
+#define FS_EndOverlay RestoreSavedCameraState
+#define FS_UnloadOverlayImage_0208d540 func_ov001_0208d568
+#include "src/ov001/library_nitro_fs/FS_UnloadOverlayImage_0208d540.c"

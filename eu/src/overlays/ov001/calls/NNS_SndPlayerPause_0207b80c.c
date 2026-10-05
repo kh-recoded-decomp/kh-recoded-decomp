@@ -1,11 +1,3 @@
-#include "nitro/types.h"
-#include "nitro/os_types.h"
-#include "nnsys/snd.h"
-
-void ZeroHalfThenFree(NNSSndSeqPlayer * seqPlayer, BOOL flag);
-extern void ZeroHalfThenFree (NNSSndSeqPlayer * seqPlayer, BOOL flag);
-
-void NNS_SndPlayerPause_0207b80c (NNSSndHandle * handle, BOOL flag)
-{
-    ZeroHalfThenFree(handle->player, flag);
-}
+#define NNS_SndPlayerPause_0207b7e4 NNS_SndPlayerPause_0207b80c
+#define NNSi_SndPlayerPause ZeroHalfThenFree
+#include "src/ov001/library_nns_snd/NNS_SndPlayerPause_0207b7e4.c"

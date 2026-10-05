@@ -1,17 +1,3 @@
-typedef unsigned short u16;
-typedef int s32;
-
-typedef struct OSLockWord {
-    volatile u16 lockFlag;
-    volatile u16 ownerID;
-    void *extension;
-} OSLockWord;
-
-extern s32 OSi_DoTryLockByWord(u16 lockID, OSLockWord *lockp,
-                               void (*ctrlFuncp)(void), int disableFiq);
-
-s32 OS_TryLockByWord(u16 lockID, OSLockWord *lockp,
-                     void (*ctrlFuncp)(void))
-{
-    return OSi_DoTryLockByWord(lockID, lockp, ctrlFuncp, 0);
-}
+#define FS_ReadFile_020022a4 OS_TryLockByWord
+#define FSi_ReadFileCore OSi_DoTryLockByWord
+#include "src/arm9/library_nitro_fs/FS_ReadFile_020022a4.c"

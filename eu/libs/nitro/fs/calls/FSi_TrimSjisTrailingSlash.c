@@ -1,16 +1,4 @@
-#include "libs/nitro/fs/fs_string_internal.h"
-
-extern int STD_GetStringLength(const char *text);
-extern int FSi_DecrementSjisPosition(const char *text, int position);
-
-int FSi_TrimSjisTrailingSlash(char *text)
-{
-    int length = STD_GetStringLength(text);
-    int lastPosition = FSi_DecrementSjisPosition(text, length);
-
-    if (lastPosition >= 0 && FSi_IsSlash((u8)text[lastPosition])) {
-        length = lastPosition;
-        text[length] = '\0';
-    }
-    return length;
-}
+#define func_0200b288 FSi_DecrementSjisPosition
+#define func_0200b350 FSi_TrimSjisTrailingSlash
+#define func_02010c74 STD_GetStringLength
+#include "src/arm9/string_utility/func_0200b350.c"

@@ -1,9 +1,3 @@
-#include "nitro/types.h"
-#include "nnsys/snd.h"
-
-extern void PXI_Init_0201313c(NNSSndSeqPlayer *seqPlayer, BOOL flag);
-
-void NNS_SndPlayerPause_0202a17c(NNSSndHandle *handle, BOOL flag)
-{
-    PXI_Init_0201313c(handle->player, flag);
-}
+#define NNS_SndPlayerPause_0202a168 NNS_SndPlayerPause_0202a17c
+#define NNSi_SndPlayerPause PXI_Init_0201313c
+#include "src/arm9/library_nns_snd/NNS_SndPlayerPause_0202a168.c"

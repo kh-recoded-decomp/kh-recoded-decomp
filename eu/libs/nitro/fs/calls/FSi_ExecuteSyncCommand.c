@@ -1,34 +1,9 @@
-#include "libs/nitro/fs/fs_internal.h"
-
-extern FSResult FSi_InvokeCommand(FSFile *file, FSCommandType command);
-extern FSFile *FSi_NextCommand(FSArchive *archive, BOOL owner);
-extern void FSi_ExecuteAsyncCommand(FSFile *file);
-
-static inline void FSi_WaitConditionChange(u32 *flags, u32 on, u32 off,
-                                            OSThreadQueue *queue)
-{
-    OSIntrMode interruptState = OS_DisableInterrupts();
-
-    while ((!on || ((*flags & on) == 0)) &&
-           (!off || ((*flags & off) != 0))) {
-        OS_SleepThread(queue);
-    }
-    (void)OS_RestoreInterrupts(interruptState);
-}
-
-void FSi_ExecuteSyncCommand(FSFile *file)
-{
-    FSi_WaitConditionChange(&file->status, FS_FILE_STATUS_OPERATING,
-                            FS_FILE_STATUS_BUSY, file->queue);
-
-    if ((file->status & FS_FILE_STATUS_OPERATING) != 0) {
-        FSArchive *const archive = file->archive;
-        FSResult result = FSi_InvokeCommand(file, FSi_GetCurrentCommand(file));
-
-        FSi_EndCommand(file, result);
-        file = FSi_NextCommand(archive, 1);
-        if (file) {
-            FSi_ExecuteAsyncCommand(file);
-        }
-    }
-}
+#define AdvanceCommandQueue_0200a8ac FSi_ExecuteSyncCommand
+#define func_02002aa8 OS_SleepThread
+#define func_02004938 OS_DisableInterrupts
+#define func_0200494c OS_RestoreInterrupts
+#define func_0200a200 FSi_EndCommand
+#define func_0200a2fc FSi_InvokeCommand
+#define func_0200a67c FSi_NextCommand
+#define func_0200a828 FSi_ExecuteAsyncCommand
+#include "src/arm9/library_nitro_card/AdvanceCommandQueue_0200a8ac.c"

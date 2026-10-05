@@ -1,6 +1,3 @@
-#include "src/overlays/ov032/row_definition.h"
-
-s32 GetRowIdleLimit(RowOwner *owner, s32 index)
-{
-    return (s16)GetRowDefinition(owner, index)->idleLimit;
-}
+#define func_ov032_020bbbd4 GetRowDefinition
+#define func_ov032_020bbbfc GetRowIdleLimit
+#include "src/ov032/leaf_research/func_ov032_020bbbfc.c"

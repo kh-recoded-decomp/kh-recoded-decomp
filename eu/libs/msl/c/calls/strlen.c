@@ -1,11 +1,2 @@
-int strlen(const unsigned char *text)
-{
-    int length = -1;
-    unsigned char character;
-
-    do {
-        character = *text++;
-        length++;
-    } while (character != 0);
-    return length;
-}
+#define Strlen_02021e44 strlen
+#include "src/arm9/library_msl_c/Strlen_02021e44.c"

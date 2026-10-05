@@ -1,8 +1,2 @@
-extern void FS_UnloadOverlay(int, int);
-extern void FSi_WaitForCardThread(int, int);
-
-void func_02029fac(int a, int b)
-{
-    FSi_WaitForCardThread(a, b);
-    FS_UnloadOverlay(a, b);
-}
+#define func_02029f98 func_02029fac
+#include "src/arm9/core_small/func_02029f98.c"

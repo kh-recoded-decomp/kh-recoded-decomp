@@ -1,7 +1,2 @@
-#include "libs/nitro/os/os_event_internal.h"
-
-void OS_InitEvent(OSEvent *event)
-{
-    OS_InitThreadQueue(&event->queue);
-    event->flag = 0;
-}
+#define func_02004d3c OS_InitEvent
+#include "src/arm9/leaf_research/func_02004d3c.c"

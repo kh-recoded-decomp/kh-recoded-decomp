@@ -1,9 +1,2 @@
-#include "nitro/types.h"
-
-u32 AlignUpTo4K_020beb20(u32 size)
-{
-    if (size & 0xfff) {
-        size = (size & ~0xfff) + 0x1000;
-    }
-    return size;
-}
+#define AlignUpTo4K_020beb00 AlignUpTo4K_020beb20
+#include "src/ov099/unclassified_helpers/AlignUpTo4K_020beb00.c"

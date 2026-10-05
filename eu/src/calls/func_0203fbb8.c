@@ -1,11 +1,4 @@
-#include "nitro/types.h"
-
-extern u32 UpdateSignedPenetrationDepth();
-extern u32 VEC_DotProduct();
-
-void func_0203fbb8(int extent,void *offset,void *axis,u8 feature,void *result) {
-  int distance;
-
-  distance = VEC_DotProduct(axis,offset);
-  UpdateSignedPenetrationDepth(extent,distance,axis,feature,result);
-}
+#define UpdateSignedPenetrationDepth_0203d854 UpdateSignedPenetrationDepth
+#define VEC_DotProduct_01ff9e6c VEC_DotProduct
+#define func_0203fba4 func_0203fbb8
+#include "src/arm9/reviewed_helpers/func_0203fba4.c"

@@ -1,11 +1,3 @@
-typedef unsigned int u32;
-
-extern void OS_SpinWaitCpuCycles(u32 cycles);
-
-void OS_SpinWait(u32 cycles)
-{
-    cycles <<= 1;
-    if (cycles > 16) {
-        OS_SpinWaitCpuCycles(cycles - 16);
-    }
-}
+#define func_020049a8 OS_SpinWaitCpuCycles
+#define func_020049b4 OS_SpinWait
+#include "src/arm9/unclassified_helpers/func_020049b4.c"

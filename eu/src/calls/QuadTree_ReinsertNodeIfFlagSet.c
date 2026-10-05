@@ -1,13 +1,4 @@
-extern void QuadTree_RemoveObject(int *tree, int node);
-extern void QuadTree_InsertObject(int *tree, int node);
-
-/* Re-inserts a node if its moved flag is set */
-void QuadTree_ReinsertNodeIfFlagSet(int *tree, int node) {
-    if ((*(unsigned char *)(node + 0xc) & 1) == 0) {
-        return;
-    }
-    QuadTree_RemoveObject(tree, node);
-    QuadTree_InsertObject(tree, node);
-    *(unsigned char *)(node + 0xc) =
-        *(unsigned char *)(node + 0xc) & 0xfe;
-}
+#define QuadTree_ReinsertNodeIfFlagSet_02033f10 QuadTree_ReinsertNodeIfFlagSet
+#define QuadTree_RemoveObject_02033c60 QuadTree_RemoveObject
+#define func_02033c3c QuadTree_InsertObject
+#include "src/arm9/shared_engine/QuadTree_ReinsertNodeIfFlagSet_02033f10.c"

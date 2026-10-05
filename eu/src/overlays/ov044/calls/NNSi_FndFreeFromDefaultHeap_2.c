@@ -1,11 +1,4 @@
-typedef unsigned char u8;
-typedef struct DefaultHeapState {
-    u8 reserved[0x48];
-    void *heap;
-} DefaultHeapState;
-extern DefaultHeapState *data_ov044_020d0ec0;
-extern void NNS_FndFreeToExpHeap_2(void *heap, void *block);
-void NNSi_FndFreeFromDefaultHeap_2(void *block)
-{
-    NNS_FndFreeToExpHeap_2(data_ov044_020d0ec0->heap, block);
-}
+#define EnterPendingPanelState_020d0d80 NNSi_FndFreeFromDefaultHeap_2
+#define SetPanelState_020d0278 NNS_FndFreeToExpHeap_2
+#define data_ov044_020d0ea0 data_ov044_020d0ec0
+#include "src/ov044/panel_state/EnterPendingPanelState_020d0d80.c"

@@ -1,14 +1,2 @@
-typedef unsigned short u16;
-typedef enum CARDTargetMode {
-    CARD_TARGET_NONE,
-    CARD_TARGET_ROM,
-    CARD_TARGET_BACKUP,
-    CARD_TARGET_RW
-} CARDTargetMode;
-
-extern void CARDi_LockResource(u16 owner, CARDTargetMode target);
-
-void CARD_LockBackup(u16 lockId)
-{
-    CARDi_LockResource(lockId, CARD_TARGET_BACKUP);
-}
+#define CARD_UnlockBackup_020091ac CARD_LockBackup
+#include "src/arm9/library_nitro_card/CARD_UnlockBackup_020091ac.c"

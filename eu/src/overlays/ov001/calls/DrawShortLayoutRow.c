@@ -1,12 +1,4 @@
-extern void BlitNibbleRunPadded(int a, int b, int width, int height,
-                                int flags, int style, void *row);
-
-typedef struct {
-    unsigned char bytes[5];
-} Ov002ShortRow;
-
-extern Ov002ShortRow data_ov001_0209de47[];
-
-void DrawShortLayoutRow(int a, int b, int row) {
-    BlitNibbleRunPadded(a, b, 5, 110, 0, 1, &data_ov001_0209de47[row]);
-}
+#define DrawShortLayoutRow_020737fc DrawShortLayoutRow
+#define Ov002_BlitNibbleRun BlitNibbleRunPadded
+#define data_0209de1e data_ov001_0209de47
+#include "src/ov001/shared_variants/DrawShortLayoutRow_020737fc.c"

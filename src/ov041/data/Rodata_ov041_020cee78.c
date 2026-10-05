@@ -1,0 +1,13 @@
+#include "nitro/types.h"
+
+const u32 data_ov041_020cee7c[17] = {
+    0xE92D4010, 0xE1A04000, 0xE5942054, 0xE2841094,
+    0xEBFFFE5A, 0xE3500000, 0x08BD8010, 0xE5941048,
+    0xE5940054, 0xE1510000, 0xB8BD8010, 0xE1A00004,
+    0xEBFFFD72, 0xE1A00004, 0xE3A01005, 0xEBFFFD47,
+    0xE8BD8010,
+};
+
+const u32 data_ov041_020cee78[1] = {
+    0xE12FFF1E,
+};

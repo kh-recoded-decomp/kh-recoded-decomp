@@ -1,8 +1,2 @@
-extern void FX_DivAsync(int numerator, int denominator);
-extern int FX_GetDivResult(void);
-
-int FX_Div(int numerator, int denominator)
-{
-    FX_DivAsync(numerator, denominator);
-    return FX_GetDivResult();
-}
+#define FX_Div_01ff9c84 FX_Div
+#include "src/itcm/library_nitro_fx/FX_Div_01ff9c84.c"

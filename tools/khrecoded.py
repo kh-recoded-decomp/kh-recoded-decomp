@@ -348,6 +348,8 @@ def progress(write: bool = True) -> dict:
                       if e.get("origin") == "generated table")
     data_strings = sum(int(e["end"], 16) - int(e["start"], 16) for e in data_match.load()
                        if e.get("origin") == "generated strings")
+    data_words = sum(int(e["end"], 16) - int(e["start"], 16) for e in data_match.load()
+                     if e.get("origin") == "generated words")
     for failure in data_failures:
         print(f"Data source not verified: {failure}", file=sys.stderr)
     hierarchy = build_hierarchy(inv, proof["verified"], json.loads(
@@ -403,8 +405,9 @@ def progress(write: bool = True) -> dict:
                  f"data {data_verified['data']:,} / {data_total['data']:,}, "
                  f"bss {data_verified['bss']:,} / {data_total['bss']:,}). Of these, {data_generated:,} bytes are "
                  f"generated .bss layout (one sized global per known symbol), {data_tables:,} bytes are "
-                 f"generated pointer tables (every entry named by its target) and {data_strings:,} bytes are "
-                 "generated strings; the rest is hand-typed. Each range is C in "
+                 f"generated pointer tables (every entry named by its target), {data_strings:,} bytes are "
+                 f"generated strings and {data_words:,} bytes are generated data words (typed arrays whose "
+                 "pointers are named by their targets); the rest is hand-typed. Each range is C in "
                  "`data_matches.json`, compiled and compared byte for byte (.bss by size and symbol layout), "
                  "and linked into the ROM by `link`.", "",
                  "| Target | C bytes / analysed code bytes | Identified function bytes | "

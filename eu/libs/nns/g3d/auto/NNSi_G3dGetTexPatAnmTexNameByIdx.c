@@ -1,15 +1,2 @@
-#include "libs/nns/g3d/g3d_kernel_internal.h"
-
-const NNSG3dResName *NNSi_G3dGetTexPatAnmTexNameByIdx(
-    const NNSG3dResTexPatAnm *animation,
-    u8 textureIndex)
-{
-    if (animation != NULL && textureIndex < animation->numTex) {
-        const NNSG3dResName *names =
-            (const NNSG3dResName *)((const u8 *)animation + animation->ofsTexName);
-
-        return &names[textureIndex];
-    }
-
-    return NULL;
-}
+#define GetTexturePatternTextureName_0201ad0c NNSi_G3dGetTexPatAnmTexNameByIdx
+#include "src/arm9/library_nns_g3d/func_0201ad0c.c"

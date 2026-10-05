@@ -1,43 +1,8 @@
-#include "libs/nns/snd/sndarc_internal.h"
-
-extern BOOL NNS_SndArcSetup(
-    NNSSndArc *arc,
-    NNSSndHeapHandle heap,
-    BOOL symbolLoadFlag);
-
-void NNS_SndArcInit(
-    NNSSndArc *arc,
-    const char *filePath,
-    NNSSndHeapHandle heap,
-    BOOL symbolLoadFlag)
-{
-    BOOL result;
-
-    arc->info = NULL;
-    arc->fat = NULL;
-    arc->symbol = NULL;
-    arc->loadBlockSize = 0;
-    arc->reservedAfterFileId[0] = 0;
-    arc->reservedAfterFileId[1] = 0;
-    arc->reservedAfterFileId[2] = 0;
-
-    if (FS_ConvertPathToFileID(&arc->fileId, filePath)) {
-        FS_InitFile(&arc->file);
-        result = FS_OpenFileFast(&arc->file, arc->fileId);
-        if (!result) {
-            return;
-        }
-    } else {
-        arc->fileId.archive = NULL;
-        arc->fileId.fileId = (u32)-1;
-        result = FS_OpenFileEx(&arc->file, filePath, 1);
-        if (!result) {
-            return;
-        }
-    }
-
-    arc->fileOpen = TRUE;
-    if (NNS_SndArcSetup(arc, heap, symbolLoadFlag)) {
-        sCurrentSoundArchive = arc;
-    }
-}
+#define NNS_SndArcSetup_0201e838 NNS_SndArcSetup
+#define OpenSoundArchive_0201e780 NNS_SndArcInit
+#define data_0205e2e4 sCurrentSoundArchive
+#define func_0200b394 FS_InitFile
+#define func_0200b408 FS_ConvertPathToFileID
+#define func_0200b4d4 FS_OpenFileFast
+#define func_0200b52c FS_OpenFileEx
+#include "src/arm9/library_nns_snd/OpenSoundArchive_0201e780.c"

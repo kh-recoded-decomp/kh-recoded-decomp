@@ -1,0 +1,11 @@
+#include "nitro/types.h"
+
+const u32 data_ov091_020c2850[8] = {
+    0x00000A13, 0x00000A14, 0x00000A15, 0x00000A16,
+    0x00000A17, 0x00000A18, 0x00000A19, 0x00000A1A,
+};
+
+const u32 data_ov091_020c283c[5] = {
+    0x00000BEB, 0x00000BEC, 0x00000BED, 0x00000BEE,
+    0x00000BEF,
+};

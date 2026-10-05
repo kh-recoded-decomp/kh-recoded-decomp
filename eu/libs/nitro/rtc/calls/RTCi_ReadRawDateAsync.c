@@ -1,6 +1,3 @@
-#include "libs/nitro/rtc/rtc_internal.h"
-
-BOOL RTCi_ReadRawDateAsync(void)
-{
-    return RtcSendPxiCommand(RTC_PXI_COMMAND_READ_DATE);
-}
+#define RTCi_TriggerAsyncCommand_0200e8f0 RTCi_ReadRawDateAsync
+#define RtcSendPxiCommand_0200e914 RtcSendPxiCommand
+#include "src/arm9/library_nitro_rtc/RTCi_TriggerAsyncCommand_0200e8f0.c"

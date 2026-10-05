@@ -1,26 +1,5 @@
-extern int ScriptVm_ReadOperandInt(int owner, void *entry);
-extern int ScriptCmd_SetElemField(int owner, int handle);
-extern int MovieScene_IsAnyStateTwo(int handle);
-extern int GetSubtitleStreamFrame(void);
-
-int func_ov003_020647b8(int owner, void *entry) {
-    int len;
-    int pos;
-
-    len = ScriptVm_ReadOperandInt(owner, entry);
-    if (MovieScene_IsAnyStateTwo(ScriptCmd_SetElemField(owner, len)) == 0) {
-        return 1;
-    }
-    if (len == 0) {
-        return 0;
-    }
-
-    pos = GetSubtitleStreamFrame();
-    if (pos < len) {
-        return 0;
-    }
-    if (pos >= len) {
-        return 1;
-    }
-    return 1;
-}
+#define func_02025de4 ScriptVm_ReadOperandInt
+#define func_02025e18 ScriptCmd_SetElemField
+#define func_02063fe4 MovieScene_IsAnyStateTwo
+#define func_020a8918 GetSubtitleStreamFrame
+#include "src/ov003/reviewed_helpers/func_ov003_020647b8.c"

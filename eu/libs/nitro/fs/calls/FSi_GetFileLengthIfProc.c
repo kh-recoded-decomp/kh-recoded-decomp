@@ -1,10 +1,4 @@
-#include "libs/nitro/fs/fs_internal.h"
-
-extern const struct FSArchiveInterface FSiArchiveProcInterface;
-extern FSResult FSi_ROMFAT_GetFileLength(FSArchive *archive, FSFile *file, u32 *value);
-
-BOOL FSi_GetFileLengthIfProc(FSFile *file, u32 *value)
-{
-    return file->archive->interface == &FSiArchiveProcInterface &&
-           FSi_ROMFAT_GetFileLength(file->archive, file, value) == FS_RESULT_SUCCESS;
-}
+#define CheckTypeAndComputeSpan_0200d01c FSi_GetFileLengthIfProc
+#define data_020529e0 FSiArchiveProcInterface
+#define func_0200ccfc FSi_ROMFAT_GetFileLength
+#include "src/arm9/leaf_research/CheckTypeAndComputeSpan_0200d01c.c"

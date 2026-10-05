@@ -1,4 +1,3 @@
-extern int RelocateArchiveSections(int a, int b, int c);
-int CallSelectionHandler(int param_1, int param_2) {
-    return RelocateArchiveSections(param_1, param_2, 1);
-}
+#define CallSelectionHandler_0202d328 CallSelectionHandler
+#define Ov000_UpdateWidgetLayer RelocateArchiveSections
+#include "src/arm9/shared_engine/CallSelectionHandler_0202d328.c"

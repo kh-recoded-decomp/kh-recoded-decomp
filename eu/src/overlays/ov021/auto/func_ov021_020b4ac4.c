@@ -1,7 +1,2 @@
-#include "nitro/types.h"
-
-void *func_ov021_020b4ac4(const void *object, u32 index)
-{
-    u8 *base = *(u8 *const *)((const u8 *)object + 0xc);
-    return base + index;
-}
+#define func_ov021_020b4aa4 func_ov021_020b4ac4
+#include "src/ov021/leaf_research/func_ov021_020b4aa4.c"

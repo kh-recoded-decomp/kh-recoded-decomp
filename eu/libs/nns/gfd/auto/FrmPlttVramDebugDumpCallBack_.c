@@ -1,9 +1,2 @@
-typedef unsigned int u32;
-
-void FrmPlttVramDebugDumpCallBack_(u32 lowAddress, u32 highAddress, u32 freeSize, u32 totalSize)
-{
-#pragma unused(lowAddress)
-#pragma unused(highAddress)
-#pragma unused(freeSize)
-#pragma unused(totalSize)
-}
+#define func_02013b94 FrmPlttVramDebugDumpCallBack_
+#include "src/arm9/panel_state/func_02013b94.c"

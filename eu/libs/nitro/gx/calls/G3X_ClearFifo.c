@@ -1,12 +1,2 @@
-#include "libs/nitro/os/os_types_internal.h"
-
-extern void GXi_NopClearFifo128_(void *destination);
-
-void G3X_ClearFifo(void)
-{
-    volatile u32 *fifo = (volatile u32 *)0x04000400;
-
-    GXi_NopClearFifo128_((void *)fifo);
-    while (*(volatile u32 *)0x04000600 & 0x08000000) {
-    }
-}
+#define G3X_ClearFifo_02006a44 G3X_ClearFifo
+#include "src/arm9/library_nitro_gx/func_02006a44.c"

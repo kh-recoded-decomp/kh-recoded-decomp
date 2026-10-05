@@ -1,8 +1,3 @@
-extern int ScriptVm_ReadOperandInt();
-extern int func_ov001_02063a58();
-
-int func_ov001_02065460(int arg0) {
-    signed char x = ScriptVm_ReadOperandInt(arg0);
-    func_ov001_02063a58(x);
-    return 1;
-}
+#define Ov002_World_SetByte8D68 func_ov001_02063a58
+#define ScriptCmd_SetWorldByte8D68_02065460 func_ov001_02065460
+#include "src/ov001/shared_engine/ScriptCmd_SetWorldByte8D68_02065460.c"

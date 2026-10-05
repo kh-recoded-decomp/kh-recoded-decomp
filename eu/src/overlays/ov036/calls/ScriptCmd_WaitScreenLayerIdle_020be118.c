@@ -1,18 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct ScriptOperand {
-    s16 type;
-    s16 pad_02;
-    s32 value;
-} ScriptOperand;
-
-extern int ScriptVm_ReadOperandInt(void *context, ScriptOperand *operand);
-extern BOOL IsScreenLayerLoaded(int screen);
-
-BOOL ScriptCmd_WaitScreenLayerIdle_020be118(void *context, ScriptOperand *operands)
-{
-    if (!IsScreenLayerLoaded(ScriptVm_ReadOperandInt(context, operands))) {
-        return TRUE;
-    }
-    return FALSE;
-}
+#define ScriptCmd_WaitScreenLayerIdle_020be0f8 ScriptCmd_WaitScreenLayerIdle_020be118
+#define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
+#define func_ov036_020bd540 IsScreenLayerLoaded
+#include "src/ov036/shared_engine/ScriptCmd_WaitScreenLayerIdle_020be0f8.c"

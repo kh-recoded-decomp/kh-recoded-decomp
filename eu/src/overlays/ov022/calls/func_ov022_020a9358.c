@@ -1,5 +1,3 @@
-extern int renderDecodedMovieFrame(int arg);
-int func_ov022_020a9358(int param_1) {
-    if (param_1 == 0) return 0;
-    return renderDecodedMovieFrame(param_1) == 1;
-}
+#define func_020a9d94 renderDecodedMovieFrame
+#define func_ov022_020a9338 func_ov022_020a9358
+#include "src/ov022/reviewed_helpers/func_ov022_020a9338.c"

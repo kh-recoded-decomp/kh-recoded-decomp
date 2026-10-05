@@ -1,10 +1,3 @@
-#include "nitro/types.h"
-
-extern void StopOv070BossEffects(void *actor, void *owner);
-
-void StopOv070BossEffectsForOwner(void *actor, void *owner)
-{
-    if (*(void **)((u8 *)actor + 8) == owner) {
-        StopOv070BossEffects(actor, owner);
-    }
-}
+#define StopLoopingSounds_020d8210 StopOv070BossEffects
+#define func_ov070_020d827c StopOv070BossEffectsForOwner
+#include "src/ov070/reviewed_helpers/func_ov070_020d827c.c"

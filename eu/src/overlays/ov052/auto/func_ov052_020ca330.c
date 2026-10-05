@@ -1,9 +1,2 @@
-#include "nitro/types.h"
-
-void func_ov052_020ca330(void *record)
-{
-    *(u32 *)record = 0;
-    *(u32 *)((u8 *)record + 4) = 0;
-    *((u8 *)record + 8) = 0;
-    *(u32 *)((u8 *)record + 0xc) = 0;
-}
+#define func_ov052_020ca310 func_ov052_020ca330
+#include "src/ov052/leaf_research/func_ov052_020ca310.c"

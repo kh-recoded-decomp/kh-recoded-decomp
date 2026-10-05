@@ -1,11 +1,3 @@
-#include "libs/nitro/fs/fs_internal.h"
-
-#define FS_COMMAND_CLOSEFILE 8UL
-
-extern BOOL FSi_SendCommand(FSFile *file, FSCommandType command,
-                            BOOL blocking);
-
-BOOL FS_CloseFile(FSFile *file)
-{
-    return FSi_SendCommand(file, FS_COMMAND_CLOSEFILE, 1);
-}
+#define func_0200a930 FSi_SendCommand
+#define func_0200b5b0 FS_CloseFile
+#include "src/arm9/unclassified_helpers/func_0200b5b0.c"

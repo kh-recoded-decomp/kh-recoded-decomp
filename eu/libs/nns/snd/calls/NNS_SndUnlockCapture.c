@@ -1,6 +1,3 @@
-#include "libs/nns/snd/snd_internal.h"
-
-void NNS_SndUnlockCapture(u32 captureMask)
-{
-    sSndResourceLocks.capture &= ~captureMask;
-}
+#define NNS_SndUnlockCapture_0201d378 NNS_SndUnlockCapture
+#define g_sndCaptureLock_0205d894 sSndResourceLocks
+#include "src/arm9/library_nns_snd/NNS_SndUnlockCapture_0201d378.c"

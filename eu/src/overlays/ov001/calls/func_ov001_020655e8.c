@@ -1,8 +1,3 @@
-extern int ScriptVm_ReadOperandInt();
-extern int HandleFieldPanelCommand();
-
-int func_ov001_020655e8(int arg0) {
-    ScriptVm_ReadOperandInt(arg0);
-    HandleFieldPanelCommand();
-    return 1;
-}
+#define Ov002_EnterPhase HandleFieldPanelCommand
+#define ScriptCmd_EnterPhase_020655e8 func_ov001_020655e8
+#include "src/ov001/shared_engine/ScriptCmd_EnterPhase_020655e8.c"

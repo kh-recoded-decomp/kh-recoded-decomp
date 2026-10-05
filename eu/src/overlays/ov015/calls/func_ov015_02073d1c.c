@@ -1,12 +1,4 @@
-extern int RunTransitionSlot9(void *handler);
-extern void WH_SetError(int id);
-extern void HandlePanelPromptSelection(int req);
-
-int func_ov015_02073d1c(void) {
-    int r = RunTransitionSlot9(&HandlePanelPromptSelection);
-    if (r != 2) {
-        WH_SetError(r);
-        return 0;
-    }
-    return 1;
-}
+#define func_02011840 RunTransitionSlot9
+#define func_020737d4 WH_SetError
+#define func_02073d44 HandlePanelPromptSelection
+#include "src/ov015/reviewed_helpers/func_ov015_02073d1c.c"

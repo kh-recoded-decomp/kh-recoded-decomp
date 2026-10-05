@@ -1,8 +1,2 @@
-#include "nitro/types.h"
-
-u32
-GetWorkFieldOffset50_02084e08(int self)
-{
-    int work = *(int *)(self + 8);
-    return *(u32 *)(work + 0x50);
-}
+#define GetWorkFieldOffset50_02084de0 GetWorkFieldOffset50_02084e08
+#include "src/ov001/unclassified_helpers/GetWorkFieldOffset50_02084de0.c"

@@ -1,5 +1,3 @@
-extern int func_ov001_0206ab14();
-
-int func_ov001_0206ad28(int arg0) {
-    return func_ov001_0206ab14(arg0, 0);
-}
+#define NNS_FndInitList func_ov001_0206ab14
+#define NNS_FndInitListWithOffset0_0206ad28 func_ov001_0206ad28
+#include "src/ov001/library_nitro_nns/NNS_FndInitListWithOffset0_0206ad28.c"

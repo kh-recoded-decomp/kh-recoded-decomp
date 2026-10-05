@@ -1,8 +1,3 @@
-#include "nitro/types.h"
-
-extern void SetClampedMenuCursor(u32 cursor, int animate);
-
-void SetClampedMenuCursorAnimated(u16 cursor)
-{
-    SetClampedMenuCursor(cursor, 7);
-}
+#define CARDi_LockResource_020750a4 SetClampedMenuCursor
+#define func_ov001_02071690 SetClampedMenuCursorAnimated
+#include "src/ov001/constant_variants/func_ov001_02071690.c"

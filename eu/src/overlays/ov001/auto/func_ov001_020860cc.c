@@ -1,7 +1,2 @@
-#include "nitro/types.h"
-
-u32 func_ov001_020860cc(const void *object)
-{
-    const u8 *nested = *(const u8 *const *)((const u8 *)object + 0x8);
-    return *(const u32 *)(nested + 0x50);
-}
+#define func_ov001_020860a4 func_ov001_020860cc
+#include "src/ov001/unclassified_helpers/func_ov001_020860a4.c"

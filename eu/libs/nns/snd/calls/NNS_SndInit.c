@@ -1,33 +1,11 @@
-#include "libs/nns/snd/snd_internal.h"
-
-typedef struct PMSleepCallbackInfo PMSleepCallbackInfo;
-
-extern void SND_Init(void);
-extern void BeginSleep(void *arg);
-extern void *PXI_Init_0201d30c(void);
-extern void PM_PrependPreSleepCallback(PMSleepCallbackInfo *info);
-extern void PM_AppendPostSleepCallback(PMSleepCallbackInfo *info);
-extern void SndCapture_Reset(void);
-extern void NNSi_SndCaptureInit(void);
-extern void NNSi_SndPlayerInit(void);
-
-void NNS_SndInit(void)
-{
-    if (sSndGlobalState.initialized != FALSE) {
-        return;
-    }
-
-    sSndGlobalState.initialized = TRUE;
-    SND_Init();
-    sSndGlobalState.preSleepCallback = BeginSleep;
-    sSndGlobalState.preSleepArg = NULL;
-    sSndGlobalState.postSleepCallback = PXI_Init_0201d30c;
-    sSndGlobalState.postSleepArg = NULL;
-    PM_PrependPreSleepCallback((PMSleepCallbackInfo *)&sSndGlobalState.preSleepCallback);
-    PM_AppendPostSleepCallback((PMSleepCallbackInfo *)&sSndGlobalState.postSleepCallback);
-    SndCapture_Reset();
-    NNSi_SndCaptureInit();
-    NNSi_SndPlayerInit();
-    sSndGlobalState.activeState = -1;
-    sSndGlobalState.unk4 = 1;
-}
+#define PM_AppendPostSleepCallback_02010ad8 PM_AppendPostSleepCallback
+#define PM_PrependPreSleepCallback_02010ac0 PM_PrependPreSleepCallback
+#define PXI_Init_0201d2f8 PXI_Init_0201d30c
+#define SndCapture_Reset_0201d3f8 SndCapture_Reset
+#define SndInit_0201d214 NNS_SndInit
+#define data_0205d864 sSndGlobalState
+#define func_0200ed90 SND_Init
+#define func_0201d2c0 BeginSleep
+#define func_0201d8c0 NNSi_SndPlayerInit
+#define func_0201e524 NNSi_SndCaptureInit
+#include "src/arm9/library_nns_snd/SndInit_0201d214.c"

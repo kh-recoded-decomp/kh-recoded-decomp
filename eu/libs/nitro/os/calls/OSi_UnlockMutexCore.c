@@ -1,50 +1,7 @@
-#include "libs/nitro/os/os_mutex_internal.h"
-
-extern OSIntrMode OS_DisableInterrupts(void);
-extern OSIntrMode OS_RestoreInterrupts(OSIntrMode state);
-extern void OSi_DequeueItem(OSThread *thread, OSMutex *mutex);
-extern void OS_WakeupThread(OSThreadQueue *queue);
-
-void OSi_UnlockMutexCore(OSMutex *mutex, u32 type)
-{
-    OSIntrMode enabled = OS_DisableInterrupts();
-    OSThread *currentThread = OS_GetCurrentThread();
-    BOOL unlocked = 0;
-
-    if (type != OS_MUTEX_TYPE_NONE && type != OS_GetMutexType(mutex)) {
-        OS_RestoreInterrupts(enabled);
-        return;
-    }
-
-    switch (OS_GetMutexType(mutex)) {
-    case OS_MUTEX_TYPE_STD:
-    case OS_MUTEX_TYPE_W:
-        if (mutex->thread == currentThread) {
-            OS_DecreaseMutexCount(mutex);
-            if (OS_GetMutexCount(mutex) == 0) {
-                unlocked = 1;
-            }
-        }
-        break;
-
-    case OS_MUTEX_TYPE_R:
-        OS_DecreaseMutexCount(mutex);
-        if (OS_GetMutexCount(mutex) == 0) {
-            unlocked = 1;
-        }
-        break;
-
-    default:
-        OS_RestoreInterrupts(enabled);
-        return;
-    }
-
-    if (unlocked) {
-        OSi_DequeueItem(currentThread, mutex);
-        mutex->thread = 0;
-        OS_SetMutexType(mutex, OS_MUTEX_TYPE_NONE);
-        OS_WakeupThread(&mutex->queue);
-    }
-
-    OS_RestoreInterrupts(enabled);
-}
+#define OS_DisableInterrupts_02004938 OS_DisableInterrupts
+#define OS_RestoreInterrupts_0200494c OS_RestoreInterrupts
+#define OS_WakeupThread_02002af8 OS_WakeupThread
+#define OSi_DequeueItem_02003390 OSi_DequeueItem
+#define OSi_UnlockMutexCore_02003294 OSi_UnlockMutexCore
+#define data_02056b6c OSi_ThreadInfo
+#include "src/arm9/library_nitro_os/OSi_UnlockMutexCore_02003294.c"

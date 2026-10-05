@@ -1,14 +1,3 @@
-typedef unsigned int u32;
-
-typedef struct OSThreadState {
-    unsigned char padding00[0x18];
-    u32 nextThreadId;
-} OSThreadState;
-
-extern OSThreadState OSi_ThreadSystemState;
-
-int OSi_GetUnusedThreadId(void)
-{
-    OSi_ThreadSystemState.nextThreadId++;
-    return OSi_ThreadSystemState.nextThreadId;
-}
+#define AllocateNextThreadId_0200249c OSi_GetUnusedThreadId
+#define data_02056b50 OSi_ThreadSystemState
+#include "src/arm9/unclassified_helpers/AllocateNextThreadId_0200249c.c"

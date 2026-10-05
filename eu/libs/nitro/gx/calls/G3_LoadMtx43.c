@@ -1,7 +1,2 @@
-/* Geometry command 0x17 (MTX_LOAD_4x3) followed by the 48-byte FIFO push. */
-extern void *GX_SendFifo48B();
-
-void *G3_LoadMtx43(void *m) {
-    *(volatile unsigned int *)0x4000400 = 0x17;
-    return GX_SendFifo48B(m);
-}
+#define G3_LoadMtx43_01ffa170 G3_LoadMtx43
+#include "src/itcm/library_nitro_gx/G3_LoadMtx43_01ffa170.c"

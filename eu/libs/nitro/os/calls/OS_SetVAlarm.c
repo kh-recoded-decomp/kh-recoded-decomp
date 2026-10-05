@@ -1,31 +1,7 @@
-#include "libs/nitro/os/os_valarm_internal.h"
-
-extern OSIntrMode OS_DisableInterrupts(void);
-extern OSIntrMode OS_RestoreInterrupts(OSIntrMode state);
-extern void OS_Terminate(void);
-
-void OS_SetVAlarm(OSVAlarm *alarm, s16 count, s16 delay,
-                  OSVAlarmHandler handler, void *arg)
-{
-    OSIntrMode enabled = OS_DisableInterrupts();
-    s32 currentVCount;
-    s32 currentVFrame;
-
-    if (!alarm || alarm->handler) {
-        OS_Terminate();
-    }
-
-    currentVCount = *(volatile u16 *)0x04000006;
-    currentVFrame = OSi_GetVFrame(currentVCount);
-
-    alarm->period = 0;
-    alarm->fire = count;
-    alarm->frame = (u32)((count > currentVCount) ? currentVFrame : currentVFrame + 1);
-    alarm->delay = delay;
-    alarm->handler = handler;
-    alarm->arg = arg;
-    alarm->canceled = 0;
-
-    OSi_InsertVAlarm(alarm);
-    OS_RestoreInterrupts(enabled);
-}
+#define OS_DisableInterrupts_02004938 OS_DisableInterrupts
+#define OS_RestoreInterrupts_0200494c OS_RestoreInterrupts
+#define OS_SetVAlarm_02004668 OS_SetVAlarm
+#define OSi_GetVFrame_020048e8 OSi_GetVFrame
+#define OSi_InsertVAlarm_02004568 OSi_InsertVAlarm
+#define RunResetCallbackAndIdle_02004cf0 OS_Terminate
+#include "src/arm9/library_nitro_os/OS_SetVAlarm_02004668.c"

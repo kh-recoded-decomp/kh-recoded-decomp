@@ -1,6 +1,2 @@
-#include "libs/nitro/os/os_system_work_internal.h"
-
-const OSBootInfo *OS_GetBootInfo(void)
-{
-    return HW_WM_BOOT_BUF;
-}
+#define func_02004a00 OS_GetBootInfo
+#include "src/arm9/leaf_research/func_02004a00.c"

@@ -1,9 +1,2 @@
-#include "libs/nns/g3d/g3d_kernel_internal.h"
-
-int NNS_G3dMdlGetMdlPolygonID(const NNSG3dResMdl *model, u32 materialId)
-{
-    NNSG3dResMatData *material;
-
-    material = NNS_G3dGetMatDataByIdx(NNS_G3dGetMat(model), materialId);
-    return (material->polyAttr & 0x3f000000) >> 24;
-}
+#define GetMaterialPolygonId_0201a7a0 NNS_G3dMdlGetMdlPolygonID
+#include "src/arm9/library_nns_g3d/GetMaterialPolygonId_0201a7a0.c"

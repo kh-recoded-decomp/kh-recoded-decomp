@@ -1,7 +1,3 @@
-extern void *OSi_DoUnlockByWord();
-extern void OSi_FreeCartridgeBus(void);
-
-void *OS_UnlockCartridge_0x020022c8(int id)
-{
-    return OSi_DoUnlockByWord(id, (void *)0x02ffffe8, OSi_FreeCartridgeBus, 1);
-}
+#define OS_UnlockCartridge_020022b4 OS_UnlockCartridge_0x020022c8
+#define OSi_DoUnlockByWord_020021b4 OSi_DoUnlockByWord
+#include "src/arm9/library_nitro_os/OS_UnlockCartridge_020022b4.c"

@@ -1,7 +1,2 @@
-#include "nitro/types.h"
-
-void *func_ov006_020a1338(const void *object, s32 index, void *base)
-{
-    s16 stride = *(const s16 *)((const u8 *)object + 0xe);
-    return (u8 *)base + index * stride;
-}
+#define func_ov006_020a1318 func_ov006_020a1338
+#include "src/ov006/reviewed_helpers/func_ov006_020a1318.c"

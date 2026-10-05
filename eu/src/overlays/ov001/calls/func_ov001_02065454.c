@@ -1,6 +1,3 @@
-extern int LoadOffsetTableFile();
-
-int func_ov001_02065454(int arg0) {
-    LoadOffsetTableFile(arg0);
-    return 1;
-}
+#define FS_EndOverlay LoadOffsetTableFile
+#define FS_UnloadOverlayImage_02065454 func_ov001_02065454
+#include "src/ov001/library_nitro_fs/FS_UnloadOverlayImage_02065454.c"

@@ -1,15 +1,2 @@
-#include "libs/nns/snd/sndarc_stream_internal.h"
-
-inline BOOL NNS_SndStrmHandleIsValid(const NNSSndStrmHandle *handle)
-{
-    return handle->player != NULL;
-}
-
-void NNS_SndArcStrmStartPrepared(NNSSndStrmHandle *handle)
-{
-    if (!NNS_SndStrmHandleIsValid(handle)) {
-        return;
-    }
-
-    handle->player->startFlag = TRUE;
-}
+#define NNS_SndArcStrmStartPrepared_0202029c NNS_SndArcStrmStartPrepared
+#include "src/arm9/library_nns_snd/NNS_SndArcStrmStartPrepared_0202029c.c"

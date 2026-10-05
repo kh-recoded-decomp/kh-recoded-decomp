@@ -1,15 +1,3 @@
-#include "libs/nns/snd/sndarc_loader_internal.h"
-
-BOOL NNS_SndArcLoadBank(int bankNo, NNSSndHeapHandle heap)
-{
-    NNSSndArcLoadResult result;
-
-    result = NNSi_SndArcLoadBank(
-        bankNo,
-        NNS_SND_ARC_LOAD_ALL,
-        heap,
-        TRUE,
-        NULL);
-
-    return result == NNS_SND_ARC_LOAD_SUCCESS ? TRUE : FALSE;
-}
+#define NNS_SndArcLoadSeq_0201f378 NNS_SndArcLoadBank
+#define NNSi_SndArcLoadSeq NNSi_SndArcLoadBank
+#include "src/arm9/library_nns_snd/NNS_SndArcLoadSeq_0201f378.c"

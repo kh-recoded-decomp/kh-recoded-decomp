@@ -1,7 +1,4 @@
-extern int ApplyPartRotationToGeometry();
-extern int CopySessionResourceBuffer();
-
-int func_ov001_0208985c(int a) {
-    ApplyPartRotationToGeometry(a);
-    return CopySessionResourceBuffer(a);
-}
+#define NNS_G2dBindAnimCtrl ApplyPartRotationToGeometry
+#define NNS_G2dSetCellAnimationSequence_02089834 func_ov001_0208985c
+#define func_020897d0 CopySessionResourceBuffer
+#include "src/ov001/library_nns_g2d/NNS_G2dSetCellAnimationSequence_02089834.c"

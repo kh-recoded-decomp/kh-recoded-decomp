@@ -1,7 +1,3 @@
-/* Bounded sprintf; same va_list spelling as OS_SPrintf.  The core's SDK name is one of the
- * misattributed ones. */
-extern void *WM_EndKeySharing();
-
-void *OS_SNPrintf(char *dst, unsigned int len, const char *fmt, ...) {
-    return WM_EndKeySharing(dst, len, fmt, (void *)(((unsigned int)&fmt & ~3u) + 4));
-}
+#define OS_SNPrintf_02002468 OS_SNPrintf
+#define Text_VSNPrintf WM_EndKeySharing
+#include "src/arm9/library_nitro_os/OS_SNPrintf_02002468.c"

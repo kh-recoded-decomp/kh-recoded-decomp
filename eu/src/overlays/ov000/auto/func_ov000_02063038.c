@@ -1,1 +1,1 @@
-int func_ov000_02063038(void){ return -1; }
+#include "src/ov000/leaf_research/func_ov000_02063038.c"

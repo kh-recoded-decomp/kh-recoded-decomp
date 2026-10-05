@@ -1,36 +1,7 @@
-#include "libs/nns/snd/sndarc_player_internal.h"
-
-BOOL NNS_SndArcPlayerSetup(NNSSndHeapHandle heap)
-{
-    NNSSndArc *arc = NNS_SndArcGetCurrent();
-    int playerNo;
-    const NNSSndArcPlayerInfo *playerInfo;
-
-    for (playerNo = 0; playerNo < NNS_SND_PLAYER_NUM; ++playerNo) {
-        playerInfo = NNS_SndArcGetPlayerInfo(playerNo);
-        if (playerInfo == NULL) {
-            continue;
-        }
-
-        NNS_SndPlayerSetPlayableSeqCount(playerNo, playerInfo->seqMax);
-        NNS_SndPlayerSetAllocatableChannel(
-            playerNo,
-            playerInfo->allocChBitFlag);
-
-        if (playerInfo->heapSize > 0 &&
-            heap != NNS_SND_HEAP_INVALID_HANDLE) {
-            int i;
-
-            for (i = 0; i < playerInfo->seqMax; i++) {
-                if (!NNS_SndPlayerCreateHeap(
-                    playerNo,
-                    heap,
-                    playerInfo->heapSize)) {
-                    return FALSE;
-                }
-            }
-        }
-    }
-
-    return TRUE;
-}
+#define func_0201d414 NNS_SndPlayerSetPlayableSeqCount
+#define func_0201d434 NNS_SndPlayerSetAllocatableChannel
+#define func_0201d44c NNS_SndPlayerCreateHeap
+#define func_0201e9f0 NNS_SndArcGetCurrent
+#define func_0201ebf4 NNS_SndArcGetPlayerInfo
+#define func_0201fc9c NNS_SndArcPlayerSetup
+#include "src/arm9/library_nns_snd/func_0201fc9c.c"

@@ -1,8 +1,3 @@
-extern int ScriptVm_ReadOperandInt();
-extern int StageEvent_SetHoldBit1();
-
-int func_ov001_020659b4(int arg0) {
-    unsigned short x = ScriptVm_ReadOperandInt(arg0);
-    StageEvent_SetHoldBit1(x);
-    return 1;
-}
+#define Ov002_NotifyNodesOfKind StageEvent_SetHoldBit1
+#define ScriptCmd_NotifyNodesOfKind_020659b4 func_ov001_020659b4
+#include "src/ov001/shared_engine/ScriptCmd_NotifyNodesOfKind_020659b4.c"

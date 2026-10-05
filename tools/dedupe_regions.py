@@ -71,7 +71,8 @@ def object_signature(path: Path):
                 for rel in section.iter_relocations():
                     sym = symtab.get_symbol(rel["r_info_sym"])
                     name = sym.name or elf.get_section(sym["st_shndx"]).name
-                    relocations.append((target, rel["r_offset"], rel["r_info_type"], name))
+                    addend = rel.entry["r_addend"] if "r_addend" in rel.entry else 0
+                    relocations.append((target, rel["r_offset"], rel["r_info_type"], name, addend))
         globals_ = sorted(sym.name for sym in symtab.iter_symbols()
                           if sym["st_info"]["bind"] == "STB_GLOBAL" and sym["st_shndx"] != "SHN_UNDEF")
     return sections, sorted(relocations), globals_
@@ -120,11 +121,66 @@ def pairs():
     return out
 
 
+FUNCTION_LINE = re.compile(r"^(\S+) kind:function\([^,]+,size=0x([0-9a-f]+)\) addr:0x([0-9a-f]+)", re.I)
+
+
+def module_functions(config: Path) -> dict[str, list[tuple[int, int, str]]]:
+    out = {}
+    for path in config.rglob("symbols.txt"):
+        module = "arm9" if path.parent == config else path.parent.name
+        rows = []
+        for line in path.read_text(encoding="utf-8").splitlines():
+            found = FUNCTION_LINE.match(line)
+            if found and int(found.group(2), 16):
+                rows.append((int(found.group(3), 16), int(found.group(2), 16), found.group(1)))
+        out[module] = sorted(rows)
+    return out
+
+
+def positional_pairs():
+    """Pair functions by their place in each module: same order, same sizes."""
+    import difflib
+    sys.path.insert(0, str(EU / "tools"))
+    import audit_progress
+    eu_functions, _ = audit_progress.classify_functions()
+    eu_matched = {}
+    for f in eu_functions:
+        if f["category"] == "c_decompiled_matched" and f["source"]:
+            eu_matched[("arm9" if f["unit"] == "main" else f["unit"], f["name"])] = f
+    us_matched = {(e["module"], e["symbol"]): e
+                  for e in json.loads((ROOT / "matches.json").read_text(encoding="utf-8"))["matches"]}
+    us_modules = module_functions(ROOT / "config" / "bk9e" / "arm9")
+    eu_modules = module_functions(EU / "config" / "arm9")
+    out = []
+    for module, us_rows in us_modules.items():
+        eu_rows = eu_modules.get(module, [])
+        matcher = difflib.SequenceMatcher(None, [r[1] for r in us_rows], [r[1] for r in eu_rows], autojunk=False)
+        for block in matcher.get_matching_blocks():
+            for k in range(block.size):
+                us_name = us_rows[block.a + k][2]
+                eu_name = eu_rows[block.b + k][2]
+                entry, f = us_matched.get((module, us_name)), eu_matched.get((module, eu_name))
+                if not entry or not f:
+                    continue
+                eu_path, us_path = EU / f["source"], ROOT / entry["source"]
+                if not us_path.exists() or not eu_path.exists():
+                    continue
+                eu_text = eu_path.read_text(encoding="utf-8", errors="replace")
+                if re.search(r'#include "src/[^"]+\.c"', eu_text):
+                    continue
+                us_body = function_body(us_path.read_text(encoding="utf-8", errors="replace"), entry["source_symbol"])
+                eu_body = function_body(eu_text, f["name"]) or ""
+                if us_body:
+                    out.append((f, eu_path, eu_body, entry, us_path, us_body))
+    return out
+
+
 def try_pair(pair, scratch: Path):
     f, eu_path, eu_body, entry, us_path, us_body = pair
     mapping = symbol_map(us_body, eu_body, entry["source_symbol"], f["name"])
     if mapping is None:
-        return pair, None, "symbol alignment"
+        # Different source shape: start from the function name and let relocations supply the rest.
+        mapping = {entry["source_symbol"]: f["name"]} if entry["source_symbol"] != f["name"] else {}
     reference = EU / "build" / Path(f["source"]).with_suffix(".o")
     if not reference.exists():
         return pair, None, "no reference object"
@@ -167,7 +223,7 @@ def relocation_renames(actual, expected) -> dict[str, str] | None:
         return None
     renames = {}
     for ours, theirs in zip(actual[1], expected[1]):
-        if ours[:3] != theirs[:3]:
+        if ours[:3] != theirs[:3] or ours[4] != theirs[4]:
             return None
         if ours[3] == theirs[3]:
             continue
@@ -181,8 +237,9 @@ def main() -> int:
     parser.add_argument("--limit", type=int, default=0)
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--jobs", type=int, default=8)
+    parser.add_argument("--positional", action="store_true", help="pair functions by module position and size")
     args = parser.parse_args()
-    candidates = pairs()
+    candidates = positional_pairs() if args.positional else pairs()
     if args.limit:
         candidates = candidates[:args.limit]
     print(f"{len(candidates)} candidate pairs", flush=True)

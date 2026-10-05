@@ -1,0 +1,23 @@
+#include "nitro/types.h"
+
+#pragma explicit_zero_data on
+
+extern void DestroyPopupManager_020c1910(void);
+extern void func_ov091_020c1858(void);
+
+u8 data_ov091_020c2c88[29] = {
+    0x0B, 0x0A, 0x00, 0x00, 0x0C, 0x0A, 0x00, 0x00, 0x0D, 0x0A, 0x00, 0x00, 0x0E, 0x0A, 0x00, 0x00,
+    0x0F, 0x0A, 0x00, 0x00, 0x10, 0x0A, 0x00, 0x00, 0x11, 0x0A, 0x00, 0x00, 0x12,
+};
+
+void *data_ov091_020c2c74[5] = {
+    (void *)0x000E001B,
+    (void *)func_ov091_020c1858,
+    (void *)DestroyPopupManager_020c1910,
+    (void *)0x00000270,
+    NULL,
+};
+
+u16 data_ov091_020c2c68[6] = {
+    37, 50, 100, 37, 0, 0,
+};

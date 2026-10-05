@@ -1,59 +1,13 @@
-#include "libs/nns/snd/sndarc_loader_internal.h"
-
-#define SOUND_HEAP_RESERVED_SIZE 32
-
-SNDWaveArc *NNS_SndArcLoadWaveArcTable(
-    u32 fileId,
-    NNSSndHeapHandle heap,
-    BOOL setAddress)
-{
-    u32 fileSize;
-    SNDWaveArc *waveArc;
-    u32 waveCount;
-    u32 tableSize;
-    int result;
-
-    waveArc = NNS_SndArcGetFileAddress(fileId);
-    if (waveArc == NULL) {
-        if (NNS_SndArcReadFile(
-            fileId,
-            sWaveArcHeaderBuffer,
-            0x3c,
-            0) != 0x3c) {
-            return NULL;
-        }
-        waveCount = sWaveArcHeader.waveCount;
-        tableSize = waveCount * sizeof(u32);
-        fileSize = tableSize * 2;
-        if (heap == NNS_SND_HEAP_INVALID_HANDLE) {
-            return NULL;
-        }
-        waveArc = NNS_SndHeapAlloc(
-            heap,
-            fileSize + 0x5c,
-            WaveArcTableDisposeCallback,
-            setAddress ? (u32)NNS_SndArcGetCurrent() : 0,
-            fileId);
-        if (waveArc == NULL) {
-            return NULL;
-        }
-        result = NNS_SndArcReadFile(
-            fileId,
-            waveArc,
-            (int)(tableSize + 0x3c),
-            0);
-        if (result != tableSize + 0x3c) {
-            return NULL;
-        }
-        MI_CpuCopy8(
-            waveArc->waveOffset,
-            &waveArc->waveOffset[waveArc->waveCount],
-            tableSize);
-        MI_CpuFill8(waveArc->waveOffset, 0, tableSize);
-        DC_StoreRange(waveArc, fileSize + 0x3c);
-        if (setAddress) {
-            NNS_SndArcSetFileAddress(fileId, waveArc);
-        }
-    }
-    return waveArc;
-}
+#define DC_StoreRange_02003430 DC_StoreRange
+#define LoadWaveArcTable_0201f8a4 NNS_SndArcLoadWaveArcTable
+#define MI_CpuCopy8_01ff89a8 MI_CpuCopy8
+#define MI_CpuFill8_01ff8830 MI_CpuFill8
+#define NNS_SndArcGetCurrentSndArc_0201e9f0 NNS_SndArcGetCurrent
+#define NNS_SndArcGetFileAddress_0201ee28 NNS_SndArcGetFileAddress
+#define NNS_SndArcReadFile_0201ed3c NNS_SndArcReadFile
+#define NNS_SndArcSetFileAddress_0201ee50 NNS_SndArcSetFileAddress
+#define NNS_SndHeapAlloc_0201f0ec NNS_SndHeapAlloc
+#define WaveArcTableDisposeCallback_0201faac WaveArcTableDisposeCallback
+#define g_waveArcHeaderBuffer_0205e2e8 sWaveArcHeaderBuffer
+#define g_waveArcHeader_0205e2e8 sWaveArcHeader
+#include "src/arm9/library_nns_snd/LoadWaveArcTable_0201f8a4.c"

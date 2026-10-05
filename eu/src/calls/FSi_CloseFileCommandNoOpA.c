@@ -1,1 +1,2 @@
-int FSi_CloseFileCommandNoOpA(void){ return 0; }
+#define FSi_CloseFileCommand_020263bc FSi_CloseFileCommandNoOpA
+#include "src/arm9/library_nitro_fs/FSi_CloseFileCommand_020263bc.c"

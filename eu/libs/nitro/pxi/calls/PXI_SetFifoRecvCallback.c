@@ -1,18 +1,5 @@
-#include "libs/nitro/pxi/pxi_fifo_internal.h"
-
-extern int OS_DisableInterrupts(void);
-extern void OS_RestoreInterrupts(int state);
-
-void PXI_SetFifoRecvCallback(int fifoTag, PXIFifoCallback callback)
-{
-    int enabled = OS_DisableInterrupts();
-    int *systemWork = (int *)0x02fffc00;
-
-    FifoRecvCallbackTable[fifoTag] = callback;
-    if (callback != 0) {
-        systemWork[0xe2] |= 1 << fifoTag;
-    } else {
-        systemWork[0xe2] &= ~(1 << fifoTag);
-    }
-    OS_RestoreInterrupts(enabled);
-}
+#define PXI_SetFifoRecvCallback_0200e29c PXI_SetFifoRecvCallback
+#define data_02057b8c FifoRecvCallbackTable
+#define func_02004938 OS_DisableInterrupts
+#define func_0200494c OS_RestoreInterrupts
+#include "src/arm9/library_nitro_pxi/PXI_SetFifoRecvCallback_0200e29c.c"

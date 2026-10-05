@@ -1,16 +1,3 @@
-#include "libs/nns/snd/sndarc_loader_internal.h"
-
-void WaveArcTableDisposeCallback(
-    void *memory,
-    u32 size,
-    u32 data1,
-    u32 data2)
-{
-    SNDWaveArc *waveArc = memory;
-    NNSSndArc *arc = (NNSSndArc *)data1;
-    u32 fileId = data2;
-
-    (void)size;
-    DisposeCallback(memory, arc, fileId);
-    SND_DestroyWaveArc(waveArc);
-}
+#define func_0201f9cc DisposeCallback
+#define func_0201faac WaveArcTableDisposeCallback
+#include "src/arm9/library_nns_snd/func_0201faac.c"

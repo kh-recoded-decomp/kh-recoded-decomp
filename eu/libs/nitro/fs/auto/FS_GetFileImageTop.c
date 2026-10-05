@@ -1,9 +1,2 @@
-#include "libs/nitro/fs/fs_internal.h"
-
-u32 FS_GetFileImageTop(const FSFile *file)
-{
-    const FSROMFATProperty *property =
-        (const FSROMFATProperty *)file->reserved1;
-
-    return property->file.top;
-}
+#define func_0200d2a4 FS_GetFileImageTop
+#include "src/arm9/leaf_research/func_0200d2a4.c"

@@ -1,6 +1,3 @@
-extern int ClearStreamFlag();
-
-int ScriptCmd_RestorePanel_02026ad0(void) {
-    ClearStreamFlag(0);
-    return 1;
-}
+#define Ov002_SuspendOrRestorePanel ClearStreamFlag
+#define ScriptCmd_RestorePanel_02026abc ScriptCmd_RestorePanel_02026ad0
+#include "src/arm9/shared_engine/ScriptCmd_RestorePanel_02026abc.c"

@@ -1,6 +1,4 @@
-extern int GetEntryNumberFromAddress(void);
-extern void func_ov001_0208f280(void *, int);
-void func_ov001_0208f290(void *obj)
-{
-    func_ov001_0208f280(obj, GetEntryNumberFromAddress());
-}
+#define BindDescriptor0_0208f268 func_ov001_0208f290
+#define Ov008_GetDescriptor0 GetEntryNumberFromAddress
+#define Ov008_SetWord0And20 func_ov001_0208f280
+#include "src/ov001/shared_engine/BindDescriptor0_0208f268.c"

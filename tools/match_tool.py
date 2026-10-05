@@ -217,7 +217,7 @@ def undefined_symbols(obj: bytes, function_name: str) -> list[str]:
 
 
 def compile_candidate(module: str, symbol: str, source: Path, compiler: str, mode: str | None,
-                      source_symbol: str | None) -> tuple[bytes | None, dict, str]:
+                      source_symbol: str | None, language: str = "c") -> tuple[bytes | None, dict, str]:
     """Compile and link a candidate; returns (bytes, entry, error)."""
     name, info = resolve_function(module, symbol)
     mode = mode or inventory()[module]["modes"][name]
@@ -227,6 +227,8 @@ def compile_candidate(module: str, symbol: str, source: Path, compiler: str, mod
     source_symbol = source_symbol or source.stem
     entry = {"source": source.relative_to(ROOT).as_posix(), "source_symbol": source_symbol,
              "compiler": compiler, "mode": mode, "bindings": {}}
+    if language != "c":
+        entry["language"] = language
     thumbs, names = thumb_addresses(), known_names()
     with tempfile.TemporaryDirectory(prefix="try-", dir=ROOT / "build") as temp:
         out = Path(temp) / "out.bin"

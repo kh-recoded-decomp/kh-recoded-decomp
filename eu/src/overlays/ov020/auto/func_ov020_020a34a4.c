@@ -1,6 +1,2 @@
-#include "nitro/types.h"
-
-u32 func_ov020_020a34a4(const void *object)
-{
-    return *(const u16 *)((const u8 *)object + 0x54) & 0x8;
-}
+#define func_ov020_020a3484 func_ov020_020a34a4
+#include "src/ov020/leaf_research/func_ov020_020a3484.c"

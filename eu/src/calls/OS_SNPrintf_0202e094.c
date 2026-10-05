@@ -1,5 +1,3 @@
-extern void *Text_VSNPrintfWide();
-
-void *OS_SNPrintf_0202e094(char *dst, unsigned int len, const char *fmt, ...) {
-    return Text_VSNPrintfWide(dst, len, fmt, (void *)(((unsigned int)&fmt & ~3u) + 4));
-}
+#define OS_SNPrintf_0202e080 OS_SNPrintf_0202e094
+#define Text_VSNPrintf Text_VSNPrintfWide
+#include "src/arm9/library_nitro_os/OS_SNPrintf_0202e080.c"

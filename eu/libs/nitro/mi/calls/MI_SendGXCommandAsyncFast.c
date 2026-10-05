@@ -1,29 +1,9 @@
-#include "libs/nitro/mi/mi_dma_internal.h"
-
-void MI_SendGXCommandAsyncFast(
-    u32 dmaNo, const void *src, u32 commandLength,
-    MIDmaCallback callback, void *arg)
-{
-    if (commandLength == 0) {
-        if (callback != 0) {
-            callback(arg);
-        }
-        return;
-    }
-
-    while (MIi_GXDmaParams.isBusy) {
-    }
-
-    MIi_GXDmaParams.isBusy = 1;
-    MIi_GXDmaParams.dmaNo = dmaNo;
-    MIi_GXDmaParams.callback = callback;
-    MIi_GXDmaParams.arg = arg;
-
-    MIi_CheckAnotherAutoDMA(dmaNo, MI_DMA_TIMING_GXFIFO);
-    MIi_CheckDma0SourceAddress(dmaNo, (u32)src, commandLength, MI_DMA_SRC_INC);
-    MI_WaitDma(dmaNo);
-
-    OSi_EnterDmaCallback(dmaNo, MIi_DMAFastCallback, 0);
-    MIi_DmaSetParameters(dmaNo, (u32)src, REG_GXFIFO_ADDR,
-                         MI_CNT_GXCOPY_IF(commandLength), 0);
-}
+#define MI_SendGXCommandAsyncFast_020055e4 MI_SendGXCommandAsyncFast
+#define MIi_CheckAnotherAutoDMA_02005304 MIi_CheckAnotherAutoDMA
+#define MIi_CheckDma0SourceAddress_02005390 MIi_CheckDma0SourceAddress
+#define MIi_DMAFastCallback_020056a0 MIi_DMAFastCallback
+#define OSi_EnterDmaCallback_02001ea4 OSi_EnterDmaCallback
+#define WaitDmaChannel_02005218 MI_WaitDma
+#define data_02056ee8 MIi_GXDmaParams
+#define func_01ff85b4 MIi_DmaSetParameters
+#include "src/arm9/library_nitro_mi/MI_SendGXCommandAsyncFast_020055e4.c"

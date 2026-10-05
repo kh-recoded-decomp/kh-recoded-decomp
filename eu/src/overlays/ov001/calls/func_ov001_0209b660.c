@@ -1,5 +1,3 @@
-extern int func_ov001_0209b584();
-
-int func_ov001_0209b660(int arg0) {
-    return func_ov001_0209b584(arg0, 1);
-}
+#define AlarmCallback_0209b638 func_ov001_0209b660
+#define StrmCallback func_ov001_0209b584
+#include "src/ov001/library_nns_snd/AlarmCallback_0209b638.c"

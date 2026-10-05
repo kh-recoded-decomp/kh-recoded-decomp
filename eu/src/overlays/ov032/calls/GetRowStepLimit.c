@@ -1,6 +1,3 @@
-#include "src/overlays/ov032/row_definition.h"
-
-s32 GetRowStepLimit(RowOwner *owner, s32 index)
-{
-    return GetRowDefinition(owner, index)->stepLimit;
-}
+#define func_ov032_020bbbd4 GetRowDefinition
+#define func_ov032_020bbc24 GetRowStepLimit
+#include "src/ov032/leaf_research/func_ov032_020bbc24.c"

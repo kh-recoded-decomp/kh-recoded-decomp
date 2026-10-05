@@ -1,7 +1,2 @@
-#include "libs/nitro/fs/fs_internal.h"
-
-FSResult FSi_CloseFileCommand(FSFile *file)
-{
-    (void)file;
-    return FS_RESULT_SUCCESS;
-}
+#define func_0200c6f4 FSi_CloseFileCommand
+#include "src/arm9/leaf_research/func_0200c6f4.c"

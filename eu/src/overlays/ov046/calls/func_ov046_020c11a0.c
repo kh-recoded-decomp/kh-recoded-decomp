@@ -1,5 +1,3 @@
-extern int func_ov046_020c11b0();
-
-int func_ov046_020c11a0(int a, int b, int c, int d) {
-    return func_ov046_020c11b0(a, b, c, d, 0);
-}
+#define Ov002_PanelDrawCounter func_ov046_020c11b0
+#define Panel_DrawCounter_020c1180 func_ov046_020c11a0
+#include "src/ov046/shared_engine/Panel_DrawCounter_020c1180.c"

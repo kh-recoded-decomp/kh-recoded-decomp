@@ -1,12 +1,5 @@
-#include "nitro/types.h"
-
-extern void SetPanelEnabled(u32 value);
-extern void ScriptCmd_SetElemField(void *scriptContext, u32 value);
-extern void func_ov036_020bdcb8(void *scriptContext, u32 value);
-
-void ScriptCmd_ResetAndDispatch(void *scriptContext, u32 value)
-{
-    SetPanelEnabled(0);
-    ScriptCmd_SetElemField(scriptContext, value);
-    func_ov036_020bdcb8(scriptContext, value);
-}
+#define ScriptCmd_ResetAndDispatch_020bdcc8 ScriptCmd_ResetAndDispatch
+#define ScriptCmd_SetElemField_02025e18 ScriptCmd_SetElemField
+#define func_02025438 SetPanelEnabled
+#define func_ov036_020bdc98 func_ov036_020bdcb8
+#include "src/ov036/shared_engine/ScriptCmd_ResetAndDispatch_020bdcc8.c"

@@ -1,6 +1,3 @@
-#include "src/calls/scene_control.h"
-
-s32 GetCurrentSceneId(void)
-{
-    return gSceneController.currentId;
-}
+#define data_0205fdec gSceneController
+#define func_02025658 GetCurrentSceneId
+#include "src/arm9/shared_engine/func_02025658.c"

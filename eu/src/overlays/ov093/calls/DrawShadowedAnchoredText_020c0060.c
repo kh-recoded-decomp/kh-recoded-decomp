@@ -1,10 +1,3 @@
-extern unsigned int DrawTextAnchored();
-
-void DrawShadowedAnchoredText_020c0060
-               (void *renderer,int x,int y,int color,unsigned int anchor,void *text)
-
-{
-  DrawTextAnchored(renderer,x + 1,y + 1,color + 1,anchor,text);
-  DrawTextAnchored(renderer,x,y,color,anchor,text);
-  return;
-}
+#define DrawShadowedAnchoredText_020c0040 DrawShadowedAnchoredText_020c0060
+#define DrawTextAnchored_020015a0 DrawTextAnchored
+#include "src/ov093/reviewed_helpers/DrawShadowedAnchoredText_020c0040.c"

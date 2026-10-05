@@ -1,6 +1,3 @@
-extern int ResetOverlaySelection();
-
-int func_ov001_020658b8(int arg0) {
-    ResetOverlaySelection(arg0);
-    return 1;
-}
+#define FS_EndOverlay ResetOverlaySelection
+#define FS_UnloadOverlayImage_020658b8 func_ov001_020658b8
+#include "src/ov001/library_nitro_fs/FS_UnloadOverlayImage_020658b8.c"

@@ -1,9 +1,2 @@
-#include "nitro/types.h"
-
-u32 func_ov056_020d6ed8(void *unused0, void *unused1, u32 *value)
-{
-    (void)unused0;
-    (void)unused1;
-    ++*value;
-    return 1;
-}
+#define func_ov056_020d6eb8 func_ov056_020d6ed8
+#include "src/ov056/leaf_research/func_ov056_020d6eb8.c"

@@ -1,20 +1,5 @@
-#include "libs/nitro/fs/fs_internal.h"
-
-BOOL FS_SuspendArchive(FSArchive *archive)
-{
-    BOOL suspended = 0;
-    OSIntrMode interruptState = OS_DisableInterrupts();
-
-    suspended = !FS_IsArchiveSuspended(archive);
-    if (suspended) {
-        if ((archive->flags & FS_ARCHIVE_FLAG_RUNNING) == 0) {
-            archive->flags |= FS_ARCHIVE_FLAG_SUSPEND;
-        } else {
-            archive->flags |= FS_ARCHIVE_FLAG_SUSPENDING;
-            FSi_WaitConditionOff(&archive->flags, FS_ARCHIVE_FLAG_SUSPENDING,
-                                 &archive->queue);
-        }
-    }
-    (void)OS_RestoreInterrupts(interruptState);
-    return suspended;
-}
+#define FS_SuspendArchive_0200b08c FS_SuspendArchive
+#define SleepCurrentThread_02002aa8 OS_SleepThread
+#define func_02004938 OS_DisableInterrupts
+#define func_0200494c OS_RestoreInterrupts
+#include "src/arm9/library_nitro_fs/FS_SuspendArchive_0200b08c.c"

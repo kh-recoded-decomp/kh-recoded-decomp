@@ -1,9 +1,2 @@
-extern void GX_BeginLoadTex(void);
-extern void GX_LoadTex(void *src, unsigned offset, unsigned size);
-extern void GX_EndLoadTex(void);
-
-void func_0202c1b0(void *src, unsigned offset, unsigned size) {
-    GX_BeginLoadTex();
-    GX_LoadTex(src, offset, size);
-    GX_EndLoadTex();
-}
+#define func_0202c19c func_0202c1b0
+#include "src/arm9/core_small/func_0202c19c.c"

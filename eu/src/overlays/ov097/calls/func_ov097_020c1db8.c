@@ -1,5 +1,3 @@
-extern int func_ov097_020c1a68();
-
-int func_ov097_020c1db8(int arg0) {
-    return func_ov097_020c1a68(arg0, 0);
-}
+#define NNS_FndInitList func_ov097_020c1a68
+#define NNS_FndInitListWithOffset0_020c1d98 func_ov097_020c1db8
+#include "src/ov097/library_nitro_nns/NNS_FndInitListWithOffset0_020c1d98.c"

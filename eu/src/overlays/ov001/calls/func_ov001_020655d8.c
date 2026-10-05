@@ -1,8 +1,3 @@
-extern int ScriptVm_ReadOperandInt();
-extern int func_ov001_0206890c();
-
-int func_ov001_020655d8(int arg0) {
-    ScriptVm_ReadOperandInt(arg0);
-    func_ov001_0206890c();
-    return 1;
-}
+#define Ov002_EnterPhase func_ov001_0206890c
+#define ScriptCmd_EnterPhase_020655d8 func_ov001_020655d8
+#include "src/ov001/shared_engine/ScriptCmd_EnterPhase_020655d8.c"

@@ -1,8 +1,3 @@
-extern int ScriptVm_ReadOperandInt();
-extern int SaveCurrentSpawnPoint();
-
-int func_ov001_02065a28(int arg0) {
-    ScriptVm_ReadOperandInt(arg0);
-    SaveCurrentSpawnPoint();
-    return 1;
-}
+#define Ov002_EnterPhase SaveCurrentSpawnPoint
+#define ScriptCmd_EnterPhase_02065a28 func_ov001_02065a28
+#include "src/ov001/shared_engine/ScriptCmd_EnterPhase_02065a28.c"

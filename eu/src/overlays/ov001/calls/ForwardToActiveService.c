@@ -1,11 +1,4 @@
-#include "nitro/types.h"
-
-extern s32 data_ov001_0209f2e8;
-extern void SeekFirstActiveStageEvent(void);
-
-void ForwardToActiveService(void)
-{
-    if (data_ov001_0209f2e8 != -1) {
-        SeekFirstActiveStageEvent();
-    }
-}
+#define func_ov001_02087884 ForwardToActiveService
+#define func_ov001_0209c884 SeekFirstActiveStageEvent
+#define g_activeService_0209f2c8 data_ov001_0209f2e8
+#include "src/ov001/shared_engine/func_ov001_02087884.c"

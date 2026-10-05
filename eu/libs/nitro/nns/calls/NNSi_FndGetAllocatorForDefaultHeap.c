@@ -1,14 +1,2 @@
-typedef struct DefaultHeapState {
-    void *heap;
-    void *currentHeap;
-} DefaultHeapState;
-
-extern DefaultHeapState data_02060394;
-
-void *NNSi_FndGetAllocatorForDefaultHeap(void *heap)
-{
-    if (heap == 0) {
-        heap = data_02060394.currentHeap;
-    }
-    return (char *)heap + 4;
-}
+#define NNSi_FndGetAllocatorForDefaultHeap_0202a268 NNSi_FndGetAllocatorForDefaultHeap
+#include "src/arm9/shared_engine/NNSi_FndGetAllocatorForDefaultHeap_0202a268.c"

@@ -1,9 +1,4 @@
-extern int ScriptVm_ReadOperandInt(int a, void *b);
-extern void SetActorSlotPriority(int a, int b);
-
-int func_ov036_020be14c(int param_1, unsigned short *param_2) {
-    int a = ScriptVm_ReadOperandInt(param_1, param_2);
-    int b = ScriptVm_ReadOperandInt(param_1, param_2 + 4);
-    SetActorSlotPriority(a, b);
-    return 1;
-}
+#define func_02025de4 ScriptVm_ReadOperandInt
+#define func_020bcf70 SetActorSlotPriority
+#define func_ov036_020be12c func_ov036_020be14c
+#include "src/ov036/reviewed_helpers/func_ov036_020be12c.c"

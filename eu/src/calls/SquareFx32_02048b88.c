@@ -1,8 +1,3 @@
-#include "nitro/types.h"
-
-extern s64 MulFx32Rounded(s32 a, s32 b);
-
-s64 SquareFx32_02048b88(s32 value)
-{
-    return MulFx32Rounded(value, value);
-}
+#define MulFx32Rounded_02048b84 MulFx32Rounded
+#define SquareFx32_02048b74 SquareFx32_02048b88
+#include "src/arm9/math/SquareFx32_02048b74.c"

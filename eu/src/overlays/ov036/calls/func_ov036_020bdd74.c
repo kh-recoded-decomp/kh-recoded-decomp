@@ -1,8 +1,3 @@
-extern int ScriptVm_ReadOperandInt();
-extern int ToggleActorSlotFlip();
-
-int func_ov036_020bdd74(int arg0) {
-    ScriptVm_ReadOperandInt(arg0);
-    ToggleActorSlotFlip();
-    return 1;
-}
+#define Ov002_EnterPhase ToggleActorSlotFlip
+#define ScriptCmd_EnterPhase_020bdd54 func_ov036_020bdd74
+#include "src/ov036/shared_engine/ScriptCmd_EnterPhase_020bdd54.c"

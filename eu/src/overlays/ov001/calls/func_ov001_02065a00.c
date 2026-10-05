@@ -1,6 +1,4 @@
-extern int ByteCode_ResolveOperand(int arg);
-extern void EnterPanelModeThree(int arg);
-int func_ov001_02065a00(int param_1) {
-    EnterPanelModeThree(ByteCode_ResolveOperand(param_1));
-    return 0;
-}
+#define CmdOpenDialog_02065a00 func_ov001_02065a00
+#define Ov023_OpenDialog EnterPanelModeThree
+#define ScriptVm_ReadOperandInt ByteCode_ResolveOperand
+#include "src/ov001/shared_engine/CmdOpenDialog_02065a00.c"

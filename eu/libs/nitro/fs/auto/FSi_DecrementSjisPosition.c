@@ -1,10 +1,2 @@
-#include "libs/nitro/fs/fs_string_internal.h"
-
-int FSi_DecrementSjisPosition(const char *text, int position)
-{
-    int previous = --position;
-
-    for (; previous > 0 && STD_IsSjisLeadByte(text[previous - 1]); --previous) {
-    }
-    return position - ((position - previous) & 1);
-}
+#define FindPrevCharBoundary_0200b288 FSi_DecrementSjisPosition
+#include "src/arm9/unclassified_helpers/FindPrevCharBoundary_0200b288.c"

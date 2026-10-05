@@ -1,9 +1,5 @@
-extern void GXS_BeginLoadBGExtPltt(void);
-extern void GXS_LoadBGExtPltt(void *src, unsigned offset, unsigned size);
-extern void GXS_EndLoadBGExtPltt(void);
-
-void Gfd_LoadSubBgExtPltt(void *src, unsigned offset, unsigned size) {
-    GXS_BeginLoadBGExtPltt();
-    GXS_LoadBGExtPltt(src, offset, size);
-    GXS_EndLoadBGExtPltt();
-}
+#define GX_BeginLoadTex GXS_BeginLoadBGExtPltt
+#define GX_EndLoadTex GXS_EndLoadBGExtPltt
+#define GX_LoadTex GXS_LoadBGExtPltt
+#define func_02013eb8 Gfd_LoadSubBgExtPltt
+#include "src/arm9/core_small/func_02013eb8.c"

@@ -1,8 +1,4 @@
-extern int ByteCode_ResolveOperand();
-extern int StartMovieCaptionScreen();
-
-int func_ov022_020a795c(int arg0) {
-    ByteCode_ResolveOperand(arg0);
-    StartMovieCaptionScreen();
-    return 1;
-}
+#define Ov002_EnterPhase StartMovieCaptionScreen
+#define ScriptCmd_EnterPhase_020a793c func_ov022_020a795c
+#define ScriptVm_ReadOperandInt ByteCode_ResolveOperand
+#include "src/ov022/shared_engine/ScriptCmd_EnterPhase_020a793c.c"

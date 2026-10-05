@@ -1,17 +1,4 @@
-#include "libs/nns/snd/snd_internal.h"
-
-extern void SND_LockChannel(u32 channelMask, u32 flags);
-
-int NNS_SndLockChannel(u32 channelMask)
-{
-    if (channelMask == 0) {
-        return TRUE;
-    }
-    if ((channelMask & sSndResourceLocks.channel) != 0) {
-        return FALSE;
-    }
-
-    SND_LockChannel(channelMask, 0);
-    sSndResourceLocks.channel |= channelMask;
-    return TRUE;
-}
+#define data_0205d894 sSndResourceLocks
+#define func_0200eba0 SND_LockChannel
+#define func_0201d304 NNS_SndLockChannel
+#include "src/arm9/library_nns_snd/func_0201d304.c"

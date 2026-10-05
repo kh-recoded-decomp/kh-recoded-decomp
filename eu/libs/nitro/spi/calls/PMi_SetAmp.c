@@ -1,12 +1,4 @@
-#include "libs/nitro/spi/pm_power_internal.h"
-
-u32 PMi_SetAmp(PMAmpSwitch status)
-{
-    if (PM_GetLCDPower() != PM_LCD_POWER_OFF) {
-        return PM_SendUtilityCommand(
-            PM_UTIL_SET_AMP,
-            (u16)status,
-            0);
-    }
-    return PM_SUCCESS;
-}
+#define PM_GetLCDPower_02010a08 PM_GetLCDPower
+#define PMi_SendChannelValueSync_02010448 PM_SendUtilityCommand
+#define PMi_SetAmp_020105a8 PMi_SetAmp
+#include "src/arm9/library_nitro_spi/PMi_SetAmp_020105a8.c"

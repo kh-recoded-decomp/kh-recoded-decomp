@@ -1,7 +1,4 @@
-extern void ResetCameraViewTopDown(void);
-extern void func_ov050_020c3530(void);
-
-void *func_ov050_020c3520(void) {
-    ResetCameraViewTopDown();
-    return (void *)&func_ov050_020c3530;
-}
+#define NNSi_FndGetCurrentRootHeap ResetCameraViewTopDown
+#define Ov008_CommitSelectedPage func_ov050_020c3530
+#define ReturnToCommitPage_020c3500 func_ov050_020c3520
+#include "src/ov050/shared_engine/ReturnToCommitPage_020c3500.c"

@@ -1,8 +1,4 @@
-#include "libs/nitro/std/std_string_internal.h"
-
-char *STD_ConcatenateString(char *destination, const char *source)
-{
-    int length = STD_GetStringLength(destination);
-    (void)STD_CopyString(&destination[length], source);
-    return destination;
-}
+#define STD_ConcatString_02010cc8 STD_ConcatenateString
+#define STD_CopyString_02010ba4 STD_CopyString
+#define func_02010c74 STD_GetStringLength
+#include "src/arm9/library_nitro_std/STD_ConcatString_02010cc8.c"

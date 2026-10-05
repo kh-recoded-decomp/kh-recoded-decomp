@@ -1,1 +1,2 @@
-int func_ov029_020baaec(void){ return 1; }
+#define func_ov029_020baacc func_ov029_020baaec
+#include "src/ov029/leaf_research/func_ov029_020baacc.c"

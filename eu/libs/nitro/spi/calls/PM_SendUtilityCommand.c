@@ -1,18 +1,5 @@
-#include "libs/nitro/spi/pm_power_internal.h"
-
-u32 PM_SendUtilityCommand(u32 number, u16 parameter, u16 *returnValue)
-{
-    u32 commandResult;
-    u32 sendResult = PM_SendUtilityCommandAsync(
-        number,
-        parameter,
-        returnValue,
-        PMi_DummyCallback,
-        &commandResult);
-
-    if (sendResult == PM_SUCCESS) {
-        PMi_WaitBusy();
-        return commandResult;
-    }
-    return sendResult;
-}
+#define AssignIfNotNull_020101fc PMi_DummyCallback
+#define PMi_SendChannelValueAsync_02010418 PM_SendUtilityCommandAsync
+#define PMi_SendChannelValueSync_02010448 PM_SendUtilityCommand
+#define func_020101a8 PMi_WaitBusy
+#include "src/arm9/library_nitro_spi/PMi_SendChannelValueSync_02010448.c"

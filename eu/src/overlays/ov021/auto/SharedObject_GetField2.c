@@ -1,6 +1,2 @@
-#include "src/overlays/ov021/auto/shared_object_record.h"
-
-u16 SharedObject_GetField2(SharedObjectRecord *record)
-{
-    return record->field_02;
-}
+#define GetFieldAt0x2_020a7550 SharedObject_GetField2
+#include "src/ov021/unclassified_helpers/GetFieldAt0x2_020a7550.c"

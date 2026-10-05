@@ -1,5 +1,3 @@
-extern void *func_ov001_0209b520();
-
-void *func_ov001_0209b5ec(int id) {
-    return func_ov001_0209b520(id, 2);
-}
+#define CARD_UnlockBackup_0209b5c4 func_ov001_0209b5ec
+#define CARDi_LockResource func_ov001_0209b520
+#include "src/ov001/library_nitro_card/CARD_UnlockBackup_0209b5c4.c"

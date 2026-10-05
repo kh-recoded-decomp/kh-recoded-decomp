@@ -1,11 +1,7 @@
-#include "libs/nitro/card/card_rom_internal.h"
-
-void CARDi_DmaReadDone(void *argument)
-{
-    (void)argument;
-
-    CARDi_CheckPulledOutCore(CARDi_ReadRomIDCore());
-    CARDi_RefreshRom(CARD_ROMST_RFS_WARN_L2_MASK);
-    cardi_common.command->result = 0;
-    CARDi_EndTask(&cardi_common);
-}
+#define data_02056fe0 cardi_common
+#define func_02009434 CARDi_EndTask
+#define func_02009b38 CARDi_ReadRomIDCore
+#define func_02009bd0 CARDi_RefreshRom
+#define func_02009ddc CARDi_DmaReadDone
+#define func_0200a0fc CARDi_CheckPulledOutCore
+#include "src/arm9/state_management/func_02009ddc.c"

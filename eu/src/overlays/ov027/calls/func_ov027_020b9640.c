@@ -1,12 +1,3 @@
-extern int IndexedRecord_SetActive();
-
-void func_ov027_020b9640(int a, int *b) {
-    int i;
-    int v;
-    for (i = 0; i < 2; i++) {
-        v = b[i + 5];
-        if (v != -1) {
-            IndexedRecord_SetActive(a, v);
-        }
-    }
-}
+#define func_0204f2c0 IndexedRecord_SetActive
+#define func_ov027_020b9620 func_ov027_020b9640
+#include "src/ov027/reviewed_helpers/func_ov027_020b9620.c"

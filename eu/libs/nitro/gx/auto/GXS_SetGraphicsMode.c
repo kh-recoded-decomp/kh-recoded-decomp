@@ -1,5 +1,2 @@
-/* Replaces the BG mode bits of the sub-engine DISPCNT. */
-void GXS_SetGraphicsMode(unsigned int mode) {
-    volatile unsigned int *dispcnt = (volatile unsigned int *)0x4001000;
-    *dispcnt = (*dispcnt & ~7) | mode;
-}
+#define func_0200672c GXS_SetGraphicsMode
+#include "src/arm9/leaf_research/func_0200672c.c"

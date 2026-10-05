@@ -1,11 +1,4 @@
-#include "nitro/types.h"
-
-extern s32 data_ov001_0209f2e8;
-extern void func_ov001_0209b49c(void);
-
-void ForwardToActiveService_02088074(void)
-{
-    if (data_ov001_0209f2e8 != -1) {
-        func_ov001_0209b49c();
-    }
-}
+#define func_ov001_0208804c ForwardToActiveService_02088074
+#define func_ov001_0209b474 func_ov001_0209b49c
+#define g_activeService_0209f2c8 data_ov001_0209f2e8
+#include "src/ov001/shared_engine/func_ov001_0208804c.c"

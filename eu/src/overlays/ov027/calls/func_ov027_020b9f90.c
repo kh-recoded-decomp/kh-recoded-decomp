@@ -1,5 +1,3 @@
-extern void CaptureLatestOnScreenTouch();
-int func_ov027_020b9f90(void) {
-    CaptureLatestOnScreenTouch();
-    return 0;
-}
+#define MsgQueue_GetHeap_020b9f70 func_ov027_020b9f90
+#define NNSi_FndGetCurrentRootHeap CaptureLatestOnScreenTouch
+#include "src/ov027/shared_engine/MsgQueue_GetHeap_020b9f70.c"

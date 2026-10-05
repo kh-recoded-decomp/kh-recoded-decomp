@@ -1,1 +1,1 @@
-void func_ov002_02065c48(void) {}
+#include "src/ov002/panel_state/func_ov002_02065c48.c"

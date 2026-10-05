@@ -1,8 +1,3 @@
-extern int func_ov001_0207d4e4();
-
-int func_ov001_02065758(int arg0) {
-    if (func_ov001_0207d4e4(arg0) != 0) {
-        return 0;
-    }
-    return 1;
-}
+#define Game_PollSceneAlive func_ov001_0207d4e4
+#define IsSceneState0_02065758 func_ov001_02065758
+#include "src/ov001/shared_engine/IsSceneState0_02065758.c"

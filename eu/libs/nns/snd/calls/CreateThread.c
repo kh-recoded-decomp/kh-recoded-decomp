@@ -1,16 +1,7 @@
-#include "libs/nns/snd/sndarc_stream_internal.h"
-
-void CreateThread(NNSSndStrmThread *thread, u32 priority)
-{
-    OS_CreateThread(
-        thread->thread,
-        StrmThread,
-        thread,
-        thread->stack + sizeof(thread->stack),
-        sizeof(thread->stack),
-        priority);
-    NNS_FndInitList(&thread->commandList, 0);
-    OS_InitMutex(thread->mutex);
-    thread->threadQueue.head = thread->threadQueue.tail = NULL;
-    OS_WakeupThreadDirect(thread->thread);
-}
+#define CreateStrmThread_0202096c CreateThread
+#define InitSyncObject_02003134 OS_InitMutex
+#define OS_WakeupThreadDirect_02002b60 OS_WakeupThreadDirect
+#define StrmThread_02021820 StrmThread
+#define func_02002898 OS_CreateThread
+#define func_0201288c NNS_FndInitList
+#include "src/arm9/library_nns_snd/CreateStrmThread_0202096c.c"

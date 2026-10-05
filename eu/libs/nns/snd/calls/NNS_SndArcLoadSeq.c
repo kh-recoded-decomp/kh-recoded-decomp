@@ -1,15 +1,2 @@
-#include "libs/nns/snd/sndarc_loader_internal.h"
-
-BOOL NNS_SndArcLoadSeq(int seqNo, NNSSndHeapHandle heap)
-{
-    NNSSndArcLoadResult result;
-
-    result = NNSi_SndArcLoadSeq(
-        seqNo,
-        NNS_SND_ARC_LOAD_ALL,
-        heap,
-        TRUE,
-        NULL);
-
-    return result == NNS_SND_ARC_LOAD_SUCCESS ? TRUE : FALSE;
-}
+#define NNS_SndArcLoadSeq_0201f318 NNS_SndArcLoadSeq
+#include "src/arm9/library_nns_snd/NNS_SndArcLoadSeq_0201f318.c"

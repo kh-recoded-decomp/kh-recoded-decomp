@@ -1,12 +1,5 @@
-#include "libs/nitro/card/card_event_internal.h"
-
-void CARDi_PeekEventListener(void *arg)
-{
-    CARDEventListener *listener = (CARDEventListener *)arg;
-
-    if (listener->Condition(listener->userdata)) {
-        OS_SignalEvent(listener->event, 1);
-    } else {
-        OS_SetVAlarm(listener->valarm, 192, 263, CARDi_PeekEventListener, listener);
-    }
-}
+#define PollTaskAndReschedule_02008ff0 CARDi_PeekEventListener
+#define SelfReschedule_02008ff0 CARDi_PeekEventListener
+#define SetFlagsAndWake_02004df8 OS_SignalEvent
+#define func_02004668 OS_SetVAlarm
+#include "src/arm9/unclassified_helpers/PollTaskAndReschedule_02008ff0.c"

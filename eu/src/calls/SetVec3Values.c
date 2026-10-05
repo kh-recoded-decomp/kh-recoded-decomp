@@ -1,8 +1,2 @@
-#include "nitro/fx_types.h"
-
-void SetVec3Values(VecFx32 *out, fx32 x, fx32 y, fx32 z)
-{
-    out->x = x;
-    out->y = y;
-    out->z = z;
-}
+#define SetVec3_02049650 SetVec3Values
+#include "src/arm9/fixed_point_math/SetVec3_02049650.c"

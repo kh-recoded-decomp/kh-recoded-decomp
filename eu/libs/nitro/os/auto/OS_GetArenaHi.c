@@ -1,4 +1,2 @@
-void *OS_GetArenaHi(int arena)
-{
-    return *(void **)(0x02fff000 + (arena << 2) + 3524);
-}
+#define GetTableAEntry_0200367c OS_GetArenaHi
+#include "src/arm9/unclassified_helpers/GetTableAEntry_0200367c.c"

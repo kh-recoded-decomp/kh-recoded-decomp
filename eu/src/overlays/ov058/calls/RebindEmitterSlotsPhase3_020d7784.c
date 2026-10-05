@@ -1,14 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad_000[0x130];
-    s32 phase;
-} EmitterRig;
-
-extern void RebindEmitterSlots(EmitterRig *rig, int blend);
-
-void RebindEmitterSlotsPhase3_020d7784(EmitterRig *rig)
-{
-    rig->phase = 3;
-    RebindEmitterSlots(rig, 2);
-}
+#define RebindEmitterSlotsPhase3_020d7764 RebindEmitterSlotsPhase3_020d7784
+#define RebindEmitterSlots_020d7498 RebindEmitterSlots
+#include "src/ov058/unclassified_helpers/RebindEmitterSlotsPhase3_020d7764.c"

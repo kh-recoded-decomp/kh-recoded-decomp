@@ -1,13 +1,5 @@
-#include "libs/nitro/gx/gx_internal.h"
-
-extern void PMi_SetDispOffCount(void);
-
-void GX_DispOff(void)
-{
-    u32 displayControl = REG_GX_DISPCNT;
-
-    gGXDataState.isDisplayOn = FALSE;
-    gGXBssState.displayMode = (u16)((displayControl & GX_DISPCNT_DISPLAY_MODE_MASK) >> 16);
-    REG_GX_DISPCNT = displayControl & ~GX_DISPCNT_DISPLAY_MODE_MASK;
-    PMi_SetDispOffCount();
-}
+#define GX_DispOff_02006640 GX_DispOff
+#define PMi_RecordPowerTick_02010b90 PMi_SetDispOffCount
+#define data_02055c18 gGXDataState
+#define data_02056f08 gGXBssState
+#include "src/arm9/library_nitro_gx/GX_DispOff_02006640.c"

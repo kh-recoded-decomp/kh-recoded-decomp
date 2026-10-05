@@ -1,9 +1,2 @@
-#include "libs/nitro/fs/fs_string_internal.h"
-
-int FSi_IncrementSjisPositionToSlash(const char *text, int position)
-{
-    while (text[position] && !FSi_IsSlash((u8)text[position])) {
-        position = FSi_IncrementSjisPosition(text, position);
-    }
-    return position;
-}
+#define FindNextSeparator_0200b2c8 FSi_IncrementSjisPositionToSlash
+#include "src/arm9/unclassified_helpers/FindNextSeparator_0200b2c8.c"

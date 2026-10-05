@@ -1,44 +1,16 @@
-#include "libs/nns/snd/sndarc_stream_internal.h"
-
-#pragma opt_rotateloops off
-#pragma opt_strength_reduction off
-void NNS_SndArcStrmInit(u32 threadPriority, NNSSndHeapHandle heap)
-{
-    int i;
-    int playerNo;
-    NNSSndStrmPlayer *player;
-
-    if (sSoundArcStreamState.initialized) {
-        NNS_SndArcStrmSetupPlayer(heap);
-        return;
-    }
-    sSoundArcStreamState.initialized = TRUE;
-
-    NNS_FndInitList(&sFreeStreamCommandList, 0);
-    for (i = 0; i < NNS_SND_STRM_COMMAND_NUM; i++) {
-        NNS_FndAppendListObject(
-            &sFreeStreamCommandList,
-            &sStreamCommands[i]);
-    }
-    OS_InitMutex(sDecodeBufferMutex);
-
-    sSoundArcStreamState.decodeBuffer = sDecodeBufferArea;
-
-    for (playerNo = 0; playerNo < NNS_SND_STRM_PLAYER_NUM; playerNo++) {
-        player = &sStrmPlayers[playerNo];
-
-        player->activeFlag = FALSE;
-        FS_InitFile((FSFile *)player->fileStorage);
-        NNS_SndStrmInit(&player->stream);
-        player->playerNo = playerNo;
-        player->numChannels = 0;
-        player->buffer = NULL;
-        player->bufferSize = 0;
-        player->allocChannelCount = 0;
-    }
-
-    NNS_SndArcStrmSetupPlayer(heap);
-    CreateThread(&sPrepareStreamThread, threadPriority);
-}
-#pragma opt_strength_reduction reset
-#pragma opt_rotateloops reset
+#define AppendIntrusiveListObject_020128d0 NNS_FndAppendListObject
+#define ConfigureArchiveStreamPlayers_02020178 NNS_SndArcStrmSetupPlayer
+#define InitStrm_0201df60 NNS_SndStrmInit
+#define InitSyncObject_02003134 OS_InitMutex
+#define NNS_SndArcStrmInit_02020074 NNS_SndArcStrmInit
+#define data_0205e324 sSoundArcStreamState
+#define data_0205e330 sFreeStreamCommandList
+#define data_0205e33c sDecodeBufferMutex
+#define data_0205e354 sStreamCommands
+#define data_0205e4e0 sDecodeBufferArea
+#define data_0205e6e0 sStrmPlayers
+#define data_0205ecd0 sPrepareStreamThread
+#define func_0200b394 FS_InitFile
+#define func_0201288c NNS_FndInitList
+#define func_0202096c CreateThread
+#include "src/arm9/library_nns_snd/NNS_SndArcStrmInit_02020074.c"

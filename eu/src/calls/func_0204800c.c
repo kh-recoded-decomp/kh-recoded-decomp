@@ -1,7 +1,3 @@
-typedef struct { int a, b, c; } T3_020ad44c;
-extern void GetUnitCross(T3_020ad44c *out, int arg1, int arg2, int arg3);
-void func_0204800c(int *arg0, int arg1, int arg2, int arg3) {
-    T3_020ad44c tmp;
-    GetUnitCross(&tmp, arg1, arg2, arg3);
-    *(T3_020ad44c *)arg0 = tmp;
-}
+#define Ov022_GetEffectAnchor GetUnitCross
+#define func_02047ff8 func_0204800c
+#include "src/arm9/shared_engine/func_02047ff8.c"

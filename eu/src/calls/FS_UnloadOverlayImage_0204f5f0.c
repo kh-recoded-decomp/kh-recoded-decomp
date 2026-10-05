@@ -1,6 +1,3 @@
-extern void UpdateKeyRepeat(void *p);
-
-int FS_UnloadOverlayImage_0204f5f0(void *p) {
-    UpdateKeyRepeat(p);
-    return 1;
-}
+#define FS_EndOverlay UpdateKeyRepeat
+#define FS_UnloadOverlayImage_0204f5dc FS_UnloadOverlayImage_0204f5f0
+#include "src/arm9/library_nitro_fs/FS_UnloadOverlayImage_0204f5dc.c"

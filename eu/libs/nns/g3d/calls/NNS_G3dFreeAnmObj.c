@@ -1,9 +1,3 @@
-typedef struct NNSFndAllocator NNSFndAllocator;
-typedef struct NNSG3dAnmObj NNSG3dAnmObj;
-
-extern void NNS_FndFreeToAllocator(NNSFndAllocator *allocator, void *memBlock);
-
-void NNS_G3dFreeAnmObj(NNSFndAllocator *allocator, NNSG3dAnmObj *anmObj)
-{
-    NNS_FndFreeToAllocator(allocator, anmObj);
-}
+#define PXI_InitFifo NNS_FndFreeToAllocator
+#define PXI_Init_0201a3b8 NNS_G3dFreeAnmObj
+#include "src/arm9/library_nitro_pxi/PXI_Init_0201a3b8.c"

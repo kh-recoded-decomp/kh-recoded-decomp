@@ -1,9 +1,3 @@
-extern int ScriptVm_ReadOperandInt(int a, void *b);
-extern void SetupSlotPanelMode(int a, int b);
-
-int func_ov001_02065e50(int param_1, unsigned short *param_2) {
-    int a = ScriptVm_ReadOperandInt(param_1, param_2);
-    int b = ScriptVm_ReadOperandInt(param_1, param_2 + 4);
-    SetupSlotPanelMode(a, b);
-    return 1;
-}
+#define func_02025de4 ScriptVm_ReadOperandInt
+#define func_020640d8 SetupSlotPanelMode
+#include "src/ov001/reviewed_helpers/func_ov001_02065e50.c"

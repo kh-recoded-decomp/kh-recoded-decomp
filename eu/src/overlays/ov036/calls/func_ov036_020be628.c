@@ -1,9 +1,4 @@
-extern int ScriptVm_ReadOperandInt(int a, void *b);
-extern void ReleaseModelSlot(int a, int b);
-
-int func_ov036_020be628(int param_1, unsigned short *param_2) {
-    int a = ScriptVm_ReadOperandInt(param_1, param_2);
-    int b = ScriptVm_ReadOperandInt(param_1, param_2 + 4);
-    ReleaseModelSlot(a, b);
-    return 1;
-}
+#define func_02025de4 ScriptVm_ReadOperandInt
+#define func_020bd414 ReleaseModelSlot
+#define func_ov036_020be608 func_ov036_020be628
+#include "src/ov036/reviewed_helpers/func_ov036_020be608.c"

@@ -1,25 +1,7 @@
-#include "libs/nitro/card/card_rom_internal.h"
-
-typedef void (*MIDmaCallback)(void *argument);
-
-extern void PanelState_NoOpB(const void *descriptor);
-extern void CARD_CheckEnabled(void);
-extern u32 CARDi_GetAccessLevel(void);
-extern void OS_Terminate(void);
-extern BOOL CARDi_WaitForTask(CARDiCommon *common, BOOL restart,
-                              MIDmaCallback callback, void *argument);
-
-#define cardi_backup_assert ((const void *)0x02000bac)
-
-void CARDi_BeginBackupCommand(u32 accessLevel, MIDmaCallback callback,
-                              void *argument)
-{
-    PanelState_NoOpB(cardi_backup_assert);
-    CARD_CheckEnabled();
-
-    if ((CARDi_GetAccessLevel() & accessLevel) != accessLevel) {
-        OS_Terminate();
-    }
-
-    (void)CARDi_WaitForTask(&cardi_common, 1, callback, argument);
-}
+#define data_02056fe0 cardi_common
+#define func_02000b64 PanelState_NoOpB
+#define func_02004cf0 OS_Terminate
+#define func_02009278 CARDi_GetAccessLevel
+#define func_020093d0 CARDi_WaitForTask
+#define func_020099d4 CARDi_BeginBackupCommand
+#include "src/arm9/state_management/func_020099d4.c"

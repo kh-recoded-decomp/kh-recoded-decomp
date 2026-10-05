@@ -1,10 +1,4 @@
-#include "libs/nitro/fs/fs_internal.h"
-
-void FSi_ROMFAT_Activate(FSArchive *archive)
-{
-    FSFile file[1];
-
-    FS_InitFile(file);
-    file->archive = archive;
-    (void)FSi_TranslateCommand(file, FS_COMMAND_ACTIVATE, 0);
-}
+#define func_0200b394 FS_InitFile
+#define func_0200c6fc FSi_TranslateCommand
+#define func_0200cb70 FSi_ROMFAT_Activate
+#include "src/arm9/unclassified_helpers/func_0200cb70.c"

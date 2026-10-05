@@ -1,11 +1,3 @@
-typedef unsigned short u16;
-typedef int s32;
-
-extern s32 OS_TryLockByWord(u16 lockID, void *lockp,
-                            void (*ctrlFuncp)(void));
-extern void OSi_AllocateCardBus(void);
-
-s32 OS_TryLockCard(u16 lockID)
-{
-    return OS_TryLockByWord(lockID, (void *)0x02ffffe0, OSi_AllocateCardBus);
-}
+#define FS_ReadFile_020022a4 OS_TryLockByWord
+#define ReadFileToFixedBuffer_0200234c OS_TryLockCard
+#include "src/arm9/library_nitro_fs/ReadFileToFixedBuffer_0200234c.c"

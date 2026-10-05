@@ -1,5 +1,3 @@
-extern void func_ov003_0206470c();
-int func_ov003_02064844(void) {
-    func_ov003_0206470c();
-    return 0;
-}
+#define MsgQueue_GetHeap_02064844 func_ov003_02064844
+#define NNSi_FndGetCurrentRootHeap func_ov003_0206470c
+#include "src/ov003/shared_engine/MsgQueue_GetHeap_02064844.c"

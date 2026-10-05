@@ -1,4 +1,2 @@
-int FSi_EmptyArchiveProcThumbStub(void)
-{
-    return 4;
-}
+#define FSi_EmptyArchiveProc_0202642c FSi_EmptyArchiveProcThumbStub
+#include "src/arm9/library_nitro_fs/FSi_EmptyArchiveProc_0202642c.c"

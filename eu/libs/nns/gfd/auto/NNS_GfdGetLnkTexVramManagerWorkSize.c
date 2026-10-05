@@ -1,6 +1,2 @@
-#include "libs/nns/gfd/gfd_LinkedListVramMan_Types.h"
-
-u32 NNS_GfdGetLnkTexVramManagerWorkSize(u32 blockCount)
-{
-    return blockCount * sizeof(NNSiGfdLnkVramBlock);
-}
+#define func_020144e8 NNS_GfdGetLnkTexVramManagerWorkSize
+#include "src/arm9/value_conversion/func_020144e8.c"

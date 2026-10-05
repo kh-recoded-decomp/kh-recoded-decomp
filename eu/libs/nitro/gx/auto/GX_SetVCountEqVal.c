@@ -1,11 +1,2 @@
-typedef unsigned short u16;
-typedef int s32;
-
-#define REG_DISPSTAT (*(volatile u16 *)0x04000004)
-
-void GX_SetVCountEqVal(s32 value)
-{
-    REG_DISPSTAT = (u16)((REG_DISPSTAT & 0x3f) |
-                         ((value & 0xff) << 8) |
-                         ((value & 0x100) >> 1));
-}
+#define GX_SetVCountEqVal_020065d0 GX_SetVCountEqVal
+#include "src/arm9/library_nitro_gx/GX_SetVCountEqVal_020065d0.c"

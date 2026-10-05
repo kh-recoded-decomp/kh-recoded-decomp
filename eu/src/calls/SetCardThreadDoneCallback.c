@@ -1,14 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad_00[0x10];
-    void (*doneCallback)(void);
-} CardThreadState;
-
-extern CardThreadState data_0205fe00;
-extern void func_02027124(void);
-
-void SetCardThreadDoneCallback(void)
-{
-    data_0205fe00.doneCallback = func_02027124;
-}
+#define SetCardThreadDoneCallback_02026ae0 SetCardThreadDoneCallback
+#define func_02027110 func_02027124
+#define g_cardThreadState_0205fe00 data_0205fe00
+#include "src/arm9/shared_engine/SetCardThreadDoneCallback_02026ae0.c"

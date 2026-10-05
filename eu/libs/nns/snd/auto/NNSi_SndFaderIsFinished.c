@@ -1,6 +1,2 @@
-#include "libs/nns/snd/fader_internal.h"
-
-BOOL NNSi_SndFaderIsFinished(const NNSSndFader *fader)
-{
-    return fader->counter >= fader->frame ? 1 : 0;
-}
+#define NNSi_SndFaderIsFinished_02021948 NNSi_SndFaderIsFinished
+#include "src/arm9/library_nns_snd/NNSi_SndFaderIsFinished_02021948.c"

@@ -1,6 +1,2 @@
-#include "src/overlays/ov021/auto/shared_object_record.h"
-
-u16 SharedObject_GetFlagsA(SharedObjectRecord *record)
-{
-    return record->flagsA;
-}
+#define GetFieldAt0xc_020a7554 SharedObject_GetFlagsA
+#include "src/ov021/unclassified_helpers/GetFieldAt0xc_020a7554.c"

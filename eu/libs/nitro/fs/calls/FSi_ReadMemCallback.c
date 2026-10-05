@@ -1,11 +1,4 @@
-#include "libs/nitro/fs/fs_internal.h"
-
-extern void MI_CpuCopy8(const void *source, void *destination, u32 size);
-
-FSResult FSi_ReadMemCallback(FSArchive *archive, void *destination,
-                             u32 position, u32 size)
-{
-    MI_CpuCopy8((const void *)FS_GetArchiveOffset(archive, position),
-                destination, size);
-    return FS_RESULT_SUCCESS;
-}
+#define func_01ff89a8 MI_CpuCopy8
+#define func_0200cf5c FSi_ReadMemCallback
+#define func_0200d280 FS_GetArchiveOffset
+#include "src/arm9/leaf_research/func_0200cf5c.c"

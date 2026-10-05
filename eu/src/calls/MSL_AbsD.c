@@ -1,1 +1,2 @@
-int MSL_AbsD(int x){ if (x < 0) x = -x; return x; }
+#define abs_02049b60 MSL_AbsD
+#include "src/arm9/library_msl_c/abs_02049b60.c"

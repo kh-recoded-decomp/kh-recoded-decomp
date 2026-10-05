@@ -1,11 +1,2 @@
-#include "nitro/types.h"
-
-typedef struct ObjectPayloadOwner {
-    u8 pad_000[0x964];
-    u8 payload[1];
-} ObjectPayloadOwner;
-
-void *GetObjectPayload964(ObjectPayloadOwner *object)
-{
-    return object->payload;
-}
+#define func_ov059_020cbfec GetObjectPayload964
+#include "src/ov059/leaf_research/func_ov059_020cbfec.c"

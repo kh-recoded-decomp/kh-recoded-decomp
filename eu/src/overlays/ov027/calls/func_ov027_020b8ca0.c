@@ -1,5 +1,3 @@
-extern int func_ov027_020b8b68();
-
-int func_ov027_020b8ca0(int a, int b) {
-    return func_ov027_020b8b68(a, b, 1, 0);
-}
+#define UpdateWidgetRootAndResetList_020b8c80 func_ov027_020b8ca0
+#define func_ov027_020b8b48 func_ov027_020b8b68
+#include "src/ov027/resource_container/UpdateWidgetRootAndResetList_020b8c80.c"

@@ -1,10 +1,4 @@
-extern int ScriptVm_ReadOperandInt(int a, void *b);
-extern void PrependListNode(int a, int b, int c);
-
-int func_ov001_0207fae0(int param_1, unsigned short *param_2) {
-    int a = ScriptVm_ReadOperandInt(param_1, param_2);
-    int b = ScriptVm_ReadOperandInt(param_1, param_2 + 4);
-    int c = ScriptVm_ReadOperandInt(param_1, param_2 + 8);
-    PrependListNode(a, b, c);
-    return 1;
-}
+#define func_02025de4 ScriptVm_ReadOperandInt
+#define func_0207eeb4 PrependListNode
+#define func_ov001_0207fab8 func_ov001_0207fae0
+#include "src/ov001/reviewed_helpers/func_ov001_0207fab8.c"

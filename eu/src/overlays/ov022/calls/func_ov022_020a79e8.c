@@ -1,5 +1,3 @@
-extern void CommitMovieStateText();
-int func_ov022_020a79e8(void) {
-    CommitMovieStateText();
-    return 0;
-}
+#define MsgQueue_GetHeap_020a79c8 func_ov022_020a79e8
+#define NNSi_FndGetCurrentRootHeap CommitMovieStateText
+#include "src/ov022/shared_engine/MsgQueue_GetHeap_020a79c8.c"

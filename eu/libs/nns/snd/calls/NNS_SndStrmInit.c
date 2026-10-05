@@ -1,31 +1,7 @@
-#include "libs/nns/snd/strm_internal.h"
-
-#define offsetof(type, member) ((u32)&(((type *)0)->member))
-
-extern void NNS_FndInitList(NNSFndList *list, u16 offset);
-extern void BeginSleep_2(void *argument);
-extern void EndSleep(void *argument);
-
-static inline void PM_SetSleepCallbackInfo(
-    PMSleepCallbackInfo *info,
-    PMSleepCallback callback,
-    void *argument)
-{
-    info->callback = callback;
-    info->argument = argument;
-}
-
-void NNS_SndStrmInit(NNSSndStrm *stream)
-{
-    if (!sSndStrmInitialized) {
-        NNS_FndInitList(&sSndStrmList, offsetof(NNSSndStrm, link));
-        sSndStrmInitialized = TRUE;
-    }
-
-    PM_SetSleepCallbackInfo(&stream->preSleepInfo, BeginSleep_2, stream);
-    PM_SetSleepCallbackInfo(&stream->postSleepInfo, EndSleep, stream);
-    stream->channelMask = 0;
-    stream->channelCount = 0;
-    stream->activeFlag = FALSE;
-    stream->startFlag = FALSE;
-}
+#define InitStrm_0201df60 NNS_SndStrmInit
+#define data_0205e178 sSndStrmInitialized
+#define data_0205e17c sSndStrmList
+#define func_0201288c NNS_FndInitList
+#define func_0201e468 BeginSleep_2
+#define func_0201e4b4 EndSleep
+#include "src/arm9/library_nns_snd/InitStrm_0201df60.c"

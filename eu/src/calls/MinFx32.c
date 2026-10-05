@@ -1,9 +1,2 @@
-#include "nitro/types.h"
-
-s32 MinFx32(s32 a, s32 b)
-{
-    if (a > b) {
-        a = b;
-    }
-    return a;
-}
+#define Min_0203f9e0 MinFx32
+#include "src/arm9/fixed_point_math/Min_0203f9e0.c"

@@ -1,9 +1,5 @@
-extern void GX_BeginLoadBGExtPltt(void);
-extern void GX_LoadBGExtPltt(void *src, unsigned offset, unsigned size);
-extern void GX_EndLoadBGExtPltt(void);
-
-void DoTransfer2dBGExtPlttMain(void *src, unsigned offset, unsigned size) {
-    GX_BeginLoadBGExtPltt();
-    GX_LoadBGExtPltt(src, offset, size);
-    GX_EndLoadBGExtPltt();
-}
+#define GX_BeginLoadTex GX_BeginLoadBGExtPltt
+#define GX_EndLoadTex GX_EndLoadBGExtPltt
+#define GX_LoadTex GX_LoadBGExtPltt
+#define func_02013e60 DoTransfer2dBGExtPlttMain
+#include "src/arm9/core_small/func_02013e60.c"

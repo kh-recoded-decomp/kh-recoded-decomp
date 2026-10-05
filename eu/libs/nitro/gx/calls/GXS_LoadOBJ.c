@@ -1,6 +1,5 @@
-#include "libs/nitro/gx/gx_load_internal.h"
-
-void GXS_LoadOBJ(const void *source, u32 offset, u32 size)
-{
-    GXi_DmaCopy32(GXi_DmaId, source, (void *)(0x06600000 + offset), size);
-}
+#define data_02055c1c GXi_DmaId
+#define func_01ff8710 MIi_CpuCopy32
+#define func_02004ec8 MIi_DmaCopy32
+#define func_020074ec GXS_LoadOBJ
+#include "src/arm9/unclassified_helpers/func_020074ec.c"

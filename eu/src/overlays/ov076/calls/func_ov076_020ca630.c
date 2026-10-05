@@ -1,8 +1,4 @@
-extern void PlaySoundChecked(int, int);
-extern void QueueSoundCommandForArc(int, int);
-
-void func_ov076_020ca630(int a, int b)
-{
-    QueueSoundCommandForArc(a, b);
-    PlaySoundChecked(a, b);
-}
+#define FS_LoadOverlay PlaySoundChecked
+#define FSi_WaitForCardThread QueueSoundCommandForArc
+#define LoadOverlaySync_020ca610 func_ov076_020ca630
+#include "src/ov076/shared_engine/LoadOverlaySync_020ca610.c"

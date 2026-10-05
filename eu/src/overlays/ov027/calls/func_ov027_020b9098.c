@@ -1,5 +1,3 @@
-extern int PXI_Init_0204f020();
-
-int func_ov027_020b9098(int arg0) {
-    return PXI_Init_0204f020(arg0);
-}
+#define PXI_InitFifo PXI_Init_0204f020
+#define PXI_Init_020b9078 func_ov027_020b9098
+#include "src/ov027/library_nitro_pxi/PXI_Init_020b9078.c"

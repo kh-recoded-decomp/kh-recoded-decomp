@@ -1,10 +1,5 @@
-extern void *func_ov039_020bc1dc();
-extern void DestroyAllContainerElements();
-extern void ReleaseIfMarked();
-
-void func_ov078_020c4728(void)
-{
-    void *p = func_ov039_020bc1dc();
-    DestroyAllContainerElements(p);
-    ReleaseIfMarked(p);
-}
+#define OS_DisableInterrupts func_ov039_020bc1dc
+#define OS_RescheduleThread_020c4708 func_ov078_020c4728
+#define OS_RestoreInterrupts ReleaseIfMarked
+#define OSi_RescheduleThread DestroyAllContainerElements
+#include "src/ov078/library_nitro_os/OS_RescheduleThread_020c4708.c"

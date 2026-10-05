@@ -1,10 +1,2 @@
-#include "nnsys/snd.h"
-
-void NNS_SndPlayerSetInitialVolume(NNSSndHandle *handle, int volume)
-{
-    if (!NNS_SndHandleIsValid(handle)) {
-        return;
-    }
-
-    handle->player->initialVolume = (u8)volume;
-}
+#define NNS_SndPlayerSetInitialVolume_0201d72c NNS_SndPlayerSetInitialVolume
+#include "src/arm9/library_nns_snd/NNS_SndPlayerSetInitialVolume_0201d72c.c"

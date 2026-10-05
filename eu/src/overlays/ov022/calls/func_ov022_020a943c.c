@@ -1,7 +1,3 @@
-extern void releaseMovieDecodeContext(void);
-
-int func_ov022_020a943c(int a)
-{
-    releaseMovieDecodeContext();
-    return a;
-}
+#define destroyMovieStreamContext_020a941c func_ov022_020a943c
+#define releaseMovieDecodeContext_020a99dc releaseMovieDecodeContext
+#include "src/ov022/video_playback/destroyMovieStreamContext_020a941c.c"

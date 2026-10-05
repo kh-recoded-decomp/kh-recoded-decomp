@@ -1,15 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct ActorManager {
-    u8 pad_000[0x3F00];
-    u32 field_3f00;
-    u32 field_3f04;
-} ActorManager;
-
-extern ActorManager *data_ov001_020a0500;
-
-void SetManagerCallbackPair(u32 value1, u32 value2)
-{
-    data_ov001_020a0500->field_3f00 = value1;
-    data_ov001_020a0500->field_3f04 = value2;
-}
+#define func_ov001_020889d0 SetManagerCallbackPair
+#define g_actorManager_020a04e0 data_ov001_020a0500
+#include "src/ov001/object_creation/func_ov001_020889d0.c"

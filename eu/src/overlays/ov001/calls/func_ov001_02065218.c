@@ -1,6 +1,3 @@
-extern int LoadLevelTableFile();
-
-int func_ov001_02065218(int arg0) {
-    LoadLevelTableFile(arg0);
-    return 1;
-}
+#define FS_EndOverlay LoadLevelTableFile
+#define FS_UnloadOverlayImage_02065218 func_ov001_02065218
+#include "src/ov001/library_nitro_fs/FS_UnloadOverlayImage_02065218.c"

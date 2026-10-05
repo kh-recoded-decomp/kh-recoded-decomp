@@ -1,32 +1,7 @@
-#include "libs/nitro/gx/gx_load_internal.h"
-#include "libs/nitro/gx/gx_load_state_internal.h"
-
-void GX_LoadTex(const void *source, u32 offset, u32 size)
-{
-    void *destination;
-
-    if (gGXTextureLoadState.texLCDCBase2 == 0) {
-        destination = (void *)(gGXTextureLoadState.texLCDCBase1 + offset);
-    } else {
-        if (offset + size < gGXTextureLoadState.texBlock1Size) {
-            destination = (void *)(gGXTextureLoadState.texLCDCBase1 + offset);
-        } else if (offset >= gGXTextureLoadState.texBlock1Size) {
-            destination = (void *)(gGXTextureLoadState.texLCDCBase2 + offset -
-                                   gGXTextureLoadState.texBlock1Size);
-        } else {
-            void *secondDestination =
-                (void *)gGXTextureLoadState.texLCDCBase2;
-            u32 firstSize = gGXTextureLoadState.texBlock1Size - offset;
-            destination =
-                (void *)(gGXTextureLoadState.texLCDCBase1 + offset);
-
-            GXi_DmaCopy32(GXi_DmaId, source, destination, firstSize);
-            GXi_DmaCopy32Async(GXi_DmaId,
-                               (const u8 *)source + firstSize,
-                               secondDestination, size - firstSize, 0, 0);
-            return;
-        }
-    }
-
-    GXi_DmaCopy32Async(GXi_DmaId, source, destination, size, 0, 0);
-}
+#define GX_LoadTex_02008050 GX_LoadTex
+#define StartWordDmaTransferChecked_02004ec8 MIi_DmaCopy32
+#define data_02055c1c GXi_DmaId
+#define data_02056f28 gGXTextureLoadState
+#define func_01ff8710 MIi_CpuCopy32
+#define func_0200511c MIi_DmaCopy32Async
+#include "src/arm9/library_nitro_gx/GX_LoadTex_02008050.c"

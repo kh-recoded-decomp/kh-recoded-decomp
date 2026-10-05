@@ -1,15 +1,8 @@
-#include "libs/nns/gfd/gfd_LinkedListVramMan_Types.h"
-
-void NNS_GfdInitLnkPlttVramManager(u32 size, void *work, u32 workSize, BOOL useAsDefault)
-{
-    sLnkPlttVramManager.size = size;
-    sLnkPlttVramManager.work = work;
-    sLnkPlttVramManager.workSize = workSize;
-
-    NNS_GfdResetLnkPlttVramState();
-
-    if (useAsDefault) {
-        sDefaultAllocPlttVramFunc = NNS_GfdAllocLnkPlttVram;
-        sDefaultFreePlttVramFunc = NNS_GfdFreeLnkPlttVram;
-    }
-}
+#define InitRangeManagerConfig_02014858 NNS_GfdInitLnkPlttVramManager
+#define data_02055c54 sDefaultAllocPlttVramFunc
+#define data_02055c58 sDefaultFreePlttVramFunc
+#define func_020148ac NNS_GfdAllocLnkPlttVram
+#define func_02014980 NNS_GfdFreeLnkPlttVram
+#define func_020149c4 NNS_GfdResetLnkPlttVramState
+#define g_rangeManagerConfig_0205a900 sLnkPlttVramManager
+#include "src/arm9/resource_management/InitRangeManagerConfig_02014858.c"

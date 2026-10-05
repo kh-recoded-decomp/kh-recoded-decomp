@@ -1,7 +1,3 @@
-typedef int BOOL;
-extern BOOL CARDi_TryWaitAsync(void);
-
-BOOL CARD_TryWaitBackupAsync(void)
-{
-    return CARDi_TryWaitAsync();
-}
+#define PXI_InitFifo CARDi_TryWaitAsync
+#define PXI_Init_02009a90 CARD_TryWaitBackupAsync
+#include "src/arm9/library_nitro_pxi/PXI_Init_02009a90.c"

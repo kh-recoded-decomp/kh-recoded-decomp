@@ -1,7 +1,3 @@
-extern void PMi_DeleteList(void *list, void *info);
-extern int PMi_PostSleepCallbackList;
-
-void PM_DeletePostSleepCallback(void *info)
-{
-    PMi_DeleteList(&PMi_PostSleepCallbackList, info);
-}
+#define PM_DeletePreSleepCallback_02010b14 PM_DeletePostSleepCallback
+#define data_020597d8 PMi_PostSleepCallbackList
+#include "src/arm9/library_nitro_spi/PM_DeletePreSleepCallback_02010b14.c"
