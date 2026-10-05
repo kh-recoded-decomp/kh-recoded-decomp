@@ -1,0 +1,229 @@
+    .text       start:0x020beb20 end:0x020c226c kind:code align:32
+    .rodata     start:0x020c226c end:0x020c2284 kind:rodata align:4
+    .ctor       start:0x020c2284 end:0x020c2284 kind:rodata align:4
+    .data       start:0x020c22a0 end:0x020c2900 kind:data align:32
+    .bss        start:0x020c2900 end:0x020c2920 kind:bss align:32
+
+src/overlays/ov099/calls/AlignUpTo4K_020beb20.c:
+    complete
+    .text       start:0x020beb20 end:0x020beb40
+
+src/overlays/ov099/calls/RemapModelId.c:
+    complete
+    .text       start:0x020beb40 end:0x020becb4
+
+src/overlays/ov099/calls/UpdateModelViewerScreen.c:
+    complete
+    .text       start:0x020bee7c end:0x020beef4
+
+src/overlays/ov099/calls/HandleListCursorUp.c:
+    complete
+    .text       start:0x020beef4 end:0x020bef60
+
+src/overlays/ov099/calls/HandleListCursorDown.c:
+    complete
+    .text       start:0x020bef60 end:0x020befcc
+
+src/overlays/ov099/calls/HandleListPageDown.c:
+    complete
+    .text       start:0x020bf038 end:0x020bf0a4
+
+src/overlays/ov099/calls/CloseSubBgPanel.c:
+    complete
+    .text       start:0x020bf0fc end:0x020bf154
+
+src/overlays/ov099/calls/OpenSubBgPanel.c:
+    complete
+    .text       start:0x020bf154 end:0x020bf1b0
+
+src/overlays/ov099/calls/LoadMessageFiles.c:
+    complete
+    .text       start:0x020bf410 end:0x020bf454
+
+src/overlays/ov099/calls/FreeLoadedFiles_020bf454.c:
+    complete
+    .text       start:0x020bf454 end:0x020bf47c
+
+src/overlays/ov099/calls/LoadViewerBackgrounds.c:
+    complete
+    .text       start:0x020bf47c end:0x020bf5c4
+
+src/overlays/ov099/calls/FreeResourceBlocks_020bf5c4.c:
+    complete
+    .text       start:0x020bf5c4 end:0x020bf5f4
+
+src/overlays/ov099/calls/FreeViewerResources.c:
+    complete
+    .text       start:0x020bf7bc end:0x020bf838
+
+src/overlays/ov099/calls/DrawShadowedAnchoredText_020c05a8.c:
+    complete
+    .text       start:0x020c05a8 end:0x020c060c
+
+src/overlays/ov099/calls/CreateViewerSlotObjs.c:
+    complete
+    .text       start:0x020c0668 end:0x020c07e8
+
+src/overlays/ov099/calls/ReleaseObjManagers.c:
+    complete
+    .text       start:0x020c07e8 end:0x020c081c
+
+src/overlays/ov099/calls/SetSlotObjVisible.c:
+    complete
+    .text       start:0x020c0840 end:0x020c087c
+
+src/overlays/ov099/calls/CreateSlotObj.c:
+    complete
+    .text       start:0x020c087c end:0x020c0984
+
+src/overlays/ov099/calls/SetSlotObjPosition.c:
+    complete
+    .text       start:0x020c0984 end:0x020c0a94
+
+src/overlays/ov099/calls/RefreshSlotObj.c:
+    complete
+    .text       start:0x020c0a94 end:0x020c0aec
+
+src/overlays/ov099/calls/GetSlotObjBounds.c:
+    complete
+    .text       start:0x020c0aec end:0x020c0b5c
+
+src/overlays/ov099/calls/StepListCursorUp.c:
+    complete
+    .text       start:0x020c0dc8 end:0x020c0f00
+
+src/overlays/ov099/calls/StepListCursorDown_020c0f00.c:
+    complete
+    .text       start:0x020c0f00 end:0x020c1034
+
+src/overlays/ov099/calls/MoveListCursorUp_020c1034.c:
+    complete
+    .text       start:0x020c1034 end:0x020c10f8
+
+src/overlays/ov099/calls/MoveListCursorDown.c:
+    complete
+    .text       start:0x020c10f8 end:0x020c11d4
+
+src/overlays/ov099/calls/IsEntryFlagSet_020c16ac.c:
+    complete
+    .text       start:0x020c16ac end:0x020c16d4
+
+src/overlays/ov099/calls/SetEntryFlag_020c16d4.c:
+    complete
+    .text       start:0x020c16d4 end:0x020c16f0
+
+src/overlays/ov099/calls/SyncEnemyEntryFlags.c:
+    complete
+    .text       start:0x020c16f0 end:0x020c1780
+
+src/overlays/ov099/calls/SetViewerMode.c:
+    complete
+    .text       start:0x020c1780 end:0x020c1798
+
+src/overlays/ov099/auto/func_ov099_020c1798.c:
+    complete
+    .text       start:0x020c1798 end:0x020c17a4
+
+src/overlays/ov099/auto/func_ov099_020c17a4.c:
+    complete
+    .text       start:0x020c17a4 end:0x020c17a8
+
+src/overlays/ov099/calls/RunViewerIntroMode.c:
+    complete
+    .text       start:0x020c17a8 end:0x020c185c
+
+src/overlays/ov099/calls/ApplyQuaternionCorrectionToMatrix_020c185c.c:
+    complete
+    .text       start:0x020c185c end:0x020c1908
+
+src/overlays/ov099/calls/LoadViewerModelTable.c:
+    complete
+    .text       start:0x020c1ab8 end:0x020c1b28
+
+src/overlays/ov099/calls/FreeModelFiles.c:
+    complete
+    .text       start:0x020c1b28 end:0x020c1b44
+
+src/overlays/ov099/calls/InitModelCamera.c:
+    complete
+    .text       start:0x020c1b44 end:0x020c1b6c
+
+src/overlays/ov099/calls/ReleaseViewerModels.c:
+    complete
+    .text       start:0x020c1d20 end:0x020c1d7c
+
+src/overlays/ov099/calls/ResetModelViewer.c:
+    complete
+    .text       start:0x020c216c end:0x020c21b8
+
+src/overlays/ov099/calls/DestroyModelViewer.c:
+    complete
+    .text       start:0x020c21b8 end:0x020c21d8
+
+src/overlays/ov099/calls/DrawModelViewer.c:
+    complete
+    .text       start:0x020c21d8 end:0x020c2260
+
+src/overlays/ov099/calls/func_ov099_020c2260.c:
+    complete
+    .text       start:0x020c2260 end:0x020c226c
+
+src/overlays/ov099/data/bss/Bss_ov099_020c2900.c:
+    complete
+    .bss        start:0x020c2900 end:0x020c2920
+
+src/overlays/ov099/data/strings/Strings_ov099_020c22e0.c:
+    complete
+    .data       start:0x020c22e0 end:0x020c2328
+
+src/overlays/ov099/data/strings/Strings_ov099_020c2328.c:
+    complete
+    .data       start:0x020c2328 end:0x020c2344
+
+src/overlays/ov099/data/strings/Strings_ov099_020c2360.c:
+    complete
+    .data       start:0x020c2360 end:0x020c2368
+
+src/overlays/ov099/data/strings/Strings_ov099_020c2774.c:
+    complete
+    .data       start:0x020c2774 end:0x020c279c
+
+src/overlays/ov099/data/strings/Strings_ov099_020c288c.c:
+    complete
+    .data       start:0x020c288c end:0x020c28a4
+
+src/overlays/ov099/data/strings/Strings_ov099_020c28a4.c:
+    complete
+    .data       start:0x020c28a4 end:0x020c28c0
+
+src/overlays/ov099/data/strings/Strings_ov099_020c28c0.c:
+    complete
+    .data       start:0x020c28c0 end:0x020c28c8
+
+src/overlays/ov099/data/strings/Strings_ov099_020c28c8.c:
+    complete
+    .data       start:0x020c28c8 end:0x020c28d0
+
+src/overlays/ov099/data/strings/Strings_ov099_020c28d0.c:
+    complete
+    .data       start:0x020c28d0 end:0x020c28e4
+
+src/overlays/ov099/data/strings/Strings_ov099_020c28e4.c:
+    complete
+    .data       start:0x020c28e4 end:0x020c28ec
+
+src/overlays/ov099/data/strings/Strings_ov099_020c28ec.c:
+    complete
+    .data       start:0x020c28ec end:0x020c2900
+
+src/overlays/ov099/data/tables/PointerTables_ov099_020c22a0.c:
+    complete
+    .data       start:0x020c22a0 end:0x020c22b4
+
+src/overlays/ov099/data/tables/gEnemyReportListHandlers.c:
+    complete
+    .data       start:0x020c2380 end:0x020c23ac
+
+src/overlays/ov099/data/tables/gEnemyReportStateHandlers.c:
+    complete
+    .rodata     start:0x020c226c end:0x020c2274

@@ -1,0 +1,49 @@
+    .text       start:0x020d8120 end:0x020d9bdc kind:code align:32
+    .rodata     start:0x020d9bdc end:0x020d9c1c kind:rodata align:4
+    .ctor       start:0x020d9c1c end:0x020d9c1c kind:rodata align:4
+    .data       start:0x020d9c20 end:0x020d9c40 kind:data align:32
+    .bss        start:0x020d9c40 end:0x020d9c40 kind:bss align:32
+
+src/overlays/ov072/calls/IsObjectType111.c:
+    complete
+    .text       start:0x020d8120 end:0x020d8134
+
+src/overlays/ov072/calls/GetObjectPaletteValue.c:
+    complete
+    .text       start:0x020d8134 end:0x020d8158
+
+src/overlays/ov072/calls/InitOv072ActorState.c:
+    complete
+    .text       start:0x020d8158 end:0x020d8250
+
+src/overlays/ov072/calls/SetObjectTimeScale.c:
+    complete
+    .text       start:0x020d8250 end:0x020d8254
+
+src/overlays/ov072/calls/StopLoopingSounds.c:
+    complete
+    .text       start:0x020d8254 end:0x020d82f8
+
+src/overlays/ov072/calls/IsEventActionAllowed.c:
+    complete
+    .text       start:0x020d849c end:0x020d84d0
+
+src/overlays/ov072/calls/SnapContactNormalUp.c:
+    complete
+    .text       start:0x020d84d0 end:0x020d8504
+
+src/overlays/ov072/calls/FlattenContactNormal.c:
+    complete
+    .text       start:0x020d8504 end:0x020d8548
+
+src/overlays/ov072/calls/CreateOv072SceneTask.c:
+    complete
+    .text       start:0x020d9acc end:0x020d9bdc
+
+src/overlays/ov072/data/strings/Strings_ov072_020d9c20.c:
+    complete
+    .data       start:0x020d9c20 end:0x020d9c30
+
+src/overlays/ov072/data/strings/Strings_ov072_020d9c30.c:
+    complete
+    .data       start:0x020d9c30 end:0x020d9c40

@@ -1,0 +1,9 @@
+extern int ScriptVm_ReadOperandInt(int a, void *b);
+extern void SetScreenLayerImage(int a, int b);
+
+int func_ov036_020be0a8(int param_1, unsigned short *param_2) {
+    int a = ScriptVm_ReadOperandInt(param_1, param_2);
+    int b = ScriptVm_ReadOperandInt(param_1, param_2 + 4);
+    SetScreenLayerImage(a, b);
+    return 1;
+}

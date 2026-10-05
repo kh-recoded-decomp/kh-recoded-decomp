@@ -1,0 +1,24 @@
+    .text       start:0x020d8120 end:0x020d8538 kind:code align:32
+    .ctor       start:0x020d8538 end:0x020d8538 kind:rodata align:4
+    .data       start:0x020d8540 end:0x020d8580 kind:data align:32
+    .bss        start:0x020d8580 end:0x020d8580 kind:bss align:32
+
+src/overlays/ov062/calls/AdvanceGroupUnitPhase.c:
+    complete
+    .text       start:0x020d8204 end:0x020d8272
+
+src/overlays/ov062/calls/FireGroupShot.c:
+    complete
+    .text       start:0x020d8274 end:0x020d8354
+
+src/overlays/ov062/calls/UpdateFinishingAttackAction.c:
+    complete
+    .text       start:0x020d8354 end:0x020d83fc
+
+src/overlays/ov062/calls/CreateBossBattleObject.c:
+    complete
+    .text       start:0x020d83fc end:0x020d8538
+
+src/overlays/ov062/data/strings/Strings_ov062_020d8540.c:
+    complete
+    .data       start:0x020d8540 end:0x020d8569

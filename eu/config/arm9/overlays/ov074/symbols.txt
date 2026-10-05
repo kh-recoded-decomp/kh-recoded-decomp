@@ -1,0 +1,25 @@
+func_ov074_020c4280 kind:function(arm,size=0xc78) addr:0x020c4280
+func_ov074_020c4ef8 kind:function(arm,size=0xcc) addr:0x020c4ef8
+ReleaseRootMenu kind:function(arm,size=0x10c) addr:0x020c4fc4
+CaptureSelectedJointMtx kind:function(arm,size=0x58) addr:0x020c50d0
+func_ov074_020c5128 kind:function(arm,size=0x148) addr:0x020c5128
+DrawRootMenuText kind:function(arm,size=0x224) addr:0x020c5270
+UpdateRootMenuGraphics kind:function(arm,size=0x7c) addr:0x020c5494
+SelectPreviousRootMenuItem kind:function(arm,size=0x60) addr:0x020c5510
+SelectNextRootMenuItem kind:function(arm,size=0x6c) addr:0x020c5570
+ToggleRootMenuOptionLeft kind:function(arm,size=0x38) addr:0x020c55dc
+ToggleRootMenuOptionRight kind:function(arm,size=0x38) addr:0x020c5614
+func_ov074_020c564c kind:function(arm,size=0x1b0) addr:0x020c564c
+HandleRootMenuCancel kind:function(arm,size=0x144) addr:0x020c57fc
+sOv074_WeaponTg01_020c5940 kind:data(any) addr:0x020c5940
+sOv074_WeaponTg00_020c5950 kind:data(any) addr:0x020c5950
+data_ov074_020c5960 kind:data(any) addr:0x020c5960
+data_ov074_020c5970 kind:data(any) addr:0x020c5970
+data_ov074_020c59a0 kind:data(any) addr:0x020c59a0 ambiguous
+sOv074_Root_020c59e4 kind:data(any) addr:0x020c59e4
+sOv074_Smenu_020c59ec kind:data(any) addr:0x020c59ec
+sOv074_UiMenuStrLanguageFormatSSZ_020c59f4 kind:data(any) addr:0x020c59f4
+sOv074_BaChSoTex0Z_020c5a0c kind:data(any) addr:0x020c5a0c
+sOv074_EvMoSoP2_020c5a1c kind:data(any) addr:0x020c5a1c
+sOv074_EvMoSoWeP2_020c5a28 kind:data(any) addr:0x020c5a28
+sOv074_BaChSoMdl0PZ_020c5a38 kind:data(any) addr:0x020c5a38

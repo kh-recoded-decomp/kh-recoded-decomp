@@ -1,0 +1,2 @@
+DefaultStepDone kind:function(thumb,size=0x4) addr:0x020a0540
+gDefaultStepHandler kind:data(any) addr:0x020a0560

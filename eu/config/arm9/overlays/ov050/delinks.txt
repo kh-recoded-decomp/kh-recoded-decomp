@@ -1,0 +1,39 @@
+    .text       start:0x020c3520 end:0x020c3c18 kind:code align:32
+    .ctor       start:0x020c3c18 end:0x020c3c18 kind:rodata align:4
+    .bss        start:0x020c3c20 end:0x020c3c20 kind:bss align:32
+
+src/overlays/ov050/calls/func_ov050_020c3520.c:
+    complete
+    .text       start:0x020c3520 end:0x020c3530
+
+src/overlays/ov050/calls/CameraCollision_ShouldBlockFacing.c:
+    complete
+    .text       start:0x020c3558 end:0x020c35cc
+
+src/overlays/ov050/calls/UpdatePathCameraCollision.c:
+    complete
+    .text       start:0x020c3600 end:0x020c38a8
+
+src/overlays/ov050/calls/TrackPlayerCameraDirection.c:
+    complete
+    .text       start:0x020c38a8 end:0x020c39fc
+
+src/overlays/ov050/calls/ClampCameraUpVector.c:
+    complete
+    .text       start:0x020c39fc end:0x020c3b30
+
+src/overlays/ov050/calls/StartCameraDriftFromParams.c:
+    complete
+    .text       start:0x020c3b30 end:0x020c3b64
+
+src/overlays/ov050/calls/ResetCameraViewTopDown.c:
+    complete
+    .text       start:0x020c3b64 end:0x020c3bbc
+
+src/overlays/ov050/calls/func_ov050_020c3bbc.c:
+    complete
+    .text       start:0x020c3bbc end:0x020c3bc4
+
+src/overlays/ov050/calls/InitCameraPathState.c:
+    complete
+    .text       start:0x020c3bc4 end:0x020c3c18

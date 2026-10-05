@@ -1,0 +1,108 @@
+    .text       start:0x020a1e00 end:0x020a3840 kind:code align:32
+    .ctor       start:0x020a3840 end:0x020a3840 kind:rodata align:4
+    .data       start:0x020a3860 end:0x020a3880 kind:data align:32
+    .bss        start:0x020a3880 end:0x020a3880 kind:bss align:32
+
+src/overlays/ov018/calls/ScriptCmd_CreateSlotObject.c:
+    complete
+    .text       start:0x020a1e00 end:0x020a1e2e
+
+src/overlays/ov018/calls/ScriptCmd_CreateGroupObject.c:
+    complete
+    .text       start:0x020a1e30 end:0x020a1edc
+
+src/overlays/ov018/calls/ResetKindDirection.c:
+    complete
+    .text       start:0x020a1edc end:0x020a1f04
+
+src/overlays/ov018/calls/LoadKind6ObjectPhase.c:
+    complete
+    .text       start:0x020a1f18 end:0x020a2220
+
+src/overlays/ov018/calls/FieldObject_TryCollideWithVolume.c:
+    complete
+    .text       start:0x020a2420 end:0x020a2620
+
+src/overlays/ov018/calls/GetRaisedTargetPosition.c:
+    complete
+    .text       start:0x020a2620 end:0x020a265e
+
+src/overlays/ov018/calls/GetActorVelocity_020a2660.c:
+    complete
+    .text       start:0x020a2660 end:0x020a269a
+
+src/overlays/ov018/calls/FieldObject_SpawnContactEffect.c:
+    complete
+    .text       start:0x020a288c end:0x020a28f2
+
+src/overlays/ov018/calls/FieldObject_HandleStrongHit.c:
+    complete
+    .text       start:0x020a28f4 end:0x020a2988
+
+src/overlays/ov018/calls/ResetObjectRotation.c:
+    complete
+    .text       start:0x020a2988 end:0x020a2a00
+
+src/overlays/ov018/calls/FieldObject_ShiftWithArea.c:
+    complete
+    .text       start:0x020a2a00 end:0x020a2c18
+
+src/overlays/ov018/calls/BounceVelocityOffNormal.c:
+    complete
+    .text       start:0x020a3154 end:0x020a31b0
+
+src/overlays/ov018/auto/func_ov018_020a31b0.c:
+    complete
+    .text       start:0x020a31b0 end:0x020a31b2
+
+src/overlays/ov018/auto/func_ov018_020a31b4.c:
+    complete
+    .text       start:0x020a31b4 end:0x020a31b6
+
+src/overlays/ov018/calls/CreateKind6EntryPool.c:
+    complete
+    .text       start:0x020a31b8 end:0x020a3254
+
+src/overlays/ov018/calls/CreateKind6FieldObject.c:
+    complete
+    .text       start:0x020a3254 end:0x020a335c
+
+src/overlays/ov018/calls/SetScaledPosition.c:
+    complete
+    .text       start:0x020a3514 end:0x020a3550
+
+src/overlays/ov018/calls/SyncActorShapePosition.c:
+    complete
+    .text       start:0x020a3550 end:0x020a35b2
+
+src/overlays/ov018/calls/CallWithZeroFlag.c:
+    complete
+    .text       start:0x020a35b4 end:0x020a35d6
+
+src/overlays/ov018/calls/SetFlagBit8.c:
+    complete
+    .text       start:0x020a37d0 end:0x020a37e2
+
+src/overlays/ov018/calls/GetKindDuration.c:
+    complete
+    .text       start:0x020a37e4 end:0x020a3804
+
+src/overlays/ov018/calls/TestFlagBit9.c:
+    complete
+    .text       start:0x020a3804 end:0x020a3818
+
+src/overlays/ov018/calls/SetFlagBit10.c:
+    complete
+    .text       start:0x020a3818 end:0x020a382a
+
+src/overlays/ov018/calls/TestFlagBit10.c:
+    complete
+    .text       start:0x020a382c end:0x020a3840
+
+src/overlays/ov018/data/strings/Strings_ov018_020a3870.c:
+    complete
+    .data       start:0x020a3870 end:0x020a3880
+
+src/overlays/ov018/data/tables/gScriptObjectCreationHandlers.c:
+    complete
+    .data       start:0x020a3860 end:0x020a3870

@@ -1,0 +1,69 @@
+    .text       start:0x020c4280 end:0x020c4fb0 kind:code align:32
+    .rodata     start:0x020c4fb0 end:0x020c4fc0 kind:rodata align:4
+    .ctor       start:0x020c4fc0 end:0x020c4fc0 kind:rodata align:4
+    .data       start:0x020c4fe0 end:0x020c51e0 kind:data align:32
+    .bss        start:0x020c51e0 end:0x020c5200 kind:bss align:32
+
+src/overlays/ov078/calls/InitPageMenu.c:
+    complete
+    .text       start:0x020c4280 end:0x020c4370
+
+src/overlays/ov078/auto/func_ov078_020c4370.c:
+    complete
+    .text       start:0x020c4370 end:0x020c4372
+
+src/overlays/ov078/calls/LoadPageMenuWidgets.c:
+    complete
+    .text       start:0x020c4590 end:0x020c4728
+
+src/overlays/ov078/calls/func_ov078_020c4728.c:
+    complete
+    .text       start:0x020c4728 end:0x020c473c
+
+src/overlays/ov078/calls/InitSequence.c:
+    complete
+    .text       start:0x020c473c end:0x020c4768
+
+src/overlays/ov078/calls/PlaceCursorNode.c:
+    complete
+    .text       start:0x020c4768 end:0x020c4792
+
+src/overlays/ov078/calls/ShowUnlockedPageTabs.c:
+    complete
+    .text       start:0x020c4794 end:0x020c48fc
+
+src/overlays/ov078/calls/RefreshPageTabs.c:
+    complete
+    .text       start:0x020c48fc end:0x020c49a0
+
+src/overlays/ov078/calls/DrawPageHeader.c:
+    complete
+    .text       start:0x020c4b38 end:0x020c4c4c
+
+src/overlays/ov078/calls/SelectNextPage.c:
+    complete
+    .text       start:0x020c4ea0 end:0x020c4f44
+
+src/overlays/ov078/calls/StepCursorBack.c:
+    complete
+    .text       start:0x020c4f60 end:0x020c4f86
+
+src/overlays/ov078/calls/StepCursorForward.c:
+    complete
+    .text       start:0x020c4f88 end:0x020c4fae
+
+src/overlays/ov078/data/bss/Bss_ov078_020c51e0.c:
+    complete
+    .bss        start:0x020c51e0 end:0x020c5200
+
+src/overlays/ov078/data/strings/Strings_ov078_020c5168.c:
+    complete
+    .data       start:0x020c5168 end:0x020c517c
+
+src/overlays/ov078/data/strings/Strings_ov078_020c517c.c:
+    complete
+    .data       start:0x020c517c end:0x020c5190
+
+src/overlays/ov078/data/strings/Strings_ov078_020c5190.c:
+    complete
+    .data       start:0x020c5190 end:0x020c51b8

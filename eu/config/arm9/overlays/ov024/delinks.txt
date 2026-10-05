@@ -1,0 +1,105 @@
+    .text       start:0x020b5820 end:0x020b7340 kind:code align:32
+    .rodata     start:0x020b7340 end:0x020b749c kind:rodata align:4
+    .ctor       start:0x020b749c end:0x020b749c kind:rodata align:4
+    .data       start:0x020b74a0 end:0x020b7540 kind:data align:32
+    .bss        start:0x020b7540 end:0x020b7580 kind:bss align:32
+
+src/overlays/ov024/calls/ReleaseSubObjectIfActive.c:
+    complete
+    .text       start:0x020b5820 end:0x020b5848
+
+src/overlays/ov024/calls/ReleaseOverlayResourceSlots.c:
+    complete
+    .text       start:0x020b5de0 end:0x020b5e04
+
+src/overlays/ov024/calls/DrawWidgetNumber.c:
+    complete
+    .text       start:0x020b5e04 end:0x020b5f2a
+
+src/overlays/ov024/calls/RerollBoardSlots.c:
+    complete
+    .text       start:0x020b5f2c end:0x020b6100
+
+src/overlays/ov024/calls/GenerateRandomLinks.c:
+    complete
+    .text       start:0x020b6100 end:0x020b61a6
+
+src/overlays/ov024/calls/FillRandomEmptySlots.c:
+    complete
+    .text       start:0x020b61a8 end:0x020b620c
+
+src/overlays/ov024/calls/PlaceBoardBonuses.c:
+    complete
+    .text       start:0x020b620c end:0x020b63e4
+
+src/overlays/ov024/calls/GetLinkDistance.c:
+    complete
+    .text       start:0x020b64f4 end:0x020b6574
+
+src/overlays/ov024/calls/PickRandomSetBit.c:
+    complete
+    .text       start:0x020b6574 end:0x020b65c2
+
+src/overlays/ov024/calls/SetupSubScreenBgLayers.c:
+    complete
+    .text       start:0x020b65fc end:0x020b666c
+
+src/overlays/ov024/calls/SetupBoardTextLayer.c:
+    complete
+    .text       start:0x020b666c end:0x020b6750
+
+src/overlays/ov024/calls/TeardownContextState.c:
+    complete
+    .text       start:0x020b6750 end:0x020b6798
+
+src/overlays/ov024/calls/CreateDefaultObjectSlot.c:
+    complete
+    .text       start:0x020b6798 end:0x020b67b4
+
+src/overlays/ov024/calls/CreateObjectSlot.c:
+    complete
+    .text       start:0x020b67b4 end:0x020b6820
+
+src/overlays/ov024/calls/CreateBoardScreen.c:
+    complete
+    .text       start:0x020b6820 end:0x020b6b60
+
+src/overlays/ov024/calls/StartBoardScreen.c:
+    complete
+    .text       start:0x020b6b60 end:0x020b6bd0
+
+src/overlays/ov024/calls/DestroyBoardScreen.c:
+    complete
+    .text       start:0x020b6d98 end:0x020b6e14
+
+src/overlays/ov024/calls/ApplyDirectionOffset.c:
+    complete
+    .text       start:0x020b7248 end:0x020b72a8
+
+src/overlays/ov024/calls/func_ov024_020b72fc.c:
+    complete
+    .text       start:0x020b72fc end:0x020b7304
+
+src/overlays/ov024/calls/ResetBoardCursor.c:
+    complete
+    .text       start:0x020b7304 end:0x020b7340
+
+src/overlays/ov024/data/bss/Bss_ov024_020b7540.c:
+    complete
+    .bss        start:0x020b7540 end:0x020b7580
+
+src/overlays/ov024/data/strings/Strings_ov024_020b74b4.c:
+    complete
+    .data       start:0x020b74b4 end:0x020b74cc
+
+src/overlays/ov024/data/strings/Strings_ov024_020b74cc.c:
+    complete
+    .data       start:0x020b74cc end:0x020b74e4
+
+src/overlays/ov024/data/strings/Strings_ov024_020b74e4.c:
+    complete
+    .data       start:0x020b74e4 end:0x020b7508
+
+src/overlays/ov024/data/strings/Strings_ov024_020b7508.c:
+    complete
+    .data       start:0x020b7508 end:0x020b7540

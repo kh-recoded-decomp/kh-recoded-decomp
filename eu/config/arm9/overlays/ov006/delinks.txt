@@ -1,0 +1,89 @@
+    .text       start:0x020a0540 end:0x020a1854 kind:code align:32
+    .rodata     start:0x020a1854 end:0x020a18c4 kind:rodata align:4
+    .ctor       start:0x020a18c4 end:0x020a18c4 kind:rodata align:4
+    .data       start:0x020a18e0 end:0x020a1900 kind:data align:32
+    .bss        start:0x020a1900 end:0x020a1900 kind:bss align:32
+
+src/overlays/ov006/calls/BuildDescendingLevelTable.c:
+    complete
+    .text       start:0x020a0694 end:0x020a0706
+
+src/overlays/ov006/calls/RespawnElevatorObject.c:
+    complete
+    .text       start:0x020a07d4 end:0x020a0a58
+
+src/overlays/ov006/auto/func_ov006_020a0a58.c:
+    complete
+    .text       start:0x020a0a58 end:0x020a0a5c
+
+src/overlays/ov006/calls/UpdateElevatorObject.c:
+    complete
+    .text       start:0x020a0c20 end:0x020a0ce8
+
+src/overlays/ov006/calls/UpdateStaticElevator.c:
+    complete
+    .text       start:0x020a0ce8 end:0x020a0e5c
+
+src/overlays/ov006/calls/CreateElevatorObject.c:
+    complete
+    .text       start:0x020a0f38 end:0x020a1054
+
+src/overlays/ov006/calls/FloodGridDistance.c:
+    complete
+    .text       start:0x020a1054 end:0x020a10f8
+
+src/overlays/ov006/calls/LoadGridLevel.c:
+    complete
+    .text       start:0x020a11b4 end:0x020a123c
+
+src/overlays/ov006/calls/ResolveSegmentNodes.c:
+    complete
+    .text       start:0x020a123c end:0x020a126a
+
+src/overlays/ov006/calls/FindGridPath.c:
+    complete
+    .text       start:0x020a126c end:0x020a12f4
+
+src/overlays/ov006/calls/GetGridCellIndex.c:
+    complete
+    .text       start:0x020a12f4 end:0x020a1338
+
+src/overlays/ov006/auto/func_ov006_020a1338.c:
+    complete
+    .text       start:0x020a1338 end:0x020a1342
+
+src/overlays/ov006/calls/GetGridCellCenter.c:
+    complete
+    .text       start:0x020a1390 end:0x020a13bc
+
+src/overlays/ov006/calls/IsGridLineClear.c:
+    complete
+    .text       start:0x020a13bc end:0x020a14e0
+
+src/overlays/ov006/auto/func_ov006_020a14e0.c:
+    complete
+    .text       start:0x020a14e0 end:0x020a14e8
+
+src/overlays/ov006/calls/AnimSequence_Init.c:
+    complete
+    .text       start:0x020a14e8 end:0x020a152e
+
+src/overlays/ov006/calls/InitPathCursor.c:
+    complete
+    .text       start:0x020a1530 end:0x020a156c
+
+src/overlays/ov006/calls/AddTouchPoint.c:
+    complete
+    .text       start:0x020a156c end:0x020a158e
+
+src/overlays/ov006/calls/AnimSequence_Update.c:
+    complete
+    .text       start:0x020a1590 end:0x020a16b4
+
+src/overlays/ov006/calls/GetStageJointPosition.c:
+    complete
+    .text       start:0x020a16b4 end:0x020a1760
+
+src/overlays/ov006/data/tables/gOv006Handlers.c:
+    complete
+    .data       start:0x020a18e0 end:0x020a1900

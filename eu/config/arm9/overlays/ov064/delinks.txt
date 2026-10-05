@@ -1,0 +1,21 @@
+    .text       start:0x020d8120 end:0x020d8844 kind:code align:32
+    .rodata     start:0x020d8844 end:0x020d886c kind:rodata align:4
+    .ctor       start:0x020d886c end:0x020d886c kind:rodata align:4
+    .data       start:0x020d8880 end:0x020d88a0 kind:data align:32
+    .bss        start:0x020d88a0 end:0x020d88a0 kind:bss align:32
+
+src/overlays/ov064/calls/BeginMarkedIntroScene.c:
+    complete
+    .text       start:0x020d8120 end:0x020d81bc
+
+src/overlays/ov064/calls/UpdateRisingFinisherAction.c:
+    complete
+    .text       start:0x020d81bc end:0x020d8254
+
+src/overlays/ov064/calls/CreateMarkedSceneTask.c:
+    complete
+    .text       start:0x020d8708 end:0x020d8844
+
+src/overlays/ov064/data/strings/Strings_ov064_020d8880.c:
+    complete
+    .data       start:0x020d8880 end:0x020d88a0

@@ -1,0 +1,149 @@
+    .text       start:0x020ba400 end:0x020be8bc kind:code align:32
+    .rodata     start:0x020be8bc end:0x020be924 kind:rodata align:4
+    .ctor       start:0x020be924 end:0x020be924 kind:rodata align:4
+    .data       start:0x020be940 end:0x020c0fa0 kind:data align:32
+    .bss        start:0x020c0fa0 end:0x020c1040 kind:bss align:32
+
+src/overlays/ov034/calls/DrawResultsWidgetOnLayer.c:
+    complete
+    .text       start:0x020bb06c end:0x020bb090
+
+src/overlays/ov034/calls/ClearResultsWidgetOnLayer.c:
+    complete
+    .text       start:0x020bb090 end:0x020bb0b4
+
+src/overlays/ov034/calls/UpdateResultsFade.c:
+    complete
+    .text       start:0x020bb0b4 end:0x020bb254
+
+src/overlays/ov034/calls/AdvanceResultsTransition.c:
+    complete
+    .text       start:0x020bb254 end:0x020bb294
+
+src/overlays/ov034/calls/SetResultsMode.c:
+    complete
+    .text       start:0x020bb294 end:0x020bb2b0
+
+src/overlays/ov034/calls/EnterResultsTierMode.c:
+    complete
+    .text       start:0x020bb2b0 end:0x020bb324
+
+src/overlays/ov034/calls/InitResultsScreen.c:
+    complete
+    .text       start:0x020bb324 end:0x020bb598
+
+src/overlays/ov034/calls/ResetResultsObjects.c:
+    complete
+    .text       start:0x020bce70 end:0x020bcf50
+
+src/overlays/ov034/calls/DrawResultsCounter.c:
+    complete
+    .text       start:0x020bcf50 end:0x020bd02e
+
+src/overlays/ov034/calls/DrawResultsLabelText.c:
+    complete
+    .text       start:0x020bd030 end:0x020bd0c0
+
+src/overlays/ov034/calls/CommitResultsRewards.c:
+    complete
+    .text       start:0x020bd0c0 end:0x020bd130
+
+src/overlays/ov034/calls/IsResultsShopEntryUnlocked.c:
+    complete
+    .text       start:0x020bdb90 end:0x020bdbf0
+
+src/overlays/ov034/calls/StartResultsScreen.c:
+    complete
+    .text       start:0x020bdbf0 end:0x020bdc38
+
+src/overlays/ov034/calls/PollResultsScreen.c:
+    complete
+    .text       start:0x020bdc38 end:0x020bdc5c
+
+src/overlays/ov034/calls/FinishResultsScreen.c:
+    complete
+    .text       start:0x020bdc5c end:0x020bdcac
+
+src/overlays/ov034/auto/func_ov034_020bdcac.c:
+    complete
+    .text       start:0x020bdcac end:0x020bdcb2
+
+src/overlays/ov034/calls/func_ov034_020bde10.c:
+    complete
+    .text       start:0x020bde10 end:0x020bde28
+
+src/overlays/ov034/calls/IsResultsInputEnabled.c:
+    complete
+    .text       start:0x020bde28 end:0x020bde44
+
+src/overlays/ov034/calls/ClearResultsFlagTwo.c:
+    complete
+    .text       start:0x020bde44 end:0x020bde5c
+
+src/overlays/ov034/calls/MarkResultsComplete.c:
+    complete
+    .text       start:0x020bde5c end:0x020bde70
+
+src/overlays/ov034/calls/MobiClip_SrcIsOpen_020bde70.c:
+    complete
+    .text       start:0x020bde70 end:0x020bde8c
+
+src/overlays/ov034/calls/MobiClip_SrcClose_020bde8c.c:
+    complete
+    .text       start:0x020bde8c end:0x020bdea4
+
+src/overlays/ov034/auto/func_ov034_020bdea4.c:
+    complete
+    .text       start:0x020bdea4 end:0x020bdea8
+
+src/overlays/ov034/calls/CreateObjectSlot_020bdec4.c:
+    complete
+    .text       start:0x020bdec4 end:0x020bdf30
+
+src/overlays/ov034/calls/ApplyResultsPartyBonus.c:
+    complete
+    .text       start:0x020be278 end:0x020be348
+
+src/overlays/ov034/calls/ClassifyResultsShopEntry.c:
+    complete
+    .text       start:0x020be518 end:0x020be568
+
+src/overlays/ov034/calls/InitResultsMovieSourceOps.c:
+    complete
+    .text       start:0x020be568 end:0x020be5a8
+
+src/overlays/ov034/auto/func_ov034_020be734.c:
+    complete
+    .text       start:0x020be734 end:0x020be736
+
+src/overlays/ov034/data/bss/Bss_ov034_020c0fa0.c:
+    complete
+    .bss        start:0x020c0fa0 end:0x020c1040
+
+src/overlays/ov034/data/strings/Strings_ov034_020c0ea8.c:
+    complete
+    .data       start:0x020c0ea8 end:0x020c0eb8
+
+src/overlays/ov034/data/strings/Strings_ov034_020c0ee8.c:
+    complete
+    .data       start:0x020c0ee8 end:0x020c0efc
+
+src/overlays/ov034/data/strings/Strings_ov034_020c0efc.c:
+    complete
+    .data       start:0x020c0efc end:0x020c0f10
+
+src/overlays/ov034/data/strings/Strings_ov034_020c0f10.c:
+    complete
+    .data       start:0x020c0f10 end:0x020c0f20
+
+src/overlays/ov034/data/strings/Strings_ov034_020c0f64.c:
+    complete
+    .data       start:0x020c0f64 end:0x020c0fa0
+
+src/overlays/ov034/data/tables/gResultsScreenHandlers.c:
+    complete
+    .data       start:0x020be944 end:0x020be954
+
+src/overlays/ov034/data/tables/gResultsScreenResourceSet.c:
+    complete
+    .data       start:0x020be974 end:0x020be980

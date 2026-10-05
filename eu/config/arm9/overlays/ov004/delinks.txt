@@ -1,0 +1,153 @@
+    .text       start:0x020613e0 end:0x02063ba8 kind:code align:32
+    .rodata     start:0x02063ba8 end:0x02064500 kind:rodata align:4
+    .ctor       start:0x02064500 end:0x02064500 kind:rodata align:4
+    .data       start:0x02064520 end:0x020645a0 kind:data align:32
+    .bss        start:0x020645a0 end:0x020645c0 kind:bss align:32
+
+src/overlays/ov004/calls/FrameTimer_Start.c:
+    complete
+    .text       start:0x020613e0 end:0x02061400
+
+src/overlays/ov004/calls/FrameTimer_GetElapsed.c:
+    complete
+    .text       start:0x02061400 end:0x0206142c
+
+src/overlays/ov004/calls/FrameTimer_Interpolate.c:
+    complete
+    .text       start:0x0206142c end:0x0206146c
+
+src/overlays/ov004/calls/FrameTimer_IsExpired.c:
+    complete
+    .text       start:0x0206146c end:0x0206148c
+
+src/overlays/ov004/calls/FrameTimer_GetDuration.c:
+    complete
+    .text       start:0x0206148c end:0x020614a4
+
+src/overlays/ov004/calls/RoundFx32ToInt.c:
+    complete
+    .text       start:0x020614a4 end:0x020614b8
+
+src/overlays/ov004/calls/InitScrollTextWork.c:
+    complete
+    .text       start:0x020614b8 end:0x02061598
+
+src/overlays/ov004/calls/LoadScrollTextResources.c:
+    complete
+    .text       start:0x02061598 end:0x02061694
+
+src/overlays/ov004/calls/ReleaseScrollTextWork.c:
+    complete
+    .text       start:0x020616d4 end:0x02061830
+
+src/overlays/ov004/calls/SetWindowCorners.c:
+    complete
+    .text       start:0x02061830 end:0x020619a0
+
+src/overlays/ov004/calls/CopyScrollTextTiles.c:
+    complete
+    .text       start:0x02061d5c end:0x02061e7c
+
+src/overlays/ov004/calls/ResetScrollTextScript.c:
+    complete
+    .text       start:0x02062034 end:0x02062090
+
+src/overlays/ov004/calls/StartScrollTextRoll.c:
+    complete
+    .text       start:0x02062090 end:0x0206223c
+
+src/overlays/ov004/auto/func_ov004_0206223c.c:
+    complete
+    .text       start:0x0206223c end:0x02062250
+
+src/overlays/ov004/auto/func_ov004_02062250.c:
+    complete
+    .text       start:0x02062250 end:0x02062264
+
+src/overlays/ov004/calls/BeginScrollTextExit.c:
+    complete
+    .text       start:0x02062264 end:0x020622e4
+
+src/overlays/ov004/calls/func_ov004_020622e4.c:
+    complete
+    .text       start:0x020622e4 end:0x020622f0
+
+src/overlays/ov004/auto/func_ov004_0206252c.c:
+    complete
+    .text       start:0x0206252c end:0x02062530
+
+src/overlays/ov004/calls/UpdateScrollTextFadeOut.c:
+    complete
+    .text       start:0x02062530 end:0x020625fc
+
+src/overlays/ov004/calls/UpdateScrollTextCrossfade.c:
+    complete
+    .text       start:0x02062768 end:0x02062990
+
+src/overlays/ov004/calls/UpdateScrollTextScreens.c:
+    complete
+    .text       start:0x02062990 end:0x020629d0
+
+src/overlays/ov004/calls/RunScrollTextFrame.c:
+    complete
+    .text       start:0x020629d0 end:0x02062b70
+
+src/overlays/ov004/auto/func_ov004_02062d78.c:
+    complete
+    .text       start:0x02062d78 end:0x02062dc0
+
+src/overlays/ov004/calls/FeedScrollTextLine.c:
+    complete
+    .text       start:0x02062dc0 end:0x02062ff4
+
+src/overlays/ov004/calls/SaveScrollOffsets.c:
+    complete
+    .text       start:0x02062ff4 end:0x0206306c
+
+src/overlays/ov004/calls/ApplyScrollTextOffsets.c:
+    complete
+    .text       start:0x0206306c end:0x02063218
+
+src/overlays/ov004/calls/InitTitleDisplay.c:
+    complete
+    .text       start:0x02063218 end:0x02063414
+
+src/overlays/ov004/calls/end_key_share_and_register_result.c:
+    complete
+    .text       start:0x02063558 end:0x02063598
+
+src/overlays/ov004/calls/SetupScrollTextBackgrounds.c:
+    complete
+    .text       start:0x0206366c end:0x02063988
+
+src/overlays/ov004/calls/InitScrollTextLayer.c:
+    complete
+    .text       start:0x02063988 end:0x02063a28
+
+src/overlays/ov004/calls/InitScrollTextLayers.c:
+    complete
+    .text       start:0x02063a28 end:0x02063aec
+
+src/overlays/ov004/calls/LoadScrollTextEntryTable.c:
+    complete
+    .text       start:0x02063aec end:0x02063ba8
+
+src/overlays/ov004/data/bss/Bss_ov004_020645a0.c:
+    complete
+    .bss        start:0x020645a0 end:0x020645c0
+
+src/overlays/ov004/data/strings/Strings_ov004_02064544.c:
+    complete
+    .data       start:0x02064544 end:0x02064564
+
+src/overlays/ov004/data/strings/Strings_ov004_02064564.c:
+    complete
+    .data       start:0x02064564 end:0x0206459d
+
+src/overlays/ov004/data/tables/gOv004Callbacks.c:
+    complete
+    .rodata     start:0x02063be0 end:0x02063bf0
+
+src/overlays/ov004/data/tables/gScrollTextHandlers.c:
+    complete
+    .data       start:0x02064520 end:0x02064530

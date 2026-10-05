@@ -1,0 +1,85 @@
+    .text       start:0x020c4280 end:0x020c5d48 kind:code align:32
+    .rodata     start:0x020c5d48 end:0x020c5d80 kind:rodata align:4
+    .ctor       start:0x020c5d80 end:0x020c5d80 kind:rodata align:4
+    .data       start:0x020c5da0 end:0x020c5e20 kind:data align:32
+    .bss        start:0x020c5e20 end:0x020c5e40 kind:bss align:32
+
+src/overlays/ov080/calls/CountValidSlots.c:
+    complete
+    .text       start:0x020c4280 end:0x020c42d0
+
+src/overlays/ov080/calls/UpdateSaveSelectScreen.c:
+    complete
+    .text       start:0x020c4760 end:0x020c4af0
+
+src/overlays/ov080/calls/DestroySaveSelectScreen.c:
+    complete
+    .text       start:0x020c4af0 end:0x020c4ba4
+
+src/overlays/ov080/calls/BuildSlotSummary.c:
+    complete
+    .text       start:0x020c4ba4 end:0x020c4cd8
+
+src/overlays/ov080/calls/HandleSlotReadResult.c:
+    complete
+    .text       start:0x020c4cd8 end:0x020c4d28
+
+src/overlays/ov080/calls/DrawSlotDetailPanel.c:
+    complete
+    .text       start:0x020c5118 end:0x020c54d8
+
+src/overlays/ov080/calls/HideSaveSlotsShowPrompt.c:
+    complete
+    .text       start:0x020c54d8 end:0x020c55a4
+
+src/overlays/ov080/calls/LoadSlotIntoGame.c:
+    complete
+    .text       start:0x020c58e4 end:0x020c5944
+
+src/overlays/ov080/calls/SelectSlotOnUp.c:
+    complete
+    .text       start:0x020c5944 end:0x020c5988
+
+src/overlays/ov080/calls/SelectSlotOnDown.c:
+    complete
+    .text       start:0x020c5988 end:0x020c59cc
+
+src/overlays/ov080/calls/ToggleOptionOnLeft.c:
+    complete
+    .text       start:0x020c59cc end:0x020c59fc
+
+src/overlays/ov080/calls/ToggleOptionOnRight.c:
+    complete
+    .text       start:0x020c59fc end:0x020c5a2c
+
+src/overlays/ov080/calls/ConfirmSaveSelectStep.c:
+    complete
+    .text       start:0x020c5a2c end:0x020c5c28
+
+src/overlays/ov080/calls/CancelSaveSelectStep.c:
+    complete
+    .text       start:0x020c5c28 end:0x020c5cd4
+
+src/overlays/ov080/calls/ConfirmSelectedSlot.c:
+    complete
+    .text       start:0x020c5cd4 end:0x020c5d28
+
+src/overlays/ov080/auto/func_ov080_020c5d28.c:
+    complete
+    .text       start:0x020c5d28 end:0x020c5d2a
+
+src/overlays/ov080/auto/func_ov080_020c5d2c.c:
+    complete
+    .text       start:0x020c5d2c end:0x020c5d2e
+
+src/overlays/ov080/calls/UpdateValidSlotCount.c:
+    complete
+    .text       start:0x020c5d30 end:0x020c5d48
+
+src/overlays/ov080/data/bss/Bss_ov080_020c5e20.c:
+    complete
+    .bss        start:0x020c5e20 end:0x020c5e40
+
+src/overlays/ov080/data/strings/Strings_ov080_020c5de4.c:
+    complete
+    .data       start:0x020c5de4 end:0x020c5dfc

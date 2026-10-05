@@ -1,0 +1,19 @@
+InitScoreScreen kind:function(thumb,size=0x47c) addr:0x020beac0
+func_ov083_020bef3c kind:function(thumb,size=0x3d4) addr:0x020bef3c
+ReleaseScreenResources_020bf310 kind:function(thumb,size=0x46) addr:0x020bf310
+SetScoreDisplay kind:function(thumb,size=0x4e) addr:0x020bf358
+ApplyScoreEvents kind:function(thumb,size=0x1b4) addr:0x020bf3a8
+DrawTableString kind:function(thumb,size=0x2e) addr:0x020bf55c
+DrawFormattedText kind:function(thumb,size=0x40) addr:0x020bf58c
+GetRowColorWithLimit kind:function(thumb,size=0x20) addr:0x020bf5cc
+GetRowColorWithStatus kind:function(thumb,size=0x2e) addr:0x020bf5ec
+GetRowColor kind:function(thumb,size=0x18) addr:0x020bf61c
+PushPendingPair kind:function(thumb,size=0x22) addr:0x020bf634
+SetSharedStateValue kind:function(thumb,size=0x14) addr:0x020bf658
+data_ov083_020bf66c kind:data(any) addr:0x020bf66c
+data_ov083_020bf67c kind:data(any) addr:0x020bf67c
+data_ov083_020bf68c kind:data(any) addr:0x020bf68c
+data_ov083_020bf6a0 kind:data(any) addr:0x020bf6a0 ambiguous
+sOv083_UiMenuStrLanguageShopSZ_020bf6e0 kind:data(any) addr:0x020bf6e0
+data_ov083_020bf6f8 kind:data(any) addr:0x020bf6f8
+data_ov083_020bf700 kind:data(any) addr:0x020bf700

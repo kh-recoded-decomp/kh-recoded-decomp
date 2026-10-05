@@ -1,0 +1,393 @@
+    .text       start:0x020a1e00 end:0x020a6e0c kind:code align:32
+    .rodata     start:0x020a6e0c end:0x020a6e48 kind:rodata align:4
+    .ctor       start:0x020a6e48 end:0x020a6e48 kind:rodata align:4
+    .data       start:0x020a6e60 end:0x020a6ee0 kind:data align:32
+    .bss        start:0x020a6ee0 end:0x020a6ee0 kind:bss align:32
+
+src/overlays/ov016/calls/ScriptVm_ConsumeOperandInt.c:
+    complete
+    .text       start:0x020a1e00 end:0x020a1e14
+
+src/overlays/ov016/calls/ScriptVm_ConsumeOperandFx32.c:
+    complete
+    .text       start:0x020a1e14 end:0x020a1e28
+
+src/overlays/ov016/calls/ScriptCmd_LoadOverlayKind9.c:
+    complete
+    .text       start:0x020a1e28 end:0x020a1e84
+
+src/overlays/ov016/calls/ScriptCmd_ApplyEntityColorParams.c:
+    complete
+    .text       start:0x020a2044 end:0x020a2082
+
+src/overlays/ov016/calls/ScriptCmd_ApplyEntityColorVecParams.c:
+    complete
+    .text       start:0x020a20e0 end:0x020a2128
+
+src/overlays/ov016/calls/ScriptCmd_ApplyPackedIds.c:
+    complete
+    .text       start:0x020a2128 end:0x020a2198
+
+src/overlays/ov016/calls/ScriptCmd_ApplyEntryValues.c:
+    complete
+    .text       start:0x020a2198 end:0x020a2208
+
+src/overlays/ov016/calls/ScriptCmd_SetGroupFlag21.c:
+    complete
+    .text       start:0x020a2208 end:0x020a2244
+
+src/overlays/ov016/calls/func_ov016_020a2284.c:
+    complete
+    .text       start:0x020a2284 end:0x020a228e
+
+src/overlays/ov016/calls/SaveFieldUnitMode.c:
+    complete
+    .text       start:0x020a2290 end:0x020a229a
+
+src/overlays/ov016/calls/InstallFieldObjectHitCallbacks.c:
+    complete
+    .text       start:0x020a25e4 end:0x020a2688
+
+src/overlays/ov016/calls/CreateFieldModelObject.c:
+    complete
+    .text       start:0x020a2708 end:0x020a273e
+
+src/overlays/ov016/calls/ReleaseHandleIfSet.c:
+    complete
+    .text       start:0x020a2740 end:0x020a275a
+
+src/overlays/ov016/calls/GetFieldUnitActionMotion.c:
+    complete
+    .text       start:0x020a275c end:0x020a2782
+
+src/overlays/ov016/calls/GetMaximumFieldValue.c:
+    complete
+    .text       start:0x020a2784 end:0x020a27a6
+
+src/overlays/ov016/calls/GetMaximumAlternateFieldValue.c:
+    complete
+    .text       start:0x020a27a8 end:0x020a27ca
+
+src/overlays/ov016/calls/SnapFieldObjectToGround.c:
+    complete
+    .text       start:0x020a27cc end:0x020a28f0
+
+src/overlays/ov016/calls/GrantFieldObjectReward.c:
+    complete
+    .text       start:0x020a28f0 end:0x020a298c
+
+src/overlays/ov016/calls/EnterFieldUnitPhase6.c:
+    complete
+    .text       start:0x020a29c4 end:0x020a29ec
+
+src/overlays/ov016/calls/SetFieldObjectWeightByKind.c:
+    complete
+    .text       start:0x020a29ec end:0x020a2a92
+
+src/overlays/ov016/calls/InitAnimTrack.c:
+    complete
+    .text       start:0x020a2a94 end:0x020a2ab4
+
+src/overlays/ov016/calls/AdvanceAnimTrack.c:
+    complete
+    .text       start:0x020a2ab4 end:0x020a2acc
+
+src/overlays/ov016/calls/PlaceFieldObjectNode.c:
+    complete
+    .text       start:0x020a2acc end:0x020a2b28
+
+src/overlays/ov016/calls/StepFieldObjectAnim.c:
+    complete
+    .text       start:0x020a2b3c end:0x020a2b48
+
+src/overlays/ov016/calls/PlaceFieldObjectAtPosition.c:
+    complete
+    .text       start:0x020a2b48 end:0x020a2b58
+
+src/overlays/ov016/calls/StartFieldUnitMotion.c:
+    complete
+    .text       start:0x020a2b58 end:0x020a2b96
+
+src/overlays/ov016/calls/SteerFieldObjectToTarget.c:
+    complete
+    .text       start:0x020a2bd0 end:0x020a2c2a
+
+src/overlays/ov016/calls/CopyEntryValueIfSet.c:
+    complete
+    .text       start:0x020a2ca8 end:0x020a2cc2
+
+src/overlays/ov016/calls/PushFieldObject.c:
+    complete
+    .text       start:0x020a3278 end:0x020a3374
+
+src/overlays/ov016/calls/OnFieldObjectBumped.c:
+    complete
+    .text       start:0x020a3374 end:0x020a341c
+
+src/overlays/ov016/calls/IsFieldStateAvailable.c:
+    complete
+    .text       start:0x020a341c end:0x020a3438
+
+src/overlays/ov016/calls/GetCarrierVelocity.c:
+    complete
+    .text       start:0x020a3438 end:0x020a34e8
+
+src/overlays/ov016/calls/MoveFieldObjectWithCollision.c:
+    complete
+    .text       start:0x020a351c end:0x020a3810
+
+src/overlays/ov016/calls/PairFieldObjects.c:
+    complete
+    .text       start:0x020a3810 end:0x020a395c
+
+src/overlays/ov016/calls/UpdateSlidingFieldObject.c:
+    complete
+    .text       start:0x020a395c end:0x020a3b64
+
+src/overlays/ov016/calls/OnMode11FieldObjectHit.c:
+    complete
+    .text       start:0x020a3b64 end:0x020a3c02
+
+src/overlays/ov016/calls/InitializeFieldEffect.c:
+    complete
+    .text       start:0x020a3c04 end:0x020a3c70
+
+src/overlays/ov016/calls/AnimateLaunchedFieldObject.c:
+    complete
+    .text       start:0x020a3c70 end:0x020a3d44
+
+src/overlays/ov016/calls/RecordVisitedEntry.c:
+    complete
+    .text       start:0x020a3d44 end:0x020a3db0
+
+src/overlays/ov016/calls/HandleFieldObjectHit.c:
+    complete
+    .text       start:0x020a3db0 end:0x020a4100
+
+src/overlays/ov016/calls/SweepFieldObjectBounce.c:
+    complete
+    .text       start:0x020a4100 end:0x020a41cc
+
+src/overlays/ov016/auto/func_ov016_020a41cc.c:
+    complete
+    .text       start:0x020a41cc end:0x020a41d0
+
+src/overlays/ov016/calls/CheckFieldUnitLinkLatch.c:
+    complete
+    .text       start:0x020a41e0 end:0x020a4230
+
+src/overlays/ov016/calls/UpdateFloorSwitch.c:
+    complete
+    .text       start:0x020a4230 end:0x020a4458
+
+src/overlays/ov016/calls/IsFieldLinkReady.c:
+    complete
+    .text       start:0x020a4468 end:0x020a448c
+
+src/overlays/ov016/calls/ApplyFieldObjectForceToPlayer.c:
+    complete
+    .text       start:0x020a448c end:0x020a46b4
+
+src/overlays/ov016/calls/UpdateKickedFieldObject.c:
+    complete
+    .text       start:0x020a4820 end:0x020a4970
+
+src/overlays/ov016/calls/ApplyFieldObjectBob.c:
+    complete
+    .text       start:0x020a4970 end:0x020a49f8
+
+src/overlays/ov016/calls/StartFieldObjectFall.c:
+    complete
+    .text       start:0x020a49f8 end:0x020a4a84
+
+src/overlays/ov016/calls/CheckFieldUnitHeightLimit.c:
+    complete
+    .text       start:0x020a4a84 end:0x020a4ab4
+
+src/overlays/ov016/calls/SwayAndDropFieldObject.c:
+    complete
+    .text       start:0x020a4ab4 end:0x020a4c74
+
+src/overlays/ov016/calls/StackLinkedFieldObjects.c:
+    complete
+    .text       start:0x020a4c74 end:0x020a4cea
+
+src/overlays/ov016/calls/StackFieldObjectChain.c:
+    complete
+    .text       start:0x020a4cec end:0x020a4d2e
+
+src/overlays/ov016/calls/LowerFieldObjectStep.c:
+    complete
+    .text       start:0x020a4d30 end:0x020a4df8
+
+src/overlays/ov016/calls/LoadFieldUnitModel.c:
+    complete
+    .text       start:0x020a4df8 end:0x020a5084
+
+src/overlays/ov016/calls/FreeHeapRecord.c:
+    complete
+    .text       start:0x020a5084 end:0x020a50a2
+
+src/overlays/ov016/calls/HandleFieldObjectHit_020a50a4.c:
+    complete
+    .text       start:0x020a50a4 end:0x020a5150
+
+src/overlays/ov016/calls/DispatchActorCollision.c:
+    complete
+    .text       start:0x020a5150 end:0x020a52d8
+
+src/overlays/ov016/calls/DispatchCollisionUnlessSameSlot.c:
+    complete
+    .text       start:0x020a52d8 end:0x020a5312
+
+src/overlays/ov016/calls/GetFieldUnitTopPosition.c:
+    complete
+    .text       start:0x020a5314 end:0x020a535e
+
+src/overlays/ov016/calls/GetFieldUnitVelocity.c:
+    complete
+    .text       start:0x020a5360 end:0x020a539a
+
+src/overlays/ov016/calls/DrawFieldUnitObject.c:
+    complete
+    .text       start:0x020a539c end:0x020a567c
+
+src/overlays/ov016/calls/ForwardModeCheck.c:
+    complete
+    .text       start:0x020a567c end:0x020a568c
+
+src/overlays/ov016/calls/OnFieldUnitPushedUp.c:
+    complete
+    .text       start:0x020a568c end:0x020a56da
+
+src/overlays/ov016/calls/ClearFieldUnitPending.c:
+    complete
+    .text       start:0x020a57ec end:0x020a5808
+
+src/overlays/ov016/calls/UpdateFieldUnitAnimPhase.c:
+    complete
+    .text       start:0x020a5808 end:0x020a584c
+
+src/overlays/ov016/calls/DispatchFieldObjectPhase.c:
+    complete
+    .text       start:0x020a584c end:0x020a58c0
+
+src/overlays/ov016/calls/TickFieldObjectRespawn.c:
+    complete
+    .text       start:0x020a58c0 end:0x020a598c
+
+src/overlays/ov016/calls/UpdateFieldObject.c:
+    complete
+    .text       start:0x020a598c end:0x020a5b40
+
+src/overlays/ov016/auto/func_ov016_020a5b40.c:
+    complete
+    .text       start:0x020a5b40 end:0x020a5b42
+
+src/overlays/ov016/calls/RefreshFieldObjectPhase.c:
+    complete
+    .text       start:0x020a5b44 end:0x020a5bb4
+
+src/overlays/ov016/calls/SetFieldObjectVisible.c:
+    complete
+    .text       start:0x020a5bb4 end:0x020a5c34
+
+src/overlays/ov016/calls/GetFieldUnitPosition.c:
+    complete
+    .text       start:0x020a5c34 end:0x020a5c46
+
+src/overlays/ov016/calls/HasFieldUnitPhase.c:
+    complete
+    .text       start:0x020a5c48 end:0x020a5c5a
+
+src/overlays/ov016/calls/ReleaseFieldSceneResources.c:
+    complete
+    .text       start:0x020a5c5c end:0x020a5d1a
+
+src/overlays/ov016/calls/GetFieldUnitSlotRecord.c:
+    complete
+    .text       start:0x020a5d1c end:0x020a5d36
+
+src/overlays/ov016/calls/CopyFieldUnitSlotFrame.c:
+    complete
+    .text       start:0x020a5f14 end:0x020a5f38
+
+src/overlays/ov016/calls/ApplyFieldObjectSpawnEntry.c:
+    complete
+    .text       start:0x020a5f38 end:0x020a6084
+
+src/overlays/ov016/calls/SyncFieldObjectAnimation.c:
+    complete
+    .text       start:0x020a6084 end:0x020a60fa
+
+src/overlays/ov016/calls/CreateFieldUnit.c:
+    complete
+    .text       start:0x020a60fc end:0x020a62fc
+
+src/overlays/ov016/calls/InitScriptEntityParams.c:
+    complete
+    .text       start:0x020a62fc end:0x020a6358
+
+src/overlays/ov016/calls/SetFieldUnitPathPoint.c:
+    complete
+    .text       start:0x020a6930 end:0x020a695c
+
+src/overlays/ov016/calls/StoreFieldUnitEntry.c:
+    complete
+    .text       start:0x020a695c end:0x020a6974
+
+src/overlays/ov016/calls/SetFieldObjectHidden.c:
+    complete
+    .text       start:0x020a6988 end:0x020a6a0e
+
+src/overlays/ov016/auto/func_ov016_020a6a10.c:
+    complete
+    .text       start:0x020a6a10 end:0x020a6a1a
+
+src/overlays/ov016/calls/IsFieldUnitPhase6.c:
+    complete
+    .text       start:0x020a6a84 end:0x020a6a98
+
+src/overlays/ov016/calls/func_ov016_020a6a98.c:
+    complete
+    .text       start:0x020a6a98 end:0x020a6aa0
+
+src/overlays/ov016/calls/IsFieldUnitAction7.c:
+    complete
+    .text       start:0x020a6aa0 end:0x020a6ab0
+
+src/overlays/ov016/calls/InitFieldUnitUpwardVelocity.c:
+    complete
+    .text       start:0x020a6ab0 end:0x020a6af4
+
+src/overlays/ov016/calls/IsFieldUnitAction5Mode1.c:
+    complete
+    .text       start:0x020a6af4 end:0x020a6b12
+
+src/overlays/ov016/auto/func_ov016_020a6b14.c:
+    complete
+    .text       start:0x020a6b14 end:0x020a6b1a
+
+src/overlays/ov016/calls/ResetUnitToBasePosition.c:
+    complete
+    .text       start:0x020a6b1c end:0x020a6ce4
+
+src/overlays/ov016/calls/SetFieldUnitPosition.c:
+    complete
+    .text       start:0x020a6ce4 end:0x020a6d1a
+
+src/overlays/ov016/calls/SetGroupMembersFlag21.c:
+    complete
+    .text       start:0x020a6d1c end:0x020a6d60
+
+src/overlays/ov016/calls/EnterFieldUnitPhase5.c:
+    complete
+    .text       start:0x020a6d60 end:0x020a6dac
+
+src/overlays/ov016/calls/TryEnterFieldUnitPhase5.c:
+    complete
+    .text       start:0x020a6dac end:0x020a6de4
+
+src/overlays/ov016/data/strings/Strings_ov016_020a6ec8.c:
+    complete
+    .data       start:0x020a6ec8 end:0x020a6ee0

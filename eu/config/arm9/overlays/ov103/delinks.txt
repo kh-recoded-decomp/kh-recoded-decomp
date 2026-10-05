@@ -1,0 +1,149 @@
+    .text       start:0x020beb20 end:0x020c049c kind:code align:32
+    .rodata     start:0x020c049c end:0x020c04ac kind:rodata align:4
+    .ctor       start:0x020c04ac end:0x020c04ac kind:rodata align:4
+    .data       start:0x020c04c0 end:0x020c0720 kind:data align:32
+    .bss        start:0x020c0720 end:0x020c0740 kind:bss align:32
+
+src/overlays/ov103/calls/InitMenuScene_020beb40.c:
+    complete
+    .text       start:0x020beb40 end:0x020beb84
+
+src/overlays/ov103/calls/DestroyMenuScene_020beb84.c:
+    complete
+    .text       start:0x020beb84 end:0x020bebb8
+
+src/overlays/ov103/calls/RunSceneStateHandler.c:
+    complete
+    .text       start:0x020bebb8 end:0x020bebe4
+
+src/overlays/ov103/calls/HandleListScrollDown.c:
+    complete
+    .text       start:0x020bebe4 end:0x020bec54
+
+src/overlays/ov103/calls/HandleListScrollUp.c:
+    complete
+    .text       start:0x020bec54 end:0x020becc4
+
+src/overlays/ov103/calls/SetupMenuDisplay.c:
+    complete
+    .text       start:0x020bed5c end:0x020bef14
+
+src/overlays/ov103/calls/FreeArchiveFiles.c:
+    complete
+    .text       start:0x020bef58 end:0x020bef80
+
+src/overlays/ov103/calls/LoadGraphicsResources.c:
+    complete
+    .text       start:0x020bef80 end:0x020bf094
+
+src/overlays/ov103/calls/FreeGraphicsResources_020bf094.c:
+    complete
+    .text       start:0x020bf094 end:0x020bf0c4
+
+src/overlays/ov103/calls/FreeTextLayers.c:
+    complete
+    .text       start:0x020bf34c end:0x020bf3bc
+
+src/overlays/ov103/calls/DrawShadowedAnchoredText_020bf584.c:
+    complete
+    .text       start:0x020bf584 end:0x020bf5e8
+
+src/overlays/ov103/calls/ReleaseSlotPool_020bf66c.c:
+    complete
+    .text       start:0x020bf66c end:0x020bf688
+
+src/overlays/ov103/calls/InitSlotPool_020bf688.c:
+    complete
+    .text       start:0x020bf688 end:0x020bf698
+
+src/overlays/ov103/calls/SetSlotEntryVisible.c:
+    complete
+    .text       start:0x020bf698 end:0x020bf6d0
+
+src/overlays/ov103/calls/CreateSlotEntry.c:
+    complete
+    .text       start:0x020bf6d0 end:0x020bf7d4
+
+src/overlays/ov103/calls/SetSlotPosition_020bf7d4.c:
+    complete
+    .text       start:0x020bf7d4 end:0x020bf8e0
+
+src/overlays/ov103/calls/GetSlotEntryResource.c:
+    complete
+    .text       start:0x020bf8e0 end:0x020bf94c
+
+src/overlays/ov103/calls/RefreshRowHighlights.c:
+    complete
+    .text       start:0x020bf94c end:0x020bf9b4
+
+src/overlays/ov103/calls/SetupListPanel.c:
+    complete
+    .text       start:0x020bf9b4 end:0x020bfc20
+
+src/overlays/ov103/calls/ScrollListUp_020bfc20.c:
+    complete
+    .text       start:0x020bfc20 end:0x020bfd60
+
+src/overlays/ov103/calls/ScrollListDown_020bfd60.c:
+    complete
+    .text       start:0x020bfd60 end:0x020bfe9c
+
+src/overlays/ov103/calls/IsEntryFlagSet_020c01a0.c:
+    complete
+    .text       start:0x020c01a0 end:0x020c01cc
+
+src/overlays/ov103/calls/SetEntryFlag_020c01cc.c:
+    complete
+    .text       start:0x020c01cc end:0x020c01ec
+
+src/overlays/ov103/calls/RefreshUnlockedEntries.c:
+    complete
+    .text       start:0x020c01ec end:0x020c0314
+
+src/overlays/ov103/calls/SetScenePhase.c:
+    complete
+    .text       start:0x020c0314 end:0x020c032c
+
+src/overlays/ov103/auto/func_ov103_020c032c.c:
+    complete
+    .text       start:0x020c032c end:0x020c0338
+
+src/overlays/ov103/auto/func_ov103_020c0338.c:
+    complete
+    .text       start:0x020c0338 end:0x020c033c
+
+src/overlays/ov103/calls/RunFadeInStep.c:
+    complete
+    .text       start:0x020c03e8 end:0x020c0490
+
+src/overlays/ov103/calls/func_ov103_020c0490.c:
+    complete
+    .text       start:0x020c0490 end:0x020c049c
+
+src/overlays/ov103/data/bss/Bss_ov103_020c0720.c:
+    complete
+    .bss        start:0x020c0720 end:0x020c0740
+
+src/overlays/ov103/data/strings/Strings_ov103_020c052c.c:
+    complete
+    .data       start:0x020c052c end:0x020c0544
+
+src/overlays/ov103/data/strings/Strings_ov103_020c0544.c:
+    complete
+    .data       start:0x020c0544 end:0x020c055c
+
+src/overlays/ov103/data/strings/Strings_ov103_020c056c.c:
+    complete
+    .data       start:0x020c056c end:0x020c05a0
+
+src/overlays/ov103/data/strings/Strings_ov103_020c05a0.c:
+    complete
+    .data       start:0x020c05a0 end:0x020c05c4
+
+src/overlays/ov103/data/strings/Strings_ov103_020c06f8.c:
+    complete
+    .data       start:0x020c06f8 end:0x020c0720
+
+src/overlays/ov103/data/tables/PointerTables_ov103_020c04c0.c:
+    complete
+    .data       start:0x020c04c0 end:0x020c04d4

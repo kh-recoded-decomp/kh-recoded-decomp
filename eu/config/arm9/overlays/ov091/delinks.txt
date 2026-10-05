@@ -1,0 +1,261 @@
+    .text       start:0x020beb20 end:0x020c2834 kind:code align:32
+    .rodata     start:0x020c2834 end:0x020c2a34 kind:rodata align:4
+    .ctor       start:0x020c2a34 end:0x020c2a34 kind:rodata align:4
+    .data       start:0x020c2a40 end:0x020c3740 kind:data align:32
+    .bss        start:0x020c3740 end:0x020c3760 kind:bss align:32
+
+src/overlays/ov091/calls/AlignUpTo4K.c:
+    complete
+    .text       start:0x020beb20 end:0x020beb40
+
+src/overlays/ov091/calls/InitRecordMenuScene.c:
+    complete
+    .text       start:0x020beb40 end:0x020bed34
+
+src/overlays/ov091/calls/DestroyMenuScene.c:
+    complete
+    .text       start:0x020bed34 end:0x020bed84
+
+src/overlays/ov091/calls/MoveEntryCursorUp.c:
+    complete
+    .text       start:0x020bedc0 end:0x020bee60
+
+src/overlays/ov091/calls/MoveEntryCursorDown.c:
+    complete
+    .text       start:0x020bee60 end:0x020bef00
+
+src/overlays/ov091/calls/OpenSelectedEntryScene.c:
+    complete
+    .text       start:0x020bef00 end:0x020bef84
+
+src/overlays/ov091/calls/TryCloseEntryMenu.c:
+    complete
+    .text       start:0x020bef84 end:0x020befbc
+
+src/overlays/ov091/calls/SetupRecordMenuDisplay.c:
+    complete
+    .text       start:0x020befbc end:0x020bf1b4
+
+src/overlays/ov091/calls/FreeMessageBuffers.c:
+    complete
+    .text       start:0x020bf1f8 end:0x020bf220
+
+src/overlays/ov091/calls/LoadMenuGraphics.c:
+    complete
+    .text       start:0x020bf220 end:0x020bf400
+
+src/overlays/ov091/calls/FreeGraphicsResources.c:
+    complete
+    .text       start:0x020bf400 end:0x020bf430
+
+src/overlays/ov091/calls/InitMenuTextLayers.c:
+    complete
+    .text       start:0x020bf430 end:0x020bf504
+
+src/overlays/ov091/calls/ReleaseTextLayers.c:
+    complete
+    .text       start:0x020bf504 end:0x020bf560
+
+src/overlays/ov091/calls/DrawRecordSummaryText.c:
+    complete
+    .text       start:0x020bf560 end:0x020bf744
+
+src/overlays/ov091/calls/DrawShadowedAnchoredText.c:
+    complete
+    .text       start:0x020bf744 end:0x020bf7a8
+
+src/overlays/ov091/calls/ReleaseListPanels.c:
+    complete
+    .text       start:0x020bf89c end:0x020bf8cc
+
+src/overlays/ov091/calls/ResetListCursor_020bf8cc.c:
+    complete
+    .text       start:0x020bf8cc end:0x020bf938
+
+src/overlays/ov091/calls/SetListPanelSlotFlag.c:
+    complete
+    .text       start:0x020bf938 end:0x020bf970
+
+src/overlays/ov091/calls/CreateListPanelSlot.c:
+    complete
+    .text       start:0x020bf970 end:0x020bfa4c
+
+src/overlays/ov091/calls/ReleaseListRecords.c:
+    complete
+    .text       start:0x020bfa4c end:0x020bfac0
+
+src/overlays/ov091/calls/SetListPanelSlotPos.c:
+    complete
+    .text       start:0x020bfac0 end:0x020bfbcc
+
+src/overlays/ov091/calls/SetListPanelSlotValue.c:
+    complete
+    .text       start:0x020bfbcc end:0x020bfc20
+
+src/overlays/ov091/calls/GetListPanelSlotData.c:
+    complete
+    .text       start:0x020bfc20 end:0x020bfc8c
+
+src/overlays/ov091/calls/InitScrollList_020bfc8c.c:
+    complete
+    .text       start:0x020bfc8c end:0x020bfef8
+
+src/overlays/ov091/calls/ScrollListUp.c:
+    complete
+    .text       start:0x020bfef8 end:0x020c0030
+
+src/overlays/ov091/calls/ScrollListDown.c:
+    complete
+    .text       start:0x020c0030 end:0x020c0164
+
+src/overlays/ov091/calls/SyncRecordFlags.c:
+    complete
+    .text       start:0x020c1420 end:0x020c1708
+
+src/overlays/ov091/calls/IsEntryFlagSet.c:
+    complete
+    .text       start:0x020c1708 end:0x020c1738
+
+src/overlays/ov091/calls/SetEntryFlag.c:
+    complete
+    .text       start:0x020c1738 end:0x020c175c
+
+src/overlays/ov091/calls/SetSceneMode.c:
+    complete
+    .text       start:0x020c175c end:0x020c1774
+
+src/overlays/ov091/auto/func_ov091_020c1774.c:
+    complete
+    .text       start:0x020c1774 end:0x020c1780
+
+src/overlays/ov091/auto/func_ov091_020c1780.c:
+    complete
+    .text       start:0x020c1780 end:0x020c1784
+
+src/overlays/ov091/calls/RequestEntryTransitionIfIdle.c:
+    complete
+    .text       start:0x020c1784 end:0x020c17b0
+
+src/overlays/ov091/calls/RunIntroPopupStep.c:
+    complete
+    .text       start:0x020c17b0 end:0x020c1878
+
+src/overlays/ov091/calls/DestroyPopupManager.c:
+    complete
+    .text       start:0x020c1930 end:0x020c196c
+
+src/overlays/ov091/calls/UpdatePopupManager.c:
+    complete
+    .text       start:0x020c196c end:0x020c19f0
+
+src/overlays/ov091/calls/DrawPopupText.c:
+    complete
+    .text       start:0x020c19f0 end:0x020c1b08
+
+src/overlays/ov091/calls/ClosePopupText.c:
+    complete
+    .text       start:0x020c1b08 end:0x020c1b74
+
+src/overlays/ov091/calls/MeasurePopupTextTiles.c:
+    complete
+    .text       start:0x020c1b74 end:0x020c1c78
+
+src/overlays/ov091/calls/SetPopupSlotPos.c:
+    complete
+    .text       start:0x020c1c78 end:0x020c1d68
+
+src/overlays/ov091/calls/SetPopupSlotVisible.c:
+    complete
+    .text       start:0x020c1d68 end:0x020c1dc0
+
+src/overlays/ov091/auto/func_ov091_020c1dc0.c:
+    complete
+    .text       start:0x020c1dc0 end:0x020c1dc4
+
+src/overlays/ov091/calls/ShowNextQueuedPopup.c:
+    complete
+    .text       start:0x020c1dc4 end:0x020c1e38
+
+src/overlays/ov091/calls/GrowPopupWindow.c:
+    complete
+    .text       start:0x020c1f58 end:0x020c2004
+
+src/overlays/ov091/calls/ShowPopupFrame.c:
+    complete
+    .text       start:0x020c2004 end:0x020c2084
+
+src/overlays/ov091/calls/HandleEntryConfirmInput.c:
+    complete
+    .text       start:0x020c2084 end:0x020c20fc
+
+src/overlays/ov091/calls/ShrinkPopupWindow.c:
+    complete
+    .text       start:0x020c20fc end:0x020c21ac
+
+src/overlays/ov091/calls/HidePopupWindow.c:
+    complete
+    .text       start:0x020c21ac end:0x020c21f0
+
+src/overlays/ov091/calls/SetSubBg2Visible.c:
+    complete
+    .text       start:0x020c273c end:0x020c2774
+
+src/overlays/ov091/auto/func_ov091_020c2774.c:
+    complete
+    .text       start:0x020c2774 end:0x020c2784
+
+src/overlays/ov091/auto/func_ov091_020c2784.c:
+    complete
+    .text       start:0x020c2784 end:0x020c2798
+
+src/overlays/ov091/auto/func_ov091_020c2798.c:
+    complete
+    .text       start:0x020c2798 end:0x020c27a4
+
+src/overlays/ov091/calls/SetPopupState.c:
+    complete
+    .text       start:0x020c27a4 end:0x020c27b4
+
+src/overlays/ov091/auto/func_ov091_020c27b4.c:
+    complete
+    .text       start:0x020c27b4 end:0x020c27bc
+
+src/overlays/ov091/calls/func_ov091_020c27ec.c:
+    complete
+    .text       start:0x020c27ec end:0x020c27f8
+
+src/overlays/ov091/calls/func_ov091_020c27f8.c:
+    complete
+    .text       start:0x020c27f8 end:0x020c2804
+
+src/overlays/ov091/calls/GetPlayerFlagRecord_020c2820.c:
+    complete
+    .text       start:0x020c2820 end:0x020c2834
+
+src/overlays/ov091/data/bss/Bss_ov091_020c3740.c:
+    complete
+    .bss        start:0x020c3740 end:0x020c375c
+
+src/overlays/ov091/data/bss/Bss_ov091_020c375c.c:
+    complete
+    .bss        start:0x020c375c end:0x020c3760
+
+src/overlays/ov091/data/strings/Strings_ov091_020c2a7c.c:
+    complete
+    .data       start:0x020c2a7c end:0x020c2a90
+
+src/overlays/ov091/data/strings/Strings_ov091_020c2a90.c:
+    complete
+    .data       start:0x020c2a90 end:0x020c2ad8
+
+src/overlays/ov091/data/strings/Strings_ov091_020c2c64.c:
+    complete
+    .data       start:0x020c2c64 end:0x020c2c7c
+
+src/overlays/ov091/data/tables/PointerTables_ov091_020c2a40.c:
+    complete
+    .data       start:0x020c2a40 end:0x020c2a50
+
+src/overlays/ov091/data/tables/gReportTopStateHandlers.c:
+    complete
+    .rodata     start:0x020c283c end:0x020c2848

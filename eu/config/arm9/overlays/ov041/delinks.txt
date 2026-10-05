@@ -1,0 +1,169 @@
+    .text       start:0x020bc520 end:0x020ce210 kind:code align:32
+    .rodata     start:0x020ce210 end:0x020cf8c8 kind:rodata align:4
+    .ctor       start:0x020cf8c8 end:0x020cf8c8 kind:rodata align:4
+    .data       start:0x020cf8e0 end:0x020cff40 kind:data align:32
+    .bss        start:0x020cff40 end:0x020cff80 kind:bss align:32
+
+src/overlays/ov041/auto/func_ov041_020bc520.c:
+    complete
+    .text       start:0x020bc520 end:0x020bc522
+
+src/overlays/ov041/calls/InitMenuScene.c:
+    complete
+    .text       start:0x020bc5e0 end:0x020bc9a4
+
+src/overlays/ov041/calls/SumStageTotals.c:
+    complete
+    .text       start:0x020bc9a4 end:0x020bca5c
+
+src/overlays/ov041/calls/ShutdownMenuScene.c:
+    complete
+    .text       start:0x020bca5c end:0x020bcb48
+
+src/overlays/ov041/calls/GetStageKindSoundId.c:
+    complete
+    .text       start:0x020bcd90 end:0x020bce3e
+
+src/overlays/ov041/calls/GetStageKindMusicId.c:
+    complete
+    .text       start:0x020bce40 end:0x020bceec
+
+src/overlays/ov041/calls/func_ov041_020be088.c:
+    complete
+    .text       start:0x020be088 end:0x020be090
+
+src/overlays/ov041/calls/func_ov041_020be090.c:
+    complete
+    .text       start:0x020be090 end:0x020be098
+
+src/overlays/ov041/calls/IsStageKindAvailable.c:
+    complete
+    .text       start:0x020becbc end:0x020bed58
+
+src/overlays/ov041/calls/FindFreeSlotId.c:
+    complete
+    .text       start:0x020c21d0 end:0x020c21f4
+
+src/overlays/ov041/calls/ReleaseEmbeddedObject.c:
+    complete
+    .text       start:0x020c279c end:0x020c27ac
+
+src/overlays/ov041/calls/MatchesEitherSlotId.c:
+    complete
+    .text       start:0x020c2a24 end:0x020c2a44
+
+src/overlays/ov041/calls/GetPositionAboveGround.c:
+    complete
+    .text       start:0x020c2b00 end:0x020c2b32
+
+src/overlays/ov041/calls/GetActorAnimTrack.c:
+    complete
+    .text       start:0x020c36b8 end:0x020c370c
+
+src/overlays/ov041/calls/LoadActorAnimation.c:
+    complete
+    .text       start:0x020c370c end:0x020c37d4
+
+src/overlays/ov041/calls/DestroyDisplayObject.c:
+    complete
+    .text       start:0x020c37d4 end:0x020c3812
+
+src/overlays/ov041/calls/PlayActorAnimation.c:
+    complete
+    .text       start:0x020c3814 end:0x020c386c
+
+src/overlays/ov041/calls/GetPathNodeOffset.c:
+    complete
+    .text       start:0x020c386c end:0x020c38bc
+
+src/overlays/ov041/calls/SetAnimationFrameIfChanged.c:
+    complete
+    .text       start:0x020c38bc end:0x020c391c
+
+src/overlays/ov041/calls/LoadSharedRecordField.c:
+    complete
+    .text       start:0x020cdfb0 end:0x020ce004
+
+src/overlays/ov041/calls/InitRecordOwnerSlots.c:
+    complete
+    .text       start:0x020ce1c8 end:0x020ce200
+
+src/overlays/ov041/data/bss/Bss_ov041_020cff40.c:
+    complete
+    .bss        start:0x020cff40 end:0x020cff80
+
+src/overlays/ov041/data/strings/Strings_ov041_020cf710.c:
+    complete
+    .rodata     start:0x020cf710 end:0x020cf720
+
+src/overlays/ov041/data/strings/Strings_ov041_020cf730.c:
+    complete
+    .rodata     start:0x020cf730 end:0x020cf740
+
+src/overlays/ov041/data/strings/Strings_ov041_020cf770.c:
+    complete
+    .rodata     start:0x020cf770 end:0x020cf780
+
+src/overlays/ov041/data/strings/Strings_ov041_020cf780.c:
+    complete
+    .rodata     start:0x020cf780 end:0x020cf790
+
+src/overlays/ov041/data/strings/Strings_ov041_020cf93c.c:
+    complete
+    .data       start:0x020cf93c end:0x020cf958
+
+src/overlays/ov041/data/strings/Strings_ov041_020cf958.c:
+    complete
+    .data       start:0x020cf958 end:0x020cf968
+
+src/overlays/ov041/data/strings/Strings_ov041_020cf968.c:
+    complete
+    .data       start:0x020cf968 end:0x020cf978
+
+src/overlays/ov041/data/strings/Strings_ov041_020cf9f8.c:
+    complete
+    .data       start:0x020cf9f8 end:0x020cfa08
+
+src/overlays/ov041/data/strings/Strings_ov041_020cfa08.c:
+    complete
+    .data       start:0x020cfa08 end:0x020cfa18
+
+src/overlays/ov041/data/strings/Strings_ov041_020cfa18.c:
+    complete
+    .data       start:0x020cfa18 end:0x020cfa20
+
+src/overlays/ov041/data/strings/Strings_ov041_020cfa20.c:
+    complete
+    .data       start:0x020cfa20 end:0x020cfa44
+
+src/overlays/ov041/data/strings/Strings_ov041_020cfa44.c:
+    complete
+    .data       start:0x020cfa44 end:0x020cfa54
+
+src/overlays/ov041/data/strings/Strings_ov041_020cfa54.c:
+    complete
+    .data       start:0x020cfa54 end:0x020cfa78
+
+src/overlays/ov041/data/strings/Strings_ov041_020cfa78.c:
+    complete
+    .data       start:0x020cfa78 end:0x020cfa8c
+
+src/overlays/ov041/data/strings/Strings_ov041_020cfa8c.c:
+    complete
+    .data       start:0x020cfa8c end:0x020cfaa0
+
+src/overlays/ov041/data/strings/Strings_ov041_020cfaa0.c:
+    complete
+    .data       start:0x020cfaa0 end:0x020cfab0
+
+src/overlays/ov041/data/strings/Strings_ov041_020cfab0.c:
+    complete
+    .data       start:0x020cfab0 end:0x020cfac0
+
+src/overlays/ov041/data/strings/Strings_ov041_020cfac0.c:
+    complete
+    .data       start:0x020cfac0 end:0x020cfac8
+
+src/overlays/ov041/data/tables/gOv041ResourceSets.c:
+    complete
+    .data       start:0x020cfac8 end:0x020cfae0

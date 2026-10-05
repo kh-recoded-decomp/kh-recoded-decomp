@@ -1,0 +1,18 @@
+ConfigMenu_Init kind:function(thumb,size=0x3a8) addr:0x020c4280
+ConfigMenu_UpdateHelp kind:function(thumb,size=0xb0) addr:0x020c4628
+ConfigMenu_Release kind:function(thumb,size=0x60) addr:0x020c46d8
+func_ov079_020c4738 kind:function(thumb,size=0xe8) addr:0x020c4738
+ConfigMenu_SaveOptions kind:function(thumb,size=0x7c) addr:0x020c4820
+ConfigMenu_UpdateTags kind:function(thumb,size=0xaa) addr:0x020c489c
+func_ov079_020c4948 kind:function(thumb,size=0x144) addr:0x020c4948
+ConfigMenu_Refresh kind:function(thumb,size=0x32) addr:0x020c4a8c
+ConfigMenu_CursorUp kind:function(thumb,size=0x28) addr:0x020c4ac0
+ConfigMenu_CursorDown kind:function(thumb,size=0x2c) addr:0x020c4ae8
+ConfigMenu_PrevValue kind:function(thumb,size=0x30) addr:0x020c4b14
+ConfigMenu_NextValue kind:function(thumb,size=0x30) addr:0x020c4b44
+func_ov079_020c4b74 kind:function(thumb,size=0x4c) addr:0x020c4b74
+func_ov079_020c4bc0 kind:function(thumb,size=0x4c) addr:0x020c4bc0
+func_ov079_020c4c0c kind:function(thumb,size=0x24) addr:0x020c4c0c
+data_ov079_020c4c30 kind:data(any) addr:0x020c4c30
+data_ov079_020c4c60 kind:data(any) addr:0x020c4c60 ambiguous
+sOv079_UiMenuStrLanguageConfigSZ_020c4ca4 kind:data(any) addr:0x020c4ca4

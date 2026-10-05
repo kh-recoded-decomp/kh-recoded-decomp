@@ -1,0 +1,116 @@
+    .text       start:0x020a0540 end:0x020a1c18 kind:code align:32
+    .ctor       start:0x020a1c18 end:0x020a1c18 kind:rodata align:4
+    .data       start:0x020a1c20 end:0x020a1c80 kind:data align:32
+    .bss        start:0x020a1c80 end:0x020a1c80 kind:bss align:32
+
+src/overlays/ov007/calls/ScriptCmd_CreateEntryObjectInSlot.c:
+    complete
+    .text       start:0x020a0540 end:0x020a059a
+
+src/overlays/ov007/calls/ScriptCmd_ShowActorEmote.c:
+    complete
+    .text       start:0x020a059c end:0x020a05d6
+
+src/overlays/ov007/calls/ScriptCmd_SetActorWander.c:
+    complete
+    .text       start:0x020a05d8 end:0x020a066e
+
+src/overlays/ov007/calls/func_ov007_020a0670.c:
+    complete
+    .text       start:0x020a0670 end:0x020a067e
+
+src/overlays/ov007/calls/func_ov007_020a0680.c:
+    complete
+    .text       start:0x020a0680 end:0x020a06b0
+
+src/overlays/ov007/calls/ScriptCmd_ForceRequest.c:
+    complete
+    .text       start:0x020a06b0 end:0x020a06d4
+
+src/overlays/ov007/calls/ScriptCmd_PlayValueSequence.c:
+    complete
+    .text       start:0x020a06d4 end:0x020a0732
+
+src/overlays/ov007/calls/ScriptCmd_SetActorPath.c:
+    complete
+    .text       start:0x020a0734 end:0x020a07aa
+
+src/overlays/ov007/calls/ScriptCmd_CreateFieldTask.c:
+    complete
+    .text       start:0x020a07ac end:0x020a080e
+
+src/overlays/ov007/calls/ScriptCmd_SetActorTarget.c:
+    complete
+    .text       start:0x020a0810 end:0x020a0862
+
+src/overlays/ov007/calls/ScriptCmd_ApplyOperandPair.c:
+    complete
+    .text       start:0x020a0864 end:0x020a0892
+
+src/overlays/ov007/calls/func_ov007_020a0894.c:
+    complete
+    .text       start:0x020a0894 end:0x020a08a2
+
+src/overlays/ov007/calls/CanTouchedObjectAct.c:
+    complete
+    .text       start:0x020a08c8 end:0x020a0928
+
+src/overlays/ov007/calls/DampBounceVelocity.c:
+    complete
+    .text       start:0x020a0adc end:0x020a0b1c
+
+src/overlays/ov007/calls/StepBounceBody.c:
+    complete
+    .text       start:0x020a0b1c end:0x020a0ba4
+
+src/overlays/ov007/calls/StartLaunchMotion.c:
+    complete
+    .text       start:0x020a0e78 end:0x020a0eec
+
+src/overlays/ov007/calls/RespawnWanderActor.c:
+    complete
+    .text       start:0x020a0eec end:0x020a100a
+
+src/overlays/ov007/auto/func_ov007_020a100c.c:
+    complete
+    .text       start:0x020a100c end:0x020a1018
+
+src/overlays/ov007/calls/GetRaisedOwnerPosition.c:
+    complete
+    .text       start:0x020a1018 end:0x020a1044
+
+src/overlays/ov007/calls/DrawWanderMotionModels.c:
+    complete
+    .text       start:0x020a15c8 end:0x020a1740
+
+src/overlays/ov007/calls/FreeEntryArray.c:
+    complete
+    .text       start:0x020a1740 end:0x020a1798
+
+src/overlays/ov007/calls/CreateEmoteFieldObject.c:
+    complete
+    .text       start:0x020a185c end:0x020a18e0
+
+src/overlays/ov007/calls/SetPathTable.c:
+    complete
+    .text       start:0x020a1af4 end:0x020a1b26
+
+src/overlays/ov007/calls/ResetSlotFlags.c:
+    complete
+    .text       start:0x020a1b38 end:0x020a1b5c
+
+src/overlays/ov007/calls/SetSlotSide.c:
+    complete
+    .text       start:0x020a1b5c end:0x020a1b84
+
+src/overlays/ov007/calls/SetTargetPosition_020a1b84.c:
+    complete
+    .text       start:0x020a1b84 end:0x020a1ba0
+
+src/overlays/ov007/calls/InitTaskCallbacks.c:
+    complete
+    .text       start:0x020a1bf0 end:0x020a1c18
+
+src/overlays/ov007/data/tables/gFieldActorScriptCommandHandlers.c:
+    complete
+    .data       start:0x020a1c20 end:0x020a1c80
