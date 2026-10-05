@@ -128,6 +128,8 @@ RUNTIME_HELPERS = {
     "_fleq": 0x02023870,
     "_fls": 0x020238D8,
     "_f2d": 0x0202399C,
+    "_ll_sto_f": 0x02023B28,
+    "_ll_sfrom_f": 0x02023A20,
 }
 
 
