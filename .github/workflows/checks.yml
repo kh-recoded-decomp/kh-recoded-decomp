@@ -19,3 +19,22 @@ jobs:
         with:
           name: BK9E_report
           path: build/report.json
+  eu-report:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: eu
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Generate EU progress audit
+        run: python tools/audit_progress.py
+      - name: Generate EU progress report
+        run: python tools/gen_report.py
+      - name: Upload EU progress report
+        uses: actions/upload-artifact@v4
+        with:
+          name: BK9P_report
+          path: eu/build/report.json

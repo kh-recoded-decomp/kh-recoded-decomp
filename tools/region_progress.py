@@ -1,0 +1,146 @@
+#!/usr/bin/env python3
+"""US / EU / shared progress for the multi-region merge.
+
+US comes from matches.json (byte-verified per function), EU from eu/tools/audit_progress.py.
+A function counts as shared when its matched C body in both regions is the same code:
+identical token structure once address-specific symbol names are abstracted away.
+Writes build/regions.json and the regions table in README.md and PROGRESS.md.
+"""
+
+from __future__ import annotations
+
+import hashlib
+import json
+import re
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+EU_ROOT = ROOT / "eu"
+START, END = "<!-- regions:start -->", "<!-- regions:end -->"
+KEYWORDS = set("""if else for while do return switch case default break continue goto sizeof struct union enum
+typedef static inline const volatile extern unsigned signed int char short long void float double""".split())
+
+
+def strip_comments(text: str) -> str:
+    text = re.sub(r"/\*.*?\*/", " ", text, flags=re.S)
+    return re.sub(r"//[^\n]*", " ", text)
+
+
+def function_body(text: str, name: str) -> str | None:
+    text = strip_comments(text)
+    found = re.search(rf"\b{re.escape(name)}\s*\([^;{{)]*\)\s*\{{", text)
+    if not found:
+        return None
+    depth = 0
+    for index in range(found.end() - 1, len(text)):
+        depth += {"{": 1, "}": -1}.get(text[index], 0)
+        if depth == 0:
+            return text[found.end() - 1:index + 1]
+    return None
+
+
+def fingerprint(body: str) -> str:
+    tokens = re.findall(r"[A-Za-z_]\w*|0x[0-9a-fA-F]+|\d+|\S", body)
+    shape = ["ID" if re.match(r"[A-Za-z_]", t) and t not in KEYWORDS else t.lower() for t in tokens]
+    return hashlib.md5(" ".join(shape).encode()).hexdigest()
+
+
+def us_functions() -> dict[str, tuple[int, str]]:
+    sys.path.insert(0, str(ROOT / "tools"))
+    import objdiff_report
+    sizes = {(unit["name"], f["name"]): f["size"]
+             for unit in objdiff_report.build_report()["units"] for f in unit["functions"]}
+    out = {}
+    matches = json.loads((ROOT / "matches.json").read_text(encoding="utf-8"))["matches"]
+    for entry in matches:
+        path = ROOT / entry["source"]
+        body = path.exists() and function_body(path.read_text(encoding="utf-8", errors="replace"),
+                                                entry["source_symbol"])
+        if body:
+            out[f"{entry['module']}:{entry['symbol']}"] = (sizes.get((entry["module"], entry["symbol"]), 0),
+                                                           fingerprint(body))
+    return out
+
+
+def eu_functions() -> tuple[dict, dict]:
+    sys.path.insert(0, str(EU_ROOT / "tools"))
+    import audit_progress
+    functions, _ = audit_progress.classify_functions()
+    summary = audit_progress.summarize(functions, [])
+    out = {}
+    for f in functions:
+        if f["category"] != "c_decompiled_matched" or not f["source"]:
+            continue
+        path = EU_ROOT / f["source"]
+        body = path.exists() and function_body(path.read_text(encoding="utf-8", errors="replace"), f["name"])
+        if body:
+            out[f"{f['unit']}:{f['name']}"] = (f["size"], fingerprint(body))
+    return out, summary
+
+
+def pct(part: int, whole: int) -> str:
+    return f"{100 * part / whole:.1f}%" if whole else "0.0%"
+
+
+def main() -> int:
+    sys.path.insert(0, str(ROOT / "tools"))
+    import objdiff_report
+    us_measures = objdiff_report.build_report()["measures"]
+    us = us_functions()
+    eu, eu_summary = eu_functions()
+    eu_prints = {}
+    for key, (size, mark) in eu.items():
+        eu_prints.setdefault(mark, []).append(size)
+    shared = [(size, mark) for size, mark in us.values() if mark in eu_prints]
+    shared_marks = {mark for _, mark in shared}
+    result = {
+        "us": {"matched_code": us_measures["matched_code"], "total_code": us_measures["total_code"],
+               "matched_functions": us_measures["matched_functions"],
+               "total_functions": us_measures["total_functions"]},
+        "eu": {"matched_code": eu_summary["code_bytes"]["c_decompiled_matched"],
+               "total_code": eu_summary["total_code_bytes"],
+               "matched_functions": eu_summary["counts"]["c_decompiled_matched"],
+               "total_functions": eu_summary["total_functions"]},
+        "shared": {"functions": len(shared), "us_bytes": sum(size for size, _ in shared),
+                   "us_only_functions": sum(1 for _, mark in us.values() if mark not in shared_marks),
+                   "eu_only_functions": sum(1 for _, mark in eu.values() if mark not in shared_marks)},
+    }
+    (ROOT / "build").mkdir(exist_ok=True)
+    (ROOT / "build" / "regions.json").write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
+    u, e, s = result["us"], result["eu"], result["shared"]
+    table = "\n".join([
+        START,
+        "| Region | C code bytes | % | Functions |",
+        "|---|---:|---:|---:|",
+        f"| **US** `BK9E` | {u['matched_code']:,} / {u['total_code']:,} | **{pct(u['matched_code'], u['total_code'])}** "
+        f"| {u['matched_functions']:,} / {u['total_functions']:,} |",
+        f"| **EU** `BK9P` | {e['matched_code']:,} / {e['total_code']:,} | **{pct(e['matched_code'], e['total_code'])}** "
+        f"| {e['matched_functions']:,} / {e['total_functions']:,} |",
+        f"| **Shared** (same C in both) | {s['us_bytes']:,} | {pct(s['us_bytes'], u['total_code'])} of US "
+        f"| {s['functions']:,} |",
+        "",
+        f"{s['us_only_functions']:,} matched functions are US-only so far and {s['eu_only_functions']:,} are EU-only. "
+        "EU numbers come from `eu/tools/audit_progress.py`; per-module EU detail is in [eu/PROGRESS.md](eu/PROGRESS.md).",
+        END,
+    ])
+    for name in ("README.md", "PROGRESS.md"):
+        path = ROOT / name
+        text = path.read_text(encoding="utf-8")
+        if START in text:
+            text = re.sub(re.escape(START) + r".*?" + re.escape(END), lambda _: table, text, flags=re.S)
+        else:
+            heading = "## Progress\n\n" if "## Progress\n\n" in text else None
+            if heading:
+                text = text.replace(heading, heading + table + "\n\n", 1)
+            else:
+                first_break = text.find("\n\n")
+                text = text[:first_break + 2] + table + "\n\n" + text[first_break + 2:]
+        path.write_text(text, encoding="utf-8", newline="\n")
+    print(f"US {pct(u['matched_code'], u['total_code'])}, EU {pct(e['matched_code'], e['total_code'])}, "
+          f"shared {s['functions']:,} functions ({s['us_bytes']:,} bytes)")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

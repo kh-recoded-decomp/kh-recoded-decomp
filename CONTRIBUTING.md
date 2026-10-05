@@ -1,5 +1,8 @@
 # Contributing a verified match
 
+This guide covers the US (`BK9E`) build at the repository root. For the EU (`BK9P`)
+build in `eu/`, follow [eu/CONTRIBUTING.md](eu/CONTRIBUTING.md).
+
 1. Run `python -m pip install -r requirements.txt` and
    `python tools/compile_match.py install` on Windows. Compiler archives and
    executables are pinned by SHA-256 in `profiles/compilers.json`.
