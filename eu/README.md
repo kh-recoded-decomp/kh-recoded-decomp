@@ -1,5 +1,15 @@
 # khrecoded-decomp
 
+> [!IMPORTANT]
+> **Development has moved to the shared
+> [kh-recoded-decomp/kh-recoded-decomp](https://github.com/kh-recoded-decomp/kh-recoded-decomp)
+> repository.** This EU (`BK9P`) project has been merged with
+> [ricky074game/kh-recoded-decomp](https://github.com/ricky074game/kh-recoded-decomp)
+> (US `BK9E`) so both regions can be developed in one codebase. The complete EU
+> history and attribution are preserved under [`eu/`](https://github.com/kh-recoded-decomp/kh-recoded-decomp/tree/main/eu).
+> This repository is retained for historical reference; please send new issues,
+> pull requests and decompilation work to the shared repository.
+
 A work-in-progress **matching decompilation** of *Kingdom Hearts Re:coded*
 (Nintendo DS). The goal is C source that recompiles to a binary **byte-for-byte
 identical** to the original game code.
@@ -18,8 +28,8 @@ identical** to the original game code.
 <!-- progress:start -->
 | Category | Count | Meaning |
 |---|---:|---|
-| Real C matched functions | **7,926** / 10,419 (76.1%) | Functions implemented in C and verified byte-exact |
-| Real C matched **bytes** | **995,514** / 1,656,988 (60.08%) | Code bytes covered by real C; the honest progress figure |
+| Real C matched functions | **7,949** / 10,419 (76.3%) | Functions implemented in C and verified byte-exact |
+| Real C matched **bytes** | **1,005,442** / 1,656,988 (60.68%) | Code bytes covered by real C; the honest progress figure |
 | Assembly matched functions | **137** (7,734 bytes) | Original SDK, BIOS and DS Protect assembly, verified byte-exact; never counted as C |
 | Reconstructed DATA bytes | **93,629** / 228,172 (41.03%) | Verified byte-exact .rodata, .data, .ctor and .bss reconstructed from source |
 | Named DATA symbols | **810** / 2,386 (33.95%) | Identified DATA names; naming alone does not count as reconstructed DATA |
