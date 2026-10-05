@@ -1,14 +1,3 @@
-extern int data_ov022_020b7da8[];
-#define activeStream_020b7d90 data_ov022_020b7da8[2]
-
-void ActivateSubtitleStream(void)
-
-{
-  if (activeStream_020b7d90 != 0) {
-    if (*(unsigned char *)(activeStream_020b7d90 + 0x38) == '\0') {
-      *(unsigned char *)(activeStream_020b7d90 + 0x38) = 1;
-    }
-    return;
-  }
-  return;
-}
+#define ActivateSubtitleStream_020a88f0 ActivateSubtitleStream
+#define subtitleContexts_020b7d88 data_ov022_020b7da8
+#include "src/ov022/video_playback/ActivateSubtitleStream_020a88f0.c"

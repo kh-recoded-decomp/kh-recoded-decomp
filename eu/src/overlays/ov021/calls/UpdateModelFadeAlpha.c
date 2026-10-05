@@ -1,23 +1,5 @@
-#include "nitro/types.h"
-
-extern u32 FX_Mul();
-extern u32 NNS_G3dMdlSetMdlAlphaAll();
-extern u32 ClearFlagAndField0x144();
-
-void UpdateModelFadeAlpha(int object,int delta)
-
-{
-  int alpha;
-  
-  if ((*(char *)(object + 0x131) != '\0') && (*(char *)(object + 0x131) == '\x01')) {
-    alpha = FX_Mul(delta,0x1b00);
-    alpha = *(int *)(object + 0x144) - alpha;
-    *(int *)(object + 0x144) = alpha;
-    if (alpha <= 0) {
-      ClearFlagAndField0x144(object);
-    }
-    NNS_G3dMdlSetMdlAlphaAll
-              (*(void **)(object + 0x78),*(int *)(object + 0x144) >> 0xc);
-  }
-  return;
-}
+#define FixedPointMultiply12 FX_Mul
+#define Model_SetAllMaterialAlpha_0201a900 NNS_G3dMdlSetMdlAlphaAll
+#define UpdateModelFadeAlpha_020ab854 UpdateModelFadeAlpha
+#define func_ov021_020ab83c ClearFlagAndField0x144
+#include "src/ov021/animation/UpdateModelFadeAlpha_020ab854.c"

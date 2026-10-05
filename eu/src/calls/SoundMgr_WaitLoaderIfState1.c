@@ -1,7 +1,4 @@
-extern int IsSceneState1();
-extern void func_0202c44c();
-
-void SoundMgr_WaitLoaderIfState1(void)
-{
-    if (IsSceneState1()) func_0202c44c();
-}
+#define Loader_SleepIfBusy func_0202c44c
+#define SoundMgr_IsState1 IsSceneState1
+#define SoundMgr_WaitLoaderIfState1_0204d6c0 SoundMgr_WaitLoaderIfState1
+#include "src/arm9/shared_engine/SoundMgr_WaitLoaderIfState1_0204d6c0.c"

@@ -1,20 +1,6 @@
-extern int func_ov039_020bcdb8(void *method, int arg);
-extern int data_ov039_020beaa4[];
-struct ov008_disp { char *obj; int _pad; };
-extern struct ov008_disp data_ov039_020be950[];
-extern struct ov008_disp data_ov039_020be8f0[];
-
-int func_ov039_020bd11c(int param_1, int param_2) {
-    int r = 0;
-    void *m1 = *(void **)(data_ov039_020be950[data_ov039_020beaa4[0]].obj + 0x18);
-    if (param_1 != 0) {
-        r = func_ov039_020bcdb8(m1, param_1);
-    }
-    if (r == 0) {
-        void *m2 = *(void **)(data_ov039_020be8f0[data_ov039_020beaa4[1]].obj + 0x14);
-        if (param_2 != 0) {
-            r = func_ov039_020bcdb8(m2, param_2);
-        }
-    }
-    return r;
-}
+#define DispatchOverlayEventPairA_020bd0fc func_ov039_020bd11c
+#define active_handler_indices data_ov039_020beaa4
+#define func_020bcd98 func_ov039_020bcdb8
+#define primary_handler_table data_ov039_020be950
+#define secondary_handler_table data_ov039_020be8f0
+#include "src/ov039/overlay_event_dispatch/DispatchOverlayEventPairA_020bd0fc.c"

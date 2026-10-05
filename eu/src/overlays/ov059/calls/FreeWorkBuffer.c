@@ -1,11 +1,4 @@
-extern void Actor_ReleaseResources();
-extern int data_ov059_020cffc0;
-
-void FreeWorkBuffer(void) {
-    int p = *(int *)&data_ov059_020cffc0;
-    if (p == 0) {
-        return;
-    }
-    Actor_ReleaseResources(p);
-    data_ov059_020cffc0 = 0;
-}
+#define FreeWorkBuffer_020c766c FreeWorkBuffer
+#define NNSi_FndFreeFromDefaultHeap Actor_ReleaseResources
+#define func_020cffa0 data_ov059_020cffc0
+#include "src/ov059/shared_engine/FreeWorkBuffer_020c766c.c"

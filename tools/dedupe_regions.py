@@ -32,6 +32,8 @@ EU = ROOT / "eu"
 sys.path.insert(0, str(ROOT / "tools"))
 from region_progress import fingerprint, function_body  # noqa: E402
 
+US_COMPILER_DIRS = {"mwccarm-4.0-1036": "dsi/1.3p1", "mwccarm-3.0-139": "2.0/sp2p4"}
+ALTERNATE_COMPILERS = ["dsi/1.1", "dsi/1.3p1", "2.0/sp2p4", "dsi/1.2", "dsi/1.1p1", "2.0/sp2p3"]
 SYMBOL_LIKE = re.compile(r"^(?:func_|data_)\w*$|_[0-9a-f]{8}$")
 TOKEN = re.compile(r"[A-Za-z_]\w*|0x[0-9a-fA-F]+|\d+|\S")
 WRAPPER_MARK = "#include \"src/"
@@ -132,14 +134,46 @@ def try_pair(pair, scratch: Path):
     wrapper = work.with_name(eu_path.name)
     wrapper.write_text(text, encoding="utf-8", newline="\n")
     out = wrapper.with_suffix(".o")
-    result = subprocess.run([sys.executable, str(EU / "tools" / "_run_mwcc.py"), str(out), str(wrapper),
-                             f"--unit={f['source']}"], capture_output=True, text=True, cwd=EU)
-    if result.returncode or not out.exists():
-        return pair, None, "compile: " + (result.stdout + result.stderr).strip().splitlines()[-1:][0][:120] \
-            if (result.stdout + result.stderr).strip() else "compile failed"
-    if object_signature(out) != object_signature(reference):
-        return pair, None, "object differs"
-    return pair, text, "ok"
+    expected = object_signature(reference)
+    # The EU unit's own compiler first, then the one the US source matched with, then the others.
+    us_cc = US_COMPILER_DIRS.get(entry.get("compiler"))
+    status = "object differs"
+    for cc in [None] + [c for c in dict.fromkeys([us_cc, *ALTERNATE_COMPILERS]) if c]:
+        out.unlink(missing_ok=True)
+        args = [sys.executable, str(EU / "tools" / "_run_mwcc.py"), str(out), str(wrapper), f"--unit={f['source']}"]
+        result = subprocess.run(args + ([f"--cc={cc}"] if cc else []), capture_output=True, text=True, cwd=EU)
+        if result.returncode or not out.exists():
+            if cc is None:
+                status = "compile"
+            continue
+        actual = object_signature(out)
+        if actual == expected:
+            return pair, (text, cc), "ok" if cc is None else "ok with other compiler"
+        extra = relocation_renames(actual, expected)
+        if extra:
+            # Same bytes and relocation sites: the remaining names pair up by position.
+            mapping = {**mapping, **extra}
+            text = wrapper_text(mapping, us_path)
+            wrapper.write_text(text, encoding="utf-8", newline="\n")
+            out.unlink(missing_ok=True)
+            result = subprocess.run(args + ([f"--cc={cc}"] if cc else []), capture_output=True, text=True, cwd=EU)
+            if not result.returncode and out.exists() and object_signature(out) == expected:
+                return pair, (text, cc), "ok via relocations"
+    return pair, None, status
+
+
+def relocation_renames(actual, expected) -> dict[str, str] | None:
+    if actual[0] != expected[0] or len(actual[1]) != len(expected[1]):
+        return None
+    renames = {}
+    for ours, theirs in zip(actual[1], expected[1]):
+        if ours[:3] != theirs[:3]:
+            return None
+        if ours[3] == theirs[3]:
+            continue
+        if not re.match(r"^[A-Za-z_]\w*$", ours[3]) or renames.setdefault(ours[3], theirs[3]) != theirs[3]:
+            return None
+    return renames or None
 
 
 def main() -> int:
@@ -154,14 +188,21 @@ def main() -> int:
     print(f"{len(candidates)} candidate pairs", flush=True)
     results = defaultdict(int)
     rewritten = []
+    compilers_path = EU / "config" / "arm9" / "file_compilers.json"
+    compilers = json.loads(compilers_path.read_text(encoding="utf-8"))
     with tempfile.TemporaryDirectory(dir=EU / "build") as temp, ThreadPoolExecutor(args.jobs) as pool:
-        for pair, text, status in pool.map(lambda p: try_pair(p, Path(temp)), candidates):
+        for pair, found, status in pool.map(lambda p: try_pair(p, Path(temp)), candidates):
             results[status.split(":")[0]] += 1
-            if text is None:
+            if found is None:
                 continue
+            text, cc = found
             rewritten.append(pair[1].relative_to(ROOT).as_posix())
             if not args.dry_run:
                 pair[1].write_text(text, encoding="utf-8", newline="\n")
+                if cc:
+                    compilers[pair[0]["source"]] = cc
+    if not args.dry_run:
+        compilers_path.write_text(json.dumps(compilers, indent=2) + "\n", encoding="utf-8")
     report = ROOT / "build" / "dedupe_regions.json"
     report.write_text(json.dumps({"results": results, "rewritten": rewritten}, indent=1) + "\n", encoding="utf-8")
     print(dict(results), f"-> {len(rewritten)} EU files {'would be ' if args.dry_run else ''}rewritten")

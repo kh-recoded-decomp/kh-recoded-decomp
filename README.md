@@ -21,7 +21,7 @@ maintained by [@ricky074game](https://github.com/ricky074game) and [@Yokimitsuro
 | **EU** `BK9P` | 1,005,442 / 1,656,988 | **60.7%** | 7,949 / 10,419 |
 | **Shared** (same C in both) | 924,928 | 52.3% of US | 7,014 |
 
-5,654 shared functions are stored once in `src/` and built for both regions. 2,567 matched functions are US-only so far and 965 are EU-only. EU numbers come from `eu/tools/audit_progress.py`; per-module EU detail is in [eu/PROGRESS.md](eu/PROGRESS.md).
+6,108 shared functions are stored once in `src/` and built for both regions. 2,567 matched functions are US-only so far and 965 are EU-only. EU numbers come from `eu/tools/audit_progress.py`; per-module EU detail is in [eu/PROGRESS.md](eu/PROGRESS.md).
 <!-- regions:end -->
 
 US detail:
@@ -66,8 +66,13 @@ python tools/match_tool.py try ov001 func_ov001_02070e98 src/ov001/.../File_0207
 | `khrecoded.py check --profile ci` | ROM-free checks (what CI runs) |
 | `khrecoded.py check --profile strict` | Everything, including the full linked ROM |
 
-EU (`BK9P`): the EU build lives in [`eu/`](eu/) and has its own tools. See [eu/CONTRIBUTING.md](eu/CONTRIBUTING.md)
-(`python tools/configure.py`, then `bash tools/gate.sh` to link every module byte-identical).
+EU (`BK9P`) builds from the same checkout. Shared functions compile from `src/`; EU-only code lives in [`eu/`](eu/):
+
+```powershell
+python tools/khrecoded.py eu setup --rom "C:\path\to\recoded_eu.nds"
+python tools/khrecoded.py eu gate        # links all 108 EU modules and checks them against the ROM
+python tools/khrecoded.py eu progress
+```
 
 ## Toolchain
 

@@ -1,8 +1,2 @@
-#include "nitro/types.h"
-
-extern u32 SetSessionStateBit();
-
-u32 func_ov001_02068dfc(void)
-{
-    return SetSessionStateBit(0, 2);
-}
+#define Scene_RequestPending SetSessionStateBit
+#include "src/ov001/constant_variants/func_ov001_02068dfc.c"

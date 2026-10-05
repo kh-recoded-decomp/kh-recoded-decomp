@@ -1,9 +1,3 @@
-extern void Slot_UnlinkAll(void *);
-extern void FreeAndClearNodeList(void *);
-
-int Obj_Release(void *object)
-{
-    Slot_UnlinkAll(object);
-    FreeAndClearNodeList(object);
-    return 1;
-}
+#define Obj_Release_0204eff8 Obj_Release
+#define SlotNodeList_FreeAll FreeAndClearNodeList
+#include "src/arm9/shared_engine/Obj_Release_0204eff8.c"

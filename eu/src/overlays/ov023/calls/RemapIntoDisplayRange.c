@@ -1,11 +1,4 @@
-#include "nitro/types.h"
-
-extern int FX_Mul(int left, int right);
-extern int FX_Div(int numer, int denom);
-
-int RemapIntoDisplayRange(int start, int end, int value)
-{
-    int result = 0x21000;
-    result += FX_Div(FX_Mul(0xbe000, value - start), end - start);
-    return result;
-}
+#define FX_Div_01ff9c84 FX_Div
+#define FixedPointMultiply12 FX_Mul
+#define RemapIntoDisplayRange_020b699c RemapIntoDisplayRange
+#include "src/ov023/menu_graphics/RemapIntoDisplayRange_020b699c.c"

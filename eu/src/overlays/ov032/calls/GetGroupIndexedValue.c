@@ -1,13 +1,3 @@
-#include "nitro/types.h"
-
-extern int data_ov032_020c0080[];
-#define activeContext_020c0064 data_ov032_020c0080[1]
-
-u32 GetGroupIndexedValue(u32 index)
-
-{
-  if (index < 3) {
-    index = (u32)*(u16 *)(activeContext_020c0064 + index * 2 + 0x44);
-  }
-  return index;
-}
+#define GetGroupIndexedValue_020bb86c GetGroupIndexedValue
+#define contextData_020c0060 data_ov032_020c0080
+#include "src/ov032/object_group/GetGroupIndexedValue_020bb86c.c"

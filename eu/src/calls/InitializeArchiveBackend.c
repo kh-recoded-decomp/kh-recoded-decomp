@@ -1,34 +1,13 @@
-extern void HandleSbcNoOp(void);
-extern void HandleSbcReturn(void);
-extern void func_01ffe280(void);
-extern void func_01ffe394(void);
-extern void NNSi_G3dFuncSbcMAT(void);
-extern void func_01ffe8a0(void);
-extern void func_01ffe934(void);
-extern void NNSi_G3dFuncSbc_BB(void);
-extern void NNSi_G3dFuncSbc_RollBB(void);
-extern void func_01ffec28(void);
-extern void Sbc_CallDl(void);
-extern void EmitJointScaleCommand(void);
-extern void NNSi_G3dFuncSbc_ENVMAP(void);
-extern void NNSi_G3dFuncSbc_PRJMAP(void);
-extern void func_01ffa1f4(unsigned seed);
-extern void *data_027e01f8[];
-
-void InitializeArchiveBackend(void) {
-    data_027e01f8[0] = (void *)&HandleSbcNoOp;
-    data_027e01f8[1] = (void *)&HandleSbcReturn;
-    data_027e01f8[2] = (void *)&func_01ffe280;
-    data_027e01f8[3] = (void *)&func_01ffe394;
-    data_027e01f8[4] = (void *)&NNSi_G3dFuncSbcMAT;
-    data_027e01f8[5] = (void *)&func_01ffe8a0;
-    data_027e01f8[6] = (void *)&func_01ffe934;
-    data_027e01f8[7] = (void *)&NNSi_G3dFuncSbc_BB;
-    data_027e01f8[8] = (void *)&NNSi_G3dFuncSbc_RollBB;
-    data_027e01f8[9] = (void *)&func_01ffec28;
-    data_027e01f8[10] = (void *)&Sbc_CallDl;
-    data_027e01f8[11] = (void *)&EmitJointScaleCommand;
-    data_027e01f8[12] = (void *)&NNSi_G3dFuncSbc_ENVMAP;
-    data_027e01f8[13] = (void *)&NNSi_G3dFuncSbc_PRJMAP;
-    func_01ffa1f4(1);
-}
+#define InitializeArchiveBackend_0203a858 InitializeArchiveBackend
+#define archive_backend_callbacks data_027e01f8
+#define func_01ffe3d8 NNSi_G3dFuncSbcMAT
+#define func_01fff374 EmitJointScaleCommand
+#define func_02039d54 HandleSbcNoOp
+#define func_02039d7c HandleSbcReturn
+#define func_02039da4 NNSi_G3dFuncSbc_BB
+#define func_02039fec NNSi_G3dFuncSbc_RollBB
+#define func_0203a28c Sbc_CallDl
+#define func_0203a2f4 NNSi_G3dFuncSbc_ENVMAP
+#define func_0203a574 NNSi_G3dFuncSbc_PRJMAP
+#define srand_0x02016284 func_01ffa1f4
+#include "src/arm9/archive_startup/InitializeArchiveBackend_0203a858.c"

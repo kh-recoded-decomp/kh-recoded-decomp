@@ -1,29 +1,7 @@
-#include "nitro/types.h"
-
-extern struct { int reserved[2]; u32 object; } data_ov021_020b56c4;
-#define currentScriptObject data_ov021_020b56c4.object
-extern u32 StartMotionToTarget();
-extern u32 ResolveTaggedValueRef();
-extern u32 TaggedValueToFixed();
-extern u32 ResolveVectorOperand();
-
-u32
-ScriptOp_ApplyCurrentObjectVector(u32 context,int operands,u32 unused,u32 argument)
-
-{
-  u32 object;
-  u32 firstValue;
-  u32 secondValue;
-  u8 vector [12];
-  u32 savedArgument;
-  
-  object = currentScriptObject;
-  savedArgument = argument;
-  firstValue = ResolveTaggedValueRef(context,operands + 8);
-  secondValue = ResolveTaggedValueRef(context,operands + 0x10);
-  ResolveVectorOperand(context,operands,vector);
-  firstValue = TaggedValueToFixed(firstValue);
-  secondValue = TaggedValueToFixed(secondValue);
-  StartMotionToTarget(object,vector,firstValue,secondValue);
-  return 0;
-}
+#define ScriptOp_ApplyCurrentObjectVector_020b35a4 ScriptOp_ApplyCurrentObjectVector
+#define func_ov001_02091094 StartMotionToTarget
+#define func_ov021_020b0374 ResolveTaggedValueRef
+#define func_ov021_020b03b0 TaggedValueToFixed
+#define func_ov021_020b03c8 ResolveVectorOperand
+#define scriptState_020b56a4 data_ov021_020b56c4
+#include "src/ov021/script_ops/ScriptOp_ApplyCurrentObjectVector_020b35a4.c"

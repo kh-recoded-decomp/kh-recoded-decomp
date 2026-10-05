@@ -1,24 +1,6 @@
-#include "nitro/types.h"
-
-extern struct { int reserved; int context; } data_ov032_020c0088;
-#define activeMenu data_ov032_020c0088.context
-extern u32 IsFieldPanelHidden();
-extern u32 func_ov032_020bb914();
-extern u32 UpdateGaugeBarTiles();
-
-u32 UpdateGroupMenuCounter(void)
-
-{
-  int menu;
-  int ready;
-  
-  menu = activeMenu;
-  if (*(int *)(activeMenu + 0x18) == 100) {
-    func_ov032_020bb914(activeMenu);
-  }
-  if ((*(int *)(menu + 0x20) != *(int *)(menu + 0x24)) &&
-     (ready = IsFieldPanelHidden(), ready != 0)) {
-    UpdateGaugeBarTiles(menu);
-  }
-  return 0;
-}
+#define UpdateGroupMenuCounter_020bbb4c UpdateGroupMenuCounter
+#define func_ov001_0207187c IsFieldPanelHidden
+#define func_ov032_020bb8f4 func_ov032_020bb914
+#define func_ov032_020bb9e0 UpdateGaugeBarTiles
+#define menuState_020c0068 data_ov032_020c0088
+#include "src/ov032/object_group/UpdateGroupMenuCounter_020bbb4c.c"

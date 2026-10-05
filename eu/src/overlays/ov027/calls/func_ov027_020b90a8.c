@@ -1,5 +1,4 @@
-extern int FindWidgetById(int a, int b);
-extern void func_ov027_020b90a0(int a, int b);
-void func_ov027_020b90a8(int param_1, int param_2, int param_3) {
-    func_ov027_020b90a0(FindWidgetById(param_1, param_2), param_3);
-}
+#define Ov008_FindEntryById FindWidgetById
+#define Ov008_StoreWordAt0x98 func_ov027_020b90a0
+#define ResolveEntryStoreWord_020b9088 func_ov027_020b90a8
+#include "src/ov027/shared_engine/ResolveEntryStoreWord_020b9088.c"

@@ -1,6 +1,6 @@
 #define TestSweepAgainstSurface_020308ec TestSweepAgainstSurface
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define func_02030fb4 TestSweepAgainstFaceBounds
-#define g_shapeSweepTable_02055930 gCollisionSweepDispatch
-#define g_shapeTestTable_020558a0 gCollisionTestDispatch
+#define g_shapeSweepTable_02055930 gCollisionSweepPairDispatch
+#define g_shapeTestTable_020558a0 gCollisionTestPairDispatch
 #include "src/arm9/spatial_queries/TestSweepAgainstSurface_020308ec.c"

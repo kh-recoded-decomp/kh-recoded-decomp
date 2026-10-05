@@ -1,6 +1,3 @@
-extern void PM_DeletePreSleepCallback(void *p);
-extern int data_02059804;
-
-void SNDi_LockMutex(void) {
-    PM_DeletePreSleepCallback(&data_02059804);
-}
+#define OS_LockMutex PM_DeletePreSleepCallback
+#define SNDi_LockMutex_02011404 SNDi_LockMutex
+#include "src/arm9/library_nitro_snd/SNDi_LockMutex_02011404.c"

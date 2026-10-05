@@ -1,29 +1,5 @@
-#include "nitro/types.h"
-
-extern u32 data_ov034_020c0fa0[2];
-#define resultsWork ((int)data_ov034_020c0fa0[1])
-extern u32 SetPanelEnabled();
-extern u32 func_ov001_02063620();
-extern u32 InitResultsScreen();
-
-u32 StartResultsScreen(void)
-
-{
-  u16 statusFlags;
-  int work;
-  int status;
-  
-  work = resultsWork;
-  status = func_ov001_02063620();
-  if (status != 0) {
-    return 0xffffffff;
-  }
-  SetPanelEnabled(0);
-  InitResultsScreen();
-  statusFlags = *(u16 *)(work + 6);
-  if ((statusFlags & 1) != 0) {
-    *(u16 *)(work + 6) = statusFlags & 0xfffe;
-  }
-  *(u16 *)(resultsWork + 6) = *(u16 *)(resultsWork + 6) | 0x8000;
-  return 1;
-}
+#define StartResultsScreen_020bdbd0 StartResultsScreen
+#define func_02025438 SetPanelEnabled
+#define func_ov034_020bb304 InitResultsScreen
+#define resultsState_020c0f80 data_ov034_020c0fa0
+#include "src/ov034/reviewed_helpers/StartResultsScreen_020bdbd0.c"

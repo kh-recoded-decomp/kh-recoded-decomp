@@ -1,21 +1,6 @@
-#include "nitro/types.h"
-
-extern struct { int reserved[2]; u32 object; } data_ov021_020b56c4;
-#define currentScriptObject data_ov021_020b56c4.object
-extern u32 SetLookAtTarget();
-extern u32 ResolveTaggedValueRef();
-extern u32 ResolveVectorOperand();
-
-u32 ScriptOp_ApplyCurrentObjectPosition(u32 context,int operands)
-
-{
-  u32 object;
-  int valueOperand;
-  u8 vector [12];
-  
-  valueOperand = ResolveTaggedValueRef(context,operands + 8);
-  object = currentScriptObject;
-  ResolveVectorOperand(context,operands,vector);
-  SetLookAtTarget(object,vector,*(u32 *)(valueOperand + 4));
-  return 0;
-}
+#define ScriptOp_ApplyCurrentObjectPosition_020b3570 ScriptOp_ApplyCurrentObjectPosition
+#define func_ov001_02090fd8 SetLookAtTarget
+#define func_ov021_020b0374 ResolveTaggedValueRef
+#define func_ov021_020b03c8 ResolveVectorOperand
+#define scriptState_020b56a4 data_ov021_020b56c4
+#include "src/ov021/script_ops/ScriptOp_ApplyCurrentObjectPosition_020b3570.c"

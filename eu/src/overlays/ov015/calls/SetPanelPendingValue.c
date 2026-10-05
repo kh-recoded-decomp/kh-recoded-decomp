@@ -1,11 +1,3 @@
-#include "nitro/types.h"
-
-extern u8 data_ov015_0207e980[];
-#define pendingValue (*(u32 *)(data_ov015_0207e980 + 0x4c))
-
-void SetPanelPendingValue(u32 value)
-
-{
-  pendingValue = value;
-  return;
-}
+#define SetPanelPendingValue_02075014 SetPanelPendingValue
+#define panelState_0207e980 data_ov015_0207e980
+#include "src/ov015/reviewed_helpers/SetPanelPendingValue_02075014.c"

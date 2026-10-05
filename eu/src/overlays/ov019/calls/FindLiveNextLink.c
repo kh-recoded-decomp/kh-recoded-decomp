@@ -1,27 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct Actor {
-    u8 pad_00[4];
-    void *pool;
-    u8 pad_08[0x56];
-    s16 nextIndex;
-} Actor;
-
-extern BOOL IsDestroyed(Actor *self);
-extern Actor *func_ov001_02086384(void *pool, int index);
-
-static inline Actor *GetNextLink(Actor *actor)
-{
-    return func_ov001_02086384(actor->pool, actor->nextIndex);
-}
-
-Actor *FindLiveNextLink(Actor *actor)
-{
-    while (actor->nextIndex >= 0) {
-        actor = GetNextLink(actor);
-        if (!IsDestroyed(actor)) {
-            return actor;
-        }
-    }
-    return NULL;
-}
+#define FindLiveNextLink_020a20e0 FindLiveNextLink
+#define IsDestroyed_020a31f8 IsDestroyed
+#define func_ov001_0208635c func_ov001_02086384
+#include "src/ov019/unclassified_helpers/FindLiveNextLink_020a20e0.c"

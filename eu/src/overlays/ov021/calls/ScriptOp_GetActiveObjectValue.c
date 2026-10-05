@@ -1,17 +1,4 @@
-extern int data_ov021_020b56c4[];
-#define activeObject_020b56ac data_ov021_020b56c4[2]
-extern unsigned int ApplyActorScaleFactors();
-
-unsigned int ScriptOp_GetActiveObjectValue(int context)
-
-{
-  unsigned int value;
-  
-  if (activeObject_020b56ac == 0) {
-    return 0;
-  }
-  *(unsigned short *)(context + 0x2c) = 0x10;
-  value = ApplyActorScaleFactors(activeObject_020b56ac);
-  *(unsigned int *)(context + 0x30) = value;
-  return 0;
-}
+#define ScriptOp_GetActiveObjectValue_020b0cb8 ScriptOp_GetActiveObjectValue
+#define contextData_020b56a4 data_ov021_020b56c4
+#define func_ov001_02091818 ApplyActorScaleFactors
+#include "src/ov021/script_ops/ScriptOp_GetActiveObjectValue_020b0cb8.c"

@@ -1,5 +1,3 @@
-extern int NNS_GfdRegisterNewVramTransferTask();
-
-int EnqueueGfxCmd0(int arg0, int arg1, int arg2) {
-    return NNS_GfdRegisterNewVramTransferTask(0, arg1, arg0, arg2);
-}
+#define EnqueueGfxCmd0_0202c184 EnqueueGfxCmd0
+#define GFXi_EnqueueCommand NNS_GfdRegisterNewVramTransferTask
+#include "src/arm9/shared_engine/EnqueueGfxCmd0_0202c184.c"

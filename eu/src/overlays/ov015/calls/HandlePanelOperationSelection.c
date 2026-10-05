@@ -1,27 +1,6 @@
-#include "nitro/types.h"
-
-extern u8 data_ov015_0207e980[];
-#define operationHandle (*(u32 *)(data_ov015_0207e980 + 0x48))
-extern u32 SetSessionCallback();
-extern u32 SetPanelTransitionMode();
-extern u32 WH_SetError();
-
-void HandlePanelOperationSelection(int context)
-
-{
-  int result;
-  
-  if (*(u16 *)(context + 2) != 0) {
-    WH_SetError();
-    SetPanelTransitionMode(10);
-    return;
-  }
-  result = SetSessionCallback(operationHandle);
-  if (result != 0) {
-    WH_SetError();
-    SetPanelTransitionMode(10);
-    return;
-  }
-  SetPanelTransitionMode(1);
-  return;
-}
+#define HandlePanelOperationSelection_02074d44 HandlePanelOperationSelection
+#define func_0201141c SetSessionCallback
+#define func_ov015_020737c4 SetPanelTransitionMode
+#define func_ov015_020737d4 WH_SetError
+#define panelState_0207e980 data_ov015_0207e980
+#include "src/ov015/reviewed_helpers/HandlePanelOperationSelection_02074d44.c"

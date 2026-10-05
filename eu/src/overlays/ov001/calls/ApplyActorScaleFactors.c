@@ -1,14 +1,4 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-extern fx32 GetGlobalScaleValue(void);
-extern fx32 FX_Mul(fx32 a, fx32 b);
-
-void ApplyActorScaleFactors(u8 *actor)
-{
-    fx32 value;
-
-    value = GetGlobalScaleValue();
-    value = FX_Mul(value, *(fx32 *)(actor + 0x39c));
-    FX_Mul(value, *(fx32 *)(actor + 0x3a0));
-}
+#define ApplyActorScaleFactors_02091818 ApplyActorScaleFactors
+#define FixedPointMultiply12 FX_Mul
+#define func_ov001_0209c3cc GetGlobalScaleValue
+#include "src/ov001/shared_engine/ApplyActorScaleFactors_02091818.c"

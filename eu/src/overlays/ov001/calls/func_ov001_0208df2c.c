@@ -1,15 +1,7 @@
-extern int ScriptVm_ReadOperandInt(int ctx, void *arg);
-extern int ScriptVm_ReadOperandFx32(int ctx, void *arg);
-extern int ScriptCmd_ReturnValue(int ctx, int arg);
-
-extern char *ActorRegistry_GetEntityByIndex(int index);
-extern void func_01ffb2f8(void *p, int slot, int value);
-
-int func_ov001_0208df2c(int ctx, int args) {
-    int entity = ScriptVm_ReadOperandInt(ctx, (void *)args);
-    int slot = ScriptVm_ReadOperandInt(ctx, (void *)(args + 8));
-    int value = ScriptVm_ReadOperandFx32(ctx, (void *)(args + 0x10));
-    func_01ffb2f8(ActorRegistry_GetEntityByIndex((unsigned short)ScriptCmd_ReturnValue(ctx, entity)) + 4,
-                  (unsigned short)slot, value);
-    return 1;
-}
+#define Animation_SetFrameWithSingleWrap func_01ffb2f8
+#define Script_SetActorAnimationFrame_0208df04 func_ov001_0208df2c
+#define func_02025960 ScriptCmd_ReturnValue
+#define func_02025de4 ScriptVm_ReadOperandInt
+#define func_02025df8 ScriptVm_ReadOperandFx32
+#define func_02036240 ActorRegistry_GetEntityByIndex
+#include "src/ov001/actor_animation/Script_SetActorAnimationFrame_0208df04.c"

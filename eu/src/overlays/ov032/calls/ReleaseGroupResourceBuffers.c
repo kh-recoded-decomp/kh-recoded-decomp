@@ -1,17 +1,4 @@
-extern unsigned int *data_ov032_020c0088[];
-#define puRam020c006c data_ov032_020c0088[1]
-extern unsigned int NNSi_FndFreeFromDefaultHeap();
-
-void ReleaseGroupResourceBuffers(void)
-
-{
-  unsigned int *buffers;
-  
-  buffers = puRam020c006c;
-  NNSi_FndFreeFromDefaultHeap(*puRam020c006c);
-  NNSi_FndFreeFromDefaultHeap(buffers[1]);
-  NNSi_FndFreeFromDefaultHeap(buffers[2]);
-  NNSi_FndFreeFromDefaultHeap(buffers[3]);
-  puRam020c006c = (unsigned int *)0x0;
-  return;
-}
+#define ReleaseGroupResourceBuffers_020bbb24 ReleaseGroupResourceBuffers
+#define func_0202a1c4 NNSi_FndFreeFromDefaultHeap
+#define resourceContexts_020c0068 data_ov032_020c0088
+#include "src/ov032/object_group/ReleaseGroupResourceBuffers_020bbb24.c"

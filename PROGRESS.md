@@ -7,7 +7,7 @@
 | **EU** `BK9P` | 1,005,442 / 1,656,988 | **60.7%** | 7,949 / 10,419 |
 | **Shared** (same C in both) | 924,928 | 52.3% of US | 7,014 |
 
-5,654 shared functions are stored once in `src/` and built for both regions. 2,567 matched functions are US-only so far and 965 are EU-only. EU numbers come from `eu/tools/audit_progress.py`; per-module EU detail is in [eu/PROGRESS.md](eu/PROGRESS.md).
+6,108 shared functions are stored once in `src/` and built for both regions. 2,567 matched functions are US-only so far and 965 are EU-only. EU numbers come from `eu/tools/audit_progress.py`; per-module EU detail is in [eu/PROGRESS.md](eu/PROGRESS.md).
 <!-- regions:end -->
 
 ## US (BK9E revision 0)

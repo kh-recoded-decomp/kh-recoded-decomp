@@ -1,9 +1,3 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-extern fx32 FX_Mul(fx32 a, fx32 b);
-
-fx32 FixedPointLerp(fx32 start, fx32 end, fx32 t)
-{
-    return start + FX_Mul(end - start, t);
-}
+#define FixedPointLerp_0208f884 FixedPointLerp
+#define FixedPointMultiply12 FX_Mul
+#include "src/ov001/shared_engine/FixedPointLerp_0208f884.c"

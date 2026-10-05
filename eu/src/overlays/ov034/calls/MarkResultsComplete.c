@@ -1,11 +1,3 @@
-#include "nitro/types.h"
-
-extern u32 data_ov034_020c0fa0[2];
-#define resultsWork ((int)data_ov034_020c0fa0[1])
-
-void MarkResultsComplete(void)
-
-{
-  *(u16 *)(resultsWork + 6) = *(u16 *)(resultsWork + 6) | 0x4000;
-  return;
-}
+#define MarkResultsComplete_020bde3c MarkResultsComplete
+#define resultsState_020c0f80 data_ov034_020c0fa0
+#include "src/ov034/reviewed_helpers/MarkResultsComplete_020bde3c.c"

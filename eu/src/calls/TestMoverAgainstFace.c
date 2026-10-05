@@ -2,6 +2,6 @@
 #define VEC_DotProduct_01ff9e6c VEC_DotProduct
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define func_01ffb328 OverlapsHeightRange
-#define g_shapeSweepTable_02055930 gCollisionSweepDispatch
-#define g_shapeTestTable_020558a0 gCollisionTestDispatch
+#define g_shapeSweepTable_02055930 gCollisionSweepPairDispatch
+#define g_shapeTestTable_020558a0 gCollisionTestPairDispatch
 #include "src/arm9/spatial_queries/TestMoverAgainstFace_02030d48.c"

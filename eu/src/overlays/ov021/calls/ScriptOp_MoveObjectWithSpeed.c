@@ -1,32 +1,10 @@
-extern int data_ov021_020b56c4[];
-#define activeObject_020b56ac data_ov021_020b56c4[2]
-extern unsigned int VEC_Mag();
-extern unsigned int FX_Div();
-extern unsigned int VEC_Subtract();
-extern unsigned int BeginWalkerMove();
-extern unsigned int ResolveTaggedValueRef();
-extern unsigned int TaggedValueToFixed();
-extern unsigned int ResolveVectorOperand();
-
-unsigned int ScriptOp_MoveObjectWithSpeed(unsigned int context,int operands)
-
-{
-  int object;
-  int speed;
-  unsigned int duration;
-  unsigned char position [12];
-  unsigned char delta [12];
-  
-  speed = ResolveTaggedValueRef(context,operands + 8);
-  object = activeObject_020b56ac;
-  speed = TaggedValueToFixed(speed);
-  duration = 0xffffffff;
-  ResolveVectorOperand(context,operands,position);
-  if (speed != 0) {
-    VEC_Subtract(position,object + 0x2c0,delta);
-    duration = VEC_Mag(delta);
-    duration = FX_Div(duration,speed);
-  }
-  BeginWalkerMove(object,position,duration,0);
-  return 0;
-}
+#define ScriptOp_MoveObjectWithSpeed_020b34d4 ScriptOp_MoveObjectWithSpeed
+#define VEC_Mag_01ff9f28 VEC_Mag
+#define contextData_020b56a4 data_ov021_020b56c4
+#define func_01ff9c84 FX_Div
+#define func_01ff9e3c VEC_Subtract
+#define func_ov001_020910c4 BeginWalkerMove
+#define func_ov021_020b0374 ResolveTaggedValueRef
+#define func_ov021_020b03b0 TaggedValueToFixed
+#define func_ov021_020b03c8 ResolveVectorOperand
+#include "src/ov021/script_ops/ScriptOp_MoveObjectWithSpeed_020b34d4.c"

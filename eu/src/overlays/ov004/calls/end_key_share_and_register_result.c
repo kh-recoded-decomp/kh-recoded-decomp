@@ -1,10 +1,5 @@
-extern int PXI_Init_0204f0c8();
-extern void Slot_SetMode2Bit();
-extern void IndexedRecords_SetFlag2();
-
-int end_key_share_and_register_result(int context, int argument) {
-    int resultObject = PXI_Init_0204f0c8(context, argument, 0);
-    Slot_SetMode2Bit(context, resultObject, 0);
-    IndexedRecords_SetFlag2(context, resultObject, 0);
-    return resultObject;
-}
+#define WM_EndKeySharing_0x02032444 PXI_Init_0204f0c8
+#define end_key_share_and_register_result_02063558 end_key_share_and_register_result
+#define func_0204f378 IndexedRecords_SetFlag2
+#define func_0204f480 Slot_SetMode2Bit
+#include "src/ov004/wireless/end_key_share_and_register_result_02063558.c"

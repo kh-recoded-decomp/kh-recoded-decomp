@@ -1,6 +1,4 @@
-extern int NNS_GfdRegisterNewVramTransferTask(void *a, int b, int c, int d);
-extern void *data_02055758[];
-
-int Gfx_EnqueueTableCmdAtC(int idx, void *p, int arg2, int arg3) {
-    return NNS_GfdRegisterNewVramTransferTask(data_02055758[idx], arg2, (int)((char *)p + 0xc), arg3);
-}
+#define GFXi_EnqueueCommand NNS_GfdRegisterNewVramTransferTask
+#define Gfx_EnqueueTableCmdAtC_0202b460 Gfx_EnqueueTableCmdAtC
+#define data_02055744 data_02055758
+#include "src/arm9/shared_engine/Gfx_EnqueueTableCmdAtC_0202b460.c"

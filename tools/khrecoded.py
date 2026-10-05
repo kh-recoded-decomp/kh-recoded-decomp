@@ -484,8 +484,22 @@ def main() -> int:
             command.add_argument("--module", help="Show one original overlay/module ID, e.g. ov001")
             command.add_argument("--subsection", help="Show one subsection ID, e.g. actor_animation")
             command.add_argument("--functions", action="store_true", help="List matched and unmatched functions")
+    eu_command = sub.add_parser("eu", help="EU (BK9P) build in eu/: setup, gate or progress")
+    eu_command.add_argument("action", choices=("setup", "gate", "progress"))
+    eu_command.add_argument("--rom", help="Path to the user's EU BK9P ROM (setup only)")
     args = parser.parse_args()
     try:
+        if args.command == "eu":
+            import eu_region
+            if args.action == "setup":
+                if not args.rom:
+                    raise RuntimeError("eu setup needs --rom pointing at the EU BK9P dump")
+                eu_region.setup(Path(args.rom), dsd(install=True))
+            elif args.action == "gate":
+                eu_region.gate()
+            else:
+                eu_region.progress()
+            return 0
         rom = None if args.command == "check" and args.profile == "ci" else rom_path(args.rom)
         if args.command == "setup":
             setup(rom)

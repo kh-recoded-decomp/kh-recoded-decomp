@@ -1,5 +1,3 @@
-extern int IsWithinDelta16(void);
-int IsSceneState0(void)
-{
-    return IsWithinDelta16() == 0;
-}
+#define Game_PollSceneAlive IsWithinDelta16
+#define IsSceneState0_02040c8c IsSceneState0
+#include "src/arm9/shared_engine/IsSceneState0_02040c8c.c"

@@ -1,31 +1,7 @@
-extern int  SetDefaultHeap(int arena);
-extern void unlink_object_registry_node(int node);
-extern void NNSi_FndFreeFromDefaultHeap(void *unknown_argument_p);
-extern void NNSi_FndFreeToExpHeap(void *obj, void *heap);
-extern int  gTaskManager[];
-extern int  data_02060394[];
-
-int DestroyRegisteredObject(int *object)
-{
-    int saved_value;
-    void (*destructor)(void);
-    int arena_state;
-
-    arena_state = SetDefaultHeap(object[7]);
-    saved_value = gTaskManager[1];
-    gTaskManager[1] = (int)object;
-    destructor = (void (*)(void))object[6];
-    if (destructor != 0) {
-        destructor();
-    }
-    *object = 0;
-    gTaskManager[1] = saved_value;
-    unlink_object_registry_node((int)object);
-    saved_value = object[3];
-    if (object[8] != 0) {
-        NNSi_FndFreeFromDefaultHeap((void *)object[8]);
-    }
-    NNSi_FndFreeToExpHeap(object, (void *)data_02060394[0]);
-    SetDefaultHeap(arena_state);
-    return saved_value;
-}
+#define DestroyRegisteredObject_0202a5b4 DestroyRegisteredObject
+#define default_heap data_02060394
+#define func_0202a134 SetDefaultHeap
+#define func_0202a240 NNSi_FndFreeToExpHeap
+#define func_0202a3a8 unlink_object_registry_node
+#define object_registry gTaskManager
+#include "src/arm9/runtime_data_utilities/DestroyRegisteredObject_0202a5b4.c"

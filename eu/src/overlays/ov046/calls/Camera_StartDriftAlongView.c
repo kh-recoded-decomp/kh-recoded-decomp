@@ -1,26 +1,6 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-#include "nitro/fx.h"
-
-typedef struct CameraManager {
-    u8 pad_00[0x88];
-    u8 motion[0x48];
-} CameraManager;
-
-extern CameraManager *data_ov046_020c3500;
-extern MtxFx43 NNS_G3dGlb_cameraMtx;
-extern void func_01ff913c(const MtxFx43 *src, MtxFx33 *dst);
-extern void InitDriftParticle(void *particle, const VecFx32 *position, int param30, int param2c);
-
-static inline MtxFx33 GetViewRotation(void)
-{
-    MtxFx33 rotation;
-    func_01ff913c(&NNS_G3dGlb_cameraMtx, &rotation);
-    return rotation;
-}
-
-void Camera_StartDriftAlongView(int param30, int param2c)
-{
-    MtxFx33 rotation = GetViewRotation();
-    InitDriftParticle(data_ov046_020c3500->motion, (const VecFx32 *)rotation.m[2], param30, param2c);
-}
+#define Camera_StartDriftAlongView_020c0fd4 Camera_StartDriftAlongView
+#define InitDriftParticle_020afb34 InitDriftParticle
+#define MTX_Copy43To33_01ff913c func_01ff913c
+#define data_0205a970 NNS_G3dGlb_cameraMtx
+#define g_cameraManager_020c34e0 data_ov046_020c3500
+#include "src/ov046/shared_engine/Camera_StartDriftAlongView_020c0fd4.c"

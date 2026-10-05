@@ -1,4 +1,3 @@
-extern int SetSessionStateBit(int a, int b);
-int RequestScene11(void) {
-    return SetSessionStateBit(1, 0);
-}
+#define RequestScene11_02068e28 RequestScene11
+#define Scene_RequestPending SetSessionStateBit
+#include "src/ov001/shared_variants/RequestScene11_02068e28.c"

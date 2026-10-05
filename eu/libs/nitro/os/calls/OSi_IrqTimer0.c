@@ -1,6 +1,3 @@
-/* See OSi_IrqDma0. */
-extern void *func_02001c84();
-
-void *OSi_IrqTimer0() {
-    return func_02001c84(4);
-}
+#define OSi_IrqCallback func_02001c84
+#define OSi_IrqTimer0_02001d38 OSi_IrqTimer0
+#include "src/arm9/library_nitro_os/OSi_IrqTimer0_02001d38.c"

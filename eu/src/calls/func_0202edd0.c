@@ -1,6 +1,3 @@
-extern int func_0202d410();
-
-int func_0202edd0(int arg0) {
-    int p = *(int *)(arg0 + 0x74);
-    return func_0202d410(*(int *)(p + 0xc), *(int *)(p + 8), *(unsigned short *)(p + 6));
-}
+#define ForwardType7RecordSpan func_0202d410
+#define func_0202edbc func_0202edd0
+#include "src/arm9/shared_engine/func_0202edbc.c"

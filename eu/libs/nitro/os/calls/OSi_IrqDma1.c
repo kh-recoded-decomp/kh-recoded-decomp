@@ -1,6 +1,3 @@
-/* See OSi_IrqDma0. */
-extern void *func_02001c84();
-
-void *OSi_IrqDma1() {
-    return func_02001c84(1);
-}
+#define OSi_IrqCallback func_02001c84
+#define OSi_IrqDma1_02001d08 OSi_IrqDma1
+#include "src/arm9/library_nitro_os/OSi_IrqDma1_02001d08.c"

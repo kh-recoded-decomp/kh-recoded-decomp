@@ -1,17 +1,3 @@
-extern void Obj_Release(void *context);
-extern void DestroyAllContainerElements(void *context);
-
-typedef struct {
-    char pad[25720];
-    unsigned int flags;
-} Unk02054364;
-
-void DestroyObjectsAndRelease(Unk02054364 *context)
-{
-    DestroyAllContainerElements(context);
-
-    if (((context->flags << 29) >> 31) == 1) {
-        Obj_Release(context);
-        context->flags &= ~4;
-    }
-}
+#define DestroyObjectsAndRelease_020b8c58 DestroyObjectsAndRelease
+#define Ov008_DestroyAllListObjects DestroyAllContainerElements
+#include "src/ov027/shared_variants/DestroyObjectsAndRelease_020b8c58.c"

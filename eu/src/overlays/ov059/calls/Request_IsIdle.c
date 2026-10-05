@@ -1,17 +1,2 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad_00[0xc];
-    s32 pending;
-} Request;
-
-BOOL Request_IsIdle(void *owner, Request *request)
-{
-    switch (request->pending) {
-    case 0:
-        break;
-    default:
-        return FALSE;
-    }
-    return TRUE;
-}
+#define Request_IsIdle_020cd724 Request_IsIdle
+#include "src/ov059/unclassified_helpers/Request_IsIdle_020cd724.c"

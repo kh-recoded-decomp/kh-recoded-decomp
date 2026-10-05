@@ -1,16 +1,5 @@
-extern int WMi_CheckStateEx(int a, int b);
-extern void SetCommandArg(int slot, int arg);
-extern int WMi_SendCommand(int slot, int flag);
-
-int RunTransitionSlotB(int arg) {
-    int r = WMi_CheckStateEx(1, 5);
-    if (r != 0) {
-        return r;
-    }
-    SetCommandArg(0xb, arg);
-    r = WMi_SendCommand(0xb, 0);
-    if (r == 0) {
-        r = 2;
-    }
-    return r;
-}
+#define Ov105_SetCommandArg SetCommandArg
+#define Ov105_WMi_CheckStateEx WMi_CheckStateEx
+#define Ov105_WMi_SendCommand WMi_SendCommand
+#define RunTransitionSlotB_0201193c RunTransitionSlotB
+#include "src/arm9/shared_engine/RunTransitionSlotB_0201193c.c"

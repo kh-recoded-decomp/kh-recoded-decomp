@@ -1,25 +1,6 @@
-#include "nitro/types.h"
-
-extern u8 data_ov015_0207e980[];
-#define transitionMode (*(int *)(data_ov015_0207e980 + 0x50))
-extern u32 data_ov015_0207fbc0;
-extern u32 ClearSlotEventHandler();
-extern u32 SetPanelTransitionMode();
-extern u32 WH_SetError();
-extern u32 func_ov015_020746f8();
-
-void PollPanelTransition(void)
-
-{
-  int result;
-  
-  if ((transitionMode == 5) && (result = ClearSlotEventHandler(&data_ov015_0207fbc0), result != 0)) {
-    WH_SetError();
-  }
-  result = func_ov015_020746f8();
-  if (result != 0) {
-    return;
-  }
-  SetPanelTransitionMode(10);
-  return;
-}
+#define PollPanelTransition_02074e80 PollPanelTransition
+#define func_02011ea4 ClearSlotEventHandler
+#define func_ov015_020737c4 SetPanelTransitionMode
+#define func_ov015_020737d4 WH_SetError
+#define panelState_0207e980 data_ov015_0207e980
+#include "src/ov015/reviewed_helpers/PollPanelTransition_02074e80.c"

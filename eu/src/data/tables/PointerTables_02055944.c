@@ -30,7 +30,12 @@ extern void func_0204268c(void); /* func */
 extern void func_02042b18(void); /* func */
 extern void SweepSphereAgainstCappedCylinder(void); /* SweepSphereAgainstCappedCylinder */
 
-void (*const gCollisionSweepPairDispatch[31])(void) = {
+void (*const gCollisionSweepPairDispatch[36])(void) = {
+    func_02041e68, /* func */
+    func_02041f40, /* func */
+    func_0204268c, /* func */
+    func_02042b18, /* func */
+    SweepSphereAgainstCappedCylinder, /* SweepSphereAgainstCappedCylinder */
     func_02042f68, /* func */
     SweepObbAgainstSphereSwapped, /* SweepObbAgainstSphereSwapped */
     SweepObbAgainstObb, /* SweepObbAgainstObb */
@@ -62,12 +67,4 @@ void (*const gCollisionSweepPairDispatch[31])(void) = {
     SweepSwappedShapesAlt, /* SweepSwappedShapesAlt */
     SweepSwappedShapesAlt, /* SweepSwappedShapesAlt */
     SweepPolygonAgainstPolygon, /* SweepPolygonAgainstPolygon */
-};
-
-void (*const gCollisionSweepDispatch[5])(void) = {
-    func_02041e68, /* func */
-    func_02041f40, /* func */
-    func_0204268c, /* func */
-    func_02042b18, /* func */
-    SweepSphereAgainstCappedCylinder, /* SweepSphereAgainstCappedCylinder */
 };

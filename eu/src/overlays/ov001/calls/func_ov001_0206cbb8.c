@@ -1,9 +1,4 @@
-extern int NNSi_FndGetCurrentRootHeap();
-extern int func_ov001_0206d718();
-extern int data_ov001_020a04bc;
-
-void func_ov001_0206cbb8(int arg0) {
-    NNSi_FndGetCurrentRootHeap(arg0);
-    func_ov001_0206d718();
-    data_ov001_020a04bc = 0;
-}
+#define DestroyEventContext_0206cbb8 func_ov001_0206cbb8
+#define Ov002_ResetLinkState func_ov001_0206d718
+#define data_020a049c data_ov001_020a04bc
+#include "src/ov001/shared_engine/DestroyEventContext_0206cbb8.c"

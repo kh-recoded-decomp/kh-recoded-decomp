@@ -1,4 +1,4 @@
 #define TestSweepAgainstFace_020310c8 TestSweepAgainstFace
-#define g_shapeSweepTable_02055930 gCollisionSweepDispatch
-#define g_shapeTestTable_020558a0 gCollisionTestDispatch
+#define g_shapeSweepTable_02055930 gCollisionSweepPairDispatch
+#define g_shapeTestTable_020558a0 gCollisionTestPairDispatch
 #include "src/arm9/spatial_queries/TestSweepAgainstFace_020310c8.c"
