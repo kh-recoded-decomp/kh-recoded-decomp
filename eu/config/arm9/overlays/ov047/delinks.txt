@@ -3,9 +3,57 @@
     .ctor       start:0x020c72d4 end:0x020c72d4 kind:rodata align:4
     .bss        start:0x020c72e0 end:0x020c72e0 kind:bss align:32
 
+src/overlays/ov047/calls/Camera_SetSavedTarget.c:
+    complete
+    .text       start:0x020c3520 end:0x020c353c
+
+src/overlays/ov047/calls/Camera_SaveCurrentTarget.c:
+    complete
+    .text       start:0x020c353c end:0x020c3558
+
+src/overlays/ov047/calls/Camera_IsFollowFlag13Set.c:
+    complete
+    .text       start:0x020c3558 end:0x020c3578
+
+src/overlays/ov047/calls/Camera_SetTrackingMode.c:
+    complete
+    .text       start:0x020c3578 end:0x020c36e8
+
+src/overlays/ov047/calls/Camera_SetMode.c:
+    complete
+    .text       start:0x020c36e8 end:0x020c37cc
+
+src/overlays/ov047/calls/Camera_ResetTrackingToLeader.c:
+    complete
+    .text       start:0x020c37cc end:0x020c382c
+
+src/overlays/ov047/calls/Camera_SetTrackingAngle.c:
+    complete
+    .text       start:0x020c383c end:0x020c38a4
+
+src/overlays/ov047/calls/Camera_ResetTracking.c:
+    complete
+    .text       start:0x020c38a4 end:0x020c3a98
+
+src/overlays/ov047/calls/Camera_ResetFollowState.c:
+    complete
+    .text       start:0x020c3a98 end:0x020c3af8
+
 src/overlays/ov047/calls/Camera_ShouldStartManualTurn.c:
     complete
     .text       start:0x020c3af8 end:0x020c3b7c
+
+src/overlays/ov047/calls/Camera_ResetFollowHeading.c:
+    complete
+    .text       start:0x020c466c end:0x020c4688
+
+src/overlays/ov047/calls/Camera_UpdateManualTurn.c:
+    complete
+    .text       start:0x020c4688 end:0x020c4788
+
+src/overlays/ov047/calls/Camera_FollowControllerUpdate.c:
+    complete
+    .text       start:0x020c4788 end:0x020c4824
 
 src/overlays/ov047/calls/IsAngleDifferenceLarge.c:
     complete
@@ -14,6 +62,18 @@ src/overlays/ov047/calls/IsAngleDifferenceLarge.c:
 src/overlays/ov047/calls/ApproachAngle.c:
     complete
     .text       start:0x020c4844 end:0x020c48a0
+
+src/overlays/ov047/calls/Camera_FollowLeaderTarget.c:
+    complete
+    .text       start:0x020c493c end:0x020c4e5c
+
+src/overlays/ov047/calls/Camera_TurnToLeaderHeading.c:
+    complete
+    .text       start:0x020c4e5c end:0x020c5028
+
+src/overlays/ov047/calls/Camera_StartFollowTracking.c:
+    complete
+    .text       start:0x020c5028 end:0x020c50e0
 
 src/overlays/ov047/calls/Camera_ConstrainEye.c:
     complete
@@ -35,6 +95,10 @@ src/overlays/ov047/calls/MinOfInts.c:
     complete
     .text       start:0x020c62ec end:0x020c633c
 
+src/overlays/ov047/calls/Camera_UpdateTracking.c:
+    complete
+    .text       start:0x020c633c end:0x020c63d4
+
 src/overlays/ov047/calls/CameraSweep_CollectContact.c:
     complete
     .text       start:0x020c63d4 end:0x020c64d0
@@ -46,3 +110,23 @@ src/overlays/ov047/calls/CameraProbe_TestContact.c:
 src/overlays/ov047/calls/TryCopySourceBlock.c:
     complete
     .text       start:0x020c6b78 end:0x020c6ba4
+
+src/overlays/ov047/calls/Camera_IsFollowHeightChanging.c:
+    complete
+    .text       start:0x020c6ba4 end:0x020c6bc4
+
+src/overlays/ov047/calls/Camera_CopyViewState.c:
+    complete
+    .text       start:0x020c6bc4 end:0x020c6c00
+
+src/overlays/ov047/calls/Camera_StartFromViewState.c:
+    complete
+    .text       start:0x020c6c00 end:0x020c6cc4
+
+src/overlays/ov047/calls/Camera_ApplyViewState.c:
+    complete
+    .text       start:0x020c6cc4 end:0x020c6d44
+
+src/overlays/ov047/calls/Camera_RestoreSavedTracking.c:
+    complete
+    .text       start:0x020c6d54 end:0x020c6e0c

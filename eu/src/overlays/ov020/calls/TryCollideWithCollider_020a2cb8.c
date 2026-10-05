@@ -1,5 +1,5 @@
 #define NegateVecFx32_0204aa40 NegateVecFx32
 #define TryCollideWithCollider_020a2c98 TryCollideWithCollider_020a2cb8
-#define data_020558a0 gCollisionTestPairDispatch
-#define data_02055930 gCollisionSweepPairDispatch
+#define data_020558a0 gCollisionTestDispatch
+#define data_02055930 gCollisionSweepDispatch
 #include "src/ov020/collision/TryCollideWithCollider_020a2c98.c"

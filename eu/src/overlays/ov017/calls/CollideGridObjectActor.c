@@ -1,6 +1,6 @@
 #define CollideGridObjectActor_020a2754 CollideGridObjectActor
 #define NegateVecFx32_0204aa40 NegateVecFx32
-#define data_020558a0 gCollisionTestPairDispatch
-#define data_02055930 gCollisionSweepPairDispatch
+#define data_020558a0 gCollisionTestDispatch
+#define data_02055930 gCollisionSweepDispatch
 #define func_02036240 ActorRegistry_GetEntityByIndex
 #include "src/ov017/field_objects/CollideGridObjectActor_020a2754.c"

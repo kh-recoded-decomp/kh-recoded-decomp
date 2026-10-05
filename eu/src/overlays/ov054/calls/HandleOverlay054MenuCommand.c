@@ -122,7 +122,3 @@ BOOL HandleOverlay054MenuCommand(Actor *actor)
     }
     return result;
 }
-
-
-
-

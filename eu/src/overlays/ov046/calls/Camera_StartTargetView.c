@@ -1,4 +1,4 @@
 #define Camera_StartTargetView_020c1668 Camera_StartTargetView
-#define func_ov047_020c6be0 func_ov047_020c6c00
+#define func_ov047_020c6be0 Camera_StartFromViewState
 #define g_cameraManager_020c34e0 data_ov046_020c3500
 #include "src/ov046/shared_engine/Camera_StartTargetView_020c1668.c"

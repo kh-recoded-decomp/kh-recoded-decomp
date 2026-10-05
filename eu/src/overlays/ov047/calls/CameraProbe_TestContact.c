@@ -3,5 +3,5 @@
 #define IsFacingContactNormal_020349d8 IsFacingContactNormal
 #define SetShapePosition_0203afa0 SetShapePosition
 #define VEC_Add_01ff9e0c VEC_Add
-#define data_020558a0 gCollisionTestPairDispatch
+#define data_020558a0 gCollisionTestDispatch
 #include "src/ov047/camera/CameraProbe_TestContact_020c64b0.c"

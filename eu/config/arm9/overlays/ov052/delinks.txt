@@ -280,6 +280,10 @@ src/overlays/ov052/calls/ExitActorState.c:
     complete
     .text       start:0x020ccfc4 end:0x020cd358
 
+src/overlays/ov052/calls/EnterActorState.c:
+    complete
+    .text       start:0x020cd358 end:0x020cde40
+
 src/overlays/ov052/calls/RequestActorMode.c:
     complete
     .text       start:0x020cde40 end:0x020cdfe0

@@ -1,7 +1,7 @@
 #define DispatchActorCollision_020a5130 DispatchActorCollision
 #define VEC_Subtract_01ff9e3c VEC_Subtract
-#define data_020558a0 gCollisionTestPairDispatch
-#define data_02055930 gCollisionSweepPairDispatch
+#define data_020558a0 gCollisionTestDispatch
+#define data_02055930 gCollisionSweepDispatch
 #define func_02036240 ActorRegistry_GetEntityByIndex
 #define func_ov001_020872b8 IsNodeFlagBitClear
 #include "src/ov016/unclassified_helpers/DispatchActorCollision_020a5130.c"

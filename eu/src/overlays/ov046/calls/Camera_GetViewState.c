@@ -1,4 +1,4 @@
-#define Camera_CopyViewState_020c6ba4 func_ov047_020c6bc4
+#define Camera_CopyViewState_020c6ba4 Camera_CopyViewState
 #define Camera_GetViewState_020c15f4 Camera_GetViewState
 #define FixedPointAtan2_020062bc FX_Atan2Idx
 #define func_01ffa0f4 VEC_Distance

@@ -1,4 +1,4 @@
 #define Camera_ApplyStateIfStandard_020c1694 Camera_ApplyStateIfStandard
-#define Camera_ApplyViewState_020c6ca4 func_ov047_020c6cc4
+#define Camera_ApplyViewState_020c6ca4 Camera_ApplyViewState
 #define g_cameraManager_020c34e0 data_ov046_020c3500
 #include "src/ov046/shared_engine/Camera_ApplyStateIfStandard_020c1694.c"

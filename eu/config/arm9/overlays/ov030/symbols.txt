@@ -75,5 +75,4 @@ gMovieOverlayDescriptor kind:data(any) addr:0x020bcfa4
 gMovieSceneStateHandlers kind:data(any) addr:0x020bcfb8
 data_ov030_020bd004 kind:data(any) addr:0x020bd004
 data_ov030_020bd020 kind:bss addr:0x020bd020
-data_ov030_020bd024 kind:bss addr:0x020bd024
 gMarkerReset kind:bss addr:0x020bd024

@@ -1,6 +1,6 @@
 #define CollideFieldObjectActor_020a30e4 CollideFieldObjectActor
 #define VEC_Subtract_01ff9e3c VEC_Subtract
-#define data_020558a0 gCollisionTestPairDispatch
-#define data_02055930 gCollisionSweepPairDispatch
+#define data_020558a0 gCollisionTestDispatch
+#define data_02055930 gCollisionSweepDispatch
 #define func_02036240 ActorRegistry_GetEntityByIndex
 #include "src/ov017/field_objects/CollideFieldObjectActor_020a30e4.c"

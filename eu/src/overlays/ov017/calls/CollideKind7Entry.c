@@ -1,5 +1,5 @@
 #define CollideKind7Entry_020a55e8 CollideKind7Entry
 #define NegateVecFx32_0204aa40 NegateVecFx32
-#define data_020558a0 gCollisionTestPairDispatch
-#define data_02055930 gCollisionSweepPairDispatch
+#define data_020558a0 gCollisionTestDispatch
+#define data_02055930 gCollisionSweepDispatch
 #include "src/ov017/field_objects/CollideKind7Entry_020a55e8.c"

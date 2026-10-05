@@ -4,7 +4,7 @@
 #define ClearFlagAndField0x144_020ab83c ClearFlagAndField0x144
 #define FieldMenu_FocusEntryById_02078800 FieldMenu_FocusEntryById
 #define ScaleValueByPercentField_020a7650 ScaleValueByPercentField
-#define data_ov030_020bd004 data_ov030_020bd024
+#define data_ov030_020bd004 gMarkerResetConfig
 #define func_ov021_020a8ab4 ResetAnimationTrackState
 #define func_ov021_020a8ca0 func_ov021_020a8cc0
 #define func_ov021_020af5f4 func_ov021_020af614

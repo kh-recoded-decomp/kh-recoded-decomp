@@ -67,10 +67,10 @@ extern void *Msg_OpenContainerAndReadHeader(const char *name, u32 mode, BOOL all
 extern void ZeroBytes0x14(EntryGroupDesc *desc);
 extern s16 func_ov021_020a89c8(EntryGroupDesc *desc);
 extern void StartOv070BossTurn();
-extern void func_ov070_020d82ac();
+extern void FreeOv070ContextBuffer();
 extern void StopOv070BossEffects();
-extern void func_ov070_020d829c();
-extern void func_ov070_020d82bc();
+extern void StopOv070BossEffectsForOwner();
+extern void UpdateOv070BossProjectiles();
 
 BossObject *CreateOv070BossObject(void *owner, void *resDesc, ObjectDesc *desc)
 {
@@ -86,10 +86,10 @@ BossObject *CreateOv070BossObject(void *owner, void *resDesc, ObjectDesc *desc)
 
     InitScriptTask(obj, 4, desc->id, desc->arg);
     obj->onStart = StartOv070BossTurn;
-    obj->draw = func_ov070_020d82ac;
+    obj->draw = FreeOv070ContextBuffer;
     obj->finish = StopOv070BossEffects;
-    obj->update = func_ov070_020d829c;
-    obj->cleanup = func_ov070_020d82bc;
+    obj->update = StopOv070BossEffectsForOwner;
+    obj->cleanup = UpdateOv070BossProjectiles;
     obj->running = 0;
     obj->field44 = 0;
     obj->field48 = 0;

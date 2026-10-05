@@ -1,5 +1,5 @@
 #define ChangeCarriedActorState_020bc84c ChangeCarriedActorState
 #define func_ov030_020bb5a0 UpdateDraggedActorState
 #define func_ov052_020ccfa4 ExitActorState
-#define func_ov052_020cd338 func_ov052_020cd358
+#define func_ov052_020cd338 EnterActorState
 #include "src/ov030/shared_engine/ChangeCarriedActorState_020bc84c.c"

@@ -50,7 +50,7 @@ typedef struct ProbeSource {
 
 typedef BOOL (*ShapeTestFn)(ProbeShape *self, ProbeShape *other, void *hit, int flags);
 
-extern ShapeTestFn gCollisionTestPairDispatch[][6];
+extern ShapeTestFn gCollisionTestDispatch[][6];
 extern BOOL IsFacingContactNormal(ContactRef *ref, const VecFx32 *direction);
 extern void func_01ffaff4(const VecFx32 *src, VecFx32 *dst);
 extern fx32 VEC_DotProduct(const VecFx32 *a, const VecFx32 *b);
@@ -73,7 +73,7 @@ static inline BOOL TestShapeOverlap(ProbeShape *shape, ProbeShape *other)
     if (shape->max.x >= other->min.x && shape->min.x <= other->max.x &&
         shape->max.z >= other->min.z && shape->min.z <= other->max.z &&
         shape->max.y >= other->min.y && shape->min.y <= other->max.y) {
-        return gCollisionTestPairDispatch[shape->kind][other->kind](shape, other, NULL, 0);
+        return gCollisionTestDispatch[shape->kind][other->kind](shape, other, NULL, 0);
     }
     return FALSE;
 }
@@ -123,5 +123,4 @@ BOOL CameraProbe_CheckContact(ContactRef *ref, ContactQuery *query, CameraProbe 
     }
     return TRUE;
 }
-
 

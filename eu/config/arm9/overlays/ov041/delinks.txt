@@ -8,6 +8,10 @@ src/overlays/ov041/auto/func_ov041_020bc520.c:
     complete
     .text       start:0x020bc520 end:0x020bc522
 
+src/overlays/ov041/calls/BuildAreaSceneInfo.c:
+    complete
+    .text       start:0x020bc524 end:0x020bc5e0
+
 src/overlays/ov041/calls/InitMenuScene.c:
     complete
     .text       start:0x020bc5e0 end:0x020bc9a4
@@ -20,6 +24,26 @@ src/overlays/ov041/calls/ShutdownMenuScene.c:
     complete
     .text       start:0x020bca5c end:0x020bcb48
 
+src/overlays/ov041/calls/UpdateStageFrame.c:
+    complete
+    .text       start:0x020bcb48 end:0x020bcbd8
+
+src/overlays/ov041/calls/HasEntryWithClearState.c:
+    complete
+    .text       start:0x020bcbd8 end:0x020bcc58
+
+src/overlays/ov041/calls/CountActiveStageEntries.c:
+    complete
+    .text       start:0x020bcc58 end:0x020bccc8
+
+src/overlays/ov041/calls/StartSceneFadeIn.c:
+    complete
+    .text       start:0x020bccc8 end:0x020bcd08
+
+src/overlays/ov041/calls/UpdateSceneFade.c:
+    complete
+    .text       start:0x020bcd08 end:0x020bcd78
+
 src/overlays/ov041/calls/GetStageKindSoundId.c:
     complete
     .text       start:0x020bcd90 end:0x020bce3e
@@ -27,6 +51,26 @@ src/overlays/ov041/calls/GetStageKindSoundId.c:
 src/overlays/ov041/calls/GetStageKindMusicId.c:
     complete
     .text       start:0x020bce40 end:0x020bceec
+
+src/overlays/ov041/calls/GetOrOpenMessageContainer.c:
+    complete
+    .text       start:0x020bd64c end:0x020bd6ac
+
+src/overlays/ov041/calls/SetStageDrawLayer.c:
+    complete
+    .text       start:0x020bd760 end:0x020bd7e0
+
+src/overlays/ov041/calls/InitResourceLevels.c:
+    complete
+    .text       start:0x020bdc8c end:0x020bde1c
+
+src/overlays/ov041/calls/OpenSlotHandleIfEmpty.c:
+    complete
+    .text       start:0x020bde1c end:0x020bde50
+
+src/overlays/ov041/calls/FreeResourceLists.c:
+    complete
+    .text       start:0x020bdf20 end:0x020be014
 
 src/overlays/ov041/calls/func_ov041_020be088.c:
     complete
@@ -36,17 +80,57 @@ src/overlays/ov041/calls/func_ov041_020be090.c:
     complete
     .text       start:0x020be090 end:0x020be098
 
+src/overlays/ov041/calls/FreeManagerRecordTable.c:
+    complete
+    .text       start:0x020be224 end:0x020be258
+
 src/overlays/ov041/calls/IsStageKindAvailable.c:
     complete
     .text       start:0x020becbc end:0x020bed58
+
+src/overlays/ov041/calls/ResetSlotHandles.c:
+    complete
+    .text       start:0x020bf0c0 end:0x020bf0ec
+
+src/overlays/ov041/calls/PlaceStageEntryObject.c:
+    complete
+    .text       start:0x020c0960 end:0x020c09ec
+
+src/overlays/ov041/calls/SpawnStageEntry.c:
+    complete
+    .text       start:0x020c09ec end:0x020c0acc
+
+src/overlays/ov041/calls/DestroySceneEntry.c:
+    complete
+    .text       start:0x020c0acc end:0x020c0bc0
+
+src/overlays/ov041/calls/ApplyStageEntryMove.c:
+    complete
+    .text       start:0x020c0c14 end:0x020c0cec
+
+src/overlays/ov041/calls/SpawnStageEntryActor.c:
+    complete
+    .text       start:0x020c18ec end:0x020c1d38
 
 src/overlays/ov041/calls/FindFreeSlotId.c:
     complete
     .text       start:0x020c21d0 end:0x020c21f4
 
+src/overlays/ov041/calls/LoadStageActorModel.c:
+    complete
+    .text       start:0x020c26d8 end:0x020c279c
+
 src/overlays/ov041/calls/ReleaseEmbeddedObject.c:
     complete
     .text       start:0x020c279c end:0x020c27ac
+
+src/overlays/ov041/calls/SetSceneEntryAnimation.c:
+    complete
+    .text       start:0x020c27ac end:0x020c28ac
+
+src/overlays/ov041/calls/SetStageActorFrame.c:
+    complete
+    .text       start:0x020c2948 end:0x020c2a24
 
 src/overlays/ov041/calls/MatchesEitherSlotId.c:
     complete
@@ -55,6 +139,10 @@ src/overlays/ov041/calls/MatchesEitherSlotId.c:
 src/overlays/ov041/calls/GetPositionAboveGround.c:
     complete
     .text       start:0x020c2b00 end:0x020c2b32
+
+src/overlays/ov041/calls/GetStageGridPosition.c:
+    complete
+    .text       start:0x020c2b7c end:0x020c2bd0
 
 src/overlays/ov041/calls/GetActorAnimTrack.c:
     complete

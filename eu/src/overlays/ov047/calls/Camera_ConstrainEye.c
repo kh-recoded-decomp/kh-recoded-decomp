@@ -127,7 +127,7 @@ typedef struct FxPair {
 
 typedef BOOL (*ShapeTestFn)(CollisionShape *self, CollisionShape *other, ShapeHit *hit, int flags);
 
-extern ShapeTestFn gCollisionTestPairDispatch[][6];
+extern ShapeTestFn gCollisionTestDispatch[][6];
 extern const s16 data_02053900[];
 extern const s16 data_02053580[];
 extern const s16 data_02053b80[];
@@ -205,7 +205,7 @@ void Camera_ConstrainEye(CameraTracking *tracking, CameraManager *camera)
     if (probe.max.x >= other->min.x && probe.min.x <= other->max.x &&
         probe.max.z >= other->min.z && probe.min.z <= other->max.z &&
         probe.max.y >= other->min.y && probe.min.y <= other->max.y) {
-        result = gCollisionTestPairDispatch[probe.kind][other->kind](&probe, other, &hit, 0);
+        result = gCollisionTestDispatch[probe.kind][other->kind](&probe, other, &hit, 0);
     } else {
         result = FALSE;
     }
@@ -215,4 +215,3 @@ void Camera_ConstrainEye(CameraTracking *tracking, CameraManager *camera)
     }
     VEC_Add(&camera->eye, &tracking->direction, &camera->unk_44);
 }
-

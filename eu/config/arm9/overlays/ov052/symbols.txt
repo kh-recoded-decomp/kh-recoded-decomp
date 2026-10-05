@@ -79,7 +79,7 @@ InstallActorCallbacks kind:function(thumb,size=0x114) addr:0x020cce8c
 func_ov052_020ccfa0 kind:function(arm,size=0x1c) addr:0x020ccfa0
 func_ov052_020ccfbc kind:function(arm,size=0x8) addr:0x020ccfbc
 ExitActorState kind:function(thumb,size=0x394) addr:0x020ccfc4
-func_ov052_020cd358 kind:function(thumb,size=0xae8) addr:0x020cd358
+EnterActorState kind:function(thumb,size=0xae8) addr:0x020cd358
 .L_020cde20 kind:label(thumb) addr:0x020cde20 local
 RequestActorMode kind:function(thumb,size=0x1a0) addr:0x020cde40
 SetAnimationFrameAll kind:function(thumb,size=0x5c) addr:0x020cdfe0
