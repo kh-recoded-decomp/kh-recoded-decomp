@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-#define ChangeEnemyState_020d65c4 ChangeEnemyState
-#define InitOverlay055Entity_020d3734 InitOverlay055Entity
-#define LoadSceneSoundArchives_020d3a18 LoadSceneSoundArchives
-#define func_ov052_020cce6c func_ov052_020cce8c
-#define func_ov055_020d38a0 SetupOverlay055Entity
-#define func_ov058_020d5ee8 InitTrackedRecordEntry
-#define func_ov058_020d68ec HandleEnemyEvent
-#define func_ov058_020d6958 SetEnemyModeEnabled
-#define func_ov058_020d6b34 UpdateEnemyAnimation
-#define func_ov058_020d6d44 FilterEnemyStatusFlags
-#define func_ov058_020d6df4 SetEnemyPose
-#define func_ov058_020d6f58 UpdateEnemyFallCheck
-#include "src/ov055/object_factory/InitOverlay055Entity_020d3734.c"
-=======
 #include "nitro/types.h"
 
 typedef void (*EntityCallback)(void);
@@ -80,4 +65,3 @@ void InitOverlay055Entity(Entity *entity, u8 kind)
     entity->actionCallback = SetupOverlay055Entity;
     entity->thinkCallback = UpdateEnemyFallCheck;
 }
->>>>>>> 6429ce2ea7ff13b674e183a6843387d9844d00d4

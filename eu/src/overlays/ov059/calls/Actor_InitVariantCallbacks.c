@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-#define Actor_InitVariantCallbacks_020c7474 Actor_InitVariantCallbacks
-#define Actor_ResetMotion_020c7960 Actor_ResetMotion
-#define FreeWorkBuffer_020c766c FreeWorkBuffer
-#define func_ov059_020c7590 Actor_LoadAnimResources
-#define func_ov059_020c7684 func_ov059_020c76a4
-#define func_ov059_020c782c Actor_SelectAction
-#define func_ov059_020c799c Actor_QueueBattleSounds
-#define func_ov059_020c79d8 Actor_BuildHitSphereWithCue
-#define func_ov059_020cbef8 func_ov059_020cbf18
-#include "src/ov059/unclassified_helpers/Actor_InitVariantCallbacks_020c7474.c"
-=======
 #include "nitro/types.h"
 
 typedef void (*ActorCallback)(void);
@@ -69,4 +57,3 @@ void Actor_InitVariantCallbacks(Actor *actor, u8 variant) {
     actor->onEnter = Actor_LoadAnimResources;
     actor->onExit = func_ov059_020c76a4;
 }
->>>>>>> 6429ce2ea7ff13b674e183a6843387d9844d00d4

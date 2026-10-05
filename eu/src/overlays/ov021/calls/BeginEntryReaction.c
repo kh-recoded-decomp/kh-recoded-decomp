@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-#define BeginEntryReaction_020ad064 BeginEntryReaction
-#define GetBoundedEntryField_0206db5c GetBoundedEntryField
-#define IsPlayerEntryFlagSet_02050014 IsPlayerEntryFlagSet
-#define MapKindToSlot_020d7cc4 MapKindToSlot
-#define func_ov052_020cec9c UpdateFacingTowardTarget
-#define func_ov052_020cef20 RefreshLockTarget
-#define func_ov052_020d1238 SelectFallStateHandler
-#define func_ov056_020d316c func_ov056_020d318c
-#include "src/ov021/shared_engine/BeginEntryReaction_020ad064.c"
-=======
 #include "nitro/types.h"
 
 typedef struct ReactEntry {
@@ -99,4 +88,3 @@ void *BeginEntryReaction(ReactOwner *owner, ReactActor *actor, int *state) {
     }
     return UpdateGrabHoldState;
 }
->>>>>>> 6429ce2ea7ff13b674e183a6843387d9844d00d4

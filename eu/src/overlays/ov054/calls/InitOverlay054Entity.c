@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-#define FX_Div_020d24dc func_ov054_020d24fc
-#define InitOverlay054Entity_020d21f4 InitOverlay054Entity
-#define LoadMenuSoundArcs_020d2688 LoadMenuSoundArcs
-#define RefreshModeMenuHighlights_020d2aa0 RefreshModeMenuHighlights
-#define ShutdownOverlay054_020d2520 ShutdownOverlay054
-#define data_ov001_020a0460 data_ov001_020a0480
-#define func_0204f768 GetOverlaySelectionRecord
-#define func_ov052_020cce6c func_ov052_020cce8c
-#define func_ov054_020d2320 LoadOverlay054EntityResources
-#define func_ov054_020d24ec func_ov054_020d250c
-#define func_ov054_020d2554 RequestOverlay054ActorState
-#define func_ov054_020d2774 func_ov054_020d2794
-#define func_ov054_020d2dac func_ov054_020d2dcc
-#define func_ov058_020d7e30 LoadSceneModelResources
-#include "src/ov054/object_factory/InitOverlay054Entity_020d21f4.c"
-=======
 #include "nitro/types.h"
 
 typedef void (*EntityCallback)(void);
@@ -114,4 +97,3 @@ void InitOverlay054Entity(Entity *entity, int kind)
     entity->specialCallback = func_ov054_020d2794;
     entity->handleCallback = HandleOverlay054MenuCommand;
 }
->>>>>>> 6429ce2ea7ff13b674e183a6843387d9844d00d4

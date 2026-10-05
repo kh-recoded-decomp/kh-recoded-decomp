@@ -1,24 +1,3 @@
-<<<<<<< HEAD
-#define AcquireRecordHandle_020adaf0 AcquireRecordHandle
-#define BeginMarkedIntroScene_020d8100 BeginMarkedIntroScene
-#define CameraPath_Load_020c2ec0 CameraPath_Load
-#define CreateMarkedSceneTask_020d86e8 CreateMarkedSceneTask
-#define InitScriptTask_020adc5c InitScriptTask
-#define LoadResGroupHandles_020adc14 LoadResGroupHandles
-#define Msg_OpenContainerAndReadHeader_0202cc6c Msg_OpenContainerAndReadHeader
-#define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
-#define UpdateRisingFinisherAction_020d819c UpdateRisingFinisherAction
-#define ZeroBytes0x14_020a8adc ZeroBytes0x14
-#define data_ov064_020d883c data_ov064_020d885c
-#define data_ov064_020d8860 sOv064_CmMF_020d8880
-#define data_ov064_020d8868 sOv064_BaEfFnMfP2_020d8888
-#define func_ov021_020a89a8 func_ov021_020a89c8
-#define func_ov064_020d8234 func_ov064_020d8254
-#define func_ov064_020d86a4 func_ov064_020d86c4
-#define func_ov064_020d86b4 func_ov064_020d86d4
-#define func_ov064_020d86d0 func_ov064_020d86f0
-#include "src/ov064/object_factory/CreateMarkedSceneTask_020d86e8.c"
-=======
 #include "nitro/types.h"
 
 typedef struct {
@@ -129,4 +108,3 @@ SceneTask *CreateMarkedSceneTask(TaskOwner *owner, void *resDesc, TaskDesc *desc
     LoadResGroupHandles(task, owner, resDesc);
     return task;
 }
->>>>>>> 6429ce2ea7ff13b674e183a6843387d9844d00d4

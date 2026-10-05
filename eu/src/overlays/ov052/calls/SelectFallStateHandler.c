@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-#define SelectFallStateHandler_020d1238 SelectFallStateHandler
-#define func_ov052_020d083c func_ov052_020d085c
-#define func_ov052_020d0df0 ChooseNextAction
-#define func_ov052_020d10f0 IsLockedOnActiveFieldUnit
-#include "src/ov052/actor_motion/SelectFallStateHandler_020d1238.c"
-=======
 #include "nitro/types.h"
 #include "nitro/fx_types.h"
 
@@ -61,4 +54,3 @@ StateHandler SelectFallStateHandler(FallActor *actor, int *nextState)
     }
     return handler;
 }
->>>>>>> 6429ce2ea7ff13b674e183a6843387d9844d00d4

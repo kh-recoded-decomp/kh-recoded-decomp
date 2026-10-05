@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-#define ApplyAnimRootMotion_020cff8c ApplyAnimRootMotion
-#define GetLinkedAngleOffset_020ceb7c GetLinkedAngleOffset
-#define InitSlotEntryFromRecord_020d1a68 func_ov052_020d1a88
-#define ProcessTargetHitEntries_020d012c ProcessTargetHitEntries
-#define SetGroupSlotTarget_020a8ea8 func_ov021_020a8ec8
-#define UpdateActionPhase_020d0294 UpdateActionPhase
-#define UpdateComboTrailSlot_020d40e0 UpdateComboTrailSlot
-#define func_ov021_020a8ab4 ResetAnimationTrackState
-#define func_ov021_020a8ca0 func_ov021_020a8cc0
-#define func_ov052_020ceb54 func_ov052_020ceb74
-#define func_ov052_020cfdb4 func_ov052_020cfdd4
-#define func_ov052_020d03b8 func_ov052_020d03d8
-#include "src/ov056/unclassified_helpers/UpdateComboTrailSlot_020d40e0.c"
-=======
 #include "nitro/types.h"
 #include "nitro/fx_types.h"
 
@@ -148,4 +133,3 @@ void UpdateComboTrailSlot(Actor *actor)
         actor->setState(actor, 4);
     }
 }
->>>>>>> 6429ce2ea7ff13b674e183a6843387d9844d00d4

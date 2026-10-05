@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-#define ApplyTimeScaledSpeed_020c7d28 ApplyTimeScaledSpeed
-#define ClearRecord68_020aa1dc ClearRecord68
-#define GetClampedPaletteSlot_02073598 GetClampedPaletteSlot
-#define InitMemberGroup_020ad5c8 func_ov021_020ad5e8
-#define InitSlotMarker_020ab6dc InitSlotMarker
-#define InitSlotTable_020a98e8 InitSlotTable
-#define IsFieldFlag16Set_020735b8 IsFieldFlag16Set
-#define ResetActorCombatState_020ccae8 ResetActorCombatState
-#define func_ov021_020a7cc8 func_ov021_020a7ce8
-#define func_ov052_020c7460 func_ov052_020c7480
-#define func_ov052_020c9f88 ResetMotionState_020c9fa8
-#define func_ov052_020ca20c func_ov052_020ca22c
-#define func_ov052_020cca90 func_ov052_020ccab0
-#include "src/ov052/unclassified_helpers/ResetActorCombatState_020ccae8.c"
-=======
 #include "nitro/types.h"
 #include "nitro/fx_types.h"
 
@@ -135,4 +119,3 @@ void ResetActorCombatState(Actor *actor)
         actor->onModeExit(actor, 0, -1);
     }
 }
->>>>>>> 6429ce2ea7ff13b674e183a6843387d9844d00d4

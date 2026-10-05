@@ -1,29 +1,3 @@
-<<<<<<< HEAD
-#define AcquireRecordHandle_020adaf0 AcquireRecordHandle
-#define BuildNodeRecords_020ade6c BuildNodeRecords
-#define CameraPath_Load_020c2ec0 CameraPath_Load
-#define CreateOv066SceneObject_020d8548 CreateOv066SceneObject
-#define InitScriptTask_020adc5c InitScriptTask
-#define LoadResGroupHandles_020adc14 LoadResGroupHandles
-#define Msg_OpenContainerAndReadHeader_0202cc6c Msg_OpenContainerAndReadHeader
-#define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
-#define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
-#define OS_SPrintf_02002428 OS_SPrintf
-#define ResetTargetSet_020adf90 ResetTargetSet
-#define ZeroBytes0x14_020a8adc ZeroBytes0x14
-#define data_0205615c gSoundCategoryNames
-#define data_ov066_020d8760 sOv066_CmBZ_020d8780
-#define data_ov066_020d8768 sOv066_BaEfFnBzP2_020d8788
-#define data_ov066_020d8778 sOv066_BaChFormatSCiBZ_020d8798
-#define func_01ff8830 MI_CpuFill8
-#define func_0202c48c func_0202c4a0
-#define func_0204f768 GetOverlaySelectionRecord
-#define func_ov021_020a89a8 func_ov021_020a89c8
-#define func_ov066_020d8100 func_ov066_020d8120
-#define func_ov066_020d81c8 func_ov066_020d81e8
-#define func_ov066_020d81f4 UpdateDualMarkerAction
-#include "src/ov066/object_factory/CreateOv066SceneObject_020d8548.c"
-=======
 #include "nitro/types.h"
 
 typedef struct EntryGroupDesc {
@@ -165,4 +139,3 @@ SceneObject *CreateOv066SceneObject(ObjectOwner *owner, void *resDesc, ObjectDes
     LoadResGroupHandles(obj, owner, resDesc);
     return obj;
 }
->>>>>>> 6429ce2ea7ff13b674e183a6843387d9844d00d4

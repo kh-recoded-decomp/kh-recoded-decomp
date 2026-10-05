@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-#define ApplyAnimRootMotion_020cff8c ApplyAnimRootMotion
-#define GetGroupMemberData_020a8eec GetGroupMemberData
-#define GetLinkedAngleOffset_020ceb7c GetLinkedAngleOffset
-#define InitSlotEntryFromRecord_020d1a68 func_ov052_020d1a88
-#define ProcessTargetHitEntries_020d012c ProcessTargetHitEntries
-#define RotateOffsetAroundY_020a9160 RotateOffsetAroundY
-#define SetGroupSlotTarget_020a8ea8 func_ov021_020a8ec8
-#define StopAndClearSoundEmitter_020a8e14 StopAndClearSoundEmitter
-#define UpdateActionPhase_020d0294 UpdateActionPhase
-#define UpdateRisingShockwaveSlot_020d3530 UpdateRisingShockwaveSlot
-#define func_ov021_020a8ab4 ResetAnimationTrackState
-#define func_ov021_020a8ca0 func_ov021_020a8cc0
-#define func_ov052_020ceb54 func_ov052_020ceb74
-#define func_ov052_020cfdb4 func_ov052_020cfdd4
-#define func_ov052_020d03b8 func_ov052_020d03d8
-#define func_ov056_020d3b4c SpawnTimedAuraMarker
-#include "src/ov056/unclassified_helpers/UpdateRisingShockwaveSlot_020d3530.c"
-=======
 #include "nitro/types.h"
 #include "nitro/fx_types.h"
 
@@ -169,4 +150,3 @@ void UpdateRisingShockwaveSlot(Actor *actor)
         actor->setState(actor, 4);
     }
 }
->>>>>>> 6429ce2ea7ff13b674e183a6843387d9844d00d4

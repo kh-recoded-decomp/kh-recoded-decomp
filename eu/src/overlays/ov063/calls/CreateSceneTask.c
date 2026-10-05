@@ -1,25 +1,3 @@
-<<<<<<< HEAD
-#define AcquireRecordHandle_020adaf0 AcquireRecordHandle
-#define BeginBossIntroScene_020d8100 BeginBossIntroScene
-#define CameraPath_Load_020c2ec0 CameraPath_Load
-#define CreateSceneTask_020d859c CreateSceneTask
-#define InitObjWithCallback_020aaf8c InitObjWithCallback
-#define InitScriptTask_020adc5c InitScriptTask
-#define LoadResGroupHandles_020adc14 LoadResGroupHandles
-#define Msg_OpenContainerAndReadHeader_0202cc6c Msg_OpenContainerAndReadHeader
-#define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
-#define ZeroBytes0x14_020a8adc ZeroBytes0x14
-#define data_ov063_020d8700 sOv063_CmHo_020d8720
-#define data_ov063_020d8708 sOv063_BaEfFnHlP2_020d8728
-#define func_ov021_020a89a8 func_ov021_020a89c8
-#define func_ov063_020d815c func_ov063_020d817c
-#define func_ov063_020d8180 func_ov063_020d81a0
-#define func_ov063_020d818c func_ov063_020d81ac
-#define func_ov063_020d8198 func_ov063_020d81b8
-#define func_ov063_020d81a4 func_ov063_020d81c4
-#define func_ov063_020d8298 UpdateGroundSlamAction
-#include "src/ov063/object_factory/CreateSceneTask_020d859c.c"
-=======
 #include "nitro/types.h"
 
 typedef struct {
@@ -127,4 +105,3 @@ SceneTask *CreateSceneTask(TaskOwner *owner, void *resDesc, TaskDesc *desc)
     LoadResGroupHandles(task, owner, resDesc);
     return task;
 }
->>>>>>> 6429ce2ea7ff13b674e183a6843387d9844d00d4

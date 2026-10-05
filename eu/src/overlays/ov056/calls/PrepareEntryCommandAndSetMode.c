@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-#define PrepareEntryCommandAndSetMode_020d402c PrepareEntryCommandAndSetMode
-#define func_ov052_020cfdb4 func_ov052_020cfdd4
-#define func_ov052_020cff8c ApplyAnimRootMotion
-#define func_ov052_020d012c ProcessTargetHitEntries
-#define func_ov052_020d0294 UpdateActionPhase
-#define func_ov052_020d03b8 func_ov052_020d03d8
-#define func_ov052_020d1a68 func_ov052_020d1a88
-#define func_ov056_020d3078 FireLinkedShot
-#include "src/ov056/unclassified_helpers/PrepareEntryCommandAndSetMode_020d402c.c"
-=======
 #include "nitro/types.h"
 
 typedef struct BattleEntry {
@@ -81,4 +70,3 @@ void PrepareEntryCommandAndSetMode(BattleScene *scene)
     }
     scene->setMode(scene, 4);
 }
->>>>>>> 6429ce2ea7ff13b674e183a6843387d9844d00d4

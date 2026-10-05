@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-#define ApplyAnimRootMotion_020cff8c ApplyAnimRootMotion
-#define InitSlotEntryFromRecord_020d1a68 func_ov052_020d1a88
-#define ProcessTargetHitEntries_020d012c ProcessTargetHitEntries
-#define UpdateActionPhase_020d0294 UpdateActionPhase
-#define UpdateAirborneActionState_020d3dc8 UpdateAirborneActionState
-#define func_ov052_020cfdb4 func_ov052_020cfdd4
-#define func_ov052_020d03b8 func_ov052_020d03d8
-#define func_ov056_020d2d1c FireMarkedLinkedShot
-#include "src/ov056/unclassified_helpers/UpdateAirborneActionState_020d3dc8.c"
-=======
 #include "nitro/types.h"
 
 typedef struct {
@@ -103,4 +92,3 @@ void UpdateAirborneActionState(Actor *actor)
         actor->setState(actor, 4);
     }
 }
->>>>>>> 6429ce2ea7ff13b674e183a6843387d9844d00d4

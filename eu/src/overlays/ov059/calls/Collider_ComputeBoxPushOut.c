@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-#define CollWorld_FindHit_020351cc CollWorld_FindHit
-#define Collider_ComputeBoxPushOut_020cd44c Collider_ComputeBoxPushOut
-#define CollisionQuery_Init_02034c74 CollisionQuery_Init
-#define GetSubStruct1C_020bbfe0 GetSubStruct1C
-#define InitBoxShape_0203ad54 InitBoxShape
-#define MTX_Identity33_01ff90ec MTX_Identity33_
-#define NegateVecFx32_0204aa40 NegateVecFx32
-#define OffsetBoxByDelta_0203ac70 OffsetBoxByDelta
-#define ScaleVecFx32InPlace_0204a5e4 ScaleVecFx32InPlace
-#define VEC_DotProduct_01ff9e6c VEC_DotProduct
-#define VEC_Normalize_01ff9f88 VEC_Normalize
-#define VEC_Subtract_01ff9e3c VEC_Subtract
-#define data_02053438 data_0205344c
-#define func_0204a9e4 func_0204a9f8
-#define func_ov059_020cd724 func_ov059_020cd744
-#include "src/ov059/unclassified_helpers/Collider_ComputeBoxPushOut_020cd44c.c"
-=======
 #include "nitro/types.h"
 #include "nitro/fx_types.h"
 #include "nitro/fx.h"
@@ -214,4 +196,3 @@ void Collider_ComputeBoxPushOut(void *world, int unused1, Collider *collider, in
         }
     }
 }
->>>>>>> 6429ce2ea7ff13b674e183a6843387d9844d00d4

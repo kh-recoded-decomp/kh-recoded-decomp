@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-#define GetWaitTargetPosition_0206c3f4 GetWaitTargetPosition
-#define InitSlotEntry_020d19f8 func_ov052_020d1a18
-#define IsFlag10Set_020aa4b4 IsFlag10Set
-#define IsObjHandleBit0Set_020aa4e4 IsObjHandleBit0Set
-#define IsPlayerEntryFlagSet_02050014 IsPlayerEntryFlagSet
-#define UpdateTargetSlotsAndMode_020cb6dc UpdateTargetSlotsAndMode
-#define func_ov052_020cfdb4 func_ov052_020cfdd4
-#define func_ov052_020cff8c ApplyAnimRootMotion
-#define func_ov052_020d012c ProcessTargetHitEntries
-#define func_ov052_020d0294 UpdateActionPhase
-#define func_ov052_020d03b8 func_ov052_020d03d8
-#include "src/ov052/unclassified_helpers/UpdateTargetSlotsAndMode_020cb6dc.c"
-=======
 #include "nitro/types.h"
 #include "nitro/fx_types.h"
 
@@ -120,4 +106,3 @@ void UpdateTargetSlotsAndMode(Actor *actor)
     }
     actor->setMode(actor, 4);
 }
->>>>>>> 6429ce2ea7ff13b674e183a6843387d9844d00d4
