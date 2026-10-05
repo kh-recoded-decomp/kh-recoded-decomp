@@ -68,7 +68,7 @@ def eu_functions() -> tuple[dict, dict]:
     import audit_progress
     functions, _ = audit_progress.classify_functions()
     summary = audit_progress.summarize(functions, [])
-    out, deduped = {}, 0
+    out, deduped, deduped_bytes = {}, 0, 0
     for f in functions:
         if f["category"] != "c_decompiled_matched" or not f["source"]:
             continue
@@ -82,11 +82,13 @@ def eu_functions() -> tuple[dict, dict]:
             text = (ROOT / shared.group(1)).read_text(encoding="utf-8", errors="replace")
             body = function_body(text, us_name)
             deduped += bool(body)
+            deduped_bytes += f["size"] if body else 0
         else:
             body = function_body(text, f["name"])
         if body:
             out[f"{f['unit']}:{f['name']}"] = (f["size"], fingerprint(body))
     summary["deduped_functions"] = deduped
+    summary["deduped_bytes"] = deduped_bytes
     return out, summary
 
 
@@ -100,11 +102,10 @@ def main() -> int:
     us_measures = objdiff_report.build_report()["measures"]
     us = us_functions()
     eu, eu_summary = eu_functions()
-    eu_prints = {}
-    for key, (size, mark) in eu.items():
-        eu_prints.setdefault(mark, []).append(size)
-    shared = [(size, mark) for size, mark in us.values() if mark in eu_prints]
-    shared_marks = {mark for _, mark in shared}
+    from dedupe_regions import pairs
+    pending = pairs()
+    shared_functions = eu_summary["deduped_functions"] + len(pending)
+    shared_bytes = eu_summary["deduped_bytes"] + sum(p[0]["size"] for p in pending)
     result = {
         "us": {"matched_code": us_measures["matched_code"], "total_code": us_measures["total_code"],
                "matched_functions": us_measures["matched_functions"],
@@ -113,10 +114,10 @@ def main() -> int:
                "total_code": eu_summary["total_code_bytes"],
                "matched_functions": eu_summary["counts"]["c_decompiled_matched"],
                "total_functions": eu_summary["total_functions"]},
-        "shared": {"functions": len(shared), "us_bytes": sum(size for size, _ in shared),
-                   "deduped_functions": eu_summary["deduped_functions"],
-                   "us_only_functions": sum(1 for _, mark in us.values() if mark not in shared_marks),
-                   "eu_only_functions": sum(1 for _, mark in eu.values() if mark not in shared_marks)},
+        "shared": {"functions": shared_functions, "bytes": shared_bytes,
+                   "deduped_functions": eu_summary["deduped_functions"], "pending_pairs": len(pending),
+                   "us_only_functions": us_measures["matched_functions"] - shared_functions,
+                   "eu_only_functions": eu_summary["counts"]["c_decompiled_matched"] - shared_functions},
     }
     (ROOT / "build").mkdir(exist_ok=True)
     (ROOT / "build" / "regions.json").write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
@@ -129,10 +130,11 @@ def main() -> int:
         f"| {u['matched_functions']:,} / {u['total_functions']:,} |",
         f"| **EU** `BK9P` | {e['matched_code']:,} / {e['total_code']:,} | **{pct(e['matched_code'], e['total_code'])}** "
         f"| {e['matched_functions']:,} / {e['total_functions']:,} |",
-        f"| **Shared** (same C in both) | {s['us_bytes']:,} | {pct(s['us_bytes'], u['total_code'])} of US "
+        f"| **Shared** (same function, matched in both) | {s['bytes']:,} | {pct(s['bytes'], e['total_code'])} of EU "
         f"| {s['functions']:,} |",
         "",
-        f"{s['deduped_functions']:,} shared functions are stored once in `src/` and built for both regions. "
+        f"{s['deduped_functions']:,} shared functions are stored once in `src/` and built for both regions; "
+        f"{s['pending_pairs']:,} still have separate EU copies. "
         f"{s['us_only_functions']:,} matched functions are US-only so far and {s['eu_only_functions']:,} are EU-only. "
         "EU numbers come from `eu/tools/audit_progress.py`; per-module EU detail is in [eu/PROGRESS.md](eu/PROGRESS.md).",
         END,
@@ -151,7 +153,7 @@ def main() -> int:
                 text = text[:first_break + 2] + table + "\n\n" + text[first_break + 2:]
         path.write_text(text, encoding="utf-8", newline="\n")
     print(f"US {pct(u['matched_code'], u['total_code'])}, EU {pct(e['matched_code'], e['total_code'])}, "
-          f"shared {s['functions']:,} functions ({s['us_bytes']:,} bytes)")
+          f"shared {s['functions']:,} functions ({s['deduped_functions']:,} stored once)")
     return 0
 
 
