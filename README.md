@@ -10,13 +10,13 @@ Every counted function is C that compiles to the original bytes exactly.
 
 | | Matched | Total | % |
 |---|---:|---:|---:|
-| **ARM9 code (C bytes)** | **1,139,270** | 1,768,220 | **64.4%** |
-| ARM9 core + autoloads | 290,746 | 370,004 | 78.6% |
-| ARM9 overlays (105) | 848,524 | 1,398,216 | 60.7% |
-| Functions | 9,364 | 10,359 | 90.4% |
+| **ARM9 code (C bytes)** | **1,148,590** | 1,768,220 | **65.0%** |
+| ARM9 core + autoloads | 293,326 | 370,004 | 79.3% |
+| ARM9 overlays (105) | 855,264 | 1,398,216 | 61.2% |
+| Functions | 9,381 | 10,359 | 90.6% |
 | Data bytes (.rodata/.data/.bss) | 93,751 | 228,140 | 41.1% |
 
-Updated 2026-10-04. Per-module numbers are in [PROGRESS.md](PROGRESS.md).
+Updated 2026-10-05. Per-module numbers are in [PROGRESS.md](PROGRESS.md).
 
 - Only C that rebuilds byte-for-byte counts. Assembly, SDK binaries and renamed symbols count for nothing.
 - `link` rebuilds all 108 ARM9 modules from objects and packs a ROM identical to the original.
