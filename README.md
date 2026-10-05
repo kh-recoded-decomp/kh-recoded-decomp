@@ -3,6 +3,14 @@
 A matching decompilation of *Kingdom Hearts Re:coded* (Nintendo DS, US `BK9E`).
 Every counted function is C that compiles to the original bytes exactly.
 
+## Multi-region merge
+
+This project is merging with [Yokimitsuro/khrecoded-decomp](https://github.com/Yokimitsuro/khrecoded-decomp)
+(EU `BK9P`) into one decomp for both regions: shared `src/`, per-region configs and toolchains.
+It started as [ricky074game/kh-recoded-decomp](https://github.com/ricky074game/kh-recoded-decomp) (US),
+maintained by [@ricky074game](https://github.com/ricky074game) and [@Yokimitsuro](https://github.com/Yokimitsuro).
+EU support is in progress; the numbers below are US.
+
 > **No ROM, assets or original binaries are included.** You need your own legally
 > obtained copy of the game to build or verify anything.
 
