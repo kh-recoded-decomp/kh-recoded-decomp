@@ -1,31 +1,7 @@
-#include "nitro/types.h"
-
-typedef struct PanelState {
-    u8 pad_00[0x8c];
-    s32 field_8c;
-    u8 pad_90[0x10];
-    s32 field_a0;
-    u8 pad_a4[0x1c];
-    s32 state;
-} PanelState;
-
-extern PanelState *gPanelState;
-extern void *NNSi_FndAllocFromDefaultHeap(int size);
-extern void MI_CpuFill8(void *dst, int value, int size);
-extern void InitPanelResources(void);
-extern void RegisterPanelCallbacks(void);
-
-void InitPanelState(void) {
-    PanelState *panel;
-
-    if (gPanelState == NULL) {
-        panel = NNSi_FndAllocFromDefaultHeap(200);
-        gPanelState = panel;
-        MI_CpuFill8(panel, 0, 200);
-        panel->field_a0 = -8;
-        panel->field_8c = -1;
-        InitPanelResources();
-        RegisterPanelCallbacks();
-        panel->state = 3;
-    }
-}
+#define InitPanelState_02028810 InitPanelState
+#define func_01ff8830 MI_CpuFill8
+#define func_020282bc InitPanelResources
+#define func_02028548 RegisterPanelCallbacks
+#define func_0202a178 NNSi_FndAllocFromDefaultHeap
+#define g_ptr_0205fe24 gPanelState
+#include "src/arm9/panel_state/InitPanelState_02028810.c"

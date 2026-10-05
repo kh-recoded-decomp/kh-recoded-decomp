@@ -1,23 +1,5 @@
-#include "nitro/types.h"
-
-typedef struct ScriptObj {
-    u8 pad_00[0x628];
-    s32 flag;
-} ScriptObj;
-
-extern int ScriptVm_ReadOperandInt(void *obj, void *cmd);
-extern BOOL IsSoundStreamActive(int handleIndex);
-extern void PrepareAndStartStream(int param1, int param2);
-
-int func_020267d8(ScriptObj *obj, void *cmd)
-{
-    int a = ScriptVm_ReadOperandInt(obj, cmd);
-    if (obj->flag != 0) {
-        return 1;
-    }
-    if (IsSoundStreamActive(0) != 0) {
-        return 0;
-    }
-    PrepareAndStartStream(0, a);
-    return 1;
-}
+#define IsSoundStreamActive_0204ded4 IsSoundStreamActive
+#define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
+#define func_020267c4 func_020267d8
+#define func_0204dd4c PrepareAndStartStream
+#include "src/arm9/shared_engine/func_020267c4.c"

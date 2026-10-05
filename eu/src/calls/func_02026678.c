@@ -1,30 +1,7 @@
-#include "nitro/types.h"
-
-typedef struct ScriptObj {
-    u8 pad_00[0x628];
-    s32 flag;
-} ScriptObj;
-
-extern int ScriptVm_ReadOperandInt(void *obj, void *cmd);
-extern s32 func_ov001_02063a38(void);
-extern void SetSceneCursor(s32 a, s32 b);
-extern int IsSoundParamStale(void);
-extern int func_0204d8cc(int arg0, int arg1);
-extern s8 gScriptState;
-
-int func_02026678(ScriptObj *obj, void *cmd)
-{
-    int a = ScriptVm_ReadOperandInt(obj, cmd);
-    int b = ScriptVm_ReadOperandInt(obj, (u8 *)cmd + 8);
-    if (func_ov001_02063a38() == 8) {
-        SetSceneCursor(a, b);
-        if (obj->flag != 0) {
-            return 1;
-        }
-    }
-    if (IsSoundParamStale() != 0) {
-        func_0204d8cc((u8)a, b);
-        gScriptState = a;
-    }
-    return 1;
-}
+#define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
+#define data_02055e00 gScriptState
+#define func_020262a4 IsSoundParamStale
+#define func_02026664 func_02026678
+#define func_0204d8b8 func_0204d8cc
+#define func_ov036_020bd980 SetSceneCursor
+#include "src/arm9/shared_engine/func_02026664.c"

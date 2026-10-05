@@ -1,93 +1,15 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-typedef struct {
-    fx32 x;
-    fx32 y;
-    fx32 z;
-    fx32 w;
-} QuatFx32;
-
-typedef struct {
-    u8 pad_00[0xe0];
-    QuatFx32 spin;
-    fx32 height;
-    fx32 accel;
-    fx32 minDistanceSq;
-} OrbitDef;
-
-typedef struct {
-    u8 pad_000[0xd4];
-    VecFx32 position;
-    u8 pad_0e0[0x150 - 0xe0];
-    OrbitDef *def;
-} OrbitUnit;
-
-typedef struct {
-    OrbitUnit *unit;
-    QuatFx32 rotation;
-    fx32 speed;
-    s32 state;
-} OrbitWork;
-
-typedef struct {
-    u8 pad_00[0x10];
-    s16 actorId;
-} OrbitEvent;
-
-typedef struct StageActor StageActor;
-
-extern StageActor *GetStageActor(int id);
-extern VecFx32 *func_ov001_02090f2c(StageActor *actor);
-extern void VEC_Add(const VecFx32 *a, const VecFx32 *b, VecFx32 *ab);
-extern void VEC_Subtract(const VecFx32 *a, const VecFx32 *b, VecFx32 *ab);
-extern fx32 VEC_DotProduct(const VecFx32 *a, const VecFx32 *b);
-extern void VEC_Normalize(const VecFx32 *src, VecFx32 *dst);
-extern void VEC_MultAdd(fx32 scale, const VecFx32 *v, const VecFx32 *add, VecFx32 *dst);
-extern void MultiplyFixedPointQuaternions(QuatFx32 *dst, QuatFx32 *a, QuatFx32 *b);
-extern void func_0202fbbc(VecFx32 *in, QuatFx32 *rotation, VecFx32 *out);
-extern void ClearActorMotionState(StageActor *actor);
-extern void ClearActorMotionSpeed(StageActor *actor);
-extern void AddObjectOffsetVector(StageActor *actor, VecFx32 *offset);
-extern void func_ov001_0209590c(OrbitEvent *event, int status);
-
-BOOL OrbitActorAroundUnit(OrbitEvent *event, OrbitWork *work)
-{
-    OrbitUnit *unit;
-    OrbitDef *def;
-    StageActor *actor;
-    VecFx32 pos;
-    VecFx32 dir;
-    VecFx32 center;
-
-    switch (work->state) {
-    default:
-        work->state = 0;
-    case 0:
-        func_ov001_0209590c(event, 9);
-        break;
-    case 1:
-        unit = work->unit;
-        def = unit->def;
-        actor = GetStageActor(event->actorId);
-        center = unit->position;
-        pos = *func_ov001_02090f2c(actor);
-        VEC_Subtract(&pos, &center, &dir);
-        MultiplyFixedPointQuaternions(&work->rotation, &work->rotation, &def->spin);
-        func_0202fbbc(&dir, &work->rotation, &dir);
-        VEC_Add(&center, &dir, &pos);
-        pos.y += def->height;
-        dir.y = 0;
-        if (VEC_DotProduct(&dir, &dir) > def->minDistanceSq) {
-            VEC_Normalize(&dir, &dir);
-            work->speed += def->accel;
-            VEC_MultAdd(-work->speed, &dir, &pos, &pos);
-        }
-        ClearActorMotionState(actor);
-        ClearActorMotionSpeed(actor);
-        VEC_Subtract(&pos, func_ov001_02090f2c(actor), &dir);
-        AddObjectOffsetVector(actor, &dir);
-        return TRUE;
-    }
-    return FALSE;
-}
+#define AddObjectOffsetVector_02091c50 AddObjectOffsetVector
+#define ClearActorMotionSpeed_020911a8 ClearActorMotionSpeed
+#define ClearActorMotionState_02091194 ClearActorMotionState
+#define GetStageActor_0209c040 GetStageActor
+#define OrbitActorAroundUnit_020d7728 OrbitActorAroundUnit
+#define VEC_Add_01ff9e0c VEC_Add
+#define VEC_DotProduct_01ff9e6c VEC_DotProduct
+#define VEC_MultAdd_01ffa09c VEC_MultAdd
+#define VEC_Normalize_01ff9f88 VEC_Normalize
+#define VEC_Subtract_01ff9e3c VEC_Subtract
+#define func_0202fba8 func_0202fbbc
+#define func_ov001_02090f04 func_ov001_02090f2c
+#define func_ov001_020958e4 func_ov001_0209590c
+#define multiplyFixedPointQuaternions_0202f93c MultiplyFixedPointQuaternions
+#include "src/ov056/shared_engine/OrbitActorAroundUnit_020d7728.c"

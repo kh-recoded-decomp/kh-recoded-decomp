@@ -1,13 +1,3 @@
-extern unsigned int func_ov042_020bd830();
-
-unsigned int ScriptOp_GetFirstSharedValue(int context)
-
-{
-  unsigned int value;
-  unsigned char otherValue [4];
-  
-  func_ov042_020bd830(&value,otherValue);
-  *(unsigned short *)(context + 0x2c) = 0x10;
-  *(unsigned int *)(context + 0x30) = value;
-  return 0;
-}
+#define ScriptOp_GetFirstSharedValue_020b0c7c ScriptOp_GetFirstSharedValue
+#define func_ov042_020bd810 func_ov042_020bd830
+#include "src/ov021/script_ops/ScriptOp_GetFirstSharedValue_020b0c7c.c"

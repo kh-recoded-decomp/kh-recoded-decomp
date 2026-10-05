@@ -1,13 +1,5 @@
-#include "nitro/types.h"
-
-extern void *NNSi_FndAllocFromDefaultHeap(u32 size);
-extern void func_ov017_020a4f98(void *dst, const char *format, u32 flags, void *args);
-extern void ProcessListHeadIfEmpty(void *obj, void *header);
-
-void FormatAndQueueMessage(void *obj, const char *format, u32 flags, void *args)
-{
-    void *header = NNSi_FndAllocFromDefaultHeap(8);
-
-    func_ov017_020a4f98(header, format, flags | 4, args);
-    ProcessListHeadIfEmpty(obj, header);
-}
+#define FormatAndQueueMessage_020a4008 FormatAndQueueMessage
+#define Text_VSNPrintf_020a4f78 func_ov017_020a4f98
+#define func_0202a178 NNSi_FndAllocFromDefaultHeap
+#define func_ov017_020a3fec ProcessListHeadIfEmpty
+#include "src/ov017/unclassified_helpers/FormatAndQueueMessage_020a4008.c"

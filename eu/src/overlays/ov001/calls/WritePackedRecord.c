@@ -1,9 +1,4 @@
-#include "nitro/types.h"
-
-extern u16 data_ov001_0209e0f4[][4];
-extern void WriteGlobalPackedBits(u32 bitOffset, u32 bitCount, u32 value);
-
-void WritePackedRecord(int row, int column, u32 value)
-{
-    WriteGlobalPackedBits(data_ov001_0209e0f4[row][column], 0x14, value);
-}
+#define WriteGlobalPackedBits_02027360 WriteGlobalPackedBits
+#define WritePackedRecord_0207ebd0 WritePackedRecord
+#define data_ov001_0209e0cc data_ov001_0209e0f4
+#include "src/ov001/unclassified_helpers/WritePackedRecord_0207ebd0.c"

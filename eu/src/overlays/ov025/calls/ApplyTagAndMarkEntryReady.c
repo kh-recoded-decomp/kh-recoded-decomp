@@ -1,11 +1,5 @@
-#include "nitro/types.h"
-
-extern u32 func_ov027_020ba1f8();
-extern void SetupSlotListView(u32 entry, u32 tag, u32 field);
-extern void func_ov027_020ba200(u32 owner, u32 flag);
-
-void ApplyTagAndMarkEntryReady(u32 owner, u32 entry) {
-    u32 tag = func_ov027_020ba1f8();
-    SetupSlotListView(entry, tag, *(u32 *)(entry + 0xc));
-    func_ov027_020ba200(owner, 1);
-}
+#define ApplyTagAndMarkEntryReady_020b6c0c ApplyTagAndMarkEntryReady
+#define func_ov025_020b6ab8 SetupSlotListView
+#define func_ov027_020ba1d8 func_ov027_020ba1f8
+#define func_ov027_020ba1e0 func_ov027_020ba200
+#include "src/ov025/leaf_research/ApplyTagAndMarkEntryReady_020b6c0c.c"

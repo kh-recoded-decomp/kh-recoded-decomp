@@ -1,15 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad_00[0x44];
-    u32 unk_44;
-} OverlayState;
-
-extern OverlayState *data_ov031_020bc820;
-extern void DisableCategory6Objects(void);
-
-void ResetField44(void)
-{
-    DisableCategory6Objects();
-    data_ov031_020bc820->unk_44 = 0xffffffff;
-}
+#define ResetField44_020bbea4 ResetField44
+#define func_ov031_020bbebc DisableCategory6Objects
+#define g_activeState_020bc800 data_ov031_020bc820
+#include "src/ov031/unclassified_helpers/ResetField44_020bbea4.c"

@@ -1,14 +1,3 @@
-typedef void code();
-extern unsigned int NNSi_FndFreeFromDefaultHeap();
-
-void ReleaseCallbackOwnedBuffer(int object)
-
-{
-  if (*(code **)(object + 0x24) != (code *)0x0) {
-    (**(code **)(object + 0x24))(object);
-    if (*(int *)(object + 0xc) != 0) {
-      NNSi_FndFreeFromDefaultHeap(*(int *)(object + 0xc));
-    }
-  }
-  return;
-}
+#define ReleaseCallbackOwnedBuffer_020aafac ReleaseCallbackOwnedBuffer
+#define func_0202a1c4 NNSi_FndFreeFromDefaultHeap
+#include "src/ov021/object_state/ReleaseCallbackOwnedBuffer_020aafac.c"

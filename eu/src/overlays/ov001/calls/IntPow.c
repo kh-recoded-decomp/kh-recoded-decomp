@@ -1,17 +1,2 @@
-#include "nitro/types.h"
-
-s32 IntPow(s32 base, s32 exponent)
-{
-    s32 count;
-    s32 result;
-
-    result = 1;
-    count = 0;
-    if (0 < exponent) {
-        do {
-            result = base * result;
-            count = count + 1;
-        } while (count < exponent);
-    }
-    return result;
-}
+#define IntPow_0207b788 IntPow
+#include "src/ov001/unclassified_helpers/IntPow_0207b788.c"

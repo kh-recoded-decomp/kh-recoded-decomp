@@ -1,19 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct LinkedActor {
-    u8 pad_000[0x284];
-    u16 firstLinkId;
-} LinkedActor;
-
-extern void *GetStageLinkedActor(u16 id);
-
-void *GetFirstLinkedActor(LinkedActor *actor)
-{
-    if (actor == NULL) {
-        return NULL;
-    }
-    if (actor->firstLinkId == 0) {
-        return NULL;
-    }
-    return GetStageLinkedActor(actor->firstLinkId);
-}
+#define GetFirstLinkedActor_0208f6e8 GetFirstLinkedActor
+#define func_ov001_0209c168 GetStageLinkedActor
+#include "src/ov001/shared_engine/GetFirstLinkedActor_0208f6e8.c"

@@ -1,9 +1,2 @@
-#include "nitro/types.h"
-
-s32 IntMax(s32 a, s32 b)
-{
-    if (a < b) {
-        a = b;
-    }
-    return a;
-}
+#define Max_02048b68 IntMax
+#include "src/arm9/fixed_point_math/Max_02048b68.c"

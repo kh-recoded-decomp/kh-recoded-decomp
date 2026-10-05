@@ -1,17 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct SceneWork {
-    u8 unknown_0000[0x10d8];
-    int value;
-} SceneWork;
-
-typedef struct SceneGlobals {
-    void *unknown_00;
-    SceneWork *work;
-} SceneGlobals;
-
-extern SceneGlobals data_ov036_020c3940;
-
-int GetSceneWorkValue10d8(void) {
-    return data_ov036_020c3940.work->value;
-}
+#define GetSceneWorkValue10d8_020bd49c GetSceneWorkValue10d8
+#define data_ov036_020c3920 data_ov036_020c3940
+#include "src/ov036/unclassified_helpers/GetSceneWorkValue10d8_020bd49c.c"

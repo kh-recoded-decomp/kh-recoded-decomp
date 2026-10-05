@@ -1,6 +1,2 @@
-extern int NNSi_FndFreeFromDefaultHeap();
-
-int ZeroHalfThenFree(void *arg0) {
-    *(short *)arg0 = 0;
-    return NNSi_FndFreeFromDefaultHeap(arg0);
-}
+#define ZeroHalfThenFree_0202cd78 ZeroHalfThenFree
+#include "src/arm9/shared_engine/ZeroHalfThenFree_0202cd78.c"

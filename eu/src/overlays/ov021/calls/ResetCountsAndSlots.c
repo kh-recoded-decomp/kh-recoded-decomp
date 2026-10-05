@@ -1,16 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct SlotCounter {
-    u8 pad_00[0x3f];
-    u8 count;
-    u8 cursor;
-} SlotCounter;
-
-extern void ResetEntryStates(SlotCounter *counter);
-
-void ResetCountsAndSlots(SlotCounter *counter)
-{
-    counter->cursor = 0;
-    counter->count = 0;
-    ResetEntryStates(counter);
-}
+#define ResetCountsAndSlots_020aeb6c ResetCountsAndSlots
+#define func_ov021_020aafe4 ResetEntryStates
+#include "src/ov021/unclassified_helpers/ResetCountsAndSlots_020aeb6c.c"

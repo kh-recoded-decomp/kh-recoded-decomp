@@ -1,21 +1,7 @@
-#include "nitro/types.h"
-
-#define PXI_FIFO_TAG_SOUND 7
-#define PXI_PROC_ARM7 1
-
-extern void PXI_SetFifoRecvCallback(u32 fifoTag, void *callback);
-extern BOOL PXI_IsCallbackReady(u32 fifoTag, int proc);
-extern int IsCommandAvailable(void);
-extern void PxiFifoCallback(int tag, int data);
-extern void OS_SpinWait(u32 cycles);
-
-void InitPXI(void)
-{
-    PXI_SetFifoRecvCallback(PXI_FIFO_TAG_SOUND, PxiFifoCallback);
-
-    if (IsCommandAvailable()) {
-        while (!PXI_IsCallbackReady(PXI_FIFO_TAG_SOUND, PXI_PROC_ARM7)) {
-            OS_SpinWait(50);
-        }
-    }
-}
+#define CheckCommandProcessorReady_0200f490 IsCommandAvailable
+#define InitPXI_0200f3bc InitPXI
+#define PXI_IsCallbackReady_0200e2e8 PXI_IsCallbackReady
+#define PXI_SetFifoRecvCallback_0200e29c PXI_SetFifoRecvCallback
+#define Sound_DispatchAlarmWithInterruptsDisabled_0200f398 PxiFifoCallback
+#define func_020049b4 OS_SpinWait
+#include "src/arm9/library_nitro_snd/InitPXI_0200f3bc.c"

@@ -1,29 +1,5 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad_00[8];
-    void *field_08;
-    u8 pad_0c[0x820 - 0xc];
-    void *field_820;
-} ActorRegistry;
-
-extern void NNSi_FndFreeFromDefaultHeap(void *ptr);
-extern void FreeRecordArrayAndReset(void *table);
-extern ActorRegistry *gActorRegistry;
-
-BOOL ShutdownActorRegistry(void) {
-    ActorRegistry *table = gActorRegistry;
-    if (table != NULL) {
-        if (table->field_820 != NULL) {
-            NNSi_FndFreeFromDefaultHeap(table->field_820);
-            table->field_820 = NULL;
-        }
-        FreeRecordArrayAndReset(table);
-        if (table->field_08 != NULL) {
-            NNSi_FndFreeFromDefaultHeap(table->field_08);
-        }
-        NNSi_FndFreeFromDefaultHeap(table);
-        gActorRegistry = NULL;
-    }
-    return TRUE;
-}
+#define FreeRecordArrayAndReset_02035178 FreeRecordArrayAndReset
+#define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
+#define func_02035774 ShutdownActorRegistry
+#define g_actorRegistry_0206083c gActorRegistry
+#include "src/arm9/shared_engine/func_02035774.c"

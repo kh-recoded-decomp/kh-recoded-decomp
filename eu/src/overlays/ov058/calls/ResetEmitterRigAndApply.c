@@ -1,16 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad_000[0x130];
-    s32 phase;
-} EmitterRig;
-
-extern void RebindEmitterSlots(EmitterRig *rig, int blend);
-extern void PlaceRigAtPlayerOffset(EmitterRig *rig, int arg);
-
-void ResetEmitterRigAndApply(EmitterRig *rig, int arg)
-{
-    rig->phase = 1;
-    RebindEmitterSlots(rig, 0);
-    PlaceRigAtPlayerOffset(rig, arg);
-}
+#define RebindEmitterSlots_020d7498 RebindEmitterSlots
+#define ResetEmitterRigAndApply_020d7738 ResetEmitterRigAndApply
+#define func_ov058_020d7818 PlaceRigAtPlayerOffset
+#include "src/ov058/unclassified_helpers/ResetEmitterRigAndApply_020d7738.c"

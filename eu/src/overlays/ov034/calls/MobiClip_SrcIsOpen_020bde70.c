@@ -1,13 +1,4 @@
-#include "nitro/types.h"
-
-extern int data_ov034_020be940;
-extern u32 Obj_GetWord28(u32 handle);
-
-/* Checks whether the MobiClip source handle is open */
-BOOL MobiClip_SrcIsOpen_020bde70(void) {
-    u32 status = Obj_GetWord28(data_ov034_020be940);
-    if (status != 0) {
-        return 1;
-    }
-    return 0;
-}
+#define MobiClip_SrcIsOpen_020bde50 MobiClip_SrcIsOpen_020bde70
+#define data_020be920 data_ov034_020be940
+#define func_0202a78c Obj_GetWord28
+#include "src/ov034/shared_engine/MobiClip_SrcIsOpen_020bde50.c"

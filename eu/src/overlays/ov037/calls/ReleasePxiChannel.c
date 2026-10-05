@@ -1,10 +1,4 @@
-#include "nitro/types.h"
-
-extern u32 data_ov037_020bb6c0;
-extern void *PXI_Init_0202a64c();
-
-void ReleasePxiChannel(void)
-{
-    PXI_Init_0202a64c(data_ov037_020bb6c0);
-    data_ov037_020bb6c0 = 0xffffffff;
-}
+#define PXI_Init_0202a638 PXI_Init_0202a64c
+#define ReleasePxiChannel_020bac10 ReleasePxiChannel
+#define g_pxiChannel_020bb6a0 data_ov037_020bb6c0
+#include "src/ov037/unclassified_helpers/ReleasePxiChannel_020bac10.c"

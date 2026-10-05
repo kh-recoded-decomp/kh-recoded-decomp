@@ -1,19 +1,7 @@
-#include "nitro/types.h"
-
-extern u32 data_ov038_020bd164;
-extern void ReleaseOv038SlotPools(void);
-extern void FreeOv038ContextSlots(void);
-extern void FreeOv038ContextBuffers(void);
-extern void NNSi_FndFreeFromDefaultHeap(void *block);
-
-void ReleaseOv038Context(void)
-{
-    u32 context;
-
-    context = data_ov038_020bd164;
-    ReleaseOv038SlotPools();
-    FreeOv038ContextSlots();
-    FreeOv038ContextBuffers();
-    NNSi_FndFreeFromDefaultHeap((void *)context);
-    data_ov038_020bd164 = 0;
-}
+#define FreeOv038ContextBuffers_020bae2c FreeOv038ContextBuffers
+#define FreeOv038ContextSlots_020baf7c FreeOv038ContextSlots
+#define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
+#define ReleaseOv038Context_020bbcb8 ReleaseOv038Context
+#define ReleaseOv038SlotPools_020bb0c0 ReleaseOv038SlotPools
+#define g_ov038Context_020bd144 data_ov038_020bd164
+#include "src/ov038/unclassified_helpers/ReleaseOv038Context_020bbcb8.c"

@@ -1,19 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct SoundCtx {
-    u8 pad_00[0x06];
-    u16 flags;
-} SoundCtx;
-
-extern SoundCtx *data_ov038_020bd160;
-
-s32 MarkSoundCtxRepeatIfReady(void)
-{
-    SoundCtx *ctx = data_ov038_020bd160;
-
-    if (ctx->flags & 0x4000) {
-        ctx->flags |= 0x8000;
-        return 4;
-    }
-    return -1;
-}
+#define MarkSoundCtxRepeatIfReady_020ba58c MarkSoundCtxRepeatIfReady
+#define g_ov038SoundCtx_020bd140 data_ov038_020bd160
+#include "src/ov038/reviewed_helpers/MarkSoundCtxRepeatIfReady_020ba58c.c"

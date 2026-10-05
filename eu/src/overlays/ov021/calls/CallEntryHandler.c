@@ -1,19 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct HandlerEntry HandlerEntry;
-
-struct HandlerEntry {
-    u8 pad_000[0x1f0];
-    int (*handler)(HandlerEntry *entry, int a, int b, int c);
-};
-
-extern HandlerEntry *GetBoundedEntryField(int index);
-
-int CallEntryHandler(int index, int a, int b, int c) {
-    HandlerEntry *entry = GetBoundedEntryField(index);
-
-    if (entry->handler != NULL) {
-        return entry->handler(entry, a, b, c);
-    }
-    return -1;
-}
+#define CallEntryHandler_020a7c60 CallEntryHandler
+#define GetBoundedEntryField_0206db5c GetBoundedEntryField
+#include "src/ov021/shared_engine/CallEntryHandler_020a7c60.c"

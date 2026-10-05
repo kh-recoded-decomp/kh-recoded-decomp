@@ -1,8 +1,2 @@
-#include "nitro/fx_types.h"
-
-void Vec3AddScalar(VecFx32 *v, fx32 amount)
-{
-    v->x = v->x + amount;
-    v->y = v->y + amount;
-    v->z = v->z + amount;
-}
+#define Vec3AddScalar_0204a534 Vec3AddScalar
+#include "src/arm9/fixed_point_math/Vec3AddScalar_0204a534.c"

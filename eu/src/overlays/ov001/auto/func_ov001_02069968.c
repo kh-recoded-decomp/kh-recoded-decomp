@@ -1,9 +1,2 @@
-int func_ov001_02069968(int a, int b, int c)
-{
-    if (a < b) goto one;
-    if (c == 0) goto zero;
-one:
-    return 1;
-zero:
-    return 0;
-}
+#define LessOrNonzero_02069968 func_ov001_02069968
+#include "src/ov001/shared_engine/LessOrNonzero_02069968.c"

@@ -1,16 +1,2 @@
-#include "nitro/types.h"
-
-typedef int (*Callback)(void *arg);
-
-extern Callback data_0205fdd4[];
-extern void *data_0205fdc8[];
-
-int InvokeCallbackSlot(int index)
-{
-    Callback callback = data_0205fdd4[index];
-
-    if (callback == 0) {
-        return 0;
-    }
-    return callback(data_0205fdc8[index]);
-}
+#define InvokeCallbackSlot_02025464 InvokeCallbackSlot
+#include "src/arm9/shared_engine/InvokeCallbackSlot_02025464.c"

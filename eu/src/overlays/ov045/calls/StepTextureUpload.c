@@ -1,33 +1,6 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad00[0x10];
-    u32 remaining;
-    u32 vramOffset;
-    const void *source;
-} TextureUpload;
-
-extern void OS_WaitVBlankIntr(void);
-extern void GX_BeginLoadTex(void);
-extern void GX_LoadTex(const void *src, u32 destSlotAddr, u32 size);
-extern void GX_EndLoadTex(void);
-
-BOOL StepTextureUpload(TextureUpload *upload)
-{
-    u32 size = upload->remaining;
-
-    if (size >= 0x400) {
-        size = 0x400;
-    }
-    OS_WaitVBlankIntr();
-    GX_BeginLoadTex();
-    GX_LoadTex(upload->source, upload->vramOffset, size);
-    GX_EndLoadTex();
-    upload->vramOffset += size;
-    upload->source = (const u8 *)upload->source + size;
-    upload->remaining -= size;
-    if (upload->remaining == 0) {
-        return TRUE;
-    }
-    return FALSE;
-}
+#define GX_BeginLoadTex_02007ff4 GX_BeginLoadTex
+#define GX_EndLoadTex_0200819c GX_EndLoadTex
+#define GX_LoadTex_02008050 GX_LoadTex
+#define OS_WaitVBlankIntr_020049d0 OS_WaitVBlankIntr
+#define StepTextureUpload_020c02dc StepTextureUpload
+#include "src/ov045/shared_engine/StepTextureUpload_020c02dc.c"

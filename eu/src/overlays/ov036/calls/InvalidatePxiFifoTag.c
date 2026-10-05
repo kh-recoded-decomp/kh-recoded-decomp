@@ -1,10 +1,4 @@
-#include "nitro/types.h"
-
-extern u32 data_ov036_020c36e0;
-extern void PXI_Init_0202a64c(u32 tag);
-
-void InvalidatePxiFifoTag(void)
-{
-    PXI_Init_0202a64c(data_ov036_020c36e0);
-    data_ov036_020c36e0 = 0xffffffff;
-}
+#define InvalidatePxiFifoTag_020bc438 InvalidatePxiFifoTag
+#define func_0202a638 PXI_Init_0202a64c
+#define g_pxiFifoTag_020c36c0 data_ov036_020c36e0
+#include "src/ov036/library_nitro_pxi/InvalidatePxiFifoTag_020bc438.c"

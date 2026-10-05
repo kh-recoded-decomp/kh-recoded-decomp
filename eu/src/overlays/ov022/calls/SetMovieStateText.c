@@ -1,9 +1,4 @@
-#include "nitro/types.h"
-
-extern void *data_ov022_020b7da0;
-extern char *strcpy(char *dst, const char *src);
-
-void SetMovieStateText(const char *text)
-{
-    strcpy((char *)data_ov022_020b7da0 + 0x8c0, text);
-}
+#define SetMovieStateText_020a791c SetMovieStateText
+#define data_020b7d80 data_ov022_020b7da0
+#define strcpy_02021e60 strcpy
+#include "src/ov022/video_playback/SetMovieStateText_020a791c.c"

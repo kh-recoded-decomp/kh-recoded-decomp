@@ -1,38 +1,8 @@
-#include "nitro/types.h"
-
-typedef u64 OSTick;
-
-typedef struct FadeTween {
-    u8 active;
-    s8 busy;
-    u8 pad_02[2];
-    u32 startMilliseconds;
-    u8 tween[0x18];
-    u32 lowFlags : 2;
-    u32 finished : 1;
-    u32 highFlags : 29;
-} FadeTween;
-
-extern FadeTween *NNSi_FndGetCurrentRootHeap(void);
-extern void SampleTweenValue(void *tween, s32 *value);
-extern void SubScene9_StartFade(BOOL fadeIn);
-extern OSTick OS_GetTick(void);
-extern void SetMainBrightnessFromFx(s32 value);
-extern void *WaitFadeDelay(void);
-
-void *StepFadeInTween(void)
-{
-    FadeTween *fade = NNSi_FndGetCurrentRootHeap();
-    void *next = NULL;
-    s32 value;
-
-    SampleTweenValue(fade->tween, &value);
-    if (fade->finished) {
-        SubScene9_StartFade(FALSE);
-        value = 0x10000;
-        fade->startMilliseconds = (OS_GetTick() * 64) / 0x82ea;
-        next = WaitFadeDelay;
-    }
-    SetMainBrightnessFromFx(value);
-    return next;
-}
+#define NNSi_FndGetCurrentRootHeap_0202a764 NNSi_FndGetCurrentRootHeap
+#define OS_GetTick_02003fd4 OS_GetTick
+#define SampleTweenValue_0205258c SampleTweenValue
+#define StepFadeInTween_02066ce0 StepFadeInTween
+#define SubScene9_StartFade_02066da4 SubScene9_StartFade
+#define func_ov001_02066d30 WaitFadeDelay
+#define func_ov001_02066df4 SetMainBrightnessFromFx
+#include "src/ov001/shared_engine/StepFadeInTween_02066ce0.c"

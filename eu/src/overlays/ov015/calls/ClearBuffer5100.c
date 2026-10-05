@@ -1,11 +1,2 @@
-#include "nitro/types.h"
-
-void ClearBuffer5100(u8 *buffer) {
-    int i;
-
-    i = 0;
-    do {
-        buffer[i] = 0;
-        i = i + 1;
-    } while (i < 0x5100);
-}
+#define ClearBuffer5100_02078bb4 ClearBuffer5100
+#include "src/ov015/panel_state/ClearBuffer5100_02078bb4.c"

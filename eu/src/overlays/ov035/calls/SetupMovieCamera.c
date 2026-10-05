@@ -1,40 +1,12 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-typedef struct Mtx33 {
-    fx32 m[9];
-} Mtx33;
-
-typedef struct GeometryState {
-    u8 unknown_00[0x54];
-    u32 flags;
-} GeometryState;
-
-extern const VecFx32 data_ov035_020bc41c;
-extern const VecFx32 data_ov035_020bc410;
-extern const Mtx33 data_ov035_020bc444;
-extern Mtx33 NNS_G3dGlb_prmBaseRot;
-extern GeometryState NNS_G3dGlb_prmMatColor0;
-extern void NNS_G3dGlbSetBaseScale(const VecFx32 *target);
-extern void NNS_G3dGlbSetBaseTrans(const VecFx32 *target);
-extern void MI_Copy36B(const Mtx33 *src, Mtx33 *dst);
-extern void NNS_G3dGlbFlushWVP(void);
-extern void NNS_G3dGeBufferOP_N(u32 op, const u32 *args, u32 numWords);
-
-void SetupMovieCamera(void) {
-    u32 command;
-    VecFx32 position;
-    VecFx32 target;
-    Mtx33 rotation;
-
-    position = data_ov035_020bc41c;
-    target = data_ov035_020bc410;
-    rotation = data_ov035_020bc444;
-    NNS_G3dGlbSetBaseScale(&target);
-    NNS_G3dGlbSetBaseTrans(&position);
-    MI_Copy36B(&rotation, &NNS_G3dGlb_prmBaseRot);
-    NNS_G3dGlb_prmMatColor0.flags &= ~0xa4;
-    NNS_G3dGlbFlushWVP();
-    command = 0x1f08c0;
-    NNS_G3dGeBufferOP_N(0x29, &command, 1);
-}
+#define FlushGeometryState_02019230 NNS_G3dGlbFlushWVP
+#define QueueOrSendGeometryCommand_01ffa37c NNS_G3dGeBufferOP_N
+#define SetupMovieCamera_020bb8f0 SetupMovieCamera
+#define data_0205a9a4 NNS_G3dGlb_prmMatColor0
+#define data_0205a9b8 NNS_G3dGlb_prmBaseRot
+#define data_ov035_020bc3f0 data_ov035_020bc410
+#define data_ov035_020bc3fc data_ov035_020bc41c
+#define data_ov035_020bc424 data_ov035_020bc444
+#define func_01ff87c4 MI_Copy36B
+#define func_020192ec NNS_G3dGlbSetBaseTrans
+#define func_0201931c NNS_G3dGlbSetBaseScale
+#include "src/ov035/shared_engine/SetupMovieCamera_020bb8f0.c"

@@ -1,10 +1,4 @@
-#include "nitro/types.h"
-
-extern void *FindLoadedElementById(void *list, u16 id);
-extern void SetTagRecordArmed(void *tracker, void *record, BOOL arm);
-
-void DisarmTagById(void *tracker, int id)
-{
-    SetTagRecordArmed(tracker, FindLoadedElementById(tracker, id), FALSE);
-}
-
+#define DisarmTagById_020bf26c DisarmTagById
+#define FindLoadedElementById_020b8390 FindLoadedElementById
+#define SetTagRecordArmed_020b83e8 SetTagRecordArmed
+#include "src/ov045/record_management/DisarmTagById_020bf26c.c"

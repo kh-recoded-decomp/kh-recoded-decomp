@@ -1,20 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct MenuSharedState {
-    s8 selectedIndex;
-    u8 pad_01[0xb44 - 1];
-    u8 list[4];
-} MenuSharedState;
-
-extern MenuSharedState *func_ov039_020bc650(void);
-extern void SetListWidgetMode(void *list, u8 mode);
-
-void SetSharedListMode(int mode)
-{
-    MenuSharedState *state = func_ov039_020bc650();
-    void *list = state->list;
-
-    if (state->selectedIndex == 4) {
-        SetListWidgetMode(list, mode);
-    }
-}
+#define SetListWidgetMode_020c3f34 SetListWidgetMode
+#define SetSharedListMode_020c2aec SetSharedListMode
+#define func_ov039_020bc630 func_ov039_020bc650
+#include "src/ov073/status_menu/SetSharedListMode_020c2aec.c"

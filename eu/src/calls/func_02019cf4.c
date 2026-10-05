@@ -1,8 +1,2 @@
-extern int data_027e00a8;
-
-void func_02019cf4(int *arg0) {
-    if (*(int *)&data_027e00a8 == 0) {
-        *arg0 = 0;
-        *(int *)&data_027e00a8 = (int)arg0;
-    }
-}
+#define func_02019ce0 func_02019cf4
+#include "src/arm9/core_small/func_02019ce0.c"

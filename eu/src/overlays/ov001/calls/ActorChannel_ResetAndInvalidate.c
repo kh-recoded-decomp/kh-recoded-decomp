@@ -1,10 +1,4 @@
-#include "nitro/types.h"
-
-extern u8 *data_ov001_020a0514;
-extern void ActorChannel_ResetFields(void);
-
-void ActorChannel_ResetAndInvalidate(void)
-{
-    ActorChannel_ResetFields();
-    *(u32 *)(data_ov001_020a0514 + 0x1e0) = 0xffffffff;
-}
+#define ActorChannel_ResetAndInvalidate_0208b888 ActorChannel_ResetAndInvalidate
+#define ActorChannel_ResetFields_0208ae3c ActorChannel_ResetFields
+#define g_channelContext_020a04f4 data_ov001_020a0514
+#include "src/ov001/shared_engine/ActorChannel_ResetAndInvalidate_0208b888.c"

@@ -1,6 +1,3 @@
-#include "libs/nns/snd/snd_internal.h"
-
-void NNS_SndPlayerSetAllocatableChannel(int playerNo, u32 channelMask)
-{
-    sSndPlayers[playerNo].allocatableChannelMask = channelMask;
-}
+#define NNS_SndPlayerSetAllocatableChannel_0201d434 NNS_SndPlayerSetAllocatableChannel
+#define data_0205dcf8 sSndPlayers
+#include "src/arm9/library_nns_snd/NNS_SndPlayerSetAllocatableChannel_0201d434.c"

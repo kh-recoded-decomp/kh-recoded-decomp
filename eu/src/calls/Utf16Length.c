@@ -1,9 +1,2 @@
-int Utf16Length(unsigned short *text) {
-    int length = -1;
-    unsigned short character;
-    do {
-        character = *text++;
-        length++;
-    } while (character != 0);
-    return length;
-}
+#define LengthTerminatedHalfwords Utf16Length
+#include "src/arm9/string_utility/LengthTerminatedHalfwords.c"

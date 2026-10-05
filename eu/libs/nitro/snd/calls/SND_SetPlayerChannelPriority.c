@@ -1,6 +1,2 @@
-/* Player parameter 4 = channel priority. */
-extern void *SNDi_SetPlayerParam();
-
-void *SND_SetPlayerChannelPriority(int player, int prio) {
-    return SNDi_SetPlayerParam(player, 4, prio, 1);
-}
+#define SND_SetPlayerChannelPriority_0200ea34 SND_SetPlayerChannelPriority
+#include "src/arm9/library_nitro_snd/SND_SetPlayerChannelPriority_0200ea34.c"

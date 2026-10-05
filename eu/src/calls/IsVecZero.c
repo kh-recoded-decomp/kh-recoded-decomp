@@ -1,8 +1,2 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-#include "nitro/fx.h"
-
-BOOL IsVecZero(const VecFx32 *vec)
-{
-    return vec->x == 0 && vec->y == 0 && vec->z == 0;
-}
+#define IsVecZero_0203fc24 IsVecZero
+#include "src/arm9/math/IsVecZero_0203fc24.c"

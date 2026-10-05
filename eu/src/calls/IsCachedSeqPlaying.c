@@ -1,22 +1,5 @@
-#include "nitro/types.h"
-#include "nnsys/snd.h"
-
-extern u8 *gSoundWork;
-extern int NNS_SndPlayerGetSeqNo(NNSSndHandle *handle);
-extern int NNS_SndPlayerCountPlayingSeqBySeqNo(int seqNo);
-
-BOOL IsCachedSeqPlaying(void)
-{
-    int seqNo = NNS_SndPlayerGetSeqNo((NNSSndHandle *)(gSoundWork + 0xb44d8));
-
-    if (seqNo < 0) {
-        goto notPlaying;
-    }
-    if (NNS_SndPlayerCountPlayingSeqBySeqNo(seqNo) != 0) {
-        goto isPlaying;
-    }
-notPlaying:
-    return FALSE;
-isPlaying:
-    return TRUE;
-}
+#define IsCachedSeqPlaying_0204da48 IsCachedSeqPlaying
+#define func_0201d6d8 NNS_SndPlayerCountPlayingSeqBySeqNo
+#define func_0201d828 NNS_SndPlayerGetSeqNo
+#define g_soundWork_0206084c gSoundWork
+#include "src/arm9/audio/IsCachedSeqPlaying_0204da48.c"

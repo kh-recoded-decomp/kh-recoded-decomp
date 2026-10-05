@@ -1,7 +1,2 @@
-/* Unlinks the heap from the list that contains it. */
-extern void *FindListContainHeap(void *heap);
-extern void NNS_FndRemoveListObject(void *list, void *heap);
-
-void NNSi_FndFinalizeHeap(void *heap) {
-    NNS_FndRemoveListObject(FindListContainHeap(heap), heap);
-}
+#define NNSi_FndFinalizeHeap_02012bb8 NNSi_FndFinalizeHeap
+#include "src/arm9/library_nitro_nns/NNSi_FndFinalizeHeap_02012bb8.c"

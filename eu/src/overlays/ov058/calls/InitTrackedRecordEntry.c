@@ -1,16 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad_00[0x2a];
-    s16 linkedId;
-    s32 trackedIndex;
-} TrackedRecordEntry;
-
-extern void InitRecordEntry(TrackedRecordEntry *entry);
-
-void InitTrackedRecordEntry(TrackedRecordEntry *entry)
-{
-    InitRecordEntry(entry);
-    entry->linkedId = -1;
-    entry->trackedIndex = -1;
-}
+#define InitRecordEntry_020d4500 InitRecordEntry
+#define InitTrackedRecordEntry_020d5ee8 InitTrackedRecordEntry
+#include "src/ov058/unclassified_helpers/InitTrackedRecordEntry_020d5ee8.c"

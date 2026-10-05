@@ -1,15 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct IdOwner {
-    u8 pad_00[0x20];
-    int id;
-} IdOwner;
-
-extern void StopCueGroupSounds(IdOwner *owner, int id);
-
-void ResetIfIdMatches(IdOwner *owner, int id)
-{
-    if (owner->id == id) {
-        StopCueGroupSounds(owner, -1);
-    }
-}
+#define ResetIfIdMatches_020a8178 ResetIfIdMatches
+#define func_ov021_020a7be0 StopCueGroupSounds
+#include "src/ov021/unclassified_helpers/ResetIfIdMatches_020a8178.c"

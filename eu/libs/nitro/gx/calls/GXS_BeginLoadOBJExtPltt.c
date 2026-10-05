@@ -1,7 +1,3 @@
-/* Records which banks had to be released for the sub OBJ extended palette upload. */
-extern int GX_ResetBankForSubOBJExtPltt(void);
-extern int gGXExtPlttLoadState[];
-
-void GXS_BeginLoadOBJExtPltt(void) {
-    gGXExtPlttLoadState[6] = GX_ResetBankForSubOBJExtPltt();
-}
+#define GXS_BeginLoadOBJExtPltt_02007f3c GXS_BeginLoadOBJExtPltt
+#define data_02056f0c gGXExtPlttLoadState
+#include "src/arm9/library_nitro_gx/GXS_BeginLoadOBJExtPltt_02007f3c.c"

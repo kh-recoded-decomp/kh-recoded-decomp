@@ -1,11 +1,3 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-extern void ScaleVecFx32InPlace(VecFx32 *vec, fx32 scale);
-
-VecFx32 VecFx32ScaledCopy(const VecFx32 *vec, fx32 scale)
-{
-    VecFx32 result = *vec;
-    ScaleVecFx32InPlace(&result, scale);
-    return result;
-}
+#define VecFx32ScaledCopy_0203f4fc VecFx32ScaledCopy
+#define func_0204a5e4 ScaleVecFx32InPlace
+#include "src/arm9/math/VecFx32ScaledCopy_0203f4fc.c"

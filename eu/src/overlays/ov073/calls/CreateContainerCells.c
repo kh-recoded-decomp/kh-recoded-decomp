@@ -1,17 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct ResourceContainer ResourceContainer;
-
-extern s16 PXI_Init_0204f0c8(ResourceContainer *container, int cellId, int flags);
-extern void IndexedRecord_ClearActive(ResourceContainer *container, int cellIndex);
-
-void CreateContainerCells(ResourceContainer *container, s16 *cells, int cellId, int count)
-{
-    int i = 0;
-
-    do {
-        *cells = PXI_Init_0204f0c8(container, cellId, 0);
-        IndexedRecord_ClearActive(container, *cells);
-        cells++;
-    } while (++i < count);
-}
+#define CreateContainerCells_020bfed0 CreateContainerCells
+#define PXI_Init_0204f0b4 PXI_Init_0204f0c8
+#define func_0204f2e4 IndexedRecord_ClearActive
+#include "src/ov073/status_menu/CreateContainerCells_020bfed0.c"

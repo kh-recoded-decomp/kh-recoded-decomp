@@ -1,9 +1,3 @@
-#include "nitro/types.h"
-
-extern void StartSubtitlePlayback(void);
-
-u32 StartSubtitlePlaybackAndReturnState6(void)
-{
-    StartSubtitlePlayback();
-    return 6;
-}
+#define func_ov022_020a73b0 StartSubtitlePlayback
+#define func_ov022_020a794c StartSubtitlePlaybackAndReturnState6
+#include "src/ov022/unclassified_helpers/func_ov022_020a794c.c"

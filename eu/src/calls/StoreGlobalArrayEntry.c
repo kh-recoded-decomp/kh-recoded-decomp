@@ -1,5 +1,2 @@
-extern int data_02055e04;
-
-void StoreGlobalArrayEntry(int index, int value) {
-    ((int *)&data_02055e04)[index] = value;
-}
+#define StoreGlobalArrayEntry_02025668 StoreGlobalArrayEntry
+#include "src/arm9/shared_engine/StoreGlobalArrayEntry_02025668.c"

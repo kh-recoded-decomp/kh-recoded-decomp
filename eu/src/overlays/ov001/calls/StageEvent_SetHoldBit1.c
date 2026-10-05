@@ -1,11 +1,4 @@
-#include "nitro/types.h"
-
-extern int data_ov001_0209f2e8;
-extern void func_ov001_0209b660(int eventIndex);
-
-void StageEvent_SetHoldBit1(int eventIndex)
-{
-    if (data_ov001_0209f2e8 != -1) {
-        func_ov001_0209b660(eventIndex);
-    }
-}
+#define StageEvent_SetHoldBit1_02087da0 StageEvent_SetHoldBit1
+#define func_ov001_0209b638 func_ov001_0209b660
+#define g_stageEventsState_0209f2c8 data_ov001_0209f2e8
+#include "src/ov001/shared_engine/StageEvent_SetHoldBit1_02087da0.c"

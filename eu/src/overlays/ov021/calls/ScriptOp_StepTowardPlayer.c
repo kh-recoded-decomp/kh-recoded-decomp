@@ -1,37 +1,9 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-typedef struct ScriptContext {
-    u8 pad0[0x34];
-    VecFx32 position;
-} ScriptContext;
-
-typedef struct ActiveContext {
-    void *stage;
-    int pad4;
-    void *object;
-} ActiveContext;
-
-extern ActiveContext data_ov021_020b56c4;
-extern void *ResolveTaggedValueRef(ScriptContext *context, void *value);
-extern s32 TaggedValueToFixed(void *tagged);
-extern void NotifySceneObjectHandler(void *object, VecFx32 *pos);
-extern void VEC_Subtract(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
-extern void VEC_Normalize(const VecFx32 *src, VecFx32 *dst);
-extern void VEC_MultAdd(int scale, const VecFx32 *v, const VecFx32 *add, VecFx32 *dst);
-
-int ScriptOp_StepTowardPlayer(ScriptContext *context, u8 *operands)
-{
-    VecFx32 origin;
-    VecFx32 target;
-    VecFx32 delta;
-    VecFx32 direction;
-    void *tagged = ResolveTaggedValueRef(context, operands + 8);
-
-    origin = context->position;
-    NotifySceneObjectHandler(data_ov021_020b56c4.object, &target);
-    VEC_Subtract(&target, &origin, &delta);
-    VEC_Normalize(&delta, &direction);
-    VEC_MultAdd(TaggedValueToFixed(tagged), &direction, &target, &context->position);
-    return 0;
-}
+#define ResolveTaggedValueRef_020b0374 ResolveTaggedValueRef
+#define ScriptOp_StepTowardPlayer_020b1c50 ScriptOp_StepTowardPlayer
+#define TaggedValueToFixed_020b03b0 TaggedValueToFixed
+#define VEC_MultAdd_01ffa09c VEC_MultAdd
+#define VEC_Normalize_01ff9f88 VEC_Normalize
+#define VEC_Subtract_01ff9e3c VEC_Subtract
+#define data_ov021_020b56a4 data_ov021_020b56c4
+#define func_ov001_02091c34 NotifySceneObjectHandler
+#include "src/ov021/script_ops/ScriptOp_StepTowardPlayer_020b1c50.c"

@@ -1,7 +1,2 @@
-int PrintfDestWide_PutChar(int *arg0, short arg1) {
-    if (arg0[0] != 0) {
-        *(short *)arg0[1] = arg1;
-        arg0[0] -= 1;
-    }
-    arg0[1] += 2;
-}
+#define PrintfDestWide_PutChar_0202d638 PrintfDestWide_PutChar
+#include "src/arm9/shared_engine/PrintfDestWide_PutChar_0202d638.c"

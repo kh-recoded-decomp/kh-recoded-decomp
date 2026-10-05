@@ -1,8 +1,2 @@
-#include "nitro/types.h"
-
-extern u32 func_ov002_02066fe0(void);
-
-void SetContextConfigByte1ac8(u32 value) {
-    u32 base = func_ov002_02066fe0();
-    *(u32 *)(base + 0x1ac8) = (*(u32 *)(base + 0x1ac8) & 0xfc03ffff) | ((value & 0xff) << 0x12);
-}
+#define SetContextConfigByte1ac8_02067444 SetContextConfigByte1ac8
+#include "src/ov002/unclassified_helpers/SetContextConfigByte1ac8_02067444.c"

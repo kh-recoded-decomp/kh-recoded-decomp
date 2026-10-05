@@ -1,18 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct HeapBlock {
-    struct HeapBlock *next;
-} HeapBlock;
-
-extern void NNSi_FndFreeFromDefaultHeap(void *block);
-
-void FreeBlockChain(HeapBlock **head)
-{
-    HeapBlock *block = *head;
-    while (block != NULL) {
-        HeapBlock *current = block;
-        block = block->next;
-        NNSi_FndFreeFromDefaultHeap(current);
-    }
-    *head = NULL;
-}
+#define FreeBlockChain_020a2e84 FreeBlockChain
+#define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
+#include "src/ov017/field_objects/FreeBlockChain_020a2e84.c"

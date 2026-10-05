@@ -1,24 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad_00[0x6690];
-    u32 pxiHandle;
-} Panel;
-
-extern u32 func_ov000_02063770(void);
-extern void PXI_Init_0202a64c(u32 handle);
-extern void SetupDisplayBanksAndLayers(Panel *panel);
-
-void ReleaseHandleAndResetDisplay(Panel *panel)
-{
-    BOOL needsReset = FALSE;
-
-    if (func_ov000_02063770() == 2) {
-        needsReset = TRUE;
-    }
-    PXI_Init_0202a64c(panel->pxiHandle);
-    panel->pxiHandle = 0;
-    if (needsReset) {
-        SetupDisplayBanksAndLayers(panel);
-    }
-}
+#define PXI_Init_0202a638 PXI_Init_0202a64c
+#define ReleaseHandleAndResetDisplay_02062cf4 ReleaseHandleAndResetDisplay
+#define SetupDisplayBanksAndLayers_0206141c SetupDisplayBanksAndLayers
+#include "src/ov000/panel_state/ReleaseHandleAndResetDisplay_02062cf4.c"

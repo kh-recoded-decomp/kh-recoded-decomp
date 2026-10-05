@@ -1,20 +1,2 @@
-#include "nitro/types.h"
-
-typedef struct TileTable {
-    int *ids;
-    int count;
-} TileTable;
-
-int FindTileTableIndex(TileTable *table, int id)
-{
-    int i;
-    int result = -1;
-
-    for (i = 0; i < table->count; i++) {
-        if (id == table->ids[i]) {
-            result = i;
-            break;
-        }
-    }
-    return result;
-}
+#define FindTileTableIndex_020b9920 FindTileTableIndex
+#include "src/ov027/resource_container/FindTileTableIndex_020b9920.c"

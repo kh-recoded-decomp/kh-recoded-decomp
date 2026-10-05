@@ -1,37 +1,6 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-#include "nitro/fx.h"
-
-typedef struct CameraOffsetSource {
-    VecFx32 position;
-    VecFx32 offset;
-} CameraOffsetSource;
-
-extern const s16 data_02053580[];
-extern u16 GetBiasAdjustedField(int playerIndex);
-extern void MTX_RotY33_(MtxFx33 *mtx, fx32 sinVal, fx32 cosVal);
-extern void MTX_MultVec33(const VecFx32 *vec, const MtxFx33 *m, VecFx32 *dst);
-
-static inline VecFx32 MakeVec(fx32 x, fx32 y, fx32 z)
-{
-    VecFx32 vec;
-    vec.x = x;
-    vec.y = y;
-    vec.z = z;
-    return vec;
-}
-
-void Camera_ComputeHeadingOffset(const CameraOffsetSource *source, s32 unused, VecFx32 *out)
-{
-    MtxFx33 rotation;
-    VecFx32 offset;
-    int index = GetBiasAdjustedField(0) >> 4;
-
-    MTX_RotY33_(&rotation, data_02053580[(0x400 - index) & 0xfff], data_02053580[index]);
-    if (source != NULL) {
-        MTX_MultVec33(&source->offset, &rotation, out);
-        return;
-    }
-    offset = MakeVec(0, 0x1333, 0);
-    MTX_MultVec33(&offset, &rotation, out);
-}
+#define Camera_ComputeHeadingOffset_020c2c4c Camera_ComputeHeadingOffset
+#define GetBiasAdjustedField_0206dc80 GetBiasAdjustedField
+#define MTX_MultVec33_01ff9404 MTX_MultVec33
+#define MTX_RotY33_01ff923c MTX_RotY33_
+#define data_0205356c data_02053580
+#include "src/ov046/shared_engine/Camera_ComputeHeadingOffset_020c2c4c.c"

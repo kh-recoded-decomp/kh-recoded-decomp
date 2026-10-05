@@ -1,14 +1,3 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-typedef struct Actor {
-    u8 pad_000[0x97c];
-    VecFx32 extraVelocity;
-} Actor;
-
-extern void VEC_Add(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
-
-void Actor_AddExtraVelocity(Actor *actor, const VecFx32 *delta)
-{
-    VEC_Add(delta, &actor->extraVelocity, &actor->extraVelocity);
-}
+#define Actor_AddExtraVelocity_020cbfd0 Actor_AddExtraVelocity
+#define VEC_Add_01ff9e0c VEC_Add
+#include "src/ov059/unclassified_helpers/Actor_AddExtraVelocity_020cbfd0.c"

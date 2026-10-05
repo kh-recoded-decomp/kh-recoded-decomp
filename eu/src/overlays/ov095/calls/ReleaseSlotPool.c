@@ -1,15 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad_000[0x180];
-    u8 slotPool[1];
-} SlotPoolOwner;
-
-extern void Slot_UnlinkAll(void *pool);
-extern int Obj_Release(void *object);
-
-void ReleaseSlotPool(SlotPoolOwner *owner)
-{
-    Slot_UnlinkAll(owner->slotPool);
-    Obj_Release(owner->slotPool);
-}
+#define Obj_Release_0204eff8 Obj_Release
+#define ReleaseSlotPool_020c01ac ReleaseSlotPool
+#define Slot_UnlinkAll_0204f104 Slot_UnlinkAll
+#include "src/ov095/unclassified_helpers/ReleaseSlotPool_020c01ac.c"

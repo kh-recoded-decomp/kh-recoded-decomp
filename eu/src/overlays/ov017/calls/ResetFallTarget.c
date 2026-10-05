@@ -1,16 +1,2 @@
-#include "nitro/types.h"
-
-typedef struct FallTarget {
-    u8 active;
-    s8 group;
-    s16 index;
-    s32 timer;
-} FallTarget;
-
-void ResetFallTarget(FallTarget *target)
-{
-    target->active = 1;
-    target->group = -1;
-    target->index = -1;
-    target->timer = -1;
-}
+#define ResetFallTarget_020a48bc ResetFallTarget
+#include "src/ov017/unclassified_helpers/ResetFallTarget_020a48bc.c"

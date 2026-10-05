@@ -1,23 +1,10 @@
-#include "nitro/types.h"
-
-typedef int (*SceneStepFn)(void);
-
-extern void InitFileLoader(void);
-extern void SoundMgr_Init(int a, int b);
-extern void LoadSeqArcIfChanged(int a);
-extern void ResetSceneCtl(void);
-extern void CreateManagerObjects(void);
-extern void SetPendingScene(s32 pendId, s32 pendArg);
-extern int UpdateSceneCallback(void);
-extern u32 gEngineState;
-
-SceneStepFn InitSceneSystem(void)
-{
-    InitFileLoader();
-    SoundMgr_Init(0, 0);
-    LoadSeqArcIfChanged(0);
-    ResetSceneCtl();
-    CreateManagerObjects();
-    SetPendingScene(1, gEngineState);
-    return UpdateSceneCallback;
-}
+#define InitSceneSystem_020254f4 InitSceneSystem
+#define ResetSceneCtl_02025550 ResetSceneCtl
+#define SetPendingScene_02025644 SetPendingScene
+#define func_02025540 UpdateSceneCallback
+#define func_02028bcc CreateManagerObjects
+#define func_0202c20c InitFileLoader
+#define func_0204d4ac SoundMgr_Init
+#define func_0204d5f0 LoadSeqArcIfChanged
+#define g_engineState_02fffc20 gEngineState
+#include "src/arm9/scene_dispatch/InitSceneSystem_020254f4.c"

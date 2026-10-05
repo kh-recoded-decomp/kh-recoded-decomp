@@ -1,6 +1,2 @@
-#include "nitro/types.h"
-
-void ClearActorMotionSpeed(u8 *actor)
-{
-    *(u32 *)(actor + 0x294) = 0;
-}
+#define ClearActorMotionSpeed_020911a8 ClearActorMotionSpeed
+#include "src/ov001/shared_engine/ClearActorMotionSpeed_020911a8.c"

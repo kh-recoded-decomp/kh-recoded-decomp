@@ -1,9 +1,3 @@
-#include "nitro/types.h"
-
-extern void StopSoundStreamAtIndex(int handleIndex, int fadeFrame);
-
-BOOL StopOv038SoundStream(void)
-{
-    StopSoundStreamAtIndex(0, 0);
-    return TRUE;
-}
+#define StopOv038SoundStream_020bac24 StopOv038SoundStream
+#define StopSoundStreamAtIndex_0204deb0 StopSoundStreamAtIndex
+#include "src/ov038/unclassified_helpers/StopOv038SoundStream_020bac24.c"

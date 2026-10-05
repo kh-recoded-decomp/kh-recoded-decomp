@@ -1,20 +1,3 @@
-extern unsigned int Anim_GetFrame();
-
-int GetMaximumFieldValue(unsigned int object)
-
-{
-  int value;
-  unsigned int index;
-  int maximum;
-  
-  maximum = 0;
-  index = 0;
-  do {
-    value = Anim_GetFrame(object,index & 0xffff);
-    if (value > maximum) {
-      maximum = value;
-    }
-    index = index + 1;
-  } while ((int)index < 5);
-  return maximum;
-}
+#define GetMaximumFieldValue_020a2764 GetMaximumFieldValue
+#define func_0202f4a0 Anim_GetFrame
+#include "src/ov016/field_objects/GetMaximumFieldValue_020a2764.c"

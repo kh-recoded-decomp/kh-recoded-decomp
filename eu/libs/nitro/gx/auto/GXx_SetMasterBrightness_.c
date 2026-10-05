@@ -1,10 +1,2 @@
-void GXx_SetMasterBrightness_(unsigned short *dst, int value)
-{
-    if (value == 0) {
-        *dst = 0;
-    } else if (value > 0) {
-        *dst = value | 0x4000;
-    } else {
-        *dst = -value | 0x8000;
-    }
-}
+#define func_02006748 GXx_SetMasterBrightness_
+#include "src/arm9/library_nitro_gx/func_02006748.c"

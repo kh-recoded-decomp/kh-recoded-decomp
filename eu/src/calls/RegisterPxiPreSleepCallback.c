@@ -1,26 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct PMSleepCallbackInfo PMSleepCallbackInfo;
-struct PMSleepCallbackInfo {
-    void (*callback)(void *arg);
-    void *arg;
-    u32 pad_08;
-    PMSleepCallbackInfo *next;
-};
-
-typedef struct {
-    u32 pad_00;
-    u32 pad_04;
-    PMSleepCallbackInfo preSleepCallback;
-} PxiState;
-
-extern PxiState data_020597fc;
-extern void *PXI_Init_02011428(void);
-extern void PMi_InsertPreSleepCallbackEx(PMSleepCallbackInfo *info, int priority);
-
-void RegisterPxiPreSleepCallback(void)
-{
-    data_020597fc.preSleepCallback.callback = (void (*)(void *))PXI_Init_02011428;
-    data_020597fc.preSleepCallback.arg = NULL;
-    PMi_InsertPreSleepCallbackEx(&data_020597fc.preSleepCallback, 1000);
-}
+#define PMi_InsertPreSleepCallback_02010aec PMi_InsertPreSleepCallbackEx
+#define PXI_Init_02011414 PXI_Init_02011428
+#define RegisterPxiPreSleepCallback_020113e0 RegisterPxiPreSleepCallback
+#include "src/arm9/library_nitro_pxi/RegisterPxiPreSleepCallback_020113e0.c"

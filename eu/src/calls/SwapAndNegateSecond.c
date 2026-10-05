@@ -1,9 +1,3 @@
-#include "nitro/types.h"
-
-extern void SwapWord32(int *first, int *second);
-
-void SwapAndNegateSecond(int *first, int *second)
-{
-    SwapWord32(first, second);
-    *second *= -1;
-}
+#define SwapAndNegateSecond_0204991c SwapAndNegateSecond
+#define SwapInts_0204993c SwapWord32
+#include "src/arm9/math/SwapAndNegateSecond_0204991c.c"

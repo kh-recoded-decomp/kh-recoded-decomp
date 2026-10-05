@@ -1,7 +1,3 @@
-/* Records which banks had to be released for the sub BG extended palette upload. */
-extern int GX_ResetBankForSubBGExtPltt(void);
-extern int gGXExtPlttLoadState[];
-
-void GXS_BeginLoadBGExtPltt(void) {
-    gGXExtPlttLoadState[0] = GX_ResetBankForSubBGExtPltt();
-}
+#define GXS_BeginLoadBGExtPltt_02007e84 GXS_BeginLoadBGExtPltt
+#define data_02056f0c gGXExtPlttLoadState
+#include "src/arm9/library_nitro_gx/GXS_BeginLoadBGExtPltt_02007e84.c"

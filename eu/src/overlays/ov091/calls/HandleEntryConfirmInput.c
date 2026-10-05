@@ -1,24 +1,8 @@
-#include "nitro/types.h"
-
-extern u16 data_02060500;
-extern u32 data_ov091_020c375c;
-extern u32 PlaySoundEffect();
-extern u32 func_ov039_020bca20();
-extern u32 SetPopupSlotVisible();
-extern u32 SetPopupState();
-
-void HandleEntryConfirmInput(u32 context)
-
-{
-  int result;
-  
-  result = func_ov039_020bca20();
-  if (((((data_02060500 & 1) == 0) && ((data_02060500 & 2) == 0)) && ((data_02060500 & 8) == 0))
-     && ((*(u16 *)(result + 8) & 3) != 1)) {
-    return;
-  }
-  SetPopupSlotVisible(*(u32 *)(data_ov091_020c375c + 0x10),0);
-  PlaySoundEffect(0,7);
-  SetPopupState(context,6);
-  return;
-}
+#define HandleEntryConfirmInput_020c2064 HandleEntryConfirmInput
+#define _data_02060500 data_02060500
+#define _data_ov091_020c373c data_ov091_020c375c
+#define func_0204d924 PlaySoundEffect
+#define func_ov039_020bca00 func_ov039_020bca20
+#define func_ov091_020c1d48 SetPopupSlotVisible
+#define func_ov091_020c2784 SetPopupState
+#include "src/ov091/reviewed_helpers/HandleEntryConfirmInput_020c2064.c"

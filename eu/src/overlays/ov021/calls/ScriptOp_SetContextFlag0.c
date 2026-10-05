@@ -1,12 +1,2 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad_00[0x9c];
-    u32 flags : 31;
-    u32 flagsTop : 1;
-} ScriptContext;
-
-int ScriptOp_SetContextFlag0(ScriptContext *context) {
-    context->flags |= 1;
-    return 4;
-}
+#define ScriptOp_SetContextFlag0_020b3400 ScriptOp_SetContextFlag0
+#include "src/ov021/script_ops/ScriptOp_SetContextFlag0_020b3400.c"

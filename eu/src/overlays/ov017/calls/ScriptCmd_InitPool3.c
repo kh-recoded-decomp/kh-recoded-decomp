@@ -1,19 +1,5 @@
-#include "nitro/types.h"
-
-typedef struct ScriptOperand {
-    s16 type;
-    s16 pad_02;
-    s32 value;
-} ScriptOperand;
-
-extern int ScriptVm_ReadOperandInt(void *vm, ScriptOperand *operand);
-extern void *FindKind4FieldObject(void);
-extern void InitPool3(void *manager, s32 capacity);
-
-int ScriptCmd_InitPool3(void *vm, ScriptOperand *operands)
-{
-    int capacity = ScriptVm_ReadOperandInt(vm, operands);
-
-    InitPool3(FindKind4FieldObject(), (u16)capacity);
-    return 1;
-}
+#define InitPool3_020a4178 InitPool3
+#define ScriptCmd_InitPool3_020a259c ScriptCmd_InitPool3
+#define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
+#define func_ov017_020a4204 FindKind4FieldObject
+#include "src/ov017/script_commands/ScriptCmd_InitPool3_020a259c.c"

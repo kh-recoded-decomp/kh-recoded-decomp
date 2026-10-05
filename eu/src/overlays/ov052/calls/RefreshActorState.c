@@ -1,30 +1,8 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-typedef void code();
-
-extern void ApplyTimeScaledSpeed(int entity, fx32 targetSpeed);
-extern void func_ov052_020c9854(int entity);
-extern void ApplyActorVelocity(int entity);
-extern fx32 func_ov001_0206db44(void);
-extern void UpdateActorFrame(int entity);
-extern void func_ov052_020c97c4(int entity);
-extern void PlayCueGroupSounds(int subObject, s32 a, s32 b);
-
-/* Runs the actor's per-update subsystem refresh */
-void RefreshActorState(int entity)
-{
-    fx32 timeScale;
-
-    ApplyTimeScaledSpeed(entity, *(fx32 *)(entity + 0x9f4));
-    func_ov052_020c9854(entity);
-    ApplyActorVelocity(entity);
-    timeScale = func_ov001_0206db44();
-    if (*(code **)(entity + 0x1ec) != (code *)0) {
-        (**(code **)(entity + 0x1ec))(entity, timeScale);
-    }
-    UpdateActorFrame(entity);
-    (**(code **)(entity + 0x9bc))(entity);
-    func_ov052_020c97c4(entity);
-    PlayCueGroupSounds(entity + 0xb2c, *(s32 *)(entity + 0x75c), *(s32 *)(entity + 0x760));
-}
+#define ApplyTimeScaledSpeed_020c7d28 ApplyTimeScaledSpeed
+#define RefreshActorState_020cce08 RefreshActorState
+#define func_ov021_020a7fa4 PlayCueGroupSounds
+#define func_ov052_020c76cc ApplyActorVelocity
+#define func_ov052_020c967c UpdateActorFrame
+#define func_ov052_020c97a4 func_ov052_020c97c4
+#define func_ov052_020c9834 func_ov052_020c9854
+#include "src/ov052/unclassified_helpers/RefreshActorState_020cce08.c"

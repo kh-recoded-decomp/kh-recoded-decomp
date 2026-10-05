@@ -1,18 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct ScriptOperand {
-    s16 type;
-    u8 payload[6];
-} ScriptOperand;
-
-extern int ScriptVm_ReadOperandInt(void *context, ScriptOperand *operand);
-extern void ActorChannel_QueueRequest(u32 frameCount, u32 angle);
-
-int ScriptCmd_QueueCameraAngleTransition(void *context, ScriptOperand *operands)
-{
-    int angleDegrees = ScriptVm_ReadOperandInt(context, operands);
-    u32 frameCount = ScriptVm_ReadOperandInt(context, operands + 1);
-
-    ActorChannel_QueueRequest(frameCount, angleDegrees * 0xb6);
-    return 1;
-}
+#define ActorChannel_QueueRequest_0208bcc0 ActorChannel_QueueRequest
+#define ScriptCmd_QueueCameraAngleTransition_0208ee0c ScriptCmd_QueueCameraAngleTransition
+#define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
+#include "src/ov001/scripted_actor_behavior/ScriptCmd_QueueCameraAngleTransition_0208ee0c.c"

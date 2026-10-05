@@ -1,18 +1,5 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-extern fx32 VEC_Mag(const VecFx32 *v);
-extern void DivideVecByLength(VecFx32 *v, fx32 length);
-extern void ScaleVecFx32InPlace(VecFx32 *v, fx32 scale);
-
-BOOL ClampVecLength(VecFx32 *vec, fx32 maxLength)
-{
-    fx32 length = VEC_Mag(vec);
-
-    if (length <= maxLength) {
-        return FALSE;
-    }
-    DivideVecByLength(vec, length);
-    ScaleVecFx32InPlace(vec, maxLength);
-    return TRUE;
-}
+#define ClampVecLength_0204ac28 ClampVecLength
+#define DivideVecByLength_0204a6ac DivideVecByLength
+#define VEC_Mag_01ff9f28 VEC_Mag
+#define func_0204a5e4 ScaleVecFx32InPlace
+#include "src/arm9/math/ClampVecLength_0204ac28.c"

@@ -1,5 +1,2 @@
-extern int data_02059784;
-
-int TP_GetLatestIndexInAuto(void) {
-    return *(unsigned short *)((int)&data_02059784 + 0x10);
-}
+#define TP_GetLatestIndexInAuto_0200ff50 TP_GetLatestIndexInAuto
+#include "src/arm9/library_nitro_spi/TP_GetLatestIndexInAuto_0200ff50.c"

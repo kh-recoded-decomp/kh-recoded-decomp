@@ -1,20 +1,5 @@
-#include "nitro/types.h"
-
-typedef struct Ov038Context {
-    u32 unk_00;
-    void *containers[3];
-} Ov038Context;
-
-extern Ov038Context *data_ov038_020bd164;
-extern const char *gResultsResourcePaths[];
-extern void *Msg_OpenContainerAndReadHeader(const char *name, u32 mode, BOOL allocFromEnd);
-
-void LoadOv038MsgContainers(void)
-{
-    Ov038Context *context = data_ov038_020bd164;
-    s32 index;
-
-    for (index = 0; index < 3; index++) {
-        context->containers[index] = Msg_OpenContainerAndReadHeader(gResultsResourcePaths[index], 0xe, FALSE);
-    }
-}
+#define LoadOv038MsgContainers_020bade0 LoadOv038MsgContainers
+#define Msg_OpenContainerAndReadHeader_0202cc6c Msg_OpenContainerAndReadHeader
+#define g_ov038ContainerNames_020bbdb0 gResultsResourcePaths
+#define g_ov038Context_020bd144 data_ov038_020bd164
+#include "src/ov038/unclassified_helpers/LoadOv038MsgContainers_020bade0.c"

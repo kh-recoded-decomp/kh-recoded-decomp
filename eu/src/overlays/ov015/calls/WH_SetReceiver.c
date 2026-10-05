@@ -1,21 +1,5 @@
-#include "nitro/types.h"
-
-typedef void (*WhReceiverFunc)(u16 aid, u16 *data, u16 size);
-
-typedef struct WirelessHelper {
-    u8 pad_00[0x44];
-    WhReceiverFunc receiver;
-} WirelessHelper;
-
-extern WirelessHelper data_ov015_0207e980;
-extern int SetSlotEventHandler(int slot, void (*callback)(void *), void *arg);
-extern void SetPanelTransitionMode(u32 mode);
-extern void WH_PortReceiveCallback(void *arg);
-
-void WH_SetReceiver(WhReceiverFunc receiver)
-{
-    data_ov015_0207e980.receiver = receiver;
-    if (SetSlotEventHandler(14, WH_PortReceiveCallback, NULL) != 0) {
-        SetPanelTransitionMode(9);
-    }
-}
+#define SetPanelTransitionMode_020737c4 SetPanelTransitionMode
+#define SetSlotEventHandler_0201144c SetSlotEventHandler
+#define WH_SetReceiver_02074e3c WH_SetReceiver
+#define func_ov015_02074840 WH_PortReceiveCallback
+#include "src/ov015/wireless/WH_SetReceiver_02074e3c.c"

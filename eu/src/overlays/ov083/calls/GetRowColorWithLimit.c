@@ -1,15 +1,2 @@
-#include "nitro/types.h"
-
-int GetRowColorWithLimit(int row, int cursor, int limit)
-{
-    if (cursor < 0 || row == cursor) {
-        if (row >= limit) {
-            return 0xa;
-        }
-        return 2;
-    }
-    if (row < cursor) {
-        return 0xc;
-    }
-    return 8;
-}
+#define GetRowColorWithLimit_020bf5ac GetRowColorWithLimit
+#include "src/ov083/unclassified_helpers/GetRowColorWithLimit_020bf5ac.c"

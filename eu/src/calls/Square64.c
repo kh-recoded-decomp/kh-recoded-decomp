@@ -1,6 +1,2 @@
-#include "nitro/types.h"
-
-s64 Square64(s32 value)
-{
-    return (s64)value * (s64)value;
-}
+#define Square64_0203fa2c Square64
+#include "src/arm9/fixed_point_math/Square64_0203fa2c.c"

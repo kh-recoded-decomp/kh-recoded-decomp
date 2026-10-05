@@ -1,3 +1,2 @@
-int GetField4UnlessState2(int arg0) {
-    return (*(short *)arg0 == 2) ? 0 : *(int *)(arg0 + 4);
-}
+#define GetField4UnlessState2_02025e40 GetField4UnlessState2
+#include "src/arm9/shared_engine/GetField4UnlessState2_02025e40.c"

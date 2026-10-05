@@ -1,29 +1,5 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-typedef struct SlotPosition {
-    VecFx32 position;
-    u32 extra[2];
-} SlotPosition;
-
-extern VecFx32 *func_ov001_0206dc4c(int context);
-extern int IsStageEventReady(u32 id);
-extern BOOL StageRecord_GetSlotPosition(u16 eventId, u16 slot, SlotPosition *outPosition);
-extern fx32 VEC_Distance(const VecFx32 *a, const VecFx32 *b);
-
-BOOL IsEventSlotInRange(int context, int eventId, int slot, fx32 range)
-{
-    VecFx32 *origin = func_ov001_0206dc4c(context);
-    SlotPosition slotPosition;
-
-    if (!IsStageEventReady((u16)eventId)) {
-        return FALSE;
-    }
-    if (!StageRecord_GetSlotPosition(eventId, slot, &slotPosition)) {
-        return FALSE;
-    }
-    if (VEC_Distance(&slotPosition.position, origin) > range) {
-        return FALSE;
-    }
-    return TRUE;
-}
+#define IsEventSlotInRange_0206b800 IsEventSlotInRange
+#define IsStageEventReady_02087c78 IsStageEventReady
+#define StageRecord_GetSlotPosition_02087c4c StageRecord_GetSlotPosition
+#define func_01ffa0f4 VEC_Distance
+#include "src/ov001/shared_engine/IsEventSlotInRange_0206b800.c"

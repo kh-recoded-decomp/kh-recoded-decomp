@@ -1,25 +1,8 @@
-#include "nitro/types.h"
-
-typedef struct Ov081State {
-    u8 pad_00[0x63c6];
-    s8 cursor;
-} Ov081State;
-
-extern Ov081State *data_ov081_020c5da0;
-extern void SkipToUnlockedListEntry(Ov081State *state, BOOL forward);
-extern void func_ov081_020c5660(void *obj);
-extern void func_ov081_020c4e08(void *obj);
-extern void *func_ov081_020c544c(void);
-extern void DrawListTitle(Ov081State *state, void *list);
-
-void ResetListCursor(void)
-{
-    Ov081State *state;
-
-    data_ov081_020c5da0->cursor = 0;
-    SkipToUnlockedListEntry(data_ov081_020c5da0, TRUE);
-    state = data_ov081_020c5da0;
-    DrawListTitle(state, func_ov081_020c544c());
-    func_ov081_020c5660(state);
-    func_ov081_020c4e08(data_ov081_020c5da0);
-}
+#define BindDescriptor0_020c4de8 func_ov081_020c4e08
+#define BindDescriptor0_020c5640 func_ov081_020c5660
+#define DrawListTitle_020c56a8 DrawListTitle
+#define FX_Div_020c542c func_ov081_020c544c
+#define ResetListCursor_020c5c0c ResetListCursor
+#define SkipToUnlockedListEntry_020c5a74 SkipToUnlockedListEntry
+#define data_020c5d80 data_ov081_020c5da0
+#include "src/ov081/unclassified_helpers/ResetListCursor_020c5c0c.c"

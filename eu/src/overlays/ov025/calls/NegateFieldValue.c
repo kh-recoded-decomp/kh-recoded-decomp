@@ -1,5 +1,2 @@
-#include "nitro/types.h"
-
-int NegateFieldValue(u32 entity) {
-    return -*(s32 *)(entity + 0x94);
-}
+#define NegateFieldValue_020b75e0 NegateFieldValue
+#include "src/ov025/leaf_research/NegateFieldValue_020b75e0.c"

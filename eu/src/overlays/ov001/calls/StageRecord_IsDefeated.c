@@ -1,22 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct StageRecord {
-    u8 pad_00[0x70];
-    s32 hitPoints;
-} StageRecord;
-
-extern int data_ov001_0209f2e8;
-extern StageRecord *GetStageEventRecord(u32 id);
-
-BOOL StageRecord_IsDefeated(u32 id)
-{
-    StageRecord *record;
-
-    if (data_ov001_0209f2e8 != -1 && (record = GetStageEventRecord(id)) != NULL) {
-        if (record->hitPoints == 0) {
-            return TRUE;
-        }
-        return FALSE;
-    }
-    return TRUE;
-}
+#define GetStageEventRecord_0209c0ec GetStageEventRecord
+#define StageRecord_IsDefeated_02087cc4 StageRecord_IsDefeated
+#define g_stageEventsState_0209f2c8 data_ov001_0209f2e8
+#include "src/ov001/shared_engine/StageRecord_IsDefeated_02087cc4.c"

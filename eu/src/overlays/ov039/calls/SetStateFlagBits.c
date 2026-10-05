@@ -1,10 +1,3 @@
-#include "nitro/types.h"
-
-extern int data_ov039_020bea20;
-
-void SetStateFlagBits(u8 clearMask, u8 setBits)
-{
-    int base = data_ov039_020bea20;
-
-    *(u8 *)(base + 0xca22) = setBits | (*(u8 *)(base + 0xca22) & ~clearMask);
-}
+#define SetStateFlagBits_020bc688 SetStateFlagBits
+#define data_ov039_020bea00 data_ov039_020bea20
+#include "src/ov039/leaf_research/SetStateFlagBits_020bc688.c"

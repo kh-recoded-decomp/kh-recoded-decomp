@@ -1,8 +1,3 @@
-#include "nitro/types.h"
-
-extern u32 data_ov001_020a0480;
-
-void ClearSessionFlagsWord(void)
-{
-    *(s16 *)(data_ov001_020a0480 + 0x20e) = ~2;
-}
+#define ClearSessionFlagsWord_02064d70 ClearSessionFlagsWord
+#define data_ov001_020a0460 data_ov001_020a0480
+#include "src/ov001/unclassified_helpers/ClearSessionFlagsWord_02064d70.c"

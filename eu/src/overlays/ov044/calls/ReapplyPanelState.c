@@ -1,13 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 _0[0x44];
-    int state;
-} PanelState;
-
-extern PanelState *data_ov044_020d0ec0;
-extern void EnterPanelState(int state);
-
-void ReapplyPanelState(void) {
-    EnterPanelState(data_ov044_020d0ec0->state);
-}
+#define ReapplyPanelState_020d0b88 ReapplyPanelState
+#define data_ov044_020d0ea0 data_ov044_020d0ec0
+#define func_ov044_020d0144 EnterPanelState
+#include "src/ov044/panel_state/ReapplyPanelState_020d0b88.c"

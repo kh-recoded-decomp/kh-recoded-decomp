@@ -1,20 +1,4 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-typedef struct {
-    VecFx32 axes[3];
-} Basis;
-
-extern u32 data_ov044_020d0ec0;
-
-extern void BuildBasisFromForward(const VecFx32 *forward, const VecFx32 *up, Basis *basis);
-
-void GetPanelBasis(Basis *out)
-{
-    Basis built;
-    Basis basis;
-
-    BuildBasisFromForward((VecFx32 *)(data_ov044_020d0ec0 + 0x70), (VecFx32 *)(data_ov044_020d0ec0 + 0x7c), &built);
-    basis = built;
-    *(Basis *)out = *(Basis *)&basis;
-}
+#define BuildBasisFromForward_0204bf70 BuildBasisFromForward
+#define GetPanelBasis_020d08d8 GetPanelBasis
+#define g_panel_020d0ea0 data_ov044_020d0ec0
+#include "src/ov044/panel_state/GetPanelBasis_020d08d8.c"

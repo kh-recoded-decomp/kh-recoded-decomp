@@ -1,34 +1,9 @@
-typedef unsigned short u16;
-typedef unsigned int u32;
-typedef int BOOL;
-typedef u32 NNSGfdTexKey;
-
-typedef struct NNSGfdFrmTexVramManager {
-    u16 numSlots;
-} NNSGfdFrmTexVramManager;
-
-extern NNSGfdFrmTexVramManager sFrmTexVramManager;
-extern NNSGfdTexKey (*sDefaultAllocTexVramFunc)(u32, BOOL, u32);
-extern int (*sDefaultFreeTexVramFunc)(NNSGfdTexKey);
-
-extern void NNSi_GfdSetTexNrmSearchArray(int, int, int, int, int);
-extern void NNS_GfdResetFrmTexVramState(void);
-extern NNSGfdTexKey NNS_GfdAllocFrmTexVram(u32 size, BOOL compressed, u32 option);
-extern int NNS_GfdFreeFrmTexVram(NNSGfdTexKey key);
-
-void NNS_GfdInitFrmTexVramManager(u16 numSlots, BOOL useAsDefault)
-{
-    if (numSlots <= 2) {
-        NNSi_GfdSetTexNrmSearchArray(4, 3, 2, 0, 1);
-    } else {
-        NNSi_GfdSetTexNrmSearchArray(4, 3, 0, 2, 1);
-    }
-
-    sFrmTexVramManager.numSlots = numSlots;
-    NNS_GfdResetFrmTexVramState();
-
-    if (useAsDefault) {
-        sDefaultAllocTexVramFunc = NNS_GfdAllocFrmTexVram;
-        sDefaultFreeTexVramFunc = NNS_GfdFreeFrmTexVram;
-    }
-}
+#define NNS_GfdInitFrmTexVramManager_0201389c NNS_GfdInitFrmTexVramManager
+#define data_02055c4c sDefaultAllocTexVramFunc
+#define data_02055c50 sDefaultFreeTexVramFunc
+#define data_0205a8c0 sFrmTexVramManager
+#define func_020137b0 NNSi_GfdSetTexNrmSearchArray
+#define func_0201391c NNS_GfdResetFrmTexVramState
+#define func_0201399c NNS_GfdAllocFrmTexVram
+#define func_02013b04 NNS_GfdFreeFrmTexVram
+#include "src/arm9/library_nns_gfd/func_0201389c.c"

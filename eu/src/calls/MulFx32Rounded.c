@@ -1,8 +1,3 @@
-#include "nitro/types.h"
-
-extern s64 PanelState_NoOpG(s64 value);
-
-s64 MulFx32Rounded(s32 a, s32 b)
-{
-    return PanelState_NoOpG(((s64)a * b + 0x800) >> 12);
-}
+#define MulFx32Rounded_02048b84 MulFx32Rounded
+#define PassThroughFx64_02048ba8 PanelState_NoOpG
+#include "src/arm9/math/MulFx32Rounded_02048b84.c"

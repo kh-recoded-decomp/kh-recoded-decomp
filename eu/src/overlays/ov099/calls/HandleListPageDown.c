@@ -1,36 +1,7 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad_00[0x2c];
-    int scrollTop;
-    int cursorRow;
-    u8 pad_34[0x4c - 0x34];
-} ListState;
-
-typedef struct {
-    u8 pad_0000[0xcf04];
-    int selectedEntry;
-    u8 pad_cf08[0xd054 - 0xcf08];
-    ListState lists[1];
-} ViewerWork;
-
-extern BOOL MoveListCursorDown(int listIndex, ViewerWork *work);
-extern BOOL PlaySoundEffect(int seqArcNo, int index);
-extern void func_ov099_020c158c(ViewerWork *work);
-extern void func_ov099_020bf838(int listIndex, ViewerWork *work);
-extern void SetViewerMode(int mode, ViewerWork *work);
-
-void HandleListPageDown(ViewerWork *work)
-{
-    ListState *list;
-
-    if (!MoveListCursorDown(0, work)) {
-        return;
-    }
-    list = &work->lists[0];
-    work->selectedEntry = list->scrollTop + list->cursorRow;
-    PlaySoundEffect(0, 0);
-    func_ov099_020c158c(work);
-    func_ov099_020bf838(0, work);
-    SetViewerMode(1, work);
-}
+#define HandleListPageDown_020bf018 HandleListPageDown
+#define PlaySoundEffect_0204d924 PlaySoundEffect
+#define func_ov091_020c1760 SetViewerMode
+#define func_ov099_020bf818 func_ov099_020bf838
+#define func_ov099_020c10d8 MoveListCursorDown
+#define func_ov099_020c156c func_ov099_020c158c
+#include "src/ov099/unclassified_helpers/HandleListPageDown_020bf018.c"

@@ -1,11 +1,4 @@
-#include "nitro/types.h"
-
-extern void GetStageActor(s16 groupId);
-extern void GetStageObjectHandle(u16 targetId);
-
-BOOL NotifyActorGroupAndTarget(u8 *actor)
-{
-    GetStageActor(*(s16 *)(actor + 0x10));
-    GetStageObjectHandle(*(u16 *)(actor + 0x12));
-    return FALSE;
-}
+#define NotifyActorGroupAndTarget_02093ac8 NotifyActorGroupAndTarget
+#define func_ov001_0209c040 GetStageActor
+#define func_ov001_0209c0c4 GetStageObjectHandle
+#include "src/ov001/shared_engine/NotifyActorGroupAndTarget_02093ac8.c"

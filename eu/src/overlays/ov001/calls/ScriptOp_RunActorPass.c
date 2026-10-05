@@ -1,11 +1,3 @@
-#include "nitro/types.h"
-
-extern void ClearAllActorSlots(void);
-
-u32 ScriptOp_RunActorPass(u8 *scriptContext)
-{
-    if (*(u32 *)(*(u8 **)(scriptContext + 0x1c8) + 0x4c) != 0) {
-        ClearAllActorSlots();
-    }
-    return 1;
-}
+#define ScriptOp_RunActorPass_0208de98 ScriptOp_RunActorPass
+#define func_ov001_020888dc ClearAllActorSlots
+#include "src/ov001/scripted_actor_behavior/ScriptOp_RunActorPass_0208de98.c"

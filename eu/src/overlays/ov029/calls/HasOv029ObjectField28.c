@@ -1,12 +1,4 @@
-#include "nitro/types.h"
-
-extern u32 Obj_GetWord28();
-extern u32 data_ov029_020bab80;
-
-BOOL HasOv029ObjectField28(void)
-{
-    u32 value;
-
-    value = Obj_GetWord28(data_ov029_020bab80);
-    return value != 0;
-}
+#define HasOv029ObjectField28_020baa40 HasOv029ObjectField28
+#define func_0202a78c Obj_GetWord28
+#define g_ov029ObjHandle_020bab60 data_ov029_020bab80
+#include "src/ov029/reviewed_helpers/HasOv029ObjectField28_020baa40.c"

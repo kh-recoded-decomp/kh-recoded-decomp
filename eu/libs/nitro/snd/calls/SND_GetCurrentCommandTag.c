@@ -1,16 +1,2 @@
-extern int OS_DisableInterrupts();
-extern void OS_RestoreInterrupts(int mask);
-extern int data_02057c50[];
-
-int SND_GetCurrentCommandTag(void) {
-    int mask;
-    int result;
-    mask = OS_DisableInterrupts();
-    if (data_02057c50[2] == 0) {
-        result = data_02057c50[1];
-    } else {
-        result = data_02057c50[8];
-    }
-    OS_RestoreInterrupts(mask);
-    return result;
-}
+#define func_0200f288 SND_GetCurrentCommandTag
+#include "src/arm9/core_small/func_0200f288.c"

@@ -1,13 +1,4 @@
-#include "nitro/types.h"
-
-extern void movie_video_hardware_setup(void);
-extern void SetupSubScreenForMovie(void);
-
-void SetupMovieScreenHardware(int useMainScreen)
-{
-    if (useMainScreen != 0) {
-        movie_video_hardware_setup();
-        return;
-    }
-    SetupSubScreenForMovie();
-}
+#define SetupMovieScreenHardware_020a831c SetupMovieScreenHardware
+#define SetupSubScreenForMovie_020a7c58 SetupSubScreenForMovie
+#define movie_video_hardware_setup_020a7b3c movie_video_hardware_setup
+#include "src/ov022/video_playback/SetupMovieScreenHardware_020a831c.c"

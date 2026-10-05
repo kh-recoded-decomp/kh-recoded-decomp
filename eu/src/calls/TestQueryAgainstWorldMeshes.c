@@ -1,11 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct CollisionWorld CollisionWorld;
-
-extern void TestQueryAgainstMeshList(CollisionWorld *world, void *params);
-extern CollisionWorld *gActorRegistry;
-
-void TestQueryAgainstWorldMeshes(void *params)
-{
-    TestQueryAgainstMeshList(gActorRegistry, params);
-}
+#define TestQueryAgainstMeshList_02035270 TestQueryAgainstMeshList
+#define TestQueryAgainstWorldMeshes_020364d8 TestQueryAgainstWorldMeshes
+#define g_collisionWorld_0206083c gActorRegistry
+#include "src/arm9/spatial_queries/TestQueryAgainstWorldMeshes_020364d8.c"

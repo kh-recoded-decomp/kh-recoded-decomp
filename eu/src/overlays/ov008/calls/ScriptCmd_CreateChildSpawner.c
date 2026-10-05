@@ -1,29 +1,6 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-typedef struct ScriptOperand {
-    s16 type;
-    s16 pad_02;
-    s32 value;
-} ScriptOperand;
-
-extern int ScriptVm_ReadOperandInt(void *script, ScriptOperand *operand);
-extern fx32 ScriptVm_ReadOperandFx32(void *script, ScriptOperand *operand);
-extern void *func_ov001_0207f050(int classId);
-extern void *CreateChildSpawnerObject(void *objectClass, int slotIndex, u16 saveBitOffset, u8 saveBitCount, const VecFx32 *position, int angle);
-
-BOOL ScriptCmd_CreateChildSpawner(void *script, ScriptOperand *operands)
-{
-    int classId = ScriptVm_ReadOperandInt(script, operands);
-    int slotIndex = ScriptVm_ReadOperandInt(script, operands + 1);
-    u32 saveBits = operands[2].value;
-    VecFx32 position;
-    int angle;
-
-    position.x = ScriptVm_ReadOperandFx32(script, operands + 3);
-    position.y = ScriptVm_ReadOperandFx32(script, operands + 4);
-    position.z = ScriptVm_ReadOperandFx32(script, operands + 5);
-    angle = ScriptVm_ReadOperandInt(script, operands + 6);
-    CreateChildSpawnerObject(func_ov001_0207f050(classId), slotIndex, saveBits, (u16)(saveBits >> 16), &position, angle);
-    return TRUE;
-}
+#define CreateChildSpawnerObject_020a0bc0 CreateChildSpawnerObject
+#define ScriptCmd_CreateChildSpawner_020a0668 ScriptCmd_CreateChildSpawner
+#define ScriptVm_ReadOperandFx32_02025df8 ScriptVm_ReadOperandFx32
+#define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
+#define func_ov001_0207f028 func_ov001_0207f050
+#include "src/ov008/script_commands/ScriptCmd_CreateChildSpawner_020a0668.c"

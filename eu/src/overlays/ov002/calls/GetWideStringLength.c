@@ -1,13 +1,2 @@
-#include "nitro/types.h"
-
-int GetWideStringLength(const u16 *text)
-{
-    int length = 0;
-    for (;;) {
-        if (text[length] == 0) {
-            break;
-        }
-        length++;
-    }
-    return length;
-}
+#define GetWideStringLength_02066374 GetWideStringLength
+#include "src/ov002/text_utils/GetWideStringLength_02066374.c"

@@ -1,14 +1,4 @@
-extern unsigned int data_ov023_020b6f84;
-extern unsigned int RemapIntoDisplayRange();
-
-void UpdateMenuRangePosition(int minimum,int maximum,int value)
-
-{
-  unsigned int position;
-  
-  if (*(int *)(data_ov023_020b6f84 + 0x34) != 0) {
-    position = RemapIntoDisplayRange(minimum,maximum,value);
-    *(unsigned int *)(data_ov023_020b6f84 + 0x7fa8) = position;
-  }
-  return;
-}
+#define UpdateMenuRangePosition_020b6e40 UpdateMenuRangePosition
+#define _data_ov023_020b6f64 data_ov023_020b6f84
+#define func_ov023_020b699c RemapIntoDisplayRange
+#include "src/ov023/menu_graphics/UpdateMenuRangePosition_020b6e40.c"

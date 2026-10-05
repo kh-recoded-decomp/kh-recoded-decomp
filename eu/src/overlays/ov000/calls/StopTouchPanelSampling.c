@@ -1,10 +1,5 @@
-extern void TP_RequestAutoSamplingStopAsync(void);
-extern void TP_WaitBusy(int channel);
-extern void TP_CheckError(int channel);
-
-void StopTouchPanelSampling(void)
-{
-    TP_RequestAutoSamplingStopAsync();
-    TP_WaitBusy(4);
-    TP_CheckError(4);
-}
+#define StopTouchPanelSampling_0206241c StopTouchPanelSampling
+#define TP_CheckError_0201019c TP_CheckError
+#define TP_RequestAutoSamplingStopAsync_0200fe84 TP_RequestAutoSamplingStopAsync
+#define TP_WaitBusy_0201018c TP_WaitBusy
+#include "src/ov000/unclassified_helpers/StopTouchPanelSampling_0206241c.c"

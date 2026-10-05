@@ -1,17 +1,4 @@
-#include "nitro/types.h"
-
-extern BOOL func_ov001_020645c8(u32 flag);
-extern void func_ov001_02087804(void);
-extern void func_ov001_0208781c(void);
-
-u32 ScriptOp_InitSubsystemIfFlagClear(void)
-{
-    BOOL flagSet;
-
-    flagSet = func_ov001_020645c8(0x3528);
-    if (flagSet == 0) {
-        func_ov001_02087804();
-        func_ov001_0208781c();
-    }
-    return 1;
-}
+#define ScriptOp_InitSubsystemIfFlagClear_0208edf0 ScriptOp_InitSubsystemIfFlagClear
+#define func_ov001_020877dc func_ov001_02087804
+#define func_ov001_020877f4 func_ov001_0208781c
+#include "src/ov001/shared_engine/ScriptOp_InitSubsystemIfFlagClear_0208edf0.c"

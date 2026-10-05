@@ -1,12 +1,4 @@
-#include "nitro/types.h"
-
-extern int data_ov001_0209f2e8;
-extern BOOL CreateStageManagerTask(void *userData);
-
-void StageEvents_StartIfIdle(void *userData)
-{
-    if (data_ov001_0209f2e8 == -1) {
-        data_ov001_0209f2e8 = 0;
-        CreateStageManagerTask(userData);
-    }
-}
+#define CreateStageManagerTask_02099ad0 CreateStageManagerTask
+#define StageEvents_StartIfIdle_0208765c StageEvents_StartIfIdle
+#define g_stageEventsState_0209f2c8 data_ov001_0209f2e8
+#include "src/ov001/shared_engine/StageEvents_StartIfIdle_0208765c.c"

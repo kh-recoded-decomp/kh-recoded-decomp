@@ -1,15 +1,3 @@
-#include "nitro/types.h"
-
-typedef char *VaList;
-#define VA_START(args, last) ((args) = (char *)(((u32)&(last) & ~3U) + 4))
-
-extern u16 *FormatWideTextV(const u16 *format, u16 *dest, u32 destLength, VaList args);
-
-u16 *FormatWideText(const u16 *format, u16 *dest, u32 destLength, ...)
-{
-    VaList args;
-
-    VA_START(args, destLength);
-    FormatWideTextV(format, dest, destLength, args);
-    return dest;
-}
+#define FormatWideTextV_0208c324 FormatWideTextV
+#define FormatWideText_0208c338 FormatWideText
+#include "src/ov001/text_rendering/FormatWideText_0208c338.c"

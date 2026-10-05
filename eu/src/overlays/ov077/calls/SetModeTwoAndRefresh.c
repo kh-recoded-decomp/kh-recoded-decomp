@@ -1,25 +1,6 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad_00000[0xc];
-    u32 pending;
-    u8 pad_00010[0x11ff4 - 0x10];
-    s32 mode;
-} MenuWork;
-
-extern void BeginSlotItemSelection(MenuWork *work);
-extern void ShowSlotHeaderMessage(MenuWork *work);
-extern void *func_ov039_020bc1dc(void);
-extern void SetFlagGatedElementsVisible(void *container, BOOL visible);
-
-void SetModeTwoAndRefresh(MenuWork *work)
-{
-    work->mode = 2;
-    if (work->pending != 0) {
-        BeginSlotItemSelection(work);
-        work->pending = 0;
-        return;
-    }
-    ShowSlotHeaderMessage(work);
-    SetFlagGatedElementsVisible(func_ov039_020bc1dc(), TRUE);
-}
+#define SetFlagGatedElementsVisible_020c9d7c SetFlagGatedElementsVisible
+#define SetModeTwoAndRefresh_020c4bb0 SetModeTwoAndRefresh
+#define func_ov039_020bc1bc func_ov039_020bc1dc
+#define func_ov077_020c58e0 ShowSlotHeaderMessage
+#define func_ov077_020c5cc8 BeginSlotItemSelection
+#include "src/ov077/unclassified_helpers/SetModeTwoAndRefresh_020c4bb0.c"

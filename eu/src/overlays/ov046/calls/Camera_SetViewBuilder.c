@@ -1,16 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct CameraView CameraView;
-typedef void (*CameraViewBuilder)(CameraView *view);
-
-typedef struct CameraManager {
-    u8 pad_00[0x260];
-    CameraViewBuilder viewBuilder;
-} CameraManager;
-
-extern CameraManager *data_ov046_020c3500;
-
-void Camera_SetViewBuilder(CameraViewBuilder builder)
-{
-    data_ov046_020c3500->viewBuilder = builder;
-}
+#define Camera_SetViewBuilder_020c2d4c Camera_SetViewBuilder
+#define g_cameraManager_020c34e0 data_ov046_020c3500
+#include "src/ov046/shared_engine/Camera_SetViewBuilder_020c2d4c.c"

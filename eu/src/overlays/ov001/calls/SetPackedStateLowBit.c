@@ -1,10 +1,4 @@
-#include "nitro/types.h"
-
-extern u16 FieldObject_GetSavedValue(void *object);
-extern void FieldObject_SetSavedValue(void *object, u16 state);
-
-void SetPackedStateLowBit(void *object, u16 lowBit)
-{
-    u16 state = FieldObject_GetSavedValue(object);
-    FieldObject_SetSavedValue(object, lowBit | (state & ~1));
-}
+#define SetPackedStateLowBit_02084774 SetPackedStateLowBit
+#define func_ov001_0207f9a8 FieldObject_GetSavedValue
+#define func_ov001_0207f9c8 FieldObject_SetSavedValue
+#include "src/ov001/unclassified_helpers/SetPackedStateLowBit_02084774.c"

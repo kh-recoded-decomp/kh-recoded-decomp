@@ -1,39 +1,7 @@
-#include "nitro/types.h"
-
-typedef struct Hud {
-    u8 pad_000[0x47c];
-    s32 busy;
-} Hud;
-
-typedef struct HudHandle {
-    u32 unk_00;
-    Hud *hud;
-} HudHandle;
-
-extern HudHandle data_ov001_020a04c4;
-
-extern BOOL IsSessionIdleForSceneChange(void);
-extern BOOL IsHudFlag7Set(void);
-extern BOOL IsFieldFlag10Set(void);
-extern BOOL IsFieldFlag8Set(void);
-extern int func_ov001_02064784(void);
-extern BOOL func_ov001_020645c8(u32 value);
-
-BOOL CanOpenFieldMenu(void)
-{
-    BOOL result = TRUE;
-
-    if (!IsSessionIdleForSceneChange()) {
-        result = FALSE;
-    }
-    if (data_ov001_020a04c4.hud->busy != 0) {
-        result = FALSE;
-    }
-    if (IsHudFlag7Set() || IsFieldFlag10Set() || IsFieldFlag8Set()) {
-        result = FALSE;
-    }
-    if (!func_ov001_02064784() && func_ov001_020645c8(0x370b)) {
-        result = FALSE;
-    }
-    return result;
-}
+#define CanOpenFieldMenu_020735d8 CanOpenFieldMenu
+#define IsFieldFlag10Set_020728c4 IsFieldFlag10Set
+#define IsFieldFlag8Set_020728a4 IsFieldFlag8Set
+#define IsHudFlag7Set_020725bc IsHudFlag7Set
+#define IsSessionIdleForSceneChange_020638ec IsSessionIdleForSceneChange
+#define data_ov001_020a04a4 data_ov001_020a04c4
+#include "src/ov001/field_manager/CanOpenFieldMenu_020735d8.c"

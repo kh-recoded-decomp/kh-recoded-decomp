@@ -1,8 +1,3 @@
-#include "nitro/types.h"
-
-extern void ReleaseResourceAndDetach(u8 *object);
-
-void ReleaseNestedObjectAt0x30(u8 *obj)
-{
-    ReleaseResourceAndDetach(obj + 0x30);
-}
+#define ReleaseNestedObjectAt0x30_020aaac8 ReleaseNestedObjectAt0x30
+#define ReleaseResourceAndDetach_0202eee8 ReleaseResourceAndDetach
+#include "src/ov021/unclassified_helpers/ReleaseNestedObjectAt0x30_020aaac8.c"

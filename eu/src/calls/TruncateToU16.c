@@ -1,6 +1,2 @@
-#include "nitro/types.h"
-
-u16 TruncateToU16(int value)
-{
-    return (u16)value;
-}
+#define TruncateToU16_02029568 TruncateToU16
+#include "src/arm9/record_management/TruncateToU16_02029568.c"

@@ -1,29 +1,6 @@
-#include "nitro/types.h"
-
-#define REG_POWCNT1 (*(volatile u16 *)0x04000304)
-
-typedef struct ScriptOperand {
-    s16 type;
-    s16 pad_02;
-    s32 value;
-} ScriptOperand;
-
-extern int ScriptVm_ReadOperandInt(void *context, ScriptOperand *operand);
-extern int DispatchPartyEntryByMode(int index);
-extern void WriteSessionPackedBits(int bitOffset, u32 bitCount, u32 value);
-extern void PushVramState(void);
-
-int ScriptCmd_SetScreenSwap(void *context, ScriptOperand *operands)
-{
-    switch (ScriptVm_ReadOperandInt(context, operands)) {
-    case 0:
-        REG_POWCNT1 = REG_POWCNT1 | 0x8000;
-        break;
-    case 1:
-        REG_POWCNT1 = REG_POWCNT1 & ~0x8000;
-        break;
-    }
-    WriteSessionPackedBits(0x351f, 1, DispatchPartyEntryByMode(0));
-    PushVramState();
-    return 1;
-}
+#define ScriptCmd_SetScreenSwap_0208d22c ScriptCmd_SetScreenSwap
+#define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
+#define WriteSessionPackedBits_0206459c WriteSessionPackedBits
+#define func_020365a4 PushVramState
+#define func_ov001_0206e690 DispatchPartyEntryByMode
+#include "src/ov001/scripted_actor_behavior/ScriptCmd_SetScreenSwap_0208d22c.c"

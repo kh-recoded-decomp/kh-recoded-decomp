@@ -1,13 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad[0x11104];
-    int state;
-} PanelWork;
-
-extern void SetPanelMode_020c1210(int mode, PanelWork *work);
-
-void EnterPanelState2(PanelWork *work) {
-    work->state = 2;
-    SetPanelMode_020c1210(2, work);
-}
+#define EnterPanelState2_020c1218 EnterPanelState2
+#define SetPanelMode_020c11f0 SetPanelMode_020c1210
+#include "src/ov095/panel_state/EnterPanelState2_020c1218.c"

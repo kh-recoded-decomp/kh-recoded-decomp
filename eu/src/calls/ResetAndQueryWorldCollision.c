@@ -1,11 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct CollisionWorld CollisionWorld;
-
-extern void func_020351cc(CollisionWorld *world, void *query);
-extern CollisionWorld *gActorRegistry;
-
-void ResetAndQueryWorldCollision(void *query)
-{
-    func_020351cc(gActorRegistry, query);
-}
+#define ResetAndQueryWorldCollision_0203644c ResetAndQueryWorldCollision
+#define func_020351b8 func_020351cc
+#define g_collisionWorld_0206083c gActorRegistry
+#include "src/arm9/spatial_queries/ResetAndQueryWorldCollision_0203644c.c"

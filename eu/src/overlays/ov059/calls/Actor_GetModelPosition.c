@@ -1,22 +1,2 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-typedef struct ModelInstance {
-    u8 pad_00[0xa4];
-    VecFx32 position;
-} ModelInstance;
-
-typedef struct ActorModel {
-    u32 flags;
-    ModelInstance instance;
-} ActorModel;
-
-typedef struct Actor {
-    u8 pad_000[0x230];
-    ActorModel *model;
-} Actor;
-
-VecFx32 *Actor_GetModelPosition(Actor *actor)
-{
-    return &actor->model->instance.position;
-}
+#define Actor_GetModelPosition_020cd0d8 Actor_GetModelPosition
+#include "src/ov059/unclassified_helpers/Actor_GetModelPosition_020cd0d8.c"

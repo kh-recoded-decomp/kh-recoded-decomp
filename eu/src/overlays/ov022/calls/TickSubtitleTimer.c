@@ -1,26 +1,5 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u32 unk_00;
-    u32 unk_04;
-    void *subtitles;
-} MovieGlobals;
-
-typedef struct {
-    u8 pad_00[0x58];
-    int subtitlesDone;
-} MovieFileBank;
-
-extern MovieGlobals data_ov022_020b7da8;
-extern MovieFileBank data_ov022_020b7db4;
-
-extern int runMovieSlotState(void *timer);
-
-int TickSubtitleTimer(void) {
-    int done = runMovieSlotState(data_ov022_020b7da8.subtitles);
-
-    if (done) {
-        data_ov022_020b7db4.subtitlesDone = 1;
-    }
-    return done;
-}
+#define TickSubtitleTimer_020a88c4 TickSubtitleTimer
+#define data_ov022_020b7d88 data_ov022_020b7da8
+#define data_ov022_020b7d94 data_ov022_020b7db4
+#define runMovieSlotState_020a8730 runMovieSlotState
+#include "src/ov022/video_playback/TickSubtitleTimer_020a88c4.c"

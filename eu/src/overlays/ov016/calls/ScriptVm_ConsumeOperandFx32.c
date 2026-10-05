@@ -1,16 +1,3 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-typedef struct ScriptOperand {
-    u8 data[8];
-} ScriptOperand;
-
-extern fx32 ScriptVm_ReadOperandFx32(void *vm, ScriptOperand *operand);
-
-fx32 ScriptVm_ConsumeOperandFx32(void *vm, ScriptOperand **cursor)
-{
-    ScriptOperand *operand = *cursor;
-
-    *cursor = operand + 1;
-    return ScriptVm_ReadOperandFx32(vm, operand);
-}
+#define ScriptVm_ConsumeOperandFx32_020a1df4 ScriptVm_ConsumeOperandFx32
+#define ScriptVm_ReadOperandFx32_02025df8 ScriptVm_ReadOperandFx32
+#include "src/ov016/script_commands/ScriptVm_ConsumeOperandFx32_020a1df4.c"

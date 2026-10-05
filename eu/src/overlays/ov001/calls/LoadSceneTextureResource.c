@@ -1,53 +1,13 @@
-#include "nitro/types.h"
-
-typedef struct TextureResource {
-    u8 pad_00[0x20];
-    u16 texInfoFlags;
-} TextureResource;
-
-typedef struct SceneTextureState {
-    u8 pad_00[0x20];
-    u32 texSize;
-    u32 plttSize;
-    u32 texKey;
-    u32 plttKey;
-} SceneTextureState;
-
-extern SceneTextureState *data_ov001_020a04a0;
-extern u32 (*sDefaultAllocTexVramFunc)(u32 size, BOOL is4x4comp, u32 opt);
-extern u32 (*sDefaultAllocPlttVramFunc)(u32 size, BOOL is4pltt, u32 opt);
-
-extern void func_0202c6a4(int enable);
-extern TextureResource *NNS_G3dGetTex(void *file);
-extern u32 NNS_G3dTexGetRequiredSize(TextureResource *tex);
-extern u32 NNS_G3dPlttGetRequiredSize(TextureResource *tex);
-extern void NNS_G3dTexSetTexKey(TextureResource *tex, u32 texKey, u32 tex4x4Key);
-extern void Obj_SetWord2C(TextureResource *tex, u32 plttKey);
-extern void Tex_LoadVram(TextureResource *tex);
-extern void func_0202d218(TextureResource *tex);
-
-void LoadSceneTextureResource(void *file)
-{
-    SceneTextureState *state = data_ov001_020a04a0;
-    TextureResource *tex;
-    u32 texSize;
-    u32 plttSize;
-
-    func_0202c6a4(0);
-    tex = NNS_G3dGetTex(file);
-    texSize = NNS_G3dTexGetRequiredSize(tex);
-    plttSize = NNS_G3dPlttGetRequiredSize(tex);
-    if (state->texKey == 0) {
-        state->texKey = sDefaultAllocTexVramFunc(texSize, FALSE, 0);
-    }
-    if (state->plttKey == 0) {
-        state->plttKey = sDefaultAllocPlttVramFunc(plttSize, tex->texInfoFlags & 0x8000, 0);
-    }
-    NNS_G3dTexSetTexKey(tex, state->texKey, 0);
-    Obj_SetWord2C(tex, state->plttKey);
-    Tex_LoadVram(tex);
-    func_0202d218(tex);
-    state->texSize = texSize;
-    state->plttSize = plttSize;
-    func_0202c6a4(1);
-}
+#define FindTextureResourceBlock_0201ac70 NNS_G3dGetTex
+#define GetPaletteBytes_02018964 NNS_G3dPlttGetRequiredSize
+#define GetTextureImageBytes_020188cc NNS_G3dTexGetRequiredSize
+#define LoadSceneTextureResource_02069f2c LoadSceneTextureResource
+#define ReleaseTextureResourceKeys_020188f4 NNS_G3dTexSetTexKey
+#define Tex_LoadVram_0202d14c Tex_LoadVram
+#define data_02055c4c sDefaultAllocTexVramFunc
+#define data_02055c54 sDefaultAllocPlttVramFunc
+#define data_ov001_020a0480 data_ov001_020a04a0
+#define func_02018978 Obj_SetWord2C
+#define func_0202c690 func_0202c6a4
+#define func_0202d204 func_0202d218
+#include "src/ov001/shared_engine/LoadSceneTextureResource_02069f2c.c"

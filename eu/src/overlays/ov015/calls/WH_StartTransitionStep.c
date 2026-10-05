@@ -1,22 +1,5 @@
-#include "nitro/types.h"
-
-typedef struct WirelessHelper {
-    u8 pad_00[8];
-    u16 measuredChannel;
-} WirelessHelper;
-
-extern WirelessHelper data_ov015_0207e980;
-extern void SetPanelTransitionMode(u32 mode);
-extern int RunTransitionSlot2(void (*callback)(void *));
-extern void ChoosePanelModeFromSelection(void *context);
-
-BOOL WH_StartTransitionStep(void)
-{
-    SetPanelTransitionMode(3);
-    if (RunTransitionSlot2(ChoosePanelModeFromSelection) == 2) {
-        data_ov015_0207e980.measuredChannel = 0;
-        return TRUE;
-    }
-    SetPanelTransitionMode(9);
-    return FALSE;
-}
+#define ChoosePanelModeFromSelection_020748ac ChoosePanelModeFromSelection
+#define RunTransitionSlot2_0201170c RunTransitionSlot2
+#define SetPanelTransitionMode_020737c4 SetPanelTransitionMode
+#define WH_StartTransitionStep_02074fd0 WH_StartTransitionStep
+#include "src/ov015/wireless/WH_StartTransitionStep_02074fd0.c"

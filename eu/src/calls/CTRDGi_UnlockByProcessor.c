@@ -1,9 +1,2 @@
-extern void OS_UnLockCartridge();
-extern void OS_RestoreInterrupts(int state);
-
-void CTRDGi_UnlockByProcessor(int id, int *ctx) {
-    if (ctx[0] == 0) {
-        OS_UnLockCartridge(id);
-    }
-    OS_RestoreInterrupts(ctx[1]);
-}
+#define CTRDGi_UnlockByProcessor_020124a0 CTRDGi_UnlockByProcessor
+#include "src/arm9/library_nitro_nitro/CTRDGi_UnlockByProcessor_020124a0.c"

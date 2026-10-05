@@ -1,40 +1,8 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-typedef struct {
-    VecFx32 start;
-    VecFx32 end;
-    u8 pad_18[0x10];
-    fx32 scale;
-} Segment;
-
-typedef struct {
-    VecFx32 low;
-    VecFx32 high;
-} Bounds;
-
-extern void ComputeSegmentBounds(Segment **segmentRef, Bounds *bounds);
-extern void VEC_Subtract(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
-extern void VEC_Add(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
-extern void VEC_Normalize(const VecFx32 *src, VecFx32 *dst);
-extern fx32 ComputeOneMinusSquareFraction(fx32 value);
-extern void ScaleVecFx32InPlace(VecFx32 *vec, fx32 scale);
-
-void ShrinkBoundsBySegmentAxis(Segment **segmentRef, Bounds *bounds)
-{
-    Segment *segment = *segmentRef;
-    VecFx32 extent;
-    VecFx32 dir;
-    VecFx32 delta;
-
-    ComputeSegmentBounds(segmentRef, bounds);
-    VEC_Subtract(&segment->end, &segment->start, &delta);
-    dir = delta;
-    VEC_Normalize(&dir, &dir);
-    extent.x = ComputeOneMinusSquareFraction(dir.x);
-    extent.y = ComputeOneMinusSquareFraction(dir.y);
-    extent.z = ComputeOneMinusSquareFraction(dir.z);
-    ScaleVecFx32InPlace(&extent, segment->scale);
-    VEC_Add(&bounds->low, &extent, &bounds->low);
-    VEC_Subtract(&bounds->high, &extent, &bounds->high);
-}
+#define ComputeOneMinusSquareFraction_02049d6c ComputeOneMinusSquareFraction
+#define ShrinkBoundsBySegmentAxis_02049c48 ShrinkBoundsBySegmentAxis
+#define VEC_Add_01ff9e0c VEC_Add
+#define VEC_Normalize_01ff9f88 VEC_Normalize
+#define VEC_Subtract_01ff9e3c VEC_Subtract
+#define func_02049b6c ComputeSegmentBounds
+#define func_0204a5e4 ScaleVecFx32InPlace
+#include "src/arm9/math/ShrinkBoundsBySegmentAxis_02049c48.c"

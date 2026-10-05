@@ -1,9 +1,3 @@
-#include "nitro/types.h"
-
-extern s64 Square64(s32 value);
-
-u32 SumOfSquaresShift12(s32 a, s32 b)
-{
-    s64 sum = Square64(a) + Square64(b);
-    return (u32)(sum >> 0xc);
-}
+#define Square64_0203fa2c Square64
+#define SumOfSquaresShift12_0203f9fc SumOfSquaresShift12
+#include "src/arm9/fixed_point_math/SumOfSquaresShift12_0203f9fc.c"

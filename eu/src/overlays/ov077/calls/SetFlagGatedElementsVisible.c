@@ -1,14 +1,4 @@
-#include "nitro/types.h"
-
-extern BOOL IsGlobalPackedBitSet(int bitIndex);
-extern void SetContainerElementVisible_020c9d3c(void *container, int elementId, BOOL visible);
-
-void SetFlagGatedElementsVisible(void *container, BOOL visible)
-{
-    if (!IsGlobalPackedBitSet(0xf5b)) {
-        visible = FALSE;
-    }
-    SetContainerElementVisible_020c9d3c(container, 3, visible);
-    SetContainerElementVisible_020c9d3c(container, 5, visible);
-    SetContainerElementVisible_020c9d3c(container, 4, visible);
-}
+#define IsGlobalPackedBitSet_02027304 IsGlobalPackedBitSet
+#define SetContainerElementVisible_020c9d1c SetContainerElementVisible_020c9d3c
+#define SetFlagGatedElementsVisible_020c9d7c SetFlagGatedElementsVisible
+#include "src/ov077/unclassified_helpers/SetFlagGatedElementsVisible_020c9d7c.c"

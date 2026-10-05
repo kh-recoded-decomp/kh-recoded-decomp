@@ -1,8 +1,3 @@
-#include "nitro/types.h"
-
-extern BOOL InitSharedRecordThenTexture(void *animSet, void *model, int archiveId, int resourceKind);
-
-void LoadActorAnimationSet(void *animSet, void *model, int archiveId)
-{
-    InitSharedRecordThenTexture(animSet, model, archiveId, 11);
-}
+#define LoadActorAnimationSet_0209bfd0 LoadActorAnimationSet
+#define func_0202e9ec InitSharedRecordThenTexture
+#include "src/ov001/actor_animation/LoadActorAnimationSet_0209bfd0.c"

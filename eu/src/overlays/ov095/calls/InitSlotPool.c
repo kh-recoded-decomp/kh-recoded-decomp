@@ -1,13 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad_000[0x180];
-    u8 slotPool[1];
-} SlotPoolOwner;
-
-extern void NNS_FndInitListWithOffset0_0204f130(void *list);
-
-void InitSlotPool(SlotPoolOwner *owner)
-{
-    NNS_FndInitListWithOffset0_0204f130(owner->slotPool);
-}
+#define InitSlotPool_020c01c8 InitSlotPool
+#define NNS_FndInitListWithOffset0_0204f11c NNS_FndInitListWithOffset0_0204f130
+#include "src/ov095/unclassified_helpers/InitSlotPool_020c01c8.c"

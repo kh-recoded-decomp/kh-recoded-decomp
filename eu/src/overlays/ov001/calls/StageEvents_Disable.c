@@ -1,11 +1,4 @@
-#include "nitro/types.h"
-
-extern int data_ov001_0209f2e8;
-extern void LockStageSlotObjects(u32 eventIndex);
-
-void StageEvents_Disable(u32 eventIndex)
-{
-    if (data_ov001_0209f2e8 != -1) {
-        LockStageSlotObjects(eventIndex);
-    }
-}
+#define StageEvents_Disable_0208772c StageEvents_Disable
+#define func_ov001_0209b5d0 LockStageSlotObjects
+#define g_stageEventsState_0209f2c8 data_ov001_0209f2e8
+#include "src/ov001/shared_engine/StageEvents_Disable_0208772c.c"

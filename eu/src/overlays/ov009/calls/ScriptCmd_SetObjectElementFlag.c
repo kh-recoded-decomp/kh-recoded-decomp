@@ -1,18 +1,5 @@
-#include "nitro/types.h"
-
-extern int ScriptVm_ReadOperandInt(void *vm, void *cmd);
-extern u32 func_ov001_0207f060(u32 slot, u32 elementIndex);
-extern void SetFlagBit0x10At0x4e(int element, BOOL enable);
-
-int ScriptCmd_SetObjectElementFlag(void *vm, void *cmd)
-{
-    u32 slot;
-    u32 elementIndex;
-    BOOL enable;
-
-    slot = ScriptVm_ReadOperandInt(vm, cmd);
-    elementIndex = ScriptVm_ReadOperandInt(vm, (u8 *)cmd + 8);
-    enable = ScriptVm_ReadOperandInt(vm, (u8 *)cmd + 0x10);
-    SetFlagBit0x10At0x4e(func_ov001_0207f060(slot, elementIndex), enable);
-    return 1;
-}
+#define ScriptCmd_SetObjectElementFlag_020a05c0 ScriptCmd_SetObjectElementFlag
+#define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
+#define SetFlagBit0x10At0x4e_020a0bf4 SetFlagBit0x10At0x4e
+#define func_ov001_0207f038 func_ov001_0207f060
+#include "src/ov009/shared_engine/ScriptCmd_SetObjectElementFlag_020a05c0.c"

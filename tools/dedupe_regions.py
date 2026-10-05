@@ -1,0 +1,172 @@
+#!/usr/bin/env python3
+"""Replace EU copies of shared functions with wrappers around the US source.
+
+For every function matched in both regions with the same C structure, the EU file
+under eu/ becomes a few `#define US_NAME EU_NAME` lines plus an `#include` of the
+US source, so the real C lives once in src/. A pair is only rewritten after the
+wrapper compiles (with the EU compiler, mode and flags) to an object identical to
+the EU build's existing object: same section bytes, relocations and symbols.
+
+    python tools/dedupe_regions.py [--limit N] [--dry-run]
+
+Needs a completed EU build (`bash tools/gate.sh` in eu/) for the reference objects.
+"""
+
+from __future__ import annotations
+
+import argparse
+import json
+import re
+import subprocess
+import sys
+import tempfile
+from collections import defaultdict
+from concurrent.futures import ThreadPoolExecutor
+from pathlib import Path
+
+from elftools.elf.elffile import ELFFile
+from elftools.elf.relocation import RelocationSection
+
+ROOT = Path(__file__).resolve().parents[1]
+EU = ROOT / "eu"
+sys.path.insert(0, str(ROOT / "tools"))
+from region_progress import fingerprint, function_body  # noqa: E402
+
+SYMBOL_LIKE = re.compile(r"^(?:func_|data_)\w*$|_[0-9a-f]{8}$")
+TOKEN = re.compile(r"[A-Za-z_]\w*|0x[0-9a-fA-F]+|\d+|\S")
+WRAPPER_MARK = "#include \"src/"
+
+
+def tokens(body: str) -> list[str]:
+    return TOKEN.findall(body)
+
+
+def symbol_map(us_body: str, eu_body: str, us_name: str, eu_name: str) -> dict[str, str] | None:
+    us_tokens, eu_tokens = tokens(us_body), tokens(eu_body)
+    if len(us_tokens) != len(eu_tokens):
+        return None
+    mapping = {us_name: eu_name} if us_name != eu_name else {}
+    for us_token, eu_token in zip(us_tokens, eu_tokens):
+        if us_token == eu_token or not SYMBOL_LIKE.search(us_token):
+            continue
+        if mapping.setdefault(us_token, eu_token) != eu_token:
+            return None
+    return mapping
+
+
+def object_signature(path: Path):
+    with path.open("rb") as handle:
+        elf = ELFFile(handle)
+        symtab = elf.get_section_by_name(".symtab")
+        sections, relocations = [], []
+        for section in elf.iter_sections():
+            if section["sh_flags"] & 0x2 and section["sh_type"] != "SHT_NOBITS":
+                sections.append((section.name, section.data()))
+            elif section["sh_flags"] & 0x2:
+                sections.append((section.name, section["sh_size"]))
+            if isinstance(section, RelocationSection):
+                target = elf.get_section(section["sh_info"]).name
+                for rel in section.iter_relocations():
+                    sym = symtab.get_symbol(rel["r_info_sym"])
+                    name = sym.name or elf.get_section(sym["st_shndx"]).name
+                    relocations.append((target, rel["r_offset"], rel["r_info_type"], name))
+        globals_ = sorted(sym.name for sym in symtab.iter_symbols()
+                          if sym["st_info"]["bind"] == "STB_GLOBAL" and sym["st_shndx"] != "SHN_UNDEF")
+    return sections, sorted(relocations), globals_
+
+
+def wrapper_text(mapping: dict[str, str], us_source: Path) -> str:
+    include = us_source.resolve().relative_to(ROOT).as_posix()
+    lines = [f"#define {us} {eu}" for us, eu in sorted(mapping.items())]
+    return "\n".join(lines + [f'#include "{include}"', ""])
+
+
+def pairs():
+    sys.path.insert(0, str(EU / "tools"))
+    import audit_progress
+    eu_functions, _ = audit_progress.classify_functions()
+    eu_index = defaultdict(list)
+    for f in eu_functions:
+        if f["category"] != "c_decompiled_matched" or not f["source"]:
+            continue
+        path = EU / f["source"]
+        text = path.read_text(encoding="utf-8", errors="replace")
+        if re.search(r'#include "src/[^"]+\.c"', text):
+            continue
+        body = function_body(text, f["name"])
+        if body:
+            eu_index[fingerprint(body)].append((f, path, body))
+    us_index = defaultdict(list)
+    for entry in json.loads((ROOT / "matches.json").read_text(encoding="utf-8"))["matches"]:
+        path = ROOT / entry["source"]
+        if not path.exists():
+            continue
+        body = function_body(path.read_text(encoding="utf-8", errors="replace"), entry["source_symbol"])
+        if body:
+            us_index[fingerprint(body)].append((entry, path, body))
+    out = []
+    for mark, eu_list in eu_index.items():
+        us_list = us_index.get(mark, [])
+        for f, eu_path, eu_body in eu_list:
+            module = "arm9" if f["unit"] == "main" else f["unit"]
+            same_module = [u for u in us_list if u[0]["module"] == module]
+            base = [u for u in same_module if re.sub(r"_[0-9a-f]{8}$", "", u[0]["source_symbol"]) == f["name"]]
+            chosen = base or (same_module if len(same_module) == 1 and len(eu_list) == 1 else [])
+            if len(chosen) == 1:
+                entry, us_path, us_body = chosen[0]
+                out.append((f, eu_path, eu_body, entry, us_path, us_body))
+    return out
+
+
+def try_pair(pair, scratch: Path):
+    f, eu_path, eu_body, entry, us_path, us_body = pair
+    mapping = symbol_map(us_body, eu_body, entry["source_symbol"], f["name"])
+    if mapping is None:
+        return pair, None, "symbol alignment"
+    reference = EU / "build" / Path(f["source"]).with_suffix(".o")
+    if not reference.exists():
+        return pair, None, "no reference object"
+    text = wrapper_text(mapping, us_path)
+    work = scratch / f["source"]
+    work.parent.mkdir(parents=True, exist_ok=True)
+    wrapper = work.with_name(eu_path.name)
+    wrapper.write_text(text, encoding="utf-8", newline="\n")
+    out = wrapper.with_suffix(".o")
+    result = subprocess.run([sys.executable, str(EU / "tools" / "_run_mwcc.py"), str(out), str(wrapper),
+                             f"--unit={f['source']}"], capture_output=True, text=True, cwd=EU)
+    if result.returncode or not out.exists():
+        return pair, None, "compile: " + (result.stdout + result.stderr).strip().splitlines()[-1:][0][:120] \
+            if (result.stdout + result.stderr).strip() else "compile failed"
+    if object_signature(out) != object_signature(reference):
+        return pair, None, "object differs"
+    return pair, text, "ok"
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
+    parser.add_argument("--limit", type=int, default=0)
+    parser.add_argument("--dry-run", action="store_true")
+    parser.add_argument("--jobs", type=int, default=8)
+    args = parser.parse_args()
+    candidates = pairs()
+    if args.limit:
+        candidates = candidates[:args.limit]
+    print(f"{len(candidates)} candidate pairs", flush=True)
+    results = defaultdict(int)
+    rewritten = []
+    with tempfile.TemporaryDirectory(dir=EU / "build") as temp, ThreadPoolExecutor(args.jobs) as pool:
+        for pair, text, status in pool.map(lambda p: try_pair(p, Path(temp)), candidates):
+            results[status.split(":")[0]] += 1
+            if text is None:
+                continue
+            rewritten.append(pair[1].relative_to(ROOT).as_posix())
+            if not args.dry_run:
+                pair[1].write_text(text, encoding="utf-8", newline="\n")
+    report = ROOT / "build" / "dedupe_regions.json"
+    report.write_text(json.dumps({"results": results, "rewritten": rewritten}, indent=1) + "\n", encoding="utf-8")
+    print(dict(results), f"-> {len(rewritten)} EU files {'would be ' if args.dry_run else ''}rewritten")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

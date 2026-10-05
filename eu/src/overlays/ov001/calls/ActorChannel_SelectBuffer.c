@@ -1,12 +1,3 @@
-#include "nitro/types.h"
-
-extern u8 *data_ov001_020a0514;
-
-void *ActorChannel_SelectBuffer(void)
-{
-    u8 *result = data_ov001_020a0514;
-    if (*(s32 *)(data_ov001_020a0514 + 0x1ec) != 0) {
-        result = data_ov001_020a0514 + 0xa0;
-    }
-    return result;
-}
+#define ActorChannel_SelectBuffer_0208bd04 ActorChannel_SelectBuffer
+#define g_channelContext_020a04f4 data_ov001_020a0514
+#include "src/ov001/shared_engine/ActorChannel_SelectBuffer_0208bd04.c"

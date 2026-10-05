@@ -1,5 +1,2 @@
-#include "nitro/types.h"
-
-u32 GetIndirectFieldAt0x50(int obj) {
-    return *(u32 *)(*(int *)(obj + 8) + 0x50);
-}
+#define GetIndirectFieldAt0x50_020a0944 GetIndirectFieldAt0x50
+#include "src/ov009/unclassified_helpers/GetIndirectFieldAt0x50_020a0944.c"

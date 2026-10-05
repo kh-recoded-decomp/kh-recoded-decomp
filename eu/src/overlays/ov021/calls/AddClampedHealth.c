@@ -1,35 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct HealthStats {
-    u16 pad0;
-    u16 current;
-    u16 max;
-} HealthStats;
-
-typedef struct BigObject {
-    u8 pad_000[0x1d4];
-    HealthStats *health;
-} BigObject;
-
-extern void SpawnHealEffect(BigObject *obj);
-
-BOOL AddClampedHealth(BigObject *obj, int delta)
-{
-    HealthStats *health = obj->health;
-    int value = health->current + delta;
-    int result = health->max;
-    if (value <= result) {
-        if (value < 0) {
-            value = 0;
-        }
-        result = value;
-    }
-    health->current = result;
-    if (delta > 0) {
-        SpawnHealEffect(obj);
-    }
-    if (health->current == 0) {
-        return TRUE;
-    }
-    return FALSE;
-}
+#define AddClampedHealth_020a75ec AddClampedHealth
+#define func_ov021_020a7568 SpawnHealEffect
+#include "src/ov021/unclassified_helpers/AddClampedHealth_020a75ec.c"

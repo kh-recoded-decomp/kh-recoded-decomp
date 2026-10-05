@@ -1,10 +1,3 @@
-#include "nitro/types.h"
-
-extern void *PXI_Init_0202a64c(u32 unused);
-extern u8 data_0205fea8[];
-
-void InitPxiChannelsPair(void)
-{
-    PXI_Init_0202a64c(*(u32 *)(data_0205fea8 + 0x14));
-    PXI_Init_0202a64c(*(u32 *)(data_0205fea8 + 0x18));
-}
+#define PXI_Init_0202a638 PXI_Init_0202a64c
+#define func_02028bf4 InitPxiChannelsPair
+#include "src/arm9/library_nitro_pxi/func_02028bf4.c"

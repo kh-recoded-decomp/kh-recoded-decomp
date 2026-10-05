@@ -1,27 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct ResourceSlot {
-    u8 pad00[0x90];
-} ResourceSlot;
-
-typedef struct ResourceOwner {
-    u8 pad00[0x44];
-    void *buffer;
-    u8 pad48[0x6c - 0x48];
-    ResourceSlot *slots;
-    s32 slotCount;
-} ResourceOwner;
-
-extern void FreeResourceAt0x44(ResourceSlot *slot, int mode);
-extern void NNSi_FndFreeFromDefaultHeap(void *memory);
-
-void FreeResourceSlots(ResourceOwner *owner, int mode)
-{
-    int i;
-
-    for (i = 0; i < owner->slotCount; i++) {
-        FreeResourceAt0x44(&owner->slots[i], mode);
-    }
-    NNSi_FndFreeFromDefaultHeap(owner->buffer);
-    NNSi_FndFreeFromDefaultHeap(owner->slots);
-}
+#define FreeResourceAt0x44_020aa8f8 FreeResourceAt0x44
+#define FreeResourceSlots_020ade38 FreeResourceSlots
+#define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
+#include "src/ov021/unclassified_helpers/FreeResourceSlots_020ade38.c"

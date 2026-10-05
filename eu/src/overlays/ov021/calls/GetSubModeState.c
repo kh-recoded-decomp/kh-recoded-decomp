@@ -1,19 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct SubModeOwner {
-    u8 pad_00[6];
-    u8 state;
-    u8 pad_07[0xd];
-    u8 busy;
-} SubModeOwner;
-
-extern int func_ov021_020af48c(void);
-
-u8 GetSubModeState(SubModeOwner *owner, BOOL update)
-{
-    u8 state = owner->state;
-    if (update && owner->busy == 0 && func_ov021_020af48c()) {
-        state = 0;
-    }
-    return state;
-}
+#define GetSubModeState_020a6ec0 GetSubModeState
+#define UpdateSubModeResult_020af46c func_ov021_020af48c
+#include "src/ov021/sub_mode/GetSubModeState_020a6ec0.c"

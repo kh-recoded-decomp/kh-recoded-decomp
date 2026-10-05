@@ -1,11 +1,3 @@
-#include "nitro/types.h"
-
-extern int IsDeviceReady(void);
-
-u16 GetTransitionFrame(void)
-{
-    if (IsDeviceReady() != 0) {
-        return 0x8000;
-    }
-    return *(u16 *)0x2fffcfa;
-}
+#define GetTransitionFrame_020115ac GetTransitionFrame
+#define IsDeviceReady_02011048 IsDeviceReady
+#include "src/arm9/shared_engine/GetTransitionFrame_020115ac.c"

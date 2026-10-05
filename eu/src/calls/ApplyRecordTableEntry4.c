@@ -1,9 +1,4 @@
-#include "nitro/types.h"
-
-extern int ForwardType7RecordSpanFromOffset14(int context);
-extern u8 *gActorRegistry;
-
-int ApplyRecordTableEntry4(int index) {
-    void **slots = (void **)(gActorRegistry + 0x20);
-    return ForwardType7RecordSpanFromOffset14((int)slots[index]);
-}
+#define func_020359d4 ApplyRecordTableEntry4
+#define func_020359ec ForwardType7RecordSpanFromOffset14
+#define g_recordTablePtr_0206083c gActorRegistry
+#include "src/arm9/shared_engine/func_020359d4.c"

@@ -1,6 +1,2 @@
-void func_ov027_020b8288(char *obj, void *arg) {
-    void (*fp)(void *) = *(void (**)(void *))(obj + 0x40);
-    if (fp) {
-        fp(arg);
-    }
-}
+#define InvokeCallback40_020b8268 func_ov027_020b8288
+#include "src/ov027/shared_engine/InvokeCallback40_020b8268.c"

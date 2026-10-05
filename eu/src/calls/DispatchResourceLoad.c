@@ -1,23 +1,6 @@
-#include "nitro/types.h"
-
-extern u32 data_02056014;
-
-extern void func_0202d328(void *archive, int extra);
-extern void ValidateResourceTagAndDispatch(void *archive, int extra);
-extern void BindModelAnimations(void *param1, void *param2, void *archive, void *param4);
-
-/* Guarded resource dispatch that clears one slot field. */
-int DispatchResourceLoad(void *param1, void *param2, int *archive, void *param4)
-{
-    u32 savedGuard = data_02056014;
-    data_02056014 = 1;
-    if (*archive == 0x4850414b) {
-        func_0202d328(archive, 1);
-    } else {
-        ValidateResourceTagAndDispatch(archive, 0);
-    }
-    data_02056014 = savedGuard;
-    BindModelAnimations(param1, param2, archive, param4);
-    *(u32 *)((u8 *)param1 + 0xc) = 0;
-    return 1;
-}
+#define DispatchResourceLoad_0202ea78 DispatchResourceLoad
+#define func_0202d098 ValidateResourceTagAndDispatch
+#define func_0202d314 func_0202d328
+#define func_0202e854 BindModelAnimations
+#define g_reentryGuard_02056014 data_02056014
+#include "src/arm9/archive_startup/DispatchResourceLoad_0202ea78.c"

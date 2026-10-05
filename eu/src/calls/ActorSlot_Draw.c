@@ -1,33 +1,4 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-typedef struct SceneNode SceneNode;
-
-typedef struct {
-    VecFx32 position;
-} ModelDraw;
-
-typedef struct {
-    u8 pad_00[0x10];
-    u32 entityFlags;
-    u8 node[0xa4];
-    VecFx32 position;
-    u8 pad_c4[0xe4];
-    ModelDraw modelDraw;
-} ActorSlot;
-
-extern void ShadowVolume_Draw(ModelDraw *draw);
-extern void func_01ffb12c(SceneNode *node);
-
-void ActorSlot_Draw(ActorSlot *slot, BOOL asModel)
-{
-    if (asModel) {
-        slot->modelDraw.position = slot->position;
-        ShadowVolume_Draw(&slot->modelDraw);
-        return;
-    }
-    if (slot->entityFlags & 0x20) {
-        return;
-    }
-    func_01ffb12c((SceneNode *)slot->node);
-}
+#define ActorSlot_Draw_020369f4 ActorSlot_Draw
+#define SceneNode_Draw_01ffb12c func_01ffb12c
+#define func_02036b80 ShadowVolume_Draw
+#include "src/arm9/shared_engine/ActorSlot_Draw_020369f4.c"

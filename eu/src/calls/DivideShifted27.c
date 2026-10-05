@@ -1,8 +1,3 @@
-#include "nitro/types.h"
-
-extern s64 _ll_sdiv(s64 numerator, s64 denominator);
-
-s64 DivideShifted27(s32 numerator, s32 denominator)
-{
-    return _ll_sdiv((s64)numerator << 27, denominator);
-}
+#define DivideShifted27_0203f4d8 DivideShifted27
+#define LongDiv_02023ba4 _ll_sdiv
+#include "src/arm9/math/DivideShifted27_0203f4d8.c"

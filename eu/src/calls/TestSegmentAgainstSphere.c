@@ -1,11 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct SphereShapeRef SphereShapeRef;
-typedef struct SegmentShapeRef SegmentShapeRef;
-
-extern BOOL TestSphereAgainstSegment(SphereShapeRef *sphereRef, SegmentShapeRef *segmentRef, void *hit, u32 flags);
-
-BOOL TestSegmentAgainstSphere(SegmentShapeRef *segmentRef, SphereShapeRef *sphereRef, void *hit, u32 flags)
-{
-    return TestSphereAgainstSegment(sphereRef, segmentRef, hit, flags ^ 1);
-}
+#define TestSegmentAgainstSphere_0203b580 TestSegmentAgainstSphere
+#define TestSphereAgainstSegment_0203f2e8 TestSphereAgainstSegment
+#include "src/arm9/spatial_queries/TestSegmentAgainstSphere_0203b580.c"

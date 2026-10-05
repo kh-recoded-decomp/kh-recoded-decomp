@@ -1,9 +1,2 @@
-#include "nitro/types.h"
-
-BOOL IsCommandType4(s32 *type)
-{
-    if (*type == 4) {
-        return TRUE;
-    }
-    return FALSE;
-}
+#define IsCommandType4_0209838c IsCommandType4
+#include "src/ov001/shared_engine/IsCommandType4_0209838c.c"

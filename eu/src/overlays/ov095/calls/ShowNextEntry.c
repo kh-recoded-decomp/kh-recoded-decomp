@@ -1,14 +1,5 @@
-#include "nitro/types.h"
-
-extern BOOL SelectNextGridRow(void *viewer);
-extern void func_ov095_020bfa38(int mode, void *viewer);
-extern BOOL PlaySoundEffect(int seqArcNo, int index);
-
-void ShowNextEntry(void *viewer)
-{
-    if (!SelectNextGridRow(viewer)) {
-        return;
-    }
-    func_ov095_020bfa38(1, viewer);
-    PlaySoundEffect(0, 0);
-}
+#define PlaySoundEffect_0204d924 PlaySoundEffect
+#define ShowNextEntry_020bef84 ShowNextEntry
+#define func_ov095_020bfa18 func_ov095_020bfa38
+#define func_ov095_020c0f78 SelectNextGridRow
+#include "src/ov095/unclassified_helpers/ShowNextEntry_020bef84.c"

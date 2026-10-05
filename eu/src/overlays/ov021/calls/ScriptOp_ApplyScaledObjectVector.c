@@ -1,35 +1,8 @@
-extern unsigned int VEC_MultAdd();
-extern unsigned int BeginWalkerMove();
-extern unsigned int ResolveStageActorRef();
-extern unsigned int ResolveTaggedValueRef();
-extern unsigned int TaggedValueToFixed();
-extern unsigned int ResolveVectorOperand();
-
-unsigned int
-ScriptOp_ApplyScaledObjectVector(unsigned int context,int operands,unsigned int argument,unsigned int savedArgument)
-
-{
-  int object;
-  unsigned int scale;
-  unsigned int firstValue;
-  unsigned int secondValue;
-  unsigned char inputVector [12];
-  unsigned char resultVector [12];
-  unsigned int saved;
-  
-  saved = savedArgument;
-  object = ResolveTaggedValueRef(context,operands);
-  scale = ResolveTaggedValueRef(context,operands + 0x10);
-  firstValue = ResolveTaggedValueRef(context,operands + 0x18);
-  secondValue = ResolveTaggedValueRef(context,operands + 0x20);
-  object = ResolveStageActorRef(context,*(unsigned int *)(object + 4));
-  if (object != 0) {
-    ResolveVectorOperand(context,operands + 8,inputVector);
-    scale = TaggedValueToFixed(scale);
-    VEC_MultAdd(scale,inputVector,object + 0x2c0,resultVector);
-    scale = TaggedValueToFixed(firstValue);
-    firstValue = TaggedValueToFixed(secondValue);
-    BeginWalkerMove(object,resultVector,scale,firstValue);
-  }
-  return 0;
-}
+#define ScriptOp_ApplyScaledObjectVector_020b36ac ScriptOp_ApplyScaledObjectVector
+#define VEC_MultAdd_01ffa09c VEC_MultAdd
+#define func_ov001_020910c4 BeginWalkerMove
+#define func_ov021_020b02b8 ResolveStageActorRef
+#define func_ov021_020b0374 ResolveTaggedValueRef
+#define func_ov021_020b03b0 TaggedValueToFixed
+#define func_ov021_020b03c8 ResolveVectorOperand
+#include "src/ov021/script_ops/ScriptOp_ApplyScaledObjectVector_020b36ac.c"

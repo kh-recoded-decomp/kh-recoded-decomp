@@ -1,9 +1,2 @@
-#include "nitro/types.h"
-
-extern void func_ov043_020bc904();
-
-u32 func_ov001_020659f4(void)
-{
-    func_ov043_020bc904(8);
-    return 1;
-}
+#define func_ov043_020bc8e4 func_ov043_020bc904
+#include "src/ov001/unclassified_helpers/func_ov001_020659f4.c"

@@ -1,9 +1,2 @@
-extern void GXS_SetGraphicsMode(int mode);
-
-void SetSubEngineGraphicsModeFromTable(int *table) {
-    int mode = table[*(volatile unsigned int *)0x4001000 & 7];
-    if (mode >= 8) {
-        mode -= 8;
-    }
-    GXS_SetGraphicsMode(mode);
-}
+#define SetSubEngineGraphicsModeFromTable_0202ae7c SetSubEngineGraphicsModeFromTable
+#include "src/arm9/shared_engine/SetSubEngineGraphicsModeFromTable_0202ae7c.c"

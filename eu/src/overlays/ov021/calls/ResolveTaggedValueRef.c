@@ -1,26 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct {
-    s16 tag;
-    s16 pad_02;
-    s32 value;
-} TaggedValue;
-
-typedef struct {
-    u8 pad_00[0x2c];
-    TaggedValue result;
-} ScriptContext;
-
-extern TaggedValue *func_ov021_020b038c(ScriptContext *context, s32 offset);
-
-TaggedValue *ResolveTaggedValueRef(ScriptContext *context, TaggedValue *value)
-{
-    if (value->tag == 8) {
-        if (value->value == -1) {
-            value = &context->result;
-        } else {
-            value = func_ov021_020b038c(context, value->value);
-        }
-    }
-    return value;
-}
+#define ResolveTaggedValueRef_020b0374 ResolveTaggedValueRef
+#define func_ov021_020b036c func_ov021_020b038c
+#include "src/ov021/unclassified_helpers/ResolveTaggedValueRef_020b0374.c"

@@ -1,28 +1,6 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad[0x11148];
-    int frameCounter;
-    int blinkPhase;
-} PanelWork;
-
-typedef void (*PanelModeHandler)(PanelWork *work);
-
-extern const PanelModeHandler gItemReportStateHandlers[];
-extern int func_ov095_020c1228(PanelWork *work);
-extern void InitSlotPool(PanelWork *work);
-extern void DrawGridSprites(PanelWork *work);
-
-void UpdatePanelFrame(PanelWork *work) {
-    int mode = func_ov095_020c1228(work);
-
-    if (gItemReportStateHandlers[mode] != NULL) {
-        gItemReportStateHandlers[mode](work);
-    }
-    if (++work->frameCounter >= 8) {
-        work->frameCounter = 0;
-        work->blinkPhase = (work->blinkPhase + 1) % 2;
-    }
-    InitSlotPool(work);
-    DrawGridSprites(work);
-}
+#define InitSlotPool_020c01c8 InitSlotPool
+#define UpdatePanelFrame_020bedf8 UpdatePanelFrame
+#define data_ov095_020c16fc gItemReportStateHandlers
+#define func_ov095_020c0730 DrawGridSprites
+#define func_ov095_020c1208 func_ov095_020c1228
+#include "src/ov095/panel_state/UpdatePanelFrame_020bedf8.c"

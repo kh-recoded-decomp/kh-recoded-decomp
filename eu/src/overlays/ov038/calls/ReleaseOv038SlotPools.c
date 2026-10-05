@@ -1,19 +1,5 @@
-#include "nitro/types.h"
-
-extern u32 data_ov038_020bd164;
-extern void Slot_UnlinkAll(void *p);
-extern int Obj_Release(void *object);
-
-void ReleaseOv038SlotPools(void)
-{
-    u32 pool;
-    s32 index;
-
-    index = 0;
-    pool = data_ov038_020bd164 + 0x40;
-    do {
-        Slot_UnlinkAll((void *)(pool + index * 0x6434));
-        Obj_Release((void *)(pool + index * 0x6434));
-        index = index + 1;
-    } while (index < 2);
-}
+#define Obj_Release_0204eff8 Obj_Release
+#define ReleaseOv038SlotPools_020bb0c0 ReleaseOv038SlotPools
+#define Slot_UnlinkAll_0204f104 Slot_UnlinkAll
+#define g_ov038Context_020bd144 data_ov038_020bd164
+#include "src/ov038/unclassified_helpers/ReleaseOv038SlotPools_020bb0c0.c"

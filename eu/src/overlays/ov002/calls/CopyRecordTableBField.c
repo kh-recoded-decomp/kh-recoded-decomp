@@ -1,22 +1,7 @@
-#include "nitro/types.h"
-
-extern void *GetRecordTableBEntry(s32 index);
-extern s32 IsRecordSlotAcquired(s32 id);
-extern void AcquireRecordSlot(s32 id, s32 value);
-extern void ReleaseRecordSlot(s32 id);
-extern void CopyWideStringBounded(u32 dst, u32 value, u32 maxLen);
-
-void CopyRecordTableBField(s32 index, u32 dst) {
-    s32 wasLocked = IsRecordSlotAcquired(9);
-    u32 entry;
-
-    if (wasLocked == 0) {
-        AcquireRecordSlot(9, 1);
-    }
-    entry = (u32)GetRecordTableBEntry(index);
-    CopyWideStringBounded(dst, *(u32 *)(entry + 0x14), 0x3f);
-    if (wasLocked != 0) {
-        return;
-    }
-    ReleaseRecordSlot(9);
-}
+#define CopyRecordTableBField_02069d04 CopyRecordTableBField
+#define GetRecordTableBEntry_02052238 GetRecordTableBEntry
+#define func_02051d3c AcquireRecordSlot
+#define func_02051dfc ReleaseRecordSlot
+#define func_02051ea8 IsRecordSlotAcquired
+#define func_ov002_020663d0 CopyWideStringBounded
+#include "src/ov002/unclassified_helpers/CopyRecordTableBField_02069d04.c"

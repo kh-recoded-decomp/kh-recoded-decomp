@@ -1,8 +1,2 @@
-#include "nitro/types.h"
-
-extern void func_ov002_0206203c(int selector);
-
-void ClosePanelSelectorAll(void)
-{
-    func_ov002_0206203c(-1);
-}
+#define ClosePanelSelectorAll_020648c0 ClosePanelSelectorAll
+#include "src/ov002/panel_state/ClosePanelSelectorAll_020648c0.c"

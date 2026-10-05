@@ -1,21 +1,4 @@
-#include "nitro/types.h"
-
-extern u32 func_ov040_020bdc44(u32 code);
-extern int GetPlayerFlagRecord(int index);
-
-BOOL IsRewardSlotUnclaimed(void *unused, u32 code)
-{
-    int i;
-    BOOL result = TRUE;
-    int flagId = func_ov040_020bdc44(code);
-
-    for (i = 0; i < 8; i++) {
-        s16 value = *(s16 *)GetPlayerFlagRecord(i);
-        if (value == flagId || value == -1) {
-            result = FALSE;
-            break;
-        }
-    }
-    return result;
-}
-
+#define GetPlayerFlagRecord_0205036c GetPlayerFlagRecord
+#define IsRewardSlotUnclaimed_020be0c4 IsRewardSlotUnclaimed
+#define func_ov040_020bdc24 func_ov040_020bdc44
+#include "src/ov040/shared_engine/IsRewardSlotUnclaimed_020be0c4.c"

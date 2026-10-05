@@ -1,52 +1,8 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-#include "nitro/fx.h"
-
-typedef struct Plane {
-    VecFx16 normal;
-    u16 pad;
-    fx32 dist;
-} Plane;
-
-typedef struct Face {
-    u8 pad_00[0x12];
-    u16 vertexCount;
-    Plane facePlane;
-    Plane edgePlanes[4];
-    VecFx32 vertices[4];
-} Face;
-
-extern void VEC_Subtract(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
-extern void VEC_CrossProduct(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
-extern void VEC_Normalize(VecFx32 *in, VecFx32 *out);
-extern void NormalizeVecFx32ToFx16(const VecFx32 *input, VecFx16 *output);
-extern fx32 VEC_DotProductFx16(const VecFx32 *v, const VecFx16 *m);
-extern void ComputeEdgePlane(const VecFx32 *pointA, const VecFx32 *pointB, Plane *plane, const VecFx16 *dir);
-
-void ComputeFacePlanes(void *unused, Face *face)
-{
-    VecFx32 *v0 = &face->vertices[0];
-    Plane *edgePlane = &face->edgePlanes[0];
-    VecFx16 *normal;
-    VecFx32 edge1;
-    VecFx32 edge2;
-    VecFx32 rawNormal;
-
-    VEC_Subtract(v0 + 1, v0, &edge1);
-    VEC_Subtract(v0 + 2, v0, &edge2);
-    VEC_CrossProduct(&edge1, &edge2, &rawNormal);
-    VEC_Normalize(&rawNormal, &rawNormal);
-    NormalizeVecFx32ToFx16(&rawNormal, &face->facePlane.normal);
-    face->facePlane.dist = VEC_DotProductFx16(v0, &face->facePlane.normal);
-
-    normal = &face->facePlane.normal;
-    ComputeEdgePlane(v0, v0 + 1, edgePlane, normal);
-    ComputeEdgePlane(v0 + 1, v0 + 2, edgePlane + 1, normal);
-
-    if (face->vertexCount == 3) {
-        ComputeEdgePlane(v0 + 2, v0, edgePlane + 2, normal);
-        return;
-    }
-    ComputeEdgePlane(v0 + 2, v0 + 3, edgePlane + 2, normal);
-    ComputeEdgePlane(v0 + 3, v0, edgePlane + 3, normal);
-}
+#define ComputeEdgePlane_02030204 ComputeEdgePlane
+#define ComputeFacePlanes_0203023c ComputeFacePlanes
+#define VEC_CrossProduct_01ff9ea8 VEC_CrossProduct
+#define VEC_DotProductFx16_0202ffb8 VEC_DotProductFx16
+#define func_01ff9e3c VEC_Subtract
+#define func_01ff9f88 VEC_Normalize
+#define func_02030098 NormalizeVecFx32ToFx16
+#include "src/arm9/spatial_queries/ComputeFacePlanes_0203023c.c"

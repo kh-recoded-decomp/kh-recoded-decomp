@@ -1,17 +1,2 @@
-#include "nitro/types.h"
-
-typedef struct SlotMenu {
-    u8 pad_00000[0x49818];
-    u16 slotPoints[8];
-} SlotMenu;
-
-BOOL SlotMenu_IsPointTotalOverLimit(SlotMenu *menu)
-{
-    int total = 0;
-    int slot;
-
-    for (slot = 0; slot < 8; slot++) {
-        total += menu->slotPoints[slot];
-    }
-    return total > 100;
-}
+#define SlotMenu_IsPointTotalOverLimit_020c52d0 SlotMenu_IsPointTotalOverLimit
+#include "src/ov076/unclassified_helpers/SlotMenu_IsPointTotalOverLimit_020c52d0.c"

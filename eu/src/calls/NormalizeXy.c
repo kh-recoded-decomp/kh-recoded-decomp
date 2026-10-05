@@ -1,14 +1,4 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-extern fx32 LengthFx32Xy(fx32 x, fx32 y);
-extern fx32 FX_Div(fx32 numer, fx32 denom);
-
-fx32 NormalizeXy(fx32 *xy)
-{
-    fx32 length = LengthFx32Xy(xy[0], xy[1]);
-
-    xy[0] = FX_Div(xy[0], length);
-    xy[1] = FX_Div(xy[1], length);
-    return length;
-}
+#define FX_Div_01ff9c84 FX_Div
+#define LengthFx32Xy_0204a3b8 LengthFx32Xy
+#define NormalizeXy_0204a3e4 NormalizeXy
+#include "src/arm9/math/NormalizeXy_0204a3e4.c"

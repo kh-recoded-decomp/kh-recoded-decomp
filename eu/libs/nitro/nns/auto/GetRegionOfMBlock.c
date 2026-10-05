@@ -1,8 +1,2 @@
-void GetRegionOfMBlock(void **out, char *node)
-{
-    unsigned short offset = (*(unsigned short *)(node + 2) >> 8) & 0x7f;
-    char *base = node + 0x10;
-
-    out[0] = node - offset;
-    out[1] = (void *)(*(int *)(node + 4) + (int)base);
-}
+#define DecodeMemoryBlockRegion_02012bd0 GetRegionOfMBlock
+#include "src/arm9/library_nitro_nns/func_02012bd0.c"

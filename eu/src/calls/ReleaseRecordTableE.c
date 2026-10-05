@@ -1,18 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad_00[0x70];
-    void *tableE;
-} RecordManager;
-
-extern RecordManager *gRecordManager;
-extern void NNSi_FndFreeFromDefaultHeap(void *block);
-
-/* Frees and clears record table E. */
-void ReleaseRecordTableE(void)
-{
-    RecordManager *manager = gRecordManager;
-
-    NNSi_FndFreeFromDefaultHeap(manager->tableE);
-    manager->tableE = 0;
-}
+#define ReleaseRecordTableE_02051c68 ReleaseRecordTableE
+#define func_0202a1c4 NNSi_FndFreeFromDefaultHeap
+#define g_recordManager_020613d0 gRecordManager
+#include "src/arm9/indexed_records/ReleaseRecordTableE_02051c68.c"

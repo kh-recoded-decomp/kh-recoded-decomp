@@ -1,6 +1,2 @@
-#include "nitro/types.h"
-
-void SetFlagBit8(int object)
-{
-    *(u16 *)(object + 0x50) |= 0x100;
-}
+#define SetFlagBit8_020a37b0 SetFlagBit8
+#include "src/ov018/unclassified_helpers/SetFlagBit8_020a37b0.c"

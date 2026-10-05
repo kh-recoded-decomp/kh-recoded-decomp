@@ -1,22 +1,5 @@
-#include "nitro/types.h"
-
-extern char data_ov015_0207f3a0[];
-extern int PXI_Init_02012298(void *arg);
-extern void WH_SetError(int code);
-extern int func_ov015_02073cbc(void);
-extern void PollPanelTransition(void);
-
-BOOL WH_EndChildStep(void)
-{
-    int error = PXI_Init_02012298(data_ov015_0207f3a0);
-
-    if (error != 0) {
-        WH_SetError(error);
-        return FALSE;
-    }
-    if (func_ov015_02073cbc() != 0) {
-        return TRUE;
-    }
-    PollPanelTransition();
-    return FALSE;
-}
+#define PXI_Init_02012284 PXI_Init_02012298
+#define PollPanelTransition_02074e80 PollPanelTransition
+#define WH_EndChildStep_02073c7c WH_EndChildStep
+#define WH_SetError_020737d4 WH_SetError
+#include "src/ov015/wireless/WH_EndChildStep_02073c7c.c"

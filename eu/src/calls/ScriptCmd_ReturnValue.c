@@ -1,5 +1,2 @@
-#include "nitro/types.h"
-
-s32 ScriptCmd_ReturnValue(void *scriptObj, s32 value) {
-    return value;
-}
+#define ScriptCmd_ReturnValue_02025960 ScriptCmd_ReturnValue
+#include "src/arm9/unclassified_helpers/ScriptCmd_ReturnValue_02025960.c"

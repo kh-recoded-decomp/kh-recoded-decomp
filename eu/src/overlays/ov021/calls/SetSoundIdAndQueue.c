@@ -1,16 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct SoundOwner {
-    u8 pad_00[0x34];
-    int soundId;
-} SoundOwner;
-
-extern void QueueSoundCommandForArc(int soundId);
-
-void SetSoundIdAndQueue(SoundOwner *owner, int soundId)
-{
-    owner->soundId = soundId;
-    if (soundId >= 0) {
-        QueueSoundCommandForArc(soundId);
-    }
-}
+#define QueueSoundCommandForArc_0204d670 QueueSoundCommandForArc
+#define SetSoundIdAndQueue_020a7f90 SetSoundIdAndQueue
+#include "src/ov021/unclassified_helpers/SetSoundIdAndQueue_020a7f90.c"

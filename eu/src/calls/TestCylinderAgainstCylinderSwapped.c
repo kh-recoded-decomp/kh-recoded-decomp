@@ -1,10 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct CylinderShapeRef CylinderShapeRef;
-
-extern BOOL TestCylinderAgainstCylinder(CylinderShapeRef *refA, CylinderShapeRef *refB, void *contact, u32 flags);
-
-BOOL TestCylinderAgainstCylinderSwapped(CylinderShapeRef *refA, CylinderShapeRef *refB, void *contact, u32 flags)
-{
-    return TestCylinderAgainstCylinder(refB, refA, contact, flags ^ 1);
-}
+#define TestCylinderAgainstCylinderSwapped_0203b628 TestCylinderAgainstCylinderSwapped
+#define TestCylinderAgainstCylinder_020410a0 TestCylinderAgainstCylinder
+#include "src/arm9/spatial_queries/TestCylinderAgainstCylinderSwapped_0203b628.c"

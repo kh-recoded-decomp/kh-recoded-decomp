@@ -1,23 +1,4 @@
-extern unsigned int Flags16_ClearBit1();
-extern unsigned int Flags16_SetBit1();
-
-void SetObjectAnimationEnabled(unsigned int *object,int enabled)
-
-{
-  if ((*object & 1) != 0) {
-    if (enabled != 0) {
-      Flags16_SetBit1(object + 2);
-      if (object[0x8a] != 0) {
-        Flags16_SetBit1(object[0x8a]);
-      }
-    }
-    else {
-      Flags16_ClearBit1(object + 2);
-      if (object[0x8a] != 0) {
-        Flags16_ClearBit1(object[0x8a]);
-        return;
-      }
-    }
-  }
-  return;
-}
+#define SetObjectAnimationEnabled_020a9d28 SetObjectAnimationEnabled
+#define func_0202f4d8 Flags16_SetBit1
+#define func_0202f4e8 Flags16_ClearBit1
+#include "src/ov021/animation/SetObjectAnimationEnabled_020a9d28.c"

@@ -1,16 +1,3 @@
-#include "nitro/types.h"
-
-extern BOOL func_ov021_020a9d24(u32 *flags);
-
-BOOL AnySubObjectFlagsActive(int entity)
-{
-    BOOL found = FALSE;
-    int i;
-    for (i = 0; i < 2; i++) {
-        if (func_ov021_020a9d24((u32 *)(entity + 0xb68 + i * 0x230))) {
-            found = TRUE;
-            break;
-        }
-    }
-    return found;
-}
+#define AnySubObjectFlagsActive_020cfb28 AnySubObjectFlagsActive
+#define func_ov021_020a9d04 func_ov021_020a9d24
+#include "src/ov052/unclassified_helpers/AnySubObjectFlagsActive_020cfb28.c"

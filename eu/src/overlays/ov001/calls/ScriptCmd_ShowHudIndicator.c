@@ -1,23 +1,5 @@
-#include "nitro/types.h"
-
-typedef struct ScriptOperand {
-    s16 type;
-    s16 pad_02;
-    s32 value;
-} ScriptOperand;
-
-extern int ScriptVm_ReadOperandInt(void *context, ScriptOperand *operand);
-extern BOOL StartSlotLayoutAnimation(int indicatorKind, u16 frameNumber);
-extern BOOL func_ov001_0207d468(u32 value);
-
-int ScriptCmd_ShowHudIndicator(void *context, ScriptOperand *operands)
-{
-    int indicatorKind;
-    u32 frameNumber;
-
-    indicatorKind = ScriptVm_ReadOperandInt(context, operands);
-    frameNumber = ScriptVm_ReadOperandInt(context, operands + 1);
-    StartSlotLayoutAnimation(indicatorKind, frameNumber);
-    func_ov001_0207d468(1);
-    return 0;
-}
+#define ScriptCmd_ShowHudIndicator_0206572c ScriptCmd_ShowHudIndicator
+#define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
+#define func_ov001_0207d3d8 StartSlotLayoutAnimation
+#define func_ov001_0207d440 func_ov001_0207d468
+#include "src/ov001/shared_engine/ScriptCmd_ShowHudIndicator_0206572c.c"

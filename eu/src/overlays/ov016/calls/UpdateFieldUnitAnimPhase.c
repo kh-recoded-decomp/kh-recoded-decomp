@@ -1,22 +1,5 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad_00[0xc0];
-    u32 flags;
-} FieldUnit;
-
-extern BOOL StepFieldObjectAnim(FieldUnit *unit);
-extern void func_ov016_020a2c64(FieldUnit *unit);
-extern void EnterFieldUnitPhase6(FieldUnit *unit);
-
-BOOL UpdateFieldUnitAnimPhase(FieldUnit *unit)
-{
-    if ((unit->flags & 0x40) && StepFieldObjectAnim(unit)) {
-        unit->flags &= ~0x40;
-    }
-    func_ov016_020a2c64(unit);
-    if (!(unit->flags & 0x60)) {
-        EnterFieldUnitPhase6(unit);
-    }
-    return FALSE;
-}
+#define EnterFieldUnitPhase6_020a29a4 EnterFieldUnitPhase6
+#define StepFieldObjectAnim_020a2b1c StepFieldObjectAnim
+#define UpdateFieldUnitAnimPhase_020a57e8 UpdateFieldUnitAnimPhase
+#define func_ov016_020a2c44 func_ov016_020a2c64
+#include "src/ov016/field_objects/UpdateFieldUnitAnimPhase_020a57e8.c"

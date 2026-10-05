@@ -1,13 +1,5 @@
-#include "nitro/types.h"
-
-extern u32 data_ov001_020a0480;
-extern u32 ReadPackedBitField(u32 *words, u32 startBit, u32 fieldWidth);
-extern u32 ReadGlobalPackedBits(u32 bitOffset, u32 bitCount);
-
-u32 ReadSessionPackedBits(int bitOffset, u32 bitCount)
-{
-    if (bitOffset >= 0x3300) {
-        return ReadPackedBitField((u32 *)(data_ov001_020a0480 + 0x28), bitOffset - 0x3300, bitCount);
-    }
-    return ReadGlobalPackedBits(bitOffset, bitCount);
-}
+#define ReadGlobalPackedBits_02027348 ReadGlobalPackedBits
+#define ReadPackedBitField_0202d4c4 ReadPackedBitField
+#define ReadSessionPackedBits_02064574 ReadSessionPackedBits
+#define data_ov001_020a0460 data_ov001_020a0480
+#include "src/ov001/unclassified_helpers/ReadSessionPackedBits_02064574.c"

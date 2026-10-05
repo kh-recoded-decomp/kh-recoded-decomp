@@ -1,16 +1,3 @@
-#include "nitro/types.h"
-
-extern int UpdatePanelScene_0206c7e8(void);
-extern void func_ov002_02062cb8(int nextMode);
-
-void PollPanelOverlay13(void)
-{
-    switch (UpdatePanelScene_0206c7e8()) {
-    case 1:
-        func_ov002_02062cb8(0);
-        break;
-    case 2:
-        func_ov002_02062cb8(4);
-        break;
-    }
-}
+#define PollPanelOverlay13_02062e64 PollPanelOverlay13
+#define func_ov013_0206c7e8 UpdatePanelScene_0206c7e8
+#include "src/ov002/panel_state/PollPanelOverlay13_02062e64.c"

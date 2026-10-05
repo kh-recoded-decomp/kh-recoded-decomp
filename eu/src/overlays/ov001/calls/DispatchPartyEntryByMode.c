@@ -1,22 +1,6 @@
-#include "nitro/types.h"
-
-typedef struct PartyState {
-    int mode;
-} PartyState;
-
-extern PartyState *data_ov001_020a04bc;
-extern u32 GetBoundedEntryField(int index);
-extern int AnySubObjectFlagsActive(u32 entry);
-extern int Actor_AnyAnimSlotBusy(u32 entry);
-
-int DispatchPartyEntryByMode(int index)
-{
-    switch (data_ov001_020a04bc->mode) {
-    case 0:
-    case 2:
-        return AnySubObjectFlagsActive(GetBoundedEntryField(index));
-    case 1:
-        return Actor_AnyAnimSlotBusy(GetBoundedEntryField(index));
-    }
-    return 0;
-}
+#define DispatchPartyEntryByMode_0206e690 DispatchPartyEntryByMode
+#define GetBoundedEntryField_0206db5c GetBoundedEntryField
+#define data_ov001_020a049c data_ov001_020a04bc
+#define func_ov052_020cfb28 AnySubObjectFlagsActive
+#define func_ov059_020cd124 Actor_AnyAnimSlotBusy
+#include "src/ov001/shared_engine/DispatchPartyEntryByMode_0206e690.c"

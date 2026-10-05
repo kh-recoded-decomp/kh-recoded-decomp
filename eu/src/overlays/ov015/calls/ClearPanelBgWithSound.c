@@ -1,14 +1,5 @@
-extern unsigned int MI_CpuClear32_0x800();
-extern unsigned int G2S_GetBG2ScrPtr();
-extern unsigned int PlaySoundEffect();
-
-void ClearPanelBgWithSound(void)
-
-{
-  void *dst;
-  
-  PlaySoundEffect(2,1);
-  dst = G2S_GetBG2ScrPtr();
-  MI_CpuClear32_0x800(dst);
-  return;
-}
+#define ClearBuffer2048_02078f00 MI_CpuClear32_0x800
+#define ClearPanelBgWithSound_02079880 ClearPanelBgWithSound
+#define G2S_GetBG2ScrPtr_02006f0c G2S_GetBG2ScrPtr
+#define PlaySoundEffect_0204d924 PlaySoundEffect
+#include "src/ov015/reviewed_helpers/ClearPanelBgWithSound_02079880.c"

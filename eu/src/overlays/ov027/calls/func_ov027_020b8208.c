@@ -1,6 +1,4 @@
-extern void func_ov027_020b81f8(int a, int b, int c, int d);
-extern void func_ov027_020b8200(int a, int b, int d);
-void func_ov027_020b8208(int param_1, int param_2, int param_3, int param_4) {
-    func_ov027_020b81f8(param_1, param_2, param_3, param_4);
-    func_ov027_020b8200(param_1, param_2, param_4);
-}
+#define func_020b81d8 func_ov027_020b81f8
+#define func_020b81e0 func_ov027_020b8200
+#define func_ov027_020b81e8 func_ov027_020b8208
+#include "src/ov027/reviewed_helpers/func_ov027_020b81e8.c"

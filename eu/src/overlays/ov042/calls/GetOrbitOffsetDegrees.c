@@ -1,8 +1,3 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-extern VecFx32 GetCameraOrbitOffset(fx32 radians);
-
-void GetOrbitOffsetDegrees(VecFx32 *out, int degrees) {
-    *out = GetCameraOrbitOffset((fx32)((s64)degrees * 0x3244 / 0xb4000));
-}
+#define GetCameraOrbitOffset_020af8d4 GetCameraOrbitOffset
+#define GetOrbitOffsetDegrees_020bd474 GetOrbitOffsetDegrees
+#include "src/ov042/camera/GetOrbitOffsetDegrees_020bd474.c"

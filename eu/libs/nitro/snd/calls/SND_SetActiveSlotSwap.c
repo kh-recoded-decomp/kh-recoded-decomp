@@ -1,8 +1,3 @@
-extern int sCurrentSoundArchive;
-
-int SND_SetActiveSlotSwap(int arg0)
-{
-    int old = sCurrentSoundArchive;
-    sCurrentSoundArchive = arg0;
-    return old;
-}
+#define SND_SetActiveSlotSwap_0201e9d8 SND_SetActiveSlotSwap
+#define data_0205e2e4 sCurrentSoundArchive
+#include "src/arm9/library_nitro_snd/SND_SetActiveSlotSwap_0201e9d8.c"

@@ -1,31 +1,7 @@
-#include "nitro/types.h"
-
-typedef struct CollisionWorld {
-    u32 unk_00;
-    void **quadTree;
-} CollisionWorld;
-
-extern void *GetFirstLinkedActor(void *actor);
-extern void *GetNextLinkedActor(void *actor);
-extern CollisionWorld *GetActorRegistry(void);
-extern void QuadTree_InsertObject(void *quadTree, void *object);
-extern void QuadTree_RemoveObject(void *quadTree, void *object);
-
-void SetLinkedActorsInQuadTree(void *actor, BOOL insert)
-{
-    void *link;
-    CollisionWorld *world;
-
-    link = GetFirstLinkedActor(actor);
-    world = GetActorRegistry();
-    if (world == NULL) {
-        return;
-    }
-    for (link = GetNextLinkedActor(link); link != NULL; link = GetNextLinkedActor(link)) {
-        if (insert) {
-            QuadTree_InsertObject(*world->quadTree, link);
-        } else {
-            QuadTree_RemoveObject(*world->quadTree, link);
-        }
-    }
-}
+#define GetFirstLinkedActor_0208f6e8 GetFirstLinkedActor
+#define GetNextLinkedActor_0208f708 GetNextLinkedActor
+#define QuadTree_RemoveObject_02033c60 QuadTree_RemoveObject
+#define SetLinkedActorsInQuadTree_020917d8 SetLinkedActorsInQuadTree
+#define func_02033c3c QuadTree_InsertObject
+#define func_02036230 GetActorRegistry
+#include "src/ov001/shared_engine/SetLinkedActorsInQuadTree_020917d8.c"

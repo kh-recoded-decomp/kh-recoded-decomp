@@ -1,15 +1,6 @@
-#include "nitro/types.h"
-
-extern u32 data_ov024_020b7540;
-extern BOOL DestroyFndObjectList(int container);
-extern void FreeResourceBufferAndProbeHeap(u32 target);
-extern void FreePointerIfSet(u32 target);
-
-void TeardownContextState(void) {
-    DestroyFndObjectList(data_ov024_020b7540 + 0x6524);
-    if (*(int *)(data_ov024_020b7540 + 0x66e0) != 0) {
-        FreeResourceBufferAndProbeHeap(data_ov024_020b7540 + 0x650c);
-        FreeResourceBufferAndProbeHeap(data_ov024_020b7540 + 0x6518);
-    }
-    FreePointerIfSet(data_ov024_020b7540 + 0x6500);
-}
+#define DestroyFndObjectList_020014f0 DestroyFndObjectList
+#define TeardownContextState_020b6730 TeardownContextState
+#define func_02001474 FreeResourceBufferAndProbeHeap
+#define func_ov027_020ba294 FreePointerIfSet
+#define g_context_020b7520 data_ov024_020b7540
+#include "src/ov024/unclassified_helpers/TeardownContextState_020b6730.c"

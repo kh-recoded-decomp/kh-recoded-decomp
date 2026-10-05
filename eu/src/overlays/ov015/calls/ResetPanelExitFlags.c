@@ -1,12 +1,4 @@
-#include "nitro/types.h"
-
-extern void DrawCenteredLabel(void);
-extern void DrawPanelInfoText(void);
-extern u8 *data_ov015_0207e960;
-
-void ResetPanelExitFlags(void) {
-    DrawCenteredLabel();
-    DrawPanelInfoText();
-    *(u32 *)(data_ov015_0207e960 + 0xe4) = 0;
-    data_ov015_0207e960[0xba] = 0;
-}
+#define DrawCenteredLabel_0206eb2c DrawCenteredLabel
+#define ResetPanelExitFlags_02070b60 ResetPanelExitFlags
+#define func_ov015_0206eba4 DrawPanelInfoText
+#include "src/ov015/panel_state/ResetPanelExitFlags_02070b60.c"

@@ -1,9 +1,2 @@
-#include "nitro/types.h"
-
-u16 *SkipWideString(u16 *text)
-{
-    while (*text != 0) {
-        text++;
-    }
-    return text + 1;
-}
+#define SkipWideString_020513a0 SkipWideString
+#include "src/arm9/runtime/SkipWideString_020513a0.c"

@@ -1,7 +1,2 @@
-int IndexedPointer_GetFirstWord(int *objectBase, int recordIndex)
-{
-    int *table = ((int **)(objectBase + recordIndex))[2];
-    if (table != 0)
-        return *table;
-    return 0;
-}
+#define func_0202d3c8 IndexedPointer_GetFirstWord
+#include "src/arm9/pointer_lookup/func_0202d3c8.c"

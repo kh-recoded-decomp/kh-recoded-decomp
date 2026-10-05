@@ -1,10 +1,5 @@
-#include "nitro/types.h"
-
-extern u8 data_ov001_0209ea20[];
-extern void *data_ov001_0209ea1c;
-extern void *func_0202a45c(void *descriptor, void *userData);
-
-void CreateSubScene9Task(void)
-{
-    data_ov001_0209ea1c = func_0202a45c(data_ov001_0209ea20, NULL);
-}
+#define CreateSubScene9Task_02066e00 CreateSubScene9Task
+#define data_ov001_0209e9fc data_ov001_0209ea1c
+#define data_ov001_0209ea00 data_ov001_0209ea20
+#define func_0202a448 func_0202a45c
+#include "src/ov001/shared_engine/CreateSubScene9Task_02066e00.c"

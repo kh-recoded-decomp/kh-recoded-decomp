@@ -1,28 +1,8 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad_00[2];
-    u16 resourceId;
-} CardThreadState;
-
-extern CardThreadState data_0205fe00;
-extern void *CARD_LockBackup(int id);
-extern void CARD_UnlockBackup(int id);
-extern int ReadCardBackupSync(u32 src, void *dst, u32 length);
-extern BOOL FormatCardBackup(void);
-extern void func_02026ef4(u32 mode);
-
-BOOL FormatSaveData(void)
-{
-    u32 probe;
-    BOOL success;
-
-    CARD_LockBackup(data_0205fe00.resourceId);
-    success = TRUE;
-    if (ReadCardBackupSync(0, &probe, 1) != 0 || FormatCardBackup() == 0) {
-        success = FALSE;
-    }
-    CARD_UnlockBackup(data_0205fe00.resourceId);
-    func_02026ef4(1);
-    return success;
-}
+#define CARD_UnlockBackup_020091ac CARD_LockBackup
+#define CardUnlockAfterKeyShare_020091b8 CARD_UnlockBackup
+#define FormatCardBackup_02026d30 FormatCardBackup
+#define FormatSaveData_02026ea0 FormatSaveData
+#define InitSaveData_02026ee0 func_02026ef4
+#define ReadCardBackupSync_02026b00 ReadCardBackupSync
+#define g_cardThreadState_0205fe00 data_0205fe00
+#include "src/arm9/shared_engine/FormatSaveData_02026ea0.c"

@@ -1,12 +1,3 @@
-#include "nitro/types.h"
-
-extern u32 data_ov028_020bb3a0;
-
-void SetOrClearStatusBit2(s32 enable)
-{
-    if (enable != 0) {
-        *(u16 *)(data_ov028_020bb3a0 + 6) = *(u16 *)(data_ov028_020bb3a0 + 6) | 4;
-        return;
-    }
-    *(u16 *)(data_ov028_020bb3a0 + 6) = *(u16 *)(data_ov028_020bb3a0 + 6) & 0xfffb;
-}
+#define SetOrClearStatusBit2_020bb2a8 SetOrClearStatusBit2
+#define g_fieldContext_020bb380 data_ov028_020bb3a0
+#include "src/ov028/unclassified_helpers/SetOrClearStatusBit2_020bb2a8.c"

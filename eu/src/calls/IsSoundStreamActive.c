@@ -1,10 +1,4 @@
-#include "nitro/types.h"
-
-extern u8 *gSoundWork;
-extern int NNS_SndArcStrmGetCurrentPlayingPos(void *handle);
-
-BOOL IsSoundStreamActive(int handleIndex)
-{
-    int result = NNS_SndArcStrmGetCurrentPlayingPos(gSoundWork + 0xb44c0 + handleIndex * 4);
-    return result != 0;
-}
+#define IsSoundStreamActive_0204ded4 IsSoundStreamActive
+#define func_02020320 NNS_SndArcStrmGetCurrentPlayingPos
+#define g_soundWork_0206084c gSoundWork
+#include "src/arm9/audio/IsSoundStreamActive_0204ded4.c"

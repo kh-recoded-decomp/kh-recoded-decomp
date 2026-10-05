@@ -1,12 +1,4 @@
-#include "nitro/types.h"
-
-extern s8 gScriptState[];
-extern int GetCachedSoundParam(void);
-
-u32 IsSoundParamStale(s32 soundId)
-{
-    s32 cachedParam = GetCachedSoundParam();
-    s32 marker = gScriptState[0];
-
-    return !(soundId == marker && (cachedParam == -1 || cachedParam == marker));
-}
+#define GetCachedSoundParam_0204d720 GetCachedSoundParam
+#define data_02055e00 gScriptState
+#define func_020262a4 IsSoundParamStale
+#include "src/arm9/audio/func_020262a4.c"

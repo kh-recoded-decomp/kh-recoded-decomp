@@ -1,12 +1,5 @@
-#include "nitro/types.h"
-
-extern const u32 data_ov072_020d9bfc[2][4];
-extern BOOL IsObjectType111(void *object);
-extern int GetClampedPaletteSlot(void);
-
-u32 GetObjectPaletteValue(void *object)
-{
-    BOOL isType = IsObjectType111(object) != 0;
-
-    return data_ov072_020d9bfc[isType][GetClampedPaletteSlot()];
-}
+#define GetClampedPaletteSlot_02073598 GetClampedPaletteSlot
+#define GetObjectPaletteValue_020d8114 GetObjectPaletteValue
+#define data_ov072_020d9bdc data_ov072_020d9bfc
+#define func_ov072_020d8100 IsObjectType111
+#include "src/ov072/unclassified_helpers/GetObjectPaletteValue_020d8114.c"

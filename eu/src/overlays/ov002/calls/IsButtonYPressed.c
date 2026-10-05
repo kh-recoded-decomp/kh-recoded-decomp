@@ -1,8 +1,2 @@
-#include "nitro/types.h"
-
-extern u16 data_02060500;
-
-BOOL IsButtonYPressed(void)
-{
-    return (data_02060500 & 0x800) != 0;
-}
+#define IsButtonYPressed_02063300 IsButtonYPressed
+#include "src/ov002/input_history/IsButtonYPressed_02063300.c"

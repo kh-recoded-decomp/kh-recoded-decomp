@@ -1,5 +1,2 @@
-/* Sub-engine BG base: 0x06200000 plus the per-BG slot in BG1CNT (no display-wide block). */
-void *G2S_GetBG1ScrPtr(void) {
-    int slot = (*(volatile unsigned short *)0x0400100a & 0x1f00) >> 8;
-    return (void *)(0x06200000 + (slot << 11));
-}
+#define G2S_GetBG1ScrPtr_02006e68 G2S_GetBG1ScrPtr
+#include "src/arm9/library_nitro_gx/func_02006e68.c"

@@ -1,20 +1,3 @@
-#include "nitro/types.h"
-
-extern int data_ov039_020bea20;
-
-BOOL IsStatePhaseActive(void)
-{
-    int base = data_ov039_020bea20;
-    int phase;
-    BOOL active;
-
-    if (base == 0) {
-        return FALSE;
-    }
-    phase = *(int *)(base + 0xc9c4);
-    active = TRUE;
-    if (phase != 1 && phase != 2) {
-        active = FALSE;
-    }
-    return active ? TRUE : FALSE;
-}
+#define IsStatePhaseActive_020bca60 IsStatePhaseActive
+#define data_ov039_020bea00 data_ov039_020bea20
+#include "src/ov039/event_state/IsStatePhaseActive_020bca60.c"

@@ -1,12 +1,2 @@
-void *func_ov027_020ba2c8(int *s, int idx) {
-    unsigned int count = s[1];
-    char *p = (char *)s[2];
-    int i;
-    if ((unsigned int)idx >= count) {
-        return 0;
-    }
-    for (i = 0; i < idx; i++) {
-        p += *(int *)p;
-    }
-    return p + 4;
-}
+#define func_ov027_020ba2a8 func_ov027_020ba2c8
+#include "src/ov027/reviewed_helpers/func_ov027_020ba2a8.c"

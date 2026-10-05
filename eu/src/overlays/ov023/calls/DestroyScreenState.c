@@ -1,33 +1,7 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad_00[8];
-    u32 slotA;
-    u32 slotB;
-    u32 freeFlag;
-    u8 pad_14[0x30];
-    u32 registration;
-    u8 pad_48[0x10];
-    u8 engineObject[1];
-} ScreenState;
-
-extern void FreeSceneListObject(u32 arg0);
-extern int Obj_Release(void *object);
-extern int ZeroHalfThenFree(void *arg0);
-extern void NNSi_FndFreeFromDefaultHeap(void *block);
-extern ScreenState *data_ov023_020b6f84;
-
-void DestroyScreenState(void)
-{
-    ScreenState *state;
-
-    state = data_ov023_020b6f84;
-    FreeSceneListObject(state->registration);
-    Obj_Release(state->engineObject);
-    ZeroHalfThenFree((void *)state->slotA);
-    ZeroHalfThenFree((void *)state->slotB);
-    if (state->freeFlag != 0) {
-        NNSi_FndFreeFromDefaultHeap((void *)state->freeFlag);
-    }
-    data_ov023_020b6f84 = (ScreenState *)0;
-}
+#define DestroyScreenState_020b6ac4 DestroyScreenState
+#define Obj_Release_0204eff8 Obj_Release
+#define ZeroHalfThenFree_0202cd78 ZeroHalfThenFree
+#define func_0202a1c4 NNSi_FndFreeFromDefaultHeap
+#define func_ov001_020715ac FreeSceneListObject
+#define g_screenState_020b6f64 data_ov023_020b6f84
+#include "src/ov023/shared_engine/DestroyScreenState_020b6ac4.c"

@@ -1,16 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad_00[0x8c];
-    u32 slotCount;
-    u8 slotModes[0x10];
-    u8 slotFlags[0x10];
-} SlotTable;
-
-extern void MI_CpuFill8(void *dest, u8 data, u32 size);
-
-void ResetSlotFlags(SlotTable *table, u32 count) {
-    table->slotCount = count;
-    MI_CpuFill8(table->slotModes, 0x1f, count);
-    MI_CpuFill8(table->slotFlags, 0, count);
-}
+#define MIi_CpuFill8_01ff8830 MI_CpuFill8
+#define ResetSlotFlags_020a1b18 ResetSlotFlags
+#include "src/ov007/shared_engine/ResetSlotFlags_020a1b18.c"

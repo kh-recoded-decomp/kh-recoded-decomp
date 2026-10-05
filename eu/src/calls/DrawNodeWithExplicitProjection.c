@@ -1,38 +1,11 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-#include "nitro/fx.h"
-
-typedef struct G3dGlobalFlags {
-    u8 pad_00[0xd4];
-    u32 flags;
-} G3dGlobalFlags;
-
-extern G3dGlobalFlags NNS_G3dGlb;
-extern MtxFx44 NNS_G3dGlb_projMtx;
-extern MtxFx43 NNS_G3dGlb_cameraMtx;
-extern VecFx32 NNS_G3dGlb_camPos;
-extern VecFx32 NNS_G3dGlb_camUp;
-extern VecFx32 NNS_G3dGlb_camTarget;
-
-extern void camera_commit_explicit_projection(void *camera, int top, int bottom, int left, int right);
-extern void func_01ffb12c(void *node);
-extern void func_01ff9b70(const VecFx32 *camPos, const VecFx32 *camUp, const VecFx32 *target, MtxFx43 *mtx);
-extern void MIi_CpuCopyFast(const void *src, void *dst, u32 size);
-
-void DrawNodeWithExplicitProjection(void *node, void *camera, int top, int bottom, int left, int right)
-{
-    VecFx32 savedPosition = NNS_G3dGlb_camPos;
-    VecFx32 savedUp = NNS_G3dGlb_camUp;
-    VecFx32 savedTarget = NNS_G3dGlb_camTarget;
-    MtxFx44 savedProjection = NNS_G3dGlb_projMtx;
-
-    camera_commit_explicit_projection(camera, top, bottom, left, right);
-    func_01ffb12c(node);
-    NNS_G3dGlb_camPos = savedPosition;
-    NNS_G3dGlb_camUp = savedUp;
-    NNS_G3dGlb_camTarget = savedTarget;
-    func_01ff9b70(&savedPosition, &savedUp, &savedTarget, &NNS_G3dGlb_cameraMtx);
-    NNS_G3dGlb.flags &= ~0xe8;
-    MIi_CpuCopyFast(&savedProjection, &NNS_G3dGlb_projMtx, sizeof(MtxFx44));
-    NNS_G3dGlb.flags &= ~0x50;
-}
+#define DrawNodeWithExplicitProjection_0202f1b0 DrawNodeWithExplicitProjection
+#define MIi_CpuCopyFast_01ff878c MIi_CpuCopyFast
+#define Scene_DrawNode_01ffb12c func_01ffb12c
+#define camera_commit_explicit_projection_0202a8c4 camera_commit_explicit_projection
+#define g_cameraMtx_0205a970 NNS_G3dGlb_cameraMtx
+#define g_cameraPosition_0205ab3c NNS_G3dGlb_camPos
+#define g_cameraTarget_0205ab54 NNS_G3dGlb_camTarget
+#define g_cameraUp_0205ab48 NNS_G3dGlb_camUp
+#define g_g3dGlobal_0205a924 NNS_G3dGlb
+#define g_projectionMtx_0205a92c NNS_G3dGlb_projMtx
+#include "src/arm9/graphics/DrawNodeWithExplicitProjection_0202f1b0.c"

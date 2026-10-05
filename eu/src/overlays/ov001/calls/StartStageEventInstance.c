@@ -1,28 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad[0x10];
-    u16 activeCount;
-} EventRecord;
-
-extern EventRecord *GetStageEventRecord(u32 id);
-extern int func_ov001_0209625c(EventRecord *record, int kind, int count, int arg0, int arg1);
-
-u32 StartStageEventInstance(u32 id, int arg0, int arg1, u16 *outHandle) {
-    EventRecord *record = GetStageEventRecord(id);
-    int handle;
-    if (record->activeCount == 0) {
-        return 0;
-    }
-    if (outHandle != NULL) {
-        *outHandle = 0;
-    }
-    handle = func_ov001_0209625c(record, 2, 1, arg0, arg1);
-    if (handle != 0) {
-        if (outHandle != NULL) {
-            *outHandle = handle;
-        }
-        return id;
-    }
-    return 0;
-}
+#define GetStageEventRecord_0209c0ec GetStageEventRecord
+#define StartStageEventInstance_0209c900 StartStageEventInstance
+#define func_ov001_02096234 func_ov001_0209625c
+#include "src/ov001/shared_engine/StartStageEventInstance_0209c900.c"

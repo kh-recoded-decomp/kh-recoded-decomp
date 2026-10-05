@@ -1,17 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct MenuSharedState {
-    s8 selectedIndex;
-} MenuSharedState;
-
-extern MenuSharedState *func_ov039_020bc650(void);
-
-int GetSharedSelectedIndex(void)
-{
-    MenuSharedState *state = func_ov039_020bc650();
-
-    if (state != NULL) {
-        return state->selectedIndex;
-    }
-    return 0;
-}
+#define GetSharedSelectedIndex_020c2c90 GetSharedSelectedIndex
+#define func_ov039_020bc630 func_ov039_020bc650
+#include "src/ov073/status_menu/GetSharedSelectedIndex_020c2c90.c"

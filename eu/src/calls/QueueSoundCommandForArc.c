@@ -1,28 +1,7 @@
-#include "nitro/types.h"
-
-extern u8 *gSoundWork;
-extern u32 QueueTypedMessageWithHandle(u16 a, u16 b, u32 c, void *arg);
-extern void func_0202c44c(void);
-extern u32 NNS_SndArcGetSeqArcSeqCount(u32 seqArcNo);
-extern void NNS_SndArcGetSeqArcIdxSymbol(u32 seqArcNo, u32 index);
-
-void QueueSoundCommandForArc(u32 seqArcNo, u32 unused2, u32 unused3, u32 commandArg)
-{
-    u32 count;
-    u32 i = 0;
-    u8 flagBuf[4];
-    u32 valueBuf;
-
-    flagBuf[0] = 0;
-    valueBuf = commandArg;
-    QueueTypedMessageWithHandle((u16)(seqArcNo & 0xffff), (u16)((seqArcNo + 0x29) & 0xffff),
-                  *(u32 *)(gSoundWork + 0xb04b4), flagBuf);
-    func_0202c44c();
-    count = NNS_SndArcGetSeqArcSeqCount(seqArcNo);
-    if (count != 0) {
-        do {
-            NNS_SndArcGetSeqArcIdxSymbol(seqArcNo, i);
-            i = i + 1;
-        } while (i < count);
-    }
-}
+#define QueueSoundCommandForArc_0204d670 QueueSoundCommandForArc
+#define func_0201ecbc NNS_SndArcGetSeqArcSeqCount
+#define func_0201ee80 NNS_SndArcGetSeqArcIdxSymbol
+#define func_0202c438 func_0202c44c
+#define func_0202cacc QueueTypedMessageWithHandle
+#define g_soundWork_0206084c gSoundWork
+#include "src/arm9/audio/QueueSoundCommandForArc_0204d670.c"

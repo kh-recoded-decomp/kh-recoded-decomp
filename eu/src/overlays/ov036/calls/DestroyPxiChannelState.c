@@ -1,18 +1,5 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad_00[4];
-    u32 handle;
-} PxiChannelState;
-
-extern PxiChannelState *data_ov036_020ca204;
-extern void *func_ov036_020c2884();
-extern void *PXI_Init_02028964();
-
-void DestroyPxiChannelState(void)
-{
-    func_ov036_020c2884(data_ov036_020ca204->handle);
-    PXI_Init_02028964();
-    data_ov036_020ca204->handle = 0xffffffff;
-    data_ov036_020ca204 = (PxiChannelState *)0;
-}
+#define DestroyPxiChannelState_020c2dbc DestroyPxiChannelState
+#define PXI_Init_02028950 PXI_Init_02028964
+#define PXI_Init_020c2864 func_ov036_020c2884
+#define g_pxiChannelState_020ca1e4 data_ov036_020ca204
+#include "src/ov036/library_nitro_pxi/DestroyPxiChannelState_020c2dbc.c"

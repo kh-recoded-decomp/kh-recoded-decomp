@@ -1,13 +1,4 @@
-#include "nitro/types.h"
-
-extern u8 *GetStageController(u16 index);
-extern u16 GetLargeRecordIndex(u8 *actor);
-
-void RegisterActorSlotInEntity(u8 *actor)
-{
-    u8 *entity = GetStageController(*(u16 *)(actor + 0x1d2));
-
-    if (entity != 0) {
-        *(u16 *)(entity + 0xc) = GetLargeRecordIndex(actor);
-    }
-}
+#define RegisterActorSlotInEntity_02097d64 RegisterActorSlotInEntity
+#define func_ov001_0209c120 GetStageController
+#define func_ov001_0209c26c GetLargeRecordIndex
+#include "src/ov001/shared_engine/RegisterActorSlotInEntity_02097d64.c"

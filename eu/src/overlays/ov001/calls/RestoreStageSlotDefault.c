@@ -1,28 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad_00[0x18de6];
-    u16 slotCount;
-} StageManager;
-
-typedef struct {
-    u8 pad_00[8];
-    s8 currentValue;
-    u8 pad_09[6];
-    s8 defaultValue;
-} StageSlot;
-
-extern StageManager *data_ov001_020a0528;
-extern StageSlot *GetStageObjectHandle(u32 id);
-
-void RestoreStageSlotDefault(u32 index)
-{
-    StageSlot *slot;
-
-    if (index < data_ov001_020a0528->slotCount) {
-        slot = GetStageObjectHandle((index + 1) & 0xffff);
-        if (slot != NULL) {
-            slot->currentValue = slot->defaultValue;
-        }
-    }
-}
+#define RestoreStageSlotDefault_0209ca7c RestoreStageSlotDefault
+#define func_ov001_0209c0c4 GetStageObjectHandle
+#define g_stageManager_020a0508 data_ov001_020a0528
+#include "src/ov001/unclassified_helpers/RestoreStageSlotDefault_0209ca7c.c"

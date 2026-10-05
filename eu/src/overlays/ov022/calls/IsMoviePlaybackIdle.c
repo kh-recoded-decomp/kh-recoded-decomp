@@ -1,12 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad_000[0x8b5];
-    u8 playing;
-} MoviePlayer;
-
-extern MoviePlayer *data_ov022_020b7da0;
-
-BOOL IsMoviePlaybackIdle(void) {
-    return data_ov022_020b7da0->playing == 0;
-}
+#define IsMoviePlaybackIdle_020a78fc IsMoviePlaybackIdle
+#define data_ov022_020b7d80 data_ov022_020b7da0
+#include "src/ov022/video_playback/IsMoviePlaybackIdle_020a78fc.c"

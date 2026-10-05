@@ -1,16 +1,4 @@
-extern unsigned int data_ov002_0206c464;
-extern unsigned int PlaySoundEffect();
-
-void UpdateMenuSelectionSound(int context)
-
-{
-  int previousSelection;
-  
-  previousSelection = *(int *)(data_ov002_0206c464 + 0xc);
-  *(unsigned int *)(data_ov002_0206c464 + 0xc) = *(unsigned int *)(context + 0xc);
-  if (*(int *)(data_ov002_0206c464 + 0xc) == previousSelection) {
-    return;
-  }
-  PlaySoundEffect(2,0);
-  return;
-}
+#define PlaySoundEffect_0204d924 PlaySoundEffect
+#define UpdateMenuSelectionSound_02065d54 UpdateMenuSelectionSound
+#define _data_ov002_0206c464 data_ov002_0206c464
+#include "src/ov002/reviewed_helpers/UpdateMenuSelectionSound_02065d54.c"

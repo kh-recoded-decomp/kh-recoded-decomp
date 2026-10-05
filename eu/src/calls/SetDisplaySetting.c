@@ -1,7 +1,2 @@
-extern int data_02060388;
-
-void SetDisplaySetting(int value) {
-    if (*(int *)((char *)&data_02060388 + 4) == 0 || value == 0) {
-        *(int *)((char *)&data_02060388 + 8) = value;
-    }
-}
+#define SetDisplaySetting_02029f28 SetDisplaySetting
+#include "src/arm9/shared_engine/SetDisplaySetting_02029f28.c"

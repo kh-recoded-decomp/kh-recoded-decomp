@@ -1,15 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct Actor {
-    u8 pad_000[0x894];
-    u8 animState[0x660];
-    u32 flags;
-} Actor;
-
-extern void BindActorAnimation(void *animState);
-
-void StartActorAnimState(Actor *actor)
-{
-    BindActorAnimation(actor->animState);
-    actor->flags = actor->flags | 0x180;
-}
+#define func_ov001_02089060 BindActorAnimation
+#define func_ov001_0208a3bc StartActorAnimState
+#include "src/ov001/actor_animation/func_ov001_0208a3bc.c"

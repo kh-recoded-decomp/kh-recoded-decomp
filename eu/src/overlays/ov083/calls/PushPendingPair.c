@@ -1,24 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct PendingPair {
-    int first;
-    int second;
-} PendingPair;
-
-typedef struct PendingQueue {
-    u8 pad_00[3];
-    u8 count;
-    u8 pad_04[0xc];
-    PendingPair entries[1];
-} PendingQueue;
-
-extern PendingQueue *func_ov039_020bc650(void);
-
-void PushPendingPair(int first, int second)
-{
-    PendingQueue *queue = func_ov039_020bc650();
-
-    queue->entries[queue->count].first = first;
-    queue->entries[queue->count].second = second;
-    queue->count++;
-}
+#define PushPendingPair_020bf614 PushPendingPair
+#define func_ov039_020bc630 func_ov039_020bc650
+#include "src/ov083/unclassified_helpers/PushPendingPair_020bf614.c"

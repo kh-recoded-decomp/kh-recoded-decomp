@@ -1,14 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad_00[0x18];
-    s64 startTick;
-} CardThreadState;
-
-extern CardThreadState data_0205fe00;
-extern s64 OS_GetTick(void);
-
-void SetCardThreadStartTick(void)
-{
-    data_0205fe00.startTick = OS_GetTick();
-}
+#define SetCardThreadStartTick_02027258 SetCardThreadStartTick
+#define func_02003fd4 OS_GetTick
+#define g_cardThreadState_0205fe00 data_0205fe00
+#include "src/arm9/shared_engine/SetCardThreadStartTick_02027258.c"

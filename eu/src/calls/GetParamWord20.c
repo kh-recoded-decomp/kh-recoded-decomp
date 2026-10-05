@@ -1,9 +1,2 @@
-#include "nitro/types.h"
-
-extern int data_020608c8;
-
-/* Reads param word 20. */
-int GetParamWord20(void)
-{
-    return *(int *)((char *)&data_020608c8 + 0x14);
-}
+#define GetParamWord20_02050650 GetParamWord20
+#include "src/arm9/shared_engine/GetParamWord20_02050650.c"

@@ -1,52 +1,9 @@
-#include "nitro/types.h"
-
-typedef struct Actor Actor;
-typedef void (*ActorStateFunc)(Actor *actor, int state);
-
-struct Actor {
-    u8 pad_0000[0x930];
-    u8 playerIndex;
-    u8 pad_0931[0x944 - 0x931];
-    int state;
-    u8 pad_0948[0x1808 - 0x948];
-    ActorStateFunc setState;
-};
-
-extern void *func_ov001_0206db78(u8 index);
-extern s32 func_ov059_020c98a0(Actor *actor);
-extern BOOL HasFlagsAt0xc(void *holder, u16 mask);
-extern BOOL func_ov021_020a7524(void *target);
-extern BOOL func_ov059_020cb930(Actor *actor);
-extern BOOL Actor_AnyAnimSlotBit0Set(Actor *actor);
-extern BOOL func_ov001_020645c8(u32 value);
-extern BOOL IsPlayerEntryFlagSet(int player, u32 id);
-extern void Actor_UpdateChargeCommand(Actor *actor, void *input);
-
-int Actor_SelectInputState(Actor *actor) {
-    void *input = func_ov001_0206db78(actor->playerIndex);
-
-    if (func_ov059_020c98a0(actor) == 0) {
-        if (HasFlagsAt0xc(input, 2)) {
-            actor->setState(actor, 2);
-            if (actor->state == 2) {
-                return 2;
-            }
-        }
-        if (HasFlagsAt0xc(input, 0x800)) {
-            if (func_ov021_020a7524(input) && func_ov059_020cb930(actor)) {
-                actor->setState(actor, 5);
-                if (actor->state == 5) {
-                    return 5;
-                }
-            } else if (Actor_AnyAnimSlotBit0Set(actor) && !func_ov001_020645c8(0x3520)
-                       && IsPlayerEntryFlagSet(actor->playerIndex, 11)) {
-                actor->setState(actor, 6);
-                if (actor->state == 6) {
-                    return 6;
-                }
-            }
-        }
-        Actor_UpdateChargeCommand(actor, input);
-    }
-    return actor->state;
-}
+#define Actor_SelectInputState_020ca22c Actor_SelectInputState
+#define Actor_TryAcquireTargetAngle_020cb910 func_ov059_020cb930
+#define HasFlagsAt0xc_020a751c HasFlagsAt0xc
+#define IsPlayerEntryFlagSet_02050014 IsPlayerEntryFlagSet
+#define func_ov021_020a7504 func_ov021_020a7524
+#define func_ov059_020c9880 func_ov059_020c98a0
+#define func_ov059_020c9b6c Actor_UpdateChargeCommand
+#define func_ov059_020cd154 Actor_AnyAnimSlotBit0Set
+#include "src/ov059/unclassified_helpers/Actor_SelectInputState_020ca22c.c"

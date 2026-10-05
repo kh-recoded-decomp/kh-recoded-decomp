@@ -1,18 +1,5 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-extern s16 data_02053580[];
-extern u32 func_ov001_0206db78(u32 index);
-extern u32 func_ov021_020a7564(u32 entry);
-extern int StepFacingToward(int entity, int angle);
-
-int ComputeFacingAndDirection(int entity, VecFx32 *out)
-{
-    int angle = StepFacingToward(entity, func_ov021_020a7564(func_ov001_0206db78(*(u8 *)(entity + 0x9b4))));
-    if (out != NULL) {
-        int index = angle >> 4;
-        out->x = -data_02053580[index];
-        out->z = -data_02053580[(0x400 - index) & 0xfff];
-    }
-    return angle;
-}
+#define ComputeFacingAndDirection_020cebbc ComputeFacingAndDirection
+#define data_0205356c data_02053580
+#define func_ov021_020a7544 func_ov021_020a7564
+#define func_ov052_020cec00 StepFacingToward
+#include "src/ov052/unclassified_helpers/ComputeFacingAndDirection_020cebbc.c"

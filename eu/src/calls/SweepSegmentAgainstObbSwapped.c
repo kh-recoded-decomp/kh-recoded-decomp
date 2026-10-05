@@ -1,21 +1,4 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-void NegateVecFx32(VecFx32 *vec);
-BOOL SweepObbAgainstSegment(void *first, void *second, void *contact, u32 flags, const VecFx32 *velocity);
-
-BOOL SweepSegmentAgainstObbSwapped(void *first, void *second, void *contact, u32 options, const VecFx32 *velocity)
-{
-    u32 flags = (options & 1) ^ 1;
-    VecFx32 copy;
-    VecFx32 reversed;
-
-    if (options & 4)
-        flags |= 8;
-    if (options & 8)
-        flags |= 4;
-    reversed = *velocity;
-    NegateVecFx32(&reversed);
-    copy = reversed;
-    return SweepObbAgainstSegment(second, first, contact, flags, &copy);
-}
+#define NegateVecFx32_0204aa40 NegateVecFx32
+#define SweepObbAgainstSegment_02047dc4 SweepObbAgainstSegment
+#define SweepSegmentAgainstObbSwapped_02041a64 SweepSegmentAgainstObbSwapped
+#include "src/arm9/spatial_queries/SweepSegmentAgainstObbSwapped_02041a64.c"

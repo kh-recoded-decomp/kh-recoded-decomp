@@ -1,12 +1,3 @@
-#include "nitro/types.h"
-
-extern int data_02060394;
-extern void *NNS_FndAllocFromExpHeapEx(void *heap, u32 size, int align);
-
-void *NNSi_FndAllocFromExpHeapEx(u32 size, void **heap)
-{
-    if (heap == 0) {
-        heap = *(void ***)((char *)&data_02060394 + 4);
-    }
-    return NNS_FndAllocFromExpHeapEx(*heap, size, 4);
-}
+#define AllocateFromExpandedHeapEx_02013134 NNS_FndAllocFromExpHeapEx
+#define NNSi_FndAllocFromExpHeapEx_0202a1e4 NNSi_FndAllocFromExpHeapEx
+#include "src/arm9/shared_engine/NNSi_FndAllocFromExpHeapEx_0202a1e4.c"

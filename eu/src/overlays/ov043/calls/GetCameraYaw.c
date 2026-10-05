@@ -1,14 +1,5 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-extern u8 *data_ov043_020bd2e0;
-extern void VEC_Subtract(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
-extern u16 FX_Atan2Idx(int vertical_component, int horizontal_component);
-
-u16 GetCameraYaw(void) {
-    VecFx32 direction;
-    VecFx32 delta;
-    VEC_Subtract((VecFx32 *)(data_ov043_020bd2e0 + 0x58), (VecFx32 *)(data_ov043_020bd2e0 + 0x64), &delta);
-    direction = delta;
-    return FX_Atan2Idx(direction.x, direction.z);
-}
+#define FixedPointAtan2_020062bc FX_Atan2Idx
+#define GetCameraYaw_020bcacc GetCameraYaw
+#define VEC_Subtract_01ff9e3c VEC_Subtract
+#define data_ov043_020bd2c0 data_ov043_020bd2e0
+#include "src/ov043/camera/GetCameraYaw_020bcacc.c"

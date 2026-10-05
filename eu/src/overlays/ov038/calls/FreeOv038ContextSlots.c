@@ -1,19 +1,4 @@
-#include "nitro/types.h"
-
-extern u32 data_ov038_020bd164;
-extern int NNSi_FndFreeFromDefaultHeap();
-
-void FreeOv038ContextSlots(void)
-{
-    u32 context;
-    s32 index;
-
-    context = data_ov038_020bd164;
-    index = 0;
-    do {
-        if (*(s32 *)(context + index * 0x10 + 0x10) != 0) {
-            NNSi_FndFreeFromDefaultHeap();
-        }
-        index = index + 1;
-    } while (index < 3);
-}
+#define FreeOv038ContextSlots_020baf7c FreeOv038ContextSlots
+#define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
+#define g_ov038Context_020bd144 data_ov038_020bd164
+#include "src/ov038/unclassified_helpers/FreeOv038ContextSlots_020baf7c.c"

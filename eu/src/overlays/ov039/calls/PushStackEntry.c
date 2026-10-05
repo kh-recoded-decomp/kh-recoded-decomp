@@ -1,10 +1,3 @@
-extern int data_ov039_020bea20;
-
-void PushStackEntry(int value)
-{
-    int base = data_ov039_020bea20;
-    int *count = (int *)(base + 0xcad4);
-    int index = (*count)++;
-
-    *(int *)(base + index * 4 + 0xcad8) = value;
-}
+#define PushStackEntry_020bc874 PushStackEntry
+#define data_ov039_020bea00 data_ov039_020bea20
+#include "src/ov039/event_state/PushStackEntry_020bc874.c"

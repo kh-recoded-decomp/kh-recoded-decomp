@@ -1,14 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u32 words[3];
-} FlagBitsBlock;
-
-extern const FlagBitsBlock data_ov015_02079f4c;
-extern u8 *data_ov015_0207e960;
-
-BOOL TestContextFlagBit(int index)
-{
-    FlagBitsBlock localBits = data_ov015_02079f4c;
-    return (data_ov015_0207e960[0xba] & localBits.words[index]) != 0;
-}
+#define TestContextFlagBit_0206f460 TestContextFlagBit
+#define g_contextFlagBits_02079f4c data_ov015_02079f4c
+#define g_context_0207e960 data_ov015_0207e960
+#include "src/ov015/wireless/TestContextFlagBit_0206f460.c"

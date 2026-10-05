@@ -1,16 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct ActorSlot ActorSlot;
-
-typedef struct {
-    u8 pad_00[0x20];
-    ActorSlot *slots[1];
-} ActorRegistry;
-
-extern void ActorSlot_Unlink(ActorSlot *slot);
-extern ActorRegistry *gActorRegistry;
-
-void ActorSlot_UnlinkByIndex(int index)
-{
-    ActorSlot_Unlink(gActorRegistry->slots[index]);
-}
+#define ActorSlot_UnlinkByIndex_02035c28 ActorSlot_UnlinkByIndex
+#define ActorSlot_Unlink_02035c48 ActorSlot_Unlink
+#define g_actorRegistry_0206083c gActorRegistry
+#include "src/arm9/shared_engine/ActorSlot_UnlinkByIndex_02035c28.c"

@@ -1,19 +1,5 @@
-#include "nitro/types.h"
-
-extern u8 *gSoundWork;
-extern void NNS_SndPlayerStopSeq(void *handle, BOOL flag);
-extern void FreeSoundHandleSlot(void *entry);
-
-void StopSoundSeqHandle(u32 handle)
-{
-    u8 *entry = gSoundWork + 0xb4518 + (handle >> 24) * 0x20;
-
-    if (*(u16 *)(entry + 0x14) == 0) {
-        return;
-    }
-    if (*(u32 *)(entry + 0x18) != (handle & 0xffffff)) {
-        return;
-    }
-    NNS_SndPlayerStopSeq(entry + 0x1c, 0);
-    FreeSoundHandleSlot(entry);
-}
+#define NNS_SndPlayerPause_0201d4d0 NNS_SndPlayerStopSeq
+#define StopSoundSeqHandle_0204dbe4 StopSoundSeqHandle
+#define func_0204ccf0 FreeSoundHandleSlot
+#define g_soundWork_0206084c gSoundWork
+#include "src/arm9/audio/StopSoundSeqHandle_0204dbe4.c"

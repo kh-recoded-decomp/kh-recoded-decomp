@@ -1,21 +1,3 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-typedef struct ContactRef {
-    void *contact;
-    s32 kind;
-} ContactRef;
-
-typedef struct ContactQuery {
-    u8 pad_00[4];
-    VecFx32 direction;
-} ContactQuery;
-
-extern BOOL IsFacingContactNormal(ContactRef *ref, const VecFx32 *direction);
-
-BOOL IsQueryFacingContact(ContactRef *ref, ContactQuery *query) {
-    if (IsFacingContactNormal(ref, &query->direction)) {
-        return TRUE;
-    }
-    return FALSE;
-}
+#define IsFacingContactNormal_020349d8 IsFacingContactNormal
+#define IsQueryFacingContact_020bca90 IsQueryFacingContact
+#include "src/ov032/unclassified_helpers/IsQueryFacingContact_020bca90.c"

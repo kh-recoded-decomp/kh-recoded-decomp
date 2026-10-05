@@ -1,30 +1,4 @@
-typedef unsigned int u32;
-typedef unsigned short u16;
-typedef int BOOL;
-
-typedef struct NNSGfdFrmTexRegionState {
-    u32 head;
-    u32 tail;
-    BOOL active;
-    const BOOL halfSize;
-    const u16 index;
-    const u16 padding;
-    const u32 baseAddress;
-} NNSGfdFrmTexRegionState;
-
-typedef struct NNSGfdFrmTexRegionOrder {
-    NNSGfdFrmTexRegionState *compressed[2];
-    NNSGfdFrmTexRegionState *normal[5];
-} NNSGfdFrmTexRegionOrder;
-
-extern NNSGfdFrmTexRegionState sFrmTexVramRegions[5];
-extern NNSGfdFrmTexRegionOrder sFrmTexVramRegionOrder;
-
-void NNSi_GfdSetTexNrmSearchArray(int first, int second, int third, int fourth, int fifth)
-{
-    sFrmTexVramRegionOrder.normal[0] = &sFrmTexVramRegions[first];
-    sFrmTexVramRegionOrder.normal[1] = &sFrmTexVramRegions[second];
-    sFrmTexVramRegionOrder.normal[2] = &sFrmTexVramRegions[third];
-    sFrmTexVramRegionOrder.normal[3] = &sFrmTexVramRegions[fourth];
-    sFrmTexVramRegionOrder.normal[4] = &sFrmTexVramRegions[fifth];
-}
+#define data_02055c5c sFrmTexVramRegionOrder
+#define data_02055c78 sFrmTexVramRegions
+#define set_frame_texture_vram_slot_order_020137b0 NNSi_GfdSetTexNrmSearchArray
+#include "src/arm9/graphics/set_frame_texture_vram_slot_order_020137b0.c"

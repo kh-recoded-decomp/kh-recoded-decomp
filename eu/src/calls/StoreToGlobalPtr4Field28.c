@@ -1,5 +1,3 @@
-extern int gTaskManager;
-
-void StoreToGlobalPtr4Field28(int arg0) {
-    *(int *)(*(int *)((char *)&gTaskManager + 4) + 0x28) = arg0;
-}
+#define StoreToGlobalPtr4Field28_0202a778 StoreToGlobalPtr4Field28
+#define data_020603c8 gTaskManager
+#include "src/arm9/shared_engine/StoreToGlobalPtr4Field28_0202a778.c"

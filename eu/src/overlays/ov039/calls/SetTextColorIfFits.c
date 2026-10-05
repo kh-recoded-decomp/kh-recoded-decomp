@@ -1,18 +1,5 @@
-#include "nitro/types.h"
-
-extern int data_ov039_020bea20;
-extern void Obj_SetField14(int *object, int value);
-extern int func_0200191c(int *object, int text, int flags);
-
-BOOL SetTextColorIfFits(int *object, int limit, int text)
-{
-    int base = data_ov039_020bea20;
-    BOOL fits;
-
-    Obj_SetField14(object, base + 0xca90);
-    fits = func_0200191c(object, text, 0) < limit;
-    if (!fits) {
-        Obj_SetField14(object, base + 0xcaa8);
-    }
-    return fits;
-}
+#define Obj_SetField14_02001490 Obj_SetField14
+#define SetTextColorIfFits_020bcd04 SetTextColorIfFits
+#define data_ov039_020bea00 data_ov039_020bea20
+#define func_02001908 func_0200191c
+#include "src/ov039/widget_layers/SetTextColorIfFits_020bcd04.c"

@@ -1,14 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad_00[0xcbc0];
-    u32 entryFlags[1];
-} MenuScene;
-
-extern MenuScene *data_ov091_020c3740;
-extern void SetPackedBit(u32 *bitWords, int bitIndex);
-
-void SetEntryFlag(int flagSet, int entryIndex)
-{
-    SetPackedBit(&data_ov091_020c3740->entryFlags[flagSet], entryIndex);
-}
+#define SetEntryFlag_020c1718 SetEntryFlag
+#define g_menuScene_020c3720 data_ov091_020c3740
+#include "src/ov091/panel_state/SetEntryFlag_020c1718.c"

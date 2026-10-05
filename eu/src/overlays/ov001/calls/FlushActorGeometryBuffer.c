@@ -1,8 +1,4 @@
-#include "nitro/types.h"
-
-extern void FlushGeometryCommandBuffer(const void *src, u32 size);
-extern u8 data_ov001_0209f194[0x154];
-
-void FlushActorGeometryBuffer(void) {
-    FlushGeometryCommandBuffer(data_ov001_0209f194, 0x154);
-}
+#define FlushActorGeometryBuffer_020864b0 FlushActorGeometryBuffer
+#define FlushGeometryCommandBuffer_01ffa204 FlushGeometryCommandBuffer
+#define data_ov001_0209f174 data_ov001_0209f194
+#include "src/ov001/library_nns_g2d/FlushActorGeometryBuffer_020864b0.c"

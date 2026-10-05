@@ -1,17 +1,4 @@
-#include "nitro/types.h"
-
-extern u32 data_ov038_020bd164;
-extern void NNS_FndInitListWithOffset0_0204f130(void *list);
-
-void InitOv038SlotPools(void)
-{
-    u32 pool;
-    s32 index;
-
-    index = 0;
-    pool = data_ov038_020bd164 + 0x40;
-    do {
-        NNS_FndInitListWithOffset0_0204f130((void *)(index * 0x6434 + pool));
-        index = index + 1;
-    } while (index < 2);
-}
+#define InitOv038SlotPools_020bb104 InitOv038SlotPools
+#define NNS_FndInitListWithOffset0_0204f11c NNS_FndInitListWithOffset0_0204f130
+#define g_ov038Context_020bd144 data_ov038_020bd164
+#include "src/ov038/unclassified_helpers/InitOv038SlotPools_020bb104.c"

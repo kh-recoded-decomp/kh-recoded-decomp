@@ -1,20 +1,4 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-typedef struct NearbyPoint {
-    u8 pad_00[0x40];
-    VecFx32 position;
-} NearbyPoint;
-
-extern VecFx32 *func_ov001_0206dc4c(int slot);
-extern fx32 VEC_Distance(const VecFx32 *a, const VecFx32 *b);
-
-BOOL IsLeadActorNearPoint(NearbyPoint *point)
-{
-    BOOL isNear = FALSE;
-
-    if (VEC_Distance(&point->position, func_ov001_0206dc4c(0)) <= 0x2000) {
-        isNear = TRUE;
-    }
-    return isNear;
-}
+#define GetActorPosition_0206dc4c func_ov001_0206dc4c
+#define IsLeadActorNearPoint_02083d98 IsLeadActorNearPoint
+#define VecFx32_Distance_01ffa0f4 VEC_Distance
+#include "src/ov001/unclassified_helpers/IsLeadActorNearPoint_02083d98.c"

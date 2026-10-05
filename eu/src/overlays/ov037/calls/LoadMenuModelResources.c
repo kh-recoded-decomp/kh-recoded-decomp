@@ -1,37 +1,12 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-typedef struct Ov037ContextView {
-    u8 pad_000[0x70];
-    u8 model[0xa4];
-    VecFx32 cameraOffset;
-    u8 pad_120[0x54];
-    u8 animation[0x80];
-} Ov037ContextView;
-
-extern Ov037ContextView *gContinueScreenContext;
-extern const VecFx32 data_ov037_020bb650;
-extern char sOv037_BaChSoTex0Z_020bb724[];
-extern char sOv037_BaChSoMdl0PZ_020bb734[];
-extern char sOv037_CntSoanmPZ_020bb748[];
-extern void *func_0202c4a0(char *path, u32 flags);
-extern void InitSharedRecordAndDispatchAlt(void *dst, char *name, void *info, int flags);
-extern BOOL InitSharedRecordThenTexture(void *dst, void *src, char *name, int flags);
-extern void selectJointAnimationBlend(void *model, u16 trackIndex, void *animation, int blend);
-extern void NNSi_FndFreeFromDefaultHeap(void *block);
-
-void LoadMenuModelResources(void)
-{
-    VecFx32 offset = data_ov037_020bb650;
-    void *archive;
-    int track;
-
-    archive = func_0202c4a0(sOv037_BaChSoTex0Z_020bb724, 0xe);
-    InitSharedRecordAndDispatchAlt(gContinueScreenContext->model, sOv037_BaChSoMdl0PZ_020bb734, archive, 0xe);
-    InitSharedRecordThenTexture(gContinueScreenContext->animation, gContinueScreenContext->model, sOv037_CntSoanmPZ_020bb748, 0xe);
-    for (track = 0; track < 5; track++) {
-        selectJointAnimationBlend(gContinueScreenContext->model, track, gContinueScreenContext->animation, 0);
-    }
-    gContinueScreenContext->cameraOffset = offset;
-    NNSi_FndFreeFromDefaultHeap(archive);
-}
+#define LoadMenuModelResources_020bafbc LoadMenuModelResources
+#define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
+#define func_0202c48c func_0202c4a0
+#define func_0202e9ec InitSharedRecordThenTexture
+#define func_0202ed3c InitSharedRecordAndDispatchAlt
+#define g_menuAnimName_020bb728 sOv037_CntSoanmPZ_020bb748
+#define g_menuArchivePath_020bb704 sOv037_BaChSoTex0Z_020bb724
+#define g_menuCameraOffset_020bb630 data_ov037_020bb650
+#define g_menuModelName_020bb714 sOv037_BaChSoMdl0PZ_020bb734
+#define g_ov037Context_020bb764 gContinueScreenContext
+#define selectJointAnimationBlend_0202f2cc selectJointAnimationBlend
+#include "src/ov037/unclassified_helpers/LoadMenuModelResources_020bafbc.c"

@@ -1,15 +1,3 @@
-#include "nitro/types.h"
-
-extern u32 PlaySoundEffect();
-
-void ToggleRootMenuOptionRight(int context)
-
-{
-  if (*(u8 *)(context + 3) != '\x01') {
-    return;
-  }
-  *(u8 *)(context + 4) = *(u8 *)(context + 4) ^ 1;
-  PlaySoundEffect(0,0);
-  *(u8 *)(context + 2) = 1;
-  return;
-}
+#define ToggleRootMenuOptionRight_020c55f4 ToggleRootMenuOptionRight
+#define func_0204d924 PlaySoundEffect
+#include "src/ov074/reviewed_helpers/ToggleRootMenuOptionRight_020c55f4.c"

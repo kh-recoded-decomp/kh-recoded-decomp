@@ -1,12 +1,3 @@
-#include "nitro/types.h"
-
-extern u32 data_0205fe0c;
-extern u32 ComputePlayerStats();
-extern u32 GetOverlaySelectionRecord();
-
-void func_0204f854(void) {
-  void *out;
-
-  out = GetOverlaySelectionRecord(0);
-  ComputePlayerStats(data_0205fe0c,out,0,1);
-}
+#define ComputePlayerStats_02050b30 ComputePlayerStats
+#define func_0204f840 func_0204f854
+#include "src/arm9/reviewed_helpers/func_0204f840.c"

@@ -1,18 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad_00[0x38];
-    void *slot7;
-} RecordManager;
-
-extern RecordManager *gRecordManager;
-extern void NNSi_FndFreeFromDefaultHeap(void *block);
-
-/* Frees and clears record slot 7. */
-void FreeRecordSlot7(void)
-{
-    RecordManager *manager = gRecordManager;
-
-    NNSi_FndFreeFromDefaultHeap(manager->slot7);
-    manager->slot7 = 0;
-}
+#define FreeRecordSlot7_02051bb8 FreeRecordSlot7
+#define func_0202a1c4 NNSi_FndFreeFromDefaultHeap
+#define g_recordManager_020613d0 gRecordManager
+#include "src/arm9/indexed_records/FreeRecordSlot7_02051bb8.c"

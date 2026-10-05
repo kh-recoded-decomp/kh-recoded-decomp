@@ -1,14 +1,2 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad_00[0xd8];
-    u32 pending : 1;
-    u32 otherFlags : 31;
-} FieldUnit;
-
-void ClearFieldUnitPending(FieldUnit *unit)
-{
-    if (unit->pending) {
-        unit->pending = 0;
-    }
-}
+#define ClearFieldUnitPending_020a57cc ClearFieldUnitPending
+#include "src/ov016/field_objects/ClearFieldUnitPending_020a57cc.c"

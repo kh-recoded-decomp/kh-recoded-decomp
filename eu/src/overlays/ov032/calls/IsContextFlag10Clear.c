@@ -1,12 +1,3 @@
-#include "nitro/types.h"
-
-extern int data_ov032_020c0080[];
-
-BOOL IsContextFlag10Clear(void)
-{
-    BOOL result = TRUE;
-    if (*(u16 *)(data_ov032_020c0080[1] + 6) & 0x10) {
-        result = FALSE;
-    }
-    return result;
-}
+#define IsContextFlag10Clear_020bb554 IsContextFlag10Clear
+#define contextData_020c0060 data_ov032_020c0080
+#include "src/ov032/object_group/IsContextFlag10Clear_020bb554.c"

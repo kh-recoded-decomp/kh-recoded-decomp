@@ -1,11 +1,2 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad_00[8];
-    u16 flags;
-} Container;
-
-BOOL Container_HasFlag3(Container *obj)
-{
-    return (obj->flags & 8) != 0;
-}
+#define func_02036184 Container_HasFlag3
+#include "src/arm9/shared_engine/func_02036184.c"

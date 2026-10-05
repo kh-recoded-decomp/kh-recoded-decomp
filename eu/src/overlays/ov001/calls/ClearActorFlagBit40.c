@@ -1,11 +1,2 @@
-#include "nitro/types.h"
-
-typedef struct Actor {
-    u8 pad_000[0xEF4];
-    u32 flags;
-} Actor;
-
-void ClearActorFlagBit40(Actor *actor)
-{
-    actor->flags = actor->flags & 0xffffffbf;
-}
+#define func_ov001_02088b48 ClearActorFlagBit40
+#include "src/ov001/actor_animation/func_ov001_02088b48.c"

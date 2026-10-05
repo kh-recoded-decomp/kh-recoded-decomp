@@ -1,22 +1,6 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-typedef struct ScriptOperand {
-    s16 type;
-    u8 payload[6];
-} ScriptOperand;
-
-extern int ScriptVm_ReadOperandInt(void *vm, ScriptOperand *operand);
-extern fx32 ScriptVm_ReadOperandFx32(void *vm, ScriptOperand *operand);
-extern void *func_ov001_0207f060(int groupIndex, int entryIndex);
-extern void SetOwnerAndTargetValue(void *object, fx32 cullRadius);
-
-int ScriptCmd_SetObjectCullRadius(void *vm, ScriptOperand *operands)
-{
-    int groupIndex = ScriptVm_ReadOperandInt(vm, operands);
-    int entryIndex = ScriptVm_ReadOperandInt(vm, operands + 1);
-    fx32 cullRadius = ScriptVm_ReadOperandFx32(vm, operands + 2);
-
-    SetOwnerAndTargetValue(func_ov001_0207f060(groupIndex, entryIndex), cullRadius);
-    return 1;
-}
+#define ScriptCmd_SetObjectCullRadius_02080744 ScriptCmd_SetObjectCullRadius
+#define ScriptVm_ReadOperandFx32_02025df8 ScriptVm_ReadOperandFx32
+#define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
+#define func_ov001_0207f038 func_ov001_0207f060
+#define func_ov001_0207fa98 SetOwnerAndTargetValue
+#include "src/ov001/scripted_actor_behavior/ScriptCmd_SetObjectCullRadius_02080744.c"

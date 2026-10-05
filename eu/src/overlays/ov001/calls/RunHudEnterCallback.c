@@ -1,28 +1,7 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad_0000[0x1340];
-    void (*enterCallback)(void);
-} HudContext;
-
-typedef struct {
-    u32 unk_00;
-    HudContext *context;
-} HudGlobals;
-
-extern HudGlobals data_ov001_020a04c4;
-
-extern void SetFieldCaptionText(s32 value);
-extern void UpdateFieldFlag18(s32 enable);
-extern void RefreshModeWindow(s32 value);
-extern void SetFieldMenuSuspended(s32 value, s32 flag);
-
-void RunHudEnterCallback(void) {
-    if (data_ov001_020a04c4.context->enterCallback != NULL) {
-        SetFieldCaptionText(-1);
-        UpdateFieldFlag18(0);
-        RefreshModeWindow(1);
-        SetFieldMenuSuspended(1, 0);
-        data_ov001_020a04c4.context->enterCallback();
-    }
-}
+#define RunHudEnterCallback_02071fb4 RunHudEnterCallback
+#define data_020a04a4 data_ov001_020a04c4
+#define func_ov001_020720cc UpdateFieldFlag18
+#define func_ov001_02072178 SetFieldCaptionText
+#define func_ov001_02077b90 SetFieldMenuSuspended
+#define func_ov001_0207a89c RefreshModeWindow
+#include "src/ov001/shared_engine/RunHudEnterCallback_02071fb4.c"

@@ -1,8 +1,2 @@
-#include "nitro/types.h"
-
-BOOL IsLessThan(int a, int b) {
-    if (a < b) {
-        return 1;
-    }
-    return 0;
-}
+#define IsLessThan_020b6d6c IsLessThan
+#include "src/ov025/leaf_research/IsLessThan_020b6d6c.c"

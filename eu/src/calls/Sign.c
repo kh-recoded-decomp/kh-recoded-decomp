@@ -1,9 +1,2 @@
-#include "nitro/types.h"
-
-s32 Sign(s32 value)
-{
-    if (value == 0) {
-        return 0;
-    }
-    return value > 0 ? 1 : -1;
-}
+#define Sign_0203f240 Sign
+#include "src/arm9/math/Sign_0203f240.c"

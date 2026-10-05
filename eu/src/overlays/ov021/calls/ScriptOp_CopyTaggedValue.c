@@ -1,17 +1,3 @@
-extern unsigned int ResolveTaggedValueRef();
-
-unsigned int ScriptOp_CopyTaggedValue(void *context,short *operands)
-
-{
-  short *source;
-  short *destination;
-  
-  source = ResolveTaggedValueRef(context,operands + 4);
-  if (*operands == 8) {
-    destination = ResolveTaggedValueRef(context,operands);
-    *destination = *source;
-    destination[1] = 0;
-    *(unsigned int *)(destination + 2) = *(unsigned int *)(source + 2);
-  }
-  return 0;
-}
+#define ResolveTaggedValueRef_020b0374 ResolveTaggedValueRef
+#define ScriptOp_CopyTaggedValue_020b3450 ScriptOp_CopyTaggedValue
+#include "src/ov021/script_ops/ScriptOp_CopyTaggedValue_020b3450.c"

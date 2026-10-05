@@ -1,16 +1,2 @@
-#include "nitro/types.h"
-
-typedef struct Counter {
-    u8 pad_00[0x3e];
-    s8 limit;
-    s8 count;
-} Counter;
-
-BOOL IsCountBelowLimit(Counter *counter)
-{
-    BOOL result = TRUE;
-    if (counter->count >= counter->limit) {
-        result = FALSE;
-    }
-    return result;
-}
+#define IsCountBelowLimit_020ae728 IsCountBelowLimit
+#include "src/ov021/unclassified_helpers/IsCountBelowLimit_020ae728.c"

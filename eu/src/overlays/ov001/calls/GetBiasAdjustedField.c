@@ -1,11 +1,3 @@
-#include "nitro/types.h"
-
-extern u32 GetBoundedEntryField();
-
-u16 GetBiasAdjustedField(void)
-{
-    u32 base;
-
-    base = GetBoundedEntryField();
-    return (u16)(*(u16 *)(base + 0x94) - 0x8000);
-}
+#define GetBiasAdjustedField_0206dc80 GetBiasAdjustedField
+#define GetBoundedEntryField_0206db5c GetBoundedEntryField
+#include "src/ov001/shared_engine/GetBiasAdjustedField_0206dc80.c"

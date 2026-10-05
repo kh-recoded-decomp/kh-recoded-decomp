@@ -1,23 +1,6 @@
-#include "nitro/types.h"
-
-extern void MIi_CpuClear32(u32 data, void *dst, u32 size);
-extern int advanceTextStringCursor(int textBytes, int *byteCursor);
-extern char *strcpy(char *dst, const char *src);
-extern void strncpy(char *dst, const char *src, int n);
-
-BOOL SplitTextAtLineBreak(char *text, char *dest)
-{
-    int cursor;
-    char lineBuffer[256];
-
-    cursor = 0;
-    MIi_CpuClear32(0, dest, 0x100);
-    if (advanceTextStringCursor((int)text, &cursor) != 0) {
-        MIi_CpuClear32(0, lineBuffer, 0x100);
-        strcpy(dest, text + cursor);
-        strncpy(lineBuffer, text, cursor + -2);
-        strcpy(text, lineBuffer);
-        return TRUE;
-    }
-    return FALSE;
-}
+#define SplitTextAtLineBreak_0208c4d8 SplitTextAtLineBreak
+#define advanceTextStringCursor_0208c474 advanceTextStringCursor
+#define func_01ff86fc MIi_CpuClear32
+#define func_02021f28 strncpy
+#define strcpy_02021e60 strcpy
+#include "src/ov001/text_rendering/SplitTextAtLineBreak_0208c4d8.c"

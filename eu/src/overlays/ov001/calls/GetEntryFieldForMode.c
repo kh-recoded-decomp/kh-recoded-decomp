@@ -1,20 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct EventContext {
-    s32 mode;
-} EventContext;
-
-extern EventContext *data_ov001_020a04bc;
-extern u32 GetBoundedEntryField(int index);
-
-u32 GetEntryFieldForMode(int index)
-{
-    switch (data_ov001_020a04bc->mode) {
-    case 0:
-    case 2:
-        return GetBoundedEntryField(index) + 0x230;
-    case 1:
-        return GetBoundedEntryField(index) + 0x230;
-    }
-    return 0;
-}
+#define GetBoundedEntryField_0206db5c GetBoundedEntryField
+#define GetEntryFieldForMode_0206e6c0 GetEntryFieldForMode
+#define g_eventContext_020a049c data_ov001_020a04bc
+#include "src/ov001/shared_engine/GetEntryFieldForMode_0206e6c0.c"

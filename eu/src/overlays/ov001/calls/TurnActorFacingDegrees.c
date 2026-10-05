@@ -1,18 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad[0x2e6];
-    u16 facing;
-    u16 targetFacing;
-} Actor;
-
-extern s64 _ll_mul(s64 a, s64 b);
-extern void func_ov001_02090f64(Actor *actor, int degrees);
-
-void TurnActorFacingDegrees(Actor *actor, int degrees, int smooth) {
-    if (smooth == 0) {
-        func_ov001_02090f64(actor, degrees);
-        return;
-    }
-    actor->targetFacing = (u16)((_ll_mul(degrees, 0xB60B60B60BLL) + 0x80000000000LL) >> 44);
-}
+#define Mul64_02023d9c _ll_mul
+#define SetActorFacingDegrees_02090f3c func_ov001_02090f64
+#define TurnActorFacingDegrees_02090fa4 TurnActorFacingDegrees
+#include "src/ov001/shared_engine/TurnActorFacingDegrees_02090fa4.c"

@@ -1,15 +1,5 @@
-#include "nitro/types.h"
-
-typedef struct MenuContext {
-    u8 pad_0000[0x69e8];
-    u8 panel[1];
-} MenuContext;
-
-extern MenuContext *data_ov002_0206c464;
-extern void func_ov027_020b90b8(void *panel, void (*callback)(void));
-extern void OnPopupElementTouched(void);
-
-void ReleaseMenuPanelCallback(void)
-{
-    func_ov027_020b90b8(data_ov002_0206c464->panel, OnPopupElementTouched);
-}
+#define ReleaseMenuPanelCallback_02065bf4 ReleaseMenuPanelCallback
+#define func_ov002_02065c54 OnPopupElementTouched
+#define func_ov027_020b9098 func_ov027_020b90b8
+#define g_context_0206c464 data_ov002_0206c464
+#include "src/ov002/panel_state/ReleaseMenuPanelCallback_02065bf4.c"

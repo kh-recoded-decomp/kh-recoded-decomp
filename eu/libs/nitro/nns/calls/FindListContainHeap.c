@@ -1,12 +1,2 @@
-/* Returns the child list that contains `heap`, or the root list when it is top level. */
-extern void *FindContainHeap(void *list, void *heap);
-extern char data_0205a8b4;
-
-void *FindListContainHeap(void *heap) {
-    char *list = &data_0205a8b4;
-    void *found = FindContainHeap(list, heap);
-    if (found != 0) {
-        list = (char *)found + 0xc;
-    }
-    return list;
-}
+#define FindContainingHeapList_02012b14 FindListContainHeap
+#include "src/arm9/library_nitro_nns/func_02012b14.c"

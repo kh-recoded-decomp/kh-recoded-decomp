@@ -1,18 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u32 entryFlags[3][64];
-    void *loadedFiles[3];
-} SceneWork;
-
-extern const char *gEnemyReportResourcePaths[];
-extern void *Msg_OpenContainerAndReadHeader(const char *name, u32 mode, BOOL allocFromEnd);
-
-void LoadMessageFiles(SceneWork *work)
-{
-    int i;
-
-    for (i = 0; i < 3; i++) {
-        work->loadedFiles[i] = Msg_OpenContainerAndReadHeader(gEnemyReportResourcePaths[i], 0xe, FALSE);
-    }
-}
+#define LoadMessageFiles_020bf3f0 LoadMessageFiles
+#define Msg_OpenContainerAndReadHeader_0202cc6c Msg_OpenContainerAndReadHeader
+#define data_ov099_020c2288 gEnemyReportResourcePaths
+#include "src/ov099/unclassified_helpers/LoadMessageFiles_020bf3f0.c"

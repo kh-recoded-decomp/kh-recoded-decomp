@@ -1,16 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct ActorSlot ActorSlot;
-
-typedef struct {
-    u8 pad_00[0x20];
-    ActorSlot *slots[1];
-} ActorRegistry;
-
-extern void ActorSlot_SetFlag8(ActorSlot *slot, BOOL enable);
-extern ActorRegistry *gActorRegistry;
-
-void ActorSlot_SetFlag8ByIndex(int index, BOOL enable)
-{
-    ActorSlot_SetFlag8(gActorRegistry->slots[index], enable);
-}
+#define ActorSlot_SetFlag8ByIndex_02036120 ActorSlot_SetFlag8ByIndex
+#define ActorSlot_SetFlag8_02036140 ActorSlot_SetFlag8
+#define g_actorRegistry_0206083c gActorRegistry
+#include "src/arm9/shared_engine/ActorSlot_SetFlag8ByIndex_02036120.c"

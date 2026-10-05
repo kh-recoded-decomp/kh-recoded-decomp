@@ -1,9 +1,3 @@
-#include "nitro/types.h"
-
-extern u32 data_ov028_020bb3a0;
-
-void SetFieldModeFlag(u8 mode)
-{
-    *(u8 *)(data_ov028_020bb3a0 + 8) = mode;
-    *(u16 *)(data_ov028_020bb3a0 + 6) = *(u16 *)(data_ov028_020bb3a0 + 6) | 0x4000;
-}
+#define SetFieldModeFlag_020bb03c SetFieldModeFlag
+#define g_fieldContext_020bb380 data_ov028_020bb3a0
+#include "src/ov028/unclassified_helpers/SetFieldModeFlag_020bb03c.c"

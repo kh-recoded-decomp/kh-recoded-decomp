@@ -1,9 +1,3 @@
-#include "libs/nns/snd/fader_internal.h"
-
-void NNSi_SndFaderSet(NNSSndFader *fader, int target, int frame)
-{
-    fader->origin = NNSi_SndFaderGet(fader);
-    fader->target = target;
-    fader->frame = frame;
-    fader->counter = 0;
-}
+#define func_020218d4 NNSi_SndFaderSet
+#define func_020218fc NNSi_SndFaderGet
+#include "src/arm9/library_nns_snd/func_020218d4.c"

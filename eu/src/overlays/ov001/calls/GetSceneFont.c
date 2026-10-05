@@ -1,13 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct SceneGlobals {
-    u32 unk_00;
-    u8 *scene;
-} SceneGlobals;
-
-extern SceneGlobals data_ov001_020a04c4;
-
-void *GetSceneFont(void)
-{
-    return data_ov001_020a04c4.scene + 0x78;
-}
+#define GetSceneFont_020711bc GetSceneFont
+#define data_ov001_020a04a4 data_ov001_020a04c4
+#include "src/ov001/shared_engine/GetSceneFont_020711bc.c"

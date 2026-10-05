@@ -1,8 +1,3 @@
-/* Free slots in the command ring: 0x100 minus the reserved ones minus the queued ones. */
-extern int SND_CountReservedCommand(void);
-extern int func_0200f354(void);
-
-int SND_CountWaitingCommand(void) {
-    int reserved = SND_CountReservedCommand();
-    return 0x100 - reserved - func_0200f354();
-}
+#define SND_CountWaitingCommand_0200f37c SND_CountWaitingCommand
+#define func_0200f340 func_0200f354
+#include "src/arm9/library_nitro_snd/SND_CountWaitingCommand_0200f37c.c"

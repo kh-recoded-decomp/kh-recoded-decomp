@@ -1,15 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad_00[9];
-    u8 locked;
-} SceneState;
-
-extern SceneState *data_ov030_020bd020;
-
-extern void func_ov042_020bd5f4(BOOL enabled);
-
-void SetSceneLock(u8 locked) {
-    data_ov030_020bd020->locked = locked;
-    func_ov042_020bd5f4(locked == 0 ? TRUE : FALSE);
-}
+#define SetSceneLock_020bb374 SetSceneLock
+#define data_ov030_020bd000 data_ov030_020bd020
+#define func_ov042_020bd5d4 func_ov042_020bd5f4
+#include "src/ov030/shared_engine/SetSceneLock_020bb374.c"

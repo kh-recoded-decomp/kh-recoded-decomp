@@ -1,29 +1,12 @@
-#include "nitro/types.h"
-
-extern void ResetDisplayHardware(void);
-extern void GX_SetBankForLCDC(int bank);
-extern void MIi_CpuClearFast(u32 data, void *dest, u32 size);
-extern void GX_DisableBankForLCDC(void);
-extern void GX_SetBankForBG(int bank);
-extern void GX_SetBankForBGExtPltt(int bank);
-extern void GX_SetBankForOBJ(int bank);
-extern void GX_SetBankForOBJExtPltt(int bank);
-extern void GX_SetGraphicsMode(int dispMode, int bgMode, int bg0As);
-extern void GX_SetBankForSubOBJ(int bank);
-
-#define REG_DISPCNT (*(vu32 *)0x04000000)
-
-void SetupOverlayVramBanks(void)
-{
-    ResetDisplayHardware();
-    GX_SetBankForLCDC(0x1ff);
-    MIi_CpuClearFast(0, (void *)0x06800000, 0xa4000);
-    GX_DisableBankForLCDC();
-    GX_SetBankForBG(8);
-    GX_SetBankForBGExtPltt(0);
-    GX_SetBankForOBJ(0x10);
-    GX_SetBankForOBJExtPltt(0);
-    REG_DISPCNT = (REG_DISPCNT & 0xffcfffef) | 0x100010;
-    GX_SetGraphicsMode(1, 0, 1);
-    GX_SetBankForSubOBJ(0x100);
-}
+#define GX_SetBankForBGExtPltt_0200868c GX_SetBankForBGExtPltt
+#define GX_SetBankForBG_02008358 GX_SetBankForBG
+#define GX_SetBankForLCDC_02008a74 GX_SetBankForLCDC
+#define GX_SetBankForOBJExtPltt_02008784 GX_SetBankForOBJExtPltt
+#define GX_SetBankForOBJ_0200855c GX_SetBankForOBJ
+#define GX_SetBankForSubOBJ_02008b34 GX_SetBankForSubOBJ
+#define GX_SetGraphicsMode_020066c4 GX_SetGraphicsMode
+#define MIi_CpuClearFast_01ff8740 MIi_CpuClearFast
+#define ResetDisplayHardware_02029bfc ResetDisplayHardware
+#define SetupOverlayVramBanks_020c2df8 SetupOverlayVramBanks
+#define func_02008ef4 GX_DisableBankForLCDC
+#include "src/ov036/unclassified_helpers/SetupOverlayVramBanks_020c2df8.c"

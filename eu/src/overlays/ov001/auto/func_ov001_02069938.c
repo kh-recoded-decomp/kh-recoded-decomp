@@ -1,4 +1,2 @@
-int func_ov001_02069938(int a, int b, int c)
-{
-    return a != b && c != 0;
-}
+#define NotEqualAndNonzero_02069938 func_ov001_02069938
+#include "src/ov001/shared_engine/NotEqualAndNonzero_02069938.c"

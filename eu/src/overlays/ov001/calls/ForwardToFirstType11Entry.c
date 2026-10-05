@@ -1,22 +1,5 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad[0x7d];
-    u8 type;
-} Entry;
-
-extern int func_ov001_0207f040(void);
-extern Entry *func_ov001_0207f050(int index);
-extern int LaunchMatchingFieldObject(Entry *entry, int arg0, int arg1);
-
-int ForwardToFirstType11Entry(int arg0, int arg1) {
-    int i;
-    int count = func_ov001_0207f040();
-    for (i = 0; i < count; i++) {
-        Entry *entry = func_ov001_0207f050(i);
-        if (entry->type == 11) {
-            return LaunchMatchingFieldObject(entry, arg0, arg1);
-        }
-    }
-    return 0;
-}
+#define ForwardToFirstType11Entry_0208279c ForwardToFirstType11Entry
+#define func_ov001_0207f018 func_ov001_0207f040
+#define func_ov001_0207f028 func_ov001_0207f050
+#define func_ov001_020827d4 LaunchMatchingFieldObject
+#include "src/ov001/unclassified_helpers/ForwardToFirstType11Entry_0208279c.c"

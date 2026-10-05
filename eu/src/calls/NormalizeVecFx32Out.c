@@ -1,11 +1,3 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-extern int NormalizeIfShort(VecFx32 *vec);
-
-void NormalizeVecFx32Out(VecFx32 *out, const VecFx32 *src)
-{
-    VecFx32 tmp = *src;
-    NormalizeIfShort(&tmp);
-    *out = tmp;
-}
+#define NormalizeVecFx32Out_020416f8 NormalizeVecFx32Out
+#define func_0204a9b4 NormalizeIfShort
+#include "src/arm9/math/NormalizeVecFx32Out_020416f8.c"

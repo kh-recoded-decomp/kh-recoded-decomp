@@ -1,20 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct ScriptObj {
-    u8 pad_00[0x628];
-    s32 flag;
-} ScriptObj;
-
-extern int ScriptVm_ReadOperandInt(void *obj, void *cmd);
-extern void PlaySoundChecked(u32 param1, u32 param2);
-
-int func_02026754(ScriptObj *obj, void *cmd)
-{
-    int a = ScriptVm_ReadOperandInt(obj, cmd);
-    int b = ScriptVm_ReadOperandInt(obj, (u8 *)cmd + 8);
-    if (obj->flag != 0) {
-        return 1;
-    }
-    PlaySoundChecked(a, b);
-    return 1;
-}
+#define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
+#define func_02026740 func_02026754
+#define func_0204d8d0 PlaySoundChecked
+#include "src/arm9/shared_engine/func_02026740.c"

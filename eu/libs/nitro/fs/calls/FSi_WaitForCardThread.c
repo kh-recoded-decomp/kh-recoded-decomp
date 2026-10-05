@@ -1,6 +1,2 @@
-extern volatile int data_027e00ac;
-
-void FSi_WaitForCardThread(int unused) {
-    (void)unused;
-    while (data_027e00ac != 0) {}
-}
+#define FSi_WaitForCardThread_01ff8140 FSi_WaitForCardThread
+#include "src/itcm/library_nitro_fs/FSi_WaitForCardThread_01ff8140.c"

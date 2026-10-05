@@ -1,15 +1,4 @@
-extern void MI_WaitDma(int channel);
-extern void GX_SetBankForBGExtPltt(int banks);
-extern int GXi_DmaId[];
-extern int gGXExtPlttLoadState[];
-
-void GX_EndLoadBGExtPltt(void)
-{
-    if (GXi_DmaId[0] != -1) {
-        MI_WaitDma(GXi_DmaId[0]);
-    }
-    GX_SetBankForBGExtPltt(gGXExtPlttLoadState[5]);
-    gGXExtPlttLoadState[5] = 0;
-    gGXExtPlttLoadState[4] = 0;
-    gGXExtPlttLoadState[3] = 0;
-}
+#define GX_EndLoadBGExtPltt_02007d50 GX_EndLoadBGExtPltt
+#define data_02055c1c GXi_DmaId
+#define data_02056f0c gGXExtPlttLoadState
+#include "src/arm9/library_nitro_gx/func_02007d50.c"

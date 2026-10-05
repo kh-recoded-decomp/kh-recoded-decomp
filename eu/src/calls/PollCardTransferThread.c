@@ -1,28 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad_000[0x2cc];
-    u32 result;
-} CardThreadBlock;
-
-typedef struct {
-    u8 pad_00[4];
-    CardThreadBlock *thread;
-} CardThreadState;
-
-extern CardThreadState data_0205fe00;
-extern BOOL OS_IsThreadTerminated(int *thread);
-extern void NNSi_FndFreeFromDefaultHeap(void *block);
-
-u32 PollCardTransferThread(void)
-{
-    u32 result = 0xffffffff;
-
-    if (data_0205fe00.thread != 0 &&
-        OS_IsThreadTerminated((int *)data_0205fe00.thread) != 0) {
-        result = data_0205fe00.thread->result;
-        NNSi_FndFreeFromDefaultHeap(data_0205fe00.thread);
-        data_0205fe00.thread = 0;
-    }
-    return result;
-}
+#define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
+#define PollCardTransferThread_02026c3c PollCardTransferThread
+#define g_cardThreadState_0205fe00 data_0205fe00
+#include "src/arm9/shared_engine/PollCardTransferThread_02026c3c.c"

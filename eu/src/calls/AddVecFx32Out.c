@@ -1,11 +1,3 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-extern void VEC_Add(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
-
-void AddVecFx32Out(VecFx32 *out, const VecFx32 *a, const VecFx32 *b)
-{
-    VecFx32 result;
-    VEC_Add(a, b, &result);
-    *out = result;
-}
+#define AddActorVectors_01ff9e0c VEC_Add
+#define AddVecFx32Out_02047f98 AddVecFx32Out
+#include "src/arm9/math/AddVecFx32Out_02047f98.c"

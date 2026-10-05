@@ -1,12 +1,2 @@
-#include "nitro/types.h"
-
-typedef struct Actor {
-    u8 pad_00[0x5a];
-    u16 flags;
-} Actor;
-
-BOOL
-IsDestroyed(Actor *self)
-{
-    return (self->flags & 0x8000) != 0;
-}
+#define IsDestroyed_020a31f8 IsDestroyed
+#include "src/ov019/unclassified_helpers/IsDestroyed_020a31f8.c"

@@ -1,11 +1,2 @@
-struct A {
-    char pad[0x40];
-    void (*fn)(void *);
-};
-
-void func_ov027_020b7f80(struct A *a, void *b, int c) {
-    if (c != 0 && a->fn != 0) {
-        a->fn(b);
-    }
-    *(int *)((char *)b + 0x14) = 0;
-}
+#define func_ov027_020b7f60 func_ov027_020b7f80
+#include "src/ov027/reviewed_helpers/func_ov027_020b7f60.c"

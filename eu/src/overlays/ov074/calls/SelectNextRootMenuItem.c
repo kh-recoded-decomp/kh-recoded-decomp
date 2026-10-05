@@ -1,24 +1,4 @@
-#include "nitro/types.h"
-
-extern u16 data_02060500;
-extern u32 PlaySoundEffect();
-
-void SelectNextRootMenuItem(u8 *context)
-
-{
-  int previousSelection;
-  
-  if (context[3] != 0) {
-    return;
-  }
-  if (++*context >= context[1]) {
-    if ((data_02060500 & 0x80) == 0) {
-      *context = context[1] - 1;
-      return;
-    }
-    *context = 0;
-  }
-  PlaySoundEffect(0,0);
-  context[2] = 1;
-  return;
-}
+#define PlaySoundEffect_0204d924 PlaySoundEffect
+#define SelectNextRootMenuItem_020c5550 SelectNextRootMenuItem
+#define _data_02060500 data_02060500
+#include "src/ov074/reviewed_helpers/SelectNextRootMenuItem_020c5550.c"

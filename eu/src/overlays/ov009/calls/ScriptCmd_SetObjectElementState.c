@@ -1,18 +1,5 @@
-#include "nitro/types.h"
-
-extern int ScriptVm_ReadOperandInt(void *vm, void *cmd);
-extern int func_ov001_0207f060(int slot, int elementIndex);
-extern void func_ov009_020a0c3c(int element, BOOL enable);
-
-int ScriptCmd_SetObjectElementState(void *vm, void *cmd)
-{
-    int slot;
-    int elementIndex;
-    BOOL enable;
-
-    slot = ScriptVm_ReadOperandInt(vm, cmd);
-    elementIndex = ScriptVm_ReadOperandInt(vm, (u8 *)cmd + 8);
-    enable = ScriptVm_ReadOperandInt(vm, (u8 *)cmd + 0x10) != 0;
-    func_ov009_020a0c3c(func_ov001_0207f060(slot, elementIndex), enable);
-    return 1;
-}
+#define PXI_Init_020a0c1c func_ov009_020a0c3c
+#define ScriptCmd_SetObjectElementState_020a05f8 ScriptCmd_SetObjectElementState
+#define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
+#define func_ov001_0207f038 func_ov001_0207f060
+#include "src/ov009/shared_engine/ScriptCmd_SetObjectElementState_020a05f8.c"

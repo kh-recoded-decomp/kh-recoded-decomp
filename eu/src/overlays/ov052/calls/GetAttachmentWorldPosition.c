@@ -1,43 +1,10 @@
-#include "nitro/types.h"
-#include "nitro/fx.h"
-
-typedef struct {
-    u8 pad0[0x7e];
-    u16 roll;
-} BodyPose;
-
-typedef struct {
-    u32 flags;
-    BodyPose pose;
-} BodyModel;
-
-extern s16 data_02053580[];
-extern u16 GetLinkedAngleOffset(int entity);
-extern VecFx32 *func_ov052_020ceb74(int entity);
-extern void GetAttachmentOffset(VecFx32 *out, int owner, int slot);
-extern void MTX_RotZ33_(MtxFx33 *mtx, fx32 sinVal, fx32 cosVal);
-extern void MTX_RotY33_(MtxFx33 *mtx, fx32 sinVal, fx32 cosVal);
-extern void MTX_MultVec33(const VecFx32 *vec, const MtxFx33 *m, VecFx32 *dst);
-extern void VEC_Add(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
-
-void GetAttachmentWorldPosition(VecFx32 *out, int entity, int slot)
-{
-    VecFx32 result;
-    VecFx32 offset;
-    VecFx32 base;
-    MtxFx33 facing;
-    MtxFx33 roll;
-    BodyPose *pose = &(*(BodyModel **)(entity + 0x230))->pose;
-    int angle = GetLinkedAngleOffset(entity);
-    int index;
-    GetAttachmentOffset(&base, entity, 2);
-    GetAttachmentOffset(&offset, entity, slot);
-    index = pose->roll >> 4;
-    MTX_RotZ33_(&roll, data_02053580[index], data_02053580[(0x400 - index) & 0xfff]);
-    index = angle >> 4;
-    MTX_RotY33_(&facing, -data_02053580[index], -data_02053580[(0x400 - index) & 0xfff]);
-    MTX_MultVec33(&offset, &roll, &offset);
-    MTX_MultVec33(&offset, &facing, &offset);
-    VEC_Add(&offset, func_ov052_020ceb74(entity), &result);
-    *out = result;
-}
+#define GetAttachmentOffset_020cbf88 GetAttachmentOffset
+#define GetAttachmentWorldPosition_020d067c GetAttachmentWorldPosition
+#define MTX_MultVec33_01ff9404 MTX_MultVec33
+#define MTX_RotY33_01ff923c MTX_RotY33_
+#define MTX_RotZ33_01ff9258 MTX_RotZ33_
+#define VEC_Add_01ff9e0c VEC_Add
+#define data_0205356c data_02053580
+#define func_ov052_020ceb54 func_ov052_020ceb74
+#define func_ov052_020ceb7c GetLinkedAngleOffset
+#include "src/ov052/unclassified_helpers/GetAttachmentWorldPosition_020d067c.c"

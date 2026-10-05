@@ -1,17 +1,3 @@
-#include "nitro/types.h"
-
-extern s8 data_ov001_020a038c[];
-
-u16 RemapExtendedSlotId(u16 slotId)
-{
-    if (slotId >= 0x46) {
-        s8 mapped = data_ov001_020a038c[(s8)(slotId - 0x46)];
-
-        if (mapped < 0) {
-            slotId -= 0x46;
-        } else {
-            slotId = mapped;
-        }
-    }
-    return slotId;
-}
+#define RemapExtendedSlotId_0209d03c RemapExtendedSlotId
+#define data_ov001_020a036c data_ov001_020a038c
+#include "src/ov001/shared_engine/RemapExtendedSlotId_0209d03c.c"

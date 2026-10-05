@@ -1,65 +1,16 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u32 words[0x3760 / 4];
-} SaveData;
-
-typedef struct {
-    u8 bytes[0x34];
-} TextLayer;
-
-typedef struct {
-    u8 pad_00[4];
-    s32 step : 8;
-    u32 stepHigh : 24;
-    u8 pad_08[0x48];
-    void *tagTracker;
-    void *panel;
-    u8 pad_58[0x7080];
-    SaveData savedGame;
-    u8 pad_A838[0xc];
-    TextLayer layers[4];
-    void *buffer;
-} SaveSelectScreen;
-
-extern SaveData *data_0205fe0c;
-extern SaveSelectScreen *data_ov080_020c5e20;
-extern void func_ov027_020b833c(void *tracker);
-extern void DestroyAllContainerElements(void *container);
-extern void ReleaseIfMarked(void *owner);
-extern void FreePointerIfSet(void **ptr);
-extern BOOL DestroyFndObjectList(TextLayer *layer);
-extern void SetupMainBgLayers_020be6c0(void);
-extern void RebuildRecordCounters(void);
-extern void *GetOverlaySelectionRecord(u32 selectionIndex);
-extern void ComputePlayerStats(SaveData *state, void *out, BOOL recompute, int scaleParam);
-extern void FillSelectionRecordFromGroup(void);
-extern void BuildSelectionEntryList(void);
-extern void SyncSelectionRecordFromSlotEntry(void);
-extern void func_0204fbb4(void);
-extern void LoadSelectionPackedValues(void);
-
-void DestroySaveSelectScreen(SaveSelectScreen *screen)
-{
-    func_ov027_020b833c(screen->tagTracker);
-    DestroyAllContainerElements(screen->panel);
-    ReleaseIfMarked(screen->panel);
-    FreePointerIfSet(&screen->buffer);
-    DestroyFndObjectList(&screen->layers[0]);
-    DestroyFndObjectList(&screen->layers[1]);
-    DestroyFndObjectList(&screen->layers[3]);
-    DestroyFndObjectList(&screen->layers[2]);
-    *(vu16 *)0x04000050 = 0;
-    SetupMainBgLayers_020be6c0();
-    data_ov080_020c5e20 = NULL;
-    if (screen->step != 9) {
-        *data_0205fe0c = screen->savedGame;
-        RebuildRecordCounters();
-        ComputePlayerStats(data_0205fe0c, GetOverlaySelectionRecord(0), TRUE, 0);
-        FillSelectionRecordFromGroup();
-        BuildSelectionEntryList();
-        SyncSelectionRecordFromSlotEntry();
-        func_0204fbb4();
-        LoadSelectionPackedValues();
-    }
-}
+#define BuildSelectionEntryList_0204f98c BuildSelectionEntryList
+#define ComputePlayerStats_02050b30 ComputePlayerStats
+#define DestroyAllContainerElements_020b900c DestroyAllContainerElements
+#define DestroyFndObjectList_020014f0 DestroyFndObjectList
+#define DestroySaveSelectScreen_020c4ad0 DestroySaveSelectScreen
+#define FillSelectionRecordFromGroup_0204f8dc FillSelectionRecordFromGroup
+#define FreePointerIfSet_020ba294 FreePointerIfSet
+#define LoadSelectionPackedValues_0205053c LoadSelectionPackedValues
+#define RebuildRecordCounters_02028e6c RebuildRecordCounters
+#define ReleaseIfMarked_020b903c ReleaseIfMarked
+#define SweepElements_020b831c func_ov027_020b833c
+#define SyncSelectionRecordFromSlotEntry_0204fabc SyncSelectionRecordFromSlotEntry
+#define data_ov080_020c5e00 data_ov080_020c5e20
+#define func_0204fba0 func_0204fbb4
+#define func_ov039_020be6a0 SetupMainBgLayers_020be6c0
+#include "src/ov080/unclassified_helpers/DestroySaveSelectScreen_020c4ad0.c"

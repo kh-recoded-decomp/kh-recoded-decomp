@@ -1,10 +1,4 @@
-#include "nitro/types.h"
-
-extern int data_02060394;
-extern void *NNSi_FndAllocFromExpHeapEx(u32 size, void **heap);
-extern void *Obj_Construct(void *object, void *descriptor, void *userData, int useTailAlloc);
-
-void *Obj_CreateWithTailWork(void *descriptor, void *userData)
-{
-    return Obj_Construct(NNSi_FndAllocFromExpHeapEx(0x2c, *(void **)&data_02060394), descriptor, userData, 1);
-}
+#define NNSi_FndAllocFromExpHeapEx_0202a1e4 NNSi_FndAllocFromExpHeapEx
+#define Obj_CreateWithTailWork_0202a47c Obj_CreateWithTailWork
+#define func_0202a4b0 Obj_Construct
+#include "src/arm9/shared_engine/Obj_CreateWithTailWork_0202a47c.c"

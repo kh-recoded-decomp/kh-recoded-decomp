@@ -1,5 +1,3 @@
-extern int func_0202edd0(int arg0);
-
-int ForwardType7RecordSpanFromOffset14(int context) {
-    return func_0202edd0(context + 0x14);
-}
+#define func_0202edbc func_0202edd0
+#define func_020359ec ForwardType7RecordSpanFromOffset14
+#include "src/arm9/shared_engine/func_020359ec.c"

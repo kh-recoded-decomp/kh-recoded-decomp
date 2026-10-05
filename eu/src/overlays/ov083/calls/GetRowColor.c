@@ -1,12 +1,2 @@
-#include "nitro/types.h"
-
-int GetRowColor(int row, int cursor)
-{
-    if (cursor < 0 || row == cursor) {
-        return 2;
-    }
-    if (row < cursor) {
-        return 0xc;
-    }
-    return 8;
-}
+#define GetRowColor_020bf5fc GetRowColor
+#include "src/ov083/unclassified_helpers/GetRowColor_020bf5fc.c"

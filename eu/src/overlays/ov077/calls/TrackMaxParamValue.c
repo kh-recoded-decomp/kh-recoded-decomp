@@ -1,19 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad[0xa];
-    u16 value;
-} ParamBlock;
-
-extern ParamBlock *GetSelectionPackedValueBlock(void);
-extern void SetParamHalf18(u16 value);
-
-void TrackMaxParamValue(u8 *work)
-{
-    ParamBlock *params = GetSelectionPackedValueBlock();
-    u16 value = params->value;
-    if (value > *(u16 *)(work + 0x14d0c)) {
-        *(u16 *)(work + 0x14d0c) = value;
-    }
-    SetParamHalf18(*(u16 *)(work + 0x14d0c));
-}
+#define SetParamHalf18_02050630 SetParamHalf18
+#define TrackMaxParamValue_020c4260 TrackMaxParamValue
+#define func_020505a8 GetSelectionPackedValueBlock
+#include "src/ov077/unclassified_helpers/TrackMaxParamValue_020c4260.c"

@@ -1,11 +1,2 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u16 startFrame;
-    u16 endFrame;
-} FrameTimer;
-
-u16 FrameTimer_GetDuration(FrameTimer *timer)
-{
-    return timer->endFrame - timer->startFrame;
-}
+#define FrameTimer_GetDuration_0206148c FrameTimer_GetDuration
+#include "src/ov004/frame_timer/FrameTimer_GetDuration_0206148c.c"

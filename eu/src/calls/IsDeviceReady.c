@@ -1,8 +1,2 @@
-extern char data_020597fc[];
-
-int IsDeviceReady(void) {
-    if (*(unsigned short *)data_020597fc != 0) {
-        return 0;
-    }
-    return 3;
-}
+#define IsDeviceReady_02011048 IsDeviceReady
+#include "src/arm9/shared_engine/IsDeviceReady_02011048.c"

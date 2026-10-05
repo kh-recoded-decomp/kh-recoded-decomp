@@ -1,7 +1,2 @@
-int PrintfDest_PutChar(int *arg0, char arg1) {
-    if (arg0[0] != 0) {
-        *(char *)arg0[1] = arg1;
-        arg0[0] -= 1;
-    }
-    arg0[1] += 1;
-}
+#define PrintfDest_PutChar_0202d620 PrintfDest_PutChar
+#include "src/arm9/shared_engine/PrintfDest_PutChar_0202d620.c"

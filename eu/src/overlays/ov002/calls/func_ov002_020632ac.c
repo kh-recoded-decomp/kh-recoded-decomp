@@ -1,5 +1,2 @@
-extern unsigned short data_02060500;
-
-int func_ov002_020632ac(void) {
-    return (data_02060500 & 1) != 0;
-}
+#define IsGlobalBit0Set_020632ac func_ov002_020632ac
+#include "src/ov002/shared_engine/IsGlobalBit0Set_020632ac.c"

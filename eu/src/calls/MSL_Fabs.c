@@ -1,7 +1,2 @@
-#include "nitro/types.h"
-
-double MSL_Fabs(double x, double y) {
-    u32 *p = (u32 *)&x;
-    p[1] &= 0x7fffffff;
-    return x;
-}
+#define Fabs_02022ac4 MSL_Fabs
+#include "src/arm9/library_msl_c/Fabs_02022ac4.c"

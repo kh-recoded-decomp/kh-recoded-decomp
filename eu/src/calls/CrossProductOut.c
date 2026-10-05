@@ -1,11 +1,3 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-extern void VEC_CrossProduct(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
-
-void CrossProductOut(VecFx32 *dst, const VecFx32 *a, const VecFx32 *b)
-{
-    VecFx32 tmp;
-    VEC_CrossProduct(a, b, &tmp);
-    *dst = tmp;
-}
+#define CrossProductOut_02048438 CrossProductOut
+#define VEC_CrossProduct_01ff9ea8 VEC_CrossProduct
+#include "src/arm9/math/CrossProductOut_02048438.c"

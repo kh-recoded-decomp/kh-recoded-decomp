@@ -1,8 +1,2 @@
-#include "nitro/fx_types.h"
-
-void Vec3SubScalar(VecFx32 *v, fx32 amount)
-{
-    v->x = v->x - amount;
-    v->y = v->y - amount;
-    v->z = v->z - amount;
-}
+#define Vec3SubScalar_0204a55c Vec3SubScalar
+#include "src/arm9/fixed_point_math/Vec3SubScalar_0204a55c.c"

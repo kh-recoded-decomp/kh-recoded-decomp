@@ -1,26 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 data[0x28];
-} Track;
-
-typedef struct {
-    u32 flags;
-    Track main;
-    Track extra[3];
-} TrackSet;
-
-extern TrackSet *data_ov001_020a04b8;
-extern void UpdateTrackedTargetMarker(Track *track, int arg);
-
-void UpdateAllTrackedProbes(int arg) {
-    TrackSet *set = data_ov001_020a04b8;
-    int i;
-    if (set == NULL || (set->flags & 1)) {
-        return;
-    }
-    UpdateTrackedTargetMarker(&set->main, arg);
-    for (i = 0; i < 3; i++) {
-        UpdateTrackedTargetMarker(&set->extra[i], arg);
-    }
-}
+#define UpdateAllTrackedProbes_0206c9fc UpdateAllTrackedProbes
+#define data_ov001_020a0498 data_ov001_020a04b8
+#define func_ov001_0206c880 UpdateTrackedTargetMarker
+#include "src/ov001/unclassified_helpers/UpdateAllTrackedProbes_0206c9fc.c"

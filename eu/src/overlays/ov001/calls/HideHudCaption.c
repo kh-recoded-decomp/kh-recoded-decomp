@@ -1,23 +1,5 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad_000[0x1c];
-    u8 recordPool[0x2e4 - 0x1c];
-    u64 captionTick;
-} HudContext;
-
-typedef struct {
-    u32 unk_00;
-    HudContext *context;
-} HudGlobals;
-
-extern HudGlobals data_ov001_020a04c4;
-
-extern void *FindActiveRecordById(void *pool, u32 recordId);
-extern void func_ov027_020b8288(void *pool, void *record);
-
-void HideHudCaption(void) {
-    HudContext *context = data_ov001_020a04c4.context;
-    func_ov027_020b8288(context->recordPool, FindActiveRecordById(context->recordPool, 6));
-    context->captionTick = 0;
-}
+#define FindActiveRecordById_020b8184 FindActiveRecordById
+#define HideHudCaption_02072c40 HideHudCaption
+#define InvokeCallback40_020b8268 func_ov027_020b8288
+#define data_020a04a4 data_ov001_020a04c4
+#include "src/ov001/shared_engine/HideHudCaption_02072c40.c"

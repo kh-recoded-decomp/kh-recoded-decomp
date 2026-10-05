@@ -1,13 +1,4 @@
-#include "nitro/types.h"
-
-extern void ReleaseResourceAndDetach(void);
-extern void NNSi_FndFreeFromDefaultHeap(s32 handle);
-
-void ReleaseHandleIfSet(s32 *handle)
-{
-    if (*handle != 0) {
-        ReleaseResourceAndDetach();
-        NNSi_FndFreeFromDefaultHeap(*handle);
-        *handle = 0;
-    }
-}
+#define ReleaseHandleIfSet_020a2720 ReleaseHandleIfSet
+#define func_0202a1c4 NNSi_FndFreeFromDefaultHeap
+#define func_0202eee8 ReleaseResourceAndDetach
+#include "src/ov016/unclassified_helpers/ReleaseHandleIfSet_020a2720.c"

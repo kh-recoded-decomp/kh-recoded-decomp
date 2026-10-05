@@ -1,14 +1,2 @@
-struct Elem {
-    char pad[0x84];
-    int a;
-    int b;
-};
-
-void SlotTable_SetEntryPair(char *base, int i, int va, int vb) {
-    if (i < 0) return;
-    {
-        struct Elem *e = (struct Elem *)(base + 4 + i * 0x8c);
-        e->a = va;
-        e->b = vb;
-    }
-}
+#define SlotTable_SetEntryPair_0204f35c SlotTable_SetEntryPair
+#include "src/arm9/shared_engine/SlotTable_SetEntryPair_0204f35c.c"

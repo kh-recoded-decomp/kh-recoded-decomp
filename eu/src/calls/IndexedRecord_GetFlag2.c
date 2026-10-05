@@ -1,3 +1,2 @@
-int IndexedRecord_GetFlag2(int recordBase, int recordIndex) {
-    return (((unsigned int *)(recordBase + recordIndex * 0x8c))[0x7c / 4] << 0x1d) >> 0x1f;
-}
+#define func_0204f3b0 IndexedRecord_GetFlag2
+#include "src/arm9/indexed_records/func_0204f3b0.c"

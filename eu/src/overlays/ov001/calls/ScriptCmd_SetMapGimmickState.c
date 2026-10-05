@@ -1,23 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct ScriptOperand {
-    s16 type;
-    s16 pad_02;
-    s32 value;
-} ScriptOperand;
-
-extern int ScriptVm_ReadOperandInt(void *context, ScriptOperand *operand);
-extern void UpdateGroupItemStats(int gimmickId, int secondaryState, int primaryState);
-
-int ScriptCmd_SetMapGimmickState(void *context, ScriptOperand *operands)
-{
-    int gimmickId;
-    int primaryState;
-    int secondaryState;
-
-    gimmickId = ScriptVm_ReadOperandInt(context, operands);
-    primaryState = ScriptVm_ReadOperandInt(context, operands + 1);
-    secondaryState = ScriptVm_ReadOperandInt(context, operands + 2);
-    UpdateGroupItemStats(gimmickId, secondaryState, primaryState);
-    return 1;
-}
+#define ScriptCmd_SetMapGimmickState_0206524c ScriptCmd_SetMapGimmickState
+#define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
+#define func_ov001_02067b1c UpdateGroupItemStats
+#include "src/ov001/shared_engine/ScriptCmd_SetMapGimmickState_0206524c.c"

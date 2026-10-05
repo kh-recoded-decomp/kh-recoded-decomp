@@ -1,17 +1,5 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-extern fx32 VEC_DotProduct(const VecFx32 *a, const VecFx32 *b);
-extern void VecFx32ScaledCopy(VecFx32 *out, const VecFx32 *v, fx32 scale);
-extern void SubtractVecFx32Into(VecFx32 *out, const VecFx32 *a, const VecFx32 *b);
-
-void ComputeVectorRejection(VecFx32 *out, const VecFx32 *a, const VecFx32 *b)
-{
-    fx32 dot = VEC_DotProduct(a, b);
-    VecFx32 result;
-    VecFx32 scaled;
-
-    VecFx32ScaledCopy(&scaled, b, dot);
-    SubtractVecFx32Into(&result, a, &scaled);
-    *out = result;
-}
+#define ComputeVectorRejection_02040aec ComputeVectorRejection
+#define VEC_DotProduct_01ff9e6c VEC_DotProduct
+#define func_0203f4a8 SubtractVecFx32Into
+#define func_0203f4fc VecFx32ScaledCopy
+#include "src/arm9/math/ComputeVectorRejection_02040aec.c"

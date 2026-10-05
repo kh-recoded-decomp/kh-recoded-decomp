@@ -1,14 +1,5 @@
-#include "nitro/types.h"
-
-typedef struct ResourceContainer ResourceContainer;
-
-extern ResourceContainer *func_ov039_020bc1ec(void);
-extern void *FindWidgetById(ResourceContainer *container, int id);
-extern void SetEntrySlotsVisible(ResourceContainer *container, void *element, BOOL visible);
-
-void SetStatusElementVisible(int elementId, BOOL visible)
-{
-    ResourceContainer *container = func_ov039_020bc1ec();
-
-    SetEntrySlotsVisible(container, FindWidgetById(container, elementId), visible);
-}
+#define SetStatusElementVisible_020beb5c SetStatusElementVisible
+#define func_ov027_020b90a4 FindWidgetById
+#define func_ov027_020b9580 SetEntrySlotsVisible
+#define func_ov039_020bc1cc func_ov039_020bc1ec
+#include "src/ov073/status_menu/SetStatusElementVisible_020beb5c.c"

@@ -1,30 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u16 unk_00;
-    u16 count;
-    void **entries;
-} RecordArray;
-
-extern void MSL_FpInitD(void);
-extern void NNSi_FndFreeFromDefaultHeap(void *block);
-
-/* Frees each entry, then the array itself. */
-void FreeRecordArrayAndReset(RecordArray *table) {
-    int i = 0;
-    if (i < table->count) {
-        do {
-            if (table->entries[i] != 0) {
-                MSL_FpInitD();
-                table->entries[i] = 0;
-            }
-            i++;
-        } while (i < table->count);
-    }
-    if (table->entries != 0) {
-        NNSi_FndFreeFromDefaultHeap(table->entries);
-        table->entries = 0;
-    }
-    table->count = 0;
-    table->unk_00 = 0;
-}
+#define FreeRecordArrayAndReset_02035178 FreeRecordArrayAndReset
+#define _fp_init_0203056c MSL_FpInitD
+#define func_0202a1c4 NNSi_FndFreeFromDefaultHeap
+#include "src/arm9/indexed_records/FreeRecordArrayAndReset_02035178.c"

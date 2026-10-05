@@ -1,19 +1,2 @@
-#include "nitro/types.h"
-
-typedef struct LinkedEntry {
-    u8 kind;
-    u8 flags;
-    u16 value;
-    struct LinkedEntry *next;
-} LinkedEntry;
-
-LinkedEntry *FindLinkedEntryTail(LinkedEntry *entry)
-{
-    if (entry == NULL) {
-        return NULL;
-    }
-    while (entry->next != NULL && !(entry->flags & 2)) {
-        entry = entry->next;
-    }
-    return entry;
-}
+#define FindLinkedEntryTail_020a4ee0 FindLinkedEntryTail
+#include "src/ov017/field_objects/FindLinkedEntryTail_020a4ee0.c"

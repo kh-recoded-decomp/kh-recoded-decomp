@@ -1,17 +1,2 @@
-typedef struct NNSFndList {
-    void *head;
-    void *tail;
-    unsigned short count;
-    unsigned short offset;
-} NNSFndList;
-
-void SetFirstObject(NNSFndList *list, void *object)
-{
-    char *link = (char *)object + list->offset;
-
-    *(void **)(link + 4) = 0;
-    *(void **)link = 0;
-    list->head = object;
-    list->tail = object;
-    list->count++;
-}
+#define SetFirstIntrusiveListObject_020128a4 SetFirstObject
+#include "src/arm9/library_nitro_nns/func_020128a4.c"

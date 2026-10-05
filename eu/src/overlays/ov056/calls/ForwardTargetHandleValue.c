@@ -1,13 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct EventTarget {
-    u8 pad_00[0x84];
-    void *handle;
-} EventTarget;
-
-extern void func_ov021_020aafe4(void *handle, u32 value);
-
-void ForwardTargetHandleValue(u32 unused, EventTarget *target, u32 value)
-{
-    func_ov021_020aafe4(target->handle, value);
-}
+#define ForwardTargetHandleValue_020d3b30 ForwardTargetHandleValue
+#define func_ov021_020aafc4 func_ov021_020aafe4
+#include "src/ov056/unclassified_helpers/ForwardTargetHandleValue_020d3b30.c"

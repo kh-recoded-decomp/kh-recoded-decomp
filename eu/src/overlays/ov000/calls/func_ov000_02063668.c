@@ -1,8 +1,3 @@
-extern int data_ov000_02063a04;
-
-void func_ov000_02063668(int arg0) {
-    int p = *(int *)&data_ov000_02063a04;
-    if (p != 0) {
-        *(int *)(p + 4) = arg0;
-    }
-}
+#define World_SetField4_02063668 func_ov000_02063668
+#define data_02063a04 data_ov000_02063a04
+#include "src/ov000/shared_engine/World_SetField4_02063668.c"

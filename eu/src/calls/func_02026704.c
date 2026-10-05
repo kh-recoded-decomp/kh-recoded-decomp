@@ -1,12 +1,5 @@
-extern int IsCachedSeqPlaying(void);
-extern void SetSelectionIfChanged(unsigned a);
-extern unsigned char gScriptState;
-
-int func_02026704(int param_1, int param_2) {
-    if (IsCachedSeqPlaying() == 0) {
-        gScriptState = param_2;
-        SetSelectionIfChanged(param_2 & 0xff);
-        return 1;
-    }
-    return 0;
-}
+#define data_02055e00 gScriptState
+#define func_020266f0 func_02026704
+#define func_0204d73c SetSelectionIfChanged
+#define func_0204da48 IsCachedSeqPlaying
+#include "src/arm9/core_small/func_020266f0.c"

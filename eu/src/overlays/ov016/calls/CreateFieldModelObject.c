@@ -1,15 +1,6 @@
-#include "nitro/types.h"
-
-extern void *NNS_FndAllocFromDefaultExpHeapEx(u32 size, int align);
-extern void func_0202edb0(void *object, u16 *counter, int arg, int count);
-extern void RebindAnimTracks(void *anim, int blendIndex, int frame);
-extern void Flags16_SetBit1(void *object);
-
-void CreateFieldModelObject(void **out, u16 *counter, int arg)
-{
-    *out = NNS_FndAllocFromDefaultExpHeapEx(0x104, 4);
-    func_0202edb0(*out, counter, arg, 4);
-    RebindAnimTracks(*out, 0, 0);
-    Flags16_SetBit1(*out);
-    (*counter)++;
-}
+#define CreateFieldModelObject_020a26e8 CreateFieldModelObject
+#define NNSi_FndAllocFromDefaultHeapEx_0202a19c NNS_FndAllocFromDefaultExpHeapEx
+#define RebindAnimTracks_020809d0 RebindAnimTracks
+#define func_0202ed9c func_0202edb0
+#define func_0202f4d8 Flags16_SetBit1
+#include "src/ov016/field_objects/CreateFieldModelObject_020a26e8.c"

@@ -1,13 +1,4 @@
-#include "nitro/types.h"
-
-extern u8 *GetStageEventRecord(u16 index);
-extern u16 GetLargeRecordIndex(u8 *actor);
-
-void RegisterActorSlotInRecord(u8 *actor)
-{
-    u8 *record = GetStageEventRecord(*(u16 *)(actor + 0x1d2));
-
-    if (record != 0) {
-        *(u16 *)(record + 0x10) = GetLargeRecordIndex(actor);
-    }
-}
+#define RegisterActorSlotInRecord_02091cf8 RegisterActorSlotInRecord
+#define func_ov001_0209c0ec GetStageEventRecord
+#define func_ov001_0209c26c GetLargeRecordIndex
+#include "src/ov001/shared_engine/RegisterActorSlotInRecord_02091cf8.c"

@@ -1,20 +1,6 @@
-extern int func_ov039_020bcdb8(void *method, int arg);
-extern int data_ov039_020beaa4[];
-struct ov008_disp { char *obj; int _pad; };
-extern struct ov008_disp data_ov039_020be950[];
-extern struct ov008_disp data_ov039_020be8f0[];
-
-int func_ov039_020bd4dc(int param_1, int param_2) {
-    int r = 0;
-    void *m1 = *(void **)(data_ov039_020be950[data_ov039_020beaa4[0]].obj + 0x38);
-    if (param_1 != 0) {
-        r = func_ov039_020bcdb8(m1, param_1);
-    }
-    if (r == 0) {
-        void *m2 = *(void **)(data_ov039_020be8f0[data_ov039_020beaa4[1]].obj + 0x34);
-        if (param_2 != 0) {
-            r = func_ov039_020bcdb8(m2, param_2);
-        }
-    }
-    return r;
-}
+#define data_020be8d0 data_ov039_020be8f0
+#define data_020be930 data_ov039_020be950
+#define data_020bea84 data_ov039_020beaa4
+#define dispatch_input_handler_pair_38_020bd4bc func_ov039_020bd4dc
+#define func_020bcd98 func_ov039_020bcdb8
+#include "src/ov039/input/dispatch_input_handler_pair_38_020bd4bc.c"

@@ -1,4 +1,2 @@
-int GetElementAddress(int base, int index)
-{
-    return (base + 0x461c) + index * 0x68;
-}
+#define GetElementAddress_0204e620 GetElementAddress
+#include "src/arm9/shared_engine/GetElementAddress_0204e620.c"

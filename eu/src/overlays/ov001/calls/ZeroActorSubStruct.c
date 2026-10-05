@@ -1,8 +1,3 @@
-#include "nitro/types.h"
-
-extern void MI_CpuFill8(void *dst, u32 value, u32 size);
-
-void ZeroActorSubStruct(void *block)
-{
-    MI_CpuFill8(block, 0, 0x30);
-}
+#define ZeroActorSubStruct_02092790 ZeroActorSubStruct
+#define func_01ff8830 MI_CpuFill8
+#include "src/ov001/object_creation/ZeroActorSubStruct_02092790.c"

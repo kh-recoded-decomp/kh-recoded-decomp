@@ -1,14 +1,5 @@
-#include "nitro/types.h"
-
-extern u8 data_ov035_020bc4d8[8];
-extern u8 data_ov035_020bc4e0[8];
-extern int NNS_GfdRegisterNewVramTransferTask(int type, int destOffset, void *source, int size);
-
-void QueueColorUpload(BOOL useHighColors) {
-    u8 *colors = data_ov035_020bc4e0;
-
-    if (!useHighColors) {
-        colors = data_ov035_020bc4d8;
-    }
-    NNS_GfdRegisterNewVramTransferTask(0xf, 0x186, colors, 8);
-}
+#define GFXi_EnqueueCommand_02014090 NNS_GfdRegisterNewVramTransferTask
+#define QueueColorUpload_020bb7d8 QueueColorUpload
+#define data_ov035_020bc4b8 data_ov035_020bc4d8
+#define data_ov035_020bc4c0 data_ov035_020bc4e0
+#include "src/ov035/unclassified_helpers/QueueColorUpload_020bb7d8.c"

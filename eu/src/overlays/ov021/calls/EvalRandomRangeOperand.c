@@ -1,14 +1,3 @@
-#include "nitro/types.h"
-
-extern u32 random_next_scaled();
-
-/* Evaluates a random-range script operand. */
-u32 EvalRandomRangeOperand(s32 result, s32 range)
-{
-    s32 rolled;
-
-    *(u16 *)(result + 0x2c) = 1;
-    rolled = random_next_scaled((*(s32 *)(range + 0xc) - *(s32 *)(range + 4)) + 1);
-    *(s32 *)(result + 0x30) = *(s32 *)(range + 4) + rolled;
-    return 0;
-}
+#define EvalRandomRangeOperand_020b38f8 EvalRandomRangeOperand
+#define random_next_scaled_0202aa04 random_next_scaled
+#include "src/ov021/leaf_research/EvalRandomRangeOperand_020b38f8.c"

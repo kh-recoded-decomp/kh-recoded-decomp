@@ -1,8 +1,2 @@
-#include "nitro/types.h"
-
-extern u32 func_ov002_02066fe0(void);
-
-void SetContextConfigFlag1ac8(u32 value) {
-    u32 base = func_ov002_02066fe0();
-    *(u32 *)(base + 0x1ac8) = (*(u32 *)(base + 0x1ac8) & 0xfbffffff) | ((value & 1) << 0x1a);
-}
+#define SetContextConfigFlag1ac8_0206746c SetContextConfigFlag1ac8
+#include "src/ov002/unclassified_helpers/SetContextConfigFlag1ac8_0206746c.c"

@@ -1,6 +1,3 @@
-#include "libs/nitro/os/os_timer_internal.h"
-
-void OSi_SetTimerReserved(int timerNum)
-{
-    OSi_TimerReserved |= (u16)(1 << timerNum);
-}
+#define ReserveTimer_02003ea4 OSi_SetTimerReserved
+#define data_02056e90 OSi_TimerReserved
+#include "src/arm9/nitro_os/ReserveTimer_02003ea4.c"

@@ -1,16 +1,5 @@
-#include "nitro/types.h"
-
-extern void *GetStageActor(s16 groupId);
-extern void *GetLinkedStageActor(void *node);
-extern void ClearWalkerStepState(void *node);
-
-void ClearActorGroupFlagsAndNotify(u8 *actor)
-{
-    void *node;
-
-    *(u8 *)(actor + 0x1b4) = 0;
-    *(u8 *)(actor + 0x1b5) = 0;
-    for (node = GetStageActor(*(s16 *)(actor + 0x10)); node != 0; node = GetLinkedStageActor(node)) {
-        ClearWalkerStepState(node);
-    }
-}
+#define ClearActorGroupFlagsAndNotify_02092ad0 ClearActorGroupFlagsAndNotify
+#define func_ov001_02091964 ClearWalkerStepState
+#define func_ov001_0209c040 GetStageActor
+#define func_ov001_0209c2f0 GetLinkedStageActor
+#include "src/ov001/shared_engine/ClearActorGroupFlagsAndNotify_02092ad0.c"

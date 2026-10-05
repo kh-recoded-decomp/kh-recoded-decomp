@@ -1,7 +1,2 @@
-#include "nitro/types.h"
-
-void SetActorCallbackPair(u8 *actor, u32 callback, u32 userData)
-{
-    *(u32 *)(actor + 0x1c0) = callback;
-    *(u32 *)(actor + 0x1c4) = userData;
-}
+#define SetActorCallbackPair_020958d0 SetActorCallbackPair
+#include "src/ov001/shared_engine/SetActorCallbackPair_020958d0.c"

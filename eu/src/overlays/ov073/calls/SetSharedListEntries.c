@@ -1,20 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct MenuSharedState {
-    s8 selectedIndex;
-    u8 pad_01[0xb44 - 1];
-    u8 list[4];
-} MenuSharedState;
-
-extern MenuSharedState *func_ov039_020bc650(void);
-extern void SetListWidgetEntries(void *list, const u16 *ids);
-
-void SetSharedListEntries(const u16 *ids)
-{
-    MenuSharedState *state = func_ov039_020bc650();
-    void *list = state->list;
-
-    if (state->selectedIndex == 4) {
-        SetListWidgetEntries(list, ids);
-    }
-}
+#define SetListWidgetEntries_020c3ffc SetListWidgetEntries
+#define SetSharedListEntries_020c2c24 SetSharedListEntries
+#define func_ov039_020bc630 func_ov039_020bc650
+#include "src/ov073/status_menu/SetSharedListEntries_020c2c24.c"

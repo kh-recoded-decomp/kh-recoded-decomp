@@ -1,13 +1,4 @@
-#include "nitro/types.h"
-
-extern u8 data_ov035_020bc434[][5];
-extern void SetTilePixel4bpp_020bb8a4(void *target, void *layout, u16 column, int glyph);
-
-void DrawMovieDigitRow(void *target, void *layout, int row)
-{
-    int i;
-
-    for (i = 0; i < 5; i++) {
-        SetTilePixel4bpp_020bb8a4(target, layout, i + 2, data_ov035_020bc434[row][i]);
-    }
-}
+#define DrawMovieDigitRow_020bb8c4 DrawMovieDigitRow
+#define data_ov035_020bc414 data_ov035_020bc434
+#define func_ov035_020bb884 SetTilePixel4bpp_020bb8a4
+#include "src/ov035/unclassified_helpers/DrawMovieDigitRow_020bb8c4.c"

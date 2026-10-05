@@ -1,8 +1,3 @@
-#include "nitro/types.h"
-
-extern int data_ov032_020c0080[];
-
-u32 IsContextFlag20Set(void)
-{
-    return *(u16 *)(data_ov032_020c0080[1] + 6) & 0x20;
-}
+#define IsContextFlag20Set_020bb56c IsContextFlag20Set
+#define contextData_020c0060 data_ov032_020c0080
+#include "src/ov032/object_group/IsContextFlag20Set_020bb56c.c"

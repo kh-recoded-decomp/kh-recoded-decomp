@@ -1,22 +1,3 @@
-extern unsigned int NNSi_FndAllocFromDefaultHeap();
-
-void AllocateObjectSlotArrays(int *container,int count)
-
-{
-  int index;
-  
-  container[1] = count;
-  index = NNSi_FndAllocFromDefaultHeap(count * 0x2c);
-  *container = index;
-  index = NNSi_FndAllocFromDefaultHeap(count);
-  container[2] = index;
-  index = 0;
-  if (0 < container[1]) {
-    do {
-      *(unsigned int *)(*container + index * 0x2c) = 0;
-      *(signed char *)(container[2] + index) = -1;
-      index = index + 1;
-    } while (index < container[1]);
-  }
-  return;
-}
+#define AllocateObjectSlotArrays_020a90a4 AllocateObjectSlotArrays
+#define func_0202a178 NNSi_FndAllocFromDefaultHeap
+#include "src/ov021/object_state/AllocateObjectSlotArrays_020a90a4.c"

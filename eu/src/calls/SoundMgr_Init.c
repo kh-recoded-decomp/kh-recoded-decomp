@@ -1,65 +1,16 @@
-#include "nitro/types.h"
-
-typedef struct SoundSlot {
-    struct SoundSlot *next;
-    struct SoundSlot *prev;
-    u8 pad_08[0xe];
-    s16 id;
-    u8 pad_18[4];
-    u8 queue[4];
-} SoundSlot;
-
-extern u8 *gSoundWork;
-extern char sMain_SdSoundDataSdat_02056134[];
-
-extern void SoundMgr_WaitLoaderIfState1(void);
-extern void NNS_SndPlayerStopSeqAll(int arg);
-extern void NNS_SndInit(void);
-extern void NNS_SndArcInit(void *archive, const char *path, void *heap, BOOL loadSymbols);
-extern void NNS_SndArcSetLoadBlockSize(u32 size);
-extern void NNS_SndArcPlayerSetup(void *heap);
-extern void Word_Clear(void *list);
-extern void MI_CpuFill8(void *dest, u32 value, u32 size);
-extern void NNS_SndArcStrmInit(int priority, void *heap);
-extern void Word_ClearB(void *handle);
-extern BOOL NNS_SndArcLoadBank(int seqNo, void *heap);
-extern int NNS_SndHeapSaveState(void *heap);
-
-void SoundMgr_Init(const char *path, BOOL loadSymbols)
-{
-    u8 *base = gSoundWork;
-    SoundSlot *slots;
-    int i;
-
-    if (path == NULL) {
-        path = sMain_SdSoundDataSdat_02056134;
-    }
-    SoundMgr_WaitLoaderIfState1();
-    NNS_SndPlayerStopSeqAll(0);
-    NNS_SndInit();
-    NNS_SndArcInit(base, path, *(void **)(base + 0xb04b4), loadSymbols);
-    NNS_SndArcSetLoadBlockSize(0x400);
-    NNS_SndArcPlayerSetup(*(void **)(base + 0xb04b4));
-    Word_Clear(base + 0xb44d8);
-    Word_Clear(base + 0xb44dc);
-    MI_CpuFill8(base + 0xb4518, 0, sizeof(SoundSlot) * 16);
-    slots = (SoundSlot *)(base + 0xb4518);
-    for (i = 0; i < 16; i++) {
-        *(SoundSlot **)(base + i * 0x20 + 0xb4518) = i < 15 ? &slots[i + 1] : NULL;
-        *(SoundSlot **)(base + i * 0x20 + 0xb451c) = i > 0 ? &slots[i - 1] : NULL;
-        *(s16 *)(base + i * 0x20 + 0xb452e) = i + 6;
-        Word_Clear(base + 0xb4534 + i * 0x20);
-    }
-    *(SoundSlot **)(base + 0xb4718) = (SoundSlot *)(base + 0xb4518);
-    NNS_SndArcStrmInit(10, *(void **)(base + 0xb44bc));
-    Word_ClearB(base + 0xb44c0);
-    Word_ClearB(base + 0xb44c4);
-    *(s16 *)(base + 0xb472a) = -1;
-    *(s16 *)(base + 0xb472c) = -1;
-    *(s16 *)(base + 0xb4736) = -1;
-    *(u16 *)(base + 0xb4734) = 0;
-    NNS_SndArcLoadBank(0x29, *(void **)(base + 0xb04b4));
-    *(int *)(base + 0xa8) = NNS_SndHeapSaveState(*(void **)(gSoundWork + 0xb04b4));
-    *(int *)(base + 0xa0) = *(int *)(base + 0xa8);
-    *(int *)(base + 0xa4) = -1;
-}
+#define NNS_SndArcLoadSeq_0201f378 NNS_SndArcLoadBank
+#define NNS_SndArcStrmInit_02020074 NNS_SndArcStrmInit
+#define OpenSoundArchive_0201e780 NNS_SndArcInit
+#define SndInit_0201d214 NNS_SndInit
+#define SoundMgr_Init_0204d4ac SoundMgr_Init
+#define SoundMgr_WaitLoaderIfState1_0204d6c0 SoundMgr_WaitLoaderIfState1
+#define data_02056134 sMain_SdSoundDataSdat_02056134
+#define data_0206084c gSoundWork
+#define func_01ff8830 MI_CpuFill8
+#define func_0201d5a0 NNS_SndPlayerStopSeqAll
+#define func_0201d698 Word_Clear
+#define func_0201ee6c NNS_SndArcSetLoadBlockSize
+#define func_0201f154 NNS_SndHeapSaveState
+#define func_0201fc9c NNS_SndArcPlayerSetup
+#define func_020202fc Word_ClearB
+#include "src/arm9/audio/SoundMgr_Init_0204d4ac.c"

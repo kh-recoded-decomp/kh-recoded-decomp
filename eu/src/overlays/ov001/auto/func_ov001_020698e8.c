@@ -1,6 +1,2 @@
-int func_ov001_020698e8(int arg0, int arg1, int arg2) {
-    if (arg0 == arg1 && arg2 != 0) {
-        return 1;
-    }
-    return 0;
-}
+#define CompareEqualAndReady_020698e8 func_ov001_020698e8
+#include "src/ov001/shared_engine/CompareEqualAndReady_020698e8.c"

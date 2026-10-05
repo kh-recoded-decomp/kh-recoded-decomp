@@ -1,6 +1,2 @@
-#include "nitro/types.h"
-
-void Obj_SetWord58(u32 *obj, u32 value)
-{
-    obj[0x16] = value;
-}
+#define Obj_SetWord58_0203ac20 Obj_SetWord58
+#include "src/arm9/shared_engine/Obj_SetWord58_0203ac20.c"

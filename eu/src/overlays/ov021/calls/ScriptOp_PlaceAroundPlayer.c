@@ -1,100 +1,17 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-#include "nitro/fx.h"
-
-typedef struct {
-    u8 pad_000[0x11c];
-    u8 surface[0x170];
-    u16 stageBits : 11;
-    u16 stageEntry : 3;
-    u16 stageUnused : 2;
-    u8 pad_28e[0x32];
-    VecFx32 position;
-} PlayerActor;
-
-typedef struct {
-    u8 pad_00[8];
-    PlayerActor *player;
-} FieldContext;
-
-typedef struct {
-    u8 pad_00[0x34];
-    VecFx32 position;
-} ScriptObject;
-
-typedef struct {
-    u8 pad_00[8];
-    s16 distance[4];
-    s16 angle[4];
-    s16 flags[4];
-} PlaceCommand;
-
-extern FieldContext data_ov021_020b56c4;
-extern const s16 data_02053580[];
-
-extern s16 *ResolveTaggedValueRef(ScriptObject *obj, s16 *value);
-extern s32 TaggedValueToFixed(s16 *tagged);
-extern s32 TaggedValueToInt(s16 *tagged);
-extern void NotifySceneObjectHandler(PlayerActor *actor, VecFx32 *out);
-extern u32 GetStageEntryParam(u32 id);
-extern fx32 Surface_GetKindValue(void *surface);
-extern void VEC_Subtract(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
-extern void func_01ffaff4(const VecFx32 *src, VecFx32 *dst);
-extern void GetStageEntryPosition(u32 id, VecFx32 *outPosition);
-extern void MTX_Identity33_(MtxFx33 *mtx);
-extern void MTX_RotY33_(MtxFx33 *mtx, fx32 sinVal, fx32 cosVal);
-extern void MTX_MultVec33(const VecFx32 *vec, const MtxFx33 *m, VecFx32 *dst);
-extern void VEC_MultAdd(fx32 scale, const VecFx32 *v, const VecFx32 *add, VecFx32 *dst);
-extern BOOL func_ov021_020afd48(VecFx32 *from, VecFx32 *to, VecFx32 *hitNormal, VecFx32 *hitPoint, int mode);
-
-s32 ScriptOp_PlaceAroundPlayer(ScriptObject *obj, PlaceCommand *cmd)
-{
-    s16 *distanceRef = ResolveTaggedValueRef(obj, cmd->distance);
-    s16 *angleRef = ResolveTaggedValueRef(obj, cmd->angle);
-    s16 *flagsRef = ResolveTaggedValueRef(obj, cmd->flags);
-    PlayerActor *player = data_ov021_020b56c4.player;
-    fx32 distance;
-    fx32 degrees;
-    u32 flags;
-    int angle;
-    fx32 minDistance;
-    VecFx32 base;
-    VecFx32 direction;
-    VecFx32 hitNormal;
-    VecFx32 hitPoint;
-    MtxFx33 rotation;
-
-    NotifySceneObjectHandler(player, &base);
-    distance = TaggedValueToFixed(distanceRef);
-    degrees = TaggedValueToFixed(angleRef);
-    flags = TaggedValueToInt(flagsRef);
-    angle = (u16)(((s64)degrees * 0xb60b60b60bLL + 0x80000000000LL) >> 44);
-    minDistance = GetStageEntryParam(player->stageEntry) + Surface_GetKindValue(player->surface);
-    if (distance < minDistance) {
-        distance = minDistance;
-    }
-    if (flags & 1) {
-        VEC_Subtract(&player->position, &base, &direction);
-        direction.y = 0;
-        func_01ffaff4(&direction, &direction);
-    } else {
-        GetStageEntryPosition(player->stageEntry, &direction);
-    }
-    if (flags & 2) {
-        flags |= 4;
-    }
-    if (flags & 4) {
-        MTX_Identity33_(&rotation);
-        MTX_RotY33_(&rotation, data_02053580[angle >> 4], data_02053580[(0x400 - (angle >> 4)) & 0xfff]);
-        MTX_MultVec33(&direction, &rotation, &direction);
-        VEC_MultAdd(distance, &direction, &base, &obj->position);
-        if (func_ov021_020afd48(&player->position, &obj->position, &hitNormal, &hitPoint, 1)) {
-            if (flags & 2) {
-                obj->position = player->position;
-            } else {
-                obj->position = hitPoint;
-            }
-        }
-    }
-    return 0;
-}
+#define GetStageEntryParam_02099218 GetStageEntryParam
+#define GetStageEntryPosition_020992ac GetStageEntryPosition
+#define MTX_MultVec33_01ff9404 MTX_MultVec33
+#define MTX_RotY33_01ff923c MTX_RotY33_
+#define ResolveTaggedValueRef_020b0374 ResolveTaggedValueRef
+#define ScriptOp_PlaceAroundPlayer_020b1850 ScriptOp_PlaceAroundPlayer
+#define Surface_GetKindValue_02034c24 Surface_GetKindValue
+#define TaggedValueToFixed_020b03b0 TaggedValueToFixed
+#define TaggedValueToInt_020b0398 TaggedValueToInt
+#define VEC_MultAdd_01ffa09c VEC_MultAdd
+#define VEC_Subtract_01ff9e3c VEC_Subtract
+#define data_0205356c data_02053580
+#define data_ov021_020b56a4 data_ov021_020b56c4
+#define func_01ff90ec MTX_Identity33_
+#define func_ov001_02091c34 NotifySceneObjectHandler
+#define func_ov021_020afd28 func_ov021_020afd48
+#include "src/ov021/script_ops/ScriptOp_PlaceAroundPlayer_020b1850.c"

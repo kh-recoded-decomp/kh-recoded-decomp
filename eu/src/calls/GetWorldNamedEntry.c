@@ -1,27 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct NamedEntry {
-    char name[0xc];
-    u32 value;
-    void *data;
-} NamedEntry;
-
-typedef struct CollisionWorld {
-    u8 pad_00[0x820];
-    NamedEntry *namedEntries;
-} CollisionWorld;
-
-extern CollisionWorld *gActorRegistry;
-
-NamedEntry *GetWorldNamedEntry(int index)
-{
-    BOOL invalid = TRUE;
-    NamedEntry *entries = gActorRegistry->namedEntries;
-    if (entries != NULL && index != 0xff) {
-        invalid = FALSE;
-    }
-    if (invalid) {
-        return NULL;
-    }
-    return &entries[index];
-}
+#define GetWorldNamedEntry_02036334 GetWorldNamedEntry
+#define g_collisionWorld_0206083c gActorRegistry
+#include "src/arm9/spatial_queries/GetWorldNamedEntry_02036334.c"

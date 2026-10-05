@@ -1,22 +1,4 @@
-#include "nitro/types.h"
-
-typedef float (*NewtonFunc)(float x, float target, float arg);
-typedef float (*NewtonDeriv)(float x, float target);
-
-extern double MSL_Fabs(double x);
-extern float func_0202354c(double x);
-
-float NewtonSolveFloat(float x, float target, float arg, NewtonFunc func, NewtonDeriv deriv, float epsilon)
-{
-    u16 iter;
-    float next;
-
-    for (iter = 0; iter < 1000; iter++) {
-        next = x - func(x, arg, target) / deriv(x, target);
-        if (func_0202354c(MSL_Fabs(next - x)) < epsilon) {
-            return next;
-        }
-        x = next;
-    }
-    return next;
-}
+#define DoubleToFloat_02023538 func_0202354c
+#define Fabs_02022ac4 MSL_Fabs
+#define NewtonSolveFloat_0204c0e0 NewtonSolveFloat
+#include "src/arm9/math/NewtonSolveFloat_0204c0e0.c"

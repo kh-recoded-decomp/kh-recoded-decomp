@@ -1,9 +1,3 @@
-#include "libs/nitro/mi/mi_dma_internal.h"
-
-void MI_StopAllDma(void)
-{
-    MI_StopDma(0);
-    MI_StopDma(1);
-    MI_StopDma(2);
-    MI_StopDma(3);
-}
+#define ResetFourChannels_020052dc MI_StopAllDma
+#define func_02005274 MI_StopDma
+#include "src/arm9/unclassified_helpers/ResetFourChannels_020052dc.c"

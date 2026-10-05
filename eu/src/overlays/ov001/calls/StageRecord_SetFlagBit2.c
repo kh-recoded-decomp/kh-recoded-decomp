@@ -1,18 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct StageRecord {
-    u8 pad_00[0x4];
-    u16 flags;
-} StageRecord;
-
-extern int data_ov001_0209f2e8;
-extern StageRecord *GetStageEventRecord(u32 id);
-
-void StageRecord_SetFlagBit2(u32 id)
-{
-    StageRecord *record;
-
-    if (id != 0 && data_ov001_0209f2e8 != -1 && (record = GetStageEventRecord(id)) != NULL) {
-        record->flags |= 4;
-    }
-}
+#define GetStageEventRecord_0209c0ec GetStageEventRecord
+#define StageRecord_SetFlagBit2_02087d24 StageRecord_SetFlagBit2
+#define g_stageEventsState_0209f2c8 data_ov001_0209f2e8
+#include "src/ov001/shared_engine/StageRecord_SetFlagBit2_02087d24.c"

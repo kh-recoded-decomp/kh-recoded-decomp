@@ -1,12 +1,4 @@
-#include "nitro/types.h"
-
-extern unsigned int gSoundWork;
-extern unsigned int NNS_SndArcStrmStartPrepared();
-
-unsigned int func_0204de64(int streamIndex) {
-  if (*(unsigned char *)(gSoundWork + streamIndex * 8 + 0xb44ce) == '\x02') {
-    NNS_SndArcStrmStartPrepared((void *)(gSoundWork + 0xb44c0 + streamIndex * 4));
-    return 1;
-  }
-  return 0;
-}
+#define NNS_SndArcStrmStartPrepared_0202029c NNS_SndArcStrmStartPrepared
+#define data_0206084c gSoundWork
+#define func_0204de50 func_0204de64
+#include "src/arm9/reviewed_helpers/func_0204de50.c"

@@ -1,11 +1,5 @@
-/* Releases the texture-palette banks and records both the released mask and the base
- * address the slot table maps it to. */
-extern int GX_ResetBankForTexPltt(void);
-extern int gGXTextureLoadState[];
-extern unsigned short data_02052908[];
-
-void GX_BeginLoadTexPltt(void) {
-    int mask = GX_ResetBankForTexPltt();
-    gGXTextureLoadState[3] = mask;
-    gGXTextureLoadState[2] = data_02052908[mask >> 4] << 12;
-}
+#define GX_BeginLoadTexPltt_020081e0 GX_BeginLoadTexPltt
+#define data_020528f4 data_02052908
+#define data_02056f28 gGXTextureLoadState
+#define func_02008d38 GX_ResetBankForTexPltt
+#include "src/arm9/library_nitro_gx/func_020081e0.c"

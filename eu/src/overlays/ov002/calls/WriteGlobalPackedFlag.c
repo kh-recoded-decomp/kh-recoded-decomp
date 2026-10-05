@@ -1,15 +1,4 @@
-#include "nitro/types.h"
-
-#define GLOBAL_FLAG_BANK_BASE 0xf50
-
-extern void SetGlobalPackedBit(int bitIndex);
-extern void ClearGlobalPackedBit(int bitIndex);
-
-void WriteGlobalPackedFlag(int flagIndex, BOOL enabled)
-{
-    if (enabled) {
-        SetGlobalPackedBit(flagIndex + GLOBAL_FLAG_BANK_BASE);
-        return;
-    }
-    ClearGlobalPackedBit(flagIndex + GLOBAL_FLAG_BANK_BASE);
-}
+#define ClearGlobalPackedBit_02027334 ClearGlobalPackedBit
+#define SetGlobalPackedBit_02027320 SetGlobalPackedBit
+#define WriteGlobalPackedFlag_020679dc WriteGlobalPackedFlag
+#include "src/ov002/unclassified_helpers/WriteGlobalPackedFlag_020679dc.c"

@@ -1,12 +1,3 @@
-#include "nitro/types.h"
-
-extern int data_02060394;
-extern void NNS_FndFreeToExpHeap(void *heap, void *block);
-
-void NNSi_FndFreeToExpHeap(void *block, void **heap)
-{
-    if (heap == 0) {
-        heap = *(void ***)((char *)&data_02060394 + 4);
-    }
-    NNS_FndFreeToExpHeap(*heap, block);
-}
+#define FND_FreeExpandedHeapBlock_020132c4 NNS_FndFreeToExpHeap
+#define NNSi_FndFreeToExpHeap_0202a240 NNSi_FndFreeToExpHeap
+#include "src/arm9/shared_engine/NNSi_FndFreeToExpHeap_0202a240.c"

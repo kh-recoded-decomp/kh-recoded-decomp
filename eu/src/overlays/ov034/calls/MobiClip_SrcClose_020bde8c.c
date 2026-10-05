@@ -1,10 +1,4 @@
-#include "nitro/types.h"
-
-extern int data_ov034_020be940;
-extern void *PXI_Init_0202a64c(int handle);
-
-/* Releases the MobiClip source handle and invalidates it */
-void MobiClip_SrcClose_020bde8c(void) {
-    PXI_Init_0202a64c(data_ov034_020be940);
-    data_ov034_020be940 = -1;
-}
+#define MobiClip_SrcClose_020bde6c MobiClip_SrcClose_020bde8c
+#define PXI_Init_0202a638 PXI_Init_0202a64c
+#define data_020be920 data_ov034_020be940
+#include "src/ov034/shared_engine/MobiClip_SrcClose_020bde6c.c"

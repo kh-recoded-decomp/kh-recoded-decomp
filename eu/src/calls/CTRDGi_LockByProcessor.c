@@ -1,21 +1,6 @@
-#include "nitro/types.h"
-#include "nitro/ctrdg.h"
-
-extern OSIntrMode OS_DisableInterrupts(void);
-extern OSIntrMode OS_RestoreInterrupts(OSIntrMode state);
-extern u16 OS_ReadOwnerOfLockWord(void *lockWord);
-extern s32 OS_TryLockCartridge(u16 lockID);
-extern void WaitByLoop(s32 count);
-
-void CTRDGi_LockByProcessor(u16 lockID, CTRDGLockByProc *info)
-{
-    while (1) {
-        info->irq = OS_DisableInterrupts();
-        if (((info->locked = OS_ReadOwnerOfLockWord((void *)0x02ffffe8) & 0x40) != 0)
-            || (OS_TryLockCartridge(lockID) == 0)) {
-            break;
-        }
-        OS_RestoreInterrupts(info->irq);
-        WaitByLoop(1);
-    }
-}
+#define CTRDGi_LockByProcessor_02012464 CTRDGi_LockByProcessor
+#define OS_DisableInterrupts_02004938 OS_DisableInterrupts
+#define OS_ReadOwnerOfLockWord_02002398 OS_ReadOwnerOfLockWord
+#define OS_RestoreInterrupts_0200494c OS_RestoreInterrupts
+#define OS_TryLockCartridge_020022e0 OS_TryLockCartridge
+#include "src/arm9/library_nitro_ctrdg/CTRDGi_LockByProcessor_02012464.c"

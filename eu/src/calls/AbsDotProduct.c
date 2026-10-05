@@ -1,13 +1,3 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-extern fx32 VEC_DotProduct(const VecFx32 *a, const VecFx32 *b);
-
-fx32 AbsDotProduct(const VecFx32 *a, const VecFx32 *b)
-{
-    fx32 dot = VEC_DotProduct(a, b);
-    if (dot < 0) {
-        dot = -dot;
-    }
-    return dot;
-}
+#define AbsDotProduct_0204a96c AbsDotProduct
+#define VEC_DotProduct_01ff9e6c VEC_DotProduct
+#include "src/arm9/math/AbsDotProduct_0204a96c.c"

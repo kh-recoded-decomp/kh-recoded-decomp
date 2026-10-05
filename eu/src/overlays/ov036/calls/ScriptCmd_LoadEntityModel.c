@@ -1,23 +1,5 @@
-#include "nitro/types.h"
-
-typedef struct ScriptOperand {
-    s16 type;
-    s16 pad_02;
-    s32 value;
-} ScriptOperand;
-
-extern int ScriptVm_ReadOperandInt(void *context, ScriptOperand *operand);
-extern BOOL LoadSceneModelSlot(int modelId, int depthSlot);
-extern void SetPanelEnabled(u32 value);
-
-BOOL ScriptCmd_LoadEntityModel(void *context, ScriptOperand *operands)
-{
-    int modelId = ScriptVm_ReadOperandInt(context, &operands[0]);
-    int depthSlot = ScriptVm_ReadOperandInt(context, &operands[1]);
-
-    if (LoadSceneModelSlot(modelId, depthSlot)) {
-        SetPanelEnabled(1);
-        return TRUE;
-    }
-    return FALSE;
-}
+#define ScriptCmd_LoadEntityModel_020be50c ScriptCmd_LoadEntityModel
+#define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
+#define func_02025438 SetPanelEnabled
+#define func_ov036_020bd1a0 LoadSceneModelSlot
+#include "src/ov036/shared_engine/ScriptCmd_LoadEntityModel_020be50c.c"

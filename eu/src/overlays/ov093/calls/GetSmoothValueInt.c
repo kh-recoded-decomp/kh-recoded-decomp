@@ -1,19 +1,3 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-typedef struct {
-    fx32 target;
-    fx32 current;
-} SmoothValue;
-
-typedef struct {
-    u8 pad_0000[0xd1e4];
-    SmoothValue smoothValues[2];
-} SceneWork;
-
-extern SceneWork *data_ov093_020c5100;
-
-int GetSmoothValueInt(int index)
-{
-    return data_ov093_020c5100->smoothValues[index].current >> 12;
-}
+#define GetSmoothValueInt_020c21d8 GetSmoothValueInt
+#define g_sceneWork_020c50e0 data_ov093_020c5100
+#include "src/ov093/unclassified_helpers/GetSmoothValueInt_020c21d8.c"

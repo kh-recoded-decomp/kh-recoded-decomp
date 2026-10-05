@@ -1,23 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct MenuPage {
-    u8 pad_00[4];
-    int kind;
-} MenuPage;
-
-extern int SpawnPairedEntryUnit(MenuPage *page, int arg1, int arg2);
-extern int SpawnSlotTrackerUnit(MenuPage *page, int arg1, int arg2);
-
-int DispatchPageHandler(MenuPage *page, int arg1, int arg2)
-{
-    int result = 0;
-    switch (page->kind) {
-    case 0:
-        result = SpawnPairedEntryUnit(page, arg1, arg2);
-        break;
-    case 4:
-        result = SpawnSlotTrackerUnit(page, arg1, arg2);
-        break;
-    }
-    return result;
-}
+#define DispatchPageHandler_020d3a94 DispatchPageHandler
+#define func_ov021_020ae938 SpawnPairedEntryUnit
+#define func_ov021_020aefb0 SpawnSlotTrackerUnit
+#include "src/ov055/unclassified_helpers/DispatchPageHandler_020d3a94.c"

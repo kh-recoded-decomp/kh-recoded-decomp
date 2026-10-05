@@ -1,33 +1,7 @@
-#include "nitro/types.h"
-
-extern int data_ov039_020bea20;
-extern int func_ov039_020bd644(void);
-extern void RuntimeState_SetMode(int phase);
-extern void InitStreamBufferPair(int blockCount, u32 flag);
-extern void SetMenuButtonsEnabled(BOOL enable);
-
-void StartSubScene(int sceneId, int fadeFrames, BOOL markPending)
-{
-    int active = func_ov039_020bd644();
-    int base = data_ov039_020bea20;
-
-    *(int *)(base + 0xc9bc) = sceneId;
-    if (active == -1) {
-        RuntimeState_SetMode(1);
-        *(int *)(base + 0xca0c) = 1;
-        return;
-    }
-    if (fadeFrames < 0) {
-        fadeFrames = 100;
-    }
-    *(u8 *)(base + 0xca44) = 1;
-    RuntimeState_SetMode(4);
-    InitStreamBufferPair(-16, fadeFrames);
-    SetMenuButtonsEnabled(FALSE);
-    if (markPending) {
-        *(int *)(base + 0xca0c) = 1;
-    }
-    *(u16 *)(base + 0xca70) = 0;
-    *(u16 *)(base + 0xca6e) = 0;
-    *(u16 *)(base + 0xca6c) = 0;
-}
+#define InitStreamBufferPair_020bacbc InitStreamBufferPair
+#define SetMenuButtonsEnabled_020bae84 SetMenuButtonsEnabled
+#define StartSubScene_020bbf78 StartSubScene
+#define data_ov039_020bea00 data_ov039_020bea20
+#define func_ov039_020baae0 RuntimeState_SetMode
+#define func_ov039_020bd624 func_ov039_020bd644
+#include "src/ov039/event_state/StartSubScene_020bbf78.c"

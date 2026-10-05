@@ -1,19 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad_00[0xc];
-    void *buffer;
-    u8 pad_10[0x8c];
-    u32 pad_9c_bits : 31;
-    u32 ownsBuffer : 1;
-} BufferHolder;
-
-extern void FreeFromStageHeap(void *block);
-
-void FreeOwnedBuffer(BufferHolder *holder)
-{
-    if (holder->ownsBuffer && holder->buffer != NULL) {
-        FreeFromStageHeap(holder->buffer);
-    }
-    holder->buffer = NULL;
-}
+#define FreeFromStageHeap_0209cf68 FreeFromStageHeap
+#define FreeOwnedBuffer_020b4b60 FreeOwnedBuffer
+#include "src/ov021/unclassified_helpers/FreeOwnedBuffer_020b4b60.c"

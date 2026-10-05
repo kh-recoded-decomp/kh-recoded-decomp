@@ -1,31 +1,8 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad_000[0x8fc];
-    BOOL subMenuOpen;
-    u8 pad_900[4];
-    BOOL popupOpen;
-} Ov089Menu;
-
-extern void ClosePopupWindow(Ov089Menu *menu, int soundIndex);
-extern void SetPopupConfirmMode(Ov089Menu *menu, int arg);
-extern void WriteSessionPackedBits(int key, int bits, int value);
-extern void SetPendingScene(int scene, int arg);
-extern void StartSubScene(int a, int b, int c);
-extern BOOL PlaySoundEffect(int seqArcNo, int index);
-
-void HandlePopupBackInput(Ov089Menu *menu)
-{
-    if (menu->popupOpen) {
-        ClosePopupWindow(menu, 3);
-        return;
-    }
-    if (menu->subMenuOpen) {
-        SetPopupConfirmMode(menu, 0);
-    } else {
-        WriteSessionPackedBits(0x3703, 3, 0);
-        SetPendingScene(2, 0);
-        StartSubScene(-1, -1, 1);
-    }
-    PlaySoundEffect(0, 3);
-}
+#define ClosePopupWindow_020bfb8c ClosePopupWindow
+#define HandlePopupBackInput_020c0068 HandlePopupBackInput
+#define PlaySoundEffect_0204d924 PlaySoundEffect
+#define SetPendingScene_02025644 SetPendingScene
+#define WriteSessionPackedBits_0206459c WriteSessionPackedBits
+#define func_ov039_020bbf78 StartSubScene
+#define func_ov089_020bfdac SetPopupConfirmMode
+#include "src/ov089/panel_state/HandlePopupBackInput_020c0068.c"

@@ -1,22 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct ListNode {
-    u8 pad_00[4];
-    struct ListNode *next;
-} ListNode;
-
-typedef struct {
-    u8 pad_00[0x60];
-    ListNode *listHead;
-} OverlayObject;
-
-extern void AppendFieldLinkedEntry(ListNode **head);
-extern void DispatchListHeadCallback(OverlayObject *obj);
-
-void ProcessListHeadIfEmpty(OverlayObject *obj)
-{
-    AppendFieldLinkedEntry(&obj->listHead);
-    if (obj->listHead->next == obj->listHead) {
-        DispatchListHeadCallback(obj);
-    }
-}
+#define ProcessListHeadIfEmpty_020a3fec ProcessListHeadIfEmpty
+#define func_ov017_020a4100 DispatchListHeadCallback
+#define func_ov017_020a4f20 AppendFieldLinkedEntry
+#include "src/ov017/unclassified_helpers/ProcessListHeadIfEmpty_020a3fec.c"

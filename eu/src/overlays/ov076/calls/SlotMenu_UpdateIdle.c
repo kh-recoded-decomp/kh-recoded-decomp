@@ -1,20 +1,6 @@
-#include "nitro/types.h"
-
-typedef struct SlotMenu {
-    u8 pad_00000[0x11f18];
-    s32 scrollY;
-} SlotMenu;
-
-extern void *func_ov039_020bc1dc(void);
-extern void SlotMenu_SetBgScrollMode(SlotMenu *menu, int layerMode, s32 scrollY);
-extern void UpdateWidgetRootAndFireAlarm(void *session, int mode);
-extern void func_ov076_020c7554(SlotMenu *menu, int layerMode);
-
-void SlotMenu_UpdateIdle(SlotMenu *menu)
-{
-    void *session = func_ov039_020bc1dc();
-
-    SlotMenu_SetBgScrollMode(menu, 0, menu->scrollY);
-    UpdateWidgetRootAndFireAlarm(session, 0);
-    func_ov076_020c7554(menu, 0);
-}
+#define SlotMenu_UpdateIdle_020c4e7c SlotMenu_UpdateIdle
+#define func_ov027_020b8c94 UpdateWidgetRootAndFireAlarm
+#define func_ov039_020bc1bc func_ov039_020bc1dc
+#define func_ov076_020c74e4 SlotMenu_SetBgScrollMode
+#define func_ov076_020c7534 func_ov076_020c7554
+#include "src/ov076/unclassified_helpers/SlotMenu_UpdateIdle_020c4e7c.c"

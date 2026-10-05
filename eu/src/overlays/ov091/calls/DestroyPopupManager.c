@@ -1,18 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad_00[0x1c];
-    void *fileData;
-} PopupManager;
-
-extern PopupManager *data_ov091_020c375c;
-extern void NNSi_FndFreeFromDefaultHeap(void *block);
-
-void DestroyPopupManager(void)
-{
-    if (data_ov091_020c375c->fileData != NULL) {
-        NNSi_FndFreeFromDefaultHeap(data_ov091_020c375c->fileData);
-        data_ov091_020c375c->fileData = NULL;
-    }
-    data_ov091_020c375c = NULL;
-}
+#define DestroyPopupManager_020c1910 DestroyPopupManager
+#define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
+#define g_popupManager_020c373c data_ov091_020c375c
+#include "src/ov091/panel_state/DestroyPopupManager_020c1910.c"

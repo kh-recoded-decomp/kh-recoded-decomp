@@ -1,15 +1,6 @@
-#include "nitro/types.h"
-
-extern void *FindLoadedElementById(void *list, u16 id);
-extern void PositionListRecords(void *container, void *list, s16 position);
-extern void SetTagRecordArmed(void *tracker, void *record, BOOL arm);
-extern void func_ov027_020b847c(void *tracker, void *record);
-
-void ArmTagAtPosition(void *tracker, int id, int position)
-{
-    void *record = FindLoadedElementById(tracker, id);
-
-    PositionListRecords(tracker, record, position);
-    SetTagRecordArmed(tracker, record, TRUE);
-    func_ov027_020b847c(tracker, record);
-}
+#define ArmTagAtPosition_020bf218 ArmTagAtPosition
+#define FindLoadedElementById_020b8390 FindLoadedElementById
+#define PositionListRecords_020b8498 PositionListRecords
+#define SetTagRecordArmed_020b83e8 SetTagRecordArmed
+#define func_ov027_020b845c func_ov027_020b847c
+#include "src/ov045/record_management/ArmTagAtPosition_020bf218.c"

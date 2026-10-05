@@ -1,11 +1,4 @@
-#include "nitro/types.h"
-
-extern BOOL PlaySoundEffect(int seqArcNo, int index);
-extern void func_ov077_020c6cb0(void *work, BOOL restoreElements);
-
-int CancelAndCloseMenu(void *work)
-{
-    PlaySoundEffect(1, 3);
-    func_ov077_020c6cb0(work, TRUE);
-    return 3;
-}
+#define CancelAndCloseMenu_020c79a4 CancelAndCloseMenu
+#define PlaySoundEffect_0204d924 PlaySoundEffect
+#define func_ov077_020c6c90 func_ov077_020c6cb0
+#include "src/ov077/unclassified_helpers/CancelAndCloseMenu_020c79a4.c"

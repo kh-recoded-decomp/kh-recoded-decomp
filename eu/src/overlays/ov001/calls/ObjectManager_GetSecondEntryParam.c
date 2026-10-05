@@ -1,25 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct ParamEntry {
-    u16 first;
-    u16 second;
-} ParamEntry;
-
-typedef struct ParamTable {
-    u32 header;
-    ParamEntry entries[1];
-} ParamTable;
-
-typedef struct ObjectManager {
-    u8 pad_000[0xc];
-    u32 baseAddress;
-    ParamTable *paramTable;
-} ObjectManager;
-
-extern ObjectManager *data_ov001_020a04f8;
-
-u32 ObjectManager_GetSecondEntryParam(int index)
-{
-    return 0x80000000 | (((data_ov001_020a04f8->baseAddress + 0x8000) & 0xfffffc) << 7) |
-           (data_ov001_020a04f8->paramTable->entries[index].second & 0x1ff);
-}
+#define ObjectManager_GetSecondEntryParam_0207ee48 ObjectManager_GetSecondEntryParam
+#define g_objectManager_020a04d8 data_ov001_020a04f8
+#include "src/ov001/unclassified_helpers/ObjectManager_GetSecondEntryParam_0207ee48.c"

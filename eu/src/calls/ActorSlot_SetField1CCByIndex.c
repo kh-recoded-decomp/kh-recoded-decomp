@@ -1,16 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct ActorSlot ActorSlot;
-
-typedef struct {
-    u8 pad_00[0x20];
-    ActorSlot *slots[1];
-} ActorRegistry;
-
-extern ActorSlot *Obj_SetWord1CC(ActorSlot *slot, u32 value);
-extern ActorRegistry *gActorRegistry;
-
-ActorSlot *ActorSlot_SetField1CCByIndex(int index, u32 value)
-{
-    return Obj_SetWord1CC(gActorRegistry->slots[index], value);
-}
+#define ActorSlot_SetField1CCByIndex_02036a98 ActorSlot_SetField1CCByIndex
+#define func_02036ab8 Obj_SetWord1CC
+#define g_actorRegistry_0206083c gActorRegistry
+#include "src/arm9/shared_engine/ActorSlot_SetField1CCByIndex_02036a98.c"

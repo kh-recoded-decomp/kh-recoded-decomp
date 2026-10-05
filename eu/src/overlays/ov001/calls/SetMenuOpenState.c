@@ -1,50 +1,6 @@
-﻿#include "nitro/types.h"
-
-typedef union {
-    u32 raw;
-    struct {
-        u32 active : 1;
-        u32 visible : 1;
-        u32 unk_2 : 3;
-        u32 highlighted : 1;
-        u32 unk_6 : 26;
-    } bits;
-} MenuFlags;
-
-typedef struct {
-    MenuFlags flags;
-    u8 listState[0xc8];
-    u8 cursorState[8];
-} MenuState;
-
-extern MenuState *data_ov001_020a04a4;
-extern void ResumeOrResetRequest(int resume);
-extern void PlaySoundEffect(int channel, int soundId);
-extern void func_ov001_0206b930(void *listState);
-extern void func_ov001_0206c038(void *cursorState);
-
-void SetMenuOpenState(int open, BOOL withSound)
-{
-    MenuState *menu = data_ov001_020a04a4;
-
-    ResumeOrResetRequest(open);
-    if (open) {
-        if (withSound) {
-            menu->flags.bits.visible = TRUE;
-            menu->flags.bits.active = FALSE;
-            menu->flags.bits.highlighted = FALSE;
-            PlaySoundEffect(0, 5);
-            return;
-        }
-        menu->flags.raw |= 1;
-        return;
-    }
-    if ((menu->flags.raw & 2) && withSound) {
-        PlaySoundEffect(0, 6);
-    }
-    menu->flags.bits.visible = FALSE;
-    menu->flags.bits.active = FALSE;
-    menu->flags.bits.highlighted = FALSE;
-    func_ov001_0206b930(menu->listState);
-    func_ov001_0206c038(menu->cursorState);
-}
+#define ClearWords124And128_0206c038 func_ov001_0206c038
+#define PlaySoundEffect_0204d924 PlaySoundEffect
+#define ResumeOrResetRequest_0206bbe4 ResumeOrResetRequest
+#define SetMenuOpenState_0206bb74 SetMenuOpenState
+#define data_ov001_020a0484 data_ov001_020a04a4
+#include "src/ov001/shared_engine/SetMenuOpenState_0206bb74.c"

@@ -1,22 +1,8 @@
-#include "nitro/types.h"
-
-typedef struct Ov081State Ov081State;
-
-extern Ov081State *data_ov081_020c5da0;
-extern void SkipToUnlockedListEntry(Ov081State *state, BOOL forward);
-extern void func_ov081_020c5660(void *obj);
-extern void func_ov081_020c4e08(void *obj);
-extern void *func_ov081_020c544c(void);
-extern void DrawListTitle(Ov081State *state, void *list);
-
-void AdvanceListAndRedraw(void)
-{
-    Ov081State *state;
-
-    SkipToUnlockedListEntry(data_ov081_020c5da0, TRUE);
-    func_ov081_020c5660(data_ov081_020c5da0);
-    state = data_ov081_020c5da0;
-    DrawListTitle(state, func_ov081_020c544c());
-    func_ov081_020c5660(state);
-    func_ov081_020c4e08(data_ov081_020c5da0);
-}
+#define AdvanceListAndRedraw_020c4db4 AdvanceListAndRedraw
+#define BindDescriptor0_020c4de8 func_ov081_020c4e08
+#define BindDescriptor0_020c5640 func_ov081_020c5660
+#define DrawListTitle_020c56a8 DrawListTitle
+#define FX_Div_020c542c func_ov081_020c544c
+#define SkipToUnlockedListEntry_020c5a74 SkipToUnlockedListEntry
+#define data_020c5d80 data_ov081_020c5da0
+#include "src/ov081/unclassified_helpers/AdvanceListAndRedraw_020c4db4.c"

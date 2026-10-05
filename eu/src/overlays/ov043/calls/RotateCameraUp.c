@@ -1,15 +1,5 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-extern u8 *data_ov043_020bd2e0;
-extern VecFx32 *GetSubStruct1C(void);
-extern void RotateVectorAroundAxis(VecFx32 *vec, const VecFx32 *axis, s32 angle);
-
-void RotateCameraUp(s32 angle) {
-    u8 *camera;
-    if (angle == 0) {
-        return;
-    }
-    camera = data_ov043_020bd2e0;
-    RotateVectorAroundAxis((VecFx32 *)(camera + 0x2c), GetSubStruct1C(), angle);
-}
+#define GetSubStruct1C_020bbfe0 GetSubStruct1C
+#define RotateCameraUp_020bca9c RotateCameraUp
+#define RotateVectorAroundAxis_0204b34c RotateVectorAroundAxis
+#define data_ov043_020bd2c0 data_ov043_020bd2e0
+#include "src/ov043/camera/RotateCameraUp_020bca9c.c"

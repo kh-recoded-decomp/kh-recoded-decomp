@@ -1,11 +1,3 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-extern void DivideVecByLength(VecFx32 *vec, fx32 divisor);
-
-VecFx32 VecFx32DividedByScalar(const VecFx32 *vec, fx32 divisor)
-{
-    VecFx32 result = *vec;
-    DivideVecByLength(&result, divisor);
-    return result;
-}
+#define VecFx32DividedByScalar_0203f2b0 VecFx32DividedByScalar
+#define func_0204a6ac DivideVecByLength
+#include "src/arm9/math/VecFx32DividedByScalar_0203f2b0.c"

@@ -1,8 +1,3 @@
-extern int CARD_IsPulledOut(void);
-extern void FS_NotifyArchiveAsyncEnd(void *archive, int status);
-
-void FSi_OnRomReadDone(void *archive)
-{
-    int status = CARD_IsPulledOut() != 0 ? 5 : 0;
-    FS_NotifyArchiveAsyncEnd(archive, status);
-}
+#define FS_CompleteArchiveAsyncRequest_0200d2b4 FSi_OnRomReadDone
+#define func_0200a0c4 CARD_IsPulledOut
+#include "src/arm9/library_nitro_fs/func_0200d2b4.c"

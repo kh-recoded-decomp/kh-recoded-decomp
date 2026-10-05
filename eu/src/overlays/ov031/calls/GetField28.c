@@ -1,16 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad_00[0x28];
-    u32 unk_28;
-} OverlayState;
-
-extern OverlayState *data_ov031_020bc820;
-
-u32 GetField28(void)
-{
-    if (data_ov031_020bc820 != 0) {
-        return data_ov031_020bc820->unk_28;
-    }
-    return 0;
-}
+#define GetField28_020bbff4 GetField28
+#define g_activeState_020bc800 data_ov031_020bc820
+#include "src/ov031/unclassified_helpers/GetField28_020bbff4.c"

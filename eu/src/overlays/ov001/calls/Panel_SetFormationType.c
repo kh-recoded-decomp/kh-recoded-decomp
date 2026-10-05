@@ -1,21 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct Panel {
-    u8 pad_000[0x103];
-    u8 formationType;
-} Panel;
-
-extern Panel *data_ov001_020a04e8;
-extern u32 func_ov001_0207a8fc(Panel *panel);
-extern void ApplyFormationSlots(int formationType);
-
-void Panel_SetFormationType(int formationType)
-{
-    Panel *panel;
-
-    panel = data_ov001_020a04e8;
-    panel->formationType = formationType;
-    if (func_ov001_0207a8fc(panel) != 0) {
-        ApplyFormationSlots(formationType);
-    }
-}
+#define ApplyFormationSlots_020b6d90 ApplyFormationSlots
+#define Panel_SetFormationType_0207b478 Panel_SetFormationType
+#define g_activePanel_020a04c8 data_ov001_020a04e8
+#include "src/ov001/leaf_research/Panel_SetFormationType_0207b478.c"

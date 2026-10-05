@@ -1,8 +1,3 @@
-extern void ReleaseResourceAndDetach(int);
-
-void func_020353b8(int *param_1) {
-    if ((*param_1 & 0x20) == 0) {
-        ReleaseResourceAndDetach((int)param_1 + 4);
-    }
-    *param_1 |= 0x20;
-}
+#define func_0202eee8 ReleaseResourceAndDetach
+#define func_020353a4 func_020353b8
+#include "src/arm9/core_small/func_020353a4.c"

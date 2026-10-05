@@ -1,8 +1,2 @@
-/* OS_InitIrqTable: clears the two-word IRQ table at data_027e00a0. */
-
-extern int data_027e00a0;
-
-void OS_InitIrqTable(void) {
-    *(int *)((int)&data_027e00a0 + 4) = 0;
-    data_027e00a0 = 0;
-}
+#define OS_InitIrqTable_02001d78 OS_InitIrqTable
+#include "src/arm9/library_nitro_os/OS_InitIrqTable_02001d78.c"

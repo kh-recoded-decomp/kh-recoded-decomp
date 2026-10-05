@@ -1,18 +1,5 @@
-#include "nitro/types.h"
-
-extern s32 UpdateMenuSelection(void);
-extern s32 IsScreenModeIdle(void);
-extern void BeginScreenFadeOut(int flag);
-
-s32 AdvanceCommWhenReady(void)
-{
-    s32 ready;
-
-    UpdateMenuSelection();
-    ready = IsScreenModeIdle();
-    if (ready != 0) {
-        BeginScreenFadeOut(1);
-        return 8;
-    }
-    return -1;
-}
+#define AdvanceCommWhenReady_020ba91c AdvanceCommWhenReady
+#define func_ov001_0206a7c0 BeginScreenFadeOut
+#define func_ov001_0206a814 IsScreenModeIdle
+#define func_ov037_020bb4bc UpdateMenuSelection
+#include "src/ov037/unclassified_helpers/AdvanceCommWhenReady_020ba91c.c"

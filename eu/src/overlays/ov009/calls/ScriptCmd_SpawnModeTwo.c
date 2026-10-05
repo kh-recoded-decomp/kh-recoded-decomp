@@ -1,9 +1,3 @@
-#include "nitro/types.h"
-
-extern int func_ov009_020a0654(void *vm, int mode);
-
-int ScriptCmd_SpawnModeTwo(void *vm)
-{
-    func_ov009_020a0654(vm, 2);
-    return 0;
-}
+#define ScriptCmd_SpawnModeTwo_020a0950 ScriptCmd_SpawnModeTwo
+#define func_ov009_020a0634 func_ov009_020a0654
+#include "src/ov009/shared_engine/ScriptCmd_SpawnModeTwo_020a0950.c"

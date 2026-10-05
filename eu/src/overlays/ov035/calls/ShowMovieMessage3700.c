@@ -1,8 +1,2 @@
-#include "nitro/types.h"
-
-extern void func_ov001_020645c8(int messageId);
-
-void ShowMovieMessage3700(void)
-{
-    func_ov001_020645c8(0x3700);
-}
+#define ShowMovieMessage3700_020baf88 ShowMovieMessage3700
+#include "src/ov035/unclassified_helpers/ShowMovieMessage3700_020baf88.c"

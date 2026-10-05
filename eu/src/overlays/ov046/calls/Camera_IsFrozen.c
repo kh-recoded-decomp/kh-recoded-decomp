@@ -1,13 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct CameraManager {
-    u8 pad_00[0x84];
-    u32 flags;
-} CameraManager;
-
-extern CameraManager *data_ov046_020c3500;
-
-BOOL Camera_IsFrozen(void)
-{
-    return (data_ov046_020c3500->flags & 1) != 0;
-}
+#define Camera_IsFrozen_020c0c1c Camera_IsFrozen
+#define g_cameraManager_020c34e0 data_ov046_020c3500
+#include "src/ov046/shared_engine/Camera_IsFrozen_020c0c1c.c"

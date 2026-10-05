@@ -1,9 +1,2 @@
-#include "nitro/types.h"
-
-BOOL IsCommandType8(s32 *type)
-{
-    if (*type == 8) {
-        return TRUE;
-    }
-    return FALSE;
-}
+#define IsCommandType8_02096224 IsCommandType8
+#include "src/ov001/shared_engine/IsCommandType8_02096224.c"

@@ -1,16 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct Actor {
-    u8 pad_00[0x32];
-    u8 idByte;
-} Actor;
-
-extern u32 ActorSlot_IsFlag8SetByIndex(u8 id);
-extern void CacheEntry_SetActive(Actor *self, u32 value);
-
-void
-ApplyDerivedIdState(Actor *self)
-{
-    u32 value = ActorSlot_IsFlag8SetByIndex(self->idByte);
-    CacheEntry_SetActive(self, value);
-}
+#define ApplyDerivedIdState_020a3188 ApplyDerivedIdState
+#define func_02036164 ActorSlot_IsFlag8SetByIndex
+#define func_ov001_02087258 CacheEntry_SetActive
+#include "src/ov019/unclassified_helpers/ApplyDerivedIdState_020a3188.c"

@@ -1,108 +1,24 @@
-#include "nitro/types.h"
-
-typedef struct FieldOverlayState {
-    s16 areaId;
-    s16 posX;
-    s16 posY;
-    u16 flags;
-    s8 fadeMode;
-    u8 pad_09[0x0B];
-    void *overlayTask;
-    void *mainTask;
-    void *subTask;
-    int counter;
-} FieldOverlayState;
-
-typedef struct FieldEntryParams {
-    s8 fadeMode;
-    s8 areaId;
-    s16 posX;
-    s16 posY;
-} FieldEntryParams;
-
-typedef struct TaskDescriptorArgs {
-    int unk_00;
-    int heapHandle;
-    int unk_08;
-} TaskDescriptorArgs;
-
-typedef int (*StateHandler)(void);
-
-extern FieldOverlayState *data_ov028_020bb3a0;
-extern u8 data_020608c8;
-extern u8 data_ov021_020b52c0[];
-extern u8 data_ov001_0209eb38[];
-
-extern FieldOverlayState *NNSi_FndGetCurrentRootHeap(void);
-extern BOOL func_ov001_020645c8(u32 eventId);
-extern void ClearSessionPackedBit(u32 eventId);
-extern void SetupAllSelectionRecords(void);
-extern void FillSelectionRecordFromGroup(void);
-extern void BuildSelectionEntryList(void);
-extern void SyncSelectionRecordFromSlotEntry(void);
-extern void func_0204fbb4(void);
-extern void RebuildRecordCounters(void);
-extern void SetupFlaggedSelectionRecords(void);
-extern void FlushPendingFieldUpdate(void);
-extern void CreateSessionNameMenu(void);
-extern void func_ov028_020baef0(void);
-extern void func_ov001_0206c6dc(void);
-extern int Heap_GetCurrent(void);
-extern void *func_0202a45c(void *descriptor, void *userData);
-extern void QueueFieldUpdate(int mode);
-extern void *CreateOverlayTask(int areaId);
-extern void LoadPzTextureParams(void);
-extern int RunSceneStateMachine(void);
-
-StateHandler InitFieldOverlayState(FieldEntryParams *params)
-{
-    BOOL flagged;
-    TaskDescriptorArgs argsCopy;
-    TaskDescriptorArgs args;
-
-    data_ov028_020bb3a0 = NNSi_FndGetCurrentRootHeap();
-    data_ov028_020bb3a0->areaId = params->areaId;
-    data_ov028_020bb3a0->posX = params->posX;
-    data_ov028_020bb3a0->posY = params->posY;
-    if (func_ov001_020645c8(0x35e3)) {
-        SetupAllSelectionRecords();
-        FillSelectionRecordFromGroup();
-        BuildSelectionEntryList();
-        SyncSelectionRecordFromSlotEntry();
-        func_0204fbb4();
-        RebuildRecordCounters();
-        ClearSessionPackedBit(0x35e3);
-    }
-    data_ov028_020bb3a0->flags = 0x23;
-    flagged = FALSE;
-    if (func_ov001_020645c8(0x3609) || func_ov001_020645c8(0x360a)) {
-        flagged = TRUE;
-    }
-    if (flagged) {
-        u8 previousCount = data_020608c8;
-        SetupFlaggedSelectionRecords();
-        if (previousCount != data_020608c8) {
-            FlushPendingFieldUpdate();
-        }
-    } else {
-        if (data_020608c8 != 1) {
-            SyncSelectionRecordFromSlotEntry();
-        }
-        data_020608c8 = 1;
-    }
-    CreateSessionNameMenu();
-    func_ov028_020baef0();
-    func_ov001_0206c6dc();
-    args.heapHandle = Heap_GetCurrent();
-    args.unk_00 = 0;
-    args.unk_08 = 0;
-    argsCopy = args;
-    data_ov028_020bb3a0->mainTask = func_0202a45c(data_ov021_020b52c0, &argsCopy);
-    QueueFieldUpdate(0);
-    data_ov028_020bb3a0->overlayTask = CreateOverlayTask(params->areaId);
-    data_ov028_020bb3a0->fadeMode = params->fadeMode;
-    data_ov028_020bb3a0->subTask = func_0202a45c(data_ov001_0209eb38, NULL);
-    LoadPzTextureParams();
-    data_ov028_020bb3a0->counter = 0;
-    return RunSceneStateMachine;
-}
+#define CreateOverlayTask_0206a6f4 CreateOverlayTask
+#define CreateSessionNameMenu_02063ba4 CreateSessionNameMenu
+#define CreateSessionTask_0206c6dc func_ov001_0206c6dc
+#define InitFieldOverlayState_020ba3e0 InitFieldOverlayState
+#define LoadPzTextureParams_02066488 LoadPzTextureParams
+#define NNSi_FndGetCurrentRootHeap_0202a764 NNSi_FndGetCurrentRootHeap
+#define RebuildRecordCounters_02028e6c RebuildRecordCounters
+#define SetupAllSelectionRecords_0204f85c SetupAllSelectionRecords
+#define SetupFlaggedSelectionRecords_0204f778 SetupFlaggedSelectionRecords
+#define SyncSelectionRecordFromSlotEntry_0204fabc SyncSelectionRecordFromSlotEntry
+#define data_0209eb18 data_ov001_0209eb38
+#define data_020b52a0 data_ov021_020b52c0
+#define data_ov028_020bb380 data_ov028_020bb3a0
+#define func_0202a158 Heap_GetCurrent
+#define func_0202a448 func_0202a45c
+#define func_0204f8dc FillSelectionRecordFromGroup
+#define func_0204f98c BuildSelectionEntryList
+#define func_0204fba0 func_0204fbb4
+#define func_ov001_020633a0 QueueFieldUpdate
+#define func_ov001_020633d4 FlushPendingFieldUpdate
+#define func_ov001_020645e8 ClearSessionPackedBit
+#define func_ov028_020ba584 RunSceneStateMachine
+#define func_ov028_020baed0 func_ov028_020baef0
+#include "src/ov028/overlay_state/InitFieldOverlayState_020ba3e0.c"

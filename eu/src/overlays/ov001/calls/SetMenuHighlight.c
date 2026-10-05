@@ -1,24 +1,5 @@
-#include "nitro/types.h"
-
-typedef struct MenuContext {
-    u32 flags;
-} MenuContext;
-
-extern MenuContext *data_ov001_020a04a4;
-extern void SetMenuOpenState(int first, int second);
-extern void ResetPendingRequest(void);
-
-void SetMenuHighlight(BOOL enable)
-{
-    MenuContext *menu = data_ov001_020a04a4;
-
-    if (menu != NULL) {
-        if (enable) {
-            menu->flags |= 4;
-        } else {
-            menu->flags &= ~4;
-        }
-        SetMenuOpenState(0, 0);
-        ResetPendingRequest();
-    }
-}
+#define ResetPendingRequest_0206c614 ResetPendingRequest
+#define SetMenuHighlight_0206c2f8 SetMenuHighlight
+#define data_ov001_020a0484 data_ov001_020a04a4
+#define func_ov001_0206bb74 SetMenuOpenState
+#include "src/ov001/shared_engine/SetMenuHighlight_0206c2f8.c"

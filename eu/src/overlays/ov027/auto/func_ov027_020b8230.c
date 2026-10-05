@@ -1,7 +1,2 @@
-void func_ov027_020b8230(int *r0, int r1) {
-    void (*fp)(int) = (void (*)(int))r0[0xf];
-    if (fp == 0) {
-        return;
-    }
-    fp(r1);
-}
+#define TagTracker_InvokeCallback_020b8210 func_ov027_020b8230
+#include "src/ov027/shared_engine/TagTracker_InvokeCallback_020b8210.c"

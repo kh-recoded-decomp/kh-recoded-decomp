@@ -1,11 +1,3 @@
-#include "nitro/types.h"
-
-extern void ReleaseSlotActor(u32 arg);
-
-BOOL HandleCommandKind1(s32 kind, u32 arg)
-{
-    if (kind == 1) {
-        ReleaseSlotActor(arg);
-    }
-    return TRUE;
-}
+#define HandleCommandKind1_020998cc HandleCommandKind1
+#define func_ov001_02098360 ReleaseSlotActor
+#include "src/ov001/shared_engine/HandleCommandKind1_020998cc.c"

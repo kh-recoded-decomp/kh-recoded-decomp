@@ -1,17 +1,4 @@
-#include "nitro/types.h"
-
-extern void ZeroActorTailBlock(void *block);
-extern BOOL ReleaseActorResources(void *actor);
-
-BOOL HandleActorLifecycleEvent(int event, void *actor)
-{
-    switch (event) {
-    case 0:
-        ZeroActorTailBlock(actor);
-        break;
-    case 1:
-        ReleaseActorResources(actor);
-        break;
-    }
-    return TRUE;
-}
+#define HandleActorLifecycleEvent_020998ac HandleActorLifecycleEvent
+#define ReleaseActorResources_02090240 ReleaseActorResources
+#define ZeroActorTailBlock_02090230 ZeroActorTailBlock
+#include "src/ov001/shared_engine/HandleActorLifecycleEvent_020998ac.c"

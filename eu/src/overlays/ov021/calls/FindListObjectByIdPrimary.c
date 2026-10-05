@@ -1,26 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u32 unk_00;
-    int id;
-} ListObject;
-
-typedef struct {
-    u8 pad_00[0x4c];
-    u8 list[0xc];
-} ListOwner;
-
-extern void *NNS_FndGetNextListObject(void *list, void *object);
-
-ListObject *FindListObjectByIdPrimary(ListOwner *owner, int id) {
-    ListObject *object;
-    ListObject *next;
-
-    for (object = NNS_FndGetNextListObject(owner->list, NULL); object != NULL; object = next) {
-        next = NNS_FndGetNextListObject(owner->list, object);
-        if (object->id == id) {
-            break;
-        }
-    }
-    return object;
-}
+#define FindListObjectByIdPrimary_020accbc FindListObjectByIdPrimary
+#define NNS_FndGetNextListObject_02012a38 NNS_FndGetNextListObject
+#include "src/ov021/object_state/FindListObjectByIdPrimary_020accbc.c"

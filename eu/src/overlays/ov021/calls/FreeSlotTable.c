@@ -1,30 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct SlotRecord {
-    u8 pad00[0x2c];
-} SlotRecord;
-
-typedef struct SlotTable {
-    SlotRecord *records;
-    s32 count;
-    s8 *ids;
-} SlotTable;
-
-extern void ReleaseSharedRecordState(SlotRecord *record);
-extern void NNSi_FndFreeFromDefaultHeap(void *memory);
-
-void FreeSlotTable(SlotTable *table)
-{
-    int i;
-
-    if (table->count > 0) {
-        for (i = 0; i < table->count; i++) {
-            if (table->ids[i] >= 0) {
-                ReleaseSharedRecordState(&table->records[i]);
-            }
-        }
-        NNSi_FndFreeFromDefaultHeap(table->records);
-        table->count = 0;
-        NNSi_FndFreeFromDefaultHeap(table->ids);
-    }
-}
+#define FreeSlotTable_020a90e4 FreeSlotTable
+#define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
+#define ReleaseSharedRecordState_020a9084 ReleaseSharedRecordState
+#include "src/ov021/object_state/FreeSlotTable_020a90e4.c"

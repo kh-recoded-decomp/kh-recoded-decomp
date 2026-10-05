@@ -1,10 +1,2 @@
-#include "nitro/types.h"
-
-typedef struct Triple {
-    u32 words[3];
-} Triple;
-
-void CopyTriple(Triple *dest, Triple *src)
-{
-    *dest = *src;
-}
+#define CopyTriple_020a4ffc CopyTriple
+#include "src/ov017/unclassified_helpers/CopyTriple_020a4ffc.c"

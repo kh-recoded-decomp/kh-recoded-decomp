@@ -1,12 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct CollisionSegment CollisionSegment;
-typedef struct CollisionPolygon CollisionPolygon;
-typedef struct CollisionContact CollisionContact;
-
-extern BOOL func_0203c26c(CollisionSegment **segmentRef, CollisionPolygon **polygonRef, CollisionContact *contact, u32 flags);
-
-BOOL TestPolygonAgainstSegment(CollisionPolygon **polygonRef, CollisionSegment **segmentRef, CollisionContact *contact, u32 flags)
-{
-    return func_0203c26c(segmentRef, polygonRef, contact, flags ^ 1);
-}
+#define TestPolygonAgainstSegment_0203b67c TestPolygonAgainstSegment
+#define TestSegmentAgainstPolygon_0203c258 func_0203c26c
+#include "src/arm9/spatial_queries/TestPolygonAgainstSegment_0203b67c.c"

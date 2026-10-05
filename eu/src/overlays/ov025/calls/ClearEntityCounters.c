@@ -1,14 +1,2 @@
-﻿#include "nitro/types.h"
-
-typedef struct PanelEntity {
-    u8 pad_00[0x94];
-    int counterA;
-    int counterB;
-    int counterC;
-} PanelEntity;
-
-void ClearEntityCounters(PanelEntity *entity) {
-    entity->counterA = 0;
-    entity->counterB = 0;
-    entity->counterC = 0;
-}
+#define ClearEntityCounters_020b7658 ClearEntityCounters
+#include "src/ov025/leaf_research/ClearEntityCounters_020b7658.c"

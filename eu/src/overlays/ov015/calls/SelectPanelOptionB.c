@@ -1,20 +1,5 @@
-#include "nitro/types.h"
-
-typedef struct PanelContext {
-    u8 pad_0000[0xbb];
-    u8 selectedOption;
-    u8 pad_00bc[0x6ac0 - 0xbc];
-    u8 entryManager[1];
-} PanelContext;
-
-extern PanelContext *data_ov015_0207e960;
-extern int FindWidgetById(void *manager, int id);
-extern void SetFocusedWidget(void *manager, int entry);
-extern BOOL PlaySoundEffect(int seqArcNo, int index);
-
-void SelectPanelOptionB(void)
-{
-    data_ov015_0207e960->selectedOption = 2;
-    SetFocusedWidget(data_ov015_0207e960->entryManager, FindWidgetById(data_ov015_0207e960->entryManager, 8));
-    PlaySoundEffect(2, 1);
-}
+#define PlaySoundEffect_0204d924 PlaySoundEffect
+#define SelectPanelOptionB_020728f8 SelectPanelOptionB
+#define func_ov027_020b90a4 FindWidgetById
+#define func_ov027_020b96e4 SetFocusedWidget
+#include "src/ov015/panel_state/SelectPanelOptionB_020728f8.c"

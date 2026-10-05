@@ -1,15 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct PendingState {
-    u8 pad_00[0x10];
-    int pending;
-} PendingState;
-
-extern PendingState data_ov021_020b5640;
-
-void ClearPendingWord(void)
-{
-    if (data_ov021_020b5640.pending != 0) {
-        data_ov021_020b5640.pending = 0;
-    }
-}
+#define ClearPendingWord_020a95b4 ClearPendingWord
+#define data_ov021_020b5620 data_ov021_020b5640
+#include "src/ov021/unclassified_helpers/ClearPendingWord_020a95b4.c"

@@ -1,9 +1,4 @@
-#include "nitro/types.h"
-
-extern u16 SharedObject_GetField2(void *obj);
-extern u16 AddQuantizedViewAngle(u16 angle);
-
-u16 QuantizeFieldAngle(void *obj)
-{
-    return AddQuantizedViewAngle(SharedObject_GetField2(obj) + 0x3fff);
-}
+#define AddQuantizedViewAngle_020cd2c4 AddQuantizedViewAngle
+#define GetFieldAt0x2_020a7550 SharedObject_GetField2
+#define QuantizeFieldAngle_020cd34c QuantizeFieldAngle
+#include "src/ov059/unclassified_helpers/QuantizeFieldAngle_020cd34c.c"

@@ -1,6 +1,3 @@
-#include "libs/nns/snd/snd_internal.h"
-
-void NNS_SndPlayerSetPlayableSeqCount(int playerNo, int sequenceCount)
-{
-    sSndPlayers[playerNo].playableSeqCount = (u16)sequenceCount;
-}
+#define data_0205dcf8 sSndPlayers
+#define func_0201d414 NNS_SndPlayerSetPlayableSeqCount
+#include "src/arm9/library_nns_snd/func_0201d414.c"

@@ -1,9 +1,4 @@
-#include "nitro/types.h"
-
-extern u8 *gSoundWork;
-extern void NNS_SndArcStrmStop(void *handle, int fadeFrame);
-
-void StopSoundStreamAtIndex(int handleIndex, int fadeFrame)
-{
-    NNS_SndArcStrmStop(gSoundWork + 0xb44c0 + handleIndex * 4, fadeFrame);
-}
+#define NNS_SndArcStrmStop_020202e0 NNS_SndArcStrmStop
+#define StopSoundStreamAtIndex_0204deb0 StopSoundStreamAtIndex
+#define g_soundWork_0206084c gSoundWork
+#include "src/arm9/audio/StopSoundStreamAtIndex_0204deb0.c"

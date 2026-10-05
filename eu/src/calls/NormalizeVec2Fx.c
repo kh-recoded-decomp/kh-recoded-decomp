@@ -1,21 +1,4 @@
-#include "nitro/fx_types.h"
-
-typedef struct {
-    fx32 x;
-    fx32 y;
-} VecFx32_2D;
-
-extern fx32 FX_Div(fx32 a, fx32 b);
-extern fx32 LengthFx32Xy(fx32 x, fx32 y);
-
-BOOL NormalizeVec2Fx(VecFx32_2D *v, VecFx32_2D *out)
-{
-    fx32 length = LengthFx32Xy(v->x, v->y);
-
-    if (length != 0) {
-        out->x = FX_Div(v->x, length);
-        out->y = FX_Div(v->y, length);
-        return FALSE;
-    }
-    return TRUE;
-}
+#define FX_Div_01ff9c84 FX_Div
+#define NormalizeVec2Fx_0204a460 NormalizeVec2Fx
+#define func_0204a3b8 LengthFx32Xy
+#include "src/arm9/fixed_point_math/NormalizeVec2Fx_0204a460.c"

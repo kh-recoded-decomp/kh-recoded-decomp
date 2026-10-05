@@ -1,19 +1,5 @@
-#include "nitro/types.h"
-
-typedef struct ScriptOperand {
-    s16 type;
-    s16 pad_02;
-    s32 value;
-} ScriptOperand;
-
-extern int ScriptVm_ReadOperandInt(void *vm, ScriptOperand *operand);
-extern void *FindKind4FieldObject(void);
-extern void func_ov017_020a424c(void *manager, u32 value);
-
-int ScriptCmd_SetManagerValue(void *vm, ScriptOperand *operands)
-{
-    int value = ScriptVm_ReadOperandInt(vm, operands);
-
-    func_ov017_020a424c(FindKind4FieldObject(), value);
-    return 1;
-}
+#define ScriptCmd_SetManagerValue_020a2628 ScriptCmd_SetManagerValue
+#define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
+#define func_ov017_020a4204 FindKind4FieldObject
+#define func_ov017_020a422c func_ov017_020a424c
+#include "src/ov017/script_commands/ScriptCmd_SetManagerValue_020a2628.c"

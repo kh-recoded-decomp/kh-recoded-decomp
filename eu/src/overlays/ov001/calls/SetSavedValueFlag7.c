@@ -1,13 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct FieldObject FieldObject;
-
-extern u16 FieldObject_GetSavedValue(FieldObject *object);
-extern void FieldObject_SetSavedValue(FieldObject *object, u32 value);
-
-void SetSavedValueFlag7(FieldObject *object, int flag)
-{
-    u32 value = FieldObject_GetSavedValue(object);
-
-    FieldObject_SetSavedValue(object, (u16)((flag << 7) | (value & ~0x80)));
-}
+#define FieldObject_GetSavedValue_0207f9a8 FieldObject_GetSavedValue
+#define FieldObject_SetSavedValue_0207f9c8 FieldObject_SetSavedValue
+#define SetSavedValueFlag7_02084750 SetSavedValueFlag7
+#include "src/ov001/field_objects/SetSavedValueFlag7_02084750.c"

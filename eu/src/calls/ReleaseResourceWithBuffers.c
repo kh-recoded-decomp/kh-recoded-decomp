@@ -1,20 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad_00[4];
-    void *bufferA;
-    void *bufferB;
-} Resource;
-
-extern void NNSi_FndFreeFromDefaultHeap(void *block);
-
-/* Frees a resource and its two buffers. */
-void ReleaseResourceWithBuffers(Resource **resourceHandle)
-{
-    Resource *resource = *resourceHandle;
-
-    NNSi_FndFreeFromDefaultHeap(resource->bufferA);
-    NNSi_FndFreeFromDefaultHeap(resource->bufferB);
-    NNSi_FndFreeFromDefaultHeap(resource);
-    *resourceHandle = 0;
-}
+#define ReleaseResourceWithBuffers_0205206c ReleaseResourceWithBuffers
+#define func_0202a1c4 NNSi_FndFreeFromDefaultHeap
+#include "src/arm9/resource_management/ReleaseResourceWithBuffers_0205206c.c"

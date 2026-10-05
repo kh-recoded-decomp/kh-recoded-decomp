@@ -1,39 +1,6 @@
-#include "nitro/types.h"
-
-typedef struct CollisionShape {
-    void *data;
-    s32 bounds[6];
-    s32 kind;
-} CollisionShape;
-
-typedef void (*ComputeBoundsFunc)(CollisionShape *shape, s32 *bounds);
-
-extern ComputeBoundsFunc gCollisionBoundsDispatch[];
-void UpdateBoxAxisAlignedFlag(void *box);
-void InitSegmentFromEndpoints(void *segment);
-void ComputePolygonEdgeFrames(void *mesh);
-
-void RefreshShapeDerivedData(CollisionShape *shape)
-{
-    switch (shape->kind) {
-    case 0:
-        break;
-    case 1:
-        UpdateBoxAxisAlignedFlag(shape->data);
-        break;
-    case 2:
-        InitSegmentFromEndpoints(shape->data);
-        break;
-    case 3:
-        InitSegmentFromEndpoints(shape->data);
-        break;
-    case 4:
-        InitSegmentFromEndpoints(shape->data);
-        break;
-    case 5:
-        ComputePolygonEdgeFrames(shape->data);
-        break;
-    }
-    /* Recompute bounds for this shape kind */
-    gCollisionBoundsDispatch[shape->kind](shape, shape->bounds);
-}
+#define InitSegmentFromEndpoints_0203b1f0 InitSegmentFromEndpoints
+#define RefreshShapeDerivedData_0203eeac RefreshShapeDerivedData
+#define UpdateBoxAxisAlignedFlag_0203b1c0 UpdateBoxAxisAlignedFlag
+#define data_020559c0 gCollisionBoundsDispatch
+#define func_0203b0b4 ComputePolygonEdgeFrames
+#include "src/arm9/spatial_queries/RefreshShapeDerivedData_0203eeac.c"

@@ -1,16 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct ActorSlot ActorSlot;
-
-typedef struct {
-    u8 pad_00[0x20];
-    ActorSlot *slots[1];
-} ActorRegistry;
-
-extern BOOL Container_HasFlag1(ActorSlot *slot);
-extern ActorRegistry *gActorRegistry;
-
-BOOL ActorSlot_IsLinked(int index)
-{
-    return Container_HasFlag1(gActorRegistry->slots[index]);
-}
+#define ActorSlot_IsLinked_02035b18 ActorSlot_IsLinked
+#define func_02035b38 Container_HasFlag1
+#define g_actorRegistry_0206083c gActorRegistry
+#include "src/arm9/shared_engine/ActorSlot_IsLinked_02035b18.c"

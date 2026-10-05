@@ -1,9 +1,3 @@
-#include "nitro/types.h"
-
-extern void ObjectManager_LoadShadowModel(void);
-
-u32 LoadShadowModelAndReturnState2(void)
-{
-    ObjectManager_LoadShadowModel();
-    return 2;
-}
+#define func_ov001_0207efac ObjectManager_LoadShadowModel
+#define func_ov035_020ba5b8 LoadShadowModelAndReturnState2
+#include "src/ov035/unclassified_helpers/func_ov035_020ba5b8.c"

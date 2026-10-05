@@ -1,6 +1,2 @@
-#include "nitro/types.h"
-
-BOOL IsBit0Set(u32 *flags)
-{
-    return (*flags & 1) != 0;
-}
+#define IsBit0Set_020a9d1c IsBit0Set
+#include "src/ov021/unclassified_helpers/IsBit0Set_020a9d1c.c"

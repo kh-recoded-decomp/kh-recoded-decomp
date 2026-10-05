@@ -1,8 +1,2 @@
-#include "nitro/fx_types.h"
-
-void Vec3MulScalar(VecFx32 *v, fx32 factor)
-{
-    v->x = v->x * factor;
-    v->y = v->y * factor;
-    v->z = v->z * factor;
-}
+#define Vec3MulScalar_0204a680 Vec3MulScalar
+#include "src/arm9/fixed_point_math/Vec3MulScalar_0204a680.c"

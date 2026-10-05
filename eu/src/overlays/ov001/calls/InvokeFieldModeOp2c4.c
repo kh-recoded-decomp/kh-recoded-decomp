@@ -1,20 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct FieldManager {
-    u8 pad_000[0x2f4];
-    u8 modeState[4];
-} FieldManager;
-
-typedef struct FieldManagerHandle {
-    u32 unk_00;
-    FieldManager *manager;
-} FieldManagerHandle;
-
-extern FieldManagerHandle data_ov001_020a04c4;
-extern void data_ov041_020cf2e4(void *state, int value);
-
-void InvokeFieldModeOp2c4(int value)
-{
-    data_ov041_020cf2e4(data_ov001_020a04c4.manager->modeState, value);
-}
-
+#define InvokeFieldModeOp2c4_02072e80 InvokeFieldModeOp2c4
+#define data_ov001_020a04a4 data_ov001_020a04c4
+#define func_020cf2c4 data_ov041_020cf2e4
+#include "src/ov001/field_manager/InvokeFieldModeOp2c4_02072e80.c"

@@ -1,9 +1,3 @@
-extern void NNS_SndPlayerStopSeqByPlayerNo(int index, int value);
-
-void func_0204d994(void) {
-    int index;
-
-    for (index = 2; index < 0x20; index++) {
-        NNS_SndPlayerStopSeqByPlayerNo(index, 0);
-    }
-}
+#define func_0201d4e0 NNS_SndPlayerStopSeqByPlayerNo
+#define func_0204d980 func_0204d994
+#include "src/arm9/core_small/func_0204d980.c"

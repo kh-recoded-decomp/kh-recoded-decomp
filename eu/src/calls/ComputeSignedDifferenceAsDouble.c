@@ -1,10 +1,4 @@
-extern double func_02023650(int value);
-extern double func_02022e34(double a, double b);
-
-double ComputeSignedDifferenceAsDouble(int a, int b)
-{
-    if (a >= b) {
-        return func_02023650(a - b);
-    }
-    return func_02022e34(0.0, func_02023650(b - a));
-}
+#define ComputeSignedDifferenceAsDouble_02022990 ComputeSignedDifferenceAsDouble
+#define func_02022e20 func_02022e34
+#define func_0202363c func_02023650
+#include "src/arm9/fixed_point/ComputeSignedDifferenceAsDouble_02022990.c"

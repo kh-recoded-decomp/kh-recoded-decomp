@@ -1,23 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct ScriptOperand {
-    s16 type;
-    s16 pad_02;
-    s32 value;
-} ScriptOperand;
-
-extern int ScriptVm_ReadOperandInt(void *context, ScriptOperand *operand);
-extern void ActorChannel_ConfigureAndPlay(u32 channelId, u32 param2, s32 resetMode);
-
-int ScriptCmd_PlayActorChannel(void *context, ScriptOperand *operands)
-{
-    u32 channelId;
-    u32 param2;
-    int resetMode;
-
-    channelId = ScriptVm_ReadOperandInt(context, operands);
-    param2 = ScriptVm_ReadOperandInt(context, operands + 2);
-    resetMode = ScriptVm_ReadOperandInt(context, operands + 1);
-    ActorChannel_ConfigureAndPlay(channelId, param2, resetMode != 0);
-    return 1;
-}
+#define ActorChannel_ConfigureAndPlay_0208b9cc ActorChannel_ConfigureAndPlay
+#define ScriptCmd_PlayActorChannel_0208d560 ScriptCmd_PlayActorChannel
+#define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
+#include "src/ov001/shared_engine/ScriptCmd_PlayActorChannel_0208d560.c"

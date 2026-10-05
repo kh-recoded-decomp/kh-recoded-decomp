@@ -1,8 +1,3 @@
-#include "nitro/types.h"
-
-extern u16 gRecordCounters[2];
-
-u16 GetSecondaryRecordCount(void)
-{
-    return gRecordCounters[1];
-}
+#define GetSecondaryRecordCount_020291c0 GetSecondaryRecordCount
+#define data_0205ffc4 gRecordCounters
+#include "src/arm9/record_management/GetSecondaryRecordCount_020291c0.c"

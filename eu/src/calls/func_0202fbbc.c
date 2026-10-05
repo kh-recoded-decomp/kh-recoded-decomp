@@ -1,9 +1,3 @@
-extern void QuaternionToRotationMatrix(void *mtx);
-extern void MTX_MultVec33(void *out, void *mtx, void *in);
-
-void func_0202fbbc(void *in_vec, int unused, void *out_vec)
-{
-    int mtx_local[9];
-    QuaternionToRotationMatrix(&mtx_local);
-    MTX_MultVec33(out_vec, &mtx_local, in_vec);
-}
+#define func_0202f808 QuaternionToRotationMatrix
+#define func_0202fba8 func_0202fbbc
+#include "src/arm9/core_small/func_0202fba8.c"

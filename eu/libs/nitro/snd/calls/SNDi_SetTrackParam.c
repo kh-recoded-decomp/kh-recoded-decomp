@@ -1,6 +1,2 @@
-/* Sound command 7; the immediate flag rides in the top byte of the track mask. */
-extern void PushCommand_impl(int cmd, int a, int b, int c, int d);
-
-void SNDi_SetTrackParam(int player, unsigned int trackMask, int param, int value, int immediate) {
-    PushCommand_impl(7, player | (immediate << 24), trackMask, param, value);
-}
+#define func_0200ed24 SNDi_SetTrackParam
+#include "src/arm9/library_nitro_snd/func_0200ed24.c"

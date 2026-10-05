@@ -1,16 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct MovieScene {
-    u8 pad_000[0x10b];
-    u8 visible;
-} MovieScene;
-
-extern MovieScene *data_ov035_020bc504;
-extern void func_01ffb12c(MovieScene *node);
-
-void DrawMovieSceneIfVisible(void)
-{
-    if (data_ov035_020bc504->visible) {
-        func_01ffb12c(data_ov035_020bc504);
-    }
-}
+#define DrawMovieSceneIfVisible_020bb73c DrawMovieSceneIfVisible
+#define SceneNode_Draw_01ffb12c func_01ffb12c
+#define data_ov035_020bc4e4 data_ov035_020bc504
+#include "src/ov035/unclassified_helpers/DrawMovieSceneIfVisible_020bb73c.c"

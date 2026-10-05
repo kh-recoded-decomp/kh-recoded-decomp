@@ -1,23 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct AttachedModel {
-    u8 data[0x104];
-} AttachedModel;
-
-typedef struct Actor {
-    u8 pad_0000[0x1700];
-    AttachedModel *attachedModels;
-} Actor;
-
-extern void ReleaseResourceAndDetach(AttachedModel *model);
-extern void NNSi_FndFreeFromDefaultHeap(void *block);
-
-void Actor_FreeAttachedModels(Actor *actor)
-{
-    int i;
-
-    for (i = 0; i < 4; i++) {
-        ReleaseResourceAndDetach(&actor->attachedModels[i]);
-    }
-    NNSi_FndFreeFromDefaultHeap(actor->attachedModels);
-}
+#define Actor_FreeAttachedModels_020c8b50 Actor_FreeAttachedModels
+#define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
+#define ReleaseResourceAndDetach_0202eee8 ReleaseResourceAndDetach
+#include "src/ov059/unclassified_helpers/Actor_FreeAttachedModels_020c8b50.c"

@@ -1,19 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct Resource {
-    u8 pad_000[0x628];
-    s32 ready;
-} Resource;
-
-extern int IsSceneState4(void);
-
-BOOL IsResourceReadyOrInitialize_020be790(Resource *resource)
-{
-    if (resource->ready != 0) {
-        return TRUE;
-    }
-    if (IsSceneState4() == 0) {
-        return TRUE;
-    }
-    return FALSE;
-}
+#define IsResourceReadyOrInitialize_020be770 IsResourceReadyOrInitialize_020be790
+#define func_0204d6fc IsSceneState4
+#include "src/ov036/shared_engine/IsResourceReadyOrInitialize_020be770.c"

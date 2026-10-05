@@ -1,15 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct EntryList {
-    u8 pad_0000[0x4582];
-    u8 locked;
-} EntryList;
-
-extern void BuildRecordCountList_020c1994(EntryList *list);
-
-void RefreshEntryListIfUnlocked(EntryList *list)
-{
-    if (list->locked == 0) {
-        BuildRecordCountList_020c1994(list);
-    }
-}
+#define RefreshEntryListIfUnlocked_020c1f78 RefreshEntryListIfUnlocked
+#define func_ov085_020c1974 BuildRecordCountList_020c1994
+#include "src/ov085/unclassified_helpers/RefreshEntryListIfUnlocked_020c1f78.c"

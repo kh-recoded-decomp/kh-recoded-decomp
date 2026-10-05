@@ -1,15 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct FlagValues {
-    int values[6];
-} FlagValues;
-
-extern const FlagValues data_02055af8;
-extern u8 *data_0205fe0c;
-
-int GetFlagTableValue(void)
-{
-    FlagValues table = data_02055af8;
-
-    return table.values[(u16)(data_0205fe0c[0x2c66] & 7)];
-}
+#define GetFlagTableValue_020511c4 GetFlagTableValue
+#define data_02055ae4 data_02055af8
+#include "src/arm9/shared_engine/GetFlagTableValue_020511c4.c"

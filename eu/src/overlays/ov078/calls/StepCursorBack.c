@@ -1,17 +1,4 @@
-#include "nitro/types.h"
-
-extern void PlaySoundEffect(int bank, int id);
-extern void InitSequence(void *menu);
-
-typedef struct {
-    u8 pad[0x5d0];
-    int cursor;
-} MenuState;
-
-void StepCursorBack(MenuState *menu)
-{
-    PlaySoundEffect(0, 2);
-    menu->cursor += 4;
-    menu->cursor = menu->cursor % 5;
-    InitSequence(menu);
-}
+#define InitSequence_020c471c InitSequence
+#define PlaySoundEffect_0204d924 PlaySoundEffect
+#define StepCursorBack_020c4f40 StepCursorBack
+#include "src/ov078/unclassified_helpers/StepCursorBack_020c4f40.c"

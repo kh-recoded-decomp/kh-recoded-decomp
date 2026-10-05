@@ -1,18 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct {
-    void *slots;
-    s8 slotCount;
-} EffectPool;
-
-typedef struct {
-    u8 pad_000[0x18c];
-    EffectPool effectPool;
-} EffectOwner;
-
-extern void FreeModelSlots(EffectPool *pool);
-
-void ReleaseEffectPool(EffectOwner *owner)
-{
-    FreeModelSlots(&owner->effectPool);
-}
+#define ReleaseEffectPool_020bcf24 ReleaseEffectPool
+#define func_ov056_020d7e34 FreeModelSlots
+#include "src/ov030/unclassified_helpers/ReleaseEffectPool_020bcf24.c"

@@ -1,23 +1,6 @@
-#include "nitro/types.h"
-
-typedef struct ScriptOperand {
-    s16 type;
-    s16 pad_02;
-    s32 value;
-} ScriptOperand;
-
-extern const char *ByteCode_ResolveOperand(void *context, ScriptOperand *operand);
-extern int ScriptVm_ReadOperandInt(void *context, ScriptOperand *operand);
-extern int strlen(const char *str);
-extern void ApplyToNamedCollisionFaces(const char *name, int nameLength, BOOL visible);
-
-int ScriptCmd_SetNamedMapNodesVisible(void *context, ScriptOperand *operands)
-{
-    const char *name;
-    int visible;
-
-    name = ByteCode_ResolveOperand(context, operands);
-    visible = ScriptVm_ReadOperandInt(context, operands + 1);
-    ApplyToNamedCollisionFaces(name, strlen(name), visible != 0);
-    return 1;
-}
+#define ScriptCmd_SetNamedMapNodesVisible_02065354 ScriptCmd_SetNamedMapNodesVisible
+#define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
+#define Strlen_02021e44 strlen
+#define func_02025dac ByteCode_ResolveOperand
+#define func_ov001_020680fc ApplyToNamedCollisionFaces
+#include "src/ov001/shared_engine/ScriptCmd_SetNamedMapNodesVisible_02065354.c"

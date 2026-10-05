@@ -1,8 +1,4 @@
-extern void InitMovieStreamFromHeader(int streamContext, unsigned short *dst, unsigned short *sourceHeader);
-extern void InitTextLayerDefault(unsigned int *streamContext, int streamOption, unsigned int streamFlags, unsigned short *preparedHeader);
-
-void openVideoStreamFromHeader(unsigned int *streamContext, int streamOption, unsigned int streamFlags, unsigned short *sourceHeader) {
-    unsigned short preparedHeader[8];
-    InitMovieStreamFromHeader((int)streamContext, preparedHeader, sourceHeader);
-    InitTextLayerDefault(streamContext, streamOption, streamFlags, preparedHeader);
-}
+#define func_02001494 InitTextLayerDefault
+#define func_02064864 InitMovieStreamFromHeader
+#define openVideoStreamFromHeader_02064934 openVideoStreamFromHeader
+#include "src/ov003/video_playback/openVideoStreamFromHeader_02064934.c"

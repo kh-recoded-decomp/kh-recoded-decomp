@@ -1,12 +1,4 @@
-#include "nitro/types.h"
-
-extern int ScriptVm_ReadOperandInt(void *vm, void *operand);
-extern void SaveSessionCheckpoint(u8 flags);
-
-BOOL ScriptCmd_SaveCheckpoint(void *vm, void *operand)
-{
-    u8 slot = ScriptVm_ReadOperandInt(vm, operand);
-
-    SaveSessionCheckpoint(slot | 0x80);
-    return TRUE;
-}
+#define SaveSessionCheckpoint_02064364 SaveSessionCheckpoint
+#define ScriptCmd_SaveCheckpoint_02065a38 ScriptCmd_SaveCheckpoint
+#define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
+#include "src/ov001/scripted_actor_behavior/ScriptCmd_SaveCheckpoint_02065a38.c"

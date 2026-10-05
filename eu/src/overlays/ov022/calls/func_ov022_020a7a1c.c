@@ -1,4 +1,2 @@
-extern void *NNS_FndAllocFromDefaultExpHeapEx(void *heap, int size);
-void *func_ov022_020a7a1c(void *param_1) {
-    return NNS_FndAllocFromDefaultExpHeapEx(param_1, 0x20);
-}
+#define MobiClip_Alloc_020a79fc func_ov022_020a7a1c
+#include "src/ov022/shared_engine/MobiClip_Alloc_020a79fc.c"

@@ -1,11 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct SegmentShapeRef SegmentShapeRef;
-typedef struct CylinderShapeRef CylinderShapeRef;
-
-extern void TestCapsuleAgainstCylinder(SegmentShapeRef *segmentRef, CylinderShapeRef *cylinderRef, void *contact, u32 flags);
-
-void TestCylinderAgainstSegment(CylinderShapeRef *cylinderRef, SegmentShapeRef *segmentRef, void *contact, u32 flags)
-{
-    TestCapsuleAgainstCylinder(segmentRef, cylinderRef, contact, flags ^ 1);
-}
+#define TestCylinderAgainstSegment_0203b5d4 TestCylinderAgainstSegment
+#define TestSegmentAgainstCylinder_02040548 TestCapsuleAgainstCylinder
+#include "src/arm9/spatial_queries/TestCylinderAgainstSegment_0203b5d4.c"

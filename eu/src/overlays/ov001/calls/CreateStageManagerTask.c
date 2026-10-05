@@ -1,16 +1,5 @@
-#include "nitro/types.h"
-
-typedef struct StageManager {
-    u8 pad_00[4];
-    void *task;
-} StageManager;
-
-extern u8 data_ov001_020a0360[];
-extern StageManager *data_ov001_020a0528;
-extern void *func_0202a45c(void *descriptor, void *userData);
-
-BOOL CreateStageManagerTask(void *userData)
-{
-    data_ov001_020a0528->task = func_0202a45c(data_ov001_020a0360, userData);
-    return TRUE;
-}
+#define CreateStageManagerTask_02099ad0 CreateStageManagerTask
+#define data_ov001_020a0340 data_ov001_020a0360
+#define func_0202a448 func_0202a45c
+#define g_stageManager_020a0508 data_ov001_020a0528
+#include "src/ov001/shared_engine/CreateStageManagerTask_02099ad0.c"

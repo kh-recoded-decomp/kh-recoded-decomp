@@ -1,13 +1,4 @@
-#include "nitro/types.h"
-
-extern int func_ov001_0209c5ac(int kind);
-extern void func_ov001_0209c5d8(int errorCode);
-
-int AllocateActorSlotOrReportError(void)
-{
-    if (func_ov001_0209c5ac(1) == 0) {
-        func_ov001_0209c5d8(0x30);
-        return 3;
-    }
-    return 0;
-}
+#define AllocateActorSlotOrReportError_02093ae0 AllocateActorSlotOrReportError
+#define func_ov001_0209c584 func_ov001_0209c5ac
+#define func_ov001_0209c5b0 func_ov001_0209c5d8
+#include "src/ov001/shared_engine/AllocateActorSlotOrReportError_02093ae0.c"

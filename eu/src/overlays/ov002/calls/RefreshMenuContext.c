@@ -1,14 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct PanelState {
-    u8 pad_00[0xc];
-    int entryMode;
-} PanelState;
-
-extern PanelState *data_ov002_0206c460;
-extern void func_ov002_0206331c(int entryMode);
-
-void RefreshMenuContext(void)
-{
-    func_ov002_0206331c(data_ov002_0206c460->entryMode);
-}
+#define InitMenuContext_0206331c func_ov002_0206331c
+#define RefreshMenuContext_02062d0c RefreshMenuContext
+#define g_panelState_0206c460 data_ov002_0206c460
+#include "src/ov002/panel_state/RefreshMenuContext_02062d0c.c"

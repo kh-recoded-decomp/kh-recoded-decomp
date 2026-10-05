@@ -1,36 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct ActorSlot {
-    struct ActorSlot *next;
-    struct ActorSlot *prev;
-    u16 flags;
-} ActorSlot;
-
-typedef struct {
-    u8 pad_00[0x1c];
-    ActorSlot *rootHead;
-} ActorRegistry;
-
-extern ActorRegistry *gActorRegistry;
-
-void ActorSlot_UnlinkRoot(ActorSlot *slot)
-{
-    ActorRegistry *registry;
-
-    if ((slot->flags & 2) == 0) {
-        return;
-    }
-    slot->flags &= 0xfff5;
-    registry = gActorRegistry;
-    if (slot->next != NULL) {
-        slot->next->prev = slot->prev;
-    }
-    if (slot->prev != NULL) {
-        slot->prev->next = slot->next;
-    }
-    if (registry->rootHead == slot) {
-        registry->rootHead = slot->next;
-    }
-    slot->prev = NULL;
-    slot->next = NULL;
-}
+#define ActorSlot_UnlinkRoot_02036748 ActorSlot_UnlinkRoot
+#define g_actorRegistry_0206083c gActorRegistry
+#include "src/arm9/shared_engine/ActorSlot_UnlinkRoot_02036748.c"

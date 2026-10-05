@@ -1,18 +1,5 @@
-#include "nitro/types.h"
-
-typedef struct MenuSharedState MenuSharedState;
-
-extern MenuSharedState *func_ov039_020bc650(void);
-extern void func_ov073_020c1c00(MenuSharedState *state, u8 mask);
-extern void func_ov073_020c1c70(MenuSharedState *state, u8 mask);
-
-void ToggleSharedStateFlag(BOOL enable)
-{
-    MenuSharedState *state = func_ov039_020bc650();
-
-    if (enable) {
-        func_ov073_020c1c00(state, 1);
-    } else {
-        func_ov073_020c1c70(state, 1);
-    }
-}
+#define ToggleSharedStateFlag_020c1d1c ToggleSharedStateFlag
+#define func_ov039_020bc630 func_ov039_020bc650
+#define func_ov073_020c1be0 func_ov073_020c1c00
+#define func_ov073_020c1c50 func_ov073_020c1c70
+#include "src/ov073/status_menu/ToggleSharedStateFlag_020c1d1c.c"

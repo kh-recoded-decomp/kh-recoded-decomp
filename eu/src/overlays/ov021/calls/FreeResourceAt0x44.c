@@ -1,15 +1,3 @@
-#include "nitro/types.h"
-
-extern void NNSi_FndFreeFromDefaultHeap(void *block);
-
-typedef struct {
-    u8 pad_000[0x44];
-    void *resource;
-} SomeObj;
-
-void FreeResourceAt0x44(SomeObj *obj)
-{
-    if (obj->resource != 0) {
-        NNSi_FndFreeFromDefaultHeap(obj->resource);
-    }
-}
+#define FreeResourceAt0x44_020aa8f8 FreeResourceAt0x44
+#define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
+#include "src/ov021/unclassified_helpers/FreeResourceAt0x44_020aa8f8.c"

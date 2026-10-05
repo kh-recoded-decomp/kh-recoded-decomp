@@ -1,9 +1,4 @@
-extern int ScriptVm_ReadOperandInt(void *arg, void *cmd);
-extern int RequestSoundSlotLoad(int index, int value);
-
-int ScriptCmd_PostEvent0(void *arg, void *cmd)
-{
-    int value = ScriptVm_ReadOperandInt(arg, cmd);
-    RequestSoundSlotLoad(0, value);
-    return 0;
-}
+#define ScriptCmd_PostEvent0_02026a88 ScriptCmd_PostEvent0
+#define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
+#define func_0204ddc4 RequestSoundSlotLoad
+#include "src/arm9/shared_engine/ScriptCmd_PostEvent0_02026a88.c"

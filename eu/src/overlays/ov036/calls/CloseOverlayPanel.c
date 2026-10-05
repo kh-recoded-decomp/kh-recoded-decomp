@@ -1,21 +1,6 @@
-#include "nitro/types.h"
-
-#define REG_DISPCNT (*(vu32 *)0x04000000)
-
-extern void UploadAndFreeBgGraphics(void);
-extern void ClosePanelAndResume(int panel);
-extern void SelectActiveEntry(int index);
-extern void G2x_SetBlendAlpha_(unsigned int *reg, unsigned int plane1, unsigned int plane2, unsigned int ev1, unsigned int ev2);
-
-BOOL CloseOverlayPanel(int panel)
-{
-    u32 planes;
-
-    UploadAndFreeBgGraphics();
-    ClosePanelAndResume(panel);
-    SelectActiveEntry(0);
-    planes = (REG_DISPCNT & 0x1f00) >> 8;
-    REG_DISPCNT = (REG_DISPCNT & ~0x1f00) | ((planes | 0x10) << 8);
-    G2x_SetBlendAlpha_((unsigned int *)0x04000050, 1, 0x22, 0, 0x10);
-    return TRUE;
-}
+#define CloseOverlayPanel_020c32d4 CloseOverlayPanel
+#define ClosePanelAndResume_0202874c ClosePanelAndResume
+#define G2x_SetBlendAlpha_02006850 G2x_SetBlendAlpha_
+#define SelectActiveEntry_020011a4 SelectActiveEntry
+#define func_ov036_020c31c8 UploadAndFreeBgGraphics
+#include "src/ov036/panel_state/CloseOverlayPanel_020c32d4.c"

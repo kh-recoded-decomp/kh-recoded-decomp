@@ -1,14 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct StageSlots {
-    u8 pad_00000[0x18d78];
-    void *slots[1];
-} StageSlots;
-
-extern StageSlots *data_ov001_020a0528;
-extern int AllocPoolNode(void *slot);
-
-int ReleaseStageSlot(int index)
-{
-    return AllocPoolNode(data_ov001_020a0528->slots[index]);
-}
+#define ReleaseStageSlot_0209c008 ReleaseStageSlot
+#define data_ov001_020a0508 data_ov001_020a0528
+#define func_ov001_0208f0bc AllocPoolNode
+#include "src/ov001/shared_engine/ReleaseStageSlot_0209c008.c"

@@ -1,36 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct BoxSize {
-    s32 width;
-    s32 height;
-} BoxSize;
-
-typedef struct TextWindowRequest {
-    s32 posX;
-    s32 posY;
-    const BoxSize *boxSize;
-    s32 style;
-    const u16 *text;
-    s32 optionA;
-    s32 optionB;
-    s32 unused;
-} TextWindowRequest;
-
-extern const BoxSize data_ov036_020c36c0;
-extern void QueueMessageWindowKind2(TextWindowRequest *request);
-
-BOOL OpenMessageTextWindow(const u16 *text)
-{
-    BoxSize box = data_ov036_020c36c0;
-    TextWindowRequest request;
-
-    request.posX = 1;
-    request.posY = 0;
-    request.boxSize = &box;
-    request.style = 0;
-    request.text = text;
-    request.optionA = 0;
-    request.optionB = 0;
-    QueueMessageWindowKind2(&request);
-    return TRUE;
-}
+#define OpenMessageTextWindow_020c2fc8 OpenMessageTextWindow
+#define data_ov036_020c36a0 data_ov036_020c36c0
+#define func_ov036_020c28d8 QueueMessageWindowKind2
+#include "src/ov036/text_rendering/OpenMessageTextWindow_020c2fc8.c"

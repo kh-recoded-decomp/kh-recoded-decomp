@@ -1,15 +1,4 @@
-#include "nitro/types.h"
-
-extern void DestroyFndObjectList(void *list);
-extern void NNSi_FndFreeFromDefaultHeap(void *ptr);
-
-void DestroyOwnedObjectList(void **listRef)
-{
-    if (listRef != NULL && *listRef != NULL) {
-        DestroyFndObjectList(*listRef);
-        if (*listRef != NULL) {
-            NNSi_FndFreeFromDefaultHeap(*listRef);
-            *listRef = NULL;
-        }
-    }
-}
+#define DestroyFndObjectList_020014f0 DestroyFndObjectList
+#define DestroyOwnedObjectList_02079cd4 DestroyOwnedObjectList
+#define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
+#include "src/ov015/ui/DestroyOwnedObjectList_02079cd4.c"

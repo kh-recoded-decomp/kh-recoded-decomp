@@ -1,20 +1,6 @@
-extern int data_ov039_020bea20;
-extern void *NNS_FndGetNextListObject(void *list, void *obj);
-extern void NNS_FndRemoveListObject(void *list, void *obj);
-extern void NNSi_FndFreeFromDefaultHeap(void *block);
-
-void RemoveListEntry(void *entry)
-{
-    void *current = NNS_FndGetNextListObject((void *)(data_ov039_020bea20 + 0xca74), 0);
-
-    while (current != 0) {
-        if (current == entry) {
-            NNS_FndRemoveListObject((void *)(data_ov039_020bea20 + 0xca74), entry);
-            if (entry != 0) {
-                NNSi_FndFreeFromDefaultHeap(entry);
-            }
-            return;
-        }
-        current = NNS_FndGetNextListObject((void *)(data_ov039_020bea20 + 0xca74), current);
-    }
-}
+#define NNS_FndGetNextListObject_02012a38 NNS_FndGetNextListObject
+#define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
+#define RemoveIntrusiveListObject_020129d8 NNS_FndRemoveListObject
+#define RemoveListEntry_020bc70c RemoveListEntry
+#define data_ov039_020bea00 data_ov039_020bea20
+#include "src/ov039/reviewed_helpers/RemoveListEntry_020bc70c.c"

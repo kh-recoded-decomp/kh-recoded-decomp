@@ -1,7 +1,4 @@
-extern void PanelState_NoOpB(void *p);
-extern int func_ov022_020a9450(int *ctx, int cursor, unsigned int a);
-
-int initializeMovieStreamWrapper(int *ctx, int cursor, unsigned int a) {
-    PanelState_NoOpB((void *)0x02000bc4);
-    return func_ov022_020a9450(ctx, cursor, a);
-}
+#define func_02000b64 PanelState_NoOpB
+#define func_ov022_020a9430 func_ov022_020a9450
+#define initializeMovieStreamWrapper_020a9170 initializeMovieStreamWrapper
+#include "src/ov022/video_playback/initializeMovieStreamWrapper_020a9170.c"

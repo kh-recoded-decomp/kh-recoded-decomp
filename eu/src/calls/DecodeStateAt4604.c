@@ -1,7 +1,2 @@
-int DecodeStateAt4604(int object) {
-    if (*(int *)(object + 0x4604) != 1) {
-        if (*(int *)(object + 0x4604) == 2) object = 2;
-        return object;
-    }
-    return 1;
-}
+#define func_0204e588 DecodeStateAt4604
+#include "src/arm9/state_helpers/func_0204e588.c"

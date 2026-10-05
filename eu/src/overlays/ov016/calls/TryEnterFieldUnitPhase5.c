@@ -1,28 +1,3 @@
-﻿#include "nitro/types.h"
-
-typedef struct {
-    u8 pad_00[4];
-    s16 motionId;
-} MotionInfo;
-
-typedef struct {
-    u8 pad_00[0x76];
-    s8 enabled;
-    u8 pad_77[0xbd - 0x77];
-    u8 lowBits : 4;
-    u8 state : 4;
-    u8 pad_be[0xec - 0xbe];
-    MotionInfo *motion;
-} FieldUnit;
-
-extern void EnterFieldUnitPhase5(FieldUnit *unit, BOOL doReset);
-
-void TryEnterFieldUnitPhase5(FieldUnit *unit, int selection)
-{
-    if (unit->enabled != 0) {
-        if (unit->state >= 5 && unit->motion->motionId == -1) {
-            return;
-        }
-        EnterFieldUnitPhase5(unit, selection != 0xff);
-    }
-}
+#define EnterFieldUnitPhase5_020a6d40 EnterFieldUnitPhase5
+#define TryEnterFieldUnitPhase5_020a6d8c TryEnterFieldUnitPhase5
+#include "src/ov016/field_objects/TryEnterFieldUnitPhase5_020a6d8c.c"

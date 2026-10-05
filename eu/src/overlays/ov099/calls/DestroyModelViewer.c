@@ -1,14 +1,5 @@
-#include "nitro/types.h"
-
-typedef struct ModelViewer ModelViewer;
-
-extern void ReleaseViewerModels(ModelViewer *viewer);
-extern void FreeModelFiles(ModelViewer *viewer);
-extern void G3X_SetHOffset(u32 value);
-
-void DestroyModelViewer(ModelViewer *viewer)
-{
-    ReleaseViewerModels(viewer);
-    FreeModelFiles(viewer);
-    G3X_SetHOffset(0);
-}
+#define DestroyModelViewer_020c2198 DestroyModelViewer
+#define FreeModelFiles_020c1b08 FreeModelFiles
+#define func_02006d3c G3X_SetHOffset
+#define func_ov099_020c1d00 ReleaseViewerModels
+#include "src/ov099/unclassified_helpers/DestroyModelViewer_020c2198.c"

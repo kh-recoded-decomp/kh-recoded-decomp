@@ -1,22 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct ScriptOperand {
-    s16 type;
-    s16 pad_02;
-    s32 value;
-} ScriptOperand;
-
-extern int ScriptVm_ReadOperandInt(void *context, ScriptOperand *operand);
-extern s32 func_ov001_02063a38(void);
-extern void QueueFieldUpdate(int setIndex);
-
-int ScriptCmd_LoadFieldObjectSet(void *context, ScriptOperand *operands)
-{
-    int setIndex;
-
-    setIndex = ScriptVm_ReadOperandInt(context, operands);
-    if (func_ov001_02063a38() != 6) {
-        QueueFieldUpdate(setIndex);
-    }
-    return 1;
-}
+#define ScriptCmd_LoadFieldObjectSet_02064eec ScriptCmd_LoadFieldObjectSet
+#define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
+#define func_ov001_020633a0 QueueFieldUpdate
+#include "src/ov001/shared_engine/ScriptCmd_LoadFieldObjectSet_02064eec.c"

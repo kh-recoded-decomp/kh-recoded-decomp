@@ -1,17 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct ActorSlot ActorSlot;
-
-typedef struct {
-    u8 pad_00[0x20];
-    ActorSlot *slots[1];
-} ActorRegistry;
-
-extern void ActorSlot_AttachToParent(ActorSlot *child, ActorSlot *parent, void *initializationData);
-extern ActorRegistry *gActorRegistry;
-
-void ActorSlot_AttachToParentByIndex(int childIndex, int parentIndex, void *initializationData)
-{
-    ActorSlot_AttachToParent(gActorRegistry->slots[childIndex],
-                                      gActorRegistry->slots[parentIndex], initializationData);
-}
+#define ActorSlot_AttachToParentByIndex_02035b4c ActorSlot_AttachToParentByIndex
+#define ActorSlot_AttachToParent_02035b74 ActorSlot_AttachToParent
+#define g_actorRegistry_0206083c gActorRegistry
+#include "src/arm9/shared_engine/ActorSlot_AttachToParentByIndex_02035b4c.c"

@@ -1,12 +1,3 @@
-#include "nitro/types.h"
-
-extern u32 VEC_Add();
-
-void AddObjectOffsetVector(int object,void *offset)
-
-{
-  if ((object != 0) && (offset != (void *)0x0)) {
-    VEC_Add((void *)(object + 0x374),offset,(void *)(object + 0x374));
-  }
-  return;
-}
+#define AddObjectOffsetVector_02091c50 AddObjectOffsetVector
+#define VEC_Add_01ff9e0c VEC_Add
+#include "src/ov001/shared_engine/AddObjectOffsetVector_02091c50.c"

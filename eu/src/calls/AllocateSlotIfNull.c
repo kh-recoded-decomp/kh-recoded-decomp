@@ -1,22 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad_00[0x4c];
-    void **slots;
-} ExtraTable;
-
-typedef struct {
-    u8 pad_00[0x1c8];
-    ExtraTable *extra;
-} Context;
-
-extern void *NNSi_FndAllocFromDefaultHeap(u32 size);
-extern void MI_CpuFill8(void *dst, int value, int size);
-
-void AllocateSlotIfNull(Context *context, int index)
-{
-    if (context->extra->slots[index] == 0) {
-        context->extra->slots[index] = NNSi_FndAllocFromDefaultHeap(0xf2c);
-        MI_CpuFill8(context->extra->slots[index], 0, 0xf2c);
-    }
-}
+#define AllocateSlotIfNull_02025964 AllocateSlotIfNull
+#define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
+#define func_01ff8830 MI_CpuFill8
+#include "src/arm9/archive_startup/AllocateSlotIfNull_02025964.c"

@@ -1,11 +1,4 @@
-#include "nitro/types.h"
-
-extern void MI_CpuFill8(void *dest, u32 value, u32 size);
-extern u32 ConfigureImageEntryList(int manager, u32 *config);
-
-void InitObjManager(int manager, u32 *config)
-{
-    MI_CpuFill8((void *)manager, 0, 0x6434);
-    *(u32 *)(manager + 0x6020) = 0;
-    ConfigureImageEntryList(manager, config);
-}
+#define InitObjManager_0204efa8 InitObjManager
+#define func_01ff8830 MI_CpuFill8
+#define func_0204ef3c ConfigureImageEntryList
+#include "src/arm9/shared_engine/InitObjManager_0204efa8.c"

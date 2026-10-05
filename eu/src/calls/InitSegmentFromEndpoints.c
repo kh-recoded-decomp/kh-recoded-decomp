@@ -1,29 +1,4 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-#include "nitro/fx.h"
-
-typedef struct CollisionSegment {
-    VecFx32 start;
-    VecFx32 end;
-    VecFx32 direction;
-    fx32 length;
-} CollisionSegment;
-
-extern void VEC_Subtract(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
-extern fx32 func_01ffaff4(VecFx32 *src, VecFx32 *dst);
-
-void InitSegmentFromEndpoints(CollisionSegment *segment)
-{
-    VecFx32 delta;
-
-    VEC_Subtract(&segment->end, &segment->start, &delta);
-    segment->direction = delta;
-    segment->length = func_01ffaff4(&segment->direction, &segment->direction);
-    if (segment->length == 0) {
-        VecFx32 down;
-        down.x = 0;
-        down.y = -FX32_ONE;
-        down.z = 0;
-        segment->direction = down;
-    }
-}
+#define InitSegmentFromEndpoints_0203b1f0 InitSegmentFromEndpoints
+#define NormalizeVecGetLength_01ffaff4 func_01ffaff4
+#define VEC_Subtract_01ff9e3c VEC_Subtract
+#include "src/arm9/spatial_queries/InitSegmentFromEndpoints_0203b1f0.c"

@@ -1,6 +1,2 @@
-extern void OS_FreeToHeap(int heap, int handle, void *ptr);
-
-void OSi_FreeStackAlloc(void *ptr)
-{
-    OS_FreeToHeap(0, -1, ptr);
-}
+#define OSi_FreeStackAlloc_02021960 OSi_FreeStackAlloc
+#include "src/arm9/library_nitro_os/OSi_FreeStackAlloc_02021960.c"

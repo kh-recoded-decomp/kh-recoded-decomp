@@ -1,28 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct SlotEntry {
-    u8 pad_00[0x26];
-    u16 flipFlags;
-    u8 pad_28[0x74];
-} SlotEntry;
-
-typedef struct SlotScene {
-    u8 pad_0000[0x1090];
-    SlotEntry *slots;
-} SlotScene;
-
-typedef struct SlotSceneHolder {
-    u32 unk_00;
-    SlotScene *scene;
-} SlotSceneHolder;
-
-extern SlotSceneHolder data_ov036_020c3940;
-extern int FindOrAcquireOwnerSlot(int ownerId);
-
-void ToggleActorSlotFlip(int ownerId)
-{
-    SlotScene *scene = data_ov036_020c3940.scene;
-    SlotEntry *slot = &scene->slots[FindOrAcquireOwnerSlot(ownerId)];
-
-    slot->flipFlags = slot->flipFlags == 0 ? 0x8000 : 0;
-}
+#define FindOrAcquireOwnerSlot_020bb7c0 FindOrAcquireOwnerSlot
+#define ToggleActorSlotFlip_020bce20 ToggleActorSlotFlip
+#define data_ov036_020c3920 data_ov036_020c3940
+#include "src/ov036/unclassified_helpers/ToggleActorSlotFlip_020bce20.c"

@@ -1,12 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct CollisionWorld CollisionWorld;
-typedef struct CollisionResult CollisionResult;
-
-extern CollisionResult *QueryModelMotionCollision(CollisionWorld *world, void *query);
-extern CollisionWorld *gActorRegistry;
-
-CollisionResult *QueryWorldMotionCollision(void *query)
-{
-    return QueryModelMotionCollision(gActorRegistry, query);
-}
+#define QueryModelMotionCollision_01ffce6c QueryModelMotionCollision
+#define QueryWorldMotionCollision_02036484 QueryWorldMotionCollision
+#define g_collisionWorld_0206083c gActorRegistry
+#include "src/arm9/spatial_queries/QueryWorldMotionCollision_02036484.c"

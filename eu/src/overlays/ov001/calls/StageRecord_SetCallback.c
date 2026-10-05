@@ -1,14 +1,5 @@
-#include "nitro/types.h"
-
-extern int data_ov001_0209f2e8;
-extern void *GetStageEventRecord(u32 id);
-extern void SetActorCallbackPair(void *record, u32 callback, u32 userData);
-
-void StageRecord_SetCallback(u32 id, u32 callback, u32 userData)
-{
-    void *record;
-
-    if (id != 0 && data_ov001_0209f2e8 != -1 && (record = GetStageEventRecord(id)) != NULL) {
-        SetActorCallbackPair(record, callback, userData);
-    }
-}
+#define GetStageEventRecord_0209c0ec GetStageEventRecord
+#define SetActorCallbackPair_020958d0 SetActorCallbackPair
+#define StageRecord_SetCallback_02087d74 StageRecord_SetCallback
+#define g_stageEventsState_0209f2c8 data_ov001_0209f2e8
+#include "src/ov001/shared_engine/StageRecord_SetCallback_02087d74.c"

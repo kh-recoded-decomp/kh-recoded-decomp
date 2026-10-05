@@ -68,14 +68,25 @@ def eu_functions() -> tuple[dict, dict]:
     import audit_progress
     functions, _ = audit_progress.classify_functions()
     summary = audit_progress.summarize(functions, [])
-    out = {}
+    out, deduped = {}, 0
     for f in functions:
         if f["category"] != "c_decompiled_matched" or not f["source"]:
             continue
         path = EU_ROOT / f["source"]
-        body = path.exists() and function_body(path.read_text(encoding="utf-8", errors="replace"), f["name"])
+        text = path.read_text(encoding="utf-8", errors="replace") if path.exists() else ""
+        shared = re.search(r'#include "(src/[^"]+\.c)"', text)
+        if shared and (ROOT / shared.group(1)).is_file():
+            # Wrapper around a shared US source: read the body it actually compiles.
+            us_name = next((us for us, eu in re.findall(r"#define (\S+) (\S+)", text) if eu == f["name"]),
+                           f["name"])
+            text = (ROOT / shared.group(1)).read_text(encoding="utf-8", errors="replace")
+            body = function_body(text, us_name)
+            deduped += bool(body)
+        else:
+            body = function_body(text, f["name"])
         if body:
             out[f"{f['unit']}:{f['name']}"] = (f["size"], fingerprint(body))
+    summary["deduped_functions"] = deduped
     return out, summary
 
 
@@ -103,6 +114,7 @@ def main() -> int:
                "matched_functions": eu_summary["counts"]["c_decompiled_matched"],
                "total_functions": eu_summary["total_functions"]},
         "shared": {"functions": len(shared), "us_bytes": sum(size for size, _ in shared),
+                   "deduped_functions": eu_summary["deduped_functions"],
                    "us_only_functions": sum(1 for _, mark in us.values() if mark not in shared_marks),
                    "eu_only_functions": sum(1 for _, mark in eu.values() if mark not in shared_marks)},
     }
@@ -120,6 +132,7 @@ def main() -> int:
         f"| **Shared** (same C in both) | {s['us_bytes']:,} | {pct(s['us_bytes'], u['total_code'])} of US "
         f"| {s['functions']:,} |",
         "",
+        f"{s['deduped_functions']:,} shared functions are stored once in `src/` and built for both regions. "
         f"{s['us_only_functions']:,} matched functions are US-only so far and {s['eu_only_functions']:,} are EU-only. "
         "EU numbers come from `eu/tools/audit_progress.py`; per-module EU detail is in [eu/PROGRESS.md](eu/PROGRESS.md).",
         END,

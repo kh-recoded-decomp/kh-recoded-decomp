@@ -1,9 +1,2 @@
-#include "nitro/types.h"
-
-/* Raises a field to a new floor value */
-void ExtendIfGreater(int entity, int minValue)
-{
-    if (*(int *)(entity + 0x9f8) < minValue) {
-        *(int *)(entity + 0x9f8) = minValue;
-    }
-}
+#define ExtendIfGreater_020cc1ec ExtendIfGreater
+#include "src/ov052/unclassified_helpers/ExtendIfGreater_020cc1ec.c"

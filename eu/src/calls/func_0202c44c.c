@@ -1,12 +1,4 @@
-extern void OS_SleepThread(void *p);
-extern struct { char _0[4]; char *field_4; char _8[0x34]; int field_3c; } gFileLoader;
-
-int func_0202c44c(void)
-{
-    if (gFileLoader.field_3c <= 0) {
-        if (*(int *)(gFileLoader.field_4 + 0x448) == 0) goto out;
-    }
-    OS_SleepThread(gFileLoader.field_4 + 0x4c + 0x400);
-out:
-    return 1;
-}
+#define data_02060564 gFileLoader
+#define func_02002aa8 OS_SleepThread
+#define func_0202c438 func_0202c44c
+#include "src/arm9/runtime/func_0202c438.c"

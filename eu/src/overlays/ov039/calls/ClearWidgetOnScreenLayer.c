@@ -1,14 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad_0000[0xc9a0];
-    u8 screenLayers[0x1c];
-} Ov039State;
-
-extern Ov039State *data_ov039_020bea20;
-extern void func_ov027_020b9bb4(void *layers, void *widget);
-
-void ClearWidgetOnScreenLayer(void *widget)
-{
-    func_ov027_020b9bb4(data_ov039_020bea20->screenLayers, widget);
-}
+#define ClearWidgetOnScreenLayer_020bb730 ClearWidgetOnScreenLayer
+#define data_ov039_020bea00 data_ov039_020bea20
+#define func_ov027_020b9b94 func_ov027_020b9bb4
+#include "src/ov039/widget_layers/ClearWidgetOnScreenLayer_020bb730.c"

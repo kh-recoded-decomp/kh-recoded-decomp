@@ -1,19 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct SlotMenu {
-    u8 pad_00000[0x11ee4];
-    s16 slotCount;
-} SlotMenu;
-
-extern SlotMenu *data_ov076_020cd400;
-extern void SlotMenu_ReloadSlot(SlotMenu *menu, int slot, int mode);
-
-void SlotMenu_ReloadAllSlots(void)
-{
-    int slot = 0;
-    s16 slotCount = data_ov076_020cd400->slotCount;
-
-    for (; slot < slotCount; slot++) {
-        SlotMenu_ReloadSlot(data_ov076_020cd400, slot, 0);
-    }
-}
+#define SlotMenu_ReloadAllSlots_020c8ef8 SlotMenu_ReloadAllSlots
+#define SlotMenu_ReloadSlot_020c6f60 SlotMenu_ReloadSlot
+#define g_slotMenu_020cd3e0 data_ov076_020cd400
+#include "src/ov076/unclassified_helpers/SlotMenu_ReloadAllSlots_020c8ef8.c"

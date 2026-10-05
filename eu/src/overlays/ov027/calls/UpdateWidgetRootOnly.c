@@ -1,6 +1,3 @@
-extern void func_ov027_020b8b68(void *root, int keys, int runFinisher, int useAlarm);
-
-void UpdateWidgetRootOnly(void *root, int keys)
-{
-    func_ov027_020b8b68(root, keys, 0, 0);
-}
+#define UpdateWidgetRootOnly_020b8ca8 UpdateWidgetRootOnly
+#define func_ov027_020b8b48 func_ov027_020b8b68
+#include "src/ov027/resource_container/UpdateWidgetRootOnly_020b8ca8.c"

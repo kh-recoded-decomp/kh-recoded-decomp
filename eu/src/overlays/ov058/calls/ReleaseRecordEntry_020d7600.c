@@ -1,17 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u32 initialized;
-    void *record;
-    u8 state[1];
-} SharedRecordState;
-
-extern void ReleaseResourceAndDetach(u8 *object);
-extern void ReleaseSharedRecordState(SharedRecordState *obj);
-
-// Releases an object and its embedded record state
-void ReleaseRecordEntry_020d7600(u8 *object)
-{
-    ReleaseResourceAndDetach(object);
-    ReleaseSharedRecordState((SharedRecordState *)(object + 0x104));
-}
+#define ReleaseRecordEntry_020d75e0 ReleaseRecordEntry_020d7600
+#define ReleaseResourceAndDetach_0202eee8 ReleaseResourceAndDetach
+#define ReleaseSharedRecordState_020a9084 ReleaseSharedRecordState
+#include "src/ov058/unclassified_helpers/ReleaseRecordEntry_020d75e0.c"

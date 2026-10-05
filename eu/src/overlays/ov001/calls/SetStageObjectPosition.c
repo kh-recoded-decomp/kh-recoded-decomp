@@ -1,22 +1,4 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-typedef struct StageObjectHandle {
-    u8 pad_00[0x1c];
-    VecFx32 position;
-} StageObjectHandle;
-
-extern int data_ov001_0209f2e8;
-extern StageObjectHandle *GetStageObjectHandle(u32 id);
-
-void SetStageObjectPosition(int index, const VecFx32 *position)
-{
-    StageObjectHandle *handle;
-
-    if (data_ov001_0209f2e8 != -1) {
-        handle = GetStageObjectHandle((u16)(index + 1));
-        if (handle != NULL) {
-            handle->position = *position;
-        }
-    }
-}
+#define GetStageObjectHandle_0209c0c4 GetStageObjectHandle
+#define SetStageObjectPosition_02087e50 SetStageObjectPosition
+#define data_ov001_0209f2c8 data_ov001_0209f2e8
+#include "src/ov001/wireless/SetStageObjectPosition_02087e50.c"

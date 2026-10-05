@@ -1,14 +1,3 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-typedef struct CameraManager {
-    u8 pad_00[0x12c];
-    fx32 followDistance;
-} CameraManager;
-
-extern CameraManager *data_ov046_020c3500;
-
-void Camera_SetFollowDistance(fx32 distance)
-{
-    data_ov046_020c3500->followDistance = distance;
-}
+#define Camera_SetFollowDistance_020c0dc4 Camera_SetFollowDistance
+#define g_cameraManager_020c34e0 data_ov046_020c3500
+#include "src/ov046/shared_engine/Camera_SetFollowDistance_020c0dc4.c"

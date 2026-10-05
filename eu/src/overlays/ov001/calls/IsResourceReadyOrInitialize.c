@@ -1,21 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct Resource {
-    u8 pad_000[0x628];
-    s32 ready;
-} Resource;
-
-extern int IsScreenModeIdle(void);
-extern void SetScreenFlag200(int arg);
-
-BOOL IsResourceReadyOrInitialize(Resource *resource)
-{
-    if (resource->ready != 0) {
-        return TRUE;
-    }
-    if (IsScreenModeIdle() != 0) {
-        SetScreenFlag200(0);
-        return TRUE;
-    }
-    return FALSE;
-}
+#define IsResourceReadyOrInitialize_0208e7a8 IsResourceReadyOrInitialize
+#define func_ov001_0206a814 IsScreenModeIdle
+#define func_ov001_0206a834 SetScreenFlag200
+#include "src/ov001/shared_engine/IsResourceReadyOrInitialize_0208e7a8.c"

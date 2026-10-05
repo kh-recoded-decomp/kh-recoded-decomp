@@ -1,16 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad_00[8];
-    u16 flags;
-    u8 pad_0A[6];
-    u32 sub;
-} Container;
-
-extern void Obj_ConditionalShutdown(Container *obj, int arg);
-extern u8 *gActorRegistry;
-
-void ShutdownRecordSlotByIndex(int index) {
-    Container **slots = (Container **)(gActorRegistry + 0x20);
-    Obj_ConditionalShutdown(slots[index], index);
-}
+#define Obj_ConditionalShutdown_020368c8 Obj_ConditionalShutdown
+#define func_020368a4 ShutdownRecordSlotByIndex
+#define g_recordTablePtr_0206083c gActorRegistry
+#include "src/arm9/shared_engine/func_020368a4.c"

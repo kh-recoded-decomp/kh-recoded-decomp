@@ -1,35 +1,7 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-typedef struct FieldObject {
-    u8 pad_00[0x40];
-    VecFx32 position;
-} FieldObject;
-
-typedef struct FieldGroup {
-    u8 pad_00[0x46];
-    u16 objectCount;
-} FieldGroup;
-
-extern void MI_CpuFill8(void *dst, int value, u32 size);
-extern FieldObject *GetStridedBufferEntry(FieldGroup *group, int index);
-extern u32 random_next_scaled(u32 upperBound);
-extern VecFx32 *ClaimNthFreeSpawnPoint(int target, int count, VecFx32 *points, u8 *used);
-extern void FieldObject_SetPositionAndSync(FieldObject *object, const VecFx32 *position);
-
-void FieldGroup_ShufflePositions(FieldGroup *group)
-{
-    u8 used[0x1a];
-    VecFx32 positions[0x1a];
-    int i = 0;
-    int count = group->objectCount;
-
-    MI_CpuFill8(used, 0, sizeof(used));
-    for (; i < count; i++) {
-        positions[i] = GetStridedBufferEntry(group, i)->position;
-    }
-    for (i = 0; i < count; i++) {
-        FieldObject *object = GetStridedBufferEntry(group, i);
-        FieldObject_SetPositionAndSync(object, ClaimNthFreeSpawnPoint(random_next_scaled(count - i), count, positions, used));
-    }
-}
+#define FieldGroup_ShufflePositions_020a0f30 FieldGroup_ShufflePositions
+#define FieldObject_SetPositionAndSync_020a0954 FieldObject_SetPositionAndSync
+#define func_01ff8830 MI_CpuFill8
+#define func_ov001_0207f4b4 GetStridedBufferEntry
+#define func_ov011_020a0efc ClaimNthFreeSpawnPoint
+#define random_next_scaled_0202aa04 random_next_scaled
+#include "src/ov011/field_objects/FieldGroup_ShufflePositions_020a0f30.c"

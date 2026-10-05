@@ -1,10 +1,3 @@
-#include "nitro/types.h"
-
-extern void NNSi_FndFreeFromDefaultHeap(void *block);
-
-void FreePointerIfSet(void **ptr) {
-    if (*ptr != 0) {
-        NNSi_FndFreeFromDefaultHeap(*ptr);
-        *ptr = 0;
-    }
-}
+#define FreePointerIfSet_020ba294 FreePointerIfSet
+#define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
+#include "src/ov027/shared_engine/FreePointerIfSet_020ba294.c"

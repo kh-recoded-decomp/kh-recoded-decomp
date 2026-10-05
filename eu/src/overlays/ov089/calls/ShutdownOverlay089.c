@@ -1,19 +1,9 @@
-#include "nitro/types.h"
-
-extern void *func_ov039_020bc1dc(void);
-extern void func_ov027_020b90b8(void *panel, u32 value);
-extern void func_ov089_020bf4a8(void *menu);
-extern void func_ov089_020bf970(void *menu);
-extern void func_ov089_020bfaf0(void *menu);
-extern void func_ov089_020bf37c(void *menu);
-extern BOOL ReleaseRecordSlot(s32 slot);
-
-void ShutdownOverlay089(void *menu)
-{
-    func_ov027_020b90b8(func_ov039_020bc1dc(), 0);
-    func_ov089_020bf4a8(menu);
-    func_ov089_020bf970(menu);
-    func_ov089_020bfaf0(menu);
-    func_ov089_020bf37c(menu);
-    ReleaseRecordSlot(2);
-}
+#define ReleaseRecordSlot_02051dfc ReleaseRecordSlot
+#define ShutdownOverlay089_020c01b4 ShutdownOverlay089
+#define func_ov027_020b9098 func_ov027_020b90b8
+#define func_ov039_020bc1bc func_ov039_020bc1dc
+#define func_ov089_020bf35c func_ov089_020bf37c
+#define func_ov089_020bf488 func_ov089_020bf4a8
+#define func_ov089_020bf950 func_ov089_020bf970
+#define func_ov089_020bfad0 func_ov089_020bfaf0
+#include "src/ov089/panel_state/ShutdownOverlay089_020c01b4.c"

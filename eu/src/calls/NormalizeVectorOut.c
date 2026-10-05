@@ -1,11 +1,3 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-extern void VEC_Normalize(const VecFx32 *src, VecFx32 *dst);
-
-void NormalizeVectorOut(VecFx32 *dst, const VecFx32 *src)
-{
-    VecFx32 tmp;
-    VEC_Normalize(src, &tmp);
-    *dst = tmp;
-}
+#define NormalizeVectorOut_0204840c NormalizeVectorOut
+#define func_01ff9f88 VEC_Normalize
+#include "src/arm9/math/NormalizeVectorOut_0204840c.c"

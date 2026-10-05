@@ -1,12 +1,5 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-extern u32 data_ov044_020d0ec0;
-
-extern VecFx32 *func_ov044_020d0598(void);
-extern void InitDriftParticle(void *particle, const VecFx32 *position, int param30, int param2c);
-
-void SpawnPanelDriftParticle(int param30, int param2c)
-{
-    InitDriftParticle((void *)(data_ov044_020d0ec0 + 0x110), func_ov044_020d0598(), param30, param2c);
-}
+#define InitDriftParticle_020afb34 InitDriftParticle
+#define SpawnPanelDriftParticle_020d058c SpawnPanelDriftParticle
+#define func_ov044_020d0578 func_ov044_020d0598
+#define g_panel_020d0ea0 data_ov044_020d0ec0
+#include "src/ov044/panel_state/SpawnPanelDriftParticle_020d058c.c"

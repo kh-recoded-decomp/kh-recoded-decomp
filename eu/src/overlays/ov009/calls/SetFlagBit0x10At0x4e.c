@@ -1,9 +1,2 @@
-#include "nitro/types.h"
-
-void SetFlagBit0x10At0x4e(int obj, BOOL enable) {
-    if (enable) {
-        *(u16 *)(obj + 0x4e) = *(u16 *)(obj + 0x4e) | 0x10;
-        return;
-    }
-    *(u16 *)(obj + 0x4e) = *(u16 *)(obj + 0x4e) & 0xffef;
-}
+#define SetFlagBit0x10At0x4e_020a0bf4 SetFlagBit0x10At0x4e
+#include "src/ov009/unclassified_helpers/SetFlagBit0x10At0x4e_020a0bf4.c"

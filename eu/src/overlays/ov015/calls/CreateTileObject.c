@@ -1,22 +1,7 @@
-#include "nitro/types.h"
-
-extern void *NNSi_FndAllocFromDefaultHeap();
-extern void InitTextLayerAt();
-extern void func_ov015_02079bc0();
-extern void FlushBufferAndRunCallback();
-extern u32 CallIndexedHandler();
-extern void FillBackgroundLayerRect();
-
-/* Allocates and registers a tiled graphics object. */
-void *CreateTileObject(u32 ownerId, u32 value, u16 *layout, void *tileData, void *mapData) {
-    void *context;
-    u32 id;
-
-    context = NNSi_FndAllocFromDefaultHeap(0x34);
-    InitTextLayerAt(context, ownerId, 0, value, layout);
-    func_ov015_02079bc0(context, layout, tileData, mapData);
-    FlushBufferAndRunCallback(context);
-    id = CallIndexedHandler(ownerId);
-    FillBackgroundLayerRect(context, id, layout[0], layout[1], layout[5] & 0xff);
-    return context;
-}
+#define CreateTileObject_02079c54 CreateTileObject
+#define func_020014b0 InitTextLayerAt
+#define func_0200153c FlushBufferAndRunCallback
+#define func_02001a60 FillBackgroundLayerRect
+#define func_0202a178 NNSi_FndAllocFromDefaultHeap
+#define func_0202b3b8 CallIndexedHandler
+#include "src/ov015/panel_state/CreateTileObject_02079c54.c"

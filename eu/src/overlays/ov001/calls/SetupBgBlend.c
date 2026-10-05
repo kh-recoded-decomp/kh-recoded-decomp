@@ -1,10 +1,3 @@
-#include "nitro/types.h"
-
-extern void G2x_SetBlendAlpha_(void *blendControl, u32 plane1, u32 plane2, u32 eva, u32 evb);
-
-void SetupBgBlend(void)
-{
-    *(vu16 *)0x0400000e = (*(vu16 *)0x0400000e & ~3) | 1;
-    *(vu16 *)0x0400000c = (*(vu16 *)0x0400000c & ~3) | 2;
-    G2x_SetBlendAlpha_((void *)0x04000050, 4, 1, 10, 6);
-}
+#define G2x_SetBlendAlpha_02006850 G2x_SetBlendAlpha_
+#define SetupBgBlend_0207d6f4 SetupBgBlend
+#include "src/ov001/field_manager/SetupBgBlend_0207d6f4.c"

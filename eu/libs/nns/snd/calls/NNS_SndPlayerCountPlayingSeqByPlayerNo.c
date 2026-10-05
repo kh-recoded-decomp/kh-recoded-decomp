@@ -1,6 +1,3 @@
-#include "libs/nns/snd/snd_internal.h"
-
-int NNS_SndPlayerCountPlayingSeqByPlayerNo(int playerNo)
-{
-    return sSndPlayers[playerNo].playerList.numObjects;
-}
+#define NNS_SndPlayerCountPlayingSeqByPlayerNo_0201d6c0 NNS_SndPlayerCountPlayingSeqByPlayerNo
+#define data_0205dcf8 sSndPlayers
+#include "src/arm9/library_nns_snd/NNS_SndPlayerCountPlayingSeqByPlayerNo_0201d6c0.c"

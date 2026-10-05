@@ -1,16 +1,5 @@
-#include "nitro/types.h"
-
-extern u8 *gSoundWork;
-extern int NNS_SndArcStrmGetCurrentPlayingPos(void *handle);
-extern u32 NNS_SndArcStrmGetTimeLength(void *handle);
-
-u32 GetNextStreamCursorOrInvalid(int handleIndex)
-{
-    u32 next = NNS_SndArcStrmGetCurrentPlayingPos(gSoundWork + 0xb44c0 + handleIndex * 4) + 1;
-    u32 limit = NNS_SndArcStrmGetTimeLength(gSoundWork + 0xb44c0 + handleIndex * 4);
-
-    if (next >= limit) {
-        next = 0xffffffff;
-    }
-    return next;
-}
+#define GetNextStreamCursorOrInvalid_0204df04 GetNextStreamCursorOrInvalid
+#define func_02020320 NNS_SndArcStrmGetCurrentPlayingPos
+#define func_02020354 NNS_SndArcStrmGetTimeLength
+#define g_soundWork_0206084c gSoundWork
+#include "src/arm9/audio/GetNextStreamCursorOrInvalid_0204df04.c"

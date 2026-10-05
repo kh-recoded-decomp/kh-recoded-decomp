@@ -1,11 +1,6 @@
-extern int data_ov039_020bea20;
-extern void PollHandlerInput(void);
-extern void func_ov039_020bcf40(int arg0);
-extern void func_ov039_020bd074(int arg0);
-
-void InitThenDispatchTwoHandlers(void)
-{
-    PollHandlerInput();
-    func_ov039_020bcf40(*(int *)(data_ov039_020bea20 + 0xc998));
-    func_ov039_020bd074(*(int *)(data_ov039_020bea20 + 0xc99c));
-}
+#define InitThenDispatchTwoHandlers_020bb308 InitThenDispatchTwoHandlers
+#define data_ov039_020bea00 data_ov039_020bea20
+#define func_ov039_020baf1c PollHandlerInput
+#define func_ov039_020bcf20 func_ov039_020bcf40
+#define func_ov039_020bd054 func_ov039_020bd074
+#include "src/ov039/overlay_event_dispatch/InitThenDispatchTwoHandlers_020bb308.c"

@@ -1,22 +1,5 @@
-#include "nitro/types.h"
-
-typedef struct ScriptOperand {
-    u32 type;
-    u32 value;
-} ScriptOperand;
-
-extern int ScriptVm_ReadOperandInt(void *vm, ScriptOperand *op);
-extern void PostPendingRequest(u16 requestId, u8 requestArg);
-extern void SetupSlotPanelMode(int mode, int enable);
-
-int ScriptCmd_PostRequestAndSetPanel(void *vm, ScriptOperand *op)
-{
-    int value = ScriptVm_ReadOperandInt(vm, op);
-    u16 requestId = op[1].value;
-    u8 requestArg = (u16)(op[1].value >> 16);
-    if (value != 0) {
-        PostPendingRequest(requestId, requestArg);
-    }
-    SetupSlotPanelMode(2, value);
-    return 1;
-}
+#define PostPendingRequest_0207d630 PostPendingRequest
+#define ScriptCmd_PostRequestAndSetPanel_020a06b8 ScriptCmd_PostRequestAndSetPanel
+#define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
+#define SetupSlotPanelMode_020640d8 SetupSlotPanelMode
+#include "src/ov011/shared_engine/ScriptCmd_PostRequestAndSetPanel_020a06b8.c"

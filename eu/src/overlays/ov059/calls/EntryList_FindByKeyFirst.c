@@ -1,23 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct {
-    union {
-        u32 value;
-        struct {
-            u16 first;
-            u16 second;
-        } pair;
-    } key;
-    s32 kind;
-} EntryKey;
-
-extern int EntryList_FindByFirstId(void *list, u16 id);
-extern int EntryList_FindByValue(void *list, u32 value);
-
-int EntryList_FindByKeyFirst(void *list, EntryKey *key)
-{
-    if (key->kind == 2) {
-        return EntryList_FindByFirstId(list, key->key.pair.first);
-    }
-    return EntryList_FindByValue(list, key->key.value);
-}
+#define EntryList_FindByKeyFirst_020cf404 EntryList_FindByKeyFirst
+#define func_ov059_020cf41c EntryList_FindByValue
+#define func_ov059_020cf490 EntryList_FindByFirstId
+#include "src/ov059/unclassified_helpers/EntryList_FindByKeyFirst_020cf404.c"

@@ -1,27 +1,5 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-typedef struct CameraManager {
-    u8 pad_00[0x2c];
-    VecFx32 defaultDirection;
-} CameraManager;
-
-extern CameraManager *data_ov046_020c3500;
-extern void GetParticleDriftDirection(CameraManager *camera, VecFx32 *out);
-extern u16 FX_Atan2Idx(fx32 y, fx32 x);
-
-u16 Camera_GetDriftHeading(void)
-{
-    VecFx32 direction;
-    fx32 height;
-
-    GetParticleDriftDirection(data_ov046_020c3500, &direction);
-    height = direction.y;
-    if (height < 0) {
-        height = -height;
-    }
-    if (height < data_ov046_020c3500->defaultDirection.y) {
-        return FX_Atan2Idx(-direction.x, -direction.z);
-    }
-    return FX_Atan2Idx(-data_ov046_020c3500->defaultDirection.x, -data_ov046_020c3500->defaultDirection.z);
-}
+#define Camera_GetDriftHeading_020c14fc Camera_GetDriftHeading
+#define FixedPointAtan2_020062bc FX_Atan2Idx
+#define GetParticleDriftDirection_020af9a4 GetParticleDriftDirection
+#define g_cameraManager_020c34e0 data_ov046_020c3500
+#include "src/ov046/shared_engine/Camera_GetDriftHeading_020c14fc.c"

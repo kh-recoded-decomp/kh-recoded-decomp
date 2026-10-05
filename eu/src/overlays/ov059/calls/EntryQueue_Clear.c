@@ -1,12 +1,2 @@
-#include "nitro/types.h"
-
-typedef struct EntryQueue {
-    u8 pad_000[0x120];
-    u8 count;
-    u8 capacity;
-} EntryQueue;
-
-void EntryQueue_Clear(EntryQueue *queue)
-{
-    queue->count = 0;
-}
+#define EntryQueue_Clear_020cf3dc EntryQueue_Clear
+#include "src/ov059/unclassified_helpers/EntryQueue_Clear_020cf3dc.c"

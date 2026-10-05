@@ -1,8 +1,3 @@
-#include "nitro/types.h"
-
-extern void OpenMessageWindow_0207a504(int mode, int x, int y, int width, int textId, int choiceId, int arg, int flags);
-
-void ShowMessageWindowMode3(int arg)
-{
-    OpenMessageWindow_0207a504(3, 0, 0, 0, -1, -1, arg, 0);
-}
+#define ShowMessageWindowMode3_02071a84 ShowMessageWindowMode3
+#define func_ov001_0207a504 OpenMessageWindow_0207a504
+#include "src/ov001/dialog_balloon/ShowMessageWindowMode3_02071a84.c"

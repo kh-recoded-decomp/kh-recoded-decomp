@@ -1,13 +1,2 @@
-#include "nitro/types.h"
-
-typedef struct {
-    int state;
-    u32 flags;
-    int frameCount;
-} StateMachine;
-
-void StateMachine_SetState(StateMachine *machine, int state)
-{
-    machine->state = state;
-    machine->frameCount = 0;
-}
+#define StateMachine_SetState_020c3bc4 StateMachine_SetState
+#include "src/ov093/unclassified_helpers/StateMachine_SetState_020c3bc4.c"

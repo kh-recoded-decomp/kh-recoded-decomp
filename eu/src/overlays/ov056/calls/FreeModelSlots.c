@@ -1,28 +1,5 @@
-#include "nitro/types.h"
-
-typedef struct ModelSlot {
-    u8 pad_000[0x104];
-    u8 recordState[0x134 - 0x104];
-} ModelSlot;
-
-typedef struct ModelSlotList {
-    ModelSlot *slots;
-    s8 count;
-} ModelSlotList;
-
-extern void ReleaseResourceAndDetach(u8 *object);
-extern void ReleaseSharedRecordState(void *state);
-extern void NNSi_FndFreeFromDefaultHeap(void *block);
-
-void FreeModelSlots(ModelSlotList *list)
-{
-    int i;
-    for (i = 0; i < list->count; i++) {
-        ModelSlot *slot = &list->slots[i];
-        ReleaseResourceAndDetach((u8 *)slot);
-        ReleaseSharedRecordState(slot->recordState);
-    }
-    if (list->slots != NULL) {
-        NNSi_FndFreeFromDefaultHeap(list->slots);
-    }
-}
+#define FreeModelSlots_020d7e34 FreeModelSlots
+#define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
+#define ReleaseResourceAndDetach_0202eee8 ReleaseResourceAndDetach
+#define ReleaseSharedRecordState_020a9084 ReleaseSharedRecordState
+#include "src/ov056/unclassified_helpers/FreeModelSlots_020d7e34.c"

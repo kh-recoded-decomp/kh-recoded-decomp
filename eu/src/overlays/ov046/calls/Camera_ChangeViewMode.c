@@ -1,22 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct CameraManager {
-    u8 pad_00[0x80];
-    int type;
-} CameraManager;
-
-extern CameraManager *data_ov046_020c3500;
-extern void func_ov047_020c3578(int viewMode, void *out);
-
-void Camera_ChangeViewMode(int viewMode, void *out)
-{
-    switch (data_ov046_020c3500->type) {
-    case 0:
-        func_ov047_020c3578(viewMode, out);
-        break;
-    case 1:
-    case 2:
-    case 3:
-        break;
-    }
-}
+#define Camera_ChangeViewMode_020c1578 Camera_ChangeViewMode
+#define func_ov047_020c3558 func_ov047_020c3578
+#define g_cameraManager_020c34e0 data_ov046_020c3500
+#include "src/ov046/shared_engine/Camera_ChangeViewMode_020c1578.c"

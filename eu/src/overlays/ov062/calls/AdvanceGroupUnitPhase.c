@@ -1,60 +1,7 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-typedef struct {
-    u8 pad_00[8];
-    int soundId;
-} SoundHandle;
-
-typedef struct UnitObj {
-    u8 pad_00[2];
-    s8 state;
-    u8 pad_03[0x2f];
-    s16 phase;
-    u8 pad_34[0x11c];
-    SoundHandle *sound;
-} UnitObj;
-
-typedef struct {
-    u8 pad_00[8];
-    UnitObj *leader;
-} UnitGroup;
-
-extern int AdvanceOwnerAnimation(UnitObj *owner, fx32 step);
-extern void RebindModelAnimTracks(UnitObj *rig, int blend);
-extern void AdvanceToSecondPhase(UnitObj *obj);
-extern void PlaySoundChecked(int id, int flag);
-extern void ForwardSubModePairA(int a, int b);
-
-BOOL AdvanceGroupUnitPhase(UnitGroup *group, UnitObj *unit, fx32 step)
-{
-    UnitObj *leader = group->leader;
-    SoundHandle *sound = unit->sound;
-    s16 phase = unit->phase;
-    int done = AdvanceOwnerAnimation(unit, step);
-
-    switch (phase) {
-    case 0:
-        if (unit == leader) {
-            if (done != 0) {
-                RebindModelAnimTracks(unit, 1);
-            }
-        } else if (leader->phase != 0) {
-            RebindModelAnimTracks(unit, 1);
-        }
-        break;
-    case 1:
-        if (done != 0) {
-            AdvanceToSecondPhase(unit);
-        }
-        if (unit == leader) {
-            PlaySoundChecked(sound->soundId, 1);
-            ForwardSubModePairA(3, 0);
-        }
-        break;
-    }
-    if (unit->state == -1) {
-        return TRUE;
-    }
-    return FALSE;
-}
+#define AdvanceGroupUnitPhase_020d81e4 AdvanceGroupUnitPhase
+#define AdvanceOwnerAnimation_020ab41c AdvanceOwnerAnimation
+#define AdvanceToSecondPhase_020ab5f0 AdvanceToSecondPhase
+#define ForwardSubModePairA_020af544 ForwardSubModePairA
+#define PlaySoundChecked_0204d8d0 PlaySoundChecked
+#define RebindModelAnimTracks_020ab2f0 RebindModelAnimTracks
+#include "src/ov062/object_state/AdvanceGroupUnitPhase_020d81e4.c"

@@ -1,16 +1,2 @@
-#include "nitro/types.h"
-
-extern int func_ov003_02064c10(int stream);
-
-/* Resets the subtitle cursor and clamps the step. */
-int ClampMovieSubtitleStep(int stream, int minStep)
-{
-    int step;
-
-    step = func_ov003_02064c10(stream);
-    *(int *)(stream + 0x58) = 0;
-    if (step <= minStep) {
-        step = minStep;
-    }
-    return step;
-}
+#define ClampMovieSubtitleStep_02064e08 ClampMovieSubtitleStep
+#include "src/ov003/video_playback/ClampMovieSubtitleStep_02064e08.c"

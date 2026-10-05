@@ -1,11 +1,4 @@
-#include "nitro/types.h"
-
-extern int data_ov001_0209f2e8;
-extern void func_ov001_0209b978(u32 updateParam);
-
-void StageManager_Update(u32 updateParam)
-{
-    if (data_ov001_0209f2e8 != -1) {
-        func_ov001_0209b978(updateParam);
-    }
-}
+#define StageManager_Update_02087694 StageManager_Update
+#define func_ov001_0209b950 func_ov001_0209b978
+#define g_stageEventsState_0209f2c8 data_ov001_0209f2e8
+#include "src/ov001/shared_engine/StageManager_Update_02087694.c"

@@ -1,7 +1,2 @@
-struct T { int a, b, c; };
-struct S { int pad[18]; struct T t; };
-
-void Transform_SetBasePos(struct S *d, struct T *s)
-{
-    d->t = *s;
-}
+#define Transform_SetBasePos_0203ab9c Transform_SetBasePos
+#include "src/arm9/shared_engine/Transform_SetBasePos_0203ab9c.c"

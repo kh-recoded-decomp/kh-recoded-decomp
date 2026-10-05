@@ -1,19 +1,3 @@
-#include "nitro/types.h"
-
-extern u32 func_ov027_020ba2c8();
-
-void SetMatrixDescription(int context,int messageIndex)
-
-{
-  u32 description;
-  
-  if (messageIndex >= 0) {
-    description = func_ov027_020ba2c8(context + 0x4ee0,messageIndex);
-  }
-  else {
-    description = 0;
-  }
-  *(u32 *)(context + 0x11fac) = description;
-  *(u8 *)(context + 7) = 1;
-  return;
-}
+#define SetMatrixDescription_020c48c0 SetMatrixDescription
+#define func_ov027_020ba2a8 func_ov027_020ba2c8
+#include "src/ov075/reviewed_helpers/SetMatrixDescription_020c48c0.c"

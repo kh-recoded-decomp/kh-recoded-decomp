@@ -1,17 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct SlotMenu SlotMenu;
-
-extern BOOL func_ov076_020c8b48(SlotMenu *menu);
-extern void SlotMenu_ShowPointLimitWarning(SlotMenu *menu);
-
-BOOL SlotMenu_CheckPointLimit(SlotMenu *menu, BOOL showWarning)
-{
-    if (!func_ov076_020c8b48(menu)) {
-        if (showWarning) {
-            SlotMenu_ShowPointLimitWarning(menu);
-        }
-        return FALSE;
-    }
-    return TRUE;
-}
+#define SlotMenu_CheckPointLimit_020c544c SlotMenu_CheckPointLimit
+#define SlotMenu_IsPointTotalWithinLimit_020c8b28 func_ov076_020c8b48
+#define SlotMenu_ShowPointLimitWarning_020c89a0 SlotMenu_ShowPointLimitWarning
+#include "src/ov076/unclassified_helpers/SlotMenu_CheckPointLimit_020c544c.c"

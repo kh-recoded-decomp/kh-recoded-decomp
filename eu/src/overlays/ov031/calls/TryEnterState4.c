@@ -1,16 +1,4 @@
-#include "nitro/types.h"
-
-extern u32 ResetSceneSlots(void);
-extern u32 StepResourceSlotLoading(void);
-
-u32 TryEnterState4(void)
-{
-    u32 result;
-
-    result = StepResourceSlotLoading();
-    if (result == 0) {
-        return 0xffffffff;
-    }
-    ResetSceneSlots();
-    return 4;
-}
+#define TryEnterState4_020ba6a4 TryEnterState4
+#define func_ov001_02067704 ResetSceneSlots
+#define func_ov001_02086d00 StepResourceSlotLoading
+#include "src/ov031/state_machine/TryEnterState4_020ba6a4.c"

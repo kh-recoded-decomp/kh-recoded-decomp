@@ -1,13 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct MenuPanel MenuPanel;
-
-extern BOOL PlaySoundEffect(int seqArcNo, int index);
-extern void func_ov076_020c9c7c(MenuPanel *panel, BOOL confirmed);
-
-int MenuPanel_Close(MenuPanel *panel)
-{
-    PlaySoundEffect(1, 3);
-    func_ov076_020c9c7c(panel, TRUE);
-    return 3;
-}
+#define MenuPanel_Close_020ca970 MenuPanel_Close
+#define MenuPanel_Finish_020c9c5c func_ov076_020c9c7c
+#define PlaySoundEffect_0204d924 PlaySoundEffect
+#include "src/ov076/unclassified_helpers/MenuPanel_Close_020ca970.c"

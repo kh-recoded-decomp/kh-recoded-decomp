@@ -1,14 +1,2 @@
-#include "nitro/types.h"
-
-typedef struct Actor {
-    u8 pad_000[0xEF4];
-    u32 flags;
-} Actor;
-
-BOOL IsActorFlagBit8Set(Actor *actor)
-{
-    if ((actor->flags & 8) != 0) {
-        return TRUE;
-    }
-    return FALSE;
-}
+#define func_ov001_0208a334 IsActorFlagBit8Set
+#include "src/ov001/actor_animation/func_ov001_0208a334.c"

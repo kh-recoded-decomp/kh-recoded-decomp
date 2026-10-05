@@ -1,8 +1,3 @@
-#include "nitro/types.h"
-
-extern int CreateObjectSlot(void *manager, int animation, int resource, int x, int y, int mode,
-                                     int priority, int palette, int enabled);
-
-int CreateDefaultObjectSlot(void *manager, int animation, int resource, int x, int y) {
-    return CreateObjectSlot(manager, animation, resource, x, y, 0, 0, -1, 0);
-}
+#define CreateDefaultObjectSlot_020b6778 CreateDefaultObjectSlot
+#define CreateObjectSlot_020b6794 CreateObjectSlot
+#include "src/ov024/unclassified_helpers/CreateDefaultObjectSlot_020b6778.c"

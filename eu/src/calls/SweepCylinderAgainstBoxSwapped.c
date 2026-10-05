@@ -1,21 +1,4 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-void NegateVecFx32(VecFx32 *vec);
-BOOL func_020434e4(void *first, void *second, void *contact, u32 flags, const VecFx32 *velocity);
-
-BOOL SweepCylinderAgainstBoxSwapped(void *first, void *second, void *contact, u32 options, const VecFx32 *velocity)
-{
-    u32 flags = (options & 1) ^ 1;
-    VecFx32 copy;
-    VecFx32 reversed;
-
-    if (options & 4)
-        flags |= 8;
-    if (options & 8)
-        flags |= 4;
-    reversed = *velocity;
-    NegateVecFx32(&reversed);
-    copy = reversed;
-    return func_020434e4(second, first, contact, flags, &copy);
-}
+#define NegateVecFx32_0204aa40 NegateVecFx32
+#define SweepBoxAgainstCylinder_020434d0 func_020434e4
+#define SweepCylinderAgainstBoxSwapped_02041984 SweepCylinderAgainstBoxSwapped
+#include "src/arm9/spatial_queries/SweepCylinderAgainstBoxSwapped_02041984.c"

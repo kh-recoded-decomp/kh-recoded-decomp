@@ -1,12 +1,4 @@
-#include "nitro/types.h"
-
-extern s32 LookupTableOffset(s32 category, s32 entryIndex);
-extern BOOL IsRecordFlagBitSet(s32 recordId);
-
-BOOL IsCategoryEntryFlagSet(s32 category, s32 entryIndex) {
-    s32 recordId = LookupTableOffset(category, entryIndex);
-    if (entryIndex < 0) {
-        return FALSE;
-    }
-    return IsRecordFlagBitSet(recordId);
-}
+#define IsCategoryEntryFlagSet_020699c8 IsCategoryEntryFlagSet
+#define func_ov002_0206991c IsRecordFlagBitSet
+#define func_ov002_02069dd8 LookupTableOffset
+#include "src/ov002/unclassified_helpers/IsCategoryEntryFlagSet_020699c8.c"

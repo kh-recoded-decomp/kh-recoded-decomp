@@ -1,31 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct PoolNode {
-    u32 flags;
-    struct PoolNode *prev;
-    struct PoolNode *next;
-} PoolNode;
-
-typedef struct HandlePool {
-    PoolNode *nodes;
-    PoolNode *freeList;
-    PoolNode *usedList;
-} HandlePool;
-
-extern int GetEntryNumberFromAddress(HandlePool *pool, PoolNode *node);
-extern void HandlePool_ReleaseHandle(HandlePool *pool, int handle);
-
-void HandlePool_ReleaseAll(HandlePool *pool)
-{
-    PoolNode *node;
-    PoolNode *next;
-
-    if (pool != NULL) {
-        node = pool->usedList;
-        while (node != NULL) {
-            next = node->next;
-            HandlePool_ReleaseHandle(pool, GetEntryNumberFromAddress(pool, node));
-            node = next;
-        }
-    }
-}
+#define HandlePool_ReleaseAll_0208f21c HandlePool_ReleaseAll
+#define HandlePool_ReleaseHandle_0208f1a8 HandlePool_ReleaseHandle
+#define func_ov001_0208f240 GetEntryNumberFromAddress
+#include "src/ov001/unclassified_helpers/HandlePool_ReleaseAll_0208f21c.c"

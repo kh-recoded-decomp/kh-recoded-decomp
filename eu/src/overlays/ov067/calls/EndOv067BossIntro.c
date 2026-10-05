@@ -1,37 +1,10 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad_000[0x9ac];
-    u64 flags;
-    u8 pad_9b4[0xfc8 - 0x9b4];
-    u8 handle[4];
-} BossEntity;
-
-typedef struct {
-    u8 pad_00[0x14];
-    int player;
-} SceneOwner;
-
-extern BossEntity *GetBoundedEntryField(int index);
-extern BOOL Camera_ReturnFromPathView(void);
-extern void ResetObjHandle(void *handle);
-extern void RunHudExitCallback(void);
-extern void ApplyTimeScaledSpeed(BossEntity *entity, int speed);
-extern void ResetGaugeDisplay(void);
-extern void SetManagerEnabled(u32 enabled);
-extern void StopEntrySounds(SceneOwner *owner, void *obj);
-
-void EndOv067BossIntro(SceneOwner *owner, void *obj)
-{
-    BossEntity *entity = GetBoundedEntryField(owner->player);
-
-    Camera_ReturnFromPathView();
-    ResetObjHandle(entity->handle);
-    entity->flags &= ~0x1000000ULL;
-    entity->flags &= ~0x20000000ULL;
-    RunHudExitCallback();
-    ApplyTimeScaledSpeed(entity, 0x1000);
-    ResetGaugeDisplay();
-    SetManagerEnabled(0);
-    StopEntrySounds(owner, obj);
-}
+#define ApplyTimeScaledSpeed_020c7d28 ApplyTimeScaledSpeed
+#define Camera_ReturnFromPathView_020c2fac Camera_ReturnFromPathView
+#define EndOv067BossIntro_020d8358 EndOv067BossIntro
+#define GetBoundedEntryField_0206db5c GetBoundedEntryField
+#define ResetGaugeDisplay_020734f8 ResetGaugeDisplay
+#define ResetObjHandle_020aa4c8 ResetObjHandle
+#define RunHudExitCallback_02071fec RunHudExitCallback
+#define SetManagerEnabled_0206e160 SetManagerEnabled
+#define StopEntrySounds_020addcc StopEntrySounds
+#include "src/ov067/object_state/EndOv067BossIntro_020d8358.c"

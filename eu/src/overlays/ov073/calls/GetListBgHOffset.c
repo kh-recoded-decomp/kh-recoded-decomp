@@ -1,11 +1,2 @@
-#include "nitro/types.h"
-
-typedef struct ListView {
-    u8 pad_00[0x94];
-    int scrollX;
-} ListView;
-
-int GetListBgHOffset(ListView *list)
-{
-    return -list->scrollX;
-}
+#define GetListBgHOffset_020c3f9c GetListBgHOffset
+#include "src/ov073/status_menu/GetListBgHOffset_020c3f9c.c"

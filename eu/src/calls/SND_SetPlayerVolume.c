@@ -1,5 +1,2 @@
-extern void SNDi_SetPlayerParam(int a, int b, int c, int d);
-
-void SND_SetPlayerVolume(int playerNo, int volume) {
-    SNDi_SetPlayerParam(playerNo, 6, volume, 2);
-}
+#define SND_SetPlayerVolume_0200ea1c SND_SetPlayerVolume
+#include "src/arm9/library_nitro_snd/SND_SetPlayerVolume_0200ea1c.c"

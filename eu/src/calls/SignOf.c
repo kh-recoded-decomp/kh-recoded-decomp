@@ -1,9 +1,2 @@
-#include "nitro/types.h"
-
-int SignOf(int value)
-{
-    if (value == 0) {
-        return 0;
-    }
-    return value > 0 ? 1 : -1;
-}
+#define SignOf_02048ad8 SignOf
+#include "src/arm9/math/SignOf_02048ad8.c"

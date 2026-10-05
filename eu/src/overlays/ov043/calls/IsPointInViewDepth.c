@@ -1,12 +1,4 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-extern s32 func_ov031_020bc720(void);
-extern BOOL IsWithinPlaneSet_0203ebdc(VecFx32 *point, s32 threshold);
-
-BOOL IsPointInViewDepth(VecFx32 *point, s32 threshold) {
-    if (point->z < -(threshold + func_ov031_020bc720())) {
-        return FALSE;
-    }
-    return IsWithinPlaneSet_0203ebdc(point, threshold);
-}
+#define IsPointInViewDepth_020bd284 IsPointInViewDepth
+#define IsWithinPlaneSet_0203ebc8 IsWithinPlaneSet_0203ebdc
+#define func_ov031_020bc700 func_ov031_020bc720
+#include "src/ov043/camera/IsPointInViewDepth_020bd284.c"

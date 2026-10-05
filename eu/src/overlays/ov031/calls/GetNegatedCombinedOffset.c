@@ -1,15 +1,4 @@
-extern unsigned int data_ov031_020bc820;
-extern unsigned int func_ov043_020bca3c();
-
-int GetNegatedCombinedOffset(int offset)
-
-{
-  int context;
-  int record;
-  
-  context = data_ov031_020bc820;
-  record = func_ov043_020bca3c();
-  { int value = *(int *)(*(int *)(context + 0x50) + *(int *)(context + 0x44) * 0x3c);
-    value += *(int *)(record + 8);
-    return -(offset + value); }
-}
+#define GetNegatedCombinedOffset_020bc68c GetNegatedCombinedOffset
+#define _data_ov031_020bc800 data_ov031_020bc820
+#define func_ov043_020bca1c func_ov043_020bca3c
+#include "src/ov031/overlay_state/GetNegatedCombinedOffset_020bc68c.c"

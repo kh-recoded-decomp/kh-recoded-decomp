@@ -1,20 +1,3 @@
-#include "nitro/types.h"
-
-extern int CheckStatusAndThreshold();
-
-int GetRowColorWithStatus(int row, int cursor, int limit)
-{
-    if (cursor < 0 || row == cursor) {
-        if (row >= limit) {
-            return 0xa;
-        }
-        if (CheckStatusAndThreshold() >= 2) {
-            return 0xe;
-        }
-        return 2;
-    }
-    if (row < cursor) {
-        return 0xc;
-    }
-    return 8;
-}
+#define GetRowColorWithStatus_020bf5cc GetRowColorWithStatus
+#define func_020275c8 CheckStatusAndThreshold
+#include "src/ov083/unclassified_helpers/GetRowColorWithStatus_020bf5cc.c"

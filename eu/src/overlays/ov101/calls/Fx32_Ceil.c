@@ -1,11 +1,2 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-#include "nitro/fx.h"
-
-fx32 Fx32_Ceil(fx32 value)
-{
-    if ((value & (FX32_ONE - 1)) != 0) {
-        value = (value & ~(FX32_ONE - 1)) + FX32_ONE;
-    }
-    return value;
-}
+#define Fx32_Ceil_020beb00 Fx32_Ceil
+#include "src/ov101/unclassified_helpers/Fx32_Ceil_020beb00.c"

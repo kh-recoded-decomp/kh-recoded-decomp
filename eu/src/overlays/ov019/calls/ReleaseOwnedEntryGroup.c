@@ -1,16 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct Actor {
-    u8 pad_00[0x64];
-    s16 groupId;
-} Actor;
-
-void func_ov021_020a8a88(int groupId);
-
-void ReleaseOwnedEntryGroup(Actor *self)
-{
-    if (self->groupId != -1) {
-        func_ov021_020a8a88(self->groupId);
-        self->groupId = -1;
-    }
-}
+#define ReleaseOwnedEntryGroup_020a3640 ReleaseOwnedEntryGroup
+#define func_ov021_020a8a68 func_ov021_020a8a88
+#include "src/ov019/unclassified_helpers/ReleaseOwnedEntryGroup_020a3640.c"

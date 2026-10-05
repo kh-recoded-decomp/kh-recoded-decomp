@@ -1,37 +1,10 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 data[0x34];
-} TextLayer;
-
-typedef struct {
-    s32 state;
-    u32 flags;
-    u8 pad_08[0x10];
-    TextLayer textLayer;
-    u16 *text;
-} PopupWindow;
-
-extern u32 func_ov091_020c2798(PopupWindow *window, u32 mask);
-extern void func_ov091_020c2784(PopupWindow *window, u32 mask);
-extern void NNSi_FndFreeFromDefaultHeap(void *block);
-extern void CallVirtualHandlerSlot1(TextLayer *layer, int color);
-extern void FlushBufferAndRunCallback(TextLayer *layer);
-extern void DestroyFndObjectList(TextLayer *layer);
-extern void *G2S_GetBG2ScrPtr(void);
-extern void MIi_CpuClearFast(u32 data, void *dest, u32 size);
-
-void ClosePopupText(PopupWindow *window)
-{
-    if (func_ov091_020c2798(window, 1)) {
-        if (window->text != NULL) {
-            NNSi_FndFreeFromDefaultHeap(window->text);
-            window->text = NULL;
-            CallVirtualHandlerSlot1(&window->textLayer, 0);
-            FlushBufferAndRunCallback(&window->textLayer);
-            DestroyFndObjectList(&window->textLayer);
-        }
-        func_ov091_020c2784(window, 1);
-    }
-    MIi_CpuClearFast(0, G2S_GetBG2ScrPtr(), 0x800);
-}
+#define CallVirtualHandlerSlot1_02001574 CallVirtualHandlerSlot1
+#define ClearPopupFlags_020c2764 func_ov091_020c2784
+#define ClosePopupText_020c1ae8 ClosePopupText
+#define DestroyFndObjectList_020014f0 DestroyFndObjectList
+#define FlushBufferAndRunCallback_0200153c FlushBufferAndRunCallback
+#define G2S_GetBG2ScrPtr_02006f0c G2S_GetBG2ScrPtr
+#define MIi_CpuClearFast_01ff8740 MIi_CpuClearFast
+#define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
+#define TestPopupFlags_020c2778 func_ov091_020c2798
+#include "src/ov091/panel_state/ClosePopupText_020c1ae8.c"

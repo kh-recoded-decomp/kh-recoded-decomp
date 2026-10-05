@@ -1,21 +1,5 @@
-#include "nitro/types.h"
-
-typedef struct FieldManager FieldManager;
-
-typedef struct FieldManagerHandle {
-    u32 unk_00;
-    FieldManager *manager;
-} FieldManagerHandle;
-
-extern FieldManagerHandle data_ov001_020a04c4;
-extern u32 func_ov027_020ba1f8(void *resource);
-extern void func_ov001_0206efac(FieldManager *manager, u32 resourceManager);
-extern void func_ov027_020ba200(void *resource, BOOL freeData);
-
-void ApplyFieldResourceAndRelease(void *resource)
-{
-    FieldManager *manager = data_ov001_020a04c4.manager;
-
-    func_ov001_0206efac(manager, func_ov027_020ba1f8(resource));
-    func_ov027_020ba200(resource, TRUE);
-}
+#define ApplyFieldResourceAndRelease_0206f040 ApplyFieldResourceAndRelease
+#define data_ov001_020a04a4 data_ov001_020a04c4
+#define func_ov027_020ba1d8 func_ov027_020ba1f8
+#define func_ov027_020ba1e0 func_ov027_020ba200
+#include "src/ov001/field_manager/ApplyFieldResourceAndRelease_0206f040.c"

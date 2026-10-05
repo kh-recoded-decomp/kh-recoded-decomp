@@ -1,14 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad_00[0xc];
-    u32 *bits;
-} CardThreadState;
-
-extern CardThreadState data_0205fe00;
-extern void WritePackedBits(u32 *base, u32 bitOffset, u32 bitCount, u32 value);
-
-void WriteGlobalPackedBits(u32 bitOffset, u32 bitCount, u32 value)
-{
-    WritePackedBits(data_0205fe00.bits, bitOffset, bitCount, value);
-}
+#define WriteGlobalPackedBits_02027360 WriteGlobalPackedBits
+#define WritePackedBits_0202d560 WritePackedBits
+#define g_cardThreadState_0205fe00 data_0205fe00
+#include "src/arm9/packed_bits/WriteGlobalPackedBits_02027360.c"

@@ -1,26 +1,2 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad_00[0x6c];
-    int actionId;
-} EventSource;
-
-typedef struct {
-    EventSource *source;
-    int kind;
-} GameEvent;
-
-BOOL IsEventActionAllowed(GameEvent *event)
-{
-    if (event->kind == 4) {
-        switch (event->source->actionId) {
-        case 0:
-        case 1:
-        case 0x17:
-        case 0x18:
-        case 0x23:
-            return FALSE;
-        }
-    }
-    return TRUE;
-}
+#define IsEventActionAllowed_020d847c IsEventActionAllowed
+#include "src/ov072/unclassified_helpers/IsEventActionAllowed_020d847c.c"

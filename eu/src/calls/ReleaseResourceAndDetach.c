@@ -1,16 +1,6 @@
-#include "nitro/types.h"
-
-extern void func_0202eb08(void *tables);
-extern void ReleaseResourceSlot(void);
-extern void ReleaseSharedRecordSlot(void *resource);
-extern void DetachObjectTreeNode(void *object);
-
-void ReleaseResourceAndDetach(u8 *object) {
-    func_0202eb08(object + 0xd8);
-    if (*(void **)(object + 0x74) != NULL) {
-        ReleaseResourceSlot();
-        ReleaseSharedRecordSlot(*(void **)(object + 0x74));
-    }
-    *(void **)(object + 0x74) = NULL;
-    DetachObjectTreeNode(object);
-}
+#define ReleaseResourceAndDetach_0202eee8 ReleaseResourceAndDetach
+#define detach_object_tree_node_0202ee1c DetachObjectTreeNode
+#define func_0202c8a8 ReleaseSharedRecordSlot
+#define func_0202ca18 ReleaseResourceSlot
+#define func_0202eaf4 func_0202eb08
+#include "src/arm9/runtime/ReleaseResourceAndDetach_0202eee8.c"

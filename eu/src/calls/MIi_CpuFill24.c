@@ -1,6 +1,2 @@
-extern void MI_CpuFill8(void *dest, unsigned char val, unsigned int size);
-
-void MIi_CpuFill24(void *dest)
-{
-    MI_CpuFill8(dest, 0, 0x24);
-}
+#define MIi_CpuFill24_020127e8 MIi_CpuFill24
+#include "src/arm9/library_nitro_mi/MIi_CpuFill24_020127e8.c"

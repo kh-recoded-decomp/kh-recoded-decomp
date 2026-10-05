@@ -1,1 +1,1 @@
-void OS_SetThreadDestructor(int *p, int v){ p[45] = v; }
+#include "src/arm9/nitro_os/func_02002dd4.c"

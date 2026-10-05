@@ -1,4 +1,2 @@
-extern int data_020608c8;
-void SetParamWord8(int param_1) {
-    *(int *)((char *)&data_020608c8 + 8) = param_1;
-}
+#define SetParamWord8_02050620 SetParamWord8
+#include "src/arm9/shared_engine/SetParamWord8_02050620.c"

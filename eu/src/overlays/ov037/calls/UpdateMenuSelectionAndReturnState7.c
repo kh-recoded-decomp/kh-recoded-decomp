@@ -1,9 +1,3 @@
-#include "nitro/types.h"
-
-extern s32 UpdateMenuSelection(void);
-
-u32 UpdateMenuSelectionAndReturnState7(void)
-{
-    UpdateMenuSelection();
-    return 7;
-}
+#define func_ov037_020ba90c UpdateMenuSelectionAndReturnState7
+#define func_ov037_020bb4bc UpdateMenuSelection
+#include "src/ov037/unclassified_helpers/func_ov037_020ba90c.c"

@@ -1,35 +1,7 @@
-#include "nitro/types.h"
-
-typedef struct SceneWork SceneWork;
-
-typedef void (*SceneStateHandler)(SceneWork *work);
-
-struct SceneWork {
-    u8 pad_0000[0xd1d8];
-    int blinkTimer;
-    int blinkPhase;
-};
-
-extern const SceneStateHandler gTrophyReportStateHandlers[];
-extern int func_ov093_020c2368(SceneWork *work);
-extern void RedrawEntryPanelText(int index, SceneWork *work);
-extern void UpdateScrollBarDrag(SceneWork *work);
-extern void func_ov093_020c0310(SceneWork *work);
-
-void UpdateSceneFrame(SceneWork *work)
-{
-    SceneStateHandler handler = gTrophyReportStateHandlers[func_ov093_020c2368(work)];
-
-    if (handler != NULL) {
-        handler(work);
-    }
-    if (++work->blinkTimer >= 60) {
-        work->blinkTimer = 0;
-        work->blinkPhase = (work->blinkPhase + 1) % 2;
-        RedrawEntryPanelText(0, work);
-    }
-    if (func_ov093_020c2368(work) == 6) {
-        UpdateScrollBarDrag(work);
-    }
-    func_ov093_020c0310(work);
-}
+#define ResetObjManagerLists_020c02f0 func_ov093_020c0310
+#define UpdateSceneFrame_020bedb0 UpdateSceneFrame
+#define UpdateScrollBarDrag_020c1d48 UpdateScrollBarDrag
+#define data_ov093_020c3c7c gTrophyReportStateHandlers
+#define func_ov093_020bfd60 RedrawEntryPanelText
+#define func_ov093_020c2348 func_ov093_020c2368
+#include "src/ov093/unclassified_helpers/UpdateSceneFrame_020bedb0.c"

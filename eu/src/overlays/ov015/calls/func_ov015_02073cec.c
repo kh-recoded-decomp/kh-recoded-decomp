@@ -1,15 +1,4 @@
-extern void WH_SetError(unsigned int id);
-extern int func_ov015_02073d1c(void);
-extern void PollPanelTransition(void);
-
-void func_ov015_02073cec(int req) {
-    if (*(unsigned short *)(req + 2) != 0) {
-        WH_SetError(*(unsigned short *)(req + 2));
-        PollPanelTransition();
-        return;
-    }
-    if (func_ov015_02073d1c() != 0) {
-        return;
-    }
-    PollPanelTransition();
-}
+#define func_020737d4 WH_SetError
+#define func_02073d1c func_ov015_02073d1c
+#define func_02074e80 PollPanelTransition
+#include "src/ov015/reviewed_helpers/func_ov015_02073cec.c"

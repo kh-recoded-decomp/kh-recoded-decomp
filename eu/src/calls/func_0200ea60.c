@@ -1,5 +1,2 @@
-extern void PushCommand_impl(int cmd, int a, int b, int c, int d);
-
-void func_0200ea60(int a, int b, int c) {
-    PushCommand_impl(0xa, a, b, c, 0);
-}
+#define func_0200ea4c func_0200ea60
+#include "src/arm9/core_small/func_0200ea4c.c"

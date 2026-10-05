@@ -1,17 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u16 id;
-    s16 x;
-    s16 y;
-} Record;
-
-extern Record *FindActiveRecordById(void *pool, u32 recordId);
-extern void func_ov027_020b824c(void *pool, Record *record, s16 x, s16 y);
-
-void OffsetRecordYById(void *pool, int recordId, int offsetY)
-{
-    Record *record = FindActiveRecordById(pool, (u16)recordId);
-
-    func_ov027_020b824c(pool, record, record->x, record->y + offsetY);
-}
+#define FindActiveRecordById_020b8184 FindActiveRecordById
+#define OffsetRecordYById_020bf0dc OffsetRecordYById
+#define func_ov027_020b822c func_ov027_020b824c
+#include "src/ov045/record_management/OffsetRecordYById_020bf0dc.c"

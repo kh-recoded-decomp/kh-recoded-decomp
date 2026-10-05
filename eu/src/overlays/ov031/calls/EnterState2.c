@@ -1,22 +1,5 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad_00[0x06];
-    u16 flags;
-    u8 pad_08[0x34];
-    s8 mode;
-} OverlayState;
-
-extern OverlayState *data_ov031_020bc820;
-extern u32 RestoreSessionActors(void);
-extern void ObjectManager_LoadShadowModel(void);
-
-u32 EnterState2(void)
-{
-    if (RestoreSessionActors() == 1 && data_ov031_020bc820->mode != 3) {
-        data_ov031_020bc820->mode = 0;
-    }
-    ObjectManager_LoadShadowModel();
-    data_ov031_020bc820->flags = data_ov031_020bc820->flags | 0x8000;
-    return 2;
-}
+#define EnterState2_020ba640 EnterState2
+#define ObjectManager_LoadShadowModel_0207efac ObjectManager_LoadShadowModel
+#define func_ov001_02063404 RestoreSessionActors
+#define g_activeState_020bc800 data_ov031_020bc820
+#include "src/ov031/state_machine/EnterState2_020ba640.c"

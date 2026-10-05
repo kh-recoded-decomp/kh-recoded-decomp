@@ -1,28 +1,9 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad_000[0xb64];
-    u8 labelTable[0x60];
-    BOOL useAlternateFocus;
-} PanelScene;
-
-extern void *func_ov039_020bc1dc(void);
-extern void ShowChoiceWindows(PanelScene *scene, int mode);
-extern void *func_ov027_020ba2c8(void *table, int index);
-extern void func_ov087_020c4734(PanelScene *scene, int slotIndex, void *label, int mode);
-extern void *FindWidgetById(void *container, int elementId);
-extern void SetFocusedWidget(void *container, void *element);
-extern void MoveCursorToWidget(PanelScene *scene, void *element, int arg2, int arg3);
-
-void OpenSelectionPanel(PanelScene *scene)
-{
-    void *container = func_ov039_020bc1dc();
-    void *element;
-
-    ShowChoiceWindows(scene, 2);
-    func_ov087_020c4734(scene, 0, func_ov027_020ba2c8(scene->labelTable, 2), 2);
-    func_ov087_020c4734(scene, 1, func_ov027_020ba2c8(scene->labelTable, 3), 2);
-    element = !scene->useAlternateFocus ? FindWidgetById(container, 2) : FindWidgetById(container, 3);
-    SetFocusedWidget(container, element);
-    MoveCursorToWidget(scene, element, 0, 0);
-}
+#define OpenSelectionPanel_020c5d44 OpenSelectionPanel
+#define func_ov027_020b90a4 FindWidgetById
+#define func_ov027_020b96e4 SetFocusedWidget
+#define func_ov027_020ba2a8 func_ov027_020ba2c8
+#define func_ov039_020bc1bc func_ov039_020bc1dc
+#define func_ov087_020c43c4 MoveCursorToWidget
+#define func_ov087_020c4714 func_ov087_020c4734
+#define func_ov087_020c4b74 ShowChoiceWindows
+#include "src/ov087/panel_state/OpenSelectionPanel_020c5d44.c"

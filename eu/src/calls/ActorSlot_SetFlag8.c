@@ -1,15 +1,2 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad_00[8];
-    u16 flags;
-} ActorSlot;
-
-void ActorSlot_SetFlag8(ActorSlot *slot, BOOL enable)
-{
-    if (enable) {
-        slot->flags |= 8;
-    } else {
-        slot->flags &= ~8;
-    }
-}
+#define ActorSlot_SetFlag8_02036140 ActorSlot_SetFlag8
+#include "src/arm9/shared_engine/ActorSlot_SetFlag8_02036140.c"

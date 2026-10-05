@@ -1,10 +1,4 @@
-﻿#include "nitro/types.h"
-
-extern void *data_ov025_020b7780;
-extern int NegateFieldValue(void *field);
-
-void ApplySubBgScroll(void) {
-    u32 offset = NegateFieldValue((u8 *)data_ov025_020b7780 + 0x64f4) & 0x1ff;
-    *(vu32 *)0x04001018 = offset;
-    *(vu32 *)0x0400101c = offset;
-}
+#define ApplySubBgScroll_020b5800 ApplySubBgScroll
+#define data_ov025_020b7760 data_ov025_020b7780
+#define func_ov025_020b75e0 NegateFieldValue
+#include "src/ov025/menu_widgets/ApplySubBgScroll_020b5800.c"

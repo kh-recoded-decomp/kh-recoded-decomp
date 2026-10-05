@@ -1,8 +1,3 @@
-#include "nitro/types.h"
-
-extern u32 UpdateListCursor(void *input, void *list, u32 keys);
-
-u32 UpdateListCursorKeys(u32 keys, void *list)
-{
-    return UpdateListCursor(NULL, list, keys);
-}
+#define UpdateListCursorKeys_02062fa0 UpdateListCursorKeys
+#define UpdateListCursor_02062fb4 UpdateListCursor
+#include "src/ov002/panel_state/UpdateListCursorKeys_02062fa0.c"

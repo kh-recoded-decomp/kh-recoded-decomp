@@ -1,14 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad_0000[0xc9a0];
-    u8 screenLayers[0x1c];
-} Ov039State;
-
-extern Ov039State *data_ov039_020bea20;
-extern void func_ov027_020b9e20(void *layers, int layerId);
-
-void SetScreenLayerDirty(int layerId)
-{
-    func_ov027_020b9e20(data_ov039_020bea20->screenLayers, layerId);
-}
+#define SetScreenLayerDirty_020bc104 SetScreenLayerDirty
+#define data_ov039_020bea00 data_ov039_020bea20
+#define func_ov027_020b9e00 func_ov027_020b9e20
+#include "src/ov039/widget_layers/SetScreenLayerDirty_020bc104.c"

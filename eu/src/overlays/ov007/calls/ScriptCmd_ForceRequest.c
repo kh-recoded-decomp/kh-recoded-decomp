@@ -1,19 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct ScriptOperand {
-    s16 type;
-    s16 pad_02;
-    s32 value;
-} ScriptOperand;
-
-extern int ScriptVm_ReadOperandInt(void *script, ScriptOperand *operand);
-extern void RequestSceneEvent(int requestId, int mode, BOOL force);
-
-int ScriptCmd_ForceRequest(void *script, ScriptOperand *operands)
-{
-    int requestId = ScriptVm_ReadOperandInt(script, operands);
-    int mode = ScriptVm_ReadOperandInt(script, operands + 1);
-
-    RequestSceneEvent(requestId, mode, TRUE);
-    return 1;
-}
+#define ScriptCmd_ForceRequest_020a0690 ScriptCmd_ForceRequest
+#define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
+#define func_ov035_020bae84 RequestSceneEvent
+#include "src/ov007/shared_engine/ScriptCmd_ForceRequest_020a0690.c"

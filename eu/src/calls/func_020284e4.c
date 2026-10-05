@@ -1,16 +1,4 @@
-#include "nitro/types.h"
-
-extern u32 func_ov001_02063838();
-extern u32 GetManagerStateFlag();
-extern u32 SnapshotActorSlotPositions();
-
-void func_020284e4(void) {
-  int active;
-
-  active = func_ov001_02063838();
-  if (active != 0) {
-    GetManagerStateFlag();
-    return;
-  }
-  SnapshotActorSlotPositions();
-}
+#define func_020284d0 func_020284e4
+#define func_ov001_0208881c GetManagerStateFlag
+#define func_ov036_020bc5e0 SnapshotActorSlotPositions
+#include "src/arm9/reviewed_helpers/func_020284d0.c"

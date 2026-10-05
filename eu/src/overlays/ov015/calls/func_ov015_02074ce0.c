@@ -1,8 +1,3 @@
-extern void SetPanelTransitionMode(int);
-extern void OS_Terminate(void);
-void func_ov015_02074ce0(char *scene) {
-    if (*(unsigned short *)(scene + 2) == 8) {
-        SetPanelTransitionMode(9);
-        OS_Terminate();
-    }
-}
+#define func_02004cf0 OS_Terminate
+#define func_020737c4 SetPanelTransitionMode
+#include "src/ov015/reviewed_helpers/func_ov015_02074ce0.c"

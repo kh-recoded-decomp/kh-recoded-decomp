@@ -1,17 +1,5 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-extern void VEC_Subtract(VecFx32 *dst, VecFx32 *src);
-extern fx32 VEC_Mag(VecFx32 *vec);
-extern void RandomHorizontalVector(fx32 z, VecFx32 *vec);
-extern void func_01ffaff4(VecFx32 *dst, VecFx32 *src);
-
-void ComputeFlatDirectionVector(VecFx32 *from, VecFx32 *to, VecFx32 *direction)
-{
-    VEC_Subtract(to, from);
-    direction->y = 0;
-    if (VEC_Mag(direction) == 0) {
-        RandomHorizontalVector(0x1000, direction);
-    }
-    func_01ffaff4(direction, direction);
-}
+#define ComputeFlatDirectionVector_02092674 ComputeFlatDirectionVector
+#define VEC_Mag_01ff9f28 VEC_Mag
+#define func_01ff9e3c VEC_Subtract
+#define func_ov001_02092634 RandomHorizontalVector
+#include "src/ov001/shared_engine/ComputeFlatDirectionVector_02092674.c"

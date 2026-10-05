@@ -1,28 +1,7 @@
-#include "nitro/types.h"
-
-typedef struct {
-    s8 ids[5];
-} EntrySceneTable;
-
-typedef struct {
-    int cursorRow;
-} MenuScene;
-
-extern EntrySceneTable data_ov091_020c2834;
-extern BOOL func_ov091_020c1774(void);
-extern void PushStackEntry(int value);
-extern void StartSubScene(int scene, int arg, int mode);
-extern BOOL PlaySoundEffect(int seqArcNo, int index);
-
-void OpenSelectedEntryScene(MenuScene *scene)
-{
-    EntrySceneTable scenes;
-
-    if (func_ov091_020c1774()) {
-        return;
-    }
-    scenes = data_ov091_020c2834;
-    PushStackEntry(scene->cursorRow);
-    StartSubScene(scenes.ids[scene->cursorRow], -1, 1);
-    PlaySoundEffect(0, 1);
-}
+#define OpenSelectedEntryScene_020beee0 OpenSelectedEntryScene
+#define PlaySoundEffect_0204d924 PlaySoundEffect
+#define PushStackEntry_020bc874 PushStackEntry
+#define data_ov091_020c2814 data_ov091_020c2834
+#define func_ov039_020bbf78 StartSubScene
+#define func_ov091_020c1754 func_ov091_020c1774
+#include "src/ov091/panel_state/OpenSelectedEntryScene_020beee0.c"

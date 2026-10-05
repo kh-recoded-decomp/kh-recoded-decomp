@@ -1,43 +1,10 @@
-#include "nitro/types.h"
-
-typedef struct TextLayer {
-    u8 pad_00[0x34];
-} TextLayer;
-
-typedef struct StatusPage {
-    u8 pad_000[0x140];
-    void *fileData;
-    void *resource;
-    u8 buffers[0x1c];
-    BOOL bgOffsetHookActive;
-    u8 pad_168[0x170 - 0x168];
-    BOOL unk_170;
-    u8 pad_174[0x198 - 0x174];
-    TextLayer upperText;
-    TextLayer lowerText;
-} StatusPage;
-
-extern const char sOv073_OCBGOFSFUNC_020c41a8[];
-extern void NotifyBothOrOne(u32 kind, const char *name, int index);
-extern BOOL DestroyFndObjectList(TextLayer *layer);
-extern void ReleaseListView(StatusPage *page);
-extern int ZeroHalfThenFree(void *block);
-extern void ReleaseResourceWithBuffers(void **resourceHandle, int unused);
-extern void FreeAllocatedBuffers(void *owner);
-extern BOOL ReleaseRecordSlot(s32 slot);
-
-void ReleaseStatusPage(void *menu, StatusPage *page)
-{
-    if (page->bgOffsetHookActive) {
-        NotifyBothOrOne(1, sOv073_OCBGOFSFUNC_020c41a8, 0);
-        page->bgOffsetHookActive = FALSE;
-    }
-    DestroyFndObjectList(&page->upperText);
-    DestroyFndObjectList(&page->lowerText);
-    ReleaseListView(page);
-    ZeroHalfThenFree(page->fileData);
-    ReleaseResourceWithBuffers(&page->resource, 0xe);
-    FreeAllocatedBuffers(page->buffers);
-    page->unk_170 = 0;
-    ReleaseRecordSlot(1);
-}
+#define DestroyFndObjectList_020014f0 DestroyFndObjectList
+#define FreeAllocatedBuffers_020b9a60 FreeAllocatedBuffers
+#define NotifyBothOrOne_02001154 NotifyBothOrOne
+#define ReleaseRecordSlot_02051dfc ReleaseRecordSlot
+#define ReleaseResourceWithBuffers_0205206c ReleaseResourceWithBuffers
+#define ReleaseStatusPage_020bece0 ReleaseStatusPage
+#define ZeroHalfThenFree_0202cd78 ZeroHalfThenFree
+#define data_ov073_020c4188 sOv073_OCBGOFSFUNC_020c41a8
+#define func_ov073_020c3c50 ReleaseListView
+#include "src/ov073/status_menu/ReleaseStatusPage_020bece0.c"

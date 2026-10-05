@@ -1,30 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad_00[8];
-    s32 mode;
-} ModeState;
-
-typedef struct {
-    u32 active;
-    ModeState state;
-} ModeContext;
-
-extern ModeContext *data_ov001_020a04e4;
-
-extern void FlushBufferAndRunCallback(void *window);
-
-void RefreshModeWindow(int screen)
-{
-    ModeContext *context = data_ov001_020a04e4;
-
-    if (context != NULL && screen == 0) {
-        switch (context->state.mode) {
-        case 4:
-        case 5:
-        case 6:
-            FlushBufferAndRunCallback((u8 *)&context->state + 0x94);
-            break;
-        }
-    }
-}
+#define FlushBufferAndRunCallback_0200153c FlushBufferAndRunCallback
+#define RefreshModeWindow_0207a89c RefreshModeWindow
+#define g_activeContext_020a04c4 data_ov001_020a04e4
+#include "src/ov001/leaf_research/RefreshModeWindow_0207a89c.c"

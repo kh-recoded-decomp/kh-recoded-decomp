@@ -1,11 +1,3 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-extern void VEC_Subtract(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
-
-void SubtractVecFx32Into(VecFx32 *dest, const VecFx32 *a, const VecFx32 *b)
-{
-    VecFx32 result;
-    VEC_Subtract(a, b, &result);
-    *dest = result;
-}
+#define SubtractVecFx32Into_0203f4a8 SubtractVecFx32Into
+#define func_01ff9e3c VEC_Subtract
+#include "src/arm9/math/SubtractVecFx32Into_0203f4a8.c"

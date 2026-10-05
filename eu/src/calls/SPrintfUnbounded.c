@@ -1,8 +1,3 @@
-#include "nitro/types.h"
-
-extern void *Text_VSNPrintfWide(void *dst, u32 len, const char *fmt, void *args);
-
-void *SPrintfUnbounded(void *dst, const char *fmt, ...)
-{
-    return Text_VSNPrintfWide(dst, 0x7fffffff, fmt, (void *)(((u32)&fmt & ~3u) + 4));
-}
+#define func_0202e060 SPrintfUnbounded
+#define func_0202e09c Text_VSNPrintfWide
+#include "src/arm9/string_utility/func_0202e060.c"

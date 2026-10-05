@@ -1,45 +1,10 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u32 pixelFmt;
-    u32 mapingType;
-    u32 characterFmt;
-    u32 unk_0C;
-    u32 szByte;
-    void *pRawData;
-} CharacterData;
-
-typedef struct {
-    u32 active;
-    u8 modeState[0xc];
-    s32 layout;
-    u8 pad_14[0xe4];
-    BOOL skipLoad;
-} ActiveContext;
-
-extern ActiveContext *data_ov001_020a04e4;
-
-extern void *func_ov027_020ba1f8(void *resource);
-extern void func_ov027_020ba200(void *resource, BOOL freeData);
-extern BOOL NNS_G2dGetUnpackedBGCharacterData(void *file, CharacterData **out);
-extern void DrawCategoryLabel(void *charData, int layout);
-extern void DC_FlushAll(void);
-extern void GX_LoadBG1Char(const void *src, u32 offset, u32 size);
-extern void LoadMenuEntryGraphic(void *modeState, int layout);
-
-void LoadModeBg1Characters(void *resource)
-{
-    ActiveContext *context = data_ov001_020a04e4;
-    CharacterData *charData;
-
-    if (context->skipLoad) {
-        func_ov027_020ba200(resource, TRUE);
-        return;
-    }
-    NNS_G2dGetUnpackedBGCharacterData(func_ov027_020ba1f8(resource), &charData);
-    DrawCategoryLabel(charData->pRawData, context->layout);
-    DC_FlushAll();
-    GX_LoadBG1Char(charData->pRawData, 0x1c00, 0x3840);
-    LoadMenuEntryGraphic(context->modeState, context->layout);
-    func_ov027_020ba200(resource, TRUE);
-}
+#define GX_LoadBG1Char_020079b0 GX_LoadBG1Char
+#define LoadModeBg1Characters_02078d24 LoadModeBg1Characters
+#define func_020033e0 DC_FlushAll
+#define func_02014d38 NNS_G2dGetUnpackedBGCharacterData
+#define func_ov001_02078ba8 DrawCategoryLabel
+#define func_ov001_0207a1a8 LoadMenuEntryGraphic
+#define func_ov027_020ba1d8 func_ov027_020ba1f8
+#define func_ov027_020ba1e0 func_ov027_020ba200
+#define g_activeContext_020a04c4 data_ov001_020a04e4
+#include "src/ov001/leaf_research/LoadModeBg1Characters_02078d24.c"

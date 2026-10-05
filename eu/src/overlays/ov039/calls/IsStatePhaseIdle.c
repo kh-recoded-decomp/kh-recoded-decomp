@@ -1,13 +1,3 @@
-#include "nitro/types.h"
-
-extern int data_ov039_020bea20;
-
-BOOL IsStatePhaseIdle(void)
-{
-    int base = data_ov039_020bea20;
-
-    if (base == 0) {
-        return 1;
-    }
-    return *(int *)(base + 0xc9c4) == 0;
-}
+#define IsStatePhaseIdle_020bcad0 IsStatePhaseIdle
+#define data_ov039_020bea00 data_ov039_020bea20
+#include "src/ov039/event_state/IsStatePhaseIdle_020bcad0.c"

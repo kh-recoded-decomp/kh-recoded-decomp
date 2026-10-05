@@ -1,15 +1,4 @@
-#include "nitro/types.h"
-
-extern int GetPackedBitMask(int *bitWords, int bitIndex);
-extern u8 *data_ov095_020c28e0;
-
-BOOL IsEntryFlagSet_020c1340(int useSecondSet, int bitIndex)
-{
-    u8 *base = data_ov095_020c28e0;
-    if (useSecondSet == 0) {
-        base += 0x124;
-    } else {
-        base += 0x144;
-    }
-    return GetPackedBitMask((int *)(base + 0x11000), bitIndex) != 0;
-}
+#define GetPackedBitMask_0202d4a0 GetPackedBitMask
+#define IsEntryFlagSet_020c1320 IsEntryFlagSet_020c1340
+#define data_ov095_020c28c0 data_ov095_020c28e0
+#include "src/ov095/bit_flags/IsEntryFlagSet_020c1320.c"

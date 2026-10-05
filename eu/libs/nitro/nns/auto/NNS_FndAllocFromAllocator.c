@@ -1,7 +1,2 @@
-/* Calls the allocator's first vtable slot (alloc). */
-typedef void *(*AllocFn)(void *allocator, unsigned int size);
-
-void *NNS_FndAllocFromAllocator(void *allocator, unsigned int size) {
-    AllocFn *vt = *(AllocFn **)allocator;
-    return vt[0](allocator, size);
-}
+#define NNS_FndAllocFromAllocator_02013718 NNS_FndAllocFromAllocator
+#include "src/arm9/library_nitro_nns/NNS_FndAllocFromAllocator_02013718.c"

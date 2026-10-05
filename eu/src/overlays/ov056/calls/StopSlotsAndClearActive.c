@@ -1,14 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad_000[0x194];
-    BOOL isActive;
-} BeamEntity;
-
-extern void ResetCountsAndSlots(BeamEntity *entity);
-
-void StopSlotsAndClearActive(BeamEntity *entity)
-{
-    ResetCountsAndSlots(entity);
-    entity->isActive = FALSE;
-}
+#define StopSlotsAndClearActive_020d7c38 StopSlotsAndClearActive
+#define func_ov021_020aeb6c ResetCountsAndSlots
+#include "src/ov056/unclassified_helpers/StopSlotsAndClearActive_020d7c38.c"

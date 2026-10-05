@@ -1,1 +1,2 @@
-void func_ov017_020a4fa0(int *p, int v){ p[0] = v; }
+#define Word_Set_020a4f80 func_ov017_020a4fa0
+#include "src/ov017/shared_engine/Word_Set_020a4f80.c"

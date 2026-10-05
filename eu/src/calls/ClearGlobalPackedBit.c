@@ -1,14 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad_00[0xc];
-    int *bits;
-} CardThreadState;
-
-extern CardThreadState data_0205fe00;
-extern void ClearPackedBit(int *bitWords, int bitIndex);
-
-void ClearGlobalPackedBit(int bitIndex)
-{
-    ClearPackedBit(data_0205fe00.bits, bitIndex);
-}
+#define ClearGlobalPackedBit_02027334 ClearGlobalPackedBit
+#define g_cardThreadState_0205fe00 data_0205fe00
+#include "src/arm9/packed_bits/ClearGlobalPackedBit_02027334.c"

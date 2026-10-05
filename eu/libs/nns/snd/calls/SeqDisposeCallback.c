@@ -1,14 +1,3 @@
-#include "libs/nns/snd/sndarc_loader_internal.h"
-
-void SeqDisposeCallback(
-    void *memory,
-    u32 size,
-    u32 data1,
-    u32 data2)
-{
-    NNSSndArc *arc = (NNSSndArc *)data1;
-    u32 fileId = data2;
-
-    DisposeCallback(memory, arc, fileId);
-    SND_InvalidateSeqData(memory, (u8 *)memory + size);
-}
+#define func_0201f9cc DisposeCallback
+#define func_0201fa24 SeqDisposeCallback
+#include "src/arm9/library_nns_snd/func_0201fa24.c"

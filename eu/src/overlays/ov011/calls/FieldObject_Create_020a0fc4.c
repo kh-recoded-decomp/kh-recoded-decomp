@@ -1,85 +1,16 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-typedef void (*ObjectFunc)(void);
-
-typedef struct FieldObject {
-    ObjectFunc init;
-    ObjectFunc release;
-    ObjectFunc update;
-    ObjectFunc destroy;
-    ObjectFunc releaseChild;
-    u8 pad_14[4];
-    ObjectFunc reset;
-    ObjectFunc onTouch;
-    ObjectFunc onIdle;
-    ObjectFunc setPosition;
-    ObjectFunc getAnchor;
-    ObjectFunc beginSpawn;
-    ObjectFunc load;
-    ObjectFunc getCenter;
-    ObjectFunc onHit;
-    ObjectFunc draw;
-    u8 pad_40[0xc];
-    fx32 radius;
-    s32 state;
-    u8 pad_54[0x10];
-    u16 soundId;
-    u8 pad_66[0xa];
-    fx32 scaleX;
-    fx32 scaleY;
-    fx32 scaleZ;
-    u8 kind;
-    u8 layer;
-    u8 pad_7e[4];
-    u8 hidden;
-    u8 pad_83;
-    s32 timer;
-} FieldObject;
-
-extern FieldObject *CreateByteGrid(int headerSize, int width, int height);
-extern void AcquireEffectRecordPair(void);
-extern void FieldObject_EnsureModelsLoaded(void);
-extern void FieldObject_LoadAndPlace(void);
-extern void func_ov001_0207f210(void);
-extern void ReleaseChildResourceAndForward(void);
-extern void func_ov001_0207f26c(void);
-extern void func_ov011_020a096c(void);
-extern void func_ov011_020a0970(void);
-extern void FieldObject_SetPositionAndSync(void);
-extern void FieldObject_BeginSpawn(void);
-extern void FieldObject_HandleContact(void);
-extern void func_ov011_020a0fc0(void);
-extern void FieldObject_Draw(void);
-
-FieldObject *FieldObject_Create_020a0fc4(int height)
-{
-    FieldObject *object = CreateByteGrid(0x18c, 0x68, height);
-
-    object->state = 0;
-    object->kind = 3;
-    object->scaleX = 0x1800;
-    object->scaleY = 0x1800;
-    object->scaleZ = 0x1800;
-    object->soundId = 0xbb;
-    object->hidden = 0;
-    object->radius = 0x3000;
-    object->init = AcquireEffectRecordPair;
-    object->release = FieldObject_EnsureModelsLoaded;
-    object->update = FieldObject_LoadAndPlace;
-    object->destroy = func_ov001_0207f210;
-    object->releaseChild = ReleaseChildResourceAndForward;
-    object->reset = func_ov001_0207f26c;
-    object->onTouch = NULL;
-    object->onIdle = func_ov011_020a096c;
-    object->getAnchor = func_ov011_020a0970;
-    object->setPosition = FieldObject_SetPositionAndSync;
-    object->beginSpawn = FieldObject_BeginSpawn;
-    object->onHit = NULL;
-    object->load = FieldObject_HandleContact;
-    object->getCenter = func_ov011_020a0fc0;
-    object->draw = FieldObject_Draw;
-    object->layer = 0xe;
-    object->timer = 0;
-    return object;
-}
+#define CreateByteGrid_0207f380 CreateByteGrid
+#define FieldObject_BeginSpawn_020a0988 FieldObject_BeginSpawn
+#define FieldObject_Create_020a0fa4 FieldObject_Create_020a0fc4
+#define FieldObject_Draw_020a0e30 FieldObject_Draw
+#define FieldObject_SetPositionAndSync_020a0954 FieldObject_SetPositionAndSync
+#define ReleaseChildResourceAndForward_020a0910 ReleaseChildResourceAndForward
+#define _fp_init_020a094c func_ov011_020a096c
+#define func_ov001_0207f0d0 AcquireEffectRecordPair
+#define func_ov001_0207f128 FieldObject_EnsureModelsLoaded
+#define func_ov001_0207f1e8 func_ov001_0207f210
+#define func_ov001_0207f244 func_ov001_0207f26c
+#define func_ov011_020a07bc FieldObject_LoadAndPlace
+#define func_ov011_020a0950 func_ov011_020a0970
+#define func_ov011_020a0d24 FieldObject_HandleContact
+#define func_ov011_020a0fa0 func_ov011_020a0fc0
+#include "src/ov011/field_objects/FieldObject_Create_020a0fa4.c"

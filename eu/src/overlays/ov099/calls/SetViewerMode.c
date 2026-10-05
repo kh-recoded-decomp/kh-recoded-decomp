@@ -1,7 +1,2 @@
-#include "nitro/types.h"
-
-void SetViewerMode(u32 mode, u8 *work) {
-  *(u32 *)(work + 0xd6ec) = mode;
-  *(u32 *)(work + 0xd6f0) = 0;
-  *(u32 *)(work + 0xd6f4) = 0;
-}
+#define SetViewerMode_020c1760 SetViewerMode
+#include "src/ov099/unclassified_helpers/SetViewerMode_020c1760.c"

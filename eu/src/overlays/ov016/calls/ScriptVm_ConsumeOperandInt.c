@@ -1,15 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct ScriptOperand {
-    u8 data[8];
-} ScriptOperand;
-
-extern s32 ScriptVm_ReadOperandInt(void *vm, ScriptOperand *operand);
-
-s32 ScriptVm_ConsumeOperandInt(void *vm, ScriptOperand **cursor)
-{
-    ScriptOperand *operand = *cursor;
-
-    *cursor = operand + 1;
-    return ScriptVm_ReadOperandInt(vm, operand);
-}
+#define ScriptVm_ConsumeOperandInt_020a1de0 ScriptVm_ConsumeOperandInt
+#define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
+#include "src/ov016/script_commands/ScriptVm_ConsumeOperandInt_020a1de0.c"

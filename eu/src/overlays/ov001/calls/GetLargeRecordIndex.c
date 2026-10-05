@@ -1,14 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct StageLayout {
-    u8 pad_000[0x4b14];
-    u8 largeRecords[1];
-} StageLayout;
-
-extern StageLayout *data_ov001_020a0528;
-extern u32 _u32_div_f(u32 numerator, u32 denominator);
-
-u16 GetLargeRecordIndex(u8 *record)
-{
-    return _u32_div_f(record - data_ov001_020a0528->largeRecords, 0x3c8) + 1;
-}
+#define GetLargeRecordIndex_0209c26c GetLargeRecordIndex
+#define UnsignedDivide_02023fc8 _u32_div_f
+#define data_ov001_020a0508 data_ov001_020a0528
+#include "src/ov001/shared_engine/GetLargeRecordIndex_0209c26c.c"

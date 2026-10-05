@@ -1,10 +1,2 @@
-#include "nitro/types.h"
-
-typedef void (*Callback)(void);
-
-u32 InvokeOptionalCallback(Callback callback) {
-    if (callback != NULL) {
-        callback();
-    }
-    return ~(u32)callback;
-}
+#define InvokeOptionalCallback_02026ac8 InvokeOptionalCallback
+#include "src/arm9/unclassified_helpers/InvokeOptionalCallback_02026ac8.c"

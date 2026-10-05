@@ -1,6 +1,2 @@
-int IndexedRecord_GetPair(int recordBase, int recordIndex)
-{
-    if (recordIndex < 0)
-        return 0;
-    return recordBase + 0x10 + recordIndex * 0x8c;
-}
+#define func_0204f160 IndexedRecord_GetPair
+#include "src/arm9/indexed_records/func_0204f160.c"

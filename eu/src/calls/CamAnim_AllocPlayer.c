@@ -1,6 +1,2 @@
-extern int NNSi_FndGetAllocatorForDefaultHeap();
-extern int NNS_FndAllocFromAllocator();
-
-void *CamAnim_AllocPlayer(void) {
-    return NNS_FndAllocFromAllocator(NNSi_FndGetAllocatorForDefaultHeap(0), 0x20);
-}
+#define CamAnim_AllocPlayer_0203a920 CamAnim_AllocPlayer
+#include "src/arm9/shared_engine/CamAnim_AllocPlayer_0203a920.c"

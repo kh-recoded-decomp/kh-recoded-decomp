@@ -1,22 +1,4 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-typedef struct CameraState {
-    u8 pad00[0x18];
-    VecFx32 target;
-} CameraState;
-
-typedef struct CameraParams {
-    u8 pad00[0xc];
-    VecFx32 target;
-} CameraParams;
-
-extern void *func_ov048_020c3520(void);
-extern u32 func_ov048_020c3530(u32 context, u32 data);
-
-void *InitCameraTarget(CameraState *camera, u32 mode, CameraParams *params)
-{
-    func_ov048_020c3520();
-    camera->target = params->target;
-    return (void *)func_ov048_020c3530;
-}
+#define InitCameraTarget_020c3858 InitCameraTarget
+#define ReturnToCommitPage_020c3500 func_ov048_020c3520
+#define func_ov048_020c3510 func_ov048_020c3530
+#include "src/ov048/shared_engine/InitCameraTarget_020c3858.c"

@@ -1,8 +1,3 @@
-#include "nitro/types.h"
-
-extern u8 *gSoundWork;
-
-void ClearStreamFlag(int index)
-{
-    *(u8 *)(gSoundWork + index * 8 + 0xb44ce) = 0;
-}
+#define ClearStreamFlag_0204de90 ClearStreamFlag
+#define g_soundWork_0206084c gSoundWork
+#include "src/arm9/audio/ClearStreamFlag_0204de90.c"

@@ -1,13 +1,4 @@
-#include "nitro/types.h"
-
-extern u32 data_ov023_020b6f84;
-extern u32 PlaySoundEffect();
-
-void PlayEnabledMenuSound(void)
-
-{
-  if (*(int *)(data_ov023_020b6f84 + 0x40) != 0) {
-    PlaySoundEffect(0,0x4a);
-  }
-  return;
-}
+#define PlayEnabledMenuSound_020b5b50 PlayEnabledMenuSound
+#define PlaySoundEffect_0204d924 PlaySoundEffect
+#define _data_ov023_020b6f64 data_ov023_020b6f84
+#include "src/ov023/menu_sound/PlayEnabledMenuSound_020b5b50.c"

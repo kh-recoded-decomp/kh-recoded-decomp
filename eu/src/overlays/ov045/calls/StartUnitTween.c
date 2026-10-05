@@ -1,13 +1,4 @@
-#include "nitro/types.h"
-#include "nitro/fx.h"
-
-typedef struct Tween Tween;
-
-extern void func_02052528(Tween *tween, int mode, fx32 startValue, fx32 endValue, int duration);
-extern void func_02052570(Tween *tween);
-
-void StartUnitTween(Tween *tween, int duration)
-{
-    func_02052528(tween, 0, 0, FX32_ONE, duration);
-    func_02052570(tween);
-}
+#define StartUnitTween_020bf1f8 StartUnitTween
+#define func_02052514 func_02052528
+#define func_0205255c func_02052570
+#include "src/ov045/animation/StartUnitTween_020bf1f8.c"

@@ -1,24 +1,6 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-typedef struct ScriptOperand {
-    u8 data[8];
-} ScriptOperand;
-
-extern int ScriptVm_ReadOperandInt(void *vm, void *operand);
-extern fx32 ScriptVm_ReadOperandFx32(void *vm, void *operand);
-extern void *func_ov001_0207f060(u32 group, u32 index);
-extern void CallFieldObjectHook24(void *object, VecFx32 *value);
-
-int ScriptOp_CallObjectVectorHook(void *vm, ScriptOperand *operands)
-{
-    int group = ScriptVm_ReadOperandInt(vm, &operands[0]);
-    int index = ScriptVm_ReadOperandInt(vm, &operands[1]);
-    VecFx32 value;
-
-    value.x = ScriptVm_ReadOperandFx32(vm, &operands[2]);
-    value.y = ScriptVm_ReadOperandFx32(vm, &operands[3]);
-    value.z = ScriptVm_ReadOperandFx32(vm, &operands[4]);
-    CallFieldObjectHook24(func_ov001_0207f060(group, index), &value);
-    return 1;
-}
+#define ScriptOp_CallObjectVectorHook_02080368 ScriptOp_CallObjectVectorHook
+#define ScriptVm_ReadOperandFx32_02025df8 ScriptVm_ReadOperandFx32
+#define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
+#define func_ov001_0207f038 func_ov001_0207f060
+#define func_ov001_0207f800 CallFieldObjectHook24
+#include "src/ov001/scripted_actor_behavior/ScriptOp_CallObjectVectorHook_02080368.c"

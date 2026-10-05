@@ -1,5 +1,2 @@
-extern int *CollModel_FindEntry(void *model, void *key);
-
-int CollModel_GetEntryField14(void *model, void *key) {
-    return CollModel_FindEntry(model, key)[5];
-}
+#define CollModel_GetEntryField14_0203537c CollModel_GetEntryField14
+#include "src/arm9/shared_engine/CollModel_GetEntryField14_0203537c.c"

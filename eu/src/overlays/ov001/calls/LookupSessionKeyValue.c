@@ -1,30 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct {
-    s16 key;
-    u16 value;
-} KeyValue;
-
-typedef struct {
-    int count;
-    KeyValue entries[1];
-} KeyValueTable;
-
-typedef struct {
-    u8 pad[0x273c];
-    KeyValueTable *lookup;
-} Session;
-
-extern Session *data_ov001_020a0480;
-
-u16 LookupSessionKeyValue(int key) {
-    int i = 0;
-    KeyValueTable *table = data_ov001_020a0480->lookup;
-    while (i < table->count) {
-        if (key == table->entries[i].key) {
-            return table->entries[i].value;
-        }
-        i++;
-    }
-    return 0;
-}
+#define LookupSessionKeyValue_02062e7c LookupSessionKeyValue
+#define data_ov001_020a0460 data_ov001_020a0480
+#include "src/ov001/unclassified_helpers/LookupSessionKeyValue_02062e7c.c"

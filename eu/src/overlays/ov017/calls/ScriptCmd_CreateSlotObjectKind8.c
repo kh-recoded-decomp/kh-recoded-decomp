@@ -1,21 +1,5 @@
-#include "nitro/types.h"
-
-typedef struct ScriptOperand {
-    s16 type;
-    s16 pad_02;
-    s32 value;
-} ScriptOperand;
-
-extern int ScriptVm_ReadOperandInt(void *vm, ScriptOperand *operand);
-extern void *func_ov001_02086eb8(int kind, int slot, int id, int arg);
-extern void func_ov001_02086fb8(int slot, void *object);
-
-int ScriptCmd_CreateSlotObjectKind8(void *vm, ScriptOperand *operands)
-{
-    int slot = ScriptVm_ReadOperandInt(vm, operands);
-    int id = ScriptVm_ReadOperandInt(vm, operands + 1);
-    void *object = func_ov001_02086eb8(8, slot, id, 0);
-
-    func_ov001_02086fb8(slot, object);
-    return 1;
-}
+#define ScriptCmd_CreateSlotObjectKind8_020a2320 ScriptCmd_CreateSlotObjectKind8
+#define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
+#define func_ov001_02086e90 func_ov001_02086eb8
+#define func_ov001_02086f90 func_ov001_02086fb8
+#include "src/ov017/script_commands/ScriptCmd_CreateSlotObjectKind8_020a2320.c"

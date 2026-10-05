@@ -1,12 +1,3 @@
-#include "nitro/types.h"
-
-extern u32 data_ov001_020a04bc;
-
-/* Bounds-checked indexed lookup into manager records */
-u32 GetBoundedEntryField(int index)
-{
-    if (index >= *(int *)(data_ov001_020a04bc + 0x7c)) {
-        return 0;
-    }
-    return *(u32 *)(data_ov001_020a04bc + index * 0x28 + 8);
-}
+#define GetBoundedEntryField_0206db5c GetBoundedEntryField
+#define g_manager_020a049c data_ov001_020a04bc
+#include "src/ov001/shared_engine/GetBoundedEntryField_0206db5c.c"

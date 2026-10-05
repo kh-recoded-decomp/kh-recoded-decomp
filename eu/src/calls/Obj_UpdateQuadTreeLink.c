@@ -1,23 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u32 flags;
-    u8 pad_04[0x108];
-    u32 node;
-} Entity;
-
-extern u32 AdvanceAnimationTracks(u32 *fields, u32 arg);
-extern void QuadTree_ReinsertNodeIfFlagSet(u32 tree, u32 *node);
-
-u32 Obj_UpdateQuadTreeLink(u32 world, Entity *entity, u32 arg)
-{
-    u32 result = 0;
-
-    if (((world != 0) && ((entity->flags & 0x10) == 0)) && ((entity->flags & 8) != 0)) {
-        QuadTree_ReinsertNodeIfFlagSet(**(u32 **)(world + 4), &entity->node);
-    }
-    if (((entity->flags & 0x20) == 0) && ((entity->flags & 0x40) == 0)) {
-        result = AdvanceAnimationTracks(&entity->flags + 1, arg);
-    }
-    return result;
-}
+#define Obj_UpdateQuadTreeLink_02035634 Obj_UpdateQuadTreeLink
+#define func_0202ef24 AdvanceAnimationTracks
+#define func_02033f10 QuadTree_ReinsertNodeIfFlagSet
+#include "src/arm9/shared_engine/Obj_UpdateQuadTreeLink_02035634.c"

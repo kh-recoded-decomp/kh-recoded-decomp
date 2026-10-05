@@ -1,11 +1,4 @@
-#include "nitro/types.h"
-
-extern void *SND_RegisterSeq(int a, int b);
-extern void InitModelInstance(void *dst, void *info, int flags, int one, int b);
-
-void InitSharedRecordAndDispatchAlt(void *dst, int a, void *info, int b)
-{
-    void *record = SND_RegisterSeq(a, b);
-    *(void **)((u8 *)dst + 0x74) = record;
-    InitModelInstance(dst, info, 0, 1, b);
-}
+#define RetainOrInitializeSharedRecord_0202c80c SND_RegisterSeq
+#define func_0202eb84 InitModelInstance
+#define func_0202ed3c InitSharedRecordAndDispatchAlt
+#include "src/arm9/shared_records/func_0202ed3c.c"

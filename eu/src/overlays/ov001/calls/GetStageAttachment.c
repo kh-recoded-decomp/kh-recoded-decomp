@@ -1,20 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct RecordTable RecordTable;
-
-typedef struct {
-    u8 pad_00[0x18d90];
-    RecordTable *attachmentTable;
-} StageManager;
-
-extern StageManager *data_ov001_020a0528;
-
-extern void *func_ov001_0208f280(RecordTable *table, u32 id);
-
-void *GetStageAttachment(u32 id)
-{
-    if (data_ov001_020a0528 != 0) {
-        return func_ov001_0208f280(data_ov001_020a0528->attachmentTable, id);
-    }
-    return 0;
-}
+#define GetStageAttachment_0209c144 GetStageAttachment
+#define func_ov001_0208f258 func_ov001_0208f280
+#define g_stageManager_020a0508 data_ov001_020a0528
+#include "src/ov001/shared_engine/GetStageAttachment_0209c144.c"

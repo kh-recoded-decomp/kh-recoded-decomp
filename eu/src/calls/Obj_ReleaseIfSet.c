@@ -1,21 +1,6 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u32 flags;
-    void *resource;
-    void *block;
-} Entity;
-
-extern u32 Obj_HasFlag0(void);
-extern void *NNSi_FndGetAllocatorForDefaultHeap(u32 kind);
-extern void NNS_FndFreeToAllocator(void *allocator, void *block);
-extern void ReleaseSharedRecordSlot(void *resource);
-
-void Obj_ReleaseIfSet(Entity *entity)
-{
-    if (Obj_HasFlag0() != 0) {
-        NNS_FndFreeToAllocator(NNSi_FndGetAllocatorForDefaultHeap(0), entity->block);
-        ReleaseSharedRecordSlot(entity->resource);
-    }
-    entity->flags = 0;
-}
+#define NNS_FndFreeToAllocator_0201372c NNS_FndFreeToAllocator
+#define Obj_ReleaseIfSet_0203a970 Obj_ReleaseIfSet
+#define func_0202a268 NNSi_FndGetAllocatorForDefaultHeap
+#define func_0202c8a8 ReleaseSharedRecordSlot
+#define func_0203a994 Obj_HasFlag0
+#include "src/arm9/shared_engine/Obj_ReleaseIfSet_0203a970.c"

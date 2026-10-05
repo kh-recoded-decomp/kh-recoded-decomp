@@ -1,24 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct {
-    void *resource;
-    void *splitCallback;
-    u32 unk_08;
-} FieldFont;
-
-typedef struct {
-    u8 pad_00[0x78];
-    FieldFont fonts[4];
-} FieldManager;
-
-typedef struct {
-    u32 unk_00;
-    FieldManager *manager;
-} FieldManagerHandle;
-
-extern FieldManagerHandle data_ov001_020a04c4;
-
-FieldFont *GetFieldFont3(void)
-{
-    return &data_ov001_020a04c4.manager->fonts[3];
-}
+#define GetFieldFont3_020711e0 GetFieldFont3
+#define data_ov001_020a04a4 data_ov001_020a04c4
+#include "src/ov001/field_manager/GetFieldFont3_020711e0.c"

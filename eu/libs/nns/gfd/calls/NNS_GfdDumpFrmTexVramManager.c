@@ -1,19 +1,4 @@
-typedef unsigned int u32;
-typedef int BOOL;
-
-typedef struct NNSiGfdDefaultDebugContext {
-    u32 totalFree;
-    u32 totalReserved;
-} NNSiGfdDefaultDebugContext;
-
-typedef void (*NNSGfdFrmTexVramDebugDumpCallBack)(int, u32, u32, u32, BOOL, void *);
-
-extern void DefaultDebugDumpFunc_(int, u32, u32, u32, BOOL, void *);
-extern void NNS_GfdDumpFrmTexVramManagerEx(NNSGfdFrmTexVramDebugDumpCallBack callback, void *userContext);
-
-void NNS_GfdDumpFrmTexVramManager(void)
-{
-    NNSiGfdDefaultDebugContext context = { 0, 0 };
-
-    NNS_GfdDumpFrmTexVramManagerEx(DefaultDebugDumpFunc_, &context);
-}
+#define NNS_GfdDumpFrmTexVramManagerEx_02013824 NNS_GfdDumpFrmTexVramManagerEx
+#define NNS_GfdDumpFrmTexVramManager_020137f8 NNS_GfdDumpFrmTexVramManager
+#define func_0201377c DefaultDebugDumpFunc_
+#include "src/arm9/library_nns_gfd/NNS_GfdDumpFrmTexVramManager_020137f8.c"

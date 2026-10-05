@@ -1,15 +1,3 @@
-#include "nitro/types.h"
-
-extern s32 _s32_div_f(s32 dividend, s32 divisor);
-
-s32 DigitCount(s32 value)
-{
-    s32 count;
-
-    count = 0;
-    do {
-        count = count + 1;
-        value = _s32_div_f(value, 10);
-    } while (0 < value);
-    return count;
-}
+#define DigitCount_0207b7a4 DigitCount
+#define func_02023dbc _s32_div_f
+#include "src/ov001/unclassified_helpers/DigitCount_0207b7a4.c"

@@ -1,17 +1,3 @@
-#include "nitro/types.h"
-
-extern s32 data_020534e4[];
-
-BOOL IsValueInTable(s32 value)
-{
-    s32 index = 0;
-
-    do {
-        if (value == data_020534e4[index]) {
-            return FALSE;
-        }
-        index = index + 1;
-    } while (index < 0x13);
-
-    return TRUE;
-}
+#define IsValueInTable_02027ebc IsValueInTable
+#define data_020534d0 data_020534e4
+#include "src/arm9/unclassified_helpers/IsValueInTable_02027ebc.c"

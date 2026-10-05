@@ -1,19 +1,4 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-typedef struct StageData {
-    u32 flags;
-    u8 pad_00004[0x18e4c];
-    VecFx32 origin;
-} StageData;
-
-extern StageData *data_ov001_020a0528;
-extern const VecFx32 data_0205344c;
-
-void ResetStageOrigin(void)
-{
-    if (data_ov001_020a0528 != NULL) {
-        data_ov001_020a0528->flags |= 1;
-        data_ov001_020a0528->origin = data_0205344c;
-    }
-}
+#define ResetStageOrigin_0209c3e8 ResetStageOrigin
+#define data_02053438 data_0205344c
+#define data_ov001_020a0508 data_ov001_020a0528
+#include "src/ov001/shared_engine/ResetStageOrigin_0209c3e8.c"

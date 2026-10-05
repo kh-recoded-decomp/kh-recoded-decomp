@@ -1,16 +1,5 @@
-#include "nitro/types.h"
-
-typedef struct ListView {
-    u8 pad_00[0xc];
-    void *workBuffer;
-} ListView;
-
-extern void *func_ov027_020ba1f8(void *request);
-extern void LoadListViewGraphics(ListView *list, void *data, void *workBuffer);
-extern void func_ov027_020ba200(void *request, BOOL freeData);
-
-void OnListDataLoaded(void *request, ListView *list)
-{
-    LoadListViewGraphics(list, func_ov027_020ba1f8(request), list->workBuffer);
-    func_ov027_020ba200(request, TRUE);
-}
+#define OnListDataLoaded_020c3684 OnListDataLoaded
+#define func_ov027_020ba1d8 func_ov027_020ba1f8
+#define func_ov027_020ba1e0 func_ov027_020ba200
+#define func_ov073_020c3530 LoadListViewGraphics
+#include "src/ov073/status_menu/OnListDataLoaded_020c3684.c"

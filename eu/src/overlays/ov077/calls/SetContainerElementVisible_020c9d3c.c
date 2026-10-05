@@ -1,10 +1,4 @@
-#include "nitro/types.h"
-
-extern void *FindWidgetById(void *container, int elementId);
-extern void SetEntrySlotsVisible(void *container, void *element, BOOL visible);
-
-void SetContainerElementVisible_020c9d3c(void *container, int elementId, BOOL visible)
-{
-    void *element = FindWidgetById(container, elementId);
-    SetEntrySlotsVisible(container, element, visible);
-}
+#define SetContainerElementVisible_020c9d1c SetContainerElementVisible_020c9d3c
+#define func_ov027_020b90a4 FindWidgetById
+#define func_ov027_020b9580 SetEntrySlotsVisible
+#include "src/ov077/unclassified_helpers/SetContainerElementVisible_020c9d1c.c"

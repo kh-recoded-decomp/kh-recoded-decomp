@@ -1,24 +1,10 @@
-#include "nitro/types.h"
-
-extern u32 sOv041_MoPzZ_020cfac0;
-extern int SND_RegisterSeq(void *table, int id);
-extern void func_0202c6a4(int enable);
-extern int AcquireOrRefreshResourceBlock(int record, int index, int type);
-extern void IndexedPointer_GetFirstWord(int value, int key);
-extern int NestedPointer_GetFirstWord(int value, int key, int flags);
-extern void Tex0_GetTexPlttParams(void *dest, int value, int flags);
-extern void ReleaseSharedRecordSlot(int record);
-
-void LoadSharedRecordField(int owner) {
-    int record;
-    int value;
-
-    record = SND_RegisterSeq(&sOv041_MoPzZ_020cfac0, 0x12);
-    func_0202c6a4(0);
-    value = AcquireOrRefreshResourceBlock(record, 0, 1);
-    func_0202c6a4(1);
-    IndexedPointer_GetFirstWord(value, 7);
-    value = NestedPointer_GetFirstWord(value, 7, 0);
-    Tex0_GetTexPlttParams((void *)(owner + 0x1dd0), value, 0);
-    ReleaseSharedRecordSlot(record);
-}
+#define LoadSharedRecordField_020cdf90 LoadSharedRecordField
+#define RetainOrInitializeSharedRecord_0202c80c SND_RegisterSeq
+#define data_ov041_020cfaa0 sOv041_MoPzZ_020cfac0
+#define func_0202c690 func_0202c6a4
+#define func_0202c8a8 ReleaseSharedRecordSlot
+#define func_0202c940 AcquireOrRefreshResourceBlock
+#define func_0202d3c8 IndexedPointer_GetFirstWord
+#define func_0202d3e0 NestedPointer_GetFirstWord
+#define func_0202fd00 Tex0_GetTexPlttParams
+#include "src/ov041/shared_records/LoadSharedRecordField_020cdf90.c"

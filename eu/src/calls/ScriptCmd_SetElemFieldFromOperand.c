@@ -1,9 +1,4 @@
-extern int ScriptVm_ReadOperandInt(void *vm, void *cmd);
-extern void ScriptCmd_SetElemField(void *vm, unsigned int value);
-
-int ScriptCmd_SetElemFieldFromOperand(void *vm, void *cmd)
-{
-    int value = ScriptVm_ReadOperandInt(vm, cmd);
-    ScriptCmd_SetElemField(vm, value);
-    return 0;
-}
+#define ScriptCmd_SetElemFieldFromOperand_0202651c ScriptCmd_SetElemFieldFromOperand
+#define ScriptCmd_SetElemField_02025e18 ScriptCmd_SetElemField
+#define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
+#include "src/arm9/shared_engine/ScriptCmd_SetElemFieldFromOperand_0202651c.c"

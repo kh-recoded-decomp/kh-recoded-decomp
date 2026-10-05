@@ -1,14 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct ItemListView {
-    u8 pad_0000[0x4580];
-    u16 visibleCount;
-} ItemListView;
-
-extern void BuildItemListForType(ItemListView *view, u32 category);
-
-u16 BuildItemListForCategory(ItemListView *view, u32 category)
-{
-    BuildItemListForType(view, category);
-    return view->visibleCount;
-}
+#define BuildItemListForCategory_020c65d8 BuildItemListForCategory
+#define func_ov077_020c631c BuildItemListForType
+#include "src/ov077/unclassified_helpers/BuildItemListForCategory_020c65d8.c"

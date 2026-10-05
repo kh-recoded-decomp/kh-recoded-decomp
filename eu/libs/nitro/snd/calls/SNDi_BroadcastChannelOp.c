@@ -1,9 +1,3 @@
-extern void NNS_SndPlayerPauseByPlayerNo(int a, int b);
-
-void SNDi_BroadcastChannelOp(int arg0)
-{
-    int i;
-    for (i = 2; i < 0x20; i++) {
-        NNS_SndPlayerPauseByPlayerNo(i, arg0);
-    }
-}
+#define func_0201d5f0 NNS_SndPlayerPauseByPlayerNo
+#define func_0204da20 SNDi_BroadcastChannelOp
+#include "src/arm9/library_nitro_snd/func_0204da20.c"

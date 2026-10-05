@@ -1,26 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct SlotGroups {
-    u8 pad_000[0x74];
-    u8 objSlots[22][16];
-    u8 recordSlots[22][16];
-    u8 pad_334[0x494 - 0x334];
-    u8 counts[22];
-} SlotGroups;
-
-extern void func_0204f0d4(void *manager, int recordIndex);
-extern void ObjManager_FreeSlot(void *manager, int index);
-
-void ReleaseGroupSlots(void *manager, SlotGroups *groups)
-{
-    int group;
-    int i;
-
-    for (group = 0; group < 22; group++) {
-        for (i = 0; i < groups->counts[group]; i++) {
-            u8 objSlot = groups->objSlots[group][i];
-            func_0204f0d4(manager, groups->recordSlots[group][i]);
-            ObjManager_FreeSlot(manager, objSlot);
-        }
-    }
-}
+#define ObjManager_FreeSlot_0204f014 ObjManager_FreeSlot
+#define ReleaseGroupSlots_0206842c ReleaseGroupSlots
+#define func_0204f0c0 func_0204f0d4
+#include "src/ov002/panel_state/ReleaseGroupSlots_0206842c.c"

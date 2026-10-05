@@ -1,10 +1,3 @@
-extern char gBgLayerTransferDispatch[];
-
-void Callbacks_RunTableEntry(int index, int arg1, int arg2, int arg3) {
-    void (*callback)(int arg1, int arg2, int arg3);
-
-    callback = *(void (**)(int, int, int))(gBgLayerTransferDispatch + index * 0x18);
-    if (callback != 0) {
-        callback(arg1, arg2, arg3);
-    }
-}
+#define Callbacks_RunTableEntry_0202b3d4 Callbacks_RunTableEntry
+#define data_02055774 gBgLayerTransferDispatch
+#include "src/arm9/shared_engine/Callbacks_RunTableEntry_0202b3d4.c"

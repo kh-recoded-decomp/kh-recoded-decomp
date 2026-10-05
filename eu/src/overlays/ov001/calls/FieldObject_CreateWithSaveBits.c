@@ -1,27 +1,5 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-typedef struct FieldObject {
-    u8 pad_00[0x14];
-    int (*handler)(void);
-    u8 pad_18[0x28];
-    VecFx32 position;
-    u8 pad_4c[0x4];
-    u16 saveBitOffset;
-    u8 saveBitCount;
-} FieldObject;
-
-extern FieldObject *FieldObject_Create(void *objectClass, u8 slotIndex);
-extern int func_ov001_02081fa8(void);
-extern const VecFx32 data_0205344c;
-
-FieldObject *FieldObject_CreateWithSaveBits(void *objectClass, u8 slotIndex, u16 saveBitOffset, u8 saveBitCount)
-{
-    FieldObject *object = FieldObject_Create(objectClass, slotIndex);
-
-    object->position = data_0205344c;
-    object->saveBitOffset = saveBitOffset;
-    object->saveBitCount = saveBitCount;
-    object->handler = func_ov001_02081fa8;
-    return object;
-}
+#define FSi_CloseFileCommand_02081f80 func_ov001_02081fa8
+#define FieldObject_CreateWithSaveBits_02082038 FieldObject_CreateWithSaveBits
+#define FieldObject_Create_0207f440 FieldObject_Create
+#define data_02053438 data_0205344c
+#include "src/ov001/unclassified_helpers/FieldObject_CreateWithSaveBits_02082038.c"

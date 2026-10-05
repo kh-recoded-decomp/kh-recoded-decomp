@@ -1,1 +1,1 @@
-int OS_IsThreadTerminated(int *p){ return p[25] == 2; }
+#include "src/arm9/nitro_os/func_02002a94.c"

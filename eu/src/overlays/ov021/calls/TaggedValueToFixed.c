@@ -1,12 +1,2 @@
-#include "nitro/types.h"
-
-s32 TaggedValueToFixed(s16 *tagged)
-{
-    s32 result = 0;
-    if (*tagged == 1) {
-        result = *(s32 *)(tagged + 2) << 0xc;
-    } else if (*tagged == 0x10) {
-        result = *(s32 *)(tagged + 2);
-    }
-    return result;
-}
+#define TaggedValueToFixed_020b03b0 TaggedValueToFixed
+#include "src/ov021/leaf_research/TaggedValueToFixed_020b03b0.c"

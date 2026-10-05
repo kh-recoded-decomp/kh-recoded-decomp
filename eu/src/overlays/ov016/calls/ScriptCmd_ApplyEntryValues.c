@@ -1,34 +1,6 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-typedef struct ScriptOperand {
-    u32 type;
-    u32 value;
-} ScriptOperand;
-
-typedef struct {
-    u32 id : 10;
-    fx32 values[5];
-} EntryParams;
-
-extern s32 ScriptVm_ConsumeOperandInt(void *vm, ScriptOperand **cursor);
-extern fx32 ScriptVm_ConsumeOperandFx32(void *vm, ScriptOperand **cursor);
-extern unsigned int func_ov001_0208723c(int index);
-extern void SetFieldUnitPathPoint(unsigned int entry, EntryParams *params);
-
-BOOL ScriptCmd_ApplyEntryValues(void *vm, ScriptOperand *operands)
-{
-    EntryParams params;
-    ScriptOperand *cursor = operands;
-    int index;
-
-    index = ScriptVm_ConsumeOperandInt(vm, &cursor);
-    params.id = ScriptVm_ConsumeOperandInt(vm, &cursor);
-    params.values[0] = ScriptVm_ConsumeOperandFx32(vm, &cursor);
-    params.values[1] = ScriptVm_ConsumeOperandFx32(vm, &cursor);
-    params.values[2] = ScriptVm_ConsumeOperandFx32(vm, &cursor);
-    params.values[3] = ScriptVm_ConsumeOperandFx32(vm, &cursor);
-    params.values[4] = ScriptVm_ConsumeOperandFx32(vm, &cursor);
-    SetFieldUnitPathPoint(func_ov001_0208723c(index), &params);
-    return TRUE;
-}
+#define ScriptCmd_ApplyEntryValues_020a2178 ScriptCmd_ApplyEntryValues
+#define ScriptVm_ConsumeOperandFx32_020a1df4 ScriptVm_ConsumeOperandFx32
+#define ScriptVm_ConsumeOperandInt_020a1de0 ScriptVm_ConsumeOperandInt
+#define func_ov001_02087214 func_ov001_0208723c
+#define func_ov016_020a6910 SetFieldUnitPathPoint
+#include "src/ov016/script_commands/ScriptCmd_ApplyEntryValues_020a2178.c"

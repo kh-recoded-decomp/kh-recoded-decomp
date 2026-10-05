@@ -1,19 +1,6 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-extern int ScriptVm_ReadOperandInt(void *vm, void *operand);
-extern fx32 ScriptVm_ReadOperandFx32(void *vm, void *operand);
-extern void *func_ov001_0207f060(int group, int index);
-extern void SetTargetPosition_020a1b84(void *mover, const VecFx32 *target);
-
-BOOL ScriptCmd_SetActorTarget(void *vm, u8 *cmd) {
-    int group = ScriptVm_ReadOperandInt(vm, cmd);
-    int index = ScriptVm_ReadOperandInt(vm, cmd + 8);
-    VecFx32 target;
-
-    target.x = ScriptVm_ReadOperandFx32(vm, cmd + 0x10);
-    target.y = ScriptVm_ReadOperandFx32(vm, cmd + 0x18);
-    target.z = ScriptVm_ReadOperandFx32(vm, cmd + 0x20);
-    SetTargetPosition_020a1b84(func_ov001_0207f060(group, index), &target);
-    return TRUE;
-}
+#define ScriptCmd_SetActorTarget_020a07f0 ScriptCmd_SetActorTarget
+#define ScriptVm_ReadOperandFx32_02025df8 ScriptVm_ReadOperandFx32
+#define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
+#define SetTargetPosition_020a1b64 SetTargetPosition_020a1b84
+#define func_ov001_0207f038 func_ov001_0207f060
+#include "src/ov007/shared_engine/ScriptCmd_SetActorTarget_020a07f0.c"

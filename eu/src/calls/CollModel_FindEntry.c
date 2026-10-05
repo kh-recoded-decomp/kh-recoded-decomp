@@ -1,6 +1,2 @@
-extern char *FindEntryByNameNoCase(int arg0, void *);
-
-char *CollModel_FindEntry(void *p, void *key)
-{
-    return FindEntryByNameNoCase(*(int *)*(int **)((char *)p + 4), key);
-}
+#define CollModel_FindEntry_020352cc CollModel_FindEntry
+#include "src/arm9/shared_engine/CollModel_FindEntry_020352cc.c"

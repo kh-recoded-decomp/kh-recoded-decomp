@@ -1,38 +1,14 @@
-#include "nitro/types.h"
-
-typedef int (*SceneHandler)(void);
-
-typedef struct {
-    SceneHandler states[9];
-    u8 pad_24[4];
-    SceneHandler onEnter;
-    SceneHandler onExit;
-} SceneHandlerTable;
-
-extern int func_ov030_020babc8(void);
-extern int func_ov030_020babe0(void);
-extern int func_ov030_020babfc(void);
-extern int func_ov030_020bac14(void);
-extern int MobiClip_IsDecoderReady(void);
-extern int MobiClip_CloseDecoder(void);
-extern int ApplyMovieStartParams(void);
-extern int IsSceneUnpaused_020bacd4(void);
-extern int ApplyOverlayScaleMode(void);
-extern int func_ov030_020bb230(void);
-extern int SuspendSceneAtQuarterRate(void);
-extern void ApplyAreaMusicEntry(int mode);
-
-void InstallSceneHandlers_020bb288(SceneHandlerTable *table) {
-    table->states[0] = func_ov030_020babc8;
-    table->states[1] = func_ov030_020babe0;
-    table->states[2] = func_ov030_020babfc;
-    table->states[3] = func_ov030_020bac14;
-    table->states[4] = MobiClip_IsDecoderReady;
-    table->states[5] = MobiClip_CloseDecoder;
-    table->states[6] = ApplyMovieStartParams;
-    table->states[7] = IsSceneUnpaused_020bacd4;
-    table->states[8] = ApplyOverlayScaleMode;
-    table->onEnter = func_ov030_020bb230;
-    table->onExit = SuspendSceneAtQuarterRate;
-    ApplyAreaMusicEntry(1);
-}
+#define ApplyOverlayScaleMode_020baab4 ApplyOverlayScaleMode
+#define InstallSceneHandlers_020bb268 InstallSceneHandlers_020bb288
+#define IsSceneUnpaused_020bacb4 IsSceneUnpaused_020bacd4
+#define func_ov001_02064734 ApplyAreaMusicEntry
+#define func_ov030_020baba8 func_ov030_020babc8
+#define func_ov030_020babc0 func_ov030_020babe0
+#define func_ov030_020babdc func_ov030_020babfc
+#define func_ov030_020babf4 func_ov030_020bac14
+#define func_ov030_020bac0c MobiClip_IsDecoderReady
+#define func_ov030_020bac28 MobiClip_CloseDecoder
+#define func_ov030_020bac48 ApplyMovieStartParams
+#define func_ov030_020bb210 func_ov030_020bb230
+#define func_ov030_020bb220 SuspendSceneAtQuarterRate
+#include "src/ov030/shared_engine/InstallSceneHandlers_020bb268.c"

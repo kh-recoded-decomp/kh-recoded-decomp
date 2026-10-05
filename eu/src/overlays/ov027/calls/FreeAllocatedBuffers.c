@@ -1,14 +1,3 @@
-#include "nitro/types.h"
-
-extern void NNSi_FndFreeFromDefaultHeap(void *block);
-
-struct Owner {
-    void *primary;
-    u8 pad_04[0xc];
-    void *secondary;
-};
-
-void FreeAllocatedBuffers(struct Owner *owner) {
-    NNSi_FndFreeFromDefaultHeap(owner->secondary);
-    NNSi_FndFreeFromDefaultHeap(owner->primary);
-}
+#define FreeAllocatedBuffers_020b9a60 FreeAllocatedBuffers
+#define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
+#include "src/ov027/shared_engine/FreeAllocatedBuffers_020b9a60.c"

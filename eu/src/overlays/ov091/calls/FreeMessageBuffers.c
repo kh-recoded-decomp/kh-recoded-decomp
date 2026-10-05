@@ -1,17 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad_00[4];
-    u16 *messageBuffers[3];
-} MenuScene;
-
-extern void ZeroHalfThenFree(u16 *buffer);
-
-void FreeMessageBuffers(MenuScene *scene)
-{
-    int i;
-
-    for (i = 0; i < 3; i++) {
-        ZeroHalfThenFree(scene->messageBuffers[i]);
-    }
-}
+#define FreeMessageBuffers_020bf1d8 FreeMessageBuffers
+#define ZeroHalfThenFree_0202cd78 ZeroHalfThenFree
+#include "src/ov091/panel_state/FreeMessageBuffers_020bf1d8.c"

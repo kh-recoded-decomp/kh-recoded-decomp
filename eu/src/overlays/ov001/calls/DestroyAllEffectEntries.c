@@ -1,39 +1,5 @@
-#include "nitro/types.h"
-
-typedef struct EffectEntry {
-    u8 pad_00[0x34];
-    void (*onDestroy)(struct EffectEntry *entry);
-} EffectEntry;
-
-typedef struct EffectList {
-    EffectEntry **entries;
-    s8 count;
-} EffectList;
-
-extern EffectList *data_ov001_020a04fc;
-
-extern void DestroyEntryPool(EffectEntry *entry);
-extern void NNSi_FndFreeFromDefaultHeap(void *ptr);
-
-void DestroyAllEffectEntries(BOOL notify)
-{
-    EffectList *list = data_ov001_020a04fc;
-    int i;
-    EffectEntry *entry;
-
-    for (i = 0; i < list->count; i++) {
-        entry = list->entries[i];
-        if (entry != NULL) {
-            if (notify && entry->onDestroy != NULL) {
-                entry->onDestroy(entry);
-            }
-            DestroyEntryPool(entry);
-            list->entries[i] = NULL;
-        }
-    }
-    list->count = 0;
-    if (list->entries != NULL) {
-        NNSi_FndFreeFromDefaultHeap(list->entries);
-        list->entries = NULL;
-    }
-}
+#define DestroyAllEffectEntries_020868d0 DestroyAllEffectEntries
+#define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
+#define data_ov001_020a04dc data_ov001_020a04fc
+#define func_ov001_02086298 DestroyEntryPool
+#include "src/ov001/field_objects/DestroyAllEffectEntries_020868d0.c"

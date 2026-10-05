@@ -1,38 +1,12 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad_00[0x48];
-    void *codeBackup;
-    u32 codeSize;
-    void *codeAddress;
-} MovieFileBank;
-
-extern MovieFileBank data_ov022_020b7db4;
-
-extern int func_ov022_020aa8c0(void);
-extern u32 OS_GetArenaHi(int index);
-extern u32 OS_GetArenaLo(int index);
-extern u32 OS_GetDTCMAddress(void);
-extern void *NNSi_FndAllocFromDefaultHeap(u32 size);
-extern void MI_CpuCopy8(const void *src, void *dest, u32 size);
-extern unsigned int func_ov022_020aa8cc(void);
-extern void func_ov022_020aa8d4(void *arenaBase, unsigned int arenaSize);
-extern void func_ov022_020aa8f4(void *arenaBase, unsigned int arenaSize);
-
-void SetupMovieDecoderArenas(void) {
-    MovieFileBank *bank = &data_ov022_020b7db4;
-    u32 tableSize;
-    u32 tableBase;
-
-    bank->codeSize = func_ov022_020aa8c0();
-    bank->codeAddress = (void *)(OS_GetArenaHi(3) - bank->codeSize);
-    bank->codeBackup = NNSi_FndAllocFromDefaultHeap(bank->codeSize);
-    MI_CpuCopy8(bank->codeAddress, bank->codeBackup, bank->codeSize);
-    tableBase = OS_GetArenaLo(4);
-    tableSize = OS_GetDTCMAddress() + 0x4000 - tableBase;
-    if (tableSize >= func_ov022_020aa8cc()) {
-        tableSize = func_ov022_020aa8cc();
-    }
-    func_ov022_020aa8d4(bank->codeAddress, bank->codeSize);
-    func_ov022_020aa8f4((void *)OS_GetArenaLo(4), tableSize);
-}
+#define GetMovieCacheTableArenaCapacity_020aa8ac func_ov022_020aa8cc
+#define GetTableAEntry_0200367c OS_GetArenaHi
+#define GetTableBEntry_02003690 OS_GetArenaLo
+#define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
+#define ResetMovieDecoderCodeArena_020aa8b4 func_ov022_020aa8d4
+#define ResetMovieLookupTableArena_020aa8d4 func_ov022_020aa8f4
+#define SetupMovieDecoderArenas_020a8264 SetupMovieDecoderArenas
+#define data_ov022_020b7d94 data_ov022_020b7db4
+#define func_01ff89a8 MI_CpuCopy8
+#define func_02003b3c OS_GetDTCMAddress
+#define getMovieDecoderCodeSize_020aa8a0 func_ov022_020aa8c0
+#include "src/ov022/video_playback/SetupMovieDecoderArenas_020a8264.c"

@@ -1,9 +1,3 @@
-#include "libs/nitro/os/os_protection_region_internal.h"
-
-typedef void (*ProtectionRegionSetter)(u32 parameter);
-extern ProtectionRegionSetter OSi_ProtectionRegionSetters[];
-
-void OSi_SetProtectionRegion(OSProtectionRegion region, u32 parameter)
-{
-    OSi_ProtectionRegionSetters[region](parameter);
-}
+#define CallTableFunc_02003be4 OSi_SetProtectionRegion
+#define data_02055bd8 OSi_ProtectionRegionSetters
+#include "src/arm9/unclassified_helpers/CallTableFunc_02003be4.c"

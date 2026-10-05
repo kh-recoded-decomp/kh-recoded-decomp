@@ -1,7 +1,2 @@
-#include "libs/nitro/fx/fx_types_internal.h"
-
-fx32 FX_Mul32x64cFunc(fx32 value, fx64c fraction)
-{
-    fx64c product = fraction * value + 0x80000000LL;
-    return (fx32)(product >> 32);
-}
+#define FX_Mul32x64c_02006468 FX_Mul32x64cFunc
+#include "src/arm9/library_nitro_fx/FX_Mul32x64c_02006468.c"

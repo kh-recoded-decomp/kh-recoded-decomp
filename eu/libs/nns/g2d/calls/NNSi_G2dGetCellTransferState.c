@@ -1,5 +1,3 @@
-extern int sCellTransferStateManager;
-
-int NNSi_G2dGetCellTransferState(int arg0) {
-    return *(int *)((char *)&sCellTransferStateManager + 8) + arg0 * 0x30;
-}
+#define GlobalArrayEntryPtr30_02015b60 NNSi_G2dGetCellTransferState
+#define data_0205a914 sCellTransferStateManager
+#include "src/arm9/library_nitro_nns/GlobalArrayEntryPtr30_02015b60.c"

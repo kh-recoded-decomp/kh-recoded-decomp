@@ -1,15 +1,5 @@
-#include "nitro/types.h"
-
-extern u32 data_ov001_020a0480;
-extern void WritePackedBits(u32 *base, u32 bitOffset, u32 bitCount, u32 value);
-extern void WriteGlobalPackedBits(u32 bitOffset, u32 bitCount, u32 value);
-
-void WriteSessionPackedBits(int bitOffset, u32 bitCount, u32 value)
-{
-    if (bitOffset >= 0x3300)
-    {
-        WritePackedBits((u32 *)(data_ov001_020a0480 + 0x28), bitOffset - 0x3300, bitCount, value);
-        return;
-    }
-    WriteGlobalPackedBits(bitOffset, bitCount, value);
-}
+#define WriteGlobalPackedBits_02027360 WriteGlobalPackedBits
+#define WritePackedBits_0202d560 WritePackedBits
+#define WriteSessionPackedBits_0206459c WriteSessionPackedBits
+#define data_ov001_020a0460 data_ov001_020a0480
+#include "src/ov001/unclassified_helpers/WriteSessionPackedBits_0206459c.c"

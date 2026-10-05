@@ -1,9 +1,3 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-extern s64 NthRootFx64(s64 value, int power);
-
-fx32 LengthFx32Xy(fx32 x, fx32 y)
-{
-    return (fx32)(NthRootFx64(((s64)x * x + (s64)y * y) << 12, 2) >> 12);
-}
+#define LengthFx32Xy_0204a3b8 LengthFx32Xy
+#define PowFx64_02049ebc NthRootFx64
+#include "src/arm9/math/LengthFx32Xy_0204a3b8.c"

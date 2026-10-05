@@ -1,31 +1,7 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad_00[0x820];
-    u8 counterChars[4];
-} Ov081State;
-
-typedef struct {
-    u8 kind;
-} EntryList;
-
-extern const char data_ov081_020c5d60[];
-extern const char data_ov081_020c5d70[];
-extern void CountUnlockedListEntries(Ov081State *state, EntryList *list, int *total, int *before);
-extern void *SPrintfUnbounded(void *dst, const char *fmt, ...);
-extern void func_ov081_020c5550(void *charBase, int bg, const void *text, int x, int y, int areaWidth, int areaHeight, int tile);
-
-void DrawListPageCounter(Ov081State *state, EntryList *list)
-{
-    int total;
-    int before;
-    char text[12];
-
-    if (list->kind == 1) {
-        CountUnlockedListEntries(state, list, &total, &before);
-        SPrintfUnbounded(text, data_ov081_020c5d60, before + 1, total);
-    } else {
-        SPrintfUnbounded(text, data_ov081_020c5d70);
-    }
-    func_ov081_020c5550(state->counterChars, 1, text, 0x1a, 1, 4, 2, 0x44);
-}
+#define CountUnlockedListEntries_020c5460 CountUnlockedListEntries
+#define DrawBgTextLabel_020c5530 func_ov081_020c5550
+#define DrawListPageCounter_020c5654 DrawListPageCounter
+#define data_ov081_020c5d40 data_ov081_020c5d60
+#define data_ov081_020c5d50 data_ov081_020c5d70
+#define func_0202e060 SPrintfUnbounded
+#include "src/ov081/unclassified_helpers/DrawListPageCounter_020c5654.c"

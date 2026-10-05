@@ -1,18 +1,7 @@
-#include "nitro/types.h"
-
-extern void PlaceCursorNode(void);
-extern void ShowUnlockedPageTabs(void *entity);
-extern void RefreshPageTabs(void *entity);
-extern void func_ov078_020c49a0(void *entity);
-extern void DrawPageHeader(void *entity);
-
-/* Runs a fixed init sequence on an entity */
-void InitSequence(void *entity)
-{
-    PlaceCursorNode();
-    func_ov078_020c49a0(entity);
-    *(u32 *)((u8 *)entity + 0x5d4) = 0;
-    ShowUnlockedPageTabs(entity);
-    RefreshPageTabs(entity);
-    DrawPageHeader(entity);
-}
+#define InitSequence_020c471c InitSequence
+#define func_ov078_020c4748 PlaceCursorNode
+#define func_ov078_020c4774 ShowUnlockedPageTabs
+#define func_ov078_020c48dc RefreshPageTabs
+#define func_ov078_020c4980 func_ov078_020c49a0
+#define func_ov078_020c4b18 DrawPageHeader
+#include "src/ov078/unclassified_helpers/InitSequence_020c471c.c"

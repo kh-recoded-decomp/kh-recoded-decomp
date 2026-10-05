@@ -1,33 +1,12 @@
-#include "nitro/types.h"
-
-typedef void *SceneHandler;
-
-typedef struct {
-    SceneHandler states[9];
-    u8 pad_24[4];
-    SceneHandler onEnter;
-} SceneHandlerTable;
-
-extern void func_ov029_020ba9d0(int arg0);
-extern BOOL func_ov029_020ba9f4(void);
-extern u32 func_ov029_020baa20(u32 argument0, u32 argument1, u32 argument2, u32 argument3);
-extern u32 func_ov029_020baa44(u32 argument0, u32 argument1, u32 argument2, u32 argument3);
-extern BOOL HasOv029ObjectField28(void);
-extern void ReleaseOv029Object(void);
-extern void func_ov029_020baaa4(void *params);
-extern u32 func_ov029_020baaec(u32 argument0, u32 argument1, u32 argument2, u32 argument3);
-extern void func_ov029_020ba88c(int mode);
-extern u32 func_ov029_020baaf4(u32 argument0, u32 argument1, u32 argument2, u32 argument3);
-
-void InstallOv029SceneHandlers(SceneHandlerTable *table) {
-    table->states[0] = func_ov029_020ba9d0;
-    table->states[1] = func_ov029_020ba9f4;
-    table->states[2] = func_ov029_020baa20;
-    table->states[3] = func_ov029_020baa44;
-    table->states[4] = HasOv029ObjectField28;
-    table->states[5] = ReleaseOv029Object;
-    table->states[6] = func_ov029_020baaa4;
-    table->states[7] = func_ov029_020baaec;
-    table->states[8] = func_ov029_020ba88c;
-    table->onEnter = func_ov029_020baaf4;
-}
+#define HasOv029ObjectField28_020baa40 HasOv029ObjectField28
+#define InstallOv029SceneHandlers_020baadc InstallOv029SceneHandlers
+#define ReleaseOv029Object_020baa64 ReleaseOv029Object
+#define func_ov029_020ba86c func_ov029_020ba88c
+#define func_ov029_020ba9b0 func_ov029_020ba9d0
+#define func_ov029_020ba9d4 func_ov029_020ba9f4
+#define func_ov029_020baa00 func_ov029_020baa20
+#define func_ov029_020baa24 func_ov029_020baa44
+#define func_ov029_020baa84 func_ov029_020baaa4
+#define func_ov029_020baacc func_ov029_020baaec
+#define func_ov029_020baad4 func_ov029_020baaf4
+#include "src/ov029/overlay_state/InstallOv029SceneHandlers_020baadc.c"

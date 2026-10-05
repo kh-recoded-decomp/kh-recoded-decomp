@@ -1,10 +1,4 @@
-#include "nitro/types.h"
-
-extern u8 *data_ov001_020a0514;
-extern void Obj_ReleaseIfSet(void *channel);
-
-void ActorChannel_Destroy(void)
-{
-    Obj_ReleaseIfSet(data_ov001_020a0514 + 0x140);
-    data_ov001_020a0514 = 0;
-}
+#define ActorChannel_Destroy_0208b760 ActorChannel_Destroy
+#define func_0203a970 Obj_ReleaseIfSet
+#define g_channelContext_020a04f4 data_ov001_020a0514
+#include "src/ov001/shared_engine/ActorChannel_Destroy_0208b760.c"

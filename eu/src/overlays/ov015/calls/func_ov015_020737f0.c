@@ -1,15 +1,7 @@
-extern void SetPanelTransitionMode(int state);
-extern int WM_SetParentParameter(void *fn, void *arg);
-extern void WH_SetError(void);
-extern void WH_StateOutSetParentParam(void);
-extern int data_ov015_0207ea20;
-
-int func_ov015_020737f0(void) {
-    SetPanelTransitionMode(3);
-    if (WM_SetParentParameter((void *)&WH_StateOutSetParentParam, &data_ov015_0207ea20) == 2) {
-        return 1;
-    }
-    WH_SetError();
-    SetPanelTransitionMode(9);
-    return 0;
-}
+#define advance_wireless_task_step_020737f0 func_ov015_020737f0
+#define data_0207ea20 data_ov015_0207ea20
+#define func_02011738 WM_SetParentParameter
+#define func_020737c4 SetPanelTransitionMode
+#define func_020737d4 WH_SetError
+#define func_02073830 WH_StateOutSetParentParam
+#include "src/ov015/wireless/advance_wireless_task_step_020737f0.c"

@@ -1,15 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct ContainerElement {
-    u8 pad_00[0x14];
-    int spriteIndices[2];
-} ContainerElement;
-
-extern ContainerElement *FindWidgetById(void *container, int elementId);
-extern void func_0204f218(void *recordArray, int recordIndex, int frames);
-
-void RefreshElementCellAnimation(void *container, int elementId)
-{
-    ContainerElement *element = FindWidgetById(container, elementId);
-    func_0204f218(container, element->spriteIndices[0], 0);
-}
+#define RefreshElementCellAnimation_020c9d34 RefreshElementCellAnimation
+#define func_0204f204 func_0204f218
+#define func_ov027_020b90a4 FindWidgetById
+#include "src/ov077/unclassified_helpers/RefreshElementCellAnimation_020c9d34.c"

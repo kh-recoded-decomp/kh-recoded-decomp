@@ -1,8 +1,4 @@
-#include "nitro/types.h"
-
-extern void *data_ov043_020bd2e0;
-extern void InitCameraState_020bcbec(int arg, void *camera);
-
-void ResetCameraDefault(void) {
-    InitCameraState_020bcbec(0, data_ov043_020bd2e0);
-}
+#define ResetCameraDefault_020bcbb0 ResetCameraDefault
+#define data_ov043_020bd2c0 data_ov043_020bd2e0
+#define func_ov043_020bcbcc InitCameraState_020bcbec
+#include "src/ov043/camera/ResetCameraDefault_020bcbb0.c"

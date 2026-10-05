@@ -1,26 +1,6 @@
-#include "nitro/types.h"
-
-typedef struct SubModeState {
-    s32 mode;
-} SubModeState;
-
-extern SubModeState *data_ov021_020b56c0;
-
-extern int Camera_GetDriftHeading(void);
-extern int func_ov042_020bd4cc(void);
-extern int GetCameraYaw(void);
-
-int QuerySubModeStatus(void)
-{
-    switch (data_ov021_020b56c0->mode) {
-    case 0:
-        return Camera_GetDriftHeading();
-    case 1:
-        return func_ov042_020bd4cc();
-    case 2:
-        return GetCameraYaw();
-    case 3:
-        return 0;
-    }
-    return 0;
-}
+#define QuerySubModeStatus_020af3f4 QuerySubModeStatus
+#define data_ov021_020b56a0 data_ov021_020b56c0
+#define func_ov042_020bd4ac func_ov042_020bd4cc
+#define func_ov043_020bcacc GetCameraYaw
+#define func_ov046_020c14fc Camera_GetDriftHeading
+#include "src/ov021/sub_mode/QuerySubModeStatus_020af3f4.c"

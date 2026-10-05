@@ -1,18 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad_00[0x48];
-    int frame;
-} SubtitleStream;
-
-typedef struct {
-    u32 unk_00;
-    u32 unk_04;
-    SubtitleStream *subtitles;
-} MovieGlobals;
-
-extern MovieGlobals data_ov022_020b7da8;
-
-int GetSubtitleStreamFrame(void) {
-    return data_ov022_020b7da8.subtitles != NULL ? data_ov022_020b7da8.subtitles->frame : -1;
-}
+#define GetSubtitleStreamFrame_020a8918 GetSubtitleStreamFrame
+#define data_ov022_020b7d88 data_ov022_020b7da8
+#include "src/ov022/video_playback/GetSubtitleStreamFrame_020a8918.c"

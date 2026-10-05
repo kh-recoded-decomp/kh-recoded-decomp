@@ -1,15 +1,3 @@
-#include "nitro/types.h"
-
-extern BOOL IsGlobalPackedBitSet(int bitIndex);
-
-int CountUnlockedTiers(void)
-{
-    int count;
-
-    for (count = 0; count < 8; count++) {
-        if (!IsGlobalPackedBitSet(count + 0xa0b)) {
-            break;
-        }
-    }
-    return count;
-}
+#define CountUnlockedTiers_020c4988 CountUnlockedTiers
+#define IsGlobalPackedBitSet_02027304 IsGlobalPackedBitSet
+#include "src/ov075/unclassified_helpers/CountUnlockedTiers_020c4988.c"

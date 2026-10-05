@@ -1,5 +1,1 @@
-/* MI_SetWramBank: selects the WRAM bank via WRAMCNT (0x04000247). */
-
-void MI_SetWramBank(unsigned char bank) {
-    *(volatile unsigned char *)0x04000247 = bank;
-}
+#include "src/arm9/nitro_os/func_02004e34.c"

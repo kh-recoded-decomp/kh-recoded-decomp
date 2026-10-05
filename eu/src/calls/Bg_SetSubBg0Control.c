@@ -1,16 +1,2 @@
-extern int GX_GetBankForBGExtPltt(int arg);
-
-void Bg_SetSubBg0Control(int size, int colorMode, int screenBase, int charBase) {
-    int bank = GX_GetBankForBGExtPltt(size);
-    int extPal;
-    if (bank == 0x20 || bank == 0x10 || bank == 0x60) {
-        extPal = 0;
-    } else {
-        extPal = 1;
-    }
-    {
-        volatile unsigned short *reg_bg0cnt_b = (volatile unsigned short *)0x04001008;
-        *reg_bg0cnt_b = (*reg_bg0cnt_b & 0x43)
-            | (size << 14) | (colorMode << 7) | (screenBase << 8) | (charBase << 2) | (extPal << 13);
-    }
-}
+#define Bg_SetSubBg0Control_0202b12c Bg_SetSubBg0Control
+#include "src/arm9/shared_engine/Bg_SetSubBg0Control_0202b12c.c"

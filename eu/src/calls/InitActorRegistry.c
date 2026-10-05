@@ -1,13 +1,5 @@
-#include "nitro/types.h"
-
-extern void *NNSi_FndAllocFromDefaultHeap(u32 size);
-extern void MI_CpuFill8(void *dst, int value, u32 size);
-extern void *gActorRegistry;
-
-BOOL InitActorRegistry(void) {
-    if (gActorRegistry == NULL) {
-        gActorRegistry = NNSi_FndAllocFromDefaultHeap(0xc30);
-    }
-    MI_CpuFill8(gActorRegistry, 0, 0xc30);
-    return TRUE;
-}
+#define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
+#define func_01ff8830 MI_CpuFill8
+#define func_0203574c InitActorRegistry
+#define g_actorRegistry_0206083c gActorRegistry
+#include "src/arm9/shared_engine/func_0203574c.c"

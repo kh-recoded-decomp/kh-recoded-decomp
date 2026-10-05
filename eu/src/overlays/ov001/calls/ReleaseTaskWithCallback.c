@@ -1,22 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct CallbackTask CallbackTask;
-
-typedef struct CallbackTask {
-    u8 pad_00[0x8];
-    void *work;
-    u8 pad_0C[0x5C];
-    void (*onFinish)(CallbackTask *task);
-} CallbackTask;
-
-extern void func_ov001_020822d4(void *work);
-extern void ReleaseOwnerResource(CallbackTask *task, int arg);
-
-void ReleaseTaskWithCallback(CallbackTask *task, int arg)
-{
-    if (task->onFinish != NULL) {
-        task->onFinish(task);
-    }
-    func_ov001_020822d4(task->work);
-    ReleaseOwnerResource(task, arg);
-}
+#define ReleaseTaskBase_0207f20c ReleaseOwnerResource
+#define ReleaseTaskWithCallback_020822d8 ReleaseTaskWithCallback
+#define ReleaseWorkResources_020822ac func_ov001_020822d4
+#include "src/ov001/unclassified_helpers/ReleaseTaskWithCallback_020822d8.c"

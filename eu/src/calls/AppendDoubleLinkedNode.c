@@ -1,20 +1,2 @@
-struct Node {
-    struct Node *prev;
-    struct Node *next;
-};
-
-void AppendDoubleLinkedNode(struct Node **head, struct Node *node)
-{
-    struct Node *tail = *head;
-    if (tail == 0) {
-        node->prev = 0;
-        *head = node;
-    } else {
-        while (tail->next != 0) {
-            tail = tail->next;
-        }
-        node->prev = tail;
-        tail->next = node;
-    }
-    node->next = 0;
-}
+#define AppendDoubleLinkedNode_0204e9f8 AppendDoubleLinkedNode
+#include "src/arm9/library_nitro_nns/func_0204e9f8.c"

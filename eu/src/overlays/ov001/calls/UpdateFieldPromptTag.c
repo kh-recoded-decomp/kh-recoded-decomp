@@ -1,24 +1,9 @@
-#include "nitro/types.h"
-
-typedef struct RecordPool RecordPool;
-
-extern BOOL IsModeSetOrFlag370aClear(void);
-extern BOOL IsHudFlag7Set(void);
-extern BOOL IsFieldFlag10Set(void);
-extern void *FindActiveRecordById(RecordPool *pool, u32 recordId);
-extern void func_ov027_020b824c(RecordPool *pool, void *record, u16 first, u16 second);
-extern void func_ov027_020b82a4(RecordPool *pool, void *record, int visible);
-extern void func_ov027_020b8230(RecordPool *pool, void *record);
-
-void UpdateFieldPromptTag(int unused, RecordPool *pool)
-{
-    void *record;
-
-    if (!IsModeSetOrFlag370aClear() || IsHudFlag7Set() || IsFieldFlag10Set()) {
-        func_ov027_020b824c(pool, FindActiveRecordById(pool, 0x1f), 0, 0x14);
-    } else {
-        record = FindActiveRecordById(pool, 0x1f);
-        func_ov027_020b82a4(pool, record, 1);
-        func_ov027_020b8230(pool, record);
-    }
-}
+#define FindActiveRecordById_020b8184 FindActiveRecordById
+#define IsFieldFlag10Set_020728c4 IsFieldFlag10Set
+#define IsHudFlag7Set_020725bc IsHudFlag7Set
+#define IsModeSetOrFlag370aClear_0207259c IsModeSetOrFlag370aClear
+#define TagTracker_InvokeCallback_020b8210 func_ov027_020b8230
+#define UpdateFieldPromptTag_02075ccc UpdateFieldPromptTag
+#define func_ov027_020b822c func_ov027_020b824c
+#define func_ov027_020b8284 func_ov027_020b82a4
+#include "src/ov001/field_manager/UpdateFieldPromptTag_02075ccc.c"

@@ -1,56 +1,7 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-typedef struct {
-    s32 isVisible;
-    s32 isMirrored;
-    fx32 height;
-    void *sprite;
-    u16 size;
-} FallingPiece;
-
-typedef struct {
-    s32 mode;
-    void *sprites[4];
-    void *frameSprite;
-    u8 pad_18[0x20 - 0x18];
-    s32 isActive;
-    FallingPiece pieces[6];
-    s32 spawnTimer;
-    s32 spawnIndex;
-    fx32 fallSpeed;
-} FallingContext;
-
-extern FallingContext *data_ov001_020a04f4;
-extern void SpawnFallingPiece(FallingContext *context, FallingPiece *piece);
-extern void UpdateFallingPiecePosition(FallingPiece *piece);
-extern void func_ov001_0207e2d0(void);
-
-extern void func_ov001_0206ad1c(void *arg);
-
-s32 UpdateFallingPieces(void)
-{
-    FallingContext *context = data_ov001_020a04f4;
-    FallingPiece *piece;
-    s32 i;
-
-    if (context->isActive != 0) {
-        context->spawnTimer--;
-        if (context->spawnTimer < 0) {
-            context->spawnTimer = 15;
-            SpawnFallingPiece(context, &context->pieces[context->spawnIndex]);
-            context->spawnIndex = (context->spawnIndex + 1) % 6;
-        }
-        func_ov001_0207e2d0();
-        for (i = 0; i < 6; i++) {
-            piece = &context->pieces[i];
-            if (piece->isVisible != 0) {
-                piece->height -= context->fallSpeed;
-                UpdateFallingPiecePosition(piece);
-                func_ov001_0206ad1c(piece->sprite);
-            }
-        }
-        func_ov001_0206ad1c(context->frameSprite);
-    }
-    return 0;
-}
+#define AlarmCallback_0206ad1c func_ov001_0206ad1c
+#define SpawnFallingPiece_0207e44c SpawnFallingPiece
+#define UpdateFallingPiecePosition_0207e3ec UpdateFallingPiecePosition
+#define UpdateFallingPieces_0207e920 UpdateFallingPieces
+#define data_ov001_020a04d4 data_ov001_020a04f4
+#define func_ov001_0207e2a8 func_ov001_0207e2d0
+#include "src/ov001/unclassified_helpers/UpdateFallingPieces_0207e920.c"

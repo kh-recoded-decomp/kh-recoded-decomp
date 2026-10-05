@@ -1,14 +1,3 @@
-#include "nitro/types.h"
-
-extern u32 SetPanelTransitionMode();
-
-void ChoosePanelModeFromSelection(int context)
-
-{
-  if (*(u16 *)(context + 2) != 0) {
-    SetPanelTransitionMode(10);
-    return;
-  }
-  SetPanelTransitionMode(0);
-  return;
-}
+#define ChoosePanelModeFromSelection_020748ac ChoosePanelModeFromSelection
+#define func_ov015_020737c4 SetPanelTransitionMode
+#include "src/ov015/reviewed_helpers/ChoosePanelModeFromSelection_020748ac.c"

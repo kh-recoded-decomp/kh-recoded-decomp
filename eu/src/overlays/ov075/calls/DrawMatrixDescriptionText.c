@@ -1,15 +1,5 @@
-extern unsigned int CallVirtualHandlerSlot1();
-extern unsigned int DrawTextColored();
-extern unsigned int Text_UploadTileBuffer();
-
-void DrawMatrixDescriptionText(int context)
-
-{
-  CallVirtualHandlerSlot1((void *)(context + 0x11f44),0);
-  if (*(void **)(context + 0x11fac) != (void *)0x0) {
-    DrawTextColored
-              ((void *)(context + 0x11f44),2,4,2,10,*(void **)(context + 0x11fac));
-  }
-  Text_UploadTileBuffer((void *)(context + 0x11f44));
-  return;
-}
+#define CallVirtualHandlerSlot1_02001574 CallVirtualHandlerSlot1
+#define DrawMatrixDescriptionText_020caa30 DrawMatrixDescriptionText
+#define DrawTextColored_02001668 DrawTextColored
+#define Text_UploadTileBuffer_02001520 Text_UploadTileBuffer
+#include "src/ov075/reviewed_helpers/DrawMatrixDescriptionText_020caa30.c"

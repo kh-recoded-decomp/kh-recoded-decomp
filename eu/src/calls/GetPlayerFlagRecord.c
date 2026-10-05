@@ -1,5 +1,2 @@
-extern int data_020608e0;
-
-int GetPlayerFlagRecord(int arg0) {
-    return (int)&data_020608e0 + arg0 * 12;
-}
+#define GetPlayerFlagRecord_0205036c GetPlayerFlagRecord
+#include "src/arm9/shared_variants/GetPlayerFlagRecord_0205036c.c"

@@ -1,20 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct StageObject {
-    u8 pad_00[0x32];
-    u16 attachmentId : 12;
-    u16 attachmentFlags : 4;
-} StageObject;
-
-extern void *GetStageAttachment(u32 id);
-
-void *GetObjectAttachment(StageObject *object)
-{
-    if (object == NULL) {
-        return NULL;
-    }
-    if (object->attachmentId == 0) {
-        return NULL;
-    }
-    return GetStageAttachment(object->attachmentId);
-}
+#define GetObjectAttachment_0208f744 GetObjectAttachment
+#define GetStageAttachment_0209c144 GetStageAttachment
+#include "src/ov001/shared_engine/GetObjectAttachment_0208f744.c"

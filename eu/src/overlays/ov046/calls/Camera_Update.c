@@ -1,50 +1,10 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-typedef struct CameraManager {
-    u8 pad_00[0x14];
-    VecFx32 eye;
-    VecFx32 target;
-    VecFx32 up;
-    u8 pad_38[0x48];
-    int type;
-    u8 pad_84[0x04];
-    int driftState;
-} CameraManager;
-
-extern CameraManager *data_ov046_020c3500;
-extern BOOL Camera_IsFrozen(void);
-extern BOOL UpdateDriftParticle(int *particle);
-extern void Camera_ApplyOffsetClampHeight(void);
-extern void VEC_Subtract(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
-extern void SetSoundListenerFrame(const VecFx32 *position, const VecFx32 *forward, const VecFx32 *up);
-extern void func_ov046_020c0b54(void *camera);
-extern void func_ov047_020c353c(BOOL updateListener);
-
-void Camera_Update(BOOL updateListener)
-{
-    CameraManager *camera = data_ov046_020c3500;
-    VecFx32 forward;
-
-    if (Camera_IsFrozen()) {
-        return;
-    }
-    if (data_ov046_020c3500->driftState != 0) {
-        UpdateDriftParticle(&data_ov046_020c3500->driftState);
-    }
-    Camera_ApplyOffsetClampHeight();
-    if (updateListener) {
-        VEC_Subtract(&camera->eye, &camera->target, &forward);
-        SetSoundListenerFrame(&camera->target, &forward, &camera->up);
-    }
-    func_ov046_020c0b54(data_ov046_020c3500);
-    switch (data_ov046_020c3500->type) {
-    case 0:
-        func_ov047_020c353c(updateListener);
-        break;
-    case 1:
-    case 2:
-    case 3:
-        break;
-    }
-}
+#define Camera_ApplyOffsetClampHeight_020c0a24 Camera_ApplyOffsetClampHeight
+#define Camera_CommitView_020c0b34 func_ov046_020c0b54
+#define Camera_IsFrozen_020c0c1c Camera_IsFrozen
+#define Camera_Update_020c0b6c Camera_Update
+#define SetSoundListenerFrame_0204dc94 SetSoundListenerFrame
+#define UpdateDriftParticle_020afb94 UpdateDriftParticle
+#define VEC_Subtract_01ff9e3c VEC_Subtract
+#define func_ov047_020c351c func_ov047_020c353c
+#define g_cameraManager_020c34e0 data_ov046_020c3500
+#include "src/ov046/shared_engine/Camera_Update_020c0b6c.c"

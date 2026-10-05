@@ -1,5 +1,2 @@
-extern int strtol();
-
-int func_02022570(int arg0) {
-    return strtol(arg0, 0, 0xa);
-}
+#define func_0202255c func_02022570
+#include "src/arm9/library_msl_c/func_0202255c.c"

@@ -1,26 +1,5 @@
-#include "nitro/types.h"
-
-typedef struct RequestState {
-    int mode;
-    s16 requestId;
-} RequestState;
-
-typedef struct Manager {
-    u32 unk_00;
-    RequestState state;
-} Manager;
-
-extern Manager *data_ov001_020a04a4;
-extern void ResetPendingRequest(void);
-extern void UpdateStageEventMessage(int requestId);
-
-void ResumeOrResetRequest(int resume)
-{
-    RequestState *state = &data_ov001_020a04a4->state;
-
-    if (state->mode != 1 || resume == 0) {
-        ResetPendingRequest();
-        return;
-    }
-    UpdateStageEventMessage(state->requestId);
-}
+#define ResetPendingRequest_0206c614 ResetPendingRequest
+#define ResumeOrResetRequest_0206bbe4 ResumeOrResetRequest
+#define data_ov001_020a0484 data_ov001_020a04a4
+#define func_ov001_0206c528 UpdateStageEventMessage
+#include "src/ov001/shared_engine/ResumeOrResetRequest_0206bbe4.c"

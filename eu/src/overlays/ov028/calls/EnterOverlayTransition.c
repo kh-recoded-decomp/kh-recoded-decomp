@@ -1,18 +1,5 @@
-extern unsigned int data_ov028_020bb3a0;
-extern unsigned int StartIdleSceneObjects();
-extern unsigned int func_ov001_02087650();
-
-unsigned int EnterOverlayTransition(void)
-
-{
-  unsigned short flags;
-  
-  flags = *(unsigned short *)(data_ov028_020bb3a0 + 6);
-  flags |= 0x20;
-  *(unsigned short *)(data_ov028_020bb3a0 + 6) = flags;
-  if ((flags & 0x10) == 0) {
-    StartIdleSceneObjects();
-    func_ov001_02087650(1);
-  }
-  return 0xf;
-}
+#define EnterOverlayTransition_020bac78 EnterOverlayTransition
+#define _data_ov028_020bb380 data_ov028_020bb3a0
+#define func_ov001_02066810 StartIdleSceneObjects
+#define func_ov001_02087628 func_ov001_02087650
+#include "src/ov028/overlay_state/EnterOverlayTransition_020bac78.c"

@@ -1,7 +1,3 @@
-typedef unsigned char u8;
-extern u8 *data_ov001_020a0514;
-
-void *GetSharedCommandDataOffset44(void)
-{
-    return data_ov001_020a0514 + 0x44;
-}
+#define GetSharedCommandDataOffset44_0208bcf8 GetSharedCommandDataOffset44
+#define data_ov001_020a04f4 data_ov001_020a0514
+#include "src/ov001/scripted_actor_behavior/GetSharedCommandDataOffset44_0208bcf8.c"

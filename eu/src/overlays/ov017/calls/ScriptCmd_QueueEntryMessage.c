@@ -1,24 +1,7 @@
-#include "nitro/types.h"
-
-typedef struct ScriptOperand {
-    s16 type;
-    s16 pad_02;
-    s32 value;
-} ScriptOperand;
-
-extern int ScriptVm_ReadOperandInt(void *vm, ScriptOperand *operand);
-extern void *FindKind4FieldObject(void);
-extern void *func_ov001_02086384(void *table, int entryIndex);
-extern void *AppendFieldValueSlot(void *manager);
-extern void FormatAndQueueMessage(void *obj, const char *format, u32 flags, void *args);
-
-int ScriptCmd_QueueEntryMessage(void *vm, ScriptOperand *operands)
-{
-    int entryIndex = ScriptVm_ReadOperandInt(vm, operands);
-    BOOL enable = ScriptVm_ReadOperandInt(vm, operands + 1) != 0;
-    void *manager = FindKind4FieldObject();
-    void *entry = func_ov001_02086384(manager, entryIndex);
-
-    FormatAndQueueMessage(entry, (const char *)4, enable, AppendFieldValueSlot(manager));
-    return 1;
-}
+#define FormatAndQueueMessage_020a4008 FormatAndQueueMessage
+#define ScriptCmd_QueueEntryMessage_020a2244 ScriptCmd_QueueEntryMessage
+#define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
+#define func_ov001_0208635c func_ov001_02086384
+#define func_ov017_020a3f84 AppendFieldValueSlot
+#define func_ov017_020a4204 FindKind4FieldObject
+#include "src/ov017/script_commands/ScriptCmd_QueueEntryMessage_020a2244.c"

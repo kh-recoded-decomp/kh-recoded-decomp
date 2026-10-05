@@ -1,13 +1,4 @@
-#include "nitro/types.h"
-
-extern u8 *data_ov001_020a0528;
-extern void PXI_Init_0202a64c(u32 handle);
-
-BOOL ReleaseStageManager(void)
-{
-    if (data_ov001_020a0528 != 0) {
-        PXI_Init_0202a64c(*(u32 *)(data_ov001_020a0528 + 4));
-        data_ov001_020a0528 = 0;
-    }
-    return TRUE;
-}
+#define PXI_Init_0202a638 PXI_Init_0202a64c
+#define ReleaseStageManager_0209b8c4 ReleaseStageManager
+#define g_stageManager_020a0508 data_ov001_020a0528
+#include "src/ov001/shared_engine/ReleaseStageManager_0209b8c4.c"

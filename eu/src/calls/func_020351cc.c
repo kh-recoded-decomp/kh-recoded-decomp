@@ -1,6 +1,3 @@
-extern void QueryModelCollision(int handle, int object);
-
-void func_020351cc(int handle, int object) {
-    *(unsigned int *)(object + 8) = 0;
-    QueryModelCollision(handle, object);
-}
+#define func_01ffce24 QueryModelCollision
+#define func_020351b8 func_020351cc
+#include "src/arm9/unclassified_helpers/func_020351b8.c"

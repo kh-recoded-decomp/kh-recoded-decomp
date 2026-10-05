@@ -1,19 +1,4 @@
-#include "nitro/types.h"
-
-extern void ReadGlobalPackedBits(void);
-extern void WriteGlobalPackedBits(void);
-
-void SetLoaderCallbacks(int context, int writeHandler, int readHandler)
-{
-    if (writeHandler != 0) {
-        *(int *)(context + 0x644) = writeHandler;
-    } else {
-        *(int *)(context + 0x644) = (int)WriteGlobalPackedBits;
-    }
-
-    if (readHandler != 0) {
-        *(int *)(context + 0x640) = readHandler;
-        return;
-    }
-    *(int *)(context + 0x640) = (int)ReadGlobalPackedBits;
-}
+#define SetLoaderCallbacks_02025914 SetLoaderCallbacks
+#define func_02027348 ReadGlobalPackedBits
+#define func_02027360 WriteGlobalPackedBits
+#include "src/arm9/packed_bits/SetLoaderCallbacks_02025914.c"

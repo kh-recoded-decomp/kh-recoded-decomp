@@ -1,6 +1,2 @@
-/* Sound command 0x2. */
-extern void PushCommand_impl(int cmd, int a, int b, int c, int d);
-
-void SND_PrepareSeq(int a, int b, int c, int d) {
-    PushCommand_impl(0x2, a, b, c, d);
-}
+#define func_0200e9b4 SND_PrepareSeq
+#include "src/arm9/library_nitro_snd/func_0200e9b4.c"

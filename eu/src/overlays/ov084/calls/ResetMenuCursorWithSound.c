@@ -1,10 +1,4 @@
-#include "nitro/types.h"
-
-extern void StartSubScene(int a, int b, int c);
-extern void PlaySoundEffect(int channel, int id);
-
-void ResetMenuCursorWithSound(void)
-{
-    StartSubScene(-1, -1, 1);
-    PlaySoundEffect(0, 3);
-}
+#define PlaySoundEffect_0204d924 PlaySoundEffect
+#define ResetMenuCursorWithSound_020bfc28 ResetMenuCursorWithSound
+#define func_ov039_020bbf78 StartSubScene
+#include "src/ov084/select_menu/ResetMenuCursorWithSound_020bfc28.c"

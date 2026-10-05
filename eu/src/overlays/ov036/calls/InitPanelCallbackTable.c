@@ -1,30 +1,11 @@
-#include "nitro/types.h"
-
-typedef void (*PanelCallback)(void);
-
-typedef struct PanelCallbackTable {
-    PanelCallback callbacks[9];
-} PanelCallbackTable;
-
-extern void func_ov036_020bc3a4(void);
-extern void IsSceneReady(void);
-extern void func_ov036_020bc3f4(void);
-extern void SetSceneFlag4000(void);
-extern void IsPxiFifoTagSet_020bc434(void);
-extern void InvalidatePxiFifoTag(void);
-extern void RecordPanelInputEvent(void);
-extern void func_ov036_020bc4c0(void);
-extern void func_ov036_020bb2a4(void);
-
-void InitPanelCallbackTable(PanelCallbackTable *table)
-{
-    table->callbacks[0] = func_ov036_020bc3a4;
-    table->callbacks[1] = IsSceneReady;
-    table->callbacks[2] = func_ov036_020bc3f4;
-    table->callbacks[3] = SetSceneFlag4000;
-    table->callbacks[4] = IsPxiFifoTagSet_020bc434;
-    table->callbacks[5] = InvalidatePxiFifoTag;
-    table->callbacks[6] = RecordPanelInputEvent;
-    table->callbacks[7] = func_ov036_020bc4c0;
-    table->callbacks[8] = func_ov036_020bb2a4;
-}
+#define InitPanelCallbackTable_020bc4a8 InitPanelCallbackTable
+#define InvalidatePxiFifoTag_020bc438 InvalidatePxiFifoTag
+#define IsPxiFifoTagSet_020bc414 IsPxiFifoTagSet_020bc434
+#define RecordPanelInputEvent_020bc458 RecordPanelInputEvent
+#define func_ov036_020bb284 func_ov036_020bb2a4
+#define func_ov036_020bc384 func_ov036_020bc3a4
+#define func_ov036_020bc3a8 IsSceneReady
+#define func_ov036_020bc3d4 func_ov036_020bc3f4
+#define func_ov036_020bc3f8 SetSceneFlag4000
+#define func_ov036_020bc4a0 func_ov036_020bc4c0
+#include "src/ov036/panel_state/InitPanelCallbackTable_020bc4a8.c"

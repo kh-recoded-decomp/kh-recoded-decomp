@@ -1,9 +1,4 @@
-#include "nitro/types.h"
-
-extern void *G2S_GetBG2ScrPtr(void);
-extern void MI_CpuClear32_0x800(void *dst);
-
-void ClearSubBg2Screen(void) {
-    MI_CpuClear32_0x800(G2S_GetBG2ScrPtr());
-    *(volatile u16 *)0x0400100c &= 0x43;
-}
+#define ClearBuffer2048_02078f00 MI_CpuClear32_0x800
+#define ClearSubBg2Screen_02078f34 ClearSubBg2Screen
+#define G2S_GetBG2ScrPtr_02006f0c G2S_GetBG2ScrPtr
+#include "src/ov015/panel_state/ClearSubBg2Screen_02078f34.c"

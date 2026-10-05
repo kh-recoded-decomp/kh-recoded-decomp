@@ -1,37 +1,8 @@
-#include "nitro/types.h"
-
-typedef struct ScriptOperand {
-    s16 type;
-    u8 payload[6];
-} ScriptOperand;
-
-typedef struct ScriptSceneData {
-    u8 pad_00[0x4c];
-    void **actorObjects;
-} ScriptSceneData;
-
-typedef struct ScriptContext {
-    u8 pad_000[0x1c8];
-    ScriptSceneData *scene;
-} ScriptContext;
-
-extern int ScriptVm_ReadOperandInt(ScriptContext *context, ScriptOperand *operand);
-extern ScriptOperand *ScriptVm_ResolveOperand(ScriptContext *context, ScriptOperand *operand);
-extern char *ByteCode_ResolveOperand(ScriptContext *context, ScriptOperand *operand);
-extern int ScriptCmd_ReturnValue(ScriptContext *context, int value);
-extern int ComputeHeadingToScriptTarget(ScriptContext *context, ScriptOperand *target, int actorId);
-extern void func_ov001_0208a764(void *actorObject, int heading, char *turnAnimation, char *followAnimation);
-
-int ScriptCmd_TurnActorTowardTarget(ScriptContext *context, ScriptOperand *operands)
-{
-    int actorId = ScriptVm_ReadOperandInt(context, operands);
-    ScriptOperand *target = ScriptVm_ResolveOperand(context, operands + 1);
-    char *turnAnimation = ByteCode_ResolveOperand(context, operands + 2);
-    char *followAnimation = ByteCode_ResolveOperand(context, operands + 3);
-    int heading;
-
-    actorId = ScriptCmd_ReturnValue(context, actorId);
-    heading = ComputeHeadingToScriptTarget(context, target, actorId);
-    func_ov001_0208a764(context->scene->actorObjects[actorId], heading, turnAnimation, followAnimation);
-    return 1;
-}
+#define ScriptCmd_ReturnValue_02025960 ScriptCmd_ReturnValue
+#define ScriptCmd_TurnActorTowardTarget_0208eb1c ScriptCmd_TurnActorTowardTarget
+#define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
+#define ScriptVm_ResolveOperand_02025d08 ScriptVm_ResolveOperand
+#define func_02025dac ByteCode_ResolveOperand
+#define func_ov001_0208a73c func_ov001_0208a764
+#define func_ov001_0208cf44 ComputeHeadingToScriptTarget
+#include "src/ov001/scripted_actor_behavior/ScriptCmd_TurnActorTowardTarget_0208eb1c.c"

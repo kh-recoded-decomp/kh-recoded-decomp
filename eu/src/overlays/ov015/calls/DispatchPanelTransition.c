@@ -1,27 +1,5 @@
-#include "nitro/types.h"
-
-extern u32 GetPanelTransitionMode(void);
-extern void func_ov015_02072ee4(char nextState);
-extern BOOL WH_StartTransitionStep(void);
-extern void WH_Finalize(void);
-
-void DispatchPanelTransition(void)
-{
-    switch (GetPanelTransitionMode()) {
-    case 9:
-    case 10:
-        WH_Finalize();
-        break;
-    case 1:
-        WH_StartTransitionStep();
-        break;
-    case 0:
-        func_ov015_02072ee4(1);
-        break;
-    case 3:
-        break;
-    default:
-        WH_Finalize();
-        break;
-    }
-}
+#define DispatchPanelTransition_02072fb4 DispatchPanelTransition
+#define GetPanelTransitionMode_020748e4 GetPanelTransitionMode
+#define WH_StartTransitionStep_02074fd0 WH_StartTransitionStep
+#define func_ov015_02074ec8 WH_Finalize
+#include "src/ov015/panel_state/DispatchPanelTransition_02072fb4.c"

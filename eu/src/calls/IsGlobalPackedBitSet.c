@@ -1,17 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad_00[0xc];
-    int *bits;
-} CardThreadState;
-
-extern CardThreadState data_0205fe00;
-extern int GetPackedBitMask(int *bitWords, int bitIndex);
-
-BOOL IsGlobalPackedBitSet(int bitIndex)
-{
-    if (GetPackedBitMask(data_0205fe00.bits, bitIndex) != 0) {
-        return TRUE;
-    }
-    return FALSE;
-}
+#define IsGlobalPackedBitSet_02027304 IsGlobalPackedBitSet
+#define g_cardThreadState_0205fe00 data_0205fe00
+#include "src/arm9/packed_bits/IsGlobalPackedBitSet_02027304.c"

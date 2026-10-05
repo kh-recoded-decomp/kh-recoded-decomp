@@ -1,9 +1,3 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-extern VecFx32 GetAttachmentWorldPosition(void *actor, int slot);
-
-VecFx32 GetSlot3WorldPosition(void *actor)
-{
-    return GetAttachmentWorldPosition(actor, 3);
-}
+#define GetSlot3WorldPosition_020cbfdc GetSlot3WorldPosition
+#define func_ov052_020d067c GetAttachmentWorldPosition
+#include "src/ov052/unclassified_helpers/GetSlot3WorldPosition_020cbfdc.c"

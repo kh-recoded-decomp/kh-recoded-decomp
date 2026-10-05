@@ -1,18 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad_00[0x48];
-    void *field48;
-} OverlayObject;
-
-extern void ReleaseResourceAndDetach();
-extern void NNSi_FndFreeFromDefaultHeap(void *ptr);
-
-void ReleaseField48(OverlayObject *obj)
-{
-    if (obj->field48 != 0) {
-        ReleaseResourceAndDetach();
-        NNSi_FndFreeFromDefaultHeap(obj->field48);
-        obj->field48 = 0;
-    }
-}
+#define ReleaseField48_020a5438 ReleaseField48
+#define ReleaseResourceAndDetach_0202eee8 ReleaseResourceAndDetach
+#define func_0202a1c4 NNSi_FndFreeFromDefaultHeap
+#include "src/ov017/unclassified_helpers/ReleaseField48_020a5438.c"

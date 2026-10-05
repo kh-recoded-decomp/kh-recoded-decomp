@@ -1,12 +1,5 @@
-#include "nitro/types.h"
-
-extern int data_ov070_020d8a3c[2][4];
-extern BOOL func_ov070_020d8120(void *obj);
-extern int GetClampedPaletteSlot(void);
-
-int GetOv070PaletteEntry(void *obj)
-{
-    int row = func_ov070_020d8120(obj) != 0;
-
-    return data_ov070_020d8a3c[row][GetClampedPaletteSlot()];
-}
+#define GetClampedPaletteSlot_02073598 GetClampedPaletteSlot
+#define GetOv070PaletteEntry_020d8114 GetOv070PaletteEntry
+#define data_ov070_020d8a1c data_ov070_020d8a3c
+#define func_ov070_020d8100 func_ov070_020d8120
+#include "src/ov070/unclassified_helpers/GetOv070PaletteEntry_020d8114.c"

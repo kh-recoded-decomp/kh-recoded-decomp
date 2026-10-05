@@ -1,12 +1,5 @@
-#include "nitro/fx_types.h"
-
-extern void ComputeSegmentBounds(void);
-extern void Vec3AddScalar(VecFx32 *v, fx32 amount);
-extern void Vec3SubScalar(VecFx32 *v, fx32 amount);
-
-void AdjustAabbMargin(u32 unused, VecFx32 *bounds)
-{
-    ComputeSegmentBounds();
-    Vec3AddScalar(bounds, 0x10);
-    Vec3SubScalar(bounds + 1, 0x10);
-}
+#define AdjustAabbMargin_02049bf0 AdjustAabbMargin
+#define Vec3AddScalar_0204a534 Vec3AddScalar
+#define Vec3SubScalar_0204a55c Vec3SubScalar
+#define func_02049b6c ComputeSegmentBounds
+#include "src/arm9/spatial_queries/AdjustAabbMargin_02049bf0.c"

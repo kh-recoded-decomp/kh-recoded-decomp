@@ -1,17 +1,3 @@
-#include "nitro/types.h"
-
-extern u32 data_ov001_0209e13c[][3];
-
-int FindThresholdRank(int row, u32 value)
-{
-    int result = 3;
-    int rank;
-
-    for (rank = 0; rank < 3; rank++) {
-        if (value >= data_ov001_0209e13c[row][rank]) {
-            result = rank;
-            break;
-        }
-    }
-    return result;
-}
+#define FindThresholdRank_0207ebf4 FindThresholdRank
+#define data_ov001_0209e114 data_ov001_0209e13c
+#include "src/ov001/unclassified_helpers/FindThresholdRank_0207ebf4.c"

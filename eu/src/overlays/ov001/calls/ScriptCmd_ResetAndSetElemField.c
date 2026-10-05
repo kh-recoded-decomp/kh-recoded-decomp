@@ -1,22 +1,6 @@
-#include "nitro/types.h"
-
-extern void MIi_CpuClear32(u32 data, void *dst, u32 size);
-extern void ScriptCmd_SetElemField(void *scriptContext, u32 value);
-extern int IsFieldPanelShown(void);
-extern u32 OpenScriptChoiceBalloon(void *scriptContext, u32 value);
-
-u32 ScriptCmd_ResetAndSetElemField(u8 *scriptContext, u32 value)
-{
-    u32 result;
-    int flag;
-
-    *(u32 *)(*(u8 **)(scriptContext + 0x1c8) + 0x54) = 0xffffffff;
-    result = 0;
-    MIi_CpuClear32(0, *(u8 **)(scriptContext + 0x1c8) + 200, 0x100);
-    ScriptCmd_SetElemField(scriptContext, value);
-    flag = IsFieldPanelShown();
-    if (flag != 0) {
-        result = OpenScriptChoiceBalloon(scriptContext, value);
-    }
-    return result;
-}
+#define ScriptCmd_ResetAndSetElemField_0208d97c ScriptCmd_ResetAndSetElemField
+#define ScriptCmd_SetElemField_02025e18 ScriptCmd_SetElemField
+#define func_01ff86fc MIi_CpuClear32
+#define func_ov001_02071860 IsFieldPanelShown
+#define func_ov001_0208d738 OpenScriptChoiceBalloon
+#include "src/ov001/scripted_actor_behavior/ScriptCmd_ResetAndSetElemField_0208d97c.c"

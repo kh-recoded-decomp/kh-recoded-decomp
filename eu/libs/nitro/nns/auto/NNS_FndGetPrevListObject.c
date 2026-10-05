@@ -1,7 +1,2 @@
-void *NNS_FndGetPrevListObject(char *base, char *table)
-{
-    if (table == 0) {
-        return *(void **)(base + 4);
-    }
-    return *(void **)(table + *(unsigned short *)(base + 0xa));
-}
+#define NNS_FndGetPrevListObject_02012a50 NNS_FndGetPrevListObject
+#include "src/arm9/library_nitro_nns/NNS_FndGetPrevListObject_02012a50.c"

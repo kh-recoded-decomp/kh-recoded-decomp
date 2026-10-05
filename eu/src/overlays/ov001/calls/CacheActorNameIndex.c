@@ -1,8 +1,3 @@
-#include "nitro/types.h"
-
-extern u16 FindActorResourceIndexByName(void *actor, const char *name);
-
-void CacheActorNameIndex(u8 *actor, const char *name)
-{
-    *(u16 *)(actor + 0x33a) = FindActorResourceIndexByName(actor, name);
-}
+#define CacheActorNameIndex_02091c20 CacheActorNameIndex
+#define func_ov001_02091248 FindActorResourceIndexByName
+#include "src/ov001/shared_engine/CacheActorNameIndex_02091c20.c"

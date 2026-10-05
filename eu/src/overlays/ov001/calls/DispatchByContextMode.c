@@ -1,20 +1,5 @@
-#include "nitro/types.h"
-
-extern s32 *data_ov001_020a04f4;
-extern void func_ov001_0207e2c8(s32 *context);
-extern void func_ov001_0207e2cc(s32 *context);
-
-void DispatchByContextMode(void)
-{
-    s32 *context = data_ov001_020a04f4;
-
-    switch (*context) {
-    case 1:
-        func_ov001_0207e2c8(context);
-        break;
-    case 2:
-    case 3:
-        func_ov001_0207e2cc(context);
-        break;
-    }
-}
+#define DispatchByContextMode_0207e8f8 DispatchByContextMode
+#define _fp_init_0207e2a0 func_ov001_0207e2c8
+#define _fp_init_0207e2a4 func_ov001_0207e2cc
+#define data_ov001_020a04d4 data_ov001_020a04f4
+#include "src/ov001/unclassified_helpers/DispatchByContextMode_0207e8f8.c"

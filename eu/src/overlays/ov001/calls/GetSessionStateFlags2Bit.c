@@ -1,13 +1,2 @@
-#include "nitro/types.h"
-
-typedef struct
-{
-    u32 bits : 2;
-} SessionStateFlags2;
-
-extern u8 *data_0205fe0c;
-
-u32 GetSessionStateFlags2Bit(void)
-{
-    return ((SessionStateFlags2 *)(data_0205fe0c + 0x2878))->bits;
-}
+#define GetSessionStateFlags2Bit_020649b8 GetSessionStateFlags2Bit
+#include "src/ov001/unclassified_helpers/GetSessionStateFlags2Bit_020649b8.c"

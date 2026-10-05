@@ -1,25 +1,5 @@
-#include "nitro/types.h"
-
-typedef struct ActorManager {
-    u8 pad_000[0x95C];
-    void *actorSlots[0x200];
-} ActorManager;
-
-extern ActorManager *data_ov001_020a0500;
-extern s32 IsActorFlagBit8Set(void);
-extern void UpdatePartyActorMotion(void *actor);
-
-void NotifyFlaggedActors(void)
-{
-    s32 index;
-    s32 hasFlag;
-
-    index = 0;
-    do {
-        if (data_ov001_020a0500->actorSlots[index] != 0 &&
-            (hasFlag = IsActorFlagBit8Set(), hasFlag != 0)) {
-            UpdatePartyActorMotion(data_ov001_020a0500->actorSlots[index]);
-        }
-        index = index + 1;
-    } while (index < 0x200);
-}
+#define func_ov001_02088568 NotifyFlaggedActors
+#define func_ov001_0208a114 UpdatePartyActorMotion
+#define func_ov001_0208a334 IsActorFlagBit8Set
+#define g_actorManager_020a04e0 data_ov001_020a0500
+#include "src/ov001/object_creation/func_ov001_02088568.c"

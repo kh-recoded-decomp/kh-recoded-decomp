@@ -1,19 +1,4 @@
-﻿#include "nitro/types.h"
-
-extern int ScriptVm_ReadOperandInt(void *vm, void *operand);
-extern void CreateFieldTaskNode(int eventId, BOOL enable, int mode, int *params);
-
-BOOL ScriptCmd_ConfigureEventSlot(void *vm, u8 *operands)
-{
-    int enable = ScriptVm_ReadOperandInt(vm, operands);
-    int eventId = ScriptVm_ReadOperandInt(vm, operands + 8);
-    int params[5];
-
-    params[0] = ScriptVm_ReadOperandInt(vm, operands + 0x10);
-    params[1] = ScriptVm_ReadOperandInt(vm, operands + 0x18);
-    params[2] = ScriptVm_ReadOperandInt(vm, operands + 0x20);
-    params[3] = ScriptVm_ReadOperandInt(vm, operands + 0x28);
-    params[4] = ScriptVm_ReadOperandInt(vm, operands + 0x30);
-    CreateFieldTaskNode(eventId, enable != 0, 7, params);
-    return TRUE;
-}
+#define ScriptCmd_ConfigureEventSlot_02065ac4 ScriptCmd_ConfigureEventSlot
+#define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
+#define func_ov001_02069274 CreateFieldTaskNode
+#include "src/ov001/unclassified_helpers/ScriptCmd_ConfigureEventSlot_02065ac4.c"

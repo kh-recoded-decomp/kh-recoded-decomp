@@ -1,47 +1,7 @@
-#include "nitro/types.h"
-
-extern void *NNS_FndAllocFromDefaultExpHeapEx(u32 size, int align);
-extern int ReadCardBackupSync(int mode, void *buffer, int size);
-extern int CompareByteStrings(unsigned char *leftBytes, unsigned char *rightBytes, int length);
-extern void NNSi_FndFreeFromDefaultHeap(void *block);
-
-typedef struct {
-    u8 pad_00[4];
-    u8 *referenceBytes;
-} IdTable;
-
-extern IdTable gGameTitleStringTable;
-
-int VerifyCardIdMatchesReference(void)
-{
-    void *buffer;
-    int result;
-    int status;
-    u8 *reference;
-    int count;
-    int offset;
-    int cmpResult;
-
-    buffer = NNS_FndAllocFromDefaultExpHeapEx(0x20, 0x20);
-    result = 0;
-    status = ReadCardBackupSync(0, buffer, 0x20);
-    if (status == 0) {
-        reference = gGameTitleStringTable.referenceBytes;
-        count = 0;
-        offset = 0;
-        do {
-            cmpResult = CompareByteStrings((u8 *)buffer + offset, reference, 8);
-            if (cmpResult != 0) {
-                break;
-            }
-            count = count + 1;
-            offset = offset + 8;
-        } while (count < 4);
-        result = 1;
-        if (count != 4) {
-            result = 0;
-        }
-    }
-    NNSi_FndFreeFromDefaultHeap(buffer);
-    return result;
-}
+#define NNSi_FndAllocFromDefaultHeapEx_0202a19c NNS_FndAllocFromDefaultExpHeapEx
+#define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
+#define compareByteStrings_02021c54 CompareByteStrings
+#define func_02026b00 ReadCardBackupSync
+#define func_02026ce0 VerifyCardIdMatchesReference
+#define g_idTable_02055f30 gGameTitleStringTable
+#include "src/arm9/unclassified_helpers/func_02026ce0.c"

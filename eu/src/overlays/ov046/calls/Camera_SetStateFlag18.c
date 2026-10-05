@@ -1,19 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct CameraManager {
-    u8 pad_00[0xf0];
-    u32 stateFlags;
-} CameraManager;
-
-extern CameraManager *data_ov046_020c3500;
-
-void Camera_SetStateFlag18(BOOL enable)
-{
-    CameraManager *camera = data_ov046_020c3500;
-
-    if (enable) {
-        camera->stateFlags |= 0x40000;
-        return;
-    }
-    camera->stateFlags &= ~0x40000;
-}
+#define Camera_SetStateFlag18_020c2a84 Camera_SetStateFlag18
+#define g_cameraManager_020c34e0 data_ov046_020c3500
+#include "src/ov046/shared_engine/Camera_SetStateFlag18_020c2a84.c"

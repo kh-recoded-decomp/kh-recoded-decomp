@@ -1,9 +1,4 @@
-#include "nitro/types.h"
-
-extern u32 data_ov014_0206f9a0;
-extern int func_ov027_020b9bb4(u32 panel, int entryId);
-
-int QueryPanelEntry(int entryId)
-{
-    return func_ov027_020b9bb4(data_ov014_0206f9a0 + 0xc990, entryId);
-}
+#define QueryPanelEntry_0206e930 QueryPanelEntry
+#define func_ov027_020b9b94 func_ov027_020b9bb4
+#define g_panelState_0206f9a0 data_ov014_0206f9a0
+#include "src/ov014/panel_state/QueryPanelEntry_0206e930.c"

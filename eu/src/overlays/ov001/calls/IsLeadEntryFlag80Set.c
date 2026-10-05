@@ -1,29 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct Entry Entry;
-
-struct Entry {
-    u8 pad_000[0x21c];
-    u32 (*getFlags)(Entry *entry);
-};
-
-extern Entry *GetBoundedEntryField(int index);
-
-BOOL IsLeadEntryFlag80Set(void)
-{
-    BOOL result = FALSE;
-    Entry *entry = GetBoundedEntryField(0);
-    u32 flags;
-
-    if (entry != NULL) {
-        if (entry->getFlags != NULL) {
-            flags = entry->getFlags(entry);
-        } else {
-            flags = 0;
-        }
-        if (flags & 0x80) {
-            result = TRUE;
-        }
-    }
-    return result;
-}
+#define GetBoundedEntryField_0206db5c GetBoundedEntryField
+#define IsLeadEntryFlag80Set_0207531c IsLeadEntryFlag80Set
+#include "src/ov001/field_manager/IsLeadEntryFlag80Set_0207531c.c"

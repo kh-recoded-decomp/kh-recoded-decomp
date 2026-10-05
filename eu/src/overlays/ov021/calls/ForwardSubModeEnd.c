@@ -1,17 +1,4 @@
-#include "nitro/types.h"
-
-extern int *data_ov021_020b56c0;
-
-extern void Camera_SetFlag18IfStandard(void *arg);
-
-void ForwardSubModeEnd(void *arg) {
-    switch (*data_ov021_020b56c0) {
-    case 0:
-        Camera_SetFlag18IfStandard(arg);
-        break;
-    case 1:
-    case 2:
-    case 3:
-        break;
-    }
-}
+#define ForwardSubModeEnd_020af7e4 ForwardSubModeEnd
+#define data_ov021_020b56a0 data_ov021_020b56c0
+#define func_ov046_020c1724 Camera_SetFlag18IfStandard
+#include "src/ov021/sub_mode/ForwardSubModeEnd_020af7e4.c"

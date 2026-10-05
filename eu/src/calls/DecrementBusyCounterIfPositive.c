@@ -1,16 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 flag;
-    u8 pad_01;
-    s16 count;
-} BusyCounterState;
-
-extern BusyCounterState gBusyCounterState;
-
-void DecrementBusyCounterIfPositive(void)
-{
-    if (gBusyCounterState.count > 0) {
-        gBusyCounterState.count--;
-    }
-}
+#define DecrementBusyCounterIfPositive_02025494 DecrementBusyCounterIfPositive
+#define g_busyCounter_0205fde8 gBusyCounterState
+#include "src/arm9/unclassified_helpers/DecrementBusyCounterIfPositive_02025494.c"

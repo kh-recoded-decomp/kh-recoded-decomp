@@ -1,13 +1,4 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-extern fx32 FX_Div(fx32 numer, fx32 denom);
-extern void func_ov001_0206a8c8(fx32 rate);
-extern void BeginScreenFadeOut(s32 mode);
-
-s32 EnterState13WithHalfRate(void)
-{
-    func_ov001_0206a8c8(FX_Div(0x10000, 0x20000));
-    BeginScreenFadeOut(2);
-    return 13;
-}
+#define EnterState13WithHalfRate_020bd5a4 EnterState13WithHalfRate
+#define FX_Div_01ff9c84 FX_Div
+#define func_ov001_0206a7c0 BeginScreenFadeOut
+#include "src/ov040/unclassified_helpers/EnterState13WithHalfRate_020bd5a4.c"

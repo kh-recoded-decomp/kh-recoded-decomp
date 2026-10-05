@@ -1,11 +1,4 @@
-#include "nitro/types.h"
-
-extern int data_ov001_0209f2e8;
-extern void ResetStageGroupObjects(u16 id);
-
-void CallIfSessionActive(int id)
-{
-    if (data_ov001_0209f2e8 != -1) {
-        ResetStageGroupObjects(id);
-    }
-}
+#define CallIfSessionActive_02087e34 CallIfSessionActive
+#define data_ov001_0209f2c8 data_ov001_0209f2e8
+#define func_ov001_0209cae0 ResetStageGroupObjects
+#include "src/ov001/wireless/CallIfSessionActive_02087e34.c"

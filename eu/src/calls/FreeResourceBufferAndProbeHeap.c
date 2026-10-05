@@ -1,17 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad_00[8];
-    void *buffer;
-} FreeableResource;
-
-extern void **data_0206039c;
-extern void NNSi_FndFreeFromDefaultHeap(void *block);
-extern int findLargestAlignedHeapBlock(void *heap, int alignmentInput);
-
-BOOL FreeResourceBufferAndProbeHeap(FreeableResource *resource)
-{
-    NNSi_FndFreeFromDefaultHeap(resource->buffer);
-    findLargestAlignedHeapBlock(*data_0206039c, 4);
-    return TRUE;
-}
+#define FreeResourceBufferAndProbeHeap_02001474 FreeResourceBufferAndProbeHeap
+#define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
+#define findLargestAlignedHeapBlock_02013304 findLargestAlignedHeapBlock
+#include "src/arm9/shared_engine/FreeResourceBufferAndProbeHeap_02001474.c"

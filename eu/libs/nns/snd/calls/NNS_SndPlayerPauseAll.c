@@ -1,19 +1,4 @@
-#include "libs/nns/snd/snd_internal.h"
-
-extern void *NNS_FndGetNextListObject(NNSFndList *list, void *object);
-extern void NNSi_SndPlayerPause(NNSSndSeqPlayer *sequencePlayer, BOOL pause);
-
-void NNS_SndPlayerPauseAll(BOOL pause)
-{
-    NNSSndSeqPlayer *sequencePlayer;
-    NNSSndSeqPlayer *next;
-
-    for (sequencePlayer = (NNSSndSeqPlayer *)NNS_FndGetNextListObject(
-             &sSndSeqPlayerList, NULL);
-         sequencePlayer != NULL;
-         sequencePlayer = next) {
-        next = (NNSSndSeqPlayer *)NNS_FndGetNextListObject(
-            &sSndSeqPlayerList, sequencePlayer);
-        NNSi_SndPlayerPause(sequencePlayer, pause);
-    }
-}
+#define data_0205d8ac sSndSeqPlayerList
+#define func_0201d648 NNS_SndPlayerPauseAll
+#define func_0201dc20 NNSi_SndPlayerPause
+#include "src/arm9/library_nns_snd/func_0201d648.c"

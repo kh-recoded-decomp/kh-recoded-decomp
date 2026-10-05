@@ -1,23 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct BufferItem {
-    u8 data[0x30];
-} BufferItem;
-
-typedef struct BufferList {
-    BufferItem *items;
-    s8 count;
-} BufferList;
-
-extern int func_ov001_0206a918(BufferItem *item);
-extern void NNSi_FndFreeFromDefaultHeap(void *block);
-
-void FreeBufferList(BufferList *list)
-{
-    int i;
-
-    for (i = 0; i < list->count; i++) {
-        func_ov001_0206a918(&list->items[i]);
-    }
-    NNSi_FndFreeFromDefaultHeap(list->items);
-}
+#define FreeBufferAndClearStatus_0206a918 func_ov001_0206a918
+#define FreeBufferList_0206c850 FreeBufferList
+#define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
+#include "src/ov001/shared_engine/FreeBufferList_0206c850.c"

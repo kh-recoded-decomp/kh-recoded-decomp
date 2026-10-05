@@ -1,11 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct BoxShapeRef BoxShapeRef;
-typedef struct CapsuleShapeRef CapsuleShapeRef;
-
-extern BOOL TestBoxAgainstCapsule(BoxShapeRef *boxRef, CapsuleShapeRef *capsuleRef, void *contact, u32 flags);
-
-BOOL TestCapsuleAgainstBox(CapsuleShapeRef *capsuleRef, BoxShapeRef *boxRef, void *contact, u32 flags)
-{
-    return TestBoxAgainstCapsule(boxRef, capsuleRef, contact, flags ^ 1);
-}
+#define TestBoxAgainstCapsule_0203fde0 TestBoxAgainstCapsule
+#define TestCapsuleAgainstBox_0203b59c TestCapsuleAgainstBox
+#include "src/arm9/spatial_queries/TestCapsuleAgainstBox_0203b59c.c"

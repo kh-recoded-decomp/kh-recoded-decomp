@@ -1,21 +1,5 @@
-#include "nitro/types.h"
-
-typedef struct ScriptOperand {
-    s16 type;
-    s16 pad_02;
-    s32 value;
-} ScriptOperand;
-
-extern int ScriptVm_ReadOperandInt(void *context, ScriptOperand *operand);
-extern void func_ov036_020bd820(int reveal, int duration);
-extern void ScriptCmd_SetElemField(void *context, u32 value);
-
-int ScriptCmd_StartMosaicTransition(void *context, ScriptOperand *operands)
-{
-    int reveal = ScriptVm_ReadOperandInt(context, &operands[0]);
-    int duration = ScriptVm_ReadOperandInt(context, &operands[1]);
-
-    func_ov036_020bd820(reveal, duration);
-    ScriptCmd_SetElemField(context, (u32)operands);
-    return 0;
-}
+#define ScriptCmd_SetElemField_02025e18 ScriptCmd_SetElemField
+#define ScriptCmd_StartMosaicTransition_020be794 ScriptCmd_StartMosaicTransition
+#define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
+#define func_ov036_020bd800 func_ov036_020bd820
+#include "src/ov036/shared_engine/ScriptCmd_StartMosaicTransition_020be794.c"

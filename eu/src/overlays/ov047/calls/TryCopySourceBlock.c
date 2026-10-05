@@ -1,20 +1,4 @@
-#include "nitro/types.h"
-
-extern u32 func_ov001_0207b3f4(void);
-extern int func_ov027_020b9f9c(void *dest);
-
-BOOL TryCopySourceBlock(void *dest)
-{
-    BOOL canCopy;
-
-    if (func_ov001_0207b3f4() == 1 || func_ov001_0207b3f4() == 0) {
-        canCopy = TRUE;
-    } else {
-        canCopy = FALSE;
-    }
-    if (!canCopy) {
-        return FALSE;
-    }
-    func_ov027_020b9f9c(dest);
-    return TRUE;
-}
+#define CopySourceBlock_020b9f7c func_ov027_020b9f9c
+#define TryCopySourceBlock_020c6b58 TryCopySourceBlock
+#define func_ov001_0207b3cc func_ov001_0207b3f4
+#include "src/ov047/unclassified_helpers/TryCopySourceBlock_020c6b58.c"

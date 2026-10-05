@@ -1,15 +1,4 @@
-#include "nitro/types.h"
-
-extern u32 gMobiClipSourceHandle;
-extern u32 Obj_GetWord28(u32 handle);
-
-u32 MobiClip_IsDecoderReady(void)
-{
-    u32 ready;
-
-    ready = Obj_GetWord28(gMobiClipSourceHandle);
-    if (ready != 0) {
-        return 1;
-    }
-    return 0;
-}
+#define MobiClip_IsDecoderReady_020bac0c MobiClip_IsDecoderReady
+#define func_0202a78c Obj_GetWord28
+#define g_mobiClipSrcHandle_020bcf80 gMobiClipSourceHandle
+#include "src/ov030/movie/MobiClip_IsDecoderReady_020bac0c.c"

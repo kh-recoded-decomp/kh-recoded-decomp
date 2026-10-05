@@ -1,21 +1,4 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-typedef struct CollisionBox {
-    VecFx32 center;
-    fx32 halfExtents[3];
-    VecFx32 axes[3];
-    u8 flags;
-} CollisionBox;
-
-void ScaleVecFx32InPlace(VecFx32 *vec, fx32 scale);
-void VEC_MultAdd(fx32 scale, const VecFx32 *v, const VecFx32 *add, VecFx32 *dst);
-
-void GetBoxEdgeDiagonal(const CollisionBox *box, s32 axisA, s32 axisB, s32 edge, VecFx32 *out)
-{
-    /* 0xb50 is one over root two */
-    VecFx32 direction = box->axes[axisA];
-    ScaleVecFx32InPlace(&direction, ((edge & 1) ? 1 : -1) * 0xb50);
-    *out = direction;
-    VEC_MultAdd(((edge & 2) ? 1 : -1) * 0xb50, &box->axes[axisB], out, out);
-}
+#define GetBoxEdgeDiagonal_0203ed8c GetBoxEdgeDiagonal
+#define ScaleVecFx32InPlace_0204a5e4 ScaleVecFx32InPlace
+#define VEC_MultAdd_01ffa09c VEC_MultAdd
+#include "src/arm9/spatial_queries/GetBoxEdgeDiagonal_0203ed8c.c"

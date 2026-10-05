@@ -1,12 +1,4 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-typedef struct SweepResult SweepResult;
-
-extern fx32 VEC_DotProduct(const VecFx32 *a, const VecFx32 *b);
-extern BOOL ClipRayAgainstPlane(fx32 extent, fx32 distance, const VecFx32 *axis, u8 feature, const VecFx32 *velocity, SweepResult *result, s64 *outTime);
-
-BOOL SweepAlongProjectedAxis(fx32 extent, const VecFx32 *offset, const VecFx32 *axis, u8 feature, const VecFx32 *velocity, SweepResult *result, s64 *outTime)
-{
-    return ClipRayAgainstPlane(extent, VEC_DotProduct(axis, offset), axis, feature, velocity, result, outTime);
-}
+#define SweepAlongProjectedAxis_020481c4 SweepAlongProjectedAxis
+#define SweepIntervalOnAxis_01fff6c8 ClipRayAgainstPlane
+#define VEC_DotProduct_01ff9e6c VEC_DotProduct
+#include "src/arm9/spatial_queries/SweepAlongProjectedAxis_020481c4.c"

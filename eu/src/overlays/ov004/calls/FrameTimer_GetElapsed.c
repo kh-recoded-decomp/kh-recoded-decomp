@@ -1,16 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u16 startFrame;
-    u16 endFrame;
-} FrameTimer;
-
-extern u32 data_ov004_020645a0;
-
-u16 FrameTimer_GetElapsed(FrameTimer *timer)
-{
-    if (data_ov004_020645a0 >= timer->endFrame) {
-        return timer->endFrame - timer->startFrame;
-    }
-    return data_ov004_020645a0 - timer->startFrame;
-}
+#define FrameTimer_GetElapsed_02061400 FrameTimer_GetElapsed
+#define g_frameCount_020645a0 data_ov004_020645a0
+#include "src/ov004/frame_timer/FrameTimer_GetElapsed_02061400.c"

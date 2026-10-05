@@ -1,10 +1,4 @@
-#include "nitro/types.h"
-
-extern void PXI_Init_0202a64c();
-extern u32 data_ov029_020bab80;
-
-void ReleaseOv029Object(void)
-{
-    PXI_Init_0202a64c(data_ov029_020bab80);
-    data_ov029_020bab80 = 0xffffffff;
-}
+#define PXI_Init_0202a638 PXI_Init_0202a64c
+#define ReleaseOv029Object_020baa64 ReleaseOv029Object
+#define g_ov029ObjHandle_020bab60 data_ov029_020bab80
+#include "src/ov029/reviewed_helpers/ReleaseOv029Object_020baa64.c"

@@ -1,13 +1,4 @@
-extern void *NNSi_AllocFromTailOfExpHeap(void *hh, unsigned size, unsigned align);
-extern void *NNSi_AllocFromHeadOfExpHeap(void *hh, unsigned size, unsigned align);
-
-void *NNS_FndAllocFromFrmHeapEx(void *heap, unsigned size, int align) {
-    if (size == 0) size = 1;
-    size = (size + 3) & ~3;
-    heap = (char *)heap + 0x24;
-    if (align >= 0) {
-        return NNSi_AllocFromHeadOfExpHeap(heap, size, (unsigned)align);
-    } else {
-        return NNSi_AllocFromTailOfExpHeap(heap, size, (unsigned)-align);
-    }
-}
+#define AllocateFrameHeapHeadBlock_020133d0 NNSi_AllocFromHeadOfExpHeap
+#define AllocateFrameHeapTailBlock_0201342c NNSi_AllocFromTailOfExpHeap
+#define AllocateFromFrameHeap_02013508 NNS_FndAllocFromFrmHeapEx
+#include "src/arm9/library_nitro_nns/AllocateFromFrameHeap_02013508.c"

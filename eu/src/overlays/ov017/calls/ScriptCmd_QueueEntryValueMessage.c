@@ -1,27 +1,8 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-typedef struct ScriptOperand {
-    s16 type;
-    s16 pad_02;
-    s32 value;
-} ScriptOperand;
-
-extern int ScriptVm_ReadOperandInt(void *vm, ScriptOperand *operand);
-extern fx32 ScriptVm_ReadOperandFx32(void *vm, ScriptOperand *operand);
-extern void *FindKind4FieldObject(void);
-extern void *func_ov001_02086384(void *table, int entryIndex);
-extern void *AppendPool0Value(void *manager, int value);
-extern void FormatAndQueueMessage(void *obj, const char *format, u32 flags, void *args);
-
-int ScriptCmd_QueueEntryValueMessage(void *vm, ScriptOperand *operands)
-{
-    int entryIndex = ScriptVm_ReadOperandInt(vm, operands);
-    BOOL enable = ScriptVm_ReadOperandInt(vm, operands + 1) != 0;
-    fx32 value = ScriptVm_ReadOperandFx32(vm, operands + 2);
-    void *manager = FindKind4FieldObject();
-    void *entry = func_ov001_02086384(manager, entryIndex);
-
-    FormatAndQueueMessage(entry, NULL, enable, AppendPool0Value(manager, value));
-    return 1;
-}
+#define AppendPool0Value_020a3ec4 AppendPool0Value
+#define FormatAndQueueMessage_020a4008 FormatAndQueueMessage
+#define ScriptCmd_QueueEntryValueMessage_020a1f18 ScriptCmd_QueueEntryValueMessage
+#define ScriptVm_ReadOperandFx32_02025df8 ScriptVm_ReadOperandFx32
+#define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
+#define func_ov001_0208635c func_ov001_02086384
+#define func_ov017_020a4204 FindKind4FieldObject
+#include "src/ov017/script_commands/ScriptCmd_QueueEntryValueMessage_020a1f18.c"

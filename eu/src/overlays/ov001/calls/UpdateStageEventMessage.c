@@ -1,81 +1,12 @@
-#include "nitro/types.h"
-
-typedef struct EventInfo {
-    u16 messageId;
-    u16 isMessage : 1;
-    u16 isTicker : 1;
-    u16 reserved : 14;
-    u8 pad_04[0x18];
-    u32 tickerMode;
-    u32 tickerValue;
-} EventInfo;
-
-typedef struct PendingRequest {
-    s32 unk_00;
-    s32 handle;
-    s32 active;
-} PendingRequest;
-
-typedef struct Manager {
-    u8 pad_00[0x3c];
-    PendingRequest request;
-} Manager;
-
-extern Manager *data_ov001_020a04a4;
-
-extern int IsStageEventReady(u16 id);
-extern u32 GetBoundedEntryField(int index);
-extern BOOL func_ov001_02087988(u16 id, EventInfo *info);
-extern s32 func_ov001_02063a38(void);
-extern BOOL IsPlayerEntryFlagSet(int player, u32 id);
-extern void ShowFieldMessageLine(u16 tickerMode, u32 tickerValue, int messageId, BOOL resetTicker);
-extern void HideFieldMessageLine(void);
-extern void ResetPendingRequest(void);
-extern void StageRecord_SetFlagBit2(u16 id);
-extern void SetClampedMenuCursorAnimated(u16 cursor);
-
-void UpdateStageEventMessage(int id)
-{
-    PendingRequest *request = &data_ov001_020a04a4->request;
-    EventInfo info;
-    BOOL reset;
-
-    switch (request->active) {
-    case 0:
-        if (id != -1 && IsStageEventReady(id)) {
-            reset = FALSE;
-            GetBoundedEntryField(0);
-            if (func_ov001_02087988(id, &info)) {
-                if ((!info.isTicker || info.isMessage) && func_ov001_02063a38() != 6) {
-                    if (IsPlayerEntryFlagSet(0, 9)) {
-                        reset = TRUE;
-                    }
-                    ShowFieldMessageLine(info.tickerMode, (u16)info.tickerValue, info.messageId, reset);
-                } else {
-                    HideFieldMessageLine();
-                }
-                request->handle = id;
-                request->active = 1;
-            }
-        }
-        break;
-    case 1:
-        if (id == -1) {
-            id = request->handle;
-        }
-        if (!IsStageEventReady(id)) {
-            ResetPendingRequest();
-            return;
-        }
-        StageRecord_SetFlagBit2(id);
-        if (id != request->handle) {
-            request->active = 0;
-            UpdateStageEventMessage(id);
-            return;
-        }
-        if (func_ov001_02087988(id, &info)) {
-            SetClampedMenuCursorAnimated(info.tickerMode);
-        }
-        break;
-    }
-}
+#define GetBoundedEntryField_0206db5c GetBoundedEntryField
+#define HideFieldMessageLine_0207166c HideFieldMessageLine
+#define IsPlayerEntryFlagSet_02050014 IsPlayerEntryFlagSet
+#define IsStageEventReady_02087c78 IsStageEventReady
+#define ResetPendingRequest_0206c614 ResetPendingRequest
+#define ShowFieldMessageLine_0207163c ShowFieldMessageLine
+#define StageRecord_SetFlagBit2_02087d24 StageRecord_SetFlagBit2
+#define UpdateStageEventMessage_0206c528 UpdateStageEventMessage
+#define func_ov001_02071690 SetClampedMenuCursorAnimated
+#define func_ov001_02087960 func_ov001_02087988
+#define g_manager_020a0484 data_ov001_020a04a4
+#include "src/ov001/shared_engine/UpdateStageEventMessage_0206c528.c"

@@ -1,14 +1,2 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-typedef struct Actor {
-    u8 pad_000[0x95c];
-    fx32 countdown;
-} Actor;
-
-void Actor_ExtendCountdown(Actor *actor, fx32 duration)
-{
-    if (actor->countdown < duration) {
-        actor->countdown = duration;
-    }
-}
+#define Actor_ExtendCountdown_020c89fc Actor_ExtendCountdown
+#include "src/ov059/unclassified_helpers/Actor_ExtendCountdown_020c89fc.c"

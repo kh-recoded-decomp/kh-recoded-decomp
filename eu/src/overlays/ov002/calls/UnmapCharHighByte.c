@@ -1,15 +1,2 @@
-#include "nitro/types.h"
-
-extern u8 data_ov002_0206ad7c[];
-
-u16 UnmapCharHighByte(int code)
-{
-    u8 high = (code & 0xff00) >> 8;
-    u8 index;
-    for (index = 0; index < 13; index++) {
-        if (high == data_ov002_0206ad7c[index]) {
-            return (code & 0xff) | (index << 8);
-        }
-    }
-    return 0;
-}
+#define UnmapCharHighByte_02065f7c UnmapCharHighByte
+#include "src/ov002/text_utils/UnmapCharHighByte_02065f7c.c"

@@ -1,29 +1,8 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u32 slotA;
-    u32 slotB;
-    u8 pad_08[0x6000 + 0x68c - 8];
-    u32 slotC;
-} Heap;
-
-extern Heap *NNSi_FndGetCurrentRootHeap(void);
-extern void ReleaseHeapExtensions(Heap *heap);
-extern void ZeroHalfThenFree(u32 value);
-extern u16 GetLanguageIndex(void);
-extern void WriteGlobalPackedBits(int opcode, int channel, u16 value);
-extern void SetCardThreadStartTick(void);
-
-void TeardownCurrentHeap(void)
-{
-    Heap *heap = NNSi_FndGetCurrentRootHeap();
-    u16 value;
-
-    ReleaseHeapExtensions(heap);
-    ZeroHalfThenFree(heap->slotA);
-    ZeroHalfThenFree(heap->slotB);
-    ZeroHalfThenFree(heap->slotC);
-    value = GetLanguageIndex();
-    WriteGlobalPackedBits(0x1a02, 3, value);
-    SetCardThreadStartTick();
-}
+#define NNSi_FndGetCurrentRootHeap_0202a764 NNSi_FndGetCurrentRootHeap
+#define ReleaseHeapExtensions_02061818 ReleaseHeapExtensions
+#define TeardownCurrentHeap_020633d8 TeardownCurrentHeap
+#define ZeroHalfThenFree_0202cd78 ZeroHalfThenFree
+#define func_02027258 SetCardThreadStartTick
+#define func_02027360 WriteGlobalPackedBits
+#define func_0202b788 GetLanguageIndex
+#include "src/ov000/unclassified_helpers/TeardownCurrentHeap_020633d8.c"

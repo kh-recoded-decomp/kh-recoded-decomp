@@ -1,16 +1,2 @@
-typedef int fx32;
-
-typedef struct VecFx32 {
-    fx32 x;
-    fx32 y;
-    fx32 z;
-} VecFx32;
-
-fx32 VEC_DotProduct(const VecFx32 *a, const VecFx32 *b)
-{
-    long long sum = (long long)a->x * b->x
-                  + (long long)a->y * b->y
-                  + (long long)a->z * b->z;
-
-    return (fx32)((sum + 0x800) >> 12);
-}
+#define VEC_DotProduct_01ff9e6c VEC_DotProduct
+#include "src/itcm/library_nitro_fx/func_01ff9e6c.c"

@@ -1,17 +1,4 @@
-#include "nitro/types.h"
-
-extern int *data_ov021_020b56c0;
-
-extern void Camera_RefreshHeading(void);
-
-void ForwardSubModeStart(void) {
-    switch (*data_ov021_020b56c0) {
-    case 0:
-        Camera_RefreshHeading();
-        break;
-    case 1:
-    case 2:
-    case 3:
-        break;
-    }
-}
+#define ForwardSubModeStart_020af7b8 ForwardSubModeStart
+#define data_ov021_020b56a0 data_ov021_020b56c0
+#define func_ov046_020c16f8 Camera_RefreshHeading
+#include "src/ov021/sub_mode/ForwardSubModeStart_020af7b8.c"

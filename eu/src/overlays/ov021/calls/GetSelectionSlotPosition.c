@@ -1,15 +1,4 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-typedef struct OverlaySelectionRecord {
-    u8 overlaySet;
-} OverlaySelectionRecord;
-
-extern OverlaySelectionRecord *GetOverlaySelectionRecord(u32 selectionIndex);
-extern VecFx32 data_ov021_020b4ec8[][9];
-
-void GetSelectionSlotPosition(VecFx32 *out, u32 selectionIndex, int slot)
-{
-    OverlaySelectionRecord *record = GetOverlaySelectionRecord(selectionIndex);
-    *out = data_ov021_020b4ec8[record->overlaySet][slot];
-}
+#define GetSelectionSlotPosition_020a91b8 GetSelectionSlotPosition
+#define data_ov021_020b4ea8 data_ov021_020b4ec8
+#define func_0204f768 GetOverlaySelectionRecord
+#include "src/ov021/unclassified_helpers/GetSelectionSlotPosition_020a91b8.c"

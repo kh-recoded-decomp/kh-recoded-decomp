@@ -1,41 +1,11 @@
-#include "nitro/types.h"
-
-typedef struct ScreenWork {
-    u8 pad_00000[0x10];
-    void *buffer0;
-    void *buffer1;
-    void *container;
-    u8 pad_0001C[0x18];
-    u8 unk_00034[0x6c0];
-    u8 sceneObject[0x4768];
-    void *messageData;
-    u8 pad_04E60[0xcda0];
-    void *heapBlock;
-} ScreenWork;
-
-extern BOOL ReleaseRecordSlot(s32 slot);
-extern void NNSi_FndFreeFromDefaultHeap(void *block);
-extern int ZeroHalfThenFree(void *buffer);
-extern void ReleaseResourceAndDetach(void *object);
-extern void func_ov077_020c9f7c(void *object);
-extern void DestroyAllContainerElements(void *container);
-extern void ReleaseIfMarked(void *container);
-extern void FreePointerIfSet(void **ptr);
-extern void SetSecondaryElementEnabled(BOOL enabled);
-
-void ReleaseScreenResources(ScreenWork *work)
-{
-    void *container = work->container;
-
-    ReleaseRecordSlot(1);
-    ReleaseRecordSlot(0);
-    NNSi_FndFreeFromDefaultHeap(work->heapBlock);
-    ZeroHalfThenFree(work->buffer1);
-    ZeroHalfThenFree(work->buffer0);
-    ReleaseResourceAndDetach(work->sceneObject);
-    func_ov077_020c9f7c(work->unk_00034);
-    DestroyAllContainerElements(container);
-    ReleaseIfMarked(container);
-    FreePointerIfSet(&work->messageData);
-    SetSecondaryElementEnabled(TRUE);
-}
+#define DestroyAllContainerElements_020b900c DestroyAllContainerElements
+#define FreePointerIfSet_020ba294 FreePointerIfSet
+#define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
+#define ReleaseRecordSlot_02051dfc ReleaseRecordSlot
+#define ReleaseResourceAndDetach_0202eee8 ReleaseResourceAndDetach
+#define ReleaseScreenResources_020c90bc ReleaseScreenResources
+#define SetSecondaryElementEnabled_020bc084 SetSecondaryElementEnabled
+#define ZeroHalfThenFree_0202cd78 ZeroHalfThenFree
+#define _fp_init_020c9f5c func_ov077_020c9f7c
+#define func_ov027_020b903c ReleaseIfMarked
+#include "src/ov077/unclassified_helpers/ReleaseScreenResources_020c90bc.c"

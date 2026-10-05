@@ -1,18 +1,5 @@
-#include "nitro/types.h"
-
-extern u32 NotifyActorGroupMembers();
-extern u32 ResolveEventRecordRef();
-extern u32 ResolveTaggedValueRef();
-
-/* Leaf script command: enables actor group flag. */
-u32 ScriptCmd_SetActorGroupFlag(u32 context)
-{
-    s32 actor;
-
-    actor = ResolveTaggedValueRef();
-    actor = ResolveEventRecordRef(context, *(u32 *)(actor + 4));
-    if (actor != 0) {
-        NotifyActorGroupMembers(actor, 1);
-    }
-    return 0;
-}
+#define ScriptCmd_SetActorGroupFlag_020b3030 ScriptCmd_SetActorGroupFlag
+#define func_ov001_020969e0 NotifyActorGroupMembers
+#define func_ov021_020b0250 ResolveEventRecordRef
+#define func_ov021_020b0374 ResolveTaggedValueRef
+#include "src/ov021/leaf_research/ScriptCmd_SetActorGroupFlag_020b3030.c"

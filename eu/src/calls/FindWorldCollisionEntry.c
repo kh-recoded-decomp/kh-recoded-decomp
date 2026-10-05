@@ -1,11 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct CollisionWorld CollisionWorld;
-
-extern char *CollModel_FindEntry(CollisionWorld *world, void *name);
-extern CollisionWorld *gActorRegistry;
-
-char *FindWorldCollisionEntry(void *name)
-{
-    return CollModel_FindEntry(gActorRegistry, name);
-}
+#define CollModel_FindEntry_020352cc CollModel_FindEntry
+#define FindWorldCollisionEntry_02036548 FindWorldCollisionEntry
+#define g_collisionWorld_0206083c gActorRegistry
+#include "src/arm9/spatial_queries/FindWorldCollisionEntry_02036548.c"

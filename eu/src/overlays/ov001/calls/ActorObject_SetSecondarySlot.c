@@ -1,8 +1,3 @@
-#include "nitro/types.h"
-
-extern void MI_CpuCopy8(const void *src, void *dest, u32 len);
-
-void ActorObject_SetSecondarySlot(u8 *actor, const void *src, int index)
-{
-    MI_CpuCopy8(src, actor + 0x820 + index * 8, 8);
-}
+#define ActorObject_SetSecondarySlot_0208a724 ActorObject_SetSecondarySlot
+#define func_01ff89a8 MI_CpuCopy8
+#include "src/ov001/scripted_actor_behavior/ActorObject_SetSecondarySlot_0208a724.c"

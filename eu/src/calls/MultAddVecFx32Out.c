@@ -1,11 +1,3 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-extern void VEC_MultAdd(fx32 scale, const VecFx32 *v, const VecFx32 *add, VecFx32 *dst);
-
-void MultAddVecFx32Out(VecFx32 *out, fx32 scale, const VecFx32 *v, const VecFx32 *add)
-{
-    VecFx32 result;
-    VEC_MultAdd(scale, v, add, &result);
-    *out = result;
-}
+#define MultAddVecFx32Out_02040c58 MultAddVecFx32Out
+#define VEC_MultAdd_01ffa09c VEC_MultAdd
+#include "src/arm9/math/MultAddVecFx32Out_02040c58.c"

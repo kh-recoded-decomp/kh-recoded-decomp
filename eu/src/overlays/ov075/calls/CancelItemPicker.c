@@ -1,13 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct ItemPicker ItemPicker;
-
-extern BOOL PlaySoundEffect(int seqArcNo, int index);
-extern void func_ov075_020cde6c(ItemPicker *picker, BOOL closing);
-
-s32 CancelItemPicker(ItemPicker *picker)
-{
-    PlaySoundEffect(1, 3);
-    func_ov075_020cde6c(picker, TRUE);
-    return 3;
-}
+#define CancelItemPicker_020ceb60 CancelItemPicker
+#define PlaySoundEffect_0204d924 PlaySoundEffect
+#define func_ov075_020cde4c func_ov075_020cde6c
+#include "src/ov075/unclassified_helpers/CancelItemPicker_020ceb60.c"

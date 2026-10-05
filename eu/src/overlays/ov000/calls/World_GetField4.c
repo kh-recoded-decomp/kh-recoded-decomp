@@ -1,9 +1,3 @@
-extern int *data_ov000_02063a04;
-
-int World_GetField4(void)
-{
-    if (data_ov000_02063a04 != 0) {
-        return data_ov000_02063a04[1];
-    }
-    return 2;
-}
+#define World_GetField4_02063630 World_GetField4
+#define data_02063a04 data_ov000_02063a04
+#include "src/ov000/shared_engine/World_GetField4_02063630.c"

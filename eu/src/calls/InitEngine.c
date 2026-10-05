@@ -1,54 +1,21 @@
-extern void PXI_Init_020034d8(void);
-extern void BootInitHookNoOp(void);
-extern void FS_Init(int priority);
-extern void GX_Init(void);
-extern void OS_InitTick(void);
-extern void RTC_Init(void);
-extern void CARD_Init(void);
-extern void CARD_SetCacheFlushThreshold(int a, int b);
-extern void GX_DispOff(void);
-extern void SetBrightnessAndSyncMain(int value);
-extern void SetSecondaryBrightness(int value);
-extern void *NNS_GfdInitVramTransferManager(int a, int b);
-extern void InitVBlankInterrupt(void);
-extern unsigned int OS_EnableIrqMask(unsigned int mask);
-extern void InitEngineHeaps(int oldIme);
-extern void ClearVideoMemory(void);
-extern void SetupDisplayRegs(void);
-extern void InitTouchPanel(void);
-extern void InitRandomFromEntropy(void);
-
-extern int GXi_DmaId;
-extern int data_02060088;
-
-void InitEngine(void)
-{
-    volatile unsigned short *keypadReg = (volatile unsigned short *)0x04000304;
-    volatile unsigned short *ime = (volatile unsigned short *)0x04000208;
-    unsigned short oldIme;
-
-    PXI_Init_020034d8();
-    BootInitHookNoOp();
-    FS_Init(3);
-    *keypadReg = (*keypadReg & ~0x20e) | 0x20e;
-    GXi_DmaId = 1;
-    GX_Init();
-    OS_InitTick();
-    RTC_Init();
-    CARD_Init();
-    CARD_SetCacheFlushThreshold(0x500, 0x2400);
-    GX_DispOff();
-    *(volatile unsigned int *)0x04001000 &= 0xfffeffff;
-    SetBrightnessAndSyncMain(0x10);
-    SetSecondaryBrightness(0x10);
-    NNS_GfdInitVramTransferManager((int)&data_02060088, 0x30);
-    InitVBlankInterrupt();
-    OS_EnableIrqMask(0x40000);
-    oldIme = *ime;
-    *ime = 1;
-    InitEngineHeaps(oldIme);
-    ClearVideoMemory();
-    SetupDisplayRegs();
-    InitTouchPanel();
-    InitRandomFromEntropy();
-}
+#define ClearVideoMemory_0202993c ClearVideoMemory
+#define GfxQueue_Configure_02013fd0 NNS_GfdInitVramTransferManager
+#define InitEngine_02029b54 InitEngine
+#define InitTouchPanel_020299c0 InitTouchPanel
+#define InitVBlankInterrupt_020010cc InitVBlankInterrupt
+#define PXI_Init_020034c4 PXI_Init_020034d8
+#define RTC_Init_0200e428 RTC_Init
+#define SetBrightnessAndSyncMain_02029e7c SetBrightnessAndSyncMain
+#define SetSecondaryBrightness_02029ed0 SetSecondaryBrightness
+#define SetupDisplayRegs_020299f4 SetupDisplayRegs
+#define data_02055c1c GXi_DmaId
+#define func_0200644c BootInitHookNoOp
+#define func_02006488 GX_Init
+#define func_02006640 GX_DispOff
+#define func_0200903c CARD_Init
+#define func_02009144 CARD_SetCacheFlushThreshold
+#define func_0200d560 FS_Init
+#define func_02029ad8 InitRandomFromEntropy
+#define func_0202a040 InitEngineHeaps
+#define initialize_frame_timer_02003eec OS_InitTick
+#include "src/arm9/runtime/InitEngine_02029b54.c"

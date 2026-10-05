@@ -1,5 +1,2 @@
-extern void SNDi_SetTrackParam(int a, int b, int c, int d, int e);
-
-void SND_SetTrackParam0A(int a, int b, int c) {
-    SNDi_SetTrackParam(a, b, 0xa, c, 2);
-}
+#define SND_SetTrackParam0A_0200ea74 SND_SetTrackParam0A
+#include "src/arm9/library_nitro_snd/SND_SetTrackParam0A_0200ea74.c"

@@ -1,16 +1,5 @@
-#include "nitro/types.h"
-#include "nnsys/snd.h"
-
-extern u8 *gSoundWork;
-extern void NNS_SndHeapClear(NNSSndHeapHandle heap);
-extern void QueueTypedMessage(u16 messageId, int arg1, int arg2);
-
-void RequestSoundLoad(u32 soundId)
-{
-    u8 *base = gSoundWork;
-
-    *(u8 *)(base + 0xb472e) = 1;
-    *(u16 *)(base + 0xb472a) = (u16)soundId;
-    NNS_SndHeapClear(*(NNSSndHeapHandle *)(base + 0xb04b8));
-    QueueTypedMessage((u16)soundId, *(int *)(base + 0xb04b8), (int)(base + 0xb472e));
-}
+#define QueueTypedMessage_0202ca88 QueueTypedMessage
+#define RequestSoundLoad_0204cfac RequestSoundLoad
+#define func_0201f030 NNS_SndHeapClear
+#define g_soundWork_0206084c gSoundWork
+#include "src/arm9/audio/RequestSoundLoad_0204cfac.c"

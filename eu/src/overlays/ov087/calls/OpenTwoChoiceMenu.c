@@ -1,35 +1,10 @@
-﻿#include "nitro/types.h"
-
-typedef struct {
-    int values[2];
-} IdPair;
-
-typedef struct {
-    u8 pad_000[0xb64];
-    u8 labelTable[0xc];
-} PanelScene;
-
-extern const IdPair data_ov087_020c7c90;
-extern void *func_ov039_020bc1dc(void);
-extern void ShowChoiceWindows(PanelScene *scene, int count);
-extern void *func_ov027_020ba2c8(void *table, int index);
-extern void func_ov087_020c4734(PanelScene *scene, int windowIndex, void *text, int color);
-extern void *FindWidgetById(void *container, int elementId);
-extern void SetFocusedWidget(void *container, void *widget);
-extern void MoveCursorToWidget(PanelScene *scene, void *widget, int slot, BOOL immediate);
-
-void OpenTwoChoiceMenu(PanelScene *scene)
-{
-    void *container = func_ov039_020bc1dc();
-    IdPair labels = data_ov087_020c7c90;
-    void *widget;
-    int i;
-
-    ShowChoiceWindows(scene, 2);
-    for (i = 0; i < 2; i++) {
-        func_ov087_020c4734(scene, i, func_ov027_020ba2c8(scene->labelTable, labels.values[i]), 2);
-    }
-    widget = FindWidgetById(container, 3);
-    SetFocusedWidget(container, widget);
-    MoveCursorToWidget(scene, widget, 0, 0);
-}
+#define OpenTwoChoiceMenu_020c5a74 OpenTwoChoiceMenu
+#define SetFocusedWidget_020b96e4 SetFocusedWidget
+#define data_ov087_020c7c70 data_ov087_020c7c90
+#define func_ov027_020b90a4 FindWidgetById
+#define func_ov027_020ba2a8 func_ov027_020ba2c8
+#define func_ov039_020bc1bc func_ov039_020bc1dc
+#define func_ov087_020c43c4 MoveCursorToWidget
+#define func_ov087_020c4714 func_ov087_020c4734
+#define func_ov087_020c4b74 ShowChoiceWindows
+#include "src/ov087/panel_state/OpenTwoChoiceMenu_020c5a74.c"

@@ -1,11 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct BoxShapeRef BoxShapeRef;
-typedef struct CylinderShapeRef CylinderShapeRef;
-
-extern BOOL func_0203b718(BoxShapeRef *boxRef, CylinderShapeRef *cylinderRef, void *contact, u32 flags);
-
-BOOL TestCylinderAgainstBox(CylinderShapeRef *cylinderRef, BoxShapeRef *boxRef, void *contact, u32 flags)
-{
-    return func_0203b718(boxRef, cylinderRef, contact, flags ^ 1);
-}
+#define TestBoxAgainstCylinder_0203b704 func_0203b718
+#define TestCylinderAgainstBox_0203b564 TestCylinderAgainstBox
+#include "src/arm9/spatial_queries/TestCylinderAgainstBox_0203b564.c"

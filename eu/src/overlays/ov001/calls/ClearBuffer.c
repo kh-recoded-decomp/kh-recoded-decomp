@@ -1,8 +1,3 @@
-#include "nitro/types.h"
-
-extern void MI_CpuFill8(void *dst, int value, u32 size);
-
-void ClearBuffer(void *dst, u32 size)
-{
-    MI_CpuFill8(dst, 0, size);
-}
+#define ClearBuffer_0208f02c ClearBuffer
+#define func_01ff8830 MI_CpuFill8
+#include "src/ov001/shared_engine/ClearBuffer_0208f02c.c"

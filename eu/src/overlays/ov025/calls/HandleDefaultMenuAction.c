@@ -1,21 +1,6 @@
-#include "nitro/types.h"
-
-extern u32 data_ov025_020b7780;
-extern u32 PlaySoundEffect();
-extern u32 func_ov001_02063a38();
-extern u32 RequestPanelModeWithStyle2();
-extern u32 SetPanelInputActive();
-
-void HandleDefaultMenuAction(void)
-
-{
-  int mode;
-  
-  if (*(u8 *)(data_ov025_020b7780 + 0x64e9) == '\0') {
-    SetPanelInputActive();
-    mode = func_ov001_02063a38();
-    RequestPanelModeWithStyle2(mode == 10);
-    PlaySoundEffect(0,0x3b);
-  }
-  return;
-}
+#define HandleDefaultMenuAction_020b5a94 HandleDefaultMenuAction
+#define _data_ov025_020b7760 data_ov025_020b7780
+#define func_0204d924 PlaySoundEffect
+#define func_ov001_0207b320 RequestPanelModeWithStyle2
+#define func_ov001_0207b6b4 SetPanelInputActive
+#include "src/ov025/menu_widgets/HandleDefaultMenuAction_020b5a94.c"

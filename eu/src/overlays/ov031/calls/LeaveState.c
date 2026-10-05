@@ -1,18 +1,8 @@
-#include "nitro/types.h"
-
-extern void func_02035de4(void);
-extern void DrawVisibleSceneSlots(void);
-extern void RunFlaggedEventCallbacks(void);
-extern void func_ov001_020876d4(void);
-extern void func_ov021_020af528(u32 a);
-extern void DrawSceneGroups(void);
-
-void LeaveState(void)
-{
-    func_ov021_020af528(1);
-    DrawVisibleSceneSlots();
-    DrawSceneGroups();
-    RunFlaggedEventCallbacks();
-    func_02035de4();
-    func_ov001_020876d4();
-}
+#define LeaveState_020bab00 LeaveState
+#define func_02035dd0 func_02035de4
+#define func_ov001_02067d48 DrawVisibleSceneSlots
+#define func_ov001_0206daa8 RunFlaggedEventCallbacks
+#define func_ov001_020876ac func_ov001_020876d4
+#define func_ov021_020af508 func_ov021_020af528
+#define func_ov031_020bb2d4 DrawSceneGroups
+#include "src/ov031/state_machine/LeaveState_020bab00.c"

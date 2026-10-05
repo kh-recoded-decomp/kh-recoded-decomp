@@ -1,12 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct ResourceContainer ResourceContainer;
-typedef struct LayoutElement LayoutElement;
-
-extern LayoutElement *FindWidgetById(ResourceContainer *container, s32 elementId);
-extern void SetEntrySlotsVisible(ResourceContainer *container, LayoutElement *element, BOOL visible);
-
-void SetLayoutElementVisible(ResourceContainer *layout, s32 elementId, BOOL visible)
-{
-    SetEntrySlotsVisible(layout, FindWidgetById(layout, elementId), visible);
-}
+#define SetLayoutElementVisible_020d0e4c SetLayoutElementVisible
+#define func_ov027_020b90a4 FindWidgetById
+#define func_ov027_020b9580 SetEntrySlotsVisible
+#include "src/ov075/unclassified_helpers/SetLayoutElementVisible_020d0e4c.c"

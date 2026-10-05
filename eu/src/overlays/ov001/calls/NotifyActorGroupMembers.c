@@ -1,14 +1,5 @@
-#include "nitro/types.h"
-
-extern void *FindRecordById_0209c304(u16 groupId);
-extern void *GetLinkedStageActor(void *node);
-extern void func_ov001_020917b4(void *node, u32 message);
-
-void NotifyActorGroupMembers(u8 *actor, u32 message)
-{
-    void *node;
-
-    for (node = FindRecordById_0209c304(*(u16 *)(actor + 0x10)); node != 0; node = GetLinkedStageActor(node)) {
-        func_ov001_020917b4(node, message);
-    }
-}
+#define NotifyActorGroupMembers_020969e0 NotifyActorGroupMembers
+#define func_ov001_0209178c func_ov001_020917b4
+#define func_ov001_0209c2dc FindRecordById_0209c304
+#define func_ov001_0209c2f0 GetLinkedStageActor
+#include "src/ov001/shared_engine/NotifyActorGroupMembers_020969e0.c"

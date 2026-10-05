@@ -1,14 +1,2 @@
-#include "nitro/types.h"
-
-typedef unsigned int code();
-
-void ApplyScalarToVec3(unsigned int *values,code *transform) {
-  unsigned int value;
-
-  value = (*transform)(*values);
-  *values = value;
-  value = (*transform)(values[1]);
-  values[1] = value;
-  value = (*transform)(values[2]);
-  values[2] = value;
-}
+#define func_0204abf4 ApplyScalarToVec3
+#include "src/arm9/reviewed_helpers/func_0204abf4.c"

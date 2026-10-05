@@ -1,9 +1,3 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-extern s64 PanelState_NoOpF(s64 value);
-
-s64 MulFx32ToFx64(fx32 a, fx32 b)
-{
-    return PanelState_NoOpF(((s64)a * b + 0x800) >> 12);
-}
+#define MulFx32ToFx64_0203f278 MulFx32ToFx64
+#define func_0203f29c PanelState_NoOpF
+#include "src/arm9/math/MulFx32ToFx64_0203f278.c"

@@ -1,26 +1,6 @@
-#include "nitro/types.h"
-
-extern u32 data_ov053_020d2c40;
-extern u32 DestroyActorResources();
-extern u32 func_ov001_02063a38();
-extern void func_ov040_020be00c();
-extern u32 func_ov001_0206e31c();
-extern u32 func_ov010_020a1828();
-
-void ShutdownOverlay053(void)
-{
-    s32 result;
-
-    if (data_ov053_020d2c40 != 0) {
-        DestroyActorResources();
-        result = func_ov001_02063a38();
-        if (result == 6) {
-            func_ov040_020be00c();
-        }
-        result = func_ov001_0206e31c();
-        if (result != 0) {
-            func_ov010_020a1828();
-        }
-        data_ov053_020d2c40 = 0;
-    }
-}
+#define FreeCueTable_020bdfec func_ov040_020be00c
+#define ShutdownOverlay053_020d2628 ShutdownOverlay053
+#define func_ov010_020a1808 func_ov010_020a1828
+#define func_ov052_020ccc60 DestroyActorResources
+#define g_overlayWorkData_020d2c20 data_ov053_020d2c40
+#include "src/ov053/unclassified_helpers/ShutdownOverlay053_020d2628.c"

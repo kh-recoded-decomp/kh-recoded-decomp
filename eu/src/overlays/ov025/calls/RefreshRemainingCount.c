@@ -1,14 +1,7 @@
-﻿#include "nitro/types.h"
-
-extern void *data_ov025_020b7780;
-extern void func_ov027_020b9e20(void *tiles, int row);
-extern void func_ov025_020b584c(void *menu);
-extern int CountActiveSlots(void *slots);
-extern void DrawRemainingCountText(void *menu, int count);
-
-void RefreshRemainingCount(void) {
-    u8 *menu = data_ov025_020b7780;
-    func_ov027_020b9e20(menu + 0x64c8, 0x1a);
-    func_ov025_020b584c(menu);
-    DrawRemainingCountText(menu, CountActiveSlots(menu + 0x64f4));
-}
+#define RefreshRemainingCount_020b58d8 RefreshRemainingCount
+#define data_ov025_020b7760 data_ov025_020b7780
+#define func_ov025_020b582c func_ov025_020b584c
+#define func_ov025_020b5858 DrawRemainingCountText
+#define func_ov025_020b74d8 CountActiveSlots
+#define func_ov027_020b9e00 func_ov027_020b9e20
+#include "src/ov025/menu_widgets/RefreshRemainingCount_020b58d8.c"

@@ -1,15 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 _0[0x40];
-    int mode;
-} CameraState;
-
-extern CameraState *data_ov043_020bd2e0;
-
-void SetCameraModeValue(int mode) {
-    CameraState *camera = data_ov043_020bd2e0;
-    if (camera->mode != mode) {
-        camera->mode = mode;
-    }
-}
+#define SetCameraModeValue_020bc8cc SetCameraModeValue
+#define data_ov043_020bd2c0 data_ov043_020bd2e0
+#include "src/ov043/camera/SetCameraModeValue_020bc8cc.c"

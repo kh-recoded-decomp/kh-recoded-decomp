@@ -1,26 +1,7 @@
-#include "nitro/types.h"
-
-typedef struct EnemyBitInfo {
-  u32 id;
-  u32 bitOffset;
-} EnemyBitInfo;
-
-extern EnemyBitInfo data_ov099_020c243c[];
-extern u32 ReadGlobalPackedBits(u32 bitOffset, u32 bitCount);
-extern BOOL IsGlobalPackedBitSet(int bitIndex);
-extern void SetGlobalPackedBit(int bitIndex);
-extern void SetEntryFlag_020c16d4(int list, int index);
-
-void SyncEnemyEntryFlags(void) {
-  int index;
-
-  for (index = 0; index < 0x28; index++) {
-    if (ReadGlobalPackedBits(data_ov099_020c243c[index].bitOffset, 0x11) != 0) {
-      SetEntryFlag_020c16d4(0, index);
-      SetGlobalPackedBit(index + 0x1172);
-    }
-    if (!IsGlobalPackedBitSet(index + 0x1222) && IsGlobalPackedBitSet(index + 0x1172)) {
-      SetEntryFlag_020c16d4(1, index);
-    }
-  }
-}
+#define IsGlobalPackedBitSet_02027304 IsGlobalPackedBitSet
+#define ReadGlobalPackedBits_02027348 ReadGlobalPackedBits
+#define SetEntryFlag_020c16b4 SetEntryFlag_020c16d4
+#define SetGlobalPackedBit_02027320 SetGlobalPackedBit
+#define SyncEnemyEntryFlags_020c16d0 SyncEnemyEntryFlags
+#define data_ov099_020c241c data_ov099_020c243c
+#include "src/ov099/unclassified_helpers/SyncEnemyEntryFlags_020c16d0.c"

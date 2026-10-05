@@ -1,8 +1,2 @@
-#include "nitro/types.h"
-
-extern int data_020608c8;
-
-void ResetParamWord8(void)
-{
-    *(int *)((char *)&data_020608c8 + 8) = -1;
-}
+#define ResetParamWord8_02050528 ResetParamWord8
+#include "src/arm9/shared_engine/ResetParamWord8_02050528.c"

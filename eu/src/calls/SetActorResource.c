@@ -1,25 +1,6 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u16 refCount;
-    u16 loadedCount;
-} SharedRecord;
-
-extern SharedRecord *SND_RegisterSeq(u32 fileId, int kind);
-extern void *func_0202c4a0(u32 fileId, int kind);
-extern void ApplyRecordTableEntry2(u16 actorIndex, SharedRecord *record, void *data, int kind);
-extern void NNSi_FndFreeFromDefaultHeap(void *block);
-
-void SetActorResource(int actorIndex, u32 resourceFileId, u32 dataFileId)
-{
-    void *data = NULL;
-    SharedRecord *record = SND_RegisterSeq(resourceFileId, 0xd);
-
-    if (record->loadedCount == 0) {
-        data = func_0202c4a0(dataFileId, 0xd);
-    }
-    ApplyRecordTableEntry2(actorIndex, record, data, 0xd);
-    if (data != NULL) {
-        NNSi_FndFreeFromDefaultHeap(data);
-    }
-}
+#define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
+#define RetainOrInitializeSharedRecord_0202c80c SND_RegisterSeq
+#define SetActorResource_02026a00 SetActorResource
+#define func_0202c48c func_0202c4a0
+#define func_020358b0 ApplyRecordTableEntry2
+#include "src/arm9/shared_engine/SetActorResource_02026a00.c"

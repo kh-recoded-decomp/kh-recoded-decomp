@@ -1,21 +1,4 @@
-#include "nitro/types.h"
-
-extern s32 func_ov001_02063a38(void);
-extern void *func_ov030_020bb374(void);
-extern void *GetSubStruct1C(void);
-
-static inline BOOL IsGameMode(s32 mode)
-{
-    return func_ov001_02063a38() == mode;
-}
-
-void *GetModeContext(void)
-{
-    if (IsGameMode(4)) {
-        return func_ov030_020bb374();
-    }
-    if (IsGameMode(7)) {
-        return GetSubStruct1C();
-    }
-    return NULL;
-}
+#define GetModeContext_02036cd8 GetModeContext
+#define GetSubStruct1C_020bbfe0 GetSubStruct1C
+#define func_ov030_020bb354 func_ov030_020bb374
+#include "src/arm9/scene_dispatch/GetModeContext_02036cd8.c"

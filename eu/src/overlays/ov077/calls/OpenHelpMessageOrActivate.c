@@ -1,43 +1,10 @@
-#include "nitro/types.h"
-
-typedef struct ScreenSprite {
-    s32 x;
-    s32 y;
-    s32 unk_08;
-    s32 animIndex;
-    s32 unk_10;
-    s32 spriteIndex;
-} ScreenSprite;
-
-typedef struct ItemScreen {
-    u8 pad_00000[0x14];
-    u8 work[0x11ebc];
-    s32 mode;
-    ScreenSprite sprites[12];
-    s32 state;
-} ItemScreen;
-
-extern s8 data_ov077_020ca11c[];
-extern int func_02029f5c(void);
-extern void *func_ov039_020bc1dc(void);
-extern void SetModeTwoAndRefresh(ItemScreen *screen);
-extern BOOL func_ov077_020c8bf4(void *work, void *owner, BOOL (*predicate)(void *owner),
-                                void (*onClose)(ItemScreen *screen), const s8 *message, int arg);
-extern void ShowSlotHeaderMessage(ItemScreen *screen);
-extern void UpdateItemScreenDisplay(ItemScreen *screen);
-extern void SetFlagGatedElementsVisible(void *container, BOOL visible);
-
-void OpenHelpMessageOrActivate(ItemScreen *screen)
-{
-    if (func_02029f5c() != 0) {
-        return;
-    }
-    if (!func_ov077_020c8bf4(screen->work, screen, NULL, SetModeTwoAndRefresh, data_ov077_020ca11c, 1)) {
-        screen->state = 2;
-        ShowSlotHeaderMessage(screen);
-        UpdateItemScreenDisplay(screen);
-        return;
-    }
-    screen->state = 1;
-    SetFlagGatedElementsVisible(func_ov039_020bc1dc(), FALSE);
-}
+#define OpenHelpMessageOrActivate_020c4b50 OpenHelpMessageOrActivate
+#define SetFlagGatedElementsVisible_020c9d7c SetFlagGatedElementsVisible
+#define data_ov077_020ca0fc data_ov077_020ca11c
+#define func_02029f48 func_02029f5c
+#define func_ov039_020bc1bc func_ov039_020bc1dc
+#define func_ov077_020c4bb0 SetModeTwoAndRefresh
+#define func_ov077_020c4be0 UpdateItemScreenDisplay
+#define func_ov077_020c58e0 ShowSlotHeaderMessage
+#define func_ov077_020c8bd4 func_ov077_020c8bf4
+#include "src/ov077/unclassified_helpers/OpenHelpMessageOrActivate_020c4b50.c"

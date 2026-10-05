@@ -1,35 +1,7 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-typedef struct Matrix33 {
-    fx32 m[3][3];
-} Matrix33;
-
-typedef struct SceneNode {
-    u16 flags;
-    u8 pad_02[0x7e];
-    Matrix33 rotation;
-} SceneNode;
-
-extern const s16 data_02053580[];
-extern void MTX_Identity33_(Matrix33 *mtx);
-extern void MTX_RotX33_(Matrix33 *mtx, fx32 sinValue, fx32 cosValue);
-extern void MTX_RotY33_(Matrix33 *mtx, fx32 sinValue, fx32 cosValue);
-extern void MTX_Concat33(const Matrix33 *a, const Matrix33 *b, Matrix33 *ab);
-
-void SetNodeRotationXY(SceneNode *node, u32 axes, int angleY, int angleX)
-{
-    Matrix33 rotateX;
-    Matrix33 rotateY;
-
-    MTX_Identity33_(&rotateX);
-    MTX_Identity33_(&rotateY);
-    if (axes & 1) {
-        MTX_RotX33_(&rotateX, data_02053580[angleX >> 4], data_02053580[(0x400 - (angleX >> 4)) & 0xfff]);
-    }
-    if (axes & 2) {
-        MTX_RotY33_(&rotateY, data_02053580[angleY >> 4], data_02053580[(0x400 - (angleY >> 4)) & 0xfff]);
-    }
-    MTX_Concat33(&rotateX, &rotateY, &node->rotation);
-    node->flags &= 0xffdf;
-}
+#define MTX_Concat33_01ff9270 MTX_Concat33
+#define MTX_RotX33_01ff9220 MTX_RotX33_
+#define MTX_RotY33_01ff923c MTX_RotY33_
+#define SetNodeRotationXY_0208f34c SetNodeRotationXY
+#define data_0205356c data_02053580
+#define func_01ff90ec MTX_Identity33_
+#include "src/ov001/shared_engine/SetNodeRotationXY_0208f34c.c"

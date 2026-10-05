@@ -1,38 +1,9 @@
-﻿#include "nitro/types.h"
-
-typedef struct CameraManager {
-    u8 pad_00[0x80];
-    int type;
-    u8 pad_84[0x138 - 0x84];
-    void *controller;
-    u8 controllerData[4];
-} CameraManager;
-
-extern CameraManager *data_ov046_020c3500;
-extern int data_ov046_020c33c0[];
-extern void func_02029fac(int layer, int id);
-extern void func_02029f8c(int layer, int id);
-extern void *func_ov047_020c70f8(void *data, CameraManager *camera, void *view);
-extern void *InitCameraTarget(void *data, CameraManager *camera, void *view);
-extern void *InitCameraPathState(void *data, CameraManager *camera, void *view);
-
-void Camera_SetViewMode(int mode, void *view)
-{
-    func_02029fac(0, data_ov046_020c33c0[data_ov046_020c3500->type]);
-    func_02029f8c(0, data_ov046_020c33c0[mode]);
-    data_ov046_020c3500->type = mode;
-    switch (mode) {
-    case 0:
-        data_ov046_020c3500->controller = func_ov047_020c70f8(data_ov046_020c3500->controllerData, data_ov046_020c3500, view);
-        break;
-    case 1:
-        data_ov046_020c3500->controller = InitCameraTarget(data_ov046_020c3500->controllerData, data_ov046_020c3500, view);
-        break;
-    case 2:
-        break;
-    case 3:
-        data_ov046_020c3500->controller = InitCameraPathState(data_ov046_020c3500->controllerData, data_ov046_020c3500, view);
-        break;
-    }
-}
-
+#define Camera_SetViewMode_020c1038 Camera_SetViewMode
+#define data_ov046_020c33a0 data_ov046_020c33c0
+#define func_02029f78 func_02029f8c
+#define func_02029f98 func_02029fac
+#define func_ov047_020c70d8 func_ov047_020c70f8
+#define func_ov048_020c3858 InitCameraTarget
+#define func_ov050_020c3ba4 InitCameraPathState
+#define g_cameraManager_020c34e0 data_ov046_020c3500
+#include "src/ov046/shared_engine/Camera_SetViewMode_020c1038.c"

@@ -1,31 +1,5 @@
-#include "nitro/types.h"
-
-typedef struct PanelContext {
-    s8 screenMode;
-} PanelContext;
-
-extern PanelContext *data_ov015_0207e960;
-extern void AnimateSubBg1Screen(void);
-extern void func_ov015_0206fcd8(void);
-extern void func_ov015_0206fe44(void);
-
-void AnimatePanelBackground(void)
-{
-    switch (data_ov015_0207e960->screenMode) {
-    case 0:
-    case 1:
-    case 7:
-        AnimateSubBg1Screen();
-        break;
-    case 2:
-    case 3:
-    case 6:
-        func_ov015_0206fcd8();
-        break;
-    case 5:
-        func_ov015_0206fe44();
-        break;
-    case 4:
-        break;
-    }
-}
+#define AnimateBg1CenterTiles_0206fcd8 func_ov015_0206fcd8
+#define AnimateBg1EdgeBandTiles_0206fe44 func_ov015_0206fe44
+#define AnimatePanelBackground_0206fb14 AnimatePanelBackground
+#define func_ov015_0206fb6c AnimateSubBg1Screen
+#include "src/ov015/ui/AnimatePanelBackground_0206fb14.c"

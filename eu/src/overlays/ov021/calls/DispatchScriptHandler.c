@@ -1,25 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct {
-    s16 tag;
-    s16 pad_02;
-    s32 value;
-} TaggedValue;
-
-typedef s32 (*ScriptHandler)(void *context, TaggedValue *operands);
-
-extern TaggedValue *ResolveTaggedValueRef(void *context, TaggedValue *value);
-extern ScriptHandler gScriptVectorHandlers[];
-
-s32 DispatchScriptHandler(void *context, TaggedValue *operands)
-{
-    TaggedValue *selector;
-    ScriptHandler handler;
-
-    selector = ResolveTaggedValueRef(context, operands);
-    handler = gScriptVectorHandlers[selector->value];
-    if (handler != NULL) {
-        handler(context, operands);
-    }
-    return 0;
-}
+#define DispatchScriptHandler_020b34b0 DispatchScriptHandler
+#define ResolveTaggedValueRef_020b0374 ResolveTaggedValueRef
+#define data_ov021_020b52b4 gScriptVectorHandlers
+#include "src/ov021/leaf_research/DispatchScriptHandler_020b34b0.c"

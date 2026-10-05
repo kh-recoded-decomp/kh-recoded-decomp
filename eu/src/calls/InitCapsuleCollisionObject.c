@@ -1,44 +1,7 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-typedef struct CollisionShape {
-    void *data;
-    s32 bounds[6];
-    s32 kind;
-} CollisionShape;
-
-typedef struct CollisionObject {
-    u8 pad_00[0x24];
-    CollisionShape shape;
-    u8 pad_44[0x44];
-} CollisionObject;
-
-extern const VecFx32 data_0205344c;
-extern BOOL InitCollisionObject(CollisionObject *object, u16 groupMask, s32 ownerId);
-extern void *NNSi_FndAllocFromDefaultHeap(u32 size);
-extern void VEC_Subtract(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
-extern fx32 func_01ffaff4(const VecFx32 *src, VecFx32 *dst);
-extern CollisionShape InitCapsuleShape(void *storage, const VecFx32 *start, const VecFx32 *end, const VecFx32 *axis, fx32 length, fx32 radius);
-
-BOOL InitCapsuleCollisionObject(CollisionObject *object, u16 groupMask, s32 ownerId, fx32 radius, fx32 height) {
-    VecFx32 top;
-    VecFx32 offset;
-    VecFx32 axis;
-    VecFx32 delta;
-    CollisionShape shape;
-    void *storage;
-    fx32 length;
-
-    InitCollisionObject(object, groupMask, ownerId);
-    offset.x = 0;
-    offset.y = height;
-    offset.z = 0;
-    top = offset;
-    storage = NNSi_FndAllocFromDefaultHeap(0x2c);
-    VEC_Subtract(&top, &data_0205344c, &delta);
-    axis = delta;
-    length = func_01ffaff4(&axis, &axis);
-    shape = InitCapsuleShape(storage, &data_0205344c, &top, &axis, length, radius);
-    object->shape = shape;
-    return TRUE;
-}
+#define InitCapsuleCollisionObject_02033d54 InitCapsuleCollisionObject
+#define InitCollisionObject_02033c7c InitCollisionObject
+#define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
+#define VEC_Subtract_01ff9e3c VEC_Subtract
+#define data_02053438 data_0205344c
+#define func_0203ae34 InitCapsuleShape
+#include "src/arm9/spatial_queries/InitCapsuleCollisionObject_02033d54.c"

@@ -1,9 +1,3 @@
-extern void DispMode_LookupWordAndDispatch(void *ptr);
-extern char data_02055698;
-
-void Bg_SetMainBg3TextControl(int arg0, int arg1, int arg2, int arg3) {
-    volatile unsigned short *reg_bg3cnt = (volatile unsigned short *)0x0400000e;
-
-    DispMode_LookupWordAndDispatch(&data_02055698);
-    *reg_bg3cnt = (*reg_bg3cnt & 0x43) | (arg0 << 14) | (arg1 << 7) | (arg2 << 8) | (arg3 << 2);
-}
+#define Bg_SetMainBg3TextControl_0202b008 Bg_SetMainBg3TextControl
+#define data_02055684 data_02055698
+#include "src/arm9/shared_engine/Bg_SetMainBg3TextControl_0202b008.c"

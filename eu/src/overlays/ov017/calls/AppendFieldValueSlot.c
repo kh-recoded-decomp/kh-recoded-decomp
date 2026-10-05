@@ -1,12 +1,3 @@
-extern unsigned int func_ov017_020a502c();
-
-unsigned short AppendFieldValueSlot(int object)
-
-{
-  unsigned short index;
-  
-  index = *(unsigned short *)(object + 0x1ea);
-  *(unsigned short *)(object + 0x1ea) = index + 1;
-  func_ov017_020a502c(*(int *)(object + 0x1d4) + (unsigned int)index * 4);
-  return *(unsigned short *)(object + 0x1ea) + -1;
-}
+#define AppendFieldValueSlot_020a3f84 AppendFieldValueSlot
+#define func_ov017_020a500c func_ov017_020a502c
+#include "src/ov017/field_objects/AppendFieldValueSlot_020a3f84.c"

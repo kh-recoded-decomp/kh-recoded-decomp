@@ -1,20 +1,5 @@
-#include "nitro/types.h"
-
-typedef struct ScriptOperand {
-    s16 type;
-    s16 pad_02;
-    s32 value;
-} ScriptOperand;
-
-extern int ScriptVm_ReadOperandInt(void *script, ScriptOperand *operand);
-extern u32 GetBoundedEntryField(int index);
-extern void GrantRewardItem(u32 entry, int *first, int *second);
-
-int ScriptCmd_ApplyOperandPair(void *script, ScriptOperand *operands)
-{
-    int first = ScriptVm_ReadOperandInt(script, operands);
-    int second = ScriptVm_ReadOperandInt(script, operands + 1);
-
-    GrantRewardItem(GetBoundedEntryField(0), &first, &second);
-    return 1;
-}
+#define GetBoundedEntryField_0206db5c GetBoundedEntryField
+#define ScriptCmd_ApplyOperandPair_020a0844 ScriptCmd_ApplyOperandPair
+#define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
+#define func_ov040_020be02c GrantRewardItem
+#include "src/ov007/shared_engine/ScriptCmd_ApplyOperandPair_020a0844.c"

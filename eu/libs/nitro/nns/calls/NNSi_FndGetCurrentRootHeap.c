@@ -1,8 +1,3 @@
-typedef unsigned int u32;
-
-extern u32 *gTaskManager[];
-
-void *NNSi_FndGetCurrentRootHeap(void)
-{
-    return (void *)gTaskManager[1][8];
-}
+#define NNSi_FndGetCurrentRootHeap_0202a764 NNSi_FndGetCurrentRootHeap
+#define data_020603c8 gTaskManager
+#include "src/arm9/library_nitro_nns/NNSi_FndGetCurrentRootHeap_0202a764.c"

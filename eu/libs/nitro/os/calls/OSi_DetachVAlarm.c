@@ -1,26 +1,3 @@
-#include "libs/nitro/os/os_valarm_internal.h"
-
-void OSi_DetachVAlarm(OSVAlarm *alarm)
-{
-    OSVAlarm *prev;
-    OSVAlarm *next;
-
-    if (!alarm) {
-        return;
-    }
-
-    prev = alarm->prev;
-    next = alarm->next;
-
-    if (next) {
-        next->prev = prev;
-    } else {
-        OSi_VAlarmState.tail = prev;
-    }
-
-    if (prev) {
-        prev->next = next;
-    } else {
-        OSi_VAlarmState.head = next;
-    }
-}
+#define OSi_DetachVAlarm_0200461c OSi_DetachVAlarm
+#define data_02056eb0 OSi_VAlarmState
+#include "src/arm9/library_nitro_os/OSi_DetachVAlarm_0200461c.c"

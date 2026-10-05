@@ -1,18 +1,5 @@
-extern int data_ov039_020bea20;
-extern void *NNS_FndGetNextListObject(void *list, void *obj);
-extern void RemoveListEntry(void *entry);
-
-void DestroyAllListEntries(void)
-{
-    void *entry = NNS_FndGetNextListObject((void *)(data_ov039_020bea20 + 0xca74), 0);
-    void *next;
-
-    if (entry == 0) {
-        return;
-    }
-    do {
-        next = NNS_FndGetNextListObject((void *)(data_ov039_020bea20 + 0xca74), entry);
-        RemoveListEntry(entry);
-        entry = next;
-    } while (next != 0);
-}
+#define DestroyAllListEntries_020bc788 DestroyAllListEntries
+#define NNS_FndGetNextListObject_02012a38 NNS_FndGetNextListObject
+#define data_ov039_020bea00 data_ov039_020bea20
+#define func_ov039_020bc70c RemoveListEntry
+#include "src/ov039/reviewed_helpers/DestroyAllListEntries_020bc788.c"

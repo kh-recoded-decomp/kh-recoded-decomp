@@ -1,15 +1,4 @@
-#include "nitro/types.h"
-
-extern u32 SetPanelTransitionMode();
-extern u32 WH_SetError();
-
-void HandlePanelPromptSelection(int context)
-
-{
-  if (*(u16 *)(context + 2) != 0) {
-    WH_SetError();
-    return;
-  }
-  SetPanelTransitionMode(1);
-  return;
-}
+#define HandlePanelPromptSelection_02073d44 HandlePanelPromptSelection
+#define func_ov015_020737c4 SetPanelTransitionMode
+#define func_ov015_020737d4 WH_SetError
+#include "src/ov015/reviewed_helpers/HandlePanelPromptSelection_02073d44.c"

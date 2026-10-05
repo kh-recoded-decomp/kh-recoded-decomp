@@ -1,15 +1,2 @@
-#include "nitro/types.h"
-
-typedef struct {
-    int header;
-    u32 current : 4;
-    u32 target : 4;
-} NibblePair;
-
-BOOL HasPendingNibbleChange(NibblePair *pair)
-{
-    if (pair->current != pair->target) {
-        return TRUE;
-    }
-    return FALSE;
-}
+#define HasPendingNibbleChange_020bbf30 HasPendingNibbleChange
+#include "src/ov032/unclassified_helpers/HasPendingNibbleChange_020bbf30.c"

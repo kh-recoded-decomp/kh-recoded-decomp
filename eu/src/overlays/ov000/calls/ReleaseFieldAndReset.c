@@ -1,16 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad_00[0x6678];
-    u32 field;
-} Panel;
-
-extern void PXI_Init_0202a64c(u32 field);
-extern void SetupDisplayBanksAndLayers(Panel *panel);
-
-void ReleaseFieldAndReset(Panel *panel)
-{
-    PXI_Init_0202a64c(panel->field);
-    panel->field = 0;
-    SetupDisplayBanksAndLayers(panel);
-}
+#define PXI_Init_0202a638 PXI_Init_0202a64c
+#define ReleaseFieldAndReset_02062bdc ReleaseFieldAndReset
+#define func_ov000_0206141c SetupDisplayBanksAndLayers
+#include "src/ov000/panel_state/ReleaseFieldAndReset_02062bdc.c"

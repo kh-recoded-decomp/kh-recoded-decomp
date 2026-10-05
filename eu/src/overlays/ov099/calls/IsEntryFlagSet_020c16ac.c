@@ -1,13 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u32 entryFlags[3][64];
-} SceneWork;
-
-extern SceneWork *data_ov099_020c2900;
-extern int GetPackedBitMask(u32 *bitWords, int bitIndex);
-
-BOOL IsEntryFlagSet_020c16ac(int flagSet, int entryIndex)
-{
-    return GetPackedBitMask(data_ov099_020c2900->entryFlags[flagSet], entryIndex) != 0;
-}
+#define IsEntryFlagSet_020c168c IsEntryFlagSet_020c16ac
+#define g_sceneWork_020c28e0 data_ov099_020c2900
+#include "src/ov099/unclassified_helpers/IsEntryFlagSet_020c168c.c"

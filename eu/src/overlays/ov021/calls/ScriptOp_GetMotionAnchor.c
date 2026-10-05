@@ -1,30 +1,4 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-typedef struct {
-    u8 pad_00[0x34];
-    VecFx32 vector;
-} ScriptContext;
-
-typedef struct {
-    u32 unk_00;
-    VecFx32 anchor;
-} MotionRecord;
-
-typedef struct {
-    u8 pad_00[0x16];
-    u16 motionId;
-} ScriptOwner;
-
-extern ScriptOwner *data_ov021_020b56c4;
-
-extern MotionRecord *GetStageMotionRecord(u32 id);
-
-int ScriptOp_GetMotionAnchor(ScriptContext *context) {
-    MotionRecord *record = GetStageMotionRecord(data_ov021_020b56c4->motionId);
-
-    if (record != NULL) {
-        context->vector = record->anchor;
-    }
-    return 0;
-}
+#define GetStageMotionRecord_0209c18c GetStageMotionRecord
+#define ScriptOp_GetMotionAnchor_020b15c0 ScriptOp_GetMotionAnchor
+#define data_ov021_020b56a4 data_ov021_020b56c4
+#include "src/ov021/script_ops/ScriptOp_GetMotionAnchor_020b15c0.c"

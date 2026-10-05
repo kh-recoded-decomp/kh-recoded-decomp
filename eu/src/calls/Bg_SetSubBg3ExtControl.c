@@ -1,12 +1,4 @@
-extern void SetSubEngineGraphicsModeFromTable(void *ptr);
-extern char data_02055638;
-extern int sBGAreaOver;
-
-void Bg_SetSubBg3ExtControl(int arg0, int arg1, int arg2) {
-    volatile unsigned short *reg_bg3cnt_b = (volatile unsigned short *)0x0400100e;
-    int arg3;
-
-    SetSubEngineGraphicsModeFromTable(&data_02055638);
-    arg3 = sBGAreaOver;
-    *reg_bg3cnt_b = (*reg_bg3cnt_b & 0x43) | (arg0 << 14) | (arg2 << 2) | (arg1 << 8) | (arg3 << 13);
-}
+#define Bg_SetSubBg3ExtControl_0202b2d0 Bg_SetSubBg3ExtControl
+#define data_02055624 data_02055638
+#define data_0205a920 sBGAreaOver
+#include "src/arm9/shared_engine/Bg_SetSubBg3ExtControl_0202b2d0.c"

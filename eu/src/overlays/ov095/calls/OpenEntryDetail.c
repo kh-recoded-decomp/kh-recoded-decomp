@@ -1,24 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad_00000[0x11108];
-    int detailOpen;
-    u8 pad_1110C[0x14];
-    int hasDetail;
-} EntryViewer;
-
-extern void func_ov095_020bfa38(int mode, EntryViewer *viewer);
-extern BOOL PlaySoundEffect(int seqArcNo, int index);
-
-void OpenEntryDetail(EntryViewer *viewer)
-{
-    if (viewer->detailOpen != FALSE) {
-        return;
-    }
-    if (viewer->hasDetail == 0) {
-        return;
-    }
-    viewer->detailOpen = TRUE;
-    func_ov095_020bfa38(1, viewer);
-    PlaySoundEffect(0, 2);
-}
+#define OpenEntryDetail_020bf044 OpenEntryDetail
+#define PlaySoundEffect_0204d924 PlaySoundEffect
+#define func_ov095_020bfa18 func_ov095_020bfa38
+#include "src/ov095/unclassified_helpers/OpenEntryDetail_020bf044.c"

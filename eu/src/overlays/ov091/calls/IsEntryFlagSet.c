@@ -1,14 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad_00[0xcbc0];
-    u32 entryFlags[1];
-} MenuScene;
-
-extern MenuScene *data_ov091_020c3740;
-extern u32 GetPackedBitMask(u32 *bitWords, int bitIndex);
-
-BOOL IsEntryFlagSet(int flagSet, int entryIndex)
-{
-    return GetPackedBitMask(&data_ov091_020c3740->entryFlags[flagSet], entryIndex) != 0;
-}
+#define IsEntryFlagSet_020c16e8 IsEntryFlagSet
+#define g_menuScene_020c3720 data_ov091_020c3740
+#include "src/ov091/panel_state/IsEntryFlagSet_020c16e8.c"

@@ -1,14 +1,4 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-extern fx32 VEC_DotProduct(const VecFx32 *a, const VecFx32 *b);
-extern void NegateVecFx32(VecFx32 *vec);
-
-fx32 FlipVectorIfDotNegative(VecFx32 *a, const VecFx32 *b)
-{
-    fx32 dot = VEC_DotProduct(a, b);
-    if (dot < 0) {
-        NegateVecFx32(a);
-    }
-    return dot;
-}
+#define FlipVectorIfDotNegative_0204abd0 FlipVectorIfDotNegative
+#define NegateVecFx32_0204aa40 NegateVecFx32
+#define VEC_DotProduct_01ff9e6c VEC_DotProduct
+#include "src/arm9/math/FlipVectorIfDotNegative_0204abd0.c"

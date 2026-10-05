@@ -8,6 +8,7 @@ reliably do it through `cmd /c` when paths contain spaces.
 """
 import json
 import os
+import re
 import subprocess
 import sys
 import time
@@ -42,6 +43,8 @@ def main():
             opt_mode = a[len("--mode="):]
         elif a.startswith("--cc="):
             opt_cc = a[len("--cc="):]
+        elif a.startswith("--unit="):
+            rel = a[len("--unit="):]
 
     # Without explicit options (a direct call) fall back to the sidecar maps
     # that gen_delinks.py / configure.py produce.
@@ -62,19 +65,30 @@ def main():
         mwcc_bin = MWCC_DIR / opt_cc / "mwccarm.exe"
 
     flags = list(CFLAGS)
+    # Wrappers around shared US sources build from the repo root with its headers.
+    shared_root = ROOT.parent
+    shared_include = re.search(r'#include "(src/[^"]+\.c)"', src_path.read_text(encoding="utf-8", errors="replace"))
+    is_wrapper = bool(shared_include) and (shared_root / shared_include.group(1)).is_file()
+    if is_wrapper:
+        flags.extend(["-i", str(shared_root), "-i", str(shared_root / "include")])
     if opt_cc == "2.0/sp2p3":
         flags.extend(["-fp", "soft", "-ipa", "file"])
     if src_path.suffix.lower() in (".cpp", ".cp", ".cc"):
         flags[flags.index("c99")] = "c++"
 
     env = dict(os.environ, LM_LICENSE_FILE=str(LICENSE))
-    cmd = [str(mwcc_bin), "-c", *flags, *extra, "-o", str(out_path), str(src_path)]
+    if is_wrapper:
+        out_arg, src_arg = str(out_path.resolve()), str(src_path.resolve())
+    else:
+        out_arg, src_arg = str(out_path), str(src_path)
+    cmd = [str(mwcc_bin), "-c", *flags, *extra, "-o", out_arg, src_arg]
 
     # The FLEXlm license check fails intermittently under a parallel build: an
     # arbitrary translation unit dies and the same command succeeds on its own.
     # A real diagnostic fails every attempt and is reported as usual.
     for attempt in range(8):
-        r = subprocess.run(cmd, env=env, capture_output=True, text=True)
+        r = subprocess.run(cmd, env=env, capture_output=True, text=True,
+                           cwd=str(shared_root) if is_wrapper else None)
         if r.returncode == 0:
             sys.stdout.write(r.stdout)
             sys.stderr.write(r.stderr)

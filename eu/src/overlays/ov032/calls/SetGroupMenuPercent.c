@@ -1,18 +1,4 @@
-#include "nitro/types.h"
-
-extern int data_ov032_020c0088[];
-extern void SetGroupMenuProgress(int percent);
-
-void SetGroupMenuPercent(int percent)
-{
-    int menu = data_ov032_020c0088[1];
-    if (percent > 100) {
-        percent = 100;
-    } else if (percent < 0) {
-        percent = 0;
-    }
-    if (percent != *(int *)(menu + 0x18)) {
-        SetGroupMenuProgress(percent);
-        *(int *)(menu + 0x18) = percent;
-    }
-}
+#define SetGroupMenuPercent_020bbb7c SetGroupMenuPercent
+#define SetGroupMenuProgress_020bb9b8 SetGroupMenuProgress
+#define contextData_020c0068 data_ov032_020c0088
+#include "src/ov032/object_group/SetGroupMenuPercent_020bbb7c.c"

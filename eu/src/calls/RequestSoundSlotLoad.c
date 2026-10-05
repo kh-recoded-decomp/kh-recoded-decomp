@@ -1,29 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct SoundLoadSlot {
-    s32 handle;
-    u16 fileId;
-    u8 state;
-    u8 pad_07;
-} SoundLoadSlot;
-
-typedef struct SoundWork {
-    u8 pad_00[0xb44c8];
-    SoundLoadSlot slots[1];
-} SoundWork;
-
-extern SoundWork *gSoundWork;
-extern s32 QueueTypedMessageWithHandle_0202cb38(u16 field1, u16 field2, s32 arg2);
-
-BOOL RequestSoundSlotLoad(int index, u32 fileId)
-{
-    SoundLoadSlot *slot = &gSoundWork->slots[index];
-
-    if (slot->state != 0) {
-        return FALSE;
-    }
-    slot->state = 1;
-    slot->handle = QueueTypedMessageWithHandle_0202cb38((u16)index, (u16)fileId, (s32)&slot->state);
-    slot->fileId = fileId;
-    return TRUE;
-}
+#define QueueTypedMessageWithHandle_0202cb24 QueueTypedMessageWithHandle_0202cb38
+#define RequestSoundSlotLoad_0204ddc4 RequestSoundSlotLoad
+#define g_soundWork_0206084c gSoundWork
+#include "src/arm9/audio/RequestSoundSlotLoad_0204ddc4.c"

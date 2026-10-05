@@ -1,21 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct MovieContext {
-    u8 pad_00[0x2c];
-    s16 baseLimit;
-} MovieContext;
-
-extern MovieContext *data_ov035_020bc500;
-
-int GetMovieCounterLimit(int which)
-{
-    switch (which) {
-    case 0:
-        return data_ov035_020bc500->baseLimit;
-    case 1:
-        return (data_ov035_020bc500->baseLimit * 130 + 50) / 100;
-    case 2:
-        return (data_ov035_020bc500->baseLimit * 115 + 50) / 100;
-    }
-    return -1;
-}
+#define GetMovieCounterLimit_020bafc4 GetMovieCounterLimit
+#define g_movieContext_020bc4e0 data_ov035_020bc500
+#include "src/ov035/unclassified_helpers/GetMovieCounterLimit_020bafc4.c"

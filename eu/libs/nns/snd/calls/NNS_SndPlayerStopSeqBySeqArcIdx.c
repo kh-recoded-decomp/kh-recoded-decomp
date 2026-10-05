@@ -1,19 +1,4 @@
-#include "libs/nns/snd/snd_internal.h"
-
-extern void NNSi_SndPlayerStopSeq(NNSSndSeqPlayer *sequencePlayer, int fadeFrames);
-
-void NNS_SndPlayerStopSeqBySeqArcIdx(int sequenceArchiveNo, int index, int fadeFrames)
-{
-    NNSSndSeqPlayer *sequencePlayer;
-    int i;
-
-    for (i = 0; i < NNS_SND_PLAYER_COUNT; i++) {
-        sequencePlayer = &sSndSeqPlayers[i];
-        if (sequencePlayer->status != NNS_SND_SEQ_PLAYER_STATUS_STOP &&
-            sequencePlayer->seqType == NNS_SND_PLAYER_SEQ_TYPE_SEQARC &&
-            sequencePlayer->seqNo == sequenceArchiveNo &&
-            sequencePlayer->seqArcIndex == index) {
-            NNSi_SndPlayerStopSeq(sequencePlayer, fadeFrames);
-        }
-    }
-}
+#define data_0205d8b8 sSndSeqPlayers
+#define func_0201d53c NNS_SndPlayerStopSeqBySeqArcIdx
+#define func_0201dbd0 NNSi_SndPlayerStopSeq
+#include "src/arm9/library_nns_snd/func_0201d53c.c"

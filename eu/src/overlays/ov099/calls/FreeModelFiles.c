@@ -1,16 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct {
-    void *modelData;
-    void *models[40];
-    void *sourceFile;
-} ModelViewer;
-
-extern void NNSi_FndFreeFromDefaultHeap(void *block);
-extern void ZeroHalfThenFree(void *file);
-
-void FreeModelFiles(ModelViewer *viewer)
-{
-    NNSi_FndFreeFromDefaultHeap(viewer->modelData);
-    ZeroHalfThenFree(viewer->sourceFile);
-}
+#define FreeModelFiles_020c1b08 FreeModelFiles
+#define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
+#define ZeroHalfThenFree_0202cd78 ZeroHalfThenFree
+#include "src/ov099/unclassified_helpers/FreeModelFiles_020c1b08.c"

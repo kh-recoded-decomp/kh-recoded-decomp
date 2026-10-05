@@ -1,38 +1,8 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad_00[0x2C];
-    s32 scroll;
-    s32 cursor;
-} ScrollPanel;
-
-typedef struct {
-    s32 selection;
-    u8 pad_0004[0xCACC - 4];
-    ScrollPanel panel;
-} Ov103State;
-
-extern int func_ov103_020c032c(Ov103State *state);
-extern BOOL ScrollListDown_020bfd60(int panelIndex, Ov103State *state);
-extern void func_ov103_020bf0c4(Ov103State *state);
-extern void func_ov103_020bf3bc(int which, Ov103State *state);
-extern void RefreshRowHighlights(Ov103State *state);
-extern void PlaySoundEffect(int soundId, int arg);
-
-void HandleListScrollUp(Ov103State *state)
-{
-    ScrollPanel *panel;
-
-    if (func_ov103_020c032c(state) != 3) {
-        return;
-    }
-    if (!ScrollListDown_020bfd60(0, state)) {
-        return;
-    }
-    panel = &state->panel;
-    state->selection = panel->scroll + panel->cursor;
-    func_ov103_020bf0c4(state);
-    func_ov103_020bf3bc(0, state);
-    RefreshRowHighlights(state);
-    PlaySoundEffect(0, 0);
-}
+#define HandleListScrollUp_020bec34 HandleListScrollUp
+#define PlaySoundEffect_0204d924 PlaySoundEffect
+#define RefreshRowHighlights_020bf92c RefreshRowHighlights
+#define func_ov103_020bf0a4 func_ov103_020bf0c4
+#define func_ov103_020bf39c func_ov103_020bf3bc
+#define func_ov103_020bfd40 ScrollListDown_020bfd60
+#define func_ov103_020c030c func_ov103_020c032c
+#include "src/ov103/panel_state/HandleListScrollUp_020bec34.c"

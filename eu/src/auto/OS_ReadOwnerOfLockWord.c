@@ -1,1 +1,1 @@
-unsigned short OS_ReadOwnerOfLockWord(unsigned short *p){ return p[2]; }
+#include "src/arm9/nitro_os/func_02002398.c"

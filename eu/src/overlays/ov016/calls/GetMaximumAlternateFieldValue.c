@@ -1,20 +1,3 @@
-extern unsigned int func_0202f4cc();
-
-int GetMaximumAlternateFieldValue(unsigned int object)
-
-{
-  int value;
-  unsigned int index;
-  int maximum;
-  
-  maximum = 0;
-  index = 0;
-  do {
-    value = func_0202f4cc(object,index & 0xffff);
-    if (value > maximum) {
-      maximum = value;
-    }
-    index = index + 1;
-  } while ((int)index < 5);
-  return maximum;
-}
+#define GetMaximumAlternateFieldValue_020a2788 GetMaximumAlternateFieldValue
+#define func_0202f4b8 func_0202f4cc
+#include "src/ov016/field_objects/GetMaximumAlternateFieldValue_020a2788.c"

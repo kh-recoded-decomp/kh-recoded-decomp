@@ -1,7 +1,2 @@
-struct IndexedRecord { char pad[0x7c]; int flags; char pad2[0x8c - 0x80]; };
-
-void IndexedRecord_ClearActive(struct IndexedRecord *recordBase, int recordIndex)
-{
-    if (recordIndex < 0) return;
-    recordBase[recordIndex].flags &= ~2;
-}
+#define func_0204f2e4 IndexedRecord_ClearActive
+#include "src/arm9/indexed_records/func_0204f2e4.c"

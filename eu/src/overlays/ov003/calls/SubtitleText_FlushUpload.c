@@ -1,17 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct SubtitleTextRenderer {
-    u8 pad_00[0x44];
-    BOOL uploadPending;
-} SubtitleTextRenderer;
-
-extern void Text_UploadTileBuffer(SubtitleTextRenderer *renderer);
-
-void SubtitleText_FlushUpload(SubtitleTextRenderer *renderer)
-{
-    if (!renderer->uploadPending) {
-        return;
-    }
-    Text_UploadTileBuffer(renderer);
-    renderer->uploadPending = FALSE;
-}
+#define SubtitleText_FlushUpload_0206507c SubtitleText_FlushUpload
+#define Text_UploadTileBuffer_02001520 Text_UploadTileBuffer
+#include "src/ov003/video_playback/SubtitleText_FlushUpload_0206507c.c"

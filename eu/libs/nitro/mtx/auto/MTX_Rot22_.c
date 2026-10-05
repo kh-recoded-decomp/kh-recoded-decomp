@@ -1,7 +1,2 @@
-void MTX_Rot22_(int *mtx, int sinv, int cosv)
-{
-    mtx[0] = cosv;
-    mtx[1] = sinv;
-    mtx[2] = -sinv;
-    mtx[3] = cosv;
-}
+#define MTX_Rot22_02005948 MTX_Rot22_
+#include "src/arm9/library_nitro_mtx/MTX_Rot22_02005948.c"

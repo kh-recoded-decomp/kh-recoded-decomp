@@ -1,17 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct SceneWork {
-    u8 unknown_00[6];
-    u16 flags;
-} SceneWork;
-
-typedef struct SceneGlobals {
-    void *unknown_00;
-    SceneWork *work;
-} SceneGlobals;
-
-extern SceneGlobals data_ov036_020c3940;
-
-void SetSceneFlag4000(void) {
-    data_ov036_020c3940.work->flags |= 0x4000;
-}
+#define SetSceneFlag4000_020bc3f8 SetSceneFlag4000
+#define data_ov036_020c3920 data_ov036_020c3940
+#include "src/ov036/unclassified_helpers/SetSceneFlag4000_020bc3f8.c"

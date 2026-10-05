@@ -1,8 +1,3 @@
-#include "nitro/types.h"
-
-extern s64 _ll_sdiv(s64 numerator, s64 denominator);
-
-s64 DivFx64Shifted(s64 numerator, s64 denominator)
-{
-    return _ll_sdiv(numerator << 16, denominator << 16);
-}
+#define DivFx64Shifted_020496b4 DivFx64Shifted
+#define func_02023ba4 _ll_sdiv
+#include "src/arm9/math/DivFx64Shifted_020496b4.c"

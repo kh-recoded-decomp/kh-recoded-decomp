@@ -1,42 +1,15 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad_000[0x138];
-    int defaultPage;
-    u8 pad_13c[0x148 - 0x13c];
-    int selectedRow;
-    u8 pad_14c[0x1dc - 0x14c];
-    void *listEntry;
-} Ov086Menu;
-
-extern Ov086Menu *data_ov086_020c3020;
-extern void SetSecondaryElementEnabled(BOOL enabled);
-extern u32 ReadGlobalPackedBits(u32 bitOffset, u32 bitCount);
-extern BOOL AcquireRecordManager(void);
-extern int AcquireRecordSlot(int slot, int param);
-extern void SetupRecordSubScreenLayers(void);
-extern void InitRecordTileTable(Ov086Menu *menu);
-extern void LoadRecordSubScreenGraphics(Ov086Menu *menu);
-extern void InitRecordPanelDigits(Ov086Menu *menu);
-extern void InitRecordPanelText(Ov086Menu *menu);
-extern void func_ov086_020c082c(Ov086Menu *menu);
-extern void *AllocateListEntry(void *callback);
-extern BOOL UpdateRecordScrollOffset(void);
-
-BOOL InitRecordMenu(Ov086Menu *menu)
-{
-    SetSecondaryElementEnabled(FALSE);
-    menu->defaultPage = ReadGlobalPackedBits(0x330b, 10) / 100 - 1;
-    AcquireRecordManager();
-    AcquireRecordSlot(0, 0);
-    data_ov086_020c3020 = menu;
-    menu->selectedRow = -1;
-    SetupRecordSubScreenLayers();
-    InitRecordTileTable(menu);
-    LoadRecordSubScreenGraphics(menu);
-    InitRecordPanelDigits(menu);
-    InitRecordPanelText(menu);
-    func_ov086_020c082c(menu);
-    menu->listEntry = AllocateListEntry(UpdateRecordScrollOffset);
-    return TRUE;
-}
+#define AcquireRecordManager_02051c80 AcquireRecordManager
+#define AcquireRecordSlot_02051d3c AcquireRecordSlot
+#define AllocateListEntry_020bc6b0 AllocateListEntry
+#define InitRecordMenu_020c1da8 InitRecordMenu
+#define ReadGlobalPackedBits_02027348 ReadGlobalPackedBits
+#define SetSecondaryElementEnabled_020bc084 SetSecondaryElementEnabled
+#define data_ov086_020c3000 data_ov086_020c3020
+#define func_ov086_020beaa0 UpdateRecordScrollOffset
+#define func_ov086_020c080c func_ov086_020c082c
+#define func_ov086_020c0e4c SetupRecordSubScreenLayers
+#define func_ov086_020c0f08 LoadRecordSubScreenGraphics
+#define func_ov086_020c1024 InitRecordTileTable
+#define func_ov086_020c1078 InitRecordPanelText
+#define func_ov086_020c1ba8 InitRecordPanelDigits
+#include "src/ov086/panel_state/InitRecordMenu_020c1da8.c"

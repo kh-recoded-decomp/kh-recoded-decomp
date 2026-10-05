@@ -1,16 +1,7 @@
-extern int ScriptVm_ReadOperandInt(void *a);
-extern int IsCachedSeqPlaying(int x);
-extern void ScriptCmd_SetElemField(void *a, int b);
-extern void SetSelectionIfChanged(int x);
-extern unsigned char gScriptState;
-
-int func_020266d0(void *obj, int arg1) {
-    int r4 = ScriptVm_ReadOperandInt(obj);
-    if (IsCachedSeqPlaying(r4) != 0) {
-        ScriptCmd_SetElemField(obj, r4);
-        return 0;
-    }
-    gScriptState = r4;
-    SetSelectionIfChanged(r4 & 0xff);
-    return 1;
-}
+#define data_02055e00 gScriptState
+#define func_02025de4 ScriptVm_ReadOperandInt
+#define func_02025e18 ScriptCmd_SetElemField
+#define func_020266bc func_020266d0
+#define func_0204d73c SetSelectionIfChanged
+#define func_0204da48 IsCachedSeqPlaying
+#include "src/arm9/core_small/func_020266bc.c"

@@ -1,8 +1,4 @@
-extern void *data_ov000_02063a04;
-extern int func_ov039_020bbb8c(void *world);
-
-int NotifyOv039OfWorld(void)
-{
-    func_ov039_020bbb8c(data_ov000_02063a04);
-    return 0;
-}
+#define NotifyOv039OfWorld_02063614 NotifyOv039OfWorld
+#define data_02063a04 data_ov000_02063a04
+#define func_ov039_020bbb6c func_ov039_020bbb8c
+#include "src/ov000/shared_engine/NotifyOv039OfWorld_02063614.c"

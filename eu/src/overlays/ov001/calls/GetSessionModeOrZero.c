@@ -1,12 +1,3 @@
-#include "nitro/types.h"
-
-extern BOOL func_ov001_02063a24(void);
-extern s32 func_ov001_02063a38(void);
-
-s32 GetSessionModeOrZero(void)
-{
-    if (func_ov001_02063a24()) {
-        return func_ov001_02063a38();
-    }
-    return 0;
-}
+#define GetSessionModeOrZero_02098714 GetSessionModeOrZero
+#define Session_Exists_02063a24 func_ov001_02063a24
+#include "src/ov001/shared_engine/GetSessionModeOrZero_02098714.c"

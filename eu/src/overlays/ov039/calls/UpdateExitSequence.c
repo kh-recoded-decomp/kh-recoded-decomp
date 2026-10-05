@@ -1,48 +1,10 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u32 flag0 : 1;
-    u32 flag1 : 1;
-    u32 exitRequested : 1;
-} ExitFlags;
-
-extern int data_ov039_020bea20;
-extern void func_ov039_020bcf40(int arg0);
-extern void func_ov039_020bd074(int arg0);
-extern void func_0204d808(int new_value);
-extern BOOL IsSoundStreamActive(int handleIndex);
-extern BOOL IsCachedSeqPlaying(void);
-extern void SetCardThreadStartTick(void);
-extern void RuntimeState_SetMode(int phase);
-
-void UpdateExitSequence(void)
-{
-    int base = data_ov039_020bea20;
-
-    func_ov039_020bcf40(*(int *)(base + 0xc998));
-    func_ov039_020bd074(*(int *)(base + 0xc99c));
-    if (!((ExitFlags *)(base + 0xc9e8))->exitRequested) {
-        return;
-    }
-    if (*(int *)(base + 0xca34) != 0) {
-        if (*(int *)(base + 0xca38) == 0) {
-            func_0204d808(5);
-            *(int *)(base + 0xca38) = 1;
-        }
-        if (IsSoundStreamActive(1)) {
-            return;
-        }
-        if (IsCachedSeqPlaying()) {
-            return;
-        }
-        RuntimeState_SetMode(9);
-    } else if (*(int *)(base + 0xc994) == 3 && *(int *)(base + 0xca80) == 1) {
-        if (IsSoundStreamActive(1)) {
-            return;
-        }
-        SetCardThreadStartTick();
-        RuntimeState_SetMode(9);
-    } else {
-        RuntimeState_SetMode(9);
-    }
-}
+#define IsCachedSeqPlaying_0204da48 IsCachedSeqPlaying
+#define IsSoundStreamActive_0204ded4 IsSoundStreamActive
+#define SetCardThreadStartTick_02027258 SetCardThreadStartTick
+#define UpdateExitSequence_020bb33c UpdateExitSequence
+#define data_ov039_020bea00 data_ov039_020bea20
+#define func_0204d7f4 func_0204d808
+#define func_ov039_020baae0 RuntimeState_SetMode
+#define func_ov039_020bcf20 func_ov039_020bcf40
+#define func_ov039_020bd054 func_ov039_020bd074
+#include "src/ov039/event_state/UpdateExitSequence_020bb33c.c"

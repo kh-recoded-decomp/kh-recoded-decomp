@@ -1,25 +1,6 @@
-#include "nitro/types.h"
-
-typedef struct SlotMenu {
-    u8 pad_00000[0x4a06c];
-    BOOL tutorialFlagPending;
-} SlotMenu;
-
-extern void func_ov076_020c4ec8(SlotMenu *menu);
-extern BOOL IsGlobalPackedBitSet(int bitIndex);
-extern BOOL SlotMenu_HasFullyRankedSlot(SlotMenu *menu);
-extern void SlotMenu_BuildSlotMasks(SlotMenu *menu, int markMode, BOOL markFilledPairs);
-
-void SlotMenu_BeginSlotSelection(SlotMenu *menu)
-{
-    BOOL markFilledPairs;
-
-    func_ov076_020c4ec8(menu);
-    if (!IsGlobalPackedBitSet(0xf78) && SlotMenu_HasFullyRankedSlot(menu)) {
-        markFilledPairs = TRUE;
-    } else {
-        markFilledPairs = FALSE;
-    }
-    SlotMenu_BuildSlotMasks(menu, 0, markFilledPairs);
-    menu->tutorialFlagPending = TRUE;
-}
+#define IsGlobalPackedBitSet_02027304 IsGlobalPackedBitSet
+#define SlotMenu_BeginSlotSelection_020c4edc SlotMenu_BeginSlotSelection
+#define SlotMenu_ResetToBrowse_020c4ea8 func_ov076_020c4ec8
+#define func_ov076_020c4260 SlotMenu_BuildSlotMasks
+#define func_ov076_020c503c SlotMenu_HasFullyRankedSlot
+#include "src/ov076/unclassified_helpers/SlotMenu_BeginSlotSelection_020c4edc.c"

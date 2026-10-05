@@ -1,8 +1,4 @@
-extern void func_ov027_020b7ac0(int self);
-extern void UpdateTrackedPointerEntry(int self);
-struct pend { unsigned char b0 : 1; };
-void func_ov027_020b7df4(int param_1) {
-    func_ov027_020b7ac0(param_1);
-    if (((struct pend *)(param_1 + 0x2c))->b0)
-        UpdateTrackedPointerEntry(param_1);
-}
+#define func_020b7aa0 func_ov027_020b7ac0
+#define func_020b7c30 UpdateTrackedPointerEntry
+#define func_ov027_020b7dd4 func_ov027_020b7df4
+#include "src/ov027/reviewed_helpers/func_ov027_020b7dd4.c"

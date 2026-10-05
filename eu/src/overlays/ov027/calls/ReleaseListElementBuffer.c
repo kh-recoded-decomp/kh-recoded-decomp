@@ -1,20 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct ListElement {
-    u8 pad_00[0x24];
-    u8 active : 1;
-    u8 loaded : 1;
-    u8 pad_25[7];
-    void *buffer;
-} ListElement;
-
-extern void NNSi_FndFreeFromDefaultHeap(void *block);
-
-void ReleaseListElementBuffer(void *list, ListElement *element)
-{
-    element->loaded = 0;
-    if (element->buffer != NULL) {
-        NNSi_FndFreeFromDefaultHeap(element->buffer);
-        element->buffer = NULL;
-    }
-}
+#define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
+#define ReleaseListElementBuffer_020b808c ReleaseListElementBuffer
+#include "src/ov027/resource_container/ReleaseListElementBuffer_020b808c.c"

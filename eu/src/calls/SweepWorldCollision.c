@@ -1,12 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct CollisionWorld CollisionWorld;
-typedef struct CollisionResult CollisionResult;
-
-extern CollisionResult *CollWorld_FindHit(CollisionWorld *world, void *params);
-extern CollisionWorld *gActorRegistry;
-
-CollisionResult *SweepWorldCollision(void *params)
-{
-    return CollWorld_FindHit(gActorRegistry, params);
-}
+#define SweepWorldCollision_020364a0 SweepWorldCollision
+#define func_020351cc CollWorld_FindHit
+#define g_collisionWorld_0206083c gActorRegistry
+#include "src/arm9/spatial_queries/SweepWorldCollision_020364a0.c"

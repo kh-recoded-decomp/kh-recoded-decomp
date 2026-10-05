@@ -1,14 +1,6 @@
-#include "nitro/types.h"
-
-extern int ScriptVm_ReadOperandFx32(void *vm, void *cmd);
-extern s64 _ll_mul(s64 left, s64 right);
-extern s64 _ll_sdiv(s64 numerator, s64 denominator);
-extern void ResetCameraUp(int angle);
-
-BOOL ScriptCmd_SetAngleDegrees(void *vm, void *cmd)
-{
-    int degrees = ScriptVm_ReadOperandFx32(vm, cmd);
-
-    ResetCameraUp(_ll_sdiv(_ll_mul(degrees, 0x3244), 0xb4000));
-    return TRUE;
-}
+#define LongDivide_02023ba4 _ll_sdiv
+#define LongMultiply_02023d9c _ll_mul
+#define ScriptCmd_SetAngleDegrees_0206598c ScriptCmd_SetAngleDegrees
+#define ScriptVm_ReadOperandFx32_02025df8 ScriptVm_ReadOperandFx32
+#define func_ov043_020bca50 ResetCameraUp
+#include "src/ov001/shared_engine/ScriptCmd_SetAngleDegrees_0206598c.c"

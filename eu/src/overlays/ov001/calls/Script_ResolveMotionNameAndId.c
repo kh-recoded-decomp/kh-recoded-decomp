@@ -1,35 +1,6 @@
-#include "nitro/types.h"
-
-typedef struct ScriptOperand {
-    s16 type;
-    s16 pad_02;
-    s32 value;
-} ScriptOperand;
-
-extern int ScriptVm_ReadOperandInt(void *context, ScriptOperand *operand);
-extern ScriptOperand *ScriptVm_ResolveOperand(void *context, ScriptOperand *operand);
-extern char *ByteCode_ResolveOperand(void *context, ScriptOperand *operand);
-extern char *strcpy(char *dst, const char *src);
-
-void Script_ResolveMotionNameAndId(void *context, ScriptOperand *operands, int actorId,
-                                            int *outMotionId, char *outMotionName)
-{
-    ScriptOperand *first;
-    ScriptOperand *second;
-
-    ScriptVm_ReadOperandInt(context, &operands[1]);
-    ScriptVm_ReadOperandInt(context, &operands[4]);
-    first = ScriptVm_ResolveOperand(context, &operands[2]);
-    second = ScriptVm_ResolveOperand(context, &operands[3]);
-    if (first->type == 2) {
-        strcpy(outMotionName, ByteCode_ResolveOperand(context, first));
-        *outMotionId = ScriptVm_ReadOperandInt(context, second);
-        return;
-    }
-    if (second->type == 2) {
-        strcpy(outMotionName, ByteCode_ResolveOperand(context, second));
-        *outMotionId = ScriptVm_ReadOperandInt(context, first);
-        return;
-    }
-    *outMotionId = ScriptVm_ReadOperandInt(context, second);
-}
+#define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
+#define ScriptVm_ResolveOperand_02025d08 ScriptVm_ResolveOperand
+#define Script_ResolveMotionNameAndId_0208cc38 Script_ResolveMotionNameAndId
+#define func_02025dac ByteCode_ResolveOperand
+#define strcpy_02021e60 strcpy
+#include "src/ov001/scripted_actor_behavior/Script_ResolveMotionNameAndId_0208cc38.c"

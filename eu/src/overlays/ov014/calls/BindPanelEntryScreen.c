@@ -1,11 +1,5 @@
-#include "nitro/types.h"
-
-extern u32 data_ov014_0206f9a0;
-extern void *G2S_GetBG0ScrPtr(void);
-extern void CopyWidgetScreenRegion(u32 panel, u32 entryId, void *scrPtr);
-
-void BindPanelEntryScreen(u32 entryId)
-{
-    void *scrPtr = G2S_GetBG0ScrPtr();
-    CopyWidgetScreenRegion(data_ov014_0206f9a0 + 0xc990, entryId, scrPtr);
-}
+#define BindPanelEntryScreen_0206e900 BindPanelEntryScreen
+#define G2S_GetBG0ScrPtr_02006e14 G2S_GetBG0ScrPtr
+#define func_ov027_020b9b18 CopyWidgetScreenRegion
+#define g_panelState_0206f9a0 data_ov014_0206f9a0
+#include "src/ov014/panel_state/BindPanelEntryScreen_0206e900.c"

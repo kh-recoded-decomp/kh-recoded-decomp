@@ -1,7 +1,3 @@
-#include "nitro/types.h"
-
-extern void ReleaseResourceAndDetach(void *node);
-
-void ReleaseEmbeddedObject(u8 *owner) {
-    ReleaseResourceAndDetach(owner + 0x3a8);
-}
+#define ReleaseEmbeddedObject_020c277c ReleaseEmbeddedObject
+#define ReleaseResourceAndDetach_0202eee8 ReleaseResourceAndDetach
+#include "src/ov041/unclassified_helpers/ReleaseEmbeddedObject_020c277c.c"

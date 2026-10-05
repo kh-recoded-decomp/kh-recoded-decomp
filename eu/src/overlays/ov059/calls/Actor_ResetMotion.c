@@ -1,14 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct Actor Actor;
-
-extern void Actor_SetModelSetsVisible(Actor *actor, BOOL enable);
-extern void Actor_ClearMotionState(Actor *actor, int mode, BOOL flag);
-
-void Actor_ResetMotion(Actor *actor, int mode, BOOL flag)
-{
-    if (mode == 2 && flag != FALSE) {
-        Actor_SetModelSetsVisible(actor, FALSE);
-    }
-    Actor_ClearMotionState(actor, mode, flag);
-}
+#define Actor_ResetMotion_020c7960 Actor_ResetMotion
+#define func_ov059_020cccec Actor_ClearMotionState
+#define func_ov059_020cd078 Actor_SetModelSetsVisible
+#include "src/ov059/unclassified_helpers/Actor_ResetMotion_020c7960.c"

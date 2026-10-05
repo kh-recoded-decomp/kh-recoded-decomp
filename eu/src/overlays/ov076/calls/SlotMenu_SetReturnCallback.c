@@ -1,23 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct SlotMenu SlotMenu;
-
-typedef struct MenuCallback {
-    void (*handler)(SlotMenu *menu);
-    SlotMenu *context;
-} MenuCallback;
-
-struct SlotMenu {
-    u8 pad_00000[0x11c04];
-    MenuCallback onReturn;
-};
-
-extern void func_ov076_020c4ec8(SlotMenu *menu);
-
-void SlotMenu_SetReturnCallback(SlotMenu *menu)
-{
-    MenuCallback callback;
-    callback.handler = func_ov076_020c4ec8;
-    callback.context = menu;
-    menu->onReturn = callback;
-}
+#define SlotMenu_ResetToBrowse_020c4ea8 func_ov076_020c4ec8
+#define SlotMenu_SetReturnCallback_020c89c4 SlotMenu_SetReturnCallback
+#include "src/ov076/unclassified_helpers/SlotMenu_SetReturnCallback_020c89c4.c"

@@ -1,23 +1,2 @@
-#pragma thumb on
-
-#include "nitro/types.h"
-
-extern void Fx64_FormatText(s64 value, int precision, char *pIntText, char *pFracText);
-
-static inline void WidenText(u16 *pDst, const char *pSrc)
-{
-    while (*pSrc != 0) {
-        *pDst++ = *pSrc++;
-    }
-    *pDst = 0;
-}
-
-void Fx64_FormatWide(s64 value, int precision, u16 *pIntOut, u16 *pFracOut)
-{
-    char aIntText[26];
-    char aFracText[14];
-
-    Fx64_FormatText(value, precision, aIntText, aFracText);
-    WidenText(pIntOut, aIntText);
-    WidenText(pFracOut, aFracText);
-}
+#define Fx64_FormatWide_0202d86c Fx64_FormatWide
+#include "src/arm9/shared_engine/Fx64_FormatWide_0202d86c.c"

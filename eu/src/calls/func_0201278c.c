@@ -1,5 +1,2 @@
-extern int data_0205a2a8;
-
-void func_0201278c(void) {
-    *(int *)((char *)&data_0205a2a8 + 4) = 0;
-}
+#define func_02012778 func_0201278c
+#include "src/arm9/library_nitro_ctrdg/func_02012778.c"

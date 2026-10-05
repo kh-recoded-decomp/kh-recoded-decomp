@@ -1,12 +1,2 @@
-#include "nitro/types.h"
-
-s32 TaggedValueToInt(s16 *tagged)
-{
-    s32 result = 0;
-    if (*tagged == 0x10) {
-        result = *(s32 *)(tagged + 2) >> 0xc;
-    } else if (*tagged == 1) {
-        result = *(s32 *)(tagged + 2);
-    }
-    return result;
-}
+#define TaggedValueToInt_020b0398 TaggedValueToInt
+#include "src/ov021/leaf_research/TaggedValueToInt_020b0398.c"

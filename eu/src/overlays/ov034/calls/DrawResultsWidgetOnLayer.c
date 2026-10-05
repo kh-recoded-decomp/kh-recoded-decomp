@@ -1,19 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct ResultsWork {
-    u8 pad_0000[0x64d8];
-    u8 screenLayers[0x1c];
-} ResultsWork;
-
-typedef struct ResultsScreen {
-    void *params;
-    ResultsWork *work;
-} ResultsScreen;
-
-extern ResultsScreen data_ov034_020c0fa0;
-extern void func_ov027_020b9a94(void *layers, void *widget);
-
-void DrawResultsWidgetOnLayer(void *widget)
-{
-    func_ov027_020b9a94(data_ov034_020c0fa0.work->screenLayers, widget);
-}
+#define DrawResultsWidgetOnLayer_020bb04c DrawResultsWidgetOnLayer
+#define func_ov027_020b9a74 func_ov027_020b9a94
+#define g_resultsScreen_020c0f80 data_ov034_020c0fa0
+#include "src/ov034/reviewed_helpers/DrawResultsWidgetOnLayer_020bb04c.c"

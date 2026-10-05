@@ -1,12 +1,4 @@
-extern int func_ov027_020b79a0(int a);
-extern void MI_CpuFill8(void *dst, int val, int size);
-extern void NNS_G2dGetUnpackedScreenData(int a, int b);
-int func_ov027_020b8110(int a, int b, unsigned short c) {
-    int obj = func_ov027_020b79a0(a);
-    MI_CpuFill8((void *)obj, 0, 0x10);
-    *(unsigned short *)(obj) = c;
-    *(int *)(obj + 4) = b;
-    NNS_G2dGetUnpackedScreenData(b, obj + 8);
-    *(int *)(obj + 0xc) = 1;
-    return obj;
-}
+#define func_02014dd0 NNS_G2dGetUnpackedScreenData
+#define func_020b7980 func_ov027_020b79a0
+#define func_ov027_020b80f0 func_ov027_020b8110
+#include "src/ov027/record_management/func_ov027_020b80f0.c"

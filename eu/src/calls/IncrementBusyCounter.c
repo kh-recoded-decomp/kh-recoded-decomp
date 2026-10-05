@@ -1,14 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 flag;
-    u8 pad_01;
-    s16 count;
-} BusyCounterState;
-
-extern BusyCounterState gBusyCounterState;
-
-void IncrementBusyCounter(void)
-{
-    gBusyCounterState.count++;
-}
+#define IncrementBusyCounter_020254a8 IncrementBusyCounter
+#define g_busyCounter_0205fde8 gBusyCounterState
+#include "src/arm9/unclassified_helpers/IncrementBusyCounter_020254a8.c"

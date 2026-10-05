@@ -1,11 +1,2 @@
-#include "nitro/types.h"
-
-typedef struct MessageWindow {
-    u8 pad_0000[0x9c38];
-    s32 finished : 1;
-} MessageWindow;
-
-BOOL MessageWindow_IsFinished(MessageWindow *window)
-{
-    return window->finished;
-}
+#define MessageWindow_IsFinished_020cbb90 MessageWindow_IsFinished
+#include "src/ov076/unclassified_helpers/MessageWindow_IsFinished_020cbb90.c"

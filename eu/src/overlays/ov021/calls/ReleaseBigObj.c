@@ -1,12 +1,5 @@
-#include "nitro/types.h"
-
-extern void NNS_G3dRenderObjResetCallBack(void *renderObj);
-extern void ReleaseResourceAndDetach(u8 *object);
-extern void ReleaseSharedRecordState(void *state);
-
-void ReleaseBigObj(u8 *obj)
-{
-    NNS_G3dRenderObjResetCallBack(obj + 0x20);
-    ReleaseResourceAndDetach(obj);
-    ReleaseSharedRecordState(obj + 0x104);
-}
+#define ClearSbcCallback_020188b8 NNS_G3dRenderObjResetCallBack
+#define ReleaseBigObj_020ab7b0 ReleaseBigObj
+#define ReleaseResourceAndDetach_0202eee8 ReleaseResourceAndDetach
+#define func_ov021_020a9084 ReleaseSharedRecordState
+#include "src/ov021/unclassified_helpers/ReleaseBigObj_020ab7b0.c"

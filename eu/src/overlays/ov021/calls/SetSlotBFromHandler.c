@@ -1,13 +1,3 @@
-#include "nitro/types.h"
-
-extern u32 GetObjHandleLevel(void);
-
-typedef struct {
-    u8 pad_000[0x64];
-    u32 slotB;
-} ObjHandle;
-
-void SetSlotBFromHandler(ObjHandle *obj)
-{
-    obj->slotB = GetObjHandleLevel();
-}
+#define SetSlotBFromHandler_020aa4d8 SetSlotBFromHandler
+#define func_ov021_020aa6e4 GetObjHandleLevel
+#include "src/ov021/unclassified_helpers/SetSlotBFromHandler_020aa4d8.c"

@@ -1,40 +1,7 @@
-#include "nitro/types.h"
-
-typedef struct CommRequest {
-    s8 slotIndex;
-    s8 mode;
-    s16 paramA;
-    s16 paramB;
-} CommRequest;
-
-typedef struct CommState {
-    s16 mode;
-    s16 paramA;
-    s16 paramB;
-    u16 flags;
-    s8 slotIndex;
-    u8 pad_09[0x0b];
-    s32 task;
-    u8 pad_18[0x08];
-    s32 counter;
-} CommState;
-
-extern CommState *gContinueSceneState;
-extern CommState *NNSi_FndGetCurrentRootHeap(void);
-extern void func_ov037_020baaa0(void);
-extern s32 CreateOverlayTask(int mode);
-extern s32 RunCommStepMachine(void);
-
-void *BeginCommSession(CommRequest *request)
-{
-    gContinueSceneState = NNSi_FndGetCurrentRootHeap();
-    gContinueSceneState->mode = request->mode;
-    gContinueSceneState->paramA = request->paramA;
-    gContinueSceneState->paramB = request->paramB;
-    gContinueSceneState->flags = 3;
-    func_ov037_020baaa0();
-    gContinueSceneState->task = CreateOverlayTask(request->mode);
-    gContinueSceneState->slotIndex = request->slotIndex;
-    gContinueSceneState->counter = 0;
-    return RunCommStepMachine;
-}
+#define BeginCommSession_020ba3e0 BeginCommSession
+#define CreateOverlayTask_0206a6f4 CreateOverlayTask
+#define NNSi_FndGetCurrentRootHeap_0202a764 NNSi_FndGetCurrentRootHeap
+#define func_ov037_020ba45c RunCommStepMachine
+#define func_ov037_020baa80 func_ov037_020baaa0
+#define g_commState_020bb760 gContinueSceneState
+#include "src/ov037/unclassified_helpers/BeginCommSession_020ba3e0.c"

@@ -1,12 +1,4 @@
-#include "nitro/types.h"
-
-extern int data_ov001_0209f2e8;
-extern BOOL func_ov001_0209c5f0(u16 eventIndex, s16 filterId, int flags);
-
-BOOL StageEvents_CheckEvent(u16 eventIndex)
-{
-    if (data_ov001_0209f2e8 != -1) {
-        return func_ov001_0209c5f0(eventIndex, -1, 0);
-    }
-    return FALSE;
-}
+#define StageEvents_CheckEvent_02087824 StageEvents_CheckEvent
+#define func_ov001_0209c5c8 func_ov001_0209c5f0
+#define g_stageEventsState_0209f2c8 data_ov001_0209f2e8
+#include "src/ov001/shared_engine/StageEvents_CheckEvent_02087824.c"

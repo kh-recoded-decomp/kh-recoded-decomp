@@ -1,20 +1,4 @@
-#include "nitro/types.h"
-
-typedef struct RecordTable RecordTable;
-
-typedef struct {
-    u8 pad_00[0x18d98];
-    RecordTable *motionTable;
-} StageManager;
-
-extern StageManager *data_ov001_020a0528;
-
-extern void *func_ov001_0208f280(RecordTable *table, u32 id);
-
-void *GetStageMotionRecord(u32 id)
-{
-    if (data_ov001_020a0528 != 0) {
-        return func_ov001_0208f280(data_ov001_020a0528->motionTable, id);
-    }
-    return 0;
-}
+#define GetStageMotionRecord_0209c18c GetStageMotionRecord
+#define func_ov001_0208f258 func_ov001_0208f280
+#define g_stageManager_020a0508 data_ov001_020a0528
+#include "src/ov001/shared_engine/GetStageMotionRecord_0209c18c.c"

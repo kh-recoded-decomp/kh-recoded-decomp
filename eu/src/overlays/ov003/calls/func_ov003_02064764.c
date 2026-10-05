@@ -1,17 +1,3 @@
-extern int ByteCode_ResolveOperand(void *a, void *b);
-extern void MovieScene_StartStream(int x);
-
-int func_ov003_02064764(void *arg1, char *arg2) {
-    int v = 0;
-    if (*(short *)(arg2 + 0) == 2) {
-        v = ByteCode_ResolveOperand(arg1, arg2);
-    }
-    if (*(short *)(arg2 + 8) == 2) {
-        ByteCode_ResolveOperand(arg1, arg2 + 8);
-    }
-    if (*(short *)(arg2 + 0x10) == 2) {
-        ByteCode_ResolveOperand(arg1, arg2 + 0x10);
-    }
-    MovieScene_StartStream(v);
-    return 1;
-}
+#define func_02025dac ByteCode_ResolveOperand
+#define func_02063e94 MovieScene_StartStream
+#include "src/ov003/overlay_handling/func_ov003_02064764.c"

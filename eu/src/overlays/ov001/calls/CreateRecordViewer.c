@@ -1,29 +1,9 @@
-#include "nitro/types.h"
-
-typedef struct RecordViewer {
-    u8 pad_000[0x64];
-    u8 records[0xce];
-    s16 selectedId;
-    s8 selectedSlot;
-    u8 pad_135[0x1c8 - 0x135];
-} RecordViewer;
-
-extern RecordViewer *data_ov001_020a04fc;
-extern void *NNSi_FndAllocFromDefaultHeap(u32 size);
-extern void MIi_CpuClearFast(u32 value, void *dest, u32 size);
-extern void MI_CpuCopy8(const void *src, void *dest, u32 size);
-extern void AcquireRecordSlot(int slot, int mode);
-extern void *GetRecordTableEPointer(void);
-extern void ReleaseRecordSlot(int slot);
-
-void CreateRecordViewer(void)
-{
-    data_ov001_020a04fc = NNSi_FndAllocFromDefaultHeap(sizeof(RecordViewer));
-    MIi_CpuClearFast(0, data_ov001_020a04fc, sizeof(RecordViewer));
-    data_ov001_020a04fc->selectedId = -1;
-    data_ov001_020a04fc->selectedSlot = -1;
-    AcquireRecordSlot(12, 1);
-    MI_CpuCopy8(GetRecordTableEPointer(), data_ov001_020a04fc->records, sizeof(data_ov001_020a04fc->records));
-    ReleaseRecordSlot(12);
-}
-
+#define AcquireRecordSlot_02051d3c AcquireRecordSlot
+#define CreateRecordViewer_02086c10 CreateRecordViewer
+#define GetRecordTableEPointer_020522a0 GetRecordTableEPointer
+#define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
+#define ReleaseRecordSlot_02051dfc ReleaseRecordSlot
+#define data_ov001_020a04dc data_ov001_020a04fc
+#define func_01ff8740 MIi_CpuClearFast
+#define func_01ff89a8 MI_CpuCopy8
+#include "src/ov001/field_manager/CreateRecordViewer_02086c10.c"
