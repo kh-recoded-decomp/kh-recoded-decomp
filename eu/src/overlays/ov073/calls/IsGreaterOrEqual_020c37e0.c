@@ -1,9 +1,2 @@
-#include "nitro/types.h"
-
-BOOL IsGreaterOrEqual_020c37e0(int a, int b)
-{
-    if (a >= b) {
-        return 1;
-    }
-    return 0;
-}
+#define IsGreaterOrEqual_020c37c0 IsGreaterOrEqual_020c37e0
+#include "src/ov073/leaf_research/IsGreaterOrEqual_020c37c0.c"

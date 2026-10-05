@@ -1,11 +1,3 @@
-#include "nitro/types.h"
-
-typedef char *VaList;
-
-extern int Text_VSNPrintfWide(u16 *dest, u32 destLength, const u16 *format, VaList args);
-
-u16 *FormatWideTextV_020be2e0(const u16 *format, u16 *dest, u32 destLength, VaList args)
-{
-    Text_VSNPrintfWide(dest, destLength, format, args);
-    return dest;
-}
+#define FormatWideTextV_020be2c0 FormatWideTextV_020be2e0
+#define Text_VSNPrintfWide_0202e09c Text_VSNPrintfWide
+#include "src/ov036/text_rendering/FormatWideTextV_020be2c0.c"

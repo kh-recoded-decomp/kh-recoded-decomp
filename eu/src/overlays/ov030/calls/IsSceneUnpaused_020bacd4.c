@@ -1,17 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad_00[6];
-    u16 flags;
-} SceneState;
-
-extern SceneState *data_ov030_020bd020;
-
-BOOL IsSceneUnpaused_020bacd4(void) {
-    BOOL result = TRUE;
-
-    if (data_ov030_020bd020->flags & 0x10) {
-        result = FALSE;
-    }
-    return result;
-}
+#define IsSceneUnpaused_020bacb4 IsSceneUnpaused_020bacd4
+#define data_ov030_020bd000 data_ov030_020bd020
+#include "src/ov030/shared_engine/IsSceneUnpaused_020bacb4.c"

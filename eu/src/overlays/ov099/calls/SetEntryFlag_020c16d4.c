@@ -1,13 +1,3 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u32 entryFlags[3][64];
-} SceneWork;
-
-extern SceneWork *data_ov099_020c2900;
-extern void SetPackedBit(u32 *bitWords, int bitIndex);
-
-void SetEntryFlag_020c16d4(int flagSet, int entryIndex)
-{
-    SetPackedBit(data_ov099_020c2900->entryFlags[flagSet], entryIndex);
-}
+#define SetEntryFlag_020c16b4 SetEntryFlag_020c16d4
+#define g_sceneWork_020c28e0 data_ov099_020c2900
+#include "src/ov099/unclassified_helpers/SetEntryFlag_020c16b4.c"

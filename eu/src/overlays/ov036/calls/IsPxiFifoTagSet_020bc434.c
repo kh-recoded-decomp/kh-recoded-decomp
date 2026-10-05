@@ -1,12 +1,4 @@
-#include "nitro/types.h"
-
-extern u32 data_ov036_020c36e0;
-extern u32 Obj_GetWord28(u32 tag);
-
-BOOL IsPxiFifoTagSet_020bc434(void)
-{
-    u32 result;
-
-    result = Obj_GetWord28(data_ov036_020c36e0);
-    return result != 0;
-}
+#define IsPxiFifoTagSet_020bc414 IsPxiFifoTagSet_020bc434
+#define func_0202a78c Obj_GetWord28
+#define g_pxiFifoTag_020c36c0 data_ov036_020c36e0
+#include "src/ov036/library_nitro_pxi/IsPxiFifoTagSet_020bc414.c"

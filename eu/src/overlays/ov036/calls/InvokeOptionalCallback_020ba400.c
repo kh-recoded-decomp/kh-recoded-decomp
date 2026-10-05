@@ -1,10 +1,2 @@
-#include "nitro/types.h"
-
-typedef void (*Callback)(void);
-
-u32 InvokeOptionalCallback_020ba400(Callback callback) {
-    if (callback != NULL) {
-        callback();
-    }
-    return ~(u32)callback;
-}
+#define InvokeOptionalCallback_020ba3e0 InvokeOptionalCallback_020ba400
+#include "src/ov036/unclassified_helpers/InvokeOptionalCallback_020ba3e0.c"

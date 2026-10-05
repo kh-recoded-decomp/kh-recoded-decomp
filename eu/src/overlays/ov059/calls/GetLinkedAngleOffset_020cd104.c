@@ -1,6 +1,2 @@
-#include "nitro/types.h"
-
-u16 GetLinkedAngleOffset_020cd104(int entity)
-{
-    return *(u16 *)(*(int *)(entity + 0x230) + 0x80) - 0x8000;
-}
+#define GetLinkedAngleOffset_020cd0e4 GetLinkedAngleOffset_020cd104
+#include "src/ov059/unclassified_helpers/GetLinkedAngleOffset_020cd0e4.c"

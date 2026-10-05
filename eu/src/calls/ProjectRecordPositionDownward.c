@@ -1,8 +1,4 @@
-#include "nitro/types.h"
-
-extern int ProjectPositionDownward(void *cont, int p3, void *out);
-extern void *gActorRegistry;
-
-int ProjectRecordPositionDownward(int p3, void *out) {
-    return ProjectPositionDownward(gActorRegistry, p3, out);
-}
+#define ProjectPositionDownward_020352e0 ProjectPositionDownward
+#define func_02036564 ProjectRecordPositionDownward
+#define g_recordTablePtr_0206083c gActorRegistry
+#include "src/arm9/shared_engine/func_02036564.c"

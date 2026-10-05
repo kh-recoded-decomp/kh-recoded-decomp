@@ -1,9 +1,2 @@
-#include "nitro/types.h"
-
-BOOL IsGreaterThan_020c37ec(int a, int b)
-{
-    if (a > b) {
-        return 1;
-    }
-    return 0;
-}
+#define IsGreaterThan_020c37cc IsGreaterThan_020c37ec
+#include "src/ov073/leaf_research/IsGreaterThan_020c37cc.c"
