@@ -4,6 +4,6 @@
 #define TransformCollShape_0203ef24 CopyShapeFromTemplate
 #define VEC_DotProduct_01ff9e6c VEC_DotProduct
 #define VEC_Subtract_01ff9e3c VEC_Subtract
-#define g_shapeSweepTable_02055930 gCollisionSweepPairDispatch
-#define g_shapeTestTable_020558a0 gCollisionTestPairDispatch
+#define g_shapeSweepTable_02055930 gCollisionSweepDispatch
+#define g_shapeTestTable_020558a0 gCollisionTestDispatch
 #include "src/arm9/spatial_queries/SweepMoverWallHit_02034488.c"

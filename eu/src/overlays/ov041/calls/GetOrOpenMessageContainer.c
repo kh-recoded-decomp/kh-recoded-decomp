@@ -1,0 +1,7 @@
+#define GetOrOpenMessageContainer_020bd62c GetOrOpenMessageContainer
+#define Msg_OpenContainerAndReadHeader_0202cc6c Msg_OpenContainerAndReadHeader
+#define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
+#define OS_SPrintf_02002428 OS_SPrintf
+#define data_ov041_020cf928 sOv041_RpgEnFormat02dP2_020cf948
+#define func_01ff8740 MIi_CpuClearFast
+#include "src/ov041/unclassified_helpers/GetOrOpenMessageContainer_020bd62c.c"

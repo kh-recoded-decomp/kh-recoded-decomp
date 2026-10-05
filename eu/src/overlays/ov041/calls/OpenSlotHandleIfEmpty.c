@@ -1,0 +1,3 @@
+#define OpenSlotHandleIfEmpty_020bddfc OpenSlotHandleIfEmpty
+#define func_ov041_020bde30 func_ov041_020bde50
+#include "src/ov041/unclassified_helpers/OpenSlotHandleIfEmpty_020bddfc.c"

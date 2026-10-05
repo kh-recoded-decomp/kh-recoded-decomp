@@ -1,4 +1,4 @@
-#define FreeManagerRecordTable_020be204 func_ov041_020be224
+#define FreeManagerRecordTable_020be204 FreeManagerRecordTable
 #define GetPlayerFlagRecord_0205036c GetPlayerFlagRecord
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define PXI_Init_0202a638 PXI_Init_0202a64c
@@ -9,7 +9,7 @@
 #define ZeroHalfThenFree_0202cd78 ZeroHalfThenFree
 #define func_ov001_0207d658 func_ov001_0207d680
 #define func_ov041_020bdc08 func_ov041_020bdc28
-#define func_ov041_020bdf00 func_ov041_020bdf20
-#define func_ov041_020c0aac func_ov041_020c0acc
+#define func_ov041_020bdf00 FreeResourceLists
+#define func_ov041_020c0aac DestroySceneEntry
 #define func_ov041_020ce1e0 func_ov041_020ce200
 #include "src/ov041/unclassified_helpers/ShutdownMenuScene_020bca3c.c"

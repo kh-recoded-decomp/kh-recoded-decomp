@@ -1,0 +1,9 @@
+#define OS_SPrintf_02002428 OS_SPrintf
+#define ResetAreaMeshValues_020bcc60 ResetAreaMeshValues
+#define SetWorldMeshEntryValueByName_02036368 SetWorldMeshEntryValueByName
+#define data_ov040_020be1a0 data_ov040_020be1c0
+#define data_ov040_020be218 sOv040_FormatSFormat02d_020be238
+#define data_ov040_020be220 sOv040_Area_020be240
+#define data_ov040_020be260 data_ov040_020be280
+#define func_ov001_02063404 RestoreSessionActors
+#include "src/ov040/unclassified_helpers/ResetAreaMeshValues_020bcc60.c"

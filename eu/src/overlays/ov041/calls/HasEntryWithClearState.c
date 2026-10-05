@@ -1,0 +1,2 @@
+#define HasEntryWithClearState_020bcbb8 HasEntryWithClearState
+#include "src/ov041/shared_records/HasEntryWithClearState_020bcbb8.c"

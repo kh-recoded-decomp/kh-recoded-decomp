@@ -32,7 +32,7 @@ extern int func_ov001_0206db8c(int kind);
 extern int func_ov021_020a8cc0(GroupRequest *request, int groupId);
 extern void func_ov040_020bdaa8(void);
 extern void func_ov040_020bdab8(void);
-extern void func_ov040_020bdac8(void);
+extern void ResetAreaGroupObjects(void);
 extern int func_ov001_02078494(void);
 extern void func_ov001_02078000(int list, int slot);
 extern int TickSlotTimer(int slot);
@@ -65,7 +65,7 @@ void ApplyPendingFlagReward(FieldMenu *menu) {
             func_ov040_020bdab8();
             break;
         case 0xd2:
-            func_ov040_020bdac8();
+            ResetAreaGroupObjects();
             break;
         }
         menu->flags |= 0x4000;

@@ -1,0 +1,7 @@
+#define RefreshAreaEvents_020bc5b8 RefreshAreaEvents
+#define StageEvent_SetHoldBit2_02087db8 StageEvent_SetHoldBit2
+#define StageEvents_CheckEvent_02087824 StageEvents_CheckEvent
+#define StartCurrentAreaEvents_020bc55c StartCurrentAreaEvents
+#define func_ov001_02087dd0 func_ov001_02087df8
+#define func_ov001_02087f00 ResetStageEntries
+#include "src/ov040/unclassified_helpers/RefreshAreaEvents_020bc5b8.c"

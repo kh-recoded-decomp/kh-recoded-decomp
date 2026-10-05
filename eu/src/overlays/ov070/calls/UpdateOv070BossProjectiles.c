@@ -1,0 +1,22 @@
+#define GetBoundedEntryField_0206db5c GetBoundedEntryField
+#define GetGroupMemberData_020a8eec GetGroupMemberData
+#define GetLinkedAngleOffset_020ceb7c GetLinkedAngleOffset
+#define InitRecord60_020ac0b8 InitRecord60
+#define OffsetBoxByDelta_0203ac70 OffsetBoxByDelta
+#define PlaySoundChecked_0204d8d0 PlaySoundChecked
+#define ScaleVecFx32_01ffafb4 func_01ffafb4
+#define StepHitScan_020ac164 StepHitScan
+#define StopAndClearSoundEmitter_020a8e14 StopAndClearSoundEmitter
+#define UpdateOv070BossProjectiles_020d829c UpdateOv070BossProjectiles
+#define UpdateStageEventMessage_0206c528 UpdateStageEventMessage
+#define VEC_Add_01ff9e0c VEC_Add
+#define ZeroAndSetField0xd4_020ac150 ZeroAndSetField0xd4
+#define ZeroBytes0x28_020ac0f8 ZeroBytes0x28
+#define func_01ff9f88 VEC_Normalize
+#define func_0203ad14 func_0203ad28
+#define func_ov021_020a8ab4 ResetAnimationTrackState
+#define func_ov021_020a8ca0 func_ov021_020a8cc0
+#define func_ov048_020c384c GetCameraViewUpVector
+#define func_ov052_020ceb54 func_ov052_020ceb74
+#define func_ov070_020d8100 func_ov070_020d8120
+#include "src/ov070/object_state/UpdateOv070BossProjectiles_020d829c.c"

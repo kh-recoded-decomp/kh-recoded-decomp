@@ -1,0 +1,4 @@
+#define SwitchAreaLayers_020bc710 SwitchAreaLayers
+#define func_ov001_0207f028 func_ov001_0207f050
+#define func_ov007_020a1b3c SetSlotSide
+#include "src/ov040/unclassified_helpers/SwitchAreaLayers_020bc710.c"

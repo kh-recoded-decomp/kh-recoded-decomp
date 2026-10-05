@@ -1,6 +1,6 @@
 #define FieldObject_HandleContact_020a0d24 FieldObject_HandleContact
 #define NegateVecFx32_0204aa40 NegateVecFx32
-#define data_020558a0 gCollisionTestPairDispatch
-#define data_02055930 gCollisionSweepPairDispatch
+#define data_020558a0 gCollisionTestDispatch
+#define data_02055930 gCollisionSweepDispatch
 #define func_02036240 ActorRegistry_GetEntityByIndex
 #include "src/ov011/field_objects/FieldObject_HandleContact_020a0d24.c"

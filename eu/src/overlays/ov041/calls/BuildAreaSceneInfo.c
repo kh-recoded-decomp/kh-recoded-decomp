@@ -1,0 +1,5 @@
+#define BuildAreaSceneInfo_020bc504 BuildAreaSceneInfo
+#define func_ov035_020bae64 func_ov035_020bae84
+#define func_ov035_020bb0f0 func_ov035_020bb110
+#define func_ov041_020bc500 func_ov041_020bc520
+#include "src/ov041/unclassified_helpers/BuildAreaSceneInfo_020bc504.c"

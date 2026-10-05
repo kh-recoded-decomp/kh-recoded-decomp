@@ -4,13 +4,65 @@
     .data       start:0x020be1e0 end:0x020be280 kind:data align:32
     .bss        start:0x020be280 end:0x020be2a0 kind:bss align:32
 
+src/overlays/ov040/calls/UpdateAreaFromPosition.c:
+    complete
+    .text       start:0x020bc520 end:0x020bc57c
+
+src/overlays/ov040/calls/StartCurrentAreaEvents.c:
+    complete
+    .text       start:0x020bc57c end:0x020bc5d8
+
+src/overlays/ov040/calls/RefreshAreaEvents.c:
+    complete
+    .text       start:0x020bc5d8 end:0x020bc670
+
+src/overlays/ov040/calls/SwitchAreaObjects.c:
+    complete
+    .text       start:0x020bc670 end:0x020bc730
+
+src/overlays/ov040/calls/SwitchAreaLayers.c:
+    complete
+    .text       start:0x020bc730 end:0x020bc774
+
+src/overlays/ov040/calls/UpdateAreaProgressLevel.c:
+    complete
+    .text       start:0x020bc7a4 end:0x020bc83c
+
+src/overlays/ov040/calls/BuildAreaObjectLists.c:
+    complete
+    .text       start:0x020bc858 end:0x020bc990
+
+src/overlays/ov040/calls/SortObjectsIntoAreaGroups.c:
+    complete
+    .text       start:0x020bc990 end:0x020bca90
+
 src/overlays/ov040/calls/InitInstanceFromTemplate.c:
     complete
     .text       start:0x020bca90 end:0x020bcc44
 
+src/overlays/ov040/calls/ResetAreaMeshValues.c:
+    complete
+    .text       start:0x020bcc80 end:0x020bcd28
+
+src/overlays/ov040/calls/StartAreaCameraIntro.c:
+    complete
+    .text       start:0x020bd2b8 end:0x020bd384
+
+src/overlays/ov040/calls/TickIntroRotation.c:
+    complete
+    .text       start:0x020bd384 end:0x020bd418
+
+src/overlays/ov040/calls/FadeInAreaScreens.c:
+    complete
+    .text       start:0x020bd484 end:0x020bd548
+
 src/overlays/ov040/calls/EnterState13WithHalfRate.c:
     complete
     .text       start:0x020bd5c4 end:0x020bd5de
+
+src/overlays/ov040/calls/FinishAreaTransition.c:
+    complete
+    .text       start:0x020bd68c end:0x020bd748
 
 src/overlays/ov040/auto/func_ov040_020bd748.c:
     complete
@@ -20,9 +72,17 @@ src/overlays/ov040/calls/RunMenuStateMachine.c:
     complete
     .text       start:0x020bd938 end:0x020bd9b0
 
+src/overlays/ov040/calls/ShutdownScreenWork.c:
+    complete
+    .text       start:0x020bd9b0 end:0x020bda1c
+
 src/overlays/ov040/calls/FindActorRewardValue.c:
     complete
     .text       start:0x020bda1c end:0x020bda8c
+
+src/overlays/ov040/calls/ResetAreaGroupObjects.c:
+    complete
+    .text       start:0x020bdac8 end:0x020bdb2c
 
 src/overlays/ov040/calls/AdvanceLoopingAnimation.c:
     complete

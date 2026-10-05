@@ -1,0 +1,9 @@
+#define Camera_ComputeFollowDistance_020c1a70 Camera_ComputeFollowDistance
+#define Camera_IsFrozen_020c0c1c Camera_IsFrozen
+#define Camera_ResetTrackingToLeader_020c37ac Camera_ResetTrackingToLeader
+#define Camera_SetFrozen_020c0bec Camera_SetFrozen
+#define Camera_SetTrackingAngle_020c381c Camera_SetTrackingAngle
+#define GetBiasAdjustedField_0206dc80 GetBiasAdjustedField
+#define func_ov046_020c1a48 func_ov046_020c1a68
+#define g_cameraManager_020c34e0 data_ov046_020c3500
+#include "src/ov047/camera/Camera_ResetTrackingToLeader_020c37ac.c"

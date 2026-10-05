@@ -1,0 +1,10 @@
+#define Camera_FollowControllerUpdate_020c4768 Camera_FollowControllerUpdate
+#define Camera_IsFrozen_020c0c1c Camera_IsFrozen
+#define Camera_ResetFollowHeading_020c464c Camera_ResetFollowHeading
+#define Camera_UpdateManualTurn_020c4668 Camera_UpdateManualTurn
+#define Camera_UpdateTracking_020c631c Camera_UpdateTracking
+#define IsLeaderFlag3Active_0206e198 IsLeaderFlag3Active
+#define func_02029f48 func_02029f5c
+#define func_ov046_020c1a48 func_ov046_020c1a68
+#define func_ov047_020c3b5c func_ov047_020c3b7c
+#include "src/ov047/camera/Camera_FollowControllerUpdate_020c4768.c"

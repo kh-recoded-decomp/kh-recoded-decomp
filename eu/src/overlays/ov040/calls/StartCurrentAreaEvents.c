@@ -1,0 +1,5 @@
+#define StageEvent_ReleaseHoldBit2_02087714 StageEvent_ReleaseHoldBit2
+#define StageEvents_CheckEvent_02087824 StageEvents_CheckEvent
+#define StartCurrentAreaEvents_020bc55c StartCurrentAreaEvents
+#define func_ov001_02087e1c func_ov001_02087e44
+#include "src/ov040/unclassified_helpers/StartCurrentAreaEvents_020bc55c.c"

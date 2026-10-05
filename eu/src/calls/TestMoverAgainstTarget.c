@@ -3,6 +3,6 @@
 #define TestMoverAgainstTarget_0203405c TestMoverAgainstTarget
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define Vec3ScaleAddQ27_0204a73c GetPointAlongDirectionQ27
-#define g_shapeSweepTable_02055930 gCollisionSweepPairDispatch
-#define g_shapeTestTable_020558a0 gCollisionTestPairDispatch
+#define g_shapeSweepTable_02055930 gCollisionSweepDispatch
+#define g_shapeTestTable_020558a0 gCollisionTestDispatch
 #include "src/arm9/spatial_queries/TestMoverAgainstTarget_0203405c.c"

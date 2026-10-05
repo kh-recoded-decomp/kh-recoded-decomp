@@ -1,0 +1,5 @@
+#define FixedPointMultiply12 FX_Mul
+#define SetBrightnessAndSyncMain_02029e7c SetBrightnessAndSyncMain
+#define UpdateSceneFade_020bcce8 UpdateSceneFade
+#define func_02029f48 func_02029f5c
+#include "src/ov041/unclassified_helpers/UpdateSceneFade_020bcce8.c"

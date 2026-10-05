@@ -1,5 +1,5 @@
 #define FindNextOverlappingEntry_0206dcac FindNextOverlappingEntry
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField
-#define data_020558a0 gCollisionTestPairDispatch
+#define data_020558a0 gCollisionTestDispatch
 #define g_manager_020a049c data_ov001_020a04bc
 #include "src/ov001/shared_engine/FindNextOverlappingEntry_0206dcac.c"

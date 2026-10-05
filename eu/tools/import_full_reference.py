@@ -46,9 +46,51 @@ COMPILER_TAG = {
     "mwccarm-3.0-139": ("3.0_patch4", None),
 }
 KNOWN_SYMBOL_RENAMES = {
-    "gCollisionTestSphereDispatch": "gCollisionTestPairDispatch",
-    "gCollisionSweepSphereDispatch": "gCollisionSweepPairDispatch",
+    "gCollisionTestSphereDispatch": "gCollisionTestDispatch",
+    "gCollisionSweepSphereDispatch": "gCollisionSweepDispatch",
+    "g_cameraManager_020c34e0": "data_ov046_020c3500",
+    "func_ov046_020c1a48": "func_ov046_020c1a68",
+    "func_ov048_020c384c": "GetCameraViewUpVector",
+    "data_ov035_020bc4e0": "data_ov035_020bc4e0",
+    "func_ov041_020c21d5": "func_ov041_020c21f4",
+    "func_ov041_020c2305": "func_ov041_020c2324",
+    "func_ov041_020c23cd": "func_ov041_020c23ec",
+    "func_ov041_020c2431": "func_ov041_020c2450",
+    "func_ov030_020bc38c": "SpawnSceneMarker",
+    "func_ov040_020bdc94": "ApplyPendingFlagReward",
+    "func_ov030_020bc110": "func_ov030_020bc130",
 }
+
+REGIONAL_OVERRIDES = [
+    {
+        "module": "ov041",
+        "name": "SpawnStageEntryActor",
+        "source": "src/ov041/unclassified_helpers/SpawnStageEntryActor_020c18cc.c",
+        "source_symbol": "SpawnStageEntryActor_020c18cc",
+        "compiler": "mwccarm-4.0-1036",
+        "reference_index": 9572,
+        "understanding": "subsystem",
+        "eu": {
+            "name": "func_ov041_020c18ec",
+            "address": 0x020C18EC,
+            "size": 0x44C,
+        },
+    },
+    {
+        "module": "ov052",
+        "name": "EnterActorState",
+        "source": "src/ov052/actor_motion/EnterActorState_020cd338.c",
+        "source_symbol": "EnterActorState_020cd338",
+        "compiler": "mwccarm-4.0-1036",
+        "reference_index": 9598,
+        "understanding": "gameplay",
+        "eu": {
+            "name": "func_ov052_020cd358",
+            "address": 0x020CD358,
+            "size": 0xAE8,
+        },
+    },
+]
 
 
 def config_dir(module: str) -> Path:
@@ -142,7 +184,10 @@ def inspect_object(mapping: dict) -> dict | None:
                 previous = relocations.setdefault(offset, target)
                 if previous != target:
                     return None
-        return {"relocations": relocations}
+        return {
+            "relocations": relocations,
+            "text": section.data()[symbol["st_value"]:symbol["st_value"] + symbol["st_size"]],
+        }
 
 
 def useful_name(name: str) -> bool:
@@ -255,18 +300,46 @@ def relocation_rewrites(
     source_relocations = object_info["relocations"]
     module_relocations = relocations.get(mapping["module"], {})
     eu_relocations = {}
-    for offset in source_relocations:
+    for offset, source_name in source_relocations.items():
         relocation = module_relocations.get(mapping["eu"]["address"] + offset)
-        if relocation is None:
-            return None
-        target_name = relocation_target_name(*relocation, symbols)
+        target_name = (
+            relocation_target_name(*relocation, symbols)
+            if relocation is not None else None
+        )
+        if target_name is None:
+            target_name = KNOWN_SYMBOL_RENAMES.get(source_name)
         if target_name is None:
             return None
         eu_relocations[offset] = target_name
-    expected_offsets = {
-        int(offset) for offset, _ in index[mapping["eu"]["name"]]["relocs"]
+    target = index[mapping["eu"]["name"]]
+    expected_relocations = {
+        int(offset): name for offset, name in target["relocs"]
     }
-    if set(source_relocations) != expected_offsets:
+    expected_offsets = set(expected_relocations)
+    source_offsets = set(source_relocations)
+    if any(
+        not expected_relocations[offset].startswith(".L_")
+        for offset in expected_offsets - source_offsets
+    ):
+        return None
+    if any(
+        source_relocations[offset] not in KNOWN_SYMBOL_RENAMES
+        for offset in source_offsets - expected_offsets
+    ):
+        return None
+
+    source_text = object_info["text"]
+    target_text = bytes.fromhex(target["hex"])
+    if len(source_text) != len(target_text):
+        return None
+    ignored = set()
+    for offset in source_offsets | expected_offsets:
+        ignored.update(range(offset, min(offset + 4, len(source_text))))
+    if any(
+        source_text[offset] != target_text[offset]
+        for offset in range(len(source_text))
+        if offset not in ignored
+    ):
         return None
     rewrites = {}
     for offset, source_name in source_relocations.items():
@@ -293,7 +366,10 @@ def replace_delink(delinks: str, destination: str, start: int, end: int) -> str:
 
 def discover(module: str | None) -> list[dict]:
     index = json.loads(FUNC_INDEX.read_text(encoding="utf-8"))
-    mappings = json.loads(RESULTS.read_text(encoding="utf-8"))["mappings"]
+    mappings = (
+        json.loads(RESULTS.read_text(encoding="utf-8"))["mappings"]
+        + REGIONAL_OVERRIDES
+    )
     available = current_names()
     occupied = set(available)
     symbols = current_symbols_by_address()

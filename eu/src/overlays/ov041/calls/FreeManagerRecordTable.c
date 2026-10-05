@@ -1,0 +1,4 @@
+#define FreeManagerRecordTable_020be204 FreeManagerRecordTable
+#define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
+#define ZeroHalfThenFree_0202cd78 ZeroHalfThenFree
+#include "src/ov041/unclassified_helpers/FreeManagerRecordTable_020be204.c"

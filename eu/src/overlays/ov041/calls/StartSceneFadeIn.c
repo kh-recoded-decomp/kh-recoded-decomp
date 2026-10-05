@@ -1,0 +1,4 @@
+#define FX_Div_01ff9c84 FX_Div
+#define SetBrightnessAndSyncMain_02029e7c SetBrightnessAndSyncMain
+#define StartSceneFadeIn_020bcca8 StartSceneFadeIn
+#include "src/ov041/unclassified_helpers/StartSceneFadeIn_020bcca8.c"

@@ -1386,6 +1386,7 @@ _f2d kind:label(arm) addr:0x020239b0
 func_02023a34 kind:function(arm,size=0x78) addr:0x02023a34
 func_02023aac kind:function(arm,size=0x48) addr:0x02023aac
 func_02023af4 kind:function(arm,size=0x48) addr:0x02023af4
+_ffltu kind:label(arm) addr:0x02023af4
 func_02023b3c kind:function(arm,size=0x6c) addr:0x02023b3c
 func_02023ba8 kind:function(arm,size=0x1c0) addr:0x02023ba8
 _ll_sdiv kind:label(arm) addr:0x02023bb8
@@ -2671,8 +2672,12 @@ data_0205585c kind:data(any) addr:0x0205585c
 data_0205587c kind:data(any) addr:0x0205587c
 data_020558a0 kind:data(any) addr:0x020558a0
 data_020558ac kind:data(any) addr:0x020558ac
-gCollisionTestPairDispatch kind:data(any) addr:0x020558b4
-gCollisionSweepPairDispatch kind:data(any) addr:0x02055944
+gCollisionTestDispatch kind:data(any) addr:0x020558b4
+gCollisionTestSphereDispatch kind:data(any) addr:0x020558b4
+gCollisionTestPairDispatch kind:data(any) addr:0x020558c8
+gCollisionSweepDispatch kind:data(any) addr:0x02055944
+gCollisionSweepSphereDispatch kind:data(any) addr:0x02055944
+gCollisionSweepPairDispatch kind:data(any) addr:0x02055958
 gCollisionBoundsDispatch kind:data(any) addr:0x020559d4
 data_020559ec kind:data(any) addr:0x020559ec
 data_02055a18 kind:data(any) addr:0x02055a18

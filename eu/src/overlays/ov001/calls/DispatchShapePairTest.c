@@ -1,5 +1,5 @@
 #define DispatchShapePairTest_02080bfc DispatchShapePairTest
 #define NegateVecFx32_0204aa40 NegateVecFx32
-#define data_020558a0 gCollisionTestPairDispatch
-#define data_02055930 gCollisionSweepPairDispatch
+#define data_020558a0 gCollisionTestDispatch
+#define data_02055930 gCollisionSweepDispatch
 #include "src/ov001/shared_engine/DispatchShapePairTest_02080bfc.c"

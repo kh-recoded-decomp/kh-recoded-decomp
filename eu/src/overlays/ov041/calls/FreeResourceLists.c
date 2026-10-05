@@ -1,0 +1,5 @@
+#define FreeResourceLists_020bdf00 FreeResourceLists
+#define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
+#define ReleaseResourceAndDetach_0202eee8 ReleaseResourceAndDetach
+#define ZeroHalfThenFree_0202cd78 ZeroHalfThenFree
+#include "src/ov041/unclassified_helpers/FreeResourceLists_020bdf00.c"

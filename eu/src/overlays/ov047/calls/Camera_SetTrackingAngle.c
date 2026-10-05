@@ -1,0 +1,7 @@
+#define Camera_SetTrackingAngle_020c381c Camera_SetTrackingAngle
+#define Camera_Update_020c0b6c Camera_Update
+#define FixedPointMultiply12 FX_Mul
+#define data_0205356c data_02053580
+#define func_ov047_020c6d34 Camera_RestoreSavedTracking
+#define g_cameraManager_020c34e0 data_ov046_020c3500
+#include "src/ov047/camera/Camera_SetTrackingAngle_020c381c.c"

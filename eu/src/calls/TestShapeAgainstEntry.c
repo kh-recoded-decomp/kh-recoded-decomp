@@ -1,6 +1,6 @@
 #define DispatchShapeTest_020310c8 TestSweepAgainstFace
 #define NegateVecFx32_0204aa40 NegateVecFx32
 #define TestShapeAgainstEntry_0203079c TestShapeAgainstEntry
-#define g_shapeSweepTable_02055930 gCollisionSweepPairDispatch
-#define g_shapeTestTable_020558a0 gCollisionTestPairDispatch
+#define g_shapeSweepTable_02055930 gCollisionSweepDispatch
+#define g_shapeTestTable_020558a0 gCollisionTestDispatch
 #include "src/arm9/spatial_queries/TestShapeAgainstEntry_0203079c.c"

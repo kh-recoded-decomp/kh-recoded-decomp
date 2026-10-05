@@ -1,6 +1,6 @@
 #define GetPlayerFlagRecord_0205036c GetPlayerFlagRecord
 #define InitMenuScene_020bc5c0 InitMenuScene
-#define InitResourceLevels_020bdc6c func_ov041_020bdc8c
+#define InitResourceLevels_020bdc6c InitResourceLevels
 #define InitSlotGroups_020bda68 func_ov041_020bda88
 #define NNS_GfdDumpFrmTexVramManager_020137f8 NNS_GfdDumpFrmTexVramManager
 #define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
@@ -9,7 +9,7 @@
 #define QueueSoundCommandForArc_0204d670 QueueSoundCommandForArc
 #define ReleaseSeqArcHeapLevel_0204e040 ReleaseSeqArcHeapLevel
 #define RequestFieldRefresh_020720b0 RequestFieldRefresh
-#define ResetSlotHandles_020bf0a0 func_ov041_020bf0c0
+#define ResetSlotHandles_020bf0a0 ResetSlotHandles
 #define SelectFieldMenuPage_02072064 SelectFieldMenuPage
 #define SetMenuEntryHighlight_0207830c SetMenuEntryHighlight
 #define data_ov041_020cf698 data_ov041_020cf6b8
@@ -19,11 +19,11 @@
 #define func_0202c48c func_0202c4a0
 #define func_ov001_020645e8 ClearSessionPackedBit
 #define func_ov001_0207d120 func_ov001_0207d148
-#define func_ov041_020bd740 func_ov041_020bd760
+#define func_ov041_020bd740 SetStageDrawLayer
 #define func_ov041_020bec9c IsStageKindAvailable
-#define func_ov041_020c0940 func_ov041_020c0960
-#define func_ov041_020c09cc func_ov041_020c09ec
-#define func_ov041_020c0bf4 func_ov041_020c0c14
+#define func_ov041_020c0940 PlaceStageEntryObject
+#define func_ov041_020c09cc SpawnStageEntry
+#define func_ov041_020c0bf4 ApplyStageEntryMove
 #define func_ov041_020c3658 func_ov041_020c3678
 #define func_ov041_020ce1a8 InitRecordOwnerSlots
 #include "src/ov041/unclassified_helpers/InitMenuScene_020bc5c0.c"

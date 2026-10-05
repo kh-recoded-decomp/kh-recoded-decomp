@@ -3,7 +3,7 @@
 #define func_ov021_020a8ab4 ResetAnimationTrackState
 #define func_ov021_020a8ca0 func_ov021_020a8cc0
 #define func_ov052_020ccfa4 ExitActorState
-#define func_ov052_020cd338 func_ov052_020cd358
+#define func_ov052_020cd338 EnterActorState
 #define func_ov052_020ceb7c GetLinkedAngleOffset
 #define func_ov058_020d50ac func_ov058_020d50cc
 #define func_ov058_020d544c func_ov058_020d546c

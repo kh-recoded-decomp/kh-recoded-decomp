@@ -1,0 +1,4 @@
+#define Camera_ResetFollowHeading_020c464c Camera_ResetFollowHeading
+#define GetBiasAdjustedField_0206dc80 GetBiasAdjustedField
+#define g_cameraManager_020c34e0 data_ov046_020c3500
+#include "src/ov047/camera/Camera_ResetFollowHeading_020c464c.c"

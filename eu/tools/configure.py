@@ -65,6 +65,9 @@ ABSOLUTE_SYMBOLS = {
     "sVramTransferTaskQueueState": 0x0205A8D0,
     "sWaveArcHeader": 0x0205E2E8,
     "gSceneControllerStorage": 0x0205FDEC,
+    # A second name for the ov030 marker BSS is required to preserve the two
+    # distinct literal-pool entries emitted by CodeWarrior.
+    "gMarkerResetConfig": 0x020BD024,
     # CodeWarrior emits these helper names itself for float expressions, so
     # identifier rewriting cannot retarget them to the EU raw symbol names.
     "_fgr": 0x02023828,

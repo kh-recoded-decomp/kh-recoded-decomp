@@ -1,0 +1,5 @@
+#define SwitchAreaObjects_020bc650 SwitchAreaObjects
+#define func_ov001_0208635c func_ov001_02086384
+#define func_ov001_02087214 func_ov001_0208723c
+#define func_ov019_020a3588 func_ov019_020a35a8
+#include "src/ov040/unclassified_helpers/SwitchAreaObjects_020bc650.c"

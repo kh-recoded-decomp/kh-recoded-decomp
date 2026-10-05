@@ -1,0 +1,5 @@
+#define GetBoundedEntryField_0206db5c GetBoundedEntryField
+#define UpdateAreaFromPosition_020bc500 UpdateAreaFromPosition
+#define func_ov040_020bd9fc FindActorRewardValue
+#define func_ov040_020bde68 UpdateRewardMenuHighlights
+#include "src/ov040/unclassified_helpers/UpdateAreaFromPosition_020bc500.c"

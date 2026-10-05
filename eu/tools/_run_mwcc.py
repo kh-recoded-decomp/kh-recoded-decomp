@@ -68,6 +68,11 @@ def main():
     # Wrappers around shared US sources build from the repo root with its headers.
     shared_root = ROOT.parent
     shared_include = re.search(r'#include "(src/[^"]+\.c)"', src_path.read_text(encoding="utf-8", errors="replace"))
+    if shared_include is None:
+        shared_include = re.search(
+            r'#include "(src/[^"]+\.(?:cpp|cp|cc))"',
+            src_path.read_text(encoding="utf-8", errors="replace"),
+        )
     is_wrapper = bool(shared_include) and (shared_root / shared_include.group(1)).is_file()
     if is_wrapper:
         flags.extend(["-i", str(shared_root), "-i", str(shared_root / "include")])

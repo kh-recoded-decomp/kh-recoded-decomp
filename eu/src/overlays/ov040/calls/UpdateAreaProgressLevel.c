@@ -1,0 +1,5 @@
+#define SubScene9_Request_02066e50 SubScene9_Request
+#define UpdateAreaProgressLevel_020bc784 UpdateAreaProgressLevel
+#define func_0204d8d0 PlaySoundChecked
+#define func_ov040_020bc754 func_ov040_020bc774
+#include "src/ov040/unclassified_helpers/UpdateAreaProgressLevel_020bc784.c"

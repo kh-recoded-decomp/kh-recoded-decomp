@@ -54,7 +54,7 @@ extern void func_ov052_020ccfbc(void);
 extern void QueryTargetPosition(void);
 extern void SetSlotDisplayMode(void);
 extern void GetStateUnlessBlocked(void);
-extern void func_ov052_020cd358(void);
+extern void EnterActorState(void);
 extern void DispatchSlotAction(void);
 
 void InstallActorCallbacks(Actor *actor)
@@ -78,7 +78,7 @@ void InstallActorCallbacks(Actor *actor)
     actor->onQueryTargetPosition = QueryTargetPosition;
     actor->onSetDisplayMode = SetSlotDisplayMode;
     actor->onGetState = GetStateUnlessBlocked;
-    actor->onSlotEvent = func_ov052_020cd358;
+    actor->onSlotEvent = EnterActorState;
     actor->slotState = 0;
     actor->slotParam0 = 0;
     actor->slotParam1 = 0;

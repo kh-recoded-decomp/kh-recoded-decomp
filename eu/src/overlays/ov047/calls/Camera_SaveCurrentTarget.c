@@ -1,0 +1,3 @@
+#define Camera_SaveCurrentTarget_020c351c Camera_SaveCurrentTarget
+#define g_cameraManager_020c34e0 data_ov046_020c3500
+#include "src/ov047/camera/Camera_SaveCurrentTarget_020c351c.c"

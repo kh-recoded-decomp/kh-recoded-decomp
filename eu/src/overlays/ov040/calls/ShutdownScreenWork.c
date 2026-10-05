@@ -1,0 +1,11 @@
+#define GetBoundedEntryField_0206db5c GetBoundedEntryField
+#define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
+#define PXI_Init_0202a638 PXI_Init_0202a64c
+#define PopVramState_020365f0 PopVramState
+#define ShutdownScreenWork_020bd990 ShutdownScreenWork
+#define data_ov040_020be260 data_ov040_020be280
+#define func_ov001_020633d4 FlushPendingFieldUpdate
+#define func_ov001_02087214 func_ov001_0208723c
+#define func_ov019_020a3640 ReleaseOwnedEntryGroup
+#define func_ov035_020bafb4 func_ov035_020bafd4
+#include "src/ov040/unclassified_helpers/ShutdownScreenWork_020bd990.c"

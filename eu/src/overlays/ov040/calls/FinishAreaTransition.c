@@ -1,0 +1,12 @@
+#define FinishAreaTransition_020bd66c FinishAreaTransition
+#define GetBiasAdjustedField_0206dc80 GetBiasAdjustedField
+#define ReleaseResourceAndDetach_0202eee8 ReleaseResourceAndDetach
+#define SetMenuHighlight_0206c2f8 SetMenuHighlight
+#define SetOverlayLayerVisible_0207ef40 func_ov001_0207ef68
+#define StoreSessionSpawnPoint_02063524 StoreSessionSpawnPoint
+#define SuspendTaskAndSetFlag_020667b4 SuspendTaskAndSetFlag
+#define data_ov001_020a046c data_ov001_020a048c
+#define data_ov040_020be260 data_ov040_020be280
+#define func_ov001_0207d658 func_ov001_0207d680
+#define func_ov035_020bb64c func_ov035_020bb66c
+#include "src/ov040/unclassified_helpers/FinishAreaTransition_020bd66c.c"

@@ -1,0 +1,11 @@
+#define FixedPointMultiply12 FX_Mul
+#define GetPositionAboveGround_020c2ae0 GetPositionAboveGround
+#define LoadStageActorModel_020c26b8 LoadStageActorModel
+#define Msg_OpenContainerAndReadHeader_0202cc6c Msg_OpenContainerAndReadHeader
+#define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
+#define OS_SPrintf_02002428 OS_SPrintf
+#define RetainOrInitializeSharedRecord_0202c80c SND_RegisterSeq
+#define data_ov041_020cfa34 sOv041_RpgEfKageP2_020cfa54
+#define func_0202c48c func_0202c4a0
+#define func_0202ed9c func_0202edb0
+#include "src/ov041/unclassified_helpers/LoadStageActorModel_020c26b8.c"

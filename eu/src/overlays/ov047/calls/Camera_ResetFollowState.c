@@ -1,0 +1,5 @@
+#define Camera_ComputeFollowDistance_020c1a70 Camera_ComputeFollowDistance
+#define Camera_ResetFollowState_020c3a78 Camera_ResetFollowState
+#define func_ov046_020c1a48 func_ov046_020c1a68
+#define g_cameraManager_020c34e0 data_ov046_020c3500
+#include "src/ov047/camera/Camera_ResetFollowState_020c3a78.c"

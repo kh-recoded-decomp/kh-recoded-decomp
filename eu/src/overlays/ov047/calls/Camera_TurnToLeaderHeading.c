@@ -1,0 +1,13 @@
+#define Camera_GetFocusPosition_020c1780 Camera_GetFocusPosition
+#define Camera_IsFrozen_020c0c1c Camera_IsFrozen
+#define Camera_TurnToLeaderHeading_020c4e3c Camera_TurnToLeaderHeading
+#define Camera_UpdateTracking_020c631c Camera_UpdateTracking
+#define FX_Div_01ff9c84 FX_Div
+#define GetBiasAdjustedField_0206dc80 GetBiasAdjustedField
+#define IsHeldEntryFlag2Active_0206e33c IsHeldEntryFlag2Active
+#define IsLeaderFlag3Active_0206e198 IsLeaderFlag3Active
+#define func_ov046_020c19f0 func_ov046_020c1a10
+#define func_ov046_020c1a48 func_ov046_020c1a68
+#define func_ov047_020c3ad8 Camera_ShouldStartManualTurn
+#define func_ov047_020c4768 Camera_FollowControllerUpdate
+#include "src/ov047/camera/Camera_TurnToLeaderHeading_020c4e3c.c"

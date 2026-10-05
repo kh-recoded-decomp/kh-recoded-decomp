@@ -1,0 +1,9 @@
+#define ActorSlot_Unlink_02035c48 ActorSlot_Unlink
+#define DestroyDisplayObject_020c37b4 DestroyDisplayObject
+#define DestroySceneEntry_020c0aac DestroySceneEntry
+#define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
+#define Obj_ConditionalShutdown_020368c8 Obj_ConditionalShutdown
+#define ReleaseEmbeddedObject_020c277c ReleaseEmbeddedObject
+#define ZeroHalfThenFree_0202cd78 ZeroHalfThenFree
+#define func_020368a4 ShutdownRecordSlotByIndex
+#include "src/ov041/unclassified_helpers/DestroySceneEntry_020c0aac.c"

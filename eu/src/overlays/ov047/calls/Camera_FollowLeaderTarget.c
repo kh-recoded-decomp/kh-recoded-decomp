@@ -1,0 +1,25 @@
+#define ApproachAngle_020c4824 ApproachAngle
+#define BuildPickingRay_0201a10c NNS_G3dScrPosToWorldLine
+#define Camera_FollowLeaderTarget_020c491c Camera_FollowLeaderTarget
+#define Camera_GetFocusPosition_020c1780 Camera_GetFocusPosition
+#define Camera_GetScreenEdgeMask_020c28d0 Camera_GetScreenEdgeMask
+#define Camera_IsFrozen_020c0c1c Camera_IsFrozen
+#define Camera_UpdateTracking_020c631c Camera_UpdateTracking
+#define FX_Div_01ff9c84 FX_Div
+#define FixedPointAtan2_020062bc FX_Atan2Idx
+#define FixedPointMultiply12 FX_Mul
+#define IsAngleDifferenceLarge_020c4804 IsAngleDifferenceLarge
+#define IsHeldEntryFlag2Active_0206e33c IsHeldEntryFlag2Active
+#define IsLeaderFlag3Active_0206e198 IsLeaderFlag3Active
+#define Math_AcosIdx_0202ab20 Math_AcosIdx
+#define ProjectWorldPositionToScreen_02019f84 NNS_G3dWorldPosToScrPos
+#define VEC_DotProduct_01ff9e6c VEC_DotProduct
+#define VEC_NormalizeUnchecked_01ff9f88 VEC_Normalize
+#define VEC_Normalize_01ffaff4 func_01ffaff4
+#define VEC_Subtract_01ff9e3c VEC_Subtract
+#define data_0205ab3c NNS_G3dGlb_camPos
+#define func_ov046_020c19f0 func_ov046_020c1a10
+#define func_ov046_020c1a48 func_ov046_020c1a68
+#define func_ov046_020c1a70 Camera_ComputeFollowDistance
+#define func_ov047_020c4768 Camera_FollowControllerUpdate
+#include "src/ov047/camera/Camera_FollowLeaderTarget_020c491c.c"

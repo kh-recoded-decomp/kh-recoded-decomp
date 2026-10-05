@@ -1,0 +1,5 @@
+#define Camera_SetTrackingMode_020c3558 Camera_SetTrackingMode
+#define data_ov047_020c7288 data_ov047_020c72a8
+#define func_ov046_020c19f0 func_ov046_020c1a10
+#define g_cameraManager_020c34e0 data_ov046_020c3500
+#include "src/ov047/camera/Camera_SetTrackingMode_020c3558.c"

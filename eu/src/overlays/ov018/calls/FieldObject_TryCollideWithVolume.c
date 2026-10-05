@@ -1,6 +1,6 @@
 #define FieldObject_TryCollideWithVolume_020a2400 FieldObject_TryCollideWithVolume
 #define VEC_Subtract_01ff9e3c VEC_Subtract
-#define data_020558a0 gCollisionTestPairDispatch
-#define data_02055930 gCollisionSweepPairDispatch
+#define data_020558a0 gCollisionTestDispatch
+#define data_02055930 gCollisionSweepDispatch
 #define func_02036240 ActorRegistry_GetEntityByIndex
 #include "src/ov018/collision/FieldObject_TryCollideWithVolume_020a2400.c"

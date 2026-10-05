@@ -1,0 +1,8 @@
+#define Camera_UpdateManualTurn_020c4668 Camera_UpdateManualTurn
+#define func_ov046_020c19b4 Camera_GetSpeedScaledStep
+#define func_ov046_020c19f0 func_ov046_020c1a10
+#define func_ov046_020c1a48 func_ov046_020c1a68
+#define func_ov046_020c1a70 Camera_ComputeFollowDistance
+#define func_ov046_020c2ab8 func_ov046_020c2ad8
+#define g_cameraManager_020c34e0 data_ov046_020c3500
+#include "src/ov047/camera/Camera_UpdateManualTurn_020c4668.c"

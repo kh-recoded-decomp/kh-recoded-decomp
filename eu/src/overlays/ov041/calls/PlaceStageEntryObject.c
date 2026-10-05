@@ -1,0 +1,7 @@
+#define GetStageGridPosition_020c2b5c GetStageGridPosition
+#define Obj_SetPosition_0203569c Obj_SetPosition
+#define PlaceStageEntryObject_020c0940 PlaceStageEntryObject
+#define func_ov041_020c0ef0 func_ov041_020c0f10
+#define func_ov041_020c18cc SpawnStageEntryActor
+#define func_ov041_020c1d18 func_ov041_020c1d38
+#include "src/ov041/unclassified_helpers/PlaceStageEntryObject_020c0940.c"

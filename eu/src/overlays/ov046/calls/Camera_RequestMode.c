@@ -1,4 +1,4 @@
 #define Camera_RequestMode_020c0d88 Camera_RequestMode
-#define Camera_SetMode_020c36c8 func_ov047_020c36e8
+#define Camera_SetMode_020c36c8 Camera_SetMode
 #define g_cameraManager_020c34e0 data_ov046_020c3500
 #include "src/ov046/shared_engine/Camera_RequestMode_020c0d88.c"

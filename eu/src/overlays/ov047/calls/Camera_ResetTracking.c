@@ -1,0 +1,9 @@
+#define Camera_ResetTracking_020c3884 Camera_ResetTracking
+#define VEC_Subtract_01ff9e3c VEC_Subtract
+#define data_02053438 data_0205344c
+#define func_01ff9f88 VEC_Normalize
+#define func_ov046_020c19f0 func_ov046_020c1a10
+#define func_ov046_020c1a48 func_ov046_020c1a68
+#define func_ov046_020c1a70 Camera_ComputeFollowDistance
+#define func_ov047_020c4768 Camera_FollowControllerUpdate
+#include "src/ov047/camera/Camera_ResetTracking_020c3884.c"

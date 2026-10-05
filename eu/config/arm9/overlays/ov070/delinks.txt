@@ -16,6 +16,22 @@ src/overlays/ov070/calls/StopOv070BossEffects.c:
     complete
     .text       start:0x020d8230 end:0x020d829a
 
+src/overlays/ov070/calls/StopOv070BossEffectsForOwner.c:
+    complete
+    .text       start:0x020d829c end:0x020d82aa
+
+src/overlays/ov070/calls/FreeOv070ContextBuffer.c:
+    complete
+    .text       start:0x020d82ac end:0x020d82bc
+
+src/overlays/ov070/calls/UpdateOv070BossProjectiles.c:
+    complete
+    .text       start:0x020d82bc end:0x020d85e8
+
+src/overlays/ov070/calls/UpdateOv070BossTurnState.c:
+    complete
+    .text       start:0x020d85e8 end:0x020d88b4
+
 src/overlays/ov070/calls/CreateOv070BossObject.c:
     complete
     .text       start:0x020d88b4 end:0x020d8a24

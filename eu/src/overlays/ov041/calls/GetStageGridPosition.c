@@ -1,0 +1,4 @@
+#define GetStageGridPosition_020c2b5c GetStageGridPosition
+#define data_ov041_020cf79c data_ov041_020cf7bc
+#define data_ov041_020cf80c data_ov041_020cf82c
+#include "src/ov041/unclassified_helpers/GetStageGridPosition_020c2b5c.c"
