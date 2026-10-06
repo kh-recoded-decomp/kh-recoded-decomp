@@ -51,6 +51,10 @@ src/overlays/ov007/calls/func_ov007_020a0894.c:
     complete
     .text       start:0x020a0894 end:0x020a08a2
 
+src/overlays/ov007/calls/func_ov007_020a08a4.c:
+    complete
+    .text       start:0x020a08a4 end:0x020a08c8
+
 src/overlays/ov007/calls/CanTouchedObjectAct.c:
     complete
     .text       start:0x020a08c8 end:0x020a0928
@@ -95,6 +99,10 @@ src/overlays/ov007/calls/SetPathTable.c:
     complete
     .text       start:0x020a1af4 end:0x020a1b26
 
+src/overlays/ov007/calls/func_ov007_020a1b28.c:
+    complete
+    .text       start:0x020a1b28 end:0x020a1b36
+
 src/overlays/ov007/calls/ResetSlotFlags.c:
     complete
     .text       start:0x020a1b38 end:0x020a1b5c
@@ -106,6 +114,10 @@ src/overlays/ov007/calls/SetSlotSide.c:
 src/overlays/ov007/calls/SetTargetPosition_020a1b84.c:
     complete
     .text       start:0x020a1b84 end:0x020a1ba0
+
+src/overlays/ov007/calls/func_ov007_020a1ba0.c:
+    complete
+    .text       start:0x020a1ba0 end:0x020a1be0
 
 src/overlays/ov007/calls/InitTaskCallbacks.c:
     complete

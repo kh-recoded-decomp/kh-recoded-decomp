@@ -80,9 +80,21 @@ src/overlays/ov077/calls/BeginSlotItemSelection.c:
     complete
     .text       start:0x020c5ce8 end:0x020c5db8
 
+src/overlays/ov077/calls/func_ov077_020c5db8.c:
+    complete
+    .text       start:0x020c5db8 end:0x020c5df8
+
 src/overlays/ov077/calls/UsePartySlotItem.c:
     complete
     .text       start:0x020c5df8 end:0x020c5f14
+
+src/overlays/ov077/calls/func_ov077_020c5f14.c:
+    complete
+    .text       start:0x020c5f14 end:0x020c5f48
+
+src/overlays/ov077/calls/func_ov077_020c5f48.c:
+    complete
+    .text       start:0x020c5f48 end:0x020c5f7c
 
 src/overlays/ov077/calls/func_ov077_020c5f7c.c:
     complete
@@ -148,6 +160,10 @@ src/overlays/ov077/calls/AddToSelectionCounters_020c7564.c:
     complete
     .text       start:0x020c7564 end:0x020c7594
 
+src/overlays/ov077/calls/func_ov077_020c7594.c:
+    complete
+    .text       start:0x020c7594 end:0x020c765c
+
 src/overlays/ov077/calls/func_ov077_020c765c.c:
     complete
     .text       start:0x020c765c end:0x020c7664
@@ -155,6 +171,10 @@ src/overlays/ov077/calls/func_ov077_020c765c.c:
 src/overlays/ov077/calls/func_ov077_020c7664.c:
     complete
     .text       start:0x020c7664 end:0x020c7678
+
+src/overlays/ov077/calls/func_ov077_020c7678.c:
+    complete
+    .text       start:0x020c7678 end:0x020c774a
 
 src/overlays/ov077/calls/ItemList_ReturnCursorItem_020c774c.c:
     complete
@@ -164,6 +184,18 @@ src/overlays/ov077/calls/OpenItemConfirmWindow.c:
     complete
     .text       start:0x020c7810 end:0x020c7914
 
+src/overlays/ov077/calls/func_ov077_020c7914.c:
+    complete
+    .text       start:0x020c7914 end:0x020c7930
+
+src/overlays/ov077/calls/func_ov077_020c7930.c:
+    complete
+    .text       start:0x020c7930 end:0x020c794c
+
+src/overlays/ov077/calls/func_ov077_020c794c.c:
+    complete
+    .text       start:0x020c794c end:0x020c79c4
+
 src/overlays/ov077/calls/CancelAndCloseMenu.c:
     complete
     .text       start:0x020c79c4 end:0x020c79dc
@@ -172,13 +204,37 @@ src/overlays/ov077/calls/MenuPanel_ConfirmSelection_020c79dc.c:
     complete
     .text       start:0x020c79dc end:0x020c7a68
 
+src/overlays/ov077/calls/func_ov077_020c7a68.c:
+    complete
+    .text       start:0x020c7a68 end:0x020c7a98
+
 src/overlays/ov077/calls/IsPartyLevelSufficient_020c7a98.c:
     complete
     .text       start:0x020c7a98 end:0x020c7b34
 
+src/overlays/ov077/calls/func_ov077_020c7b34.c:
+    complete
+    .text       start:0x020c7b34 end:0x020c7b70
+
+src/overlays/ov077/calls/func_ov077_020c7b70.c:
+    complete
+    .text       start:0x020c7b70 end:0x020c7b8c
+
 src/overlays/ov077/calls/CanUseItemEntry.c:
     complete
     .text       start:0x020c7b8c end:0x020c7ce8
+
+src/overlays/ov077/calls/func_ov077_020c7ce8.c:
+    complete
+    .text       start:0x020c7ce8 end:0x020c7d44
+
+src/overlays/ov077/calls/func_ov077_020c7d44.c:
+    complete
+    .text       start:0x020c7d44 end:0x020c7e5c
+
+src/overlays/ov077/calls/func_ov077_020c7e5c.c:
+    complete
+    .text       start:0x020c7e5c end:0x020c7e90
 
 src/overlays/ov077/calls/HandleYesNoWindowInput.c:
     complete
@@ -187,6 +243,10 @@ src/overlays/ov077/calls/HandleYesNoWindowInput.c:
 src/overlays/ov077/calls/MeasureTextLine_020c8120.c:
     complete
     .text       start:0x020c8120 end:0x020c8188
+
+src/overlays/ov077/calls/func_ov077_020c8188.c:
+    complete
+    .text       start:0x020c8188 end:0x020c81f8
 
 src/overlays/ov077/calls/OpenMessageWindow_020c81f8.c:
     complete
@@ -243,6 +303,10 @@ src/overlays/ov077/calls/SetFlagGatedElementsVisible.c:
 src/overlays/ov077/auto/func_ov077_020c9f7c.c:
     complete
     .text       start:0x020c9f7c end:0x020c9f7e
+
+src/overlays/ov077/calls/func_ov077_020c9f80.c:
+    complete
+    .text       start:0x020c9f80 end:0x020ca104
 
 src/overlays/ov077/data/bss/Bss_ov077_020ca3a0.c:
     complete

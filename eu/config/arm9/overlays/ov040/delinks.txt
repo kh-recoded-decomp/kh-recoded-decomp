@@ -24,9 +24,17 @@ src/overlays/ov040/calls/SwitchAreaLayers.c:
     complete
     .text       start:0x020bc730 end:0x020bc774
 
+src/overlays/ov040/calls/func_ov040_020bc774.c:
+    complete
+    .text       start:0x020bc774 end:0x020bc7a4
+
 src/overlays/ov040/calls/UpdateAreaProgressLevel.c:
     complete
     .text       start:0x020bc7a4 end:0x020bc83c
+
+src/overlays/ov040/calls/func_ov040_020bc83c.c:
+    complete
+    .text       start:0x020bc83c end:0x020bc858
 
 src/overlays/ov040/calls/BuildAreaObjectLists.c:
     complete
@@ -40,9 +48,21 @@ src/overlays/ov040/calls/InitInstanceFromTemplate.c:
     complete
     .text       start:0x020bca90 end:0x020bcc44
 
+src/overlays/ov040/calls/func_ov040_020bcc44.c:
+    complete
+    .text       start:0x020bcc44 end:0x020bcc7e
+
 src/overlays/ov040/calls/ResetAreaMeshValues.c:
     complete
     .text       start:0x020bcc80 end:0x020bcd28
+
+src/overlays/ov040/calls/func_ov040_020bcd28.c:
+    complete
+    .text       start:0x020bcd28 end:0x020bcd6a
+
+src/overlays/ov040/calls/func_ov040_020bd0f4.c:
+    complete
+    .text       start:0x020bd0f4 end:0x020bd128
 
 src/overlays/ov040/calls/StartAreaCameraIntro.c:
     complete
@@ -52,13 +72,37 @@ src/overlays/ov040/calls/TickIntroRotation.c:
     complete
     .text       start:0x020bd384 end:0x020bd418
 
+src/overlays/ov040/calls/func_ov040_020bd418.c:
+    complete
+    .text       start:0x020bd418 end:0x020bd484
+
 src/overlays/ov040/calls/FadeInAreaScreens.c:
     complete
     .text       start:0x020bd484 end:0x020bd548
 
+src/overlays/ov040/calls/func_ov040_020bd548.c:
+    complete
+    .text       start:0x020bd548 end:0x020bd568
+
 src/overlays/ov040/calls/EnterState13WithHalfRate.c:
     complete
     .text       start:0x020bd5c4 end:0x020bd5de
+
+src/overlays/ov040/calls/func_ov040_020bd5e0.c:
+    complete
+    .text       start:0x020bd5e0 end:0x020bd602
+
+src/overlays/ov040/calls/func_ov040_020bd604.c:
+    complete
+    .text       start:0x020bd604 end:0x020bd624
+
+src/overlays/ov040/calls/func_ov040_020bd624.c:
+    complete
+    .text       start:0x020bd624 end:0x020bd648
+
+src/overlays/ov040/calls/func_ov040_020bd648.c:
+    complete
+    .text       start:0x020bd648 end:0x020bd68c
 
 src/overlays/ov040/calls/FinishAreaTransition.c:
     complete
@@ -88,6 +132,10 @@ src/overlays/ov040/calls/AdvanceLoopingAnimation.c:
     complete
     .text       start:0x020bdb2c end:0x020bdb70
 
+src/overlays/ov040/calls/func_ov040_020bdb70.c:
+    complete
+    .text       start:0x020bdb70 end:0x020bdba4
+
 src/overlays/ov040/calls/func_ov040_020bdba4.c:
     complete
     .text       start:0x020bdba4 end:0x020bdbac
@@ -95,6 +143,10 @@ src/overlays/ov040/calls/func_ov040_020bdba4.c:
 src/overlays/ov040/calls/RewardFlagToItemCode.c:
     complete
     .text       start:0x020bdbac end:0x020bdc44
+
+src/overlays/ov040/calls/func_ov040_020bdc44.c:
+    complete
+    .text       start:0x020bdc44 end:0x020bdcb4
 
 src/overlays/ov040/calls/ApplyPendingFlagReward.c:
     complete
@@ -108,9 +160,17 @@ src/overlays/ov040/calls/UpdateRewardMenuHighlights.c:
     complete
     .text       start:0x020bde88 end:0x020bdf9c
 
+src/overlays/ov040/calls/func_ov040_020bdf9c.c:
+    complete
+    .text       start:0x020bdf9c end:0x020be00c
+
 src/overlays/ov040/calls/func_ov040_020be00c.c:
     complete
     .text       start:0x020be00c end:0x020be028
+
+src/overlays/ov040/calls/func_ov040_020be028.c:
+    complete
+    .text       start:0x020be028 end:0x020be03c
 
 src/overlays/ov040/calls/GrantRewardItem.c:
     complete

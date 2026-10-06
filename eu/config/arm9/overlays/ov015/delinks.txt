@@ -12,9 +12,29 @@ src/overlays/ov015/calls/ShutdownPanelState_0206c4d4.c:
     complete
     .text       start:0x0206c4d4 end:0x0206c4f0
 
+src/overlays/ov015/calls/func_ov015_0206c4f0.c:
+    complete
+    .text       start:0x0206c4f0 end:0x0206c5dc
+
+src/overlays/ov015/calls/func_ov015_0206c5dc.c:
+    complete
+    .text       start:0x0206c5dc end:0x0206c660
+
 src/overlays/ov015/calls/func_ov015_0206c660.c:
     complete
     .text       start:0x0206c660 end:0x0206c670
+
+src/overlays/ov015/calls/func_ov015_0206c670.c:
+    complete
+    .text       start:0x0206c670 end:0x0206c6bc
+
+src/overlays/ov015/calls/func_ov015_0206c6bc.c:
+    complete
+    .text       start:0x0206c6bc end:0x0206c708
+
+src/overlays/ov015/calls/func_ov015_0206e658.c:
+    complete
+    .text       start:0x0206e658 end:0x0206e730
 
 src/overlays/ov015/calls/InitPanelMainScreen.c:
     complete
@@ -27,6 +47,14 @@ src/overlays/ov015/calls/DrawCenteredLabel.c:
 src/overlays/ov015/calls/DrawPanelInfoText.c:
     complete
     .text       start:0x0206eba4 end:0x0206edc8
+
+src/overlays/ov015/calls/func_ov015_0206edc8.c:
+    complete
+    .text       start:0x0206edc8 end:0x0206eefc
+
+src/overlays/ov015/calls/func_ov015_0206eefc.c:
+    complete
+    .text       start:0x0206eefc end:0x0206f048
 
 src/overlays/ov015/calls/ShowPlayerCardSummary.c:
     complete
@@ -72,6 +100,10 @@ src/overlays/ov015/calls/HasIdleActiveEntry.c:
     complete
     .text       start:0x0206fa38 end:0x0206fa98
 
+src/overlays/ov015/calls/func_ov015_0206fa98.c:
+    complete
+    .text       start:0x0206fa98 end:0x0206fb14
+
 src/overlays/ov015/calls/AnimatePanelBackground.c:
     complete
     .text       start:0x0206fb14 end:0x0206fb6c
@@ -116,6 +148,10 @@ src/overlays/ov015/calls/StepPanelCursorBlink.c:
     complete
     .text       start:0x020709ec end:0x02070af8
 
+src/overlays/ov015/calls/func_ov015_02070af8.c:
+    complete
+    .text       start:0x02070af8 end:0x02070b60
+
 src/overlays/ov015/calls/ResetPanelExitFlags.c:
     complete
     .text       start:0x02070b60 end:0x02070b8c
@@ -140,6 +176,10 @@ src/overlays/ov015/calls/func_ov015_02070fa8.c:
     complete
     .text       start:0x02070fa8 end:0x02070fb4
 
+src/overlays/ov015/calls/func_ov015_02070fb4.c:
+    complete
+    .text       start:0x02070fb4 end:0x02070fe8
+
 src/overlays/ov015/calls/UpdatePanelPendingAction.c:
     complete
     .text       start:0x02070fe8 end:0x02071060
@@ -160,6 +200,10 @@ src/overlays/ov015/calls/func_ov015_020716ec.c:
     complete
     .text       start:0x020716ec end:0x020716f8
 
+src/overlays/ov015/calls/func_ov015_020716f8.c:
+    complete
+    .text       start:0x020716f8 end:0x020718fc
+
 src/overlays/ov015/calls/HidePanelOptionSlots.c:
     complete
     .text       start:0x020718fc end:0x02071a78
@@ -168,6 +212,10 @@ src/overlays/ov015/calls/func_ov015_02071a78.c:
     complete
     .text       start:0x02071a78 end:0x02071a88
 
+src/overlays/ov015/calls/func_ov015_02071a88.c:
+    complete
+    .text       start:0x02071a88 end:0x02071ab0
+
 src/overlays/ov015/auto/func_ov015_02071ab0.c:
     complete
     .text       start:0x02071ab0 end:0x02071ab4
@@ -175,6 +223,10 @@ src/overlays/ov015/auto/func_ov015_02071ab0.c:
 src/overlays/ov015/calls/OpenResultPanel.c:
     complete
     .text       start:0x02071ab4 end:0x02071bec
+
+src/overlays/ov015/calls/func_ov015_02071bec.c:
+    complete
+    .text       start:0x02071bec end:0x02071c60
 
 src/overlays/ov015/calls/RequestPanelConfirm.c:
     complete
@@ -187,6 +239,10 @@ src/overlays/ov015/calls/ResetPanelEntry9.c:
 src/overlays/ov015/calls/UpdatePanelResultPhase.c:
     complete
     .text       start:0x02071d0c end:0x02071e2c
+
+src/overlays/ov015/calls/func_ov015_02071e48.c:
+    complete
+    .text       start:0x02071e48 end:0x02071fdc
 
 src/overlays/ov015/calls/UpdatePanelConfirmSequence.c:
     complete
@@ -208,6 +264,10 @@ src/overlays/ov015/auto/func_ov015_02072754.c:
     complete
     .text       start:0x02072754 end:0x02072758
 
+src/overlays/ov015/calls/func_ov015_02072758.c:
+    complete
+    .text       start:0x02072758 end:0x02072814
+
 src/overlays/ov015/calls/func_ov015_02072830.c:
     complete
     .text       start:0x02072830 end:0x0207283c
@@ -223,6 +283,18 @@ src/overlays/ov015/calls/func_ov015_02072848.c:
 src/overlays/ov015/calls/func_ov015_02072854.c:
     complete
     .text       start:0x02072854 end:0x02072860
+
+src/overlays/ov015/calls/func_ov015_02072860.c:
+    complete
+    .text       start:0x02072860 end:0x02072878
+
+src/overlays/ov015/calls/func_ov015_02072878.c:
+    complete
+    .text       start:0x02072878 end:0x02072890
+
+src/overlays/ov015/calls/func_ov015_02072890.c:
+    complete
+    .text       start:0x02072890 end:0x020728a8
 
 src/overlays/ov015/calls/SelectPanelOptionA.c:
     complete
@@ -248,6 +320,10 @@ src/overlays/ov015/calls/UpdateConnectTimer.c:
     complete
     .text       start:0x02072c48 end:0x02072cb4
 
+src/overlays/ov015/calls/func_ov015_02072cb4.c:
+    complete
+    .text       start:0x02072cb4 end:0x02072cec
+
 libs/nns/snd/calls/func_ov015_02072cec.c:
     complete
     .text       start:0x02072cec end:0x02072d00
@@ -259,6 +335,14 @@ src/overlays/ov015/calls/InitPanelRecordFromProfile.c:
 src/overlays/ov015/calls/GenerateRandomProfile.c:
     complete
     .text       start:0x02072dd8 end:0x02072ee4
+
+src/overlays/ov015/calls/func_ov015_02072ee4.c:
+    complete
+    .text       start:0x02072ee4 end:0x02072f4c
+
+src/overlays/ov015/calls/func_ov015_02072f7c.c:
+    complete
+    .text       start:0x02072f7c end:0x02072f98
 
 src/overlays/ov015/auto/func_ov015_02072f98.c:
     complete
@@ -320,9 +404,17 @@ src/overlays/ov015/auto/func_ov015_020731b8.c:
     complete
     .text       start:0x020731b8 end:0x020731bc
 
+src/overlays/ov015/calls/func_ov015_020731d4.c:
+    complete
+    .text       start:0x020731d4 end:0x0207321c
+
 src/overlays/ov015/auto/func_ov015_0207321c.c:
     complete
     .text       start:0x0207321c end:0x02073220
+
+src/overlays/ov015/calls/func_ov015_02073238.c:
+    complete
+    .text       start:0x02073238 end:0x02073280
 
 src/overlays/ov015/auto/func_ov015_02073280.c:
     complete
@@ -372,6 +464,10 @@ src/overlays/ov015/calls/WH_StateOutSetParentParam.c:
     complete
     .text       start:0x02073830 end:0x02073894
 
+src/overlays/ov015/calls/func_ov015_02073894.c:
+    complete
+    .text       start:0x02073894 end:0x020738f8
+
 src/overlays/ov015/calls/func_ov015_020738f8.c:
     complete
     .text       start:0x020738f8 end:0x02073930
@@ -383,6 +479,10 @@ src/overlays/ov015/calls/WH_StartScanStep.c:
 src/overlays/ov015/calls/StartWirelessMP.c:
     complete
     .text       start:0x02073aa0 end:0x02073b30
+
+src/overlays/ov015/calls/func_ov015_02073c48.c:
+    complete
+    .text       start:0x02073c48 end:0x02073c7c
 
 src/overlays/ov015/calls/WH_EndChildStep.c:
     complete
@@ -451,6 +551,10 @@ src/overlays/ov015/calls/func_ov015_02074634.c:
 src/overlays/ov015/calls/func_ov015_02074664.c:
     complete
     .text       start:0x02074664 end:0x02074698
+
+src/overlays/ov015/calls/func_ov015_02074698.c:
+    complete
+    .text       start:0x02074698 end:0x020746d4
 
 src/overlays/ov015/calls/HandlePanelConfirmSelection.c:
     complete
@@ -540,6 +644,10 @@ src/overlays/ov015/calls/SetPanelPendingValue.c:
     complete
     .text       start:0x02075014 end:0x02075024
 
+src/overlays/ov015/calls/func_ov015_02075024.c:
+    complete
+    .text       start:0x02075024 end:0x02075034
+
 src/overlays/ov015/calls/SetupResultPanel.c:
     complete
     .text       start:0x0207509c end:0x020752f4
@@ -548,9 +656,17 @@ src/overlays/ov015/calls/ReleaseWorkBuffer.c:
     complete
     .text       start:0x020752f4 end:0x02075320
 
+src/overlays/ov015/calls/func_ov015_02075320.c:
+    complete
+    .text       start:0x02075320 end:0x02075338
+
 src/overlays/ov015/auto/func_ov015_02075338.c:
     complete
     .text       start:0x02075338 end:0x0207533c
+
+src/overlays/ov015/calls/func_ov015_0207634c.c:
+    complete
+    .text       start:0x0207634c end:0x020763a8
 
 src/overlays/ov015/calls/RunPanelIntroSequence.c:
     complete
@@ -560,9 +676,21 @@ src/overlays/ov015/calls/UpdatePanelBoard.c:
     complete
     .text       start:0x020764c4 end:0x020766d0
 
+src/overlays/ov015/calls/func_ov015_02077904.c:
+    complete
+    .text       start:0x02077904 end:0x0207793c
+
 src/overlays/ov015/calls/StopPanelSequence.c:
     complete
     .text       start:0x0207793c end:0x02077978
+
+src/overlays/ov015/calls/func_ov015_02077978.c:
+    complete
+    .text       start:0x02077978 end:0x020779a4
+
+src/overlays/ov015/calls/func_ov015_020779a4.c:
+    complete
+    .text       start:0x020779a4 end:0x020779c4
 
 src/overlays/ov015/calls/GetPanelPageCount.c:
     complete
@@ -604,6 +732,10 @@ src/overlays/ov015/calls/GrantRewardEntry.c:
     complete
     .text       start:0x02078438 end:0x02078554
 
+src/overlays/ov015/calls/func_ov015_02078554.c:
+    complete
+    .text       start:0x02078554 end:0x020785f8
+
 src/overlays/ov015/calls/SetSceneRecordValue.c:
     complete
     .text       start:0x020785f8 end:0x02078638
@@ -619,6 +751,10 @@ src/overlays/ov015/calls/SwapPanelSlots.c:
 src/overlays/ov015/calls/PickWeightedEntry.c:
     complete
     .text       start:0x020788a8 end:0x02078918
+
+src/overlays/ov015/calls/func_ov015_02078918.c:
+    complete
+    .text       start:0x02078918 end:0x02078950
 
 src/overlays/ov015/calls/MeasureTextWidth.c:
     complete
@@ -668,9 +804,21 @@ src/overlays/ov015/calls/MI_CpuClear32_0x800.c:
     complete
     .text       start:0x02078f00 end:0x02078f18
 
+src/overlays/ov015/calls/func_ov015_02078f18.c:
+    complete
+    .text       start:0x02078f18 end:0x02078f34
+
 src/overlays/ov015/calls/ClearSubBg2Screen.c:
     complete
     .text       start:0x02078f34 end:0x02078f58
+
+src/overlays/ov015/calls/func_ov015_020790c0.c:
+    complete
+    .text       start:0x020790c0 end:0x020790e8
+
+src/overlays/ov015/calls/func_ov015_020790e8.c:
+    complete
+    .text       start:0x020790e8 end:0x02079108
 
 src/overlays/ov015/calls/IsCursorOffscreen.c:
     complete

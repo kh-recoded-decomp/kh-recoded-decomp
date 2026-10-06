@@ -4,6 +4,10 @@
     .data       start:0x020c1780 end:0x020c28e0 kind:data align:32
     .bss        start:0x020c28e0 end:0x020c2900 kind:bss align:32
 
+src/overlays/ov095/calls/func_ov095_020bed84.c:
+    complete
+    .text       start:0x020bed84 end:0x020bee18
+
 src/overlays/ov095/calls/UpdatePanelFrame.c:
     complete
     .text       start:0x020bee18 end:0x020bee8c
@@ -23,6 +27,14 @@ src/overlays/ov095/calls/ShowPreviousEntry.c:
 src/overlays/ov095/calls/ShowNextEntry.c:
     complete
     .text       start:0x020befa4 end:0x020befd4
+
+src/overlays/ov095/calls/func_ov095_020befd4.c:
+    complete
+    .text       start:0x020befd4 end:0x020beffc
+
+src/overlays/ov095/calls/func_ov095_020beffc.c:
+    complete
+    .text       start:0x020beffc end:0x020bf02c
 
 src/overlays/ov095/calls/CloseEntryDetail.c:
     complete
@@ -56,9 +68,17 @@ src/overlays/ov095/calls/DrawShadowedAnchoredText_020c0000.c:
     complete
     .text       start:0x020c0000 end:0x020c0064
 
+src/overlays/ov095/calls/func_ov095_020c0064.c:
+    complete
+    .text       start:0x020c0064 end:0x020c00c0
+
 src/overlays/ov095/calls/DrawShadowedTextFitted.c:
     complete
     .text       start:0x020c00c0 end:0x020c0148
+
+src/overlays/ov095/calls/func_ov095_020c0148.c:
+    complete
+    .text       start:0x020c0148 end:0x020c01cc
 
 src/overlays/ov095/calls/ReleaseSlotPool.c:
     complete
@@ -163,6 +183,10 @@ src/overlays/ov095/calls/SetEntryFlag_020c1374.c:
 src/overlays/ov095/calls/ClearEntryFlag_020c139c.c:
     complete
     .text       start:0x020c139c end:0x020c13c4
+
+src/overlays/ov095/calls/func_ov095_020c1628.c:
+    complete
+    .text       start:0x020c1628 end:0x020c1714
 
 src/overlays/ov095/data/bss/Bss_ov095_020c28e0.c:
     complete

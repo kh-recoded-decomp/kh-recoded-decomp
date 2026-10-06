@@ -36,6 +36,14 @@ src/overlays/ov004/calls/LoadScrollTextResources.c:
     complete
     .text       start:0x02061598 end:0x02061694
 
+src/overlays/ov004/calls/func_ov004_02061694.c:
+    complete
+    .text       start:0x02061694 end:0x020616b4
+
+src/overlays/ov004/calls/func_ov004_020616b4.c:
+    complete
+    .text       start:0x020616b4 end:0x020616d4
+
 src/overlays/ov004/calls/ReleaseScrollTextWork.c:
     complete
     .text       start:0x020616d4 end:0x02061830

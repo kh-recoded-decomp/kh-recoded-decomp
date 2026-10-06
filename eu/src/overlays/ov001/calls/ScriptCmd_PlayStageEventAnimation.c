@@ -1,6 +1,6 @@
 #define ScriptCmd_PlayStageEventAnimation_0208ec70 ScriptCmd_PlayStageEventAnimation
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
 #define func_ov001_02088064 ChainedConditionCheck
-#define func_ov001_02088080 func_ov001_020880a8
+#define func_ov001_02088080 StageEvent_ProbeRecord
 #define func_ov001_0208808c func_ov001_020880b4
 #include "src/ov001/scripted_actor_behavior/ScriptCmd_PlayStageEventAnimation_0208ec70.c"

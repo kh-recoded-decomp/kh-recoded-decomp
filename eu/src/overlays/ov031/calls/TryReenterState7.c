@@ -1,4 +1,5 @@
 #define TryReenterState7_020ba95c TryReenterState7
 #define func_ov001_0206430c MarkFieldValueNegative
 #define func_ov001_0206a814 IsScreenModeIdle
+#define func_ov001_02063130 SetFieldStateValue
 #include "src/ov031/state_machine/TryReenterState7_020ba95c.c"

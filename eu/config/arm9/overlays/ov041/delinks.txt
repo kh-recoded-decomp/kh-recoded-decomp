@@ -44,6 +44,10 @@ src/overlays/ov041/calls/UpdateSceneFade.c:
     complete
     .text       start:0x020bcd08 end:0x020bcd78
 
+src/overlays/ov041/calls/func_ov041_020bcd78.c:
+    complete
+    .text       start:0x020bcd78 end:0x020bcd90
+
 src/overlays/ov041/calls/GetStageKindSoundId.c:
     complete
     .text       start:0x020bcd90 end:0x020bce3e
@@ -144,6 +148,10 @@ src/overlays/ov041/calls/GetStageGridPosition.c:
     complete
     .text       start:0x020c2b7c end:0x020c2bd0
 
+src/overlays/ov041/calls/func_ov041_020c3678.c:
+    complete
+    .text       start:0x020c3678 end:0x020c36b8
+
 src/overlays/ov041/calls/GetActorAnimTrack.c:
     complete
     .text       start:0x020c36b8 end:0x020c370c
@@ -175,6 +183,10 @@ src/overlays/ov041/calls/LoadSharedRecordField.c:
 src/overlays/ov041/calls/InitRecordOwnerSlots.c:
     complete
     .text       start:0x020ce1c8 end:0x020ce200
+
+src/overlays/ov041/calls/func_ov041_020ce200.c:
+    complete
+    .text       start:0x020ce200 end:0x020ce210
 
 src/overlays/ov041/data/bss/Bss_ov041_020cff40.c:
     complete

@@ -15,9 +15,25 @@ src/overlays/ov018/calls/ResetKindDirection.c:
     complete
     .text       start:0x020a1edc end:0x020a1f04
 
+src/overlays/ov018/calls/func_ov018_020a1f04.c:
+    complete
+    .text       start:0x020a1f04 end:0x020a1f18
+
 src/overlays/ov018/calls/LoadKind6ObjectPhase.c:
     complete
     .text       start:0x020a1f18 end:0x020a2220
+
+src/overlays/ov018/calls/func_ov018_020a2220.c:
+    complete
+    .text       start:0x020a2220 end:0x020a2234
+
+src/overlays/ov018/calls/func_ov018_020a2234.c:
+    complete
+    .text       start:0x020a2234 end:0x020a225e
+
+src/overlays/ov018/calls/func_ov018_020a2260.c:
+    complete
+    .text       start:0x020a2260 end:0x020a22ba
 
 src/overlays/ov018/calls/FieldObject_TryCollideWithVolume.c:
     complete
@@ -66,6 +82,18 @@ src/overlays/ov018/calls/CreateKind6EntryPool.c:
 src/overlays/ov018/calls/CreateKind6FieldObject.c:
     complete
     .text       start:0x020a3254 end:0x020a335c
+
+src/overlays/ov018/calls/func_ov018_020a3424.c:
+    complete
+    .text       start:0x020a3424 end:0x020a3490
+
+src/overlays/ov018/calls/func_ov018_020a3490.c:
+    complete
+    .text       start:0x020a3490 end:0x020a34a4
+
+src/overlays/ov018/calls/func_ov018_020a34a4.c:
+    complete
+    .text       start:0x020a34a4 end:0x020a3514
 
 src/overlays/ov018/calls/SetScaledPosition.c:
     complete

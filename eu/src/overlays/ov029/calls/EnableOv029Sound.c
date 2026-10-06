@@ -2,7 +2,7 @@
 #define EnableOv029Sound_020ba670 EnableOv029Sound
 #define StoreToGlobalPtr4Field28_0202a778 StoreToGlobalPtr4Field28
 #define func_ov001_0206c2f8 SetMenuHighlight
-#define func_ov001_0207d120 func_ov001_0207d148
+#define func_ov001_0207d120 LoadContextResourceGroups
 #define func_ov001_0207ef40 func_ov001_0207ef68
 #define func_ov021_020af57c func_ov021_020af59c
 #define g_ov029SoundCtx_020baba0 data_ov029_020babc0

@@ -6,4 +6,5 @@
 #define UpdateIdleTimerToggle_0207aec8 UpdateIdleTimerToggle
 #define func_ov001_0207b338 func_ov001_0207b360
 #define func_ov001_0207b3cc func_ov001_0207b3f4
+#define func_ov001_020642a0 IsFieldTrackFlagSet
 #include "src/ov001/field_manager/UpdateIdleTimerToggle_0207aec8.c"

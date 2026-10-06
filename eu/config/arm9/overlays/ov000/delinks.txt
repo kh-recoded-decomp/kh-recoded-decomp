@@ -4,6 +4,10 @@
     .data       start:0x02063840 end:0x02063a00 kind:data align:32
     .bss        start:0x02063a00 end:0x02063a20 kind:bss align:32
 
+src/overlays/ov000/calls/func_ov000_020613e0.c:
+    complete
+    .text       start:0x020613e0 end:0x020613f8
+
 src/overlays/ov000/calls/HasRecentTouchPoints.c:
     complete
     .text       start:0x020613f8 end:0x0206141c
@@ -40,9 +44,17 @@ src/overlays/ov000/calls/ShowPanelBgScreen.c:
     complete
     .text       start:0x02061a80 end:0x02061b30
 
+src/overlays/ov000/calls/func_ov000_02061b30.c:
+    complete
+    .text       start:0x02061b30 end:0x02061b6c
+
 src/overlays/ov000/calls/DSProt_OnDetection.c:
     complete
     .text       start:0x02061b6c end:0x02061b88
+
+src/overlays/ov000/calls/func_ov000_02061b88.c:
+    complete
+    .text       start:0x02061b88 end:0x02061bb0
 
 src/overlays/ov000/calls/IsPanelFlagSet.c:
     complete
@@ -80,6 +92,10 @@ src/overlays/ov000/calls/ApplyPanelSelection.c:
     complete
     .text       start:0x020622b8 end:0x02062318
 
+src/overlays/ov000/calls/func_ov000_02062318.c:
+    complete
+    .text       start:0x02062318 end:0x0206241c
+
 src/overlays/ov000/calls/StopTouchPanelSampling.c:
     complete
     .text       start:0x0206241c end:0x0206243c
@@ -104,6 +120,10 @@ src/overlays/ov000/calls/ScanSaveSlots.c:
     complete
     .text       start:0x020625d4 end:0x0206276c
 
+src/overlays/ov000/calls/func_ov000_0206276c.c:
+    complete
+    .text       start:0x0206276c end:0x02062794
+
 src/overlays/ov000/calls/EnterPanelMenuScreen.c:
     complete
     .text       start:0x02062794 end:0x02062838
@@ -115,6 +135,10 @@ src/overlays/ov000/calls/UpdatePanelInputWithTimeout.c:
 src/overlays/ov000/calls/func_ov000_02062908.c:
     complete
     .text       start:0x02062908 end:0x02062920
+
+src/overlays/ov000/calls/FinishTitlePanel.c:
+    complete
+    .text       start:0x02062920 end:0x02062a10
 
 src/overlays/ov000/calls/TryEnterPanelState.c:
     complete
@@ -148,9 +172,21 @@ src/overlays/ov000/calls/UpdatePanelRequest.c:
     complete
     .text       start:0x02062d60 end:0x02062e00
 
+src/overlays/ov000/calls/BeginTitleSaveFormat.c:
+    complete
+    .text       start:0x02062f44 end:0x02062f74
+
+src/overlays/ov000/calls/WaitTitleSaveFormat.c:
+    complete
+    .text       start:0x02062f74 end:0x0206300c
+
 src/overlays/ov000/calls/func_ov000_0206300c.c:
     complete
     .text       start:0x0206300c end:0x02063018
+
+src/overlays/ov000/calls/ShowTitleFormatNotice.c:
+    complete
+    .text       start:0x02063018 end:0x02063038
 
 src/overlays/ov000/auto/func_ov000_02063038.c:
     complete
@@ -160,9 +196,41 @@ src/overlays/ov000/auto/func_ov000_02063040.c:
     complete
     .text       start:0x02063040 end:0x02063044
 
+src/overlays/ov000/calls/GetFadeProgressLevel.c:
+    complete
+    .text       start:0x02063044 end:0x02063070
+
+src/overlays/ov000/calls/GetFadeOutLevel.c:
+    complete
+    .text       start:0x02063070 end:0x020630a4
+
+src/overlays/ov000/calls/GetFadeInRemainingLevel.c:
+    complete
+    .text       start:0x020630a4 end:0x020630d4
+
+src/overlays/ov000/calls/FadeOutBrightness.c:
+    complete
+    .text       start:0x020630d4 end:0x02063108
+
+src/overlays/ov000/calls/StepPanelFadeIn.c:
+    complete
+    .text       start:0x02063108 end:0x02063170
+
+src/overlays/ov000/calls/SwitchPanelState.c:
+    complete
+    .text       start:0x02063170 end:0x020631d8
+
+src/overlays/ov000/calls/StepPanelFadeOut_020631d8.c:
+    complete
+    .text       start:0x020631d8 end:0x02063240
+
 src/overlays/ov000/calls/TeardownCurrentHeap.c:
     complete
     .text       start:0x020633d8 end:0x02063424
+
+src/overlays/ov000/calls/UpdateTitlePanel.c:
+    complete
+    .text       start:0x02063424 end:0x02063578
 
 src/overlays/ov000/calls/NotifyOv039OfWorld.c:
     complete
@@ -179,6 +247,10 @@ src/overlays/ov000/calls/func_ov000_0206364c.c:
 src/overlays/ov000/calls/func_ov000_02063668.c:
     complete
     .text       start:0x02063668 end:0x02063680
+
+src/overlays/ov000/calls/UpdateOv039Selection.c:
+    complete
+    .text       start:0x020636ec end:0x02063770
 
 src/overlays/ov000/calls/func_ov000_02063770.c:
     complete

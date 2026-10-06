@@ -5,4 +5,5 @@
 #define func_0203574c InitActorRegistry
 #define func_02035774 ShutdownActorRegistry
 #define func_ov001_020633d4 FlushPendingFieldUpdate
+#define func_ov001_020674a0 ResetWorldNamedEntries
 #include "src/ov001/unclassified_helpers/ShutdownSessionOverlays_02062a54.c"

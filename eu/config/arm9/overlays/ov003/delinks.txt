@@ -115,6 +115,10 @@ src/overlays/ov003/calls/advanceMovieStreamWindow.c:
     complete
     .text       start:0x020649a8 end:0x020649fc
 
+src/overlays/ov003/calls/func_ov003_020649fc.c:
+    complete
+    .text       start:0x020649fc end:0x02064ac0
+
 src/overlays/ov003/calls/decodeMovieSubtitleCodeUnit.c:
     complete
     .text       start:0x02064ac0 end:0x02064c10
@@ -127,9 +131,17 @@ src/overlays/ov003/calls/updateMovieStreamLeadTime.c:
     complete
     .text       start:0x02064e2c end:0x02064ec4
 
+src/overlays/ov003/calls/func_ov003_02064ec4.c:
+    complete
+    .text       start:0x02064ec4 end:0x02064fd8
+
 src/overlays/ov003/calls/IsMovieStreamReady.c:
     complete
     .text       start:0x02064fd8 end:0x02065028
+
+src/overlays/ov003/calls/func_ov003_02065028.c:
+    complete
+    .text       start:0x02065028 end:0x0206507c
 
 src/overlays/ov003/calls/SubtitleText_FlushUpload.c:
     complete

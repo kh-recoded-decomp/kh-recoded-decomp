@@ -59,6 +59,10 @@ src/overlays/ov009/calls/IsKind4WithState0Or3.c:
     complete
     .text       start:0x020a0a94 end:0x020a0aae
 
+src/overlays/ov009/calls/func_ov009_020a0ab0.c:
+    complete
+    .text       start:0x020a0ab0 end:0x020a0ad8
+
 src/overlays/ov009/calls/func_ov009_020a0ad8.c:
     complete
     .text       start:0x020a0ad8 end:0x020a0ae2

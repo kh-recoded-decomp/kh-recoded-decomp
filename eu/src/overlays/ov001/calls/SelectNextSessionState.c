@@ -17,4 +17,5 @@
 #define func_ov001_0207b45c func_ov001_0207b484
 #define func_ov001_02087054 func_ov001_0208707c
 #define func_ov046_020c0dd4 Camera_SaveSnapshot
+#define func_ov001_02063130 SetFieldStateValue
 #include "src/ov001/unclassified_helpers/SelectNextSessionState_02062150.c"

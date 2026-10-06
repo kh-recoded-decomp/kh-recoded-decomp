@@ -16,6 +16,18 @@ src/overlays/ov058/calls/HasReachedMoveTarget.c:
     complete
     .text       start:0x020d485c end:0x020d4968
 
+src/overlays/ov058/calls/func_ov058_020d4968.c:
+    complete
+    .text       start:0x020d4968 end:0x020d49dc
+
+src/overlays/ov058/calls/func_ov058_020d49dc.c:
+    complete
+    .text       start:0x020d49dc end:0x020d4a54
+
+src/overlays/ov058/calls/func_ov058_020d4a54.c:
+    complete
+    .text       start:0x020d4a54 end:0x020d4b84
+
 src/overlays/ov058/calls/UpdateEnemyTargetTracking.c:
     complete
     .text       start:0x020d4b84 end:0x020d4fcc
@@ -24,6 +36,18 @@ src/overlays/ov058/calls/RefreshAiModeFromFlags.c:
     complete
     .text       start:0x020d4fcc end:0x020d4ffc
 
+src/overlays/ov058/calls/func_ov058_020d4ffc.c:
+    complete
+    .text       start:0x020d4ffc end:0x020d503c
+
+src/overlays/ov058/calls/func_ov058_020d503c.c:
+    complete
+    .text       start:0x020d503c end:0x020d50cc
+
+src/overlays/ov058/calls/func_ov058_020d50cc.c:
+    complete
+    .text       start:0x020d50cc end:0x020d5180
+
 src/overlays/ov058/calls/CheckEnemyContactAbove.c:
     complete
     .text       start:0x020d5180 end:0x020d5354
@@ -31,6 +55,10 @@ src/overlays/ov058/calls/CheckEnemyContactAbove.c:
 src/overlays/ov058/calls/StartEnemyLaunch.c:
     complete
     .text       start:0x020d5354 end:0x020d546c
+
+src/overlays/ov058/calls/func_ov058_020d546c.c:
+    complete
+    .text       start:0x020d546c end:0x020d5488
 
 src/overlays/ov058/calls/UpdateEnemyDownState.c:
     complete
@@ -132,6 +160,10 @@ src/overlays/ov058/calls/UpdateEffectSlotPhase.c:
     complete
     .text       start:0x020d7660 end:0x020d7740
 
+src/overlays/ov058/calls/func_ov058_020d7740.c:
+    complete
+    .text       start:0x020d7740 end:0x020d7758
+
 src/overlays/ov058/calls/ResetEmitterRigAndApply.c:
     complete
     .text       start:0x020d7758 end:0x020d7784
@@ -159,6 +191,10 @@ src/overlays/ov058/calls/RebindEmitterSlotsPhase1.c:
 src/overlays/ov058/calls/UpdateRaisedModelAnimation.c:
     complete
     .text       start:0x020d7924 end:0x020d79a0
+
+src/overlays/ov058/calls/func_ov058_020d79a0.c:
+    complete
+    .text       start:0x020d79a0 end:0x020d79b8
 
 src/overlays/ov058/calls/PurgeNearbyStageObjects.c:
     complete

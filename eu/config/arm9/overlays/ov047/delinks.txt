@@ -127,6 +127,10 @@ src/overlays/ov047/calls/Camera_ApplyViewState.c:
     complete
     .text       start:0x020c6cc4 end:0x020c6d44
 
+src/overlays/ov047/calls/func_ov047_020c6d44.c:
+    complete
+    .text       start:0x020c6d44 end:0x020c6d52
+
 src/overlays/ov047/calls/Camera_RestoreSavedTracking.c:
     complete
     .text       start:0x020c6d54 end:0x020c6e0c

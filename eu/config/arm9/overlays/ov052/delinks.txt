@@ -64,9 +64,21 @@ src/overlays/ov052/calls/EnterRecoilState.c:
     complete
     .text       start:0x020c959c end:0x020c9648
 
+src/overlays/ov052/calls/func_ov052_020c9648.c:
+    complete
+    .text       start:0x020c9648 end:0x020c969c
+
 src/overlays/ov052/calls/UpdateActorFrame.c:
     complete
     .text       start:0x020c969c end:0x020c97c4
+
+src/overlays/ov052/calls/func_ov052_020c97c4.c:
+    complete
+    .text       start:0x020c97c4 end:0x020c9854
+
+src/overlays/ov052/calls/func_ov052_020c9854.c:
+    complete
+    .text       start:0x020c9854 end:0x020c9894
 
 src/overlays/ov052/calls/ApplyLinkedObjectMotion.c:
     complete
@@ -272,6 +284,10 @@ src/overlays/ov052/calls/InstallActorCallbacks.c:
     complete
     .text       start:0x020cce8c end:0x020ccfa0
 
+src/overlays/ov052/calls/func_ov052_020ccfa0.c:
+    complete
+    .text       start:0x020ccfa0 end:0x020ccfbc
+
 src/overlays/ov052/auto/func_ov052_020ccfbc.c:
     complete
     .text       start:0x020ccfbc end:0x020ccfc4
@@ -299,6 +315,10 @@ src/overlays/ov052/calls/GetTransitionReaction.c:
 src/overlays/ov052/calls/ChangeActorState.c:
     complete
     .text       start:0x020ce0e0 end:0x020ce188
+
+src/overlays/ov052/calls/func_ov052_020ce188.c:
+    complete
+    .text       start:0x020ce188 end:0x020ce1a8
 
 src/overlays/ov052/calls/PlayActorContextSound.c:
     complete
@@ -331,6 +351,14 @@ src/overlays/ov052/calls/SetSubModelsEnabled.c:
 src/overlays/ov052/auto/func_ov052_020ceb74.c:
     complete
     .text       start:0x020ceb74 end:0x020ceb7e
+
+src/overlays/ov052/calls/func_ov052_020ceb80.c:
+    complete
+    .text       start:0x020ceb80 end:0x020ceb90
+
+src/overlays/ov052/calls/func_ov052_020ceb90.c:
+    complete
+    .text       start:0x020ceb90 end:0x020ceb9c
 
 src/overlays/ov052/calls/GetLinkedAngleOffset.c:
     complete
@@ -411,6 +439,10 @@ src/overlays/ov052/calls/IsField1078Clear.c:
 src/overlays/ov052/calls/GetAttachmentWorldPosition.c:
     complete
     .text       start:0x020d069c end:0x020d073c
+
+src/overlays/ov052/calls/func_ov052_020d073c.c:
+    complete
+    .text       start:0x020d073c end:0x020d0768
 
 src/overlays/ov052/calls/UpdateMemberActionTrigger.c:
     complete

@@ -12,6 +12,10 @@ src/overlays/ov014/calls/UpdatePanelBanner.c:
     complete
     .text       start:0x0206cfa0 end:0x0206d1c0
 
+src/overlays/ov014/calls/func_ov014_0206d234.c:
+    complete
+    .text       start:0x0206d234 end:0x0206d25c
+
 src/overlays/ov014/calls/UpdatePanelOpenStep.c:
     complete
     .text       start:0x0206d25c end:0x0206d2e0

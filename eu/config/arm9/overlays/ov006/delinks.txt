@@ -4,9 +4,21 @@
     .data       start:0x020a18e0 end:0x020a1900 kind:data align:32
     .bss        start:0x020a1900 end:0x020a1900 kind:bss align:32
 
+src/overlays/ov006/calls/func_ov006_020a0540.c:
+    complete
+    .text       start:0x020a0540 end:0x020a0604
+
+src/overlays/ov006/calls/func_ov006_020a0604.c:
+    complete
+    .text       start:0x020a0604 end:0x020a0692
+
 src/overlays/ov006/calls/BuildDescendingLevelTable.c:
     complete
     .text       start:0x020a0694 end:0x020a0706
+
+src/overlays/ov006/calls/func_ov006_020a0708.c:
+    complete
+    .text       start:0x020a0708 end:0x020a0774
 
 src/overlays/ov006/calls/RespawnElevatorObject.c:
     complete
@@ -15,6 +27,10 @@ src/overlays/ov006/calls/RespawnElevatorObject.c:
 src/overlays/ov006/auto/func_ov006_020a0a58.c:
     complete
     .text       start:0x020a0a58 end:0x020a0a5c
+
+src/overlays/ov006/calls/func_ov006_020a0c0c.c:
+    complete
+    .text       start:0x020a0c0c end:0x020a0c20
 
 src/overlays/ov006/calls/UpdateElevatorObject.c:
     complete

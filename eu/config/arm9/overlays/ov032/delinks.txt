@@ -32,6 +32,10 @@ src/overlays/ov032/calls/AcknowledgeGroupTransition.c:
     complete
     .text       start:0x020ba960 end:0x020ba98c
 
+src/overlays/ov032/calls/func_ov032_020ba98c.c:
+    complete
+    .text       start:0x020ba98c end:0x020ba9a4
+
 src/overlays/ov032/calls/FinishMovieMenuLoad.c:
     complete
     .text       start:0x020ba9a4 end:0x020baa28
@@ -72,9 +76,21 @@ src/overlays/ov032/calls/FinishGroupActionState.c:
     complete
     .text       start:0x020bb27c end:0x020bb2a4
 
+src/overlays/ov032/calls/func_ov032_020bb2a4.c:
+    complete
+    .text       start:0x020bb2a4 end:0x020bb350
+
 src/overlays/ov032/calls/ClearGroupTransitionFlags.c:
     complete
     .text       start:0x020bb350 end:0x020bb36c
+
+src/overlays/ov032/calls/func_ov032_020bb36c.c:
+    complete
+    .text       start:0x020bb36c end:0x020bb386
+
+src/overlays/ov032/calls/func_ov032_020bb388.c:
+    complete
+    .text       start:0x020bb388 end:0x020bb3c0
 
 src/overlays/ov032/calls/InitMovieGraphics_020bb3c0.c:
     complete
@@ -83,6 +99,14 @@ src/overlays/ov032/calls/InitMovieGraphics_020bb3c0.c:
 src/overlays/ov032/calls/func_ov032_020bb468.c:
     complete
     .text       start:0x020bb468 end:0x020bb480
+
+src/overlays/ov032/calls/func_ov032_020bb480.c:
+    complete
+    .text       start:0x020bb480 end:0x020bb49c
+
+src/overlays/ov032/calls/func_ov032_020bb49c.c:
+    complete
+    .text       start:0x020bb49c end:0x020bb4b4
 
 src/overlays/ov032/calls/SetContextModeAndFlag.c:
     complete
@@ -115,6 +139,10 @@ src/overlays/ov032/calls/UpdateChallengeProgress.c:
 src/overlays/ov032/calls/InstallMovieCallbacks.c:
     complete
     .text       start:0x020bb7bc end:0x020bb828
+
+src/overlays/ov032/calls/func_ov032_020bb828.c:
+    complete
+    .text       start:0x020bb828 end:0x020bb83c
 
 src/overlays/ov032/calls/GetContextIndexedByte.c:
     complete
@@ -200,9 +228,21 @@ src/overlays/ov032/calls/GetRowMoveSpeed.c:
     complete
     .text       start:0x020bbc50 end:0x020bbc5a
 
+src/overlays/ov032/calls/func_ov032_020bbc5c.c:
+    complete
+    .text       start:0x020bbc5c end:0x020bbc80
+
+src/overlays/ov032/calls/func_ov032_020bbc80.c:
+    complete
+    .text       start:0x020bbc80 end:0x020bbc98
+
 src/overlays/ov032/auto/func_ov032_020bbc98.c:
     complete
     .text       start:0x020bbc98 end:0x020bbc9e
+
+src/overlays/ov032/calls/func_ov032_020bbca0.c:
+    complete
+    .text       start:0x020bbca0 end:0x020bbce4
 
 src/overlays/ov032/calls/MoveGroupObjectAndSyncActor.c:
     complete
@@ -215,6 +255,10 @@ src/overlays/ov032/calls/PickWeightedIndex.c:
 src/overlays/ov032/calls/RollRowDropItem.c:
     complete
     .text       start:0x020bbeec end:0x020bbf40
+
+src/overlays/ov032/calls/func_ov032_020bbf40.c:
+    complete
+    .text       start:0x020bbf40 end:0x020bbf50
 
 src/overlays/ov032/calls/HasPendingNibbleChange.c:
     complete
@@ -471,6 +515,10 @@ src/overlays/ov032/calls/UpdateRespawningGroupMember.c:
 src/overlays/ov032/calls/StartGroupPhaseTwo.c:
     complete
     .text       start:0x020bf410 end:0x020bf47c
+
+src/overlays/ov032/calls/func_ov032_020bf47c.c:
+    complete
+    .text       start:0x020bf47c end:0x020bf488
 
 src/overlays/ov032/calls/SpawnGroupMemberGrid.c:
     complete

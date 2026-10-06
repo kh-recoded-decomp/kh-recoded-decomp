@@ -96,6 +96,10 @@ src/overlays/ov034/auto/func_ov034_020bdea4.c:
     complete
     .text       start:0x020bdea4 end:0x020bdea8
 
+src/overlays/ov034/calls/func_ov034_020bdea8.c:
+    complete
+    .text       start:0x020bdea8 end:0x020bdec4
+
 src/overlays/ov034/calls/CreateObjectSlot_020bdec4.c:
     complete
     .text       start:0x020bdec4 end:0x020bdf30
@@ -115,6 +119,10 @@ src/overlays/ov034/calls/InitResultsMovieSourceOps.c:
 src/overlays/ov034/auto/func_ov034_020be734.c:
     complete
     .text       start:0x020be734 end:0x020be736
+
+src/overlays/ov034/calls/func_ov034_020be738.c:
+    complete
+    .text       start:0x020be738 end:0x020be8bc
 
 src/overlays/ov034/data/bss/Bss_ov034_020c0fa0.c:
     complete

@@ -12,6 +12,10 @@ src/overlays/ov023/calls/SetupMenuSubBgLayers.c:
     complete
     .text       start:0x020b58bc end:0x020b5944
 
+src/overlays/ov023/calls/func_ov023_020b5944.c:
+    complete
+    .text       start:0x020b5944 end:0x020b5994
+
 src/overlays/ov023/calls/DestroyFndListIfNonEmpty.c:
     complete
     .text       start:0x020b5994 end:0x020b59ae

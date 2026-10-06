@@ -18,7 +18,7 @@
 #define func_02013b98 NNS_GfdDumpFrmPlttVramManager
 #define func_0202c48c func_0202c4a0
 #define func_ov001_020645e8 ClearSessionPackedBit
-#define func_ov001_0207d120 func_ov001_0207d148
+#define func_ov001_0207d120 LoadContextResourceGroups
 #define func_ov041_020bd740 SetStageDrawLayer
 #define func_ov041_020bec9c IsStageKindAvailable
 #define func_ov041_020c0940 PlaceStageEntryObject

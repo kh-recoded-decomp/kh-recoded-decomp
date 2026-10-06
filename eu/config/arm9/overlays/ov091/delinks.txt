@@ -16,6 +16,10 @@ src/overlays/ov091/calls/DestroyMenuScene.c:
     complete
     .text       start:0x020bed34 end:0x020bed84
 
+src/overlays/ov091/calls/func_ov091_020bed84.c:
+    complete
+    .text       start:0x020bed84 end:0x020bedc0
+
 src/overlays/ov091/calls/MoveEntryCursorUp.c:
     complete
     .text       start:0x020bedc0 end:0x020bee60
@@ -35,6 +39,10 @@ src/overlays/ov091/calls/TryCloseEntryMenu.c:
 src/overlays/ov091/calls/SetupRecordMenuDisplay.c:
     complete
     .text       start:0x020befbc end:0x020bf1b4
+
+src/overlays/ov091/calls/func_ov091_020bf1b4.c:
+    complete
+    .text       start:0x020bf1b4 end:0x020bf1f8
 
 src/overlays/ov091/calls/FreeMessageBuffers.c:
     complete
@@ -63,6 +71,10 @@ src/overlays/ov091/calls/DrawRecordSummaryText.c:
 src/overlays/ov091/calls/DrawShadowedAnchoredText.c:
     complete
     .text       start:0x020bf744 end:0x020bf7a8
+
+src/overlays/ov091/calls/func_ov091_020bf7a8.c:
+    complete
+    .text       start:0x020bf7a8 end:0x020bf89c
 
 src/overlays/ov091/calls/ReleaseListPanels.c:
     complete
@@ -108,6 +120,14 @@ src/overlays/ov091/calls/ScrollListDown.c:
     complete
     .text       start:0x020c0030 end:0x020c0164
 
+src/overlays/ov091/calls/func_ov091_020c12d4.c:
+    complete
+    .text       start:0x020c12d4 end:0x020c1370
+
+src/overlays/ov091/calls/func_ov091_020c1370.c:
+    complete
+    .text       start:0x020c1370 end:0x020c1420
+
 src/overlays/ov091/calls/SyncRecordFlags.c:
     complete
     .text       start:0x020c1420 end:0x020c1708
@@ -139,6 +159,10 @@ src/overlays/ov091/calls/RequestEntryTransitionIfIdle.c:
 src/overlays/ov091/calls/RunIntroPopupStep.c:
     complete
     .text       start:0x020c17b0 end:0x020c1878
+
+src/overlays/ov091/calls/func_ov091_020c1878.c:
+    complete
+    .text       start:0x020c1878 end:0x020c1930
 
 src/overlays/ov091/calls/DestroyPopupManager.c:
     complete
@@ -220,6 +244,10 @@ src/overlays/ov091/auto/func_ov091_020c27b4.c:
     complete
     .text       start:0x020c27b4 end:0x020c27bc
 
+src/overlays/ov091/calls/func_ov091_020c27bc.c:
+    complete
+    .text       start:0x020c27bc end:0x020c27ec
+
 src/overlays/ov091/calls/func_ov091_020c27ec.c:
     complete
     .text       start:0x020c27ec end:0x020c27f8
@@ -227,6 +255,10 @@ src/overlays/ov091/calls/func_ov091_020c27ec.c:
 src/overlays/ov091/calls/func_ov091_020c27f8.c:
     complete
     .text       start:0x020c27f8 end:0x020c2804
+
+src/overlays/ov091/calls/func_ov091_020c2804.c:
+    complete
+    .text       start:0x020c2804 end:0x020c2820
 
 src/overlays/ov091/calls/GetPlayerFlagRecord_020c2820.c:
     complete

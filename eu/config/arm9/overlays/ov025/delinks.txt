@@ -52,6 +52,14 @@ src/overlays/ov025/calls/ShutdownMenuScreen.c:
     complete
     .text       start:0x020b5eac end:0x020b5f28
 
+src/overlays/ov025/calls/func_ov025_020b6184.c:
+    complete
+    .text       start:0x020b6184 end:0x020b619c
+
+src/overlays/ov025/calls/func_ov025_020b619c.c:
+    complete
+    .text       start:0x020b619c end:0x020b61b4
+
 src/overlays/ov025/calls/ResetMenuLayerTransforms.c:
     complete
     .text       start:0x020b61b4 end:0x020b6214
@@ -76,6 +84,10 @@ src/overlays/ov025/calls/DrawNumberInPanelSlot.c:
     complete
     .text       start:0x020b62e4 end:0x020b6330
 
+src/overlays/ov025/calls/func_ov025_020b6330.c:
+    complete
+    .text       start:0x020b6330 end:0x020b6348
+
 src/overlays/ov025/calls/ActivatePanelEntity.c:
     complete
     .text       start:0x020b6348 end:0x020b636c
@@ -96,6 +108,14 @@ src/overlays/ov025/calls/DrawSlotTileBlock.c:
     complete
     .text       start:0x020b6538 end:0x020b65e2
 
+src/overlays/ov025/calls/func_ov025_020b65e4.c:
+    complete
+    .text       start:0x020b65e4 end:0x020b684e
+
+src/overlays/ov025/calls/func_ov025_020b6850.c:
+    complete
+    .text       start:0x020b6850 end:0x020b6ad8
+
 src/overlays/ov025/calls/SetupSlotListView.c:
     complete
     .text       start:0x020b6ad8 end:0x020b6c2a
@@ -111,6 +131,14 @@ src/overlays/ov025/calls/LoadPanelResource.c:
 src/overlays/ov025/calls/PlaceCellAtListEntry.c:
     complete
     .text       start:0x020b6c88 end:0x020b6cbe
+
+src/overlays/ov025/calls/func_ov025_020b6cc0.c:
+    complete
+    .text       start:0x020b6cc0 end:0x020b6d1e
+
+src/overlays/ov025/calls/func_ov025_020b6d20.c:
+    complete
+    .text       start:0x020b6d20 end:0x020b6d30
 
 src/overlays/ov025/calls/TrySelectListEntry.c:
     complete
@@ -163,6 +191,10 @@ src/overlays/ov025/calls/ScrollListUpOneRow.c:
 src/overlays/ov025/calls/ScrollListToRow.c:
     complete
     .text       start:0x020b7488 end:0x020b74da
+
+src/overlays/ov025/calls/func_ov025_020b74dc.c:
+    complete
+    .text       start:0x020b74dc end:0x020b74f6
 
 src/overlays/ov025/calls/CountActiveSlots.c:
     complete

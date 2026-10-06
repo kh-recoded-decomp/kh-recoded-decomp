@@ -6,9 +6,17 @@ src/overlays/ov042/calls/CommitCameraProjection.c:
     complete
     .text       start:0x020bd040 end:0x020bd070
 
+src/overlays/ov042/calls/func_ov042_020bd0f4.c:
+    complete
+    .text       start:0x020bd0f4 end:0x020bd110
+
 src/overlays/ov042/calls/func_ov042_020bd110.c:
     complete
     .text       start:0x020bd110 end:0x020bd11c
+
+src/overlays/ov042/calls/func_ov042_020bd11c.c:
+    complete
+    .text       start:0x020bd11c end:0x020bd18c
 
 src/overlays/ov042/auto/func_ov042_020bd18c.c:
     complete
@@ -38,6 +46,10 @@ src/overlays/ov042/calls/MoveCameraAlongAxis.c:
     complete
     .text       start:0x020bd354 end:0x020bd39c
 
+src/overlays/ov042/calls/func_ov042_020bd39c.c:
+    complete
+    .text       start:0x020bd39c end:0x020bd3b4
+
 src/overlays/ov042/calls/GetOrbitOffsetDegrees.c:
     complete
     .text       start:0x020bd494 end:0x020bd4cc
@@ -54,17 +66,57 @@ src/overlays/ov042/auto/func_ov042_020bd5b0.c:
     complete
     .text       start:0x020bd5b0 end:0x020bd5bc
 
+src/overlays/ov042/calls/func_ov042_020bd5bc.c:
+    complete
+    .text       start:0x020bd5bc end:0x020bd5f4
+
 src/overlays/ov042/auto/func_ov042_020bd5f4.c:
     complete
     .text       start:0x020bd5f4 end:0x020bd600
+
+src/overlays/ov042/calls/func_ov042_020bd600.c:
+    complete
+    .text       start:0x020bd600 end:0x020bd620
+
+src/overlays/ov042/calls/func_ov042_020bd620.c:
+    complete
+    .text       start:0x020bd620 end:0x020bd640
+
+src/overlays/ov042/calls/func_ov042_020bd640.c:
+    complete
+    .text       start:0x020bd640 end:0x020bd660
+
+src/overlays/ov042/calls/func_ov042_020bd660.c:
+    complete
+    .text       start:0x020bd660 end:0x020bd680
 
 src/overlays/ov042/calls/SetCameraMode.c:
     complete
     .text       start:0x020bd680 end:0x020bd70c
 
+src/overlays/ov042/calls/func_ov042_020bd70c.c:
+    complete
+    .text       start:0x020bd70c end:0x020bd71c
+
 src/overlays/ov042/calls/StartCameraParticle.c:
     complete
     .text       start:0x020bd71c end:0x020bd76c
+
+src/overlays/ov042/calls/func_ov042_020bd76c.c:
+    complete
+    .text       start:0x020bd76c end:0x020bd7ac
+
+src/overlays/ov042/calls/func_ov042_020bd7ac.c:
+    complete
+    .text       start:0x020bd7ac end:0x020bd7c8
+
+src/overlays/ov042/calls/func_ov042_020bd7c8.c:
+    complete
+    .text       start:0x020bd7c8 end:0x020bd830
+
+src/overlays/ov042/calls/func_ov042_020bd830.c:
+    complete
+    .text       start:0x020bd830 end:0x020bd878
 
 src/overlays/ov042/calls/BuildCameraFrustumColliders.c:
     complete
@@ -89,6 +141,10 @@ src/overlays/ov042/auto/func_ov042_020bde3c.c:
 src/overlays/ov042/calls/StepCameraGoalTowardTarget.c:
     complete
     .text       start:0x020be408 end:0x020be4bc
+
+src/overlays/ov042/calls/func_ov042_020be4bc.c:
+    complete
+    .text       start:0x020be4bc end:0x020be4cc
 
 src/overlays/ov042/calls/ApplyCameraConfig.c:
     complete

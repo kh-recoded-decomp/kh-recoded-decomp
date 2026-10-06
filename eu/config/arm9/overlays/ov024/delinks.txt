@@ -40,6 +40,14 @@ src/overlays/ov024/calls/PickRandomSetBit.c:
     complete
     .text       start:0x020b6574 end:0x020b65c2
 
+src/overlays/ov024/calls/func_ov024_020b65c4.c:
+    complete
+    .text       start:0x020b65c4 end:0x020b65e8
+
+src/overlays/ov024/calls/func_ov024_020b65e8.c:
+    complete
+    .text       start:0x020b65e8 end:0x020b65fc
+
 src/overlays/ov024/calls/SetupSubScreenBgLayers.c:
     complete
     .text       start:0x020b65fc end:0x020b666c

@@ -52,6 +52,10 @@ src/overlays/ov076/calls/SlotMenu_UpdateIdle.c:
     complete
     .text       start:0x020c4e9c end:0x020c4ec8
 
+src/overlays/ov076/calls/func_ov076_020c4ec8.c:
+    complete
+    .text       start:0x020c4ec8 end:0x020c4efc
+
 src/overlays/ov076/calls/SlotMenu_BeginSlotSelection.c:
     complete
     .text       start:0x020c4efc end:0x020c4f38
@@ -111,6 +115,10 @@ src/overlays/ov076/calls/func_ov076_020c5c2c.c:
 src/overlays/ov076/calls/SlotMenu_UpdateMessageWait.c:
     complete
     .text       start:0x020c5c34 end:0x020c5ca0
+
+src/overlays/ov076/calls/func_ov076_020c5ca0.c:
+    complete
+    .text       start:0x020c5ca0 end:0x020c5ccc
 
 src/overlays/ov076/calls/SlotMenu_ToggleViewAfterTween.c:
     complete
@@ -188,6 +196,10 @@ src/overlays/ov076/calls/SlotMenu_SetBgScrollMode.c:
     complete
     .text       start:0x020c7504 end:0x020c7554
 
+src/overlays/ov076/calls/func_ov076_020c7714.c:
+    complete
+    .text       start:0x020c7714 end:0x020c7728
+
 src/overlays/ov076/calls/SlotMenu_UploadLabel.c:
     complete
     .text       start:0x020c7b64 end:0x020c7c0c
@@ -248,13 +260,29 @@ src/overlays/ov076/calls/SlotMenu_OnMessageConfirm.c:
     complete
     .text       start:0x020c8a90 end:0x020c8b48
 
+src/overlays/ov076/calls/func_ov076_020c8b48.c:
+    complete
+    .text       start:0x020c8b48 end:0x020c8b70
+
 src/overlays/ov076/calls/SlotMenu_HandleSlotSelect.c:
     complete
     .text       start:0x020c8b80 end:0x020c8d40
 
+src/overlays/ov076/calls/func_ov076_020c8d40.c:
+    complete
+    .text       start:0x020c8d40 end:0x020c8d90
+
 src/overlays/ov076/calls/SlotMenu_UnequipCursorSlot.c:
     complete
     .text       start:0x020c8d90 end:0x020c8e8c
+
+src/overlays/ov076/calls/func_ov076_020c8e8c.c:
+    complete
+    .text       start:0x020c8e8c end:0x020c8ece
+
+src/overlays/ov076/calls/func_ov076_020c8ed0.c:
+    complete
+    .text       start:0x020c8ed0 end:0x020c8f10
 
 src/overlays/ov076/calls/func_ov076_020c8f10.c:
     complete
@@ -328,6 +356,10 @@ src/overlays/ov076/calls/AddToSelectionCounters_020ca530.c:
     complete
     .text       start:0x020ca530 end:0x020ca560
 
+src/overlays/ov076/calls/func_ov076_020ca560.c:
+    complete
+    .text       start:0x020ca560 end:0x020ca628
+
 src/overlays/ov076/calls/func_ov076_020ca628.c:
     complete
     .text       start:0x020ca628 end:0x020ca630
@@ -335,6 +367,10 @@ src/overlays/ov076/calls/func_ov076_020ca628.c:
 src/overlays/ov076/calls/func_ov076_020ca630.c:
     complete
     .text       start:0x020ca630 end:0x020ca644
+
+src/overlays/ov076/calls/func_ov076_020ca644.c:
+    complete
+    .text       start:0x020ca644 end:0x020ca716
 
 src/overlays/ov076/calls/ItemList_ReturnCursorItem.c:
     complete
@@ -344,6 +380,18 @@ src/overlays/ov076/calls/ItemList_OpenConfirmWindow.c:
     complete
     .text       start:0x020ca7dc end:0x020ca8e0
 
+src/overlays/ov076/calls/func_ov076_020ca8e0.c:
+    complete
+    .text       start:0x020ca8e0 end:0x020ca8fc
+
+src/overlays/ov076/calls/func_ov076_020ca8fc.c:
+    complete
+    .text       start:0x020ca8fc end:0x020ca918
+
+src/overlays/ov076/calls/func_ov076_020ca918.c:
+    complete
+    .text       start:0x020ca918 end:0x020ca990
+
 src/overlays/ov076/calls/MenuPanel_Close.c:
     complete
     .text       start:0x020ca990 end:0x020ca9a8
@@ -352,13 +400,37 @@ src/overlays/ov076/calls/MenuPanel_ConfirmSelection.c:
     complete
     .text       start:0x020ca9a8 end:0x020caa34
 
+src/overlays/ov076/calls/func_ov076_020caa34.c:
+    complete
+    .text       start:0x020caa34 end:0x020caa64
+
 src/overlays/ov076/calls/IsRecordCapacityReached.c:
     complete
     .text       start:0x020caa64 end:0x020cab00
 
+src/overlays/ov076/calls/func_ov076_020cab00.c:
+    complete
+    .text       start:0x020cab00 end:0x020cab3c
+
+src/overlays/ov076/calls/func_ov076_020cab3c.c:
+    complete
+    .text       start:0x020cab3c end:0x020cab58
+
 src/overlays/ov076/calls/ItemList_IsRewardEntryLocked.c:
     complete
     .text       start:0x020cab58 end:0x020cacb4
+
+src/overlays/ov076/calls/func_ov076_020cacb4.c:
+    complete
+    .text       start:0x020cacb4 end:0x020cad10
+
+src/overlays/ov076/calls/func_ov076_020cad10.c:
+    complete
+    .text       start:0x020cad10 end:0x020cae28
+
+src/overlays/ov076/calls/func_ov076_020cae28.c:
+    complete
+    .text       start:0x020cae28 end:0x020cae5c
 
 src/overlays/ov076/calls/MessageWindow_UpdateYesNoInput.c:
     complete
@@ -367,6 +439,10 @@ src/overlays/ov076/calls/MessageWindow_UpdateYesNoInput.c:
 src/overlays/ov076/calls/TextCanvas_GetLineWidth.c:
     complete
     .text       start:0x020cb0ec end:0x020cb154
+
+src/overlays/ov076/calls/func_ov076_020cb154.c:
+    complete
+    .text       start:0x020cb154 end:0x020cb1c4
 
 src/overlays/ov076/calls/MessageWindow_Open.c:
     complete

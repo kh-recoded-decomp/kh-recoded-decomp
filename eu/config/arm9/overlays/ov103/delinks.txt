@@ -24,9 +24,21 @@ src/overlays/ov103/calls/HandleListScrollUp.c:
     complete
     .text       start:0x020bec54 end:0x020becc4
 
+src/overlays/ov103/calls/func_ov103_020becc4.c:
+    complete
+    .text       start:0x020becc4 end:0x020bed20
+
+src/overlays/ov103/calls/func_ov103_020bed20.c:
+    complete
+    .text       start:0x020bed20 end:0x020bed5c
+
 src/overlays/ov103/calls/SetupMenuDisplay.c:
     complete
     .text       start:0x020bed5c end:0x020bef14
+
+src/overlays/ov103/calls/func_ov103_020bef14.c:
+    complete
+    .text       start:0x020bef14 end:0x020bef58
 
 src/overlays/ov103/calls/FreeArchiveFiles.c:
     complete
@@ -47,6 +59,10 @@ src/overlays/ov103/calls/FreeTextLayers.c:
 src/overlays/ov103/calls/DrawShadowedAnchoredText_020bf584.c:
     complete
     .text       start:0x020bf584 end:0x020bf5e8
+
+src/overlays/ov103/calls/func_ov103_020bf5e8.c:
+    complete
+    .text       start:0x020bf5e8 end:0x020bf66c
 
 src/overlays/ov103/calls/ReleaseSlotPool_020bf66c.c:
     complete
@@ -111,6 +127,10 @@ src/overlays/ov103/auto/func_ov103_020c032c.c:
 src/overlays/ov103/auto/func_ov103_020c0338.c:
     complete
     .text       start:0x020c0338 end:0x020c033c
+
+src/overlays/ov103/calls/func_ov103_020c033c.c:
+    complete
+    .text       start:0x020c033c end:0x020c03e8
 
 src/overlays/ov103/calls/RunFadeInStep.c:
     complete

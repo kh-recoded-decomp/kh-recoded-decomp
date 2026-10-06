@@ -1,4 +1,5 @@
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define ReleaseTaskNode_02069030 ReleaseTaskNode
 #define data_ov001_020a0478 data_ov001_020a0498
+#define func_ov001_02068e18 ReleaseSessionSlotBit
 #include "src/ov001/unclassified_helpers/ReleaseTaskNode_02069030.c"

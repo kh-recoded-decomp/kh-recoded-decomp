@@ -11,6 +11,14 @@ src/overlays/ov049/calls/InitFastSpinCameraOrbit.c:
     complete
     .text       start:0x020c355c end:0x020c359c
 
+src/overlays/ov049/calls/func_ov049_020c359c.c:
+    complete
+    .text       start:0x020c359c end:0x020c35b8
+
+src/overlays/ov049/calls/func_ov049_020c35b8.c:
+    complete
+    .text       start:0x020c35b8 end:0x020c35d4
+
 src/overlays/ov049/calls/InitRandomCameraSwing.c:
     complete
     .text       start:0x020c35d4 end:0x020c3602

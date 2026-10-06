@@ -92,6 +92,14 @@ src/overlays/ov010/calls/FieldObject_CreateAtOrigin.c:
     complete
     .text       start:0x020a0c98 end:0x020a0cf8
 
+src/overlays/ov010/calls/func_ov010_020a0cf8.c:
+    complete
+    .text       start:0x020a0cf8 end:0x020a0d20
+
+src/overlays/ov010/calls/func_ov010_020a0d20.c:
+    complete
+    .text       start:0x020a0d20 end:0x020a0d44
+
 src/overlays/ov010/calls/LoadObjectSprites.c:
     complete
     .text       start:0x020a0d44 end:0x020a0db8
@@ -124,6 +132,10 @@ src/overlays/ov010/calls/Entity_UpdateSpecialCharge.c:
     complete
     .text       start:0x020a1728 end:0x020a17c0
 
+src/overlays/ov010/calls/func_ov010_020a17c0.c:
+    complete
+    .text       start:0x020a17c0 end:0x020a1828
+
 src/overlays/ov010/calls/Entity_HandleSpecialAction.c:
     complete
     .text       start:0x020a1858 end:0x020a18cc
@@ -131,6 +143,10 @@ src/overlays/ov010/calls/Entity_HandleSpecialAction.c:
 src/overlays/ov010/calls/Entity_UpdateEventEffect.c:
     complete
     .text       start:0x020a18cc end:0x020a1978
+
+src/overlays/ov010/calls/func_ov010_020a1978.c:
+    complete
+    .text       start:0x020a1978 end:0x020a1998
 
 src/overlays/ov010/calls/AnimSequence_Init_020a1ac8.c:
     complete

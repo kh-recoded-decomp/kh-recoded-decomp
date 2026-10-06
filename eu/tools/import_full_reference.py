@@ -364,7 +364,7 @@ def replace_delink(delinks: str, destination: str, start: int, end: int) -> str:
     )
 
 
-def discover(module: str | None) -> list[dict]:
+def discover(module: str | None, keep_placeholders: bool = False) -> list[dict]:
     index = json.loads(FUNC_INDEX.read_text(encoding="utf-8"))
     mappings = (
         json.loads(RESULTS.read_text(encoding="utf-8"))["mappings"]
@@ -393,7 +393,10 @@ def discover(module: str | None) -> list[dict]:
             continue
         name = mapping["name"]
         if not useful_name(name):
-            continue
+            if not keep_placeholders:
+                continue
+            # Byte-exact code still counts; it keeps the EU placeholder name until someone names it.
+            name = old_name
         source = source_with_current_includes(mapping)
         if source is None:
             continue
@@ -405,9 +408,9 @@ def discover(module: str | None) -> list[dict]:
         )
         if rewrites is None:
             continue
-        if name in occupied:
+        if name != old_name and name in occupied:
             name = f"{name}_{mapping['eu']['address']:08x}"
-        if name in occupied:
+        if name != old_name and name in occupied:
             continue
         if mapping["source_symbol"] not in source:
             continue
@@ -457,9 +460,16 @@ def apply(candidates: list[dict]) -> None:
         if source_suffix not in (".c", ".cpp"):
             source_suffix = ".c"
         destination = destination_dir(module) / f"{new_name}{source_suffix}"
-        destination.parent.mkdir(parents=True, exist_ok=True)
         if destination.exists():
             raise RuntimeError(f"destination already exists: {destination}")
+        relative = destination.relative_to(ROOT).as_posix()
+        try:
+            delinks = replace_delink(state["delinks"], relative, address, address + size)
+        except RuntimeError as error:
+            # Two candidates for one range: keep the first, write nothing for this one.
+            print(f"skipped {module} {old_name}: {error}")
+            continue
+        destination.parent.mkdir(parents=True, exist_ok=True)
         destination.write_text(source, encoding="utf-8", newline="\n")
 
         pattern = re.compile(
@@ -471,14 +481,12 @@ def apply(candidates: list[dict]) -> None:
         if count != 1:
             raise RuntimeError(f"symbol line not found once: {old_name}")
 
-        relative = destination.relative_to(ROOT).as_posix()
-        state["delinks"] = replace_delink(
-            state["delinks"], relative, address, address + size
-        )
+        state["delinks"] = delinks
         compiler = COMPILER_TAG[item["compiler"]][1]
         if compiler is not None:
             compiler_map[relative] = compiler
-        renames[old_name] = new_name
+        if new_name != old_name:
+            renames[old_name] = new_name
 
     for state in modules.values():
         state["symbols_path"].write_text(
@@ -570,13 +578,15 @@ def main() -> None:
     parser.add_argument("--module")
     parser.add_argument("--max-size", type=lambda value: int(value, 0))
     parser.add_argument("--repair-cpp-suffixes", action="store_true")
+    parser.add_argument("--keep-placeholders", action="store_true",
+                        help="also import matches whose US function has no real name yet")
     args = parser.parse_args()
 
     if args.repair_cpp_suffixes:
         print(f"repaired {repair_cpp_suffixes()} C++ source suffixes")
         return
 
-    candidates = discover(args.module)
+    candidates = discover(args.module, args.keep_placeholders)
     if args.max_size is not None:
         candidates = [
             item for item in candidates if item["eu"]["size"] <= args.max_size

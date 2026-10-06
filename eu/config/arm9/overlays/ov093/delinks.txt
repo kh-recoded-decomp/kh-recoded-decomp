@@ -12,6 +12,10 @@ src/overlays/ov093/calls/InitEntryGridScene.c:
     complete
     .text       start:0x020beb40 end:0x020bed58
 
+src/overlays/ov093/calls/func_ov093_020bed58.c:
+    complete
+    .text       start:0x020bed58 end:0x020bedd0
+
 src/overlays/ov093/calls/UpdateSceneFrame.c:
     complete
     .text       start:0x020bedd0 end:0x020bee5c
@@ -28,9 +32,21 @@ src/overlays/ov093/calls/MoveGridCursorLeft.c:
     complete
     .text       start:0x020bf238 end:0x020bf3f8
 
+src/overlays/ov093/calls/func_ov093_020bf5cc.c:
+    complete
+    .text       start:0x020bf5cc end:0x020bf600
+
+src/overlays/ov093/calls/func_ov093_020bf600.c:
+    complete
+    .text       start:0x020bf600 end:0x020bf63c
+
 src/overlays/ov093/calls/ToggleSceneOption.c:
     complete
     .text       start:0x020bf63c end:0x020bf69c
+
+src/overlays/ov093/calls/func_ov093_020bf8a0.c:
+    complete
+    .text       start:0x020bf8a0 end:0x020bf8e0
 
 src/overlays/ov093/calls/FreeLoadedFiles.c:
     complete
@@ -51,6 +67,10 @@ src/overlays/ov093/calls/RedrawEntryPanelText.c:
 src/overlays/ov093/calls/DrawShadowedAnchoredText_020c0060.c:
     complete
     .text       start:0x020c0060 end:0x020c00c4
+
+src/overlays/ov093/calls/func_ov093_020c00c4.c:
+    complete
+    .text       start:0x020c00c4 end:0x020c0120
 
 src/overlays/ov093/calls/InitEntrySlotSprites.c:
     complete
@@ -172,6 +192,10 @@ src/overlays/ov093/auto/func_ov093_020c2b20.c:
     complete
     .text       start:0x020c2b20 end:0x020c2b24
 
+src/overlays/ov093/calls/func_ov093_020c2cac.c:
+    complete
+    .text       start:0x020c2cac end:0x020c2d64
+
 src/overlays/ov093/calls/ShutdownPopupSystem.c:
     complete
     .text       start:0x020c2d64 end:0x020c2da0
@@ -184,6 +208,10 @@ src/overlays/ov093/calls/DrawPopupText_020c2e24.c:
     complete
     .text       start:0x020c2e24 end:0x020c2f3c
 
+src/overlays/ov093/calls/func_ov093_020c2f3c.c:
+    complete
+    .text       start:0x020c2f3c end:0x020c2fa8
+
 src/overlays/ov093/calls/MeasurePopupTiles.c:
     complete
     .text       start:0x020c2fa8 end:0x020c30ac
@@ -191,6 +219,10 @@ src/overlays/ov093/calls/MeasurePopupTiles.c:
 src/overlays/ov093/calls/SetPopupPosition.c:
     complete
     .text       start:0x020c30ac end:0x020c319c
+
+src/overlays/ov093/calls/func_ov093_020c319c.c:
+    complete
+    .text       start:0x020c319c end:0x020c31f4
 
 src/overlays/ov093/auto/func_ov093_020c31f4.c:
     complete
@@ -207,6 +239,10 @@ src/overlays/ov093/calls/FadeInPopup.c:
 src/overlays/ov093/calls/OpenPopupWindow_020c3438.c:
     complete
     .text       start:0x020c3438 end:0x020c34c4
+
+src/overlays/ov093/calls/func_ov093_020c34c4.c:
+    complete
+    .text       start:0x020c34c4 end:0x020c353c
 
 src/overlays/ov093/calls/FadeOutPopup.c:
     complete
@@ -240,6 +276,10 @@ src/overlays/ov093/auto/func_ov093_020c3bf4.c:
     complete
     .text       start:0x020c3bf4 end:0x020c3bfc
 
+src/overlays/ov093/calls/func_ov093_020c3bfc.c:
+    complete
+    .text       start:0x020c3bfc end:0x020c3c2c
+
 src/overlays/ov093/calls/func_ov093_020c3c2c.c:
     complete
     .text       start:0x020c3c2c end:0x020c3c38
@@ -247,6 +287,10 @@ src/overlays/ov093/calls/func_ov093_020c3c2c.c:
 src/overlays/ov093/calls/func_ov093_020c3c38.c:
     complete
     .text       start:0x020c3c38 end:0x020c3c44
+
+src/overlays/ov093/calls/func_ov093_020c3c44.c:
+    complete
+    .text       start:0x020c3c44 end:0x020c3c60
 
 src/overlays/ov093/data/bss/Bss_ov093_020c5100.c:
     complete

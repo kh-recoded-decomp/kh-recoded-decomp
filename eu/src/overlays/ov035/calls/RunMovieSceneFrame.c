@@ -14,4 +14,5 @@
 #define func_ov035_020bb054 LoadMovieCounter
 #define func_ov035_020bb0a0 GetScaledMenuLevel
 #define func_ov035_020bc250 UpdateChannelLevel
+#define func_ov001_02074fa8 SetHudGaugeValueDefault
 #include "src/ov035/shared_engine/RunMovieSceneFrame_020ba458.c"

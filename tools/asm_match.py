@@ -7,6 +7,7 @@ decomp.dev reports them as matched code; the README keeps them in a separate row
     python tools/asm_match.py try MODULE SYMBOL SOURCE [--compiler C]
     python tools/asm_match.py register MODULE SYMBOL SOURCE --name NAME --evidence TEXT [--compiler C]
     python tools/asm_match.py port [--dry-run]     # port the EU build's verified asm stubs to US
+    python tools/asm_match.py days DAYS_CHECKOUT   # port 358/2 Days asm stubs by exact code match
 """
 
 from __future__ import annotations
@@ -119,6 +120,55 @@ def port(dry_run: bool) -> int:
     return 0
 
 
+def days(checkout: Path) -> int:
+    sys.path.insert(0, str(ROOT / "build"))
+    from unmatched import unmatched
+    done = {(m["module"], m["symbol"]) for m in load()["matches"]}
+    by_code: dict[tuple[str, bytes], list[tuple[str, str]]] = {}
+    anchor = {}
+    for module, symbol, size, mode in unmatched():
+        if (module, symbol) in done:
+            continue
+        mode = "thumb" if "thumb" in mode else "arm"
+        anchor.setdefault(mode, (module, symbol))
+        by_code.setdefault((mode, match_tool.target_bytes(module, symbol)[2]), []).append((module, symbol))
+    scratch = ROOT / "src" / ".port_scratch" / "days_asm"
+    scratch.mkdir(parents=True, exist_ok=True)
+    asm_re = re.compile(r"^\s*asm\b|\basm\s+(?:static\s+)?\w+\s*\**\s*\w+\s*\(", re.M)
+    ported = 0
+    for path in sorted(checkout.glob("libs/**/*.c")) + sorted(checkout.glob("src/**/*.c")):
+        text = path.read_text(encoding="utf-8", errors="replace").lstrip("\ufeff")
+        if not asm_re.search(text) or re.search(r'#include "(?!nitro/)', text):
+            continue
+        func = path.stem
+        if not re.search(rf"\b{re.escape(func)}\s*\(", text):
+            continue
+        probe = scratch / path.name
+        probe.write_text(text, encoding="utf-8", newline="\n")
+        hits = []
+        for mode, (module, symbol) in anchor.items():
+            for compiler in COMPILERS:
+                actual, _, _ = match_tool.compile_candidate(module, symbol, probe, compiler, mode, func,
+                                                            language="asm")
+                if actual:
+                    hits += by_code.get((mode, actual), [])
+        probe.unlink()
+        for module, symbol in dict.fromkeys(hits):
+            address = match_tool.target_bytes(module, symbol)[1]["address"]
+            stem = us_name(func, address, symbol)
+            renamed = re.sub(rf"\b{re.escape(func)}\b", stem, text)
+            target = ROOT / "src" / module / "asm" / f"{stem}.c"
+            target.parent.mkdir(parents=True, exist_ok=True)
+            target.write_text(renamed, encoding="utf-8", newline="\n")
+            evidence = f"Original assembly; same code as the 358/2 Days asm stub {path.relative_to(checkout).as_posix()}"
+            if register(module, symbol, target, stem.rsplit("_", 1)[0], evidence, None):
+                ported += 1
+            else:
+                target.unlink()
+    print(f"ported {ported} from Days")
+    return 0
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     sub = parser.add_subparsers(dest="command", required=True)
@@ -133,7 +183,10 @@ def main() -> int:
             cmd.add_argument("--evidence", required=True)
     port_cmd = sub.add_parser("port")
     port_cmd.add_argument("--dry-run", action="store_true")
+    sub.add_parser("days").add_argument("checkout", type=Path)
     args = parser.parse_args()
+    if args.command == "days":
+        return days(args.checkout)
     if args.command == "port":
         return port(args.dry_run)
     if args.command == "try":

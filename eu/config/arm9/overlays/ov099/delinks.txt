@@ -12,6 +12,14 @@ src/overlays/ov099/calls/RemapModelId.c:
     complete
     .text       start:0x020beb40 end:0x020becb4
 
+src/overlays/ov099/calls/func_ov099_020becb4.c:
+    complete
+    .text       start:0x020becb4 end:0x020bedd0
+
+src/overlays/ov099/calls/func_ov099_020bedd0.c:
+    complete
+    .text       start:0x020bedd0 end:0x020bee7c
+
 src/overlays/ov099/calls/UpdateModelViewerScreen.c:
     complete
     .text       start:0x020bee7c end:0x020beef4
@@ -27,6 +35,14 @@ src/overlays/ov099/calls/HandleListCursorDown.c:
 src/overlays/ov099/calls/HandleListPageDown.c:
     complete
     .text       start:0x020bf038 end:0x020bf0a4
+
+src/overlays/ov099/calls/func_ov099_020bf0a4.c:
+    complete
+    .text       start:0x020bf0a4 end:0x020bf0cc
+
+src/overlays/ov099/calls/func_ov099_020bf0cc.c:
+    complete
+    .text       start:0x020bf0cc end:0x020bf0fc
 
 src/overlays/ov099/calls/CloseSubBgPanel.c:
     complete
@@ -59,6 +75,10 @@ src/overlays/ov099/calls/FreeViewerResources.c:
 src/overlays/ov099/calls/DrawShadowedAnchoredText_020c05a8.c:
     complete
     .text       start:0x020c05a8 end:0x020c060c
+
+src/overlays/ov099/calls/func_ov099_020c060c.c:
+    complete
+    .text       start:0x020c060c end:0x020c0668
 
 src/overlays/ov099/calls/CreateViewerSlotObjs.c:
     complete
@@ -151,6 +171,10 @@ src/overlays/ov099/calls/InitModelCamera.c:
 src/overlays/ov099/calls/ReleaseViewerModels.c:
     complete
     .text       start:0x020c1d20 end:0x020c1d7c
+
+src/overlays/ov099/calls/func_ov099_020c2078.c:
+    complete
+    .text       start:0x020c2078 end:0x020c216c
 
 src/overlays/ov099/calls/ResetModelViewer.c:
     complete

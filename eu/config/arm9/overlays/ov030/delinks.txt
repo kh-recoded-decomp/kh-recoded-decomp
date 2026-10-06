@@ -16,17 +16,69 @@ src/overlays/ov030/calls/MoviePlayer_Close.c:
     complete
     .text       start:0x020ba538 end:0x020ba588
 
+src/overlays/ov030/calls/func_ov030_020ba588.c:
+    complete
+    .text       start:0x020ba588 end:0x020ba5b4
+
 src/overlays/ov030/calls/FinishSceneSetup.c:
     complete
     .text       start:0x020ba5b4 end:0x020ba5e8
+
+src/overlays/ov030/calls/func_ov030_020ba5e8.c:
+    complete
+    .text       start:0x020ba5e8 end:0x020ba614
+
+src/overlays/ov030/calls/func_ov030_020ba614.c:
+    complete
+    .text       start:0x020ba614 end:0x020ba62c
+
+src/overlays/ov030/calls/func_ov030_020ba62c.c:
+    complete
+    .text       start:0x020ba62c end:0x020ba698
+
+src/overlays/ov030/calls/func_ov030_020ba774.c:
+    complete
+    .text       start:0x020ba774 end:0x020ba7a8
+
+src/overlays/ov030/calls/func_ov030_020ba844.c:
+    complete
+    .text       start:0x020ba844 end:0x020ba874
+
+src/overlays/ov030/calls/func_ov030_020ba874.c:
+    complete
+    .text       start:0x020ba874 end:0x020ba894
 
 src/overlays/ov030/calls/EnterState12WithHalfRate_020ba8f0.c:
     complete
     .text       start:0x020ba8f0 end:0x020ba90a
 
+src/overlays/ov030/calls/func_ov030_020ba90c.c:
+    complete
+    .text       start:0x020ba90c end:0x020ba92e
+
+src/overlays/ov030/calls/func_ov030_020ba930.c:
+    complete
+    .text       start:0x020ba930 end:0x020ba964
+
+src/overlays/ov030/calls/func_ov030_020ba964.c:
+    complete
+    .text       start:0x020ba964 end:0x020ba98c
+
+src/overlays/ov030/calls/func_ov030_020ba98c.c:
+    complete
+    .text       start:0x020ba98c end:0x020ba9c8
+
+src/overlays/ov030/calls/func_ov030_020ba9c8.c:
+    complete
+    .text       start:0x020ba9c8 end:0x020ba9f0
+
 src/overlays/ov030/calls/MoviePlayer_Stop.c:
     complete
     .text       start:0x020ba9f0 end:0x020baa9c
+
+src/overlays/ov030/calls/func_ov030_020baab8.c:
+    complete
+    .text       start:0x020baab8 end:0x020baad2
 
 src/overlays/ov030/calls/ApplyOverlayScaleMode.c:
     complete
@@ -35,6 +87,14 @@ src/overlays/ov030/calls/ApplyOverlayScaleMode.c:
 src/overlays/ov030/calls/func_ov030_020babc8.c:
     complete
     .text       start:0x020babc8 end:0x020babe0
+
+src/overlays/ov030/calls/func_ov030_020babe0.c:
+    complete
+    .text       start:0x020babe0 end:0x020babfc
+
+src/overlays/ov030/calls/func_ov030_020bac14.c:
+    complete
+    .text       start:0x020bac14 end:0x020bac2c
 
 src/overlays/ov030/calls/MobiClip_IsDecoderReady.c:
     complete
@@ -64,6 +124,10 @@ src/overlays/ov030/calls/InstallSceneHandlers_020bb288.c:
     complete
     .text       start:0x020bb288 end:0x020bb2ec
 
+src/overlays/ov030/calls/func_ov030_020bb374.c:
+    complete
+    .text       start:0x020bb374 end:0x020bb388
+
 src/overlays/ov030/auto/func_ov030_020bb388.c:
     complete
     .text       start:0x020bb388 end:0x020bb394
@@ -79,6 +143,10 @@ src/overlays/ov030/calls/LoadCameraParams.c:
 src/overlays/ov030/calls/ClearSceneEntry.c:
     complete
     .text       start:0x020bb444 end:0x020bb460
+
+src/overlays/ov030/calls/func_ov030_020bb460.c:
+    complete
+    .text       start:0x020bb460 end:0x020bb488
 
 src/overlays/ov030/auto/func_ov030_020bb488.c:
     complete
@@ -148,6 +216,10 @@ src/overlays/ov030/calls/UpdateCarriedLauncher.c:
     complete
     .text       start:0x020bc920 end:0x020bcb3c
 
+src/overlays/ov030/calls/func_ov030_020bcb3c.c:
+    complete
+    .text       start:0x020bcb3c end:0x020bcb50
+
 src/overlays/ov030/calls/OnUnitHitEvent.c:
     complete
     .text       start:0x020bcb50 end:0x020bcbac
@@ -163,6 +235,10 @@ src/overlays/ov030/calls/UpdateSpiralProjectile.c:
 src/overlays/ov030/calls/SpawnSpiralProjectile.c:
     complete
     .text       start:0x020bcdac end:0x020bcec0
+
+src/overlays/ov030/calls/func_ov030_020bcec0.c:
+    complete
+    .text       start:0x020bcec0 end:0x020bcf42
 
 src/overlays/ov030/calls/ReleaseEffectPool.c:
     complete

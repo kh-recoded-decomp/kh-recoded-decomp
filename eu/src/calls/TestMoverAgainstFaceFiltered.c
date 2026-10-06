@@ -1,4 +1,5 @@
 #define TestMoverAgainstFaceFiltered_02030e58 TestMoverAgainstFaceFiltered
 #define g_shapeSweepTable_02055930 gCollisionSweepDispatch
 #define g_shapeTestTable_020558a0 gCollisionTestDispatch
+#define func_01ffb3a0 BuildPolygonEdges
 #include "src/arm9/spatial_queries/TestMoverAgainstFaceFiltered_02030e58.c"

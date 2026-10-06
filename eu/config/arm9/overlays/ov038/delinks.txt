@@ -16,6 +16,10 @@ src/overlays/ov038/calls/EnableOv038SoundCtx.c:
     complete
     .text       start:0x020ba54c end:0x020ba588
 
+src/overlays/ov038/calls/func_ov038_020ba588.c:
+    complete
+    .text       start:0x020ba588 end:0x020ba5ac
+
 src/overlays/ov038/calls/MarkSoundCtxRepeatIfReady.c:
     complete
     .text       start:0x020ba5ac end:0x020ba5d4
@@ -136,9 +140,17 @@ src/overlays/ov038/calls/func_ov038_020bbcb0.c:
     complete
     .text       start:0x020bbcb0 end:0x020bbcbc
 
+src/overlays/ov038/calls/func_ov038_020bbcbc.c:
+    complete
+    .text       start:0x020bbcbc end:0x020bbcd8
+
 src/overlays/ov038/calls/ReleaseOv038Context.c:
     complete
     .text       start:0x020bbcd8 end:0x020bbd08
+
+src/overlays/ov038/calls/func_ov038_020bbd08.c:
+    complete
+    .text       start:0x020bbd08 end:0x020bbd30
 
 src/overlays/ov038/data/bss/Bss_ov038_020bd160.c:
     complete

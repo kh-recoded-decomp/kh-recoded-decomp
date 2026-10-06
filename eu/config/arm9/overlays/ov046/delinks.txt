@@ -7,6 +7,10 @@ src/overlays/ov046/calls/MaxOfArgs.c:
     complete
     .text       start:0x020c09cc end:0x020c0a1c
 
+src/overlays/ov046/calls/func_ov046_020c0a1c.c:
+    complete
+    .text       start:0x020c0a1c end:0x020c0a44
+
 src/overlays/ov046/calls/Camera_ApplyOffsetClampHeight.c:
     complete
     .text       start:0x020c0a44 end:0x020c0a90
@@ -163,6 +167,10 @@ src/overlays/ov046/calls/Camera_GetSpeedScaledStep.c:
     complete
     .text       start:0x020c19d4 end:0x020c1a10
 
+src/overlays/ov046/calls/func_ov046_020c1a68.c:
+    complete
+    .text       start:0x020c1a68 end:0x020c1a90
+
 src/overlays/ov046/calls/Camera_ComputeFollowDistance.c:
     complete
     .text       start:0x020c1a90 end:0x020c1bc8
@@ -203,6 +211,10 @@ src/overlays/ov046/calls/Camera_SetStateFlag18.c:
     complete
     .text       start:0x020c2aa4 end:0x020c2ad8
 
+src/overlays/ov046/calls/func_ov046_020c2ad8.c:
+    complete
+    .text       start:0x020c2ad8 end:0x020c2afe
+
 src/overlays/ov046/calls/Camera_LoadOptionFlags.c:
     complete
     .text       start:0x020c2b00 end:0x020c2bcc
@@ -214,6 +226,10 @@ src/overlays/ov046/calls/Camera_RefreshTargetHeading.c:
 src/overlays/ov046/calls/Camera_FollowAlongViewDirection.c:
     complete
     .text       start:0x020c2c0c end:0x020c2c18
+
+src/overlays/ov046/calls/func_ov046_020c2c18.c:
+    complete
+    .text       start:0x020c2c18 end:0x020c2c28
 
 src/overlays/ov046/calls/Camera_ComputeFollowPoint.c:
     complete

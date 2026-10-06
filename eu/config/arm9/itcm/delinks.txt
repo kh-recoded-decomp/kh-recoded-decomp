@@ -129,6 +129,10 @@ libs/nitro/mtx/auto/MTX_MultVec43.c:
     complete
     .text       start:0x01ff9ad8 end:0x01ff9b70
 
+src/calls/func_01ff9b70.c:
+    complete
+    .text       start:0x01ff9b70 end:0x01ff9c84
+
 libs/nitro/fx/calls/FX_Div.c:
     complete
     .text       start:0x01ff9c84 end:0x01ff9c94
@@ -229,6 +233,14 @@ libs/nns/g3d/calls/NNS_G3dGeBufferOP_N.c:
     complete
     .text       start:0x01ffa37c end:0x01ffa450
 
+src/calls/func_01ffa5b0.c:
+    complete
+    .text       start:0x01ffa5b0 end:0x01ffa624
+
+src/calls/func_01ffa624.c:
+    complete
+    .text       start:0x01ffa624 end:0x01ffa660
+
 src/calls/EmitJointAnimationResult.c:
     complete
     .text       start:0x01ffa680 end:0x01ffa73c
@@ -257,6 +269,18 @@ src/calls/BuildTextureVerticalScaleMatrix.c:
     complete
     .text       start:0x01ffac9c end:0x01ffacdc
 
+src/calls/func_01ffacdc.c:
+    complete
+    .text       start:0x01ffacdc end:0x01ffad00
+
+src/calls/func_01ffae58.c:
+    complete
+    .text       start:0x01ffae58 end:0x01ffae7c
+
+src/calls/func_01ffb2d4.c:
+    complete
+    .text       start:0x01ffb2d4 end:0x01ffb2f8
+
 src/calls/func_01ffb2f8.c:
     complete
     .text       start:0x01ffb2f8 end:0x01ffb328
@@ -264,6 +288,10 @@ src/calls/func_01ffb2f8.c:
 src/calls/OverlapsHeightRange.c:
     complete
     .text       start:0x01ffb328 end:0x01ffb3a0
+
+src/calls/BuildPolygonEdges.c:
+    complete
+    .text       start:0x01ffb3a0 end:0x01ffb4f8
 
 src/calls/ApplyShapeVelocity.c:
     complete
@@ -300,6 +328,10 @@ src/calls/GetJointSRTAnimResult.c:
 libs/nitro/nns/calls/func_01ffd934.c:
     complete
     .text       start:0x01ffd934 end:0x01ffda04
+
+src/calls/G3dDrawInternal.c:
+    complete
+    .text       start:0x01ffdfc8 end:0x01ffe158
 
 src/calls/updateHintVec.c:
     complete

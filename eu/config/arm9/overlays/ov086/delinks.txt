@@ -32,6 +32,10 @@ src/overlays/ov086/calls/CountUnlockedGroupEntries.c:
     complete
     .text       start:0x020bf344 end:0x020bf3b4
 
+src/overlays/ov086/calls/func_ov086_020bf3b4.c:
+    complete
+    .text       start:0x020bf3b4 end:0x020bf428
+
 src/overlays/ov086/calls/IsGroupEntryStateOne.c:
     complete
     .text       start:0x020bf428 end:0x020bf4a4
@@ -63,6 +67,10 @@ src/overlays/ov086/calls/GetPageSectionIndex.c:
 src/overlays/ov086/calls/DrawRecordRowNames.c:
     complete
     .text       start:0x020bf8c4 end:0x020bf9f4
+
+src/overlays/ov086/calls/func_ov086_020bfba0.c:
+    complete
+    .text       start:0x020bfba0 end:0x020bfc00
 
 src/overlays/ov086/calls/DrawCounterGoalText.c:
     complete

@@ -8,13 +8,37 @@ src/overlays/ov013/calls/InitPanelScene_0206c480.c:
     complete
     .text       start:0x0206c480 end:0x0206c760
 
+src/overlays/ov013/calls/func_ov013_0206c760.c:
+    complete
+    .text       start:0x0206c760 end:0x0206c7e8
+
 src/overlays/ov013/calls/UpdatePanelScene_0206c7e8.c:
     complete
     .text       start:0x0206c7e8 end:0x0206c9d4
 
+src/overlays/ov013/calls/func_ov013_0206c9d4.c:
+    complete
+    .text       start:0x0206c9d4 end:0x0206ca70
+
+src/overlays/ov013/calls/func_ov013_0206ca70.c:
+    complete
+    .text       start:0x0206ca70 end:0x0206caa4
+
+src/overlays/ov013/calls/func_ov013_0206caa4.c:
+    complete
+    .text       start:0x0206caa4 end:0x0206cb80
+
 src/overlays/ov013/calls/InitMenuScreenGraphics.c:
     complete
     .text       start:0x0206cb80 end:0x0206cfd8
+
+src/overlays/ov013/calls/func_ov013_0206cfd8.c:
+    complete
+    .text       start:0x0206cfd8 end:0x0206cff0
+
+src/overlays/ov013/calls/func_ov013_0206cff0.c:
+    complete
+    .text       start:0x0206cff0 end:0x0206d078
 
 src/overlays/ov013/calls/InitPanelSubScreenGraphics.c:
     complete
@@ -44,6 +68,10 @@ src/overlays/ov013/calls/LeavePanelScene.c:
     complete
     .text       start:0x0206f978 end:0x0206fbbc
 
+src/overlays/ov013/calls/func_ov013_0206fbbc.c:
+    complete
+    .text       start:0x0206fbbc end:0x0206fc74
+
 src/overlays/ov013/calls/LayoutPanelSlotWidgets.c:
     complete
     .text       start:0x0206fc74 end:0x0206fe50
@@ -52,9 +80,37 @@ src/overlays/ov013/calls/RefreshPanelSlotDigits.c:
     complete
     .text       start:0x0206fe50 end:0x020704a0
 
+src/overlays/ov013/calls/func_ov013_02070a18.c:
+    complete
+    .text       start:0x02070a18 end:0x02070a50
+
+src/overlays/ov013/calls/func_ov013_02070a50.c:
+    complete
+    .text       start:0x02070a50 end:0x02070aa0
+
+src/overlays/ov013/calls/func_ov013_02070aa0.c:
+    complete
+    .text       start:0x02070aa0 end:0x02070b1c
+
+src/overlays/ov013/calls/func_ov013_02070b1c.c:
+    complete
+    .text       start:0x02070b1c end:0x02070b78
+
+src/overlays/ov013/calls/func_ov013_02070b78.c:
+    complete
+    .text       start:0x02070b78 end:0x02070cb4
+
+src/overlays/ov013/calls/func_ov013_02070cb4.c:
+    complete
+    .text       start:0x02070cb4 end:0x02070ce8
+
 src/overlays/ov013/calls/ShiftPanelSlotsDown.c:
     complete
     .text       start:0x02070dd0 end:0x02070e40
+
+src/overlays/ov013/calls/func_ov013_02070e40.c:
+    complete
+    .text       start:0x02070e40 end:0x02070f50
 
 src/overlays/ov013/calls/RecordPanelClear.c:
     complete
@@ -83,6 +139,10 @@ src/overlays/ov013/calls/QueryPanelSlotStates.c:
 src/overlays/ov013/calls/RefreshInactivePanelSlots.c:
     complete
     .text       start:0x02071638 end:0x020716e4
+
+src/overlays/ov013/calls/func_ov013_020716e4.c:
+    complete
+    .text       start:0x020716e4 end:0x0207174c
 
 src/overlays/ov013/calls/ResolvePanelExitMode.c:
     complete
@@ -172,6 +232,10 @@ src/overlays/ov013/calls/ClearPanelListCallback.c:
     complete
     .text       start:0x020738ec end:0x0207390c
 
+src/overlays/ov013/calls/func_ov013_0207390c.c:
+    complete
+    .text       start:0x0207390c end:0x02073944
+
 src/overlays/ov013/calls/AdvancePanelCloseStep.c:
     complete
     .text       start:0x02073944 end:0x020739a0
@@ -180,9 +244,17 @@ src/overlays/ov013/auto/func_ov013_020739a0.c:
     complete
     .text       start:0x020739a0 end:0x020739a4
 
+src/overlays/ov013/calls/func_ov013_020739bc.c:
+    complete
+    .text       start:0x020739bc end:0x02073a98
+
 src/overlays/ov013/auto/func_ov013_02073a98.c:
     complete
     .text       start:0x02073a98 end:0x02073a9c
+
+src/overlays/ov013/calls/func_ov013_02073ab4.c:
+    complete
+    .text       start:0x02073ab4 end:0x02073b90
 
 src/overlays/ov013/auto/func_ov013_02073b90.c:
     complete
@@ -240,6 +312,14 @@ src/overlays/ov013/auto/func_ov013_0207441c.c:
     complete
     .text       start:0x0207441c end:0x02074420
 
+src/overlays/ov013/calls/func_ov013_02074420.c:
+    complete
+    .text       start:0x02074420 end:0x0207445c
+
+src/overlays/ov013/calls/func_ov013_0207445c.c:
+    complete
+    .text       start:0x0207445c end:0x02074498
+
 src/overlays/ov013/auto/func_ov013_02074498.c:
     complete
     .text       start:0x02074498 end:0x0207449c
@@ -247,6 +327,14 @@ src/overlays/ov013/auto/func_ov013_02074498.c:
 src/overlays/ov013/calls/UpdateFloatingPanelSprites.c:
     complete
     .text       start:0x0207449c end:0x02074598
+
+src/overlays/ov013/calls/func_ov013_02074598.c:
+    complete
+    .text       start:0x02074598 end:0x020745a8
+
+src/overlays/ov013/calls/func_ov013_020745a8.c:
+    complete
+    .text       start:0x020745a8 end:0x020745b8
 
 src/overlays/ov013/calls/SelectPanelResultMode1.c:
     complete
@@ -263,6 +351,10 @@ src/overlays/ov013/calls/CheckClearCountMilestone.c:
 src/overlays/ov013/calls/SetPanelModeWithSound.c:
     complete
     .text       start:0x020746d0 end:0x020746f4
+
+src/overlays/ov013/calls/func_ov013_020746f4.c:
+    complete
+    .text       start:0x020746f4 end:0x02074718
 
 src/overlays/ov013/auto/func_ov013_02074718.c:
     complete

@@ -32,9 +32,21 @@ src/overlays/ov097/calls/ScrollEntryListDown.c:
     complete
     .text       start:0x020bf314 end:0x020bf3c8
 
+src/overlays/ov097/calls/func_ov097_020bf3c8.c:
+    complete
+    .text       start:0x020bf3c8 end:0x020bf3f0
+
+src/overlays/ov097/calls/func_ov097_020bf3f0.c:
+    complete
+    .text       start:0x020bf3f0 end:0x020bf420
+
 src/overlays/ov097/calls/ToggleListMode.c:
     complete
     .text       start:0x020bf420 end:0x020bf46c
+
+src/overlays/ov097/calls/func_ov097_020bf6c8.c:
+    complete
+    .text       start:0x020bf6c8 end:0x020bf70c
 
 src/overlays/ov097/calls/FreeMessageBuffers_020bf70c.c:
     complete
@@ -156,6 +168,10 @@ src/overlays/ov097/calls/SyncUnlockedEntryFlags.c:
     complete
     .text       start:0x020c14e0 end:0x020c1578
 
+src/overlays/ov097/calls/func_ov097_020c1578.c:
+    complete
+    .text       start:0x020c1578 end:0x020c1590
+
 src/overlays/ov097/auto/func_ov097_020c1590.c:
     complete
     .text       start:0x020c1590 end:0x020c159c
@@ -163,6 +179,14 @@ src/overlays/ov097/auto/func_ov097_020c1590.c:
 src/overlays/ov097/auto/func_ov097_020c159c.c:
     complete
     .text       start:0x020c159c end:0x020c15a0
+
+src/overlays/ov097/calls/func_ov097_020c1864.c:
+    complete
+    .text       start:0x020c1864 end:0x020c188c
+
+src/overlays/ov097/calls/func_ov097_020c188c.c:
+    complete
+    .text       start:0x020c188c end:0x020c18b0
 
 src/overlays/ov097/calls/RebindSpriteToCell.c:
     complete

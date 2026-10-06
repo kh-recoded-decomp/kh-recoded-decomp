@@ -6,9 +6,17 @@ src/overlays/ov050/calls/func_ov050_020c3520.c:
     complete
     .text       start:0x020c3520 end:0x020c3530
 
+src/overlays/ov050/calls/func_ov050_020c3530.c:
+    complete
+    .text       start:0x020c3530 end:0x020c3556
+
 src/overlays/ov050/calls/CameraCollision_ShouldBlockFacing.c:
     complete
     .text       start:0x020c3558 end:0x020c35cc
+
+src/overlays/ov050/calls/func_ov050_020c35cc.c:
+    complete
+    .text       start:0x020c35cc end:0x020c35fe
 
 src/overlays/ov050/calls/UpdatePathCameraCollision.c:
     complete

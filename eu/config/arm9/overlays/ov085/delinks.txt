@@ -36,6 +36,10 @@ src/overlays/ov085/calls/CanSelectItem.c:
     complete
     .text       start:0x020c13ac end:0x020c1440
 
+src/overlays/ov085/calls/func_ov085_020c1440.c:
+    complete
+    .text       start:0x020c1440 end:0x020c1450
+
 src/overlays/ov085/calls/FilterItemsForTab.c:
     complete
     .text       start:0x020c14e0 end:0x020c1570
@@ -79,6 +83,10 @@ src/overlays/ov085/calls/CompareItemEntries.c:
 src/overlays/ov085/calls/BuildRecordCountList_020c1994.c:
     complete
     .text       start:0x020c1994 end:0x020c1cdc
+
+src/overlays/ov085/calls/func_ov085_020c1cdc.c:
+    complete
+    .text       start:0x020c1cdc end:0x020c1dec
 
 src/overlays/ov085/calls/RefreshEntryListIfUnlocked.c:
     complete

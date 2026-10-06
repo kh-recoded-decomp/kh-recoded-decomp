@@ -2,5 +2,5 @@
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define data_ov001_020a04d0 data_ov001_020a04f0
 #define func_ov001_0207da58 AdvanceCounterPanel
-#define func_ov001_0207daf0 func_ov001_0207db18
+#define func_ov001_0207daf0 ScrollCounterPanelUp
 #include "src/ov001/unclassified_helpers/ArrowPrompt_HandleDpad_0207dfe4.c"

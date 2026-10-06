@@ -4,4 +4,5 @@
 #define func_ov001_0206dd90 ActivateFieldPlayerEntry
 #define func_ov021_020af7b8 ForwardSubModeStart
 #define func_ov052_020d13b4 ApplyModeCallbackAndBlock
+#define func_ov001_02067fa4 GetMenuItemWorldMarker
 #include "src/ov001/field_manager/RestoreSessionActors_02063404.c"

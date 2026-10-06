@@ -88,6 +88,10 @@ src/overlays/ov075/auto/func_ov075_020c7bdc.c:
     complete
     .text       start:0x020c7bdc end:0x020c7bf4
 
+src/overlays/ov075/calls/func_ov075_020c7bf4.c:
+    complete
+    .text       start:0x020c7bf4 end:0x020c7c00
+
 src/overlays/ov075/calls/ScrollMatrixView.c:
     complete
     .text       start:0x020c7c00 end:0x020c7cfc
@@ -236,6 +240,10 @@ src/overlays/ov075/calls/BuildRecordCountList.c:
     complete
     .text       start:0x020ccd78 end:0x020cd0c0
 
+src/overlays/ov075/calls/func_ov075_020cd0c0.c:
+    complete
+    .text       start:0x020cd0c0 end:0x020cd1d0
+
 src/overlays/ov075/calls/BuildCategoryList.c:
     complete
     .text       start:0x020cd37c end:0x020cd390
@@ -259,6 +267,10 @@ src/overlays/ov075/calls/InitCellImageQuad.c:
 src/overlays/ov075/calls/InitGridImageQuad.c:
     complete
     .text       start:0x020cd5b0 end:0x020cd602
+
+src/overlays/ov075/calls/func_ov075_020cd874.c:
+    complete
+    .text       start:0x020cd874 end:0x020cda30
 
 src/overlays/ov075/calls/DrawImageQuad.c:
     complete
@@ -304,9 +316,21 @@ src/overlays/ov075/calls/ApplyDialogReward.c:
     complete
     .text       start:0x020ce834 end:0x020ce906
 
+src/overlays/ov075/calls/func_ov075_020ce908.c:
+    complete
+    .text       start:0x020ce908 end:0x020ce9cc
+
 src/overlays/ov075/calls/OpenItemPicker.c:
     complete
     .text       start:0x020ce9cc end:0x020cead0
+
+src/overlays/ov075/calls/func_ov075_020cead0.c:
+    complete
+    .text       start:0x020cead0 end:0x020ceaec
+
+src/overlays/ov075/calls/func_ov075_020ceaec.c:
+    complete
+    .text       start:0x020ceaec end:0x020ceb08
 
 src/overlays/ov075/calls/ClearBg1AndRedraw.c:
     complete
@@ -320,13 +344,33 @@ src/overlays/ov075/calls/ConfirmItemPicker.c:
     complete
     .text       start:0x020ceb98 end:0x020cec24
 
+src/overlays/ov075/calls/func_ov075_020cec24.c:
+    complete
+    .text       start:0x020cec24 end:0x020cec54
+
 src/overlays/ov075/calls/IsPartyLevelSufficient.c:
     complete
     .text       start:0x020cec54 end:0x020cecf0
 
+src/overlays/ov075/calls/func_ov075_020cecf0.c:
+    complete
+    .text       start:0x020cecf0 end:0x020ced2c
+
+src/overlays/ov075/calls/func_ov075_020ced2c.c:
+    complete
+    .text       start:0x020ced2c end:0x020ced48
+
 src/overlays/ov075/calls/IsRewardEntryLocked.c:
     complete
     .text       start:0x020ced48 end:0x020ceea4
+
+src/overlays/ov075/calls/func_ov075_020ceea4.c:
+    complete
+    .text       start:0x020ceea4 end:0x020cef00
+
+src/overlays/ov075/calls/func_ov075_020cef00.c:
+    complete
+    .text       start:0x020cef00 end:0x020cf018
 
 src/overlays/ov075/calls/GetDialogPixelBounds.c:
     complete
@@ -339,6 +383,10 @@ src/overlays/ov075/calls/UpdateYesNoDialogInput.c:
 src/overlays/ov075/calls/MeasureTextLine.c:
     complete
     .text       start:0x020cf19c end:0x020cf204
+
+src/overlays/ov075/calls/func_ov075_020cf204.c:
+    complete
+    .text       start:0x020cf204 end:0x020cf274
 
 src/overlays/ov075/calls/OpenMessageWindow.c:
     complete

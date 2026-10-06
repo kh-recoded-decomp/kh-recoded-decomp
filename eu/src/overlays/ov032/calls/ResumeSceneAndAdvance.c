@@ -5,7 +5,7 @@
 #define UpdateEventObjects_0206daf8 UpdateEventObjects
 #define data_ov032_020c0060 data_ov032_020c0080
 #define func_ov001_0206c2f8 SetMenuHighlight
-#define func_ov001_0207d120 func_ov001_0207d148
+#define func_ov001_0207d120 LoadContextResourceGroups
 #define func_ov001_0207d210 func_ov001_0207d238
 #define func_ov001_0207d384 func_ov001_0207d3ac
 #define func_ov001_0207ef40 func_ov001_0207ef68

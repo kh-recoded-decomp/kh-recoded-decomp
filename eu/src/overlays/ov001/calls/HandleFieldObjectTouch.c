@@ -1,2 +1,3 @@
 #define HandleFieldObjectTouch_0207fa2c HandleFieldObjectTouch
+#define func_ov001_020642a0 IsFieldTrackFlagSet
 #include "src/ov001/field_objects/HandleFieldObjectTouch_0207fa2c.c"

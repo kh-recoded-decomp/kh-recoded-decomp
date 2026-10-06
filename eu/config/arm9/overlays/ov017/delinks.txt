@@ -116,6 +116,14 @@ src/overlays/ov017/auto/func_ov017_020a2888.c:
     complete
     .text       start:0x020a2888 end:0x020a288a
 
+src/overlays/ov017/calls/func_ov017_020a288c.c:
+    complete
+    .text       start:0x020a288c end:0x020a28ca
+
+src/overlays/ov017/calls/func_ov017_020a28cc.c:
+    complete
+    .text       start:0x020a28cc end:0x020a2940
+
 src/overlays/ov017/calls/BuildFieldObjectCellGrid.c:
     complete
     .text       start:0x020a2940 end:0x020a2a12
@@ -388,6 +396,10 @@ src/overlays/ov017/calls/FindSlotLinkedObject.c:
     complete
     .text       start:0x020a4bd4 end:0x020a4c00
 
+src/overlays/ov017/calls/func_ov017_020a4c00.c:
+    complete
+    .text       start:0x020a4c00 end:0x020a4c52
+
 src/overlays/ov017/calls/FinishPoolActions.c:
     complete
     .text       start:0x020a4c54 end:0x020a4e70
@@ -460,6 +472,10 @@ src/overlays/ov017/calls/FindInactiveOwnerAncestor.c:
     complete
     .text       start:0x020a51a8 end:0x020a51e6
 
+src/overlays/ov017/calls/func_ov017_020a51e8.c:
+    complete
+    .text       start:0x020a51e8 end:0x020a5218
+
 src/overlays/ov017/calls/PropagateStackHeight.c:
     complete
     .text       start:0x020a5218 end:0x020a525a
@@ -495,6 +511,10 @@ src/overlays/ov017/calls/GetListHead.c:
 src/overlays/ov017/calls/DrawKind7EntryStack.c:
     complete
     .text       start:0x020a576c end:0x020a5874
+
+src/overlays/ov017/calls/func_ov017_020a5a98.c:
+    complete
+    .text       start:0x020a5a98 end:0x020a5aae
 
 src/overlays/ov017/calls/SyncKind7EntryStackHeight.c:
     complete

@@ -12,7 +12,7 @@ extern void func_ov000_0206276c(void);
 extern void EnterPanelMenuScreen(void); /* EnterPanelMenuScreen */
 extern void UpdatePanelInputWithTimeout(void); /* UpdatePanelInputWithTimeout */
 extern void func_ov000_02062908(void); /* NNS_G2dSetCellAnimationSequence */
-extern void func_ov000_02062920(void);
+extern void FinishTitlePanel(void);
 extern void TryEnterPanelState(void); /* TryEnterPanelState */
 extern void func_ov000_02062a58(void); /* PXI_Init */
 extern void SetupPanelField(void); /* SetupPanelField */
@@ -27,10 +27,10 @@ extern void func_ov000_02062e00(void);
 extern void func_ov000_02062e3c(void);
 extern void func_ov000_02062e64(void);
 extern void func_ov000_02062f0c(void);
-extern void func_ov000_02062f44(void);
-extern void func_ov000_02062f74(void);
+extern void BeginTitleSaveFormat(void);
+extern void WaitTitleSaveFormat(void);
 extern void func_ov000_0206300c(void); /* PXI_Init */
-extern void func_ov000_02063018(void);
+extern void ShowTitleFormatNotice(void);
 extern void func_ov000_02063038(void);
 extern void func_ov000_02063040(void);
 
@@ -54,7 +54,7 @@ void (*gPanelStateHandlers[43])(void) = {
     EnterPanelMenuScreen, /* EnterPanelMenuScreen */
     UpdatePanelInputWithTimeout, /* UpdatePanelInputWithTimeout */
     func_ov000_02062908, /* NNS_G2dSetCellAnimationSequence */
-    func_ov000_02062920,
+    FinishTitlePanel,
     TryEnterPanelState, /* TryEnterPanelState */
     func_ov000_02062a58, /* PXI_Init */
     SetupPanelField, /* SetupPanelField */
@@ -72,10 +72,10 @@ void (*gPanelStateHandlers[43])(void) = {
     func_ov000_02062e3c,
     func_ov000_02062e64,
     func_ov000_02062f0c,
-    func_ov000_02062f44,
-    func_ov000_02062f74,
+    BeginTitleSaveFormat,
+    WaitTitleSaveFormat,
     func_ov000_0206300c, /* PXI_Init */
-    func_ov000_02063018,
+    ShowTitleFormatNotice,
     func_ov000_02063038,
     func_ov000_02063040,
 };

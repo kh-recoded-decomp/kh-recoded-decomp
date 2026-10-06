@@ -123,6 +123,10 @@ src/overlays/ov031/calls/func_ov031_020bb494.c:
     complete
     .text       start:0x020bb494 end:0x020bb4ac
 
+src/overlays/ov031/calls/func_ov031_020bb4ac.c:
+    complete
+    .text       start:0x020bb4ac end:0x020bb4c8
+
 src/overlays/ov031/calls/SetModeByte.c:
     complete
     .text       start:0x020bb4e0 end:0x020bb4fc
@@ -147,9 +151,17 @@ src/overlays/ov031/calls/IsSupportedOwnerState.c:
     complete
     .text       start:0x020bb594 end:0x020bb5b8
 
+src/overlays/ov031/calls/func_ov031_020bb5b8.c:
+    complete
+    .text       start:0x020bb5b8 end:0x020bb5d6
+
 src/overlays/ov031/calls/MarkLinkedTargetFlag.c:
     complete
     .text       start:0x020bb5d8 end:0x020bb5f8
+
+src/overlays/ov031/calls/func_ov031_020bb5f8.c:
+    complete
+    .text       start:0x020bb5f8 end:0x020bb64c
 
 src/overlays/ov031/calls/BeginNextRecord.c:
     complete

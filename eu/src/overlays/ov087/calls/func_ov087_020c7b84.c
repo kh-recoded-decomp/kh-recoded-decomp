@@ -1,0 +1,37 @@
+#include "nitro/types.h"
+
+extern u32 PlaySoundEffect();
+extern u32 EnterSceneSlot();
+extern u32 PlayFieldTrackSet();
+extern u32 EnterSceneSlotAtSpawn();
+extern u32 func_ov001_02064998();
+extern u32 func_ov033_020baa6c();
+extern u32 StartSubScene();
+extern u32 func_ov039_020bc638();
+
+void func_ov087_020c7b84(void) {
+  int menu;
+  u32 selection;
+
+  menu = func_ov039_020bc638();
+  selection = *(u32 *)(*(int *)(menu + 4) * 0x108 + menu + 0x118);
+  if (*(int *)(menu + 0x10) == 0) {
+    switch(*(u32 *)(menu + 0xbc0)) {
+    case 0:
+      func_ov001_02064998();
+      break;
+    case 1:
+      EnterSceneSlot(selection,*(u32 *)(menu + 0xbc4));
+      break;
+    case 2:
+      PlayFieldTrackSet();
+      break;
+    case 3:
+      EnterSceneSlotAtSpawn(selection,*(u32 *)(menu + 0xbc4));
+    }
+    func_ov033_020baa6c();
+    StartSubScene(0xffffffff,0xffffffff,1);
+    PlaySoundEffect(0,1);
+    return;
+  }
+}

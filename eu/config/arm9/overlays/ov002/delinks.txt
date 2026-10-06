@@ -48,9 +48,49 @@ src/overlays/ov002/calls/DrawPanelTextLine.c:
     complete
     .text       start:0x02061d58 end:0x02061dc8
 
+src/overlays/ov002/calls/func_ov002_02061dc8.c:
+    complete
+    .text       start:0x02061dc8 end:0x02061e34
+
 src/overlays/ov002/calls/func_ov002_02062000.c:
     complete
     .text       start:0x02062000 end:0x02062014
+
+src/overlays/ov002/calls/func_ov002_02062014.c:
+    complete
+    .text       start:0x02062014 end:0x0206203c
+
+src/overlays/ov002/calls/func_ov002_0206203c.c:
+    complete
+    .text       start:0x0206203c end:0x020620fc
+
+src/overlays/ov002/calls/func_ov002_020620fc.c:
+    complete
+    .text       start:0x020620fc end:0x020621c4
+
+src/overlays/ov002/calls/func_ov002_020621c4.c:
+    complete
+    .text       start:0x020621c4 end:0x020621e4
+
+src/overlays/ov002/calls/func_ov002_020621e4.c:
+    complete
+    .text       start:0x020621e4 end:0x02062254
+
+src/overlays/ov002/calls/func_ov002_02062254.c:
+    complete
+    .text       start:0x02062254 end:0x02062368
+
+src/overlays/ov002/calls/func_ov002_02062368.c:
+    complete
+    .text       start:0x02062368 end:0x02062470
+
+src/overlays/ov002/calls/func_ov002_02062470.c:
+    complete
+    .text       start:0x02062470 end:0x02062504
+
+src/overlays/ov002/calls/func_ov002_02062504.c:
+    complete
+    .text       start:0x02062504 end:0x020625a0
 
 src/overlays/ov002/calls/CreatePanelTextLayer.c:
     complete
@@ -103,6 +143,10 @@ src/overlays/ov002/auto/func_ov002_02062dd8.c:
 src/overlays/ov002/auto/func_ov002_02062ddc.c:
     complete
     .text       start:0x02062ddc end:0x02062de0
+
+src/overlays/ov002/calls/func_ov002_02062dfc.c:
+    complete
+    .text       start:0x02062dfc end:0x02062e18
 
 src/overlays/ov002/calls/PollPanelOverlay13.c:
     complete
@@ -212,6 +256,14 @@ src/overlays/ov002/calls/ApplyMenuEntryValues.c:
     complete
     .text       start:0x02064c9c end:0x02064d54
 
+src/overlays/ov002/calls/func_ov002_02064f6c.c:
+    complete
+    .text       start:0x02064f6c end:0x02064fd4
+
+src/overlays/ov002/calls/func_ov002_02064fd4.c:
+    complete
+    .text       start:0x02064fd4 end:0x02064ff8
+
 src/overlays/ov002/calls/RunMenuIntroStep.c:
     complete
     .text       start:0x02064ff8 end:0x02065070
@@ -295,6 +347,14 @@ src/overlays/ov002/calls/OnPopupElementTouched.c:
 src/overlays/ov002/calls/UpdateMenuSelectionSound.c:
     complete
     .text       start:0x02065d54 end:0x02065d90
+
+src/overlays/ov002/calls/func_ov002_02065d90.c:
+    complete
+    .text       start:0x02065d90 end:0x02065dfc
+
+src/overlays/ov002/calls/func_ov002_02065dfc.c:
+    complete
+    .text       start:0x02065dfc end:0x02065e68
 
 src/overlays/ov002/calls/SelectMenuEntry3.c:
     complete
@@ -380,9 +440,17 @@ src/overlays/ov002/calls/UpdateScreenFade.c:
     complete
     .text       start:0x020665e8 end:0x020666b4
 
+src/overlays/ov002/calls/func_ov002_020666c8.c:
+    complete
+    .text       start:0x020666c8 end:0x0206671c
+
 src/overlays/ov002/calls/UpdateMenuTouch.c:
     complete
     .text       start:0x0206671c end:0x02066a68
+
+src/overlays/ov002/calls/func_ov002_02066a68.c:
+    complete
+    .text       start:0x02066a68 end:0x02066a90
 
 src/overlays/ov002/calls/GetMenuRectSize.c:
     complete
@@ -520,6 +588,26 @@ src/overlays/ov002/calls/IsContextSlotFlag19Set.c:
     complete
     .text       start:0x020678a0 end:0x020678cc
 
+src/overlays/ov002/calls/func_ov002_020678cc.c:
+    complete
+    .text       start:0x020678cc end:0x020678fc
+
+src/overlays/ov002/calls/func_ov002_020678fc.c:
+    complete
+    .text       start:0x020678fc end:0x0206793c
+
+src/overlays/ov002/calls/func_ov002_0206793c.c:
+    complete
+    .text       start:0x0206793c end:0x02067974
+
+src/overlays/ov002/calls/func_ov002_02067974.c:
+    complete
+    .text       start:0x02067974 end:0x020679ac
+
+src/overlays/ov002/calls/func_ov002_020679ac.c:
+    complete
+    .text       start:0x020679ac end:0x020679dc
+
 src/overlays/ov002/calls/WriteGlobalPackedFlag.c:
     complete
     .text       start:0x020679dc end:0x020679fc
@@ -632,6 +720,10 @@ src/overlays/ov002/calls/GetRecordFlagState.c:
     complete
     .text       start:0x02069aac end:0x02069b8c
 
+src/overlays/ov002/calls/func_ov002_02069b8c.c:
+    complete
+    .text       start:0x02069b8c end:0x02069bc8
+
 src/overlays/ov002/calls/SetRecordFlagFromTable.c:
     complete
     .text       start:0x02069cd4 end:0x02069d04
@@ -679,6 +771,10 @@ src/overlays/ov002/calls/PickRandomRecordWithBias.c:
 src/overlays/ov002/calls/PickRandomAvailableRecord.c:
     complete
     .text       start:0x0206a888 end:0x0206a9f8
+
+src/overlays/ov002/calls/func_ov002_0206a9f8.c:
+    complete
+    .text       start:0x0206a9f8 end:0x0206aa28
 
 src/overlays/ov002/calls/CheckRecordEntryRequirements.c:
     complete

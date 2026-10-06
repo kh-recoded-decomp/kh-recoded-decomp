@@ -96,6 +96,10 @@ src/overlays/ov056/calls/SpawnEffectUnitFromSpawner.c:
     complete
     .text       start:0x020d4380 end:0x020d4478
 
+src/overlays/ov056/calls/func_ov056_020d4478.c:
+    complete
+    .text       start:0x020d4478 end:0x020d4490
+
 src/overlays/ov056/calls/DrawWithVariantMaterialsHidden.c:
     complete
     .text       start:0x020d4490 end:0x020d450c
@@ -127,6 +131,10 @@ src/overlays/ov056/calls/UpdateHomingBounceProjectile.c:
 src/overlays/ov056/calls/UpdateActiveEntries.c:
     complete
     .text       start:0x020d4a60 end:0x020d4aa0
+
+src/overlays/ov056/calls/func_ov056_020d4aa0.c:
+    complete
+    .text       start:0x020d4aa0 end:0x020d4ab0
 
 src/overlays/ov056/calls/SpawnHitEffectOnEvent.c:
     complete

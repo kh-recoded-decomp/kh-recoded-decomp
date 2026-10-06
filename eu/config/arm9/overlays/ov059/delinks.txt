@@ -4,6 +4,10 @@
     .data       start:0x020cff00 end:0x020cffc0 kind:data align:32
     .bss        start:0x020cffc0 end:0x020cffe0 kind:bss align:32
 
+src/overlays/ov059/calls/func_ov059_020c7480.c:
+    complete
+    .text       start:0x020c7480 end:0x020c7494
+
 src/overlays/ov059/calls/Actor_InitVariantCallbacks.c:
     complete
     .text       start:0x020c7494 end:0x020c7530
@@ -132,6 +136,30 @@ src/overlays/ov059/calls/TryGuardFrontalHit.c:
     complete
     .text       start:0x020c921c end:0x020c934c
 
+src/overlays/ov059/calls/func_ov059_020c934c.c:
+    complete
+    .text       start:0x020c934c end:0x020c9394
+
+src/overlays/ov059/calls/func_ov059_020c9394.c:
+    complete
+    .text       start:0x020c9394 end:0x020c93f8
+
+src/overlays/ov059/calls/func_ov059_020c9748.c:
+    complete
+    .text       start:0x020c9748 end:0x020c98a0
+
+src/overlays/ov059/calls/func_ov059_020c98a0.c:
+    complete
+    .text       start:0x020c98a0 end:0x020c999c
+
+src/overlays/ov059/calls/func_ov059_020c999c.c:
+    complete
+    .text       start:0x020c999c end:0x020c99ec
+
+src/overlays/ov059/calls/func_ov059_020c99ec.c:
+    complete
+    .text       start:0x020c99ec end:0x020c99fc
+
 src/overlays/ov059/calls/Actor_SetCommandType.c:
     complete
     .text       start:0x020c99fc end:0x020c9a50
@@ -139,6 +167,10 @@ src/overlays/ov059/calls/Actor_SetCommandType.c:
 src/overlays/ov059/calls/Actor_ConsumeCommand.c:
     complete
     .text       start:0x020c9a50 end:0x020c9a74
+
+src/overlays/ov059/calls/func_ov059_020c9a74.c:
+    complete
+    .text       start:0x020c9a74 end:0x020c9b8c
 
 src/overlays/ov059/calls/Actor_UpdateChargeCommand.c:
     complete
@@ -148,9 +180,17 @@ src/overlays/ov059/calls/QueryFilter_IsKind24.c:
     complete
     .text       start:0x020ca1f4 end:0x020ca206
 
+src/overlays/ov059/calls/func_ov059_020ca208.c:
+    complete
+    .text       start:0x020ca208 end:0x020ca24c
+
 src/overlays/ov059/calls/Actor_SelectInputState.c:
     complete
     .text       start:0x020ca24c end:0x020ca31c
+
+src/overlays/ov059/calls/func_ov059_020ca31c.c:
+    complete
+    .text       start:0x020ca31c end:0x020ca35c
 
 src/overlays/ov059/calls/Actor_UpdateHaltedState.c:
     complete
@@ -175,6 +215,10 @@ src/overlays/ov059/calls/Actor_InitOrbitSlots.c:
 src/overlays/ov059/calls/Actor_UpdateOrbitEffects.c:
     complete
     .text       start:0x020cabe0 end:0x020cac3c
+
+src/overlays/ov059/calls/func_ov059_020cac3c.c:
+    complete
+    .text       start:0x020cac3c end:0x020cac58
 
 src/overlays/ov059/calls/Actor_UpdateRootMotionJump.c:
     complete
@@ -228,6 +272,14 @@ src/overlays/ov059/calls/Actor_ReleaseResources.c:
     complete
     .text       start:0x020cbd08 end:0x020cbdf0
 
+src/overlays/ov059/calls/func_ov059_020cbdf0.c:
+    complete
+    .text       start:0x020cbdf0 end:0x020cbe00
+
+src/overlays/ov059/calls/func_ov059_020cbea0.c:
+    complete
+    .text       start:0x020cbea0 end:0x020cbeb8
+
 src/overlays/ov059/calls/Actor_Update.c:
     complete
     .text       start:0x020cbeb8 end:0x020cbf18
@@ -259,6 +311,10 @@ src/overlays/ov059/calls/GetStateTransitionDelay.c:
 src/overlays/ov059/calls/Actor_ChangeAnimation.c:
     complete
     .text       start:0x020cc970 end:0x020cca14
+
+src/overlays/ov059/calls/func_ov059_020cca14.c:
+    complete
+    .text       start:0x020cca14 end:0x020cca34
 
 src/overlays/ov059/calls/Actor_PlaySurfaceSound.c:
     complete
@@ -328,6 +384,10 @@ src/overlays/ov059/calls/QuantizeFieldAngle.c:
     complete
     .text       start:0x020cd36c end:0x020cd384
 
+src/overlays/ov059/calls/func_ov059_020cd384.c:
+    complete
+    .text       start:0x020cd384 end:0x020cd3d8
+
 src/overlays/ov059/calls/func_ov059_020cd3d8.c:
     complete
     .text       start:0x020cd3d8 end:0x020cd3e4
@@ -363,6 +423,10 @@ src/overlays/ov059/calls/AnimRequest_ApplyFrame.c:
 src/overlays/ov059/calls/SoundRequest_Play.c:
     complete
     .text       start:0x020cd9e0 end:0x020cda34
+
+src/overlays/ov059/calls/func_ov059_020cdc6c.c:
+    complete
+    .text       start:0x020cdc6c end:0x020cdc7c
 
 src/overlays/ov059/calls/TaskRunner_Update.c:
     complete
@@ -436,6 +500,10 @@ src/overlays/ov059/calls/RewardQueue_Push.c:
     complete
     .text       start:0x020cf324 end:0x020cf3b4
 
+src/overlays/ov059/calls/func_ov059_020cf3b4.c:
+    complete
+    .text       start:0x020cf3b4 end:0x020cf3fc
+
 src/overlays/ov059/calls/EntryQueue_Clear.c:
     complete
     .text       start:0x020cf3fc end:0x020cf406
@@ -451,6 +519,10 @@ src/overlays/ov059/calls/EntryList_FindByKeyFirst.c:
 src/overlays/ov059/calls/EntryList_FindByValue.c:
     complete
     .text       start:0x020cf43c end:0x020cf46c
+
+src/overlays/ov059/calls/func_ov059_020cf46c.c:
+    complete
+    .text       start:0x020cf46c end:0x020cf4ae
 
 src/overlays/ov059/calls/EntryList_FindByFirstId.c:
     complete

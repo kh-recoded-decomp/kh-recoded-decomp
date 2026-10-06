@@ -8,6 +8,10 @@ src/overlays/ov022/calls/UpdateMovieFadeOut.c:
     complete
     .text       start:0x020a6ee0 end:0x020a6f44
 
+src/overlays/ov022/calls/func_ov022_020a6f44.c:
+    complete
+    .text       start:0x020a6f44 end:0x020a6f88
+
 src/overlays/ov022/calls/DrawMovieCaption.c:
     complete
     .text       start:0x020a6f88 end:0x020a7020
@@ -24,17 +28,41 @@ src/overlays/ov022/calls/StartSubtitlePlayback.c:
     complete
     .text       start:0x020a73d0 end:0x020a73f8
 
+src/overlays/ov022/calls/func_ov022_020a73f8.c:
+    complete
+    .text       start:0x020a73f8 end:0x020a7414
+
+src/overlays/ov022/calls/func_ov022_020a7414.c:
+    complete
+    .text       start:0x020a7414 end:0x020a7434
+
 src/overlays/ov022/auto/func_ov022_020a77b0.c:
     complete
     .text       start:0x020a77b0 end:0x020a77b8
+
+src/overlays/ov022/calls/func_ov022_020a77b8.c:
+    complete
+    .text       start:0x020a77b8 end:0x020a7810
 
 src/overlays/ov022/calls/func_ov022_020a7810.c:
     complete
     .text       start:0x020a7810 end:0x020a7834
 
+src/overlays/ov022/calls/func_ov022_020a7834.c:
+    complete
+    .text       start:0x020a7834 end:0x020a7854
+
+src/overlays/ov022/calls/func_ov022_020a7854.c:
+    complete
+    .text       start:0x020a7854 end:0x020a7878
+
 src/overlays/ov022/auto/func_ov022_020a7878.c:
     complete
     .text       start:0x020a7878 end:0x020a787c
+
+src/overlays/ov022/calls/func_ov022_020a787c.c:
+    complete
+    .text       start:0x020a787c end:0x020a789c
 
 src/overlays/ov022/calls/InitMovieSceneCallbacks.c:
     complete
@@ -208,6 +236,10 @@ src/overlays/ov022/calls/decodeMovieSubtitleCodeUnit_020a8bb0.c:
     complete
     .text       start:0x020a8bb0 end:0x020a8d00
 
+src/overlays/ov022/calls/func_ov022_020a8ef8.c:
+    complete
+    .text       start:0x020a8ef8 end:0x020a8f1c
+
 src/overlays/ov022/calls/updateMovieStreamLeadTime_020a8f1c.c:
     complete
     .text       start:0x020a8f1c end:0x020a8fb4
@@ -219,6 +251,10 @@ src/overlays/ov022/calls/DrawNextSubtitleGlyph.c:
 src/overlays/ov022/calls/IsMovieStreamReady_020a90c8.c:
     complete
     .text       start:0x020a90c8 end:0x020a9118
+
+src/overlays/ov022/calls/func_ov022_020a9118.c:
+    complete
+    .text       start:0x020a9118 end:0x020a916c
 
 src/overlays/ov022/calls/UploadDirtySubtitleTiles.c:
     complete

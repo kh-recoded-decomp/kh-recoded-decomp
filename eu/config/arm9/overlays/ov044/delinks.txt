@@ -11,6 +11,14 @@ src/overlays/ov044/calls/InitPanelSwayA.c:
     complete
     .text       start:0x020cffc0 end:0x020d0000
 
+src/overlays/ov044/calls/func_ov044_020d0000.c:
+    complete
+    .text       start:0x020d0000 end:0x020d0020
+
+src/overlays/ov044/calls/func_ov044_020d0020.c:
+    complete
+    .text       start:0x020d0020 end:0x020d0040
+
 src/overlays/ov044/calls/InitPanelMotionA.c:
     complete
     .text       start:0x020d0040 end:0x020d0070
@@ -22,6 +30,10 @@ src/overlays/ov044/calls/InitPanelMotionB.c:
 src/overlays/ov044/calls/func_ov044_020d00a0.c:
     complete
     .text       start:0x020d00a0 end:0x020d00b0
+
+src/overlays/ov044/calls/func_ov044_020d00b0.c:
+    complete
+    .text       start:0x020d00b0 end:0x020d0110
 
 src/overlays/ov044/calls/IsPanelFlag2000Set.c:
     complete

@@ -8,6 +8,10 @@ src/overlays/ov020/calls/ScriptCmd_CreateSlotObjectKind2.c:
     complete
     .text       start:0x020a1e00 end:0x020a1e2e
 
+src/overlays/ov020/calls/func_ov020_020a1e30.c:
+    complete
+    .text       start:0x020a1e30 end:0x020a1ef0
+
 src/overlays/ov020/calls/ScriptCmd_CreateSlotObjectKind1.c:
     complete
     .text       start:0x020a1ef0 end:0x020a1f1e
@@ -23,6 +27,10 @@ src/overlays/ov020/calls/ScriptCmd_CreateSlotObjectKind3.c:
 src/overlays/ov020/calls/ScriptCmd_SpawnPanelCollider.c:
     complete
     .text       start:0x020a204c end:0x020a20ae
+
+src/overlays/ov020/calls/func_ov020_020a20b0.c:
+    complete
+    .text       start:0x020a20b0 end:0x020a21d2
 
 src/overlays/ov020/auto/func_ov020_020a21d4.c:
     complete
@@ -72,6 +80,10 @@ src/overlays/ov020/calls/FindLiveNextBlock.c:
     complete
     .text       start:0x020a285c end:0x020a2898
 
+src/overlays/ov020/calls/func_ov020_020a2898.c:
+    complete
+    .text       start:0x020a2898 end:0x020a28cc
+
 src/overlays/ov020/calls/SettleBlockGround.c:
     complete
     .text       start:0x020a28cc end:0x020a2914
@@ -103,6 +115,10 @@ src/overlays/ov020/calls/GetRaisedBlockFocus.c:
 src/overlays/ov020/calls/TryGetFieldHandle.c:
     complete
     .text       start:0x020a2eb8 end:0x020a2edc
+
+src/overlays/ov020/calls/func_ov020_020a2edc.c:
+    complete
+    .text       start:0x020a2edc end:0x020a2f18
 
 src/overlays/ov020/calls/UpdatePanelAnimations.c:
     complete

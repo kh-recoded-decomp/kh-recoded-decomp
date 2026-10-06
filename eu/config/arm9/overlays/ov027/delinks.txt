@@ -28,9 +28,17 @@ src/overlays/ov027/calls/FindFreeRecordSlot_020b790c.c:
     complete
     .text       start:0x020b790c end:0x020b7954
 
+src/overlays/ov027/calls/func_ov027_020b7954.c:
+    complete
+    .text       start:0x020b7954 end:0x020b79a0
+
 src/overlays/ov027/auto/func_ov027_020b79a0.c:
     complete
     .text       start:0x020b79a0 end:0x020b79dc
+
+src/overlays/ov027/calls/func_ov027_020b79dc.c:
+    complete
+    .text       start:0x020b79dc end:0x020b7a50
 
 src/overlays/ov027/calls/func_ov027_020b7a50.c:
     complete
@@ -39,6 +47,10 @@ src/overlays/ov027/calls/func_ov027_020b7a50.c:
 src/overlays/ov027/calls/UpdateTrackedPointerEntry.c:
     complete
     .text       start:0x020b7c50 end:0x020b7d78
+
+src/overlays/ov027/calls/func_ov027_020b7d78.c:
+    complete
+    .text       start:0x020b7d78 end:0x020b7df2
 
 src/overlays/ov027/calls/func_ov027_020b7df4.c:
     complete
@@ -68,6 +80,10 @@ src/overlays/ov027/auto/func_ov027_020b7f80.c:
     complete
     .text       start:0x020b7f80 end:0x020b7fac
 
+src/overlays/ov027/calls/func_ov027_020b7fac.c:
+    complete
+    .text       start:0x020b7fac end:0x020b7fe0
+
 src/overlays/ov027/calls/CreateTagRecord.c:
     complete
     .text       start:0x020b7fe0 end:0x020b80ac
@@ -79,6 +95,14 @@ src/overlays/ov027/calls/ReleaseListElementBuffer.c:
 src/overlays/ov027/calls/func_ov027_020b8110.c:
     complete
     .text       start:0x020b8110 end:0x020b8154
+
+src/overlays/ov027/calls/func_ov027_020b8154.c:
+    complete
+    .text       start:0x020b8154 end:0x020b817c
+
+src/overlays/ov027/calls/func_ov027_020b817c.c:
+    complete
+    .text       start:0x020b817c end:0x020b81a4
 
 src/overlays/ov027/calls/FindActiveRecordById.c:
     complete
@@ -204,6 +228,10 @@ src/overlays/ov027/calls/CreateWidget.c:
     complete
     .text       start:0x020b8cdc end:0x020b8f7c
 
+src/overlays/ov027/calls/func_ov027_020b8f7c.c:
+    complete
+    .text       start:0x020b8f7c end:0x020b8fb6
+
 src/overlays/ov027/calls/func_ov027_020b8fb8.c:
     complete
     .text       start:0x020b8fb8 end:0x020b8fde
@@ -236,6 +264,10 @@ src/overlays/ov027/calls/func_ov027_020b90a8.c:
     complete
     .text       start:0x020b90a8 end:0x020b90b8
 
+src/overlays/ov027/calls/func_ov027_020b90b8.c:
+    complete
+    .text       start:0x020b90b8 end:0x020b90c4
+
 src/overlays/ov027/calls/FindWidgetById.c:
     complete
     .text       start:0x020b90c4 end:0x020b9114
@@ -259,6 +291,10 @@ src/overlays/ov027/calls/GetField84Bit1.c:
 src/overlays/ov027/auto/func_ov027_020b91c8.c:
     complete
     .text       start:0x020b91c8 end:0x020b91d0
+
+src/overlays/ov027/calls/func_ov027_020b91d0.c:
+    complete
+    .text       start:0x020b91d0 end:0x020b91e8
 
 src/overlays/ov027/calls/StartWidgetMoveTween.c:
     complete
@@ -356,6 +392,10 @@ src/overlays/ov027/calls/ClearWidgetScreenRegion.c:
     complete
     .text       start:0x020b9c70 end:0x020b9cf8
 
+src/overlays/ov027/calls/func_ov027_020b9cf8.c:
+    complete
+    .text       start:0x020b9cf8 end:0x020b9d38
+
 src/overlays/ov027/calls/func_ov027_020b9d68.c:
     complete
     .text       start:0x020b9d68 end:0x020b9d74
@@ -395,6 +435,10 @@ src/overlays/ov027/calls/ClearCapturedTouchState.c:
 src/overlays/ov027/calls/ProcessFileLoadQueue.c:
     complete
     .text       start:0x020b9fcc end:0x020ba060
+
+src/overlays/ov027/calls/func_ov027_020ba060.c:
+    complete
+    .text       start:0x020ba060 end:0x020ba094
 
 src/overlays/ov027/calls/func_ov027_020ba094.c:
     complete

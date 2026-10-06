@@ -10,4 +10,5 @@
 #define func_ov001_0207b45c func_ov001_0207b484
 #define func_ov021_020af3e8 func_ov021_020af408
 #define func_ov035_020bc250 UpdateChannelLevel
+#define func_ov001_02074fa8 SetHudGaugeValueDefault
 #include "src/ov001/shared_engine/UpdatePartyState_0206cbd0.c"

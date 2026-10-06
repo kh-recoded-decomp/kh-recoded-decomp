@@ -24,6 +24,10 @@ src/overlays/ov021/calls/UpdateFieldButton.c:
     complete
     .text       start:0x020a748c end:0x020a7510
 
+src/overlays/ov021/calls/func_ov021_020a7510.c:
+    complete
+    .text       start:0x020a7510 end:0x020a7522
+
 src/overlays/ov021/calls/func_ov021_020a7524.c:
     complete
     .text       start:0x020a7524 end:0x020a7530
@@ -116,6 +120,10 @@ src/overlays/ov021/calls/func_ov021_020a7ca8.c:
     complete
     .text       start:0x020a7ca8 end:0x020a7cb0
 
+src/overlays/ov021/calls/func_ov021_020a7cb0.c:
+    complete
+    .text       start:0x020a7cb0 end:0x020a7ccc
+
 src/overlays/ov021/calls/func_ov021_020a7ccc.c:
     complete
     .text       start:0x020a7ccc end:0x020a7ce8
@@ -151,6 +159,10 @@ src/overlays/ov021/calls/ResetIfIdMatches.c:
 src/overlays/ov021/calls/RestartScriptSound.c:
     complete
     .text       start:0x020a81ac end:0x020a81d8
+
+src/overlays/ov021/calls/func_ov021_020a81d8.c:
+    complete
+    .text       start:0x020a81d8 end:0x020a8202
 
 src/overlays/ov021/calls/InitModelObject.c:
     complete
@@ -356,6 +368,10 @@ src/overlays/ov021/calls/SetBit1WhenBit0Set.c:
     complete
     .text       start:0x020a9d08 end:0x020a9d24
 
+src/overlays/ov021/calls/func_ov021_020a9d24.c:
+    complete
+    .text       start:0x020a9d24 end:0x020a9d3c
+
 src/overlays/ov021/calls/IsBit0Set.c:
     complete
     .text       start:0x020a9d3c end:0x020a9d48
@@ -515,6 +531,14 @@ src/overlays/ov021/calls/InitObjWithCallback.c:
 src/overlays/ov021/calls/ReleaseCallbackOwnedBuffer.c:
     complete
     .text       start:0x020aafcc end:0x020aafe4
+
+src/overlays/ov021/calls/func_ov021_020aafe4.c:
+    complete
+    .text       start:0x020aafe4 end:0x020aaff4
+
+src/overlays/ov021/calls/func_ov021_020aaff4.c:
+    complete
+    .text       start:0x020aaff4 end:0x020ab004
 
 src/overlays/ov021/calls/ResetEntryStates.c:
     complete
@@ -736,6 +760,14 @@ src/overlays/ov021/calls/CreateEffectTask.c:
     complete
     .text       start:0x020acefc end:0x020ad064
 
+src/overlays/ov021/calls/func_ov021_020ad064.c:
+    complete
+    .text       start:0x020ad064 end:0x020ad076
+
+src/overlays/ov021/calls/func_ov021_020ad078.c:
+    complete
+    .text       start:0x020ad078 end:0x020ad084
+
 src/overlays/ov021/calls/BeginEntryReaction.c:
     complete
     .text       start:0x020ad084 end:0x020ad174
@@ -747,6 +779,10 @@ src/overlays/ov021/calls/SetupEffectSlots.c:
 src/overlays/ov021/calls/ResetObjectSlots.c:
     complete
     .text       start:0x020ad490 end:0x020ad4b4
+
+src/overlays/ov021/calls/func_ov021_020ad4b4.c:
+    complete
+    .text       start:0x020ad4b4 end:0x020ad4c2
 
 src/overlays/ov021/calls/RollEntryReaction.c:
     complete
@@ -783,6 +819,10 @@ src/overlays/ov021/calls/GetMemberValue.c:
 src/overlays/ov021/calls/FindMemberIndexById.c:
     complete
     .text       start:0x020ad8b4 end:0x020ad8e2
+
+src/overlays/ov021/calls/func_ov021_020ad8e4.c:
+    complete
+    .text       start:0x020ad8e4 end:0x020ad8f6
 
 src/overlays/ov021/calls/DeactivateCurrentMember.c:
     complete
@@ -824,9 +864,21 @@ src/overlays/ov021/calls/InitScriptTask.c:
     complete
     .text       start:0x020adc7c end:0x020adca0
 
+src/overlays/ov021/calls/func_ov021_020adca0.c:
+    complete
+    .text       start:0x020adca0 end:0x020adcac
+
+src/overlays/ov021/calls/func_ov021_020adcac.c:
+    complete
+    .text       start:0x020adcac end:0x020adcb8
+
 src/overlays/ov021/calls/StartEntryMotion.c:
     complete
     .text       start:0x020adcb8 end:0x020add98
+
+src/overlays/ov021/calls/func_ov021_020add98.c:
+    complete
+    .text       start:0x020add98 end:0x020addec
 
 src/overlays/ov021/calls/StopEntrySounds.c:
     complete
@@ -847,6 +899,10 @@ src/overlays/ov021/calls/AcquireEntryHandles.c:
 src/overlays/ov021/calls/ResetTargetSet.c:
     complete
     .text       start:0x020adfb0 end:0x020adfd6
+
+src/overlays/ov021/calls/func_ov021_020adfd8.c:
+    complete
+    .text       start:0x020adfd8 end:0x020adff4
 
 src/overlays/ov021/calls/UpdateEffectEmitters.c:
     complete
@@ -895,6 +951,10 @@ src/overlays/ov021/calls/AllocEntity.c:
 src/overlays/ov021/calls/func_ov021_020ae8ac.c:
     complete
     .text       start:0x020ae8ac end:0x020ae90c
+
+src/overlays/ov021/calls/func_ov021_020ae944.c:
+    complete
+    .text       start:0x020ae944 end:0x020ae956
 
 src/overlays/ov021/calls/SpawnPairedEntryUnit.c:
     complete
@@ -952,6 +1012,10 @@ src/overlays/ov021/calls/SpawnEffectParticle.c:
     complete
     .text       start:0x020af124 end:0x020af21a
 
+src/overlays/ov021/calls/func_ov021_020af21c.c:
+    complete
+    .text       start:0x020af21c end:0x020af22c
+
 src/overlays/ov021/calls/ResetActiveEntries.c:
     complete
     .text       start:0x020af22c end:0x020af266
@@ -963,6 +1027,10 @@ src/overlays/ov021/calls/StartSubMode.c:
 src/overlays/ov021/calls/RunSubModeUpdate.c:
     complete
     .text       start:0x020af384 end:0x020af3a0
+
+src/overlays/ov021/calls/func_ov021_020af3a0.c:
+    complete
+    .text       start:0x020af3a0 end:0x020af408
 
 src/overlays/ov021/calls/func_ov021_020af408.c:
     complete
@@ -980,9 +1048,21 @@ src/overlays/ov021/calls/DispatchModeUpdate.c:
     complete
     .text       start:0x020af4cc end:0x020af528
 
+src/overlays/ov021/calls/func_ov021_020af528.c:
+    complete
+    .text       start:0x020af528 end:0x020af564
+
 src/overlays/ov021/calls/ForwardSubModePairA.c:
     complete
     .text       start:0x020af564 end:0x020af59c
+
+src/overlays/ov021/calls/func_ov021_020af5d4.c:
+    complete
+    .text       start:0x020af5d4 end:0x020af614
+
+src/overlays/ov021/calls/func_ov021_020af614.c:
+    complete
+    .text       start:0x020af614 end:0x020af654
 
 src/overlays/ov021/calls/CopySubModeState.c:
     complete
@@ -996,6 +1076,14 @@ src/overlays/ov021/calls/ForwardSubModeValue.c:
     complete
     .text       start:0x020af6b4 end:0x020af6e4
 
+src/overlays/ov021/calls/func_ov021_020af71c.c:
+    complete
+    .text       start:0x020af71c end:0x020af758
+
+src/overlays/ov021/calls/func_ov021_020af798.c:
+    complete
+    .text       start:0x020af798 end:0x020af7d8
+
 src/overlays/ov021/calls/ForwardSubModeStart.c:
     complete
     .text       start:0x020af7d8 end:0x020af804
@@ -1003,6 +1091,10 @@ src/overlays/ov021/calls/ForwardSubModeStart.c:
 src/overlays/ov021/calls/ForwardSubModeEnd.c:
     complete
     .text       start:0x020af804 end:0x020af830
+
+src/overlays/ov021/calls/func_ov021_020af830.c:
+    complete
+    .text       start:0x020af830 end:0x020af86c
 
 src/overlays/ov021/calls/GetCameraRollAngle.c:
     complete
@@ -1052,6 +1144,14 @@ src/overlays/ov021/calls/ResolveStageActorRef.c:
     complete
     .text       start:0x020b02d8 end:0x020b0370
 
+src/overlays/ov021/calls/func_ov021_020b0370.c:
+    complete
+    .text       start:0x020b0370 end:0x020b037c
+
+src/overlays/ov021/calls/func_ov021_020b037c.c:
+    complete
+    .text       start:0x020b037c end:0x020b038a
+
 src/overlays/ov021/auto/func_ov021_020b038c.c:
     complete
     .text       start:0x020b038c end:0x020b0392
@@ -1080,9 +1180,25 @@ src/overlays/ov021/calls/ResolveOffsetPosition.c:
     complete
     .text       start:0x020b0528 end:0x020b0608
 
+src/overlays/ov021/calls/func_ov021_020b0a68.c:
+    complete
+    .text       start:0x020b0a68 end:0x020b0ab0
+
 src/overlays/ov021/calls/ScriptOp_GetPlayerHiddenFlag.c:
     complete
     .text       start:0x020b0ab0 end:0x020b0ad4
+
+src/overlays/ov021/calls/func_ov021_020b0ad4.c:
+    complete
+    .text       start:0x020b0ad4 end:0x020b0af0
+
+src/overlays/ov021/calls/func_ov021_020b0af0.c:
+    complete
+    .text       start:0x020b0af0 end:0x020b0b0c
+
+src/overlays/ov021/calls/func_ov021_020b0b0c.c:
+    complete
+    .text       start:0x020b0b0c end:0x020b0b20
 
 src/overlays/ov021/calls/ReadContextFlagBit13.c:
     complete
@@ -1092,9 +1208,17 @@ src/overlays/ov021/calls/ScriptOp_GetEventFlagPairBits.c:
     complete
     .text       start:0x020b0b40 end:0x020b0b74
 
+src/overlays/ov021/calls/func_ov021_020b0b74.c:
+    complete
+    .text       start:0x020b0b74 end:0x020b0b8c
+
 src/overlays/ov021/calls/ScriptOp_GetEventActorValue.c:
     complete
     .text       start:0x020b0b8c end:0x020b0bec
+
+src/overlays/ov021/calls/func_ov021_020b0bec.c:
+    complete
+    .text       start:0x020b0bec end:0x020b0c08
 
 src/overlays/ov021/calls/ScriptOp_IsPlayerAnimDone.c:
     complete
@@ -1120,9 +1244,29 @@ src/overlays/ov021/calls/ScriptOp_GetActiveObjectValue.c:
     complete
     .text       start:0x020b0cd8 end:0x020b0cfc
 
+src/overlays/ov021/calls/func_ov021_020b0cfc.c:
+    complete
+    .text       start:0x020b0cfc end:0x020b0d44
+
 src/overlays/ov021/calls/ScriptOp_FindNearestFreeSlot.c:
     complete
     .text       start:0x020b0d44 end:0x020b0d8c
+
+src/overlays/ov021/calls/func_ov021_020b0d8c.c:
+    complete
+    .text       start:0x020b0d8c end:0x020b0dd4
+
+src/overlays/ov021/calls/func_ov021_020b0dd4.c:
+    complete
+    .text       start:0x020b0dd4 end:0x020b0df0
+
+src/overlays/ov021/calls/func_ov021_020b0df0.c:
+    complete
+    .text       start:0x020b0df0 end:0x020b0e24
+
+src/overlays/ov021/calls/func_ov021_020b0e24.c:
+    complete
+    .text       start:0x020b0e24 end:0x020b0e40
 
 src/overlays/ov021/calls/ScriptOp_GetObjectTypeId.c:
     complete
@@ -1132,6 +1276,10 @@ src/overlays/ov021/calls/SampleGridCellValue.c:
     complete
     .text       start:0x020b0e80 end:0x020b0edc
 
+src/overlays/ov021/calls/func_ov021_020b0edc.c:
+    complete
+    .text       start:0x020b0edc end:0x020b0f0c
+
 src/overlays/ov021/calls/ScriptCmd_CheckTargetLineOfSight.c:
     complete
     .text       start:0x020b0f0c end:0x020b0f94
@@ -1139,6 +1287,10 @@ src/overlays/ov021/calls/ScriptCmd_CheckTargetLineOfSight.c:
 src/overlays/ov021/calls/ScriptOp_GetPlayerAngleDegrees.c:
     complete
     .text       start:0x020b0f94 end:0x020b0fd4
+
+src/overlays/ov021/calls/func_ov021_020b0fd4.c:
+    complete
+    .text       start:0x020b0fd4 end:0x020b0ff0
 
 src/overlays/ov021/calls/ScriptOp_GetOwnerIntegerField.c:
     complete
@@ -1155,6 +1307,14 @@ src/overlays/ov021/calls/ScriptOp_GetPlayerStateBit0.c:
 src/overlays/ov021/calls/ReadContextFlagBit9.c:
     complete
     .text       start:0x020b1090 end:0x020b10b0
+
+src/overlays/ov021/calls/func_ov021_020b10b0.c:
+    complete
+    .text       start:0x020b10b0 end:0x020b10c0
+
+src/overlays/ov021/calls/func_ov021_020b10c0.c:
+    complete
+    .text       start:0x020b10c0 end:0x020b10dc
 
 src/overlays/ov021/calls/ScriptOp_GetObjectFixedField.c:
     complete
@@ -1192,6 +1352,10 @@ src/overlays/ov021/calls/ScriptOp_GetPlayerLockFlag.c:
     complete
     .text       start:0x020b122c end:0x020b1250
 
+src/overlays/ov021/calls/func_ov021_020b1250.c:
+    complete
+    .text       start:0x020b1250 end:0x020b1260
+
 src/overlays/ov021/calls/ScriptOp_IsStageEntryKind24.c:
     complete
     .text       start:0x020b1260 end:0x020b128e
@@ -1199,6 +1363,10 @@ src/overlays/ov021/calls/ScriptOp_IsStageEntryKind24.c:
 src/overlays/ov021/calls/ScriptOp_GetObjectVectorMagnitude.c:
     complete
     .text       start:0x020b1290 end:0x020b12b8
+
+src/overlays/ov021/calls/func_ov021_020b12b8.c:
+    complete
+    .text       start:0x020b12b8 end:0x020b12d8
 
 src/overlays/ov021/calls/ScriptOp_GetPlayerHorizontalDrift.c:
     complete
@@ -1248,6 +1416,14 @@ src/overlays/ov021/calls/ScriptOp_GetSlotPosition.c:
     complete
     .text       start:0x020b1a50 end:0x020b1a9c
 
+src/overlays/ov021/calls/func_ov021_020b1a9c.c:
+    complete
+    .text       start:0x020b1a9c end:0x020b1af4
+
+src/overlays/ov021/calls/func_ov021_020b1af4.c:
+    complete
+    .text       start:0x020b1af4 end:0x020b1b1c
+
 src/overlays/ov021/calls/ScriptOp_GetGridCellPosition.c:
     complete
     .text       start:0x020b1b1c end:0x020b1b74
@@ -1267,6 +1443,10 @@ src/overlays/ov021/calls/ScriptOp_GetStageAnchorB.c:
 src/overlays/ov021/calls/ScriptOp_GetObjectPositionById.c:
     complete
     .text       start:0x020b1bd4 end:0x020b1c02
+
+src/overlays/ov021/calls/func_ov021_020b1c04.c:
+    complete
+    .text       start:0x020b1c04 end:0x020b1c50
 
 src/overlays/ov021/calls/ScriptOp_GetCameraTarget.c:
     complete
@@ -1296,6 +1476,10 @@ src/overlays/ov021/calls/PickSpawnPointNearPlayer.c:
     complete
     .text       start:0x020b1e24 end:0x020b1f54
 
+src/overlays/ov021/calls/func_ov021_020b1f54.c:
+    complete
+    .text       start:0x020b1f54 end:0x020b1f98
+
 src/overlays/ov021/calls/SubmitActorRender.c:
     complete
     .text       start:0x020b1f98 end:0x020b1fb0
@@ -1307,6 +1491,10 @@ src/overlays/ov021/calls/AddScriptContextVector.c:
 src/overlays/ov021/calls/SetScriptContextVector.c:
     complete
     .text       start:0x020b2000 end:0x020b2042
+
+src/overlays/ov021/calls/func_ov021_020b2044.c:
+    complete
+    .text       start:0x020b2044 end:0x020b2070
 
 src/overlays/ov021/calls/ScriptCmd_SetStagePoint.c:
     complete
@@ -1323,6 +1511,14 @@ src/overlays/ov021/calls/ScriptOp_SubtractStageVector.c:
 src/overlays/ov021/calls/ScriptCmd_RotatePathPoint.c:
     complete
     .text       start:0x020b2224 end:0x020b230c
+
+src/overlays/ov021/calls/func_ov021_020b230c.c:
+    complete
+    .text       start:0x020b230c end:0x020b23a0
+
+src/overlays/ov021/calls/func_ov021_020b23a0.c:
+    complete
+    .text       start:0x020b23a0 end:0x020b23cc
 
 src/overlays/ov021/calls/ScriptOp_MeasureStageVector.c:
     complete
@@ -1368,6 +1564,10 @@ src/overlays/ov021/calls/ScriptOp_ResetLinkedSlotEvent.c:
     complete
     .text       start:0x020b2780 end:0x020b2880
 
+src/overlays/ov021/calls/func_ov021_020b2880.c:
+    complete
+    .text       start:0x020b2880 end:0x020b28e6
+
 src/overlays/ov021/calls/ScriptCmd_StopActorMotion.c:
     complete
     .text       start:0x020b28e8 end:0x020b2914
@@ -1403,6 +1603,10 @@ src/overlays/ov021/calls/ScriptOp_DivideValues.c:
 src/overlays/ov021/calls/ScriptOp_SetStageMarker.c:
     complete
     .text       start:0x020b2f78 end:0x020b2fec
+
+src/overlays/ov021/calls/func_ov021_020b2fec.c:
+    complete
+    .text       start:0x020b2fec end:0x020b3050
 
 src/overlays/ov021/calls/ScriptCmd_SetActorGroupFlag.c:
     complete
@@ -1464,9 +1668,21 @@ src/overlays/ov021/calls/ScriptOp_SetCurrentObjectVector.c:
     complete
     .text       start:0x020b3618 end:0x020b366c
 
+src/overlays/ov021/calls/func_ov021_020b366c.c:
+    complete
+    .text       start:0x020b366c end:0x020b36cc
+
 src/overlays/ov021/calls/ScriptOp_ApplyScaledObjectVector.c:
     complete
     .text       start:0x020b36cc end:0x020b374e
+
+src/overlays/ov021/calls/func_ov021_020b3750.c:
+    complete
+    .text       start:0x020b3750 end:0x020b37c0
+
+src/overlays/ov021/calls/func_ov021_020b37c0.c:
+    complete
+    .text       start:0x020b37c0 end:0x020b3802
 
 src/overlays/ov021/calls/ScriptCmd_PlayTargetSound.c:
     complete
@@ -1475,6 +1691,10 @@ src/overlays/ov021/calls/ScriptCmd_PlayTargetSound.c:
 src/overlays/ov021/calls/ScriptCmd_RemovePlayerAttachment.c:
     complete
     .text       start:0x020b38a8 end:0x020b38f4
+
+src/overlays/ov021/calls/func_ov021_020b38f4.c:
+    complete
+    .text       start:0x020b38f4 end:0x020b3916
 
 src/overlays/ov021/calls/EvalRandomRangeOperand.c:
     complete

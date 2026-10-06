@@ -1,3 +1,4 @@
 #define ScriptCmd_RequestRoomChange_02064e68 ScriptCmd_RequestRoomChange
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
+#define func_ov001_02063130 SetFieldStateValue
 #include "src/ov001/shared_engine/ScriptCmd_RequestRoomChange_02064e68.c"

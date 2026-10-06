@@ -24,6 +24,10 @@ src/overlays/ov073/calls/ReleaseStatusPage.c:
     complete
     .text       start:0x020bed00 end:0x020bed68
 
+src/overlays/ov073/calls/func_ov073_020bfbec.c:
+    complete
+    .text       start:0x020bfbec end:0x020bfc78
+
 src/overlays/ov073/calls/LoadStatusLabels.c:
     complete
     .text       start:0x020bfc78 end:0x020bfef0
@@ -263,6 +267,10 @@ src/overlays/ov073/calls/UploadListPalette.c:
 src/overlays/ov073/calls/GetListBgHOffset.c:
     complete
     .text       start:0x020c3fbc end:0x020c3fc4
+
+src/overlays/ov073/calls/func_ov073_020c3fc4.c:
+    complete
+    .text       start:0x020c3fc4 end:0x020c3fe8
 
 src/overlays/ov073/calls/GetListWidgetEntryIds.c:
     complete

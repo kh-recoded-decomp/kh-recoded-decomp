@@ -40,6 +40,10 @@ src/overlays/ov039/calls/UpdateSubOverlayHandlers.c:
     complete
     .text       start:0x020bb168 end:0x020bb2d0
 
+src/overlays/ov039/calls/func_ov039_020bb2d0.c:
+    complete
+    .text       start:0x020bb2d0 end:0x020bb328
+
 src/overlays/ov039/calls/InitThenDispatchTwoHandlers.c:
     complete
     .text       start:0x020bb328 end:0x020bb35c
@@ -51,6 +55,14 @@ src/overlays/ov039/calls/UpdateExitSequence.c:
 src/overlays/ov039/calls/LoadSelectedHandlerAndStart.c:
     complete
     .text       start:0x020bb42c end:0x020bb4c8
+
+src/overlays/ov039/calls/func_ov039_020bb4c8.c:
+    complete
+    .text       start:0x020bb4c8 end:0x020bb518
+
+src/overlays/ov039/calls/func_ov039_020bb518.c:
+    complete
+    .text       start:0x020bb518 end:0x020bb560
 
 src/overlays/ov039/calls/CleanupHandlersAndSetPhase5.c:
     complete
@@ -79,6 +91,10 @@ src/overlays/ov039/calls/FreeSlotPair.c:
 src/overlays/ov039/calls/StartSubScene.c:
     complete
     .text       start:0x020bbf98 end:0x020bc038
+
+src/overlays/ov039/calls/func_ov039_020bc038.c:
+    complete
+    .text       start:0x020bc038 end:0x020bc05c
 
 src/overlays/ov039/calls/RuntimeState_SetCondition.c:
     complete
@@ -228,6 +244,14 @@ src/overlays/ov039/calls/func_ov039_020bced0.c:
     complete
     .text       start:0x020bced0 end:0x020bcf10
 
+src/overlays/ov039/calls/func_ov039_020bcf10.c:
+    complete
+    .text       start:0x020bcf10 end:0x020bcf40
+
+src/overlays/ov039/calls/func_ov039_020bcf40.c:
+    complete
+    .text       start:0x020bcf40 end:0x020bcf70
+
 src/overlays/ov039/calls/LoadSecondarySubOverlay.c:
     complete
     .text       start:0x020bcf70 end:0x020bcfa8
@@ -243,6 +267,10 @@ src/overlays/ov039/calls/func_ov039_020bcfec.c:
 src/overlays/ov039/calls/CloseSecondarySubOverlay.c:
     complete
     .text       start:0x020bd02c end:0x020bd074
+
+src/overlays/ov039/calls/func_ov039_020bd074.c:
+    complete
+    .text       start:0x020bd074 end:0x020bd0a4
 
 src/overlays/ov039/calls/func_ov039_020bd0a4.c:
     complete
@@ -347,6 +375,14 @@ src/overlays/ov039/calls/SetWidgetDigitDisplay.c:
 src/overlays/ov039/calls/SetDigitDisplay.c:
     complete
     .text       start:0x020be2e8 end:0x020be378
+
+src/overlays/ov039/calls/func_ov039_020be548.c:
+    complete
+    .text       start:0x020be548 end:0x020be594
+
+src/overlays/ov039/calls/func_ov039_020be594.c:
+    complete
+    .text       start:0x020be594 end:0x020be5d8
 
 src/overlays/ov039/calls/OpenTextFrame.c:
     complete

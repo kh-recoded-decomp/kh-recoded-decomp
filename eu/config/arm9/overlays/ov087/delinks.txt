@@ -24,6 +24,10 @@ src/overlays/ov087/calls/HandleSlotInput.c:
     complete
     .text       start:0x020c462c end:0x020c4694
 
+src/overlays/ov087/calls/func_ov087_020c4694.c:
+    complete
+    .text       start:0x020c4694 end:0x020c46a4
+
 src/overlays/ov087/calls/SwitchToSecondaryIfEntryRejected.c:
     complete
     .text       start:0x020c46a4 end:0x020c4700
@@ -31,6 +35,10 @@ src/overlays/ov087/calls/SwitchToSecondaryIfEntryRejected.c:
 src/overlays/ov087/calls/InvokeSlotHandlers.c:
     complete
     .text       start:0x020c4700 end:0x020c4734
+
+src/overlays/ov087/calls/func_ov087_020c4734.c:
+    complete
+    .text       start:0x020c4734 end:0x020c4778
 
 src/overlays/ov087/calls/DrawPromptMessage.c:
     complete
@@ -135,6 +143,14 @@ src/overlays/ov087/calls/DestroyPanelScene.c:
 src/overlays/ov087/calls/HandleConfirmForState.c:
     complete
     .text       start:0x020c7b04 end:0x020c7b84
+
+src/overlays/ov087/calls/func_ov087_020c7b84.c:
+    complete
+    .text       start:0x020c7b84 end:0x020c7c18
+
+src/overlays/ov087/calls/func_ov087_020c7c18.c:
+    complete
+    .text       start:0x020c7c18 end:0x020c7c38
 
 src/overlays/ov087/data/strings/Strings_ov087_020c7e9c.c:
     complete

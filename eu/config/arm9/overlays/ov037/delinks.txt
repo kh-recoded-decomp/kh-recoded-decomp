@@ -56,9 +56,17 @@ src/overlays/ov037/calls/func_ov037_020baa84.c:
     complete
     .text       start:0x020baa84 end:0x020baa90
 
+src/overlays/ov037/calls/func_ov037_020baa90.c:
+    complete
+    .text       start:0x020baa90 end:0x020baaa0
+
 src/overlays/ov037/calls/func_ov037_020bab98.c:
     complete
     .text       start:0x020bab98 end:0x020babbc
+
+src/overlays/ov037/calls/func_ov037_020babbc.c:
+    complete
+    .text       start:0x020babbc end:0x020babe8
 
 src/overlays/ov037/calls/IsPxiChannelActive.c:
     complete
@@ -75,6 +83,14 @@ src/overlays/ov037/calls/ContinueScene_GetResult.c:
 src/overlays/ov037/calls/InitCommHandlerTable.c:
     complete
     .text       start:0x020bacb8 end:0x020bad2c
+
+src/overlays/ov037/calls/func_ov037_020bad44.c:
+    complete
+    .text       start:0x020bad44 end:0x020bad64
+
+src/overlays/ov037/calls/func_ov037_020bad64.c:
+    complete
+    .text       start:0x020bad64 end:0x020bad84
 
 src/overlays/ov037/calls/RefreshMenuListLayout.c:
     complete

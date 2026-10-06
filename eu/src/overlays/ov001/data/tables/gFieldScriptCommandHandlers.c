@@ -87,7 +87,7 @@ extern void func_ov001_02065c5c(void); /* ScriptCmd_SetLinkMode */
 extern void ScriptCmd_QueueFlagTaskKind8(void); /* ScriptCmd_QueueFlagTaskKind8 */
 extern void func_ov001_02065ce4(void); /* ScriptCmd_EnterPhase */
 extern void ScriptCmd_StorePageVariantParams(void); /* ScriptCmd_StorePageVariantParams */
-extern void func_ov001_02065d80(void);
+extern void ScriptCmd_StoreFifoReady(void);
 extern void func_ov001_02065db0(void); /* FS_UnloadOverlayImage */
 extern void func_ov001_02065e44(void); /* FS_UnloadOverlayImage */
 extern void func_ov001_02065e50(void);
@@ -266,7 +266,7 @@ void (*gFieldScriptCommandHandlers[190])(void) = {
     NULL,
     ScriptCmd_StorePageVariantParams, /* ScriptCmd_StorePageVariantParams */
     NULL,
-    func_ov001_02065d80,
+    ScriptCmd_StoreFifoReady,
     NULL,
     func_ov001_02065db0, /* FS_UnloadOverlayImage */
     NULL,
