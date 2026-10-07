@@ -1,0 +1,3 @@
+#define PlayAlternatingStageSound_0209279c PlayAlternatingStageSound
+#define PlayStageSoundAt_0209d080 PlayStageSoundAt
+#include "src/ov001/shared_engine/PlayAlternatingStageSound_0209279c.c"

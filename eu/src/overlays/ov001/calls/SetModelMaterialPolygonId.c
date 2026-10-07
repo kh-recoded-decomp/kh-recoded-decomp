@@ -1,0 +1,2 @@
+#define SetModelMaterialPolygonId_0208f5fc SetModelMaterialPolygonId
+#include "src/ov001/shared_engine/SetModelMaterialPolygonId_0208f5fc.c"

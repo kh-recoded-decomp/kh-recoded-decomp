@@ -231,7 +231,7 @@ func_ov001_02065e44 kind:function(thumb,size=0xa) addr:0x02065e44
 func_ov001_02065e50 kind:function(thumb,size=0x22) addr:0x02065e50
 ScriptCmd_ToggleSessionBit15 kind:function(thumb,size=0x18) addr:0x02065e74
 func_ov001_02065e8c kind:function(thumb,size=0x16) addr:0x02065e8c
-func_ov001_02065ea4 kind:function(thumb,size=0x60) addr:0x02065ea4
+ScriptCmd_DamageLeaderNonLethal kind:function(thumb,size=0x60) addr:0x02065ea4
 func_ov001_02065f04 kind:function(thumb,size=0x1c) addr:0x02065f04
 func_ov001_02065f20 kind:function(thumb,size=0xa) addr:0x02065f20
 func_ov001_02065f2c kind:function(thumb,size=0xa) addr:0x02065f2c
@@ -308,9 +308,9 @@ UpdateSceneAnimsAndCaption kind:function(thumb,size=0x154) addr:0x02067d80
 func_ov001_02067ed4 kind:function(thumb,size=0x10) addr:0x02067ed4
 func_ov001_02067ee4 kind:function(thumb,size=0x24) addr:0x02067ee4
 func_ov001_02067f08 kind:function(thumb,size=0x84) addr:0x02067f08
-func_ov001_02067f8c kind:function(thumb,size=0x6) addr:0x02067f8c
-func_ov001_02067f94 kind:function(thumb,size=0x6) addr:0x02067f94
-func_ov001_02067f9c kind:function(thumb,size=0x6) addr:0x02067f9c
+GetSignedByteAt3 kind:function(thumb,size=0x6) addr:0x02067f8c
+GetSignedByteAt2 kind:function(thumb,size=0x6) addr:0x02067f94
+GetSignedByteAt1 kind:function(thumb,size=0x6) addr:0x02067f9c
 GetMenuItemWorldMarker kind:function(thumb,size=0x5c) addr:0x02067fa4
 GetSlotEntryValue kind:function(thumb,size=0x2c) addr:0x02068000
 GetMenuItemValue kind:function(thumb,size=0x30) addr:0x0206802c
@@ -835,7 +835,7 @@ RelayoutGaugeRows kind:function(thumb,size=0xe0) addr:0x020742e0
 LoadMenuGaugeData kind:function(thumb,size=0x120) addr:0x020743c0
 RedrawGaugeCells kind:function(thumb,size=0xfe) addr:0x020744e0
 RedrawHudGaugeRows kind:function(thumb,size=0xa8) addr:0x020745e0
-func_ov001_02074688 kind:function(thumb,size=0x60) addr:0x02074688
+SetGaugeValues kind:function(thumb,size=0x60) addr:0x02074688
 RepaintPanelGaugeRows kind:function(thumb,size=0x114) addr:0x020746e8
 func_ov001_020747fc kind:function(thumb,size=0x1c4) addr:0x020747fc
 func_ov001_020749c0 kind:function(thumb,size=0x1bc) addr:0x020749c0
@@ -1750,7 +1750,7 @@ ScriptCmd_UpdateScreenOverlayFade kind:function(thumb,size=0x68) addr:0x0208e638
 ScriptCmd_PlayActorNamedMotion kind:function(thumb,size=0x48) addr:0x0208e6a0
 ScriptCmd_ShowMessageWindow kind:function(thumb,size=0x90) addr:0x0208e6e8
 func_ov001_0208e778 kind:function(thumb,size=0x4) addr:0x0208e778
-func_ov001_0208e77c kind:function(thumb,size=0x18) addr:0x0208e77c
+ScriptCmd_DispatchToHandler kind:function(thumb,size=0x18) addr:0x0208e77c
 ScriptCmd_StartScreenFade kind:function(thumb,size=0x3c) addr:0x0208e794
 IsResourceReadyOrInitialize kind:function(thumb,size=0x28) addr:0x0208e7d0
 ScriptCmd_OpenFieldPanelScreen kind:function(thumb,size=0x78) addr:0x0208e7f8
@@ -1801,7 +1801,7 @@ CalcMaterialAnimWithGlobalAlpha kind:function(thumb,size=0x48) addr:0x0208f4d4
 SceneNode_DrawImmediate kind:function(thumb,size=0x60) addr:0x0208f51c
 HookMaterialAnimAlpha kind:function(thumb,size=0x48) addr:0x0208f57c
 GetModelMaterialPolygonID kind:function(thumb,size=0x60) addr:0x0208f5c4
-func_ov001_0208f624 kind:function(thumb,size=0x5c) addr:0x0208f624
+SetModelMaterialPolygonId kind:function(thumb,size=0x5c) addr:0x0208f624
 CanActorReactToSource kind:function(thumb,size=0x60) addr:0x0208f680
 func_ov001_0208f6e0 kind:function(thumb,size=0x2) addr:0x0208f6e0
 SyncNearestEntryPosition kind:function(thumb,size=0x24) addr:0x0208f6e4
@@ -1854,11 +1854,11 @@ GetNodeMatrix kind:function(thumb,size=0x54) addr:0x020915d4
 GetNodePosition kind:function(thumb,size=0x58) addr:0x02091628
 func_ov001_02091680 kind:function(thumb,size=0x16) addr:0x02091680
 ProbeGroundBelowActor kind:function(thumb,size=0x11c) addr:0x02091698
-func_ov001_020917b4 kind:function(thumb,size=0x4c) addr:0x020917b4
+SetWalkerActive kind:function(thumb,size=0x4c) addr:0x020917b4
 SetLinkedActorsInQuadTree kind:function(thumb,size=0x40) addr:0x02091800
 ApplyActorScaleFactors kind:function(thumb,size=0x1c) addr:0x02091840
 func_ov001_0209185c kind:function(thumb,size=0xe8) addr:0x0209185c
-func_ov001_02091944 kind:function(thumb,size=0x48) addr:0x02091944
+SetActorGridCell kind:function(thumb,size=0x48) addr:0x02091944
 ClearWalkerStepState kind:function(thumb,size=0x2c) addr:0x0209198c
 ReloadActorAnimationSet kind:function(thumb,size=0x70) addr:0x020919b8
 PlayActorAnimationSlot kind:function(thumb,size=0xa8) addr:0x02091a28
@@ -1886,7 +1886,7 @@ RandomHorizontalVector kind:function(thumb,size=0x40) addr:0x0209265c
 ComputeFlatDirectionVector kind:function(thumb,size=0x30) addr:0x0209269c
 BindSlotToSourceCell kind:function(thumb,size=0xec) addr:0x020926cc
 ZeroActorSubStruct kind:function(thumb,size=0xc) addr:0x020927b8
-func_ov001_020927c4 kind:function(arm,size=0x11c) addr:0x020927c4
+PlayAlternatingStageSound kind:function(arm,size=0x11c) addr:0x020927c4
 GetResourceSectionElement kind:function(arm,size=0x98) addr:0x020928e0
 GetOwnerTableEntryValue kind:function(arm,size=0x40) addr:0x02092978
 SpawnActorById kind:function(thumb,size=0x34) addr:0x020929b8
@@ -2006,8 +2006,8 @@ LoadStageResource kind:function(thumb,size=0x128) addr:0x0209a7ac
 LoadStageModelEntry kind:function(thumb,size=0x2b8) addr:0x0209a8d4
 func_ov001_0209ab8c kind:function(thumb,size=0x910) addr:0x0209ab8c
 func_ov001_0209b49c kind:function(thumb,size=0x84) addr:0x0209b49c
-func_ov001_0209b520 kind:function(thumb,size=0x64) addr:0x0209b520
-func_ov001_0209b584 kind:function(thumb,size=0x5c) addr:0x0209b584
+ReleaseStageSlotLocks kind:function(thumb,size=0x64) addr:0x0209b520
+AddStageSlotLocks kind:function(thumb,size=0x5c) addr:0x0209b584
 func_ov001_0209b5e0 kind:function(thumb,size=0xc) addr:0x0209b5e0
 func_ov001_0209b5ec kind:function(thumb,size=0xc) addr:0x0209b5ec
 LockStageSlotObjects kind:function(thumb,size=0x68) addr:0x0209b5f8
@@ -2308,7 +2308,7 @@ sOv001_UiBtlBtlLanguageP2_0209edb4 kind:data(any) addr:0x0209edb4
 sOv001_UiBtlFaceP2_0209edc8 kind:data(any) addr:0x0209edc8
 sOv001_BTLUITASK_0209edd8 kind:data(any) addr:0x0209edd8
 data_ov001_0209ede4 kind:data(any) addr:0x0209ede4
-data_ov001_0209edec kind:data(any) addr:0x0209edec
+gGaugeScale kind:data(any) addr:0x0209edec
 data_ov001_0209edf0 kind:data(any) addr:0x0209edf0
 data_ov001_0209edf4 kind:data(any) addr:0x0209edf4
 data_ov001_0209edf8 kind:data(any) addr:0x0209edf8

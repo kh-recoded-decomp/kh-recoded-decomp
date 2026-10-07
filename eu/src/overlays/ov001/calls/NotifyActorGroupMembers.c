@@ -1,5 +1,5 @@
 #define NotifyActorGroupMembers_020969e0 NotifyActorGroupMembers
-#define func_ov001_0209178c func_ov001_020917b4
+#define func_ov001_0209178c SetWalkerActive
 #define func_ov001_0209c2dc FindRecordById_0209c304
 #define func_ov001_0209c2f0 GetLinkedStageActor
 #include "src/ov001/shared_engine/NotifyActorGroupMembers_020969e0.c"

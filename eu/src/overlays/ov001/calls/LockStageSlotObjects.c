@@ -1,5 +1,5 @@
 #define GetStageObjectHandle_0209c0c4 GetStageObjectHandle
 #define LockStageSlotObjects_0209b5d0 LockStageSlotObjects
-#define ReleaseStageSlotLocks_0209b4f8 func_ov001_0209b520
+#define ReleaseStageSlotLocks_0209b4f8 ReleaseStageSlotLocks
 #define g_stageManager_020a0508 data_ov001_020a0528
 #include "src/ov001/shared_engine/LockStageSlotObjects_0209b5d0.c"

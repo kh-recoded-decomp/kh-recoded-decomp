@@ -1,0 +1,7 @@
+#define ScriptCmd_DamageLeaderNonLethal_02065ea4 ScriptCmd_DamageLeaderNonLethal
+#define ScriptVm_ReadOperandFx32_02025df8 ScriptVm_ReadOperandFx32
+#define GetBoundedEntryField_0206db5c GetBoundedEntryField
+#define ScaleValueByPercentField_020a7650 ScaleValueByPercentField
+#define func_ov021_020a75ec AddClampedHealth
+#define func_ov052_020ceb60 func_ov052_020ceb80
+#include "src/ov001/shared_engine/ScriptCmd_DamageLeaderNonLethal_02065ea4.c"

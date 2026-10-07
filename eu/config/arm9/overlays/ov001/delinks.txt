@@ -880,6 +880,10 @@ src/overlays/ov001/calls/func_ov001_02065e8c.c:
     complete
     .text       start:0x02065e8c end:0x02065ea2
 
+src/overlays/ov001/calls/ScriptCmd_DamageLeaderNonLethal.c:
+    complete
+    .text       start:0x02065ea4 end:0x02065f04
+
 src/overlays/ov001/calls/func_ov001_02065f04.c:
     complete
     .text       start:0x02065f04 end:0x02065f20
@@ -1144,15 +1148,15 @@ src/overlays/ov001/calls/func_ov001_02067ee4.c:
     complete
     .text       start:0x02067ee4 end:0x02067f08
 
-src/overlays/ov001/auto/func_ov001_02067f8c.c:
+src/overlays/ov001/auto/GetSignedByteAt3.c:
     complete
     .text       start:0x02067f8c end:0x02067f92
 
-src/overlays/ov001/auto/func_ov001_02067f94.c:
+src/overlays/ov001/auto/GetSignedByteAt2.c:
     complete
     .text       start:0x02067f94 end:0x02067f9a
 
-src/overlays/ov001/auto/func_ov001_02067f9c.c:
+src/overlays/ov001/auto/GetSignedByteAt1.c:
     complete
     .text       start:0x02067f9c end:0x02067fa2
 
@@ -3063,6 +3067,10 @@ src/overlays/ov001/calls/RedrawGaugeCells.c:
 src/overlays/ov001/calls/RedrawHudGaugeRows.c:
     complete
     .text       start:0x020745e0 end:0x02074688
+
+src/overlays/ov001/calls/SetGaugeValues.c:
+    complete
+    .text       start:0x02074688 end:0x020746e8
 
 src/overlays/ov001/calls/RepaintPanelGaugeRows.c:
     complete
@@ -6388,7 +6396,7 @@ src/overlays/ov001/auto/func_ov001_0208e778.c:
     complete
     .text       start:0x0208e778 end:0x0208e77c
 
-src/overlays/ov001/calls/func_ov001_0208e77c.c:
+src/overlays/ov001/calls/ScriptCmd_DispatchToHandler.c:
     complete
     .text       start:0x0208e77c end:0x0208e794
 
@@ -6584,6 +6592,10 @@ src/overlays/ov001/calls/GetModelMaterialPolygonID.c:
     complete
     .text       start:0x0208f5c4 end:0x0208f624
 
+src/overlays/ov001/calls/SetModelMaterialPolygonId.c:
+    complete
+    .text       start:0x0208f624 end:0x0208f680
+
 src/overlays/ov001/calls/CanActorReactToSource.c:
     complete
     .text       start:0x0208f680 end:0x0208f6e0
@@ -6764,6 +6776,10 @@ src/overlays/ov001/calls/ProbeGroundBelowActor.c:
     complete
     .text       start:0x02091698 end:0x020917b4
 
+src/overlays/ov001/calls/SetWalkerActive.c:
+    complete
+    .text       start:0x020917b4 end:0x02091800
+
 src/overlays/ov001/calls/SetLinkedActorsInQuadTree.c:
     complete
     .text       start:0x02091800 end:0x02091840
@@ -6771,6 +6787,10 @@ src/overlays/ov001/calls/SetLinkedActorsInQuadTree.c:
 src/overlays/ov001/calls/ApplyActorScaleFactors.c:
     complete
     .text       start:0x02091840 end:0x0209185c
+
+src/overlays/ov001/calls/SetActorGridCell.c:
+    complete
+    .text       start:0x02091944 end:0x0209198c
 
 src/overlays/ov001/calls/ClearWalkerStepState.c:
     complete
@@ -6875,6 +6895,10 @@ src/overlays/ov001/calls/BindSlotToSourceCell.c:
 src/overlays/ov001/calls/ZeroActorSubStruct.c:
     complete
     .text       start:0x020927b8 end:0x020927c4
+
+src/overlays/ov001/calls/PlayAlternatingStageSound.c:
+    complete
+    .text       start:0x020927c4 end:0x020928e0
 
 src/overlays/ov001/calls/GetResourceSectionElement.c:
     complete
@@ -7259,6 +7283,14 @@ src/overlays/ov001/calls/LoadStageResource.c:
 src/overlays/ov001/calls/LoadStageModelEntry.c:
     complete
     .text       start:0x0209a8d4 end:0x0209ab8c
+
+src/overlays/ov001/calls/ReleaseStageSlotLocks.c:
+    complete
+    .text       start:0x0209b520 end:0x0209b584
+
+src/overlays/ov001/calls/AddStageSlotLocks.c:
+    complete
+    .text       start:0x0209b584 end:0x0209b5e0
 
 src/overlays/ov001/calls/func_ov001_0209b5e0.c:
     complete

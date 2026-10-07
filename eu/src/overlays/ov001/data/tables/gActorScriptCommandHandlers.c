@@ -68,7 +68,7 @@ extern void ScriptCmd_ShowSpeakerMessage(void); /* ScriptCmd_ShowSpeakerMessage 
 extern void ScriptCmd_ShowTwoChoiceMessage(void); /* ScriptCmd_ShowTwoChoiceMessage */
 extern void ScriptCmd_ShowMessageWindow(void); /* ScriptCmd_ShowMessageWindow */
 extern void func_ov001_0208e778(void); /* DefaultStepDone */
-extern void func_ov001_0208e77c(void); /* ScriptCmd_DispatchToHandler */
+extern void ScriptCmd_DispatchToHandler(void);
 extern void ScriptCmd_StartScreenFade(void); /* ScriptCmd_StartScreenFade */
 extern void IsResourceReadyOrInitialize(void); /* IsResourceReadyOrInitialize */
 extern void ScriptCmd_OpenFieldPanelScreen(void); /* ScriptCmd_OpenFieldPanelScreen */
@@ -225,7 +225,7 @@ void (*gActorScriptCommandHandlers[186])(void) = {
     NULL,
     func_ov001_0208e778, /* DefaultStepDone */
     NULL,
-    func_ov001_0208e77c, /* ScriptCmd_DispatchToHandler */
+    ScriptCmd_DispatchToHandler,
     NULL,
     ScriptCmd_StartScreenFade, /* ScriptCmd_StartScreenFade */
     IsResourceReadyOrInitialize, /* IsResourceReadyOrInitialize */

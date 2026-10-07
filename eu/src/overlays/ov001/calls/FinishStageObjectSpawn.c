@@ -2,7 +2,7 @@
 #define GetStageActor_0209c040 GetStageActor
 #define GetStageEventRecord_0209c0ec GetStageEventRecord
 #define GetStageObjectRecord_0209c0a0 GetStageObjectRecord
-#define SetModelMaterialPolygonId_0208f5fc func_ov001_0208f624
+#define SetModelMaterialPolygonId_0208f5fc SetModelMaterialPolygonId
 #define func_ov001_020909e4 func_ov001_02090a0c
 #define func_ov001_02097324 func_ov001_0209734c
 #include "src/ov001/shared_engine/FinishStageObjectSpawn_020981e8.c"

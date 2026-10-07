@@ -31,7 +31,7 @@ extern BOOL func_ov001_020681e8(u8 *entry, u32 kind);
 extern int func_ov001_02067ed4(void);
 extern int func_ov001_02068344(int group, s8 slot);
 extern Registry *GetActorRegistry(void);
-extern int func_ov001_02067f94(u8 *entry);
+extern int GetSignedByteAt2(u8 *entry);
 
 BOOL func_ov001_02084604(Record *record, Unit *unit)
 {
@@ -53,7 +53,7 @@ BOOL func_ov001_02084604(Record *record, Unit *unit)
         id = ids[i];
         table = *GetActorRegistry()->tables;
         entry = (id == 0xFF) ? NULL : table->entries + id * 0x14;
-        if (expected == func_ov001_02067f94(entry))
+        if (expected == GetSignedByteAt2(entry))
             return FALSE;
     }
     return TRUE;

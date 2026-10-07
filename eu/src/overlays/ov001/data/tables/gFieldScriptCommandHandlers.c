@@ -93,7 +93,7 @@ extern void func_ov001_02065e44(void); /* FS_UnloadOverlayImage */
 extern void func_ov001_02065e50(void);
 extern void ScriptCmd_ToggleSessionBit15(void); /* ScriptCmd_ToggleSessionBit15 */
 extern void func_ov001_02065e8c(void);
-extern void func_ov001_02065ea4(void); /* ScriptCmd_DamageLeaderNonLethal */
+extern void ScriptCmd_DamageLeaderNonLethal(void);
 extern void func_ov001_02065f04(void);
 extern void func_ov001_02065f20(void); /* FS_UnloadOverlayImage */
 extern void func_ov001_02065f2c(void); /* MsgQueue_GetHeap */
@@ -278,7 +278,7 @@ void (*gFieldScriptCommandHandlers[190])(void) = {
     NULL,
     func_ov001_02065e8c,
     NULL,
-    func_ov001_02065ea4, /* ScriptCmd_DamageLeaderNonLethal */
+    ScriptCmd_DamageLeaderNonLethal,
     NULL,
     func_ov001_02065f04,
     NULL,
