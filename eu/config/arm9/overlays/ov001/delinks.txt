@@ -376,11 +376,11 @@ src/overlays/ov001/calls/WriteSessionPackedBits.c:
     complete
     .text       start:0x0206459c end:0x020645c8
 
-src/overlays/ov001/calls/func_ov001_020645c8.c:
+src/overlays/ov001/calls/IsSessionFlagSet.c:
     complete
     .text       start:0x020645c8 end:0x020645dc
 
-src/overlays/ov001/calls/func_ov001_020645dc.c:
+src/overlays/ov001/calls/SetSessionFlag.c:
     complete
     .text       start:0x020645dc end:0x020645e8
 
@@ -1520,6 +1520,10 @@ src/overlays/ov001/calls/func_ov001_020695b8.c:
     complete
     .text       start:0x020695b8 end:0x02069606
 
+src/overlays/ov001/calls/ResetRangeTriggerNode.c:
+    complete
+    .text       start:0x02069608 end:0x02069618
+
 src/overlays/ov001/calls/IsPointWithinEntityRadius.c:
     complete
     .text       start:0x02069618 end:0x02069642
@@ -1547,6 +1551,10 @@ src/overlays/ov001/calls/InitRangeTriggerNode.c:
 src/overlays/ov001/calls/EventTrigger_CheckCounterGoal.c:
     complete
     .text       start:0x02069830 end:0x020698ac
+
+src/overlays/ov001/calls/ResetOffsetFieldTask.c:
+    complete
+    .text       start:0x020698ac end:0x020698bc
 
 src/overlays/ov001/calls/InitOffsetFieldTask.c:
     complete
@@ -1608,6 +1616,10 @@ src/overlays/ov001/calls/func_ov001_02069a30.c:
     complete
     .text       start:0x02069a30 end:0x02069a44
 
+src/overlays/ov001/calls/ResetBitChainTrigger.c:
+    complete
+    .text       start:0x02069a44 end:0x02069a54
+
 src/overlays/ov001/calls/InitBitChainTrigger.c:
     complete
     .text       start:0x02069a54 end:0x02069b80
@@ -1632,6 +1644,10 @@ src/overlays/ov001/calls/UpdateFieldTask.c:
     complete
     .text       start:0x02069cb4 end:0x02069cfe
 
+src/overlays/ov001/calls/ResetFieldTask.c:
+    complete
+    .text       start:0x02069d00 end:0x02069d10
+
 src/overlays/ov001/calls/InitFieldTask.c:
     complete
     .text       start:0x02069d10 end:0x02069d34
@@ -1655,6 +1671,10 @@ src/overlays/ov001/calls/OpenNamedSessionArchive.c:
 src/overlays/ov001/calls/EventTrigger_EvaluateCallback.c:
     complete
     .text       start:0x02069e1c end:0x02069e74
+
+src/overlays/ov001/calls/ResetPairFieldTask.c:
+    complete
+    .text       start:0x02069e74 end:0x02069e84
 
 src/overlays/ov001/calls/InitPairFieldTask.c:
     complete
@@ -2171,6 +2191,10 @@ src/overlays/ov001/calls/func_ov001_0206db44.c:
 src/overlays/ov001/calls/GetBoundedEntryField.c:
     complete
     .text       start:0x0206db5c end:0x0206db78
+
+src/overlays/ov001/calls/GetPlayerControlState.c:
+    complete
+    .text       start:0x0206db78 end:0x0206db8c
 
 src/overlays/ov001/calls/func_ov001_0206db8c.c:
     complete

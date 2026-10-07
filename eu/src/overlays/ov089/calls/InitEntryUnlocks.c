@@ -1,3 +1,4 @@
+#define func_ov001_020645c8 IsSessionFlagSet
 #define InitEntryUnlocks_020bfc4c InitEntryUnlocks
 #define ReadSessionPackedBits_02064574 ReadSessionPackedBits
 #define RefreshEntryCaption_020beff4 RefreshEntryCaption

@@ -2,5 +2,5 @@
 
 void *GetSecondaryMenuElement(void)
 {
-    return gOv039MenuState->secondaryElementPrefix;
+    return gOv039MenuState->secondaryElement;
 }

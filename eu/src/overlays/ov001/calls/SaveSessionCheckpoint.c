@@ -1,3 +1,4 @@
+#define func_ov001_020645c8 IsSessionFlagSet
 #define CaptureSaveSnapshot_02062eb4 CaptureSaveSnapshot
 #define NNSi_FndAllocFromDefaultHeapEx_0202a19c NNS_FndAllocFromDefaultExpHeapEx
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap

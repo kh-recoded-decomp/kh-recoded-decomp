@@ -1,3 +1,4 @@
+#define func_ov001_020645c8 IsSessionFlagSet
 #define IsFieldFlag13OrSessionFlagSet_020728e4 IsFieldFlag13OrSessionFlagSet
 #define data_ov001_020a04a4 data_ov001_020a04c4
 #include "src/ov001/field_manager/IsFieldFlag13OrSessionFlagSet_020728e4.c"

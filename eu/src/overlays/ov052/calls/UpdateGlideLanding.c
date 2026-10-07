@@ -1,3 +1,4 @@
+#define func_ov001_0206db78 GetPlayerControlState
 #define AlarmCallback_020a7504 func_ov021_020a7524
 #define ComputeRootMotionDelta_020ce9d4 ComputeRootMotionDelta
 #define GetPlayerEntryCount_02050050 GetPlayerEntryCount

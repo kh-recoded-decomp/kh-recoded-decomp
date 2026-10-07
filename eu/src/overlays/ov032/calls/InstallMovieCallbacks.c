@@ -1,3 +1,4 @@
+#define func_ov001_020645c8 IsSessionFlagSet
 #define ApplyAreaMusicEntry_02064734 ApplyAreaMusicEntry
 #define InstallMovieCallbacks_020bb79c InstallMovieCallbacks
 #define IsContextFlag10Clear_020bb554 IsContextFlag10Clear

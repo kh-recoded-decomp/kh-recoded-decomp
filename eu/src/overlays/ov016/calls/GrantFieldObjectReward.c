@@ -1,3 +1,4 @@
+#define func_ov001_020645dc SetSessionFlag
 #define GrantEntryUnlockReward_02087518 GrantEntryUnlockReward
 #define GrantFieldObjectReward_020a28d0 GrantFieldObjectReward
 #define func_ov001_020645e8 ClearSessionPackedBit

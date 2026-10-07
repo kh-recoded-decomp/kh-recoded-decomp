@@ -1,3 +1,4 @@
+#define func_ov001_020645c8 IsSessionFlagSet
 #define GetTextWindowStatus_020c3080 GetTextWindowStatus
 #define PXI_Init_020c30d8 func_ov036_020c30f8
 #define PXI_Init_020c3354 func_ov036_020c3374

@@ -1,3 +1,4 @@
+#define func_ov001_020645c8 IsSessionFlagSet
 #define CheckFallOutOfBounds_020c7d54 CheckFallOutOfBounds
 #define ReadActiveMenuState_0206c328 ReadActiveMenuState
 #define SetClampedCursor_020a75d8 SetClampedCursor

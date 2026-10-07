@@ -6,7 +6,7 @@ extern unsigned int NNSi_FndAllocFromDefaultHeap();
 extern unsigned int ResourceCache_FreeAll();
 extern unsigned int MIi_CpuClear32();
 extern unsigned int func_ov001_020644c0();
-extern unsigned int func_ov001_020645c8();
+extern unsigned int IsSessionFlagSet();
 
 void func_ov001_02086e58(int count) {
   unsigned int *cache;
@@ -18,7 +18,7 @@ void func_ov001_02086e58(int count) {
   *cache = entries;
   MIi_CpuClear32(0,entries,count * 4);
   *(char *)(cache + 1) = (char)count;
-  currentState = func_ov001_020645c8(0x3614);
+  currentState = IsSessionFlagSet(0x3614);
   if ((currentState == 0) &&
      (((currentState = func_ov001_020644c0(), *(short *)((int)cache + 0x132) != currentState ||
        (*(char *)(cache + 0x4d) != count)) ||

@@ -13,7 +13,7 @@ typedef struct FieldState {
 
 extern const ModeTable data_ov001_0209de90;
 extern FieldState *data_ov001_020a0480;
-extern BOOL func_ov001_020645c8(u32 flag);
+extern BOOL IsSessionFlagSet(u32 flag);
 extern void func_ov001_020716e8(int menu, int value);
 
 void RunMenuEntryCallbacks(void *context, int menu, int count, void (*callback)(void *context, int index, int mode), int mode)
@@ -28,7 +28,7 @@ void RunMenuEntryCallbacks(void *context, int menu, int count, void (*callback)(
     }
     value = table.values[mode];
     if (value == 2) {
-        if (menu == 0 && (func_ov001_020645c8(0x3525) || data_ov001_020a0480->hintShown)) {
+        if (menu == 0 && (IsSessionFlagSet(0x3525) || data_ov001_020a0480->hintShown)) {
             skip = TRUE;
         } else {
             skip = FALSE;

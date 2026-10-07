@@ -3,6 +3,7 @@
 #define IsPointWithinEntityRadius_02069618 IsPointWithinEntityRadius
 #define PointInBox3D_02069718 PointInBox3D
 #define PointInBoxXZ_0206976c PointInBoxXZ
+#define func_ov001_02069608 ResetRangeTriggerNode
 #define func_01ff8710 MIi_CpuCopy32
 #define func_ov001_020696c8 IsWithinHorizontalRange
 #include "src/ov001/shared_engine/InitRangeTriggerNode_020697ac.c"

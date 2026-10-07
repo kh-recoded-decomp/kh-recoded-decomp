@@ -124,6 +124,14 @@ src/overlays/ov040/calls/FindActorRewardValue.c:
     complete
     .text       start:0x020bda1c end:0x020bda8c
 
+src/overlays/ov040/calls/SetSessionFlag3723.c:
+    complete
+    .text       start:0x020bdaa8 end:0x020bdab8
+
+src/overlays/ov040/calls/SetSessionFlag3724.c:
+    complete
+    .text       start:0x020bdab8 end:0x020bdac8
+
 src/overlays/ov040/calls/ResetAreaGroupObjects.c:
     complete
     .text       start:0x020bdac8 end:0x020bdb2c
@@ -171,6 +179,10 @@ src/overlays/ov040/calls/func_ov040_020be00c.c:
 src/overlays/ov040/calls/func_ov040_020be028.c:
     complete
     .text       start:0x020be028 end:0x020be03c
+
+src/overlays/ov040/calls/GetFallbackActorAnimation.c:
+    complete
+    .text       start:0x020be03c end:0x020be04c
 
 src/overlays/ov040/calls/GrantRewardItem.c:
     complete

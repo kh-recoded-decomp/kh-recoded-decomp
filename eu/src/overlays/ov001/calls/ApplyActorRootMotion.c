@@ -1,3 +1,4 @@
+#define func_ov001_020645c8 IsSessionFlagSet
 #define ActorAnim_AdvanceAndGetRootDelta_02089118 ActorAnim_AdvanceAndGetRootDelta
 #define Actor_FireExpiredTrackCues_02089180 Actor_FireExpiredTrackCues
 #define Anim_GetFrame_0202f4a0 Anim_GetFrame

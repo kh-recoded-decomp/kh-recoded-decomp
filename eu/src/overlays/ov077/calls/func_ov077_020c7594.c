@@ -23,7 +23,7 @@ extern const ThresholdTable data_ov077_020ca1b8;
 extern GameState *data_0205fe0c;
 
 extern int ReadSessionPackedBits(int id, int mode);
-extern BOOL func_ov001_020645c8(u32 value);
+extern BOOL IsSessionFlagSet(u32 value);
 extern s8 func_ov001_02068084(void);
 extern PlayerParams *GetSelectionPackedValueBlock(void);
 extern void SetParamHalf18(u16 value);
@@ -33,7 +33,7 @@ void func_ov077_020c7594(int bonus) {
     ThresholdTable table = data_ov077_020ca1b8;
     int state = ReadSessionPackedBits(0x1a00, 2);
     if (func_ov001_02068084() == 5 && state != 2) {
-        if (func_ov001_020645c8(0x3609) && func_ov001_020645c8(0x360a) && bonus > 0) {
+        if (IsSessionFlagSet(0x3609) && IsSessionFlagSet(0x360a) && bonus > 0) {
             SetParamHalf18(0xce4);
         }
     } else {

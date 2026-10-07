@@ -1,3 +1,4 @@
+#define func_ov001_020645c8 IsSessionFlagSet
 #define Entity_UpdateEventEffect_020a18ac Entity_UpdateEventEffect
 #define IsBit0Set_020a9d1c IsBit0Set
 #define SetBit1WhenBit0Set_020a9ce8 SetBit1WhenBit0Set

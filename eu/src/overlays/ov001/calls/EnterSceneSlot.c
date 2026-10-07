@@ -1,3 +1,4 @@
+#define func_ov001_020645dc SetSessionFlag
 #define EnterSceneSlot_020647a4 EnterSceneSlot
 #define data_ov001_020a0460 data_ov001_020a0480
 #define func_01ff8740 MIi_CpuClearFast

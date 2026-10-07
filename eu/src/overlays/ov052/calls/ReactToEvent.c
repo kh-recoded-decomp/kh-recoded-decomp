@@ -1,3 +1,4 @@
+#define func_ov001_0206db78 GetPlayerControlState
 #define ReactToEvent_020c8598 ReactToEvent
 #define func_ov021_020a7504 func_ov021_020a7524
 #define func_ov052_020c7dc4 TryStartSpecialAction

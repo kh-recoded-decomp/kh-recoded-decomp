@@ -16,6 +16,6 @@
 #define func_ov027_020b9e00 func_ov027_020b9e20
 #define func_ov027_020ba2a8 func_ov027_020ba2c8
 #define func_ov039_020bc1e4 UpdateScreenWidgetLayer
-#define func_ov039_020bc994 func_ov039_020bc9b4
+#define func_ov039_020bc994 GetMenuFont10
 #define func_ov086_020bfb80 func_ov086_020bfba0
 #include "src/ov086/panel_state/InitRecordPanelText_020c1078.c"

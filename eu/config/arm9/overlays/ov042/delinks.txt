@@ -62,6 +62,10 @@ src/overlays/ov042/calls/GetOrbitOffsetDegrees.c:
     complete
     .text       start:0x020bd494 end:0x020bd4cc
 
+src/overlays/ov042/calls/GetCameraModeStatus.c:
+    complete
+    .text       start:0x020bd4cc end:0x020bd4dc
+
 src/overlays/ov042/calls/InitCameraState.c:
     complete
     .text       start:0x020bd4dc end:0x020bd5a4

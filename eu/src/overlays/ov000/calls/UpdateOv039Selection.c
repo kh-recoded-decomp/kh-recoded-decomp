@@ -10,7 +10,7 @@ extern s32 data_ov000_020639cc[];
 extern SelectionSession *NNSi_FndGetCurrentRootHeap(void);
 extern void func_ov039_020bbb8c(void *arg);
 extern BOOL IsStatePhaseIdle(void);
-extern int func_ov039_020bcda0(void);
+extern int RuntimeState_GetObjectId(void);
 extern void func_ov039_020bbe80(int arg);
 
 int UpdateOv039Selection(void)
@@ -22,9 +22,9 @@ int UpdateOv039Selection(void)
     case 0:
         func_ov039_020bbb8c(NULL);
         if (IsStatePhaseIdle()) {
-            result = func_ov039_020bcda0();
+            result = RuntimeState_GetObjectId();
             if (result != -1) {
-                result = data_ov000_020639cc[func_ov039_020bcda0()];
+                result = data_ov000_020639cc[RuntimeState_GetObjectId()];
             }
             session->result = result;
             func_ov039_020bbe80(0);

@@ -1,3 +1,4 @@
 #define InitPairFieldTask_02069e84 InitPairFieldTask
 #define func_ov001_02069e1c EventTrigger_EvaluateCallback
+#define func_ov001_02069e74 ResetPairFieldTask
 #include "src/ov001/field_manager/InitPairFieldTask_02069e84.c"

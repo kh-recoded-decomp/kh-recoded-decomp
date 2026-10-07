@@ -1,3 +1,4 @@
+#define func_ov001_020645c8 IsSessionFlagSet
 #define GetClampedTimerValue_02063f90 GetClampedTimerValue
 #define data_ov001_020a0460 data_ov001_020a0480
 #include "src/ov001/shared_engine/GetClampedTimerValue_02063f90.c"

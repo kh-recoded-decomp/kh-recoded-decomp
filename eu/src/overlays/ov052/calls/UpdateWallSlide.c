@@ -1,3 +1,4 @@
+#define func_ov001_0206db78 GetPlayerControlState
 #define AddSessionCounter_02063a80 AddSessionCounter
 #define CollisionQuery_Init_02034c74 CollisionQuery_Init
 #define ComputeRootMotionDelta_020ce9d4 ComputeRootMotionDelta

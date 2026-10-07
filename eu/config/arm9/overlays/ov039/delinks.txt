@@ -148,6 +148,10 @@ src/overlays/ov039/calls/UpdateScreenWidgetLayer.c:
     complete
     .text       start:0x020bc204 end:0x020bc228
 
+src/overlays/ov039/calls/GetMenuTileTable.c:
+    complete
+    .text       start:0x020bc228 end:0x020bc240
+
 src/overlays/ov039/calls/BuildSlotImageParams.c:
     complete
     .text       start:0x020bc240 end:0x020bc28c
@@ -175,6 +179,10 @@ src/overlays/ov039/calls/GetMenuSharedState.c:
 src/overlays/ov039/calls/SetScreenBrightness.c:
     complete
     .text       start:0x020bc668 end:0x020bc690
+
+src/overlays/ov039/calls/GetMenuLayerMask.c:
+    complete
+    .text       start:0x020bc690 end:0x020bc6a8
 
 src/overlays/ov039/calls/SetStateFlagBits.c:
     complete
@@ -232,7 +240,15 @@ src/overlays/ov039/calls/SetSelectionIfChanged_020bc94c.c:
     complete
     .text       start:0x020bc94c end:0x020bc99c
 
-src/overlays/ov039/calls/GetMenuFont.c:
+src/overlays/ov039/calls/GetMenuFont08.c:
+    complete
+    .text       start:0x020bc99c end:0x020bc9b4
+
+src/overlays/ov039/calls/GetMenuFont10.c:
+    complete
+    .text       start:0x020bc9b4 end:0x020bc9cc
+
+src/overlays/ov039/calls/GetMenuFont10s.c:
     complete
     .text       start:0x020bc9cc end:0x020bc9e4
 
@@ -275,6 +291,10 @@ src/overlays/ov039/calls/SetTextColorIfFits.c:
 src/overlays/ov039/calls/RuntimeState_SetObjectId.c:
     complete
     .text       start:0x020bcd88 end:0x020bcda0
+
+src/overlays/ov039/calls/RuntimeState_GetObjectId.c:
+    complete
+    .text       start:0x020bcda0 end:0x020bcdb8
 
 src/overlays/ov039/auto/func_ov039_020bcdb8.c:
     complete

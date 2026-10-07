@@ -11,8 +11,8 @@
 #define func_0200160c func_02001620
 #define func_02001908 func_0200191c
 #define func_ov027_020ba2a8 func_ov027_020ba2c8
-#define func_ov039_020bc994 func_ov039_020bc9b4
-#define func_ov039_020bc9ac GetMenuFont
+#define func_ov039_020bc994 GetMenuFont10
+#define func_ov039_020bc9ac GetMenuFont10s
 #define func_ov039_020be450 func_ov039_020be470
 #define func_ov073_020c3fa4 func_ov073_020c3fc4
 #include "src/ov073/status_menu/ShowSelectedRecordName_020c1a00.c"

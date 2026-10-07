@@ -1,3 +1,4 @@
 #define InitOffsetFieldTask_020698bc InitOffsetFieldTask
 #define func_ov001_02069830 EventTrigger_CheckCounterGoal
+#define func_ov001_020698ac ResetOffsetFieldTask
 #include "src/ov001/field_manager/InitOffsetFieldTask_020698bc.c"

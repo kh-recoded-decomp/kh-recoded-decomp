@@ -1,3 +1,4 @@
+#define func_ov001_0206db78 GetPlayerControlState
 #define Actor_UpdateChargeState_020cb5a8 Actor_UpdateChargeState
 #define HasFlagsAt0xc_020a751c HasFlagsAt0xc
 #define IsPlayerEntryFlagSet_02050014 IsPlayerEntryFlagSet

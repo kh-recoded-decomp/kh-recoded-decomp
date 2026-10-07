@@ -1,3 +1,4 @@
+#define func_ov001_0206db78 GetPlayerControlState
 #define Actor_UpdateSettleState_020cb4f0 Actor_UpdateSettleState
 #define AlarmCallback_020a7504 func_ov021_020a7524
 #define data_02053438 data_0205344c

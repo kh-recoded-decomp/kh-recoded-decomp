@@ -1,3 +1,5 @@
+#define func_ov001_0206db78 GetPlayerControlState
+#define func_ov001_020645c8 IsSessionFlagSet
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField
 #define GetId10_020a755c SharedObject_GetId
 #define IsMenuItemLinked_02078a80 IsMenuItemLinked

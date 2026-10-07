@@ -1,3 +1,4 @@
+#define func_ov001_020645c8 IsSessionFlagSet
 #define UpdateEventObjects_0206daf8 UpdateEventObjects
 #define g_eventContext_020a049c data_ov001_020a04bc
 #include "src/ov001/shared_engine/UpdateEventObjects_0206daf8.c"

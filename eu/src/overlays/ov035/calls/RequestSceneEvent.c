@@ -1,3 +1,4 @@
+#define func_ov001_020645c8 IsSessionFlagSet
 #define RequestSceneEvent_020bae84 RequestSceneEvent
 #define StageEvents_CheckEvent_02087824 StageEvents_CheckEvent
 #define data_ov001_020a0460 data_ov001_020a0480

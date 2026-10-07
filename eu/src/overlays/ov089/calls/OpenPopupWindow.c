@@ -1,3 +1,4 @@
+#define func_ov001_020645dc SetSessionFlag
 #define FillBackgroundLayerRect_02001a60 FillBackgroundLayerRect
 #define OpenPopupWindow_020bfae8 OpenPopupWindow
 #define PlaySoundEffect_0204d924 PlaySoundEffect

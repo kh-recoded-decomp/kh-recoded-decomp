@@ -1,3 +1,4 @@
+#define func_ov001_020645c8 IsSessionFlagSet
 #define AddSessionCounter_02063a80 AddSessionCounter
 #define AnySubObjectBit0Set_020cfb58 AnySubObjectBit0Set
 #define DispatchAttackHitEvent_020c9e18 DispatchAttackHitEvent

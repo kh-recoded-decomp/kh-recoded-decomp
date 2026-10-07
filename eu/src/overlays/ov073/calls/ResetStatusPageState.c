@@ -7,5 +7,5 @@
 #define func_ov027_020b96a0 func_ov027_020b96c0
 #define func_ov027_020ba2a8 func_ov027_020ba2c8
 #define func_ov039_020bc1cc GetMenuWidgetContainer
-#define func_ov039_020bc9ac GetMenuFont
+#define func_ov039_020bc9ac GetMenuFont10s
 #include "src/ov073/status_menu/ResetStatusPageState_020beaa0.c"

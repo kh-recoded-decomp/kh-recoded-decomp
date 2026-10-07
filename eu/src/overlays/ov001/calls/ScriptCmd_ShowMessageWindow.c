@@ -1,3 +1,4 @@
+#define func_ov001_020645c8 IsSessionFlagSet
 #define ScriptCmd_ShowMessageWindow_0208e6c0 ScriptCmd_ShowMessageWindow
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
 #define Utf8ToUcs2_020512b4 Utf8ToUcs2

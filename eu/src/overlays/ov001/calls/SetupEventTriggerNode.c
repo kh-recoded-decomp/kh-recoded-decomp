@@ -1,3 +1,5 @@
+#define func_ov001_020645c8 IsSessionFlagSet
+#define func_ov001_020645dc SetSessionFlag
 #define InitArithmeticNode_02069d9c InitArithmeticNode
 #define SetupEventTriggerNode_02069370 SetupEventTriggerNode
 #define WriteSessionPackedBits_0206459c WriteSessionPackedBits

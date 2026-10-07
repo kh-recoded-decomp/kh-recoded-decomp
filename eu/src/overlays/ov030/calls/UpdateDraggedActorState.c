@@ -1,3 +1,4 @@
+#define func_ov001_0206db78 GetPlayerControlState
 #define AlarmCallback_020a7504 func_ov021_020a7524
 #define ApplyTimeScaledSpeed_020c7d28 ApplyTimeScaledSpeed
 #define FixedPointMultiply12 FX_Mul

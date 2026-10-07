@@ -1,3 +1,4 @@
+#define func_ov001_0206db78 GetPlayerControlState
 #define ApplyTimeScaledSpeed_020c7d28 ApplyTimeScaledSpeed
 #define CameraPath_ConsumeSkipRequest_020c2fd4 CameraPath_ConsumeSkipRequest
 #define GetFieldAt0x12_020a7560 SharedObject_GetMode

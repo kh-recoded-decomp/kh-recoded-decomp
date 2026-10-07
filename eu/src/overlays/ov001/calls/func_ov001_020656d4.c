@@ -26,7 +26,7 @@ extern s32 func_ov001_02063a38(void);
 extern int func_ov042_020bd39c(void);
 extern ManagerEntry *GetBoundedEntryField(int index);
 extern void ClearSessionPackedBit(int bitOffset);
-extern void func_ov001_020645dc(int bitOffset);
+extern void SetSessionFlag(int bitOffset);
 
 BOOL func_ov001_020656d4(void)
 {
@@ -36,7 +36,7 @@ BOOL func_ov001_020656d4(void)
         {
             ClearSessionPackedBit(0x3525);
             data_ov001_020a0480->stateFlags.bit4 = FALSE;
-            func_ov001_020645dc(0x3637);
+            SetSessionFlag(0x3637);
         }
         return FALSE;
     }

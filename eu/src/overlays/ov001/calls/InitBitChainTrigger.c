@@ -14,4 +14,5 @@
 #define NotEqualAndNonzero_02069938 func_ov001_02069938
 #define NotEqualOrNonzero_02069998 func_ov001_02069998
 #define ReleaseNodePairs_02069a30 func_ov001_02069a30
+#define func_ov001_02069a44 ResetBitChainTrigger
 #include "src/ov001/shared_engine/InitBitChainTrigger_02069a54.c"

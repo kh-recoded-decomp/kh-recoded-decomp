@@ -1,3 +1,4 @@
+#define func_ov001_020645dc SetSessionFlag
 #define Entity_UpdateSpecialRelease_020a1298 Entity_UpdateSpecialRelease
 #define data_ov010_020a1d20 data_ov010_020a1d40
 #define data_ov010_020a1dc0 data_ov010_020a1de0

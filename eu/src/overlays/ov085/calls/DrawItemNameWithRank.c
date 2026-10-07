@@ -3,6 +3,6 @@
 #define G2D_DrawCharGlyph_02017910 NNS_G2dCharCanvasDrawChar
 #define G2D_MeasureTextWidth_02016bc0 NNSi_G2dFontGetTextWidth
 #define GetActiveRecordEntryOrNull_02029548 GetActiveRecordEntryOrNull
-#define func_ov039_020bc9ac GetMenuFont
+#define func_ov039_020bc9ac GetMenuFont10s
 #define func_ov085_020bf72c GetItemMenuEntry
 #include "src/ov085/unclassified_helpers/DrawItemNameWithRank_020c11e8.c"

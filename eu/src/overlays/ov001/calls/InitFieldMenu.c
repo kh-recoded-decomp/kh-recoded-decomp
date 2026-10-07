@@ -1,3 +1,4 @@
+#define func_ov001_020645c8 IsSessionFlagSet
 #define FindActiveRecordById_020b8184 FindActiveRecordById
 #define GetCtxModeByte_02068084 func_ov001_02068084
 #define GetSceneTagTracker_020711b0 GetSceneTagTracker

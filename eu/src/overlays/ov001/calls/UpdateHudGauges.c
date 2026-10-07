@@ -1,3 +1,4 @@
+#define func_ov001_020645c8 IsSessionFlagSet
 #define AdvanceGaugeSlot_0207414c AdvanceGaugeSlot
 #define GFXi_EnqueueCommand_02014090 NNS_GfdRegisterNewVramTransferTask
 #define IsFieldPanelHidden_0207187c IsFieldPanelHidden

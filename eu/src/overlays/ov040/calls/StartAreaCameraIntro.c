@@ -1,3 +1,4 @@
+#define func_ov001_020645c8 IsSessionFlagSet
 #define Camera_SaveSnapshot_020c0dd4 Camera_SaveSnapshot
 #define FadeBgmVolume_0204d9a8 FadeBgmVolume
 #define Math_AsinIdx_0202aaa8 Math_AsinIdx

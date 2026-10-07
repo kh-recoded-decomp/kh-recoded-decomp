@@ -1,3 +1,4 @@
+#define func_ov001_020645c8 IsSessionFlagSet
 #define ArmObject_0205115c ArmObject
 #define GetOptionChangeNotice_020c6134 GetOptionChangeNotice
 #define IsGlobalPackedBitSet_02027304 IsGlobalPackedBitSet

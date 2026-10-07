@@ -1,3 +1,4 @@
+#define func_ov001_020645c8 IsSessionFlagSet
 #define AddFieldListener_0207157c AddFieldListener
 #define ApplyFormationSlots_020b6d90 ApplyFormationSlots
 #define InitMapMenuState_020b6a18 InitMapMenuState

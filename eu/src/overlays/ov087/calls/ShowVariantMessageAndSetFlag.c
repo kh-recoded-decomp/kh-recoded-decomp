@@ -1,3 +1,4 @@
+#define func_ov001_020645dc SetSessionFlag
 #define ShowVariantMessageAndSetFlag_020c4990 ShowVariantMessageAndSetFlag
 #define data_ov087_020c7c88 data_ov087_020c7ca8
 #define data_ov087_020c7cac data_ov087_020c7ccc

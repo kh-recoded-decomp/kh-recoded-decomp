@@ -1,3 +1,4 @@
+#define func_ov001_0206db78 GetPlayerControlState
 #define Actor_GetRootMotionDelta_020cce10 Actor_GetRootMotionDelta
 #define Actor_UpdateRootMotionJump_020cad40 Actor_UpdateRootMotionJump
 #define GetFieldAt0x12_020a7560 SharedObject_GetMode

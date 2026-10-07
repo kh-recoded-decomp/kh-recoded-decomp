@@ -1,3 +1,4 @@
+#define func_ov001_020645c8 IsSessionFlagSet
 #define ActorSlot_UnlinkByIndex_02035c28 ActorSlot_UnlinkByIndex
 #define AddClampedHealth_020a75ec AddClampedHealth
 #define CheckCarriedActorEscape_020bbf78 CheckCarriedActorEscape

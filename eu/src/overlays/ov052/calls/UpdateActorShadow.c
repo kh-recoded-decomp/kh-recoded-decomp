@@ -1,3 +1,4 @@
+#define func_ov001_020645c8 IsSessionFlagSet
 #define GetLinkedAngleOffset_020ceb7c GetLinkedAngleOffset
 #define ShadowVolume_Draw_02036b80 ShadowVolume_Draw
 #define UpdateActorShadow_020cbe7c UpdateActorShadow

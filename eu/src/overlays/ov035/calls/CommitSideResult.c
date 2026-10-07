@@ -1,5 +1,6 @@
+#define func_ov001_020645dc SetSessionFlag
 #define CommitSideResult_020bb114 CommitSideResult
-#define SNDi_LockMutex_020baf94 func_ov035_020bafb4
+#define SNDi_LockMutex_020baf94 IsSessionFlag3701Set
 #define SetFieldSlotValue_020715d4 SetFieldSlotValue
 #define WriteSessionPackedBits_0206459c WriteSessionPackedBits
 #define func_ov035_020baf88 ShowMovieMessage3700

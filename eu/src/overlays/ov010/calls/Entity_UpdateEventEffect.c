@@ -1,3 +1,4 @@
+#define func_ov001_020645c8 IsSessionFlagSet
 #define Camera_ReturnFromPathView_020c2fac Camera_ReturnFromPathView
 #define Entity_UpdateEventEffect_020a18ac Entity_UpdateEventEffect
 #define SpawnEffectAtTarget_020a1028 SpawnEffectAtTarget

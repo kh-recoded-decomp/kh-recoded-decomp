@@ -1,3 +1,4 @@
+#define func_ov001_020645c8 IsSessionFlagSet
 #define IsPartnerAheadOfActor_02088a90 IsPartnerAheadOfActor
 #define PXI_Init_02088a88 func_ov001_02088ab0
 #define ReadSessionPackedBits_02064574 ReadSessionPackedBits

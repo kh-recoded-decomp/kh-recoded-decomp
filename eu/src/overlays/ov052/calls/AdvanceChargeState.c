@@ -1,3 +1,4 @@
+#define func_ov001_0206db78 GetPlayerControlState
 #define AdvanceChargeState_020cb63c AdvanceChargeState
 #define func_ov052_020c88f4 func_ov052_020c8914
 #include "src/ov052/unclassified_helpers/AdvanceChargeState_020cb63c.c"

@@ -1,3 +1,4 @@
+#define func_ov001_020645c8 IsSessionFlagSet
 #define CacheSeqArcStatus_0204e00c CacheSeqArcStatus
 #define TryEnterState6_020ba72c TryEnterState6
 #define func_ov001_02066780 ResumeTaskAndClearFlags

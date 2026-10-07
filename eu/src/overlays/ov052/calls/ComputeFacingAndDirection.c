@@ -1,3 +1,4 @@
+#define func_ov001_0206db78 GetPlayerControlState
 #define ComputeFacingAndDirection_020cebbc ComputeFacingAndDirection
 #define data_0205356c data_02053580
 #define func_ov021_020a7544 func_ov021_020a7564

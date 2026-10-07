@@ -1,3 +1,4 @@
+#define func_ov001_0206db78 GetPlayerControlState
 #define ApproachTargetValue_020d0e80 ApproachTargetValue
 #define ComputeFacingAndDirection_020cebbc ComputeFacingAndDirection
 #define FixedPointMultiply12 FX_Mul

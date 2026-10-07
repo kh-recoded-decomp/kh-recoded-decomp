@@ -1,2 +1,3 @@
+#define func_ov001_020645c8 IsSessionFlagSet
 #define ScriptOp_GetEventFlagPairBits_020b0b20 ScriptOp_GetEventFlagPairBits
 #include "src/ov021/script_ops/ScriptOp_GetEventFlagPairBits_020b0b20.c"

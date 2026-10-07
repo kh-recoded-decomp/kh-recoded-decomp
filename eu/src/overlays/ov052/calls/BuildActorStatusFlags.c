@@ -1,3 +1,4 @@
+#define func_ov001_020645c8 IsSessionFlagSet
 #define BuildActorStatusFlags_020ce5d4 BuildActorStatusFlags
 #define IsBit0Set_020a9d1c IsBit0Set
 #define func_ov021_020a9d04 func_ov021_020a9d24

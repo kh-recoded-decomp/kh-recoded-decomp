@@ -1,3 +1,4 @@
+#define func_ov001_020645c8 IsSessionFlagSet
 #define StageEvent_ReleaseHoldBit2_02087714 StageEvent_ReleaseHoldBit2
 #define StageEvents_CheckEvent_02087824 StageEvents_CheckEvent
 #define StartCurrentAreaEvents_020bc55c StartCurrentAreaEvents

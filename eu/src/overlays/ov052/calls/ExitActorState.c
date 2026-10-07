@@ -1,3 +1,4 @@
+#define func_ov001_0206db78 GetPlayerControlState
 #define AddSessionCounter_02063a80 AddSessionCounter
 #define ApplyTimeScaledSpeed_020c7d28 ApplyTimeScaledSpeed
 #define CanUseMemberSlot_020d0600 CanUseMemberSlot

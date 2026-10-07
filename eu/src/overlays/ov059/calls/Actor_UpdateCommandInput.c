@@ -1,3 +1,4 @@
+#define func_ov001_0206db78 GetPlayerControlState
 #define Actor_ConsumeCommand_020c9a30 Actor_ConsumeCommand
 #define Actor_GetRotatedJointPosition_020c895c Actor_GetRotatedJointPosition
 #define Actor_UpdateCommandInput_020c8470 Actor_UpdateCommandInput

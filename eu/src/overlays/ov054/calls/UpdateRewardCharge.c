@@ -1,3 +1,4 @@
+#define func_ov001_0206db78 GetPlayerControlState
 #define ApplyItemRewardEffect_020d0ec0 ApplyItemRewardEffect
 #define GetId10_020a755c SharedObject_GetId
 #define IsPlayerEntryFlagSet_02050014 IsPlayerEntryFlagSet

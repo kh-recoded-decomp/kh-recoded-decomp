@@ -1,3 +1,4 @@
+#define func_ov001_0206db78 GetPlayerControlState
 #define FinishLockedAction_020cb5b4 FinishLockedAction
 #define func_ov052_020c7edc SelectGroundAction
 #include "src/ov052/unclassified_helpers/FinishLockedAction_020cb5b4.c"

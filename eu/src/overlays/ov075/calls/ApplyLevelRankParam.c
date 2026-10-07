@@ -1,3 +1,4 @@
+#define func_ov001_020645c8 IsSessionFlagSet
 #define ApplyLevelRankParam_020ce730 ApplyLevelRankParam
 #define GetCtxModeByte_02068084 func_ov001_02068084
 #define SetParamHalf18_02050630 SetParamHalf18

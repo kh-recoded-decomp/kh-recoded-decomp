@@ -1,3 +1,4 @@
+#define func_ov001_020645c8 IsSessionFlagSet
 #define Actor_SetModelSetsVisible_020cd078 Actor_SetModelSetsVisible
 #define ClearPendingWord_020a95b4 ClearPendingWord
 #define InitUnitResources_020aa264 InitUnitResources

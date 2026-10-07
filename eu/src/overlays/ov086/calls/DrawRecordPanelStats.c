@@ -20,7 +20,7 @@ extern void CallVirtualHandlerSlot1(void *context, int arg);
 extern void SetScreenLayerDirty(int layerId);
 extern void func_ov027_020b9e20(void *table, int id);
 extern u32 ReadSessionPackedBits(int bitOffset, u32 bitCount);
-extern BOOL func_ov001_020645c8(u32 flagId);
+extern BOOL IsSessionFlagSet(u32 flagId);
 extern int func_ov086_020bf2b0(int group);
 extern int CountUnlockedGroupEntries(int group);
 extern int func_ov086_020bf3b4(int group);
@@ -53,6 +53,6 @@ void DrawRecordPanelStats(RecordPanel *panel)
     func_ov086_020bee2c(panel, 3, first, SumUnlockedGroupEntryCounts(panel->group));
     func_ov086_020bee2c(panel, 4, GetHighestSetFlagTier(panel->group));
     first = ReadSessionPackedBits(data_ov086_020c217c[panel->group], 7);
-    second = func_ov001_020645c8(data_ov086_020c219c[panel->group]);
+    second = IsSessionFlagSet(data_ov086_020c219c[panel->group]);
     func_ov086_020bee2c(panel, 5, first + 1, second);
 }

@@ -1,3 +1,4 @@
+#define func_ov001_020645c8 IsSessionFlagSet
 #define SetEntityModeEnabled_020ce7a0 SetEntityModeEnabled
 #define SetEntityModeHideSubModels_020d28e4 SetEntityModeHideSubModels
 #define SetSubModelsEnabled_020ceaf4 SetSubModelsEnabled

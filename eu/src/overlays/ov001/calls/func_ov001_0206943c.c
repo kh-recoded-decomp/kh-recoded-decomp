@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-extern void func_ov001_020645dc(s32 param);
+extern void SetSessionFlag(s32 param);
 extern void ClearSessionPackedBit(s32 param);
 
 void func_ov001_0206943c(s32 index, s32 useSecondSet, s32 useAltCall)
@@ -12,5 +12,5 @@ void func_ov001_0206943c(s32 index, s32 useSecondSet, s32 useAltCall)
         ClearSessionPackedBit(index * 2 + 0x331f);
         return;
     }
-    func_ov001_020645dc(index * 2 + 0x331f);
+    SetSessionFlag(index * 2 + 0x331f);
 }

@@ -1,3 +1,4 @@
+#define func_ov001_0206db78 GetPlayerControlState
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField
 #define GetId10_020a755c SharedObject_GetId
 #define HandleOverlay054MenuCommand_020d2dac HandleOverlay054MenuCommand

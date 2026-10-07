@@ -148,6 +148,10 @@ src/overlays/ov035/calls/ShowMovieMessage3700.c:
     complete
     .text       start:0x020bafa8 end:0x020bafb4
 
+src/overlays/ov035/calls/IsSessionFlag3701Set.c:
+    complete
+    .text       start:0x020bafb4 end:0x020bafc4
+
 src/overlays/ov035/calls/func_ov035_020bafc4.c:
     complete
     .text       start:0x020bafc4 end:0x020bafd4

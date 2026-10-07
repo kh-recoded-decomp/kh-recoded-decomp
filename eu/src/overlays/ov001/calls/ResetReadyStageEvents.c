@@ -1,3 +1,4 @@
+#define func_ov001_020645c8 IsSessionFlagSet
 #define GetStageEventRecord_0209c0ec GetStageEventRecord
 #define ResetActorMotion_02093e28 ResetActorMotion
 #define ResetGroupLeaderAndSetState_02097a1c ResetGroupLeaderAndSetState

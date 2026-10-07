@@ -1,3 +1,4 @@
+#define func_ov001_020645c8 IsSessionFlagSet
 #define BindDescriptor0_0208f268 func_ov001_0208f290
 #define ResetLinkedActorMotion_02097a64 ResetLinkedActorMotion
 #define ResetStageLinksForSession_0209c430 ResetStageLinksForSession

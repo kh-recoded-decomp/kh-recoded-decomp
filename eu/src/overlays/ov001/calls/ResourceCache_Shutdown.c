@@ -1,6 +1,6 @@
 #define Actor_SetUpdateCallback_02036a90 Obj_SetWord1C8
 #define GetActorByIndex_02036810 ActorSlot_GetByIndex
-#define IsGameFlagSet_020645c8 func_ov001_020645c8
+#define IsGameFlagSet_020645c8 IsSessionFlagSet
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define ResourceCache_Shutdown_02087190 ResourceCache_Shutdown
 #define func_ov001_02086aec func_ov001_02086b14

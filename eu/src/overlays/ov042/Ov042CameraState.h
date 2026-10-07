@@ -4,7 +4,9 @@
 #include "nitro/fx_types.h"
 
 typedef struct Ov042CameraState {
-    u8 pad_000[0x110];
+    u8 pad_000[0x50];
+    u32 modeStatus;
+    u8 pad_054[0xbc];
     VecFx32 goalPosition;
     VecFx32 colliderOffset;
 } Ov042CameraState;

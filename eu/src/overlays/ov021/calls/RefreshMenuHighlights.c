@@ -1,3 +1,4 @@
+#define func_ov001_020645c8 IsSessionFlagSet
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField
 #define RefreshMenuHighlights_020aca30 RefreshMenuHighlights
 #define SetMenuEntryHighlight_0207830c SetMenuEntryHighlight

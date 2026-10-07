@@ -1,3 +1,4 @@
+#define func_ov001_020645c8 IsSessionFlagSet
 #define FindHorizontalNeighbor_020c386c func_ov073_020c388c
 #define FindVerticalNeighbor_020c37f0 FindVerticalNeighbor_020c3810
 #define HandleListCursorInput_020c39f0 HandleListCursorInput

@@ -1,3 +1,4 @@
+#define func_ov001_0206db78 GetPlayerControlState
 #define HasFlagsAt0xe_020a752c HasFlagsAt0xe
 #define UpdateLandingRecovery_020cb0f4 UpdateLandingRecovery
 #include "src/ov052/actor_motion/UpdateLandingRecovery_020cb0f4.c"

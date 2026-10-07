@@ -1,3 +1,4 @@
+#define func_ov001_020645c8 IsSessionFlagSet
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField
 #define IsEntryFlag2Active_020642d0 IsEntryFlag2Active
 #include "src/ov001/unclassified_helpers/IsEntryFlag2Active_020642d0.c"

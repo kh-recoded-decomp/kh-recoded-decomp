@@ -1,5 +1,5 @@
 #define FindSlotRecordById_020a9124 FindSlotRecordById
 #define SelectSlotAnimation_020cfb88 SelectSlotAnimation
 #define func_ov021_020a9b74 func_ov021_020a9b94
-#define func_ov040_020be01c func_ov040_020be03c
+#define func_ov040_020be01c GetFallbackActorAnimation
 #include "src/ov052/actor_motion/SelectSlotAnimation_020cfb88.c"

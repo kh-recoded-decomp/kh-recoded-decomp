@@ -2,7 +2,7 @@
 
 extern u32 data_ov103_020c0500;
 extern u32 MIi_CpuClearFast();
-extern u32 func_ov039_020bcda0();
+extern u32 RuntimeState_GetObjectId();
 extern u32 func_ov103_020bef14();
 extern u32 LoadGraphicsResources();
 extern u32 func_ov103_020bf0c4();
@@ -16,7 +16,7 @@ extern u32 SetScenePhase();
 void func_ov103_020c033c(int *work) {
   int selection;
 
-  selection = func_ov039_020bcda0();
+  selection = RuntimeState_GetObjectId();
   MIi_CpuClearFast(0,work,0xcbc4);
   if (selection < 0) {
     selection = 0;

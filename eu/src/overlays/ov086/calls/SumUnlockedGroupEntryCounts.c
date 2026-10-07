@@ -1,3 +1,4 @@
+#define func_ov001_020645c8 IsSessionFlagSet
 #define SumUnlockedGroupEntryCounts_020bf5d8 SumUnlockedGroupEntryCounts
 #define data_ov086_020c2340 data_ov086_020c2360
 #define func_ov086_020bf540 CountGroupEntriesInStateOne

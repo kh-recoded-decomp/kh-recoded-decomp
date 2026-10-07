@@ -1,3 +1,4 @@
+#define func_ov001_020645c8 IsSessionFlagSet
 #define IsRecordPageUnavailable_020c2080 IsRecordPageUnavailable
 #define data_ov086_020c3000 data_ov086_020c3020
 #include "src/ov086/panel_state/IsRecordPageUnavailable_020c2080.c"

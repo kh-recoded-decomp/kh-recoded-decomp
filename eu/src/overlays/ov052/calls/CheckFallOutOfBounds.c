@@ -1,3 +1,4 @@
+#define func_ov001_020645c8 IsSessionFlagSet
 #define CheckCarriedActorEscape_020bbf78 CheckCarriedActorEscape
 #define CheckFallOutOfBounds_020c7d54 CheckFallOutOfBounds
 #define Obj_SetPosition_0203569c Obj_SetPosition

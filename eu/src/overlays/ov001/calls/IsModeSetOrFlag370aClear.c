@@ -1,2 +1,3 @@
+#define func_ov001_020645c8 IsSessionFlagSet
 #define IsModeSetOrFlag370aClear_0207259c IsModeSetOrFlag370aClear
 #include "src/ov001/shared_engine/IsModeSetOrFlag370aClear_0207259c.c"

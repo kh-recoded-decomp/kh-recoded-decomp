@@ -1,2 +1,3 @@
+#define func_ov001_020645c8 IsSessionFlagSet
 #define ShowMovieMessage3700_020baf88 ShowMovieMessage3700
 #include "src/ov035/unclassified_helpers/ShowMovieMessage3700_020baf88.c"

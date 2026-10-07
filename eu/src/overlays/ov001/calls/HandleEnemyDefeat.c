@@ -1,3 +1,4 @@
+#define func_ov001_020645c8 IsSessionFlagSet
 #define AddSessionCounter_02063a80 AddSessionCounter
 #define GetGroupIndexedValue_020bb86c GetGroupIndexedValue
 #define HandleEnemyDefeat_02068abc HandleEnemyDefeat

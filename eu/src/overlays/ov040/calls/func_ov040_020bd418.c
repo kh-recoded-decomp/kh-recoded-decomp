@@ -3,7 +3,7 @@
 extern u32 data_ov035_020bc4e0;
 extern u32 data_ov040_020be280;
 extern void PlaySoundChecked();
-extern int func_ov001_020645c8();
+extern int IsSessionFlagSet();
 extern void func_ov001_02064184();
 
 u32 func_ov040_020bd418(void)
@@ -12,7 +12,7 @@ u32 func_ov040_020bd418(void)
 
     *(u8 *)(data_ov035_020bc4e0 + 0x84) = 0xf;
     PlaySoundChecked(0x1a0, 0);
-    ok = func_ov001_020645c8(0x3308);
+    ok = IsSessionFlagSet(0x3308);
     if (ok == 0) {
         func_ov001_02064184(1, 0xffffffff);
     }

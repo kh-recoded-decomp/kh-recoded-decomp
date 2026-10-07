@@ -1,3 +1,4 @@
+#define func_ov001_020645c8 IsSessionFlagSet
 #define GetGlobalScaleValue_0209c3cc GetGlobalScaleValue
 #define GetLargeTableEntry_0209c30c GetLargeTableEntry
 #define ProjectWorldPositionToScreen_02019f84 NNS_G3dWorldPosToScrPos

@@ -1,3 +1,4 @@
+#define func_ov001_020645c8 IsSessionFlagSet
 #define ActivateFreeSlotEntry_0208a674 ActivateFreeSlotEntry
 #define AssignFreeEffectSlot_020890c8 AssignFreeEffectSlot
 #define BindActorAnimation_02089060 BindActorAnimation

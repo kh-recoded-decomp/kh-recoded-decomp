@@ -1,3 +1,4 @@
+#define func_ov001_020645c8 IsSessionFlagSet
 #define AnySubObjectFlagsActive_020cfb28 AnySubObjectFlagsActive
 #define GetCtxModeByte_02068084 func_ov001_02068084
 #define LookupKindTableValue_020a8fc8 LookupKindTableValue

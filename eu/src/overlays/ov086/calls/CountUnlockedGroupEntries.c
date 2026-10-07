@@ -1,3 +1,4 @@
+#define func_ov001_020645c8 IsSessionFlagSet
 #define CountUnlockedGroupEntries_020bf324 CountUnlockedGroupEntries
 #define data_ov086_020c2340 data_ov086_020c2360
 #include "src/ov086/panel_state/CountUnlockedGroupEntries_020bf324.c"

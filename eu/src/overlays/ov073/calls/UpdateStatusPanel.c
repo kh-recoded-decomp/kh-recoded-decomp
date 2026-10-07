@@ -16,6 +16,6 @@
 #define func_ov027_020ba2a8 func_ov027_020ba2c8
 #define func_ov039_020bc0d4 GetPrimaryElementEnabled
 #define func_ov039_020bc1cc GetMenuWidgetContainer
-#define func_ov039_020bc9ac GetMenuFont
+#define func_ov039_020bc9ac GetMenuFont10s
 #define func_ov073_020c3fa4 func_ov073_020c3fc4
 #include "src/ov073/status_menu/UpdateStatusPanel_020c15b0.c"

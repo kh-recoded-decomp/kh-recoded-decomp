@@ -49,7 +49,7 @@ typedef struct {
     void *messages;
 } SaveSelectScreen;
 
-extern void *func_ov039_020bc9b4(void);
+extern void *GetMenuFont10(void);
 extern void Obj_SetField14(int *layer, void *font);
 extern void CallStateWidget(int bgId, int x, int y, int width, int height);
 extern void IndexedRecords_SetFlag2(void *panel, int index, BOOL visible);
@@ -75,7 +75,7 @@ void DrawSlotDetailPanel(SaveSelectScreen *screen, int slotIndex)
     u8 confirming = (screen->step == 1 && screen->overwriting && screen->slots[screen->slotIndex].status == 1) ? 1 : 0;
     u16 row = confirming ? 0 : 2;
     u16 y = row * 8 + 12;
-    void *font = func_ov039_020bc9b4();
+    void *font = GetMenuFont10();
     Position2D positions[3];
     u16 text[128];
     SaveSlot *other;

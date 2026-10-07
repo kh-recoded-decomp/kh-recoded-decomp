@@ -1,3 +1,4 @@
+#define func_ov001_020645c8 IsSessionFlagSet
 #define GetOverlaySelectionRecord_0204f768 GetOverlaySelectionRecord
 #define SetupFlaggedSelectionRecords_0204f778 SetupFlaggedSelectionRecords
 #define func_0204fbcc ApplySelectionStatScaling

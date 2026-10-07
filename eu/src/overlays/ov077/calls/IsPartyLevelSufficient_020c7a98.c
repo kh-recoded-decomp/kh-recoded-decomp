@@ -1,3 +1,4 @@
+#define func_ov001_020645c8 IsSessionFlagSet
 #define GetCtxModeByte_02068084 func_ov001_02068084
 #define IsPartyLevelSufficient_020c7a78 IsPartyLevelSufficient_020c7a98
 #define ReadSessionPackedBits_02064574 ReadSessionPackedBits

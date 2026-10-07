@@ -17,7 +17,7 @@ extern int func_ov001_0206dc4c(int index);
 extern u16 GetBiasAdjustedField(int index);
 extern void StoreSessionSpawnPoint(int index, int value, u16 field);
 extern void ResumeTaskAndClearFlags(void);
-extern BOOL func_ov001_020645c8(u32 eventId);
+extern BOOL IsSessionFlagSet(u32 eventId);
 extern void ClearSessionPackedBit(u32 eventId);
 extern void func_ov001_02087804(void);
 extern void func_ov001_0208781c(void);
@@ -42,11 +42,11 @@ void func_ov001_0206375c(void) {
         StoreSessionSpawnPoint(index, func_ov001_0206dc4c(index), GetBiasAdjustedField(index));
     }
     ResumeTaskAndClearFlags();
-    if (!func_ov001_020645c8(0x3528)) {
+    if (!IsSessionFlagSet(0x3528)) {
         func_ov001_02087804();
         func_ov001_0208781c();
     }
-    if (func_ov001_020645c8(0x360c)) {
+    if (IsSessionFlagSet(0x360c)) {
         ReleaseSeqArcHeapLevel(1);
         ClearSessionPackedBit(0x360c);
         if (func_ov001_02063a38() == 6) {

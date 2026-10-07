@@ -1,3 +1,4 @@
+#define func_ov001_020645c8 IsSessionFlagSet
 #define CanOpenFieldMenu_020735d8 CanOpenFieldMenu
 #define IsFieldFlag10Set_020728c4 IsFieldFlag10Set
 #define IsFieldFlag8Set_020728a4 IsFieldFlag8Set

@@ -1,3 +1,4 @@
+#define func_ov001_020645c8 IsSessionFlagSet
 #define InitMapScreen_020b5de0 InitMapScreen
 #define data_ov023_020b5b51 PlayEnabledMenuSound
 #define data_ov023_020b6e84 data_ov023_020b6ea4

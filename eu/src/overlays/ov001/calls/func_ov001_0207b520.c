@@ -1,7 +1,7 @@
 #include "nitro/types.h"
 
-extern u32 func_ov001_020645c8(u32 id);
-extern void func_ov001_020645dc(u32 id);
+extern u32 IsSessionFlagSet(u32 id);
+extern void SetSessionFlag(u32 id);
 extern u32 func_ov001_02064784(void);
 extern u32 func_ov001_0207b3f4(void);
 extern u32 func_ov001_0207b610(void);
@@ -16,8 +16,8 @@ void func_ov001_0207b520(void)
 
     panel = data_ov001_020a04e8;
     fault = func_ov001_02064784();
-    if ((fault == 0) && (fault = func_ov001_020645c8(0x3709), fault == 0)) {
-        func_ov001_020645dc(0x3709);
+    if ((fault == 0) && (fault = IsSessionFlagSet(0x3709), fault == 0)) {
+        SetSessionFlag(0x3709);
     }
     fault = func_ov001_0207b3f4();
     if (fault == 2) {

@@ -1,3 +1,4 @@
+#define func_ov001_020645c8 IsSessionFlagSet
 #define FieldObject_CallHook24_0207f800 CallFieldObjectHook24
 #define FieldObject_GetSavedValue_0207f9a8 FieldObject_GetSavedValue
 #define FieldObject_SetSavedValue_0207f9c8 FieldObject_SetSavedValue

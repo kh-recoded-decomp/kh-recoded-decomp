@@ -1,3 +1,4 @@
+#define func_ov001_020645c8 IsSessionFlagSet
 #define ClearPendingWord_020a95b4 ClearPendingWord
 #define InitUnitResources_020aa264 InitUnitResources
 #define IsPlayerEntryFlagSet_02050014 IsPlayerEntryFlagSet

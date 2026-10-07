@@ -9,7 +9,7 @@
 #define func_ov035_020ba7dc func_ov035_020ba7fc
 #define func_ov035_020bae74 func_ov035_020bae94
 #define func_ov035_020baf88 ShowMovieMessage3700
-#define func_ov035_020baf94 func_ov035_020bafb4
+#define func_ov035_020baf94 IsSessionFlag3701Set
 #define func_ov035_020bafc4 GetMovieCounterLimit
 #define func_ov035_020bb054 LoadMovieCounter
 #define func_ov035_020bb0a0 GetScaledMenuLevel

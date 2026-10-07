@@ -1,3 +1,4 @@
+#define func_ov001_020645c8 IsSessionFlagSet
 #define FX_Atan2Idx_020062bc FX_Atan2Idx
 #define FX_Mul_02006450 FX_Mul
 #define FrameCameraOnActor_0208c13c FrameCameraOnActor

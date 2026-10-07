@@ -1,3 +1,4 @@
+#define func_ov001_020645c8 IsSessionFlagSet
 #define RefreshSessionSelections_02064c44 RefreshSessionSelections
 #define SyncSessionCommFlags_020ba764 SyncSessionCommFlags
 #define data_ov001_020a0460 data_ov001_020a0480

@@ -30,8 +30,8 @@ extern s16 *GetPlayerFlagRecord(int index);
 extern void ResetAnimationTrackState(GroupRequest *request);
 extern int func_ov001_0206db8c(int kind);
 extern int func_ov021_020a8cc0(GroupRequest *request, int groupId);
-extern void func_ov040_020bdaa8(void);
-extern void func_ov040_020bdab8(void);
+extern void SetSessionFlag3723(void);
+extern void SetSessionFlag3724(void);
 extern void ResetAreaGroupObjects(void);
 extern int func_ov001_02078494(void);
 extern void func_ov001_02078000(int list, int slot);
@@ -59,10 +59,10 @@ void ApplyPendingFlagReward(FieldMenu *menu) {
         func_ov021_020a8cc0(&request, func_ov001_0206db8c(6));
         switch (*record) {
         case 0xd0:
-            func_ov040_020bdaa8();
+            SetSessionFlag3723();
             break;
         case 0xd1:
-            func_ov040_020bdab8();
+            SetSessionFlag3724();
             break;
         case 0xd2:
             ResetAreaGroupObjects();

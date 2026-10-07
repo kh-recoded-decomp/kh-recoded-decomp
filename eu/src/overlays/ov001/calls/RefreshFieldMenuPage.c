@@ -1,3 +1,4 @@
+#define func_ov001_020645c8 IsSessionFlagSet
 #define IsBattleModeNotTwo_02064280 IsBattleModeNotTwo
 #define ReadActiveMenuState_0206c328 ReadActiveMenuState
 #define RefreshFieldMenuPage_0206d248 RefreshFieldMenuPage

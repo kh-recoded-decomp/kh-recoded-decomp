@@ -1,3 +1,4 @@
+#define func_ov001_020645dc SetSessionFlag
 #define CollectRecordPickup_020bf324 CollectRecordPickup
 #define GetByteCounterOrDefault_020291cc GetByteCounterOrDefault
 #define GetRecordSlotPair0Entry_02051ec8 GetRecordSlotPair0Entry

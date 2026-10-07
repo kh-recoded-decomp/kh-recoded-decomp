@@ -1,3 +1,4 @@
+#define func_ov001_020645c8 IsSessionFlagSet
 #define ComputeNamedPointBounds_02068268 ComputeNamedPointBounds
 #define UpdatePointTriggerBox_02066f20 UpdatePointTriggerBox
 #define VEC_Add_01ff9e0c VEC_Add

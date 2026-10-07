@@ -1,3 +1,5 @@
+#define func_ov001_0206db78 GetPlayerControlState
+#define func_ov001_020645c8 IsSessionFlagSet
 #define AnySubObjectBit0Set_020cfb58 AnySubObjectBit0Set
 #define HasFlagsAt0xc_020a751c HasFlagsAt0xc
 #define IsPlayerEntryFlagSet_02050014 IsPlayerEntryFlagSet

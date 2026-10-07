@@ -1,3 +1,5 @@
+#define func_ov001_020645dc SetSessionFlag
+#define func_ov001_020645c8 IsSessionFlagSet
 #define FieldObject_CallHook24_0207f800 CallFieldObjectHook24
 #define FieldObject_SetEnabled_0207f6f4 func_ov001_0207f71c
 #define OnGroupEventFinished_020bb1ac OnGroupEventFinished

@@ -1,3 +1,4 @@
+#define func_ov001_0206db78 GetPlayerControlState
 #define AlarmCallback_020a7504 func_ov021_020a7524
 #define EnterRecoilState_020c957c EnterRecoilState
 #define ForwardIfWorkMode12_0207fa14 ForwardIfWorkMode12

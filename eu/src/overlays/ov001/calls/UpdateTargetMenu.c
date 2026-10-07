@@ -1,3 +1,4 @@
+#define func_ov001_020645c8 IsSessionFlagSet
 #define SelectNearestTarget_0206afec SelectNearestTarget
 #define UpdateSubModeResult_020af46c UpdateSubModeResult
 #define UpdateTargetMenu_0206bcbc UpdateTargetMenu

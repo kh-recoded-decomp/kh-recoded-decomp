@@ -1,3 +1,4 @@
+#define func_ov001_0206db78 GetPlayerControlState
 #define CanUseMemberSlot_020d0600 CanUseMemberSlot
 #define FieldMenu_TryOpenByMode_02077d64 FieldMenu_TryOpenByMode
 #define GetId10_020a755c SharedObject_GetId

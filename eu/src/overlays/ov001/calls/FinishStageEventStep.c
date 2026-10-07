@@ -1,3 +1,4 @@
+#define func_ov001_020645c8 IsSessionFlagSet
 #define ClearActorGroupFlagsAndNotify_02092ad0 ClearActorGroupFlagsAndNotify
 #define ClearActorMotionState_02091194 ClearActorMotionState
 #define FinishStageEventStep_02093a04 FinishStageEventStep

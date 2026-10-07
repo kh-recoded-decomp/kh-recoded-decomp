@@ -1,3 +1,4 @@
+#define func_ov001_020645dc SetSessionFlag
 #define AppendNodeToActiveList_02086fac AppendNodeToActiveList
 #define BuildCollisionShape_02080834 BuildCollisionShape
 #define SpawnKind7Entry_020a5bcc SpawnKind7Entry

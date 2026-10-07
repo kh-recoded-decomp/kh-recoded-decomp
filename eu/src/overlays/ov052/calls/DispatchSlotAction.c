@@ -1,3 +1,5 @@
+#define func_ov001_0206db78 GetPlayerControlState
+#define func_ov001_020645c8 IsSessionFlagSet
 #define DispatchSlotAction_020ced20 DispatchSlotAction
 #define GetFieldAt0x12_020a7560 SharedObject_GetMode
 #define GetId10_020a755c SharedObject_GetId

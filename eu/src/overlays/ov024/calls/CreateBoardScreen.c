@@ -58,7 +58,7 @@ extern char sOv024_UiBtlBtlLanguageP2_020b7508[];
 extern BoardState *NNSi_FndGetCurrentRootHeap(void);
 extern void MI_CpuFill8(void *dest, int value, int size);
 extern void MIi_CpuClear32(int value, void *dest, int size);
-extern BOOL func_ov001_020645c8(int flag);
+extern BOOL IsSessionFlagSet(int flag);
 extern BOOL IsFieldFlag13OrSessionFlagSet(void);
 extern void func_ov001_0207b228(void (*callback)(void));
 extern void SetupSubScreenBgLayers(void);
@@ -96,7 +96,7 @@ void *CreateBoardScreen(int mode)
         data_ov024_020b754c[i] = 0;
     }
     data_ov024_020b7540.state->useChannel = (mode == 0x7b);
-    if (data_ov024_020b7540.state->useChannel || func_ov001_020645c8(0x3520) || IsFieldFlag13OrSessionFlagSet()) {
+    if (data_ov024_020b7540.state->useChannel || IsSessionFlagSet(0x3520) || IsFieldFlag13OrSessionFlagSet()) {
         state->showTutorial = 0;
     } else {
         state->showTutorial = 1;
@@ -135,10 +135,10 @@ void *CreateBoardScreen(int mode)
     data_ov024_020b7540.state->markerSlots[0] = CreateDefaultObjectSlot(data_ov024_020b7540.state->objectSet, 0, 0, 0, 0);
     data_ov024_020b7540.state->markerSlots[1] = CreateDefaultObjectSlot(data_ov024_020b7540.state->objectSet, 0, 1, 0, 0);
     if (!data_ov024_020b7540.state->useChannel && IsFieldFlag13OrSessionFlagSet()) {
-        if (func_ov001_020645c8(0x3609)) {
+        if (IsSessionFlagSet(0x3609)) {
             data_ov024_020b7540.state->markerSlots[2] = CreateDefaultObjectSlot(data_ov024_020b7540.state->objectSet, 0, 2, 0, 0);
         }
-        if (func_ov001_020645c8(0x360a)) {
+        if (IsSessionFlagSet(0x360a)) {
             data_ov024_020b7540.state->markerSlots[3] = CreateDefaultObjectSlot(data_ov024_020b7540.state->objectSet, 0, 2, 0, 0);
         }
     }

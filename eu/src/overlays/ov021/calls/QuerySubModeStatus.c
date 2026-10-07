@@ -1,6 +1,6 @@
 #define QuerySubModeStatus_020af3f4 QuerySubModeStatus
 #define data_ov021_020b56a0 data_ov021_020b56c0
-#define func_ov042_020bd4ac func_ov042_020bd4cc
+#define func_ov042_020bd4ac GetCameraModeStatus
 #define func_ov043_020bcacc GetCameraYaw
 #define func_ov046_020c14fc Camera_GetDriftHeading
 #include "src/ov021/sub_mode/QuerySubModeStatus_020af3f4.c"

@@ -4,5 +4,5 @@
 #define OpenTextFrame_020be5b8 OpenTextFrame
 #define SetScreenLayerDirty_020bc104 SetScreenLayerDirty
 #define UpdateScreenWidgetLayer_020bc1e4 UpdateScreenWidgetLayer
-#define func_ov039_020bc994 func_ov039_020bc9b4
+#define func_ov039_020bc994 GetMenuFont10
 #include "src/ov039/widget_layers/OpenTextFrame_020be5b8.c"

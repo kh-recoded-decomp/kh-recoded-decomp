@@ -1,5 +1,5 @@
 #define GetEntryUnlockState_02087478 GetEntryUnlockState
 #define GetModeDataRegion_0208698c GetModeDataRegion
 #define IsEntryFlagSet_0208696c func_ov001_02086994
-#define IsGameFlagSet_020645c8 func_ov001_020645c8
+#define IsGameFlagSet_020645c8 IsSessionFlagSet
 #include "src/ov001/unclassified_helpers/GetEntryUnlockState_02087478.c"

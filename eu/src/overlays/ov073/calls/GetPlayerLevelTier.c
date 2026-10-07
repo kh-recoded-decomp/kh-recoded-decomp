@@ -1,3 +1,4 @@
+#define func_ov001_020645c8 IsSessionFlagSet
 #define GetCtxModeByte_02068084 func_ov001_02068084
 #define GetPlayerLevelTier_020c1418 GetPlayerLevelTier
 #define data_ov073_020c4090 data_ov073_020c40b0

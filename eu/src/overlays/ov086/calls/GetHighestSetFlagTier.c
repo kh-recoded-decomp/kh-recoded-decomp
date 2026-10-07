@@ -1,3 +1,4 @@
+#define func_ov001_020645c8 IsSessionFlagSet
 #define GetHighestSetFlagTier_020bf658 GetHighestSetFlagTier
 #define data_ov086_020c20dc data_ov086_020c20fc
 #include "src/ov086/panel_state/GetHighestSetFlagTier_020bf658.c"

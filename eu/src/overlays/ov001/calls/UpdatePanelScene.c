@@ -28,7 +28,7 @@ typedef struct TouchSample {
 extern PanelScene *data_ov001_020a04e8;
 extern PanelStateTable gMenuOverlayStateHandlers;
 extern u8 GetPrimarySelectionByte1E(void);
-extern BOOL func_ov001_020645c8(u32 value);
+extern BOOL IsSessionFlagSet(u32 value);
 extern int func_ov001_02064784(void);
 extern void func_ov001_0207a9f4(PanelScene *panel);
 extern void UpdateIdleTimerToggle(PanelScene *panel);
@@ -54,7 +54,7 @@ int UpdatePanelScene(void)
         LookupChannelEntry_020b62ac(channel);
         panel->channel = channel;
     }
-    if (!func_ov001_02064784() && func_ov001_020645c8(0x370b)) {
+    if (!func_ov001_02064784() && IsSessionFlagSet(0x370b)) {
         func_ov001_0207af6c(panel);
     } else {
         switch (panel->timerMode) {

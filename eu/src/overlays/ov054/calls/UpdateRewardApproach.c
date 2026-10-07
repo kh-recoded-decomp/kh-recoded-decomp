@@ -1,3 +1,4 @@
+#define func_ov001_0206db78 GetPlayerControlState
 #define GetId10_020a755c SharedObject_GetId
 #define IsLockedOnActiveFieldUnit_020d10f0 IsLockedOnActiveFieldUnit
 #define UpdateRewardApproach_020d2f8c UpdateRewardApproach

@@ -1,3 +1,4 @@
+#define func_ov001_0206db78 GetPlayerControlState
 #define ComputeApproachStep_020cc2f0 ComputeApproachStep
 #define FixedPointAtan2_020062bc FX_Atan2Idx
 #define FixedPointMultiply12 FX_Mul

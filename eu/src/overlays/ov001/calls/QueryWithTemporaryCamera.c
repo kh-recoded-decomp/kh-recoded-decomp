@@ -1,3 +1,4 @@
+#define func_ov001_020645c8 IsSessionFlagSet
 #define PXI_Init_02028dac PXI_Init_02028dc0
 #define PXI_Init_02028db8 PXI_Init_02028dcc
 #define PXI_Init_02088b20 func_ov001_02088b48

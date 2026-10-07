@@ -1,3 +1,4 @@
+#define func_ov001_020645c8 IsSessionFlagSet
 #define IsFirstEntryFlagSet_0206e584 IsFirstEntryFlagSet
 #define IsSessionIdle_02063860 IsSessionIdle
 #define data_ov001_020a0460 data_ov001_020a0480

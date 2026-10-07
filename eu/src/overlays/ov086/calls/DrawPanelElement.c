@@ -1,5 +1,5 @@
 #define DrawPanelElement_020beb28 DrawPanelElement
 #define data_ov086_020c3000 data_ov086_020c3020
 #define func_ov027_020b9a74 func_ov027_020b9a94
-#define func_ov039_020bc208 func_ov039_020bc228
+#define func_ov039_020bc208 GetMenuTileTable
 #include "src/ov086/panel_state/DrawPanelElement_020beb28.c"

@@ -1,3 +1,5 @@
+#define func_ov001_020645c8 IsSessionFlagSet
+#define func_ov001_020645dc SetSessionFlag
 #define ChangeEnemyState_020d65c4 ChangeEnemyState
 #define data_ov058_020d8958 data_ov058_020d8978
 #define func_ov021_020a8ab4 ResetAnimationTrackState

@@ -1,3 +1,4 @@
+#define func_ov001_020645c8 IsSessionFlagSet
 #define IsSessionFlagClear_020c4260 IsSessionFlagClear
 #define data_ov087_020c7cd0 data_ov087_020c7cf0
 #include "src/ov087/panel_state/IsSessionFlagClear_020c4260.c"

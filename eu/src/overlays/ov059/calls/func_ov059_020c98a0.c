@@ -1,3 +1,4 @@
+#define func_ov001_0206db78 GetPlayerControlState
 #include "nitro/types.h"
 
 typedef struct Actor Actor;

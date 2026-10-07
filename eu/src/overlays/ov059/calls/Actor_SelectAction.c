@@ -1,3 +1,4 @@
+#define func_ov001_020645c8 IsSessionFlagSet
 #define Actor_SelectAction_020c782c Actor_SelectAction
 #define func_ov059_020cc814 Actor_ChangeMotion
 #define func_ov059_020cc950 Actor_ChangeAnimation

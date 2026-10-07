@@ -1,3 +1,4 @@
+#define func_ov001_020645c8 IsSessionFlagSet
 #define RegisterOverlay053TaggedEntries_020d23d8 RegisterOverlay053TaggedEntries
 #define RegisterTaggedEntry_0204ff18 RegisterTaggedEntry
 #include "src/ov053/unclassified_helpers/RegisterOverlay053TaggedEntries_020d23d8.c"

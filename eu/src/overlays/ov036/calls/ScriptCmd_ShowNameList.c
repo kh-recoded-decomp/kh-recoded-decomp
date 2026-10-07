@@ -1,3 +1,4 @@
+#define func_ov001_020645c8 IsSessionFlagSet
 #define OpenTextWindowVariant_020c2f88 OpenTextWindowVariant
 #define ScriptCmd_SetElemField_02025e18 ScriptCmd_SetElemField
 #define ScriptCmd_ShowNameList_020be3ac ScriptCmd_ShowNameList

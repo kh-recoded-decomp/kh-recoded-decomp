@@ -1,3 +1,4 @@
+#define func_ov001_0206db78 GetPlayerControlState
 #define OS_GetTick_02003fd4 OS_GetTick
 #define UpdateTriggerWallContact_0206ce78 UpdateTriggerWallContact
 #define VEC_DotProduct_01ff9e6c VEC_DotProduct

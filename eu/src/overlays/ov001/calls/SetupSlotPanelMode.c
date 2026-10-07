@@ -1,3 +1,4 @@
+#define func_ov001_020645dc SetSessionFlag
 #define InitSlotLayoutCompact_0207d320 InitSlotLayoutCompact
 #define InitSlotLayout_0207d2c0 InitSlotLayout
 #define ReadSessionPackedBits_02064574 ReadSessionPackedBits

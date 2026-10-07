@@ -1,3 +1,4 @@
+#define func_ov001_020645c8 IsSessionFlagSet
 #define GetPlayerFlagRecord_0205036c GetPlayerFlagRecord
 #define InitMenuScene_020bc5c0 InitMenuScene
 #define InitResourceLevels_020bdc6c InitResourceLevels

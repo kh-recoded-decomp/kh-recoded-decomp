@@ -1,3 +1,4 @@
+#define func_ov001_020645dc SetSessionFlag
 #define GetEntryUnlockState_02087478 GetEntryUnlockState
 #define GetModeDataRegion_0208698c GetModeDataRegion
 #define GrantEntryUnlockReward_02087518 GrantEntryUnlockReward

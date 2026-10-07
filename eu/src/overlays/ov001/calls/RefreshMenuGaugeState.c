@@ -1,3 +1,4 @@
+#define func_ov001_020645c8 IsSessionFlagSet
 #define RefreshMenuGaugeState_02073a3c RefreshMenuGaugeState
 #define SetMenuGaugeActive_0207512c SetMenuGaugeActive
 #define data_ov001_020a0460 data_ov001_020a0480

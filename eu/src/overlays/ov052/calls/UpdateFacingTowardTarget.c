@@ -1,3 +1,4 @@
+#define func_ov001_0206db78 GetPlayerControlState
 #define AlarmCallback_020a7504 func_ov021_020a7524
 #define FixedPointAtan2_020062bc FX_Atan2Idx
 #define UpdateFacingTowardTarget_020cec9c UpdateFacingTowardTarget

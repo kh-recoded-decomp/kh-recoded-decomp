@@ -1,3 +1,4 @@
+#define func_ov001_020645c8 IsSessionFlagSet
 #define AcquireSharedRecordState_020a9054 AcquireSharedRecordState
 #define IsPlayerEntryFlagSet_02050014 IsPlayerEntryFlagSet
 #define LoadOverlay053EntityModel_020d22dc LoadOverlay053EntityModel

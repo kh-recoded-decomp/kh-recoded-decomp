@@ -1,3 +1,4 @@
+#define func_ov001_020645c8 IsSessionFlagSet
 #define ReleaseSessionHandle_02062c98 ReleaseSessionHandle
 #define RunSessionScriptFrame_02063638 RunSessionScriptFrame
 #define StepSessionScriptOrAbort_020625b8 StepSessionScriptOrAbort
