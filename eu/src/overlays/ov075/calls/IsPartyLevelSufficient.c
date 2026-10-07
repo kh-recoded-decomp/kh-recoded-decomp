@@ -1,6 +1,6 @@
 #define GetCtxModeByte_02068084 func_ov001_02068084
 #define IsPartyLevelSufficient_020cec34 IsPartyLevelSufficient
 #define ReadSessionPackedBits_02064574 ReadSessionPackedBits
-#define data_ov075_020d1664 data_ov075_020d1684
+#define data_ov075_020d1664 sPartyLevelThresholds
 #define func_020505a8 GetSelectionPackedValueBlock
 #include "src/ov075/unclassified_helpers/IsPartyLevelSufficient_020cec34.c"

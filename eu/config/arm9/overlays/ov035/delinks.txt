@@ -320,6 +320,62 @@ src/overlays/ov035/data/bss/Bss_ov035_020bc504.c:
     complete
     .bss        start:0x020bc504 end:0x020bc520
 
+src/overlays/ov035/data/gBarGaugeClassDescriptor.c:
+    complete
+    .data       start:0x020bc4e8 end:0x020bc500
+
+src/overlays/ov035/data/gMovieSourceClassDescriptor.c:
+    complete
+    .data       start:0x020bc484 end:0x020bc498
+
+src/overlays/ov035/data/gMovieSourceHandle.c:
+    complete
+    .data       start:0x020bc480 end:0x020bc484
+
+src/overlays/ov035/data/sOv035ActiveColors.c:
+    complete
+    .data       start:0x020bc4e0 end:0x020bc4e8
+
+src/overlays/ov035/data/sOv035AreaName.c:
+    complete
+    .data       start:0x020bc4d0 end:0x020bc4d8
+
+src/overlays/ov035/data/sOv035CameraPosition.c:
+    complete
+    .rodata     start:0x020bc41c end:0x020bc428
+
+src/overlays/ov035/data/sOv035CameraRotation.c:
+    complete
+    .rodata     start:0x020bc444 end:0x020bc468
+
+src/overlays/ov035/data/sOv035CameraScale.c:
+    complete
+    .rodata     start:0x020bc410 end:0x020bc41c
+
+src/overlays/ov035/data/sOv035DigitTiles.c:
+    complete
+    .rodata     start:0x020bc434 end:0x020bc444
+
+src/overlays/ov035/data/sOv035EventEffectOffset.c:
+    complete
+    .rodata     start:0x020bc400 end:0x020bc40c
+
+src/overlays/ov035/data/sOv035InactiveColors.c:
+    complete
+    .data       start:0x020bc4d8 end:0x020bc4e0
+
+src/overlays/ov035/data/sOv035MaterialAlphaByKind.c:
+    complete
+    .rodata     start:0x020bc40c end:0x020bc410
+
+src/overlays/ov035/data/sOv035MenuValueMap.c:
+    complete
+    .rodata     start:0x020bc428 end:0x020bc434
+
+src/overlays/ov035/data/sOv035ModelNameFormat.c:
+    complete
+    .data       start:0x020bc4c8 end:0x020bc4d0
+
 src/overlays/ov035/data/strings/Strings_ov035_020bc4c0.c:
     complete
     .data       start:0x020bc4c0 end:0x020bc4c8

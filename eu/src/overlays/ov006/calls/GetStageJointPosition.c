@@ -7,7 +7,7 @@
 #define RestoreNodeGeometryMatrix_02019d8c NNS_G3dGetResultMtx
 #define ScaleVector4ByReciprocalMagnitude_0202fc50 ScaleVector4ByReciprocalMagnitude
 #define SceneNode_DrawImmediate_0208f4f4 SceneNode_DrawImmediate
-#define data_ov006_020a1854 data_ov006_020a1874
+#define data_ov006_020a1854 sOv006JointRotation
 #define multiplyFixedPointQuaternions_0202f93c MultiplyFixedPointQuaternions
 #define selectJointAnimationBlend_0202f2cc selectJointAnimationBlend
 #include "src/ov006/reviewed_helpers/GetStageJointPosition_020a1694.c"

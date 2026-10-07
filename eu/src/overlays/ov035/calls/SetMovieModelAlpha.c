@@ -1,5 +1,5 @@
 #define Model_SetAllMaterialAlpha_0201a900 NNS_G3dMdlSetMdlAlphaAll
 #define SetMovieModelAlpha_020bb758 SetMovieModelAlpha
-#define data_ov035_020bc3ec data_ov035_020bc40c
+#define data_ov035_020bc3ec sOv035MaterialAlphaByKind
 #define data_ov035_020bc4e4 data_ov035_020bc504
 #include "src/ov035/unclassified_helpers/SetMovieModelAlpha_020bb758.c"

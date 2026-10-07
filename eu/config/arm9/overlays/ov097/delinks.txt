@@ -200,6 +200,58 @@ src/overlays/ov097/calls/func_ov097_020c1db8.c:
     complete
     .text       start:0x020c1db8 end:0x020c1dc4
 
+src/overlays/ov097/data/DataStrings_ov097_020c1e7c.c:
+    complete
+    .data       start:0x020c1e7c end:0x020c1ea0
+
+src/overlays/ov097/data/Data_ov097_020c1e5c.c:
+    complete
+    .data       start:0x020c1e5c end:0x020c1e7c
+
+src/overlays/ov097/data/Data_ov097_020c1ea0.c:
+    complete
+    .data       start:0x020c1ea0 end:0x020c1ee4
+
+src/overlays/ov097/data/Data_ov097_020c1ee4.c:
+    complete
+    .data       start:0x020c1ee4 end:0x020c1f10
+
+src/overlays/ov097/data/Data_ov097_020c1f10.c:
+    complete
+    .data       start:0x020c1f10 end:0x020c1f3c
+
+src/overlays/ov097/data/Data_ov097_020c1f3c.c:
+    complete
+    .data       start:0x020c1f3c end:0x020c2010
+
+src/overlays/ov097/data/Data_ov097_020c2010.c:
+    complete
+    .data       start:0x020c2010 end:0x020c2144
+
+src/overlays/ov097/data/Data_ov097_020c2144.c:
+    complete
+    .data       start:0x020c2144 end:0x020c22e4
+
+src/overlays/ov097/data/Data_ov097_020c22e4.c:
+    complete
+    .data       start:0x020c22e4 end:0x020c2360
+
+src/overlays/ov097/data/Data_ov097_020c2360.c:
+    complete
+    .data       start:0x020c2360 end:0x020c2368
+
+src/overlays/ov097/data/Data_ov097_020c2368.c:
+    complete
+    .data       start:0x020c2368 end:0x020c2380
+
+src/overlays/ov097/data/Data_ov097_020c2380.c:
+    complete
+    .data       start:0x020c2380 end:0x020c2514
+
+src/overlays/ov097/data/Rodata_ov097_020c1dcc.c:
+    complete
+    .rodata     start:0x020c1dcc end:0x020c1dd8
+
 src/overlays/ov097/data/bss/Bss_ov097_020c2540.c:
     complete
     .bss        start:0x020c2540 end:0x020c2560

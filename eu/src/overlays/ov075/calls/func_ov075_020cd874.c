@@ -25,7 +25,7 @@ typedef struct ImageQuad {
     u16 color;
 } ImageQuad;
 
-extern const MtxFx33 data_ov075_020d16b8;
+extern const MtxFx33 sFrameRenderRotation;
 extern MtxFx33 NNS_G3dGlb_prmBaseRot;
 extern GeometryState NNS_G3dGlb_prmMatColor0;
 extern void NNS_G3dGlbSetBaseScale(const VecFx32 *scale);
@@ -57,7 +57,7 @@ void func_ov075_020cd874(const ImageQuad *quad, BOOL decal)
 {
     VecFx32 trans;
     VecFx32 scale;
-    MtxFx33 rot = data_ov075_020d16b8;
+    MtxFx33 rot = sFrameRenderRotation;
     fx32 texS;
     fx32 texT;
     int polyMode;

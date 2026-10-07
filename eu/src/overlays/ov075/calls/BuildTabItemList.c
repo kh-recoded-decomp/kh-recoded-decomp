@@ -1,6 +1,6 @@
 #define BuildCategoryList_020cd35c BuildCategoryList
 #define BuildCategorySetList_020cd370 BuildCategorySetList
 #define BuildTabItemList_020cde04 BuildTabItemList
-#define data_ov075_020d1658 data_ov075_020d1678
-#define data_ov075_020d1784 data_ov075_020d17a4
+#define data_ov075_020d1658 sTabCategoryMap
+#define data_ov075_020d1784 sSpecialTabCategories
 #include "src/ov075/unclassified_helpers/BuildTabItemList_020cde04.c"

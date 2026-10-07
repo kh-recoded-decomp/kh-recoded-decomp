@@ -13,9 +13,9 @@
 #define SetupScrollList_020c02f4 func_ov097_020c0314
 #define SyncUnlockedEntryFlags_020c14c0 SyncUnlockedEntryFlags
 #define compareByteStrings_02021c54 CompareByteStrings
-#define data_ov097_020c1dac data_ov097_020c1dcc
-#define data_ov097_020c1ec4 data_ov097_020c1ee4
-#define data_ov097_020c1ef0 data_ov097_020c1f10
+#define data_ov097_020c1dac sStoryReportLayoutValues
+#define data_ov097_020c1ec4 sStoryReportModeMap
+#define data_ov097_020c1ef0 sStoryReportRootIndices
 #define func_ov027_020ba2a8 func_ov027_020ba2c8
 #define func_ov097_020bf6a8 func_ov097_020bf6c8
 #define func_ov097_020c1558 func_ov097_020c1578

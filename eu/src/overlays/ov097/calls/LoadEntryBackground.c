@@ -2,6 +2,6 @@
 #define GetBgDataFromArchive_0202b554 GetBgDataFromArchive
 #define IsEntryFlagSet_020c1474 IsEntryFlagSet_020c1494
 #define LoadEntryBackground_020bf85c LoadEntryBackground
-#define data_ov097_020c2124 data_ov097_020c2144
+#define data_ov097_020c2124 sStoryReportGroupDefinitions
 #define func_0202c478 Archive_LoadFile
 #include "src/ov097/panel_state/LoadEntryBackground_020bf85c.c"

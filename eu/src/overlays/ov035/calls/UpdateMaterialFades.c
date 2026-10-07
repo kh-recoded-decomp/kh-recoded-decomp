@@ -1,6 +1,6 @@
 #define AdvanceAnimationTracks_0202ef24 AdvanceAnimationTracks
 #define UpdateMaterialFades_020bb670 UpdateMaterialFades
-#define data_ov035_020bc3ec data_ov035_020bc40c
+#define data_ov035_020bc3ec sOv035MaterialAlphaByKind
 #define data_ov035_020bc4e4 data_ov035_020bc504
 #define func_ov035_020badf0 GetMovieEntryKind
 #define func_ov035_020bae74 func_ov035_020bae94

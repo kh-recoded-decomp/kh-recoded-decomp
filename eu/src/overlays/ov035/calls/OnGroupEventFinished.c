@@ -2,7 +2,7 @@
 #define FieldObject_SetEnabled_0207f6f4 func_ov001_0207f71c
 #define OnGroupEventFinished_020bb1ac OnGroupEventFinished
 #define addScaledVector_020301ac AddScaledVector
-#define data_ov035_020bc3e0 data_ov035_020bc400
+#define data_ov035_020bc3e0 sOv035EventEffectOffset
 #define data_ov035_020bc4e0 data_ov035_020bc500
 #define func_020351b8 func_020351cc
 #define func_02036230 GetActorRegistry

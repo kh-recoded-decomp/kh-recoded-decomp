@@ -7,7 +7,7 @@
 #define QuaternionToRotationMatrix_0202f808 QuaternionToRotationMatrix
 #define RestoreNodeGeometryMatrix_02019d8c NNS_G3dGetResultMtx
 #define ScaleVector4ByReciprocalMagnitude_0202fc50 ScaleVector4ByReciprocalMagnitude
-#define data_ov006_020a1854 data_ov006_020a1874
+#define data_ov006_020a1854 sOv006JointRotation
 #define func_0202f4b8 func_0202f4cc
 #define func_ov001_0208f4f4 SceneNode_DrawImmediate
 #define multiplyFixedPointQuaternions_0202f93c MultiplyFixedPointQuaternions

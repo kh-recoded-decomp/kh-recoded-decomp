@@ -1,4 +1,4 @@
 #define OpenDefaultRectDialog_020cc220 OpenDefaultRectDialog
-#define data_ov075_020d14e0 data_ov075_020d1500
+#define data_ov075_020d14e0 sDefaultDialogRect
 #define func_ov075_020cbf3c func_ov075_020cbf5c
 #include "src/ov075/unclassified_helpers/OpenDefaultRectDialog_020cc220.c"

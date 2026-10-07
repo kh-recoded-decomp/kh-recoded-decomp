@@ -4,7 +4,7 @@
 #define FieldObject_GetSavedValue_0207f9a8 FieldObject_GetSavedValue
 #define FieldObject_SetSavedValue_0207f9c8 FieldObject_SetSavedValue
 #define UpdateStaticElevator_020a0cc8 UpdateStaticElevator
-#define data_ov006_020a1834 data_ov006_020a1854
+#define data_ov006_020a1834 sOv006ElevatorFrameData
 #define func_02036240 ActorRegistry_GetEntityByIndex
 #define func_ov006_020a06e8 func_ov006_020a0708
 #include "src/ov006/reviewed_helpers/UpdateStaticElevator_020a0cc8.c"

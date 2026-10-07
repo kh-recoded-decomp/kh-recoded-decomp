@@ -1,4 +1,4 @@
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define UpdateVolumeSlider_020cc258 UpdateVolumeSlider
-#define data_ov075_020d1474 data_ov075_020d1494
+#define data_ov075_020d1474 sVolumeSliderTouchRect
 #include "src/ov075/unclassified_helpers/UpdateVolumeSlider_020cc258.c"

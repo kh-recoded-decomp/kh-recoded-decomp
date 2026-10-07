@@ -40,9 +40,9 @@ from:0x020a0798 kind:thumb_call to:0x0206dc4c module:overlay(1)
 from:0x020a07a4 kind:thumb_call_arm to:0x01ff9e3c module:itcm
 from:0x020a07b0 kind:thumb_call_arm to:0x01ff9f88 module:itcm
 from:0x020a07b8 kind:thumb_call_arm to:0x01ff9e6c module:itcm
-from:0x020a07c8 kind:load to:0x020a1858 module:overlay(6)
-from:0x020a07cc kind:load to:0x020a185a module:overlay(6)
-from:0x020a07d0 kind:load to:0x020a185c module:overlay(6)
+from:0x020a07c8 kind:load to:0x020a1854 add:0x4 module:overlay(6)
+from:0x020a07cc kind:load to:0x020a1854 add:0x6 module:overlay(6)
+from:0x020a07d0 kind:load to:0x020a1854 add:0x8 module:overlay(6)
 from:0x020a0830 kind:thumb_call to:0x020807b4 module:overlay(1)
 from:0x020a0840 kind:thumb_call to:0x020358c4 module:main
 from:0x020a0846 kind:thumb_call to:0x0207f9d0 module:overlay(1)

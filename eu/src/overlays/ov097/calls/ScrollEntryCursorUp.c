@@ -4,7 +4,7 @@
 #define ResetScrollTrack_020c1228 ResetScrollTrack
 #define ScrollEntryCursorUp_020bef14 ScrollEntryCursorUp
 #define StepListCursorUp_020c055c MoveListCursorUp
-#define data_ov097_020c1ef0 data_ov097_020c1f10
+#define data_ov097_020c1ef0 sStoryReportRootIndices
 #define func_ov097_020c02f4 func_ov097_020c0314
 #define func_ov097_020c1558 func_ov097_020c1578
 #define g_menuScene_020c2520 data_ov097_020c2540

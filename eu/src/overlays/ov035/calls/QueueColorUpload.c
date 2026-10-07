@@ -1,5 +1,5 @@
 #define GFXi_EnqueueCommand_02014090 NNS_GfdRegisterNewVramTransferTask
 #define QueueColorUpload_020bb7d8 QueueColorUpload
-#define data_ov035_020bc4b8 data_ov035_020bc4d8
+#define data_ov035_020bc4b8 sOv035InactiveColors
 #define data_ov035_020bc4c0 data_ov035_020bc4e0
 #include "src/ov035/unclassified_helpers/QueueColorUpload_020bb7d8.c"

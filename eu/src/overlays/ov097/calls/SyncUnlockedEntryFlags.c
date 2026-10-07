@@ -2,5 +2,5 @@
 #define SetEntryFlag_020c14a0 SetEntryFlag_020c14c0
 #define SetGlobalPackedBit_02027320 SetGlobalPackedBit
 #define SyncUnlockedEntryFlags_020c14c0 SyncUnlockedEntryFlags
-#define data_ov097_020c2124 data_ov097_020c2144
+#define data_ov097_020c2124 sStoryReportGroupDefinitions
 #include "src/ov097/panel_state/SyncUnlockedEntryFlags_020c14c0.c"

@@ -1365,6 +1365,146 @@
       "behavior": "Initialised data words, pointers named by their targets."
     },
     {
+      "module": "ov035",
+      "section": ".rodata",
+      "start": "0x020bc400",
+      "end": "0x020bc40c",
+      "source": "src/overlays/ov035/data/sOv035EventEffectOffset.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "movie event effect offset",
+      "behavior": "World-space offset applied when the movie event effect is attached."
+    },
+    {
+      "module": "ov035",
+      "section": ".rodata",
+      "start": "0x020bc40c",
+      "end": "0x020bc410",
+      "source": "src/overlays/ov035/data/sOv035MaterialAlphaByKind.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "movie material alpha levels",
+      "behavior": "Material alpha selected for each movie fade kind."
+    },
+    {
+      "module": "ov035",
+      "section": ".rodata",
+      "start": "0x020bc410",
+      "end": "0x020bc41c",
+      "source": "src/overlays/ov035/data/sOv035CameraScale.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "movie camera scale",
+      "behavior": "Base geometry scale used by the movie scene camera."
+    },
+    {
+      "module": "ov035",
+      "section": ".rodata",
+      "start": "0x020bc41c",
+      "end": "0x020bc428",
+      "source": "src/overlays/ov035/data/sOv035CameraPosition.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "movie camera position",
+      "behavior": "Base geometry translation used by the movie scene camera."
+    },
+    {
+      "module": "ov035",
+      "section": ".rodata",
+      "start": "0x020bc428",
+      "end": "0x020bc434",
+      "source": "src/overlays/ov035/data/sOv035MenuValueMap.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "movie menu value map",
+      "behavior": "Maps the three movie menu values to their display order."
+    },
+    {
+      "module": "ov035",
+      "section": ".rodata",
+      "start": "0x020bc434",
+      "end": "0x020bc444",
+      "source": "src/overlays/ov035/data/sOv035DigitTiles.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "movie digit tiles",
+      "behavior": "Tile indices used to draw each movie digit row, including the original alignment byte."
+    },
+    {
+      "module": "ov035",
+      "section": ".rodata",
+      "start": "0x020bc444",
+      "end": "0x020bc468",
+      "source": "src/overlays/ov035/data/sOv035CameraRotation.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "movie camera rotation",
+      "behavior": "Identity rotation matrix installed for movie scene rendering."
+    },
+    {
+      "module": "ov035",
+      "section": ".data",
+      "start": "0x020bc480",
+      "end": "0x020bc484",
+      "source": "src/overlays/ov035/data/gMovieSourceHandle.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "movie source handle",
+      "behavior": "Handle of the currently open movie source."
+    },
+    {
+      "module": "ov035",
+      "section": ".data",
+      "start": "0x020bc484",
+      "end": "0x020bc498",
+      "source": "src/overlays/ov035/data/gMovieSourceClassDescriptor.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "movie source class descriptor",
+      "behavior": "Class descriptor for movie source allocation and teardown."
+    },
+    {
+      "module": "ov035",
+      "section": ".data",
+      "start": "0x020bc4c8",
+      "end": "0x020bc4d0",
+      "source": "src/overlays/ov035/data/sOv035ModelNameFormat.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "movie model name format",
+      "behavior": "Format string used to build numbered movie model names."
+    },
+    {
+      "module": "ov035",
+      "section": ".data",
+      "start": "0x020bc4d0",
+      "end": "0x020bc4d8",
+      "source": "src/overlays/ov035/data/sOv035AreaName.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "movie area name",
+      "behavior": "Resource name used when loading the movie area model."
+    },
+    {
+      "module": "ov035",
+      "section": ".data",
+      "start": "0x020bc4d8",
+      "end": "0x020bc4e0",
+      "source": "src/overlays/ov035/data/sOv035InactiveColors.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "inactive movie gauge colors",
+      "behavior": "Palette pair uploaded for the inactive movie gauge state."
+    },
+    {
+      "module": "ov035",
+      "section": ".data",
+      "start": "0x020bc4e0",
+      "end": "0x020bc4e8",
+      "source": "src/overlays/ov035/data/sOv035ActiveColors.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "active movie gauge colors",
+      "behavior": "Palette pair uploaded for the active movie gauge state."
+    },
+    {
+      "module": "ov035",
+      "section": ".data",
+      "start": "0x020bc4e8",
+      "end": "0x020bc500",
+      "source": "src/overlays/ov035/data/gBarGaugeClassDescriptor.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "bar gauge class descriptor",
+      "behavior": "Class descriptor for bar gauge allocation and teardown."
+    },
+    {
       "module": "ov036",
       "section": ".rodata",
       "start": "0x020c3380",
@@ -2562,6 +2702,386 @@
       "name": "ov074 data words",
       "origin": "generated words",
       "behavior": "Initialised data words, pointers named by their targets."
+    },
+    {
+      "module": "ov075",
+      "section": ".rodata",
+      "start": "0x020d1408",
+      "end": "0x020d1414",
+      "source": "src/overlays/ov075/data/Rodata_ov075_020d1408.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "menu input code tables",
+      "behavior": "Compact input and menu navigation code tables."
+    },
+    {
+      "module": "ov075",
+      "section": ".rodata",
+      "start": "0x020d143c",
+      "end": "0x020d1474",
+      "source": "src/overlays/ov075/data/Rodata_ov075_020d143c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "matrix navigation graph",
+      "behavior": "Navigation origin, adjacency links, and packed positions for the eight matrix nodes."
+    },
+    {
+      "module": "ov075",
+      "section": ".rodata",
+      "start": "0x020d1474",
+      "end": "0x020d1494",
+      "source": "src/overlays/ov075/data/Rodata_ov075_020d1474.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "matrix mode labels",
+      "behavior": "Four-byte labels selected for each matrix display mode."
+    },
+    {
+      "module": "ov075",
+      "section": ".rodata",
+      "start": "0x020d1494",
+      "end": "0x020d1498",
+      "source": "src/overlays/ov075/data/Rodata_ov075_020d1494.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "volume slider touch rectangle",
+      "behavior": "Packed width, height, and margins for the volume slider."
+    },
+    {
+      "module": "ov075",
+      "section": ".rodata",
+      "start": "0x020d1498",
+      "end": "0x020d14a0",
+      "source": "src/overlays/ov075/data/Rodata_ov075_020d1498.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "flag grid touch rectangle",
+      "behavior": "Packed bounds and margins for the flag toggle grid."
+    },
+    {
+      "module": "ov075",
+      "section": ".rodata",
+      "start": "0x020d14a0",
+      "end": "0x020d14a8",
+      "source": "src/overlays/ov075/data/Rodata_ov075_020d14a0.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "option panel bounds",
+      "behavior": "Packed dimensions for an option panel."
+    },
+    {
+      "module": "ov075",
+      "section": ".rodata",
+      "start": "0x020d14a8",
+      "end": "0x020d14ac",
+      "source": "src/overlays/ov075/data/Rodata_ov075_020d14a8.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "two-column option layout",
+      "behavior": "Packed row and column count for a two-column option control."
+    },
+    {
+      "module": "ov075",
+      "section": ".rodata",
+      "start": "0x020d14ac",
+      "end": "0x020d14b0",
+      "source": "src/overlays/ov075/data/Rodata_ov075_020d14ac.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "single-column option layout",
+      "behavior": "Packed row and column count for a single-column option control."
+    },
+    {
+      "module": "ov075",
+      "section": ".rodata",
+      "start": "0x020d14b0",
+      "end": "0x020d14b4",
+      "source": "src/overlays/ov075/data/Rodata_ov075_020d14b0.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "three-column option layout",
+      "behavior": "Packed row and column count for a three-column option control."
+    },
+    {
+      "module": "ov075",
+      "section": ".rodata",
+      "start": "0x020d14b4",
+      "end": "0x020d14b8",
+      "source": "src/overlays/ov075/data/Rodata_ov075_020d14b4.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "binary option layout",
+      "behavior": "Packed dimensions for a binary option control."
+    },
+    {
+      "module": "ov075",
+      "section": ".rodata",
+      "start": "0x020d14b8",
+      "end": "0x020d14bc",
+      "source": "src/overlays/ov075/data/Rodata_ov075_020d14b8.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "four-entry option layout",
+      "behavior": "Packed entry count for an option control."
+    },
+    {
+      "module": "ov075",
+      "section": ".rodata",
+      "start": "0x020d14bc",
+      "end": "0x020d14c0",
+      "source": "src/overlays/ov075/data/Rodata_ov075_020d14bc.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "option selection count",
+      "behavior": "Number of selectable option entries."
+    },
+    {
+      "module": "ov075",
+      "section": ".rodata",
+      "start": "0x020d14c0",
+      "end": "0x020d14c8",
+      "source": "src/overlays/ov075/data/Rodata_ov075_020d14c0.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "option animation ranges",
+      "behavior": "Packed animation range values for option controls."
+    },
+    {
+      "module": "ov075",
+      "section": ".rodata",
+      "start": "0x020d14c8",
+      "end": "0x020d14d0",
+      "source": "src/overlays/ov075/data/Rodata_ov075_020d14c8.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "option animation range",
+      "behavior": "Packed animation range values for an option control."
+    },
+    {
+      "module": "ov075",
+      "section": ".rodata",
+      "start": "0x020d14d0",
+      "end": "0x020d14d8",
+      "source": "src/overlays/ov075/data/Rodata_ov075_020d14d0.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "matrix cursor dimensions",
+      "behavior": "Cursor dimensions used by the matrix menu."
+    },
+    {
+      "module": "ov075",
+      "section": ".rodata",
+      "start": "0x020d14d8",
+      "end": "0x020d14e0",
+      "source": "src/overlays/ov075/data/Rodata_ov075_020d14d8.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "preview cursor dimensions",
+      "behavior": "Cursor dimensions used by the preview dialog."
+    },
+    {
+      "module": "ov075",
+      "section": ".rodata",
+      "start": "0x020d14e0",
+      "end": "0x020d14f0",
+      "source": "src/overlays/ov075/data/Rodata_ov075_020d14e0.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "preview dialog rectangle",
+      "behavior": "Rectangle passed to the matrix menu preview dialog."
+    },
+    {
+      "module": "ov075",
+      "section": ".rodata",
+      "start": "0x020d14f0",
+      "end": "0x020d1500",
+      "source": "src/overlays/ov075/data/Rodata_ov075_020d14f0.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "disabled option mask",
+      "behavior": "All-bits-set option mask."
+    },
+    {
+      "module": "ov075",
+      "section": ".rodata",
+      "start": "0x020d1500",
+      "end": "0x020d1510",
+      "source": "src/overlays/ov075/data/Rodata_ov075_020d1500.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "default dialog rectangle",
+      "behavior": "Default rectangle passed to the matrix menu dialog."
+    },
+    {
+      "module": "ov075",
+      "section": ".rodata",
+      "start": "0x020d1510",
+      "end": "0x020d1520",
+      "source": "src/overlays/ov075/data/Rodata_ov075_020d1510.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "menu list descriptor",
+      "behavior": "Packed descriptor for a matrix menu list."
+    },
+    {
+      "module": "ov075",
+      "section": ".rodata",
+      "start": "0x020d1520",
+      "end": "0x020d1538",
+      "source": "src/overlays/ov075/data/Rodata_ov075_020d1520.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "four-entry list arguments",
+      "behavior": "Initial argument block for a four-entry list."
+    },
+    {
+      "module": "ov075",
+      "section": ".rodata",
+      "start": "0x020d1538",
+      "end": "0x020d1550",
+      "source": "src/overlays/ov075/data/Rodata_ov075_020d1538.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "four-entry list state",
+      "behavior": "Initial state block for a four-entry list."
+    },
+    {
+      "module": "ov075",
+      "section": ".rodata",
+      "start": "0x020d1550",
+      "end": "0x020d1568",
+      "source": "src/overlays/ov075/data/Rodata_ov075_020d1550.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "single-entry list state",
+      "behavior": "Initial state block for a single-entry list."
+    },
+    {
+      "module": "ov075",
+      "section": ".rodata",
+      "start": "0x020d1580",
+      "end": "0x020d1678",
+      "source": "src/overlays/ov075/data/Rodata_ov075_020d1580.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "unlock notice entries",
+      "behavior": "Packed message, position, and size records for unlock notices."
+    },
+    {
+      "module": "ov075",
+      "section": ".rodata",
+      "start": "0x020d1678",
+      "end": "0x020d1680",
+      "source": "src/overlays/ov075/data/Rodata_ov075_020d1678.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "tab category map",
+      "behavior": "Category selectors used to build each matrix menu tab."
+    },
+    {
+      "module": "ov075",
+      "section": ".rodata",
+      "start": "0x020d1680",
+      "end": "0x020d1684",
+      "source": "src/overlays/ov075/data/Rodata_ov075_020d1680.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "party threshold mode",
+      "behavior": "Mode selector paired with the party level thresholds."
+    },
+    {
+      "module": "ov075",
+      "section": ".rodata",
+      "start": "0x020d1684",
+      "end": "0x020d1694",
+      "source": "src/overlays/ov075/data/Rodata_ov075_020d1684.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "party level thresholds",
+      "behavior": "Four level thresholds used by the party check."
+    },
+    {
+      "module": "ov075",
+      "section": ".rodata",
+      "start": "0x020d1694",
+      "end": "0x020d16a4",
+      "source": "src/overlays/ov075/data/Rodata_ov075_020d1694.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "frame render parameters",
+      "behavior": "Initial parameters used for framed menu rendering."
+    },
+    {
+      "module": "ov075",
+      "section": ".rodata",
+      "start": "0x020d16a4",
+      "end": "0x020d16b8",
+      "source": "src/overlays/ov075/data/Rodata_ov075_020d16a4.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "frame tile indices",
+      "behavior": "Tile indices for the top, middle, and bottom frame rows."
+    },
+    {
+      "module": "ov075",
+      "section": ".rodata",
+      "start": "0x020d16b8",
+      "end": "0x020d16dc",
+      "source": "src/overlays/ov075/data/Rodata_ov075_020d16b8.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "frame render rotation",
+      "behavior": "Identity rotation matrix used for framed menu rendering."
+    },
+    {
+      "module": "ov075",
+      "section": ".rodata",
+      "start": "0x020d16dc",
+      "end": "0x020d1700",
+      "source": "src/overlays/ov075/data/Rodata_ov075_020d16dc.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "image quad rotation",
+      "behavior": "Identity rotation matrix used for image quads."
+    },
+    {
+      "module": "ov075",
+      "section": ".rodata",
+      "start": "0x020d1700",
+      "end": "0x020d1728",
+      "source": "src/overlays/ov075/data/Rodata_ov075_020d1700.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "level rank thresholds",
+      "behavior": "Five level thresholds and the value assigned to each rank."
+    },
+    {
+      "module": "ov075",
+      "section": ".rodata",
+      "start": "0x020d1728",
+      "end": "0x020d17a4",
+      "source": "src/overlays/ov075/data/Rodata_ov075_020d1728.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "menu category table",
+      "behavior": "Category layout data used by the matrix menu."
+    },
+    {
+      "module": "ov075",
+      "section": ".rodata",
+      "start": "0x020d17a4",
+      "end": "0x020d17b4",
+      "source": "src/overlays/ov075/data/Rodata_ov075_020d17a4.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "special tab categories",
+      "behavior": "Three categories grouped for the special matrix tab."
+    },
+    {
+      "module": "ov075",
+      "section": ".rodata",
+      "start": "0x020d17b4",
+      "end": "0x020d17d8",
+      "source": "src/overlays/ov075/data/Rodata_ov075_020d17b4.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "centered image rotation",
+      "behavior": "Identity rotation matrix used for centered menu images."
+    },
+    {
+      "module": "ov075",
+      "section": ".rodata",
+      "start": "0x020d17d8",
+      "end": "0x020d17fc",
+      "source": "src/overlays/ov075/data/Rodata_ov075_020d17d8.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "modulated image rotation",
+      "behavior": "Identity rotation matrix used for modulated menu images."
+    },
+    {
+      "module": "ov075",
+      "section": ".data",
+      "start": "0x020d1878",
+      "end": "0x020d187c",
+      "source": "src/overlays/ov075/data/Data_ov075_020d1878.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "locked record description",
+      "behavior": "Empty UTF-16 description used for locked records."
+    },
+    {
+      "module": "ov075",
+      "section": ".data",
+      "start": "0x020d1888",
+      "end": "0x020d1890",
+      "source": "src/overlays/ov075/data/Data_ov075_020d1888.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "menu viewport dimensions",
+      "behavior": "Dimensions and terminator used by the menu viewport."
     },
     {
       "module": "ov076",
@@ -3827,6 +4347,136 @@
       "name": "ov096 data words",
       "origin": "generated words",
       "behavior": "Initialised data words, pointers named by their targets."
+    },
+    {
+      "module": "ov097",
+      "section": ".rodata",
+      "start": "0x020c1dcc",
+      "end": "0x020c1dd8",
+      "source": "src/overlays/ov097/data/Rodata_ov097_020c1dcc.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "story report layout values",
+      "behavior": "Six compact layout values used by the story report menu."
+    },
+    {
+      "module": "ov097",
+      "section": ".data",
+      "start": "0x020c1e5c",
+      "end": "0x020c1e7c",
+      "source": "src/overlays/ov097/data/Data_ov097_020c1e5c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "story name text path",
+      "behavior": "Localized story name text resource path."
+    },
+    {
+      "module": "ov097",
+      "section": ".data",
+      "start": "0x020c1e7c",
+      "end": "0x020c1ea0",
+      "source": "src/overlays/ov097/data/DataStrings_ov097_020c1e7c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "story detail text path",
+      "behavior": "Localized story detail text resource path."
+    },
+    {
+      "module": "ov097",
+      "section": ".data",
+      "start": "0x020c1ea0",
+      "end": "0x020c1ee4",
+      "source": "src/overlays/ov097/data/Data_ov097_020c1ea0.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "story report command table",
+      "behavior": "Callbacks and fixed command values used by the story report menu."
+    },
+    {
+      "module": "ov097",
+      "section": ".data",
+      "start": "0x020c1ee4",
+      "end": "0x020c1f10",
+      "source": "src/overlays/ov097/data/Data_ov097_020c1ee4.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "story report mode map",
+      "behavior": "Mode and sentinel values used by the story report menu."
+    },
+    {
+      "module": "ov097",
+      "section": ".data",
+      "start": "0x020c1f10",
+      "end": "0x020c1f3c",
+      "source": "src/overlays/ov097/data/Data_ov097_020c1f10.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "story report root indices",
+      "behavior": "Root indices used to arrange story report groups."
+    },
+    {
+      "module": "ov097",
+      "section": ".data",
+      "start": "0x020c1f3c",
+      "end": "0x020c2010",
+      "source": "src/overlays/ov097/data/Data_ov097_020c1f3c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "story report entry ids",
+      "behavior": "Sequential story report entry identifiers."
+    },
+    {
+      "module": "ov097",
+      "section": ".data",
+      "start": "0x020c2010",
+      "end": "0x020c2144",
+      "source": "src/overlays/ov097/data/Data_ov097_020c2010.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "story report list layout",
+      "behavior": "Packed row layout records for the story report list."
+    },
+    {
+      "module": "ov097",
+      "section": ".data",
+      "start": "0x020c2144",
+      "end": "0x020c22e4",
+      "source": "src/overlays/ov097/data/Data_ov097_020c2144.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "story report group definitions",
+      "behavior": "Entry membership and message ids for story report groups."
+    },
+    {
+      "module": "ov097",
+      "section": ".data",
+      "start": "0x020c22e4",
+      "end": "0x020c2360",
+      "source": "src/overlays/ov097/data/Data_ov097_020c22e4.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "story report panel layout",
+      "behavior": "Packed layout records for story report panels."
+    },
+    {
+      "module": "ov097",
+      "section": ".data",
+      "start": "0x020c2360",
+      "end": "0x020c2368",
+      "source": "src/overlays/ov097/data/Data_ov097_020c2360.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "story report detail header",
+      "behavior": "Header values for the story detail layout table."
+    },
+    {
+      "module": "ov097",
+      "section": ".data",
+      "start": "0x020c2368",
+      "end": "0x020c2380",
+      "source": "src/overlays/ov097/data/Data_ov097_020c2368.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "story report detail template",
+      "behavior": "Template record for story detail layout rows."
+    },
+    {
+      "module": "ov097",
+      "section": ".data",
+      "start": "0x020c2380",
+      "end": "0x020c2514",
+      "source": "src/overlays/ov097/data/Data_ov097_020c2380.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "story report detail rows",
+      "behavior": "Packed layout records for story detail rows."
     },
     {
       "module": "ov098",

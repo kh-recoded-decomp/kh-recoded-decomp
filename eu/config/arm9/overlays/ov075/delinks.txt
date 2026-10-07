@@ -476,6 +476,158 @@ src/overlays/ov075/calls/DrawMenuImageModulated.c:
     complete
     .text       start:0x020d1284 end:0x020d1408
 
+src/overlays/ov075/data/Data_ov075_020d1878.c:
+    complete
+    .data       start:0x020d1878 end:0x020d187c
+
+src/overlays/ov075/data/Data_ov075_020d1888.c:
+    complete
+    .data       start:0x020d1888 end:0x020d1890
+
+src/overlays/ov075/data/Rodata_ov075_020d1408.c:
+    complete
+    .rodata     start:0x020d1408 end:0x020d1414
+
+src/overlays/ov075/data/Rodata_ov075_020d143c.c:
+    complete
+    .rodata     start:0x020d143c end:0x020d1474
+
+src/overlays/ov075/data/Rodata_ov075_020d1474.c:
+    complete
+    .rodata     start:0x020d1474 end:0x020d1494
+
+src/overlays/ov075/data/Rodata_ov075_020d1494.c:
+    complete
+    .rodata     start:0x020d1494 end:0x020d1498
+
+src/overlays/ov075/data/Rodata_ov075_020d1498.c:
+    complete
+    .rodata     start:0x020d1498 end:0x020d14a0
+
+src/overlays/ov075/data/Rodata_ov075_020d14a0.c:
+    complete
+    .rodata     start:0x020d14a0 end:0x020d14a8
+
+src/overlays/ov075/data/Rodata_ov075_020d14a8.c:
+    complete
+    .rodata     start:0x020d14a8 end:0x020d14ac
+
+src/overlays/ov075/data/Rodata_ov075_020d14ac.c:
+    complete
+    .rodata     start:0x020d14ac end:0x020d14b0
+
+src/overlays/ov075/data/Rodata_ov075_020d14b0.c:
+    complete
+    .rodata     start:0x020d14b0 end:0x020d14b4
+
+src/overlays/ov075/data/Rodata_ov075_020d14b4.c:
+    complete
+    .rodata     start:0x020d14b4 end:0x020d14b8
+
+src/overlays/ov075/data/Rodata_ov075_020d14b8.c:
+    complete
+    .rodata     start:0x020d14b8 end:0x020d14bc
+
+src/overlays/ov075/data/Rodata_ov075_020d14bc.c:
+    complete
+    .rodata     start:0x020d14bc end:0x020d14c0
+
+src/overlays/ov075/data/Rodata_ov075_020d14c0.c:
+    complete
+    .rodata     start:0x020d14c0 end:0x020d14c8
+
+src/overlays/ov075/data/Rodata_ov075_020d14c8.c:
+    complete
+    .rodata     start:0x020d14c8 end:0x020d14d0
+
+src/overlays/ov075/data/Rodata_ov075_020d14d0.c:
+    complete
+    .rodata     start:0x020d14d0 end:0x020d14d8
+
+src/overlays/ov075/data/Rodata_ov075_020d14d8.c:
+    complete
+    .rodata     start:0x020d14d8 end:0x020d14e0
+
+src/overlays/ov075/data/Rodata_ov075_020d14e0.c:
+    complete
+    .rodata     start:0x020d14e0 end:0x020d14f0
+
+src/overlays/ov075/data/Rodata_ov075_020d14f0.c:
+    complete
+    .rodata     start:0x020d14f0 end:0x020d1500
+
+src/overlays/ov075/data/Rodata_ov075_020d1500.c:
+    complete
+    .rodata     start:0x020d1500 end:0x020d1510
+
+src/overlays/ov075/data/Rodata_ov075_020d1510.c:
+    complete
+    .rodata     start:0x020d1510 end:0x020d1520
+
+src/overlays/ov075/data/Rodata_ov075_020d1520.c:
+    complete
+    .rodata     start:0x020d1520 end:0x020d1538
+
+src/overlays/ov075/data/Rodata_ov075_020d1538.c:
+    complete
+    .rodata     start:0x020d1538 end:0x020d1550
+
+src/overlays/ov075/data/Rodata_ov075_020d1550.c:
+    complete
+    .rodata     start:0x020d1550 end:0x020d1568
+
+src/overlays/ov075/data/Rodata_ov075_020d1580.c:
+    complete
+    .rodata     start:0x020d1580 end:0x020d1678
+
+src/overlays/ov075/data/Rodata_ov075_020d1678.c:
+    complete
+    .rodata     start:0x020d1678 end:0x020d1680
+
+src/overlays/ov075/data/Rodata_ov075_020d1680.c:
+    complete
+    .rodata     start:0x020d1680 end:0x020d1684
+
+src/overlays/ov075/data/Rodata_ov075_020d1684.c:
+    complete
+    .rodata     start:0x020d1684 end:0x020d1694
+
+src/overlays/ov075/data/Rodata_ov075_020d1694.c:
+    complete
+    .rodata     start:0x020d1694 end:0x020d16a4
+
+src/overlays/ov075/data/Rodata_ov075_020d16a4.c:
+    complete
+    .rodata     start:0x020d16a4 end:0x020d16b8
+
+src/overlays/ov075/data/Rodata_ov075_020d16b8.c:
+    complete
+    .rodata     start:0x020d16b8 end:0x020d16dc
+
+src/overlays/ov075/data/Rodata_ov075_020d16dc.c:
+    complete
+    .rodata     start:0x020d16dc end:0x020d1700
+
+src/overlays/ov075/data/Rodata_ov075_020d1700.c:
+    complete
+    .rodata     start:0x020d1700 end:0x020d1728
+
+src/overlays/ov075/data/Rodata_ov075_020d1728.c:
+    complete
+    .rodata     start:0x020d1728 end:0x020d17a4
+
+src/overlays/ov075/data/Rodata_ov075_020d17a4.c:
+    complete
+    .rodata     start:0x020d17a4 end:0x020d17b4
+
+src/overlays/ov075/data/Rodata_ov075_020d17b4.c:
+    complete
+    .rodata     start:0x020d17b4 end:0x020d17d8
+
+src/overlays/ov075/data/Rodata_ov075_020d17d8.c:
+    complete
+    .rodata     start:0x020d17d8 end:0x020d17fc
+
 src/overlays/ov075/data/bss/Bss_ov075_020d1900.c:
     complete
     .bss        start:0x020d1900 end:0x020d1b04

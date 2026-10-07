@@ -1,4 +1,4 @@
 #define MobiClip_SrcIsOpen_020ba9a4 MobiClip_SrcIsOpen_020ba9c4
-#define data_ov035_020bc460 data_ov035_020bc480
+#define data_ov035_020bc460 gMovieSourceHandle
 #define func_0202a78c Obj_GetWord28
 #include "src/ov035/shared_engine/MobiClip_SrcIsOpen_020ba9a4.c"

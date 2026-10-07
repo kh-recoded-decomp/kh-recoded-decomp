@@ -1,7 +1,7 @@
 #define CreateEntryPopups_020c0bc0 CreateEntryPopups
 #define NNS_GfdResetFrmTexVramState_0201391c NNS_GfdResetFrmTexVramState
-#define data_ov097_020c1f1c data_ov097_020c1f3c
-#define data_ov097_020c2124 data_ov097_020c2144
+#define data_ov097_020c1f1c sStoryReportEntryIds
+#define data_ov097_020c2124 sStoryReportGroupDefinitions
 #define func_02013d74 NNS_GfdResetFrmPlttVramState
 #define func_ov097_020c1844 func_ov097_020c1864
 #include "src/ov097/panel_state/CreateEntryPopups_020c0bc0.c"

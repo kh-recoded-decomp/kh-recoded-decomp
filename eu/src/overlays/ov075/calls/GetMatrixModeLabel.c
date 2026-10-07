@@ -1,3 +1,3 @@
 #define GetMatrixModeLabel_020c575c GetMatrixModeLabel
-#define data_ov075_020d1454 data_ov075_020d1474
+#define data_ov075_020d1454 sMatrixModeLabels
 #include "src/ov075/reviewed_helpers/GetMatrixModeLabel_020c575c.c"

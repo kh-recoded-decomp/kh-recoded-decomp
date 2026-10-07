@@ -1,4 +1,4 @@
 #define OpenPreviewDialog_020cc550 OpenPreviewDialog
-#define data_ov075_020d14c0 data_ov075_020d14e0
+#define data_ov075_020d14c0 sPreviewDialogRect
 #define func_ov075_020cbf3c func_ov075_020cbf5c
 #include "src/ov075/unclassified_helpers/OpenPreviewDialog_020cc550.c"

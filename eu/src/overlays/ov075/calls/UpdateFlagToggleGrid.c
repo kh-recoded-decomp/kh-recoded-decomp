@@ -1,4 +1,4 @@
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define UpdateFlagToggleGrid_020cc3bc UpdateFlagToggleGrid
-#define data_ov075_020d1478 data_ov075_020d1498
+#define data_ov075_020d1478 sFlagGridTouchConfig
 #include "src/ov075/unclassified_helpers/UpdateFlagToggleGrid_020cc3bc.c"

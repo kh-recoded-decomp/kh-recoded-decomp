@@ -4,7 +4,7 @@
 #define ObjectManager_GetFirstEntryParam_0207ee14 ObjectManager_GetFirstEntryParam
 #define ObjectManager_GetSecondEntryParam_0207ee48 ObjectManager_GetSecondEntryParam
 #define data_ov035_020bc4a8 data_ov035_020bc4c8
-#define data_ov035_020bc4b0 data_ov035_020bc4d0
+#define data_ov035_020bc4b0 sOv035AreaName
 #define data_ov035_020bc4e4 data_ov035_020bc504
 #define func_0202c48c func_0202c4a0
 #define func_0202ed3c InitSharedRecordAndDispatchAlt

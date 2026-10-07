@@ -1,3 +1,3 @@
 #define RemapMovieMenuValue_020bb7a8 RemapMovieMenuValue
-#define data_ov035_020bc408 data_ov035_020bc428
+#define data_ov035_020bc408 sOv035MenuValueMap
 #include "src/ov035/unclassified_helpers/RemapMovieMenuValue_020bb7a8.c"

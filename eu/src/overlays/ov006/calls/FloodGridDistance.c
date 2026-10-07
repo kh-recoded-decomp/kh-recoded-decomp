@@ -1,6 +1,9 @@
 ﻿#include "nitro/types.h"
 #include "nitro/fx_types.h"
 
+#define data_ov006_020a1864 sOv006CardinalStepIndices
+#define data_ov006_020a1884 sOv006GridSteps
+
 typedef struct {
     u8 layer;
     u8 distance;

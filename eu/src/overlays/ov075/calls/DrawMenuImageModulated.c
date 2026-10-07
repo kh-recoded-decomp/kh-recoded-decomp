@@ -4,7 +4,7 @@
 #define QueueOrSendGeometryCommand_01ffa37c NNS_G3dGeBufferOP_N
 #define data_0205a9a4 NNS_G3dGlb_prmMatColor0
 #define data_0205a9b8 NNS_G3dGlb_prmBaseRot
-#define data_ov075_020d17b8 data_ov075_020d17d8
+#define data_ov075_020d17b8 sModulatedImageRotation
 #define func_020192ec NNS_G3dGlbSetBaseTrans
 #define func_0201931c NNS_G3dGlbSetBaseScale
 #include "src/ov075/unclassified_helpers/DrawMenuImageModulated_020d1264.c"

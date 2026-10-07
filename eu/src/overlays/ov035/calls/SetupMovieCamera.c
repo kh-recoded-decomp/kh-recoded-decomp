@@ -3,9 +3,9 @@
 #define SetupMovieCamera_020bb8f0 SetupMovieCamera
 #define data_0205a9a4 NNS_G3dGlb_prmMatColor0
 #define data_0205a9b8 NNS_G3dGlb_prmBaseRot
-#define data_ov035_020bc3f0 data_ov035_020bc410
-#define data_ov035_020bc3fc data_ov035_020bc41c
-#define data_ov035_020bc424 data_ov035_020bc444
+#define data_ov035_020bc3f0 sOv035CameraScale
+#define data_ov035_020bc3fc sOv035CameraPosition
+#define data_ov035_020bc424 sOv035CameraRotation
 #define func_01ff87c4 MI_Copy36B
 #define func_020192ec NNS_G3dGlbSetBaseTrans
 #define func_0201931c NNS_G3dGlbSetBaseScale

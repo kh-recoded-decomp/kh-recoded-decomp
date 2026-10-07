@@ -29,12 +29,8 @@ AddTouchPoint kind:function(thumb,size=0x22) addr:0x020a156c
 AnimSequence_Update kind:function(thumb,size=0x124) addr:0x020a1590
 GetStageJointPosition kind:function(thumb,size=0xac) addr:0x020a16b4
 func_ov006_020a1760 kind:function(thumb,size=0xf4) addr:0x020a1760
-data_ov006_020a1854 kind:data(any) addr:0x020a1854
-data_ov006_020a1858 kind:data(any) addr:0x020a1858
-data_ov006_020a1859 kind:data(any) addr:0x020a1859 ambiguous
-data_ov006_020a185a kind:data(any) addr:0x020a185a
-data_ov006_020a185c kind:data(any) addr:0x020a185c
-data_ov006_020a1864 kind:data(any) addr:0x020a1864
-data_ov006_020a1874 kind:data(any) addr:0x020a1874
-data_ov006_020a1884 kind:data(any) addr:0x020a1884
+sOv006ElevatorFrameData kind:data(any) addr:0x020a1854
+sOv006CardinalStepIndices kind:data(any) addr:0x020a1864
+sOv006JointRotation kind:data(any) addr:0x020a1874
+sOv006GridSteps kind:data(any) addr:0x020a1884
 gOv006Handlers kind:data(any) addr:0x020a18e0

@@ -14,7 +14,7 @@ from:0x020d22dc kind:load to:0x020bc86d module:overlays(30,38)
 from:0x020d22e4 kind:load to:0x020be159 module:overlays(39,40)
 from:0x020d22e8 kind:load to:0x020d2435 module:overlay(53)
 from:0x020d22f0 kind:load to:0x020d267d module:overlay(53)
-from:0x020d22f4 kind:load to:0x020a1859 module:overlays(6,10)
+from:0x020d22f4 kind:load to:0x020a1854 add:0x5 module:overlay(6)
 from:0x020d22f8 kind:load to:0x020a1999 module:overlay(10)
 from:0x020d2306 kind:thumb_call to:0x0204f77c module:main
 from:0x020d2324 kind:thumb_call to:0x020aa284 module:overlay(21)

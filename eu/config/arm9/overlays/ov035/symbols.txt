@@ -86,23 +86,22 @@ UpdateChannelLevel kind:function(thumb,size=0xa0) addr:0x020bc270
 func_ov035_020bc310 kind:function(thumb,size=0x9c) addr:0x020bc310
 func_ov035_020bc3ac kind:function(thumb,size=0x2a) addr:0x020bc3ac
 func_ov035_020bc3d8 kind:function(thumb,size=0x28) addr:0x020bc3d8
-data_ov035_020bc400 kind:data(any) addr:0x020bc400
-data_ov035_020bc40c kind:data(any) addr:0x020bc40c
-data_ov035_020bc410 kind:data(any) addr:0x020bc410
-data_ov035_020bc41c kind:data(any) addr:0x020bc41c
-data_ov035_020bc428 kind:data(any) addr:0x020bc428
-data_ov035_020bc434 kind:data(any) addr:0x020bc434
-data_ov035_020bc444 kind:data(any) addr:0x020bc444
-data_ov035_020bc480 kind:data(any) addr:0x020bc480
-data_ov035_020bc484 kind:data(any) addr:0x020bc484
+sOv035EventEffectOffset kind:data(any) addr:0x020bc400
+sOv035MaterialAlphaByKind kind:data(any) addr:0x020bc40c
+sOv035CameraScale kind:data(any) addr:0x020bc410
+sOv035CameraPosition kind:data(any) addr:0x020bc41c
+sOv035MenuValueMap kind:data(any) addr:0x020bc428
+sOv035DigitTiles kind:data(any) addr:0x020bc434
+sOv035CameraRotation kind:data(any) addr:0x020bc444
+gMovieSourceHandle kind:data(any) addr:0x020bc480
+gMovieSourceClassDescriptor kind:data(any) addr:0x020bc484
 gMovieSkipHandlers kind:data(any) addr:0x020bc498
 sOv035_RpgZ_020bc4c0 kind:data(any) addr:0x020bc4c0
 data_ov035_020bc4c8 kind:data(any) addr:0x020bc4c8
-data_ov035_020bc4c9 kind:data(any) addr:0x020bc4c9 ambiguous
-data_ov035_020bc4d0 kind:data(any) addr:0x020bc4d0
-data_ov035_020bc4d8 kind:data(any) addr:0x020bc4d8
+sOv035AreaName kind:data(any) addr:0x020bc4d0
+sOv035InactiveColors kind:data(any) addr:0x020bc4d8
 data_ov035_020bc4e0 kind:data(any) addr:0x020bc4e0
-data_ov035_020bc4e8 kind:data(any) addr:0x020bc4e8 ambiguous
+gBarGaugeClassDescriptor kind:data(any) addr:0x020bc4e8
 data_ov035_020bc500 kind:bss addr:0x020bc500
 data_ov035_020bc504 kind:bss addr:0x020bc504
 data_ov035_020bc508 kind:bss addr:0x020bc508

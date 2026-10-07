@@ -4,7 +4,7 @@
 #define PXI_Init_0204f00c PXI_Init_0204f020
 #define SetPanelSlotFlag_020bff94 SetPanelSlotFlag
 #define TickPanelSlotAnimation_020c020c TickPanelSlotAnimation
-#define data_ov097_020c1ff0 data_ov097_020c2010
-#define data_ov097_020c22c4 data_ov097_020c22e4
+#define data_ov097_020c1ff0 sStoryReportListLayout
+#define data_ov097_020c22c4 sStoryReportPanelLayout
 #define func_ov097_020bffd0 BindPanelSlot
 #include "src/ov097/panel_state/InitMenuPanels_020bfdcc.c"

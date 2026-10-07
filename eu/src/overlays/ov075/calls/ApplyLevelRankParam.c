@@ -1,7 +1,7 @@
 #define ApplyLevelRankParam_020ce730 ApplyLevelRankParam
 #define GetCtxModeByte_02068084 func_ov001_02068084
 #define SetParamHalf18_02050630 SetParamHalf18
-#define data_ov075_020d16e0 data_ov075_020d1700
+#define data_ov075_020d16e0 sLevelRankThresholds
 #define func_020505a8 GetSelectionPackedValueBlock
 #define func_ov001_02064574 ReadSessionPackedBits
 #define func_ov073_020c2ac8 SyncSharedListScroll
