@@ -4,7 +4,7 @@
 #define CommitResultsRewards_020bd0a0 CommitResultsRewards
 #define ResourceCache_FreeAll_02086df0 ResourceCache_FreeAll
 #define WriteSessionPackedBits_0206459c WriteSessionPackedBits
-#define func_ov001_020876cc func_ov001_020876f4
+#define func_ov001_020876cc ClearStageTablesIfActive
 #define g_resultsScreen_020c0f80 data_ov034_020c0fa0
 #define func_ov001_02063130 SetFieldStateValue
 #include "src/ov034/unclassified_helpers/CommitResultsRewards_020bd0a0.c"

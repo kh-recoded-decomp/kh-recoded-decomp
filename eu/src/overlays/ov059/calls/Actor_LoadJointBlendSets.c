@@ -1,3 +1,4 @@
+#define func_ov001_0206dba0 GetResourceArchiveId
 #define Actor_LoadJointBlendSets_020c8a84 Actor_LoadJointBlendSets
 #define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap

@@ -1,3 +1,4 @@
 #define NotifyCommSlotIfReady_020ba874 NotifyCommSlotIfReady
 #define g_commState_020bb760 gContinueSceneState
+#define func_ov001_0206a8d4 SetScreenFlag1
 #include "src/ov037/unclassified_helpers/NotifyCommSlotIfReady_020ba874.c"

@@ -1,3 +1,4 @@
+#define func_ov001_0206dba0 GetResourceArchiveId
 #define AcquireRecordHandle_020adaf0 AcquireRecordHandle
 #define CreatePageEffectTask_020d3ddc CreatePageEffectTask
 #define DispatchPageHandler_020d3a94 DispatchPageHandler

@@ -1,5 +1,5 @@
 #define func_ov001_020645c8 IsSessionFlagSet
 #define ScriptOp_InitSubsystemIfFlagClear_0208edf0 ScriptOp_InitSubsystemIfFlagClear
-#define func_ov001_020877dc func_ov001_02087804
-#define func_ov001_020877f4 func_ov001_0208781c
+#define func_ov001_020877dc ClearStageManagerFlags31IfActive
+#define func_ov001_020877f4 ClearStageManagerFlags42IfActive
 #include "src/ov001/shared_engine/ScriptOp_InitSubsystemIfFlagClear_0208edf0.c"

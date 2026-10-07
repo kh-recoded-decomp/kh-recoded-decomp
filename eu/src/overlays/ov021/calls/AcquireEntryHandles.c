@@ -1,3 +1,4 @@
+#define func_ov001_0206dba0 GetResourceArchiveId
 #define AcquireEntryHandles_020adf14 AcquireEntryHandles
 #define AcquireRecordHandle_020adaf0 AcquireRecordHandle
 #define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap

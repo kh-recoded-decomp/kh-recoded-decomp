@@ -1,3 +1,4 @@
+#define func_ov001_0206dba0 GetResourceArchiveId
 #define AcquireSharedRecordState_020a9054 AcquireSharedRecordState
 #define IsPlayerEntryFlagSet_02050014 IsPlayerEntryFlagSet
 #define LoadOverlay054EntityResources_020d2320 LoadOverlay054EntityResources

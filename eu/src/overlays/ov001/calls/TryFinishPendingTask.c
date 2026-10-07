@@ -1,5 +1,5 @@
 #define TryFinishPendingTask_0207e108 TryFinishPendingTask
 #define data_ov001_020a04d0 data_ov001_020a04f0
 #define func_ov001_0207d6f4 SetupBgBlend
-#define func_ov001_0207e094 func_ov001_0207e0bc
+#define func_ov001_0207e094 IsArrowPromptVisible
 #include "src/ov001/unclassified_helpers/TryFinishPendingTask_0207e108.c"

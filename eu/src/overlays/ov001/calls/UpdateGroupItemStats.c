@@ -1,3 +1,4 @@
+#define func_ov001_02066ef8 SyncMenuPanelDefinition
 #define FindGroupItemById_02067108 FindGroupItemById
 #define SetPanelItemHighlight_0207b19c SetPanelItemHighlight
 #define UpdateGroupItemStats_02067b1c UpdateGroupItemStats

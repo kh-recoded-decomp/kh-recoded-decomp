@@ -17,7 +17,7 @@ extern void func_ov001_0207ffd4(void); /* ScriptCmd_EnterPhase */
 extern void ScriptCmd_SetAuxObjectVisible(void); /* ScriptCmd_SetAuxObjectVisible */
 extern void func_ov001_02080020(void);
 extern void ScriptOp_SetObjectVector(void); /* ScriptOp_SetObjectVector */
-extern void func_ov001_02080098(void);
+extern void ScriptCmd_CreateTargetViewInSlot(void); /* ScriptCmd_CreateTargetViewInSlot */
 extern void ScriptCmd_CreateRunningFieldObject(void); /* ScriptCmd_CreateRunningFieldObject */
 extern void func_ov001_02080168(void); /* ScriptCmd_SpawnStateSpot */
 extern void func_ov001_020801a8(void); /* DefaultStepDone */
@@ -75,7 +75,7 @@ void (*gFieldObjectScriptCommandHandlers[78])(void) = {
     NULL,
     ScriptOp_SetObjectVector, /* ScriptOp_SetObjectVector */
     NULL,
-    func_ov001_02080098,
+    ScriptCmd_CreateTargetViewInSlot, /* ScriptCmd_CreateTargetViewInSlot */
     NULL,
     ScriptCmd_CreateRunningFieldObject, /* ScriptCmd_CreateRunningFieldObject */
     NULL,

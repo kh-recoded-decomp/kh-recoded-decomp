@@ -15,6 +15,8 @@ typedef struct PlayerControlSlot {
 typedef struct EventContext {
     u32 header;
     PlayerControlSlot players[4];
+    u8 pad_a4[0x14];
+    u32 resourceArchiveIds[5];
 } EventContext;
 
 extern EventContext *data_ov001_020a04bc;

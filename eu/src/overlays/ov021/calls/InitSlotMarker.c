@@ -1,3 +1,4 @@
+#define func_ov001_0206dba0 GetResourceArchiveId
 #define AcquireSharedRecordState_020a9054 AcquireSharedRecordState
 #define GetOverlaySelectionRecord_0204f768 GetOverlaySelectionRecord
 #define InitSlotMarker_020ab6dc InitSlotMarker

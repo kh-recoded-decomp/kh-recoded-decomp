@@ -1,4 +1,4 @@
 #define InitTaskCallbacks_020a1bd0 InitTaskCallbacks
 #define func_ov007_020a1b80 func_ov007_020a1ba0
-#define func_ov007_020a1bc0 func_ov007_020a1be0
+#define func_ov007_020a1bc0 ResetTaskUpdateCallback
 #include "src/ov007/shared_engine/InitTaskCallbacks_020a1bd0.c"

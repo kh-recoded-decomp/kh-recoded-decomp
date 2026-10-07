@@ -3,5 +3,5 @@
 #define ResetActorMotion_02093e28 ResetActorMotion
 #define ResetGroupLeaderAndSetState_02097a1c ResetGroupLeaderAndSetState
 #define ResetReadyStageEvents_02087fd4 ResetReadyStageEvents
-#define func_ov001_020877a8 func_ov001_020877d0
+#define func_ov001_020877a8 GetStageManagerIfActive
 #include "src/ov001/shared_engine/ResetReadyStageEvents_02087fd4.c"

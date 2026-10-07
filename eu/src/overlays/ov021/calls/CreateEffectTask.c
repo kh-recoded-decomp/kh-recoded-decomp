@@ -50,7 +50,7 @@ typedef struct {
 extern void *NNSi_FndAllocFromDefaultHeap(u32 size);
 extern void InitScriptTask(EffectTask *task, int script, int id, void *arg);
 extern EffectSource *DispatchModeHandler(EffectDef *def, void *arg, u32 player);
-extern u32 func_ov001_0206dba0(int index);
+extern u32 GetResourceArchiveId(int index);
 extern int MapKindToSlot(int kind);
 extern void *AcquireRecordHandle(EffectOwner *owner, void *desc, int id, u32 key);
 extern void LoadResGroupHandles(EffectTask *task, EffectOwner *owner, void *desc);
@@ -90,7 +90,7 @@ EffectTask *CreateEffectTask(EffectOwner *owner, void *resDesc, EffectDesc *desc
     if (def->sizeZ >= 0) {
         task->scaleZ = def->sizeZ << 12;
     }
-    base = func_ov001_0206dba0(4);
+    base = GetResourceArchiveId(4);
     slot = MapKindToSlot(task->source->kind);
     task->handleCount = 1;
     if (slot == 0) {

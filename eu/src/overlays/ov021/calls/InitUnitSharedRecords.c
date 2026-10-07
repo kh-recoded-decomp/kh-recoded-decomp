@@ -1,3 +1,4 @@
+#define func_ov001_0206dba0 GetResourceArchiveId
 #define AcquireSharedRecordState_020a9054 AcquireSharedRecordState
 #define AllocateObjectSlotArrays_020a90a4 AllocateObjectSlotArrays
 #define InitUnitSharedRecords_020aa150 InitUnitSharedRecords

@@ -16,7 +16,7 @@
 #define func_0202a448 func_0202a45c
 #define func_0202c48c func_0202c4a0
 #define func_ov001_0207de48 ResetMenuScreenLayers
-#define func_ov001_0207e094 func_ov001_0207e0bc
-#define func_ov001_0207e0a0 func_ov001_0207e0c8
-#define func_ov001_0207e0ac func_ov001_0207e0d4
+#define func_ov001_0207e094 IsArrowPromptVisible
+#define func_ov001_0207e0a0 GetArrowPromptState
+#define func_ov001_0207e0ac GetArrowPromptStepCount
 #include "src/ov001/field_manager/CreateFieldHudWidgets_0206fa74.c"

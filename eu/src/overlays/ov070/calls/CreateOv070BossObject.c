@@ -1,3 +1,4 @@
+#define func_ov001_0206dba0 GetResourceArchiveId
 #define AcquireRecordHandle_020adaf0 AcquireRecordHandle
 #define CreateOv070BossObject_020d8894 CreateOv070BossObject
 #define InitScriptTask_020adc5c InitScriptTask

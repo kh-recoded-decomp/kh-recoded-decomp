@@ -1,3 +1,4 @@
+#define func_ov001_0206dba0 GetResourceArchiveId
 #define CreateTimedEntryPair_020acc00 CreateTimedEntryPair
 #define ZeroBytes0x14_020a8adc ZeroBytes0x14
 #define func_ov021_020a89a8 func_ov021_020a89c8

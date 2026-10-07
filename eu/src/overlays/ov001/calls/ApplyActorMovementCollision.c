@@ -8,5 +8,5 @@
 #define VEC_Mag_01ff9f28 VEC_Mag
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define data_02053438 data_0205344c
-#define func_ov001_02091658 func_ov001_02091680
+#define func_ov001_02091658 InvokeActorGroundProbe
 #include "src/ov001/shared_engine/ApplyActorMovementCollision_0208fda4.c"

@@ -1,3 +1,4 @@
+#define func_ov001_0206dba0 GetResourceArchiveId
 #define EnsureEffectGroup_020acb6c EnsureEffectGroup
 #define ZeroBytes0x14_020a8adc ZeroBytes0x14
 #define data_ov021_020b506c data_ov021_020b508c

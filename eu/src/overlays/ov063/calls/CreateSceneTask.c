@@ -1,3 +1,4 @@
+#define func_ov001_0206dba0 GetResourceArchiveId
 #define AcquireRecordHandle_020adaf0 AcquireRecordHandle
 #define BeginBossIntroScene_020d8100 BeginBossIntroScene
 #define CameraPath_Load_020c2ec0 CameraPath_Load

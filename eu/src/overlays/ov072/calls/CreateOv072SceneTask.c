@@ -1,3 +1,4 @@
+#define func_ov001_0206dba0 GetResourceArchiveId
 #define AcquireRecordHandle_020adaf0 AcquireRecordHandle
 #define CameraPath_Load_020c2ec0 CameraPath_Load
 #define CreateOv072SceneTask_020d9aac CreateOv072SceneTask

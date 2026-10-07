@@ -4,7 +4,7 @@
 #define StartSessionScene_020636f8 StartSessionScene
 #define data_ov001_020a0460 data_ov001_020a0480
 #define func_ov001_02066810 StartIdleSceneObjects
-#define func_ov001_020877c4 func_ov001_020877ec
-#define func_ov001_0208780c func_ov001_02087834
+#define func_ov001_020877c4 ResetStageOriginIfActive
+#define func_ov001_0208780c ResetStageLinksForSessionIfActive
 #define func_ov021_020af7e4 ForwardSubModeEnd
 #include "src/ov001/unclassified_helpers/StartSessionScene_020636f8.c"

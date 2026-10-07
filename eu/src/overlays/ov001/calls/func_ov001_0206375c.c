@@ -19,8 +19,8 @@ extern void StoreSessionSpawnPoint(int index, int value, u16 field);
 extern void ResumeTaskAndClearFlags(void);
 extern BOOL IsSessionFlagSet(u32 eventId);
 extern void ClearSessionPackedBit(u32 eventId);
-extern void func_ov001_02087804(void);
-extern void func_ov001_0208781c(void);
+extern void ClearStageManagerFlags31IfActive(void);
+extern void ClearStageManagerFlags42IfActive(void);
 extern void ReleaseSeqArcHeapLevel(int index);
 extern int CacheSeqArcStatus(int index);
 extern s32 func_ov001_02063a38(void);
@@ -43,8 +43,8 @@ void func_ov001_0206375c(void) {
     }
     ResumeTaskAndClearFlags();
     if (!IsSessionFlagSet(0x3528)) {
-        func_ov001_02087804();
-        func_ov001_0208781c();
+        ClearStageManagerFlags31IfActive();
+        ClearStageManagerFlags42IfActive();
     }
     if (IsSessionFlagSet(0x360c)) {
         ReleaseSeqArcHeapLevel(1);

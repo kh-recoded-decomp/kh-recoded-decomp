@@ -1,3 +1,4 @@
+#define func_ov001_0206dba0 GetResourceArchiveId
 #define AcquireSharedRecordState_020a9054 AcquireSharedRecordState
 #define LoadUnitSharedRecords_020aee14 LoadUnitSharedRecords
 #define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap

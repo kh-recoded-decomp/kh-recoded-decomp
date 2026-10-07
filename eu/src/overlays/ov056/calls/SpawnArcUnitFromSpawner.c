@@ -1,3 +1,4 @@
+#define func_ov001_0206dba0 GetResourceArchiveId
 #define AllocEntity_020ae844 AllocEntity
 #define CopyWordArray24_020aec8c CopyWordArray24
 #define FX_Div_01ff9c84 FX_Div

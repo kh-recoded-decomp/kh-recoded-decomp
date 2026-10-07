@@ -119,6 +119,10 @@ src/overlays/ov007/calls/func_ov007_020a1ba0.c:
     complete
     .text       start:0x020a1ba0 end:0x020a1be0
 
+src/overlays/ov007/calls/ResetTaskUpdateCallback.c:
+    complete
+    .text       start:0x020a1be0 end:0x020a1bf0
+
 src/overlays/ov007/calls/InitTaskCallbacks.c:
     complete
     .text       start:0x020a1bf0 end:0x020a1c18

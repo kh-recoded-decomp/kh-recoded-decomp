@@ -1,3 +1,4 @@
+#define func_ov001_02066ef8 SyncMenuPanelDefinition
 #define func_ov001_020645dc SetSessionFlag
 #define EnterMenuItem_02067618 EnterMenuItem
 #define InitLayerSlotsFromData_02066e8c InitLayerSlotsFromData

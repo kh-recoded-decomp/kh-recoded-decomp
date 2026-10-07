@@ -4,6 +4,6 @@
 #define ReleaseStageSlotEntry_0209c024 ReleaseStageSlotEntry
 #define ResetStageEntries_02087f00 ResetStageEntries
 #define func_01ff8830 MI_CpuFill8
-#define func_ov001_020877a8 func_ov001_020877d0
+#define func_ov001_020877a8 GetStageManagerIfActive
 #define func_ov001_020958f4 func_ov001_0209591c
 #include "src/ov001/shared_engine/ResetStageEntries_02087f00.c"

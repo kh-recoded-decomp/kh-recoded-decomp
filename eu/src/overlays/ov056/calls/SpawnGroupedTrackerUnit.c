@@ -1,3 +1,4 @@
+#define func_ov001_0206dba0 GetResourceArchiveId
 #define AllocEntity_020ae844 AllocEntity
 #define CopyWordArray24_020aec8c CopyWordArray24
 #define LoadUnitSharedRecords_020aee14 LoadUnitSharedRecords

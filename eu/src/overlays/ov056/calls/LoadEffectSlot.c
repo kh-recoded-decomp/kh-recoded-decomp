@@ -1,3 +1,4 @@
+#define func_ov001_0206dba0 GetResourceArchiveId
 #define AcquireSharedRecordState_020a9054 AcquireSharedRecordState
 #define LoadEffectSlot_020d42a8 LoadEffectSlot
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
