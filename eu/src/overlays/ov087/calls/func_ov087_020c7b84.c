@@ -7,13 +7,13 @@ extern u32 EnterSceneSlotAtSpawn();
 extern u32 func_ov001_02064998();
 extern u32 func_ov033_020baa6c();
 extern u32 StartSubScene();
-extern u32 func_ov039_020bc638();
+extern u32 GetActiveMenuScene();
 
 void func_ov087_020c7b84(void) {
   int menu;
   u32 selection;
 
-  menu = func_ov039_020bc638();
+  menu = GetActiveMenuScene();
   selection = *(u32 *)(*(int *)(menu + 4) * 0x108 + menu + 0x118);
   if (*(int *)(menu + 0x10) == 0) {
     switch(*(u32 *)(menu + 0xbc0)) {

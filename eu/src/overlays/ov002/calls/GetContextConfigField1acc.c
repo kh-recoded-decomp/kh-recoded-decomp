@@ -1,2 +1,3 @@
 #define GetContextConfigField1acc_02067548 GetContextConfigField1acc
+#define func_ov002_02066fe0 GetContextConfig
 #include "src/ov002/unclassified_helpers/GetContextConfigField1acc_02067548.c"

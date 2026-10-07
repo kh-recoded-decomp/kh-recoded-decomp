@@ -3,12 +3,12 @@
 extern u32 PlaySoundEffect();
 extern u32 WriteSessionPackedBits();
 extern u32 StartSubScene();
-extern u32 func_ov039_020bc638();
+extern u32 GetActiveMenuScene();
 
 void func_ov089_020c047c(void) {
   int selection;
 
-  selection = func_ov039_020bc638();
+  selection = GetActiveMenuScene();
   selection = *(int *)(*(int *)(selection + 0x748) * 0xc + *(int *)(selection + 0x738) + 8);
   if ((selection < 0) || (selection == 8)) {
     selection = 7;

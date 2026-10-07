@@ -1,6 +1,6 @@
 #define PlaySoundChecked_0204d8d0 PlaySoundChecked
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define RewardQueue_Push_020cf304 RewardQueue_Push
-#define func_ov031_020bc710 func_ov031_020bc730
+#define func_ov031_020bc710 SetNearestStageEvent
 #define func_ov059_020cf404 EntryList_FindByKeyFirst
 #include "src/ov059/unclassified_helpers/RewardQueue_Push_020cf304.c"

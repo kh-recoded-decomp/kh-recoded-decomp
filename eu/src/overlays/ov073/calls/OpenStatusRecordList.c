@@ -8,7 +8,7 @@
 #define ReloadStatusRecord_020c29d8 ReloadStatusRecord
 #define UpdateWidgetLayerDefault_020b9df0 func_ov027_020b9e10
 #define UploadListPalette_020c3f6c UploadListPalette
-#define func_ov039_020bc1cc func_ov039_020bc1ec
-#define func_ov039_020bc630 func_ov039_020bc650
+#define func_ov039_020bc1cc GetMenuWidgetContainer
+#define func_ov039_020bc630 GetMenuSharedState
 #define func_ov073_020c3ae0 InitListView
 #include "src/ov073/status_menu/OpenStatusRecordList_020c2a04.c"

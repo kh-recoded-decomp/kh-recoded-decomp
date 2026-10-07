@@ -1,3 +1,3 @@
 #define GetSharedSelectedIndex_020c2c90 GetSharedSelectedIndex
-#define func_ov039_020bc630 func_ov039_020bc650
+#define func_ov039_020bc630 GetMenuSharedState
 #include "src/ov073/status_menu/GetSharedSelectedIndex_020c2c90.c"

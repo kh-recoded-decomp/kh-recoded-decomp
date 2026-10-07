@@ -63,7 +63,7 @@ extern void func_ov027_020b8230(void *tracker, SlotFrame *frame);
 extern Position2D *func_ov027_020b91c8(void *panel, void *element);
 extern void SetEntrySlotsVisible(void *panel, void *element, BOOL visible);
 extern void func_ov027_020b91e8(void *panel, void *element, Position2D *position, int mode);
-extern int func_ov039_020bc934(void);
+extern int GetMenuSelection(void);
 extern const u16 *func_ov027_020ba2c8(void **messages, int id);
 extern void *OS_SNPrintf_0202e094(u16 *dst, unsigned int len, const u16 *fmt, ...);
 
@@ -154,7 +154,7 @@ void DrawSlotDetailPanel(SaveSelectScreen *screen, int slotIndex)
                 messageId = 6;
             }
         } else {
-            messageId = slot->status == 0 ? 7 : (func_ov039_020bc934() != 3 ? 4 : 5);
+            messageId = slot->status == 0 ? 7 : (GetMenuSelection() != 3 ? 4 : 5);
         }
         number = screen->slotIndex + 1;
         OS_SNPrintf_0202e094(text, 0x80, func_ov027_020ba2c8(&screen->messages, messageId), number, number);

@@ -1,6 +1,6 @@
 #define TryOpenMatrixMenuThree_020cbc3c TryOpenMatrixMenuThree
 #define func_0204d924 PlaySoundEffect
 #define func_ov039_020bbf78 StartSubScene
-#define func_ov039_020bca00 func_ov039_020bca20
+#define func_ov039_020bca00 GetMenuInputState
 #define func_ov075_020c42b4 GetDialogInputMode
 #include "src/ov075/reviewed_helpers/TryOpenMatrixMenuThree_020cbc3c.c"

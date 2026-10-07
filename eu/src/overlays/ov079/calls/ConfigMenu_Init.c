@@ -15,9 +15,9 @@
 #define func_ov027_020b7e24 func_ov027_020b7e44
 #define func_ov027_020b81e8 func_ov027_020b8208
 #define func_ov027_020ba2a8 func_ov027_020ba2c8
-#define func_ov039_020bc18c func_ov039_020bc1ac
+#define func_ov039_020bc18c GetPrimaryMenuElement
 #define func_ov039_020bc318 func_ov039_020bc338
 #define func_ov039_020bc414 IsPxiFifoTagSet_020bc434
-#define func_ov039_020bc914 func_ov039_020bc934
+#define func_ov039_020bc914 GetMenuSelection
 #define func_ov039_020bcb20 func_ov039_020bcb40
 #include "src/ov079/unclassified_helpers/ConfigMenu_Init_020c4260.c"

@@ -1,5 +1,5 @@
 #define HandleSlotInput_020c460c HandleSlotInput
-#define func_ov039_020bc618 func_ov039_020bc638
+#define func_ov039_020bc618 GetActiveMenuScene
 #define func_ov087_020c43c4 MoveCursorToWidget
 #define func_ov087_020c44a4 func_ov087_020c44c4
 #include "src/ov087/panel_state/HandleSlotInput_020c460c.c"

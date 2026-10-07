@@ -73,9 +73,9 @@ CanStartIdleRecord kind:function(thumb,size=0x3c) addr:0x020bc670
 GetNegatedCombinedOffset kind:function(thumb,size=0x24) addr:0x020bc6ac
 NotifyFlaggedActor kind:function(thumb,size=0x50) addr:0x020bc6d0
 func_ov031_020bc720 kind:function(thumb,size=0x10) addr:0x020bc720
-func_ov031_020bc730 kind:function(thumb,size=0x10) addr:0x020bc730
-func_ov031_020bc740 kind:function(thumb,size=0x18) addr:0x020bc740
-func_ov031_020bc758 kind:function(thumb,size=0x10) addr:0x020bc758
+SetNearestStageEvent kind:function(thumb,size=0x10) addr:0x020bc730
+GetCurrentRecordPosition kind:function(thumb,size=0x18) addr:0x020bc740
+GetMovieFrameCount kind:function(thumb,size=0x10) addr:0x020bc758
 SetFlagBit4 kind:function(thumb,size=0x28) addr:0x020bc768
 data_ov031_020bc7a0 kind:data(any) addr:0x020bc7a0
 data_ov031_020bc7a4 kind:data(any) addr:0x020bc7a4

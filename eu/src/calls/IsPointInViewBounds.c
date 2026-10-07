@@ -3,6 +3,6 @@
 #define VEC_DotProduct_01ff9e6c VEC_DotProduct
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define data_0205a970 NNS_G3dGlb_cameraMtx
-#define func_ov042_020bd290 func_ov042_020bd2b0
+#define func_ov042_020bd290 Camera_GetGoalPosition
 #define func_ov042_020bd590 func_ov042_020bd5b0
 #include "src/arm9/spatial_queries/IsPointInViewBounds_0203ec44.c"

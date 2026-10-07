@@ -1,5 +1,6 @@
 #define CensorBannedWords_02066130 CensorBannedWords
 #define func_0202b788 GetLanguageIndex
+#define func_ov002_02062ca4 GetPanelMessageFile
 #define func_ov002_0206626c MatchWideTextPattern
 #define func_ov002_02066374 GetWideStringLength
 #include "src/ov002/text_utils/CensorBannedWords_02066130.c"

@@ -1,3 +1,4 @@
+#define func_ov002_0206655c IsScreenFadeComplete
 #define DispatchContextCommand_02066c78 DispatchContextCommand
 #define GetMenuCursorTouch_02066b2c GetMenuCursorTouch
 #define IsButtonBPressed_020632c8 IsButtonBPressed

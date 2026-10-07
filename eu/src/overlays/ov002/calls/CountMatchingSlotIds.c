@@ -2,4 +2,5 @@
 #define CountMatchingSlotIds_02069f9c CountMatchingSlotIds
 #define ReleaseRecordSlot_02051dfc ReleaseRecordSlot
 #define func_ov002_0206a020 CollectRecordItemsBySlot
+#define func_ov002_02066fc8 GetPackedFields
 #include "src/ov002/unclassified_helpers/CountMatchingSlotIds_02069f9c.c"

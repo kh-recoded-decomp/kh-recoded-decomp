@@ -4,6 +4,6 @@
 #define ReleaseIfMarked_020b903c ReleaseIfMarked
 #define ShutdownOv082Screen_020bf300 ShutdownOv082Screen
 #define SweepElements_020b831c func_ov027_020b833c
-#define func_ov039_020bc1a4 func_ov039_020bc1c4
-#define func_ov039_020bc1cc func_ov039_020bc1ec
+#define func_ov039_020bc1a4 GetSecondaryMenuElement
+#define func_ov039_020bc1cc GetMenuWidgetContainer
 #include "src/ov082/unclassified_helpers/ShutdownOv082Screen_020bf300.c"

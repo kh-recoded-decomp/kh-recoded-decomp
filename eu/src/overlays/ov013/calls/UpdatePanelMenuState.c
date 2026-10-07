@@ -1,3 +1,4 @@
+#define func_ov002_0206655c IsScreenFadeComplete
 #define IsButtonXPressed_020632e4 IsButtonXPressed
 #define IsGlobalBit0Set_020632ac func_ov002_020632ac
 #define PlaySoundEffect_0204d924 PlaySoundEffect

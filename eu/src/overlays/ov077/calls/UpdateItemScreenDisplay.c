@@ -3,7 +3,7 @@
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define UpdateItemScreenDisplay_020c4be0 UpdateItemScreenDisplay
 #define func_0204f378 IndexedRecords_SetFlag2
-#define func_ov039_020bc0d4 func_ov039_020bc0f4
+#define func_ov039_020bc0d4 GetPrimaryElementEnabled
 #define func_ov039_020bc1bc func_ov039_020bc1dc
 #define func_ov077_020c4598 func_ov077_020c45b8
 #define func_ov077_020c53a0 func_ov077_020c53c0

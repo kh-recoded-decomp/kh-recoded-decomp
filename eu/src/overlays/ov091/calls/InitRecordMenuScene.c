@@ -12,7 +12,7 @@
 #define UpdateEntryProgress_020c0448 func_ov091_020c0468
 #define data_ov091_020c2a30 data_ov091_020c2a50
 #define data_ov091_020c3720 data_ov091_020c3740
-#define func_ov039_020bc828 func_ov039_020bc848
+#define func_ov039_020bc828 GetCurrentMenuStackEntry
 #define func_ov091_020bef9c SetupRecordMenuDisplay
 #define func_ov091_020bf194 func_ov091_020bf1b4
 #define func_ov091_020bf410 InitMenuTextLayers

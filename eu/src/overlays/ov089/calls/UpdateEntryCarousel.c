@@ -2,5 +2,5 @@
 #define OS_GetTick_02003fd4 OS_GetTick
 #define RefreshEntryCaption_020beff4 RefreshEntryCaption
 #define UpdateEntryCarousel_020c01f4 UpdateEntryCarousel
-#define func_ov039_020bc0d4 func_ov039_020bc0f4
+#define func_ov039_020bc0d4 GetPrimaryElementEnabled
 #include "src/ov089/panel_state/UpdateEntryCarousel_020c01f4.c"

@@ -4,7 +4,7 @@ extern void func_ov014_0206d2e0(void);
 extern void func_ov014_0206d2e4(void);
 extern void func_ov014_0206d2e8(void);
 extern void func_ov014_0206e84c(void);
-extern void func_ov014_0206e850(void);
+extern void ResetPanelCloseStep(void);
 extern void UpdatePanelCloseStep(void); /* UpdatePanelCloseStep */
 extern void func_ov014_0206e8fc(void);
 extern void UpdatePanelOpenStep(void); /* UpdatePanelOpenStep */
@@ -14,7 +14,7 @@ void (*gPanelLifecycleHandlers[7])(void) = {
     func_ov014_0206d2e4,
     func_ov014_0206d2e8,
     func_ov014_0206e84c,
-    func_ov014_0206e850,
+    ResetPanelCloseStep,
     UpdatePanelCloseStep, /* UpdatePanelCloseStep */
     func_ov014_0206e8fc,
 };

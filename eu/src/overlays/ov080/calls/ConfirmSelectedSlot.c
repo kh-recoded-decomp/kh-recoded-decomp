@@ -1,5 +1,5 @@
 #define ConfirmSelectedSlot_020c5cb4 ConfirmSelectedSlot
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define func_02025658 GetCurrentSceneId
-#define func_ov039_020bc914 func_ov039_020bc934
+#define func_ov039_020bc914 GetMenuSelection
 #include "src/ov080/unclassified_helpers/ConfirmSelectedSlot_020c5cb4.c"

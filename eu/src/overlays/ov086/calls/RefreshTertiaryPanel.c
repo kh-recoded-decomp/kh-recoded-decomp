@@ -11,6 +11,6 @@
 #define func_ov027_020b9580 SetEntrySlotsVisible
 #define func_ov027_020b9e00 func_ov027_020b9e20
 #define func_ov039_020bc104 SetScreenLayerDirty
-#define func_ov039_020bc1cc func_ov039_020bc1ec
+#define func_ov039_020bc1cc GetMenuWidgetContainer
 #define func_ov039_020bc1e4 UpdateScreenWidgetLayer
 #include "src/ov086/panel_state/RefreshTertiaryPanel_020c042c.c"

@@ -13,5 +13,5 @@
 #define func_02052514 func_02052528
 #define func_0205255c func_02052570
 #define func_ov039_020bbf78 StartSubScene
-#define func_ov039_020bc914 func_ov039_020bc934
+#define func_ov039_020bc914 GetMenuSelection
 #include "src/ov080/unclassified_helpers/ConfirmSaveSelectStep_020c5a0c.c"

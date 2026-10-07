@@ -1,5 +1,5 @@
 #define DrawPlayTimeDigits_020c1a28 DrawPlayTimeDigits
 #define func_0204f204 func_0204f218
 #define func_0204f378 IndexedRecords_SetFlag2
-#define func_ov039_020bc1cc func_ov039_020bc1ec
+#define func_ov039_020bc1cc GetMenuWidgetContainer
 #include "src/ov086/panel_state/DrawPlayTimeDigits_020c1a28.c"

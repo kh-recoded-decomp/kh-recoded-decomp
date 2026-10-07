@@ -3,6 +3,6 @@
 #define FX_Div_01ff9c84 FX_Div
 #define SolveMonicQuadratic_0204c17c SolveMonicQuadratic
 #define func_02006450 FX_Mul
-#define func_ov042_020bd290 func_ov042_020bd2b0
+#define func_ov042_020bd290 Camera_GetGoalPosition
 #define func_ov042_020bd584 func_ov042_020bd5a4
 #include "src/ov017/unclassified_helpers/AimEntryLandingPoint_020a5048.c"

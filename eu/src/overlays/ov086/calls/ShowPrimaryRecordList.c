@@ -5,5 +5,5 @@
 #define Text_UploadTileBuffer_02001520 Text_UploadTileBuffer
 #define func_ov027_020b90a4 FindWidgetById
 #define func_ov027_020b9580 SetEntrySlotsVisible
-#define func_ov039_020bc1cc func_ov039_020bc1ec
+#define func_ov039_020bc1cc GetMenuWidgetContainer
 #include "src/ov086/panel_state/ShowPrimaryRecordList_020bfe24.c"

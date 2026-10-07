@@ -7,7 +7,7 @@ typedef struct SubModeState {
 extern SubModeState *data_ov021_020b56c0;
 
 extern int Camera_GetActiveController(void);
-extern int func_ov042_020bd2b0(void);
+extern int Camera_GetGoalPosition(void);
 extern int Ov043Camera_GetActiveController(void);
 extern int Panel_GetActiveController(void);
 
@@ -17,7 +17,7 @@ int func_ov021_020af5d4(void)
     case 0:
         return Camera_GetActiveController();
     case 1:
-        return func_ov042_020bd2b0();
+        return Camera_GetGoalPosition();
     case 2:
         return Ov043Camera_GetActiveController();
     case 3:

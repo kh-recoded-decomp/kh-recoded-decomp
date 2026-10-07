@@ -7,7 +7,7 @@
 #define SlotMenu_ShowPointLimitWarning_020c89a0 SlotMenu_ShowPointLimitWarning
 #define SlotMenu_Update_020c4b48 SlotMenu_Update
 #define func_ov039_020bc03c RuntimeState_SetCondition
-#define func_ov039_020bc0d4 func_ov039_020bc0f4
+#define func_ov039_020bc0d4 GetPrimaryElementEnabled
 #define func_ov039_020bc1bc func_ov039_020bc1dc
 #define func_ov076_020c4d94 func_ov076_020c4db4
 #define func_ov076_020c4e7c SlotMenu_UpdateIdle

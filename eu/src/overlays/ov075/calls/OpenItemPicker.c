@@ -4,5 +4,5 @@
 #define OpenItemPicker_020ce9ac OpenItemPicker
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define func_01ff869c MIi_CpuCopy16
-#define func_ov039_020bc618 func_ov039_020bc638
+#define func_ov039_020bc618 GetActiveMenuScene
 #include "src/ov075/unclassified_helpers/OpenItemPicker_020ce9ac.c"

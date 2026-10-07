@@ -9,7 +9,7 @@ extern u32 Msg_OpenContainerAndReadHeader();
 extern u32 SetStateFlagBits();
 extern u32 MIi_CpuClearFast();
 extern u32 AcquireRecordManager();
-extern u32 func_ov039_020bc848();
+extern u32 GetCurrentMenuStackEntry();
 extern u32 func_ov099_020bf1b0();
 extern u32 LoadViewerBackgrounds();
 extern u32 func_ov099_020bf5f4();
@@ -29,7 +29,7 @@ u32 func_ov099_020becb4(void *work) {
   data_ov099_020c2900 = work;
   SetStateFlagBits('\x05','\0');
   MIi_CpuClearFast(0,work,0xd6f8);
-  menuMode = func_ov039_020bc848();
+  menuMode = GetCurrentMenuStackEntry();
   *(u32 *)((int)work + 0xcf04) = menuMode;
   *(u32 *)((int)work + 0xd050) = 0;
   *(u32 *)((int)work + 0xd6e4) = 0;

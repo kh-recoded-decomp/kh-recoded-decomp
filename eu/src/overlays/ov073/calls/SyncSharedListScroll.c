@@ -1,5 +1,5 @@
 #define GetPlayerLevelTier_020c1418 GetPlayerLevelTier
 #define ScrollListWidgetTo_020c3ee0 ScrollListWidgetTo
 #define SyncSharedListScroll_020c2ac8 SyncSharedListScroll
-#define func_ov039_020bc630 func_ov039_020bc650
+#define func_ov039_020bc630 GetMenuSharedState
 #include "src/ov073/status_menu/SyncSharedListScroll_020c2ac8.c"

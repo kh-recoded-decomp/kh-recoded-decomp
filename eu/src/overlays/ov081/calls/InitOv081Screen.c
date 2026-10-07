@@ -17,7 +17,7 @@
 #define func_ov027_020b8f98 func_ov027_020b8fb8
 #define func_ov027_020b97b8 func_ov027_020b97d8
 #define func_ov039_020bc1bc func_ov039_020bc1dc
-#define func_ov039_020bc1cc func_ov039_020bc1ec
+#define func_ov039_020bc1cc GetMenuWidgetContainer
 #define func_ov081_020c4260 func_ov081_020c4280
 #define func_ov081_020c4e98 BuildVisibleEntryIndex
 #define func_ov081_020c527c SetupOv081Backgrounds

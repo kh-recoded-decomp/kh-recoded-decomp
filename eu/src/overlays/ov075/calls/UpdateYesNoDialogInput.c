@@ -1,6 +1,6 @@
 #define GetDialogPixelBounds_020ceff8 GetDialogPixelBounds
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define UpdateYesNoDialogInput_020cf02c UpdateYesNoDialogInput
-#define func_ov039_020bca00 func_ov039_020bca20
+#define func_ov039_020bca00 GetMenuInputState
 #define func_ov075_020cf518 BeginPickerFadeOut
 #include "src/ov075/unclassified_helpers/UpdateYesNoDialogInput_020cf02c.c"

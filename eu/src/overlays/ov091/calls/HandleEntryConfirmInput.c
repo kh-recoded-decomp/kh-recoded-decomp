@@ -2,7 +2,7 @@
 #define _data_02060500 data_02060500
 #define _data_ov091_020c373c data_ov091_020c375c
 #define func_0204d924 PlaySoundEffect
-#define func_ov039_020bca00 func_ov039_020bca20
+#define func_ov039_020bca00 GetMenuInputState
 #define func_ov091_020c1d48 SetPopupSlotVisible
 #define func_ov091_020c2784 SetPopupState
 #include "src/ov091/reviewed_helpers/HandleEntryConfirmInput_020c2064.c"

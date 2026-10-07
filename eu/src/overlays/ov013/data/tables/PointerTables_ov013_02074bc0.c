@@ -13,7 +13,7 @@ extern void CancelPanelConfirm(void); /* CancelPanelConfirm */
 extern void OpenPanelResultMenu(void);
 extern void UpdatePanelResultPrompt(void); /* UpdatePanelResultPrompt */
 extern void ResetPanelLayout(void); /* ResetPanelLayout */
-extern void func_ov013_02073234(void);
+extern void ResetPanelSaveStep(void);
 extern void PollPanelSaveStep(void); /* PollPanelSaveStep */
 extern void func_ov013_020732a4(void);
 extern void CloseRecordPanelMenu(void); /* CloseRecordPanelMenu */
@@ -25,10 +25,10 @@ extern void ClearPanelListCallback(void); /* ClearPanelListCallback */
 extern void func_ov013_0207390c(void);
 extern void AdvancePanelCloseStep(void); /* AdvancePanelCloseStep */
 extern void func_ov013_020739a0(void);
-extern void func_ov013_020739a4(void);
+extern void ResetPanelListUpStep(void);
 extern void func_ov013_020739bc(void);
 extern void func_ov013_02073a98(void);
-extern void func_ov013_02073a9c(void);
+extern void ResetPanelListDownStep(void);
 extern void func_ov013_02073ab4(void);
 extern void func_ov013_02073b90(void);
 extern void OpenPanelConfirmPrompt(void); /* OpenPanelConfirmPrompt */
@@ -50,7 +50,7 @@ void (*gPanelMenuStateHandlers[34])(void) = {
     OpenPanelResultMenu,
     UpdatePanelResultPrompt, /* UpdatePanelResultPrompt */
     ResetPanelLayout, /* ResetPanelLayout */
-    func_ov013_02073234,
+    ResetPanelSaveStep,
     PollPanelSaveStep, /* PollPanelSaveStep */
     func_ov013_020732a4,
     CloseRecordPanelMenu, /* CloseRecordPanelMenu */
@@ -62,10 +62,10 @@ void (*gPanelMenuStateHandlers[34])(void) = {
     func_ov013_0207390c,
     AdvancePanelCloseStep, /* AdvancePanelCloseStep */
     func_ov013_020739a0,
-    func_ov013_020739a4,
+    ResetPanelListUpStep,
     func_ov013_020739bc,
     func_ov013_02073a98,
-    func_ov013_02073a9c,
+    ResetPanelListDownStep,
     func_ov013_02073ab4,
     func_ov013_02073b90,
     OpenPanelConfirmPrompt, /* OpenPanelConfirmPrompt */

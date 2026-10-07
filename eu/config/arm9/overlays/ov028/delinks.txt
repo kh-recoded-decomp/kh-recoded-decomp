@@ -99,6 +99,10 @@ src/overlays/ov028/calls/IsSceneUnpaused.c:
     complete
     .text       start:0x020bb17c end:0x020bb19c
 
+src/overlays/ov028/calls/GetFieldTransitionFlags.c:
+    complete
+    .text       start:0x020bb19c end:0x020bb1b4
+
 src/overlays/ov028/calls/func_ov028_020bb1b4.c:
     complete
     .text       start:0x020bb1b4 end:0x020bb220

@@ -1,2 +1,3 @@
 #define GetContextSlotCount_020672f4 GetContextSlotCount
+#define func_ov002_02066fe0 GetContextConfig
 #include "src/ov002/unclassified_helpers/GetContextSlotCount_020672f4.c"

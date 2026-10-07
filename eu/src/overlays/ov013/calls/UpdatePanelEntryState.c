@@ -1,3 +1,4 @@
+#define func_ov002_0206655c IsScreenFadeComplete
 #define DispatchContextCommand_02066c78 DispatchContextCommand
 #define RebuildPanelSelection_020712e8 RebuildPanelSelection
 #define RecordPanelClear_02070f50 RecordPanelClear

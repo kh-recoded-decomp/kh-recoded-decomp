@@ -1,3 +1,4 @@
+#define func_ov002_0206655c IsScreenFadeComplete
 #define DispatchContextCommand_02066c78 DispatchContextCommand
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define UpdatePanelExitSequence_02070b8c UpdatePanelExitSequence

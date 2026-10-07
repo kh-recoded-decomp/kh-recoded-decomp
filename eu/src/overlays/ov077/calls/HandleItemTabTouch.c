@@ -3,5 +3,5 @@
 #define RefreshElementCellAnimation_020c9d34 RefreshElementCellAnimation
 #define ShowSlotHeaderMessage_020c58e0 ShowSlotHeaderMessage
 #define func_ov039_020bc1bc func_ov039_020bc1dc
-#define func_ov039_020bca00 func_ov039_020bca20
+#define func_ov039_020bca00 GetMenuInputState
 #include "src/ov077/unclassified_helpers/HandleItemTabTouch_020c43f8.c"

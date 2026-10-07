@@ -4,4 +4,5 @@
 #define IsCategoryEntryFlagSet_020699c8 IsCategoryEntryFlagSet
 #define func_01ff8830 MI_CpuFill8
 #define g_panelState_0206f9a0 data_ov014_0206f9a0
+#define func_ov002_02066fc8 GetPackedFields
 #include "src/ov014/panel_state/BuildPanelGroupEntries_0206f0a0.c"

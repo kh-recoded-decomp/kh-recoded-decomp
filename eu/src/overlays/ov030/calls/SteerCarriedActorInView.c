@@ -1,6 +1,6 @@
 #define SteerCarriedActorInView_020bb870 SteerCarriedActorInView
 #define func_ov021_020af5f4 func_ov021_020af614
-#define func_ov042_020bd324 func_ov042_020bd344
+#define func_ov042_020bd324 Camera_GetColliderOffset
 #define func_ov042_020bd590 func_ov042_020bd5b0
 #define func_ov052_020ceb54 func_ov052_020ceb74
 #include "src/ov030/shared_engine/SteerCarriedActorInView_020bb870.c"

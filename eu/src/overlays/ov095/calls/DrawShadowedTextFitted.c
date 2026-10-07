@@ -1,4 +1,4 @@
 #define DrawShadowedTextFitted_020c00a0 DrawShadowedTextFitted
 #define func_0200160c func_02001620
-#define func_ov039_020bc9ac func_ov039_020bc9cc
+#define func_ov039_020bc9ac GetMenuFont
 #include "src/ov095/unclassified_helpers/DrawShadowedTextFitted_020c00a0.c"

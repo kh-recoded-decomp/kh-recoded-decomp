@@ -1,3 +1,4 @@
+#define func_ov002_0206655c IsScreenFadeComplete
 #define IsButtonXPressed_020632e4 IsButtonXPressed
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define RefreshProgressCaption_0206f06c RefreshProgressCaption

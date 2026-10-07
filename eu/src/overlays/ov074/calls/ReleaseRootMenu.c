@@ -13,6 +13,6 @@
 #define func_02006d3c G3X_SetHOffset
 #define func_02013d74 NNS_GfdResetFrmPlttVramState
 #define func_0202eaf4 func_0202eb08
-#define func_ov039_020bc18c func_ov039_020bc1ac
+#define func_ov039_020bc18c GetPrimaryMenuElement
 #define func_ov039_020bc1bc func_ov039_020bc1dc
 #include "src/ov074/root_menu/ReleaseRootMenu_020c4fa4.c"

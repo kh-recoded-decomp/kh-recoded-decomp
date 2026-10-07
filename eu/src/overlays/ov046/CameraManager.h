@@ -8,7 +8,9 @@ typedef struct CameraManager {
     s32 mode;
     u8 pad_084[0x5C];
     u32 stateFlags;
-    u8 pad_0E4[0x58];
+    u8 pad_0E4[0x10];
+    void *focusTarget;
+    u8 pad_0F8[0x44];
     u8 embeddedView[1];
 } CameraManager;
 

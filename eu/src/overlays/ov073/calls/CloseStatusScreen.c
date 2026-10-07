@@ -12,5 +12,5 @@
 #define StartCurrentAreaEvents_020bc55c LoadSlotSubBgImage
 #define UpdateScreenWidgetLayer_020bc1e4 UpdateScreenWidgetLayer
 #define func_01ff8740 MIi_CpuClearFast
-#define func_ov039_020bc1cc func_ov039_020bc1ec
+#define func_ov039_020bc1cc GetMenuWidgetContainer
 #include "src/ov073/status_menu/CloseStatusScreen_020c1864.c"

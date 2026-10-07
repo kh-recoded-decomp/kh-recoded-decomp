@@ -7,7 +7,7 @@
 #define ResetScrollTrack_020c1228 ResetScrollTrack
 #define SetScrollTrackTarget_020c1328 SetScrollTrackTarget
 #define UpdateScrollBarDrag_020c0ef8 UpdateScrollBarDrag_020c0f18
-#define func_ov039_020bca00 func_ov039_020bca20
+#define func_ov039_020bca00 GetMenuInputState
 #define func_ov097_020c08b4 func_ov097_020c08d4
 #define g_menuScene_020c2520 data_ov097_020c2540
 #include "src/ov097/panel_state/UpdateScrollBarDrag_020c0ef8.c"

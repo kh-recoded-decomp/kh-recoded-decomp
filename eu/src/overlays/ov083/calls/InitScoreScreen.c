@@ -104,8 +104,8 @@ extern void *func_ov039_020bc9b4(void);
 extern BOOL InitTextLayerAt(TextLayer *obj, int layer, u16 *screenBase, void *font, TextFrame *frame);
 extern void FillBackgroundLayerRect(TextLayer *info, u16 *dst, int x, int y, u8 palette);
 extern void func_01ff8ad8(const void *src, void *dst, u32 len);
-extern void *func_ov039_020bc1c4(void);
-extern void *func_ov039_020bc1ec(void);
+extern void *GetSecondaryMenuElement(void);
+extern void *GetMenuWidgetContainer(void);
 extern u32 BuildSlotImageParams(int slot, u32 low);
 extern void InitObjManagerAndMark(void *container, SlotPoolConfig *config);
 extern void func_ov027_020b9098(void *container, u32 imageParams);
@@ -117,8 +117,8 @@ extern int *func_ov027_020b91c8(void *container, void *widget);
 extern s16 SetWidgetDigitDisplay(void *cells, int widgetId, int key, u32 value);
 extern s16 func_ov039_020be378(void *cells, int widgetId, int key, u32 value);
 extern void func_ov039_020bc4a8(int a, int b, int c, int d, int e);
-extern BOOL func_ov039_020bc830(void);
-extern BOOL func_ov039_020bc86c(void);
+extern BOOL GetMenuStackDepth(void);
+extern BOOL GetPreviousMenuStackEntry(void);
 extern void *Archive_LoadFile(u32 fileId, int mode);
 extern void GetBgDataFromArchive(void *dst, void *file, int x, int y, int flags);
 extern void DC_FlushRange(void *dest, u32 size);
@@ -182,8 +182,8 @@ BOOL InitScoreScreen(ScoreScreen *screen)
     FillBackgroundLayerRect(&screen->textLayers[1], layer, frameB.x, frameB.y, 0xf);
     func_01ff8ad8(layer, screen->tileBuffer, 0x600);
 
-    elements = func_ov039_020bc1c4();
-    container = func_ov039_020bc1ec();
+    elements = GetSecondaryMenuElement();
+    container = GetMenuWidgetContainer();
     config = data_ov083_020bf66c;
     config.imageParams = BuildSlotImageParams(2, 2);
     InitObjManagerAndMark(container, &config);
@@ -221,7 +221,7 @@ BOOL InitScoreScreen(ScoreScreen *screen)
     screen->records = elements;
 
     func_ov039_020bc4a8(2, 0, 0, 1, 0);
-    if (func_ov039_020bc830() && func_ov039_020bc86c()) {
+    if (GetMenuStackDepth() && GetPreviousMenuStackEntry()) {
         screen->bgFile = Archive_LoadFile(BuildSlotImageParams(2, 0), 0xe);
         GetBgDataFromArchive(screen->bgData, screen->bgFile, -1, -1, 0);
         DC_FlushRange((void *)0x05000400, 0x40);

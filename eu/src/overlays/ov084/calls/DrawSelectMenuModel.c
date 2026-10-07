@@ -6,5 +6,5 @@
 #define camera_commit_projection_0202a814 camera_commit_projection
 #define data_ov084_020bfc50 data_ov084_020bfc70
 #define func_02006d3c G3X_SetHOffset
-#define func_ov039_020bc7f8 func_ov039_020bc818
+#define func_ov039_020bc7f8 GetRuntimeStateFlags
 #include "src/ov084/select_menu/DrawSelectMenuModel_020bfadc.c"

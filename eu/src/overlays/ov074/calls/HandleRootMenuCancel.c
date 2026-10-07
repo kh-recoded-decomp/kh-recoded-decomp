@@ -9,5 +9,5 @@
 #define func_ov001_02064ac0 IsBattleModeOne
 #define func_ov039_020bbf78 StartSubScene
 #define func_ov039_020bc03c RuntimeState_SetCondition
-#define func_ov039_020bc810 func_ov039_020bc830
+#define func_ov039_020bc810 GetMenuStackDepth
 #include "src/ov074/root_menu/HandleRootMenuCancel_020c57dc.c"

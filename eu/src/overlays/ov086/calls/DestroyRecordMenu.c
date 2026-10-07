@@ -9,5 +9,5 @@
 #define RemoveListEntry_020bc70c RemoveListEntry
 #define data_ov086_020c3000 data_ov086_020c3020
 #define func_ov027_020b7dfc func_ov027_020b7e1c
-#define func_ov039_020bc1cc func_ov039_020bc1ec
+#define func_ov039_020bc1cc GetMenuWidgetContainer
 #include "src/ov086/panel_state/DestroyRecordMenu_020c1e50.c"

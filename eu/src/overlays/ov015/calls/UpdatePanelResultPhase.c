@@ -1,3 +1,4 @@
+#define func_ov002_0206655c IsScreenFadeComplete
 #define SetEntrySlotsVisible_020b9580 SetEntrySlotsVisible
 #define UpdatePanelResultPhase_02071d0c UpdatePanelResultPhase
 #define func_ov027_020b8ca8 UpdateWidgetRootOnly

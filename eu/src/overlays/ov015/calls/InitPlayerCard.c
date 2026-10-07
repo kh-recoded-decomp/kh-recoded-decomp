@@ -5,4 +5,5 @@
 #define func_ov002_02066394 CopyWideString
 #define func_ov002_02066c78 DispatchContextCommand
 #define g_context_0207e960 data_ov015_0207e960
+#define func_ov002_02066fc8 GetPackedFields
 #include "src/ov015/wireless/InitPlayerCard_0206f524.c"

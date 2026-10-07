@@ -2,6 +2,6 @@
 #define SetListWidgetBusy_020c4044 SetListWidgetBusy
 #define SetSharedListBusy_020c2c44 SetSharedListBusy
 #define func_ov027_020b9580 SetEntrySlotsVisible
-#define func_ov039_020bc0d4 func_ov039_020bc0f4
-#define func_ov039_020bc630 func_ov039_020bc650
+#define func_ov039_020bc0d4 GetPrimaryElementEnabled
+#define func_ov039_020bc630 GetMenuSharedState
 #include "src/ov073/status_menu/SetSharedListBusy_020c2c44.c"

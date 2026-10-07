@@ -3,6 +3,6 @@
 #define OpenItemConfirmWindow_020c77f0 OpenItemConfirmWindow
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define func_01ff869c MIi_CpuCopy16
-#define func_ov039_020bc618 func_ov039_020bc638
+#define func_ov039_020bc618 GetActiveMenuScene
 #define func_ov077_020c6c90 func_ov077_020c6cb0
 #include "src/ov077/unclassified_helpers/OpenItemConfirmWindow_020c77f0.c"

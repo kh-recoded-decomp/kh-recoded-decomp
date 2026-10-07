@@ -223,6 +223,10 @@ src/overlays/ov046/calls/Camera_IsFlag3JustSet.c:
     complete
     .text       start:0x020c29ac end:0x020c29d0
 
+src/overlays/ov046/calls/Camera_SetFocusTarget.c:
+    complete
+    .text       start:0x020c29d0 end:0x020c29e0
+
 src/overlays/ov046/calls/Camera_SetFollowSuspended.c:
     complete
     .text       start:0x020c29e0 end:0x020c2aa4

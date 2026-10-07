@@ -7,9 +7,9 @@
 #define SetWidgetRootDpadEnabled_020b9874 SetWidgetRootDpadEnabled
 #define UpdateRecordPanelInput_020c1ed4 UpdateRecordPanelInput
 #define func_ov027_020b9e60 FlushDirtyTileTableRows
-#define func_ov039_020bc0ec func_ov039_020bc10c
+#define func_ov039_020bc0ec GetSecondaryElementEnabled
 #define func_ov039_020bc1bc func_ov039_020bc1dc
-#define func_ov039_020bc1cc func_ov039_020bc1ec
+#define func_ov039_020bc1cc GetMenuWidgetContainer
 #define func_ov086_020bed2c SetPageHeaderVisible
 #define func_ov086_020c1600 UpdateRecordSliderTouch
 #define func_ov086_020c1674 func_ov086_020c1694

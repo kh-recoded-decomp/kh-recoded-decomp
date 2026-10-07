@@ -8,6 +8,6 @@
 #define SetStatusElementVisible_020beb5c SetStatusElementVisible
 #define ShowStatusPageContents_020c1b28 ShowStatusPageContents
 #define func_ov027_020ba2a8 func_ov027_020ba2c8
-#define func_ov039_020bc914 func_ov039_020bc934
+#define func_ov039_020bc914 GetMenuSelection
 #define func_ov039_020be450 func_ov039_020be470
 #include "src/ov073/status_menu/ShowStatusPageContents_020c1b28.c"

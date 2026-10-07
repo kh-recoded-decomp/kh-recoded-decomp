@@ -38,9 +38,17 @@ src/overlays/ov042/calls/SetCameraGoalTarget.c:
     complete
     .text       start:0x020bd254 end:0x020bd2b0
 
+src/overlays/ov042/calls/Camera_GetGoalPosition.c:
+    complete
+    .text       start:0x020bd2b0 end:0x020bd2c0
+
 src/overlays/ov042/calls/OffsetCameraColliders.c:
     complete
     .text       start:0x020bd2c0 end:0x020bd344
+
+src/overlays/ov042/calls/Camera_GetColliderOffset.c:
+    complete
+    .text       start:0x020bd344 end:0x020bd354
 
 src/overlays/ov042/calls/MoveCameraAlongAxis.c:
     complete

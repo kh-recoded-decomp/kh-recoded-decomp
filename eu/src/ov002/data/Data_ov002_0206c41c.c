@@ -3,12 +3,12 @@
 #pragma explicit_zero_data on
 
 extern void StartScreenFade(void);
-extern void func_ov002_020666b4(void);
+extern void MarkScreenFadeComplete(void);
 
 void *data_ov002_0206c420[5] = {
     (void *)0x00100008,
     (void *)StartScreenFade,
-    (void *)func_ov002_020666b4,
+    (void *)MarkScreenFadeComplete,
     (void *)0x0000000C,
     NULL,
 };

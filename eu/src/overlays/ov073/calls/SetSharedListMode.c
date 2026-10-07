@@ -1,4 +1,4 @@
 #define SetListWidgetMode_020c3f34 SetListWidgetMode
 #define SetSharedListMode_020c2aec SetSharedListMode
-#define func_ov039_020bc630 func_ov039_020bc650
+#define func_ov039_020bc630 GetMenuSharedState
 #include "src/ov073/status_menu/SetSharedListMode_020c2aec.c"

@@ -1,3 +1,4 @@
+#define func_ov002_02066c68 SetContextCommandFlag
 #define AddRecordItem_02029240 func_02029254
 #define DispatchContextCommand_02066c78 DispatchContextCommand
 #define GrantRewardEntry_02078438 GrantRewardEntry

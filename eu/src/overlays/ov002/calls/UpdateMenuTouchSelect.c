@@ -1,3 +1,4 @@
+#define func_ov002_02066c58 GetContextCommandFlag
 #define GetMenuCursorTouch_02066b2c GetMenuCursorTouch
 #define IsButtonBPressed_020632c8 IsButtonBPressed
 #define PlaySoundEffect_0204d924 PlaySoundEffect

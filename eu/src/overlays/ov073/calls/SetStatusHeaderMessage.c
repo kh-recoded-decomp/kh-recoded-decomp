@@ -2,5 +2,5 @@
 #define SetStatusHeaderMessage_020c1dbc SetStatusHeaderMessage
 #define SetStatusHeaderText_020c1d38 SetStatusHeaderText
 #define func_ov027_020ba2e0 func_ov027_020ba300
-#define func_ov039_020bc630 func_ov039_020bc650
+#define func_ov039_020bc630 GetMenuSharedState
 #include "src/ov073/status_menu/SetStatusHeaderMessage_020c1dbc.c"

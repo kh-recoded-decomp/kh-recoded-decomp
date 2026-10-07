@@ -1,5 +1,5 @@
 #define Camera_GetActiveController_020c15a4 Camera_GetActiveController
-#define func_ov047_020c380c func_ov047_020c382c
+#define func_ov047_020c380c Camera_GetTrackingController
 #define func_ov048_020c3844 func_ov048_020c3864
 #define func_ov049_020c4220 func_ov049_020c4240
 #define func_ov050_020c3b9c func_ov050_020c3bbc

@@ -1,3 +1,3 @@
 #define SetSharedStateValue_020bf638 SetSharedStateValue
-#define func_ov039_020bc630 func_ov039_020bc650
+#define func_ov039_020bc630 GetMenuSharedState
 #include "src/ov083/unclassified_helpers/SetSharedStateValue_020bf638.c"

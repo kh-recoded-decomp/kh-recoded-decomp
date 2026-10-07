@@ -1,2 +1,3 @@
 #define IsContextSlotFlagSet_02067310 IsContextSlotFlagSet
+#define func_ov002_02066fe0 GetContextConfig
 #include "src/ov002/unclassified_helpers/IsContextSlotFlagSet_02067310.c"

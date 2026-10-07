@@ -27,6 +27,10 @@ src/overlays/ov047/calls/Camera_ResetTrackingToLeader.c:
     complete
     .text       start:0x020c37cc end:0x020c382c
 
+src/overlays/ov047/calls/Camera_GetTrackingController.c:
+    complete
+    .text       start:0x020c382c end:0x020c383c
+
 src/overlays/ov047/calls/Camera_SetTrackingAngle.c:
     complete
     .text       start:0x020c383c end:0x020c38a4

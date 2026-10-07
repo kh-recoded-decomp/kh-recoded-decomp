@@ -108,6 +108,14 @@ src/overlays/ov039/calls/SetSecondaryElementEnabled.c:
     complete
     .text       start:0x020bc0a4 end:0x020bc0f4
 
+src/overlays/ov039/calls/GetPrimaryElementEnabled.c:
+    complete
+    .text       start:0x020bc0f4 end:0x020bc10c
+
+src/overlays/ov039/calls/GetSecondaryElementEnabled.c:
+    complete
+    .text       start:0x020bc10c end:0x020bc124
+
 src/overlays/ov039/calls/SetScreenLayerDirty.c:
     complete
     .text       start:0x020bc124 end:0x020bc148
@@ -120,9 +128,21 @@ src/overlays/ov039/calls/CallStateWidget.c:
     complete
     .text       start:0x020bc16c end:0x020bc1ac
 
+src/overlays/ov039/calls/GetPrimaryMenuElement.c:
+    complete
+    .text       start:0x020bc1ac end:0x020bc1c4
+
+src/overlays/ov039/calls/GetSecondaryMenuElement.c:
+    complete
+    .text       start:0x020bc1c4 end:0x020bc1dc
+
 src/overlays/ov039/calls/func_ov039_020bc1dc.c:
     complete
     .text       start:0x020bc1dc end:0x020bc1ec
+
+src/overlays/ov039/calls/GetMenuWidgetContainer.c:
+    complete
+    .text       start:0x020bc1ec end:0x020bc204
 
 src/overlays/ov039/calls/UpdateScreenWidgetLayer.c:
     complete
@@ -143,6 +163,14 @@ src/overlays/ov039/calls/LoadSlotBgCharacters.c:
 src/overlays/ov039/calls/LoadSlotSubBgImage.c:
     complete
     .text       start:0x020bc57c end:0x020bc638
+
+src/overlays/ov039/calls/GetActiveMenuScene.c:
+    complete
+    .text       start:0x020bc638 end:0x020bc650
+
+src/overlays/ov039/calls/GetMenuSharedState.c:
+    complete
+    .text       start:0x020bc650 end:0x020bc668
 
 src/overlays/ov039/calls/SetScreenBrightness.c:
     complete
@@ -168,6 +196,22 @@ src/overlays/ov039/calls/RuntimeState_SetFlags.c:
     complete
     .text       start:0x020bc800 end:0x020bc818
 
+src/overlays/ov039/calls/GetRuntimeStateFlags.c:
+    complete
+    .text       start:0x020bc818 end:0x020bc830
+
+src/overlays/ov039/calls/GetMenuStackDepth.c:
+    complete
+    .text       start:0x020bc830 end:0x020bc848
+
+src/overlays/ov039/calls/GetCurrentMenuStackEntry.c:
+    complete
+    .text       start:0x020bc848 end:0x020bc86c
+
+src/overlays/ov039/calls/GetPreviousMenuStackEntry.c:
+    complete
+    .text       start:0x020bc86c end:0x020bc894
+
 src/overlays/ov039/calls/PushStackEntry.c:
     complete
     .text       start:0x020bc894 end:0x020bc8c0
@@ -180,13 +224,25 @@ src/overlays/ov039/calls/ReplaceStackTop.c:
     complete
     .text       start:0x020bc8f0 end:0x020bc934
 
+src/overlays/ov039/calls/GetMenuSelection.c:
+    complete
+    .text       start:0x020bc934 end:0x020bc94c
+
 src/overlays/ov039/calls/SetSelectionIfChanged_020bc94c.c:
     complete
     .text       start:0x020bc94c end:0x020bc99c
 
+src/overlays/ov039/calls/GetMenuFont.c:
+    complete
+    .text       start:0x020bc9cc end:0x020bc9e4
+
 src/overlays/ov039/calls/GetFieldCa4a.c:
     complete
     .text       start:0x020bca00 end:0x020bca20
+
+src/overlays/ov039/calls/GetMenuInputState.c:
+    complete
+    .text       start:0x020bca20 end:0x020bca38
 
 src/overlays/ov039/calls/IsStatePhase4.c:
     complete

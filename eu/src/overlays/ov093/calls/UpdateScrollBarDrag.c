@@ -2,7 +2,7 @@
 #define GetSmoothValueInt_020c21d8 GetSmoothValueInt
 #define ResetSmoothValue_020c2058 ResetSmoothValue
 #define UpdateScrollBarDrag_020c1d48 UpdateScrollBarDrag
-#define func_ov039_020bca00 func_ov039_020bca20
+#define func_ov039_020bca00 GetMenuInputState
 #define func_ov093_020bfd60 RedrawEntryPanelText
 #define func_ov093_020c05b8 RefreshEntryListSlots
 #define func_ov093_020c0cb0 func_ov093_020c0cd0

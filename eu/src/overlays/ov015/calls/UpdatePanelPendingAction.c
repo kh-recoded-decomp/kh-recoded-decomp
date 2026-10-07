@@ -1,2 +1,3 @@
+#define func_ov002_0206655c IsScreenFadeComplete
 #define UpdatePanelPendingAction_02070fe8 UpdatePanelPendingAction
 #include "src/ov015/panel_state/UpdatePanelPendingAction_02070fe8.c"

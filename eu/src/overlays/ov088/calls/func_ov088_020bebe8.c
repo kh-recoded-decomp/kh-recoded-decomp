@@ -1,4 +1,4 @@
 #define ReleaseOverlay088Graphics func_ov088_020bebe8
 #define func_ov027_020b7f8c func_ov027_020b7fac
-#define func_ov039_020bc1a4 func_ov039_020bc1c4
+#define func_ov039_020bc1a4 GetSecondaryMenuElement
 #include "src/ov088/panel_state/ReleaseOverlay088Graphics.c"

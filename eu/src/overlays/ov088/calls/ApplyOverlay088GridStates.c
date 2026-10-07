@@ -6,7 +6,7 @@
 #define func_ov027_020b95e4 func_ov027_020b9604
 #define func_ov027_020b96a0 func_ov027_020b96c0
 #define func_ov027_020b97fc SetAllElementObjectModes
-#define func_ov039_020bc1cc func_ov039_020bc1ec
+#define func_ov039_020bc1cc GetMenuWidgetContainer
 #define func_ov039_020bc220 BuildSlotImageParams
 #define gridEntryIds data_ov088_020beec0
 #include "src/ov088/panel_state/ApplyOverlay088GridStates.c"

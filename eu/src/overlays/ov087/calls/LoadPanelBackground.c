@@ -8,5 +8,5 @@
 #define func_02007250 GX_LoadBGPltt
 #define func_0202c48c func_0202c4a0
 #define func_ov027_020b7e24 func_ov027_020b7e44
-#define func_ov039_020bc18c func_ov039_020bc1ac
+#define func_ov039_020bc18c GetPrimaryMenuElement
 #include "src/ov087/panel_state/LoadPanelBackground_020c6590.c"

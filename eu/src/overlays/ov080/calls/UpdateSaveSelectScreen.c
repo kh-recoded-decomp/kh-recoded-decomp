@@ -29,7 +29,7 @@
 #define func_ov039_020bbf78 StartSubScene
 #define func_ov039_020bc018 func_ov039_020bc038
 #define func_ov039_020bc03c RuntimeState_SetCondition
-#define func_ov039_020bc0d4 func_ov039_020bc0f4
+#define func_ov039_020bc0d4 GetPrimaryElementEnabled
 #define func_ov039_020bc7e0 RuntimeState_SetFlags
 #define func_ov073_020c1eb4 func_ov073_020c1ed4
 #define func_ov080_020c4260 CountValidSlots

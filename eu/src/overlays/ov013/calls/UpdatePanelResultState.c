@@ -1,3 +1,4 @@
+#define func_ov002_0206655c IsScreenFadeComplete
 #define IsButtonBPressed_020632c8 IsButtonBPressed
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define UpdatePanelResultState_020724c0 UpdatePanelResultState

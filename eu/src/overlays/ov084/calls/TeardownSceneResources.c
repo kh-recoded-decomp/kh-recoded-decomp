@@ -6,5 +6,5 @@
 #define SweepElements_020b831c func_ov027_020b833c
 #define TeardownSceneResources_020bf9a4 TeardownSceneResources
 #define func_02006d3c G3X_SetHOffset
-#define func_ov039_020bc18c func_ov039_020bc1ac
+#define func_ov039_020bc18c GetPrimaryMenuElement
 #include "src/ov084/scene_teardown/TeardownSceneResources_020bf9a4.c"

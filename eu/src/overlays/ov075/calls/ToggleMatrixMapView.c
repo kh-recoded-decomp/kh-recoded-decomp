@@ -9,6 +9,6 @@
 #define UpdateScreenWidgetLayer_020bc1e4 UpdateScreenWidgetLayer
 #define data_ov075_020d1454 sMatrixModeLabels
 #define func_ov027_020ba2a8 func_ov027_020ba2c8
-#define func_ov039_020bca00 func_ov039_020bca20
+#define func_ov039_020bca00 GetMenuInputState
 #define func_ov075_020cad14 ShowEntryHeaderMessage
 #include "src/ov075/unclassified_helpers/ToggleMatrixMapView_020cbd1c.c"

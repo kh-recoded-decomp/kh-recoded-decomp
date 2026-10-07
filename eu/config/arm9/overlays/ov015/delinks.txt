@@ -368,6 +368,10 @@ src/overlays/ov015/calls/DispatchPanelTransition.c:
     complete
     .text       start:0x02072fb4 end:0x02073018
 
+src/overlays/ov015/calls/SetWirelessReadyFlag.c:
+    complete
+    .text       start:0x02073018 end:0x02073030
+
 src/overlays/ov015/auto/func_ov015_02073030.c:
     complete
     .text       start:0x02073030 end:0x02073034
@@ -691,6 +695,10 @@ src/overlays/ov015/calls/func_ov015_02077978.c:
 src/overlays/ov015/calls/func_ov015_020779a4.c:
     complete
     .text       start:0x020779a4 end:0x020779c4
+
+src/overlays/ov015/calls/ApplyPendingPanelMode.c:
+    complete
+    .text       start:0x020779c4 end:0x020779dc
 
 src/overlays/ov015/calls/GetPanelPageCount.c:
     complete

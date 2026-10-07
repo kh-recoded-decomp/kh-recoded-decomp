@@ -6,6 +6,6 @@
 #define func_ov027_020b91c8 func_ov027_020b91e8
 #define func_ov027_020b96a0 func_ov027_020b96c0
 #define func_ov027_020ba2a8 func_ov027_020ba2c8
-#define func_ov039_020bc1cc func_ov039_020bc1ec
-#define func_ov039_020bc9ac func_ov039_020bc9cc
+#define func_ov039_020bc1cc GetMenuWidgetContainer
+#define func_ov039_020bc9ac GetMenuFont
 #include "src/ov073/status_menu/ResetStatusPageState_020beaa0.c"

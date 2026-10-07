@@ -1,4 +1,4 @@
 #define SetListWidgetEntries_020c3ffc SetListWidgetEntries
 #define SetSharedListEntries_020c2c24 SetSharedListEntries
-#define func_ov039_020bc630 func_ov039_020bc650
+#define func_ov039_020bc630 GetMenuSharedState
 #include "src/ov073/status_menu/SetSharedListEntries_020c2c24.c"

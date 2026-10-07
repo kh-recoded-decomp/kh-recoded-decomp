@@ -7,5 +7,5 @@
 #define SetPopupConfirmMode_020bfdac SetPopupConfirmMode
 #define UpdateScreenWidgetLayer_020bc1e4 UpdateScreenWidgetLayer
 #define func_ov039_020bc1bc func_ov039_020bc1dc
-#define func_ov039_020bc618 func_ov039_020bc638
+#define func_ov039_020bc618 GetActiveMenuScene
 #include "src/ov089/panel_state/SetPopupConfirmMode_020bfdac.c"

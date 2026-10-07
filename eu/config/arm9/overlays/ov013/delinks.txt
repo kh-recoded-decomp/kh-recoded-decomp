@@ -200,6 +200,10 @@ src/overlays/ov013/calls/CancelPanelConfirm.c:
     complete
     .text       start:0x020731a4 end:0x02073234
 
+src/overlays/ov013/calls/ResetPanelSaveStep.c:
+    complete
+    .text       start:0x02073234 end:0x0207324c
+
 src/overlays/ov013/calls/PollPanelSaveStep.c:
     complete
     .text       start:0x0207324c end:0x020732a4
@@ -244,6 +248,10 @@ src/overlays/ov013/auto/func_ov013_020739a0.c:
     complete
     .text       start:0x020739a0 end:0x020739a4
 
+src/overlays/ov013/calls/ResetPanelListUpStep.c:
+    complete
+    .text       start:0x020739a4 end:0x020739bc
+
 src/overlays/ov013/calls/func_ov013_020739bc.c:
     complete
     .text       start:0x020739bc end:0x02073a98
@@ -251,6 +259,10 @@ src/overlays/ov013/calls/func_ov013_020739bc.c:
 src/overlays/ov013/auto/func_ov013_02073a98.c:
     complete
     .text       start:0x02073a98 end:0x02073a9c
+
+src/overlays/ov013/calls/ResetPanelListDownStep.c:
+    complete
+    .text       start:0x02073a9c end:0x02073ab4
 
 src/overlays/ov013/calls/func_ov013_02073ab4.c:
     complete
@@ -284,6 +296,10 @@ src/overlays/ov013/calls/EnablePanelWidget.c:
     complete
     .text       start:0x020741f4 end:0x02074218
 
+src/overlays/ov013/calls/SetPanelScrollUpDirection.c:
+    complete
+    .text       start:0x02074218 end:0x02074238
+
 src/overlays/ov013/auto/func_ov013_02074238.c:
     complete
     .text       start:0x02074238 end:0x0207423c
@@ -303,6 +319,10 @@ src/overlays/ov013/calls/ScrollPanelSlotsUp.c:
 src/overlays/ov013/auto/func_ov013_02074348.c:
     complete
     .text       start:0x02074348 end:0x0207434c
+
+src/overlays/ov013/calls/SetPanelScrollDownDirection.c:
+    complete
+    .text       start:0x0207434c end:0x0207436c
 
 src/overlays/ov013/calls/ScrollPanelSlotsDown.c:
     complete

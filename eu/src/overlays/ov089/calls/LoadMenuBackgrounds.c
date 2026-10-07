@@ -9,5 +9,5 @@
 #define func_02014d38 NNS_G2dGetUnpackedBGCharacterData
 #define func_0202c48c func_0202c4a0
 #define func_ov027_020b7e24 func_ov027_020b7e44
-#define func_ov039_020bc18c func_ov039_020bc1ac
+#define func_ov039_020bc18c GetPrimaryMenuElement
 #include "src/ov089/panel_state/LoadMenuBackgrounds_020bf398.c"

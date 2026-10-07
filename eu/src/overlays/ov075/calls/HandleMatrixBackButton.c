@@ -8,5 +8,5 @@
 #define UpdateScreenWidgetLayer_020bc1e4 UpdateScreenWidgetLayer
 #define func_ov027_020ba2a8 func_ov027_020ba2c8
 #define func_ov039_020bbf78 StartSubScene
-#define func_ov039_020bca00 func_ov039_020bca20
+#define func_ov039_020bca00 GetMenuInputState
 #include "src/ov075/unclassified_helpers/HandleMatrixBackButton_020cba18.c"

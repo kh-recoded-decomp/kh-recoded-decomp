@@ -1,6 +1,6 @@
 #define SetPageHeaderVisible_020bed2c SetPageHeaderVisible
 #define func_ov027_020b90a4 FindWidgetById
 #define func_ov027_020b9580 SetEntrySlotsVisible
-#define func_ov039_020bc1cc func_ov039_020bc1ec
+#define func_ov039_020bc1cc GetMenuWidgetContainer
 #define func_ov086_020bebe8 DrawRecordHintText
 #include "src/ov086/panel_state/SetPageHeaderVisible_020bed2c.c"

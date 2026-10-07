@@ -3,5 +3,5 @@
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define PopStackEntry_020bc8a0 PopStackEntry
 #define func_ov039_020bbf78 StartSubScene
-#define func_ov039_020bc914 func_ov039_020bc934
+#define func_ov039_020bc914 GetMenuSelection
 #include "src/ov080/unclassified_helpers/CancelSaveSelectStep_020c5c08.c"

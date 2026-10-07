@@ -9,6 +9,6 @@
 #define func_ov028_020bafec func_ov028_020bb00c
 #define func_ov028_020bb018 func_ov028_020bb038
 #define func_ov028_020bb060 func_ov028_020bb080
-#define func_ov028_020bb17c func_ov028_020bb19c
+#define func_ov028_020bb17c GetFieldTransitionFlags
 #define func_ov028_020bb194 func_ov028_020bb1b4
 #include "src/ov028/overlay_state/InstallSceneHandlers_020bb200.c"

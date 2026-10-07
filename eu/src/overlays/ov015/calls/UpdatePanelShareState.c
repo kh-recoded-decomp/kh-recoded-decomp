@@ -1,3 +1,4 @@
+#define func_ov002_0206655c IsScreenFadeComplete
 #define AreAllWidgetMovesFinished_020b912c AreAllWidgetMovesFinished
 #define DispatchContextCommand_02066c78 DispatchContextCommand
 #define FindWidgetById_020b90a4 FindWidgetById

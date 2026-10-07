@@ -7,7 +7,7 @@
 #define UpdateActorReactionState_020bbe00 UpdateActorReactionState
 #define UpdateDraggedActorState_020bb5a0 UpdateDraggedActorState
 #define data_ov030_020bcf44 data_ov030_020bcf64
-#define func_ov042_020bd324 func_ov042_020bd344
+#define func_ov042_020bd324 Camera_GetColliderOffset
 #define func_ov052_020cebbc ComputeFacingAndDirection
 #define func_ov052_020d0e80 ApproachTargetValue
 #include "src/ov030/shared_engine/UpdateDraggedActorState_020bb5a0.c"

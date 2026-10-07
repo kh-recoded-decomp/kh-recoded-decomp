@@ -1,3 +1,3 @@
 #define ScrollMatrixView_020c7be0 ScrollMatrixView
-#define func_ov039_020bc0d4 func_ov039_020bc0f4
+#define func_ov039_020bc0d4 GetPrimaryElementEnabled
 #include "src/ov075/unclassified_helpers/ScrollMatrixView_020c7be0.c"

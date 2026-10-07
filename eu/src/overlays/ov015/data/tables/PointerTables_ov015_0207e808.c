@@ -6,7 +6,7 @@ extern void func_ov015_02072fa0(void);
 extern void func_ov015_02072fa4(void);
 extern void func_ov015_02072fa8(void); /* PXI_Init */
 extern void DispatchPanelTransition(void); /* DispatchPanelTransition */
-extern void func_ov015_02073018(void);
+extern void SetWirelessReadyFlag(void);
 extern void func_ov015_02073030(void);
 extern void HandleMatchTransition(void); /* HandleMatchTransition */
 extern void func_ov015_020730a4(void);
@@ -31,7 +31,7 @@ void (*gWirelessStateHandlers[22])(void) = {
     func_ov015_02072fa4,
     func_ov015_02072fa8, /* PXI_Init */
     DispatchPanelTransition, /* DispatchPanelTransition */
-    func_ov015_02073018,
+    SetWirelessReadyFlag,
     func_ov015_02073030,
     HandleMatchTransition, /* HandleMatchTransition */
     func_ov015_020730a4,

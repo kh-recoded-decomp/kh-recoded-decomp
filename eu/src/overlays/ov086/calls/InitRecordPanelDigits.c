@@ -14,6 +14,6 @@
 #define func_0204f2e4 IndexedRecord_ClearActive
 #define func_0204f378 IndexedRecords_SetFlag2
 #define func_ov027_020b8f98 func_ov027_020b8fb8
-#define func_ov039_020bc1cc func_ov039_020bc1ec
+#define func_ov039_020bc1cc GetMenuWidgetContainer
 #define func_ov086_020c1470 AddTaggedIndexedRecord
 #include "src/ov086/panel_state/InitRecordPanelDigits_020c1ba8.c"

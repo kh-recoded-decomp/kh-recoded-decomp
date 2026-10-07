@@ -1,5 +1,5 @@
 #define HandleListKeyInput_020bdc28 HandleListKeyInput
 #define HandleListTouchInput_020bd868 func_ov039_020bd888
 #define UpdateScrollListInput_020be0c4 UpdateScrollListInput
-#define func_ov039_020bca00 func_ov039_020bca20
+#define func_ov039_020bca00 GetMenuInputState
 #include "src/ov039/input/UpdateScrollListInput_020be0c4.c"

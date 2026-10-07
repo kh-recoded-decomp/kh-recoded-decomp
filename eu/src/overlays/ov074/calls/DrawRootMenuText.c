@@ -6,5 +6,5 @@
 #define Text_UploadTileBuffer_02001520 Text_UploadTileBuffer
 #define func_0200160c func_02001620
 #define func_ov027_020ba2a8 func_ov027_020ba2c8
-#define func_ov039_020bc9ac func_ov039_020bc9cc
+#define func_ov039_020bc9ac GetMenuFont
 #include "src/ov074/root_menu/DrawRootMenuText_020c5250.c"

@@ -13,7 +13,7 @@
 #define data_ov076_020cd2cc data_ov076_020cd2ec
 #define data_ov076_020cd2d8 data_ov076_020cd2f8
 #define func_ov039_020bc1bc func_ov039_020bc1dc
-#define func_ov039_020bca00 func_ov039_020bca20
+#define func_ov039_020bca00 GetMenuInputState
 #define func_ov076_020c44c0 SlotMenu_CanCombineSlotPair
 #define func_ov076_020c52f8 func_ov076_020c5318
 #define func_ov076_020c8388 SlotMenu_OpenSlotMessage

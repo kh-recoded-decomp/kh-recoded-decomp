@@ -1,3 +1,4 @@
+#define func_ov002_02066c58 GetContextCommandFlag
 #define DispatchContextCommand_02066c78 DispatchContextCommand
 #define LeavePanelScene_0206f978 LeavePanelScene
 #define ReadGlobalPackedBits_02027348 ReadGlobalPackedBits

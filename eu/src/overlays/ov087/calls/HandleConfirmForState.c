@@ -1,5 +1,5 @@
 #define HandleConfirmForState_020c7ae4 HandleConfirmForState
 #define PushEntryConfirmState_020c6fd8 PushEntryConfirmState
-#define func_ov039_020bc618 func_ov039_020bc638
+#define func_ov039_020bc618 GetActiveMenuScene
 #define func_ov087_020c6218 func_ov087_020c6238
 #include "src/ov087/panel_state/HandleConfirmForState_020c7ae4.c"

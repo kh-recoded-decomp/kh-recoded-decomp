@@ -1,3 +1,4 @@
+#define func_ov002_0206655c IsScreenFadeComplete
 #define UpdatePanelCloseStep_0206e86c UpdatePanelCloseStep
 #define g_panelState_0206f9a0 data_ov014_0206f9a0
 #include "src/ov014/panel_state/UpdatePanelCloseStep_0206e86c.c"

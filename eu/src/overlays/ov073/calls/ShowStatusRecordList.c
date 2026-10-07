@@ -10,9 +10,9 @@
 #define UpdateWidgetLayerDefault_020b9df0 func_ov027_020b9e10
 #define UploadListPalette_020c3f6c UploadListPalette
 #define func_020505a8 GetSelectionPackedValueBlock
-#define func_ov039_020bc0d4 func_ov039_020bc0f4
-#define func_ov039_020bc1cc func_ov039_020bc1ec
-#define func_ov039_020bc630 func_ov039_020bc650
+#define func_ov039_020bc0d4 GetPrimaryElementEnabled
+#define func_ov039_020bc1cc GetMenuWidgetContainer
+#define func_ov039_020bc630 GetMenuSharedState
 #define func_ov073_020c3ae0 InitListView
 #define func_ov073_020c3fc8 GetListWidgetEntryIds
 #include "src/ov073/status_menu/ShowStatusRecordList_020c2b10.c"

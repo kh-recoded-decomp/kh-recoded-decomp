@@ -1,2 +1,3 @@
 #define SetTierMaskLowBit_0206762c SetTierMaskLowBit
+#define func_ov002_02066fe0 GetContextConfig
 #include "src/ov002/unclassified_helpers/SetTierMaskLowBit_0206762c.c"

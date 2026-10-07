@@ -656,6 +656,10 @@ src/overlays/ov036/calls/ApplyTextWindowBgOffsets.c:
     complete
     .text       start:0x020c2a18 end:0x020c2aa4
 
+src/overlays/ov036/calls/GetTextWindowChoiceResult.c:
+    complete
+    .text       start:0x020c2aa4 end:0x020c2abc
+
 src/overlays/ov036/calls/AdvanceFinishedTextWindows.c:
     complete
     .text       start:0x020c2abc end:0x020c2b9c

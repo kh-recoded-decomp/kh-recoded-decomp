@@ -1,3 +1,4 @@
+#define func_ov002_02066c44 ResetContextCommandFlag
 #define DecrementBusyCounterIfPositive_02025494 DecrementBusyCounterIfPositive
 #define GetMenuCursorHeld_02066b84 GetMenuCursorHeld
 #define IncrementBusyCounter_020254a8 IncrementBusyCounter

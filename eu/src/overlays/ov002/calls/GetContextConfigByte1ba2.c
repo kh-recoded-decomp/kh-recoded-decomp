@@ -1,2 +1,3 @@
 #define GetContextConfigByte1ba2_02067a2c GetContextConfigByte1ba2
+#define func_ov002_02066fe0 GetContextConfig
 #include "src/ov002/unclassified_helpers/GetContextConfigByte1ba2_02067a2c.c"

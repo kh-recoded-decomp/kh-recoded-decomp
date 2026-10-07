@@ -7,6 +7,6 @@
 #define func_ov027_020b7e24 func_ov027_020b7e44
 #define func_ov027_020b8184 FindActiveRecordById
 #define func_ov027_020b8210 func_ov027_020b8230
-#define func_ov039_020bc1a4 func_ov039_020bc1c4
+#define func_ov039_020bc1a4 GetSecondaryMenuElement
 #define func_ov039_020bc220 BuildSlotImageParams
 #include "src/ov088/panel_state/LoadOverlay088Graphics.c"

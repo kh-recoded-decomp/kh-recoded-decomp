@@ -12,7 +12,7 @@ extern void LoadPanelOverlay13(void);
 extern void PollPanelOverlay13(void); /* PollPanelOverlay13 */
 extern void UnloadPanelOverlay13(void);
 extern void func_ov013_0206c9d4(void);
-extern void func_ov002_02062f60(void);
+extern void SetPanelStateFlag0(void);
 extern void func_ov002_02062f80(void);
 extern void func_ov002_02062f84(void);
 extern void func_ov002_02062ec8(void);
@@ -38,7 +38,7 @@ void (*gPanelSceneStateHandlers[25])(void) = {
     PollPanelOverlay13, /* PollPanelOverlay13 */
     UnloadPanelOverlay13,
     func_ov013_0206c9d4,
-    func_ov002_02062f60,
+    SetPanelStateFlag0,
     func_ov002_02062f80,
     func_ov002_02062f84,
     NULL,

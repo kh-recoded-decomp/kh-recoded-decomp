@@ -1,3 +1,3 @@
 #define MakeSharedMessageKey_020c13c4 MakeSharedMessageKey
-#define func_ov039_020bc630 func_ov039_020bc650
+#define func_ov039_020bc630 GetMenuSharedState
 #include "src/ov073/status_menu/MakeSharedMessageKey_020c13c4.c"

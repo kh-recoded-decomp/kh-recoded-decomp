@@ -56,6 +56,10 @@ src/overlays/ov038/auto/func_ov038_020ba6f8.c:
     complete
     .text       start:0x020ba6f8 end:0x020ba700
 
+src/overlays/ov038/calls/GetOv038ResumeFlags.c:
+    complete
+    .text       start:0x020ba700 end:0x020ba718
+
 src/overlays/ov038/calls/InitOv038HandlerTable.c:
     complete
     .text       start:0x020ba718 end:0x020ba780

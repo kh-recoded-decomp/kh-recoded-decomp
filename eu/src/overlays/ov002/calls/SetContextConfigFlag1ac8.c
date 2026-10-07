@@ -1,2 +1,3 @@
 #define SetContextConfigFlag1ac8_0206746c SetContextConfigFlag1ac8
+#define func_ov002_02066fe0 GetContextConfig
 #include "src/ov002/unclassified_helpers/SetContextConfigFlag1ac8_0206746c.c"

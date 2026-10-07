@@ -120,6 +120,14 @@ src/overlays/ov002/calls/IsPanelBusy.c:
     complete
     .text       start:0x02062c6c end:0x02062c88
 
+src/overlays/ov002/calls/SetPanelStateFlag4.c:
+    complete
+    .text       start:0x02062c88 end:0x02062ca4
+
+src/overlays/ov002/calls/GetPanelMessageFile.c:
+    complete
+    .text       start:0x02062ca4 end:0x02062cb8
+
 src/overlays/ov002/calls/RefreshMenuContext.c:
     complete
     .text       start:0x02062d0c end:0x02062d28
@@ -191,6 +199,10 @@ src/overlays/ov002/calls/PollPanelOverlay15.c:
 src/overlays/ov002/calls/UnloadPanelOverlay15.c:
     complete
     .text       start:0x02062f30 end:0x02062f60
+
+src/overlays/ov002/calls/SetPanelStateFlag0.c:
+    complete
+    .text       start:0x02062f60 end:0x02062f80
 
 src/overlays/ov002/auto/func_ov002_02062f80.c:
     complete
@@ -388,6 +400,18 @@ src/overlays/ov002/calls/SelectMenuEntry4.c:
     complete
     .text       start:0x02065ec4 end:0x02065f30
 
+src/overlays/ov002/calls/SetMenuSelection2.c:
+    complete
+    .text       start:0x02065f30 end:0x02065f48
+
+src/overlays/ov002/calls/SetMenuSelection1.c:
+    complete
+    .text       start:0x02065f48 end:0x02065f60
+
+src/overlays/ov002/calls/SetMenuStateFlag10.c:
+    complete
+    .text       start:0x02065f60 end:0x02065f7c
+
 src/overlays/ov002/calls/UnmapCharHighByte.c:
     complete
     .text       start:0x02065f7c end:0x02065fc8
@@ -452,7 +476,7 @@ src/overlays/ov002/calls/PostPanelEventOn.c:
     complete
     .text       start:0x02066530 end:0x0206655c
 
-src/overlays/ov002/calls/func_ov002_0206655c.c:
+src/overlays/ov002/calls/IsScreenFadeComplete.c:
     complete
     .text       start:0x0206655c end:0x0206656c
 
@@ -463,6 +487,10 @@ src/overlays/ov002/calls/StartScreenFade.c:
 src/overlays/ov002/calls/UpdateScreenFade.c:
     complete
     .text       start:0x020665e8 end:0x020666b4
+
+src/overlays/ov002/calls/MarkScreenFadeComplete.c:
+    complete
+    .text       start:0x020666b4 end:0x020666c8
 
 src/overlays/ov002/calls/func_ov002_020666c8.c:
     complete
@@ -492,11 +520,15 @@ src/overlays/ov002/calls/GetMenuCursorPosition.c:
     complete
     .text       start:0x02066bdc end:0x02066c44
 
-src/overlays/ov002/calls/func_ov002_02066c58.c:
+src/overlays/ov002/calls/ResetContextCommandFlag.c:
+    complete
+    .text       start:0x02066c44 end:0x02066c58
+
+src/overlays/ov002/calls/GetContextCommandFlag.c:
     complete
     .text       start:0x02066c58 end:0x02066c68
 
-src/overlays/ov002/calls/func_ov002_02066c68.c:
+src/overlays/ov002/calls/SetContextCommandFlag.c:
     complete
     .text       start:0x02066c68 end:0x02066c78
 
@@ -507,6 +539,18 @@ src/overlays/ov002/calls/DispatchContextCommand.c:
 src/overlays/ov002/calls/CountSetFlagsInRange.c:
     complete
     .text       start:0x02066f7c end:0x02066fb0
+
+src/overlays/ov002/calls/GetRecordFlagBits.c:
+    complete
+    .text       start:0x02066fb0 end:0x02066fc8
+
+src/overlays/ov002/calls/GetPackedFields.c:
+    complete
+    .text       start:0x02066fc8 end:0x02066fe0
+
+src/overlays/ov002/calls/GetContextConfig.c:
+    complete
+    .text       start:0x02066fe0 end:0x02066ff8
 
 src/overlays/ov002/calls/AppendProfileHistory.c:
     complete

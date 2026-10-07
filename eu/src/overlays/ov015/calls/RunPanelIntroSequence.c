@@ -1,3 +1,4 @@
+#define func_ov002_0206655c IsScreenFadeComplete
 #define RunPanelIntroSequence_020763a8 RunPanelIntroSequence
 #define func_ov027_020b8ca8 UpdateWidgetRootOnly
 #include "src/ov015/panel_state/RunPanelIntroSequence_020763a8.c"

@@ -1,5 +1,5 @@
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define SlotMenu_HandleSlotTouch_020c480c SlotMenu_HandleSlotTouch
-#define func_ov039_020bca00 func_ov039_020bca20
+#define func_ov039_020bca00 GetMenuInputState
 #define func_ov076_020c4764 SlotMenu_GetSlotFillState
 #include "src/ov076/unclassified_helpers/SlotMenu_HandleSlotTouch_020c480c.c"

@@ -4,4 +4,5 @@
 #define func_0202737c func_02027390
 #define func_ov002_02065ff4 PackWideChars12
 #define func_ov002_02067170 RemoveContextSlot
+#define func_ov002_02066fe0 GetContextConfig
 #include "src/ov002/unclassified_helpers/AppendProfileHistory_02066ff8.c"
