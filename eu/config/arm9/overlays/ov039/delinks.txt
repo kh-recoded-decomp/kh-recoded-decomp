@@ -396,6 +396,38 @@ src/overlays/ov039/calls/SetupMainBgLayers_020be6c0.c:
     complete
     .text       start:0x020be6c0 end:0x020be750
 
+src/ov039/data/Data_ov039_020be8c4.c:
+    complete
+    .data       start:0x020be8c4 end:0x020be8cc
+
+src/ov039/data/Data_ov039_020be8cc.c:
+    complete
+    .data       start:0x020be8cc end:0x020be8d4
+
+src/ov039/data/Data_ov039_020be8d4.c:
+    complete
+    .data       start:0x020be8d4 end:0x020be8ec
+
+src/ov039/data/Data_ov039_020be8f0.c:
+    complete
+    .data       start:0x020be8f0 end:0x020be94c
+
+src/ov039/data/Data_ov039_020be950.c:
+    complete
+    .data       start:0x020be950 end:0x020be9e4
+
+src/ov039/data/Data_ov039_020be9e4.c:
+    complete
+    .data       start:0x020be9e4 end:0x020bea20
+
+src/ov039/data/Rodata_ov039_020be750.c:
+    complete
+    .rodata     start:0x020be750 end:0x020be7a0
+
+src/ov039/data/Rodata_ov039_020be7a0.c:
+    complete
+    .rodata     start:0x020be7a0 end:0x020be7e4
+
 src/overlays/ov039/data/bss/Bss_ov039_020bea20.c:
     complete
     .bss        start:0x020bea20 end:0x020beaa4

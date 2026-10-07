@@ -48,6 +48,26 @@ src/overlays/ov083/calls/SetSharedStateValue.c:
     complete
     .text       start:0x020bf658 end:0x020bf66c
 
+src/ov083/data/Data_ov083_020bf6a0.c:
+    complete
+    .data       start:0x020bf6a0 end:0x020bf6e0
+
+src/ov083/data/Data_ov083_020bf6f8.c:
+    complete
+    .data       start:0x020bf6f8 end:0x020bf720
+
+src/ov083/data/Rodata_ov083_020bf66c.c:
+    complete
+    .rodata     start:0x020bf66c end:0x020bf67c
+
+src/ov083/data/Rodata_ov083_020bf67c.c:
+    complete
+    .rodata     start:0x020bf67c end:0x020bf68c
+
+src/ov083/data/Rodata_ov083_020bf68c.c:
+    complete
+    .rodata     start:0x020bf68c end:0x020bf69c
+
 src/overlays/ov083/data/strings/Strings_ov083_020bf6e0.c:
     complete
     .data       start:0x020bf6e0 end:0x020bf6f8

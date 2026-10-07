@@ -111,6 +111,10 @@ src/overlays/ov028/calls/SetOrClearStatusBit2.c:
     complete
     .text       start:0x020bb2c8 end:0x020bb30c
 
+src/ov028/data/Data_ov028_020bb320.c:
+    complete
+    .data       start:0x020bb320 end:0x020bb338
+
 src/overlays/ov028/data/bss/Bss_ov028_020bb3a0.c:
     complete
     .bss        start:0x020bb3a0 end:0x020bb3c0

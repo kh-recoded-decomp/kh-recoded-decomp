@@ -104,6 +104,26 @@ src/overlays/ov085/calls/DrawIndexedImageQuad.c:
     complete
     .text       start:0x020c2160 end:0x020c22e4
 
+src/ov085/data/Data_ov085_020c2368.c:
+    complete
+    .data       start:0x020c2368 end:0x020c2380
+
+src/ov085/data/Data_ov085_020c23bc.c:
+    complete
+    .data       start:0x020c23bc end:0x020c23c4
+
+src/ov085/data/Rodata_ov085_020c22e4.c:
+    complete
+    .rodata     start:0x020c22e4 end:0x020c22f4
+
+src/ov085/data/Rodata_ov085_020c22f4.c:
+    complete
+    .rodata     start:0x020c22f4 end:0x020c230c
+
+src/ov085/data/Rodata_ov085_020c230c.c:
+    complete
+    .rodata     start:0x020c230c end:0x020c2358
+
 src/overlays/ov085/data/strings/Strings_ov085_020c23a4.c:
     complete
     .data       start:0x020c23a4 end:0x020c23bc

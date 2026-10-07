@@ -1,4 +1,5 @@
 #include "nitro/types.h"
+#include "src/overlays/ov067/resource_paths.h"
 
 typedef struct EntryGroupDesc {
     int kind;
@@ -55,9 +56,6 @@ typedef struct {
     int introActive;
 } BossObject;
 
-extern char data_ov067_020d8560[];
-extern char data_ov067_020d8570[];
-extern char data_ov067_020d8580[];
 extern char *gSoundCategoryNames[];
 
 extern void *NNSi_FndAllocFromDefaultHeap(u32 size);
@@ -103,7 +101,8 @@ BossObject *CreateOv067BossObject(ObjectOwner *owner, void *resDesc, ObjectDesc 
     targets->range = 0x7fffffff;
     targets->field24 = 0;
     targets->field28 = 0;
-    obj->messages = Msg_OpenContainerAndReadHeader(data_ov067_020d8560, owner->player + 8, FALSE);
+    obj->messages = Msg_OpenContainerAndReadHeader(data_ov067_020d8560.effectDirectory,
+                                                   owner->player + 8, FALSE);
     key = (u32)obj->messages;
     ZeroBytes0x14(&group);
     key = (key + 0x8000 & 0xfffffc) << 7;
@@ -124,13 +123,14 @@ BossObject *CreateOv067BossObject(ObjectOwner *owner, void *resDesc, ObjectDesc 
     obj->finish = EndOv067BossIntro;
     obj->onAction = RunOv067BossIntroState;
     selection = *GetOverlaySelectionRecord(owner->player);
-    OS_SPrintf(path, data_ov067_020d8570, gSoundCategoryNames[selection]);
+    OS_SPrintf(path, data_ov067_020d8560.characterPathFormat,
+               gSoundCategoryNames[selection]);
     file = func_0202c4a0(path, 0x11);
     BuildNodeRecords(obj, owner, resDesc, file);
     NNSi_FndFreeFromDefaultHeap(file);
     AcquireEntryHandles(obj, owner, resDesc);
     LoadResGroupHandles(obj, owner, resDesc);
     obj->introActive = 0;
-    CameraPath_Load(obj->cameraPath, data_ov067_020d8580);
+    CameraPath_Load(obj->cameraPath, data_ov067_020d8560.commonArchive);
     return obj;
 }

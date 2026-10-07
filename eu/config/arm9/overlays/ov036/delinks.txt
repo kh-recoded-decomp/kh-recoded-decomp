@@ -736,6 +736,94 @@ src/overlays/ov036/calls/func_ov036_020c3374.c:
     complete
     .text       start:0x020c3374 end:0x020c3380
 
+src/ov036/data/Data_ov036_020c36e0.c:
+    complete
+    .data       start:0x020c36e0 end:0x020c36f8
+
+src/ov036/data/Data_ov036_020c385c.c:
+    complete
+    .data       start:0x020c385c end:0x020c3860
+
+src/ov036/data/Data_ov036_020c3868.c:
+    complete
+    .data       start:0x020c3868 end:0x020c387c
+
+src/ov036/data/Data_ov036_020c38bc.c:
+    complete
+    .data       start:0x020c38bc end:0x020c38e4
+
+src/ov036/data/Data_ov036_020c392c.c:
+    complete
+    .data       start:0x020c392c end:0x020c3940
+
+src/ov036/data/Rodata_ov036_020c3380.c:
+    complete
+    .rodata     start:0x020c3380 end:0x020c338c
+
+src/ov036/data/Rodata_ov036_020c338c.c:
+    complete
+    .rodata     start:0x020c338c end:0x020c3398
+
+src/ov036/data/Rodata_ov036_020c3398.c:
+    complete
+    .rodata     start:0x020c3398 end:0x020c33a4
+
+src/ov036/data/Rodata_ov036_020c33a4.c:
+    complete
+    .rodata     start:0x020c33a4 end:0x020c33b0
+
+src/ov036/data/Rodata_ov036_020c33b0.c:
+    complete
+    .rodata     start:0x020c33b0 end:0x020c33b8
+
+src/ov036/data/Rodata_ov036_020c33b8.c:
+    complete
+    .rodata     start:0x020c33b8 end:0x020c33c0
+
+src/ov036/data/Rodata_ov036_020c33c0.c:
+    complete
+    .rodata     start:0x020c33c0 end:0x020c33c8
+
+src/ov036/data/Rodata_ov036_020c33c8.c:
+    complete
+    .rodata     start:0x020c33c8 end:0x020c33d0
+
+src/ov036/data/Rodata_ov036_020c33d0.c:
+    complete
+    .rodata     start:0x020c33d0 end:0x020c342c
+
+src/ov036/data/Rodata_ov036_020c342c.c:
+    complete
+    .rodata     start:0x020c342c end:0x020c342e
+
+src/ov036/data/Rodata_ov036_020c342e.c:
+    complete
+    .rodata     start:0x020c342e end:0x020c3430
+
+src/ov036/data/Rodata_ov036_020c3430.c:
+    complete
+    .rodata     start:0x020c3430 end:0x020c3454
+
+src/ov036/data/Rodata_ov036_020c348c.c:
+    complete
+    .rodata     start:0x020c348c end:0x020c34cc
+
+src/ov036/data/Rodata_ov036_020c34cc.c:
+    complete
+    .rodata     start:0x020c34cc end:0x020c3500
+
+src/ov036/data/Rodata_ov036_020c3500.c:
+    complete
+    .rodata     start:0x020c3500 end:0x020c36b8
+
+src/ov036/data/Rodata_ov036_020c36b8.c:
+    complete
+    .rodata     start:0x020c36b8 end:0x020c36c0
+
+src/ov036/data/Rodata_ov036_020c36c0.c:
+    complete
+    .rodata     start:0x020c36c0 end:0x020c36c8
+
 src/overlays/ov036/data/bss/Bss_ov036_020c3940.c:
     complete
     .bss        start:0x020c3940 end:0x020c394c

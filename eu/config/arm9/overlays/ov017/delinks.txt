@@ -544,6 +544,14 @@ src/overlays/ov017/calls/func_ov017_020a5e10.c:
     complete
     .text       start:0x020a5e10 end:0x020a5e18
 
+src/ov017/data/Rodata_ov017_020a5e18.c:
+    complete
+    .rodata     start:0x020a5e18 end:0x020a5e24
+
+src/ov017/data/Rodata_ov017_020a5e5c.c:
+    complete
+    .rodata     start:0x020a5e5c end:0x020a5e70
+
 src/overlays/ov017/data/strings/Strings_ov017_020a5f38.c:
     complete
     .data       start:0x020a5f38 end:0x020a5f60

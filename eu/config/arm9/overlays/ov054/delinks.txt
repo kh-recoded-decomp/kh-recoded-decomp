@@ -60,6 +60,18 @@ src/overlays/ov054/calls/ReleaseActiveDisplay.c:
     complete
     .text       start:0x020d31d0 end:0x020d3250
 
+src/ov054/data/Ov054CharacterPathFormat.c:
+    complete
+    .data       start:0x020d36f8 end:0x020d3720
+
+src/ov054/data/Rodata_ov054_020d3674.c:
+    complete
+    .rodata     start:0x020d3674 end:0x020d3690
+
+src/ov054/data/Rodata_ov054_020d3690.c:
+    complete
+    .rodata     start:0x020d3690 end:0x020d36ac
+
 src/overlays/ov054/data/bss/Bss_ov054_020d3720.c:
     complete
     .bss        start:0x020d3720 end:0x020d3740

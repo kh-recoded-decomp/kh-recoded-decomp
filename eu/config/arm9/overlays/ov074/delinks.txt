@@ -40,6 +40,18 @@ src/overlays/ov074/calls/HandleRootMenuCancel.c:
     complete
     .text       start:0x020c57fc end:0x020c5940
 
+src/ov074/data/Data_ov074_020c59a0.c:
+    complete
+    .data       start:0x020c59a0 end:0x020c59e4
+
+src/ov074/data/Rodata_ov074_020c5960.c:
+    complete
+    .rodata     start:0x020c5960 end:0x020c5970
+
+src/ov074/data/Rodata_ov074_020c5970.c:
+    complete
+    .rodata     start:0x020c5970 end:0x020c5980
+
 src/overlays/ov074/data/strings/Strings_ov074_020c5940.c:
     complete
     .rodata     start:0x020c5940 end:0x020c5950

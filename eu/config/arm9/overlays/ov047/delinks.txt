@@ -138,3 +138,15 @@ src/overlays/ov047/calls/Camera_RestoreSavedTracking.c:
 src/overlays/ov047/calls/CameraTarget_IsTrackable.c:
     complete
     .text       start:0x020c6e0c end:0x020c6e30
+
+src/ov047/data/Rodata_ov047_020c7274.c:
+    complete
+    .rodata     start:0x020c7274 end:0x020c72a4
+
+src/ov047/data/Rodata_ov047_020c72a4.c:
+    complete
+    .rodata     start:0x020c72a4 end:0x020c72a8
+
+src/ov047/data/Rodata_ov047_020c72a8.c:
+    complete
+    .rodata     start:0x020c72a8 end:0x020c72d4

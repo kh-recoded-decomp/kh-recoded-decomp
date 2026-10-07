@@ -232,6 +232,18 @@ src/overlays/ov058/calls/func_ov058_020d895c.c:
     complete
     .text       start:0x020d895c end:0x020d896c
 
+src/ov058/data/Rodata_ov058_020d896c.c:
+    complete
+    .rodata     start:0x020d896c end:0x020d89b4
+
+src/ov058/data/Rodata_ov058_020d89b4.c:
+    complete
+    .rodata     start:0x020d89b4 end:0x020d89c8
+
+src/ov058/data/Rodata_ov058_020d89c8.c:
+    complete
+    .rodata     start:0x020d89c8 end:0x020d89f8
+
 src/overlays/ov058/data/bss/Bss_ov058_020d8a40.c:
     complete
     .bss        start:0x020d8a40 end:0x020d8bb8

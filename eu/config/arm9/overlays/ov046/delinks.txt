@@ -303,6 +303,18 @@ src/overlays/ov046/calls/Camera_AimViewAtPlayer.c:
     complete
     .text       start:0x020c3310 end:0x020c3388
 
+src/ov046/data/Data_ov046_020c33c0.c:
+    complete
+    .data       start:0x020c33c0 end:0x020c33d0
+
+src/ov046/data/Data_ov046_020c33d0.c:
+    complete
+    .data       start:0x020c33d0 end:0x020c33d4
+
+src/ov046/data/Data_ov046_020c33d4.c:
+    complete
+    .data       start:0x020c33d4 end:0x020c3500
+
 src/overlays/ov046/data/bss/Bss_ov046_020c3500.c:
     complete
     .bss        start:0x020c3500 end:0x020c3520

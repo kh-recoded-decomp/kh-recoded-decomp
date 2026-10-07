@@ -60,6 +60,22 @@ src/overlays/ov078/calls/StepCursorForward.c:
     complete
     .text       start:0x020c4f88 end:0x020c4fae
 
+src/ov078/data/Data_ov078_020c4fe0.c:
+    complete
+    .data       start:0x020c4fe0 end:0x020c5124
+
+src/ov078/data/Data_ov078_020c5124.c:
+    complete
+    .data       start:0x020c5124 end:0x020c5168
+
+src/ov078/data/Data_ov078_020c51b8.c:
+    complete
+    .data       start:0x020c51b8 end:0x020c51e0
+
+src/ov078/data/Rodata_ov078_020c4fb0.c:
+    complete
+    .rodata     start:0x020c4fb0 end:0x020c4fc0
+
 src/overlays/ov078/data/bss/Bss_ov078_020c51e0.c:
     complete
     .bss        start:0x020c51e0 end:0x020c5200

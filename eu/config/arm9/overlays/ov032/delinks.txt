@@ -540,6 +540,46 @@ src/overlays/ov032/calls/ScriptCmd_StoreFieldUnitRecord.c:
     complete
     .text       start:0x020bfda4 end:0x020bfef8
 
+src/ov032/data/Data_ov032_020bffe0.c:
+    complete
+    .data       start:0x020bffe0 end:0x020bfff8
+
+src/ov032/data/Data_ov032_020c0050.c:
+    complete
+    .data       start:0x020c0050 end:0x020c0064
+
+src/ov032/data/Data_ov032_020c0064.c:
+    complete
+    .data       start:0x020c0064 end:0x020c0080
+
+src/ov032/data/Rodata_ov032_020bfef8.c:
+    complete
+    .rodata     start:0x020bfef8 end:0x020bff78
+
+src/ov032/data/Rodata_ov032_020bff78.c:
+    complete
+    .rodata     start:0x020bff78 end:0x020bff8c
+
+src/ov032/data/Rodata_ov032_020bff8c.c:
+    complete
+    .rodata     start:0x020bff8c end:0x020bffac
+
+src/ov032/data/Rodata_ov032_020bffac.c:
+    complete
+    .rodata     start:0x020bffac end:0x020bffb8
+
+src/ov032/data/Rodata_ov032_020bffb8.c:
+    complete
+    .rodata     start:0x020bffb8 end:0x020bffc4
+
+src/ov032/data/Rodata_ov032_020bffc4.c:
+    complete
+    .rodata     start:0x020bffc4 end:0x020bffd0
+
+src/ov032/data/Rodata_ov032_020bffd0.c:
+    complete
+    .rodata     start:0x020bffd0 end:0x020bffdc
+
 src/overlays/ov032/data/bss/Bss_ov032_020c0080.c:
     complete
     .bss        start:0x020c0080 end:0x020c00a0

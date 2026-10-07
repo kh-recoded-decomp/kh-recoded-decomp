@@ -300,6 +300,126 @@ src/overlays/ov093/calls/func_ov093_020c3c44.c:
     complete
     .text       start:0x020c3c44 end:0x020c3c60
 
+src/ov093/data/Data_ov093_020c3f94.c:
+    complete
+    .data       start:0x020c3f94 end:0x020c3fd4
+
+src/ov093/data/Data_ov093_020c3fd4.c:
+    complete
+    .data       start:0x020c3fd4 end:0x020c4058
+
+src/ov093/data/Data_ov093_020c4058.c:
+    complete
+    .data       start:0x020c4058 end:0x020c4084
+
+src/ov093/data/Data_ov093_020c4084.c:
+    complete
+    .data       start:0x020c4084 end:0x020c4128
+
+src/ov093/data/Data_ov093_020c4128.c:
+    complete
+    .data       start:0x020c4128 end:0x020c4c60
+
+src/ov093/data/Data_ov093_020c4c60.c:
+    complete
+    .data       start:0x020c4c60 end:0x020c4d54
+
+src/ov093/data/Data_ov093_020c4d78.c:
+    complete
+    .data       start:0x020c4d78 end:0x020c4d80
+
+src/ov093/data/Data_ov093_020c4d80.c:
+    complete
+    .data       start:0x020c4d80 end:0x020c4d88
+
+src/ov093/data/Data_ov093_020c4d88.c:
+    complete
+    .data       start:0x020c4d88 end:0x020c4da4
+
+src/ov093/data/Data_ov093_020c4da4.c:
+    complete
+    .data       start:0x020c4da4 end:0x020c4dd4
+
+src/ov093/data/Data_ov093_020c4dd4.c:
+    complete
+    .data       start:0x020c4dd4 end:0x020c4df4
+
+src/ov093/data/Data_ov093_020c4df4.c:
+    complete
+    .data       start:0x020c4df4 end:0x020c4e10
+
+src/ov093/data/Data_ov093_020c4e10.c:
+    complete
+    .data       start:0x020c4e10 end:0x020c4e2c
+
+src/ov093/data/Data_ov093_020c4e2c.c:
+    complete
+    .data       start:0x020c4e2c end:0x020c4e48
+
+src/ov093/data/Data_ov093_020c4e48.c:
+    complete
+    .data       start:0x020c4e48 end:0x020c4e64
+
+src/ov093/data/Data_ov093_020c4e64.c:
+    complete
+    .data       start:0x020c4e64 end:0x020c4e80
+
+src/ov093/data/Data_ov093_020c4e80.c:
+    complete
+    .data       start:0x020c4e80 end:0x020c4fe0
+
+src/ov093/data/Data_ov093_020c4fe0.c:
+    complete
+    .data       start:0x020c4fe0 end:0x020c50d8
+
+src/ov093/data/Data_ov093_020c50d8.c:
+    complete
+    .data       start:0x020c50d8 end:0x020c5100
+
+src/ov093/data/Rodata_ov093_020c3c60.c:
+    complete
+    .rodata     start:0x020c3c60 end:0x020c3c74
+
+src/ov093/data/Rodata_ov093_020c3c74.c:
+    complete
+    .rodata     start:0x020c3c74 end:0x020c3c88
+
+src/ov093/data/Rodata_ov093_020c3c88.c:
+    complete
+    .rodata     start:0x020c3c88 end:0x020c3c9c
+
+src/ov093/data/Rodata_ov093_020c3cb8.c:
+    complete
+    .rodata     start:0x020c3cb8 end:0x020c3cf4
+
+src/ov093/data/Rodata_ov093_020c3cf4.c:
+    complete
+    .rodata     start:0x020c3cf4 end:0x020c3d14
+
+src/ov093/data/Rodata_ov093_020c3d14.c:
+    complete
+    .rodata     start:0x020c3d14 end:0x020c3d34
+
+src/ov093/data/Rodata_ov093_020c3d34.c:
+    complete
+    .rodata     start:0x020c3d34 end:0x020c3d54
+
+src/ov093/data/Rodata_ov093_020c3d54.c:
+    complete
+    .rodata     start:0x020c3d54 end:0x020c3d74
+
+src/ov093/data/Rodata_ov093_020c3d74.c:
+    complete
+    .rodata     start:0x020c3d74 end:0x020c3d94
+
+src/ov093/data/Rodata_ov093_020c3d94.c:
+    complete
+    .rodata     start:0x020c3d94 end:0x020c3e74
+
+src/ov093/data/Rodata_ov093_020c3e74.c:
+    complete
+    .rodata     start:0x020c3e74 end:0x020c3e98
+
 src/overlays/ov093/data/bss/Bss_ov093_020c5100.c:
     complete
     .bss        start:0x020c5100 end:0x020c5120

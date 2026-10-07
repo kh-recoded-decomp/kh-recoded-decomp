@@ -40,6 +40,14 @@ src/overlays/ov070/calls/CreateOv070BossObject.c:
     complete
     .text       start:0x020d88b4 end:0x020d8a24
 
+src/ov070/data/Rodata_ov070_020d8a24.c:
+    complete
+    .rodata     start:0x020d8a24 end:0x020d8a30
+
+src/ov070/data/Rodata_ov070_020d8a30.c:
+    complete
+    .rodata     start:0x020d8a30 end:0x020d8a5c
+
 src/overlays/ov070/data/strings/Strings_ov070_020d8a60.c:
     complete
     .data       start:0x020d8a60 end:0x020d8a80

@@ -512,6 +512,74 @@ src/overlays/ov076/calls/DrawMenuImageModulated_020ccf34.c:
     complete
     .text       start:0x020ccf34 end:0x020cd0b8
 
+src/ov076/data/Data_ov076_020cd280.c:
+    complete
+    .data       start:0x020cd280 end:0x020cd28c
+
+src/ov076/data/Data_ov076_020cd2a4.c:
+    complete
+    .data       start:0x020cd2a4 end:0x020cd2b0
+
+src/ov076/data/Data_ov076_020cd2b0.c:
+    complete
+    .data       start:0x020cd2b0 end:0x020cd2bc
+
+src/ov076/data/Data_ov076_020cd2bc.c:
+    complete
+    .data       start:0x020cd2bc end:0x020cd2c8
+
+src/ov076/data/Data_ov076_020cd2c8.c:
+    complete
+    .data       start:0x020cd2c8 end:0x020cd2d4
+
+src/ov076/data/Data_ov076_020cd2d4.c:
+    complete
+    .data       start:0x020cd2d4 end:0x020cd2e0
+
+src/ov076/data/Data_ov076_020cd2e0.c:
+    complete
+    .data       start:0x020cd2e0 end:0x020cd2ec
+
+src/ov076/data/Data_ov076_020cd2ec.c:
+    complete
+    .data       start:0x020cd2ec end:0x020cd2f8
+
+src/ov076/data/Data_ov076_020cd2f8.c:
+    complete
+    .data       start:0x020cd2f8 end:0x020cd348
+
+src/ov076/data/Data_ov076_020cd370.c:
+    complete
+    .data       start:0x020cd370 end:0x020cd37c
+
+src/ov076/data/Data_ov076_020cd388.c:
+    complete
+    .data       start:0x020cd388 end:0x020cd390
+
+src/ov076/data/Rodata_ov076_020cd0b8.c:
+    complete
+    .rodata     start:0x020cd0b8 end:0x020cd0d8
+
+src/ov076/data/Rodata_ov076_020cd0d8.c:
+    complete
+    .rodata     start:0x020cd0d8 end:0x020cd124
+
+src/ov076/data/Rodata_ov076_020cd124.c:
+    complete
+    .rodata     start:0x020cd124 end:0x020cd12c
+
+src/ov076/data/Rodata_ov076_020cd12c.c:
+    complete
+    .rodata     start:0x020cd12c end:0x020cd140
+
+src/ov076/data/Rodata_ov076_020cd140.c:
+    complete
+    .rodata     start:0x020cd140 end:0x020cd22c
+
+src/ov076/data/Rodata_ov076_020cd22c.c:
+    complete
+    .rodata     start:0x020cd22c end:0x020cd260
+
 src/overlays/ov076/data/bss/Bss_ov076_020cd400.c:
     complete
     .bss        start:0x020cd400 end:0x020cd420

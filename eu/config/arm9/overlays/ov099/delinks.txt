@@ -196,6 +196,34 @@ src/overlays/ov099/calls/func_ov099_020c2260.c:
     complete
     .text       start:0x020c2260 end:0x020c226c
 
+src/ov099/data/Data_ov099_020c22b4.c:
+    complete
+    .data       start:0x020c22b4 end:0x020c22e0
+
+src/ov099/data/Data_ov099_020c2344.c:
+    complete
+    .data       start:0x020c2344 end:0x020c2360
+
+src/ov099/data/Data_ov099_020c2368.c:
+    complete
+    .data       start:0x020c2368 end:0x020c2380
+
+src/ov099/data/Data_ov099_020c23ac.c:
+    complete
+    .data       start:0x020c23ac end:0x020c2774
+
+src/ov099/data/Data_ov099_020c279c.c:
+    complete
+    .data       start:0x020c279c end:0x020c27c8
+
+src/ov099/data/Data_ov099_020c27c8.c:
+    complete
+    .data       start:0x020c27c8 end:0x020c288c
+
+src/ov099/data/Rodata_ov099_020c2274.c:
+    complete
+    .rodata     start:0x020c2274 end:0x020c2284
+
 src/overlays/ov099/data/bss/Bss_ov099_020c2900.c:
     complete
     .bss        start:0x020c2900 end:0x020c2920

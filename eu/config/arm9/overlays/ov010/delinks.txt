@@ -168,6 +168,14 @@ src/overlays/ov010/calls/AnimSequence_GetCurrentPosition.c:
     complete
     .text       start:0x020a1c94 end:0x020a1d40
 
+src/ov010/data/Rodata_ov010_020a1d40.c:
+    complete
+    .rodata     start:0x020a1d40 end:0x020a1d7c
+
+src/ov010/data/Rodata_ov010_020a1d7c.c:
+    complete
+    .rodata     start:0x020a1d7c end:0x020a1d8c
+
 src/overlays/ov010/data/bss/Bss_ov010_020a1de0.c:
     complete
     .bss        start:0x020a1de0 end:0x020a1e00

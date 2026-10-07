@@ -448,6 +448,34 @@ src/overlays/ov022/calls/decodeMovieAdpcmSamples.cpp:
     complete
     .text       start:0x020aaafc end:0x020aac54
 
+src/ov022/data/Data_ov022_020b7c00.c:
+    complete
+    .data       start:0x020b7c00 end:0x020b7c18
+
+src/ov022/data/Data_ov022_020b7c30.c:
+    complete
+    .data       start:0x020b7c30 end:0x020b7c40
+
+src/ov022/data/Data_ov022_020b7c40.c:
+    complete
+    .data       start:0x020b7c40 end:0x020b7c64
+
+src/ov022/data/Data_ov022_020b7c64.c:
+    complete
+    .data       start:0x020b7c64 end:0x020b7cec
+
+src/ov022/data/Rodata_ov022_020b75c0.c:
+    complete
+    .rodata     start:0x020b75c0 end:0x020b76a8
+
+src/ov022/data/Rodata_ov022_020b76a8.c:
+    complete
+    .rodata     start:0x020b76a8 end:0x020b7b28
+
+src/ov022/data/Rodata_ov022_020b7b28.c:
+    complete
+    .rodata     start:0x020b7b28 end:0x020b7bec
+
 src/overlays/ov022/data/bss/Bss_ov022_020b7da0.c:
     complete
     .bss        start:0x020b7da0 end:0x020b7e10

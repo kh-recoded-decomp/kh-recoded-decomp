@@ -47,6 +47,6 @@ from:0x020d853c kind:load to:0x020d8141 module:overlay(67)
 from:0x020d8540 kind:load to:0x020d8121 module:overlay(67)
 from:0x020d8544 kind:load to:0x020d8379 module:overlay(67)
 from:0x020d8548 kind:load to:0x020d81ad module:overlay(67)
-from:0x020d854c kind:load to:0x020d8570 module:overlay(67)
+from:0x020d854c kind:load to:0x020d8560 add:0x10 module:overlay(67)
 from:0x020d8550 kind:load to:0x0205615c module:main
-from:0x020d8554 kind:load to:0x020d8580 module:overlay(67)
+from:0x020d8554 kind:load to:0x020d8560 add:0x20 module:overlay(67)

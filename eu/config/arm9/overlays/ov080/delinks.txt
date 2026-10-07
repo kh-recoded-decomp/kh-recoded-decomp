@@ -76,6 +76,22 @@ src/overlays/ov080/calls/UpdateValidSlotCount.c:
     complete
     .text       start:0x020c5d30 end:0x020c5d48
 
+src/ov080/data/Data_ov080_020c5da0.c:
+    complete
+    .data       start:0x020c5da0 end:0x020c5de4
+
+src/ov080/data/Data_ov080_020c5dfc.c:
+    complete
+    .data       start:0x020c5dfc end:0x020c5e20
+
+src/ov080/data/Rodata_ov080_020c5d48.c:
+    complete
+    .rodata     start:0x020c5d48 end:0x020c5d58
+
+src/ov080/data/Rodata_ov080_020c5d58.c:
+    complete
+    .rodata     start:0x020c5d58 end:0x020c5d80
+
 src/overlays/ov080/data/bss/Bss_ov080_020c5e20.c:
     complete
     .bss        start:0x020c5e20 end:0x020c5e40

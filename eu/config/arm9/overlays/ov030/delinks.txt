@@ -248,6 +248,14 @@ src/overlays/ov030/calls/ResetUnitCounts.c:
     complete
     .text       start:0x020bcf54 end:0x020bcf64
 
+src/ov030/data/Data_ov030_020bd004.c:
+    complete
+    .data       start:0x020bd004 end:0x020bd020
+
+src/ov030/data/Rodata_ov030_020bcf64.c:
+    complete
+    .rodata     start:0x020bcf64 end:0x020bcf8c
+
 src/overlays/ov030/data/MovieOverlayData_020bcfa0.c:
     complete
     .data       start:0x020bcfa0 end:0x020bd004

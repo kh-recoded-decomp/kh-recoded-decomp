@@ -878,7 +878,7 @@ from:0x020ad358 kind:load to:0x020b5294 module:overlay(21)
 from:0x020ad35c kind:load to:0x0205615c module:main
 from:0x020ad360 kind:load to:0x020bc4c9 module:overlays(30,35,38)
 from:0x020ad364 kind:load to:0x020d3551 module:overlay(56)
-from:0x020ad368 kind:load to:0x020d36fd module:overlays(54,56)
+from:0x020ad368 kind:load to:0x020d36f8 add:0x5 module:overlays(54,56)
 from:0x020ad36c kind:load to:0x020d3925 module:overlay(56)
 from:0x020ad370 kind:load to:0x020d3b3d module:overlay(56)
 from:0x020ad374 kind:load to:0x020ad491 module:overlay(21)

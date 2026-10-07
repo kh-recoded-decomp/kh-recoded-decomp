@@ -36,6 +36,18 @@ src/overlays/ov026/calls/ShouldRestorePositiveBrightness.c:
     complete
     .text       start:0x020b5aa4 end:0x020b5ab0
 
+src/ov026/data/Data_ov026_020b5ae0.c:
+    complete
+    .data       start:0x020b5ae0 end:0x020b5af4
+
+src/ov026/data/Data_ov026_020b5af4.c:
+    complete
+    .data       start:0x020b5af4 end:0x020b5af8
+
+src/ov026/data/Rodata_ov026_020b5ab0.c:
+    complete
+    .rodata     start:0x020b5ab0 end:0x020b5ac8
+
 src/overlays/ov026/data/bss/Bss_ov026_020b5b20.c:
     complete
     .bss        start:0x020b5b20 end:0x020b5b40

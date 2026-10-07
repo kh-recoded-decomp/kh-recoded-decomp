@@ -808,6 +808,66 @@ src/overlays/ov002/calls/TallyFlagGroups.c:
     complete
     .text       start:0x0206abc0 end:0x0206ac94
 
+src/ov002/data/Data_ov002_0206c2c4.c:
+    complete
+    .data       start:0x0206c2c4 end:0x0206c2d8
+
+src/ov002/data/Data_ov002_0206c41c.c:
+    complete
+    .data       start:0x0206c41c end:0x0206c434
+
+src/ov002/data/Data_ov002_0206c434.c:
+    complete
+    .data       start:0x0206c434 end:0x0206c438
+
+src/ov002/data/Rodata_ov002_0206ac94.c:
+    complete
+    .rodata     start:0x0206ac94 end:0x0206aca4
+
+src/ov002/data/Rodata_ov002_0206aca4.c:
+    complete
+    .rodata     start:0x0206aca4 end:0x0206acb4
+
+src/ov002/data/Rodata_ov002_0206acb4.c:
+    complete
+    .rodata     start:0x0206acb4 end:0x0206acd8
+
+src/ov002/data/Rodata_ov002_0206acd8.c:
+    complete
+    .rodata     start:0x0206acd8 end:0x0206ad04
+
+src/ov002/data/Rodata_ov002_0206ad04.c:
+    complete
+    .rodata     start:0x0206ad04 end:0x0206ad3c
+
+src/ov002/data/Rodata_ov002_0206ad3c.c:
+    complete
+    .rodata     start:0x0206ad3c end:0x0206ad5c
+
+src/ov002/data/Rodata_ov002_0206ad5c.c:
+    complete
+    .rodata     start:0x0206ad5c end:0x0206ad7c
+
+src/ov002/data/Rodata_ov002_0206ad7c.c:
+    complete
+    .rodata     start:0x0206ad7c end:0x0206ada0
+
+src/ov002/data/Rodata_ov002_0206ada0.c:
+    complete
+    .rodata     start:0x0206ada0 end:0x0206ae0c
+
+src/ov002/data/Rodata_ov002_0206ae0c.c:
+    complete
+    .rodata     start:0x0206ae0c end:0x0206ae70
+
+src/ov002/data/Rodata_ov002_0206ae70.c:
+    complete
+    .rodata     start:0x0206ae70 end:0x0206af0c
+
+src/ov002/data/Rodata_ov002_0206af0c.c:
+    complete
+    .rodata     start:0x0206af0c end:0x0206c27c
+
 src/overlays/ov002/data/bss/Bss_ov002_0206c460.c:
     complete
     .bss        start:0x0206c460 end:0x0206c464

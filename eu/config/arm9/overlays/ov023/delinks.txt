@@ -148,6 +148,30 @@ src/overlays/ov023/calls/ApplyScreenAlphaBlend.c:
     complete
     .text       start:0x020b6e80 end:0x020b6e94
 
+src/ov023/data/Data_ov023_020b6ee0.c:
+    complete
+    .data       start:0x020b6ee0 end:0x020b6ef4
+
+src/ov023/data/Data_ov023_020b6ef4.c:
+    complete
+    .data       start:0x020b6ef4 end:0x020b6f2c
+
+src/ov023/data/Data_ov023_020b6f2c.c:
+    complete
+    .data       start:0x020b6f2c end:0x020b6f40
+
+src/ov023/data/Rodata_ov023_020b6e94.c:
+    complete
+    .rodata     start:0x020b6e94 end:0x020b6ea4
+
+src/ov023/data/Rodata_ov023_020b6ea4.c:
+    complete
+    .rodata     start:0x020b6ea4 end:0x020b6eac
+
+src/ov023/data/Rodata_ov023_020b6eac.c:
+    complete
+    .rodata     start:0x020b6eac end:0x020b6ec4
+
 src/overlays/ov023/data/bss/Bss_ov023_020b6f80.c:
     complete
     .bss        start:0x020b6f80 end:0x020b6f84

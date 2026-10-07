@@ -14,3 +14,7 @@ src/overlays/ov096/auto/func_ov096_020beac8.c:
 src/overlays/ov096/auto/func_ov096_020beacc.c:
     complete
     .text       start:0x020beacc end:0x020bead0
+
+src/ov096/data/Data_ov096_020beae0.c:
+    complete
+    .data       start:0x020beae0 end:0x020beb20

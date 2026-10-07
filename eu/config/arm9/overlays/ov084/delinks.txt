@@ -36,6 +36,14 @@ src/overlays/ov084/calls/ResetMenuCursorWithSound.c:
     complete
     .text       start:0x020bfc48 end:0x020bfc60
 
+src/ov084/data/Data_ov084_020bfca0.c:
+    complete
+    .data       start:0x020bfca0 end:0x020bfce4
+
+src/ov084/data/Rodata_ov084_020bfc60.c:
+    complete
+    .rodata     start:0x020bfc60 end:0x020bfc90
+
 src/overlays/ov084/data/strings/Strings_ov084_020bfce4.c:
     complete
     .data       start:0x020bfce4 end:0x020bfd00

@@ -59,6 +59,14 @@ src/overlays/ov033/calls/func_ov033_020baa60.c:
     complete
     .text       start:0x020baa60 end:0x020baa6c
 
+src/ov033/data/Data_ov033_020baaa0.c:
+    complete
+    .data       start:0x020baaa0 end:0x020baaa4
+
+src/ov033/data/Data_ov033_020baab4.c:
+    complete
+    .data       start:0x020baab4 end:0x020baae0
+
 src/overlays/ov033/data/bss/Bss_ov033_020baae0.c:
     complete
     .bss        start:0x020baae0 end:0x020baafc

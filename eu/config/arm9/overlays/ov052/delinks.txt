@@ -524,6 +524,22 @@ src/overlays/ov052/calls/DispatchHitEvent.c:
     complete
     .text       start:0x020d2044 end:0x020d20ac
 
+src/ov052/data/Rodata_ov052_020d20ac.c:
+    complete
+    .rodata     start:0x020d20ac end:0x020d20e0
+
+src/ov052/data/Rodata_ov052_020d20e0.c:
+    complete
+    .rodata     start:0x020d20e0 end:0x020d20e8
+
+src/ov052/data/Rodata_ov052_020d20e8.c:
+    complete
+    .rodata     start:0x020d20e8 end:0x020d210c
+
+src/ov052/data/Rodata_ov052_020d210c.c:
+    complete
+    .rodata     start:0x020d210c end:0x020d215c
+
 src/overlays/ov052/data/bss/Bss_ov052_020d21e0.c:
     complete
     .bss        start:0x020d21e0 end:0x020d2200

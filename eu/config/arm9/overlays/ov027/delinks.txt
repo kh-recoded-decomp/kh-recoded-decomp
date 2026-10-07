@@ -488,6 +488,18 @@ src/overlays/ov027/calls/FindPageEntryById.c:
     complete
     .text       start:0x020ba368 end:0x020ba384
 
+src/ov027/data/Data_ov027_020ba3a0.c:
+    complete
+    .data       start:0x020ba3a0 end:0x020ba3e0
+
+src/ov027/data/Rodata_ov027_020ba384.c:
+    complete
+    .rodata     start:0x020ba384 end:0x020ba388
+
+src/ov027/data/Rodata_ov027_020ba388.c:
+    complete
+    .rodata     start:0x020ba388 end:0x020ba38c
+
 src/overlays/ov027/data/bss/Bss_ov027_020ba3e0.c:
     complete
     .bss        start:0x020ba3e0 end:0x020ba400

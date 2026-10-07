@@ -16,6 +16,14 @@ src/overlays/ov061/calls/CreateBurstBattleObject.c:
     complete
     .text       start:0x020d8380 end:0x020d8520
 
+src/ov061/data/Data_ov061_020d8569.c:
+    complete
+    .data       start:0x020d8569 end:0x020d8580
+
+src/ov061/data/Rodata_ov061_020d8520.c:
+    complete
+    .rodata     start:0x020d8520 end:0x020d8530
+
 src/overlays/ov061/data/strings/Strings_ov061_020d8540.c:
     complete
     .data       start:0x020d8540 end:0x020d8569

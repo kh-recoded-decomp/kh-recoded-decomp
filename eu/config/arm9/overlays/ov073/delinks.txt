@@ -284,6 +284,70 @@ src/overlays/ov073/calls/SetListWidgetBusy.c:
     complete
     .text       start:0x020c4064 end:0x020c40a6
 
+src/ov073/data/Data_ov073_020c4160.c:
+    complete
+    .data       start:0x020c4160 end:0x020c41a0
+
+src/ov073/data/Data_ov073_020c41a0.c:
+    complete
+    .data       start:0x020c41a0 end:0x020c41a8
+
+src/ov073/data/Data_ov073_020c41d4.c:
+    complete
+    .data       start:0x020c41d4 end:0x020c41dc
+
+src/ov073/data/Data_ov073_020c41ec.c:
+    complete
+    .data       start:0x020c41ec end:0x020c4208
+
+src/ov073/data/Data_ov073_020c4208.c:
+    complete
+    .data       start:0x020c4208 end:0x020c4218
+
+src/ov073/data/Data_ov073_020c4218.c:
+    complete
+    .data       start:0x020c4218 end:0x020c4228
+
+src/ov073/data/Data_ov073_020c4228.c:
+    complete
+    .data       start:0x020c4228 end:0x020c4238
+
+src/ov073/data/Data_ov073_020c4238.c:
+    complete
+    .data       start:0x020c4238 end:0x020c4260
+
+src/ov073/data/Rodata_ov073_020c40a8.c:
+    complete
+    .rodata     start:0x020c40a8 end:0x020c40c0
+
+src/ov073/data/Rodata_ov073_020c40c0.c:
+    complete
+    .rodata     start:0x020c40c0 end:0x020c40d0
+
+src/ov073/data/Rodata_ov073_020c40d0.c:
+    complete
+    .rodata     start:0x020c40d0 end:0x020c40e0
+
+src/ov073/data/Rodata_ov073_020c40e0.c:
+    complete
+    .rodata     start:0x020c40e0 end:0x020c40f0
+
+src/ov073/data/Rodata_ov073_020c40f0.c:
+    complete
+    .rodata     start:0x020c40f0 end:0x020c4100
+
+src/ov073/data/Rodata_ov073_020c4100.c:
+    complete
+    .rodata     start:0x020c4100 end:0x020c4110
+
+src/ov073/data/Rodata_ov073_020c4110.c:
+    complete
+    .rodata     start:0x020c4110 end:0x020c4120
+
+src/ov073/data/Rodata_ov073_020c4120.c:
+    complete
+    .rodata     start:0x020c4120 end:0x020c4148
+
 src/overlays/ov073/data/bss/Bss_ov073_020c4260.c:
     complete
     .bss        start:0x020c4260 end:0x020c4280

@@ -1764,6 +1764,74 @@ src/overlays/ov021/calls/TickSequenceCountdown.c:
     complete
     .text       start:0x020b4d88 end:0x020b4dca
 
+src/ov021/data/Data_ov021_020b5268.c:
+    complete
+    .data       start:0x020b5268 end:0x020b5278
+
+src/ov021/data/Data_ov021_020b5294.c:
+    complete
+    .data       start:0x020b5294 end:0x020b52a4
+
+src/ov021/data/Data_ov021_020b52b0.c:
+    complete
+    .data       start:0x020b52b0 end:0x020b52d4
+
+src/ov021/data/Data_ov021_020b560c.c:
+    complete
+    .data       start:0x020b560c end:0x020b5620
+
+src/ov021/data/Rodata_ov021_020b4dcc.c:
+    complete
+    .rodata     start:0x020b4dcc end:0x020b4e44
+
+src/ov021/data/Rodata_ov021_020b4e44.c:
+    complete
+    .rodata     start:0x020b4e44 end:0x020b4e50
+
+src/ov021/data/Rodata_ov021_020b4e50.c:
+    complete
+    .rodata     start:0x020b4e50 end:0x020b4e80
+
+src/ov021/data/Rodata_ov021_020b4e80.c:
+    complete
+    .rodata     start:0x020b4e80 end:0x020b4ea4
+
+src/ov021/data/Rodata_ov021_020b4ea4.c:
+    complete
+    .rodata     start:0x020b4ea4 end:0x020b4fa0
+
+src/ov021/data/Rodata_ov021_020b4fa0.c:
+    complete
+    .rodata     start:0x020b4fa0 end:0x020b4fb4
+
+src/ov021/data/Rodata_ov021_020b4fb4.c:
+    complete
+    .rodata     start:0x020b4fb4 end:0x020b4fc8
+
+src/ov021/data/Rodata_ov021_020b4fc8.c:
+    complete
+    .rodata     start:0x020b4fc8 end:0x020b4fdc
+
+src/ov021/data/Rodata_ov021_020b4fdc.c:
+    complete
+    .rodata     start:0x020b4fdc end:0x020b4fe8
+
+src/ov021/data/Rodata_ov021_020b4ff8.c:
+    complete
+    .rodata     start:0x020b4ff8 end:0x020b5004
+
+src/ov021/data/Rodata_ov021_020b5014.c:
+    complete
+    .rodata     start:0x020b5014 end:0x020b5124
+
+src/ov021/data/Rodata_ov021_020b5124.c:
+    complete
+    .rodata     start:0x020b5124 end:0x020b5184
+
+src/ov021/data/Rodata_ov021_020b5184.c:
+    complete
+    .rodata     start:0x020b5184 end:0x020b51e4
+
 src/overlays/ov021/data/bss/Bss_ov021_020b5620.c:
     complete
     .bss        start:0x020b5620 end:0x020b5624

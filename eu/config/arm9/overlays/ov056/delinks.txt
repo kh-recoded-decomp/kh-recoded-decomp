@@ -435,3 +435,55 @@ src/overlays/ov056/calls/StartFreeModelSlot.c:
 src/overlays/ov056/calls/DrawModelSlots.c:
     complete
     .text       start:0x020d7f38 end:0x020d7f6a
+
+src/ov056/data/Data_ov056_020d7fe0.c:
+    complete
+    .data       start:0x020d7fe0 end:0x020d8030
+
+src/ov056/data/Data_ov056_020d8030.c:
+    complete
+    .data       start:0x020d8030 end:0x020d8080
+
+src/ov056/data/Data_ov056_020d8080.c:
+    complete
+    .data       start:0x020d8080 end:0x020d80d0
+
+src/ov056/data/Data_ov056_020d80d0.c:
+    complete
+    .data       start:0x020d80d0 end:0x020d8120
+
+src/ov056/data/Rodata_ov056_020d7f6c.c:
+    complete
+    .rodata     start:0x020d7f6c end:0x020d7f78
+
+src/ov056/data/Rodata_ov056_020d7f78.c:
+    complete
+    .rodata     start:0x020d7f78 end:0x020d7f84
+
+src/ov056/data/Rodata_ov056_020d7f84.c:
+    complete
+    .rodata     start:0x020d7f84 end:0x020d7f90
+
+src/ov056/data/Rodata_ov056_020d7f90.c:
+    complete
+    .rodata     start:0x020d7f90 end:0x020d7f9c
+
+src/ov056/data/Rodata_ov056_020d7f9c.c:
+    complete
+    .rodata     start:0x020d7f9c end:0x020d7fa8
+
+src/ov056/data/Rodata_ov056_020d7fa8.c:
+    complete
+    .rodata     start:0x020d7fa8 end:0x020d7fb4
+
+src/ov056/data/Rodata_ov056_020d7fb4.c:
+    complete
+    .rodata     start:0x020d7fb4 end:0x020d7fc0
+
+src/ov056/data/Rodata_ov056_020d7fc0.c:
+    complete
+    .rodata     start:0x020d7fc0 end:0x020d7fcc
+
+src/ov056/data/Rodata_ov056_020d7fcc.c:
+    complete
+    .rodata     start:0x020d7fcc end:0x020d7fd8

@@ -392,6 +392,50 @@ src/overlays/ov013/auto/func_ov013_020749f0.c:
     complete
     .text       start:0x020749f0 end:0x020749f4
 
+src/ov013/data/Data_ov013_02074c70.c:
+    complete
+    .data       start:0x02074c70 end:0x02074cac
+
+src/ov013/data/Data_ov013_02074cac.c:
+    complete
+    .data       start:0x02074cac end:0x02074ce0
+
+src/ov013/data/Rodata_ov013_020749f4.c:
+    complete
+    .rodata     start:0x020749f4 end:0x02074a08
+
+src/ov013/data/Rodata_ov013_02074a08.c:
+    complete
+    .rodata     start:0x02074a08 end:0x02074a1c
+
+src/ov013/data/Rodata_ov013_02074a1c.c:
+    complete
+    .rodata     start:0x02074a1c end:0x02074a30
+
+src/ov013/data/Rodata_ov013_02074a30.c:
+    complete
+    .rodata     start:0x02074a30 end:0x02074a5c
+
+src/ov013/data/Rodata_ov013_02074a5c.c:
+    complete
+    .rodata     start:0x02074a5c end:0x02074a74
+
+src/ov013/data/Rodata_ov013_02074a74.c:
+    complete
+    .rodata     start:0x02074a74 end:0x02074a8c
+
+src/ov013/data/Rodata_ov013_02074a8c.c:
+    complete
+    .rodata     start:0x02074a8c end:0x02074ac4
+
+src/ov013/data/Rodata_ov013_02074ac4.c:
+    complete
+    .rodata     start:0x02074ac4 end:0x02074ae4
+
+src/ov013/data/Rodata_ov013_02074ae4.c:
+    complete
+    .rodata     start:0x02074ae4 end:0x02074b04
+
 src/overlays/ov013/data/bss/Bss_ov013_02074ce0.c:
     complete
     .bss        start:0x02074ce0 end:0x02074d00

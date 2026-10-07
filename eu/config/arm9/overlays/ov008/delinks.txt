@@ -124,6 +124,10 @@ src/overlays/ov008/calls/BindLinkSlotTable.c:
     complete
     .text       start:0x020a134c end:0x020a13b2
 
+src/ov008/data/Data_ov008_020a1400.c:
+    complete
+    .data       start:0x020a1400 end:0x020a1428
+
 src/overlays/ov008/data/strings/Strings_ov008_020a13b4.c:
     complete
     .rodata     start:0x020a13b4 end:0x020a13c4

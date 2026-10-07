@@ -48,6 +48,14 @@ src/overlays/ov079/calls/func_ov079_020c4c0c.c:
     complete
     .text       start:0x020c4c0c end:0x020c4c30
 
+src/ov079/data/Data_ov079_020c4c60.c:
+    complete
+    .data       start:0x020c4c60 end:0x020c4ca4
+
+src/ov079/data/Rodata_ov079_020c4c30.c:
+    complete
+    .rodata     start:0x020c4c30 end:0x020c4c40
+
 src/overlays/ov079/data/strings/Strings_ov079_020c4ca4.c:
     complete
     .data       start:0x020c4ca4 end:0x020c4cc0

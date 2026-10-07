@@ -236,6 +236,26 @@ src/overlays/ov025/calls/ResetFieldsToDefault.c:
     complete
     .text       start:0x020b768c end:0x020b769e
 
+src/ov025/data/Data_ov025_020b7748.c:
+    complete
+    .data       start:0x020b7748 end:0x020b775c
+
+src/ov025/data/Rodata_ov025_020b76a0.c:
+    complete
+    .rodata     start:0x020b76a0 end:0x020b76a8
+
+src/ov025/data/Rodata_ov025_020b76a8.c:
+    complete
+    .rodata     start:0x020b76a8 end:0x020b76c0
+
+src/ov025/data/Rodata_ov025_020b76c0.c:
+    complete
+    .rodata     start:0x020b76c0 end:0x020b76d0
+
+src/ov025/data/Rodata_ov025_020b76d0.c:
+    complete
+    .rodata     start:0x020b76d0 end:0x020b7724
+
 src/overlays/ov025/data/bss/Bss_ov025_020b7780.c:
     complete
     .bss        start:0x020b7780 end:0x020b77a0

@@ -120,6 +120,18 @@ src/overlays/ov037/calls/UpdateMenuSelection.c:
     complete
     .text       start:0x020bb4dc end:0x020bb648
 
+src/ov037/data/Data_ov037_020bb6c0.c:
+    complete
+    .data       start:0x020bb6c0 end:0x020bb6d8
+
+src/ov037/data/Rodata_ov037_020bb648.c:
+    complete
+    .rodata     start:0x020bb648 end:0x020bb66c
+
+src/ov037/data/Rodata_ov037_020bb66c.c:
+    complete
+    .rodata     start:0x020bb66c end:0x020bb6b0
+
 src/overlays/ov037/data/bss/Bss_ov037_020bb780.c:
     complete
     .bss        start:0x020bb780 end:0x020bb7a0
