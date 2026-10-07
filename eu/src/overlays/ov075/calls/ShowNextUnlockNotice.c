@@ -3,8 +3,8 @@
 #define SetSecondaryElementEnabled_020bc084 SetSecondaryElementEnabled
 #define SetUnlockableElementsVisible_020d0e64 SetUnlockableElementsVisible
 #define ShowNextUnlockNotice_020cc9fc ShowNextUnlockNotice
-#define data_ov075_020d1560 data_ov075_020d1580
+#define data_ov075_020d1560 gUnlockNoticeEntries
 #define func_ov027_020ba2a8 func_ov027_020ba2c8
-#define func_ov075_020c42d4 func_ov075_020c42f4
+#define func_ov075_020c42d4 CheckOrMarkUnlockNoticeSeen
 #define func_ov075_020c8d0c ShowDialogMessageAt
 #include "src/ov075/unclassified_helpers/ShowNextUnlockNotice_020cc9fc.c"

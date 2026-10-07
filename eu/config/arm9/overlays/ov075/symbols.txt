@@ -1,6 +1,6 @@
 HasUnvisitedLink kind:function(thumb,size=0x54) addr:0x020c4280
 GetDialogInputMode kind:function(thumb,size=0x20) addr:0x020c42d4
-func_ov075_020c42f4 kind:function(thumb,size=0x38) addr:0x020c42f4
+CheckOrMarkUnlockNoticeSeen kind:function(thumb,size=0x38) addr:0x020c42f4
 ResetDirectionRepeat kind:function(thumb,size=0x18) addr:0x020c432c
 IsMenuModeUnlocked kind:function(thumb,size=0x4c) addr:0x020c4344
 func_ov075_020c4390 kind:function(thumb,size=0x550) addr:0x020c4390
@@ -158,7 +158,7 @@ DrawNodeAtInvertedY kind:function(thumb,size=0x1c) addr:0x020d0e50
 SetLayoutElementVisible kind:function(thumb,size=0x16) addr:0x020d0e6c
 SetUnlockableElementsVisible kind:function(thumb,size=0x38) addr:0x020d0e84
 HitTestToggleButtons kind:function(thumb,size=0x98) addr:0x020d0ebc
-func_ov075_020d0f54 kind:function(thumb,size=0x1c) addr:0x020d0f54
+MatrixMenu_GetStockForRecord kind:function(thumb,size=0x1c) addr:0x020d0f54
 func_ov075_020d0f70 kind:function(thumb,size=0x18c) addr:0x020d0f70
 func_ov075_020d10fc kind:function(thumb,size=0x2) addr:0x020d10fc
 DrawMenuImageCentered kind:function(thumb,size=0x184) addr:0x020d1100
@@ -191,7 +191,7 @@ data_ov075_020d1520 kind:data(any) addr:0x020d1520
 data_ov075_020d1538 kind:data(any) addr:0x020d1538
 data_ov075_020d1550 kind:data(any) addr:0x020d1550
 sOv075_Empty_020d1568 kind:data(any) addr:0x020d1568
-data_ov075_020d1580 kind:data(any) addr:0x020d1580
+gUnlockNoticeEntries kind:data(any) addr:0x020d1580
 data_ov075_020d1678 kind:data(any) addr:0x020d1678
 data_ov075_020d1680 kind:data(any) addr:0x020d1680
 data_ov075_020d1684 kind:data(any) addr:0x020d1684

@@ -264,6 +264,14 @@ src/overlays/ov076/calls/func_ov076_020c8b48.c:
     complete
     .text       start:0x020c8b48 end:0x020c8b70
 
+src/overlays/ov076/calls/SlotMenu_GetPanelState.c:
+    complete
+    .text       start:0x020c8b70 end:0x020c8b76
+
+src/overlays/ov076/calls/SlotMenu_GetPanelStateAlt.c:
+    complete
+    .text       start:0x020c8b78 end:0x020c8b7e
+
 src/overlays/ov076/calls/SlotMenu_HandleSlotSelect.c:
     complete
     .text       start:0x020c8b80 end:0x020c8d40
@@ -491,6 +499,10 @@ src/overlays/ov076/calls/ShowMarkerElementAt.c:
 src/overlays/ov076/calls/SetNavigationElementsVisible.c:
     complete
     .text       start:0x020ccd50 end:0x020ccd88
+
+src/overlays/ov076/calls/CommandMatrix_GetStockForRecord.c:
+    complete
+    .text       start:0x020ccd88 end:0x020ccda4
 
 src/overlays/ov076/auto/func_ov076_020ccf30.c:
     complete

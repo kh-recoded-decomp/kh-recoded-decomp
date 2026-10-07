@@ -3,5 +3,5 @@
 #define ItemList_UpdateHeaderText_020c95cc ItemList_UpdateHeaderText
 #define SetStatusHeaderMessage_020c1dbc SetStatusHeaderMessage
 #define func_ov039_020bc618 func_ov039_020bc638
-#define func_ov076_020ccd68 func_ov076_020ccd88
+#define func_ov076_020ccd68 CommandMatrix_GetStockForRecord
 #include "src/ov076/unclassified_helpers/ItemList_UpdateHeaderText_020c95cc.c"

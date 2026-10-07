@@ -103,7 +103,7 @@ SetContainerElementVisible_020c9d3c kind:function(thumb,size=0x16) addr:0x020c9d
 RefreshElementCellAnimation kind:function(thumb,size=0x16) addr:0x020c9d54
 PlaceElement42OrHide kind:function(thumb,size=0x30) addr:0x020c9d6c
 SetFlagGatedElementsVisible kind:function(thumb,size=0x38) addr:0x020c9d9c
-func_ov077_020c9dd4 kind:function(thumb,size=0x1c) addr:0x020c9dd4
+EquipmentMatrix_GetStockForRecord kind:function(thumb,size=0x1c) addr:0x020c9dd4
 func_ov077_020c9df0 kind:function(thumb,size=0x18c) addr:0x020c9df0
 func_ov077_020c9f7c kind:function(thumb,size=0x2) addr:0x020c9f7c
 func_ov077_020c9f80 kind:function(thumb,size=0x184) addr:0x020c9f80
@@ -122,7 +122,7 @@ data_ov077_020ca1e0 kind:data(any) addr:0x020ca1e0
 data_ov077_020ca25c kind:data(any) addr:0x020ca25c
 data_ov077_020ca26c kind:data(any) addr:0x020ca26c
 data_ov077_020ca2a0 kind:data(any) addr:0x020ca2a0
-data_ov077_020ca2ac kind:data(any) addr:0x020ca2ac
+gEquipmentMatrixMenuDescriptor kind:data(any) addr:0x020ca2ac
 sOv077_UiMenuEqumtxP2_020ca2f0 kind:data(any) addr:0x020ca2f0
 sOv077_UiMenuLanguageEqumtxP2_020ca304 kind:data(any) addr:0x020ca304
 sOv077_ScrollCmx_020ca318 kind:data(any) addr:0x020ca318

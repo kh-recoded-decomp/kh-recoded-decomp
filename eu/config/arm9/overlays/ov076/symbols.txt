@@ -84,8 +84,8 @@ SlotMenu_SetReturnCallback kind:function(thumb,size=0x1c) addr:0x020c89e4
 SlotMenu_UnequipSlotEntry kind:function(thumb,size=0x90) addr:0x020c8a00
 SlotMenu_OnMessageConfirm kind:function(thumb,size=0xb8) addr:0x020c8a90
 func_ov076_020c8b48 kind:function(thumb,size=0x28) addr:0x020c8b48
-func_ov076_020c8b70 kind:function(thumb,size=0x6) addr:0x020c8b70
-func_ov076_020c8b78 kind:function(thumb,size=0x6) addr:0x020c8b78
+SlotMenu_GetPanelState kind:function(thumb,size=0x6) addr:0x020c8b70
+SlotMenu_GetPanelStateAlt kind:function(thumb,size=0x6) addr:0x020c8b78
 SlotMenu_HandleSlotSelect kind:function(thumb,size=0x1c0) addr:0x020c8b80
 func_ov076_020c8d40 kind:function(thumb,size=0x50) addr:0x020c8d40
 SlotMenu_UnequipCursorSlot kind:function(thumb,size=0xfc) addr:0x020c8d90
@@ -162,7 +162,7 @@ InitPanelModel kind:function(thumb,size=0xa4) addr:0x020ccc64
 SetContainerElementVisible kind:function(thumb,size=0x16) addr:0x020ccd08
 ShowMarkerElementAt kind:function(thumb,size=0x30) addr:0x020ccd20
 SetNavigationElementsVisible kind:function(thumb,size=0x38) addr:0x020ccd50
-func_ov076_020ccd88 kind:function(thumb,size=0x1c) addr:0x020ccd88
+CommandMatrix_GetStockForRecord kind:function(thumb,size=0x1c) addr:0x020ccd88
 func_ov076_020ccda4 kind:function(thumb,size=0x18c) addr:0x020ccda4
 func_ov076_020ccf30 kind:function(thumb,size=0x2) addr:0x020ccf30
 DrawMenuImageModulated_020ccf34 kind:function(thumb,size=0x184) addr:0x020ccf34
@@ -190,7 +190,7 @@ data_ov076_020cd2d4 kind:data(any) addr:0x020cd2d4
 data_ov076_020cd2e0 kind:data(any) addr:0x020cd2e0
 data_ov076_020cd2ec kind:data(any) addr:0x020cd2ec
 data_ov076_020cd2f8 kind:data(any) addr:0x020cd2f8
-data_ov076_020cd304 kind:data(any) addr:0x020cd304
+gCommandMatrixMenuDescriptor kind:data(any) addr:0x020cd304
 sOv076_UiMenuCmdmtxP2_020cd348 kind:data(any) addr:0x020cd348
 sOv076_UiMenuLanguageCmdmtxP2_020cd35c kind:data(any) addr:0x020cd35c
 data_ov076_020cd370 kind:data(any) addr:0x020cd370

@@ -300,6 +300,10 @@ src/overlays/ov077/calls/SetFlagGatedElementsVisible.c:
     complete
     .text       start:0x020c9d9c end:0x020c9dd4
 
+src/overlays/ov077/calls/EquipmentMatrix_GetStockForRecord.c:
+    complete
+    .text       start:0x020c9dd4 end:0x020c9df0
+
 src/overlays/ov077/auto/func_ov077_020c9f7c.c:
     complete
     .text       start:0x020c9f7c end:0x020c9f7e

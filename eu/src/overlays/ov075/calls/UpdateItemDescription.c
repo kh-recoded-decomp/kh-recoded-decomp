@@ -3,5 +3,5 @@
 #define SetStatusHeaderMessage_020c1dbc SetStatusHeaderMessage
 #define UpdateItemDescription_020cd384 UpdateItemDescription
 #define func_ov039_020bc618 func_ov039_020bc638
-#define func_ov075_020d0f34 func_ov075_020d0f54
+#define func_ov075_020d0f34 MatrixMenu_GetStockForRecord
 #include "src/ov075/unclassified_helpers/UpdateItemDescription_020cd384.c"
