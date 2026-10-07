@@ -1,0 +1,4 @@
+#define ActivateSubModeHandlers_02062b48 ActivateSubModeHandlers
+#define data_ov001_020a0460 data_ov001_020a0480
+#define func_ov034_020be548 InitResultsMovieSourceOps
+#include "src/ov001/unclassified_helpers/ActivateSubModeHandlers_02062b48.c"

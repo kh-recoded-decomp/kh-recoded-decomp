@@ -1,0 +1,6 @@
+#define RemoveTaggedListEntries_0206c720 RemoveTaggedListEntries
+#define NNS_FndGetNextListObject_02012a38 NNS_FndGetNextListObject
+#define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
+#define RemoveIntrusiveListObject_020129d8 NNS_FndRemoveListObject
+#define data_ov001_020a0488 data_ov001_020a04a8
+#include "src/ov001/unclassified_helpers/RemoveTaggedListEntries_0206c720.c"

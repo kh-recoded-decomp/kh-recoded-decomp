@@ -84,6 +84,10 @@ src/overlays/ov001/calls/ActivateResumeModeHandlers.c:
     complete
     .text       start:0x02062b08 end:0x02062b48
 
+src/overlays/ov001/calls/ActivateSubModeHandlers.c:
+    complete
+    .text       start:0x02062b48 end:0x02062b84
+
 src/overlays/ov001/calls/func_ov001_02062b84.c:
     complete
     .text       start:0x02062b84 end:0x02062b9c
@@ -988,6 +992,10 @@ src/overlays/ov001/calls/WakeNearbyIdleNodes.c:
     complete
     .text       start:0x02066874 end:0x020668e4
 
+src/overlays/ov001/calls/SubScene9_Create_02066c80.c:
+    complete
+    .text       start:0x02066c80 end:0x02066ca0
+
 src/overlays/ov001/calls/func_ov001_02066ca0.c:
     complete
     .text       start:0x02066ca0 end:0x02066cb4
@@ -1087,6 +1095,10 @@ src/overlays/ov001/calls/LoadSceneTable.c:
 src/overlays/ov001/calls/EnterMenuItem.c:
     complete
     .text       start:0x02067618 end:0x020676c4
+
+src/overlays/ov001/calls/ShutdownSceneContext.c:
+    complete
+    .text       start:0x020676c4 end:0x02067704
 
 src/overlays/ov001/calls/ResetSceneSlots.c:
     complete
@@ -1355,6 +1367,10 @@ src/overlays/ov001/calls/func_ov001_02068a74.c:
 src/overlays/ov001/calls/HandleEnemyDefeat.c:
     complete
     .text       start:0x02068abc end:0x02068c0c
+
+src/overlays/ov001/calls/SubScene9_Create_02068c0c.c:
+    complete
+    .text       start:0x02068c0c end:0x02068c3c
 
 src/overlays/ov001/calls/func_ov001_02068c3c.c:
     complete
@@ -2080,7 +2096,7 @@ src/overlays/ov001/calls/RunSessionCallbacks.c:
     complete
     .text       start:0x0206c684 end:0x0206c6d0
 
-src/overlays/ov001/calls/func_ov001_0206c6d0.c:
+src/overlays/ov001/calls/RemoveAllTaggedListEntries.c:
     complete
     .text       start:0x0206c6d0 end:0x0206c6dc
 
@@ -2095,6 +2111,10 @@ src/overlays/ov001/calls/func_ov001_0206c6f4.c:
 src/overlays/ov001/calls/RegisterSessionCallback.c:
     complete
     .text       start:0x0206c704 end:0x0206c720
+
+src/overlays/ov001/calls/RemoveTaggedListEntries.c:
+    complete
+    .text       start:0x0206c720 end:0x0206c768
 
 src/overlays/ov001/calls/func_ov001_0206c768.c:
     complete

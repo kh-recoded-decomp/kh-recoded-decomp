@@ -6,6 +6,7 @@
 #define func_020365f0 PopVramState
 #define func_ov001_02063524 StoreSessionSpawnPoint
 #define func_ov001_020667b4 SuspendTaskAndSetFlag
+#define func_ov001_020676c4 ShutdownSceneContext
 #define func_ov001_0206dc80 GetBiasAdjustedField
 #define func_ov001_0207b36c Panel_TryBeginTransition4
 #define func_ov001_0207d658 func_ov001_0207d680

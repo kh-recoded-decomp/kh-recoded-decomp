@@ -9,7 +9,7 @@ extern unsigned int SuspendTaskAndSetFlag();
 extern unsigned int func_ov035_020bac90();
 extern unsigned int StoreToGlobalPtr4Field28();
 extern unsigned int ActorRegistry_ClearCollisionResult();
-extern unsigned int func_ov001_020676c4();
+extern unsigned int ShutdownSceneContext();
 extern unsigned int func_ov001_020685d4();
 extern unsigned int func_ov001_0207ef68();
 extern unsigned int func_ov001_0207efa0();
@@ -24,7 +24,7 @@ unsigned int func_ov035_020ba6e4(void) {
   ReleaseMovieResources();
   *(u16 *)(data_ov035_020bc500 + 6) = *(u16 *)(data_ov035_020bc500 + 6) & 0xfff3;
   func_ov001_020685d4();
-  func_ov001_020676c4();
+  ShutdownSceneContext();
   func_ov001_0207ef68(1);
   func_ov001_0207efa0();
   func_ov035_020bb7a8();

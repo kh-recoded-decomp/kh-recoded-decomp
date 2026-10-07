@@ -9,7 +9,7 @@ extern unsigned int ReleaseSeqArcHeapLevel();
 extern unsigned int StoreSessionSpawnPoint();
 extern unsigned int func_ov001_02064d88();
 extern unsigned int SuspendTaskAndSetFlag();
-extern unsigned int func_ov001_020676c4();
+extern unsigned int ShutdownSceneContext();
 extern unsigned int func_ov001_020685d4();
 extern unsigned int SetMenuHighlight();
 extern unsigned int func_ov001_0206dc38();
@@ -46,7 +46,7 @@ unsigned int func_ov032_020bb2a4(void) {
     } while (index < countOrGate);
   }
   func_ov001_020685d4();
-  func_ov001_020676c4();
+  ShutdownSceneContext();
   func_ov001_0207ef68(1);
   func_ov001_0207efa0();
   *(u16 *)(data_ov032_020c0080.value + 6) = *(u16 *)(data_ov032_020c0080.value + 6) & 0xfff3;

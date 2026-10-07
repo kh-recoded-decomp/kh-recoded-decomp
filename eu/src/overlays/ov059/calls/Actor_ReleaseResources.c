@@ -9,7 +9,7 @@
 #define ReleaseEffectBank_020aa1f4 ReleaseEffectBank
 #define ReleaseModelSet_020a9928 ReleaseModelSet
 #define ReleaseSharedRecordState_020a9084 ReleaseSharedRecordState
-#define RemoveTaggedListEntries_0206c720 func_ov001_0206c720
+#define RemoveTaggedListEntries_0206c720 RemoveTaggedListEntries
 #define TeardownBigObj_020ac8cc TeardownBigObj
 #define ZeroHalfThenFree_0202cd78 ZeroHalfThenFree
 #define func_020368a4 ShutdownRecordSlotByIndex

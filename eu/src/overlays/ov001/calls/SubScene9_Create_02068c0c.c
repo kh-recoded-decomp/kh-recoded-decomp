@@ -1,0 +1,4 @@
+#define NNSi_FndGetCurrentRootHeap_0202a764 NNSi_FndGetCurrentRootHeap
+#define data_ov001_020a0474 data_ov001_020a0494
+#define func_01ff8740 MIi_CpuClearFast
+#include "src/ov001/shared_engine/SubScene9_Create_02068c0c.c"
