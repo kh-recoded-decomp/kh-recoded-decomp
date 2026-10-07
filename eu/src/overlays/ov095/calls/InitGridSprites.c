@@ -1,4 +1,4 @@
 #define InitGridSprites_020c0504 InitGridSprites
 #define InitSlotFromFile_0206a8f0 InitSlotFromFile
-#define data_ov095_020c2110 data_ov095_020c2130
+#define data_ov095_020c2110 gItemAttributeLookup
 #include "src/ov095/unclassified_helpers/InitGridSprites_020c0504.c"

@@ -1,4 +1,4 @@
 #define HasOv038ObjectField28_020ba694 HasOv038ObjectField28
 #define func_0202a78c Obj_GetWord28
-#define g_ov038ObjHandle_020bbd80 data_ov038_020bbda0
+#define g_ov038ObjHandle_020bbd80 gResultsObjectHandle
 #include "src/ov038/reviewed_helpers/HasOv038ObjectField28_020ba694.c"

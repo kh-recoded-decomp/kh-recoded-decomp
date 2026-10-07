@@ -1,4 +1,4 @@
 #define PXI_Init_0202a638 PXI_Init_0202a64c
 #define ReleaseOv038Object_020ba6b8 ReleaseOv038Object
-#define g_ov038ObjHandle_020bbd80 data_ov038_020bbda0
+#define g_ov038ObjHandle_020bbd80 gResultsObjectHandle
 #include "src/ov038/reviewed_helpers/ReleaseOv038Object_020ba6b8.c"

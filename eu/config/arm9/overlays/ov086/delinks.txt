@@ -172,6 +172,118 @@ src/overlays/ov086/calls/IsRecordPageUnavailable.c:
     complete
     .text       start:0x020c20a0 end:0x020c20f4
 
+src/overlays/ov086/data/Data_ov086_020c2360.c:
+    complete
+    .data       start:0x020c2360 end:0x020c2368
+
+src/overlays/ov086/data/Data_ov086_020c2368.c:
+    complete
+    .data       start:0x020c2368 end:0x020c2380
+
+src/overlays/ov086/data/Data_ov086_020c2380.c:
+    complete
+    .data       start:0x020c2380 end:0x020c23c0
+
+src/overlays/ov086/data/Data_ov086_020c23c0.c:
+    complete
+    .data       start:0x020c23c0 end:0x020c2b18
+
+src/overlays/ov086/data/Data_ov086_020c2b18.c:
+    complete
+    .data       start:0x020c2b18 end:0x020c2fe4
+
+src/overlays/ov086/data/Data_ov086_020c2fe8.c:
+    complete
+    .data       start:0x020c2fe8 end:0x020c2ff0
+
+src/overlays/ov086/data/Data_ov086_020c2ff0.c:
+    complete
+    .data       start:0x020c2ff0 end:0x020c2ff8
+
+src/overlays/ov086/data/Rodata_ov086_020c20f4.c:
+    complete
+    .rodata     start:0x020c20f4 end:0x020c20fc
+
+src/overlays/ov086/data/Rodata_ov086_020c20fc.c:
+    complete
+    .rodata     start:0x020c20fc end:0x020c2108
+
+src/overlays/ov086/data/Rodata_ov086_020c2108.c:
+    complete
+    .rodata     start:0x020c2108 end:0x020c2118
+
+src/overlays/ov086/data/Rodata_ov086_020c2118.c:
+    complete
+    .rodata     start:0x020c2118 end:0x020c2128
+
+src/overlays/ov086/data/Rodata_ov086_020c2128.c:
+    complete
+    .rodata     start:0x020c2128 end:0x020c2138
+
+src/overlays/ov086/data/Rodata_ov086_020c2138.c:
+    complete
+    .rodata     start:0x020c2138 end:0x020c2148
+
+src/overlays/ov086/data/Rodata_ov086_020c2148.c:
+    complete
+    .rodata     start:0x020c2148 end:0x020c2158
+
+src/overlays/ov086/data/Rodata_ov086_020c2158.c:
+    complete
+    .rodata     start:0x020c2158 end:0x020c2168
+
+src/overlays/ov086/data/Rodata_ov086_020c2168.c:
+    complete
+    .rodata     start:0x020c2168 end:0x020c217c
+
+src/overlays/ov086/data/Rodata_ov086_020c217c.c:
+    complete
+    .rodata     start:0x020c217c end:0x020c219c
+
+src/overlays/ov086/data/Rodata_ov086_020c219c.c:
+    complete
+    .rodata     start:0x020c219c end:0x020c21bc
+
+src/overlays/ov086/data/Rodata_ov086_020c21bc.c:
+    complete
+    .rodata     start:0x020c21bc end:0x020c21dc
+
+src/overlays/ov086/data/Rodata_ov086_020c21dc.c:
+    complete
+    .rodata     start:0x020c21dc end:0x020c21f0
+
+src/overlays/ov086/data/Rodata_ov086_020c21f0.c:
+    complete
+    .rodata     start:0x020c21f0 end:0x020c220c
+
+src/overlays/ov086/data/Rodata_ov086_020c220c.c:
+    complete
+    .rodata     start:0x020c220c end:0x020c222c
+
+src/overlays/ov086/data/Rodata_ov086_020c222c.c:
+    complete
+    .rodata     start:0x020c222c end:0x020c224c
+
+src/overlays/ov086/data/Rodata_ov086_020c224c.c:
+    complete
+    .rodata     start:0x020c224c end:0x020c226c
+
+src/overlays/ov086/data/Rodata_ov086_020c226c.c:
+    complete
+    .rodata     start:0x020c226c end:0x020c228c
+
+src/overlays/ov086/data/Rodata_ov086_020c228c.c:
+    complete
+    .rodata     start:0x020c228c end:0x020c22ac
+
+src/overlays/ov086/data/Rodata_ov086_020c22ac.c:
+    complete
+    .rodata     start:0x020c22ac end:0x020c22d0
+
+src/overlays/ov086/data/Rodata_ov086_020c22d0.c:
+    complete
+    .rodata     start:0x020c22d0 end:0x020c2350
+
 src/overlays/ov086/data/bss/Bss_ov086_020c3020.c:
     complete
     .bss        start:0x020c3020 end:0x020c3040

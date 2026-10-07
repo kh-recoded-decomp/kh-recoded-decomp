@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-extern unsigned char data_ov091_020c2ca8;
+extern unsigned char data_ov091_020c2c88;
 extern unsigned int IsGlobalPackedBitSet();
 extern unsigned int SetEntryFlag();
 extern unsigned int SetGlobalPackedBit();
@@ -13,7 +13,7 @@ void func_ov091_020c12d4(int work) {
   completed = 0;
   index = 0;
   do {
-    flag = IsGlobalPackedBitSet(*(int *)(&data_ov091_020c2ca8 + index * 4));
+    flag = IsGlobalPackedBitSet(*(int *)(&data_ov091_020c2c88 + 0x20 + index * 4));
     if (flag != 0) {
       completed = completed + 1;
       SetGlobalPackedBit(index + 0x11b2);

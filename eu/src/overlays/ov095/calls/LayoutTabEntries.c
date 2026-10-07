@@ -2,5 +2,5 @@
 #define LayoutTabEntries_020c0478 LayoutTabEntries
 #define SetGridEntryPosition_020c02fc SetGridEntryPosition
 #define SetGridEntryVisible_020c01d8 SetGridEntryVisible
-#define data_ov095_020c1894 data_ov095_020c18b4
+#define data_ov095_020c1894 gItemGridLayoutRecords
 #include "src/ov095/unclassified_helpers/LayoutTabEntries_020c0478.c"

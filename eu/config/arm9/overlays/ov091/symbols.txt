@@ -83,6 +83,7 @@ data_ov091_020c2930 kind:data(any) addr:0x020c2930
 data_ov091_020c2950 kind:data(any) addr:0x020c2950
 data_ov091_020c2980 kind:data(any) addr:0x020c2980
 data_ov091_020c2a10 kind:data(any) addr:0x020c2a10
+data_ov091_020c2a30 kind:data(any) addr:0x020c2a30
 gReportTopTextPath kind:data(any) addr:0x020c2a40
 gReportTopResourcePaths kind:data(any) addr:0x020c2a44
 data_ov091_020c2a50 kind:data(any) addr:0x020c2a50
@@ -97,15 +98,8 @@ data_ov091_020c2bd4 kind:data(any) addr:0x020c2bd4
 sOv091_TextFontEu10Nftr_020c2c64 kind:data(any) addr:0x020c2c64
 data_ov091_020c2c7c kind:data(any) addr:0x020c2c7c
 data_ov091_020c2c88 kind:data(any) addr:0x020c2c88
-data_ov091_020c2c94 kind:data(any) addr:0x020c2c94
-data_ov091_020c2ca8 kind:data(any) addr:0x020c2ca8
-data_ov091_020c2cc5 kind:data(any) addr:0x020c2cc5 ambiguous
-data_ov091_020c2cc8 kind:data(any) addr:0x020c2cc8
-data_ov091_020c2d41 kind:data(any) addr:0x020c2d41 ambiguous
 data_ov091_020c2d68 kind:data(any) addr:0x020c2d68
 data_ov091_020c2e08 kind:data(any) addr:0x020c2e08
-data_ov091_020c322d kind:data(any) addr:0x020c322d ambiguous
-data_ov091_020c3275 kind:data(any) addr:0x020c3275 ambiguous
 data_ov091_020c3500 kind:data(any) addr:0x020c3500 ambiguous
 data_ov091_020c3580 kind:data(any) addr:0x020c3580
 data_ov091_020c3740 kind:bss addr:0x020c3740

@@ -202,7 +202,7 @@ data_ov075_020d1728 kind:data(any) addr:0x020d1728
 sSpecialTabCategories kind:data(any) addr:0x020d17a4
 sCenteredImageRotation kind:data(any) addr:0x020d17b4
 sModulatedImageRotation kind:data(any) addr:0x020d17d8
-data_ov075_020d1800 kind:data(any) addr:0x020d1800
+gMatrixMenuHandlers kind:data(any) addr:0x020d1800
 sOv075_UiMenuStamtxP2_020d1844 kind:data(any) addr:0x020d1844
 sOv075_UiMenuLanguageStamtxP2_020d1858 kind:data(any) addr:0x020d1858
 sOv075_ScrollBg_020d186c kind:data(any) addr:0x020d186c

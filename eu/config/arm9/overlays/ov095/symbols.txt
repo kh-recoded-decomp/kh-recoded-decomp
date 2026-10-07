@@ -58,26 +58,20 @@ data_ov095_020c1728 kind:data(any) addr:0x020c1728
 data_ov095_020c1744 kind:data(any) addr:0x020c1744
 gItemReportTextPaths kind:data(any) addr:0x020c1780
 gItemReportResourcePaths kind:data(any) addr:0x020c1788
-data_ov095_020c1794 kind:data(any) addr:0x020c1794
-data_ov095_020c17a8 kind:data(any) addr:0x020c17a8
-data_ov095_020c17cc kind:data(any) addr:0x020c17cc
+gItemReportDefaults kind:data(any) addr:0x020c1794
+gItemReportCompletionThresholds kind:data(any) addr:0x020c17a8
+gItemReportLayoutValues kind:data(any) addr:0x020c17cc
 sOv095_UiReportItemP2f_020c17f0 kind:data(any) addr:0x020c17f0
 sOv095_UiReportLanguageItemP2f_020c1804 kind:data(any) addr:0x020c1804
 sOv095_UiReportLanguageItemImdP2f_020c181c kind:data(any) addr:0x020c181c
 sOv095_UiMenuStrLanguageMatrixSZ_020c1838 kind:data(any) addr:0x020c1838
 sOv095_UiReportTextLanguageItemSZ_020c1854 kind:data(any) addr:0x020c1854
-data_ov095_020c1870 kind:data(any) addr:0x020c1870
-data_ov095_020c18b4 kind:data(any) addr:0x020c18b4
-data_ov095_020c19b8 kind:data(any) addr:0x020c19b8
-data_ov095_020c1a9c kind:data(any) addr:0x020c1a9c ambiguous
-data_ov095_020c1bc8 kind:data(any) addr:0x020c1bc8 ambiguous
-data_ov095_020c1c60 kind:data(any) addr:0x020c1c60 ambiguous
-data_ov095_020c1e61 kind:data(any) addr:0x020c1e61 ambiguous
-data_ov095_020c1ea0 kind:data(any) addr:0x020c1ea0 ambiguous
-data_ov095_020c2130 kind:data(any) addr:0x020c2130
-data_ov095_020c2360 kind:data(any) addr:0x020c2360 ambiguous
-data_ov095_020c2368 kind:data(any) addr:0x020c2368 ambiguous
-data_ov095_020c2380 kind:data(any) addr:0x020c2380 ambiguous
+gItemReportMenuCallbacks kind:data(any) addr:0x020c1870
+gItemGridLayoutRecords kind:data(any) addr:0x020c18b4
+gItemReportIdentifiers kind:data(any) addr:0x020c19b8
+gItemReportRecordTables kind:data(any) addr:0x020c1bc8 ambiguous
+gItemAttributeLookup kind:data(any) addr:0x020c2130
+gItemCategoryRecords kind:data(any) addr:0x020c2360 ambiguous
 sOv095_VblankFunc_020c28a8 kind:data(any) addr:0x020c28a8
 sOv095_TextFontEu10Nftr_020c28b4 kind:data(any) addr:0x020c28b4
 data_ov095_020c28cc kind:data(any) addr:0x020c28cc

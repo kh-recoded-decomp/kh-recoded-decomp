@@ -188,13 +188,73 @@ src/overlays/ov095/calls/func_ov095_020c1628.c:
     complete
     .text       start:0x020c1628 end:0x020c1714
 
+src/overlays/ov095/data/Data_ov095_020c1794.c:
+    complete
+    .data       start:0x020c1794 end:0x020c17a8
+
+src/overlays/ov095/data/Data_ov095_020c17a8.c:
+    complete
+    .data       start:0x020c17a8 end:0x020c17cc
+
+src/overlays/ov095/data/Data_ov095_020c17cc.c:
+    complete
+    .data       start:0x020c17cc end:0x020c17f0
+
+src/overlays/ov095/data/Data_ov095_020c1870.c:
+    complete
+    .data       start:0x020c1870 end:0x020c18b4
+
+src/overlays/ov095/data/Data_ov095_020c18b4.c:
+    complete
+    .data       start:0x020c18b4 end:0x020c19b8
+
+src/overlays/ov095/data/Data_ov095_020c19b8.c:
+    complete
+    .data       start:0x020c19b8 end:0x020c1bc8
+
+src/overlays/ov095/data/Data_ov095_020c1bc8.c:
+    complete
+    .data       start:0x020c1bc8 end:0x020c2130
+
+src/overlays/ov095/data/Data_ov095_020c2130.c:
+    complete
+    .data       start:0x020c2130 end:0x020c2360
+
+src/overlays/ov095/data/Data_ov095_020c2360.c:
+    complete
+    .data       start:0x020c2360 end:0x020c28a8
+
+src/overlays/ov095/data/Data_ov095_020c28cc.c:
+    complete
+    .data       start:0x020c28cc end:0x020c28e0
+
+src/overlays/ov095/data/Rodata_ov095_020c1714.c:
+    complete
+    .rodata     start:0x020c1714 end:0x020c171c
+
+src/overlays/ov095/data/Rodata_ov095_020c1728.c:
+    complete
+    .rodata     start:0x020c1728 end:0x020c1744
+
+src/overlays/ov095/data/Rodata_ov095_020c1744.c:
+    complete
+    .rodata     start:0x020c1744 end:0x020c1768
+
 src/overlays/ov095/data/bss/Bss_ov095_020c28e0.c:
     complete
     .bss        start:0x020c28e0 end:0x020c2900
 
 src/overlays/ov095/data/strings/Strings_ov095_020c17f0.c:
     complete
-    .data       start:0x020c17f0 end:0x020c1838
+    .data       start:0x020c17f0 end:0x020c1804
+
+src/overlays/ov095/data/strings/Strings_ov095_020c1804.c:
+    complete
+    .data       start:0x020c1804 end:0x020c181c
+
+src/overlays/ov095/data/strings/Strings_ov095_020c181c.c:
+    complete
+    .data       start:0x020c181c end:0x020c1838
 
 src/overlays/ov095/data/strings/Strings_ov095_020c1838.c:
     complete
@@ -206,12 +266,20 @@ src/overlays/ov095/data/strings/Strings_ov095_020c1854.c:
 
 src/overlays/ov095/data/strings/Strings_ov095_020c28a8.c:
     complete
-    .data       start:0x020c28a8 end:0x020c28cc
+    .data       start:0x020c28a8 end:0x020c28b4
+
+src/overlays/ov095/data/strings/Strings_ov095_020c28b4.c:
+    complete
+    .data       start:0x020c28b4 end:0x020c28cc
 
 src/overlays/ov095/data/tables/PointerTables_ov095_020c1780.c:
     complete
-    .data       start:0x020c1780 end:0x020c1794
+    .data       start:0x020c1788 end:0x020c1794
 
 src/overlays/ov095/data/tables/gItemReportStateHandlers.c:
     complete
     .rodata     start:0x020c171c end:0x020c1728
+
+src/overlays/ov095/data/tables/gItemReportTextPaths.c:
+    complete
+    .data       start:0x020c1780 end:0x020c1788

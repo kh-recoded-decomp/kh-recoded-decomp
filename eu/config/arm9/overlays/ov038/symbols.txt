@@ -43,35 +43,35 @@ func_ov038_020bbcb0 kind:function(arm,size=0xc) addr:0x020bbcb0
 func_ov038_020bbcbc kind:function(arm,size=0x1c) addr:0x020bbcbc
 ReleaseOv038Context kind:function(arm,size=0x30) addr:0x020bbcd8
 func_ov038_020bbd08 kind:function(arm,size=0x28) addr:0x020bbd08
-data_ov038_020bbd30 kind:data(any) addr:0x020bbd30
+gResultsMessageIds kind:data(any) addr:0x020bbd30
 gResultsPageStateHandlers kind:data(any) addr:0x020bbd44
-data_ov038_020bbd58 kind:data(any) addr:0x020bbd58
-data_ov038_020bbd78 kind:data(any) addr:0x020bbd78
-data_ov038_020bbda0 kind:data(any) addr:0x020bbda0
-data_ov038_020bbda4 kind:data(any) addr:0x020bbda4
+gResultsLayoutWidths kind:data(any) addr:0x020bbd58
+gResultsLayoutOffsets kind:data(any) addr:0x020bbd78
+gResultsObjectHandle kind:data(any) addr:0x020bbda0
+gResultsSoundContextConfig kind:data(any) addr:0x020bbda4
 gResultsSoundStateHandlers kind:data(any) addr:0x020bbdb8
 gResultsResourcePaths kind:data(any) addr:0x020bbdd0
 sOv038_ClearClearP2f_020bbddc kind:data(any) addr:0x020bbddc
 sOv038_ClearLanguageClearP2f_020bbdec kind:data(any) addr:0x020bbdec
 sOv038_ClearLanguageClearObjP2f_020bbe00 kind:data(any) addr:0x020bbe00
-data_ov038_020bbe18 kind:data(any) addr:0x020bbe18
-data_ov038_020bbe6c kind:data(any) addr:0x020bbe6c
-data_ov038_020bbefc kind:data(any) addr:0x020bbefc
-data_ov038_020bbf9d kind:data(any) addr:0x020bbf9d ambiguous
-data_ov038_020bc05c kind:data(any) addr:0x020bc05c ambiguous
-data_ov038_020bc131 kind:data(any) addr:0x020bc131 ambiguous
-data_ov038_020bc3ad kind:data(any) addr:0x020bc3ad ambiguous
-data_ov038_020bc4c8 kind:data(any) addr:0x020bc4c8 ambiguous
-data_ov038_020bc4c9 kind:data(any) addr:0x020bc4c9 ambiguous
-data_ov038_020bc4e8 kind:data(any) addr:0x020bc4e8 ambiguous
-data_ov038_020bc500 kind:data(any) addr:0x020bc500 ambiguous
-data_ov038_020bc645 kind:data(any) addr:0x020bc645 ambiguous
-data_ov038_020bc674 kind:data(any) addr:0x020bc674
-data_ov038_020bc815 kind:data(any) addr:0x020bc815 ambiguous
-data_ov038_020bc86d kind:data(any) addr:0x020bc86d ambiguous
-data_ov038_020bcdad kind:data(any) addr:0x020bcdad ambiguous
-data_ov038_020bcec1 kind:data(any) addr:0x020bcec1 ambiguous
-data_ov038_020bcf45 kind:data(any) addr:0x020bcf45 ambiguous
-data_ov038_020bcf55 kind:data(any) addr:0x020bcf55 ambiguous
+gResultsTables kind:data(any) addr:0x020bbe18
+gResultsTopMessageIds kind:label(arm) addr:0x020bbe6c
+gResultsTopRecordTableA kind:label(arm) addr:0x020bbefc
+gResultsTopRecordTableB kind:label(arm) addr:0x020bbf9d
+gResultsTopRecordTableC kind:label(arm) addr:0x020bc05c
+gResultsTopRecordTableD kind:label(arm) addr:0x020bc131
+gResultsTopRecordTableE kind:label(arm) addr:0x020bc3ad
+gResultsBottomMode kind:label(arm) addr:0x020bc4c8
+gResultsBottomOrder kind:label(arm) addr:0x020bc4c9
+gResultsBottomLayout kind:label(arm) addr:0x020bc4e8
+gResultsBottomRecordTableA kind:label(arm) addr:0x020bc500
+gResultsBottomHeader kind:label(arm) addr:0x020bc645
+gResultsBottomSpriteLayout kind:data(any) addr:0x020bc674
+gResultsBottomIndexTable kind:label(arm) addr:0x020bc815
+gResultsBottomRecordTableB kind:label(arm) addr:0x020bc86d
+gResultsSummaryTableA kind:label(arm) addr:0x020bcdad
+gResultsSummaryTableB kind:label(arm) addr:0x020bcec1
+gResultsSummaryState kind:label(arm) addr:0x020bcf45
+gResultsSummaryRecordTable kind:label(arm) addr:0x020bcf55
 data_ov038_020bd160 kind:bss addr:0x020bd160
 data_ov038_020bd164 kind:bss addr:0x020bd164

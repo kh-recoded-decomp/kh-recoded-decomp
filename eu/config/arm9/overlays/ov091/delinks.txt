@@ -264,6 +264,78 @@ src/overlays/ov091/calls/GetPlayerFlagRecord_020c2820.c:
     complete
     .text       start:0x020c2820 end:0x020c2834
 
+src/overlays/ov091/data/Data_ov091_020c2a50.c:
+    complete
+    .data       start:0x020c2a50 end:0x020c2a7c
+
+src/overlays/ov091/data/Data_ov091_020c2ad8.c:
+    complete
+    .data       start:0x020c2ad8 end:0x020c2c64
+
+src/overlays/ov091/data/Data_ov091_020c2c7c.c:
+    complete
+    .data       start:0x020c2c7c end:0x020c2c88
+
+src/overlays/ov091/data/Data_ov091_020c2c88.c:
+    complete
+    .data       start:0x020c2c88 end:0x020c2d68
+
+src/overlays/ov091/data/Data_ov091_020c2d68.c:
+    complete
+    .data       start:0x020c2d68 end:0x020c2e08
+
+src/overlays/ov091/data/Data_ov091_020c2e08.c:
+    complete
+    .data       start:0x020c2e08 end:0x020c3500
+
+src/overlays/ov091/data/Data_ov091_020c3500.c:
+    complete
+    .data       start:0x020c3500 end:0x020c3740
+
+src/overlays/ov091/data/Rodata_ov091_020c2834.c:
+    complete
+    .rodata     start:0x020c2834 end:0x020c283c
+
+src/overlays/ov091/data/Rodata_ov091_020c2848.c:
+    complete
+    .rodata     start:0x020c2848 end:0x020c285c
+
+src/overlays/ov091/data/Rodata_ov091_020c285c.c:
+    complete
+    .rodata     start:0x020c285c end:0x020c2890
+
+src/overlays/ov091/data/Rodata_ov091_020c2890.c:
+    complete
+    .rodata     start:0x020c2890 end:0x020c28b0
+
+src/overlays/ov091/data/Rodata_ov091_020c28b0.c:
+    complete
+    .rodata     start:0x020c28b0 end:0x020c28d0
+
+src/overlays/ov091/data/Rodata_ov091_020c28d0.c:
+    complete
+    .rodata     start:0x020c28d0 end:0x020c28f0
+
+src/overlays/ov091/data/Rodata_ov091_020c28f0.c:
+    complete
+    .rodata     start:0x020c28f0 end:0x020c2910
+
+src/overlays/ov091/data/Rodata_ov091_020c2910.c:
+    complete
+    .rodata     start:0x020c2910 end:0x020c2930
+
+src/overlays/ov091/data/Rodata_ov091_020c2930.c:
+    complete
+    .rodata     start:0x020c2930 end:0x020c2a10
+
+src/overlays/ov091/data/Rodata_ov091_020c2a10.c:
+    complete
+    .rodata     start:0x020c2a10 end:0x020c2a30
+
+src/overlays/ov091/data/Rodata_ov091_020c2a30.c:
+    complete
+    .rodata     start:0x020c2a30 end:0x020c2a34
+
 src/overlays/ov091/data/bss/Bss_ov091_020c3740.c:
     complete
     .bss        start:0x020c3740 end:0x020c375c
@@ -278,7 +350,15 @@ src/overlays/ov091/data/strings/Strings_ov091_020c2a7c.c:
 
 src/overlays/ov091/data/strings/Strings_ov091_020c2a90.c:
     complete
-    .data       start:0x020c2a90 end:0x020c2ad8
+    .data       start:0x020c2a90 end:0x020c2aa4
+
+src/overlays/ov091/data/strings/Strings_ov091_020c2aa4.c:
+    complete
+    .data       start:0x020c2aa4 end:0x020c2abc
+
+src/overlays/ov091/data/strings/Strings_ov091_020c2abc.c:
+    complete
+    .data       start:0x020c2abc end:0x020c2ad8
 
 src/overlays/ov091/data/strings/Strings_ov091_020c2c64.c:
     complete

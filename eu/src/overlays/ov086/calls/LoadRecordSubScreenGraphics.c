@@ -6,7 +6,7 @@
 #define LoadRecordSubScreenGraphics_020c0f08 LoadRecordSubScreenGraphics
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define TagTracker_InvokeCallback_020b8210 func_ov027_020b8230
-#define data_ov086_020c21bc data_ov086_020c21dc
+#define data_ov086_020c21bc gRecordPanelCallbacks
 #define func_020033e0 DC_FlushAll
 #define func_02014d38 NNS_G2dGetUnpackedBGCharacterData
 #define func_0202c48c func_0202c4a0

@@ -1,0 +1,6 @@
+#include "nitro/types.h"
+
+const u32 gResultsLayoutOffsets[8] = {
+    0x00000500, 0x00000508, 0x00000518, 0x00000528,
+    0x00000540, 0x00000550, 0x00000560, 0x00000570,
+};
