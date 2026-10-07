@@ -1,0 +1,6 @@
+#define Camera_CommitView_020c0b34 Camera_CommitView
+#define camera_commit_projection_0202a814 camera_commit_projection
+#define func_ov046_020c0c34 Camera_UpdateViewAxes
+#define func_ov047_020c3500 Camera_SetSavedTarget
+#define g_cameraManager_020c34e0 data_ov046_020c3500
+#include "src/ov046/shared_engine/Camera_CommitView_020c0b34.c"

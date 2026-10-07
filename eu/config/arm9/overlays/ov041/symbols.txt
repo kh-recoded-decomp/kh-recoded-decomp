@@ -65,6 +65,7 @@ data_ov041_020cee9c kind:data(any) addr:0x020cee9c
 data_ov041_020ceee0 kind:data(any) addr:0x020ceee0
 data_ov041_020ceee4 kind:data(any) addr:0x020ceee4
 data_ov041_020cefb0 kind:data(any) addr:0x020cefb0
+data_ov041_020cf0d4 kind:function(arm,size=0x9c) addr:0x020cf0d4
 data_ov041_020cf170 kind:data(any) addr:0x020cf170
 data_ov041_020cf1c4 kind:data(any) addr:0x020cf1c4
 data_ov041_020cf1f8 kind:data(any) addr:0x020cf1f8

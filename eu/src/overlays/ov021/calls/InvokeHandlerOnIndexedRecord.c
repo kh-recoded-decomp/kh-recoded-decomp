@@ -1,4 +1,4 @@
 #define InvokeHandlerOnIndexedRecord_020a8e88 InvokeHandlerOnIndexedRecord
 #define func_ov021_020a867c SelectModelTrackBlends
-#define func_ov021_020a8810 func_ov021_020a8830
+#define func_ov021_020a8810 FindEntryGroupById
 #include "src/ov021/unclassified_helpers/InvokeHandlerOnIndexedRecord_020a8e88.c"

@@ -1,0 +1,3 @@
+#define StopTouchScrolling_020c0edc StopTouchScrolling
+#define func_ov039_020bc03c RuntimeState_SetCondition
+#include "src/ov097/panel_state/StopTouchScrolling_020c0edc.c"

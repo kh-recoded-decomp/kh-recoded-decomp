@@ -1,7 +1,7 @@
 #define DrawScrolledPopups_020c0d70 DrawScrolledPopups
 #define EaseScrollTrack_020c13c8 EaseScrollTrack
 #define GetScrollTrackRow_020c13a8 GetScrollTrackRow
-#define InitSlotPools_020bff74 func_ov097_020bff94
+#define InitSlotPools_020bff74 InitSlotPools
 #define SetScrollTrackTarget_020c1328 SetScrollTrackTarget
 #define UpdateMenuScene_020bedfc UpdateMenuScene
 #define data_0205356c data_02053580

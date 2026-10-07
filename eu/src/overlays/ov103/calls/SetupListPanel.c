@@ -1,4 +1,4 @@
-#define AlignUpTo4K_020beb00 func_ov103_020beb20
+#define AlignUpTo4K_020beb00 AlignSizeUpTo4K
 #define FX_Div_01ff9c84 FX_Div
 #define SetupListPanel_020bf994 SetupListPanel
 #define func_ov103_020bf678 SetSlotEntryVisible

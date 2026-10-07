@@ -12,5 +12,5 @@
 #define func_ov001_0207ef40 func_ov001_0207ef68
 #define func_ov001_02087628 func_ov001_02087650
 #define func_ov001_0208804c ForwardToActiveService_02088074
-#define func_ov021_020af57c func_ov021_020af59c
+#define func_ov021_020af57c ForwardSubModePairB
 #include "src/ov032/unclassified_helpers/ResumeSceneAndAdvance_020baa08.c"

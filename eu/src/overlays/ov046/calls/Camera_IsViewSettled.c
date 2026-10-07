@@ -1,0 +1,4 @@
+#define Camera_IsViewSettled_020c1540 Camera_IsViewSettled
+#define g_cameraManager_020c34e0 data_ov046_020c3500
+#define func_ov047_020c3538 Camera_IsFollowFlag13Set
+#include "src/ov046/shared_engine/Camera_IsViewSettled_020c1540.c"

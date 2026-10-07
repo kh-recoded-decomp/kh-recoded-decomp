@@ -1,7 +1,7 @@
 #define ApplyTimeScaledSpeed_020c7d28 ApplyTimeScaledSpeed
 #define ClearRecord68_020aa1dc ClearRecord68
 #define GetClampedPaletteSlot_02073598 GetClampedPaletteSlot
-#define InitMemberGroup_020ad5c8 func_ov021_020ad5e8
+#define InitMemberGroup_020ad5c8 InitMemberGroup
 #define InitSlotMarker_020ab6dc InitSlotMarker
 #define InitSlotTable_020a98e8 InitSlotTable
 #define IsFieldFlag16Set_020735b8 IsFieldFlag16Set

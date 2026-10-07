@@ -11,7 +11,7 @@
 #define LoadAvatarObjPalette_02067b24 LoadAvatarObjPalette
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define SetAllElementObjectModes_020b97fc SetAllElementObjectModes
-#define SetPanelPhase_0207174c func_ov013_0207174c
+#define SetPanelPhase_0207174c SetPanelPhase
 #define ZeroHalfThenFree_0202cd78 ZeroHalfThenFree
 #define data_ov013_02074b20 gPanelAssetPaths
 #define data_ov013_02074c4c sOv013_WxcWlaP2_02074c4c

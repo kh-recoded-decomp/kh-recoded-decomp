@@ -1,5 +1,5 @@
 #define Camera_ApplyOffsetClampHeight_020c0a24 Camera_ApplyOffsetClampHeight
-#define Camera_CommitView_020c0b34 func_ov046_020c0b54
+#define Camera_CommitView_020c0b34 Camera_CommitView
 #define Camera_IsFrozen_020c0c1c Camera_IsFrozen
 #define Camera_Update_020c0b6c Camera_Update
 #define SetSoundListenerFrame_0204dc94 SetSoundListenerFrame

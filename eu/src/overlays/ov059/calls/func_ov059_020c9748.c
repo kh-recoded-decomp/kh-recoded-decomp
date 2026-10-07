@@ -31,7 +31,7 @@ extern void Actor_GetRootMotionDelta(Actor *actor, VecFx32 *target);
 extern void *func_ov001_0206db78(u32 playerIndex);
 extern BOOL func_ov021_020a7524(void *record);
 extern BOOL HasFlagsAt0xc(void *record, u16 mask);
-extern BOOL func_ov059_020cb930(Actor *actor);
+extern BOOL Actor_TryAcquireTargetAngle(Actor *actor);
 extern void func_ov059_020c999c(Actor *actor);
 
 void func_ov059_020c9748(Actor *actor)
@@ -50,7 +50,7 @@ void func_ov059_020c9748(Actor *actor)
     actor->moveTarget = target;
     record = func_ov001_0206db78(actor->playerIndex);
     if (actor->animFrame >= 0x9000 && !(actor->statusFlags & 2) && func_ov021_020a7524(record) &&
-        HasFlagsAt0xc(record, 0x800) && func_ov059_020cb930(actor)) {
+        HasFlagsAt0xc(record, 0x800) && Actor_TryAcquireTargetAngle(actor)) {
         actor->statusFlags |= 2;
     }
     func_ov059_020c999c(actor);

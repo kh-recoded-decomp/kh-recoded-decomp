@@ -1,4 +1,4 @@
-func_ov103_020beb20 kind:function(arm,size=0x20) addr:0x020beb20
+AlignSizeUpTo4K kind:function(arm,size=0x20) addr:0x020beb20
 InitMenuScene_020beb40 kind:function(arm,size=0x44) addr:0x020beb40
 DestroyMenuScene_020beb84 kind:function(arm,size=0x34) addr:0x020beb84
 RunSceneStateHandler kind:function(arm,size=0x2c) addr:0x020bebb8

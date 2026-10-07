@@ -79,7 +79,7 @@ extern void func_ov001_02065a94(void);
 extern void ScriptCmd_ConfigureEventSlot(void); /* ScriptCmd_ConfigureEventSlot */
 extern void ScriptCmd_SpawnRewardAtActor(void); /* ScriptCmd_SpawnRewardAtActor */
 extern void func_ov001_02065b8c(void);
-extern void func_ov001_02065bb0(void); /* ScriptCmd_PlacePartyMember */
+extern void ScriptCmd_PlacePartyMember(void);
 extern void func_ov001_02065c10(void); /* ScriptCmd_EnterPhase */
 extern void ScriptCmd_StoreRandomBits(void); /* ScriptCmd_StoreRandomBits */
 extern void func_ov001_02065c4c(void); /* ScriptCmd_EnterPhase */
@@ -250,7 +250,7 @@ void (*gFieldScriptCommandHandlers[190])(void) = {
     NULL,
     ScriptCmd_SpawnRewardAtActor, /* ScriptCmd_SpawnRewardAtActor */
     func_ov001_02065b8c,
-    func_ov001_02065bb0, /* ScriptCmd_PlacePartyMember */
+    ScriptCmd_PlacePartyMember,
     NULL,
     func_ov001_02065c10, /* ScriptCmd_EnterPhase */
     NULL,

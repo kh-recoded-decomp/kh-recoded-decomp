@@ -144,6 +144,10 @@ src/overlays/ov013/calls/func_ov013_020716e4.c:
     complete
     .text       start:0x020716e4 end:0x0207174c
 
+src/overlays/ov013/calls/SetPanelPhase.c:
+    complete
+    .text       start:0x0207174c end:0x020717c0
+
 src/overlays/ov013/calls/ResolvePanelExitMode.c:
     complete
     .text       start:0x020717c0 end:0x020718e0

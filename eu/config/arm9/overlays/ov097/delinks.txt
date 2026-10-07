@@ -76,6 +76,14 @@ src/overlays/ov097/calls/InitMenuPanels.c:
     complete
     .text       start:0x020bfdec end:0x020bff64
 
+src/overlays/ov097/calls/ReleaseSlotPools.c:
+    complete
+    .text       start:0x020bff64 end:0x020bff94
+
+src/overlays/ov097/calls/InitSlotPools.c:
+    complete
+    .text       start:0x020bff94 end:0x020bffb4
+
 src/overlays/ov097/calls/SetPanelSlotFlag.c:
     complete
     .text       start:0x020bffb4 end:0x020bfff0
@@ -131,6 +139,10 @@ src/overlays/ov097/calls/DrawScrolledPopups.c:
 src/overlays/ov097/calls/ApplyTouchRegionBounds.c:
     complete
     .text       start:0x020c0e7c end:0x020c0efc
+
+src/overlays/ov097/calls/StopTouchScrolling.c:
+    complete
+    .text       start:0x020c0efc end:0x020c0f18
 
 src/overlays/ov097/calls/UpdateScrollBarDrag_020c0f18.c:
     complete

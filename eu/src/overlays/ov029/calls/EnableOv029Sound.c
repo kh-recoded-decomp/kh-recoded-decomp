@@ -5,6 +5,6 @@
 #define func_ov001_0206c2f8 SetMenuHighlight
 #define func_ov001_0207d120 LoadContextResourceGroups
 #define func_ov001_0207ef40 func_ov001_0207ef68
-#define func_ov021_020af57c func_ov021_020af59c
+#define func_ov021_020af57c ForwardSubModePairB
 #define g_ov029SoundCtx_020baba0 data_ov029_020babc0
 #include "src/ov029/reviewed_helpers/EnableOv029Sound_020ba670.c"

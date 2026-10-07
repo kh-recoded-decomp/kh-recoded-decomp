@@ -18,7 +18,7 @@
 #define VEC_Normalize_01ffaff4 func_01ffaff4
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define data_0205ab3c NNS_G3dGlb_camPos
-#define func_ov046_020c19f0 func_ov046_020c1a10
+#define func_ov046_020c19f0 Camera_GetModeDistance
 #define func_ov046_020c1a48 func_ov046_020c1a68
 #define func_ov046_020c1a70 Camera_ComputeFollowDistance
 #define func_ov047_020c4768 Camera_FollowControllerUpdate

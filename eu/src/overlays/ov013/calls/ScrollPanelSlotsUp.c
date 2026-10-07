@@ -1,4 +1,4 @@
 #define ResetGroupSlotsPosition_020680a4 ResetGroupSlotsPosition
 #define ScrollPanelSlotsUp_020742a4 ScrollPanelSlotsUp
-#define SetPanelPhase_0207174c func_ov013_0207174c
+#define SetPanelPhase_0207174c SetPanelPhase
 #include "src/ov013/panel_state/ScrollPanelSlotsUp_020742a4.c"

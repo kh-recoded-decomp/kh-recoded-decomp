@@ -1,10 +1,10 @@
 #define DestroyMenuScene_020beda8 DestroyMenuScene_020bedc8
 #define FreeGraphicsResources_020bf82c FreeGraphicsResources_020bf84c
 #define FreeMessageBuffers_020bf6ec FreeMessageBuffers_020bf70c
-#define ReleaseSlotPools_020bff44 func_ov097_020bff64
+#define ReleaseSlotPools_020bff44 ReleaseSlotPools
 #define ReleaseTextLayers_020bfac8 ReleaseTextLayers_020bfae8
 #define SetStateFlagBits_020bc688 SetStateFlagBits
 #define func_ov097_020c0d20 ReleasePopupEntries
-#define func_ov097_020c0edc func_ov097_020c0efc
+#define func_ov097_020c0edc StopTouchScrolling
 #define g_menuScene_020c2520 data_ov097_020c2540
 #include "src/ov097/panel_state/DestroyMenuScene_020beda8.c"

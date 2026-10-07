@@ -1,0 +1,6 @@
+#define ForwardSubModePairB_020af57c ForwardSubModePairB
+#define data_ov021_020b56a0 data_ov021_020b56c0
+#define func_ov046_020c0d88 Camera_RequestMode
+#define func_ov042_020bd0fc func_ov042_020bd11c
+#define func_ov043_020bc8e0 func_ov043_020bc900
+#include "src/ov021/sub_mode/ForwardSubModePairB_020af57c.c"

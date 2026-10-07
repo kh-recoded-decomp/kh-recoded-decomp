@@ -1,0 +1,5 @@
+#define StartEventCameraFollow_020c363c StartEventCameraFollow
+#define EventCamera_Update_020c2d20 EventCamera_Update
+#define func_01ffa0f4 VEC_Distance
+#define func_ov049_020c4510 SetupEventCameraShot
+#include "src/ov049/shared_engine/StartEventCameraFollow_020c363c.c"

@@ -36,6 +36,10 @@ src/overlays/ov073/calls/CreateContainerCells.c:
     complete
     .text       start:0x020bfef0 end:0x020bff1c
 
+src/overlays/ov073/calls/OpenStatusPageView.c:
+    complete
+    .text       start:0x020bff1c end:0x020bff88
+
 src/overlays/ov073/auto/func_ov073_020bff88.c:
     complete
     .text       start:0x020bff88 end:0x020bff8c
@@ -56,9 +60,17 @@ src/overlays/ov073/calls/HideStatusPageRows.c:
     complete
     .text       start:0x020c0da8 end:0x020c0e0c
 
+src/overlays/ov073/calls/SetupStatusScreenScroll.c:
+    complete
+    .text       start:0x020c0e0c end:0x020c0e58
+
 src/overlays/ov073/calls/HideStatusScreenElement.c:
     complete
     .text       start:0x020c1044 end:0x020c1060
+
+src/overlays/ov073/calls/SetupStatusPanelScroll.c:
+    complete
+    .text       start:0x020c1060 end:0x020c10a8
 
 src/overlays/ov073/calls/HideStatusPanelElement.c:
     complete
@@ -99,6 +111,10 @@ src/overlays/ov073/calls/ShowSelectedRecordName.c:
 src/overlays/ov073/calls/ShowStatusPageContents.c:
     complete
     .text       start:0x020c1b48 end:0x020c1c00
+
+src/overlays/ov073/calls/AddStatusMenuFlags.c:
+    complete
+    .text       start:0x020c1c00 end:0x020c1c70
 
 src/overlays/ov073/auto/func_ov073_020c1ce0.c:
     complete

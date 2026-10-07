@@ -1,4 +1,4 @@
-#define FindEntryGroupById_020a8810 func_ov021_020a8830
+#define FindEntryGroupById_020a8810 FindEntryGroupById
 #define RestartEntrySlot_020a8d54 RestartEntrySlot
 #define SpawnSoundSlot_0204da8c SpawnSoundSlot
 #define func_ov021_020a8844 ResolveEntryAnchorPosition

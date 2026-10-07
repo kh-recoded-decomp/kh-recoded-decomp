@@ -5,5 +5,5 @@
 #define func_ov021_020a751c HasFlagsAt0xc
 #define func_ov059_020c997c func_ov059_020c999c
 #define func_ov059_020ca33c func_ov059_020ca35c
-#define func_ov059_020cb910 func_ov059_020cb930
+#define func_ov059_020cb910 Actor_TryAcquireTargetAngle
 #include "src/ov059/unclassified_helpers/Actor_UpdateSettleState_020cb4f0.c"

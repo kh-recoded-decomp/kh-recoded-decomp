@@ -1,0 +1,7 @@
+#define AddStatusMenuFlags_020c1be0 AddStatusMenuFlags
+#define func_ov073_020c1a00 ShowSelectedRecordName
+#define SetStatusElementVisible_020beb5c SetStatusElementVisible
+#define SetScreenBrightness_020bc648 SetScreenBrightness
+#define SetPrimaryElementEnabled_020bc054 SetPrimaryElementEnabled
+#define func_ov039_020bc03c RuntimeState_SetCondition
+#include "src/ov073/status_menu/AddStatusMenuFlags_020c1be0.c"

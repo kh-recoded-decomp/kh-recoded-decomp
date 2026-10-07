@@ -22,7 +22,7 @@ func_ov024_020b6bd0 kind:function(thumb,size=0x1c8) addr:0x020b6bd0
 DestroyBoardScreen kind:function(thumb,size=0x7c) addr:0x020b6d98
 func_ov024_020b6e14 kind:function(thumb,size=0x434) addr:0x020b6e14
 ApplyDirectionOffset kind:function(thumb,size=0x60) addr:0x020b7248
-func_ov024_020b72a8 kind:function(thumb,size=0x54) addr:0x020b72a8
+GetCursorScreenPos kind:function(thumb,size=0x54) addr:0x020b72a8
 func_ov024_020b72fc kind:function(thumb,size=0x8) addr:0x020b72fc
 ResetBoardCursor kind:function(thumb,size=0x3c) addr:0x020b7304
 data_ov024_020b7340 kind:data(any) addr:0x020b7340

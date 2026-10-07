@@ -8,6 +8,6 @@
 #define func_ov001_02082860 func_ov001_02082888
 #define func_ov001_02087628 func_ov001_02087650
 #define func_ov001_0208804c ForwardToActiveService_02088074
-#define func_ov021_020af57c func_ov021_020af59c
+#define func_ov021_020af57c ForwardSubModePairB
 #define g_activeState_020bc800 data_ov031_020bc820
 #include "src/ov031/state_machine/TryEnterState6_020ba72c.c"

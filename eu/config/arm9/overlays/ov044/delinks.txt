@@ -83,6 +83,10 @@ src/overlays/ov044/calls/SpawnPanelDriftParticle.c:
     complete
     .text       start:0x020d05ac end:0x020d05e0
 
+src/overlays/ov044/calls/SpawnPanelDriftPreset.c:
+    complete
+    .text       start:0x020d05e0 end:0x020d0608
+
 src/overlays/ov044/calls/InitPanel.c:
     complete
     .text       start:0x020d0608 end:0x020d069c

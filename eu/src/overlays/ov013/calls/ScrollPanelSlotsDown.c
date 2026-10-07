@@ -1,5 +1,5 @@
 #define ResetGroupSlotsPosition_020680a4 ResetGroupSlotsPosition
 #define ScrollPanelSlotsDown_0207436c ScrollPanelSlotsDown
 #define SetGroupSlotsVisible_02068248 SetGroupSlotsVisible
-#define SetPanelPhase_0207174c func_ov013_0207174c
+#define SetPanelPhase_0207174c SetPanelPhase
 #include "src/ov013/panel_state/ScrollPanelSlotsDown_0207436c.c"

@@ -4,6 +4,10 @@
     .data       start:0x020c04c0 end:0x020c0720 kind:data align:32
     .bss        start:0x020c0720 end:0x020c0740 kind:bss align:32
 
+src/overlays/ov103/calls/AlignSizeUpTo4K.c:
+    complete
+    .text       start:0x020beb20 end:0x020beb40
+
 src/overlays/ov103/calls/InitMenuScene_020beb40.c:
     complete
     .text       start:0x020beb40 end:0x020beb84

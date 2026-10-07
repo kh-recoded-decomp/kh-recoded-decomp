@@ -1,0 +1,6 @@
+#define NotifySubModeEvent_020af6c4 NotifySubModeEvent
+#define data_ov021_020b56a0 data_ov021_020b56c0
+#define func_ov046_020c16c0 Camera_RefreshStandardView
+#define func_ov039_020bd084 func_ov039_020bd0a4
+#define func_ov044_020d0b88 ReapplyPanelState
+#include "src/ov021/sub_mode/NotifySubModeEvent_020af6c4.c"

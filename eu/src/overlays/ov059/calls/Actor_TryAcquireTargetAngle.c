@@ -1,0 +1,7 @@
+#define Actor_TryAcquireTargetAngle_020cb910 Actor_TryAcquireTargetAngle
+#define func_ov001_0206db78 GetPlayerControlState
+#define func_02050014 IsPlayerEntryFlagSet
+#define func_ov021_020a7504 func_ov021_020a7524
+#define QuantizeSummedAngle_020cd334 QuantizeSummedAngle
+#define data_0205356c data_02053580
+#include "src/ov059/unclassified_helpers/Actor_TryAcquireTargetAngle_020cb910.c"

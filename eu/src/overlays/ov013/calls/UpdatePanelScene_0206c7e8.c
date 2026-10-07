@@ -1,7 +1,7 @@
 #define DrawPlayerCardDetails_0206e574 DrawPlayerCardDetails
 #define NNS_FndInitListWithOffset0_0204f11c NNS_FndInitListWithOffset0_0204f130
 #define SetGroupSlotsVisible_02068248 SetGroupSlotsVisible
-#define SetPanelPhase_0207174c func_ov013_0207174c
+#define SetPanelPhase_0207174c SetPanelPhase
 #define UpdateFloatingPanelSprites_0207449c UpdateFloatingPanelSprites
 #define data_ov013_02074bc0 gPanelEntryStateHandler
 #define func_ov013_02071454 BlinkPanelCursor_02071454

@@ -820,6 +820,10 @@ src/overlays/ov001/calls/func_ov001_02065b8c.c:
     complete
     .text       start:0x02065b8c end:0x02065bae
 
+src/overlays/ov001/calls/ScriptCmd_PlacePartyMember.c:
+    complete
+    .text       start:0x02065bb0 end:0x02065c10
+
 src/overlays/ov001/calls/func_ov001_02065c10.c:
     complete
     .text       start:0x02065c10 end:0x02065c1e
@@ -2931,6 +2935,10 @@ src/overlays/ov001/calls/GetModeSecondaryMessage.c:
 src/overlays/ov001/calls/GetFieldChunkEntry.c:
     complete
     .text       start:0x02072dd4 end:0x02072dec
+
+src/overlays/ov001/calls/ApplyCurrentFieldMode.c:
+    complete
+    .text       start:0x02072dec end:0x02072e08
 
 src/overlays/ov001/calls/InvokeFieldModeOp150.c:
     complete

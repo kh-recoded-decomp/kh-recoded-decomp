@@ -1,7 +1,7 @@
 #include "nitro/types.h"
 
 extern void SetGroupSlotsVisible(int screenBase, int paletteBase, int mode);
-extern void func_ov013_0207174c(int index);
+extern void SetPanelPhase(int index);
 extern int data_ov013_02074ce0;
 
 /* Enables panel background layers, clears busy flags. */
@@ -20,5 +20,5 @@ void func_ov013_0206cff0(void) {
         *(u8 *)(data_ov013_02074ce0 + 0xd259) = (u8)flags;
     }
     *(u32 *)(data_ov013_02074ce0 + 0x2e8) = 0xffffffff;
-    func_ov013_0207174c(0);
+    SetPanelPhase(0);
 }

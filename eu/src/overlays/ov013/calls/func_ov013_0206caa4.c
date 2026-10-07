@@ -11,7 +11,7 @@ extern int IsPanelBusy(void);
 extern void InitMenuScreenGraphics(void);
 extern void func_ov013_0206cff0(void);
 extern void func_ov013_0206cfd8(void);
-extern void func_ov013_0207174c(int mode);
+extern void SetPanelPhase(int mode);
 extern int data_ov013_02074ce0;
 
 /* Advances the day counter and runs the matching panel transition. */
@@ -42,7 +42,7 @@ void func_ov013_0206caa4(void) {
             flags = flags & ~8;
             *(u8 *)(data_ov013_02074ce0 + 0x99) = (u8)flags;
         }
-        func_ov013_0207174c(1);
+        SetPanelPhase(1);
         return;
     }
     *(int *)(data_ov013_02074ce0 + 0x2e8) = day;

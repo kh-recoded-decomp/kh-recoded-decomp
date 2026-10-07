@@ -5,7 +5,7 @@
 #define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
 #define QueryPanelSlotStates_02071590 QueryPanelSlotStates
 #define SetEntrySlotsVisible_020b9580 SetEntrySlotsVisible
-#define SetPanelPhase_0207174c func_ov013_0207174c
+#define SetPanelPhase_0207174c SetPanelPhase
 #define SetScrollListPosition_02063280 SetScrollListPosition
 #define SetSelectionIfChanged_0204d73c SetSelectionIfChanged
 #define func_01ff8830 MI_CpuFill8

@@ -6,7 +6,7 @@
 #define GetBiasAdjustedField_0206dc80 GetBiasAdjustedField
 #define IsHeldEntryFlag2Active_0206e33c IsHeldEntryFlag2Active
 #define IsLeaderFlag3Active_0206e198 IsLeaderFlag3Active
-#define func_ov046_020c19f0 func_ov046_020c1a10
+#define func_ov046_020c19f0 Camera_GetModeDistance
 #define func_ov046_020c1a48 func_ov046_020c1a68
 #define func_ov047_020c3ad8 Camera_ShouldStartManualTurn
 #define func_ov047_020c4768 Camera_FollowControllerUpdate

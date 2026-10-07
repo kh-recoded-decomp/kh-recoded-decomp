@@ -252,6 +252,10 @@ src/overlays/ov059/auto/func_ov059_020cb92c.c:
     complete
     .text       start:0x020cb92c end:0x020cb930
 
+src/overlays/ov059/calls/Actor_TryAcquireTargetAngle.c:
+    complete
+    .text       start:0x020cb930 end:0x020cb988
+
 src/overlays/ov059/calls/Actor_ExitCommandMode.c:
     complete
     .text       start:0x020cb988 end:0x020cba0c

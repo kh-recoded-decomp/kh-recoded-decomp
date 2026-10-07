@@ -1,0 +1,6 @@
+#define Camera_GetModeDistance_020c19f0 Camera_GetModeDistance
+#define data_ov046_020c33b0 data_ov046_020c33d0
+#define Camera_GetFocusPosition_020c1780 Camera_GetFocusPosition
+#define FX_Div_01ff9c84 FX_Div
+#define FixedPointMultiply12 FX_Mul
+#include "src/ov046/shared_engine/Camera_GetModeDistance_020c19f0.c"

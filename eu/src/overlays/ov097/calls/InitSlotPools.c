@@ -1,0 +1,3 @@
+#define InitSlotPools_020bff74 InitSlotPools
+#define NNS_FndInitListWithOffset0_0204f11c NNS_FndInitListWithOffset0_0204f130
+#include "src/ov097/panel_state/InitSlotPools_020bff74.c"

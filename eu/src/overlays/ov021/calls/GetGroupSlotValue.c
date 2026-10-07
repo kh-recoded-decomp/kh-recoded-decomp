@@ -1,4 +1,4 @@
 #define GetGroupSlotValue_020a8f1c GetGroupSlotValue
-#define func_ov021_020a8810 func_ov021_020a8830
+#define func_ov021_020a8810 FindEntryGroupById
 #define g_registryInitialized_020b5608 data_ov021_020b5628
 #include "src/ov021/object_state/GetGroupSlotValue_020a8f1c.c"

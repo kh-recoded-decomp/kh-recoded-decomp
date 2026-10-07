@@ -1,4 +1,4 @@
 #define GetGroupMemberData_020a8eec GetGroupMemberData
 #define _data_ov021_020b5608 data_ov021_020b5628
-#define func_ov021_020a8810 func_ov021_020a8830
+#define func_ov021_020a8810 FindEntryGroupById
 #include "src/ov021/object_state/GetGroupMemberData_020a8eec.c"

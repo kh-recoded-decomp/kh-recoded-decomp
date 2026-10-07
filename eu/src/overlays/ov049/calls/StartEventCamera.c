@@ -1,0 +1,4 @@
+#define StartEventCamera_020c3614 StartEventCamera
+#define func_ov049_020c4330 InitEventCameraShot
+#define EventCamera_Update_020c2d20 EventCamera_Update
+#include "src/ov049/shared_engine/StartEventCamera_020c3614.c"

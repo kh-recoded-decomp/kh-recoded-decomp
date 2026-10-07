@@ -1,0 +1,4 @@
+#define ChangePanelState_0206d1c0 ChangePanelState
+#define g_panelState_0206f9a0 data_ov014_0206f9a0
+#define g_panelStateTable_0206f8f8 gPanelInitialUpdateCallback
+#include "src/ov014/panel_state/ChangePanelState_0206d1c0.c"

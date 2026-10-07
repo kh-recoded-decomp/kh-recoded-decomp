@@ -4,5 +4,5 @@
 #define func_ov042_020bd590 func_ov042_020bd5b0
 #define func_ov043_020bc820 CommitCameraWithCache
 #define func_ov044_020d0080 func_ov044_020d00a0
-#define func_ov046_020c0b34 func_ov046_020c0b54
+#define func_ov046_020c0b34 Camera_CommitView
 #include "src/ov021/sub_mode/DispatchModeUpdate_020af4ac.c"

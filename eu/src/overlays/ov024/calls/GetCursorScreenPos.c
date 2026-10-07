@@ -1,0 +1,5 @@
+#define GetCursorScreenPos_020b7288 GetCursorScreenPos
+#define data_ov024_020b7520 data_ov024_020b7540
+#define data_ov024_020b7384 data_ov024_020b73a4
+#define func_ov024_020b7228 ApplyDirectionOffset
+#include "src/ov024/unclassified_helpers/GetCursorScreenPos_020b7288.c"

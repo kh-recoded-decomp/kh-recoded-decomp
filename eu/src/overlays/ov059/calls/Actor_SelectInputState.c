@@ -1,7 +1,7 @@
 #define func_ov001_0206db78 GetPlayerControlState
 #define func_ov001_020645c8 IsSessionFlagSet
 #define Actor_SelectInputState_020ca22c Actor_SelectInputState
-#define Actor_TryAcquireTargetAngle_020cb910 func_ov059_020cb930
+#define Actor_TryAcquireTargetAngle_020cb910 Actor_TryAcquireTargetAngle
 #define HasFlagsAt0xc_020a751c HasFlagsAt0xc
 #define IsPlayerEntryFlagSet_02050014 IsPlayerEntryFlagSet
 #define func_ov021_020a7504 func_ov021_020a7524
