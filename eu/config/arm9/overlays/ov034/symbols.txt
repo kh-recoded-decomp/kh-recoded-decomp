@@ -63,23 +63,14 @@ data_ov034_020be9fa kind:data(any) addr:0x020be9fa
 data_ov034_020bea78 kind:data(any) addr:0x020bea78
 data_ov034_020beae0 kind:data(any) addr:0x020beae0 ambiguous
 data_ov034_020beb2c kind:data(any) addr:0x020beb2c
-data_ov034_020bed6c kind:data(any) addr:0x020bed6c
-data_ov034_020bed6e kind:data(any) addr:0x020bed6e
-data_ov034_020bed6f kind:data(any) addr:0x020bed6f
-data_ov034_020bed70 kind:data(any) addr:0x020bed70
-data_ov034_020bed74 kind:data(any) addr:0x020bed74
+gResultsShopEntries kind:data(any) addr:0x020bed6c
 data_ov034_020bee80 kind:data(any) addr:0x020bee80 ambiguous
 data_ov034_020bf6a0 kind:data(any) addr:0x020bf6a0 ambiguous
 data_ov034_020bf990 kind:data(any) addr:0x020bf990
 data_ov034_020bf992 kind:data(any) addr:0x020bf992
 data_ov034_020bfca0 kind:data(any) addr:0x020bfca0 ambiguous
 data_ov034_020bfda5 kind:data(any) addr:0x020bfda5 ambiguous
-data_ov034_020c056c kind:data(any) addr:0x020c056c ambiguous
-data_ov034_020c05c4 kind:data(any) addr:0x020c05c4 ambiguous
-data_ov034_020c0820 kind:data(any) addr:0x020c0820 ambiguous
-data_ov034_020c0d59 kind:data(any) addr:0x020c0d59 ambiguous
-data_ov034_020c0d69 kind:data(any) addr:0x020c0d69 ambiguous
-data_ov034_020c0d79 kind:data(any) addr:0x020c0d79 ambiguous
+gResultsShopConfiguration kind:data(any) addr:0x020c056c ambiguous
 sOv034_UiBtlStrLanguageP2_020c0ea8 kind:data(any) addr:0x020c0ea8
 data_ov034_020c0eb8 kind:data(any) addr:0x020c0eb8
 data_ov034_020c0ed0 kind:data(any) addr:0x020c0ed0

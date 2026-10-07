@@ -1,6 +1,6 @@
 #define ClassifyResultsShopEntry_020be4f8 ClassifyResultsShopEntry
 #define IsResultsShopEntryUnlocked_020bdb70 IsResultsShopEntryUnlocked
-#define data_ov034_020bed4c data_ov034_020bed6c
+#define data_ov034_020bed4c gResultsShopEntries
 #define func_ov034_020be418 func_ov034_020be438
 #define g_resultsScreen_020c0f80 data_ov034_020c0fa0
 #include "src/ov034/reviewed_helpers/IsResultsShopEntryUnlocked_020bdb70.c"

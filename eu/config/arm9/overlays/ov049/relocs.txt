@@ -118,7 +118,7 @@ from:0x020c41be kind:thumb_call to:0x020afa60 module:overlay(21)
 from:0x020c41f2 kind:thumb_call_arm to:0x02023bb8 module:main
 from:0x020c4214 kind:thumb_call_arm to:0x02023bb8 module:main
 from:0x020c423c kind:load to:0x02053580 module:main
-from:0x020c4244 kind:load to:0x020c0d69 module:overlays(34,46)
+from:0x020c4244 kind:load to:0x020c0d69 module:overlay(46)
 from:0x020c4290 kind:thumb_call_arm to:0x01ff9e3c module:itcm
 from:0x020c42ac kind:thumb_call_arm to:0x01ff9e3c module:itcm
 from:0x020c42c6 kind:thumb_call_arm to:0x0204aebc module:main

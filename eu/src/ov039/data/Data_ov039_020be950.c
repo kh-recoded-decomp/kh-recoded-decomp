@@ -3,8 +3,7 @@
 #pragma explicit_zero_data on
 
 extern u8 data_ov034_020bfca0[];
-extern u8 data_ov034_020c056c[];
-extern u8 data_ov034_020c05c4[];
+extern u8 gResultsShopConfiguration[];
 extern u8 data_ov036_020c4014[];
 extern u8 data_ov036_020c4c60[];
 extern u8 data_ov036_020c4fe0[];
@@ -43,7 +42,7 @@ void *data_ov039_020be950[37] = {
     (void *)0x00000057,
     (void *)data_ov036_020c7da0,
     (void *)0x00000059,
-    (void *)data_ov034_020c056c,
+    (void *)gResultsShopConfiguration,
     (void *)0x0000005B,
     (void *)data_ov086_020c2b18,
     (void *)0x0000005D,
@@ -57,7 +56,7 @@ void *data_ov039_020be950[37] = {
     (void *)0x00000065,
     (void *)(gItemReportIdentifiers + 0xE4),
     (void *)0x00000067,
-    (void *)data_ov034_020c05c4,
+    (void *)(gResultsShopConfiguration + 0x58),
     (void *)0x00000051,
     (void *)data_ov036_020c5cc0,
 };

@@ -59,6 +59,6 @@ from:0x020c3b24 kind:load to:0x02053ac0 module:main
 from:0x020c3b40 kind:thumb_call to:0x020afa60 module:overlay(21)
 from:0x020c3b68 kind:thumb_call to:0x020c0d78 module:overlay(46)
 from:0x020c3bb4 kind:load to:0x0205344c module:main
-from:0x020c3bc0 kind:load to:0x020c0d79 module:overlays(34,46)
+from:0x020c3bc0 kind:load to:0x020c0d79 module:overlay(46)
 from:0x020c3bca kind:thumb_call to:0x020c3520 module:overlay(50)
 from:0x020c3c14 kind:load to:0x020c3531 module:overlay(50)

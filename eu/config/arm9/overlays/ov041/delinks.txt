@@ -188,6 +188,210 @@ src/overlays/ov041/calls/func_ov041_020ce200.c:
     complete
     .text       start:0x020ce200 end:0x020ce210
 
+src/overlays/ov041/data/Data_ov041_020cf8e0.c:
+    complete
+    .data       start:0x020cf8e0 end:0x020cf93c
+
+src/overlays/ov041/data/Data_ov041_020cf978.c:
+    complete
+    .data       start:0x020cf978 end:0x020cf9f8
+
+src/overlays/ov041/data/Data_ov041_020cfae0.c:
+    complete
+    .data       start:0x020cfae0 end:0x020cff30
+
+src/overlays/ov041/data/Data_ov041_020cff30.c:
+    complete
+    .data       start:0x020cff30 end:0x020cff40
+
+src/overlays/ov041/data/RodataStrings_ov041_020cf47c.c:
+    complete
+    .rodata     start:0x020cf47c end:0x020cf480
+
+src/overlays/ov041/data/RodataStrings_ov041_020cf484.c:
+    complete
+    .rodata     start:0x020cf484 end:0x020cf488
+
+src/overlays/ov041/data/RodataStrings_ov041_020cf488.c:
+    complete
+    .rodata     start:0x020cf488 end:0x020cf48c
+
+src/overlays/ov041/data/RodataStrings_ov041_020cf48c.c:
+    complete
+    .rodata     start:0x020cf48c end:0x020cf490
+
+src/overlays/ov041/data/RodataStrings_ov041_020cf490.c:
+    complete
+    .rodata     start:0x020cf490 end:0x020cf494
+
+src/overlays/ov041/data/RodataStrings_ov041_020cf494.c:
+    complete
+    .rodata     start:0x020cf494 end:0x020cf498
+
+src/overlays/ov041/data/RodataStrings_ov041_020cf498.c:
+    complete
+    .rodata     start:0x020cf498 end:0x020cf49c
+
+src/overlays/ov041/data/RodataStrings_ov041_020cf49c.c:
+    complete
+    .rodata     start:0x020cf49c end:0x020cf4a0
+
+src/overlays/ov041/data/RodataStrings_ov041_020cf5d4.c:
+    complete
+    .rodata     start:0x020cf5d4 end:0x020cf5d8
+
+src/overlays/ov041/data/RodataStrings_ov041_020cf5e4.c:
+    complete
+    .rodata     start:0x020cf5e4 end:0x020cf5e8
+
+src/overlays/ov041/data/RodataStrings_ov041_020cf720.c:
+    complete
+    .rodata     start:0x020cf720 end:0x020cf730
+
+src/overlays/ov041/data/RodataStrings_ov041_020cf760.c:
+    complete
+    .rodata     start:0x020cf760 end:0x020cf770
+
+src/overlays/ov041/data/RodataStrings_ov041_020cf790.c:
+    complete
+    .rodata     start:0x020cf790 end:0x020cf7a0
+
+src/overlays/ov041/data/Rodata_ov041_020ce210.c:
+    complete
+    .rodata     start:0x020ce210 end:0x020cedcc
+
+src/overlays/ov041/data/Rodata_ov041_020cedcc.c:
+    complete
+    .rodata     start:0x020cedcc end:0x020cee98
+
+src/overlays/ov041/data/Rodata_ov041_020cee98.c:
+    complete
+    .rodata     start:0x020cee98 end:0x020ceee0
+
+src/overlays/ov041/data/Rodata_ov041_020ceee0.c:
+    complete
+    .rodata     start:0x020ceee0 end:0x020cf170
+
+src/overlays/ov041/data/Rodata_ov041_020cf170.c:
+    complete
+    .rodata     start:0x020cf170 end:0x020cf1c4
+
+src/overlays/ov041/data/Rodata_ov041_020cf1c4.c:
+    complete
+    .rodata     start:0x020cf1c4 end:0x020cf288
+
+src/overlays/ov041/data/Rodata_ov041_020cf288.c:
+    complete
+    .rodata     start:0x020cf288 end:0x020cf448
+
+src/overlays/ov041/data/Rodata_ov041_020cf448.c:
+    complete
+    .rodata     start:0x020cf448 end:0x020cf47c
+
+src/overlays/ov041/data/Rodata_ov041_020cf480.c:
+    complete
+    .rodata     start:0x020cf480 end:0x020cf484
+
+src/overlays/ov041/data/Rodata_ov041_020cf4a0.c:
+    complete
+    .rodata     start:0x020cf4a0 end:0x020cf4a8
+
+src/overlays/ov041/data/Rodata_ov041_020cf4a8.c:
+    complete
+    .rodata     start:0x020cf4a8 end:0x020cf4c0
+
+src/overlays/ov041/data/Rodata_ov041_020cf4c0.c:
+    complete
+    .rodata     start:0x020cf4c0 end:0x020cf4cc
+
+src/overlays/ov041/data/Rodata_ov041_020cf4cc.c:
+    complete
+    .rodata     start:0x020cf4cc end:0x020cf4d8
+
+src/overlays/ov041/data/Rodata_ov041_020cf4d8.c:
+    complete
+    .rodata     start:0x020cf4d8 end:0x020cf4f0
+
+src/overlays/ov041/data/Rodata_ov041_020cf4f0.c:
+    complete
+    .rodata     start:0x020cf4f0 end:0x020cf4fc
+
+src/overlays/ov041/data/Rodata_ov041_020cf4fc.c:
+    complete
+    .rodata     start:0x020cf4fc end:0x020cf508
+
+src/overlays/ov041/data/Rodata_ov041_020cf508.c:
+    complete
+    .rodata     start:0x020cf508 end:0x020cf514
+
+src/overlays/ov041/data/Rodata_ov041_020cf514.c:
+    complete
+    .rodata     start:0x020cf514 end:0x020cf520
+
+src/overlays/ov041/data/Rodata_ov041_020cf520.c:
+    complete
+    .rodata     start:0x020cf520 end:0x020cf530
+
+src/overlays/ov041/data/Rodata_ov041_020cf530.c:
+    complete
+    .rodata     start:0x020cf530 end:0x020cf544
+
+src/overlays/ov041/data/Rodata_ov041_020cf544.c:
+    complete
+    .rodata     start:0x020cf544 end:0x020cf554
+
+src/overlays/ov041/data/Rodata_ov041_020cf554.c:
+    complete
+    .rodata     start:0x020cf554 end:0x020cf568
+
+src/overlays/ov041/data/Rodata_ov041_020cf568.c:
+    complete
+    .rodata     start:0x020cf568 end:0x020cf580
+
+src/overlays/ov041/data/Rodata_ov041_020cf580.c:
+    complete
+    .rodata     start:0x020cf580 end:0x020cf5d4
+
+src/overlays/ov041/data/Rodata_ov041_020cf5d8.c:
+    complete
+    .rodata     start:0x020cf5d8 end:0x020cf5e4
+
+src/overlays/ov041/data/Rodata_ov041_020cf5e8.c:
+    complete
+    .rodata     start:0x020cf5e8 end:0x020cf61c
+
+src/overlays/ov041/data/Rodata_ov041_020cf61c.c:
+    complete
+    .rodata     start:0x020cf61c end:0x020cf6ac
+
+src/overlays/ov041/data/Rodata_ov041_020cf6ac.c:
+    complete
+    .rodata     start:0x020cf6ac end:0x020cf710
+
+src/overlays/ov041/data/Rodata_ov041_020cf740.c:
+    complete
+    .rodata     start:0x020cf740 end:0x020cf750
+
+src/overlays/ov041/data/Rodata_ov041_020cf750.c:
+    complete
+    .rodata     start:0x020cf750 end:0x020cf760
+
+src/overlays/ov041/data/Rodata_ov041_020cf7a0.c:
+    complete
+    .rodata     start:0x020cf7a0 end:0x020cf7ec
+
+src/overlays/ov041/data/Rodata_ov041_020cf7ec.c:
+    complete
+    .rodata     start:0x020cf7ec end:0x020cf88c
+
+src/overlays/ov041/data/Rodata_ov041_020cf88c.c:
+    complete
+    .rodata     start:0x020cf88c end:0x020cf898
+
+src/overlays/ov041/data/Rodata_ov041_020cf898.c:
+    complete
+    .rodata     start:0x020cf898 end:0x020cf8c8
+
 src/overlays/ov041/data/bss/Bss_ov041_020cff40.c:
     complete
     .bss        start:0x020cff40 end:0x020cff80
