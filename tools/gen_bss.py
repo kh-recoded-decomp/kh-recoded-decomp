@@ -13,9 +13,10 @@ import re
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT / "tools"))
+SOURCE_ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(SOURCE_ROOT / "tools"))
 import data_match  # noqa: E402
+ROOT = data_match.ROOT
 
 SYMBOL_LINE = data_match.SYMBOL_LINE
 
@@ -58,7 +59,7 @@ def write_unit(module: str, run: list[tuple[int, str, int]]) -> dict:
     source.parent.mkdir(parents=True, exist_ok=True)
     source.write_text("\n".join(lines) + "\n", encoding="utf-8", newline="\n")
     return {"module": module, "section": ".bss", "start": f"{start:#010x}", "end": f"{end:#010x}",
-            "source": source.relative_to(ROOT).as_posix(), "compiler": "mwccarm-4.0-1036",
+            "source": source.relative_to(ROOT).as_posix(), "compiler": data_match.DEFAULT_COMPILER,
             "name": f"{module} .bss layout", "origin": "generated layout",
             "behavior": "Uninitialised globals, one per known symbol, sized by layout."}
 

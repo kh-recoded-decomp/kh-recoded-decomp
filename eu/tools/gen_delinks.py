@@ -162,6 +162,24 @@ def gen_data_block(unit, committed_delinks):
                 continue
             by_source.setdefault(receipt["source"], []).append(
                 (receipt["section"], receipt["start"], receipt["end"]))
+    # The shared DATA generator records every independently verified range in
+    # eu/data_matches.json. Keeping that manifest in git makes the claims
+    # reproducible on a fresh checkout; the full-module gate remains the final
+    # byte-exact proof.
+    manifest = ROOT / "data_matches.json"
+    if manifest.is_file():
+        module = "arm9" if unit == "main" else unit
+        for entry in json.loads(manifest.read_text(encoding="utf-8")).get("data", []):
+            if entry.get("module") != module:
+                continue
+            source = ROOT / entry.get("source", "")
+            if not source.is_file():
+                continue
+            by_source.setdefault(entry["source"], []).append((
+                entry["section"].lstrip("."),
+                int(entry["start"], 16),
+                int(entry["end"], 16),
+            ))
     fresh = [(sec, s, e) for spans in by_source.values() for sec, s, e in spans]
     for source, spans in committed_data_claims(committed_delinks).items():
         if source in receipted or source in by_source:

@@ -10,9 +10,11 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-REFERENCE = ROOT / "build" / "reference_ricky"
+# The unified checkout keeps the authoritative US build at the repository root.
+REFERENCE = ROOT.parent
 MANIFEST = REFERENCE / "data_matches.json"
 RESULTS = ROOT / "build" / "reference_batch_results.json"
+FULL_RESULTS = ROOT / "build" / "reference_full_candidates.json"
 CONFIG = ROOT / "config" / "arm9"
 SYMBOLS = CONFIG / "symbols.txt"
 DELINKS = CONFIG / "delinks.txt"
@@ -76,6 +78,25 @@ TABLE_NAMES = {
     0x0205615C: "gSoundCategoryNames",
 }
 
+
+def load_regional_matches() -> list[dict]:
+    if RESULTS.is_file():
+        return json.loads(RESULTS.read_text(encoding="utf-8"))
+    if not FULL_RESULTS.is_file():
+        raise FileNotFoundError(
+            f"missing both {RESULTS.name} and {FULL_RESULTS.name}"
+        )
+    mappings = json.loads(FULL_RESULTS.read_text(encoding="utf-8"))["mappings"]
+    return [
+        {
+            "result": "match",
+            "us": item["us"],
+            "eu": item["eu"],
+            "match": {"name": item["name"]},
+        }
+        for item in mappings
+    ]
+
 TARGET_NAMES = {
     **{0x02003C00 + index * 8: f"OS_SetProtectionRegion{index}" for index in range(8)},
     **{0x02003C40 + index * 8: f"OS_GetProtectionRegion{index}" for index in range(8)},
@@ -134,7 +155,7 @@ def replace_data_symbol(text: str, old: str, new: str, address: int) -> str:
 
 
 def discover() -> list[dict]:
-    results = json.loads(RESULTS.read_text(encoding="utf-8"))
+    results = load_regional_matches()
     address_map = {
         item["us"]["address"]: item
         for item in results

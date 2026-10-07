@@ -12,10 +12,11 @@ from __future__ import annotations
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT / "tools"))
+SOURCE_ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(SOURCE_ROOT / "tools"))
 import data_match  # noqa: E402
 import gen_data_tables  # noqa: E402
+ROOT = data_match.ROOT
 
 ESCAPES = {9: "\\t", 10: "\\n", 13: "\\r", 34: '\\"', 92: "\\\\"}
 
@@ -37,7 +38,7 @@ def write_unit(module: str, kind: str, run) -> dict:
     source.write_text('#include "nitro/types.h"\n\n' + "\n".join(lines) + "\n", encoding="utf-8", newline="\n")
     end = run[-1][0] + run[-1][2]
     return {"module": module, "section": f".{kind}", "start": f"{start:#010x}", "end": f"{end:#010x}",
-            "source": source.relative_to(ROOT).as_posix(), "compiler": "mwccarm-4.0-1036",
+            "source": source.relative_to(ROOT).as_posix(), "compiler": data_match.DEFAULT_COMPILER,
             "name": f"{module} strings", "origin": "generated strings",
             "behavior": "Text strings referenced by this module's code."}
 

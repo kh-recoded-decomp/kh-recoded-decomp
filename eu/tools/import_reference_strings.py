@@ -14,7 +14,8 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-REFERENCE = ROOT / "build" / "reference_ricky"
+# The unified checkout keeps the authoritative US build at the repository root.
+REFERENCE = ROOT.parent
 MANIFEST = REFERENCE / "data_matches.json"
 COMPILERS = ROOT / "config" / "arm9" / "file_compilers.json"
 

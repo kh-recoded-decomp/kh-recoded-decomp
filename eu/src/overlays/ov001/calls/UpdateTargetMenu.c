@@ -1,5 +1,5 @@
 #define SelectNearestTarget_0206afec SelectNearestTarget
-#define UpdateSubModeResult_020af46c func_ov021_020af48c
+#define UpdateSubModeResult_020af46c UpdateSubModeResult
 #define UpdateTargetMenu_0206bcbc UpdateTargetMenu
 #define data_ov001_020a0484 data_ov001_020a04a4
 #define func_ov001_0206bb74 SetMenuOpenState

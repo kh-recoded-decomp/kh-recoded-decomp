@@ -896,6 +896,34 @@ src/overlays/ov015/data/bss/Bss_ov015_0207e9e0.c:
     complete
     .bss        start:0x0207e9e0 end:0x0207ea60
 
+src/overlays/ov015/data/bss/Bss_ov015_0207ea60.c:
+    complete
+    .bss        start:0x0207ea60 end:0x0207ea6a
+
+src/overlays/ov015/data/bss/Bss_ov015_0207ea6a.c:
+    complete
+    .bss        start:0x0207ea6a end:0x0207ea74
+
+src/overlays/ov015/data/bss/Bss_ov015_0207ea74.c:
+    complete
+    .bss        start:0x0207ea74 end:0x0207eac0
+
+src/overlays/ov015/data/bss/Bss_ov015_0207eac0.c:
+    complete
+    .bss        start:0x0207eac0 end:0x0207eb60
+
+src/overlays/ov015/data/bss/Bss_ov015_0207eb60.c:
+    complete
+    .bss        start:0x0207eb60 end:0x0207ec20
+
+src/overlays/ov015/data/bss/Bss_ov015_0207ec20.c:
+    complete
+    .bss        start:0x0207ec20 end:0x0207efa0
+
+src/overlays/ov015/data/bss/Bss_ov015_0207f3a0.c:
+    complete
+    .bss        start:0x0207f3a0 end:0x0207fbc0
+
 src/overlays/ov015/data/bss/Bss_ov015_0207fbc0.c:
     complete
     .bss        start:0x0207fbc0 end:0x02080000
@@ -919,6 +947,18 @@ src/overlays/ov015/data/bss/Bss_ov015_02080303.c:
 src/overlays/ov015/data/bss/Bss_ov015_020803e0.c:
     complete
     .bss        start:0x020803e0 end:0x02080504
+
+src/overlays/ov015/data/bss/Bss_ov015_02080504.c:
+    complete
+    .bss        start:0x02080504 end:0x02080605
+
+src/overlays/ov015/data/bss/Bss_ov015_02080605.c:
+    complete
+    .bss        start:0x02080605 end:0x02080606
+
+src/overlays/ov015/data/bss/Bss_ov015_02080606.c:
+    complete
+    .bss        start:0x02080606 end:0x020812e0
 
 src/overlays/ov015/data/bss/Bss_ov015_020812e0.c:
     complete

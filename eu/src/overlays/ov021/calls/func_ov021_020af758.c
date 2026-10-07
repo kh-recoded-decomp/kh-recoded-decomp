@@ -1,0 +1,6 @@
+#define data_ov021_020b56a0 data_ov021_020b56c0
+#define IsWithinPlaneSet_0203e958 IsWithinPlaneSet
+#define func_0203eab0 IsShapeInViewBounds
+#define func_ov043_020bd1ec func_ov039_020bd20c
+#define func_ov021_020af738 func_ov021_020af758
+#include "src/ov021/reviewed_helpers/func_ov021_020af738.c"

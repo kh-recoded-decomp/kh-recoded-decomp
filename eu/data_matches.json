@@ -1,0 +1,15 @@
+{
+  "data": [
+    {
+      "module": "ov019",
+      "section": ".rodata",
+      "start": "0x020a367c",
+      "end": "0x020a3688",
+      "source": "src/ov019/data/Rodata_ov019_020a367c.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "ov019 data words",
+      "origin": "generated words",
+      "behavior": "Initialised data words, pointers named by their targets."
+    }
+  ]
+}

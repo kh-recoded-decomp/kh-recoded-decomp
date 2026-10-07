@@ -25,8 +25,11 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+SHARED_ROOT = ROOT.parent
 NAME = re.compile(r"^[A-Za-z_]\w*$")
 SKIP_DIRS = {"nonmatching", "asm_stubs", "data"}
+SHARED_INCLUDE = re.compile(r'^\s*#\s*include\s+"(src/[^"]+\.c)"', re.MULTILINE)
+DEFINE = re.compile(r'^\s*#\s*define\s+([A-Za-z_]\w*)\s+([A-Za-z_]\w*)\s*$', re.MULTILINE)
 
 
 def source_files():
@@ -65,7 +68,26 @@ def global_functions(obj):
 
 def source_defines(src, name):
     text = src.read_text(encoding="utf-8", errors="ignore")
-    return re.search(r"\b%s\s*\([^;{]*\)\s*\{" % re.escape(name), text) is not None
+    if re.search(r"\b%s\s*\([^;{]*\)\s*\{" % re.escape(name), text):
+        return True
+
+    include = SHARED_INCLUDE.search(text)
+    if include is None:
+        return False
+    shared = (SHARED_ROOT / include.group(1)).resolve()
+    try:
+        shared.relative_to(SHARED_ROOT.resolve())
+    except ValueError:
+        return False
+    if not shared.is_file():
+        return False
+
+    aliases = {target: source for source, target in DEFINE.findall(text)}
+    canonical = aliases.get(name, name)
+    shared_text = shared.read_text(encoding="utf-8", errors="ignore")
+    return re.search(
+        r"\b%s\s*\([^;{]*\)\s*\{" % re.escape(canonical), shared_text
+    ) is not None
 
 
 def main():

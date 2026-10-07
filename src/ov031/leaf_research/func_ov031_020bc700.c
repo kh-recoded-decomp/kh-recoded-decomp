@@ -1,8 +1,13 @@
-typedef unsigned int u32;
-u32 func_ov031_020bc700(u32 argument0, u32 argument1, u32 argument2, u32 argument3) {
-    u32 value0 = 0x20bc800U;
-    u32 value1 = *(const u32 *)(value0);
-    u32 value2 = (value1) + (0xb8U);
-    u32 value3 = *(const u32 *)(value2);
-    return value3;
+#include "nitro/types.h"
+
+typedef struct PanelState {
+    u8 pad_00[0xb8];
+    u32 cullDepth;
+} PanelState;
+
+extern PanelState *data_ov031_020bc800;
+
+u32 func_ov031_020bc700(void)
+{
+    return data_ov031_020bc800->cullDepth;
 }

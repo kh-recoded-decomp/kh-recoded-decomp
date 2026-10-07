@@ -21,14 +21,17 @@ import subprocess
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT / "tools"))
+SOURCE_ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(os.environ.get("KH_DATA_PROJECT_ROOT", SOURCE_ROOT)).resolve()
+sys.path.insert(0, str(SOURCE_ROOT / "tools"))
 import compile_match  # noqa: E402
 
 REGISTRY = ROOT / "data_matches.json"
-CONFIG = ROOT / "config" / "bk9e" / "arm9"
-EXTRACT = ROOT / "build" / "bk9e" / "extract"
-CACHE = ROOT / "build" / "bk9e" / "data_objects"
+IS_EU = ROOT != SOURCE_ROOT
+CONFIG = ROOT / "config" / ("arm9" if IS_EU else "bk9e/arm9")
+EXTRACT = ROOT / ("dsd_extract" if IS_EU else "build/bk9e/extract")
+CACHE = ROOT / "build" / ("data_objects" if IS_EU else "bk9e/data_objects")
+DEFAULT_COMPILER = "mwccarm-3.0-139" if IS_EU else "mwccarm-4.0-1036"
 SECTIONS = {".rodata": "rodata", ".data": "data", ".bss": "bss"}
 SYMBOL_LINE = re.compile(r"^(\S+) kind:(\w+)(\(([^)]*)\))? addr:0x([0-9a-f]+)", re.I)
 METADATA = {"", ".symtab", ".strtab", ".shstrtab", ".comment"}
@@ -48,6 +51,15 @@ def module_binary(module: str) -> tuple[int, bytes]:
     header = (module_dir(module) / "delinks.txt").read_text(encoding="utf-8")
     base = min(int(x, 16) for x in re.findall(r"start:0x([0-9a-f]+)", header))
     return base, path.read_bytes()
+
+
+def claimed_spans(module: str) -> list[tuple[int, int]]:
+    """DATA ranges already owned by committed delinks FILE entries."""
+    text = (module_dir(module) / "delinks.txt").read_text(encoding="utf-8")
+    _, _, body = text.partition("\n\n")
+    return [(int(start, 16), int(end, 16)) for _kind, start, end in re.findall(
+        r"^\s+\.(rodata|data|bss)\s+start:0x([0-9a-f]+)\s+end:0x([0-9a-f]+)", body, re.M
+    )]
 
 
 def section_spans(module: str) -> dict[str, list[tuple[int, int]]]:
@@ -80,7 +92,8 @@ def symbol_index() -> dict[str, list[tuple[str, int, bool]]]:
             found = SYMBOL_LINE.match(line)
             if found:
                 names[(line_module, found.group(1))] = int(found.group(5), 16)
-    matches = json.loads((ROOT / "matches.json").read_text(encoding="utf-8"))["matches"]
+    matches_path = ROOT / "matches.json"
+    matches = json.loads(matches_path.read_text(encoding="utf-8"))["matches"] if matches_path.exists() else []
     for entry in matches:
         address = names.get((entry["module"], entry["symbol"]))
         if address is not None and entry.get("source_symbol"):
@@ -105,14 +118,23 @@ def compile_source(entry: dict) -> bytes:
     key = hashlib.sha256((source.read_text(encoding="utf-8") + entry["compiler"]).encode()).hexdigest()[:16]
     obj = CACHE / f"{Path(entry['source']).stem}_{key}.o"
     if not obj.exists():
-        compile_match.validate_c_source(source)
-        config = compile_match.compiler_config()
-        variant = config["variants"][entry["compiler"]]
-        flags = list(config["flags"]) + ["-i", str(compile_match.INCLUDE_DIR)]
         CACHE.mkdir(parents=True, exist_ok=True)
-        env = dict(os.environ, LM_LICENSE_FILE=str(ROOT / config["license"]))
-        result = subprocess.run([str(ROOT / variant["executable"]), *flags, "-o", str(obj), str(source)],
-                                cwd=ROOT, env=env, capture_output=True, text=True)
+        if IS_EU:
+            result = subprocess.run(
+                [sys.executable, str(ROOT / "tools/_run_mwcc.py"), str(obj), str(source),
+                 "--mode=arm", "--cc=default"],
+                cwd=ROOT, capture_output=True, text=True,
+            )
+        else:
+            compile_match.validate_c_source(source)
+            config = compile_match.compiler_config()
+            variant = config["variants"][entry["compiler"]]
+            flags = list(config["flags"]) + ["-i", str(compile_match.INCLUDE_DIR)]
+            env = dict(os.environ, LM_LICENSE_FILE=str(ROOT / config["license"]))
+            result = subprocess.run(
+                [str(ROOT / variant["executable"]), *flags, "-o", str(obj), str(source)],
+                cwd=ROOT, env=env, capture_output=True, text=True,
+            )
         if result.returncode:
             raise RuntimeError(result.stdout + result.stderr)
     return obj.read_bytes()

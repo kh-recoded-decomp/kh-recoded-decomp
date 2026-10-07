@@ -21,12 +21,13 @@ import struct
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT / "tools"))
+SOURCE_ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(SOURCE_ROOT / "tools"))
 import data_match  # noqa: E402
 import gen_bss  # noqa: E402
 import gen_data_tables  # noqa: E402
 import gen_strings  # noqa: E402
+ROOT = data_match.ROOT
 
 RELOC_LINE = re.compile(r"^from:0x([0-9a-f]+) kind:load to:0x([0-9a-f]+) module:(\S+)", re.I)
 UNALIGNED_PTR = ("typedef struct UnalignedPtr {\n    void *ptr __attribute__((packed));\n"
@@ -262,7 +263,7 @@ def write_unit(module: str, kind: str, run: list[Object]) -> dict:
                  "layout": "Uninitialised globals, one per known symbol, sized by layout."}
     names = {"words": "data words", "table": "pointer tables", "strings": "strings", "layout": ".bss layout"}
     return {"module": module, "section": f".{kind}", "start": f"{start:#010x}", "end": f"{end:#010x}",
-            "source": source.relative_to(ROOT).as_posix(), "compiler": "mwccarm-4.0-1036",
+            "source": source.relative_to(ROOT).as_posix(), "compiler": data_match.DEFAULT_COMPILER,
             "name": f"{module} {names[origin]}", "origin": ORIGIN[origin], "behavior": behaviors[origin]}
 
 
@@ -339,6 +340,7 @@ def main() -> int:
         base, binary = data_match.module_binary(module)
         names = symbols.data_names(module)
         taken = [(int(e["start"], 16), int(e["end"], 16)) for e in registered if e["module"] == module]
+        taken.extend(data_match.claimed_spans(module))
         for kind in args.section or ["rodata", "data", "bss"]:
             for gap_start, gap_end, _ in gaps(named_spans(module, kind), taken):
                 starts = sorted({gap_start} | {a for a in names if gap_start < a < gap_end})

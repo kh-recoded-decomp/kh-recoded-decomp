@@ -17,9 +17,10 @@ import struct
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT / "tools"))
+SOURCE_ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(SOURCE_ROOT / "tools"))
 import data_match  # noqa: E402
+ROOT = data_match.ROOT
 
 SYMBOL_LINE = data_match.SYMBOL_LINE
 RELOC_LINE = re.compile(r"^from:0x([0-9a-f]+) kind:load to:0x([0-9a-f]+) module:(\S+)", re.I)
@@ -47,7 +48,9 @@ def load_symbols() -> dict[str, dict[int, tuple[str, str, bool]]]:
                 thumb = found.group(2) == "function" and (found.group(4) or "").startswith("thumb")
                 rows.setdefault(address, (found.group(1), found.group(2), thumb))
                 by_name[(module, found.group(1))] = address
-    for entry in json.loads((ROOT / "matches.json").read_text(encoding="utf-8"))["matches"]:
+    matches_path = ROOT / "matches.json"
+    matches = json.loads(matches_path.read_text(encoding="utf-8"))["matches"] if matches_path.exists() else []
+    for entry in matches:
         address = by_name.get((entry["module"], entry["symbol"]))
         if address is not None and entry.get("source_symbol"):
             _, kind, thumb = table[entry["module"]][address]
@@ -122,7 +125,7 @@ def write_unit(module: str, kind: str, run) -> dict:
     source.write_text(text, encoding="utf-8", newline="\n")
     end = run[-1][0] + 4 * len(run[-1][2])
     return {"module": module, "section": f".{kind}", "start": f"{start:#010x}", "end": f"{end:#010x}",
-            "source": source.relative_to(ROOT).as_posix(), "compiler": "mwccarm-4.0-1036",
+            "source": source.relative_to(ROOT).as_posix(), "compiler": data_match.DEFAULT_COMPILER,
             "name": f"{module} pointer tables", "origin": "generated table",
             "behavior": "Tables of function and data pointers, each entry named by its target."}
 

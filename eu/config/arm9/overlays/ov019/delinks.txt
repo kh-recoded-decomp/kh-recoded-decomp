@@ -120,6 +120,10 @@ src/overlays/ov019/calls/ReleaseOwnedEntryGroup.c:
     complete
     .text       start:0x020a3660 end:0x020a367c
 
+src/ov019/data/Rodata_ov019_020a367c.c:
+    complete
+    .rodata     start:0x020a367c end:0x020a3688
+
 src/overlays/ov019/data/strings/Strings_ov019_020a36b0.c:
     complete
     .data       start:0x020a36b0 end:0x020a36c0

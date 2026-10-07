@@ -25805,14 +25805,16 @@
       "source_symbol": "func_ov031_020bc700",
       "compiler": "mwccarm-4.0-1036",
       "mode": "thumb",
-      "bindings": {},
+      "bindings": {
+        "data_ov031_020bc800": "0x20bc800"
+      },
       "name": "func_ov031_020bc700",
-      "behavior": "Returns (word((((word((0x20bc800)))) + (0xb8)))).",
-      "evidence": "Reviewed straight-line memory and arithmetic operations: ldr r0, [pc, #8]; ldr r0, [r0]; adds r0, #0xb8; ldr r0, [r0]. Literal words are reproduced from their original function pools; all 16 bytes match a complete pinned C build.",
-      "uncertainty": "The source-level signature, field ownership and gameplay meaning remain unclassified. The four argument words and machine R0 result are modeled explicitly; a returned machine word is not asserted to be part of a higher-level API.",
-      "domain": "unclassified_helpers",
+      "behavior": "Returns the culling-depth field at offset 0xb8 from the active overlay state.",
+      "evidence": "Callers use the value as a Z/depth threshold. The structured getter compiles to the same 16 US bytes as the prior verified implementation, and the EU counterpart builds from this source in a 108/108 byte-exact module gate.",
+      "uncertainty": "The wider overlay-state structure and the exact gameplay name of the depth field remain unclassified.",
+      "domain": "overlay_state",
       "origin": "independent C reconstruction",
-      "understanding": "unknown"
+      "understanding": "subsystem"
     },
     {
       "module": "ov031",
