@@ -1,5 +1,5 @@
 #define GetSmallTableEntry_0209c340 GetSmallTableEntry
 #define GetStageEventRecord_0209c0ec GetStageEventRecord
 #define StageRecord_GetLinkedEntryValue_02087cf0 StageRecord_GetLinkedEntryValue
-#define g_stageEventsState_0209f2c8 data_ov001_0209f2e8
+#define g_stageEventsState_0209f2c8 g_stageEventsState
 #include "src/ov001/shared_engine/StageRecord_GetLinkedEntryValue_02087cf0.c"

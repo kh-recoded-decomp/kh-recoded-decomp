@@ -2,6 +2,7 @@
 #define SplitTextAtLineBreak_0208c4d8 SplitTextAtLineBreak
 #define Utf8ToUcs2_020512b4 Utf8ToUcs2
 #define WriteSessionPackedBits_0206459c WriteSessionPackedBits
+#define func_ov001_0207a810 GetMessageWindowResult
 #define func_ov001_02071a14 ShowMessageWindowMode1
 #define func_ov001_0208c534 OpenActorSpeechBalloon
 #define strcpy_02021e60 strcpy

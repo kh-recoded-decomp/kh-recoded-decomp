@@ -1,4 +1,6 @@
 #define PushVramState_020365a4 PushVramState
 #define SetSlotDisplayStyle_020ba8a0 SetSlotDisplayStyle
+#define func_ov001_020680cc SetSceneEntryPrimaryDisplayId
+#define func_ov001_020680e4 SetSceneEntrySecondaryDisplayId
 #define data_ov032_020c0060 data_ov032_020c0080
 #include "src/ov032/unclassified_helpers/SetSlotDisplayStyle_020ba8a0.c"

@@ -6,6 +6,8 @@
 #define func_ov001_02067870 QueueAreaSoundArchives
 #define func_ov001_02068000 GetSlotEntryValue
 #define func_ov001_0206802c GetMenuItemValue
+#define func_ov001_020681c4 GetSceneResourceHandle
+#define func_ov001_020681d4 GetSceneEntryResourceId
 #define func_ov001_0207eff0 InvokeListNodeCallbacks
 #define func_ov001_020876cc func_ov001_020876f4
 #define g_activeState_020bc800 data_ov031_020bc820

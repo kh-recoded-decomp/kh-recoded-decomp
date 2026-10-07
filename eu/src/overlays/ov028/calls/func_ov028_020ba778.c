@@ -1,5 +1,8 @@
 #include "nitro/types.h"
 
+#define func_ov001_020681c4 GetSceneResourceHandle
+#define func_ov001_020681d4 GetSceneEntryResourceId
+
 extern u32 data_ov028_020bb3a0;
 extern void SetCachedSoundParams(u32 param1, u32 param2, u16 param3);
 extern s32 UpdateMenuItemLoading(void);

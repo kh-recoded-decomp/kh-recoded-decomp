@@ -1,4 +1,5 @@
 #define Camera_ApplyOffsetClampHeight_020c0a24 Camera_ApplyOffsetClampHeight
 #define VEC_Add_01ff9e0c VEC_Add
 #define g_cameraManager_020c34e0 data_ov046_020c3500
+#define func_ov001_0206805c GetSceneEntryCameraHeightLimit
 #include "src/ov046/shared_engine/Camera_ApplyOffsetClampHeight_020c0a24.c"

@@ -3,5 +3,5 @@
 #define StageEvents_CheckEvent_02087824 StageEvents_CheckEvent
 #define TryTriggerGroupEvent_020bb378 TryTriggerGroupEvent
 #define data_ov035_020bc4e0 data_ov035_020bc500
-#define func_ov001_02087e1c func_ov001_02087e44
+#define func_ov001_02087e1c TryActivateStageSlot
 #include "src/ov035/shared_engine/TryTriggerGroupEvent_020bb378.c"

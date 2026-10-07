@@ -1,6 +1,7 @@
 #define ChooseNextPatrolPoint_02083c68 ChooseNextPatrolPoint
 #define FindActiveSlotEntry_02083c38 FindActiveSlotEntry
 #define GetCtxModeByte_02068084 func_ov001_02068084
+#define func_ov001_02068254 GetSceneEntryPatrolPointCount
 #define func_01ffa0f4 VEC_Distance
 #define random_next_scaled_0202aa04 random_next_scaled
 #include "src/ov001/unclassified_helpers/ChooseNextPatrolPoint_02083c68.c"

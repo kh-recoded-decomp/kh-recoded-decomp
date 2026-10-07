@@ -1,4 +1,4 @@
 #define StageEvent_ReleaseHoldBit1_020876fc StageEvent_ReleaseHoldBit1
 #define func_ov001_0209b5b8 func_ov001_0209b5e0
-#define g_stageEventsState_0209f2c8 data_ov001_0209f2e8
+#define g_stageEventsState_0209f2c8 g_stageEventsState
 #include "src/ov001/shared_engine/StageEvent_ReleaseHoldBit1_020876fc.c"

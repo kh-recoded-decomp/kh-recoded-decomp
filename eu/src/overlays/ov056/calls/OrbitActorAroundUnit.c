@@ -10,6 +10,6 @@
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define func_0202fba8 func_0202fbbc
 #define func_ov001_02090f04 func_ov001_02090f2c
-#define func_ov001_020958e4 func_ov001_0209590c
+#define func_ov001_020958e4 ClearStageEventKindIfMatches
 #define multiplyFixedPointQuaternions_0202f93c MultiplyFixedPointQuaternions
 #include "src/ov056/shared_engine/OrbitActorAroundUnit_020d7728.c"

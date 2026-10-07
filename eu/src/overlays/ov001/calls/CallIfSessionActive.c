@@ -1,4 +1,4 @@
 #define CallIfSessionActive_02087e34 CallIfSessionActive
-#define data_ov001_0209f2c8 data_ov001_0209f2e8
+#define data_ov001_0209f2c8 g_stageEventsState
 #define func_ov001_0209cae0 ResetStageGroupObjects
 #include "src/ov001/wireless/CallIfSessionActive_02087e34.c"

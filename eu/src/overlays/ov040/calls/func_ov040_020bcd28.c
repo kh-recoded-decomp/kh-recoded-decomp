@@ -1,4 +1,5 @@
 #pragma opt_propagation off
+#define func_ov001_0206823c GetCurrentSceneEntrySlotId
 #include "nitro/types.h"
 
 extern unsigned int ResetSceneSlots();

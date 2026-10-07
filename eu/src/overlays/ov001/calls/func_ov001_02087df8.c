@@ -7,12 +7,12 @@ typedef struct StageGroup {
     u8 state : 2;
 } StageGroup;
 
-extern s32 data_ov001_0209f2e8;
+extern s32 g_stageEventsState;
 extern StageGroup *GetStageObjectHandle(u16 groupId);
 
 BOOL func_ov001_02087df8(s16 groupIndex)
 {
-    if (data_ov001_0209f2e8 != -1) {
+    if (g_stageEventsState != -1) {
         return GetStageObjectHandle(groupIndex + 1)->state & 1;
     }
     return FALSE;

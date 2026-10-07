@@ -1,4 +1,4 @@
-#define BindDescriptor0_0208f268 func_ov001_0208f290
+#define BindDescriptor0_0208f268 BindDescriptor0
 #define DrawVisibleStageQuads_02099a84 DrawVisibleStageQuads
 #define NNS_FndInitListWithOffset0_0206ad28 func_ov001_0206ad28
 #define func_ov001_0208f27c func_ov001_0208f2a4

@@ -1,6 +1,6 @@
 #define DispatchStageEventArg_020878d4 DispatchStageEventArg
 #define GetStageEventRecord_0209c0ec GetStageEventRecord
-#define data_ov001_0209f2c8 data_ov001_0209f2e8
+#define data_ov001_0209f2c8 g_stageEventsState
 #define func_ov001_020958f4 func_ov001_0209591c
 #define func_ov016_020a6dd8 func_ov016_020a6df8
 #include "src/ov001/wireless/DispatchStageEventArg_020878d4.c"

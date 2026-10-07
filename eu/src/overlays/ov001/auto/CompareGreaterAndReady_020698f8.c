@@ -1,2 +1,1 @@
-#define CompareGreaterAndReady_020698f8 func_ov001_020698f8
 #include "src/ov001/shared_engine/CompareGreaterAndReady_020698f8.c"

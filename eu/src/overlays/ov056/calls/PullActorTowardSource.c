@@ -9,5 +9,5 @@
 #define VEC_Normalize_01ff9f88 VEC_Normalize
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define func_ov001_02090f04 func_ov001_02090f2c
-#define func_ov001_020958e4 func_ov001_0209590c
+#define func_ov001_020958e4 ClearStageEventKindIfMatches
 #include "src/ov056/shared_engine/PullActorTowardSource_020d383c.c"

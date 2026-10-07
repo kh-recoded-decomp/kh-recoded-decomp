@@ -1,4 +1,4 @@
-#define BindDescriptor0_0208f268 func_ov001_0208f290
+#define BindDescriptor0_0208f268 BindDescriptor0
 #define FindStageObjectById_0209c290 FindStageObjectById
 #define data_ov001_020a0508 data_ov001_020a0528
 #define func_ov001_0208f27c func_ov001_0208f2a4

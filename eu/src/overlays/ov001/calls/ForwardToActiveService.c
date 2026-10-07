@@ -1,4 +1,4 @@
 #define func_ov001_02087884 ForwardToActiveService
 #define func_ov001_0209c884 SeekFirstActiveStageEvent
-#define g_activeService_0209f2c8 data_ov001_0209f2e8
+#define g_activeService_0209f2c8 g_stageEventsState
 #include "src/ov001/shared_engine/func_ov001_02087884.c"

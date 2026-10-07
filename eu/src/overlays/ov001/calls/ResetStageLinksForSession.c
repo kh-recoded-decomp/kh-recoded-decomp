@@ -1,5 +1,5 @@
 #define func_ov001_020645c8 IsSessionFlagSet
-#define BindDescriptor0_0208f268 func_ov001_0208f290
+#define BindDescriptor0_0208f268 BindDescriptor0
 #define ResetLinkedActorMotion_02097a64 ResetLinkedActorMotion
 #define ResetStageLinksForSession_0209c430 ResetStageLinksForSession
 #define Session_Exists_02063a24 func_ov001_02063a24

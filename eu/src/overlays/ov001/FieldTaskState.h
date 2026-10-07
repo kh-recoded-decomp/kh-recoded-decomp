@@ -9,9 +9,15 @@ typedef void (*FieldTaskUpdate)(FieldTaskState *task);
 struct FieldTaskState {
     FieldTaskUpdate update;
     u32 phase;
-    void *release;
-    u32 parameter;
+    FieldTaskUpdate draw;
+    int parameter;
     u8 active;
+    u8 pad_11;
+    u8 kind;
+    u8 pad_13;
+    u8 mode;
+    u8 pad_15;
+    u16 id;
 };
 
 #endif

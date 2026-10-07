@@ -1,4 +1,4 @@
 #define GetStageEventRecord_0209c0ec GetStageEventRecord
 #define StageRecord_SetFlagBit2_02087d24 StageRecord_SetFlagBit2
-#define g_stageEventsState_0209f2c8 data_ov001_0209f2e8
+#define g_stageEventsState_0209f2c8 g_stageEventsState
 #include "src/ov001/shared_engine/StageRecord_SetFlagBit2_02087d24.c"

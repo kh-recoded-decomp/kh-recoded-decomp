@@ -1,6 +1,6 @@
 #define GetStageEventRecord_0209c0ec GetStageEventRecord
 #define ReleaseEventLinkedEntries_02097c10 ReleaseEventLinkedEntries
-#define func_ov001_0208f268 func_ov001_0208f290
+#define func_ov001_0208f268 BindDescriptor0
 #define func_ov001_0208f27c func_ov001_0208f2a4
 #define func_ov001_0208f28c func_ov001_0208f2b4
 #define func_ov001_0209c024 ReleaseStageSlotEntry

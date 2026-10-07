@@ -1,4 +1,4 @@
 #define StageEvents_Trigger_020876e4 StageEvents_Trigger
 #define func_ov001_0209a174 func_ov001_0209a19c
-#define g_stageEventsState_0209f2c8 data_ov001_0209f2e8
+#define g_stageEventsState_0209f2c8 g_stageEventsState
 #include "src/ov001/shared_engine/StageEvents_Trigger_020876e4.c"

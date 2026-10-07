@@ -1,4 +1,4 @@
 #define GetStageEventRecord_0209c0ec GetStageEventRecord
 #define IsStageEventReady_02087c78 IsStageEventReady
-#define data_ov001_0209f2c8 data_ov001_0209f2e8
+#define data_ov001_0209f2c8 g_stageEventsState
 #include "src/ov001/wireless/IsStageEventReady_02087c78.c"

@@ -1,5 +1,8 @@
 #include "nitro/types.h"
 
+#define func_ov001_020681c4 GetSceneResourceHandle
+#define func_ov001_020681d4 GetSceneEntryResourceId
+
 extern u32 data_ov030_020bd020;
 extern s32 UpdateMenuItemLoading(void);
 extern void func_ov001_020687b8(void);

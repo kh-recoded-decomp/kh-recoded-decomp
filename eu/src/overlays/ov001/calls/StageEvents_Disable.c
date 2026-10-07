@@ -1,4 +1,4 @@
 #define StageEvents_Disable_0208772c StageEvents_Disable
 #define func_ov001_0209b5d0 LockStageSlotObjects
-#define g_stageEventsState_0209f2c8 data_ov001_0209f2e8
+#define g_stageEventsState_0209f2c8 g_stageEventsState
 #include "src/ov001/shared_engine/StageEvents_Disable_0208772c.c"

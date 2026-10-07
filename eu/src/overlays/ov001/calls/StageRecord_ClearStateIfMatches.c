@@ -1,5 +1,5 @@
 #define GetStageEventRecord_0209c0ec GetStageEventRecord
 #define StageRecord_ClearStateIfMatches_02087d4c StageRecord_ClearStateIfMatches
-#define func_ov001_020958e4 func_ov001_0209590c
-#define g_stageEventsState_0209f2c8 data_ov001_0209f2e8
+#define func_ov001_020958e4 ClearStageEventKindIfMatches
+#define g_stageEventsState_0209f2c8 g_stageEventsState
 #include "src/ov001/shared_engine/StageRecord_ClearStateIfMatches_02087d4c.c"

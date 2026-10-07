@@ -17,5 +17,5 @@
 #define data_ov056_020d7f58 data_ov056_020d7f78
 #define func_0202fba8 func_0202fbbc
 #define func_ov001_02090f04 func_ov001_02090f2c
-#define func_ov001_020958e4 func_ov001_0209590c
+#define func_ov001_020958e4 ClearStageEventKindIfMatches
 #include "src/ov056/shared_engine/CircleActorAroundUnit_020d56e8.c"

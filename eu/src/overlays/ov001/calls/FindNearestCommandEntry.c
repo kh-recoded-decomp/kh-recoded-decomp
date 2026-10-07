@@ -1,4 +1,4 @@
-#define BindDescriptor0_0208f268 func_ov001_0208f290
+#define BindDescriptor0_0208f268 BindDescriptor0
 #define FindNearestCommandEntry_02096a04 FindNearestCommandEntry
 #define GetStageActor_0209c040 GetStageActor
 #define GetStageRowIndex_0209c228 GetStageRowIndex

@@ -1,3 +1,3 @@
-#define Ov002_NotifyNodesOfKind func_ov001_02087e44
+#define Ov002_NotifyNodesOfKind TryActivateStageSlot
 #define ScriptCmd_NotifyNodesOfKind_020659c8 func_ov001_020659c8
 #include "src/ov001/shared_engine/ScriptCmd_NotifyNodesOfKind_020659c8.c"

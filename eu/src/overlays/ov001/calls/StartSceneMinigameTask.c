@@ -7,6 +7,6 @@
 #define func_ov001_0207eadc func_ov001_0207eb04
 #define func_ov001_0207eb0c HandleListMenuConfirm
 #define func_ov001_0207eb70 func_ov001_0207eb98
-#define func_ov001_0207eb8c func_ov001_0207ebb4
-#define func_ov001_0207eb9c func_ov001_0207ebc4
+#define func_ov001_0207eb8c GetFieldMinigameScore
+#define func_ov001_0207eb9c GetFieldMinigameLevel
 #include "src/ov001/field_manager/StartSceneMinigameTask_02070cfc.c"

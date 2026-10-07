@@ -7,6 +7,8 @@
 #define PXI_Init_02088248 func_ov001_02088270
 #define SetCachedSoundParams_0204dcec SetCachedSoundParams
 #define UpdateMenuItemLoading_02067750 UpdateMenuItemLoading
+#define func_ov001_020681c4 GetSceneResourceHandle
+#define func_ov001_020681d4 GetSceneEntryResourceId
 #define contextData_020c0060 data_ov032_020c0080
 #define func_ov001_02067870 QueueAreaSoundArchives
 #define func_ov032_020ba604 func_ov032_020ba624

@@ -1,4 +1,4 @@
 #define ReleaseServiceInstance_02087678 ReleaseServiceInstance_020876a0
-#define data_0209f2c8 data_ov001_0209f2e8
+#define data_0209f2c8 g_stageEventsState
 #define func_0209b8c4 ReleaseStageManager
 #include "src/ov001/shared_engine/ReleaseServiceInstance_02087678.c"

@@ -1,5 +1,7 @@
 #include "nitro/types.h"
 
+#define func_ov001_020681d4 GetSceneEntryResourceId
+
 extern int func_ov001_02067ed4(void);
 extern int func_ov001_020681d4(void);
 extern int SetFieldCaptionText(void);

@@ -1,4 +1,4 @@
 #define CreateStageManagerTask_02099ad0 CreateStageManagerTask
 #define StageEvents_StartIfIdle_0208765c StageEvents_StartIfIdle
-#define g_stageEventsState_0209f2c8 data_ov001_0209f2e8
+#define g_stageEventsState_0209f2c8 g_stageEventsState
 #include "src/ov001/shared_engine/StageEvents_StartIfIdle_0208765c.c"

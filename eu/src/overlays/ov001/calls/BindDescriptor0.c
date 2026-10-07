@@ -1,4 +1,4 @@
-#define BindDescriptor0_0208f268 func_ov001_0208f290
+#define BindDescriptor0_0208f268 BindDescriptor0
 #define Ov008_GetDescriptor0 GetEntryNumberFromAddress
 #define Ov008_SetWord0And20 func_ov001_0208f280
 #include "src/ov001/shared_engine/BindDescriptor0_0208f268.c"
