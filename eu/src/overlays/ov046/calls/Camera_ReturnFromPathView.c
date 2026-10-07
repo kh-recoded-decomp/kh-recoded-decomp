@@ -14,16 +14,16 @@ typedef struct EventCameraWork {
     CameraPath *activePath;
 } EventCameraWork;
 
-extern s32 func_ov046_020c0d88(void);
-extern EventCameraWork *func_ov046_020c0d68(void);
+extern s32 Camera_GetModeValue(void);
+extern EventCameraWork *Camera_GetEventWork(void);
 extern void Camera_BlendToFollowView(s32 curveType, fx32 duration);
 
 BOOL Camera_ReturnFromPathView(void)
 {
     CameraPath *path;
 
-    if (func_ov046_020c0d88() == 2) {
-        path = func_ov046_020c0d68()->activePath;
+    if (Camera_GetModeValue() == 2) {
+        path = Camera_GetEventWork()->activePath;
         if (path != NULL) {
             Camera_BlendToFollowView(path->curveType, path->duration);
             return TRUE;

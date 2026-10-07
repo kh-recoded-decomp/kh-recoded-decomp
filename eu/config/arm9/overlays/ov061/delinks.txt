@@ -8,6 +8,10 @@ src/overlays/ov061/calls/BeginGuardIntroScene.c:
     complete
     .text       start:0x020d8120 end:0x020d81b4
 
+src/overlays/ov061/calls/ReleaseBurstBattleResources.c:
+    complete
+    .text       start:0x020d81b4 end:0x020d81de
+
 src/overlays/ov061/calls/UpdateTimedBurstAction.c:
     complete
     .text       start:0x020d81e0 end:0x020d8380

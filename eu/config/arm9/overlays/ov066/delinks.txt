@@ -7,6 +7,10 @@ src/overlays/ov066/calls/BeginSweepIntroScene.c:
     complete
     .text       start:0x020d8120 end:0x020d81e8
 
+src/overlays/ov066/calls/ReleaseSweepSceneResources.c:
+    complete
+    .text       start:0x020d81e8 end:0x020d8212
+
 src/overlays/ov066/calls/UpdateDualMarkerAction.c:
     complete
     .text       start:0x020d8214 end:0x020d8370

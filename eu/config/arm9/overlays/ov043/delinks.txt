@@ -14,7 +14,7 @@ src/overlays/ov043/auto/func_ov043_020bc8d4.c:
     complete
     .text       start:0x020bc8d4 end:0x020bc8dc
 
-src/overlays/ov043/calls/func_ov043_020bc8dc.c:
+src/overlays/ov043/calls/Ov043Camera_GetState.c:
     complete
     .text       start:0x020bc8dc end:0x020bc8ec
 
@@ -26,11 +26,11 @@ src/overlays/ov043/auto/func_ov043_020bc900.c:
     complete
     .text       start:0x020bc900 end:0x020bc902
 
-src/overlays/ov043/auto/func_ov043_020bc904.c:
+src/overlays/ov043/auto/Ov043Camera_SetFlags.c:
     complete
     .text       start:0x020bc904 end:0x020bc918
 
-src/overlays/ov043/auto/func_ov043_020bc918.c:
+src/overlays/ov043/auto/Ov043Camera_GetFlags.c:
     complete
     .text       start:0x020bc918 end:0x020bc92c
 
@@ -45,6 +45,10 @@ src/overlays/ov043/calls/MoveCameraTargetTo.c:
 src/overlays/ov043/calls/TranslateCameraGoal_020bc9d4.c:
     complete
     .text       start:0x020bc9d4 end:0x020bca3c
+
+src/overlays/ov043/calls/Ov043Camera_GetActiveController.c:
+    complete
+    .text       start:0x020bca3c end:0x020bca50
 
 src/overlays/ov043/calls/GetCameraToTargetDistance.c:
     complete
@@ -93,6 +97,10 @@ src/overlays/ov043/auto/func_ov043_020bd0a4.c:
 src/overlays/ov043/auto/func_ov043_020bd0a8.c:
     complete
     .text       start:0x020bd0a8 end:0x020bd0ac
+
+src/overlays/ov043/calls/Ov043Camera_GetViewState.c:
+    complete
+    .text       start:0x020bd0ac end:0x020bd0c0
 
 src/overlays/ov043/calls/IsShapeInViewDepth.c:
     complete

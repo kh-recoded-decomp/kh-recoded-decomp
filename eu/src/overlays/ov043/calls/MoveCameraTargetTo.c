@@ -1,5 +1,5 @@
 #define MoveCameraTargetTo_020bc974 MoveCameraTargetTo
 #define VEC_Subtract_01ff9e3c VEC_Subtract
-#define data_ov043_020bd2c0 data_ov043_020bd2e0
+#define data_ov043_020bd2c0 gOv043CameraState
 #define func_ov043_020bc90c TranslateCameraTarget_020bc92c
 #include "src/ov043/camera/MoveCameraTargetTo_020bc974.c"

@@ -1,8 +1,8 @@
 #include "nitro/types.h"
 
 extern unsigned int *data_ov021_020b56c0;
-extern unsigned int func_ov043_020bd0ac();
-extern unsigned int func_ov044_020d0bc4();
+extern unsigned int Ov043Camera_GetViewState();
+extern unsigned int Panel_GetViewState();
 extern unsigned int func_ov046_020c170c();
 
 unsigned int func_ov021_020af71c(void) {
@@ -14,10 +14,10 @@ unsigned int func_ov021_020af71c(void) {
     return result;
   case 1:
   case 2:
-    result = func_ov043_020bd0ac();
+    result = Ov043Camera_GetViewState();
     return result;
   case 3:
-    result = func_ov044_020d0bc4();
+    result = Panel_GetViewState();
     return result;
   default:
     return 0;

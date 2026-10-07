@@ -1,6 +1,6 @@
 #define Camera_SetFollowSuspended_020c29c0 Camera_SetFollowSuspended
 #define Camera_SetStateFlag18_020c2a84 Camera_SetStateFlag18
-#define func_ov046_020c0d68 func_ov046_020c0d88
+#define func_ov046_020c0d68 Camera_GetModeValue
 #define func_ov046_020c1a48 func_ov046_020c1a68
 #define func_ov046_020c1a70 Camera_ComputeFollowDistance
 #define func_ov046_020c2ab8 func_ov046_020c2ad8

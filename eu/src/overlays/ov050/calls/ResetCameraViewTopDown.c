@@ -1,4 +1,4 @@
 #define ResetCameraViewTopDown_020c3b44 ResetCameraViewTopDown
 #define data_02053438 data_0205344c
-#define func_ov046_020c0d58 func_ov046_020c0d78
+#define func_ov046_020c0d58 Camera_GetTopDownView
 #include "src/ov050/shared_engine/ResetCameraViewTopDown_020c3b44.c"

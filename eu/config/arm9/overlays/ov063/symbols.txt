@@ -1,5 +1,5 @@
 BeginBossIntroScene kind:function(thumb,size=0x5c) addr:0x020d8120
-func_ov063_020d817c kind:function(thumb,size=0x24) addr:0x020d817c
+ReleaseUnitEffectResources kind:function(thumb,size=0x24) addr:0x020d817c
 func_ov063_020d81a0 kind:function(thumb,size=0xc) addr:0x020d81a0
 func_ov063_020d81ac kind:function(thumb,size=0xc) addr:0x020d81ac
 func_ov063_020d81b8 kind:function(thumb,size=0xc) addr:0x020d81b8

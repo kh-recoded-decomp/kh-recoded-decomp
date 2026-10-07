@@ -8,8 +8,8 @@ typedef struct EventCameraWork {
     VecFx32 translation;
 } EventCameraWork;
 
-extern s32 func_ov046_020c0d88(void);
-extern EventCameraWork *func_ov046_020c0d68(void);
+extern s32 Camera_GetModeValue(void);
+extern EventCameraWork *Camera_GetEventWork(void);
 extern VecFx32 *func_ov001_0206dc4c(int playerIndex);
 
 void Camera_GetEventFocusPoint(VecFx32 *out)
@@ -19,8 +19,8 @@ void Camera_GetEventFocusPoint(VecFx32 *out)
     EventCameraWork *work;
     VecFx32 *position;
 
-    if (func_ov046_020c0d88() == 2) {
-        work = func_ov046_020c0d68();
+    if (Camera_GetModeValue() == 2) {
+        work = Camera_GetEventWork();
         if (work->pathKind == 2) {
             pathFocus.x = work->translation.x;
             pathFocus.y = work->translation.y + 0x14cd;

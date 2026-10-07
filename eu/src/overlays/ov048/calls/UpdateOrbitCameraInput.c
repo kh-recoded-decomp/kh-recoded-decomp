@@ -5,5 +5,5 @@
 #define data_02053438 data_0205344c
 #define data_0205a970 NNS_G3dGlb_cameraMtx
 #define func_0204b0ac RotateVecTowardVec
-#define func_ov046_020c0d78 func_ov046_020c0d98
+#define func_ov046_020c0d78 Camera_GetStateFlags
 #include "src/ov048/shared_engine/UpdateOrbitCameraInput_020c3530.c"

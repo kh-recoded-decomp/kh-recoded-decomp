@@ -8,7 +8,7 @@ DispatchPageHandler kind:function(arm,size=0x38) addr:0x020d3ab4
 func_ov055_020d3aec kind:function(arm,size=0x30) addr:0x020d3aec
 ResumeEffectOwnerActor kind:function(arm,size=0x104) addr:0x020d3b1c
 UpdateEffectOwnerMotion kind:function(arm,size=0x1b4) addr:0x020d3c20
-func_ov055_020d3dd4 kind:function(thumb,size=0x28) addr:0x020d3dd4
+CreateOverlay055Entity kind:function(thumb,size=0x28) addr:0x020d3dd4
 CreatePageEffectTask kind:function(thumb,size=0xe0) addr:0x020d3dfc
 sOv055_BaChFormatSDefPZ_020d3ee0 kind:data(any) addr:0x020d3ee0
 sOv055_BaChFormatSEtcPZ_020d3ef4 kind:data(any) addr:0x020d3ef4

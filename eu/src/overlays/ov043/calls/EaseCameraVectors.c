@@ -4,5 +4,5 @@
 #define TranslateCameraTarget_020bc90c TranslateCameraTarget_020bc92c
 #define VEC_MultAdd_01ffa09c VEC_MultAdd
 #define VEC_Subtract_01ff9e3c VEC_Subtract
-#define data_ov043_020bd2c0 data_ov043_020bd2e0
+#define data_ov043_020bd2c0 gOv043CameraState
 #include "src/ov043/camera/EaseCameraVectors_020bcf44.c"

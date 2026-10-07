@@ -1,5 +1,5 @@
 #define CommitCameraWithCache_020bc820 CommitCameraWithCache
 #define camera_commit_projection_0202a814 camera_commit_projection
-#define data_ov043_020bd2c0 data_ov043_020bd2e0
+#define data_ov043_020bd2c0 gOv043CameraState
 #define func_ov043_020bd0a0 func_ov043_020bd0c0
 #include "src/ov043/camera/CommitCameraWithCache_020bc820.c"

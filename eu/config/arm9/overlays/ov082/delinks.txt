@@ -20,6 +20,10 @@ src/overlays/ov082/calls/ShutdownOv082Screen.c:
     complete
     .text       start:0x020bf320 end:0x020bf390
 
+src/overlays/ov082/calls/GetOv082SelectedSlot.c:
+    complete
+    .text       start:0x020bf660 end:0x020bf674
+
 src/ov082/data/Data_ov082_020bf6a0.c:
     complete
     .data       start:0x020bf6a0 end:0x020bf6e0

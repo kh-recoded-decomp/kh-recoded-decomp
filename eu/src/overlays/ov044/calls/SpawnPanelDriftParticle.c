@@ -1,5 +1,5 @@
 #define InitDriftParticle_020afb34 InitDriftParticle
 #define SpawnPanelDriftParticle_020d058c SpawnPanelDriftParticle
-#define func_ov044_020d0578 func_ov044_020d0598
+#define func_ov044_020d0578 Panel_GetDriftOrigin
 #define g_panel_020d0ea0 data_ov044_020d0ec0
 #include "src/ov044/panel_state/SpawnPanelDriftParticle_020d058c.c"

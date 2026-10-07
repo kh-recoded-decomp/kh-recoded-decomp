@@ -15,5 +15,5 @@
 #define func_ov064_020d8234 UpdateOv064BossSequence
 #define func_ov064_020d86a4 func_ov064_020d86c4
 #define func_ov064_020d86b4 func_ov064_020d86d4
-#define func_ov064_020d86d0 func_ov064_020d86f0
+#define func_ov064_020d86d0 ReleaseMarkedSceneResources
 #include "src/ov064/object_factory/CreateMarkedSceneTask_020d86e8.c"

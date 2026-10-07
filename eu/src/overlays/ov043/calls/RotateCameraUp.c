@@ -1,5 +1,5 @@
 #define GetSubStruct1C_020bbfe0 GetSubStruct1C
 #define RotateCameraUp_020bca9c RotateCameraUp
 #define RotateVectorAroundAxis_0204b34c RotateVectorAroundAxis
-#define data_ov043_020bd2c0 data_ov043_020bd2e0
+#define data_ov043_020bd2c0 gOv043CameraState
 #include "src/ov043/camera/RotateCameraUp_020bca9c.c"

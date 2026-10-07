@@ -3,7 +3,7 @@
 #define LoadDefaultProjectionValues_0202a7b4 LoadDefaultProjectionValues
 #define VEC_MultAdd_01ffa09c VEC_MultAdd
 #define data_02053438 data_0205344c
-#define data_ov043_020bd2c0 data_ov043_020bd2e0
+#define data_ov043_020bd2c0 gOv043CameraState
 #define func_ov043_020bccc4 func_ov043_020bcce4
 #define func_ov043_020bd088 func_ov043_020bd0a8
 #include "src/ov043/camera/InitCameraState_020bcbcc.c"

@@ -1,4 +1,4 @@
 #define GetCameraToTargetDistance_020bca30 GetCameraToTargetDistance
 #define func_01ffa0f4 VEC_Distance
-#define g_activeCamera_020bd2c0 data_ov043_020bd2e0
+#define g_activeCamera_020bd2c0 gOv043CameraState
 #include "src/ov043/leaf_research/GetCameraToTargetDistance_020bca30.c"

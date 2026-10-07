@@ -19,6 +19,6 @@
 #define func_0204f768 GetOverlaySelectionRecord
 #define func_ov021_020a89a8 func_ov021_020a89c8
 #define func_ov066_020d8100 BeginSweepIntroScene
-#define func_ov066_020d81c8 func_ov066_020d81e8
+#define func_ov066_020d81c8 ReleaseSweepSceneResources
 #define func_ov066_020d81f4 UpdateDualMarkerAction
 #include "src/ov066/object_factory/CreateOv066SceneObject_020d8548.c"

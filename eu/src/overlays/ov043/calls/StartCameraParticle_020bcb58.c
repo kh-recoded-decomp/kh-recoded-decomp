@@ -2,5 +2,5 @@
 #define MTX_Copy43To33_01ff913c func_01ff913c
 #define StartCameraParticle_020bcb38 StartCameraParticle_020bcb58
 #define data_0205a970 NNS_G3dGlb_cameraMtx
-#define data_ov043_020bd2c0 data_ov043_020bd2e0
+#define data_ov043_020bd2c0 gOv043CameraState
 #include "src/ov043/camera/StartCameraParticle_020bcb38.c"

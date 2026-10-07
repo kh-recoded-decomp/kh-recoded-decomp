@@ -7,6 +7,10 @@ src/overlays/ov062/calls/func_ov062_020d8120.c:
     complete
     .text       start:0x020d8120 end:0x020d8154
 
+src/overlays/ov062/calls/ReleaseBossBattleResources.c:
+    complete
+    .text       start:0x020d8154 end:0x020d817e
+
 src/overlays/ov062/calls/AdvanceGroupUnitPhase.c:
     complete
     .text       start:0x020d8204 end:0x020d8272

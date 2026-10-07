@@ -1,3 +1,3 @@
 #define IsOffsetBeyondActiveRecord_020bc594 IsOffsetBeyondActiveRecord
-#define func_ov043_020bca1c func_ov043_020bca3c
+#define func_ov043_020bca1c Ov043Camera_GetActiveController
 #include "src/ov031/overlay_state/IsOffsetBeyondActiveRecord_020bc594.c"

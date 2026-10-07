@@ -21,5 +21,5 @@
 #define func_0204f768 GetOverlaySelectionRecord
 #define func_ov021_020a89a8 func_ov021_020a89c8
 #define func_ov021_020addcc StopEntrySounds
-#define func_ov061_020d8194 func_ov061_020d81b4
+#define func_ov061_020d8194 ReleaseBurstBattleResources
 #include "src/ov061/object_factory/CreateBurstBattleObject_020d8360.c"

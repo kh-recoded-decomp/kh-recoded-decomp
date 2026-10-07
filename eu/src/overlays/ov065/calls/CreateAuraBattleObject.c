@@ -24,6 +24,6 @@
 #define func_ov056_020d3b30 ForwardTargetHandleValue
 #define func_ov056_020d3b40 ForwardTargetHandle_020d3b60
 #define func_ov065_020d8100 func_ov065_020d8120
-#define func_ov065_020d8134 func_ov065_020d8154
+#define func_ov065_020d8134 ReleaseAuraBattleResources
 #define func_ov065_020d82b0 func_ov065_020d82d0
 #include "src/ov065/object_factory/CreateAuraBattleObject_020d8400.c"

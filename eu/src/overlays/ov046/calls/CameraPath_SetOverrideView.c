@@ -14,15 +14,15 @@ typedef struct EventCameraWork {
     void *activePath;
 } EventCameraWork;
 
-extern s32 func_ov046_020c0d88(void);
-extern EventCameraWork *func_ov046_020c0d68(void);
+extern s32 Camera_GetModeValue(void);
+extern EventCameraWork *Camera_GetEventWork(void);
 
 BOOL CameraPath_SetOverrideView(const CameraOverrideView *view)
 {
     EventCameraWork *work;
 
-    if (func_ov046_020c0d88() == 2) {
-        work = func_ov046_020c0d68();
+    if (Camera_GetModeValue() == 2) {
+        work = Camera_GetEventWork();
         if (work->activePath != NULL) {
             if (work->pathKind == 2) {
                 work->directView = *view;

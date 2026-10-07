@@ -7,6 +7,10 @@ src/overlays/ov065/calls/func_ov065_020d8120.c:
     complete
     .text       start:0x020d8120 end:0x020d8154
 
+src/overlays/ov065/calls/ReleaseAuraBattleResources.c:
+    complete
+    .text       start:0x020d8154 end:0x020d817e
+
 src/overlays/ov065/calls/FireMarkedGroupShot.c:
     complete
     .text       start:0x020d8180 end:0x020d82b4

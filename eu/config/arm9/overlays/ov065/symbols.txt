@@ -1,5 +1,5 @@
 func_ov065_020d8120 kind:function(thumb,size=0x34) addr:0x020d8120
-func_ov065_020d8154 kind:function(thumb,size=0x2a) addr:0x020d8154
+ReleaseAuraBattleResources kind:function(thumb,size=0x2a) addr:0x020d8154
 FireMarkedGroupShot kind:function(thumb,size=0x134) addr:0x020d8180
 UpdateStoppingEffect kind:function(thumb,size=0x1a) addr:0x020d82b4
 func_ov065_020d82d0 kind:function(thumb,size=0x98) addr:0x020d82d0

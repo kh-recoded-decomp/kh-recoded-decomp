@@ -8,7 +8,7 @@ extern SubModeState *data_ov021_020b56c0;
 
 extern int func_ov046_020c1608(void);
 extern int func_ov042_020bd110(void);
-extern int func_ov043_020bc8dc(void);
+extern int Ov043Camera_GetState(void);
 extern int func_ov044_020d0130(void);
 
 int func_ov021_020af614(void)
@@ -19,7 +19,7 @@ int func_ov021_020af614(void)
     case 1:
         return func_ov042_020bd110();
     case 2:
-        return func_ov043_020bc8dc();
+        return Ov043Camera_GetState();
     case 3:
         return func_ov044_020d0130();
     }

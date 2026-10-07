@@ -1,3 +1,3 @@
 #include "nitro/types.h"
 
-static u32 data_ov082_020bf6e0[8];
+static u32 gOv082State[8];

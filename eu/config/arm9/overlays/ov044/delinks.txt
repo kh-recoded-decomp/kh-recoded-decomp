@@ -71,6 +71,14 @@ src/overlays/ov044/auto/func_ov044_020d0580.c:
     complete
     .text       start:0x020d0580 end:0x020d0582
 
+src/overlays/ov044/calls/Panel_GetActiveController.c:
+    complete
+    .text       start:0x020d0584 end:0x020d0598
+
+src/overlays/ov044/calls/Panel_GetDriftOrigin.c:
+    complete
+    .text       start:0x020d0598 end:0x020d05ac
+
 src/overlays/ov044/calls/SpawnPanelDriftParticle.c:
     complete
     .text       start:0x020d05ac end:0x020d05e0
@@ -114,6 +122,10 @@ src/overlays/ov044/auto/func_ov044_020d0ba4.c:
 src/overlays/ov044/calls/ReapplyPanelState.c:
     complete
     .text       start:0x020d0ba8 end:0x020d0bc4
+
+src/overlays/ov044/calls/Panel_GetViewState.c:
+    complete
+    .text       start:0x020d0bc4 end:0x020d0bd8
 
 src/overlays/ov044/calls/UpdatePanelViewAxes.c:
     complete

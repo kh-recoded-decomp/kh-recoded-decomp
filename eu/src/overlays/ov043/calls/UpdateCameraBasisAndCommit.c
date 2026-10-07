@@ -2,5 +2,5 @@
 #define func_01ff9e3c VEC_Subtract
 #define func_0204dc94 SetSoundListenerFrame
 #define func_ov043_020bc820 CommitCameraWithCache
-#define g_activeCamera_020bd2c0 data_ov043_020bd2e0
+#define g_activeCamera_020bd2c0 gOv043CameraState
 #include "src/ov043/leaf_research/UpdateCameraBasisAndCommit_020bc854.c"

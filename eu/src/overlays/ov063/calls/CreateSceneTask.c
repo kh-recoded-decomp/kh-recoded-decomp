@@ -11,7 +11,7 @@
 #define data_ov063_020d8700 sOv063_CmHo_020d8720
 #define data_ov063_020d8708 sOv063_BaEfFnHlP2_020d8728
 #define func_ov021_020a89a8 func_ov021_020a89c8
-#define func_ov063_020d815c func_ov063_020d817c
+#define func_ov063_020d815c ReleaseUnitEffectResources
 #define func_ov063_020d8180 func_ov063_020d81a0
 #define func_ov063_020d818c func_ov063_020d81ac
 #define func_ov063_020d8198 func_ov063_020d81b8

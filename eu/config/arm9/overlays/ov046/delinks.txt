@@ -35,6 +35,26 @@ src/overlays/ov046/calls/Camera_UpdateViewAxes.c:
     complete
     .text       start:0x020c0c54 end:0x020c0d58
 
+src/overlays/ov046/calls/Camera_GetEmbeddedView.c:
+    complete
+    .text       start:0x020c0d58 end:0x020c0d68
+
+src/overlays/ov046/calls/Camera_GetEventWork.c:
+    complete
+    .text       start:0x020c0d68 end:0x020c0d78
+
+src/overlays/ov046/calls/Camera_GetTopDownView.c:
+    complete
+    .text       start:0x020c0d78 end:0x020c0d88
+
+src/overlays/ov046/calls/Camera_GetModeValue.c:
+    complete
+    .text       start:0x020c0d88 end:0x020c0d98
+
+src/overlays/ov046/calls/Camera_GetStateFlags.c:
+    complete
+    .text       start:0x020c0d98 end:0x020c0da8
+
 src/overlays/ov046/calls/Camera_RequestMode.c:
     complete
     .text       start:0x020c0da8 end:0x020c0dd4

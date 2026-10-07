@@ -16,6 +16,6 @@
 #define func_0202f4b8 func_0202f4cc
 #define func_ov021_020a8ab4 ResetAnimationTrackState
 #define func_ov021_020a8ca0 func_ov021_020a8cc0
-#define func_ov046_020c0d68 func_ov046_020c0d88
+#define func_ov046_020c0d68 Camera_GetModeValue
 #define func_ov048_020c384c GetCameraViewUpVector
 #include "src/ov070/object_state/UpdateOv070BossTurnState_020d85c8.c"

@@ -1,4 +1,4 @@
-func_ov067_020d8120 kind:function(thumb,size=0x1e) addr:0x020d8120
+ReleaseOv067BossResources kind:function(thumb,size=0x1e) addr:0x020d8120
 StartOv067BossIntro kind:function(thumb,size=0x6c) addr:0x020d8140
 RunOv067BossIntroState kind:function(thumb,size=0x1cc) addr:0x020d81ac
 EndOv067BossIntro kind:function(thumb,size=0x6c) addr:0x020d8378

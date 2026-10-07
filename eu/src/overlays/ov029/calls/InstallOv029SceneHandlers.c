@@ -4,8 +4,8 @@
 #define func_ov029_020ba86c func_ov029_020ba88c
 #define func_ov029_020ba9b0 func_ov029_020ba9d0
 #define func_ov029_020ba9d4 func_ov029_020ba9f4
-#define func_ov029_020baa00 func_ov029_020baa20
-#define func_ov029_020baa24 func_ov029_020baa44
+#define func_ov029_020baa00 Ov029_ClearSceneFlag1
+#define func_ov029_020baa24 Ov029_SetSceneFlag4000
 #define func_ov029_020baa84 func_ov029_020baaa4
 #define func_ov029_020baacc func_ov029_020baaec
 #define func_ov029_020baad4 func_ov029_020baaf4

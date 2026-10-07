@@ -43,6 +43,10 @@ src/overlays/ov055/calls/UpdateEffectOwnerMotion.c:
     complete
     .text       start:0x020d3c20 end:0x020d3dd4
 
+src/overlays/ov055/calls/CreateOverlay055Entity.c:
+    complete
+    .text       start:0x020d3dd4 end:0x020d3dfc
+
 src/overlays/ov055/calls/CreatePageEffectTask.c:
     complete
     .text       start:0x020d3dfc end:0x020d3edc

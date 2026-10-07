@@ -73,7 +73,7 @@ extern void *func_0202c4a0(const char *name, u32 mode);
 extern void BuildNodeRecords(BossObject *obj, ObjectOwner *owner, void *resDesc, void *file);
 extern void AcquireEntryHandles(BossObject *obj, ObjectOwner *owner, void *resDesc);
 extern void LoadResGroupHandles(BossObject *obj, ObjectOwner *owner, void *resDesc);
-extern void func_ov067_020d8120();
+extern void ReleaseOv067BossResources();
 extern void StartOv067BossIntro();
 extern void RunOv067BossIntroState();
 extern void EndOv067BossIntro();
@@ -119,7 +119,7 @@ BossObject *CreateOv067BossObject(ObjectOwner *owner, void *resDesc, ObjectDesc 
     targets->field10 = 0;
     obj->groupAPtr = &targets->groupA;
     obj->onStart = StartOv067BossIntro;
-    obj->draw = func_ov067_020d8120;
+    obj->draw = ReleaseOv067BossResources;
     obj->finish = EndOv067BossIntro;
     obj->onAction = RunOv067BossIntroState;
     selection = *GetOverlaySelectionRecord(owner->player);

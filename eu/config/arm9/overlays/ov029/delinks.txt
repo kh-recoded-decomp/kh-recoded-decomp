@@ -43,6 +43,10 @@ src/overlays/ov029/calls/DisableOv029Sound.c:
     complete
     .text       start:0x020ba788 end:0x020ba844
 
+src/overlays/ov029/calls/Ov029_ClearSceneModeBits.c:
+    complete
+    .text       start:0x020ba844 end:0x020ba86c
+
 src/overlays/ov029/calls/func_ov029_020ba86c.c:
     complete
     .text       start:0x020ba86c end:0x020ba88c
@@ -58,6 +62,14 @@ src/overlays/ov029/calls/func_ov029_020ba9d0.c:
 src/overlays/ov029/calls/func_ov029_020ba9f4.c:
     complete
     .text       start:0x020ba9f4 end:0x020baa20
+
+src/overlays/ov029/calls/Ov029_ClearSceneFlag1.c:
+    complete
+    .text       start:0x020baa20 end:0x020baa44
+
+src/overlays/ov029/calls/Ov029_SetSceneFlag4000.c:
+    complete
+    .text       start:0x020baa44 end:0x020baa60
 
 src/overlays/ov029/calls/HasOv029ObjectField28.c:
     complete
