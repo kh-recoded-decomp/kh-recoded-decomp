@@ -47,6 +47,13 @@ ABSOLUTE_SYMBOLS = {
     "data_02ffff96": 0x02FFFF96,
     # Fixed overlay ID used by the save-system self-check.
     "gSaveCheckOverlayId": 0x68,
+    # Overlay IDs referenced through NitroSDK's address-of-symbol convention.
+    "OverlayId13_0000000d": 13,
+    "OverlayId14_0000000e": 14,
+    "OverlayId15_0000000f": 15,
+    "OverlayId053": 53,
+    "OverlayId059": 59,
+    "OverlayId060": 60,
     # Storage immediately before OSi_ArenaState used by the idle thread.
     "OSi_IdleThreadStack": 0x02056CFC,
     # Save verification callbacks execute from overlay 104 but are referenced

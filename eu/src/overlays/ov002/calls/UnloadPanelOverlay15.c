@@ -1,0 +1,4 @@
+#define g_panelState_0206c460 data_ov002_0206c460
+#define func_02029f98 func_02029fac
+#define UnloadPanelOverlay15_02062f30 UnloadPanelOverlay15
+#include "src/ov002/panel_state/UnloadPanelOverlay15_02062f30.c"

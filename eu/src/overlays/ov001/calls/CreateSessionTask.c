@@ -1,0 +1,5 @@
+#define data_ov001_0209eb3c data_ov001_0209eb5c
+#define g_sessionState_020a0488 data_ov001_020a04a8
+#define func_0202a448 func_0202a45c
+#define CreateSessionTask_0206c6dc CreateSessionTask
+#include "src/ov001/shared_engine/CreateSessionTask_0206c6dc.c"

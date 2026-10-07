@@ -1,0 +1,5 @@
+#define func_0201288c NNS_FndInitList
+#define g_sessionState_020a0488 data_ov001_020a04a8
+#define RunSessionCallbacks_0206c684 RunSessionCallbacks
+#define InitSessionCallbackList_0206c66c InitSessionCallbackList
+#include "src/ov001/shared_engine/InitSessionCallbackList_0206c66c.c"

@@ -786,7 +786,7 @@
               "name": "Script commands",
               "evidence": "One exact-matched command handler; its downstream game-facing effect is unresolved. See analysis/actor_model.json.",
               "symbols": [
-                "func_ov005_020a0520"
+                "ScriptCmd_ApplyVectorOperation_020a0520"
               ]
             }
           ]

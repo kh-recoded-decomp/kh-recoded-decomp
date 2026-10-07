@@ -1,5 +1,5 @@
 #define DrawModelViewer_020c21b8 DrawModelViewer
-#define ResetObjManagerLists_020c07fc func_ov099_020c081c
+#define ResetObjManagerLists_020c07fc ResetObjManagerLists_020c081c
 #define UpdateModelViewerScreen_020bee5c UpdateModelViewerScreen
 #define data_ov099_020c224c gEnemyReportStateHandlers
 #define func_ov099_020c1778 func_ov099_020c1798

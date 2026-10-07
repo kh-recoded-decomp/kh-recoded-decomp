@@ -1,7 +1,7 @@
 #define InitMessageLoaders_0206c924 InitMessageLoaders
 #define Msg_BuildLangPath_0202b798 Msg_BuildLangPath
 #define OS_SPrintf_02002428 OS_SPrintf
-#define RegisterSessionCallback_0206c704 func_ov001_0206c704
+#define RegisterSessionCallback_0206c704 RegisterSessionCallback
 #define data_ov001_0209eb50 sOv001_FormatS_0209eb70
 #define data_ov001_0209eb54 sOv001_BaEfInfoPZ_0209eb74
 #define data_ov001_0209eb64 sOv001_BaEfStLanguagePZ_0209eb84

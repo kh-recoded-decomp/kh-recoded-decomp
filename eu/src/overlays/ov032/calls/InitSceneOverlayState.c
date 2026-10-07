@@ -1,7 +1,7 @@
 #define ApplySlotStyleToSession_020ba570 ApplySlotStyleToSession
 #define CreateOverlayTask_0206a6f4 CreateOverlayTask
 #define CreateSessionNameMenu_02063ba4 CreateSessionNameMenu
-#define CreateSessionTask_0206c6dc func_ov001_0206c6dc
+#define CreateSessionTask_0206c6dc CreateSessionTask
 #define InitMovieGraphics_020bb3a0 InitMovieGraphics_020bb3c0
 #define InitSceneOverlayState_020ba3e0 InitSceneOverlayState
 #define LoadPackedFileView_020ba25c LoadPackedFileView

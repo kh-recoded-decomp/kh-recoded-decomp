@@ -1,7 +1,7 @@
-func_ov051_020c72e0 kind:function(thumb,size=0x18) addr:0x020c72e0
-func_ov051_020c72f8 kind:function(thumb,size=0x18) addr:0x020c72f8
+LoadOverlay053 kind:function(thumb,size=0x18) addr:0x020c72e0
+LoadOverlay059 kind:function(thumb,size=0x18) addr:0x020c72f8
 LoadNextOverlayForSelection kind:function(thumb,size=0x68) addr:0x020c7310
-func_ov051_020c7378 kind:function(thumb,size=0x18) addr:0x020c7378
+LoadOverlay060 kind:function(thumb,size=0x18) addr:0x020c7378
 LoadOverlayForMode kind:function(thumb,size=0x34) addr:0x020c7390
 UnloadTrackedOverlay kind:function(thumb,size=0x2c) addr:0x020c73c4
 data_ov051_020c73f0 kind:data(any) addr:0x020c73f0

@@ -8,7 +8,7 @@
 #define Msg_OpenContainerAndReadHeader_0202cc6c Msg_OpenContainerAndReadHeader
 #define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
 #define QueryFilter_IsKind24_020ca1d4 QueryFilter_IsKind24
-#define RegisterSessionCallback_0206c704 func_ov001_0206c704
+#define RegisterSessionCallback_0206c704 RegisterSessionCallback
 #define ZeroBytes0x14_020a8adc ZeroBytes0x14
 #define data_ov059_020cfe7c data_ov059_020cfe9c
 #define data_ov059_020cff64 sOv059_BaEfStefP2_020cff84

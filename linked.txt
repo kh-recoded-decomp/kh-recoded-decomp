@@ -4833,7 +4833,7 @@ ov004 func_ov004_0206366c
 ov004 func_ov004_02063988
 ov004 func_ov004_02063a28
 ov004 func_ov004_02063aec
-ov005 func_ov005_020a0520
+ov005 ScriptCmd_ApplyVectorOperation_020a0520
 ov006 func_ov006_020a0520
 ov006 func_ov006_020a05e4
 ov006 func_ov006_020a0674

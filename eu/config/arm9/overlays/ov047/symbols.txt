@@ -40,7 +40,7 @@ Camera_StartFromViewState kind:function(thumb,size=0xc4) addr:0x020c6c00
 Camera_ApplyViewState kind:function(thumb,size=0x80) addr:0x020c6cc4
 func_ov047_020c6d44 kind:function(thumb,size=0xe) addr:0x020c6d44
 Camera_RestoreSavedTracking kind:function(thumb,size=0xb8) addr:0x020c6d54
-func_ov047_020c6e0c kind:function(thumb,size=0x24) addr:0x020c6e0c
+CameraTarget_IsTrackable kind:function(thumb,size=0x24) addr:0x020c6e0c
 func_ov047_020c6e30 kind:function(thumb,size=0x2c8) addr:0x020c6e30
 func_ov047_020c70f8 kind:function(thumb,size=0x17c) addr:0x020c70f8
 data_ov047_020c72a4 kind:data(any) addr:0x020c72a4

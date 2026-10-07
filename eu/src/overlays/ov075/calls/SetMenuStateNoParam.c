@@ -1,0 +1,3 @@
+#define func_ov073_020c2ca4 func_ov073_020c2cc4
+#define SetMenuStateNoParam_020c706c SetMenuStateNoParam
+#include "src/ov075/unclassified_helpers/SetMenuStateNoParam_020c706c.c"

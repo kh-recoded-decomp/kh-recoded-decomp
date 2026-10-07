@@ -4,9 +4,21 @@
     .data       start:0x020c7460 end:0x020c7480 kind:data align:32
     .bss        start:0x020c7480 end:0x020c7480 kind:bss align:32
 
+src/overlays/ov051/calls/LoadOverlay053.c:
+    complete
+    .text       start:0x020c72e0 end:0x020c72f8
+
+src/overlays/ov051/calls/LoadOverlay059.c:
+    complete
+    .text       start:0x020c72f8 end:0x020c7310
+
 src/overlays/ov051/calls/LoadNextOverlayForSelection.c:
     complete
     .text       start:0x020c7310 end:0x020c7378
+
+src/overlays/ov051/calls/LoadOverlay060.c:
+    complete
+    .text       start:0x020c7378 end:0x020c7390
 
 src/overlays/ov051/calls/LoadOverlayForMode.c:
     complete

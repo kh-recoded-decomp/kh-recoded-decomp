@@ -7,6 +7,7 @@
 #define func_0202c690 func_0202c6a4
 #define func_0202c940 AcquireOrRefreshResourceBlock
 #define func_0202d3c8 IndexedPointer_GetFirstWord
+#define func_ov001_0206c704 RegisterSessionCallback
 #define func_ov001_0206ae84 UpdateTargetMenuState
 #define func_ov001_0206be78 InitButtonPanelSprites
 #define func_ov001_0206c19c InitSpritePairFromResource

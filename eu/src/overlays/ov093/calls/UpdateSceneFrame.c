@@ -1,4 +1,4 @@
-#define ResetObjManagerLists_020c02f0 func_ov093_020c0310
+#define ResetObjManagerLists_020c02f0 ResetObjManagerLists_020c0310
 #define UpdateSceneFrame_020bedb0 UpdateSceneFrame
 #define UpdateScrollBarDrag_020c1d48 UpdateScrollBarDrag
 #define data_ov093_020c3c7c gTrophyReportStateHandlers

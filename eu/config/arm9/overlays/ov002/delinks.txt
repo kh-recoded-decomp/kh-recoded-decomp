@@ -144,13 +144,29 @@ src/overlays/ov002/auto/func_ov002_02062ddc.c:
     complete
     .text       start:0x02062ddc end:0x02062de0
 
+src/overlays/ov002/calls/LoadPanelOverlay14.c:
+    complete
+    .text       start:0x02062de0 end:0x02062dfc
+
 src/overlays/ov002/calls/func_ov002_02062dfc.c:
     complete
     .text       start:0x02062dfc end:0x02062e18
 
+src/overlays/ov002/calls/UnloadPanelOverlay14.c:
+    complete
+    .text       start:0x02062e18 end:0x02062e48
+
+src/overlays/ov002/calls/LoadPanelOverlay13.c:
+    complete
+    .text       start:0x02062e48 end:0x02062e64
+
 src/overlays/ov002/calls/PollPanelOverlay13.c:
     complete
     .text       start:0x02062e64 end:0x02062e98
+
+src/overlays/ov002/calls/UnloadPanelOverlay13.c:
+    complete
+    .text       start:0x02062e98 end:0x02062ec8
 
 src/overlays/ov002/auto/func_ov002_02062ec8.c:
     complete
@@ -164,9 +180,17 @@ src/overlays/ov002/auto/func_ov002_02062edc.c:
     complete
     .text       start:0x02062edc end:0x02062ee0
 
+src/overlays/ov002/calls/LoadPanelOverlay15.c:
+    complete
+    .text       start:0x02062ee0 end:0x02062efc
+
 src/overlays/ov002/calls/PollPanelOverlay15.c:
     complete
     .text       start:0x02062efc end:0x02062f30
+
+src/overlays/ov002/calls/UnloadPanelOverlay15.c:
+    complete
+    .text       start:0x02062f30 end:0x02062f60
 
 src/overlays/ov002/auto/func_ov002_02062f80.c:
     complete

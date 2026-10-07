@@ -1,0 +1,4 @@
+#define data_ov093_020c50e0 data_ov093_020c5100
+#define func_ov039_020bc03c RuntimeState_SetCondition
+#define ResetTouchActive_020c1d24 ResetTouchActive
+#include "src/ov093/unclassified_helpers/ResetTouchActive_020c1d24.c"

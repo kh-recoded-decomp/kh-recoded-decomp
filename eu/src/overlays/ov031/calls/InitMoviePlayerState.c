@@ -1,7 +1,7 @@
 #define ClearFieldCounters_02064dc8 ClearFieldCounters
 #define CreateOverlayTask_0206a6f4 CreateOverlayTask
 #define CreateSessionNameMenu_02063ba4 CreateSessionNameMenu
-#define CreateSessionTask_0206c6dc func_ov001_0206c6dc
+#define CreateSessionTask_0206c6dc CreateSessionTask
 #define InitMovieGraphics_020bb3cc InitMovieGraphics
 #define InitMoviePlayerState_020ba3e0 InitMoviePlayerState
 #define LoadPzTextureParams_02066488 LoadPzTextureParams

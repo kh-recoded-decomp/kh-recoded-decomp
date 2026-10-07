@@ -88,6 +88,10 @@ src/overlays/ov075/calls/CommitOptionChoice.c:
     complete
     .text       start:0x020c6378 end:0x020c64bc
 
+src/overlays/ov075/calls/SetMenuStateNoParam.c:
+    complete
+    .text       start:0x020c708c end:0x020c709c
+
 src/overlays/ov075/auto/func_ov075_020c7bdc.c:
     complete
     .text       start:0x020c7bdc end:0x020c7bf4

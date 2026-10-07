@@ -1,0 +1,3 @@
+#define NNS_FndInitListWithOffset0_0204f11c NNS_FndInitListWithOffset0_0204f130
+#define ResetObjManagerLists_020c07fc ResetObjManagerLists_020c081c
+#include "src/ov099/unclassified_helpers/ResetObjManagerLists_020c07fc.c"

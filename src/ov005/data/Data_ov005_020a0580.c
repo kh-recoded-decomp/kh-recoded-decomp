@@ -1,7 +1,7 @@
 #include "nitro/types.h"
 
-extern void func_ov005_020a0520(void);
+extern void ScriptCmd_ApplyVectorOperation_020a0520(void);
 
 void (*data_ov005_020a0580[1])(void) = {
-    func_ov005_020a0520,
+    ScriptCmd_ApplyVectorOperation_020a0520,
 };

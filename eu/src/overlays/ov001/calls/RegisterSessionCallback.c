@@ -1,0 +1,5 @@
+#define g_sessionState_020a0488 data_ov001_020a04a8
+#define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
+#define AppendIntrusiveListObject_020128d0 NNS_FndAppendListObject
+#define RegisterSessionCallback_0206c704 RegisterSessionCallback
+#include "src/ov001/shared_engine/RegisterSessionCallback_0206c704.c"

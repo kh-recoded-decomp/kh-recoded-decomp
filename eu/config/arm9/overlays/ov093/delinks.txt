@@ -80,6 +80,10 @@ src/overlays/ov093/calls/ReleaseSceneObjManagers.c:
     complete
     .text       start:0x020c02e0 end:0x020c0310
 
+src/overlays/ov093/calls/ResetObjManagerLists_020c0310.c:
+    complete
+    .text       start:0x020c0310 end:0x020c0330
+
 src/overlays/ov093/calls/SetSlotAnimFlag.c:
     complete
     .text       start:0x020c0330 end:0x020c0368
@@ -123,6 +127,10 @@ src/overlays/ov093/calls/AdvanceScrollBarStep.c:
 src/overlays/ov093/calls/UpdateDragAreaBounds.c:
     complete
     .text       start:0x020c1cc8 end:0x020c1d44
+
+src/overlays/ov093/calls/ResetTouchActive.c:
+    complete
+    .text       start:0x020c1d44 end:0x020c1d68
 
 src/overlays/ov093/calls/UpdateScrollBarDrag.c:
     complete

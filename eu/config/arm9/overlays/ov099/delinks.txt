@@ -88,6 +88,10 @@ src/overlays/ov099/calls/ReleaseObjManagers.c:
     complete
     .text       start:0x020c07e8 end:0x020c081c
 
+src/overlays/ov099/calls/ResetObjManagerLists_020c081c.c:
+    complete
+    .text       start:0x020c081c end:0x020c0840
+
 src/overlays/ov099/calls/SetSlotObjVisible.c:
     complete
     .text       start:0x020c0840 end:0x020c087c

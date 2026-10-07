@@ -1,0 +1,3 @@
+#define Camera_CanTrackTarget_020c1ba8 Camera_CanTrackTarget
+#define CameraTarget_IsTrackable_020c6dec CameraTarget_IsTrackable
+#include "src/ov047/camera/CameraTarget_IsTrackable_020c6dec.c"

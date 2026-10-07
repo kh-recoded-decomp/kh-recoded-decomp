@@ -1,0 +1,4 @@
+#define Script_ReadInteger ScriptVm_ReadOperandInt
+#define Script_ReadFixed ScriptVm_ReadOperandFx32
+#define ScriptCmd_ApplyVectorOperation_020a0520 ScriptCmd_ApplyVectorOperation
+#include "src/ov005/script_commands/ScriptCmd_ApplyVectorOperation_020a0520.c"

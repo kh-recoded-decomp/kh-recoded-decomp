@@ -1,0 +1,4 @@
+#define func_02029f78 func_02029f8c
+#define InitPanelState_0206c480 InitPanelScene_0206c480
+#define LoadPanelOverlay14_02062de0 LoadPanelOverlay14
+#include "src/ov002/panel_state/LoadPanelOverlay14_02062de0.c"

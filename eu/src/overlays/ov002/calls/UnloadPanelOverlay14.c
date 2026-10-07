@@ -1,0 +1,5 @@
+#define g_panelState_0206c460 data_ov002_0206c460
+#define ShutdownPanelObjects_0206cea0 ShutdownPanelObjects
+#define func_02029f98 func_02029fac
+#define UnloadPanelOverlay14_02062e18 UnloadPanelOverlay14
+#include "src/ov002/panel_state/UnloadPanelOverlay14_02062e18.c"

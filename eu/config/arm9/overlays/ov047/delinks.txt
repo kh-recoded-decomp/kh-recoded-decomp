@@ -134,3 +134,7 @@ src/overlays/ov047/calls/func_ov047_020c6d44.c:
 src/overlays/ov047/calls/Camera_RestoreSavedTracking.c:
     complete
     .text       start:0x020c6d54 end:0x020c6e0c
+
+src/overlays/ov047/calls/CameraTarget_IsTrackable.c:
+    complete
+    .text       start:0x020c6e0c end:0x020c6e30

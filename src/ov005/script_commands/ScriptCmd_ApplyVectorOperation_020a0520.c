@@ -8,7 +8,7 @@ extern int Script_ReadInteger(void *scriptContext, void *operand);
 extern int Script_ReadFixed(void *scriptContext, void *operand);
 extern void func_ov001_020725dc(const ScriptVector *vector, int operation);
 
-int func_ov005_020a0520(void *scriptContext, void *command)
+int ScriptCmd_ApplyVectorOperation_020a0520(void *scriptContext, void *command)
 {
     ScriptVector vector;
     int operation = Script_ReadInteger(scriptContext, command);
