@@ -1,5 +1,5 @@
 #define ClearBg1AndRedraw_020ceae8 ClearBg1AndRedraw
 #define G2_GetBG1CharPtr_020070cc G2_GetBG1CharPtr
 #define func_01ff8740 MIi_CpuClearFast
-#define func_ov075_020d0014 func_ov075_020d0034
+#define func_ov075_020d0014 UnlockableListPanel_Open
 #include "src/ov075/unclassified_helpers/ClearBg1AndRedraw_020ceae8.c"

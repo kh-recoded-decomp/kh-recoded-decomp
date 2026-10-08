@@ -1,7 +1,7 @@
 UpdateMovieFadeOut kind:function(arm,size=0x64) addr:0x020a6ee0
 func_ov022_020a6f44 kind:function(arm,size=0x44) addr:0x020a6f44
 DrawMovieCaption kind:function(arm,size=0x98) addr:0x020a6f88
-func_ov022_020a7020 kind:function(arm,size=0x22c) addr:0x020a7020
+StartMoviePlaybackState kind:function(arm,size=0x22c) addr:0x020a7020
 InitMovieOverlayState kind:function(arm,size=0x5c) addr:0x020a724c
 StartMovieCaptionScreen kind:function(arm,size=0x128) addr:0x020a72a8
 StartSubtitlePlayback kind:function(arm,size=0x28) addr:0x020a73d0

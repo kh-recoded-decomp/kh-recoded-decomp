@@ -6,7 +6,7 @@
 #define func_0204f204 func_0204f218
 #define func_0204f2e4 IndexedRecord_ClearActive
 #define func_0204f378 IndexedRecords_SetFlag2
-#define func_ov027_020b91a8 func_ov027_020b91c8
+#define func_ov027_020b91a8 GetWidgetPosition
 #define func_ov039_020bc1cc GetMenuWidgetContainer
 #define func_ov081_020c5bd8 func_ov081_020c5bf8
 #define func_ov082_020bf08c func_ov082_020bf0ac

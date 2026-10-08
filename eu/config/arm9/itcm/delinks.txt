@@ -249,6 +249,10 @@ src/calls/EmitJointAnimationResult.c:
     complete
     .text       start:0x01ffa680 end:0x01ffa73c
 
+src/calls/NNSi_G3dGetJointScaleMaya.c:
+    complete
+    .text       start:0x01ffa73c end:0x01ffa884
+
 libs/nns/g3d/calls/texmtxCalc_flag_.c:
     complete
     .text       start:0x01ffa884 end:0x01ffa98c

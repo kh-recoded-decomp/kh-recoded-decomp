@@ -18,7 +18,7 @@ extern void EnterOverlayTransition(void); /* EnterOverlayTransition */
 extern void func_ov028_020bacd0(void);
 extern void func_ov028_020bad1c(void);
 extern void func_ov028_020bad50(void); /* ShutdownFieldAndSaveActorPoses */
-extern void func_ov028_020bae40(void);
+extern void FinishFieldSceneState(void);
 
 void (*gSceneStateHandlers[19])(void) = {
     func_ov028_020ba69c,
@@ -39,5 +39,5 @@ void (*gSceneStateHandlers[19])(void) = {
     func_ov028_020bacd0,
     func_ov028_020bad1c,
     func_ov028_020bad50, /* ShutdownFieldAndSaveActorPoses */
-    func_ov028_020bae40,
+    FinishFieldSceneState,
 };

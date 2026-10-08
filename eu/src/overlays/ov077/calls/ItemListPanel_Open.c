@@ -1,0 +1,28 @@
+#define MenuPanel_Open_020c9118 ItemListPanel_Open
+#define func_ov027_020b90a4 FindWidgetById
+#define G2_GetBG1CharPtr_020070cc G2_GetBG1CharPtr
+#define MIi_CpuClearFast_01ff8740 MIi_CpuClearFast
+#define G2_GetBG1ScrPtr_02006e34 G2_GetBG1ScrPtr
+#define func_01ff869c MIi_CpuCopy16
+#define func_ov039_020bc670 GetMenuLayerMask
+#define SetStateFlagBits_020bc688 SetStateFlagBits
+#define SetFlagGatedElementsVisible_020c9d7c SetFlagGatedElementsVisible
+#define SetContainerElementVisible_020c9d1c SetContainerElementVisible_020c9d3c
+#define func_ov077_020c6c48 MenuPanel_ApplyCategoryFilter_020c6c68
+#define func_ov027_020b96a0 func_ov027_020b96c0
+#define SetupScrollList_020bdf10 SetupStageParams
+#define RefreshScrollListLayout_020be138 RefreshScrollListLayout
+#define InvokeForChannelOrBoth_0200110c InvokeForChannelOrBoth
+#define func_ov077_020c6dcc func_ov077_020c6dec
+#define MIi_CpuCopy32_01ff8710 MIi_CpuCopy32
+#define func_ov027_020b91c8 func_ov027_020b91e8
+#define func_ov027_020b9360 func_ov027_020b9380
+#define PlaySoundEffect_0204d924 PlaySoundEffect
+#define data_ov077_020ca1c0 data_ov077_020ca1e0
+#define data_ov077_020ca2f8 sOv077_ScrollCmx_020ca318
+#define func_ov077_020c7cc8 func_ov077_020c7ce8
+#if defined(__MWERKS__)
+#include "../src/ov077/unclassified_helpers/MenuPanel_Open_020c9118.c"
+#else
+#include "src/ov077/unclassified_helpers/MenuPanel_Open_020c9118.c"
+#endif

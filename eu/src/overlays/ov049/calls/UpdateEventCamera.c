@@ -1,0 +1,22 @@
+#define UpdateEventCamera_020c377c UpdateEventCamera
+#define PlayEventCameraKeys_020c3a34 PlayEventCameraKeys
+#define BlendEventCameraMatrix_020c3690 BlendEventCameraMatrix
+#define VEC_Subtract_01ff9e3c VEC_Subtract
+#define TransformVectorByBasis_0204bee8 TransformVectorByBasis
+#define Camera_BuildViewFromState_020c2dd0 Camera_BuildViewFromState
+#define VEC_DotProduct_01ff9e6c VEC_DotProduct
+#define ScaleVecFx32InPlace_0204a5e4 ScaleVecFx32InPlace
+#define VEC_Add_01ff9e0c VEC_Add
+#define func_ov046_020c2e60 CameraPath_TransformKey
+#define func_01ff9f88 VEC_Normalize
+#define UpdateEventCameraCollision_020c3ea8 UpdateEventCameraCollision
+#define UpdateEventCameraDistance_020c3b60 UpdateEventCameraDistance
+#define UpdateEventCameraOrbitParticle_020c4104 UpdateEventCameraOrbitParticle
+#define SetupEventCameraShot_020c4510 SetupEventCameraShot
+#define Camera_BlendToFollowView_020c1304 Camera_BlendToFollowView
+#define UpdateEventCameraShot_020c3c0c UpdateEventCameraShot
+#if defined(__MWERKS__)
+#include "../src/ov049/shared_engine/UpdateEventCamera_020c377c.c"
+#else
+#include "src/ov049/shared_engine/UpdateEventCamera_020c377c.c"
+#endif

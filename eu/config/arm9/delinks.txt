@@ -5757,6 +5757,10 @@ src/calls/FormatSaveData.c:
     complete
     .text       start:0x02026eb4 end:0x02026ef4
 
+src/calls/InitSaveData.c:
+    complete
+    .text       start:0x02026ef4 end:0x02027048
+
 src/calls/StartCardWriteFromSlot.c:
     complete
     .text       start:0x02027048 end:0x02027074
@@ -7677,6 +7681,10 @@ src/calls/ResetPositionState.c:
     complete
     .text       start:0x02038b40 end:0x02038b64
 
+src/calls/UpdateActorMovement.c:
+    complete
+    .text       start:0x02038b64 end:0x02038e80
+
 src/calls/func_02038e80.c:
     complete
     .text       start:0x02038e80 end:0x02038eba
@@ -8405,9 +8413,17 @@ src/calls/func_0204800c.c:
     complete
     .text       start:0x0204800c end:0x02048034
 
+src/calls/SweepObbAgainstPolygon.c:
+    complete
+    .text       start:0x02048034 end:0x020481d8
+
 src/calls/SweepAlongProjectedAxis.c:
     complete
     .text       start:0x020481d8 end:0x02048228
+
+src/calls/SweepSegmentAgainstSegment.c:
+    complete
+    .text       start:0x02048228 end:0x020483f6
 
 src/calls/func_020483f8.c:
     complete

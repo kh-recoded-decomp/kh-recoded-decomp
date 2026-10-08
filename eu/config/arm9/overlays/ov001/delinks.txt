@@ -7396,6 +7396,10 @@ src/overlays/ov001/calls/FindStageObjectByOwner.c:
     complete
     .text       start:0x020995ec end:0x02099650
 
+src/overlays/ov001/calls/CreateStageManager.c:
+    complete
+    .text       start:0x02099650 end:0x020998d4
+
 src/overlays/ov001/calls/HandleActorLifecycleEvent.c:
     complete
     .text       start:0x020998d4 end:0x020998f2

@@ -5,5 +5,5 @@
 #define func_0204f204 func_0204f218
 #define func_0204f2e4 IndexedRecord_ClearActive
 #define func_0204f378 IndexedRecords_SetFlag2
-#define func_ov027_020b91a8 func_ov027_020b91c8
+#define func_ov027_020b91a8 GetWidgetPosition
 #include "src/ov039/widget_layers/SetWidgetDigitDisplay_020be234.c"

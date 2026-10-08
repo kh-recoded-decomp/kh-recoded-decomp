@@ -1,0 +1,23 @@
+#define RefreshSelectedEntryInfo_020c5ef0 RefreshSelectedEntryInfo
+#define func_ov001_020645c8 IsSessionFlagSet
+#define func_ov039_020bc1bc func_ov039_020bc1dc
+#define CallVirtualHandlerSlot1_02001574 CallVirtualHandlerSlot1
+#define func_02051f48 GetGridTableValue
+#define func_ov027_020ba2a8 func_ov027_020ba2c8
+#define OS_SNPrintf_0202e080 OS_SNPrintf_0202e094
+#define DrawTextAnchored_020015a0 DrawTextAnchored
+#define Text_UploadTileBuffer_02001520 Text_UploadTileBuffer
+#define func_02050050 GetPlayerEntryCount
+#define func_ov027_020b90f4 func_ov027_020b9114
+#define func_ov087_020c431c SetInfoWindowVisible
+#define func_ov027_020b90a4 FindWidgetById
+#define func_ov027_020b9580 SetEntrySlotsVisible
+#define func_ov086_020c2060 SelectRecordPage
+#define PlaySoundEffect_0204d924 PlaySoundEffect
+#define data_ov087_020c7d3c data_ov087_020c7d5c
+#define data_ov087_020c7e0c data_ov087_020c7e2c
+#if defined(__MWERKS__)
+#include "../src/ov087/panel_state/RefreshSelectedEntryInfo_020c5ef0.c"
+#else
+#include "src/ov087/panel_state/RefreshSelectedEntryInfo_020c5ef0.c"
+#endif

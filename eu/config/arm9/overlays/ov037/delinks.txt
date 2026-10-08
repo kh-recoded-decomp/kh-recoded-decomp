@@ -52,6 +52,10 @@ src/overlays/ov037/calls/MarkCommBusyWhenReady.c:
     complete
     .text       start:0x020ba964 end:0x020ba9a0
 
+src/overlays/ov037/calls/FinishCommunicationState.c:
+    complete
+    .text       start:0x020baa5c end:0x020baa84
+
 src/overlays/ov037/calls/func_ov037_020baa84.c:
     complete
     .text       start:0x020baa84 end:0x020baa90
@@ -67,6 +71,10 @@ src/overlays/ov037/calls/func_ov037_020bab98.c:
 src/overlays/ov037/calls/func_ov037_020babbc.c:
     complete
     .text       start:0x020babbc end:0x020babe8
+
+src/overlays/ov037/calls/ClearCommunicationReadyFlag.c:
+    complete
+    .text       start:0x020babe8 end:0x020bac0c
 
 src/overlays/ov037/calls/IsPxiChannelActive.c:
     complete

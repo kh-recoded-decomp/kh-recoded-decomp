@@ -87,6 +87,10 @@ src/overlays/ov031/calls/TryEnterState18.c:
     complete
     .text       start:0x020baa54 end:0x020bab04
 
+src/overlays/ov031/calls/FinishMoviePlayerState.c:
+    complete
+    .text       start:0x020bab04 end:0x020bab20
+
 src/overlays/ov031/calls/LeaveState.c:
     complete
     .text       start:0x020bab20 end:0x020bab3e
@@ -126,6 +130,10 @@ src/overlays/ov031/calls/func_ov031_020bb494.c:
 src/overlays/ov031/calls/func_ov031_020bb4ac.c:
     complete
     .text       start:0x020bb4ac end:0x020bb4c8
+
+src/overlays/ov031/calls/ClearMovieSourceReadyFlag.c:
+    complete
+    .text       start:0x020bb4c8 end:0x020bb4e0
 
 src/overlays/ov031/calls/SetModeByte.c:
     complete

@@ -2,7 +2,7 @@
 #define CardUnlockAfterKeyShare_020091b8 CARD_UnlockBackup
 #define FormatCardBackup_02026d30 FormatCardBackup
 #define FormatSaveData_02026ea0 FormatSaveData
-#define InitSaveData_02026ee0 func_02026ef4
+#define InitSaveData_02026ee0 InitSaveData
 #define ReadCardBackupSync_02026b00 ReadCardBackupSync
 #define g_cardThreadState_0205fe00 data_0205fe00
 #include "src/arm9/shared_engine/FormatSaveData_02026ea0.c"

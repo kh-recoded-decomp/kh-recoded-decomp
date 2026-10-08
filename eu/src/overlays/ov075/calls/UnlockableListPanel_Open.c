@@ -1,0 +1,28 @@
+#define func_ov075_020d0014 UnlockableListPanel_Open
+#define func_ov027_020b90a4 FindWidgetById
+#define G2_GetBG1CharPtr_020070cc G2_GetBG1CharPtr
+#define MIi_CpuClearFast_01ff8740 MIi_CpuClearFast
+#define G2_GetBG1ScrPtr_02006e34 G2_GetBG1ScrPtr
+#define func_01ff869c MIi_CpuCopy16
+#define func_ov039_020bc670 GetMenuLayerMask
+#define SetStateFlagBits_020bc688 SetStateFlagBits
+#define SetNavigationElementsVisible_020d0e64 SetUnlockableElementsVisible
+#define SetContainerElementVisible_020d0e4c SetLayoutElementVisible
+#define MenuPanel_ApplyCategoryFilter_020cde04 BuildTabItemList
+#define func_ov027_020b96a0 func_ov027_020b96c0
+#define SetupScrollList_020bdf10 SetupStageParams
+#define RefreshScrollListLayout_020be138 RefreshScrollListLayout
+#define InvokeForChannelOrBoth_0200110c InvokeForChannelOrBoth
+#define func_ov076_020cdf88 func_ov075_020cdfa8
+#define MIi_CpuCopy32_01ff8710 MIi_CpuCopy32
+#define func_ov027_020b91c8 func_ov027_020b91e8
+#define func_ov027_020b9360 func_ov027_020b9380
+#define PlaySoundEffect_0204d924 PlaySoundEffect
+#define data_ov076_020d1708 data_ov075_020d1728
+#define data_ov076_020d185c sOv075_ScrollCmx_020d187c
+#define func_ov076_020cee84 func_ov075_020ceea4
+#if defined(__MWERKS__)
+#include "../src/ov075/unclassified_helpers/func_ov075_020d0014.c"
+#else
+#include "src/ov075/unclassified_helpers/func_ov075_020d0014.c"
+#endif

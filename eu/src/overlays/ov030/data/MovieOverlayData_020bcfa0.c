@@ -30,7 +30,7 @@ extern int func_ov030_020ba964(void);
 extern int func_ov030_020ba98c(void);
 extern int func_ov030_020ba9c8(void);
 extern int MoviePlayer_Stop(void);
-extern int func_ov030_020baa9c(void);
+extern int FinishMoviePlaybackState(void);
 
 s32 gMobiClipSourceHandle = -1;
 
@@ -57,5 +57,5 @@ SceneStateFunc gMovieSceneStateHandlers[] = {
     func_ov030_020ba98c,
     func_ov030_020ba9c8,
     MoviePlayer_Stop,
-    func_ov030_020baa9c,
+    FinishMoviePlaybackState,
 };

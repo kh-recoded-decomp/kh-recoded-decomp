@@ -1,5 +1,5 @@
 #define EventCamera_Update_020c2d20 EventCamera_Update
 #define func_ov046_020c1038 Camera_SetViewMode
 #define func_ov046_020c2dd0 Camera_BuildViewFromState
-#define func_ov049_020c377c func_ov049_020c379c
+#define func_ov049_020c377c UpdateEventCamera
 #include "src/ov046/shared_engine/EventCamera_Update_020c2d20.c"

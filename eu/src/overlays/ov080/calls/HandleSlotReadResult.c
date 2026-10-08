@@ -1,3 +1,3 @@
 #define HandleSlotReadResult_020c4cb8 HandleSlotReadResult
-#define InitSaveData_02026ee0 func_02026ef4
+#define InitSaveData_02026ee0 InitSaveData
 #include "src/ov080/unclassified_helpers/HandleSlotReadResult_020c4cb8.c"

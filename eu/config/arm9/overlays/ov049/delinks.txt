@@ -39,6 +39,10 @@ src/overlays/ov049/calls/BlendEventCameraMatrix.c:
     complete
     .text       start:0x020c36b0 end:0x020c379c
 
+src/overlays/ov049/calls/UpdateEventCamera.c:
+    complete
+    .text       start:0x020c379c end:0x020c3a54
+
 src/overlays/ov049/calls/PlayEventCameraKeys.c:
     complete
     .text       start:0x020c3a54 end:0x020c3b80

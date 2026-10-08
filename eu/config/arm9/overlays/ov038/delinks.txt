@@ -40,6 +40,10 @@ src/overlays/ov038/calls/IsOv038SoundCtxFlag0Clear.c:
     complete
     .text       start:0x020ba640 end:0x020ba66c
 
+src/overlays/ov038/calls/ClearSoundContextReadyFlag.c:
+    complete
+    .text       start:0x020ba66c end:0x020ba690
+
 src/overlays/ov038/calls/SetSoundCtxMode.c:
     complete
     .text       start:0x020ba690 end:0x020ba6b4

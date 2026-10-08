@@ -1,5 +1,5 @@
 #define OpenStatusPageView_020bfefc OpenStatusPageView
-#define SetupScrollList_020bdf10 func_ov034_020bdf30
+#define SetupScrollList_020bdf10 SetupStageParams
 #define SetStatusElementVisible_020beb5c SetStatusElementVisible
 #define func_ov027_020ba2a8 func_ov027_020ba2c8
 #define OS_SNPrintf_0202e080 OS_SNPrintf_0202e094

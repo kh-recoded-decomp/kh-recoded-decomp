@@ -252,6 +252,10 @@ src/overlays/ov015/calls/UpdatePanelResultPhase.c:
     complete
     .text       start:0x02071d0c end:0x02071e2c
 
+src/overlays/ov015/calls/ClearPanelFlagE0Bit3.c:
+    complete
+    .text       start:0x02071e2c end:0x02071e48
+
 src/overlays/ov015/calls/func_ov015_02071e48.c:
     complete
     .text       start:0x02071e48 end:0x02071fdc
@@ -279,6 +283,10 @@ src/overlays/ov015/auto/func_ov015_02072754.c:
 src/overlays/ov015/calls/func_ov015_02072758.c:
     complete
     .text       start:0x02072758 end:0x02072814
+
+src/overlays/ov015/calls/SetPanelFlagE2Bit3.c:
+    complete
+    .text       start:0x02072814 end:0x02072830
 
 src/overlays/ov015/calls/func_ov015_02072830.c:
     complete

@@ -21,6 +21,7 @@
 #define SelectPanelTint5_02074974 SelectPanelTint5
 #define SetAllElementObjectModes_020b97fc SetAllElementObjectModes
 #define SetFocusedWidget_020b96e4 SetFocusedWidget
+#define func_ov013_02074658 SetPanelFlag99Bit5
 #define ZeroHalfThenFree_0202cd78 ZeroHalfThenFree
 #define data_ov013_02074b20 gPanelAssetPaths
 #define data_ov013_02074c4c sOv013_WxcWlaP2_02074c4c

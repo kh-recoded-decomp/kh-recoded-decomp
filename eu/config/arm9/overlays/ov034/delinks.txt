@@ -104,6 +104,10 @@ src/overlays/ov034/calls/CreateObjectSlot_020bdec4.c:
     complete
     .text       start:0x020bdec4 end:0x020bdf30
 
+src/overlays/ov034/calls/SetupStageParams.c:
+    complete
+    .text       start:0x020bdf30 end:0x020be278
+
 src/overlays/ov034/calls/ApplyResultsPartyBonus.c:
     complete
     .text       start:0x020be278 end:0x020be348

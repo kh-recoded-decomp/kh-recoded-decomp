@@ -18,7 +18,7 @@ extern void func_ov015_02071bec(void);
 extern void RequestPanelConfirm(void); /* RequestPanelConfirm */
 extern void ResetPanelEntry9(void); /* ResetPanelEntry9 */
 extern void UpdatePanelResultPhase(void); /* UpdatePanelResultPhase */
-extern void func_ov015_02071e2c(void);
+extern void ClearPanelFlagE0Bit3(void);
 extern void func_ov015_02071e48(void);
 extern void UpdatePanelConfirmSequence(void); /* UpdatePanelConfirmSequence */
 extern void ResetPanelMenuElements(void); /* ResetPanelMenuElements */
@@ -43,7 +43,7 @@ void (*gLinkPanelStateHandlers[22])(void) = {
     RequestPanelConfirm, /* RequestPanelConfirm */
     ResetPanelEntry9, /* ResetPanelEntry9 */
     UpdatePanelResultPhase, /* UpdatePanelResultPhase */
-    func_ov015_02071e2c,
+    ClearPanelFlagE0Bit3,
     func_ov015_02071e48,
     UpdatePanelConfirmSequence, /* UpdatePanelConfirmSequence */
     ResetPanelMenuElements, /* ResetPanelMenuElements */

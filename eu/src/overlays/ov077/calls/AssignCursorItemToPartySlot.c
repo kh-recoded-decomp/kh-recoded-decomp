@@ -1,0 +1,19 @@
+#define AssignCursorItemToPartySlot_020c4598 AssignCursorItemToPartySlot
+#define func_ov073_020c1eb4 func_ov073_020c1ed4
+#define func_0204f768 GetOverlaySelectionRecord
+#define TrackMaxParamValue_020c4260 TrackMaxParamValue
+#define SetParamHalf18_02050630 SetParamHalf18
+#define SetParamWord20_02050640 SetParamWord20
+#define OpenStatusRecordList_020c2a04 MatchesEitherSlotId
+#define SetSharedListEntries_020c2c24 SetSharedListEntries
+#define SetSharedListBusy_020c2c44 SetSharedListBusy
+#define SyncSharedListScroll_020c2ac8 SyncSharedListScroll
+#define UpdateItemCountDigits_020c52a0 UpdateItemCountDigits
+#define SetStatusPageAndCursor_020c2ca4 SetStatusPageAndCursor
+#define DrawPartySlotLabel_020c5a4c func_ov077_020c5a6c
+#define data_ov077_020ca108 data_ov077_020ca128
+#if defined(__MWERKS__)
+#include "../src/ov077/unclassified_helpers/AssignCursorItemToPartySlot_020c4598.c"
+#else
+#include "src/ov077/unclassified_helpers/AssignCursorItemToPartySlot_020c4598.c"
+#endif

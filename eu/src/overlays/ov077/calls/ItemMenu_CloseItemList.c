@@ -25,7 +25,7 @@ extern void NotifyBothOrOne(u32 a, u32 b, int index);
 extern void SetStateFlagBits(int clearMask, int setBits);
 extern void SetFlagGatedElementsVisible(void *container, BOOL visible);
 extern void SetContainerElementVisible_020c9d3c(void *container, int elementId, BOOL visible);
-extern void func_ov034_020bdf30(void *listView, void *layout, int mode);
+extern void SetupStageParams(void *listView, void *layout, int mode);
 extern void CallStateWidget(int a, int b, int c, int d, int e);
 
 void ItemMenu_CloseItemList(ItemListMenu *menu, BOOL closing)
@@ -43,7 +43,7 @@ void ItemMenu_CloseItemList(ItemListMenu *menu, BOOL closing)
     SetContainerElementVisible_020c9d3c(layout, 0x1c, FALSE);
     SetContainerElementVisible_020c9d3c(layout, 0, FALSE);
     SetContainerElementVisible_020c9d3c(layout, 1, FALSE);
-    func_ov034_020bdf30(menu->listView, layout, 0);
+    SetupStageParams(menu->listView, layout, 0);
     menu->interactive = !closing;
     REG_BG1OFS = 0;
     if (closing) {

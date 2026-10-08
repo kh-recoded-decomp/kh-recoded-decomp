@@ -512,6 +512,10 @@ src/overlays/ov076/calls/MenuPanel_Destroy.c:
     complete
     .text       start:0x020cc0a8 end:0x020cc104
 
+src/overlays/ov076/calls/ItemSelectionPanel_Open.c:
+    complete
+    .text       start:0x020cc104 end:0x020cc35c
+
 src/overlays/ov076/calls/SlotMenu_HandleTabTouch.c:
     complete
     .text       start:0x020ccbd0 end:0x020ccc64

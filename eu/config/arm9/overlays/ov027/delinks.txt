@@ -296,7 +296,7 @@ src/overlays/ov027/calls/GetField84Bit1.c:
     complete
     .text       start:0x020b91b8 end:0x020b91c8
 
-src/overlays/ov027/auto/func_ov027_020b91c8.c:
+src/overlays/ov027/calls/GetWidgetPosition.c:
     complete
     .text       start:0x020b91c8 end:0x020b91d0
 

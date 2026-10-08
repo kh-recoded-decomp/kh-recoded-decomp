@@ -26,7 +26,7 @@ typedef struct {
 
 extern void *G2_GetBG1CharPtr(void);
 extern void MIi_CpuClearFast(u32 value, void *dest, u32 size);
-extern void func_ov076_020cc104(Bg1Screen *screen, int drawArg);
+extern void ItemSelectionPanel_Open(Bg1Screen *screen, int drawArg);
 
 #define REG_BG1CNT (*(volatile u16 *)0x0400000a)
 
@@ -45,7 +45,7 @@ BOOL func_ov076_020ca918(Bg1Screen *screen) {
     G2_SetBG1Control((GXBGScreenSizeText)control.screenSize, (GXBGColorMode)screen->colorMode, (GXBGScrBase)control.screenBase, (GXBGCharBase)control.charBase, (GXBGExtPltt)control.bgExtPltt);
     screen->unk_04 = 0;
     screen->redrawing = 1;
-    func_ov076_020cc104(screen, screen->drawArg);
+    ItemSelectionPanel_Open(screen, screen->drawArg);
     screen->redrawing = 0;
     return TRUE;
 }

@@ -6,17 +6,17 @@ extern void CancelSaveSelectStep(void);
 extern void ConfirmSaveSelectStep(void);
 extern void ConfirmSelectedSlot(void);
 extern void DestroySaveSelectScreen(void);
+extern void InitSaveSelectScreen(void);
 extern void SelectSlotOnDown(void);
 extern void SelectSlotOnUp(void);
 extern void ToggleOptionOnLeft(void);
 extern void ToggleOptionOnRight(void);
 extern void UpdateSaveSelectScreen(void);
-extern void func_ov080_020c42d0(void);
 extern void func_ov080_020c5d28(void);
 extern void func_ov080_020c5d2c(void);
 
 void *data_ov080_020c5da0[17] = {
-    (void *)func_ov080_020c42d0,
+    (void *)InitSaveSelectScreen,
     (void *)DestroySaveSelectScreen,
     (void *)UpdateSaveSelectScreen,
     NULL,

@@ -35,6 +35,10 @@ src/overlays/ov033/calls/func_ov033_020ba918.c:
     complete
     .text       start:0x020ba918 end:0x020ba944
 
+src/overlays/ov033/calls/ClearResumeModeReadyFlag.c:
+    complete
+    .text       start:0x020ba944 end:0x020ba968
+
 src/overlays/ov033/calls/func_ov033_020ba968.c:
     complete
     .text       start:0x020ba968 end:0x020ba98c
@@ -62,6 +66,10 @@ src/overlays/ov033/calls/InstallResumeModeHandlers.c:
 src/overlays/ov033/calls/func_ov033_020baa60.c:
     complete
     .text       start:0x020baa60 end:0x020baa6c
+
+src/overlays/ov033/calls/ClearResumeModePending.c:
+    complete
+    .text       start:0x020baa6c end:0x020baa84
 
 src/ov033/data/Data_ov033_020baaa0.c:
     complete

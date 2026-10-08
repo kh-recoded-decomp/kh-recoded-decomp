@@ -1,0 +1,34 @@
+#define UpdateBoardScreen_020b6df4 UpdateBoardScreen
+#define func_0204f378 IndexedRecords_SetFlag2
+#define GetCursorScreenPos_020b7288 GetCursorScreenPos
+#define func_0204f13c IndexedRecord_SetPair
+#define GetBiasAdjustedField_0206dc80 GetBiasAdjustedField
+#define SetEntryRotation_0204f308 SetEntryRotation
+#define func_ov001_02087928 ForwardToActiveServiceWithResult
+#define GetStageEventTargetInfo_02087960 func_ov001_02087988
+#define func_ov001_02087944 func_ov001_0208796c
+#define func_ov001_0207f038 func_ov001_0207f060
+#define ApplyDirectionOffset_020b7228 ApplyDirectionOffset
+#define DrawWidgetNumber_020b5de4 DrawWidgetNumber
+#define CanOpenFieldMenu_020735d8 CanOpenFieldMenu
+#define func_ov001_0207b5f4 func_ov001_0207b61c
+#define FindWidgetById_020b90a4 FindWidgetById
+#define SetEntrySlotsVisible_020b9580 SetEntrySlotsVisible
+#define CopySourceBlock_020b9f7c func_ov027_020b9f9c
+#define data_ov024_020b7520 data_ov024_020b7540
+#define data_ov024_020b7384 data_ov024_020b73a4
+#define func_ov001_0207b6b4 SetPanelInputActive
+#define RequestPanelModeWithStyle2_0207b320 RequestPanelModeWithStyle2
+#define PlaySoundEffect_0204d924 PlaySoundEffect
+#define func_ov001_0207b6c4 ClearPanelInputActive
+#define func_01ff89a8 MI_CpuCopy8
+#define FindActiveRecordById_020b8184 FindActiveRecordById
+#define func_ov027_020b8284 func_ov027_020b82a4
+#define TagTracker_InvokeCallback_020b8210 func_ov027_020b8230
+#define func_ov024_020b6bb0 func_ov024_020b6bd0
+#define FlushDirtyTileTableRows_020b9e60 FlushDirtyTileTableRows
+#if defined(__MWERKS__)
+#include "../src/ov024/unclassified_helpers/UpdateBoardScreen_020b6df4.c"
+#else
+#include "src/ov024/unclassified_helpers/UpdateBoardScreen_020b6df4.c"
+#endif

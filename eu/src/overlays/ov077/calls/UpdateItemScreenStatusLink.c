@@ -1,0 +1,19 @@
+#define UpdateItemScreenStatusLink_020c53a0 UpdateItemScreenStatusLink
+#define func_ov039_020bc0d4 GetPrimaryElementEnabled
+#define func_ov077_020c9370 func_ov077_020c9390
+#define func_020505a8 GetSelectionPackedValueBlock
+#define ShowStatusRecordList_020c2b10 ShowStatusRecordList
+#define FindWidgetById_020b90a4 FindWidgetById
+#define func_ov027_020b965c func_ov027_020b967c
+#define GetOverlaySelectionRecord_0204f768 GetOverlaySelectionRecord
+#define TrackMaxParamValue_020c4260 TrackMaxParamValue
+#define SetParamWord20_02050640 SetParamWord20
+#define OpenStatusRecordList_020c2a04 MatchesEitherSlotId
+#define SetSharedListEntries_020c2c24 SetSharedListEntries
+#define SetSharedListBusy_020c2c44 SetSharedListBusy
+#define SyncSharedListScroll_020c2ac8 SyncSharedListScroll
+#if defined(__MWERKS__)
+#include "../src/ov077/unclassified_helpers/UpdateItemScreenStatusLink_020c53a0.c"
+#else
+#include "src/ov077/unclassified_helpers/UpdateItemScreenStatusLink_020c53a0.c"
+#endif

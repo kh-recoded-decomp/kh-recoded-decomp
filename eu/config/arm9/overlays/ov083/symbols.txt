@@ -1,5 +1,5 @@
 InitScoreScreen kind:function(thumb,size=0x47c) addr:0x020beac0
-func_ov083_020bef3c kind:function(thumb,size=0x3d4) addr:0x020bef3c
+UpdateScoreScreen kind:function(thumb,size=0x3d4) addr:0x020bef3c
 ReleaseScreenResources_020bf310 kind:function(thumb,size=0x46) addr:0x020bf310
 SetScoreDisplay kind:function(thumb,size=0x4e) addr:0x020bf358
 ApplyScoreEvents kind:function(thumb,size=0x1b4) addr:0x020bf3a8

@@ -13,7 +13,7 @@
 #define RefreshEntryRows_020bef08 RefreshEntryRows
 #define SetTextColorIfFits_020bcd04 SetTextColorIfFits
 #define SetupOv082Screen_020beb48 SetupOv082Screen
-#define StepEntryListCursor_020bf448 func_ov082_020bf468
+#define StepEntryListCursor_020bf448 StepEntryListCursor
 #define Text_UploadTileBuffer_02001520 Text_UploadTileBuffer
 #define data_020bf654 data_ov082_020bf674
 #define func_01ff8740 MIi_CpuClearFast

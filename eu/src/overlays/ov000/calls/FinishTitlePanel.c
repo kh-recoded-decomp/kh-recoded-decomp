@@ -16,7 +16,7 @@ typedef struct {
 extern SceneArgs data_02060850;
 extern u8 data_ov000_02063798[];
 
-extern void func_02026ef4(u32 mode);
+extern void InitSaveData(u32 mode);
 extern void WriteGlobalPackedBits(u32 id, u32 bits, u32 value);
 extern void SetGlobalPackedBit(u32 id);
 extern void RebuildRecordCounters(void);
@@ -34,7 +34,7 @@ extern void GXS_LoadBGPltt(const void *src, u32 offset, u32 size);
 
 void FinishTitlePanel(Panel *panel)
 {
-    func_02026ef4(1);
+    InitSaveData(1);
     data_02060850.sceneId = 100;
     data_02060850.entryId = -1;
     data_02060850.kind = 1;

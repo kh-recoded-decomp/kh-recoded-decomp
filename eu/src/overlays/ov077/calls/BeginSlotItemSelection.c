@@ -1,5 +1,5 @@
 #define BeginSlotItemSelection_020c5cc8 BeginSlotItemSelection
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define func_ov077_020c5c1c func_ov077_020c5c3c
-#define func_ov077_020c9118 func_ov077_020c9138
+#define func_ov077_020c9118 ItemListPanel_Open
 #include "src/ov077/unclassified_helpers/BeginSlotItemSelection_020c5cc8.c"

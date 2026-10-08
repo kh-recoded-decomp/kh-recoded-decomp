@@ -67,6 +67,10 @@ src/overlays/ov028/calls/func_ov028_020bad1c.c:
     complete
     .text       start:0x020bad1c end:0x020bad50
 
+src/overlays/ov028/calls/FinishFieldSceneState.c:
+    complete
+    .text       start:0x020bae40 end:0x020bae68
+
 src/overlays/ov028/calls/func_ov028_020bae68.c:
     complete
     .text       start:0x020bae68 end:0x020bae88
@@ -82,6 +86,10 @@ src/overlays/ov028/calls/func_ov028_020bafe8.c:
 src/overlays/ov028/calls/func_ov028_020bb00c.c:
     complete
     .text       start:0x020bb00c end:0x020bb038
+
+src/overlays/ov028/calls/ClearFieldSceneReadyFlag.c:
+    complete
+    .text       start:0x020bb038 end:0x020bb05c
 
 src/overlays/ov028/calls/SetFieldModeFlag.c:
     complete

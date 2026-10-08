@@ -1,3 +1,3 @@
 #define MsgQueue_GetHeap_02064844 func_ov003_02064844
-#define NNSi_FndGetCurrentRootHeap func_ov003_0206470c
+#define NNSi_FndGetCurrentRootHeap MovieScene_SetStopRequested
 #include "src/ov003/shared_engine/MsgQueue_GetHeap_02064844.c"

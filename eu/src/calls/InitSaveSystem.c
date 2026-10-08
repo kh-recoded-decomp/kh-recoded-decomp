@@ -1,7 +1,7 @@
 #define AllocFromHeapOrDefaultEx_0202a210 AllocFromHeapOrDefaultEx
 #define CARD_UnlockBackup_020091ac CARD_LockBackup
 #define CardUnlockAfterKeyShare_020091b8 CARD_UnlockBackup
-#define InitSaveData_02026ee0 func_02026ef4
+#define InitSaveData_02026ee0 InitSaveData
 #define InitSaveSystem_02026dc0 InitSaveSystem
 #define InvokeOptionalCallback_02026ac8 InvokeOptionalCallback
 #define RunResetCallbackAndIdle_02004cf0 OS_Terminate

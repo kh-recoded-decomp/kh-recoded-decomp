@@ -444,6 +444,10 @@ src/overlays/ov075/calls/DestroyItemPicker.c:
     complete
     .text       start:0x020cffd8 end:0x020d0034
 
+src/overlays/ov075/calls/UnlockableListPanel_Open.c:
+    complete
+    .text       start:0x020d0034 end:0x020d028c
+
 src/overlays/ov075/calls/HandleTabTouch.c:
     complete
     .text       start:0x020d0b00 end:0x020d0b94

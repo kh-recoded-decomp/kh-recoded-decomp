@@ -113,7 +113,7 @@ extern void func_ov027_020b8fb8(void *container, u32 imageParams, int count);
 extern void func_ov027_020b7e44(void *elements, u32 imageParams);
 extern void *FindWidgetById(void *container, int id);
 extern void func_ov027_020b97d8(void *container, void *widget, int mode);
-extern int *func_ov027_020b91c8(void *container, void *widget);
+extern int *GetWidgetPosition(void *container, void *widget);
 extern s16 SetWidgetDigitDisplay(void *cells, int widgetId, int key, u32 value);
 extern s16 func_ov039_020be378(void *cells, int widgetId, int key, u32 value);
 extern void func_ov039_020bc4a8(int a, int b, int c, int d, int e);
@@ -209,9 +209,9 @@ BOOL InitScoreScreen(ScoreScreen *screen)
     func_ov027_020b97d8(container, FindWidgetById(container, 10), 2);
     func_ov027_020b97d8(container, FindWidgetById(container, 11), 2);
     func_ov027_020b97d8(container, FindWidgetById(container, 12), 2);
-    screen->row = (func_ov027_020b91c8(container, rowWidget)[1] >> 12) - 13;
+    screen->row = (GetWidgetPosition(container, rowWidget)[1] >> 12) - 13;
     screen->labelColumn = 0;
-    screen->valueColumn = (func_ov027_020b91c8(container, columnWidget)[0] >> 12) - 16;
+    screen->valueColumn = (GetWidgetPosition(container, columnWidget)[0] >> 12) - 16;
 
     screen->bestDigits = SetWidgetDigitDisplay(container, 0x14, 8, *(u32 *)(data_0205fe0c + 0x28d0));
     screen->timerDigits = func_ov039_020be378(container, 1, 1, screen->elapsedSeconds);

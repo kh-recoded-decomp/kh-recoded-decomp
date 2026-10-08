@@ -112,6 +112,10 @@ src/overlays/ov087/calls/OpenPromptMessage14.c:
     complete
     .text       start:0x020c5ec4 end:0x020c5f10
 
+src/overlays/ov087/calls/RefreshSelectedEntryInfo.c:
+    complete
+    .text       start:0x020c5f10 end:0x020c6138
+
 src/overlays/ov087/calls/EnterPanelState_020c6138.c:
     complete
     .text       start:0x020c6138 end:0x020c61d0

@@ -1,0 +1,20 @@
+#define SweepObbAgainstPolygon_02048020 SweepObbAgainstPolygon
+#define func_02047cec CopyInitializedRecord13
+#define SubtractVecFx32Out_02047d2c SubtractVecFx32Out
+#define GetObbProjectedRadius_0203d4d0 GetObbProjectedRadius
+#define func_02047d5c DotProductForward
+#define GetProjectedInterval_0203d774 GetProjectedInterval
+#define VEC_DotProduct_01ff9e6c VEC_DotProduct
+#define SweepIntervalOnAxis_0204774c SweepIntervalOnAxis
+#define NegateVecFx32Out_02047fc8 NegateVecFx32Out
+#define func_0204a9e4 GetCrossIfNonParallel
+#define VEC_NormalizeUnchecked_01ff9f88 VEC_Normalize
+#define FlipVectorIfDotNegative_0204abd0 FlipVectorIfDotNegative
+#define ProjectObbExtentExcludingAxis_0203d568 ProjectObbExtentExcludingAxis
+#define SweepAlongProjectedAxis_020481c4 SweepAlongProjectedAxis
+#define ResolveSweepContact_0204792c ResolveSweepContact
+#if defined(__MWERKS__)
+#include "../src/arm9/spatial_queries/SweepObbAgainstPolygon_02048020.c"
+#else
+#include "src/arm9/spatial_queries/SweepObbAgainstPolygon_02048020.c"
+#endif

@@ -1,0 +1,17 @@
+#define Camera_ResolveLookAtCollision_020c6758 Camera_ResolveLookAtCollision
+#define VEC_Subtract_01ff9e3c VEC_Subtract
+#define func_0203ad14 MakeSphereShape
+#define OffsetBoxByDelta_0203ac70 OffsetBoxByDelta
+#define GetBoundedEntryField_0206db5c GetBoundedEntryField
+#define CollisionQuery_Init_02034c74 CollisionQuery_Init
+#define func_020350d4 CopyTransformFields
+#define SweepWorldCollision_020364a0 SweepWorldCollision
+#define Camera_CanTrackTarget_020c1ba8 Camera_CanTrackTarget
+#define CameraSweep_CollectContact_020c63b4 CameraSweep_CollectContact
+#define CameraCollision_ShouldTestContact_020c1c40 CameraCollision_ShouldTestContact
+#define IsQueryFacingContact_020c1e40 IsQueryFacingContact_020c1e60
+#if defined(__MWERKS__)
+#include "../src/ov047/camera/Camera_ResolveLookAtCollision_020c6758.c"
+#else
+#include "src/ov047/camera/Camera_ResolveLookAtCollision_020c6758.c"
+#endif

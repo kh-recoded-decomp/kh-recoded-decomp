@@ -1,0 +1,23 @@
+#define CreateStageManager_02099628 CreateStageManager
+#define NNSi_FndGetCurrentRootHeap_0202a764 NNSi_FndGetCurrentRootHeap
+#define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
+#define func_01ff8830 MI_CpuFill8
+#define CreateHeapRecord_0202a0b4 CreateHeapRecord
+#define Msg_OpenContainerAndReadHeader_0202cc6c Msg_OpenContainerAndReadHeader
+#define func_0202a158 Heap_GetCurrent
+#define SetDefaultHeap_0202a134 SetDefaultHeap
+#define func_ov001_0208f038 func_ov001_0208f060
+#define g_stageManager_020a0508 data_ov001_020a0528
+#define data_ov001_020a0354 data_ov001_020a0374
+#define data_ov001_020a03d4 sOv001_EnPaDPP2f_020a03f4
+#define data_ov001_020a03e4 sOv001_EnPaDDP2f_020a0404
+#define data_ov001_020a03f4 sOv001_EnChChP2f_020a0414
+#define data_ov001_020a0404 sOv001_EnEfEfP2f_020a0424
+#define func_ov001_020998ac HandleActorLifecycleEvent
+#define func_ov001_020998cc HandleCommandKind1
+#define func_ov001_02099acc func_ov001_02099af4
+#if defined(__MWERKS__)
+#include "../src/ov001/shared_engine/CreateStageManager_02099628.c"
+#else
+#include "src/ov001/shared_engine/CreateStageManager_02099628.c"
+#endif

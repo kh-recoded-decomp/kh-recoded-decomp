@@ -5,7 +5,7 @@
 #define func_ov001_02064734 ApplyAreaMusicEntry
 #define func_ov035_020ba7dc func_ov035_020ba7fc
 #define func_ov035_020ba958 func_ov035_020ba978
-#define func_ov035_020ba974 func_ov035_020ba994
+#define func_ov035_020ba974 ClearMovieContextReadyFlag
 #define func_ov035_020ba98c func_ov035_020ba9ac
 #define func_ov035_020ba9d8 BeginMovieCaption
 #define func_ov035_020baa18 func_ov035_020baa38

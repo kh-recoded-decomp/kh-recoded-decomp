@@ -188,6 +188,10 @@ src/overlays/ov017/calls/FieldObject_HandleContact_020a33d8.c:
     complete
     .text       start:0x020a33d8 end:0x020a3574
 
+src/overlays/ov017/calls/UpdateMovingFieldObject.c:
+    complete
+    .text       start:0x020a3630 end:0x020a3934
+
 src/overlays/ov017/calls/IsObjectInChain.c:
     complete
     .text       start:0x020a3934 end:0x020a3962

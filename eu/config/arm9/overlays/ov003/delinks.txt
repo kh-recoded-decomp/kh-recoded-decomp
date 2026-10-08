@@ -55,6 +55,10 @@ src/overlays/ov003/calls/MovieScene_RequestStop.c:
     complete
     .text       start:0x020646e8 end:0x0206470c
 
+src/overlays/ov003/calls/MovieScene_SetStopRequested.c:
+    complete
+    .text       start:0x0206470c end:0x02064724
+
 src/overlays/ov003/calls/MovieScene_IsFlag8b9Clear.c:
     complete
     .text       start:0x02064724 end:0x02064744

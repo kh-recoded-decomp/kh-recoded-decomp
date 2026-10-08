@@ -256,6 +256,10 @@ src/overlays/ov039/calls/GetMenuFont10s.c:
     complete
     .text       start:0x020bc9cc end:0x020bc9e4
 
+src/overlays/ov039/calls/SetEventStateFlagCa34.c:
+    complete
+    .text       start:0x020bc9e4 end:0x020bca00
+
 src/overlays/ov039/calls/GetFieldCa4a.c:
     complete
     .text       start:0x020bca00 end:0x020bca20
@@ -263,6 +267,10 @@ src/overlays/ov039/calls/GetFieldCa4a.c:
 src/overlays/ov039/calls/GetMenuInputState.c:
     complete
     .text       start:0x020bca20 end:0x020bca38
+
+src/overlays/ov039/calls/GetEventStateWordCa48.c:
+    complete
+    .text       start:0x020bca38 end:0x020bca50
 
 src/overlays/ov039/calls/IsStatePhase4.c:
     complete

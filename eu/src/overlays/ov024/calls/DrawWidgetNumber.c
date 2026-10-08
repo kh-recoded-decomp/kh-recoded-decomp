@@ -3,7 +3,7 @@
 #define func_0204f204 func_0204f218
 #define func_ov024_020b6794 CreateObjectSlot
 #define func_ov027_020b90a4 FindWidgetById
-#define func_ov027_020b91a8 func_ov027_020b91c8
+#define func_ov027_020b91a8 GetWidgetPosition
 #define func_ov027_020b9580 SetEntrySlotsVisible
 #define func_ov027_020b95e4 func_ov027_020b9604
 #define func_ov027_020b96a0 func_ov027_020b96c0

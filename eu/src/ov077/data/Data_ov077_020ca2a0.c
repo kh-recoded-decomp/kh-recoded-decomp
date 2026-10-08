@@ -5,7 +5,7 @@
 extern void BeginSlotItemSelection(void);
 extern void UsePartySlotItem(void);
 extern void func_ov077_020c42a4(void);
-extern void func_ov077_020c479c(void);
+extern void UpdateItemScreen(void);
 extern void ShutdownItemMenu(void);
 extern void func_ov077_020c5cc0(void);
 extern void func_ov077_020c5cd4(void);
@@ -16,7 +16,7 @@ extern void func_ov077_020c5f48(void);
 void *gEquipmentMatrixMenuDescriptor[17] = {
     (void *)func_ov077_020c42a4,
     (void *)ShutdownItemMenu,
-    (void *)func_ov077_020c479c,
+    (void *)UpdateItemScreen,
     NULL,
     (void *)0x00014D2C,
     (void *)func_ov077_020c5cc0,

@@ -1,0 +1,28 @@
+#define StartMoviePlaybackState_020a7000 StartMoviePlaybackState
+#define NNSi_FndGetCurrentRootHeap_0202a764 NNSi_FndGetCurrentRootHeap
+#define func_02028bf4 InitPxiChannelsPair
+#define func_01ff8830 MI_CpuFill8
+#define func_ov022_020a7798 func_ov022_020a77b8
+#define func_020257c4 func_020257d8
+#define func_02001458 func_0200146c
+#define func_02007250 GX_LoadBGPltt
+#define GXS_LoadBGPltt_020072b4 GXS_LoadBGPltt
+#define StoreGlobalArrayEntry_02025668 StoreGlobalArrayEntry
+#define FormatSessionNumber_02063578 FormatSessionNumber
+#define findSharedResourceByName_0202cd8c findSharedResourceByName
+#define Strlen_02021e44 strlen
+#define func_0202255c func_02022570
+#define RoundAndInitArchive_020258b0 RoundAndInitArchive
+#define SetLoaderCallbacks_02025914 SetLoaderCallbacks
+#define data_ov022_020b7d80 data_ov022_020b7da0
+#define data_ov022_020b7ccc sOv022_FontEu10allNftr_020b7cec
+#define data_ov022_020b7c8c data_ov022_020b7cac
+#define data_ov022_020b7ce0 gStreamScriptCommandHandlers
+#define func_ov001_0206459c WriteSessionPackedBits
+#define func_ov001_02064574 ReadSessionPackedBits
+#define func_ov022_020a7414 func_ov022_020a7434
+#if defined(__MWERKS__)
+#include "../src/ov022/video_playback/StartMoviePlaybackState_020a7000.c"
+#else
+#include "src/ov022/video_playback/StartMoviePlaybackState_020a7000.c"
+#endif

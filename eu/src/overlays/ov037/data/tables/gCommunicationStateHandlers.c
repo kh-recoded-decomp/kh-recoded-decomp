@@ -10,7 +10,7 @@ extern void UpdateMenuSelectionAndReturnState7(void);
 extern void AdvanceCommWhenReady(void); /* AdvanceCommWhenReady */
 extern void MarkCommBusyWhenReady(void); /* MarkCommBusyWhenReady */
 extern void func_ov037_020ba9a0(void); /* CloseCommAndRestoreRoom */
-extern void func_ov037_020baa5c(void);
+extern void FinishCommunicationState(void);
 
 void (*gCommunicationStateHandlers[11])(void) = {
     MarkCommChannelBusy, /* MarkCommChannelBusy */
@@ -23,5 +23,5 @@ void (*gCommunicationStateHandlers[11])(void) = {
     AdvanceCommWhenReady, /* AdvanceCommWhenReady */
     MarkCommBusyWhenReady, /* MarkCommBusyWhenReady */
     func_ov037_020ba9a0, /* CloseCommAndRestoreRoom */
-    func_ov037_020baa5c,
+    FinishCommunicationState,
 };

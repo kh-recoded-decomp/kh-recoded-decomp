@@ -14,7 +14,7 @@ typedef struct TabMenu {
     int *tabCursor;
 } TabMenu;
 
-extern WidgetPos *func_ov027_020b91c8(void *cells, int *widget);
+extern WidgetPos *GetWidgetPosition(void *cells, int *widget);
 extern void func_ov027_020b91e8(void *cells, int *widget, WidgetPos *pos, int mode);
 extern void SetEntrySlotsVisible(void *cells, int *slots, int visible);
 
@@ -25,7 +25,7 @@ void MoveTabCursor(TabMenu *menu, int tab)
         SetEntrySlotsVisible(menu->cells, menu->tabCursor, 0);
     } else {
         int *cursor = menu->tabCursor;
-        WidgetPos pos = *func_ov027_020b91c8(menu->cells, cursor);
+        WidgetPos pos = *GetWidgetPosition(menu->cells, cursor);
 
         SetEntrySlotsVisible(menu->cells, menu->tabHighlight, 0);
         SetEntrySlotsVisible(menu->cells, cursor, 1);

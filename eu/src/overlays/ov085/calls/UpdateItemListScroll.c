@@ -25,7 +25,7 @@ typedef struct ItemListMenu {
 
 extern int GetFieldCa4a(void);
 extern BOOL ScriptCmd_ResetScreenLayer(ScrollList *list, void *cells);
-extern WidgetPos *func_ov027_020b91c8(void *cells, int *widget);
+extern WidgetPos *GetWidgetPosition(void *cells, int *widget);
 extern void func_ov027_020b91e8(void *cells, int *widget, WidgetPos *pos, int mode);
 extern void func_ov085_020c02a0(ItemListMenu *menu);
 
@@ -34,7 +34,7 @@ void UpdateItemListScroll(ItemListMenu *menu)
     GetFieldCa4a();
     if ((menu->mode == 0 && menu->list.count != 0 && ScriptCmd_ResetScreenLayer(&menu->list, menu->cells))
         || menu->dirty != 0) {
-        WidgetPos pos = *func_ov027_020b91c8(menu->cells, menu->scrollBar);
+        WidgetPos pos = *GetWidgetPosition(menu->cells, menu->scrollBar);
 
         if (menu->list.count != 0) {
             pos.y += (menu->list.offset - menu->list.base) << 16;

@@ -8,7 +8,7 @@
 #define ResetSceneState_020bbf34 ResetSceneState
 #define SetModeByte_020bb4c0 SetModeByte
 #define func_ov031_020bb48c func_ov031_020bb4ac
-#define func_ov031_020bb4a8 func_ov031_020bb4c8
+#define func_ov031_020bb4a8 ClearMovieSourceReadyFlag
 #define func_ov031_020bb55c IsStopFlagClear
 #define func_ov031_020bbf24 func_ov031_020bbf44
 #include "src/ov031/shared_engine/InstallMovieSceneHandlers_020bbf7c.c"

@@ -55,7 +55,7 @@ extern const char sOv073_UiBtlBtlLanguageP2_020c41dc[];
 extern void InitTileTableFrom(void *table, const TileTableSource *source);
 extern void *Msg_OpenContainerAndReadHeader(const char *name, u32 mode, BOOL allocFromEnd);
 extern Record *CloneRecord(Record **out, u32 id, int useTailAlloc, int heapTag);
-extern void func_ov034_020bdf30(void *list, void *container, int arg);
+extern void SetupStageParams(void *list, void *container, int arg);
 extern u16 *UpdateScreenWidgetLayer(int widget);
 extern BOOL InitTextLayerAt(void *obj, int layer, u16 *screenBase, void *font, TextFrame *frame);
 extern u16 *func_ov027_020ba2c8(void *table, int index);
@@ -80,7 +80,7 @@ void InitStatusPanel(StatusMenu *menu, StatusPanel *panel)
     panel->messages = Msg_OpenContainerAndReadHeader(sOv073_UiBtlBtlLanguageP2_020c41dc, 0xe, FALSE);
     panel->record = NULL;
     CloneRecord(&panel->record, panel->recordId, 1, 0xe);
-    func_ov034_020bdf30(menu->list, menu->container, 0);
+    SetupStageParams(menu->list, menu->container, 0);
     screenBase = UpdateScreenWidgetLayer(0x18);
     InitTextLayerAt(panel->titleLayer, 4, screenBase, menu->font, &titleFrame);
     DrawTextAnchored(panel->titleLayer, 0, 5, 2, 8, func_ov027_020ba2c8(menu->strings, 5));

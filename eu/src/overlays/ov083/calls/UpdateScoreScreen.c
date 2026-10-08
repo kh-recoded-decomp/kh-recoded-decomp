@@ -1,0 +1,30 @@
+#define UpdateScoreScreen_020bef1c UpdateScoreScreen
+#define func_02003fd4 OS_GetTick
+#define GetCardThreadStartTick_0202726c GetCardThreadStartTick
+#define func_02023d54 _ll_udiv
+#define func_ov039_020be450 func_ov039_020be470
+#define func_ov039_020bca30 IsStatePhase4
+#define ApplyScoreEvents_020bf388 ApplyScoreEvents
+#define GetFieldCa4a_020bc9e0 GetFieldCa4a
+#define CallStateWidget_020bc14c CallStateWidget
+#define UpdateScreenWidgetLayer_020bc1e4 UpdateScreenWidgetLayer
+#define SetScreenLayerDirty_020bc104 SetScreenLayerDirty
+#define CallVirtualHandlerSlot1_02001574 CallVirtualHandlerSlot1
+#define DrawTableString_020bf53c DrawTableString
+#define func_ov083_020bf56c DrawFormattedText
+#define SetEntrySlotsVisible_020b9580 SetEntrySlotsVisible
+#define func_ov083_020bf5fc GetRowColor
+#define func_ov083_020bf5ac GetRowColorWithLimit
+#define func_ov083_020bf5cc GetRowColorWithStatus
+#define func_020275c8 CheckStatusAndThreshold
+#define data_ov083_020bf6d8 data_ov083_020bf6f8
+#define data_ov083_020bf6e0 data_ov083_020bf700
+#define Text_UploadTileBuffer_02001520 Text_UploadTileBuffer
+#define DrawTextAnchored_020015a0 DrawTextAnchored
+#define FindActiveRecordById_020b8184 FindActiveRecordById
+#define TagTracker_InvokeCallback_020b8210 func_ov027_020b8230
+#if defined(__MWERKS__)
+#include "../src/ov083/unclassified_helpers/UpdateScoreScreen_020bef1c.c"
+#else
+#include "src/ov083/unclassified_helpers/UpdateScoreScreen_020bef1c.c"
+#endif

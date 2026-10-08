@@ -119,6 +119,14 @@ src/overlays/ov047/calls/CameraProbe_TestContact.c:
     complete
     .text       start:0x020c64d0 end:0x020c65b4
 
+src/overlays/ov047/calls/Camera_SweepLookAt.c:
+    complete
+    .text       start:0x020c65b4 end:0x020c6778
+
+src/overlays/ov047/calls/Camera_ResolveLookAtCollision.c:
+    complete
+    .text       start:0x020c6778 end:0x020c6b78
+
 src/overlays/ov047/calls/TryCopySourceBlock.c:
     complete
     .text       start:0x020c6b78 end:0x020c6ba4

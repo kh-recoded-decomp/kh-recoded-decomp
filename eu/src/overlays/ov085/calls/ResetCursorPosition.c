@@ -19,7 +19,7 @@ typedef struct CursorMenu {
     u32 itemIndex;
 } CursorMenu;
 
-extern void func_ov034_020bdf30(CursorPos *position, void *layout, int animate);
+extern void SetupStageParams(CursorPos *position, void *layout, int animate);
 
 void ResetCursorPosition(CursorMenu *menu)
 {
@@ -30,5 +30,5 @@ void ResetCursorPosition(CursorMenu *menu)
     }
     menu->position.y = 0;
     menu->position.z = 0;
-    func_ov034_020bdf30(&menu->position, menu->layout, 1);
+    SetupStageParams(&menu->position, menu->layout, 1);
 }

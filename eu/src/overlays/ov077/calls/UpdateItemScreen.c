@@ -1,0 +1,39 @@
+#define UpdateItemScreen_020c477c UpdateItemScreen
+#define ToggleSharedStateFlag_020c1d1c ToggleSharedStateFlag
+#define func_ov039_020bc0d4 GetPrimaryElementEnabled
+#define MessageWindow_Update_020c84dc MessageWindow_Update_020c84fc
+#define TabBar_HandleTouch_020c9be4 ItemMenu_HandleTabTouch
+#define OpenHelpMessageOrActivate_020c4b50 OpenHelpMessageOrActivate
+#define func_ov077_020c4bac func_ov077_020c4bcc
+#define UpdateItemScreenDisplay_020c4be0 UpdateItemScreenDisplay
+#define func_020505a8 GetSelectionPackedValueBlock
+#define func_ov077_020c43f8 HandleItemTabTouch
+#define BeginSlotItemSelection_020c5cc8 BeginSlotItemSelection
+#define MoveSlotCursor_020c4514 MoveSlotCursor
+#define ShowSlotItemHeader_020c437c ShowSlotItemHeader
+#define SetPanelShifted_020c5618 SetPanelShifted
+#define ResetMenuCamera_020c5648 ResetMenuCamera
+#define SetStatusPageAndCursor_020c2ca4 SetStatusPageAndCursor
+#define func_ov039_020bc03c RuntimeState_SetCondition
+#define IsGlobalPackedBitSet_02027304 IsGlobalPackedBitSet
+#define func_ov039_020bc1bc func_ov039_020bc1dc
+#define SetFlagGatedElementsVisible_020c9d7c SetFlagGatedElementsVisible
+#define func_ov077_020c5944 func_ov077_020c5964
+#define FindWidgetById_020b90a4 FindWidgetById
+#define func_ov027_020b965c func_ov027_020b967c
+#define ShowStatusRecordList_020c2b10 ShowStatusRecordList
+#define func_ov039_020bc0ec GetSecondaryElementEnabled
+#define func_0204f768 GetOverlaySelectionRecord
+#define TrackMaxParamValue_020c4260 TrackMaxParamValue
+#define SetParamWord20_02050640 SetParamWord20
+#define OpenStatusRecordList_020c2a04 MatchesEitherSlotId
+#define SetSharedListEntries_020c2c24 SetSharedListEntries
+#define SetSharedListBusy_020c2c44 SetSharedListBusy
+#define SyncSharedListScroll_020c2ac8 SyncSharedListScroll
+#define SetParamHalf18_02050630 SetParamHalf18
+#define SetSharedListMode_020c2aec SetSharedListMode
+#if defined(__MWERKS__)
+#include "../src/ov077/unclassified_helpers/UpdateItemScreen_020c477c.c"
+#else
+#include "src/ov077/unclassified_helpers/UpdateItemScreen_020c477c.c"
+#endif

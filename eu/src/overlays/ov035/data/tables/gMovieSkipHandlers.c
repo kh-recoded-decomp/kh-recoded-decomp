@@ -9,7 +9,7 @@ extern void FinishMovieSkip(void); /* FinishMovieSkip */
 extern void func_ov035_020ba6c0(void);
 extern void func_ov035_020ba6d8(void);
 extern void func_ov035_020ba6e4(void);
-extern void func_ov035_020ba760(void);
+extern void FinishMovieContextState(void);
 
 void (*gMovieSkipHandlers[10])(void) = {
     func_ov035_020ba594,
@@ -21,5 +21,5 @@ void (*gMovieSkipHandlers[10])(void) = {
     func_ov035_020ba6c0,
     func_ov035_020ba6d8,
     func_ov035_020ba6e4,
-    func_ov035_020ba760,
+    FinishMovieContextState,
 };

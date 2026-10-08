@@ -76,6 +76,10 @@ src/overlays/ov030/calls/MoviePlayer_Stop.c:
     complete
     .text       start:0x020ba9f0 end:0x020baa9c
 
+src/overlays/ov030/calls/FinishMoviePlaybackState.c:
+    complete
+    .text       start:0x020baa9c end:0x020baab8
+
 src/overlays/ov030/calls/func_ov030_020baab8.c:
     complete
     .text       start:0x020baab8 end:0x020baad2

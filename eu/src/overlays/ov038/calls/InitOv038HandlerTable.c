@@ -4,7 +4,7 @@
 #define ReleaseOv038Object_020ba6b8 ReleaseOv038Object
 #define SetSoundCtxMode_020ba670 SetSoundCtxMode
 #define func_ov038_020ba5fc func_ov038_020ba61c
-#define func_ov038_020ba64c func_ov038_020ba66c
+#define func_ov038_020ba64c ClearSoundContextReadyFlag
 #define func_ov038_020ba6d8 func_ov038_020ba6f8
 #define func_ov038_020ba6e0 GetOv038ResumeFlags
 #include "src/ov038/reviewed_helpers/InitOv038HandlerTable_020ba6f8.c"

@@ -1,0 +1,40 @@
+#define InitSelectMenu_020bf700 InitSelectMenu
+#define func_ov039_020bc828 GetCurrentMenuStackEntry
+#define func_ov039_020bc914 GetMenuSelection
+#define func_ov039_020bc18c GetPrimaryMenuElement
+#define func_ov039_020bc7f8 GetRuntimeStateFlags
+#define func_ov039_020be6a0 SetupMainBgLayers_020be6c0
+#define SetSelectionIfChanged_020bc92c SetSelectionIfChanged_020bc94c
+#define OpenTextFrame_020be5b8 OpenTextFrame
+#define LoadPackedFileView_020ba25c LoadPackedFileView
+#define func_ov027_020ba2a8 func_ov027_020ba2c8
+#define func_ov039_020bcb20 func_ov039_020bcb40
+#define SetTextColorIfFits_020bcd04 SetTextColorIfFits
+#define DrawTextAnchored_020015a0 DrawTextAnchored
+#define BuildSlotImageParams_020bc220 BuildSlotImageParams
+#define func_ov027_020b7e24 func_ov027_020b7e44
+#define FindActiveRecordById_020b8184 FindActiveRecordById
+#define AddRecordFromTemplate_020b7ecc AddRecordFromTemplate
+#define func_ov027_020b81e8 func_ov027_020b8208
+#define FindLoadedElementById_020b8390 FindLoadedElementById
+#define apply_all_pending_entry_edits_020b84f4 func_ov027_020b8514
+#define SetTagRecordArmed_020b83e8 SetTagRecordArmed
+#define func_ov039_020bc318 func_ov039_020bc338
+#define func_ov039_020bc414 IsPxiFifoTagSet_020bc434
+#define ObjectManager_GetFirstEntryParam_0207ee14 ObjectManager_GetFirstEntryParam
+#define RetainOrInitializeSharedRecord_0202c80c SND_RegisterSeq
+#define ObjectManager_GetSecondEntryParam_0207ee48 ObjectManager_GetSecondEntryParam
+#define func_0202c48c func_0202c4a0
+#define func_0202ed9c func_0202edb0
+#define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
+#define selectJointAnimationBlend_0202f2cc selectJointAnimationBlend
+#define PrepareAndStartStream_0204dd4c PrepareAndStartStream
+#define func_ov039_020bc7e0 RuntimeState_SetFlags
+#define data_ov084_020bfc40 data_ov084_020bfc60
+#define data_ov084_020bfcc4 sOv084_UiMenuStrLanguageShopSZ_020bfce4
+#define data_02053438 data_0205344c
+#if defined(__MWERKS__)
+#include "../src/ov084/select_menu/InitSelectMenu_020bf700.c"
+#else
+#include "src/ov084/select_menu/InitSelectMenu_020bf700.c"
+#endif

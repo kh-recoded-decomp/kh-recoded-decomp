@@ -84,6 +84,10 @@ src/overlays/ov024/calls/DestroyBoardScreen.c:
     complete
     .text       start:0x020b6d98 end:0x020b6e14
 
+src/overlays/ov024/calls/UpdateBoardScreen.c:
+    complete
+    .text       start:0x020b6e14 end:0x020b7248
+
 src/overlays/ov024/calls/ApplyDirectionOffset.c:
     complete
     .text       start:0x020b7248 end:0x020b72a8

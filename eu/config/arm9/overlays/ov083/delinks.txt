@@ -8,6 +8,10 @@ src/overlays/ov083/calls/InitScoreScreen.c:
     complete
     .text       start:0x020beac0 end:0x020bef3c
 
+src/overlays/ov083/calls/UpdateScoreScreen.c:
+    complete
+    .text       start:0x020bef3c end:0x020bf310
+
 src/overlays/ov083/calls/ReleaseScreenResources_020bf310.c:
     complete
     .text       start:0x020bf310 end:0x020bf356

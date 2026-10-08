@@ -5,7 +5,7 @@ func_ov082_020bf0ac kind:function(arm,size=0x1d4) addr:0x020bf0ac
 DrawEntryRowFrames kind:function(arm,size=0xa0) addr:0x020bf280
 ShutdownOv082Screen kind:function(arm,size=0x70) addr:0x020bf320
 func_ov082_020bf390 kind:function(arm,size=0xd8) addr:0x020bf390
-func_ov082_020bf468 kind:function(arm,size=0x1f8) addr:0x020bf468
+StepEntryListCursor kind:function(arm,size=0x1f8) addr:0x020bf468
 GetOv082SelectedSlot kind:function(arm,size=0x14) addr:0x020bf660
 data_ov082_020bf674 kind:data(any) addr:0x020bf674
 data_ov082_020bf6a0 kind:data(any) addr:0x020bf6a0 ambiguous

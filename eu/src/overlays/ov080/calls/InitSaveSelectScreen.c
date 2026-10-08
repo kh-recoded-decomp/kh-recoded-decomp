@@ -1,0 +1,50 @@
+#define InitSaveSelectScreen_020c42b0 InitSaveSelectScreen
+#define func_ov039_020bc914 GetMenuSelection
+#define func_ov039_020bc18c GetPrimaryMenuElement
+#define func_ov039_020bc7f8 GetRuntimeStateFlags
+#define GX_SetGraphicsMode_020066c4 GX_SetGraphicsMode
+#define G2x_SetBlendAlpha_02006850 G2x_SetBlendAlpha_
+#define G2_GetBG0ScrPtr_02006de0 G2_GetBG0ScrPtr
+#define func_01ff8740 MIi_CpuClearFast
+#define LoadSlotBgImage_020bc26c LoadSlotBgImage
+#define func_ov039_020bc414 IsPxiFifoTagSet_020bc434
+#define SetScreenLayerDirty_020bc104 SetScreenLayerDirty
+#define GetBgDataFromArchive_0202b554 GetBgDataFromArchive
+#define GX_LoadBG2Char_02007a90 GX_LoadBG2Char
+#define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
+#define OpenTextFrame_020be5b8 OpenTextFrame
+#define LoadPackedFileView_020ba25c LoadPackedFileView
+#define func_ov039_020bcb20 func_ov039_020bcb40
+#define SetTextColorIfFits_020bcd04 SetTextColorIfFits
+#define DrawTextAnchored_020015a0 DrawTextAnchored
+#define func_ov027_020ba2a8 func_ov027_020ba2c8
+#define func_ov039_020bc1bc func_ov039_020bc1dc
+#define BuildSlotImageParams_020bc220 BuildSlotImageParams
+#define InitObjManagerAndMark_020b9060 InitObjManagerAndMark
+#define PXI_Init_020b9078 func_ov027_020b9098
+#define func_ov027_020b8f98 func_ov027_020b8fb8
+#define func_ov027_020b7e24 func_ov027_020b7e44
+#define FindActiveRecordById_020b8184 FindActiveRecordById
+#define FindWidgetById_020b90a4 FindWidgetById
+#define func_ov027_020b91c8 func_ov027_020b91e8
+#define func_ov027_020b91a8 GetWidgetPosition
+#define PXI_Init_0204f0b4 PXI_Init_0204f0c8
+#define func_0204f13c IndexedRecord_SetPair
+#define data_ov080_020c5d38 data_ov080_020c5d58
+#define data_ov080_020c5dc4 sOv080_UiMenuStrLanguageSaveSZ_020c5de4
+#define data_ov080_020c5d28 gSaveSelectObjManagerConfig
+#define data_ov080_020c5d48 data_ov080_020c5d68
+#define AddRecordFromTemplate_020b7ecc AddRecordFromTemplate
+#define func_ov027_020b81e0 func_ov027_020b8200
+#define func_ov027_020b97b8 func_ov027_020b97d8
+#define func_ov039_020bc7e0 RuntimeState_SetFlags
+#define func_0204f498 SetBank6Word1C
+#define OS_GetTick_02003fd4 OS_GetTick
+#define StartCardWriteFromSlot_02027034 StartCardWriteFromSlot
+#define PollSaveSlotReads_020c4d08 func_ov080_020c4d28
+#define data_ov080_020c5e00 data_ov080_020c5e20
+#if defined(__MWERKS__)
+#include "../src/ov080/unclassified_helpers/InitSaveSelectScreen_020c42b0.c"
+#else
+#include "src/ov080/unclassified_helpers/InitSaveSelectScreen_020c42b0.c"
+#endif

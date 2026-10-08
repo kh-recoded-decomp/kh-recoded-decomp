@@ -3,5 +3,5 @@
 #define HasFlagsAt0xc_020a751c HasFlagsAt0xc
 #define IsPlayerEntryFlagSet_02050014 IsPlayerEntryFlagSet
 #define func_ov059_020c997c func_ov059_020c999c
-#define func_ov059_020ca33c func_ov059_020ca35c
+#define func_ov059_020ca33c Actor_UpdateJump
 #include "src/ov059/unclassified_helpers/Actor_UpdateChargeState_020cb5a8.c"

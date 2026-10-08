@@ -5,7 +5,7 @@ extern u32 EnterSceneSlot();
 extern u32 PlayFieldTrackSet();
 extern u32 EnterSceneSlotAtSpawn();
 extern u32 func_ov001_02064998();
-extern u32 func_ov033_020baa6c();
+extern void ClearResumeModePending(void);
 extern u32 StartSubScene();
 extern u32 GetActiveMenuScene();
 
@@ -29,7 +29,7 @@ void func_ov087_020c7b84(void) {
     case 3:
       EnterSceneSlotAtSpawn(selection,*(u32 *)(menu + 0xbc4));
     }
-    func_ov033_020baa6c();
+    ClearResumeModePending();
     StartSubScene(0xffffffff,0xffffffff,1);
     PlaySoundEffect(0,1);
     return;

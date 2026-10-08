@@ -5,8 +5,8 @@
 #define func_0204f378 IndexedRecords_SetFlag2
 #define func_ov039_020bc0d4 GetPrimaryElementEnabled
 #define func_ov039_020bc1bc func_ov039_020bc1dc
-#define func_ov077_020c4598 func_ov077_020c45b8
-#define func_ov077_020c53a0 func_ov077_020c53c0
+#define func_ov077_020c4598 AssignCursorItemToPartySlot
+#define func_ov077_020c53a0 UpdateItemScreenStatusLink
 #define func_ov077_020c5510 SyncScreenSpriteSlots
 #define func_ov077_020c5618 SetPanelShifted
 #define func_ov077_020c57f4 func_ov077_020c5814

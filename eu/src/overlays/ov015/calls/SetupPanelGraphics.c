@@ -113,7 +113,7 @@ extern const char sOv015_WxcWlaP2_0207e7ec[];
 extern void func_ov015_020724dc(void);
 extern void func_ov015_02072754(void);
 extern void func_ov015_02072758(void);
-extern void func_ov015_02072814(void);
+extern void SetPanelFlagE2Bit3(void);
 extern void func_ov015_02072830(void);
 extern void func_ov015_0207283c(void);
 extern void func_ov015_02072848(void);
@@ -373,7 +373,7 @@ void SetupPanelGraphics(void) {
     func_ov027_020b90b8(data_ov015_0207e960->subObj, func_ov015_020724dc);
     func_ov027_020b90a8(data_ov015_0207e960->subObj, 4, func_ov015_02072754);
     func_ov027_020b90a8(data_ov015_0207e960->subObj, 9, func_ov015_02072758);
-    func_ov027_020b90a8(data_ov015_0207e960->subObj, 17, func_ov015_02072814);
+    func_ov027_020b90a8(data_ov015_0207e960->subObj, 17, SetPanelFlagE2Bit3);
     func_ov027_020b90a8(data_ov015_0207e960->subObj, 30, func_ov015_02072830);
     func_ov027_020b90a8(data_ov015_0207e960->subObj, 31, func_ov015_0207283c);
     func_ov027_020b90a8(data_ov015_0207e960->subObj, 32, func_ov015_02072848);

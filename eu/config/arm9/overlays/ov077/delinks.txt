@@ -20,6 +20,14 @@ src/overlays/ov077/calls/MoveSlotCursor.c:
     complete
     .text       start:0x020c4534 end:0x020c45b8
 
+src/overlays/ov077/calls/AssignCursorItemToPartySlot.c:
+    complete
+    .text       start:0x020c45b8 end:0x020c479c
+
+src/overlays/ov077/calls/UpdateItemScreen.c:
+    complete
+    .text       start:0x020c479c end:0x020c4b70
+
 src/overlays/ov077/calls/OpenHelpMessageOrActivate.c:
     complete
     .text       start:0x020c4b70 end:0x020c4bcc
@@ -55,6 +63,10 @@ src/overlays/ov077/calls/ReleaseScreenSprites.c:
 src/overlays/ov077/calls/UpdateItemCountDigits.c:
     complete
     .text       start:0x020c52c0 end:0x020c53c0
+
+src/overlays/ov077/calls/UpdateItemScreenStatusLink.c:
+    complete
+    .text       start:0x020c53c0 end:0x020c5504
 
 src/overlays/ov077/calls/PlaceSlotSprite.c:
     complete
@@ -291,6 +303,10 @@ src/overlays/ov077/calls/IsMessageWindowActive.c:
 src/overlays/ov077/calls/ReleaseScreenResources.c:
     complete
     .text       start:0x020c90dc end:0x020c9138
+
+src/overlays/ov077/calls/ItemListPanel_Open.c:
+    complete
+    .text       start:0x020c9138 end:0x020c9390
 
 src/overlays/ov077/calls/ItemMenu_HandleTabTouch.c:
     complete

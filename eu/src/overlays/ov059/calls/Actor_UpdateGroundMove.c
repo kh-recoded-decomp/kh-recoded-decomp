@@ -67,7 +67,7 @@ extern fx32 FX_Mul(fx32 a, fx32 b);
 extern void ScaleVecFx32InPlace(VecFx32 *vec, fx32 scale);
 extern fx32 FX_Sqrt(fx32 value);
 extern fx32 FX_Div(fx32 numer, fx32 denom);
-extern void func_ov059_020ca35c(Actor *actor, BOOL tilted, int angle);
+extern void Actor_UpdateJump(Actor *actor, BOOL tilted, int angle);
 
 static inline int Sign(int value)
 {
@@ -204,7 +204,7 @@ void Actor_UpdateGroundMove(Actor *actor)
         airborne = TRUE;
     }
     if (airborne) {
-        func_ov059_020ca35c(actor, tilted, angle);
+        Actor_UpdateJump(actor, tilted, angle);
     }
     actor->prevTilt = tilted;
 }

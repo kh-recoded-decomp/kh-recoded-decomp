@@ -1,4 +1,4 @@
 #define GetActiveRecordEntryOrNull_02029548 GetActiveRecordEntryOrNull
 #define SlotMenu_UpdatePairedCategory_020c53c8 SlotMenu_UpdatePairedCategory
-#define func_ov076_020cc0e4 func_ov076_020cc104
+#define func_ov076_020cc0e4 ItemSelectionPanel_Open
 #include "src/ov076/unclassified_helpers/SlotMenu_UpdatePairedCategory_020c53c8.c"

@@ -1,5 +1,5 @@
 #define SetupStatusPageScroll_020c0220 SetupStatusPageScroll
 #define func_ov039_020bc914 GetMenuSelection
-#define SetupScrollList_020bdf10 func_ov034_020bdf30
+#define SetupScrollList_020bdf10 SetupStageParams
 #define func_ov027_020b9580 SetEntrySlotsVisible
 #include "src/ov073/status_menu/SetupStatusPageScroll_020c0220.c"

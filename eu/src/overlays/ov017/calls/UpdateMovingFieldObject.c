@@ -1,0 +1,22 @@
+#define UpdateMovingFieldObject_020a3610 UpdateMovingFieldObject
+#define func_ov042_020bd6ec FollowChainLeader
+#define func_ov042_020bd290 Camera_GetGoalPosition
+#define func_ov042_020bd590 func_ov042_020bd5b0
+#define SetFieldObjectHidden_020a3c78 func_ov017_020a3c98
+#define ActorSlot_UnlinkByIndex_02035c28 ActorSlot_UnlinkByIndex
+#define CacheEntry_SetActive_02087258 CacheEntry_SetActive
+#define func_02036240 ActorRegistry_GetEntityByIndex
+#define OffsetBoxByDelta_0203ac70 OffsetBoxByDelta
+#define SetCollisionObjectPosition_02033f48 SetCollisionObjectPosition
+#define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
+#define DispatchListHeadCallback_020a4100 DispatchListHeadCallback
+#define VEC_Subtract_01ff9e3c VEC_Subtract
+#define func_ov001_0208635c func_ov001_02086384
+#define VEC_Add_01ff9e0c VEC_Add
+#define UpdateFieldObjectBreakAnim_020a3554 func_ov017_020a3574
+#define data_02053438 data_0205344c
+#if defined(__MWERKS__)
+#include "../src/ov017/field_objects/UpdateMovingFieldObject_020a3610.c"
+#else
+#include "src/ov017/field_objects/UpdateMovingFieldObject_020a3610.c"
+#endif
