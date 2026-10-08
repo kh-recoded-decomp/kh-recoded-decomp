@@ -1,3 +1,3 @@
 #define UpdateRecordSliderTouch_020c1600 UpdateRecordSliderTouch
-#define func_ov086_020c14c0 func_ov086_020c14e0
+#define func_ov086_020c14c0 ScrollMenuToItem
 #include "src/ov086/panel_state/UpdateRecordSliderTouch_020c1600.c"

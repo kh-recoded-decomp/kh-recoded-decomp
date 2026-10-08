@@ -1,6 +1,6 @@
 #define GetActiveRecordEntryOrNull_02029548 GetActiveRecordEntryOrNull
 #define SlotMenu_AssignStockToSlot_020c4a38 SlotMenu_AssignStockToSlot
-#define SlotMenu_EquipRecordEntry_020c82d8 func_ov076_020c82f8
+#define SlotMenu_EquipRecordEntry_020c82d8 SlotMenu_EquipRecordEntry
 #define SlotMenu_EquipSlotEntry_020c8334 func_ov076_020c8354
 #define SlotMenu_UnequipSlotEntry_020c89e0 SlotMenu_UnequipSlotEntry
 #include "src/ov076/unclassified_helpers/SlotMenu_AssignStockToSlot_020c4a38.c"

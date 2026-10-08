@@ -1,0 +1,6 @@
+#define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
+#define func_02025438 SetPanelEnabled
+#define func_ov036_020bca70 SetSlotSharedRecord
+#define func_ov036_020bdc98 ScriptCmd_SetSlotSharedRecord
+
+#include "src/ov036/reviewed_helpers/func_ov036_020bdc98.c"

@@ -84,7 +84,7 @@ extern void BuildNodeRecords(BossObject *obj, ObjectOwner *owner, void *resDesc,
 extern void AcquireEntryHandles(BossObject *obj, ObjectOwner *owner, void *resDesc);
 extern void LoadManagerSpriteSlots(void);
 extern void LoadResGroupHandles(BossObject *obj, ObjectOwner *owner, void *resDesc);
-extern void func_ov069_020d8120();
+extern void ReleaseOv069BossResources();
 extern void StartOv069BossIntro();
 extern void func_ov069_020d829c();
 extern void EndOv069BossIntro();
@@ -118,7 +118,7 @@ BossObject *CreateOv069BossObject(ObjectOwner *owner, void *resDesc, ObjectDesc 
     group.param = 4;
     targets->groupB = func_ov021_020a89c8(&group);
     obj->onStart = StartOv069BossIntro;
-    obj->draw = func_ov069_020d8120;
+    obj->draw = ReleaseOv069BossResources;
     obj->finish = EndOv069BossIntro;
     obj->onAction = func_ov069_020d829c;
     selection = *GetOverlaySelectionRecord(owner->player);

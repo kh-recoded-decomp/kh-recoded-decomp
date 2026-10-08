@@ -21,7 +21,7 @@ extern void SetScreenLayerDirty(int layerId);
 extern void MarkTileTableRowDirty(void *table, int id);
 extern u32 ReadSessionPackedBits(int bitOffset, u32 bitCount);
 extern BOOL IsSessionFlagSet(u32 flagId);
-extern int func_ov086_020bf2b0(int group);
+extern int CountSessionGroupFlags(int group);
 extern int CountUnlockedGroupEntries(int group);
 extern int func_ov086_020bf3b4(int group);
 extern int CountGroupFlaggedEntries_020bf4a4(int group);
@@ -40,7 +40,7 @@ void DrawRecordPanelStats(RecordPanel *panel)
     SetScreenLayerDirty(0x18);
     MarkTileTableRowDirty(panel->tileTable, 0x19);
     group = panel->group;
-    func_ov086_020bee2c(panel, 0, func_ov086_020bf2b0(group), table.values[group]);
+    func_ov086_020bee2c(panel, 0, CountSessionGroupFlags(group), table.values[group]);
     group = panel->group;
     if (group < 5) {
         func_ov086_020bee2c(panel, 1, ReadSessionPackedBits(data_ov086_020c2168[group], 2), 3);

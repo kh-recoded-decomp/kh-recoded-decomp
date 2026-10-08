@@ -1,5 +1,5 @@
 #define Actor_UpdateHaltFlags_020cb3f8 Actor_UpdateHaltFlags
-#define func_ov059_020c93d8 func_ov059_020c93f8
+#define func_ov059_020c93d8 Actor_UpdateGroundMove
 #define func_ov059_020c997c func_ov059_020c999c
 #define func_ov059_020caea0 func_ov059_020caec0
 #include "src/ov059/unclassified_helpers/Actor_UpdateHaltFlags_020cb3f8.c"

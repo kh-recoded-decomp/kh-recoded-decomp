@@ -8,5 +8,5 @@
 #define func_02006450 FX_Mul
 #define func_0205125c GetMapFinalStats
 #define func_ov075_020c4988 CountUnlockedTiers
-#define func_ov075_020c60e8 func_ov075_020c6108
+#define func_ov075_020c60e8 ScaleRoundedMillis
 #include "src/ov075/unclassified_helpers/GetOptionChangeNotice_020c6134.c"

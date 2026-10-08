@@ -1,3 +1,3 @@
 #define ReleaseActiveDisplay_020d31b0 ReleaseActiveDisplay
-#define data_ov054_020d3700 data_ov054_020d3720
+#define data_ov054_020d3700 gOv054WorkData
 #include "src/ov054/unclassified_helpers/ReleaseActiveDisplay_020d31b0.c"

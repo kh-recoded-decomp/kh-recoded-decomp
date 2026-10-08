@@ -14,6 +14,6 @@
 #define func_ov021_020a89a8 func_ov021_020a89c8
 #define func_ov072_020d8230 SetObjectTimeScale
 #define func_ov072_020d8234 StopLoopingSounds
-#define func_ov072_020d82d8 func_ov072_020d82f8
-#define func_ov072_020d82e8 func_ov072_020d8308
+#define func_ov072_020d82d8 HandleOv072OwnerEvent
+#define func_ov072_020d82e8 ReleaseOv072CameraResources
 #include "src/ov072/object_factory/CreateOv072SceneTask_020d9aac.c"

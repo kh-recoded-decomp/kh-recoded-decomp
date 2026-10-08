@@ -1,5 +1,5 @@
 #define ScriptCmd_ResetAndDispatch_020bdcc8 ScriptCmd_ResetAndDispatch
 #define ScriptCmd_SetElemField_02025e18 ScriptCmd_SetElemField
 #define func_02025438 SetPanelEnabled
-#define func_ov036_020bdc98 func_ov036_020bdcb8
+#define func_ov036_020bdc98 ScriptCmd_SetSlotSharedRecord
 #include "src/ov036/shared_engine/ScriptCmd_ResetAndDispatch_020bdcc8.c"

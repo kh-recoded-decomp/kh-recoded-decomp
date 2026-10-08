@@ -1,0 +1,6 @@
+#define g_panelState_0206f9a0 data_ov014_0206f9a0
+#define g_panelStateTable_0206f8f8 gPanelInitialUpdateCallback
+#define func_ov027_020b7dd4 func_ov027_020b7df4
+#define NNS_FndInitListWithOffset0_0204f11c NNS_FndInitListWithOffset0_0204f130
+
+#include "src/ov014/panel_state/UpdatePanelState_0206cf38.c"

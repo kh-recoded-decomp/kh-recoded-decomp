@@ -1,5 +1,5 @@
 #define GenerateRandomLinks_020b60e0 GenerateRandomLinks
 #define func_0202a9d0 func_0202a9e4
-#define func_ov024_020b63c4 func_ov024_020b63e4
+#define func_ov024_020b63c4 TryLinkNodes
 #define func_ov024_020b64d4 GetLinkDistance
 #include "src/ov024/board_setup/GenerateRandomLinks_020b60e0.c"

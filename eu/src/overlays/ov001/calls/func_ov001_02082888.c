@@ -3,7 +3,7 @@
 extern unsigned int func_ov001_0207f040();
 extern unsigned int func_ov001_0207f050();
 extern unsigned int func_ov001_0207f060();
-extern unsigned int func_ov001_02082230();
+extern unsigned int LoadCursorModels();
 extern unsigned int ReleaseAttachedModels();
 
 void func_ov001_02082888(void) {
@@ -20,7 +20,7 @@ void func_ov001_02082888(void) {
       if (((actor != 0) && (*(unsigned short *)(actor + 0x46) != 0)) &&
          (entry = func_ov001_0207f060(index,0), *(unsigned char *)(*(int *)(entry + 8) + 0x7d) == '\v')) {
         ReleaseAttachedModels(actor);
-        func_ov001_02082230(actor);
+        LoadCursorModels(actor);
         return;
       }
       index = index + 1;

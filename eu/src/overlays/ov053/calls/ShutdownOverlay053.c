@@ -1,6 +1,6 @@
 #define FreeCueTable_020bdfec func_ov040_020be00c
 #define ShutdownOverlay053_020d2628 ShutdownOverlay053
-#define func_ov010_020a1808 func_ov010_020a1828
+#define func_ov010_020a1808 ReleaseSpecialActionWork
 #define func_ov052_020ccc60 DestroyActorResources
-#define g_overlayWorkData_020d2c20 data_ov053_020d2c40
+#define g_overlayWorkData_020d2c20 gOv053WorkData
 #include "src/ov053/unclassified_helpers/ShutdownOverlay053_020d2628.c"

@@ -292,6 +292,10 @@ src/overlays/ov036/calls/AccumulateTextBoxScroll.c:
     complete
     .text       start:0x020bdc24 end:0x020bdcb8
 
+src/overlays/ov036/calls/ScriptCmd_SetSlotSharedRecord.c:
+    complete
+    .text       start:0x020bdcb8 end:0x020bdce8
+
 src/overlays/ov036/calls/ScriptCmd_ResetAndDispatch.c:
     complete
     .text       start:0x020bdce8 end:0x020bdd06
@@ -511,6 +515,10 @@ src/overlays/ov036/calls/func_ov036_020bebbc.c:
 src/overlays/ov036/calls/func_ov036_020bee60.c:
     complete
     .text       start:0x020bee60 end:0x020bef0c
+
+src/overlays/ov036/calls/DrawNextTextWindowGlyph.c:
+    complete
+    .text       start:0x020bef0c end:0x020bf110
 
 src/overlays/ov036/calls/DrawNextTextGlyph.c:
     complete

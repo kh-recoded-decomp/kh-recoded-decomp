@@ -1,3 +1,3 @@
 #define UpdateWidgetRootAndFireAlarm_020b8c94 UpdateWidgetRootAndFireAlarm
-#define func_ov027_020b8b48 func_ov027_020b8b68
+#define func_ov027_020b8b48 UpdateWidgetRoot
 #include "src/ov027/resource_container/UpdateWidgetRootAndFireAlarm_020b8c94.c"

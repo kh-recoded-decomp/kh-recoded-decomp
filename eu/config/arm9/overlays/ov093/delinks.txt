@@ -52,6 +52,10 @@ src/overlays/ov093/calls/FreeLoadedFiles.c:
     complete
     .text       start:0x020bf8e0 end:0x020bf904
 
+src/overlays/ov093/calls/LoadSceneBackgrounds.c:
+    complete
+    .text       start:0x020bf904 end:0x020bfab4
+
 src/overlays/ov093/calls/FreeResourceBlocks.c:
     complete
     .text       start:0x020bfab4 end:0x020bfae4

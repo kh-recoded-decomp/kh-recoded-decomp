@@ -140,6 +140,10 @@ src/overlays/ov038/calls/ResetOv038ExitState.c:
     complete
     .text       start:0x020bb658 end:0x020bb67c
 
+src/overlays/ov038/calls/GetResultsPageState.c:
+    complete
+    .text       start:0x020bb67c end:0x020bb694
+
 src/overlays/ov038/calls/func_ov038_020bbcb0.c:
     complete
     .text       start:0x020bbcb0 end:0x020bbcbc

@@ -13,7 +13,7 @@
 #define data_ov071_020d96b0 sOv071_CmDB_020d96d0
 #define func_ov021_020a89a8 func_ov021_020a89c8
 #define func_ov071_020d8270 func_ov071_020d8290
-#define func_ov071_020d8340 func_ov071_020d8360
-#define func_ov071_020d8350 func_ov071_020d8370
+#define func_ov071_020d8340 HandleOv071OwnerEvent
+#define func_ov071_020d8350 ReleaseOv071CameraResources
 #define func_ov071_020d8368 func_ov071_020d8388
 #include "src/ov071/object_factory/CreateOv071SceneTask_020d954c.c"

@@ -44,6 +44,10 @@ src/overlays/ov059/calls/MapKindToSlotIndex_020c7a44.c:
     complete
     .text       start:0x020c7a44 end:0x020c7a68
 
+src/overlays/ov059/calls/Actor_Create.c:
+    complete
+    .text       start:0x020c7a68 end:0x020c7a90
+
 src/overlays/ov059/calls/Actor_TrySpawnIdleEffect.c:
     complete
     .text       start:0x020c7a90 end:0x020c7aec
@@ -116,6 +120,10 @@ src/overlays/ov059/auto/func_ov059_020c8b9c.c:
     complete
     .text       start:0x020c8b9c end:0x020c8ba8
 
+src/overlays/ov059/calls/Actor_UpdateComboStage.c:
+    complete
+    .text       start:0x020c8ba8 end:0x020c8fbc
+
 src/overlays/ov059/calls/Actor_SetJointBlendMode.c:
     complete
     .text       start:0x020c8fbc end:0x020c9068
@@ -143,6 +151,10 @@ src/overlays/ov059/calls/func_ov059_020c934c.c:
 src/overlays/ov059/calls/func_ov059_020c9394.c:
     complete
     .text       start:0x020c9394 end:0x020c93f8
+
+src/overlays/ov059/calls/Actor_UpdateGroundMove.c:
+    complete
+    .text       start:0x020c93f8 end:0x020c9748
 
 src/overlays/ov059/calls/func_ov059_020c9748.c:
     complete
@@ -411,6 +423,10 @@ src/overlays/ov059/calls/Request_IsIdle.c:
 src/overlays/ov059/calls/Actor_IsIdleWithoutTarget.c:
     complete
     .text       start:0x020cd754 end:0x020cd7a0
+
+src/overlays/ov059/calls/EffectGroup_LoadModels.c:
+    complete
+    .text       start:0x020cd7a0 end:0x020cd944
 
 src/overlays/ov059/calls/MapStateToEvenIndex.c:
     complete

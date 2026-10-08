@@ -3,6 +3,6 @@
 #define GetId10_020a755c SharedObject_GetId
 #define IsPlayerEntryFlagSet_02050014 IsPlayerEntryFlagSet
 #define UpdateRewardCharge_020d3078 UpdateRewardCharge
-#define data_ov054_020d3700 data_ov054_020d3720
+#define data_ov054_020d3700 gOv054WorkData
 #define func_ov054_020d34b0 func_ov054_020d34d0
 #include "src/ov054/unclassified_helpers/UpdateRewardCharge_020d3078.c"

@@ -32,6 +32,10 @@ src/overlays/ov015/calls/func_ov015_0206c6bc.c:
     complete
     .text       start:0x0206c6bc end:0x0206c708
 
+src/overlays/ov015/calls/SetupPanelGraphics.c:
+    complete
+    .text       start:0x0206c708 end:0x0206d59c
+
 src/overlays/ov015/calls/func_ov015_0206e658.c:
     complete
     .text       start:0x0206e658 end:0x0206e730

@@ -208,6 +208,10 @@ src/overlays/ov027/calls/ForEachListElement.c:
     complete
     .text       start:0x020b8b3c end:0x020b8b68
 
+src/overlays/ov027/calls/UpdateWidgetRoot.c:
+    complete
+    .text       start:0x020b8b68 end:0x020b8bf4
+
 src/overlays/ov027/calls/InitializeResourceContainer.c:
     complete
     .text       start:0x020b8bf4 end:0x020b8c78

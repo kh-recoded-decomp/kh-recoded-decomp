@@ -1,4 +1,4 @@
 #define HandleRecordScrollInput_020c1828 HandleRecordScrollInput
 #define PlaySoundEffect_0204d924 PlaySoundEffect
-#define func_ov086_020c14c0 func_ov086_020c14e0
+#define func_ov086_020c14c0 ScrollMenuToItem
 #include "src/ov086/panel_state/HandleRecordScrollInput_020c1828.c"

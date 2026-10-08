@@ -3,7 +3,7 @@
 #define Entity_UpdateEventEffect_020a18ac Entity_UpdateEventEffect
 #define SpawnEffectAtTarget_020a1028 SpawnEffectAtTarget
 #define StartObjectEffects_020a0e6c StartObjectEffects
-#define data_ov010_020a1dc0 data_ov010_020a1de0
+#define data_ov010_020a1dc0 gSpecialActionWork
 #define func_ov001_020645e8 ClearSessionPackedBit
 #define func_ov010_020a0d00 func_ov010_020a0d20
 #define func_ov010_020a0d98 UpdateObjectEffects

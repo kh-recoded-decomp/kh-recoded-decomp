@@ -8,6 +8,10 @@ src/overlays/ov014/calls/ShutdownPanelObjects.c:
     complete
     .text       start:0x0206cea0 end:0x0206cf38
 
+src/overlays/ov014/calls/UpdatePanelState_0206cf38.c:
+    complete
+    .text       start:0x0206cf38 end:0x0206cfa0
+
 src/overlays/ov014/calls/UpdatePanelBanner.c:
     complete
     .text       start:0x0206cfa0 end:0x0206d1c0

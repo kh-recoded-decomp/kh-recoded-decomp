@@ -7,7 +7,7 @@
 #define RefreshModeMenuHighlights_020d2aa0 RefreshModeMenuHighlights
 #define SetMenuEntryHighlight_0207830c SetMenuEntryHighlight
 #define SetSceneAnimState_02072fc4 SetSceneAnimState
-#define data_ov054_020d3700 data_ov054_020d3720
+#define data_ov054_020d3700 gOv054WorkData
 #define func_ov058_020d64c8 SetEnemyTargetAndClearFlag
 #define func_ov058_020d81a4 func_ov058_020d81c4
 #include "src/ov054/unclassified_helpers/RefreshModeMenuHighlights_020d2aa0.c"

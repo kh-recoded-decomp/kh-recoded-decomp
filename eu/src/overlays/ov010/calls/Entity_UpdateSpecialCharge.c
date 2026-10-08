@@ -1,5 +1,5 @@
 #define Entity_UpdateSpecialCharge_020a1708 Entity_UpdateSpecialCharge
-#define data_ov010_020a1dc0 data_ov010_020a1de0
+#define data_ov010_020a1dc0 gSpecialActionWork
 #define func_ov010_020a0cd8 func_ov010_020a0cf8
 #define func_ov010_020a0d00 func_ov010_020a0d20
 #include "src/ov010/actor_state/Entity_UpdateSpecialCharge_020a1708.c"

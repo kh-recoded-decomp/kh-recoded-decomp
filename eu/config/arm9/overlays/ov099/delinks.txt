@@ -32,6 +32,10 @@ src/overlays/ov099/calls/HandleListCursorDown.c:
     complete
     .text       start:0x020bef60 end:0x020befcc
 
+src/overlays/ov099/calls/HandleListPageUp.c:
+    complete
+    .text       start:0x020befcc end:0x020bf038
+
 src/overlays/ov099/calls/HandleListPageDown.c:
     complete
     .text       start:0x020bf038 end:0x020bf0a4

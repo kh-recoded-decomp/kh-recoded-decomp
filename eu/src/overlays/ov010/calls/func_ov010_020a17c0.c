@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-extern unsigned int *data_ov010_020a1de0;
+extern unsigned int *gSpecialActionWork;
 extern unsigned int sOv010_BaEfFnW7P2_020a1dc0;
 extern unsigned int sOv010_CmDD_020a1dd0;
 extern unsigned int Msg_OpenContainerAndReadHeader();
@@ -13,14 +13,14 @@ void func_ov010_020a17c0(unsigned int value) {
   unsigned int *work;
   void *resource;
 
-  if (data_ov010_020a1de0 == (unsigned int *)0x0) {
-    data_ov010_020a1de0 = NNSi_FndAllocFromDefaultHeap(0x9c);
+  if (gSpecialActionWork == (unsigned int *)0x0) {
+    gSpecialActionWork = NNSi_FndAllocFromDefaultHeap(0x9c);
     resource = Msg_OpenContainerAndReadHeader(&sOv010_BaEfFnW7P2_020a1dc0,8,0);
-    data_ov010_020a1de0[0xb] = resource;
-    LoadObjectSprites(data_ov010_020a1de0);
+    gSpecialActionWork[0xb] = resource;
+    LoadObjectSprites(gSpecialActionWork);
   }
-  work = data_ov010_020a1de0;
-  *data_ov010_020a1de0 = 0;
+  work = gSpecialActionWork;
+  *gSpecialActionWork = 0;
   work[8] = value;
   work[2] = 0;
   work[3] = 0;

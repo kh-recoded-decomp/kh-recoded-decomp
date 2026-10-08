@@ -37,7 +37,7 @@ Entity_UpdateSpecialRelease kind:function(thumb,size=0x134) addr:0x020a12b8
 func_ov010_020a13ec kind:function(thumb,size=0x33c) addr:0x020a13ec
 Entity_UpdateSpecialCharge kind:function(thumb,size=0x98) addr:0x020a1728
 func_ov010_020a17c0 kind:function(thumb,size=0x68) addr:0x020a17c0
-func_ov010_020a1828 kind:function(thumb,size=0x30) addr:0x020a1828
+ReleaseSpecialActionWork kind:function(thumb,size=0x30) addr:0x020a1828
 Entity_HandleSpecialAction kind:function(thumb,size=0x74) addr:0x020a1858
 Entity_UpdateEventEffect kind:function(thumb,size=0xac) addr:0x020a18cc
 func_ov010_020a1978 kind:function(thumb,size=0x20) addr:0x020a1978
@@ -53,4 +53,4 @@ data_ov010_020a1d7c kind:data(any) addr:0x020a1d7c
 gOv010ScriptObjectCreationHandlers kind:data(any) addr:0x020a1da0
 sOv010_BaEfFnW7P2_020a1dc0 kind:data(any) addr:0x020a1dc0
 sOv010_CmDD_020a1dd0 kind:data(any) addr:0x020a1dd0
-data_ov010_020a1de0 kind:bss addr:0x020a1de0
+gSpecialActionWork kind:bss addr:0x020a1de0

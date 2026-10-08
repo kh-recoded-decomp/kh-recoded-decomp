@@ -47,6 +47,10 @@ src/overlays/ov053/calls/MapKindToSlotIndex.c:
     complete
     .text       start:0x020d2a60 end:0x020d2b3e
 
+src/overlays/ov053/calls/CreateOv053Actor.c:
+    complete
+    .text       start:0x020d2b40 end:0x020d2b68
+
 src/overlays/ov053/data/bss/Bss_ov053_020d2c40.c:
     complete
     .bss        start:0x020d2c40 end:0x020d2c60

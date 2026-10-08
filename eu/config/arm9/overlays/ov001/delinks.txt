@@ -3512,6 +3512,10 @@ src/overlays/ov001/calls/DrawCenteredWindowText.c:
     complete
     .text       start:0x02079a34 end:0x02079a9a
 
+src/overlays/ov001/calls/PrintNextShadowedGlyph.c:
+    complete
+    .text       start:0x02079a9c end:0x02079b4c
+
 src/overlays/ov001/calls/DrawMessageWindowPage.c:
     complete
     .text       start:0x02079b4c end:0x02079c88
@@ -4799,6 +4803,10 @@ src/overlays/ov001/calls/FieldObject_CreateWithSaveBits.c:
 src/overlays/ov001/calls/ActivateFieldSwitchObject.c:
     complete
     .text       start:0x02082098 end:0x02082230
+
+src/overlays/ov001/calls/LoadCursorModels.c:
+    complete
+    .text       start:0x02082230 end:0x020822d4
 
 src/overlays/ov001/calls/ReleaseAttachedModels.c:
     complete
@@ -7468,6 +7476,10 @@ src/overlays/ov001/calls/UpdateStageBrightnessFade.c:
     complete
     .text       start:0x0209b908 end:0x0209b978
 
+src/overlays/ov001/calls/UpdateStageManager.c:
+    complete
+    .text       start:0x0209b978 end:0x0209bedc
+
 src/overlays/ov001/calls/InitStageObjectModel.c:
     complete
     .text       start:0x0209bedc end:0x0209bf7c
@@ -7743,6 +7755,10 @@ src/overlays/ov001/calls/FindPartySlotById.c:
 src/overlays/ov001/calls/LoadResourceSetEntry.c:
     complete
     .text       start:0x0209d1ec end:0x0209d258
+
+src/overlays/ov001/calls/LoadScaledOffsetPair.c:
+    complete
+    .text       start:0x0209d258 end:0x0209d2c4
 
 src/overlays/ov001/calls/ComputeLevelStats.c:
     complete

@@ -24,9 +24,13 @@ src/overlays/ov072/calls/StopLoopingSounds.c:
     complete
     .text       start:0x020d8254 end:0x020d82f8
 
-src/overlays/ov072/calls/func_ov072_020d82f8.c:
+src/overlays/ov072/calls/HandleOv072OwnerEvent.c:
     complete
     .text       start:0x020d82f8 end:0x020d8306
+
+src/overlays/ov072/calls/ReleaseOv072CameraResources.c:
+    complete
+    .text       start:0x020d8308 end:0x020d8320
 
 src/overlays/ov072/calls/IsEventActionAllowed.c:
     complete

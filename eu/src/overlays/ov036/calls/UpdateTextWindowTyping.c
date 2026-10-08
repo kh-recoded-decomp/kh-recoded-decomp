@@ -1,5 +1,5 @@
 #define UpdateTextWindowTyping_020c0d34 UpdateTextWindowTyping
-#define func_ov036_020beeec func_ov036_020bef0c
+#define func_ov036_020beeec DrawNextTextWindowGlyph
 #define func_ov036_020bf0f0 DrawNextTextGlyph
 #define func_ov036_020c27dc SetTimerDuration
 #include "src/ov036/text_rendering/UpdateTextWindowTyping_020c0d34.c"

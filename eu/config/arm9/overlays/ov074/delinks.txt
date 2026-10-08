@@ -12,6 +12,10 @@ src/overlays/ov074/calls/CaptureSelectedJointMtx.c:
     complete
     .text       start:0x020c50d0 end:0x020c5128
 
+src/overlays/ov074/calls/RefreshRootMenuHighlights.c:
+    complete
+    .text       start:0x020c5128 end:0x020c5270
+
 src/overlays/ov074/calls/DrawRootMenuText.c:
     complete
     .text       start:0x020c5270 end:0x020c5494

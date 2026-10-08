@@ -2,7 +2,7 @@
 #define ShutdownOverlay089_020c01b4 ShutdownOverlay089
 #define func_ov027_020b9098 func_ov027_020b90b8
 #define func_ov039_020bc1bc func_ov039_020bc1dc
-#define func_ov089_020bf35c func_ov089_020bf37c
+#define func_ov089_020bf35c ReleaseEntryModels
 #define func_ov089_020bf488 func_ov089_020bf4a8
 #define func_ov089_020bf950 func_ov089_020bf970
 #define func_ov089_020bfad0 func_ov089_020bfaf0

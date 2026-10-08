@@ -1,4 +1,4 @@
 #define StageManager_Update_02087694 StageManager_Update
-#define func_ov001_0209b950 func_ov001_0209b978
+#define func_ov001_0209b950 UpdateStageManager
 #define g_stageEventsState_0209f2c8 g_stageEventsState
 #include "src/ov001/shared_engine/StageManager_Update_02087694.c"

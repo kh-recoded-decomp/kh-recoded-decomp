@@ -3,6 +3,10 @@
     .data       start:0x020d8a40 end:0x020d8a80 kind:data align:32
     .bss        start:0x020d8a80 end:0x020d8a80 kind:bss align:32
 
+src/overlays/ov069/calls/ReleaseOv069BossResources.c:
+    complete
+    .text       start:0x020d8120 end:0x020d813e
+
 src/overlays/ov069/calls/StartOv069BossIntro.c:
     complete
     .text       start:0x020d8140 end:0x020d81dc

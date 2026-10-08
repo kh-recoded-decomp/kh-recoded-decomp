@@ -60,6 +60,10 @@ src/overlays/ov054/calls/ReleaseActiveDisplay.c:
     complete
     .text       start:0x020d31d0 end:0x020d3250
 
+src/overlays/ov054/calls/CreateOv054Actor.c:
+    complete
+    .text       start:0x020d364c end:0x020d3674
+
 src/ov054/data/Ov054CharacterPathFormat.c:
     complete
     .data       start:0x020d36f8 end:0x020d3720

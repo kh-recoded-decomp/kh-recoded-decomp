@@ -7,5 +7,5 @@
 #define func_ov021_020a8ab4 ResetAnimationTrackState
 #define func_ov021_020a8ca0 func_ov021_020a8cc0
 #define func_ov021_020a9d04 func_ov021_020a9d24
-#define g_overlayWorkData_020d2c20 data_ov053_020d2c40
+#define g_overlayWorkData_020d2c20 gOv053WorkData
 #include "src/ov053/unclassified_helpers/UpdateModelBlinkEffect_020d265c.c"

@@ -13,7 +13,7 @@
 #define data_ov037_020bb670 data_ov037_020bb690
 #define func_02001458 func_0200146c
 #define func_ov027_020ba2a8 func_ov027_020ba2c8
-#define func_ov037_020bad0c func_ov037_020bad2c
+#define func_ov037_020bad0c GetContinueTitleIndex
 #define g_menuFontPath_020bb738 sOv037_TextFontEu10Nftr_020bb758
 #define g_menuTextArchive_020bb750 sOv037_CntConLanguageSZ_020bb770
 #define g_ov037Context_020bb764 gContinueScreenContext

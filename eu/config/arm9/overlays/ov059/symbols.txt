@@ -9,7 +9,7 @@ Actor_ResetMotion kind:function(arm,size=0x3c) addr:0x020c7980
 Actor_QueueBattleSounds kind:function(arm,size=0x3c) addr:0x020c79bc
 Actor_BuildHitSphereWithCue kind:function(arm,size=0x4c) addr:0x020c79f8
 MapKindToSlotIndex_020c7a44 kind:function(arm,size=0x24) addr:0x020c7a44
-func_ov059_020c7a68 kind:function(thumb,size=0x28) addr:0x020c7a68
+Actor_Create kind:function(thumb,size=0x28) addr:0x020c7a68
 Actor_TrySpawnIdleEffect kind:function(thumb,size=0x5c) addr:0x020c7a90
 func_ov059_020c7aec kind:function(thumb,size=0x2bc) addr:0x020c7aec
 Actor_SetTimeScale kind:function(thumb,size=0x20) addr:0x020c7da8
@@ -31,7 +31,7 @@ Actor_SyncAnimationSpeed kind:function(thumb,size=0x78) addr:0x020c8a2c
 Actor_LoadJointBlendSets kind:function(thumb,size=0xcc) addr:0x020c8aa4
 Actor_FreeAttachedModels kind:function(thumb,size=0x2a) addr:0x020c8b70
 func_ov059_020c8b9c kind:function(thumb,size=0xc) addr:0x020c8b9c
-func_ov059_020c8ba8 kind:function(thumb,size=0x414) addr:0x020c8ba8
+Actor_UpdateComboStage kind:function(thumb,size=0x414) addr:0x020c8ba8
 Actor_SetJointBlendMode kind:function(thumb,size=0xac) addr:0x020c8fbc
 func_ov059_020c9068 kind:function(thumb,size=0x80) addr:0x020c9068
 Actor_BuildJointHitSphere kind:function(thumb,size=0x6c) addr:0x020c90e8
@@ -40,7 +40,7 @@ Actor_PlayHitReaction kind:function(thumb,size=0xb8) addr:0x020c9164
 TryGuardFrontalHit kind:function(thumb,size=0x130) addr:0x020c921c
 func_ov059_020c934c kind:function(thumb,size=0x48) addr:0x020c934c
 func_ov059_020c9394 kind:function(thumb,size=0x64) addr:0x020c9394
-func_ov059_020c93f8 kind:function(thumb,size=0x350) addr:0x020c93f8
+Actor_UpdateGroundMove kind:function(thumb,size=0x350) addr:0x020c93f8
 func_ov059_020c9748 kind:function(thumb,size=0x158) addr:0x020c9748
 func_ov059_020c98a0 kind:function(thumb,size=0xfc) addr:0x020c98a0
 func_ov059_020c999c kind:function(thumb,size=0x50) addr:0x020c999c
@@ -118,7 +118,7 @@ SpawnSourceRewardOrbs kind:function(thumb,size=0x88) addr:0x020cd3e4
 Collider_ComputeBoxPushOut kind:function(thumb,size=0x2d8) addr:0x020cd46c
 Request_IsIdle kind:function(thumb,size=0xe) addr:0x020cd744
 Actor_IsIdleWithoutTarget kind:function(thumb,size=0x4c) addr:0x020cd754
-func_ov059_020cd7a0 kind:function(thumb,size=0x1a4) addr:0x020cd7a0
+EffectGroup_LoadModels kind:function(thumb,size=0x1a4) addr:0x020cd7a0
 MapStateToEvenIndex kind:function(thumb,size=0x2c) addr:0x020cd944
 MapStateToOddIndex kind:function(thumb,size=0x2c) addr:0x020cd970
 AnimRequest_ApplyFrame kind:function(thumb,size=0x44) addr:0x020cd99c
@@ -184,5 +184,5 @@ sOv059_BaChFormatSMovPZ_020cff70 kind:data(any) addr:0x020cff70
 sOv059_BaEfStefP2_020cff84 kind:data(any) addr:0x020cff84
 sOv059_BaEfStTamPZ_020cff94 kind:data(any) addr:0x020cff94
 sOv059_BaEfStTaPZ_020cffa8 kind:data(any) addr:0x020cffa8
-data_ov059_020cffc0 kind:bss addr:0x020cffc0
+gActorWork kind:bss addr:0x020cffc0
 data_ov059_020cffc4 kind:bss addr:0x020cffc4

@@ -13,7 +13,7 @@
 #define data_ov093_020c4d34 sOv093_VblankFunc_020c4d54
 #define func_ov093_020bf67c func_ov093_020bf69c
 #define func_ov093_020bf880 func_ov093_020bf8a0
-#define func_ov093_020bf8e4 func_ov093_020bf904
+#define func_ov093_020bf8e4 LoadSceneBackgrounds
 #define func_ov093_020bfac4 func_ov093_020bfae4
 #define func_ov093_020bfd60 RedrawEntryPanelText
 #define func_ov093_020c0100 InitEntrySlotSprites

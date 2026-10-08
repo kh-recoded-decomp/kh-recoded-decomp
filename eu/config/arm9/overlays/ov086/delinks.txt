@@ -28,6 +28,10 @@ src/overlays/ov086/calls/SetPageHeaderVisible.c:
     complete
     .text       start:0x020bed4c end:0x020bee2c
 
+src/overlays/ov086/calls/CountSessionGroupFlags.c:
+    complete
+    .text       start:0x020bf2b0 end:0x020bf344
+
 src/overlays/ov086/calls/CountUnlockedGroupEntries.c:
     complete
     .text       start:0x020bf344 end:0x020bf3b4
@@ -131,6 +135,10 @@ src/overlays/ov086/calls/InitRecordPanelText.c:
 src/overlays/ov086/calls/AddTaggedIndexedRecord.c:
     complete
     .text       start:0x020c1490 end:0x020c14e0
+
+src/overlays/ov086/calls/ScrollMenuToItem.c:
+    complete
+    .text       start:0x020c14e0 end:0x020c1620
 
 src/overlays/ov086/calls/UpdateRecordSliderTouch.c:
     complete

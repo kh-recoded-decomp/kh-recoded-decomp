@@ -3,6 +3,6 @@
 #define func_0202ef24 AdvanceAnimationTracks
 #define func_ov021_020a9aa4 AdvanceObjectAnimationTracks
 #define func_ov021_020a9af0 DrawModelWithAttachment
-#define func_ov074_020c5108 func_ov074_020c5128
+#define func_ov074_020c5108 RefreshRootMenuHighlights
 #define func_ov074_020c5250 DrawRootMenuText
 #include "src/ov074/reviewed_helpers/UpdateRootMenuGraphics_020c5474.c"

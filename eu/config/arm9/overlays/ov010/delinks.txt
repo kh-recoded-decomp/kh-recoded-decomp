@@ -144,6 +144,10 @@ src/overlays/ov010/calls/func_ov010_020a17c0.c:
     complete
     .text       start:0x020a17c0 end:0x020a1828
 
+src/overlays/ov010/calls/ReleaseSpecialActionWork.c:
+    complete
+    .text       start:0x020a1828 end:0x020a1858
+
 src/overlays/ov010/calls/Entity_HandleSpecialAction.c:
     complete
     .text       start:0x020a1858 end:0x020a18cc

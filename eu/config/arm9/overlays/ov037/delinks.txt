@@ -84,6 +84,10 @@ src/overlays/ov037/calls/InitCommHandlerTable.c:
     complete
     .text       start:0x020bacb8 end:0x020bad2c
 
+src/overlays/ov037/calls/GetContinueTitleIndex.c:
+    complete
+    .text       start:0x020bad2c end:0x020bad44
+
 src/overlays/ov037/calls/func_ov037_020bad44.c:
     complete
     .text       start:0x020bad44 end:0x020bad64
