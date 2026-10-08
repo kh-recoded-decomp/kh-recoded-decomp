@@ -2,7 +2,7 @@
 #define GrantRewardItem_020be02c GrantRewardItem
 #define RewardFlagToItemCode_020bdb8c RewardFlagToItemCode
 #define data_ov040_020be264 data_ov040_020be284
-#define func_02050380 func_02050394
+#define func_02050380 ReplaceSlotEntry
 #define func_ov001_02078360 SetFieldMenuMode_02078360
 #define func_ov040_020bdc24 func_ov040_020bdc44
 #include "src/ov040/shared_engine/GrantRewardItem_020be02c.c"

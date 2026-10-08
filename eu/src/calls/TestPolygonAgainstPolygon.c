@@ -5,5 +5,5 @@
 #define UpdateSignedPenetrationDepth_0203d854 UpdateSignedPenetrationDepth
 #define VEC_DotProduct_01ff9e6c VEC_DotProduct
 #define WritePenetrationContact_0203d8fc WritePenetrationContact
-#define func_0204a9e4 func_0204a9f8
+#define func_0204a9e4 GetCrossIfNonParallel
 #include "src/arm9/spatial_queries/TestPolygonAgainstPolygon_02041798.c"

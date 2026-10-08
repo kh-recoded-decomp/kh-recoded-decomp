@@ -4,7 +4,9 @@
 #include "nitro/types.h"
 
 typedef struct Ov014PanelState {
-    u8 pad_0000[0xcf8a];
+    u8 pad_0000[0xcb4c];
+    u32 infoMode;
+    u8 pad_cb50[0xcf8a - 0xcb50];
     s8 stateIndex;
     s8 closeRequested;
     s8 step;

@@ -8,5 +8,5 @@
 #define SweepWorldCollision_020364a0 SweepWorldCollision
 #define VEC_Add_01ff9e0c VEC_Add
 #define func_02036240 ActorRegistry_GetEntityByIndex
-#define func_0203ad14 func_0203ad28
+#define func_0203ad14 MakeSphereShape
 #include "src/ov001/field_objects/FallFieldObject_02082468.c"

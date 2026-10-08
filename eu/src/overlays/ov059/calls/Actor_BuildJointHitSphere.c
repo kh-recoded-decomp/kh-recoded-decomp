@@ -1,4 +1,4 @@
 #define Actor_BuildJointHitSphere_020c90c8 Actor_BuildJointHitSphere
 #define Actor_GetRotatedJointPosition_020c895c Actor_GetRotatedJointPosition
-#define MakeSphereShape_0203ad14 func_0203ad28
+#define MakeSphereShape_0203ad14 MakeSphereShape
 #include "src/ov059/unclassified_helpers/Actor_BuildJointHitSphere_020c90c8.c"

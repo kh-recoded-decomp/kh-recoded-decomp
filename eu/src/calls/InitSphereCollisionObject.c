@@ -2,5 +2,5 @@
 #define InitSphereCollisionObject_02033d18 InitSphereCollisionObject
 #define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
 #define data_02053438 data_0205344c
-#define func_0203ad14 func_0203ad28
+#define func_0203ad14 MakeSphereShape
 #include "src/arm9/spatial_queries/InitSphereCollisionObject_02033d18.c"

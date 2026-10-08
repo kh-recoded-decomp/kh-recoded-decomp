@@ -1,6 +1,6 @@
 #define func_ov046_020c2cb8 Camera_GetEventFocusPoint
 #define VEC_Subtract_01ff9e3c VEC_Subtract
-#define func_0203ad14 func_0203ad28
+#define func_0203ad14 MakeSphereShape
 #define OffsetBoxByDelta_0203ac70 OffsetBoxByDelta
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField
 #define CollisionQuery_Init_02034c74 CollisionQuery_Init

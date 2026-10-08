@@ -8,5 +8,5 @@
 #define data_ov021_020b5638 data_ov021_020b5658
 #define data_ov021_020b5648 data_ov021_020b5668
 #define data_ov021_020b5674 data_ov021_020b5694
-#define func_0203ad14 func_0203ad28
+#define func_0203ad14 MakeSphereShape
 #include "src/ov021/object_state/BuildEntryHitShape_020aaad4.c"

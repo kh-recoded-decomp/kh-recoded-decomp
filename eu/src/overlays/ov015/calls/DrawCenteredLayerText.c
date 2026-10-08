@@ -3,5 +3,5 @@
 #define DrawTextColored_02001668 DrawTextColored
 #define G2D_MeasureTextRectangle_02016c18 NNSi_G2dFontGetTextRect
 #define MeasureTextWidth_02078950 MeasureTextWidth
-#define func_02001768 func_0200177c
+#define func_02001768 DrawCenteredTextLine
 #include "src/ov015/ui/DrawCenteredLayerText_020789b8.c"

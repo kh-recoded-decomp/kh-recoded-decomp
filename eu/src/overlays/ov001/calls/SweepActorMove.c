@@ -5,5 +5,5 @@
 #define SweepActorMove_02097dc8 SweepActorMove
 #define SweepWorldCollision_020364a0 SweepWorldCollision
 #define addScaledVector_020301ac AddScaledVector
-#define func_0203ad14 func_0203ad28
+#define func_0203ad14 MakeSphereShape
 #include "src/ov001/actor_animation/SweepActorMove_02097dc8.c"

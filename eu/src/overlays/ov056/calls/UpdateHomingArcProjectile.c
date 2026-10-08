@@ -22,7 +22,7 @@
 #define func_01ffa0f4 VEC_Distance
 #define func_0202fba8 func_0202fbbc
 #define func_02036240 ActorRegistry_GetEntityByIndex
-#define func_0203ad14 func_0203ad28
+#define func_0203ad14 MakeSphereShape
 #define func_ov021_020a9230 AreZoneMeshesClear
 #define func_ov021_020ac148 func_ov021_020ac168
 #define func_ov056_020d5f50 IsScenePhaseInterruptible

@@ -1,4 +1,4 @@
 #define BuildSlot3HitSphere_020cbff8 BuildSlot3HitSphere
 #define GetSlot3WorldPosition_020cbfdc GetSlot3WorldPosition
-#define MakeSphereShape_0203ad14 func_0203ad28
+#define MakeSphereShape_0203ad14 MakeSphereShape
 #include "src/ov052/unclassified_helpers/BuildSlot3HitSphere_020cbff8.c"

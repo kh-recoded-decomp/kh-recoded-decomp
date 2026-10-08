@@ -12,5 +12,5 @@
 #define func_ov001_02078360 SetFieldMenuMode_02078360
 #define func_ov021_020a8ab4 ResetAnimationTrackState
 #define func_ov021_020a8ca0 func_ov021_020a8cc0
-#define func_ov040_020bda6c func_ov040_020bda8c
+#define func_ov040_020bda6c ApplyRewardEntryOffset
 #include "src/ov052/unclassified_helpers/ApplyItemRewardEffect_020d0ec0.c"

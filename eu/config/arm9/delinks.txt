@@ -208,6 +208,10 @@ src/calls/DrawTextPackedColor.c:
     complete
     .text       start:0x02001760 end:0x0200177a
 
+src/calls/DrawCenteredTextLine.c:
+    complete
+    .text       start:0x0200177c end:0x02001816
+
 src/calls/DrawDirectional.c:
     complete
     .text       start:0x02001818 end:0x02001884
@@ -5805,6 +5809,10 @@ src/calls/WriteGlobalPackedBits.c:
     complete
     .text       start:0x02027374 end:0x02027390
 
+src/calls/AddClampedGlobalPackedBits.c:
+    complete
+    .text       start:0x02027390 end:0x020273ba
+
 src/calls/GetBit26Flag.c:
     complete
     .text       start:0x020273bc end:0x020273d4
@@ -7809,9 +7817,17 @@ src/calls/OffsetBoxByDelta.c:
     complete
     .text       start:0x0203ac84 end:0x0203ad28
 
+src/calls/MakeSphereShape.c:
+    complete
+    .text       start:0x0203ad28 end:0x0203ad68
+
 src/calls/InitBoxShape.c:
     complete
     .text       start:0x0203ad68 end:0x0203ade0
+
+src/calls/InitAxisCylinderShape.c:
+    complete
+    .text       start:0x0203ade0 end:0x0203ae48
 
 src/calls/InitCapsuleShape.c:
     complete
@@ -7992,6 +8008,10 @@ src/calls/IsWithinPlaneSet_0203ebdc.c:
 src/calls/IsPointInViewBounds.c:
     complete
     .text       start:0x0203ec58 end:0x0203ed24
+
+src/calls/GetBoxLocalPoint.c:
+    complete
+    .text       start:0x0203ed24 end:0x0203eda0
 
 src/calls/GetBoxEdgeDiagonal.c:
     complete
@@ -8688,6 +8708,10 @@ src/calls/NormalizeUnlessDefault.c:
 src/calls/NormalizeIfShort.c:
     complete
     .text       start:0x0204a9c8 end:0x0204a9f8
+
+src/calls/GetCrossIfNonParallel.c:
+    complete
+    .text       start:0x0204a9f8 end:0x0204aa54
 
 src/calls/NegateVecFx32.c:
     complete
@@ -9440,6 +9464,10 @@ src/calls/TickSlotTimer.c:
 src/calls/GetPlayerFlagRecord.c:
     complete
     .text       start:0x02050380 end:0x02050394
+
+src/calls/ReplaceSlotEntry.c:
+    complete
+    .text       start:0x02050394 end:0x0205041c
 
 src/calls/AddSlotItemUses.c:
     complete

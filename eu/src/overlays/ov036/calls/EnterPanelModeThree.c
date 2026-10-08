@@ -4,5 +4,5 @@
 #define func_02029f48 func_02029f5c
 #define func_02029f58 func_02029f6c
 #define func_ov001_020645e8 ClearSessionPackedBit
-#define func_ov036_020ba820 func_ov036_020ba840
+#define func_ov036_020ba820 OpenPanelMessageArchive
 #include "src/ov036/panel_state/EnterPanelModeThree_020bc51c.c"

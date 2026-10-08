@@ -3,7 +3,7 @@
 #define func_ov047_020c50c0 func_ov047_020c50e0
 #define func_ov047_020c53b4 func_ov047_020c53d4
 #define func_ov047_020c5548 func_ov047_020c5568
-#define func_ov047_020c5d90 func_ov047_020c5db0
+#define func_ov047_020c5d90 Camera_HandleDistanceToggle
 #define func_ov047_020c5e1c Camera_ConstrainEye
 #define func_ov047_020c603c Camera_UpdateUpVector
 #define g_cameraManager_020c34e0 data_ov046_020c3500

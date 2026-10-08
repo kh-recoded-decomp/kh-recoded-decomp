@@ -59,6 +59,10 @@ src/overlays/ov007/calls/CanTouchedObjectAct.c:
     complete
     .text       start:0x020a08c8 end:0x020a0928
 
+src/overlays/ov007/calls/UpdateEventTargetMode.c:
+    complete
+    .text       start:0x020a0928 end:0x020a09ac
+
 src/overlays/ov007/calls/DampBounceVelocity.c:
     complete
     .text       start:0x020a0adc end:0x020a0b1c

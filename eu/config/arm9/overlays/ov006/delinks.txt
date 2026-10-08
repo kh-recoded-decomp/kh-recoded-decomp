@@ -20,6 +20,10 @@ src/overlays/ov006/calls/func_ov006_020a0708.c:
     complete
     .text       start:0x020a0708 end:0x020a0774
 
+src/overlays/ov006/calls/IsPlayerInFacingHalfPlane.c:
+    complete
+    .text       start:0x020a0774 end:0x020a07d4
+
 src/overlays/ov006/calls/RespawnElevatorObject.c:
     complete
     .text       start:0x020a07d4 end:0x020a0a58

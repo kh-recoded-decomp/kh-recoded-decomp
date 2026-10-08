@@ -8,5 +8,5 @@
 #define func_02047cec CopyInitializedRecord13
 #define func_02047d5c DotProductForward
 #define func_02047dac PXI_Init_02047dc0
-#define func_0204a9e4 func_0204a9f8
+#define func_0204a9e4 GetCrossIfNonParallel
 #include "src/arm9/spatial_queries/SweepObbAgainstObb_02047b40.c"

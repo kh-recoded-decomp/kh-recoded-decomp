@@ -7,7 +7,7 @@
 #define VEC_Normalize_01ff9f88 VEC_Normalize
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define func_02036240 ActorRegistry_GetEntityByIndex
-#define func_0203adcc func_0203ade0
+#define func_0203adcc InitAxisCylinderShape
 #define func_ov001_02086434 func_ov001_0208645c
 #define func_ov016_020a4448 IsFieldLinkReady
 #include "src/ov016/field_objects/ApplyFieldObjectForceToPlayer_020a446c.c"

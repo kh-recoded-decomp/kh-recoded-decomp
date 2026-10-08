@@ -10,6 +10,6 @@
 #define func_02047d5c DotProductForward
 #define func_020481c4 SweepAlongProjectedAxis
 #define func_02048b30 func_02048b44
-#define func_0204a9e4 func_0204a9f8
+#define func_0204a9e4 GetCrossIfNonParallel
 #define func_0204b604 AverageVecs
 #include "src/arm9/spatial_queries/SweepSegmentAgainstPolygon_02048c7c.c"

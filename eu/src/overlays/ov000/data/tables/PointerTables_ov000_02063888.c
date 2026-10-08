@@ -25,7 +25,7 @@ extern void LoadOverlay22AndClearFlag(void);
 extern void UpdatePanelRequest(void); /* UpdatePanelRequest */
 extern void ShutdownTitlePanel(void);
 extern void LoadOverlay3AndClearFlag(void);
-extern void func_ov000_02062e64(void);
+extern void UpdateTitleOverlayLoad(void);
 extern void ReleaseTitleOverlayTask(void);
 extern void BeginTitleSaveFormat(void);
 extern void WaitTitleSaveFormat(void);
@@ -70,7 +70,7 @@ void (*gPanelStateHandlers[43])(void) = {
     UpdatePanelRequest, /* UpdatePanelRequest */
     ShutdownTitlePanel,
     LoadOverlay3AndClearFlag,
-    func_ov000_02062e64,
+    UpdateTitleOverlayLoad,
     ReleaseTitleOverlayTask,
     BeginTitleSaveFormat,
     WaitTitleSaveFormat,

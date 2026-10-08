@@ -1,15 +1,15 @@
-#include "nitro/types.h"
+#include "src/overlays/ov015/Ov015WirelessState.h"
 
 extern int HasIdleActiveEntry(void);
 extern void func_ov015_02072ee4(int state);
 extern void WH_Finalize(void);
-extern u8 *data_ov015_0207e964;
 
-void func_ov015_02073238(void) {
+void PollWirelessFinalizeDelay20(void)
+{
     int result;
 
-    *(s16 *)(data_ov015_0207e964 + 0x7c) -= 1;
-    if (*(s16 *)(data_ov015_0207e964 + 0x7c) > 0) {
+    gOv015WirelessState->finalizeDelay--;
+    if (gOv015WirelessState->finalizeDelay > 0) {
         return;
     }
     result = HasIdleActiveEntry();

@@ -48,6 +48,10 @@ src/overlays/ov085/calls/FilterItemsForTab.c:
     complete
     .text       start:0x020c14e0 end:0x020c1570
 
+src/overlays/ov085/calls/ResetCursorPosition.c:
+    complete
+    .text       start:0x020c1570 end:0x020c15a8
+
 src/overlays/ov085/calls/IncreasePickerValue.c:
     complete
     .text       start:0x020c15a8 end:0x020c15dc

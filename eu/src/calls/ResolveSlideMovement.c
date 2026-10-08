@@ -11,6 +11,6 @@
 #define data_02055898 data_020558ac
 #define func_0203dde0 AreAxesMutuallyEnclosing
 #define func_0204a5e4 ScaleVecFx32InPlace
-#define func_0204a9e4 func_0204a9f8
+#define func_0204a9e4 GetCrossIfNonParallel
 #define func_0204af88 GetNormalizedRejection
 #include "src/arm9/spatial_queries/ResolveSlideMovement_0203deac.c"

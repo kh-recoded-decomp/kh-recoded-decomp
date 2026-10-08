@@ -2,6 +2,6 @@
 #define OffsetBoxByDelta_0203ac70 OffsetBoxByDelta
 #define SweepShadowToGround_020847e4 SweepShadowToGround
 #define SweepWorldCollision_020364a0 SweepWorldCollision
-#define func_0203ad14 func_0203ad28
+#define func_0203ad14 MakeSphereShape
 #define func_ov001_020847c4 func_ov001_020847ec
 #include "src/ov001/actor_animation/SweepShadowToGround_020847e4.c"

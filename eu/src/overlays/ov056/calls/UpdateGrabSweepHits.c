@@ -11,7 +11,7 @@
 #define ZeroBytes0x28_020ac0f8 ZeroBytes0x28
 #define data_02053438 data_0205344c
 #define data_0205356c data_02053580
-#define func_0203ad14 func_0203ad28
+#define func_0203ad14 MakeSphereShape
 #define func_ov056_020d33f8 func_ov056_020d3418
 #define func_ov056_020d383c PullActorTowardSource
 #include "src/ov056/shared_engine/UpdateGrabSweepHits_020d3904.c"

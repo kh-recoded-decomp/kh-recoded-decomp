@@ -13,7 +13,7 @@
 #define ZeroAndSetField0xd4_020ac150 ZeroAndSetField0xd4
 #define ZeroBytes0x28_020ac0f8 ZeroBytes0x28
 #define func_01ff9f88 VEC_Normalize
-#define func_0203ad14 func_0203ad28
+#define func_0203ad14 MakeSphereShape
 #define func_ov021_020a8ab4 ResetAnimationTrackState
 #define func_ov021_020a8ca0 func_ov021_020a8cc0
 #define func_ov048_020c384c GetCameraViewUpVector

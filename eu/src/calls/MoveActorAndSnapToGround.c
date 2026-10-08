@@ -17,7 +17,7 @@
 #define func_02037858 Container_IsOperationAllowed
 #define func_02038130 RefreshActorMeshCache
 #define func_020382b0 func_020382c4
-#define func_0203ad14 func_0203ad28
+#define func_0203ad14 MakeSphereShape
 #define func_0203ae34 InitCapsuleShape
 #define func_0204a5e4 ScaleVecFx32InPlace
 #define func_ov059_020cd44c Collider_ComputeBoxPushOut

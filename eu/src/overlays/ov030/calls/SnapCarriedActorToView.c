@@ -1,6 +1,6 @@
 #define CollisionQuery_Init_02034c74 CollisionQuery_Init
 #define GetShapeCenter_0203b43c GetShapeCenter
-#define MakeSphereShape_0203ad14 func_0203ad28
+#define MakeSphereShape_0203ad14 MakeSphereShape
 #define Obj_SetPosition_0203569c Obj_SetPosition
 #define SnapCarriedActorToView_020bb474 SnapCarriedActorToView
 #define SweepWorldCollision_020364a0 SweepWorldCollision

@@ -9,7 +9,7 @@
 #define data_02053438 data_0205344c
 #define data_0205356c data_02053580
 #define func_01ff8830 MI_CpuFill8
-#define func_0203ad14 func_0203ad28
+#define func_0203ad14 MakeSphereShape
 #define func_ov001_02087884 ForwardToActiveService
 #define func_ov001_0208789c func_ov001_020878c4
 #define func_ov021_020a8ab4 ResetAnimationTrackState

@@ -1,4 +1,4 @@
 #define DrawCenteredWindowText_02079a34 DrawCenteredWindowText
-#define func_02001768 func_0200177c
+#define func_02001768 DrawCenteredTextLine
 #define func_020019f4 GetNestedModeByte
 #include "src/ov001/text_rendering/DrawCenteredWindowText_02079a34.c"

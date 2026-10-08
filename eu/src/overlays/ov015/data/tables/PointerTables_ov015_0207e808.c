@@ -16,11 +16,11 @@ extern void func_ov015_02073148(void);
 extern void func_ov015_0207314c(void);
 extern void HandleConnectTransition(void); /* HandleConnectTransition */
 extern void func_ov015_020731b8(void);
-extern void func_ov015_020731bc(void);
-extern void func_ov015_020731d4(void);
+extern void StartWirelessFinalizeDelay16(void);
+extern void PollWirelessFinalizeDelay17(void);
 extern void func_ov015_0207321c(void);
-extern void func_ov015_02073220(void);
-extern void func_ov015_02073238(void);
+extern void StartWirelessFinalizeDelay19(void);
+extern void PollWirelessFinalizeDelay20(void);
 extern void func_ov015_02073280(void);
 extern void func_ov015_02072f7c(void);
 
@@ -41,11 +41,11 @@ void (*gWirelessStateHandlers[22])(void) = {
     func_ov015_0207314c,
     HandleConnectTransition, /* HandleConnectTransition */
     func_ov015_020731b8,
-    func_ov015_020731bc,
-    func_ov015_020731d4,
+    StartWirelessFinalizeDelay16,
+    PollWirelessFinalizeDelay17,
     func_ov015_0207321c,
-    func_ov015_02073220,
-    func_ov015_02073238,
+    StartWirelessFinalizeDelay19,
+    PollWirelessFinalizeDelay20,
     func_ov015_02073280,
 };
 

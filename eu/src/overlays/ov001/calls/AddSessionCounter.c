@@ -3,7 +3,7 @@
 #define WriteSessionPackedBits_0206459c WriteSessionPackedBits
 #define data_ov001_0209d918 data_ov001_0209d940
 #define data_ov001_020a0460 data_ov001_020a0480
-#define func_0202737c func_02027390
+#define func_0202737c AddClampedGlobalPackedBits
 #define func_ov001_02064574 ReadSessionPackedBits
 #define func_ov001_020645e8 ClearSessionPackedBit
 #define func_ov001_02066514 SpawnRewardOrbs

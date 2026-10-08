@@ -15,6 +15,6 @@
 #define VEC_MultAdd_01ffa09c VEC_MultAdd
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define func_01ff9f88 VEC_Normalize
-#define func_0203ad14 func_0203ad28
+#define func_0203ad14 MakeSphereShape
 #define func_ov050_020c35ac func_ov050_020c35cc
 #include "src/ov050/shared_engine/UpdatePathCameraCollision_020c35e0.c"

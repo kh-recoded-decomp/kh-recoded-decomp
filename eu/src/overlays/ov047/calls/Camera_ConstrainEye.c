@@ -12,5 +12,5 @@
 #define data_02053b6c data_02053b80
 #define data_020558a0 gCollisionTestDispatch
 #define func_01ffa0f4 VEC_Distance
-#define func_0203ad14 func_0203ad28
+#define func_0203ad14 MakeSphereShape
 #include "src/ov047/camera/Camera_ConstrainEye_020c5e1c.c"

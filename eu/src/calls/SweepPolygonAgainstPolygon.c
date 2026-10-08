@@ -5,5 +5,5 @@
 #define SweepPolygonAgainstPolygon_02048e18 SweepPolygonAgainstPolygon
 #define VEC_DotProduct_01ff9e6c VEC_DotProduct
 #define func_02047cec CopyInitializedRecord13
-#define func_0204a9e4 func_0204a9f8
+#define func_0204a9e4 GetCrossIfNonParallel
 #include "src/arm9/spatial_queries/SweepPolygonAgainstPolygon_02048e18.c"

@@ -37,7 +37,7 @@
 #define func_02048c10 func_02048c24
 #define func_0204970c func_02049720
 #define func_0204a9b4 NormalizeIfShort
-#define func_0204a9e4 func_0204a9f8
+#define func_0204a9e4 GetCrossIfNonParallel
 #define func_0204ad4c GetPerpendicularVector
 #define func_0204aea8 GetUnitRejectionFromAxis
 #define func_0204b604 AverageVecs

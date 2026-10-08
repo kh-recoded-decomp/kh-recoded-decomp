@@ -7,6 +7,6 @@
 #define SweepWorldCollision_020364a0 SweepWorldCollision
 #define VEC_MultAdd_01ffa09c VEC_MultAdd
 #define func_01ff8830 MI_CpuFill8
-#define func_0203ad14 func_0203ad28
+#define func_0203ad14 MakeSphereShape
 #define func_ov001_02091c68 FilterPlayerAttackTarget
 #include "src/ov001/actor_animation/SweepActorStep_02091e68.c"

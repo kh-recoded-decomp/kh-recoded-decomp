@@ -8,7 +8,7 @@
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define data_ov058_020d8a20 data_ov058_020d8a40
 #define func_01ffa0f4 VEC_Distance
-#define func_0203adcc func_0203ade0
+#define func_0203adcc InitAxisCylinderShape
 #define func_ov052_020ceb54 func_ov052_020ceb74
 #define func_ov058_020d544c func_ov058_020d546c
 #include "src/ov058/unclassified_helpers/UpdateEnemyTargetTracking_020d4b64.c"

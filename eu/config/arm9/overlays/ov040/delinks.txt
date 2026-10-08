@@ -128,6 +128,10 @@ src/overlays/ov040/calls/FindActorRewardValue.c:
     complete
     .text       start:0x020bda1c end:0x020bda8c
 
+src/overlays/ov040/calls/ApplyRewardEntryOffset.c:
+    complete
+    .text       start:0x020bda8c end:0x020bdaa6
+
 src/overlays/ov040/calls/SetSessionFlag3723.c:
     complete
     .text       start:0x020bdaa8 end:0x020bdab8

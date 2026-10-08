@@ -4,5 +4,5 @@
 #define OffsetBoxByDelta_0203ac70 OffsetBoxByDelta
 #define SweepSphereAgainstWorld_020bcaa4 SweepSphereAgainstWorld
 #define SweepWorldCollision_020364a0 SweepWorldCollision
-#define func_0203ad14 func_0203ad28
+#define func_0203ad14 MakeSphereShape
 #include "src/ov032/unclassified_helpers/SweepSphereAgainstWorld_020bcaa4.c"

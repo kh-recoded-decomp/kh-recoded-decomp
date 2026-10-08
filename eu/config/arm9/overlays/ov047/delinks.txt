@@ -83,6 +83,10 @@ src/overlays/ov047/calls/Camera_StartFollowTracking.c:
     complete
     .text       start:0x020c5028 end:0x020c50e0
 
+src/overlays/ov047/calls/Camera_HandleDistanceToggle.c:
+    complete
+    .text       start:0x020c5db0 end:0x020c5e3c
+
 src/overlays/ov047/calls/Camera_ConstrainEye.c:
     complete
     .text       start:0x020c5e3c end:0x020c605c

@@ -7,7 +7,7 @@ typedef struct PanelState {
 } PanelState;
 
 extern PanelState *data_ov002_0206c460;
-extern void func_0200177c(void *entry, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8);
+extern void DrawCenteredTextLine(void *entry, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8);
 
 void func_ov002_02061dc8(int selectSecond, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8) {
     void *entry;
@@ -19,5 +19,5 @@ void func_ov002_02061dc8(int selectSecond, int arg2, int arg3, int arg4, int arg
         entry = (u8 *)data_ov002_0206c460 + 0x7c;
         data_ov002_0206c460->flags10 |= 0x80;
     }
-    func_0200177c(entry, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
+    DrawCenteredTextLine(entry, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 }

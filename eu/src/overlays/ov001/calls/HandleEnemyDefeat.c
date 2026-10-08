@@ -7,7 +7,7 @@
 #define SetGlobalPackedBit_02027320 SetGlobalPackedBit
 #define SpawnDropsPerTenUnits_0206671c SpawnDropsPerTenUnits
 #define data_ov001_020a0470 data_ov001_020a0490
-#define func_0202737c func_02027390
+#define func_0202737c AddClampedGlobalPackedBits
 #define func_ov001_0206e074 AddRegionProgress
 #define func_ov035_020bae74 func_ov035_020bae94
 #include "src/ov001/unclassified_helpers/HandleEnemyDefeat_02068abc.c"

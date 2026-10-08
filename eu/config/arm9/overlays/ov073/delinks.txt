@@ -80,6 +80,10 @@ src/overlays/ov073/calls/SetupStatusPanelScroll.c:
     complete
     .text       start:0x020c1060 end:0x020c10a8
 
+src/overlays/ov073/calls/UpdateStatusPanelInput.c:
+    complete
+    .text       start:0x020c10a8 end:0x020c111c
+
 src/overlays/ov073/calls/HideStatusPanelElement.c:
     complete
     .text       start:0x020c1250 end:0x020c1268

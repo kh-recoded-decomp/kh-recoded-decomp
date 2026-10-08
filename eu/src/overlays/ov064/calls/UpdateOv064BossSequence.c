@@ -22,7 +22,7 @@
 #define data_ov064_020d8830 data_ov064_020d8850
 #define func_0202a9d0 func_0202a9e4
 #define func_0202f4b8 func_0202f4cc
-#define func_0203adcc func_0203ade0
+#define func_0203adcc InitAxisCylinderShape
 #define func_ov001_02087928 ForwardToActiveServiceWithResult
 #define func_ov001_02087944 func_ov001_0208796c
 #define func_ov021_020a8ab4 ResetAnimationTrackState

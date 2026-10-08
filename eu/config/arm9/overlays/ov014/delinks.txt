@@ -72,6 +72,26 @@ src/overlays/ov014/calls/CopyPanelEntry.c:
     complete
     .text       start:0x0206e954 end:0x0206e9c0
 
+src/overlays/ov014/calls/SetPanelInfoMode2.c:
+    complete
+    .text       start:0x0206e9c0 end:0x0206e9dc
+
+src/overlays/ov014/calls/SetPanelInfoMode16.c:
+    complete
+    .text       start:0x0206e9dc end:0x0206e9f8
+
+src/overlays/ov014/calls/SetPanelInfoMode32.c:
+    complete
+    .text       start:0x0206e9f8 end:0x0206ea14
+
+src/overlays/ov014/calls/SetPanelInfoMode64.c:
+    complete
+    .text       start:0x0206ea14 end:0x0206ea30
+
+src/overlays/ov014/calls/SetPanelInfoMode128.c:
+    complete
+    .text       start:0x0206ea30 end:0x0206ea4c
+
 src/overlays/ov014/calls/DrawSelectedEntryInfo.c:
     complete
     .text       start:0x0206ea4c end:0x0206ec14

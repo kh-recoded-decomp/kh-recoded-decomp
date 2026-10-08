@@ -5,5 +5,5 @@
 #define Session_Exists_02063a24 func_ov001_02063a24
 #define Surface_GetKindValue_02034c24 Surface_GetKindValue
 #define SweepWorldCollision_020364a0 SweepWorldCollision
-#define func_0203ad14 func_0203ad28
+#define func_0203ad14 MakeSphereShape
 #include "src/ov001/actor_animation/ProbeCeilingAboveActor_02092124.c"

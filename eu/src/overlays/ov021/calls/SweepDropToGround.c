@@ -5,7 +5,7 @@
 #define VEC_Add_01ff9e0c VEC_Add
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define func_02036240 ActorRegistry_GetEntityByIndex
-#define func_0203adcc func_0203ade0
+#define func_0203adcc InitAxisCylinderShape
 #define func_0203aeac InitCylinderShape
 #define func_ov021_020a9230 AreZoneMeshesClear
 #define func_ov021_020a9268 IsObjHandleUsable

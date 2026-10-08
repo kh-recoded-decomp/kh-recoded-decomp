@@ -3,7 +3,7 @@
 #define SweepFieldObjectBounce_020a40e0 SweepFieldObjectBounce
 #define SweepWorldCollision_020364a0 SweepWorldCollision
 #define func_02036240 ActorRegistry_GetEntityByIndex
-#define func_0203ad14 func_0203ad28
+#define func_0203ad14 MakeSphereShape
 #define func_ov016_020a2c44 func_ov016_020a2c64
 #define func_ov016_020a3d90 HandleFieldObjectHit
 #include "src/ov016/field_objects/SweepFieldObjectBounce_020a40e0.c"

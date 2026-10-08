@@ -89,7 +89,7 @@ func_ov046_020c3094 kind:function(thumb,size=0x198) addr:0x020c3094
 CameraCollision_ShouldBlock kind:function(thumb,size=0x48) addr:0x020c322c
 CameraCollision_CheckContact kind:function(thumb,size=0x9a) addr:0x020c3274
 Camera_AimViewAtPlayer kind:function(thumb,size=0x78) addr:0x020c3310
-func_ov046_020c3388 kind:function(thumb,size=0x34) addr:0x020c3388
+SetCameraMode3EntryState kind:function(thumb,size=0x34) addr:0x020c3388
 gCameraLayerIds kind:data(any) addr:0x020c33c0
 gCameraLayerIdsByMode kind:data(any) addr:0x020c33c0
 data_ov046_020c33d0 kind:data(any) addr:0x020c33d0

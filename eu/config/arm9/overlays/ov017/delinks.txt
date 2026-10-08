@@ -128,6 +128,10 @@ src/overlays/ov017/calls/BuildFieldObjectCellGrid.c:
     complete
     .text       start:0x020a2940 end:0x020a2a12
 
+src/overlays/ov017/calls/DeactivateFieldObjectPastScrollLimit.c:
+    complete
+    .text       start:0x020a2a14 end:0x020a2a5e
+
 src/overlays/ov017/calls/CreateGridEntryPool.c:
     complete
     .text       start:0x020a2a60 end:0x020a2ac8

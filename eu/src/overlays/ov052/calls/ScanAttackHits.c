@@ -13,6 +13,6 @@
 #define StepHitScan_020ac164 StepHitScan
 #define ZeroAndSetField0xd4_020ac150 ZeroAndSetField0xd4
 #define ZeroBytes0x28_020ac0f8 ZeroBytes0x28
-#define func_0203ad14 func_0203ad28
+#define func_0203ad14 MakeSphereShape
 #define func_ov052_020ceb54 func_ov052_020ceb74
 #include "src/ov052/unclassified_helpers/ScanAttackHits_020d1b38.c"

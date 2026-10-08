@@ -1,5 +1,5 @@
 #define Abs_0203f228 PXI_Init_0203f23c
-#define CrossUnlessParallel_0204a9e4 func_0204a9f8
+#define CrossUnlessParallel_0204a9e4 GetCrossIfNonParallel
 #define FixedPointMultiply12 FX_Mul
 #define MakeEmptyPenetration_0203fb74 InitMaxDistanceHit
 #define ProjectBoxExtent_0203d4d0 GetObbProjectedRadius

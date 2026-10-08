@@ -14,6 +14,6 @@
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define data_02053438 data_0205344c
 #define data_0205356c data_02053580
-#define func_0203adcc func_0203ade0
+#define func_0203adcc InitAxisCylinderShape
 #define func_ov001_02085138 UpdateSpawnerRise
 #include "src/ov001/actor_animation/BounceProjectileOffWall_020858e0.c"
