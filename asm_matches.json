@@ -50,6 +50,29 @@
     },
     {
       "module": "arm9",
+      "symbol": "Entry",
+      "name": "Entry",
+      "language": "asm",
+      "source": "src/arm9/asm/Entry_02000800.c",
+      "source_symbol": "Entry_02000800",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_02000a78": "0x2000a78",
+        "func_0200093c": "0x200093c",
+        "func_02000950": "0x2000950",
+        "func_020009fc": "0x20009fc",
+        "func_020253b0": "0x20253b0",
+        "func_02000b60": "0x2000b60",
+        "func_020253b4": "0x20253b4",
+        "data_027e0000": "0x27e0000",
+        "func_01ff8158": "0x1ff8158",
+        "main_02000bec": "0x2000bec"
+      },
+      "evidence": "Uses msr CPSR mode switches to set SVC/IRQ/SYS stacks and mcr p15 cache ops that mwcc C cannot emit; NitroSDK crt0 _start, same layout as the 358/2 Days Entry asm stub"
+    },
+    {
+      "module": "arm9",
       "symbol": "GetCRC16",
       "name": "GetCRC16",
       "language": "asm",
@@ -242,6 +265,34 @@
     },
     {
       "module": "arm9",
+      "symbol": "func_020009fc",
+      "name": "INITi_DoAutoload",
+      "language": "asm",
+      "source": "src/arm9/asm/INITi_DoAutoload_020009fc.c",
+      "source_symbol": "INITi_DoAutoload_020009fc",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_02000a74": "0x2000a74"
+      },
+      "evidence": "Copies and clears autoload sections with conditional ldrmi/strmi/strcc loops and mcr p15 cache flushes that mwcc C cannot emit; NitroSDK crt0 do_autoload, same layout as the 358/2 Days asm stub"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_02000a78",
+      "name": "INITi_InitCp15",
+      "language": "asm",
+      "source": "src/arm9/asm/INITi_InitCp15_02000a78.c",
+      "source_symbol": "INITi_InitCp15_02000a78",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "data_027e0000": "0x27e0000"
+      },
+      "evidence": "Programs CP15 control, cache and protection-region registers with mrc/mcr p15 that mwcc C cannot emit; NitroSDK crt0 init_cp15, same layout as the 358/2 Days asm stub"
+    },
+    {
+      "module": "arm9",
       "symbol": "func_020022d4",
       "name": "OS_UnLockCartridge",
       "language": "asm",
@@ -365,6 +416,18 @@
       "mode": "arm",
       "bindings": {},
       "evidence": "Original assembly; ported from the EU build's verified stub libs/nitro/os/asm_stubs/auto/DC_StoreRange.c"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_0200344c",
+      "name": "DC_FlushRange",
+      "language": "asm",
+      "source": "src/arm9/asm/DC_FlushRange_0200344c.c",
+      "source_symbol": "DC_FlushRange_0200344c",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {},
+      "evidence": "Cleans and invalidates data-cache lines with mcr p15 c7 that mwcc C cannot emit; NitroSDK os_cache.c DC_FlushRange, same code as the 358/2 Days version"
     },
     {
       "module": "arm9",
@@ -728,6 +791,21 @@
     },
     {
       "module": "arm9",
+      "symbol": "func_02003d20",
+      "name": "OSi_ExceptionHandler",
+      "language": "asm",
+      "source": "src/arm9/asm/OSi_ExceptionHandler_02003d20.c",
+      "source_symbol": "OSi_ExceptionHandler_02003d20",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "OSi_GetAndDisplayContext_02003d94": "0x2003d94",
+        "data_02056df0": "0x2056df0"
+      },
+      "evidence": "Reads CPSR with mrs, switches stacks by hand and uses conditional movne/bxne calls that mwcc C cannot emit; NitroSDK os_exception.c OSi_ExceptionHandler, same layout as the 358/2 Days asm stub"
+    },
+    {
+      "module": "arm9",
       "symbol": "func_02003d94",
       "name": "OSi_GetAndDisplayContext",
       "language": "asm",
@@ -740,6 +818,20 @@
         "func_02003e3c_02003e28": "0x2003e28"
       },
       "evidence": "Original assembly; ported from the EU build's verified stub libs/nitro/os/asm_stubs/calls/OSi_GetAndDisplayContext.c"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_02003da8",
+      "name": "OSi_SetExContext",
+      "language": "asm",
+      "source": "src/arm9/asm/OSi_SetExContext_02003da8.c",
+      "source_symbol": "OSi_SetExContext_02003da8",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "data_02056e20": "0x2056e20"
+      },
+      "evidence": "Uses mrs/msr CPSR and SPSR access to capture banked sp/lr that mwcc C cannot emit; NitroSDK os_exception.c OSi_SetExContext (FINALROM variant of the 358/2 Days asm stub)"
     },
     {
       "module": "arm9",
@@ -985,6 +1077,178 @@
     },
     {
       "module": "arm9",
+      "symbol": "func_02022e20",
+      "name": "_dsub",
+      "language": "asm",
+      "source": "src/arm9/asm/_dsub_02022e20.c",
+      "source_symbol": "_dsub_02022e20",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_02022b00": "0x2022b00"
+      },
+      "evidence": "Sign-flip tail branch into the middle of _dadd plus subs/sbcs and adds/adc 64-bit carry chains with conditional sticky-bit orrne that mwcc C cannot emit; Metrowerks ARM runtime floating-point library double subtract"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_020231d4",
+      "name": "_dmul",
+      "language": "asm",
+      "source": "src/arm9/asm/_dmul_020231d4.c",
+      "source_symbol": "_dmul_020231d4",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {},
+      "evidence": "Four umull partial products combined with adds/adcs carry chains and flag-driven sticky-bit/rounding steps that mwcc C cannot emit; Metrowerks ARM runtime floating-point library double multiply"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_0202363c",
+      "name": "_dflt",
+      "language": "asm",
+      "source": "src/arm9/asm/_dflt_0202363c.c",
+      "source_symbol": "_dflt_0202363c",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {},
+      "evidence": "Frameless clz normalisation with flag-setting rsbmi/bxeq control flow that mwcc C does not emit; Metrowerks ARM runtime floating-point library int-to-double routine"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_0202367c",
+      "name": "_dgr",
+      "language": "asm",
+      "source": "src/arm9/asm/_dgr_0202367c.c",
+      "source_symbol": "_dgr_0202367c",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {},
+      "evidence": "Returns its result in the CPSR carry flag via mrs/msr CPSR_f, which mwcc C cannot emit; Metrowerks ARM runtime floating-point library double compare"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_02023714",
+      "name": "_dleq",
+      "language": "asm",
+      "source": "src/arm9/asm/_dleq_02023714.c",
+      "source_symbol": "_dleq_02023714",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {},
+      "evidence": "Returns its result in the CPSR Z/C flags via mrs/msr CPSR_f, which mwcc C cannot emit; Metrowerks ARM runtime floating-point library double compare"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_020237b8",
+      "name": "_fgeq",
+      "language": "asm",
+      "source": "src/arm9/asm/_fgeq_020237b8.c",
+      "source_symbol": "_fgeq_020237b8",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {},
+      "evidence": "Returns its result in the CPSR carry flag via mrs/msr CPSR_f with conditional biclt/orrge, which mwcc C cannot emit; Metrowerks ARM runtime floating-point library float compare"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_02023814",
+      "name": "_fgr",
+      "language": "asm",
+      "source": "src/arm9/asm/_fgr_02023814.c",
+      "source_symbol": "_fgr_02023814",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {},
+      "evidence": "Returns its result in the CPSR carry flag via mrs/msr CPSR_f with conditional bicle/orrgt, which mwcc C cannot emit; Metrowerks ARM runtime floating-point library float compare"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_02023870",
+      "name": "_fleq",
+      "language": "asm",
+      "source": "src/arm9/asm/_fleq_02023870.c",
+      "source_symbol": "_fleq_02023870",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {},
+      "evidence": "Returns its result in the CPSR Z/C flags via mrs/msr CPSR_f, which mwcc C cannot emit; Metrowerks ARM runtime floating-point library float compare"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_020238d8",
+      "name": "_fls",
+      "language": "asm",
+      "source": "src/arm9/asm/_fls_020238d8.c",
+      "source_symbol": "_fls_020238d8",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {},
+      "evidence": "Returns its result in the CPSR carry flag via mrs/msr CPSR_f, which mwcc C cannot emit; Metrowerks ARM runtime floating-point library float compare"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_02023934",
+      "name": "_feq",
+      "language": "asm",
+      "source": "src/arm9/asm/_feq_02023934.c",
+      "source_symbol": "_feq_02023934",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {},
+      "evidence": "Returns its result in the CPSR Z flag via mrs/msr CPSR_f, which mwcc C cannot emit; Metrowerks ARM runtime floating-point library float compare"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_0202399c",
+      "name": "_f2d",
+      "language": "asm",
+      "source": "src/arm9/asm/_f2d_0202399c.c",
+      "source_symbol": "_f2d_0202399c",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {},
+      "evidence": "Frameless bit-level repacking with clz denormal normalisation and flag-driven branches that mwcc C does not emit; Metrowerks ARM runtime floating-point library float-to-double routine"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_02023a98",
+      "name": "_fflt",
+      "language": "asm",
+      "source": "src/arm9/asm/_fflt_02023a98.c",
+      "source_symbol": "_fflt_02023a98",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {},
+      "evidence": "Frameless clz normalisation with conditional andeqs/addne rounding and bxeq exits that mwcc C does not emit; Metrowerks ARM runtime floating-point library int-to-float routine"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_02023ae0",
+      "name": "_ffltu",
+      "language": "asm",
+      "source": "src/arm9/asm/_ffltu_02023ae0.c",
+      "source_symbol": "_ffltu_02023ae0",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {},
+      "evidence": "Frameless clz normalisation with conditional andeqs/addne rounding and bxeq exits that mwcc C does not emit; Metrowerks ARM runtime floating-point library unsigned-to-float routine"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_02023b28",
+      "name": "_ll2f",
+      "language": "asm",
+      "source": "src/arm9/asm/_ll2f_02023b28.c",
+      "source_symbol": "_ll2f_02023b28",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_02023aa4": "0x2023aa4"
+      },
+      "evidence": "Branches into the middle of _fflt and uses rsbs/rsc 64-bit negation with clz normalisation, which mwcc C cannot emit; Metrowerks ARM runtime floating-point library long-long-to-float routine"
+    },
+    {
+      "module": "arm9",
       "symbol": "func_02023d9c",
       "name": "_ll_mul",
       "language": "asm",
@@ -994,6 +1258,102 @@
       "mode": "arm",
       "bindings": {},
       "evidence": "Original assembly; ported from the EU build's verified stub libs/msl/c/asm_stubs/auto/_ll_mul.c"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_0202426c",
+      "name": "sqrt",
+      "language": "asm",
+      "source": "src/arm9/asm/sqrt_0202426c.c",
+      "source_symbol": "sqrt_0202426c",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "data_0205fdbc": "0x205fdbc"
+      },
+      "evidence": "Carry-chain arithmetic (movs/adc, rrx, asrs+bhs, subs/sbc) and a stmfd/ldmfd+bx lr frame that mwcc C cannot emit; Metrowerks ARM runtime double square root setting errno EDOM"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_02024408",
+      "name": "_fmul",
+      "language": "asm",
+      "source": "src/arm9/asm/_fmul_02024408.c",
+      "source_symbol": "_fmul_02024408",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {},
+      "evidence": "Frameless umull mantissa product with flag-driven addpl/subpl/andeqs rounding and bxeq exits that mwcc C does not emit; Metrowerks ARM runtime floating-point library float multiply"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_02024818",
+      "name": "_fsub",
+      "language": "asm",
+      "source": "src/arm9/asm/_fsub_02024818.c",
+      "source_symbol": "_fsub_02024818",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_020245f4": "0x20245f4"
+      },
+      "evidence": "Frameless sign-flip tail branch into the middle of _fadd plus flag-driven eorlo/sublo/andeqs alignment and rounding that mwcc C cannot emit; Metrowerks ARM runtime floating-point library float subtract"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_02024a9c",
+      "name": "_fdiv",
+      "language": "asm",
+      "source": "src/arm9/asm/_fdiv_02024a9c.c",
+      "source_symbol": "_fdiv_02024a9c",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {},
+      "evidence": "Embeds a reciprocal lookup table inside the code reached with sub r0, pc, #imm, plus umull Newton refinement and flag-driven lsllo/sublo/orrmi steps that mwcc C cannot emit; Metrowerks ARM runtime floating-point library float divide"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_02024e6c",
+      "name": "_ddiv",
+      "language": "asm",
+      "source": "src/arm9/asm/_ddiv_02024e6c.c",
+      "source_symbol": "_ddiv_02024e6c",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {},
+      "evidence": "Embeds a reciprocal lookup table inside the code reached with sub r4, pc, #imm, plus rsbs/rsc and adds/adc 64-bit carry chains with umull/mla refinement that mwcc C cannot emit; Metrowerks ARM runtime floating-point library double divide"
+    },
+    {
+      "module": "itcm",
+      "symbol": "func_01ff8158",
+      "name": "OS_IrqHandler",
+      "language": "asm",
+      "source": "src/itcm/asm/OS_IrqHandler_01ff8158.c",
+      "source_symbol": "OS_IrqHandler_01ff8158",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "data_027e0000": "0x27e0000",
+        "func_01ff81b0": "0x1ff81b0"
+      },
+      "evidence": "Hand-written IRQ vector handler using clz priority selection, conditional ldmeqia returns and a forged lr return into the thread-switch path that mwcc C cannot emit; NitroSDK os_irqHandler.c OS_IrqHandler, same layout as the 358/2 Days asm stub"
+    },
+    {
+      "module": "itcm",
+      "symbol": "func_01ff81b0",
+      "name": "OS_IrqHandler_ThreadSwitch",
+      "language": "asm",
+      "source": "src/itcm/asm/OS_IrqHandler_ThreadSwitch_01ff81b0.c",
+      "source_symbol": "OS_IrqHandler_ThreadSwitch_01ff81b0",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "data_027e00a0": "0x27e00a0",
+        "data_02056b6c": "0x2056b6c",
+        "CP_SaveContext_0200a15c": "0x200a15c",
+        "CPi_RestoreContext_0200a19c": "0x200a19c"
+      },
+      "evidence": "Switches CPU modes with msr CPSR_c, saves and restores user-bank registers with stmib/ldmib ^ and reads SPSR, which mwcc C cannot emit; NitroSDK os_irqHandler.c OS_IrqHandler_ThreadSwitch, same layout as the 358/2 Days asm stub"
     },
     {
       "module": "itcm",
@@ -1270,6 +1630,30 @@
       "mode": "arm",
       "bindings": {},
       "evidence": "Original assembly; ported from the EU build's verified stub libs/mobiclip/video/asm_stubs/auto/func_ov022_020aa300.c"
+    },
+    {
+      "module": "ov076",
+      "symbol": "func_ov076_020c8b50",
+      "name": "SlotMenu_GetPanelState",
+      "language": "asm",
+      "source": "src/ov076/asm/SlotMenu_GetPanelState_020c8b50.c",
+      "source_symbol": "SlotMenu_GetPanelState_020c8b50",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "thumb",
+      "bindings": {},
+      "evidence": "Original assembly; ported from the EU build's verified stub src/overlays/ov076/calls/SlotMenu_GetPanelState.c"
+    },
+    {
+      "module": "ov076",
+      "symbol": "func_ov076_020c8b58",
+      "name": "SlotMenu_GetPanelStateAlt",
+      "language": "asm",
+      "source": "src/ov076/asm/SlotMenu_GetPanelStateAlt_020c8b58.c",
+      "source_symbol": "SlotMenu_GetPanelStateAlt_020c8b58",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "thumb",
+      "bindings": {},
+      "evidence": "Original assembly; ported from the EU build's verified stub src/overlays/ov076/calls/SlotMenu_GetPanelStateAlt.c"
     }
   ]
 }
