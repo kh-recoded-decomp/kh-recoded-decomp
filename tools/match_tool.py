@@ -531,7 +531,14 @@ def merge_locked() -> int:
             os.chmod(source, stat.S_IREAD)
     temp_path = path.with_suffix(".json.tmp")
     temp_path.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
-    os.replace(temp_path, path)
+    for attempt in range(20):  # Windows refuses the swap while a reader holds matches.json
+        try:
+            os.replace(temp_path, path)
+            break
+        except PermissionError:
+            if attempt == 19:
+                raise
+            time.sleep(0.5)
     for fragment in accepted:
         fragment.unlink()
     for fragment in refused:

@@ -1,0 +1,2012 @@
+{
+ "arm9:func_02001914": {
+  "percent": 91.55,
+  "draft": "src/.port_scratch/pragma_sweep/arm9_02001914_2510/func_02001914.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "arm9:func_02002088": {
+  "percent": 94.23,
+  "draft": "src/.port_scratch/pragma_sweep/arm9_02002088_3317/func_02002088.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "arm9:func_020034a4": {
+  "percent": 22.22,
+  "draft": "src/.port_scratch/pragma_sweep/arm9_020034a4_6979/CancelDma0_020034a4.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "arm9:func_02006d4c": {
+  "percent": 5.41,
+  "draft": "src/.port_scratch/pragma_sweep/arm9_02006d4c_4571/func_02006d4c.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "arm9:func_02009c4c": {
+  "percent": 45.71,
+  "draft": "src/.port_scratch/pragma_sweep/arm9_02009c4c_1428/CARDi_ReadRomWithCPU_02009c4c.c",
+  "compiler": "mwccarm-3.0-139"
+ },
+ "arm9:func_0200e8cc": {
+  "percent": 66.67,
+  "draft": "src/.port_scratch/pragma_sweep/arm9_0200e8cc_9440/RtcWaitBusy_0200e8cc.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "arm9:func_02010624": {
+  "percent": 82.69,
+  "draft": "src/.port_scratch/pragma_sweep/arm9_02010624_4023/StopAllDmaChannels_02010624.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "arm9:func_02021c94": {
+  "percent": 97.44,
+  "draft": "src/.port_scratch/pragma_sweep/arm9_02021c94_2862/HeapSort_02021c94.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "arm9:func_020241ac": {
+  "percent": 53.33,
+  "draft": "src/.port_scratch/pragma_sweep/arm9_020241ac_1569/FloatToInt32_020241ac.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "arm9:func_02027110": {
+  "percent": 96.84,
+  "draft": "src/.port_scratch/pragma_sweep/arm9_02027110_7693/OnCardBackupSaveDone_02027110.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "arm9:func_020281cc": {
+  "percent": 91.96,
+  "draft": "src/.port_scratch/pragma_sweep/arm9_020281cc_7971/func_020281cc.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "arm9:func_020289b4": {
+  "percent": 95.51,
+  "draft": "src/.port_scratch/pragma_sweep/arm9_020289b4_7828/SetupOrthoCamera_020289b4.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "arm9:func_020290b8": {
+  "percent": 90.16,
+  "draft": "src/.port_scratch/pragma_sweep/arm9_020290b8_0177/MoveRecordSlot_020290b8.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "arm9:func_02029240": {
+  "percent": 83.95,
+  "draft": "src/.port_scratch/pragma_sweep/arm9_02029240_0565/AddRecordItem_02029240.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "arm9:func_020292ec": {
+  "percent": 81.97,
+  "draft": "src/.port_scratch/pragma_sweep/arm9_020292ec_4228/InsertRecordEntry_020292ec.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "arm9:func_020293c4": {
+  "percent": 89.61,
+  "draft": "src/.port_scratch/pragma_sweep/arm9_020293c4_7583/ApplyRecordMerge_020293c4.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "arm9:func_020322f0": {
+  "percent": 55.49,
+  "draft": "src/.port_scratch/big_22f0/vF/func_020322f0.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "arm9:func_020338c0": {
+  "percent": 72.73,
+  "draft": "src/.port_scratch/pragma_sweep/arm9_020338c0_7170/FindMeshNamedEntry_020338c0.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "arm9:func_02034d64": {
+  "percent": 73.48,
+  "draft": "src/.port_scratch/pragma_sweep/arm9_02034d64_6116/ConstrainVectorToContacts_02034d64.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "arm9:func_020382b0": {
+  "percent": 99.69,
+  "draft": "src/.port_scratch/b382/p2/func_020382b0.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "arm9:func_0203a8d8": {
+  "percent": 70.59,
+  "draft": "src/.port_scratch/pragma_sweep/arm9_0203a8d8_6406/InitCameraProjection_0203a8d8.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "arm9:func_0203b6b4": {
+  "percent": 85.0,
+  "draft": "src/.port_scratch/pragma_sweep/arm9_0203b6b4_3743/TestSphereAgainstSphere_0203b6b4.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "arm9:func_0203b704": {
+  "percent": 98.07,
+  "draft": "src/.port_scratch/big_b704/v/ty_len_int/TestBoxAgainstCylinder_0203b704.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "arm9:func_0203c258": {
+  "percent": 99.64,
+  "draft": "src/.port_scratch/pragma_sweep/arm9_0203c258_8973/TestSegmentAgainstPolygon_0203c258.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "arm9:func_02040024": {
+  "percent": 95.03,
+  "draft": "src/.port_scratch/pragma_sweep/arm9_02040024_1250/TestBoxAgainstPolygon_02040024.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "arm9:func_020405b4": {
+  "percent": 96.91,
+  "draft": "src/.port_scratch/pragma_sweep/arm9_020405b4_3457/TestCapsuleAgainstCapsule_020405b4.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "arm9:func_02041e54": {
+  "percent": 94.44,
+  "draft": "src/.port_scratch/pragma_sweep/arm9_02041e54_8491/func_02041e54.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "arm9:func_02041f2c": {
+  "percent": 91.01,
+  "draft": "src/.port_scratch/pragma_sweep/arm9_02041f2c_5795/SweepSphereAgainstObb_02041f2c.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "arm9:func_02042678": {
+  "percent": 90.03,
+  "draft": "src/.port_scratch/pragma_sweep/arm9_02042678_9569/SweepSphereAgainstCylinder_02042678.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "arm9:func_02042b04": {
+  "percent": 96.88,
+  "draft": "src/.port_scratch/pragma_sweep/arm9_02042b04_7898/func_02042b04.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "arm9:func_02042f54": {
+  "percent": 77.68,
+  "draft": "src/.port_scratch/b268/n16/func_02042f54.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "arm9:func_020434d0": {
+  "percent": 87.69,
+  "draft": "src/.port_scratch/big_020434d0/SweepBoxAgainstCylinder_020434d0.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "arm9:func_02044914": {
+  "percent": 75.0,
+  "draft": "src/.port_scratch/b268/v13/func_02044914.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "arm9:func_020449b4": {
+  "percent": 89.7,
+  "draft": "src/.port_scratch/pragma_sweep/arm9_020449b4_2097/SweepCylinderAgainstCylinder_020449b4.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "arm9:func_020456c0": {
+  "percent": 49.1,
+  "draft": "src/.port_scratch/big_020456c0/SweepCylinderAgainstPolygon_020456c0.c",
+  "compiler": "mwccarm-3.0-139"
+ },
+ "arm9:func_02047184": {
+  "percent": 18.38,
+  "draft": "src/.port_scratch/pragma_sweep/arm9_02047184_6529/SweepSphereAgainstCircle_02047184.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "arm9:func_0204970c": {
+  "percent": 72.09,
+  "draft": "src/.port_scratch/pragma_sweep/arm9_0204970c_6606/SweepDiscAgainstEdge_0204970c.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "arm9:func_0204bac4": {
+  "percent": 73.39,
+  "draft": "src/.port_scratch/pragma_sweep/arm9_0204bac4_1584/GetPerpendicularUnit_0204bac4.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "arm9:func_0204c6c0": {
+  "percent": 30.86,
+  "draft": "src/.port_scratch/pragma_sweep/arm9_0204c6c0_5786/SolveQuartic_0204c6c0.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "arm9:func_0204cc5c": {
+  "percent": 86.49,
+  "draft": "src/.port_scratch/pragma_sweep/arm9_0204cc5c_3644/func_0204cc5c.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "arm9:func_0204e84c": {
+  "percent": 86.75,
+  "draft": "src/.port_scratch/pragma_sweep/arm9_0204e84c_7363/func_0204e84c.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "arm9:func_02051618": {
+  "percent": 96.72,
+  "draft": "src/.port_scratch/b272/y3/func_02051618.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "itcm:func_01ff8684": {
+  "percent": 37.5,
+  "draft": "src/.port_scratch/b273/func_01ff8684.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "itcm:func_01ff923c": {
+  "percent": 50.0,
+  "draft": "src/.port_scratch/pragma_sweep/itcm_01ff923c_2564/MTX_RotY33_01ff923c.c",
+  "compiler": "mwccarm-3.0-139"
+ },
+ "itcm:func_01ffb4f8": {
+  "percent": 64.84,
+  "draft": "src/.port_scratch/big_01ffb4f8/func_01ffb4f8.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "itcm:func_01ffe280": {
+  "percent": 97.1,
+  "draft": "src/.port_scratch/pragma_sweep/itcm_01ffe280_6758/NNSi_G3dFuncSbc_NODE_01ffe280.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "itcm:func_01fff8b0": {
+  "percent": 73.33,
+  "draft": "src/.port_scratch/b276/t2/l/SetModelFirstTexture_01fff8b0.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "itcm:func_01fff9a0": {
+  "percent": 76.21,
+  "draft": "src/.port_scratch/b276/t3/r/DrawModelFacingQuads_01fff9a0.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov000:func_ov000_02061de8": {
+  "percent": 98.9,
+  "draft": "src/.port_scratch/me/g/HandleTitleMenuInput_02061de8.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov000:func_ov000_02062a98": {
+  "percent": 66.67,
+  "draft": "src/.port_scratch/pragma_sweep/ov000_02062a98_9699/UpdateTitleSaveCheck_02062a98.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov001:func_ov001_02061468": {
+  "percent": 86.23,
+  "draft": "src/.port_scratch/pragma_sweep/ov001_02061468_5818/StartFieldSession_02061468.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov001:func_ov001_02063d4c": {
+  "percent": 98.82,
+  "draft": "src/.port_scratch/pragma_sweep/ov001_02063d4c_2805/UpdateFieldTimer_02063d4c.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov001:func_ov001_02063ff4": {
+  "percent": 96.12,
+  "draft": "src/.port_scratch/pragma_sweep/ov001_02063ff4_1669/RestoreSessionCountdown_02063ff4.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov001:func_ov001_02064184": {
+  "percent": 91.18,
+  "draft": "src/.port_scratch/pragma_sweep/ov001_02064184_7861/PlayFieldMusic_02064184.c",
+  "compiler": "mwccarm-3.0-139"
+ },
+ "ov001:func_ov001_02064a38": {
+  "percent": 83.02,
+  "draft": "src/.port_scratch/b28/GrantRecordItem_02064a38.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov001:func_ov001_02065010": {
+  "percent": 96.74,
+  "draft": "src/.port_scratch/pragma_sweep/ov001_02065010_2281/func_ov001_02065010.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov001:func_ov001_0206703c": {
+  "percent": 94.55,
+  "draft": "src/.port_scratch/pragma_sweep/ov001_0206703c_6832/LoadMenuItemModels_0206703c.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov001:func_ov001_02067140": {
+  "percent": 94.12,
+  "draft": "src/.port_scratch/pragma_sweep/ov001_02067140_3692/FindMenuPanelById_02067140.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov001:func_ov001_02067f08": {
+  "percent": 65.15,
+  "draft": "src/.port_scratch/pragma_sweep/ov001_02067f08_9290/FindMenuItemForEntry_02067f08.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov001:func_ov001_0206a4e4": {
+  "percent": 90.38,
+  "draft": "src/.port_scratch/pragma_sweep/ov001_0206a4e4_1653/v2_0206a4e4.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov001:func_ov001_0206aa7c": {
+  "percent": 79.73,
+  "draft": "src/.port_scratch/b280/v6_0206aa7c.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov001:func_ov001_0206b06c": {
+  "percent": 85.51,
+  "draft": "src/.port_scratch/pragma_sweep/ov001_0206b06c_2142/lb_0206b06c.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov001:func_ov001_0206b614": {
+  "percent": 90.91,
+  "draft": "src/.port_scratch/pragma_sweep/ov001_0206b614_7249/w3_0206b614.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov001:func_ov001_0206dfbc": {
+  "percent": 71.95,
+  "draft": "src/.port_scratch/pragma_sweep/ov001_0206dfbc_5454/func_ov001_0206dfbc.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov001:func_ov001_0206ed8c": {
+  "percent": 95.82,
+  "draft": "src/.port_scratch/pragma_sweep/ov001_0206ed8c_2469/BlendIconTiles_0206ed8c.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov001:func_ov001_02070e98": {
+  "percent": 99.72,
+  "draft": "src/.port_scratch/pragma_sweep/ov001_02070e98_8191/UpdateFieldHud_02070e98.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov001:func_ov001_020716e8": {
+  "percent": 49.23,
+  "draft": "src/.port_scratch/pragma_sweep/ov001_020716e8_4338/LoadFieldPaletteSlot_020716e8.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov001:func_ov001_02072254": {
+  "percent": 97.64,
+  "draft": "src/.port_scratch/b281/s2/ShowChoiceDetails_02072254.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov001:func_ov001_020725dc": {
+  "percent": 30.3,
+  "draft": "src/.port_scratch/b203/ShowChoiceBalloonAtWorldPos_020725dc.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov001:func_ov001_02072c98": {
+  "percent": 58.75,
+  "draft": "src/.port_scratch/pragma_sweep/ov001_02072c98_0795/PlaceFieldSlotTag_02072c98.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov001:func_ov001_02072ec8": {
+  "percent": 67.57,
+  "draft": "src/.port_scratch/pragma_sweep/ov001_02072ec8_3322/CloseFieldOverlayScreens_02072ec8.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov001:func_ov001_020738d4": {
+  "percent": 99.16,
+  "draft": "src/.port_scratch/pragma_sweep/ov001_020738d4_0895/UpdateGaugeMarker_020738d4.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov001:func_ov001_02073d00": {
+  "percent": 91.89,
+  "draft": "src/.port_scratch/pragma_sweep/ov001_02073d00_0520/StartGaugeTween_02073d00.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov001:func_ov001_02073e40": {
+  "percent": 77.63,
+  "draft": "src/.port_scratch/pragma_sweep/ov001_02073e40_9681/func_ov001_02073e40.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov001:func_ov001_020747fc": {
+  "percent": 89.77,
+  "draft": "src/.port_scratch/pragma_sweep/ov001_020747fc_1415/SetHudGaugeValue_020747fc.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov001:func_ov001_020749c0": {
+  "percent": 98.06,
+  "draft": "src/.port_scratch/pragma_sweep/ov001_020749c0_4847/SetHudGaugeRange_020749c0.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov001:func_ov001_02075e10": {
+  "percent": 94.74,
+  "draft": "src/.port_scratch/pragma_sweep/ov001_02075e10_8023/ShowMenuHighlightGroup_02075e10.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov001:func_ov001_02076e30": {
+  "percent": 97.01,
+  "draft": "src/.port_scratch/pragma_sweep/ov001_02076e30_2020/LerpColor555_02076e30.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov001:func_ov001_02076ebc": {
+  "percent": 68.24,
+  "draft": "src/.port_scratch/pragma_sweep/ov001_02076ebc_9237/UpdateFieldMenuPalette_02076ebc.c",
+  "compiler": "mwccarm-3.0-139"
+ },
+ "ov001:func_ov001_020791e0": {
+  "percent": 97.55,
+  "draft": "src/.port_scratch/pragma_sweep/ov001_020791e0_2855/OpenMessageWindowFrame_020791e0.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov001:func_ov001_020794c8": {
+  "percent": 73.81,
+  "draft": "src/.port_scratch/pragma_sweep/ov001_020794c8_0958/DrawPanelPortraitTiles_020794c8.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov001:func_ov001_020795f0": {
+  "percent": 78.63,
+  "draft": "src/.port_scratch/pragma_sweep/ov001_020795f0_8896/func_ov001_020795f0.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov001:func_ov001_0207a73c": {
+  "percent": 82.35,
+  "draft": "src/.port_scratch/pragma_sweep/ov001_0207a73c_1035/func_ov001_0207a73c.c",
+  "compiler": "mwccarm-3.0-139"
+ },
+ "ov001:func_ov001_0207a968": {
+  "percent": 62.69,
+  "draft": "src/.port_scratch/pragma_sweep/ov001_0207a968_9752/LerpRgb555_0207a968.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov001:func_ov001_0207b0c0": {
+  "percent": 82.35,
+  "draft": "src/.port_scratch/pragma_sweep/ov001_0207b0c0_0070/func_ov001_0207b0c0.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov001:func_ov001_0207b860": {
+  "percent": 80.0,
+  "draft": "src/.port_scratch/pragma_sweep/ov001_0207b860_9034/DrawCounterHud_0207b860.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov001:func_ov001_0207c960": {
+  "percent": 80.0,
+  "draft": "src/.port_scratch/pragma_sweep/ov001_0207c960_5099/SetupOrthoFieldCamera_0207c960.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov001:func_ov001_0207d210": {
+  "percent": 95.0,
+  "draft": "src/.port_scratch/pragma_sweep/ov001_0207d210_0654/StartPanelScrollIn_0207d210.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov001:func_ov001_0207f2bc": {
+  "percent": 83.52,
+  "draft": "src/.port_scratch/pragma_sweep/ov001_0207f2bc_4230/func_ov001_0207f2bc.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov001:func_ov001_02080290": {
+  "percent": 75.86,
+  "draft": "src/.port_scratch/pragma_sweep/ov001_02080290_9274/Script_CreateFieldObject_02080290.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov001:func_ov001_0208078c": {
+  "percent": 25.93,
+  "draft": "src/.port_scratch/small601/v5/SpawnFieldActor_0208078c.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov001:func_ov001_02082c50": {
+  "percent": 99.69,
+  "draft": "src/.port_scratch/b155x/func_ov001_02082c50.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov001:func_ov001_020831a8": {
+  "percent": 87.65,
+  "draft": "src/.port_scratch/pragma_sweep/ov001_020831a8_3883/FallCylinderObject_020831a8.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov001:func_ov001_0208334c": {
+  "percent": 93.63,
+  "draft": "src/.port_scratch/pragma_sweep/ov001_0208334c_3776/func_ov001_0208334c.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov001:func_ov001_02083730": {
+  "percent": 54.92,
+  "draft": "src/.port_scratch/pragma_sweep/ov001_02083730_7816/func_ov001_02083730.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov001:func_ov001_02083d2c": {
+  "percent": 98.08,
+  "draft": "src/.port_scratch/pragma_sweep/ov001_02083d2c_4626/FieldObject_UpdateBasisFromForward_02083d2c.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov001:func_ov001_02083f9c": {
+  "percent": 54.75,
+  "draft": "src/.port_scratch/big_02083f9c/v2/UpdatePatrolMove_02083f9c.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov001:func_ov001_02086a28": {
+  "percent": 67.74,
+  "draft": "src/.port_scratch/pragma_sweep/ov001_02086a28_9978/func_ov001_02086a28.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov001:func_ov001_02089bd4": {
+  "percent": 88.68,
+  "draft": "src/.port_scratch/pragma_sweep/ov001_02089bd4_1351/StepTowardTargetAngle_02089bd4.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov001:func_ov001_0208a73c": {
+  "percent": 95.31,
+  "draft": "src/.port_scratch/pragma_sweep/ov001_0208a73c_8579/func_ov001_0208a73c.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov001:func_ov001_0208af4c": {
+  "percent": 82.98,
+  "draft": "src/.port_scratch/b28/RotateMtx43ByAngles_0208af4c.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov001:func_ov001_0208f038": {
+  "percent": 81.03,
+  "draft": "src/.port_scratch/pragma_sweep/ov001_0208f038_5221/HandlePool_Create_0208f038.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov001:func_ov001_020909e4": {
+  "percent": 50.8,
+  "draft": "src/.port_scratch/b205/DrawStageActor_020909e4.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov001:func_ov001_02091834": {
+  "percent": 64.04,
+  "draft": "src/.port_scratch/pragma_sweep/ov001_02091834_6932/CreateStageActor_02091834.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov001:func_ov001_0209224c": {
+  "percent": 51.15,
+  "draft": "src/.port_scratch/b203/func_ov001_0209224c.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov001:func_ov001_02093330": {
+  "percent": 71.21,
+  "draft": "src/.port_scratch/b43/RefreshStageEventDisplay_02093330.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov001:func_ov001_02093c70": {
+  "percent": 99.02,
+  "draft": "src/.port_scratch/b202/InitStageActorStats_02093c70.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov001:func_ov001_020958f4": {
+  "percent": 98.0,
+  "draft": "src/.port_scratch/b157x/il1/ApplyHitToEnemyGroup_020958f4.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov001:func_ov001_02096234": {
+  "percent": 92.21,
+  "draft": "src/.port_scratch/b205/TestActorPartHits_02096234.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov001:func_ov001_0209661c": {
+  "percent": 77.48,
+  "draft": "src/.port_scratch/b204/v1/func_ov001_0209661c.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov001:func_ov001_02096bc8": {
+  "percent": 99.28,
+  "draft": "src/.port_scratch/pragma_sweep/ov001_02096bc8_4714/func_ov001_02096bc8.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov001:func_ov001_02097130": {
+  "percent": 77.12,
+  "draft": "src/.port_scratch/b202/v2/func_ov001_02097130.c",
+  "compiler": "mwccarm-3.0-139"
+ },
+ "ov001:func_ov001_02097a84": {
+  "percent": 93.33,
+  "draft": "src/.port_scratch/pragma_sweep/ov001_02097a84_2569/func_ov001_02097a84.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov001:func_ov001_020983a0": {
+  "percent": 97.83,
+  "draft": "src/.port_scratch/pragma_sweep/ov001_020983a0_2756/ProbeGroundBelow_020983a0.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov001:func_ov001_020993d0": {
+  "percent": 74.68,
+  "draft": "src/.port_scratch/pragma_sweep/ov001_020993d0_4710/LoadCellBankFile_020993d0.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov001:func_ov001_020998dc": {
+  "percent": 99.47,
+  "draft": "src/.port_scratch/pragma_sweep/ov001_020998dc_1689/ShutdownStageManager_020998dc.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov001:func_ov001_0209a174": {
+  "percent": 98.71,
+  "draft": "src/.port_scratch/b204/v5/StartStageEvent_0209a174.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov001:func_ov001_0209a4bc": {
+  "percent": 99.4,
+  "draft": "src/.port_scratch/pragma_sweep/ov001_0209a4bc_8648/SpawnStageEventTree_0209a4bc.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov001:func_ov001_0209b474": {
+  "percent": 51.52,
+  "draft": "src/.port_scratch/pragma_sweep/ov001_0209b474_0848/StopSlotSoundArcs_0209b474.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov001:func_ov001_0209c650": {
+  "percent": 75.44,
+  "draft": "src/.port_scratch/pragma_sweep/ov001_0209c650_2668/NotifyRowMotionHandlers_0209c650.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov002:func_ov002_020629b8": {
+  "percent": 83.72,
+  "draft": "src/.port_scratch/pragma_sweep/ov002_020629b8_9246/ResetPanelBackgrounds_020629b8.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov002:func_ov002_02062b10": {
+  "percent": 90.8,
+  "draft": "src/.port_scratch/pragma_sweep/ov002_02062b10_4189/ResetSubBgLayers_02062b10.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov002:func_ov002_0206331c": {
+  "percent": 93.71,
+  "draft": "src/.port_scratch/big_0206331c/v0/InitMenuContext_0206331c.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov002:func_ov002_02064d54": {
+  "percent": 91.04,
+  "draft": "src/.port_scratch/pragma_sweep/ov002_02064d54_8167/func_ov002_02064d54.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov002:func_ov002_02066ad0": {
+  "percent": 65.22,
+  "draft": "src/.port_scratch/pragma_sweep/ov002_02066ad0_5932/GetCursorOffsetFromParent_02066ad0.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov002:func_ov002_02067c10": {
+  "percent": 92.15,
+  "draft": "src/.port_scratch/pragma_sweep/ov002_02067c10_5392/CreateSelectionSprites_02067c10.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov002:func_ov002_02068498": {
+  "percent": 79.55,
+  "draft": "src/.port_scratch/pragma_sweep/ov002_02068498_0554/GetPanelItemId_02068498.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov002:func_ov002_02069df8": {
+  "percent": 83.78,
+  "draft": "src/.port_scratch/pragma_sweep/ov002_02069df8_8036/GetPanelSlotOffset_02069df8.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov003:func_ov003_02064c10": {
+  "percent": 93.65,
+  "draft": "src/.port_scratch/pragma_sweep/ov003_02064c10_7740/MeasureSubtitleLineWidth_02064c10.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov004:func_ov004_020619a0": {
+  "percent": 83.26,
+  "draft": "src/.port_scratch/b210/v2/RunScrollTextScript_020619a0.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov004:func_ov004_02061e7c": {
+  "percent": 74.55,
+  "draft": "src/.port_scratch/b209/f7/StepScrollTextScroll_02061e7c.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov004:func_ov004_020622f0": {
+  "percent": 97.9,
+  "draft": "src/.port_scratch/b209/h4/UpdateScrollTextFrame_020622f0.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov004:func_ov004_020625fc": {
+  "percent": 91.21,
+  "draft": "src/.port_scratch/pragma_sweep/ov004_020625fc_6283/UpdateScrollTextFade_020625fc.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov004:func_ov004_02062b70": {
+  "percent": 59.7,
+  "draft": "src/.port_scratch/pragma_sweep/ov004_02062b70_7352/DrawScrollTextLine_02062b70.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov004:func_ov004_02063414": {
+  "percent": 68.29,
+  "draft": "src/.port_scratch/pragma_sweep/ov004_02063414_6249/LoadScrollTextBg_02063414.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov004:func_ov004_02063598": {
+  "percent": 67.92,
+  "draft": "src/.port_scratch/pragma_sweep/ov004_02063598_0742/CreateScrollTextObjects_02063598.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov006:func_ov006_020a0b04": {
+  "percent": 93.91,
+  "draft": "src/.port_scratch/pragma_sweep/ov006_020a0b04_8676/func_ov006_020a0b04.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov006:func_ov006_020a10d8": {
+  "percent": 46.81,
+  "draft": "src/.port_scratch/pragma_sweep/ov006_020a10d8_7902/TraceGridPath_020a10d8.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov006:func_ov006_020a1324": {
+  "percent": 91.89,
+  "draft": "src/.port_scratch/pragma_sweep/ov006_020a1324_9678/GetGridCellPosition_020a1324.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov006:func_ov006_020a1740": {
+  "percent": 97.2,
+  "draft": "src/.port_scratch/pragma_sweep/ov006_020a1740_0307/RunGridPathCommand_020a1740.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov007:func_ov007_020a098c": {
+  "percent": 85.71,
+  "draft": "src/.port_scratch/pragma_sweep/ov007_020a098c_0095/SweepTouchedObjectMove_020a098c.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov008:func_ov008_020a06dc": {
+  "percent": 80.44,
+  "draft": "src/.port_scratch/b211/v3/FieldObject_RespawnSegmented_020a06dc.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov010:func_ov010_020a10b8": {
+  "percent": 65.47,
+  "draft": "src/.port_scratch/pragma_sweep/ov010_020a10b8_2615/Entity_ProbeReleaseTarget_020a10b8.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov010:func_ov010_020a13cc": {
+  "percent": 97.14,
+  "draft": "src/.port_scratch/b211/v3/func_ov010_020a13cc.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov010:func_ov010_020a1978": {
+  "percent": 99.31,
+  "draft": "src/.port_scratch/pragma_sweep/ov010_020a1978_5191/Entity_ChangeSpecialState_020a1978.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov011:func_ov011_020a09b0": {
+  "percent": 96.84,
+  "draft": "src/.port_scratch/pragma_sweep/ov011_020a09b0_8805/func_ov011_020a09b0.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov013:func_ov013_0206df40": {
+  "percent": 74.06,
+  "draft": "src/.port_scratch/b158/InitRecordResultScreen_0206df40.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov013:func_ov013_020704a0": {
+  "percent": 58.86,
+  "draft": "src/.port_scratch/b158/ScrollPanelSlotSprites_020704a0.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov013:func_ov013_020711f8": {
+  "percent": 58.33,
+  "draft": "src/.port_scratch/b212/m2/CyclePanelGlowColor_020711f8.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov013:func_ov013_0207225c": {
+  "percent": 99.35,
+  "draft": "src/.port_scratch/b900/r4/ConfirmPanelResult_0207225c.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov014:func_ov014_0206c480": {
+  "percent": 95.68,
+  "draft": "src/.port_scratch/big_c480_ov014/p2/InitPanelScene_0206c480.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov014:func_ov014_0206d2e8": {
+  "percent": 99.84,
+  "draft": "src/.port_scratch/big_0206d2e8/var3/UpdatePanelEditInput_0206d2e8.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov014:func_ov014_0206ec14": {
+  "percent": 76.29,
+  "draft": "src/.port_scratch/b213/func_ov014_0206ec14.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov014:func_ov014_0206f42c": {
+  "percent": 67.62,
+  "draft": "src/.port_scratch/b213/func_ov014_0206f42c.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov014:func_ov014_0206f5cc": {
+  "percent": 45.16,
+  "draft": "src/.port_scratch/pragma_sweep/ov014_0206f5cc_9044/func_ov014_0206f5cc.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov015:func_ov015_0206d59c": {
+  "percent": 99.63,
+  "draft": "src/.port_scratch/big_0206d59c/rb4/InitPanelScreenGraphics_0206d59c.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov015:func_ov015_0206f688": {
+  "percent": 75.0,
+  "draft": "src/.port_scratch/pragma_sweep/ov015_0206f688_7210/func_ov015_0206f688.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov015:func_ov015_020702fc": {
+  "percent": 79.75,
+  "draft": "src/.port_scratch/pragma_sweep/ov015_020702fc_8084/func_ov015_020702fc.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov015:func_ov015_02070540": {
+  "percent": 64.94,
+  "draft": "src/.port_scratch/pragma_sweep/ov015_02070540_2763/func_ov015_02070540.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov015:func_ov015_020724dc": {
+  "percent": 97.2,
+  "draft": "src/.port_scratch/b215/arr/UpdatePanelCursorItem_020724dc.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov015:func_ov015_02073b30": {
+  "percent": 98.57,
+  "draft": "src/.port_scratch/pragma_sweep/ov015_02073b30_8155/func_ov015_02073b30.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov015:func_ov015_02073d68": {
+  "percent": 95.56,
+  "draft": "src/.port_scratch/pragma_sweep/ov015_02073d68_1967/WH_ChildConnectAuto_02073d68.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov015:func_ov015_020745dc": {
+  "percent": 95.45,
+  "draft": "src/.port_scratch/pragma_sweep/ov015_020745dc_0012/EndWirelessKeySharing_020745dc.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov015:func_ov015_02074774": {
+  "percent": 96.55,
+  "draft": "src/.port_scratch/pragma_sweep/ov015_02074774_4571/WH_SendData_02074774.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov015:func_ov015_02075034": {
+  "percent": 96.15,
+  "draft": "src/.port_scratch/pragma_sweep/ov015_02075034_5069/FormatMessageArgs_02075034.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov015:func_ov015_0207533c": {
+  "percent": 65.4,
+  "draft": "src/.port_scratch/b161/InitPanelRound_0207533c.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov015:func_ov015_020766d0": {
+  "percent": 78.68,
+  "draft": "src/.port_scratch/big_020766d0/best/UpdatePanelMinigame_020766d0.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov015:func_ov015_0207830c": {
+  "percent": 73.33,
+  "draft": "src/.port_scratch/pragma_sweep/ov015_0207830c_0887/func_ov015_0207830c.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov015:func_ov015_02078f58": {
+  "percent": 75.56,
+  "draft": "src/.port_scratch/pragma_sweep/ov015_02078f58_8542/func_ov015_02078f58.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov015:func_ov015_02079bc0": {
+  "percent": 43.24,
+  "draft": "src/.port_scratch/b213/func_ov015_02079bc0.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov016:func_ov016_020a4694": {
+  "percent": 97.71,
+  "draft": "src/.port_scratch/pragma_sweep/ov016_020a4694_4066/func_ov016_020a4694.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov016:func_ov016_020a56bc": {
+  "percent": 96.88,
+  "draft": "src/.port_scratch/pragma_sweep/ov016_020a56bc_2651/func_ov016_020a56bc.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov016:func_ov016_020a6338": {
+  "percent": 56.47,
+  "draft": "src/.port_scratch/b217/SpawnFieldObjectTree_020a6338.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov016:func_ov016_020a68d8": {
+  "percent": 60.0,
+  "draft": "src/.port_scratch/b217/SetFieldUnitCell_020a68d8.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov017:func_ov017_020a5248": {
+  "percent": 90.32,
+  "draft": "src/.port_scratch/pragma_sweep/ov017_020a5248_1134/GetObjectUnlockResult_020a5248.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov018:func_ov018_020a2c84": {
+  "percent": 51.19,
+  "draft": "src/.port_scratch/b218/func_ov018_020a2c84.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov019:func_ov019_020a2ecc": {
+  "percent": 97.71,
+  "draft": "src/.port_scratch/b219/UpdateLinkObject_020a2ecc.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov019:func_ov019_020a3588": {
+  "percent": 84.62,
+  "draft": "src/.port_scratch/pragma_sweep/ov019_020a3588_8028/SetEntryGroupMode_020a3588.c",
+  "compiler": "mwccarm-3.0-139"
+ },
+ "ov020:func_ov020_020a3150": {
+  "percent": 94.52,
+  "draft": "src/.port_scratch/pragma_sweep/ov020_020a3150_3982/StackPanelColliders_020a3150.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov020:func_ov020_020a37d8": {
+  "percent": 51.11,
+  "draft": "src/.port_scratch/pragma_sweep/ov020_020a37d8_6807/UpdateElevatorPanel_020a37d8.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov021:func_ov021_020a7cc8": {
+  "percent": 77.57,
+  "draft": "src/.port_scratch/b220/LoadPathGraph_020a7cc8.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov021:func_ov021_020a9b74": {
+  "percent": 68.52,
+  "draft": "src/.port_scratch/pragma_sweep/ov021_020a9b74_0500/BlendModelTrackSet_020a9b74.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov021:func_ov021_020a9ecc": {
+  "percent": 84.29,
+  "draft": "src/.port_scratch/medium244/u1/func_ov021_020a9ecc.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov021:func_ov021_020ab930": {
+  "percent": 94.34,
+  "draft": "src/.port_scratch/pragma_sweep/ov021_020ab930_3720/ResolveFirstHitNode_020ab930.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov021:func_ov021_020abe54": {
+  "percent": 86.0,
+  "draft": "src/.port_scratch/pragma_sweep/ov021_020abe54_2371/CheckObjectReady_020abe54.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov021:func_ov021_020abfb0": {
+  "percent": 98.31,
+  "draft": "src/.port_scratch/pragma_sweep/ov021_020abfb0_8248/IsMovingWithFacing_020abfb0.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov021:func_ov021_020ac028": {
+  "percent": 97.1,
+  "draft": "src/.port_scratch/pragma_sweep/ov021_020ac028_2841/IsTargetReachable_020ac028.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov021:func_ov021_020aed24": {
+  "percent": 78.45,
+  "draft": "src/.port_scratch/pragma_sweep/ov021_020aed24_9520/PlaceUnitAtSlot_020aed24.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov021:func_ov021_020b0450": {
+  "percent": 53.85,
+  "draft": "src/.port_scratch/pragma_sweep/ov021_020b0450_2489/func_ov021_020b0450.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov021:func_ov021_020b2cf4": {
+  "percent": 60.28,
+  "draft": "src/.port_scratch/b76/ScriptOp_WarpActorToLinkCell_020b2cf4.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov021:func_ov021_020b3114": {
+  "percent": 70.98,
+  "draft": "src/.port_scratch/b76/ScriptOp_SpawnLinkedWalkers_020b3114.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov021:func_ov021_020b39d4": {
+  "percent": 99.81,
+  "draft": "src/.port_scratch/large65/v2/ScriptCmd_SetProperty_020b39d4.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov022:func_ov022_020a8ce0": {
+  "percent": 98.41,
+  "draft": "src/.port_scratch/b78/v2/MeasureSubtitleLineWidth_020a8ce0.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov023:func_ov023_020b61a0": {
+  "percent": 57.8,
+  "draft": "src/.port_scratch/pragma_sweep/ov023_020b61a0_3905/func_ov023_020b61a0.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov023:func_ov023_020b65ac": {
+  "percent": 97.85,
+  "draft": "src/.port_scratch/b222/m/func_ov023_020b65ac.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov024:func_ov024_020b6bb0": {
+  "percent": 89.5,
+  "draft": "src/.port_scratch/b79/UpdateBoardHintText_020b6bb0.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov025:func_ov025_020b5f08": {
+  "percent": 84.11,
+  "draft": "src/.port_scratch/b80/UpdateMenuScreen_020b5f08.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov025:func_ov025_020b6df4": {
+  "percent": 50.0,
+  "draft": "src/.port_scratch/pragma_sweep/ov025_020b6df4_1679/FindHorizontalNeighbor_020b6df4.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov025:func_ov025_020b6e70": {
+  "percent": 69.6,
+  "draft": "src/.port_scratch/pragma_sweep/ov025_020b6e70_6271/HandleListTouch_020b6e70.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov027:func_ov027_020b80bc": {
+  "percent": 80.0,
+  "draft": "src/.port_scratch/pragma_sweep/ov027_020b80bc_1572/ReleaseLoadedElementBuffers_020b80bc.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov027:func_ov027_020b8284": {
+  "percent": 86.84,
+  "draft": "src/.port_scratch/b224/days/StampTileRegionPalette_020b8284.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov027:func_ov027_020b845c": {
+  "percent": 93.33,
+  "draft": "src/.port_scratch/pragma_sweep/ov027_020b845c_3066/RestartTagRecord_020b845c.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov027:func_ov027_020b91c8": {
+  "percent": 65.69,
+  "draft": "src/.port_scratch/pragma_sweep/ov027_020b91c8_1179/SetWidgetPosition_020b91c8.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov027:func_ov027_020b9360": {
+  "percent": 88.0,
+  "draft": "src/.port_scratch/pragma_sweep/ov027_020b9360_7354/GetWidgetPositionByMode_020b9360.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov028:func_ov028_020ba97c": {
+  "percent": 81.44,
+  "draft": "src/.port_scratch/pragma_sweep/ov028_020ba97c_7110/UpdateFieldMenuState_020ba97c.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov028:func_ov028_020bb0a4": {
+  "percent": 67.39,
+  "draft": "src/.port_scratch/pragma_sweep/ov028_020bb0a4_4616/SetupSceneFromParams_020bb0a4.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov029:func_ov029_020baa84": {
+  "percent": 42.11,
+  "draft": "src/.port_scratch/pragma_sweep/ov029_020baa84_5169/SetupSceneFromParams_020baa84.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov030:func_ov030_020ba788": {
+  "percent": 90.14,
+  "draft": "src/.port_scratch/pragma_sweep/ov030_020ba788_7219/MoviePlayer_PollState_020ba788.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov031:func_ov031_020babf8": {
+  "percent": 97.4,
+  "draft": "src/.port_scratch/b227/v2/UpdateMovieScene_020babf8.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov031:func_ov031_020bb054": {
+  "percent": 96.7,
+  "draft": "src/.port_scratch/pragma_sweep/ov031_020bb054_2509/UpdateSceneScroll_020bb054.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov031:func_ov031_020bb6f0": {
+  "percent": 90.62,
+  "draft": "src/.port_scratch/b227/v3/BuildSceneGroups_020bb6f0.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov031:func_ov031_020bc04c": {
+  "percent": 97.85,
+  "draft": "src/.port_scratch/perm/ov031_func_ov031_020bc04c/LoadSceneData_020bc04c.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov032:func_ov032_020ba604": {
+  "percent": 64.89,
+  "draft": "src/.port_scratch/pragma_sweep/ov032_020ba604_2301/func_ov032_020ba604.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov032:func_ov032_020bbd60": {
+  "percent": 86.47,
+  "draft": "src/.port_scratch/pragma_sweep/ov032_020bbd60_5627/func_ov032_020bbd60.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov032:func_ov032_020bc1e8": {
+  "percent": 90.61,
+  "draft": "src/.port_scratch/b228/func_ov032_020bc1e8.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov032:func_ov032_020bd0dc": {
+  "percent": 66.67,
+  "draft": "src/.port_scratch/b228/v4/func_ov032_020bd0dc.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov032:func_ov032_020beeb8": {
+  "percent": 50.39,
+  "draft": "src/.port_scratch/b228/func_ov032_020beeb8.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov034:func_ov034_020ba3e0": {
+  "percent": 1.22,
+  "draft": "src/ov037/unclassified_helpers/BeginCommSession_020ba3e0.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov034:func_ov034_020bac50": {
+  "percent": 74.38,
+  "draft": "src/.port_scratch/pragma_sweep/ov034_020bac50_5943/RunResultsFrame_020bac50.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov034:func_ov034_020bb578": {
+  "percent": 99.36,
+  "draft": "src/.port_scratch/big_020bb578/m1/UpdateResultsScreen_020bb578.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov034:func_ov034_020bdc94": {
+  "percent": 99.38,
+  "draft": "src/.port_scratch/pragma_sweep/ov034_020bdc94_1513/SetupResultsDisplay_020bdc94.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov034:func_ov034_020be328": {
+  "percent": 76.92,
+  "draft": "src/.port_scratch/pragma_sweep/ov034_020be328_9725/SetupResultsShopList_020be328.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov034:func_ov034_020be418": {
+  "percent": 78.43,
+  "draft": "src/.port_scratch/b229/GetResultsShopItemInfo_020be418.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov034:func_ov034_020be588": {
+  "percent": 79.03,
+  "draft": "src/.port_scratch/pragma_sweep/ov034_020be588_1629/LoadResultsIconCells_020be588.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov035:func_ov035_020bc2f0": {
+  "percent": 97.33,
+  "draft": "src/.port_scratch/pragma_sweep/ov035_020bc2f0_0771/func_ov035_020bc2f0.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov036:func_ov036_020ba3f8": {
+  "percent": 91.3,
+  "draft": "src/.port_scratch/pragma_sweep/ov036_020ba3f8_7028/func_ov036_020ba3f8.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov036:func_ov036_020bad3c": {
+  "percent": 89.03,
+  "draft": "src/.port_scratch/pragma_sweep/ov036_020bad3c_7142/func_ov036_020bad3c.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov036:func_ov036_020be324": {
+  "percent": 76.27,
+  "draft": "src/.port_scratch/b229/ScriptCmd_OpenNamedMessageWindow_020be324.c",
+  "compiler": "mwccarm-3.0-139"
+ },
+ "ov036:func_ov036_020c2b7c": {
+  "percent": 76.52,
+  "draft": "src/.port_scratch/b92/func_ov036_020c2b7c.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov036:func_ov036_020c30e4": {
+  "percent": 33.33,
+  "draft": "src/.port_scratch/pragma_sweep/ov036_020c30e4_0641/func_ov036_020c30e4.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov037:func_ov037_020bac30": {
+  "percent": 45.45,
+  "draft": "src/.port_scratch/pragma_sweep/ov037_020bac30_3083/ApplyCommRequest_020bac30.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov037:func_ov037_020baebc": {
+  "percent": 84.38,
+  "draft": "src/.port_scratch/pragma_sweep/ov037_020baebc_9076/LoadMenuBackground_020baebc.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov038:func_ov038_020bac3c": {
+  "percent": 98.1,
+  "draft": "src/.port_scratch/pragma_sweep/ov038_020bac3c_1776/InitDisplayForScene_020bac3c.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov038:func_ov038_020bb4e0": {
+  "percent": 84.88,
+  "draft": "src/.port_scratch/pragma_sweep/ov038_020bb4e0_1860/DrawOv038TimeDigits_020bb4e0.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov039:func_ov039_020bc318": {
+  "percent": 74.6,
+  "draft": "src/.port_scratch/b231/y4/LoadMainBgAndTriggerTags_020bc318.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov039:func_ov039_020bc488": {
+  "percent": 73.58,
+  "draft": "src/.port_scratch/pragma_sweep/ov039_020bc488_4408/LoadSubBgAndTriggerTags_020bc488.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov039:func_ov039_020bcb20": {
+  "percent": 91.92,
+  "draft": "src/.port_scratch/pragma_sweep/ov039_020bcb20_1926/FormatAreaName_020bcb20.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov039:func_ov039_020bd700": {
+  "percent": 83.33,
+  "draft": "src/.port_scratch/b231/u1/UpdateScrollThumbOffset_020bd700.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov039:func_ov039_020bd868": {
+  "percent": 73.28,
+  "draft": "src/.port_scratch/medium271/b/HandleListTouchInput_020bd868.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov039:func_ov039_020be358": {
+  "percent": 94.64,
+  "draft": "src/.port_scratch/b231/x2/DrawWidgetPlayTime_020be358.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov039:func_ov039_020be450": {
+  "percent": 94.12,
+  "draft": "src/.port_scratch/b231/w3/DrawPlayTimeDigits_020be450.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov040:func_ov040_020bd730": {
+  "percent": 86.51,
+  "draft": "src/.port_scratch/b232/bd730/func_ov040_020bd730.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov041:func_ov041_020bd46c": {
+  "percent": 98.13,
+  "draft": "src/.port_scratch/pragma_sweep/ov041_020bd46c_0662/func_ov041_020bd46c.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov041:func_ov041_020bde30": {
+  "percent": 87.5,
+  "draft": "src/.port_scratch/pragma_sweep/ov041_020bde30_5075/LoadSlotModelSet_020bde30.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov041:func_ov041_020bec60": {
+  "percent": 43.33,
+  "draft": "src/.port_scratch/b232/IsActorKindPresent_020bec60.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov041:func_ov041_020c1d18": {
+  "percent": 83.11,
+  "draft": "src/.port_scratch/b233/SpawnPlayerStageActor_020c1d18.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov042:func_ov042_020bd050": {
+  "percent": 90.16,
+  "draft": "src/.port_scratch/b233/UpdateCameraFrame_020bd050.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov042:func_ov042_020bd394": {
+  "percent": 81.9,
+  "draft": "src/.port_scratch/pragma_sweep/ov042_020bd394_0674/RotateCameraOffset_020bd394.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov043:func_ov043_020bccc4": {
+  "percent": 66.88,
+  "draft": "src/.port_scratch/pragma_sweep/ov043_020bccc4_8856/UpdateFollowCamera_020bccc4.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov043:func_ov043_020bd0a0": {
+  "percent": 96.39,
+  "draft": "src/.port_scratch/pragma_sweep/ov043_020bd0a0_9676/UpdateViewPlanes_020bd0a0.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov044:func_ov044_020d0728": {
+  "percent": 96.3,
+  "draft": "src/.port_scratch/pragma_sweep/ov044_020d0728_8759/ComputePanelAxesFromAngles_020d0728.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov045:func_ov045_020be710": {
+  "percent": 91.25,
+  "draft": "src/.port_scratch/big_e710_ov045/v3/func_ov045_020be710.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov045:func_ov045_020bf3d0": {
+  "percent": 95.23,
+  "draft": "src/.port_scratch/big_f3d0_ov045/func_ov045_020bf3d0.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov045:func_ov045_020c0334": {
+  "percent": 80.26,
+  "draft": "src/.port_scratch/pragma_sweep/ov045_020c0334_7121/SetupOrthoCamera_020c0334.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov046:func_ov046_020c08a0": {
+  "percent": 98.43,
+  "draft": "src/.port_scratch/b101/Camera_Init_020c08a0.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov046:func_ov046_020c10d4": {
+  "percent": 62.5,
+  "draft": "src/.port_scratch/pragma_sweep/ov046_020c10d4_2963/Camera_StartScriptedView_020c10d4.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov046:func_ov046_020c13e0": {
+  "percent": 96.63,
+  "draft": "src/.port_scratch/pragma_sweep/ov046_020c13e0_3651/Camera_BlendToSideView_020c13e0.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov046:func_ov046_020c179c": {
+  "percent": 96.43,
+  "draft": "src/.port_scratch/pragma_sweep/ov046_020c179c_1253/Camera_BuildOrbitView_020c179c.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov046:func_ov046_020c1fa0": {
+  "percent": 54.43,
+  "draft": "src/.port_scratch/big_1fa0_ov046/Camera_SlideEyeAlongWalls_020c1fa0.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov046:func_ov046_020c3074": {
+  "percent": 94.27,
+  "draft": "src/.port_scratch/pragma_sweep/ov046_020c3074_8644/Camera_FindOpenAngle_020c3074.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov047:func_ov047_020c3b5c": {
+  "percent": 0.23,
+  "draft": "src/ov093/unclassified_helpers/SetBgSubLayerVisible_020c3b5c.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov047:func_ov047_020c50c0": {
+  "percent": 94.57,
+  "draft": "src/.port_scratch/pragma_sweep/ov047_020c50c0_8769/Camera_UpdateOrbit_020c50c0.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov047:func_ov047_020c53b4": {
+  "percent": 96.88,
+  "draft": "src/.port_scratch/pragma_sweep/ov047_020c53b4_7022/Camera_StepFollowTarget_020c53b4.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov047:func_ov047_020c6e10": {
+  "percent": 99.1,
+  "draft": "src/.port_scratch/b236/v24/Camera_FindClearOrbit_020c6e10.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov047:func_ov047_020c70d8": {
+  "percent": 98.86,
+  "draft": "src/.port_scratch/pragma_sweep/ov047_020c70d8_3340/Camera_EnterRailMode_020c70d8.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov052:func_ov052_020c7460": {
+  "percent": 66.08,
+  "draft": "src/.port_scratch/pragma_sweep/ov052_020c7460_1119/func_ov052_020c7460.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov052:func_ov052_020c88f4": {
+  "percent": 62.54,
+  "draft": "src/.port_scratch/b237/func_ov052_020c88f4.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov052:func_ov052_020c9274": {
+  "percent": 97.97,
+  "draft": "src/.port_scratch/b237/func_ov052_020c9274.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov052:func_ov052_020ca918": {
+  "percent": 96.66,
+  "draft": "src/.port_scratch/pragma_sweep/ov052_020ca918_8310/func_ov052_020ca918.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov052:func_ov052_020cfdb4": {
+  "percent": 57.34,
+  "draft": "src/.port_scratch/b107/func_ov052_020cfdb4.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov054:func_ov054_020d2774": {
+  "percent": 68.47,
+  "draft": "src/.port_scratch/pragma_sweep/ov054_020d2774_8103/func_ov054_020d2774.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov054:func_ov054_020d3230": {
+  "percent": 59.63,
+  "draft": "src/.port_scratch/pragma_sweep/ov054_020d3230_3400/func_ov054_020d3230.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov054:func_ov054_020d34b0": {
+  "percent": 74.74,
+  "draft": "src/.port_scratch/pragma_sweep/ov054_020d34b0_0181/func_ov054_020d34b0.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov056:func_ov056_020d33f8": {
+  "percent": 99.31,
+  "draft": "src/.port_scratch/pragma_sweep/ov056_020d33f8_3883/func_ov056_020d33f8.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov056:func_ov056_020d3d08": {
+  "percent": 83.7,
+  "draft": "src/.port_scratch/pragma_sweep/ov056_020d3d08_1886/func_ov056_020d3d08.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov056:func_ov056_020d3f70": {
+  "percent": 84.27,
+  "draft": "src/.port_scratch/pragma_sweep/ov056_020d3f70_4004/func_ov056_020d3f70.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov058:func_ov058_020d81a4": {
+  "percent": 0.54,
+  "draft": "src/.port_scratch/pragma_sweep/ov058_020d81a4_1045/SetupBarrierUnitModel_020d81a4.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov059:func_ov059_020c7acc": {
+  "percent": 77.43,
+  "draft": "src/.port_scratch/b242/v7/InitActorModel_020c7acc.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov059:func_ov059_020c8560": {
+  "percent": 72.08,
+  "draft": "src/.port_scratch/pragma_sweep/ov059_020c8560_1253/func_ov059_020c8560.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov059:func_ov059_020cac38": {
+  "percent": 89.76,
+  "draft": "src/.port_scratch/pragma_sweep/ov059_020cac38_9072/func_ov059_020cac38.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov059:func_ov059_020cbff8": {
+  "percent": 1.0,
+  "draft": "src/.port_scratch/pragma_sweep/ov059_020cbff8_9797/BuildSlot3HitSphere_020cbff8.c",
+  "compiler": "mwccarm-3.0-139"
+ },
+ "ov059:func_ov059_020ceefc": {
+  "percent": 99.5,
+  "draft": "src/.port_scratch/pragma_sweep/ov059_020ceefc_6261/func_ov059_020ceefc.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov059:func_ov059_020cf9f8": {
+  "percent": 58.71,
+  "draft": "src/.port_scratch/b242/f2d/RewardQueue_GatherTargets_020cf9f8.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov062:func_ov062_020d8160": {
+  "percent": 75.0,
+  "draft": "src/.port_scratch/b243/w29/SetupGroupUnitModel_020d8160.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov065:func_ov065_020d82b0": {
+  "percent": 66.22,
+  "draft": "src/.port_scratch/pragma_sweep/ov065_020d82b0_3427/SetupStoppingEffectModel_020d82b0.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov073:func_ov073_020c0eb8": {
+  "percent": 76.7,
+  "draft": "src/.port_scratch/pragma_sweep/ov073_020c0eb8_9482/DrawStatusItemRows_020c0eb8.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov073:func_ov073_020c10fc": {
+  "percent": 74.83,
+  "draft": "src/.port_scratch/pragma_sweep/ov073_020c10fc_8949/DrawStatusListRows_020c10fc.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov073:func_ov073_020c386c": {
+  "percent": 40.32,
+  "draft": "src/.port_scratch/b246/v4/FindHorizontalNeighbor_020c386c.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov073:func_ov073_020c38e8": {
+  "percent": 68.0,
+  "draft": "src/.port_scratch/pragma_sweep/ov073_020c38e8_5918/HandleListTouchInput_020c38e8.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov074:func_ov074_020c4260": {
+  "percent": 95.99,
+  "draft": "src/.port_scratch/big_4260_ov074/InitRootMenu_020c4260.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov074:func_ov074_020c562c": {
+  "percent": 94.44,
+  "draft": "src/.port_scratch/pragma_sweep/ov074_020c562c_5612/HandleRootMenuConfirm_020c562c.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov075:func_ov075_020c49cc": {
+  "percent": 98.14,
+  "draft": "src/.port_scratch/big_020c49cc/mv/w22/InitMatrixMenu_020c49cc.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov075:func_ov075_020c5d10": {
+  "percent": 0.63,
+  "draft": "src/ov080/unclassified_helpers/UpdateValidSlotCount_020c5d10.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov075:func_ov075_020c707c": {
+  "percent": 68.6,
+  "draft": "src/.port_scratch/big_707c_ov075/UpdateMatrixMenu_020c707c.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov075:func_ov075_020c8920": {
+  "percent": 59.62,
+  "draft": "src/.port_scratch/b126/MatrixMenuVBlank_020c8920.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov075:func_ov075_020cac34": {
+  "percent": 46.73,
+  "draft": "src/.port_scratch/pragma_sweep/ov075_020cac34_4954/MoveGridCursor_020cac34.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov075:func_ov075_020caf38": {
+  "percent": 98.18,
+  "draft": "src/.port_scratch/me/MoveMatrixCursorUp_020caf38.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov075:func_ov075_020cb410": {
+  "percent": 98.21,
+  "draft": "src/.port_scratch/me/MoveMatrixCursorLeft_020cb410.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov075:func_ov075_020cb658": {
+  "percent": 19.63,
+  "draft": "src/.port_scratch/pragma_sweep/ov075_020cb658_1182/func_ov075_020cb658.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov075:func_ov075_020cbb34": {
+  "percent": 93.55,
+  "draft": "src/.port_scratch/pragma_sweep/ov075_020cbb34_4059/CycleNodeCategory_020cbb34.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov075:func_ov075_020cbf3c": {
+  "percent": 45.9,
+  "draft": "src/.port_scratch/pragma_sweep/ov075_020cbf3c_1632/func_ov075_020cbf3c.c",
+  "compiler": "mwccarm-3.0-139"
+ },
+ "ov075:func_ov075_020cc5a8": {
+  "percent": 40.88,
+  "draft": "src/.port_scratch/b127/func_ov075_020cc5a8.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov075:func_ov075_020cd1b0": {
+  "percent": 89.0,
+  "draft": "src/.port_scratch/pragma_sweep/ov075_020cd1b0_0300/BuildTypeFilteredList_020cd1b0.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov075:func_ov075_020cd450": {
+  "percent": 87.5,
+  "draft": "src/.port_scratch/pragma_sweep/ov075_020cd450_8676/LoadArchiveTextureParams_020cd450.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov075:func_ov075_020cd5e4": {
+  "percent": 96.77,
+  "draft": "src/.port_scratch/pragma_sweep/ov075_020cd5e4_7484/DrawTexturedUnitQuad_020cd5e4.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov075:func_ov075_020cd73c": {
+  "percent": 51.05,
+  "draft": "src/.port_scratch/pragma_sweep/ov075_020cd73c_1217/DrawGaugeWithNumber_020cd73c.c",
+  "compiler": "mwccarm-3.0-139"
+ },
+ "ov075:func_ov075_020cdbc0": {
+  "percent": 74.73,
+  "draft": "src/.port_scratch/b126/DrawPivotSpriteQuad_020cdbc0.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov075:func_ov075_020cdf88": {
+  "percent": 97.54,
+  "draft": "src/.port_scratch/pragma_sweep/ov075_020cdf88_0778/func_ov075_020cdf88.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov075:func_ov075_020d0c18": {
+  "percent": 85.87,
+  "draft": "src/.port_scratch/pragma_sweep/ov075_020d0c18_8476/LoadTextureImageParams_020d0c18.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov075:func_ov075_020d0f50": {
+  "percent": 46.24,
+  "draft": "src/.port_scratch/pragma_sweep/ov075_020d0f50_5469/LoadMenuImageTable_020d0f50.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov076:func_ov076_020c4ca0": {
+  "percent": 50.86,
+  "draft": "src/.port_scratch/pragma_sweep/ov076_020c4ca0_4659/SlotMenu_ShowSlotItemHeader_020c4ca0.c",
+  "compiler": "mwccarm-3.0-139"
+ },
+ "ov076:func_ov076_020c50e8": {
+  "percent": 53.66,
+  "draft": "src/.port_scratch/pragma_sweep/ov076_020c50e8_5890/SlotMenu_HasPartialSlotUnderLimit_020c50e8.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov076:func_ov076_020c51cc": {
+  "percent": 69.49,
+  "draft": "src/.port_scratch/pragma_sweep/ov076_020c51cc_0298/func_ov076_020c51cc.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov076:func_ov076_020c6d2c": {
+  "percent": 63.49,
+  "draft": "src/.port_scratch/pragma_sweep/ov076_020c6d2c_3023/SlotMenu_SetupRecordSprites_020c6d2c.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov076:func_ov076_020c7534": {
+  "percent": 98.1,
+  "draft": "src/.port_scratch/pragma_sweep/ov076_020c7534_8761/SlotMenu_Draw3D_020c7534.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov076:func_ov076_020c7708": {
+  "percent": 84.99,
+  "draft": "src/.port_scratch/pragma_sweep/ov076_020c7708_4412/SlotMenu_DrawSlotModels_020c7708.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov076:func_ov076_020c7a5c": {
+  "percent": 87.61,
+  "draft": "src/.port_scratch/pragma_sweep/ov076_020c7a5c_5871/SlotMenu_UpdateCursorSprites_020c7a5c.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov076:func_ov076_020c7c20": {
+  "percent": 97.61,
+  "draft": "src/.port_scratch/b247/SlotMenu_DrawRecordLabel_020c7c20.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov076:func_ov076_020c8178": {
+  "percent": 63.71,
+  "draft": "src/.port_scratch/pragma_sweep/ov076_020c8178_8619/SlotMenu_DrawHintText_020c8178.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov076:func_ov076_020c83e4": {
+  "percent": 78.48,
+  "draft": "src/.port_scratch/pragma_sweep/ov076_020c83e4_1751/SlotMenu_OpenSlotEditor_020c83e4.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov076:func_ov076_020c851c": {
+  "percent": 62.36,
+  "draft": "src/.port_scratch/b131/SlotMenu_FuseSlotRecords_020c851c.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov076:func_ov076_020c8b50": {
+  "percent": 66.67,
+  "draft": "src/.port_scratch/pragma_sweep/ov076_020c8b50_5648/func_ov076_020c8b50.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov076:func_ov076_020c93f8": {
+  "percent": 89.0,
+  "draft": "src/.port_scratch/pragma_sweep/ov076_020c93f8_0012/func_ov076_020c93f8.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov076:func_ov076_020c9698": {
+  "percent": 87.5,
+  "draft": "src/.port_scratch/pragma_sweep/ov076_020c9698_4055/func_ov076_020c9698.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov076:func_ov076_020c97e8": {
+  "percent": 96.77,
+  "draft": "src/.port_scratch/pragma_sweep/ov076_020c97e8_2187/func_ov076_020c97e8.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov076:func_ov076_020c9940": {
+  "percent": 45.52,
+  "draft": "src/.port_scratch/pragma_sweep/ov076_020c9940_4040/ItemList_DrawCountGauge_020c9940.c",
+  "compiler": "mwccarm-3.0-139"
+ },
+ "ov076:func_ov076_020caf8c": {
+  "percent": 53.9,
+  "draft": "src/.port_scratch/pragma_sweep/ov076_020caf8c_6932/func_ov076_020caf8c.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov076:func_ov076_020cbba0": {
+  "percent": 51.37,
+  "draft": "src/.port_scratch/pragma_sweep/ov076_020cbba0_5275/ItemScreen_OpenHintWindow_020cbba0.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov076:func_ov076_020cc81c": {
+  "percent": 82.72,
+  "draft": "src/.port_scratch/b131/v/MenuPanel_DrawItemRows_020cc81c.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov076:func_ov076_020ccd84": {
+  "percent": 48.39,
+  "draft": "src/.port_scratch/pragma_sweep/ov076_020ccd84_8653/func_ov076_020ccd84.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov077:func_ov077_020c4284": {
+  "percent": 93.64,
+  "draft": "src/.port_scratch/pragma_sweep/ov077_020c4284_6308/InitItemScreen_020c4284.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov077:func_ov077_020c57f4": {
+  "percent": 94.87,
+  "draft": "src/.port_scratch/pragma_sweep/ov077_020c57f4_9118/func_ov077_020c57f4.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov077:func_ov077_020c5944": {
+  "percent": 62.4,
+  "draft": "src/.port_scratch/pragma_sweep/ov077_020c5944_7091/DrawItemScreenCaption_020c5944.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov077:func_ov077_020c5c1c": {
+  "percent": 85.71,
+  "draft": "src/.port_scratch/pragma_sweep/ov077_020c5c1c_9810/func_ov077_020c5c1c.c",
+  "compiler": "mwccarm-3.0-139"
+ },
+ "ov077:func_ov077_020c5ca0": {
+  "percent": 10.0,
+  "draft": "src/.port_scratch/pragma_sweep/ov077_020c5ca0_3597/func_ov077_020c5ca0.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov077:func_ov077_020c5cb4": {
+  "percent": 5.26,
+  "draft": "src/.port_scratch/pragma_sweep/ov077_020c5cb4_8670/func_ov080_020c5cb4.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov077:func_ov077_020c642c": {
+  "percent": 89.0,
+  "draft": "src/.port_scratch/pragma_sweep/ov077_020c642c_3898/BuildVisibleItemList_020c642c.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov077:func_ov077_020c66cc": {
+  "percent": 87.5,
+  "draft": "src/.port_scratch/pragma_sweep/ov077_020c66cc_9237/func_ov077_020c66cc.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov077:func_ov077_020c681c": {
+  "percent": 96.77,
+  "draft": "src/.port_scratch/pragma_sweep/ov077_020c681c_5743/DrawTexturedQuad_020c681c.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov077:func_ov077_020c6974": {
+  "percent": 53.9,
+  "draft": "src/.port_scratch/pragma_sweep/ov077_020c6974_7319/DrawItemGaugeAndDigits_020c6974.c",
+  "compiler": "mwccarm-3.0-139"
+ },
+ "ov077:func_ov077_020c6dcc": {
+  "percent": 75.43,
+  "draft": "src/.port_scratch/pragma_sweep/ov077_020c6dcc_8110/ItemList_DrawRows_020c6dcc.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov077:func_ov077_020c7fc0": {
+  "percent": 59.09,
+  "draft": "src/.port_scratch/pragma_sweep/ov077_020c7fc0_5585/AdvanceItemPrompt_020c7fc0.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov077:func_ov077_020c8bd4": {
+  "percent": 67.81,
+  "draft": "src/.port_scratch/pragma_sweep/ov077_020c8bd4_5530/OpenItemPrompt_020c8bd4.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov077:func_ov077_020c9850": {
+  "percent": 96.06,
+  "draft": "src/.port_scratch/b134/DrawItemListRows_020c9850.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov077:func_ov077_020c9dd0": {
+  "percent": 48.39,
+  "draft": "src/.port_scratch/pragma_sweep/ov077_020c9dd0_2469/LoadIconTable_020c9dd0.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov078:func_ov078_020c43c0": {
+  "percent": 96.39,
+  "draft": "src/.port_scratch/pragma_sweep/ov078_020c43c0_6786/SetupPageMenuBackgrounds_020c43c0.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov078:func_ov078_020c4980": {
+  "percent": 84.24,
+  "draft": "src/.port_scratch/pragma_sweep/ov078_020c4980_0677/DrawPageSlotList_020c4980.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov079:func_ov079_020c4718": {
+  "percent": 96.36,
+  "draft": "src/.port_scratch/pragma_sweep/ov079_020c4718_2681/ConfigMenu_CreateOption_020c4718.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov079:func_ov079_020c4928": {
+  "percent": 82.43,
+  "draft": "src/.port_scratch/pragma_sweep/ov079_020c4928_9330/ConfigMenu_DrawText_020c4928.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov080:func_ov080_020c4e6c": {
+  "percent": 99.67,
+  "draft": "src/.port_scratch/q2/f/DrawSaveSlotPanel_020c4e6c.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov080:func_ov080_020c5584": {
+  "percent": 97.42,
+  "draft": "src/.port_scratch/b136/RedrawSaveSelectScreen_020c5584.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov084:func_ov084_020bfa44": {
+  "percent": 86.76,
+  "draft": "src/.port_scratch/b138/DrawSelectMenuText_020bfa44.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov085:func_ov085_020bf754": {
+  "percent": 92.21,
+  "draft": "src/.port_scratch/pragma_sweep/ov085_020bf754_8653/GetItemRecordInfo_020bf754.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov085:func_ov085_020bf7f0": {
+  "percent": 99.61,
+  "draft": "src/.port_scratch/big_f7f0_ov085/var/InitShopMenu_020bf7f0.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov085:func_ov085_020c01b8": {
+  "percent": 91.57,
+  "draft": "src/.port_scratch/pragma_sweep/ov085_020c01b8_8803/DestroyItemMenu_020c01b8.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov085:func_ov085_020c1430": {
+  "percent": 76.06,
+  "draft": "src/.port_scratch/pragma_sweep/ov085_020c1430_1061/FilterOwnedEntries_020c1430.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov085:func_ov085_020c1dcc": {
+  "percent": 89.0,
+  "draft": "src/.port_scratch/pragma_sweep/ov085_020c1dcc_2510/func_ov085_020c1dcc.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov085:func_ov085_020c1fb4": {
+  "percent": 46.24,
+  "draft": "src/.port_scratch/pragma_sweep/ov085_020c1fb4_1125/func_ov085_020c1fb4.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov086:func_ov086_020bee0c": {
+  "percent": 82.7,
+  "draft": "src/.port_scratch/b140/v/DrawRecordStatRow_020bee0c.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov086:func_ov086_020bf9d4": {
+  "percent": 97.2,
+  "draft": "src/.port_scratch/pragma_sweep/ov086_020bf9d4_8595/DrawRecordScoreRow_020bf9d4.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov087:func_ov087_020c5200": {
+  "percent": 89.02,
+  "draft": "src/.port_scratch/b142/OpenSlotDetailPanel_020c5200.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov087:func_ov087_020c5758": {
+  "percent": 72.73,
+  "draft": "src/.port_scratch/b141/FocusDefaultElementForState_020c5758.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov087:func_ov087_020c5964": {
+  "percent": 2.11,
+  "draft": "src/.port_scratch/pragma_sweep/ov087_020c5964_2514/AreSlotEntriesAllSeen_020c5964.c",
+  "compiler": "mwccarm-3.0-139"
+ },
+ "ov087:func_ov087_020c6ab0": {
+  "percent": 92.31,
+  "draft": "src/.port_scratch/pragma_sweep/ov087_020c6ab0_9281/func_ov087_020c6ab0.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov087:func_ov087_020c7c18": {
+  "percent": 86.36,
+  "draft": "src/.port_scratch/me/IsNeighbourEntryValid_020c7c18.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov091:func_ov091_020c0144": {
+  "percent": 85.49,
+  "draft": "src/.port_scratch/pragma_sweep/ov091_020c0144_0592/RefreshScrollList_020c0144.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov093:func_ov093_020bf3d8": {
+  "percent": 68.38,
+  "draft": "src/.port_scratch/pragma_sweep/ov093_020bf3d8_3306/func_ov093_020bf3d8.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov093:func_ov093_020bf67c": {
+  "percent": 73.64,
+  "draft": "src/.port_scratch/b146/func_ov093_020bf67c.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov093:func_ov093_020bfac4": {
+  "percent": 34.53,
+  "draft": "src/.port_scratch/b146/v2/func_ov093_020bfac4.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov093:func_ov093_020c06ec": {
+  "percent": 96.77,
+  "draft": "src/.port_scratch/pragma_sweep/ov093_020c06ec_4434/func_ov093_020c06ec.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov093:func_ov093_020c0cb0": {
+  "percent": 61.46,
+  "draft": "src/.port_scratch/b147/c0cb0/func_ov093_020c0cb0.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov093:func_ov093_020c0fb0": {
+  "percent": 93.98,
+  "draft": "src/.port_scratch/big_020c0fb0/l/BuildAchievementList_020c0fb0.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov093:func_ov093_020c2610": {
+  "percent": 62.84,
+  "draft": "src/.port_scratch/b146/func_ov093_020c2610.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov093:func_ov093_020c2b04": {
+  "percent": 55.32,
+  "draft": "src/.port_scratch/pragma_sweep/ov093_020c2b04_7605/LoadUnlockedEntryTiles_020c2b04.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov095:func_ov095_020beb00": {
+  "percent": 86.27,
+  "draft": "src/.port_scratch/b147/InitGridMenu_020beb00.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov095:func_ov095_020bf084": {
+  "percent": 96.55,
+  "draft": "src/.port_scratch/pragma_sweep/ov095_020bf084_8192/SetupGridMenuDisplay_020bf084.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov095:func_ov095_020bf350": {
+  "percent": 39.34,
+  "draft": "src/.port_scratch/pragma_sweep/ov095_020bf350_0040/CopyTiledRegion_020bf350.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov095:func_ov095_020bf824": {
+  "percent": 46.94,
+  "draft": "src/.port_scratch/pragma_sweep/ov095_020bf824_5234/InitPanelTextLayers_020bf824.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov095:func_ov095_020c09f8": {
+  "percent": 55.0,
+  "draft": "src/.port_scratch/pragma_sweep/ov095_020c09f8_4230/CreateGridCell_020c09f8.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov095:func_ov095_020c0ce0": {
+  "percent": 92.77,
+  "draft": "src/.port_scratch/b148/MoveGridCursorDown_020c0ce0.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov097:func_ov097_020bf44c": {
+  "percent": 72.19,
+  "draft": "src/.port_scratch/b149/v3/SetupMenuDisplay_020bf44c.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov097:func_ov097_020bf93c": {
+  "percent": 65.35,
+  "draft": "src/.port_scratch/pragma_sweep/ov097_020bf93c_0389/InitMenuTextLayers_020bf93c.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov097:func_ov097_020bfb38": {
+  "percent": 95.71,
+  "draft": "src/.port_scratch/b149/RefreshListPanels_020bfb38.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov097:func_ov097_020c02f4": {
+  "percent": 96.75,
+  "draft": "src/.port_scratch/b149/SetupScrollList_020c02f4.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov097:func_ov097_020c08b4": {
+  "percent": 58.46,
+  "draft": "src/.port_scratch/b149/v6/RefreshScrollList_020c08b4.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov097:func_ov097_020c1580": {
+  "percent": 70.62,
+  "draft": "src/.port_scratch/b149/v7/TickEntryTransition_020c1580.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov097:func_ov097_020c1a48": {
+  "percent": 58.03,
+  "draft": "src/.port_scratch/b150/DrawGaugeSprite_020c1a48.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov099:func_ov099_020bf190": {
+  "percent": 84.21,
+  "draft": "src/.port_scratch/pragma_sweep/ov099_020bf190_9766/SetupViewerDisplay_020bf190.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov099:func_ov099_020bf5d4": {
+  "percent": 53.85,
+  "draft": "src/.port_scratch/b151/InitViewerTextLayers_020bf5d4.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov099:func_ov099_020c0b3c": {
+  "percent": 96.77,
+  "draft": "src/.port_scratch/pragma_sweep/ov099_020c0b3c_2961/InitScrollList_020c0b3c.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov099:func_ov099_020c11b4": {
+  "percent": 87.05,
+  "draft": "src/.port_scratch/pragma_sweep/ov099_020c11b4_6795/UpdateScrollList_020c11b4.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov099:func_ov099_020c14b8": {
+  "percent": 31.11,
+  "draft": "src/.port_scratch/pragma_sweep/ov099_020c14b8_3761/InitEnemyEntryStates_020c14b8.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov099:func_ov099_020c156c": {
+  "percent": 52.78,
+  "draft": "src/.port_scratch/pragma_sweep/ov099_020c156c_3773/RefreshEnemyListSlots_020c156c.c",
+  "compiler": "mwccarm-3.0-139"
+ },
+ "ov099:func_ov099_020c1b4c": {
+  "percent": 73.39,
+  "draft": "src/.port_scratch/pragma_sweep/ov099_020c1b4c_8144/AttachModelBones_020c1b4c.c",
+  "compiler": "mwccarm-3.0-139"
+ },
+ "ov099:func_ov099_020c1d5c": {
+  "percent": 46.6,
+  "draft": "src/.port_scratch/b151/ApplyModelPoseAdjust_020c1d5c.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov101:func_ov101_020bf004": {
+  "percent": 95.21,
+  "draft": "src/.port_scratch/pragma_sweep/ov101_020bf004_3712/SetupDisplayLayers_020bf004.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov101:func_ov101_020bf400": {
+  "percent": 54.31,
+  "draft": "src/.port_scratch/pragma_sweep/ov101_020bf400_2630/InitListTextLayers_020bf400.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov101:func_ov101_020c0274": {
+  "percent": 80.31,
+  "draft": "src/.port_scratch/pragma_sweep/ov101_020c0274_4377/UpdateScrollPanel_020c0274.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov103:func_ov103_020bf0a4": {
+  "percent": 87.1,
+  "draft": "src/.port_scratch/pragma_sweep/ov103_020bf0a4_3061/LoadEntryBackground_020bf0a4.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov103:func_ov103_020bf19c": {
+  "percent": 67.65,
+  "draft": "src/.port_scratch/pragma_sweep/ov103_020bf19c_8687/InitMenuTextLayers_020bf19c.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov103:func_ov103_020bf39c": {
+  "percent": 80.7,
+  "draft": "src/.port_scratch/b153/DrawMenuPage_020bf39c.c",
+  "compiler": "mwccarm-4.0-1036"
+ },
+ "ov103:func_ov103_020bfe7c": {
+  "percent": 60.51,
+  "draft": "src/.port_scratch/pragma_sweep/ov103_020bfe7c_4673/RefreshListPanel_020bfe7c.c",
+  "compiler": "mwccarm-3.0-139"
+ }
+}

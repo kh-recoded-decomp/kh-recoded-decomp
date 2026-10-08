@@ -59,8 +59,9 @@ def percent(part: int, whole: int) -> float:
 
 def measures(code: int, matched_code: int, data: int, matched_data: int,
              functions: int, matched_functions: int, units: int,
-             complete_code: int = 0, complete_units: int = 0) -> dict:
-    return {"fuzzy_match_percent": percent(matched_code, code),
+             complete_code: int = 0, complete_units: int = 0, fuzzy_code: float | None = None) -> dict:
+    fuzzy_code = matched_code if fuzzy_code is None else fuzzy_code
+    return {"fuzzy_match_percent": percent(fuzzy_code, code),
             "total_code": code, "matched_code": matched_code,
             "matched_code_percent": percent(matched_code, code),
             "total_data": data, "matched_data": matched_data,
@@ -76,9 +77,10 @@ def sum_measures(items: list[dict]) -> dict:
     keys = ("total_code", "matched_code", "total_data", "matched_data", "total_functions", "matched_functions",
             "complete_code", "total_units", "complete_units")
     total = {key: sum(item[key] for item in items) for key in keys}
+    total["fuzzy_code"] = sum(item["fuzzy_match_percent"] * item["total_code"] / 100 for item in items)
     return measures(total["total_code"], total["matched_code"], total["total_data"], total["matched_data"],
                     total["total_functions"], total["matched_functions"], total["total_units"],
-                    total["complete_code"], total["complete_units"])
+                    total["complete_code"], total["complete_units"], total["fuzzy_code"])
 
 
 def load_linked() -> set[tuple[str, str]]:
@@ -97,13 +99,16 @@ def build_report() -> dict:
         for m in json.loads(asm_path.read_text(encoding="utf-8"))["matches"]:
             matches.setdefault((m["module"], m["symbol"]), m)
     data_matches = json.loads((ROOT / "data_matches.json").read_text(encoding="utf-8"))["data"]
+    # Best-draft scores of unmatched functions (tools/fuzzy_score.py); never counted as matched.
+    fuzzy_path = ROOT / "fuzzy.json"
+    fuzzy = json.loads(fuzzy_path.read_text(encoding="utf-8")) if fuzzy_path.exists() else {}
     linked = load_linked()
     units = []
     for module, config_dir in module_dirs():
         spans = header_spans(config_dir)
         code_ranges = spans.get("code", [])
         base = min(start for start, _ in code_ranges) if code_ranges else 0
-        functions = []
+        functions, matched_names = [], set()
         for line in (config_dir / "symbols.txt").read_text(encoding="utf-8").splitlines():
             found = SYMBOL_RE.match(line)
             if not found or not int(found.group(2), 16):
@@ -114,15 +119,18 @@ def build_report() -> dict:
             metadata = {"virtual_address": address}
             if match:
                 metadata["demangled_name"] = Path(match["source"]).stem
-            functions.append({"name": symbol, "size": size,
-                              "fuzzy_match_percent": 100.0 if match else 0.0,
+            score = 100.0 if match else min(fuzzy.get(f"{module}:{symbol}", {}).get("percent", 0.0), 99.9)
+            functions.append({"name": symbol, "size": size, "fuzzy_match_percent": score,
                               "address": address - base, "metadata": metadata})
+            if match:
+                matched_names.add(symbol)
         functions.sort(key=lambda f: f["metadata"]["virtual_address"])
         code = union_size(code_ranges)
-        matched_code = sum(f["size"] for f in functions if f["fuzzy_match_percent"])
+        matched_code = sum(f["size"] for f in functions if f["name"] in matched_names)
+        fuzzy_code = sum(f["size"] * f["fuzzy_match_percent"] / 100 for f in functions)
         linked_code = sum(f["size"] for f in functions
-                          if f["fuzzy_match_percent"] and (module, f["name"]) in linked)
-        sections = [{"name": ".text", "size": code, "fuzzy_match_percent": percent(matched_code, code),
+                          if f["name"] in matched_names and (module, f["name"]) in linked)
+        sections = [{"name": ".text", "size": code, "fuzzy_match_percent": percent(fuzzy_code, code),
                      "address": 0, "metadata": {"virtual_address": base}}]
         data_total = data_matched = 0
         for kind in DATA_KINDS:
@@ -144,8 +152,8 @@ def build_report() -> dict:
             metadata["module_id"] = int(module[2:])
         units.append({"name": module,
                       "measures": measures(code, matched_code, data_total, data_matched, len(functions),
-                                           sum(1 for f in functions if f["fuzzy_match_percent"]), 1,
-                                           linked_code, int(bool(code) and linked_code == code)),
+                                           len(matched_names), 1,
+                                           linked_code, int(bool(code) and linked_code == code), fuzzy_code),
                       "sections": sections, "functions": functions, "metadata": metadata})
     categories = [{"id": cid, "name": name,
                    "measures": sum_measures([u["measures"] for u in units
