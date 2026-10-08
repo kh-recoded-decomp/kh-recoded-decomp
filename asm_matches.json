@@ -835,6 +835,25 @@
     },
     {
       "module": "arm9",
+      "symbol": "func_02003e28",
+      "name": "OSi_DisplayExContext",
+      "language": "asm",
+      "source": "src/arm9/library_nitro_os/OSi_DisplayExContext_02003e28.c",
+      "source_symbol": "OSi_DisplayExContext_02003e28",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_02003b50": "0x2003b50",
+        "func_02003b60": "0x2003b60",
+        "data_02056df0": "0x2056df0",
+        "data_02056e20": "0x2056e20",
+        "data_02056df4": "0x2056df4",
+        "data_02056dfc": "0x2056dfc"
+      },
+      "evidence": "NitroSDK C function with an inline asm block (as in the 358/2 Days decomp); byte-exact"
+    },
+    {
+      "module": "arm9",
       "symbol": "func_0200442c",
       "name": "OSi_AlarmHandler",
       "language": "asm",
@@ -942,6 +961,18 @@
       "mode": "arm",
       "bindings": {},
       "evidence": "Original assembly; ported from the EU build's verified stub libs/nitro/os/asm_stubs/auto/OS_SpinWaitCpuCycles.c"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_02004b64",
+      "name": "OS_CountZeroBits",
+      "language": "asm",
+      "source": "src/arm9/library_nitro_os/OS_CountZeroBits_02004b64.c",
+      "source_symbol": "OS_CountZeroBits_02004b64",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {},
+      "evidence": "NitroSDK C helper whose body is an inline asm clz; byte-exact"
     },
     {
       "module": "arm9",
@@ -1369,6 +1400,20 @@
     },
     {
       "module": "itcm",
+      "symbol": "func_01ff8420",
+      "name": "OSi_ReloadRomData",
+      "language": "asm",
+      "source": "src/itcm/library_nitro_os/OSi_ReloadRomData_01ff8420.c",
+      "source_symbol": "OSi_ReloadRomData_01ff8420",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_01ff84e0": "0x1ff84e0"
+      },
+      "evidence": "NitroSDK C function around an inline asm ROM reload block; byte-exact"
+    },
+    {
+      "module": "itcm",
       "symbol": "func_01ff8684",
       "name": "MIi_CpuClear16",
       "language": "asm",
@@ -1654,6 +1699,21 @@
       "mode": "thumb",
       "bindings": {},
       "evidence": "Original assembly; ported from the EU build's verified stub src/overlays/ov076/calls/SlotMenu_GetPanelStateAlt.c"
+    },
+    {
+      "module": "ov104",
+      "symbol": "func_ov104_020d2620",
+      "name": "Encryptor_DecodeFunctionTable",
+      "language": "asm",
+      "source": "src/ov104/code_protection/Encryptor_DecodeFunctionTable_020d2620.c",
+      "source_symbol": "Encryptor_DecodeFunctionTable_020d2620",
+      "compiler": "mwccarm-3.0-139",
+      "mode": "arm",
+      "bindings": {
+        "ClassifyBranchInsn_020d25e4": "0x20d25e4",
+        "DSProt_BSS_020d3720": "0x20d3720"
+      },
+      "evidence": "DSProt C with an inline asm cache flush, same code as the EU match; byte-exact"
     }
   ]
 }
