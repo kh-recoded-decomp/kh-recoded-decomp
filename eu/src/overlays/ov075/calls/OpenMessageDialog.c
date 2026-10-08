@@ -5,6 +5,6 @@
 #define SetUnlockableElementsVisible_020d0e64 SetUnlockableElementsVisible
 #define data_ov075_020d18e4 data_ov075_020d1904
 #define func_ov027_020ba31c func_ov027_020ba33c
-#define func_ov075_020cf368 func_ov075_020cf388
+#define func_ov075_020cf368 MeasureOv075MessageTiles
 #define func_ov075_020cf430 OpenDefaultDialog
 #include "src/ov075/unclassified_helpers/OpenMessageDialog_020c8ba0.c"

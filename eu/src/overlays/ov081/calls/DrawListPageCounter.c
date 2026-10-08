@@ -1,5 +1,5 @@
 #define CountUnlockedListEntries_020c5460 CountUnlockedListEntries
-#define DrawBgTextLabel_020c5530 func_ov081_020c5550
+#define DrawBgTextLabel_020c5530 DrawBgTextLabel
 #define DrawListPageCounter_020c5654 DrawListPageCounter
 #define data_ov081_020c5d40 data_ov081_020c5d60
 #define data_ov081_020c5d50 data_ov081_020c5d70

@@ -1,4 +1,4 @@
-#define DrawBgTextLabel_020c5530 func_ov081_020c5550
+#define DrawBgTextLabel_020c5530 DrawBgTextLabel
 #define G2_GetBG1ScrPtr_02006e34 G2_GetBG1ScrPtr
 #define G2_GetBG2ScrPtr_02006e88 G2_GetBG2ScrPtr
 #define G2_GetBG3ScrPtr_02006f80 G2_GetBG3ScrPtr

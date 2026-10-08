@@ -104,6 +104,10 @@ src/overlays/ov013/calls/func_ov013_02070cb4.c:
     complete
     .text       start:0x02070cb4 end:0x02070ce8
 
+src/overlays/ov013/calls/RefreshPanelSlotMarkers.c:
+    complete
+    .text       start:0x02070ce8 end:0x02070dd0
+
 src/overlays/ov013/calls/ShiftPanelSlotsDown.c:
     complete
     .text       start:0x02070dd0 end:0x02070e40

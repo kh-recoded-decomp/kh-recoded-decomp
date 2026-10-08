@@ -12,5 +12,6 @@
 #define SpawnDropsPerTenUnits_0206671c UpdateMenuTouch
 #define UpdatePanelScrollState_02071b6c UpdatePanelScrollState
 #define UpdateWidgetRootOnly_020b8ca8 UpdateWidgetRootOnly
+#define func_ov013_02070ce8 RefreshPanelSlotMarkers
 #define func_ov027_020b90a4 FindWidgetById
 #include "src/ov013/panel_state/UpdatePanelScrollState_02071b6c.c"

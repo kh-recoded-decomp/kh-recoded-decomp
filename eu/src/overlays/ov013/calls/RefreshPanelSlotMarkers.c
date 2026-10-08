@@ -1,0 +1,6 @@
+#define func_ov013_02070ce8 RefreshPanelSlotMarkers
+#define g_panelState_02074ce0 data_ov013_02074ce0
+#define func_ov027_020b90a4 FindWidgetById
+#define func_ov027_020b9580 SetEntrySlotsVisible
+#define func_ov027_020b96a0 func_ov027_020b96c0
+#include "src/ov013/panel_state/func_ov013_02070ce8.c"

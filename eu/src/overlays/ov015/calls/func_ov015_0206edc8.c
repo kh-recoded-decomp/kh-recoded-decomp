@@ -7,7 +7,7 @@ extern void ActivatePanelSlotAB(int mode, int x, int y, int size, int textId);
 extern int func_ov002_02061930(void);
 extern int func_ov002_0206193c(void);
 extern int CopyWideStringWithNewline(void *buf, int bufLen, int value, int digits);
-extern void func_ov002_020627e8(int size[2], int mode, int textId);
+extern void MeasurePanelTextPrimary(int size[2], int mode, int textId);
 extern s8 *data_ov015_0207e960;
 
 void func_ov015_0206edc8(void) {
@@ -28,7 +28,7 @@ void func_ov015_0206edc8(void) {
     ActivatePanelSlotAB(1, 0x16, 0x51, 0xc, textId);
 
     textId = func_ov002_020621c4(data_ov015_0207e960[3] + 0x40, 0);
-    func_ov002_020627e8(size, 1, textId);
+    MeasurePanelTextPrimary(size, 1, textId);
 
     textId = func_ov002_020621c4(data_ov015_0207e960[3] + 0x40, 0);
     ActivatePanelSlotAB(1, 0x52, 0x9c - size[1] / 2, 2, textId);

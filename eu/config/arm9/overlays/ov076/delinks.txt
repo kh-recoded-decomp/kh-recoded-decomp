@@ -488,6 +488,14 @@ src/overlays/ov076/calls/MessageWindow_Open.c:
     complete
     .text       start:0x020cb1c4 end:0x020cb258
 
+src/overlays/ov076/calls/MeasureOv076TextRect.c:
+    complete
+    .text       start:0x020cb258 end:0x020cb2d8
+
+src/overlays/ov076/calls/MenuPanel_MeasureMessage.c:
+    complete
+    .text       start:0x020cb2d8 end:0x020cb3a0
+
 src/overlays/ov076/calls/MenuPanel_InitStandard.c:
     complete
     .text       start:0x020cb3a0 end:0x020cb3c8

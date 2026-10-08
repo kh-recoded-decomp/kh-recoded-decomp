@@ -485,6 +485,10 @@ src/calls/OS_InitThread.c:
     complete
     .text       start:0x02002760 end:0x020028ac
 
+src/calls/OS_CreateThread.c:
+    complete
+    .text       start:0x020028ac end:0x0200299c
+
 libs/nitro/os/calls/OS_ExitThread.c:
     complete
     .text       start:0x0200299c end:0x020029bc
@@ -4037,6 +4041,10 @@ libs/nns/g2d/auto/InitCharCanvas.c:
     complete
     .text       start:0x020178fc end:0x02017924
 
+src/calls/NNS_G2dCharCanvasDrawChar.c:
+    complete
+    .text       start:0x02017924 end:0x02017a40
+
 libs/nns/g2d/calls/NNS_G2dCharCanvasInitForBG.c:
     complete
     .text       start:0x02017a40 end:0x02017a6c
@@ -6676,6 +6684,10 @@ src/calls/QueueTypedMessageWithHandle_0202cb38.c:
 src/calls/OpenAndClassifyFile.c:
     complete
     .text       start:0x0202cb90 end:0x0202cc80
+
+src/calls/Msg_OpenContainerAndReadHeader.c:
+    complete
+    .text       start:0x0202cc80 end:0x0202cd8c
 
 src/calls/ZeroHalfThenFree.c:
     complete

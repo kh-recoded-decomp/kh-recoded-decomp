@@ -1,0 +1,10 @@
+#define DrawBgTextLabel_020c5530 DrawBgTextLabel
+#define data_020c5c64 data_ov081_020c5c64
+#define data_020c5c74 data_ov081_020c5c74
+#define G2D_InitializeLinearCanvas_02017a2c NNS_G2dCharCanvasInitForBG
+#define func_ov039_020bc994 GetMenuFont10
+#define DrawNnsG2dText_02017ff0 NNSi_G2dTextCanvasDrawTaggedText
+#define func_ov081_020c5510 ApplyTextColorTag
+#define func_0200344c DC_FlushRange
+#define FillBackgroundTileRectangle_02017adc NNS_G2dMapScrToCharText
+#include "src/ov081/unclassified_helpers/DrawBgTextLabel_020c5530.c"

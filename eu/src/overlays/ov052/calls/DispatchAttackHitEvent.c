@@ -4,7 +4,7 @@
 #define DispatchStageEventArg_020878d4 DispatchStageEventArg
 #define GetLinkedAngleOffset_020ceb7c GetLinkedAngleOffset
 #define IsPlayerEntryFlagSet_02050014 IsPlayerEntryFlagSet
-#define ScaleVecFx32_01ffafb4 func_01ffafb4
+#define ScaleVecFx32_01ffafb4 ScaleVecFx32
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define data_0205356c data_02053580
 #define func_01ff8830 MI_CpuFill8

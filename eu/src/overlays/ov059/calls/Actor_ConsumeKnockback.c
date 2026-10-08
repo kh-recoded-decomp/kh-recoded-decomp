@@ -1,5 +1,5 @@
 #define Actor_ConsumeKnockback_020c7da8 Actor_ConsumeKnockback
-#define ScaleVecFx32_01ffafb4 func_01ffafb4
+#define ScaleVecFx32_01ffafb4 ScaleVecFx32
 #define VEC_Mag_01ff9f28 VEC_Mag
 #define VEC_Normalize_01ff9f88 VEC_Normalize
 #include "src/ov059/unclassified_helpers/Actor_ConsumeKnockback_020c7da8.c"

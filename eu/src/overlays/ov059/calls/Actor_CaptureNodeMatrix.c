@@ -1,0 +1,3 @@
+#define Actor_CaptureNodeMatrix_020cd280 Actor_CaptureNodeMatrix
+#define CaptureGeometryMatrices_02019d00 NNS_G3dGetCurrentMtx
+#include "src/ov059/unclassified_helpers/Actor_CaptureNodeMatrix_020cd280.c"

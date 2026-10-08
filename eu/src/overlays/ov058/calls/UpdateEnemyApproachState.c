@@ -3,7 +3,7 @@
 #define IsGroupMemberActive_020a8d1c IsGroupMemberActive
 #define Obj_PlaceInWorld_02035580 Obj_PlaceInWorld
 #define Obj_SetPosition_0203569c Obj_SetPosition
-#define ScaleVecFx32_01ffafb4 func_01ffafb4
+#define ScaleVecFx32_01ffafb4 ScaleVecFx32
 #define SetActorPaused_020d12f0 SetActorPaused
 #define UpdateEnemyApproachState_020d5af4 UpdateEnemyApproachState
 #define func_02036230 GetActorRegistry

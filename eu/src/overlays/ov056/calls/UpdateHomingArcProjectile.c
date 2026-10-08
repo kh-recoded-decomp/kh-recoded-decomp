@@ -7,7 +7,7 @@
 #define GetShapeCenter_0203b43c GetShapeCenter
 #define Math_AcosIdx_0202ab20 Math_AcosIdx
 #define OffsetBoxByDelta_0203ac70 OffsetBoxByDelta
-#define ScaleVecFx32_01ffafb4 func_01ffafb4
+#define ScaleVecFx32_01ffafb4 ScaleVecFx32
 #define SweepWorldCollision_020364a0 SweepWorldCollision
 #define UpdateHomingArcProjectile_020d5f7c UpdateHomingArcProjectile
 #define VEC_Add_01ff9e0c VEC_Add

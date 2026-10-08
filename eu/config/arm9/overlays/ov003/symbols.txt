@@ -1,6 +1,6 @@
 MovieScene_UpdateFade kind:function(arm,size=0x7c) addr:0x02063a20
 MovieScene_UpdateGlobals kind:function(arm,size=0x44) addr:0x02063a9c
-func_ov003_02063ae0 kind:function(arm,size=0xd0) addr:0x02063ae0
+MoviePlayer_SetupDisplay kind:function(arm,size=0xd0) addr:0x02063ae0
 MovieScene_Init kind:function(arm,size=0x25c) addr:0x02063bb0
 MovieScene_Shutdown kind:function(arm,size=0x88) addr:0x02063e0c
 MovieScene_StartStream kind:function(arm,size=0x114) addr:0x02063e94

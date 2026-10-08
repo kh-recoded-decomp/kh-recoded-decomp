@@ -8,5 +8,5 @@
 #define func_ov076_020c8178 func_ov076_020c8198
 #define func_ov076_020c8934 SlotMenu_OpenSlotPanel
 #define func_ov076_020c8a70 SlotMenu_OnMessageConfirm
-#define func_ov076_020cb2b8 func_ov076_020cb2d8
+#define func_ov076_020cb2b8 MenuPanel_MeasureMessage
 #include "src/ov076/unclassified_helpers/SlotMenu_ShowResultMessage_020c61c8.c"

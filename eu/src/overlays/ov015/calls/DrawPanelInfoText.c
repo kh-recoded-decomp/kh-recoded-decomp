@@ -1,5 +1,6 @@
 #define OS_SNPrintf_0202e080 OS_SNPrintf_0202e094
 #define func_ov002_02061964 ActivatePanelSlotCD
+#define func_ov002_02062890 MeasurePanelTextSecondary
 #define func_ov002_02066484 CopyWideStringWithNewline
 #define func_ov002_02066c78 DispatchContextCommand
 #define func_ov015_0206eba4 DrawPanelInfoText

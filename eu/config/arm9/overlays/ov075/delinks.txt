@@ -424,6 +424,14 @@ src/overlays/ov075/calls/OpenMessageWindow.c:
     complete
     .text       start:0x020cf274 end:0x020cf308
 
+src/overlays/ov075/calls/MeasureOv075TextRect.c:
+    complete
+    .text       start:0x020cf308 end:0x020cf388
+
+src/overlays/ov075/calls/MeasureOv075MessageTiles.c:
+    complete
+    .text       start:0x020cf388 end:0x020cf450
+
 src/overlays/ov075/calls/OpenDefaultDialog.c:
     complete
     .text       start:0x020cf450 end:0x020cf478

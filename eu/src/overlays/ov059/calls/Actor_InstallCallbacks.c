@@ -1,5 +1,5 @@
 #define Actor_AddExtraVelocity_020cbfd0 Actor_AddExtraVelocity
-#define Actor_Draw_020cbde0 func_ov059_020cbe00
+#define Actor_Draw_020cbde0 Actor_Draw
 #define Actor_GetReadyFlags_020ccc68 Actor_GetReadyFlags
 #define Actor_InstallCallbacks_020cbef8 Actor_InstallCallbacks
 #define Actor_Update_020cbe98 Actor_Update

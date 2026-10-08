@@ -12,7 +12,7 @@ extern void DC_FlushRange(const void *addr, u32 size);
 extern void GX_LoadBGPltt(void *addr, u32 val, u32 size);
 extern u32 func_ov027_020ba1f8();
 extern void func_ov027_020ba200(u32 entry, u32 flag);
-extern void func_ov001_0207a1d0(u32 field);
+extern void OpenMessageWindowLayers(u32 field);
 
 extern u32 data_ov001_020a04e4;
 
@@ -34,5 +34,5 @@ void func_ov001_02078d7c(u32 entry, u32 unused1, u32 unused2, u32 unused3)
     DC_FlushRange(palette->pRawData, 0x200);
     GX_LoadBGPltt(palette->pRawData, 0, 0x1a0);
     func_ov027_020ba200(entry, 1);
-    func_ov001_0207a1d0(context + 4);
+    OpenMessageWindowLayers(context + 4);
 }

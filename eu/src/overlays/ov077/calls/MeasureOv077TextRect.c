@@ -1,0 +1,5 @@
+#define func_ov077_020c826c MeasureOv077TextRect
+#define NNSi_G2dFontGetTextHeight_02016b4c NNSi_G2dFontGetTextHeight
+#define G2D_FindGlyphIndex_02016a10 NNS_G2dFontFindGlyphIndex
+#define G2D_GetGlyphWidths_02016a58 NNS_G2dFontGetCharWidthsFromIndex
+#include "src/ov077/unclassified_helpers/func_ov077_020c826c.c"

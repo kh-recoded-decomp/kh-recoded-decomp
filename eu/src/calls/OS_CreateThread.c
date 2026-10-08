@@ -1,0 +1,9 @@
+#define OS_CreateThread_02002898 OS_CreateThread
+#define func_02004938 OS_DisableInterrupts
+#define func_0200494c OS_RestoreInterrupts
+#define AllocateNextThreadId_0200249c OSi_GetUnusedThreadId
+#define InsertThreadByPriority_020025e4 OSi_InsertThreadToList
+#define func_02002ddc OS_InitContext
+#define func_01ff86fc MIi_CpuClear32
+#define ExitCurrentThread_02002988 OS_ExitThread
+#include "src/arm9/library_nitro_os/OS_CreateThread_02002898.c"

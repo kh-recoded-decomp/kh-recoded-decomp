@@ -41,7 +41,7 @@ extern char OVERLAY_22_ID[];
 extern void *NNSi_FndGetCurrentRootHeap(void);
 extern void InitPxiChannelsPair(void);
 extern void func_02029f8c(int processor, int overlayId);
-extern void func_ov003_02063ae0(void);
+extern void MoviePlayer_SetupDisplay(void);
 extern void MI_CpuFill8(void *dst, int value, int size);
 extern int func_0200146c(void *font, char *name);
 extern void GX_LoadBGPltt(void *src, u32 offset, u32 size);
@@ -69,7 +69,7 @@ void *MovieScene_Init(int fromTitle)
     scene = NNSi_FndGetCurrentRootHeap();
     InitPxiChannelsPair();
     func_02029f8c(0, (int)OVERLAY_22_ID);
-    func_ov003_02063ae0();
+    MoviePlayer_SetupDisplay();
     data_ov003_020658c0 = scene;
     scene->state = 0;
     scene->flags = 0;

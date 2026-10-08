@@ -1,0 +1,9 @@
+#define MoviePlayer_SetupDisplay_02063ae0 MoviePlayer_SetupDisplay
+#define SetBrightnessAndSyncMain_02029e7c SetBrightnessAndSyncMain
+#define SetSecondaryBrightness_02029ed0 SetSecondaryBrightness
+#define ResetDisplayHardware_02029bfc ResetDisplayHardware
+#define SetupMovieScreenHardware_020a831c SetupMovieScreenHardware
+#define GX_SetGraphicsMode_020066c4 GX_SetGraphicsMode
+#define GX_SetBankForBG_02008358 GX_SetBankForBG
+#define GX_SetBankForBGExtPltt_0200868c GX_SetBankForBGExtPltt
+#include "src/ov003/video_playback/MoviePlayer_SetupDisplay_02063ae0.c"

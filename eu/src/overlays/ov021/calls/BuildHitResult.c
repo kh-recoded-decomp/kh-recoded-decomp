@@ -3,7 +3,7 @@
 #define FixedPointMultiply12 FX_Mul
 #define GetShapeCenter_0203b43c GetShapeCenter
 #define IsObjectIdle_020ac7f0 IsObjectIdle
-#define ScaleVecFx32_01ffafb4 func_01ffafb4
+#define ScaleVecFx32_01ffafb4 ScaleVecFx32
 #define VEC_Add_01ff9e0c VEC_Add
 #define func_ov001_020863e0 func_ov001_02086408
 #define func_ov021_020abebc ComputeKnockbackVector

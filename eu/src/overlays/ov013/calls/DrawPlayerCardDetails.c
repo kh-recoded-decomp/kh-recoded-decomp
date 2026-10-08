@@ -4,7 +4,7 @@
 #define CountFlaggedCategorySelections_0206a45c CountFlaggedCategorySelections
 #define DispatchContextCommand_02066c78 DispatchContextCommand
 #define DrawPlayerCardDetails_0206e574 DrawPlayerCardDetails
-#define MeasurePanelTextPrimary_020627e8 func_ov002_020627e8
+#define MeasurePanelTextPrimary_020627e8 MeasurePanelTextPrimary
 #define OS_SNPrintf_0202e080 OS_SNPrintf_0202e094
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define StopSeqArcOrDefault_0204d960 StopSeqArcOrDefault

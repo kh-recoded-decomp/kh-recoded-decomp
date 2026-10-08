@@ -163,7 +163,7 @@ extern void VEC_Normalize(const VecFx32 *src, VecFx32 *dst);
 extern fx32 func_01ffaff4(const VecFx32 *src, VecFx32 *dst);
 extern fx32 VEC_Mag(const VecFx32 *v);
 extern void VEC_MultAdd(fx32 scale, const VecFx32 *a, const VecFx32 *b, VecFx32 *dst);
-extern void func_01ffafb4(fx32 scale, const VecFx32 *src, VecFx32 *dst);
+extern void ScaleVecFx32(fx32 scale, const VecFx32 *src, VecFx32 *dst);
 extern u16 FX_Atan2Idx(fx32 y, fx32 x);
 extern void CameraPath_Start(int path);
 extern int Anim_GetFrame(void *anim, int track);
@@ -641,7 +641,7 @@ void UpdatePillarRide(Actor *actor)
                 index = (u16)Camera_GetDriftHeading() >> 4;
                 MTX_RotY33_(&driftRot, data_02053580[index], data_02053580[(0x400 - index) & 0xfff]);
                 MTX_MultVec33(&dir, &driftRot, &dir);
-                func_01ffafb4(speed, &dir, &motion);
+                ScaleVecFx32(speed, &dir, &motion);
                 VEC_Add(&motion, &pos, &target);
                 VEC_Subtract(&target, &task->origin, &dir);
                 dir.y = 0;

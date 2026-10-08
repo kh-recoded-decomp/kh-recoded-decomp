@@ -2,7 +2,7 @@
 #define AdvanceToSecondPhase_020ab5f0 AdvanceToSecondPhase
 #define FindStrongestHit_020ab0c8 FindStrongestHit
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField
-#define ScaleVecFx32_01ffafb4 func_01ffafb4
+#define ScaleVecFx32_01ffafb4 ScaleVecFx32
 #define UpdateHomingBounceProjectile_020d48d8 UpdateHomingBounceProjectile
 #define VEC_Add_01ff9e0c VEC_Add
 #define VEC_Subtract_01ff9e3c VEC_Subtract

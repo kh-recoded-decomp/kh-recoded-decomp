@@ -1,0 +1,5 @@
+#define MenuPanel_MeasureMessage_020cb2b8 MenuPanel_MeasureMessage
+#define G2D_InitializeLinearCanvas_02017a2c NNS_G2dCharCanvasInitForBG
+#define func_ov039_020bc994 GetMenuFont10
+#define func_ov076_020cb238 MeasureOv076TextRect
+#include "src/ov076/unclassified_helpers/MenuPanel_MeasureMessage_020cb2b8.c"

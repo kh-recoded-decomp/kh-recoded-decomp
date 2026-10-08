@@ -6,7 +6,7 @@
 #define FixedPointMultiply12 FX_Mul
 #define GetStageActor_0209c040 GetStageActor
 #define HermiteInterpolateVec_020d5348 HermiteInterpolateVec
-#define ScaleVecFx32_01ffafb4 func_01ffafb4
+#define ScaleVecFx32_01ffafb4 ScaleVecFx32
 #define SetActorFacingDegrees_02090f3c SetActorFacingDegrees
 #define VEC_Add_01ff9e0c VEC_Add
 #define VEC_CrossProduct_01ff9ea8 VEC_CrossProduct

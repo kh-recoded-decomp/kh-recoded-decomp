@@ -5,7 +5,7 @@
 #define InitPathSegment_020ac104 InitPathSegment
 #define IsObjectIdle_020ac7f0 IsObjectIdle
 #define ResolveHitContacts_020abc40 ResolveHitContacts
-#define ScaleVecFx32_01ffafb4 func_01ffafb4
+#define ScaleVecFx32_01ffafb4 ScaleVecFx32
 #define VEC_Add_01ff9e0c VEC_Add
 #define func_0202a9d0 func_0202a9e4
 #define func_ov001_0208789c func_ov001_020878c4

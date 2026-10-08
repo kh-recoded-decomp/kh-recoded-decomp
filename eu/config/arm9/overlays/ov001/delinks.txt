@@ -2540,6 +2540,10 @@ src/overlays/ov001/calls/RunFieldListCallbacks.c:
     complete
     .text       start:0x0206e7e4 end:0x0206e818
 
+src/overlays/ov001/calls/ConfigureFieldBgLayers.c:
+    complete
+    .text       start:0x0206e818 end:0x0206e8c4
+
 src/overlays/ov001/calls/UpdateFieldWindowFade.c:
     complete
     .text       start:0x0206e8c4 end:0x0206e9a8
@@ -3735,6 +3739,10 @@ src/overlays/ov001/calls/LoadMenuEntryPanel.c:
 src/overlays/ov001/calls/LoadMenuEntryGraphic.c:
     complete
     .text       start:0x0207a1a8 end:0x0207a1d0
+
+src/overlays/ov001/calls/OpenMessageWindowLayers.c:
+    complete
+    .text       start:0x0207a1d0 end:0x0207a260
 
 src/overlays/ov001/calls/CloseModeWindow.c:
     complete

@@ -6,7 +6,7 @@
 #define VEC_Mag_01ff9f28 VEC_Mag
 #define VEC_Normalize_01ff9f88 VEC_Normalize
 #define VEC_MultAdd_01ffa09c VEC_MultAdd
-#define ScaleVecFx32_01ffafb4 func_01ffafb4
+#define ScaleVecFx32_01ffafb4 ScaleVecFx32
 #define FixedPointMultiply12 FX_Mul
 #define GetModeContext_02036cd8 GetModeContext
 #define MoveActorAndSnapToGround_02037870 MoveActorAndSnapToGround

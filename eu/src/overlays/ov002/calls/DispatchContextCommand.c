@@ -20,6 +20,7 @@
 #define SetContextConfigFlag1ad0_02067a5c SetContextConfigFlag1ad0
 #define SetContextConfigNibble_02067494 SetContextConfigNibble
 #define SetSlotConfigFlag38_020677e4 SetSlotConfigFlag38
+#define func_ov002_02067564 StampContextDateTime
 #define WriteGlobalPackedFlag_020679dc WriteGlobalPackedFlag
 #define func_ov002_02066ff8 AppendProfileHistory
 #define func_ov002_02067170 RemoveContextSlot

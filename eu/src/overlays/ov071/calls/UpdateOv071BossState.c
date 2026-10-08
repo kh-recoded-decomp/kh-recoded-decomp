@@ -25,7 +25,7 @@
 #define StopAndClearSoundEmitter_020a8e14 StopAndClearSoundEmitter
 #define GetGroupMemberData_020a8eec GetGroupMemberData
 #define FixedPointMultiply12 FX_Mul
-#define ScaleVecFx32_01ffafb4 func_01ffafb4
+#define ScaleVecFx32_01ffafb4 ScaleVecFx32
 #define UpdateIdleTimeout_0206e1c8 UpdateIdleTimeout
 #define Camera_BlendToFollowView_020c1304 Camera_BlendToFollowView
 #define FX_Div_01ff9c84 FX_Div

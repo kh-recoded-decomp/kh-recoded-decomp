@@ -1,0 +1,4 @@
+#define G2D_DrawCharGlyph_02017910 NNS_G2dCharCanvasDrawChar
+#define G2D_FindGlyphIndex_02016a10 NNS_G2dFontFindGlyphIndex
+#define G2D_GetGlyphWidths_02016a58 NNS_G2dFontGetCharWidthsFromIndex
+#include "src/arm9/library_nns_g2d/G2D_DrawCharGlyph_02017910.c"

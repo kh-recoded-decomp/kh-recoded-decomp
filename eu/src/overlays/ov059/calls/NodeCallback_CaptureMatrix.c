@@ -1,3 +1,3 @@
-#define Actor_CaptureNodeMatrix_020cd280 func_ov059_020cd2a0
+#define Actor_CaptureNodeMatrix_020cd280 Actor_CaptureNodeMatrix
 #define NodeCallback_CaptureMatrix_020c9134 NodeCallback_CaptureMatrix
 #include "src/ov059/unclassified_helpers/NodeCallback_CaptureMatrix_020c9134.c"

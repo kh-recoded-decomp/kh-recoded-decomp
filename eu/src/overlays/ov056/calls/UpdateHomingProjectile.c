@@ -3,7 +3,7 @@
 #define FindStrongestHit_020ab0c8 FindStrongestHit
 #define FixedPointMultiply12 FX_Mul
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField
-#define ScaleVecFx32_01ffafb4 func_01ffafb4
+#define ScaleVecFx32_01ffafb4 ScaleVecFx32
 #define SteerTowardTarget_020ab1f0 SteerTowardTarget
 #define UpdateHomingProjectile_020d2e60 UpdateHomingProjectile
 #define VEC_Add_01ff9e0c VEC_Add

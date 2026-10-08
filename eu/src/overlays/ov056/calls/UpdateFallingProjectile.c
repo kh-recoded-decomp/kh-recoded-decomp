@@ -2,7 +2,7 @@
 #define AdvanceToSecondPhase_020ab5f0 AdvanceToSecondPhase
 #define FindStrongestHit_020ab0c8 FindStrongestHit
 #define FixedPointMultiply12 FX_Mul
-#define ScaleVecFx32_01ffafb4 func_01ffafb4
+#define ScaleVecFx32_01ffafb4 ScaleVecFx32
 #define SpawnSoundSlot_0204da8c SpawnSoundSlot
 #define UpdateFallingProjectile_020d6b94 UpdateFallingProjectile
 #define VEC_Add_01ff9e0c VEC_Add

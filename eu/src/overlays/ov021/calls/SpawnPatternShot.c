@@ -1,6 +1,6 @@
 #define FixedPointAtan2_020062bc FX_Atan2Idx
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField
-#define ScaleVecFx32_01ffafb4 func_01ffafb4
+#define ScaleVecFx32_01ffafb4 ScaleVecFx32
 #define SpawnPatternShot_020ae0f8 SpawnPatternShot
 #define SpawnSoundSlot_0204da8c SpawnSoundSlot
 #define SweepDropToGround_020ae3f0 SweepDropToGround

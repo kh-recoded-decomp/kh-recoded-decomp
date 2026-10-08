@@ -7,7 +7,7 @@
 #define GetWaitTargetPosition_0206c3f4 GetWaitTargetPosition
 #define MTX_MultVec33_01ff9404 MTX_MultVec33
 #define MTX_RotY33_01ff923c MTX_RotY33_
-#define ScaleVecFx32_01ffafb4 func_01ffafb4
+#define ScaleVecFx32_01ffafb4 ScaleVecFx32
 #define StageRecord_GetSlotPosition_02087c4c StageRecord_GetSlotPosition
 #define VEC_Add_01ff9e0c VEC_Add
 #define VEC_Mag_01ff9f28 VEC_Mag

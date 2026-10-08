@@ -1,6 +1,7 @@
 #define DispatchContextCommand_02066c78 DispatchContextCommand
 #define FindWidgetById_020b90a4 FindWidgetById
 #define RefreshPanelSlotDigits_0206fe50 RefreshPanelSlotDigits
+#define func_ov013_02070ce8 RefreshPanelSlotMarkers
 #define SetEntrySlotsVisible_020b9580 SetEntrySlotsVisible
 #define SlotTable_SetEntryPriority_0204f468 SlotTable_SetEntryPriority
 #define func_ov027_020b96a0 func_ov027_020b96c0

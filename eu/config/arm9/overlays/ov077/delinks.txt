@@ -276,6 +276,14 @@ src/overlays/ov077/calls/OpenMessageWindow_020c81f8.c:
     complete
     .text       start:0x020c81f8 end:0x020c828c
 
+src/overlays/ov077/calls/MeasureOv077TextRect.c:
+    complete
+    .text       start:0x020c828c end:0x020c830c
+
+src/overlays/ov077/calls/MeasureOv077MessageTiles.c:
+    complete
+    .text       start:0x020c830c end:0x020c83d4
+
 src/overlays/ov077/calls/InitDefaultMessageWindow.c:
     complete
     .text       start:0x020c83d4 end:0x020c83fc

@@ -3,6 +3,6 @@
 #define ComputeRootMotionDelta_020ce9d4 ComputeRootMotionDelta
 #define GetPlayerEntryCount_02050050 GetPlayerEntryCount
 #define HasFlagsAt0xc_020a751c HasFlagsAt0xc
-#define ScaleVecFx32_01ffafb4 func_01ffafb4
+#define ScaleVecFx32_01ffafb4 ScaleVecFx32
 #define UpdateGlideLanding_020caed4 UpdateGlideLanding
 #include "src/ov052/actor_motion/UpdateGlideLanding_020caed4.c"

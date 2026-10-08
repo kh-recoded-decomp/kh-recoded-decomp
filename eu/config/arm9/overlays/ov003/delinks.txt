@@ -11,6 +11,10 @@ src/overlays/ov003/calls/MovieScene_UpdateGlobals.c:
     complete
     .text       start:0x02063a9c end:0x02063ae0
 
+src/overlays/ov003/calls/MoviePlayer_SetupDisplay.c:
+    complete
+    .text       start:0x02063ae0 end:0x02063bb0
+
 src/overlays/ov003/calls/MovieScene_Init.c:
     complete
     .text       start:0x02063bb0 end:0x02063e0c

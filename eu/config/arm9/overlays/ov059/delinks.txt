@@ -308,6 +308,10 @@ src/overlays/ov059/calls/func_ov059_020cbdf0.c:
     complete
     .text       start:0x020cbdf0 end:0x020cbe00
 
+src/overlays/ov059/calls/Actor_Draw.c:
+    complete
+    .text       start:0x020cbe00 end:0x020cbea0
+
 src/overlays/ov059/calls/func_ov059_020cbea0.c:
     complete
     .text       start:0x020cbea0 end:0x020cbeb8
@@ -407,6 +411,10 @@ src/overlays/ov059/calls/Actor_MarkGuardBreakInState3.c:
 src/overlays/ov059/calls/Actor_InitNodeCaptureCallback.c:
     complete
     .text       start:0x020cd274 end:0x020cd2a0
+
+src/overlays/ov059/calls/Actor_CaptureNodeMatrix.c:
+    complete
+    .text       start:0x020cd2a0 end:0x020cd2e4
 
 src/overlays/ov059/calls/AddQuantizedViewAngle.c:
     complete

@@ -1,5 +1,5 @@
 #define ApplyModeFadeBlend_0207a8c8 ApplyModeFadeBlend
-#define ConfigureFieldBgLayers_0206e818 func_ov001_0206e818
+#define ConfigureFieldBgLayers_0206e818 ConfigureFieldBgLayers
 #define FindActiveRecordById_020b8184 FindActiveRecordById
 #define G2_GetBG1ScrPtr_02006e34 G2_GetBG1ScrPtr
 #define G2_GetBG3ScrPtr_02006f80 G2_GetBG3ScrPtr

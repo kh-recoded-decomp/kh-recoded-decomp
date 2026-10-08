@@ -1,0 +1,9 @@
+#define Msg_OpenContainerAndReadHeader_0202cc6c Msg_OpenContainerAndReadHeader
+#define func_0200b394 FS_InitFile
+#define FSi_WaitForCardThread_01ff8140 FSi_WaitForCardThread
+#define Msg_BuildLangPath_0202b798 Msg_BuildLangPath
+#define CallSelectionHandler_0200b740 FS_OpenFile
+#define ReadFileSync_0200b674 FS_ReadFile
+#define NNSi_FndAllocFromDefaultHeapEx_0202a19c NNS_FndAllocFromDefaultExpHeapEx
+#define func_0200b5b0 FS_CloseFile
+#include "src/arm9/shared_engine/Msg_OpenContainerAndReadHeader_0202cc6c.c"

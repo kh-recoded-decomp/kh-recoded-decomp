@@ -2,5 +2,5 @@
 #define func_01fffe28 CaptureSelectedJointMtx_01fffe28
 #define func_ov001_0206db5c GetBoundedEntryField
 #define func_ov001_020897d0 CopySessionResourceBuffer
-#define func_ov059_020cd280 func_ov059_020cd2a0
+#define func_ov059_020cd280 Actor_CaptureNodeMatrix
 #include "src/ov001/unclassified_helpers/func_ov001_020897d0.c"

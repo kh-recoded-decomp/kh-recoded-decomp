@@ -1,0 +1,4 @@
+#define MeasurePanelTextPrimary_020627e8 MeasurePanelTextPrimary
+#define G2D_MeasureTextRectangle_02016c18 NNSi_G2dFontGetTextRect
+#define g_panelState_0206c460 data_ov002_0206c460
+#include "src/ov002/panel_state/MeasurePanelTextPrimary_020627e8.c"

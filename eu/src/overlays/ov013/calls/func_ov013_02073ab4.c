@@ -7,7 +7,7 @@ extern unsigned int GetMenuCursorTouch();
 extern unsigned int RefreshProgressCaption();
 extern unsigned int func_ov013_0206fbbc();
 extern unsigned int func_ov013_020704a0();
-extern unsigned int func_ov013_02070ce8();
+extern unsigned int RefreshPanelSlotMarkers();
 extern unsigned int func_ov013_020716e4();
 
 void func_ov013_02073ab4(void) {
@@ -30,7 +30,7 @@ void func_ov013_02073ab4(void) {
         '\x01') {
       *(u8 *)(data_ov013_02074ce0 + 600 + (int)*(char *)(data_ov013_02074ce0 + 0x2f0)) = 2
       ;
-      func_ov013_02070ce8();
+      RefreshPanelSlotMarkers();
     }
     PlaySoundEffect(2,0);
     *(unsigned int *)(data_ov013_02074ce0 + 700) = 2;

@@ -21,7 +21,7 @@ typedef struct {
 } FieldManager;
 
 extern FieldManager data_ov001_020a04c4;
-extern void func_ov001_0206e818(void);
+extern void ConfigureFieldBgLayers(void);
 
 static inline void G2_SetWnd0InsidePlane(int wnd, BOOL effect)
 {
@@ -78,7 +78,7 @@ void UpdateFieldWindowFade(void)
             return;
         }
         if (size == -2) {
-            func_ov001_0206e818();
+            ConfigureFieldBgLayers();
         }
         GX_SetVisibleWnd(0);
         screen->fadeSize = 0;

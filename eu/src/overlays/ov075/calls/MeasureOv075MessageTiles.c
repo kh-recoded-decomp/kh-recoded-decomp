@@ -1,0 +1,5 @@
+#define MeasureMessageTiles_020cf368 MeasureOv075MessageTiles
+#define G2D_InitializeLinearCanvas_02017a2c NNS_G2dCharCanvasInitForBG
+#define func_ov039_020bc994 GetMenuFont10
+#define func_ov075_020cf2e8 MeasureOv075TextRect
+#include "src/ov075/unclassified_helpers/MeasureMessageTiles_020cf368.c"

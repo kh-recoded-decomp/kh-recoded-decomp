@@ -1,0 +1,5 @@
+#define StepScreenBrightnessFade_020bbc64 StepScreenBrightnessFade
+#define data_ov036_020c3920 data_ov036_020c3940
+#define SetBrightnessAndSyncMain_02029e7c SetBrightnessAndSyncMain
+#define SetSecondaryBrightness_02029ed0 SetSecondaryBrightness
+#include "src/ov036/panel_state/StepScreenBrightnessFade_020bbc64.c"

@@ -25,6 +25,10 @@ libs/nitro/os/asm_stubs/auto/func_01ff840c.c:
     complete
     .text       start:0x01ff840c end:0x01ff8420
 
+src/calls/Boot_ReadRom.c:
+    complete
+    .text       start:0x01ff84e0 end:0x01ff85b4
+
 libs/nitro/mi/calls/MIi_DmaSetParameters.c:
     complete
     .text       start:0x01ff85b4 end:0x01ff8684
@@ -281,6 +285,10 @@ src/calls/BuildTextureTransformVariantD.c:
     complete
     .text       start:0x01ffab10 end:0x01ffabf0
 
+src/calls/NNSi_G3dCalcTexMtxRotTransZero.c:
+    complete
+    .text       start:0x01ffabf0 end:0x01ffac9c
+
 src/calls/BuildTextureVerticalScaleMatrix.c:
     complete
     .text       start:0x01ffac9c end:0x01ffacdc
@@ -300,6 +308,10 @@ src/calls/func_01ffae58.c:
 src/calls/SendTexMtxAltBuilders.c:
     complete
     .text       start:0x01ffae7c end:0x01ffafb4
+
+src/calls/ScaleVecFx32.c:
+    complete
+    .text       start:0x01ffafb4 end:0x01ffaff4
 
 src/calls/SceneNode_Draw.c:
     complete

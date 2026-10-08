@@ -1,0 +1,4 @@
+#define NNSi_G3dCalcTexMtxRotTransZero_01ffabf0 NNSi_G3dCalcTexMtxRotTransZero
+#define FX_DivAsync_01ff9de4 FX_DivAsync
+#define FX_GetDivResult_01ff9d54 FX_GetDivResult
+#include "src/itcm/library_nns_g3d/NNSi_G3dCalcTexMtxRotTransZero_01ffabf0.c"

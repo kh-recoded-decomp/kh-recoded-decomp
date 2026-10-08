@@ -1,4 +1,4 @@
-#define DrawBgTextLabel_020c5530 func_ov081_020c5550
+#define DrawBgTextLabel_020c5530 DrawBgTextLabel
 #define DrawListTitle_020c56a8 DrawListTitle
 #define func_ov081_020c5be4 func_ov081_020c5c04
 #include "src/ov081/unclassified_helpers/DrawListTitle_020c56a8.c"

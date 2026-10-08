@@ -1,5 +1,5 @@
 #define EnterRecoilState_020c957c EnterRecoilState
-#define ScaleVecFx32_01ffafb4 func_01ffafb4
+#define ScaleVecFx32_01ffafb4 ScaleVecFx32
 #define data_0205356c data_02053580
 #define func_ov052_020ceb7c GetLinkedAngleOffset
 #include "src/ov052/unclassified_helpers/EnterRecoilState_020c957c.c"

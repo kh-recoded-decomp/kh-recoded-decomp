@@ -10,7 +10,7 @@
 #define IsPlayerEntryFlagSet_02050014 IsPlayerEntryFlagSet
 #define MTX_RotY33_01ff923c MTX_RotY33_
 #define RotateOffsetAroundY_020a9160 RotateOffsetAroundY
-#define ScaleVecFx32_01ffafb4 func_01ffafb4
+#define ScaleVecFx32_01ffafb4 ScaleVecFx32
 #define SweepWorldCollision_020364a0 SweepWorldCollision
 #define UpdateWallSlide_020cba24 UpdateWallSlide
 #define VEC_Add_01ff9e0c VEC_Add

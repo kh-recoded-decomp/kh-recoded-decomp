@@ -2,7 +2,7 @@
 #define LoadMenuEntryPanel_0207a17c LoadMenuEntryPanel
 #define LoadModeBg3Graphics_02078c7c LoadModeBg3Graphics
 #define MakePrimaryVramKey_020711ec MakePrimaryVramKey
-#define OpenMessageWindowLayers_0207a1d0 func_ov001_0207a1d0
+#define OpenMessageWindowLayers_0207a1d0 OpenMessageWindowLayers
 #define QueueFileLoadRequest_020ba114 QueueFileLoadRequest
 #define SetTextAndChoices_02079338 SetTextAndChoices
 #define data_ov001_0209df24 data_ov001_0209df4c

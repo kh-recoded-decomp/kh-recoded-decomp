@@ -1,6 +1,6 @@
 #define DispatchContextCommand_02066c78 DispatchContextCommand
 #define DrawPanelResultCaption_0206f3d8 DrawPanelResultCaption
-#define MeasurePanelTextSecondary_02062890 func_ov002_02062890
+#define MeasurePanelTextSecondary_02062890 MeasurePanelTextSecondary
 #define OS_SNPrintf_0202e080 OS_SNPrintf_0202e094
 #define SetEntrySlotsVisible_020b9580 SetEntrySlotsVisible
 #define func_01ff8684 MIi_CpuClear16

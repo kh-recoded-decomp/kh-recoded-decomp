@@ -2,7 +2,7 @@
 #define FixedPointAtan2_020062bc FX_Atan2Idx
 #define MTX_MultVec33_01ff9404 MTX_MultVec33
 #define MTX_RotY33_01ff923c MTX_RotY33_
-#define ScaleVecFx32_01ffafb4 func_01ffafb4
+#define ScaleVecFx32_01ffafb4 ScaleVecFx32
 #define VEC_Mag_01ff9f28 VEC_Mag
 #define VEC_Normalize_01ffaff4 func_01ffaff4
 #define VEC_Subtract_01ff9e3c VEC_Subtract

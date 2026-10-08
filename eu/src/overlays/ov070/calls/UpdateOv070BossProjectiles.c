@@ -4,7 +4,7 @@
 #define InitRecord60_020ac0b8 InitRecord60
 #define OffsetBoxByDelta_0203ac70 OffsetBoxByDelta
 #define PlaySoundChecked_0204d8d0 PlaySoundChecked
-#define ScaleVecFx32_01ffafb4 func_01ffafb4
+#define ScaleVecFx32_01ffafb4 ScaleVecFx32
 #define StepHitScan_020ac164 StepHitScan
 #define StopAndClearSoundEmitter_020a8e14 StopAndClearSoundEmitter
 #define UpdateOv070BossProjectiles_020d829c UpdateOv070BossProjectiles

@@ -64,6 +64,10 @@ src/overlays/ov081/calls/ApplyTextColorTag.c:
     complete
     .text       start:0x020c5530 end:0x020c5550
 
+src/overlays/ov081/calls/DrawBgTextLabel.c:
+    complete
+    .text       start:0x020c5550 end:0x020c5660
+
 src/overlays/ov081/calls/func_ov081_020c5660.c:
     complete
     .text       start:0x020c5660 end:0x020c5672

@@ -31,7 +31,7 @@ typedef struct PanelContext {
 extern PanelContext data_ov036_020c3940;
 extern void LoadScreenLayerImage(ScreenLayer *layer, int screen);
 extern void ClearScreenLayerGraphics(ScreenLayer *layer, int screen);
-extern void func_ov036_020bbc84(int screen);
+extern void StepScreenBrightnessFade(int screen);
 extern void UpdateLayerShake(ScreenLayer *layer, int screen);
 extern void StepBgMosaicTransition(ScreenLayer *layer);
 extern int EvaluateInterpolationCurve(int curve, unsigned int duration, int frame);
@@ -71,7 +71,7 @@ void UpdateScreenLayer(int screen)
         }
     }
     if (layer->flags & 8) {
-        func_ov036_020bbc84(screen);
+        StepScreenBrightnessFade(screen);
     }
     if (layer->flags & 0x10) {
         UpdateLayerShake(layer, screen);

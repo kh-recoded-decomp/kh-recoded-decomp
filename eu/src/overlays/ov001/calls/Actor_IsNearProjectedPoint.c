@@ -1,5 +1,5 @@
 #define Actor_IsNearProjectedPoint_02089a4c Actor_IsNearProjectedPoint
-#define ScaleVecFx32_01ffafb4 func_01ffafb4
+#define ScaleVecFx32_01ffafb4 ScaleVecFx32
 #define VEC_Add_01ff9e0c VEC_Add
 #define VEC_Mag_01ff9f28 VEC_Mag
 #define VEC_Subtract_01ff9e3c VEC_Subtract

@@ -15,7 +15,7 @@
 #define IsPlayerEntryFlagSet_02050014 IsPlayerEntryFlagSet
 #define Model_SetAllMaterialCullMode_0201a880 NNS_G3dMdlSetMdlCullModeAll
 #define PlayDirectionalHitReaction_020c994c PlayDirectionalHitReaction
-#define ScaleVecFx32_01ffafb4 func_01ffafb4
+#define ScaleVecFx32_01ffafb4 ScaleVecFx32
 #define SelectFallStateHandler_020d1238 SelectFallStateHandler
 #define SelectMenuMember_020ad980 SelectMenuMember
 #define SetActorPaused_020d12f0 SetActorPaused

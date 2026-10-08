@@ -7,7 +7,7 @@
 #define MTX_Identity43_01ff9480 MTX_Identity43_
 #define MTX_MultVec43_01ff9ad8 MTX_MultVec43
 #define MTX_RotY43_01ff9530 MTX_RotY43_
-#define ScaleVecFx32_01ffafb4 func_01ffafb4
+#define ScaleVecFx32_01ffafb4 ScaleVecFx32
 #define WriteSessionPackedBits_0206459c WriteSessionPackedBits
 #define data_02053438 data_0205344c
 #define data_0205356c data_02053580

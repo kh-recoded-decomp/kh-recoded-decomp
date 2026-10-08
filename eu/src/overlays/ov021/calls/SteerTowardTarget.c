@@ -1,5 +1,5 @@
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField
-#define ScaleVecFx32_01ffafb4 func_01ffafb4
+#define ScaleVecFx32_01ffafb4 ScaleVecFx32
 #define SteerTowardTarget_020ab1f0 SteerTowardTarget
 #define VEC_DotProduct_01ff9e6c VEC_DotProduct
 #define VEC_MultAdd_01ffa09c VEC_MultAdd
