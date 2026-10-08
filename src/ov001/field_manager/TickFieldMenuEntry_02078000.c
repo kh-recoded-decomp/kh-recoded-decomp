@@ -1,5 +1,9 @@
 #include "nitro/types.h"
 
+#ifndef FIELD_MENU_FLAGS_QUALIFIER
+#define FIELD_MENU_FLAGS_QUALIFIER
+#endif
+
 typedef struct {
     s32 active;
     u32 unk_04;
@@ -7,7 +11,7 @@ typedef struct {
     u32 unk_0C;
     s32 state;
     u8 pad_14[0x14];
-    u16 flags;
+    FIELD_MENU_FLAGS_QUALIFIER u16 flags;
     u16 timer;
 } FieldMenuEntry;
 
@@ -47,6 +51,13 @@ extern BOOL IsModeSetOrFlag370aClear_0207259c(void);
 extern BOOL IsHudFlag7Set_020725bc(void);
 extern BOOL IsFieldFlag10Set_020728c4(void);
 
+#ifndef FIELD_MENU_FLAGS_KEEP_MASK
+#define FIELD_MENU_FLAGS_KEEP_MASK (~1)
+#endif
+#ifndef FIELD_MENU_CLEARED_ID
+#define FIELD_MENU_CLEARED_ID 0xffff
+#endif
+
 void TickFieldMenuEntry_02078000(int listKind, int entryId) {
     FieldMenu *menu = data_ov001_020a04b0.menu;
     void *pool = GetSceneTagTracker_020711b0();
@@ -72,9 +83,9 @@ void TickFieldMenuEntry_02078000(int listKind, int entryId) {
                 } else if (menu->mode == 1) {
                     menu->unk_C8 = menu->remaining;
                 }
-                entry->flags &= ~1;
+                entry->flags &= FIELD_MENU_FLAGS_KEEP_MASK;
                 entry->flags |= 8;
-                entry->id = 0xffff;
+                entry->id = FIELD_MENU_CLEARED_ID;
                 entry->active = 0;
                 RemoveIntrusiveListObject_020129d8(menu->entryList, entry);
                 if (menu->mode == 1) {
@@ -89,10 +100,10 @@ void TickFieldMenuEntry_02078000(int listKind, int entryId) {
             }
             entry->active = 0;
         } else if (IsFieldFlag8Set_020728a4()) {
-            entry->flags &= ~1;
+            entry->flags &= FIELD_MENU_FLAGS_KEEP_MASK;
             entry->active = 0;
         } else if (IsModeSetOrFlag370aClear_0207259c() && !IsHudFlag7Set_020725bc() && !IsFieldFlag10Set_020728c4()) {
-            entry->flags &= ~1;
+            entry->flags &= FIELD_MENU_FLAGS_KEEP_MASK;
             entry->active = 0;
         } else {
             if (entry->timer != 0) {

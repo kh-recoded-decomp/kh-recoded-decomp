@@ -14,6 +14,10 @@ extern void func_ov021_020a8b9c(int index);
 
 extern u32 g_manager_020a049c;
 
+#ifndef ACTOR_SLOT_FLAGS_QUALIFIER
+#define ACTOR_SLOT_FLAGS_QUALIFIER
+#endif
+
 void func_ov001_0206de40(int index)
 {
     int slot;
@@ -35,8 +39,10 @@ void func_ov001_0206de40(int index)
         slot = func_ov001_0206db5c(index);
         if (slot != 0) {
             cur = cur + 4 + index * 0x28;
-            *(unsigned short *)(cur + 0x24) = *(unsigned short *)(cur + 0x24) & 0xfffd;
-            *(unsigned short *)(cur + 0x24) = *(unsigned short *)(cur + 0x24) & 0xfff7;
+            *(ACTOR_SLOT_FLAGS_QUALIFIER unsigned short *)(cur + 0x24) =
+                *(ACTOR_SLOT_FLAGS_QUALIFIER unsigned short *)(cur + 0x24) & 0xfffd;
+            *(ACTOR_SLOT_FLAGS_QUALIFIER unsigned short *)(cur + 0x24) =
+                *(ACTOR_SLOT_FLAGS_QUALIFIER unsigned short *)(cur + 0x24) & 0xfff7;
             cur = func_ov001_0206db5c(index);
             if (*(ActorCallback *)(cur + 0x20c) != (ActorCallback)0) {
                 (*(ActorCallback *)(cur + 0x20c))(cur, 2, 0);

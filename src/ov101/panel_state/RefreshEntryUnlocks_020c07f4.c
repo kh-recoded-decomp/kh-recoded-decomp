@@ -6,8 +6,12 @@ typedef struct {
     s32 unlockBit;
 } EntryInfo;
 
+#ifndef OV101_COUNTS_OFFSET
+#define OV101_COUNTS_OFFSET 0xCF00
+#endif
+
 typedef struct {
-    u8 pad_0000[0xCF00];
+    u8 pad_0000[OV101_COUNTS_OFFSET];
     s32 counts[40];
 } Ov101State;
 

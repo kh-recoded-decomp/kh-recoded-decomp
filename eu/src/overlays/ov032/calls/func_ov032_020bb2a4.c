@@ -1,3 +1,4 @@
+#define func_ov001_0206de40 ReleaseActorSlotByIndex
 #include "nitro/types.h"
 
 typedef struct { unsigned char padding[4]; int value; } SharedState;

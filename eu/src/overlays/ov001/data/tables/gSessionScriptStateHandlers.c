@@ -1,3 +1,4 @@
+#define func_ov001_0206269c HandleSessionScriptResult
 #include "nitro/types.h"
 
 extern void RestoreSavedPlacement(void); /* RestoreSavedPlacement */

@@ -8,6 +8,7 @@
 #define func_ov001_020676c4 ShutdownSceneContext
 #define func_ov001_0206db5c GetBoundedEntryField
 #define func_ov001_0206dc80 GetBiasAdjustedField
+#define func_ov001_0206de40 ReleaseActorSlotByIndex
 #define func_ov001_0207b36c Panel_TryBeginTransition4
 #define func_ov001_0207d658 func_ov001_0207d680
 #define func_ov001_0207ef40 SetOverlayLayerVisible

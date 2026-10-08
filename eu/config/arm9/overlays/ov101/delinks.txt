@@ -24,6 +24,10 @@ src/overlays/ov101/calls/FreeStateBuffers.c:
     complete
     .text       start:0x020bf714 end:0x020bf73c
 
+src/overlays/ov101/calls/LoadStateBackgrounds.c:
+    complete
+    .text       start:0x020bf73c end:0x020bf854
+
 src/overlays/ov101/calls/FreeMenuResourceSlots.c:
     complete
     .text       start:0x020bf854 end:0x020bf884
@@ -40,6 +44,10 @@ src/overlays/ov101/calls/InitListSlots.c:
     complete
     .text       start:0x020bfd98 end:0x020bff10
 
+src/overlays/ov101/calls/ReleaseStateSlotLists.c:
+    complete
+    .text       start:0x020bff10 end:0x020bff40
+
 src/overlays/ov101/calls/InitStateLists.c:
     complete
     .text       start:0x020bff40 end:0x020bff60
@@ -51,6 +59,10 @@ src/overlays/ov101/calls/SetOv101SlotEntryVisible.c:
 src/overlays/ov101/calls/CreateOv101SlotEntry.c:
     complete
     .text       start:0x020bff98 end:0x020c00b8
+
+src/overlays/ov101/calls/SetSlotEntryPosition.c:
+    complete
+    .text       start:0x020c00b8 end:0x020c01c4
 
 src/overlays/ov101/calls/SetEntryAnimFrame.c:
     complete
@@ -91,6 +103,10 @@ src/overlays/ov101/calls/IsStateFlagSet.c:
 src/overlays/ov101/calls/SetStateFlag.c:
     complete
     .text       start:0x020c1360 end:0x020c1380
+
+src/overlays/ov101/calls/RefreshEntryUnlocks.c:
+    complete
+    .text       start:0x020c1380 end:0x020c17a4
 
 src/overlays/ov101/calls/SetStatePhase.c:
     complete

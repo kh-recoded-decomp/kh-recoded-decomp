@@ -37,10 +37,13 @@ typedef struct Session {
     s8 mode;
     u8 pad_28a5[0x10b];
     u32 unk_29B0;
-    u8 unk_29B4_0 : 1;
-    u8 unk_29B4_1 : 1;
-    u8 unk_29B4_2 : 1;
-    u8 unk_29B4_3 : 5;
+#ifndef SESSION_FLAGS_29B4_QUALIFIER
+#define SESSION_FLAGS_29B4_QUALIFIER
+#endif
+    SESSION_FLAGS_29B4_QUALIFIER u8 unk_29B4_0 : 1;
+    SESSION_FLAGS_29B4_QUALIFIER u8 unk_29B4_1 : 1;
+    SESSION_FLAGS_29B4_QUALIFIER u8 unk_29B4_2 : 1;
+    SESSION_FLAGS_29B4_QUALIFIER u8 unk_29B4_3 : 5;
 } Session;
 
 extern Session *data_ov001_020a0460;

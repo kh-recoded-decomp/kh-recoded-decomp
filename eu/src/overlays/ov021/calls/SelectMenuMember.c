@@ -5,7 +5,7 @@
 #define ReadSessionPackedBits_02064574 ReadSessionPackedBits
 #define SelectMenuMember_020ad980 SelectMenuMember
 #define SetFieldAt0x30_020a7fa0 SetFieldAt0x30
-#define TickFieldMenuEntry_02078000 func_ov001_02078000
+#define TickFieldMenuEntry_02078000 TickFieldMenuEntry
 #define WriteSessionPackedBits_0206459c WriteSessionPackedBits
 #define func_ov001_02078360 SetFieldMenuMode_02078360
 #include "src/ov021/object_state/SelectMenuMember_020ad980.c"

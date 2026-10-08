@@ -1,3 +1,4 @@
+#define func_ov001_02078000 TickFieldMenuEntry
 #include "nitro/types.h"
 
 typedef struct GroupRequest {

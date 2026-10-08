@@ -1,0 +1,11 @@
+#define func_ov001_0206de40 ReleaseActorSlotByIndex
+#define func_ov001_020734f8 ResetGaugeDisplay
+#define func_ov001_02071fec RunHudExitCallback
+#define func_ov001_0206db5c GetBoundedEntryField
+#define func_ov001_0206e6c0 GetEntryFieldForMode
+#define func_02038b2c ResetPositionState
+#define func_02035c28 ActorSlot_UnlinkByIndex
+#define func_ov021_020a8b9c StopEntrySoundsByOwner
+#define g_manager_020a049c data_ov001_020a04bc
+#define ACTOR_SLOT_FLAGS_QUALIFIER volatile
+#include "src/ov001/shared_engine/func_ov001_0206de40.c"

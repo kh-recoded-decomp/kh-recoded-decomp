@@ -4,7 +4,7 @@
 #define SetActorsEnabled_0206e444 func_ov001_0206e444
 #define SetSessionFinishCallback_02063678 SetSessionScriptParams
 #define StartSessionScript_020635b0 OpenSessionArchive
-#define TryBeginSessionEvent_02063694 func_ov001_02063694
+#define TryBeginSessionEvent_02063694 TryRaiseSessionScriptFlags
 #define data_ov001_020a0460 data_ov001_020a0480
 #define func_ov001_02080e5c func_ov001_02080e84
 #include "src/ov001/unclassified_helpers/FieldObject_TryStartEvent_02081014.c"

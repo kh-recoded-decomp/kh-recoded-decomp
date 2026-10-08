@@ -17,6 +17,10 @@ typedef struct Session {
 extern Session *data_ov001_020a0460;
 extern int func_ov000_02062c64(void);
 
+#ifndef SESSION_SCRIPT_RUN_FLAG
+#define SESSION_SCRIPT_RUN_FLAG 0x80
+#endif
+
 BOOL TryRaiseSessionScriptFlags_02063694(void) {
     Session *session = data_ov001_020a0460;
     SessionScript *script = &session->script;
@@ -26,7 +30,7 @@ BOOL TryRaiseSessionScriptFlags_02063694(void) {
     if (func_ov000_02062c64() == 0) {
         return FALSE;
     }
-    script->runFlags |= 0x80;
+    script->runFlags |= SESSION_SCRIPT_RUN_FLAG;
     session->statusFlags |= 0x10;
     return TRUE;
 }

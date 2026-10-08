@@ -8529,5 +8529,15 @@
   "src/overlays/ov018/calls/RespawnKind6FieldObject.c": "dsi/1.1",
   "src/overlays/ov041/calls/UpdateStageHudMessage.c": "dsi/1.1",
   "src/overlays/ov041/calls/PlayActorEffectAnimation.c": "dsi/1.1",
-  "src/overlays/ov059/calls/Actor_UpdateDrift.c": "dsi/1.1"
+  "src/overlays/ov059/calls/Actor_UpdateDrift.c": "dsi/1.1",
+  "src/overlays/ov101/calls/LoadStateBackgrounds.c": "dsi/1.1",
+  "src/overlays/ov101/calls/ReleaseStateSlotLists.c": "dsi/1.1",
+  "src/overlays/ov101/calls/SetSlotEntryPosition.c": "dsi/1.1",
+  "src/overlays/ov101/calls/RefreshEntryUnlocks.c": "dsi/1.1",
+  "src/overlays/ov001/calls/TryRaiseSessionScriptFlags.c": "dsi/1.1",
+  "src/overlays/ov001/calls/TickFieldMenuEntry.c": "dsi/1.1",
+  "src/overlays/ov001/calls/HandleSessionScriptResult.c": "dsi/1.1",
+  "src/overlays/ov001/calls/CopyNameMenuSlotValues.c": "dsi/1.1",
+  "src/overlays/ov001/calls/ReleaseActorSlotByIndex.c": "dsi/1.1",
+  "src/overlays/ov001/calls/UpdateActorHoverHeight.c": "dsi/1.1"
 }

@@ -7,7 +7,7 @@
 #define FieldMenu_TryOpenByMode_02077d64 FieldMenu_TryOpenByMode
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField
 #define IsPlayerEntryFlagSet_02050014 IsPlayerEntryFlagSet
-#define TickFieldMenuEntry_02078000 func_ov001_02078000
+#define TickFieldMenuEntry_02078000 TickFieldMenuEntry
 #define UpdateSelectionCount_02050464 UpdateSelectionCount
 #define func_ov001_02078360 SetFieldMenuMode_02078360
 #define func_ov021_020a8ab4 ResetAnimationTrackState

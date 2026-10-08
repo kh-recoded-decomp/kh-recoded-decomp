@@ -1,3 +1,4 @@
+#define func_ov101_020c00b8 SetSlotEntryPosition
 #include "nitro/types.h"
 
 typedef struct {
@@ -79,4 +80,3 @@ BOOL ScrollPanelCursorDown(int panelIndex, Ov101State *state)
     }
     return FALSE;
 }
-

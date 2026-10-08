@@ -1,0 +1,10 @@
+#define RefreshEntryUnlocks_020c07f4 RefreshEntryUnlocks
+#define data_ov101_020c139c data_ov101_020c1f9c
+#define IsGlobalPackedBitSet_02027304 IsGlobalPackedBitSet
+#define SetGlobalPackedBit_02027320 SetGlobalPackedBit
+#define ClearGlobalPackedBit_02027334 ClearGlobalPackedBit
+#define IsStateFlagSet_020c07a8 IsStateFlagSet
+#define func_ov101_020c07d4 SetStateFlag
+#define OV101_COUNTS_OFFSET 0xCF08
+
+#include "src/ov101/panel_state/RefreshEntryUnlocks_020c07f4.c"

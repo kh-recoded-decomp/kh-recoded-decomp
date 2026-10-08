@@ -1,3 +1,4 @@
+#define func_ov001_0208fc90 UpdateActorHoverHeight
 #include "nitro/types.h"
 #include "nitro/fx_types.h"
 

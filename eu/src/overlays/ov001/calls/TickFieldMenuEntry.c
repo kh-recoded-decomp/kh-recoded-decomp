@@ -1,0 +1,21 @@
+#define TickFieldMenuEntry_02078000 TickFieldMenuEntry
+#define data_ov001_020a04b0 data_ov001_020a04d0
+#define GetSceneTagTracker_020711b0 GetSceneTagTracker
+#define FindFieldMenuEntryById_020754d8 FindFieldMenuEntryById
+#define CycleMenuEntry_02075348 CycleMenuEntry
+#define func_ov027_020b8390 FindLoadedElementById
+#define func_ov027_020b83e8 SetTagRecordArmed
+#define FindActiveRecordById_020b8184 FindActiveRecordById
+#define InvokeCallback40_020b8268 func_ov027_020b8288
+#define func_ov001_02078360 SetFieldMenuMode_02078360
+#define RemoveIntrusiveListObject_020129d8 NNS_FndRemoveListObject
+#define func_ov001_020769f4 DrawMenuPanelPage
+#define IsFieldFlag8Set_020728a4 IsFieldFlag8Set
+#define IsModeSetOrFlag370aClear_0207259c IsModeSetOrFlag370aClear
+#define IsHudFlag7Set_020725bc IsHudFlag7Set
+#define IsFieldFlag10Set_020728c4 IsFieldFlag10Set
+#define FIELD_MENU_FLAGS_QUALIFIER volatile
+#define FIELD_MENU_FLAGS_KEEP_MASK 0xfffe
+#define FIELD_MENU_CLEARED_ID (FIELD_MENU_FLAGS_KEEP_MASK + 1)
+
+#include "src/ov001/field_manager/TickFieldMenuEntry_02078000.c"

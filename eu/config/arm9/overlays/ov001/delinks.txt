@@ -68,6 +68,10 @@ src/overlays/ov001/calls/WaitSessionPollCallback.c:
     complete
     .text       start:0x02062674 end:0x0206269c
 
+src/overlays/ov001/calls/HandleSessionScriptResult.c:
+    complete
+    .text       start:0x0206269c end:0x02062838
+
 src/overlays/ov001/calls/ShutdownSessionOverlays.c:
     complete
     .text       start:0x02062a54 end:0x02062ac0
@@ -223,6 +227,10 @@ src/overlays/ov001/calls/RunSessionScriptFrame.c:
 src/overlays/ov001/calls/SetSessionScriptParams.c:
     complete
     .text       start:0x02063678 end:0x02063694
+
+src/overlays/ov001/calls/TryRaiseSessionScriptFlags.c:
+    complete
+    .text       start:0x02063694 end:0x020636e4
 
 src/overlays/ov001/calls/func_ov001_020636e4.c:
     complete
@@ -1348,6 +1356,10 @@ src/overlays/ov001/calls/func_ov001_0206890c.c:
     complete
     .text       start:0x0206890c end:0x02068918
 
+src/overlays/ov001/calls/CopyNameMenuSlotValues.c:
+    complete
+    .text       start:0x02068918 end:0x0206894c
+
 src/overlays/ov001/calls/func_ov001_0206894c.c:
     complete
     .text       start:0x0206894c end:0x02068958
@@ -2379,6 +2391,10 @@ src/overlays/ov001/calls/SetOverlayObjectFactory.c:
 src/overlays/ov001/calls/ActivateFieldPlayerEntry.c:
     complete
     .text       start:0x0206dd90 end:0x0206de40
+
+src/overlays/ov001/calls/ReleaseActorSlotByIndex.c:
+    complete
+    .text       start:0x0206de40 end:0x0206ded8
 
 src/overlays/ov001/calls/AwardPartyGaugePoints.c:
     complete
@@ -3427,6 +3443,10 @@ src/overlays/ov001/calls/SelectFieldMenuEntryById.c:
 src/overlays/ov001/calls/GetSelectedMenuEntryValue.c:
     complete
     .text       start:0x02077f80 end:0x02078000
+
+src/overlays/ov001/calls/TickFieldMenuEntry.c:
+    complete
+    .text       start:0x02078000 end:0x02078180
 
 src/overlays/ov001/calls/func_ov001_02078180.c:
     complete
@@ -6911,6 +6931,10 @@ src/overlays/ov001/calls/GetTargetActorPointPosition.c:
 src/overlays/ov001/calls/AddActorSideOffset.c:
     complete
     .text       start:0x0208fc3c end:0x0208fc90
+
+src/overlays/ov001/calls/UpdateActorHoverHeight.c:
+    complete
+    .text       start:0x0208fc90 end:0x0208fd5c
 
 src/overlays/ov001/calls/AdvanceActorJumpArc.c:
     complete

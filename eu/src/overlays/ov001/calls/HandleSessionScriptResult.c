@@ -1,0 +1,14 @@
+#define HandleSessionScriptResult_0206269c HandleSessionScriptResult
+#define data_ov001_020a0460 data_ov001_020a0480
+#define func_020257e4 func_020257f8
+#define func_0204d7f4 func_0204d808
+#define SetSessionState_02063200 SetSessionState
+#define StoreSessionDifficultyPreset_0206452c StoreSessionDifficultyPreset
+#define func_ov001_020645c8 IsSessionFlagSet
+#define ResetTrackState_02062cf8 ResetTrackState
+#define func_ov001_020630bc SaveElapsedSeconds
+#define func_020273d4 func_020273e8
+#define ReleaseLowIdTaskNodes_02069194 ReleaseLowIdTaskNodes
+#define SetGlobalStateValue_0209d184 SetGlobalStateValue
+#define SESSION_FLAGS_29B4_QUALIFIER volatile
+#include "src/ov001/unclassified_helpers/HandleSessionScriptResult_0206269c.c"

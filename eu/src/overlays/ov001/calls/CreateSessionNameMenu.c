@@ -1,4 +1,5 @@
 #define func_ov001_020645c8 IsSessionFlagSet
+#define func_ov001_02068918 CopyNameMenuSlotValues
 #define CreateSessionNameMenu_02063ba4 CreateSessionNameMenu
 #define SNDi_LockMutex_020baf94 IsSessionFlag3701Set
 #define ShowSessionNameEntry_020639ac ShowSessionNameEntry
