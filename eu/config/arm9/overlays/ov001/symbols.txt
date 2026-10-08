@@ -262,7 +262,7 @@ WakeNearbyIdleNodes kind:function(thumb,size=0x70) addr:0x02066874
 func_ov001_020668e4 kind:function(arm,size=0x39c) addr:0x020668e4
 SubScene9_Create_02066c80 kind:function(thumb,size=0x20) addr:0x02066c80
 func_ov001_02066ca0 kind:function(thumb,size=0x14) addr:0x02066ca0
-func_ov001_02066cb4 kind:function(thumb,size=0x2c) addr:0x02066cb4
+FinishFadeTween kind:function(thumb,size=0x2c) addr:0x02066cb4
 StepFadeInTween kind:function(thumb,size=0x50) addr:0x02066ce0
 WaitFadeDelay kind:function(thumb,size=0x40) addr:0x02066d30
 StepFadeTween kind:function(thumb,size=0x34) addr:0x02066d70
@@ -389,8 +389,8 @@ func_ov001_02068ec4 kind:function(thumb,size=0xc) addr:0x02068ec4
 func_ov001_02068ed0 kind:function(thumb,size=0x10) addr:0x02068ed0
 func_ov001_02068ee0 kind:function(thumb,size=0x10) addr:0x02068ee0
 func_ov001_02068ef0 kind:function(thumb,size=0xc) addr:0x02068ef0
-func_ov001_02068efc kind:function(thumb,size=0x50) addr:0x02068efc
-func_ov001_02068f4c kind:function(thumb,size=0x18) addr:0x02068f4c
+InitEventTriggerScene kind:function(thumb,size=0x50) addr:0x02068efc
+WaitForEventTriggerActivation kind:function(thumb,size=0x18) addr:0x02068f4c
 PollEventTriggerList kind:function(thumb,size=0x90) addr:0x02068f64
 func_ov001_02068ff4 kind:function(thumb,size=0x20) addr:0x02068ff4
 FindSceneNodeById kind:function(thumb,size=0x1a) addr:0x02069014
@@ -411,7 +411,7 @@ SetupEventTriggerNode kind:function(thumb,size=0x90) addr:0x02069370
 PollTimerTask kind:function(thumb,size=0x34) addr:0x02069400
 func_ov001_02069434 kind:function(thumb,size=0x6) addr:0x02069434
 func_ov001_0206943c kind:function(thumb,size=0x28) addr:0x0206943c
-func_ov001_02069464 kind:function(thumb,size=0x34) addr:0x02069464
+UpdateEventTriggerDelay kind:function(thumb,size=0x34) addr:0x02069464
 LoadOffsetTableFile kind:function(thumb,size=0x70) addr:0x02069498
 func_ov001_02069508 kind:function(thumb,size=0x28) addr:0x02069508
 PlayWeightedRandomEntry kind:function(thumb,size=0x88) addr:0x02069530
@@ -455,7 +455,7 @@ RunSessionFieldOp kind:function(thumb,size=0x66) addr:0x02069d34
 InitArithmeticNode kind:function(thumb,size=0x20) addr:0x02069d9c
 OpenDefaultSessionArchive kind:function(thumb,size=0x10) addr:0x02069dbc
 OpenNamedSessionArchive kind:function(thumb,size=0x14) addr:0x02069dcc
-func_ov001_02069de0 kind:function(thumb,size=0x3c) addr:0x02069de0
+InitStringEventTrigger kind:function(thumb,size=0x3c) addr:0x02069de0
 EventTrigger_EvaluateCallback kind:function(thumb,size=0x58) addr:0x02069e1c
 ResetPairFieldTask kind:function(thumb,size=0x10) addr:0x02069e74
 InitPairFieldTask kind:function(thumb,size=0x2c) addr:0x02069e84
@@ -464,9 +464,9 @@ ResetSceneEntryTrigger kind:function(thumb,size=0x10) addr:0x02069ef4
 InitModeFieldTask_02069f04 kind:function(thumb,size=0x28) addr:0x02069f04
 LoadSceneTextureResource kind:function(thumb,size=0x88) addr:0x02069f2c
 LoadSlotTextureFile kind:function(thumb,size=0xec) addr:0x02069fb4
-func_ov001_0206a0a0 kind:function(thumb,size=0x78) addr:0x0206a0a0
+InitScreenFadeContext kind:function(thumb,size=0x78) addr:0x0206a0a0
 func_ov001_0206a118 kind:function(thumb,size=0x20) addr:0x0206a118
-func_ov001_0206a138 kind:function(thumb,size=0x4c) addr:0x0206a138
+SelectScreenFadeHandler kind:function(thumb,size=0x4c) addr:0x0206a138
 ScreenFadeInStep kind:function(thumb,size=0x84) addr:0x0206a184
 ScreenFadeOutStep kind:function(thumb,size=0x88) addr:0x0206a208
 StepBrightnessFadeIn kind:function(thumb,size=0xd4) addr:0x0206a290
@@ -495,7 +495,7 @@ func_ov001_0206ad1c kind:function(thumb,size=0xc) addr:0x0206ad1c
 func_ov001_0206ad28 kind:function(thumb,size=0xc) addr:0x0206ad28
 ProjectWorldToScreenFx kind:function(thumb,size=0x94) addr:0x0206ad34
 InitSceneWork kind:function(thumb,size=0x90) addr:0x0206adc8
-func_ov001_0206ae58 kind:function(thumb,size=0x2c) addr:0x0206ae58
+ShutdownSceneWork kind:function(thumb,size=0x2c) addr:0x0206ae58
 UpdateTargetMenuState kind:function(thumb,size=0xf6) addr:0x0206ae84
 FindNearestTargetInRange kind:function(thumb,size=0x70) addr:0x0206af7c
 SelectNearestTarget kind:function(thumb,size=0x80) addr:0x0206afec
@@ -967,7 +967,7 @@ LoadMenuEntryGraphic kind:function(thumb,size=0x28) addr:0x0207a1a8
 func_ov001_0207a1d0 kind:function(thumb,size=0x90) addr:0x0207a1d0
 CloseModeWindow kind:function(thumb,size=0x110) addr:0x0207a260
 HandleModeMenuInput kind:function(thumb,size=0xe8) addr:0x0207a370
-func_ov001_0207a458 kind:function(thumb,size=0x48) addr:0x0207a458
+InitModeHandlerContext kind:function(thumb,size=0x48) addr:0x0207a458
 func_ov001_0207a4a0 kind:function(thumb,size=0x30) addr:0x0207a4a0
 RunActiveModeHandler kind:function(thumb,size=0x34) addr:0x0207a4d0
 OpenMessageWindow_0207a504 kind:function(thumb,size=0x144) addr:0x0207a504
@@ -2209,9 +2209,9 @@ data_ov001_0209e4bc kind:data(any) addr:0x0209e4bc
 data_ov001_0209e4dc kind:data(any) addr:0x0209e4dc
 data_ov001_0209e554 kind:data(any) addr:0x0209e554
 sOv001_EnPaUPBin_0209e61c kind:data(any) addr:0x0209e61c
-data_ov001_0209e640 kind:data(any) addr:0x0209e640
-data_ov001_0209e654 kind:data(any) addr:0x0209e654
-data_ov001_0209e66c kind:data(any) addr:0x0209e66c
+gFieldSessionClassDescriptor kind:data(any) addr:0x0209e640
+gFollowerOffsets kind:data(any) addr:0x0209e654
+gSessionStateOverlayIds kind:data(any) addr:0x0209e66c
 gSessionScriptStateHandlers kind:data(any) addr:0x0209e6a0
 sOv001_MiMiDebugFormatD_0209e6d4 kind:data(any) addr:0x0209e6d4
 sOv001_MiMiFormatD_0209e6e4 kind:data(any) addr:0x0209e6e4
@@ -2220,8 +2220,8 @@ sOv001_I_0209e6f4 kind:data(any) addr:0x0209e6f4
 sOv001_M_0209e6f8 kind:data(any) addr:0x0209e6f8
 sOv001_Fz_0209e6fc kind:data(any) addr:0x0209e6fc
 sOv001_BaEfShBin_0209e700 kind:data(any) addr:0x0209e700
-data_ov001_0209e710 kind:data(any) addr:0x0209e710
-data_ov001_0209e714 kind:data(any) addr:0x0209e714
+sSessionNameStringFormat kind:data(any) addr:0x0209e710
+sSessionNumberFormat kind:data(any) addr:0x0209e714
 gFieldScriptCommandHandlers kind:data(any) addr:0x0209e718
 sOv001_Pz_0209ea10 kind:data(any) addr:0x0209ea10
 sOv001_MoPzZ_0209ea14 kind:data(any) addr:0x0209ea14
@@ -2255,9 +2255,9 @@ data_ov001_0209eb08 kind:data(any) addr:0x0209eb08
 data_ov001_0209eb0c kind:data(any) addr:0x0209eb0c
 sOv001_BaTrTr_0209eb20 kind:data(any) addr:0x0209eb20
 sOv001_RefreshWnd_0209eb2c kind:data(any) addr:0x0209eb2c
-data_ov001_0209eb38 kind:data(any) addr:0x0209eb38
+gSceneWorkClassDescriptor kind:data(any) addr:0x0209eb38
 sOv001_BaEfTaPZ_0209eb4c kind:data(any) addr:0x0209eb4c
-data_ov001_0209eb5c kind:data(any) addr:0x0209eb5c
+gSessionTaskClassDescriptor kind:data(any) addr:0x0209eb5c
 sOv001_FormatS_0209eb70 kind:data(any) addr:0x0209eb70
 sOv001_BaEfInfoPZ_0209eb74 kind:data(any) addr:0x0209eb74
 sOv001_BaEfStLanguagePZ_0209eb84 kind:data(any) addr:0x0209eb84
@@ -2271,7 +2271,7 @@ sOv001_BaChDoAmP2_0209ebe4 kind:data(any) addr:0x0209ebe4
 sOv001_BaEfDkDkP2_0209ebf4 kind:data(any) addr:0x0209ebf4
 sOv001_BaChGoAmP2_0209ec04 kind:data(any) addr:0x0209ec04
 sOv001_BaChSoDkP2_0209ec14 kind:data(any) addr:0x0209ec14
-data_ov001_0209ec24 kind:data(any) addr:0x0209ec24
+gPartyStateClassDescriptor kind:data(any) addr:0x0209ec24
 gFieldMessagePaths kind:data(any) addr:0x0209ec38
 data_ov001_0209ec5c kind:data(any) addr:0x0209ec5c
 data_ov001_0209ec60 kind:data(any) addr:0x0209ec60
@@ -2295,7 +2295,7 @@ gHudSlideResourceGroup3 kind:data(any) addr:0x0209ecc8
 gHudSlideResourceGroup4 kind:data(any) addr:0x0209ecd4
 gMainBgScreenGetters kind:data(any) addr:0x0209ece0
 gHudNoticeStateHandlers kind:data(any) addr:0x0209ecec
-data_ov001_0209ecfc kind:data(any) addr:0x0209ecfc
+gFieldManagerClassDescriptor kind:data(any) addr:0x0209ecfc
 gBgScreenLoaders kind:data(any) addr:0x0209ed10
 sOv001_TextFontEu10Nftr_0209ed2c kind:data(any) addr:0x0209ed2c
 sOv001_TextFontEu08Nftr_0209ed44 kind:data(any) addr:0x0209ed44
@@ -2355,7 +2355,7 @@ sOv001_EvEVW0FormatDP2_0209f300 kind:data(any) addr:0x0209f300
 sP2Extension_0209f310 kind:data(any) addr:0x0209f310
 sOv001_Z_0209f314 kind:data(any) addr:0x0209f314
 sOv001_MiMoFormatSZ_0209f318 kind:data(any) addr:0x0209f318
-data_ov001_0209f324 kind:data(any) addr:0x0209f324
+gActorChannelClassDescriptor kind:data(any) addr:0x0209f324
 sOv001_EvEcamP2_0209f338 kind:data(any) addr:0x0209f338
 gActorScriptCommandHandlers kind:data(any) addr:0x0209f344
 data_ov001_0209f62c kind:data(any) addr:0x0209f62c

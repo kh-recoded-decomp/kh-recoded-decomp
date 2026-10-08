@@ -75,6 +75,7 @@ NNS_G3dGeBufferOP_N kind:function(arm,size=0xd4) addr:0x01ffa37c
 SampleAnimationScalarITCM kind:function(arm,size=0x160) addr:0x01ffa450
 func_01ffa5b0 kind:function(arm,size=0x74) addr:0x01ffa5b0
 func_01ffa624 kind:function(arm,size=0x3c) addr:0x01ffa624
+gTexMtxMode2Builders kind:data(any) addr:0x01ffa660
 EmitJointAnimationResult kind:function(arm,size=0xbc) addr:0x01ffa680
 NNSi_G3dGetJointScaleMaya kind:function(arm,size=0x148) addr:0x01ffa73c
 texmtxCalc_flag_ kind:function(arm,size=0x108) addr:0x01ffa884
@@ -85,9 +86,10 @@ BuildTextureTransformVariantD kind:function(arm,size=0xe0) addr:0x01ffab10
 func_01ffabf0 kind:function(arm,size=0xac) addr:0x01ffabf0
 BuildTextureVerticalScaleMatrix kind:function(arm,size=0x40) addr:0x01ffac9c
 func_01ffacdc kind:function(arm,size=0x24) addr:0x01ffacdc
-func_01ffad00 kind:function(arm,size=0x138) addr:0x01ffad00
+NNSi_G3dSendTexMtxMode2 kind:function(arm,size=0x138) addr:0x01ffad00
+gTexMtxAltBuilders kind:data(any) addr:0x01ffae38
 func_01ffae58 kind:function(arm,size=0x24) addr:0x01ffae58
-func_01ffae7c kind:function(arm,size=0x138) addr:0x01ffae7c
+SendTexMtxAltBuilders kind:function(arm,size=0x138) addr:0x01ffae7c
 func_01ffafb4 kind:function(arm,size=0x40) addr:0x01ffafb4
 func_01ffaff4 kind:function(arm,size=0x138) addr:0x01ffaff4
 func_01ffb12c kind:function(arm,size=0x1a8) addr:0x01ffb12c

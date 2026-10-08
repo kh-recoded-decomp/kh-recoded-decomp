@@ -5,7 +5,7 @@ typedef unsigned int code();
 extern unsigned int UpdateTextWindows();
 extern unsigned int gTextWindowResourceTable;
 extern unsigned int data_ov036_020c394c;
-extern unsigned int func_ov036_020bf498();
+extern unsigned int InitOverlayObjManager();
 extern unsigned int NNSi_FndGetCurrentRootHeap();
 extern unsigned int MIi_CpuClearFast();
 extern unsigned int func_0204f5a0();
@@ -29,6 +29,6 @@ code * func_ov036_020be858(void) {
   func_0204f5a0((void *)(gTextWindowResourceTable + 0x6830),(void *)0x0);
   LoadTextWindowBackground();
   func_ov036_020beb7c();
-  func_ov036_020bf498();
+  InitOverlayObjManager();
   return UpdateTextWindows;
 }

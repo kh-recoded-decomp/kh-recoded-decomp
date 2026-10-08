@@ -1,0 +1,8 @@
+#define func_ov001_0206a0a0 InitScreenFadeContext
+#define data_ov001_020a0480 data_ov001_020a04a0
+#define data_ov001_0209eb00 sOv001_BaTrTr_0209eb20
+#define LoadCenteredScreenSprite_0206a860 LoadCenteredScreenSprite
+#define Msg_OpenContainerAndReadHeader_0202cc6c Msg_OpenContainerAndReadHeader
+#define NNSi_FndGetCurrentRootHeap_0202a764 NNSi_FndGetCurrentRootHeap
+#define func_01ff8740 MIi_CpuClearFast
+#include "src/ov001/reviewed_helpers/func_ov001_0206a0a0.c"

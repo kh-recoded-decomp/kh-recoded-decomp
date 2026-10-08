@@ -2,7 +2,7 @@
 #define func_02025438 SetPanelEnabled
 #define func_0202a778 StoreToGlobalPtr4Field28
 #define func_0204e040 ReleaseSeqArcHeapLevel
-#define func_ov034_020bcdf0 func_ov034_020bce10
+#define func_ov034_020bcdf0 DestroyResultsGraphics
 #define globalState_0206085c data_0206085c
 #define resultsState_020c0f80 data_ov034_020c0fa0
 #include "src/ov034/reviewed_helpers/FinishResultsScreen_020bdc3c.c"

@@ -1,0 +1,7 @@
+#define func_ov015_02079d6c InstallResultPanelCallbacks
+#define func_ov015_02079dcc OnPanelSlot1Selected
+#define func_ov015_02079e5c OnPanelSlot16Selected
+#define func_ov015_02079ed4 OnPanelSlot17Selected
+#define func_ov027_020b9088 func_ov027_020b90a8
+#define func_ov027_020b9098 func_ov027_020b90b8
+#include "src/ov015/reviewed_helpers/func_ov015_02079d6c.c"

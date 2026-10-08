@@ -1,4 +1,5 @@
 #define SetBrightnessAndSyncMain_02029e7c SetBrightnessAndSyncMain
+#define func_ov001_0206a138 SelectScreenFadeHandler
 #define SetSecondaryBrightness_02029ed0 SetSecondaryBrightness
 #define StepBrightnessFade_0206a364 StepBrightnessFade
 #define data_ov001_020a0480 data_ov001_020a04a0

@@ -13,7 +13,7 @@ extern unsigned int ReleaseRecordManager();
 extern unsigned int ReleaseIfMarked();
 extern unsigned int GetSecondaryMenuElement();
 extern unsigned int GetMenuWidgetContainer();
-extern unsigned int func_ov073_020c02f4();
+extern unsigned int UpdateSlotFillCounts();
 
 void func_ov073_020bfbec(char *work) {
   void *container;
@@ -30,7 +30,7 @@ void func_ov073_020bfbec(char *work) {
   func_02050a58();
   ReleaseRecordSlot(3);
   ReleaseRecordManager();
-  func_ov073_020c02f4(work + 0x16c,((NibbleFlags *)(data_0205fe0c + 0x28d7))->low);
+  UpdateSlotFillCounts(work + 0x16c,((NibbleFlags *)(data_0205fe0c + 0x28d7))->low);
   records = GetSecondaryMenuElement();
   func_ov027_020b833c(records);
   DestroyAllContainerElements(container);

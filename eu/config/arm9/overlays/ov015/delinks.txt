@@ -360,6 +360,10 @@ src/overlays/ov015/calls/func_ov015_02072ee4.c:
     complete
     .text       start:0x02072ee4 end:0x02072f4c
 
+src/overlays/ov015/calls/InitPeerWirelessSession.c:
+    complete
+    .text       start:0x02072f4c end:0x02072f7c
+
 src/overlays/ov015/calls/func_ov015_02072f7c.c:
     complete
     .text       start:0x02072f7c end:0x02072f98
@@ -612,7 +616,7 @@ src/overlays/ov015/calls/ChoosePanelModeFromSelection.c:
     complete
     .text       start:0x020748ac end:0x020748d4
 
-src/overlays/ov015/calls/func_ov015_020748d4.c:
+src/overlays/ov015/calls/SetWirelessSessionParam.c:
     complete
     .text       start:0x020748d4 end:0x020748e4
 
@@ -648,6 +652,10 @@ src/overlays/ov015/calls/func_ov015_02074ce0.c:
     complete
     .text       start:0x02074ce0 end:0x02074d00
 
+src/overlays/ov015/calls/StartWirelessPanelOperation.c:
+    complete
+    .text       start:0x02074d00 end:0x02074d44
+
 src/overlays/ov015/calls/HandlePanelOperationSelection.c:
     complete
     .text       start:0x02074d44 end:0x02074d98
@@ -680,7 +688,7 @@ src/overlays/ov015/calls/SetPanelPendingValue.c:
     complete
     .text       start:0x02075014 end:0x02075024
 
-src/overlays/ov015/calls/func_ov015_02075024.c:
+src/overlays/ov015/calls/SetPanelPeerExchangeCallback.c:
     complete
     .text       start:0x02075024 end:0x02075034
 
@@ -915,6 +923,10 @@ src/overlays/ov015/calls/DestroyOwnedObjectList.c:
 src/overlays/ov015/calls/PlaySoundOnPanelEntryMatch.c:
     complete
     .text       start:0x02079d08 end:0x02079d6c
+
+src/overlays/ov015/calls/InstallResultPanelCallbacks.c:
+    complete
+    .text       start:0x02079d6c end:0x02079dcc
 
 src/overlays/ov015/calls/OnPanelSlot1Selected.c:
     complete

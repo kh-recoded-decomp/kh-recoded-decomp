@@ -1,0 +1,6 @@
+#define func_ov015_02074d00 StartWirelessPanelOperation
+#define func_ov015_02074d44 HandlePanelOperationSelection
+#define FS_ReadFile_0201169c FS_ReadFile_020116b0
+#define func_ov015_020737c4 SetPanelTransitionMode
+#define func_ov015_020737d4 WH_SetError
+#include "src/ov015/reviewed_helpers/func_ov015_02074d00.c"

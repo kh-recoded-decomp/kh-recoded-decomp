@@ -24,7 +24,7 @@ extern FadeState *data_ov001_020a04a0;
 extern FieldState *data_ov001_020a0480;
 extern void SetBrightnessAndSyncMain(int level);
 extern void SetSecondaryBrightness(int level);
-extern void *func_ov001_0206a138(void);
+extern void *SelectScreenFadeHandler(void);
 
 FadeStepFn StepBrightnessFadeIn(void)
 {
@@ -44,7 +44,7 @@ FadeStepFn StepBrightnessFadeIn(void)
             data_ov001_020a0480->flags &= ~0x40000;
             fade->fadeSub = 0;
         }
-        return func_ov001_0206a138;
+        return SelectScreenFadeHandler;
     }
     if (fade->flags & 0x10) {
         fade->mainLevel -= fade->step;

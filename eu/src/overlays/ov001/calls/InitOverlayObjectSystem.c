@@ -8,7 +8,7 @@ typedef struct ActorManager {
 } ActorManager;
 
 extern ActorManager *data_ov001_020a0500;
-extern u32 data_ov001_0209f324;
+extern u32 gActorChannelClassDescriptor;
 extern u32 gActorScriptCommandHandlers;
 extern void MI_CpuFill8(void *dst, int val, u32 size);
 extern void StoreGlobalArrayEntry(int index, void *value);
@@ -26,7 +26,7 @@ u32 InitOverlayObjectSystem(void)
     MI_CpuFill8(manager, 0, 0x3f20);
     StoreGlobalArrayEntry(1, &gActorScriptCommandHandlers);
     manager->heapHandle = func_0202a768();
-    manager->rootObject = func_0202a45c(&data_ov001_0209f324, 0);
+    manager->rootObject = func_0202a45c(&gActorChannelClassDescriptor, 0);
     func_020257d8((u8 *)manager + 0x140, 0x8000, 0xd);
     return 0x20882d5;
 }

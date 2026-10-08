@@ -48,6 +48,10 @@ src/overlays/ov025/calls/SetupMenuTextLayers.c:
     complete
     .text       start:0x020b5c98 end:0x020b5e44
 
+src/overlays/ov025/calls/RefreshTagCallbacksAndSchedule.c:
+    complete
+    .text       start:0x020b5e44 end:0x020b5eac
+
 src/overlays/ov025/calls/ShutdownMenuScreen.c:
     complete
     .text       start:0x020b5eac end:0x020b5f28

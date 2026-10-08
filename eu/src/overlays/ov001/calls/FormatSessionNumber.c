@@ -1,6 +1,6 @@
 #define FormatSessionNumber_02063578 FormatSessionNumber
 #define OS_SPrintf_02002428 OS_SPrintf
-#define data_ov001_0209e6f0 data_ov001_0209e710
-#define data_ov001_0209e6f4 data_ov001_0209e714
+#define data_ov001_0209e6f0 sSessionNameStringFormat
+#define data_ov001_0209e6f4 sSessionNumberFormat
 #define data_ov001_020a0460 data_ov001_020a0480
 #include "src/ov001/unclassified_helpers/FormatSessionNumber_02063578.c"

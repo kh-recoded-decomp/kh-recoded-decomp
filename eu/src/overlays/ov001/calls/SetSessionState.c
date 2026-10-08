@@ -47,7 +47,7 @@ typedef struct Session {
 } Session;
 
 extern Session *data_ov001_020a0480;
-extern s32 data_ov001_0209e66c[];
+extern s32 gSessionStateOverlayIds[];
 extern u8 sOv001_BaEfShBin_0209e700[];
 extern u8 OVERLAY_21_ID[];
 
@@ -118,7 +118,7 @@ s32 SetSessionState(s32 newState, s32 mode) {
             ClearStageTablesIfActive();
         }
 
-        overlayId = data_ov001_0209e66c[newState];
+        overlayId = gSessionStateOverlayIds[newState];
         if (overlayId != -1) {
             machine->overlayId = overlayId;
             func_02029f8c(0, overlayId);

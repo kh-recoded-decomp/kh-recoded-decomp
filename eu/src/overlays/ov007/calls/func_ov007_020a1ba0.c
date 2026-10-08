@@ -2,7 +2,7 @@
 
 extern int func_ov001_02067ed4(void);
 extern int func_ov035_020bae94(void);
-extern int func_ov001_02069464(void *obj);
+extern int UpdateEventTriggerDelay(void *obj);
 
 typedef struct {
     void *callback;
@@ -26,7 +26,7 @@ int func_ov007_020a1ba0(UnkState_020a1b80 *obj)
     if (obj->alreadyRun == 0 && (value = func_ov035_020bae94(), value != 0)) {
         obj->result = 1;
     }
-    value = func_ov001_02069464(obj);
+    value = UpdateEventTriggerDelay(obj);
     if (value != 0) {
         return obj->result;
     }

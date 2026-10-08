@@ -128,6 +128,10 @@ src/overlays/ov041/calls/FindFreeSlotId.c:
     complete
     .text       start:0x020c21d0 end:0x020c21f4
 
+src/overlays/ov041/calls/InstallModelRenderCallback.c:
+    complete
+    .text       start:0x020c2538 end:0x020c25ec
+
 src/overlays/ov041/calls/LoadStageActorModel.c:
     complete
     .text       start:0x020c26d8 end:0x020c279c

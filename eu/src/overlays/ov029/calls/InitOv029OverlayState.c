@@ -3,7 +3,7 @@
 #define NNSi_FndGetCurrentRootHeap_0202a764 NNSi_FndGetCurrentRootHeap
 #define QueueFieldUpdate_020633a0 QueueFieldUpdate
 #define RunSceneStateMachine_020ba4a4 RunSceneStateMachine_020ba4c4
-#define data_0209eb18 data_ov001_0209eb38
+#define data_0209eb18 gSceneWorkClassDescriptor
 #define data_020b52a0 gSubModeTaskDefinition
 #define data_ov029_020baba0 data_ov029_020babc0
 #define func_0202a158 Heap_GetCurrent

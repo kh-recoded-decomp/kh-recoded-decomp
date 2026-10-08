@@ -1,4 +1,5 @@
 #define EventTrigger_EvaluateCallback_02069e1c EventTrigger_EvaluateCallback
+#define func_ov001_02069464 UpdateEventTriggerDelay
 #define func_ov001_0208635c func_ov001_02086384
 #define func_ov001_02087214 func_ov001_0208723c
 #include "src/ov001/shared_engine/EventTrigger_EvaluateCallback_02069e1c.c"

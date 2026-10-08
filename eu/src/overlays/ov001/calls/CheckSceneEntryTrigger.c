@@ -2,7 +2,7 @@
 
 extern int func_ov001_02067ed4(void);
 extern int IsSceneEntryFlag2Set(int value);
-extern int func_ov001_02069464(FieldTaskState *task);
+extern int UpdateEventTriggerDelay(FieldTaskState *task);
 
 int CheckSceneEntryTrigger(FieldTaskState *task)
 {
@@ -17,7 +17,7 @@ int CheckSceneEntryTrigger(FieldTaskState *task)
         (result = IsSceneEntryFlag2Set((s16)task->id), result != 0)) {
         task->active = TRUE;
     }
-    result = func_ov001_02069464(task);
+    result = UpdateEventTriggerDelay(task);
     if (result != 0) {
         return (s8)task->active;
     }

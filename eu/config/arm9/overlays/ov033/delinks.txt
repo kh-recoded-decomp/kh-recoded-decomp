@@ -11,6 +11,10 @@ src/overlays/ov033/calls/LoadActorOverlay.c:
     complete
     .text       start:0x020ba418 end:0x020ba430
 
+src/overlays/ov033/calls/InitResumeModeContext.c:
+    complete
+    .text       start:0x020ba430 end:0x020ba574
+
 src/overlays/ov033/calls/func_ov033_020ba574.c:
     complete
     .text       start:0x020ba574 end:0x020ba5d4

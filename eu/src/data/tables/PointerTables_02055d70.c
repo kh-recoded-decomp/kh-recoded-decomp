@@ -1,14 +1,14 @@
 #include "nitro/types.h"
 
-extern void func_01ffad00(void); /* func */
-extern void func_01ffae7c(void); /* func */
+extern void NNSi_G3dSendTexMtxMode2(void);
+extern void SendTexMtxAltBuilders(void);
 extern void func_01ffa624(void); /* func */
 extern void NNSi_G3dGetJointScaleMaya(void); /* func */
 
 void (*gMaterialAnimationDispatch[4])(void) = {
-    func_01ffad00, /* func */
+    NNSi_G3dSendTexMtxMode2,
     NULL,
-    func_01ffae7c, /* func */
+    SendTexMtxAltBuilders,
     NULL,
 };
 

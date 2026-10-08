@@ -1,4 +1,5 @@
 #define NotifyBothOrOne_02001154 NotifyBothOrOne
+#define func_ov001_0206a138 SelectScreenFadeHandler
 #define ScreenFadeInStep_0206a184 ScreenFadeInStep
 #define SetSecondaryBrightness_02029ed0 SetSecondaryBrightness
 #define data_ov001_0209eb0c sOv001_RefreshWnd_0209eb2c

@@ -1,7 +1,7 @@
 #include "nitro/types.h"
 
-extern void func_ov015_02072f4c(void);
+extern void InitPeerWirelessSession(void);
 
 void (*gWirelessStateInitCallback[1])(void) = {
-    func_ov015_02072f4c,
+    InitPeerWirelessSession,
 };

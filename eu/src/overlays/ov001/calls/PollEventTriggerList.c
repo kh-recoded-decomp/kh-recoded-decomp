@@ -1,4 +1,5 @@
 #define func_ov001_020645c8 IsSessionFlagSet
+#define func_ov001_02068f4c WaitForEventTriggerActivation
 #define NNSi_FndGetCurrentRootHeap_0202a764 NNSi_FndGetCurrentRootHeap
 #define PollEventTriggerList_02068f64 PollEventTriggerList
 #include "src/ov001/shared_engine/PollEventTriggerList_02068f64.c"

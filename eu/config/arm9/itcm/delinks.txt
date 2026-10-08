@@ -281,9 +281,17 @@ src/calls/func_01ffacdc.c:
     complete
     .text       start:0x01ffacdc end:0x01ffad00
 
+src/calls/NNSi_G3dSendTexMtxMode2.c:
+    complete
+    .text       start:0x01ffad00 end:0x01ffae38
+
 src/calls/func_01ffae58.c:
     complete
     .text       start:0x01ffae58 end:0x01ffae7c
+
+src/calls/SendTexMtxAltBuilders.c:
+    complete
+    .text       start:0x01ffae7c end:0x01ffafb4
 
 src/calls/func_01ffb2d4.c:
     complete

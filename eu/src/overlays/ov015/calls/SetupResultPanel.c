@@ -1,4 +1,5 @@
 #define MIi_CpuFill8_01ff8830 MI_CpuFill8
+#define func_ov015_02079d6c InstallResultPanelCallbacks
 #define MeasureTextWidth_02078950 MeasureTextWidth
 #define NNSi_FndAllocFromDefaultHeapEx_0202a19c NNS_FndAllocFromDefaultExpHeapEx
 #define SetupResultPanel_0207509c SetupResultPanel

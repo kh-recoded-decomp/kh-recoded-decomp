@@ -1,0 +1,5 @@
+#define func_ov001_0206ae58 ShutdownSceneWork
+#define NNSi_FndGetCurrentRootHeap_0202a764 NNSi_FndGetCurrentRootHeap
+#define func_ov001_0206c720 RemoveTaggedListEntries
+#define g_manager_020a0484 data_ov001_020a04a4
+#include "src/ov001/shared_engine/func_ov001_0206ae58.c"

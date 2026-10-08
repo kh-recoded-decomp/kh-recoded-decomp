@@ -6443,6 +6443,94 @@
       "name": "empty spawn node name",
       "origin": "US reference adapted to EU",
       "behavior": "Empty node name passed when a stage object has no attachment node."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209e640",
+      "end": "0x0209e6a0",
+      "source": "src/overlays/ov001/data/tables/gFieldSessionClassData.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "field session class data",
+      "origin": "US reference adapted to EU",
+      "behavior": "Field-session class descriptor, follower offsets, and state-to-overlay mapping."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209e710",
+      "end": "0x0209e714",
+      "source": "src/overlays/ov001/data/strings/sSessionNameFormat.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "session name format",
+      "origin": "US reference adapted to EU",
+      "behavior": "String format used when composing a named session identifier."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209e714",
+      "end": "0x0209e718",
+      "source": "src/overlays/ov001/data/strings/sSessionNumberFormat.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "session number format",
+      "origin": "US reference adapted to EU",
+      "behavior": "Decimal format used when composing a numbered session identifier."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209eb38",
+      "end": "0x0209eb4c",
+      "source": "src/overlays/ov001/data/tables/gSceneWorkClassDescriptor.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "scene work class descriptor",
+      "origin": "US reference adapted to EU",
+      "behavior": "Constructor, destructor, and allocation size for scene work instances."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209eb5c",
+      "end": "0x0209eb70",
+      "source": "src/overlays/ov001/data/tables/gSessionTaskClassDescriptor.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "session task class descriptor",
+      "origin": "US reference adapted to EU",
+      "behavior": "Lifecycle callbacks used to create and clear session callback lists."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209ec24",
+      "end": "0x0209ec38",
+      "source": "src/overlays/ov001/data/tables/gPartyStateClassDescriptor.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "party state class descriptor",
+      "origin": "US reference adapted to EU",
+      "behavior": "Lifecycle callbacks and allocation size for party-state objects."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209ecfc",
+      "end": "0x0209ed10",
+      "source": "src/overlays/ov001/data/tables/gFieldManagerClassDescriptor.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "field manager class descriptor",
+      "origin": "US reference adapted to EU",
+      "behavior": "Lifecycle callbacks and allocation size for the field manager."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209f324",
+      "end": "0x0209f338",
+      "source": "src/overlays/ov001/data/tables/gActorChannelClassDescriptor.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "actor channel class descriptor",
+      "origin": "US reference adapted to EU",
+      "behavior": "Lifecycle callbacks and allocation size for actor channels."
     }
   ]
 }

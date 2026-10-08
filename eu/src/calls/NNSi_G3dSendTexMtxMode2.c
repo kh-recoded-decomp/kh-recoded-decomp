@@ -1,0 +1,4 @@
+#define NNSi_G3dSendTexMtxMode2_01ffad00 NNSi_G3dSendTexMtxMode2
+#define data_01ffa660 gTexMtxMode2Builders
+#define QueueOrSendGeometryCommand_01ffa37c NNS_G3dGeBufferOP_N
+#include "src/itcm/library_nns_g3d/NNSi_G3dSendTexMtxMode2_01ffad00.c"

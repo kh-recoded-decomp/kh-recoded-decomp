@@ -1,3 +1,4 @@
 #define EventTrigger_EvaluateBitChain_020699a8 EventTrigger_EvaluateBitChain
+#define func_ov001_02069464 UpdateEventTriggerDelay
 #define ReadSessionPackedBits_02064574 ReadSessionPackedBits
 #include "src/ov001/shared_engine/EventTrigger_EvaluateBitChain_020699a8.c"

@@ -1012,6 +1012,10 @@ src/overlays/ov001/calls/func_ov001_02066ca0.c:
     complete
     .text       start:0x02066ca0 end:0x02066cb4
 
+src/overlays/ov001/calls/FinishFadeTween.c:
+    complete
+    .text       start:0x02066cb4 end:0x02066ce0
+
 src/overlays/ov001/calls/StepFadeInTween.c:
     complete
     .text       start:0x02066ce0 end:0x02066d30
@@ -1492,6 +1496,14 @@ src/overlays/ov001/auto/func_ov001_02068ef0.c:
     complete
     .text       start:0x02068ef0 end:0x02068efc
 
+src/overlays/ov001/calls/InitEventTriggerScene.c:
+    complete
+    .text       start:0x02068efc end:0x02068f4c
+
+src/overlays/ov001/calls/WaitForEventTriggerActivation.c:
+    complete
+    .text       start:0x02068f4c end:0x02068f64
+
 src/overlays/ov001/calls/PollEventTriggerList.c:
     complete
     .text       start:0x02068f64 end:0x02068ff4
@@ -1571,6 +1583,10 @@ src/overlays/ov001/auto/func_ov001_02069434.c:
 src/overlays/ov001/calls/func_ov001_0206943c.c:
     complete
     .text       start:0x0206943c end:0x02069464
+
+src/overlays/ov001/calls/UpdateEventTriggerDelay.c:
+    complete
+    .text       start:0x02069464 end:0x02069498
 
 src/overlays/ov001/calls/LoadOffsetTableFile.c:
     complete
@@ -1744,6 +1760,10 @@ src/overlays/ov001/calls/OpenNamedSessionArchive.c:
     complete
     .text       start:0x02069dcc end:0x02069de0
 
+src/overlays/ov001/calls/InitStringEventTrigger.c:
+    complete
+    .text       start:0x02069de0 end:0x02069e1c
+
 src/overlays/ov001/calls/EventTrigger_EvaluateCallback.c:
     complete
     .text       start:0x02069e1c end:0x02069e74
@@ -1776,9 +1796,17 @@ src/overlays/ov001/calls/LoadSlotTextureFile.c:
     complete
     .text       start:0x02069fb4 end:0x0206a0a0
 
+src/overlays/ov001/calls/InitScreenFadeContext.c:
+    complete
+    .text       start:0x0206a0a0 end:0x0206a118
+
 src/overlays/ov001/calls/func_ov001_0206a118.c:
     complete
     .text       start:0x0206a118 end:0x0206a138
+
+src/overlays/ov001/calls/SelectScreenFadeHandler.c:
+    complete
+    .text       start:0x0206a138 end:0x0206a184
 
 src/overlays/ov001/calls/ScreenFadeInStep.c:
     complete
@@ -1883,6 +1911,10 @@ src/overlays/ov001/calls/ProjectWorldToScreenFx.c:
 src/overlays/ov001/calls/InitSceneWork.c:
     complete
     .text       start:0x0206adc8 end:0x0206ae58
+
+src/overlays/ov001/calls/ShutdownSceneWork.c:
+    complete
+    .text       start:0x0206ae58 end:0x0206ae84
 
 src/overlays/ov001/calls/UpdateTargetMenuState.c:
     complete
@@ -3611,6 +3643,10 @@ src/overlays/ov001/calls/CloseModeWindow.c:
 src/overlays/ov001/calls/HandleModeMenuInput.c:
     complete
     .text       start:0x0207a370 end:0x0207a458
+
+src/overlays/ov001/calls/InitModeHandlerContext.c:
+    complete
+    .text       start:0x0207a458 end:0x0207a4a0
 
 src/overlays/ov001/calls/func_ov001_0207a4a0.c:
     complete
@@ -8220,6 +8256,14 @@ src/overlays/ov001/data/strings/sP2Extension_0209f310.c:
     complete
     .data       start:0x0209f310 end:0x0209f314
 
+src/overlays/ov001/data/strings/sSessionNameFormat.c:
+    complete
+    .data       start:0x0209e710 end:0x0209e714
+
+src/overlays/ov001/data/strings/sSessionNumberFormat.c:
+    complete
+    .data       start:0x0209e714 end:0x0209e718
+
 src/overlays/ov001/data/tables/PointerTables_ov001_0209ec90.c:
     complete
     .data       start:0x0209ec90 end:0x0209ecac
@@ -8232,6 +8276,10 @@ src/overlays/ov001/data/tables/PointerTables_ov001_0209efc8.c:
     complete
     .data       start:0x0209efc8 end:0x0209eff4
 
+src/overlays/ov001/data/tables/gActorChannelClassDescriptor.c:
+    complete
+    .data       start:0x0209f324 end:0x0209f338
+
 src/overlays/ov001/data/tables/gActorScriptCommandHandlers.c:
     complete
     .data       start:0x0209f344 end:0x0209f62c
@@ -8239,6 +8287,10 @@ src/overlays/ov001/data/tables/gActorScriptCommandHandlers.c:
 src/overlays/ov001/data/tables/gBgScreenLoaders.c:
     complete
     .data       start:0x0209ed10 end:0x0209ed2c
+
+src/overlays/ov001/data/tables/gFieldManagerClassDescriptor.c:
+    complete
+    .data       start:0x0209ecfc end:0x0209ed10
 
 src/overlays/ov001/data/tables/gFieldMenuDrawHandlers.c:
     complete
@@ -8255,6 +8307,10 @@ src/overlays/ov001/data/tables/gFieldObjectScriptCommandHandlers.c:
 src/overlays/ov001/data/tables/gFieldScriptCommandHandlers.c:
     complete
     .data       start:0x0209e718 end:0x0209ea10
+
+src/overlays/ov001/data/tables/gFieldSessionClassData.c:
+    complete
+    .data       start:0x0209e640 end:0x0209e6a0
 
 src/overlays/ov001/data/tables/gHudSlideResourceGroup1.c:
     complete
@@ -8292,9 +8348,21 @@ src/overlays/ov001/data/tables/gNearestEntrySyncHandlers.c:
     complete
     .data       start:0x020a0260 end:0x020a0294
 
+src/overlays/ov001/data/tables/gPartyStateClassDescriptor.c:
+    complete
+    .data       start:0x0209ec24 end:0x0209ec38
+
+src/overlays/ov001/data/tables/gSceneWorkClassDescriptor.c:
+    complete
+    .data       start:0x0209eb38 end:0x0209eb4c
+
 src/overlays/ov001/data/tables/gSessionScriptStateHandlers.c:
     complete
     .data       start:0x0209e6a0 end:0x0209e6d4
+
+src/overlays/ov001/data/tables/gSessionTaskClassDescriptor.c:
+    complete
+    .data       start:0x0209eb5c end:0x0209eb70
 
 src/overlays/ov001/data/tables/gStageScriptStateHandlers.c:
     complete

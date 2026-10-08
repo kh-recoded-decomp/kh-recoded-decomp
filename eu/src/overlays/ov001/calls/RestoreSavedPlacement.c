@@ -8,5 +8,5 @@
 #define data_0205356c data_02053580
 #define data_ov001_020a0460 data_ov001_020a0480
 #define func_0204fb1c RefreshSelectionLinkValues
-#define g_followerOffsets_0209e634 data_ov001_0209e654
+#define g_followerOffsets_0209e634 gFollowerOffsets
 #include "src/ov001/unclassified_helpers/RestoreSavedPlacement_02061c6c.c"

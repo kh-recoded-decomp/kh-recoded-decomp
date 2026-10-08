@@ -1,0 +1,4 @@
+#define SendTexMtxAltBuilders_01ffae7c SendTexMtxAltBuilders
+#define data_01ffae38 gTexMtxAltBuilders
+#define QueueOrSendGeometryCommand_01ffa37c NNS_G3dGeBufferOP_N
+#include "src/itcm/library_nns_g3d/SendTexMtxAltBuilders_01ffae7c.c"

@@ -1,0 +1,5 @@
+#define func_ov001_02066cb4 FinishFadeTween
+#define NNSi_FndGetCurrentRootHeap_0202a764 NNSi_FndGetCurrentRootHeap
+#define func_ov001_02066da4 SubScene9_StartFade
+#define func_0204d8d0 PlaySoundChecked
+#include "src/ov001/shared_engine/func_ov001_02066cb4.c"

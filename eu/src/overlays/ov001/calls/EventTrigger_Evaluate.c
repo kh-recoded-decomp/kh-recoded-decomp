@@ -1,4 +1,5 @@
 #define EventTrigger_Evaluate_02069b80 EventTrigger_Evaluate
+#define func_ov001_02069464 UpdateEventTriggerDelay
 #define StageEvents_CheckEvent_02087824 StageEvents_CheckEvent
 #define func_ov001_02087868 func_ov001_02087890
 #include "src/ov001/shared_engine/EventTrigger_Evaluate_02069b80.c"

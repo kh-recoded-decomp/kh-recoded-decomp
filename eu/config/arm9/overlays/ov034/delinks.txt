@@ -36,6 +36,10 @@ src/overlays/ov034/calls/InitResultsScreen.c:
     complete
     .text       start:0x020bb324 end:0x020bb598
 
+src/overlays/ov034/calls/DestroyResultsGraphics.c:
+    complete
+    .text       start:0x020bce10 end:0x020bce70
+
 src/overlays/ov034/calls/ResetResultsObjects.c:
     complete
     .text       start:0x020bce70 end:0x020bcf50

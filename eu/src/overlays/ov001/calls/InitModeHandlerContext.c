@@ -1,0 +1,8 @@
+#define func_ov001_0207a458 InitModeHandlerContext
+#define NNSi_FndGetCurrentRootHeap_0202a764 NNSi_FndGetCurrentRootHeap
+#define MI_CpuFill8_01ff8830 MI_CpuFill8
+#define func_ov001_02071248 MakePrimaryVramKey_02071248
+#define func_0202c478 Archive_LoadFile
+#define func_020524e8 func_020524fc
+#define g_activeContext_020a04c4 data_ov001_020a04e4
+#include "src/ov001/leaf_research/func_ov001_0207a458.c"
