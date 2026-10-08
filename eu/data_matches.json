@@ -89,6 +89,16 @@
       "behavior": "Initialised data words, pointers named by their targets."
     },
     {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209dbbc",
+      "end": "0x0209dbc8",
+      "source": "src/overlays/ov001/data/tables/gMainBgLayerIds.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "Main HUD background layer IDs",
+      "behavior": "Maps the three copied HUD background screens to tile-table layer IDs 9, 10, and 11."
+    },
+    {
       "module": "ov002",
       "section": ".rodata",
       "start": "0x0206ac94",

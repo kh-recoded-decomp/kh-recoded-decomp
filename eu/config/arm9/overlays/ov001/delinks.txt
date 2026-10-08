@@ -2912,6 +2912,10 @@ src/overlays/ov001/calls/IsFieldFlag13OrSessionFlagSet.c:
     complete
     .text       start:0x020728e4 end:0x0207292c
 
+src/overlays/ov001/calls/LoadHudLayersAndRecordText.c:
+    complete
+    .text       start:0x0207292c end:0x02072ad0
+
 src/overlays/ov001/calls/ShowFieldMessageLine_02072ad0.c:
     complete
     .text       start:0x02072ad0 end:0x02072b84
@@ -7440,6 +7444,10 @@ src/overlays/ov001/calls/LoadStageModelEntry.c:
     complete
     .text       start:0x0209a8d4 end:0x0209ab8c
 
+src/overlays/ov001/calls/LoadStageModels.cpp:
+    complete
+    .text       start:0x0209ab8c end:0x0209b49c
+
 src/overlays/ov001/calls/ReleaseStageSlotLocks.c:
     complete
     .text       start:0x0209b520 end:0x0209b584
@@ -7783,6 +7791,10 @@ src/overlays/ov001/calls/GetTrajectoryPosition.c:
 src/overlays/ov001/calls/BuildSweptShape.c:
     complete
     .text       start:0x0209d638 end:0x0209d8a0
+
+src/overlays/ov001/data/AliasHudEntryPoints.s:
+    complete
+    .bss        start:0x020a0480 end:0x020a0480
 
 src/overlays/ov001/data/bss/Bss_ov001_020a0480.c:
     complete
@@ -8183,6 +8195,10 @@ src/overlays/ov001/data/tables/gHudSlideResourceGroup3.c:
 src/overlays/ov001/data/tables/gHudSlideResourceGroup4.c:
     complete
     .data       start:0x0209ecd4 end:0x0209ece0
+
+src/overlays/ov001/data/tables/gMainBgLayerIds.c:
+    complete
+    .rodata     start:0x0209dbbc end:0x0209dbc8
 
 src/overlays/ov001/data/tables/gMenuOverlayStateHandlers.c:
     complete

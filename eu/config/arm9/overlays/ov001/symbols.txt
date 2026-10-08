@@ -775,7 +775,7 @@ IsHudFlag9Set kind:function(thumb,size=0x20) addr:0x02072884
 IsFieldFlag8Set kind:function(thumb,size=0x20) addr:0x020728a4
 IsFieldFlag10Set kind:function(thumb,size=0x20) addr:0x020728c4
 IsFieldFlag13OrSessionFlagSet kind:function(thumb,size=0x48) addr:0x020728e4
-func_ov001_0207292c kind:function(thumb,size=0x1a4) addr:0x0207292c
+LoadHudLayersAndRecordText kind:function(thumb,size=0x1a4) addr:0x0207292c
 ShowFieldMessageLine_02072ad0 kind:function(thumb,size=0xb4) addr:0x02072ad0
 HasPendingSceneValue kind:function(thumb,size=0x28) addr:0x02072b84
 ShowHudCaption kind:function(thumb,size=0x94) addr:0x02072bac
@@ -2004,7 +2004,7 @@ func_ov001_0209a19c kind:function(thumb,size=0x348) addr:0x0209a19c
 func_ov001_0209a4e4 kind:function(thumb,size=0x2c8) addr:0x0209a4e4
 LoadStageResource kind:function(thumb,size=0x128) addr:0x0209a7ac
 LoadStageModelEntry kind:function(thumb,size=0x2b8) addr:0x0209a8d4
-func_ov001_0209ab8c kind:function(thumb,size=0x910) addr:0x0209ab8c
+LoadStageModels kind:function(thumb,size=0x910) addr:0x0209ab8c
 func_ov001_0209b49c kind:function(thumb,size=0x84) addr:0x0209b49c
 ReleaseStageSlotLocks kind:function(thumb,size=0x64) addr:0x0209b520
 AddStageSlotLocks kind:function(thumb,size=0x5c) addr:0x0209b584
@@ -2117,7 +2117,7 @@ data_ov001_0209db2c kind:data(any) addr:0x0209db2c
 data_ov001_0209db48 kind:data(any) addr:0x0209db48
 data_ov001_0209db78 kind:data(any) addr:0x0209db78
 data_ov001_0209dbb4 kind:data(any) addr:0x0209dbb4
-data_ov001_0209dbbc kind:data(any) addr:0x0209dbbc
+gMainBgLayerIds kind:data(any) addr:0x0209dbbc
 data_ov001_0209dbc8 kind:data(any) addr:0x0209dbc8
 data_ov001_0209dbd4 kind:data(any) addr:0x0209dbd4
 data_ov001_0209dbe0 kind:data(any) addr:0x0209dbe0

@@ -5,8 +5,8 @@
 #define SaveSlotEntriesToBits_02050194 SaveSlotEntriesToBits
 #define data_ov035_020bc478 gMovieSkipHandlers
 #define data_ov035_020bc4e0 data_ov035_020bc500
-#define func_ov035_020ba75c func_ov035_020ba77c
-#define func_ov035_020ba7dc func_ov035_020ba7fc
+#define func_ov035_020ba75c DispatchSceneDrawCallbacks
+#define func_ov035_020ba7dc UpdateSceneSystems
 #define func_ov035_020bae74 func_ov035_020bae94
 #define func_ov035_020baf88 ShowMovieMessage3700
 #define func_ov035_020baf94 IsSessionFlag3701Set

@@ -129,6 +129,7 @@ IsRewardEntryLocked kind:function(thumb,size=0x15c) addr:0x020ced48
 func_ov075_020ceea4 kind:function(thumb,size=0x5c) addr:0x020ceea4
 func_ov075_020cef00 kind:function(thumb,size=0x118) addr:0x020cef00
 GetDialogPixelBounds kind:function(thumb,size=0x34) addr:0x020cf018
+func_020cf02c kind:label(arm) addr:0x020cf02c
 UpdateYesNoDialogInput kind:function(thumb,size=0x150) addr:0x020cf04c
 MeasureTextLine kind:function(thumb,size=0x68) addr:0x020cf19c
 func_ov075_020cf204 kind:function(thumb,size=0x70) addr:0x020cf204

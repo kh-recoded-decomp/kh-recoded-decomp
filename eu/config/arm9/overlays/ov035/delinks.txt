@@ -56,6 +56,14 @@ src/overlays/ov035/calls/FinishMovieContextState.c:
     complete
     .text       start:0x020ba760 end:0x020ba77c
 
+src/overlays/ov035/calls/DispatchSceneDrawCallbacks.c:
+    complete
+    .text       start:0x020ba77c end:0x020ba7fc
+
+src/overlays/ov035/calls/UpdateSceneSystems.c:
+    complete
+    .text       start:0x020ba7fc end:0x020ba8b8
+
 src/overlays/ov035/calls/SetupMovieDisplay.c:
     complete
     .text       start:0x020ba8b8 end:0x020ba960
@@ -335,6 +343,10 @@ src/overlays/ov035/calls/func_ov035_020bc3ac.c:
 src/overlays/ov035/calls/func_ov035_020bc3d8.c:
     complete
     .text       start:0x020bc3d8 end:0x020bc400
+
+src/overlays/ov035/data/AliasSceneEntryPoints.s:
+    complete
+    .bss        start:0x020bc500 end:0x020bc500
 
 src/overlays/ov035/data/bss/Bss_ov035_020bc500.c:
     complete
