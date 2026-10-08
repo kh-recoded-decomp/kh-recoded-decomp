@@ -5,5 +5,5 @@
 #define InvokeMemberUpdateCallbacks_020ad6dc InvokeMemberUpdateCallbacks
 #define IsGroupMemberActive_020a8d1c IsGroupMemberActive
 #define UpdateActorAnimation_020cea48 UpdateActorAnimation
-#define UpdateAllPoolEntries_020a8ae8 func_ov021_020a8b08
+#define UpdateAllPoolEntries_020a8ae8 UpdateAllPoolEntries
 #include "src/ov052/actor_motion/UpdateActorAnimation_020cea48.c"

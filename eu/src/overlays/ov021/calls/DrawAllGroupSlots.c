@@ -1,0 +1,6 @@
+#define DrawAllGroupSlots_020a8b44 DrawAllGroupSlots
+#define g_groupsInitialized_020b5608 gEntryGroupsInitialized
+#define g_groupRegistry_020b5608 gEntryGroupRegistry
+#define NNS_FndGetNextListObject_02012a38 NNS_FndGetNextListObject
+#define DrawEntryForScreen_020a82ec func_ov021_020a830c
+#include "src/ov021/animation/DrawAllGroupSlots_020a8b44.c"

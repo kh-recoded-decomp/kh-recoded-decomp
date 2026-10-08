@@ -1,0 +1,6 @@
+#define UpdateAllPoolEntries_020a8ae8 UpdateAllPoolEntries
+#define NNS_FndGetNextListObject_02012a38 NNS_FndGetNextListObject
+#define func_ov021_020a8240 func_ov021_020a8260
+#define PoolListEnabled_020b5608 gEntryGroupsInitialized
+#define PoolState_020b5608 gEntryGroupRegistry
+#include "src/ov021/shared_engine/UpdateAllPoolEntries_020a8ae8.c"

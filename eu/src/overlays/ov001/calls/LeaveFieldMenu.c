@@ -1,0 +1,11 @@
+#define LeaveFieldMenu_02061fc0 LeaveFieldMenu
+#define func_ov046_020c0e38 Camera_RestoreSnapshot
+#define Panel_SetFormationType_0207b478 Panel_SetFormationType
+#define RefreshSelectionLinkValues_0204fb1c RefreshSelectionLinkValues
+#define func_ov001_020645e8 ClearSessionPackedBit
+#define func_ov001_02064364 SaveSessionCheckpoint
+#define func_ov001_020690c8 RaiseFieldStateFlag
+#define func_01ff8830 MI_CpuFill8
+#define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
+#define data_ov001_020a0460 data_ov001_020a0480
+#include "src/ov001/field_manager/LeaveFieldMenu_02061fc0.c"

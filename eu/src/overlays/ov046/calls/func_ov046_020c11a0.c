@@ -1,3 +1,3 @@
-#define Ov002_PanelDrawCounter func_ov046_020c11b0
+#define Ov002_PanelDrawCounter Camera_StartPathViewFromState
 #define Panel_DrawCounter_020c1180 func_ov046_020c11a0
 #include "src/ov046/shared_engine/Panel_DrawCounter_020c1180.c"

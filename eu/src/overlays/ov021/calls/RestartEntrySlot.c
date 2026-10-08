@@ -2,5 +2,5 @@
 #define RestartEntrySlot_020a8d54 RestartEntrySlot
 #define SpawnSoundSlot_0204da8c SpawnSoundSlot
 #define func_ov021_020a8844 ResolveEntryAnchorPosition
-#define g_groupsReady_020b5608 data_ov021_020b5628
+#define g_groupsReady_020b5608 gEntryGroupRegistry
 #include "src/ov021/object_state/RestartEntrySlot_020a8d54.c"

@@ -3,7 +3,7 @@
 extern void RestoreSavedPlacement(void); /* RestoreSavedPlacement */
 extern void EnterPendingRoom(void); /* EnterPendingRoom */
 extern void StepSessionScriptState(void); /* StepSessionScriptState */
-extern void func_ov001_02061fc0(void); /* LeaveFieldMenu */
+extern void LeaveFieldMenu(void);
 extern void SelectNextSessionState(void); /* SelectNextSessionState */
 extern void WaitSessionPollAndClearFlags(void); /* WaitSessionPollAndClearFlags */
 extern void HandleMenuPromptResult(void); /* HandleMenuPromptResult */
@@ -18,7 +18,7 @@ void (*gSessionScriptStateHandlers[13])(void) = {
     RestoreSavedPlacement, /* RestoreSavedPlacement */
     EnterPendingRoom, /* EnterPendingRoom */
     StepSessionScriptState, /* StepSessionScriptState */
-    func_ov001_02061fc0, /* LeaveFieldMenu */
+    LeaveFieldMenu,
     SelectNextSessionState, /* SelectNextSessionState */
     WaitSessionPollAndClearFlags, /* WaitSessionPollAndClearFlags */
     HandleMenuPromptResult, /* HandleMenuPromptResult */

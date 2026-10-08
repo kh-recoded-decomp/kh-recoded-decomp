@@ -1,0 +1,14 @@
+#define DrawSpriteFrameQuad_0206ab14 DrawSpriteFrameQuad
+#define FixedPointMultiply12 FX_Mul
+#define func_0201931c NNS_G3dGlbSetBaseScale
+#define func_020192ec NNS_G3dGlbSetBaseTrans
+#define MTX_RotZ33_01ff9258 MTX_RotZ33_
+#define MTX_Identity33_01ff90ec MTX_Identity33_
+#define MTX_RotY33_01ff923c MTX_RotY33_
+#define MTX_Concat33_01ff9270 MTX_Concat33
+#define MI_Copy36B_01ff87c4 MI_Copy36B
+#define FlushGeometryState_02019230 NNS_G3dGlbFlushWVP
+#define QueueOrSendGeometryCommand_01ffa37c NNS_G3dGeBufferOP_N
+#define data_0205356c data_02053580
+#define data_0205a924 NNS_G3dGlb
+#include "src/ov001/unclassified_helpers/DrawSpriteFrameQuad_0206ab14.c"

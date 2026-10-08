@@ -124,6 +124,10 @@ src/overlays/ov058/calls/IsEnemyStunnedOrDowned.c:
     complete
     .text       start:0x020d704c end:0x020d7074
 
+src/overlays/ov058/calls/SettleAnchorOnGround.c:
+    complete
+    .text       start:0x020d7074 end:0x020d722c
+
 src/overlays/ov058/calls/UpdateSceneCameraTransform.c:
     complete
     .text       start:0x020d722c end:0x020d72e4

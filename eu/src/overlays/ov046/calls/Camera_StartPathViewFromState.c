@@ -1,0 +1,19 @@
+#define Camera_StartPathViewFromState_020c1190 Camera_StartPathViewFromState
+#define func_ov021_020af9dc GetSegmentState
+#define func_ov046_020c2d8c Camera_BuildSideView
+#define VEC_Subtract_01ff9e3c VEC_Subtract
+#define TransformVectorByBasis_0204bee8 TransformVectorByBasis
+#define VEC_DotProduct_01ff9e6c VEC_DotProduct
+#define ScaleVecFx32InPlace_0204a5e4 ScaleVecFx32InPlace
+#define VEC_Add_01ff9e0c VEC_Add
+#define func_02029f98 func_02029fac
+#define func_02029f78 func_02029f8c
+#define func_ov049_020c363c StartEventCameraFollow
+#define Camera_SetViewBuilder_020c2d4c Camera_SetViewBuilder
+#define func_ov046_020c0a70 Camera_UpdateController
+#define g_cameraManager_020c34e0 data_ov046_020c3500
+#define data_ov046_020c33a0 gCameraLayerIdsByMode
+#define CameraLayerIds_020c33a0 gCameraLayerIds
+#define Camera_FollowAlongViewDirection_020c2bec Camera_FollowAlongViewDirection
+#define Camera_AimViewAtPlayer_020c32f0 Camera_AimViewAtPlayer
+#include "src/ov046/shared_engine/Camera_StartPathViewFromState_020c1190.c"

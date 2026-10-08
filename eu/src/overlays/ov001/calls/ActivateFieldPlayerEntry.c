@@ -2,7 +2,7 @@
 #define ActorSlot_SetFlag8ByIndex_02036120 ActorSlot_SetFlag8ByIndex
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField
 #define RefreshFieldMenuPage_0206d248 RefreshFieldMenuPage
-#define UpdateActionCommand_0206d0ac func_ov001_0206d0ac
+#define UpdateActionCommand_0206d0ac UpdateActionCommand
 #define data_ov001_020a049c data_ov001_020a04bc
 #define func_020359f8 ApplyRecordTableEntry5
 #define func_ov021_020a74f0 func_ov021_020a7510

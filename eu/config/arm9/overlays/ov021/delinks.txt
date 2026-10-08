@@ -192,6 +192,14 @@ src/overlays/ov021/calls/ResolveEntryAnchorPosition.c:
     complete
     .text       start:0x020a8864 end:0x020a8918
 
+src/overlays/ov021/calls/InitializeEntryGroupRegistry.c:
+    complete
+    .text       start:0x020a8918 end:0x020a894c
+
+src/overlays/ov021/calls/DestroyAllPools.c:
+    complete
+    .text       start:0x020a894c end:0x020a89c8
+
 src/overlays/ov021/calls/DestroyEntryGroup.c:
     complete
     .text       start:0x020a8a88 end:0x020a8ad4
@@ -203,6 +211,22 @@ src/overlays/ov021/calls/ResetAnimationTrackState.c:
 src/overlays/ov021/calls/ZeroBytes0x14.c:
     complete
     .text       start:0x020a8afc end:0x020a8b08
+
+src/overlays/ov021/calls/UpdateAllPoolEntries.c:
+    complete
+    .text       start:0x020a8b08 end:0x020a8b64
+
+src/overlays/ov021/calls/DrawAllGroupSlots.c:
+    complete
+    .text       start:0x020a8b64 end:0x020a8bbc
+
+src/overlays/ov021/calls/StopEntrySoundsByOwner.c:
+    complete
+    .text       start:0x020a8bbc end:0x020a8c40
+
+src/overlays/ov021/calls/AreActorEntriesFinished.c:
+    complete
+    .text       start:0x020a8c40 end:0x020a8cc0
 
 src/overlays/ov021/calls/IsGroupMemberActive.c:
     complete
@@ -235,6 +259,10 @@ src/overlays/ov021/calls/GetGroupSlotValue.c:
 src/overlays/ov021/calls/SetSlotEntryValue.c:
     complete
     .text       start:0x020a8f6c end:0x020a8f94
+
+src/overlays/ov021/calls/UpdateAllGroupSlots.c:
+    complete
+    .text       start:0x020a8f94 end:0x020a8fe8
 
 src/overlays/ov021/calls/LookupKindTableValue.c:
     complete
@@ -1863,6 +1891,10 @@ src/ov021/data/Rodata_ov021_020b5124.c:
 src/ov021/data/Rodata_ov021_020b5184.c:
     complete
     .rodata     start:0x020b5184 end:0x020b51e4
+
+src/overlays/ov021/data/bss/Alias_gEntryGroupsInitialized.s:
+    complete
+    .bss        start:0x020b5628 end:0x020b5628
 
 src/overlays/ov021/data/bss/Bss_ov021_020b5620.c:
     complete

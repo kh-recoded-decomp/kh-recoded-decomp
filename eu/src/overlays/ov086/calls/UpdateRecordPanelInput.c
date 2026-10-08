@@ -12,7 +12,7 @@
 #define func_ov039_020bc1cc GetMenuWidgetContainer
 #define func_ov086_020bed2c SetPageHeaderVisible
 #define func_ov086_020c1600 UpdateRecordSliderTouch
-#define func_ov086_020c1674 func_ov086_020c1694
+#define func_ov086_020c1674 HandleRecordTabTouch
 #define func_ov086_020c1828 HandleRecordScrollInput
 #define func_ov086_020c1a28 DrawPlayTimeDigits
 #include "src/ov086/panel_state/UpdateRecordPanelInput_020c1ed4.c"

@@ -1,0 +1,6 @@
+#define StopEntrySoundsByOwner_020a8b9c StopEntrySoundsByOwner
+#define g_groupsReady_020b5608 gEntryGroupsInitialized
+#define g_groupRegistry_020b5608 gEntryGroupRegistry
+#define NNS_FndGetNextListObject_02012a38 NNS_FndGetNextListObject
+#define StopSoundSeqHandle_0204dbe4 StopSoundSeqHandle
+#include "src/ov021/object_state/StopEntrySoundsByOwner_020a8b9c.c"

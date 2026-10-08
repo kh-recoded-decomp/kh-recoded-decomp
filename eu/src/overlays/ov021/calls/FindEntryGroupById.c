@@ -1,5 +1,5 @@
 #define FindEntryGroupById_020a8810 FindEntryGroupById
 #define NNS_FndGetNextListObject_02012a38 NNS_FndGetNextListObject
-#define g_groupList_020b560c data_ov021_020b562c
-#define g_groupRegistry_020b5608 data_ov021_020b5628
+#define g_groupList_020b560c gEntryGroupList
+#define g_groupRegistry_020b5608 gEntryGroupRegistry
 #include "src/ov021/object_state/FindEntryGroupById_020a8810.c"

@@ -1,0 +1,10 @@
+#define DestroyAllPools_020a892c DestroyAllPools
+#define NNS_FndGetNextListObject_02012a38 NNS_FndGetNextListObject
+#define RemoveIntrusiveListObject_020129d8 NNS_FndRemoveListObject
+#define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
+#define UnpackExtendedData_020a8234 func_ov021_020a8254
+#define RemoveTaggedListEntries_0206c720 RemoveTaggedListEntries
+#define func_ov021_020a8f74 UpdateAllGroupSlots
+#define PoolListEnabled_020b5608 gEntryGroupsInitialized
+#define PoolState_020b5608 gEntryGroupRegistry
+#include "src/ov021/shared_engine/DestroyAllPools_020a892c.c"

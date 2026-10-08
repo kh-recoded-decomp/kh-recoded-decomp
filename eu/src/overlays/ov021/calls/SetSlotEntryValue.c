@@ -1,4 +1,4 @@
 #define SetSlotEntryValue_020a8f4c SetSlotEntryValue
-#define data_ov021_020b5608 data_ov021_020b5628
+#define data_ov021_020b5608 gEntryGroupRegistry
 #define func_ov021_020a8810 FindEntryGroupById
 #include "src/ov021/shared_engine/SetSlotEntryValue_020a8f4c.c"

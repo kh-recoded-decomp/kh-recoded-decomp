@@ -2,7 +2,7 @@
 #define Actor_ReleaseResources_020cbce8 Actor_ReleaseResources
 #define BufferSlotSet_FreeAll_020cf9d0 BufferSlotSet_FreeAll
 #define ClearSbcCallback_020188b8 NNS_G3dRenderObjResetCallBack
-#define DestroyAllPools_020a892c func_ov021_020a894c
+#define DestroyAllPools_020a892c DestroyAllPools
 #define EffectSet_Release_020cf1d8 EffectSet_Release
 #define FreeRecordListsAndBuffer_020a7f00 FreeRecordListsAndBuffer
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap

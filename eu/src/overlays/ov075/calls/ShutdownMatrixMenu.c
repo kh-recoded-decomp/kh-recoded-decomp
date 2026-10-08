@@ -1,0 +1,21 @@
+#define ShutdownMatrixMenu_020c7de8 ShutdownMatrixMenu
+#define NotifyBothOrOne_02001154 NotifyBothOrOne
+#define ZeroHalfThenFree_0202cd78 ZeroHalfThenFree
+#define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
+#define DestroyFndObjectList_020014f0 DestroyFndObjectList
+#define DestroyItemPicker_020cffb8 DestroyItemPicker
+#define func_02050a44 func_02050a58
+#define ReleaseResourceAndDetach_0202eee8 ReleaseResourceAndDetach
+#define ReadSessionPackedBits_02064574 ReadSessionPackedBits
+#define func_0205125c GetMapFinalStats
+#define WriteSessionPackedBits_0206459c WriteSessionPackedBits
+#define func_ov001_020645c8 IsSessionFlagSet
+#define func_ov001_020645e8 ClearSessionPackedBit
+#define SetupAllSelectionRecords_0204f85c SetupAllSelectionRecords
+#define func_0204fba0 func_0204fbb4
+#define func_ov045_020be6a0 func_ov045_020be6c0
+#define NNS_GfdResetFrmTexVramState_0201391c NNS_GfdResetFrmTexVramState
+#define func_02013d74 NNS_GfdResetFrmPlttVramState
+#define data_ov075_020d184c sOv075_ScrollBg_020d186c
+#define data_ov075_020d18e0 data_ov075_020d1900
+#include "src/ov075/unclassified_helpers/ShutdownMatrixMenu_020c7de8.c"

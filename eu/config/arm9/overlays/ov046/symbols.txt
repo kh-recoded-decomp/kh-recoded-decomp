@@ -26,7 +26,7 @@ Camera_SetViewMode kind:function(thumb,size=0x8c) addr:0x020c1058
 func_ov046_020c10e4 kind:function(thumb,size=0x10) addr:0x020c10e4
 func_ov046_020c10f4 kind:function(thumb,size=0xac) addr:0x020c10f4
 func_ov046_020c11a0 kind:function(thumb,size=0x10) addr:0x020c11a0
-func_ov046_020c11b0 kind:function(thumb,size=0x174) addr:0x020c11b0
+Camera_StartPathViewFromState kind:function(thumb,size=0x174) addr:0x020c11b0
 Camera_BlendToFollowView kind:function(thumb,size=0x28) addr:0x020c1324
 Camera_BlendToVelocityAim kind:function(thumb,size=0x34) addr:0x020c134c
 Camera_BlendToPlayerBackView kind:function(thumb,size=0x80) addr:0x020c1380
@@ -90,7 +90,8 @@ CameraCollision_ShouldBlock kind:function(thumb,size=0x48) addr:0x020c322c
 CameraCollision_CheckContact kind:function(thumb,size=0x9a) addr:0x020c3274
 Camera_AimViewAtPlayer kind:function(thumb,size=0x78) addr:0x020c3310
 func_ov046_020c3388 kind:function(thumb,size=0x34) addr:0x020c3388
-data_ov046_020c33c0 kind:data(any) addr:0x020c33c0
+gCameraLayerIds kind:data(any) addr:0x020c33c0
+gCameraLayerIdsByMode kind:data(any) addr:0x020c33c0
 data_ov046_020c33d0 kind:data(any) addr:0x020c33d0
 data_ov046_020c33d4 kind:data(any) addr:0x020c33d4
 data_ov046_020c33d8 kind:data(any) addr:0x020c33d8

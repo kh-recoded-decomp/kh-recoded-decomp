@@ -1,4 +1,4 @@
 #define IsGroupMemberActive_020a8d1c IsGroupMemberActive
-#define _data_ov021_020b5608 data_ov021_020b5628
+#define _data_ov021_020b5608 gEntryGroupRegistry
 #define func_ov021_020a8810 FindEntryGroupById
 #include "src/ov021/object_state/IsGroupMemberActive_020a8d1c.c"

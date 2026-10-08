@@ -1,0 +1,8 @@
+#define HandleRecordTabTouch_020c1674 HandleRecordTabTouch
+#define func_ov087_020c7c18 func_ov087_020c7c38
+#define IsStatePhaseActive_020bca60 IsStatePhaseActive
+#define GetCameraToTargetDistance_020bca30 GetCameraToTargetDistance
+#define CopySourceBlock_020b9f7c func_ov027_020b9f9c
+#define PlaySoundEffect_0204d924 PlaySoundEffect
+#define func_ov086_020c080c func_ov086_020c082c
+#include "src/ov086/panel_state/HandleRecordTabTouch_020c1674.c"

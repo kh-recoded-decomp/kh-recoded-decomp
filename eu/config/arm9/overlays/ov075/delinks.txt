@@ -120,6 +120,10 @@ src/overlays/ov075/calls/ResetMatrixCamera.c:
     complete
     .text       start:0x020c7d24 end:0x020c7e08
 
+src/overlays/ov075/calls/ShutdownMatrixMenu.c:
+    complete
+    .text       start:0x020c7e08 end:0x020c7fc8
+
 src/overlays/ov075/calls/ClearGlyphCell.c:
     complete
     .text       start:0x020c8890 end:0x020c8940

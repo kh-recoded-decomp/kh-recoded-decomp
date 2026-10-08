@@ -1,5 +1,5 @@
 #define func_ov021_020a8a68 DestroyEntryGroup
-#define g_entryRegistry_020b5608 data_ov021_020b5628
+#define g_entryRegistry_020b5608 gEntryGroupRegistry
 #define func_ov021_020a8810 FindEntryGroupById
 #define UnpackExtendedData_020a8234 func_ov021_020a8254
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap

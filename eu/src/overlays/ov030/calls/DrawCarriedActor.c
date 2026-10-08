@@ -1,4 +1,4 @@
-#define DrawAllGroupSlots_020a8b44 func_ov021_020a8b64
+#define DrawAllGroupSlots_020a8b44 DrawAllGroupSlots
 #define DrawCarriedActor_020bc624 DrawCarriedActor
 #define DrawModelWithAttachment_020a9af0 DrawModelWithAttachment
 #define DrawSlotMarker_020ab898 DrawSlotMarker

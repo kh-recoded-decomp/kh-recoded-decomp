@@ -11,7 +11,7 @@
 #define ResetIfIdMatches_020a8178 ResetIfIdMatches
 #define StopSeqArcOrDefault_0204d960 StopSeqArcOrDefault
 #define StopSoundSeqHandle_0204dbe4 StopSoundSeqHandle
-#define UpdateAllPoolEntries_020a8ae8 func_ov021_020a8b08
+#define UpdateAllPoolEntries_020a8ae8 UpdateAllPoolEntries
 #define func_ov021_020aafc4 func_ov021_020aafe4
 #define func_ov031_020bc018 GetSeekStep
 #define func_ov031_020bc040 func_ov031_020bc060

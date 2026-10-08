@@ -1,0 +1,5 @@
+#define func_ov021_020a8c20 AreActorEntriesFinished
+#define g_registryInitialized_020b5608 gEntryGroupsInitialized
+#define g_entryRegistry_020b5608 gEntryGroupRegistry
+#define NNS_FndGetNextListObject_02012a38 NNS_FndGetNextListObject
+#include "src/ov021/unclassified_helpers/func_ov021_020a8c20.c"

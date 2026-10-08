@@ -1,5 +1,5 @@
 #define StopAndClearSoundEmitter_020a8e14 StopAndClearSoundEmitter
 #define StopSoundSeqHandle_0204dbe4 StopSoundSeqHandle
-#define data_ov021_020b5608 data_ov021_020b5628
+#define data_ov021_020b5608 gEntryGroupRegistry
 #define func_ov021_020a8810 FindEntryGroupById
 #include "src/ov021/unclassified_helpers/StopAndClearSoundEmitter_020a8e14.c"

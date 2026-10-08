@@ -1,4 +1,4 @@
 #define ArePartyActorsSettled_0206e5b8 ArePartyActorsSettled
 #define data_ov001_020a049c data_ov001_020a04bc
-#define func_ov021_020a8c20 func_ov021_020a8c40
+#define func_ov021_020a8c20 AreActorEntriesFinished
 #include "src/ov001/shared_engine/ArePartyActorsSettled_0206e5b8.c"

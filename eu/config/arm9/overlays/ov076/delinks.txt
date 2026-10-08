@@ -28,6 +28,10 @@ src/overlays/ov076/calls/SlotMenu_IsSlotPairFilled.c:
     complete
     .text       start:0x020c4580 end:0x020c45c8
 
+src/overlays/ov076/calls/SlotMenu_Init.c:
+    complete
+    .text       start:0x020c45c8 end:0x020c4784
+
 src/overlays/ov076/calls/SlotMenu_GetSlotFillState.c:
     complete
     .text       start:0x020c4784 end:0x020c482c

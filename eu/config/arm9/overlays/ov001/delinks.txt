@@ -36,6 +36,10 @@ src/overlays/ov001/calls/StepSessionScriptState.c:
     complete
     .text       start:0x02061f64 end:0x02061fc0
 
+src/overlays/ov001/calls/LeaveFieldMenu.c:
+    complete
+    .text       start:0x02061fc0 end:0x02062150
+
 src/overlays/ov001/calls/SelectNextSessionState.c:
     complete
     .text       start:0x02062150 end:0x020623b0
@@ -1856,6 +1860,10 @@ src/overlays/ov001/calls/RebindSlotTexture.c:
     complete
     .text       start:0x0206a95c end:0x0206aa7c
 
+src/overlays/ov001/calls/DrawSpriteFrameQuad.c:
+    complete
+    .text       start:0x0206ab14 end:0x0206ad1c
+
 src/overlays/ov001/calls/func_ov001_0206ad1c.c:
     complete
     .text       start:0x0206ad1c end:0x0206ad28
@@ -2227,6 +2235,10 @@ src/overlays/ov001/calls/DropInactiveGroupMember.c:
 src/overlays/ov001/calls/SpawnTrailEffect.c:
     complete
     .text       start:0x0206d050 end:0x0206d0ac
+
+src/overlays/ov001/calls/UpdateActionCommand.c:
+    complete
+    .text       start:0x0206d0ac end:0x0206d248
 
 src/overlays/ov001/calls/RefreshFieldMenuPage.c:
     complete

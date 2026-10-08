@@ -1,0 +1,16 @@
+#define InitTitleScreen_02063240 InitTitleScreen
+#define NNSi_FndGetCurrentRootHeap_0202a764 NNSi_FndGetCurrentRootHeap
+#define func_0202cc6c Msg_OpenContainerAndReadHeader
+#define func_0202a794 TaskManager_SetEnabled
+#define func_0204f718 InitPlayerData
+#define func_0204f58c func_0204f5a0
+#define SetupDisplayBanksAndLayers_0206141c SetupDisplayBanksAndLayers
+#define SetParamHalf18_02050630 SetParamHalf18
+#define SetParamWord20_02050640 SetParamWord20
+#define SelectLocalizedTextIds_02028e04 SelectLocalizedTextIds
+#define func_02026dc0 InitSaveSystem
+#define SetPanelState_02061db0 SetPanelState
+#define EnterPanelPhase_02062270 EnterPanelPhase
+#define data_ov000_0206397c sOv000_TtlTtlP2_0206397c
+#define func_ov000_02063424 UpdateTitlePanel
+#include "src/ov000/panel_state/InitTitleScreen_02063240.c"

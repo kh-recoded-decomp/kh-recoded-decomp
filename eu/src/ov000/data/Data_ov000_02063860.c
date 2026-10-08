@@ -3,11 +3,11 @@
 #pragma explicit_zero_data on
 
 extern void TeardownCurrentHeap(void);
-extern void func_ov000_02063240(void);
+extern void InitTitleScreen(void);
 
 void *data_ov000_02063870[5] = {
     (void *)0x00110008,
-    (void *)func_ov000_02063240,
+    (void *)InitTitleScreen,
     (void *)TeardownCurrentHeap,
     (void *)0x000066EC,
     NULL,

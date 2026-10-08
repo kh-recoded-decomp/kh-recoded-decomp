@@ -4,6 +4,6 @@
 #define GetLinkedAngleOffset_020ceb7c GetLinkedAngleOffset
 #define InvokeMemberUpdateCallbacks_020ad6dc InvokeMemberUpdateCallbacks
 #define IsGroupMemberActive_020a8d1c IsGroupMemberActive
-#define UpdateAllPoolEntries_020a8ae8 func_ov021_020a8b08
+#define UpdateAllPoolEntries_020a8ae8 UpdateAllPoolEntries
 #define UpdateEnemyAnimation_020d6b34 UpdateEnemyAnimation
 #include "src/ov058/unclassified_helpers/UpdateEnemyAnimation_020d6b34.c"

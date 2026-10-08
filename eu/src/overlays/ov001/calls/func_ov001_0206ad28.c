@@ -1,3 +1,3 @@
-#define NNS_FndInitList func_ov001_0206ab14
+#define NNS_FndInitList DrawSpriteFrameQuad
 #define NNS_FndInitListWithOffset0_0206ad28 func_ov001_0206ad28
 #include "src/ov001/library_nitro_nns/NNS_FndInitListWithOffset0_0206ad28.c"

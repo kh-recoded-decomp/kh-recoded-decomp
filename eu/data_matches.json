@@ -2878,7 +2878,7 @@
       "section": ".data",
       "start": "0x020c33c0",
       "end": "0x020c33d0",
-      "source": "src/ov046/data/Data_ov046_020c33c0.c",
+      "source": "src/ov046/data/gCameraLayerIds.c",
       "compiler": "mwccarm-3.0-139",
       "name": "ov046 data words",
       "origin": "generated words",

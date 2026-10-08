@@ -1,5 +1,5 @@
 #define Camera_SetViewMode_020c1038 Camera_SetViewMode
-#define data_ov046_020c33a0 data_ov046_020c33c0
+#define data_ov046_020c33a0 gCameraLayerIdsByMode
 #define func_02029f78 func_02029f8c
 #define func_02029f98 func_02029fac
 #define func_ov047_020c70d8 func_ov047_020c70f8

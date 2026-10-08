@@ -1,0 +1,7 @@
+#define func_ov021_020a88f8 InitializeEntryGroupRegistry
+#define g_registryInitialized_020b5608 gEntryGroupsInitialized
+#define g_entryRegistry_020b5608 gEntryGroupRegistry
+#define func_0201288c NNS_FndInitList
+#define RegisterSessionCallback_0206c704 RegisterSessionCallback
+#define func_ov021_020a8f74 UpdateAllGroupSlots
+#include "src/ov021/unclassified_helpers/func_ov021_020a88f8.c"

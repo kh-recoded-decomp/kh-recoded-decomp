@@ -2,7 +2,7 @@
 #define CollisionQuery_Init_02034c74 CollisionQuery_Init
 #define RotateOffsetAroundY_020a9160 RotateOffsetAroundY
 #define SelectAnimationById_020ac8f4 SelectAnimationById
-#define SettleAnchorOnGround_020d7054 func_ov058_020d7074
+#define SettleAnchorOnGround_020d7054 SettleAnchorOnGround
 #define StartAnchorSequence_020d7f60 StartAnchorSequence
 #define SweepWorldCollision_020364a0 SweepWorldCollision
 #define VEC_MultAdd_01ffa09c VEC_MultAdd

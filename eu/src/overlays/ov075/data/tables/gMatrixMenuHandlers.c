@@ -4,7 +4,7 @@
 
 extern void func_ov075_020c49ec(void);
 extern void func_ov075_020c64bc(void);
-extern void func_ov075_020c7e08(void);
+extern void ShutdownMatrixMenu(void);
 extern void func_ov075_020caf58(void);
 extern void func_ov075_020cb198(void);
 extern void func_ov075_020cb430(void);
@@ -17,7 +17,7 @@ extern void ToggleMatrixMapView(void);
 
 void *gMatrixMenuHandlers[17] = {
     (void *)func_ov075_020c49ec,
-    (void *)func_ov075_020c7e08,
+    (void *)ShutdownMatrixMenu,
     (void *)func_ov075_020c64bc,
     NULL,
     (void *)0x000178A8,
