@@ -5,6 +5,6 @@
 #define func_020258f8 PcmChannel_ResetAndEnable
 #define func_0202a5ac Obj_SetWord14
 #define func_ov001_02071898 StartFieldSlideIn
-#define func_ov001_02088308 func_ov001_02088330
+#define func_ov001_02088308 TryShutdownActorSystem
 #define func_ov001_0208bec4 StartEventCameraCut
 #include "src/ov001/scripted_actor_behavior/RunEventScriptFrame_020884e0.c"

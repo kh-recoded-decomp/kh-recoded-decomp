@@ -1,3 +1,3 @@
 #define UpdateEndOfAction_020cb1fc UpdateEndOfAction
-#define func_ov052_020c8710 func_ov052_020c8730
+#define func_ov052_020c8710 TryStartPlayerSpecialAction
 #include "src/ov052/unclassified_helpers/UpdateEndOfAction_020cb1fc.c"

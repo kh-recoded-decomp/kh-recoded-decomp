@@ -7,5 +7,5 @@
 #define VEC_MultAdd_01ffa09c VEC_MultAdd
 #define WarpWalkerTo_02090f0c WarpWalkerTo
 #define data_ov001_0209e450 data_ov001_0209e478
-#define func_ov001_020902e0 func_ov001_02090308
+#define func_ov001_020902e0 UpdateFieldActorMovement
 #include "src/ov001/object_creation/SpawnLaunchedActor_020929f4.c"

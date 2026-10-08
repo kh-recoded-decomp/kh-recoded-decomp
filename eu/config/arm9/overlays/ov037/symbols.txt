@@ -35,8 +35,8 @@ ResetCameraProjectionOverrides kind:function(arm,size=0x40) addr:0x020bb0a8
 DrawMenuTexts kind:function(arm,size=0x218) addr:0x020bb0e8
 func_ov037_020bb300 kind:function(arm,size=0x34) addr:0x020bb300
 BuildMenuEntryList kind:function(arm,size=0xac) addr:0x020bb334
-func_ov037_020bb3e0 kind:function(arm,size=0x88) addr:0x020bb3e0
-func_ov037_020bb468 kind:function(arm,size=0x74) addr:0x020bb468
+CreateOv037Context kind:function(arm,size=0x88) addr:0x020bb3e0
+DestroyOv037Context kind:function(arm,size=0x74) addr:0x020bb468
 UpdateMenuSelection kind:function(arm,size=0x16c) addr:0x020bb4dc
 data_ov037_020bb648 kind:data(any) addr:0x020bb648
 data_ov037_020bb650 kind:data(any) addr:0x020bb650

@@ -2,7 +2,7 @@
 #define GetPlayerFlagRecord_0205036c GetPlayerFlagRecord
 #define InitMenuScene_020bc5c0 InitMenuScene
 #define InitResourceLevels_020bdc6c InitResourceLevels
-#define InitSlotGroups_020bda68 func_ov041_020bda88
+#define InitSlotGroups_020bda68 InitSlotGroups
 #define NNS_GfdDumpFrmTexVramManager_020137f8 NNS_GfdDumpFrmTexVramManager
 #define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
 #define PXI_Init_020be068 func_ov041_020be088

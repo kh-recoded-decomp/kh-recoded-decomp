@@ -2,13 +2,13 @@
 
 #pragma explicit_zero_data on
 
-extern void func_ov002_020613e0(void);
-extern void func_ov002_02061854(void);
+extern void InitProfilePanel(void);
+extern void ShutdownPanelScene(void);
 
 void *data_ov002_0206c2c4[5] = {
     (void *)0x00110008,
-    (void *)func_ov002_020613e0,
-    (void *)func_ov002_02061854,
+    (void *)InitProfilePanel,
+    (void *)ShutdownPanelScene,
     (void *)0x00000130,
     NULL,
 };

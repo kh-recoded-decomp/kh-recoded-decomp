@@ -5,4 +5,5 @@
 #define ScriptCmd_CloseFieldPanelScreen_0208e848 ScriptCmd_CloseFieldPanelScreen
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
 #define _fp_init_02071aa8 func_ov001_02071aa8
+#define func_ov001_02071b7c ReleaseOverlayWidgets
 #include "src/ov001/scripted_actor_behavior/ScriptCmd_CloseFieldPanelScreen_0208e848.c"

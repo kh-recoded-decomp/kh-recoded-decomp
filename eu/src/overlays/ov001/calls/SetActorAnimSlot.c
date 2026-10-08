@@ -3,7 +3,7 @@
 #define Msg_OpenContainerAndReadHeader_0202cc6c Msg_OpenContainerAndReadHeader
 #define SetActorAnimSlot_0208a54c SetActorAnimSlot
 #define Strlen_02021e44 strlen
-#define data_ov001_0209f2f0 data_ov001_0209f310
+#define data_ov001_0209f2f0 sP2Extension_0209f310
 #define func_ov001_02088b48 ClearActorFlagBit40
 #define func_ov001_02088c1c GetActorFieldBySessionMode
 #define func_ov001_02088d14 ApplyActorAnimationRequest

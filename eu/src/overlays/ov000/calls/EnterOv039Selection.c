@@ -1,7 +1,7 @@
 #define EnterOv039Selection_02063680 EnterOv039Selection
 #define NNSi_FndGetCurrentRootHeap_0202a764 NNSi_FndGetCurrentRootHeap
 #define func_02029f78 func_02029f8c
-#define InitOverlayState_020bb888 func_ov039_020bb8a8
+#define InitOverlayState_020bb888 InitOverlayState
 #define func_ov039_020bcd68 RuntimeState_SetObjectId
 #define func_ov000_020636ec UpdateOv039Selection
 #define OverlayId39_00000027 OVERLAY_39_ID

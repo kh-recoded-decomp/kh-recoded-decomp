@@ -2,13 +2,13 @@
 
 #pragma explicit_zero_data on
 
-extern void func_ov038_020ba400(void);
-extern void func_ov038_020ba4e8(void);
+extern void StartOv038SoundCtx(void);
+extern void ShutdownOv038SoundCtx(void);
 
 void *gResultsSoundContextConfig[5] = {
     (void *)0x0002000E,
-    (void *)func_ov038_020ba400,
-    (void *)func_ov038_020ba4e8,
+    (void *)StartOv038SoundCtx,
+    (void *)ShutdownOv038SoundCtx,
     (void *)0x00000018,
     NULL,
 };

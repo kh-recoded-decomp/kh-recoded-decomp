@@ -1,3 +1,4 @@
 #define ScriptCmd_SwitchFieldMode_02064e94 ScriptCmd_SwitchFieldMode
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
+#define func_ov001_02063200 SetSessionState
 #include "src/ov001/shared_engine/ScriptCmd_SwitchFieldMode_02064e94.c"

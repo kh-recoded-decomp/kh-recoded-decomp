@@ -1,6 +1,6 @@
 #define ScriptCmd_SpawnLinkedObject_020a1e10 ScriptCmd_SpawnLinkedObject
 #define ScriptVm_ReadOperandFx32_02025df8 ScriptVm_ReadOperandFx32
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
-#define SpawnLinkedObject_020a3328 func_ov019_020a3348
+#define SpawnLinkedObject_020a3328 SpawnLinkedObject
 #define func_ov001_02087214 func_ov001_0208723c
 #include "src/ov019/script_commands/ScriptCmd_SpawnLinkedObject_020a1e10.c"

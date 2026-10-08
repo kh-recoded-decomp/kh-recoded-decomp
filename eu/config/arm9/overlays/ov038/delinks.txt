@@ -4,9 +4,17 @@
     .data       start:0x020bbda0 end:0x020bd160 kind:data align:32
     .bss        start:0x020bd160 end:0x020bd180 kind:bss align:32
 
+src/overlays/ov038/calls/StartOv038SoundCtx.c:
+    complete
+    .text       start:0x020ba400 end:0x020ba488
+
 src/overlays/ov038/calls/RunOv038SoundCtxStates.c:
     complete
     .text       start:0x020ba488 end:0x020ba4e8
+
+src/overlays/ov038/calls/ShutdownOv038SoundCtx.c:
+    complete
+    .text       start:0x020ba4e8 end:0x020ba518
 
 src/overlays/ov038/calls/TryMarkSoundCtxActive.c:
     complete

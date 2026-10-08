@@ -1,6 +1,6 @@
-func_ov038_020ba400 kind:function(arm,size=0x88) addr:0x020ba400
+StartOv038SoundCtx kind:function(arm,size=0x88) addr:0x020ba400
 RunOv038SoundCtxStates kind:function(arm,size=0x60) addr:0x020ba488
-func_ov038_020ba4e8 kind:function(arm,size=0x30) addr:0x020ba4e8
+ShutdownOv038SoundCtx kind:function(arm,size=0x30) addr:0x020ba4e8
 TryMarkSoundCtxActive kind:function(arm,size=0x34) addr:0x020ba518
 EnableOv038SoundCtx kind:function(arm,size=0x3c) addr:0x020ba54c
 func_ov038_020ba588 kind:function(arm,size=0x24) addr:0x020ba588

@@ -6388,6 +6388,61 @@
       "name": "ov103 data words",
       "origin": "generated words",
       "behavior": "Initialised data words, pointers named by their targets."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209e6f0",
+      "end": "0x0209e6f4",
+      "source": "src/overlays/ov001/data/strings/sFieldSessionArchiveSuffix_0209e6f0.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "field session archive suffix",
+      "origin": "US reference adapted to EU",
+      "behavior": "Suffix used when opening the field session archive."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209ecac",
+      "end": "0x0209ecb0",
+      "source": "src/overlays/ov001/data/tables/gHudSlideResourceGroup1Descriptor.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "HUD slide resource group 1 descriptor",
+      "origin": "US reference adapted to EU",
+      "behavior": "Descriptor value referenced by the first HUD slide resource group."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209ed8c",
+      "end": "0x0209ed90",
+      "source": "src/overlays/ov001/data/strings/gEmptyMessageText.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "empty message text",
+      "origin": "US reference adapted to EU",
+      "behavior": "Empty UTF-16 text used for missing message-line entries."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209f310",
+      "end": "0x0209f314",
+      "source": "src/overlays/ov001/data/strings/sP2Extension_0209f310.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "P2 extension string",
+      "origin": "US reference adapted to EU",
+      "behavior": "Extension used to identify P2 animation resource names."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x020a0458",
+      "end": "0x020a045c",
+      "source": "src/overlays/ov001/data/strings/sEmptyNodeName_020a0458.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "empty spawn node name",
+      "origin": "US reference adapted to EU",
+      "behavior": "Empty node name passed when a stage object has no attachment node."
     }
   ]
 }

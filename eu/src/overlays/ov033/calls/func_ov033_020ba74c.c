@@ -8,12 +8,12 @@ extern unsigned int FadeBgmVolume();
 extern unsigned int ReleaseSeqArcHeapLevel();
 extern unsigned int SetFieldStateValue();
 extern unsigned int Set_SessionFlagBit0();
-extern unsigned int func_ov039_020bbe80();
+extern unsigned int ShutdownOverlay();
 
 unsigned int func_ov033_020ba74c(void) {
   unsigned int mode;
 
-  func_ov039_020bbe80(0);
+  ShutdownOverlay(0);
   FadeBgmVolume(0x7f,10);
   mode = 1;
   SetPanelEnabled(1);

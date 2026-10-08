@@ -84,6 +84,10 @@ src/overlays/ov000/calls/SubmitNumberedPanelRequest.c:
     complete
     .text       start:0x02061f54 end:0x02061fc0
 
+src/overlays/ov000/calls/ShowTitleNotice.c:
+    complete
+    .text       start:0x02061fc0 end:0x02062270
+
 src/overlays/ov000/calls/EnterPanelPhase.c:
     complete
     .text       start:0x02062270 end:0x020622b8

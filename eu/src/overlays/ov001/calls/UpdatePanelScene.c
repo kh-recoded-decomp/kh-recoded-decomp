@@ -30,7 +30,7 @@ extern PanelStateTable gMenuOverlayStateHandlers;
 extern u8 GetPrimarySelectionByte1E(void);
 extern BOOL IsSessionFlagSet(u32 value);
 extern int func_ov001_02064784(void);
-extern void func_ov001_0207a9f4(PanelScene *panel);
+extern void PulsePaletteFlash(PanelScene *panel);
 extern void UpdateIdleTimerToggle(PanelScene *panel);
 extern void func_ov001_0207af6c(PanelScene *panel);
 extern u32 func_ov001_0207b3f4(void);
@@ -69,7 +69,7 @@ int UpdatePanelScene(void)
         }
     }
     if (func_ov001_0207b3f4() == 0 && func_ov001_0207b610()) {
-        func_ov001_0207a9f4(panel);
+        PulsePaletteFlash(panel);
     }
     if (panel->touchActive != 0) {
         func_ov027_020b9f9c(&sample);

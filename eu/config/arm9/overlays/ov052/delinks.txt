@@ -56,6 +56,10 @@ src/overlays/ov052/calls/TryEnterLevelTargetState.c:
     complete
     .text       start:0x020c86b0 end:0x020c8730
 
+src/overlays/ov052/calls/TryStartPlayerSpecialAction.c:
+    complete
+    .text       start:0x020c8730 end:0x020c8914
+
 src/overlays/ov052/calls/IsTargetAboveInRange.c:
     complete
     .text       start:0x020c9504 end:0x020c959c

@@ -45,7 +45,7 @@ func_ov001_0206312c kind:function(thumb,size=0x2) addr:0x0206312c
 SetFieldStateValue kind:function(thumb,size=0x4c) addr:0x02063130
 ConfigureFieldTracks kind:function(thumb,size=0x68) addr:0x0206317c
 SetPendingFieldValue kind:function(thumb,size=0x1c) addr:0x020631e4
-func_ov001_02063200 kind:function(thumb,size=0x19c) addr:0x02063200
+SetSessionState kind:function(thumb,size=0x19c) addr:0x02063200
 func_ov001_0206339c kind:function(thumb,size=0x2) addr:0x0206339c
 QueueFieldUpdate kind:function(thumb,size=0x34) addr:0x020633a0
 FlushPendingFieldUpdate kind:function(thumb,size=0x30) addr:0x020633d4
@@ -594,7 +594,7 @@ LoadModeSprites kind:function(thumb,size=0x320) addr:0x0206d308
 CreateFieldEffectGroups kind:function(thumb,size=0xac) addr:0x0206d628
 OpenFieldMessageContainers kind:function(thumb,size=0x44) addr:0x0206d6d4
 func_ov001_0206d718 kind:function(thumb,size=0x20) addr:0x0206d718
-func_ov001_0206d738 kind:function(thumb,size=0x114) addr:0x0206d738
+InitPartyState kind:function(thumb,size=0x114) addr:0x0206d738
 DestroyPartyState kind:function(thumb,size=0x110) addr:0x0206d84c
 UpdatePartyEntries kind:function(thumb,size=0x14c) addr:0x0206d95c
 RunFlaggedEventCallbacks kind:function(thumb,size=0x50) addr:0x0206daa8
@@ -705,9 +705,9 @@ UpdateHudNoticeMessage kind:function(thumb,size=0x2cc) addr:0x020705a4
 UpdateMenuSlideIn kind:function(thumb,size=0x80) addr:0x02070870
 func_ov001_020708f0 kind:function(thumb,size=0x2) addr:0x020708f0
 UpdateSceneSlideOut kind:function(thumb,size=0x40) addr:0x020708f4
-func_ov001_02070934 kind:function(thumb,size=0x3c8) addr:0x02070934
+InitFieldManager kind:function(thumb,size=0x3c8) addr:0x02070934
 StartSceneMinigameTask kind:function(thumb,size=0x98) addr:0x02070cfc
-func_ov001_02070d94 kind:function(thumb,size=0x104) addr:0x02070d94
+ShutdownFieldScene kind:function(thumb,size=0x104) addr:0x02070d94
 func_ov001_02070e98 kind:function(thumb,size=0x318) addr:0x02070e98
 GetSceneTagTracker kind:function(thumb,size=0xc) addr:0x020711b0
 GetSceneFont kind:function(thumb,size=0xc) addr:0x020711bc
@@ -742,13 +742,13 @@ ShowMessageWindowByKind kind:function(thumb,size=0x4c) addr:0x02071a38
 ShowMessageWindowMode3 kind:function(thumb,size=0x20) addr:0x02071a84
 func_ov001_02071aa4 kind:function(thumb,size=0x2) addr:0x02071aa4
 func_ov001_02071aa8 kind:function(thumb,size=0x2) addr:0x02071aa8
-func_ov001_02071aac kind:function(thumb,size=0xd0) addr:0x02071aac
-func_ov001_02071b7c kind:function(thumb,size=0x68) addr:0x02071b7c
-func_ov001_02071be4 kind:function(thumb,size=0xe8) addr:0x02071be4
+OpenResultScreen kind:function(thumb,size=0xd0) addr:0x02071aac
+ReleaseOverlayWidgets kind:function(thumb,size=0x68) addr:0x02071b7c
+ReopenFieldScoreScreen kind:function(thumb,size=0xe8) addr:0x02071be4
 func_ov001_02071ccc kind:function(thumb,size=0x8) addr:0x02071ccc
-func_ov001_02071cd4 kind:function(thumb,size=0x90) addr:0x02071cd4
+OpenOverlayWidgets kind:function(thumb,size=0x90) addr:0x02071cd4
 func_ov001_02071d64 kind:function(thumb,size=0x8) addr:0x02071d64
-func_ov001_02071d6c kind:function(thumb,size=0x7c) addr:0x02071d6c
+OpenFieldSubScreenLayer kind:function(thumb,size=0x7c) addr:0x02071d6c
 func_ov001_02071de8 kind:function(thumb,size=0x8) addr:0x02071de8
 DrawFieldHeaderText kind:function(thumb,size=0x54) addr:0x02071df0
 ShowFieldPopupText kind:function(thumb,size=0x114) addr:0x02071e44
@@ -983,7 +983,7 @@ func_ov001_0207a8fc kind:function(thumb,size=0x22) addr:0x0207a8fc
 func_ov001_0207a920 kind:function(thumb,size=0x24) addr:0x0207a920
 func_ov001_0207a944 kind:function(thumb,size=0x24) addr:0x0207a944
 func_ov001_0207a968 kind:function(thumb,size=0x8c) addr:0x0207a968
-func_ov001_0207a9f4 kind:function(thumb,size=0x78) addr:0x0207a9f4
+PulsePaletteFlash kind:function(thumb,size=0x78) addr:0x0207a9f4
 BuildEntryNameList kind:function(thumb,size=0x6e) addr:0x0207aa6c
 FreeBufferArray kind:function(thumb,size=0x32) addr:0x0207aadc
 LoadModeNameAndMessages kind:function(thumb,size=0x58) addr:0x0207ab10
@@ -996,7 +996,7 @@ UpdateDisplayFadeState kind:function(thumb,size=0x74) addr:0x0207ac90
 StepSubScreenFadeIn kind:function(thumb,size=0x2c) addr:0x0207ad04
 StepSubScreenFadeIn_0207ad30 kind:function(thumb,size=0x2c) addr:0x0207ad30
 func_ov001_0207ad5c kind:function(thumb,size=0x2) addr:0x0207ad5c
-func_ov001_0207ad60 kind:function(thumb,size=0xf8) addr:0x0207ad60
+InitFieldPanelScene kind:function(thumb,size=0xf8) addr:0x0207ad60
 func_ov001_0207ae58 kind:function(thumb,size=0x70) addr:0x0207ae58
 UpdateIdleTimerToggle kind:function(thumb,size=0xa4) addr:0x0207aec8
 func_ov001_0207af6c kind:function(thumb,size=0x84) addr:0x0207af6c
@@ -1534,10 +1534,10 @@ func_ov001_02088108 kind:function(thumb,size=0xa0) addr:0x02088108
 func_ov001_020881a8 kind:function(thumb,size=0x5c) addr:0x020881a8
 func_ov001_02088204 kind:function(thumb,size=0x6c) addr:0x02088204
 func_ov001_02088270 kind:function(thumb,size=0x8) addr:0x02088270
-func_ov001_02088278 kind:function(thumb,size=0x5c) addr:0x02088278
+InitOverlayObjectSystem kind:function(thumb,size=0x5c) addr:0x02088278
 func_ov001_020882d4 kind:function(thumb,size=0x4) addr:0x020882d4
 func_ov001_020882d8 kind:function(thumb,size=0x58) addr:0x020882d8
-func_ov001_02088330 kind:function(thumb,size=0x7c) addr:0x02088330
+TryShutdownActorSystem kind:function(thumb,size=0x7c) addr:0x02088330
 TryFinishIntroSequence kind:function(thumb,size=0x78) addr:0x020883ac
 ReloadModeMessageArchive kind:function(thumb,size=0xb4) addr:0x02088424
 ShutdownOverlayObjectSystem kind:function(thumb,size=0x30) addr:0x020884d8
@@ -1634,7 +1634,7 @@ UpdateEventCameraTransform kind:function(thumb,size=0x120) addr:0x0208afe0
 InterpolateFieldCamera kind:function(thumb,size=0x4d0) addr:0x0208b100
 func_ov001_0208b5d0 kind:function(thumb,size=0x11c) addr:0x0208b5d0
 func_ov001_0208b6ec kind:function(thumb,size=0x6c) addr:0x0208b6ec
-func_ov001_0208b758 kind:function(thumb,size=0x30) addr:0x0208b758
+CreateActorChannel kind:function(thumb,size=0x30) addr:0x0208b758
 ActorChannel_Destroy kind:function(thumb,size=0x1c) addr:0x0208b788
 func_ov001_0208b7a4 kind:function(thumb,size=0x4) addr:0x0208b7a4
 UpdateFieldCamera kind:function(thumb,size=0xf0) addr:0x0208b7a8
@@ -1827,7 +1827,7 @@ ApplyActorMovementCollision kind:function(thumb,size=0x3b0) addr:0x0208fdcc
 ApplyActorMoveSpeed kind:function(thumb,size=0xdc) addr:0x0209017c
 ZeroActorTailBlock kind:function(thumb,size=0x10) addr:0x02090258
 ReleaseActorResources kind:function(thumb,size=0xa0) addr:0x02090268
-func_ov001_02090308 kind:function(thumb,size=0x704) addr:0x02090308
+UpdateFieldActorMovement kind:function(thumb,size=0x704) addr:0x02090308
 func_ov001_02090a0c kind:function(thumb,size=0x3b2) addr:0x02090a0c
 InitStageObjectActor kind:function(thumb,size=0x168) addr:0x02090dc0
 func_ov001_02090f28 kind:function(thumb,size=0x4) addr:0x02090f28
@@ -2215,7 +2215,7 @@ data_ov001_0209e66c kind:data(any) addr:0x0209e66c
 gSessionScriptStateHandlers kind:data(any) addr:0x0209e6a0
 sOv001_MiMiDebugFormatD_0209e6d4 kind:data(any) addr:0x0209e6d4
 sOv001_MiMiFormatD_0209e6e4 kind:data(any) addr:0x0209e6e4
-data_ov001_0209e6f0 kind:data(any) addr:0x0209e6f0
+sFieldSessionArchiveSuffix_0209e6f0 kind:data(any) addr:0x0209e6f0
 sOv001_I_0209e6f4 kind:data(any) addr:0x0209e6f4
 sOv001_M_0209e6f8 kind:data(any) addr:0x0209e6f8
 sOv001_Fz_0209e6fc kind:data(any) addr:0x0209e6fc
@@ -2288,7 +2288,7 @@ data_ov001_0209ec88 kind:data(any) addr:0x0209ec88
 data_ov001_0209ec8c kind:data(any) addr:0x0209ec8c
 gHudSlideData kind:data(any) addr:0x0209ec90
 gHudSlideStateHandlers kind:data(any) addr:0x0209ec98
-data_ov001_0209ecac kind:data(any) addr:0x0209ecac
+gHudSlideResourceGroup1Descriptor kind:data(any) addr:0x0209ecac
 gHudSlideResourceGroup1 kind:data(any) addr:0x0209ecb0
 gHudSlideResourceGroup2 kind:data(any) addr:0x0209ecbc
 gHudSlideResourceGroup3 kind:data(any) addr:0x0209ecc8
@@ -2301,7 +2301,7 @@ sOv001_TextFontEu10Nftr_0209ed2c kind:data(any) addr:0x0209ed2c
 sOv001_TextFontEu08Nftr_0209ed44 kind:data(any) addr:0x0209ed44
 sOv001_TextFontEu08sNftr_0209ed5c kind:data(any) addr:0x0209ed5c
 sOv001_TextFontEu10sNftr_0209ed74 kind:data(any) addr:0x0209ed74
-data_ov001_0209ed8c kind:data(any) addr:0x0209ed8c
+gEmptyMessageText kind:data(any) addr:0x0209ed8c
 sOv001_UiBtlStrLanguageP2_0209ed90 kind:data(any) addr:0x0209ed90
 sOv001_UiBtlBtluiP2_0209eda0 kind:data(any) addr:0x0209eda0
 sOv001_UiBtlBtlLanguageP2_0209edb4 kind:data(any) addr:0x0209edb4
@@ -2352,7 +2352,7 @@ data_ov001_0209f194 kind:data(any) addr:0x0209f194
 g_stageEventsState kind:data(any) addr:0x0209f2e8
 data_ov001_0209f2ec kind:data(any) addr:0x0209f2ec
 sOv001_EvEVW0FormatDP2_0209f300 kind:data(any) addr:0x0209f300
-data_ov001_0209f310 kind:data(any) addr:0x0209f310
+sP2Extension_0209f310 kind:data(any) addr:0x0209f310
 sOv001_Z_0209f314 kind:data(any) addr:0x0209f314
 sOv001_MiMoFormatSZ_0209f318 kind:data(any) addr:0x0209f318
 data_ov001_0209f324 kind:data(any) addr:0x0209f324
@@ -2387,7 +2387,7 @@ sOv001_Ef_020a0438 kind:data(any) addr:0x020a0438
 sOv001_Pt_020a043c kind:data(any) addr:0x020a043c
 sOv001_Format04dP2_020a0440 kind:data(any) addr:0x020a0440
 sOv001_EnFormatSFormat04dP2_020a0448 kind:data(any) addr:0x020a0448
-data_ov001_020a0458 kind:data(any) addr:0x020a0458
+sEmptyNodeName_020a0458 kind:data(any) addr:0x020a0458
 sOv001_EnPaEPBin_020a045c kind:data(any) addr:0x020a045c
 sOv001_EnPaBLBin_020a046c kind:data(any) addr:0x020a046c
 data_ov001_020a0480 kind:bss addr:0x020a0480

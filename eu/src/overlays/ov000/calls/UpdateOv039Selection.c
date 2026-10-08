@@ -11,7 +11,7 @@ extern SelectionSession *NNSi_FndGetCurrentRootHeap(void);
 extern void func_ov039_020bbb8c(void *arg);
 extern BOOL IsStatePhaseIdle(void);
 extern int RuntimeState_GetObjectId(void);
-extern void func_ov039_020bbe80(int arg);
+extern void ShutdownOverlay(int arg);
 
 int UpdateOv039Selection(void)
 {
@@ -27,7 +27,7 @@ int UpdateOv039Selection(void)
                 result = gOv039SelectionResultMap[RuntimeState_GetObjectId()];
             }
             session->result = result;
-            func_ov039_020bbe80(0);
+            ShutdownOverlay(0);
             if (result >= 0) {
                 session->status = 1;
             } else {

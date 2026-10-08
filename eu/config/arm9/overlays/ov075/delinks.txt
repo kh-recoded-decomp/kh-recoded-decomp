@@ -164,6 +164,10 @@ src/overlays/ov075/calls/FindNearestReachableNode.c:
     complete
     .text       start:0x020c8ecc end:0x020c910c
 
+src/overlays/ov075/calls/DrawMatrixMenu.c:
+    complete
+    .text       start:0x020c910c end:0x020ca02c
+
 src/overlays/ov075/calls/GetGridCellPosition.c:
     complete
     .text       start:0x020ca02c end:0x020ca078

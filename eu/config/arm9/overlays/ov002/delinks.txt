@@ -4,9 +4,17 @@
     .data       start:0x0206c280 end:0x0206c460 kind:data align:32
     .bss        start:0x0206c460 end:0x0206c480 kind:bss align:32
 
+src/overlays/ov002/calls/InitProfilePanel.c:
+    complete
+    .text       start:0x020613e0 end:0x0206162c
+
 src/overlays/ov002/calls/UpdatePanelState.c:
     complete
     .text       start:0x0206162c end:0x020617e4
+
+src/overlays/ov002/calls/ShutdownPanelScene.c:
+    complete
+    .text       start:0x02061854 end:0x02061930
 
 src/overlays/ov002/calls/func_ov002_02061930.c:
     complete

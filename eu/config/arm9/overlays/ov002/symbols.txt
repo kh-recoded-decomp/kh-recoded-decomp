@@ -1,7 +1,7 @@
-func_ov002_020613e0 kind:function(arm,size=0x24c) addr:0x020613e0
+InitProfilePanel kind:function(arm,size=0x24c) addr:0x020613e0
 UpdatePanelState kind:function(arm,size=0x1b8) addr:0x0206162c
 RunPanelDispatchAction kind:function(arm,size=0x70) addr:0x020617e4
-func_ov002_02061854 kind:function(arm,size=0xdc) addr:0x02061854
+ShutdownPanelScene kind:function(arm,size=0xdc) addr:0x02061854
 func_ov002_02061930 kind:function(arm,size=0xc) addr:0x02061930
 func_ov002_0206193c kind:function(arm,size=0xc) addr:0x0206193c
 GetPanelSlot0 kind:function(arm,size=0x1c) addr:0x02061948

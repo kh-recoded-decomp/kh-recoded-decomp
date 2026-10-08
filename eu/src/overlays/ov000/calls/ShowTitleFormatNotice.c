@@ -5,7 +5,7 @@ typedef struct {
     s32 formatFailed;
 } Panel;
 
-extern void func_ov000_02061fc0(Panel *owner, int noticeType);
+extern void ShowTitleNotice(Panel *owner, int noticeType);
 
 void ShowTitleFormatNotice(Panel *panel)
 {
@@ -16,5 +16,5 @@ void ShowTitleFormatNotice(Panel *panel)
     } else {
         noticeType = 2;
     }
-    func_ov000_02061fc0(panel, noticeType);
+    ShowTitleNotice(panel, noticeType);
 }

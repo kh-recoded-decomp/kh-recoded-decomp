@@ -4,7 +4,7 @@
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField
 #define OS_SPrintf_02002428 OS_SPrintf
 #define Strlen_02021e44 strlen
-#define data_ov001_0209f2f0 data_ov001_0209f310
+#define data_ov001_0209f2f0 sP2Extension_0209f310
 #define data_ov001_0209f2f4 sOv001_Z_0209f314
 #define data_ov001_0209f2f8 sOv001_MiMoFormatSZ_0209f318
 #define func_0202e9ec InitSharedRecordThenTexture

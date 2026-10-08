@@ -123,7 +123,7 @@ typedef void (*UnitTransformFunc)(VecFx32 **positionOut, u8 *transform);
 
 extern StageManager *data_ov001_020a0528;
 extern const VecFx32 data_0205344c;
-extern char data_ov001_020a0458[];
+extern char sEmptyNodeName_020a0458[];
 extern UnitTransformFunc gCollisionBoundsDispatch[];
 
 extern void UpdateStageBrightnessFade(void);
@@ -225,7 +225,7 @@ void UpdateStageManager(u32 value)
             func_01ff88c4(&params, 0, sizeof(SpawnParams));
             params.ownerSlot = 0x2bd;
             params.attachActorId = record->linkedId;
-            params.nodeName = data_ov001_020a0458;
+            params.nodeName = sEmptyNodeName_020a0458;
             params.attach = 1;
             SpawnStageObjectActor(record, &params, NULL);
             record->health = record->maxHealth;

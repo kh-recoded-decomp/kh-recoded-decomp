@@ -104,6 +104,10 @@ src/overlays/ov019/calls/CreateKind5EntryPool.c:
     complete
     .text       start:0x020a32a4 end:0x020a3348
 
+src/overlays/ov019/calls/SpawnLinkedObject.c:
+    complete
+    .text       start:0x020a3348 end:0x020a35a0
+
 src/overlays/ov019/calls/SetLinkedCallbackId.c:
     complete
     .text       start:0x020a35a0 end:0x020a35a6

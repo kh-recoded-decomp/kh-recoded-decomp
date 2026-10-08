@@ -176,6 +176,10 @@ src/overlays/ov001/calls/SetPendingFieldValue.c:
     complete
     .text       start:0x020631e4 end:0x02063200
 
+src/overlays/ov001/calls/SetSessionState.c:
+    complete
+    .text       start:0x02063200 end:0x0206339c
+
 src/overlays/ov001/auto/func_ov001_0206339c.c:
     complete
     .text       start:0x0206339c end:0x0206339e
@@ -2264,6 +2268,10 @@ src/overlays/ov001/calls/func_ov001_0206d718.c:
     complete
     .text       start:0x0206d718 end:0x0206d738
 
+src/overlays/ov001/calls/InitPartyState.c:
+    complete
+    .text       start:0x0206d738 end:0x0206d84c
+
 src/overlays/ov001/calls/DestroyPartyState.c:
     complete
     .text       start:0x0206d84c end:0x0206d95c
@@ -2676,9 +2684,17 @@ src/overlays/ov001/calls/UpdateSceneSlideOut.c:
     complete
     .text       start:0x020708f4 end:0x02070934
 
+src/overlays/ov001/calls/InitFieldManager.c:
+    complete
+    .text       start:0x02070934 end:0x02070cfc
+
 src/overlays/ov001/calls/StartSceneMinigameTask.c:
     complete
     .text       start:0x02070cfc end:0x02070d94
+
+src/overlays/ov001/calls/ShutdownFieldScene.c:
+    complete
+    .text       start:0x02070d94 end:0x02070e98
 
 src/overlays/ov001/calls/GetSceneTagTracker.c:
     complete
@@ -2808,13 +2824,33 @@ src/overlays/ov001/auto/func_ov001_02071aa8.c:
     complete
     .text       start:0x02071aa8 end:0x02071aaa
 
+src/overlays/ov001/calls/OpenResultScreen.c:
+    complete
+    .text       start:0x02071aac end:0x02071b7c
+
+src/overlays/ov001/calls/ReleaseOverlayWidgets.c:
+    complete
+    .text       start:0x02071b7c end:0x02071be4
+
+src/overlays/ov001/calls/ReopenFieldScoreScreen.c:
+    complete
+    .text       start:0x02071be4 end:0x02071ccc
+
 src/overlays/ov001/calls/func_ov001_02071ccc.c:
     complete
     .text       start:0x02071ccc end:0x02071cd4
 
+src/overlays/ov001/calls/OpenOverlayWidgets.c:
+    complete
+    .text       start:0x02071cd4 end:0x02071d64
+
 src/overlays/ov001/calls/func_ov001_02071d64.c:
     complete
     .text       start:0x02071d64 end:0x02071d6c
+
+src/overlays/ov001/calls/OpenFieldSubScreenLayer.c:
+    complete
+    .text       start:0x02071d6c end:0x02071de8
 
 src/overlays/ov001/calls/func_ov001_02071de8.c:
     complete
@@ -3628,6 +3664,10 @@ src/overlays/ov001/calls/func_ov001_0207a944.c:
     complete
     .text       start:0x0207a944 end:0x0207a968
 
+src/overlays/ov001/calls/PulsePaletteFlash.c:
+    complete
+    .text       start:0x0207a9f4 end:0x0207aa6c
+
 src/overlays/ov001/calls/BuildEntryNameList.c:
     complete
     .text       start:0x0207aa6c end:0x0207aada
@@ -3675,6 +3715,10 @@ src/overlays/ov001/calls/StepSubScreenFadeIn_0207ad30.c:
 src/overlays/ov001/auto/func_ov001_0207ad5c.c:
     complete
     .text       start:0x0207ad5c end:0x0207ad5e
+
+src/overlays/ov001/calls/InitFieldPanelScene.c:
+    complete
+    .text       start:0x0207ad60 end:0x0207ae58
 
 src/overlays/ov001/calls/func_ov001_0207ae58.c:
     complete
@@ -5696,6 +5740,10 @@ src/overlays/ov001/calls/func_ov001_02088270.c:
     complete
     .text       start:0x02088270 end:0x02088278
 
+src/overlays/ov001/calls/InitOverlayObjectSystem.c:
+    complete
+    .text       start:0x02088278 end:0x020882d4
+
 src/overlays/ov001/auto/func_ov001_020882d4.c:
     complete
     .text       start:0x020882d4 end:0x020882d8
@@ -5703,6 +5751,10 @@ src/overlays/ov001/auto/func_ov001_020882d4.c:
 src/overlays/ov001/calls/func_ov001_020882d8.c:
     complete
     .text       start:0x020882d8 end:0x02088330
+
+src/overlays/ov001/calls/TryShutdownActorSystem.c:
+    complete
+    .text       start:0x02088330 end:0x020883ac
 
 src/overlays/ov001/calls/TryFinishIntroSequence.c:
     complete
@@ -6075,6 +6127,10 @@ src/overlays/ov001/calls/func_ov001_0208b5d0.c:
 src/overlays/ov001/calls/func_ov001_0208b6ec.c:
     complete
     .text       start:0x0208b6ec end:0x0208b758
+
+src/overlays/ov001/calls/CreateActorChannel.c:
+    complete
+    .text       start:0x0208b758 end:0x0208b788
 
 src/overlays/ov001/calls/ActorChannel_Destroy.c:
     complete
@@ -6835,6 +6891,10 @@ src/overlays/ov001/calls/ZeroActorTailBlock.c:
 src/overlays/ov001/calls/ReleaseActorResources.c:
     complete
     .text       start:0x02090268 end:0x02090308
+
+src/overlays/ov001/calls/UpdateFieldActorMovement.c:
+    complete
+    .text       start:0x02090308 end:0x02090a0c
 
 src/overlays/ov001/calls/InitStageObjectActor.c:
     complete
@@ -8144,6 +8204,22 @@ src/overlays/ov001/data/strings/Strings_ov001_020a045c.c:
     complete
     .data       start:0x020a045c end:0x020a0480
 
+src/overlays/ov001/data/strings/gEmptyMessageText.c:
+    complete
+    .data       start:0x0209ed8c end:0x0209ed90
+
+src/overlays/ov001/data/strings/sEmptyNodeName_020a0458.c:
+    complete
+    .data       start:0x020a0458 end:0x020a045c
+
+src/overlays/ov001/data/strings/sFieldSessionArchiveSuffix_0209e6f0.c:
+    complete
+    .data       start:0x0209e6f0 end:0x0209e6f4
+
+src/overlays/ov001/data/strings/sP2Extension_0209f310.c:
+    complete
+    .data       start:0x0209f310 end:0x0209f314
+
 src/overlays/ov001/data/tables/PointerTables_ov001_0209ec90.c:
     complete
     .data       start:0x0209ec90 end:0x0209ecac
@@ -8183,6 +8259,10 @@ src/overlays/ov001/data/tables/gFieldScriptCommandHandlers.c:
 src/overlays/ov001/data/tables/gHudSlideResourceGroup1.c:
     complete
     .data       start:0x0209ecb0 end:0x0209ecbc
+
+src/overlays/ov001/data/tables/gHudSlideResourceGroup1Descriptor.c:
+    complete
+    .data       start:0x0209ecac end:0x0209ecb0
 
 src/overlays/ov001/data/tables/gHudSlideResourceGroup2.c:
     complete

@@ -1,7 +1,7 @@
 func_ov034_020ba400 kind:function(arm,size=0x7b4) addr:0x020ba400
 func_ov034_020babb4 kind:function(arm,size=0xbc) addr:0x020babb4
 func_ov034_020bac70 kind:function(arm,size=0x1e4) addr:0x020bac70
-func_ov034_020bae54 kind:function(arm,size=0x218) addr:0x020bae54
+CloseResultsSession kind:function(arm,size=0x218) addr:0x020bae54
 DrawResultsWidgetOnLayer kind:function(arm,size=0x24) addr:0x020bb06c
 ClearResultsWidgetOnLayer kind:function(arm,size=0x24) addr:0x020bb090
 UpdateResultsFade kind:function(arm,size=0x1a0) addr:0x020bb0b4

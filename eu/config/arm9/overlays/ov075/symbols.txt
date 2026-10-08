@@ -47,7 +47,7 @@ OnMessageDialogClosed kind:function(thumb,size=0xb8) addr:0x020c8d50
 SetMatrixInputDisabled kind:function(thumb,size=0x14) addr:0x020c8e08
 ResolveGridEntry kind:function(thumb,size=0xb0) addr:0x020c8e1c
 FindNearestReachableNode kind:function(thumb,size=0x240) addr:0x020c8ecc
-func_ov075_020c910c kind:function(thumb,size=0xf20) addr:0x020c910c
+DrawMatrixMenu kind:function(thumb,size=0xf20) addr:0x020c910c
 .L_020c9686 kind:label(thumb) addr:0x020c9686
 .L_020c9efa kind:label(thumb) addr:0x020c9efa local
 .L_020c9f14 kind:label(thumb) addr:0x020c9f14 local

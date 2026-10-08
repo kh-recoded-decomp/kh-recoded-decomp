@@ -8,7 +8,7 @@
 #define WriteSessionPackedBits_0206459c WriteSessionPackedBits
 #define data_ov001_0209e6b4 sOv001_MiMiDebugFormatD_0209e6d4
 #define data_ov001_0209e6c4 sOv001_MiMiFormatD_0209e6e4
-#define data_ov001_0209e6d0 data_ov001_0209e6f0
+#define data_ov001_0209e6d0 sFieldSessionArchiveSuffix_0209e6f0
 #define data_ov001_0209e6d4 sOv001_I_0209e6f4
 #define data_ov001_0209e6f8 gFieldScriptCommandHandlers
 #define data_ov001_020a0460 data_ov001_020a0480

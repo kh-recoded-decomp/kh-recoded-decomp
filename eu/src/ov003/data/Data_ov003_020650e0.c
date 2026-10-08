@@ -2,8 +2,8 @@
 
 #pragma explicit_zero_data on
 
-extern void func_ov003_02063bb0(void);
-extern void func_ov003_02063e0c(void);
+extern void MovieScene_Init(void);
+extern void MovieScene_Shutdown(void);
 
 u32 data_ov003_02065134[456] = {
     0x00000000, 0x001F0004, 0x00000001, 0x0000044C,
@@ -131,8 +131,8 @@ u32 data_ov003_020650f4[16] = {
 
 void *data_ov003_020650e0[5] = {
     (void *)0x000D0008,
-    (void *)func_ov003_02063bb0,
-    (void *)func_ov003_02063e0c,
+    (void *)MovieScene_Init,
+    (void *)MovieScene_Shutdown,
     (void *)0x00000A20,
     NULL,
 };
