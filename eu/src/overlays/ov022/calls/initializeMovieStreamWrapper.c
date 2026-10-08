@@ -1,4 +1,4 @@
 #define func_02000b64 PanelState_NoOpB
-#define func_ov022_020a9430 func_ov022_020a9450
+#define func_ov022_020a9430 InitializeMovieDecodeContext
 #define initializeMovieStreamWrapper_020a9170 initializeMovieStreamWrapper
 #include "src/ov022/video_playback/initializeMovieStreamWrapper_020a9170.c"

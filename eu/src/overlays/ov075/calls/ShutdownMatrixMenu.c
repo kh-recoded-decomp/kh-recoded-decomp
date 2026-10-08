@@ -13,7 +13,7 @@
 #define func_ov001_020645e8 ClearSessionPackedBit
 #define SetupAllSelectionRecords_0204f85c SetupAllSelectionRecords
 #define func_0204fba0 func_0204fbb4
-#define func_ov045_020be6a0 func_ov045_020be6c0
+#define func_ov045_020be6a0 InitBattleGaugeContext
 #define NNS_GfdResetFrmTexVramState_0201391c NNS_GfdResetFrmTexVramState
 #define func_02013d74 NNS_GfdResetFrmPlttVramState
 #define data_ov075_020d184c sOv075_ScrollBg_020d186c

@@ -1,0 +1,4 @@
+#define data_020b7df4 data_ov022_020b7e14
+#define data_020b0ba0 gMovieDecoderCodeBlob
+#define get_cached_movie_decoder_code_020aa8fc GetCachedMovieDecoderCode
+#include "src/ov022/movie/get_cached_movie_decoder_code_020aa8fc.c"

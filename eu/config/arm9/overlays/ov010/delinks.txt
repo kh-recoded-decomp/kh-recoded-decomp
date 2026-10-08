@@ -88,7 +88,15 @@ src/overlays/ov010/calls/FieldObject_DrawFrontView.c:
     complete
     .text       start:0x020a0a9c end:0x020a0b10
 
-src/overlays/ov010/auto/func_ov010_020a0bf0.c:
+src/overlays/ov010/calls/FieldObject_BeginRespawnAnimation.c:
+    complete
+    .text       start:0x020a0b10 end:0x020a0bb0
+
+src/overlays/ov010/calls/FieldObject_AdvanceRespawnAnimation.c:
+    complete
+    .text       start:0x020a0bb0 end:0x020a0bf0
+
+src/overlays/ov010/calls/FieldObject_RespawnAnimationComplete.c:
     complete
     .text       start:0x020a0bf0 end:0x020a0bf4
 

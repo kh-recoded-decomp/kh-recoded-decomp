@@ -12,6 +12,10 @@ src/overlays/ov002/calls/UpdatePanelState.c:
     complete
     .text       start:0x0206162c end:0x020617e4
 
+src/overlays/ov002/calls/RunPanelDispatchAction.c:
+    complete
+    .text       start:0x020617e4 end:0x02061854
+
 src/overlays/ov002/calls/ShutdownPanelScene.c:
     complete
     .text       start:0x02061854 end:0x02061930

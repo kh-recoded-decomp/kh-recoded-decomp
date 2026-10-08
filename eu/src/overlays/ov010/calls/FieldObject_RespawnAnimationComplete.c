@@ -1,0 +1,2 @@
+#define FSi_CloseFileCommand_020a0bd0 FieldObject_RespawnAnimationComplete
+#include "src/ov010/library_nitro_fs/FSi_CloseFileCommand_020a0bd0.c"

@@ -652,6 +652,10 @@ src/overlays/ov036/calls/func_ov036_020c2884.c:
     complete
     .text       start:0x020c2884 end:0x020c2890
 
+src/overlays/ov036/calls/GetActiveTextWindowState.c:
+    complete
+    .text       start:0x020c2890 end:0x020c28b0
+
 src/overlays/ov036/calls/QueueTypedMessageWindow.c:
     complete
     .text       start:0x020c28b0 end:0x020c28dc

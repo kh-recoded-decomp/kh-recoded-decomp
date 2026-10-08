@@ -4,7 +4,7 @@
 #define func_ov001_02064734 ApplyAreaMusicEntry
 #define func_ov030_020baba8 func_ov030_020babc8
 #define func_ov030_020babc0 func_ov030_020babe0
-#define func_ov030_020babdc func_ov030_020babfc
+#define func_ov030_020babdc ClearMovieSceneFlag1
 #define func_ov030_020babf4 func_ov030_020bac14
 #define func_ov030_020bac0c MobiClip_IsDecoderReady
 #define func_ov030_020bac28 MobiClip_CloseDecoder

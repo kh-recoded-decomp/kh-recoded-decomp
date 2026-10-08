@@ -2,7 +2,7 @@
 #define ReleaseScreenResources_020c90bc ReleaseScreenResources
 #define ZeroHalfThenFree_0202cd78 ZeroHalfThenFree
 #define ReleaseScreenSprites_020c5270 ReleaseScreenSprites
-#define func_ov045_020be6a0 func_ov045_020be6c0
+#define func_ov045_020be6a0 InitBattleGaugeContext
 #define NNS_GfdResetFrmTexVramState_0201391c NNS_GfdResetFrmTexVramState
 #define func_02013d74 NNS_GfdResetFrmPlttVramState
 #define FillSelectionRecordFromGroup_0204f8dc FillSelectionRecordFromGroup

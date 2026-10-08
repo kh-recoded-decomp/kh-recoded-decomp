@@ -1,0 +1,10 @@
+#define func_ov022_020a79fc func_ov022_020a7a1c
+#define func_01ff8740 MIi_CpuClearFast
+#define getCachedMovieDecoderCode_020aa8fc GetCachedMovieDecoderCode
+#define GetCachedMovieDecodeTable_020aa978 GetCachedMovieDecodeTable
+#define GetCachedPixelClampTable_020aaa58 func_ov022_020aaa78
+#define get_cached_movie_saturation_table_020aa9e8 func_ov022_020aaa08
+#define func_01ff8830 MI_CpuFill8
+#define data_ov022_020ac9a0 gMovieDecoderLookupTable
+#define initializeMovieDecodeContext_020a9430 InitializeMovieDecodeContext
+#include "src/ov022/video_playback/initializeMovieDecodeContext_020a9430.cpp"

@@ -1,6 +1,6 @@
 LoadBg3Graphics kind:function(thumb,size=0x86) addr:0x020be600
 OpenMessageContainer kind:function(thumb,size=0x38) addr:0x020be688
-func_ov045_020be6c0 kind:function(thumb,size=0x70) addr:0x020be6c0
+InitBattleGaugeContext kind:function(thumb,size=0x70) addr:0x020be6c0
 func_ov045_020be730 kind:function(thumb,size=0x864) addr:0x020be730
 ShutdownScene kind:function(thumb,size=0xe8) addr:0x020bef94
 ScrollTileRowPairLeft kind:function(thumb,size=0x3a) addr:0x020bf07c

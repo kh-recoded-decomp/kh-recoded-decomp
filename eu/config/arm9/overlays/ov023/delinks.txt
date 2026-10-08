@@ -20,6 +20,10 @@ src/overlays/ov023/calls/DestroyFndListIfNonEmpty.c:
     complete
     .text       start:0x020b5994 end:0x020b59ae
 
+src/overlays/ov023/calls/InitMenuResourceCache.c:
+    complete
+    .text       start:0x020b59b0 end:0x020b5a00
+
 src/overlays/ov023/calls/EnterMenuScreenState.c:
     complete
     .text       start:0x020b5a00 end:0x020b5a28
@@ -127,6 +131,10 @@ src/overlays/ov023/calls/DestroyScreenState.c:
 src/overlays/ov023/calls/UpdateMapMenuState.c:
     complete
     .text       start:0x020b6b1c end:0x020b6c68
+
+src/overlays/ov023/calls/PrepareMenuScreenEntry.c:
+    complete
+    .text       start:0x020b6c68 end:0x020b6d14
 
 src/overlays/ov023/calls/ResetMapMenuScreen.c:
     complete

@@ -85,7 +85,7 @@ func_ov022_020a93f4 kind:function(arm,size=0xc) addr:0x020a93f4
 func_ov022_020a9400 kind:function(arm,size=0xc) addr:0x020a9400
 func_ov022_020a940c kind:function(arm,size=0x30) addr:0x020a940c
 func_ov022_020a943c kind:function(arm,size=0x14) addr:0x020a943c
-func_ov022_020a9450 kind:function(arm,size=0x5ac) addr:0x020a9450
+InitializeMovieDecodeContext kind:function(arm,size=0x5ac) addr:0x020a9450
 releaseMovieDecodeContext kind:function(arm,size=0x168) addr:0x020a99fc
 func_ov022_020a9b64 kind:function(arm,size=0x8) addr:0x020a9b64
 func_ov022_020a9b6c kind:function(arm,size=0x8) addr:0x020a9b6c
@@ -110,8 +110,8 @@ func_ov022_020aa8c0 kind:function(arm,size=0xc) addr:0x020aa8c0
 func_ov022_020aa8cc kind:function(arm,size=0x8) addr:0x020aa8cc
 func_ov022_020aa8d4 kind:function(arm,size=0x20) addr:0x020aa8d4
 func_ov022_020aa8f4 kind:function(arm,size=0x28) addr:0x020aa8f4
-func_ov022_020aa91c kind:function(arm,size=0x7c) addr:0x020aa91c
-func_ov022_020aa998 kind:function(arm,size=0x70) addr:0x020aa998
+GetCachedMovieDecoderCode kind:function(arm,size=0x7c) addr:0x020aa91c
+GetCachedMovieDecodeTable kind:function(arm,size=0x70) addr:0x020aa998
 func_ov022_020aaa08 kind:function(arm,size=0x70) addr:0x020aaa08
 func_ov022_020aaa78 kind:function(arm,size=0x70) addr:0x020aaa78
 func_ov022_020aaae8 kind:function(arm,size=0x14) addr:0x020aaae8
@@ -121,6 +121,9 @@ func_ov022_020ab614 kind:function(arm,size=0x4) addr:0x020ab614
 func_ov022_020ab898 kind:function(arm,size=0x56c) addr:0x020ab898
 func_ov022_020abe44 kind:function(arm,size=0x1cc) addr:0x020abe44
 func_ov022_020ac020 kind:function(arm,size=0x1a0) addr:0x020ac020
+gMovieDecodeTableBlob kind:data(any) addr:0x020aeac0
+gMovieDecoderCodeBlob kind:data(any) addr:0x020b0bc0
+gMovieDecoderLookupTable kind:data(any) addr:0x020ac9c0
 func_ov022_020b715c kind:function(arm,size=0xe4) addr:0x020b715c
 func_ov022_020b728c kind:function(arm,size=0x138) addr:0x020b728c
 func_ov022_020b74b8 kind:function(arm,size=0x108) addr:0x020b74b8

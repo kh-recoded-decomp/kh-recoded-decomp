@@ -19,6 +19,10 @@ src/overlays/ov033/calls/func_ov033_020ba574.c:
     complete
     .text       start:0x020ba574 end:0x020ba5d4
 
+src/overlays/ov033/calls/ShutdownResumeModeContext.c:
+    complete
+    .text       start:0x020ba5d4 end:0x020ba604
+
 src/overlays/ov033/calls/func_ov033_020ba71c.c:
     complete
     .text       start:0x020ba71c end:0x020ba74c

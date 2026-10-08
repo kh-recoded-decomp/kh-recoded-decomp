@@ -340,6 +340,10 @@ src/overlays/ov022/calls/func_ov022_020a943c.c:
     complete
     .text       start:0x020a943c end:0x020a9450
 
+src/overlays/ov022/calls/InitializeMovieDecodeContext.cpp:
+    complete
+    .text       start:0x020a9450 end:0x020a99fc
+
 src/overlays/ov022/calls/releaseMovieDecodeContext.cpp:
     complete
     .text       start:0x020a99fc end:0x020a9b64
@@ -435,6 +439,14 @@ src/overlays/ov022/calls/func_ov022_020aa8d4.c:
 src/overlays/ov022/calls/func_ov022_020aa8f4.c:
     complete
     .text       start:0x020aa8f4 end:0x020aa91c
+
+src/overlays/ov022/calls/GetCachedMovieDecoderCode.c:
+    complete
+    .text       start:0x020aa91c end:0x020aa998
+
+src/overlays/ov022/calls/GetCachedMovieDecodeTable.c:
+    complete
+    .text       start:0x020aa998 end:0x020aaa08
 
 src/overlays/ov022/calls/func_ov022_020aaa08.c:
     complete

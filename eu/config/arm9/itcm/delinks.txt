@@ -197,6 +197,10 @@ libs/nitro/fx/auto/VEC_Mag.c:
     complete
     .text       start:0x01ff9f28 end:0x01ff9f88
 
+src/calls/VEC_Normalize.c:
+    complete
+    .text       start:0x01ff9f88 end:0x01ffa09c
+
 src/calls/VEC_MultAdd.c:
     complete
     .text       start:0x01ffa09c end:0x01ffa0f4
@@ -236,6 +240,10 @@ src/calls/FlushGeometryCommandBuffer.c:
 libs/nns/g3d/calls/NNS_G3dGeBufferOP_N.c:
     complete
     .text       start:0x01ffa37c end:0x01ffa450
+
+src/calls/SampleAnimationScalarITCM.c:
+    complete
+    .text       start:0x01ffa450 end:0x01ffa5b0
 
 src/calls/func_01ffa5b0.c:
     complete

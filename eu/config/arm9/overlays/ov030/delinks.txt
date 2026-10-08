@@ -96,6 +96,10 @@ src/overlays/ov030/calls/func_ov030_020babe0.c:
     complete
     .text       start:0x020babe0 end:0x020babfc
 
+src/overlays/ov030/calls/ClearMovieSceneFlag1.c:
+    complete
+    .text       start:0x020babfc end:0x020bac14
+
 src/overlays/ov030/calls/func_ov030_020bac14.c:
     complete
     .text       start:0x020bac14 end:0x020bac2c

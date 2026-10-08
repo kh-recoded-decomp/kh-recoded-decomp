@@ -5,5 +5,5 @@
 #define func_020359f8 ApplyRecordTableEntry5
 #define func_02036240 ActorRegistry_GetEntityByIndex
 #define func_ov001_0207f7a4 IsObjectFlagClear
-#define func_ov010_020a0af0 func_ov010_020a0b10
+#define func_ov010_020a0af0 FieldObject_BeginRespawnAnimation
 #include "src/ov010/shared_engine/FieldObject_RespawnIdle_020a09c4.c"

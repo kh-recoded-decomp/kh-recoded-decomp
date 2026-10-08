@@ -2737,6 +2737,10 @@ libs/nitro/snd/calls/SND_AssignWaveArc.c:
     complete
     .text       start:0x0200f72c end:0x0200f7fc
 
+libs/nitro/snd/calls/SND_DestroyBank.c:
+    complete
+    .text       start:0x0200f7fc end:0x0200f894
+
 libs/nitro/snd/calls/SND_DestroyWaveArc.c:
     complete
     .text       start:0x0200f894 end:0x0200f8dc
@@ -2952,6 +2956,10 @@ libs/nitro/std/auto/STD_GetStringLength.c:
 libs/nitro/std/calls/STD_ConcatenateString.c:
     complete
     .text       start:0x02010cdc end:0x02010cf2
+
+libs/msl/c/calls/STD_CompareNString.c:
+    complete
+    .text       start:0x02010cf4 end:0x02010d78
 
 src/calls/WmInit.c:
     complete
@@ -3684,6 +3692,10 @@ libs/nns/gfd/calls/NNS_GfdAllocLnkPlttVram.c:
 libs/nns/gfd/calls/NNS_GfdFreeLnkPlttVram.c:
     complete
     .text       start:0x02014994 end:0x020149d8
+
+libs/nns/gfd/calls/NNS_GfdResetLnkPlttVramState.c:
+    complete
+    .text       start:0x020149d8 end:0x02014a34
 
 libs/nns/g2d/calls/GetUnpackedAnimBankImpl_.c:
     complete
@@ -9920,6 +9932,10 @@ libs/nns/g3d/data/g3d_glbstate.c:
 libs/nns/g3d/data/g3d_nsbca_pivot_table.c:
     complete
     .rodata     start:0x02053108 end:0x0205312c
+
+libs/nns/gfd/data/Alias_sLnkPlttVramLists.s:
+    complete
+    .bss        start:0x0205a914 end:0x0205a914
 
 libs/nns/gfd/data/sLnkPlttVramManager.c:
     complete

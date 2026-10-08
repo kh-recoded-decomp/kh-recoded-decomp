@@ -12,6 +12,10 @@ src/overlays/ov045/calls/OpenMessageContainer.c:
     complete
     .text       start:0x020be688 end:0x020be6c0
 
+src/overlays/ov045/calls/InitBattleGaugeContext.c:
+    complete
+    .text       start:0x020be6c0 end:0x020be730
+
 src/overlays/ov045/calls/ShutdownScene.c:
     complete
     .text       start:0x020bef94 end:0x020bf07c

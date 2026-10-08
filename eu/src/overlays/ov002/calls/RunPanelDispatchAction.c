@@ -1,0 +1,4 @@
+#define g_panelState_0206c460 data_ov002_0206c460
+#define g_dispatchTable_0206c2f0 gPanelModeExitCallback
+#define func_ov002_020617e4 RunPanelDispatchAction
+#include "src/ov002/panel_state/func_ov002_020617e4.c"

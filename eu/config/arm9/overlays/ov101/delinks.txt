@@ -16,9 +16,33 @@ src/overlays/ov101/calls/func_ov101_020bf3d8.c:
     complete
     .text       start:0x020bf3d8 end:0x020bf408
 
+src/overlays/ov101/calls/LoadStateMessages.c:
+    complete
+    .text       start:0x020bf6d0 end:0x020bf714
+
+src/overlays/ov101/calls/FreeStateBuffers.c:
+    complete
+    .text       start:0x020bf714 end:0x020bf73c
+
+src/overlays/ov101/calls/FreeMenuResourceSlots.c:
+    complete
+    .text       start:0x020bf854 end:0x020bf884
+
 src/overlays/ov101/calls/DrawShadowedAnchoredText_020bfd34.c:
     complete
     .text       start:0x020bfd34 end:0x020bfd98
+
+src/overlays/ov101/calls/IsStateFlagSet.c:
+    complete
+    .text       start:0x020c1334 end:0x020c1360
+
+src/overlays/ov101/calls/SetStateFlag.c:
+    complete
+    .text       start:0x020c1360 end:0x020c1380
+
+src/overlays/ov101/calls/SetStatePhase.c:
+    complete
+    .text       start:0x020c17a4 end:0x020c17c8
 
 src/overlays/ov101/auto/func_ov101_020c17e0.c:
     complete

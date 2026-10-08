@@ -1,3 +1,3 @@
 #define GetTextWindowStatus_020c3080 GetTextWindowStatus
-#define func_ov036_020c2870 func_ov036_020c2890
+#define func_ov036_020c2870 GetActiveTextWindowState
 #include "src/ov036/text_rendering/GetTextWindowStatus_020c3080.c"

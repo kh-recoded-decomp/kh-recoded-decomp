@@ -1,0 +1,4 @@
+#define decoder_cache_arena data_ov022_020b7e14
+#define movie_decode_table gMovieDecodeTableBlob
+#define GetCachedMovieDecodeTable_020aa978 GetCachedMovieDecodeTable
+#include "src/ov022/video_playback/GetCachedMovieDecodeTable_020aa978.c"

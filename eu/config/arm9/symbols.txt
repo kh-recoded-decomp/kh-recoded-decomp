@@ -2909,6 +2909,7 @@ sLnkTexVramManager kind:bss addr:0x0205a8e4
 sLnkTexCompressedVramManager kind:bss addr:0x0205a8e8
 sLnkTexVramBlockPoolList kind:bss addr:0x0205a8ec
 sLnkPlttVramManager kind:bss addr:0x0205a900
+sLnkPlttVramManagerListHead kind:bss addr:0x0205a900
 sLnkPlttVramBlockPoolList kind:bss addr:0x0205a904
 sCellTransferStateManager kind:bss addr:0x0205a914
 sBGAreaOver kind:bss addr:0x0205a920
