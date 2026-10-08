@@ -1,3 +1,4 @@
+#define func_01ffe1bc NNS_G3dDraw
 #define FlushGeometryStateVariant_020191b8 NNS_G3dGlbFlushVP
 #define SceneNode_DrawImmediate_0208f4f4 SceneNode_DrawImmediate
 #define data_0205a9a4 NNS_G3dGlb_prmMatColor0

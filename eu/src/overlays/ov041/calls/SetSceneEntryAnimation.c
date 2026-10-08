@@ -1,7 +1,7 @@
 #define BlendToAnimationTrack_0202f374 BlendToAnimationTrack
 #define SetAnimationFrameIfChanged_020c389c SetAnimationFrameIfChanged
 #define SetSceneEntryAnimation_020c278c SetSceneEntryAnimation
-#define func_ov041_020c288c func_ov041_020c28ac
+#define func_ov041_020c288c PlayActorEffectAnimation
 #define func_ov041_020c2928 SetStageActorFrame
 #define func_ov041_020c2a04 MatchesEitherSlotId
 #define func_ov041_020c37f4 PlayActorAnimation

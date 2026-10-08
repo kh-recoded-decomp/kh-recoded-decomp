@@ -1,3 +1,4 @@
+#define func_01ffe1bc NNS_G3dDraw
 #define DrawSpinGroupEntries_020d7bcc DrawSpinGroupEntries
 #define FixedPointAtan2_020062bc FX_Atan2Idx
 #define QueueOrSendGeometryCommand_01ffa37c NNS_G3dGeBufferOP_N

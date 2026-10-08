@@ -1,3 +1,4 @@
+#define func_01ffe1bc NNS_G3dDraw
 #define AdvanceAnimationTracks_0202ef24 AdvanceAnimationTracks
 #define ClearSbcCallback_020188b8 NNS_G3dRenderObjResetCallBack
 #define DrawActorWithShadow_020848a0 DrawActorWithShadow

@@ -152,6 +152,10 @@ src/overlays/ov041/calls/SetSceneEntryAnimation.c:
     complete
     .text       start:0x020c27ac end:0x020c28ac
 
+src/overlays/ov041/calls/PlayActorEffectAnimation.c:
+    complete
+    .text       start:0x020c28ac end:0x020c2948
+
 src/overlays/ov041/calls/SetStageActorFrame.c:
     complete
     .text       start:0x020c2948 end:0x020c2a24

@@ -1,3 +1,4 @@
+#define func_01ffe1bc NNS_G3dDraw
 #define DrawSlotMarker_020ab898 DrawSlotMarker
 #define FlushGeometryStateVariant_020191b8 NNS_G3dGlbFlushVP
 #define GetBiasAdjustedField_0206dc80 GetBiasAdjustedField

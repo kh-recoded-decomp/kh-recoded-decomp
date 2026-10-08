@@ -1,3 +1,4 @@
+#define func_01ffe1bc NNS_G3dDraw
 #define DrawScreenAnchoredSlot_020a8408 DrawScreenAnchoredSlot
 #define FixedPointMultiply12 FX_Mul
 #define func_0201931c NNS_G3dGlbSetBaseScale

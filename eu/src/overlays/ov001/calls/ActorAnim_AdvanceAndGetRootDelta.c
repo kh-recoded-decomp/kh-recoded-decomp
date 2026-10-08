@@ -1,3 +1,4 @@
+#define func_01ffe1bc NNS_G3dDraw
 #define ActorAnim_AdvanceAndGetRootDelta_02089118 ActorAnim_AdvanceAndGetRootDelta
 #define AdvanceAnimationTracks_0202ef24 AdvanceAnimationTracks
 #define VEC_Subtract_01ff9e3c VEC_Subtract

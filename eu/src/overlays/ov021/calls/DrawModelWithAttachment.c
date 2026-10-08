@@ -1,3 +1,4 @@
+#define func_01ffe1bc NNS_G3dDraw
 #define DrawModelWithAttachment_020a9af0 DrawModelWithAttachment
 #define QueueOrSendGeometryCommand_01ffa37c NNS_G3dGeBufferOP_N
 #define func_02019188 NNS_G3dGlbFlushP

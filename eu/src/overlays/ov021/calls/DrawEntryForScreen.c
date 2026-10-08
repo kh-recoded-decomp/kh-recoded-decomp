@@ -1,3 +1,4 @@
+#define func_01ffe1bc NNS_G3dDraw
 #include "nitro/types.h"
 #include "nitro/fx_types.h"
 typedef struct {

@@ -361,6 +361,10 @@ src/calls/updateHintVec.c:
     complete
     .text       start:0x01ffe158 end:0x01ffe1bc
 
+src/calls/NNS_G3dDraw.c:
+    complete
+    .text       start:0x01ffe1bc end:0x01ffe280
+
 src/calls/func_01ffe394.c:
     complete
     .text       start:0x01ffe394 end:0x01ffe3d8

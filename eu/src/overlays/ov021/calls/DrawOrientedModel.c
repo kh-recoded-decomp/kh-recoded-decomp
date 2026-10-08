@@ -1,3 +1,4 @@
+#define func_01ffe1bc NNS_G3dDraw
 #define DrawOrientedModel_020ab370 DrawOrientedModel
 #define FlushGeometryStateVariant_020191b8 NNS_G3dGlbFlushVP
 #define VEC_CrossProduct_01ff9ea8 VEC_CrossProduct

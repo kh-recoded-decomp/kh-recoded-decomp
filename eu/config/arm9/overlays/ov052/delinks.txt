@@ -192,6 +192,10 @@ src/overlays/ov052/calls/CachePositionAndFlushScale.c:
     complete
     .text       start:0x020cb8d0 end:0x020cb928
 
+src/overlays/ov052/calls/UpdateDriftState.c:
+    complete
+    .text       start:0x020cb928 end:0x020cba44
+
 src/overlays/ov052/calls/UpdateWallSlide.c:
     complete
     .text       start:0x020cba44 end:0x020cbe9c

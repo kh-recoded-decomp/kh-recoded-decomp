@@ -28,9 +28,17 @@ src/overlays/ov101/calls/FreeMenuResourceSlots.c:
     complete
     .text       start:0x020bf854 end:0x020bf884
 
+src/overlays/ov101/calls/ShutdownStateHandlers.c:
+    complete
+    .text       start:0x020bfa48 end:0x020bfab8
+
 src/overlays/ov101/calls/DrawShadowedAnchoredText_020bfd34.c:
     complete
     .text       start:0x020bfd34 end:0x020bfd98
+
+src/overlays/ov101/calls/InitListSlots.c:
+    complete
+    .text       start:0x020bfd98 end:0x020bff10
 
 src/overlays/ov101/calls/InitStateLists.c:
     complete
@@ -55,6 +63,26 @@ src/overlays/ov101/calls/GetOv101SlotEntryResource.c:
 src/overlays/ov101/calls/InitScrollPanel.c:
     complete
     .text       start:0x020c0284 end:0x020c04f0
+
+src/overlays/ov101/calls/ScrollPanelCursorUp.c:
+    complete
+    .text       start:0x020c04f0 end:0x020c0628
+
+src/overlays/ov101/calls/ScrollPanelCursorDown.c:
+    complete
+    .text       start:0x020c0628 end:0x020c0768
+
+src/overlays/ov101/calls/LoadPortraitSprites.c:
+    complete
+    .text       start:0x020c0b30 end:0x020c0c78
+
+src/overlays/ov101/calls/ReleaseStateBuffers.c:
+    complete
+    .text       start:0x020c0c78 end:0x020c0cc8
+
+src/overlays/ov101/calls/UpdatePageBufferPositions.c:
+    complete
+    .text       start:0x020c0cc8 end:0x020c0d60
 
 src/overlays/ov101/calls/IsStateFlagSet.c:
     complete

@@ -47,7 +47,7 @@
 #define func_ov052_020cb6dc UpdateTargetSlotsAndMode
 #define func_ov052_020cb834 ResolvePendingModeChange
 #define func_ov052_020cb8b0 CachePositionAndFlushScale
-#define func_ov052_020cb908 func_ov052_020cb928
+#define func_ov052_020cb908 UpdateDriftState
 #define func_ov052_020cba24 UpdateWallSlide
 #define func_ov052_020ceb54 func_ov052_020ceb74
 #define func_ov052_020ceb60 func_ov052_020ceb80
