@@ -218803,6 +218803,45 @@
       "domain": "unclassified_helpers",
       "origin": "independent C reconstruction",
       "understanding": "unknown"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_0202737c",
+      "name": "AddClampedGlobalPackedBits",
+      "language": "c",
+      "source": "src/arm9/calls/AddClampedGlobalPackedBits_0202737c.c",
+      "source_symbol": "AddClampedGlobalPackedBits_0202737c",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "thumb",
+      "bindings": {
+        "ReadGlobalPackedBits_02027348": "0x2027349",
+        "WriteGlobalPackedBits_02027360": "0x2027361"
+      },
+      "behavior": "Same function as the verified EU match AddClampedGlobalPackedBits; purpose not reviewed beyond that match.",
+      "evidence": "Same code as verified EU main:AddClampedGlobalPackedBits with the US calls and globals; rebuilt C matches all 42 bytes.",
+      "uncertainty": "Ported from the EU decomp; names come from the EU source.",
+      "domain": "calls",
+      "origin": "ported from the verified EU (BK9P) C",
+      "understanding": "unknown"
+    },
+    {
+      "module": "ov089",
+      "symbol": "func_ov089_020bf35c",
+      "name": "ReleaseEntryModels",
+      "language": "c",
+      "source": "src/ov089/calls/ReleaseEntryModels_020bf35c.c",
+      "source_symbol": "ReleaseEntryModels_020bf35c",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "ReleaseResourceAndDetach_0202eee8": "0x202eee8"
+      },
+      "behavior": "Same function as the verified EU match ReleaseEntryModels; purpose not reviewed beyond that match.",
+      "evidence": "Same code as verified EU ov089:ReleaseEntryModels with the US calls and globals; rebuilt C matches all 60 bytes.",
+      "uncertainty": "Ported from the EU decomp; names come from the EU source.",
+      "domain": "calls",
+      "origin": "ported from the verified EU (BK9P) C",
+      "understanding": "unknown"
     }
   ]
 }

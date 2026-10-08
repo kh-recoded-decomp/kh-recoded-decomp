@@ -35,7 +35,7 @@ US detail:
 | Functions | 9,703 | 10,359 | 93.7% |
 | Data bytes (.rodata/.data/.bss) | 228,100 | 228,140 | 99.98% |
 
-Updated 2026-10-07. Per-module numbers are in [PROGRESS.md](PROGRESS.md).
+Updated 2026-10-08. Per-module numbers are in [PROGRESS.md](PROGRESS.md).
 
 - Only C that rebuilds byte-for-byte counts as C. Original SDK/MSL assembly that rebuilds byte-for-byte is listed in its own row (`asm_matches.json`) and never added to the C numbers.
 - Data counts when the C data objects link byte-exact. Most of it is generated arrays and pointer tables still waiting for real types and names.

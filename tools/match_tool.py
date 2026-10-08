@@ -439,6 +439,17 @@ def write_source(path: Path, data: bytes) -> None:
     os.chmod(path, stat.S_IREAD)
 
 
+def uncommitted_paths() -> set[str] | None:
+    """Repo-relative paths with uncommitted changes, or None when git is unavailable."""
+    import subprocess
+    try:
+        out = subprocess.run(["git", "status", "--porcelain", "-z", "--untracked-files=all"], cwd=ROOT,
+                             capture_output=True, check=True).stdout.decode("utf-8", "replace")
+    except (OSError, subprocess.CalledProcessError):
+        return None
+    return {item[3:] for item in out.split("\0") if len(item) > 3}
+
+
 def cmd_merge(_args) -> int:
     """Register staged matches. Serialized by a lock; fragments are removed only after
     matches.json is written; registered sources are restored from verified snapshots."""
@@ -507,9 +518,13 @@ def merge_locked() -> int:
         shutil.copyfile(source, snapshot_path(record))
         accepted.append(fragment)
     restored = 0
+    dirty = uncommitted_paths()
     for entry in manifest["matches"]:  # undo later edits, renames and deletions
         source, snapshot = ROOT / entry["source"], snapshot_path(entry)
-        if snapshot.exists() and (not source.exists() or source.read_bytes() != snapshot.read_bytes()):
+        if dirty is not None and snapshot.exists() and source.exists() and entry["source"] not in dirty \
+                and source.read_bytes() != snapshot.read_bytes():
+            shutil.copyfile(source, snapshot)  # committed upstream edit wins
+        elif snapshot.exists() and (not source.exists() or source.read_bytes() != snapshot.read_bytes()):
             write_source(source, snapshot.read_bytes())
             restored += 1
         elif source.exists() and os.access(source, os.W_OK):
