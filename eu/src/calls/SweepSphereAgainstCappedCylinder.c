@@ -13,4 +13,5 @@
 #define func_0204a5e4 ScaleVecFx32InPlace
 #define func_0204aa68 GetUnitCross
 #define func_0204b604 AverageVecs
+#define func_01ffaff4 VEC_NormalizeLength
 #include "src/arm9/spatial_queries/SweepSphereAgainstCappedCylinder_02042b84.c"

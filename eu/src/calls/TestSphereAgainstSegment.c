@@ -14,4 +14,5 @@
 #define TestSphereAgainstSegment_0203f2e8 TestSphereAgainstSegment
 #define VEC_DotProduct_01ff9e6c VEC_DotProduct
 #define VEC_Subtract_01ff9e3c VEC_Subtract
+#define func_01ffaff4 VEC_NormalizeLength
 #include "src/arm9/spatial_queries/TestSphereAgainstSegment_0203f2e8.c"

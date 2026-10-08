@@ -1,0 +1,15 @@
+#define DrawTextWindow_020bebcc DrawTextWindow
+#define data_ov036_020c3844 gTextWindowResourceTable
+#define IsPackedBitSet_020c27a0 IsPackedBitSet
+#define InitTextLayerAt_020014b0 InitTextLayerAt
+#define CallVirtualHandlerSlot1_02001574 CallVirtualHandlerSlot1
+#define DrawTextAnchored_020015a0 DrawTextAnchored
+#define G2D_MeasureTextRectangle_02016c18 NNSi_G2dFontGetTextRect
+#define DrawTextPackedColor_0200174c DrawTextPackedColor
+#define func_02001768 DrawCenteredTextLine
+#define G2_GetBG2ScrPtr_02006e88 G2_GetBG2ScrPtr
+#define G2_GetBG3ScrPtr_02006f80 G2_GetBG3ScrPtr
+#define FlushBufferAndRunCallback_0200153c FlushBufferAndRunCallback
+#define FillBackgroundLayerRect_02001a60 FillBackgroundLayerRect
+#define func_ov036_020c27bc func_ov036_020c27dc
+#include "src/ov036/panel_state/DrawTextWindow_020bebcc.c"

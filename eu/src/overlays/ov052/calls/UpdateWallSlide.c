@@ -22,4 +22,5 @@
 #define func_ov052_020c847c IsForwardPathBlocked
 #define func_ov052_020ceb54 func_ov052_020ceb74
 #define func_ov052_020ceb60 func_ov052_020ceb80
+#define func_01ffaff4 VEC_NormalizeLength
 #include "src/ov052/actor_motion/UpdateWallSlide_020cba24.c"

@@ -14,6 +14,7 @@
 #define GetUnitRejectionFromAxis_0204aea8 GetUnitRejectionFromAxis
 #define RotateVecTowardVec_0204b0ac RotateVecTowardVec
 #define data_02053438 data_0205344c
+#define func_01ffaff4 VEC_NormalizeLength
 #if defined(__MWERKS__)
 #include "../src/arm9/spatial_queries/UpdateActorMovement_02038b50.c"
 #else

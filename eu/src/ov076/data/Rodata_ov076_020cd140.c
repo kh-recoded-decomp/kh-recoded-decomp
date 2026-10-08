@@ -28,6 +28,6 @@ const u32 data_ov076_020cd150[5] = {
     0x00000C01,
 };
 
-const u32 data_ov076_020cd140[4] = {
+const u32 gSlotMenuObjManagerConfig[4] = {
     0x00000000, 0x00000001, 0x00000000, 0x00000000,
 };

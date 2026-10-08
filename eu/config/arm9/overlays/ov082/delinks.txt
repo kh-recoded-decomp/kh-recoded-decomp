@@ -16,6 +16,10 @@ src/overlays/ov082/calls/RefreshEntryRows.c:
     complete
     .text       start:0x020bef28 end:0x020bf0ac
 
+src/overlays/ov082/calls/DrawEntryRowText.c:
+    complete
+    .text       start:0x020bf0ac end:0x020bf280
+
 src/overlays/ov082/calls/DrawEntryRowFrames.c:
     complete
     .text       start:0x020bf280 end:0x020bf320

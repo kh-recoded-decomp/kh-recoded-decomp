@@ -28,11 +28,11 @@ identical** to the original game code.
 <!-- progress:start -->
 | Category | Count | Meaning |
 |---|---:|---|
-| Real C matched functions | **9,662** / 10,428 (92.7%) | Functions implemented in C and verified byte-exact |
-| Real C matched **bytes** | **1,242,554** / 1,658,216 (74.93%) | Code bytes covered by real C; the honest progress figure |
+| Real C matched functions | **9,685** / 10,428 (92.9%) | Functions implemented in C and verified byte-exact |
+| Real C matched **bytes** | **1,253,646** / 1,658,216 (75.60%) | Code bytes covered by real C; the honest progress figure |
 | Assembly matched functions | **143** (7,850 bytes) | Original SDK, BIOS and DS Protect assembly, verified byte-exact; never counted as C |
 | Reconstructed DATA bytes | **171,618** / 228,172 (75.21%) | Verified byte-exact .rodata, .data, .ctor and .bss reconstructed from source |
-| Named DATA symbols | **922** / 2,324 (39.67%) | Identified DATA names; naming alone does not count as reconstructed DATA |
+| Named DATA symbols | **928** / 2,324 (39.93%) | Identified DATA names; naming alone does not count as reconstructed DATA |
 | Named, not decompiled | **47** | Functions with a known name (SDK, NitroSystem, ...) but no source yet |
 | Total known functions | **10,428** | Functions in the dsd symbol tables |
 | Region | EU (`BK9P`) |  |

@@ -16,5 +16,5 @@
 #define func_ov039_020bc1bc func_ov039_020bc1dc
 #define func_ov039_020bca00 GetMenuInputState
 #define func_ov075_020ceee0 func_ov075_020cef00
-#define func_ov075_020cf918 func_ov075_020cf938
+#define func_ov075_020cf918 DrawCenteredDialogText
 #include "src/ov075/unclassified_helpers/UpdateMessageDialog_020cf558.c"

@@ -19,4 +19,5 @@
 #define func_0204a3e4 NormalizeXy
 #define func_0204a420 SafeNormalizeXy
 #define func_0204a5e4 ScaleVecFx32InPlace
+#define func_01ffaff4 VEC_NormalizeLength
 #include "src/arm9/spatial_queries/ResolveSteepSurfaceContact_02037528.c"

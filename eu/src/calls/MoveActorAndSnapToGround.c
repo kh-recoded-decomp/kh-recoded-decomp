@@ -21,4 +21,5 @@
 #define func_0203ae34 InitCapsuleShape
 #define func_0204a5e4 ScaleVecFx32InPlace
 #define func_ov059_020cd44c Collider_ComputeBoxPushOut
+#define func_01ffaff4 VEC_NormalizeLength
 #include "src/arm9/spatial_queries/MoveActorAndSnapToGround_02037870.c"

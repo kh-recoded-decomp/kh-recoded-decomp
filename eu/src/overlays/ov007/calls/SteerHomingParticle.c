@@ -13,7 +13,7 @@ typedef struct HomingParticle {
 extern u32 func_ov035_020bae94(void);
 extern VecFx32 *func_ov001_0206dc60(int index);
 extern void VEC_Subtract(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
-extern fx32 func_01ffaff4(VecFx32 *in, VecFx32 *out);
+extern fx32 VEC_NormalizeLength(VecFx32 *in, VecFx32 *out);
 extern void VEC_MultAdd(int scale, const VecFx32 *v, const VecFx32 *add, VecFx32 *dst);
 extern void VEC_Add(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
 
@@ -34,7 +34,7 @@ BOOL SteerHomingParticle(void *owner, HomingParticle *particle)
     }
     target = *func_ov001_0206dc60(0);
     VEC_Subtract(&target, &particle->position, &direction);
-    distance = func_01ffaff4(&direction, &direction);
+    distance = VEC_NormalizeLength(&direction, &direction);
     particle->progress += 0xaa;
     if (particle->progress > 0x1000) {
         particle->progress = 0x1000;

@@ -59,7 +59,7 @@ extern int func_ov001_0207f040(void);
 extern FieldObject *func_ov001_0207f050(int index);
 extern FieldObject *GetStridedBufferEntry(FieldObject *object, u32 index);
 extern VecFx32 *func_ov001_0206dc4c(int index);
-extern void func_01ffaff4(VecFx32 *src, VecFx32 *dst);
+extern void VEC_NormalizeLength(VecFx32 *src, VecFx32 *dst);
 extern int func_ov011_020a09d0(SpawnOwner *owner);
 extern void SetPanelActorState(FieldObject *object, int value);
 extern void *func_ov001_0208724c(u32 group, u32 index);
@@ -128,7 +128,7 @@ void RunSpawnCommand(SpawnCommand *command, SpawnOwner *owner)
                     position = raised;
                     CallFieldObjectHook24(target, &position);
                     SetVector(&target->direction, destination->x - owner->position.x, 0, destination->z - owner->position.z);
-                    func_01ffaff4(&target->direction, &target->direction);
+                    VEC_NormalizeLength(&target->direction, &target->direction);
                     if (target->direction.x == 0 && target->direction.y == 0 && target->direction.z == 0) {
                         target->direction.x = 0;
                         target->direction.y = 0;

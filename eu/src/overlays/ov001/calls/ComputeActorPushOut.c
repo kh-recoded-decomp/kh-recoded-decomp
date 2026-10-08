@@ -7,4 +7,5 @@
 #define VEC_MultAdd_01ffa09c VEC_MultAdd
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define data_02053438 data_0205344c
+#define func_01ffaff4 VEC_NormalizeLength
 #include "src/ov001/shared_engine/ComputeActorPushOut_02094160.c"

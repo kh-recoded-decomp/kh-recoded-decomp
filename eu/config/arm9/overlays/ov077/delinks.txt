@@ -96,6 +96,10 @@ src/overlays/ov077/calls/SelectChooserValueByIndex.c:
     complete
     .text       start:0x020c5950 end:0x020c5964
 
+src/overlays/ov077/calls/DrawPartySlotLabel.c:
+    complete
+    .text       start:0x020c5a6c end:0x020c5c3c
+
 src/overlays/ov077/calls/BeginSlotItemSelection.c:
     complete
     .text       start:0x020c5ce8 end:0x020c5db8
@@ -172,6 +176,10 @@ src/overlays/ov077/calls/MenuPanel_SetFilterMode_020c7230.c:
     complete
     .text       start:0x020c7230 end:0x020c72a4
 
+src/overlays/ov077/calls/DrawItemNameHeader.c:
+    complete
+    .text       start:0x020c72a4 end:0x020c73dc
+
 src/overlays/ov077/calls/SetDialogInputDisabled_020c73dc.c:
     complete
     .text       start:0x020c73dc end:0x020c73ea
@@ -179,6 +187,10 @@ src/overlays/ov077/calls/SetDialogInputDisabled_020c73dc.c:
 src/overlays/ov077/calls/ItemList_ReleaseCursorEntry_020c73ec.c:
     complete
     .text       start:0x020c73ec end:0x020c7428
+
+src/overlays/ov077/calls/DrawItemNameUseHeader.c:
+    complete
+    .text       start:0x020c7428 end:0x020c7564
 
 src/overlays/ov077/calls/AddToSelectionCounters_020c7564.c:
     complete
@@ -300,6 +312,14 @@ src/overlays/ov077/calls/MessageWindow_Update_020c84fc.c:
     complete
     .text       start:0x020c84fc end:0x020c88ba
 
+src/overlays/ov077/calls/DrawPanelTextBlock.c:
+    complete
+    .text       start:0x020c88bc end:0x020c89f4
+
+src/overlays/ov077/calls/DrawOv077DialogText.c:
+    complete
+    .text       start:0x020c89f4 end:0x020c8b90
+
 src/overlays/ov077/calls/MenuScreen_RefreshMarker_020c8b90.c:
     complete
     .text       start:0x020c8b90 end:0x020c8be4
@@ -307,6 +327,10 @@ src/overlays/ov077/calls/MenuScreen_RefreshMarker_020c8b90.c:
 src/overlays/ov077/calls/IsMessageWindowActive.c:
     complete
     .text       start:0x020c8be4 end:0x020c8bf4
+
+src/overlays/ov077/calls/ItemListPanel_Create.c:
+    complete
+    .text       start:0x020c8d20 end:0x020c90dc
 
 src/overlays/ov077/calls/ReleaseScreenResources.c:
     complete

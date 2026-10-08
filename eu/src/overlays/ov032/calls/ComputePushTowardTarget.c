@@ -2,4 +2,5 @@
 #define ScaleVecFx32InPlace_0204a5e4 ScaleVecFx32InPlace
 #define VEC_Mag_01ff9f28 VEC_Mag
 #define VEC_Subtract_01ff9e3c VEC_Subtract
+#define func_01ffaff4 VEC_NormalizeLength
 #include "src/ov032/object_group/ComputePushTowardTarget_020bc924.c"

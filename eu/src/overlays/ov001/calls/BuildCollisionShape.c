@@ -7,4 +7,5 @@
 #define func_0203ad54 InitBoxShape
 #define func_0203ae34 InitCapsuleShape
 #define func_0203aeac InitCylinderShape
+#define func_01ffaff4 VEC_NormalizeLength
 #include "src/ov001/unclassified_helpers/BuildCollisionShape_02080834.c"

@@ -15,7 +15,7 @@
 #define ProjectWorldPositionToScreen_02019f84 NNS_G3dWorldPosToScrPos
 #define VEC_DotProduct_01ff9e6c VEC_DotProduct
 #define VEC_NormalizeUnchecked_01ff9f88 VEC_Normalize
-#define VEC_Normalize_01ffaff4 func_01ffaff4
+#define VEC_Normalize_01ffaff4 VEC_NormalizeLength
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define data_0205ab3c NNS_G3dGlb_camPos
 #define func_ov046_020c19f0 Camera_GetModeDistance

@@ -10,4 +10,5 @@
 #define func_0204be6c LerpVecFx32Q27InPlace
 #define func_ov021_020afadc StepDriftEffect
 #define random_next_scaled_0202aa04 random_next_scaled
+#define func_01ffaff4 VEC_NormalizeLength
 #include "src/ov021/object_state/UpdateDriftParticle_020afb94.c"

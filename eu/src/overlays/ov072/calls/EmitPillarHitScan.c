@@ -81,7 +81,7 @@ extern void ResetAnimationTrackState(MarkerRequest *request);
 extern int func_ov021_020a8cc0(MarkerRequest *request, int groupId);
 extern void InitRecord60(HitAttack *attack);
 extern void VEC_Subtract(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
-extern fx32 func_01ffaff4(const VecFx32 *src, VecFx32 *dst);
+extern fx32 VEC_NormalizeLength(const VecFx32 *src, VecFx32 *dst);
 extern CollisionShape InitCylinderShape(CylinderStorage *storage, const VecFx32 *start, const VecFx32 *end, const VecFx32 *axis, fx32 length, fx32 radius);
 extern void OffsetBoxByDelta(const Box *src, Box *dst, const VecFx32 *delta);
 extern void ZeroBytes0x28(void *obj);
@@ -122,7 +122,7 @@ void EmitPillarHitScan(EffectOwner *owner, Actor *actor, const VecFx32 *pos)
     InitRecord60(&attack);
     VEC_Subtract(&bottom, &top, &diff);
     axis = diff;
-    shapeResult = InitCylinderShape(&cylinder, &top, &bottom, &axis, func_01ffaff4(&axis, &axis), 0x1000);
+    shapeResult = InitCylinderShape(&cylinder, &top, &bottom, &axis, VEC_NormalizeLength(&axis, &axis), 0x1000);
     swept.shape = shapeResult;
     swept.delta = data_0205344c;
     OffsetBoxByDelta(&swept.shape.bounds, &swept.sweptBounds, &swept.delta);

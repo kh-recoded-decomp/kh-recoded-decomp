@@ -6,4 +6,5 @@
 #define func_0202f628 QuaternionFromRotationMatrix
 #define g_correctionQuat_02055824 data_02055838
 #define multiplyFixedPointQuaternions_0202f93c MultiplyFixedPointQuaternions
+#define func_01ffaff4 VEC_NormalizeLength
 #include "src/arm9/math/ApplyQuaternionCorrectionToMatrix_0202f090.c"

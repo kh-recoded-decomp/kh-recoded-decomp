@@ -1,0 +1,9 @@
+#define DrawDialogText_020c89d4 DrawOv077DialogText
+#define G2D_InitializeLinearCanvas_02017a2c NNS_G2dCharCanvasInitForBG
+#define func_ov039_020bc994 GetMenuFont10
+#define NNSi_G2dFontGetTextHeight_02016b4c NNSi_G2dFontGetTextHeight
+#define G2D_FindGlyphIndex_02016a10 NNS_G2dFontFindGlyphIndex
+#define G2D_GetGlyphWidths_02016a58 NNS_G2dFontGetCharWidthsFromIndex
+#define DrawNnsG2dText_02017ff0 NNSi_G2dTextCanvasDrawTaggedText
+#define func_ov077_020c8168 func_ov077_020c8188
+#include "src/ov077/unclassified_helpers/DrawDialogText_020c89d4.c"

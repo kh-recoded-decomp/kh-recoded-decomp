@@ -4,4 +4,5 @@
 #define VEC_Mag_01ff9f28 VEC_Mag
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define func_ov052_020ceb54 func_ov052_020ceb74
+#define func_01ffaff4 VEC_NormalizeLength
 #include "src/ov052/unclassified_helpers/IsFacingNearbyTarget_020d16c8.c"

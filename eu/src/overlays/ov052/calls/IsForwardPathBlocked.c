@@ -7,4 +7,5 @@
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define data_0205356c data_02053580
 #define func_0203adcc InitAxisCylinderShape
+#define func_01ffaff4 VEC_NormalizeLength
 #include "src/ov052/actor_motion/IsForwardPathBlocked_020c847c.c"

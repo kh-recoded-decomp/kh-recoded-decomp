@@ -4,7 +4,7 @@
 #define MTX_RotY33_01ff923c MTX_RotY33_
 #define ScaleVecFx32_01ffafb4 ScaleVecFx32
 #define VEC_Mag_01ff9f28 VEC_Mag
-#define VEC_Normalize_01ffaff4 func_01ffaff4
+#define VEC_Normalize_01ffaff4 VEC_NormalizeLength
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define data_0205356c data_02053580
 #include "src/ov021/object_state/ComputeKnockbackVector_020abebc.c"

@@ -13,4 +13,5 @@
 #define func_0203adcc InitAxisCylinderShape
 #define func_ov021_020a9268 IsObjHandleUsable
 #define func_ov058_020d720c UpdateSceneCameraTransform
+#define func_01ffaff4 VEC_NormalizeLength
 #include "src/ov058/unclassified_helpers/StartAnchorSequence_020d7f60.c"

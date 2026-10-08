@@ -1,4 +1,5 @@
 #define CameraCollision_CheckContact_020c3254 CameraCollision_CheckContact
 #define IsFacingContactNormal_020349d8 IsFacingContactNormal
 #define VEC_DotProduct_01ff9e6c VEC_DotProduct
+#define func_01ffaff4 VEC_NormalizeLength
 #include "src/ov046/shared_engine/CameraCollision_CheckContact_020c3254.c"

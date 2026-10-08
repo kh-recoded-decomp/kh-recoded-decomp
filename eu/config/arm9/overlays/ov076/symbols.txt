@@ -112,10 +112,10 @@ SlotMenu_CloseItemList kind:function(thumb,size=0xc4) addr:0x020c9c7c
 IsItemSlotAvailable_020c9d40 kind:function(thumb,size=0x76) addr:0x020c9d40
 func_ov076_020c9db8 kind:function(thumb,size=0x444) addr:0x020c9db8
 MenuPanel_SetFilterMode kind:function(thumb,size=0x74) addr:0x020ca1fc
-func_ov076_020ca270 kind:function(thumb,size=0x138) addr:0x020ca270
+ItemScreen_DrawItemPrompt kind:function(thumb,size=0x138) addr:0x020ca270
 SetDialogInputDisabled_020ca3a8 kind:function(thumb,size=0xe) addr:0x020ca3a8
 ItemList_ReleaseCursorEntry kind:function(thumb,size=0x3c) addr:0x020ca3b8
-func_ov076_020ca3f4 kind:function(thumb,size=0x13c) addr:0x020ca3f4
+ItemList_DrawSelectedName kind:function(thumb,size=0x13c) addr:0x020ca3f4
 AddToSelectionCounters_020ca530 kind:function(thumb,size=0x30) addr:0x020ca530
 func_ov076_020ca560 kind:function(thumb,size=0xc8) addr:0x020ca560
 func_ov076_020ca628 kind:function(thumb,size=0x8) addr:0x020ca628
@@ -147,12 +147,12 @@ MenuPanel_InitStandard kind:function(thumb,size=0x28) addr:0x020cb3a0
 MenuPanel_Setup kind:function(thumb,size=0xc0) addr:0x020cb3c8
 MessageWindow_BeginClosing kind:function(thumb,size=0x40) addr:0x020cb488
 MessageWindow_Update kind:function(thumb,size=0x3be) addr:0x020cb4c8
-func_ov076_020cb888 kind:function(thumb,size=0x138) addr:0x020cb888
-func_ov076_020cb9c0 kind:function(thumb,size=0x19c) addr:0x020cb9c0
+MessageWindow_DrawText kind:function(thumb,size=0x138) addr:0x020cb888
+MessageWindow_DrawLines kind:function(thumb,size=0x19c) addr:0x020cb9c0
 MenuScreen_RefreshMarker kind:function(thumb,size=0x54) addr:0x020cbb5c
 MessageWindow_IsFinished kind:function(thumb,size=0x10) addr:0x020cbbb0
 func_ov076_020cbbc0 kind:function(thumb,size=0x12c) addr:0x020cbbc0
-func_ov076_020cbcec kind:function(thumb,size=0x3bc) addr:0x020cbcec
+MenuPanel_Create kind:function(thumb,size=0x3bc) addr:0x020cbcec
 MenuPanel_Destroy kind:function(thumb,size=0x5c) addr:0x020cc0a8
 ItemSelectionPanel_Open kind:function(thumb,size=0x258) addr:0x020cc104
 func_ov076_020cc35c kind:function(thumb,size=0x4e0) addr:0x020cc35c
@@ -172,7 +172,7 @@ data_ov076_020cd0e0 kind:data(any) addr:0x020cd0e0
 data_ov076_020cd124 kind:data(any) addr:0x020cd124
 data_ov076_020cd12c kind:data(any) addr:0x020cd12c
 data_ov076_020cd130 kind:data(any) addr:0x020cd130
-data_ov076_020cd140 kind:data(any) addr:0x020cd140
+gSlotMenuObjManagerConfig kind:data(any) addr:0x020cd140
 data_ov076_020cd150 kind:data(any) addr:0x020cd150
 data_ov076_020cd164 kind:data(any) addr:0x020cd164
 data_ov076_020cd188 kind:data(any) addr:0x020cd188
@@ -203,4 +203,4 @@ sOv076_UiMenuTipsP2_020cd3d4 kind:data(any) addr:0x020cd3d4
 sOv076_UiMenuLanguageTipsP2_020cd3e4 kind:data(any) addr:0x020cd3e4
 data_ov076_020cd400 kind:bss addr:0x020cd400
 data_ov076_020cd404 kind:bss addr:0x020cd404
-data_ov076_020cd40c kind:bss addr:0x020cd40c
+gSlotMenuPanelWork kind:bss addr:0x020cd40c

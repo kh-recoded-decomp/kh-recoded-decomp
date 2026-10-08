@@ -24,7 +24,7 @@ func_ov077_020c5814 kind:function(thumb,size=0xec) addr:0x020c5814
 ShowSlotHeaderMessage kind:function(thumb,size=0x50) addr:0x020c5900
 SelectChooserValueByIndex kind:function(thumb,size=0x14) addr:0x020c5950
 func_ov077_020c5964 kind:function(thumb,size=0x108) addr:0x020c5964
-func_ov077_020c5a6c kind:function(thumb,size=0x1d0) addr:0x020c5a6c
+DrawPartySlotLabel kind:function(thumb,size=0x1d0) addr:0x020c5a6c
 func_ov077_020c5c3c kind:function(thumb,size=0x84) addr:0x020c5c3c
 func_ov077_020c5cc0 kind:function(thumb,size=0x14) addr:0x020c5cc0
 func_ov077_020c5cd4 kind:function(thumb,size=0x14) addr:0x020c5cd4
@@ -52,10 +52,10 @@ ItemMenu_CloseItemList kind:function(thumb,size=0xc4) addr:0x020c6cb0
 IsItemSlotAvailable_020c6d74 kind:function(thumb,size=0x76) addr:0x020c6d74
 func_ov077_020c6dec kind:function(thumb,size=0x444) addr:0x020c6dec
 MenuPanel_SetFilterMode_020c7230 kind:function(thumb,size=0x74) addr:0x020c7230
-func_ov077_020c72a4 kind:function(thumb,size=0x138) addr:0x020c72a4
+DrawItemNameHeader kind:function(thumb,size=0x138) addr:0x020c72a4
 SetDialogInputDisabled_020c73dc kind:function(thumb,size=0xe) addr:0x020c73dc
 ItemList_ReleaseCursorEntry_020c73ec kind:function(thumb,size=0x3c) addr:0x020c73ec
-func_ov077_020c7428 kind:function(thumb,size=0x13c) addr:0x020c7428
+DrawItemNameUseHeader kind:function(thumb,size=0x13c) addr:0x020c7428
 AddToSelectionCounters_020c7564 kind:function(thumb,size=0x30) addr:0x020c7564
 func_ov077_020c7594 kind:function(thumb,size=0xc8) addr:0x020c7594
 func_ov077_020c765c kind:function(thumb,size=0x8) addr:0x020c765c
@@ -87,12 +87,12 @@ InitDefaultMessageWindow kind:function(thumb,size=0x28) addr:0x020c83d4
 InitMessageWindow_020c83fc kind:function(thumb,size=0xc0) addr:0x020c83fc
 MessageWindow_BeginClosing_020c84bc kind:function(thumb,size=0x40) addr:0x020c84bc
 MessageWindow_Update_020c84fc kind:function(thumb,size=0x3be) addr:0x020c84fc
-func_ov077_020c88bc kind:function(thumb,size=0x138) addr:0x020c88bc
-func_ov077_020c89f4 kind:function(thumb,size=0x19c) addr:0x020c89f4
+DrawPanelTextBlock kind:function(thumb,size=0x138) addr:0x020c88bc
+DrawOv077DialogText kind:function(thumb,size=0x19c) addr:0x020c89f4
 MenuScreen_RefreshMarker_020c8b90 kind:function(thumb,size=0x54) addr:0x020c8b90
 IsMessageWindowActive kind:function(thumb,size=0x10) addr:0x020c8be4
 func_ov077_020c8bf4 kind:function(thumb,size=0x12c) addr:0x020c8bf4
-func_ov077_020c8d20 kind:function(thumb,size=0x3bc) addr:0x020c8d20
+ItemListPanel_Create kind:function(thumb,size=0x3bc) addr:0x020c8d20
 ReleaseScreenResources kind:function(thumb,size=0x5c) addr:0x020c90dc
 ItemListPanel_Open kind:function(thumb,size=0x258) addr:0x020c9138
 func_ov077_020c9390 kind:function(thumb,size=0x4e0) addr:0x020c9390
@@ -114,7 +114,7 @@ data_ov077_020ca128 kind:data(any) addr:0x020ca128
 data_ov077_020ca154 kind:data(any) addr:0x020ca154
 data_ov077_020ca15c kind:data(any) addr:0x020ca15c
 data_ov077_020ca160 kind:data(any) addr:0x020ca160
-data_ov077_020ca170 kind:data(any) addr:0x020ca170
+gItemListObjManagerConfig kind:data(any) addr:0x020ca170
 data_ov077_020ca180 kind:data(any) addr:0x020ca180
 data_ov077_020ca194 kind:data(any) addr:0x020ca194
 data_ov077_020ca1b8 kind:data(any) addr:0x020ca1b8
@@ -134,4 +134,4 @@ sOv077_UiMenuTipsP2_020ca370 kind:data(any) addr:0x020ca370
 sOv077_UiMenuLanguageTipsP2_020ca380 kind:data(any) addr:0x020ca380
 data_ov077_020ca3a0 kind:bss addr:0x020ca3a0
 data_ov077_020ca3a4 kind:bss addr:0x020ca3a4
-data_ov077_020ca3ac kind:bss addr:0x020ca3ac
+gItemListPanelWork kind:bss addr:0x020ca3ac

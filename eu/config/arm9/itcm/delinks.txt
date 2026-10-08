@@ -313,6 +313,10 @@ src/calls/ScaleVecFx32.c:
     complete
     .text       start:0x01ffafb4 end:0x01ffaff4
 
+src/calls/VEC_NormalizeLength.c:
+    complete
+    .text       start:0x01ffaff4 end:0x01ffb12c
+
 src/calls/SceneNode_Draw.c:
     complete
     .text       start:0x01ffb12c end:0x01ffb2d4
@@ -352,6 +356,10 @@ src/calls/QueryCollisionSegment.c:
 libs/nitro/nns/calls/func_01ffcedc.c:
     complete
     .text       start:0x01ffcedc end:0x01ffcf74
+
+src/calls/NormalizeVecPair.c:
+    complete
+    .text       start:0x01ffcf74 end:0x01ffd180
 
 src/calls/SampleJointRotationStreamITCM.c:
     complete

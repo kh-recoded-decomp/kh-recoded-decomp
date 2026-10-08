@@ -24,7 +24,7 @@ typedef struct PenetrationResult {
 } PenetrationResult;
 
 extern fx32 VEC_Mag(const VecFx32 *v);
-extern fx32 func_01ffaff4(VecFx32 *src, VecFx32 *dst);
+extern fx32 VEC_NormalizeLength(VecFx32 *src, VecFx32 *dst);
 extern fx32 ComputeDirectionalExtent(const CollisionCylinder *cylinder, const VecFx32 *dirA, s32 majorExtent, const VecFx32 *dirB);
 extern void WritePenetrationContact(const PenetrationResult *result, void *contact, u32 flags);
 extern VecFx32 SubtractVecFx32Into(const VecFx32 *a, const VecFx32 *b);
@@ -67,7 +67,7 @@ BOOL TestSegmentAgainstCylinder(CylinderShapeRef *segmentRef, CylinderShapeRef *
     } else {
         normal = cross;
     }
-    func_01ffaff4(&normal, &normal);
+    VEC_NormalizeLength(&normal, &normal);
     if (!func_0203fbb8(cylinder->radius, &delta, &normal, 0, &result)) {
         return FALSE;
     }

@@ -1,4 +1,4 @@
-#define DrawDialogText_020cfa50 func_ov075_020cfa70
+#define DrawDialogText_020cfa50 DrawOv075DialogText
 #define OnMessageDialogClosed_020c8d30 OnMessageDialogClosed
 #define OpenMessageDialog_020c8ba0 OpenMessageDialog
 #define SetMatrixInputDisabled_020c8de8 SetMatrixInputDisabled

@@ -320,6 +320,10 @@ src/overlays/ov075/calls/SelectItemTab.c:
     complete
     .text       start:0x020ce3ec end:0x020ce460
 
+src/overlays/ov075/calls/DrawItemPickerHeader.c:
+    complete
+    .text       start:0x020ce460 end:0x020ce598
+
 src/overlays/ov075/calls/SetDialogInputDisabled.c:
     complete
     .text       start:0x020ce598 end:0x020ce5a6
@@ -327,6 +331,10 @@ src/overlays/ov075/calls/SetDialogInputDisabled.c:
 src/overlays/ov075/calls/DiscardSelectedItem.c:
     complete
     .text       start:0x020ce5a8 end:0x020ce5e4
+
+src/overlays/ov075/calls/DrawSelectedEntryName.c:
+    complete
+    .text       start:0x020ce5e4 end:0x020ce720
 
 src/overlays/ov075/calls/AddToSelectionCounters.c:
     complete
@@ -448,9 +456,21 @@ src/overlays/ov075/calls/UpdateMessageDialog.c:
     complete
     .text       start:0x020cf578 end:0x020cf936
 
+src/overlays/ov075/calls/DrawCenteredDialogText.c:
+    complete
+    .text       start:0x020cf938 end:0x020cfa70
+
+src/overlays/ov075/calls/DrawOv075DialogText.c:
+    complete
+    .text       start:0x020cfa70 end:0x020cfc0c
+
 src/overlays/ov075/calls/IsDialogTransitionDone.c:
     complete
     .text       start:0x020cfc0c end:0x020cfc1c
+
+src/overlays/ov075/calls/ItemPickerPanel_Create.c:
+    complete
+    .text       start:0x020cfc1c end:0x020cffd8
 
 src/overlays/ov075/calls/DestroyItemPicker.c:
     complete

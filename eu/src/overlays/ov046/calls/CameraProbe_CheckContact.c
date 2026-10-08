@@ -6,4 +6,5 @@
 #define VEC_Add_01ff9e0c VEC_Add
 #define VEC_DotProduct_01ff9e6c VEC_DotProduct
 #define data_020558a0 gCollisionTestDispatch
+#define func_01ffaff4 VEC_NormalizeLength
 #include "src/ov046/shared_engine/CameraProbe_CheckContact_020c1cc8.c"

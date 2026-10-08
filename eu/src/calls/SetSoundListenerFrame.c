@@ -1,4 +1,5 @@
 #define SetSoundListenerFrame_0204dc94 SetSoundListenerFrame
 #define VEC_CrossProduct_01ff9ea8 VEC_CrossProduct
 #define g_soundWork_0206084c gSoundWork
+#define func_01ffaff4 VEC_NormalizeLength
 #include "src/arm9/audio/SetSoundListenerFrame_0204dc94.c"

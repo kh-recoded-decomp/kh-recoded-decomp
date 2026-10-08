@@ -4,4 +4,5 @@
 #define Surface_GetKindValue_02034c24 Surface_GetKindValue
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define addScaledVector_020301ac AddScaledVector
+#define func_01ffaff4 VEC_NormalizeLength
 #include "src/ov001/scripted_actor_behavior/ProbeGroundBelowActor_02091670.c"

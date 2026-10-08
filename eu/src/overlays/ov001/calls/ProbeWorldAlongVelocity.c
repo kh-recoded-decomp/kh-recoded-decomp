@@ -4,4 +4,5 @@
 #define ProbeWorldAlongVelocity_02085278 ProbeWorldAlongVelocity
 #define ScaleVecFx32InPlace_0204a5e4 ScaleVecFx32InPlace
 #define TestQueryAgainstWorldMeshes_020364d8 TestQueryAgainstWorldMeshes
+#define func_01ffaff4 VEC_NormalizeLength
 #include "src/ov001/field_objects/ProbeWorldAlongVelocity_02085278.c"

@@ -8,5 +8,5 @@
 #define data_ov078_020c519c data_ov078_020c51bc
 #define data_ov078_020c51a8 data_ov078_020c51c8
 #define func_ov027_020ba2a8 func_ov027_020ba2c8
-#define func_ov078_020c4c2c func_ov078_020c4c4c
+#define func_ov078_020c4c2c DrawLayoutLine
 #include "src/ov078/unclassified_helpers/DrawPageHeader_020c4b18.c"

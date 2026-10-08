@@ -4,7 +4,7 @@
 #define GX_LoadBG1Char_020079b0 GX_LoadBG1Char
 #define GX_LoadBG1Scr_02007630 GX_LoadBG1Scr
 #define MessageWindow_BeginClosing_020cb468 MessageWindow_BeginClosing
-#define MessageWindow_DrawText_020cb868 func_ov076_020cb888
+#define MessageWindow_DrawText_020cb868 MessageWindow_DrawText
 #define MessageWindow_UpdateYesNoInput_020cae3c MessageWindow_UpdateYesNoInput
 #define MessageWindow_Update_020cb4a8 MessageWindow_Update
 #define PlaySoundEffect_0204d924 PlaySoundEffect

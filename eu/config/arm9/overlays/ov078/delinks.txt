@@ -44,6 +44,10 @@ src/overlays/ov078/calls/DrawPageHeader.c:
     complete
     .text       start:0x020c4b38 end:0x020c4c4c
 
+src/overlays/ov078/calls/DrawLayoutLine.c:
+    complete
+    .text       start:0x020c4c4c end:0x020c4df8
+
 src/overlays/ov078/calls/func_ov078_020c4df8.c:
     complete
     .text       start:0x020c4df8 end:0x020c4ea0

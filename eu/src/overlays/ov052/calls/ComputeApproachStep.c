@@ -16,4 +16,5 @@
 #define func_ov021_020a7504 func_ov021_020a7524
 #define func_ov021_020a7544 func_ov021_020a7564
 #define func_ov052_020ceb54 func_ov052_020ceb74
+#define func_01ffaff4 VEC_NormalizeLength
 #include "src/ov052/actor_motion/ComputeApproachStep_020cc2f0.c"

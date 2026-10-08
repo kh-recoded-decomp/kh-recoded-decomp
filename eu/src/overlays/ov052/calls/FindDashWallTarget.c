@@ -19,4 +19,5 @@
 #define func_ov021_020a7544 func_ov021_020a7564
 #define func_ov021_020a9474 AnyLinkedObjectHasStateSeven
 #define func_ov052_020ceb54 func_ov052_020ceb74
+#define func_01ffaff4 VEC_NormalizeLength
 #include "src/ov052/actor_motion/FindDashWallTarget_020c8040.c"

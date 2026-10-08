@@ -15,7 +15,7 @@
 #define VEC_Mag_01ff9f28 VEC_Mag
 #define VEC_MultAdd_01ffa09c VEC_MultAdd
 #define VEC_NormalizeUnchecked_01ff9f88 VEC_Normalize
-#define VEC_Normalize_01ffaff4 func_01ffaff4
+#define VEC_Normalize_01ffaff4 VEC_NormalizeLength
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define ZeroBytes0x28_020ac0f8 ZeroBytes0x28
 #define data_ov064_020d8824 data_ov064_020d8844

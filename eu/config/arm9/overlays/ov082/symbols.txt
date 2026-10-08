@@ -1,7 +1,7 @@
 InitOv082EntryList kind:function(arm,size=0xa8) addr:0x020beac0
 SetupOv082Screen kind:function(arm,size=0x3c0) addr:0x020beb68
 RefreshEntryRows kind:function(arm,size=0x184) addr:0x020bef28
-func_ov082_020bf0ac kind:function(arm,size=0x1d4) addr:0x020bf0ac
+DrawEntryRowText kind:function(arm,size=0x1d4) addr:0x020bf0ac
 DrawEntryRowFrames kind:function(arm,size=0xa0) addr:0x020bf280
 ShutdownOv082Screen kind:function(arm,size=0x70) addr:0x020bf320
 UpdateOv082EntryList kind:function(arm,size=0xd8) addr:0x020bf390

@@ -1,4 +1,5 @@
 #define SampleJointRotationStreamITCM_01ffd180 SampleJointRotationStreamITCM
+#define func_01ffcf74 NormalizeVecPair
 #define func_01ff9f88 VEC_Normalize
 #define func_01ffd56c DecodeCompressedRotationITCM
 #include "src/itcm/library_nitro_nns/func_01ffd180.c"

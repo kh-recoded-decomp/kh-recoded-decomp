@@ -160,7 +160,7 @@ extern void VEC_Subtract(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
 extern void VEC_Add(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
 extern fx32 VEC_DotProduct(const VecFx32 *a, const VecFx32 *b);
 extern void VEC_Normalize(const VecFx32 *src, VecFx32 *dst);
-extern fx32 func_01ffaff4(const VecFx32 *src, VecFx32 *dst);
+extern fx32 VEC_NormalizeLength(const VecFx32 *src, VecFx32 *dst);
 extern fx32 VEC_Mag(const VecFx32 *v);
 extern void VEC_MultAdd(fx32 scale, const VecFx32 *a, const VecFx32 *b, VecFx32 *dst);
 extern void ScaleVecFx32(fx32 scale, const VecFx32 *src, VecFx32 *dst);
@@ -675,7 +675,7 @@ void UpdatePillarRide(Actor *actor)
             top.y = y + 0x1000;
             VEC_Subtract(&top, &bottom, &diff);
             axis = diff;
-            shape = InitCylinderShape(&cylinder, &bottom, &top, &axis, func_01ffaff4(&axis, &axis), 0x1000);
+            shape = InitCylinderShape(&cylinder, &bottom, &top, &axis, VEC_NormalizeLength(&axis, &axis), 0x1000);
             swept.shape = shape;
             swept.delta = motion;
             OffsetBoxByDelta(&swept.shape.bounds, &swept.sweptBounds, &swept.delta);
@@ -709,7 +709,7 @@ void UpdatePillarRide(Actor *actor)
                 SetVec(&dir, 0, task->origin.y + 0x3000 - pos.y, 0);
                 VEC_Subtract(&top, &bottom, &diff3);
                 axis3 = diff3;
-                shape3 = InitCylinderShape(&cylinder, &bottom, &top, &axis3, func_01ffaff4(&axis3, &axis3), 0x1000);
+                shape3 = InitCylinderShape(&cylinder, &bottom, &top, &axis3, VEC_NormalizeLength(&axis3, &axis3), 0x1000);
                 swept3.shape = shape3;
                 swept3.delta = dir;
                 OffsetBoxByDelta(&swept3.shape.bounds, &swept3.sweptBounds, &swept3.delta);
@@ -753,7 +753,7 @@ void UpdatePillarRide(Actor *actor)
             SetVec(&dir, 0, task->origin.y - 0x3000 - y, 0);
             VEC_Subtract(&top, &bottom, &diff);
             axis = diff;
-            shape = InitCylinderShape(&cylinder, &bottom, &top, &axis, func_01ffaff4(&axis, &axis), 0x1000);
+            shape = InitCylinderShape(&cylinder, &bottom, &top, &axis, VEC_NormalizeLength(&axis, &axis), 0x1000);
             swept.shape = shape;
             swept.delta = dir;
             OffsetBoxByDelta(&swept.shape.bounds, &swept.sweptBounds, &swept.delta);
@@ -793,7 +793,7 @@ void UpdatePillarRide(Actor *actor)
             top.y = bottom.y + 0x1000;
             VEC_Subtract(&top, &bottom, &diff);
             axis = diff;
-            shape = InitCylinderShape(&cylinder, &bottom, &top, &axis, func_01ffaff4(&axis, &axis), 0x1000);
+            shape = InitCylinderShape(&cylinder, &bottom, &top, &axis, VEC_NormalizeLength(&axis, &axis), 0x1000);
             swept.shape = shape;
             swept.delta = motion;
             OffsetBoxByDelta(&swept.shape.bounds, &swept.sweptBounds, &swept.delta);
@@ -822,7 +822,7 @@ void UpdatePillarRide(Actor *actor)
                     VEC_Subtract(&pos, &task->origin, &fromOrigin);
                     flat = fromOrigin;
                     flat.y = 0;
-                    length = func_01ffaff4(&flat, &move.direction);
+                    length = VEC_NormalizeLength(&flat, &move.direction);
                     if (length > 0x14000) {
                         move.distance = length - 0x14000;
                         NegateVecFx32(&move.direction);

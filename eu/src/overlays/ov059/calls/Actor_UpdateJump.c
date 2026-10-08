@@ -7,6 +7,7 @@
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define IsPlayerEntryFlagSet_02050014 IsPlayerEntryFlagSet
 #define data_0205356c data_02053580
+#define func_01ffaff4 VEC_NormalizeLength
 #if defined(__MWERKS__)
 #include "../src/ov059/unclassified_helpers/Actor_UpdateJump_020ca33c.c"
 #else

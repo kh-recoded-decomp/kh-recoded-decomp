@@ -2,4 +2,5 @@
 #define VEC_Mag_01ff9f28 VEC_Mag
 #define func_01ff9e3c VEC_Subtract
 #define func_ov001_02092634 RandomHorizontalVector
+#define func_01ffaff4 VEC_NormalizeLength
 #include "src/ov001/shared_engine/ComputeFlatDirectionVector_02092674.c"

@@ -75,7 +75,7 @@ extern void selectJointAnimationBlend(void *animationState, u16 trackIndex, void
 extern void ActorSlot_SetFlag8ByIndex(int index, BOOL enable);
 extern void VEC_MultAdd(fx32 scale, const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
 extern void VEC_Subtract(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
-extern fx32 func_01ffaff4(const VecFx32 *src, VecFx32 *dst);
+extern fx32 VEC_NormalizeLength(const VecFx32 *src, VecFx32 *dst);
 extern void InitCylinderShape(CollisionShape *shape, CollisionCylinder *cylinder, const VecFx32 *start, const VecFx32 *end, const VecFx32 *direction, fx32 length, fx32 radius);
 extern void CollisionQuery_Init(CollisionQuery *query, u16 id, void *actor, u8 kind, u8 unk3C, u8 unk3D, void *shape, QueryWorkspace *workspace, void *filter);
 extern void *SweepWorldCollision(CollisionQuery *query);
@@ -156,7 +156,7 @@ int Gimmick_UpdateOpening(Gimmick *gimmick)
         end = endResult;
         VEC_Subtract(&end, &gimmick->position, &delta);
         direction = delta;
-        InitCylinderShape(&shapeResult, &cylinder, &gimmick->position, &end, &direction, func_01ffaff4(&direction, &direction), 0xcd);
+        InitCylinderShape(&shapeResult, &cylinder, &gimmick->position, &end, &direction, VEC_NormalizeLength(&direction, &direction), 0xcd);
         shape = shapeResult;
         CollisionQuery_Init(&query, 0, NULL, 8, 2, 0, &shape, &workspace, NULL);
         sweep = query;

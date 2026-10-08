@@ -4,4 +4,5 @@
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define data_0205ab3c NNS_G3dGlb_camPos
 #define data_0205ab54 NNS_G3dGlb_camTarget
+#define func_01ffaff4 VEC_NormalizeLength
 #include "src/ov046/shared_engine/Camera_GetScreenEdgeMask_020c28d0.c"

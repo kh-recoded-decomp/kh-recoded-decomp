@@ -18,7 +18,7 @@ typedef struct {
     u32 frameParity;
 } MenuWork;
 
-extern MenuWork *data_ov075_020d1b04;
+extern MenuWork *gItemPickerPanelWork;
 extern u32 func_01ff80d4(void);
 extern void *G2_GetBG1CharPtr(void);
 extern void MIi_CpuCopyFast(const void *src, void *dest, u32 size);
@@ -26,7 +26,7 @@ extern void UpdateWidgetRootAndFireAlarm(TextRenderer *renderer, int mode);
 
 void func_ov075_020ceea4(void)
 {
-    MenuWork *work = data_ov075_020d1b04;
+    MenuWork *work = gItemPickerPanelWork;
 
     if (work->isPaused != 0) {
         return;

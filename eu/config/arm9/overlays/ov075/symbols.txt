@@ -105,10 +105,10 @@ CloseItemPicker kind:function(thumb,size=0xc4) addr:0x020cde6c
 IsItemSlotAvailable kind:function(thumb,size=0x76) addr:0x020cdf30
 func_ov075_020cdfa8 kind:function(thumb,size=0x444) addr:0x020cdfa8
 SelectItemTab kind:function(thumb,size=0x74) addr:0x020ce3ec
-func_ov075_020ce460 kind:function(thumb,size=0x138) addr:0x020ce460
+DrawItemPickerHeader kind:function(thumb,size=0x138) addr:0x020ce460
 SetDialogInputDisabled kind:function(thumb,size=0xe) addr:0x020ce598
 DiscardSelectedItem kind:function(thumb,size=0x3c) addr:0x020ce5a8
-func_ov075_020ce5e4 kind:function(thumb,size=0x13c) addr:0x020ce5e4
+DrawSelectedEntryName kind:function(thumb,size=0x13c) addr:0x020ce5e4
 AddToSelectionCounters kind:function(thumb,size=0x30) addr:0x020ce720
 ApplyLevelRankParam kind:function(thumb,size=0xc8) addr:0x020ce750
 func_ov075_020ce818 kind:function(thumb,size=0x8) addr:0x020ce818
@@ -140,10 +140,10 @@ OpenDefaultDialog kind:function(thumb,size=0x28) addr:0x020cf450
 InitMessageWindow kind:function(thumb,size=0xc0) addr:0x020cf478
 BeginPickerFadeOut kind:function(thumb,size=0x40) addr:0x020cf538
 UpdateMessageDialog kind:function(thumb,size=0x3be) addr:0x020cf578
-func_ov075_020cf938 kind:function(thumb,size=0x138) addr:0x020cf938
-func_ov075_020cfa70 kind:function(thumb,size=0x19c) addr:0x020cfa70
+DrawCenteredDialogText kind:function(thumb,size=0x138) addr:0x020cf938
+DrawOv075DialogText kind:function(thumb,size=0x19c) addr:0x020cfa70
 IsDialogTransitionDone kind:function(thumb,size=0x10) addr:0x020cfc0c
-func_ov075_020cfc1c kind:function(thumb,size=0x3bc) addr:0x020cfc1c
+ItemPickerPanel_Create kind:function(thumb,size=0x3bc) addr:0x020cfc1c
 DestroyItemPicker kind:function(thumb,size=0x5c) addr:0x020cffd8
 UnlockableListPanel_Open kind:function(thumb,size=0x258) addr:0x020d0034
 func_ov075_020d028c kind:function(thumb,size=0x4e0) addr:0x020d028c
@@ -194,7 +194,7 @@ gUnlockNoticeEntries kind:data(any) addr:0x020d1580
 sTabCategoryMap kind:data(any) addr:0x020d1678
 data_ov075_020d1680 kind:data(any) addr:0x020d1680
 sPartyLevelThresholds kind:data(any) addr:0x020d1684
-data_ov075_020d1694 kind:data(any) addr:0x020d1694
+gItemPickerObjManagerConfig kind:data(any) addr:0x020d1694
 sFrameTiles kind:data(any) addr:0x020d16a4
 sFrameRenderRotation kind:data(any) addr:0x020d16b8
 sImageQuadRotation kind:data(any) addr:0x020d16dc
@@ -217,4 +217,4 @@ sOv075_UiMenuTipsP2_020d18d4 kind:data(any) addr:0x020d18d4
 sOv075_UiMenuLanguageTipsP2_020d18e4 kind:data(any) addr:0x020d18e4
 data_ov075_020d1900 kind:bss addr:0x020d1900
 data_ov075_020d1904 kind:bss addr:0x020d1904
-data_ov075_020d1b04 kind:bss addr:0x020d1b04
+gItemPickerPanelWork kind:bss addr:0x020d1b04

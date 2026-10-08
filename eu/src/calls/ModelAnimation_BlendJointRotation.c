@@ -1,5 +1,5 @@
 #define ModelAnimation_BlendJointRotation_02039728 ModelAnimation_BlendJointRotation
 #define ModelAnimation_DecodeJointRotation DecodeCompressedRotationITCM
 #define Vector_Normalize VEC_Normalize
-#define Vector_NormalizeTwoAxes func_01ffcf74
+#define Vector_NormalizeTwoAxes NormalizeVecPair
 #include "src/arm9/model_animation/ModelAnimation_BlendJointRotation_02039728.c"

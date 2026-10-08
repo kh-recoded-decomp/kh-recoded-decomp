@@ -10,4 +10,5 @@
 #define func_ov032_020bcaa4 SweepSphereAgainstWorld
 #define func_ov032_020bcbe0 ScaleValueByLevelFactor
 #define random_next_scaled_0202aa04 random_next_scaled
+#define func_01ffaff4 VEC_NormalizeLength
 #include "src/ov032/unclassified_helpers/UpdateHopMovement_020bcc44.c"

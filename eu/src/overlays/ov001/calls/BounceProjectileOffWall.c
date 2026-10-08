@@ -16,4 +16,5 @@
 #define data_0205356c data_02053580
 #define func_0203adcc InitAxisCylinderShape
 #define func_ov001_02085138 UpdateSpawnerRise
+#define func_01ffaff4 VEC_NormalizeLength
 #include "src/ov001/actor_animation/BounceProjectileOffWall_020858e0.c"

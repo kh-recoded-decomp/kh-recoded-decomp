@@ -1,4 +1,5 @@
 #define NegateVecFx32_0204aa40 NegateVecFx32
 #define ResolveSweepContact_0204792c ResolveSweepContact
 #define VEC_DotProduct_01ff9e6c VEC_DotProduct
+#define func_01ffaff4 VEC_NormalizeLength
 #include "src/arm9/spatial_queries/ResolveSweepContact_0204792c.c"

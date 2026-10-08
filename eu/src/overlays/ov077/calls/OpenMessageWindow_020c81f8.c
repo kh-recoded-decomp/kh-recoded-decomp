@@ -1,3 +1,3 @@
 #define OpenMessageWindow_020c81d8 OpenMessageWindow_020c81f8
-#define func_ov077_020c889c func_ov077_020c88bc
+#define func_ov077_020c889c DrawPanelTextBlock
 #include "src/ov077/unclassified_helpers/OpenMessageWindow_020c81d8.c"

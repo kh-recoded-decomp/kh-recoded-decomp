@@ -1,4 +1,4 @@
-#define DrawDialogText_020c89d4 func_ov077_020c89f4
+#define DrawDialogText_020c89d4 DrawOv077DialogText
 #define MenuScreen_RefreshMarker_020c8b70 MenuScreen_RefreshMarker_020c8b90
 #define func_0204f204 func_0204f218
 #define func_ov027_020b90a4 FindWidgetById

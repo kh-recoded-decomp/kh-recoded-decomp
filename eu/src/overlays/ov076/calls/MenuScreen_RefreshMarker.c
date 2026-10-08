@@ -3,5 +3,5 @@
 #define func_ov027_020b90a4 FindWidgetById
 #define func_ov027_020b91c8 func_ov027_020b91e8
 #define func_ov027_020b9580 SetEntrySlotsVisible
-#define func_ov076_020cb9a0 func_ov076_020cb9c0
+#define func_ov076_020cb9a0 MessageWindow_DrawLines
 #include "src/ov076/unclassified_helpers/MenuScreen_RefreshMarker_020cbb3c.c"

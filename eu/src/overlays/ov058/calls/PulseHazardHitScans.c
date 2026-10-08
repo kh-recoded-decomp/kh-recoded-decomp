@@ -77,7 +77,7 @@ extern HazardEntry data_ov058_020d8cec[];
 extern void InitRecord60(HitAttack *attack);
 extern void RotateOffsetAroundY(VecFx32 *out, const VecFx32 *origin, int angle, const VecFx32 *offset);
 extern void VEC_Subtract(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
-extern fx32 func_01ffaff4(const VecFx32 *src, VecFx32 *dst);
+extern fx32 VEC_NormalizeLength(const VecFx32 *src, VecFx32 *dst);
 extern CollisionShape InitCylinderShape(CylinderStorage *storage, const VecFx32 *start, const VecFx32 *end, const VecFx32 *axis, fx32 length, fx32 radius);
 extern void MakeSphereShape(HitVolume *volume, int *bounds, const VecFx32 *center, fx32 radius);
 extern void OffsetBoxByDelta(const Box *src, Box *dst, const VecFx32 *delta);
@@ -115,7 +115,7 @@ void PulseHazardHitScans(int index)
     RotateOffsetAroundY(&tip, &base, entry->angle, &tip);
     VEC_Subtract(&tip, &base, &diff);
     axis = diff;
-    shapeResult = InitCylinderShape(&cylinder, &base, &tip, &axis, func_01ffaff4(&axis, &axis), 0x14cd);
+    shapeResult = InitCylinderShape(&cylinder, &base, &tip, &axis, VEC_NormalizeLength(&axis, &axis), 0x14cd);
     swept.shape = shapeResult;
     swept.delta = attack.motion;
     OffsetBoxByDelta(&swept.shape.bounds, &swept.sweptBounds, &swept.delta);

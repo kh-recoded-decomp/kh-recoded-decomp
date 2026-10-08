@@ -15,4 +15,5 @@
 #define func_ov001_020909e4 func_ov001_02090a0c
 #define func_ov001_02097324 func_ov001_0209734c
 #define func_ov021_020af5f4 func_ov021_020af614
+#define func_01ffaff4 VEC_NormalizeLength
 #include "src/ov001/shared_engine/UpdateStageEventTracking_02093eec.c"

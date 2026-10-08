@@ -4,4 +4,5 @@
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define data_02053438 data_0205344c
 #define func_0203aeac InitCylinderShape
+#define func_01ffaff4 VEC_NormalizeLength
 #include "src/arm9/spatial_queries/InitCylinderCollisionObject_02033c9c.c"

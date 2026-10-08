@@ -6,4 +6,5 @@
 #define VEC_Mag_01ff9f28 VEC_Mag
 #define g_correctionQuat_020c2254 data_ov099_020c2274
 #define multiplyFixedPointQuaternions_0202f93c MultiplyFixedPointQuaternions
+#define func_01ffaff4 VEC_NormalizeLength
 #include "src/ov099/unclassified_helpers/ApplyQuaternionCorrectionToMatrix_020c183c.c"

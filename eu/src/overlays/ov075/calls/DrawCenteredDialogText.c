@@ -1,0 +1,8 @@
+#define DrawCenteredDialogText_020cf918 DrawCenteredDialogText
+#define G2D_InitializeLinearCanvas_02017a2c NNS_G2dCharCanvasInitForBG
+#define func_ov039_020bc994 GetMenuFont10
+#define NNSi_G2dFontGetTextHeight_02016b4c NNSi_G2dFontGetTextHeight
+#define MeasureTextLine_020cf17c MeasureTextLine
+#define DrawNnsG2dText_02017ff0 NNSi_G2dTextCanvasDrawTaggedText
+#define func_ov075_020cf1e4 func_ov075_020cf204
+#include "src/ov075/unclassified_helpers/DrawCenteredDialogText_020cf918.c"

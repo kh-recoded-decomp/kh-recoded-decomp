@@ -7,4 +7,5 @@
 #define func_ov001_0207f038 func_ov001_0207f060
 #define func_ov001_0207f810 func_ov001_0207f838
 #define func_ov001_02087224 func_ov001_0208724c
+#define func_01ffaff4 VEC_NormalizeLength
 #include "src/ov021/object_state/CheckLinkedTargetClearance_020a9308.c"

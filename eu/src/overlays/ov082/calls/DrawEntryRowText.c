@@ -1,0 +1,12 @@
+#define DrawEntryRowText_020bf08c DrawEntryRowText
+#define G2D_InitializeLinearCanvas_02017a2c NNS_G2dCharCanvasInitForBG
+#define func_ov039_020bc994 GetMenuFont10
+#define func_ov039_020bc9ac GetMenuFont10s
+#define func_ov081_020c5bf8 func_ov081_020c5c18
+#define G2D_MeasureTextWidth_02016bc0 NNSi_G2dFontGetTextWidth
+#define G2D_DrawAnchoredText_02017dec NNSi_G2dTextCanvasDrawText
+#define func_0200344c DC_FlushRange
+#define GFXi_EnqueueCommand_02014090 NNS_GfdRegisterNewVramTransferTask
+#define G2S_GetBG1ScrPtr_02006e68 G2S_GetBG1ScrPtr
+#define FillBackgroundTileRectangle_02017adc NNS_G2dMapScrToCharText
+#include "src/ov082/unclassified_helpers/DrawEntryRowText_020bf08c.c"

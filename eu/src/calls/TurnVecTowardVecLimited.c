@@ -5,4 +5,5 @@
 #define VEC_DotProduct_01ff9e6c VEC_DotProduct
 #define VEC_Mag_01ff9f28 VEC_Mag
 #define func_01ff9f88 VEC_Normalize
+#define func_01ffaff4 VEC_NormalizeLength
 #include "src/arm9/math/TurnVecTowardVecLimited_0204b1fc.c"

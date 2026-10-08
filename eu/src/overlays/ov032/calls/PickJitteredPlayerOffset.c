@@ -3,4 +3,5 @@
 #define VEC_Mag_01ff9f28 VEC_Mag
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define random_next_scaled_0202aa04 random_next_scaled
+#define func_01ffaff4 VEC_NormalizeLength
 #include "src/ov032/object_group/PickJitteredPlayerOffset_020bdd74.c"

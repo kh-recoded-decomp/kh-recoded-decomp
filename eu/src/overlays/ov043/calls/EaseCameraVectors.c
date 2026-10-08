@@ -5,4 +5,5 @@
 #define VEC_MultAdd_01ffa09c VEC_MultAdd
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define data_ov043_020bd2c0 gOv043CameraState
+#define func_01ffaff4 VEC_NormalizeLength
 #include "src/ov043/camera/EaseCameraVectors_020bcf44.c"

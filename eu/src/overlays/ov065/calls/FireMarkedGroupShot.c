@@ -7,4 +7,5 @@
 #define func_ov021_020a8ab4 ResetAnimationTrackState
 #define func_ov021_020a8ca0 func_ov021_020a8cc0
 #define func_ov052_020ceb54 func_ov052_020ceb74
+#define func_01ffaff4 VEC_NormalizeLength
 #include "src/ov065/shared_engine/FireMarkedGroupShot_020d8160.c"

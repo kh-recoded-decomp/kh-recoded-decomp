@@ -5,4 +5,5 @@
 #define data_02053438 data_0205344c
 #define func_01ff9f88 VEC_Normalize
 #define func_0204a8f4 AreVecsWithinRange16
+#define func_01ffaff4 VEC_NormalizeLength
 #include "src/arm9/spatial_queries/HasVelocityDeviated_020321d4.c"

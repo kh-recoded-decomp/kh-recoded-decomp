@@ -71,7 +71,7 @@ extern void SetShapePosition(void *shape, const VecFx32 *position);
 extern void OffsetBoxByDelta(const void *src, void *dst, const VecFx32 *delta);
 extern void CollisionQuery_Init(CollisionQuery *query, u16 id, void *actor, u8 kind, u8 unk3C, u8 unk3D, void *shape, QueryWorkspace *workspace, QueryFilter *filter);
 extern HitInfo *SweepWorldCollision(CollisionQuery *query);
-extern fx32 func_01ffaff4(const VecFx32 *src, VecFx32 *dst);
+extern fx32 VEC_NormalizeLength(const VecFx32 *src, VecFx32 *dst);
 extern fx32 VEC_DotProduct(const VecFx32 *a, const VecFx32 *b);
 extern int FX_Mul(int left, int right);
 extern void ScaleVecFx32InPlace(VecFx32 *vec, fx32 scale);
@@ -104,14 +104,14 @@ static inline VecFx32 VecAdd(const VecFx32 *a, const VecFx32 *b)
 static inline VecFx32 VecNormalize(const VecFx32 *v)
 {
     VecFx32 result;
-    func_01ffaff4(v, &result);
+    VEC_NormalizeLength(v, &result);
     return result;
 }
 
 static inline fx32 Normalize(const VecFx32 *v, VecFx32 *out)
 {
     VecFx32 result;
-    fx32 length = func_01ffaff4(v, &result);
+    fx32 length = VEC_NormalizeLength(v, &result);
     *out = result;
     return length;
 }

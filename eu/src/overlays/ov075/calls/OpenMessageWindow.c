@@ -1,3 +1,3 @@
 #define OpenMessageWindow_020cf254 OpenMessageWindow
-#define func_ov075_020cf918 func_ov075_020cf938
+#define func_ov075_020cf918 DrawCenteredDialogText
 #include "src/ov075/unclassified_helpers/OpenMessageWindow_020cf254.c"

@@ -5,4 +5,5 @@
 #define VEC_Mag_01ff9f28 VEC_Mag
 #define VEC_MultAdd_01ffa09c VEC_MultAdd
 #define nextRandom12_0202aa58 nextRandom12
+#define func_01ffaff4 VEC_NormalizeLength
 #include "src/ov021/script_ops/ScriptCmd_PushRandomHorizontal_020b15e8.c"

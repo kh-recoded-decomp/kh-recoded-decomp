@@ -6,4 +6,5 @@
 #define func_ov021_020a8ca0 func_ov021_020a8cc0
 #define func_ov052_020ceb54 func_ov052_020ceb74
 #define nextRandom12_0202aa58 nextRandom12
+#define func_01ffaff4 VEC_NormalizeLength
 #include "src/ov052/unclassified_helpers/SpawnHitSparkMarker_020d1494.c"

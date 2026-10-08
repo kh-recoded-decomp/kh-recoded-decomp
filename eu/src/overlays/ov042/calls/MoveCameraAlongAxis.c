@@ -2,4 +2,5 @@
 #define ScaleVecFx32InPlace_0204a5e4 ScaleVecFx32InPlace
 #define data_ov042_020be5c0 data_ov042_020be5e0
 #define func_ov042_020bd2a0 OffsetCameraColliders
+#define func_01ffaff4 VEC_NormalizeLength
 #include "src/ov042/camera/MoveCameraAlongAxis_020bd334.c"

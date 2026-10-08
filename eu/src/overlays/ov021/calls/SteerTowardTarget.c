@@ -3,7 +3,7 @@
 #define SteerTowardTarget_020ab1f0 SteerTowardTarget
 #define VEC_DotProduct_01ff9e6c VEC_DotProduct
 #define VEC_MultAdd_01ffa09c VEC_MultAdd
-#define VEC_Normalize_01ffaff4 func_01ffaff4
+#define VEC_Normalize_01ffaff4 VEC_NormalizeLength
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define func_02023dbc _s32_div_f
 #include "src/ov021/animation/SteerTowardTarget_020ab1f0.c"

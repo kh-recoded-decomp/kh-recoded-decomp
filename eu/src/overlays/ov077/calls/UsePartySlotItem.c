@@ -1,4 +1,4 @@
-#define DrawPartySlotLabel_020c5a4c func_ov077_020c5a6c
+#define DrawPartySlotLabel_020c5a4c DrawPartySlotLabel
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define SetStatusPageAndCursor_020c2ca4 SetStatusPageAndCursor
 #define ShowSlotHeaderMessage_020c58e0 ShowSlotHeaderMessage

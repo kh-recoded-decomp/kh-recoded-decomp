@@ -49,7 +49,7 @@ extern void func_ov001_02072254(int *payload, int count);
 extern void func_ov001_0206674c(PrizeOrb *orb);
 extern void VEC_Add(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
 extern void VEC_Subtract(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
-extern fx32 func_01ffaff4(const VecFx32 *src, VecFx32 *dst);
+extern fx32 VEC_NormalizeLength(const VecFx32 *src, VecFx32 *dst);
 extern void VEC_MultAdd(fx32 scale, const VecFx32 *v, const VecFx32 *add, VecFx32 *dst);
 
 void UpdatePrizeOrbs(void)
@@ -83,7 +83,7 @@ void UpdatePrizeOrbs(void)
                 target = *func_ov001_0206dc60(orb->targetSlot);
             }
             VEC_Subtract(&target, &orb->pos, &direction);
-            distance = func_01ffaff4(&direction, &direction);
+            distance = VEC_NormalizeLength(&direction, &direction);
             orb->timer += 0x100;
             if (orb->timer > 0x1000) {
                 orb->timer = 0x1000;

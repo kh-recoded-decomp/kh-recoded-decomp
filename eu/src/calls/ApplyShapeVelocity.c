@@ -5,6 +5,6 @@
 #define SetShapePosition_0203afa0 SetShapePosition
 #define VEC_Add_01ff9e0c VEC_Add
 #define VEC_Mag_01ff9f28 VEC_Mag
-#define VEC_Normalize_01ffaff4 func_01ffaff4
+#define VEC_Normalize_01ffaff4 VEC_NormalizeLength
 #define data_02053438 data_0205344c
 #include "src/itcm/spatial_queries/ApplyShapeVelocity_01ffcd30.c"

@@ -1,3 +1,3 @@
 #define MessageWindow_Open_020cb1a4 MessageWindow_Open
-#define func_ov076_020cb868 func_ov076_020cb888
+#define func_ov076_020cb868 MessageWindow_DrawText
 #include "src/ov076/unclassified_helpers/MessageWindow_Open_020cb1a4.c"

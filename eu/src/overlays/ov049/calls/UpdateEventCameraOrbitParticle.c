@@ -5,4 +5,5 @@
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define data_0205356c data_02053580
 #define func_ov046_020c2cb8 Camera_GetEventFocusPoint
+#define func_01ffaff4 VEC_NormalizeLength
 #include "src/ov049/shared_engine/UpdateEventCameraOrbitParticle_020c4104.c"

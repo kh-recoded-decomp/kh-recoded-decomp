@@ -78,7 +78,7 @@ extern u32 func_ov001_0209c5ac(u32 mask);
 extern fx32 FX_Mul(fx32 a, fx32 b);
 extern void ApplyActorDisplayParams(Actor *actor);
 extern void VEC_Subtract(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
-extern fx32 func_01ffaff4(const VecFx32 *source, VecFx32 *dest);
+extern fx32 VEC_NormalizeLength(const VecFx32 *source, VecFx32 *dest);
 extern fx32 VEC_Mag(const VecFx32 *v);
 extern void VecToYawPitch(VecFx32 *dir, s16 *pitch, u16 *yaw);
 extern void AdvanceActorJumpArc(Actor *actor, VecFx32 *position);
@@ -210,7 +210,7 @@ void UpdateFieldActorMovement(Actor *actor)
             case 2:
                 TurnActor(actor);
                 VEC_Subtract(&actor->target, &pos, &diff);
-                dist = func_01ffaff4(&diff, &dir);
+                dist = VEC_NormalizeLength(&diff, &dir);
                 if (actor->moveMode == 2) {
                     dir.x = actor->body.forward.x;
                     dir.y = actor->body.forward.y;
@@ -223,7 +223,7 @@ void UpdateFieldActorMovement(Actor *actor)
             case 1:
                 if (!frozen) {
                     VEC_Subtract(&actor->nextTarget, &pos, &diff);
-                    dist = func_01ffaff4(&diff, &facing);
+                    dist = VEC_NormalizeLength(&diff, &facing);
                     if (dist != 0) {
                         VecToYawPitch(&facing, (s16 *)&actor->targetPitch, &actor->targetYaw);
                     }
@@ -231,7 +231,7 @@ void UpdateFieldActorMovement(Actor *actor)
                 actor->target = actor->nextTarget;
                 TurnActor(actor);
                 if (actor->keepDirection && (actor->frozen || dist <= 0)) {
-                    func_01ffaff4(&actor->direction, &dir);
+                    VEC_NormalizeLength(&actor->direction, &dir);
                 } else {
                     dir.x = actor->body.forward.x;
                     dir.y = actor->body.forward.y;
@@ -239,13 +239,13 @@ void UpdateFieldActorMovement(Actor *actor)
                 }
                 if (!(actor->snapMode & 2)) {
                     dir.y = 0;
-                    func_01ffaff4(&dir, &dir);
+                    VEC_NormalizeLength(&dir, &dir);
                 }
                 VEC_Subtract(&actor->target, &pos, &diff);
                 if (!(actor->snapMode & 2)) {
                     diff.y = 0;
                 }
-                dist = func_01ffaff4(&diff, &diff);
+                dist = VEC_NormalizeLength(&diff, &diff);
                 break;
             }
         }

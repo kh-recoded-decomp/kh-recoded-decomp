@@ -10,4 +10,5 @@
 #define data_ov058_020d8a60 data_ov058_020d8a80
 #define data_ov058_020d8a24 data_ov058_020d8a44
 #define func_ov021_020a94b0 CanStartTargetAction
+#define func_01ffaff4 VEC_NormalizeLength
 #include "src/ov058/unclassified_helpers/SettleAnchorOnGround_020d7054.c"

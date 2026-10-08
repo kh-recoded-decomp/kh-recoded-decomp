@@ -2,7 +2,7 @@
 #define MIi_CpuClear32_01ff8740 MIi_CpuClearFast
 #define ScaleVecFx32InPlace_0204a5e4 ScaleVecFx32InPlace
 #define TryLaunchHitEffect_02085798 TryLaunchHitEffect
-#define VEC_Normalize_01ffaff4 func_01ffaff4
+#define VEC_Normalize_01ffaff4 VEC_NormalizeLength
 #define func_ov021_020a8ab4 ResetAnimationTrackState
 #define func_ov021_020a8ca0 func_ov021_020a8cc0
 #include "src/ov001/actor_animation/TryLaunchHitEffect_02085798.c"

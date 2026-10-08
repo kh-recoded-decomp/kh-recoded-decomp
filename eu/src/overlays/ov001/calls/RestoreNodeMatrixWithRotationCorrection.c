@@ -7,4 +7,5 @@
 #define func_0202f628 QuaternionFromRotationMatrix
 #define g_correctionQuaternion_0209e438 data_ov001_0209e460
 #define multiplyFixedPointQuaternions_0202f93c MultiplyFixedPointQuaternions
+#define func_01ffaff4 VEC_NormalizeLength
 #include "src/ov001/actor_animation/RestoreNodeMatrixWithRotationCorrection_0208f2b4.c"

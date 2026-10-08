@@ -110,7 +110,7 @@ extern s16 data_02053580[];
 extern void MI_CpuFill8(void *dst, int value, int size);
 extern void VEC_Subtract(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
 extern void ScaleVecFx32(fx32 scale, const VecFx32 *src, VecFx32 *dst);
-extern fx32 func_01ffaff4(const VecFx32 *source, VecFx32 *destination);
+extern fx32 VEC_NormalizeLength(const VecFx32 *source, VecFx32 *destination);
 extern u16 AdvanceAnimationTracks(void *state, fx32 delta);
 extern void selectJointAnimationBlend(void *selector, u16 trackIndex, void *blendTable, s16 blendIndex);
 extern void OffsetBoxByDelta(const void *src, Box *dst, const VecFx32 *delta);
@@ -241,7 +241,7 @@ void Actor_UpdateComboStage(Actor *actor, StageProgress *progress, fx32 delta)
                 offset.z = 0;
                 direction = Vec_Difference(&end, &start);
                 query.shape = MakeCylinderShape(&cylinder, &start, &end, &direction,
-                                                func_01ffaff4(&direction, &direction));
+                                                VEC_NormalizeLength(&direction, &direction));
                 query.delta = offset;
                 OffsetBoxByDelta(query.shape.bounds, &query.sweptBounds, &query.delta);
                 request.query = query;

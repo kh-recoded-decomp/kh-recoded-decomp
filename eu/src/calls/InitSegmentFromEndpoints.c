@@ -1,4 +1,4 @@
 #define InitSegmentFromEndpoints_0203b1f0 InitSegmentFromEndpoints
-#define NormalizeVecGetLength_01ffaff4 func_01ffaff4
+#define NormalizeVecGetLength_01ffaff4 VEC_NormalizeLength
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #include "src/arm9/spatial_queries/InitSegmentFromEndpoints_0203b1f0.c"

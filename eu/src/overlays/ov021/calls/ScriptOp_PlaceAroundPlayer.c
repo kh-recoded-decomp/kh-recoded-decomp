@@ -14,4 +14,5 @@
 #define func_01ff90ec MTX_Identity33_
 #define func_ov001_02091c34 NotifySceneObjectHandler
 #define func_ov021_020afd28 ProbeGroundContact
+#define func_01ffaff4 VEC_NormalizeLength
 #include "src/ov021/script_ops/ScriptOp_PlaceAroundPlayer_020b1850.c"

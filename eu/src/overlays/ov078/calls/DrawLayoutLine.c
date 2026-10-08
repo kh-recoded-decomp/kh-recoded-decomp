@@ -1,0 +1,12 @@
+#define DrawLayoutLine_020c4c2c DrawLayoutLine
+#define data_ov078_020c5004 data_ov078_020c5024
+#define G2D_InitializeLinearCanvas_02017a2c NNS_G2dCharCanvasInitForBG
+#define func_ov039_020bc994 GetMenuFont10
+#define func_ov039_020bc9ac GetMenuFont10s
+#define NNSi_G2dFontGetStringWidth_02016aa0 NNSi_G2dFontGetStringWidth
+#define G2D_DrawAnchoredText_02017dec NNSi_G2dTextCanvasDrawText
+#define func_0200344c DC_FlushRange
+#define GX_LoadBG2Char_02007a90 GX_LoadBG2Char
+#define G2_GetBG2ScrPtr_02006e88 G2_GetBG2ScrPtr
+#define FillBackgroundTileRectangle_02017adc NNS_G2dMapScrToCharText
+#include "src/ov078/unclassified_helpers/DrawLayoutLine_020c4c2c.c"

@@ -4,4 +4,5 @@
 #define Session_Exists_02063a24 func_ov001_02063a24
 #define Surface_GetKindValue_02034c24 Surface_GetKindValue
 #define VEC_MultAdd_01ffa09c VEC_MultAdd
+#define func_01ffaff4 VEC_NormalizeLength
 #include "src/ov001/shared_engine/ProbeGroundAhead_02091d9c.c"

@@ -7,4 +7,5 @@
 #define func_ov052_020ceb54 func_ov052_020ceb74
 #define func_ov052_020ceb7c GetLinkedAngleOffset
 #define g_player_020d8a20 data_ov058_020d8a40
+#define func_01ffaff4 VEC_NormalizeLength
 #include "src/ov058/unclassified_helpers/IsFacedByPlayer_020d46d8.c"

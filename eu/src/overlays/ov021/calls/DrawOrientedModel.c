@@ -9,4 +9,5 @@
 #define func_01ff90ec MTX_Identity33_
 #define func_020192ec NNS_G3dGlbSetBaseTrans
 #define func_0201931c NNS_G3dGlbSetBaseScale
+#define func_01ffaff4 VEC_NormalizeLength
 #include "src/ov021/animation/DrawOrientedModel_020ab370.c"

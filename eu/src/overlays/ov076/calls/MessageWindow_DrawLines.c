@@ -1,0 +1,9 @@
+#define MessageWindow_DrawLines_020cb9a0 MessageWindow_DrawLines
+#define G2D_InitializeLinearCanvas_02017a2c NNS_G2dCharCanvasInitForBG
+#define func_ov039_020bc994 GetMenuFont10
+#define NNSi_G2dFontGetTextHeight_02016b4c NNSi_G2dFontGetTextHeight
+#define G2D_FindGlyphIndex_02016a10 NNS_G2dFontFindGlyphIndex
+#define G2D_GetGlyphWidths_02016a58 NNS_G2dFontGetCharWidthsFromIndex
+#define DrawNnsG2dText_02017ff0 NNSi_G2dTextCanvasDrawTaggedText
+#define func_ov076_020cb134 func_ov076_020cb154
+#include "src/ov076/unclassified_helpers/MessageWindow_DrawLines_020cb9a0.c"

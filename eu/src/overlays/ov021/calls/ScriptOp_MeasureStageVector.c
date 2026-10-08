@@ -1,4 +1,5 @@
 #define ResolveTaggedValueRef_020b0374 ResolveTaggedValueRef
 #define ScriptOp_MeasureStageVector_020b23ac ScriptOp_MeasureStageVector
 #define func_ov001_0209c3c0 func_ov001_0209c3e8
+#define func_01ffaff4 VEC_NormalizeLength
 #include "src/ov021/script_ops/ScriptOp_MeasureStageVector_020b23ac.c"

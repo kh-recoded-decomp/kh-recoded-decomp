@@ -11,4 +11,5 @@
 #define ZeroBytes0x40_020ab08c ZeroBytes0x40
 #define data_0205356c data_02053580
 #define random_next_scaled_0202aa04 random_next_scaled
+#define func_01ffaff4 VEC_NormalizeLength
 #include "src/ov021/object_state/SpawnPatternShot_020ae0f8.c"

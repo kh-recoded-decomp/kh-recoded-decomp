@@ -11,4 +11,5 @@
 #define VEC_MultAdd_01ffa09c VEC_MultAdd
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define func_01ffa0f4 VEC_Distance
+#define func_01ffaff4 VEC_NormalizeLength
 #include "src/ov056/shared_engine/UpdateHomingProjectile_020d2e60.c"

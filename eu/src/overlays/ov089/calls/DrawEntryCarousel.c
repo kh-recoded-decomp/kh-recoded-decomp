@@ -1,0 +1,7 @@
+#define DrawEntryCarousel_020bfeec DrawEntryCarousel
+#define data_ov089_020c04f4 data_ov089_020c0514
+#define camera_commit_projection_0202a814 camera_commit_projection
+#define AdvanceAnimationTracks_0202ef24 AdvanceAnimationTracks
+#define SceneNode_Draw_01ffb12c SceneNode_Draw
+#define FX_Div_01ff9c84 FX_Div
+#include "src/ov089/panel_state/DrawEntryCarousel_020bfeec.c"

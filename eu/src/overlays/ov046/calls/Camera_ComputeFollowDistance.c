@@ -6,4 +6,5 @@
 #define data_ov046_020c33b0 data_ov046_020c33d0
 #define func_01ff9f88 VEC_Normalize
 #define g_cameraManager_020c34e0 data_ov046_020c3500
+#define func_01ffaff4 VEC_NormalizeLength
 #include "src/ov046/shared_engine/Camera_ComputeFollowDistance_020c1a70.c"

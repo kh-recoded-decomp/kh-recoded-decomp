@@ -1,6 +1,6 @@
 #define AbsDotProduct_0204a96c AbsDotProduct
 #define ComputeOneMinusSquareFraction_02049d6c ComputeOneMinusSquareFraction
 #define GetCapsuleProjectedExtent_0203d684 GetCapsuleProjectedExtent
-#define NormalizeVecGetLength_01ffaff4 func_01ffaff4
+#define NormalizeVecGetLength_01ffaff4 VEC_NormalizeLength
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #include "src/arm9/spatial_queries/GetCapsuleProjectedExtent_0203d684.c"

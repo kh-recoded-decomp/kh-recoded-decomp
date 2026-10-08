@@ -18,11 +18,11 @@ maintained by [@ricky074game](https://github.com/ricky074game) and [@Yokimitsuro
 | Region | C code bytes | % | Functions |
 |---|---:|---:|---:|
 | **US** `BK9E` | 1,269,618 / 1,768,220 | **71.8%** | 9,703 / 10,359 |
-| **EU** `BK9P` | 1,242,554 / 1,658,216 | **74.9%** | 9,662 / 10,428 |
+| **EU** `BK9P` | 1,253,646 / 1,658,216 | **75.6%** | 9,685 / 10,428 |
 | US verified original assembly (not C) | 5,458 | 0.3% | 105 |
-| **Shared** (same function, matched in both) | 1,192,740 | 71.9% of EU | 9,077 |
+| **Shared** (same function, matched in both) | 1,203,832 | 72.6% of EU | 9,100 |
 
-7,955 shared functions are stored once in `src/` and built for both regions; 1,122 still have separate EU copies. 626 matched functions are US-only so far and 585 are EU-only. EU numbers come from `eu/tools/audit_progress.py`; per-module EU detail is in [eu/PROGRESS.md](eu/PROGRESS.md).
+7,978 shared functions are stored once in `src/` and built for both regions; 1,122 still have separate EU copies. 603 matched functions are US-only so far and 585 are EU-only. EU numbers come from `eu/tools/audit_progress.py`; per-module EU detail is in [eu/PROGRESS.md](eu/PROGRESS.md).
 <!-- regions:end -->
 
 US detail:

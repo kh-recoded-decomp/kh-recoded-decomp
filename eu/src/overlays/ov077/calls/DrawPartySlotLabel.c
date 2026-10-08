@@ -1,0 +1,13 @@
+#define DrawPartySlotLabel_020c5a4c DrawPartySlotLabel
+#define func_01ff878c MIi_CpuCopyFast
+#define func_0200344c DC_FlushRange
+#define GX_LoadBG2Char_02007a90 GX_LoadBG2Char
+#define G2_GetBG2ScrPtr_02006e88 G2_GetBG2ScrPtr
+#define FillBackgroundTileRectangle_02017adc NNS_G2dMapScrToCharText
+#define func_ov001_020645c8 IsSessionFlagSet
+#define G2D_InitializeLinearCanvas_02017a2c NNS_G2dCharCanvasInitForBG
+#define func_ov039_020bc994 GetMenuFont10
+#define func_ov039_020bc9ac GetMenuFont10s
+#define G2D_MeasureTextWidth_02016bc0 NNSi_G2dFontGetTextWidth
+#define G2D_DrawTextLine_02017be8 NNSi_G2dTextCanvasDrawString
+#include "src/ov077/unclassified_helpers/DrawPartySlotLabel_020c5a4c.c"

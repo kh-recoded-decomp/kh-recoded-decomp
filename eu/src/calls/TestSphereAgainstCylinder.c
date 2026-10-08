@@ -18,4 +18,5 @@
 #define VEC_DotProduct_01ff9e6c VEC_DotProduct
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define Vec_DotSelf_0203f258 Vec_DotSelf
+#define func_01ffaff4 VEC_NormalizeLength
 #include "src/arm9/spatial_queries/TestSphereAgainstCylinder_0203f658.c"

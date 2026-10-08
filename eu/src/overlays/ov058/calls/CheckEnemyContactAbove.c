@@ -7,4 +7,5 @@
 #define func_ov021_020a94b0 CanStartTargetAction
 #define func_ov052_020ceb54 func_ov052_020ceb74
 #define func_ov058_020d50ac func_ov058_020d50cc
+#define func_01ffaff4 VEC_NormalizeLength
 #include "src/ov058/unclassified_helpers/CheckEnemyContactAbove_020d5160.c"

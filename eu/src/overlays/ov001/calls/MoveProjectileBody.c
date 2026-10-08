@@ -96,7 +96,7 @@ extern int UpdateFallingObject(Projectile *projectile);
 extern void VEC_Add(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
 extern void VEC_Subtract(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
 extern void VEC_CrossProduct(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
-extern fx32 func_01ffaff4(const VecFx32 *src, VecFx32 *dst);
+extern fx32 VEC_NormalizeLength(const VecFx32 *src, VecFx32 *dst);
 extern int FX_Mul(int left, int right);
 extern void SetCollisionObjectPosition(void *object, const VecFx32 *position);
 extern void CollisionQuery_Init(CollisionQuery *query, u16 id, void *actor, u8 kind, u8 unk3C, u8 unk3D, void *shape, QueryWorkspace *workspace, QueryFilter *filter);
@@ -172,7 +172,7 @@ static inline void BuildSegmentShape(CollisionShape *shape, ShapeStorage *storag
     fx32 length;
     VEC_Subtract(top, position, &delta);
     axis = delta;
-    length = func_01ffaff4(&axis, &axis);
+    length = VEC_NormalizeLength(&axis, &axis);
     *shape = InitAxisCylinderShape(storage, position, top, &axis, length);
 }
 

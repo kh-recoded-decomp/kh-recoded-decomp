@@ -1,4 +1,4 @@
-#define DrawEntryCarousel_020bfeec func_ov089_020bff0c
+#define DrawEntryCarousel_020bfeec DrawEntryCarousel
 #define OS_GetTick_02003fd4 OS_GetTick
 #define RefreshEntryCaption_020beff4 RefreshEntryCaption
 #define UpdateEntryCarousel_020c01f4 UpdateEntryCarousel
