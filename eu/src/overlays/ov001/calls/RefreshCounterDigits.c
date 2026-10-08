@@ -1,5 +1,5 @@
 #define ReadSessionPackedBits_02064574 ReadSessionPackedBits
 #define RefreshCounterDigits_0207c1a8 RefreshCounterDigits
 #define func_0200d594 PopCount32
-#define func_ov001_0207ca04 func_ov001_0207ca2c
+#define func_ov001_0207ca04 DrawScaledTextureQuad
 #include "src/ov001/unclassified_helpers/RefreshCounterDigits_0207c1a8.c"

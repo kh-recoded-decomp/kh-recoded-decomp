@@ -485,7 +485,7 @@ FreeOwnedBuffer kind:function(thumb,size=0x1c) addr:0x020b4b80
 CopySourceWords kind:function(thumb,size=0x1e) addr:0x020b4b9c
 RunOverrideTrack kind:function(thumb,size=0x40) addr:0x020b4bbc
 SelectSequenceTrack kind:function(thumb,size=0x2e) addr:0x020b4bfc
-func_ov021_020b4c2c kind:function(thumb,size=0x15c) addr:0x020b4c2c
+RunScriptThread kind:function(thumb,size=0x15c) addr:0x020b4c2c
 TickSequenceCountdown kind:function(thumb,size=0x42) addr:0x020b4d88
 data_ov021_020b4dcc kind:data(any) addr:0x020b4dcc
 data_ov021_020b4e04 kind:data(any) addr:0x020b4e04
@@ -535,6 +535,7 @@ data_ov021_020b5668 kind:bss addr:0x020b5668
 data_ov021_020b5694 kind:bss addr:0x020b5694
 data_ov021_020b56c0 kind:bss addr:0x020b56c0
 data_ov021_020b56c4 kind:bss addr:0x020b56c4
+gActiveFieldContext kind:bss addr:0x020b56c4
 data_ov021_020b56d0 kind:bss addr:0x020b56d0
 data_ov021_020b56dc kind:bss addr:0x020b56dc
 data_ov021_020b575c kind:bss addr:0x020b575c

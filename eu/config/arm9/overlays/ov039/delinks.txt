@@ -64,6 +64,10 @@ src/overlays/ov039/calls/func_ov039_020bb518.c:
     complete
     .text       start:0x020bb518 end:0x020bb560
 
+src/overlays/ov039/calls/ShutdownHandlersAndExit.c:
+    complete
+    .text       start:0x020bb560 end:0x020bb6a0
+
 src/overlays/ov039/calls/CleanupHandlersAndSetPhase5.c:
     complete
     .text       start:0x020bb6a0 end:0x020bb708

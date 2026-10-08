@@ -1,6 +1,6 @@
 #define UpdateGroupMenuCounter_020bbb4c UpdateGroupMenuCounter
 #define func_ov001_0207187c IsFieldPanelHidden
-#define func_ov032_020bb8f4 func_ov032_020bb914
+#define func_ov032_020bb8f4 PulseMenuHighlightColor
 #define func_ov032_020bb9e0 UpdateGaugeBarTiles
 #define menuState_020c0068 data_ov032_020c0088
 #include "src/ov032/object_group/UpdateGroupMenuCounter_020bbb4c.c"

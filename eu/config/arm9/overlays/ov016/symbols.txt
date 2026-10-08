@@ -1,7 +1,7 @@
 ScriptVm_ConsumeOperandInt kind:function(thumb,size=0x14) addr:0x020a1e00
 ScriptVm_ConsumeOperandFx32 kind:function(thumb,size=0x14) addr:0x020a1e14
 ScriptCmd_LoadOverlayKind9 kind:function(thumb,size=0x5c) addr:0x020a1e28
-func_ov016_020a1e84 kind:function(thumb,size=0x19c) addr:0x020a1e84
+ScriptCmd_ReadEntityParams kind:function(thumb,size=0x19c) addr:0x020a1e84
 func_ov016_020a2020 kind:function(thumb,size=0x24) addr:0x020a2020
 ScriptCmd_ApplyEntityColorParams kind:function(thumb,size=0x3e) addr:0x020a2044
 func_ov016_020a2084 kind:function(thumb,size=0x28) addr:0x020a2084

@@ -36,6 +36,10 @@ src/overlays/ov076/calls/SlotMenu_HandleSlotTouch.c:
     complete
     .text       start:0x020c482c end:0x020c48b4
 
+src/overlays/ov076/calls/SlotMenu_HandleColumnInput.c:
+    complete
+    .text       start:0x020c48b4 end:0x020c4a58
+
 src/overlays/ov076/calls/SlotMenu_AssignStockToSlot.c:
     complete
     .text       start:0x020c4a58 end:0x020c4ab0

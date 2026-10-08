@@ -1,5 +1,5 @@
 #define DrawCounterDigits_0207c540 DrawCounterDigits
 #define ReadSessionPackedBits_02064574 ReadSessionPackedBits
 #define WriteSessionPackedBits_0206459c WriteSessionPackedBits
-#define func_ov001_0207ca04 func_ov001_0207ca2c
+#define func_ov001_0207ca04 DrawScaledTextureQuad
 #include "src/ov001/unclassified_helpers/DrawCounterDigits_0207c540.c"

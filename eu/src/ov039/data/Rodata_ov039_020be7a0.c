@@ -8,7 +8,7 @@ extern void UpdateSubOverlayHandlers(void);
 extern void func_ov039_020bb2d0(void);
 extern void func_ov039_020bb4c8(void);
 extern void func_ov039_020bb518(void);
-extern void func_ov039_020bb560(void);
+extern void ShutdownHandlersAndExit(void);
 
 void *const data_ov039_020be7bc[10] = {
     NULL,
@@ -20,7 +20,7 @@ void *const data_ov039_020be7bc[10] = {
     (void *)func_ov039_020bb4c8,
     (void *)func_ov039_020bb518,
     (void *)CleanupHandlersAndSetPhase5,
-    (void *)func_ov039_020bb560,
+    (void *)ShutdownHandlersAndExit,
 };
 
 const u32 data_ov039_020be7a0[7] = {

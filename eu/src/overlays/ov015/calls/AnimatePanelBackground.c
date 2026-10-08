@@ -1,5 +1,5 @@
-#define AnimateBg1CenterTiles_0206fcd8 func_ov015_0206fcd8
-#define AnimateBg1EdgeBandTiles_0206fe44 func_ov015_0206fe44
+#define AnimateBg1CenterTiles_0206fcd8 AnimateBg1CenterTiles
+#define AnimateBg1EdgeBandTiles_0206fe44 AnimateBg1EdgeBandTiles
 #define AnimatePanelBackground_0206fb14 AnimatePanelBackground
 #define func_ov015_0206fb6c AnimateSubBg1Screen
 #include "src/ov015/ui/AnimatePanelBackground_0206fb14.c"

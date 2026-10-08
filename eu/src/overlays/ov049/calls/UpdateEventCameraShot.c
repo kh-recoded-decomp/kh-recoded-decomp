@@ -3,7 +3,7 @@
 #define LerpVecFx32Q27InPlace_0204be6c LerpVecFx32Q27InPlace
 #define RotateTowardVector_0204b404 RotateTowardVector
 #define RotateVectorAroundAxis_0204b34c RotateVectorAroundAxis
-#define UpdateEventCameraCollision_020c3ea8 func_ov049_020c3ec8
+#define UpdateEventCameraCollision_020c3ea8 UpdateEventCameraCollision
 #define UpdateEventCameraShot_020c3c0c UpdateEventCameraShot
 #define VEC_Add_01ff9e0c VEC_Add
 #define VEC_DotProduct_01ff9e6c VEC_DotProduct

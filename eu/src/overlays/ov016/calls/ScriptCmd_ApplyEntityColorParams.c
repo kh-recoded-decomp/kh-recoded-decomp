@@ -1,5 +1,5 @@
 #define ScriptCmd_ApplyEntityColorParams_020a2024 ScriptCmd_ApplyEntityColorParams
-#define ScriptCmd_ReadEntityParams_020a1e64 func_ov016_020a1e84
+#define ScriptCmd_ReadEntityParams_020a1e64 ScriptCmd_ReadEntityParams
 #define ScriptVm_ConsumeOperandInt_020a1de0 ScriptVm_ConsumeOperandInt
 #define func_ov001_02087214 func_ov001_0208723c
 #define func_ov016_020a6338 func_ov016_020a6358

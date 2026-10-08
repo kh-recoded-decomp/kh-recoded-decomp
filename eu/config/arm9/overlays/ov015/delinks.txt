@@ -112,6 +112,14 @@ src/overlays/ov015/calls/AnimateSubBg1Screen.c:
     complete
     .text       start:0x0206fb6c end:0x0206fcd8
 
+src/overlays/ov015/calls/AnimateBg1CenterTiles.c:
+    complete
+    .text       start:0x0206fcd8 end:0x0206fe44
+
+src/overlays/ov015/calls/AnimateBg1EdgeBandTiles.c:
+    complete
+    .text       start:0x0206fe44 end:0x0206ffa0
+
 src/overlays/ov015/calls/UpdateDriftingElementsByMode.c:
     complete
     .text       start:0x0206ffa0 end:0x0206fff0

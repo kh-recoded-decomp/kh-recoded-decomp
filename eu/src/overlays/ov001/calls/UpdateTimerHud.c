@@ -7,5 +7,5 @@
 #define func_02052514 func_02052528
 #define func_0205255c func_02052570
 #define func_ov001_0207b9f4 func_ov001_0207ba1c
-#define func_ov001_0207ca04 func_ov001_0207ca2c
+#define func_ov001_0207ca04 DrawScaledTextureQuad
 #include "src/ov001/unclassified_helpers/UpdateTimerHud_0207ba8c.c"

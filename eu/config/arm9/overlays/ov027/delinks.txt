@@ -44,6 +44,10 @@ src/overlays/ov027/calls/func_ov027_020b7a50.c:
     complete
     .text       start:0x020b7a50 end:0x020b7ac0
 
+src/overlays/ov027/calls/TickTagRecords.c:
+    complete
+    .text       start:0x020b7ac0 end:0x020b7c50
+
 src/overlays/ov027/calls/UpdateTrackedPointerEntry.c:
     complete
     .text       start:0x020b7c50 end:0x020b7d78

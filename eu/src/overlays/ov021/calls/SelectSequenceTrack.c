@@ -1,3 +1,3 @@
 #define SelectSequenceTrack_020b4bdc SelectSequenceTrack
-#define func_ov021_020b4c0c func_ov021_020b4c2c
+#define func_ov021_020b4c0c RunScriptThread
 #include "src/ov021/unclassified_helpers/SelectSequenceTrack_020b4bdc.c"

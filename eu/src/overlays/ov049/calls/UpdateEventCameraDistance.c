@@ -4,5 +4,5 @@
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define func_01ff9f88 VEC_Normalize
 #define func_ov046_020c2cb8 Camera_GetEventFocusPoint
-#define func_ov049_020c3fd0 func_ov049_020c3ff0
+#define func_ov049_020c3fd0 ResolveEventCameraCollision
 #include "src/ov049/shared_engine/UpdateEventCameraDistance_020c3b60.c"

@@ -1,0 +1,6 @@
+#define func_ov016_020a62dc InitScriptEntityParams
+#define ScriptVm_ConsumeOperandInt_020a1de0 ScriptVm_ConsumeOperandInt
+#define ScriptVm_ConsumeOperandFx32_020a1df4 ScriptVm_ConsumeOperandFx32
+#define func_ov032_020bb884 RollContextReward
+#define ScriptCmd_ReadEntityParams_020a1e64 ScriptCmd_ReadEntityParams
+#include "src/ov016/script_commands/ScriptCmd_ReadEntityParams_020a1e64.c"

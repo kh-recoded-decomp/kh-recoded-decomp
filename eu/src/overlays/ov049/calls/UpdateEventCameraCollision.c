@@ -1,0 +1,13 @@
+#define func_ov046_020c2cb8 Camera_GetEventFocusPoint
+#define VEC_Subtract_01ff9e3c VEC_Subtract
+#define func_0203ad14 func_0203ad28
+#define OffsetBoxByDelta_0203ac70 OffsetBoxByDelta
+#define GetBoundedEntryField_0206db5c GetBoundedEntryField
+#define CollisionQuery_Init_02034c74 CollisionQuery_Init
+#define VEC_Mag_01ff9f28 VEC_Mag
+#define SweepWorldCollision_020364a0 SweepWorldCollision
+#define func_01ffa0f4 VEC_Distance
+#define CameraCollision_ShouldBlock_020c320c CameraCollision_ShouldBlock
+#define CameraCollision_CheckContact_020c3254 CameraCollision_CheckContact
+#define UpdateEventCameraCollision_020c3ea8 UpdateEventCameraCollision
+#include "src/ov049/shared_engine/UpdateEventCameraCollision_020c3ea8.c"

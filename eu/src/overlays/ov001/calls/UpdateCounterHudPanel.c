@@ -4,5 +4,5 @@
 #define UpdateCounterHudPanel_0207c288 UpdateCounterHudPanel
 #define func_02052514 func_02052528
 #define func_0205255c func_02052570
-#define func_ov001_0207ca04 func_ov001_0207ca2c
+#define func_ov001_0207ca04 DrawScaledTextureQuad
 #include "src/ov001/unclassified_helpers/UpdateCounterHudPanel_0207c288.c"

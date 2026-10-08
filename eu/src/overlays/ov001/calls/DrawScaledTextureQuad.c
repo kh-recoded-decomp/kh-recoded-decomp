@@ -1,0 +1,10 @@
+#define FixedPointMultiply12 FX_Mul
+#define func_0201931c NNS_G3dGlbSetBaseScale
+#define func_020192ec NNS_G3dGlbSetBaseTrans
+#define MI_Copy36B_01ff87c4 MI_Copy36B
+#define FlushGeometryState_02019230 NNS_G3dGlbFlushWVP
+#define QueueOrSendGeometryCommand_01ffa37c NNS_G3dGeBufferOP_N
+#define data_ov001_0209dfa4 data_ov001_0209dfcc
+#define data_0205a924 NNS_G3dGlb
+#define DrawScaledTextureQuad_0207ca04 DrawScaledTextureQuad
+#include "src/ov001/unclassified_helpers/DrawScaledTextureQuad_0207ca04.c"

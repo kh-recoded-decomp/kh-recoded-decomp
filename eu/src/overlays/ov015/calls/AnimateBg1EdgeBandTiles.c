@@ -1,0 +1,4 @@
+#define func_ov027_020b8558 func_ov027_020b8578
+#define GX_LoadBG1Scr_02007630 GX_LoadBG1Scr
+#define AnimateBg1EdgeBandTiles_0206fe44 AnimateBg1EdgeBandTiles
+#include "src/ov015/ui/AnimateBg1EdgeBandTiles_0206fe44.c"

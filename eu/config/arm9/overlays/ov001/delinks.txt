@@ -3912,6 +3912,10 @@ src/overlays/ov001/calls/LoadResourceGroups.c:
     complete
     .text       start:0x0207c798 end:0x0207c988
 
+src/overlays/ov001/calls/DrawScaledTextureQuad.c:
+    complete
+    .text       start:0x0207ca2c end:0x0207cba0
+
 src/overlays/ov001/calls/StartTimerFromPackedPair.c:
     complete
     .text       start:0x0207cba0 end:0x0207cbd8

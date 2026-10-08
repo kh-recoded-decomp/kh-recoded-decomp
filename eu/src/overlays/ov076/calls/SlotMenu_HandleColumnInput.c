@@ -1,0 +1,10 @@
+#define func_ov039_020bca00 GetMenuInputState
+#define func_ov039_020bc0d4 GetPrimaryElementEnabled
+#define func_ov039_020bc1bc func_ov039_020bc1dc
+#define ScriptCmd_ResetScreenLayer_020be0c4 ScriptCmd_ResetScreenLayer
+#define RefreshScrollListLayout_020be138 RefreshScrollListLayout
+#define PlaySoundEffect_0204d924 PlaySoundEffect
+#define SlotMenu_IsSlotPairFilled_020c4560 SlotMenu_IsSlotPairFilled
+#define SlotMenu_ShowSlotHint_020c827c SlotMenu_ShowSlotHint
+#define SlotMenu_HandleColumnInput_020c4894 SlotMenu_HandleColumnInput
+#include "src/ov076/unclassified_helpers/SlotMenu_HandleColumnInput_020c4894.c"
