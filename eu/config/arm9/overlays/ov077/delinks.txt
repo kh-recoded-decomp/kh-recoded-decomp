@@ -148,6 +148,10 @@ src/overlays/ov077/calls/MenuPanel_ApplyCategoryFilter_020c6c68.c:
     complete
     .text       start:0x020c6c68 end:0x020c6cb0
 
+src/overlays/ov077/calls/ItemMenu_CloseItemList.c:
+    complete
+    .text       start:0x020c6cb0 end:0x020c6d74
+
 src/overlays/ov077/calls/IsItemSlotAvailable_020c6d74.c:
     complete
     .text       start:0x020c6d74 end:0x020c6dea
@@ -287,6 +291,10 @@ src/overlays/ov077/calls/IsMessageWindowActive.c:
 src/overlays/ov077/calls/ReleaseScreenResources.c:
     complete
     .text       start:0x020c90dc end:0x020c9138
+
+src/overlays/ov077/calls/ItemMenu_HandleTabTouch.c:
+    complete
+    .text       start:0x020c9c04 end:0x020c9c98
 
 src/overlays/ov077/calls/InitSceneModel.c:
     complete

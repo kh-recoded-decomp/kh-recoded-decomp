@@ -1,6 +1,6 @@
 #define G2_GetBG1ScrPtr_02006e34 G2_GetBG1ScrPtr
 #define ItemList_OpenConfirmWindow_020ca7bc ItemList_OpenConfirmWindow
-#define MenuPanel_CloseItemList_020c9c5c func_ov076_020c9c7c
+#define MenuPanel_CloseItemList_020c9c5c SlotMenu_CloseItemList
 #define MenuPanel_InitStandard_020cb380 MenuPanel_InitStandard
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define func_01ff869c MIi_CpuCopy16

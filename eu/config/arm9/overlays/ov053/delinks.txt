@@ -7,6 +7,10 @@ src/overlays/ov053/calls/func_ov053_020d2200.c:
     complete
     .text       start:0x020d2200 end:0x020d2214
 
+src/overlays/ov053/calls/InitOverlay053Entity.c:
+    complete
+    .text       start:0x020d2214 end:0x020d22fc
+
 src/overlays/ov053/calls/LoadOverlay053EntityModel.c:
     complete
     .text       start:0x020d22fc end:0x020d23f8

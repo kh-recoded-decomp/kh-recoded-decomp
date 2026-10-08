@@ -48,6 +48,10 @@ src/overlays/ov076/calls/SlotMenu_Update.c:
     complete
     .text       start:0x020c4b68 end:0x020c4cc0
 
+src/overlays/ov076/calls/SlotMenu_UpdateBrowse.c:
+    complete
+    .text       start:0x020c4db4 end:0x020c4e9c
+
 src/overlays/ov076/calls/SlotMenu_UpdateIdle.c:
     complete
     .text       start:0x020c4e9c end:0x020c4ec8
@@ -95,6 +99,10 @@ src/overlays/ov076/calls/SlotMenu_HasThreeFilledSlotsAndFlags.c:
 src/overlays/ov076/calls/SlotMenu_IsPointTotalOverLimit.c:
     complete
     .text       start:0x020c52f0 end:0x020c5318
+
+src/overlays/ov076/calls/SlotMenu_MoveCursorToSlot.c:
+    complete
+    .text       start:0x020c5318 end:0x020c53e8
 
 src/overlays/ov076/calls/SlotMenu_UpdatePairedCategory.c:
     complete
@@ -348,6 +356,10 @@ src/overlays/ov076/calls/MenuPanel_ApplyCategoryFilter.c:
     complete
     .text       start:0x020c9c34 end:0x020c9c7c
 
+src/overlays/ov076/calls/SlotMenu_CloseItemList.c:
+    complete
+    .text       start:0x020c9c7c end:0x020c9d40
+
 src/overlays/ov076/calls/IsItemSlotAvailable_020c9d40.c:
     complete
     .text       start:0x020c9d40 end:0x020c9db6
@@ -487,6 +499,10 @@ src/overlays/ov076/calls/MessageWindow_IsFinished.c:
 src/overlays/ov076/calls/MenuPanel_Destroy.c:
     complete
     .text       start:0x020cc0a8 end:0x020cc104
+
+src/overlays/ov076/calls/SlotMenu_HandleTabTouch.c:
+    complete
+    .text       start:0x020ccbd0 end:0x020ccc64
 
 src/overlays/ov076/calls/InitPanelModel.c:
     complete

@@ -2,7 +2,7 @@
 
 extern void ResetAreaMeshValues(void); /* ResetAreaMeshValues */
 extern void func_ov040_020bcd28(void);
-extern void func_ov040_020bcd6c(void); /* FinishAreaSceneLoad */
+extern void FinishAreaSceneLoad(void);
 extern void func_ov040_020bce70(void);
 extern void func_ov040_020bd0f4(void);
 extern void func_ov040_020bd128(void); /* UpdateAreaSceneState */
@@ -23,7 +23,7 @@ extern void func_ov040_020bd748(void); /* Gfd_DefaultFreeTexVram */
 void (*gAreaSceneStateHandlers[19])(void) = {
     ResetAreaMeshValues, /* ResetAreaMeshValues */
     func_ov040_020bcd28,
-    func_ov040_020bcd6c, /* FinishAreaSceneLoad */
+    FinishAreaSceneLoad,
     func_ov040_020bce70,
     func_ov040_020bd0f4,
     func_ov040_020bd128, /* UpdateAreaSceneState */

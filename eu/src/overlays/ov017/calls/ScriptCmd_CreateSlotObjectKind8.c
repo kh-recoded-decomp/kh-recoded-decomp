@@ -1,5 +1,5 @@
 #define ScriptCmd_CreateSlotObjectKind8_020a2320 ScriptCmd_CreateSlotObjectKind8
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
-#define func_ov001_02086e90 func_ov001_02086eb8
+#define func_ov001_02086e90 DispatchOverlayLoadByKind
 #define func_ov001_02086f90 func_ov001_02086fb8
 #include "src/ov017/script_commands/ScriptCmd_CreateSlotObjectKind8_020a2320.c"

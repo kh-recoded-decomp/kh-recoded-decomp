@@ -48,6 +48,10 @@ src/overlays/ov008/calls/ReleaseChildObjects.c:
     complete
     .text       start:0x020a0ad4 end:0x020a0b36
 
+src/overlays/ov008/calls/CreateChildSpawnerClass.c:
+    complete
+    .text       start:0x020a0b38 end:0x020a0be0
+
 src/overlays/ov008/calls/CreateChildSpawnerObject.c:
     complete
     .text       start:0x020a0be0 end:0x020a0c48
@@ -95,6 +99,10 @@ src/overlays/ov008/calls/IsOwnerStatusActive.c:
 src/overlays/ov008/calls/ApplyScaledVelocityToPlayer.c:
     complete
     .text       start:0x020a10e4 end:0x020a1128
+
+src/overlays/ov008/calls/CreateGimmickClass.c:
+    complete
+    .text       start:0x020a1128 end:0x020a11c0
 
 src/overlays/ov008/calls/CreateDelayedGimmickObject.c:
     complete

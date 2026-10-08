@@ -1,5 +1,5 @@
 #define ScriptCmd_CreateObjectInSlot_020a0520 ScriptCmd_CreateObjectInSlot
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
 #define func_ov001_0207ee04 func_ov001_0207ee2c
-#define func_ov008_020a1108 func_ov008_020a1128
+#define func_ov008_020a1108 CreateGimmickClass
 #include "src/ov008/script_commands/ScriptCmd_CreateObjectInSlot_020a0520.c"

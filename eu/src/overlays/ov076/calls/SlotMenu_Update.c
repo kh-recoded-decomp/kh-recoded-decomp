@@ -2,14 +2,14 @@
 #define IsGlobalPackedBitSet_02027304 IsGlobalPackedBitSet
 #define SceneNode_Draw_01ffb12c func_01ffb12c
 #define SetNavigationElementsVisible_020ccd30 SetNavigationElementsVisible
-#define SetStatusPageAndCursor_020c2ca4 func_ov073_020c2cc4
+#define SetStatusPageAndCursor_020c2ca4 SetStatusPageAndCursor
 #define SlotMenu_HasThreeFilledSlotsAndFlags_020c5248 SlotMenu_HasThreeFilledSlotsAndFlags
 #define SlotMenu_ShowPointLimitWarning_020c89a0 SlotMenu_ShowPointLimitWarning
 #define SlotMenu_Update_020c4b48 SlotMenu_Update
 #define func_ov039_020bc03c RuntimeState_SetCondition
 #define func_ov039_020bc0d4 GetPrimaryElementEnabled
 #define func_ov039_020bc1bc func_ov039_020bc1dc
-#define func_ov076_020c4d94 func_ov076_020c4db4
+#define func_ov076_020c4d94 SlotMenu_UpdateBrowse
 #define func_ov076_020c4e7c SlotMenu_UpdateIdle
 #define func_ov076_020c4f7c SlotMenu_OpenEmptySlot
 #define func_ov076_020c546c func_ov076_020c548c
@@ -23,5 +23,5 @@
 #define func_ov076_020c8178 func_ov076_020c8198
 #define func_ov076_020c8b28 func_ov076_020c8b48
 #define func_ov076_020cb4a8 MessageWindow_Update
-#define func_ov076_020ccbb0 func_ov076_020ccbd0
+#define func_ov076_020ccbb0 SlotMenu_HandleTabTouch
 #include "src/ov076/unclassified_helpers/SlotMenu_Update_020c4b48.c"

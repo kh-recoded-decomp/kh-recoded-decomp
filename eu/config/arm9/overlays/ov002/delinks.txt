@@ -264,6 +264,10 @@ src/overlays/ov002/calls/ReleaseContextResources.c:
     complete
     .text       start:0x020642b8 end:0x02064328
 
+src/overlays/ov002/calls/UpdateMenuContext.c:
+    complete
+    .text       start:0x02064328 end:0x02064394
+
 src/overlays/ov002/calls/func_ov002_02064394.c:
     complete
     .text       start:0x02064394 end:0x020643a0

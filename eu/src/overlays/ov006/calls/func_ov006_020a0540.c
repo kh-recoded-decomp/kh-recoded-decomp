@@ -23,7 +23,7 @@ typedef struct {
 
 extern int ScriptVm_ReadOperandInt(void *vm, ScriptOperand *operand);
 extern fx32 ScriptVm_ReadOperandFx32(void *vm, ScriptOperand *operand);
-extern void *func_ov006_020a0e5c(u16 kind, ObjectGroupParams *params);
+extern void *CreateElevatorObjectClass(u16 kind, ObjectGroupParams *params);
 extern void func_ov001_0207ee2c(int groupIndex, void *group);
 
 int func_ov006_020a0540(void *vm, ScriptOperand *operands)
@@ -44,6 +44,6 @@ int func_ov006_020a0540(void *vm, ScriptOperand *operands)
     params.unk_1c = ScriptVm_ReadOperandInt(vm, operands + 11);
     params.unk_10 = ScriptVm_ReadOperandFx32(vm, operands + 12);
     params.unk_18 = ScriptVm_ReadOperandInt(vm, operands + 13);
-    func_ov001_0207ee2c(groupIndex, func_ov006_020a0e5c(kind, &params));
+    func_ov001_0207ee2c(groupIndex, CreateElevatorObjectClass(kind, &params));
     return 1;
 }

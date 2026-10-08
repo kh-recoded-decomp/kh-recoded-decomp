@@ -1,5 +1,5 @@
 #define SlotMenu_OpenEmptySlot_020c4f7c SlotMenu_OpenEmptySlot
 #define data_ov076_020cd260 data_ov076_020cd280
 #define func_020291b4 GetPrimaryRecordCount
-#define func_ov076_020c52f8 func_ov076_020c5318
+#define func_ov076_020c52f8 SlotMenu_MoveCursorToSlot
 #include "src/ov076/unclassified_helpers/SlotMenu_OpenEmptySlot_020c4f7c.c"

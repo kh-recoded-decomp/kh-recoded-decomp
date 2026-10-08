@@ -4112,6 +4112,10 @@ src/overlays/ov001/auto/func_ov001_0207e2cc.c:
     complete
     .text       start:0x0207e2cc end:0x0207e2ce
 
+src/overlays/ov001/calls/DrawCrossedGuideLines.c:
+    complete
+    .text       start:0x0207e2d0 end:0x0207e414
+
 src/overlays/ov001/calls/UpdateFallingPiecePosition.c:
     complete
     .text       start:0x0207e414 end:0x0207e474
@@ -5287,6 +5291,10 @@ src/overlays/ov001/calls/ResourceCache_FreeAll.c:
 src/overlays/ov001/calls/func_ov001_02086e58.c:
     complete
     .text       start:0x02086e58 end:0x02086eb8
+
+src/overlays/ov001/calls/DispatchOverlayLoadByKind.c:
+    complete
+    .text       start:0x02086eb8 end:0x02086fb8
 
 src/overlays/ov001/calls/func_ov001_02086fb8.c:
     complete
@@ -6547,6 +6555,10 @@ src/overlays/ov001/calls/ScriptCmd_PlayStageEventAnimation.c:
 src/overlays/ov001/calls/func_ov001_0208ecec.c:
     complete
     .text       start:0x0208ecec end:0x0208ed0e
+
+src/overlays/ov001/calls/ScriptCmd_SetSceneFlagBit2.c:
+    complete
+    .text       start:0x0208ed10 end:0x0208ed52
 
 src/overlays/ov001/calls/ScriptCmd_FaceTargetWithAnims.c:
     complete

@@ -104,6 +104,10 @@ src/overlays/ov073/calls/GetPlayerLevelTier.c:
     complete
     .text       start:0x020c1438 end:0x020c14a8
 
+src/overlays/ov073/calls/InitStatusPanel.c:
+    complete
+    .text       start:0x020c14a8 end:0x020c15d0
+
 src/overlays/ov073/calls/UpdateStatusPanel.c:
     complete
     .text       start:0x020c15d0 end:0x020c175c
@@ -179,6 +183,10 @@ src/overlays/ov073/calls/SetSharedListBusy.c:
 src/overlays/ov073/calls/GetSharedSelectedIndex.c:
     complete
     .text       start:0x020c2cb0 end:0x020c2cc4
+
+src/overlays/ov073/calls/SetStatusPageAndCursor.c:
+    complete
+    .text       start:0x020c2cc4 end:0x020c2de4
 
 src/overlays/ov073/calls/RefreshListRowColors.c:
     complete

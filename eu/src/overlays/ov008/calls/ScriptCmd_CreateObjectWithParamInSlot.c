@@ -1,5 +1,5 @@
 #define ScriptCmd_CreateObjectWithParamInSlot_020a0630 ScriptCmd_CreateObjectWithParamInSlot
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
 #define func_ov001_0207ee04 func_ov001_0207ee2c
-#define func_ov008_020a0b18 func_ov008_020a0b38
+#define func_ov008_020a0b18 CreateChildSpawnerClass
 #include "src/ov008/script_commands/ScriptCmd_CreateObjectWithParamInSlot_020a0630.c"

@@ -3,5 +3,5 @@
 #define UpdateFallingPiecePosition_0207e3ec UpdateFallingPiecePosition
 #define UpdateFallingPieces_0207e920 UpdateFallingPieces
 #define data_ov001_020a04d4 data_ov001_020a04f4
-#define func_ov001_0207e2a8 func_ov001_0207e2d0
+#define func_ov001_0207e2a8 DrawCrossedGuideLines
 #include "src/ov001/unclassified_helpers/UpdateFallingPieces_0207e920.c"

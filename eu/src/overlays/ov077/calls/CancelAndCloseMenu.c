@@ -1,4 +1,4 @@
 #define CancelAndCloseMenu_020c79a4 CancelAndCloseMenu
 #define PlaySoundEffect_0204d924 PlaySoundEffect
-#define func_ov077_020c6c90 func_ov077_020c6cb0
+#define func_ov077_020c6c90 ItemMenu_CloseItemList
 #include "src/ov077/unclassified_helpers/CancelAndCloseMenu_020c79a4.c"

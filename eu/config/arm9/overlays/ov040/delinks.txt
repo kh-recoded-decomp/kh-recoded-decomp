@@ -60,6 +60,10 @@ src/overlays/ov040/calls/func_ov040_020bcd28.c:
     complete
     .text       start:0x020bcd28 end:0x020bcd6a
 
+src/overlays/ov040/calls/FinishAreaSceneLoad.c:
+    complete
+    .text       start:0x020bcd6c end:0x020bce70
+
 src/overlays/ov040/calls/func_ov040_020bd0f4.c:
     complete
     .text       start:0x020bd0f4 end:0x020bd128

@@ -1,5 +1,5 @@
 #define IsItemSlotAvailable_020c9d20 IsItemSlotAvailable_020c9d40
 #define MenuPanel_ConfirmSelection_020ca988 MenuPanel_ConfirmSelection
-#define MenuPanel_Finish_020c9c5c func_ov076_020c9c7c
+#define MenuPanel_Finish_020c9c5c SlotMenu_CloseItemList
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #include "src/ov076/unclassified_helpers/MenuPanel_ConfirmSelection_020ca988.c"

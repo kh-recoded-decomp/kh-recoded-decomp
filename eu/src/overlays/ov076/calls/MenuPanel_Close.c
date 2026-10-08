@@ -1,4 +1,4 @@
 #define MenuPanel_Close_020ca970 MenuPanel_Close
-#define MenuPanel_Finish_020c9c5c func_ov076_020c9c7c
+#define MenuPanel_Finish_020c9c5c SlotMenu_CloseItemList
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #include "src/ov076/unclassified_helpers/MenuPanel_Close_020ca970.c"

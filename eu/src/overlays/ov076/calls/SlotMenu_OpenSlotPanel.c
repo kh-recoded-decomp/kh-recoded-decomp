@@ -5,6 +5,6 @@
 #define data_ov076_020cd2cc data_ov076_020cd2ec
 #define data_ov076_020cd2d8 data_ov076_020cd2f8
 #define func_ov039_020bc1bc func_ov039_020bc1dc
-#define func_ov076_020c52f8 func_ov076_020c5318
+#define func_ov076_020c52f8 SlotMenu_MoveCursorToSlot
 #define func_ov076_020cbba0 func_ov076_020cbbc0
 #include "src/ov076/unclassified_helpers/SlotMenu_OpenSlotPanel_020c8934.c"

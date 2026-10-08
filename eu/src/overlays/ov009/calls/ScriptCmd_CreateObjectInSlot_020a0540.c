@@ -1,5 +1,5 @@
 #define ScriptCmd_CreateObjectInSlot_020a0520 ScriptCmd_CreateObjectInSlot_020a0540
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
 #define func_ov001_0207ee04 func_ov001_0207ee2c
-#define func_ov009_020a0ad0 func_ov009_020a0af0
+#define func_ov009_020a0ad0 FieldObjectClass_Create
 #include "src/ov009/shared_engine/ScriptCmd_CreateObjectInSlot_020a0520.c"

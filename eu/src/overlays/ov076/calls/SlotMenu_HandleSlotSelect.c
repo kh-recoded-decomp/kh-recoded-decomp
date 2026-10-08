@@ -15,7 +15,7 @@
 #define func_ov039_020bc1bc func_ov039_020bc1dc
 #define func_ov039_020bca00 GetMenuInputState
 #define func_ov076_020c44c0 SlotMenu_CanCombineSlotPair
-#define func_ov076_020c52f8 func_ov076_020c5318
+#define func_ov076_020c52f8 SlotMenu_MoveCursorToSlot
 #define func_ov076_020c8388 SlotMenu_OpenSlotMessage
 #define func_ov076_020cbba0 func_ov076_020cbbc0
 #include "src/ov076/unclassified_helpers/SlotMenu_HandleSlotSelect_020c8b60.c"

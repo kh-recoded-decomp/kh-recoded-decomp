@@ -1,4 +1,4 @@
-#define DispatchOverlayLoadByKind_02086e90 func_ov001_02086eb8
+#define DispatchOverlayLoadByKind_02086e90 DispatchOverlayLoadByKind
 #define ScriptCmd_LoadOverlayKind9_020a1e08 ScriptCmd_LoadOverlayKind9
 #define ScriptVm_ConsumeOperandInt_020a1de0 ScriptVm_ConsumeOperandInt
 #define func_ov001_02086f90 func_ov001_02086fb8

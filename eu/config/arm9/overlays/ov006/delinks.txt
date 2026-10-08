@@ -40,6 +40,10 @@ src/overlays/ov006/calls/UpdateStaticElevator.c:
     complete
     .text       start:0x020a0ce8 end:0x020a0e5c
 
+src/overlays/ov006/calls/CreateElevatorObjectClass.c:
+    complete
+    .text       start:0x020a0e5c end:0x020a0f38
+
 src/overlays/ov006/calls/CreateElevatorObject.c:
     complete
     .text       start:0x020a0f38 end:0x020a1054

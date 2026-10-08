@@ -91,7 +91,7 @@ extern void func_ov001_0208ebb8(void);
 extern void ScriptCmd_ShowItemMessage(void); /* ScriptCmd_ShowItemMessage */
 extern void ScriptCmd_PlayStageEventAnimation(void); /* ScriptCmd_PlayStageEventAnimation */
 extern void func_ov001_0208ecec(void);
-extern void func_ov001_0208ed10(void); /* ScriptCmd_SetSceneFlagBit2 */
+extern void ScriptCmd_SetSceneFlagBit2(void);
 extern void ScriptCmd_FaceTargetWithAnims(void); /* ScriptCmd_FaceTargetWithAnims */
 extern void ScriptOp_InitSubsystemIfFlagClear(void); /* ScriptOp_InitSubsystemIfFlagClear */
 extern void ScriptCmd_QueueCameraAngleTransition(void); /* ScriptCmd_QueueCameraAngleTransition */
@@ -267,7 +267,7 @@ void (*gActorScriptCommandHandlers[186])(void) = {
     NULL,
     func_ov001_0208ecec,
     NULL,
-    func_ov001_0208ed10, /* ScriptCmd_SetSceneFlagBit2 */
+    ScriptCmd_SetSceneFlagBit2,
     NULL,
     ScriptCmd_FaceTargetWithAnims, /* ScriptCmd_FaceTargetWithAnims */
     NULL,
