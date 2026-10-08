@@ -52,6 +52,10 @@ src/overlays/ov073/calls/HideStatusPageIcons.c:
     complete
     .text       start:0x020c0204 end:0x020c0240
 
+src/overlays/ov073/calls/SetupStatusPageScroll.c:
+    complete
+    .text       start:0x020c0240 end:0x020c028c
+
 src/overlays/ov073/calls/FixSelectedSlotIndex.c:
     complete
     .text       start:0x020c028c end:0x020c02f4
@@ -63,6 +67,10 @@ src/overlays/ov073/calls/HideStatusPageRows.c:
 src/overlays/ov073/calls/SetupStatusScreenScroll.c:
     complete
     .text       start:0x020c0e0c end:0x020c0e58
+
+src/overlays/ov073/calls/UpdateStatusListInput.c:
+    complete
+    .text       start:0x020c0e58 end:0x020c0ed8
 
 src/overlays/ov073/calls/HideStatusScreenElement.c:
     complete

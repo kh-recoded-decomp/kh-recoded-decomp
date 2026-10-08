@@ -1,0 +1,21 @@
+#define UpdateCarriedActor_020bc110 UpdateCarriedActor
+#define data_ov030_020bd004 gMarkerResetConfig
+#define g_carryMotion_020bd004 gMarkerReset
+#define data_02053438 data_0205344c
+#define func_ov001_0206db78 GetPlayerControlState
+#define func_ov001_020645c8 IsSessionFlagSet
+#define IsGroupMemberActive_020a8d1c IsGroupMemberActive
+#define StopAndClearSoundEmitter_020a8e14 StopAndClearSoundEmitter
+#define SnapCarriedActorToView_020bb474 SnapCarriedActorToView
+#define SteerCarriedActorInView_020bb870 SteerCarriedActorInView
+#define CheckHeadroomClear_020bb9c8 CheckHeadroomClear
+#define func_ov021_020a8ab4 ResetAnimationTrackState
+#define func_ov021_020a8ca0 func_ov021_020a8cc0
+#define GetFieldAt0xe_020a7558 SharedObject_GetFlagsB
+#define HasFlagsAt0xc_020a751c HasFlagsAt0xc
+#define func_ov042_020bd324 Camera_GetColliderOffset
+#define GetGroupSlotValue_020a8f1c GetGroupSlotValue
+#define SetSlotEntryValue_020a8f4c SetSlotEntryValue
+#define InvokeHandlerOnIndexedRecord_020a8e88 InvokeHandlerOnIndexedRecord
+#define func_020359f8 ApplyRecordTableEntry5
+#include "src/ov030/shared_engine/UpdateCarriedActor_020bc110.c"

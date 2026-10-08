@@ -1,0 +1,12 @@
+#define ShutdownItemMenu_020c4d78 ShutdownItemMenu
+#define ReleaseScreenResources_020c90bc ReleaseScreenResources
+#define ZeroHalfThenFree_0202cd78 ZeroHalfThenFree
+#define ReleaseScreenSprites_020c5270 ReleaseScreenSprites
+#define func_ov045_020be6a0 func_ov045_020be6c0
+#define NNS_GfdResetFrmTexVramState_0201391c NNS_GfdResetFrmTexVramState
+#define func_02013d74 NNS_GfdResetFrmPlttVramState
+#define FillSelectionRecordFromGroup_0204f8dc FillSelectionRecordFromGroup
+#define SyncSelectionRecordFromSlotEntry_0204fabc SyncSelectionRecordFromSlotEntry
+#define func_0204fba0 func_0204fbb4
+#define data_ov077_020ca380 data_ov077_020ca3a0
+#include "src/ov077/unclassified_helpers/ShutdownItemMenu_020c4d78.c"

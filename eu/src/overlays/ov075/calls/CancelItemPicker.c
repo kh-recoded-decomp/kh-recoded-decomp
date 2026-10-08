@@ -1,4 +1,4 @@
 #define CancelItemPicker_020ceb60 CancelItemPicker
 #define PlaySoundEffect_0204d924 PlaySoundEffect
-#define func_ov075_020cde4c func_ov075_020cde6c
+#define func_ov075_020cde4c CloseItemPicker
 #include "src/ov075/unclassified_helpers/CancelItemPicker_020ceb60.c"

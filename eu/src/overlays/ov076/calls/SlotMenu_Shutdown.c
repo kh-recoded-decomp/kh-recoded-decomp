@@ -1,0 +1,15 @@
+#define SlotMenu_Shutdown_020c5ee0 SlotMenu_Shutdown
+#define MenuPanel_Destroy_020cc088 MenuPanel_Destroy
+#define ZeroHalfThenFree_0202cd78 ZeroHalfThenFree
+#define SlotMenu_ReleaseSlotObjects_020c68dc SlotMenu_ReleaseSlotObjects
+#define SlotMenu_ReleaseSprites_020c6c7c SlotMenu_ReleaseSprites
+#define func_ov045_020be6a0 func_ov045_020be6c0
+#define NNS_GfdResetFrmTexVramState_0201391c NNS_GfdResetFrmTexVramState
+#define func_02013d74 NNS_GfdResetFrmPlttVramState
+#define SetStateFlagBits_020bc688 SetStateFlagBits
+#define RefreshSlotRecordCache_02028f44 RefreshSlotRecordCache
+#define BuildSelectionEntryList_0204f98c BuildSelectionEntryList
+#define ReleaseRecordSlot_02051dfc ReleaseRecordSlot
+#define ReleaseRecordManager_02051cdc ReleaseRecordManager
+#define data_ov076_020cd3e0 data_ov076_020cd400
+#include "src/ov076/unclassified_helpers/SlotMenu_Shutdown_020c5ee0.c"

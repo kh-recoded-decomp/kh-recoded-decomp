@@ -67,6 +67,10 @@ src/overlays/ov047/calls/ApproachAngle.c:
     complete
     .text       start:0x020c4844 end:0x020c48a0
 
+src/overlays/ov047/calls/Camera_PlaceTrackingEye.c:
+    complete
+    .text       start:0x020c48a0 end:0x020c493c
+
 src/overlays/ov047/calls/Camera_FollowLeaderTarget.c:
     complete
     .text       start:0x020c493c end:0x020c4e5c

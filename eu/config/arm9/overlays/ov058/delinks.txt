@@ -208,6 +208,10 @@ src/overlays/ov058/calls/LoadSceneModelResources.c:
     complete
     .text       start:0x020d7e50 end:0x020d7f08
 
+src/overlays/ov058/calls/ReleaseSceneModelResources.c:
+    complete
+    .text       start:0x020d7f08 end:0x020d7f80
+
 src/overlays/ov058/calls/StartAnchorSequence.c:
     complete
     .text       start:0x020d7f80 end:0x020d81c4

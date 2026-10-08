@@ -29,7 +29,7 @@
 #define func_ov021_020a7544 func_ov021_020a7564
 #define func_ov021_020a8ab4 ResetAnimationTrackState
 #define func_ov021_020a8ca0 func_ov021_020a8cc0
-#define func_ov030_020bc110 func_ov030_020bc130
+#define func_ov030_020bc110 UpdateCarriedActor
 #define func_ov030_020bc38c SpawnSceneMarker
 #define func_ov040_020bdc94 ApplyPendingFlagReward
 #define func_ov040_020bddd8 UpdateRewardMenuClose

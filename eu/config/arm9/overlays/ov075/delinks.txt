@@ -116,6 +116,10 @@ src/overlays/ov075/auto/func_ov075_020c7d1c.c:
     complete
     .text       start:0x020c7d1c end:0x020c7d24
 
+src/overlays/ov075/calls/ResetMatrixCamera.c:
+    complete
+    .text       start:0x020c7d24 end:0x020c7e08
+
 src/overlays/ov075/calls/ClearGlyphCell.c:
     complete
     .text       start:0x020c8890 end:0x020c8940
@@ -288,6 +292,10 @@ src/overlays/ov075/calls/BuildTabItemList.c:
     complete
     .text       start:0x020cde24 end:0x020cde6c
 
+src/overlays/ov075/calls/CloseItemPicker.c:
+    complete
+    .text       start:0x020cde6c end:0x020cdf30
+
 src/overlays/ov075/calls/IsItemSlotAvailable.c:
     complete
     .text       start:0x020cdf30 end:0x020cdfa6
@@ -423,6 +431,10 @@ src/overlays/ov075/calls/IsDialogTransitionDone.c:
 src/overlays/ov075/calls/DestroyItemPicker.c:
     complete
     .text       start:0x020cffd8 end:0x020d0034
+
+src/overlays/ov075/calls/HandleTabTouch.c:
+    complete
+    .text       start:0x020d0b00 end:0x020d0b94
 
 src/overlays/ov075/calls/InitMenuModel.c:
     complete

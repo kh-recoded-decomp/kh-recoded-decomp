@@ -1,0 +1,13 @@
+#define DestroyOv081Screen_020c571c DestroyOv081Screen
+#define func_ov039_020bc1bc func_ov039_020bc1dc
+#define FreeEntryLists_020c523c FreeEntryLists
+#define DestroyAllContainerElements_020b900c DestroyAllContainerElements
+#define ReleaseIfMarked_020b903c ReleaseIfMarked
+#define FreePointerIfSet_020ba294 FreePointerIfSet
+#define ZeroHalfThenFree_0202cd78 ZeroHalfThenFree
+#define func_ov039_020be6a0 SetupMainBgLayers_020be6c0
+#define NNS_GfdResetFrmTexVramState_0201391c NNS_GfdResetFrmTexVramState
+#define func_02013d74 NNS_GfdResetFrmPlttVramState
+#define SetStateFlagBits_020bc688 SetStateFlagBits
+#define data_020c5d80 data_ov081_020c5da0
+#include "src/ov081/unclassified_helpers/DestroyOv081Screen_020c571c.c"

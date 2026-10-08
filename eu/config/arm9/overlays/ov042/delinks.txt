@@ -86,7 +86,7 @@ src/overlays/ov042/auto/func_ov042_020bd5f4.c:
     complete
     .text       start:0x020bd5f4 end:0x020bd600
 
-src/overlays/ov042/calls/func_ov042_020bd600.c:
+src/overlays/ov042/calls/SetCameraParameterBc.c:
     complete
     .text       start:0x020bd600 end:0x020bd620
 

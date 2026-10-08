@@ -12,6 +12,10 @@ src/overlays/ov078/auto/func_ov078_020c4370.c:
     complete
     .text       start:0x020c4370 end:0x020c4372
 
+src/overlays/ov078/calls/ShutdownPageMenu.c:
+    complete
+    .text       start:0x020c4374 end:0x020c43e0
+
 src/overlays/ov078/calls/LoadPageMenuWidgets.c:
     complete
     .text       start:0x020c4590 end:0x020c4728

@@ -1,0 +1,13 @@
+#define SetupMovieCamera_020bb2cc SetupMovieCameraView
+#define func_ov042_020bd4bc InitCameraState
+#define func_ov042_020be548 AimCameraAlongDirection
+#define func_ov042_020bd394 func_ov042_020bd3b4
+#define func_ov042_020bd334 MoveCameraAlongAxis
+#define VEC_Add_01ff9e0c VEC_Add
+#define func_ov042_020bd234 SetCameraGoalTarget
+#define func_ov042_020bd1c0 PushFromCameraTarget
+#define func_ov042_020bd5e0 SetCameraParameterBc
+#define func_ov042_020bd600 func_ov042_020bd620
+#define func_ov042_020bd59c func_ov042_020bd5bc
+#define func_ov042_020bd0fc func_ov042_020bd11c
+#include "src/ov030/movie/SetupMovieCamera_020bb2cc.c"

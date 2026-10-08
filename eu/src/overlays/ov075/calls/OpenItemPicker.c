@@ -1,4 +1,4 @@
-#define CloseItemPicker_020cde4c func_ov075_020cde6c
+#define CloseItemPicker_020cde4c CloseItemPicker
 #define G2_GetBG1ScrPtr_02006e34 G2_GetBG1ScrPtr
 #define OpenDefaultDialog_020cf430 OpenDefaultDialog
 #define OpenItemPicker_020ce9ac OpenItemPicker

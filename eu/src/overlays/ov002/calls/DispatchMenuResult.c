@@ -1,4 +1,4 @@
 #define DispatchMenuResult_02062d28 DispatchMenuResult
-#define SwitchPanelMode_02062cb8 func_ov002_02062cb8
+#define SwitchPanelMode_02062cb8 SwitchPanelMode
 #define UpdateMenuContext_02064328 UpdateMenuContext
 #include "src/ov002/panel_state/DispatchMenuResult_02062d28.c"

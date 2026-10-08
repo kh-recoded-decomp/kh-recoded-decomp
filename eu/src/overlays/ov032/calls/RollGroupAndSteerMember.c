@@ -1,6 +1,6 @@
 #define GetRemainingRowSpan_020bc6d8 GetRemainingRowSpan
 #define MTX_MultVec33_01ff9404 MTX_MultVec33
-#define QuatFromRotatedAxisAngle_020bd19c func_ov032_020bd1bc
+#define QuatFromRotatedAxisAngle_020bd19c QuatFromRotatedAxisAngle
 #define QuaternionToRotationMatrix_0202f808 QuaternionToRotationMatrix
 #define RollGroupAndSteerMember_020be348 RollGroupAndSteerMember
 #define VEC_Add_01ff9e0c VEC_Add

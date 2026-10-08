@@ -204,6 +204,10 @@ src/overlays/ov097/calls/RebindSpriteToCell.c:
     complete
     .text       start:0x020c18b0 end:0x020c19cc
 
+src/overlays/ov097/calls/ResetMenuOrthoCamera.c:
+    complete
+    .text       start:0x020c19cc end:0x020c1a64
+
 src/overlays/ov097/auto/func_ov097_020c1a64.c:
     complete
     .text       start:0x020c1a64 end:0x020c1a66

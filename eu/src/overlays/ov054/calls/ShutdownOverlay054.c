@@ -2,5 +2,5 @@
 #define ShutdownOverlay054_020d2520 ShutdownOverlay054
 #define data_ov001_020a0460 data_ov001_020a0480
 #define data_ov054_020d3700 data_ov054_020d3720
-#define func_ov058_020d7ee8 func_ov058_020d7f08
+#define func_ov058_020d7ee8 ReleaseSceneModelResources
 #include "src/ov054/unclassified_helpers/ShutdownOverlay054_020d2520.c"

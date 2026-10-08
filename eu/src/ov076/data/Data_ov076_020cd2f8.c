@@ -8,14 +8,14 @@ extern void SlotMenu_HandleSlotSelect(void);
 extern void SlotMenu_UnequipCursorSlot(void);
 extern void SlotMenu_Update(void);
 extern void func_ov076_020c45c8(void);
-extern void func_ov076_020c5f00(void);
+extern void SlotMenu_Shutdown(void);
 extern void func_ov076_020c8d40(void);
 extern void func_ov076_020c8e8c(void);
 extern void func_ov076_020c8ed0(void);
 
 void *gCommandMatrixMenuDescriptor[17] = {
     (void *)func_ov076_020c45c8,
-    (void *)func_ov076_020c5f00,
+    (void *)SlotMenu_Shutdown,
     (void *)SlotMenu_Update,
     NULL,
     (void *)0x0004A104,

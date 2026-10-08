@@ -1,0 +1,5 @@
+#define UpdateStatusListInput_020c0e38 UpdateStatusListInput
+#define func_ov039_020be0c4 UpdateScrollListInput
+#define func_ov039_020bca00 GetMenuInputState
+#define PlaySoundEffect_0204d924 PlaySoundEffect
+#include "src/ov073/status_menu/UpdateStatusListInput_020c0e38.c"

@@ -13,7 +13,7 @@
 #define func_ov017_020a3e10 ResetFieldObjectToIdle
 #define func_ov017_020a40dc SetFieldObjectPosition_020a40fc
 #define func_ov017_020a4bb4 FindSlotLinkedObject
-#define func_ov042_020bd5e0 func_ov042_020bd600
+#define func_ov042_020bd5e0 SetCameraParameterBc
 #define func_ov042_020bd6fc StartCameraParticle
 #define func_ov042_020bd78c func_ov042_020bd7ac
 #include "src/ov017/unclassified_helpers/FinishPoolActions_020a4c34.c"

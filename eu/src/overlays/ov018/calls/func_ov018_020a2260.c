@@ -1,11 +1,11 @@
 #include "nitro/types.h"
 
-extern void func_ov021_020a8a88(int channel);
+extern void DestroyEntryGroup(int channel);
 extern void func_0202eb08(int *resourceState);
 
 void func_ov018_020a2260(int object)
 {
-    func_ov021_020a8a88((int)*(s16 *)(object + 0x470));
+    DestroyEntryGroup((int)*(s16 *)(object + 0x470));
     if (*(int *)(object + 0xd4) != 0) {
         func_0202eb08((int *)(object + 0x138));
     }

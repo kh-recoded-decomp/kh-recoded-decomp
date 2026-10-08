@@ -192,6 +192,10 @@ src/overlays/ov021/calls/ResolveEntryAnchorPosition.c:
     complete
     .text       start:0x020a8864 end:0x020a8918
 
+src/overlays/ov021/calls/DestroyEntryGroup.c:
+    complete
+    .text       start:0x020a8a88 end:0x020a8ad4
+
 src/overlays/ov021/calls/ResetAnimationTrackState.c:
     complete
     .text       start:0x020a8ad4 end:0x020a8afa
@@ -283,6 +287,14 @@ src/overlays/ov021/calls/AnyLinkedObjectHasStateSeven.c:
 src/overlays/ov021/calls/CanStartTargetAction.c:
     complete
     .text       start:0x020a94d0 end:0x020a9544
+
+src/overlays/ov021/calls/LoadMsgContainers.c:
+    complete
+    .text       start:0x020a9544 end:0x020a9588
+
+src/overlays/ov021/calls/FreeSharedBuffers.c:
+    complete
+    .text       start:0x020a9588 end:0x020a95b8
 
 src/overlays/ov021/calls/SetPendingFromTable.c:
     complete

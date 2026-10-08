@@ -2,7 +2,7 @@
 #define DestroyAllContainerElements_020b900c DestroyAllContainerElements
 #define DestroyFndObjectList_020014f0 DestroyFndObjectList
 #define FreePointerIfSet_020ba294 FreePointerIfSet
-#define FreeSharedBuffers_020a9568 func_ov021_020a9588
+#define FreeSharedBuffers_020a9568 FreeSharedBuffers
 #define NNS_GfdResetFrmTexVramState_0201391c NNS_GfdResetFrmTexVramState
 #define ReleaseIfMarked_020b903c ReleaseIfMarked
 #define ReleaseModelSet_020a9928 ReleaseModelSet

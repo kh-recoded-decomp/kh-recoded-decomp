@@ -1,0 +1,8 @@
+#define HandleTabTouch_020d0ae0 HandleTabTouch
+#define PlaySoundEffect_0204d924 PlaySoundEffect
+#define func_ov039_020bc0d4 GetPrimaryElementEnabled
+#define func_ov039_020bca00 GetMenuInputState
+#define func_ov039_020bca60 IsStatePhaseActive
+#define func_ov039_020bca30 IsStatePhase4
+#define func_ov039_020bbf78 StartSubScene
+#include "src/ov075/unclassified_helpers/HandleTabTouch_020d0ae0.c"

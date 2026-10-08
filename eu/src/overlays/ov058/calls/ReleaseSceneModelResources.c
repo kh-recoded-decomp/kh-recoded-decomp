@@ -1,0 +1,11 @@
+#define ReleaseSceneModelResources_020d7ee8 ReleaseSceneModelResources
+#define data_ov058_020d8a60 data_ov058_020d8a80
+#define data_ov058_020d8a24 data_ov058_020d8a44
+#define data_ov058_020d8b98 data_ov058_020d8bb8
+#define data_ov058_020d9068 data_ov058_020d9088
+#define TeardownBigObj_020ac8cc TeardownBigObj
+#define ReleaseRecordEntry_020d75e0 ReleaseRecordEntry_020d7600
+#define StopSeqArcOrDefault_0204d960 StopSeqArcOrDefault
+#define CameraPath_Free_020c2f90 CameraPath_Free
+#define ZeroHalfThenFree_0202cd78 ZeroHalfThenFree
+#include "src/ov058/unclassified_helpers/ReleaseSceneModelResources_020d7ee8.c"

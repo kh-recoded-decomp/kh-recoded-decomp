@@ -7,7 +7,7 @@ extern void SelectNextPage(void);
 extern void StepCursorBack(void);
 extern void StepCursorForward(void);
 extern void func_ov078_020c4370(void);
-extern void func_ov078_020c4374(void);
+extern void ShutdownPageMenu(void);
 extern void func_ov078_020c4df8(void);
 extern void func_ov078_020c4f44(void);
 
@@ -32,7 +32,7 @@ u32 data_ov078_020c5024[64] = {
 
 void *data_ov078_020c4fe0[17] = {
     (void *)InitPageMenu,
-    (void *)func_ov078_020c4374,
+    (void *)ShutdownPageMenu,
     (void *)func_ov078_020c4370,
     NULL,
     (void *)0x000005D8,

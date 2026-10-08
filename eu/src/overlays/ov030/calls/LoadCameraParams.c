@@ -2,9 +2,9 @@
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define findSharedResourceByName_0202cd8c findSharedResourceByName
 #define func_0202c478 Archive_LoadFile
-#define func_ov030_020bb2cc func_ov030_020bb2ec
+#define func_ov030_020bb2cc SetupMovieCameraView
 #define func_ov030_020bb374 SetSceneLock
-#define func_ov042_020bd5e0 func_ov042_020bd600
+#define func_ov042_020bd5e0 SetCameraParameterBc
 #define func_ov042_020bd660 SetCameraMode
 #define g_moviePlayerCtx_020bd000 data_ov030_020bd020
 #include "src/ov030/movie/LoadCameraParams_020bb390.c"

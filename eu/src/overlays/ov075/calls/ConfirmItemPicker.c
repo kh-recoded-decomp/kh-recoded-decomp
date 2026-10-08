@@ -1,4 +1,4 @@
-#define CloseItemPicker_020cde4c func_ov075_020cde6c
+#define CloseItemPicker_020cde4c CloseItemPicker
 #define ConfirmItemPicker_020ceb78 ConfirmItemPicker
 #define IsItemSlotAvailable_020cdf10 IsItemSlotAvailable
 #define PlaySoundEffect_0204d924 PlaySoundEffect

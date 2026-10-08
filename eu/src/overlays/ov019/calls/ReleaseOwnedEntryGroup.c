@@ -1,3 +1,3 @@
 #define ReleaseOwnedEntryGroup_020a3640 ReleaseOwnedEntryGroup
-#define func_ov021_020a8a68 func_ov021_020a8a88
+#define func_ov021_020a8a68 DestroyEntryGroup
 #include "src/ov019/unclassified_helpers/ReleaseOwnedEntryGroup_020a3640.c"

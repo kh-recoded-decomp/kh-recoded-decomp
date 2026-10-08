@@ -1,0 +1,8 @@
+#define Camera_PlaceTrackingEye_020c4880 Camera_PlaceTrackingEye
+#define g_cameraManager_020c34e0 data_ov046_020c3500
+#define Camera_ResolveCollision_020c1e54 Camera_ResolveCollision
+#define ScaleVecFx32InPlace_0204a5e4 ScaleVecFx32InPlace
+#define VEC_Add_01ff9e0c VEC_Add
+#define func_ov046_020c1fa0 func_ov046_020c1fc0
+#define func_01ffa0f4 VEC_Distance
+#include "src/ov047/camera/Camera_PlaceTrackingEye_020c4880.c"

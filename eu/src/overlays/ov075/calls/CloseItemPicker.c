@@ -1,0 +1,9 @@
+#define CloseItemPicker_020cde4c CloseItemPicker
+#define NotifyBothOrOne_02001154 NotifyBothOrOne
+#define SetStateFlagBits_020bc688 SetStateFlagBits
+#define SetUnlockableElementsVisible_020d0e64 SetUnlockableElementsVisible
+#define SetLayoutElementVisible_020d0e4c SetLayoutElementVisible
+#define func_ov039_020bdf10 SetupScrollList
+#define CallStateWidget_020bc14c CallStateWidget
+#define data_ov075_020d185c sOv075_ScrollCmx_020d187c
+#include "src/ov075/unclassified_helpers/CloseItemPicker_020cde4c.c"

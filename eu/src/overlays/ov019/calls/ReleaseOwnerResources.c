@@ -1,5 +1,5 @@
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define ReleaseOwnerResources_020a272c ReleaseOwnerResources
 #define ReleaseResourceAndDetach_0202eee8 ReleaseResourceAndDetach
-#define func_ov021_020a8a68 func_ov021_020a8a88
+#define func_ov021_020a8a68 DestroyEntryGroup
 #include "src/ov019/unclassified_helpers/ReleaseOwnerResources_020a272c.c"

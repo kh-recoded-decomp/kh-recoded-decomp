@@ -1,7 +1,7 @@
 #define DrawScrolledPopups_020c0d70 DrawScrolledPopups
 #define IsEntryFlagSet_020c1474 IsEntryFlagSet_020c1494
 #define NNS_FndInitListWithOffset0_020c1d98 func_ov097_020c1db8
-#define ResetMenuOrthoCamera_020c19ac func_ov097_020c19cc
+#define ResetMenuOrthoCamera_020c19ac ResetMenuOrthoCamera
 #define _fp_init_020c1a44 func_ov097_020c1a64
 #define func_01ff89a8 MI_CpuCopy8
 #include "src/ov097/panel_state/DrawScrolledPopups_020c0d70.c"

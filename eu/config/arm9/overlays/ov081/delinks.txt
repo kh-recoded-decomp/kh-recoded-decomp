@@ -76,6 +76,10 @@ src/overlays/ov081/calls/DrawListTitle.c:
     complete
     .text       start:0x020c56c8 end:0x020c573c
 
+src/overlays/ov081/calls/DestroyOv081Screen.c:
+    complete
+    .text       start:0x020c573c end:0x020c57b0
+
 src/overlays/ov081/calls/DrawListPageIndicator.c:
     complete
     .text       start:0x020c57b0 end:0x020c58a0

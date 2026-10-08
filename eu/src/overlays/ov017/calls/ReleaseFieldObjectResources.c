@@ -2,5 +2,5 @@
 #define ReleaseFieldObjectResources_020a2ea0 ReleaseFieldObjectResources
 #define ReleaseIfSet_020a2e70 ReleaseIfSet
 #define func_0202eee8 ReleaseResourceAndDetach
-#define func_ov021_020a8a68 func_ov021_020a8a88
+#define func_ov021_020a8a68 DestroyEntryGroup
 #include "src/ov017/field_objects/ReleaseFieldObjectResources_020a2ea0.c"

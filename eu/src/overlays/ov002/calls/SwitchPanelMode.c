@@ -1,0 +1,4 @@
+#define SwitchPanelMode_02062cb8 SwitchPanelMode
+#define g_panelState_0206c460 data_ov002_0206c460
+#define data_ov002_0206c2ec gPanelModeEnterCallback
+#include "src/ov002/panel_state/SwitchPanelMode_02062cb8.c"

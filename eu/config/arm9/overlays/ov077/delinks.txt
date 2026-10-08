@@ -36,6 +36,10 @@ src/overlays/ov077/calls/UpdateItemScreenDisplay.c:
     complete
     .text       start:0x020c4c00 end:0x020c4d98
 
+src/overlays/ov077/calls/ShutdownItemMenu.c:
+    complete
+    .text       start:0x020c4d98 end:0x020c4df4
+
 src/overlays/ov077/calls/SetupItemScreenBackgrounds.c:
     complete
     .text       start:0x020c4df4 end:0x020c50b4
@@ -63,6 +67,10 @@ src/overlays/ov077/calls/SyncScreenSpriteSlots.c:
 src/overlays/ov077/calls/SetPanelShifted.c:
     complete
     .text       start:0x020c5638 end:0x020c5668
+
+src/overlays/ov077/calls/ResetMenuCamera.c:
+    complete
+    .text       start:0x020c5668 end:0x020c5714
 
 src/overlays/ov077/calls/DrawPartySlotIcons.c:
     complete

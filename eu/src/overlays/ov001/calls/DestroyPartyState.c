@@ -7,5 +7,5 @@
 #define func_02029f98 func_02029fac
 #define func_02050a44 func_02050a58
 #define func_ov021_020a892c func_ov021_020a894c
-#define func_ov021_020a9568 func_ov021_020a9588
+#define func_ov021_020a9568 FreeSharedBuffers
 #include "src/ov001/shared_engine/DestroyPartyState_0206d84c.c"

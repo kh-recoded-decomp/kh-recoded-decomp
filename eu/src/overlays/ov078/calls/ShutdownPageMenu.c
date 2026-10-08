@@ -1,0 +1,11 @@
+#define ShutdownPageMenu_020c4354 ShutdownPageMenu
+#define OS_RescheduleThread_020c4708 func_ov078_020c4728
+#define ReleaseRecordSlot_02051dfc ReleaseRecordSlot
+#define ReleaseRecordManager_02051cdc ReleaseRecordManager
+#define FreePointerIfSet_020ba294 FreePointerIfSet
+#define ZeroHalfThenFree_0202cd78 ZeroHalfThenFree
+#define func_ov045_020be6a0 func_ov045_020be6c0
+#define NNS_GfdResetFrmTexVramState_0201391c NNS_GfdResetFrmTexVramState
+#define func_02013d74 NNS_GfdResetFrmPlttVramState
+#define data_ov078_020c51c0 data_ov078_020c51e0
+#include "src/ov078/unclassified_helpers/ShutdownPageMenu_020c4354.c"

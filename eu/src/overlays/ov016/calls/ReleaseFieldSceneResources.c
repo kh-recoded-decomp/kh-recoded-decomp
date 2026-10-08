@@ -2,5 +2,5 @@
 #define ReleaseFieldSceneResources_020a5c3c ReleaseFieldSceneResources
 #define ReleaseHandleIfSet_020a2720 ReleaseHandleIfSet
 #define func_ov001_02088180 func_ov001_020881a8
-#define func_ov021_020a8a68 func_ov021_020a8a88
+#define func_ov021_020a8a68 DestroyEntryGroup
 #include "src/ov016/field_objects/ReleaseFieldSceneResources_020a5c3c.c"

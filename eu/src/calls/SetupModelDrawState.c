@@ -1,10 +1,53 @@
-#define GetMaterialLightMask_0201a6c4 NNS_G3dMdlGetMdlLightEnableFlag
-#define GetMaterialPolygonId_0201a7a0 NNS_G3dMdlGetMdlPolygonID
-#define GetMaterialPolygonMode_0201a730 NNS_G3dMdlGetMdlPolygonMode
-#define MI_Copy36B_01ff87c4 MI_Copy36B
-#define SetupModelDrawState_01fff810 SetupModelDrawState
-#define data_0205a924 NNS_G3dGlb
-#define data_0205a9b8 NNS_G3dGlb_prmBaseRot
-#define data_0205a9dc NNS_G3dGlb_prmBaseTrans
-#define func_02019188 NNS_G3dGlbFlushP
-#include "src/itcm/library_nns_g3d/SetupModelDrawState_01fff810.c"
+#include "nitro/types.h"
+#include "nitro/fx_types.h"
+#include "nitro/fx.h"
+
+typedef struct {
+    u8 pad_00[0x88];
+    u32 polygonAttr;
+    u8 pad_8c[0x38];
+    VecFx32 scale;
+    u8 pad_d0[4];
+    u32 flags;
+} GeometryState;
+
+typedef struct {
+    u8 pad_00[0x78];
+    void *model;
+    u8 pad_7c[0x28];
+    VecFx32 translation;
+} ModelDrawObject;
+
+typedef struct {
+    MtxFx33 rotation;
+    VecFx32 translation;
+} BaseTransform;
+
+extern void MI_Copy36B(const void *src, void *dst);
+extern u32 NNS_G3dMdlGetMdlPolygonID(void *model, u32 materialIndex);
+extern u32 NNS_G3dMdlGetMdlLightEnableFlag(void *model, u32 materialIndex);
+extern u32 NNS_G3dMdlGetMdlPolygonMode(void *model, u32 materialIndex);
+extern void NNS_G3dGlbFlushP(void);
+extern BaseTransform NNS_G3dGlb_prmBaseRot;
+extern GeometryState NNS_G3dGlb;
+
+void SetupModelDrawState(ModelDrawObject *object, fx32 scale, const MtxFx33 *rotation, u32 alpha)
+{
+    u32 polygonId;
+    u32 lightMask;
+    u32 polygonMode;
+    void *model;
+
+    MI_Copy36B(rotation, &NNS_G3dGlb_prmBaseRot.rotation);
+    NNS_G3dGlb_prmBaseRot.translation = object->translation;
+    NNS_G3dGlb.scale.x = scale;
+    NNS_G3dGlb.scale.y = scale;
+    NNS_G3dGlb.scale.z = scale;
+    model = object->model;
+    NNS_G3dGlb.flags &= ~0xa4;
+    polygonId = NNS_G3dMdlGetMdlPolygonID(model, 0);
+    lightMask = NNS_G3dMdlGetMdlLightEnableFlag(object->model, 0);
+    polygonMode = NNS_G3dMdlGetMdlPolygonMode(object->model, 0);
+    NNS_G3dGlb.polygonAttr = lightMask | (polygonMode << 4) | 0xc0 | (polygonId << 24) | (alpha << 16);
+    NNS_G3dGlbFlushP();
+}

@@ -1,3 +1,4 @@
 #define PollPanelOverlay13_02062e64 PollPanelOverlay13
+#define func_ov002_02062cb8 SwitchPanelMode
 #define func_ov013_0206c7e8 UpdatePanelScene_0206c7e8
 #include "src/ov002/panel_state/PollPanelOverlay13_02062e64.c"
