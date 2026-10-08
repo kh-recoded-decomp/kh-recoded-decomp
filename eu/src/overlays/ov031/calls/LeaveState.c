@@ -1,5 +1,5 @@
 #define LeaveState_020bab00 LeaveState
-#define func_02035dd0 func_02035de4
+#define func_02035dd0 UpdateActorSlotsAndBillboards
 #define func_ov001_02067d48 DrawVisibleSceneSlots
 #define func_ov001_0206daa8 RunFlaggedEventCallbacks
 #define func_ov001_020876ac func_ov001_020876d4

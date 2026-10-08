@@ -4,12 +4,12 @@
 
 extern void ShutdownOv082Screen(void);
 extern void InitOv082EntryList(void);
-extern void func_ov082_020bf390(void);
+extern void UpdateOv082EntryList(void);
 
 void *data_ov082_020bf6a0[16] = {
     (void *)InitOv082EntryList,
     (void *)ShutdownOv082Screen,
-    (void *)func_ov082_020bf390,
+    (void *)UpdateOv082EntryList,
     (void *)0x0000372C,
     NULL,
     NULL,

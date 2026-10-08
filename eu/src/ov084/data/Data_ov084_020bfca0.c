@@ -7,7 +7,7 @@ extern void SelectPrevOption(void);
 extern void TeardownSceneResources(void);
 extern void InitSelectMenu(void);
 extern void func_ov084_020bf9bc(void);
-extern void func_ov084_020bfbe4(void);
+extern void SelectNextOption(void);
 extern void func_ov084_020bfc28(void);
 
 void *data_ov084_020bfca0[17] = {
@@ -17,7 +17,7 @@ void *data_ov084_020bfca0[17] = {
     (void *)0x00000001,
     (void *)0x000001D4,
     (void *)SelectPrevOption,
-    (void *)func_ov084_020bfbe4,
+    (void *)SelectNextOption,
     NULL,
     NULL,
     (void *)func_ov084_020bfc28,

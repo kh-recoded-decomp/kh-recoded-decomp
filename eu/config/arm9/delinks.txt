@@ -6109,6 +6109,10 @@ src/calls/ResolveMergedRecordEntry.c:
     complete
     .text       start:0x020295dc end:0x020297c4
 
+src/calls/GrantStarterRecordPair.c:
+    complete
+    .text       start:0x020297c4 end:0x02029890
+
 src/calls/ClearItemCountsByGroup.c:
     complete
     .text       start:0x02029890 end:0x02029950
@@ -7061,6 +7065,10 @@ src/calls/RecordHitContact.c:
     complete
     .text       start:0x02031310 end:0x02031478
 
+src/calls/GatherQuadtreeFaces.c:
+    complete
+    .text       start:0x02031478 end:0x02031b9c
+
 src/calls/SetMotionQueueField.c:
     complete
     .text       start:0x02031b9c end:0x02031c04
@@ -7416,6 +7424,10 @@ src/calls/ActorSlot_IsWarmupDoneByIndex.c:
 src/calls/ActorSlot_StartWarmupByIndex.c:
     complete
     .text       start:0x02035d94 end:0x02035de4
+
+src/calls/UpdateActorSlotsAndBillboards.c:
+    complete
+    .text       start:0x02035de4 end:0x020360b4
 
 src/calls/ActorRegistry_ForEachCallback.c:
     complete

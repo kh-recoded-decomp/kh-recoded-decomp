@@ -32,6 +32,10 @@ src/overlays/ov006/auto/func_ov006_020a0a58.c:
     complete
     .text       start:0x020a0a58 end:0x020a0a5c
 
+src/overlays/ov006/calls/TryActivateElevatorSlot.c:
+    complete
+    .text       start:0x020a0a5c end:0x020a0b24
+
 src/overlays/ov006/calls/func_ov006_020a0c0c.c:
     complete
     .text       start:0x020a0c0c end:0x020a0c20

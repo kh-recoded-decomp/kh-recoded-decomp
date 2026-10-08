@@ -43,7 +43,7 @@ extern FieldObject *FieldObject_Create(FieldObjectClass *objectClass, u8 slotInd
 extern void ShadowVolume_Init(void *dest, VecFx32 *position, int value, int mode);
 extern void BuildCollisionShape(void *model, VecFx32 *position, int mode, fx32 x, fx32 y, fx32 z,
                                 u16 angle, int flags, int layer);
-extern void func_ov001_02084f60(FieldObject *object);
+extern void ResetFallingObjectSpawner(FieldObject *object);
 
 FieldObject *func_ov001_02085ca4(FieldObjectClass *objectClass, u8 slotIndex, u16 saveBitOffset, u8 saveBitCount,
                                  int unk6C, u16 unk5C, VecFx32 *position)
@@ -64,7 +64,7 @@ FieldObject *func_ov001_02085ca4(FieldObjectClass *objectClass, u8 slotIndex, u1
     object->unk_6C = unk6C;
     object->origin = *position;
     object->unk_5E = 0;
-    func_ov001_02084f60(object);
+    ResetFallingObjectSpawner(object);
     object->flags |= 0x4000;
     return object;
 }

@@ -1,0 +1,20 @@
+#define UpdateFallingBlock_020a58e0 UpdateFallingBlock
+#define func_ov042_020bd6ec FollowChainLeader
+#define func_ov042_020bd290 func_ov042_020bd2b0
+#define func_ov042_020bd2b0 Camera_GetGoalPosition
+#define func_ov042_020bd590 func_ov042_020bd5b0
+#define func_ov017_020a5d4c func_ov017_020a5d6c
+#define func_ov017_020a5d6c SetKind7EntryHidden
+#define ActorSlot_UnlinkByIndex_02035c28 ActorSlot_UnlinkByIndex
+#define CacheEntry_SetActive_02087258 CacheEntry_SetActive
+#define BuildCollisionShape_02080834 BuildCollisionShape
+#define func_02036240 ActorRegistry_GetEntityByIndex
+#define Obj_SetPosition_0203569c Obj_SetPosition
+#define func_ov017_020a51c8 func_ov017_020a51e8
+#define Obj_RemoveFromQuadTree_020355f4 Obj_RemoveFromQuadTree
+#define ResizeBoxCollisionObject_02033e6c ResizeBoxCollisionObject
+#define func_ov017_020a5854 func_ov017_020a5874
+#define func_ov017_020a5874 UpdateKind7EntryAnimations
+#define IsEntityWithinRange_02086cd8 IsEntityWithinRange
+#define ActorSlot_SetFlag8ByIndex_02036120 ActorSlot_SetFlag8ByIndex
+#include "src/ov017/field_objects/UpdateFallingBlock_020a58e0.c"

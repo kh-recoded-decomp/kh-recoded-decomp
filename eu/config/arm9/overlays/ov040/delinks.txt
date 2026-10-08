@@ -64,6 +64,10 @@ src/overlays/ov040/calls/FinishAreaSceneLoad.c:
     complete
     .text       start:0x020bcd6c end:0x020bce70
 
+src/overlays/ov040/calls/SetupAreaFieldState.c:
+    complete
+    .text       start:0x020bce70 end:0x020bd0f4
+
 src/overlays/ov040/calls/func_ov040_020bd0f4.c:
     complete
     .text       start:0x020bd0f4 end:0x020bd128
@@ -91,6 +95,10 @@ src/overlays/ov040/calls/FadeInAreaScreens.c:
 src/overlays/ov040/calls/func_ov040_020bd548.c:
     complete
     .text       start:0x020bd548 end:0x020bd568
+
+src/overlays/ov040/calls/FinishAreaScreenTransition.c:
+    complete
+    .text       start:0x020bd568 end:0x020bd5c4
 
 src/overlays/ov040/calls/EnterState13WithHalfRate.c:
     complete

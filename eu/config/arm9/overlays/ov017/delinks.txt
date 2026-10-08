@@ -556,6 +556,10 @@ src/overlays/ov017/calls/UpdateKind7EntryAnimations.c:
     complete
     .text       start:0x020a5874 end:0x020a5900
 
+src/overlays/ov017/calls/UpdateFallingBlock.c:
+    complete
+    .text       start:0x020a5900 end:0x020a5a98
+
 src/overlays/ov017/calls/func_ov017_020a5a98.c:
     complete
     .text       start:0x020a5a98 end:0x020a5aae

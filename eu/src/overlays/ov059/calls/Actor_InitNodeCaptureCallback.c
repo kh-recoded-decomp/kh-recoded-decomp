@@ -1,0 +1,5 @@
+#define Actor_InitNodeCaptureCallback_020cd254 Actor_InitNodeCaptureCallback
+#define ClearSbcCallback_020188b8 NNS_G3dRenderObjResetCallBack
+#define RegisterSbcCallback_020188a4 NNS_G3dRenderObjSetCallBack
+#define func_ov059_020c9134 NodeCallback_CaptureMatrix
+#include "src/ov059/unclassified_helpers/Actor_InitNodeCaptureCallback_020cd254.c"

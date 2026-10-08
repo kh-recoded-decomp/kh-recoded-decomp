@@ -1,5 +1,5 @@
 #define BuildCollisionShape_02080834 BuildCollisionShape
 #define FieldObject_CreateLinked_020819b4 FieldObject_CreateLinked
 #define FieldObject_Create_0207f440 FieldObject_Create
-#define func_ov001_02081728 func_ov001_02081750
+#define func_ov001_02081728 FieldObject_UpdateZoneTrigger
 #include "src/ov001/field_objects/FieldObject_CreateLinked_020819b4.c"

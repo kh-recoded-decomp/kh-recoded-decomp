@@ -140,6 +140,10 @@ src/overlays/ov073/calls/AddStatusMenuFlags.c:
     complete
     .text       start:0x020c1c00 end:0x020c1c70
 
+src/overlays/ov073/calls/ClearSharedStateFlag.c:
+    complete
+    .text       start:0x020c1c70 end:0x020c1ce0
+
 src/overlays/ov073/auto/func_ov073_020c1ce0.c:
     complete
     .text       start:0x020c1ce0 end:0x020c1ce8

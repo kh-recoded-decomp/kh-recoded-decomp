@@ -1,6 +1,6 @@
 #define BuildMenuEntryList_020bb314 BuildMenuEntryList
 #define ReadSessionPackedBits_02064574 ReadSessionPackedBits
 #define data_ov001_020a0460 data_ov001_020a0480
-#define func_ov037_020bb2e0 func_ov037_020bb300
+#define func_ov037_020bb2e0 AppendContinueMenuEntry
 #define g_ov037Context_020bb764 gContinueScreenContext
 #include "src/ov037/unclassified_helpers/BuildMenuEntryList_020bb314.c"

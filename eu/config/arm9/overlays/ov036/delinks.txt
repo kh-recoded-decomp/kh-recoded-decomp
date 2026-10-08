@@ -28,6 +28,10 @@ src/overlays/ov036/calls/func_ov036_020ba914.c:
     complete
     .text       start:0x020ba914 end:0x020ba948
 
+src/overlays/ov036/calls/StartPanelSceneLoad.c:
+    complete
+    .text       start:0x020ba948 end:0x020ba990
+
 src/overlays/ov036/calls/RunPanelScriptFrame.c:
     complete
     .text       start:0x020ba990 end:0x020ba9f0
@@ -43,6 +47,14 @@ src/overlays/ov036/calls/FinishPanelSceneSetup.c:
 src/overlays/ov036/calls/ShutdownPanelScene_020bab74.c:
     complete
     .text       start:0x020bab74 end:0x020bacf0
+
+src/overlays/ov036/calls/FinishPanelSceneTransition.c:
+    complete
+    .text       start:0x020bacf0 end:0x020bad34
+
+src/overlays/ov036/calls/ClearPanelSceneTransition.c:
+    complete
+    .text       start:0x020bad34 end:0x020bad5c
 
 src/overlays/ov036/calls/UpdatePendingSlotScene.c:
     complete

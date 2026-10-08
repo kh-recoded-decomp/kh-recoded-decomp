@@ -46,7 +46,7 @@ extern void RespawnElevatorObject(void);
 extern void func_ov001_0207f210(void);
 extern void func_ov001_0207f26c(void);
 extern void func_ov006_020a0a58(void);
-extern void func_ov006_020a0a5c(void);
+extern void TryActivateElevatorSlot(void);
 extern void func_ov006_020a0b24(void);
 extern void func_ov006_020a0c0c(void);
 extern void ReleaseOwnerResource(void);
@@ -75,7 +75,7 @@ ElevatorClass *CreateElevatorObjectClass(int count, const ElevatorDesc *desc)
     objectClass->hooks[6] = func_ov001_0207f26c;
     objectClass->hooks[7] = NULL;
     objectClass->hooks[10] = func_ov006_020a0a58;
-    objectClass->hooks[11] = func_ov006_020a0a5c;
+    objectClass->hooks[11] = TryActivateElevatorSlot;
     objectClass->hooks[14] = NULL;
     objectClass->hooks[12] = func_ov006_020a0b24;
     objectClass->hooks[13] = func_ov006_020a0c0c;

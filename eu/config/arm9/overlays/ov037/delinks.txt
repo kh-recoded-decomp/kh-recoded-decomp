@@ -136,6 +136,10 @@ src/overlays/ov037/calls/DrawMenuTexts.c:
     complete
     .text       start:0x020bb0e8 end:0x020bb300
 
+src/overlays/ov037/calls/AppendContinueMenuEntry.c:
+    complete
+    .text       start:0x020bb300 end:0x020bb334
+
 src/overlays/ov037/calls/BuildMenuEntryList.c:
     complete
     .text       start:0x020bb334 end:0x020bb3e0

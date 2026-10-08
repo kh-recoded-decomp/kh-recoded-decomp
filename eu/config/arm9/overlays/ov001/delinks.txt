@@ -3528,6 +3528,18 @@ src/overlays/ov001/calls/func_ov001_02078494.c:
     complete
     .text       start:0x02078494 end:0x020784a4
 
+src/overlays/ov001/calls/SetFieldEntryEnabled.c:
+    complete
+    .text       start:0x020784a4 end:0x02078500
+
+src/overlays/ov001/calls/AddItemToFieldSlot.c:
+    complete
+    .text       start:0x02078500 end:0x020785c0
+
+src/overlays/ov001/calls/MoveSelectedItemToSlot.c:
+    complete
+    .text       start:0x020785c0 end:0x0207865c
+
 src/overlays/ov001/calls/func_ov001_0207865c.c:
     complete
     .text       start:0x0207865c end:0x02078680
@@ -4868,6 +4880,10 @@ src/overlays/ov001/calls/IsLeadActorWithinRadius.c:
     complete
     .text       start:0x02080e58 end:0x02080e82
 
+src/overlays/ov001/calls/FieldObject_FinishEvent.c:
+    complete
+    .text       start:0x02080e84 end:0x02080ed0
+
 src/overlays/ov001/calls/RestoreFieldObjectActor.c:
     complete
     .text       start:0x02080ed0 end:0x02080ffa
@@ -4935,6 +4951,10 @@ src/overlays/ov001/calls/GetFieldOffset40_020816b0.c:
 src/overlays/ov001/calls/FieldObject_SyncWorkState.c:
     complete
     .text       start:0x020816b4 end:0x02081750
+
+src/overlays/ov001/calls/FieldObject_UpdateZoneTrigger.c:
+    complete
+    .text       start:0x02081750 end:0x02081934
 
 src/overlays/ov001/calls/CreateWorkSlotObjectClass.c:
     complete
@@ -5283,6 +5303,10 @@ src/overlays/ov001/calls/GetWorkFieldOffset50_02084e08.c:
 src/overlays/ov001/calls/FieldObject_CollideSweptShape.c:
     complete
     .text       start:0x02084e10 end:0x02084f60
+
+src/overlays/ov001/calls/ResetFallingObjectSpawner.c:
+    complete
+    .text       start:0x02084f60 end:0x02084f94
 
 src/overlays/ov001/calls/StartSpinningActor.c:
     complete

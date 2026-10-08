@@ -4,7 +4,7 @@ extern unsigned int data_ov035_020bc500;
 extern unsigned int DrawVisibleSceneSlots(void);
 extern unsigned int RunFlaggedEventCallbacks(void);
 extern unsigned int func_ov001_020876d4(void);
-extern unsigned int func_02035de4(void);
+extern unsigned int UpdateActorSlotsAndBillboards(void);
 extern unsigned int func_020bd2a4(void);
 extern unsigned int func_ov001_0206dc38(void);
 extern unsigned int func_ov021_020af528(int);
@@ -35,7 +35,7 @@ void DispatchSceneDrawCallbacks(void)
         RunFlaggedEventCallbacks();
     }
     if ((*(u16 *)(work + 0x22) & 0x40) != 0) {
-        func_02035de4();
+        UpdateActorSlotsAndBillboards();
     }
     if ((*(u16 *)(work + 0x22) & 0x10) != 0) {
         func_ov001_020876d4();

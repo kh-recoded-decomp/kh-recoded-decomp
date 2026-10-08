@@ -1,0 +1,17 @@
+#define FieldObject_UpdateZoneTrigger_02081728 FieldObject_UpdateZoneTrigger
+#define data_ov001_020a0460 data_ov001_020a0480
+#define func_ov001_020642a0 IsFieldTrackFlagSet
+#define ActorSlot_SetFlag8ByIndex_02036120 ActorSlot_SetFlag8ByIndex
+#define SceneObject_IsPointWithinOneUnit_02081a88 SceneObject_IsPointWithinOneUnit
+#define func_ov001_0207f810 func_ov001_0207f838
+#define SpawnSoundSlot_0204da8c SpawnSoundSlot
+#define GetBoundedEntryField_0206db5c GetBoundedEntryField
+#define func_ov021_020a75d8 SetClampedCursor
+#define func_ov058_020d6c0c RestoreEnemyHealthAndReset
+#define func_ov035_020baf88 ShowMovieMessage3700
+#define func_ov035_020bafc4 GetMovieCounterLimit
+#define func_ov032_020bb014 func_ov032_020bb034
+#define func_ov032_020bb034 AdvanceToRoutedSlot
+#define SNDi_LockMutex_020baf94 IsSessionFlag3701Set
+#define ConfigureChannelSlot_0206ca68 ConfigureChannelSlot
+#include "src/ov001/field_objects/FieldObject_UpdateZoneTrigger_02081728.c"

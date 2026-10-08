@@ -1,5 +1,5 @@
 #define ToggleSharedStateFlag_020c1d1c ToggleSharedStateFlag
 #define func_ov039_020bc630 GetMenuSharedState
 #define func_ov073_020c1be0 AddStatusMenuFlags
-#define func_ov073_020c1c50 func_ov073_020c1c70
+#define func_ov073_020c1c50 ClearSharedStateFlag
 #include "src/ov073/status_menu/ToggleSharedStateFlag_020c1d1c.c"

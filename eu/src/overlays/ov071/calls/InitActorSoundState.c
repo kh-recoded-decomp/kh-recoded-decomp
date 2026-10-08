@@ -1,4 +1,4 @@
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField
 #define InitActorSoundState_020d81a8 InitActorSoundState
-#define func_ov071_020d836c func_ov071_020d838c
+#define func_ov071_020d836c UpdateOv071BossState
 #include "src/ov071/unclassified_helpers/InitActorSoundState_020d81a8.c"

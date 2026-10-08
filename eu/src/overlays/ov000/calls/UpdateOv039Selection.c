@@ -8,7 +8,7 @@ typedef struct SelectionSession {
 extern s32 gOv039SelectionResultMap[];
 
 extern SelectionSession *NNSi_FndGetCurrentRootHeap(void);
-extern void func_ov039_020bbb8c(void *arg);
+extern void UpdateOverlayFrame(void *arg);
 extern BOOL IsStatePhaseIdle(void);
 extern int RuntimeState_GetObjectId(void);
 extern void ShutdownOverlay(int arg);
@@ -20,7 +20,7 @@ int UpdateOv039Selection(void)
 
     switch (session->status) {
     case 0:
-        func_ov039_020bbb8c(NULL);
+        UpdateOverlayFrame(NULL);
         if (IsStatePhaseIdle()) {
             result = RuntimeState_GetObjectId();
             if (result != -1) {

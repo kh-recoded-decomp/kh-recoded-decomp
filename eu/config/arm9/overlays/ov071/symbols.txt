@@ -6,7 +6,7 @@ func_ov071_020d8290 kind:function(thumb,size=0xd0) addr:0x020d8290
 HandleOv071OwnerEvent kind:function(thumb,size=0xe) addr:0x020d8360
 ReleaseOv071CameraResources kind:function(thumb,size=0x18) addr:0x020d8370
 func_ov071_020d8388 kind:function(thumb,size=0x4) addr:0x020d8388
-func_ov071_020d838c kind:function(thumb,size=0x11e0) addr:0x020d838c
+UpdateOv071BossState kind:function(thumb,size=0x11e0) addr:0x020d838c
 CreateOv071SceneTask kind:function(thumb,size=0x110) addr:0x020d956c
 data_ov071_020d9680 kind:data(any) addr:0x020d9680
 data_ov071_020d968c kind:data(any) addr:0x020d968c

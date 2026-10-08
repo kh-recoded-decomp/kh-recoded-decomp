@@ -1,6 +1,6 @@
 #define FixedPointMultiply12 FX_Mul
 #define UpdateFallingObject_02085218 UpdateFallingObject
-#define func_ov001_02084f38 func_ov001_02084f60
+#define func_ov001_02084f38 ResetFallingObjectSpawner
 #define func_ov001_0208502c AdvanceSpawnerTimer
 #define func_ov001_02085320 MoveProjectileBody
 #include "src/ov001/unclassified_helpers/UpdateFallingObject_02085218.c"

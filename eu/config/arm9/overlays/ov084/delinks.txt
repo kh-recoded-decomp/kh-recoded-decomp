@@ -32,6 +32,10 @@ src/overlays/ov084/calls/SelectPrevOption.c:
     complete
     .text       start:0x020bfba8 end:0x020bfbe4
 
+src/overlays/ov084/calls/SelectNextOption.c:
+    complete
+    .text       start:0x020bfbe4 end:0x020bfc28
+
 src/overlays/ov084/calls/func_ov084_020bfc28.c:
     complete
     .text       start:0x020bfc28 end:0x020bfc46

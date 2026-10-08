@@ -6,7 +6,7 @@ func_ov084_020bfa64 kind:function(thumb,size=0x96) addr:0x020bfa64
 DrawSelectMenuModel kind:function(thumb,size=0x88) addr:0x020bfafc
 UpdateSelectMenu kind:function(thumb,size=0x22) addr:0x020bfb84
 SelectPrevOption kind:function(thumb,size=0x3c) addr:0x020bfba8
-func_ov084_020bfbe4 kind:function(thumb,size=0x44) addr:0x020bfbe4
+SelectNextOption kind:function(thumb,size=0x44) addr:0x020bfbe4
 func_ov084_020bfc28 kind:function(thumb,size=0x1e) addr:0x020bfc28
 ResetMenuCursorWithSound kind:function(thumb,size=0x18) addr:0x020bfc48
 data_ov084_020bfc60 kind:data(any) addr:0x020bfc60

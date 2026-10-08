@@ -3,7 +3,7 @@
 extern void ResetAreaMeshValues(void); /* ResetAreaMeshValues */
 extern void func_ov040_020bcd28(void);
 extern void FinishAreaSceneLoad(void);
-extern void func_ov040_020bce70(void);
+extern void SetupAreaFieldState(void);
 extern void func_ov040_020bd0f4(void);
 extern void UpdateAreaSceneState(void); /* UpdateAreaSceneState */
 extern void StartAreaCameraIntro(void);
@@ -11,7 +11,7 @@ extern void TickIntroRotation(void); /* TickIntroRotation */
 extern void func_ov040_020bd418(void);
 extern void FadeInAreaScreens(void); /* FadeInAreaScreens */
 extern void func_ov040_020bd548(void);
-extern void func_ov040_020bd568(void);
+extern void FinishAreaScreenTransition(void);
 extern void EnterState13WithHalfRate(void); /* EnterState13WithHalfRate */
 extern void func_ov040_020bd5e0(void);
 extern void func_ov040_020bd604(void);
@@ -24,7 +24,7 @@ void (*gAreaSceneStateHandlers[19])(void) = {
     ResetAreaMeshValues, /* ResetAreaMeshValues */
     func_ov040_020bcd28,
     FinishAreaSceneLoad,
-    func_ov040_020bce70,
+    SetupAreaFieldState,
     func_ov040_020bd0f4,
     UpdateAreaSceneState, /* UpdateAreaSceneState */
     StartAreaCameraIntro,
@@ -32,7 +32,7 @@ void (*gAreaSceneStateHandlers[19])(void) = {
     func_ov040_020bd418,
     FadeInAreaScreens, /* FadeInAreaScreens */
     func_ov040_020bd548,
-    func_ov040_020bd568,
+    FinishAreaScreenTransition,
     EnterState13WithHalfRate, /* EnterState13WithHalfRate */
     func_ov040_020bd5e0,
     func_ov040_020bd604,

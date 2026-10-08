@@ -9,6 +9,7 @@
 #define IsPlayerEntryFlagSet_02050014 IsPlayerEntryFlagSet
 #define TickFieldMenuEntry_02078000 TickFieldMenuEntry
 #define UpdateSelectionCount_02050464 UpdateSelectionCount
+#define func_ov001_020784a4 SetFieldEntryEnabled
 #define func_ov001_02078360 SetFieldMenuMode_02078360
 #define func_ov021_020a8ab4 ResetAnimationTrackState
 #define func_ov021_020a8ca0 func_ov021_020a8cc0

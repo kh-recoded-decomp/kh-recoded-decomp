@@ -1,0 +1,18 @@
+#define HandleLinkHit_020a2774 HandleLinkHit
+#define func_ov001_0208764c func_ov001_02087674
+#define func_02036240 ActorRegistry_GetEntityByIndex
+#define RebindAnimTracks_020809d0 RebindAnimTracks
+#define func_0202f4e8 Flags16_ClearBit1
+#define FindLivePrevLink_020a2098 FindLivePrevLink
+#define FindLiveNextLink_020a20e0 FindLiveNextLink
+#define NNS_FndInitListWithOffset0_020a23a0 func_ov019_020a23c0
+#define _fp_init_020a23ac func_ov019_020a23cc
+#define DropRequest_InitKind0_020874fc DropRequest_InitKind0
+#define DropRequest_InitKind1_020874e0 DropRequest_InitKind1
+#define GrantEntryUnlockReward_02087518 GrantEntryUnlockReward
+#define RollRewardOrbDrop_020665bc RollRewardOrbDrop
+#define RefreshLeadLinkFlags_020a21e0 RefreshLeadLinkFlags
+#define SpawnSoundSlot_0204da8c SpawnSoundSlot
+#define EnterState12WithHalfRate_020bb1ac EnterState12WithHalfRate_020bb1cc
+#define AddSessionCounter_02063a80 AddSessionCounter
+#include "src/ov019/unclassified_helpers/HandleLinkHit_020a2774.c"
