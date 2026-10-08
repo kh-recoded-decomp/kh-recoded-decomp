@@ -5,7 +5,7 @@ typedef struct SelectionSession {
     s32 status;
 } SelectionSession;
 
-extern s32 data_ov000_020639cc[];
+extern s32 gOv039SelectionResultMap[];
 
 extern SelectionSession *NNSi_FndGetCurrentRootHeap(void);
 extern void func_ov039_020bbb8c(void *arg);
@@ -24,7 +24,7 @@ int UpdateOv039Selection(void)
         if (IsStatePhaseIdle()) {
             result = RuntimeState_GetObjectId();
             if (result != -1) {
-                result = data_ov000_020639cc[RuntimeState_GetObjectId()];
+                result = gOv039SelectionResultMap[RuntimeState_GetObjectId()];
             }
             session->result = result;
             func_ov039_020bbe80(0);

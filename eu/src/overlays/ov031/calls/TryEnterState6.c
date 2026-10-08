@@ -4,7 +4,7 @@
 #define func_ov001_02066780 ResumeTaskAndClearFlags
 #define func_ov001_0206daf8 UpdateEventObjects
 #define func_ov001_0207d120 LoadContextResourceGroups
-#define func_ov001_0207ef40 func_ov001_0207ef68
+#define func_ov001_0207ef40 SetOverlayLayerVisible
 #define func_ov001_02082860 func_ov001_02082888
 #define func_ov001_02087628 func_ov001_02087650
 #define func_ov001_0208804c ForwardToActiveService_02088074

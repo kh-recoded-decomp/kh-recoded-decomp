@@ -7,5 +7,5 @@
 #define func_01ff878c MIi_CpuCopyFast
 #define func_020033e0 DC_FlushAll
 #define func_02007250 GX_LoadBGPltt
-#define func_ov027_020b9e00 func_ov027_020b9e20
+#define func_ov027_020b9e00 MarkTileTableRowDirty
 #include "src/ov001/field_manager/FlushAndFreeBgScreen_0206fdac.c"

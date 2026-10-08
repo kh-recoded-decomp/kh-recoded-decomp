@@ -9,6 +9,6 @@
 #define data_ov001_0209dc74 data_ov001_0209dc9c
 #define func_01ff878c MIi_CpuCopyFast
 #define func_ov001_02073634 MakePrimaryVramKey_02073634
-#define func_ov027_020b9e00 func_ov027_020b9e20
+#define func_ov027_020b9e00 MarkTileTableRowDirty
 #define func_ov027_020ba25c LoadPackedFileView
 #include "src/ov001/text_rendering/InitFieldHudWindow_0206f200.c"

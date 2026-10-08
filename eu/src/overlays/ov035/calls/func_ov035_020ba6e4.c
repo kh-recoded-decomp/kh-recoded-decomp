@@ -11,7 +11,7 @@ extern unsigned int StoreToGlobalPtr4Field28();
 extern unsigned int ActorRegistry_ClearCollisionResult();
 extern unsigned int ShutdownSceneContext();
 extern unsigned int func_ov001_020685d4();
-extern unsigned int func_ov001_0207ef68();
+extern unsigned int SetOverlayLayerVisible();
 extern unsigned int func_ov001_0207efa0();
 extern unsigned int FreeMovieCharacterBuffers();
 extern unsigned int FreeMovieSlotBuffers();
@@ -25,7 +25,7 @@ unsigned int func_ov035_020ba6e4(void) {
   *(u16 *)(data_ov035_020bc500 + 6) = *(u16 *)(data_ov035_020bc500 + 6) & 0xfff3;
   func_ov001_020685d4();
   ShutdownSceneContext();
-  func_ov001_0207ef68(1);
+  SetOverlayLayerVisible(1);
   func_ov001_0207efa0();
   func_ov035_020bb7a8();
   if (*(int *)(data_ov035_020bc500 + 0x14) != -1) {

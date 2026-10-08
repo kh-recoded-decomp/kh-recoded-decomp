@@ -400,6 +400,10 @@ src/overlays/ov027/calls/func_ov027_020b9cf8.c:
     complete
     .text       start:0x020b9cf8 end:0x020b9d38
 
+src/overlays/ov027/calls/ClearTileTableRowAndMarkDirty.c:
+    complete
+    .text       start:0x020b9d38 end:0x020b9d68
+
 src/overlays/ov027/calls/func_ov027_020b9d68.c:
     complete
     .text       start:0x020b9d68 end:0x020b9d74
@@ -407,6 +411,14 @@ src/overlays/ov027/calls/func_ov027_020b9d68.c:
 src/overlays/ov027/calls/func_ov027_020b9e10.c:
     complete
     .text       start:0x020b9e10 end:0x020b9e20
+
+src/overlays/ov027/calls/MarkTileTableRowDirty.c:
+    complete
+    .text       start:0x020b9e20 end:0x020b9e50
+
+src/overlays/ov027/calls/ClearTileTableRowDirty.c:
+    complete
+    .text       start:0x020b9e50 end:0x020b9e80
 
 src/overlays/ov027/calls/FlushDirtyTileTableRows.c:
     complete

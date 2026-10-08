@@ -1,4 +1,4 @@
-#define ClearTileTableRowAndMarkDirty_020b9d18 func_ov027_020b9d38
+#define ClearTileTableRowAndMarkDirty_020b9d18 ClearTileTableRowAndMarkDirty
 #define InvokeCallbackForRecordId_020bf0c4 InvokeCallbackForRecordId
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define RunIntroSequenceStep_020bfea0 RunIntroSequenceStep

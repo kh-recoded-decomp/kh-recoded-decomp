@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-const u32 data_ov021_020b4e04[16] = {
+const u32 gDamageScaleTable[16] = {
     0x000001C0, 0x000000C0, 0x000001C0, 0x00000F00,
     0x00000280, 0x00000100, 0x00000280, 0x00001000,
     0x00000380, 0x00000200, 0x00000280, 0x00001100,

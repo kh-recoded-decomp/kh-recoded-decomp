@@ -4,4 +4,5 @@
 #define func_0202b788 GetLanguageIndex
 #define func_0204dd4c PrepareAndStartStream
 #define func_0204ded4 IsSoundStreamActive
+#define data_ov000_020639b8 gOv039SelectionDescriptor
 #include "src/ov000/panel_state/UpdatePanelLookup_02062c08.c"

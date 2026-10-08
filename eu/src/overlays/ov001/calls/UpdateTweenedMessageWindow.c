@@ -1,5 +1,5 @@
 #define DrawScaledWindowFrame_020796f8 DrawScaledWindowFrame
-#define MarkTileTableRowDirty_020b9e00 func_ov027_020b9e20
+#define MarkTileTableRowDirty_020b9e00 MarkTileTableRowDirty
 #define OS_GetTick_02003fd4 OS_GetTick
 #define SampleTweenValue_0205258c SampleTweenValue
 #define UpdateTweenedMessageWindow_02079f80 UpdateTweenedMessageWindow

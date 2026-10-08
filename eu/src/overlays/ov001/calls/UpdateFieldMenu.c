@@ -14,5 +14,5 @@
 #define func_ov001_02076ff4 DrawItemCountBadge
 #define func_ov001_020771a8 TriggerFieldMenuButtonRecords
 #define func_ov027_020b9d54 func_ov027_020b9d74
-#define func_ov027_020b9e00 func_ov027_020b9e20
+#define func_ov027_020b9e00 MarkTileTableRowDirty
 #include "src/ov001/field_manager/UpdateFieldMenu_020779f0.c"

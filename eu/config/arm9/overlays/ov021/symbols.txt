@@ -3,7 +3,7 @@ RefreshInputState kind:function(thumb,size=0x58) addr:0x020a6efc
 UpdateDirectionInput kind:function(thumb,size=0xa4) addr:0x020a6f54
 ToggleFieldButtonFlags kind:function(thumb,size=0xd0) addr:0x020a6ff8
 func_ov021_020a6ff8 kind:function(thumb,size=0xd0) addr:0x020a6ff8
-func_ov021_020a70c8 kind:function(thumb,size=0x3b8) addr:0x020a70c8
+UpdateFieldButtonInput kind:function(thumb,size=0x3b8) addr:0x020a70c8
 func_ov021_020a7480 kind:function(thumb,size=0xa) addr:0x020a7480
 UpdateFieldButton kind:function(thumb,size=0x84) addr:0x020a748c
 func_ov021_020a7510 kind:function(thumb,size=0x12) addr:0x020a7510
@@ -25,7 +25,7 @@ SetClampedCursor kind:function(thumb,size=0x12) addr:0x020a75f8
 AddClampedHealth kind:function(thumb,size=0x32) addr:0x020a760c
 ApplyScaledHealthDelta kind:function(thumb,size=0x30) addr:0x020a7640
 ScaleValueByPercentField kind:function(thumb,size=0x1c) addr:0x020a7670
-func_ov021_020a768c kind:function(thumb,size=0x244) addr:0x020a768c
+ComputeDamageAmount kind:function(thumb,size=0x244) addr:0x020a768c
 RollHitEffect kind:function(thumb,size=0x4c) addr:0x020a78d0
 TryApplyStatusEffect kind:function(thumb,size=0x144) addr:0x020a791c
 ApplyRewardByTier kind:function(thumb,size=0x1a0) addr:0x020a7a60
@@ -231,7 +231,7 @@ CreateEffectTask kind:function(thumb,size=0x168) addr:0x020acefc
 func_ov021_020ad064 kind:function(thumb,size=0x12) addr:0x020ad064
 func_ov021_020ad078 kind:function(thumb,size=0xc) addr:0x020ad078
 BeginEntryReaction kind:function(thumb,size=0xf0) addr:0x020ad084
-func_ov021_020ad174 kind:function(thumb,size=0x230) addr:0x020ad174
+CreateScriptedEffectTask kind:function(thumb,size=0x230) addr:0x020ad174
 SetupEffectSlots kind:function(thumb,size=0xec) addr:0x020ad3a4
 ResetObjectSlots kind:function(thumb,size=0x24) addr:0x020ad490
 func_ov021_020ad4b4 kind:function(thumb,size=0xe) addr:0x020ad4b4
@@ -499,7 +499,7 @@ SelectSequenceTrack kind:function(thumb,size=0x2e) addr:0x020b4bfc
 RunScriptThread kind:function(thumb,size=0x15c) addr:0x020b4c2c
 TickSequenceCountdown kind:function(thumb,size=0x42) addr:0x020b4d88
 data_ov021_020b4dcc kind:data(any) addr:0x020b4dcc
-data_ov021_020b4e04 kind:data(any) addr:0x020b4e04
+gDamageScaleTable kind:data(any) addr:0x020b4e04
 data_ov021_020b4e44 kind:data(any) addr:0x020b4e44
 data_ov021_020b4e50 kind:data(any) addr:0x020b4e50
 data_ov021_020b4e5c kind:data(any) addr:0x020b4e5c
@@ -528,7 +528,7 @@ sOv021_BaChGoWP2_020b5248 kind:data(any) addr:0x020b5248
 sOv021_BaChFormatSCpBZ_020b5258 kind:data(any) addr:0x020b5258
 data_ov021_020b5268 kind:data(any) addr:0x020b5268
 gEffectCreationHandlers kind:data(any) addr:0x020b5278
-data_ov021_020b5294 kind:data(any) addr:0x020b5294
+sCharacterCiPathFormat kind:data(any) addr:0x020b5294
 sOv021_BaChDaZ_020b52a4 kind:data(any) addr:0x020b52a4
 gSubModeOverlayIds kind:data(any) addr:0x020b52b0
 gSubModeTaskDefinition kind:data(any) addr:0x020b52c0

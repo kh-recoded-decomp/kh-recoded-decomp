@@ -1,5 +1,5 @@
 #define RefreshSharedUploadSlot_020c13f0 RefreshSharedUploadSlot
-#define func_ov027_020b9e00 func_ov027_020b9e20
+#define func_ov027_020b9e00 MarkTileTableRowDirty
 #define func_ov027_020b9e60 FlushDirtyTileTableRows
 #define func_ov039_020bc630 GetMenuSharedState
 #include "src/ov073/status_menu/RefreshSharedUploadSlot_020c13f0.c"

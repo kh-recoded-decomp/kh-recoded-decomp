@@ -18,7 +18,7 @@ extern int data_ov086_020c217c[];
 extern u32 data_ov086_020c219c[];
 extern void CallVirtualHandlerSlot1(void *context, int arg);
 extern void SetScreenLayerDirty(int layerId);
-extern void func_ov027_020b9e20(void *table, int id);
+extern void MarkTileTableRowDirty(void *table, int id);
 extern u32 ReadSessionPackedBits(int bitOffset, u32 bitCount);
 extern BOOL IsSessionFlagSet(u32 flagId);
 extern int func_ov086_020bf2b0(int group);
@@ -38,7 +38,7 @@ void DrawRecordPanelStats(RecordPanel *panel)
 
     CallVirtualHandlerSlot1(panel->handler, 0);
     SetScreenLayerDirty(0x18);
-    func_ov027_020b9e20(panel->tileTable, 0x19);
+    MarkTileTableRowDirty(panel->tileTable, 0x19);
     group = panel->group;
     func_ov086_020bee2c(panel, 0, func_ov086_020bf2b0(group), table.values[group]);
     group = panel->group;

@@ -1,5 +1,5 @@
 #define GFXi_EnqueueCommand_02014090 NNS_GfdRegisterNewVramTransferTask
 #define LoadFieldBottomRowTiles_0206ed30 LoadFieldBottomRowTiles
 #define UpdateWidgetLayerDefault_020b9df0 func_ov027_020b9e10
-#define func_ov027_020b9e00 func_ov027_020b9e20
+#define func_ov027_020b9e00 MarkTileTableRowDirty
 #include "src/ov001/field_manager/LoadFieldBottomRowTiles_0206ed30.c"

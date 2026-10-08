@@ -1,0 +1,8 @@
+#define StartOverlay41Phase_020bad08 StartOverlay41Phase
+#define g_movieContext_020bc4e0 data_ov035_020bc500
+#define OverlayId41_00000029 OVERLAY_41_ID
+#define func_02029f78 func_02029f8c
+#define func_ov041_020bc504 BuildAreaSceneInfo
+#define func_ov041_020bc5c0 InitMenuScene
+
+#include "src/ov035/unclassified_helpers/StartOverlay41Phase_020bad08.c"

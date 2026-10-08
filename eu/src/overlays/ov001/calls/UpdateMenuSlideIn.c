@@ -1,4 +1,4 @@
-#define ClearTileTableRowAndMarkDirty_020b9d18 func_ov027_020b9d38
+#define ClearTileTableRowAndMarkDirty_020b9d18 ClearTileTableRowAndMarkDirty
 #define SampleTweenValue_0205258c SampleTweenValue
 #define SetMenuHiddenAndReloadChars_0207525c SetMenuHiddenAndReloadChars
 #define UpdateMenuSlideIn_02070870 UpdateMenuSlideIn

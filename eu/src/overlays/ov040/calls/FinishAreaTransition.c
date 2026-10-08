@@ -2,7 +2,7 @@
 #define GetBiasAdjustedField_0206dc80 GetBiasAdjustedField
 #define ReleaseResourceAndDetach_0202eee8 ReleaseResourceAndDetach
 #define SetMenuHighlight_0206c2f8 SetMenuHighlight
-#define SetOverlayLayerVisible_0207ef40 func_ov001_0207ef68
+#define SetOverlayLayerVisible_0207ef40 SetOverlayLayerVisible
 #define StoreSessionSpawnPoint_02063524 StoreSessionSpawnPoint
 #define SuspendTaskAndSetFlag_020667b4 SuspendTaskAndSetFlag
 #define data_ov001_020a046c data_ov001_020a048c

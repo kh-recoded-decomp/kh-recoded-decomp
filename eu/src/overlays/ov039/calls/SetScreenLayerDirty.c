@@ -1,4 +1,4 @@
 #define SetScreenLayerDirty_020bc104 SetScreenLayerDirty
 #define data_ov039_020bea00 data_ov039_020bea20
-#define func_ov027_020b9e00 func_ov027_020b9e20
+#define func_ov027_020b9e00 MarkTileTableRowDirty
 #include "src/ov039/widget_layers/SetScreenLayerDirty_020bc104.c"

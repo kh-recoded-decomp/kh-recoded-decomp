@@ -1,4 +1,4 @@
-#define ClearTileTableRowAndMarkDirty_020b9d18 func_ov027_020b9d38
+#define ClearTileTableRowAndMarkDirty_020b9d18 ClearTileTableRowAndMarkDirty
 #define CountActiveSlots_020b74d8 CountActiveSlots
 #define DrawRemainingCountText_020b5858 DrawRemainingCountText
 #define FlushBufferAndRunCallback_0200153c FlushBufferAndRunCallback
@@ -7,7 +7,7 @@
 #define GetFieldFont3_020711e0 GetFieldFont3
 #define HandleDefaultMenuAction_020b5a94 HandleDefaultMenuAction
 #define InitTextLayerAtFromEnd_020014d0 InitTextLayerAtFromEnd
-#define MarkTileTableRowDirty_020b9e00 func_ov027_020b9e20
+#define MarkTileTableRowDirty_020b9e00 MarkTileTableRowDirty
 #define RefreshTagCallbacksAndSchedule_020b5e24 func_ov025_020b5e44
 #define ResolveEntryStoreWord_020b9088 func_ov027_020b90a8
 #define SetupMenuTextLayers_020b5c78 SetupMenuTextLayers

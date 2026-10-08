@@ -8,7 +8,7 @@
 #define GetOv070PaletteEntry_020d8114 GetOv070PaletteEntry
 #define ResetGaugeDisplay_020734f8 ResetGaugeDisplay
 #define SetManagerEnabled_0206e160 SetManagerEnabled
-#define SetPendingSlotFlagWithValue_0207d504 func_ov001_0207d52c
+#define SetPendingSlotFlagWithValue_0207d504 SetPendingSlotFlagWithValue
 #define StopAndClearSoundEmitter_020a8e14 StopAndClearSoundEmitter
 #define UpdateIdleTimeout_0206e1c8 UpdateIdleTimeout
 #define UpdateOv070BossTurnState_020d85c8 UpdateOv070BossTurnState

@@ -7,7 +7,7 @@
 #define GetStageActor_0209c040 GetStageActor
 #define HermiteInterpolateVec_020d5348 HermiteInterpolateVec
 #define ScaleVecFx32_01ffafb4 func_01ffafb4
-#define SetActorFacingDegrees_02090f3c func_ov001_02090f64
+#define SetActorFacingDegrees_02090f3c SetActorFacingDegrees
 #define VEC_Add_01ff9e0c VEC_Add
 #define VEC_CrossProduct_01ff9ea8 VEC_CrossProduct
 #define VEC_DotProduct_01ff9e6c VEC_DotProduct

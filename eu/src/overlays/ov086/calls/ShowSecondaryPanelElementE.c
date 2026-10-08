@@ -1,7 +1,7 @@
 #define ShowSecondaryPanelElementE_020c0320 ShowSecondaryPanelElementE
 #define func_ov027_020b90a4 FindWidgetById
 #define func_ov027_020b9580 SetEntrySlotsVisible
-#define func_ov027_020b9d18 func_ov027_020b9d38
+#define func_ov027_020b9d18 ClearTileTableRowAndMarkDirty
 #define func_ov039_020bc14c CallStateWidget
 #define func_ov039_020bc1cc GetMenuWidgetContainer
 #include "src/ov086/panel_state/ShowSecondaryPanelElementE_020c0320.c"

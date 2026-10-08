@@ -1,0 +1,7 @@
+#define StartOverlay40Phase_020bacc4 StartOverlay40Phase
+#define g_movieContext_020bc4e0 data_ov035_020bc500
+#define func_02029f78 func_02029f8c
+#define func_ov040_020bd730 func_ov040_020bd750
+#define OverlayId40_00000028 OVERLAY_40_ID
+
+#include "src/ov035/unclassified_helpers/StartOverlay40Phase_020bacc4.c"

@@ -1,4 +1,4 @@
 #define Mul64_02023d9c _ll_mul
-#define SetActorFacingDegrees_02090f3c func_ov001_02090f64
+#define SetActorFacingDegrees_02090f3c SetActorFacingDegrees
 #define TurnActorFacingDegrees_02090fa4 TurnActorFacingDegrees
 #include "src/ov001/shared_engine/TurnActorFacingDegrees_02090fa4.c"

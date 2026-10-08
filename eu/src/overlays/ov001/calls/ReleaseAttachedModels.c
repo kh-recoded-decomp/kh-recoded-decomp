@@ -1,0 +1,4 @@
+#define ReleaseAttachedModels_020822ac ReleaseAttachedModels
+#define ReleaseResourceAndDetach_0202eee8 ReleaseResourceAndDetach
+
+#include "src/ov001/actor_models/ReleaseAttachedModels_020822ac.c"

@@ -3,7 +3,7 @@
 #define GXS_LoadBG1Scr_020076a0 GXS_LoadBG1Scr
 #define GXS_LoadBG3Char_02007be0 GXS_LoadBG3Char
 #define GXS_LoadBGPltt_020072b4 GXS_LoadBGPltt
-#define MarkTileTableRowDirty_020b9e00 func_ov027_020b9e20
+#define MarkTileTableRowDirty_020b9e00 MarkTileTableRowDirty
 #define RestoreStatusSubScreen_020c1248 RestoreStatusSubScreen
 #define UpdateScreenWidgetLayer_020bc1e4 UpdateScreenWidgetLayer
 #define data_ov073_020c4240 data_ov073_020c4260

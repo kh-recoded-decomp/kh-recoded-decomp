@@ -20,6 +20,10 @@ src/overlays/ov021/calls/ToggleFieldButtonFlags.c:
     complete
     .text       start:0x020a6ff8 end:0x020a70c8
 
+src/overlays/ov021/calls/UpdateFieldButtonInput.c:
+    complete
+    .text       start:0x020a70c8 end:0x020a7480
+
 src/overlays/ov021/auto/func_ov021_020a7480.c:
     complete
     .text       start:0x020a7480 end:0x020a748a
@@ -99,6 +103,10 @@ src/overlays/ov021/calls/ApplyScaledHealthDelta.c:
 src/overlays/ov021/calls/ScaleValueByPercentField.c:
     complete
     .text       start:0x020a7670 end:0x020a768c
+
+src/overlays/ov021/calls/ComputeDamageAmount.c:
+    complete
+    .text       start:0x020a768c end:0x020a78d0
 
 src/overlays/ov021/calls/RollHitEffect.c:
     complete
@@ -859,6 +867,10 @@ src/overlays/ov021/calls/func_ov021_020ad078.c:
 src/overlays/ov021/calls/BeginEntryReaction.c:
     complete
     .text       start:0x020ad084 end:0x020ad174
+
+src/overlays/ov021/calls/CreateScriptedEffectTask.c:
+    complete
+    .text       start:0x020ad174 end:0x020ad3a4
 
 src/overlays/ov021/calls/SetupEffectSlots.c:
     complete

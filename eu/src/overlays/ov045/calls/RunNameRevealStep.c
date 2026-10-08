@@ -1,4 +1,4 @@
-#define ClearTileTableRowAndMarkDirty_020b9d18 func_ov027_020b9d38
+#define ClearTileTableRowAndMarkDirty_020b9d18 ClearTileTableRowAndMarkDirty
 #define DrawRotatedSprite_020c04c4 DrawRotatedSprite
 #define DrawTextAnchored_020015a0 DrawTextAnchored
 #define FillBackgroundLayerRect_02001a60 FillBackgroundLayerRect

@@ -7,7 +7,7 @@
 #define func_ov001_020676c4 ShutdownSceneContext
 #define func_ov001_0206dc80 GetBiasAdjustedField
 #define func_ov001_0207d658 func_ov001_0207d680
-#define func_ov001_0207ef40 func_ov001_0207ef68
+#define func_ov001_0207ef40 SetOverlayLayerVisible
 #define func_ov001_0207ef78 func_ov001_0207efa0
 #define g_ov029SoundCtx_020baba0 data_ov029_020babc0
 #include "src/ov029/reviewed_helpers/DisableOv029Sound_020ba768.c"

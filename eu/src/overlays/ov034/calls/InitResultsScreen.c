@@ -71,7 +71,7 @@ extern int ZeroHalfThenFree(u32 container);
 extern int func_0200146c(void *font, char *path);
 extern u16 *func_ov027_020b9e10(void *layer, int id);
 extern BOOL InitTextLayerAt(void *text, int layer, u16 *screenBase, void *font, TextFrame *frame);
-extern void func_ov027_020b9e20(void *layer, int id);
+extern void MarkTileTableRowDirty(void *layer, int id);
 extern int AcquireRecordSlot(int slot, int param);
 extern void func_ov027_020b7d78(void *tracker, TagConfig *config);
 extern void func_ov027_020b7e44(void *tracker, u32 fileId);
@@ -119,7 +119,7 @@ void InitResultsScreen(void)
     func_0200146c(WORK->fontAlt, data_ov034_020c0ed0);
     frame = data_ov034_020be8dc;
     InitTextLayerAt(WORK->text, 2, func_ov027_020b9e10(WORK->iconLayer, 10), WORK->font, &frame);
-    func_ov027_020b9e20(WORK->iconLayer, 10);
+    MarkTileTableRowDirty(WORK->iconLayer, 10);
     AcquireRecordSlot(0, 0);
     objContainer = Msg_OpenContainerAndReadHeader(sOv034_UiBtlBtluiP2_020c0ee8, 0xe, 0);
     iconContainer = Msg_OpenContainerAndReadHeader(sOv034_UiBtlBtlLanguageP2_020c0efc, 0xe, 0);

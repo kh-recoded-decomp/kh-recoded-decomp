@@ -9,7 +9,7 @@
 #define func_ov001_0207d120 LoadContextResourceGroups
 #define func_ov001_0207d210 func_ov001_0207d238
 #define func_ov001_0207d384 func_ov001_0207d3ac
-#define func_ov001_0207ef40 func_ov001_0207ef68
+#define func_ov001_0207ef40 SetOverlayLayerVisible
 #define func_ov001_02087628 func_ov001_02087650
 #define func_ov001_0208804c ForwardToActiveService_02088074
 #define func_ov021_020af57c ForwardSubModePairB

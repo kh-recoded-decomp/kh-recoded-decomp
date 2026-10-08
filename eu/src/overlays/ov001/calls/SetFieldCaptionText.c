@@ -5,5 +5,5 @@
 #define UpdateFieldWidgetLayer_020736b4 UpdateFieldWidgetLayer
 #define data_ov001_020a04a4 data_ov001_020a04c4
 #define func_0200160c func_02001620
-#define func_ov027_020b9e00 func_ov027_020b9e20
+#define func_ov027_020b9e00 MarkTileTableRowDirty
 #include "src/ov001/field_manager/SetFieldCaptionText_02072178.c"

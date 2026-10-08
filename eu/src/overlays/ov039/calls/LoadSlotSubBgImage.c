@@ -3,7 +3,7 @@
 #define GXS_LoadBGPltt_020072b4 GXS_LoadBGPltt
 #define GetBgDataFromArchive_0202b554 GetBgDataFromArchive
 #define LoadSlotSubBgImage_020bc55c LoadSlotSubBgImage
-#define MarkTileTableRowDirty_020b9e00 func_ov027_020b9e20
+#define MarkTileTableRowDirty_020b9e00 MarkTileTableRowDirty
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define UpdateWidgetLayerDefault_020b9df0 func_ov027_020b9e10
 #define data_ov039_020bea00 data_ov039_020bea20

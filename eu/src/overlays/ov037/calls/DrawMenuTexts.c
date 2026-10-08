@@ -7,7 +7,7 @@
 #define GetCtxModeByte_02068084 func_ov001_02068084
 #define InitTextLayerAt_020014b0 InitTextLayerAt
 #define LoadPackedFileView_020ba25c LoadPackedFileView
-#define MarkTileTableRowDirty_020b9e00 func_ov027_020b9e20
+#define MarkTileTableRowDirty_020b9e00 MarkTileTableRowDirty
 #define UpdateWidgetLayerDefault_020b9df0 func_ov027_020b9e10
 #define data_ov037_020bb64c data_ov037_020bb66c
 #define data_ov037_020bb670 data_ov037_020bb690

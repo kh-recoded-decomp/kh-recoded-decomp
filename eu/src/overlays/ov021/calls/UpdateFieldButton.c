@@ -1,6 +1,6 @@
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField
 #define HasFlagsAt0xe_020a752c HasFlagsAt0xe
-#define UpdateFieldButtonInput_020a70a8 func_ov021_020a70c8
+#define UpdateFieldButtonInput_020a70a8 UpdateFieldButtonInput
 #define UpdateFieldButton_020a746c UpdateFieldButton
 #define data_ov021_020b5600 gActiveFieldButtonEntryIndex
 #define func_ov021_020a6edc RefreshInputState

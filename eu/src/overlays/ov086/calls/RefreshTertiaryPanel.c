@@ -9,7 +9,7 @@
 #define func_ov027_020b90a4 FindWidgetById
 #define func_ov027_020b91c8 func_ov027_020b91e8
 #define func_ov027_020b9580 SetEntrySlotsVisible
-#define func_ov027_020b9e00 func_ov027_020b9e20
+#define func_ov027_020b9e00 MarkTileTableRowDirty
 #define func_ov039_020bc104 SetScreenLayerDirty
 #define func_ov039_020bc1cc GetMenuWidgetContainer
 #define func_ov039_020bc1e4 UpdateScreenWidgetLayer

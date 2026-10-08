@@ -1,5 +1,5 @@
 #define GaugePanel_Update_020cfd1c GaugePanel_Update
 #define NNS_FndInitListWithOffset0_0206ad28 func_ov001_0206ad28
-#define SetPendingSlotFlag_0207d4d0 func_ov001_0207d4f8
+#define SetPendingSlotFlag_0207d4d0 SetPendingSlotFlag
 #define func_ov059_020cf6cc PopupSprites_Draw
 #include "src/ov059/unclassified_helpers/GaugePanel_Update_020cfd1c.c"

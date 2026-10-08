@@ -21,12 +21,12 @@ extern void ReleaseFieldAndReset(void); /* ReleaseFieldAndReset */
 extern void UpdatePanelLookup(void); /* UpdatePanelLookup */
 extern void HandleSessionModeTransition(void); /* HandleSessionModeTransition */
 extern void ReleaseHandleAndResetDisplay(void); /* ReleaseHandleAndResetDisplay */
-extern void func_ov000_02062d38(void); /* LoadOverlay22AndClearFlag */
+extern void LoadOverlay22AndClearFlag(void);
 extern void UpdatePanelRequest(void); /* UpdatePanelRequest */
-extern void func_ov000_02062e00(void);
-extern void func_ov000_02062e3c(void);
+extern void ShutdownTitlePanel(void);
+extern void LoadOverlay3AndClearFlag(void);
 extern void func_ov000_02062e64(void);
-extern void func_ov000_02062f0c(void);
+extern void ReleaseTitleOverlayTask(void);
 extern void BeginTitleSaveFormat(void);
 extern void WaitTitleSaveFormat(void);
 extern void func_ov000_0206300c(void); /* PXI_Init */
@@ -66,12 +66,12 @@ void (*gPanelStateHandlers[43])(void) = {
     UpdatePanelLookup, /* UpdatePanelLookup */
     HandleSessionModeTransition, /* HandleSessionModeTransition */
     ReleaseHandleAndResetDisplay, /* ReleaseHandleAndResetDisplay */
-    func_ov000_02062d38, /* LoadOverlay22AndClearFlag */
+    LoadOverlay22AndClearFlag,
     UpdatePanelRequest, /* UpdatePanelRequest */
-    func_ov000_02062e00,
-    func_ov000_02062e3c,
+    ShutdownTitlePanel,
+    LoadOverlay3AndClearFlag,
     func_ov000_02062e64,
-    func_ov000_02062f0c,
+    ReleaseTitleOverlayTask,
     BeginTitleSaveFormat,
     WaitTitleSaveFormat,
     func_ov000_0206300c, /* PXI_Init */

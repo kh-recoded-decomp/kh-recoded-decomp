@@ -104,13 +104,25 @@ src/overlays/ov035/calls/FreeMovieSlotBuffers.c:
     complete
     .text       start:0x020bac94 end:0x020bace4
 
+src/overlays/ov035/calls/StartOverlay40Phase.c:
+    complete
+    .text       start:0x020bace4 end:0x020bad08
+
 src/overlays/ov035/calls/EndOverlay40Phase.c:
     complete
     .text       start:0x020bad08 end:0x020bad28
 
+src/overlays/ov035/calls/StartOverlay41Phase.c:
+    complete
+    .text       start:0x020bad28 end:0x020bad64
+
 src/overlays/ov035/calls/IsMovieWaitingForInput.c:
     complete
     .text       start:0x020bad64 end:0x020bad84
+
+src/overlays/ov035/calls/EndOverlay41Phase.c:
+    complete
+    .text       start:0x020bad84 end:0x020badb4
 
 src/overlays/ov035/calls/InitMovieSourceOps.c:
     complete

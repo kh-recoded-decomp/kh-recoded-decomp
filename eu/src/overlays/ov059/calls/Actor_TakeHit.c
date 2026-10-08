@@ -6,7 +6,7 @@
 #define ScaleVecFx32InPlace_0204a5e4 ScaleVecFx32InPlace
 #define StartCameraParticle_020bcb38 StartCameraParticle_020bcb58
 #define TryGuardFrontalHit_020c91fc TryGuardFrontalHit
-#define func_ov021_020a766c func_ov021_020a768c
+#define func_ov021_020a766c ComputeDamageAmount
 #define func_ov059_020cb968 Actor_ExitCommandMode
 #define func_ov059_020cd224 Actor_MarkGuardBreakInState3
 #define random_next_scaled_0202aa04 random_next_scaled

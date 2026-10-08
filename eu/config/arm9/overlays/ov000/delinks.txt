@@ -168,9 +168,25 @@ src/overlays/ov000/calls/ReleaseHandleAndResetDisplay.c:
     complete
     .text       start:0x02062cf4 end:0x02062d38
 
+src/overlays/ov000/calls/LoadOverlay22AndClearFlag.c:
+    complete
+    .text       start:0x02062d38 end:0x02062d60
+
 src/overlays/ov000/calls/UpdatePanelRequest.c:
     complete
     .text       start:0x02062d60 end:0x02062e00
+
+src/overlays/ov000/calls/ShutdownTitlePanel.c:
+    complete
+    .text       start:0x02062e00 end:0x02062e3c
+
+src/overlays/ov000/calls/LoadOverlay3AndClearFlag.c:
+    complete
+    .text       start:0x02062e3c end:0x02062e64
+
+src/overlays/ov000/calls/ReleaseTitleOverlayTask.c:
+    complete
+    .text       start:0x02062f0c end:0x02062f44
 
 src/overlays/ov000/calls/BeginTitleSaveFormat.c:
     complete
@@ -236,6 +252,14 @@ src/overlays/ov000/calls/UpdateTitlePanel.c:
     complete
     .text       start:0x02063424 end:0x02063578
 
+src/overlays/ov000/calls/EnterWorldSession.c:
+    complete
+    .text       start:0x02063578 end:0x020635d4
+
+src/overlays/ov000/calls/ExitWorldSession.c:
+    complete
+    .text       start:0x020635d4 end:0x02063614
+
 src/overlays/ov000/calls/NotifyOv039OfWorld.c:
     complete
     .text       start:0x02063614 end:0x02063630
@@ -251,6 +275,14 @@ src/overlays/ov000/calls/func_ov000_0206364c.c:
 src/overlays/ov000/calls/func_ov000_02063668.c:
     complete
     .text       start:0x02063668 end:0x02063680
+
+src/overlays/ov000/calls/EnterOv039Selection.c:
+    complete
+    .text       start:0x02063680 end:0x020636c4
+
+src/overlays/ov000/calls/ExitOv039Selection.c:
+    complete
+    .text       start:0x020636c4 end:0x020636ec
 
 src/overlays/ov000/calls/UpdateOv039Selection.c:
     complete

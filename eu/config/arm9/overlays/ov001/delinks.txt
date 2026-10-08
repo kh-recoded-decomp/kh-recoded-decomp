@@ -3988,6 +3988,14 @@ src/overlays/ov001/calls/func_ov001_0207d4e4.c:
     complete
     .text       start:0x0207d4e4 end:0x0207d4f8
 
+src/overlays/ov001/calls/SetPendingSlotFlag.c:
+    complete
+    .text       start:0x0207d4f8 end:0x0207d52c
+
+src/overlays/ov001/calls/SetPendingSlotFlagWithValue.c:
+    complete
+    .text       start:0x0207d52c end:0x0207d568
+
 src/overlays/ov001/calls/ApplyVerticalLayoutOffset.c:
     complete
     .text       start:0x0207d61c end:0x0207d658
@@ -4263,6 +4271,10 @@ src/overlays/ov001/calls/DestroyListNodes.c:
 src/overlays/ov001/calls/func_ov001_0207ef44.c:
     complete
     .text       start:0x0207ef44 end:0x0207ef68
+
+src/overlays/ov001/calls/SetOverlayLayerVisible.c:
+    complete
+    .text       start:0x0207ef68 end:0x0207ef90
 
 src/overlays/ov001/auto/func_ov001_0207ef90.c:
     complete
@@ -4788,6 +4800,10 @@ src/overlays/ov001/calls/ActivateFieldSwitchObject.c:
     complete
     .text       start:0x02082098 end:0x02082230
 
+src/overlays/ov001/calls/ReleaseAttachedModels.c:
+    complete
+    .text       start:0x020822d4 end:0x020822fe
+
 src/overlays/ov001/calls/ReleaseTaskWithCallback.c:
     complete
     .text       start:0x02082300 end:0x0208231e
@@ -5191,6 +5207,10 @@ src/overlays/ov001/calls/func_ov001_02086330.c:
 src/overlays/ov001/auto/func_ov001_02086384.c:
     complete
     .text       start:0x02086384 end:0x0208638e
+
+src/overlays/ov001/calls/Element_RunStopHook.c:
+    complete
+    .text       start:0x02086390 end:0x020863ac
 
 src/overlays/ov001/calls/FieldObject_ApplyActorSlotIndex.c:
     complete
@@ -6819,6 +6839,14 @@ src/overlays/ov001/auto/func_ov001_02090f2c.c:
 src/overlays/ov001/calls/WarpWalkerTo.c:
     complete
     .text       start:0x02090f34 end:0x02090f64
+
+src/overlays/ov001/calls/SetActorFacingDegrees.c:
+    complete
+    .text       start:0x02090f64 end:0x02090f98
+
+src/overlays/ov001/calls/SetActorTiltDegrees.c:
+    complete
+    .text       start:0x02090f98 end:0x02090fcc
 
 src/overlays/ov001/calls/TurnActorFacingDegrees.c:
     complete

@@ -1,4 +1,4 @@
 #define ReleaseTaskBase_0207f20c ReleaseOwnerResource
 #define ReleaseTaskWithCallback_020822d8 ReleaseTaskWithCallback
-#define ReleaseWorkResources_020822ac func_ov001_020822d4
+#define ReleaseWorkResources_020822ac ReleaseAttachedModels
 #include "src/ov001/unclassified_helpers/ReleaseTaskWithCallback_020822d8.c"

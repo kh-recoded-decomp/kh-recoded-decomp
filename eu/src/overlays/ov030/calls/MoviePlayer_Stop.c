@@ -10,7 +10,7 @@
 #define func_ov001_0206dc80 GetBiasAdjustedField
 #define func_ov001_0207b36c Panel_TryBeginTransition4
 #define func_ov001_0207d658 func_ov001_0207d680
-#define func_ov001_0207ef40 func_ov001_0207ef68
+#define func_ov001_0207ef40 SetOverlayLayerVisible
 #define func_ov001_0207ef78 func_ov001_0207efa0
 #define func_ov001_020828ac func_ov001_020828d4
 #define g_moviePlayerCtx_020bd000 data_ov030_020bd020

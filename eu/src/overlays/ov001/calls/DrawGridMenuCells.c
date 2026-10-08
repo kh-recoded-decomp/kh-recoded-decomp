@@ -8,5 +8,5 @@
 #define func_ov027_020b8390 FindLoadedElementById
 #define func_ov027_020b83e8 SetTagRecordArmed
 #define func_ov027_020b9d54 func_ov027_020b9d74
-#define func_ov027_020b9e00 func_ov027_020b9e20
+#define func_ov027_020b9e00 MarkTileTableRowDirty
 #include "src/ov001/field_manager/DrawGridMenuCells_02079790.c"

@@ -1,5 +1,5 @@
 func_ov033_020ba400 kind:function(arm,size=0x18) addr:0x020ba400
-func_ov033_020ba418 kind:function(arm,size=0x18) addr:0x020ba418
+LoadActorOverlay kind:function(arm,size=0x18) addr:0x020ba418
 func_ov033_020ba430 kind:function(arm,size=0x144) addr:0x020ba430
 func_ov033_020ba574 kind:function(arm,size=0x60) addr:0x020ba574
 func_ov033_020ba5d4 kind:function(arm,size=0x30) addr:0x020ba5d4

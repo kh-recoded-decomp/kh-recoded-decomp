@@ -1,0 +1,4 @@
+#define MarkTileTableRowDirty_020b9e00 MarkTileTableRowDirty
+#define FindTileTableIndex_020b9920 FindTileTableIndex
+
+#include "src/ov027/resource_container/MarkTileTableRowDirty_020b9e00.c"

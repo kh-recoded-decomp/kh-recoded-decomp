@@ -7,7 +7,7 @@
 #define GetStageMotionRecord_0209c18c GetStageMotionRecord
 #define PickStageEventSide_02098400 PickStageEventSide
 #define Session_Exists_02063a24 func_ov001_02063a24
-#define SetActorFacingDegrees_02090f3c func_ov001_02090f64
+#define SetActorFacingDegrees_02090f3c SetActorFacingDegrees
 #define SnapToStageGround_02098570 SnapToStageGround
 #define SpawnStageEventGroups_0209895c SpawnStageEventGroups
 #define SpawnStageGroup_02094f60 SpawnStageGroup

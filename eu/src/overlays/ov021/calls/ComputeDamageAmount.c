@@ -1,0 +1,12 @@
+#define ComputeDamageAmount_020a766c ComputeDamageAmount
+#define data_ov021_020b4de4 gDamageScaleTable
+#define func_02050014 IsPlayerEntryFlagSet
+#define func_02050050 GetPlayerEntryCount
+#define func_02023dbc _s32_div_f
+#define func_020511c4 GetFlagTableValue
+#define FixedPointMultiply12 FX_Mul
+#define FX_Div_01ff9c84 FX_Div
+#define GetSessionStateFlags2Bit_020649b8 GetSessionStateFlags2Bit
+#define AddSessionCounter_02063a80 AddSessionCounter
+
+#include "src/ov021/unclassified_helpers/ComputeDamageAmount_020a766c.c"

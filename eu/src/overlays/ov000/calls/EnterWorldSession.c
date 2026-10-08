@@ -1,0 +1,10 @@
+#define EnterWorldSession_02063578 EnterWorldSession
+#define data_02063a04 gWorldSession
+#define OverlayId27_0000001b OVERLAY_27_ID
+#define OverlayId39_00000027 OVERLAY_39_ID
+#define NNSi_FndGetCurrentRootHeap_0202a764 NNSi_FndGetCurrentRootHeap
+#define func_02029f78 func_02029f8c
+#define InitOverlayState_020bb888 func_ov039_020bb8a8
+#define NotifyOv039OfWorld_02063614 NotifyOv039OfWorld
+
+#include "src/ov000/shared_engine/EnterWorldSession_02063578.c"

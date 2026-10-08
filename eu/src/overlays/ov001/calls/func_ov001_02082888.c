@@ -4,7 +4,7 @@ extern unsigned int func_ov001_0207f040();
 extern unsigned int func_ov001_0207f050();
 extern unsigned int func_ov001_0207f060();
 extern unsigned int func_ov001_02082230();
-extern unsigned int func_ov001_020822d4();
+extern unsigned int ReleaseAttachedModels();
 
 void func_ov001_02082888(void) {
   int count;
@@ -19,7 +19,7 @@ void func_ov001_02082888(void) {
       actor = func_ov001_0207f050(index);
       if (((actor != 0) && (*(unsigned short *)(actor + 0x46) != 0)) &&
          (entry = func_ov001_0207f060(index,0), *(unsigned char *)(*(int *)(entry + 8) + 0x7d) == '\v')) {
-        func_ov001_020822d4(actor);
+        ReleaseAttachedModels(actor);
         func_ov001_02082230(actor);
         return;
       }

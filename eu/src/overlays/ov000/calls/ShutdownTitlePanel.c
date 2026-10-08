@@ -1,0 +1,6 @@
+#define ShutdownTitlePanel_02062e00 ShutdownTitlePanel
+#define SetupDisplayBanksAndLayers_0206141c SetupDisplayBanksAndLayers
+#define func_02029f98 func_02029fac
+#define OverlayId22_00000016 OVERLAY_22_ID
+
+#include "src/ov000/panel_state/ShutdownTitlePanel_02062e00.c"

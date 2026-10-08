@@ -1,0 +1,12 @@
+#define UpdateFieldButtonInput_020a70a8 UpdateFieldButtonInput
+#define g_saveData_0205fe0c data_0205fe0c
+#define func_ov001_02072020 CallFieldCommandHandler
+#define func_ov001_020720cc UpdateFieldFlag18
+#define func_ov001_02078360 SetFieldMenuMode_02078360
+#define PlaySoundEffect_0204d924 PlaySoundEffect
+#define SelectFieldMenuEntryById_02077f3c SelectFieldMenuEntryById
+#define func_ov021_020a751c HasFlagsAt0xc
+#define func_ov021_020a752c HasFlagsAt0xe
+#define GetFieldAt0xc_020a7554 SharedObject_GetFlagsA
+
+#include "src/ov021/unclassified_helpers/UpdateFieldButtonInput_020a70a8.c"
