@@ -256,6 +256,10 @@ src/overlays/ov059/calls/Actor_ResetMovementState.c:
     complete
     .text       start:0x020cb6a0 end:0x020cb774
 
+src/overlays/ov059/calls/Actor_UpdateDrift.c:
+    complete
+    .text       start:0x020cb774 end:0x020cb8b8
+
 src/overlays/ov059/calls/Actor_ProbeLinkIfFlagClear.c:
     complete
     .text       start:0x020cb8b8 end:0x020cb8ec

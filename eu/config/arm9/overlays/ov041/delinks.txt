@@ -68,6 +68,10 @@ src/overlays/ov041/calls/InitSlotGroups.c:
     complete
     .text       start:0x020bda88 end:0x020bdb74
 
+src/overlays/ov041/calls/FreeSceneGroupObjects.c:
+    complete
+    .text       start:0x020bdc28 end:0x020bdc8c
+
 src/overlays/ov041/calls/InitResourceLevels.c:
     complete
     .text       start:0x020bdc8c end:0x020bde1c
@@ -87,6 +91,10 @@ src/overlays/ov041/calls/func_ov041_020be088.c:
 src/overlays/ov041/calls/func_ov041_020be090.c:
     complete
     .text       start:0x020be090 end:0x020be098
+
+src/overlays/ov041/calls/UpdateStageHudMessage.c:
+    complete
+    .text       start:0x020be098 end:0x020be140
 
 src/overlays/ov041/calls/FreeManagerRecordTable.c:
     complete

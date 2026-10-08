@@ -8507,5 +8507,17 @@
   "src/overlays/ov101/calls/FreeMenuResourceSlots.c": "dsi/1.1",
   "src/overlays/ov101/calls/IsStateFlagSet.c": "dsi/1.1",
   "src/overlays/ov101/calls/SetStateFlag.c": "dsi/1.1",
-  "src/overlays/ov101/calls/SetStatePhase.c": "dsi/1.1"
+  "src/overlays/ov101/calls/SetStatePhase.c": "dsi/1.1",
+  "src/overlays/ov101/calls/GetStatePhase.c": "dsi/1.1",
+  "src/overlays/ov101/calls/InitStateLists.c": "dsi/1.1",
+  "src/overlays/ov101/calls/SetOv101SlotEntryVisible.c": "dsi/1.1",
+  "src/overlays/ov101/calls/SetEntryAnimFrame.c": "dsi/1.1",
+  "src/overlays/ov101/calls/GetOv101SlotEntryResource.c": "dsi/1.1",
+  "src/overlays/ov101/calls/CreateOv101SlotEntry.c": "dsi/1.1",
+  "src/overlays/ov101/calls/InitScrollPanel.c": "dsi/1.1",
+  "src/overlays/ov041/calls/FreeSceneGroupObjects.c": "dsi/1.1",
+  "src/overlays/ov001/calls/FieldObject_TrySpawn.c": "dsi/1.1",
+  "src/overlays/ov018/calls/RespawnKind6FieldObject.c": "dsi/1.1",
+  "src/overlays/ov041/calls/UpdateStageHudMessage.c": "dsi/1.1",
+  "src/overlays/ov059/calls/Actor_UpdateDrift.c": "dsi/1.1"
 }

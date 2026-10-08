@@ -8,7 +8,7 @@
 #define ShutdownMenuScene_020bca3c ShutdownMenuScene
 #define ZeroHalfThenFree_0202cd78 ZeroHalfThenFree
 #define func_ov001_0207d658 func_ov001_0207d680
-#define func_ov041_020bdc08 func_ov041_020bdc28
+#define func_ov041_020bdc08 FreeSceneGroupObjects
 #define func_ov041_020bdf00 FreeResourceLists
 #define func_ov041_020c0aac DestroySceneEntry
 #define func_ov041_020ce1e0 func_ov041_020ce200

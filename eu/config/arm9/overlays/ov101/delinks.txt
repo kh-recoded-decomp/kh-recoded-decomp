@@ -32,6 +32,30 @@ src/overlays/ov101/calls/DrawShadowedAnchoredText_020bfd34.c:
     complete
     .text       start:0x020bfd34 end:0x020bfd98
 
+src/overlays/ov101/calls/InitStateLists.c:
+    complete
+    .text       start:0x020bff40 end:0x020bff60
+
+src/overlays/ov101/calls/SetOv101SlotEntryVisible.c:
+    complete
+    .text       start:0x020bff60 end:0x020bff98
+
+src/overlays/ov101/calls/CreateOv101SlotEntry.c:
+    complete
+    .text       start:0x020bff98 end:0x020c00b8
+
+src/overlays/ov101/calls/SetEntryAnimFrame.c:
+    complete
+    .text       start:0x020c01c4 end:0x020c0218
+
+src/overlays/ov101/calls/GetOv101SlotEntryResource.c:
+    complete
+    .text       start:0x020c0218 end:0x020c0284
+
+src/overlays/ov101/calls/InitScrollPanel.c:
+    complete
+    .text       start:0x020c0284 end:0x020c04f0
+
 src/overlays/ov101/calls/IsStateFlagSet.c:
     complete
     .text       start:0x020c1334 end:0x020c1360
@@ -43,6 +67,10 @@ src/overlays/ov101/calls/SetStateFlag.c:
 src/overlays/ov101/calls/SetStatePhase.c:
     complete
     .text       start:0x020c17a4 end:0x020c17c8
+
+src/overlays/ov101/calls/GetStatePhase.c:
+    complete
+    .text       start:0x020c17c8 end:0x020c17e0
 
 src/overlays/ov101/auto/func_ov101_020c17e0.c:
     complete

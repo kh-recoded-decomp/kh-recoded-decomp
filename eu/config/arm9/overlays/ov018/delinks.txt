@@ -107,6 +107,10 @@ src/overlays/ov018/calls/CallWithZeroFlag.c:
     complete
     .text       start:0x020a35b4 end:0x020a35d6
 
+src/overlays/ov018/calls/RespawnKind6FieldObject.c:
+    complete
+    .text       start:0x020a35d8 end:0x020a37d0
+
 src/overlays/ov018/calls/SetFlagBit8.c:
     complete
     .text       start:0x020a37d0 end:0x020a37e2

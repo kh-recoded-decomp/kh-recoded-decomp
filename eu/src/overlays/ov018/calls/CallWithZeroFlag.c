@@ -1,3 +1,3 @@
 #define CallWithZeroFlag_020a3594 CallWithZeroFlag
-#define func_ov018_020a35b8 func_ov018_020a35d8
+#define func_ov018_020a35b8 RespawnKind6FieldObject
 #include "src/ov018/unclassified_helpers/CallWithZeroFlag_020a3594.c"

@@ -4,6 +4,6 @@
 #define UpdateSceneFade_020bcce8 UpdateSceneFade
 #define UpdateStageFrame_020bcb28 UpdateStageFrame
 #define data_ov041_020cf8c0 data_ov041_020cf8e0
-#define func_ov041_020be078 func_ov041_020be098
+#define func_ov041_020be078 UpdateStageHudMessage
 #define func_ov001_02074fa8 SetHudGaugeValueDefault
 #include "src/ov041/unclassified_helpers/UpdateStageFrame_020bcb28.c"
