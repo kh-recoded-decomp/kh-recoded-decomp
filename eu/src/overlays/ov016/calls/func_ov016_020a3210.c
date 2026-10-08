@@ -2,7 +2,7 @@
 
 extern unsigned int func_ov001_02086384();
 extern unsigned int IsNodeFlagBitClear();
-extern unsigned int func_ov016_020a229c();
+extern unsigned int UpdateFieldObjectHighlight();
 
 void func_ov016_020a3210(int owner) {
   int entry;
@@ -18,11 +18,11 @@ void func_ov016_020a3210(int owner) {
       active = IsNodeFlagBitClear();
       if (active != 0) {
         if (*(int *)(entry + 0x3c) + 0x1800 < 0x80) {
-          func_ov016_020a229c(entry,0);
+          UpdateFieldObjectHighlight(entry,0);
           flags = *(u32 *)(entry + 0xc0) | 0x1000000;
         }
         else {
-          func_ov016_020a229c(entry,1);
+          UpdateFieldObjectHighlight(entry,1);
           flags = *(u32 *)(entry + 0xc0) & 0xfeffffff;
         }
         *(u32 *)(entry + 0xc0) = flags;

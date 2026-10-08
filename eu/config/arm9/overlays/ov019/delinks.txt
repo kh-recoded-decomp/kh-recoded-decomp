@@ -84,9 +84,17 @@ src/overlays/ov019/calls/DrawActorModel.c:
     complete
     .text       start:0x020a2c6c end:0x020a2e28
 
+src/overlays/ov019/calls/UpdateDespawnAnimation.c:
+    complete
+    .text       start:0x020a2e28 end:0x020a2eec
+
 src/overlays/ov019/calls/ApplyDerivedIdState.c:
     complete
     .text       start:0x020a31a8 end:0x020a31be
+
+src/overlays/ov019/calls/RefreshLeadLinkState.c:
+    complete
+    .text       start:0x020a31c0 end:0x020a3218
 
 src/overlays/ov019/calls/IsDestroyed.c:
     complete

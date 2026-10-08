@@ -1,6 +1,6 @@
 #define DrawObjectWithDepthScale_020860b0 DrawObjectWithDepthScale
 #define FX_Div_01ff9c84 FX_Div
-#define SceneNode_Draw_01ffb12c func_01ffb12c
+#define SceneNode_Draw_01ffb12c SceneNode_Draw
 #define data_020536ac data_020536c0
 #define data_0205a92c NNS_G3dGlb_projMtx
 #define data_0205a9a4 NNS_G3dGlb_prmMatColor0

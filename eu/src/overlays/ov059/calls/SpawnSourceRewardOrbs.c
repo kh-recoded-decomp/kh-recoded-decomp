@@ -1,6 +1,6 @@
 #define AddSessionCounter_02063a80 AddSessionCounter
 #define GetKindDuration_020a37c4 GetKindDuration
-#define GetStageEventTargetInfo_02087960 func_ov001_02087988
+#define GetStageEventTargetInfo_02087960 GetStageEventTargetInfo
 #define SpawnRewardOrbs_02066514 SpawnRewardOrbs
 #define SpawnSourceRewardOrbs_020cd3c4 SpawnSourceRewardOrbs
 #define StageRecord_GetLinkedEntryValue_02087cf0 StageRecord_GetLinkedEntryValue

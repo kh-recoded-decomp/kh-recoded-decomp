@@ -18,7 +18,7 @@
 #define func_ov001_0208078c func_ov001_020807b4
 #define func_ov001_020809d0 RebindAnimTracks
 #define func_ov001_020872b8 IsNodeFlagBitClear
-#define func_ov017_020a3c78 func_ov017_020a3c98
+#define func_ov017_020a3c78 SetFieldObjectHidden_020a3c98
 #define func_ov017_020a3d40 IsFieldFlagBit1Set
 #define func_ov021_020a89a8 func_ov021_020a89c8
 #define selectJointAnimationBlend_0202f2cc selectJointAnimationBlend

@@ -1,6 +1,6 @@
 #define LoadMessageFiles_020bf3f0 StartGroupPhaseTwo
 #define RefreshFieldObjectPhase_020a5b24 RefreshFieldObjectPhase
-#define func_ov016_020a232c func_ov016_020a234c
+#define func_ov016_020a232c LinkStackedFieldObjects
 #define func_ov016_020a4a64 CheckFieldUnitHeightLimit
 #define func_ov016_020a6064 SyncFieldObjectAnimation
 #include "src/ov016/field_objects/RefreshFieldObjectPhase_020a5b24.c"

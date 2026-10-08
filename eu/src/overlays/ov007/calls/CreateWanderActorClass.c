@@ -31,7 +31,7 @@ extern void ReleaseOwnerResource(void);
 extern void func_ov001_0207f26c(void);
 extern void FreeEntryArray(void);
 extern void func_ov007_020a100c(void);
-extern void func_ov007_020a1044(void);
+extern void TryLaunchWanderActor(void);
 extern void GetRaisedOwnerPosition(void);
 
 WanderActorClass *CreateWanderActorClass(int count, int actorKind, int param, int pathCount)
@@ -58,7 +58,7 @@ WanderActorClass *CreateWanderActorClass(int count, int actorKind, int param, in
     objectClass->hooks[7] = FreeEntryArray;
     objectClass->hooks[10] = func_ov007_020a100c;
     objectClass->hooks[11] = NULL;
-    objectClass->hooks[14] = func_ov007_020a1044;
+    objectClass->hooks[14] = TryLaunchWanderActor;
     objectClass->hooks[12] = NULL;
     objectClass->hooks[13] = GetRaisedOwnerPosition;
     objectClass->unk_82 = 1;

@@ -1,5 +1,5 @@
 #define DrawPanelBlockCells_020a2348 DrawPanelBlockCells
-#define SceneNode_Draw_01ffb12c func_01ffb12c
+#define SceneNode_Draw_01ffb12c SceneNode_Draw
 #define TranslateAndFlushGeometry_020864c4 TranslateAndFlushGeometry
 #define func_02036240 ActorRegistry_GetEntityByIndex
 #define func_ov021_020af738 func_ov021_020af758

@@ -47,7 +47,7 @@ extern unsigned int ActorSlot_GetByIndex();
 extern unsigned int TransitionRecordSlot();
 extern unsigned int ClearRecordSlotFlag();
 extern unsigned int ActorRegistry_GetEntityByIndex();
-extern unsigned int func_ov016_020a229c();
+extern unsigned int UpdateFieldObjectHighlight();
 
 void func_ov016_020a2688(int work,int enabled) {
   int slot;
@@ -55,14 +55,14 @@ void func_ov016_020a2688(int work,int enabled) {
 
   slot = ActorSlot_GetByIndex(*(u8 *)(work + 0x32));
   if (enabled == 0) {
-    func_ov016_020a229c(work,0);
+    UpdateFieldObjectHighlight(work,0);
     if ((*(u16 *)(slot + 8) & 0x100) != 0) {
       ClearRecordSlotFlag((u32)*(u8 *)(work + 0x32));
     }
     *(u32 *)(work + 0xc0) = *(u32 *)(work + 0xc0) & 0xfffffffe;
     return;
   }
-  func_ov016_020a229c(work,1);
+  UpdateFieldObjectHighlight(work,1);
   entity = ActorRegistry_GetEntityByIndex((u32)*(u8 *)(work + 0x32));
   Obj_SetPosition(entity,(void *)(work + 0x38));
   if ((*(u16 *)(slot + 8) & 0x100) == 0) {

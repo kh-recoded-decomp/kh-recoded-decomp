@@ -5,7 +5,7 @@
 #define GetCtxModeByte_02068084 func_ov001_02068084
 #define QueueOrSendGeometryCommand_01ffa37c NNS_G3dGeBufferOP_N
 #define RegisterSbcCallback_020188a4 NNS_G3dRenderObjSetCallBack
-#define SceneNode_Draw_01ffb12c func_01ffb12c
+#define SceneNode_Draw_01ffb12c SceneNode_Draw
 #define ShadowVolume_Draw_02036b80 ShadowVolume_Draw
 #define func_02019188 NNS_G3dGlbFlushP
 #define func_02036240 ActorRegistry_GetEntityByIndex

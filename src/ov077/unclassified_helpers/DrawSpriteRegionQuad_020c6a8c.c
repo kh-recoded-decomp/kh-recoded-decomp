@@ -24,9 +24,28 @@ typedef struct SpriteRegion {
     u16 palette;
 } SpriteRegion;
 
+#ifdef USE_NNS_G3D_GLB
+typedef struct GeometryGlobalState {
+    u8 pad_00[0x94];
+    MtxFx33 prmBaseRot;
+    VecFx32 prmBaseTrans;
+    VecFx32 prmBaseScale;
+    u32 prmTexImageParam;
+    u32 flag;
+} GeometryGlobalState;
+
+extern GeometryGlobalState NNS_G3dGlb;
+#endif
+
 extern const MtxFx33 data_ov077_020ca174;
+#ifndef G3D_BASE_ROT
 extern MtxFx33 data_0205a9b8;
+#define G3D_BASE_ROT data_0205a9b8
+#endif
+#ifndef G3D_FLAGS
 extern GeometryState data_0205a9a4;
+#define G3D_FLAGS data_0205a9a4.flags
+#endif
 extern void func_0201931c(const VecFx32 *scale);
 extern void func_020192ec(const VecFx32 *trans);
 extern void MI_Copy36B_01ff87c4(const void *src, void *dst);
@@ -72,8 +91,8 @@ void DrawSpriteRegionQuad_020c6a8c(const SpriteRegion *region, BOOL highlighted)
     }
     func_0201931c(&scale);
     func_020192ec(&trans);
-    MI_Copy36B_01ff87c4(&rot, &data_0205a9b8);
-    data_0205a9a4.flags &= ~0xa4;
+    MI_Copy36B_01ff87c4(&rot, &G3D_BASE_ROT);
+    G3D_FLAGS &= ~0xa4;
     FlushGeometryState_02019230();
     u = region->u << 12;
     v = region->v << 12;

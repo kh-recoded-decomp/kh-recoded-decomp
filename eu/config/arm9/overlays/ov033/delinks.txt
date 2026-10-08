@@ -23,6 +23,10 @@ src/overlays/ov033/calls/ShutdownResumeModeContext.c:
     complete
     .text       start:0x020ba5d4 end:0x020ba604
 
+src/overlays/ov033/calls/BeginResumeMode.c:
+    complete
+    .text       start:0x020ba604 end:0x020ba71c
+
 src/overlays/ov033/calls/func_ov033_020ba71c.c:
     complete
     .text       start:0x020ba71c end:0x020ba74c
@@ -34,6 +38,10 @@ src/overlays/ov033/calls/func_ov033_020ba74c.c:
 src/overlays/ov033/auto/func_ov033_020ba7f0.c:
     complete
     .text       start:0x020ba7f0 end:0x020ba7f8
+
+src/overlays/ov033/calls/SetupResumeDisplay.c:
+    complete
+    .text       start:0x020ba7f8 end:0x020ba8f4
 
 src/overlays/ov033/calls/func_ov033_020ba8f4.c:
     complete

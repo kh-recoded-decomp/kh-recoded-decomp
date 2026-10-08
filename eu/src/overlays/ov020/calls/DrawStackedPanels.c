@@ -1,4 +1,4 @@
 #define DrawStackedPanels_020a3724 DrawStackedPanels
-#define SceneNode_Draw_01ffb12c func_01ffb12c
+#define SceneNode_Draw_01ffb12c SceneNode_Draw
 #define func_02036240 ActorRegistry_GetEntityByIndex
 #include "src/ov020/panel_state/DrawStackedPanels_020a3724.c"

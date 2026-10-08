@@ -1,4 +1,4 @@
 #define DrawActorWithShadow_02085b68 DrawActorWithShadow_02085b90
-#define SceneNode_Draw_01ffb12c func_01ffb12c
+#define SceneNode_Draw_01ffb12c SceneNode_Draw
 #define ShadowVolume_Draw_02036b80 ShadowVolume_Draw
 #include "src/ov001/actor_animation/DrawActorWithShadow_02085b68.c"

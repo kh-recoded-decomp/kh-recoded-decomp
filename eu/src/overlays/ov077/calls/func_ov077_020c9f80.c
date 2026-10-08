@@ -2,20 +2,23 @@
 #include "nitro/fx_types.h"
 #include "nitro/fx.h"
 
-typedef struct GeometryState {
-    u8 unknown_00[0x54];
-    u32 flags;
-} GeometryState;
-
 typedef struct MenuImage {
     s16 width;
     s16 height;
     u32 texParams[2];
 } MenuImage;
 
+typedef struct GeometryGlobalState {
+    u8 pad_00[0x94];
+    MtxFx33 prmBaseRot;
+    VecFx32 prmBaseTrans;
+    VecFx32 prmBaseScale;
+    u32 prmTexImageParam;
+    u32 flag;
+} GeometryGlobalState;
+
 extern const MtxFx33 data_ov077_020ca26c;
-extern MtxFx33 NNS_G3dGlb_prmBaseRot;
-extern GeometryState NNS_G3dGlb_prmMatColor0;
+extern GeometryGlobalState NNS_G3dGlb;
 extern void NNS_G3dGlbSetBaseScale(const VecFx32 *scale);
 extern void NNS_G3dGlbSetBaseTrans(const VecFx32 *trans);
 extern void MI_Copy36B(const void *src, void *dst);
@@ -56,8 +59,8 @@ void func_ov077_020c9f80(const MenuImage *images, u32 select, u32 pos, fx32 dept
     trans.z = depth;
     NNS_G3dGlbSetBaseScale(&scale);
     NNS_G3dGlbSetBaseTrans(&trans);
-    MI_Copy36B(&rot, &NNS_G3dGlb_prmBaseRot);
-    NNS_G3dGlb_prmMatColor0.flags &= ~0xa4;
+    MI_Copy36B(&rot, &NNS_G3dGlb.prmBaseRot);
+    NNS_G3dGlb.flag &= ~0xa4;
     NNS_G3dGlbFlushWVP();
     NNS_G3dGeBufferOP_N(0x2b2a, image->texParams, 2);
     GeCommand1(0x29, 0x1f08c0);

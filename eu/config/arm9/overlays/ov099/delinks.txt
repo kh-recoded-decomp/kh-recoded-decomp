@@ -164,6 +164,10 @@ src/overlays/ov099/calls/ApplyQuaternionCorrectionToMatrix_020c185c.c:
     complete
     .text       start:0x020c185c end:0x020c1908
 
+src/overlays/ov099/calls/DrawViewerSceneNode.c:
+    complete
+    .text       start:0x020c1908 end:0x020c1ab8
+
 src/overlays/ov099/calls/LoadViewerModelTable.c:
     complete
     .text       start:0x020c1ab8 end:0x020c1b28

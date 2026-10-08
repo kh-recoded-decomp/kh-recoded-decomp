@@ -72,6 +72,10 @@ src/overlays/ov001/calls/HandleSessionScriptResult.c:
     complete
     .text       start:0x0206269c end:0x02062838
 
+src/overlays/ov001/calls/ExitSessionAndCommitSave.c:
+    complete
+    .text       start:0x02062838 end:0x02062a54
+
 src/overlays/ov001/calls/ShutdownSessionOverlays.c:
     complete
     .text       start:0x02062a54 end:0x02062ac0
@@ -139,6 +143,10 @@ src/overlays/ov001/calls/RunPendingCallback.c:
 src/overlays/ov001/calls/ResetTrackState.c:
     complete
     .text       start:0x02062cf8 end:0x02062d1c
+
+src/overlays/ov001/calls/UpdateFieldBgm.c:
+    complete
+    .text       start:0x02062d1c end:0x02062e30
 
 src/overlays/ov001/calls/LoadSessionArchiveResource.c:
     complete
@@ -984,6 +992,10 @@ src/overlays/ov001/calls/RollRewardOrbDrop.c:
     complete
     .text       start:0x020665bc end:0x02066684
 
+src/overlays/ov001/calls/ApplyPartyStatGain.c:
+    complete
+    .text       start:0x02066684 end:0x0206671c
+
 src/overlays/ov001/calls/SpawnDropsPerTenUnits.c:
     complete
     .text       start:0x0206671c end:0x0206674c
@@ -1011,6 +1023,10 @@ src/overlays/ov001/calls/func_ov001_0206685c.c:
 src/overlays/ov001/calls/WakeNearbyIdleNodes.c:
     complete
     .text       start:0x02066874 end:0x020668e4
+
+src/overlays/ov001/calls/UpdatePrizeOrbs.c:
+    complete
+    .text       start:0x020668e4 end:0x02066c80
 
 src/overlays/ov001/calls/SubScene9_Create_02066c80.c:
     complete
@@ -1164,6 +1180,10 @@ src/overlays/ov001/calls/ConfigureMenuPanel.c:
     complete
     .text       start:0x02067bec end:0x02067c48
 
+src/overlays/ov001/calls/SetScenePanelAnimation.c:
+    complete
+    .text       start:0x02067c48 end:0x02067cd0
+
 src/overlays/ov001/calls/func_ov001_02067cd0.c:
     complete
     .text       start:0x02067cd0 end:0x02067d0c
@@ -1295,6 +1315,10 @@ src/overlays/ov001/calls/func_ov001_02068378.c:
 src/overlays/ov001/calls/RollLevelBonus.c:
     complete
     .text       start:0x0206838c end:0x020683e0
+
+src/overlays/ov001/calls/RollRandomRewardStats.c:
+    complete
+    .text       start:0x020683e0 end:0x0206844c
 
 src/overlays/ov001/calls/RollEnemyDrop.c:
     complete
@@ -2448,6 +2472,14 @@ src/overlays/ov001/calls/RefreshMenuEntries.c:
     complete
     .text       start:0x0206e378 end:0x0206e3d8
 
+src/overlays/ov001/calls/DeactivateManagerEntries.c:
+    complete
+    .text       start:0x0206e3d8 end:0x0206e444
+
+src/overlays/ov001/calls/SetFieldEntriesPaused.c:
+    complete
+    .text       start:0x0206e444 end:0x0206e4b4
+
 src/overlays/ov001/calls/NotifyManagerEntryObjects.c:
     complete
     .text       start:0x0206e4b4 end:0x0206e4f0
@@ -2455,6 +2487,10 @@ src/overlays/ov001/calls/NotifyManagerEntryObjects.c:
 src/overlays/ov001/calls/NotifySceneActorsPaused.c:
     complete
     .text       start:0x0206e4f0 end:0x0206e53c
+
+src/overlays/ov001/calls/SetFieldSpritesFlag.c:
+    complete
+    .text       start:0x0206e53c end:0x0206e584
 
 src/overlays/ov001/calls/IsFirstEntryFlagSet.c:
     complete
@@ -3084,6 +3120,10 @@ src/overlays/ov001/calls/func_ov001_02073060.c:
     complete
     .text       start:0x02073060 end:0x02073074
 
+src/overlays/ov001/calls/AddGaugePoints.c:
+    complete
+    .text       start:0x02073074 end:0x02073388
+
 src/overlays/ov001/calls/AdvanceMenuLevel.c:
     complete
     .text       start:0x02073388 end:0x020734f8
@@ -3308,9 +3348,17 @@ src/overlays/ov001/calls/GetGaugeRect.c:
     complete
     .text       start:0x020756d4 end:0x020758c2
 
+src/overlays/ov001/calls/DrawPartyGauges.c:
+    complete
+    .text       start:0x020758c4 end:0x02075ae8
+
 src/overlays/ov001/calls/AdvanceActiveSlotTimers.c:
     complete
     .text       start:0x02075ae8 end:0x02075b48
+
+src/overlays/ov001/calls/DrawFieldEntryRow.c:
+    complete
+    .text       start:0x02075b48 end:0x02075ccc
 
 src/overlays/ov001/calls/UpdateFieldPromptTag.c:
     complete
@@ -3372,6 +3420,14 @@ src/overlays/ov001/calls/func_ov001_02076a54.c:
     complete
     .text       start:0x02076a54 end:0x02076a9c
 
+src/overlays/ov001/calls/DrawFieldSlotCell.c:
+    complete
+    .text       start:0x02076a9c end:0x02076b80
+
+src/overlays/ov001/calls/StartCommandCooldownGauge.c:
+    complete
+    .text       start:0x02076b80 end:0x02076cac
+
 src/overlays/ov001/calls/RefreshFieldMenuHighlights.c:
     complete
     .text       start:0x02076cac end:0x02076e30
@@ -3391,6 +3447,10 @@ src/overlays/ov001/calls/func_ov001_02077148.c:
 src/overlays/ov001/calls/TriggerFieldMenuButtonRecords.c:
     complete
     .text       start:0x020771a8 end:0x0207723c
+
+src/overlays/ov001/calls/InitFieldCommandMenu.c:
+    complete
+    .text       start:0x0207723c end:0x020778bc
 
 src/overlays/ov001/calls/InitFieldMenu.c:
     complete
@@ -3556,9 +3616,17 @@ src/overlays/ov001/calls/MeasureMessageTiles.c:
     complete
     .text       start:0x02078dd8 end:0x02078e2e
 
+src/overlays/ov001/calls/BuildChoiceListWindows.c:
+    complete
+    .text       start:0x02078e30 end:0x02078fb4
+
 src/overlays/ov001/calls/GetTailOverhang.c:
     complete
     .text       start:0x02078fb4 end:0x02078ff6
+
+src/overlays/ov001/calls/PlaceMessageWindow.c:
+    complete
+    .text       start:0x02078ff8 end:0x020791e0
 
 src/overlays/ov001/calls/SetTextAndChoices.c:
     complete
@@ -3783,6 +3851,10 @@ src/overlays/ov001/calls/func_ov001_0207ae58.c:
 src/overlays/ov001/calls/UpdateIdleTimerToggle.c:
     complete
     .text       start:0x0207aec8 end:0x0207af6c
+
+src/overlays/ov001/calls/UpdatePanelConfirmTimer.c:
+    complete
+    .text       start:0x0207af6c end:0x0207aff0
 
 src/overlays/ov001/calls/UpdatePanelScene.c:
     complete
@@ -4092,6 +4164,10 @@ src/overlays/ov001/calls/func_ov001_0207d468.c:
     complete
     .text       start:0x0207d468 end:0x0207d484
 
+src/overlays/ov001/calls/SetSlotLayoutHighlight.c:
+    complete
+    .text       start:0x0207d484 end:0x0207d4e4
+
 src/overlays/ov001/calls/func_ov001_0207d4e4.c:
     complete
     .text       start:0x0207d4e4 end:0x0207d4f8
@@ -4103,6 +4179,10 @@ src/overlays/ov001/calls/SetPendingSlotFlag.c:
 src/overlays/ov001/calls/SetPendingSlotFlagWithValue.c:
     complete
     .text       start:0x0207d52c end:0x0207d568
+
+src/overlays/ov001/calls/PlaceSlotPanelAtWorldPosition.c:
+    complete
+    .text       start:0x0207d568 end:0x0207d61c
 
 src/overlays/ov001/calls/ApplyVerticalLayoutOffset.c:
     complete
@@ -4456,6 +4536,10 @@ src/overlays/ov001/calls/func_ov001_0207f26c.c:
     complete
     .text       start:0x0207f26c end:0x0207f280
 
+src/overlays/ov001/calls/DrawLodSceneObject.c:
+    complete
+    .text       start:0x0207f280 end:0x0207f2e4
+
 src/overlays/ov001/calls/CreateByteGrid.c:
     complete
     .text       start:0x0207f3a8 end:0x0207f3f8
@@ -4487,6 +4571,10 @@ src/overlays/ov001/calls/ReleaseObjectUse.c:
 src/overlays/ov001/calls/FieldObject_Refresh.c:
     complete
     .text       start:0x0207f6bc end:0x0207f71c
+
+src/overlays/ov001/calls/FieldObject_SetEnabled.c:
+    complete
+    .text       start:0x0207f71c end:0x0207f7cc
 
 src/overlays/ov001/calls/IsObjectFlagClear.c:
     complete
@@ -4784,6 +4872,10 @@ src/overlays/ov001/calls/RestoreFieldObjectActor.c:
     complete
     .text       start:0x02080ed0 end:0x02080ffa
 
+src/overlays/ov001/calls/FieldObject_RefreshSavedFlag.c:
+    complete
+    .text       start:0x02080ffc end:0x0208103c
+
 src/overlays/ov001/calls/FieldObject_TryStartEvent.c:
     complete
     .text       start:0x0208103c end:0x020810f0
@@ -4824,6 +4916,10 @@ src/overlays/ov001/calls/FieldObject_StopActorAnimation.c:
     complete
     .text       start:0x020814f8 end:0x0208154c
 
+src/overlays/ov001/calls/FieldObject_SpawnScaledActor.c:
+    complete
+    .text       start:0x0208154c end:0x020816a8
+
 src/overlays/ov001/auto/func_ov001_020816a8.c:
     complete
     .text       start:0x020816a8 end:0x020816aa
@@ -4835,6 +4931,10 @@ src/overlays/ov001/calls/GetFieldOffset40_020816ac.c:
 src/overlays/ov001/calls/GetFieldOffset40_020816b0.c:
     complete
     .text       start:0x020816b0 end:0x020816b4
+
+src/overlays/ov001/calls/FieldObject_SyncWorkState.c:
+    complete
+    .text       start:0x020816b4 end:0x02081750
 
 src/overlays/ov001/calls/CreateWorkSlotObjectClass.c:
     complete
@@ -5088,6 +5188,10 @@ src/overlays/ov001/calls/IsLeadActorNearPoint.c:
     complete
     .text       start:0x02083dc0 end:0x02083de4
 
+src/overlays/ov001/calls/UpdateFieldPointActivation.c:
+    complete
+    .text       start:0x02083de4 end:0x02083e98
+
 src/overlays/ov001/calls/UpdatePatrolIdle.c:
     complete
     .text       start:0x02083e98 end:0x02083fc4
@@ -5207,6 +5311,10 @@ src/overlays/ov001/calls/UpdateFallingObject.c:
 src/overlays/ov001/calls/ProbeWorldAlongVelocity.c:
     complete
     .text       start:0x020852a0 end:0x02085348
+
+src/overlays/ov001/calls/MoveProjectileBody.c:
+    complete
+    .text       start:0x02085348 end:0x0208575c
 
 src/overlays/ov001/calls/CheckSurfaceFacing.c:
     complete
@@ -5476,6 +5584,10 @@ src/overlays/ov001/calls/func_ov001_0208707c.c:
     complete
     .text       start:0x0208707c end:0x020870a0
 
+src/overlays/ov001/calls/SetCachePaused.c:
+    complete
+    .text       start:0x020870a0 end:0x020870e4
+
 src/overlays/ov001/auto/func_ov001_020870e4.c:
     complete
     .text       start:0x020870e4 end:0x020870f4
@@ -5523,6 +5635,10 @@ src/overlays/ov001/calls/CacheEntry_SetActive.c:
 src/overlays/ov001/calls/IsNodeFlagBitClear.c:
     complete
     .text       start:0x020872e0 end:0x02087318
+
+src/overlays/ov001/calls/AllocEffectBufferSlot.c:
+    complete
+    .text       start:0x02087318 end:0x02087370
 
 src/overlays/ov001/calls/ResourceCache_LoadModeTables.c:
     complete
@@ -5672,6 +5788,10 @@ src/overlays/ov001/calls/func_ov001_0208796c.c:
     complete
     .text       start:0x0208796c end:0x02087988
 
+src/overlays/ov001/calls/GetStageEventTargetInfo.c:
+    complete
+    .text       start:0x02087988 end:0x02087c14
+
 src/overlays/ov001/calls/QueryStageEventPlacement.c:
     complete
     .text       start:0x02087c14 end:0x02087c74
@@ -5787,6 +5907,10 @@ src/overlays/ov001/calls/func_ov001_020880f8.c:
 src/overlays/ov001/calls/func_ov001_02088100.c:
     complete
     .text       start:0x02088100 end:0x02088108
+
+src/overlays/ov001/calls/AssignPartySlotToStageEvent.c:
+    complete
+    .text       start:0x02088108 end:0x020881a8
 
 src/overlays/ov001/calls/func_ov001_020881a8.c:
     complete
@@ -7032,6 +7156,10 @@ src/overlays/ov001/calls/ReleaseAllAttachments.c:
     complete
     .text       start:0x02091428 end:0x0209147c
 
+src/overlays/ov001/calls/SetLinkedActorPartHidden.c:
+    complete
+    .text       start:0x0209147c end:0x020914de
+
 src/overlays/ov001/calls/AttachActorResource.c:
     complete
     .text       start:0x020914e0 end:0x02091598
@@ -7219,6 +7347,10 @@ src/overlays/ov001/calls/RaycastMoveStep.c:
 src/overlays/ov001/calls/GetCollisionShapeParams.c:
     complete
     .text       start:0x0209313c end:0x020931ae
+
+src/overlays/ov001/calls/ResetStageActorFlags.c:
+    complete
+    .text       start:0x020931b0 end:0x02093358
 
 src/overlays/ov001/auto/func_ov001_02093604.c:
     complete

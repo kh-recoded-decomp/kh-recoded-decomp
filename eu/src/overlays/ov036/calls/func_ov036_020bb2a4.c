@@ -56,7 +56,7 @@ typedef struct PanelContext {
 
 extern PanelContext data_ov036_020c3940;
 extern void AdvanceSlotTransition(void);
-extern void func_ov036_020bbfb0(int layerIndex);
+extern void UpdateScreenLayer(int layerIndex);
 extern void func_ov036_020bb564(int slotIndex);
 extern void StepSceneModelMove(PanelModel *model);
 extern void ReleaseModelSlot(s32 groupHandle, int force);
@@ -77,7 +77,7 @@ void func_ov036_020bb2a4(void)
     }
     for (i = 0; i < 2; i++) {
         if (work->layers[i].active != 0) {
-            func_ov036_020bbfb0(i);
+            UpdateScreenLayer(i);
         }
     }
     for (i = 0; i < 8; i++) {

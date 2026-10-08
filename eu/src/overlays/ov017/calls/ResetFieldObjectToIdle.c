@@ -7,6 +7,6 @@
 #define func_0202f4e8 Flags16_ClearBit1
 #define func_02036240 ActorRegistry_GetEntityByIndex
 #define func_02036924 TransitionRecordSlot
-#define func_ov017_020a3c78 func_ov017_020a3c98
+#define func_ov017_020a3c78 SetFieldObjectHidden_020a3c98
 #define selectJointAnimationBlend_0202f2cc selectJointAnimationBlend
 #include "src/ov017/field_objects/ResetFieldObjectToIdle_020a3e10.c"

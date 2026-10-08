@@ -1,6 +1,6 @@
 #define RefreshRemainingCount_020b58d8 RefreshRemainingCount
 #define data_ov025_020b7760 data_ov025_020b7780
-#define func_ov025_020b582c func_ov025_020b584c
+#define func_ov025_020b582c AdvanceMenuDelayCounter
 #define func_ov025_020b5858 DrawRemainingCountText
 #define func_ov025_020b74d8 CountActiveSlots
 #define func_ov027_020b9e00 MarkTileTableRowDirty

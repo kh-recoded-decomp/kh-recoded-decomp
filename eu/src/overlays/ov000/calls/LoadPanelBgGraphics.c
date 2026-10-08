@@ -1,0 +1,6 @@
+#define LoadPanelBgGraphics_020616dc LoadPanelBgGraphics
+#define func_0202c478 Archive_LoadFile
+#define GetBgDataFromArchive_0202b554 GetBgDataFromArchive
+#define func_02014d38 NNS_G2dGetUnpackedBGCharacterData
+
+#include "src/ov000/panel_state/LoadPanelBgGraphics_020616dc.c"

@@ -38,7 +38,7 @@ extern void NNS_FndInitListWithOffset0_0204f130(void *list);
 extern u16 AdvanceAnimationTracks(void *animation, int delta);
 extern int func_0202f4cc(void *animation, int track);
 extern int *func_01ffb2f8(void *animation, int track, int frame);
-extern void func_01ffb12c(void *animation);
+extern void SceneNode_Draw(void *animation);
 
 int UpdateTitlePanel(void)
 {
@@ -69,7 +69,7 @@ int UpdateTitlePanel(void)
             func_01ffb2f8(panel->animation, 2, frame - 0x1000);
             panel->animationLooped = TRUE;
         }
-        func_01ffb12c(panel->animation);
+        SceneNode_Draw(panel->animation);
     }
     return result;
 }

@@ -1,3 +1,4 @@
+#define func_ov001_0206e444 SetFieldEntriesPaused
 #define func_ov001_020645c8 IsSessionFlagSet
 #define ArePartyActorsSettled_0206e5b8 ArePartyActorsSettled
 #define CanAdvancePastIntro_02063cac func_ov001_02063cac

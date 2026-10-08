@@ -11,6 +11,7 @@
 #define func_02026dc0 InitSaveSystem
 #define SetPanelState_02061db0 SetPanelState
 #define EnterPanelPhase_02062270 EnterPanelPhase
+#define func_ov000_020616dc LoadPanelBgGraphics
 #define data_ov000_0206397c sOv000_TtlTtlP2_0206397c
 #define func_ov000_02063424 UpdateTitlePanel
 #include "src/ov000/panel_state/InitTitleScreen_02063240.c"

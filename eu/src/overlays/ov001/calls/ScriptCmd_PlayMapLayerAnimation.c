@@ -1,4 +1,5 @@
 #define ScriptCmd_PlayMapLayerAnimation_0206527c ScriptCmd_PlayMapLayerAnimation
+#define func_ov001_02067c48 SetScenePanelAnimation
 #define ScriptVm_ReadOperandFx32_02025df8 ScriptVm_ReadOperandFx32
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
 #include "src/ov001/shared_engine/ScriptCmd_PlayMapLayerAnimation_0206527c.c"

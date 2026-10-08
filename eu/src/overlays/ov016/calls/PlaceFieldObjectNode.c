@@ -1,4 +1,4 @@
 #define PlaceFieldObjectNode_020a2aac PlaceFieldObjectNode
 #define RebindAnimTracks_020809d0 RebindAnimTracks
-#define SceneNode_Draw_01ffb12c func_01ffb12c
+#define SceneNode_Draw_01ffb12c SceneNode_Draw
 #include "src/ov016/field_objects/PlaceFieldObjectNode_020a2aac.c"

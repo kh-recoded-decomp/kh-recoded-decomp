@@ -1,7 +1,7 @@
 #include "nitro/types.h"
 
 extern void ActorRegistry_ForEachCallback(s32 channelMask);
-extern void func_ov001_020668e4(void);
+extern void UpdatePrizeOrbs(void);
 extern void UpdateSceneAnimsAndCaption(s32 channelMask);
 extern void UpdatePartyEntries(s32 channelMask);
 extern void UpdateFieldObjectStates(s32 channelMask);
@@ -15,7 +15,7 @@ void func_ov032_020bb388(s32 keepAlive) {
     UpdatePartyEntries(0x1000);
     if (keepAlive == 0) {
         StageManager_Update(0x1000);
-        func_ov001_020668e4();
+        UpdatePrizeOrbs();
     }
     ActorRegistry_ForEachCallback(0x1000);
 }

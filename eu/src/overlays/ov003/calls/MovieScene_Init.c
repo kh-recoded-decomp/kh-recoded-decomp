@@ -35,7 +35,7 @@ extern u8 data_ov003_020650f4[];
 extern char sOv003_OpOpP2_02065868[];
 extern u8 gMovieScriptCommandHandlers[];
 extern u8 sOv003_OpScrZ_02065874[];
-extern void func_ov003_020643f0(void);
+extern void MovieScene_Run(void);
 extern char OVERLAY_22_ID[];
 
 extern void *NNSi_FndGetCurrentRootHeap(void);
@@ -110,5 +110,5 @@ void *MovieScene_Init(int fromTitle)
     held = buttons & ~((buttons & 0x40) << 1) & ~((buttons & 0x20) >> 1);
     scene->skipHeld = held & 8;
     WriteGlobalPackedBits(0x1a02, 3, GetLanguageIndex());
-    return func_ov003_020643f0;
+    return MovieScene_Run;
 }

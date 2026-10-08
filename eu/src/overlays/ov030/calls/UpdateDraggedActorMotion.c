@@ -16,5 +16,5 @@
 #define func_ov052_020d03b8 HandlePendingCommand
 #define func_ov052_020d0524 HandleMemberMenuInput
 #define func_ov052_020d0e80 ApproachTargetValue
-#define func_ov052_020d19f8 func_ov052_020d1a18
+#define func_ov052_020d19f8 InitSlotEntry
 #include "src/ov030/shared_engine/UpdateDraggedActorMotion_020bbacc.c"

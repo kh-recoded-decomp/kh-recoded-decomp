@@ -11,7 +11,7 @@ FinishMovieMenuLoad kind:function(thumb,size=0x84) addr:0x020ba9a4
 ResumeSceneAndAdvance kind:function(thumb,size=0xc8) addr:0x020baa28
 CompleteGroupTransition kind:function(thumb,size=0x34) addr:0x020baaf0
 func_ov032_020bab24 kind:function(thumb,size=0x510) addr:0x020bab24
-func_ov032_020bb034 kind:function(thumb,size=0x118) addr:0x020bb034
+AdvanceToRoutedSlot kind:function(thumb,size=0x118) addr:0x020bb034
 InitializeGroupAction kind:function(thumb,size=0x24) addr:0x020bb14c
 FinishGroupTransition kind:function(thumb,size=0x5c) addr:0x020bb170
 EnterState12WithHalfRate_020bb1cc kind:function(thumb,size=0x1a) addr:0x020bb1cc
@@ -139,7 +139,7 @@ func_ov032_020bf47c kind:function(thumb,size=0xc) addr:0x020bf47c
 SpawnGroupMemberGrid kind:function(thumb,size=0x328) addr:0x020bf488
 TickFieldObjectCounters kind:function(thumb,size=0xa0) addr:0x020bf7b0
 UpdateObjectGroupMembers kind:function(thumb,size=0x1ac) addr:0x020bf850
-func_ov032_020bf9fc kind:function(thumb,size=0x1c8) addr:0x020bf9fc
+DrawGroupMemberModel kind:function(thumb,size=0x1c8) addr:0x020bf9fc
 ApplyGroupLeaderHit kind:function(thumb,size=0x1e0) addr:0x020bfbc4
 ScriptCmd_StoreFieldUnitRecord kind:function(thumb,size=0x154) addr:0x020bfda4
 data_ov032_020bfef8 kind:data(any) addr:0x020bfef8

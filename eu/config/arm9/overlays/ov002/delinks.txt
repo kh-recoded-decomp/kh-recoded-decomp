@@ -252,6 +252,10 @@ src/overlays/ov002/calls/ScrollListKeys.c:
     complete
     .text       start:0x020631b4 end:0x020631e0
 
+src/overlays/ov002/calls/SetScrollListPixels.c:
+    complete
+    .text       start:0x020631e0 end:0x02063280
+
 src/overlays/ov002/calls/SetScrollListPosition.c:
     complete
     .text       start:0x02063280 end:0x020632ac
@@ -812,6 +816,10 @@ src/overlays/ov002/calls/func_ov002_02069b8c.c:
     complete
     .text       start:0x02069b8c end:0x02069bc8
 
+src/overlays/ov002/calls/SetRecordFlagBit.c:
+    complete
+    .text       start:0x02069bc8 end:0x02069cd4
+
 src/overlays/ov002/calls/SetRecordFlagFromTable.c:
     complete
     .text       start:0x02069cd4 end:0x02069d04
@@ -867,6 +875,10 @@ src/overlays/ov002/calls/func_ov002_0206a9f8.c:
 src/overlays/ov002/calls/CheckRecordEntryRequirements.c:
     complete
     .text       start:0x0206aa28 end:0x0206aaa0
+
+src/overlays/ov002/calls/RankPreferredItems.c:
+    complete
+    .text       start:0x0206aaa0 end:0x0206abc0
 
 src/overlays/ov002/calls/TallyFlagGroups.c:
     complete

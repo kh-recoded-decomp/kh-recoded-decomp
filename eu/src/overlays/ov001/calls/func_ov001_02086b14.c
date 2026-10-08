@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-extern void func_01ffb12c(int arg);
+extern void SceneNode_Draw(int arg);
 extern int QueryLinkTarget(void);
 extern int func_ov001_020870e4(void);
 
@@ -14,6 +14,6 @@ void func_ov001_02086b14(int param1, int useCallback) {
             cb(obj);
             return;
         }
-        func_01ffb12c(param1 + 0x14);
+        SceneNode_Draw(param1 + 0x14);
     }
 }

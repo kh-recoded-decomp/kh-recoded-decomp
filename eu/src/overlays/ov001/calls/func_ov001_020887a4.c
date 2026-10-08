@@ -45,7 +45,7 @@ typedef struct ScriptOperand {
 extern unsigned int data_ov001_020a0500;
 extern unsigned int ActorChannel_SelectBuffer();
 extern unsigned int LoadDefaultProjectionValues();
-extern unsigned int func_01ffb12c();
+extern unsigned int SceneNode_Draw();
 extern unsigned int camera_commit_explicit_projection();
 extern unsigned int ActorSlot_GetFlagsByIndex();
 extern unsigned int ActorRegistry_GetEntityByIndex();
@@ -78,7 +78,7 @@ void func_ov001_020887a4(void) {
         }
         else {
           actor = ActorRegistry_GetEntityByIndex(*(u32 *)(slot + 0x3f08) & 0xffff);
-          func_01ffb12c(&actor->flags_004);
+          SceneNode_Draw(&actor->flags_004);
         }
       }
       index = index + 1;

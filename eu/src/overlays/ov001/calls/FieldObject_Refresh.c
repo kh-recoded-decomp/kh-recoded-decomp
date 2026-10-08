@@ -1,4 +1,4 @@
 #define FieldObject_Refresh_0207f694 FieldObject_Refresh
-#define FieldObject_SetEnabled_0207f6f4 func_ov001_0207f71c
+#define FieldObject_SetEnabled_0207f6f4 FieldObject_SetEnabled
 #define func_02036184 Container_HasFlag3
 #include "src/ov001/unclassified_helpers/FieldObject_Refresh_0207f694.c"

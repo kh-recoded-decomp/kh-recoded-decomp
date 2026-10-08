@@ -1,5 +1,5 @@
 #define ApplyAnimRootMotion_020cff8c ApplyAnimRootMotion
-#define InitSlotEntryFromRecord_020d1a68 func_ov052_020d1a88
+#define InitSlotEntryFromRecord_020d1a68 InitSlotEntryFromRecord
 #define ProcessTargetHitEntries_020d012c ProcessTargetHitEntries
 #define ResetGaugeDisplay_020734f8 ResetGaugeDisplay
 #define SetManagerEnabled_0206e160 SetManagerEnabled

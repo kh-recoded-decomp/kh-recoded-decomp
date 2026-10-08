@@ -240,6 +240,10 @@ src/overlays/ov076/calls/SlotMenu_EquipRecordEntry.c:
     complete
     .text       start:0x020c82f8 end:0x020c8354
 
+src/overlays/ov076/calls/SlotMenu_EquipSlotEntry.c:
+    complete
+    .text       start:0x020c8354 end:0x020c83a8
+
 src/overlays/ov076/calls/SlotMenu_OpenSlotMessage.c:
     complete
     .text       start:0x020c83a8 end:0x020c8404

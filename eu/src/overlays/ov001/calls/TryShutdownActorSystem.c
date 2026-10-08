@@ -12,7 +12,7 @@ extern void func_ov001_0206375c(void);
 extern s32 func_ov001_02063a38(void);
 extern s32 IsSessionFlagSet(s32 id);
 extern void ClearSessionPackedBit(s32 id);
-extern void func_ov001_0206e444(s32 flag);
+extern void SetFieldEntriesPaused(s32 flag);
 extern s32 IsFieldPanelHidden(void);
 extern void ClearAllActorSlots(void);
 extern s32 IsTransitionStateDone(void);
@@ -32,7 +32,7 @@ s32 TryShutdownActorSystem(void)
         PopVramState();
         ClearAllActorSlots();
         func_ov001_0206375c();
-        func_ov001_0206e444(1);
+        SetFieldEntriesPaused(1);
         ZeroHalfThenFree(manager->releasableHandle);
         manager->releasableHandle = 0;
         sessionMode = func_ov001_02063a38();

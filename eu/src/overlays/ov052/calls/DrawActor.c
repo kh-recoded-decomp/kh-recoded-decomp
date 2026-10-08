@@ -5,6 +5,6 @@
 #define DrawSlotMarker_020ab898 DrawSlotMarker
 #define GetSlot3WorldPosition_020cbfdc GetSlot3WorldPosition
 #define InvokeMemberDrawCallbacks_020ad714 InvokeMemberDrawCallbacks
-#define SceneNode_Draw_01ffb12c func_01ffb12c
+#define SceneNode_Draw_01ffb12c SceneNode_Draw
 #define UpdateActorShadow_020cbe7c UpdateActorShadow
 #include "src/ov052/model_display/DrawActor_020ccd24.c"

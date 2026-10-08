@@ -1,5 +1,5 @@
 #define DisableCategory6Objects_020bbebc DisableCategory6Objects
-#define FieldObject_SetDisabled_020a333c func_ov018_020a335c
+#define FieldObject_SetDisabled_020a333c FieldObject_SetDisabled
 #define func_ov001_0208635c func_ov001_02086384
 #define func_ov001_02087204 func_ov001_0208722c
 #define func_ov001_02087214 func_ov001_0208723c

@@ -1,7 +1,7 @@
 #define FieldObject_GetSavedValue_0207f9a8 FieldObject_GetSavedValue
 #define FieldObject_TryStartEvent_02081014 FieldObject_TryStartEvent
 #define IsFirstEntryFlagSet_0206e584 IsFirstEntryFlagSet
-#define SetActorsEnabled_0206e444 func_ov001_0206e444
+#define SetActorsEnabled_0206e444 SetFieldEntriesPaused
 #define SetSessionFinishCallback_02063678 SetSessionScriptParams
 #define StartSessionScript_020635b0 OpenSessionArchive
 #define TryBeginSessionEvent_02063694 TryRaiseSessionScriptFlags

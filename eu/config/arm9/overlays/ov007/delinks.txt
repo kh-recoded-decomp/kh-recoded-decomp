@@ -71,6 +71,14 @@ src/overlays/ov007/calls/StepBounceBody.c:
     complete
     .text       start:0x020a0b1c end:0x020a0ba4
 
+src/overlays/ov007/calls/SteerHomingParticle.c:
+    complete
+    .text       start:0x020a0ba4 end:0x020a0d44
+
+src/overlays/ov007/calls/StepHomingBounceBody.c:
+    complete
+    .text       start:0x020a0d44 end:0x020a0e78
+
 src/overlays/ov007/calls/StartLaunchMotion.c:
     complete
     .text       start:0x020a0e78 end:0x020a0eec
@@ -87,6 +95,14 @@ src/overlays/ov007/calls/GetRaisedOwnerPosition.c:
     complete
     .text       start:0x020a1018 end:0x020a1044
 
+src/overlays/ov007/calls/TryLaunchWanderActor.c:
+    complete
+    .text       start:0x020a1044 end:0x020a1138
+
+src/overlays/ov007/calls/UpdateWanderActor.c:
+    complete
+    .text       start:0x020a1138 end:0x020a15c8
+
 src/overlays/ov007/calls/DrawWanderMotionModels.c:
     complete
     .text       start:0x020a15c8 end:0x020a1740
@@ -102,6 +118,10 @@ src/overlays/ov007/calls/CreateWanderActorClass.c:
 src/overlays/ov007/calls/CreateEmoteFieldObject.c:
     complete
     .text       start:0x020a185c end:0x020a18e0
+
+src/overlays/ov007/calls/ApplyWanderCommand.c:
+    complete
+    .text       start:0x020a18e0 end:0x020a1af4
 
 src/overlays/ov007/calls/SetPathTable.c:
     complete

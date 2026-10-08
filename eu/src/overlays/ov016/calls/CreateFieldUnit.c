@@ -9,7 +9,7 @@
 #define MIi_CpuCopyFast_01ff878c MIi_CpuCopyFast
 #define NNSi_FndAllocFromDefaultHeapEx_0202a19c NNS_FndAllocFromDefaultExpHeapEx
 #define RefreshFieldObjectPhase_020a5b24 RefreshFieldObjectPhase
-#define SaveFieldUnitRecords_020a5d18 func_ov016_020a5d38
+#define SaveFieldUnitRecords_020a5d18 SaveFieldUnitRecords
 #define func_ov001_0208635c func_ov001_02086384
 #define func_ov016_020a5084 HandleFieldObjectHit_020a50a4
 #define func_ov016_020a52f4 GetFieldUnitTopPosition

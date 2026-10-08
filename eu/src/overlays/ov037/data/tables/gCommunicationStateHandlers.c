@@ -2,26 +2,26 @@
 
 extern void MarkCommChannelBusy(void); /* MarkCommChannelBusy */
 extern void SyncSessionCommFlags(void); /* SyncSessionCommFlags */
-extern void func_ov037_020ba810(void); /* FinishCommSession */
+extern void FinishCommSession(void); /* FinishCommSession */
 extern void NotifyCommSlotIfReady(void); /* NotifyCommSlotIfReady */
 extern void ResetCommSlotWhenIdle(void); /* ResetCommSlotWhenIdle */
 extern void StoreCommResultSlot(void); /* StoreCommResultSlot */
 extern void UpdateMenuSelectionAndReturnState7(void);
 extern void AdvanceCommWhenReady(void); /* AdvanceCommWhenReady */
 extern void MarkCommBusyWhenReady(void); /* MarkCommBusyWhenReady */
-extern void func_ov037_020ba9a0(void); /* CloseCommAndRestoreRoom */
+extern void CloseCommAndRestoreRoom(void); /* CloseCommAndRestoreRoom */
 extern void FinishCommunicationState(void);
 
 void (*gCommunicationStateHandlers[11])(void) = {
     MarkCommChannelBusy, /* MarkCommChannelBusy */
     SyncSessionCommFlags, /* SyncSessionCommFlags */
-    func_ov037_020ba810, /* FinishCommSession */
+    FinishCommSession, /* FinishCommSession */
     NotifyCommSlotIfReady, /* NotifyCommSlotIfReady */
     ResetCommSlotWhenIdle, /* ResetCommSlotWhenIdle */
     StoreCommResultSlot, /* StoreCommResultSlot */
     UpdateMenuSelectionAndReturnState7,
     AdvanceCommWhenReady, /* AdvanceCommWhenReady */
     MarkCommBusyWhenReady, /* MarkCommBusyWhenReady */
-    func_ov037_020ba9a0, /* CloseCommAndRestoreRoom */
+    CloseCommAndRestoreRoom, /* CloseCommAndRestoreRoom */
     FinishCommunicationState,
 };

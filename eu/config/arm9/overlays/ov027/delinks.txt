@@ -392,9 +392,17 @@ src/overlays/ov027/calls/FreeAllocatedBuffers.c:
     complete
     .text       start:0x020b9a80 end:0x020b9a92
 
+src/overlays/ov027/calls/BlitWidgetToTileTable.c:
+    complete
+    .text       start:0x020b9a94 end:0x020b9b38
+
 src/overlays/ov027/calls/CopyWidgetScreenRegion.c:
     complete
     .text       start:0x020b9b38 end:0x020b9bb4
+
+src/overlays/ov027/calls/ClearWidgetTileArea.c:
+    complete
+    .text       start:0x020b9bb4 end:0x020b9c70
 
 src/overlays/ov027/calls/ClearWidgetScreenRegion.c:
     complete
@@ -411,6 +419,10 @@ src/overlays/ov027/calls/ClearTileTableRowAndMarkDirty.c:
 src/overlays/ov027/calls/func_ov027_020b9d68.c:
     complete
     .text       start:0x020b9d68 end:0x020b9d74
+
+src/overlays/ov027/calls/ClearTileTableRect.c:
+    complete
+    .text       start:0x020b9d74 end:0x020b9e10
 
 src/overlays/ov027/calls/func_ov027_020b9e10.c:
     complete

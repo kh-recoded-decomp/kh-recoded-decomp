@@ -1,7 +1,7 @@
 #define ApplyAnimRootMotion_020cff8c ApplyAnimRootMotion
 #define GetGroupMemberData_020a8eec GetGroupMemberData
 #define GetLinkedAngleOffset_020ceb7c GetLinkedAngleOffset
-#define InitSlotEntryFromRecord_020d1a68 func_ov052_020d1a88
+#define InitSlotEntryFromRecord_020d1a68 InitSlotEntryFromRecord
 #define ProcessTargetHitEntries_020d012c ProcessTargetHitEntries
 #define RotateOffsetAroundY_020a9160 RotateOffsetAroundY
 #define SetGroupSlotTarget_020a8ea8 SetGroupSlotTarget

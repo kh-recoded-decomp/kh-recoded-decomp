@@ -49,7 +49,7 @@ extern unsigned int ActorSlot_GetByIndex();
 extern unsigned int TransitionRecordSlot();
 extern unsigned int ActorRegistry_GetEntityByIndex();
 extern unsigned int ResetKindDirection();
-extern unsigned int func_ov018_020a335c();
+extern unsigned int FieldObject_SetDisabled();
 extern unsigned int func_ov018_020a3424();
 
 void func_ov018_020a34a4(int work) {
@@ -65,7 +65,7 @@ void func_ov018_020a34a4(int work) {
   if ((*(u16 *)(slot + 8) & 0x100) == 0) {
     TransitionRecordSlot((u32)*(u8 *)(work + 0x32));
   }
-  func_ov018_020a335c(work,0);
+  FieldObject_SetDisabled(work,0);
   ResetKindDirection(work);
   *(u16 *)(work + 0x30) = *(u16 *)(work + 0x30) | 0x10;
   *(u16 *)(work + 0x30) = *(u16 *)(work + 0x30) | 8;

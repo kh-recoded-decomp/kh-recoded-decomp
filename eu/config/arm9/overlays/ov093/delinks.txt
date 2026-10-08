@@ -160,6 +160,10 @@ src/overlays/ov093/calls/StepSmoothValue.c:
     complete
     .text       start:0x020c2218 end:0x020c2274
 
+src/overlays/ov093/calls/IsSmoothValueSettled.c:
+    complete
+    .text       start:0x020c2274 end:0x020c22c4
+
 src/overlays/ov093/calls/IsEntryFlagSet_020c22c4.c:
     complete
     .text       start:0x020c22c4 end:0x020c22f4
@@ -248,6 +252,10 @@ src/overlays/ov093/calls/StartNextPopup.c:
     complete
     .text       start:0x020c31f8 end:0x020c326c
 
+src/overlays/ov093/calls/OpenPopupMessage.c:
+    complete
+    .text       start:0x020c326c end:0x020c338c
+
 src/overlays/ov093/calls/FadeInPopup.c:
     complete
     .text       start:0x020c338c end:0x020c3438
@@ -267,6 +275,10 @@ src/overlays/ov093/calls/FadeOutPopup.c:
 src/overlays/ov093/calls/ClosePopupPanel.c:
     complete
     .text       start:0x020c35ec end:0x020c3630
+
+src/overlays/ov093/calls/QueuePopup.c:
+    complete
+    .text       start:0x020c3630 end:0x020c36bc
 
 src/overlays/ov093/calls/SetBgSubLayerVisible.c:
     complete

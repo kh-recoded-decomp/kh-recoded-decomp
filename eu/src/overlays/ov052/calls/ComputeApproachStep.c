@@ -3,7 +3,7 @@
 #define FixedPointAtan2_020062bc FX_Atan2Idx
 #define FixedPointMultiply12 FX_Mul
 #define GetLinkedAngleOffset_020ceb7c GetLinkedAngleOffset
-#define GetStageEventTargetInfo_02087960 func_ov001_02087988
+#define GetStageEventTargetInfo_02087960 GetStageEventTargetInfo
 #define GetWaitTargetPosition_0206c3f4 GetWaitTargetPosition
 #define MTX_MultVec33_01ff9404 MTX_MultVec33
 #define MTX_RotY33_01ff923c MTX_RotY33_

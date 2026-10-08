@@ -1,5 +1,5 @@
 #define ClearFieldStatusRow_020701fc ClearFieldStatusRow
 #define ClearTilemapRegion_0206ea94 ClearTilemapRegion
 #define GetPanelLayerScreen_0206ea08 GetPanelLayerScreen
-#define func_ov027_020b9d54 func_ov027_020b9d74
+#define func_ov027_020b9d54 ClearTileTableRect
 #include "src/ov001/text_rendering/ClearFieldStatusRow_020701fc.c"

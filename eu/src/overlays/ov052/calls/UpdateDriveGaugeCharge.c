@@ -1,4 +1,4 @@
-#define AddGaugePoints_02073074 func_ov001_02073074
+#define AddGaugePoints_02073074 AddGaugePoints
 #define AdvanceStepTimer_020ccac8 AdvanceStepTimer
 #define AdvanceTimerWithCarry_020cca9c AdvanceTimerWithCarry
 #define ApplyScaledHealthDelta_020a7620 ApplyScaledHealthDelta

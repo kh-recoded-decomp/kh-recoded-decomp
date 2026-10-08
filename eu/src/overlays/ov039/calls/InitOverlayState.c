@@ -78,7 +78,7 @@ extern void LoadSlotImagePair();
 extern void *func_0202a45c(void *descriptor, void *userData);
 extern void NNS_FndInitList(void *list, int offset);
 extern int func_0200146c(void *script, char *path);
-extern void func_ov039_020bab30(void);
+extern void SetupOverlayDisplay(void);
 extern void func_ov039_020bcdd8(void);
 extern int *AcquireMapLayout(BOOL reload, BOOL discard);
 extern void InitTileTableFrom(void *table, TileTableDesc *source);
@@ -160,7 +160,7 @@ void InitOverlayState(u32 entryArg)
     func_0200146c(data_ov039_020bea20->scripts[1], sOv039_TextFontEu10Nftr_020be860);
     func_0200146c(data_ov039_020bea20->scripts[2], sOv039_TextFontEu08sNftr_020be878);
     func_0200146c(data_ov039_020bea20->scripts[3], sOv039_TextFontEu10sNftr_020be890);
-    func_ov039_020bab30();
+    SetupOverlayDisplay();
     func_ov039_020bcdd8();
     AcquireMapLayout(state->mode != 7, FALSE);
     desc.ids = ids.ids;

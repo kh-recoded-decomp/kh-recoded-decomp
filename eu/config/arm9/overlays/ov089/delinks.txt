@@ -20,6 +20,10 @@ src/overlays/ov089/calls/RefreshEntryCaption.c:
     complete
     .text       start:0x020bf014 end:0x020bf0c4
 
+src/overlays/ov089/calls/SetupEntryMenuDisplay.c:
+    complete
+    .text       start:0x020bf0c4 end:0x020bf230
+
 src/overlays/ov089/calls/LoadEntryModels.c:
     complete
     .text       start:0x020bf230 end:0x020bf37c

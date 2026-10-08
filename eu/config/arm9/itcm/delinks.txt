@@ -301,6 +301,10 @@ src/calls/SendTexMtxAltBuilders.c:
     complete
     .text       start:0x01ffae7c end:0x01ffafb4
 
+src/calls/SceneNode_Draw.c:
+    complete
+    .text       start:0x01ffb12c end:0x01ffb2d4
+
 src/calls/func_01ffb2d4.c:
     complete
     .text       start:0x01ffb2d4 end:0x01ffb2f8
@@ -376,6 +380,10 @@ src/calls/NNSi_G3dFuncSbcMAT.c:
 libs/nitro/nns/calls/func_01ffe8a0.c:
     complete
     .text       start:0x01ffe8a0 end:0x01ffe934
+
+src/calls/NNSi_G3dFuncSbcNODEDESC.c:
+    complete
+    .text       start:0x01ffe934 end:0x01ffec28
 
 src/calls/EmitJointScaleCommand.c:
     complete

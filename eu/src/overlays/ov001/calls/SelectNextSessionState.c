@@ -1,3 +1,4 @@
+#define func_ov001_0206e444 SetFieldEntriesPaused
 #define func_ov001_020645c8 IsSessionFlagSet
 #define DivideU32_02023fc8 _u32_div_f
 #define GetBiasAdjustedField_0206dc80 GetBiasAdjustedField

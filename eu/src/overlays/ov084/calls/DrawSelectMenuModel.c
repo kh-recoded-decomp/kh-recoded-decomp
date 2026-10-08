@@ -1,7 +1,7 @@
 #define AdvanceAnimationTracks_0202ef24 AdvanceAnimationTracks
 #define DrawSelectMenuModel_020bfadc DrawSelectMenuModel
 #define LoadDefaultProjectionValues_0202a7b4 LoadDefaultProjectionValues
-#define SceneNode_Draw_01ffb12c func_01ffb12c
+#define SceneNode_Draw_01ffb12c SceneNode_Draw
 #define VEC_Add_01ff9e0c VEC_Add
 #define camera_commit_projection_0202a814 camera_commit_projection
 #define data_ov084_020bfc50 data_ov084_020bfc70

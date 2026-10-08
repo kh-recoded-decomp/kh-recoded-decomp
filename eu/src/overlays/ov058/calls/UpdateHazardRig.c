@@ -1,6 +1,6 @@
 #define AdvanceAnimationTracks_0202ef24 AdvanceAnimationTracks
 #define PlaceRigAtPlayerOffset_020d7818 PlaceRigAtPlayerOffset
-#define PulseHazardHitScans_020d7a44 func_ov058_020d7a64
+#define PulseHazardHitScans_020d7a44 PulseHazardHitScans
 #define RebindEmitterSlots_020d7498 RebindEmitterSlots
 #define UpdateHazardRig_020d777c UpdateHazardRig
 #include "src/ov058/unclassified_helpers/UpdateHazardRig_020d777c.c"

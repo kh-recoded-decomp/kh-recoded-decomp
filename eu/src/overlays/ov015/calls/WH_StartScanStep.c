@@ -1,4 +1,5 @@
 #define AlarmCallback_02011834 AlarmCallback_02011848
 #define WH_SetError_020737d4 WH_SetError
 #define WH_StartScanStep_02073930 WH_StartScanStep
+#define func_ov015_02073980 WH_StateOutStartParent
 #include "src/ov015/wireless/WH_StartScanStep_02073930.c"

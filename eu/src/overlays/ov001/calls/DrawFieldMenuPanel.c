@@ -1,4 +1,5 @@
 #define DrawFieldMenuPanel_02075f5c DrawFieldMenuPanel
+#define func_ov001_02075b48 DrawFieldEntryRow
 #define FillBackgroundLayerRect_02001a60 FillBackgroundLayerRect
 #define FindActiveRecordById_020b8184 FindActiveRecordById
 #define GetSceneTagTracker_020711b0 GetSceneTagTracker

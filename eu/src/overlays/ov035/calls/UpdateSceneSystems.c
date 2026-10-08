@@ -4,7 +4,7 @@ extern unsigned int data_ov035_020bc500;
 extern unsigned int ActorRegistry_ForEachCallback(void *);
 extern unsigned int AdvanceLoopingAnimation(unsigned int);
 extern unsigned int StageManager_Update(unsigned int);
-extern unsigned int func_ov001_020668e4(void);
+extern unsigned int UpdatePrizeOrbs(void);
 extern unsigned int func_020bd17c(unsigned int);
 extern unsigned int UpdateSceneAnimsAndCaption(unsigned int);
 extern unsigned int UpdatePartyEntries(unsigned int);
@@ -50,7 +50,7 @@ void UpdateSceneSystems(int paused)
         }
         StageManager_Update(step);
         if ((*(u16 *)(work + 0x24) & 0x20) != 0) {
-            func_ov001_020668e4();
+            UpdatePrizeOrbs();
         }
     }
     if ((*(u16 *)(work + 0x24) & 0x40) != 0) {

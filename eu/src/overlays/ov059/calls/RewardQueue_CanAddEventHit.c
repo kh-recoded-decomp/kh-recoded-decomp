@@ -1,6 +1,6 @@
 #define ComputeAttackDamage_020ac6cc ComputeAttackDamage
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField
-#define GetStageEventTargetInfo_02087960 func_ov001_02087988
+#define GetStageEventTargetInfo_02087960 GetStageEventTargetInfo
 #define RewardQueue_CanAddEventHit_020cf4c8 RewardQueue_CanAddEventHit
 #define ZeroBytes0x28_020ac0f8 ZeroBytes0x28
 #define data_02053438 data_0205344c

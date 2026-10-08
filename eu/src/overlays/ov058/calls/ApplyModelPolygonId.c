@@ -1,3 +1,4 @@
 #define ApplyModelPolygonId_020d78bc ApplyModelPolygonId
+#define func_01ffb12c SceneNode_Draw
 #define SetMaterialPolygonId_0201a5d4 NNS_G3dMdlSetMdlPolygonID
 #include "src/ov058/unclassified_helpers/ApplyModelPolygonId_020d78bc.c"

@@ -1,4 +1,4 @@
-#define AddReceivedPlayerCard_020721ec func_ov015_020721ec
+#define AddReceivedPlayerCard_020721ec AddReceivedPlayerCard
 #define InitPlayerCard_0206f524 InitPlayerCard
 #define InitShareBuffers_02072948 InitShareBuffers
 #define StartPlayerCardSharing_02071064 StartPlayerCardSharing

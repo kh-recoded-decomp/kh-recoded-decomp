@@ -1,4 +1,4 @@
-#define BuildHitResult_020d1860 func_ov052_020d1880
+#define BuildHitResult_020d1860 BuildHitResult_020d1880
 #define GetLinkedAngleOffset_020ceb7c GetLinkedAngleOffset
 #define InitRecord60_020ac0b8 InitRecord60
 #define OffsetBoxByDelta_0203ac70 OffsetBoxByDelta

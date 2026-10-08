@@ -1,7 +1,7 @@
 #define DrawFieldObjectEffects_020a32bc DrawFieldObjectEffects
 #define DrawTexturedGridQuads_020866ac DrawTexturedGridQuads
 #define GetCtxModeByte_02068084 func_ov001_02068084
-#define SceneNode_Draw_01ffb12c func_01ffb12c
+#define SceneNode_Draw_01ffb12c SceneNode_Draw
 #define func_02036240 ActorRegistry_GetEntityByIndex
 #define func_0204a174 EaseProgress
 #include "src/ov017/field_objects/DrawFieldObjectEffects_020a32bc.c"

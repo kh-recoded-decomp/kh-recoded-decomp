@@ -1,4 +1,4 @@
 #define StartScreenLayerScroll_020bd570 StartScreenLayerScroll
-#define UpdateScreenLayer_020bbf90 func_ov036_020bbfb0
+#define UpdateScreenLayer_020bbf90 UpdateScreenLayer
 #define data_ov036_020c3920 data_ov036_020c3940
 #include "src/ov036/panel_state/StartScreenLayerScroll_020bd570.c"

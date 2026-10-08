@@ -19,6 +19,14 @@ src/overlays/ov009/calls/ScriptCmd_SetObjectElementState.c:
     complete
     .text       start:0x020a0618 end:0x020a0654
 
+src/overlays/ov009/calls/FieldObject_SetSwitchState.c:
+    complete
+    .text       start:0x020a0654 end:0x020a0798
+
+src/overlays/ov009/calls/FieldObject_RespawnSwitch.c:
+    complete
+    .text       start:0x020a0798 end:0x020a0908
+
 src/overlays/ov009/auto/func_ov009_020a0908.c:
     complete
     .text       start:0x020a0908 end:0x020a090a

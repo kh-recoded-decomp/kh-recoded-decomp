@@ -1,5 +1,5 @@
 #define FieldObject_BeginSpawn_020a0988 FieldObject_BeginSpawn
-#define RunSpawnCommand_020a0afc func_ov011_020a0b1c
+#define RunSpawnCommand_020a0afc RunSpawnCommand
 #define SpawnSoundSlot_0204da8c SpawnSoundSlot
-#define func_ov011_020a06e8 func_ov011_020a0708
+#define func_ov011_020a06e8 FieldObject_SetState
 #include "src/ov011/field_objects/FieldObject_BeginSpawn_020a0988.c"

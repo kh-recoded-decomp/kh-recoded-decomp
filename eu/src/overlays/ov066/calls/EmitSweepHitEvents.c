@@ -2,7 +2,7 @@
 #define EmitSweepHitEvents_020d8350 EmitSweepHitEvents
 #define FixedPointMultiply12_02006450 FX_Mul
 #define GetLinkedAngleOffset_020ceb7c GetLinkedAngleOffset
-#define GetStageEventTargetInfo_02087960 func_ov001_02087988
+#define GetStageEventTargetInfo_02087960 GetStageEventTargetInfo
 #define OffsetBoxByDelta_0203ac70 OffsetBoxByDelta
 #define RotateOffsetAroundY_020a9160 RotateOffsetAroundY
 #define ScaleVecFx32_01ffafb4 func_01ffafb4

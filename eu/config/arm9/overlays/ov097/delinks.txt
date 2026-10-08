@@ -168,6 +168,10 @@ src/overlays/ov097/calls/EaseScrollTrack.c:
     complete
     .text       start:0x020c13e8 end:0x020c1444
 
+src/overlays/ov097/calls/IsScrollTrackSettled.c:
+    complete
+    .text       start:0x020c1444 end:0x020c1494
+
 src/overlays/ov097/calls/IsEntryFlagSet_020c1494.c:
     complete
     .text       start:0x020c1494 end:0x020c14c0

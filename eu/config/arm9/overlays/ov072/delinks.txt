@@ -32,6 +32,10 @@ src/overlays/ov072/calls/ReleaseOv072CameraResources.c:
     complete
     .text       start:0x020d8308 end:0x020d8320
 
+src/overlays/ov072/calls/EmitPillarHitScan.c:
+    complete
+    .text       start:0x020d8320 end:0x020d849c
+
 src/overlays/ov072/calls/IsEventActionAllowed.c:
     complete
     .text       start:0x020d849c end:0x020d84d0
@@ -43,6 +47,10 @@ src/overlays/ov072/calls/SnapContactNormalUp.c:
 src/overlays/ov072/calls/FlattenContactNormal.c:
     complete
     .text       start:0x020d8504 end:0x020d8548
+
+src/overlays/ov072/calls/UpdatePillarRide.c:
+    complete
+    .text       start:0x020d8548 end:0x020d9acc
 
 src/overlays/ov072/calls/CreateOv072SceneTask.c:
     complete

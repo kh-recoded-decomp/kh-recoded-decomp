@@ -36,7 +36,7 @@ typedef struct ObjectClass {
 extern ObjectClass *CreateByteGrid(int headerSize, int width, int height);
 extern void AcquireEffectRecordPair(void);
 extern void FieldObject_EnsureModelsLoaded(void);
-extern void func_ov009_020a0798(void);
+extern void FieldObject_RespawnSwitch(void);
 extern void func_ov001_0207f210(void);
 extern void ReleaseOwnerResource(void);
 extern void func_ov001_0207f26c(void);
@@ -62,7 +62,7 @@ ObjectClass *FieldObjectClass_Create(int height)
     objectClass->size = 0x3000;
     objectClass->onCreate = AcquireEffectRecordPair;
     objectClass->onDestroy = FieldObject_EnsureModelsLoaded;
-    objectClass->onUpdate = func_ov009_020a0798;
+    objectClass->onUpdate = FieldObject_RespawnSwitch;
     objectClass->onDraw = func_ov001_0207f210;
     objectClass->onEnter = ReleaseOwnerResource;
     objectClass->onLeave = func_ov001_0207f26c;

@@ -12,6 +12,10 @@ src/overlays/ov036/calls/RunPanelStateMachine.c:
     complete
     .text       start:0x020ba640 end:0x020ba6c4
 
+src/overlays/ov036/calls/ShutdownSceneWork_020ba6c4.c:
+    complete
+    .text       start:0x020ba6c4 end:0x020ba79c
+
 src/overlays/ov036/calls/InitializePanelArchive.c:
     complete
     .text       start:0x020ba79c end:0x020ba840
@@ -35,6 +39,10 @@ src/overlays/ov036/calls/RunPanelSubScriptFrame.c:
 src/overlays/ov036/calls/FinishPanelSceneSetup.c:
     complete
     .text       start:0x020baa58 end:0x020bab74
+
+src/overlays/ov036/calls/ShutdownPanelScene_020bab74.c:
+    complete
+    .text       start:0x020bab74 end:0x020bacf0
 
 src/overlays/ov036/calls/UpdatePendingSlotScene.c:
     complete
@@ -64,6 +72,18 @@ src/overlays/ov036/calls/func_ov036_020bb564.c:
     complete
     .text       start:0x020bb564 end:0x020bb5c4
 
+src/overlays/ov036/calls/StepActorSlotMove.c:
+    complete
+    .text       start:0x020bb5c4 end:0x020bb65c
+
+src/overlays/ov036/calls/UpdateSpriteShake.c:
+    complete
+    .text       start:0x020bb65c end:0x020bb73c
+
+src/overlays/ov036/calls/StepActorSlotAlphaFade.c:
+    complete
+    .text       start:0x020bb73c end:0x020bb7e0
+
 src/overlays/ov036/calls/FindOrAcquireOwnerSlot.c:
     complete
     .text       start:0x020bb7e0 end:0x020bb8ec
@@ -83,6 +103,18 @@ src/overlays/ov036/calls/LoadScreenLayerImage.c:
 src/overlays/ov036/calls/ClearScreenLayerGraphics.c:
     complete
     .text       start:0x020bbb84 end:0x020bbc84
+
+src/overlays/ov036/calls/UpdateLayerShake.c:
+    complete
+    .text       start:0x020bbd40 end:0x020bbe98
+
+src/overlays/ov036/calls/StepBgMosaicTransition.c:
+    complete
+    .text       start:0x020bbe98 end:0x020bbfb0
+
+src/overlays/ov036/calls/UpdateScreenLayer.c:
+    complete
+    .text       start:0x020bbfb0 end:0x020bc158
 
 src/overlays/ov036/calls/FindOrAcquireModelSlot.c:
     complete
@@ -251,6 +283,14 @@ src/overlays/ov036/calls/StartScreenBrightnessFade.c:
 src/overlays/ov036/calls/StartScreenBrightnessFade_020bd6dc.c:
     complete
     .text       start:0x020bd6dc end:0x020bd750
+
+src/overlays/ov036/calls/StartScreenLayerZoom.c:
+    complete
+    .text       start:0x020bd750 end:0x020bd820
+
+src/overlays/ov036/calls/StartBgMosaicTransition.c:
+    complete
+    .text       start:0x020bd820 end:0x020bd8c8
 
 src/overlays/ov036/calls/GetPanelFlag40.c:
     complete

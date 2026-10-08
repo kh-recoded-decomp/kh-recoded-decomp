@@ -4,10 +4,11 @@
 #define IsHudFlag7Set_020725bc IsHudFlag7Set
 #define IsModeSetOrFlag370aClear_0207259c IsModeSetOrFlag370aClear
 #define RefreshFieldMenuHighlights_02076cac RefreshFieldMenuHighlights
+#define func_ov001_02075b48 DrawFieldEntryRow
 #define TagTracker_InvokeCallback_020b8210 func_ov027_020b8230
 #define UpdateWidgetLayerDefault_020b9df0 func_ov027_020b9e10
 #define func_ov001_02075348 CycleMenuEntry
 #define func_ov001_02075ccc UpdateFieldPromptTag
 #define func_ov027_020b822c func_ov027_020b824c
-#define func_ov027_020b9d54 func_ov027_020b9d74
+#define func_ov027_020b9d54 ClearTileTableRect
 #include "src/ov001/field_manager/RefreshFieldMenuHighlights_02076cac.c"

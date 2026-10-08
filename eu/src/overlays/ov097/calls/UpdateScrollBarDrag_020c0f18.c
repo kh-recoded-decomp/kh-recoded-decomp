@@ -1,7 +1,7 @@
 #define EaseScrollTrack_020c13c8 EaseScrollTrack
 #define FX_Div_01ff9c84 FX_Div
 #define GetScrollTrackRow_020c13a8 GetScrollTrackRow
-#define IsScrollTrackSettled_020c1424 func_ov097_020c1444
+#define IsScrollTrackSettled_020c1424 IsScrollTrackSettled
 #define JumpScrollTrack_020c1250 JumpScrollTrack
 #define RefreshListPanels_020bfb38 func_ov097_020bfb58
 #define ResetScrollTrack_020c1228 ResetScrollTrack

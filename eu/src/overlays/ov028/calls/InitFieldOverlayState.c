@@ -21,5 +21,5 @@
 #define func_ov001_020633d4 FlushPendingFieldUpdate
 #define func_ov001_020645e8 ClearSessionPackedBit
 #define func_ov028_020ba584 RunSceneStateMachine
-#define func_ov028_020baed0 func_ov028_020baef0
+#define func_ov028_020baed0 SetupFieldDisplay
 #include "src/ov028/overlay_state/InitFieldOverlayState_020ba3e0.c"

@@ -4,6 +4,10 @@
     .data       start:0x020be940 end:0x020c0fa0 kind:data align:32
     .bss        start:0x020c0fa0 end:0x020c1040 kind:bss align:32
 
+src/overlays/ov034/calls/CloseResultsScreen.c:
+    complete
+    .text       start:0x020babb4 end:0x020bac70
+
 src/overlays/ov034/calls/CloseResultsSession.c:
     complete
     .text       start:0x020bae54 end:0x020bb06c

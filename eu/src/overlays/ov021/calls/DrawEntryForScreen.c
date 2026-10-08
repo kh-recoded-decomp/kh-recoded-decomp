@@ -9,7 +9,7 @@ extern NNSG3dGlbBaseTransView NNS_G3dGlb;
 #define BASE_TRANS NNS_G3dGlb.prmBaseTrans
 #define DrawEntryForScreen_020a82ec DrawEntryForScreen
 #define func_ov021_020a86b0 PlaceObjectAtEntry
-#define SceneNode_Draw_01ffb12c func_01ffb12c
+#define SceneNode_Draw_01ffb12c SceneNode_Draw
 #define func_ov021_020af5f4 func_ov021_020af614
 #define FixedPointMultiply12 FX_Mul
 #define camera_commit_explicit_projection_0202a8c4 camera_commit_explicit_projection

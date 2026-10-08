@@ -1,4 +1,4 @@
 #define FieldObject_DrawInstance_020823a0 FieldObject_DrawInstance
 #define Model_SetAllMaterialAlpha_0201a900 NNS_G3dMdlSetMdlAlphaAll
-#define SceneNode_Draw_01ffb12c func_01ffb12c
+#define SceneNode_Draw_01ffb12c SceneNode_Draw
 #include "src/ov001/field_objects/FieldObject_DrawInstance_020823a0.c"

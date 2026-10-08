@@ -1,6 +1,6 @@
 #define ScriptCmd_CreateManagerObject_020a1e10 ScriptCmd_CreateManagerObject
 #define ScriptVm_ReadOperandFx32_02025df8 ScriptVm_ReadOperandFx32
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
-#define func_ov017_020a3ae8 func_ov017_020a3b08
+#define func_ov017_020a3ae8 SpawnFieldObject
 #define func_ov017_020a4204 FindKind4FieldObject
 #include "src/ov017/script_commands/ScriptCmd_CreateManagerObject_020a1e10.c"

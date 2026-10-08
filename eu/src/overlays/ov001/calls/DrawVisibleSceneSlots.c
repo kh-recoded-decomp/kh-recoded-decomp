@@ -1,4 +1,4 @@
 #define DrawVisibleSceneSlots_02067d48 DrawVisibleSceneSlots
-#define SceneNode_Draw_01ffb12c func_01ffb12c
+#define SceneNode_Draw_01ffb12c SceneNode_Draw
 #define data_ov001_020a046c data_ov001_020a048c
 #include "src/ov001/unclassified_helpers/DrawVisibleSceneSlots_02067d48.c"

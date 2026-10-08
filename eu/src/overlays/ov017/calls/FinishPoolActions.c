@@ -6,9 +6,9 @@
 #define func_0204d8d0 PlaySoundChecked
 #define func_ov001_0208635c func_ov001_02086384
 #define func_ov001_020863e0 func_ov001_02086408
-#define func_ov017_020a3c78 func_ov017_020a3c98
+#define func_ov017_020a3c78 SetFieldObjectHidden_020a3c98
 #define func_ov017_020a3d40 IsFieldFlagBit1Set
-#define func_ov017_020a3d74 func_ov017_020a3d94
+#define func_ov017_020a3d74 SetFieldObjectFlag5
 #define func_ov017_020a3df0 IsFieldIdle
 #define func_ov017_020a3e10 ResetFieldObjectToIdle
 #define func_ov017_020a40dc SetFieldObjectPosition_020a40fc

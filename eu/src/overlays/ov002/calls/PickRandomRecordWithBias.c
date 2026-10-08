@@ -3,4 +3,5 @@
 #define PickRandomRecordWithBias_0206a824 PickRandomRecordWithBias
 #define ReleaseRecordSlot_02051dfc ReleaseRecordSlot
 #define func_0202a9d0 func_0202a9e4
+#define func_ov002_0206aaa0 RankPreferredItems
 #include "src/ov002/unclassified_helpers/PickRandomRecordWithBias_0206a824.c"

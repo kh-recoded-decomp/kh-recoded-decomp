@@ -2,7 +2,7 @@
 #define OffsetBoxByDelta_0203ac70 OffsetBoxByDelta
 #define SetActorRaisedCollision_02082b28 SetActorRaisedCollision
 #define SetShapePosition_0203afa0 SetShapePosition
-#define SetSlotLayoutHighlight_0207d45c func_ov001_0207d484
+#define SetSlotLayoutHighlight_0207d45c SetSlotLayoutHighlight
 #define data_ov001_020a0460 data_ov001_020a0480
 #define func_020359f8 ApplyRecordTableEntry5
 #include "src/ov001/field_objects/SetActorRaisedCollision_02082b28.c"

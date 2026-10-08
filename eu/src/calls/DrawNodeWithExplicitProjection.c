@@ -1,6 +1,6 @@
 #define DrawNodeWithExplicitProjection_0202f1b0 DrawNodeWithExplicitProjection
 #define MIi_CpuCopyFast_01ff878c MIi_CpuCopyFast
-#define Scene_DrawNode_01ffb12c func_01ffb12c
+#define Scene_DrawNode_01ffb12c SceneNode_Draw
 #define camera_commit_explicit_projection_0202a8c4 camera_commit_explicit_projection
 #define g_cameraMtx_0205a970 NNS_G3dGlb_cameraMtx
 #define g_cameraPosition_0205ab3c NNS_G3dGlb_camPos

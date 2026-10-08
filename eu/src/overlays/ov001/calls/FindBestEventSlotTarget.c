@@ -5,5 +5,5 @@
 #define func_ov001_0206ba2c ClassifyTargetRange
 #define func_ov001_02087928 ForwardToActiveServiceWithResult
 #define func_ov001_02087944 func_ov001_0208796c
-#define func_ov001_02087960 func_ov001_02087988
+#define func_ov001_02087960 GetStageEventTargetInfo
 #include "src/ov001/shared_engine/FindBestEventSlotTarget_0206b744.c"

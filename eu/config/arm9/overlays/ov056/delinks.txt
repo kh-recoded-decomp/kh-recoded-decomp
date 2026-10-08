@@ -300,6 +300,10 @@ src/overlays/ov056/calls/ResetSlotStateAndNotify.c:
     complete
     .text       start:0x020d6ae8 end:0x020d6afc
 
+src/overlays/ov056/calls/UpdateEntryRotations.c:
+    complete
+    .text       start:0x020d6afc end:0x020d6bb4
+
 src/overlays/ov056/calls/UpdateFallingProjectile.c:
     complete
     .text       start:0x020d6bb4 end:0x020d6c84

@@ -104,6 +104,10 @@ src/overlays/ov020/calls/ReleaseAndFreeResource.c:
     complete
     .text       start:0x020a2adc end:0x020a2af6
 
+src/overlays/ov020/calls/ActivatePanel.c:
+    complete
+    .text       start:0x020a2af8 end:0x020a2cb8
+
 src/overlays/ov020/calls/TryCollideWithCollider_020a2cb8.c:
     complete
     .text       start:0x020a2cb8 end:0x020a2e78
@@ -143,6 +147,10 @@ src/overlays/ov020/calls/SpawnStackedBlock.c:
 src/overlays/ov020/calls/ApplyBlockLift.c:
     complete
     .text       start:0x020a33b8 end:0x020a3428
+
+src/overlays/ov020/calls/SetBlockHidden.c:
+    complete
+    .text       start:0x020a3428 end:0x020a34a4
 
 src/overlays/ov020/auto/func_ov020_020a34a4.c:
     complete

@@ -1,3 +1,4 @@
+#define func_ov001_0206e444 SetFieldEntriesPaused
 #define func_ov001_020645c8 IsSessionFlagSet
 #define CacheSeqArcStatus_0204e00c CacheSeqArcStatus
 #define EnableOv029Sound_020ba670 EnableOv029Sound

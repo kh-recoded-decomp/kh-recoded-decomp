@@ -1,4 +1,4 @@
 #define DrawWidgetOnScreenLayer_020bb70c DrawWidgetOnScreenLayer
 #define data_ov039_020bea00 data_ov039_020bea20
-#define func_ov027_020b9a74 func_ov027_020b9a94
+#define func_ov027_020b9a74 BlitWidgetToTileTable
 #include "src/ov039/widget_layers/DrawWidgetOnScreenLayer_020bb70c.c"

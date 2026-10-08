@@ -1,4 +1,4 @@
 #define RefreshWindowHighlight_02079490 RefreshWindowHighlight
 #define func_ov027_020b9d18 ClearTileTableRowAndMarkDirty
-#define func_ov027_020b9d54 func_ov027_020b9d74
+#define func_ov027_020b9d54 ClearTileTableRect
 #include "src/ov001/field_manager/RefreshWindowHighlight_02079490.c"

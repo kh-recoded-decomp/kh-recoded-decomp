@@ -19,7 +19,7 @@ typedef struct StageRecord {
 
 extern StagePartySlot *GetStagePartySlot(u32 slot);
 extern StageRecord *GetStageEventRecord(u32 id);
-extern void func_ov001_02088108(u32 slotIndex, u8 kind, u8 subKind);
+extern void AssignPartySlotToStageEvent(u32 slotIndex, u8 kind, u8 subKind);
 
 void func_ov001_02088204(u32 slotIndex, u8 kind, u8 subKind, s32 hitPoints, s32 maxHitPoints, const VecFx32 *position)
 {
@@ -31,7 +31,7 @@ void func_ov001_02088204(u32 slotIndex, u8 kind, u8 subKind, s32 hitPoints, s32 
         return;
     }
     if (slot->recordId == 0) {
-        func_ov001_02088108(slotIndex, kind, subKind);
+        AssignPartySlotToStageEvent(slotIndex, kind, subKind);
     }
     if (slot->recordId == 0) {
         return;

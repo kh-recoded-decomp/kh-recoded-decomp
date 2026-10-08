@@ -1,6 +1,6 @@
 #define OpenFieldMenuMode_020641d4 OpenFieldMenuMode
-#define SetFieldEntriesPaused_0206e444 func_ov001_0206e444
-#define SetFieldSpritesFlag_0206e53c func_ov001_0206e53c
+#define SetFieldEntriesPaused_0206e444 SetFieldEntriesPaused
+#define SetFieldSpritesFlag_0206e53c SetFieldSpritesFlag
 #define SetMenuHighlight_0206c2f8 SetMenuHighlight
 #define data_ov001_020a0460 data_ov001_020a0480
 #include "src/ov001/field_manager/OpenFieldMenuMode_020641d4.c"

@@ -36,6 +36,10 @@ src/overlays/ov030/calls/func_ov030_020ba62c.c:
     complete
     .text       start:0x020ba62c end:0x020ba698
 
+src/overlays/ov030/calls/MoviePlayer_EnterPlayback.c:
+    complete
+    .text       start:0x020ba698 end:0x020ba774
+
 src/overlays/ov030/calls/func_ov030_020ba774.c:
     complete
     .text       start:0x020ba774 end:0x020ba7a8
@@ -47,6 +51,10 @@ src/overlays/ov030/calls/func_ov030_020ba844.c:
 src/overlays/ov030/calls/func_ov030_020ba874.c:
     complete
     .text       start:0x020ba874 end:0x020ba894
+
+src/overlays/ov030/calls/SceneState_WaitScreenIdle_020ba894.c:
+    complete
+    .text       start:0x020ba894 end:0x020ba8f0
 
 src/overlays/ov030/calls/EnterState12WithHalfRate_020ba8f0.c:
     complete
@@ -87,6 +95,10 @@ src/overlays/ov030/calls/func_ov030_020baab8.c:
 src/overlays/ov030/calls/ApplyOverlayScaleMode.c:
     complete
     .text       start:0x020baad4 end:0x020bab20
+
+src/overlays/ov030/calls/SetupMovieDisplay_020bab20.c:
+    complete
+    .text       start:0x020bab20 end:0x020babc8
 
 src/overlays/ov030/calls/func_ov030_020babc8.c:
     complete

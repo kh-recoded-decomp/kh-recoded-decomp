@@ -1,5 +1,5 @@
 #define GetGroupMemberData_020a8eec GetGroupMemberData
-#define GetStageEventTargetInfo_02087960 func_ov001_02087988
+#define GetStageEventTargetInfo_02087960 GetStageEventTargetInfo
 #define SpawnEffectAtTarget_020a1028 SpawnEffectAtTarget
 #define StopAndClearSoundEmitter_020a8e14 StopAndClearSoundEmitter
 #define func_ov021_020a8ab4 ResetAnimationTrackState

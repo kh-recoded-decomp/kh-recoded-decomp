@@ -31,7 +31,7 @@ extern s32 __DSProt_DetectNotFlashcart(void *task, void *callback, int arg);
 extern u32 func_ov033_020ba400(void (*callback)(void));
 extern void LoadActorOverlay(void);
 extern void MI_CpuFill8(void *dst, u8 value, u32 size);
-extern void func_ov033_020ba7f8(void);
+extern void SetupResumeDisplay(void);
 extern u32 func_ov033_020ba574(void);
 
 void *InitResumeModeContext(ResumeModeParams *params)
@@ -62,7 +62,7 @@ void *InitResumeModeContext(ResumeModeParams *params)
     data_ov033_020baae0->modeId = params->modeId;
     data_ov033_020baae0->active = 1;
     data_ov033_020baae0->flags = 3;
-    func_ov033_020ba7f8();
+    SetupResumeDisplay();
     data_ov033_020baae0->state = 0;
     return func_ov033_020ba574;
 }

@@ -5,7 +5,7 @@
 #define GetBiasAdjustedField_0206dc80 GetBiasAdjustedField
 #define SetEntryRotation_0204f308 SetEntryRotation
 #define func_ov001_02087928 ForwardToActiveServiceWithResult
-#define GetStageEventTargetInfo_02087960 func_ov001_02087988
+#define GetStageEventTargetInfo_02087960 GetStageEventTargetInfo
 #define func_ov001_02087944 func_ov001_0208796c
 #define func_ov001_0207f038 func_ov001_0207f060
 #define ApplyDirectionOffset_020b7228 ApplyDirectionOffset

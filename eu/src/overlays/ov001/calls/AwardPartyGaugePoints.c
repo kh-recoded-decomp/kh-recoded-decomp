@@ -1,4 +1,4 @@
-#define AddGaugePoints_02073074 func_ov001_02073074
+#define AddGaugePoints_02073074 AddGaugePoints
 #define AwardPartyGaugePoints_0206ded8 AwardPartyGaugePoints
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField
 #define IsFieldFlag16Set_020735b8 IsFieldFlag16Set

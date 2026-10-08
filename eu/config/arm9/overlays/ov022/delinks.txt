@@ -40,6 +40,10 @@ src/overlays/ov022/calls/func_ov022_020a7414.c:
     complete
     .text       start:0x020a7414 end:0x020a7434
 
+src/overlays/ov022/calls/RunMoviePlaybackState.c:
+    complete
+    .text       start:0x020a7434 end:0x020a77b0
+
 src/overlays/ov022/auto/func_ov022_020a77b0.c:
     complete
     .text       start:0x020a77b0 end:0x020a77b8

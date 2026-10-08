@@ -7,4 +7,5 @@
 #define func_ov002_02069504 GetPackedFieldValue
 #define func_ov002_0206991c IsRecordFlagBitSet
 #define func_ov002_02069dd8 LookupTableOffset
+#define func_ov002_0206aaa0 RankPreferredItems
 #include "src/ov002/unclassified_helpers/PickRandomUnflaggedRecord_0206a214.c"

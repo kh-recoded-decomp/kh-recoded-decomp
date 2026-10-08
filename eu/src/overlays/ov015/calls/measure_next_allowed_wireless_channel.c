@@ -1,7 +1,7 @@
 #define func_020115ac GetTransitionFrame
 #define func_020737c4 SetPanelTransitionMode
 #define func_020737d4 WH_SetError
-#define func_02074a58 func_ov015_02074a58
+#define func_02074a58 RecordWirelessChannelMeasurement
 #define func_02074b04 func_ov015_02074b04
 #define measure_next_allowed_wireless_channel_020749b8 measure_next_allowed_wireless_channel
 #include "src/ov015/wireless/measure_next_allowed_wireless_channel_020749b8.c"

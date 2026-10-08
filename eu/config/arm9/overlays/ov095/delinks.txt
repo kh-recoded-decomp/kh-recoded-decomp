@@ -184,6 +184,10 @@ src/overlays/ov095/calls/ClearEntryFlag_020c139c.c:
     complete
     .text       start:0x020c139c end:0x020c13c4
 
+src/overlays/ov095/calls/GrantUnlockedEntries.c:
+    complete
+    .text       start:0x020c13c4 end:0x020c1628
+
 src/overlays/ov095/calls/func_ov095_020c1628.c:
     complete
     .text       start:0x020c1628 end:0x020c1714

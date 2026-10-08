@@ -1,6 +1,6 @@
 #define Anim_GetFrame_0202f4a0 Anim_GetFrame
 #define GetGroupMemberData_020a8eec GetGroupMemberData
-#define GetStageEventTargetInfo_02087960 func_ov001_02087988
+#define GetStageEventTargetInfo_02087960 GetStageEventTargetInfo
 #define IsGroupMemberActive_020a8d1c IsGroupMemberActive
 #define StopAndClearSoundEmitter_020a8e14 StopAndClearSoundEmitter
 #define UpdateTargetEffect_020a0f60 UpdateTargetEffect

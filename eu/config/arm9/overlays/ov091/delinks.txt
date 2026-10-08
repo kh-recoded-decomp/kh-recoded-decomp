@@ -120,6 +120,10 @@ src/overlays/ov091/calls/ScrollListDown.c:
     complete
     .text       start:0x020c0030 end:0x020c0164
 
+src/overlays/ov091/calls/ComputeCompletionPercent.c:
+    complete
+    .text       start:0x020c114c end:0x020c12d4
+
 src/overlays/ov091/calls/func_ov091_020c12d4.c:
     complete
     .text       start:0x020c12d4 end:0x020c1370
@@ -200,6 +204,10 @@ src/overlays/ov091/calls/ShowNextQueuedPopup.c:
     complete
     .text       start:0x020c1dc4 end:0x020c1e38
 
+src/overlays/ov091/calls/OpenPopupWindow_020c1e38.c:
+    complete
+    .text       start:0x020c1e38 end:0x020c1f58
+
 src/overlays/ov091/calls/GrowPopupWindow.c:
     complete
     .text       start:0x020c1f58 end:0x020c2004
@@ -219,6 +227,10 @@ src/overlays/ov091/calls/ShrinkPopupWindow.c:
 src/overlays/ov091/calls/HidePopupWindow.c:
     complete
     .text       start:0x020c21ac end:0x020c21f0
+
+src/overlays/ov091/calls/QueuePopupMessage.c:
+    complete
+    .text       start:0x020c21f0 end:0x020c227c
 
 src/overlays/ov091/calls/SetSubBg2Visible.c:
     complete

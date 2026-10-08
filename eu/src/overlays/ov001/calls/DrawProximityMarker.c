@@ -5,6 +5,6 @@
 #define GetStageObjectRecord_0209c0a0 GetStageObjectRecord
 #define Model_SetAllMaterialAlpha_0201a900 NNS_G3dMdlSetMdlAlphaAll
 #define Model_SetAllPolygonIds_0201a8c0 NNS_G3dMdlSetMdlPolygonIDAll
-#define SceneNode_Draw_01ffb12c func_01ffb12c
+#define SceneNode_Draw_01ffb12c SceneNode_Draw
 #define Session_Exists_02063a24 func_ov001_02063a24
 #include "src/ov001/actor_animation/DrawProximityMarker_0208f760.c"

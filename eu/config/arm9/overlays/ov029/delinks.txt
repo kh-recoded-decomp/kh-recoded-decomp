@@ -55,6 +55,10 @@ src/overlays/ov029/calls/func_ov029_020ba88c.c:
     complete
     .text       start:0x020ba88c end:0x020ba8d8
 
+src/overlays/ov029/calls/SetupOv029Display.c:
+    complete
+    .text       start:0x020ba8d8 end:0x020ba9d0
+
 src/overlays/ov029/calls/func_ov029_020ba9d0.c:
     complete
     .text       start:0x020ba9d0 end:0x020ba9f4

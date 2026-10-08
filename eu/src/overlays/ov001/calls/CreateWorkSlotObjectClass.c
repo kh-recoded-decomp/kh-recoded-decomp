@@ -1,5 +1,5 @@
 #define CreateWorkSlotObjectClass_0208190c CreateWorkSlotObjectClass
-#define FieldObject_SyncWorkState_0208168c func_ov001_020816b4
+#define FieldObject_SyncWorkState_0208168c FieldObject_SyncWorkState
 #define GetFieldOffset40_02081684 GetFieldOffset40_020816ac
 #define GetFieldOffset40_02081688 GetFieldOffset40_020816b0
 #define _fp_init_02081680 func_ov001_020816a8
@@ -9,5 +9,5 @@
 #define func_ov001_0207f20c ReleaseOwnerResource
 #define func_ov001_0207f244 func_ov001_0207f26c
 #define func_ov001_0207f380 CreateByteGrid
-#define func_ov001_02081524 func_ov001_0208154c
+#define func_ov001_02081524 FieldObject_SpawnScaledActor
 #include "src/ov001/unclassified_helpers/CreateWorkSlotObjectClass_0208190c.c"

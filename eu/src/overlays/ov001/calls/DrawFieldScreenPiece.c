@@ -1,6 +1,6 @@
 #define DrawFieldScreenPiece_0206ead4 DrawFieldScreenPiece
 #define data_ov001_020a04a4 data_ov001_020a04c4
 #define func_ov001_0206ea44 GetFieldLayerScreen
-#define func_ov027_020b9a74 func_ov027_020b9a94
+#define func_ov027_020b9a74 BlitWidgetToTileTable
 #define func_ov027_020b9b18 CopyWidgetScreenRegion
 #include "src/ov001/field_manager/DrawFieldScreenPiece_0206ead4.c"

@@ -1,7 +1,7 @@
 #define AddSessionCounter_02063a80 AddSessionCounter
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField
 #define GetShapeCenter_0203b43c GetShapeCenter
-#define GetStageEventTargetInfo_02087960 func_ov001_02087988
+#define GetStageEventTargetInfo_02087960 GetStageEventTargetInfo
 #define InitPathSegment_020ac104 InitPathSegment
 #define IsObjectIdle_020ac7f0 IsObjectIdle
 #define ResolveHitContacts_020abc40 ResolveHitContacts

@@ -50,7 +50,7 @@ UpdateGridScrollDisplay kind:function(arm,size=0xec) addr:0x020c1254
 IsEntryFlagSet_020c1340 kind:function(arm,size=0x34) addr:0x020c1340
 SetEntryFlag_020c1374 kind:function(arm,size=0x28) addr:0x020c1374
 ClearEntryFlag_020c139c kind:function(arm,size=0x28) addr:0x020c139c
-func_ov095_020c13c4 kind:function(arm,size=0x264) addr:0x020c13c4
+GrantUnlockedEntries kind:function(arm,size=0x264) addr:0x020c13c4
 func_ov095_020c1628 kind:function(arm,size=0xec) addr:0x020c1628
 data_ov095_020c1714 kind:data(any) addr:0x020c1714
 gItemReportStateHandlers kind:data(any) addr:0x020c171c

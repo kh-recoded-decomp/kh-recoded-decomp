@@ -1,6 +1,6 @@
 #define ClearFieldScreenPiece_0206eb88 ClearFieldScreenPiece
 #define data_ov001_020a04a4 data_ov001_020a04c4
 #define func_ov001_0206ea44 GetFieldLayerScreen
-#define func_ov027_020b9b94 func_ov027_020b9bb4
+#define func_ov027_020b9b94 ClearWidgetTileArea
 #define func_ov027_020b9c50 ClearWidgetScreenRegion
 #include "src/ov001/field_manager/ClearFieldScreenPiece_0206eb88.c"

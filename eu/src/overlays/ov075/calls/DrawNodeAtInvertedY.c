@@ -1,3 +1,3 @@
 #define DrawNodeAtInvertedY_020d0e30 DrawNodeAtInvertedY
-#define SceneNode_Draw_01ffb12c func_01ffb12c
+#define SceneNode_Draw_01ffb12c SceneNode_Draw
 #include "src/ov075/reviewed_helpers/DrawNodeAtInvertedY_020d0e30.c"

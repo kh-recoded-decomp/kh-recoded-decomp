@@ -1,7 +1,7 @@
 #include "nitro/types.h"
 
 extern u32 ScriptVm_ReadOperandInt();
-extern u32 func_ov036_020bd750();
+extern u32 StartScreenLayerZoom();
 
 u32 func_ov036_020be67c(void *vm,void *operands) {
   int first;
@@ -14,6 +14,6 @@ u32 func_ov036_020be67c(void *vm,void *operands) {
   if (*(int *)((int)vm + 0x628) != 0) {
     return 1;
   }
-  func_ov036_020bd750(first,second,third);
+  StartScreenLayerZoom(first,second,third);
   return 1;
 }

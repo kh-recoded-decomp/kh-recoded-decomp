@@ -1,4 +1,4 @@
-#define AdvanceMenuDelayCounter_020b582c func_ov025_020b584c
+#define AdvanceMenuDelayCounter_020b582c AdvanceMenuDelayCounter
 #define GetClampedPaletteSlot_02073598 GetClampedPaletteSlot
 #define InitMenuScreen_020b5acc InitMenuScreen
 #define InitObjManagerAndMark_020b9060 InitObjManagerAndMark

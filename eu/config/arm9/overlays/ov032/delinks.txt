@@ -48,6 +48,10 @@ src/overlays/ov032/calls/CompleteGroupTransition.c:
     complete
     .text       start:0x020baaf0 end:0x020bab24
 
+src/overlays/ov032/calls/AdvanceToRoutedSlot.c:
+    complete
+    .text       start:0x020bb034 end:0x020bb14c
+
 src/overlays/ov032/calls/InitializeGroupAction.c:
     complete
     .text       start:0x020bb14c end:0x020bb170
@@ -539,6 +543,10 @@ src/overlays/ov032/calls/TickFieldObjectCounters.c:
 src/overlays/ov032/calls/UpdateObjectGroupMembers.c:
     complete
     .text       start:0x020bf850 end:0x020bf9fc
+
+src/overlays/ov032/calls/DrawGroupMemberModel.c:
+    complete
+    .text       start:0x020bf9fc end:0x020bfbc4
 
 src/overlays/ov032/calls/ApplyGroupLeaderHit.c:
     complete

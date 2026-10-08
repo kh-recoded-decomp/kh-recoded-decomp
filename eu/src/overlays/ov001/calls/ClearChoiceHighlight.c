@@ -1,4 +1,4 @@
 #define ClearChoiceHighlight_020701a8 ClearChoiceHighlight
-#define func_ov027_020b9d54 func_ov027_020b9d74
+#define func_ov027_020b9d54 ClearTileTableRect
 #define func_ov027_020b9e00 MarkTileTableRowDirty
 #include "src/ov001/text_rendering/ClearChoiceHighlight_020701a8.c"

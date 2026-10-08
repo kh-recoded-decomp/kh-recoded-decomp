@@ -20,7 +20,7 @@
 #define data_ov022_020b7ce0 gStreamScriptCommandHandlers
 #define func_ov001_0206459c WriteSessionPackedBits
 #define func_ov001_02064574 ReadSessionPackedBits
-#define func_ov022_020a7414 func_ov022_020a7434
+#define func_ov022_020a7414 RunMoviePlaybackState
 #if defined(__MWERKS__)
 #include "../src/ov022/video_playback/StartMoviePlaybackState_020a7000.c"
 #else

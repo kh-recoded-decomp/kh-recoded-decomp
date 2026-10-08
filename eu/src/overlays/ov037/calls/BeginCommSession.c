@@ -2,6 +2,6 @@
 #define CreateOverlayTask_0206a6f4 CreateOverlayTask
 #define NNSi_FndGetCurrentRootHeap_0202a764 NNSi_FndGetCurrentRootHeap
 #define func_ov037_020ba45c RunCommStepMachine
-#define func_ov037_020baa80 func_ov037_020baaa0
+#define func_ov037_020baa80 SetupMenu3dDisplay
 #define g_commState_020bb760 gContinueSceneState
 #include "src/ov037/unclassified_helpers/BeginCommSession_020ba3e0.c"

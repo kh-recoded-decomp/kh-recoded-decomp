@@ -1,9 +1,9 @@
 #include "nitro/types.h"
 
 extern void *gContinueScreenContext;
-extern char *func_ov027_020b9bb4(char *dst, const char *src);
+extern char *ClearWidgetTileArea(char *dst, const char *src);
 
 void func_ov037_020bad64(const char *text)
 {
-    func_ov027_020b9bb4((char *)gContinueScreenContext + 84, text);
+    ClearWidgetTileArea((char *)gContinueScreenContext + 84, text);
 }

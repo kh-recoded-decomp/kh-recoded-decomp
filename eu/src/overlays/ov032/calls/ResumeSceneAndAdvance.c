@@ -1,3 +1,4 @@
+#define func_ov001_0206e444 SetFieldEntriesPaused
 #define func_ov001_020645c8 IsSessionFlagSet
 #define ApplyVerticalLayoutOffset_0207d5f4 ApplyVerticalLayoutOffset
 #define CacheSeqArcStatus_0204e00c CacheSeqArcStatus

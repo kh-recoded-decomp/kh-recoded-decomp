@@ -2,5 +2,5 @@
 #define CacheEntry_SetActive_02087258 CacheEntry_SetActive
 #define SetFieldObjectVisible_020a5b94 SetFieldObjectVisible
 #define func_02036810 ActorSlot_GetByIndex
-#define func_ov016_020a227c func_ov016_020a229c
+#define func_ov016_020a227c UpdateFieldObjectHighlight
 #include "src/ov016/field_objects/SetFieldObjectVisible_020a5b94.c"

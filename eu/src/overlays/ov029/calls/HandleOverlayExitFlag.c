@@ -1,4 +1,5 @@
 #define HandleOverlayExitFlag_020ba708 HandleOverlayExitFlag
+#define func_ov001_0206e444 SetFieldEntriesPaused
 #define _data_02060500 data_02060500
 #define _data_ov029_020baba0 data_ov029_020babc0
 #include "src/ov029/unclassified_helpers/HandleOverlayExitFlag_020ba708.c"

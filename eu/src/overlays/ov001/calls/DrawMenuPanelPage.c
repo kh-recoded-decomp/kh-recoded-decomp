@@ -1,5 +1,5 @@
 #define DrawMenuPanelPage_020769f4 DrawMenuPanelPage
 #define GetSceneTagTracker_020711b0 GetSceneTagTracker
 #define data_ov001_0209eeb0 gFieldMenuDrawHandlers
-#define func_ov027_020b9d54 func_ov027_020b9d74
+#define func_ov027_020b9d54 ClearTileTableRect
 #include "src/ov001/field_manager/DrawMenuPanelPage_020769f4.c"

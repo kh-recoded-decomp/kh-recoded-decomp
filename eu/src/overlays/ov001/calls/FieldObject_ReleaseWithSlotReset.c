@@ -1,5 +1,5 @@
 #define FieldObject_ReleaseWithSlotReset_02082ae0 FieldObject_ReleaseWithSlotReset
 #define ReleaseOwnerResource_0207f20c ReleaseOwnerResource
-#define SetSlotLayoutHighlight_0207d45c func_ov001_0207d484
+#define SetSlotLayoutHighlight_0207d45c SetSlotLayoutHighlight
 #define data_ov001_020a0460 data_ov001_020a0480
 #include "src/ov001/field_objects/FieldObject_ReleaseWithSlotReset_02082ae0.c"

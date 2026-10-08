@@ -2,7 +2,7 @@
 #define Actor_ResetMotion_020c7960 Actor_ResetMotion
 #define FreeWorkBuffer_020c766c FreeWorkBuffer
 #define func_ov059_020c7590 Actor_LoadAnimResources
-#define func_ov059_020c7684 func_ov059_020c76a4
+#define func_ov059_020c7684 UpdateToggleEffectTimer
 #define func_ov059_020c782c Actor_SelectAction
 #define func_ov059_020c799c Actor_QueueBattleSounds
 #define func_ov059_020c79d8 Actor_BuildHitSphereWithCue

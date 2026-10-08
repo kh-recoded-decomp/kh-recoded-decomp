@@ -1,9 +1,10 @@
+#define USE_NNS_G3D_GLB
 #define DrawIndexedImageQuad_020c2140 DrawIndexedImageQuad
 #define FlushGeometryState_02019230 NNS_G3dGlbFlushWVP
 #define MI_Copy36B_01ff87c4 MI_Copy36B
 #define QueueOrSendGeometryCommand_01ffa37c NNS_G3dGeBufferOP_N
-#define data_0205a9a4 NNS_G3dGlb_prmMatColor0
-#define data_0205a9b8 NNS_G3dGlb_prmBaseRot
+#define G3D_BASE_ROT NNS_G3dGlb.prmBaseRot
+#define G3D_FLAGS NNS_G3dGlb.flag
 #define data_ov085_020c2314 data_ov085_020c2334
 #define func_020192ec NNS_G3dGlbSetBaseTrans
 #define func_0201931c NNS_G3dGlbSetBaseScale

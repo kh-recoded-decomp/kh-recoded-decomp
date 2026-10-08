@@ -10,8 +10,8 @@ ConfigMenu_CursorUp kind:function(thumb,size=0x28) addr:0x020c4ac0
 ConfigMenu_CursorDown kind:function(thumb,size=0x2c) addr:0x020c4ae8
 ConfigMenu_PrevValue kind:function(thumb,size=0x30) addr:0x020c4b14
 ConfigMenu_NextValue kind:function(thumb,size=0x30) addr:0x020c4b44
-func_ov079_020c4b74 kind:function(thumb,size=0x4c) addr:0x020c4b74
-func_ov079_020c4bc0 kind:function(thumb,size=0x4c) addr:0x020c4bc0
+ConfigMenu_PrevPage kind:function(thumb,size=0x4c) addr:0x020c4b74
+ConfigMenu_NextPage kind:function(thumb,size=0x4c) addr:0x020c4bc0
 func_ov079_020c4c0c kind:function(thumb,size=0x24) addr:0x020c4c0c
 data_ov079_020c4c30 kind:data(any) addr:0x020c4c30
 data_ov079_020c4c60 kind:data(any) addr:0x020c4c60 ambiguous

@@ -1,6 +1,6 @@
 #define ApplyAnimRootMotion_020cff8c ApplyAnimRootMotion
 #define GetLinkedAngleOffset_020ceb7c GetLinkedAngleOffset
-#define InitSlotEntryFromRecord_020d1a68 func_ov052_020d1a88
+#define InitSlotEntryFromRecord_020d1a68 InitSlotEntryFromRecord
 #define IsGroupMemberActive_020a8d1c IsGroupMemberActive
 #define ProcessTargetHitEntries_020d012c ProcessTargetHitEntries
 #define StopAndClearSoundEmitter_020a8e14 StopAndClearSoundEmitter

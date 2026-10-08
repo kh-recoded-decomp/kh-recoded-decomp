@@ -1,4 +1,4 @@
 #define DrawMovieSceneIfVisible_020bb73c DrawMovieSceneIfVisible
-#define SceneNode_Draw_01ffb12c func_01ffb12c
+#define SceneNode_Draw_01ffb12c SceneNode_Draw
 #define data_ov035_020bc4e4 data_ov035_020bc504
 #include "src/ov035/unclassified_helpers/DrawMovieSceneIfVisible_020bb73c.c"

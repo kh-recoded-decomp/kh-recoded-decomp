@@ -1,5 +1,5 @@
 InitRecordEntry kind:function(arm,size=0x24) addr:0x020d4520
-func_ov058_020d4544 kind:function(arm,size=0x1b4) addr:0x020d4544
+SteerEnemyTowardPoint kind:function(arm,size=0x1b4) addr:0x020d4544
 IsFacedByPlayer kind:function(arm,size=0x164) addr:0x020d46f8
 HasReachedMoveTarget kind:function(arm,size=0x10c) addr:0x020d485c
 func_ov058_020d4968 kind:function(arm,size=0x74) addr:0x020d4968
@@ -51,8 +51,8 @@ RebindEmitterSlotsPhase1 kind:function(arm,size=0x18) addr:0x020d790c
 UpdateRaisedModelAnimation kind:function(arm,size=0x7c) addr:0x020d7924
 func_ov058_020d79a0 kind:function(arm,size=0x18) addr:0x020d79a0
 PurgeNearbyStageObjects kind:function(arm,size=0xac) addr:0x020d79b8
-func_ov058_020d7a64 kind:function(arm,size=0x2dc) addr:0x020d7a64
-func_ov058_020d7d40 kind:function(arm,size=0xfc) addr:0x020d7d40
+PulseHazardHitScans kind:function(arm,size=0x2dc) addr:0x020d7a64
+RunAreaBlastHitScan kind:function(arm,size=0xfc) addr:0x020d7d40
 ToBoolMask kind:function(arm,size=0x14) addr:0x020d7e3c
 LoadSceneModelResources kind:function(arm,size=0xb8) addr:0x020d7e50
 ReleaseSceneModelResources kind:function(arm,size=0x78) addr:0x020d7f08

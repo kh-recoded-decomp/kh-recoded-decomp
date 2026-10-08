@@ -1,4 +1,4 @@
-#define BuildChoiceListWindows_02078e30 func_ov001_02078e30
+#define BuildChoiceListWindows_02078e30 BuildChoiceListWindows
 #define LoadMenuEntryPanel_0207a17c LoadMenuEntryPanel
 #define LoadModeBg3Graphics_02078c7c LoadModeBg3Graphics
 #define MakePrimaryVramKey_020711ec MakePrimaryVramKey

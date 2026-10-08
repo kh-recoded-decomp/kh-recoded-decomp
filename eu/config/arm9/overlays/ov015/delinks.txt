@@ -268,6 +268,10 @@ src/overlays/ov015/calls/ResetPanelMenuElements.c:
     complete
     .text       start:0x020720e4 end:0x020721ec
 
+src/overlays/ov015/calls/AddReceivedPlayerCard.c:
+    complete
+    .text       start:0x020721ec end:0x02072490
+
 src/overlays/ov015/calls/IsKnownMacAddress.c:
     complete
     .text       start:0x02072490 end:0x020724dc
@@ -512,6 +516,10 @@ src/overlays/ov015/calls/WH_StartScanStep.c:
     complete
     .text       start:0x02073930 end:0x02073980
 
+src/overlays/ov015/calls/WH_StateOutStartParent.c:
+    complete
+    .text       start:0x02073980 end:0x02073aa0
+
 src/overlays/ov015/calls/StartWirelessMP.c:
     complete
     .text       start:0x02073aa0 end:0x02073b30
@@ -631,6 +639,10 @@ src/overlays/ov015/calls/BeginWirelessChannelMeasurement.c:
 src/overlays/ov015/calls/measure_next_allowed_wireless_channel.c:
     complete
     .text       start:0x020749b8 end:0x02074a58
+
+src/overlays/ov015/calls/RecordWirelessChannelMeasurement.c:
+    complete
+    .text       start:0x02074a58 end:0x02074b04
 
 src/overlays/ov015/calls/func_ov015_02074b04.c:
     complete

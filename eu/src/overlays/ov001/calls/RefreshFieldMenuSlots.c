@@ -3,6 +3,7 @@
 #define GetSceneTagTracker_020711b0 GetSceneTagTracker
 #define InvokeCallback40_020b8268 func_ov027_020b8288
 #define RefreshFieldMenuSlots_0207651c RefreshFieldMenuSlots
+#define func_ov001_02075b48 DrawFieldEntryRow
 #define TagTracker_InvokeCallback_020b8210 func_ov027_020b8230
 #define UpdateWidgetLayerDefault_020b9df0 func_ov027_020b9e10
 #define func_ov001_020728a4 IsFieldFlag8Set

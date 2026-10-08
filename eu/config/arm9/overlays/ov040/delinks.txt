@@ -68,6 +68,10 @@ src/overlays/ov040/calls/func_ov040_020bd0f4.c:
     complete
     .text       start:0x020bd0f4 end:0x020bd128
 
+src/overlays/ov040/calls/UpdateAreaSceneState.c:
+    complete
+    .text       start:0x020bd128 end:0x020bd2b8
+
 src/overlays/ov040/calls/StartAreaCameraIntro.c:
     complete
     .text       start:0x020bd2b8 end:0x020bd384

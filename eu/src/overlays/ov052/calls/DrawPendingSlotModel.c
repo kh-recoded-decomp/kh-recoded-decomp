@@ -1,4 +1,4 @@
 #define DrawPendingSlotModel_020d13f0 DrawPendingSlotModel
-#define SceneNode_Draw_01ffb12c func_01ffb12c
+#define SceneNode_Draw_01ffb12c SceneNode_Draw
 #define func_ov052_020ceb54 func_ov052_020ceb74
 #include "src/ov052/model_display/DrawPendingSlotModel_020d13f0.c"

@@ -1,6 +1,6 @@
 RuntimeState_SetMode kind:function(arm,size=0x18) addr:0x020bab00
 GetStateC9C4 kind:function(arm,size=0x18) addr:0x020bab18
-func_ov039_020bab30 kind:function(thumb,size=0x7c) addr:0x020bab30
+SetupOverlayDisplay kind:function(thumb,size=0x7c) addr:0x020bab30
 LoadBgLayerSet3 kind:function(arm,size=0x98) addr:0x020babac
 LoadBgLayerSet4 kind:function(arm,size=0x98) addr:0x020bac44
 InitStreamBufferPair kind:function(arm,size=0x78) addr:0x020bacdc

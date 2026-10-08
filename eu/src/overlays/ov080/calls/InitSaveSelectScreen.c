@@ -41,7 +41,7 @@
 #define func_0204f498 SetBank6Word1C
 #define OS_GetTick_02003fd4 OS_GetTick
 #define StartCardWriteFromSlot_02027034 StartCardWriteFromSlot
-#define PollSaveSlotReads_020c4d08 func_ov080_020c4d28
+#define PollSaveSlotReads_020c4d08 PollSaveSlotReads
 #define data_ov080_020c5e00 data_ov080_020c5e20
 #if defined(__MWERKS__)
 #include "../src/ov080/unclassified_helpers/InitSaveSelectScreen_020c42b0.c"

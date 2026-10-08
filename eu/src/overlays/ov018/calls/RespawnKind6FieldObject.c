@@ -51,7 +51,7 @@ extern int GetMovieFrameCount(void);
 extern void SyncActorShapePosition(FieldObject *obj, const VecFx32 *position);
 extern void SetScaledPosition(FieldObject *obj, const VecFx32 *position);
 extern void func_ov018_020a34a4(FieldObject *obj);
-extern void func_ov018_020a335c(FieldObject *obj, BOOL disable);
+extern void FieldObject_SetDisabled(FieldObject *obj, BOOL disable);
 extern void CacheEntry_SetActive(FieldObject *obj, BOOL active);
 extern void ResetObjectRotation(FieldObject *obj);
 extern int GetEntryUnlockState(BOOL skipModeCheck, int flagOffset, u32 entryId, u32 slot);
@@ -94,7 +94,7 @@ void RespawnKind6FieldObject(FieldObject *obj, const VecFx32 *position, int spaw
     obj->hitCount = 0;
     obj->state = 2;
     func_ov018_020a34a4(obj);
-    func_ov018_020a335c(obj, FALSE);
+    FieldObject_SetDisabled(obj, FALSE);
     CacheEntry_SetActive(obj, TRUE);
     obj->linkIndex = linkIndex;
     obj->linkGroup = linkGroup;

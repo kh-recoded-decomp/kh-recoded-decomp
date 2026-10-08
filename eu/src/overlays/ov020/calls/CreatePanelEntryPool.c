@@ -1,4 +1,4 @@
-#define ActivatePanel_020a2ad8 func_ov020_020a2af8
+#define ActivatePanel_020a2ad8 ActivatePanel
 #define ApplyTypeCapabilityFlag_020a3138 ApplyTypeCapabilityFlag
 #define CreateEntryPool_02086258 CreateEntryPool
 #define CreatePanelEntryPool_020a31f4 CreatePanelEntryPool

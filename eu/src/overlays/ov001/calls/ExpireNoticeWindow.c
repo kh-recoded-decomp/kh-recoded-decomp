@@ -3,5 +3,5 @@
 #define FindActiveRecordById_020b8184 FindActiveRecordById
 #define InvokeCallback40_020b8268 func_ov027_020b8288
 #define OS_GetTick_02003fd4 OS_GetTick
-#define func_ov027_020b9d54 func_ov027_020b9d74
+#define func_ov027_020b9d54 ClearTileTableRect
 #include "src/ov001/field_manager/ExpireNoticeWindow_0207023c.c"

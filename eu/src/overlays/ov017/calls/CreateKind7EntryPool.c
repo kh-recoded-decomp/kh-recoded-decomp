@@ -3,7 +3,7 @@
 #define func_ov017_020a50e4 IsActiveAncestorChain
 #define func_ov017_020a5288 LoadStageObjectPhase
 #define func_ov017_020a5438 ReleaseField48
-#define func_ov017_020a5454 func_ov017_020a5474
+#define func_ov017_020a5454 FieldDrop_OnCollect
 #define func_ov017_020a55e8 CollideKind7Entry
 #define func_ov017_020a56f4 GetRaisedPosition
 #define func_ov017_020a5734 GetListHead

@@ -1,3 +1,3 @@
 #define CheckFieldUnitHeightLimit_020a4a64 CheckFieldUnitHeightLimit
-#define func_ov016_020a227c func_ov016_020a229c
+#define func_ov016_020a227c UpdateFieldObjectHighlight
 #include "src/ov016/field_objects/CheckFieldUnitHeightLimit_020a4a64.c"

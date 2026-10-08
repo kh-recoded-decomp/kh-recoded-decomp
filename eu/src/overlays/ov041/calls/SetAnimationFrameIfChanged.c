@@ -1,3 +1,4 @@
 #define SetAnimationFrameIfChanged_020c389c SetAnimationFrameIfChanged
+#define func_01ffb12c SceneNode_Draw
 #define func_ov041_020c384c GetPathNodeOffset
 #include "src/ov041/animation/SetAnimationFrameIfChanged_020c389c.c"

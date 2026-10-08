@@ -1,9 +1,9 @@
 #define ActorSlot_SetFlag8ByIndex_02036120 ActorSlot_SetFlag8ByIndex
 #define FieldObject_ResetToIdle_020a10c4 FieldObject_ResetToIdle
-#define FieldObject_SetEnabled_0207f6f4 func_ov001_0207f71c
+#define FieldObject_SetEnabled_0207f6f4 FieldObject_SetEnabled
 #define SetObjectAnimTrack_0207f8d0 SetObjectAnimTrack
 #define func_02036240 ActorRegistry_GetEntityByIndex
 #define func_02036810 ActorSlot_GetByIndex
 #define func_02036924 TransitionRecordSlot
-#define func_ov011_020a06e8 func_ov011_020a0708
+#define func_ov011_020a06e8 FieldObject_SetState
 #include "src/ov011/field_objects/FieldObject_ResetToIdle_020a10c4.c"

@@ -3,5 +3,5 @@
 #define GetSceneTagTracker_020711b0 GetSceneTagTracker
 #define func_ov001_02075604 DrawGradientRect
 #define func_ov027_020b822c func_ov027_020b824c
-#define func_ov027_020b9d54 func_ov027_020b9d74
+#define func_ov027_020b9d54 ClearTileTableRect
 #include "src/ov001/field_manager/DrawItemCountBadge_02076ff4.c"

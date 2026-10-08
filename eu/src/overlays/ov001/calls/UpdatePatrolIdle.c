@@ -6,7 +6,7 @@
 #define SetPackedStateLowBit_02084774 SetPackedStateLowBit
 #define SetSavedValueFlag7_02084750 SetSavedValueFlag7
 #define SpawnSoundSlot_0204da8c SpawnSoundSlot
-#define UpdateFieldPointActivation_02083dbc func_ov001_02083de4
+#define UpdateFieldPointActivation_02083dbc UpdateFieldPointActivation
 #define UpdatePatrolIdle_02083e70 UpdatePatrolIdle
 #define func_0204b1fc TurnVecTowardVecLimited
 #define func_ov001_02083d2c func_ov001_02083d54

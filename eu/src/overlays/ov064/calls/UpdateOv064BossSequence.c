@@ -5,7 +5,7 @@
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField
 #define GetGroupMemberData_020a8eec GetGroupMemberData
 #define GetLinkedAngleOffset_020ceb7c GetLinkedAngleOffset
-#define GetStageEventTargetInfo_02087960 func_ov001_02087988
+#define GetStageEventTargetInfo_02087960 GetStageEventTargetInfo
 #define InitPathSegment_020ac104 InitPathSegment
 #define IsStageEventReady_02087c78 IsStageEventReady
 #define RotateOffsetAroundY_020a9160 RotateOffsetAroundY

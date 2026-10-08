@@ -1,6 +1,6 @@
 #define DrawChildSpawner_020a0a08 DrawChildSpawner
 #define Obj_SetPosition_0203569c Obj_SetPosition
-#define SceneNode_Draw_01ffb12c func_01ffb12c
+#define SceneNode_Draw_01ffb12c SceneNode_Draw
 #define VEC_Add_01ff9e0c VEC_Add
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define func_02036240 ActorRegistry_GetEntityByIndex

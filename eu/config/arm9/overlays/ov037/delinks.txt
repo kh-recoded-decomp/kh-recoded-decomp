@@ -28,6 +28,10 @@ src/overlays/ov037/calls/SyncSessionCommFlags.c:
     complete
     .text       start:0x020ba784 end:0x020ba810
 
+src/overlays/ov037/calls/FinishCommSession.c:
+    complete
+    .text       start:0x020ba810 end:0x020ba894
+
 src/overlays/ov037/calls/NotifyCommSlotIfReady.c:
     complete
     .text       start:0x020ba894 end:0x020ba8c8
@@ -52,6 +56,10 @@ src/overlays/ov037/calls/MarkCommBusyWhenReady.c:
     complete
     .text       start:0x020ba964 end:0x020ba9a0
 
+src/overlays/ov037/calls/CloseCommAndRestoreRoom.c:
+    complete
+    .text       start:0x020ba9a0 end:0x020baa5c
+
 src/overlays/ov037/calls/FinishCommunicationState.c:
     complete
     .text       start:0x020baa5c end:0x020baa84
@@ -63,6 +71,10 @@ src/overlays/ov037/calls/func_ov037_020baa84.c:
 src/overlays/ov037/calls/func_ov037_020baa90.c:
     complete
     .text       start:0x020baa90 end:0x020baaa0
+
+src/overlays/ov037/calls/SetupMenu3dDisplay.c:
+    complete
+    .text       start:0x020baaa0 end:0x020bab98
 
 src/overlays/ov037/calls/func_ov037_020bab98.c:
     complete

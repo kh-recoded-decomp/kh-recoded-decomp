@@ -6,7 +6,7 @@
 #define PlaySoundChecked_0204d8d0 PlaySoundChecked
 #define RunScoreTallySequence_0207cc8c RunScoreTallySequence
 #define SampleTweenValue_0205258c SampleTweenValue
-#define SceneNode_Draw_01ffb12c func_01ffb12c
+#define SceneNode_Draw_01ffb12c SceneNode_Draw
 #define StartTimerFromPackedPair_0207cb78 StartTimerFromPackedPair
 #define StopSeqArcOrDefault_0204d960 StopSeqArcOrDefault
 #define data_ov001_0209df94 data_ov001_0209dfbc

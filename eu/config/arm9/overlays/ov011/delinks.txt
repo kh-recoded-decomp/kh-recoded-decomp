@@ -27,6 +27,10 @@ src/overlays/ov011/calls/ScriptCmd_PostRequestAndSetPanel.c:
     complete
     .text       start:0x020a06d8 end:0x020a0706
 
+src/overlays/ov011/calls/FieldObject_SetState.c:
+    complete
+    .text       start:0x020a0708 end:0x020a07dc
+
 src/overlays/ov011/calls/FieldObject_LoadAndPlace.c:
     complete
     .text       start:0x020a07dc end:0x020a0930
@@ -50,6 +54,10 @@ src/overlays/ov011/calls/FieldObject_SetPositionAndSync.c:
 src/overlays/ov011/calls/FieldObject_BeginSpawn.c:
     complete
     .text       start:0x020a09a8 end:0x020a09d0
+
+src/overlays/ov011/calls/RunSpawnCommand.c:
+    complete
+    .text       start:0x020a0b1c end:0x020a0d44
 
 src/overlays/ov011/calls/FieldObject_HandleContact.c:
     complete

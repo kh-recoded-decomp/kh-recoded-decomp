@@ -1,6 +1,6 @@
 #define ActivateFieldSwitchObject_02082070 ActivateFieldSwitchObject
 #define ApplyRecordOrSetState_020822f8 ApplyRecordOrSetState
-#define FieldObject_SetEnabled_0207f6f4 func_ov001_0207f71c
+#define FieldObject_SetEnabled_0207f6f4 FieldObject_SetEnabled
 #define Obj_SetPosition_0203569c Obj_SetPosition
 #define RebindAnimTracks_020809d0 RebindAnimTracks
 #define SetCollisionObjectPosition_02033f48 SetCollisionObjectPosition

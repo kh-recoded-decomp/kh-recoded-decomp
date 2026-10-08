@@ -6,7 +6,7 @@
 #define data_ov035_020bc4e8 data_ov035_020bc508
 #define func_ov035_020bae1c GetMovieEntryValue
 #define func_ov035_020bae64 func_ov035_020bae84
-#define func_ov035_020bb96c func_ov035_020bb98c
+#define func_ov035_020bb96c DrawChannelMeter
 #define func_ov035_020bbc4c DrawLevelBarQuads
 #define func_ov035_020bbef0 SetGaugeLevel
 #define func_ov035_020bbf70 UpdateBarGauge

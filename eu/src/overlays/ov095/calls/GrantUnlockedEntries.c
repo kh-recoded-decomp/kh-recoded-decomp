@@ -1,0 +1,8 @@
+#define GrantUnlockedEntries_020c13a4 GrantUnlockedEntries
+#define data_ov095_020c1998 gItemReportIdentifiers
+#define data_ov095_020c1788 gItemReportCompletionThresholds
+#define IsGlobalPackedBitSet_02027304 IsGlobalPackedBitSet
+#define GetUnlockedSlotValue_02051270 GetUnlockedSlotValue
+#define SetEntryFlag_020c1354 SetEntryFlag_020c1374
+
+#include "src/ov095/bit_flags/GrantUnlockedEntries_020c13a4.c"

@@ -2,7 +2,7 @@
 #define Camera_SaveSnapshot_020c0dd4 Camera_SaveSnapshot
 #define FadeBgmVolume_0204d9a8 FadeBgmVolume
 #define Math_AsinIdx_0202aaa8 Math_AsinIdx
-#define SetFieldEntriesPaused_0206e444 func_ov001_0206e444
+#define SetFieldEntriesPaused_0206e444 SetFieldEntriesPaused
 #define SetMenuHighlight_0206c2f8 SetMenuHighlight
 #define StartAreaCameraIntro_020bd298 StartAreaCameraIntro
 #define data_ov040_020be260 data_ov040_020be280

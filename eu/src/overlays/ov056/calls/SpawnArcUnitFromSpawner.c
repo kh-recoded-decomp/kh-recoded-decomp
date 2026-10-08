@@ -8,7 +8,7 @@
 #define LoadUnitSharedRecords_020aee14 LoadUnitSharedRecords
 #define SetupOwnerAndEntries_020ab010 SetupOwnerAndEntries
 #define SpawnArcUnitFromSpawner_020d6778 SpawnArcUnitFromSpawner
-#define UpdateEntryRotations_020d6adc func_ov056_020d6afc
+#define UpdateEntryRotations_020d6adc UpdateEntryRotations
 #define UpdateFallingProjectile_020d6b94 UpdateFallingProjectile
 #define func_ov021_020ae73c UpdateUnitAttackSweep
 #define func_ov056_020d6a50 UpdateDelayedSlotProjectile

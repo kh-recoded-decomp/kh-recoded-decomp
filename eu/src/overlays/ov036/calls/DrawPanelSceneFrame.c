@@ -1,7 +1,7 @@
 #define AlarmCallback_0206ad1c func_ov001_0206ad1c
 #define DrawPanelSceneFrame_020bb130 DrawPanelSceneFrame
 #define G3X_SetClearColor_02006c08 G3X_SetClearColor
-#define SceneNode_Draw_01ffb12c func_01ffb12c
+#define SceneNode_Draw_01ffb12c SceneNode_Draw
 #define camera_commit_explicit_projection_0202a8c4 camera_commit_explicit_projection
 #define data_ov036_020c3920 data_ov036_020c3940
 #include "src/ov036/panel_state/DrawPanelSceneFrame_020bb130.c"

@@ -1,4 +1,4 @@
 #define CanAddRecordToSlots_020d518c CanAddRecordToSlots
 #define StageRecord_IsDefeated_02087cc4 StageRecord_IsDefeated
-#define func_ov001_02087960 func_ov001_02087988
+#define func_ov001_02087960 GetStageEventTargetInfo
 #include "src/ov056/unclassified_helpers/CanAddRecordToSlots_020d518c.c"

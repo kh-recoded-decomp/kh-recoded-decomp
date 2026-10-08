@@ -1,6 +1,6 @@
 #define LoadMenuWidgetResource_020b5954 LoadMenuWidgetResource
 #define _data_ov025_020b7760 data_ov025_020b7780
-#define func_ov025_020b582c func_ov025_020b584c
+#define func_ov025_020b582c AdvanceMenuDelayCounter
 #define func_ov025_020b5908 LoadSubBgGraphics
 #define func_ov027_020ba1d8 func_ov027_020ba1f8
 #define func_ov027_020ba1e0 func_ov027_020ba200

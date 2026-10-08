@@ -13,7 +13,7 @@ extern void StepSessionScriptOrAbort(void); /* StepSessionScriptOrAbort */
 extern void func_ov001_02062654(void);
 extern void WaitSessionPollCallback(void); /* WaitSessionPollCallback */
 extern void func_ov001_0206269c(void); /* HandleSessionScriptResult */
-extern void func_ov001_02062838(void); /* ExitSessionAndCommitSave */
+extern void ExitSessionAndCommitSave(void); /* ExitSessionAndCommitSave */
 
 void (*gSessionScriptStateHandlers[13])(void) = {
     RestoreSavedPlacement, /* RestoreSavedPlacement */
@@ -28,5 +28,5 @@ void (*gSessionScriptStateHandlers[13])(void) = {
     func_ov001_02062654,
     WaitSessionPollCallback, /* WaitSessionPollCallback */
     func_ov001_0206269c, /* HandleSessionScriptResult */
-    func_ov001_02062838, /* ExitSessionAndCommitSave */
+    ExitSessionAndCommitSave, /* ExitSessionAndCommitSave */
 };

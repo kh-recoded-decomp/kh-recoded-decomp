@@ -1,3 +1,4 @@
 #define ScriptCmd_SetFieldObjectsFlag_020659dc ScriptCmd_SetFieldObjectsFlag
+#define func_ov001_0206e444 SetFieldEntriesPaused
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
 #include "src/ov001/shared_engine/ScriptCmd_SetFieldObjectsFlag_020659dc.c"

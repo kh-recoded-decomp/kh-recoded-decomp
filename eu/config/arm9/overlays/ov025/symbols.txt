@@ -1,5 +1,5 @@
 ApplySubBgScroll kind:function(thumb,size=0x2c) addr:0x020b5820
-func_ov025_020b584c kind:function(thumb,size=0x2c) addr:0x020b584c
+AdvanceMenuDelayCounter kind:function(thumb,size=0x2c) addr:0x020b584c
 DrawRemainingCountText kind:function(thumb,size=0x80) addr:0x020b5878
 RefreshRemainingCount kind:function(thumb,size=0x30) addr:0x020b58f8
 LoadSubBgGraphics kind:function(thumb,size=0x4c) addr:0x020b5928

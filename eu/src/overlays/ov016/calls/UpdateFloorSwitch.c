@@ -9,6 +9,6 @@
 #define func_02036230 GetActorRegistry
 #define func_02036240 ActorRegistry_GetEntityByIndex
 #define func_ov001_02086434 func_ov001_0208645c
-#define func_ov016_020a227c func_ov016_020a229c
+#define func_ov016_020a227c UpdateFieldObjectHighlight
 #define func_ov016_020a41c0 CheckFieldUnitLinkLatch
 #include "src/ov016/field_objects/UpdateFloorSwitch_020a4210.c"

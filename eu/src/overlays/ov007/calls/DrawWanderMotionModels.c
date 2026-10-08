@@ -5,6 +5,6 @@
 #define Model_SetAllMaterialAlpha_0201a900 NNS_G3dMdlSetMdlAlphaAll
 #define Model_SetAllPolygonIds_0201a8c0 NNS_G3dMdlSetMdlPolygonIDAll
 #define RemoveAnimationFromRenderObject_02018850 NNS_G3dRenderObjRemoveAnmObj
-#define SceneNode_Draw_01ffb12c func_01ffb12c
+#define SceneNode_Draw_01ffb12c SceneNode_Draw
 #define func_ov040_020bd9fc FindActorRewardValue
 #include "src/ov007/unclassified_helpers/DrawWanderMotionModels_020a15a8.c"

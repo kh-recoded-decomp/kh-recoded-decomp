@@ -6,7 +6,7 @@
 #define data_ov059_020cfeb8 data_ov059_020cfed8
 #define func_01ff86fc MIi_CpuClear32
 #define func_ov059_020cd780 EffectGroup_LoadModels
-#define func_ov059_020cda14 func_ov059_020cda34
+#define func_ov059_020cda14 EffectGroup_Draw
 #define func_ov059_020cdc5c TaskRunner_Update
 #define func_ov059_020cde6c func_ov059_020cde8c
 #define func_ov059_020cebd4 SlotEntry_AdvanceAnim

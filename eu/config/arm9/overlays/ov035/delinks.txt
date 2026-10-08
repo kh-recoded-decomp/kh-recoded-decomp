@@ -108,6 +108,10 @@ src/overlays/ov035/calls/ReleaseMovieResources.c:
     complete
     .text       start:0x020baae4 end:0x020bab4c
 
+src/overlays/ov035/calls/InitEventGroupTable.c:
+    complete
+    .text       start:0x020bab4c end:0x020bac48
+
 src/overlays/ov035/calls/FreeMovieCharacterBuffers.c:
     complete
     .text       start:0x020bac48 end:0x020bac90
@@ -299,6 +303,10 @@ src/overlays/ov035/calls/DrawMovieDigitRow.c:
 src/overlays/ov035/calls/SetupMovieCamera.c:
     complete
     .text       start:0x020bb910 end:0x020bb98c
+
+src/overlays/ov035/calls/DrawChannelMeter.c:
+    complete
+    .text       start:0x020bb98c end:0x020bbc6c
 
 src/overlays/ov035/calls/DrawLevelBarQuads.c:
     complete

@@ -1,4 +1,4 @@
 #define LookupTableOffset_02069dd8 LookupTableOffset
-#define SetRecordFlagBit_02069bc8 func_ov002_02069bc8
+#define SetRecordFlagBit_02069bc8 SetRecordFlagBit
 #define SetRecordFlagFromTable_02069cd4 SetRecordFlagFromTable
 #include "src/ov002/unclassified_helpers/SetRecordFlagFromTable_02069cd4.c"

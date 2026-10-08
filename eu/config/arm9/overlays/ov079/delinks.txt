@@ -44,6 +44,14 @@ src/overlays/ov079/calls/ConfigMenu_NextValue.c:
     complete
     .text       start:0x020c4b44 end:0x020c4b74
 
+src/overlays/ov079/calls/ConfigMenu_PrevPage.c:
+    complete
+    .text       start:0x020c4b74 end:0x020c4bc0
+
+src/overlays/ov079/calls/ConfigMenu_NextPage.c:
+    complete
+    .text       start:0x020c4bc0 end:0x020c4c0c
+
 src/overlays/ov079/calls/func_ov079_020c4c0c.c:
     complete
     .text       start:0x020c4c0c end:0x020c4c30

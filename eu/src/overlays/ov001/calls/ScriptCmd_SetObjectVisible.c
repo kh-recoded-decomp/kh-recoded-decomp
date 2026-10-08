@@ -1,5 +1,5 @@
 #define ScriptCmd_SetObjectVisible_0207fc68 ScriptCmd_SetObjectVisible
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
 #define func_ov001_0207f038 func_ov001_0207f060
-#define func_ov001_0207f6f4 func_ov001_0207f71c
+#define func_ov001_0207f6f4 FieldObject_SetEnabled
 #include "src/ov001/scripted_actor_behavior/ScriptCmd_SetObjectVisible_0207fc68.c"

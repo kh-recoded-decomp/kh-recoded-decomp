@@ -1,4 +1,4 @@
 #define FieldObject_CreateAtPosition_020a0b7c FieldObject_CreateAtPosition_020a0b9c
 #define FieldObject_Create_0207f440 FieldObject_Create
-#define func_ov009_020a0634 func_ov009_020a0654
+#define func_ov009_020a0634 FieldObject_SetSwitchState
 #include "src/ov009/shared_engine/FieldObject_CreateAtPosition_020a0b7c.c"

@@ -4,6 +4,6 @@
 #define func_ov052_020d012c ProcessTargetHitEntries
 #define func_ov052_020d0294 UpdateActionPhase
 #define func_ov052_020d03b8 HandlePendingCommand
-#define func_ov052_020d1a68 func_ov052_020d1a88
+#define func_ov052_020d1a68 InitSlotEntryFromRecord
 #define func_ov056_020d3078 FireLinkedShot
 #include "src/ov056/unclassified_helpers/PrepareEntryCommandAndSetMode_020d402c.c"

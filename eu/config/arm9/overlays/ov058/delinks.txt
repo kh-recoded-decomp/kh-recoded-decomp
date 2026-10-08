@@ -8,6 +8,10 @@ src/overlays/ov058/calls/InitRecordEntry.c:
     complete
     .text       start:0x020d4520 end:0x020d4544
 
+src/overlays/ov058/calls/SteerEnemyTowardPoint.c:
+    complete
+    .text       start:0x020d4544 end:0x020d46f8
+
 src/overlays/ov058/calls/IsFacedByPlayer.c:
     complete
     .text       start:0x020d46f8 end:0x020d485c
@@ -203,6 +207,14 @@ src/overlays/ov058/calls/func_ov058_020d79a0.c:
 src/overlays/ov058/calls/PurgeNearbyStageObjects.c:
     complete
     .text       start:0x020d79b8 end:0x020d7a64
+
+src/overlays/ov058/calls/PulseHazardHitScans.c:
+    complete
+    .text       start:0x020d7a64 end:0x020d7d40
+
+src/overlays/ov058/calls/RunAreaBlastHitScan.c:
+    complete
+    .text       start:0x020d7d40 end:0x020d7e3c
 
 src/overlays/ov058/calls/ToBoolMask.c:
     complete

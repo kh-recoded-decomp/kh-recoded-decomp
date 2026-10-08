@@ -35,6 +35,10 @@ src/overlays/ov018/calls/func_ov018_020a2260.c:
     complete
     .text       start:0x020a2260 end:0x020a22ba
 
+src/overlays/ov018/calls/FieldObject_TakeDamage.c:
+    complete
+    .text       start:0x020a22bc end:0x020a2420
+
 src/overlays/ov018/calls/FieldObject_TryCollideWithVolume.c:
     complete
     .text       start:0x020a2420 end:0x020a2620
@@ -46,6 +50,10 @@ src/overlays/ov018/calls/GetRaisedTargetPosition.c:
 src/overlays/ov018/calls/GetActorVelocity_020a2660.c:
     complete
     .text       start:0x020a2660 end:0x020a269a
+
+src/overlays/ov018/calls/FieldObject_Draw_020a269c.c:
+    complete
+    .text       start:0x020a269c end:0x020a288c
 
 src/overlays/ov018/calls/FieldObject_SpawnContactEffect.c:
     complete
@@ -62,6 +70,10 @@ src/overlays/ov018/calls/ResetObjectRotation.c:
 src/overlays/ov018/calls/FieldObject_ShiftWithArea.c:
     complete
     .text       start:0x020a2a00 end:0x020a2c18
+
+src/overlays/ov018/calls/AdvanceObjectAnimations.c:
+    complete
+    .text       start:0x020a2c18 end:0x020a2ca4
 
 src/overlays/ov018/calls/BounceVelocityOffNormal.c:
     complete
@@ -82,6 +94,10 @@ src/overlays/ov018/calls/CreateKind6EntryPool.c:
 src/overlays/ov018/calls/CreateKind6FieldObject.c:
     complete
     .text       start:0x020a3254 end:0x020a335c
+
+src/overlays/ov018/calls/FieldObject_SetDisabled.c:
+    complete
+    .text       start:0x020a335c end:0x020a3424
 
 src/overlays/ov018/calls/func_ov018_020a3424.c:
     complete

@@ -8,7 +8,7 @@ extern void func_0204d994(void);
 extern void BeginScreenFadeOut(s32 value);
 extern void func_ov001_0206a8c8(void);
 extern void *GetBoundedEntryField(s32 value);
-extern void func_ov001_0206e444(s32 value);
+extern void SetFieldEntriesPaused(s32 value);
 extern void Camera_SetFlag18IfStandard(s32 value);
 
 void func_ov028_020bb1b4(void)
@@ -19,7 +19,7 @@ void func_ov028_020bb1b4(void)
     FX_Div(0x10000, 0x40000);
     func_ov001_0206a8c8();
     BeginScreenFadeOut(2);
-    func_ov001_0206e444(1);
+    SetFieldEntriesPaused(1);
     self = GetBoundedEntryField(0);
     callback = *(ResetCallback *)((u8 *)self + 0x200);
     if (callback != 0) {

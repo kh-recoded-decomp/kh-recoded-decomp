@@ -1,4 +1,5 @@
 #define UpdateRootMenuGraphics_020c5474 UpdateRootMenuGraphics
+#define func_01ffb12c SceneNode_Draw
 #define camera_commit_projection_0202a814 camera_commit_projection
 #define func_0202ef24 AdvanceAnimationTracks
 #define func_ov021_020a9aa4 AdvanceObjectAnimationTracks

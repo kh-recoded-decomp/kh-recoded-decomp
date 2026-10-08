@@ -5,5 +5,5 @@
 #define VEC_Mag_01ff9f28 VEC_Mag
 #define VEC_MultAdd_01ffa09c VEC_MultAdd
 #define func_ov001_0208502c AdvanceSpawnerTimer
-#define func_ov001_02085320 func_ov001_02085348
+#define func_ov001_02085320 MoveProjectileBody
 #include "src/ov001/field_objects/StepFallingObject_020850bc.c"

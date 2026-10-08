@@ -6,7 +6,7 @@
 #define Model_SetAllMaterialAlpha_0201a900 NNS_G3dMdlSetMdlAlphaAll
 #define Model_SetAllPolygonIds_0201a8c0 NNS_G3dMdlSetMdlPolygonIDAll
 #define RemoveAnimationFromRenderObject_02018850 NNS_G3dRenderObjRemoveAnmObj
-#define SceneNode_Draw_01ffb12c func_01ffb12c
+#define SceneNode_Draw_01ffb12c SceneNode_Draw
 #define func_02036240 ActorRegistry_GetEntityByIndex
 #define func_ov001_02080a10 func_ov001_02080a38
 #define func_ov035_020bae74 func_ov035_020bae94

@@ -1,5 +1,5 @@
 #define AdvanceModelAnimation_020ac9a4 AdvanceModelAnimation
-#define SceneNode_Draw_01ffb12c func_01ffb12c
+#define SceneNode_Draw_01ffb12c SceneNode_Draw
 #define func_0202f4b8 func_0202f4cc
 #define func_ov021_020ac814 GetCurrentNodeOffset
 #include "src/ov021/object_state/AdvanceModelAnimation_020ac9a4.c"

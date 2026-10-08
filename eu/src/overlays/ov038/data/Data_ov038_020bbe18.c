@@ -1,8 +1,6 @@
 #include "nitro/types.h"
 
-typedef struct ResultsTopTables {
-    u32 topSpriteLayout[21];
-    u32 topMessageIds[36];
+typedef struct ResultsTopTablesTail {
     u8 topRecordTableA[161];
     u8 topRecordTableB[191];
     u8 topRecordTableC[213];
@@ -13,18 +11,18 @@ typedef struct ResultsTopTables {
     u32 bottomLayout[6];
     u8 bottomRecordTableA[325];
     u8 bottomHeader[47];
-} ResultsTopTables;
+} ResultsTopTablesTail;
 
-ResultsTopTables gResultsTables = {
-    {
+u32 gResultsTables[21] = {
         0x00000000, 0x00000000, 0x00000080, 0x00000060,
         0x00000001, 0x00000001, 0x00000001, 0x00000001,
         0x00000000, 0x00000080, 0x00000060, 0x00000001,
         0x00000001, 0x00000000, 0x00000002, 0x00000000,
         0x00000080, 0x00000060, 0x00000001, 0x00000001,
         0x00000000,
-    },
-    {
+};
+
+u32 gResultsTopMessageIds[36] = {
         0x00000BFA, 0x00000C0E, 0x00000C22, 0x00000C36,
         0x00000C4A, 0x00000C5E, 0x00000C72, 0x00000C86,
         0x00000C9A, 0x00000CAE, 0x00000CC2, 0x00000CD6,
@@ -34,7 +32,9 @@ ResultsTopTables gResultsTables = {
         0x00000D3A, 0x00000D4E, 0x00000D62, 0x00000D76,
         0x00000D8A, 0x00000D9E, 0x00000DB2, 0x00000DC6,
         0x00000DDA, 0x00000DEE, 0x00000E02, 0x00000E16,
-    },
+};
+
+ResultsTopTablesTail gResultsTopRecordTableA = {
     {
         0x00, 0x00, 0x00, 0x00, 0x90, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xCA, 0x00, 0x00, 0x00,
         0x00, 0x00, 0x00, 0x00, 0x91, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x92, 0x00, 0x00, 0x00,

@@ -8,8 +8,8 @@ typedef struct Session {
 } Session;
 
 extern Session *data_ov001_020a0480;
-extern void func_ov001_0206e3d8(void);
-extern void func_ov001_0206e444(s32 enable);
+extern void DeactivateManagerEntries(void);
+extern void SetFieldEntriesPaused(s32 enable);
 extern void SetSubModeFrozen(s32 value);
 extern void func_ov001_0207ef44(void);
 extern int func_ov001_0206dc38(void);
@@ -34,8 +34,8 @@ void func_ov001_0206375c(void) {
     int index;
 
     data_ov001_020a0480->flags &= ~0x20;
-    func_ov001_0206e3d8();
-    func_ov001_0206e444(1);
+    DeactivateManagerEntries();
+    SetFieldEntriesPaused(1);
     SetSubModeFrozen(0);
     func_ov001_0207ef44();
     for (index = 0; index < func_ov001_0206dc38(); index++) {

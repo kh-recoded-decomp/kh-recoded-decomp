@@ -5,7 +5,7 @@ extern void func_ov040_020bcd28(void);
 extern void FinishAreaSceneLoad(void);
 extern void func_ov040_020bce70(void);
 extern void func_ov040_020bd0f4(void);
-extern void func_ov040_020bd128(void); /* UpdateAreaSceneState */
+extern void UpdateAreaSceneState(void); /* UpdateAreaSceneState */
 extern void StartAreaCameraIntro(void);
 extern void TickIntroRotation(void); /* TickIntroRotation */
 extern void func_ov040_020bd418(void);
@@ -26,7 +26,7 @@ void (*gAreaSceneStateHandlers[19])(void) = {
     FinishAreaSceneLoad,
     func_ov040_020bce70,
     func_ov040_020bd0f4,
-    func_ov040_020bd128, /* UpdateAreaSceneState */
+    UpdateAreaSceneState, /* UpdateAreaSceneState */
     StartAreaCameraIntro,
     TickIntroRotation, /* TickIntroRotation */
     func_ov040_020bd418,

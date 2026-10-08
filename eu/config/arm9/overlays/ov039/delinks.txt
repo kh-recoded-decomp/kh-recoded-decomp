@@ -12,6 +12,10 @@ src/overlays/ov039/calls/GetStateC9C4.c:
     complete
     .text       start:0x020bab18 end:0x020bab30
 
+src/overlays/ov039/calls/SetupOverlayDisplay.c:
+    complete
+    .text       start:0x020bab30 end:0x020babac
+
 src/overlays/ov039/calls/LoadBgLayerSet3.c:
     complete
     .text       start:0x020babac end:0x020bac44

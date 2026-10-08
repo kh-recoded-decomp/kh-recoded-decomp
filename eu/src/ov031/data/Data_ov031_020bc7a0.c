@@ -21,7 +21,7 @@ extern void TryEnterState6(void);
 extern void TryEnterState7(void);
 extern void TryReenterState7(void);
 extern void TryReenterState7Clear(void);
-extern void func_ov031_020ba900(void);
+extern void TryLeaveToState7(void);
 extern void FinishMoviePlayerState(void);
 
 typedef struct UnalignedPtr {
@@ -43,7 +43,7 @@ struct {
         {(void *)SelectNextState},
         {(void *)EnterState7Alt},
         {(void *)EnterState10},
-        {(void *)func_ov031_020ba900},
+        {(void *)TryLeaveToState7},
         {(void *)EnterState12},
         {(void *)TryReenterState7},
         {(void *)TryReenterState7Clear},

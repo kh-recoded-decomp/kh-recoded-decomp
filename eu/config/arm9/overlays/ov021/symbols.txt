@@ -2,7 +2,6 @@ GetSubModeState kind:function(thumb,size=0x1c) addr:0x020a6ee0
 RefreshInputState kind:function(thumb,size=0x58) addr:0x020a6efc
 UpdateDirectionInput kind:function(thumb,size=0xa4) addr:0x020a6f54
 ToggleFieldButtonFlags kind:function(thumb,size=0xd0) addr:0x020a6ff8
-func_ov021_020a6ff8 kind:function(thumb,size=0xd0) addr:0x020a6ff8
 UpdateFieldButtonInput kind:function(thumb,size=0x3b8) addr:0x020a70c8
 func_ov021_020a7480 kind:function(thumb,size=0xa) addr:0x020a7480
 UpdateFieldButton kind:function(thumb,size=0x84) addr:0x020a748c

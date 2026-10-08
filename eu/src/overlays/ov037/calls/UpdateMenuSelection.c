@@ -2,7 +2,7 @@
 #define OS_GetTick_02003fd4 OS_GetTick
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define RefreshMenuListLayout_020bad64 RefreshMenuListLayout
-#define SceneNode_Draw_01ffb12c func_01ffb12c
+#define SceneNode_Draw_01ffb12c SceneNode_Draw
 #define Text_UploadTileBuffer_02001520 Text_UploadTileBuffer
 #define UpdateMenuSelection_020bb4bc UpdateMenuSelection
 #define camera_commit_projection_0202a814 camera_commit_projection

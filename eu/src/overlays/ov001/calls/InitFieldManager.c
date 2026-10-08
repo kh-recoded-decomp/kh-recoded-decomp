@@ -117,7 +117,7 @@ extern void SetParamHalf18(int value);
 extern void SetParamWord20(int value);
 extern SaveSlots *GetSelectionPackedValueBlock(void);
 extern u32 GetParamWord20(void);
-extern void func_ov001_02073074(u16 slot, int arg1);
+extern void AddGaugePoints(u16 slot, int arg1);
 extern BOOL func_ov001_02064784(void);
 extern void func_ov001_0206efac(FieldManager *manager, void *file);
 extern void StartSceneMinigameTask(void);
@@ -222,7 +222,7 @@ void *InitFieldManager(FieldParams *params)
         slots = GetSelectionPackedValueBlock();
         manager->unk_474 = -1;
         manager->paramActive = GetParamWord20() != 0;
-        func_ov001_02073074(slots->currentSlot, 1);
+        AddGaugePoints(slots->currentSlot, 1);
         if (!func_ov001_02064784() && IsSessionFlagSet(0x3708)) {
             file = Archive_LoadFile((((manager->messages6C + 0x8000) & 0xFFFFFC) << 7) | 0x80000005, 0xE);
             func_ov001_0206efac(manager, file);

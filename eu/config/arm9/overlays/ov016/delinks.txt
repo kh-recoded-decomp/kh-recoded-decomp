@@ -64,9 +64,17 @@ src/overlays/ov016/calls/SaveFieldUnitMode.c:
     complete
     .text       start:0x020a2290 end:0x020a229a
 
+src/overlays/ov016/calls/UpdateFieldObjectHighlight.c:
+    complete
+    .text       start:0x020a229c end:0x020a232c
+
 src/overlays/ov016/calls/func_ov016_020a232c.c:
     complete
     .text       start:0x020a232c end:0x020a234c
+
+src/overlays/ov016/calls/LinkStackedFieldObjects.c:
+    complete
+    .text       start:0x020a234c end:0x020a2578
 
 src/overlays/ov016/calls/func_ov016_020a2578.c:
     complete
@@ -379,6 +387,10 @@ src/overlays/ov016/calls/ReleaseFieldSceneResources.c:
 src/overlays/ov016/calls/GetFieldUnitSlotRecord.c:
     complete
     .text       start:0x020a5d1c end:0x020a5d36
+
+src/overlays/ov016/calls/SaveFieldUnitRecords.c:
+    complete
+    .text       start:0x020a5d38 end:0x020a5f14
 
 src/overlays/ov016/calls/CopyFieldUnitSlotFrame.c:
     complete

@@ -42,18 +42,18 @@ typedef struct ScriptOperand {
     short type;
     LayoutU8 undecodedPayload[6];
 } ScriptOperand;
-extern unsigned int func_01ffb12c();
+extern unsigned int SceneNode_Draw();
 extern unsigned int ActorRegistry_GetEntityByIndex();
 
 void func_ov020_020a2edc(int work) {
   ActorNode *actor;
 
   if ((*(u16 *)(work + 0x54) & 0x20) != 0) {
-    func_01ffb12c(*(void **)(work + 0x48));
+    SceneNode_Draw(*(void **)(work + 0x48));
   }
   if ((*(u16 *)(work + 0x54) & 0x40) == 0) {
     return;
   }
   actor = ActorRegistry_GetEntityByIndex((u32)*(u8 *)(work + 0x32));
-  func_01ffb12c(&actor->flags_004);
+  SceneNode_Draw(&actor->flags_004);
 }

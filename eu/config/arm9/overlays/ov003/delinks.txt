@@ -47,6 +47,14 @@ src/overlays/ov003/calls/MovieScene_LoadSlotBuffer.c:
     complete
     .text       start:0x02064110 end:0x02064154
 
+src/overlays/ov003/calls/MovieScene_FadeInBgPlanes.c:
+    complete
+    .text       start:0x02064154 end:0x02064230
+
+src/overlays/ov003/calls/MovieScene_FadeOutBgPlanes.c:
+    complete
+    .text       start:0x02064230 end:0x020642fc
+
 src/overlays/ov003/auto/func_ov003_020642fc.c:
     complete
     .text       start:0x020642fc end:0x02064304
@@ -58,6 +66,10 @@ src/overlays/ov003/calls/MovieScene_SetBgPriority.c:
 src/overlays/ov003/calls/MovieScene_ProcessTimeline.c:
     complete
     .text       start:0x0206436c end:0x020643f0
+
+src/overlays/ov003/calls/MovieScene_Run.c:
+    complete
+    .text       start:0x020643f0 end:0x020646e8
 
 src/overlays/ov003/calls/MovieScene_RequestStop.c:
     complete

@@ -1,5 +1,5 @@
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField
 #define GetCtxModeByte_02068084 func_ov001_02068084
 #define InitOv072ActorState_020d8138 InitOv072ActorState
-#define func_ov072_020d8528 func_ov072_020d8548
+#define func_ov072_020d8528 UpdatePillarRide
 #include "src/ov072/unclassified_helpers/InitOv072ActorState_020d8138.c"

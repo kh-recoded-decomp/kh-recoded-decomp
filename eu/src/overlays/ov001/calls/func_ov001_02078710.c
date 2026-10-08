@@ -43,7 +43,7 @@ extern void *GetWord20(void *window);
 extern void SelectListNodeOrFirst(void *self, void *target);
 extern u32 MakePrimaryVramKey_02073634(u32 messageId);
 extern void LoadPackedFileView(MessageSet *messages, u32 fileId, int compressed);
-extern void func_ov001_02076a9c(FieldMenu *menu, void *window, FieldEntry *entry, MessageSet *messages, s32 number);
+extern void DrawFieldSlotCell(FieldMenu *menu, void *window, FieldEntry *entry, MessageSet *messages, s32 number);
 extern void FreePointerIfSet(void **pointer);
 extern void DrawMenuPanelPage(FieldMenu *menu);
 extern FieldEntry *CycleMenuEntry(FieldMenu *menu, s32 index, s32 arg2, s32 arg3);
@@ -64,7 +64,7 @@ void func_ov001_02078710(s32 index, s32 kind)
         savedNode = GetWord20(menu);
         SelectListNodeOrFirst(menu, entry->listNode);
         LoadPackedFileView(&messages, MakePrimaryVramKey_02073634(0), 1);
-        func_ov001_02076a9c(menu, menu, entry, &messages, index + 1);
+        DrawFieldSlotCell(menu, menu, entry, &messages, index + 1);
         FreePointerIfSet(&messages.file);
         SelectListNodeOrFirst(menu, savedNode);
         if (menu->mode == 2 && menu->unk_C8 != menu->unk_DC) {

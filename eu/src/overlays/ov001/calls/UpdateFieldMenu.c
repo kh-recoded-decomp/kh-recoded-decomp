@@ -4,6 +4,7 @@
 #define PXI_Init_02028dac PXI_Init_02028dc0
 #define PXI_Init_02028db8 PXI_Init_02028dcc
 #define UpdateFieldMenu_020779f0 UpdateFieldMenu
+#define func_ov001_020758c4 DrawPartyGauges
 #define UpdateWidgetLayerDefault_020b9df0 func_ov027_020b9e10
 #define func_01ff8684 MIi_CpuClear16
 #define func_ov001_020736b4 UpdateFieldWidgetLayer
@@ -13,6 +14,6 @@
 #define func_ov001_02076cac RefreshFieldMenuHighlights
 #define func_ov001_02076ff4 DrawItemCountBadge
 #define func_ov001_020771a8 TriggerFieldMenuButtonRecords
-#define func_ov027_020b9d54 func_ov027_020b9d74
+#define func_ov027_020b9d54 ClearTileTableRect
 #define func_ov027_020b9e00 MarkTileTableRowDirty
 #include "src/ov001/field_manager/UpdateFieldMenu_020779f0.c"

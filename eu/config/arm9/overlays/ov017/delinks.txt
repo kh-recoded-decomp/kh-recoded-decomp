@@ -168,6 +168,10 @@ src/overlays/ov017/calls/ReleaseFieldObjectResources.c:
     complete
     .text       start:0x020a2ec0 end:0x020a2f28
 
+src/overlays/ov017/calls/HandleFieldObjectActivation.c:
+    complete
+    .text       start:0x020a2f28 end:0x020a3104
+
 src/overlays/ov017/calls/CollideFieldObjectActor.c:
     complete
     .text       start:0x020a3104 end:0x020a3260
@@ -187,6 +191,10 @@ src/overlays/ov017/calls/DrawFieldObjectEffects.c:
 src/overlays/ov017/calls/FieldObject_HandleContact_020a33d8.c:
     complete
     .text       start:0x020a33d8 end:0x020a3574
+
+src/overlays/ov017/calls/UpdateFieldObjectBreakAnim.c:
+    complete
+    .text       start:0x020a3574 end:0x020a3630
 
 src/overlays/ov017/calls/UpdateMovingFieldObject.c:
     complete
@@ -212,6 +220,14 @@ src/overlays/ov017/calls/CreateKind4EntryPool.c:
     complete
     .text       start:0x020a3a48 end:0x020a3b08
 
+src/overlays/ov017/calls/SpawnFieldObject.c:
+    complete
+    .text       start:0x020a3b08 end:0x020a3c98
+
+src/overlays/ov017/calls/SetFieldObjectHidden_020a3c98.c:
+    complete
+    .text       start:0x020a3c98 end:0x020a3d60
+
 src/overlays/ov017/calls/IsFieldFlagBit1Set.c:
     complete
     .text       start:0x020a3d60 end:0x020a3d6e
@@ -219,6 +235,10 @@ src/overlays/ov017/calls/IsFieldFlagBit1Set.c:
 src/overlays/ov017/calls/IsFieldObjectActive.c:
     complete
     .text       start:0x020a3d70 end:0x020a3d94
+
+src/overlays/ov017/calls/SetFieldObjectFlag5.c:
+    complete
+    .text       start:0x020a3d94 end:0x020a3e0e
 
 src/overlays/ov017/calls/IsFieldIdle.c:
     complete
@@ -263,6 +283,10 @@ src/overlays/ov017/calls/FormatAndQueueMessage.c:
 src/overlays/ov017/calls/QueueLinkedEntryRange.c:
     complete
     .text       start:0x020a4050 end:0x020a407c
+
+src/overlays/ov017/calls/ResetFieldObjectState.c:
+    complete
+    .text       start:0x020a407c end:0x020a40ca
 
 src/overlays/ov017/calls/DispatchKind4Entry.c:
     complete
@@ -508,6 +532,10 @@ src/overlays/ov017/calls/ReleaseField48.c:
     complete
     .text       start:0x020a5458 end:0x020a5472
 
+src/overlays/ov017/calls/FieldDrop_OnCollect.c:
+    complete
+    .text       start:0x020a5474 end:0x020a5608
+
 src/overlays/ov017/calls/CollideKind7Entry.c:
     complete
     .text       start:0x020a5608 end:0x020a5714
@@ -524,6 +552,10 @@ src/overlays/ov017/calls/DrawKind7EntryStack.c:
     complete
     .text       start:0x020a576c end:0x020a5874
 
+src/overlays/ov017/calls/UpdateKind7EntryAnimations.c:
+    complete
+    .text       start:0x020a5874 end:0x020a5900
+
 src/overlays/ov017/calls/func_ov017_020a5a98.c:
     complete
     .text       start:0x020a5a98 end:0x020a5aae
@@ -539,6 +571,10 @@ src/overlays/ov017/calls/CreateKind7EntryPool.c:
 src/overlays/ov017/calls/SpawnKind7Entry.c:
     complete
     .text       start:0x020a5bec end:0x020a5d6c
+
+src/overlays/ov017/calls/SetKind7EntryHidden.c:
+    complete
+    .text       start:0x020a5d6c end:0x020a5df0
 
 src/overlays/ov017/auto/func_ov017_020a5df0.c:
     complete

@@ -1,4 +1,4 @@
 #define FieldObject_CreateAt_020a1054 FieldObject_CreateAt
 #define FieldObject_Create_0207f440 FieldObject_Create
-#define func_ov011_020a06e8 func_ov011_020a0708
+#define func_ov011_020a06e8 FieldObject_SetState
 #include "src/ov011/field_objects/FieldObject_CreateAt_020a1054.c"

@@ -7,6 +7,6 @@
 #define apply_all_pending_entry_edits_020b84f4 func_ov027_020b8514
 #define func_ov027_020b8390 FindLoadedElementById
 #define func_ov027_020b83e8 SetTagRecordArmed
-#define func_ov027_020b9d54 func_ov027_020b9d74
+#define func_ov027_020b9d54 ClearTileTableRect
 #define func_ov027_020b9e00 MarkTileTableRowDirty
 #include "src/ov001/field_manager/DrawGridMenuCells_02079790.c"

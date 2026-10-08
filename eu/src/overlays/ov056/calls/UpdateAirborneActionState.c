@@ -1,5 +1,5 @@
 #define ApplyAnimRootMotion_020cff8c ApplyAnimRootMotion
-#define InitSlotEntryFromRecord_020d1a68 func_ov052_020d1a88
+#define InitSlotEntryFromRecord_020d1a68 InitSlotEntryFromRecord
 #define ProcessTargetHitEntries_020d012c ProcessTargetHitEntries
 #define UpdateActionPhase_020d0294 UpdateActionPhase
 #define UpdateAirborneActionState_020d3dc8 UpdateAirborneActionState

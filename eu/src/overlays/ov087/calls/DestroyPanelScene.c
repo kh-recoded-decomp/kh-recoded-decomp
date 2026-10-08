@@ -10,5 +10,5 @@
 #define func_ov027_020b9098 func_ov027_020b90b8
 #define func_ov039_020bc18c GetPrimaryMenuElement
 #define func_ov039_020bc1bc func_ov039_020bc1dc
-#define func_ov087_020c64d8 func_ov087_020c64f8
+#define func_ov087_020c64d8 SetupPanelDisplay
 #include "src/ov087/panel_state/DestroyPanelScene_020c73f4.c"

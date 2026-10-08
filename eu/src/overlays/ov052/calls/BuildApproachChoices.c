@@ -1,5 +1,5 @@
 #define BuildApproachChoices_020cc66c BuildApproachChoices
-#define GetStageEventTargetInfo_02087960 func_ov001_02087988
+#define GetStageEventTargetInfo_02087960 GetStageEventTargetInfo
 #define GetWaitTargetPosition_0206c3f4 GetWaitTargetPosition
 #define IsStageEventReady_02087c78 IsStageEventReady
 #define VEC_Mag_01ff9f28 VEC_Mag

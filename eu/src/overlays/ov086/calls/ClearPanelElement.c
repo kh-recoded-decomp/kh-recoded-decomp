@@ -1,5 +1,5 @@
 #define ClearPanelElement_020beb6c ClearPanelElement
 #define data_ov086_020c3000 data_ov086_020c3020
-#define func_ov027_020b9b94 func_ov027_020b9bb4
+#define func_ov027_020b9b94 ClearWidgetTileArea
 #define func_ov039_020bc208 GetMenuTileTable
 #include "src/ov086/panel_state/ClearPanelElement_020beb6c.c"

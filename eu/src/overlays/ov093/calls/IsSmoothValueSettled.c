@@ -1,0 +1,4 @@
+#define IsSmoothValueSettled_020c2254 IsSmoothValueSettled
+#define g_sceneWork_020c50e0 data_ov093_020c5100
+
+#include "src/ov093/unclassified_helpers/IsSmoothValueSettled_020c2254.c"

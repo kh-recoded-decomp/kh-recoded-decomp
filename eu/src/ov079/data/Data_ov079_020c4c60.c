@@ -9,8 +9,8 @@ extern void ConfigMenu_NextValue(void);
 extern void ConfigMenu_PrevValue(void);
 extern void ConfigMenu_Release(void);
 extern void ConfigMenu_UpdateHelp(void);
-extern void func_ov079_020c4b74(void);
-extern void func_ov079_020c4bc0(void);
+extern void ConfigMenu_PrevPage(void);
+extern void ConfigMenu_NextPage(void);
 extern void func_ov079_020c4c0c(void);
 
 void *data_ov079_020c4c60[17] = {
@@ -27,8 +27,8 @@ void *data_ov079_020c4c60[17] = {
     (void *)func_ov079_020c4c0c,
     NULL,
     NULL,
-    (void *)func_ov079_020c4b74,
-    (void *)func_ov079_020c4bc0,
+    (void *)ConfigMenu_PrevPage,
+    (void *)ConfigMenu_NextPage,
     NULL,
     (void *)func_ov079_020c4c0c,
 };

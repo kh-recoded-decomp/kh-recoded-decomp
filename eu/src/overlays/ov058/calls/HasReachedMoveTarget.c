@@ -1,4 +1,4 @@
-#define GetStageEventTargetInfo_02087960 func_ov001_02087988
+#define GetStageEventTargetInfo_02087960 GetStageEventTargetInfo
 #define HasReachedMoveTarget_020d483c HasReachedMoveTarget
 #define StageRecord_GetSlotPosition_02087c4c StageRecord_GetSlotPosition
 #define func_01ffa0f4 VEC_Distance

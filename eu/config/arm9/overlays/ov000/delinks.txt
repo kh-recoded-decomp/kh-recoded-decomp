@@ -28,6 +28,10 @@ src/overlays/ov000/calls/ReleaseEmbeddedIfActive.c:
     complete
     .text       start:0x020616b4 end:0x020616dc
 
+src/overlays/ov000/calls/LoadPanelBgGraphics.c:
+    complete
+    .text       start:0x020616dc end:0x02061818
+
 src/overlays/ov000/calls/ReleaseHeapExtensions.c:
     complete
     .text       start:0x02061818 end:0x0206183c

@@ -2,6 +2,7 @@
 #define GetStageActor_0209c040 GetStageActor
 #define GetStageObjectHandle_0209c0c4 GetStageObjectHandle
 #define StartStageEventEffect_02097b88 StartStageEventEffect
+#define func_ov001_02066684 ApplyPartyStatGain
 #define func_ov001_02068abc HandleEnemyDefeat
 #define func_ov001_0209ce10 FinishScoreEvent
 #include "src/ov001/shared_engine/StartStageEventEffect_02097b88.c"

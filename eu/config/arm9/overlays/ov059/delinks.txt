@@ -24,6 +24,10 @@ src/overlays/ov059/calls/FreeWorkBuffer.c:
     complete
     .text       start:0x020c768c end:0x020c76a4
 
+src/overlays/ov059/calls/UpdateToggleEffectTimer.c:
+    complete
+    .text       start:0x020c76a4 end:0x020c784c
+
 src/overlays/ov059/calls/Actor_SelectAction.c:
     complete
     .text       start:0x020c784c end:0x020c7980
@@ -127,6 +131,10 @@ src/overlays/ov059/calls/Actor_UpdateComboStage.c:
 src/overlays/ov059/calls/Actor_SetJointBlendMode.c:
     complete
     .text       start:0x020c8fbc end:0x020c9068
+
+src/overlays/ov059/calls/Actor_DrawPendingEffectNode.c:
+    complete
+    .text       start:0x020c9068 end:0x020c90e8
 
 src/overlays/ov059/calls/Actor_BuildJointHitSphere.c:
     complete
@@ -451,6 +459,10 @@ src/overlays/ov059/calls/AnimRequest_ApplyFrame.c:
 src/overlays/ov059/calls/SoundRequest_Play.c:
     complete
     .text       start:0x020cd9e0 end:0x020cda34
+
+src/overlays/ov059/calls/EffectGroup_Draw.c:
+    complete
+    .text       start:0x020cda34 end:0x020cdc6c
 
 src/overlays/ov059/calls/func_ov059_020cdc6c.c:
     complete

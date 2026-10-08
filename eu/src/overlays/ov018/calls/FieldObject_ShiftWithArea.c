@@ -1,4 +1,4 @@
-#define FieldObject_SetDisabled_020a333c func_ov018_020a335c
+#define FieldObject_SetDisabled_020a333c FieldObject_SetDisabled
 #define FieldObject_ShiftWithArea_020a29e0 FieldObject_ShiftWithArea
 #define GetNegatedCombinedOffset_020bc68c GetNegatedCombinedOffset
 #define IsOffsetBeyondActiveRecord_020bc594 IsOffsetBeyondActiveRecord

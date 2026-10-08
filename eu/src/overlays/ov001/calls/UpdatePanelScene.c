@@ -32,7 +32,7 @@ extern BOOL IsSessionFlagSet(u32 value);
 extern int func_ov001_02064784(void);
 extern void PulsePaletteFlash(PanelScene *panel);
 extern void UpdateIdleTimerToggle(PanelScene *panel);
-extern void func_ov001_0207af6c(PanelScene *panel);
+extern void UpdatePanelConfirmTimer(PanelScene *panel);
 extern u32 func_ov001_0207b3f4(void);
 extern BOOL func_ov001_0207b610(void);
 extern void ClearPanelInputActive(void);
@@ -55,14 +55,14 @@ int UpdatePanelScene(void)
         panel->channel = channel;
     }
     if (!func_ov001_02064784() && IsSessionFlagSet(0x370b)) {
-        func_ov001_0207af6c(panel);
+        UpdatePanelConfirmTimer(panel);
     } else {
         switch (panel->timerMode) {
         case 0:
             UpdateIdleTimerToggle(panel);
             break;
         case 1:
-            func_ov001_0207af6c(panel);
+            UpdatePanelConfirmTimer(panel);
             break;
         case 2:
             break;

@@ -1,6 +1,6 @@
 #define AdvanceAnimationTracks_0202ef24 AdvanceAnimationTracks
 #define DrawModelViewer_020c21b8 DrawModelViewer
-#define SceneNode_Draw_01ffb12c func_01ffb12c
+#define SceneNode_Draw_01ffb12c SceneNode_Draw
 #define camera_commit_projection_0202a814 camera_commit_projection
-#define func_ov099_020c18e8 func_ov099_020c1908
+#define func_ov099_020c18e8 DrawViewerSceneNode
 #include "src/ov099/unclassified_helpers/DrawModelViewer_020c21b8.c"

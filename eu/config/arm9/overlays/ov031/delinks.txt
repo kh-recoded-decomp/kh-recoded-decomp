@@ -59,6 +59,10 @@ src/overlays/ov031/calls/EnterState10.c:
     complete
     .text       start:0x020ba8e0 end:0x020ba900
 
+src/overlays/ov031/calls/TryLeaveToState7.c:
+    complete
+    .text       start:0x020ba900 end:0x020ba960
+
 src/overlays/ov031/calls/EnterState12.c:
     complete
     .text       start:0x020ba960 end:0x020ba97a

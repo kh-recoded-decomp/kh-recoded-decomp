@@ -2,7 +2,7 @@
 
 extern u32 data_ov028_020bb3a0;
 extern void ActorRegistry_ForEachCallback(u32 size);
-extern void func_ov001_020668e4(void);
+extern void UpdatePrizeOrbs(void);
 extern void UpdateSceneAnimsAndCaption(u32 size);
 extern void UpdatePartyEntries(u32 size);
 extern void UpdateFieldObjectStates(u32 size);
@@ -22,7 +22,7 @@ void func_ov028_020bae88(s32 mode)
     UpdatePartyEntries(budget);
     if (mode == 0) {
         StageManager_Update(budget);
-        func_ov001_020668e4();
+        UpdatePrizeOrbs();
     }
     ActorRegistry_ForEachCallback(0x1000);
 }

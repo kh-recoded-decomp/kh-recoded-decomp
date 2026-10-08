@@ -1,6 +1,6 @@
 #define NNSi_FndGetCurrentRootHeap_0202a764 NNSi_FndGetCurrentRootHeap
 #define RunFieldPhases_02061af4 RunFieldPhases
-#define UpdateFieldBgm_02062d1c func_ov001_02062d1c
+#define UpdateFieldBgm_02062d1c UpdateFieldBgm
 #define data_ov001_0209e680 gSessionScriptStateHandlers
 #define func_ov001_02087868 func_ov001_02087890
 #include "src/ov001/field_manager/RunFieldPhases_02061af4.c"

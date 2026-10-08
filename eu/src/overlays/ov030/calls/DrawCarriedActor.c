@@ -3,7 +3,7 @@
 #define DrawModelWithAttachment_020a9af0 DrawModelWithAttachment
 #define DrawSlotMarker_020ab898 DrawSlotMarker
 #define InvokeMemberDrawCallbacks_020ad714 InvokeMemberDrawCallbacks
-#define SceneNode_Draw_01ffb12c func_01ffb12c
+#define SceneNode_Draw_01ffb12c SceneNode_Draw
 #define func_ov052_020cfb28 AnySubObjectFlagsActive
 #define func_ov052_020d067c GetAttachmentWorldPosition
 #define func_ov052_020d13f0 DrawPendingSlotModel

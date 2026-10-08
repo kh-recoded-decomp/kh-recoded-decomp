@@ -6,9 +6,9 @@
 #define func_ov018_020a2200 func_ov018_020a2220
 #define func_ov018_020a2214 func_ov018_020a2234
 #define func_ov018_020a2240 func_ov018_020a2260
-#define func_ov018_020a229c func_ov018_020a22bc
+#define func_ov018_020a229c FieldObject_TakeDamage
 #define func_ov018_020a2400 FieldObject_TryCollideWithVolume
-#define func_ov018_020a267c func_ov018_020a269c
+#define func_ov018_020a267c FieldObject_Draw_020a269c
 #define func_ov018_020a3190 func_ov018_020a31b0
 #define func_ov018_020a3194 func_ov018_020a31b4
 #include "src/ov018/unclassified_helpers/CreateKind6EntryPool_020a3198.c"

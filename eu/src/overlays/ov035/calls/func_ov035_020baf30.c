@@ -6,7 +6,7 @@ extern void WriteSessionPackedBits(u32 id, int size, int value);
 extern int IsSessionFlagSet(u32 id);
 extern void SetSessionFlag(u32 id);
 extern u32 func_ov001_0207f060(u8 a, u8 b);
-extern void func_ov001_0207f71c(u32 a, u32 b);
+extern void FieldObject_SetEnabled(u32 a, u32 b);
 extern int random_next_scaled(u32 scale);
 
 void func_ov035_020baf30(u32 scale, s16 *table, u8 a, u8 b) {
@@ -27,5 +27,5 @@ void func_ov035_020baf30(u32 scale, s16 *table, u8 a, u8 b) {
     encoded = func_ov001_0207f060(*(u8 *)(data_ov035_020bc500 + 0x1f),
                                   *(u8 *)(data_ov035_020bc500 + 0x20));
     extra = IsSessionFlagSet(0x3702);
-    func_ov001_0207f71c(encoded, extra);
+    FieldObject_SetEnabled(encoded, extra);
 }

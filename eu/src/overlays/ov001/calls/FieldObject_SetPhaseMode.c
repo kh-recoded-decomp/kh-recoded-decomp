@@ -1,6 +1,6 @@
 #define ActorSlot_Unlink_02035c48 ActorSlot_Unlink
 #define AdvanceWrappedPhase_02082440 AdvanceWrappedPhase
-#define FieldObject_SetEnabled_0207f6f4 func_ov001_0207f71c
+#define FieldObject_SetEnabled_0207f6f4 FieldObject_SetEnabled
 #define FieldObject_SetPhaseMode_02082714 FieldObject_SetPhaseMode
 #define func_ov001_02082468 FallFieldObject
 #include "src/ov001/field_objects/FieldObject_SetPhaseMode_02082714.c"

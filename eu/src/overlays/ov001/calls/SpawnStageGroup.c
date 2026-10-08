@@ -9,7 +9,7 @@
 #define SpawnStageGroup_02094f60 SpawnStageGroup
 #define func_ov001_0208f018 func_ov001_0208f040
 #define func_ov001_020925bc func_ov001_020925e4
-#define func_ov001_02093188 func_ov001_020931b0
+#define func_ov001_02093188 ResetStageActorFlags
 #define func_ov001_02093330 func_ov001_02093358
 #define func_ov001_020950f8 func_ov001_02095120
 #define func_ov001_0209c3c0 func_ov001_0209c3e8

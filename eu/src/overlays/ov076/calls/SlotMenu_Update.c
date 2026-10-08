@@ -1,6 +1,6 @@
 #define AdvanceAnimationTracks_0202ef24 AdvanceAnimationTracks
 #define IsGlobalPackedBitSet_02027304 IsGlobalPackedBitSet
-#define SceneNode_Draw_01ffb12c func_01ffb12c
+#define SceneNode_Draw_01ffb12c SceneNode_Draw
 #define SetNavigationElementsVisible_020ccd30 SetNavigationElementsVisible
 #define SetStatusPageAndCursor_020c2ca4 SetStatusPageAndCursor
 #define SlotMenu_HasThreeFilledSlotsAndFlags_020c5248 SlotMenu_HasThreeFilledSlotsAndFlags

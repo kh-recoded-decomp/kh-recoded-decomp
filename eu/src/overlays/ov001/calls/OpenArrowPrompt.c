@@ -11,5 +11,5 @@
 #define data_ov001_020a04d0 data_ov001_020a04f0
 #define func_0202a7a4 func_0202a7b8
 #define func_ov001_0207d838 func_ov001_0207d860
-#define func_ov027_020b9d54 func_ov027_020b9d74
+#define func_ov027_020b9d54 ClearTileTableRect
 #include "src/ov001/unclassified_helpers/OpenArrowPrompt_0207dd14.c"

@@ -7,7 +7,7 @@
 #define HandleLinkEvent_020a2418 HandleLinkEvent
 #define HandleLinkHit_020a2774 func_ov019_020a2794
 #define IsDestroyed_020a31f8 IsDestroyed
-#define RefreshLeadLinkState_020a31a0 func_ov019_020a31c0
+#define RefreshLeadLinkState_020a31a0 RefreshLeadLinkState
 #define ReleaseOwnerResources_020a272c ReleaseOwnerResources
 #define SnapshotLinkStates_020a3234 SnapshotLinkStates
 #define TryCollideWithCollider_020a2a08 TryCollideWithCollider

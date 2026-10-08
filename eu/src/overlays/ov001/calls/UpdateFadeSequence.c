@@ -1,5 +1,5 @@
 #define SampleTweenValue_0205258c SampleTweenValue
-#define SceneNode_Draw_01ffb12c func_01ffb12c
+#define SceneNode_Draw_01ffb12c SceneNode_Draw
 #define StartTimerFromPackedPair_0207cb78 StartTimerFromPackedPair
 #define UpdateFadeSequence_0207d0b8 UpdateFadeSequence
 #define func_ov001_0207c960 func_ov001_0207c988

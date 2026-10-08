@@ -65,7 +65,7 @@ UpdateListCursor kind:function(arm,size=0x198) addr:0x02062fb4
 InitScrollList kind:function(arm,size=0x3c) addr:0x0206314c
 ScrollListPad kind:function(arm,size=0x2c) addr:0x02063188
 ScrollListKeys kind:function(arm,size=0x2c) addr:0x020631b4
-func_ov002_020631e0 kind:function(arm,size=0xa0) addr:0x020631e0
+SetScrollListPixels kind:function(arm,size=0xa0) addr:0x020631e0
 SetScrollListPosition kind:function(arm,size=0x2c) addr:0x02063280
 func_ov002_020632ac kind:function(arm,size=0x1c) addr:0x020632ac
 IsButtonBPressed kind:function(arm,size=0x1c) addr:0x020632c8
@@ -212,7 +212,7 @@ IsCategoryEntryFlagSet kind:function(arm,size=0x20) addr:0x020699c8
 GetCategoryFlagState kind:function(arm,size=0xc4) addr:0x020699e8
 GetRecordFlagState kind:function(arm,size=0xe0) addr:0x02069aac
 func_ov002_02069b8c kind:function(arm,size=0x3c) addr:0x02069b8c
-func_ov002_02069bc8 kind:function(arm,size=0x10c) addr:0x02069bc8
+SetRecordFlagBit kind:function(arm,size=0x10c) addr:0x02069bc8
 SetRecordFlagFromTable kind:function(arm,size=0x30) addr:0x02069cd4
 CopyRecordTableBField kind:function(arm,size=0x58) addr:0x02069d04
 CopyRecordName kind:function(arm,size=0x7c) addr:0x02069d5c
@@ -228,7 +228,7 @@ PickRandomRecordWithBias kind:function(arm,size=0x64) addr:0x0206a824
 PickRandomAvailableRecord kind:function(arm,size=0x170) addr:0x0206a888
 func_ov002_0206a9f8 kind:function(arm,size=0x30) addr:0x0206a9f8
 CheckRecordEntryRequirements kind:function(arm,size=0x78) addr:0x0206aa28
-func_ov002_0206aaa0 kind:function(arm,size=0x120) addr:0x0206aaa0
+RankPreferredItems kind:function(arm,size=0x120) addr:0x0206aaa0
 TallyFlagGroups kind:function(arm,size=0xd4) addr:0x0206abc0
 data_ov002_0206ac94 kind:data(any) addr:0x0206ac94
 data_ov002_0206aca4 kind:data(any) addr:0x0206aca4

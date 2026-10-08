@@ -1,5 +1,5 @@
 #define GetWaitTargetPosition_0206c3f4 GetWaitTargetPosition
-#define InitSlotEntry_020d19f8 func_ov052_020d1a18
+#define InitSlotEntry_020d19f8 InitSlotEntry
 #define IsFlag10Set_020aa4b4 IsFlag10Set
 #define IsObjHandleBit0Set_020aa4e4 IsObjHandleBit0Set
 #define IsPlayerEntryFlagSet_02050014 IsPlayerEntryFlagSet

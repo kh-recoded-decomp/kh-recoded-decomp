@@ -5,5 +5,5 @@
 #define data_ov001_0209dfd8 data_ov001_0209e000
 #define data_ov001_0209dfe8 data_ov001_0209e010
 #define func_ov027_020b81e0 func_ov027_020b8200
-#define func_ov027_020b9d54 func_ov027_020b9d74
+#define func_ov027_020b9d54 ClearTileTableRect
 #include "src/ov001/field_manager/AnimateSwapSlotLabels_0207db50.c"

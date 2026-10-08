@@ -1,5 +1,5 @@
 #define AcquireMapLayout_020506dc AcquireMapLayout
-#define ComputeCompletionPercent_020c112c func_ov091_020c114c
+#define ComputeCompletionPercent_020c112c ComputeCompletionPercent
 #define InitRecordMenuScene_020beb20 InitRecordMenuScene
 #define IsEntryFlagSet_020c16e8 IsEntryFlagSet
 #define IsGlobalPackedBitSet_02027304 IsGlobalPackedBitSet

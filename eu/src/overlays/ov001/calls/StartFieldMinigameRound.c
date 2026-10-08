@@ -8,5 +8,5 @@
 #define data_ov001_020a04d4 data_ov001_020a04f4
 #define func_ov001_0207df44 func_ov001_0207df6c
 #define func_ov001_0207e244 func_ov001_0207e26c
-#define func_ov027_020b9d54 func_ov027_020b9d74
+#define func_ov027_020b9d54 ClearTileTableRect
 #include "src/ov001/field_manager/StartFieldMinigameRound_0207ea14.c"

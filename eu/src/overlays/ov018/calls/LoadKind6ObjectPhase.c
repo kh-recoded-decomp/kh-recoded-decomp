@@ -1,7 +1,7 @@
 #define ActorSlot_SetFlag8ByIndex_02036120 ActorSlot_SetFlag8ByIndex
 #define FX_Div_01ff9c84 FX_Div
 #define FieldObject_HandleStrongHit_020a28d4 FieldObject_HandleStrongHit
-#define FieldObject_SetDisabled_020a333c func_ov018_020a335c
+#define FieldObject_SetDisabled_020a333c FieldObject_SetDisabled
 #define FieldObject_SpawnContactEffect_020a286c FieldObject_SpawnContactEffect
 #define IsNodeFlagBitClear_020872b8 IsNodeFlagBitClear
 #define LoadKind6ObjectPhase_020a1ef8 LoadKind6ObjectPhase

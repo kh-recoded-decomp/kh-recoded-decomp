@@ -2,6 +2,7 @@
 #define NotifyManagerEntryObjects_0206e4b4 NotifyManagerEntryObjects
 #define OS_SPrintf_02002428 OS_SPrintf
 #define StartSessionScene_020636f8 StartSessionScene
+#define func_ov001_0206e444 SetFieldEntriesPaused
 #define data_ov001_020a0460 data_ov001_020a0480
 #define func_ov001_02066810 StartIdleSceneObjects
 #define func_ov001_020877c4 ResetStageOriginIfActive

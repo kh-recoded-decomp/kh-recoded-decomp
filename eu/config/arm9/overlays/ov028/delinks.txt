@@ -35,6 +35,14 @@ src/overlays/ov028/calls/func_ov028_020ba778.c:
     complete
     .text       start:0x020ba778 end:0x020ba7fc
 
+src/overlays/ov028/calls/ResumeFieldFromMenu.c:
+    complete
+    .text       start:0x020ba7fc end:0x020ba954
+
+src/overlays/ov028/calls/SceneState_WaitPanelReady.c:
+    complete
+    .text       start:0x020ba954 end:0x020ba99c
+
 src/overlays/ov028/calls/func_ov028_020bab20.c:
     complete
     .text       start:0x020bab20 end:0x020bab68
@@ -42,6 +50,10 @@ src/overlays/ov028/calls/func_ov028_020bab20.c:
 src/overlays/ov028/calls/func_ov028_020bab68.c:
     complete
     .text       start:0x020bab68 end:0x020bab94
+
+src/overlays/ov028/calls/SceneState_WaitScreenIdle.c:
+    complete
+    .text       start:0x020bab94 end:0x020bac0c
 
 src/overlays/ov028/calls/EnterState12WithHalfRate.c:
     complete
@@ -67,6 +79,10 @@ src/overlays/ov028/calls/func_ov028_020bad1c.c:
     complete
     .text       start:0x020bad1c end:0x020bad50
 
+src/overlays/ov028/calls/ShutdownFieldAndSaveActorPoses.c:
+    complete
+    .text       start:0x020bad50 end:0x020bae40
+
 src/overlays/ov028/calls/FinishFieldSceneState.c:
     complete
     .text       start:0x020bae40 end:0x020bae68
@@ -78,6 +94,10 @@ src/overlays/ov028/calls/func_ov028_020bae68.c:
 src/overlays/ov028/calls/func_ov028_020bae88.c:
     complete
     .text       start:0x020bae88 end:0x020baef0
+
+src/overlays/ov028/calls/SetupFieldDisplay.c:
+    complete
+    .text       start:0x020baef0 end:0x020bafe8
 
 src/overlays/ov028/calls/func_ov028_020bafe8.c:
     complete

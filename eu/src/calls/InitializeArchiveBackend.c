@@ -1,6 +1,7 @@
 #define InitializeArchiveBackend_0203a858 InitializeArchiveBackend
 #define archive_backend_callbacks data_027e01f8
 #define func_01ffe3d8 NNSi_G3dFuncSbcMAT
+#define func_01ffe934 NNSi_G3dFuncSbcNODEDESC
 #define func_01fff374 EmitJointScaleCommand
 #define func_02039d54 HandleSbcNoOp
 #define func_02039d7c HandleSbcReturn

@@ -4,7 +4,7 @@
 #define ReadSessionPackedBits_02064574 ReadSessionPackedBits
 #define RefreshEntryCaption_020beff4 RefreshEntryCaption
 #define ShouldOpenPopupWindow_020bef00 ShouldOpenPopupWindow
-#define func_ov089_020bf0a4 func_ov089_020bf0c4
+#define func_ov089_020bf0a4 SetupEntryMenuDisplay
 #define func_ov089_020bf210 LoadEntryModels
 #define func_ov089_020bf398 LoadMenuBackgrounds
 #define func_ov089_020bf49c func_ov089_020bf4bc

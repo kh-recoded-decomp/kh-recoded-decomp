@@ -1,3 +1,4 @@
+#define func_ov001_0206e444 SetFieldEntriesPaused
 #define FX_Div_01ff9c84 FX_Div
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField
 #define ResetSceneState_020bbf34 ResetSceneState

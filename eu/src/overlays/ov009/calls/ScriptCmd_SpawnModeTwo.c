@@ -1,3 +1,3 @@
 #define ScriptCmd_SpawnModeTwo_020a0950 ScriptCmd_SpawnModeTwo
-#define func_ov009_020a0634 func_ov009_020a0654
+#define func_ov009_020a0634 FieldObject_SetSwitchState
 #include "src/ov009/shared_engine/ScriptCmd_SpawnModeTwo_020a0950.c"

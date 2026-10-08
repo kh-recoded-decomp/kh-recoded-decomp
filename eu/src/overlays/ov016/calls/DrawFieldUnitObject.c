@@ -4,7 +4,7 @@
 #define DrawFieldUnitObject_020a537c DrawFieldUnitObject
 #define IsEntityWithinRange_02086cd8 IsEntityWithinRange
 #define PlaceFieldObjectAtPosition_020a2b28 PlaceFieldObjectAtPosition
-#define SceneNode_Draw_01ffb12c func_01ffb12c
+#define SceneNode_Draw_01ffb12c SceneNode_Draw
 #define TranslateAndFlushGeometry_020864c4 TranslateAndFlushGeometry
 #define data_02053444 data_02053458
 #define data_0205356c data_02053580
@@ -15,5 +15,5 @@
 #define func_ov016_020a41ac func_ov016_020a41cc
 #define func_ov016_020a4438 func_ov016_020a4458
 #define func_ov021_020af738 func_ov021_020af758
-#define func_ov032_020bf9dc func_ov032_020bf9fc
+#define func_ov032_020bf9dc DrawGroupMemberModel
 #include "src/ov016/field_objects/DrawFieldUnitObject_020a537c.c"

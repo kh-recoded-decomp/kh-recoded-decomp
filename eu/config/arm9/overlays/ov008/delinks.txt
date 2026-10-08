@@ -92,6 +92,10 @@ src/overlays/ov008/calls/Gimmick_WaitOpenAnimEnd.c:
     complete
     .text       start:0x020a0e10 end:0x020a0e88
 
+src/overlays/ov008/calls/Gimmick_UpdateOpening.c:
+    complete
+    .text       start:0x020a0e88 end:0x020a10d0
+
 src/overlays/ov008/calls/IsOwnerStatusActive.c:
     complete
     .text       start:0x020a10d0 end:0x020a10e4

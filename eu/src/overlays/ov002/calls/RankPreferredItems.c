@@ -1,0 +1,8 @@
+#define RankPreferredItems_0206aaa0 RankPreferredItems
+#define AcquireRecordSlot_02051d3c AcquireRecordSlot
+#define func_01ff8830 MI_CpuFill8
+#define IsRecordFlagBitSet_0206991c IsRecordFlagBitSet
+#define GetRecordTableBEntry_02052238 GetRecordTableBEntry
+#define ReleaseRecordSlot_02051dfc ReleaseRecordSlot
+
+#include "src/ov002/unclassified_helpers/RankPreferredItems_0206aaa0.c"

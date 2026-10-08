@@ -1,4 +1,4 @@
 #define DrawResultsWidgetOnLayer_020bb04c DrawResultsWidgetOnLayer
-#define func_ov027_020b9a74 func_ov027_020b9a94
+#define func_ov027_020b9a74 BlitWidgetToTileTable
 #define g_resultsScreen_020c0f80 data_ov034_020c0fa0
 #include "src/ov034/reviewed_helpers/DrawResultsWidgetOnLayer_020bb04c.c"

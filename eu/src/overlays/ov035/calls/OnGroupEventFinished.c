@@ -1,7 +1,7 @@
 #define func_ov001_020645dc SetSessionFlag
 #define func_ov001_020645c8 IsSessionFlagSet
 #define FieldObject_CallHook24_0207f800 CallFieldObjectHook24
-#define FieldObject_SetEnabled_0207f6f4 func_ov001_0207f71c
+#define FieldObject_SetEnabled_0207f6f4 FieldObject_SetEnabled
 #define OnGroupEventFinished_020bb1ac OnGroupEventFinished
 #define addScaledVector_020301ac AddScaledVector
 #define data_ov035_020bc3e0 sOv035EventEffectOffset

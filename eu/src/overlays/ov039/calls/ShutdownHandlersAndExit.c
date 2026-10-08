@@ -29,7 +29,7 @@ extern void RuntimeState_SetMode(int value);
 extern int GetCurrentSceneId(void);
 extern void func_ov000_02063668(int value);
 extern void HasOv029ObjectField28(int mode);
-extern void func_ov039_020bab30(void);
+extern void SetupOverlayDisplay(void);
 
 void ShutdownHandlersAndExit(void)
 {
@@ -78,7 +78,7 @@ void ShutdownHandlersAndExit(void)
         return;
     }
     if (state->menuActive) {
-        func_ov039_020bab30();
+        SetupOverlayDisplay();
     }
     RuntimeState_SetMode(1);
 }

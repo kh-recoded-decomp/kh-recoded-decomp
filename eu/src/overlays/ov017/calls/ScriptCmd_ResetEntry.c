@@ -2,5 +2,5 @@
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
 #define func_ov001_0208635c func_ov001_02086384
 #define func_ov001_02087214 func_ov001_0208723c
-#define func_ov017_020a405c func_ov017_020a407c
+#define func_ov017_020a405c ResetFieldObjectState
 #include "src/ov017/script_commands/ScriptCmd_ResetEntry_020a2218.c"

@@ -1,4 +1,4 @@
 #define IsRecordAliveAndUnflagged_020d6e80 IsRecordAliveAndUnflagged_020d6ea0
 #define StageRecord_IsDefeated_02087cc4 StageRecord_IsDefeated
-#define func_ov001_02087960 func_ov001_02087988
+#define func_ov001_02087960 GetStageEventTargetInfo
 #include "src/ov056/unclassified_helpers/IsRecordAliveAndUnflagged_020d6e80.c"

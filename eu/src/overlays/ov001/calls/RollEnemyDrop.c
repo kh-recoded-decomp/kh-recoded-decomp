@@ -3,7 +3,7 @@
 #define GetSessionStateFlags2Bit_020649b8 GetSessionStateFlags2Bit
 #define RollEnemyDrop_0206844c RollEnemyDrop
 #define RollLevelBonus_0206838c RollLevelBonus
-#define RollRandomRewardStats_020683e0 func_ov001_020683e0
+#define RollRandomRewardStats_020683e0 RollRandomRewardStats
 #define SetGlobalPackedBit_02027320 SetGlobalPackedBit
 #define data_ov001_0209da52 data_ov001_0209da7a
 #define func_020275c8 CheckStatusAndThreshold
