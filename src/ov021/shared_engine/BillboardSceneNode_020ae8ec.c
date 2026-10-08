@@ -23,6 +23,6 @@ void BillboardSceneNode_020ae8ec(SceneNode *node)
 {
     ViewMatrix view = *GetCachedInverseViewMatrix_02019378();
     func_01ff87c4(&view, &node->rotation);
-    node->flags &= ~0x20;
+    node->flags &= 0xffdf;
     func_ov021_020ae88c(node);
 }

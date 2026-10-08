@@ -2,10 +2,10 @@
 #define HasFlagsAt0xe_020a752c HasFlagsAt0xe
 #define UpdateFieldButtonInput_020a70a8 func_ov021_020a70c8
 #define UpdateFieldButton_020a746c UpdateFieldButton
-#define data_ov021_020b5600 data_ov021_020b5620
+#define data_ov021_020b5600 gActiveFieldButtonEntryIndex
 #define func_ov021_020a6edc RefreshInputState
 #define func_ov021_020a6f34 UpdateDirectionInput
-#define func_ov021_020a6fd8 func_ov021_020a6ff8
+#define func_ov021_020a6fd8 ToggleFieldButtonFlags
 #define func_ov021_020a74f0 func_ov021_020a7510
 #define func_ov058_020d5f04 func_ov058_020d5f24
 #include "src/ov021/unclassified_helpers/UpdateFieldButton_020a746c.c"

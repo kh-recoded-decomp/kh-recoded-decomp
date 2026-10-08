@@ -1,7 +1,7 @@
 #define ApplyAnimRootMotion_020cff8c ApplyAnimRootMotion
 #define InitSlotEntryFromRecord_020d1a68 func_ov052_020d1a88
 #define ProcessTargetHitEntries_020d012c ProcessTargetHitEntries
-#define SetGroupSlotTarget_020a8ea8 func_ov021_020a8ec8
+#define SetGroupSlotTarget_020a8ea8 SetGroupSlotTarget
 #define UpdateActionPhase_020d0294 UpdateActionPhase
 #define UpdateRisingEffectSlots_020d36dc UpdateRisingEffectSlots
 #define func_ov021_020a8ab4 ResetAnimationTrackState

@@ -1,4 +1,4 @@
 #define UpdateSceneGroupNodes_020aeb28 UpdateSceneGroupNodes
 #define func_ov021_020ae88c func_ov021_020ae8ac
-#define func_ov021_020ae8ec func_ov021_020ae90c
+#define func_ov021_020ae8ec BillboardSceneNode
 #include "src/ov021/shared_engine/UpdateSceneGroupNodes_020aeb28.c"

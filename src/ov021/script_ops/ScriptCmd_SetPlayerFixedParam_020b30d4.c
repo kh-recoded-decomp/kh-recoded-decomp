@@ -29,6 +29,7 @@ int ScriptCmd_SetPlayerFixedParam_020b30d4(ScriptContext *context, TaggedValue *
 {
     PlayerActor *player;
     s32 value;
+    u32 flags;
 
     ResolveTaggedValueRef_020b0374(context, args);
     args = ResolveTaggedValueRef_020b0374(context, args + 1);
@@ -36,9 +37,10 @@ int ScriptCmd_SetPlayerFixedParam_020b30d4(ScriptContext *context, TaggedValue *
     value = TaggedValueToFixed_020b03b0(args);
     player->fixedParam = value;
     if (value != 0) {
-        player->flags |= 0x10;
+        flags = player->flags | 0x10;
     } else {
-        player->flags &= ~0x10;
+        flags = player->flags & 0xffef;
     }
+    player->flags = flags;
     return 0;
 }

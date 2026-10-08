@@ -1,7 +1,7 @@
 #define NNSi_FndAllocFromExpHeapEx_0202a1e4 NNSi_FndAllocFromExpHeapEx
 #define NNSi_FndGetCurrentRootHeap_0202a764 NNSi_FndGetCurrentRootHeap
 #define StartSubMode_020af260 StartSubMode
-#define data_ov021_020b5290 data_ov021_020b52b0
+#define data_ov021_020b5290 gSubModeOverlayIds
 #define data_ov021_020b56a0 data_ov021_020b56c0
 #define func_01ff86fc MIi_CpuClear32
 #define func_01ff8830 MI_CpuFill8

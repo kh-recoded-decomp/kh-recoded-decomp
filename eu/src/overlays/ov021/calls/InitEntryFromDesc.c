@@ -1,6 +1,6 @@
 #define InitEntryFromDesc_020a84bc InitEntryFromDesc
 #define ResolveEntryAnchorPosition_020a8844 ResolveEntryAnchorPosition
 #define SelectModelTrackBlends_020a867c SelectModelTrackBlends
-#define SetObjectYawPitchMatrix_020a8784 func_ov021_020a87a4
+#define SetObjectYawPitchMatrix_020a8784 SetObjectYawPitchMatrix
 #define SpawnSoundSlot_0204da8c SpawnSoundSlot
 #include "src/ov021/object_state/InitEntryFromDesc_020a84bc.c"

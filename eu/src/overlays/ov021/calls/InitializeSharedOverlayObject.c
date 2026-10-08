@@ -1,0 +1,5 @@
+#define InitializeSharedOverlayObject_020a75a4 InitializeSharedOverlayObject
+#define func_01ff8830 MI_CpuFill8
+#define func_arm9_0204f768 GetOverlaySelectionRecord
+#define ApplyRewardByTier_020a7a40 ApplyRewardByTier
+#include "src/ov021/reviewed_helpers/func_ov021_020a75a4.c"

@@ -1,0 +1,7 @@
+#define SetObjectYawPitchMatrix_020a8784 SetObjectYawPitchMatrix
+#define MTX_Identity33_01ff90ec MTX_Identity33_
+#define MTX_RotY33_01ff923c MTX_RotY33_
+#define MTX_RotX33_01ff9220 MTX_RotX33_
+#define MTX_Concat33_01ff9270 MTX_Concat33
+#define data_0205356c data_02053580
+#include "src/ov021/unclassified_helpers/func_ov021_020a8784.c"

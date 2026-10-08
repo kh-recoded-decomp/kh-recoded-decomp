@@ -1,0 +1,3 @@
+#define SetGroupSlotTarget_020a8ea8 SetGroupSlotTarget
+#define FindEntryGroupById_020a8810 FindEntryGroupById
+#include "src/ov021/object_state/SetGroupSlotTarget_020a8ea8.c"

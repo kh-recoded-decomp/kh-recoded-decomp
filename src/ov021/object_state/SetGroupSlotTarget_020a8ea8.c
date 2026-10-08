@@ -33,6 +33,6 @@ void SetGroupSlotTarget_020a8ea8(int groupId, int index, s32 target)
         slot->target = target;
         slot->flags |= 0x100;
     } else {
-        slot->flags &= ~0x100;
+        slot->flags &= 0xfeff;
     }
 }

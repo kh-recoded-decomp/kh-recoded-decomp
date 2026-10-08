@@ -45,7 +45,7 @@ void DrawScreenAnchoredSlot_020a8408(EntrySlot *slot)
         return;
     }
     if (slot->flags & 2) {
-        slot->flags &= ~2;
+        slot->flags &= 0xfffd;
         return;
     }
     if (slot->anchorMode != 3) {

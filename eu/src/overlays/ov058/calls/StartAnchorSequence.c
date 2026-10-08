@@ -11,6 +11,6 @@
 #define data_ov058_020d8a24 data_ov058_020d8a44
 #define func_01ff9f88 VEC_Normalize
 #define func_0203adcc func_0203ade0
-#define func_ov021_020a9268 func_ov021_020a9288
+#define func_ov021_020a9268 IsObjHandleUsable
 #define func_ov058_020d720c UpdateSceneCameraTransform
 #include "src/ov058/unclassified_helpers/StartAnchorSequence_020d7f60.c"

@@ -13,5 +13,5 @@
 #define data_ov021_020b56a4 data_ov021_020b56c4
 #define func_01ff90ec MTX_Identity33_
 #define func_ov001_02091c34 NotifySceneObjectHandler
-#define func_ov021_020afd28 func_ov021_020afd48
+#define func_ov021_020afd28 ProbeGroundContact
 #include "src/ov021/script_ops/ScriptOp_PlaceAroundPlayer_020b1850.c"

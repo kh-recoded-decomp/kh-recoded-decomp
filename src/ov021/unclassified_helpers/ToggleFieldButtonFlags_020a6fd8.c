@@ -55,16 +55,16 @@ void ToggleFieldButtonFlags_020a6fd8(FieldButton *button) {
     }
     if (flags & 0x40) {
         button->flags |= 0x80;
-        button->flags &= ~0x40;
+        button->flags &= 0xffbf;
     } else if (flags & 0x80) {
         button->flags |= 0x40;
-        button->flags &= ~0x80;
+        button->flags &= 0xff7f;
     }
     if (flags & 0x20) {
         button->flags |= 0x10;
-        button->flags &= ~0x20;
+        button->flags &= 0xffdf;
     } else if (flags & 0x10) {
         button->flags |= 0x20;
-        button->flags &= ~0x10;
+        button->flags &= 0xffef;
     }
 }

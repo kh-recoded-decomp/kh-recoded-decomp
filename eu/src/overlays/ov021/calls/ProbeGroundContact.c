@@ -1,0 +1,4 @@
+#define ProbeGroundContact_020afd28 ProbeGroundContact
+#define QueryWorldMotionCollision_02036484 QueryWorldMotionCollision
+#define addScaledVector_020301ac AddScaledVector
+#include "src/ov021/object_state/ProbeGroundContact_020afd28.c"

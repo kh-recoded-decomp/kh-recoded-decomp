@@ -41,7 +41,7 @@ typedef s32 (*ScriptHandler)(ScriptThread *thread, u32 operand);
 extern FieldContext data_ov021_020b56c4;
 extern FieldContext gActiveFieldContext;
 extern FieldContext data_ov021_020b56d0;
-extern ScriptHandler data_ov021_020b56dc[];
+extern ScriptHandler gScriptHandlerTable[];
 
 extern void *func_ov001_0209c3e8(void);
 extern void MI_CpuFill8(void *dest, u32 value, u32 size);
@@ -83,7 +83,7 @@ s32 RunScriptThread(ScriptThread *thread)
         if (op->length >= 4) {
             operand = func_ov021_020b037c(thread);
         }
-        handler = data_ov021_020b56dc[op->handler];
+        handler = gScriptHandlerTable[op->handler];
         if (handler == NULL) {
             return 0;
         }

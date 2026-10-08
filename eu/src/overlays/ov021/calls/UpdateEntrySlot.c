@@ -1,0 +1,6 @@
+#define UpdateEntrySlot_020a8240 UpdateEntrySlot
+#define ProjectWorldToScreenFx_0206ad34 ProjectWorldToScreenFx
+#define func_0204dc3c func_0204dc50
+#define Handle_WritePayloadIfLive_0204db9c Handle_WritePayloadIfLive
+#define AdvanceAnimationTracks_0202ef24 AdvanceAnimationTracks
+#include "src/ov021/object_state/UpdateEntrySlot_020a8240.c"

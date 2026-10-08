@@ -1,0 +1,5 @@
+#define BillboardSceneNode_020ae8ec BillboardSceneNode
+#define GetCachedInverseViewMatrix_02019378 NNS_G3dGlbGetInvV
+#define func_01ff87c4 MI_Copy36B
+#define func_ov021_020ae88c func_ov021_020ae8ac
+#include "src/ov021/shared_engine/BillboardSceneNode_020ae8ec.c"

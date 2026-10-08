@@ -31,7 +31,10 @@ typedef struct {
 
 extern const s16 data_0205356c[];
 extern MtxFx33 data_0205a9b8;
+#ifndef BASE_TRANS
 extern VecFx32 data_0205a9dc;
+#define BASE_TRANS data_0205a9dc
+#endif
 extern GeometryState data_0205a9a4;
 
 extern void func_ov021_020a86b0(DrawEntry *entry);
@@ -50,7 +53,7 @@ void DrawEntryForScreen_020a82ec(DrawEntry *entry, s32 screen)
     if (entry->active != 0 && entry->screen == screen) {
         s32 kind = entry->kind;
         if (kind != 3 && (entry->flags & 2)) {
-            entry->flags &= ~2;
+            entry->flags &= 0xfffd;
             return;
         }
         switch (kind) {
@@ -76,7 +79,7 @@ void DrawEntryForScreen_020a82ec(DrawEntry *entry, s32 screen)
         case 2: {
             int index = entry->node.angleY >> 4;
             MTX_RotY33_01ff923c(&data_0205a9b8, data_0205356c[index], data_0205356c[(0x400 - index) & 0xfff]);
-            data_0205a9dc = *(VecFx32 *)&entry->node.matrix._30;
+            BASE_TRANS = *(VecFx32 *)&entry->node.matrix._30;
             data_0205a9a4.flags &= ~0xa4;
             func_02019188();
             QueueOrSendGeometryCommand_01ffa37c(0x17, entry->matrixPtr, 0xc);

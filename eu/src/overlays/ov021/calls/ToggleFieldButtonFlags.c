@@ -1,0 +1,7 @@
+#define ToggleFieldButtonFlags_020a6fd8 ToggleFieldButtonFlags
+#define GetBoundedEntryField_0206db5c GetBoundedEntryField
+#define HasFlagsAt0xe_020a752c HasFlagsAt0xe
+#define g_saveData_0205fe0c data_0205fe0c
+#define data_ov021_020b5600 gActiveFieldButtonEntryIndex
+
+#include "src/ov021/unclassified_helpers/ToggleFieldButtonFlags_020a6fd8.c"

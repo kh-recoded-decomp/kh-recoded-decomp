@@ -18,7 +18,7 @@
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define data_0205356c data_02053580
 #define func_0203adcc func_0203ade0
-#define func_ov021_020a9268 func_ov021_020a9288
+#define func_ov021_020a9268 IsObjHandleUsable
 #define func_ov052_020c847c IsForwardPathBlocked
 #define func_ov052_020ceb54 func_ov052_020ceb74
 #define func_ov052_020ceb60 func_ov052_020ceb80

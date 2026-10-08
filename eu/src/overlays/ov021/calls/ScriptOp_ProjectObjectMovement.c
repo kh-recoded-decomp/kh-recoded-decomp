@@ -1,7 +1,7 @@
 #define ScriptOp_ProjectObjectMovement_020b19d0 ScriptOp_ProjectObjectMovement
 #define VEC_MultAdd_01ffa09c VEC_MultAdd
 #define contextData_020b56a4 data_ov021_020b56c4
-#define func_ov021_020afd28 func_ov021_020afd48
+#define func_ov021_020afd28 ProbeGroundContact
 #define func_ov021_020b0374 ResolveTaggedValueRef
 #define func_ov021_020b03b0 TaggedValueToFixed
 #include "src/ov021/script_ops/ScriptOp_ProjectObjectMovement_020b19d0.c"

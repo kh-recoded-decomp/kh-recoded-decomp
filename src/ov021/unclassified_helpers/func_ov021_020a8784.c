@@ -15,7 +15,7 @@ extern void MTX_RotY33_01ff923c(MtxFx33 *mtx, fx32 sinVal, fx32 cosVal);
 extern void MTX_RotX33_01ff9220(MtxFx33 *mtx, fx32 sinVal, fx32 cosVal);
 extern void MTX_Concat33_01ff9270(const MtxFx33 *a, const MtxFx33 *b, MtxFx33 *ab);
 
-void func_ov021_020a8784(OrientedObject *object, int yaw, int pitch)
+void SetObjectYawPitchMatrix_020a8784(OrientedObject *object, int yaw, int pitch)
 {
     MtxFx33 yawMtx;
     MtxFx33 pitchMtx;
@@ -39,5 +39,5 @@ void func_ov021_020a8784(OrientedObject *object, int yaw, int pitch)
         MTX_Concat33_01ff9270(&pitchMtx, &rotation, &rotation);
     }
     object->rotation = rotation;
-    object->flags &= ~0x20;
+    object->flags &= 0xffdf;
 }

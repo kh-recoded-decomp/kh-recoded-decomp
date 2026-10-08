@@ -4,5 +4,5 @@
 #define PlaceObjectAtEntry_020a86b0 PlaceObjectAtEntry
 #define VEC_Add_01ff9e0c VEC_Add
 #define data_0205356c data_02053580
-#define func_ov021_020a8784 func_ov021_020a87a4
+#define func_ov021_020a8784 SetObjectYawPitchMatrix
 #include "src/ov021/unclassified_helpers/PlaceObjectAtEntry_020a86b0.c"

@@ -4,7 +4,7 @@
 #define InitSlotEntryFromRecord_020d1a68 func_ov052_020d1a88
 #define ProcessTargetHitEntries_020d012c ProcessTargetHitEntries
 #define RotateOffsetAroundY_020a9160 RotateOffsetAroundY
-#define SetGroupSlotTarget_020a8ea8 func_ov021_020a8ec8
+#define SetGroupSlotTarget_020a8ea8 SetGroupSlotTarget
 #define StopAndClearSoundEmitter_020a8e14 StopAndClearSoundEmitter
 #define UpdateActionPhase_020d0294 UpdateActionPhase
 #define UpdateRisingShockwaveSlot_020d3530 UpdateRisingShockwaveSlot

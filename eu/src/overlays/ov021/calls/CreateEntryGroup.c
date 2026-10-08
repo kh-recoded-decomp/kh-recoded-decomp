@@ -1,0 +1,10 @@
+#define func_ov021_020a89a8 CreateEntryGroup
+#define g_registryInitialized_020b5608 gEntryGroupsInitialized
+#define g_entryRegistry_020b5608 gEntryGroupRegistry
+#define data_ov021_020b51ec sOv021_FormatSZ_020b520c
+#define data_ov021_020b51f4 sOv021_FormatSTxZ_020b5214
+#define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
+#define AppendIntrusiveListObject_020128d0 NNS_FndAppendListObject
+#define OS_SPrintf_02002428 OS_SPrintf
+#define func_ov021_020a81e4 InitModelObject
+#include "src/ov021/unclassified_helpers/func_ov021_020a89a8.c"

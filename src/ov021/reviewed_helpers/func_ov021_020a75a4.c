@@ -20,16 +20,18 @@ typedef int OverlayIdTable[3][3];
 typedef void (*OverlayInitializer)(void);
 typedef OverlayInitializer OverlayInitializerTable[3][3];
 typedef int OverlayTrackedIds[3];
-extern unsigned int func_01ff8830();
-extern unsigned int func_arm9_0204f768();
+extern void func_01ff8830(void *dest, u32 value, u32 size);
+extern OverlaySelectionRecord *func_arm9_0204f768(int index);
+extern void ApplyRewardByTier_020a7a40(void);
 
-void func_ov021_020a75a4(OverlayObject *object,int variant,int selectionIndex) {
-  OverlaySelectionRecord *selection;
+void InitializeSharedOverlayObject_020a75a4(OverlayObject *object, int variant, int selectionIndex)
+{
+    OverlaySelectionRecord *selection;
 
-  func_01ff8830(object,0,0x230);
-  object->updateCallback = (void *)0x20a7a41;
-  object->variant = variant;
-  object->selectionIndex = (u8)selectionIndex;
-  selection = func_arm9_0204f768(selectionIndex);
-  object->selectionState = selection;
+    func_01ff8830(object, 0, sizeof(*object));
+    object->updateCallback = ApplyRewardByTier_020a7a40;
+    object->variant = variant;
+    object->selectionIndex = (u8)selectionIndex;
+    selection = func_arm9_0204f768(selectionIndex);
+    object->selectionState = selection;
 }

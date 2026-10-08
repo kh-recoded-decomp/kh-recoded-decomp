@@ -2,7 +2,7 @@
 #define GetLinkedAngleOffset_020ceb7c GetLinkedAngleOffset
 #define InitSlotEntryFromRecord_020d1a68 func_ov052_020d1a88
 #define ProcessTargetHitEntries_020d012c ProcessTargetHitEntries
-#define SetGroupSlotTarget_020a8ea8 func_ov021_020a8ec8
+#define SetGroupSlotTarget_020a8ea8 SetGroupSlotTarget
 #define UpdateActionPhase_020d0294 UpdateActionPhase
 #define UpdateComboTrailSlot_020d40e0 UpdateComboTrailSlot
 #define func_ov021_020a8ab4 ResetAnimationTrackState

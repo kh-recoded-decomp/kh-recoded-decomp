@@ -3,7 +3,7 @@
 #define Actor_GetReadyFlags_020ccc68 Actor_GetReadyFlags
 #define Actor_InstallCallbacks_020cbef8 Actor_InstallCallbacks
 #define Actor_Update_020cbe98 Actor_Update
-#define func_ov021_020a75a4 func_ov021_020a75c4
+#define func_ov021_020a75a4 InitializeSharedOverlayObject
 #define func_ov059_020c8f9c Actor_SetJointBlendMode
 #define func_ov059_020c90c8 Actor_BuildJointHitSphere
 #define func_ov059_020cbce8 Actor_ReleaseResources

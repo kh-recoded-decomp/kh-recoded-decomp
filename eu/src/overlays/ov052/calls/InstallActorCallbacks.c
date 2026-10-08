@@ -16,7 +16,7 @@
 #define SetModelsAlpha_020cc0d8 SetModelsAlpha
 #define SetSlotDisplayMode_020ca7d0 SetSlotDisplayMode
 #define UpdateActorAnimation_020cea48 UpdateActorAnimation
-#define func_ov021_020a75a4 func_ov021_020a75c4
+#define func_ov021_020a75a4 InitializeSharedOverlayObject
 #define func_ov052_020ccf80 func_ov052_020ccfa0
 #define func_ov052_020ccf9c func_ov052_020ccfbc
 #define func_ov052_020cd338 EnterActorState

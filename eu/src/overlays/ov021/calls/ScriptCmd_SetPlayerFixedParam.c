@@ -1,0 +1,5 @@
+#define ScriptCmd_SetPlayerFixedParam_020b30d4 ScriptCmd_SetPlayerFixedParam
+#define data_ov021_020b56a4 gActiveFieldContext
+#define ResolveTaggedValueRef_020b0374 ResolveTaggedValueRef
+#define TaggedValueToFixed_020b03b0 TaggedValueToFixed
+#include "src/ov021/script_ops/ScriptCmd_SetPlayerFixedParam_020b30d4.c"

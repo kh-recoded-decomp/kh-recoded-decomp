@@ -10,7 +10,7 @@
 #define SetupFlaggedSelectionRecords_0204f778 SetupFlaggedSelectionRecords
 #define SyncSelectionRecordFromSlotEntry_0204fabc SyncSelectionRecordFromSlotEntry
 #define data_0209eb18 data_ov001_0209eb38
-#define data_020b52a0 data_ov021_020b52c0
+#define data_020b52a0 gSubModeTaskDefinition
 #define data_ov028_020bb380 data_ov028_020bb3a0
 #define func_0202a158 Heap_GetCurrent
 #define func_0202a448 func_0202a45c

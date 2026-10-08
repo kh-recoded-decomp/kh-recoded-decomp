@@ -2,5 +2,5 @@
 #define g_groupsInitialized_020b5608 gEntryGroupsInitialized
 #define g_groupRegistry_020b5608 gEntryGroupRegistry
 #define NNS_FndGetNextListObject_02012a38 NNS_FndGetNextListObject
-#define func_ov021_020a8408 func_ov021_020a8428
+#define func_ov021_020a8408 DrawScreenAnchoredSlot
 #include "src/ov021/object_state/UpdateAllGroupSlots_020a8f74.c"

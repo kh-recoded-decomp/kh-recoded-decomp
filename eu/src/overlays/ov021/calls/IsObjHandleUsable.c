@@ -1,0 +1,4 @@
+#define IsObjHandleUsable_020a9268 IsObjHandleUsable
+#define func_ov001_02087224 func_ov001_0208724c
+#define Object_GetKindValue_0208744c Object_GetKindValue
+#include "src/ov021/object_state/IsObjHandleUsable_020a9268.c"

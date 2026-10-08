@@ -1,0 +1,5 @@
+#define func_ov021_020a8ca0 InitializeEntryGroupSlot
+#define g_registryInitialized_020b5608 gEntryGroupsInitialized
+#define func_ov021_020a8810 FindEntryGroupById
+#define func_ov021_020a84bc InitEntryFromDesc
+#include "src/ov021/unclassified_helpers/func_ov021_020a8ca0.c"

@@ -15,7 +15,7 @@
 #define UploadGroupMenuTiles_020bbba8 UploadGroupMenuTiles
 #define ZeroHalfThenFree_0202cd78 ZeroHalfThenFree
 #define data_0209eb18 data_ov001_0209eb38
-#define data_020b52a0 data_ov021_020b52c0
+#define data_020b52a0 gSubModeTaskDefinition
 #define data_ov032_020c0020 sOv032_UiBtlStrLanguageP2_020c0040
 #define data_ov032_020c0030 data_ov032_020c0050
 #define data_ov032_020c0060 data_ov032_020c0080

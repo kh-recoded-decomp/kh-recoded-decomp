@@ -19,7 +19,7 @@ typedef struct ModelState {
 
 void ResetModelSlotIds_020aa108(ModelState *state)
 {
-    RenderFlags *render;
+    volatile RenderFlags *render;
     int i;
 
     for (i = 0; i < 8; i++) {

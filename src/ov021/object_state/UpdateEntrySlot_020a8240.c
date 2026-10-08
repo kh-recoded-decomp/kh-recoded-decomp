@@ -32,7 +32,7 @@ void UpdateEntrySlot_020a8240(EntrySlot *slot, int actorId, fx32 delta)
         if (slot->anchorMode == 3 && !(slot->flags & 0x20)) {
             slot->flags |= 2;
             if (ProjectWorldToScreenFx_0206ad34(&slot->worldPos, slot->screenPos) >= 0) {
-                slot->flags &= ~2;
+                slot->flags &= 0xfffd;
             }
         }
         if (slot->soundHandle != 0 && !(slot->flags & 0x40)) {

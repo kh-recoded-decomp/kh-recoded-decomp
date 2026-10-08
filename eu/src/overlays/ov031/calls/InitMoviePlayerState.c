@@ -8,7 +8,7 @@
 #define NNSi_FndGetCurrentRootHeap_0202a764 NNSi_FndGetCurrentRootHeap
 #define ResetSelectionSlots_020bb38c ResetSelectionSlots
 #define RunStateMachine_020ba4b4 RunStateMachine
-#define data_ov021_020b52a0 data_ov021_020b52c0
+#define data_ov021_020b52a0 gSubModeTaskDefinition
 #define func_0202a158 Heap_GetCurrent
 #define func_0202a448 func_0202a45c
 #define func_ov001_020633a0 QueueFieldUpdate

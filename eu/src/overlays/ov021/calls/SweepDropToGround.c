@@ -8,7 +8,7 @@
 #define func_0203adcc func_0203ade0
 #define func_0203aeac InitCylinderShape
 #define func_ov021_020a9230 AreZoneMeshesClear
-#define func_ov021_020a9268 func_ov021_020a9288
+#define func_ov021_020a9268 IsObjHandleUsable
 #define func_ov021_020af5b4 func_ov021_020af5d4
 #define func_ov042_020bd590 func_ov042_020bd5b0
 #include "src/ov021/object_state/SweepDropToGround_020ae3f0.c"
