@@ -1385,9 +1385,8 @@ _feq kind:label(arm) addr:0x02023948
 func_020239b0 kind:function(arm,size=0x84) addr:0x020239b0
 _f2d kind:label(arm) addr:0x020239b0
 func_02023a34 kind:function(arm,size=0x78) addr:0x02023a34
-func_02023aac kind:function(arm,size=0x48) addr:0x02023aac
-func_02023af4 kind:function(arm,size=0x48) addr:0x02023af4
-_ffltu kind:label(arm) addr:0x02023af4
+_fflt kind:function(arm,size=0x48) addr:0x02023aac
+_ffltu kind:function(arm,size=0x48) addr:0x02023af4
 func_02023b3c kind:function(arm,size=0x6c) addr:0x02023b3c
 func_02023ba8 kind:function(arm,size=0x1c0) addr:0x02023ba8
 _ll_sdiv kind:label(arm) addr:0x02023bb8
@@ -2810,7 +2809,7 @@ data_02056dcc kind:bss addr:0x02056dcc
 OSi_ExceptionState kind:bss addr:0x02056df0
 data_02056df4 kind:bss addr:0x02056df4
 data_02056dfc kind:bss addr:0x02056dfc
-data_02056e20 kind:bss addr:0x02056e20
+OSi_ExContext kind:bss addr:0x02056e20
 OSi_TimerReserved kind:bss addr:0x02056e90
 OSi_TickState kind:bss addr:0x02056e94
 OSi_TickCounter kind:bss addr:0x02056e9c
@@ -2971,7 +2970,7 @@ sStrmPlayers kind:bss addr:0x0205e6e0
 sPrepareStreamThread kind:bss addr:0x0205ecd0
 sSoundArcStreamMutex kind:bss addr:0x0205fd98
 sStreamCommandList kind:bss addr:0x0205fdb0
-data_0205fdbc kind:bss addr:0x0205fdbc
+gMslErrno kind:bss addr:0x0205fdbc
 __global_destructor_chain kind:bss addr:0x0205fdc0
 gPanelEnabled kind:bss addr:0x0205fdc4
 data_0205fdc8 kind:bss addr:0x0205fdc8
@@ -3055,6 +3054,5 @@ data_02fffc30 kind:data(any) addr:0x02fffc30
 gVBlankCount kind:data(any) addr:0x02fffc3c
 data_02ffff96 kind:data(any) addr:0x02ffff96
 _fgr kind:function(arm,size=0x0) addr:0x02023828
-_fflt kind:function(arm,size=0x0) addr:0x02023aac
 _ffix kind:function(arm,size=0x0) addr:0x020241c0
 _fadd kind:function(arm,size=0x0) addr:0x020245fc

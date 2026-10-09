@@ -866,6 +866,10 @@ libs/nitro/os/asm_stubs/calls/OSi_GetAndDisplayContext.c:
     complete
     .text       start:0x02003da8 end:0x02003dbc
 
+libs/nitro/os/asm_stubs/calls/OSi_SetExContext.c:
+    complete
+    .text       start:0x02003dbc end:0x02003e3c
+
 libs/nitro/os/calls/OSi_SetTimerReserved.c:
     complete
     .text       start:0x02003eb8 end:0x02003edc
@@ -5440,6 +5444,14 @@ src/calls/MSL_Fabs.c:
 src/calls/PXI_Init_02022af8.c:
     complete
     .text       start:0x02022af8 end:0x02022b04
+
+src/asm_stubs/calls/_fflt.c:
+    complete
+    .text       start:0x02023aac end:0x02023af4
+
+src/asm_stubs/calls/_ffltu.c:
+    complete
+    .text       start:0x02023af4 end:0x02023b3c
 
 libs/msl/c/asm_stubs/auto/_ll_mul.c:
     complete

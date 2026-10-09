@@ -8835,6 +8835,9 @@
   "src/calls/MTX_Copy33To43.c": "dsi/1.1",
   "src/calls/MTX_Copy43To33.c": "dsi/1.1",
   "libs/nitro/mi/asm_stubs/calls/MIi_CpuCopy16Backward.c": "dsi/1.1",
+  "src/overlays/ov101/calls/IsPageScrollSettled.c": "dsi/1.2",
+  "src/asm_stubs/calls/_fflt.c": "dsi/1.1",
+  "src/asm_stubs/calls/_ffltu.c": "dsi/1.1",
   "src/overlays/ov019/calls/SetLinkedObjectVisible.c": "dsi/1.1",
   "src/overlays/ov027/calls/SweepReleasePendingElements.c": "dsi/1.1",
   "src/overlays/ov016/calls/SetFieldEntryPackedIds.c": "dsi/1.1"

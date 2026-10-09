@@ -128,6 +128,10 @@ src/overlays/ov101/calls/StepPageScrollPosition.c:
     complete
     .text       start:0x020c1288 end:0x020c12e4
 
+src/overlays/ov101/calls/IsPageScrollSettled.c:
+    complete
+    .text       start:0x020c12e4 end:0x020c1334
+
 src/overlays/ov101/calls/IsStateFlagSet.c:
     complete
     .text       start:0x020c1334 end:0x020c1360
