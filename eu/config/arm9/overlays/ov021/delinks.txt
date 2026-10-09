@@ -1304,6 +1304,10 @@ src/overlays/ov021/calls/ResolveVectorOperand.c:
     complete
     .text       start:0x020b03e8 end:0x020b0470
 
+src/overlays/ov021/calls/SetXZVectorFromAngle.c:
+    complete
+    .text       start:0x020b0470 end:0x020b04a8
+
 src/overlays/ov021/calls/RandomScaledDirection.c:
     complete
     .text       start:0x020b04a8 end:0x020b0528

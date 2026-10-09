@@ -1371,9 +1371,9 @@ func_02022b04 kind:function(arm,size=0x318) addr:0x02022b04
 func_02022e34 kind:function(arm,size=0x3b4) addr:0x02022e34
 func_020231e8 kind:function(arm,size=0x364) addr:0x020231e8
 func_0202354c kind:function(arm,size=0x104) addr:0x0202354c
-func_02023650 kind:function(arm,size=0x40) addr:0x02023650
-func_02023690 kind:function(arm,size=0x98) addr:0x02023690
-func_02023728 kind:function(arm,size=0xa4) addr:0x02023728
+_dflt kind:function(arm,size=0x40) addr:0x02023650
+_dgr kind:function(arm,size=0x98) addr:0x02023690
+_dleq kind:function(arm,size=0xa4) addr:0x02023728
 func_020237cc kind:function(arm,size=0x5c) addr:0x020237cc
 _fgeq kind:label(arm) addr:0x020237cc
 func_02023828 kind:function(arm,size=0x5c) addr:0x02023828
@@ -1396,8 +1396,8 @@ _ll_mul kind:function(arm,size=0x20) addr:0x02023db0
 _s32_div_f kind:function(arm,size=0x20c) addr:0x02023dd0
 _u32_div_f kind:function(arm,size=0x1e4) addr:0x02023fdc
 .L_02023fe4 kind:label(arm) addr:0x02023fe4
-func_020241c0 kind:function(arm,size=0x34) addr:0x020241c0
-func_020241f4 kind:function(arm,size=0x40) addr:0x020241f4
+_ffix kind:function(arm,size=0x34) addr:0x020241c0
+_ffixu kind:function(arm,size=0x40) addr:0x020241f4
 func_02024234 kind:function(arm,size=0x4c) addr:0x02024234
 func_02024280 kind:function(arm,size=0x19c) addr:0x02024280
 func_0202441c kind:function(arm,size=0x1e0) addr:0x0202441c
@@ -3054,5 +3054,4 @@ data_02fffc30 kind:data(any) addr:0x02fffc30
 gVBlankCount kind:data(any) addr:0x02fffc3c
 data_02ffff96 kind:data(any) addr:0x02ffff96
 _fgr kind:function(arm,size=0x0) addr:0x02023828
-_ffix kind:function(arm,size=0x0) addr:0x020241c0
 _fadd kind:function(arm,size=0x0) addr:0x020245fc

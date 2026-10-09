@@ -5445,6 +5445,18 @@ src/calls/PXI_Init_02022af8.c:
     complete
     .text       start:0x02022af8 end:0x02022b04
 
+src/asm_stubs/calls/_dflt.c:
+    complete
+    .text       start:0x02023650 end:0x02023690
+
+src/asm_stubs/calls/_dgr.c:
+    complete
+    .text       start:0x02023690 end:0x02023728
+
+src/asm_stubs/calls/_dleq.c:
+    complete
+    .text       start:0x02023728 end:0x020237cc
+
 src/asm_stubs/calls/_fflt.c:
     complete
     .text       start:0x02023aac end:0x02023af4
@@ -5456,6 +5468,14 @@ src/asm_stubs/calls/_ffltu.c:
 libs/msl/c/asm_stubs/auto/_ll_mul.c:
     complete
     .text       start:0x02023db0 end:0x02023dd0
+
+src/asm_stubs/calls/_ffix.c:
+    complete
+    .text       start:0x020241c0 end:0x020241f4
+
+src/asm_stubs/calls/_ffixu.c:
+    complete
+    .text       start:0x020241f4 end:0x02024234
 
 src/calls/GetMaxPositiveInt.c:
     complete

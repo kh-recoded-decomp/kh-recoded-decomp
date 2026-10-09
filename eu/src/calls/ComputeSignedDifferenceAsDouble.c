@@ -1,4 +1,4 @@
 #define ComputeSignedDifferenceAsDouble_02022990 ComputeSignedDifferenceAsDouble
 #define func_02022e20 func_02022e34
-#define func_0202363c func_02023650
+#define func_0202363c _dflt
 #include "src/arm9/fixed_point/ComputeSignedDifferenceAsDouble_02022990.c"
