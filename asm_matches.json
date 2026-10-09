@@ -1160,6 +1160,18 @@
     },
     {
       "module": "arm9",
+      "symbol": "func_02023538",
+      "name": "func_02023538",
+      "language": "asm",
+      "source": "src/arm9/asm/func_02023538.c",
+      "source_symbol": "func_02023538",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {},
+      "evidence": "Original assembly: Metrowerks ARM runtime soft-float library routine inside the hand-written FP block (02022af0-020245e8); no prologue, conditional returns on raw IEEE bits. One mnemonic per ROM word, assembles byte-exact."
+    },
+    {
+      "module": "arm9",
       "symbol": "func_0202363c",
       "name": "_dflt",
       "language": "asm",
@@ -1268,6 +1280,18 @@
     },
     {
       "module": "arm9",
+      "symbol": "func_02023a20",
+      "name": "_ll_sfrom_f",
+      "language": "asm",
+      "source": "src/arm9/asm/_ll_sfrom_f_02023a20.c",
+      "source_symbol": "_ll_sfrom_f_02023a20",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {},
+      "evidence": "Original assembly; ported from the EU build's verified stub src/asm_stubs/calls/_ll_sfrom_f.c"
+    },
+    {
+      "module": "arm9",
       "symbol": "func_02023a98",
       "name": "_fflt",
       "language": "asm",
@@ -1306,6 +1330,35 @@
     },
     {
       "module": "arm9",
+      "symbol": "func_02023b94",
+      "name": "func_02023b94",
+      "language": "asm",
+      "source": "src/arm9/asm/func_02023b94.c",
+      "source_symbol": "func_02023b94",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_02023dbc": "0x2023dbc"
+      },
+      "evidence": "Original assembly: Metrowerks ARM runtime soft-float library routine inside the hand-written FP block (02022af0-020245e8); push pads with ip, 64-bit carry chains, branches outside its body. One mnemonic per ROM word, assembles byte-exact."
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_02023d54",
+      "name": "_ll_udiv",
+      "language": "asm",
+      "source": "src/arm9/asm/_ll_udiv_02023d54.c",
+      "source_symbol": "_ll_udiv_02023d54",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_02023c18": "0x2023c18",
+        "func_02023fd0": "0x2023fd0"
+      },
+      "evidence": "Original assembly: Metrowerks ARM runtime soft-float library routine inside the hand-written FP block (02022af0-020245e8); push pads with ip, branches outside its body. One mnemonic per ROM word, assembles byte-exact. Named from the runtime helper table in tools/match_tool.py."
+    },
+    {
+      "module": "arm9",
       "symbol": "func_02023d9c",
       "name": "_ll_mul",
       "language": "asm",
@@ -1315,6 +1368,66 @@
       "mode": "arm",
       "bindings": {},
       "evidence": "Original assembly; ported from the EU build's verified stub libs/msl/c/asm_stubs/auto/_ll_mul.c"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_02023dbc",
+      "name": "_s32_div_f",
+      "language": "asm",
+      "source": "src/arm9/asm/_s32_div_f_02023dbc.c",
+      "source_symbol": "_s32_div_f_02023dbc",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {},
+      "evidence": "Original assembly: Metrowerks ARM runtime soft-float library routine inside the hand-written FP block (02022af0-020245e8); no prologue, 64-bit carry chains, 75 conditionally executed ops. One mnemonic per ROM word, assembles byte-exact. Named from the runtime helper table in tools/match_tool.py."
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_02023fc8",
+      "name": "_u32_div_f",
+      "language": "asm",
+      "source": "src/arm9/asm/_u32_div_f_02023fc8.c",
+      "source_symbol": "_u32_div_f_02023fc8",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {},
+      "evidence": "Original assembly: Metrowerks ARM runtime soft-float library routine inside the hand-written FP block (02022af0-020245e8); no prologue, 64-bit carry chains, conditional returns. One mnemonic per ROM word, assembles byte-exact. Named from the runtime helper table in tools/match_tool.py."
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_020241ac",
+      "name": "_ffix",
+      "language": "asm",
+      "source": "src/arm9/asm/_ffix_020241ac.c",
+      "source_symbol": "_ffix_020241ac",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {},
+      "evidence": "Original assembly: Metrowerks ARM runtime float-to-int helper; no prologue, flag-chained subs/ble on the raw IEEE bits. Ported from the EU build's verified stub."
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_020241e0",
+      "name": "_ffixu",
+      "language": "asm",
+      "source": "src/arm9/asm/_ffixu_020241e0.c",
+      "source_symbol": "_ffixu_020241e0",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {},
+      "evidence": "Original assembly: Metrowerks ARM runtime float-to-unsigned helper; no prologue, flag-chained tests on the raw IEEE bits. Ported from the EU build's verified stub."
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_02024220",
+      "name": "_dfix",
+      "language": "asm",
+      "source": "src/arm9/asm/_dfix_02024220.c",
+      "source_symbol": "_dfix_02024220",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {},
+      "evidence": "Original assembly; ported from the EU build's verified stub src/asm_stubs/calls/_dfix.c"
     },
     {
       "module": "arm9",
@@ -1341,6 +1454,20 @@
       "mode": "arm",
       "bindings": {},
       "evidence": "Frameless umull mantissa product with flag-driven addpl/subpl/andeqs rounding and bxeq exits that mwcc C does not emit; Metrowerks ARM runtime floating-point library float multiply"
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_020245e8",
+      "name": "_fadd",
+      "language": "asm",
+      "source": "src/arm9/asm/_fadd_020245e8.c",
+      "source_symbol": "_fadd_020245e8",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_02024824": "0x2024824"
+      },
+      "evidence": "Original assembly: Metrowerks ARM runtime soft-float library routine inside the hand-written FP block (02022af0-020245e8); no prologue, conditional returns, branches outside its body. One mnemonic per ROM word, assembles byte-exact. Named from the runtime helper table in tools/match_tool.py."
     },
     {
       "module": "arm9",
@@ -1414,6 +1541,20 @@
     },
     {
       "module": "itcm",
+      "symbol": "func_01ff833c",
+      "name": "func_01ff833c",
+      "language": "asm",
+      "source": "src/itcm/asm/func_01ff833c.c",
+      "source_symbol": "func_01ff833c",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_01ff840c": "0x1ff840c"
+      },
+      "evidence": "Original assembly: NitroSDK ITCM memory routine written in asm, alongside the EU-verified MIi_CpuCopy16Backward and MTX copy stubs; no prologue, post-indexed copy loop, branches outside its body. One mnemonic per ROM word, assembles byte-exact."
+    },
+    {
+      "module": "itcm",
       "symbol": "func_01ff840c",
       "name": "func_01ff840c",
       "language": "asm",
@@ -1461,6 +1602,18 @@
       "mode": "arm",
       "bindings": {},
       "evidence": "Original assembly; ported from the EU build's verified stub libs/nitro/mi/asm_stubs/auto/MIi_CpuCopy16.c"
+    },
+    {
+      "module": "itcm",
+      "symbol": "func_01ff86b8",
+      "name": "MIi_CpuCopy16Backward",
+      "language": "asm",
+      "source": "src/itcm/asm/MIi_CpuCopy16Backward_01ff86b8.c",
+      "source_symbol": "MIi_CpuCopy16Backward_01ff86b8",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {},
+      "evidence": "Original assembly; ported from the EU build's verified stub libs/nitro/mi/asm_stubs/calls/MIi_CpuCopy16Backward.c"
     },
     {
       "module": "itcm",
@@ -1572,6 +1725,18 @@
     },
     {
       "module": "itcm",
+      "symbol": "func_01ff88c4",
+      "name": "func_01ff88c4",
+      "language": "asm",
+      "source": "src/itcm/asm/func_01ff88c4.c",
+      "source_symbol": "func_01ff88c4",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {},
+      "evidence": "Original assembly: NitroSDK ITCM memory routine written in asm, alongside the EU-verified MIi_CpuCopy16Backward and MTX copy stubs; no prologue, conditional post-indexed byte loop and conditional returns. One mnemonic per ROM word, assembles byte-exact."
+    },
+    {
+      "module": "itcm",
       "symbol": "func_01ff89a8",
       "name": "MI_CpuCopy8",
       "language": "asm",
@@ -1581,6 +1746,41 @@
       "mode": "arm",
       "bindings": {},
       "evidence": "Original assembly; ported from the EU build's verified stub libs/nitro/mi/asm_stubs/auto/MI_CpuCopy8.c"
+    },
+    {
+      "module": "itcm",
+      "symbol": "func_01ff8ad8",
+      "name": "func_01ff8ad8",
+      "language": "asm",
+      "source": "src/itcm/asm/func_01ff8ad8.c",
+      "source_symbol": "func_01ff8ad8",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_01ff8b7c": "0x1ff8b7c",
+        "func_01ff8bb8": "0x1ff8bb8",
+        "func_01ff8c50": "0x1ff8c50",
+        "func_01ff8ce8": "0x1ff8ce8"
+      },
+      "evidence": "Original assembly: NitroSDK ITCM memory routine written in asm, alongside the EU-verified MIi_CpuCopy16Backward and MTX copy stubs; no prologue, conditional post-indexed byte loop, branches outside its body. One mnemonic per ROM word, assembles byte-exact."
+    },
+    {
+      "module": "itcm",
+      "symbol": "func_01ff8dc8",
+      "name": "func_01ff8dc8",
+      "language": "asm",
+      "source": "src/itcm/asm/func_01ff8dc8.c",
+      "source_symbol": "func_01ff8dc8",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_01ff8ad8": "0x1ff8ad8",
+        "func_01ff8e84": "0x1ff8e84",
+        "func_01ff8ec0": "0x1ff8ec0",
+        "func_01ff8f5c": "0x1ff8f5c",
+        "func_01ff8ff8": "0x1ff8ff8"
+      },
+      "evidence": "Original assembly: NitroSDK ITCM memory routine written in asm, alongside the EU-verified MIi_CpuCopy16Backward and MTX copy stubs; no prologue, conditional pre-indexed byte loop and conditional returns. One mnemonic per ROM word, assembles byte-exact."
     },
     {
       "module": "itcm",
@@ -1605,6 +1805,30 @@
       "mode": "arm",
       "bindings": {},
       "evidence": "Original assembly; ported from the EU build's verified stub libs/nitro/mtx/asm_stubs/auto/MTX_Identity33_.c"
+    },
+    {
+      "module": "itcm",
+      "symbol": "func_01ff9110",
+      "name": "MTX_Copy33To43",
+      "language": "asm",
+      "source": "src/itcm/asm/MTX_Copy33To43_01ff9110.c",
+      "source_symbol": "MTX_Copy33To43_01ff9110",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {},
+      "evidence": "Original assembly; ported from the EU build's verified stub src/calls/MTX_Copy33To43.c"
+    },
+    {
+      "module": "itcm",
+      "symbol": "func_01ff913c",
+      "name": "MTX_Copy43To33",
+      "language": "asm",
+      "source": "src/itcm/asm/MTX_Copy43To33_01ff913c.c",
+      "source_symbol": "MTX_Copy43To33_01ff913c",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {},
+      "evidence": "Original assembly; ported from the EU build's verified stub src/calls/MTX_Copy43To33.c"
     },
     {
       "module": "itcm",
@@ -1692,6 +1916,35 @@
     },
     {
       "module": "ov022",
+      "symbol": "DecodeMovieChunkType2Impl",
+      "name": "DecodeMovieChunkType2Impl",
+      "language": "asm",
+      "source": "src/ov022/asm/DecodeMovieChunkType2Impl_020ac000.c",
+      "source_symbol": "DecodeMovieChunkType2Impl_020ac000",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_020ab878": "0x20ab878",
+        "func_020abe24": "0x20abe24"
+      },
+      "evidence": "Original assembly: hand-written MobiClip decoder code, like the registered func_ov022_020aa300 and 020ab898; push pads with ip, pc-relative table math, branches outside its body. One mnemonic per ROM word, assembles byte-exact."
+    },
+    {
+      "module": "ov022",
+      "symbol": "GetMovieChunkType1Size",
+      "name": "GetMovieChunkType1Size",
+      "language": "asm",
+      "source": "src/ov022/asm/GetMovieChunkType1Size_020aac34.c",
+      "source_symbol": "GetMovieChunkType1Size_020aac34",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_020ab444": "0x20ab444"
+      },
+      "evidence": "Original assembly: hand-written MobiClip decoder code, like the registered func_ov022_020aa300 and 020ab898; no prologue, enters with a branch, returns with mov pc, lr. One mnemonic per ROM word, assembles byte-exact."
+    },
+    {
+      "module": "ov022",
       "symbol": "func_ov022_020aa2e0",
       "name": "func_ov022_020aa300",
       "language": "asm",
@@ -1713,6 +1966,59 @@
       "mode": "arm",
       "bindings": {},
       "evidence": "Original assembly: no prologue, clobbers r4-r8 unsaved, pc-relative table addressing (sub ip, pc) and mov pc, lr; same hand-written MobiClip code as func_ov022_020aa300. One mnemonic per ROM word, assembles byte-exact."
+    },
+    {
+      "module": "ov022",
+      "symbol": "func_ov022_020abe24",
+      "name": "func_ov022_020abe24",
+      "language": "asm",
+      "source": "src/ov022/asm/func_ov022_020abe24.c",
+      "source_symbol": "func_ov022_020abe24",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {},
+      "evidence": "Original assembly: hand-written MobiClip decoder code, like the registered func_ov022_020aa300 and 020ab898; no prologue, reads r8 on entry, returns with mov pc, lr. One mnemonic per ROM word, assembles byte-exact."
+    },
+    {
+      "module": "ov022",
+      "symbol": "func_ov022_020b713c",
+      "name": "func_ov022_020b713c",
+      "language": "asm",
+      "source": "src/ov022/asm/func_ov022_020b713c.c",
+      "source_symbol": "func_ov022_020b713c",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_020b726c": "0x20b726c",
+        "func_020b73a4": "0x20b73a4",
+        "func_020b7498": "0x20b7498",
+        "func_020b75a0": "0x20b75a0"
+      },
+      "evidence": "Original assembly: hand-written MobiClip decoder code, like the registered func_ov022_020aa300 and 020ab898; pc-relative table math, branches outside its body. One mnemonic per ROM word, assembles byte-exact."
+    },
+    {
+      "module": "ov022",
+      "symbol": "func_ov022_020b726c",
+      "name": "func_ov022_020b726c",
+      "language": "asm",
+      "source": "src/ov022/asm/func_ov022_020b726c.c",
+      "source_symbol": "func_ov022_020b726c",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {},
+      "evidence": "Original assembly: hand-written MobiClip decoder code, like the registered func_ov022_020aa300 and 020ab898; push pads with ip, 15 conditionally executed ops. One mnemonic per ROM word, assembles byte-exact."
+    },
+    {
+      "module": "ov022",
+      "symbol": "func_ov022_020b7498",
+      "name": "func_ov022_020b7498",
+      "language": "asm",
+      "source": "src/ov022/asm/func_ov022_020b7498.c",
+      "source_symbol": "func_ov022_020b7498",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {},
+      "evidence": "Original assembly: hand-written MobiClip decoder code, like the registered func_ov022_020aa300 and 020ab898; push pads with ip. One mnemonic per ROM word, assembles byte-exact."
     },
     {
       "module": "ov076",
