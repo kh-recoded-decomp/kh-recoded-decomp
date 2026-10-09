@@ -84,6 +84,14 @@ src/overlays/ov101/calls/ScrollPanelCursorDown.c:
     complete
     .text       start:0x020c0628 end:0x020c0768
 
+src/overlays/ov101/calls/ScrollPanelPageUp.c:
+    complete
+    .text       start:0x020c0768 end:0x020c07c4
+
+src/overlays/ov101/calls/ScrollPanelPageDown.c:
+    complete
+    .text       start:0x020c07c4 end:0x020c082c
+
 src/overlays/ov101/calls/LoadPortraitSprites.c:
     complete
     .text       start:0x020c0b30 end:0x020c0c78
@@ -95,6 +103,30 @@ src/overlays/ov101/calls/ReleaseStateBuffers.c:
 src/overlays/ov101/calls/UpdatePageBufferPositions.c:
     complete
     .text       start:0x020c0cc8 end:0x020c0d60
+
+src/overlays/ov101/calls/ShutdownPageInteractionState.c:
+    complete
+    .text       start:0x020c0ddc end:0x020c0df4
+
+src/overlays/ov101/calls/ResetPageScrollValue.c:
+    complete
+    .text       start:0x020c10e8 end:0x020c1110
+
+src/overlays/ov101/calls/SetPageScrollValue.c:
+    complete
+    .text       start:0x020c1110 end:0x020c11e8
+
+src/overlays/ov101/calls/SetPageScrollTarget.c:
+    complete
+    .text       start:0x020c11e8 end:0x020c1268
+
+src/overlays/ov101/calls/GetPageScrollPosition.c:
+    complete
+    .text       start:0x020c1268 end:0x020c1288
+
+src/overlays/ov101/calls/StepPageScrollPosition.c:
+    complete
+    .text       start:0x020c1288 end:0x020c12e4
 
 src/overlays/ov101/calls/IsStateFlagSet.c:
     complete

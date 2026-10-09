@@ -8749,5 +8749,13 @@
   "src/calls/NNSi_G3dCalcTexMtxRotTransZero.c": "dsi/1.3p1",
   "src/overlays/ov001/calls/ConfigureFieldBgLayers.c": "dsi/1.3p1",
   "src/overlays/ov036/calls/StepScreenBrightnessFade.c": "dsi/1.3p1",
-  "src/overlays/ov002/calls/StampContextDateTime.c": "dsi/1.3p1"
+  "src/overlays/ov002/calls/StampContextDateTime.c": "dsi/1.3p1",
+  "src/overlays/ov101/calls/ShutdownPageInteractionState.c": "dsi/1.1",
+  "src/overlays/ov101/calls/ResetPageScrollValue.c": "dsi/1.1",
+  "src/overlays/ov101/calls/GetPageScrollPosition.c": "dsi/1.1",
+  "src/overlays/ov101/calls/StepPageScrollPosition.c": "dsi/1.1",
+  "src/overlays/ov101/calls/SetPageScrollTarget.c": "dsi/1.1",
+  "src/overlays/ov101/calls/SetPageScrollValue.c": "dsi/1.1",
+  "src/overlays/ov101/calls/ScrollPanelPageUp.c": "dsi/1.1",
+  "src/overlays/ov101/calls/ScrollPanelPageDown.c": "dsi/1.1"
 }
