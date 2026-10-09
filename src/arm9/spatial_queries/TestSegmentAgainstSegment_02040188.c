@@ -67,8 +67,13 @@ BOOL TestSegmentAgainstSegment_02040188(SegmentShapeRef *refA, SegmentShapeRef *
         BOOL parallel;
         VecFx32 edgeAxis = ComputeEdgeAxis_020404a0(&halfA, &halfB, &parallel);
         VecFx32 dirs[2];
+#ifdef KH_RECODED_EU
+        fx32 dot;
+        fx32 lengths[2];
+#else
         fx32 lengths[2];
         fx32 dot;
+#endif
         u8 i;
 
         if (!TestSeparatingAxis_0203fba4(0x80, &delta, &edgeAxis, 0, &result)) {

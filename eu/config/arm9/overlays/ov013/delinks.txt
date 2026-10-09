@@ -52,6 +52,10 @@ src/overlays/ov013/calls/DrawPlayerCardDetails.c:
     complete
     .text       start:0x0206e574 end:0x0206eb18
 
+src/overlays/ov013/calls/DrawContextEntrySummary.c:
+    complete
+    .text       start:0x0206eb18 end:0x0206eef4
+
 src/overlays/ov013/calls/DrawPanelHeaderTexts.c:
     complete
     .text       start:0x0206eef4 end:0x0206f06c

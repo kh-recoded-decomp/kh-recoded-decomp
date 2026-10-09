@@ -2,5 +2,5 @@
 #define PXI_Init_020c2240 func_ov099_020c2260
 #define RunViewerIntroMode_020c1788 RunViewerIntroMode
 #define SetViewerMode_020c1760 SetViewerMode
-#define func_ov099_020bf818 func_ov099_020bf838
+#define func_ov099_020bf818 DrawEntryStatsPanels
 #include "src/ov099/unclassified_helpers/RunViewerIntroMode_020c1788.c"

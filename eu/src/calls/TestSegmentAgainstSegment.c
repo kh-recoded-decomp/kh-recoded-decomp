@@ -1,0 +1,21 @@
+#define KH_RECODED_EU 1
+#define TestSegmentAgainstSegment_02040188 TestSegmentAgainstSegment
+#define IsSameVecFx32_0204a8f4 AreVecsWithinRange16
+#define MakeEmptyPenetration_0203fb74 InitMaxDistanceHit
+#define AverageVecFx32_0204b604 AverageVecs
+#define SubtractVecFx32Into_0203f4a8 SubtractVecFx32Into
+#define GetHalfSegment_0203ff74 GetSegmentHalfDelta
+#define ComputeEdgeAxis_020404a0 func_020404b4
+#define TestSeparatingAxis_0203fba4 func_0203fbb8
+#define NormalizeCrossProduct_020404c8 NormalizeCrossProduct
+#define CrossNormalized_0203fffc func_02040010
+#define ComputeCrossProduct_02040500 ComputeCrossProduct
+#define MakeVec2Fx32_02040530 SetFx32Pair
+#define VEC_DotProduct_01ff9e6c VEC_DotProduct
+#define FX_Div_01ff9c84 FX_Div
+#define FX_DivQ27_0203f4d8 DivideShifted27
+#define FixedPointMultiply12 FX_Mul
+#define Abs_0203f228 PXI_Init_0203f23c
+#define NegateVecFx32_0204aa40 NegateVecFx32
+#define WritePenetrationContact_0203d8fc WritePenetrationContact
+#include "src/arm9/spatial_queries/TestSegmentAgainstSegment_02040188.c"

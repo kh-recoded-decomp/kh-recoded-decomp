@@ -393,6 +393,10 @@ libs/nitro/nns/calls/func_01ffd934.c:
     complete
     .text       start:0x01ffd934 end:0x01ffda04
 
+src/calls/NNSi_G3dAnmBlendJntItcm.c:
+    complete
+    .text       start:0x01ffda04 end:0x01ffdfc8
+
 src/calls/G3dDrawInternal.c:
     complete
     .text       start:0x01ffdfc8 end:0x01ffe158

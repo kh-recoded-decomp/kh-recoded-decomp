@@ -2913,6 +2913,10 @@ src/calls/PM_GoSleepMode.c:
     complete
     .text       start:0x020106a4 end:0x020108b4
 
+libs/nitro/spi/calls/PMi_SetLCDPower.c:
+    complete
+    .text       start:0x020108b4 end:0x020109f8
+
 libs/nitro/spi/calls/PM_SetLCDPower.c:
     complete
     .text       start:0x020109f8 end:0x02010a1c
@@ -4057,6 +4061,10 @@ libs/nns/g2d/calls/DrawGlyphLine.c:
     complete
     .text       start:0x0201710c end:0x020172a0
 
+libs/nns/g2d/calls/DrawGlyph1D.c:
+    complete
+    .text       start:0x020172a0 end:0x020174a8
+
 libs/nns/g2d/calls/ClearContinuous.c:
     complete
     .text       start:0x020174a8 end:0x020174f8
@@ -4112,6 +4120,10 @@ libs/nns/g2d/calls/NNSi_G2dTextCanvasDrawTextRect.c:
 libs/nns/g2d/calls/NNSi_G2dTextCanvasDrawTaggedText.c:
     complete
     .text       start:0x02018004 end:0x02018164
+
+libs/nns/g2d/calls/NNSi_G2dGetUnpackedFont.c:
+    complete
+    .text       start:0x02018164 end:0x02018328
 
 libs/nns/g2d/auto/NNSi_G2dUnpackNFT.c:
     complete
@@ -8300,6 +8312,10 @@ src/calls/GetSegmentDelta.c:
 src/calls/func_02040010.c:
     complete
     .text       start:0x02040010 end:0x02040038
+
+src/calls/TestSegmentAgainstSegment.c:
+    complete
+    .text       start:0x0204019c end:0x020404b2
 
 src/calls/func_020404b4.c:
     complete

@@ -76,6 +76,10 @@ src/overlays/ov099/calls/FreeViewerResources.c:
     complete
     .text       start:0x020bf7bc end:0x020bf838
 
+src/overlays/ov099/calls/DrawEntryStatsPanels.c:
+    complete
+    .text       start:0x020bf838 end:0x020c05a8
+
 src/overlays/ov099/calls/DrawShadowedAnchoredText_020c05a8.c:
     complete
     .text       start:0x020c05a8 end:0x020c060c

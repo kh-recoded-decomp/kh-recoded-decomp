@@ -4,6 +4,7 @@
 #define func_02029f58 func_02029f6c
 #define func_0204d8b8 func_0204d8cc
 #define func_ov013_0206da20 InitRecordScreenGraphics
+#define func_ov013_0206eb18 DrawContextEntrySummary
 #define func_ov013_0206f06c RefreshProgressCaption
 #define func_ov027_020b90a4 FindWidgetById
 #define func_ov027_020b95e4 func_ov027_020b9604

@@ -120,6 +120,10 @@ src/overlays/ov076/calls/SlotMenu_CheckPointLimit.c:
     complete
     .text       start:0x020c546c end:0x020c548c
 
+src/overlays/ov076/calls/SlotMenu_UpdateEditScreen.c:
+    complete
+    .text       start:0x020c548c end:0x020c5c00
+
 src/overlays/ov076/calls/SlotMenu_RefreshView.c:
     complete
     .text       start:0x020c5c00 end:0x020c5c2c
@@ -227,6 +231,10 @@ src/overlays/ov076/calls/SlotMenu_UploadLabel.c:
 src/overlays/ov076/calls/SlotMenu_DrawEmptyLabel.c:
     complete
     .text       start:0x020c7c0c end:0x020c7c40
+
+src/overlays/ov076/calls/SlotMenu_DrawPanelLabel.c:
+    complete
+    .text       start:0x020c7efc end:0x020c8184
 
 src/overlays/ov076/calls/PanelState_SelectChoice.c:
     complete

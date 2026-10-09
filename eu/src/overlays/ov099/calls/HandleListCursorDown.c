@@ -1,7 +1,7 @@
 #define HandleListCursorDown_020bef40 HandleListCursorDown
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define func_ov091_020c1760 SetViewerMode
-#define func_ov099_020bf818 func_ov099_020bf838
+#define func_ov099_020bf818 DrawEntryStatsPanels
 #define func_ov099_020c0ee0 StepListCursorDown_020c0f00
 #define func_ov099_020c156c func_ov099_020c158c
 #include "src/ov099/unclassified_helpers/HandleListCursorDown_020bef40.c"

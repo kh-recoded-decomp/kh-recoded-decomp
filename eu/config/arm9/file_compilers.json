@@ -6237,6 +6237,7 @@
   "src/overlays/ov020/calls/DrawPanelBlockCells.c": "dsi/1.1",
   "src/overlays/ov021/calls/BuildEntryHitShape.c": "dsi/1.1",
   "src/overlays/ov076/calls/SlotMenu_ReloadSlot.c": "dsi/1.1",
+  "src/overlays/ov076/calls/SlotMenu_DrawPanelLabel.c": "dsi/1.1",
   "src/overlays/ov086/calls/RefreshRecordGraphPanel.c": "dsi/1.1",
   "src/overlays/ov091/calls/DrawRecordSummaryText.c": "dsi/1.1",
   "src/overlays/ov001/calls/RestoreSavedPlacement.c": "dsi/1.1",
@@ -6318,6 +6319,7 @@
   "src/overlays/ov095/calls/MoveGridCursorUp.c": "dsi/1.1",
   "src/overlays/ov032/calls/InitGroupFormation.c": "dsi/1.1",
   "src/calls/GetJointSRTAnimResult.c": "dsi/1.1",
+  "src/calls/NNSi_G3dAnmBlendJntItcm.c": "dsi/1.1",
   "src/overlays/ov073/calls/ExpandListRow.c": "dsi/1.1",
   "src/overlays/ov016/calls/LoadFieldUnitModel.c": "dsi/1.1",
   "src/overlays/ov076/calls/SlotMenu_UpdateItemSprites.c": "dsi/1.1",
@@ -7328,6 +7330,7 @@
   "src/overlays/ov013/calls/InitRecordScreenGraphics.c": "dsi/1.1",
   "src/overlays/ov013/calls/DrawPanelResultCaption.c": "dsi/1.1",
   "src/overlays/ov013/calls/DrawPlayerCardDetails.c": "dsi/1.1",
+  "src/overlays/ov013/calls/DrawContextEntrySummary.c": "dsi/1.1",
   "src/overlays/ov015/calls/UpdatePanelShareState.c": "dsi/1.1",
   "src/overlays/ov013/calls/RefreshPanelSlotDigits.c": "dsi/1.1",
   "src/overlays/ov013/calls/UpdatePanelScrollState.c": "dsi/1.1",
@@ -8794,5 +8797,10 @@
   "src/calls/MTX_Inverse43.c": "dsi/1.1",
   "src/calls/FSi_InvokeCommand.c": "dsi/1.1",
   "src/calls/NNSi_G3dAnmBlendJnt.c": "dsi/1.1",
-  "src/calls/NNS_GfdResetLnkTexVramState.c": "dsi/1.1"
+  "src/calls/NNS_GfdResetLnkTexVramState.c": "dsi/1.1",
+  "src/overlays/ov099/calls/DrawEntryStatsPanels.c": "dsi/1.1",
+  "src/overlays/ov076/calls/SlotMenu_UpdateEditScreen.c": "dsi/1.1",
+  "libs/nns/g2d/calls/DrawGlyph1D.c": "dsi/1.1",
+  "libs/nns/g2d/calls/NNSi_G2dGetUnpackedFont.c": "dsi/1.1",
+  "libs/nitro/spi/calls/PMi_SetLCDPower.c": "dsi/1.1"
 }

@@ -13,7 +13,7 @@ extern u32 GetCurrentMenuStackEntry();
 extern u32 func_ov099_020bf1b0();
 extern u32 LoadViewerBackgrounds();
 extern u32 func_ov099_020bf5f4();
-extern u32 func_ov099_020bf838();
+extern u32 DrawEntryStatsPanels();
 extern u32 CreateViewerSlotObjs();
 extern u32 func_ov099_020c0b5c();
 extern u32 func_ov099_020c14d8();
@@ -49,7 +49,7 @@ u32 func_ov099_020becb4(void *work) {
   func_ov099_020c0b5c(&data_ov099_020c22b4,work);
   func_ov099_020c14d8(work);
   func_ov099_020bf5f4(work);
-  func_ov099_020bf838(0xffffffff,work);
+  DrawEntryStatsPanels(0xffffffff,work);
   CreateViewerSlotObjs(work);
   func_ov099_020c158c(work);
   ResetModelViewer((int)work + 0xd0ec,0);

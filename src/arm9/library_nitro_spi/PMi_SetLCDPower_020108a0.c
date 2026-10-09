@@ -50,7 +50,11 @@ BOOL PMi_SetLCDPower_020108a0(int sw, u32 led, BOOL skip, BOOL isSync)
             PMi_WaitVBlank_02010220();
             PMi_WaitVBlank_02010220();
         }
+#ifdef KH_RECODED_EU
+        REG_POWCNT &= 0xfffe;
+#else
         REG_POWCNT &= ~1;
+#endif
         data_020597c0.lcdOffCount = VBLANK_COUNT;
         if (led != 0) {
             if (isSync) {

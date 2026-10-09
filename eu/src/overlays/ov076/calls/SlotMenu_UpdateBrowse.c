@@ -32,7 +32,7 @@ extern BOOL SlotMenu_HasThreeFilledSlotsAndFlags(SlotMenu *menu);
 extern BOOL SlotMenu_OpenEmptySlot(SlotMenu *menu);
 extern void SlotMenu_BeginSlotSelection(SlotMenu *menu);
 extern void SlotMenu_ShowSlotHint(SlotMenu *menu);
-extern void func_ov076_020c548c(SlotMenu *menu);
+extern void SlotMenu_UpdateEditScreen(SlotMenu *menu);
 extern void SetNavigationElementsVisible(void *container, BOOL visible);
 extern void ToggleSharedStateFlag(int flag);
 extern void RefreshScrollListLayout(ScrollList *list, void *layout);
@@ -52,7 +52,7 @@ void SlotMenu_UpdateBrowse(SlotMenu *menu)
             menu->state = 1;
             menu->stateTimer = 0;
             SlotMenu_ShowSlotHint(menu);
-            func_ov076_020c548c(menu);
+            SlotMenu_UpdateEditScreen(menu);
             return;
         }
         menu->state = 2;

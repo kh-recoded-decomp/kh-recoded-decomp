@@ -1,0 +1,22 @@
+#define CallVirtualHandlerSlot1_02001574 CallVirtualHandlerSlot1
+#define ComputeScaledPercentPlusOne_02051134 ComputeScaledPercentPlusOne
+#define DrawEntryStatsPanels_020bf818 DrawEntryStatsPanels
+#define FX_Div_01ff9c84 FX_Div
+#define FlushBufferAndRunCallback_0200153c FlushBufferAndRunCallback
+#define GetRecordSlotPair0Entry_02051ec8 GetRecordSlotPair0Entry
+#define IsEntryFlagSet_020c168c IsEntryFlagSet_020c16ac
+#define IsGlobalPackedBitSet_02027304 IsGlobalPackedBitSet
+#define ReadGlobalPackedBits_02027348 ReadGlobalPackedBits
+#define data_ov099_020c241c data_ov099_020c243c
+#define data_ov099_020c277c data_ov099_020c279c
+#define data_ov099_020c2784 data_ov099_020c27a4
+#define data_ov099_020c27a8 data_ov099_020c27c8
+#define func_02001908 func_0200191c
+#define func_020019f4 GetNestedModeByte
+#define func_020275c8 CheckStatusAndThreshold
+#define func_0202e060 SPrintfUnbounded
+#define func_ov027_020ba2a8 func_ov027_020ba2c8
+#define func_ov099_020beb20 RemapModelId
+#define func_ov099_020c0588 DrawShadowedAnchoredText_020c05a8
+#define func_ov099_020c05ec func_ov099_020c060c
+#include "src/ov099/panel_state/DrawEntryStatsPanels_020bf818.c"

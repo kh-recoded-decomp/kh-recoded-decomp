@@ -9,5 +9,5 @@
 #define func_ov076_020c6e38 func_ov076_020c6e58
 #define func_ov076_020c7bec SlotMenu_DrawEmptyLabel
 #define func_ov076_020c7c20 func_ov076_020c7c40
-#define func_ov076_020c7edc func_ov076_020c7efc
+#define func_ov076_020c7edc SlotMenu_DrawPanelLabel
 #include "src/ov076/unclassified_helpers/SlotMenu_ReloadSlot_020c6f60.c"

@@ -1,6 +1,6 @@
 #define NNSi_G3dFuncSbcNODEDESC_01ffe934 NNSi_G3dFuncSbcNODEDESC
 #define QueueOrSendGeometryCommandPair_01ffcedc func_01ffcedc
-#define NNSi_G3dAnmBlendJnt_01ffda04 func_01ffda04
+#define NNSi_G3dAnmBlendJnt_01ffda04 NNSi_G3dAnmBlendJntItcm
 #define MI_Zero36B_01ff90dc MI_Zero36B
 #define g_pivotPermutation_02055868 data_0205587c
 

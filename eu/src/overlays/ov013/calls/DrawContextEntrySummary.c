@@ -1,0 +1,14 @@
+#define DrawContextEntrySummary_0206eb18 DrawContextEntrySummary
+#define func_ov002_02061b74 DrawPanelSlotABText
+#define func_01ff8684 MIi_CpuClear16
+#define DispatchContextCommand_02066c78 DispatchContextCommand
+#define OS_SNPrintf_0202e080 OS_SNPrintf_0202e094
+#define func_0202b788 GetLanguageIndex
+#define MeasurePanelTextPrimary_020627e8 MeasurePanelTextPrimary
+#define func_ov002_020619e8 ActivatePanelSlotAB
+#define CountFlaggedCategorySelections_0206a45c CountFlaggedCategorySelections
+#define CountFilledCategorySelections_0206a678 CountFilledCategorySelections
+#define func_ov027_020b90a4 FindWidgetById
+#define SetEntrySlotsVisible_020b9580 SetEntrySlotsVisible
+#define PlaySoundEffect_0204d924 PlaySoundEffect
+#include "src/ov013/panel_state/DrawContextEntrySummary_0206eb18.c"

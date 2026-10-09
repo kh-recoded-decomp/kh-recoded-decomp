@@ -1,4 +1,4 @@
-#define DrawContextEntrySummary_0206eb18 func_ov013_0206eb18
+#define DrawContextEntrySummary_0206eb18 DrawContextEntrySummary
 #define IsPanelBusy_02062c6c IsPanelBusy
 #define RecordPanelClear_02070f50 RecordPanelClear
 #define RefreshProgressCaption_0206f06c RefreshProgressCaption

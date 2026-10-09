@@ -1,0 +1,5 @@
+#define G2D_FindResourceBlock_02014e00 NNS_G2dFindBinaryBlock
+#define NNSi_G2dGetUnpackedFont_02018150 NNSi_G2dGetUnpackedFont
+#define RunResetCallbackAndIdle_02004cf0 OS_Terminate
+#define relocateFontResource_02018314 NNSi_G2dUnpackNFT
+#include "src/arm9/library_nns_g2d/NNSi_G2dGetUnpackedFont_02018150.c"

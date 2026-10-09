@@ -1,0 +1,6 @@
+#define NNSi_G3dAnmBlendJnt_01ffda04 NNSi_G3dAnmBlendJntItcm
+#define func_01ff8740 MIi_CpuClearFast
+#define FX_Div_01ff9c84 FX_Div
+#define blendScaleVec_02039ce4 BlendScaleVec
+#define VEC_CrossProduct_01ff9ea8 VEC_CrossProduct
+#include "src/itcm/library_nns_g3d/NNSi_G3dAnmBlendJnt_01ffda04.c"

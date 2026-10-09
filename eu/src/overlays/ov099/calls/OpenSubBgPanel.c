@@ -1,4 +1,4 @@
 #define OpenSubBgPanel_020bf134 OpenSubBgPanel
 #define PlaySoundEffect_0204d924 PlaySoundEffect
-#define func_ov099_020bf818 func_ov099_020bf838
+#define func_ov099_020bf818 DrawEntryStatsPanels
 #include "src/ov099/unclassified_helpers/OpenSubBgPanel_020bf134.c"

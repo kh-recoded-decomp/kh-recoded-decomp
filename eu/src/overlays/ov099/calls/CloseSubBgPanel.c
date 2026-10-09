@@ -1,4 +1,4 @@
 #define CloseSubBgPanel_020bf0dc CloseSubBgPanel
 #define PlaySoundEffect_0204d924 PlaySoundEffect
-#define func_ov099_020bf818 func_ov099_020bf838
+#define func_ov099_020bf818 DrawEntryStatsPanels
 #include "src/ov099/unclassified_helpers/CloseSubBgPanel_020bf0dc.c"

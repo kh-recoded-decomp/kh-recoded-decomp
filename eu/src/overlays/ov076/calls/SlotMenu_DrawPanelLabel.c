@@ -1,0 +1,11 @@
+#define SlotMenu_DrawPanelLabel_020c7edc SlotMenu_DrawPanelLabel
+#define func_01ff878c MIi_CpuCopyFast
+#define G2D_InitializeLinearCanvas_02017a2c NNS_G2dCharCanvasInitForBG
+#define func_ov039_020bc994 GetMenuFont10
+#define G2D_MeasureTextWidth_02016bc0 NNSi_G2dFontGetTextWidth
+#define func_ov039_020bc9ac GetMenuFont10s
+#define G2D_DrawAnchoredText_02017dec NNSi_G2dTextCanvasDrawText
+#define OS_SNPrintf_0202e080 OS_SNPrintf_0202e094
+#define func_ov076_020c7b44 SlotMenu_UploadLabel
+#define data_ov076_020cd350 data_ov076_020cd370
+#include "src/ov076/unclassified_helpers/SlotMenu_DrawPanelLabel_020c7edc.c"

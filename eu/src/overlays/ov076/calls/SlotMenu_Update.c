@@ -12,7 +12,7 @@
 #define func_ov076_020c4d94 SlotMenu_UpdateBrowse
 #define func_ov076_020c4e7c SlotMenu_UpdateIdle
 #define func_ov076_020c4f7c SlotMenu_OpenEmptySlot
-#define func_ov076_020c546c func_ov076_020c548c
+#define func_ov076_020c546c SlotMenu_UpdateEditScreen
 #define func_ov076_020c5c0c func_ov076_020c5c2c
 #define func_ov076_020c5c14 SlotMenu_UpdateMessageWait
 #define func_ov076_020c5c80 func_ov076_020c5ca0
