@@ -41,7 +41,6 @@ typedef enum GXDispMode {
 typedef struct GXDataState {
     u16 isDisplayOn;
     u16 padding;
-    u32 dmaId;
 } GXDataState;
 
 typedef struct GXBssState {

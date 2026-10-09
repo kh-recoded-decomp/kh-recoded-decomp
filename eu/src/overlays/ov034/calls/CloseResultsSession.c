@@ -39,7 +39,7 @@ extern void func_02029fac(int processor, int overlayId);
 extern u64 OS_GetTick(void);
 extern u64 GetCardThreadStartTick(void);
 extern u64 _ll_udiv(u64 dividend, u64 divisor);
-extern u64 _ll_mod(u64 value, u64 divisor);
+extern u64 _ull_mod(u64 value, u64 divisor);
 extern unsigned int func_0202a9e4(unsigned int range);
 extern unsigned int random_next_scaled(unsigned int upperBound);
 extern void SeedSharedRandomState(u32 seed, u64 mix);
@@ -66,7 +66,7 @@ void CloseResultsSession(void)
         if (data_ov034_020c0fa0.work->syncPlayTime == 1) {
             data_0206085c = *data_ov034_020c0fa0.params;
         }
-        for (i = 0; i < _ll_mod(*(u32 *)(data_0205fe0c + 0x28c8)
+        for (i = 0; i < _ull_mod(*(u32 *)(data_0205fe0c + 0x28c8)
                 + _ll_udiv((OS_GetTick() - GetCardThreadStartTick()) * 64, 0x1ff6210), 100); i++) {
             func_0202a9e4(1000);
             random_next_scaled(1000);

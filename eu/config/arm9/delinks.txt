@@ -5457,6 +5457,30 @@ src/asm_stubs/calls/_dleq.c:
     complete
     .text       start:0x02023728 end:0x020237cc
 
+src/asm_stubs/calls/_fgeq.c:
+    complete
+    .text       start:0x020237cc end:0x02023828
+
+src/asm_stubs/calls/_fgr.c:
+    complete
+    .text       start:0x02023828 end:0x02023884
+
+src/asm_stubs/calls/_fleq.c:
+    complete
+    .text       start:0x02023884 end:0x020238ec
+
+src/asm_stubs/calls/_fls.c:
+    complete
+    .text       start:0x020238ec end:0x02023948
+
+src/asm_stubs/calls/_feq.c:
+    complete
+    .text       start:0x02023948 end:0x020239b0
+
+src/asm_stubs/calls/_f2d.c:
+    complete
+    .text       start:0x020239b0 end:0x02023a34
+
 src/asm_stubs/calls/_fflt.c:
     complete
     .text       start:0x02023aac end:0x02023af4
@@ -5465,9 +5489,37 @@ src/asm_stubs/calls/_ffltu.c:
     complete
     .text       start:0x02023af4 end:0x02023b3c
 
+libs/msl/c/asm_stubs/calls/_ll2f.s:
+    complete
+    .text       start:0x02023b3c end:0x02023ba8
+
+libs/msl/c/asm_stubs/calls/_ll_mod.s:
+    complete
+    .text       start:0x02023ba8 end:0x02023bb8
+
+libs/msl/c/asm_stubs/calls/_ll_sdiv.s:
+    complete
+    .text       start:0x02023bb8 end:0x02023d68
+
+libs/msl/c/asm_stubs/calls/_ll_udiv.s:
+    complete
+    .text       start:0x02023d68 end:0x02023d74
+
+libs/msl/c/asm_stubs/calls/_ull_mod.s:
+    complete
+    .text       start:0x02023d74 end:0x02023db0
+
 libs/msl/c/asm_stubs/auto/_ll_mul.c:
     complete
     .text       start:0x02023db0 end:0x02023dd0
+
+libs/msl/c/asm_stubs/calls/_s32_div_f.s:
+    complete
+    .text       start:0x02023dd0 end:0x02023fdc
+
+libs/msl/c/asm_stubs/calls/_u32_div_f.s:
+    complete
+    .text       start:0x02023fdc end:0x020241c0
 
 src/asm_stubs/calls/_ffix.c:
     complete
@@ -5477,9 +5529,25 @@ src/asm_stubs/calls/_ffixu.c:
     complete
     .text       start:0x020241f4 end:0x02024234
 
+src/asm_stubs/calls/MSL_Sqrt.c:
+    complete
+    .text       start:0x02024280 end:0x0202441c
+
+src/asm_stubs/calls/_fmul.c:
+    complete
+    .text       start:0x0202441c end:0x020245fc
+
 src/calls/GetMaxPositiveInt.c:
     complete
     .text       start:0x02024818 end:0x02024820
+
+src/asm_stubs/calls/_fdiv.c:
+    complete
+    .text       start:0x02024ab0 end:0x02024e68
+
+src/asm_stubs/calls/_ddiv.c:
+    complete
+    .text       start:0x02024e80 end:0x020253c4
 
 src/calls/PanelState_NoOpD.c:
     complete
@@ -10045,9 +10113,13 @@ libs/msl/c/data/sLowerCaseMap.c:
     complete
     .rodata     start:0x020531f4 end:0x02053274
 
-libs/nitro/fs/data/Alias_FSiRomArchiveViews.s:
+libs/nitro/card/data/card_pullout_state.c:
     complete
-    .bss        start:0x02057b00 end:0x02057b00
+    .bss        start:0x020578e0 end:0x020578ec
+
+libs/nitro/data/SdkLinkerSymbols.s:
+    complete
+    .data       start:0x020561ac end:0x020561c0
 
 libs/nitro/fs/data/FSiOverlayContext.c:
     complete
@@ -10061,6 +10133,10 @@ libs/nitro/fs/data/fsi_default_command.c:
     complete
     .rodata     start:0x020529c0 end:0x020529f4
 
+libs/nitro/gx/data/gx_state.c:
+    complete
+    .data       start:0x02055c18 end:0x02055c20
+
 libs/nitro/math/data/MATHi_OverlayTableMode.c:
     complete
     .bss        start:0x02057b84 end:0x02057b88
@@ -10073,13 +10149,17 @@ libs/nitro/snd/data/SNDi_SharedWork.c:
     complete
     .bss        start:0x02059780 end:0x02059784
 
+libs/nitro/spi/data/pm_power_data.c:
+    complete
+    .data       start:0x02055c44 end:0x02055c4c
+
 libs/nns/g2d/data/NNSiG2dBGCNTTable.c:
     complete
     .rodata     start:0x020530e8 end:0x02053108
 
 libs/nns/g2d/data/g2d_charcanvas_tables.c:
     complete
-    .rodata     start:0x020530b0 end:0x020530e8
+    .rodata     start:0x02053098 end:0x020530e8
 
 libs/nns/g2d/data/g2d_oam_size_tables.c:
     complete
@@ -10112,6 +10192,10 @@ libs/nns/gfd/data/sLnkTexInitialSlots.c:
 libs/nns/gfd/data/sLnkTexVramManager.s:
     complete
     .bss        start:0x0205a8e4 end:0x0205a900
+
+libs/nns/snd/data/sNullSoundArchiveSymbol.c:
+    complete
+    .rodata     start:0x0205312c end:0x02053130
 
 libs/nns/snd/data/sStrmChannel.c:
     complete

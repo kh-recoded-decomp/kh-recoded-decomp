@@ -32,10 +32,24 @@ extern void DrawGlyph1D(const struct NNSG2dCharCanvas *pCC,
                         int x, int y, int cl,
                         const struct NNSG2dGlyph *pGlyph);
 extern void ClearContinuous(const struct NNSG2dCharCanvas *pCC, int cl);
+extern void ClearLine(const struct NNSG2dCharCanvas *pCC, int cl);
 extern void ClearAreaLine(const struct NNSG2dCharCanvas *pCC,
                           int cl, int x, int y, int w, int h);
 extern void ClearArea1D(const struct NNSG2dCharCanvas *pCC,
                         int cl, int x, int y, int w, int h);
+
+/* Constant masks retained by the three object-canvas initializers. */
+const unsigned int sCharCanvasFullBits[3] = {
+    ~0u,
+    ~0u,
+    ~0u,
+};
+
+const NNSiG2dCharCanvasVTable VTABLE_OBJ2DRECT = {
+    DrawGlyphLine,
+    ClearLine,
+    ClearAreaLine
+};
 
 const NNSiG2dCharCanvasVTable VTABLE_BG = {
     DrawGlyphLine,

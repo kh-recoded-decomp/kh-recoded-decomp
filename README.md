@@ -18,7 +18,7 @@ maintained by [@ricky074game](https://github.com/ricky074game) and [@Yokimitsuro
 | Region | C code bytes | % | Functions |
 |---|---:|---:|---:|
 | **US** `BK9E` | 1,326,316 / 1,768,220 | **75.0%** | 9,732 / 10,359 |
-| **EU** `BK9P` | 1,331,308 / 1,658,216 | **80.3%** | 9,773 / 10,426 |
+| **EU** `BK9P` | 1,331,308 / 1,658,216 | **80.3%** | 9,773 / 10,427 |
 | US verified original assembly (not C) | 14,374 | 0.8% | 138 |
 | **Shared** (same function, matched in both) | 1,279,498 | 77.2% of EU | 9,163 |
 

@@ -44,7 +44,6 @@
 #define HasFlagsAt0xe_020a752c HasFlagsAt0xe
 #define GetFieldAt0xe_020a7558 GetFieldAt0xe
 #define GetFieldAt0xe SharedObject_GetFlagsB
-#define _fgeq func_020237cc
 #define func_ov046_020c0d68 Camera_GetModeValue
 #define func_ov046_020c3368 SetCameraMode3EntryState
 #include "src/ov071/object_state/UpdateOv071BossState_020d836c.c"

@@ -347,7 +347,7 @@ sOv015_WxcWleP2_0207e7f8 kind:data(any) addr:0x0207e7f8
 gWirelessStateInitCallback kind:data(any) addr:0x0207e804
 gWirelessStateUpdateCallback kind:data(any) addr:0x0207e808
 gWirelessStateHandlers kind:data(any) addr:0x0207e80c
-data_ov015_0207e864 kind:data(any) addr:0x0207e864
+sWirelessDataSharingDoubleMode kind:data(word) addr:0x0207e864
 gWirelessResourceTables kind:data(any) addr:0x0207e868
 gWirelessModeDataTables kind:data(any) addr:0x0207e884
 sOv015_WxcSchP2_0207e8ac kind:data(any) addr:0x0207e8ac
