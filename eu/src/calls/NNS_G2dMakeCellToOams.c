@@ -1,0 +1,4 @@
+#define NNS_G2dMakeCellToOams_020157fc NNS_G2dMakeCellToOams
+#define s_oamSizeXTable_02052fd4 NNSi_objSizeWTbl
+#define s_oamSizeYTable_02052fbc NNSi_objSizeHTbl
+#include "src/arm9/library_nns_g2d/NNS_G2dMakeCellToOams_020157fc.c"

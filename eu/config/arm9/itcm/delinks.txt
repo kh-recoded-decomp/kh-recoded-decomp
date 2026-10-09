@@ -425,6 +425,10 @@ src/calls/NNSi_G3dFuncSbcNODEDESC.c:
     complete
     .text       start:0x01ffe934 end:0x01ffec28
 
+src/calls/NNSi_G3dFuncSbcNODEMIX.c:
+    complete
+    .text       start:0x01ffec28 end:0x01fff374
+
 src/calls/EmitJointScaleCommand.c:
     complete
     .text       start:0x01fff374 end:0x01fff3dc

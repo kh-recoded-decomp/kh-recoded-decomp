@@ -148,7 +148,7 @@ extern void LoadStatusLabels(StatusMenu *menu);
 extern int *AcquireMapLayout(BOOL reload, BOOL discard);
 extern BOOL IsGlobalPackedBitSet(int bitIndex);
 extern void ComputePlayerStats(SaveData *save, PlayerStats *out, BOOL recompute, int scale);
-extern void func_ov073_020c1ed4(SaveData *save, void *preview);
+extern void RefreshStatusMenuData(SaveData *save, void *preview);
 extern int GetFieldCad0(void);
 extern int GetMenuStackDepth(void);
 extern void LoadSlotSubBgImage(int a, int b, int c, u16 d);
@@ -366,7 +366,7 @@ int InitStatusMenu(StatusMenu *menu)
     menu->showExtra = value;
     ComputePlayerStats(data_0205fe0c, &stats, TRUE, 0);
     if (menu->isCurrent == 0) {
-        func_ov073_020c1ed4(data_0205fe0c, NULL);
+        RefreshStatusMenuData(data_0205fe0c, NULL);
     }
     menu->openTick = GetCardThreadStartTick();
     menu->isCurrent |= ((REG_POWCNT & 0x8000) >> 15) != 1;

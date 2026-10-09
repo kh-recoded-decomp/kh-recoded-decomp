@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-extern unsigned int data_ov035_020bc500;
+extern unsigned int gMovieContextState;
 extern unsigned int ActorRegistry_ForEachCallback(void *);
 extern unsigned int AdvanceLoopingAnimation(unsigned int);
 extern unsigned int StageManager_Update(unsigned int);
@@ -20,8 +20,8 @@ void UpdateSceneSystems(int paused)
     u32 step;
     int work;
 
-    work = data_ov035_020bc500;
-    if ((*(u16 *)(data_ov035_020bc500 + 0x24) & 0x100) != 0) {
+    work = gMovieContextState;
+    if ((*(u16 *)(gMovieContextState + 0x24) & 0x100) != 0) {
         AdvanceLoopingAnimation(0x1000);
     }
     if (paused == 0) {
@@ -58,6 +58,6 @@ void UpdateSceneSystems(int paused)
     }
     work = func_ov035_020bae94();
     if (work != 0) {
-        func_020bd17c(*(unsigned int *)(*(int *)(data_ov035_020bc500 + 0xb8) + 9000));
+        func_020bd17c(*(unsigned int *)(*(int *)(gMovieContextState + 0xb8) + 9000));
     }
 }

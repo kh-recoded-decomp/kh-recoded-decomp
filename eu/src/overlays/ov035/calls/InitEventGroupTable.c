@@ -62,7 +62,7 @@ typedef struct SceneWork {
     EventTable table;
 } SceneWork;
 
-extern SceneWork *data_ov035_020bc500;
+extern SceneWork *gMovieContextState;
 extern void *NNSi_FndAllocFromDefaultHeap(u32 size);
 extern void *NNS_FndAllocFromDefaultExpHeapEx(u32 size, int align);
 extern void MIi_CpuClearFast(int value, void *dest, u32 size);
@@ -72,7 +72,7 @@ extern BOOL ReleaseRecordSlot(s32 slot);
 extern s32 GetShortTableValueOrDefault(s32 index);
 
 void InitEventGroupTable(void) {
-    SceneWork *work = data_ov035_020bc500;
+    SceneWork *work = gMovieContextState;
     EventTable *table;
     EventList *events;
     int i = 0;

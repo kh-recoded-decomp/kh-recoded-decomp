@@ -1,3 +1,3 @@
 #define GetMovieEntryValue_020bae1c GetMovieEntryValue
-#define g_movieContext_020bc4e0 data_ov035_020bc500
+#define g_movieContext_020bc4e0 gMovieContextState
 #include "src/ov035/unclassified_helpers/GetMovieEntryValue_020bae1c.c"

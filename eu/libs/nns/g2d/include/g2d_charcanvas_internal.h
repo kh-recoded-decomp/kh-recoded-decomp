@@ -20,6 +20,11 @@ typedef struct NNSiG2dCharCanvasVTable {
     NNSiG2dClearAreaFunc pClearArea;
 } NNSiG2dCharCanvasVTable;
 
+typedef struct NNSiG2dObjectSize {
+    u8 widthShift;
+    u8 heightShift;
+} NNSiG2dObjectSize;
+
 struct NNSG2dCharCanvas {
     u8 *charBase;
     int areaWidth;
@@ -29,5 +34,16 @@ struct NNSG2dCharCanvas {
     u32 param;
     const NNSiG2dCharCanvasVTable *vtable;
 };
+
+extern const NNSiG2dObjectSize sMaxObjectSizeTable[4][4];
+
+static inline int NNSi_G2dIntegerLog2(u32 value)
+{
+    int leadingZeros = (int)value;
+    asm {
+        clz leadingZeros, leadingZeros
+    }
+    return 31 - leadingZeros;
+}
 
 #endif

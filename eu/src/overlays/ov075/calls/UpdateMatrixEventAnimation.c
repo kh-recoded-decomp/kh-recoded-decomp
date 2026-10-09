@@ -110,12 +110,12 @@ extern SlotEntry *GetRecordSlotPair1Entry(s32 index);
 extern void *func_ov027_020ba2c8(int *bank, int index);
 extern void SetSecondaryElementEnabled(BOOL enabled);
 extern void HasSceneActiveMenu(int brightness);
-extern void func_ov073_020c1ed4(SaveData *save, const RefreshArgs *args);
+extern void RefreshStatusMenuData(SaveData *save, const RefreshArgs *args);
 extern void SetStatusPageAndCursor(int page, int index);
 extern u32 PropagateMatrixNodeVisit(MatrixMenu *menu, MatrixNode *node, int dir, BOOL quiet, BOOL keepSteps);
 extern void func_ov075_020c5d30(MatrixMenu *menu, int a, int b, int c);
 extern BOOL TryCompleteGridGroup(MatrixMenu *menu, u32 group);
-extern void func_ov075_020c7fc8(void *state, MatrixMap *map, MatrixNode *node, int index);
+extern void DrawMatrixCellGlyph(void *state, MatrixMap *map, MatrixNode *node, int index);
 extern void ClearGlyphCell(void *pixels, MatrixMap *grid, u32 cellIndex);
 extern void ShowDialogMessage(MatrixMenu *menu, int messageId, int dialogType, int cancelable, ...);
 extern void GetGridCellPosition(MatrixMenu *menu, MatrixNode *cell, fx32 *x, fx32 *y);
@@ -129,7 +129,7 @@ static inline void RefreshRevealedCell(MatrixMenu *menu, MatrixNode *cell)
 {
     if (cell->type >= 0xe) {
         cell->pendingSteps = 0;
-        func_ov075_020c7fc8(menu->revealState, menu->map, cell, cell->index);
+        DrawMatrixCellGlyph(menu->revealState, menu->map, cell, cell->index);
     }
 }
 
@@ -137,7 +137,7 @@ static inline void MarkPortalCleared(int bit)
 {
     RefreshArgs args = data_ov075_020d1520;
     data_0205fe0c->portalMask |= 1 << bit;
-    func_ov073_020c1ed4(data_0205fe0c, &args);
+    RefreshStatusMenuData(data_0205fe0c, &args);
 }
 
 static inline MatrixNode *GetGroupNode(MatrixMap *map, int group)
@@ -377,17 +377,17 @@ void UpdateMatrixEventAnimation(MatrixMenu *menu)
                 columns = *menu->map->columns;
                 cell0 = nodes[index];
                 ClearGlyphCell(menu->revealState, menu->map, index);
-                func_ov075_020c7fc8(menu->revealState, menu->map, cell0, index);
+                DrawMatrixCellGlyph(menu->revealState, menu->map, cell0, index);
                 next = index + 1;
                 cell1 = nodes[next];
                 ClearGlyphCell(menu->revealState, menu->map, next);
-                func_ov075_020c7fc8(menu->revealState, menu->map, cell1, next);
+                DrawMatrixCellGlyph(menu->revealState, menu->map, cell1, next);
                 cell2 = nodes[index + columns];
                 ClearGlyphCell(menu->revealState, menu->map, index + columns);
-                func_ov075_020c7fc8(menu->revealState, menu->map, cell2, index + columns);
+                DrawMatrixCellGlyph(menu->revealState, menu->map, cell2, index + columns);
                 cell3 = nodes[index + columns + 1];
                 ClearGlyphCell(menu->revealState, menu->map, index + columns + 1);
-                func_ov075_020c7fc8(menu->revealState, menu->map, cell3, index + columns + 1);
+                DrawMatrixCellGlyph(menu->revealState, menu->map, cell3, index + columns + 1);
                 break;
             case 0x200:
                 if (AdvanceAnimationTracks(&menu->effects[1], 0x1000) == 0) {
@@ -433,7 +433,7 @@ void UpdateMatrixEventAnimation(MatrixMenu *menu)
                 }
                 menu->state &= 0xff;
                 menu->timer = 0;
-                func_ov073_020c1ed4(data_0205fe0c, NULL);
+                RefreshStatusMenuData(data_0205fe0c, NULL);
                 SetStatusPageAndCursor(1, data_0205fe0c->keyCount + 2);
                 ShowDialogMessage(menu, 0x21, 0, 0, data_0205fe0c->keyCount + 3);
                 break;

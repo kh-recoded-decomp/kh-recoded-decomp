@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-extern int data_ov035_020bc500;
+extern int gMovieContextState;
 extern int NNSi_FndFreeFromDefaultHeap();
 extern int func_ov001_0206a918();
 extern int RemoveTaggedListEntries();
@@ -12,7 +12,7 @@ void FreeSceneGroupObjects(void)
     int group;
     int groupIndex;
 
-    work = *(int *)(data_ov035_020bc500 + 0xb8);
+    work = *(int *)(gMovieContextState + 0xb8);
     RemoveTaggedListEntries(0x20bdb75);
     groupIndex = 0;
     do {

@@ -5,11 +5,11 @@ typedef struct MovieContextState {
     u16 flags;
 } MovieContextState;
 
-extern MovieContextState *data_ov035_020bc500;
+extern MovieContextState *gMovieContextState;
 
 u32 ClearMovieContextReadyFlag(void)
 {
-    MovieContextState *state = data_ov035_020bc500;
+    MovieContextState *state = gMovieContextState;
     u32 flags = state->flags & 0xfffd;
     state->flags = flags;
     return flags;

@@ -4,7 +4,7 @@
 #define GetSharedSelectedIndex_020c2c90 GetSharedSelectedIndex
 #define ResolveMergedRecordEntry_020295c8 ResolveMergedRecordEntry
 #define SlotMenu_ReloadSlot_020c6f60 SlotMenu_ReloadSlot
-#define func_ov073_020c1eb4 func_ov073_020c1ed4
+#define func_ov073_020c1eb4 RefreshStatusMenuData
 #define func_ov076_020c6d2c func_ov076_020c6d4c
 #define func_ov076_020c6e38 func_ov076_020c6e58
 #define func_ov076_020c7bec SlotMenu_DrawEmptyLabel

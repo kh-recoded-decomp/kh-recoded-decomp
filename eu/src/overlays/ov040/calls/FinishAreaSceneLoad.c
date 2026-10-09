@@ -22,7 +22,7 @@ typedef struct {
 #define AREA_SCENE_DESCRIPTOR ((void *)0x020bc4e8)
 
 extern SceneState *data_ov040_020be280;
-extern SharedScene *data_ov035_020bc500;
+extern SharedScene *gMovieContextState;
 extern u8 sOv040_RpgEfEcZ_020be248[];
 extern BOOL UpdateMenuItemLoading(void);
 extern void LoadFadeModel(int mode);
@@ -52,8 +52,8 @@ int FinishAreaSceneLoad(void)
     if (data_ov040_020be280->flags & 1) {
         u32 entryValue;
         HighlightSelectedMenuPanels();
-        if ((int)data_ov035_020bc500->handle == -1) {
-            data_ov035_020bc500->handle = func_0202a45c(AREA_SCENE_DESCRIPTOR, NULL);
+        if ((int)gMovieContextState->handle == -1) {
+            gMovieContextState->handle = func_0202a45c(AREA_SCENE_DESCRIPTOR, NULL);
         }
         entryValue = GetSceneEntryResourceId(func_ov001_02067ed4());
         func_ov001_0207b0c0(GetSceneResourceHandle(), entryValue);

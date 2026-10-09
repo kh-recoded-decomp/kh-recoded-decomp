@@ -5,7 +5,7 @@
 #define OnGroupEventFinished_020bb1ac OnGroupEventFinished
 #define addScaledVector_020301ac AddScaledVector
 #define data_ov035_020bc3e0 sOv035EventEffectOffset
-#define data_ov035_020bc4e0 data_ov035_020bc500
+#define data_ov035_020bc4e0 gMovieContextState
 #define func_020351b8 func_020351cc
 #define func_02036230 GetActorRegistry
 #define func_ov001_0207f038 func_ov001_0207f060

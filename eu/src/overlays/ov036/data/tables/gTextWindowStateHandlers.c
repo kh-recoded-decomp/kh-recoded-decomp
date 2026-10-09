@@ -5,7 +5,7 @@ extern void OpenQueuedTextWindow(void);
 extern void LoadTextWindowFrame(void); /* LoadTextWindowFrame */
 extern void func_ov036_020bfe38(void);
 extern void StepPanelFade(void);
-extern void func_ov036_020c0400(void);
+extern void LayoutTextWindow(void);
 extern void UpdateTextWindowTyping(void); /* UpdateTextWindowTyping */
 extern void func_ov036_020c0e30(void);
 extern void AdvanceTextWindowPage(void); /* AdvanceTextWindowPage */
@@ -21,7 +21,7 @@ void (*const gTextWindowStateHandlers[14])(void) = {
     LoadTextWindowFrame, /* LoadTextWindowFrame */
     func_ov036_020bfe38,
     StepPanelFade,
-    func_ov036_020c0400,
+    LayoutTextWindow,
     UpdateTextWindowTyping, /* UpdateTextWindowTyping */
     func_ov036_020c0e30,
     AdvanceTextWindowPage, /* AdvanceTextWindowPage */

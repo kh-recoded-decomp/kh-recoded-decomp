@@ -21,12 +21,12 @@ typedef struct {
     EffectObject *effects[2];
 } StageWork;
 
-extern u8 *data_ov035_020bc500;
+extern u8 *gMovieContextState;
 extern AnimTrackEntry data_ov041_020cf61c[][24];
 extern void selectJointAnimationBlend(void *state, int joint, void *target, s16 track);
 
 void PlayActorEffectAnimation(AnimActor *actor, int animId) {
-    StageWork *work = *(StageWork **)(data_ov035_020bc500 + 0xb8);
+    StageWork *work = *(StageWork **)(gMovieContextState + 0xb8);
     int track;
     EffectObject *effect;
 

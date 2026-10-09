@@ -1,4 +1,4 @@
 #define FreeMovieCharacterBuffers_020bac28 FreeMovieCharacterBuffers
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
-#define g_movieContext_020bc4e0 data_ov035_020bc500
+#define g_movieContext_020bc4e0 gMovieContextState
 #include "src/ov035/unclassified_helpers/FreeMovieCharacterBuffers_020bac28.c"

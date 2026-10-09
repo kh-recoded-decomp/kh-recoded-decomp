@@ -1,5 +1,5 @@
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define ReleaseMovieResources_020baac4 ReleaseMovieResources
-#define data_ov035_020bc4e0 data_ov035_020bc500
+#define data_ov035_020bc4e0 gMovieContextState
 #define func_01ff8740 MIi_CpuClearFast
 #include "src/ov035/shared_engine/ReleaseMovieResources_020baac4.c"

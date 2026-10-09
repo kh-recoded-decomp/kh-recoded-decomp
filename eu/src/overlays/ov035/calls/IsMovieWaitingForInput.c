@@ -1,3 +1,3 @@
 #define IsMovieWaitingForInput_020bad44 IsMovieWaitingForInput
-#define g_movieContext_020bc4e0 data_ov035_020bc500
+#define g_movieContext_020bc4e0 gMovieContextState
 #include "src/ov035/unclassified_helpers/IsMovieWaitingForInput_020bad44.c"

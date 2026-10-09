@@ -5,7 +5,7 @@
 #define LoadPzTextureParams_02066488 LoadPzTextureParams
 #define LoadSlotEntriesFromBits_02050120 LoadSlotEntriesFromBits
 #define NNSi_FndGetCurrentRootHeap_0202a764 NNSi_FndGetCurrentRootHeap
-#define data_ov035_020bc4e0 data_ov035_020bc500
+#define data_ov035_020bc4e0 gMovieContextState
 #define func_ov035_020ba458 RunMovieSceneFrame
 #define func_ov035_020ba898 SetupMovieDisplay
 #include "src/ov035/shared_engine/InitMovieSceneWork_020ba3e0.c"

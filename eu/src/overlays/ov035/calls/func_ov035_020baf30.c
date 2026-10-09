@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-extern u32 data_ov035_020bc500;
+extern u32 gMovieContextState;
 extern u16 ReadSessionPackedBits(u32 id, int size);
 extern void WriteSessionPackedBits(u32 id, int size, int value);
 extern int IsSessionFlagSet(u32 id);
@@ -20,12 +20,12 @@ void func_ov035_020baf30(u32 scale, s16 *table, u8 a, u8 b) {
         WriteSessionPackedBits(0x3791, 10, (int)table[index]);
         SetSessionFlag(0x379b);
     }
-    *(u8 *)(data_ov035_020bc500 + 0x1f) = a;
-    *(u8 *)(data_ov035_020bc500 + 0x20) = b;
+    *(u8 *)(gMovieContextState + 0x1f) = a;
+    *(u8 *)(gMovieContextState + 0x20) = b;
     picked = ReadSessionPackedBits(0x3791, 10);
-    *(u16 *)(data_ov035_020bc500 + 0x30) = picked;
-    encoded = func_ov001_0207f060(*(u8 *)(data_ov035_020bc500 + 0x1f),
-                                  *(u8 *)(data_ov035_020bc500 + 0x20));
+    *(u16 *)(gMovieContextState + 0x30) = picked;
+    encoded = func_ov001_0207f060(*(u8 *)(gMovieContextState + 0x1f),
+                                  *(u8 *)(gMovieContextState + 0x20));
     extra = IsSessionFlagSet(0x3702);
     FieldObject_SetEnabled(encoded, extra);
 }

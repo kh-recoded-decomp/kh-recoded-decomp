@@ -12,14 +12,14 @@ typedef struct SessionState {
     u32 flags;
 } SessionState;
 
-extern ScreenState *data_ov035_020bc500;
+extern ScreenState *gMovieContextState;
 extern SessionState *data_ov001_020a0480;
 extern BOOL IsScreenModeIdle(void);
 extern void Panel_CaptureBrightness(void);
 
 int FinishAreaScreenTransition(void)
 {
-    ScreenState *screen = data_ov035_020bc500;
+    ScreenState *screen = gMovieContextState;
 
     if (!IsScreenModeIdle()) {
         return -1;

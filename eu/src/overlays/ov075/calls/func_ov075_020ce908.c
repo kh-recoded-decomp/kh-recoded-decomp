@@ -37,7 +37,7 @@ extern SaveData *data_0205fe0c;
 extern void ApplyDialogReward(u32 reward);
 extern void DecrementByteCounter(u32 index);
 extern u16 GetByteCounterOrDefault(u32 index);
-extern void func_ov073_020c1ed4(SaveData *save, int mode);
+extern void RefreshStatusMenuData(SaveData *save, int mode);
 extern BOOL ClearBg1AndRedraw(ItemListMenu *menu);
 
 void func_ov075_020ce908(ItemListMenu *menu)
@@ -68,7 +68,7 @@ void func_ov075_020ce908(ItemListMenu *menu)
             stock->total--;
             stock->used--;
         }
-        func_ov073_020c1ed4(data_0205fe0c, 0);
+        RefreshStatusMenuData(data_0205fe0c, 0);
     }
     menu->state = 4;
     ClearBg1AndRedraw(menu);

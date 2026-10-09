@@ -124,6 +124,10 @@ src/overlays/ov041/calls/ApplyStageEntryMove.c:
     complete
     .text       start:0x020c0c14 end:0x020c0cec
 
+src/overlays/ov041/calls/InitSpecialStageEntry.c:
+    complete
+    .text       start:0x020c0f10 end:0x020c14e8
+
 src/overlays/ov041/calls/InitStageEntry.c:
     complete
     .text       start:0x020c14e8 end:0x020c18ec
@@ -139,6 +143,18 @@ src/overlays/ov041/calls/FindFreeSlotId.c:
 src/overlays/ov041/calls/InstallModelRenderCallback.c:
     complete
     .text       start:0x020c2538 end:0x020c25ec
+
+src/overlays/ov041/calls/ModelRenderCallbackKindFD.c:
+    complete
+    .text       start:0x020c263c end:0x020c2680
+
+src/overlays/ov041/calls/ModelRenderCallbackKind12.c:
+    complete
+    .text       start:0x020c2680 end:0x020c2690
+
+src/overlays/ov041/calls/ModelRenderCallbackKindC.c:
+    complete
+    .text       start:0x020c2690 end:0x020c26d8
 
 src/overlays/ov041/calls/LoadStageActorModel.c:
     complete

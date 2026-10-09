@@ -4,7 +4,7 @@
 #define RunMovieSceneFrame_020ba458 RunMovieSceneFrame
 #define SaveSlotEntriesToBits_02050194 SaveSlotEntriesToBits
 #define data_ov035_020bc478 gMovieSkipHandlers
-#define data_ov035_020bc4e0 data_ov035_020bc500
+#define data_ov035_020bc4e0 gMovieContextState
 #define func_ov035_020ba75c DispatchSceneDrawCallbacks
 #define func_ov035_020ba7dc UpdateSceneSystems
 #define func_ov035_020bae74 func_ov035_020bae94

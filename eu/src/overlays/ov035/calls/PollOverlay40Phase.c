@@ -1,5 +1,5 @@
 #define EndOverlay40Phase_020bace8 EndOverlay40Phase
 #define PollOverlay40Phase_020ba628 PollOverlay40Phase
 #define func_ov040_020bd918 RunMenuStateMachine
-#define g_movieContext_020bc4e0 data_ov035_020bc500
+#define g_movieContext_020bc4e0 gMovieContextState
 #include "src/ov035/unclassified_helpers/PollOverlay40Phase_020ba628.c"

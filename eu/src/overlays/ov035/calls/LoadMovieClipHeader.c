@@ -2,7 +2,7 @@
 #define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define data_ov035_020bc4a0 sOv035_RpgZ_020bc4c0
-#define data_ov035_020bc4e0 data_ov035_020bc500
+#define data_ov035_020bc4e0 gMovieContextState
 #define findSharedResourceByName_0202cd8c findSharedResourceByName
 #define func_01ff89a8 MI_CpuCopy8
 #define func_0202c48c func_0202c4a0

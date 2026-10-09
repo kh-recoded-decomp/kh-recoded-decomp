@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-extern unsigned int data_ov035_020bc500;
+extern unsigned int gMovieContextState;
 extern unsigned int DrawVisibleSceneSlots(void);
 extern unsigned int RunFlaggedEventCallbacks(void);
 extern unsigned int func_ov001_020876d4(void);
@@ -18,8 +18,8 @@ void DispatchSceneDrawCallbacks(void)
     u32 active;
     int blocked;
 
-    work = data_ov035_020bc500;
-    if ((*(u16 *)(data_ov035_020bc500 + 0x24) & 0x80) != 0) {
+    work = gMovieContextState;
+    if ((*(u16 *)(gMovieContextState + 0x24) & 0x80) != 0) {
         func_ov021_020af528(1);
     }
     if ((*(u16 *)(work + 0x22) & 1) != 0) {

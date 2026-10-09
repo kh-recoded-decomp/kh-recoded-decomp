@@ -1,3 +1,3 @@
 #define GetMovieCounterLimit_020bafc4 GetMovieCounterLimit
-#define g_movieContext_020bc4e0 data_ov035_020bc500
+#define g_movieContext_020bc4e0 gMovieContextState
 #include "src/ov035/unclassified_helpers/GetMovieCounterLimit_020bafc4.c"

@@ -76,6 +76,10 @@ src/overlays/ov045/calls/UpdateTweenIsFinished.c:
     complete
     .text       start:0x020bf3dc end:0x020bf3ee
 
+src/overlays/ov045/calls/RunResultTallyStep.c:
+    complete
+    .text       start:0x020bf3f0 end:0x020bfc50
+
 src/overlays/ov045/calls/RunNameRevealStep.c:
     complete
     .text       start:0x020bfc50 end:0x020bfec0

@@ -7,10 +7,10 @@
 #define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
 #define func_01ff8740 MIi_CpuClearFast
 #define func_01ff878c MIi_CpuCopyFast
-#define data_ov035_020bc4e0 data_ov035_020bc500
-#define data_ov041_020cf500 data_ov041_020cf520
-#define data_ov041_020cf510 data_ov041_020cf530
-#define data_ov041_020cf524 data_ov041_020cf544
+#define data_ov035_020bc4e0 gMovieContextState
+#define data_ov041_020cf500 gSpecialStageSlotTable
+#define data_ov041_020cf510 gSpecialStageItem0ColorTable
+#define data_ov041_020cf524 gSpecialStageItem1ColorTable
 #if defined(__MWERKS__)
 #include "../src/ov041/unclassified_helpers/InitStageEntry_020c14c8.c"
 #else

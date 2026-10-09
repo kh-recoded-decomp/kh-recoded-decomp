@@ -9,7 +9,7 @@
 #define SetListPanelSlotFlag_020bf918 SetListPanelSlotFlag
 #define SetSceneMode_020c173c SetSceneMode
 #define SetStateFlagBits_020bc688 SetStateFlagBits
-#define UpdateEntryProgress_020c0448 func_ov091_020c0468
+#define UpdateEntryProgress_020c0448 UpdateEntryProgress
 #define data_ov091_020c2a30 data_ov091_020c2a50
 #define data_ov091_020c3720 data_ov091_020c3740
 #define func_ov039_020bc828 GetCurrentMenuStackEntry

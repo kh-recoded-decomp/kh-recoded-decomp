@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-extern u32 data_ov035_020bc500;
+extern u32 gMovieContextState;
 extern int StepResourceSlotLoading(void);
 extern void InvokeSceneCallback(void);
 extern void func_ov001_020687b8(void);
@@ -15,6 +15,6 @@ u32 func_ov035_020ba610(void) {
     func_ov001_020687b8();
     InvokeListNodeCallbacks();
     StartOverlay40Phase(1);
-    *(u16 *)(data_ov035_020bc500 + 6) = *(u16 *)(data_ov035_020bc500 + 6) | 0x8000;
+    *(u16 *)(gMovieContextState + 6) = *(u16 *)(gMovieContextState + 6) | 0x8000;
     return 4;
 }

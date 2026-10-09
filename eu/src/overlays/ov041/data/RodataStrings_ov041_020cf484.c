@@ -1,3 +1,3 @@
 #include "nitro/types.h"
 
-const char data_ov041_020cf484[4] = "222";
+const char gSpecialStageStat4Table[4] = "222";

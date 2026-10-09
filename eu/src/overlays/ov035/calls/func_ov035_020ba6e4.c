@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-extern unsigned int data_ov035_020bc500;
+extern unsigned int gMovieContextState;
 extern unsigned int PXI_Init_0202a64c();
 extern unsigned int PopVramState();
 extern unsigned int ReleaseMovieResources();
@@ -22,21 +22,21 @@ unsigned int func_ov035_020ba6e4(void) {
   FreeMovieSlotBuffers();
   FreeMovieCharacterBuffers();
   ReleaseMovieResources();
-  *(u16 *)(data_ov035_020bc500 + 6) = *(u16 *)(data_ov035_020bc500 + 6) & 0xfff3;
+  *(u16 *)(gMovieContextState + 6) = *(u16 *)(gMovieContextState + 6) & 0xfff3;
   func_ov001_020685d4();
   ShutdownSceneContext();
   SetOverlayLayerVisible(1);
   func_ov001_0207efa0();
   func_ov035_020bb7a8();
-  if (*(int *)(data_ov035_020bc500 + 0x14) != -1) {
-    PXI_Init_0202a64c(*(int *)(data_ov035_020bc500 + 0x14));
-    *(unsigned int *)(data_ov035_020bc500 + 0x14) = 0xffffffff;
+  if (*(int *)(gMovieContextState + 0x14) != -1) {
+    PXI_Init_0202a64c(*(int *)(gMovieContextState + 0x14));
+    *(unsigned int *)(gMovieContextState + 0x14) = 0xffffffff;
   }
   SuspendTaskAndSetFlag();
   PopVramState();
   ActorRegistry_ClearCollisionResult();
   ReleaseSeqArcHeapLevel(1);
   StoreToGlobalPtr4Field28(1);
-  *(u16 *)(data_ov035_020bc500 + 6) = *(u16 *)(data_ov035_020bc500 + 6) | 0x8000;
+  *(u16 *)(gMovieContextState + 6) = *(u16 *)(gMovieContextState + 6) | 0x8000;
   return 9;
 }

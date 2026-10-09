@@ -7,7 +7,7 @@ const u32 data_ov041_020cf594[16] = {
     0x000000CE, 0x000000CF, 0x000000D4, 0xFFFFFFFF,
 };
 
-const u32 data_ov041_020cf580[5] = {
+const u32 gSpecialStagePositionTable[5] = {
     0x00000000, 0x00000800, 0x00000000, 0x00000000,
     0x00000800,
 };

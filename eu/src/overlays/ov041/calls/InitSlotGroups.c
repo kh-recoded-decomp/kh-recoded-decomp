@@ -7,7 +7,7 @@
 #define ClearFast MIi_CpuClearFast
 #define GetResourceEntry NestedPointer_GetFirstWord
 
-extern int data_ov035_020bc500;
+extern int gMovieContextState;
 extern char sOv041_RpgUiLanguagePZ_020cf958[];
 extern void FormatString(char *dst, const char *fmt, ...);
 extern void *RetainOrInitializeSharedRecord(char *name, int kind);
@@ -41,7 +41,7 @@ void InitSlotGroups(void)
     int index;
     char name[32];
 
-    work = *(SlotGroupWork **)(data_ov035_020bc500 + 0xb8);
+    work = *(SlotGroupWork **)(gMovieContextState + 0xb8);
     FormatString(name, sOv041_RpgUiLanguagePZ_020cf958);
     info = RetainOrInitializeSharedRecord(name, 0x12);
     groupIndex = 0;

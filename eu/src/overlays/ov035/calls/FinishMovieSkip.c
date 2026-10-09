@@ -1,5 +1,5 @@
 #define FinishMovieSkip_020ba668 FinishMovieSkip
 #define func_ov001_020645e8 ClearSessionPackedBit
 #define func_ov035_020bad08 StartOverlay41Phase
-#define g_movieContext_020bc4e0 data_ov035_020bc500
+#define g_movieContext_020bc4e0 gMovieContextState
 #include "src/ov035/unclassified_helpers/FinishMovieSkip_020ba668.c"

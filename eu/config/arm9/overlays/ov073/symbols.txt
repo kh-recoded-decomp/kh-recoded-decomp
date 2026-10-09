@@ -45,7 +45,7 @@ ToggleSharedStateFlag kind:function(thumb,size=0x1c) addr:0x020c1d3c
 SetStatusHeaderText kind:function(thumb,size=0x84) addr:0x020c1d58
 SetStatusHeaderMessage kind:function(thumb,size=0xa4) addr:0x020c1ddc
 SplitFxToTenths kind:function(thumb,size=0x54) addr:0x020c1e80
-func_ov073_020c1ed4 kind:function(thumb,size=0xb24) addr:0x020c1ed4
+RefreshStatusMenuData kind:function(thumb,size=0xb24) addr:0x020c1ed4
 .L_020c29b0 kind:label(thumb) addr:0x020c29b0
 .L_020c29ee kind:label(thumb) addr:0x020c29ee
 ReloadStatusRecord kind:function(thumb,size=0x2a) addr:0x020c29f8

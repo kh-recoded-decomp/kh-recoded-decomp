@@ -1,5 +1,5 @@
 #define StoreMovieCounter_020bb014 StoreMovieCounter
 #define WriteSessionPackedBits_0206459c WriteSessionPackedBits
 #define func_ov035_020bafc4 GetMovieCounterLimit
-#define g_movieContext_020bc4e0 data_ov035_020bc500
+#define g_movieContext_020bc4e0 gMovieContextState
 #include "src/ov035/unclassified_helpers/StoreMovieCounter_020bb014.c"

@@ -58,7 +58,7 @@ extern NeighborIds data_ov075_020d14f0;
 extern int GetPackedBitMask(u32 *bitWords, int bitIndex);
 extern void func_01ffb2f8(void *effect, int kind, int arg);
 extern BOOL PlaySoundEffect(int seqArcNo, int index);
-extern void func_ov075_020c7fc8(void *state, MatrixMap *map, MatrixNode *node, int index);
+extern void DrawMatrixCellGlyph(void *state, MatrixMap *map, MatrixNode *node, int index);
 
 static inline BOOL IsNodeFlagSet(MatrixNode *node)
 {
@@ -150,7 +150,7 @@ u32 PropagateMatrixNodeVisit(MatrixMenu *menu, MatrixNode *node, int dir, BOOL q
             neighbors = data_ov075_020d14f0;
             node->pendingSteps = 0;
             if (menu->map->levels[node->index] <= data_0205fe0c->currentLevel) {
-                func_ov075_020c7fc8(menu->revealState, menu->map, node, node->index);
+                DrawMatrixCellGlyph(menu->revealState, menu->map, node, node->index);
             }
             if (dir != 0) {
                 neighbors.ids[2] = node->index + 1;

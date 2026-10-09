@@ -1,5 +1,5 @@
 #define ArmObject_0206c6f4 func_ov001_0206c6f4
 #define TeardownMovieContext_020ba540 TeardownMovieContext
-#define data_ov035_020bc4e0 data_ov035_020bc500
+#define data_ov035_020bc4e0 gMovieContextState
 #define func_0204df9c SetSoundListenersEnabled
 #include "src/ov035/shared_engine/TeardownMovieContext_020ba540.c"

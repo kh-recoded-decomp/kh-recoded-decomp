@@ -3,7 +3,7 @@
 #pragma explicit_zero_data on
 
 extern void func_ov075_020c49ec(void);
-extern void func_ov075_020c64bc(void);
+extern void UpdateMatrixMenuView(void);
 extern void ShutdownMatrixMenu(void);
 extern void func_ov075_020caf58(void);
 extern void func_ov075_020cb198(void);
@@ -18,7 +18,7 @@ extern void ToggleMatrixMapView(void);
 void *gMatrixMenuHandlers[17] = {
     (void *)func_ov075_020c49ec,
     (void *)ShutdownMatrixMenu,
-    (void *)func_ov075_020c64bc,
+    (void *)UpdateMatrixMenuView,
     NULL,
     (void *)0x000178A8,
     (void *)func_ov075_020caf58,

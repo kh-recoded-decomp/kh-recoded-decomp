@@ -1,4 +1,4 @@
 #define FreeMovieSlotBuffers_020bac74 FreeMovieSlotBuffers
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
-#define data_ov035_020bc4e0 data_ov035_020bc500
+#define data_ov035_020bc4e0 gMovieContextState
 #include "src/ov035/unclassified_helpers/FreeMovieSlotBuffers_020bac74.c"

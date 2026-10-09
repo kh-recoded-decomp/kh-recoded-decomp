@@ -180,6 +180,10 @@ src/overlays/ov073/calls/SplitFxToTenths.c:
     complete
     .text       start:0x020c1e80 end:0x020c1ed4
 
+src/overlays/ov073/calls/RefreshStatusMenuData.c:
+    complete
+    .text       start:0x020c1ed4 end:0x020c29f8
+
 src/overlays/ov073/calls/ReloadStatusRecord.c:
     complete
     .text       start:0x020c29f8 end:0x020c2a22

@@ -3917,6 +3917,10 @@ libs/nns/g2d/auto/NNS_G2dSetCellAnimationSpeed.c:
     complete
     .text       start:0x02015808 end:0x02015810
 
+src/calls/NNS_G2dMakeCellToOams.c:
+    complete
+    .text       start:0x02015810 end:0x02015b74
+
 libs/nns/g2d/calls/NNSi_G2dGetCellTransferState.c:
     complete
     .text       start:0x02015b74 end:0x02015b8c
@@ -4049,6 +4053,10 @@ libs/nns/g2d/calls/NNSi_G2dFontGetTextRect.c:
     complete
     .text       start:0x02016c2c end:0x02016cc0
 
+libs/nns/g2d/calls/GetCharIndex1D.c:
+    complete
+    .text       start:0x02016cc0 end:0x02016da8
+
 libs/nns/g2d/calls/ClearChar.c:
     complete
     .text       start:0x02016da8 end:0x02016ed8
@@ -4092,6 +4100,10 @@ src/calls/NNS_G2dCharCanvasDrawChar.c:
 libs/nns/g2d/calls/NNS_G2dCharCanvasInitForBG.c:
     complete
     .text       start:0x02017a40 end:0x02017a6c
+
+libs/nns/g2d/calls/NNS_G2dCharCanvasInitForOBJ1D.c:
+    complete
+    .text       start:0x02017a6c end:0x02017af0
 
 src/calls/NNS_G2dMapScrToCharText.c:
     complete
@@ -7017,7 +7029,7 @@ src/calls/Obj_SetHalfwordFC.c:
     complete
     .text       start:0x0202f5c8 end:0x0202f5d0
 
-src/calls/PXI_Init_0202f5d0.c:
+src/calls/CaptureTrackedNodeMatrixThunk.c:
     complete
     .text       start:0x0202f5d0 end:0x0202f5dc
 
@@ -7240,6 +7252,10 @@ src/calls/FindEntryByNameNoCase.c:
 src/calls/ForEachFaceOnPoint.c:
     complete
     .text       start:0x0203392c end:0x02033aa4
+
+src/calls/QuadTree_Insert.c:
+    complete
+    .text       start:0x02033aa4 end:0x02033c00
 
 src/calls/UnlinkNodeFromList.c:
     complete
@@ -8052,6 +8068,10 @@ src/calls/TestPolygonAgainstSegment.c:
 src/calls/TestPolygonAgainstCylinder.c:
     complete
     .text       start:0x0203b6ac end:0x0203b6c8
+
+src/calls/TestBoxAgainstCylinder.c:
+    complete
+    .text       start:0x0203b718 end:0x0203c26c
 
 src/calls/TestCylinderAgainstPolygon.c:
     complete

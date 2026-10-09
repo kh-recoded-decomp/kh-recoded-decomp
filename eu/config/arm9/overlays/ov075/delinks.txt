@@ -96,6 +96,14 @@ src/overlays/ov075/calls/CommitOptionChoice.c:
     complete
     .text       start:0x020c6378 end:0x020c64bc
 
+src/overlays/ov075/calls/UpdateMatrixMenuView.c:
+    complete
+    .text       start:0x020c64bc end:0x020c6a9c
+
+src/overlays/ov075/calls/UpdateMatrixOptionMenu.c:
+    complete
+    .text       start:0x020c6a9c end:0x020c708c
+
 src/overlays/ov075/calls/SetMenuStateNoParam.c:
     complete
     .text       start:0x020c708c end:0x020c709c
@@ -131,6 +139,10 @@ src/overlays/ov075/calls/ResetMatrixCamera.c:
 src/overlays/ov075/calls/ShutdownMatrixMenu.c:
     complete
     .text       start:0x020c7e08 end:0x020c7fc8
+
+src/overlays/ov075/calls/DrawMatrixCellGlyph.c:
+    complete
+    .text       start:0x020c7fc8 end:0x020c8890
 
 src/overlays/ov075/calls/ClearGlyphCell.c:
     complete

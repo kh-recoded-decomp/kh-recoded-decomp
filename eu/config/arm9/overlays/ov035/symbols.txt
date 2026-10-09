@@ -102,6 +102,6 @@ sOv035AreaName kind:data(any) addr:0x020bc4d0
 sOv035InactiveColors kind:data(any) addr:0x020bc4d8
 data_ov035_020bc4e0 kind:data(any) addr:0x020bc4e0
 gBarGaugeClassDescriptor kind:data(any) addr:0x020bc4e8
-data_ov035_020bc500 kind:bss addr:0x020bc500
+gMovieContextState kind:bss addr:0x020bc500
 data_ov035_020bc504 kind:bss addr:0x020bc504
 data_ov035_020bc508 kind:bss addr:0x020bc508

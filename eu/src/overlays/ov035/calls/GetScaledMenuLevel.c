@@ -1,3 +1,3 @@
 #define GetScaledMenuLevel_020bb0a0 GetScaledMenuLevel
-#define data_ov035_020bc4e0 data_ov035_020bc500
+#define data_ov035_020bc4e0 gMovieContextState
 #include "src/ov035/unclassified_helpers/GetScaledMenuLevel_020bb0a0.c"

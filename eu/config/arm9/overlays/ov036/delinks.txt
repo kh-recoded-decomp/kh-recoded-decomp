@@ -648,6 +648,10 @@ src/overlays/ov036/calls/StepPanelFade.c:
     complete
     .text       start:0x020c0348 end:0x020c0400
 
+src/overlays/ov036/calls/LayoutTextWindow.c:
+    complete
+    .text       start:0x020c0400 end:0x020c0d54
+
 src/overlays/ov036/calls/UpdateTextWindowTyping.c:
     complete
     .text       start:0x020c0d54 end:0x020c0e30

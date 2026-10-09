@@ -1,0 +1,17 @@
+#define LayoutTextWindow_020c03e0 LayoutTextWindow
+#define data_ov036_020c3844 gTextWindowResourceTable
+#define data_ov036_020c3588 data_ov036_020c35a8
+#define data_ov036_020c346c data_ov036_020c348c
+#define data_ov036_020c389c data_ov036_020c38bc
+#define data_ov036_020c34ac data_ov036_020c34cc
+#define data_ov036_020c33e4 data_ov036_020c3404
+#define data_ov036_020c33b8 data_ov036_020c33d8
+#define data_ov036_020c33b0 data_ov036_020c33d0
+#define func_020019f4 GetNestedModeByte
+#define G2D_MeasureTextRectangle_02016c18 NNSi_G2dFontGetTextRect
+#define SetSlotEntryFlags_0204f1ac SetSlotEntryFlags
+#define DrawTextWindow_020bebcc DrawTextWindow
+#define SetRecordEntryEnabled_020bf4fc SetRecordEntryEnabled
+#define InitRecordEntryAt_020bf530 InitRecordEntryAt
+#define SetTimerDuration_020c27dc SetTimerDuration
+#include "src/ov036/text_rendering/LayoutTextWindow_020c03e0.c"

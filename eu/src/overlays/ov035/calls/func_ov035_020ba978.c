@@ -1,10 +1,10 @@
 #include "nitro/types.h"
 
-extern unsigned int data_ov035_020bc500;
+extern unsigned int gMovieContextState;
 
 BOOL func_ov035_020ba978(void) {
-  if (data_ov035_020bc500 == 0) {
+  if (gMovieContextState == 0) {
     return FALSE;
   }
-  return (*(u16 *)(data_ov035_020bc500 + 6) & 1) == 0;
+  return (*(u16 *)(gMovieContextState + 6) & 1) == 0;
 }

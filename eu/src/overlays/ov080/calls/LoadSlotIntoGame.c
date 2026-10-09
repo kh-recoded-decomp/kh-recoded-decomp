@@ -4,5 +4,5 @@
 #define func_02050a44 func_02050a58
 #define func_02050b30 ComputePlayerStats
 #define func_ov039_020bc914 GetMenuSelection
-#define func_ov073_020c1eb4 func_ov073_020c1ed4
+#define func_ov073_020c1eb4 RefreshStatusMenuData
 #include "src/ov080/unclassified_helpers/LoadSlotIntoGame_020c58c4.c"

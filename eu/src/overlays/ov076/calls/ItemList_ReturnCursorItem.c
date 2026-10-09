@@ -1,7 +1,7 @@
 #define DecrementByteCounter_02029370 DecrementByteCounter
 #define GetByteCounterOrDefault_020291cc GetByteCounterOrDefault
 #define ItemList_ReturnCursorItem_020ca6f8 ItemList_ReturnCursorItem
-#define func_ov073_020c1eb4 func_ov073_020c1ed4
+#define func_ov073_020c1eb4 RefreshStatusMenuData
 #define func_ov076_020ca624 func_ov076_020ca644
 #define func_ov076_020ca8f8 func_ov076_020ca918
 #include "src/ov076/unclassified_helpers/ItemList_ReturnCursorItem_020ca6f8.c"

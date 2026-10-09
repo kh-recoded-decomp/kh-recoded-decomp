@@ -1,3 +1,3 @@
-#define TestBoxAgainstCylinder_0203b704 func_0203b718
+#define TestBoxAgainstCylinder_0203b704 TestBoxAgainstCylinder
 #define TestCylinderAgainstBox_0203b564 TestCylinderAgainstBox
 #include "src/arm9/spatial_queries/TestCylinderAgainstBox_0203b564.c"

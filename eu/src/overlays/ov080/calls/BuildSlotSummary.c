@@ -10,5 +10,5 @@
 #define func_02050a44 func_02050a58
 #define func_ov039_020bcb20 func_ov039_020bcb40
 #define func_ov039_020be64c FormatPlayTimeText
-#define func_ov073_020c1eb4 func_ov073_020c1ed4
+#define func_ov073_020c1eb4 RefreshStatusMenuData
 #include "src/ov080/unclassified_helpers/BuildSlotSummary_020c4b84.c"

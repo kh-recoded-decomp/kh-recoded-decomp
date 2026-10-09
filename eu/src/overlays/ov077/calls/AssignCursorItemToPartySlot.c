@@ -1,5 +1,5 @@
 #define AssignCursorItemToPartySlot_020c4598 AssignCursorItemToPartySlot
-#define func_ov073_020c1eb4 func_ov073_020c1ed4
+#define func_ov073_020c1eb4 RefreshStatusMenuData
 #define func_0204f768 GetOverlaySelectionRecord
 #define TrackMaxParamValue_020c4260 TrackMaxParamValue
 #define SetParamHalf18_02050630 SetParamHalf18

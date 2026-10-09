@@ -1,6 +1,6 @@
 #define Actor_InstallModelCallback_02089898 Actor_InstallModelCallback
 #define ClearSbcCallback_020188b8 NNS_G3dRenderObjResetCallBack
 #define RegisterSbcCallback_020188a4 NNS_G3dRenderObjSetCallBack
-#define func_0202f5bc PXI_Init_0202f5d0
+#define func_0202f5bc CaptureTrackedNodeMatrixThunk
 #define func_ov001_020897d0 CopySessionResourceBuffer
 #include "src/ov001/actor_animation/Actor_InstallModelCallback_02089898.c"

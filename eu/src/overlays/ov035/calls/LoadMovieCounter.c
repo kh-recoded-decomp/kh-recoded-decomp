@@ -2,5 +2,5 @@
 #define LoadMovieCounter_020bb054 LoadMovieCounter
 #define ReadSessionPackedBits_02064574 ReadSessionPackedBits
 #define StoreMovieCounter_020bb014 StoreMovieCounter
-#define g_movieContext_020bc4e0 data_ov035_020bc500
+#define g_movieContext_020bc4e0 gMovieContextState
 #include "src/ov035/unclassified_helpers/LoadMovieCounter_020bb054.c"

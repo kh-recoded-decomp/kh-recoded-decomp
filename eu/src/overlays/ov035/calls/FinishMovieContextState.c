@@ -5,10 +5,10 @@ typedef struct MovieContextState {
     u16 flags;
 } MovieContextState;
 
-extern MovieContextState *data_ov035_020bc500;
+extern MovieContextState *gMovieContextState;
 
 int FinishMovieContextState(void)
 {
-    data_ov035_020bc500->flags = data_ov035_020bc500->flags & 0xfff3;
+    gMovieContextState->flags = gMovieContextState->flags & 0xfff3;
     return -1;
 }
