@@ -1,5 +1,5 @@
 #include "nitro/types.h"
-#include "src/ov002/panel_state/MenuTouchState.h"
+#include "ov002/MenuTouchState.h"
 extern void func_01ff8830(void *dst, int value, u32 size);
 
 void GetMenuCursorPosition_02066bdc(MenuTouchPosition *out)

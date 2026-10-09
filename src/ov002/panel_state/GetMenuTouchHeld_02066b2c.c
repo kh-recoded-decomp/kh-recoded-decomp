@@ -1,5 +1,5 @@
 #include "nitro/types.h"
-#include "src/ov002/panel_state/MenuTouchState.h"
+#include "ov002/MenuTouchState.h"
 
 u32 GetMenuTouchHeld_02066b2c(u32 *out)
 {

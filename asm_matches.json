@@ -1677,6 +1677,18 @@
       "evidence": "Original assembly; ported from the EU build's verified stub libs/mobiclip/video/asm_stubs/auto/func_ov022_020aa300.c"
     },
     {
+      "module": "ov022",
+      "symbol": "func_ov022_020ab878",
+      "name": "func_ov022_020ab898",
+      "language": "asm",
+      "source": "src/ov022/asm/func_ov022_020ab898_020ab878.c",
+      "source_symbol": "func_ov022_020ab898_020ab878",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {},
+      "evidence": "Original assembly: no prologue, clobbers r4-r8 unsaved, pc-relative table addressing (sub ip, pc) and mov pc, lr; same hand-written MobiClip code as func_ov022_020aa300. One mnemonic per ROM word, assembles byte-exact."
+    },
+    {
       "module": "ov076",
       "symbol": "func_ov076_020c8b50",
       "name": "SlotMenu_GetPanelState",
