@@ -3,6 +3,6 @@
 #define SetTagRecordArmed_020b83e8 SetTagRecordArmed
 #define TagTracker_InvokeCallback_020b8210 func_ov027_020b8230
 #define func_ov027_020b81e0 func_ov027_020b8200
-#define func_ov027_020b845c func_ov027_020b847c
+#define func_ov027_020b845c RestartTagRecord
 #define func_ov039_020bc0d4 GetPrimaryElementEnabled
 #include "src/ov079/unclassified_helpers/ConfigMenu_UpdateHelp_020c4608.c"

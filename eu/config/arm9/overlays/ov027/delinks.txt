@@ -156,6 +156,10 @@ src/overlays/ov027/calls/SetTagRecordArmed.c:
     complete
     .text       start:0x020b8408 end:0x020b847c
 
+src/overlays/ov027/calls/RestartTagRecord.c:
+    complete
+    .text       start:0x020b847c end:0x020b84b8
+
 src/overlays/ov027/calls/PositionListRecords.c:
     complete
     .text       start:0x020b84b8 end:0x020b8514

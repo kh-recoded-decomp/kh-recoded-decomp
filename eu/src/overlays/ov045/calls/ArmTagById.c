@@ -1,5 +1,5 @@
 #define ArmTagById_020bf248 ArmTagById
 #define FindLoadedElementById_020b8390 FindLoadedElementById
 #define SetTagRecordArmed_020b83e8 SetTagRecordArmed
-#define func_ov027_020b845c func_ov027_020b847c
+#define func_ov027_020b845c RestartTagRecord
 #include "src/ov045/record_management/ArmTagById_020bf248.c"

@@ -3,6 +3,7 @@
 #define MeasureTextWidth_02078950 MeasureTextWidth
 #define NNSi_FndAllocFromDefaultHeapEx_0202a19c NNS_FndAllocFromDefaultExpHeapEx
 #define func_ov015_020759cc SetupPanelBoard
+#define func_ov015_02075034 FormatResultPanelText
 #define SetupResultPanel_0207509c SetupResultPanel
 #define Text_UploadTileBuffer_02001520 Text_UploadTileBuffer
 #define func_0202e060 SPrintfUnbounded

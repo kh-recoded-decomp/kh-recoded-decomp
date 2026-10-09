@@ -588,6 +588,10 @@ src/overlays/ov015/calls/StartWirelessKeySharing.c:
     complete
     .text       start:0x02074584 end:0x020745dc
 
+src/overlays/ov015/calls/EndWirelessKeySharing.c:
+    complete
+    .text       start:0x020745dc end:0x02074634
+
 src/overlays/ov015/calls/func_ov015_02074634.c:
     complete
     .text       start:0x02074634 end:0x02074664
@@ -703,6 +707,10 @@ src/overlays/ov015/calls/SetPanelPendingValue.c:
 src/overlays/ov015/calls/SetPanelPeerExchangeCallback.c:
     complete
     .text       start:0x02075024 end:0x02075034
+
+src/overlays/ov015/calls/FormatResultPanelText.c:
+    complete
+    .text       start:0x02075034 end:0x0207509c
 
 src/overlays/ov015/calls/SetupResultPanel.c:
     complete

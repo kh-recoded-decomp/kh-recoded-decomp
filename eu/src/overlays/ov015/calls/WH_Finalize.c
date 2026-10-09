@@ -1,5 +1,5 @@
 #define ClearSlotEventHandler_02011ea4 ClearSlotEventHandler
-#define EndWirelessKeySharing_020745dc func_ov015_020745dc
+#define EndWirelessKeySharing_020745dc EndWirelessKeySharing
 #define EndWirelessScan_02074118 EndWirelessScan
 #define PollPanelTransition_02074e80 PollPanelTransition
 #define SetPanelTransitionMode_020737c4 SetPanelTransitionMode

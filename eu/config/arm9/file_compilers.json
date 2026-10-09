@@ -8858,6 +8858,11 @@
   "src/asm_stubs/calls/_fdiv.c": "dsi/1.1",
   "src/asm_stubs/calls/_ddiv.c": "dsi/1.1",
   "src/overlays/ov019/calls/SetLinkedObjectVisible.c": "dsi/1.1",
+  "src/overlays/ov015/calls/FormatResultPanelText.c": "dsi/1.1",
+  "src/overlays/ov015/calls/EndWirelessKeySharing.c": "dsi/1.1",
+  "src/overlays/ov027/calls/RestartTagRecord.c": "dsi/1.1",
+  "src/overlays/ov077/calls/HandleEquipmentCursorUp.c": "dsi/1.1",
+  "src/overlays/ov077/calls/HandleEquipmentCursorDown.c": "dsi/1.1",
   "src/overlays/ov027/calls/SweepReleasePendingElements.c": "dsi/1.1",
   "src/overlays/ov016/calls/SetFieldEntryPackedIds.c": "dsi/1.1"
 }
