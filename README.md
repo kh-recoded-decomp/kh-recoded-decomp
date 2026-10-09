@@ -17,25 +17,25 @@ maintained by [@ricky074game](https://github.com/ricky074game) and [@Yokimitsuro
 <!-- regions:start -->
 | Region | C code bytes | % | Functions |
 |---|---:|---:|---:|
-| **US** `BK9E` | 1,326,316 / 1,768,220 | **75.0%** | 9,732 / 10,359 |
+| **US** `BK9E` | 1,326,654 / 1,768,220 | **75.0%** | 9,738 / 10,359 |
 | **EU** `BK9P` | 1,332,104 / 1,658,216 | **80.3%** | 9,783 / 10,422 |
 | US verified original assembly (not C) | 14,374 | 0.8% | 138 |
-| **Shared** (same function, matched in both) | 1,279,466 | 77.2% of EU | 9,161 |
+| **Shared** (same function, matched in both) | 1,279,764 | 77.2% of EU | 9,165 |
 
-7,999 shared functions are stored once in `src/` and built for both regions; 1,162 still have separate EU copies. 571 matched functions are US-only so far and 622 are EU-only. EU numbers come from `eu/tools/audit_progress.py`; per-module EU detail is in [eu/PROGRESS.md](eu/PROGRESS.md).
+7,999 shared functions are stored once in `src/` and built for both regions; 1,166 still have separate EU copies. 573 matched functions are US-only so far and 618 are EU-only. EU numbers come from `eu/tools/audit_progress.py`; per-module EU detail is in [eu/PROGRESS.md](eu/PROGRESS.md).
 <!-- regions:end -->
 
 US detail:
 
 | | Matched | Total | % |
 |---|---:|---:|---:|
-| **ARM9 code (C bytes)** | **1,326,316** | 1,768,220 | **75.0%** |
+| **ARM9 code (C bytes)** | **1,326,654** | 1,768,220 | **75.0%** |
 | ARM9 core + autoloads | 305,340 | 370,004 | 82.5% |
-| ARM9 overlays (105) | 1,020,976 | 1,398,216 | 73.0% |
-| Functions | 9,732 | 10,359 | 93.9% |
+| ARM9 overlays (105) | 1,021,314 | 1,398,216 | 73.0% |
+| Functions | 9,738 | 10,359 | 94.0% |
 | Data bytes (.rodata/.data/.bss) | 228,100 | 228,140 | 99.98% |
 
-Updated 2026-10-08. Per-module numbers are in [PROGRESS.md](PROGRESS.md).
+Updated 2026-10-09. Per-module numbers are in [PROGRESS.md](PROGRESS.md).
 
 - Only C that rebuilds byte-for-byte counts as C. Original SDK/MSL assembly that rebuilds byte-for-byte is listed in its own row (`asm_matches.json`) and never added to the C numbers.
 - Data counts when the C data objects link byte-exact. Most of it is generated arrays and pointer tables still waiting for real types and names.
