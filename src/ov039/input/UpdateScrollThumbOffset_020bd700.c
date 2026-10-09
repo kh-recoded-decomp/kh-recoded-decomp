@@ -1,3 +1,4 @@
+#pragma opt_dead_assignments off
 #include "nitro/types.h"
 
 typedef struct ScrollBar {

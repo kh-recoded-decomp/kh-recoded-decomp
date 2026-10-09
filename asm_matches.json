@@ -1108,6 +1108,32 @@
     },
     {
       "module": "arm9",
+      "symbol": "func_0200ded0",
+      "name": "func_0200ded0",
+      "language": "asm",
+      "source": "src/arm9/asm/func_0200ded0.c",
+      "source_symbol": "func_0200ded0",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {},
+      "evidence": "Original assembly: prologue pads the push with r12, which mwcc never does (it pads with r3). One mnemonic per ROM word, assembles byte-exact."
+    },
+    {
+      "module": "arm9",
+      "symbol": "func_02022af0",
+      "name": "_dadd",
+      "language": "asm",
+      "source": "src/arm9/asm/_dadd_02022af0.c",
+      "source_symbol": "_dadd_02022af0",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_02022e30": "0x2022e30"
+      },
+      "evidence": "Original assembly: Metrowerks ARM runtime double add; tail branch into the middle of _dsub and 64-bit carry chains mwcc C cannot emit. One mnemonic per ROM word, assembles byte-exact."
+    },
+    {
+      "module": "arm9",
       "symbol": "func_02022e20",
       "name": "_dsub",
       "language": "asm",
