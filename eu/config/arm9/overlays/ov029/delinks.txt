@@ -83,6 +83,10 @@ src/overlays/ov029/calls/ReleaseOv029Object.c:
     complete
     .text       start:0x020baa84 end:0x020baaa4
 
+src/overlays/ov029/calls/ApplyOv029SceneParams.c:
+    complete
+    .text       start:0x020baaa4 end:0x020baaec
+
 src/overlays/ov029/auto/func_ov029_020baaec.c:
     complete
     .text       start:0x020baaec end:0x020baaf4

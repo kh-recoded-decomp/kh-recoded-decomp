@@ -1,5 +1,5 @@
 #define CamAnim_AllocPlayer_0203a920 CamAnim_AllocPlayer
-#define CamAnim_ResetProjection_0203a8d8 func_0203a8ec
+#define CamAnim_ResetProjection_0203a8d8 CamAnim_ResetProjection
 #define CamAnim_SelectAnim_0203abac CamAnim_SelectAnim
 #define CamAnim_Start_0203a930 CamAnim_Start
 #define RetainOrInitializeSharedRecord_0202c80c SND_RegisterSeq

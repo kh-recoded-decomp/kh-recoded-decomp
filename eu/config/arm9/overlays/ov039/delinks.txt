@@ -444,6 +444,10 @@ src/overlays/ov039/calls/ClampScrollCursor.c:
     complete
     .text       start:0x020bd6b4 end:0x020bd720
 
+src/overlays/ov039/calls/UpdateScrollThumbOffset.c:
+    complete
+    .text       start:0x020bd720 end:0x020bd76e
+
 src/overlays/ov039/calls/SnapScrollToStep.c:
     complete
     .text       start:0x020bd770 end:0x020bd7ce

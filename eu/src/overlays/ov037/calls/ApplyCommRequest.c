@@ -1,0 +1,3 @@
+#define ApplyCommRequest_020bac30 ApplyCommRequest
+#define g_commState_020bb760 gContinueSceneState
+#include "src/ov037/unclassified_helpers/ApplyCommRequest_020bac30.c"

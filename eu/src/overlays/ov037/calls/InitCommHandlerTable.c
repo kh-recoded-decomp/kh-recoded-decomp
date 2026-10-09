@@ -1,4 +1,4 @@
-#define ApplyCommRequest_020bac30 func_ov037_020bac50
+#define ApplyCommRequest_020bac30 ApplyCommRequest
 #define InitCommHandlerTable_020bac98 InitCommHandlerTable
 #define IsPxiChannelActive_020babec IsPxiChannelActive
 #define ReleasePxiChannel_020bac10 ReleasePxiChannel

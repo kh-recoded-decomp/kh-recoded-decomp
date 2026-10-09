@@ -96,6 +96,10 @@ src/overlays/ov037/calls/ReleasePxiChannel.c:
     complete
     .text       start:0x020bac30 end:0x020bac50
 
+src/overlays/ov037/calls/ApplyCommRequest.c:
+    complete
+    .text       start:0x020bac50 end:0x020baca4
+
 src/overlays/ov037/calls/ContinueScene_GetResult.c:
     complete
     .text       start:0x020baca4 end:0x020bacb8

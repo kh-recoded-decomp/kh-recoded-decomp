@@ -1,5 +1,5 @@
 #define ClampScrollCursor_020bd694 ClampScrollCursor
 #define UpdateScrollInertia_020bd7b0 UpdateScrollInertia
-#define func_ov039_020bd700 func_ov039_020bd720
+#define func_ov039_020bd700 UpdateScrollThumbOffset
 #define func_ov039_020bd750 SnapScrollToStep
 #include "src/ov039/input/UpdateScrollInertia_020bd7b0.c"

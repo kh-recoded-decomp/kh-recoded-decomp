@@ -25,14 +25,14 @@ extern void func_ov001_020801ac(void); /* DefaultStepDone */
 extern void ScriptCmd_CreateObjectGroupKindB(void); /* ScriptCmd_CreateObjectGroupKindB */
 extern void ScriptCmd_CreateFieldObject(void); /* ScriptCmd_CreateFieldObject */
 extern void ScriptCmd_CreateObjectGroupKindD(void); /* ScriptCmd_CreateObjectGroupKindD */
-extern void func_ov001_020802b8(void);
+extern void ScriptCmd_CreateFieldObjectWithSaveBits(void); /* ScriptCmd_CreateFieldObjectWithSaveBits */
 extern void ScriptCmd_CreateObjectGroupKind7(void); /* ScriptCmd_CreateObjectGroupKind7 */
 extern void ScriptCmd_AddGroupObjectAtPosition(void); /* ScriptCmd_AddGroupObjectAtPosition */
 extern void ScriptOp_CallObjectVectorHook(void); /* ScriptOp_CallObjectVectorHook */
 extern void ScriptCmd_SetObjectHeading(void); /* ScriptCmd_SetObjectHeading */
 extern void ScriptCmd_CreateObjectGroupKind9(void); /* ScriptCmd_CreateObjectGroupKind9 */
 extern void ScriptCmd_CreateRoamingObject(void); /* ScriptCmd_CreateRoamingObject */
-extern void func_ov001_0208055c(void);
+extern void ScriptCmd_CreateGridWidget(void); /* ScriptCmd_CreateGridWidget */
 extern void ScriptCmd_CreateFieldObjectFx(void); /* ScriptCmd_CreateFieldObjectFx */
 extern void ScriptCmd_RegisterFieldObject(void); /* ScriptCmd_RegisterFieldObject */
 extern void ScriptCmd_CreateUpdatingFieldObject(void); /* ScriptCmd_CreateUpdatingFieldObject */
@@ -91,7 +91,7 @@ void (*gFieldObjectScriptCommandHandlers[78])(void) = {
     NULL,
     ScriptCmd_CreateObjectGroupKindD, /* ScriptCmd_CreateObjectGroupKindD */
     NULL,
-    func_ov001_020802b8,
+    ScriptCmd_CreateFieldObjectWithSaveBits, /* ScriptCmd_CreateFieldObjectWithSaveBits */
     NULL,
     ScriptCmd_CreateObjectGroupKind7, /* ScriptCmd_CreateObjectGroupKind7 */
     NULL,
@@ -105,7 +105,7 @@ void (*gFieldObjectScriptCommandHandlers[78])(void) = {
     NULL,
     ScriptCmd_CreateRoamingObject, /* ScriptCmd_CreateRoamingObject */
     NULL,
-    func_ov001_0208055c,
+    ScriptCmd_CreateGridWidget, /* ScriptCmd_CreateGridWidget */
     NULL,
     ScriptCmd_CreateFieldObjectFx, /* ScriptCmd_CreateFieldObjectFx */
     NULL,
