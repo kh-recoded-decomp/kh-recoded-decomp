@@ -1,5 +1,5 @@
-#define GetMenuCursorHeld_02066b84 GetMenuCursorHeld
-#define GetMenuCursorTouch_02066b2c GetMenuCursorTouch
+#define GetMenuTouchPressed_02066b84 GetMenuTouchPressed
+#define GetMenuTouchHeld_02066b2c GetMenuTouchHeld
 #define IsButtonBPressed_020632c8 IsButtonBPressed
 #define IsGlobalBit0Set_020632ac func_ov002_020632ac
 #define PlaySoundEffect_0204d924 PlaySoundEffect

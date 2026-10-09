@@ -1,0 +1,2 @@
+#define GetMenuTouchDisplacement_02066a90 GetMenuTouchDisplacement
+#include "src/ov002/panel_state/GetMenuTouchDisplacement_02066a90.c"

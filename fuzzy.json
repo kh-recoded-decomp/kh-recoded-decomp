@@ -619,7 +619,7 @@
   "draft": "src/.port_scratch/pragma_sweep/ov002_02064d54_8167/func_ov002_02064d54.c",
   "compiler": "mwccarm-4.0-1036"
  },
- "ov002:func_ov002_02066ad0": {
+ "ov002:GetMenuCursorDelta": {
   "percent": 65.22,
   "draft": "src/.port_scratch/pragma_sweep/ov002_02066ad0_5932/GetCursorOffsetFromParent_02066ad0.c",
   "compiler": "mwccarm-4.0-1036"

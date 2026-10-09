@@ -49,7 +49,7 @@ extern u16 *func_ov002_02062000(void);
 extern BOOL IsGlobalBit0Set_020632ac(void);
 extern BOOL IsButtonBPressed_020632c8(void);
 extern void UpdateWidgetRootOnly_020b8ca8(void *manager, u16 entry);
-extern u16 GetMenuCursorTouch_02066b2c(int arg);
+extern u16 GetMenuTouchHeld_02066b2c(int arg);
 extern void func_ov015_020716f8(void);
 extern int TestContextFlagBit_0206f460(int slot);
 extern void *FindWidgetById_020b90a4(void *manager, int id);
@@ -60,7 +60,7 @@ extern void SetEntrySlotsVisible_020b9580(void *manager, void *widget, int visib
 extern void HidePanelOptionSlots_020718fc(void);
 extern BOOL AreAllWidgetMovesFinished_020b912c(void *manager);
 extern void func_ov015_02070af8(int mode);
-extern void func_ov002_020664f4(int frames);
+extern void StartPanelFadeOut(int frames);
 extern void func_ov015_02072cb4(void);
 extern BOOL func_ov002_0206655c(void);
 extern void func_ov015_0206fa98(void);
@@ -103,7 +103,7 @@ void UpdatePanelShareState_02071100(void)
     }
     switch (data_ov015_0207e960->state) {
     case 0:
-        data_ov015_0207e960->touchCursor = GetMenuCursorTouch_02066b2c(0);
+        data_ov015_0207e960->touchCursor = GetMenuTouchHeld_02066b2c(0);
         data_ov015_0207e960->state = 5;
         break;
     case 5:
@@ -183,7 +183,7 @@ void UpdatePanelShareState_02071100(void)
         func_ov015_02070af8(6);
         break;
     case 100:
-        func_ov002_020664f4(3);
+        StartPanelFadeOut(3);
         data_ov015_0207e960->touchLocked = 1;
         func_ov015_02072cb4();
         data_ov015_0207e960->state = 0x6e;

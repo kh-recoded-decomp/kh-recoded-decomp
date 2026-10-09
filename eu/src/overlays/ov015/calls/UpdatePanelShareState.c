@@ -3,7 +3,7 @@
 #define DispatchContextCommand_02066c78 DispatchContextCommand
 #define FindWidgetById_020b90a4 FindWidgetById
 #define FreePanelBuffers_02072a54 FreePanelBuffers
-#define GetMenuCursorTouch_02066b2c GetMenuCursorTouch
+#define GetMenuTouchHeld_02066b2c GetMenuTouchHeld
 #define HidePanelOptionSlots_020718fc HidePanelOptionSlots
 #define IsButtonBPressed_020632c8 IsButtonBPressed
 #define IsGlobalBit0Set_020632ac func_ov002_020632ac

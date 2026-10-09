@@ -70,7 +70,7 @@ extern BOOL PlaySoundEffect_0204d924(int seqArcNo, int index);
 extern void func_ov013_020716e4(int mode);
 extern u32 SpawnDropsPerTenUnits_0206671c(void);
 extern void func_ov013_02070ce8(void);
-extern BOOL GetMenuCursorTouch_02066b2c(int index);
+extern BOOL GetMenuTouchHeld_02066b2c(int index);
 extern void GetMenuCursorPosition_02066bdc(PanelPoint *out);
 extern BOOL DispatchTouchToWidget_020b8874(void *root, TouchPoint *point);
 extern u16 *func_ov002_02062000(void);
@@ -80,8 +80,8 @@ extern void func_ov013_0206fbbc(void);
 extern void RefreshProgressCaption_0206f06c(void);
 extern void func_ov013_02070e40(s32 useAlt);
 extern void UpdateWidgetRootOnly_020b8ca8(void *root, int keys);
-extern void func_ov002_02066ad0(PanelPoint *out);
-extern void GetMenuRectSize_02066a90(PanelPoint *out);
+extern void GetMenuCursorDelta(PanelPoint *out);
+extern void GetMenuTouchDisplacement_02066a90(PanelPoint *out);
 extern void func_ov013_020704a0(void);
 extern PanelObject *func_ov027_020b90a4(void *panel, int id);
 extern void SetEntrySlotsVisible_020b9580(void *panel, PanelObject *object, BOOL visible);
@@ -147,7 +147,7 @@ void UpdatePanelScrollState_02071b6c(void)
 
     switch (data_ov013_02074ce0->step) {
     case 0:
-        if (!GetMenuCursorTouch_02066b2c(0)) {
+        if (!GetMenuTouchHeld_02066b2c(0)) {
             data_ov013_02074ce0->step = 5;
         }
         break;
@@ -184,7 +184,7 @@ void UpdatePanelScrollState_02071b6c(void)
         break;
     case 10:
         if (keys & 2) {
-            func_ov002_02066ad0(&point);
+            GetMenuCursorDelta(&point);
             delta = point;
             if (delta.y > 3 || delta.y < -3) {
                 data_ov013_02074ce0->velocity = delta.y << 12;
@@ -196,7 +196,7 @@ void UpdatePanelScrollState_02071b6c(void)
             data_ov013_02074ce0->scrollAnchor = data_ov013_02074ce0->scrollOffset;
             data_ov013_02074ce0->step = 20;
         } else {
-            GetMenuRectSize_02066a90(&rect);
+            GetMenuTouchDisplacement_02066a90(&rect);
             size = rect;
             data_ov013_02074ce0->dragDelta = size.y;
             sum = data_ov013_02074ce0->scrollOffset + data_ov013_02074ce0->dragDelta;

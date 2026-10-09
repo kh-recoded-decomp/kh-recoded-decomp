@@ -24,7 +24,7 @@ extern void func_ov027_020b8ca8(void *widgets, int id);
 extern BOOL func_ov027_020b9100(void *widget);
 extern void SetEntrySlotsVisible_020b9580(void *widgets, void *widget, BOOL visible);
 extern BOOL func_ov027_020b912c(void *widgets);
-extern void func_ov002_020664f4(int frames);
+extern void StartPanelFadeOut(int frames);
 extern BOOL func_ov002_0206655c(void);
 extern void func_ov015_0206c6bc(void);
 extern void func_ov015_02070af8(int mode);
@@ -40,7 +40,7 @@ void UpdatePanelResultPhase_02071d0c(void) {
             SetEntrySlotsVisible_020b9580(data_ov015_0207e960->widgets, widget, FALSE);
         }
         if (func_ov027_020b912c(data_ov015_0207e960->widgets)) {
-            func_ov002_020664f4(3);
+            StartPanelFadeOut(3);
             data_ov015_0207e960->phase = 20;
         }
         break;

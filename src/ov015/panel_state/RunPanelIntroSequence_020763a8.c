@@ -11,8 +11,8 @@ typedef struct {
 extern PanelIntro *data_ov015_020812e0;
 
 extern void func_ov002_02062014(int mode);
-extern void func_ov002_020664e4(int frames);
-extern void func_ov002_020664f4(int frames);
+extern void StartPanelFadeIn(int frames);
+extern void StartPanelFadeOut(int frames);
 extern BOOL func_ov002_0206655c(void);
 extern void func_ov015_02078f58(void);
 extern u16 *func_ov002_02062000(void);
@@ -27,7 +27,7 @@ BOOL RunPanelIntroSequence_020763a8(void) {
         data_ov015_020812e0->step = 10;
         break;
     case 10:
-        func_ov002_020664e4(3);
+        StartPanelFadeIn(3);
         data_ov015_020812e0->step = 20;
         break;
     case 20:
@@ -43,7 +43,7 @@ BOOL RunPanelIntroSequence_020763a8(void) {
         }
         break;
     case 200:
-        func_ov002_020664f4(3);
+        StartPanelFadeOut(3);
         data_ov015_020812e0->step = 210;
         break;
     case 210:

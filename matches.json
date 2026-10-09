@@ -15671,7 +15671,7 @@
       "name": "func_ov001_02065550",
       "behavior": "Evaluates two argument records eight bytes apart, forwards both results to a helper, and returns one.",
       "evidence": "Reviewed the recovered C operations and resolved all external references at the original BK9E function address. Complete compiled code and literal pools match; shared reference naming alone is not semantic evidence.",
-      "uncertainty": "The local operation is established; gameplay identity and the meaning of unnamed helper calls remain unclassified.",
+      "uncertainty": "The cursor callback event values are not yet fully classified.",
       "domain": "reviewed_helpers",
       "origin": "recovered CC0 shared C",
       "understanding": "unknown",
@@ -17788,17 +17788,17 @@
     },
     {
       "module": "ov002",
-      "symbol": "func_ov002_02066a68",
+      "symbol": "ReleaseMenuCursorState",
       "language": "c",
-      "source": "src/ov002/reviewed_helpers/func_ov002_02066a68.c",
-      "source_symbol": "func_ov002_02066a68",
+      "source": "src/ov002/reviewed_helpers/ReleaseMenuCursorState_02066a68.c",
+      "source_symbol": "ReleaseMenuCursorState_02066a68",
       "compiler": "mwccarm-4.0-1036",
       "mode": "arm",
       "bindings": {
         "func_0202a1c4": "0x202a1c4",
-        "data_0206c46c": "0x206c46c"
+        "gMenuCursorState": "0x206c46c"
       },
-      "name": "func_ov002_02066a68",
+      "name": "ReleaseMenuCursorState",
       "behavior": "Releases a nonnull global pointer through a helper and clears the global.",
       "evidence": "Reviewed the recovered C operations and resolved all external references at the original BK9E function address. Complete compiled code and literal pools match; shared reference naming alone is not semantic evidence.",
       "uncertainty": "The local operation is established; gameplay identity and the meaning of unnamed helper calls remain unclassified.",
@@ -50915,7 +50915,7 @@
         "func_ov013_02071638": "0x2071638",
         "func_ov002_02066c78": "0x2066c78",
         "func_0204d960": "0x204d960",
-        "func_ov002_02066a68": "0x2066a68",
+        "ReleaseMenuCursorState": "0x2066a68",
         "func_ov027_020b7dfc": "0x20b7dfd",
         "func_ov027_020b8c58": "0x20b8c59",
         "func_0202a1c4": "0x202a1c4",
@@ -111156,7 +111156,7 @@
         "func_ov013_020716e4": "0x20716e4",
         "func_ov002_02062000": "0x2062000",
         "func_ov027_020b8ca8": "0x20b8ca8",
-        "func_ov002_020664f4": "0x20664f4",
+        "StartPanelFadeOut": "0x20664f4",
         "func_ov002_0206655c": "0x206655c",
         "func_ov013_0206f978": "0x206f978",
         "g_panelState_02074ce0": "0x2074ce0",
@@ -111321,7 +111321,7 @@
       "bindings": {
         "func_ov002_020621c4": "0x20621c4",
         "func_ov002_02061d58": "0x2061d58",
-        "func_ov002_020666c8": "0x20666c8",
+        "InitMenuCursorState": "0x20666c8",
         "func_ov027_020b90a4": "0x20b90a4",
         "func_ov027_020b95e4": "0x20b95e4",
         "func_ov027_020b96a0": "0x20b96a0",
@@ -122968,22 +122968,22 @@
     },
     {
       "module": "ov002",
-      "symbol": "func_ov002_020664e4",
-      "name": "func_ov002_020664e4",
+      "symbol": "StartPanelFadeIn",
+      "name": "StartPanelFadeIn",
       "language": "c",
-      "source": "src/ov002/constant_variants/func_ov002_020664e4.c",
-      "source_symbol": "func_ov002_020664e4",
+      "source": "src/ov002/constant_variants/StartPanelFadeIn.c",
+      "source_symbol": "StartPanelFadeIn",
       "compiler": "mwccarm-4.0-1036",
       "mode": "arm",
       "bindings": {
-        "NNS_FndInitList_02066504": "0x2066504"
+        "PostPanelEventOff_02066504": "0x2066504"
       },
-      "behavior": "A C helper sharing the donor control flow with different constants or field offsets; gameplay purpose unreviewed.",
-      "evidence": "Adapted from verified arm9:func_0201f278; rebuilt C matches all 16 bytes.",
-      "uncertainty": "Constant and field meanings are not established.",
-      "domain": "library_nitro_nns",
+      "behavior": "Starts the panel fade-in event with the standard 0x3000 event flags.",
+      "evidence": "Menu and panel opening state machines call it and then wait for IsScreenFadeComplete; rebuilt C matches all 16 bytes.",
+      "uncertainty": "The individual bits in the mode argument and 0x3000 flags are not yet named.",
+      "domain": "panel_state",
       "origin": "Re:coded disassembly and verified C template",
-      "understanding": "unknown",
+      "understanding": "subsystem",
       "provenance": {
         "project": "Yokimitsuro/khdays-decomp",
         "revision": "54a63ca0ede75f76eded7315d556e63024649415",
@@ -122993,22 +122993,22 @@
     },
     {
       "module": "ov002",
-      "symbol": "func_ov002_020664f4",
-      "name": "func_ov002_020664f4",
+      "symbol": "StartPanelFadeOut",
+      "name": "StartPanelFadeOut",
       "language": "c",
-      "source": "src/ov002/constant_variants/func_ov002_020664f4.c",
-      "source_symbol": "func_ov002_020664f4",
+      "source": "src/ov002/constant_variants/StartPanelFadeOut.c",
+      "source_symbol": "StartPanelFadeOut",
       "compiler": "mwccarm-4.0-1036",
       "mode": "arm",
       "bindings": {
-        "NNS_FndInitList_02066530": "0x2066530"
+        "PostPanelEventOn_02066530": "0x2066530"
       },
-      "behavior": "A C helper sharing the donor control flow with different constants or field offsets; gameplay purpose unreviewed.",
-      "evidence": "Adapted from verified arm9:func_0201f278; rebuilt C matches all 16 bytes.",
-      "uncertainty": "Constant and field meanings are not established.",
-      "domain": "library_nitro_nns",
+      "behavior": "Starts the panel fade-out event with the standard 0x3000 event flags.",
+      "evidence": "Menu and panel closing state machines call it and then wait for IsScreenFadeComplete; rebuilt C matches all 16 bytes.",
+      "uncertainty": "The individual bits in the mode argument and 0x3000 flags are not yet named.",
+      "domain": "panel_state",
       "origin": "Re:coded disassembly and verified C template",
-      "understanding": "unknown",
+      "understanding": "subsystem",
       "provenance": {
         "project": "Yokimitsuro/khdays-decomp",
         "revision": "54a63ca0ede75f76eded7315d556e63024649415",
@@ -128598,23 +128598,23 @@
       "understanding": "subsystem"
     },
     {
-      "source": "src/ov002/reviewed_helpers/func_ov002_020666c8.c",
-      "source_symbol": "func_ov002_020666c8",
+      "source": "src/ov002/reviewed_helpers/InitMenuCursorState_020666c8.c",
+      "source_symbol": "InitMenuCursorState_020666c8",
       "compiler": "mwccarm-4.0-1036",
       "mode": "arm",
       "bindings": {
         "NNSi_FndFreeFromDefaultHeap_0202a1c4": "0x202a1c4",
         "NNSi_FndAllocFromDefaultHeap_0202a178": "0x202a178",
         "func_01ff8830": "0x1ff8830",
-        "data_ov002_0206c46c": "0x206c46c"
+        "gMenuCursorState": "0x206c46c"
       },
       "module": "ov002",
-      "symbol": "func_ov002_020666c8",
-      "name": "func_ov002_020666c8",
+      "symbol": "InitMenuCursorState",
+      "name": "InitMenuCursorState",
       "language": "c",
-      "behavior": "Replaces a 44-byte work allocation, clears it and stores the supplied initial value.",
-      "evidence": "Reviewed reconstructed calls, pointer types and conditions; rebuilt C matches all 84 bytes.",
-      "uncertainty": "The particular in-game scene or actor using this routine remains unconfirmed.",
+      "behavior": "Replaces the 44-byte menu cursor and touch state, clears it and stores the optional event callback.",
+      "evidence": "Reviewed the cursor-state layout and all known menu and panel callers; rebuilt C matches all 84 bytes.",
+      "uncertainty": "The cursor callback event values are not yet fully classified.",
       "domain": "reviewed_helpers",
       "origin": "Ghidra output, reviewed and reconstructed",
       "understanding": "subsystem"
@@ -152098,19 +152098,19 @@
     },
     {
       "module": "ov002",
-      "symbol": "func_ov002_02066a90",
-      "name": "GetMenuRectSize",
+      "symbol": "GetMenuTouchDisplacement",
+      "name": "GetMenuTouchDisplacement",
       "language": "c",
-      "source": "src/ov002/panel_state/GetMenuRectSize_02066a90.c",
-      "source_symbol": "GetMenuRectSize_02066a90",
+      "source": "src/ov002/panel_state/GetMenuTouchDisplacement_02066a90.c",
+      "source_symbol": "GetMenuTouchDisplacement_02066a90",
       "compiler": "mwccarm-4.0-1036",
       "mode": "arm",
       "bindings": {
-        "data_ov002_0206c46c": "0x206c46c"
+        "gMenuCursorState": "0x206c46c"
       },
-      "behavior": "Writes the width and height of the active menu rectangle.",
-      "evidence": "Rebuilt C matches all 64 bytes including relocations.",
-      "uncertainty": "Which menu object owns the rectangle.",
+      "behavior": "Writes the current touch displacement from the position where the press began.",
+      "evidence": "The shared 44-byte cursor-state layout identifies the start and current coordinates; rebuilt C matches all 64 bytes including relocations.",
+      "uncertainty": "None beyond the exact higher-level gesture thresholds chosen by callers.",
       "domain": "panel_state",
       "origin": "Ghidra output, reviewed and reconstructed",
       "understanding": "subsystem"
@@ -152309,41 +152309,41 @@
     },
     {
       "module": "ov002",
-      "symbol": "func_ov002_02066b2c",
-      "name": "GetMenuCursorTouch",
+      "symbol": "GetMenuTouchHeld",
+      "name": "GetMenuTouchHeld",
       "language": "c",
-      "source": "src/ov002/panel_state/GetMenuCursorTouch_02066b2c.c",
-      "source_symbol": "GetMenuCursorTouch_02066b2c",
+      "source": "src/ov002/panel_state/GetMenuTouchHeld_02066b2c.c",
+      "source_symbol": "GetMenuTouchHeld_02066b2c",
       "compiler": "mwccarm-4.0-1036",
       "mode": "arm",
       "bindings": {
-        "data_ov002_0206c46c": "0x206c46c"
+        "gMenuCursorState": "0x206c46c"
       },
-      "behavior": "Writes the current menu cursor point and returns its bit-1 flag.",
-      "evidence": "Rebuilt C matches all 88 bytes including relocations.",
-      "uncertainty": "Exact meaning of flag bits 1 and 2.",
+      "behavior": "Optionally writes the latest touch point and reports whether the screen is currently being held.",
+      "evidence": "The shared cursor-state layout maps bit 1 to the current touching state; rebuilt C matches all 88 bytes including relocations.",
+      "uncertainty": "None beyond higher-level gesture interpretation by callers.",
       "domain": "panel_state",
       "origin": "Ghidra output, reviewed and reconstructed",
-      "understanding": "unknown"
+      "understanding": "subsystem"
     },
     {
       "module": "ov002",
-      "symbol": "func_ov002_02066b84",
-      "name": "GetMenuCursorHeld",
+      "symbol": "GetMenuTouchPressed",
+      "name": "GetMenuTouchPressed",
       "language": "c",
-      "source": "src/ov002/panel_state/GetMenuCursorHeld_02066b84.c",
-      "source_symbol": "GetMenuCursorHeld_02066b84",
+      "source": "src/ov002/panel_state/GetMenuTouchPressed_02066b84.c",
+      "source_symbol": "GetMenuTouchPressed_02066b84",
       "compiler": "mwccarm-4.0-1036",
       "mode": "arm",
       "bindings": {
-        "data_ov002_0206c46c": "0x206c46c"
+        "gMenuCursorState": "0x206c46c"
       },
-      "behavior": "Writes the current menu cursor point and returns its bit-2 flag.",
-      "evidence": "Rebuilt C matches all 88 bytes including relocations.",
-      "uncertainty": "Exact meaning of flag bits 1 and 2.",
+      "behavior": "Optionally writes the latest touch point and reports the new-press edge for the current frame.",
+      "evidence": "UpdateMenuTouch derives bit 2 from the previous and current touching states; rebuilt C matches all 88 bytes including relocations.",
+      "uncertainty": "None beyond higher-level gesture interpretation by callers.",
       "domain": "panel_state",
       "origin": "Ghidra output, reviewed and reconstructed",
-      "understanding": "unknown"
+      "understanding": "subsystem"
     },
     {
       "module": "ov002",
@@ -152692,7 +152692,7 @@
       "mode": "arm",
       "bindings": {
         "func_ov002_02062014": "0x2062014",
-        "func_ov002_020664e4": "0x20664e4",
+        "StartPanelFadeIn": "0x20664e4",
         "func_ov002_0206655c": "0x206655c",
         "func_ov002_02064f6c": "0x2064f6c",
         "g_context_0206c464": "0x206c464"
@@ -152717,7 +152717,7 @@
         "func_ov027_020b90a4": "0x20b90a4",
         "ApplySelectedSubitemValues_020b94fc": "0x20b94fc",
         "func_ov027_020b9620": "0x20b9620",
-        "func_ov002_020666c8": "0x20666c8",
+        "InitMenuCursorState": "0x20666c8",
         "g_context_0206c464": "0x206c464"
       },
       "behavior": "Applies and refreshes panel element 5, recreates the cursor context and clears a menu counter.",
@@ -152738,7 +152738,7 @@
       "mode": "arm",
       "bindings": {
         "func_ov002_0206671c": "0x206671c",
-        "GetMenuCursorTouch_02066b2c": "0x2066b2c",
+        "GetMenuTouchHeld_02066b2c": "0x2066b2c",
         "IsButtonBPressed_020632c8": "0x20632c8",
         "func_ov002_02066c58": "0x2066c58",
         "func_ov002_02064f6c": "0x2064f6c",
@@ -152768,7 +152768,7 @@
         "ApplySelectedSubitemValues_020b94fc": "0x20b94fc",
         "func_ov027_020b95e4": "0x20b95e4",
         "func_ov027_020b96a0": "0x20b96a0",
-        "func_ov002_02066a68": "0x2066a68",
+        "ReleaseMenuCursorState": "0x2066a68",
         "g_context_0206c464": "0x206c464"
       },
       "behavior": "Deselects and disables panel element 5, then frees the menu cursor context.",
@@ -152796,13 +152796,13 @@
         "func_ov027_020b9764": "0x20b9764",
         "func_ov027_020b95e4": "0x20b95e4",
         "func_ov027_020b9098": "0x20b9099",
-        "func_ov002_020666c8": "0x20666c8",
+        "InitMenuCursorState": "0x20666c8",
         "g_context_0206c464": "0x206c464",
         "UpdateMenuSelectionSound_02065d54": "0x2065d54"
       },
       "behavior": "Shows popup panel elements 11 and 12 on the sub screen, highlights the selected entry, installs the selection-sound callback and resets the menu phase.",
       "evidence": "Rebuilt C matches all 304 bytes including relocations.",
-      "uncertainty": "Exact role of the ov002 state helpers 02064c9c, 02064584 and 020666c8 is unknown.",
+      "uncertainty": "Exact roles of the ov002 helpers at 02064c9c and 02064584 remain unknown.",
       "domain": "panel_state",
       "origin": "Ghidra output, reviewed and reconstructed",
       "understanding": "subsystem"
@@ -152835,7 +152835,7 @@
         "func_ov002_02066c44": "0x2066c44",
         "func_ov002_0206671c": "0x206671c",
         "IsGlobalBit0Set_020632ac": "0x20632ac",
-        "GetMenuCursorHeld_02066b84": "0x2066b84",
+        "GetMenuTouchPressed_02066b84": "0x2066b84",
         "func_ov002_020620fc": "0x20620fc",
         "data_ov002_0206c464": "0x206c464",
         "data_0205fe0c": "0x205fe0c"
@@ -152864,7 +152864,7 @@
         "func_ov027_020b96e4": "0x20b96e4",
         "func_ov027_020b9620": "0x20b9620",
         "func_ov027_020b9098": "0x20b9099",
-        "func_ov002_02066a68": "0x2066a68",
+        "ReleaseMenuCursorState": "0x2066a68",
         "g_context_0206c464": "0x206c464",
         "func_ov002_02065c54": "0x2065c54"
       },
@@ -153062,7 +153062,7 @@
     },
     {
       "module": "ov002",
-      "symbol": "func_ov002_0206671c",
+      "symbol": "UpdateMenuTouch",
       "name": "UpdateMenuTouch",
       "language": "c",
       "source": "src/ov002/panel_state/UpdateMenuTouch_0206671c.c",
@@ -153071,9 +153071,9 @@
       "mode": "arm",
       "bindings": {
         "CopyRecentTouchPoints_0202b618": "0x202b618",
-        "GetMenuRectSize_02066a90": "0x2066a90",
-        "data_ov002_0206c46c": "0x206c46c",
-        "data_ov002_0206c434": "0x206c434"
+        "GetMenuTouchDisplacement_02066a90": "0x2066a90",
+        "gMenuCursorState": "0x206c46c",
+        "gMenuCursorNextPoint": "0x206c434"
       },
       "behavior": "Samples the touch screen, updates menu touch press, release, tap and drag flags, fires the touch callback for each event and returns the event mask.",
       "evidence": "Rebuilt C matches all 844 bytes including relocations.",
@@ -153084,7 +153084,7 @@
     },
     {
       "module": "ov002",
-      "symbol": "func_ov002_02066bdc",
+      "symbol": "GetMenuCursorPosition",
       "name": "GetMenuCursorPosition",
       "language": "c",
       "source": "src/ov002/panel_state/GetMenuCursorPosition_02066bdc.c",
@@ -153093,7 +153093,7 @@
       "mode": "arm",
       "bindings": {
         "func_01ff8830": "0x1ff8830",
-        "data_ov002_0206c46c": "0x206c46c"
+        "gMenuCursorState": "0x206c46c"
       },
       "behavior": "Returns the current menu cursor point, or zeroes if no cursor context exists.",
       "evidence": "Rebuilt C matches all 104 bytes including relocations.",
@@ -156834,7 +156834,7 @@
       "compiler": "mwccarm-4.0-1036",
       "mode": "arm",
       "bindings": {
-        "func_ov002_020664f4": "0x20664f4",
+        "StartPanelFadeOut": "0x20664f4",
         "func_ov002_0206655c": "0x206655c",
         "data_ov013_02074ce0": "0x2074ce0"
       },
@@ -156864,14 +156864,14 @@
         "func_ov027_020b95e4": "0x20b95e4",
         "func_ov027_020b96a0": "0x20b96a0",
         "SetEntrySlotsVisible_020b9580": "0x20b9580",
-        "func_ov002_020664e4": "0x20664e4",
+        "StartPanelFadeIn": "0x20664e4",
         "GetCachedSoundParam_0204d720": "0x204d720",
         "func_0204d8b8": "0x204d8b8",
         "g_panelState_02074ce0": "0x2074ce0"
       },
       "behavior": "Resets the panel result state, hides panel objects, selects the next mode and restores sound 22.",
       "evidence": "Rebuilt C matches all 328 bytes including relocations.",
-      "uncertainty": "Meaning of the mode bits passed to func_ov002_020664e4 is unknown.",
+      "uncertainty": "Meaning of the mode bits passed to StartPanelFadeIn is unknown.",
       "domain": "panel_state",
       "origin": "Ghidra output, reviewed and reconstructed",
       "understanding": "subsystem"
@@ -156889,12 +156889,12 @@
         "func_ov002_0206655c": "0x206655c",
         "IsGlobalBit0Set_020632ac": "0x20632ac",
         "PlaySoundEffect_0204d924": "0x204d924",
-        "func_ov002_020664f4": "0x20664f4",
+        "StartPanelFadeOut": "0x20664f4",
         "IsButtonXPressed_020632e4": "0x20632e4",
         "func_ov013_0206caa4": "0x206caa4",
         "func_ov002_0206203c": "0x206203c",
         "func_ov013_0206e574": "0x206e574",
-        "func_ov002_020664e4": "0x20664e4",
+        "StartPanelFadeIn": "0x20664e4",
         "func_ov013_020716e4": "0x20716e4",
         "func_ov013_0206f978": "0x206f978",
         "g_panelState_02074ce0": "0x2074ce0"
@@ -156923,7 +156923,7 @@
         "func_ov027_020b95e4": "0x20b95e4",
         "func_ov027_020b96a0": "0x20b96a0",
         "SetEntrySlotsVisible_020b9580": "0x20b9580",
-        "func_ov002_020664e4": "0x20664e4",
+        "StartPanelFadeIn": "0x20664e4",
         "GetCachedSoundParam_0204d720": "0x204d720",
         "func_0204d8b8": "0x204d8b8",
         "g_panelState_02074ce0": "0x2074ce0"
@@ -157071,7 +157071,7 @@
       "mode": "arm",
       "bindings": {
         "data_ov015_0207e960": "0x207e960",
-        "func_ov002_020666c8": "0x20666c8"
+        "InitMenuCursorState": "0x20666c8"
       },
       "behavior": "Clears the panel selection byte and pending action, then forwards zero to an ov002 helper.",
       "evidence": "Rebuilt C matches all 40 bytes including relocations.",
@@ -157305,7 +157305,7 @@
         "func_ov013_0206e574": "0x206e574",
         "RebuildPanelSelection_020712e8": "0x20712e8",
         "func_ov002_02062014": "0x2062014",
-        "func_ov002_020664e4": "0x20664e4",
+        "StartPanelFadeIn": "0x20664e4",
         "func_ov002_0206655c": "0x206655c",
         "DispatchContextCommand_02066c78": "0x2066c78",
         "func_ov013_020716e4": "0x20716e4",
@@ -157392,7 +157392,7 @@
         "func_ov002_0206655c": "0x206655c",
         "PlaySoundEffect_0204d924": "0x204d924",
         "IsButtonXPressed_020632e4": "0x20632e4",
-        "func_ov002_020664f4": "0x20664f4",
+        "StartPanelFadeOut": "0x20664f4",
         "func_ov002_02062000": "0x2062000",
         "func_ov027_020b8ca8": "0x20b8ca8",
         "func_ov013_0206f978": "0x206f978",
@@ -157747,7 +157747,7 @@
         "func_ov027_020b90a4": "0x20b90a4",
         "SetEntrySlotsVisible_020b9580": "0x20b9580",
         "func_0202a9d0": "0x202a9d0",
-        "func_ov002_020666c8": "0x20666c8",
+        "InitMenuCursorState": "0x20666c8",
         "func_ov013_020716e4": "0x20716e4",
         "SetPanelPhase_0207174c": "0x207174c",
         "g_panelState_02074ce0": "0x2074ce0",
@@ -157855,8 +157855,8 @@
         "SpawnDropsPerTenUnits_0206671c": "0x206671c",
         "IsGlobalBit0Set_020632ac": "0x20632ac",
         "IsButtonBPressed_020632c8": "0x20632c8",
-        "GetMenuCursorHeld_02066b84": "0x2066b84",
-        "GetMenuCursorTouch_02066b2c": "0x2066b2c",
+        "GetMenuTouchPressed_02066b84": "0x2066b84",
+        "GetMenuTouchHeld_02066b2c": "0x2066b2c",
         "PlaySoundEffect_0204d924": "0x204d924",
         "func_ov002_020620fc": "0x20620fc",
         "func_ov013_02070aa0": "0x2070aa0",
@@ -157907,7 +157907,7 @@
       "mode": "arm",
       "bindings": {
         "func_ov002_02062014": "0x2062014",
-        "func_ov002_020664e4": "0x20664e4",
+        "StartPanelFadeIn": "0x20664e4",
         "func_ov002_0206655c": "0x206655c",
         "ChangePanelState_0206d1c0": "0x206d1c0",
         "g_panelState_0206f9a0": "0x206f9a0"
@@ -157929,7 +157929,7 @@
       "compiler": "mwccarm-4.0-1036",
       "mode": "arm",
       "bindings": {
-        "func_ov002_020664f4": "0x20664f4",
+        "StartPanelFadeOut": "0x20664f4",
         "func_ov002_0206655c": "0x206655c",
         "g_panelState_0206f9a0": "0x206f9a0"
       },
@@ -158469,7 +158469,7 @@
       "mode": "arm",
       "bindings": {
         "func_ov002_0206671c": "0x206671c",
-        "GetMenuCursorTouch_02066b2c": "0x2066b2c",
+        "GetMenuTouchHeld_02066b2c": "0x2066b2c",
         "IsButtonBPressed_020632c8": "0x20632c8",
         "PlaySoundEffect_0204d924": "0x204d924",
         "func_ov027_020b90a4": "0x20b90a4",
@@ -158478,7 +158478,7 @@
         "func_ov015_0206eba4": "0x206eba4",
         "func_ov002_02062000": "0x2062000",
         "func_ov027_020b8ca8": "0x20b8ca8",
-        "func_ov002_020664f4": "0x20664f4",
+        "StartPanelFadeOut": "0x20664f4",
         "func_ov002_0206655c": "0x206655c",
         "DispatchContextCommand_02066c78": "0x2066c78",
         "func_0204d960": "0x204d960",
@@ -158504,7 +158504,7 @@
       "mode": "arm",
       "bindings": {
         "func_ov002_02062014": "0x2062014",
-        "func_ov002_020664e4": "0x20664e4",
+        "StartPanelFadeIn": "0x20664e4",
         "func_ov002_0206655c": "0x206655c",
         "func_ov015_02070af8": "0x2070af8",
         "data_ov015_0207e960": "0x207e960"
@@ -158530,7 +158530,7 @@
         "InitPlayerCard_0206f524": "0x206f524",
         "InitShareBuffers_02072948": "0x2072948",
         "func_ov015_02072cec": "0x2072cec",
-        "func_ov002_020666c8": "0x20666c8",
+        "InitMenuCursorState": "0x20666c8",
         "data_ov015_0207e960": "0x207e960",
         "AddReceivedPlayerCard_020721ec": "0x20721ec"
       },
@@ -158924,7 +158924,7 @@
       "mode": "arm",
       "bindings": {
         "func_ov002_02062014": "0x2062014",
-        "func_ov002_020664e4": "0x20664e4",
+        "StartPanelFadeIn": "0x20664e4",
         "func_ov002_0206655c": "0x206655c",
         "DispatchContextCommand_02066c78": "0x2066c78",
         "PlaySoundEffect_0204d924": "0x204d924",
@@ -158953,7 +158953,7 @@
         "func_ov027_020b9100": "0x20b9100",
         "SetEntrySlotsVisible_020b9580": "0x20b9580",
         "func_ov027_020b912c": "0x20b912c",
-        "func_ov002_020664f4": "0x20664f4",
+        "StartPanelFadeOut": "0x20664f4",
         "func_ov002_0206655c": "0x206655c",
         "func_ov015_0206c6bc": "0x206c6bc",
         "func_ov015_02070af8": "0x2070af8",
@@ -159159,13 +159159,13 @@
       "mode": "arm",
       "bindings": {
         "func_ov002_02062014": "0x2062014",
-        "func_ov002_020664e4": "0x20664e4",
+        "StartPanelFadeIn": "0x20664e4",
         "func_ov002_0206655c": "0x206655c",
         "func_ov015_02078f58": "0x2078f58",
         "func_ov002_02062000": "0x2062000",
         "func_ov027_020b8ca8": "0x20b8ca8",
         "func_ov015_020766d0": "0x20766d0",
-        "func_ov002_020664f4": "0x20664f4",
+        "StartPanelFadeOut": "0x20664f4",
         "data_ov015_020812e0": "0x20812e0"
       },
       "behavior": "Steps the panel intro sequence through fade-in, record loading and fade-out, returning FALSE once it finishes.",
@@ -160282,8 +160282,8 @@
         "func_ov002_0206671c": "0x206671c",
         "IsGlobalBit0Set_020632ac": "0x20632ac",
         "IsButtonBPressed_020632c8": "0x20632c8",
-        "GetMenuCursorHeld_02066b84": "0x2066b84",
-        "GetMenuCursorTouch_02066b2c": "0x2066b2c",
+        "GetMenuTouchPressed_02066b84": "0x2066b84",
+        "GetMenuTouchHeld_02066b2c": "0x2066b2c",
         "PlaySoundEffect_0204d924": "0x204d924",
         "func_ov002_020620fc": "0x20620fc",
         "func_ov015_02070af8": "0x2070af8",
@@ -160309,7 +160309,7 @@
         "func_ov027_020b90a4": "0x20b90a4",
         "func_ov027_020b9620": "0x20b9620",
         "DispatchContextCommand_02066c78": "0x2066c78",
-        "func_ov002_02066a68": "0x2066a68",
+        "ReleaseMenuCursorState": "0x2066a68",
         "data_ov015_0207e960": "0x207e960"
       },
       "behavior": "Applies the same ov027 element reset to seven menu elements, then issues a context command.",
@@ -209991,7 +209991,7 @@
         "IsGlobalBit0Set_020632ac": "0x20632ac",
         "IsButtonBPressed_020632c8": "0x20632c8",
         "UpdateWidgetRootOnly_020b8ca8": "0x20b8ca8",
-        "GetMenuCursorTouch_02066b2c": "0x2066b2c",
+        "GetMenuTouchHeld_02066b2c": "0x2066b2c",
         "func_ov015_020716f8": "0x20716f8",
         "TestContextFlagBit_0206f460": "0x206f460",
         "FindWidgetById_020b90a4": "0x20b90a4",
@@ -210002,7 +210002,7 @@
         "HidePanelOptionSlots_020718fc": "0x20718fc",
         "AreAllWidgetMovesFinished_020b912c": "0x20b912c",
         "func_ov015_02070af8": "0x2070af8",
-        "func_ov002_020664f4": "0x20664f4",
+        "StartPanelFadeOut": "0x20664f4",
         "func_ov015_02072cb4": "0x2072cb4",
         "func_ov002_0206655c": "0x206655c",
         "func_ov015_0206fa98": "0x206fa98",
@@ -211175,7 +211175,7 @@
         "IsButtonYPressed_02063300": "0x2063300",
         "SpawnDropsPerTenUnits_0206671c": "0x206671c",
         "func_ov013_02070ce8": "0x2070ce8",
-        "GetMenuCursorTouch_02066b2c": "0x2066b2c",
+        "GetMenuTouchHeld_02066b2c": "0x2066b2c",
         "GetMenuCursorPosition_02066bdc": "0x2066bdc",
         "DispatchTouchToWidget_020b8874": "0x20b8875",
         "func_ov002_02062000": "0x2062000",
@@ -211185,8 +211185,8 @@
         "RefreshProgressCaption_0206f06c": "0x206f06c",
         "func_ov013_02070e40": "0x2070e40",
         "UpdateWidgetRootOnly_020b8ca8": "0x20b8ca8",
-        "func_ov002_02066ad0": "0x2066ad0",
-        "GetMenuRectSize_02066a90": "0x2066a90",
+        "GetMenuCursorDelta": "0x2066ad0",
+        "GetMenuTouchDisplacement_02066a90": "0x2066a90",
         "func_ov013_020704a0": "0x20704a0",
         "_s32_div_f": "0x2023dbc",
         "func_ov027_020b90a4": "0x20b90a4",
@@ -211197,7 +211197,7 @@
       },
       "behavior": "Runs the panel list input state machine: handles cancel and confirm buttons, touch and pad scrolling, drag inertia and snapping, then refreshes the scroll arrows and plays a cursor sound on change.",
       "evidence": "Rebuilt C matches all 1724 bytes including relocations.",
-      "uncertainty": "Exact meaning of the input flag bits and the drag helper func_ov002_02066ad0 is unknown.",
+      "uncertainty": "Exact meaning of the input flag bits and the drag helper GetMenuCursorDelta is unknown.",
       "domain": "panel_state",
       "origin": "Ghidra output, reviewed and reconstructed",
       "understanding": "subsystem"

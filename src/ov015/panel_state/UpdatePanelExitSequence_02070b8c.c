@@ -7,7 +7,7 @@ typedef struct PanelState {
 
 extern PanelState *data_ov015_0207e960;
 extern void func_ov002_02062014(int value);
-extern void func_ov002_020664e4(int mode);
+extern void StartPanelFadeIn(int mode);
 extern BOOL func_ov002_0206655c(void);
 extern u32 DispatchContextCommand_02066c78(u32 command, u32 value, u32 extra, void *buffer);
 extern BOOL PlaySoundEffect_0204d924(int seqArcNo, int index);
@@ -21,7 +21,7 @@ void UpdatePanelExitSequence_02070b8c(void)
         data_ov015_0207e960->exitStep = 10;
         break;
     case 10:
-        func_ov002_020664e4(3);
+        StartPanelFadeIn(3);
         data_ov015_0207e960->exitStep = 20;
         break;
     case 20:

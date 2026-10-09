@@ -13,7 +13,7 @@ extern void func_ov027_020b95e4(void *container, void *item);
 extern void func_ov027_020b96a0(void *container, void *item, int mode);
 extern int func_ov002_020621c4(int textIndex, int unused);
 extern void func_ov002_02061d58(int screen, int x, int y, int size, int arg4, int arg5, int textId, int arg7);
-extern void func_ov002_020666c8(int mode);
+extern void InitMenuCursorState(int mode);
 extern BOOL PlaySoundEffect_0204d924(int seqArcNo, int index);
 extern PanelState *data_ov015_0207e960;
 
@@ -23,7 +23,7 @@ void func_ov015_02071e48(void) {
     *(vu32 *)REG_DB_DISPCNT_ADDR = (*(vu32 *)REG_DB_DISPCNT_ADDR & ~0x1f00) | 0x1f00;
     func_ov002_02061d58(0, 0x80, 0x32, 2, 6, 10, func_ov002_020621c4(0x70, 0), 0);
     data_ov015_0207e960->unk_E4 = 0;
-    func_ov002_020666c8(0);
+    InitMenuCursorState(0);
     container = data_ov015_0207e960->container;
     func_ov027_020b95e4(container, func_ov027_020b90a4(container, 0xb));
     container = data_ov015_0207e960->container;

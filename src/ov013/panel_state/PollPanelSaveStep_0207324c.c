@@ -26,14 +26,14 @@ typedef struct PanelState {
 } PanelState;
 
 extern PanelState *data_ov013_02074ce0;
-extern void func_ov002_020664f4(int mode);
+extern void StartPanelFadeOut(int mode);
 extern BOOL func_ov002_0206655c(void);
 
 void PollPanelSaveStep_0207324c(void)
 {
     switch (data_ov013_02074ce0->step) {
     case 0:
-        func_ov002_020664f4(3);
+        StartPanelFadeOut(3);
         data_ov013_02074ce0->step = 10;
         break;
     case 10:

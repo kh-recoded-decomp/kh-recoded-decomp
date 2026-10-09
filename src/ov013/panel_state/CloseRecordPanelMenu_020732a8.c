@@ -17,7 +17,7 @@ extern void func_ov013_0206da20(void);
 extern void func_ov013_0206eb18(void);
 extern BOOL func_02029f58(void);
 extern void func_ov013_0206f06c(void);
-extern void func_ov002_020664e4(int mode);
+extern void StartPanelFadeIn(int mode);
 extern int GetCachedSoundParam_0204d720(void);
 extern int func_0204d8b8(int arg0, int arg1);
 extern PanelObject *func_ov027_020b90a4(void *panel, int id);
@@ -54,7 +54,7 @@ void CloseRecordPanelMenu_020732a8(void) {
     panel = g_panelState_02074ce0->panel;
     object = func_ov027_020b90a4(panel, 6);
     SetEntrySlotsVisible_020b9580(panel, object, 0);
-    func_ov002_020664e4(mode | 1);
+    StartPanelFadeIn(mode | 1);
     if (GetCachedSoundParam_0204d720() != 22) {
         func_0204d8b8(22, 15);
     }

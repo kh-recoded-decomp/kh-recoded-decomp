@@ -21,7 +21,7 @@ extern void func_ov027_020b96e4(void *panel, PanelElement *element);
 extern void func_ov027_020b9620(void *panel, PanelElement *element);
 extern void func_ov027_020b9098(void *panel, void (*callback)(void));
 extern void func_ov002_02065c54(void);
-extern void func_ov002_02066a68(void);
+extern void ReleaseMenuCursorState(void);
 
 void CloseMenuPopup_02065668(void)
 {
@@ -39,5 +39,5 @@ void CloseMenuPopup_02065668(void)
     panel = g_context_0206c464->panel;
     func_ov027_020b9620(panel, func_ov027_020b90a4(g_context_0206c464->panel, g_context_0206c464->selectedIndex + 1));
     func_ov027_020b9098(g_context_0206c464->panel, func_ov002_02065c54);
-    func_ov002_02066a68();
+    ReleaseMenuCursorState();
 }

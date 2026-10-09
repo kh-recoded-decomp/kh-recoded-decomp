@@ -1,4 +1,5 @@
 #include "nitro/types.h"
+#include "src/ov002/panel_state/MenuTouchState.h"
 
 typedef struct TouchSample {
     u16 x;
@@ -7,52 +8,17 @@ typedef struct TouchSample {
     u16 validity;
 } TouchSample;
 
-typedef struct TouchPos {
-    int x;
-    int y;
-} TouchPos;
-
-typedef struct MenuPoint {
-    s16 x;
-    s16 y;
-    u8 pad_04[4];
-} MenuPoint;
-
-typedef void (*MenuTouchCallback)(int event, TouchPos *pos, int arg);
-
-typedef struct MenuTouch {
-    MenuTouchCallback callback;
-    u8 wasTouching : 1;
-    u8 touching : 1;
-    u8 pressed : 1;
-    u8 released : 1;
-    u8 dragged : 1;
-    u8 pad_04_b5 : 3;
-    u8 pad_05;
-    MenuPoint points[3];
-    s16 current;
-    s16 startX;
-    s16 startY;
-    s16 x;
-    s16 y;
-    s16 prevX;
-    s16 prevY;
-} MenuTouch;
-
-extern MenuTouch *data_ov002_0206c46c;
-extern s8 data_ov002_0206c434[];
-
 extern int CopyRecentTouchPoints_0202b618(TouchSample *table);
-extern void GetMenuRectSize_02066a90(TouchPos *out);
+extern void GetMenuTouchDisplacement_02066a90(MenuTouchPosition *out);
 
 u32 UpdateMenuTouch_0206671c(void)
 {
     TouchSample samples[4];
-    TouchPos pressPos;
-    TouchPos releasePos;
-    TouchPos delta;
-    TouchPos dragPos;
-    TouchPos rectSize;
+    MenuTouchPosition pressPos;
+    MenuTouchPosition releasePos;
+    MenuTouchPosition delta;
+    MenuTouchPosition dragPos;
+    MenuTouchPosition rectSize;
     u8 touching;
     int count;
     int i;
@@ -77,61 +43,61 @@ u32 UpdateMenuTouch_0206671c(void)
             } else if (y < 0) {
                 y = 0;
             }
-            data_ov002_0206c46c->prevX = data_ov002_0206c46c->x;
-            data_ov002_0206c46c->prevY = data_ov002_0206c46c->y;
-            data_ov002_0206c46c->x = x;
-            data_ov002_0206c46c->y = y;
+            gMenuCursorState->prevX = gMenuCursorState->x;
+            gMenuCursorState->prevY = gMenuCursorState->y;
+            gMenuCursorState->x = x;
+            gMenuCursorState->y = y;
         }
         touching = TRUE;
     }
-    data_ov002_0206c46c->wasTouching = data_ov002_0206c46c->touching;
-    data_ov002_0206c46c->touching = touching;
-    data_ov002_0206c46c->pressed = (u8)(data_ov002_0206c46c->wasTouching ^ data_ov002_0206c46c->touching) & data_ov002_0206c46c->touching;
-    data_ov002_0206c46c->released = ~data_ov002_0206c46c->touching & data_ov002_0206c46c->wasTouching;
-    if (data_ov002_0206c46c->pressed) {
+    gMenuCursorState->wasTouching = gMenuCursorState->touching;
+    gMenuCursorState->touching = touching;
+    gMenuCursorState->pressed = (u8)(gMenuCursorState->wasTouching ^ gMenuCursorState->touching) & gMenuCursorState->touching;
+    gMenuCursorState->released = ~gMenuCursorState->touching & gMenuCursorState->wasTouching;
+    if (gMenuCursorState->pressed) {
         events |= 1;
-        data_ov002_0206c46c->prevX = data_ov002_0206c46c->x;
-        data_ov002_0206c46c->prevY = data_ov002_0206c46c->y;
-        pressPos.x = data_ov002_0206c46c->x;
-        pressPos.y = data_ov002_0206c46c->y;
-        data_ov002_0206c46c->startX = data_ov002_0206c46c->x;
-        data_ov002_0206c46c->startY = data_ov002_0206c46c->y;
-        data_ov002_0206c46c->dragged = FALSE;
+        gMenuCursorState->prevX = gMenuCursorState->x;
+        gMenuCursorState->prevY = gMenuCursorState->y;
+        pressPos.x = gMenuCursorState->x;
+        pressPos.y = gMenuCursorState->y;
+        gMenuCursorState->startX = gMenuCursorState->x;
+        gMenuCursorState->startY = gMenuCursorState->y;
+        gMenuCursorState->dragged = FALSE;
         for (i = 0; i < 3; i++) {
-            data_ov002_0206c46c->points[i].x = pressPos.x;
-            data_ov002_0206c46c->points[i].y = pressPos.y;
+            gMenuCursorState->points[i].x = pressPos.x;
+            gMenuCursorState->points[i].y = pressPos.y;
         }
-        if (data_ov002_0206c46c->callback != NULL) {
-            data_ov002_0206c46c->callback(1, &pressPos, 0);
+        if (gMenuCursorState->callback != NULL) {
+            gMenuCursorState->callback(1, &pressPos, 0);
         }
     }
-    if (data_ov002_0206c46c->released) {
+    if (gMenuCursorState->released) {
         events |= 2;
-        releasePos.x = data_ov002_0206c46c->x;
-        releasePos.y = data_ov002_0206c46c->y;
-        if (data_ov002_0206c46c->callback != NULL) {
-            data_ov002_0206c46c->callback(2, &releasePos, 0);
+        releasePos.x = gMenuCursorState->x;
+        releasePos.y = gMenuCursorState->y;
+        if (gMenuCursorState->callback != NULL) {
+            gMenuCursorState->callback(2, &releasePos, 0);
         }
-        if (!data_ov002_0206c46c->dragged) {
+        if (!gMenuCursorState->dragged) {
             events |= 4;
-            if (data_ov002_0206c46c->callback != NULL) {
-                data_ov002_0206c46c->callback(4, &releasePos, 0);
+            if (gMenuCursorState->callback != NULL) {
+                gMenuCursorState->callback(4, &releasePos, 0);
             }
         }
     }
-    if (data_ov002_0206c46c->touching) {
-        GetMenuRectSize_02066a90(&rectSize);
+    if (gMenuCursorState->touching) {
+        GetMenuTouchDisplacement_02066a90(&rectSize);
         delta = rectSize;
         if (delta.x < -4 || delta.x > 4 || delta.y < -4 || delta.y > 4) {
             events |= 8;
-            data_ov002_0206c46c->dragged = TRUE;
-            dragPos.x = data_ov002_0206c46c->x;
-            dragPos.y = data_ov002_0206c46c->y;
-            data_ov002_0206c46c->points[data_ov002_0206c46c->current].x = dragPos.x;
-            data_ov002_0206c46c->points[data_ov002_0206c46c->current].y = dragPos.y;
-            data_ov002_0206c46c->current = data_ov002_0206c434[data_ov002_0206c46c->current];
-            if (data_ov002_0206c46c->callback != NULL) {
-                data_ov002_0206c46c->callback(8, &dragPos, 0);
+            gMenuCursorState->dragged = TRUE;
+            dragPos.x = gMenuCursorState->x;
+            dragPos.y = gMenuCursorState->y;
+            gMenuCursorState->points[gMenuCursorState->current].x = dragPos.x;
+            gMenuCursorState->points[gMenuCursorState->current].y = dragPos.y;
+            gMenuCursorState->current = gMenuCursorNextPoint[gMenuCursorState->current];
+            if (gMenuCursorState->callback != NULL) {
+                gMenuCursorState->callback(8, &dragPos, 0);
             }
         }
     }

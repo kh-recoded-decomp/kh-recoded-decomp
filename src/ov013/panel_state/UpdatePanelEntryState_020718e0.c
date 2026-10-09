@@ -35,7 +35,7 @@ extern void func_ov013_0206fbbc(void);
 extern void RefreshProgressCaption_0206f06c(void);
 extern void func_ov013_020716e4(int mode);
 extern void func_ov002_02062014(int value);
-extern void func_ov002_020664e4(int mode);
+extern void StartPanelFadeIn(int mode);
 extern u32 func_ov002_0206655c(void);
 extern int DispatchContextCommand_02066c78(u32 command, int value, int extra, void *buffer);
 extern u32 ScrollListKeys_020631b4(u32 keys, ScrollList *list);
@@ -54,7 +54,7 @@ void UpdatePanelEntryState_020718e0(void) {
         g_panelState_02074ce0->resultState = 10;
         break;
     case 10:
-        func_ov002_020664e4(3);
+        StartPanelFadeIn(3);
         g_panelState_02074ce0->resultState = 20;
         break;
     case 20:

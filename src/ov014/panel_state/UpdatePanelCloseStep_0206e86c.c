@@ -8,7 +8,7 @@ typedef struct PanelState {
 } PanelState;
 
 extern PanelState *g_panelState_0206f9a0;
-extern void func_ov002_020664f4(int mode);
+extern void StartPanelFadeOut(int mode);
 extern BOOL func_ov002_0206655c(void);
 
 void UpdatePanelCloseStep_0206e86c(void)
@@ -18,7 +18,7 @@ void UpdatePanelCloseStep_0206e86c(void)
         g_panelState_0206f9a0->step = 1;
         break;
     case 1:
-        func_ov002_020664f4(3);
+        StartPanelFadeOut(3);
         g_panelState_0206f9a0->step = 2;
         break;
     case 2:

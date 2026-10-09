@@ -1,6 +1,6 @@
 #define func_ov002_02066c44 ResetContextCommandFlag
 #define DecrementBusyCounterIfPositive_02025494 DecrementBusyCounterIfPositive
-#define GetMenuCursorHeld_02066b84 GetMenuCursorHeld
+#define GetMenuTouchPressed_02066b84 GetMenuTouchPressed
 #define IncrementBusyCounter_020254a8 IncrementBusyCounter
 #define IsButtonBPressed_020632c8 IsButtonBPressed
 #define IsGlobalBit0Set_020632ac func_ov002_020632ac

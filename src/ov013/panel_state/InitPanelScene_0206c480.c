@@ -78,7 +78,7 @@ extern void SetScrollListPosition_02063280(ScrollList *list, int scrollOffset, i
 extern PanelObject *func_ov027_020b90a4(void *panel, int id);
 extern void SetEntrySlotsVisible_020b9580(void *panel, PanelObject *object, int visible);
 extern u32 func_0202a9d0(u32 range);
-extern void func_ov002_020666c8(void (*callback)(void));
+extern void InitMenuCursorState(void (*callback)(void));
 extern void func_ov013_020716e4(int mode);
 extern void SetPanelPhase_0207174c(s8 phase);
 
@@ -146,7 +146,7 @@ void InitPanelScene_0206c480(void) {
     for (i = 0; i < 21; i++) {
         g_panelState_02074ce0->rolls[i] = func_0202a9d0(2) + 1;
     }
-    func_ov002_020666c8(func_ov013_02074498);
+    InitMenuCursorState(func_ov013_02074498);
     func_ov013_020716e4(0);
     SetPanelPhase_0207174c(0);
 }

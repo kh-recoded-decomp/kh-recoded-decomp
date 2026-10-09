@@ -10,7 +10,7 @@ extern void *func_ov027_020b90a4(void *panel, int elementId);
 extern void ApplySelectedSubitemValues_020b94fc(void *panel, void *element, int useAlt);
 extern void func_ov027_020b95e4(void *panel, void *element);
 extern void func_ov027_020b96a0(void *panel, void *element, int value);
-extern void func_ov002_02066a68(void);
+extern void ReleaseMenuCursorState(void);
 
 void CloseMenuElement5_020651c0(void)
 {
@@ -22,5 +22,5 @@ void CloseMenuElement5_020651c0(void)
     func_ov027_020b95e4(panel, func_ov027_020b90a4(panel, 5));
     panel = g_context_0206c464->panel;
     func_ov027_020b96a0(panel, func_ov027_020b90a4(panel, 5), 0);
-    func_ov002_02066a68();
+    ReleaseMenuCursorState();
 }

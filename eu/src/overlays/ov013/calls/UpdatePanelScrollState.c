@@ -1,7 +1,7 @@
 #define DispatchTouchToWidget_020b8874 DispatchTouchToWidget
 #define GetMenuCursorPosition_02066bdc GetMenuCursorPosition
-#define GetMenuCursorTouch_02066b2c GetMenuCursorTouch
-#define GetMenuRectSize_02066a90 GetMenuRectSize
+#define GetMenuTouchHeld_02066b2c GetMenuTouchHeld
+#define GetMenuTouchDisplacement_02066a90 GetMenuTouchDisplacement
 #define IsButtonBPressed_020632c8 IsButtonBPressed
 #define IsButtonYPressed_02063300 IsButtonYPressed
 #define PlaySoundEffect_0204d924 PlaySoundEffect

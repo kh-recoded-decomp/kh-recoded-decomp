@@ -3,7 +3,7 @@
 extern unsigned int data_ov013_02074ce0;
 extern unsigned int PlaySoundEffect();
 extern unsigned int UpdateMenuTouch();
-extern unsigned int GetMenuCursorTouch();
+extern unsigned int GetMenuTouchHeld();
 extern unsigned int RefreshProgressCaption();
 extern unsigned int func_ov013_0206fbbc();
 extern unsigned int func_ov013_020704a0();
@@ -38,7 +38,7 @@ void func_ov013_020739bc(void) {
   else {
     *(int *)(data_ov013_02074ce0 + 700) = *(int *)(data_ov013_02074ce0 + 700) + -1;
   }
-  active = GetMenuCursorTouch(inputState);
+  active = GetMenuTouchHeld(inputState);
   if (active == 0) {
     func_ov013_020716e4(1);
     return;

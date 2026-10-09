@@ -492,11 +492,11 @@ src/overlays/ov002/calls/CopyWideStringWithNewline.c:
     complete
     .text       start:0x02066484 end:0x020664e4
 
-src/overlays/ov002/auto/func_ov002_020664e4.c:
+src/overlays/ov002/auto/StartPanelFadeIn.c:
     complete
     .text       start:0x020664e4 end:0x020664f4
 
-src/overlays/ov002/auto/func_ov002_020664f4.c:
+src/overlays/ov002/auto/StartPanelFadeOut.c:
     complete
     .text       start:0x020664f4 end:0x02066504
 
@@ -524,7 +524,7 @@ src/overlays/ov002/calls/MarkScreenFadeComplete.c:
     complete
     .text       start:0x020666b4 end:0x020666c8
 
-src/overlays/ov002/calls/func_ov002_020666c8.c:
+src/overlays/ov002/calls/InitMenuCursorState.c:
     complete
     .text       start:0x020666c8 end:0x0206671c
 
@@ -532,19 +532,19 @@ src/overlays/ov002/calls/UpdateMenuTouch.c:
     complete
     .text       start:0x0206671c end:0x02066a68
 
-src/overlays/ov002/calls/func_ov002_02066a68.c:
+src/overlays/ov002/calls/ReleaseMenuCursorState.c:
     complete
     .text       start:0x02066a68 end:0x02066a90
 
-src/overlays/ov002/calls/GetMenuRectSize.c:
+src/overlays/ov002/calls/GetMenuTouchDisplacement.c:
     complete
     .text       start:0x02066a90 end:0x02066ad0
 
-src/overlays/ov002/calls/GetMenuCursorTouch.c:
+src/overlays/ov002/calls/GetMenuTouchHeld.c:
     complete
     .text       start:0x02066b2c end:0x02066b84
 
-src/overlays/ov002/calls/GetMenuCursorHeld.c:
+src/overlays/ov002/calls/GetMenuTouchPressed.c:
     complete
     .text       start:0x02066b84 end:0x02066bdc
 

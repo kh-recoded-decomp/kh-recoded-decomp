@@ -12,7 +12,7 @@ an identified name (NitroSDK, NNS, MSL, ...) but no source yet.
 | PART itcm | 91 | 27 | 1 | 8 | 127 | 71.7% | 66.2% |
 | PART ov000 | 76 | 0 | 0 | 2 | 78 | 97.4% | 92.5% |
 | PART ov001 | 2022 | 0 | 0 | 73 | 2095 | 96.5% | 86.2% |
-| PART ov002 | 223 | 0 | 0 | 9 | 232 | 96.1% | 81.9% |
+| PART ov002 | 223 | 0 | 1 | 8 | 232 | 96.1% | 81.9% |
 | PART ov003 | 43 | 0 | 0 | 1 | 44 | 97.7% | 91.2% |
 | PART ov004 | 34 | 0 | 0 | 7 | 41 | 82.9% | 66.7% |
 | DONE ov005 | 1 | 0 | 0 | 0 | 1 | 100.0% | 100.0% |
@@ -115,7 +115,7 @@ an identified name (NitroSDK, NNS, MSL, ...) but no source yet.
 | DONE ov102 | 3 | 0 | 0 | 0 | 3 | 100.0% | 100.0% |
 | PART ov103 | 35 | 0 | 0 | 4 | 39 | 89.7% | 71.2% |
 | PART ov104 | 33 | 24 | 0 | 0 | 57 | 57.9% | 75.8% |
-| **TOTAL** | **9783** | **171** | **8** | **460** | **10422** | **93.9%** | **80.33%** |
+| **TOTAL** | **9783** | **171** | **9** | **459** | **10422** | **93.9%** | **80.33%** |
 
 ## Byte progress
 
@@ -134,4 +134,4 @@ Naming is tracked separately and does not count as reconstructed DATA.
 | Metric | Complete | Total | % |
 |---|---:|---:|---:|
 | Reconstructed byte-exact DATA | **171,826** | **228,172** | **75.31%** |
-| Named DATA symbols | **962** | **2,327** | **41.34%** |
+| Named DATA symbols | **964** | **2,327** | **41.43%** |

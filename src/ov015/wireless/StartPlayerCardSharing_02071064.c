@@ -26,7 +26,7 @@ extern void InitPlayerCard_0206f524(PlayerCard *card);
 extern void InitShareBuffers_02072948(const void *header);
 extern void func_ov015_02072cec(void (*callback)(void));
 extern void AddReceivedPlayerCard_020721ec(void);
-extern void func_ov002_020666c8(u32 value);
+extern void InitMenuCursorState(u32 value);
 
 void StartPlayerCardSharing_02071064(void)
 {
@@ -43,5 +43,5 @@ void StartPlayerCardSharing_02071064(void)
     data_ov015_0207e960->exitTimer = 0;
     data_ov015_0207e960->stateFlag6 = 0;
     data_ov015_0207e960->stateFlag2 = 0;
-    func_ov002_020666c8(0);
+    InitMenuCursorState(0);
 }

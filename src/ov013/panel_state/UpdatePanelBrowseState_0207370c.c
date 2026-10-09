@@ -27,7 +27,7 @@ extern PanelState *g_panelState_02074ce0;
 extern u32 func_ov002_0206655c(void);
 extern BOOL IsButtonXPressed_020632e4(void);
 extern BOOL PlaySoundEffect_0204d924(int seqArcNo, int index);
-extern void func_ov002_020664f4(int mode);
+extern void StartPanelFadeOut(int mode);
 extern u16 *func_ov002_02062000(void);
 extern void func_ov027_020b8ca8(void *panel, int value);
 extern u32 ScrollListKeys_020631b4(u32 keys, ScrollList *list);
@@ -50,18 +50,18 @@ void UpdatePanelBrowseState_0207370c(void) {
     case 10:
         if (IsButtonXPressed_020632e4()) {
             PlaySoundEffect_0204d924(2, 3);
-            func_ov002_020664f4(3);
+            StartPanelFadeOut(3);
             g_panelState_02074ce0->resultState = 60;
             break;
         }
         func_ov027_020b8ca8(g_panelState_02074ce0->panel, *func_ov002_02062000());
         switch (g_panelState_02074ce0->resultMode) {
         case 1:
-            func_ov002_020664f4(3);
+            StartPanelFadeOut(3);
             g_panelState_02074ce0->resultState = 50;
             break;
         case 2:
-            func_ov002_020664f4(3);
+            StartPanelFadeOut(3);
             g_panelState_02074ce0->resultState = 40;
             break;
         }

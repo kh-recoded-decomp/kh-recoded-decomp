@@ -16,7 +16,7 @@ extern int data_0206085c;
 extern BOOL IsButtonBPressed_020632c8(void);
 extern u16 *func_ov002_02062000(void);
 extern u32 func_ov002_0206655c(void);
-extern void func_ov002_020664f4(int mode);
+extern void StartPanelFadeOut(int mode);
 extern BOOL PlaySoundEffect_0204d924(int seqArcNo, int index);
 extern void func_ov013_02070aa0(void);
 extern void func_ov013_0206f06c(void);
@@ -51,7 +51,7 @@ void UpdatePanelResultState_020724c0(void) {
                 func_ov013_0206f06c();
                 g_panelState_02074ce0->resultState = 20;
             } else {
-                func_ov002_020664f4(3);
+                StartPanelFadeOut(3);
                 g_panelState_02074ce0->resultState = 35;
             }
         } else if (g_panelState_02074ce0->resultMode == 2) {
@@ -61,7 +61,7 @@ void UpdatePanelResultState_020724c0(void) {
         }
         break;
     case 20:
-        func_ov002_020664f4(1);
+        StartPanelFadeOut(1);
         g_panelState_02074ce0->resultState = 30;
         break;
     case 30:

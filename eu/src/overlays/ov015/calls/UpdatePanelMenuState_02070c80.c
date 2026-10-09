@@ -1,6 +1,6 @@
 #define func_ov002_0206655c IsScreenFadeComplete
 #define DispatchContextCommand_02066c78 DispatchContextCommand
-#define GetMenuCursorTouch_02066b2c GetMenuCursorTouch
+#define GetMenuTouchHeld_02066b2c GetMenuTouchHeld
 #define IsButtonBPressed_020632c8 IsButtonBPressed
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define SetEntrySlotsVisible_020b9580 SetEntrySlotsVisible

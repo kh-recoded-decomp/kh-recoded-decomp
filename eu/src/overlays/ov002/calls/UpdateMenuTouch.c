@@ -1,4 +1,4 @@
 #define CopyRecentTouchPoints_0202b618 CopyRecentTouchPoints
-#define GetMenuRectSize_02066a90 GetMenuRectSize
+#define GetMenuTouchDisplacement_02066a90 GetMenuTouchDisplacement
 #define UpdateMenuTouch_0206671c UpdateMenuTouch
 #include "src/ov002/panel_state/UpdateMenuTouch_0206671c.c"

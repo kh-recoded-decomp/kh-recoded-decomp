@@ -55,8 +55,8 @@ extern PanelState *data_ov013_02074ce0;
 extern void SpawnDropsPerTenUnits_0206671c(void);
 extern BOOL IsGlobalBit0Set_020632ac(void);
 extern BOOL IsButtonBPressed_020632c8(void);
-extern BOOL GetMenuCursorHeld_02066b84(int index);
-extern BOOL GetMenuCursorTouch_02066b2c(int index);
+extern BOOL GetMenuTouchPressed_02066b84(int index);
+extern BOOL GetMenuTouchHeld_02066b2c(int index);
 extern BOOL PlaySoundEffect_0204d924(int seqArcNo, int index);
 extern void func_ov002_020620fc(int value);
 extern void func_ov013_02070aa0(void);
@@ -75,8 +75,8 @@ void UpdatePanelDismissPrompt_02073d14(void)
         data_ov013_02074ce0->step = 5;
         break;
     case 5:
-        if (IsGlobalBit0Set_020632ac() || IsButtonBPressed_020632c8() || GetMenuCursorHeld_02066b84(0)) {
-            if (IsGlobalBit0Set_020632ac() || GetMenuCursorTouch_02066b2c(0)) {
+        if (IsGlobalBit0Set_020632ac() || IsButtonBPressed_020632c8() || GetMenuTouchPressed_02066b84(0)) {
+            if (IsGlobalBit0Set_020632ac() || GetMenuTouchHeld_02066b2c(0)) {
                 PlaySoundEffect_0204d924(2, 1);
             } else if (IsButtonBPressed_020632c8()) {
                 PlaySoundEffect_0204d924(2, 2);

@@ -33,7 +33,7 @@ typedef struct {
 extern PanelContext *data_ov015_0207e960;
 
 extern void func_ov002_0206671c(void);
-extern u16 GetMenuCursorTouch_02066b2c(int arg);
+extern u16 GetMenuTouchHeld_02066b2c(int arg);
 extern BOOL IsButtonBPressed_020632c8(void);
 extern void PlaySoundEffect_0204d924(int bank, int id);
 extern PanelEntry *func_ov027_020b90a4(void *manager, int id);
@@ -42,7 +42,7 @@ extern void SetEntrySlotsVisible_020b9580(void *manager, PanelEntry *entry, int 
 extern void func_ov015_0206eba4(void);
 extern u16 *func_ov002_02062000(void);
 extern void func_ov027_020b8ca8(void *manager, u16 entry);
-extern void func_ov002_020664f4(int mode);
+extern void StartPanelFadeOut(int mode);
 extern BOOL func_ov002_0206655c(void);
 extern u32 DispatchContextCommand_02066c78(u32 command, u32 value, u32 extra, void *buffer);
 extern void func_0204d960(int bank, int seq, int fade);
@@ -61,7 +61,7 @@ void UpdatePanelMenuState_02070c80(void)
     func_ov002_0206671c();
     switch (data_ov015_0207e960->state) {
     case 0:
-        data_ov015_0207e960->touchCursor = GetMenuCursorTouch_02066b2c(0);
+        data_ov015_0207e960->touchCursor = GetMenuTouchHeld_02066b2c(0);
         data_ov015_0207e960->state = 5;
         break;
     case 5:
@@ -99,13 +99,13 @@ void UpdatePanelMenuState_02070c80(void)
             return;
         }
         if (data_ov015_0207e960->confirmPending) {
-            func_ov002_020664f4(3);
+            StartPanelFadeOut(3);
             data_ov015_0207e960->confirmPending = 0;
             data_ov015_0207e960->state = 0x32;
         }
         break;
     case 10:
-        func_ov002_020664f4(3);
+        StartPanelFadeOut(3);
         data_ov015_0207e960->state = 0x14;
         break;
     case 0x14:

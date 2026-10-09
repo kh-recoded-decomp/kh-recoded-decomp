@@ -30,7 +30,7 @@ extern int PollCardThreadState_020271f8(void);
 extern void SetCardThreadStartTick_02027258(void);
 extern void func_ov002_02066c44(void);
 extern void func_ov002_0206671c(void);
-extern int GetMenuCursorHeld_02066b84(int arg);
+extern int GetMenuTouchPressed_02066b84(int arg);
 extern void func_ov002_020620fc(int arg);
 
 void UpdateSaveMenuState_02065374(void)
@@ -113,7 +113,7 @@ void UpdateSaveMenuState_02065374(void)
         break;
     case 50:
         func_ov002_0206671c();
-        if (IsGlobalBit0Set_020632ac() || IsButtonBPressed_020632c8() || GetMenuCursorHeld_02066b84(0)) {
+        if (IsGlobalBit0Set_020632ac() || IsButtonBPressed_020632c8() || GetMenuTouchPressed_02066b84(0)) {
             func_ov002_020620fc(0);
             PlaySoundEffect_0204d924(2, 2);
             func_ov002_02064f6c(1);

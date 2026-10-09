@@ -17,7 +17,7 @@ typedef struct MenuContext {
 extern MenuContext *g_context_0206c464;
 
 extern void func_ov002_0206671c(void);
-extern u16 GetMenuCursorTouch_02066b2c(int mode);
+extern u16 GetMenuTouchHeld_02066b2c(int mode);
 extern BOOL IsButtonBPressed_020632c8(void);
 extern BOOL func_ov002_02066c58(void);
 extern void func_ov002_02064f6c(int nextState);
@@ -30,7 +30,7 @@ void UpdateMenuTouchSelect_020650e0(void)
     func_ov002_0206671c();
     switch (g_context_0206c464->phase) {
     case 0:
-        g_context_0206c464->touchCursor = GetMenuCursorTouch_02066b2c(0);
+        g_context_0206c464->touchCursor = GetMenuTouchHeld_02066b2c(0);
         g_context_0206c464->phase = 5;
         break;
     case 5:

@@ -24,7 +24,7 @@ extern void func_ov027_020b9764(void *panel, PanelElement *element, BOOL enabled
 extern void func_ov027_020b95e4(void *panel, PanelElement *element);
 extern void func_ov027_020b9098(void *panel, void (*callback)(void));
 extern void UpdateMenuSelectionSound_02065d54(void);
-extern void func_ov002_020666c8(int value);
+extern void InitMenuCursorState(int value);
 
 void OpenMenuSelector_02065244(void)
 {
@@ -45,5 +45,5 @@ void OpenMenuSelector_02065244(void)
     func_ov027_020b9098(g_context_0206c464->panel, UpdateMenuSelectionSound_02065d54);
     g_context_0206c464->phase = 0;
     g_context_0206c464->unk_02 = 0;
-    func_ov002_020666c8(0);
+    InitMenuCursorState(0);
 }

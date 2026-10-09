@@ -7,7 +7,7 @@ typedef struct MenuContext {
 
 extern MenuContext *g_context_0206c464;
 extern void func_ov002_02062014(int value);
-extern void func_ov002_020664e4(int value);
+extern void StartPanelFadeIn(int value);
 extern u32 func_ov002_0206655c(void);
 extern void func_ov002_02064f6c(int state);
 
@@ -19,7 +19,7 @@ void RunMenuIntroStep_02064ff8(void)
         g_context_0206c464->step = 10;
         break;
     case 10:
-        func_ov002_020664e4(3);
+        StartPanelFadeIn(3);
         g_context_0206c464->step = 20;
         break;
     case 20:

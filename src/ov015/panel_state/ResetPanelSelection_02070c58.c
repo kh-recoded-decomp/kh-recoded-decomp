@@ -8,11 +8,11 @@ typedef struct PanelContext {
 } PanelContext;
 
 extern PanelContext *data_ov015_0207e960;
-extern void func_ov002_020666c8(unsigned int value);
+extern void InitMenuCursorState(unsigned int value);
 
 void ResetPanelSelection_02070c58(void)
 {
     data_ov015_0207e960->selection = 0;
     data_ov015_0207e960->pendingAction = 0;
-    func_ov002_020666c8(0);
+    InitMenuCursorState(0);
 }
