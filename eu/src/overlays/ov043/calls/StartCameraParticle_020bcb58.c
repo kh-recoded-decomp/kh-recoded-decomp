@@ -1,5 +1,5 @@
 #define InitLaunchedParticle_020afa70 InitLaunchedParticle
-#define MTX_Copy43To33_01ff913c func_01ff913c
+#define MTX_Copy43To33_01ff913c MTX_Copy43To33
 #define StartCameraParticle_020bcb38 StartCameraParticle_020bcb58
 #define data_0205a970 NNS_G3dGlb_cameraMtx
 #define data_ov043_020bd2c0 gOv043CameraState

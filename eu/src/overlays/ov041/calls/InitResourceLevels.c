@@ -2,5 +2,5 @@
 #define Msg_OpenContainerAndReadHeader_0202cc6c Msg_OpenContainerAndReadHeader
 #define data_ov041_020cf948 sOv041_RpgEfCoP2_020cf968
 #define func_ov041_020bddfc OpenSlotHandleIfEmpty
-#define func_ov041_020bec60 func_ov041_020bec80
+#define func_ov041_020bec60 HasStageEntryKind
 #include "src/ov041/unclassified_helpers/InitResourceLevels_020bdc6c.c"

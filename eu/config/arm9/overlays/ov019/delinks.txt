@@ -124,6 +124,10 @@ src/overlays/ov019/calls/SetLinkedCallbackId.c:
     complete
     .text       start:0x020a35a0 end:0x020a35a6
 
+src/overlays/ov019/calls/SetLinkedObjectVisible.c:
+    complete
+    .text       start:0x020a35a8 end:0x020a35dc
+
 src/overlays/ov019/calls/SendStateEvent10.c:
     complete
     .text       start:0x020a35dc end:0x020a3628

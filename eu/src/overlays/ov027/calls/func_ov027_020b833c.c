@@ -1,5 +1,5 @@
 #define Ov000_FlushFlaggedElements func_ov027_020b7fac
 #define Ov000_SweepFreeElementBuffers func_ov027_020b817c
-#define Ov000_SweepReleasePendingElements func_ov027_020b80dc
+#define Ov000_SweepReleasePendingElements SweepReleasePendingElements
 #define SweepElements_020b831c func_ov027_020b833c
 #include "src/ov027/shared_engine/SweepElements_020b831c.c"

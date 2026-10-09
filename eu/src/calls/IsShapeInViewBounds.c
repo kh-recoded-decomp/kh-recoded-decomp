@@ -1,6 +1,6 @@
 #define GetShapeCenter_0203b43c GetShapeCenter
 #define IsShapeInViewBounds_0203eab0 IsShapeInViewBounds
-#define MTX_Copy43To33_01ff913c func_01ff913c
+#define MTX_Copy43To33_01ff913c MTX_Copy43To33
 #define VEC_DotProduct_01ff9e6c VEC_DotProduct
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define data_0205a970 NNS_G3dGlb_cameraMtx

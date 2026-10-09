@@ -1,5 +1,6 @@
 #define AngleBetweenVecs_0204b070 AngleBetweenVecs
 #define GetCameraRollAngle_020af84c GetCameraRollAngle
+#define func_01ff913c MTX_Copy43To33
 #define VEC_DotProduct_01ff9e6c VEC_DotProduct
 #define data_0205a970 NNS_G3dGlb_cameraMtx
 #define func_0204aea8 GetUnitRejectionFromAxis

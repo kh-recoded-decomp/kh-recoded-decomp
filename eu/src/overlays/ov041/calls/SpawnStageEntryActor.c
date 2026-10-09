@@ -32,7 +32,7 @@
 #define func_02036ab8 Obj_SetWord1CC
 #define func_ov041_020c21d5 func_ov041_020c21f4
 #define func_ov041_020c2305 func_ov041_020c2324
-#define func_ov041_020c23cd func_ov041_020c23ec
+#define func_ov041_020c23cd UpdateStageShadowActor
 #define func_ov041_020c2431 func_ov041_020c2450
 #define selectJointAnimationBlend_0202f2cc selectJointAnimationBlend
 #include "src/ov041/unclassified_helpers/SpawnStageEntryActor_020c18cc.c"

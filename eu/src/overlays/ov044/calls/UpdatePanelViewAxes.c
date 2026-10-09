@@ -1,5 +1,5 @@
 #define FX_Div_01ff9c84 FX_Div
-#define MTX_Copy43To33_01ff913c func_01ff913c
+#define MTX_Copy43To33_01ff913c MTX_Copy43To33
 #define ReflectVectorAcrossNormal_0204adf8 ReflectVectorAcrossNormal
 #define ScaleVecFx32InPlace_0204a5e4 ScaleVecFx32InPlace
 #define UpdatePanelViewAxes_020d0bb8 UpdatePanelViewAxes

@@ -1,5 +1,5 @@
 #define ScriptCmd_ApplyPackedIds_020a2108 ScriptCmd_ApplyPackedIds
 #define ScriptVm_ConsumeOperandInt_020a1de0 ScriptVm_ConsumeOperandInt
 #define func_ov001_02087214 func_ov001_0208723c
-#define func_ov016_020a68d8 func_ov016_020a68f8
+#define func_ov016_020a68d8 SetFieldEntryPackedIds
 #include "src/ov016/script_commands/ScriptCmd_ApplyPackedIds_020a2108.c"

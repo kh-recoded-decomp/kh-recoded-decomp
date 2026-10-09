@@ -1,4 +1,5 @@
 #define BuildCameraFrustumColliders_020bd858 BuildCameraFrustumColliders
+#define func_01ff913c MTX_Copy43To33
 #define ComputePolygonEdgeFrames_0203b0b4 ComputePolygonEdgeFrames
 #define OffsetBoxByDelta_0203ac70 OffsetBoxByDelta
 #define ScaleVecFx32InPlace_0204a5e4 ScaleVecFx32InPlace

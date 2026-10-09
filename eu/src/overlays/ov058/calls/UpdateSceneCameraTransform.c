@@ -1,4 +1,5 @@
 #define MTX_RotY33_01ff923c MTX_RotY33_
+#define func_01ff9110 MTX_Copy33To43
 #define UpdateSceneCameraTransform_020d720c UpdateSceneCameraTransform
 #define data_0205356c data_02053580
 #define data_ov058_020d8a24 data_ov058_020d8a44

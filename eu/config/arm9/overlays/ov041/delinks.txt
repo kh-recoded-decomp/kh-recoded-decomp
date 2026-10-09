@@ -100,6 +100,10 @@ src/overlays/ov041/calls/FreeManagerRecordTable.c:
     complete
     .text       start:0x020be224 end:0x020be258
 
+src/overlays/ov041/calls/HasStageEntryKind.c:
+    complete
+    .text       start:0x020bec80 end:0x020becbc
+
 src/overlays/ov041/calls/IsStageKindAvailable.c:
     complete
     .text       start:0x020becbc end:0x020bed58
@@ -140,9 +144,17 @@ src/overlays/ov041/calls/FindFreeSlotId.c:
     complete
     .text       start:0x020c21d0 end:0x020c21f4
 
+src/overlays/ov041/calls/UpdateStageShadowActor.c:
+    complete
+    .text       start:0x020c23ec end:0x020c2450
+
 src/overlays/ov041/calls/InstallModelRenderCallback.c:
     complete
     .text       start:0x020c2538 end:0x020c25ec
+
+src/overlays/ov041/calls/ModelRenderCallbackKindFF.c:
+    complete
+    .text       start:0x020c25ec end:0x020c263c
 
 src/overlays/ov041/calls/ModelRenderCallbackKindFD.c:
     complete

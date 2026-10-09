@@ -412,6 +412,10 @@ src/overlays/ov016/calls/InitScriptEntityParams.c:
     complete
     .text       start:0x020a62fc end:0x020a6358
 
+src/overlays/ov016/calls/SetFieldEntryPackedIds.c:
+    complete
+    .text       start:0x020a68f8 end:0x020a6930
+
 src/overlays/ov016/calls/SetFieldUnitPathPoint.c:
     complete
     .text       start:0x020a6930 end:0x020a695c

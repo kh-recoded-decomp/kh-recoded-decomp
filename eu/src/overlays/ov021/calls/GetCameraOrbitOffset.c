@@ -1,4 +1,5 @@
 #define GetCameraOrbitOffset_020af8d4 GetCameraOrbitOffset
+#define func_01ff913c MTX_Copy43To33
 #define ScaleVecFx32InPlace_0204a5e4 ScaleVecFx32InPlace
 #define VEC_MultAdd_01ffa09c VEC_MultAdd
 #define data_0205356c data_02053580

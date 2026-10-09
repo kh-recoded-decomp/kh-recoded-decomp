@@ -45,6 +45,10 @@ libs/nitro/mi/asm_stubs/auto/MIi_CpuCopy16.c:
     complete
     .text       start:0x01ff869c end:0x01ff86b8
 
+libs/nitro/mi/asm_stubs/calls/MIi_CpuCopy16Backward.c:
+    complete
+    .text       start:0x01ff86b8 end:0x01ff86d8
+
 src/calls/MI_CpuMove16.c:
     complete
     .text       start:0x01ff86d8 end:0x01ff86fc
@@ -96,6 +100,14 @@ libs/nitro/mi/asm_stubs/auto/MI_Zero36B.c:
 libs/nitro/mtx/asm_stubs/auto/MTX_Identity33_.c:
     complete
     .text       start:0x01ff90ec end:0x01ff9110
+
+src/calls/MTX_Copy33To43.c:
+    complete
+    .text       start:0x01ff9110 end:0x01ff913c
+
+src/calls/MTX_Copy43To33.c:
+    complete
+    .text       start:0x01ff913c end:0x01ff9158
 
 src/calls/MTX_ScaleApply33.c:
     complete

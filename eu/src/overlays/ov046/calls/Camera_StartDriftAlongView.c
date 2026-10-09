@@ -1,6 +1,6 @@
 #define Camera_StartDriftAlongView_020c0fd4 Camera_StartDriftAlongView
 #define InitDriftParticle_020afb34 InitDriftParticle
-#define MTX_Copy43To33_01ff913c func_01ff913c
+#define MTX_Copy43To33_01ff913c MTX_Copy43To33
 #define data_0205a970 NNS_G3dGlb_cameraMtx
 #define g_cameraManager_020c34e0 data_ov046_020c3500
 #include "src/ov046/shared_engine/Camera_StartDriftAlongView_020c0fd4.c"

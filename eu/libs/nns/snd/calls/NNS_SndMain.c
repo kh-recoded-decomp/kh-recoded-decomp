@@ -1,23 +1,7 @@
-typedef unsigned int u32;
-
-extern const void *SND_RecvCommandReply(u32 flags);
-extern int SND_FlushCommand();
-extern void NNSi_SndPlayerMain(void);
-extern void NNSi_SndCaptureMain(void);
-extern void NNSi_SndArcStrmMain(void);
-
-void NNS_SndMain(void)
-{
-    u32 flags = 0;
-
-    while (SND_RecvCommandReply(flags) != 0) {
-    }
-
-    NNSi_SndPlayerMain();
-    NNSi_SndCaptureMain();
-    NNSi_SndArcStrmMain();
-    asm {
-        mov r0, flags
-    }
-    (void)SND_FlushCommand();
-}
+#define func_0201d290 NNS_SndMain
+#define func_0200eec0 SND_RecvCommandReply
+#define func_0200f080 SND_FlushCommand
+#define func_0201d974 NNSi_SndPlayerMain
+#define func_0201e544 NNSi_SndCaptureMain
+#define func_02020388 NNSi_SndArcStrmMain
+#include "src/arm9/library_nns_snd/func_0201d290.c"
