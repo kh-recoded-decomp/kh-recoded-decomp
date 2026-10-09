@@ -436,9 +436,9 @@ extern u16 data_027e0068;
 #define sMyAid data_027e0064
 #define sConnectBitmap data_027e0068
 
-extern void SetPanelTransitionMode(int nState);
+extern void WH_ChangeSysState(int nState);
 extern void WH_SetError(int nError);
-#define WH_ChangeSysState SetPanelTransitionMode
+#define WH_ChangeSysState WH_ChangeSysState
 #define WH_SetError WH_SetError
 
 extern WMErrCode func_ov105_020bdea4(WMCallbackFunc callback, u16 aid);

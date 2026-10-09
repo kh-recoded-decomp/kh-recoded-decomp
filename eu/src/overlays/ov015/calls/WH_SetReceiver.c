@@ -1,4 +1,4 @@
-#define SetPanelTransitionMode_020737c4 SetPanelTransitionMode
+#define SetPanelTransitionMode_020737c4 WH_ChangeSysState
 #define SetSlotEventHandler_0201144c SetSlotEventHandler
 #define WH_SetReceiver_02074e3c WH_SetReceiver
 #define func_ov015_02074840 WH_PortReceiveCallback

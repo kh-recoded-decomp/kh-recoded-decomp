@@ -1,8 +1,9 @@
 #define ClearSlotEventHandler_02011ea4 ClearSlotEventHandler
 #define EndWirelessKeySharing_020745dc EndWirelessKeySharing
 #define EndWirelessScan_02074118 EndWirelessScan
-#define PollPanelTransition_02074e80 PollPanelTransition
-#define SetPanelTransitionMode_020737c4 SetPanelTransitionMode
+#define PollPanelTransition_02074e80 WH_Reset
+#define SetPanelTransitionMode_020737c4 WH_ChangeSysState
 #define WH_EndChildStep_02073c7c WH_EndChildStep
 #define WH_Finalize_02074ec8 WH_Finalize
+#define func_ov015_02074634 WH_StateInEndChildMP
 #include "src/ov015/wireless/WH_Finalize_02074ec8.c"

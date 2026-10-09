@@ -488,7 +488,7 @@ src/overlays/ov015/calls/IsPlayerCardValid.c:
     complete
     .text       start:0x020736e0 end:0x020737c4
 
-src/overlays/ov015/calls/SetPanelTransitionMode.c:
+src/overlays/ov015/calls/WH_ChangeSysState.c:
     complete
     .text       start:0x020737c4 end:0x020737d4
 
@@ -548,6 +548,10 @@ src/overlays/ov015/calls/HandlePanelPromptSelection.c:
     complete
     .text       start:0x02073d44 end:0x02073d68
 
+src/overlays/ov015/calls/WH_StartScan.c:
+    complete
+    .text       start:0x02073d68 end:0x02073e1c
+
 src/overlays/ov015/calls/WH_StateOutStartScanEx.c:
     complete
     .text       start:0x02073f34 end:0x02074118
@@ -592,29 +596,33 @@ src/overlays/ov015/calls/EndWirelessKeySharing.c:
     complete
     .text       start:0x020745dc end:0x02074634
 
-src/overlays/ov015/calls/func_ov015_02074634.c:
+src/overlays/ov015/calls/WH_StateInEndChildMP.c:
     complete
     .text       start:0x02074634 end:0x02074664
 
-src/overlays/ov015/calls/func_ov015_02074664.c:
+src/overlays/ov015/calls/WH_StateOutEndChildMP.c:
     complete
     .text       start:0x02074664 end:0x02074698
 
-src/overlays/ov015/calls/func_ov015_02074698.c:
+src/overlays/ov015/calls/WH_StateInEndChild.c:
     complete
     .text       start:0x02074698 end:0x020746d4
 
-src/overlays/ov015/calls/HandlePanelConfirmSelection.c:
+src/overlays/ov015/calls/WH_StateOutEndChild.c:
     complete
     .text       start:0x020746d4 end:0x020746f8
 
-src/overlays/ov015/calls/func_ov015_020746f8.c:
+src/overlays/ov015/calls/WH_StateInReset.c:
     complete
     .text       start:0x020746f8 end:0x02074728
 
-src/overlays/ov015/calls/OnWirelessResetDone.c:
+src/overlays/ov015/calls/WH_StateOutReset.c:
     complete
     .text       start:0x02074728 end:0x02074774
+
+src/overlays/ov015/calls/WH_StateInSetMPData.c:
+    complete
+    .text       start:0x02074774 end:0x020747e8
 
 src/overlays/ov015/calls/WH_OnPortSendDone.c:
     complete
@@ -684,11 +692,11 @@ src/overlays/ov015/calls/WH_SetReceiver.c:
     complete
     .text       start:0x02074e3c end:0x02074e74
 
-src/overlays/ov015/calls/func_ov015_02074e74.c:
+src/overlays/ov015/calls/WH_SendData.c:
     complete
     .text       start:0x02074e74 end:0x02074e80
 
-src/overlays/ov015/calls/PollPanelTransition.c:
+src/overlays/ov015/calls/WH_Reset.c:
     complete
     .text       start:0x02074e80 end:0x02074ec8
 

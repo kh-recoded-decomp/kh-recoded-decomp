@@ -2,4 +2,5 @@
 #define HandleConnectTransition_02073150 HandleConnectTransition
 #define WH_SetReceiver_02074e3c WH_SetReceiver
 #define func_ov015_02073348 ReceivePeerCardData
+#define func_ov015_02073d68 WH_StartScan
 #include "src/ov015/wireless/HandleConnectTransition_02073150.c"

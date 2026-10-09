@@ -467,9 +467,9 @@ extern u16 data_027e0068;
 #define sMyAid data_027e0064
 #define sConnectBitmap data_027e0068
 
-extern void SetPanelTransitionMode(int nState);
+extern void WH_ChangeSysState(int nState);
 extern void WH_SetError(int nError);
-#define WH_ChangeSysState SetPanelTransitionMode
+#define WH_ChangeSysState WH_ChangeSysState
 #define WH_SetError WH_SetError
 
 extern WMErrCode WM_Disconnect(WMCallbackFunc callback, u16 aid);
@@ -486,11 +486,11 @@ extern BOOL func_ov105_020bec64(void);
 extern BOOL func_ov105_020becfc(void);
 extern BOOL func_ov105_020bee7c(void);
 extern void func_ov105_020beee0(void *arg);
-extern void HandlePanelConfirmSelection(void *arg);
+extern void WH_StateOutEndChild(void *arg);
 extern void func_ov105_020bf0e0(void *arg);
 extern void func_ov105_020bf120(void *arg);
 extern BOOL func_ov105_020bf66c(void);
-extern void PollPanelTransition(void);
+extern void WH_Reset(void);
 extern BOOL func_ov105_020beb98(void);
 extern BOOL func_ov105_020be850(void);
 extern BOOL func_ov105_020bef44(void);
@@ -508,16 +508,16 @@ extern void *data_0204c024;
 #define WH_RAND()       (sWh.nRand = sWh.nRand * 69069UL + 12345)
 #define WH_MATH_MIN(a, b) (((a) < (b)) ? (a) : (b))
 
-BOOL func_ov015_02074698(void)
+BOOL WH_StateInEndChild(void)
 {
     WMErrCode result;
 
     WH_ChangeSysState(WH_SYSSTATE_BUSY);
 
-    result = WM_Disconnect(HandlePanelConfirmSelection, 0);
+    result = WM_Disconnect(WH_StateOutEndChild, 0);
     if (result != WM_ERRCODE_OPERATING) {
         WH_SetError(result);
-        PollPanelTransition();
+        WH_Reset();
         return FALSE;
     }
 

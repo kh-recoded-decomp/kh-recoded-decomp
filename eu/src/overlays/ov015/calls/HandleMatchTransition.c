@@ -1,6 +1,6 @@
 #define GetPanelTransitionMode_020748e4 GetPanelTransitionMode
 #define HandleMatchTransition_02073034 HandleMatchTransition
-#define PollPanelTransition_02074e80 PollPanelTransition
+#define PollPanelTransition_02074e80 WH_Reset
 #define func_0202a9d0 func_0202a9e4
 #define func_ov015_02074c24 WH_Initialize
 #include "src/ov015/wireless/HandleMatchTransition_02073034.c"

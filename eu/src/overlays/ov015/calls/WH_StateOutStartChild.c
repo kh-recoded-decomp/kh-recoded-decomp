@@ -1,4 +1,4 @@
-#define SetPanelTransitionMode_020737c4 SetPanelTransitionMode
+#define SetPanelTransitionMode_020737c4 WH_ChangeSysState
 #define WH_SetError_020737d4 WH_SetError
 #define WH_StateInStartChildMP_020743fc WH_StateInStartChildMP
 #define WH_StateOutStartChild_0207431c WH_StateOutStartChild

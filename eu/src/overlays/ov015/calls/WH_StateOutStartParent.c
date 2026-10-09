@@ -20,7 +20,7 @@ typedef struct {
 extern WHState data_ov015_0207e980;
 
 extern void WH_SetError(int code);
-extern void SetPanelTransitionMode(int state);
+extern void WH_ChangeSysState(int state);
 extern int WM_Disconnect(void *callback, u16 aid);
 extern BOOL StartWirelessMP(void);
 
@@ -30,7 +30,7 @@ void WH_StateOutStartParent(WMStartParentCallback *cb) {
 
     if (cb->errcode != 0) {
         WH_SetError(cb->errcode);
-        SetPanelTransitionMode(9);
+        WH_ChangeSysState(9);
         return;
     }
     switch (cb->state) {
@@ -39,7 +39,7 @@ void WH_StateOutStartParent(WMStartParentCallback *cb) {
             result = WM_Disconnect(NULL, cb->aid);
             if (result != 2) {
                 WH_SetError(result);
-                SetPanelTransitionMode(9);
+                WH_ChangeSysState(9);
             }
             break;
         }
@@ -56,7 +56,7 @@ void WH_StateOutStartParent(WMStartParentCallback *cb) {
         break;
     case 0:
         if (!StartWirelessMP()) {
-            SetPanelTransitionMode(9);
+            WH_ChangeSysState(9);
         }
         break;
     case 2:

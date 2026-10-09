@@ -1,3 +1,3 @@
 #define ChoosePanelModeFromSelection_020748ac ChoosePanelModeFromSelection
-#define func_ov015_020737c4 SetPanelTransitionMode
+#define func_ov015_020737c4 WH_ChangeSysState
 #include "src/ov015/reviewed_helpers/ChoosePanelModeFromSelection_020748ac.c"

@@ -1,5 +1,5 @@
 #define GetDispersionBeaconPeriod_020115c8 GetDispersionBeaconPeriod
-#define SetPanelTransitionMode_020737c4 SetPanelTransitionMode
+#define SetPanelTransitionMode_020737c4 WH_ChangeSysState
 #define WH_ParentConnect_02074d98 WH_ParentConnect
 #define advance_wireless_task_step_020737f0 func_ov015_020737f0
 #include "src/ov015/wireless/WH_ParentConnect_02074d98.c"

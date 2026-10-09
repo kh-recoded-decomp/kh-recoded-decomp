@@ -3101,7 +3101,7 @@ src/calls/WM_InitializeEx.c:
     complete
     .text       start:0x020116bc end:0x020116fa
 
-src/calls/RunTransitionSlot1.c:
+src/calls/WM_Reset.c:
     complete
     .text       start:0x020116fc end:0x02011720
 

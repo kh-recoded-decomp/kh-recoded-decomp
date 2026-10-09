@@ -1,4 +1,4 @@
 #define HandlePanelPromptSelection_02073d44 HandlePanelPromptSelection
-#define func_ov015_020737c4 SetPanelTransitionMode
+#define func_ov015_020737c4 WH_ChangeSysState
 #define func_ov015_020737d4 WH_SetError
 #include "src/ov015/reviewed_helpers/HandlePanelPromptSelection_02073d44.c"

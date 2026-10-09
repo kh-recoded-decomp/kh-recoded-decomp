@@ -1,5 +1,5 @@
 #define ChoosePanelModeFromSelection_020748ac ChoosePanelModeFromSelection
 #define RunTransitionSlot2_0201170c RunTransitionSlot2
-#define SetPanelTransitionMode_020737c4 SetPanelTransitionMode
+#define SetPanelTransitionMode_020737c4 WH_ChangeSysState
 #define WH_StartTransitionStep_02074fd0 WH_StartTransitionStep
 #include "src/ov015/wireless/WH_StartTransitionStep_02074fd0.c"

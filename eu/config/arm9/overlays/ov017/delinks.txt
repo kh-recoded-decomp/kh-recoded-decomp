@@ -524,6 +524,10 @@ src/overlays/ov017/auto/func_ov017_020a5264.c:
     complete
     .text       start:0x020a5264 end:0x020a5266
 
+src/overlays/ov017/calls/GetStageObjectLoadPhase.c:
+    complete
+    .text       start:0x020a5268 end:0x020a52a8
+
 src/overlays/ov017/calls/LoadStageObjectPhase.c:
     complete
     .text       start:0x020a52a8 end:0x020a5458

@@ -1,5 +1,5 @@
 #define func_020115ac GetTransitionFrame
-#define func_020737c4 SetPanelTransitionMode
+#define func_020737c4 WH_ChangeSysState
 #define func_020737d4 WH_SetError
 #define func_02074a58 RecordWirelessChannelMeasurement
 #define func_02074b04 func_ov015_02074b04

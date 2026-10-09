@@ -1,5 +1,6 @@
 #define ConfigureMenuPanel_02067bec ConfigureMenuPanel
 #define SetPanelItemHighlight_0207b19c SetPanelItemHighlight
 #define data_ov001_020a046c data_ov001_020a048c
+#define func_ov001_02067140 FindMenuPanelById
 #define func_ov001_020671e0 SyncDoorMeshState
 #include "src/ov001/field_manager/ConfigureMenuPanel_02067bec.c"

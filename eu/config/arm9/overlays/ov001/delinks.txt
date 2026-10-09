@@ -1104,6 +1104,10 @@ src/overlays/ov001/calls/FindGroupItemById.c:
     complete
     .text       start:0x02067108 end:0x02067140
 
+src/overlays/ov001/calls/FindMenuPanelById.c:
+    complete
+    .text       start:0x02067140 end:0x02067184
+
 src/overlays/ov001/calls/ExpandBoundsByArea.c:
     complete
     .text       start:0x02067184 end:0x020671de

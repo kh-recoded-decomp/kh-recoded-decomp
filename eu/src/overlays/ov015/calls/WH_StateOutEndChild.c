@@ -1,0 +1,4 @@
+#define HandlePanelConfirmSelection_020746d4 WH_StateOutEndChild
+#define func_ov015_020737c4 WH_ChangeSysState
+#define func_ov015_020737d4 WH_SetError
+#include "src/ov015/reviewed_helpers/HandlePanelConfirmSelection_020746d4.c"

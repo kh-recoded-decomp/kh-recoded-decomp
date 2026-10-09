@@ -1,7 +1,7 @@
 #define advance_wireless_task_step_020737f0 func_ov015_020737f0
 #define data_0207ea20 data_ov015_0207ea20
 #define func_02011738 WM_SetParentParameter
-#define func_020737c4 SetPanelTransitionMode
+#define func_020737c4 WH_ChangeSysState
 #define func_020737d4 WH_SetError
 #define func_02073830 WH_StateOutSetParentParam
 #include "src/ov015/wireless/advance_wireless_task_step_020737f0.c"

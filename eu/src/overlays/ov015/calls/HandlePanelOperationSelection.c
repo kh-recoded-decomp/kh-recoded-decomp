@@ -1,6 +1,6 @@
 #define HandlePanelOperationSelection_02074d44 HandlePanelOperationSelection
 #define func_0201141c SetSessionCallback
-#define func_ov015_020737c4 SetPanelTransitionMode
+#define func_ov015_020737c4 WH_ChangeSysState
 #define func_ov015_020737d4 WH_SetError
 #define panelState_0207e980 data_ov015_0207e980
 #include "src/ov015/reviewed_helpers/HandlePanelOperationSelection_02074d44.c"

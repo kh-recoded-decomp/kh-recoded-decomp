@@ -1,6 +1,6 @@
 #define DC_InvalidateRange_02003414 DC_InvalidateRange
 #define MI_CpuCopy8_01ff89a8 MI_CpuCopy8
-#define SetPanelTransitionMode_020737c4 SetPanelTransitionMode
+#define SetPanelTransitionMode_020737c4 WH_ChangeSysState
 #define WH_SetError_020737d4 WH_SetError
 #define WH_StateOutStartScanEx_02073f34 WH_StateOutStartScanEx
 #include "src/ov015/wireless/WH_StateOutStartScanEx_02073f34.c"

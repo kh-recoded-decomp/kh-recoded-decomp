@@ -1,4 +1,4 @@
 #define GetPanelTransitionMode_020748e4 GetPanelTransitionMode
-#define PXI_Init_02074e74 func_ov015_02074e74
+#define PXI_Init_02074e74 WH_SendData
 #define UpdateConnectTimer_02072c48 UpdateConnectTimer
 #include "src/ov015/wireless/UpdateConnectTimer_02072c48.c"

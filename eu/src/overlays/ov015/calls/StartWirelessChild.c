@@ -3,7 +3,7 @@
 #define data_0207e980 data_ov015_0207e980
 #define data_0207e9f4 data_ov015_0207e9f4
 #define data_0207eb60 data_ov015_0207eb60
-#define func_020737c4 SetPanelTransitionMode
+#define func_020737c4 WH_ChangeSysState
 #define func_020737d4 WH_SetError
 #define func_0207431c WH_StateOutStartChild
 #include "src/ov015/wireless/StartWirelessChild_02074288.c"
