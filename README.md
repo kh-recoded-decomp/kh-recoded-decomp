@@ -17,22 +17,22 @@ maintained by [@ricky074game](https://github.com/ricky074game) and [@Yokimitsuro
 <!-- regions:start -->
 | Region | C code bytes | % | Functions |
 |---|---:|---:|---:|
-| **US** `BK9E` | 1,359,032 / 1,768,220 | **76.9%** | 9,764 / 10,359 |
+| **US** `BK9E` | 1,363,584 / 1,768,220 | **77.1%** | 9,770 / 10,359 |
 | **EU** `BK9P` | 1,357,440 / 1,658,216 | **81.9%** | 9,803 / 10,422 |
 | US verified original assembly (not C) | 15,762 | 0.9% | 139 |
 | **Shared** (same function, matched in both) | 1,305,320 | 78.7% of EU | 9,191 |
 
-8,025 shared functions are stored once in `src/` and built for both regions; 1,166 still have separate EU copies. 573 matched functions are US-only so far and 612 are EU-only. EU numbers come from `eu/tools/audit_progress.py`; per-module EU detail is in [eu/PROGRESS.md](eu/PROGRESS.md).
+8,025 shared functions are stored once in `src/` and built for both regions; 1,166 still have separate EU copies. 579 matched functions are US-only so far and 612 are EU-only. EU numbers come from `eu/tools/audit_progress.py`; per-module EU detail is in [eu/PROGRESS.md](eu/PROGRESS.md).
 <!-- regions:end -->
 
 US detail:
 
 | | Matched | Total | % |
 |---|---:|---:|---:|
-| **ARM9 code (C bytes)** | **1,359,032** | 1,768,220 | **76.9%** |
-| ARM9 core + autoloads | 305,340 | 370,004 | 82.5% |
-| ARM9 overlays (105) | 1,053,692 | 1,398,216 | 75.4% |
-| Functions | 9,764 | 10,359 | 94.3% |
+| **ARM9 code (C bytes)** | **1,363,584** | 1,768,220 | **77.1%** |
+| ARM9 core + autoloads | 306,356 | 370,004 | 82.8% |
+| ARM9 overlays (105) | 1,057,228 | 1,398,216 | 75.6% |
+| Functions | 9,770 | 10,359 | 94.3% |
 | Data bytes (.rodata/.data/.bss) | 228,100 | 228,140 | 99.98% |
 
 Updated 2026-10-09. Per-module numbers are in [PROGRESS.md](PROGRESS.md).
