@@ -1,0 +1,4 @@
+#define g_context_0206c464 data_ov002_0206c464
+#define ClosePanelSelectorAll_020648c0 ClosePanelSelectorAll
+#define DrawMenuLabels_020643a0 DrawMenuLabels
+#include "src/ov002/panel_state/EnterMenuIntroState.c"

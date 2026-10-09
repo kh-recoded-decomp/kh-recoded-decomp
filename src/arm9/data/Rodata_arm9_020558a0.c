@@ -21,7 +21,7 @@ extern void TestSegmentAgainstSegment_02040188(void);
 extern void TestSegmentAgainstSphere_0203b580(void);
 extern void TestSphereAgainstCylinder_0203f658(void);
 extern void TestSphereAgainstSegment_0203f2e8(void);
-extern void func_0203b6b4(void);
+extern void TestSphereAgainstSphere(void);
 extern void func_0203b704(void);
 extern void func_0203c258(void);
 extern void func_0203f09c(void);
@@ -67,7 +67,7 @@ void (*const data_020558b4[31])(void) = {
 };
 
 void (*const data_020558a0[5])(void) = {
-    func_0203b6b4,
+    TestSphereAgainstSphere,
     func_0203f09c,
     TestSphereAgainstSegment_0203f2e8,
     func_0203f610,

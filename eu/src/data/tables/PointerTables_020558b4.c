@@ -26,7 +26,7 @@ extern void TestPolygonAgainstBox(void); /* TestPolygonAgainstBox */
 extern void TestPolygonAgainstSegment(void); /* TestPolygonAgainstSegment */
 extern void TestPolygonAgainstCylinder(void); /* TestPolygonAgainstCylinder */
 extern void TestPolygonAgainstPolygon(void); /* TestPolygonAgainstPolygon */
-extern void func_0203b6c8(void); /* func */
+extern void TestSphereAgainstSphere(void);
 extern void TestSphereAgainstBox(void); /* TestSphereAgainstBox */
 extern void TestSphereAgainstSegment(void); /* TestSphereAgainstSegment */
 extern void TestSphereAgainstCapsule(void); /* TestSphereAgainstCapsule */
@@ -67,7 +67,7 @@ void (*const gCollisionTestPairDispatch[31])(void) = {
 };
 
 void (*const gCollisionTestDispatch[5])(void) = {
-    func_0203b6c8, /* func */
+    TestSphereAgainstSphere,
     TestSphereAgainstBox, /* TestSphereAgainstBox */
     TestSphereAgainstSegment, /* TestSphereAgainstSegment */
     TestSphereAgainstCapsule, /* TestSphereAgainstCapsule */

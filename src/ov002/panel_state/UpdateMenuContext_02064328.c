@@ -1,10 +1,10 @@
 #include "nitro/types.h"
 
-typedef struct MenuState {
+typedef struct MenuStateCallbacks {
     void (*enter)(void);
     void (*update)(void);
-    void (*exit)(void);
-} MenuState;
+    void (*leave)(void);
+} MenuStateCallbacks;
 
 typedef struct MenuContext {
     s8 state;
@@ -15,7 +15,7 @@ typedef struct MenuContext {
 } MenuContext;
 
 extern MenuContext *g_context_0206c464;
-extern MenuState data_ov002_0206c3c8[];
+extern MenuStateCallbacks gMenuStateTable[];
 extern void func_ov002_020649b0(void);
 extern void func_ov002_02064d54(void);
 extern void NNS_FndInitListWithOffset0_0204f11c(void *list);
@@ -23,7 +23,7 @@ extern u32 func_ov002_0206655c(void);
 
 int UpdateMenuContext_02064328(void)
 {
-    data_ov002_0206c3c8[g_context_0206c464->state].update();
+    gMenuStateTable[g_context_0206c464->state].update();
     func_ov002_020649b0();
     func_ov002_02064d54();
     NNS_FndInitListWithOffset0_0204f11c(g_context_0206c464->listA);

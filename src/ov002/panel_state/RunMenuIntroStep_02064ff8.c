@@ -9,7 +9,7 @@ extern MenuContext *g_context_0206c464;
 extern void func_ov002_02062014(int value);
 extern void StartPanelFadeIn(int value);
 extern u32 func_ov002_0206655c(void);
-extern void func_ov002_02064f6c(int state);
+extern void ChangeMenuState(int state);
 
 void RunMenuIntroStep_02064ff8(void)
 {
@@ -24,7 +24,7 @@ void RunMenuIntroStep_02064ff8(void)
         break;
     case 20:
         if (func_ov002_0206655c()) {
-            func_ov002_02064f6c(1);
+            ChangeMenuState(1);
         }
         break;
     }

@@ -1,4 +1,3 @@
 #define PlaySoundEffect_0204d924 PlaySoundEffect
-#define UpdateMenuSelectionSound_02065d54 UpdateMenuSelectionSound
-#define _data_ov002_0206c464 data_ov002_0206c464
-#include "src/ov002/reviewed_helpers/UpdateMenuSelectionSound_02065d54.c"
+#define g_context_0206c464 data_ov002_0206c464
+#include "src/ov002/panel_state/UpdateMenuSelectionSound.c"

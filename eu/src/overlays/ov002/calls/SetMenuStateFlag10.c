@@ -1,10 +1,2 @@
-#include "src/overlays/ov002/Ov002MenuState.h"
-
-s32 SetMenuStateFlag10(void)
-{
-    Ov002MenuState *state = gOv002MenuState;
-    s32 flags = state->stateFlags | 0x10;
-
-    state->stateFlags = flags;
-    return flags;
-}
+#define g_context_0206c464 data_ov002_0206c464
+#include "src/ov002/panel_state/SetMenuStateFlag10.c"

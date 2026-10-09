@@ -1,6 +1,2 @@
-#include "src/overlays/ov002/Ov002MenuState.h"
-
-void SetMenuSelection1(void)
-{
-    gOv002MenuState->selection = 1;
-}
+#define g_context_0206c464 data_ov002_0206c464
+#include "src/ov002/panel_state/SetMenuSelection1.c"

@@ -1,11 +1,9 @@
-#define CloseMenuPopup_02065668 CloseMenuPopup
 #define SetEntrySlotsVisible_020b9580 SetEntrySlotsVisible
 #define func_ov002_020643a0 DrawMenuLabels
 #define func_ov002_02064c9c ApplyMenuEntryValues
-#define func_ov002_02065c54 OnPopupElementTouched
 #define func_ov027_020b9098 func_ov027_020b90b8
 #define func_ov027_020b90a4 FindWidgetById
 #define func_ov027_020b9620 func_ov027_020b9640
 #define func_ov027_020b96e4 SetFocusedWidget
 #define g_context_0206c464 data_ov002_0206c464
-#include "src/ov002/panel_state/CloseMenuPopup_02065668.c"
+#include "src/ov002/panel_state/CloseMenuPopup.c"

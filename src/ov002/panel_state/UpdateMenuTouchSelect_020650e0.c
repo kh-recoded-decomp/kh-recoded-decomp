@@ -20,7 +20,7 @@ extern void func_ov002_0206671c(void);
 extern u16 GetMenuTouchHeld_02066b2c(int mode);
 extern BOOL IsButtonBPressed_020632c8(void);
 extern BOOL func_ov002_02066c58(void);
-extern void func_ov002_02064f6c(int nextState);
+extern void ChangeMenuState(int nextState);
 extern BOOL PlaySoundEffect_0204d924(int seqArcNo, int index);
 extern u16 *func_ov002_02062000(void);
 extern void func_ov027_020b8ca8(void *panel, u16 value);
@@ -37,12 +37,12 @@ void UpdateMenuTouchSelect_020650e0(void)
         if (IsButtonBPressed_020632c8() || g_context_0206c464->pendingSelect) {
             g_context_0206c464->pendingSelect = 0;
             if (func_ov002_02066c58()) {
-                func_ov002_02064f6c(3);
+                ChangeMenuState(3);
                 return;
             }
             PlaySoundEffect_0204d924(2, 4);
             g_context_0206c464->confirmed = 1;
-            func_ov002_02064f6c(4);
+            ChangeMenuState(4);
             return;
         }
         func_ov027_020b8ca8(g_context_0206c464->panel, *func_ov002_02062000());

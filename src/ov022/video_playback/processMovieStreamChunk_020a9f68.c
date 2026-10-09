@@ -15,8 +15,8 @@ struct MovieChunkRecord {
     int outputBuffer;
     unsigned char unknown_008[0x14f0];
 };
-extern int func_ov022_020aac34(int chunkRecord);
-extern void func_ov022_020ab5f4(int chunkRecord);
+extern int GetMovieChunkType1Size(int chunkRecord);
+extern void DecodeMovieChunkType2(int chunkRecord);
 extern void func_ov022_020aaac8(int chunkRecord, int chunkAddress);
 extern void func_ov022_020aaadc(int chunkRecord, int chunkAddress, int size, int outputBuffer);
 extern void func_01ff869c(int source, int outputBuffer, int size, int option);
@@ -35,12 +35,12 @@ int processMovieStreamChunk_020a9f68(int movieContext, int outputBuffer, int unu
         ((struct MovieChunkRecord *)*(int *)(movieContext + MOVIE_CONTEXT_CHUNK_SLOT_TABLE))[*(int *)(movieContext + MOVIE_CONTEXT_ACTIVE_SLOT_INDEX)].chunkStreamAddress =
             **(int **)(movieContext + MOVIE_CONTEXT_STREAM_CURSOR_POINTER);
         ((struct MovieChunkRecord *)*(int *)(movieContext + MOVIE_CONTEXT_CHUNK_SLOT_TABLE))[*(int *)(movieContext + MOVIE_CONTEXT_ACTIVE_SLOT_INDEX)].outputBuffer = outputBuffer;
-        **(int **)(movieContext + MOVIE_CONTEXT_STREAM_CURSOR_POINTER) += func_ov022_020aac34(*(int *)(movieContext + MOVIE_CONTEXT_ACTIVE_SLOT_INDEX) * 0x14f8 + *(int *)(movieContext + MOVIE_CONTEXT_CHUNK_SLOT_TABLE));
+        **(int **)(movieContext + MOVIE_CONTEXT_STREAM_CURSOR_POINTER) += GetMovieChunkType1Size(*(int *)(movieContext + MOVIE_CONTEXT_ACTIVE_SLOT_INDEX) * 0x14f8 + *(int *)(movieContext + MOVIE_CONTEXT_CHUNK_SLOT_TABLE));
     } else if (chunkType == 2) {
         ((struct MovieChunkRecord *)*(int *)(movieContext + MOVIE_CONTEXT_CHUNK_SLOT_TABLE))[*(int *)(movieContext + MOVIE_CONTEXT_ACTIVE_SLOT_INDEX)].chunkStreamAddress =
             **(int **)(movieContext + MOVIE_CONTEXT_STREAM_CURSOR_POINTER);
         ((struct MovieChunkRecord *)*(int *)(movieContext + MOVIE_CONTEXT_CHUNK_SLOT_TABLE))[*(int *)(movieContext + MOVIE_CONTEXT_ACTIVE_SLOT_INDEX)].outputBuffer = outputBuffer;
-        func_ov022_020ab5f4(*(int *)(movieContext + MOVIE_CONTEXT_ACTIVE_SLOT_INDEX) * 0x14f8 + *(int *)(movieContext + MOVIE_CONTEXT_CHUNK_SLOT_TABLE));
+        DecodeMovieChunkType2(*(int *)(movieContext + MOVIE_CONTEXT_ACTIVE_SLOT_INDEX) * 0x14f8 + *(int *)(movieContext + MOVIE_CONTEXT_CHUNK_SLOT_TABLE));
         **(int **)(movieContext + MOVIE_CONTEXT_STREAM_CURSOR_POINTER) += 0x28;
     } else if (chunkType == 3) {
         if (*(int *)(movieContext + MOVIE_CONTEXT_CHUNK_STATE) == 1) {

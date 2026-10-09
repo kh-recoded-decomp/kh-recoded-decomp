@@ -1,8 +1,6 @@
-#define OpenMenuPopup_0206574c OpenMenuPopup
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define func_ov002_02064584 ShowSaveMessage
 #define func_ov002_02064c9c ApplyMenuEntryValues
-#define func_ov002_02065d54 UpdateMenuSelectionSound
 #define func_ov027_020b9098 func_ov027_020b90b8
 #define func_ov027_020b90a4 FindWidgetById
 #define func_ov027_020b9580 SetEntrySlotsVisible
@@ -10,4 +8,4 @@
 #define func_ov027_020b96e4 SetFocusedWidget
 #define func_ov027_020b9764 ApplyWidgetFocusAnims
 #define g_context_0206c464 data_ov002_0206c464
-#include "src/ov002/panel_state/OpenMenuPopup_0206574c.c"
+#include "src/ov002/panel_state/OpenMenuPopup.c"

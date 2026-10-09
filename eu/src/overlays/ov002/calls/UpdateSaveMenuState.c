@@ -8,7 +8,6 @@
 #define PollCardThreadState_020271f8 PollCardThreadState
 #define SetCardThreadStartTick_02027258 SetCardThreadStartTick
 #define SetEntrySlotsVisible_020b9580 SetEntrySlotsVisible
-#define UpdateSaveMenuState_02065374 UpdateSaveMenuState
 #define func_020271e8 InvokeCallback
 #define func_ov002_02064584 ShowSaveMessage
 #define func_ov002_0206671c UpdateMenuTouch
@@ -16,4 +15,4 @@
 #define func_ov027_020b9098 func_ov027_020b90b8
 #define func_ov027_020b90a4 FindWidgetById
 #define func_ov027_020b96e4 SetFocusedWidget
-#include "src/ov002/panel_state/UpdateSaveMenuState_02065374.c"
+#include "src/ov002/panel_state/UpdateSaveMenuState.c"

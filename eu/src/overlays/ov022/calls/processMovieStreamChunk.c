@@ -1,7 +1,5 @@
 #define func_01ff869c MIi_CpuCopy16
 #define func_ov022_020aaac8 func_ov022_020aaae8
 #define func_ov022_020aaadc decodeMovieAdpcmSamples
-#define func_ov022_020aac34 func_ov022_020aac54
-#define func_ov022_020ab5f4 func_ov022_020ab614
 #define processMovieStreamChunk_020a9f68 processMovieStreamChunk
 #include "src/ov022/video_playback/processMovieStreamChunk_020a9f68.c"
