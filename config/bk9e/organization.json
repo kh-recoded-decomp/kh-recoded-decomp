@@ -856,8 +856,8 @@
                 "func_ov022_020a9398",
                 "func_ov022_020aaac8",
                 "func_ov022_020aaadc",
-                "func_ov022_020aac34",
-                "func_ov022_020ab5f4"
+                "GetMovieChunkType1Size",
+                "DecodeMovieChunkType2"
               ]
             },
             {
