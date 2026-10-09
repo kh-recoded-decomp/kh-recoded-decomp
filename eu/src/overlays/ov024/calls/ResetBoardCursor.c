@@ -1,6 +1,6 @@
 #define ResetBoardCursor_020b72e4 ResetBoardCursor
 #define data_ov024_020b7520 data_ov024_020b7540
-#define func_ov024_020b5828 func_ov024_020b5848
+#define func_ov024_020b5828 BuildBoardLayout
 #define func_ov024_020b60e0 GenerateRandomLinks
 #define func_ov024_020b6bb0 func_ov024_020b6bd0
 #include "src/ov024/unclassified_helpers/ResetBoardCursor_020b72e4.c"

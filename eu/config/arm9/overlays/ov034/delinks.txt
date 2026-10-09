@@ -60,6 +60,10 @@ src/overlays/ov034/calls/CommitResultsRewards.c:
     complete
     .text       start:0x020bd0c0 end:0x020bd130
 
+src/overlays/ov034/calls/HandleResultsInput.c:
+    complete
+    .text       start:0x020bd130 end:0x020bdb90
+
 src/overlays/ov034/calls/IsResultsShopEntryUnlocked.c:
     complete
     .text       start:0x020bdb90 end:0x020bdbf0

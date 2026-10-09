@@ -4,6 +4,10 @@
     .data       start:0x020c5cc0 end:0x020c5da0 kind:data align:32
     .bss        start:0x020c5da0 end:0x020c5dc0 kind:bss align:32
 
+src/overlays/ov081/calls/InitEntryTables.c:
+    complete
+    .text       start:0x020c4280 end:0x020c4c4e
+
 src/overlays/ov081/calls/InitOv081Screen.c:
     complete
     .text       start:0x020c4c50 end:0x020c4dd4

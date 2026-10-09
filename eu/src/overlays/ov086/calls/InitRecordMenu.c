@@ -6,7 +6,7 @@
 #define SetSecondaryElementEnabled_020bc084 SetSecondaryElementEnabled
 #define data_ov086_020c3000 data_ov086_020c3020
 #define func_ov086_020beaa0 UpdateRecordScrollOffset
-#define func_ov086_020c080c func_ov086_020c082c
+#define func_ov086_020c080c RefreshRecordPageLayout
 #define func_ov086_020c0e4c SetupRecordSubScreenLayers
 #define func_ov086_020c0f08 LoadRecordSubScreenGraphics
 #define func_ov086_020c1024 InitRecordTileTable

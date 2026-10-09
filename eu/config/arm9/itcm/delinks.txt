@@ -9,6 +9,10 @@ src/calls/func_01ff80d4.c:
     complete
     .text       start:0x01ff80d4 end:0x01ff80e4
 
+src/calls/GXi_FlushCommandList.c:
+    complete
+    .text       start:0x01ff80e4 end:0x01ff8140
+
 libs/nitro/fs/calls/FSi_WaitForCardThread.c:
     complete
     .text       start:0x01ff8140 end:0x01ff8158
@@ -125,6 +129,10 @@ libs/nitro/mtx/asm_stubs/auto/MTX_Copy43To44_.c:
     complete
     .text       start:0x01ff94a8 end:0x01ff94dc
 
+libs/nitro/mtx/calls/MTX_ScaleApply43.c:
+    complete
+    .text       start:0x01ff94dc end:0x01ff9510
+
 libs/nitro/mtx/asm_stubs/auto/MTX_RotX43_.c:
     complete
     .text       start:0x01ff9510 end:0x01ff952e
@@ -132,6 +140,14 @@ libs/nitro/mtx/asm_stubs/auto/MTX_RotX43_.c:
 libs/nitro/mtx/asm_stubs/auto/MTX_RotY43_.c:
     complete
     .text       start:0x01ff9530 end:0x01ff954a
+
+src/calls/MTX_Inverse43.c:
+    complete
+    .text       start:0x01ff954c end:0x01ff98c0
+
+src/calls/MTX_Concat43.c:
+    complete
+    .text       start:0x01ff98c0 end:0x01ff9ad8
 
 libs/nitro/mtx/auto/MTX_MultVec43.c:
     complete

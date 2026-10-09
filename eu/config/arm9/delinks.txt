@@ -1964,6 +1964,10 @@ libs/nitro/fs/calls/FSi_WaitForArchiveCompletion.c:
     complete
     .text       start:0x0200a2b8 end:0x0200a310
 
+src/calls/FSi_InvokeCommand.c:
+    complete
+    .text       start:0x0200a310 end:0x0200a690
+
 libs/nitro/fs/calls/FSi_NextCommand.c:
     complete
     .text       start:0x0200a690 end:0x0200a83c
@@ -2372,6 +2376,10 @@ libs/nitro/fs/auto/FSi_OverrideRomArchive.c:
     complete
     .text       start:0x0200d3c8 end:0x0200d3d0
 
+src/calls/FSi_InitRomArchive.c:
+    complete
+    .text       start:0x0200d3d0 end:0x0200d524
+
 libs/nitro/fs/auto/FS_TryLoadTable.c:
     complete
     .text       start:0x0200d524 end:0x0200d544
@@ -2753,6 +2761,10 @@ libs/nitro/snd/auto/SND_GetFirstInstDataPos.c:
     complete
     .text       start:0x0200f8dc end:0x0200f8fc
 
+src/calls/SND_GetNextInstData.c:
+    complete
+    .text       start:0x0200f8fc end:0x0200faa8
+
 src/auto/SND_GetWaveDataCount.c:
     complete
     .text       start:0x0200faa8 end:0x0200fab0
@@ -2952,6 +2964,10 @@ libs/nitro/spi/auto/PMi_SetDispOffCount.c:
 libs/nitro/std/auto/STD_CopyString.c:
     complete
     .text       start:0x02010bb8 end:0x02010be0
+
+src/calls/STD_CopyLString.c:
+    complete
+    .text       start:0x02010be0 end:0x02010c88
 
 libs/nitro/std/auto/STD_GetStringLength.c:
     complete
@@ -3657,6 +3673,10 @@ libs/nns/gfd/calls/NNSi_GfdAllocLnkVram.c:
     complete
     .text       start:0x0201429c end:0x020142b0
 
+src/calls/NNSi_GfdAllocLnkVramAligned.c:
+    complete
+    .text       start:0x020142b0 end:0x020143e8
+
 libs/nns/gfd/calls/NNSi_GfdMergeAllFreeBlocks.c:
     complete
     .text       start:0x020143e8 end:0x0201446c
@@ -3680,6 +3700,10 @@ libs/nns/gfd/calls/NNS_GfdAllocLnkTexVram.c:
 libs/nns/gfd/calls/NNS_GfdFreeLnkTexVram.c:
     complete
     .text       start:0x020145e0 end:0x0201464c
+
+src/calls/NNS_GfdResetLnkTexVramState.c:
+    complete
+    .text       start:0x0201464c end:0x02014864
 
 libs/nns/gfd/auto/NNS_GfdGetLnkPlttVramManagerWorkSize.c:
     complete
@@ -3709,9 +3733,17 @@ libs/nns/g2d/calls/NNS_G2dGetUnpackedAnimBank.c:
     complete
     .text       start:0x02014a70 end:0x02014a7c
 
+src/calls/NNS_G2dUnpackNAN.c:
+    complete
+    .text       start:0x02014a7c end:0x02014bbc
+
 libs/nns/g2d/auto/NNS_G2dGetAnimSequenceByIdx.c:
     complete
     .text       start:0x02014bbc end:0x02014bd4
+
+libs/nns/g2d/auto/GetPtrOamArrayHead_.c:
+    complete
+    .text       start:0x02014bd4 end:0x02014bf0
 
 libs/nns/g2d/calls/UnPackExtendedData_.c:
     complete
@@ -4037,6 +4069,10 @@ libs/nns/g2d/calls/ClearAreaLine.c:
     complete
     .text       start:0x02017578 end:0x02017710
 
+src/calls/ClearArea1D.c:
+    complete
+    .text       start:0x02017710 end:0x020178fc
+
 libs/nns/g2d/auto/InitCharCanvas.c:
     complete
     .text       start:0x020178fc end:0x02017924
@@ -4048,6 +4084,10 @@ src/calls/NNS_G2dCharCanvasDrawChar.c:
 libs/nns/g2d/calls/NNS_G2dCharCanvasInitForBG.c:
     complete
     .text       start:0x02017a40 end:0x02017a6c
+
+src/calls/NNS_G2dMapScrToCharText.c:
+    complete
+    .text       start:0x02017af0 end:0x02017ba0
 
 libs/nns/g2d/auto/NNS_G2dMapScrToChar256x16Pltt.c:
     complete
@@ -4261,6 +4301,10 @@ libs/nns/g3d/auto/AccumulateVec3Scaled.c:
     complete
     .text       start:0x0201980c end:0x0201987c
 
+src/calls/NNSi_G3dAnmBlendJnt.c:
+    complete
+    .text       start:0x0201987c end:0x02019c6c
+
 libs/nns/g3d/auto/NNSi_G3dAnmBlendVis.c:
     complete
     .text       start:0x02019c6c end:0x02019cf4
@@ -4352,6 +4396,10 @@ libs/nns/g3d/calls/NNS_G3dMdlSetMdlPolygonIDAll.c:
 libs/nns/g3d/calls/NNS_G3dMdlSetMdlAlphaAll.c:
     complete
     .text       start:0x0201a914 end:0x0201a954
+
+src/calls/NNS_G3dGetResDataByName.c:
+    complete
+    .text       start:0x0201a954 end:0x0201ab10
 
 libs/nns/g3d/auto/NNS_G3dGetResDictIdxByName.c:
     complete
@@ -4876,6 +4924,18 @@ libs/nns/snd/calls/NNS_SndArcSetLoadBlockSize.c:
 libs/nns/snd/calls/NNS_SndArcGetSeqArcIdxSymbol.c:
     complete
     .text       start:0x0201ee94 end:0x0201ef18
+
+libs/nns/snd/auto/NNSi_SndArcGetFilePath.c:
+    complete
+    .text       start:0x0201ef18 end:0x0201ef2c
+
+libs/nns/snd/auto/NNSi_SndArcGetSeekCacheBuffer.c:
+    complete
+    .text       start:0x0201ef2c end:0x0201ef40
+
+libs/nns/snd/auto/NNSi_SndArcGetSeekCacheSize.c:
+    complete
+    .text       start:0x0201ef40 end:0x0201ef54
 
 libs/nns/snd/auto/GetSoundArchiveSymbol.c:
     complete
@@ -5864,6 +5924,10 @@ src/calls/SetSharedFlagBits.c:
 src/calls/GrantStartingRecords.c:
     complete
     .text       start:0x02027684 end:0x02027808
+
+src/calls/TestRecordFlagBit.c:
+    complete
+    .text       start:0x02027808 end:0x0202786c
 
 src/calls/EquipRecordList.c:
     complete
@@ -7112,6 +7176,10 @@ src/calls/HasVelocityDeviated.c:
 src/calls/AddUniqueContactId.c:
     complete
     .text       start:0x020322bc end:0x02032304
+
+src/calls/ResolvePlaneContacts.c:
+    complete
+    .text       start:0x02032304 end:0x02032b20
 
 src/calls/InitMoverCast.c:
     complete
@@ -9905,6 +9973,10 @@ libs/msl/c/data/sLowerCaseMap.c:
     complete
     .rodata     start:0x020531f4 end:0x02053274
 
+libs/nitro/fs/data/Alias_FSiRomArchiveViews.s:
+    complete
+    .bss        start:0x02057b00 end:0x02057b00
+
 libs/nitro/fs/data/FSiOverlayContext.c:
     complete
     .bss        start:0x02057b00 end:0x02057b1c
@@ -9957,11 +10029,7 @@ libs/nns/g3d/data/g3d_nsbca_pivot_table.c:
     complete
     .rodata     start:0x02053108 end:0x0205312c
 
-libs/nns/gfd/data/Alias_sLnkPlttVramLists.s:
-    complete
-    .bss        start:0x0205a914 end:0x0205a914
-
-libs/nns/gfd/data/sLnkPlttVramManager.c:
+libs/nns/gfd/data/sLnkPlttVramManager.s:
     complete
     .bss        start:0x0205a900 end:0x0205a914
 
@@ -9969,7 +10037,7 @@ libs/nns/gfd/data/sLnkTexInitialSlots.c:
     complete
     .rodata     start:0x02052fa0 end:0x02052fd0
 
-libs/nns/gfd/data/sLnkTexVramManager.c:
+libs/nns/gfd/data/sLnkTexVramManager.s:
     complete
     .bss        start:0x0205a8e4 end:0x0205a900
 

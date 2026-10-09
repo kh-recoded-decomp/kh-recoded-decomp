@@ -5,5 +5,5 @@
 #define func_ov052_020c7edc SelectGroundAction
 #define func_ov052_020c8040 FindDashWallTarget
 #define func_ov052_020c8690 TryEnterLevelTargetState
-#define func_ov052_020c8bac func_ov052_020c8bcc
+#define func_ov052_020c8bac TryGrabLedge
 #include "src/ov052/unclassified_helpers/ReactToEvent_020c8598.c"

@@ -6,5 +6,5 @@
 #define NNS_FndInitListWithOffset0_020a7510 func_ov021_020a7530
 #define SelectGroundAction_020c7edc SelectGroundAction
 #define func_ov052_020c8040 FindDashWallTarget
-#define func_ov052_020cefe8 func_ov052_020cf008
+#define func_ov052_020cefe8 TryLedgeClimb
 #include "src/ov052/unclassified_helpers/SelectGroundAction_020c7edc.c"

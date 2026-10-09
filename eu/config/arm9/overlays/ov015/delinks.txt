@@ -720,6 +720,10 @@ src/overlays/ov015/auto/func_ov015_02075338.c:
     complete
     .text       start:0x02075338 end:0x0207533c
 
+src/overlays/ov015/calls/SetupPanelBoard.c:
+    complete
+    .text       start:0x020759cc end:0x0207634c
+
 src/overlays/ov015/calls/func_ov015_0207634c.c:
     complete
     .text       start:0x0207634c end:0x020763a8

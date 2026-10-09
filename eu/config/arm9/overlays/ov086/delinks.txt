@@ -108,6 +108,10 @@ src/overlays/ov086/calls/RefreshRecordGraphPanel.c:
     complete
     .text       start:0x020c0648 end:0x020c082c
 
+src/overlays/ov086/calls/RefreshRecordPageLayout.c:
+    complete
+    .text       start:0x020c082c end:0x020c0db0
+
 src/overlays/ov086/calls/StepCursorBackward.c:
     complete
     .text       start:0x020c0db0 end:0x020c0e10

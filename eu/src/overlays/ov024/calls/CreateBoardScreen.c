@@ -75,7 +75,7 @@ extern void func_ov027_020b9098(void *objectSet, u32 key);
 extern void func_ov027_020b8fb8(void *objectSet, u32 key, int count);
 extern void SetAllElementObjectModes(void *objectSet, int mode);
 extern int CreateDefaultObjectSlot(void *objectSet, int resource, int kind, int arg3, int arg4);
-extern void func_ov024_020b5848(void *cursor, int value);
+extern void BuildBoardLayout(void *cursor, int value);
 extern void *StartBoardScreen(void);
 
 void *CreateBoardScreen(int mode)
@@ -149,7 +149,7 @@ void *CreateBoardScreen(int mode)
     data_ov024_020b7540.state->targetSlot = CreateDefaultObjectSlot(data_ov024_020b7540.state->objectSet, 0, 5, 0, 0);
     data_ov024_020b7540.state->hintSlot = CreateDefaultObjectSlot(data_ov024_020b7540.state->objectSet, 0, 6, 0, 0);
     data_ov024_020b7540.state->goalSlot = CreateDefaultObjectSlot(data_ov024_020b7540.state->objectSet, 0, 7, 0, 0);
-    func_ov024_020b5848(data_ov024_020b7540.cursor, 1);
+    BuildBoardLayout(data_ov024_020b7540.cursor, 1);
     data_ov024_020b7540.state->active = 1;
     return StartBoardScreen;
 }

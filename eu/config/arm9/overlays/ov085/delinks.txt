@@ -16,6 +16,10 @@ src/overlays/ov085/calls/UpdateItemListScroll.c:
     complete
     .text       start:0x020c0154 end:0x020c01d8
 
+src/overlays/ov085/calls/RedrawShopMenu.c:
+    complete
+    .text       start:0x020c02a0 end:0x020c0b58
+
 src/overlays/ov085/calls/ArrangeWidgetPair.c:
     complete
     .text       start:0x020c0b58 end:0x020c0bae

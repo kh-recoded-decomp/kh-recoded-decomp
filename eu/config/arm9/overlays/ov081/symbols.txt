@@ -1,4 +1,4 @@
-func_ov081_020c4280 kind:function(thumb,size=0x9ce) addr:0x020c4280
+InitEntryTables kind:function(thumb,size=0x9ce) addr:0x020c4280
 InitOv081Screen kind:function(thumb,size=0x184) addr:0x020c4c50
 AdvanceListAndRedraw kind:function(thumb,size=0x34) addr:0x020c4dd4
 func_ov081_020c4e08 kind:function(thumb,size=0x12) addr:0x020c4e08

@@ -15,6 +15,10 @@ src/overlays/ov069/calls/AimOv069BossAtHit.c:
     complete
     .text       start:0x020d81dc end:0x020d829c
 
+src/overlays/ov069/calls/UpdateOv069BossMotion.c:
+    complete
+    .text       start:0x020d829c end:0x020d8844
+
 src/overlays/ov069/calls/EndOv069BossIntro.c:
     complete
     .text       start:0x020d8844 end:0x020d88c4

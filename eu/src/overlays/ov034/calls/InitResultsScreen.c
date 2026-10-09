@@ -91,7 +91,7 @@ extern void func_ov027_020b97d8(void *objects, void *widget, int mode);
 extern void SetWidgetRootDpadEnabled(void *objects, BOOL enabled);
 extern int func_ov034_020bdea8(void *manager, int animation, int resource, int x, int y);
 extern void func_ov027_020b90b8(void *objects, void (*callback)(void));
-extern void func_ov034_020bd130(void);
+extern void HandleResultsInput(void);
 extern void InvokeForChannelOrBoth(u32 arg0, void *arg1, void (*callback)(void), int channel);
 extern void UpdateResultsFade(void);
 
@@ -149,7 +149,7 @@ void InitResultsScreen(void)
     for (i = 0; i < 6; i++) {
         WORK->rowEntries[i] = func_ov034_020bdea8(WORK->objects, 1, 0xc, 0xb8, i * 16 + 0x51);
     }
-    func_ov027_020b90b8(WORK->objects, func_ov034_020bd130);
+    func_ov027_020b90b8(WORK->objects, HandleResultsInput);
     InvokeForChannelOrBoth(1, sOv034_SYSAREAMENU_020c0f10, UpdateResultsFade, 0);
     WORK->isActive = 1;
 }

@@ -232,6 +232,10 @@ src/overlays/ov058/calls/StartAnchorSequence.c:
     complete
     .text       start:0x020d7f80 end:0x020d81c4
 
+src/overlays/ov058/calls/UpdateSceneIntroSequence.c:
+    complete
+    .text       start:0x020d81c4 end:0x020d8794
+
 src/overlays/ov058/calls/DrawSceneModels.c:
     complete
     .text       start:0x020d8794 end:0x020d87e0

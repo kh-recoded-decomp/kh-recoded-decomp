@@ -1,5 +1,5 @@
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define StepCursorForward_020c0df0 StepCursorForward_020c0e10
 #define func_02023dbc _s32_div_f
-#define func_ov086_020c080c func_ov086_020c082c
+#define func_ov086_020c080c RefreshRecordPageLayout
 #include "src/ov086/panel_state/StepCursorForward_020c0df0.c"

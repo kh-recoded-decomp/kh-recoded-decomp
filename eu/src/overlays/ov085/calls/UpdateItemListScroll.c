@@ -27,7 +27,7 @@ extern int GetFieldCa4a(void);
 extern BOOL ScriptCmd_ResetScreenLayer(ScrollList *list, void *cells);
 extern WidgetPos *GetWidgetPosition(void *cells, int *widget);
 extern void func_ov027_020b91e8(void *cells, int *widget, WidgetPos *pos, int mode);
-extern void func_ov085_020c02a0(ItemListMenu *menu);
+extern void RedrawShopMenu(ItemListMenu *menu);
 
 void UpdateItemListScroll(ItemListMenu *menu)
 {
@@ -44,5 +44,5 @@ void UpdateItemListScroll(ItemListMenu *menu)
             menu->dirty = 1;
         }
     }
-    func_ov085_020c02a0(menu);
+    RedrawShopMenu(menu);
 }

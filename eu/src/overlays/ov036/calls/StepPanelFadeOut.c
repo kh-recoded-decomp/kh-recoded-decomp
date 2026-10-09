@@ -3,5 +3,5 @@
 #define SetTimerDuration_020c27dc SetTimerDuration
 #define StepPanelFadeOut_020c1168 StepPanelFadeOut
 #define func_ov036_020bee40 func_ov036_020bee60
-#define func_ov036_020c1d7c func_ov036_020c1d9c
+#define func_ov036_020c1d7c DrawScaledWindowFrame_020c1d9c
 #include "src/ov036/panel_state/StepPanelFadeOut_020c1168.c"

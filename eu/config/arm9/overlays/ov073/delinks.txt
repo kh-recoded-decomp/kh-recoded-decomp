@@ -24,6 +24,14 @@ src/overlays/ov073/calls/ReleaseStatusPage.c:
     complete
     .text       start:0x020bed00 end:0x020bed68
 
+src/overlays/ov073/calls/InitStatusMenu.c:
+    complete
+    .text       start:0x020bed68 end:0x020bf64c
+
+src/overlays/ov073/calls/UpdateStatusMenu.c:
+    complete
+    .text       start:0x020bf64c end:0x020bfbec
+
 src/overlays/ov073/calls/func_ov073_020bfbec.c:
     complete
     .text       start:0x020bfbec end:0x020bfc78

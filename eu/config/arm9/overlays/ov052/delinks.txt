@@ -60,6 +60,10 @@ src/overlays/ov052/calls/TryStartPlayerSpecialAction.c:
     complete
     .text       start:0x020c8730 end:0x020c8914
 
+src/overlays/ov052/calls/TryGrabLedge.c:
+    complete
+    .text       start:0x020c8bcc end:0x020c9292
+
 src/overlays/ov052/calls/IsTargetAboveInRange.c:
     complete
     .text       start:0x020c9504 end:0x020c959c
@@ -399,6 +403,10 @@ src/overlays/ov052/calls/RefreshLockTarget.c:
 src/overlays/ov052/calls/GetLockTargetPosition.c:
     complete
     .text       start:0x020cef84 end:0x020cf008
+
+src/overlays/ov052/calls/TryLedgeClimb.c:
+    complete
+    .text       start:0x020cf008 end:0x020cfb48
 
 src/overlays/ov052/calls/AnySubObjectFlagsActive.c:
     complete

@@ -52,7 +52,7 @@ DrawMatrixMenu kind:function(thumb,size=0xf20) addr:0x020c910c
 .L_020c9efa kind:label(thumb) addr:0x020c9efa local
 .L_020c9f14 kind:label(thumb) addr:0x020c9f14 local
 GetGridCellPosition kind:function(thumb,size=0x4c) addr:0x020ca02c
-func_ov075_020ca078 kind:function(thumb,size=0x9d8) addr:0x020ca078
+UpdateMatrixEventAnimation kind:function(thumb,size=0x9d8) addr:0x020ca078
 .L_020caa0e kind:label(thumb) addr:0x020caa0e local
 DrawMatrixDescriptionText kind:function(thumb,size=0x3c) addr:0x020caa50
 IsMatrixInputReady kind:function(thumb,size=0x2c) addr:0x020caa8c

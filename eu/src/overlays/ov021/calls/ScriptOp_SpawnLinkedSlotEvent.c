@@ -10,5 +10,5 @@
 #define SpawnStageGroup_02094f60 SpawnStageGroup
 #define WarpWalkerTo_02090f0c WarpWalkerTo
 #define data_ov021_020b56a4 data_ov021_020b56c4
-#define func_ov001_02094714 func_ov001_0209473c
+#define func_ov001_02094714 UpdateStageEvent
 #include "src/ov021/script_ops/ScriptOp_SpawnLinkedSlotEvent_020b25b4.c"

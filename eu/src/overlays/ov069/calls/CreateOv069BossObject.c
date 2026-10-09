@@ -86,7 +86,7 @@ extern void LoadManagerSpriteSlots(void);
 extern void LoadResGroupHandles(BossObject *obj, ObjectOwner *owner, void *resDesc);
 extern void ReleaseOv069BossResources();
 extern void StartOv069BossIntro();
-extern void func_ov069_020d829c();
+extern void UpdateOv069BossMotion();
 extern void EndOv069BossIntro();
 
 BossObject *CreateOv069BossObject(ObjectOwner *owner, void *resDesc, ObjectDesc *desc)
@@ -120,7 +120,7 @@ BossObject *CreateOv069BossObject(ObjectOwner *owner, void *resDesc, ObjectDesc 
     obj->onStart = StartOv069BossIntro;
     obj->draw = ReleaseOv069BossResources;
     obj->finish = EndOv069BossIntro;
-    obj->onAction = func_ov069_020d829c;
+    obj->onAction = UpdateOv069BossMotion;
     selection = *GetOverlaySelectionRecord(owner->player);
     OS_SPrintf(path, sOv069_BaChFormatSCiBZ_020d8a50, gSoundCategoryNames[selection]);
     file = func_0202c4a0(path, 0x11);

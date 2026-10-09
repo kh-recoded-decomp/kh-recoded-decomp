@@ -19,7 +19,7 @@ ResetResultsObjects kind:function(thumb,size=0xe0) addr:0x020bce70
 DrawResultsCounter kind:function(thumb,size=0xde) addr:0x020bcf50
 DrawResultsLabelText kind:function(thumb,size=0x90) addr:0x020bd030
 CommitResultsRewards kind:function(thumb,size=0x70) addr:0x020bd0c0
-func_ov034_020bd130 kind:function(thumb,size=0xa60) addr:0x020bd130
+HandleResultsInput kind:function(thumb,size=0xa60) addr:0x020bd130
 .L_020bdb8c kind:label(thumb) addr:0x020bdb8c local
 IsResultsShopEntryUnlocked kind:function(thumb,size=0x60) addr:0x020bdb90
 StartResultsScreen kind:function(thumb,size=0x48) addr:0x020bdbf0

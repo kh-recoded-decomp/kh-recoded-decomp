@@ -1,4 +1,4 @@
 #define SelectRecordPage_020c2060 SelectRecordPage
 #define data_ov086_020c3000 data_ov086_020c3020
-#define func_ov086_020c080c func_ov086_020c082c
+#define func_ov086_020c080c RefreshRecordPageLayout
 #include "src/ov086/panel_state/SelectRecordPage_020c2060.c"
