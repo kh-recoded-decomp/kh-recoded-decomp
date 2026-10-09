@@ -1,6 +1,6 @@
 #define BuildItemListForType_020c631c BuildItemListForType
 #define GetActiveRecordEntryOrNull_02029548 GetActiveRecordEntryOrNull
-#define func_02021c94 func_02021ca8
+#define func_02021c94 qsort
 #define func_ov077_020c5f64 ItemList_CompareStock_020c5f84
 #define func_ov077_020c5fd4 InitItemListEntries
 #include "src/ov077/unclassified_helpers/BuildItemListForType_020c631c.c"

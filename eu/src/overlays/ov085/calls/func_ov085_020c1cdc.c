@@ -25,7 +25,7 @@ typedef struct ItemScreen {
 
 extern void BuildRecordCountList_020c1994(ItemScreen *screen);
 extern void *GetActiveRecordEntryOrNull(u16 index);
-extern void func_02021ca8(void *base, u32 count, u32 size, void *compare);
+extern void qsort(void *base, u32 count, u32 size, void *compare);
 extern int CompareItemEntries(const void *a, const void *b);
 
 void func_ov085_020c1cdc(ItemScreen *screen, u32 type)
@@ -66,6 +66,6 @@ void func_ov085_020c1cdc(ItemScreen *screen, u32 type)
                 }
             }
         }
-        func_02021ca8(screen->list, screen->listCount, 4, CompareItemEntries);
+        qsort(screen->list, screen->listCount, 4, CompareItemEntries);
     }
 }

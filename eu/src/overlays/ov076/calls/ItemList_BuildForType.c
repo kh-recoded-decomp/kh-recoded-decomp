@@ -2,5 +2,5 @@
 #define ItemList_BuildForType_020c92e8 ItemList_BuildForType
 #define ItemList_BuildStock_020c8fa0 ItemList_BuildStock
 #define ItemList_CompareStock_020c8f30 ItemList_CompareStock
-#define func_02021c94 func_02021ca8
+#define func_02021c94 qsort
 #include "src/ov076/unclassified_helpers/ItemList_BuildForType_020c92e8.c"
