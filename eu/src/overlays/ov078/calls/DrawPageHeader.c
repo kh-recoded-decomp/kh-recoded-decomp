@@ -1,4 +1,5 @@
 #define DrawPageHeader_020c4b18 DrawPageHeader
+#define data_02055fd4 gRankGlyphCodepoints
 #define GetPageTableEntry_02052124 GetPageTableEntry
 #define GetRecordSlotPair0Entry_02051ec8 GetRecordSlotPair0Entry
 #define IsGlobalPackedBitSet_02027304 IsGlobalPackedBitSet

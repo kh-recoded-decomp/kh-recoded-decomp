@@ -1,4 +1,5 @@
 #define DrawItemNameWithRank_020c11e8 DrawItemNameWithRank
+#define data_02055fd4 gRankGlyphCodepoints
 #define G2D_DrawAnchoredText_02017dec NNSi_G2dTextCanvasDrawText
 #define G2D_DrawCharGlyph_02017910 NNS_G2dCharCanvasDrawChar
 #define G2D_MeasureTextWidth_02016bc0 NNSi_G2dFontGetTextWidth

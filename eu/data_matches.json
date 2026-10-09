@@ -1,6 +1,257 @@
 {
   "data": [
     {
+      "module": "arm9",
+      "section": ".rodata",
+      "start": "0x020526d4",
+      "end": "0x020526ec",
+      "source": "src/data/gRuntimeInitCleanupDescriptors.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "runtime init and cleanup descriptors",
+      "origin": "ported US twin",
+      "behavior": "Two compiler runtime descriptors referencing the global constructor runner and conditional stack cleanup helper."
+    },
+    {
+      "module": "arm9",
+      "section": ".rodata",
+      "start": "0x02052978",
+      "end": "0x02052980",
+      "source": "src/data/tables/CARDiDmaUsingFormer.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "CARD DMA previous-use flags",
+      "behavior": "Tracks the previous DMA ownership state for CARD transfers."
+    },
+    {
+      "module": "arm9",
+      "section": ".rodata",
+      "start": "0x02052f00",
+      "end": "0x02052fa0",
+      "source": "src/data/tables/PointerTables_02052f00.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "VRAM transfer and heap allocator dispatch",
+      "behavior": "Dispatch tables for VRAM transfer jobs and heap allocation backends."
+    },
+    {
+      "module": "arm9",
+      "section": ".rodata",
+      "start": "0x020555d8",
+      "end": "0x020555f8",
+      "source": "src/data/tables/gBgAffineControlDispatch.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "affine background control dispatch",
+      "behavior": "Dispatch table for affine background control handlers."
+    },
+    {
+      "module": "arm9",
+      "section": ".rodata",
+      "start": "0x02055658",
+      "end": "0x02055678",
+      "source": "src/data/tables/gBgExtendedControlDispatch.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "extended background control dispatch",
+      "behavior": "Dispatch table for extended background control handlers."
+    },
+    {
+      "module": "arm9",
+      "section": ".rodata",
+      "start": "0x02055780",
+      "end": "0x02055838",
+      "source": "src/data/tables/PointerTables_02055780.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "background layer transfer dispatch",
+      "behavior": "Main and sub-engine background layer control and transfer handlers."
+    },
+    {
+      "module": "arm9",
+      "section": ".rodata",
+      "start": "0x020558b4",
+      "end": "0x02055944",
+      "source": "src/data/tables/PointerTables_020558b4.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "collision test dispatch",
+      "behavior": "Pairwise and primary collision test handler tables."
+    },
+    {
+      "module": "arm9",
+      "section": ".rodata",
+      "start": "0x02055944",
+      "end": "0x020559d4",
+      "source": "src/data/tables/PointerTables_02055944.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "collision sweep dispatch",
+      "behavior": "Pairwise and primary swept-collision handler tables."
+    },
+    {
+      "module": "arm9",
+      "section": ".rodata",
+      "start": "0x020559d4",
+      "end": "0x020559ec",
+      "source": "src/data/tables/gCollisionBoundsDispatch.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "collision bounds dispatch",
+      "behavior": "Dispatch table for collision-bound calculation handlers."
+    },
+    {
+      "module": "arm9",
+      "section": ".data",
+      "start": "0x02055ba0",
+      "end": "0x02055bc0",
+      "source": "src/data/gTitleNoticePalette.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "title notice palette",
+      "behavior": "Sixteen-color background palette loaded for the title notice."
+    },
+    {
+      "module": "arm9",
+      "section": ".data",
+      "start": "0x02055bc0",
+      "end": "0x02055bd0",
+      "source": "src/data/gIrqCallbackMaskBits.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "IRQ callback mask-bit map",
+      "behavior": "Maps DMA and timer callback slots to hardware IRQ mask bits."
+    },
+    {
+      "module": "arm9",
+      "section": ".data",
+      "start": "0x02055bd0",
+      "end": "0x02055bd8",
+      "source": "src/data/gConsoleTypeCache.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "console type cache",
+      "behavior": "Two-word Nitro OS console-type state initialized to the unknown sentinel."
+    },
+    {
+      "module": "arm9",
+      "section": ".data",
+      "start": "0x02055bd8",
+      "end": "0x02055c18",
+      "source": "src/data/tables/OSi_ProtectionRegionSetters.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "MPU protection-region setter table",
+      "behavior": "Nitro OS dispatch table for configuring ARM MPU protection regions."
+    },
+    {
+      "module": "arm9",
+      "section": ".data",
+      "start": "0x02055c4c",
+      "end": "0x02055c50",
+      "source": "src/data/tables/sDefaultAllocTexVramFunc.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "default texture VRAM allocator",
+      "behavior": "Default callback used to allocate texture VRAM."
+    },
+    {
+      "module": "arm9",
+      "section": ".data",
+      "start": "0x02055c50",
+      "end": "0x02055c54",
+      "source": "src/data/tables/sDefaultFreeTexVramFunc.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "default texture VRAM release callback",
+      "behavior": "Default callback used when releasing texture VRAM."
+    },
+    {
+      "module": "arm9",
+      "section": ".data",
+      "start": "0x02055c54",
+      "end": "0x02055c58",
+      "source": "src/data/tables/sDefaultAllocPlttVramFunc.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "default palette VRAM allocator",
+      "behavior": "Default callback used to allocate palette VRAM."
+    },
+    {
+      "module": "arm9",
+      "section": ".data",
+      "start": "0x02055c58",
+      "end": "0x02055c78",
+      "source": "src/data/tables/PointerTables_02055c58.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "texture VRAM region and palette release tables",
+      "behavior": "Texture VRAM region ordering plus the default palette release callback."
+    },
+    {
+      "module": "arm9",
+      "section": ".data",
+      "start": "0x02055d64",
+      "end": "0x02055d70",
+      "source": "src/data/tables/gJointAnimationResultDispatch.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "joint animation result dispatch",
+      "behavior": "Dispatch table for applying joint-animation results."
+    },
+    {
+      "module": "arm9",
+      "section": ".data",
+      "start": "0x02055d70",
+      "end": "0x02055d8c",
+      "source": "src/data/tables/PointerTables_02055d70.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "material and joint animation dispatch",
+      "behavior": "Material texture-matrix and joint-node animation dispatch tables."
+    },
+    {
+      "module": "arm9",
+      "section": ".data",
+      "start": "0x02055f30",
+      "end": "0x02055f38",
+      "source": "src/data/tables/gGameTitleStringTable.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "game title string table",
+      "behavior": "Pointers to the localized game title strings."
+    },
+    {
+      "module": "arm9",
+      "section": ".data",
+      "start": "0x02055fac",
+      "end": "0x02055fc0",
+      "source": "src/data/gManagerObjectDescriptorB.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "manager object descriptor B",
+      "behavior": "Factory descriptor for the second global manager object."
+    },
+    {
+      "module": "arm9",
+      "section": ".data",
+      "start": "0x02055fc0",
+      "end": "0x02055fd4",
+      "source": "src/data/gManagerObjectDescriptorA.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "manager object descriptor A",
+      "behavior": "Factory descriptor for the first global manager object."
+    },
+    {
+      "module": "arm9",
+      "section": ".data",
+      "start": "0x02055fd4",
+      "end": "0x02055fdc",
+      "source": "src/data/gRankGlyphCodepoints.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "localized rank glyph codepoints",
+      "behavior": "Space plus the three localized glyph codepoints used for rank markers."
+    },
+    {
+      "module": "arm9",
+      "section": ".data",
+      "start": "0x02055ff8",
+      "end": "0x02056014",
+      "source": "src/data/tables/gLanguageCodeTable.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "language code table",
+      "behavior": "Language identifiers used to select localized assets and text."
+    },
+    {
+      "module": "arm9",
+      "section": ".data",
+      "start": "0x0205615c",
+      "end": "0x0205616c",
+      "source": "src/data/tables/gSoundCategoryNames.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "sound category name table",
+      "behavior": "Pointers to sound category names used by the sound manager."
+    },
+    {
       "module": "dtcm",
       "section": ".data",
       "start": "0x027e0058",
@@ -97,6 +348,149 @@
       "compiler": "mwccarm-4.0-1036",
       "name": "Main HUD background layer IDs",
       "behavior": "Maps the three copied HUD background screens to tile-table layer IDs 9, 10, and 11."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209e640",
+      "end": "0x0209e6a0",
+      "source": "src/overlays/ov001/data/tables/gFieldSessionClassData.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "field session class data",
+      "origin": "US reference adapted to EU",
+      "behavior": "Field-session class descriptor, follower offsets, and state-to-overlay mapping."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209e6f0",
+      "end": "0x0209e6f4",
+      "source": "src/overlays/ov001/data/strings/sFieldSessionArchiveSuffix_0209e6f0.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "field session archive suffix",
+      "origin": "US reference adapted to EU",
+      "behavior": "Suffix used when opening the field session archive."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209e710",
+      "end": "0x0209e714",
+      "source": "src/overlays/ov001/data/strings/sSessionNameFormat.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "session name format",
+      "origin": "US reference adapted to EU",
+      "behavior": "String format used when composing a named session identifier."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209e714",
+      "end": "0x0209e718",
+      "source": "src/overlays/ov001/data/strings/sSessionNumberFormat.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "session number format",
+      "origin": "US reference adapted to EU",
+      "behavior": "Decimal format used when composing a numbered session identifier."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209eb38",
+      "end": "0x0209eb4c",
+      "source": "src/overlays/ov001/data/tables/gSceneWorkClassDescriptor.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "scene work class descriptor",
+      "origin": "US reference adapted to EU",
+      "behavior": "Constructor, destructor, and allocation size for scene work instances."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209eb5c",
+      "end": "0x0209eb70",
+      "source": "src/overlays/ov001/data/tables/gSessionTaskClassDescriptor.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "session task class descriptor",
+      "origin": "US reference adapted to EU",
+      "behavior": "Lifecycle callbacks used to create and clear session callback lists."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209ec24",
+      "end": "0x0209ec38",
+      "source": "src/overlays/ov001/data/tables/gPartyStateClassDescriptor.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "party state class descriptor",
+      "origin": "US reference adapted to EU",
+      "behavior": "Lifecycle callbacks and allocation size for party-state objects."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209ecac",
+      "end": "0x0209ecb0",
+      "source": "src/overlays/ov001/data/tables/gHudSlideResourceGroup1Descriptor.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "HUD slide resource group 1 descriptor",
+      "origin": "US reference adapted to EU",
+      "behavior": "Descriptor value referenced by the first HUD slide resource group."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209ecfc",
+      "end": "0x0209ed10",
+      "source": "src/overlays/ov001/data/tables/gFieldManagerClassDescriptor.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "field manager class descriptor",
+      "origin": "US reference adapted to EU",
+      "behavior": "Lifecycle callbacks and allocation size for the field manager."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209ed8c",
+      "end": "0x0209ed90",
+      "source": "src/overlays/ov001/data/strings/gEmptyMessageText.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "empty message text",
+      "origin": "US reference adapted to EU",
+      "behavior": "Empty UTF-16 text used for missing message-line entries."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209f310",
+      "end": "0x0209f314",
+      "source": "src/overlays/ov001/data/strings/sP2Extension_0209f310.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "P2 extension string",
+      "origin": "US reference adapted to EU",
+      "behavior": "Extension used to identify P2 animation resource names."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209f324",
+      "end": "0x0209f338",
+      "source": "src/overlays/ov001/data/tables/gActorChannelClassDescriptor.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "actor channel class descriptor",
+      "origin": "US reference adapted to EU",
+      "behavior": "Lifecycle callbacks and allocation size for actor channels."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x020a0458",
+      "end": "0x020a045c",
+      "source": "src/overlays/ov001/data/strings/sEmptyNodeName_020a0458.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "empty spawn node name",
+      "origin": "US reference adapted to EU",
+      "behavior": "Empty node name passed when a stage object has no attachment node."
     },
     {
       "module": "ov002",
@@ -6388,149 +6782,6 @@
       "name": "ov103 data words",
       "origin": "generated words",
       "behavior": "Initialised data words, pointers named by their targets."
-    },
-    {
-      "module": "ov001",
-      "section": ".data",
-      "start": "0x0209e6f0",
-      "end": "0x0209e6f4",
-      "source": "src/overlays/ov001/data/strings/sFieldSessionArchiveSuffix_0209e6f0.c",
-      "compiler": "mwccarm-4.0-1036",
-      "name": "field session archive suffix",
-      "origin": "US reference adapted to EU",
-      "behavior": "Suffix used when opening the field session archive."
-    },
-    {
-      "module": "ov001",
-      "section": ".data",
-      "start": "0x0209ecac",
-      "end": "0x0209ecb0",
-      "source": "src/overlays/ov001/data/tables/gHudSlideResourceGroup1Descriptor.c",
-      "compiler": "mwccarm-4.0-1036",
-      "name": "HUD slide resource group 1 descriptor",
-      "origin": "US reference adapted to EU",
-      "behavior": "Descriptor value referenced by the first HUD slide resource group."
-    },
-    {
-      "module": "ov001",
-      "section": ".data",
-      "start": "0x0209ed8c",
-      "end": "0x0209ed90",
-      "source": "src/overlays/ov001/data/strings/gEmptyMessageText.c",
-      "compiler": "mwccarm-4.0-1036",
-      "name": "empty message text",
-      "origin": "US reference adapted to EU",
-      "behavior": "Empty UTF-16 text used for missing message-line entries."
-    },
-    {
-      "module": "ov001",
-      "section": ".data",
-      "start": "0x0209f310",
-      "end": "0x0209f314",
-      "source": "src/overlays/ov001/data/strings/sP2Extension_0209f310.c",
-      "compiler": "mwccarm-4.0-1036",
-      "name": "P2 extension string",
-      "origin": "US reference adapted to EU",
-      "behavior": "Extension used to identify P2 animation resource names."
-    },
-    {
-      "module": "ov001",
-      "section": ".data",
-      "start": "0x020a0458",
-      "end": "0x020a045c",
-      "source": "src/overlays/ov001/data/strings/sEmptyNodeName_020a0458.c",
-      "compiler": "mwccarm-4.0-1036",
-      "name": "empty spawn node name",
-      "origin": "US reference adapted to EU",
-      "behavior": "Empty node name passed when a stage object has no attachment node."
-    },
-    {
-      "module": "ov001",
-      "section": ".data",
-      "start": "0x0209e640",
-      "end": "0x0209e6a0",
-      "source": "src/overlays/ov001/data/tables/gFieldSessionClassData.c",
-      "compiler": "mwccarm-4.0-1036",
-      "name": "field session class data",
-      "origin": "US reference adapted to EU",
-      "behavior": "Field-session class descriptor, follower offsets, and state-to-overlay mapping."
-    },
-    {
-      "module": "ov001",
-      "section": ".data",
-      "start": "0x0209e710",
-      "end": "0x0209e714",
-      "source": "src/overlays/ov001/data/strings/sSessionNameFormat.c",
-      "compiler": "mwccarm-4.0-1036",
-      "name": "session name format",
-      "origin": "US reference adapted to EU",
-      "behavior": "String format used when composing a named session identifier."
-    },
-    {
-      "module": "ov001",
-      "section": ".data",
-      "start": "0x0209e714",
-      "end": "0x0209e718",
-      "source": "src/overlays/ov001/data/strings/sSessionNumberFormat.c",
-      "compiler": "mwccarm-4.0-1036",
-      "name": "session number format",
-      "origin": "US reference adapted to EU",
-      "behavior": "Decimal format used when composing a numbered session identifier."
-    },
-    {
-      "module": "ov001",
-      "section": ".data",
-      "start": "0x0209eb38",
-      "end": "0x0209eb4c",
-      "source": "src/overlays/ov001/data/tables/gSceneWorkClassDescriptor.c",
-      "compiler": "mwccarm-4.0-1036",
-      "name": "scene work class descriptor",
-      "origin": "US reference adapted to EU",
-      "behavior": "Constructor, destructor, and allocation size for scene work instances."
-    },
-    {
-      "module": "ov001",
-      "section": ".data",
-      "start": "0x0209eb5c",
-      "end": "0x0209eb70",
-      "source": "src/overlays/ov001/data/tables/gSessionTaskClassDescriptor.c",
-      "compiler": "mwccarm-4.0-1036",
-      "name": "session task class descriptor",
-      "origin": "US reference adapted to EU",
-      "behavior": "Lifecycle callbacks used to create and clear session callback lists."
-    },
-    {
-      "module": "ov001",
-      "section": ".data",
-      "start": "0x0209ec24",
-      "end": "0x0209ec38",
-      "source": "src/overlays/ov001/data/tables/gPartyStateClassDescriptor.c",
-      "compiler": "mwccarm-4.0-1036",
-      "name": "party state class descriptor",
-      "origin": "US reference adapted to EU",
-      "behavior": "Lifecycle callbacks and allocation size for party-state objects."
-    },
-    {
-      "module": "ov001",
-      "section": ".data",
-      "start": "0x0209ecfc",
-      "end": "0x0209ed10",
-      "source": "src/overlays/ov001/data/tables/gFieldManagerClassDescriptor.c",
-      "compiler": "mwccarm-4.0-1036",
-      "name": "field manager class descriptor",
-      "origin": "US reference adapted to EU",
-      "behavior": "Lifecycle callbacks and allocation size for the field manager."
-    },
-    {
-      "module": "ov001",
-      "section": ".data",
-      "start": "0x0209f324",
-      "end": "0x0209f338",
-      "source": "src/overlays/ov001/data/tables/gActorChannelClassDescriptor.c",
-      "compiler": "mwccarm-4.0-1036",
-      "name": "actor channel class descriptor",
-      "origin": "US reference adapted to EU",
-      "behavior": "Lifecycle callbacks and allocation size for actor channels."
     }
   ]
 }

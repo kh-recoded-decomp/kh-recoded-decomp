@@ -1,12 +1,12 @@
-/* CodeWarrior signed 64-bit integer to float conversion. */
+/* ARM fplib signed-long-long to float conversion. */
     .syntax unified
     .arch armv5te
     .text
     .arm
     .align 2
-    .global _ll2f
-    .type _ll2f, %function
-_ll2f:
+    .global _ll_sto_f
+    .type _ll_sto_f, %function
+_ll_sto_f:
     ands r2, r1, #0x80000000
     beq .L_positive
     rsbs r0, r0, #0
@@ -36,4 +36,4 @@ _ll2f:
     andeqs r3, r0, #1
     addne r0, r0, #1
     bx lr
-    .size _ll2f, .-_ll2f
+    .size _ll_sto_f, .-_ll_sto_f

@@ -204,7 +204,7 @@ src/overlays/ov077/calls/func_ov077_020c765c.c:
     complete
     .text       start:0x020c765c end:0x020c7664
 
-src/overlays/ov077/calls/func_ov077_020c7664.c:
+src/overlays/ov077/calls/QueueAndPlaySound.c:
     complete
     .text       start:0x020c7664 end:0x020c7678
 

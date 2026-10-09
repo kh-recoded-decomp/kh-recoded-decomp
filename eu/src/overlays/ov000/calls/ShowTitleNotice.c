@@ -36,7 +36,7 @@ typedef struct TitlePaths {
 extern const TextFrame data_ov000_020637a4;
 extern TitlePaths sOv000_TtlTitleLanguageSZ_0206393c;
 extern u16 data_ov000_02063a00[];
-extern u16 data_02055ba0[];
+extern u16 gTitleNoticePalette[];
 extern char OVERLAY_27_ID[];
 
 #define FS_OVERLAY_ID_ov027 ((u32)OVERLAY_27_ID)
@@ -86,7 +86,7 @@ void ShowTitleNotice(void *owner, int noticeType)
     LoadPackedFileView(&messages, sOv000_TtlTitleLanguageSZ_0206393c.messageArchive, 0);
     func_0200146c(&font, GetLanguageIndex() != 0 ? sOv000_TtlTitleLanguageSZ_0206393c.fontEu : sOv000_TtlTitleLanguageSZ_0206393c.fontJp);
     GX_LoadBGPltt(data_ov000_02063a00, 0, 2);
-    GX_LoadBGPltt(data_02055ba0, 0x1a0, 0x20);
+    GX_LoadBGPltt(gTitleNoticePalette, 0x1a0, 0x20);
     REG_POWCNT |= 0x8000;
     REG_DISPCNT = (REG_DISPCNT & ~0x1f00) | 0x800;
     REG_DB_DISPCNT = REG_DB_DISPCNT & ~0x1f00;
