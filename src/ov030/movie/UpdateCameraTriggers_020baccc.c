@@ -72,8 +72,8 @@ extern void func_ov042_020bd394(int degrees);
 extern void MoveCameraAlongAxis_020bd334(fx32 distance);
 extern void PushFromCameraTarget_020bd1c0(const VecFx32 *pos);
 extern void func_ov042_020bd5e0(u32 value);
-extern void func_ov042_020bd620(u32 value);
-extern void func_ov042_020bd640(u32 value);
+extern void SetCameraParameterC4(u32 value);
+extern void SetCameraParameterC8(u32 value);
 extern void func_ov042_020bd7a8(u32 firstValue, int secondValue);
 extern void func_ov042_020bd59c(int extent);
 extern void SetCameraMode_020bd660(u32 mode);
@@ -239,10 +239,10 @@ void UpdateCameraTriggers_020baccc(void)
                     func_ov042_020bd5e0(trigger->paramA);
                 }
                 if (trigger->paramB != UNSET) {
-                    func_ov042_020bd620(trigger->paramB);
+                    SetCameraParameterC4(trigger->paramB);
                 }
                 if (trigger->paramC != UNSET) {
-                    func_ov042_020bd640(trigger->paramC);
+                    SetCameraParameterC8(trigger->paramC);
                 }
                 if (trigger->paramB == UNSET && trigger->paramC == UNSET) {
                     func_ov042_020bd7a8(0x80000000, UNSET);

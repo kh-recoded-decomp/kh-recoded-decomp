@@ -2,7 +2,7 @@
 
 extern u32 data_ov042_020be5e0;
 
-void func_ov042_020bd660(u32 value) {
+void SetCameraParameterC4(u32 value) {
   *(u32 *)(data_ov042_020be5e0 + 0x13c) = 0x7fffffff;
-  *(u32 *)(data_ov042_020be5e0 + 200) = value;
+  *(u32 *)(data_ov042_020be5e0 + 0xc4) = value;
 }

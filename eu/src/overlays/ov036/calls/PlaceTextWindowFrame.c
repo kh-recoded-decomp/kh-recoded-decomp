@@ -1,0 +1,9 @@
+#define DestroyFndObjectList_020014f0 DestroyFndObjectList
+#define InitTextLayerAt_020014b0 InitTextLayerAt
+#define MeasureTextWindowTiles_020bf2f4 MeasureTextWindowTiles
+#define PlaceTextWindowFrame_020bfe18 PlaceTextWindowFrame
+#define SetTimerDuration_020c27dc SetTimerDuration
+#define data_ov036_020c340c data_ov036_020c342c
+#define data_ov036_020c3844 gTextWindowResourceTable
+#define func_020019f4 GetNestedModeByte
+#include "src/ov036/text_rendering/PlaceTextWindowFrame_020bfe18.c"

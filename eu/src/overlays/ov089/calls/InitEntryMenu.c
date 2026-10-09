@@ -7,7 +7,7 @@
 #define func_ov089_020bf0a4 SetupEntryMenuDisplay
 #define func_ov089_020bf210 LoadEntryModels
 #define func_ov089_020bf398 LoadMenuBackgrounds
-#define func_ov089_020bf49c func_ov089_020bf4bc
+#define func_ov089_020bf49c DrawEntryMenuTexts_020bf49c
 #define func_ov089_020bf9c0 LoadEntryMenuWidgets
 #define func_ov089_020bfc4c InitEntryUnlocks
 #include "src/ov089/panel_state/InitEntryMenu_020c00e4.c"

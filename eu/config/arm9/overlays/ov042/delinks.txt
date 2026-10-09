@@ -94,11 +94,11 @@ src/overlays/ov042/calls/func_ov042_020bd620.c:
     complete
     .text       start:0x020bd620 end:0x020bd640
 
-src/overlays/ov042/calls/func_ov042_020bd640.c:
+src/overlays/ov042/calls/SetCameraParameterC4.c:
     complete
     .text       start:0x020bd640 end:0x020bd660
 
-src/overlays/ov042/calls/func_ov042_020bd660.c:
+src/overlays/ov042/calls/SetCameraParameterC8.c:
     complete
     .text       start:0x020bd660 end:0x020bd680
 

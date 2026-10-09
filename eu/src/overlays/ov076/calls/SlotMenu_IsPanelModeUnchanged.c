@@ -1,4 +1,4 @@
-#define MenuPanel_Update_020cc33c func_ov076_020cc35c
+#define MenuPanel_Update_020cc33c MenuPanel_HandleInput
 #define SlotMenu_IsPanelModeUnchanged_020c7188 SlotMenu_IsPanelModeUnchanged
 #define func_ov039_020bc0d4 GetPrimaryElementEnabled
 #include "src/ov076/unclassified_helpers/SlotMenu_IsPanelModeUnchanged_020c7188.c"

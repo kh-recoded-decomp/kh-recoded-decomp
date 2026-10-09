@@ -1,5 +1,5 @@
 #define DispatchFieldObjectPhase_020a582c DispatchFieldObjectPhase
-#define func_ov016_020a2ca4 func_ov016_020a2cc4
+#define func_ov016_020a2ca4 UpdatePathMovement
 #define func_ov016_020a4a94 SwayAndDropFieldObject
 #define func_ov016_020a4d10 LowerFieldObjectStep
 #define func_ov032_020bf830 UpdateObjectGroupMembers

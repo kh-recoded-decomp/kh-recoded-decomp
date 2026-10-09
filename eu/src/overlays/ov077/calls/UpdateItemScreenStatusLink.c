@@ -1,6 +1,6 @@
 #define UpdateItemScreenStatusLink_020c53a0 UpdateItemScreenStatusLink
 #define func_ov039_020bc0d4 GetPrimaryElementEnabled
-#define func_ov077_020c9370 func_ov077_020c9390
+#define func_ov077_020c9370 MenuPanel_HandleInput_020c9390
 #define func_020505a8 GetSelectionPackedValueBlock
 #define ShowStatusRecordList_020c2b10 ShowStatusRecordList
 #define FindWidgetById_020b90a4 FindWidgetById

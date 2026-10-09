@@ -24,6 +24,10 @@ src/overlays/ov075/calls/IsMenuModeUnlocked.c:
     complete
     .text       start:0x020c4344 end:0x020c4390
 
+src/overlays/ov075/calls/SelectMatrixNode.c:
+    complete
+    .text       start:0x020c4390 end:0x020c48e0
+
 src/overlays/ov075/calls/SetMatrixDescription.c:
     complete
     .text       start:0x020c48e0 end:0x020c4908
@@ -495,6 +499,10 @@ src/overlays/ov075/calls/DestroyItemPicker.c:
 src/overlays/ov075/calls/UnlockableListPanel_Open.c:
     complete
     .text       start:0x020d0034 end:0x020d028c
+
+src/overlays/ov075/calls/ItemMenu_Update_020d026c.c:
+    complete
+    .text       start:0x020d028c end:0x020d076c
 
 src/overlays/ov075/calls/HandleTabTouch.c:
     complete

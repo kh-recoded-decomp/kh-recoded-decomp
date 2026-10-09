@@ -3,7 +3,7 @@
 #define SetUnlockableElementsVisible_020d0e64 SetUnlockableElementsVisible
 #define func_ov073_020c1eb4 RefreshStatusMenuData
 #define func_ov073_020c2ca4 SetStatusPageAndCursor
-#define func_ov075_020c4370 func_ov075_020c4390
+#define func_ov075_020c4370 SelectMatrixNode
 #define func_ov075_020c6358 CommitOptionChoice
 #define func_ov075_020cc9fc ShowNextUnlockNotice
 #include "src/ov075/unclassified_helpers/OnMessageDialogClosed_020c8d30.c"

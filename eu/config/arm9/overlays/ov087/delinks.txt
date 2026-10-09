@@ -60,6 +60,10 @@ src/overlays/ov087/calls/ShowConfirmWindows.c:
     complete
     .text       start:0x020c4c90 end:0x020c4d8c
 
+src/overlays/ov087/calls/RefreshChoiceMenu_020c4d6c.c:
+    complete
+    .text       start:0x020c4d8c end:0x020c5220
+
 src/overlays/ov087/calls/FocusElementForState.c:
     complete
     .text       start:0x020c5880 end:0x020c5984

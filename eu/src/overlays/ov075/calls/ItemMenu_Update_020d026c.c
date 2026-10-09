@@ -1,0 +1,23 @@
+#define BuildTabItemList_020cde04 BuildTabItemList
+#define CancelItemPicker_020ceb60 CancelItemPicker
+#define ConfirmItemPicker_020ceb78 ConfirmItemPicker
+#define FindWidgetById_020b90a4 FindWidgetById
+#define IsRewardEntryLocked_020ced28 IsRewardEntryLocked
+#define PlaySoundEffect_0204d924 PlaySoundEffect
+#define RefreshScrollListLayout_020be138 RefreshScrollListLayout
+#define SelectItemTab_020ce3cc SelectItemTab
+#define SetLayoutElementVisible_020d0e4c SetLayoutElementVisible
+#define SetStatusPageAndCursor_020c2ca4 SetStatusPageAndCursor
+#define SetupScrollList_020bdf10 SetupScrollList
+#define UpdateItemDescription_020cd384 UpdateItemDescription
+#define UpdateScrollList_020be0c4 UpdateScrollListInput
+#define func_0204f204 func_0204f218
+#define func_ov027_020b91c8 func_ov027_020b91e8
+#define func_ov027_020b9360 func_ov027_020b9380
+#define func_ov039_020bc0d4 GetPrimaryElementEnabled
+#define func_ov039_020bc0ec GetSecondaryElementEnabled
+#define func_ov039_020bca00 GetMenuInputState
+#define func_ov075_020cdf88 func_ov075_020cdfa8
+#define func_ov075_020ceab0 func_ov075_020cead0
+#define func_ov075_020ceacc func_ov075_020ceaec
+#include "src/ov075/unclassified_helpers/ItemMenu_Update_020d026c.c"

@@ -1,0 +1,19 @@
+#define DecrementByteCounter_02029370 DecrementByteCounter
+#define GetRecordSlotPair1Entry_02051ef4 GetRecordSlotPair1Entry
+#define IsMenuModeUnlocked_020c4324 IsMenuModeUnlocked
+#define PlaySoundEffect_0204d924 PlaySoundEffect
+#define ResetDirectionRepeat_020c430c ResetDirectionRepeat
+#define SelectMatrixNode_020c4370 SelectMatrixNode
+#define SetSecondaryElementEnabled_020bc084 SetSecondaryElementEnabled
+#define SetUnlockableElementsVisible_020d0e64 SetUnlockableElementsVisible
+#define ShowDialogMessage_020c8ce4 ShowDialogMessage
+#define data_ov075_020d13f4 gOv075StateHandlers
+#define data_ov075_020d1408 gOv075CursorHandlers
+#define data_ov075_020d1518 data_ov075_020d1538
+#define func_ov027_020ba2a8 func_ov027_020ba2c8
+#define func_ov073_020c1eb4 RefreshStatusMenuData
+#define func_ov073_020c2ca4 SetStatusPageAndCursor
+#define func_ov075_020c4260 HasUnvisitedLink
+#define func_ov075_020c5d10 func_ov075_020c5d30
+#define func_ov075_020d0014 UnlockableListPanel_Open
+#include "src/ov075/matrix_menu/SelectMatrixNode_020c4370.c"

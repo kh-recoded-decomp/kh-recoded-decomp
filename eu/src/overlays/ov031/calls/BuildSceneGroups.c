@@ -1,0 +1,16 @@
+#define BuildSceneGroups_020bb6f0 BuildSceneGroups
+#define InitCollisionObject_02033c7c InitCollisionObject
+#define InitPolygonShape_0203af1c InitPolygonShape
+#define IsSupportedOwnerState_020bb574 IsSupportedOwnerState
+#define MarkLinkedTargetFlag_020bb5b8 MarkLinkedTargetFlag
+#define NNSi_FndAllocFromDefaultHeapEx_0202a19c NNS_FndAllocFromDefaultExpHeapEx
+#define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
+#define OffsetBoxByDelta_0203ac70 OffsetBoxByDelta
+#define SetShapePosition_0203afa0 SetShapePosition
+#define VEC_Add_01ff9e0c VEC_Add
+#define data_02053438 data_0205344c
+#define func_01ff8710 MIi_CpuCopy32
+#define func_02036230 GetActorRegistry
+#define func_ov031_020bb598 func_ov031_020bb5b8
+#define g_activeState_020bc800 data_ov031_020bc820
+#include "src/ov031/overlay_state/BuildSceneGroups_020bb6f0.c"

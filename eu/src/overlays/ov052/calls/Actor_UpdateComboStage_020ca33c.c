@@ -1,0 +1,19 @@
+#define Actor_UpdateComboStage_020ca31c Actor_UpdateComboStage_020ca33c
+#define AdvanceAnimationTracks_0202ef24 AdvanceAnimationTracks
+#define ConfigureChannelSlot_0206ca68 ConfigureChannelSlot
+#define FX_Div_01ff9c84 FX_Div
+#define GetLinkedAngleOffset_020ceb7c GetLinkedAngleOffset
+#define InitCylinderShape_0203aeac InitCylinderShape
+#define InitRecord60_020ac0b8 InitRecord60
+#define IsPlayerEntryFlagSet_02050014 IsPlayerEntryFlagSet
+#define OffsetBoxByDelta_0203ac70 OffsetBoxByDelta
+#define RemapIndex_0206cad8 RemapIndex
+#define ScaleVecFx32_01ffafb4 ScaleVecFx32
+#define StepHitScan_020ac164 StepHitScan
+#define VEC_Normalize_01ffaff4 VEC_NormalizeLength
+#define VEC_Subtract_01ff9e3c VEC_Subtract
+#define ZeroAndSetField0xd4_020ac150 ZeroAndSetField0xd4
+#define data_0205356c data_02053580
+#define func_01ff8830 MI_CpuFill8
+#define selectJointAnimationBlend_0202f2cc selectJointAnimationBlend
+#include "src/ov052/actor_motion/Actor_UpdateComboStage_020ca31c.c"

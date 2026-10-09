@@ -1,0 +1,6 @@
+#define CopyClippedScreenRegion_020167d0 NNS_G2dBGLoadScreenRect
+#define DrawPopupWindowFrame_020c225c DrawPopupWindowFrame
+#define G2S_GetBG2ScrPtr_02006f0c G2S_GetBG2ScrPtr
+#define MIi_CpuClearFast_01ff8740 MIi_CpuClearFast
+#define g_popupManager_020c373c data_ov091_020c375c
+#include "src/ov091/panel_state/DrawPopupWindowFrame_020c225c.c"

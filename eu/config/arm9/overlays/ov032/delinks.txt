@@ -48,6 +48,10 @@ src/overlays/ov032/calls/CompleteGroupTransition.c:
     complete
     .text       start:0x020baaf0 end:0x020bab24
 
+src/overlays/ov032/calls/UpdateChallengeScene.c:
+    complete
+    .text       start:0x020bab24 end:0x020bb034
+
 src/overlays/ov032/calls/AdvanceToRoutedSlot.c:
     complete
     .text       start:0x020bb034 end:0x020bb14c

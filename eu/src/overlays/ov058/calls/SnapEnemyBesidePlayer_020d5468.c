@@ -1,0 +1,24 @@
+#define CollisionQuery_Init_02034c74 CollisionQuery_Init
+#define GetBoundedEntryField_0206db5c GetBoundedEntryField
+#define GetLinkedAngleOffset_020ceb7c GetLinkedAngleOffset
+#define InitAxisCylinderShape_0203adcc InitAxisCylinderShape
+#define InitCylinderShape_0203aeac InitCylinderShape
+#define IsGroupMemberActive_020a8d1c IsGroupMemberActive
+#define MTX_Concat33_01ff9270 MTX_Concat33
+#define MTX_Identity33_01ff90ec MTX_Identity33_
+#define MTX_MultVec33_01ff9404 MTX_MultVec33
+#define MTX_RotY33_01ff923c MTX_RotY33_
+#define Obj_SetPosition_0203569c Obj_SetPosition
+#define OffsetBoxByDelta_0203ac70 OffsetBoxByDelta
+#define ResetEnemyLaunchState_020d6a78 ResetEnemyLaunchState
+#define ScaleVecFx32_01ffafb4 ScaleVecFx32
+#define SweepWorldCollision_020364a0 SweepWorldCollision
+#define VEC_Add_01ff9e0c VEC_Add
+#define VEC_Subtract_01ff9e3c VEC_Subtract
+#define data_0205356c data_02053580
+#define data_ov058_020d8970 data_ov058_020d8990
+#define func_01ffaff4 VEC_NormalizeLength
+#define func_ov021_020a8ab4 ResetAnimationTrackState
+#define func_ov021_020a8ca0 func_ov021_020a8cc0
+#define func_ov052_020ceb54 func_ov052_020ceb74
+#include "src/ov058/unclassified_helpers/SnapEnemyBesidePlayer_020d5468.c"

@@ -1268,6 +1268,10 @@ src/overlays/ov021/calls/ProbeGroundContact.c:
     complete
     .text       start:0x020afd48 end:0x020afdc8
 
+src/overlays/ov021/calls/MoveLinkedActor_020afdc8.c:
+    complete
+    .text       start:0x020afdc8 end:0x020b0270
+
 src/overlays/ov021/calls/ResolveEventRecordRef.c:
     complete
     .text       start:0x020b0270 end:0x020b02d8

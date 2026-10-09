@@ -1,0 +1,24 @@
+#define EaseProgress_0204a174 EaseProgress
+#define GetOrbitOffsetDegrees_020bd474 GetOrbitOffsetDegrees
+#define LerpVecFx32Q27InPlace_0204be6c LerpVecFx32Q27InPlace
+#define MoveCameraAlongAxis_020bd334 MoveCameraAlongAxis
+#define OffsetCameraColliders_020bd2a0 OffsetCameraColliders
+#define PushFromCameraTarget_020bd1c0 PushFromCameraTarget
+#define ScaleVecFx32InPlace_0204a5e4 ScaleVecFx32InPlace
+#define SetCameraMode_020bd660 SetCameraMode
+#define UpdateCameraTriggers_020baccc UpdateCameraTriggers
+#define VEC_Mag_01ff9f28 VEC_Mag
+#define VEC_NormalizeUnchecked_01ff9f88 VEC_Normalize
+#define data_ov030_020bd000 data_ov030_020bd020
+#define func_ov001_0207b49c func_ov001_0207b4c4
+#define func_ov021_020af5f4 func_ov021_020af614
+#define func_ov030_020bb368 func_ov030_020bb388
+#define func_ov042_020bd290 Camera_GetGoalPosition
+#define func_ov042_020bd324 Camera_GetColliderOffset
+#define func_ov042_020bd394 func_ov042_020bd3b4
+#define func_ov042_020bd584 func_ov042_020bd5a4
+#define func_ov042_020bd59c func_ov042_020bd5bc
+#define func_ov042_020bd5e0 SetCameraParameterBc
+#define func_ov042_020bd6ec FollowChainLeader
+#define func_ov042_020bd7a8 func_ov042_020bd7c8
+#include "src/ov030/movie/UpdateCameraTriggers_020baccc.c"

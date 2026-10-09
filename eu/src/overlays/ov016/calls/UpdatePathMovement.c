@@ -1,0 +1,11 @@
+#define CopyEntryValueIfSet_020a2c88 CopyEntryValueIfSet
+#define OffsetBoxByDelta_0203ac70 OffsetBoxByDelta
+#define ScaleVecFx32InPlace_0204a5e4 ScaleVecFx32InPlace
+#define SetCollisionObjectPosition_02033f48 SetCollisionObjectPosition
+#define UpdatePathMovement_020a2ca4 UpdatePathMovement
+#define VEC_Add_01ff9e0c VEC_Add
+#define VEC_Subtract_01ff9e3c VEC_Subtract
+#define data_02053438 data_0205344c
+#define func_02036240 ActorRegistry_GetEntityByIndex
+#define func_ov016_020a2558 func_ov016_020a2578
+#include "src/ov016/field_objects/UpdatePathMovement_020a2ca4.c"

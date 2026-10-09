@@ -1,0 +1,9 @@
+#define SetTimerDuration_020c27dc SetTimerDuration
+#define data_ov036_020c33b0 data_ov036_020c33d0
+#define data_ov036_020c33b8 data_ov036_020c33d8
+#define data_ov036_020c33e4 data_ov036_020c3404
+#define data_ov036_020c34ac data_ov036_020c34cc
+#define data_ov036_020c3588 data_ov036_020c35a8
+#define data_ov036_020c3844 gTextWindowResourceTable
+#define func_0204f13c IndexedRecord_SetPair
+#include "src/ov036/text_rendering/UpdateTextWindowTail_020c12e8.c"

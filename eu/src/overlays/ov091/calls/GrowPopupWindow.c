@@ -2,5 +2,5 @@
 #define GrowPopupWindow_020c1f38 GrowPopupWindow
 #define SetPopupState_020c2784 SetPopupState
 #define SetSubBg2Visible_020c271c SetSubBg2Visible
-#define func_ov091_020c225c func_ov091_020c227c
+#define func_ov091_020c225c DrawPopupWindowFrame
 #include "src/ov091/panel_state/GrowPopupWindow_020c1f38.c"

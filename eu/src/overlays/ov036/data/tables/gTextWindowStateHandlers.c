@@ -3,7 +3,7 @@
 extern void func_ov036_020bf6dc(void);
 extern void OpenQueuedTextWindow(void);
 extern void LoadTextWindowFrame(void); /* LoadTextWindowFrame */
-extern void func_ov036_020bfe38(void);
+extern void PlaceTextWindowFrame(void);
 extern void StepPanelFade(void);
 extern void LayoutTextWindow(void);
 extern void UpdateTextWindowTyping(void); /* UpdateTextWindowTyping */
@@ -11,15 +11,15 @@ extern void func_ov036_020c0e30(void);
 extern void AdvanceTextWindowPage(void); /* AdvanceTextWindowPage */
 extern void StepPanelFadeOut(void);
 extern void CloseTextWindowEntry(void); /* CloseTextWindowEntry */
-extern void func_ov036_020c1308(void);
-extern void func_ov036_020c182c(void);
+extern void UpdateTextWindowTail_020c12e8(void);
+extern void HandleScrollMenuInput(void);
 extern void func_ov036_020c1d48(void);
 
 void (*const gTextWindowStateHandlers[14])(void) = {
     func_ov036_020bf6dc,
     OpenQueuedTextWindow,
     LoadTextWindowFrame, /* LoadTextWindowFrame */
-    func_ov036_020bfe38,
+    PlaceTextWindowFrame,
     StepPanelFade,
     LayoutTextWindow,
     UpdateTextWindowTyping, /* UpdateTextWindowTyping */
@@ -27,7 +27,7 @@ void (*const gTextWindowStateHandlers[14])(void) = {
     AdvanceTextWindowPage, /* AdvanceTextWindowPage */
     StepPanelFadeOut,
     CloseTextWindowEntry, /* CloseTextWindowEntry */
-    func_ov036_020c1308,
-    func_ov036_020c182c,
+    UpdateTextWindowTail_020c12e8,
+    HandleScrollMenuInput,
     func_ov036_020c1d48,
 };

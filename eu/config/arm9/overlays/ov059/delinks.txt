@@ -196,6 +196,10 @@ src/overlays/ov059/calls/Actor_UpdateChargeCommand.c:
     complete
     .text       start:0x020c9b8c end:0x020c9d34
 
+src/overlays/ov059/calls/Actor_UpdateSweepHits.c:
+    complete
+    .text       start:0x020c9d34 end:0x020ca1f4
+
 src/overlays/ov059/calls/QueryFilter_IsKind24.c:
     complete
     .text       start:0x020ca1f4 end:0x020ca206
@@ -499,6 +503,10 @@ src/overlays/ov059/calls/MarkList_Add.c:
 src/overlays/ov059/calls/MarkList_AddAtObject.c:
     complete
     .text       start:0x020cde6c end:0x020cde8a
+
+src/overlays/ov059/calls/Seeker_Update.c:
+    complete
+    .text       start:0x020cde8c end:0x020ce3dc
 
 src/overlays/ov059/calls/SlotEntry_AdvanceAnim.c:
     complete

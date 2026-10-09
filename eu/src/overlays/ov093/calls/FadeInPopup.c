@@ -2,5 +2,5 @@
 #define FadeInPopup_020c336c FadeInPopup
 #define SetBgSubLayerVisible_020c3b5c SetBgSubLayerVisible
 #define StateMachine_SetState_020c3bc4 StateMachine_SetState
-#define func_ov093_020c369c func_ov093_020c36bc
+#define func_ov093_020c369c DrawPopupWindowFrame_020c369c
 #include "src/ov093/unclassified_helpers/FadeInPopup_020c336c.c"

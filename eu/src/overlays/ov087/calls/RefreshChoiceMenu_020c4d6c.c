@@ -1,0 +1,16 @@
+#define FindWidgetById_020b90a4 FindWidgetById
+#define InvokeSlotHandlers_020c46e0 InvokeSlotHandlers
+#define MoveCursorToWidget_020c43c4 MoveCursorToWidget
+#define SetEntrySlotsVisible_020b9580 SetEntrySlotsVisible
+#define SetFocusedWidget_020b96e4 SetFocusedWidget
+#define SetInfoWindowVisible_020c431c SetInfoWindowVisible
+#define ShowChoiceWindows_020c4b74 ShowChoiceWindows
+#define data_ov087_020c7cb8 data_ov087_020c7cd8
+#define func_ov001_020645c8 IsSessionFlagSet
+#define func_ov027_020b90f4 func_ov027_020b9114
+#define func_ov027_020ba2a8 func_ov027_020ba2c8
+#define func_ov039_020bc1bc func_ov039_020bc1dc
+#define func_ov039_020bc810 GetMenuStackDepth
+#define func_ov087_020c4714 func_ov087_020c4734
+#define func_ov087_020c4a48 func_ov087_020c4a68
+#include "src/ov087/panel_state/RefreshChoiceMenu_020c4d6c.c"

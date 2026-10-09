@@ -7,7 +7,7 @@ extern void func_ov032_020ba98c(void);
 extern void FinishMovieMenuLoad(void); /* FinishMovieMenuLoad */
 extern void ResumeSceneAndAdvance(void); /* ResumeSceneAndAdvance */
 extern void CompleteGroupTransition(void); /* CompleteGroupTransition */
-extern void func_ov032_020bab24(void);
+extern void UpdateChallengeScene(void);
 extern void AdvanceToRoutedSlot(void); /* AdvanceToRoutedSlot */
 extern void InitializeGroupAction(void); /* InitializeGroupAction */
 extern void FinishGroupTransition(void); /* FinishGroupTransition */
@@ -27,7 +27,7 @@ void (*gGroupActionStateHandlers[18])(void) = {
     FinishMovieMenuLoad, /* FinishMovieMenuLoad */
     ResumeSceneAndAdvance, /* ResumeSceneAndAdvance */
     CompleteGroupTransition, /* CompleteGroupTransition */
-    func_ov032_020bab24,
+    UpdateChallengeScene,
     AdvanceToRoutedSlot, /* AdvanceToRoutedSlot */
     InitializeGroupAction, /* InitializeGroupAction */
     FinishGroupTransition, /* FinishGroupTransition */

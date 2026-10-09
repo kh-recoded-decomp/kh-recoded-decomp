@@ -1,0 +1,23 @@
+#define IsEntryFlag2Active_020642d0 IsEntryFlag2Active
+#define IsGlobalPackedBitSet_02027304 IsGlobalPackedBitSet
+#define SetFieldEntriesPaused_0206e444 SetFieldEntriesPaused
+#define SetGroupMenuPercent_020bbb7c SetGroupMenuPercent
+#define SetMenuHighlight_0206c2f8 SetMenuHighlight
+#define ShowFieldPopupText_02071e44 ShowFieldPopupText
+#define StageEvents_CheckAllEvents_02087844 StageEvents_CheckAllEvents
+#define SubScene9_Request_02066e50 SubScene9_Request
+#define UpdateChallengeProgress_020bb57c UpdateChallengeProgress
+#define UpdateChallengeScene_020bab04 UpdateChallengeScene
+#define WriteSessionPackedBits_0206459c WriteSessionPackedBits
+#define data_ov001_020a0460 data_ov001_020a0480
+#define data_ov032_020c0060 data_ov032_020c0080
+#define func_0202b788 GetLanguageIndex
+#define func_0204d7f4 func_0204d808
+#define func_ov001_020645c8 IsSessionFlagSet
+#define func_ov001_020680cc SetSceneEntryPrimaryDisplayId
+#define func_ov001_020680e4 SetSceneEntrySecondaryDisplayId
+#define func_ov001_0207d384 func_ov001_0207d3ac
+#define func_ov027_020ba2a8 func_ov027_020ba2c8
+#define func_ov027_020ba2e0 func_ov027_020ba300
+#define func_ov032_020ba604 func_ov032_020ba624
+#include "src/ov032/state_machine/UpdateChallengeScene_020bab04.c"

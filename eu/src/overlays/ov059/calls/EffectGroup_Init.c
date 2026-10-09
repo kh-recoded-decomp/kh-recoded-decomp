@@ -8,6 +8,6 @@
 #define func_ov059_020cd780 EffectGroup_LoadModels
 #define func_ov059_020cda14 EffectGroup_Draw
 #define func_ov059_020cdc5c TaskRunner_Update
-#define func_ov059_020cde6c func_ov059_020cde8c
+#define func_ov059_020cde6c Seeker_Update
 #define func_ov059_020cebd4 SlotEntry_AdvanceAnim
 #include "src/ov059/unclassified_helpers/EffectGroup_Init_020cedbc.c"

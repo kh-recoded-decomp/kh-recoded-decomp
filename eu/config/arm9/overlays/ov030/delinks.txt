@@ -132,6 +132,10 @@ src/overlays/ov030/calls/IsSceneUnpaused_020bacd4.c:
     complete
     .text       start:0x020bacd4 end:0x020bacec
 
+src/overlays/ov030/calls/UpdateCameraTriggers.c:
+    complete
+    .text       start:0x020bacec end:0x020bb230
+
 src/overlays/ov030/auto/func_ov030_020bb230.c:
     complete
     .text       start:0x020bb230 end:0x020bb240

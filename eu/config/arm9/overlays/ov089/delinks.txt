@@ -40,6 +40,10 @@ src/overlays/ov089/calls/func_ov089_020bf4a8.c:
     complete
     .text       start:0x020bf4a8 end:0x020bf4bc
 
+src/overlays/ov089/calls/DrawEntryMenuTexts_020bf49c.c:
+    complete
+    .text       start:0x020bf4bc end:0x020bf970
+
 src/overlays/ov089/calls/LoadEntryMenuWidgets.c:
     complete
     .text       start:0x020bf9e0 end:0x020bfaf0

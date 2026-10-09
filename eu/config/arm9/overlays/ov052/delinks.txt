@@ -136,6 +136,10 @@ src/overlays/ov052/auto/func_ov052_020ca330.c:
     complete
     .text       start:0x020ca330 end:0x020ca33c
 
+src/overlays/ov052/calls/Actor_UpdateComboStage_020ca33c.c:
+    complete
+    .text       start:0x020ca33c end:0x020ca7f0
+
 src/overlays/ov052/calls/SetSlotDisplayMode.c:
     complete
     .text       start:0x020ca7f0 end:0x020ca8f4

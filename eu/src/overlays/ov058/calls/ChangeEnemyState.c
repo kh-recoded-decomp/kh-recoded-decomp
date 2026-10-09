@@ -9,7 +9,7 @@
 #define func_ov052_020ceb7c GetLinkedAngleOffset
 #define func_ov058_020d50ac func_ov058_020d50cc
 #define func_ov058_020d544c func_ov058_020d546c
-#define func_ov058_020d5468 func_ov058_020d5488
+#define func_ov058_020d5468 SnapEnemyBesidePlayer_020d5468
 #define func_ov058_020d59b4 UpdateEnemyDownState
 #define func_ov058_020d5af4 UpdateEnemyApproachState
 #define selectJointAnimationBlend_0202f2cc selectJointAnimationBlend
