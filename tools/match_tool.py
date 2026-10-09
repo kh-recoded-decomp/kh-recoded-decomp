@@ -130,6 +130,9 @@ RUNTIME_HELPERS = {
     "_f2d": 0x0202399C,
     "_ll_sto_f": 0x02023B28,
     "_ll_sfrom_f": 0x02023A20,
+    # Double-precision compare and convert helpers.
+    "_dflt": 0x0202363C,
+    "_dleq": 0x02023714,
 }
 
 
