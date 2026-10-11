@@ -1,5 +1,5 @@
 #define MTX_RotY33_01ff923c MTX_RotY33_
 #define ResizeBoxCollisionObject_02033e6c ResizeBoxCollisionObject
-#define data_0205356c data_02053580
+#define data_0205356c gSinFx12Table
 #define func_0203ad54 InitBoxShape
 #include "src/arm9/spatial_queries/ResizeBoxCollisionObject_02033e6c.c"

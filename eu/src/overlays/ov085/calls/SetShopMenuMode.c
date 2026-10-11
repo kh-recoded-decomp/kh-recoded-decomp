@@ -1,0 +1,26 @@
+#define ArrangeWidgetPair_020c0b38 ArrangeWidgetPair
+#define FilterItemsForTab_020c14c0 FilterItemsForTab
+#define FindActiveRecordById_020b8184 FindActiveRecordById
+#define FindWidgetById_020b90a4 FindWidgetById
+#define GetSecondaryRecordCount_020291c0 GetSecondaryRecordCount
+#define InvokeCallback40_020b8268 func_ov027_020b8288
+#define MoveTabCursor_020c1164 MoveTabCursor
+#define PlaySoundEffect_0204d924 PlaySoundEffect
+#define PushPendingPair_020bf614 PushPendingPair
+#define ReleaseRecordEntry_02029388 ReleaseRecordEntry
+#define ResetCursorPosition_020c1550 ResetCursorPosition
+#define SetEntrySlotsVisible_020b9580 SetEntrySlotsVisible
+#define SetGlobalPackedBit_02027320 SetGlobalPackedBit
+#define SetShopMenuMode_020c0b90 SetShopMenuMode
+#define TagTracker_InvokeCallback_020b8210 func_ov027_020b8230
+#define _u32_div_f _u32_div_f
+#define data_0205fe0c data_0205fe0c
+#define data_ov085_020c22c4 data_ov085_020c22e4
+#define func_020291b4 GetPrimaryRecordCount
+#define func_02029240 func_02029254
+#define func_0204f378 IndexedRecords_SetFlag2
+#define func_ov001_020645dc SetSessionFlag
+#define func_ov039_020bc7f8 GetRuntimeStateFlags
+#define func_ov039_020bdf10 SetupScrollList
+#define func_ov085_020bf754 func_ov085_020bf774
+#include "src/ov085/unclassified_helpers/SetShopMenuMode_020c0b90.c"

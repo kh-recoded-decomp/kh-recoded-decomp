@@ -144,6 +144,10 @@ src/overlays/ov010/calls/Entity_UpdateSpecialRelease.c:
     complete
     .text       start:0x020a12b8 end:0x020a13ec
 
+src/overlays/ov010/calls/Entity_UpdateSpecialStrike.c:
+    complete
+    .text       start:0x020a13ec end:0x020a1728
+
 src/overlays/ov010/calls/Entity_UpdateSpecialCharge.c:
     complete
     .text       start:0x020a1728 end:0x020a17c0

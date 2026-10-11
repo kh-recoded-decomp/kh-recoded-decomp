@@ -5,7 +5,7 @@
 #define SwayAndDropFieldObject_020a4a94 SwayAndDropFieldObject
 #define VEC_Add_01ff9e0c VEC_Add
 #define VEC_Subtract_01ff9e3c VEC_Subtract
-#define data_0205356c data_02053580
+#define data_0205356c gSinFx12Table
 #define func_02036240 ActorRegistry_GetEntityByIndex
 #define func_ov016_020a2558 func_ov016_020a2578
 #define func_ov016_020a4a64 CheckFieldUnitHeightLimit

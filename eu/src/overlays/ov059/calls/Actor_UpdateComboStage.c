@@ -105,7 +105,7 @@ struct Actor {
     ActorStateFunc setState;
 };
 
-extern s16 data_02053580[];
+extern s16 gSinFx12Table[];
 
 extern void MI_CpuFill8(void *dst, int value, int size);
 extern void VEC_Subtract(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
@@ -229,8 +229,8 @@ void Actor_UpdateComboStage(Actor *actor, StageProgress *progress, fx32 delta)
                 request.velocity.y = 0;
                 request.velocity.x = 0;
                 angle = GetLinkedAngleOffset_020cd104(actor) >> 4;
-                request.velocity.x = -data_02053580[angle];
-                request.velocity.z = -data_02053580[(0x400 - angle) & 0xfff];
+                request.velocity.x = -gSinFx12Table[angle];
+                request.velocity.z = -gSinFx12Table[(0x400 - angle) & 0xfff];
                 ScaleVecFx32(0x333, &request.velocity, &request.velocity);
                 InitRecord60(&request);
                 start = actor->position;

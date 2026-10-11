@@ -1,0 +1,13 @@
+#define AdvanceAnimationTracks_0202ef24 AdvanceAnimationTracks
+#define BuildCollisionShape_02080834 BuildCollisionShape
+#define GetMovieEntryKind_020badf0 GetMovieEntryKind
+#define Obj_SetPosition_0203569c Obj_SetPosition
+#define RebindAnimTracks_020809d0 RebindAnimTracks
+#define ResetLinkAnimation_020a23b0 ResetLinkAnimation
+#define ResizeBoxCollisionObject_02033e6c ResizeBoxCollisionObject
+#define UpdateDespawnAnimation_020a2e08 UpdateDespawnAnimation
+#define UpdateLinkObject_020a2ecc UpdateLinkedObject
+#define func_0202f4e8 Flags16_ClearBit1
+#define func_02036240 ActorRegistry_GetEntityByIndex
+#define func_ov035_020bae64 func_ov035_020bae84
+#include "src/ov019/unclassified_helpers/UpdateLinkObject_020a2ecc.c"

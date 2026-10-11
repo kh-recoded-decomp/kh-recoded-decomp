@@ -2,7 +2,7 @@
 #define VEC_DotProduct_01ff9e6c VEC_DotProduct
 #define VEC_Normalize_01ff9f88 VEC_Normalize
 #define VEC_Subtract_01ff9e3c VEC_Subtract
-#define data_0205356c data_02053580
+#define data_0205356c gSinFx12Table
 #define data_ov021_020b56a4 data_ov021_020b56c4
 #define func_ov001_02090f04 func_ov001_02090f2c
 #define func_ov001_02091c34 NotifySceneObjectHandler

@@ -7,6 +7,6 @@
 #define HasFlagsAt0xe_020a752c HasFlagsAt0xe
 #define IsPlayerEntryFlagSet_02050014 IsPlayerEntryFlagSet
 #define UpdateAirDashMode_020cb3e0 UpdateAirDashMode
-#define data_0205356c data_02053580
+#define data_0205356c gSinFx12Table
 #define func_ov052_020d12f0 SetActorPaused
 #include "src/ov052/unclassified_helpers/UpdateAirDashMode_020cb3e0.c"

@@ -1,0 +1,17 @@
+#define FormatStateText_020bccac FormatStateText
+#define G2D_DrawAnchoredText_02017dec NNSi_G2dTextCanvasDrawText
+#define G2D_DrawCharGlyph_02017910 NNS_G2dCharCanvasDrawChar
+#define G2D_MeasureTextWidth_02016bc0 NNSi_G2dFontGetTextWidth
+#define GetActiveRecordEntryOrNull_02029548 GetActiveRecordEntryOrNull
+#define GetPackedBitMask GetPackedBitMask
+#define IsItemSlotAvailable_020cdf10 IsItemSlotAvailable
+#define ItemPicker_DrawRows_020cdf88 ItemPicker_DrawRows
+#define MatrixMenu_GetStockForRecord_020d0f34 MatrixMenu_GetStockForRecord
+#define OS_SNPrintf_0202e080 OS_SNPrintf_0202e094
+#define UpdateItemDescription_020cd384 UpdateItemDescription
+#define _s32_div_f _s32_div_f
+#define data_02055fd4 gRankGlyphCodepoints
+#define data_ov075_020d1868 sMenuViewportDimensions
+#define func_ov039_020bc994 GetMenuFont10
+#define func_ov039_020bc9ac GetMenuFont10s
+#include "src/ov075/unclassified_helpers/ItemPicker_DrawRows_020cdf88.c"

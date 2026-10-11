@@ -392,6 +392,10 @@ src/overlays/ov076/calls/IsItemSlotAvailable_020c9d40.c:
     complete
     .text       start:0x020c9d40 end:0x020c9db6
 
+src/overlays/ov076/calls/ItemPicker_DrawRows_020c9db8.c:
+    complete
+    .text       start:0x020c9db8 end:0x020ca1fc
+
 src/overlays/ov076/calls/MenuPanel_SetFilterMode.c:
     complete
     .text       start:0x020ca1fc end:0x020ca270

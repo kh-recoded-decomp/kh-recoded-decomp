@@ -3,7 +3,7 @@
 #define UpdateEventCameraOrbitParticle_020c4104 UpdateEventCameraOrbitParticle
 #define VEC_Add_01ff9e0c VEC_Add
 #define VEC_Subtract_01ff9e3c VEC_Subtract
-#define data_0205356c data_02053580
+#define data_0205356c gSinFx12Table
 #define func_ov046_020c2cb8 Camera_GetEventFocusPoint
 #define func_01ffaff4 VEC_NormalizeLength
 #include "src/ov049/shared_engine/UpdateEventCameraOrbitParticle_020c4104.c"

@@ -2,5 +2,5 @@
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define PopStackEntry_020bc8a0 PopStackEntry
 #define func_ov039_020bbf78 StartSubScene
-#define func_ov085_020c0b90 func_ov085_020c0bb0
+#define func_ov085_020c0b90 SetShopMenuMode
 #include "src/ov085/unclassified_helpers/CancelPicker_020c17c4.c"

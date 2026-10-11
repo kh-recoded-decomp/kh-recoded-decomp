@@ -12,5 +12,5 @@
 #define func_ov052_020ceb60 func_ov052_020ceb80
 #define func_ov058_020d88e4 GetSceneSlotAngle
 #define func_ov058_020d893c func_ov058_020d895c
-#define g_sinTable_0205356c data_02053580
+#define g_sinTable_0205356c gSinFx12Table
 #include "src/ov058/unclassified_helpers/UpdateEnemyApproachState_020d5af4.c"

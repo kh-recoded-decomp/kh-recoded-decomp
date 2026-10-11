@@ -3,5 +3,5 @@
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define func_ov027_020b90a4 FindWidgetById
 #define func_ov027_020b96a0 func_ov027_020b96c0
-#define func_ov076_020c9d98 func_ov076_020c9db8
+#define func_ov076_020c9d98 ItemPicker_DrawRows_020c9db8
 #include "src/ov076/unclassified_helpers/MenuPanel_SetFilterMode_020ca1dc.c"

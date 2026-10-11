@@ -13,7 +13,7 @@
 #define VEC_MultAdd_01ffa09c VEC_MultAdd
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define data_02053438 gZeroVecFx32
-#define data_0205356c data_02053580
+#define data_0205356c gSinFx12Table
 #define func_0203adcc InitAxisCylinderShape
 #define func_ov021_020a7504 func_ov021_020a7524
 #define func_ov021_020a7544 func_ov021_020a7564

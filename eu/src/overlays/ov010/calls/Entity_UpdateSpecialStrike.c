@@ -1,0 +1,22 @@
+#define Entity_UpdateSpecialStrike_020a13cc Entity_UpdateSpecialStrike
+#define FixedPointAtan2_020062bc FX_Atan2Idx
+#define FixedPointMultiply12 FX_Mul
+#define GetStageEventTargetInfo_02087960 GetStageEventTargetInfo
+#define VEC_MultAdd_01ffa09c VEC_MultAdd
+#define VEC_Subtract_01ff9e3c VEC_Subtract
+#define ZeroBytes0x28_020ac0f8 ZeroBytes0x28
+#define _s32_div_f _s32_div_f
+#define data_ov010_020a1dc0 gSpecialActionWork
+#define func_01ff9f88 VEC_Normalize
+#define func_ov001_020645e8 ClearSessionPackedBit
+#define func_ov010_020a0d00 func_ov010_020a0d20
+#define func_ov010_020a1028 SpawnEffectAtTarget
+#define func_ov021_020a8ab4 ResetAnimationTrackState
+#define func_ov021_020a8ca0 func_ov021_020a8cc0
+#define func_ov021_020ac104 InitPathSegment
+#define func_ov021_020ac33c ApplyHitToTarget_020ac33c
+#define func_ov052_020ce9d4 ComputeRootMotionDelta
+#define func_ov052_020ceb54 func_ov052_020ceb74
+#define func_ov052_020ceb60 func_ov052_020ceb80
+#define nextRandom12_0202aa58 nextRandom12
+#include "src/ov010/actor_state/Entity_UpdateSpecialStrike_020a13cc.c"

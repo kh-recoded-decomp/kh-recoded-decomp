@@ -5,5 +5,5 @@
 #define MTX_MultVec33_01ff9404 MTX_MultVec33
 #define MTX_RotY33_01ff923c MTX_RotY33_
 #define ScaleVecFx32_01ffafb4 ScaleVecFx32
-#define g_sinTable_0205356c data_02053580
+#define g_sinTable_0205356c gSinFx12Table
 #include "src/ov059/unclassified_helpers/Actor_GetRootMotionDelta_020cce10.c"

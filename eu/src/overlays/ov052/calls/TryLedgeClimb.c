@@ -114,7 +114,7 @@ typedef struct {
 } GameFlags;
 
 extern GameFlags *data_0205fe0c;
-extern s16 data_02053580[];
+extern s16 gSinFx12Table[];
 extern void *GetPlayerControlState(int player);
 extern VecFx32 *func_ov052_020ceb74(Actor *actor);
 extern u16 GetLinkedAngleOffset(Actor *actor);
@@ -220,8 +220,8 @@ BOOL TryLedgeClimb(Actor *actor, ClimbState *state)
     facing.y = 0;
     facing.x = 0;
     index = GetLinkedAngleOffset(actor) >> 4;
-    facing.x = -data_02053580[index];
-    facing.z = -data_02053580[(0x400 - index) & 0xfff];
+    facing.x = -gSinFx12Table[index];
+    facing.z = -gSinFx12Table[(0x400 - index) & 0xfff];
     secondY = 0x80000000;
     maxY = secondY;
     if (actor->flags & 2) {
@@ -448,8 +448,8 @@ BOOL TryLedgeClimb(Actor *actor, ClimbState *state)
             return FALSE;
         }
         index = func_ov021_020a7564(unit) >> 4;
-        facing.x = -data_02053580[index];
-        facing.z = -data_02053580[(0x400 - index) & 0xfff];
+        facing.x = -gSinFx12Table[index];
+        facing.z = -gSinFx12Table[(0x400 - index) & 0xfff];
         start = pos;
         start.y += 0x333;
         VEC_MultAdd(0xd80, &facing, &start, &end);

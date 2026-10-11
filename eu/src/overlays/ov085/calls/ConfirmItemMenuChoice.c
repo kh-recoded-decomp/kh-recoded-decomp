@@ -4,6 +4,6 @@
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define func_020291b4 GetPrimaryRecordCount
 #define func_ov085_020bf72c GetItemMenuEntry
-#define func_ov085_020c0b90 func_ov085_020c0bb0
+#define func_ov085_020c0b90 SetShopMenuMode
 #define func_ov085_020c138c CanSelectItem
 #include "src/ov085/unclassified_helpers/ConfirmItemMenuChoice_020c168c.c"

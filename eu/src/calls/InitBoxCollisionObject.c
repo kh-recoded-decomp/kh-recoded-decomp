@@ -2,6 +2,6 @@
 #define InitCollisionObject_02033c7c InitCollisionObject
 #define MTX_RotY33_01ff923c MTX_RotY33_
 #define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
-#define data_0205356c data_02053580
+#define data_0205356c gSinFx12Table
 #define func_0203ad54 InitBoxShape
 #include "src/arm9/spatial_queries/InitBoxCollisionObject_02033dd0.c"

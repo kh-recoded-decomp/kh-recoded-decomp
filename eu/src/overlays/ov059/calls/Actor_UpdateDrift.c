@@ -37,7 +37,7 @@ struct Actor {
 };
 
 extern const VecFx32 gZeroVecFx32;
-extern const s16 data_02053580[];
+extern const s16 gSinFx12Table[];
 extern InputRecord *GetPlayerControlState(u32 playerIndex);
 extern void Actor_UpdateJump(Actor *actor, int x, int y);
 extern BOOL func_ov021_020a7524(InputRecord *record);
@@ -97,8 +97,8 @@ void Actor_UpdateDrift(Actor *actor)
     }
     if (angle >= 0) {
         int index = (u16)angle >> 4;
-        offset.x = -data_02053580[index];
-        offset.z = -data_02053580[(0x400 - index) & 0xfff];
+        offset.x = -gSinFx12Table[index];
+        offset.z = -gSinFx12Table[(0x400 - index) & 0xfff];
         offset.x = FX_Mul(offset.x, 0x133);
         offset.z = FX_Mul(offset.z, 0x133);
         offset.y = 0;

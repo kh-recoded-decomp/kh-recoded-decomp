@@ -15,7 +15,7 @@ extern u32 LoadViewerBackgrounds();
 extern u32 InitViewerTextLayers();
 extern u32 DrawEntryStatsPanels();
 extern u32 CreateViewerSlotObjs();
-extern u32 func_ov099_020c0b5c();
+extern u32 InitScrollList_020c0b5c();
 extern u32 func_ov099_020c14d8();
 extern u32 func_ov099_020c158c();
 extern u32 SyncEnemyEntryFlags();
@@ -46,7 +46,7 @@ u32 func_ov099_020becb4(void *work) {
   SetupStatsPanelDisplay_020bf190(work);
   LoadMessageFiles(work);
   LoadViewerBackgrounds(work);
-  func_ov099_020c0b5c(&data_ov099_020c22b4,work);
+  InitScrollList_020c0b5c(&data_ov099_020c22b4,work);
   func_ov099_020c14d8(work);
   InitViewerTextLayers(work);
   DrawEntryStatsPanels(0xffffffff,work);

@@ -3,6 +3,6 @@
 #define LoadDefaultProjectionValues_0202a7b4 LoadDefaultProjectionValues
 #define ResetFieldCamera_0208ae68 ResetFieldCamera
 #define data_02053438 gZeroVecFx32
-#define data_0205356c data_02053580
+#define data_0205356c gSinFx12Table
 #define data_ov001_020a04f4 data_ov001_020a0514
 #include "src/ov001/shared_engine/ResetFieldCamera_0208ae68.c"

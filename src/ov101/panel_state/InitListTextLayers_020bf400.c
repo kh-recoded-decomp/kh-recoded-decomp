@@ -1,6 +1,15 @@
 #pragma opt_propagation off
 #include "nitro/types.h"
 
+#ifndef RECODED_EU
+#define RECODED_EU 0
+#endif
+
+enum {
+    LIST_SCENE_HEADER_SIZE = RECODED_EU ? 0x30 : 0x28,
+    LIST_SCENE_ARCHIVE_COUNT = RECODED_EU ? 4 : 3
+};
+
 typedef struct {
     u8 data[0xc];
 } Font;
@@ -25,14 +34,14 @@ typedef struct {
 } PackedFileView;
 
 typedef struct {
-    u8 pad_00[0x28];
+    u8 pad_00[LIST_SCENE_HEADER_SIZE];
     s32 archiveHandle;
     u8 pad_2c[4];
     Font font;
     TextLayer layers[4];
     TextFrame frames[4];
     u8 pad_14c[0xcfa0 - 0x14c];
-    PackedFileView views[3];
+    PackedFileView views[LIST_SCENE_ARCHIVE_COUNT];
 } ListScene;
 
 extern char data_ov101_020c1384[];
@@ -59,7 +68,7 @@ void InitListTextLayers_020bf400(ListScene *scene)
         } else {
             LoadPackedFileView_020ba25c(&scene->views[i], data_ov101_020c0dc0[i], FALSE);
         }
-    } while (++i < 3);
+    } while (++i < LIST_SCENE_ARCHIVE_COUNT);
     charBase = 0x200;
     frame = &scene->frames[0];
     frame->x = 0x13;

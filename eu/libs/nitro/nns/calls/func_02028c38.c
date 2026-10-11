@@ -32,6 +32,7 @@ typedef struct CameraProjectionState {
     MtxFx43 camera;
 } CameraProjectionState;
 
+#define data_0205fe40 gCameraDefaultsTail
 extern CameraProjectionState data_0205fe40;
 
 extern void MTX_MultVec43(const VecFx32 *src, const MtxFx43 *mtx, VecFx32 *dst);

@@ -4,7 +4,7 @@
 #define data_ov010_020a1dc0 gSpecialActionWork
 #define func_ov010_020a0d00 func_ov010_020a0d20
 #define func_ov010_020a10b8 func_ov010_020a10d8
-#define func_ov010_020a13cc func_ov010_020a13ec
+#define func_ov010_020a13cc Entity_UpdateSpecialStrike
 #define func_ov021_020a8ab4 ResetAnimationTrackState
 #define func_ov021_020a8ca0 func_ov021_020a8cc0
 #define func_ov046_020c2f44 CameraPath_Start

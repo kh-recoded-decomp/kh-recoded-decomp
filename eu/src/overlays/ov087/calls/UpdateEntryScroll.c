@@ -1,0 +1,17 @@
+#define OS_GetTick_02003fd4 OS_GetTick
+#define RefreshChoiceMenu_020c4d6c RefreshChoiceMenu_020c4d6c
+#define RefreshSelectedEntryInfo_020c5ef0 RefreshSelectedEntryInfo
+#define SetScreenBrightness_020bc648 SetScreenBrightness
+#define SetWidgetRootDpadEnabled_020b9874 SetWidgetRootDpadEnabled
+#define UpdateEntryScroll_020c74f0 UpdateEntryScroll
+#define _s32_div_f _s32_div_f
+#define data_020604fc data_020604fc
+#define data_02060500 data_02060500
+#define func_ov027_020b90f4 func_ov027_020b9114
+#define func_ov039_020bc0d4 GetPrimaryElementEnabled
+#define func_ov039_020bc1bc func_ov039_020bc1dc
+#define func_ov087_020c44a4 SelectChoiceWidget_020c44a4
+#define func_ov087_020c5200 RefreshKindChoiceWindows_020c5200
+#define func_ov087_020c548c RefreshChoiceMenuForKind
+#define func_ov087_020c6c84 DrawEntryCarousel_020c6ca4
+#include "src/ov087/panel_state/UpdateEntryScroll_020c74f0.c"

@@ -1,0 +1,17 @@
+#define Camera_ComputeFollowDistance_020c1a70 Camera_ComputeFollowDistance
+#define Camera_RefreshCollisionBounds_020c60e8 Camera_RefreshCollisionBounds
+#define Camera_UpdateOrbit_020c50c0 Camera_UpdateOrbit
+#define FX_Div_01ff9c84 FX_Div
+#define FX_Sqrt_01ff9cfc FX_Sqrt
+#define FixedPointMultiply12 FX_Mul
+#define Math_AsinIdx_0202aaa8 Math_AsinIdx
+#define RotateVecTowardVec_0204b0ac RotateVecTowardVec
+#define RotateVectorAroundAxis_0204b34c RotateVectorAroundAxis
+#define ScalePairInPlace_0204a350 ScalePairInPlace
+#define VEC_Add_01ff9e0c VEC_Add
+#define VEC_NormalizeUnchecked_01ff9f88 VEC_Normalize
+#define VEC_Subtract_01ff9e3c VEC_Subtract
+#define _ll_mul _ll_mul
+#define _ll_sdiv _ll_sdiv
+#define data_0205356c gSinFx12Table
+#include "src/ov047/camera/Camera_UpdateOrbit_020c50c0.c"

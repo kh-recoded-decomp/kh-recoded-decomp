@@ -2,6 +2,6 @@
 #define SpawnTrailProjectile_020d655c SpawnTrailProjectile
 #define TryConsumeLimitedUse_020ab098 TryConsumeLimitedUse
 #define ZeroBytes0x40_020ab08c ZeroBytes0x40
-#define data_0205356c data_02053580
+#define data_0205356c gSinFx12Table
 #define func_ov021_020aed24 func_ov021_020aed44
 #include "src/ov056/shared_engine/SpawnTrailProjectile_020d655c.c"

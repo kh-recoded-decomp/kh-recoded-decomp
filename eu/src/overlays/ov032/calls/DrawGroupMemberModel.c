@@ -74,7 +74,7 @@ extern void MI_Copy36B(const MtxFx33 *src, MtxFx43 *dst);
 extern void NNS_G3dGlbSetBaseScale(const VecFx32 *scale);
 extern void NNS_G3dGlbFlushP(void);
 
-extern const s16 data_02053580[];
+extern const s16 gSinFx12Table[];
 extern const VecFx32 data_ov032_020bffd0;
 extern MtxFx43 NNS_G3dGlb_prmBaseRot;
 extern GeometryCommandCache NNS_G3dGlb_prmMatColor0;
@@ -105,7 +105,7 @@ void DrawGroupMemberModel(DisplayObject *object, const VecFx32 *position)
         actorScale = actor->scale;
         node->angleY = actor->angleY;
         node->flags |= 0x20;
-        MTX_RotY33_(&node->rotation, data_02053580[angle >> 4], data_02053580[(0x400 - (angle >> 4)) & 0xfff]);
+        MTX_RotY33_(&node->rotation, gSinFx12Table[angle >> 4], gSinFx12Table[(0x400 - (angle >> 4)) & 0xfff]);
         MTX_Concat33(&node->rotation, &rotation, &rotation);
         if (actorScale.x != 0x1000 || actorScale.y != 0x1000 || actorScale.z != 0x1000) {
             ScaleVecFx32InPlace(&actorScale, 0x10cd);
@@ -120,7 +120,7 @@ void DrawGroupMemberModel(DisplayObject *object, const VecFx32 *position)
     forward = data_ov032_020bffd0;
     MTX_MultVec33(&forward, &record->rotation, &forward);
     index = FX_Atan2Idx(forward.x, forward.z) >> 4;
-    MTX_RotY33_(&rotation, data_02053580[index], data_02053580[(0x400 - index) & 0xfff]);
+    MTX_RotY33_(&rotation, gSinFx12Table[index], gSinFx12Table[(0x400 - index) & 0xfff]);
     NNS_G3dGlbSetBaseTrans(&object->cameraTarget);
     MI_Copy36B(&rotation, &NNS_G3dGlb_prmBaseRot);
     NNS_G3dGlb_prmMatColor0.flags &= ~0xa4;

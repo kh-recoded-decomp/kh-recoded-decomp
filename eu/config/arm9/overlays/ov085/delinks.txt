@@ -24,6 +24,10 @@ src/overlays/ov085/calls/ArrangeWidgetPair.c:
     complete
     .text       start:0x020c0b58 end:0x020c0bae
 
+src/overlays/ov085/calls/SetShopMenuMode.c:
+    complete
+    .text       start:0x020c0bb0 end:0x020c1184
+
 src/overlays/ov085/calls/MoveTabCursor.c:
     complete
     .text       start:0x020c1184 end:0x020c1206

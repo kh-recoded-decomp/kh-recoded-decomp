@@ -1,6 +1,6 @@
 #define Camera_UpdateTracking_020c631c Camera_UpdateTracking
 #define func_01ffa0f4 VEC_Distance
-#define func_ov047_020c50c0 func_ov047_020c50e0
+#define func_ov047_020c50c0 Camera_UpdateOrbit
 #define func_ov047_020c53b4 func_ov047_020c53d4
 #define func_ov047_020c5548 func_ov047_020c5568
 #define func_ov047_020c5d90 Camera_HandleDistanceToggle

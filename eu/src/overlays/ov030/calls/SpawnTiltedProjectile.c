@@ -4,6 +4,6 @@
 #define SpawnTiltedProjectile_020bcb8c SpawnTiltedProjectile
 #define TryConsumeLimitedUse_020ab098 TryConsumeLimitedUse
 #define ZeroBytes0x40_020ab08c ZeroBytes0x40
-#define data_0205356c data_02053580
+#define data_0205356c gSinFx12Table
 #define random_next_scaled_0202aa04 random_next_scaled
 #include "src/ov030/shared_engine/SpawnTiltedProjectile_020bcb8c.c"

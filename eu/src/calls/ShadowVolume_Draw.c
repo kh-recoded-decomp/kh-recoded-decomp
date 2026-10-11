@@ -7,5 +7,5 @@
 #define ShadowVolume_Draw_02036b80 ShadowVolume_Draw
 #define func_02019188 NNS_G3dGlbFlushP
 #define g_g3dGlobal_0205a924 NNS_G3dGlb
-#define g_sinTable_0205356c data_02053580
+#define g_sinTable_0205356c gSinFx12Table
 #include "src/arm9/graphics/ShadowVolume_Draw_02036b80.c"

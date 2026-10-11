@@ -1,4 +1,4 @@
 #define SetSlotObjPosition_020c0964 SetSlotObjPosition
 #define StepListCursorDown_020c0ee0 StepListCursorDown_020c0f00
-#define func_ov099_020c11b4 func_ov099_020c11d4
+#define func_ov099_020c11b4 UpdateScrollList
 #include "src/ov099/unclassified_helpers/StepListCursorDown_020c0ee0.c"

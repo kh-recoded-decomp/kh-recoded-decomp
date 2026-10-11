@@ -7,7 +7,7 @@
 #define RotateOffsetAroundY_020a9160 RotateOffsetAroundY
 #define ScaleVecFx32_01ffafb4 ScaleVecFx32
 #define data_02053438 gZeroVecFx32
-#define data_0205356c data_02053580
+#define data_0205356c gSinFx12Table
 #define func_01ff8830 MI_CpuFill8
 #define func_0203ad14 MakeSphereShape
 #define func_ov001_02087884 ForwardToActiveService

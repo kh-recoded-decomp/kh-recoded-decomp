@@ -7,7 +7,7 @@
 #define VEC_CrossProduct_01ff9ea8 VEC_CrossProduct
 #define VEC_MultAdd_01ffa09c VEC_MultAdd
 #define VEC_Subtract_01ff9e3c VEC_Subtract
-#define data_0205356c data_02053580
+#define data_0205356c gSinFx12Table
 #define data_ov001_020a04f4 data_ov001_020a0514
 #define func_01ff9f88 VEC_Normalize
 #define func_02036240 ActorRegistry_GetEntityByIndex

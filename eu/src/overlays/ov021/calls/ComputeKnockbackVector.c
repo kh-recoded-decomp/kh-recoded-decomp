@@ -6,5 +6,5 @@
 #define VEC_Mag_01ff9f28 VEC_Mag
 #define VEC_Normalize_01ffaff4 VEC_NormalizeLength
 #define VEC_Subtract_01ff9e3c VEC_Subtract
-#define data_0205356c data_02053580
+#define data_0205356c gSinFx12Table
 #include "src/ov021/object_state/ComputeKnockbackVector_020abebc.c"

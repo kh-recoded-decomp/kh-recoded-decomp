@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-extern unsigned char data_02053580;
+extern unsigned char gSinFx12Table;
 extern unsigned int MTX_Concat33();
 extern unsigned int MTX_RotX33_();
 extern unsigned int MTX_Identity33_();
@@ -13,17 +13,17 @@ void func_ov001_020895ac(void *matrix,int xAngle,int yAngle,int zAngle) {
   MTX_Identity33_();
   MTX_Identity33_(rotation);
   MTX_RotX33_
-            (rotation,(int)*(short *)(&data_02053580 + (xAngle >> 4) * 2),
-             (int)*(short *)(&data_02053580 + (0x400U - (xAngle >> 4) & 0xfff) * 2));
+            (rotation,(int)*(short *)(&gSinFx12Table + (xAngle >> 4) * 2),
+             (int)*(short *)(&gSinFx12Table + (0x400U - (xAngle >> 4) & 0xfff) * 2));
   MTX_Concat33(matrix,rotation,matrix);
   MTX_Identity33_(rotation);
-  MTX_RotY33_(rotation,(int)*(short *)(&data_02053580 + (yAngle >> 4) * 2),
-                      (int)*(short *)(&data_02053580 + (0x400U - (yAngle >> 4) & 0xfff) * 2))
+  MTX_RotY33_(rotation,(int)*(short *)(&gSinFx12Table + (yAngle >> 4) * 2),
+                      (int)*(short *)(&gSinFx12Table + (0x400U - (yAngle >> 4) & 0xfff) * 2))
   ;
   MTX_Concat33(matrix,rotation,matrix);
   MTX_Identity33_(rotation);
-  MTX_RotZ33_(rotation,(int)*(short *)(&data_02053580 + (zAngle >> 4) * 2),
-                      (int)*(short *)(&data_02053580 + (0x400U - (zAngle >> 4) & 0xfff) * 2))
+  MTX_RotZ33_(rotation,(int)*(short *)(&gSinFx12Table + (zAngle >> 4) * 2),
+                      (int)*(short *)(&gSinFx12Table + (0x400U - (zAngle >> 4) & 0xfff) * 2))
   ;
   MTX_Concat33(matrix,rotation,matrix);
 }

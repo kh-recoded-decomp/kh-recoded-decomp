@@ -4,6 +4,6 @@
 #define func_ov039_020bc1bc func_ov039_020bc1dc
 #define func_ov089_020bf35c ReleaseEntryModels
 #define func_ov089_020bf488 func_ov089_020bf4a8
-#define func_ov089_020bf950 func_ov089_020bf970
+#define func_ov089_020bf950 ReleaseEntryMenuTextLayers
 #define func_ov089_020bfad0 func_ov089_020bfaf0
 #include "src/ov089/panel_state/ShutdownOverlay089_020c01b4.c"

@@ -128,6 +128,10 @@ src/overlays/ov099/calls/GetSlotObjBounds.c:
     complete
     .text       start:0x020c0aec end:0x020c0b5c
 
+src/overlays/ov099/calls/InitScrollList_020c0b5c.c:
+    complete
+    .text       start:0x020c0b5c end:0x020c0dc8
+
 src/overlays/ov099/calls/StepListCursorUp.c:
     complete
     .text       start:0x020c0dc8 end:0x020c0f00
@@ -143,6 +147,10 @@ src/overlays/ov099/calls/MoveListCursorUp_020c1034.c:
 src/overlays/ov099/calls/MoveListCursorDown.c:
     complete
     .text       start:0x020c10f8 end:0x020c11d4
+
+src/overlays/ov099/calls/UpdateScrollList.c:
+    complete
+    .text       start:0x020c11d4 end:0x020c14d8
 
 src/overlays/ov099/calls/IsEntryFlagSet_020c16ac.c:
     complete

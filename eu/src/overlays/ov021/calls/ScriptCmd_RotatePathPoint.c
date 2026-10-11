@@ -7,6 +7,6 @@
 #define ResolveTaggedValueRef_020b0374 ResolveTaggedValueRef
 #define ScriptCmd_RotatePathPoint_020b2204 ScriptCmd_RotatePathPoint
 #define TaggedValueToFixed_020b03b0 TaggedValueToFixed
-#define data_0205356c data_02053580
+#define data_0205356c gSinFx12Table
 #define func_ov001_0209c3c0 func_ov001_0209c3e8
 #include "src/ov021/script_ops/ScriptCmd_RotatePathPoint_020b2204.c"

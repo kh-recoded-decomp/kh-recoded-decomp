@@ -7,7 +7,7 @@
 #define ScriptVm_ReadOperandFx32_02025df8 ScriptVm_ReadOperandFx32
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
 #define VEC_Add_01ff9e0c VEC_Add
-#define data_0205356c data_02053580
+#define data_0205356c gSinFx12Table
 #define func_01ff9480 MTX_Identity43_
 #define func_01ff9530 MTX_RotY43_
 #define func_020359f8 ApplyRecordTableEntry5

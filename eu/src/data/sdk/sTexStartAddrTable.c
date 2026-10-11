@@ -1,0 +1,30 @@
+#include "libs/nitro/os/os_types_internal.h"
+
+typedef struct GXTexBankMapping {
+    u16 block1Page;
+    u16 block2Page;
+    u16 block1PageCount;
+} GXTexBankMapping;
+
+typedef char TexBankMappingMustBe6Bytes[sizeof(GXTexBankMapping) == 6 ? 1 : -1];
+
+/* Indexed by the A/B/C/D texture-bank mask. Addresses and the first-block
+ * size use 4 KB pages; block2 is zero for a contiguous bank allocation. */
+const GXTexBankMapping sTexStartAddrTable[16] = {
+    { 0x0000, 0x0000, 0x00 },
+    { 0x6800, 0x0000, 0x00 },
+    { 0x6820, 0x0000, 0x00 },
+    { 0x6800, 0x0000, 0x00 },
+    { 0x6840, 0x0000, 0x00 },
+    { 0x6800, 0x6840, 0x20 },
+    { 0x6820, 0x0000, 0x00 },
+    { 0x6800, 0x0000, 0x00 },
+    { 0x6860, 0x0000, 0x00 },
+    { 0x6800, 0x6860, 0x20 },
+    { 0x6820, 0x6860, 0x20 },
+    { 0x6800, 0x6860, 0x40 },
+    { 0x6840, 0x0000, 0x00 },
+    { 0x6800, 0x6840, 0x20 },
+    { 0x6820, 0x0000, 0x00 },
+    { 0x6800, 0x0000, 0x00 },
+};

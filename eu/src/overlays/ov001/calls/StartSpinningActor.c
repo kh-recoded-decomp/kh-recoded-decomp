@@ -2,6 +2,6 @@
 #define SpawnSoundSlot_0204da8c SpawnSoundSlot
 #define StartSpinningActor_02084f6c StartSpinningActor
 #define data_02053438 gZeroVecFx32
-#define data_0205356c data_02053580
+#define data_0205356c gSinFx12Table
 #define func_ov001_020850bc StepFallingObject
 #include "src/ov001/actor_animation/StartSpinningActor_02084f6c.c"

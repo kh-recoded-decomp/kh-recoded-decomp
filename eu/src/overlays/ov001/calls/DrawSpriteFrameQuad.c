@@ -9,6 +9,6 @@
 #define MI_Copy36B_01ff87c4 MI_Copy36B
 #define FlushGeometryState_02019230 NNS_G3dGlbFlushWVP
 #define QueueOrSendGeometryCommand_01ffa37c NNS_G3dGeBufferOP_N
-#define data_0205356c data_02053580
+#define data_0205356c gSinFx12Table
 #define data_0205a924 NNS_G3dGlb
 #include "src/ov001/unclassified_helpers/DrawSpriteFrameQuad_0206ab14.c"

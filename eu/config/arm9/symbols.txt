@@ -731,7 +731,7 @@ PMi_ForceToPowerOff kind:function(thumb,size=0x2c) addr:0x02010590
 PMi_SetAmp kind:function(thumb,size=0x1e) addr:0x020105bc
 PM_GetBackLight kind:function(thumb,size=0x42) addr:0x020105dc
 PMi_SendPxiData kind:function(thumb,size=0x18) addr:0x02010620
-func_02010638 kind:function(thumb,size=0x6c) addr:0x02010638
+PMi_PreSleepDma kind:function(thumb,size=0x6c) addr:0x02010638
 PM_GoSleepMode kind:function(thumb,size=0x210) addr:0x020106a4
 PMi_SetLCDPower kind:function(thumb,size=0x144) addr:0x020108b4
 PM_SetLCDPower kind:function(thumb,size=0x24) addr:0x020109f8
@@ -2579,8 +2579,8 @@ gRuntimeInitCleanupDescriptors kind:data(any) addr:0x020526d4
 OSi_DeviceTypeTable kind:data(any) addr:0x020526ec
 FX_AtanTable_ kind:data(any) addr:0x02052700
 FX_AtanIdxTable_ kind:data(any) addr:0x02052804
-data_02052908 kind:data(any) addr:0x02052908
-data_02052918 kind:data(any) addr:0x02052918
+sTexPlttStartAddrTable kind:data(short[8]) addr:0x02052908
+sTexStartAddrTable kind:data(any) addr:0x02052918
 data_0205291a kind:data(any) addr:0x0205291a
 data_0205291c kind:data(any) addr:0x0205291c
 CARDiDmaUsingFormer kind:data(any) addr:0x02052978
@@ -2630,7 +2630,7 @@ data_02053490 kind:data(any) addr:0x02053490
 data_020534b8 kind:data(any) addr:0x020534b8
 data_020534e4 kind:data(any) addr:0x020534e4
 data_02053530 kind:data(any) addr:0x02053530
-data_02053580 kind:data(any) addr:0x02053580
+gSinFx12Table kind:data(short[4096]) addr:0x02053580
 data_02053640 kind:data(any) addr:0x02053640
 data_020536c0 kind:data(any) addr:0x020536c0
 data_02053740 kind:data(any) addr:0x02053740
@@ -2643,10 +2643,10 @@ data_02053ac0 kind:data(any) addr:0x02053ac0
 data_02053b40 kind:data(any) addr:0x02053b40
 data_02053b80 kind:data(any) addr:0x02053b80
 data_02053d80 kind:data(any) addr:0x02053d80
-data_02055580 kind:data(any) addr:0x02055580
-data_02055590 kind:data(any) addr:0x02055590
-data_020555a8 kind:data(any) addr:0x020555a8
-data_020555c0 kind:data(any) addr:0x020555c0
+sBgExtPlttControlOffsets kind:data(short[8]) addr:0x02055580
+gBgSizeModePairs kind:data(any) addr:0x02055590
+gBgAffineSizeModePairs kind:data(any) addr:0x020555a8
+gBgTextSizeModePairs kind:data(any) addr:0x020555c0
 gBgAffineControlDispatch kind:data(any) addr:0x020555d8
 data_020555f8 kind:data(any) addr:0x020555f8
 data_02055638 kind:data(any) addr:0x02055638
@@ -2870,8 +2870,8 @@ data_02058f20 kind:bss addr:0x02058f20
 data_02059708 kind:bss addr:0x02059708
 data_02059720 kind:bss addr:0x02059720
 SNDi_SharedWork kind:bss addr:0x02059780
-data_02059784 kind:bss addr:0x02059784
-data_020597a0 kind:bss addr:0x020597a0
+sTouchPanelState kind:bss addr:0x02059784
+sTouchPanelCalibration kind:bss addr:0x020597a0
 PMi_Bss kind:bss addr:0x020597c0
 PMi_PreSleepCallbackList kind:bss addr:0x020597d0
 PMi_PostSleepCallbackList kind:bss addr:0x020597d8
@@ -2949,7 +2949,7 @@ data_0205e100 kind:bss addr:0x0205e100
 data_0205e118 kind:bss addr:0x0205e118
 sSndStrmInitialized kind:bss addr:0x0205e178
 sSndStrmList kind:bss addr:0x0205e17c
-data_0205e188 kind:bss addr:0x0205e188
+sStrmCallbackBuffers kind:bss addr:0x0205e188
 sStrmChannel kind:bss addr:0x0205e1c8
 sSndCaptureThreadCreated kind:bss addr:0x0205e248
 sSndCaptureMessageQueue kind:bss addr:0x0205e250
@@ -2982,8 +2982,8 @@ data_0205fe20 kind:bss addr:0x0205fe20
 gPanelState kind:bss addr:0x0205fe24
 data_0205fe28 kind:bss addr:0x0205fe28
 data_0205fe34 kind:bss addr:0x0205fe34
-data_0205fe40 kind:bss addr:0x0205fe40
-data_0205fe4c kind:bss addr:0x0205fe4c
+gCameraDefaultsTail kind:bss addr:0x0205fe40
+gCameraDefaultProjection kind:bss addr:0x0205fe4c
 data_0205fe8c kind:bss addr:0x0205fe8c
 data_0205fea8 kind:bss addr:0x0205fea8
 data_0205fec4 kind:bss addr:0x0205fec4

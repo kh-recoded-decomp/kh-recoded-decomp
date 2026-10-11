@@ -6,7 +6,7 @@
 #define IsPlayerEntryFlagSet_02050014 IsPlayerEntryFlagSet
 #define ScaleVecFx32_01ffafb4 ScaleVecFx32
 #define VEC_Subtract_01ff9e3c VEC_Subtract
-#define data_0205356c data_02053580
+#define data_0205356c gSinFx12Table
 #define func_01ff8830 MI_CpuFill8
 #define func_01ff9f88 VEC_Normalize
 #define func_ov052_020ceb54 func_ov052_020ceb74

@@ -13,7 +13,7 @@
 #define SetupScrollList_020bdf10 SetupStageParams
 #define RefreshScrollListLayout_020be138 RefreshScrollListLayout
 #define InvokeForChannelOrBoth_0200110c InvokeForChannelOrBoth
-#define func_ov076_020c9d98 func_ov076_020c9db8
+#define func_ov076_020c9d98 ItemPicker_DrawRows_020c9db8
 #define MIi_CpuCopy32_01ff8710 MIi_CpuCopy32
 #define func_ov027_020b91c8 func_ov027_020b91e8
 #define func_ov027_020b9360 func_ov027_020b9380

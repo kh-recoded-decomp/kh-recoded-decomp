@@ -13,7 +13,7 @@
 #define VEC_Normalize_01ffaff4 VEC_NormalizeLength
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define ZeroAndSetField0xd4_020ac150 ZeroAndSetField0xd4
-#define data_0205356c data_02053580
+#define data_0205356c gSinFx12Table
 #define func_01ff8830 MI_CpuFill8
 #define selectJointAnimationBlend_0202f2cc selectJointAnimationBlend
 #include "src/ov052/actor_motion/Actor_UpdateComboStage_020ca31c.c"

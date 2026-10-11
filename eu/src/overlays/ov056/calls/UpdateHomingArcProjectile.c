@@ -17,7 +17,7 @@
 #define VEC_Normalize_01ff9f88 VEC_Normalize
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define ZeroAndSetField0xd4_020ac150 ZeroAndSetField0xd4
-#define data_0205356c data_02053580
+#define data_0205356c gSinFx12Table
 #define data_ov056_020d7f64 data_ov056_020d7f84
 #define func_01ffa0f4 VEC_Distance
 #define func_0202fba8 func_0202fbbc

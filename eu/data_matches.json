@@ -34,6 +34,16 @@
     {
       "module": "arm9",
       "section": ".rodata",
+      "start": "0x02052908",
+      "end": "0x02052918",
+      "source": "src/data/sdk/sTexPlttStartAddrTable.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "sTexPlttStartAddrTable",
+      "behavior": "Eight E/F/G texture-palette bank mappings, storing LCDC addresses in 4 KB pages"
+    },
+    {
+      "module": "arm9",
+      "section": ".rodata",
       "start": "0x02052978",
       "end": "0x02052980",
       "source": "src/data/tables/CARDiDmaUsingFormer.c",
@@ -60,6 +70,46 @@
       "compiler": "mwccarm-3.0-139",
       "name": "gZeroVecFx32",
       "behavior": "Typed zero position/velocity vector shared by collision and movement helpers"
+    },
+    {
+      "module": "arm9",
+      "section": ".rodata",
+      "start": "0x02055580",
+      "end": "0x02055590",
+      "source": "src/data/sdk/sBgExtPlttControlOffsets.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "sBgExtPlttControlOffsets",
+      "behavior": "BG control register offsets for main and sub extended-palette slots"
+    },
+    {
+      "module": "arm9",
+      "section": ".rodata",
+      "start": "0x02055590",
+      "end": "0x020555a8",
+      "source": "src/data/math/gBgSizeModePairs.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gBgSizeModePairs",
+      "behavior": "Four width-height pairs mapped to background size modes"
+    },
+    {
+      "module": "arm9",
+      "section": ".rodata",
+      "start": "0x020555a8",
+      "end": "0x020555c0",
+      "source": "src/data/math/gBgAffineSizeModePairs.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gBgAffineSizeModePairs",
+      "behavior": "Four width-height pairs used by the affine control dispatcher"
+    },
+    {
+      "module": "arm9",
+      "section": ".rodata",
+      "start": "0x020555c0",
+      "end": "0x020555d8",
+      "source": "src/data/math/gBgTextSizeModePairs.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gBgTextSizeModePairs",
+      "behavior": "Four square or rectangular text-background size modes"
     },
     {
       "module": "arm9",
@@ -300,6 +350,26 @@
       "compiler": "mwccarm-3.0-139",
       "name": "MIi_GXDmaParams",
       "behavior": "Asynchronous geometry FIFO DMA state, callback and saved IRQ configuration"
+    },
+    {
+      "module": "arm9",
+      "section": ".bss",
+      "start": "0x0205764c",
+      "end": "0x020576e0",
+      "source": "src/data/sdk/CARDiOwnSignature.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "CARDiOwnSignature",
+      "behavior": "136-byte cartridge module signature with 12 bytes of padding before the aligned ROM cache"
+    },
+    {
+      "module": "arm9",
+      "section": ".bss",
+      "start": "0x0205e178",
+      "end": "0x0205e1c8",
+      "source": "src/data/sdk/sSndStrmState.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "sSndStrmState",
+      "behavior": "Streaming initialization flag, typed stream registry list, and 16 current channel-block pointers for callbacks"
     },
     {
       "module": "dtcm",

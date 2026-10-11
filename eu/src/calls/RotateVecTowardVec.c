@@ -5,6 +5,6 @@
 #define VEC_DotProduct_01ff9e6c VEC_DotProduct
 #define VEC_Mag_01ff9f28 VEC_Mag
 #define VEC_MultAdd_01ffa09c VEC_MultAdd
-#define data_0205356c data_02053580
+#define data_0205356c gSinFx12Table
 #define func_0204aa68 GetUnitCross
 #include "src/arm9/math/RotateVecTowardVec_0204b0ac.c"

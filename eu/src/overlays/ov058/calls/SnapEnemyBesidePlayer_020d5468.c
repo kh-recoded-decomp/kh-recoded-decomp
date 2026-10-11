@@ -15,7 +15,7 @@
 #define SweepWorldCollision_020364a0 SweepWorldCollision
 #define VEC_Add_01ff9e0c VEC_Add
 #define VEC_Subtract_01ff9e3c VEC_Subtract
-#define data_0205356c data_02053580
+#define data_0205356c gSinFx12Table
 #define data_ov058_020d8970 data_ov058_020d8990
 #define func_01ffaff4 VEC_NormalizeLength
 #define func_ov021_020a8ab4 ResetAnimationTrackState

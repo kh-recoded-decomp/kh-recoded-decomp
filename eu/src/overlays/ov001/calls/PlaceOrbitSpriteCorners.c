@@ -1,4 +1,4 @@
 #define PlaceOrbitSpriteCorners_0207e598 PlaceOrbitSpriteCorners
 #define SetSpriteRectIfIdle_0207e4c8 SetSpriteRectIfIdle
-#define data_0205356c data_02053580
+#define data_0205356c gSinFx12Table
 #include "src/ov001/unclassified_helpers/PlaceOrbitSpriteCorners_0207e598.c"

@@ -30,7 +30,7 @@ typedef struct {
 
 extern u16 data_02060500;
 extern void func_ov101_020c00b8(int listIndex, int entryIndex, int x, int y, Ov101State *state);
-extern void func_ov101_020c082c(int listId, Ov101State *state);
+extern void UpdateScrollPanel(int listId, Ov101State *state);
 
 BOOL ScrollPanelCursorUp(int panelIndex, Ov101State *state)
 {
@@ -59,7 +59,7 @@ BOOL ScrollPanelCursorUp(int panelIndex, Ov101State *state)
                 func_ov101_020c00b8(panel->listId, entryIndex, entry->x, entry->y, state);
             }
         }
-        func_ov101_020c082c(panel->listId, state);
+        UpdateScrollPanel(panel->listId, state);
         return TRUE;
     }
     if (data_02060500 & 0x40) {
@@ -75,7 +75,7 @@ BOOL ScrollPanelCursorUp(int panelIndex, Ov101State *state)
             entry->y += (panel->itemCount - 1) * 0x10;
             func_ov101_020c00b8(panel->listId, entryIndex, entry->x, entry->y, state);
         }
-        func_ov101_020c082c(panel->listId, state);
+        UpdateScrollPanel(panel->listId, state);
         return TRUE;
     }
     return FALSE;

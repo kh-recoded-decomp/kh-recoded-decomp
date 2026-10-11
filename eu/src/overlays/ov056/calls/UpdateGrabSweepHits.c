@@ -10,7 +10,7 @@
 #define ZeroAndSetField0xd4_020ac150 ZeroAndSetField0xd4
 #define ZeroBytes0x28_020ac0f8 ZeroBytes0x28
 #define data_02053438 gZeroVecFx32
-#define data_0205356c data_02053580
+#define data_0205356c gSinFx12Table
 #define func_0203ad14 MakeSphereShape
 #define func_ov056_020d33f8 func_ov056_020d3418
 #define func_ov056_020d383c PullActorTowardSource

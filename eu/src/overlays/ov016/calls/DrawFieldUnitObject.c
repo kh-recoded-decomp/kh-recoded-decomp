@@ -7,7 +7,7 @@
 #define SceneNode_Draw_01ffb12c SceneNode_Draw
 #define TranslateAndFlushGeometry_020864c4 TranslateAndFlushGeometry
 #define data_02053444 data_02053458
-#define data_0205356c data_02053580
+#define data_0205356c gSinFx12Table
 #define func_01ff923c MTX_RotY33_
 #define func_02036240 ActorRegistry_GetEntityByIndex
 #define func_ov001_020872b8 IsNodeFlagBitClear

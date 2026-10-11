@@ -4,7 +4,7 @@
 #define MI_Copy36B_01ff87c4 MI_Copy36B
 #define MTX_RotZ33_01ff9258 MTX_RotZ33_
 #define QueueOrSendGeometryCommand_01ffa37c NNS_G3dGeBufferOP_N
-#define data_0205356c data_02053580
+#define data_0205356c gSinFx12Table
 #define data_0205a9a4 NNS_G3dGlb_prmMatColor0
 #define data_0205a9b8 NNS_G3dGlb_prmBaseRot
 #define data_ov045_020c075c data_ov045_020c077c

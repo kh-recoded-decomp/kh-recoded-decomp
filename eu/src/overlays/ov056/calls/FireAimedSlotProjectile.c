@@ -8,6 +8,6 @@
 #define VEC_MultAdd_01ffa09c VEC_MultAdd
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define ZeroBytes0x40_020ab08c ZeroBytes0x40
-#define data_0205356c data_02053580
+#define data_0205356c gSinFx12Table
 #define func_01ff923c MTX_RotY33_
 #include "src/ov056/unclassified_helpers/FireAimedSlotProjectile_020d6900.c"

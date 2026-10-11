@@ -4,7 +4,7 @@
 #define LongDivide_02023ba4 _ll_sdiv
 #define ResetGroupSlotsPosition_020680a4 ResetGroupSlotsPosition
 #define SetEntrySlotsVisible_020b9580 SetEntrySlotsVisible
-#define data_0205356c data_02053580
+#define data_0205356c gSinFx12Table
 #define func_ov027_020b91c8 func_ov027_020b91e8
 #define func_ov027_020b9360 func_ov027_020b9380
 #include "src/ov015/ui/BobPanelWidgets_0206f7d8.c"

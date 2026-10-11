@@ -10,7 +10,7 @@
 #define ScaleVecFx32_01ffafb4 ScaleVecFx32
 #define WriteSessionPackedBits_0206459c WriteSessionPackedBits
 #define data_02053438 gZeroVecFx32
-#define data_0205356c data_02053580
+#define data_0205356c gSinFx12Table
 #define func_ov001_02088b48 ClearActorFlagBit40
 #define selectJointAnimationBlend_0202f2cc selectJointAnimationBlend
 #include "src/ov001/actor_animation/ApplyActorRootMotion_02089208.c"

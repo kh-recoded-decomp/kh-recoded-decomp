@@ -5,7 +5,7 @@
 #define HasFlagsAt0xe_020a752c HasFlagsAt0xe
 #define NNS_FndInitListWithOffset0_020a7510 func_ov021_020a7530
 #define UpdateGlideSteering_020cb270 UpdateGlideSteering
-#define data_0205356c data_02053580
+#define data_0205356c gSinFx12Table
 #define func_ov021_020a7544 func_ov021_020a7564
 #define func_ov052_020cc120 UpdateModelTilt
 #define func_ov052_020cec00 StepFacingToward

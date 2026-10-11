@@ -17,7 +17,7 @@ extern NNSG3dGlbBaseTransView NNS_G3dGlb;
 #define MTX_RotY33_01ff923c MTX_RotY33_
 #define func_02019188 NNS_G3dGlbFlushP
 #define QueueOrSendGeometryCommand_01ffa37c NNS_G3dGeBufferOP_N
-#define data_0205356c data_02053580
+#define data_0205356c gSinFx12Table
 #define data_0205a9b8 NNS_G3dGlb_prmBaseRot
 #define data_0205a9a4 NNS_G3dGlb_prmMatColor0
 #include "src/ov021/animation/DrawEntryForScreen_020a82ec.c"

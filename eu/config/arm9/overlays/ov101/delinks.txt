@@ -36,6 +36,10 @@ src/overlays/ov101/calls/FreeMenuResourceSlots.c:
     complete
     .text       start:0x020bf854 end:0x020bf884
 
+src/overlays/ov101/calls/InitListTextLayers.c:
+    complete
+    .text       start:0x020bf884 end:0x020bfa48
+
 src/overlays/ov101/calls/ShutdownStateHandlers.c:
     complete
     .text       start:0x020bfa48 end:0x020bfab8
@@ -95,6 +99,10 @@ src/overlays/ov101/calls/ScrollPanelPageUp.c:
 src/overlays/ov101/calls/ScrollPanelPageDown.c:
     complete
     .text       start:0x020c07c4 end:0x020c082c
+
+src/overlays/ov101/calls/UpdateScrollPanel.c:
+    complete
+    .text       start:0x020c082c end:0x020c0b30
 
 src/overlays/ov101/calls/LoadPortraitSprites.c:
     complete

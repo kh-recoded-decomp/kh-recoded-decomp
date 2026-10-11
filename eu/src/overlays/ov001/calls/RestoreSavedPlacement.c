@@ -5,7 +5,7 @@
 #define RestoreSavedPlacement_02061c6c RestoreSavedPlacement
 #define VEC_Add_01ff9e0c VEC_Add
 #define WriteSessionPackedBits_0206459c WriteSessionPackedBits
-#define data_0205356c data_02053580
+#define data_0205356c gSinFx12Table
 #define data_ov001_020a0460 data_ov001_020a0480
 #define func_0204fb1c RefreshSelectionLinkValues
 #define g_followerOffsets_0209e634 gFollowerOffsets

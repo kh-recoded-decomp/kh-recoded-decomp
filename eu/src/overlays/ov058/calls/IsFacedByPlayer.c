@@ -1,7 +1,7 @@
 #define IsFacedByPlayer_020d46d8 IsFacedByPlayer
 #define VEC_DotProduct_01ff9e6c VEC_DotProduct
 #define VEC_Subtract_01ff9e3c VEC_Subtract
-#define data_0205356c data_02053580
+#define data_0205356c gSinFx12Table
 #define func_01ff9f88 VEC_Normalize
 #define func_01ffa0f4 VEC_Distance
 #define func_ov052_020ceb54 func_ov052_020ceb74

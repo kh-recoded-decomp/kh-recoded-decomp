@@ -92,6 +92,10 @@ src/overlays/ov019/calls/UpdateDespawnAnimation.c:
     complete
     .text       start:0x020a2e28 end:0x020a2eec
 
+src/overlays/ov019/calls/UpdateLinkedObject.c:
+    complete
+    .text       start:0x020a2eec end:0x020a31a8
+
 src/overlays/ov019/calls/ApplyDerivedIdState.c:
     complete
     .text       start:0x020a31a8 end:0x020a31be

@@ -22,7 +22,7 @@
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define VecToYawPitch_0209d3c4 VecToYawPitch
 #define WarpWalkerTo_02090f0c WarpWalkerTo
-#define data_0205356c data_02053580
+#define data_0205356c gSinFx12Table
 #define func_01ff8830 MI_CpuFill8
 #define func_01ff90ec MTX_Identity33_
 #define func_ov001_0208f018 func_ov001_0208f040

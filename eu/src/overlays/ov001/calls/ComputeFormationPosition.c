@@ -2,7 +2,7 @@
 #define VEC_Add_01ff9e0c VEC_Add
 #define VEC_MultAdd_01ffa09c VEC_MultAdd
 #define data_02053438 gZeroVecFx32
-#define data_0205356c data_02053580
+#define data_0205356c gSinFx12Table
 #define func_02023dbc _s32_div_f
 #define nextRandom12_0202aa58 nextRandom12
 #define random_next_scaled_0202aa04 random_next_scaled

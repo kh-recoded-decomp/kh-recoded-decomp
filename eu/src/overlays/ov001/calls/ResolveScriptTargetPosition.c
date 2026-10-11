@@ -4,7 +4,7 @@
 #define ScriptVm_ResolveOperand_02025d08 ScriptVm_ResolveOperand
 #define VEC_Add_01ff9e0c VEC_Add
 #define VEC_MultAdd_01ffa09c VEC_MultAdd
-#define data_0205356c data_02053580
+#define data_0205356c gSinFx12Table
 #define func_02023dbc _s32_div_f
 #define func_02025dac ByteCode_ResolveOperand
 #define func_02036240 ActorRegistry_GetEntityByIndex

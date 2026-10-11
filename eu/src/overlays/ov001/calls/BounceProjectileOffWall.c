@@ -13,7 +13,7 @@
 #define VEC_Normalize_01ff9f88 VEC_Normalize
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define data_02053438 gZeroVecFx32
-#define data_0205356c data_02053580
+#define data_0205356c gSinFx12Table
 #define func_0203adcc InitAxisCylinderShape
 #define func_ov001_02085138 UpdateSpawnerRise
 #define func_01ffaff4 VEC_NormalizeLength

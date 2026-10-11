@@ -5,5 +5,5 @@
 #define VEC_MultAdd_01ffa09c VEC_MultAdd
 #define VEC_Normalize_01ff9f88 VEC_Normalize
 #define VEC_Subtract_01ff9e3c VEC_Subtract
-#define data_0205356c data_02053580
+#define data_0205356c gSinFx12Table
 #include "src/ov021/object_state/UpdateUnitAttackSweep_020ae73c.c"

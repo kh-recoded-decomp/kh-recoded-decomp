@@ -14,7 +14,7 @@
 #define func_020049b4 OS_SpinWait
 #define func_02004d30 OS_Halt
 #define func_020103bc PMi_SendSleepStart
-#define func_02010624 func_02010638
+#define func_02010624 PMi_PreSleepDma
 #define func_020108a0 PMi_SetLCDPower
 #define func_02012364 CTRDG_IsExisting
 #include "src/arm9/library_nitro_spi/PM_GoSleepMode_02010690.c"

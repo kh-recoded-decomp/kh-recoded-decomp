@@ -37,7 +37,7 @@ extern void NNS_G3dDraw(void *renderObj);
 extern BOOL NNS_G3dGetResultMtx(void *renderObj, MtxFx43 *pos, MtxFx33 *nrm, u32 nodeID);
 extern void ApplyQuaternionCorrectionToMatrix_020c185c(MtxFx33 *mtx);
 
-extern const s16 data_02053580[];
+extern const s16 gSinFx12Table[];
 extern GeometryGlobalState NNS_G3dGlb;
 extern SceneNode *data_ov099_020c2904;
 
@@ -51,16 +51,16 @@ void DrawViewerSceneNode(SceneNode *node)
         NNS_G3dGlb.prmBaseScale = node->position;
         if (node->flags & 0x20) {
             int index = node->angleY >> 4;
-            MTX_RotY33_((MtxFx33 *)&node->matrix, data_02053580[index],
-                                data_02053580[(0x400 - index) & 0xfff]);
+            MTX_RotY33_((MtxFx33 *)&node->matrix, gSinFx12Table[index],
+                                gSinFx12Table[(0x400 - index) & 0xfff]);
 
             if (node->angleX != 0) {
                 fx32 sine;
                 fx32 cosine;
 
                 index = node->angleX >> 4;
-                cosine = data_02053580[(0x400 - index) & 0xfff];
-                sine = data_02053580[index];
+                cosine = gSinFx12Table[(0x400 - index) & 0xfff];
+                sine = gSinFx12Table[index];
                 node->matrix._11 = cosine;
                 node->matrix._01 = sine;
                 node->matrix._10 = (fx32)(((s64)-sine * node->matrix._00) >> 12);

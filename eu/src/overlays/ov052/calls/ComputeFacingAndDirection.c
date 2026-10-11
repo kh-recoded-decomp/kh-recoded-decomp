@@ -1,6 +1,6 @@
 #define func_ov001_0206db78 GetPlayerControlState
 #define ComputeFacingAndDirection_020cebbc ComputeFacingAndDirection
-#define data_0205356c data_02053580
+#define data_0205356c gSinFx12Table
 #define func_ov021_020a7544 func_ov021_020a7564
 #define func_ov052_020cec00 StepFacingToward
 #include "src/ov052/unclassified_helpers/ComputeFacingAndDirection_020cebbc.c"

@@ -44,6 +44,10 @@ src/overlays/ov089/calls/DrawEntryMenuTexts_020bf49c.c:
     complete
     .text       start:0x020bf4bc end:0x020bf970
 
+src/overlays/ov089/calls/ReleaseEntryMenuTextLayers.c:
+    complete
+    .text       start:0x020bf970 end:0x020bf9e0
+
 src/overlays/ov089/calls/LoadEntryMenuWidgets.c:
     complete
     .text       start:0x020bf9e0 end:0x020bfaf0

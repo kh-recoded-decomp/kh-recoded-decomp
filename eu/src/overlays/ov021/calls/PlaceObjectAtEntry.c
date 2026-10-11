@@ -3,6 +3,6 @@
 #define MTX_RotY33_01ff923c MTX_RotY33_
 #define PlaceObjectAtEntry_020a86b0 PlaceObjectAtEntry
 #define VEC_Add_01ff9e0c VEC_Add
-#define data_0205356c data_02053580
+#define data_0205356c gSinFx12Table
 #define func_ov021_020a8784 SetObjectYawPitchMatrix
 #include "src/ov021/unclassified_helpers/PlaceObjectAtEntry_020a86b0.c"

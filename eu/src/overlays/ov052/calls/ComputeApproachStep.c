@@ -12,7 +12,7 @@
 #define VEC_Add_01ff9e0c VEC_Add
 #define VEC_Mag_01ff9f28 VEC_Mag
 #define VEC_Subtract_01ff9e3c VEC_Subtract
-#define data_0205356c data_02053580
+#define data_0205356c gSinFx12Table
 #define func_ov021_020a7504 func_ov021_020a7524
 #define func_ov021_020a7544 func_ov021_020a7564
 #define func_ov052_020ceb54 func_ov052_020ceb74

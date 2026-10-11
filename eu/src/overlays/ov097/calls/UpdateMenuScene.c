@@ -4,7 +4,7 @@
 #define InitSlotPools_020bff74 InitSlotPools
 #define SetScrollTrackTarget_020c1328 SetScrollTrackTarget
 #define UpdateMenuScene_020bedfc UpdateMenuScene
-#define data_0205356c data_02053580
+#define data_0205356c gSinFx12Table
 #define data_ov097_020c1da4 gStoryReportStateHandlers
 #define func_ov097_020bfb38 RefreshListPanels
 #define func_ov097_020c0ef8 UpdateScrollBarDrag_020c0f18

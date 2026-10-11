@@ -4,7 +4,7 @@
 #define GetBiasAdjustedField_0206dc80 GetBiasAdjustedField
 #define MI_Copy36B_01ff87c4 MI_Copy36B
 #define MTX_RotY33_01ff923c MTX_RotY33_
-#define data_0205356c data_02053580
+#define data_0205356c gSinFx12Table
 #define data_0205a9a4 NNS_G3dGlb_prmMatColor0
 #define data_0205a9b8 NNS_G3dGlb_prmBaseRot
 #define func_020192ec NNS_G3dGlbSetBaseTrans

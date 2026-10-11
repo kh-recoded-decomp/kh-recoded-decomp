@@ -50,7 +50,7 @@ struct Actor {
     ActorChangeStateFunc changeState;
 };
 
-extern const s16 data_02053580[];
+extern const s16 gSinFx12Table[];
 extern const s16 data_02053780[];
 extern const TiltConfig data_02053740;
 extern GameSettings *data_0205fe0c;
@@ -163,7 +163,7 @@ void Actor_UpdateGroundMove(Actor *actor)
             dir.z *= -1;
         }
         index = angle >> 4;
-        scale = FX_Mul(StickScale(data_02053580[(0x400 - index) & 0xfff], airborne), actor->jump.speed);
+        scale = FX_Mul(StickScale(gSinFx12Table[(0x400 - index) & 0xfff], airborne), actor->jump.speed);
         scaled = dir;
         scaledPtr = &scaled;
         ScaleVecFx32InPlace(scaledPtr, scale);
@@ -183,8 +183,8 @@ void Actor_UpdateGroundMove(Actor *actor)
             actor->jump.velZ = move.z;
         }
         if (!airborne) {
-            if (!data_0205fe0c->invertTilt && data_02053580[index] > data_02053740.threshold
-                && (!actor->prevTilt || data_02053580[fieldAngle >> 4] <= data_02053740.threshold)) {
+            if (!data_0205fe0c->invertTilt && gSinFx12Table[index] > data_02053740.threshold
+                && (!actor->prevTilt || gSinFx12Table[fieldAngle >> 4] <= data_02053740.threshold)) {
                 landed = TRUE;
             }
             if (!landed && actor->mode != 0xc && actor->onActionEnd != NULL) {

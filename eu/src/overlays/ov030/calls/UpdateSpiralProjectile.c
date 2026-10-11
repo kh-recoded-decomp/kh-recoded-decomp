@@ -5,6 +5,6 @@
 #define MTX_RotZ33_01ff9258 MTX_RotZ33_
 #define UpdateSpiralProjectile_020bcc78 UpdateSpiralProjectile
 #define VEC_Add_01ff9e0c VEC_Add
-#define data_0205356c data_02053580
+#define data_0205356c gSinFx12Table
 #define func_01ffa0f4 VEC_Distance
 #include "src/ov030/shared_engine/UpdateSpiralProjectile_020bcc78.c"

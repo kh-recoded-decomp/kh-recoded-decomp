@@ -20,7 +20,7 @@ typedef struct HoverActor {
     fx32 speedScale;
 } HoverActor;
 
-extern const s16 data_02053580[];
+extern const s16 gSinFx12Table[];
 extern u32 GetGlobalScaleValue(void);
 extern fx32 FX_Mul(fx32 a, fx32 b);
 extern void FindNearestStageEntry(VecFx32 *position);
@@ -43,7 +43,7 @@ void UpdateActorHoverHeight(HoverActor *actor, VecFx32 *position)
         SyncStageEntryPosition(actor->floorLayer, &layerOffset);
         if (actor->bobbing) {
             actor->bobPhase += 0x100;
-            bobOffset = FX_Mul(data_02053580[actor->bobPhase >> 4], 0x333);
+            bobOffset = FX_Mul(gSinFx12Table[actor->bobPhase >> 4], 0x333);
         }
         target.y = bobOffset + (layerOffset.y + actor->hoverHeight);
         difference = target.y - actor->position.y;

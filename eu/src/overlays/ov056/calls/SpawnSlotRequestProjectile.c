@@ -7,5 +7,5 @@
 #define TryConsumeLimitedUse_020ab098 TryConsumeLimitedUse
 #define VEC_Add_01ff9e0c VEC_Add
 #define ZeroBytes0x40_020ab08c ZeroBytes0x40
-#define data_0205356c data_02053580
+#define data_0205356c gSinFx12Table
 #include "src/ov056/shared_engine/SpawnSlotRequestProjectile_020d4fb8.c"

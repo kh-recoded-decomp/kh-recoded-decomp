@@ -39,7 +39,7 @@ typedef struct OrbReceiver {
 } OrbReceiver;
 
 extern OrbHost *data_ov001_020a0484;
-extern const s16 data_02053580[];
+extern const s16 gSinFx12Table[];
 extern BOOL IsEntryFlag2Active(int mode);
 extern BOOL func_ov001_02088100(VecFx32 *out);
 extern void func_ov001_020880f8(int payload);
@@ -125,7 +125,7 @@ void UpdatePrizeOrbs(void)
             }
             if (orb->floating) {
                 orb->timer += 0x400;
-                orb->pos.y = orb->velocity.y + (data_02053580[(u16)orb->timer >> 4] >> 4);
+                orb->pos.y = orb->velocity.y + (gSinFx12Table[(u16)orb->timer >> 4] >> 4);
                 goto copy;
             }
             VEC_Add(&orb->pos, &orb->velocity, &orb->pos);

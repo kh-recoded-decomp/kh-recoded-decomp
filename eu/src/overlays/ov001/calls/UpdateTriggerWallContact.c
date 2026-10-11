@@ -3,7 +3,7 @@
 #define UpdateTriggerWallContact_0206ce78 UpdateTriggerWallContact
 #define VEC_DotProduct_01ff9e6c VEC_DotProduct
 #define VEC_MultAdd_01ffa09c VEC_MultAdd
-#define data_0205356c data_02053580
+#define data_0205356c gSinFx12Table
 #define func_0203625c GetWorldMeshNamedEntry
 #define func_ov001_0206d050 SpawnTrailEffect
 #define func_ov021_020a7504 func_ov021_020a7524

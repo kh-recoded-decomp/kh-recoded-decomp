@@ -1,5 +1,5 @@
 #define func_ov002_02064d54 UpdateDriftingPanelWidgets
-#define data_0205356c data_02053580
+#define data_0205356c gSinFx12Table
 #define func_02023a98 _fflt
 #define func_020241ac _ffix
 #define func_020245e8 _fadd

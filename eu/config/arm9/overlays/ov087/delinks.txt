@@ -180,6 +180,10 @@ src/overlays/ov087/calls/SetupPanelWidgetHandlers.c:
     complete
     .text       start:0x020c69c4 end:0x020c6ad0
 
+src/overlays/ov087/calls/DrawEntryCarousel_020c6ca4.c:
+    complete
+    .text       start:0x020c6ca4 end:0x020c6dec
+
 src/overlays/ov087/calls/ConfirmPanelSelection.c:
     complete
     .text       start:0x020c6dec end:0x020c6ff8
@@ -199,6 +203,10 @@ src/overlays/ov087/calls/InitPanelScene_020c713c.c:
 src/overlays/ov087/calls/DestroyPanelScene.c:
     complete
     .text       start:0x020c7414 end:0x020c7510
+
+src/overlays/ov087/calls/UpdateEntryScroll.c:
+    complete
+    .text       start:0x020c7510 end:0x020c7830
 
 src/overlays/ov087/calls/HandleSelectForState.c:
     complete

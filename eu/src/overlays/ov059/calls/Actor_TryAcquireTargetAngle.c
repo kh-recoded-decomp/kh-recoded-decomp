@@ -3,5 +3,5 @@
 #define func_02050014 IsPlayerEntryFlagSet
 #define func_ov021_020a7504 func_ov021_020a7524
 #define QuantizeSummedAngle_020cd334 QuantizeSummedAngle
-#define data_0205356c data_02053580
+#define data_0205356c gSinFx12Table
 #include "src/ov059/unclassified_helpers/Actor_TryAcquireTargetAngle_020cb910.c"

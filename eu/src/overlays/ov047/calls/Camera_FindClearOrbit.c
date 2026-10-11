@@ -1,0 +1,19 @@
+#define AngleBetweenVecs_0204b070 AngleBetweenVecs
+#define CameraTarget_IsTrackable_020c6dec CameraTarget_IsTrackable
+#define Camera_FindClearOrbit_020c6e10 Camera_FindClearOrbit
+#define CollisionQuery_Init_02034c74 CollisionQuery_Init
+#define GetBoundedEntryField_0206db5c GetBoundedEntryField
+#define IsQueryFacingContact_020c1e40 IsQueryFacingContact_020c1e60
+#define MakeSphereShape_0203ad14 MakeSphereShape
+#define NegateVecFx32_0204aa40 NegateVecFx32
+#define OffsetBoxByDelta_0203ac70 OffsetBoxByDelta
+#define RotateVecTowardVec_0204b0ac RotateVecTowardVec
+#define RotateVectorAroundAxis_0204b34c RotateVectorAroundAxis
+#define ScaleVecFx32InPlace_0204a5e4 ScaleVecFx32InPlace
+#define SweepWorldCollision_020364a0 SweepWorldCollision
+#define VEC_MultAdd_01ffa09c VEC_MultAdd
+#define VEC_Subtract_01ff9e3c VEC_Subtract
+#define _ll_mul _ll_mul
+#define _ll_sdiv _ll_sdiv
+#define g_cameraManager_020c34e0 data_ov046_020c3500
+#include "src/ov047/camera/Camera_FindClearOrbit_020c6e10.c"

@@ -1,4 +1,4 @@
 #define MoveListCursorDown_020c10d8 MoveListCursorDown
 #define func_ov099_020c0964 SetSlotObjPosition
-#define func_ov099_020c11b4 func_ov099_020c11d4
+#define func_ov099_020c11b4 UpdateScrollList
 #include "src/ov099/unclassified_helpers/MoveListCursorDown_020c10d8.c"

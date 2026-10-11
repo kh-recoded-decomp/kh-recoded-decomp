@@ -1,5 +1,5 @@
 #define UpdateOv071BossState_020d836c UpdateOv071BossState
-#define data_0205356c data_02053580
+#define data_0205356c gSinFx12Table
 #define data_02053438 gZeroVecFx32
 #define data_ov071_020d9660 data_ov071_020d9680
 #define func_ov001_0206db78 GetPlayerControlState

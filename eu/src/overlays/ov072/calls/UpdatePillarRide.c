@@ -149,7 +149,7 @@ struct Actor {
 };
 
 extern const VecFx32 gZeroVecFx32;
-extern const s16 data_02053580[];
+extern const s16 gSinFx12Table[];
 
 extern void ComputeRootMotionDelta(Actor *actor, VecFx32 *out);
 extern int GetObjectPaletteValue(RideTask *task);
@@ -568,7 +568,7 @@ void UpdatePillarRide(Actor *actor)
             offset.y = 0x333;
             offset.z = 0x800;
             index = angle >> 4;
-            MTX_RotY33_(&rot, data_02053580[index], data_02053580[(0x400 - index) & 0xfff]);
+            MTX_RotY33_(&rot, gSinFx12Table[index], gSinFx12Table[(0x400 - index) & 0xfff]);
             MTX_MultVec33(&offset, &rot, &offset);
             VEC_Add(&offset, func_ov052_020ceb74(actor), &offset);
             ResetAnimationTrackState(&request10);
@@ -581,7 +581,7 @@ void UpdatePillarRide(Actor *actor)
                 GroupMember *member = GetGroupMemberData(task->burstGroup, handle);
 
                 index = (u16)random_next_scaled(0xffff) >> 4;
-                MTX_RotY33_(&rot, data_02053580[index], data_02053580[(0x400 - index) & 0xfff]);
+                MTX_RotY33_(&rot, gSinFx12Table[index], gSinFx12Table[(0x400 - index) & 0xfff]);
                 member->rotation = rot;
                 member->flags &= ~0x20;
             }
@@ -639,7 +639,7 @@ void UpdatePillarRide(Actor *actor)
                 }
                 VEC_Normalize(&dir, &dir);
                 index = (u16)Camera_GetDriftHeading() >> 4;
-                MTX_RotY33_(&driftRot, data_02053580[index], data_02053580[(0x400 - index) & 0xfff]);
+                MTX_RotY33_(&driftRot, gSinFx12Table[index], gSinFx12Table[(0x400 - index) & 0xfff]);
                 MTX_MultVec33(&dir, &driftRot, &dir);
                 ScaleVecFx32(speed, &dir, &motion);
                 VEC_Add(&motion, &pos, &target);
@@ -854,7 +854,7 @@ void UpdatePillarRide(Actor *actor)
         markerPos1.y += 0x800;
         member->position = markerPos1;
         index = angle >> 4;
-        MTX_RotY33_(&endRot, data_02053580[index], data_02053580[(0x400 - index) & 0xfff]);
+        MTX_RotY33_(&endRot, gSinFx12Table[index], gSinFx12Table[(0x400 - index) & 0xfff]);
         member->rotation = endRot;
         member->flags &= ~0x20;
         step = DegToIndex(FxMul(FX_Div(task->speed, 0x3c000), 0x2d000));

@@ -20,7 +20,7 @@
 #define VEC_Add_01ff9e0c VEC_Add
 #define WarpWalkerTo_02090f0c WarpWalkerTo
 #define data_02053438 gZeroVecFx32
-#define data_0205356c data_02053580
+#define data_0205356c gSinFx12Table
 #define data_ov021_020b56a4 gActiveFieldContext
 #define func_02023dbc _s32_div_f
 #define func_ov001_0209c3c0 func_ov001_0209c3e8

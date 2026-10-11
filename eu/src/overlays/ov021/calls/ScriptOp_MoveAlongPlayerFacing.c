@@ -3,6 +3,6 @@
 #define TaggedValueToFixed_020b03b0 TaggedValueToFixed
 #define VEC_MultAdd_01ffa09c VEC_MultAdd
 #define VEC_Normalize_01ff9f88 VEC_Normalize
-#define data_0205356c data_02053580
+#define data_0205356c gSinFx12Table
 #define data_ov021_020b56a4 data_ov021_020b56c4
 #include "src/ov021/script_ops/ScriptOp_MoveAlongPlayerFacing_020b1d14.c"

@@ -2,5 +2,5 @@
 #define GetBiasAdjustedField_0206dc80 GetBiasAdjustedField
 #define MTX_MultVec33_01ff9404 MTX_MultVec33
 #define MTX_RotY33_01ff923c MTX_RotY33_
-#define data_0205356c data_02053580
+#define data_0205356c gSinFx12Table
 #include "src/ov046/shared_engine/Camera_ComputeHeadingOffset_020c2c4c.c"

@@ -1,3 +1,3 @@
 #define ResolveBlockedAngle_0208c064 ResolveBlockedAngle
-#define func_ov047_020c6e10 func_ov047_020c6e30
+#define func_ov047_020c6e10 Camera_FindClearOrbit
 #include "src/ov001/scripted_actor_behavior/ResolveBlockedAngle_0208c064.c"

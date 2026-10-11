@@ -1,2 +1,3 @@
+#define data_02059784 sTouchPanelState
 #define TP_GetLatestIndexInAuto_0200ff50 TP_GetLatestIndexInAuto
 #include "src/arm9/library_nitro_spi/TP_GetLatestIndexInAuto_0200ff50.c"

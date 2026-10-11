@@ -89,7 +89,7 @@ struct Actor {
     void (*setMode)(Actor *actor, int mode);
 };
 
-extern const s16 data_02053580[];
+extern const s16 gSinFx12Table[];
 
 extern InputEntry *GetPlayerControlState(int player);
 extern int func_ov001_02072040(void);
@@ -311,9 +311,9 @@ void UpdateOv069BossMotion(Actor *actor)
         }
         heading = actor->angle - 0x8000;
         angle = (u16)(heading + 0x8000) >> 4;
-        dir.x = data_02053580[angle];
+        dir.x = gSinFx12Table[angle];
         dir.y = 0;
-        dir.z = data_02053580[(0x400 - angle) & 0xfff];
+        dir.z = gSinFx12Table[(0x400 - angle) & 0xfff];
     scale:
         ScaleVecFx32(obj->speed, &dir, &dir);
         actor->pos.x += dir.x;

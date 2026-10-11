@@ -4,7 +4,7 @@
 #define MTX_RotY33_01ff923c MTX_RotY33_
 #define MTX_RotZ33_01ff9258 MTX_RotZ33_
 #define VEC_Add_01ff9e0c VEC_Add
-#define data_0205356c data_02053580
+#define data_0205356c gSinFx12Table
 #define func_ov059_020c8908 GetAttachmentOffset_020c8928
 #define func_ov059_020cd0e4 GetLinkedAngleOffset_020cd104
 #include "src/ov059/unclassified_helpers/Actor_GetRotatedJointPosition_020c895c.c"

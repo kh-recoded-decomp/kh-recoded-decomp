@@ -2,7 +2,7 @@
 #define MTX_RotY33_01ff923c MTX_RotY33_
 #define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
 #define VEC_Subtract_01ff9e3c VEC_Subtract
-#define data_0205356c data_02053580
+#define data_0205356c gSinFx12Table
 #define func_0203ad14 MakeSphereShape
 #define func_0203ad54 InitBoxShape
 #define func_0203ae34 InitCapsuleShape

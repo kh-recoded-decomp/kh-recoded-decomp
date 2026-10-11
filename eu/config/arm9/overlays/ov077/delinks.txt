@@ -180,6 +180,10 @@ src/overlays/ov077/calls/IsItemSlotAvailable_020c6d74.c:
     complete
     .text       start:0x020c6d74 end:0x020c6dea
 
+src/overlays/ov077/calls/ItemPicker_DrawRows_020c6dec.c:
+    complete
+    .text       start:0x020c6dec end:0x020c7230
+
 src/overlays/ov077/calls/MenuPanel_SetFilterMode_020c7230.c:
     complete
     .text       start:0x020c7230 end:0x020c72a4

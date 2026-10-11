@@ -47,7 +47,7 @@ extern s16 *GetOv101SlotEntryResource(int listIndex, int entryIndex, Ov101State 
 extern fx32 FX_Div(fx32 numer, fx32 denom);
 extern fx32 Fx32_Ceil(fx32 value);
 extern void SetOv101SlotEntryVisible(int listIndex, int entryIndex, int visible, Ov101State *state);
-extern void func_ov101_020c082c(int listId, Ov101State *state);
+extern void UpdateScrollPanel(int listId, Ov101State *state);
 
 #define INT_TO_FX32_ROUNDED(v) ((fx32)((float)(v) > 0.0f ? 0.5f + 4096.0f * (float)(v) : 4096.0f * (float)(v) - 0.5f))
 
@@ -95,5 +95,5 @@ void InitScrollPanel(ScrollPanelConfig *config, Ov101State *state)
     if (panel->totalRows <= panel->pageRows && panel->downArrowEntry >= 0) {
         SetOv101SlotEntryVisible(panel->listId, panel->downArrowEntry, 0, state);
     }
-    func_ov101_020c082c(panel->listId, state);
+    UpdateScrollPanel(panel->listId, state);
 }

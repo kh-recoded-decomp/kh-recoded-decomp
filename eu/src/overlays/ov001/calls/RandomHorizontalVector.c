@@ -1,5 +1,5 @@
 #define FixedPointMultiply12 FX_Mul
 #define RandomHorizontalVector_02092634 RandomHorizontalVector
-#define data_0205356c data_02053580
+#define data_0205356c gSinFx12Table
 #define random_next_scaled_0202aa04 random_next_scaled
 #include "src/ov001/shared_engine/RandomHorizontalVector_02092634.c"

@@ -1,4 +1,4 @@
 #define Camera_GetPlayerBackDirection_020c2d5c Camera_GetPlayerBackDirection
 #define GetBiasAdjustedField_0206dc80 GetBiasAdjustedField
-#define data_0205356c data_02053580
+#define data_0205356c gSinFx12Table
 #include "src/ov046/shared_engine/Camera_GetPlayerBackDirection_020c2d5c.c"

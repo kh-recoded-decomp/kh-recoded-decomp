@@ -6,7 +6,7 @@
 #define ScaleVecFx32InPlace_0204a5e4 ScaleVecFx32InPlace
 #define VEC_Add_01ff9e0c VEC_Add
 #define VEC_MultAdd_01ffa09c VEC_MultAdd
-#define data_0205356c data_02053580
+#define data_0205356c gSinFx12Table
 #define data_0205372c data_02053740
 #define data_020538ec data_02053900
 #define data_02053b6c data_02053b80

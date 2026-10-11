@@ -32,7 +32,7 @@ struct DriftActor {
     ActorEventFunc onEvent;
 };
 
-extern s16 data_02053580[];
+extern s16 gSinFx12Table[];
 extern u16 *GetPlayerControlState(int pool);
 extern BOOL func_ov021_020a7524(u16 *self);
 extern BOOL HasFlagsAt0xc(u16 *holder, u16 mask);
@@ -50,7 +50,7 @@ static inline void AddScaledDrift(DriftActor *actor, fx32 z, fx32 x)
 static inline void AddDriftForAngle(DriftActor *actor, u16 angle)
 {
     int index = angle >> 4;
-    AddScaledDrift(actor, -data_02053580[(0x400 - index) & 0xfff], -data_02053580[index]);
+    AddScaledDrift(actor, -gSinFx12Table[(0x400 - index) & 0xfff], -gSinFx12Table[index]);
 }
 
 void UpdateDriftState(DriftActor *actor)

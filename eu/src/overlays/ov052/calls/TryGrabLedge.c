@@ -148,7 +148,7 @@ struct Actor {
     ClimbState climb;
 };
 
-extern s16 data_02053580[];
+extern s16 gSinFx12Table[];
 extern VecFx32 *func_ov052_020ceb74(Actor *actor);
 extern u16 GetLinkedAngleOffset(Actor *actor);
 extern void VEC_Subtract(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
@@ -251,8 +251,8 @@ BOOL TryGrabLedge(Actor *actor)
     facing.y = 0;
     facing.x = 0;
     index = GetLinkedAngleOffset(actor) >> 4;
-    facing.x = -data_02053580[index];
-    facing.z = -data_02053580[(0x400 - index) & 0xfff];
+    facing.x = -gSinFx12Table[index];
+    facing.z = -gSinFx12Table[(0x400 - index) & 0xfff];
     filterInit.mask = 0;
     filterInit.flags = 0x20;
     filter = filterInit;
@@ -439,7 +439,7 @@ BOOL TryGrabLedge(Actor *actor)
     VEC_MultAdd(0x780, &normal, &point, &point);
     climb->angle = FX_Atan2Idx(normal.x, normal.z);
     index = climb->angle >> 4;
-    MTX_RotY33_(&rot, data_02053580[index], data_02053580[(0x400 - index) & 0xfff]);
+    MTX_RotY33_(&rot, gSinFx12Table[index], gSinFx12Table[(0x400 - index) & 0xfff]);
     offset.x = reach;
     offset.y = 0;
     offset.z = 0;

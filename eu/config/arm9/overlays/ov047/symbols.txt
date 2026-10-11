@@ -19,7 +19,7 @@ Camera_PlaceTrackingEye kind:function(thumb,size=0x9c) addr:0x020c48a0
 Camera_FollowLeaderTarget kind:function(thumb,size=0x520) addr:0x020c493c
 Camera_TurnToLeaderHeading kind:function(thumb,size=0x1cc) addr:0x020c4e5c
 Camera_StartFollowTracking kind:function(thumb,size=0xb8) addr:0x020c5028
-func_ov047_020c50e0 kind:function(thumb,size=0x2f4) addr:0x020c50e0
+Camera_UpdateOrbit kind:function(thumb,size=0x2f4) addr:0x020c50e0
 func_ov047_020c53d4 kind:function(thumb,size=0x194) addr:0x020c53d4
 func_ov047_020c5568 kind:function(thumb,size=0x848) addr:0x020c5568
 Camera_HandleDistanceToggle kind:function(thumb,size=0x8c) addr:0x020c5db0
@@ -41,7 +41,7 @@ Camera_ApplyViewState kind:function(thumb,size=0x80) addr:0x020c6cc4
 func_ov047_020c6d44 kind:function(thumb,size=0xe) addr:0x020c6d44
 Camera_RestoreSavedTracking kind:function(thumb,size=0xb8) addr:0x020c6d54
 CameraTarget_IsTrackable kind:function(thumb,size=0x24) addr:0x020c6e0c
-func_ov047_020c6e30 kind:function(thumb,size=0x2c8) addr:0x020c6e30
+Camera_FindClearOrbit kind:function(thumb,size=0x2c8) addr:0x020c6e30
 func_ov047_020c70f8 kind:function(thumb,size=0x17c) addr:0x020c70f8
 data_ov047_020c72a4 kind:data(any) addr:0x020c72a4
 data_ov047_020c72a8 kind:data(any) addr:0x020c72a8

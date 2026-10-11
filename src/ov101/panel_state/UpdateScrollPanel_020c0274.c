@@ -2,6 +2,10 @@
 #include "nitro/types.h"
 #include "nitro/fx_types.h"
 
+#ifndef RECODED_EU
+#define RECODED_EU 0
+#endif
+
 #define INT_TO_FX32(n) ((fx32)(((f32)(n) > 0) ? (0.5f + 4096.0f * (f32)(n)) : (4096.0f * (f32)(n) - 0.5f)))
 
 typedef float f32;
@@ -45,7 +49,7 @@ typedef struct {
 } ScrollPanel;
 
 typedef struct {
-    u8 pad_00[0x17c];
+    u8 pad_00[RECODED_EU ? 0x184 : 0x17c];
     u8 screenObjects[2][0x6434];
     SlotEntry primaryEntries[12];
     SlotEntry secondaryEntries[12];

@@ -2,7 +2,7 @@
 #define Camera_IsFrozen_020c0c1c Camera_IsFrozen
 #define Camera_StartFollowTracking_020c5008 Camera_StartFollowTracking
 #define Camera_UpdateTracking_020c631c Camera_UpdateTracking
-#define data_0205356c data_02053580
+#define data_0205356c gSinFx12Table
 #define func_ov046_020c19f0 Camera_GetModeDistance
 #define func_ov046_020c1a48 func_ov046_020c1a68
 #include "src/ov047/camera/Camera_StartFollowTracking_020c5008.c"

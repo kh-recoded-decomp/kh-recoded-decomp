@@ -57,6 +57,7 @@ typedef struct NNSSndStrmChannel {
 
 extern BOOL sSndStrmInitialized;
 extern NNSFndList sSndStrmList;
+extern void *sStrmCallbackBuffers[16];
 extern NNSSndStrmChannel sStrmChannel[16];
 
 #endif

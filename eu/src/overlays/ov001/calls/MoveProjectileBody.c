@@ -87,7 +87,7 @@ typedef struct Projectile {
 } Projectile;
 
 extern const VecFx32 gZeroVecFx32;
-extern const s16 data_02053580[];
+extern const s16 gSinFx12Table[];
 extern BOOL CheckSurfaceFacing(void);
 extern BOOL HandleContactHit(void);
 extern void BounceProjectileOffWall(void);
@@ -109,8 +109,8 @@ extern void SpawnSoundSlot(int soundId, int mode, const VecFx32 *position, int f
 extern void ProbeWorldAlongVelocity(Projectile *probe, QueryFilter *filter);
 
 #define ANGLE_INDEX(angle) ((s32)((((s64)(angle) << 16) / 0x6488) & 0xffff) >> 4)
-#define SIN_AT(index) data_02053580[index]
-#define COS_AT(index) data_02053580[(0x400 - (index)) & 0xfff]
+#define SIN_AT(index) gSinFx12Table[index]
+#define COS_AT(index) gSinFx12Table[(0x400 - (index)) & 0xfff]
 
 static inline QueryFilter MakeFilter(s32 unk, s32 mask)
 {

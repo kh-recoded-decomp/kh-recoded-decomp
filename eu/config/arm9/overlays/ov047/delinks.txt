@@ -83,6 +83,10 @@ src/overlays/ov047/calls/Camera_StartFollowTracking.c:
     complete
     .text       start:0x020c5028 end:0x020c50e0
 
+src/overlays/ov047/calls/Camera_UpdateOrbit.c:
+    complete
+    .text       start:0x020c50e0 end:0x020c53d4
+
 src/overlays/ov047/calls/Camera_HandleDistanceToggle.c:
     complete
     .text       start:0x020c5db0 end:0x020c5e3c
@@ -158,6 +162,10 @@ src/overlays/ov047/calls/Camera_RestoreSavedTracking.c:
 src/overlays/ov047/calls/CameraTarget_IsTrackable.c:
     complete
     .text       start:0x020c6e0c end:0x020c6e30
+
+src/overlays/ov047/calls/Camera_FindClearOrbit.c:
+    complete
+    .text       start:0x020c6e30 end:0x020c70f8
 
 src/ov047/data/Rodata_ov047_020c7274.c:
     complete

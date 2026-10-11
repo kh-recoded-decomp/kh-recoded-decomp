@@ -1,5 +1,5 @@
 #define Gfx_DispatchByPairKeyA_0202b344 Gfx_DispatchByPairKeyA
 #define LookupPairKey LookupPairValue
-#define data_02055594 data_020555a8
+#define data_02055594 gBgAffineSizeModePairs
 #define data_020555c4 gBgAffineControlDispatch
 #include "src/arm9/shared_engine/Gfx_DispatchByPairKeyA_0202b344.c"
