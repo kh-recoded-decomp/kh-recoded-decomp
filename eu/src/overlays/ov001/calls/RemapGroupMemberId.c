@@ -1,6 +1,6 @@
 #define GetGroupIndexedValue_020bb86c GetGroupIndexedValue
 #define RemapGroupMemberId_0209cfcc RemapGroupMemberId
-#define data_ov001_020a038c data_ov001_020a03ac
+#define data_ov001_020a038c gGroupMemberRemap
 #define func_ov032_020bb808 func_ov032_020bb828
 #define func_ov032_020bb840 IsContextSlotEnabled
 #include "src/ov001/shared_engine/RemapGroupMemberId_0209cfcc.c"

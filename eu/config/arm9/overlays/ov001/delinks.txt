@@ -1068,11 +1068,11 @@ src/overlays/ov001/calls/CreateSubScene9Task.c:
     complete
     .text       start:0x02066e00 end:0x02066e18
 
-src/overlays/ov001/calls/func_ov001_02066e18.c:
+src/overlays/ov001/calls/DestroySubScene9Task.c:
     complete
     .text       start:0x02066e18 end:0x02066e38
 
-src/overlays/ov001/calls/func_ov001_02066e38.c:
+src/overlays/ov001/calls/IsSubScene9TaskActive.c:
     complete
     .text       start:0x02066e38 end:0x02066e50
 
@@ -8244,6 +8244,14 @@ src/overlays/ov001/data/bss/Bss_ov001_020a0500.c:
     complete
     .bss        start:0x020a0500 end:0x020a0514
 
+src/overlays/ov001/data/bss/gActorChannelContext.c:
+    complete
+    .bss        start:0x020a0514 end:0x020a0518
+
+src/overlays/ov001/data/bss/gActorResourceNameBuffer.c:
+    complete
+    .bss        start:0x020a0518 end:0x020a0528
+
 src/overlays/ov001/data/bss/gStageManager.c:
     complete
     .bss        start:0x020a0528 end:0x020a0540
@@ -8544,6 +8552,10 @@ src/overlays/ov001/data/tables/gActorChannelClassDescriptor.c:
     complete
     .data       start:0x0209f324 end:0x0209f338
 
+src/overlays/ov001/data/tables/gActorControllerStateHandlers.c:
+    complete
+    .data       start:0x020a0318 end:0x020a032c
+
 src/overlays/ov001/data/tables/gActorScriptCommandHandlers.c:
     complete
     .data       start:0x0209f344 end:0x0209f62c
@@ -8559,6 +8571,22 @@ src/overlays/ov001/data/tables/gBgScreenLoaders.c:
 src/overlays/ov001/data/tables/gDefaultActorAnimation.c:
     complete
     .data       start:0x020a0250 end:0x020a0254
+
+src/overlays/ov001/data/tables/gDefaultAttachPointName.c:
+    complete
+    .data       start:0x020a0314 end:0x020a0318
+
+src/overlays/ov001/data/tables/gEventTriggerTaskDescriptor.c:
+    complete
+    .data       start:0x0209eaec end:0x0209eb00
+
+src/overlays/ov001/data/tables/gEventTriggerTaskHandle.c:
+    complete
+    .data       start:0x0209eae8 end:0x0209eaec
+
+src/overlays/ov001/data/tables/gExtendedSlotRemap.c:
+    complete
+    .data       start:0x020a038c end:0x020a03ac
 
 src/overlays/ov001/data/tables/gFieldManagerClassDescriptor.c:
     complete
@@ -8587,6 +8615,10 @@ src/overlays/ov001/data/tables/gFieldSessionClassData.c:
 src/overlays/ov001/data/tables/gGroupEntries.c:
     complete
     .data       start:0x0209f62c end:0x020a0250
+
+src/overlays/ov001/data/tables/gGroupMemberRemap.c:
+    complete
+    .data       start:0x020a03ac end:0x020a03f4
 
 src/overlays/ov001/data/tables/gHudSlideResourceGroup1.c:
     complete
@@ -8628,9 +8660,29 @@ src/overlays/ov001/data/tables/gPartyStateClassDescriptor.c:
     complete
     .data       start:0x0209ec24 end:0x0209ec38
 
+src/overlays/ov001/data/tables/gRootObjectTaskDescriptor.c:
+    complete
+    .data       start:0x0209ead4 end:0x0209eae8
+
+src/overlays/ov001/data/tables/gRootObjectTaskHandle.c:
+    complete
+    .data       start:0x0209ead0 end:0x0209ead4
+
 src/overlays/ov001/data/tables/gSceneWorkClassDescriptor.c:
     complete
     .data       start:0x0209eb38 end:0x0209eb4c
+
+src/overlays/ov001/data/tables/gScreenFadeTaskDescriptor.c:
+    complete
+    .data       start:0x0209eb0c end:0x0209eb20
+
+src/overlays/ov001/data/tables/gScreenFadeTaskHandle.c:
+    complete
+    .data       start:0x0209eb08 end:0x0209eb0c
+
+src/overlays/ov001/data/tables/gSessionArchiveName.c:
+    complete
+    .data       start:0x0209eb04 end:0x0209eb08
 
 src/overlays/ov001/data/tables/gSessionScriptStateHandlers.c:
     complete
@@ -8640,6 +8692,18 @@ src/overlays/ov001/data/tables/gSessionTaskClassDescriptor.c:
     complete
     .data       start:0x0209eb5c end:0x0209eb70
 
+src/overlays/ov001/data/tables/gSpawnedActorDescriptor.c:
+    complete
+    .data       start:0x020a032c end:0x020a0360
+
+src/overlays/ov001/data/tables/gStageHeapConfigs.c:
+    complete
+    .data       start:0x020a0374 end:0x020a038c
+
+src/overlays/ov001/data/tables/gStageManagerTaskDescriptor.c:
+    complete
+    .data       start:0x020a0360 end:0x020a0374
+
 src/overlays/ov001/data/tables/gStageMeshValues.c:
     complete
     .rodata     start:0x0209da18 end:0x0209da68
@@ -8647,3 +8711,11 @@ src/overlays/ov001/data/tables/gStageMeshValues.c:
 src/overlays/ov001/data/tables/gStageScriptStateHandlers.c:
     complete
     .data       start:0x020a0298 end:0x020a02c8
+
+src/overlays/ov001/data/tables/gSubScene9TaskDescriptor.c:
+    complete
+    .data       start:0x0209ea20 end:0x0209ea34
+
+src/overlays/ov001/data/tables/gSubScene9TaskHandle.c:
+    complete
+    .data       start:0x0209ea1c end:0x0209ea20

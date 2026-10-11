@@ -1,5 +1,5 @@
 #define CreateOverlayTask_0206a6f4 CreateOverlayTask
-#define data_ov001_0209eaec data_ov001_0209eb0c
+#define data_ov001_0209eaec gScreenFadeTaskDescriptor
 #define func_0202a448 func_0202a45c
-#define g_overlayTask_0209eae8 data_ov001_0209eb08
+#define g_overlayTask_0209eae8 gScreenFadeTaskHandle
 #include "src/ov001/shared_engine/CreateOverlayTask_0206a6f4.c"

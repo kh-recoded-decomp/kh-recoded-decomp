@@ -1,3 +1,3 @@
 #define SetCameraTargetParams_0208ba8c SetCameraTargetParams
-#define data_ov001_020a04f4 data_ov001_020a0514
+#define data_ov001_020a04f4 gActorChannelContext
 #include "src/ov001/field_manager/SetCameraTargetParams_0208ba8c.c"

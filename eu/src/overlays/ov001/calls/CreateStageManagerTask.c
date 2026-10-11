@@ -1,5 +1,5 @@
 #define CreateStageManagerTask_02099ad0 CreateStageManagerTask
-#define data_ov001_020a0340 data_ov001_020a0360
+#define data_ov001_020a0340 gStageManagerTaskDescriptor
 #define func_0202a448 func_0202a45c
 #define g_stageManager_020a0508 gStageManager
 #include "src/ov001/shared_engine/CreateStageManagerTask_02099ad0.c"

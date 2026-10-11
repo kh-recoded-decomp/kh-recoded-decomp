@@ -4,5 +4,5 @@
 #define ResetFieldCamera_0208ae68 ResetFieldCamera
 #define data_02053438 gZeroVecFx32
 #define data_0205356c gSinFx12Table
-#define data_ov001_020a04f4 data_ov001_020a0514
+#define data_ov001_020a04f4 gActorChannelContext
 #include "src/ov001/shared_engine/ResetFieldCamera_0208ae68.c"

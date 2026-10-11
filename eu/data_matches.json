@@ -656,6 +656,96 @@
     {
       "module": "ov001",
       "section": ".data",
+      "start": "0x0209ea1c",
+      "end": "0x0209ea20",
+      "source": "src/overlays/ov001/data/tables/gSubScene9TaskHandle.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gSubScene9TaskHandle",
+      "behavior": "Scene task descriptor, lifetime handle, or session archive name; verified against EU ROM bytes"
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209ea20",
+      "end": "0x0209ea34",
+      "source": "src/overlays/ov001/data/tables/gSubScene9TaskDescriptor.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gSubScene9TaskDescriptor",
+      "behavior": "Scene task descriptor, lifetime handle, or session archive name; verified against EU ROM bytes"
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209ead0",
+      "end": "0x0209ead4",
+      "source": "src/overlays/ov001/data/tables/gRootObjectTaskHandle.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gRootObjectTaskHandle",
+      "behavior": "Scene task descriptor, lifetime handle, or session archive name; verified against EU ROM bytes"
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209ead4",
+      "end": "0x0209eae8",
+      "source": "src/overlays/ov001/data/tables/gRootObjectTaskDescriptor.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gRootObjectTaskDescriptor",
+      "behavior": "Scene task descriptor, lifetime handle, or session archive name; verified against EU ROM bytes"
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209eae8",
+      "end": "0x0209eaec",
+      "source": "src/overlays/ov001/data/tables/gEventTriggerTaskHandle.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gEventTriggerTaskHandle",
+      "behavior": "Scene task descriptor, lifetime handle, or session archive name; verified against EU ROM bytes"
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209eaec",
+      "end": "0x0209eb00",
+      "source": "src/overlays/ov001/data/tables/gEventTriggerTaskDescriptor.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gEventTriggerTaskDescriptor",
+      "behavior": "Scene task descriptor, lifetime handle, or session archive name; verified against EU ROM bytes"
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209eb04",
+      "end": "0x0209eb08",
+      "source": "src/overlays/ov001/data/tables/gSessionArchiveName.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gSessionArchiveName",
+      "behavior": "Scene task descriptor, lifetime handle, or session archive name; verified against EU ROM bytes"
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209eb08",
+      "end": "0x0209eb0c",
+      "source": "src/overlays/ov001/data/tables/gScreenFadeTaskHandle.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gScreenFadeTaskHandle",
+      "behavior": "Scene task descriptor, lifetime handle, or session archive name; verified against EU ROM bytes"
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209eb0c",
+      "end": "0x0209eb20",
+      "source": "src/overlays/ov001/data/tables/gScreenFadeTaskDescriptor.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gScreenFadeTaskDescriptor",
+      "behavior": "Scene task descriptor, lifetime handle, or session archive name; verified against EU ROM bytes"
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
       "start": "0x0209eb38",
       "end": "0x0209eb4c",
       "source": "src/overlays/ov001/data/tables/gSceneWorkClassDescriptor.c",
@@ -764,6 +854,66 @@
     {
       "module": "ov001",
       "section": ".data",
+      "start": "0x20a0314",
+      "end": "0x20a0318",
+      "source": "src/overlays/ov001/data/tables/gDefaultAttachPointName.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gDefaultAttachPointName",
+      "behavior": "Stage actor table reconstructed from EU bytes and verified consumer layouts"
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x20a0318",
+      "end": "0x20a032c",
+      "source": "src/overlays/ov001/data/tables/gActorControllerStateHandlers.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gActorControllerStateHandlers",
+      "behavior": "Stage actor table reconstructed from EU bytes and verified consumer layouts"
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x20a032c",
+      "end": "0x20a0360",
+      "source": "src/overlays/ov001/data/tables/gSpawnedActorDescriptor.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gSpawnedActorDescriptor",
+      "behavior": "Stage actor table reconstructed from EU bytes and verified consumer layouts"
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x20a0360",
+      "end": "0x20a0374",
+      "source": "src/overlays/ov001/data/tables/gStageManagerTaskDescriptor.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gStageManagerTaskDescriptor",
+      "behavior": "Stage actor table reconstructed from EU bytes and verified consumer layouts"
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x20a038c",
+      "end": "0x20a03ac",
+      "source": "src/overlays/ov001/data/tables/gExtendedSlotRemap.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gExtendedSlotRemap",
+      "behavior": "Stage actor table reconstructed from EU bytes and verified consumer layouts"
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x20a03ac",
+      "end": "0x20a03f4",
+      "source": "src/overlays/ov001/data/tables/gGroupMemberRemap.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gGroupMemberRemap",
+      "behavior": "Stage actor table reconstructed from EU bytes and verified consumer layouts"
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
       "start": "0x020a0458",
       "end": "0x020a045c",
       "source": "src/overlays/ov001/data/strings/sEmptyNodeName_020a0458.c",
@@ -771,6 +921,26 @@
       "name": "empty spawn node name",
       "origin": "US reference adapted to EU",
       "behavior": "Empty node name passed when a stage object has no attachment node."
+    },
+    {
+      "module": "ov001",
+      "section": ".bss",
+      "start": "0x020a0514",
+      "end": "0x020a0518",
+      "source": "src/overlays/ov001/data/bss/gActorChannelContext.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gActorChannelContext",
+      "behavior": "Owner of actor channel and field camera state"
+    },
+    {
+      "module": "ov001",
+      "section": ".bss",
+      "start": "0x020a0518",
+      "end": "0x020a0528",
+      "source": "src/overlays/ov001/data/bss/gActorResourceNameBuffer.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gActorResourceNameBuffer",
+      "behavior": "Aligned 16-byte Nitro dictionary name scratch buffer"
     },
     {
       "module": "ov001",

@@ -4,7 +4,7 @@
 #define UpdateFieldCamera_0208b780 UpdateFieldCamera
 #define VEC_Add_01ff9e0c VEC_Add
 #define VEC_Subtract_01ff9e3c VEC_Subtract
-#define data_ov001_020a04f4 data_ov001_020a0514
+#define data_ov001_020a04f4 gActorChannelContext
 #define func_ov001_0208afb8 UpdateEventCameraTransform
 #define func_ov001_0208b0d8 InterpolateFieldCamera
 #define func_ov001_0208b5a8 func_ov001_0208b5d0

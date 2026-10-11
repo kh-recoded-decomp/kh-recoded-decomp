@@ -8,7 +8,7 @@
 #define SetDefaultHeap_0202a134 SetDefaultHeap
 #define func_ov001_0208f038 func_ov001_0208f060
 #define g_stageManager_020a0508 gStageManager
-#define data_ov001_020a0354 data_ov001_020a0374
+#define data_ov001_020a0354 gStageHeapConfigs
 #define data_ov001_020a03d4 sOv001_EnPaDPP2f_020a03f4
 #define data_ov001_020a03e4 sOv001_EnPaDDP2f_020a0404
 #define data_ov001_020a03f4 sOv001_EnChChP2f_020a0414

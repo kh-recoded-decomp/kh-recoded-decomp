@@ -1,4 +1,4 @@
 #define ActorChannel_ResetAndInvalidate_0208b888 ActorChannel_ResetAndInvalidate
 #define ActorChannel_ResetFields_0208ae3c ActorChannel_ResetFields
-#define g_channelContext_020a04f4 data_ov001_020a0514
+#define g_channelContext_020a04f4 gActorChannelContext
 #include "src/ov001/shared_engine/ActorChannel_ResetAndInvalidate_0208b888.c"

@@ -4,7 +4,7 @@
 #define Msg_OpenContainerAndReadHeader_0202cc6c Msg_OpenContainerAndReadHeader
 #define ResetFieldCamera_0208ae68 ResetFieldCamera
 #define data_ov001_0209f318 sOv001_EvEcamP2_0209f338
-#define data_ov001_020a04f4 data_ov001_020a0514
+#define data_ov001_020a04f4 gActorChannelContext
 #define func_0202a5ac Obj_SetWord14
 #define func_ov001_02088960 GetManagerUnknownValue
 #define func_ov001_0208b780 UpdateFieldCamera

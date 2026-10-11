@@ -17,4 +17,5 @@
 #define func_0202a638 PXI_Init_0202a64c
 #define func_02035774 ShutdownActorRegistry
 #define func_02050a44 func_02050a58
+#define func_ov001_02066e18 DestroySubScene9Task
 #include "src/ov001/field_manager/ShutdownFieldSession_02061b54.c"

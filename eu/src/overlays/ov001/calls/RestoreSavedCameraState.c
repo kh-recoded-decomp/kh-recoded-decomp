@@ -1,6 +1,6 @@
 #define Obj_SetWord58_0203ac20 Obj_SetWord58
 #define RestoreSavedCameraState_0208b8a4 RestoreSavedCameraState
 #define VEC_Add_01ff9e0c VEC_Add
-#define data_ov001_020a04f4 data_ov001_020a0514
+#define data_ov001_020a04f4 gActorChannelContext
 #define func_02036240 ActorRegistry_GetEntityByIndex
 #include "src/ov001/unclassified_helpers/RestoreSavedCameraState_0208b8a4.c"

@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-extern unsigned int *data_ov001_020a0514;
+extern unsigned int *gActorChannelContext;
 extern unsigned char gSinFx12Table;
 extern unsigned int EvaluateInterpolationCurve();
 extern unsigned int ScaleAroundPivot();
@@ -9,8 +9,8 @@ void func_ov001_0208b6ec(void) {
   int *work;
   int angle;
 
-  work = data_ov001_020a0514;
-  data_ov001_020a0514[0x24] = data_ov001_020a0514[0x24] + -1;
+  work = gActorChannelContext;
+  gActorChannelContext[0x24] = gActorChannelContext[0x24] + -1;
   if (work[0x24] == 0) {
     work[0x26] = 0;
     angle = work[0x21];

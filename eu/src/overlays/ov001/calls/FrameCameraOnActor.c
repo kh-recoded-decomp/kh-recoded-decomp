@@ -3,7 +3,7 @@
 #define FX_Mul_02006450 FX_Mul
 #define FrameCameraOnActor_0208c13c FrameCameraOnActor
 #define GetActorModeThreeTarget_02088b28 GetActorModeThreeTarget
-#define data_ov001_020a04f4 data_ov001_020a0514
+#define data_ov001_020a04f4 gActorChannelContext
 #define func_02036240 ActorRegistry_GetEntityByIndex
 #define func_ov001_020645e8 ClearSessionPackedBit
 #define func_ov001_0208babc SetFieldCameraTarget

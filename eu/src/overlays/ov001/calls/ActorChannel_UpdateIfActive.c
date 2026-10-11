@@ -1,4 +1,4 @@
 #define ActorChannel_UpdateIfActive_0208bd1c ActorChannel_UpdateIfActive
 #define func_ov001_0208b780 UpdateFieldCamera
-#define g_channelContext_020a04f4 data_ov001_020a0514
+#define g_channelContext_020a04f4 gActorChannelContext
 #include "src/ov001/shared_engine/ActorChannel_UpdateIfActive_0208bd1c.c"

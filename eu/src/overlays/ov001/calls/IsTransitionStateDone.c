@@ -1,4 +1,4 @@
 #define IsTransitionStateDone_0208b95c IsTransitionStateDone
-#define data_ov001_020a04f4 data_ov001_020a0514
+#define data_ov001_020a04f4 gActorChannelContext
 #define func_0203ab80 ClearFlagIfSentinelAndReturnField
 #include "src/ov001/unclassified_helpers/IsTransitionStateDone_0208b95c.c"

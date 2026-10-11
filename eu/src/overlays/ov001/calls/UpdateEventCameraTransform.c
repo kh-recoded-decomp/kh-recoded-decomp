@@ -4,7 +4,7 @@
 #define UpdateEventCameraTransform_0208afb8 UpdateEventCameraTransform
 #define VEC_Add_01ff9e0c VEC_Add
 #define VEC_Subtract_01ff9e3c VEC_Subtract
-#define data_ov001_020a04f4 data_ov001_020a0514
+#define data_ov001_020a04f4 gActorChannelContext
 #define func_02036240 ActorRegistry_GetEntityByIndex
 #define func_ov001_0208af4c BuildRotationXY43
 #define func_ov021_020af4ac DispatchModeUpdate

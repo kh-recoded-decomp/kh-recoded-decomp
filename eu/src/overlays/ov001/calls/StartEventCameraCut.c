@@ -3,7 +3,7 @@
 #define Math_AsinIdx_0202aaa8 Math_AsinIdx
 #define StartEventCameraCut_0208bec4 StartEventCameraCut
 #define abs_0202198c abs
-#define data_ov001_020a04f4 data_ov001_020a0514
+#define data_ov001_020a04f4 gActorChannelContext
 #define func_01ff89a8 MI_CpuCopy8
 #define func_02028940 GetPanelFieldB8
 #define func_02029f48 func_02029f5c

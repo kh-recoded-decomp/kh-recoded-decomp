@@ -7,5 +7,5 @@
 #define ReleaseStageSlot_0209c008 ReleaseStageSlot
 #define SpawnStageObjectActor_02096ae0 SpawnStageObjectActor
 #define WarpWalkerTo_02090f0c WarpWalkerTo
-#define data_ov001_020a02f4 data_ov001_020a0314
+#define data_ov001_020a02f4 gDefaultAttachPointName
 #include "src/ov001/shared_engine/SpawnStageObjectActor_02096ae0.c"

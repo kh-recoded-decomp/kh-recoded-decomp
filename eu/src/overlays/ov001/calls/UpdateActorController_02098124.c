@@ -2,7 +2,7 @@
 #define GetStageActor_0209c040 GetStageActor
 #define GetStageEventRecord_0209c0ec GetStageEventRecord
 #define UpdateActorController_020980fc UpdateActorController_02098124
-#define data_ov001_020a02f8 data_ov001_020a0318
+#define data_ov001_020a02f8 gActorControllerStateHandlers
 #define func_ov001_020902e0 UpdateFieldActorMovement
 #define func_ov021_020b4b9c RunOverrideTrack
 #include "src/ov001/shared_engine/UpdateActorController_020980fc.c"

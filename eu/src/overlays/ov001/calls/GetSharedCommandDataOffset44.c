@@ -1,3 +1,3 @@
 #define GetSharedCommandDataOffset44_0208bcf8 GetSharedCommandDataOffset44
-#define data_ov001_020a04f4 data_ov001_020a0514
+#define data_ov001_020a04f4 gActorChannelContext
 #include "src/ov001/scripted_actor_behavior/GetSharedCommandDataOffset44_0208bcf8.c"

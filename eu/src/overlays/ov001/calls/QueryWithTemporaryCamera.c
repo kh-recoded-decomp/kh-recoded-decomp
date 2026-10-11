@@ -3,6 +3,6 @@
 #define PXI_Init_02028db8 PXI_Init_02028dcc
 #define PXI_Init_02088b20 func_ov001_02088b48
 #define QueryWithTemporaryCamera_0208c0b4 QueryWithTemporaryCamera
-#define data_ov001_020a04f4 data_ov001_020a0514
+#define data_ov001_020a04f4 gActorChannelContext
 #define func_ov001_0208babc SetFieldCameraTarget
 #include "src/ov001/field_manager/QueryWithTemporaryCamera_0208c0b4.c"

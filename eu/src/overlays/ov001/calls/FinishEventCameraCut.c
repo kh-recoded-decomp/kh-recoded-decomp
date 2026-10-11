@@ -1,7 +1,7 @@
 #define FinishEventCameraCut_0208be1c FinishEventCameraCut
 #define SetSubModeFrozen_020af434 SetSubModeFrozen
 #define ZeroHalfThenFree_0202cd78 ZeroHalfThenFree
-#define data_ov001_020a04f4 data_ov001_020a0514
+#define data_ov001_020a04f4 gActorChannelContext
 #define func_02028940 GetPanelFieldB8
 #define func_0202a5ac Obj_SetWord14
 #define func_ov001_02088960 GetManagerUnknownValue

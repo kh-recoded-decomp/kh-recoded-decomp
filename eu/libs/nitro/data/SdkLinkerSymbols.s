@@ -124,6 +124,12 @@
     .global fsi_rom_root_path
     .equ fsi_rom_root_path, 0x02055c38
 
+    /* Interior field labels in the stage heap configuration records. */
+    .global data_ov001_020a0378
+    .equ data_ov001_020a0378, 0x020a0378
+    .global data_ov001_020a037c
+    .equ data_ov001_020a037c, 0x020a037c
+
     /* This build has no authenticated overlay digest rows. */
     .section .data
     .align 2

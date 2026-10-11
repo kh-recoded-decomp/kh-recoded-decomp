@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-extern unsigned int *data_ov001_020a0514;
+extern unsigned int *gActorChannelContext;
 extern unsigned int EvaluateInterpolationCurve();
 extern unsigned int VEC_MultAdd();
 extern unsigned int VEC_Subtract();
@@ -13,8 +13,8 @@ void func_ov001_0208b5d0(void) {
   unsigned int value;
   u8 delta [12];
 
-  work = data_ov001_020a0514;
-  data_ov001_020a0514[0x24] = data_ov001_020a0514[0x24] + -1;
+  work = gActorChannelContext;
+  gActorChannelContext[0x24] = gActorChannelContext[0x24] + -1;
   if (work[0x24] == 0) {
     MI_CpuCopy8(work + 0x67,work,0x38);
     work[0x26] = 0;

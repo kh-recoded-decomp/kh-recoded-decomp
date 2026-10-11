@@ -1,4 +1,4 @@
 #define ActorChannel_Destroy_0208b760 ActorChannel_Destroy
 #define func_0203a970 Obj_ReleaseIfSet
-#define g_channelContext_020a04f4 data_ov001_020a0514
+#define g_channelContext_020a04f4 gActorChannelContext
 #include "src/ov001/shared_engine/ActorChannel_Destroy_0208b760.c"

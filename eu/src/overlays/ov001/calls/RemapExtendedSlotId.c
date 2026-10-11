@@ -1,3 +1,3 @@
 #define RemapExtendedSlotId_0209d03c RemapExtendedSlotId
-#define data_ov001_020a036c data_ov001_020a038c
+#define data_ov001_020a036c gExtendedSlotRemap
 #include "src/ov001/shared_engine/RemapExtendedSlotId_0209d03c.c"

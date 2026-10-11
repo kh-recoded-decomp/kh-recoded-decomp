@@ -1,3 +1,3 @@
 #define ActorChannel_SetStateFields_0208b870 ActorChannel_SetStateFields
-#define g_channelContext_020a04f4 data_ov001_020a0514
+#define g_channelContext_020a04f4 gActorChannelContext
 #include "src/ov001/shared_engine/ActorChannel_SetStateFields_0208b870.c"

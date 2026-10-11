@@ -2,6 +2,6 @@
 #define FindResourceIndexByName_0201aafc NNS_G3dGetResDictIdxByName
 #define Strlen_02021e44 strlen
 #define func_01ff86fc MIi_CpuClear32
-#define g_resourceNameBuffer_020a04f8 data_ov001_020a0518
+#define g_resourceNameBuffer_020a04f8 gActorResourceNameBuffer
 #define strncpy_02021f28 strncpy
 #include "src/ov001/shared_engine/FindActorResourceIndexByName_02091248.c"

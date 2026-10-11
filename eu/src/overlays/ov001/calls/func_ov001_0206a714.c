@@ -2,10 +2,10 @@
 
 extern void *PXI_Init_0202a64c();
 
-extern u32 data_ov001_0209eb08;
+extern u32 gScreenFadeTaskHandle;
 
 void func_ov001_0206a714(void)
 {
-    PXI_Init_0202a64c(data_ov001_0209eb08);
-    data_ov001_0209eb08 = 0xffffffff;
+    PXI_Init_0202a64c(gScreenFadeTaskHandle);
+    gScreenFadeTaskHandle = 0xffffffff;
 }
