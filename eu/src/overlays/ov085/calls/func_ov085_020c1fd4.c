@@ -1,0 +1,11 @@
+#define FindTextureResourceBlock_0201ac70 NNS_G3dGetTex
+#define LoadMenuImageTable_020c1fb4 func_ov085_020c1fd4
+#define Msg_OpenContainerAndReadHeader_0202cc6c Msg_OpenContainerAndReadHeader
+#define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
+#define ZeroHalfThenFree_0202cd78 ZeroHalfThenFree
+#define data_ov085_020c23a8 sOv085_UiMenuTipsP2_020c23c8
+#define data_ov085_020c23b8 sOv085_UiMenuLanguageTipsP2_020c23d8
+#define func_0202c48c func_0202c4a0
+#define func_0202c690 func_0202c6a4
+#define func_0202d098 ValidateResourceTagAndDispatch
+#include "src/ov085/unclassified_helpers/LoadMenuImageTable_020c1fb4.c"

@@ -1,0 +1,6 @@
+#define CallVirtualHandlerSlot1_02001574 CallVirtualHandlerSlot1
+#define ConfigMenu_DrawText_020c4928 func_ov079_020c4948
+#define Text_UploadTileBuffer_02001520 Text_UploadTileBuffer
+#define func_0200160c func_02001620
+#define func_ov039_020bc9ac GetMenuFont10s
+#include "src/ov079/unclassified_helpers/ConfigMenu_DrawText_020c4928.c"

@@ -1,0 +1,5 @@
+#define DrawPlayTimeDigits_020be450 func_ov039_020be470
+#define func_0204f13c IndexedRecord_SetPair
+#define func_0204f204 func_0204f218
+#define func_0204f378 IndexedRecords_SetFlag2
+#include "src/ov039/widget_layers/DrawPlayTimeDigits_020be450.c"

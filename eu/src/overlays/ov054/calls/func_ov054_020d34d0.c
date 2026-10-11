@@ -1,0 +1,12 @@
+#define FieldMenu_TryOpenByMode_02077d64 FieldMenu_TryOpenByMode
+#define GetBoundedEntryField_0206db5c GetBoundedEntryField
+#define GetSelectedMenuEntryValue_02077f80 GetSelectedMenuEntryValue
+#define HandleFieldMenuSelection_020d34b0 func_ov054_020d34d0
+#define HasFlagsAt0xc_020a751c HasFlagsAt0xc
+#define ResolveEventVariant_02078948 ResolveEventVariant
+#define TickFieldMenuEntry_02078000 TickFieldMenuEntry
+#define TryRequestEnemyAction_020d64dc TryRequestEnemyAction
+#define data_ov054_020d3700 gOv054WorkData
+#define func_ov001_0206db78 GetPlayerControlState
+#define func_ov021_020a81b8 func_ov021_020a81d8
+#include "src/ov054/unclassified_helpers/HandleFieldMenuSelection_020d34b0.c"

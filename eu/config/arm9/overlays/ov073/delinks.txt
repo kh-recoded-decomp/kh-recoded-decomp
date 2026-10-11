@@ -88,6 +88,10 @@ src/overlays/ov073/calls/UpdateStatusListInput.c:
     complete
     .text       start:0x020c0e58 end:0x020c0ed8
 
+src/overlays/ov073/calls/func_ov073_020c0ed8.c:
+    complete
+    .text       start:0x020c0ed8 end:0x020c1044
+
 src/overlays/ov073/calls/HideStatusScreenElement.c:
     complete
     .text       start:0x020c1044 end:0x020c1060
@@ -99,6 +103,10 @@ src/overlays/ov073/calls/SetupStatusPanelScroll.c:
 src/overlays/ov073/calls/UpdateStatusPanelInput.c:
     complete
     .text       start:0x020c10a8 end:0x020c111c
+
+src/overlays/ov073/calls/func_ov073_020c111c.c:
+    complete
+    .text       start:0x020c111c end:0x020c1250
 
 src/overlays/ov073/calls/HideStatusPanelElement.c:
     complete

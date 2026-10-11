@@ -226108,6 +226108,102 @@
       "domain": "panel_state",
       "origin": "Ghidra output, reviewed and reconstructed",
       "understanding": "subsystem"
+    },
+    {
+      "module": "ov021",
+      "symbol": "func_ov021_020a7cc8",
+      "name": "LoadPathGraph_020a7cc8",
+      "language": "c",
+      "source": "src/ov021/object_state/LoadPathGraph_020a7cc8.c",
+      "source_symbol": "LoadPathGraph_020a7cc8",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "thumb",
+      "bindings": {
+        "func_0204f768": "0x204f769",
+        "func_01ff8830": "0x1ff8830",
+        "func_02025658": "0x2025658",
+        "func_ov001_020645c8": "0x20645c9",
+        "func_0202c48c": "0x202c48c",
+        "NNSi_FndAllocFromDefaultHeap_0202a178": "0x202a178",
+        "NNSi_FndFreeFromDefaultHeap_0202a1c4": "0x202a1c4",
+        "func_ov021_020a7c60": "0x20a7c61",
+        "func_ov021_020a7c88": "0x20a7c89",
+        "data_020608c8": "0x20608c8",
+        "data_ov021_020b5604": "0x20b5604"
+      },
+      "behavior": "Resets a path graph, loads its archive file (kind 4 when unlocked episodes apply) and expands points, links and groups into heap arrays.",
+      "evidence": "Rebuilt C matches all 568 bytes including relocations.",
+      "uncertainty": "Meaning of the link flag bits, the unk20-unk34 fields and the two callbacks is unknown.",
+      "domain": "object_state",
+      "origin": "Ghidra output, reviewed and reconstructed",
+      "understanding": "subsystem"
+    },
+    {
+      "module": "ov035",
+      "symbol": "func_ov035_020bc2f0",
+      "name": "QueueGaugeLevelEntry",
+      "language": "c",
+      "source": "src/ov035/shared_engine/QueueGaugeLevelEntry_020bc2f0.c",
+      "source_symbol": "QueueGaugeLevelEntry_020bc2f0",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "thumb",
+      "bindings": {
+        "_s32_div_f": "0x2023dbc",
+        "func_01ff89a8": "0x1ff89a8",
+        "data_ov035_020bc4e8": "0x20bc4e8"
+      },
+      "behavior": "Appends a gauge entry to a 12-slot queue, scaling two clamped values to a 24 or 48 pixel width and copying a 12-byte header.",
+      "evidence": "Rebuilt C matches all 156 bytes including relocations.",
+      "uncertainty": "What the two gauge levels represent and who drains the queue is unknown.",
+      "domain": "shared_engine",
+      "origin": "Ghidra output, reviewed and reconstructed",
+      "understanding": "subsystem"
+    },
+    {
+      "module": "ov047",
+      "symbol": "func_ov047_020c53b4",
+      "name": "Camera_StepFollowTarget_020c53b4",
+      "language": "c",
+      "source": "src/ov047/camera/Camera_StepFollowTarget_020c53b4.c",
+      "source_symbol": "Camera_StepFollowTarget_020c53b4",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "thumb",
+      "bindings": {
+        "FixedPointMultiply12": "0x2006450",
+        "VEC_Subtract_01ff9e3c": "0x1ff9e3c",
+        "VEC_Mag_01ff9f28": "0x1ff9f28",
+        "VEC_NormalizeUnchecked_01ff9f88": "0x1ff9f88",
+        "VEC_MultAdd_01ffa09c": "0x1ffa09c"
+      },
+      "behavior": "Eases the camera's tracked target and blend value toward their saved goals, snapping when close or when forced.",
+      "evidence": "Rebuilt C matches all 404 bytes including relocations.",
+      "uncertainty": "Meaning of the 0x2000000 and 0x20 camera flags and of the blend value at offset 0x18.",
+      "domain": "camera",
+      "origin": "Ghidra output, reviewed and reconstructed",
+      "understanding": "subsystem"
+    },
+    {
+      "module": "ov093",
+      "symbol": "func_ov093_020bfac4",
+      "name": "InitEntryTextLayers",
+      "language": "c",
+      "source": "src/ov093/panel_state/InitEntryTextLayers_020bfac4.c",
+      "source_symbol": "InitEntryTextLayers_020bfac4",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "func_02001458": "0x2001459",
+        "LoadPackedFileView_020ba25c": "0x20ba25d",
+        "InitTextLayerDefault_02001494": "0x2001495",
+        "data_ov093_020c4d40": "0x20c4d40",
+        "data_ov093_020c3e8c": "0x20c3e8c"
+      },
+      "behavior": "Loads the scene font and four packed file views, then lays out six text frames and initializes their text layers on both screens.",
+      "evidence": "Rebuilt C matches all 556 bytes including relocations.",
+      "uncertainty": "Exact meaning of each frame and the packed file contents is unknown.",
+      "domain": "panel_state",
+      "origin": "Ghidra output, reviewed and reconstructed",
+      "understanding": "subsystem"
     }
   ]
 }

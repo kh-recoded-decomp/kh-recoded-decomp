@@ -1,0 +1,9 @@
+#define DrawWidgetPlayTime_020be358 func_ov039_020be378
+#define FindWidgetById_020b90a4 FindWidgetById
+#define func_0204f0b4 PXI_Init_0204f0c8
+#define func_0204f13c IndexedRecord_SetPair
+#define func_0204f204 func_0204f218
+#define func_0204f2e4 IndexedRecord_ClearActive
+#define func_0204f378 IndexedRecords_SetFlag2
+#define func_ov027_020b91a8 GetWidgetPosition
+#include "src/ov039/widget_layers/DrawWidgetPlayTime_020be358.c"

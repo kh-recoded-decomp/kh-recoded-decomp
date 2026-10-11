@@ -1,0 +1,8 @@
+#define AdvanceItemPrompt_020c7fc0 func_ov077_020c7fe0
+#define InitDefaultMessageWindow_020c83b4 InitDefaultMessageWindow
+#define IsGlobalPackedBitSet_02027304 IsGlobalPackedBitSet
+#define MeasureMessageTiles_020c82ec MeasureOv077MessageTiles
+#define MenuScreen_RefreshMarker_020c8b70 MenuScreen_RefreshMarker_020c8b90
+#define OpenItemPrompt_020c8bd4 func_ov077_020c8bf4
+#define func_ov027_020ba2a8 func_ov027_020ba2c8
+#include "src/ov077/unclassified_helpers/OpenItemPrompt_020c8bd4.c"

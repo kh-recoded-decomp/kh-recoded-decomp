@@ -1,0 +1,8 @@
+#define DrawStatusListRows_020c10fc func_ov073_020c111c
+#define DrawTextAnchored_020015a0 DrawTextAnchored
+#define SetStatusHeaderText_020c1d38 SetStatusHeaderText
+#define SetTextColorIfFits_020bcd04 SetTextColorIfFits
+#define func_ov027_020b822c func_ov027_020b824c
+#define func_ov027_020b91c8 func_ov027_020b91e8
+#define func_ov039_020bc994 GetMenuFont10
+#include "src/ov073/status_menu/DrawStatusListRows_020c10fc.c"

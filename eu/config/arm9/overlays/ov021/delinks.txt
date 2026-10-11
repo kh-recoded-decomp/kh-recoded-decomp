@@ -144,6 +144,10 @@ src/overlays/ov021/calls/func_ov021_020a7ccc.c:
     complete
     .text       start:0x020a7ccc end:0x020a7ce8
 
+src/overlays/ov021/calls/func_ov021_020a7ce8.c:
+    complete
+    .text       start:0x020a7ce8 end:0x020a7f20
+
 src/overlays/ov021/calls/FreeRecordListsAndBuffer.c:
     complete
     .text       start:0x020a7f20 end:0x020a7f94

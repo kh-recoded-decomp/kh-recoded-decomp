@@ -140,6 +140,10 @@ src/overlays/ov034/calls/InitResultsMovieSourceOps.c:
     complete
     .text       start:0x020be568 end:0x020be5a8
 
+src/overlays/ov034/calls/func_ov034_020be5a8.c:
+    complete
+    .text       start:0x020be5a8 end:0x020be734
+
 src/overlays/ov034/auto/func_ov034_020be734.c:
     complete
     .text       start:0x020be734 end:0x020be736

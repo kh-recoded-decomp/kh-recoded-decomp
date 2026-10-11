@@ -1,0 +1,11 @@
+#define FindTextureResourceBlock_0201ac70 NNS_G3dGetTex
+#define LoadMenuImageTable_020ccd84 func_ov076_020ccda4
+#define Msg_OpenContainerAndReadHeader_0202cc6c Msg_OpenContainerAndReadHeader
+#define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
+#define ZeroHalfThenFree_0202cd78 ZeroHalfThenFree
+#define data_ov076_020cd3b4 sOv076_UiMenuTipsP2_020cd3d4
+#define data_ov076_020cd3c4 sOv076_UiMenuLanguageTipsP2_020cd3e4
+#define func_0202c48c func_0202c4a0
+#define func_0202c690 func_0202c6a4
+#define func_0202d098 ValidateResourceTagAndDispatch
+#include "src/ov076/matrix_menu/LoadMenuImageTable_020ccd84.c"

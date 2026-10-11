@@ -344,6 +344,10 @@ src/overlays/ov035/calls/UpdateChannelLevel.c:
     complete
     .text       start:0x020bc270 end:0x020bc310
 
+src/overlays/ov035/calls/func_ov035_020bc310.c:
+    complete
+    .text       start:0x020bc310 end:0x020bc3ac
+
 src/overlays/ov035/calls/func_ov035_020bc3ac.c:
     complete
     .text       start:0x020bc3ac end:0x020bc3d6

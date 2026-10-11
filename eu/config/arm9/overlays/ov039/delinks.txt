@@ -492,6 +492,14 @@ src/overlays/ov039/calls/SetDigitDisplay.c:
     complete
     .text       start:0x020be2e8 end:0x020be378
 
+src/overlays/ov039/calls/func_ov039_020be378.c:
+    complete
+    .text       start:0x020be378 end:0x020be470
+
+src/overlays/ov039/calls/func_ov039_020be470.c:
+    complete
+    .text       start:0x020be470 end:0x020be548
+
 src/overlays/ov039/calls/func_ov039_020be548.c:
     complete
     .text       start:0x020be548 end:0x020be594

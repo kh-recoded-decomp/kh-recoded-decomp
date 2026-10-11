@@ -596,6 +596,10 @@ src/overlays/ov075/calls/MatrixMenu_GetStockForRecord.c:
     complete
     .text       start:0x020d0f54 end:0x020d0f70
 
+src/overlays/ov075/calls/func_ov075_020d0f70.c:
+    complete
+    .text       start:0x020d0f70 end:0x020d10fc
+
 src/overlays/ov075/auto/func_ov075_020d10fc.c:
     complete
     .text       start:0x020d10fc end:0x020d10fe

@@ -508,6 +508,10 @@ src/overlays/ov076/calls/MessageWindow_UpdateYesNoInput.c:
     complete
     .text       start:0x020cae5c end:0x020cafac
 
+src/overlays/ov076/calls/func_ov076_020cafac.c:
+    complete
+    .text       start:0x020cafac end:0x020cb0ec
+
 src/overlays/ov076/calls/TextCanvas_GetLineWidth.c:
     complete
     .text       start:0x020cb0ec end:0x020cb154
@@ -560,6 +564,10 @@ src/overlays/ov076/calls/MessageWindow_IsFinished.c:
     complete
     .text       start:0x020cbbb0 end:0x020cbbc0
 
+src/overlays/ov076/calls/func_ov076_020cbbc0.c:
+    complete
+    .text       start:0x020cbbc0 end:0x020cbcec
+
 src/overlays/ov076/calls/MenuPanel_Create.c:
     complete
     .text       start:0x020cbcec end:0x020cc0a8
@@ -599,6 +607,10 @@ src/overlays/ov076/calls/SetNavigationElementsVisible.c:
 src/overlays/ov076/calls/CommandMatrix_GetStockForRecord.c:
     complete
     .text       start:0x020ccd88 end:0x020ccda4
+
+src/overlays/ov076/calls/func_ov076_020ccda4.c:
+    complete
+    .text       start:0x020ccda4 end:0x020ccf30
 
 src/overlays/ov076/auto/func_ov076_020ccf30.c:
     complete

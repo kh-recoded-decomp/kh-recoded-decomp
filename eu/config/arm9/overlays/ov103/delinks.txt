@@ -56,6 +56,10 @@ src/overlays/ov103/calls/FreeGraphicsResources_020bf094.c:
     complete
     .text       start:0x020bf094 end:0x020bf0c4
 
+src/overlays/ov103/calls/func_ov103_020bf0c4.c:
+    complete
+    .text       start:0x020bf0c4 end:0x020bf1bc
+
 src/overlays/ov103/calls/InitTextLayers_020bf1bc.c:
     complete
     .text       start:0x020bf1bc end:0x020bf34c

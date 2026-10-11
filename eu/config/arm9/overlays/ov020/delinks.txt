@@ -184,6 +184,10 @@ src/overlays/ov020/calls/DrawStackedPanels.c:
     complete
     .text       start:0x020a3744 end:0x020a37f8
 
+src/overlays/ov020/calls/func_ov020_020a37f8.c:
+    complete
+    .text       start:0x020a37f8 end:0x020a3960
+
 src/overlays/ov020/calls/CreateKind3EntryPool.c:
     complete
     .text       start:0x020a3960 end:0x020a39b8

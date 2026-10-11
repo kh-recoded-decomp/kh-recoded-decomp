@@ -1,0 +1,8 @@
+#define AdvanceHintPrompt_020caf8c func_ov076_020cafac
+#define IsGlobalPackedBitSet_02027304 IsGlobalPackedBitSet
+#define MenuPanel_InitStandard_020cb380 MenuPanel_InitStandard
+#define MenuPanel_MeasureMessage_020cb2b8 MenuPanel_MeasureMessage
+#define MenuScreen_RefreshMarker_020cbb3c MenuScreen_RefreshMarker
+#define OpenHintPrompt_020cbba0 func_ov076_020cbbc0
+#define func_ov027_020ba2a8 func_ov027_020ba2c8
+#include "src/ov076/unclassified_helpers/OpenHintPrompt_020cbba0.c"

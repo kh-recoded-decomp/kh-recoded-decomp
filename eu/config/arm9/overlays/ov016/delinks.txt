@@ -272,6 +272,10 @@ src/overlays/ov016/calls/ApplyFieldObjectForceToPlayer.c:
     complete
     .text       start:0x020a448c end:0x020a46b4
 
+src/overlays/ov016/calls/func_ov016_020a46b4.c:
+    complete
+    .text       start:0x020a46b4 end:0x020a4820
+
 src/overlays/ov016/calls/UpdateKickedFieldObject.c:
     complete
     .text       start:0x020a4820 end:0x020a4970
@@ -343,6 +347,10 @@ src/overlays/ov016/calls/ForwardModeCheck.c:
 src/overlays/ov016/calls/OnFieldUnitPushedUp.c:
     complete
     .text       start:0x020a568c end:0x020a56da
+
+src/overlays/ov016/calls/func_ov016_020a56dc.c:
+    complete
+    .text       start:0x020a56dc end:0x020a57ec
 
 src/overlays/ov016/calls/ClearFieldUnitPending.c:
     complete

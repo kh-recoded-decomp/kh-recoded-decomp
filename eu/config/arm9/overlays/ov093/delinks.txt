@@ -64,6 +64,10 @@ src/overlays/ov093/calls/FreeResourceBlocks.c:
     complete
     .text       start:0x020bfab4 end:0x020bfae4
 
+src/overlays/ov093/calls/func_ov093_020bfae4.c:
+    complete
+    .text       start:0x020bfae4 end:0x020bfd10
+
 src/overlays/ov093/calls/ReleaseSceneResources.c:
     complete
     .text       start:0x020bfd10 end:0x020bfd80
