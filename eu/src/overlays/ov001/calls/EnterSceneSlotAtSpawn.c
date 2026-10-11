@@ -1,4 +1,4 @@
 #define EnterSceneSlotAtSpawn_02064828 EnterSceneSlotAtSpawn
-#define data_ov001_0209d8a0 data_ov001_0209d8c8
+#define data_ov001_0209d8a0 gSceneSlotSpawns
 #define func_ov001_0206317c ConfigureFieldTracks
 #include "src/ov001/unclassified_helpers/EnterSceneSlotAtSpawn_02064828.c"

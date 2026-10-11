@@ -1,4 +1,9 @@
-#define DrawShortLayoutRow_020737fc DrawShortLayoutRow
-#define Ov002_BlitNibbleRun BlitNibbleRunPadded
-#define data_0209de1e data_ov001_0209de47
-#include "src/ov001/shared_variants/DrawShortLayoutRow_020737fc.c"
+#include "src/overlays/ov001/FieldUiPatterns.h"
+
+extern void BlitNibbleRunPadded(u8 *dst, int right, int count, int width,
+                               int pad, int row, const u8 *pixels);
+
+void DrawShortLayoutRow(u8 *tiles, int right, int row)
+{
+    BlitNibbleRunPadded(tiles, right, 5, 110, 0, 1, gShortLayoutRowsB[row]);
+}

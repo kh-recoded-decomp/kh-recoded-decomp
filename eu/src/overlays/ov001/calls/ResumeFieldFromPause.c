@@ -18,7 +18,7 @@
 #define SetPanelReadyState_02028968 SetPanelReadyState
 #define TagTracker_InvokeCallback_020b8210 func_ov027_020b8230
 #define UpdateWidgetLayerDefault_020b9df0 func_ov027_020b9e10
-#define data_ov001_0209dd00 data_ov001_0209dd28
+#define data_ov001_0209dd00 gResumeFieldLayerIds
 #define data_ov001_0209ecf0 gBgScreenLoaders
 #define data_ov001_020a04a4 data_ov001_020a04c4
 #define func_020033e0 DC_FlushAll

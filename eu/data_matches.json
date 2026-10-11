@@ -8945,6 +8945,182 @@
       "name": "gMenuGaugePointThresholds",
       "origin": "EU original DATA",
       "behavior": "Gauge level and capacity boundaries read by AddGaugePoints."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209dd0c",
+      "end": "0x0209dd28",
+      "source": "src/overlays/ov001/data/tables/gMenuScreenCellIds.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gMenuScreenCellIds",
+      "origin": "EU original DATA",
+      "behavior": "Cell IDs passed to InitTileTableFrom when loading the field menu."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209dd28",
+      "end": "0x0209dd44",
+      "source": "src/overlays/ov001/data/tables/gResumeFieldLayerIds.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gResumeFieldLayerIds",
+      "origin": "EU original DATA",
+      "behavior": "Widget layers restored by ResumeFieldFromPause."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209de06",
+      "end": "0x0209de0e",
+      "source": "src/overlays/ov001/data/tables/gFourPixelInsetRows.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gFourPixelInsetRows",
+      "origin": "EU original DATA",
+      "behavior": "Two four-pixel rows read by the inset label blitter."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209de1a",
+      "end": "0x0209de2e",
+      "source": "src/overlays/ov001/data/tables/gFourPixelLabelRows.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gFourPixelLabelRows",
+      "origin": "EU original DATA",
+      "behavior": "Five four-pixel rows read by the label blitter."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209de2e",
+      "end": "0x0209de47",
+      "source": "src/overlays/ov001/data/tables/ShortLayoutPatterns.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gShortLayoutRowsA",
+      "origin": "EU original DATA",
+      "behavior": "Five-pixel rows used by DrawShortLayoutRow_02073824."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209de47",
+      "end": "0x0209de65",
+      "source": "src/overlays/ov001/data/tables/ShortLayoutPatterns.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gShortLayoutRowsB",
+      "origin": "EU original DATA",
+      "behavior": "Five-pixel rows used by DrawShortLayoutRow."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209de65",
+      "end": "0x0209de8f",
+      "source": "src/overlays/ov001/data/tables/ShortLayoutPatterns.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gShortLabelRows",
+      "origin": "EU original DATA",
+      "behavior": "Seven-pixel bordered rows used by DrawShortLabel; excludes one alignment byte."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209de90",
+      "end": "0x0209de9c",
+      "source": "src/overlays/ov001/data/tables/gFieldEntryModes.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gFieldEntryModes",
+      "origin": "EU original DATA",
+      "behavior": "Mode mapping read after running the menu-entry callbacks."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209dec8",
+      "end": "0x0209ded8",
+      "source": "src/overlays/ov001/data/tables/gFieldSlotMessageIds.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gFieldSlotMessageIds",
+      "origin": "EU original DATA",
+      "behavior": "Message IDs selected by DrawFieldSlotCell."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209ded8",
+      "end": "0x0209dee8",
+      "source": "src/overlays/ov001/data/tables/gFieldCommandTextFrame.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gFieldCommandTextFrame",
+      "origin": "EU original DATA",
+      "behavior": "Text frame copied by InitFieldCommandMenu."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209de8f",
+      "end": "0x0209de90",
+      "source": "src/overlays/ov001/data/tables/ShortLayoutPatterns.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gShortLabelRowAlignment",
+      "origin": "EU original DATA",
+      "behavior": "One zero alignment byte following the packed short-label rows."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209d8c8",
+      "end": "0x0209d8f8",
+      "source": "src/overlays/ov001/data/tables/gSceneSlotSpawns.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gSceneSlotSpawns",
+      "origin": "EU original DATA",
+      "behavior": "Eight room and spawn-coordinate records selected by EnterSceneSlotAtSpawn."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209de9c",
+      "end": "0x0209deb0",
+      "source": "src/overlays/ov001/data/tables/gTimedSceneRecordIds.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gTimedSceneRecordIds",
+      "origin": "EU original DATA",
+      "behavior": "Five record IDs looked up when CreateTimedSceneState attaches scene records."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209deb0",
+      "end": "0x0209debc",
+      "source": "src/overlays/ov001/data/tables/gDefaultSceneBaseTranslation.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gDefaultSceneBaseTranslation",
+      "origin": "EU original DATA",
+      "behavior": "Fixed-point translation passed to NNS_G3dGlbSetBaseTrans by ApplyDefaultSceneCamera."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209debc",
+      "end": "0x0209dec8",
+      "source": "src/overlays/ov001/data/tables/gDefaultSceneBaseScale.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gDefaultSceneBaseScale",
+      "origin": "EU original DATA",
+      "behavior": "Fixed-point scale passed to NNS_G3dGlbSetBaseScale by ApplyDefaultSceneCamera."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209dee8",
+      "end": "0x0209df0c",
+      "source": "src/overlays/ov001/data/tables/gDefaultSceneBaseRotation.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gDefaultSceneBaseRotation",
+      "origin": "EU original DATA",
+      "behavior": "Identity fixed-point 3x3 base rotation copied into Nitro3D global state."
     }
   ]
 }

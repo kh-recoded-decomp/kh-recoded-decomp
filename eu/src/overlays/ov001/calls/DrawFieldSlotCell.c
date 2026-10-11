@@ -29,7 +29,7 @@ typedef struct SlotPanel {
 
 typedef struct MessageSet MessageSet;
 
-extern const SlotNameTable data_ov001_0209dec8;
+extern const SlotNameTable gFieldSlotMessageIds;
 extern const u16 data_ov001_0209eee8[];
 
 extern const u16 *func_ov027_020ba2c8(MessageSet *messages, int index);
@@ -41,7 +41,7 @@ extern void func_02001620(int *context, u32 x, u32 y, u32 color, u32 flags, cons
 
 void DrawFieldSlotCell(SlotPanel *panel, int *layer, SlotCell *cell, MessageSet *messages, int slot)
 {
-    SlotNameTable table = data_ov001_0209dec8;
+    SlotNameTable table = gFieldSlotMessageIds;
     const u16 *text = data_ov001_0209eee8;
     int value;
 

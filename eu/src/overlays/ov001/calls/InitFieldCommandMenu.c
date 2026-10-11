@@ -111,7 +111,7 @@ typedef struct FieldMenu {
     s32 mode;
 } FieldMenu;
 
-extern TextFrame data_ov001_0209ded8;
+extern const TextFrame gFieldCommandTextFrame;
 extern const u16 data_ov001_0209ef00[];
 
 extern void *GetSceneFont(void);
@@ -167,7 +167,7 @@ static inline void SetupLinkedGauge(FieldMenu *menu, CommandGauge *gauge, s32 li
 
 void InitFieldCommandMenu(FieldMenu *menu, u8 *tiles)
 {
-    TextFrame frame = data_ov001_0209ded8;
+    TextFrame frame = gFieldCommandTextFrame;
     PackedFileView view;
     PackedFileView slotView;
     SelectionSlots *slots;

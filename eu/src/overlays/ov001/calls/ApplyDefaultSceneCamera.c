@@ -3,9 +3,9 @@
 #define QueueOrSendGeometryCommand_01ffa37c NNS_G3dGeBufferOP_N
 #define data_0205a9a4 NNS_G3dGlb_prmMatColor0
 #define data_0205a9b8 NNS_G3dGlb_prmBaseRot
-#define data_ov001_0209de88 data_ov001_0209deb0
-#define data_ov001_0209de94 data_ov001_0209debc
-#define data_ov001_0209dec0 data_ov001_0209dee8
+#define data_ov001_0209de88 gDefaultSceneBaseTranslation
+#define data_ov001_0209de94 gDefaultSceneBaseScale
+#define data_ov001_0209dec0 gDefaultSceneBaseRotation
 #define func_01ff87c4 MI_Copy36B
 #define func_020192ec NNS_G3dGlbSetBaseTrans
 #define func_0201931c NNS_G3dGlbSetBaseScale

@@ -5,7 +5,7 @@
 #define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define data_ov001_0209dc94 data_ov001_0209dcbc
-#define data_ov001_0209dce4 data_ov001_0209dd0c
+#define data_ov001_0209dce4 gMenuScreenCellIds
 #define func_01ff878c MIi_CpuCopyFast
 #define func_02007250 GX_LoadBGPltt
 #define func_0202c478 Archive_LoadFile

@@ -2,7 +2,7 @@
 #define FindActiveRecordById_020b8184 FindActiveRecordById
 #define GetSceneTagTracker_020711b0 GetSceneTagTracker
 #define NNSi_FndGetCurrentRootHeap_0202a764 NNSi_FndGetCurrentRootHeap
-#define data_ov001_0209de74 data_ov001_0209de9c
+#define data_ov001_0209de74 gTimedSceneRecordIds
 #define data_ov001_020a04ac data_ov001_020a04cc
 #define func_01ff8830 MI_CpuFill8
 #define func_ov001_020743c0 LoadMenuGaugeData

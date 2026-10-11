@@ -11,14 +11,14 @@ typedef struct FieldState {
     u8 highFlags : 3;
 } FieldState;
 
-extern const ModeTable data_ov001_0209de90;
+extern const ModeTable gFieldEntryModes;
 extern FieldState *data_ov001_020a0480;
 extern BOOL IsSessionFlagSet(u32 flag);
 extern void func_ov001_020716e8(int menu, int value);
 
 void RunMenuEntryCallbacks(void *context, int menu, int count, void (*callback)(void *context, int index, int mode), int mode)
 {
-    ModeTable table = data_ov001_0209de90;
+    ModeTable table = gFieldEntryModes;
     int i;
     int value;
     BOOL skip;

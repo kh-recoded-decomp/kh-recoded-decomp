@@ -4,4 +4,5 @@
 #define data_ov001_0209edd8 data_ov001_0209edf8
 #define data_ov001_020a04ac data_ov001_020a04cc
 #define func_ov001_020737fc DrawShortLayoutRow
+#define func_ov001_02073870 BlitFourPixelLabelPattern
 #include "src/ov001/field_manager/AdvanceGaugeSlot_0207414c.c"

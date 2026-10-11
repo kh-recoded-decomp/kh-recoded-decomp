@@ -29,6 +29,7 @@ extern const FieldTextFrame gSceneTextFrame51C;
 extern const FieldTextFrame gChoiceTextFrame;
 extern const FieldTextFrame gSlotLabelTextFrame;
 extern const FieldTextFrame gFieldHudTextFrame;
+extern const FieldTextFrame gFieldCommandTextFrame;
 extern const FieldSlotOrder gFieldSlotOrder;
 extern const FieldWidgetLayerList gVramRestoreWidgetLayers;
 extern const FieldWidgetLayerList gVramBackupWidgetLayers;

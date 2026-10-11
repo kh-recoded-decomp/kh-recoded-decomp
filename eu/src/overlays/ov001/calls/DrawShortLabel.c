@@ -1,4 +1,9 @@
-#define DrawShortLabel_0207384c DrawShortLabel
-#define data_ov001_0209de3d data_ov001_0209de65
-#define func_ov001_02073758 BlitNibbleRunPadded
-#include "src/ov001/text_rendering/DrawShortLabel_0207384c.c"
+#include "src/overlays/ov001/FieldUiPatterns.h"
+
+extern void BlitNibbleRunPadded(u8 *dst, int right, int count, int width,
+                               int pad, int row, const u8 *pixels);
+
+void DrawShortLabel(u8 *tiles, int right, int index)
+{
+    BlitNibbleRunPadded(tiles, right, 7, 110, 0, 0, gShortLabelRows[index]);
+}

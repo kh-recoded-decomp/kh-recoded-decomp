@@ -10,4 +10,5 @@
 #define func_ov001_02071770 UploadScreenSlotBlock
 #define func_ov001_020737fc DrawShortLayoutRow
 #define func_ov001_0207414c AdvanceGaugeSlot
+#define func_ov001_02073870 BlitFourPixelLabelPattern
 #include "src/ov001/field_manager/SetMenuGaugeActive_0207512c.c"
