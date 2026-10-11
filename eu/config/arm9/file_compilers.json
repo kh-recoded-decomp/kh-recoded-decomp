@@ -9087,5 +9087,14 @@
   "src/overlays/ov085/calls/func_ov085_020c1fd4.c": "dsi/1.3p1",
   "src/overlays/ov093/calls/func_ov093_020bfae4.c": "dsi/1.3p1",
   "src/overlays/ov103/calls/func_ov103_020bf0c4.c": "dsi/1.3p1",
-  "src/overlays/ov001/calls/QueueStageResourceSounds.c": "dsi/1.1"
+  "src/overlays/ov001/calls/QueueStageResourceSounds.c": "dsi/1.1",
+  "src/overlays/ov001/calls/func_ov001_0206ed8c.c": "dsi/1.3p1",
+  "src/overlays/ov025/calls/func_ov025_020b5f28.c": "dsi/1.3p1",
+  "src/overlays/ov052/calls/func_ov052_020c9294.c": "dsi/1.3p1",
+  "src/overlays/ov075/calls/func_ov075_020cd604.c": "dsi/1.3p1",
+  "src/overlays/ov075/calls/func_ov075_020cdbe0.c": "dsi/1.3p1",
+  "src/overlays/ov076/calls/func_ov076_020c9808.c": "dsi/1.3p1",
+  "src/overlays/ov077/calls/func_ov077_020c683c.c": "dsi/1.3p1",
+  "src/overlays/ov031/calls/func_ov031_020bb074.c": "dsi/1.3p1",
+  "src/overlays/ov075/calls/func_ov075_020c8940.c": "dsi/1.3p1"
 }

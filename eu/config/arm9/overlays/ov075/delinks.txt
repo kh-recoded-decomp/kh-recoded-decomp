@@ -156,6 +156,10 @@ src/overlays/ov075/calls/ClearGlyphCell.c:
     complete
     .text       start:0x020c8890 end:0x020c8940
 
+src/overlays/ov075/calls/func_ov075_020c8940.c:
+    complete
+    .text       start:0x020c8940 end:0x020c8bc0
+
 src/overlays/ov075/calls/OpenMessageDialog.c:
     complete
     .text       start:0x020c8bc0 end:0x020c8d04
@@ -363,6 +367,10 @@ src/overlays/ov075/calls/func_ov075_020cd874.c:
 src/overlays/ov075/calls/DrawImageQuad.c:
     complete
     .text       start:0x020cda30 end:0x020cdbe0
+
+src/overlays/ov075/calls/func_ov075_020cdbe0.c:
+    complete
+    .text       start:0x020cdbe0 end:0x020cde24
 
 src/overlays/ov075/calls/BuildTabItemList.c:
     complete

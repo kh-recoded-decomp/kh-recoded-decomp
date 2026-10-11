@@ -72,6 +72,10 @@ src/overlays/ov052/calls/TryGrabLedge.c:
     complete
     .text       start:0x020c8bcc end:0x020c9292
 
+src/overlays/ov052/calls/func_ov052_020c9294.c:
+    complete
+    .text       start:0x020c9294 end:0x020c9504
+
 src/overlays/ov052/calls/IsTargetAboveInRange.c:
     complete
     .text       start:0x020c9504 end:0x020c959c

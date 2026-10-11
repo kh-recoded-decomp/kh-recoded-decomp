@@ -119,6 +119,10 @@ src/overlays/ov031/calls/CanLeaveActiveRecord.c:
     complete
     .text       start:0x020bb030 end:0x020bb074
 
+src/overlays/ov031/calls/func_ov031_020bb074.c:
+    complete
+    .text       start:0x020bb074 end:0x020bb2f4
+
 src/overlays/ov031/calls/DrawSceneGroups.c:
     complete
     .text       start:0x020bb2f4 end:0x020bb3ac

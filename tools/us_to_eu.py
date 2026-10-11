@@ -101,6 +101,7 @@ class EuModel:
                     self.claimed[module].append((int(found.group(1), 16), int(found.group(2), 16)))
             if binary_path(module).exists():
                 self.blobs[module] = binary_path(module).read_bytes()
+        self.defined = defined_symbols()
 
     def name_at(self, target: int, module_name: str) -> str | None:
         names = set()
@@ -122,6 +123,17 @@ class EuModel:
 
     def is_claimed(self, module: str, address: int, size: int) -> bool:
         return any(start < address + size and address < end for start, end in self.claimed[module])
+
+
+def defined_symbols() -> set[str]:
+    """Global symbols the last EU link defines; dsd also lists field aliases nothing defines."""
+    elf_path = EU / "build" / "arm9.elf"
+    if not elf_path.exists():
+        return set()
+    with elf_path.open("rb") as handle:
+        symtab = ELFFile(handle).get_section_by_name(".symtab")
+        return {s.name for s in symtab.iter_symbols()
+                if s["st_shndx"] != "SHN_UNDEF" and s["st_info"]["bind"] == "STB_GLOBAL"}
 
 
 def eu_sources() -> set[str]:
@@ -248,6 +260,10 @@ def try_pair(model: EuModel, pair, scratch: Path):
                 target, target_module = rom_relocs[offset]
                 addend = addend if kind == R_ARM_ABS32 else 0
                 want = model.name_at(target - addend, target_module)
+                if want is not None and model.defined and want not in model.defined:
+                    status = "undefined target"
+                    ok = False
+                    break
                 if want is None or is_section:
                     ok = False
                     break
@@ -255,7 +271,7 @@ def try_pair(model: EuModel, pair, scratch: Path):
                     ok = False
                     break
             if not ok:
-                status = "relocation names"
+                status = status if status == "undefined target" else "relocation names"
                 break
             if not renames:
                 return pair, (text, cc), "ok"

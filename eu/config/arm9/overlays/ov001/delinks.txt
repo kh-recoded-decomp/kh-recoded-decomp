@@ -2612,6 +2612,10 @@ src/overlays/ov001/calls/LoadFieldBottomRowTiles.c:
     complete
     .text       start:0x0206ed30 end:0x0206ed8c
 
+src/overlays/ov001/calls/func_ov001_0206ed8c.c:
+    complete
+    .text       start:0x0206ed8c end:0x0206efac
+
 src/overlays/ov001/calls/func_ov001_0206efac.c:
     complete
     .text       start:0x0206efac end:0x0206f040
