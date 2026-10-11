@@ -1,4 +1,5 @@
 #include "nitro/types.h"
+#include "src/overlays/ov015/WirelessBoardData.h"
 #include "nitro/fx_types.h"
 #include "src/overlays/ov015/WirelessPanelInitData.h"
 
@@ -97,7 +98,6 @@ typedef struct {
 
 extern PanelState *data_ov015_0207e960;
 extern u32 gLinkPanelAssetPaths[];
-extern u32 data_ov015_0207a19c[];
 extern const char sOv015_WxcWlmP2_0207e7e0[];
 extern const char sOv015_WxcWlaP2_0207e7ec[];
 
@@ -356,7 +356,7 @@ void SetupPanelGraphics(void) {
         void *container = panel->subObj;
         func_ov027_020b96c0(container, FindWidgetById(container, 10), panel->randomDigit);
     }
-    data_ov015_0207e960->randomPick = func_0202a9e4(data_ov015_0207a19c[DispatchContextCommand(6, 0, 0, 0)]);
+    data_ov015_0207e960->randomPick = func_0202a9e4(gWirelessRandomChoiceLimits[DispatchContextCommand(6, 0, 0, 0)]);
     {
         void *element = FindWidgetById(data_ov015_0207e960->subObj, 10);
         SetFocusedWidget(data_ov015_0207e960->subObj, element);

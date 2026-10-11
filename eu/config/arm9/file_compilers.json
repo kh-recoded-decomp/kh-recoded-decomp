@@ -1,4 +1,7 @@
 {
+  "src/overlays/ov001/calls/StartPanelLayoutTransition.c": "dsi/1.3p1",
+  "src/overlays/ov025/calls/FindHorizontalNeighbor.c": "dsi/1.3p1",
+  "src/overlays/ov073/calls/FindHorizontalNeighbor_020c388c.c": "dsi/1.3p1",
   "src/overlays/ov076/calls/SlotMenu_IsSelectedRecordEquipped.c": "dsi/1.3p1",
   "libs/nitro/nns/calls/NNS_FndFreeToExpHeap.c": "dsi/1.3p1",
   "libs/nitro/os/calls/OSi_ExitThread_ArgSpecified.c": "dsi/1.3p1",
@@ -8996,5 +8999,6 @@
   "src/overlays/ov001/calls/GetStageManager.c": "dsi/1.1",
   "src/overlays/ov042/calls/CommitCameraFrame.c": "dsi/1.3p1",
   "src/overlays/ov001/calls/QueryStageFloor.c": "dsi/1.3p1",
+  "src/overlays/ov001/calls/OpenStageModelGroup.c": "dsi/1.3p1",
   "src/overlays/ov101/calls/CommitPageInteractionBounds.c": "dsi/1.3p1"
 }

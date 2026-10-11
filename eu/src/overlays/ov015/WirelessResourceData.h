@@ -10,6 +10,11 @@ typedef struct WirelessResourceData {
 
 typedef char WirelessResourceDataSizeCheck[(sizeof(WirelessResourceData) == 600) ? 1 : -1];
 
+extern const WirelessResourceData *gWirelessResourceTableA[10];
+extern const WirelessResourceData *gWirelessResourceTableB[10];
+extern const WirelessResourceData *gWirelessResourceTableC[10];
+extern const WirelessResourceData *const *gWirelessResourceTables[7];
+
 extern const WirelessResourceData gWirelessResourceDataA0;
 extern const WirelessResourceData gWirelessResourceDataA1;
 extern const WirelessResourceData gWirelessResourceDataA2;

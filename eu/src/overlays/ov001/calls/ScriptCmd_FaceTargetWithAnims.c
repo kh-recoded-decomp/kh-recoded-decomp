@@ -4,7 +4,7 @@
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
 #define SetFieldOffset5aIfFlag_020814c4 SetFieldOffset5aIfFlag
 #define data_ov001_0209e430 data_ov001_0209e458
-#define data_ov001_020a0230 data_ov001_020a0250
+#define data_ov001_020a0230 gDefaultActorAnimation
 #define func_02036240 ActorRegistry_GetEntityByIndex
 #define func_02036810 ActorSlot_GetByIndex
 #define func_ov001_0208a73c func_ov001_0208a764

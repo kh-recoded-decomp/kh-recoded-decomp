@@ -1,4 +1,5 @@
 #define OS_SNPrintf_0202e080 OS_SNPrintf_0202e094
+#define data_ov015_0207a19c gWirelessRandomChoiceLimits
 #define func_ov002_02061964 ActivatePanelSlotCD
 #define func_ov002_02062890 MeasurePanelTextSecondary
 #define func_ov002_02066484 CopyWideStringWithNewline

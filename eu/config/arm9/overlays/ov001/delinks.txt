@@ -1100,6 +1100,10 @@ src/overlays/ov001/calls/SelectMode3StateHandler.c:
     complete
     .text       start:0x0206700c end:0x0206703c
 
+src/overlays/ov001/calls/OpenStageModelGroup.c:
+    complete
+    .text       start:0x0206703c end:0x020670b4
+
 src/overlays/ov001/calls/func_ov001_020670b4.c:
     complete
     .text       start:0x020670b4 end:0x02067106
@@ -4171,6 +4175,10 @@ src/overlays/ov001/calls/LoadContextResourceGroups.c:
 src/overlays/ov001/calls/StartCountdownTimer.c:
     complete
     .text       start:0x0207d15c end:0x0207d238
+
+src/overlays/ov001/calls/StartPanelLayoutTransition.c:
+    complete
+    .text       start:0x0207d238 end:0x0207d2b4
 
 src/overlays/ov001/calls/StartPanelScrollOut.c:
     complete
@@ -8540,9 +8548,17 @@ src/overlays/ov001/data/tables/gActorScriptCommandHandlers.c:
     complete
     .data       start:0x0209f344 end:0x0209f62c
 
+src/overlays/ov001/data/tables/gActorWorldUp.c:
+    complete
+    .data       start:0x020a0254 end:0x020a0260
+
 src/overlays/ov001/data/tables/gBgScreenLoaders.c:
     complete
     .data       start:0x0209ed10 end:0x0209ed2c
+
+src/overlays/ov001/data/tables/gDefaultActorAnimation.c:
+    complete
+    .data       start:0x020a0250 end:0x020a0254
 
 src/overlays/ov001/data/tables/gFieldManagerClassDescriptor.c:
     complete
@@ -8567,6 +8583,10 @@ src/overlays/ov001/data/tables/gFieldScriptCommandHandlers.c:
 src/overlays/ov001/data/tables/gFieldSessionClassData.c:
     complete
     .data       start:0x0209e640 end:0x0209e6a0
+
+src/overlays/ov001/data/tables/gGroupEntries.c:
+    complete
+    .data       start:0x0209f62c end:0x020a0250
 
 src/overlays/ov001/data/tables/gHudSlideResourceGroup1.c:
     complete
@@ -8619,6 +8639,10 @@ src/overlays/ov001/data/tables/gSessionScriptStateHandlers.c:
 src/overlays/ov001/data/tables/gSessionTaskClassDescriptor.c:
     complete
     .data       start:0x0209eb5c end:0x0209eb70
+
+src/overlays/ov001/data/tables/gStageMeshValues.c:
+    complete
+    .rodata     start:0x0209da18 end:0x0209da68
 
 src/overlays/ov001/data/tables/gStageScriptStateHandlers.c:
     complete

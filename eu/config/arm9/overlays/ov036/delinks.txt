@@ -480,6 +480,10 @@ src/overlays/ov036/calls/CopyRecordTableAString.c:
     complete
     .text       start:0x020be314 end:0x020be342
 
+src/overlays/ov036/calls/ScriptCmd_ShowFormattedMessage.c:
+    complete
+    .text       start:0x020be344 end:0x020be3cc
+
 src/overlays/ov036/calls/ScriptCmd_ShowNameList.c:
     complete
     .text       start:0x020be3cc end:0x020be488

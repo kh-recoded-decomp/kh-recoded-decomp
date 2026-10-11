@@ -4,7 +4,7 @@
 #define QueueSoundCommandForArc_0204d670 QueueSoundCommandForArc
 #define data_ov001_0209d9a8 data_ov001_0209d9d0
 #define data_ov001_0209d9ba data_ov001_0209d9e2
-#define data_ov001_0209d9f0 data_ov001_0209da18
+#define data_ov001_0209d9f0 gStageMeshValues
 #define data_ov001_020a046c data_ov001_020a048c
 #define func_02036230 GetActorRegistry
 #define func_02036288 FindWorldMeshEntryByName

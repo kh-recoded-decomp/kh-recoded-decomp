@@ -1,3 +1,3 @@
 #define IsGroupEntryFlagged_0208c36c IsGroupEntryFlagged
-#define data_ov001_0209f60c data_ov001_0209f62c
+#define data_ov001_0209f60c gGroupEntries
 #include "src/ov001/unclassified_helpers/IsGroupEntryFlagged_0208c36c.c"

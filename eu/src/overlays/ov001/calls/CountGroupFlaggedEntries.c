@@ -1,3 +1,3 @@
 #define CountGroupFlaggedEntries_0208c40c CountGroupFlaggedEntries
-#define data_ov001_0209f60c data_ov001_0209f62c
+#define data_ov001_0209f60c gGroupEntries
 #include "src/ov001/unclassified_helpers/CountGroupFlaggedEntries_0208c40c.c"

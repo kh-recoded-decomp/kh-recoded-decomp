@@ -279,19 +279,19 @@ data_ov015_0207a11c kind:data(any) addr:0x0207a11c
 data_ov015_0207a13c kind:data(any) addr:0x0207a13c
 data_ov015_0207a15c kind:data(any) addr:0x0207a15c
 data_ov015_0207a17c kind:data(any) addr:0x0207a17c
-data_ov015_0207a19c kind:data(any) addr:0x0207a19c
+gWirelessRandomChoiceLimits kind:data(any) addr:0x0207a19c
 data_ov015_0207a1c8 kind:data(any) addr:0x0207a1c8
 data_ov015_0207a1e0 kind:data(any) addr:0x0207a1e0
 data_ov015_0207a1e8 kind:data(any) addr:0x0207a1e8
 data_ov015_0207a1f2 kind:data(any) addr:0x0207a1f2
-data_ov015_0207a1fc kind:data(any) addr:0x0207a1fc
-data_ov015_0207a208 kind:data(any) addr:0x0207a208
+gWirelessBoardSlotPositions3 kind:data(any) addr:0x0207a1fc
+gWirelessBoardSlotPositions4 kind:data(any) addr:0x0207a208
 data_ov015_0207a218 kind:data(any) addr:0x0207a218
-data_ov015_0207a22c kind:data(any) addr:0x0207a22c
-data_ov015_0207a240 kind:data(any) addr:0x0207a240
-data_ov015_0207a258 kind:data(any) addr:0x0207a258
-data_ov015_0207a274 kind:data(any) addr:0x0207a274
-data_ov015_0207a294 kind:data(any) addr:0x0207a294
+gWirelessBoardSlotPositions5 kind:data(any) addr:0x0207a22c
+gWirelessBoardSlotPositions6 kind:data(any) addr:0x0207a240
+gWirelessBoardSlotPositions7 kind:data(any) addr:0x0207a258
+gWirelessBoardSlotPositions8 kind:data(any) addr:0x0207a274
+gWirelessBoardSlotPositions9 kind:data(any) addr:0x0207a294
 data_ov015_0207a2b8 kind:data(any) addr:0x0207a2b8
 data_ov015_0207a2cc kind:data(any) addr:0x0207a2cc
 gWirelessBoardObjConfig kind:data(any) addr:0x0207a2e0
@@ -367,7 +367,7 @@ data_ov015_0207ea74 kind:bss addr:0x0207ea74
 data_ov015_0207eac0 kind:bss addr:0x0207eac0
 data_ov015_0207eb60 kind:bss addr:0x0207eb60
 data_ov015_0207ec20 kind:bss addr:0x0207ec20
-data_ov015_0207efa0 kind:bss addr:0x0207efa0
+gWirelessScanBuffer kind:bss addr:0x0207efa0
 data_ov015_0207f0f9 kind:bss addr:0x0207f0f9 ambiguous
 data_ov015_0207f151 kind:bss addr:0x0207f151 ambiguous
 data_ov015_0207f211 kind:bss addr:0x0207f211 ambiguous

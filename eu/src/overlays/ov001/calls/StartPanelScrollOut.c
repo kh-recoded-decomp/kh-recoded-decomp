@@ -1,5 +1,5 @@
 #define StartPanelScrollOut_0207d28c StartPanelScrollOut
 #define data_ov001_020a04cc data_ov001_020a04ec
 #define func_ov001_0207d134 StartCountdownTimer
-#define func_ov001_0207d210 func_ov001_0207d238
+#define func_ov001_0207d210 StartPanelLayoutTransition
 #include "src/ov001/field_manager/StartPanelScrollOut_0207d28c.c"

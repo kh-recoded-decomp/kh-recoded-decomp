@@ -1,4 +1,5 @@
 #define DispatchContextCommand_02066c78 DispatchContextCommand
+#define data_ov015_0207a19c gWirelessRandomChoiceLimits
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define StepPanelCursorBlink_020709ec StepPanelCursorBlink
 #define func_ov015_0206eba4 DrawPanelInfoText

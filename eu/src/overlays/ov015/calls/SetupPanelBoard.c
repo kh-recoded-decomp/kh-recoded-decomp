@@ -1,10 +1,7 @@
 #include "nitro/types.h"
 #include "src/overlays/ov015/WirelessBoardData.h"
 
-typedef struct {
-    s16 x;
-    s16 y;
-} PanelPoint;
+typedef WirelessBoardSlotPosition PanelPoint;
 
 typedef struct {
     int x;
@@ -90,7 +87,6 @@ extern PanelWork *data_ov015_020812e0;
 extern const char sOv015_WxcSchP2_0207e8ac[];
 extern const char sOv015_WxcSchLanguageP2_0207e8b8[];
 extern const char sOv015_WxcScrLanguageSZ_0207e8c8[];
-extern PanelPoint *gWirelessModeDataTables[];
 
 extern void MIi_CpuClear32(u32 data, void *dst, u32 size);
 extern void MI_CpuCopy8(const void *src, void *dst, u32 size);
@@ -158,7 +154,7 @@ void SetupPanelBoard(void) {
     void *themeArchive;
     ScenePos pos;
     PanelWork *work;
-    PanelPoint *points;
+    const PanelPoint *points;
     void *paletteArchive;
     int handleB;
     u16 kind;

@@ -1,5 +1,5 @@
 #define HandleFieldPanelCommand_02063ccc HandleFieldPanelCommand
 #define data_ov001_020a0460 data_ov001_020a0480
-#define func_ov001_0207d210 func_ov001_0207d238
+#define func_ov001_0207d210 StartPanelLayoutTransition
 #define func_ov001_0207d384 func_ov001_0207d3ac
 #include "src/ov001/field_manager/HandleFieldPanelCommand_02063ccc.c"

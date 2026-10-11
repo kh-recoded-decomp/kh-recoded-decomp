@@ -8,5 +8,5 @@
 #define func_ov025_020b6ca0 func_ov025_020b6cc0
 #define func_ov025_020b6d48 IsGreaterOrEqual
 #define func_ov025_020b6d54 IsGreaterThan
-#define func_ov025_020b6df4 func_ov025_020b6e14
+#define func_ov025_020b6df4 FindHorizontalNeighbor
 #include "src/ov025/status_menu/HandleListInput_020b6f78.c"

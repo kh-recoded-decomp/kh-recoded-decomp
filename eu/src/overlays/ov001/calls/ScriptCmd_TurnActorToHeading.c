@@ -1,7 +1,7 @@
 #define ScriptCmd_ReturnValue_02025960 ScriptCmd_ReturnValue
 #define ScriptCmd_TurnActorToHeading_0208ea94 ScriptCmd_TurnActorToHeading
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
-#define data_ov001_020a0230 data_ov001_020a0250
+#define data_ov001_020a0230 gDefaultActorAnimation
 #define func_02023dbc _s32_div_f
 #define func_02025dac ByteCode_ResolveOperand
 #define func_ov001_0208a73c func_ov001_0208a764

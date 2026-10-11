@@ -8,7 +8,7 @@
 #define data_ov032_020c0060 data_ov032_020c0080
 #define func_ov001_0206c2f8 SetMenuHighlight
 #define func_ov001_0207d120 LoadContextResourceGroups
-#define func_ov001_0207d210 func_ov001_0207d238
+#define func_ov001_0207d210 StartPanelLayoutTransition
 #define func_ov001_0207d384 func_ov001_0207d3ac
 #define func_ov001_0207ef40 SetOverlayLayerVisible
 #define func_ov001_02087628 func_ov001_02087650

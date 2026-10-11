@@ -3,6 +3,6 @@
 #define FixedPointMultiply12 FX_Mul
 #define VEC_CrossProduct_01ff9ea8 VEC_CrossProduct
 #define VEC_MultAdd_01ffa09c VEC_MultAdd
-#define data_ov001_020a0234 data_ov001_020a0254
+#define data_ov001_020a0234 gActorWorldUp
 #define func_01ffaff4 VEC_NormalizeLength
 #include "src/ov001/actor_animation/AddActorSideOffset_0208fc14.c"

@@ -86,6 +86,22 @@
 
     /* Absolute NitroSDK archive aliases supplied by the original linker. */
     /* Interior anchors in the wireless board's fixed-stride tables. */
+    /* Ambiguous DSD anchors within the 1 KB wireless scan buffer. */
+    /* Interior byte anchor in entry 231 of the group table. */
+    .global data_ov001_020a0101
+    .equ data_ov001_020a0101, 0x020a0101
+
+    .global data_ov015_0207f0f9
+    .equ data_ov015_0207f0f9, 0x0207f0f9
+    .global data_ov015_0207f151
+    .equ data_ov015_0207f151, 0x0207f151
+    .global data_ov015_0207f211
+    .equ data_ov015_0207f211, 0x0207f211
+    .global data_ov015_0207f235
+    .equ data_ov015_0207f235, 0x0207f235
+    .global data_ov015_0207f26d
+    .equ data_ov015_0207f26d, 0x0207f26d
+
     .global gWirelessThemes
     .equ gWirelessThemes, 0x0207a312
     .global data_ov015_0207a313

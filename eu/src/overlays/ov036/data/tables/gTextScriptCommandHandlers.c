@@ -24,7 +24,7 @@ extern void func_ov036_020be1b0(void); /* ScriptCmd_EnterPhase */
 extern void func_ov036_020be1c0(void);
 extern void ScriptCmd_ShowJoinedMessage(void); /* ScriptCmd_ShowJoinedMessage */
 extern void ScriptCmd_ShowMessageWindow_020be284(void); /* ScriptCmd_ShowMessageWindow */
-extern void func_ov036_020be344(void);
+extern void ScriptCmd_ShowFormattedMessage(void);
 extern void ScriptCmd_ShowNameList(void);
 extern void ScriptCmd_WaitWindowAnswer(void); /* ScriptCmd_WaitWindowAnswer */
 extern void func_ov036_020be4ec(void);
@@ -81,7 +81,7 @@ void (*gTextScriptCommandHandlers[64])(void) = {
     NULL,
     ScriptCmd_ShowMessageWindow_020be284, /* ScriptCmd_ShowMessageWindow */
     NULL,
-    func_ov036_020be344,
+    ScriptCmd_ShowFormattedMessage,
     NULL,
     ScriptCmd_ShowNameList,
     ScriptCmd_WaitWindowAnswer, /* ScriptCmd_WaitWindowAnswer */

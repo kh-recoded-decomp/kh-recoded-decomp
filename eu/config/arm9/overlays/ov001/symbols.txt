@@ -277,7 +277,7 @@ InitLayerSlotsFromData kind:function(thumb,size=0x6c) addr:0x02066e8c
 SyncMenuPanelDefinition kind:function(thumb,size=0x28) addr:0x02066ef8
 UpdatePointTriggerBox kind:function(thumb,size=0xec) addr:0x02066f20
 SelectMode3StateHandler kind:function(thumb,size=0x30) addr:0x0206700c
-func_ov001_0206703c kind:function(thumb,size=0x78) addr:0x0206703c
+OpenStageModelGroup kind:function(thumb,size=0x78) addr:0x0206703c
 func_ov001_020670b4 kind:function(thumb,size=0x52) addr:0x020670b4
 FindGroupItemById kind:function(thumb,size=0x38) addr:0x02067108
 FindMenuPanelById kind:function(thumb,size=0x44) addr:0x02067140
@@ -1073,7 +1073,7 @@ UpdateShortFadeSequence kind:function(thumb,size=0x6a) addr:0x0207d074
 UpdateFadeSequence kind:function(thumb,size=0x68) addr:0x0207d0e0
 LoadContextResourceGroups kind:function(thumb,size=0x14) addr:0x0207d148
 StartCountdownTimer kind:function(thumb,size=0xdc) addr:0x0207d15c
-func_ov001_0207d238 kind:function(thumb,size=0x7c) addr:0x0207d238
+StartPanelLayoutTransition kind:function(thumb,size=0x7c) addr:0x0207d238
 StartPanelScrollOut kind:function(thumb,size=0x34) addr:0x0207d2b4
 InitSlotLayout kind:function(thumb,size=0x60) addr:0x0207d2e8
 InitSlotLayoutCompact kind:function(thumb,size=0x64) addr:0x0207d348
@@ -2101,7 +2101,7 @@ data_ov001_0209d940 kind:data(any) addr:0x0209d940
 data_ov001_0209d9b4 kind:data(any) addr:0x0209d9b4
 data_ov001_0209d9d0 kind:data(any) addr:0x0209d9d0
 data_ov001_0209d9e2 kind:data(any) addr:0x0209d9e2
-data_ov001_0209da18 kind:data(any) addr:0x0209da18
+gStageMeshValues kind:data(any) addr:0x0209da18
 data_ov001_0209da68 kind:data(any) addr:0x0209da68
 data_ov001_0209da7a kind:data(any) addr:0x0209da7a
 data_ov001_0209da94 kind:data(any) addr:0x0209da94
@@ -2358,10 +2358,10 @@ sOv001_MiMoFormatSZ_0209f318 kind:data(any) addr:0x0209f318
 gActorChannelClassDescriptor kind:data(any) addr:0x0209f324
 sOv001_EvEcamP2_0209f338 kind:data(any) addr:0x0209f338
 gActorScriptCommandHandlers kind:data(any) addr:0x0209f344
-data_ov001_0209f62c kind:data(any) addr:0x0209f62c
+gGroupEntries kind:data(any) addr:0x0209f62c
 data_ov001_020a0101 kind:data(any) addr:0x020a0101
-data_ov001_020a0250 kind:data(any) addr:0x020a0250
-data_ov001_020a0254 kind:data(any) addr:0x020a0254
+gDefaultActorAnimation kind:data(any) addr:0x020a0250
+gActorWorldUp kind:data(any) addr:0x020a0254
 gNearestEntrySyncHandlers kind:data(any) addr:0x020a0260
 sOv001_Bip_020a0294 kind:data(any) addr:0x020a0294
 gStageScriptStateHandlers kind:data(any) addr:0x020a0298

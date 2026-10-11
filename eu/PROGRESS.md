@@ -11,7 +11,7 @@ an identified name (NitroSDK, NNS, MSL, ...) but no source yet.
 | PART main | 2416 | 113 | 5 | 39 | 2573 | 93.9% | 85.3% |
 | PART itcm | 91 | 27 | 1 | 8 | 127 | 71.7% | 66.2% |
 | PART ov000 | 76 | 0 | 0 | 2 | 78 | 97.4% | 92.5% |
-| PART ov001 | 2034 | 0 | 0 | 61 | 2095 | 97.1% | 88.6% |
+| PART ov001 | 2036 | 0 | 0 | 59 | 2095 | 97.2% | 88.7% |
 | PART ov002 | 224 | 0 | 1 | 7 | 232 | 96.6% | 83.3% |
 | PART ov003 | 43 | 0 | 0 | 1 | 44 | 97.7% | 91.2% |
 | PART ov004 | 36 | 0 | 0 | 5 | 41 | 87.8% | 81.7% |
@@ -35,7 +35,7 @@ an identified name (NitroSDK, NNS, MSL, ...) but no source yet.
 | PART ov022 | 115 | 1 | 3 | 6 | 125 | 92.0% | 72.9% |
 | PART ov023 | 38 | 0 | 0 | 2 | 40 | 95.0% | 78.7% |
 | PART ov024 | 26 | 0 | 0 | 1 | 27 | 96.3% | 93.4% |
-| PART ov025 | 60 | 0 | 0 | 3 | 63 | 95.2% | 87.2% |
+| PART ov025 | 61 | 0 | 0 | 2 | 63 | 96.8% | 88.8% |
 | DONE ov026 | 8 | 0 | 0 | 0 | 8 | 100.0% | 100.0% |
 | PART ov027 | 131 | 0 | 0 | 3 | 134 | 97.8% | 93.2% |
 | PART ov028 | 35 | 0 | 0 | 2 | 37 | 94.6% | 85.2% |
@@ -46,7 +46,7 @@ an identified name (NitroSDK, NNS, MSL, ...) but no source yet.
 | DONE ov033 | 21 | 0 | 0 | 0 | 21 | 100.0% | 100.0% |
 | PART ov034 | 35 | 0 | 0 | 7 | 42 | 83.3% | 43.6% |
 | PART ov035 | 86 | 1 | 0 | 1 | 88 | 97.7% | 97.9% |
-| PART ov036 | 211 | 0 | 0 | 4 | 215 | 98.1% | 96.2% |
+| PART ov036 | 212 | 0 | 0 | 3 | 215 | 98.6% | 96.6% |
 | PART ov037 | 39 | 0 | 0 | 1 | 40 | 97.5% | 94.5% |
 | PART ov038 | 43 | 0 | 0 | 2 | 45 | 95.6% | 88.2% |
 | PART ov039 | 125 | 0 | 0 | 6 | 131 | 95.4% | 85.2% |
@@ -83,7 +83,7 @@ an identified name (NitroSDK, NNS, MSL, ...) but no source yet.
 | DONE ov070 | 9 | 0 | 0 | 0 | 9 | 100.0% | 100.0% |
 | DONE ov071 | 10 | 0 | 0 | 0 | 10 | 100.0% | 100.0% |
 | DONE ov072 | 13 | 0 | 0 | 0 | 13 | 100.0% | 100.0% |
-| PART ov073 | 86 | 0 | 0 | 5 | 91 | 94.5% | 87.5% |
+| PART ov073 | 87 | 0 | 0 | 4 | 91 | 95.6% | 88.1% |
 | PART ov074 | 11 | 0 | 0 | 2 | 13 | 84.6% | 37.8% |
 | PART ov075 | 146 | 1 | 0 | 13 | 160 | 91.2% | 79.7% |
 | PART ov076 | 148 | 2 | 0 | 18 | 168 | 88.1% | 81.0% |
@@ -115,7 +115,7 @@ an identified name (NitroSDK, NNS, MSL, ...) but no source yet.
 | DONE ov102 | 3 | 0 | 0 | 0 | 3 | 100.0% | 100.0% |
 | PART ov103 | 37 | 0 | 0 | 2 | 39 | 94.9% | 89.2% |
 | PART ov104 | 33 | 24 | 0 | 0 | 57 | 57.9% | 75.8% |
-| **TOTAL** | **9905** | **171** | **11** | **335** | **10422** | **95.0%** | **85.49%** |
+| **TOTAL** | **9910** | **171** | **11** | **330** | **10422** | **95.1%** | **85.53%** |
 
 ## Byte progress
 
@@ -124,7 +124,7 @@ the matched set is dominated by small wrappers. Bytes count real C only.
 
 | C matched bytes | Total code bytes | % |
 |---:|---:|---:|
-| **1,417,582** | **1,658,216** | **85.49%** |
+| **1,418,210** | **1,658,216** | **85.53%** |
 
 ## DATA progress
 
@@ -133,5 +133,5 @@ Naming is tracked separately and does not count as reconstructed DATA.
 
 | Metric | Complete | Total | % |
 |---|---:|---:|---:|
-| Reconstructed byte-exact DATA | **216,878** | **228,172** | **95.05%** |
-| Named DATA symbols | **1,049** | **2,331** | **45.00%** |
+| Reconstructed byte-exact DATA | **221,838** | **228,172** | **97.22%** |
+| Named DATA symbols | **1,062** | **2,331** | **45.56%** |

@@ -592,6 +592,16 @@
     {
       "module": "ov001",
       "section": ".rodata",
+      "start": "0x0209da18",
+      "end": "0x0209da68",
+      "source": "src/overlays/ov001/data/tables/gStageMeshValues.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gStageMeshValues",
+      "behavior": "Ten named world meshes and their collision values"
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
       "start": "0x0209dbbc",
       "end": "0x0209dbc8",
       "source": "src/overlays/ov001/data/tables/gMainBgLayerIds.c",
@@ -730,6 +740,26 @@
       "name": "actor channel class descriptor",
       "origin": "US reference adapted to EU",
       "behavior": "Lifecycle callbacks and allocation size for actor channels."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x020a0250",
+      "end": "0x020a0254",
+      "source": "src/overlays/ov001/data/tables/gDefaultActorAnimation.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gDefaultActorAnimation",
+      "behavior": "Fallback empty animation name used by actor script commands"
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x020a0254",
+      "end": "0x020a0260",
+      "source": "src/overlays/ov001/data/tables/gActorWorldUp.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gActorWorldUp",
+      "behavior": "Fixed-point world up axis used to derive actor lateral movement"
     },
     {
       "module": "ov001",
@@ -1357,12 +1387,322 @@
     {
       "module": "ov015",
       "section": ".rodata",
+      "start": "0x207a034",
+      "end": "0x207a04c",
+      "source": "src/overlays/ov015/data/tables/data_ov015_0207a034.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "data_ov015_0207a034",
+      "behavior": "Wireless panel read-only configuration; unconfirmed fields retain neutral names"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x207a04c",
+      "end": "0x207a064",
+      "source": "src/overlays/ov015/data/tables/data_ov015_0207a04c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "data_ov015_0207a04c",
+      "behavior": "Wireless panel read-only configuration; unconfirmed fields retain neutral names"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x207a064",
+      "end": "0x207a07c",
+      "source": "src/overlays/ov015/data/tables/data_ov015_0207a064.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "data_ov015_0207a064",
+      "behavior": "Wireless panel read-only configuration; unconfirmed fields retain neutral names"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x207a07c",
+      "end": "0x207a09c",
+      "source": "src/overlays/ov015/data/tables/data_ov015_0207a07c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "data_ov015_0207a07c",
+      "behavior": "Wireless panel read-only configuration; unconfirmed fields retain neutral names"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x207a09c",
+      "end": "0x207a0bc",
+      "source": "src/overlays/ov015/data/tables/data_ov015_0207a09c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "data_ov015_0207a09c",
+      "behavior": "Wireless panel read-only configuration; unconfirmed fields retain neutral names"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x207a0bc",
+      "end": "0x207a0dc",
+      "source": "src/overlays/ov015/data/tables/data_ov015_0207a0bc.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "data_ov015_0207a0bc",
+      "behavior": "Wireless panel read-only configuration; unconfirmed fields retain neutral names"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x207a0dc",
+      "end": "0x207a0fc",
+      "source": "src/overlays/ov015/data/tables/data_ov015_0207a0dc.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "data_ov015_0207a0dc",
+      "behavior": "Wireless panel read-only configuration; unconfirmed fields retain neutral names"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x207a0fc",
+      "end": "0x207a11c",
+      "source": "src/overlays/ov015/data/tables/data_ov015_0207a0fc.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "data_ov015_0207a0fc",
+      "behavior": "Wireless panel read-only configuration; unconfirmed fields retain neutral names"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x207a11c",
+      "end": "0x207a13c",
+      "source": "src/overlays/ov015/data/tables/data_ov015_0207a11c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "data_ov015_0207a11c",
+      "behavior": "Wireless panel read-only configuration; unconfirmed fields retain neutral names"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x207a13c",
+      "end": "0x207a15c",
+      "source": "src/overlays/ov015/data/tables/data_ov015_0207a13c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "data_ov015_0207a13c",
+      "behavior": "Wireless panel read-only configuration; unconfirmed fields retain neutral names"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x207a15c",
+      "end": "0x207a17c",
+      "source": "src/overlays/ov015/data/tables/data_ov015_0207a15c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "data_ov015_0207a15c",
+      "behavior": "Wireless panel read-only configuration; unconfirmed fields retain neutral names"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x207a17c",
+      "end": "0x207a19c",
+      "source": "src/overlays/ov015/data/tables/data_ov015_0207a17c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "data_ov015_0207a17c",
+      "behavior": "Wireless panel read-only configuration; unconfirmed fields retain neutral names"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x207a19c",
+      "end": "0x207a1c8",
+      "source": "src/overlays/ov015/data/tables/gWirelessRandomChoiceLimits.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gWirelessRandomChoiceLimits",
+      "behavior": "Random selection range by context value"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x207a1c8",
+      "end": "0x207a1e0",
+      "source": "src/overlays/ov015/data/tables/data_ov015_0207a1c8.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "data_ov015_0207a1c8",
+      "behavior": "Wireless panel read-only configuration; unconfirmed fields retain neutral names"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x207a1e0",
+      "end": "0x207a1e8",
+      "source": "src/overlays/ov015/data/tables/data_ov015_0207a1e0.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "data_ov015_0207a1e0",
+      "behavior": "Wireless panel read-only configuration; unconfirmed fields retain neutral names"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x207a1e8",
+      "end": "0x207a1f2",
+      "source": "src/overlays/ov015/data/tables/data_ov015_0207a1e8.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "data_ov015_0207a1e8",
+      "behavior": "Wireless panel read-only configuration; unconfirmed fields retain neutral names"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x207a1f2",
+      "end": "0x207a1fc",
+      "source": "src/overlays/ov015/data/tables/data_ov015_0207a1f2.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "data_ov015_0207a1f2",
+      "behavior": "Wireless panel read-only configuration; unconfirmed fields retain neutral names"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x207a1fc",
+      "end": "0x207a208",
+      "source": "src/overlays/ov015/data/tables/gWirelessBoardSlotPositions3.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gWirelessBoardSlotPositions3",
+      "behavior": "Wireless board slot positions for 3 entries"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x207a208",
+      "end": "0x207a218",
+      "source": "src/overlays/ov015/data/tables/gWirelessBoardSlotPositions4.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gWirelessBoardSlotPositions4",
+      "behavior": "Wireless board slot positions for 4 entries"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x207a218",
+      "end": "0x207a22c",
+      "source": "src/overlays/ov015/data/tables/data_ov015_0207a218.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "data_ov015_0207a218",
+      "behavior": "Wireless panel read-only configuration; unconfirmed fields retain neutral names"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x207a22c",
+      "end": "0x207a240",
+      "source": "src/overlays/ov015/data/tables/gWirelessBoardSlotPositions5.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gWirelessBoardSlotPositions5",
+      "behavior": "Wireless board slot positions for 5 entries"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x207a240",
+      "end": "0x207a258",
+      "source": "src/overlays/ov015/data/tables/gWirelessBoardSlotPositions6.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gWirelessBoardSlotPositions6",
+      "behavior": "Wireless board slot positions for 6 entries"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x207a258",
+      "end": "0x207a274",
+      "source": "src/overlays/ov015/data/tables/gWirelessBoardSlotPositions7.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gWirelessBoardSlotPositions7",
+      "behavior": "Wireless board slot positions for 7 entries"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x207a274",
+      "end": "0x207a294",
+      "source": "src/overlays/ov015/data/tables/gWirelessBoardSlotPositions8.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gWirelessBoardSlotPositions8",
+      "behavior": "Wireless board slot positions for 8 entries"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x207a294",
+      "end": "0x207a2b8",
+      "source": "src/overlays/ov015/data/tables/gWirelessBoardSlotPositions9.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gWirelessBoardSlotPositions9",
+      "behavior": "Wireless board slot positions for 9 entries"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x207a2b8",
+      "end": "0x207a2cc",
+      "source": "src/overlays/ov015/data/tables/data_ov015_0207a2b8.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "data_ov015_0207a2b8",
+      "behavior": "Wireless panel read-only configuration; unconfirmed fields retain neutral names"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x207a2cc",
+      "end": "0x207a2e0",
+      "source": "src/overlays/ov015/data/tables/data_ov015_0207a2cc.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "data_ov015_0207a2cc",
+      "behavior": "Wireless panel read-only configuration; unconfirmed fields retain neutral names"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
       "start": "0x0207a2e0",
       "end": "0x0207a2f8",
       "source": "src/overlays/ov015/data/tables/gWirelessBoardObjConfig.c",
       "compiler": "mwccarm-4.0-1036",
       "name": "gWirelessBoardObjConfig",
       "behavior": "Object manager initialization for the wireless board"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x207a2f8",
+      "end": "0x207a310",
+      "source": "src/overlays/ov015/data/tables/data_ov015_0207a2f8.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "data_ov015_0207a2f8",
+      "behavior": "Wireless panel read-only configuration; unconfirmed fields retain neutral names"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x207a548",
+      "end": "0x207a54c",
+      "source": "src/overlays/ov015/data/tables/data_ov015_0207a548.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "data_ov015_0207a548",
+      "behavior": "Wireless panel read-only configuration; unconfirmed fields retain neutral names"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x207a54c",
+      "end": "0x207a554",
+      "source": "src/overlays/ov015/data/tables/data_ov015_0207a54c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "data_ov015_0207a54c",
+      "behavior": "Wireless panel read-only configuration; unconfirmed fields retain neutral names"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x207a554",
+      "end": "0x207a560",
+      "source": "src/overlays/ov015/data/tables/data_ov015_0207a554.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "data_ov015_0207a554",
+      "behavior": "Wireless panel read-only configuration; unconfirmed fields retain neutral names"
     },
     {
       "module": "ov015",
