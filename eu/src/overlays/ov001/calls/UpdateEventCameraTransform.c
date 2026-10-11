@@ -6,6 +6,6 @@
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define data_ov001_020a04f4 data_ov001_020a0514
 #define func_02036240 ActorRegistry_GetEntityByIndex
-#define func_ov001_0208af4c func_ov001_0208af74
+#define func_ov001_0208af4c BuildRotationXY43
 #define func_ov021_020af4ac DispatchModeUpdate
 #include "src/ov001/field_manager/UpdateEventCameraTransform_0208afb8.c"

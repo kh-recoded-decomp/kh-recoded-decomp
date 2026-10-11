@@ -43,6 +43,39 @@
     .global gCameraDefaultProjection
     .equ gCameraDefaultProjection, 0x0205fe4c
 
+    /* Zero-byte view used by SHA-1 finalization. */
+    .global sSha1PaddingZeros
+    .equ sSha1PaddingZeros, 0x02052af5
+
+    /* Ambiguous overlay-address anchors within gListPortraitLayouts. They are
+     * existing DSD metadata views, not separately allocated portrait storage. */
+    .global data_ov101_020c2360
+    .equ data_ov101_020c2360, 0x020c2360
+    .global data_ov101_020c2368
+    .equ data_ov101_020c2368, 0x020c2368
+    .global data_ov101_020c2380
+    .equ data_ov101_020c2380, 0x020c2380
+    .global data_ov101_020c2b18
+    .equ data_ov101_020c2b18, 0x020c2b18
+    .global data_ov101_020c2cc5
+    .equ data_ov101_020c2cc5, 0x020c2cc5
+    .global data_ov101_020c2d41
+    .equ data_ov101_020c2d41, 0x020c2d41
+    .global data_ov101_020c322d
+    .equ data_ov101_020c322d, 0x020c322d
+    .global data_ov101_020c3275
+    .equ data_ov101_020c3275, 0x020c3275
+    .global data_ov101_020c3500
+    .equ data_ov101_020c3500, 0x020c3500
+    .global data_ov101_020c4014
+    .equ data_ov101_020c4014, 0x020c4014
+    .global data_ov101_020c4160
+    .equ data_ov101_020c4160, 0x020c4160
+    .global data_ov101_020c4c60
+    .equ data_ov101_020c4c60, 0x020c4c60
+    .global data_ov101_020c4fe0
+    .equ data_ov101_020c4fe0, 0x020c4fe0
+
     /* Absolute NitroSDK archive aliases supplied by the original linker. */
     .global fsi_default_dma_no
     .equ fsi_default_dma_no, 0x02057b1c

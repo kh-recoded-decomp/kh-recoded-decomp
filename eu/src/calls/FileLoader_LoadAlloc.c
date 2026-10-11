@@ -6,7 +6,7 @@
 #define PXI_Init_0200b750 FS_GetLength
 #define RunResetCallbackAndIdle_02004cf0 OS_Terminate
 #define Strlen_02021e44 strlen
-#define data_02053260 data_02053274
+#define data_02053260 gAsciiUppercaseMap
 #define data_02060564 gFileLoader
 #define func_020033e0 DC_FlushAll
 #define func_0200344c DC_FlushRange

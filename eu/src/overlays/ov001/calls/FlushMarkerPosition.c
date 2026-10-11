@@ -1,6 +1,6 @@
 #define FlushMarkerPosition_0209cd18 FlushMarkerPosition
 #define data_02053438 gZeroVecFx32
-#define data_ov001_020a0508 data_ov001_020a0528
+#define data_ov001_020a0508 gStageManager
 #define func_ov001_020863e0 func_ov001_02086408
 #define func_ov001_02087224 func_ov001_0208724c
 #define func_ov016_020a6a78 func_ov016_020a6a98

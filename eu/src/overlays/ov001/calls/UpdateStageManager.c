@@ -121,7 +121,7 @@ typedef struct FloorProbe {
 
 typedef void (*UnitTransformFunc)(VecFx32 **positionOut, u8 *transform);
 
-extern StageManager *data_ov001_020a0528;
+extern StageManager *gStageManager;
 extern const VecFx32 gZeroVecFx32;
 extern char sEmptyNodeName_020a0458[];
 extern UnitTransformFunc gCollisionBoundsDispatch[];
@@ -195,17 +195,17 @@ void UpdateStageManager(u32 value)
     int release;
     int i;
 
-    if (data_ov001_020a0528 == NULL) {
+    if (gStageManager == NULL) {
         return;
     }
-    if (data_ov001_020a0528->flags & 0x40) {
+    if (gStageManager->flags & 0x40) {
         value = 0;
     }
-    data_ov001_020a0528->inputValue = value;
+    gStageManager->inputValue = value;
     UpdateStageBrightnessFade();
-    manager = data_ov001_020a0528;
+    manager = gStageManager;
     entry = CacheStageEntryValue(1);
-    if (data_ov001_020a0528->flags & 1) {
+    if (gStageManager->flags & 1) {
         manager->drift = gZeroVecFx32;
     } else if (entry != NULL) {
         if (VEC_Mag(&manager->drift) > 4) {
@@ -219,7 +219,7 @@ void UpdateStageManager(u32 value)
             manager->drift = gZeroVecFx32;
         }
     }
-    manager = data_ov001_020a0528;
+    manager = gStageManager;
     if (manager->spawnMode != 0) {
         if (manager->spawnRecordId != 0 && (record = GetStageEventRecord(manager->spawnRecordId)) != NULL && manager->spawnMode == 1) {
             func_01ff88c4(&params, 0, sizeof(SpawnParams));
@@ -233,24 +233,24 @@ void UpdateStageManager(u32 value)
         manager->spawnMode = 0;
         manager->spawnRecordId = 0;
     }
-    if (data_ov001_020a0528->eventActive == 0) {
-        data_ov001_020a0528->eventStarted = 0;
+    if (gStageManager->eventActive == 0) {
+        gStageManager->eventStarted = 0;
     }
-    if (data_ov001_020a0528->eventRecordId != 0) {
-        record = GetStageEventRecord(data_ov001_020a0528->eventRecordId);
+    if (gStageManager->eventRecordId != 0) {
+        record = GetStageEventRecord(gStageManager->eventRecordId);
         func_01ff88c4(&message, 0, sizeof(EventMessage));
         message.mode = 1;
         message.flags |= 0x400;
         func_ov001_0209591c(record, &message);
-        data_ov001_020a0528->eventStarted = 1;
-        data_ov001_020a0528->eventRecordId = 0;
-        data_ov001_020a0528->eventTimer = 0;
+        gStageManager->eventStarted = 1;
+        gStageManager->eventRecordId = 0;
+        gStageManager->eventTimer = 0;
     }
     total = 0;
-    data_ov001_020a0528->eventActive = 0;
+    gStageManager->eventActive = 0;
     waiting = 0;
     for (i = 0; i < 16; i++) {
-        slot = &data_ov001_020a0528->slots[i];
+        slot = &gStageManager->slots[i];
         if (slot->unitIndex != 0 && slot->active != 0) {
             total++;
             if (slot->state == 0) {
@@ -259,7 +259,7 @@ void UpdateStageManager(u32 value)
         }
     }
     for (i = 0; i < 16; i++) {
-        slot = &data_ov001_020a0528->slots[i];
+        slot = &gStageManager->slots[i];
         if (slot->unitIndex == 0) {
             continue;
         }
@@ -302,25 +302,25 @@ void UpdateStageManager(u32 value)
             break;
         }
     }
-    MI_CpuFill8(data_ov001_020a0528->kindCounts, 0, sizeof(data_ov001_020a0528->kindCounts));
-    node = func_ov001_0208f2a4(data_ov001_020a0528->commandList);
+    MI_CpuFill8(gStageManager->kindCounts, 0, sizeof(gStageManager->kindCounts));
+    node = func_ov001_0208f2a4(gStageManager->commandList);
     while (node != NULL) {
-        command = BindDescriptor0(data_ov001_020a0528->commandList, node);
+        command = BindDescriptor0(gStageManager->commandList, node);
         node = func_ov001_0208f2b4(node);
         if (IsCommandType8(command)) {
             ReleaseEventResources(command);
         } else if (command->active != 0) {
             if (command->kindIndex != 0xffff && command->active != 0) {
-                data_ov001_020a0528->kindCounts[command->kindIndex]++;
+                gStageManager->kindCounts[command->kindIndex]++;
             }
             if (command->kind == 0x3f) {
-                data_ov001_020a0528->rowIndex = GetStageRowIndex(command);
+                gStageManager->rowIndex = GetStageRowIndex(command);
             }
         }
     }
-    node = func_ov001_0208f2a4(data_ov001_020a0528->triggerList);
+    node = func_ov001_0208f2a4(gStageManager->triggerList);
     while (node != NULL) {
-        command = BindDescriptor0(data_ov001_020a0528->triggerList, node);
+        command = BindDescriptor0(gStageManager->triggerList, node);
         node = func_ov001_0208f2b4(node);
         if (command->actorId != 0 && (actor = GetStageActor((s16)command->actorId)) != NULL) {
             release = IsCommandType4(command);
@@ -355,11 +355,11 @@ void UpdateStageManager(u32 value)
             }
         }
     }
-    node = func_ov001_0208f2a4(data_ov001_020a0528->actorList);
+    node = func_ov001_0208f2a4(gStageManager->actorList);
     while (node != NULL) {
-        actor = (StageActor *)BindDescriptor0(data_ov001_020a0528->actorList, node);
+        actor = (StageActor *)BindDescriptor0(gStageManager->actorList, node);
         node = func_ov001_0208f2b4(node);
-        if (actor->slotIndex != 0 && !IsSlotEntryUsed(data_ov001_020a0528->actorList, actor->slotIndex)) {
+        if (actor->slotIndex != 0 && !IsSlotEntryUsed(gStageManager->actorList, actor->slotIndex)) {
             actor->slotIndex = 0;
         }
     }

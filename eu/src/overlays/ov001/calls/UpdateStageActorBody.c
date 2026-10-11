@@ -11,6 +11,6 @@
 #define UpdateStageActorBody_0208f9bc UpdateStageActorBody
 #define data_020559c0 gCollisionBoundsDispatch
 #define func_02036230 GetActorRegistry
-#define func_ov001_0209c3c0 func_ov001_0209c3e8
+#define func_ov001_0209c3c0 GetStageManager
 #define func_ov001_0209c584 func_ov001_0209c5ac
 #include "src/ov001/shared_engine/UpdateStageActorBody_0208f9bc.c"

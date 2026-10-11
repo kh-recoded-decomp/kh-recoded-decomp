@@ -37,7 +37,7 @@ typedef struct NNSSndStrmPlayer {
 #define PLAYER_STARTING 0x04
 #define PLAYER_FADE_OUT 0x08
 
-extern const s16 data_02052b1c[128];
+extern const s16 gSndVolumeToDecibel[128];
 extern NNSSndStrmPlayer sStrmPlayers[NNS_SND_STRM_PLAYER_NUM];
 extern void NNS_SndStrmStart(void *stream);
 extern void NNS_SndStrmSetVolume(void *stream, int volume);
@@ -48,7 +48,7 @@ extern void ForceStopStrm_2(NNSSndStrmPlayer *player);
 
 static inline s16 SND_CalcDecibel(int scale)
 {
-    return data_02052b1c[scale];
+    return gSndVolumeToDecibel[scale];
 }
 
 void NNSi_SndArcStrmMain(void)

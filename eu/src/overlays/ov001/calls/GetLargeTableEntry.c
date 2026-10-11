@@ -1,3 +1,3 @@
 #define GetLargeTableEntry_0209c30c GetLargeTableEntry
-#define g_ov001State_020a0508 data_ov001_020a0528
+#define g_ov001State_020a0508 gStageManager
 #include "src/ov001/unclassified_helpers/GetLargeTableEntry_0209c30c.c"

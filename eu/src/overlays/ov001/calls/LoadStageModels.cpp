@@ -45,7 +45,7 @@ typedef struct ModelManager {
     u8 *archives[2];
 } ModelManager;
 
-extern ModelManager *data_ov001_020a0528;
+extern ModelManager *gStageManager;
 extern char sOv001_Ch_020a0434[];
 extern char sOv001_Ef_020a0438[];
 extern char sOv001_Pt_020a043c[];
@@ -120,7 +120,7 @@ inline void *GetResourceSectionElement(Resource *resource, int index, u32 elemen
 
 inline s16 LoadStageModelEntry(u16 id, int variant, int type) __attribute__((weak))
 {
-    ModelManager *manager = data_ov001_020a0528;
+    ModelManager *manager = gStageManager;
     void *buffer = NULL;
     ModelEntry *entry = &manager->entries[manager->count];
     ModelHeader *header;
@@ -144,11 +144,11 @@ inline s16 LoadStageModelEntry(u16 id, int variant, int type) __attribute__((wea
     loaded = (ModelHeader *)NULL;
     if (type == 0) {
         prefix = sOv001_Ch_020a0434;
-        archive = data_ov001_020a0528->archives[0];
+        archive = gStageManager->archives[0];
     }
     if (type == 1) {
         prefix = sOv001_Ef_020a0438;
-        archive = data_ov001_020a0528->archives[1];
+        archive = gStageManager->archives[1];
     }
     if (type == 2) {
         prefix = sOv001_Pt_020a043c;

@@ -5,5 +5,5 @@
 #define func_0202a158 Heap_GetCurrent
 #define func_0202ea38 PrepareTextureAndDispatch
 #define func_02035930 ActivateEntrySubobject
-#define g_stageManager_020a0508 data_ov001_020a0528
+#define g_stageManager_020a0508 gStageManager
 #include "src/ov001/shared_engine/InitStageObjectModel_0209beb4.c"

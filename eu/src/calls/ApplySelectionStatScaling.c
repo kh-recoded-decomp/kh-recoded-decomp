@@ -1,4 +1,4 @@
 #define ApplySelectionStatScaling_0204fbcc ApplySelectionStatScaling
 #define ArmObject_0205115c ArmObject
-#define data_02055a64 data_02055a78
+#define data_02055a64 gSelectionStatScales
 #include "src/arm9/overlay_selection/ApplySelectionStatScaling_0204fbcc.c"

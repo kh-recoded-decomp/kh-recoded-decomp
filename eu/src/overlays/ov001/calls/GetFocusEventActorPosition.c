@@ -1,5 +1,5 @@
 #define GetFocusEventActorPosition_0209ce8c GetFocusEventActorPosition
 #define GetStageActor_0209c040 GetStageActor
 #define GetStageEventRecord_0209c0ec GetStageEventRecord
-#define g_stageManager_020a0508 data_ov001_020a0528
+#define g_stageManager_020a0508 gStageManager
 #include "src/ov001/shared_engine/GetFocusEventActorPosition_0209ce8c.c"

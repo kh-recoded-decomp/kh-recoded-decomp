@@ -7,5 +7,5 @@
 #define SetDefaultHeap_0202a134 SetDefaultHeap
 #define func_0202a158 Heap_GetCurrent
 #define func_0202cb7c OpenAndClassifyFile
-#define g_stageManager_020a0508 data_ov001_020a0528
+#define g_stageManager_020a0508 gStageManager
 #include "src/ov001/shared_engine/LoadStageResource_0209a784.c"

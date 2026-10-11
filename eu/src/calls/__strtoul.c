@@ -18,8 +18,8 @@ enum scan_states {
 #define fetch()                 (count++, (*ReadProc)(ReadProcArg, 0, __GetAChar))
 #define unfetch(c)              (*ReadProc)(ReadProcArg, c, __UngetAChar)
 
-extern const unsigned char data_02053274[128];
-extern const unsigned short data_020532f4[128];
+extern const unsigned char gAsciiUppercaseMap[128];
+extern const unsigned short gAsciiCtypeFlags[128];
 
 #define __ctype_alpha 0x0001
 #define __ctype_digit 0x0008
@@ -27,22 +27,22 @@ extern const unsigned short data_020532f4[128];
 
 static inline int isalpha(int c)
 {
-    return (c < 0 || c >= 128) ? 0 : (int)(data_020532f4[c] & __ctype_alpha);
+    return (c < 0 || c >= 128) ? 0 : (int)(gAsciiCtypeFlags[c] & __ctype_alpha);
 }
 
 static inline int isdigit(int c)
 {
-    return (c < 0 || c >= 128) ? 0 : (int)(data_020532f4[c] & __ctype_digit);
+    return (c < 0 || c >= 128) ? 0 : (int)(gAsciiCtypeFlags[c] & __ctype_digit);
 }
 
 static inline int isspace(int c)
 {
-    return (c < 0 || c >= 128) ? 0 : (int)(data_020532f4[c] & __ctype_space);
+    return (c < 0 || c >= 128) ? 0 : (int)(gAsciiCtypeFlags[c] & __ctype_space);
 }
 
 static inline int toupper(int c)
 {
-    return (c < 0 || c >= 128) ? c : data_02053274[c];
+    return (c < 0 || c >= 128) ? c : gAsciiUppercaseMap[c];
 }
 
 unsigned long __strtoul(int base, int max_width, int (*ReadProc)(void *, int, int), void *ReadProcArg,

@@ -1,5 +1,5 @@
 #define ResolveTaggedValueRef_020b0374 ResolveTaggedValueRef
 #define ScriptCmd_SetStagePoint_020b2050 ScriptCmd_SetStagePoint
 #define TaggedValueToFixed_020b03b0 TaggedValueToFixed
-#define func_ov001_0209c3c0 func_ov001_0209c3e8
+#define func_ov001_0209c3c0 GetStageManager
 #include "src/ov021/script_ops/ScriptCmd_SetStagePoint_020b2050.c"

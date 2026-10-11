@@ -2,5 +2,5 @@
 #define ScheduleSpawnerNextTime_02096928 ScheduleSpawnerNextTime
 #define data_02053438 gZeroVecFx32
 #define data_ov021_020b56a4 data_ov021_020b56c4
-#define func_ov001_0209c3c0 func_ov001_0209c3e8
+#define func_ov001_0209c3c0 GetStageManager
 #include "src/ov021/shared_engine/HandleStageEvent_020b46cc.c"

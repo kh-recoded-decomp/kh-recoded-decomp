@@ -8982,5 +8982,15 @@
   "src/overlays/ov099/calls/UpdateScrollList.c": "dsi/1.3p1",
   "src/overlays/ov101/calls/InitListTextLayers.c": "dsi/1.3p1",
   "src/overlays/ov101/calls/UpdateScrollPanel.c": "dsi/1.3p1",
-  "src/overlays/ov089/calls/ReleaseEntryMenuTextLayers.c": "dsi/1.3p1"
+  "src/overlays/ov089/calls/ReleaseEntryMenuTextLayers.c": "dsi/1.3p1",
+  "src/overlays/ov101/calls/ShutdownListScene.c": "dsi/1.3p1",
+  "src/overlays/ov101/calls/UpdateListScene.c": "dsi/1.3p1",
+  "src/overlays/ov101/calls/ToggleListPage.c": "dsi/1.3p1",
+  "src/overlays/ov021/calls/ProbeIdleActorContact.c": "dsi/1.3p1",
+  "src/overlays/ov001/calls/BuildRotationXY43.c": "dsi/1.3p1",
+  "src/overlays/ov021/calls/IsHitWithinFacingCone.c": "dsi/1.3p1",
+  "src/overlays/ov021/calls/IsHitWithinFacingAndHeight.c": "dsi/1.3p1",
+  "src/overlays/ov001/calls/StartStageObjectMotions.c": "dsi/1.3p1",
+  "src/overlays/ov001/calls/DispatchStageObjectMotions.c": "dsi/1.3p1",
+  "src/overlays/ov001/calls/GetStageManager.c": "dsi/1.1"
 }

@@ -7,6 +7,6 @@
 #define SpawnStageObjectActor_02096ae0 SpawnStageObjectActor
 #define UpdateActorController_020980fc UpdateActorController_02098124
 #define data_ov021_020b56a4 data_ov021_020b56c4
-#define func_ov001_0209c3c0 func_ov001_0209c3e8
+#define func_ov001_0209c3c0 GetStageManager
 #define func_ov021_020b0508 ResolveOffsetPosition
 #include "src/ov021/script_ops/ScriptOp_SpawnStageObject_020b28f4.c"

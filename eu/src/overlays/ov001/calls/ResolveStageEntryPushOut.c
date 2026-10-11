@@ -7,5 +7,5 @@
 #define VEC_Add_01ff9e0c VEC_Add
 #define VEC_Mag_01ff9f28 VEC_Mag
 #define data_02053438 gZeroVecFx32
-#define func_ov001_0209c3c0 func_ov001_0209c3e8
+#define func_ov001_0209c3c0 GetStageManager
 #include "src/ov001/shared_engine/ResolveStageEntryPushOut_020943d8.c"

@@ -1,4 +1,4 @@
 #define RegisterMarkerPosition_0209cc6c RegisterMarkerPosition
-#define data_ov001_020a0508 data_ov001_020a0528
+#define data_ov001_020a0508 gStageManager
 #define func_ov001_02087224 func_ov001_0208724c
 #include "src/ov001/field_manager/RegisterMarkerPosition_0209cc6c.c"

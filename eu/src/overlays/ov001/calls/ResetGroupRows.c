@@ -1,4 +1,4 @@
 #define GetStageObjectHandle_0209c0c4 GetStageObjectHandle
 #define ResetGroupRows_0209ca00 ResetGroupRows
-#define data_ov001_020a0508 data_ov001_020a0528
+#define data_ov001_020a0508 gStageManager
 #include "src/ov001/shared_engine/ResetGroupRows_0209ca00.c"

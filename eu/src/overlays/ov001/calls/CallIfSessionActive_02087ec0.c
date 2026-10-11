@@ -1,4 +1,4 @@
 #define CallIfSessionActive_02087e98 CallIfSessionActive_02087ec0
 #define data_ov001_0209f2c8 g_stageEventsState
-#define func_ov001_0209c650 func_ov001_0209c678
+#define func_ov001_0209c650 StartStageObjectMotions
 #include "src/ov001/wireless/CallIfSessionActive_02087e98.c"

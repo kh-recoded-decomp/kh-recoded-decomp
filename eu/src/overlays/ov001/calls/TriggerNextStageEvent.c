@@ -1,5 +1,5 @@
 #define TriggerNextStageEvent_0209947c TriggerNextStageEvent
 #define func_ov001_02096234 func_ov001_0209625c
 #define func_ov016_020a6dc4 func_ov016_020a6de4
-#define g_stageManager_020a0508 data_ov001_020a0528
+#define g_stageManager_020a0508 gStageManager
 #include "src/ov001/shared_engine/TriggerNextStageEvent_0209947c.c"

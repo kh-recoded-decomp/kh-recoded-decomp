@@ -1,13 +1,8 @@
-#include "nitro/types.h"
+#include "src/overlays/ov101/ListSceneState.h"
 
-typedef struct {
-    u8 pad_0000[0xCFE0];
-    u32 phase;
-} Ov101State;
-
-extern Ov101State *data_ov101_020c5920;
+extern ListSceneState *data_ov101_020c5920;
 
 u32 GetStatePhase(void)
 {
-    return data_ov101_020c5920->phase;
+    return data_ov101_020c5920->handlerPhase;
 }

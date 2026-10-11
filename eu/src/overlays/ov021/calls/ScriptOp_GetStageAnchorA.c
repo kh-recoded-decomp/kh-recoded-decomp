@@ -1,3 +1,3 @@
 #define ScriptOp_GetStageAnchorA_020b1b74 ScriptOp_GetStageAnchorA
-#define func_ov001_0209c3c0 func_ov001_0209c3e8
+#define func_ov001_0209c3c0 GetStageManager
 #include "src/ov021/script_ops/ScriptOp_GetStageAnchorA_020b1b74.c"

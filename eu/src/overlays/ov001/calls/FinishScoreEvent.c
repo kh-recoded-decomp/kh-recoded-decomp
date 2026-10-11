@@ -2,5 +2,5 @@
 #define GetStageActor_0209c040 GetStageActor
 #define GetStageEventRecord_0209c0ec GetStageEventRecord
 #define SpawnRewardOrbs_02066514 SpawnRewardOrbs
-#define data_ov001_020a0508 data_ov001_020a0528
+#define data_ov001_020a0508 gStageManager
 #include "src/ov001/shared_engine/FinishScoreEvent_0209ce10.c"

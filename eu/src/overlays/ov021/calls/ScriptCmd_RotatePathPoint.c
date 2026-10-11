@@ -8,5 +8,5 @@
 #define ScriptCmd_RotatePathPoint_020b2204 ScriptCmd_RotatePathPoint
 #define TaggedValueToFixed_020b03b0 TaggedValueToFixed
 #define data_0205356c gSinFx12Table
-#define func_ov001_0209c3c0 func_ov001_0209c3e8
+#define func_ov001_0209c3c0 GetStageManager
 #include "src/ov021/script_ops/ScriptCmd_RotatePathPoint_020b2204.c"

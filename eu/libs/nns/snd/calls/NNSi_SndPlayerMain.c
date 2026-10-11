@@ -1,4 +1,4 @@
-#define data_02052b08 data_02052b1c
+#define data_02052b08 gSndVolumeToDecibel
 #define data_0205d8ac sSndSeqPlayerList
 #define func_0200f2b4 sound_command_tag_reached
 #define func_0201d974 NNSi_SndPlayerMain

@@ -1,3 +1,3 @@
 #define FindFirstActiveStageEvent_0209c940 FindFirstActiveStageEvent
-#define g_stageManager_020a0508 data_ov001_020a0528
+#define g_stageManager_020a0508 gStageManager
 #include "src/ov001/unclassified_helpers/FindFirstActiveStageEvent_0209c940.c"

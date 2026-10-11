@@ -3,7 +3,7 @@
 #define ResetLinkedActorMotion_02097a64 ResetLinkedActorMotion
 #define ResetStageLinksForSession_0209c430 ResetStageLinksForSession
 #define Session_Exists_02063a24 func_ov001_02063a24
-#define data_ov001_020a0508 data_ov001_020a0528
+#define data_ov001_020a0508 gStageManager
 #define func_ov001_0208f27c func_ov001_0208f2a4
 #define func_ov001_0208f28c func_ov001_0208f2b4
 #include "src/ov001/shared_engine/ResetStageLinksForSession_0209c430.c"

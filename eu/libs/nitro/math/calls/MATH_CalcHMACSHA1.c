@@ -2,6 +2,6 @@
 #define ComputeKeyedHash_0200da88 MATHi_CalcHMAC
 #define CopyBufferInChunks_0200d724 DGT_Hash2SetSource
 #define HashContextReset_0200d6d0 DGT_Hash2Reset
-#define data_02052aec data_02052b00
+#define data_02052aec sSha1HmacTemplate
 #define func_0200d7b8 DGT_Hash2GetDigest
 #include "src/arm9/keyed_hash/ComputeHMACSHA1_0200d9f4.c"

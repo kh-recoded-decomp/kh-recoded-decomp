@@ -54,6 +54,46 @@
     {
       "module": "arm9",
       "section": ".rodata",
+      "start": "0x02052b00",
+      "end": "0x02052b1c",
+      "source": "src/data/sdk/sSha1HmacTemplate.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "SHA-1 HMAC operations template",
+      "behavior": "Digest size 20 and block size 64; per-call state and callbacks are installed by MATH_CalcHMACSHA1."
+    },
+    {
+      "module": "arm9",
+      "section": ".rodata",
+      "start": "0x02052b1c",
+      "end": "0x02052c1c",
+      "source": "src/data/sdk/gSndVolumeToDecibel.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "Linear sound volume to decibels",
+      "behavior": "128 signed entries mapping volume 0..127 to tenths of a decibel, including the mute sentinel."
+    },
+    {
+      "module": "arm9",
+      "section": ".rodata",
+      "start": "0x02052c1c",
+      "end": "0x02052ef0",
+      "source": "src/data/sdk/gSndDecibelToChannelVolume.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "Decibels to channel volume",
+      "behavior": "724 unsigned entries for -723..0 tenths of a decibel; the caller chooses the hardware volume data shift separately."
+    },
+    {
+      "module": "arm9",
+      "section": ".rodata",
+      "start": "0x02052ef0",
+      "end": "0x02052f00",
+      "source": "src/data/sdk/sAllocatorUnitAndFrameOps.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "Unit and frame heap allocator operations",
+      "behavior": "Two typed allocate/free callback pairs. Frame-heap individual frees are intentionally a no-op."
+    },
+    {
+      "module": "arm9",
+      "section": ".rodata",
       "start": "0x02052f00",
       "end": "0x02052fa0",
       "source": "src/data/tables/PointerTables_02052f00.c",
@@ -64,12 +104,52 @@
     {
       "module": "arm9",
       "section": ".rodata",
+      "start": "0x02053274",
+      "end": "0x020532f4",
+      "source": "src/data/tables/gAsciiUppercaseMap.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ASCII uppercase conversion",
+      "behavior": "128-byte MSL mapping; lowercase letters map to uppercase and other characters remain unchanged."
+    },
+    {
+      "module": "arm9",
+      "section": ".rodata",
+      "start": "0x020532f4",
+      "end": "0x020533f4",
+      "source": "src/data/tables/gAsciiCtypeFlags.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "ASCII character classification",
+      "behavior": "128 16-bit character masks used by MSL numeric parsing and file loading."
+    },
+    {
+      "module": "arm9",
+      "section": ".rodata",
+      "start": "0x02053418",
+      "end": "0x0205344c",
+      "source": "src/data/tables/gCalendarMonthStarts.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "Calendar month cumulative day offsets",
+      "behavior": "Two rows of thirteen day offsets for ordinary and leap years, including the year-end sentinel."
+    },
+    {
+      "module": "arm9",
+      "section": ".rodata",
       "start": "0x0205344c",
       "end": "0x02053458",
       "source": "src/data/sdk/gZeroVecFx32.c",
       "compiler": "mwccarm-3.0-139",
       "name": "gZeroVecFx32",
       "behavior": "Typed zero position/velocity vector shared by collision and movement helpers"
+    },
+    {
+      "module": "arm9",
+      "section": ".rodata",
+      "start": "0x02053458",
+      "end": "0x0205347c",
+      "source": "src/data/tables/gIdentityMtxFx33.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gIdentityMtxFx33",
+      "behavior": "Identity 20.12 rotation matrix used by field objects and group formation."
     },
     {
       "module": "arm9",
@@ -124,6 +204,16 @@
     {
       "module": "arm9",
       "section": ".rodata",
+      "start": "0x02055638",
+      "end": "0x02055658",
+      "source": "src/data/tables/sBg3ExtendedDisplayModes.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "sBg3ExtendedDisplayModes",
+      "behavior": "Chooses the display BG mode before configuring extended BG3."
+    },
+    {
+      "module": "arm9",
+      "section": ".rodata",
       "start": "0x02055658",
       "end": "0x02055678",
       "source": "src/data/tables/gBgExtendedControlDispatch.c",
@@ -170,6 +260,26 @@
       "compiler": "mwccarm-4.0-1036",
       "name": "collision bounds dispatch",
       "behavior": "Dispatch table for collision-bound calculation handlers."
+    },
+    {
+      "module": "arm9",
+      "section": ".rodata",
+      "start": "0x02055a18",
+      "end": "0x02055a40",
+      "source": "src/data/tables/gKeyRepeatTables.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gKeyRepeatTables",
+      "behavior": "Maps repeated buttons to hardware input bits and timestamp slots."
+    },
+    {
+      "module": "arm9",
+      "section": ".rodata",
+      "start": "0x02055a78",
+      "end": "0x02055af8",
+      "source": "src/data/tables/gSelectionStatScales.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gSelectionStatScales",
+      "behavior": "20.12 HP, attack, defense and magic scales indexed by tier and difficulty."
     },
     {
       "module": "arm9",
@@ -330,6 +440,26 @@
       "compiler": "mwccarm-4.0-1036",
       "name": "language code table",
       "behavior": "Language identifiers used to select localized assets and text."
+    },
+    {
+      "module": "arm9",
+      "section": ".data",
+      "start": "0x02056020",
+      "end": "0x02056050",
+      "source": "src/data/tables/gBillboardMatrix.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gBillboardMatrix",
+      "behavior": "Identity billboard transform whose translation is updated for each sprite."
+    },
+    {
+      "module": "arm9",
+      "section": ".data",
+      "start": "0x02056130",
+      "end": "0x02056134",
+      "source": "src/data/sdk/gSoundRequestSerial.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gSoundRequestSerial",
+      "behavior": "Sequence counter consumed by sound-request allocation; only its low 24 bits are stored in each request."
     },
     {
       "module": "arm9",
@@ -611,6 +741,16 @@
       "name": "empty spawn node name",
       "origin": "US reference adapted to EU",
       "behavior": "Empty node name passed when a stage object has no attachment node."
+    },
+    {
+      "module": "ov001",
+      "section": ".bss",
+      "start": "0x020a0528",
+      "end": "0x020a0540",
+      "source": "src/overlays/ov001/data/bss/gStageManager.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gStageManager",
+      "behavior": "Stage-manager pointer and module-tail BSS alignment."
     },
     {
       "module": "ov002",

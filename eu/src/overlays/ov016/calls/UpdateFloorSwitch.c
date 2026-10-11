@@ -3,7 +3,7 @@
 #define QuadTree_RemoveObject_02033c60 QuadTree_RemoveObject
 #define SweepWorldCollision_020364a0 SweepWorldCollision
 #define UpdateFloorSwitch_020a4210 UpdateFloorSwitch
-#define data_02053444 data_02053458
+#define data_02053444 gIdentityMtxFx33
 #define data_ov016_020a6dec data_ov016_020a6e0c
 #define func_02033c3c QuadTree_InsertObject
 #define func_02036230 GetActorRegistry

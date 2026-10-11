@@ -2,10 +2,10 @@
 #define CacheStageEntrySlot_02098f64 CacheStageEntrySlot
 #define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
 #define Session_Exists_02063a24 func_ov001_02063a24
-#define data_ov001_020a0508 data_ov001_020a0528
+#define data_ov001_020a0508 gStageManager
 #define func_0202a5ac Obj_SetWord14
 #define func_ov001_02099c28 UpdateStageEventSpawns
-#define func_ov001_0209c3c0 func_ov001_0209c3e8
+#define func_ov001_0209c3c0 GetStageManager
 #define func_ov006_020a14c8 AnimSequence_Init
 #define func_ov006_020a1510 InitPathCursor
 #define func_ov006_020a154c AddTouchPoint

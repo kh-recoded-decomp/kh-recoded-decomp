@@ -1,15 +1,5 @@
 #include "nitro/types.h"
-
-typedef struct {
-    s32 id;
-    s32 x;
-    s32 y;
-} PagePosition;
-
-typedef struct {
-    PagePosition pages[30];
-    u8 pad_168[8];
-} ItemLayout;
+#include "src/overlays/ov101/ListPortraitLayout.h"
 
 typedef struct {
     u8 pad_00[0x10];
@@ -26,7 +16,6 @@ typedef struct {
     s32 pages[40];
 } Ov101State;
 
-extern ItemLayout data_ov101_020c1f9c[];
 extern void func_ov001_0206aa7c(void);
 extern BOOL IsStateFlagSet(int setIndex, int bitIndex);
 extern void func_ov001_0206ad28(void *list);
@@ -35,18 +24,18 @@ void UpdatePageBufferPositions(Ov101State *state)
 {
     int item = state->selectedItem;
     int i;
-    ItemLayout *layout;
-    PagePosition *position;
+    ListPortraitLayout *layout;
+    ListPortraitEntry *position;
     StateBuffer *buffer;
 
     func_ov001_0206aa7c();
     if (!IsStateFlagSet(0, item) || state->bufferCount <= 0) {
         return;
     }
-    layout = &data_ov101_020c1f9c[item];
+    layout = &gListPortraitLayouts[item];
     for (i = 0; i < state->bufferCount; i++) {
         buffer = &state->buffers[i];
-        position = &layout->pages[state->pages[item]];
+        position = &layout->entries[state->pages[item]];
         buffer->x = position->x << 12;
         buffer->y = position->y << 12;
         func_ov001_0206ad28(buffer);

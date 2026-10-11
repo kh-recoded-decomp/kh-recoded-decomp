@@ -43,7 +43,7 @@ extern FieldContext gActiveFieldContext;
 extern FieldContext data_ov021_020b56d0;
 extern ScriptHandler gScriptHandlerTable[];
 
-extern void *func_ov001_0209c3e8(void);
+extern void *GetStageManager(void);
 extern void MI_CpuFill8(void *dest, u32 value, u32 size);
 extern StageEvent *GetStageEventRecord(u32 id);
 extern StageLink *GetStageController(u32 id);
@@ -59,7 +59,7 @@ s32 RunScriptThread(ScriptThread *thread)
     u16 actorId;
     s32 result;
 
-    func_ov001_0209c3e8();
+    GetStageManager();
     running = TRUE;
     data_ov021_020b56d0 = data_ov021_020b56c4;
     MI_CpuFill8(&data_ov021_020b56c4, 0, sizeof(FieldContext));

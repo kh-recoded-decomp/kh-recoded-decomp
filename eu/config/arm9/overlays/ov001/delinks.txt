@@ -6352,6 +6352,10 @@ src/overlays/ov001/calls/ResetFieldCamera.c:
     complete
     .text       start:0x0208ae90 end:0x0208af74
 
+src/overlays/ov001/calls/BuildRotationXY43.c:
+    complete
+    .text       start:0x0208af74 end:0x0208afe0
+
 src/overlays/ov001/calls/UpdateEventCameraTransform.c:
     complete
     .text       start:0x0208afe0 end:0x0208b100
@@ -7932,7 +7936,7 @@ src/overlays/ov001/calls/FindSmallRecordIndex.c:
     complete
     .text       start:0x0209c39c end:0x0209c3e8
 
-src/overlays/ov001/calls/func_ov001_0209c3e8.c:
+src/overlays/ov001/calls/GetStageManager.c:
     complete
     .text       start:0x0209c3e8 end:0x0209c3f4
 
@@ -7983,6 +7987,14 @@ src/overlays/ov001/calls/func_ov001_0209c5d8.c:
 src/overlays/ov001/calls/func_ov001_0209c5f0.c:
     complete
     .text       start:0x0209c5f0 end:0x0209c678
+
+src/overlays/ov001/calls/StartStageObjectMotions.c:
+    complete
+    .text       start:0x0209c678 end:0x0209c6f0
+
+src/overlays/ov001/calls/DispatchStageObjectMotions.c:
+    complete
+    .text       start:0x0209c6f0 end:0x0209c76c
 
 src/overlays/ov001/calls/SetStageObjectRotation.c:
     complete
@@ -8219,6 +8231,10 @@ src/overlays/ov001/data/bss/Bss_ov001_020a04fc.c:
 src/overlays/ov001/data/bss/Bss_ov001_020a0500.c:
     complete
     .bss        start:0x020a0500 end:0x020a0514
+
+src/overlays/ov001/data/bss/gStageManager.c:
+    complete
+    .bss        start:0x020a0528 end:0x020a0540
 
 src/overlays/ov001/data/strings/Strings_ov001_0209e61c.c:
     complete

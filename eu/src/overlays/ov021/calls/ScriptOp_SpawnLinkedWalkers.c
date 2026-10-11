@@ -23,6 +23,6 @@
 #define data_0205356c gSinFx12Table
 #define data_ov021_020b56a4 gActiveFieldContext
 #define func_02023dbc _s32_div_f
-#define func_ov001_0209c3c0 func_ov001_0209c3e8
+#define func_ov001_0209c3c0 GetStageManager
 #define func_ov021_020b0450 SetXZVectorFromAngle
 #include "src/ov021/script_ops/ScriptOp_SpawnLinkedWalkers_020b3114.c"

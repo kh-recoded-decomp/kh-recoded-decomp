@@ -1,5 +1,5 @@
 #define ClearStageTables_0209a094 ClearStageTables
 #define HandlePool_ReleaseAll_0208f21c HandlePool_ReleaseAll
-#define data_ov001_020a0508 data_ov001_020a0528
+#define data_ov001_020a0508 gStageManager
 #define func_01ff8830 MI_CpuFill8
 #include "src/ov001/shared_engine/ClearStageTables_0209a094.c"

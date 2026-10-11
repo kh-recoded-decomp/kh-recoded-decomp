@@ -1629,7 +1629,7 @@ PlanActorJump kind:function(thumb,size=0x2f8) addr:0x0208aadc
 Anim_InterpEased kind:function(thumb,size=0x90) addr:0x0208add4
 ActorChannel_ResetFields kind:function(thumb,size=0x2c) addr:0x0208ae64
 ResetFieldCamera kind:function(thumb,size=0xe4) addr:0x0208ae90
-func_ov001_0208af74 kind:function(thumb,size=0x6c) addr:0x0208af74
+BuildRotationXY43 kind:function(thumb,size=0x6c) addr:0x0208af74
 UpdateEventCameraTransform kind:function(thumb,size=0x120) addr:0x0208afe0
 InterpolateFieldCamera kind:function(thumb,size=0x4d0) addr:0x0208b100
 func_ov001_0208b5d0 kind:function(thumb,size=0x11c) addr:0x0208b5d0
@@ -2044,7 +2044,7 @@ GetLinkedStageActor kind:function(thumb,size=0x1c) addr:0x0209c318
 GetLargeTableEntry kind:function(thumb,size=0x34) addr:0x0209c334
 GetSmallTableEntry kind:function(thumb,size=0x34) addr:0x0209c368
 FindSmallRecordIndex kind:function(thumb,size=0x4c) addr:0x0209c39c
-func_ov001_0209c3e8 kind:function(thumb,size=0xc) addr:0x0209c3e8
+GetStageManager kind:function(thumb,size=0xc) addr:0x0209c3e8
 GetGlobalScaleValue kind:function(thumb,size=0x1c) addr:0x0209c3f4
 ResetStageOrigin kind:function(thumb,size=0x30) addr:0x0209c410
 func_ov001_0209c440 kind:function(thumb,size=0x18) addr:0x0209c440
@@ -2057,8 +2057,8 @@ func_ov001_0209c5ac kind:function(thumb,size=0x18) addr:0x0209c5ac
 func_ov001_0209c5c4 kind:function(thumb,size=0x14) addr:0x0209c5c4
 func_ov001_0209c5d8 kind:function(thumb,size=0x18) addr:0x0209c5d8
 func_ov001_0209c5f0 kind:function(thumb,size=0x88) addr:0x0209c5f0
-func_ov001_0209c678 kind:function(thumb,size=0x78) addr:0x0209c678
-func_ov001_0209c6f0 kind:function(thumb,size=0x7c) addr:0x0209c6f0
+StartStageObjectMotions kind:function(thumb,size=0x78) addr:0x0209c678
+DispatchStageObjectMotions kind:function(thumb,size=0x7c) addr:0x0209c6f0
 SetStageObjectRotation kind:function(thumb,size=0x12) addr:0x0209c76c
 QueryStageEventState kind:function(thumb,size=0x12c) addr:0x0209c780
 SeekFirstActiveStageEvent kind:function(thumb,size=0x54) addr:0x0209c8ac
@@ -2420,4 +2420,4 @@ data_ov001_020a0504 kind:bss addr:0x020a0504
 data_ov001_020a0505 kind:bss addr:0x020a0505
 data_ov001_020a0514 kind:bss addr:0x020a0514
 data_ov001_020a0518 kind:bss addr:0x020a0518
-data_ov001_020a0528 kind:bss addr:0x020a0528
+gStageManager kind:bss addr:0x020a0528

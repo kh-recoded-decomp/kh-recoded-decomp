@@ -1,4 +1,4 @@
 #define ReleaseStageSlotEntry_0209c024 ReleaseStageSlotEntry
-#define data_ov001_020a0508 data_ov001_020a0528
+#define data_ov001_020a0508 gStageManager
 #define func_ov001_0208f1a8 HandlePool_ReleaseHandle
 #include "src/ov001/shared_engine/ReleaseStageSlotEntry_0209c024.c"

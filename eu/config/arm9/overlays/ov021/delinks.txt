@@ -736,9 +736,21 @@ src/overlays/ov021/calls/ResolveHitContacts.c:
     complete
     .text       start:0x020abc60 end:0x020abe74
 
+src/overlays/ov021/calls/ProbeIdleActorContact.c:
+    complete
+    .text       start:0x020abe74 end:0x020abedc
+
 src/overlays/ov021/calls/ComputeKnockbackVector.c:
     complete
     .text       start:0x020abedc end:0x020abfd0
+
+src/overlays/ov021/calls/IsHitWithinFacingCone.c:
+    complete
+    .text       start:0x020abfd0 end:0x020ac048
+
+src/overlays/ov021/calls/IsHitWithinFacingAndHeight.c:
+    complete
+    .text       start:0x020ac048 end:0x020ac0d8
 
 src/overlays/ov021/calls/InitRecord60.c:
     complete

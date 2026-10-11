@@ -11,5 +11,5 @@
 #define func_ov001_0209a4bc func_ov001_0209a4e4
 #define func_ov001_0209ab64 LoadStageModels
 #define func_ov001_0209d064 func_ov001_0209d08c
-#define g_stageManager_020a0508 data_ov001_020a0528
+#define g_stageManager_020a0508 gStageManager
 #include "src/ov001/shared_engine/StartStageEvent_0209a174.c"

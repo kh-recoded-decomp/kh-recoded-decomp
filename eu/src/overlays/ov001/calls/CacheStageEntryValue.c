@@ -1,4 +1,4 @@
 #define CacheStageEntryValue_02099248 CacheStageEntryValue
 #define func_ov001_0206db5c GetBoundedEntryField
-#define g_stageManager_020a0508 data_ov001_020a0528
+#define g_stageManager_020a0508 gStageManager
 #include "src/ov001/shared_engine/CacheStageEntryValue_02099248.c"

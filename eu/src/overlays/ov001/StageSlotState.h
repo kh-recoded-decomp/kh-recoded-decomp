@@ -21,7 +21,7 @@ typedef struct StageSlotManager {
     u16 slotCount;
 } StageSlotManager;
 
-extern StageSlotManager *data_ov001_020a0528;
-#define gStageSlotManager data_ov001_020a0528
+extern StageSlotManager *gStageManager;
+#define gStageSlotManager gStageManager
 
 #endif

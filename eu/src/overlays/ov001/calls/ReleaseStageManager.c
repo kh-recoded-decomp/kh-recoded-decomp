@@ -1,4 +1,4 @@
 #define PXI_Init_0202a638 PXI_Init_0202a64c
 #define ReleaseStageManager_0209b8c4 ReleaseStageManager
-#define g_stageManager_020a0508 data_ov001_020a0528
+#define g_stageManager_020a0508 gStageManager
 #include "src/ov001/shared_engine/ReleaseStageManager_0209b8c4.c"

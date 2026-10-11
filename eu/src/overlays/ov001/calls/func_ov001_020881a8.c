@@ -11,7 +11,7 @@ typedef struct StageRecord {
 } StageRecord;
 
 extern s32 g_stageEventsState;
-extern void func_ov001_0209c3e8(void);
+extern void GetStageManager(void);
 extern u16 FindFirstActiveStageEvent(void);
 extern u16 func_ov001_0209c9c4(u16 recordId);
 extern StagePartySlot *GetStagePartySlot(u32 slot);
@@ -27,7 +27,7 @@ void func_ov001_020881a8(u32 slotIndex)
     if (g_stageEventsState == -1) {
         return;
     }
-    func_ov001_0209c3e8();
+    GetStageManager();
     for (recordId = FindFirstActiveStageEvent(); recordId != 0; recordId = func_ov001_0209c9c4(recordId)) {
         slot = GetStagePartySlot(slotIndex);
         if (slot != NULL && slot->recordId != 0) {

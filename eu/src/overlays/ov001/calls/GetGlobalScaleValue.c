@@ -1,3 +1,3 @@
 #define GetGlobalScaleValue_0209c3cc GetGlobalScaleValue
-#define g_ov001State_020a0508 data_ov001_020a0528
+#define g_ov001State_020a0508 gStageManager
 #include "src/ov001/unclassified_helpers/GetGlobalScaleValue_0209c3cc.c"

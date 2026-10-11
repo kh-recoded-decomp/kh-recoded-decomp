@@ -1,6 +1,6 @@
 #define AllocFromStageHeap_0209cee4 AllocFromStageHeap
 #define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
 #define SetDefaultHeap_0202a134 SetDefaultHeap
-#define data_ov001_020a0508 data_ov001_020a0528
+#define data_ov001_020a0508 gStageManager
 #define func_0202a158 Heap_GetCurrent
 #include "src/ov001/shared_engine/AllocFromStageHeap_0209cee4.c"

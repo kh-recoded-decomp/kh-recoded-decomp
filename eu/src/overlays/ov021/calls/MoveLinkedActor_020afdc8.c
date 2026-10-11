@@ -26,5 +26,5 @@
 #define func_01ff8830 MI_CpuFill8
 #define func_01ff90ec MTX_Identity33_
 #define func_ov001_0208f018 func_ov001_0208f040
-#define func_ov001_0209c3c0 func_ov001_0209c3e8
+#define func_ov001_0209c3c0 GetStageManager
 #include "src/ov021/shared_engine/MoveLinkedActor_020afda8.c"

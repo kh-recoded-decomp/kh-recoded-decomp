@@ -3,5 +3,5 @@
 #define VEC_Mag_01ff9f28 VEC_Mag
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define func_ov021_020abb50 BuildHitResult
-#define func_ov021_020ac028 func_ov021_020ac048
+#define func_ov021_020ac028 IsHitWithinFacingAndHeight
 #include "src/ov021/object_state/ResolveNearestHitNode_020aba18.c"

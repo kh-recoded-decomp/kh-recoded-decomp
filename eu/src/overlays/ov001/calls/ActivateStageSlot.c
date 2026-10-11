@@ -1,4 +1,4 @@
 #define ActivateStageSlot_0209caa8 ActivateStageSlot
 #define func_ov001_0209c0c4 GetStageObjectHandle
-#define g_stageManager_020a0508 data_ov001_020a0528
+#define g_stageManager_020a0508 gStageManager
 #include "src/ov001/unclassified_helpers/ActivateStageSlot_0209caa8.c"

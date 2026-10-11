@@ -1,4 +1,4 @@
 #define RestoreStageSlotDefault_0209ca7c RestoreStageSlotDefault
 #define func_ov001_0209c0c4 GetStageObjectHandle
-#define g_stageManager_020a0508 data_ov001_020a0528
+#define g_stageManager_020a0508 gStageManager
 #include "src/ov001/unclassified_helpers/RestoreStageSlotDefault_0209ca7c.c"

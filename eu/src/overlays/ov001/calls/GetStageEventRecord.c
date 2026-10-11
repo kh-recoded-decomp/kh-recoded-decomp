@@ -1,3 +1,3 @@
 #define GetStageEventRecord_0209c0ec GetStageEventRecord
-#define g_stageManager_020a0508 data_ov001_020a0528
+#define g_stageManager_020a0508 gStageManager
 #include "src/ov001/shared_engine/GetStageEventRecord_0209c0ec.c"

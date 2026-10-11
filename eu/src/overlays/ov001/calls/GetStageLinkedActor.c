@@ -1,4 +1,4 @@
 #define GetStageLinkedActor_0209c168 GetStageLinkedActor
 #define func_ov001_0208f258 func_ov001_0208f280
-#define g_stageManager_020a0508 data_ov001_020a0528
+#define g_stageManager_020a0508 gStageManager
 #include "src/ov001/shared_engine/GetStageLinkedActor_0209c168.c"

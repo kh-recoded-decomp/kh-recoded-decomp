@@ -1,14 +1,9 @@
-#include "nitro/types.h"
-
-typedef struct {
-    u8 pad_00[8];
-    BOOL active;
-} PageInteractionState;
+#include "src/overlays/ov101/ListSceneState.h"
 
 extern void RuntimeState_SetCondition(int condition);
 
-void ShutdownPageInteractionState(PageInteractionState *state)
+void ShutdownPageInteractionState(ListSceneState *state)
 {
-    state->active = FALSE;
+    state->interactionActive = FALSE;
     RuntimeState_SetCondition(FALSE);
 }

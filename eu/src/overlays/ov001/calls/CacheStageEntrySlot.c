@@ -1,4 +1,4 @@
 #define CacheStageEntrySlot_02098f64 CacheStageEntrySlot
 #define func_ov001_02099248 CacheStageEntryValue
-#define g_stageManager_020a0508 data_ov001_020a0528
+#define g_stageManager_020a0508 gStageManager
 #include "src/ov001/shared_engine/CacheStageEntrySlot_02098f64.c"

@@ -1,6 +1,6 @@
 #define GetLargeTableEntry_0209c30c GetLargeTableEntry
 #define GetStageEventRecord_0209c0ec GetStageEventRecord
 #define PickStageEventSide_02098400 PickStageEventSide
-#define g_stageManager_020a0508 data_ov001_020a0528
+#define g_stageManager_020a0508 gStageManager
 #define random_next_scaled_0202aa04 random_next_scaled
 #include "src/ov001/shared_engine/PickStageEventSide_02098400.c"

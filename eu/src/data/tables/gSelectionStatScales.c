@@ -1,0 +1,21 @@
+#include "nitro/fx.h"
+
+typedef struct SelectionStatScales {
+    fx32 scale[2][4][4];
+} SelectionStatScales;
+
+/* Tier, difficulty, then HP/attack/defense/magic; values are 20.12 fixed point. */
+const SelectionStatScales gSelectionStatScales = { {
+    {
+        { 0x0f00, 0x0e00, 0x1600, 0x0e00 },
+        { 0x0f00, 0x0e00, 0x1600, 0x0e00 },
+        { 0x0f00, 0x0e00, 0x1600, 0x0e00 },
+        { 0x0f00, 0x0e00, 0x1600, 0x0e00 }
+    },
+    {
+        { 0x1200, 0x1000, 0x0c00, 0x0e00 },
+        { 0x1200, 0x1000, 0x0c00, 0x0e00 },
+        { 0x1200, 0x1000, 0x0c00, 0x0e00 },
+        { 0x1200, 0x1000, 0x0c00, 0x0e00 }
+    }
+} };

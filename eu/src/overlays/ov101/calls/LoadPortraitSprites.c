@@ -1,5 +1,6 @@
 #include "nitro/types.h"
 #include "nitro/fx_types.h"
+#include "src/overlays/ov101/ListPortraitLayout.h"
 
 typedef struct {
     s16 frameWidth;
@@ -19,16 +20,6 @@ typedef struct {
 } SpriteDesc;
 
 typedef struct {
-    u32 fileIndex;
-    u8 pad_04[8];
-} IconEntry;
-
-typedef struct {
-    IconEntry entries[30];
-    u8 pad_168[8];
-} IconTable;
-
-typedef struct {
     s32 mode;
     u8 pad_0004[0x30];
     u32 archive;
@@ -39,7 +30,6 @@ typedef struct {
     s32 selection[17];
 } Ov101State;
 
-extern const IconTable data_ov101_020c1f9c[];
 extern void NNS_GfdResetFrmTexVramState(void);
 extern void NNS_GfdResetFrmPlttVramState(void);
 extern BOOL InitSlotFromFile(SpriteDesc *slot, u32 fileId);
@@ -54,7 +44,7 @@ void LoadPortraitSprites(Ov101State *state)
 
     NNS_GfdResetFrmTexVramState();
     NNS_GfdResetFrmPlttVramState();
-    InitSlotFromFile(sprite, ARCHIVE_FILE_ID(state->archive, data_ov101_020c1f9c[mode].entries[selection].fileIndex));
+    InitSlotFromFile(sprite, ARCHIVE_FILE_ID(state->archive, gListPortraitLayouts[mode].entries[selection].fileIndex));
     sprite->scale = 0;
     sprite->visible = 1;
     sprite->alpha = 0x1f;

@@ -1,6 +1,6 @@
 #define GetStageObjectHandle_0209c0c4 GetStageObjectHandle
 #define ResetStageGroupObjects_0209cae0 ResetStageGroupObjects
-#define data_ov001_020a0508 data_ov001_020a0528
+#define data_ov001_020a0508 gStageManager
 #define func_01ff8830 MI_CpuFill8
 #define func_ov001_020958f4 func_ov001_0209591c
 #include "src/ov001/shared_engine/ResetStageGroupObjects_0209cae0.c"

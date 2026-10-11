@@ -11,7 +11,7 @@ an identified name (NitroSDK, NNS, MSL, ...) but no source yet.
 | PART main | 2416 | 113 | 5 | 39 | 2573 | 93.9% | 85.3% |
 | PART itcm | 91 | 27 | 1 | 8 | 127 | 71.7% | 66.2% |
 | PART ov000 | 76 | 0 | 0 | 2 | 78 | 97.4% | 92.5% |
-| PART ov001 | 2030 | 0 | 0 | 65 | 2095 | 96.9% | 88.5% |
+| PART ov001 | 2033 | 0 | 0 | 62 | 2095 | 97.0% | 88.6% |
 | PART ov002 | 224 | 0 | 1 | 7 | 232 | 96.6% | 83.3% |
 | PART ov003 | 43 | 0 | 0 | 1 | 44 | 97.7% | 91.2% |
 | PART ov004 | 36 | 0 | 0 | 5 | 41 | 87.8% | 81.7% |
@@ -31,7 +31,7 @@ an identified name (NitroSDK, NNS, MSL, ...) but no source yet.
 | PART ov018 | 36 | 0 | 0 | 1 | 37 | 97.3% | 82.1% |
 | DONE ov019 | 35 | 0 | 0 | 0 | 35 | 100.0% | 100.0% |
 | PART ov020 | 47 | 0 | 0 | 2 | 49 | 95.9% | 92.8% |
-| PART ov021 | 480 | 0 | 0 | 9 | 489 | 98.2% | 90.2% |
+| PART ov021 | 483 | 0 | 0 | 6 | 489 | 98.8% | 90.9% |
 | PART ov022 | 115 | 1 | 3 | 6 | 125 | 92.0% | 72.9% |
 | PART ov023 | 38 | 0 | 0 | 2 | 40 | 95.0% | 78.7% |
 | PART ov024 | 26 | 0 | 0 | 1 | 27 | 96.3% | 93.4% |
@@ -111,11 +111,11 @@ an identified name (NitroSDK, NNS, MSL, ...) but no source yet.
 | DONE ov098 | 3 | 0 | 0 | 0 | 3 | 100.0% | 100.0% |
 | PART ov099 | 56 | 0 | 0 | 3 | 59 | 94.9% | 93.6% |
 | DONE ov100 | 3 | 0 | 0 | 0 | 3 | 100.0% | 100.0% |
-| PART ov101 | 42 | 0 | 0 | 12 | 54 | 77.8% | 64.5% |
+| PART ov101 | 45 | 0 | 0 | 9 | 54 | 83.3% | 67.6% |
 | DONE ov102 | 3 | 0 | 0 | 0 | 3 | 100.0% | 100.0% |
 | PART ov103 | 37 | 0 | 0 | 2 | 39 | 94.9% | 89.2% |
 | PART ov104 | 33 | 24 | 0 | 0 | 57 | 57.9% | 75.8% |
-| **TOTAL** | **9892** | **171** | **11** | **348** | **10422** | **94.9%** | **85.39%** |
+| **TOTAL** | **9901** | **171** | **11** | **339** | **10422** | **95.0%** | **85.46%** |
 
 ## Byte progress
 
@@ -124,7 +124,7 @@ the matched set is dominated by small wrappers. Bytes count real C only.
 
 | C matched bytes | Total code bytes | % |
 |---:|---:|---:|
-| **1,416,022** | **1,658,216** | **85.39%** |
+| **1,417,110** | **1,658,216** | **85.46%** |
 
 ## DATA progress
 
@@ -133,5 +133,5 @@ Naming is tracked separately and does not count as reconstructed DATA.
 
 | Metric | Complete | Total | % |
 |---|---:|---:|---:|
-| Reconstructed byte-exact DATA | **181,338** | **228,172** | **79.47%** |
-| Named DATA symbols | **977** | **2,327** | **41.99%** |
+| Reconstructed byte-exact DATA | **197,846** | **228,172** | **86.71%** |
+| Named DATA symbols | **997** | **2,331** | **42.77%** |

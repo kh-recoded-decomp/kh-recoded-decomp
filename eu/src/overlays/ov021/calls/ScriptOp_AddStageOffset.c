@@ -2,5 +2,5 @@
 #define ScriptOp_AddStageOffset_020b2450 ScriptOp_AddStageOffset
 #define TaggedValueToFixed_020b03b0 TaggedValueToFixed
 #define VEC_Add_01ff9e0c VEC_Add
-#define func_ov001_0209c3c0 func_ov001_0209c3e8
+#define func_ov001_0209c3c0 GetStageManager
 #include "src/ov021/script_ops/ScriptOp_AddStageOffset_020b2450.c"

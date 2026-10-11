@@ -4,5 +4,5 @@
 #define Session_Exists_02063a24 func_ov001_02063a24
 #define func_01ff9f88 VEC_Normalize
 #define func_ov052_020ceb7c GetLinkedAngleOffset
-#define g_stageManager_020a0508 data_ov001_020a0528
+#define g_stageManager_020a0508 gStageManager
 #include "src/ov001/shared_engine/GetStageEntrySide_020990ec.c"

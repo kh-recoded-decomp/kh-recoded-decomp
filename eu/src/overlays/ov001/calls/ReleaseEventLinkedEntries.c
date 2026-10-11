@@ -6,5 +6,5 @@
 #define func_ov001_0209c024 ReleaseStageSlotEntry
 #define func_ov001_0209c040 GetStageActor
 #define func_ov001_0209c248 GetSmallRecordIndex
-#define func_ov001_0209c3c0 func_ov001_0209c3e8
+#define func_ov001_0209c3c0 GetStageManager
 #include "src/ov001/shared_engine/ReleaseEventLinkedEntries_02097c10.c"

@@ -1,5 +1,5 @@
 #define RefreshEntryUnlocks_020c07f4 RefreshEntryUnlocks
-#define data_ov101_020c139c data_ov101_020c1f9c
+#define data_ov101_020c139c gListPortraitLayouts
 #define IsGlobalPackedBitSet_02027304 IsGlobalPackedBitSet
 #define SetGlobalPackedBit_02027320 SetGlobalPackedBit
 #define ClearGlobalPackedBit_02027334 ClearGlobalPackedBit

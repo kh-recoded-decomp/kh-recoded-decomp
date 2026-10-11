@@ -2,5 +2,5 @@
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define SetDefaultHeap_0202a134 SetDefaultHeap
 #define func_0202a158 Heap_GetCurrent
-#define g_stageManager_020a0508 data_ov001_020a0528
+#define g_stageManager_020a0508 gStageManager
 #include "src/ov001/unclassified_helpers/FreeFromStageHeap_0209cf68.c"

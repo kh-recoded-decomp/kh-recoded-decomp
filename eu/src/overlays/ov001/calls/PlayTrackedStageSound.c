@@ -1,4 +1,4 @@
 #define PlayStageSoundAt_0209d080 PlayStageSoundAt
 #define PlayTrackedStageSound_0209d0e8 PlayTrackedStageSound
-#define g_stageManager_020a0508 data_ov001_020a0528
+#define g_stageManager_020a0508 gStageManager
 #include "src/ov001/unclassified_helpers/PlayTrackedStageSound_0209d0e8.c"

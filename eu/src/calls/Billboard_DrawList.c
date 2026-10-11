@@ -1,6 +1,6 @@
 #define Billboard_DrawList_0202fe70 Billboard_DrawList
 #define G3_LoadMtx43_01ffa170 G3_LoadMtx43
 #define MTX_MultVec43_01ff9ad8 MTX_MultVec43
-#define g_billboardMtx_02056020 data_02056020
+#define g_billboardMtx_02056020 gBillboardMatrix
 #define g_cameraMtx_0205a970 NNS_G3dGlb_cameraMtx
 #include "src/arm9/graphics/Billboard_DrawList_0202fe70.c"

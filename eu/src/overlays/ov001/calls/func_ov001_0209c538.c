@@ -1,9 +1,9 @@
 #include "nitro/types.h"
 
-extern u32 *data_ov001_020a0528;
+extern u32 *gStageManager;
 
 void func_ov001_0209c538(void) {
-  if (data_ov001_020a0528 != (u32 *)0x0) {
-    *data_ov001_020a0528 = *data_ov001_020a0528 & 0xbfffffff;
+  if (gStageManager != (u32 *)0x0) {
+    *gStageManager = *gStageManager & 0xbfffffff;
   }
 }

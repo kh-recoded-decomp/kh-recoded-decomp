@@ -9,7 +9,7 @@
 #define data_ov001_020a041c sOv001_Pt_020a043c
 #define data_ov001_020a0420 sOv001_Format04dP2_020a0440
 #define data_ov001_020a0428 sOv001_EnFormatSFormat04dP2_020a0448
-#define data_ov001_020a0508 data_ov001_020a0528
+#define data_ov001_020a0508 gStageManager
 #define findSharedResourceByName_0202cd8c findSharedResourceByName
 #define func_01ff8830 MI_CpuFill8
 #define func_0202b788 GetLanguageIndex

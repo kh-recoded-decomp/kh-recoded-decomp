@@ -1,5 +1,5 @@
 #define FX_Div_01ff9c84 FX_Div
 #define SetBrightnessAndSyncMain_02029e7c SetBrightnessAndSyncMain
 #define UpdateStageBrightnessFade_0209b8e0 UpdateStageBrightnessFade
-#define g_stageManager_020a0508 data_ov001_020a0528
+#define g_stageManager_020a0508 gStageManager
 #include "src/ov001/shared_engine/UpdateStageBrightnessFade_0209b8e0.c"

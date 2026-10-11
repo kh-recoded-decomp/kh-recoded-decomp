@@ -148,7 +148,7 @@ extern void VEC_Add(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
 extern fx32 FX_Mul(fx32 a, fx32 b);
 extern int func_ov001_02063a24(void);
 extern s32 func_ov001_02063a38(void);
-extern u8 *func_ov001_0209c3e8(void);
+extern u8 *GetStageManager(void);
 extern s32 func_ov001_0208f2a4(void *pool);
 extern u32 FindFirstActiveStageEvent(void);
 extern StageEvent *GetStageEventRecord(u32 handle);
@@ -380,7 +380,7 @@ void UpdateStageEvent(StageEvent *event)
     SetVec(&actor->velocity, FX_Mul(actor->velocity.x, 0x666), FX_Mul(actor->velocity.y, 0x666), FX_Mul(actor->velocity.z, 0x666));
     actor->pushed = 0;
     if (actor->pushMode == 1 && GetSessionMode() != 7) {
-        func_ov001_0208f2a4(*(void **)(func_ov001_0209c3e8() + 0x18d7c));
+        func_ov001_0208f2a4(*(void **)(GetStageManager() + 0x18d7c));
         for (handle = FindFirstActiveStageEvent(); handle != 0; handle = func_ov001_0209c9c4(handle)) {
             other = GetStageEventRecord(handle);
             if (other == NULL) {

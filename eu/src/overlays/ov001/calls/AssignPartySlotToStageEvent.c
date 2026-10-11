@@ -22,7 +22,7 @@ typedef struct PartySlot {
 } PartySlot;
 
 extern int g_stageEventsState;
-extern void func_ov001_0209c3e8(void);
+extern void GetStageManager(void);
 extern u16 FindFirstActiveStageEvent(void);
 extern u32 func_ov001_0209c9c4(int startHandle);
 extern StageEventRecord *GetStageEventRecord(u32 id);
@@ -38,7 +38,7 @@ void AssignPartySlotToStageEvent(u32 slotIndex, u8 mode, u8 param)
     if (g_stageEventsState == -1) {
         return;
     }
-    func_ov001_0209c3e8();
+    GetStageManager();
     for (id = FindFirstActiveStageEvent(); id != 0; id = func_ov001_0209c9c4(id)) {
         record = GetStageEventRecord(id);
         if (record != NULL && record->kind == 99 && !record->claimed) {

@@ -15,8 +15,8 @@
 #define VEC_Mag_01ff9f28 VEC_Mag
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define WarpWalkerTo_02090f0c WarpWalkerTo
-#define data_ov001_020a0508 data_ov001_020a0528
+#define data_ov001_020a0508 gStageManager
 #define func_01ff9f88 VEC_Normalize
 #define func_ov001_02094714 UpdateStageEvent
-#define func_ov001_0209c3c0 func_ov001_0209c3e8
+#define func_ov001_0209c3c0 GetStageManager
 #include "src/ov001/shared_engine/SpawnStageEventGroups_0209895c.c"

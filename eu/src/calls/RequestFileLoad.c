@@ -4,7 +4,7 @@
 #define Msg_BuildLangPath_0202b798 Msg_BuildLangPath
 #define RequestFileLoad_0202c000 RequestFileLoad
 #define Strlen_02021e44 strlen
-#define data_02053260 data_02053274
+#define data_02053260 gAsciiUppercaseMap
 #define data_02060564 gFileLoader
 #define func_0200b394 FS_InitFile
 #define func_0200b5b0 FS_CloseFile

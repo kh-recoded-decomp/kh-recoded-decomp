@@ -6,7 +6,7 @@
 #define PlaceFieldObjectAtPosition_020a2b28 PlaceFieldObjectAtPosition
 #define SceneNode_Draw_01ffb12c SceneNode_Draw
 #define TranslateAndFlushGeometry_020864c4 TranslateAndFlushGeometry
-#define data_02053444 data_02053458
+#define data_02053444 gIdentityMtxFx33
 #define data_0205356c gSinFx12Table
 #define func_01ff923c MTX_RotY33_
 #define func_02036240 ActorRegistry_GetEntityByIndex

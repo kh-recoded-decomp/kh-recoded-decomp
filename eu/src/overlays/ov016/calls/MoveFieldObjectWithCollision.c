@@ -10,7 +10,7 @@
 #define VEC_Add_01ff9e0c VEC_Add
 #define VEC_DotProduct_01ff9e6c VEC_DotProduct
 #define data_02053438 gZeroVecFx32
-#define data_02053444 data_02053458
+#define data_02053444 gIdentityMtxFx33
 #define data_ov016_020a6e1c data_ov016_020a6e3c
 #define func_02036240 ActorRegistry_GetEntityByIndex
 #define func_ov016_020a2558 func_ov016_020a2578
