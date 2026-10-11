@@ -6,6 +6,10 @@ src/overlays/ov042/calls/CommitCameraProjection.c:
     complete
     .text       start:0x020bd040 end:0x020bd070
 
+src/overlays/ov042/calls/CommitCameraFrame.c:
+    complete
+    .text       start:0x020bd070 end:0x020bd0f4
+
 src/overlays/ov042/calls/func_ov042_020bd0f4.c:
     complete
     .text       start:0x020bd0f4 end:0x020bd110

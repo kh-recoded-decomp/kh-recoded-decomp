@@ -1215,6 +1215,436 @@
       "behavior": "Initialised data words, pointers named by their targets."
     },
     {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x02079f4c",
+      "end": "0x02079f58",
+      "source": "src/overlays/ov015/data/tables/gContextFlagTestMasks.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gContextFlagTestMasks",
+      "behavior": "Three bit masks for wireless context flags"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x2079f58",
+      "end": "0x2079f64",
+      "source": "src/overlays/ov015/data/tables/data_ov015_02079f58.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "data_ov015_02079f58",
+      "behavior": "Three wireless panel widget ids"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x2079f64",
+      "end": "0x2079f70",
+      "source": "src/overlays/ov015/data/tables/data_ov015_02079f64.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "data_ov015_02079f64",
+      "behavior": "Three wireless panel widget ids"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x2079f70",
+      "end": "0x2079f7c",
+      "source": "src/overlays/ov015/data/tables/data_ov015_02079f70.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "data_ov015_02079f70",
+      "behavior": "Three wireless panel widget ids"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x2079f7c",
+      "end": "0x2079f88",
+      "source": "src/overlays/ov015/data/tables/data_ov015_02079f7c.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "data_ov015_02079f7c",
+      "behavior": "Three wireless panel widget ids"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x2079f88",
+      "end": "0x2079f94",
+      "source": "src/overlays/ov015/data/tables/gContextFlagSetMasks.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gContextFlagSetMasks",
+      "behavior": "Wireless context flag masks"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x2079f94",
+      "end": "0x2079fa0",
+      "source": "src/overlays/ov015/data/tables/gContextFlagClearMasks.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gContextFlagClearMasks",
+      "behavior": "Wireless context flag masks"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x2079fa0",
+      "end": "0x2079fb4",
+      "source": "src/overlays/ov015/data/tables/gWirelessMainBgConfig.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gWirelessMainBgConfig",
+      "behavior": "Wireless panel background container configuration"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x2079fb4",
+      "end": "0x2079fc8",
+      "source": "src/overlays/ov015/data/tables/gWirelessSubBgConfig.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gWirelessSubBgConfig",
+      "behavior": "Wireless panel background container configuration"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x2079fc8",
+      "end": "0x2079fdc",
+      "source": "src/overlays/ov015/data/tables/data_ov015_02079fc8.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "data_ov015_02079fc8",
+      "behavior": "Wireless panel background container configuration"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x2079fdc",
+      "end": "0x2079ff0",
+      "source": "src/overlays/ov015/data/tables/data_ov015_02079fdc.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "data_ov015_02079fdc",
+      "behavior": "Wireless panel background container configuration"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x2079ff0",
+      "end": "0x207a004",
+      "source": "src/overlays/ov015/data/tables/data_ov015_02079ff0.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "data_ov015_02079ff0",
+      "behavior": "Wireless panel background container configuration"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x207a004",
+      "end": "0x207a01c",
+      "source": "src/overlays/ov015/data/tables/gWirelessMainObjConfig.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gWirelessMainObjConfig",
+      "behavior": "Wireless panel object manager initialization"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x207a01c",
+      "end": "0x207a034",
+      "source": "src/overlays/ov015/data/tables/gWirelessSubObjConfig.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gWirelessSubObjConfig",
+      "behavior": "Wireless panel object manager initialization"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x0207a2e0",
+      "end": "0x0207a2f8",
+      "source": "src/overlays/ov015/data/tables/gWirelessBoardObjConfig.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gWirelessBoardObjConfig",
+      "behavior": "Object manager initialization for the wireless board"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x207a560",
+      "end": "0x207a7b8",
+      "source": "src/overlays/ov015/data/tables/gWirelessResourceDataC9.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gWirelessResourceDataC9",
+      "behavior": "Ten fixed-size wireless resource groups; field meanings remain unconfirmed"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x207a7b8",
+      "end": "0x207aa10",
+      "source": "src/overlays/ov015/data/tables/gWirelessResourceDataA3.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gWirelessResourceDataA3",
+      "behavior": "Ten fixed-size wireless resource groups; field meanings remain unconfirmed"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x207aa10",
+      "end": "0x207ac68",
+      "source": "src/overlays/ov015/data/tables/gWirelessResourceDataA7.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gWirelessResourceDataA7",
+      "behavior": "Ten fixed-size wireless resource groups; field meanings remain unconfirmed"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x207ac68",
+      "end": "0x207aec0",
+      "source": "src/overlays/ov015/data/tables/gWirelessResourceDataB7.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gWirelessResourceDataB7",
+      "behavior": "Ten fixed-size wireless resource groups; field meanings remain unconfirmed"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x207aec0",
+      "end": "0x207b118",
+      "source": "src/overlays/ov015/data/tables/gWirelessResourceDataC3.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gWirelessResourceDataC3",
+      "behavior": "Ten fixed-size wireless resource groups; field meanings remain unconfirmed"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x207b118",
+      "end": "0x207b370",
+      "source": "src/overlays/ov015/data/tables/gWirelessResourceDataC7.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gWirelessResourceDataC7",
+      "behavior": "Ten fixed-size wireless resource groups; field meanings remain unconfirmed"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x207b370",
+      "end": "0x207b5c8",
+      "source": "src/overlays/ov015/data/tables/gWirelessResourceDataB6.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gWirelessResourceDataB6",
+      "behavior": "Ten fixed-size wireless resource groups; field meanings remain unconfirmed"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x207b5c8",
+      "end": "0x207b820",
+      "source": "src/overlays/ov015/data/tables/gWirelessResourceDataA6.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gWirelessResourceDataA6",
+      "behavior": "Ten fixed-size wireless resource groups; field meanings remain unconfirmed"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x207b820",
+      "end": "0x207ba78",
+      "source": "src/overlays/ov015/data/tables/gWirelessResourceDataB4.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gWirelessResourceDataB4",
+      "behavior": "Ten fixed-size wireless resource groups; field meanings remain unconfirmed"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x207ba78",
+      "end": "0x207bcd0",
+      "source": "src/overlays/ov015/data/tables/gWirelessResourceDataC8.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gWirelessResourceDataC8",
+      "behavior": "Ten fixed-size wireless resource groups; field meanings remain unconfirmed"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x207bcd0",
+      "end": "0x207bf28",
+      "source": "src/overlays/ov015/data/tables/gWirelessResourceDataC5.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gWirelessResourceDataC5",
+      "behavior": "Ten fixed-size wireless resource groups; field meanings remain unconfirmed"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x207bf28",
+      "end": "0x207c180",
+      "source": "src/overlays/ov015/data/tables/gWirelessResourceDataA5.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gWirelessResourceDataA5",
+      "behavior": "Ten fixed-size wireless resource groups; field meanings remain unconfirmed"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x207c180",
+      "end": "0x207c3d8",
+      "source": "src/overlays/ov015/data/tables/gWirelessResourceDataA8.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gWirelessResourceDataA8",
+      "behavior": "Ten fixed-size wireless resource groups; field meanings remain unconfirmed"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x207c3d8",
+      "end": "0x207c630",
+      "source": "src/overlays/ov015/data/tables/gWirelessResourceDataA4.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gWirelessResourceDataA4",
+      "behavior": "Ten fixed-size wireless resource groups; field meanings remain unconfirmed"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x207c630",
+      "end": "0x207c888",
+      "source": "src/overlays/ov015/data/tables/gWirelessResourceDataC4.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gWirelessResourceDataC4",
+      "behavior": "Ten fixed-size wireless resource groups; field meanings remain unconfirmed"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x207c888",
+      "end": "0x207cae0",
+      "source": "src/overlays/ov015/data/tables/gWirelessResourceDataB3.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gWirelessResourceDataB3",
+      "behavior": "Ten fixed-size wireless resource groups; field meanings remain unconfirmed"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x207cae0",
+      "end": "0x207cd38",
+      "source": "src/overlays/ov015/data/tables/gWirelessResourceDataB5.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gWirelessResourceDataB5",
+      "behavior": "Ten fixed-size wireless resource groups; field meanings remain unconfirmed"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x207cd38",
+      "end": "0x207cf90",
+      "source": "src/overlays/ov015/data/tables/gWirelessResourceDataA0.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gWirelessResourceDataA0",
+      "behavior": "Ten fixed-size wireless resource groups; field meanings remain unconfirmed"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x207cf90",
+      "end": "0x207d1e8",
+      "source": "src/overlays/ov015/data/tables/gWirelessResourceDataB2.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gWirelessResourceDataB2",
+      "behavior": "Ten fixed-size wireless resource groups; field meanings remain unconfirmed"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x207d1e8",
+      "end": "0x207d440",
+      "source": "src/overlays/ov015/data/tables/gWirelessResourceDataA2.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gWirelessResourceDataA2",
+      "behavior": "Ten fixed-size wireless resource groups; field meanings remain unconfirmed"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x207d440",
+      "end": "0x207d698",
+      "source": "src/overlays/ov015/data/tables/gWirelessResourceDataC2.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gWirelessResourceDataC2",
+      "behavior": "Ten fixed-size wireless resource groups; field meanings remain unconfirmed"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x207d698",
+      "end": "0x207d8f0",
+      "source": "src/overlays/ov015/data/tables/gWirelessResourceDataB1.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gWirelessResourceDataB1",
+      "behavior": "Ten fixed-size wireless resource groups; field meanings remain unconfirmed"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x207d8f0",
+      "end": "0x207db48",
+      "source": "src/overlays/ov015/data/tables/gWirelessResourceDataA1.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gWirelessResourceDataA1",
+      "behavior": "Ten fixed-size wireless resource groups; field meanings remain unconfirmed"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x207db48",
+      "end": "0x207dda0",
+      "source": "src/overlays/ov015/data/tables/gWirelessResourceDataC1.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gWirelessResourceDataC1",
+      "behavior": "Ten fixed-size wireless resource groups; field meanings remain unconfirmed"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x207dda0",
+      "end": "0x207dff8",
+      "source": "src/overlays/ov015/data/tables/gWirelessResourceDataB0.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gWirelessResourceDataB0",
+      "behavior": "Ten fixed-size wireless resource groups; field meanings remain unconfirmed"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x207dff8",
+      "end": "0x207e250",
+      "source": "src/overlays/ov015/data/tables/gWirelessResourceDataC6.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gWirelessResourceDataC6",
+      "behavior": "Ten fixed-size wireless resource groups; field meanings remain unconfirmed"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x207e250",
+      "end": "0x207e4a8",
+      "source": "src/overlays/ov015/data/tables/gWirelessResourceDataC0.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gWirelessResourceDataC0",
+      "behavior": "Ten fixed-size wireless resource groups; field meanings remain unconfirmed"
+    },
+    {
+      "module": "ov015",
+      "section": ".rodata",
+      "start": "0x207e4a8",
+      "end": "0x207e700",
+      "source": "src/overlays/ov015/data/tables/gWirelessResourceDataB8.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gWirelessResourceDataB8",
+      "behavior": "Ten fixed-size wireless resource groups; field meanings remain unconfirmed"
+    },
+    {
       "module": "ov016",
       "section": ".rodata",
       "start": "0x020a6e0c",
@@ -6976,6 +7406,106 @@
       "name": "ov100 data words",
       "origin": "generated words",
       "behavior": "Initialised data words, pointers named by their targets."
+    },
+    {
+      "module": "ov101",
+      "section": ".data",
+      "start": "0x20c19b0",
+      "end": "0x20c19c0",
+      "source": "src/overlays/ov101/data/strings/sListBattleStringsPath.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "sListBattleStringsPath",
+      "behavior": "Report menu resources and control configuration"
+    },
+    {
+      "module": "ov101",
+      "section": ".data",
+      "start": "0x20c19c0",
+      "end": "0x20c19d0",
+      "source": "src/overlays/ov101/data/tables/gListTextArchivePaths.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gListTextArchivePaths",
+      "behavior": "Report menu resources and control configuration"
+    },
+    {
+      "module": "ov101",
+      "section": ".data",
+      "start": "0x20c19d0",
+      "end": "0x20c19e4",
+      "source": "src/overlays/ov101/data/tables/gListMessageArchivePaths.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gListMessageArchivePaths",
+      "behavior": "Report menu resources and control configuration"
+    },
+    {
+      "module": "ov101",
+      "section": ".data",
+      "start": "0x20c19e4",
+      "end": "0x20c19fc",
+      "source": "src/overlays/ov101/data/strings/sListCharacterArchivePath.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "sListCharacterArchivePath",
+      "behavior": "Report menu resources and control configuration"
+    },
+    {
+      "module": "ov101",
+      "section": ".data",
+      "start": "0x20c19fc",
+      "end": "0x20c1a18",
+      "source": "src/overlays/ov101/data/strings/sListLocalizedCharacterArchivePath.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "sListLocalizedCharacterArchivePath",
+      "behavior": "Report menu resources and control configuration"
+    },
+    {
+      "module": "ov101",
+      "section": ".data",
+      "start": "0x20c1a18",
+      "end": "0x20c1a34",
+      "source": "src/overlays/ov101/data/strings/sListStoryTextPath.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "sListStoryTextPath",
+      "behavior": "Report menu resources and control configuration"
+    },
+    {
+      "module": "ov101",
+      "section": ".data",
+      "start": "0x20c1a34",
+      "end": "0x20c1a54",
+      "source": "src/overlays/ov101/data/strings/sListLocalizedCharacterObjectArchivePath.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "sListLocalizedCharacterObjectArchivePath",
+      "behavior": "Report menu resources and control configuration"
+    },
+    {
+      "module": "ov101",
+      "section": ".data",
+      "start": "0x20c1a9c",
+      "end": "0x20c1ae0",
+      "source": "src/overlays/ov101/data/tables/gListSceneDescriptor.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gListSceneDescriptor",
+      "behavior": "Report menu resources and control configuration"
+    },
+    {
+      "module": "ov101",
+      "section": ".data",
+      "start": "0x20c1ae0",
+      "end": "0x20c1b0c",
+      "source": "src/overlays/ov101/data/tables/gPrimaryListScrollConfig.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gPrimaryListScrollConfig",
+      "behavior": "Report menu resources and control configuration"
+    },
+    {
+      "module": "ov101",
+      "section": ".data",
+      "start": "0x20c1b0c",
+      "end": "0x20c1b38",
+      "source": "src/overlays/ov101/data/tables/gSecondaryListScrollConfig.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gSecondaryListScrollConfig",
+      "behavior": "Report menu resources and control configuration"
     },
     {
       "module": "ov102",

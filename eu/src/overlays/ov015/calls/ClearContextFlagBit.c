@@ -1,4 +1,4 @@
 #define ClearContextFlagBit_0206f4a8 ClearContextFlagBit
-#define g_contextFlagBits_02079f94 data_ov015_02079f94
+#define g_contextFlagBits_02079f94 gContextFlagClearMasks
 #define g_context_0207e960 data_ov015_0207e960
 #include "src/ov015/wireless/ClearContextFlagBit_0206f4a8.c"

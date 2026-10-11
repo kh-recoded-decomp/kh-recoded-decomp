@@ -2,7 +2,7 @@
 #define InitListTextLayers_020bf400 InitListTextLayers
 #define InitTextLayerDefault_02001494 InitTextLayerDefault
 #define LoadPackedFileView_020ba25c LoadPackedFileView
-#define data_ov101_020c0dc0 data_ov101_020c19c0
+#define data_ov101_020c0dc0 gListTextArchivePaths
 #define data_ov101_020c1384 sOv101_TextFontEu10Nftr_020c1f84
 #define func_02001458 func_0200146c
 #include "src/ov101/panel_state/InitListTextLayers_020bf400.c"

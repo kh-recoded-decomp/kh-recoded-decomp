@@ -35,7 +35,7 @@ UpdateScrollPanel kind:function(arm,size=0x304) addr:0x020c082c
 LoadPortraitSprites kind:function(arm,size=0x148) addr:0x020c0b30
 ReleaseStateBuffers kind:function(arm,size=0x50) addr:0x020c0c78
 UpdatePageBufferPositions kind:function(arm,size=0x98) addr:0x020c0cc8
-func_ov101_020c0d60 kind:function(arm,size=0x7c) addr:0x020c0d60
+CommitPageInteractionBounds kind:function(arm,size=0x7c) addr:0x020c0d60
 ShutdownPageInteractionState kind:function(arm,size=0x18) addr:0x020c0ddc
 func_ov101_020c0df4 kind:function(arm,size=0x2f4) addr:0x020c0df4
 ResetPageScrollValue kind:function(arm,size=0x28) addr:0x020c10e8
@@ -54,23 +54,23 @@ func_ov101_020c17e4 kind:function(arm,size=0x19c) addr:0x020c17e4
 func_ov101_020c1980 kind:function(arm,size=0x4) addr:0x020c1980
 gOv101Callbacks kind:data(any) addr:0x020c1984
 sOv101_Ev2dChtexP2_020c19a0 kind:data(any) addr:0x020c19a0
-data_ov101_020c19b0 kind:data(any) addr:0x020c19b0
-data_ov101_020c19c0 kind:data(any) addr:0x020c19c0
-data_ov101_020c19d0 kind:data(any) addr:0x020c19d0
-data_ov101_020c19e4 kind:data(any) addr:0x020c19e4
-data_ov101_020c19fc kind:data(any) addr:0x020c19fc
-data_ov101_020c1a18 kind:data(any) addr:0x020c1a18
-data_ov101_020c1a34 kind:data(any) addr:0x020c1a34
+sListBattleStringsPath kind:data(any) addr:0x020c19b0
+gListTextArchivePaths kind:data(any) addr:0x020c19c0
+gListMessageArchivePaths kind:data(any) addr:0x020c19d0
+sListCharacterArchivePath kind:data(any) addr:0x020c19e4
+sListLocalizedCharacterArchivePath kind:data(any) addr:0x020c19fc
+sListStoryTextPath kind:data(any) addr:0x020c1a18
+sListLocalizedCharacterObjectArchivePath kind:data(any) addr:0x020c1a34
 sOv101_UiReportTextLanguageCharacterSZ_020c1a54 kind:data(any) addr:0x020c1a54
 sOv101_UiReportTextLanguageCharacterDetailSZ_020c1a74 kind:data(any) addr:0x020c1a74
-data_ov101_020c1a9c kind:data(any) addr:0x020c1a9c ambiguous
-data_ov101_020c1ae0 kind:data(any) addr:0x020c1ae0
-data_ov101_020c1b0c kind:data(any) addr:0x020c1b0c
-data_ov101_020c1b38 kind:data(any) addr:0x020c1b38
+gListSceneDescriptor kind:data(any) addr:0x020c1a9c ambiguous
+gPrimaryListScrollConfig kind:data(any) addr:0x020c1ae0
+gSecondaryListScrollConfig kind:data(any) addr:0x020c1b0c
+gPrimaryListSlotTemplates kind:data(any) addr:0x020c1b38
 data_ov101_020c1bc8 kind:data(any) addr:0x020c1bc8 ambiguous
-data_ov101_020c1c58 kind:data(any) addr:0x020c1c58
+gListEntryTextIndices kind:data(any) addr:0x020c1c58
 data_ov101_020c1c60 kind:data(any) addr:0x020c1c60 ambiguous
-data_ov101_020c1d98 kind:data(any) addr:0x020c1d98
+gSecondaryListSlotTemplates kind:data(any) addr:0x020c1d98
 data_ov101_020c1e61 kind:data(any) addr:0x020c1e61 ambiguous
 data_ov101_020c1ea0 kind:data(any) addr:0x020c1ea0 ambiguous
 sOv101_VblankFunc_020c1f78 kind:data(any) addr:0x020c1f78

@@ -1,8 +1,6 @@
-#include "nitro/types.h"
+#include "src/overlays/ov101/ListSlotTemplate.h"
 
-typedef struct {
-    u8 data[0x18];
-} SlotTemplate;
+typedef ListSlotTemplate SlotTemplate;
 
 typedef struct {
     u32 fileId;
@@ -20,8 +18,6 @@ typedef struct {
     u8 slotLists[2][0x6434];
 } Ov101State;
 
-extern const SlotTemplate data_ov101_020c1b38[];
-extern const SlotTemplate data_ov101_020c1d98[];
 extern void InitObjManager(void *manager, ObjManagerConfig *config);
 extern void PXI_Init_0204f020(void *manager, u32 fileId);
 extern void CreateOv101SlotEntry(int listIndex, int entryIndex, const SlotTemplate *slotTemplate, Ov101State *state);
@@ -47,7 +43,7 @@ void InitListSlots(Ov101State *state)
     InitObjManager(state->slotLists[0], &config);
     PXI_Init_0204f020(state->slotLists[0], ARCHIVE_FILE_ID(state->paletteArchive, 0));
     for (i = 0; i < 12; i++) {
-        CreateOv101SlotEntry(0, i, &data_ov101_020c1b38[i], state);
+        CreateOv101SlotEntry(0, i, &gPrimaryListSlotTemplates[i], state);
     }
     row = 0;
     do {
@@ -63,6 +59,6 @@ void InitListSlots(Ov101State *state)
     config.unk_0C = 0;
     InitObjManager(state->slotLists[1], &config);
     for (slot = 0; slot < 20; slot++) {
-        CreateOv101SlotEntry(1, slot, &data_ov101_020c1d98[slot], state);
+        CreateOv101SlotEntry(1, slot, &gSecondaryListSlotTemplates[slot], state);
     }
 }

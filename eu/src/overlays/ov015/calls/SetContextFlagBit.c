@@ -1,4 +1,4 @@
 #define SetContextFlagBit_0206f418 SetContextFlagBit
-#define g_contextFlagBits_02079f88 data_ov015_02079f88
+#define g_contextFlagBits_02079f88 gContextFlagSetMasks
 #define g_context_0207e960 data_ov015_0207e960
 #include "src/ov015/wireless/SetContextFlagBit_0206f418.c"

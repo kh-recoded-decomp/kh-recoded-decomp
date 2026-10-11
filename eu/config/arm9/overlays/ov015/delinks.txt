@@ -1100,6 +1100,46 @@ src/overlays/ov015/data/tables/PointerTables_ov015_0207e868.c:
     complete
     .data       start:0x0207e868 end:0x0207e8ac
 
+src/overlays/ov015/data/tables/data_ov015_02079f58.c:
+    complete
+    .rodata     start:0x02079f58 end:0x02079f64
+
+src/overlays/ov015/data/tables/data_ov015_02079f64.c:
+    complete
+    .rodata     start:0x02079f64 end:0x02079f70
+
+src/overlays/ov015/data/tables/data_ov015_02079f70.c:
+    complete
+    .rodata     start:0x02079f70 end:0x02079f7c
+
+src/overlays/ov015/data/tables/data_ov015_02079f7c.c:
+    complete
+    .rodata     start:0x02079f7c end:0x02079f88
+
+src/overlays/ov015/data/tables/data_ov015_02079fc8.c:
+    complete
+    .rodata     start:0x02079fc8 end:0x02079fdc
+
+src/overlays/ov015/data/tables/data_ov015_02079fdc.c:
+    complete
+    .rodata     start:0x02079fdc end:0x02079ff0
+
+src/overlays/ov015/data/tables/data_ov015_02079ff0.c:
+    complete
+    .rodata     start:0x02079ff0 end:0x0207a004
+
+src/overlays/ov015/data/tables/gContextFlagClearMasks.c:
+    complete
+    .rodata     start:0x02079f94 end:0x02079fa0
+
+src/overlays/ov015/data/tables/gContextFlagSetMasks.c:
+    complete
+    .rodata     start:0x02079f88 end:0x02079f94
+
+src/overlays/ov015/data/tables/gContextFlagTestMasks.c:
+    complete
+    .rodata     start:0x02079f4c end:0x02079f58
+
 src/overlays/ov015/data/tables/gLinkPanelAssetPaths.c:
     complete
     .data       start:0x0207e720 end:0x0207e730
@@ -1107,6 +1147,130 @@ src/overlays/ov015/data/tables/gLinkPanelAssetPaths.c:
 src/overlays/ov015/data/tables/gPanelExitResetCallback.c:
     complete
     .data       start:0x0207e780 end:0x0207e784
+
+src/overlays/ov015/data/tables/gWirelessBoardObjConfig.c:
+    complete
+    .rodata     start:0x0207a2e0 end:0x0207a2f8
+
+src/overlays/ov015/data/tables/gWirelessMainBgConfig.c:
+    complete
+    .rodata     start:0x02079fa0 end:0x02079fb4
+
+src/overlays/ov015/data/tables/gWirelessMainObjConfig.c:
+    complete
+    .rodata     start:0x0207a004 end:0x0207a01c
+
+src/overlays/ov015/data/tables/gWirelessResourceDataA0.c:
+    complete
+    .rodata     start:0x0207cd38 end:0x0207cf90
+
+src/overlays/ov015/data/tables/gWirelessResourceDataA1.c:
+    complete
+    .rodata     start:0x0207d8f0 end:0x0207db48
+
+src/overlays/ov015/data/tables/gWirelessResourceDataA2.c:
+    complete
+    .rodata     start:0x0207d1e8 end:0x0207d440
+
+src/overlays/ov015/data/tables/gWirelessResourceDataA3.c:
+    complete
+    .rodata     start:0x0207a7b8 end:0x0207aa10
+
+src/overlays/ov015/data/tables/gWirelessResourceDataA4.c:
+    complete
+    .rodata     start:0x0207c3d8 end:0x0207c630
+
+src/overlays/ov015/data/tables/gWirelessResourceDataA5.c:
+    complete
+    .rodata     start:0x0207bf28 end:0x0207c180
+
+src/overlays/ov015/data/tables/gWirelessResourceDataA6.c:
+    complete
+    .rodata     start:0x0207b5c8 end:0x0207b820
+
+src/overlays/ov015/data/tables/gWirelessResourceDataA7.c:
+    complete
+    .rodata     start:0x0207aa10 end:0x0207ac68
+
+src/overlays/ov015/data/tables/gWirelessResourceDataA8.c:
+    complete
+    .rodata     start:0x0207c180 end:0x0207c3d8
+
+src/overlays/ov015/data/tables/gWirelessResourceDataB0.c:
+    complete
+    .rodata     start:0x0207dda0 end:0x0207dff8
+
+src/overlays/ov015/data/tables/gWirelessResourceDataB1.c:
+    complete
+    .rodata     start:0x0207d698 end:0x0207d8f0
+
+src/overlays/ov015/data/tables/gWirelessResourceDataB2.c:
+    complete
+    .rodata     start:0x0207cf90 end:0x0207d1e8
+
+src/overlays/ov015/data/tables/gWirelessResourceDataB3.c:
+    complete
+    .rodata     start:0x0207c888 end:0x0207cae0
+
+src/overlays/ov015/data/tables/gWirelessResourceDataB4.c:
+    complete
+    .rodata     start:0x0207b820 end:0x0207ba78
+
+src/overlays/ov015/data/tables/gWirelessResourceDataB5.c:
+    complete
+    .rodata     start:0x0207cae0 end:0x0207cd38
+
+src/overlays/ov015/data/tables/gWirelessResourceDataB6.c:
+    complete
+    .rodata     start:0x0207b370 end:0x0207b5c8
+
+src/overlays/ov015/data/tables/gWirelessResourceDataB7.c:
+    complete
+    .rodata     start:0x0207ac68 end:0x0207aec0
+
+src/overlays/ov015/data/tables/gWirelessResourceDataB8.c:
+    complete
+    .rodata     start:0x0207e4a8 end:0x0207e700
+
+src/overlays/ov015/data/tables/gWirelessResourceDataC0.c:
+    complete
+    .rodata     start:0x0207e250 end:0x0207e4a8
+
+src/overlays/ov015/data/tables/gWirelessResourceDataC1.c:
+    complete
+    .rodata     start:0x0207db48 end:0x0207dda0
+
+src/overlays/ov015/data/tables/gWirelessResourceDataC2.c:
+    complete
+    .rodata     start:0x0207d440 end:0x0207d698
+
+src/overlays/ov015/data/tables/gWirelessResourceDataC3.c:
+    complete
+    .rodata     start:0x0207aec0 end:0x0207b118
+
+src/overlays/ov015/data/tables/gWirelessResourceDataC4.c:
+    complete
+    .rodata     start:0x0207c630 end:0x0207c888
+
+src/overlays/ov015/data/tables/gWirelessResourceDataC5.c:
+    complete
+    .rodata     start:0x0207bcd0 end:0x0207bf28
+
+src/overlays/ov015/data/tables/gWirelessResourceDataC6.c:
+    complete
+    .rodata     start:0x0207dff8 end:0x0207e250
+
+src/overlays/ov015/data/tables/gWirelessResourceDataC7.c:
+    complete
+    .rodata     start:0x0207b118 end:0x0207b370
+
+src/overlays/ov015/data/tables/gWirelessResourceDataC8.c:
+    complete
+    .rodata     start:0x0207ba78 end:0x0207bcd0
+
+src/overlays/ov015/data/tables/gWirelessResourceDataC9.c:
+    complete
+    .rodata     start:0x0207a560 end:0x0207a7b8
 
 src/overlays/ov015/data/tables/gWirelessResourceTableA.c:
     complete
@@ -1120,6 +1284,22 @@ src/overlays/ov015/data/tables/gWirelessResourceTableC.c:
     complete
     .data       start:0x0207e928 end:0x0207e960
 
+src/overlays/ov015/data/tables/gWirelessSlotStyles.c:
+    complete
+    .rodata     start:0x0207a40c end:0x0207a548
+
 src/overlays/ov015/data/tables/gWirelessStateInitCallback.c:
     complete
     .data       start:0x0207e804 end:0x0207e808
+
+src/overlays/ov015/data/tables/gWirelessSubBgConfig.c:
+    complete
+    .rodata     start:0x02079fb4 end:0x02079fc8
+
+src/overlays/ov015/data/tables/gWirelessSubObjConfig.c:
+    complete
+    .rodata     start:0x0207a01c end:0x0207a034
+
+src/overlays/ov015/data/tables/gWirelessThemeData.c:
+    complete
+    .rodata     start:0x0207a310 end:0x0207a40c

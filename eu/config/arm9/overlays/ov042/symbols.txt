@@ -1,5 +1,5 @@
 CommitCameraProjection kind:function(thumb,size=0x30) addr:0x020bd040
-func_ov042_020bd070 kind:function(thumb,size=0x84) addr:0x020bd070
+CommitCameraFrame kind:function(thumb,size=0x84) addr:0x020bd070
 func_ov042_020bd0f4 kind:function(thumb,size=0x1c) addr:0x020bd0f4
 func_ov042_020bd110 kind:function(thumb,size=0xc) addr:0x020bd110
 func_ov042_020bd11c kind:function(thumb,size=0x70) addr:0x020bd11c

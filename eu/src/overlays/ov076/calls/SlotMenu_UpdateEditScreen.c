@@ -48,7 +48,7 @@
 #define func_ov039_020bc1bc func_ov039_020bc1dc
 #define func_ov039_020bca00 GetMenuInputState
 #define func_ov076_020c4ca0 func_ov076_020c4cc0
-#define func_ov076_020c51cc func_ov076_020c51ec
+#define func_ov076_020c51cc SlotMenu_IsSelectedRecordEquipped
 #define func_ov076_020c7534 func_ov076_020c7554
 #define func_ov076_020c7a5c func_ov076_020c7a7c
 #define func_ov076_020cbba0 func_ov076_020cbbc0

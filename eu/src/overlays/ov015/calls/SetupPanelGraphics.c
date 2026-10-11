@@ -1,15 +1,10 @@
 #include "nitro/types.h"
 #include "nitro/fx_types.h"
+#include "src/overlays/ov015/WirelessPanelInitData.h"
 
-typedef struct {
-    u32 counts[5];
-} BgContainerConfig;
+typedef WirelessPanelBgConfig BgContainerConfig;
 
-typedef struct {
-    u32 cellFileId;
-    u32 unk_04[4];
-    u32 animFileId;
-} ObjManagerConfig;
+typedef WirelessPanelObjConfig ObjManagerConfig;
 
 typedef struct {
     u8 pad_00[8];
@@ -101,10 +96,6 @@ typedef struct {
 } PanelState;
 
 extern PanelState *data_ov015_0207e960;
-extern const BgContainerConfig data_ov015_02079fa0;
-extern const BgContainerConfig data_ov015_02079fb4;
-extern const ObjManagerConfig data_ov015_0207a004;
-extern const ObjManagerConfig data_ov015_0207a01c;
 extern u32 gLinkPanelAssetPaths[];
 extern u32 data_ov015_0207a19c[];
 extern const char sOv015_WxcWlmP2_0207e7e0[];
@@ -196,10 +187,10 @@ static inline void SetElementNumber(void *container, int elementId, u16 value) {
 }
 
 void SetupPanelGraphics(void) {
-    BgContainerConfig mainBgConfig = data_ov015_02079fa0;
-    ObjManagerConfig mainObjConfig = data_ov015_0207a004;
-    BgContainerConfig subBgConfig = data_ov015_02079fb4;
-    ObjManagerConfig subObjConfig = data_ov015_0207a01c;
+    BgContainerConfig mainBgConfig = gWirelessMainBgConfig;
+    ObjManagerConfig mainObjConfig = gWirelessMainObjConfig;
+    BgContainerConfig subBgConfig = gWirelessSubBgConfig;
+    ObjManagerConfig subObjConfig = gWirelessSubObjConfig;
     BgGraphicsData bgData;
     int handle;
     u32 fileId;

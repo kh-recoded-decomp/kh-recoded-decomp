@@ -7640,6 +7640,10 @@ src/overlays/ov001/auto/func_ov001_020983c4.c:
     complete
     .text       start:0x020983c4 end:0x020983c8
 
+src/overlays/ov001/calls/QueryStageFloor.c:
+    complete
+    .text       start:0x020983c8 end:0x02098428
+
 src/overlays/ov001/calls/PickStageEventSide.c:
     complete
     .text       start:0x02098428 end:0x02098598

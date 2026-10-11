@@ -76,7 +76,26 @@
     .global data_ov101_020c4fe0
     .equ data_ov101_020c4fe0, 0x020c4fe0
 
+    /* Ambiguous DSD anchors inside the list-slot template arrays. */
+    .global data_ov101_020c1bc8
+    .equ data_ov101_020c1bc8, 0x020c1bc8
+    .global data_ov101_020c1e61
+    .equ data_ov101_020c1e61, 0x020c1e61
+    .global data_ov101_020c1ea0
+    .equ data_ov101_020c1ea0, 0x020c1ea0
+
     /* Absolute NitroSDK archive aliases supplied by the original linker. */
+    /* Interior anchors in the wireless board's fixed-stride tables. */
+    .global gWirelessThemes
+    .equ gWirelessThemes, 0x0207a312
+    .global data_ov015_0207a313
+    .equ data_ov015_0207a313, 0x0207a313
+    .global data_ov015_0207a40f
+    .equ data_ov015_0207a40f, 0x0207a40f
+
+    .global data_ov101_020c1c60
+    .equ data_ov101_020c1c60, 0x020c1c60
+
     .global fsi_default_dma_no
     .equ fsi_default_dma_no, 0x02057b1c
 

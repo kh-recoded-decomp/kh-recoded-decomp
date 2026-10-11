@@ -113,11 +113,7 @@ typedef struct EventMessage {
     u8 pad_2a[0x48 - 0x2a];
 } EventMessage;
 
-typedef struct FloorProbe {
-    u32 hit;
-    fx32 height;
-    u8 pad_08[4];
-} FloorProbe;
+typedef VecFx32 FloorProbe;
 
 typedef void (*UnitTransformFunc)(VecFx32 **positionOut, u8 *transform);
 
@@ -142,7 +138,7 @@ extern void ResetUnitToBasePosition(FieldUnit *unit);
 extern void SetFieldUnitPosition(FieldUnit *unit, const VecFx32 *position);
 extern void Obj_SetPosition(void *object, const VecFx32 *position);
 extern BOOL IsFieldUnitPhase6(FieldUnit *unit);
-extern BOOL func_ov001_020983c8(const VecFx32 *position, FloorProbe *probe);
+extern BOOL QueryStageFloor(VecFx32 *position, VecFx32 *floorPoint);
 extern void *func_ov001_0208f2a4(void *list);
 extern StageCommand *BindDescriptor0(void *list, void *node);
 extern void *func_ov001_0208f2b4(void *node);
@@ -285,8 +281,8 @@ void UpdateStageManager(u32 value)
             if (IsFieldUnitPhase6(walker)) {
                 DropSlotUnit(slot);
             } else {
-                if (func_ov001_020983c8(&slot->position, &probe)) {
-                    slot->floor = probe.height;
+                if (QueryStageFloor(&slot->position, &probe)) {
+                    slot->floor = probe.y;
                 }
                 slot->position.y -= 0x800;
                 if (slot->position.y < slot->floor) {

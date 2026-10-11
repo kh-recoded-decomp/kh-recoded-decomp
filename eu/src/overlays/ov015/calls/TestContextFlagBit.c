@@ -1,4 +1,4 @@
 #define TestContextFlagBit_0206f460 TestContextFlagBit
-#define g_contextFlagBits_02079f4c data_ov015_02079f4c
+#define g_contextFlagBits_02079f4c gContextFlagTestMasks
 #define g_context_0207e960 data_ov015_0207e960
 #include "src/ov015/wireless/TestContextFlagBit_0206f460.c"

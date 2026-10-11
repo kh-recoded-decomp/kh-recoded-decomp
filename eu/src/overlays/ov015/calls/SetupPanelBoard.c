@@ -1,4 +1,5 @@
 #include "nitro/types.h"
+#include "src/overlays/ov015/WirelessBoardData.h"
 
 typedef struct {
     s16 x;
@@ -10,24 +11,9 @@ typedef struct {
     int y;
 } ScenePos;
 
-typedef struct {
-    s8 slotX;
-    s8 priority;
-    u8 pad_02[2];
-} SlotStyle;
-
-typedef struct {
-    s8 bgIndex;
-    s8 charIndex;
-    u8 pad_02[23];
-} ThemeEntry;
-
-typedef struct {
-    u32 cellFileId;
-    u32 unk_04[3];
-    int count;
-    u32 animFileId;
-} ObjManagerConfig;
+typedef WirelessSlotStyle SlotStyle;
+typedef WirelessThemeEntry ThemeEntry;
+typedef WirelessBoardObjConfig ObjManagerConfig;
 
 typedef struct {
     u16 x;
@@ -104,10 +90,7 @@ extern PanelWork *data_ov015_020812e0;
 extern const char sOv015_WxcSchP2_0207e8ac[];
 extern const char sOv015_WxcSchLanguageP2_0207e8b8[];
 extern const char sOv015_WxcScrLanguageSZ_0207e8c8[];
-extern const ObjManagerConfig data_ov015_0207a2e0;
-extern const ThemeEntry data_ov015_0207a312[];
 extern PanelPoint *gWirelessModeDataTables[];
-extern const SlotStyle data_ov015_0207a40c[];
 
 extern void MIi_CpuClear32(u32 data, void *dst, u32 size);
 extern void MI_CpuCopy8(const void *src, void *dst, u32 size);
@@ -206,7 +189,7 @@ void SetupPanelBoard(void) {
     handleA = Msg_OpenContainerAndReadHeader(sOv015_WxcSchP2_0207e8ac, 0x10, 0);
     handleB = Msg_OpenContainerAndReadHeader(sOv015_WxcSchLanguageP2_0207e8b8, 0x10, 0);
     GXS_BeginLoadBGExtPltt();
-    config = data_ov015_0207a2e0;
+    config = gWirelessBoardObjConfig;
     config.cellFileId = ARCHIVE_FILE_ID(handleA, 0x0d);
     config.animFileId = ARCHIVE_FILE_ID(handleA, 0x10);
     InitializeResourceContainer(data_ov015_020812e0->container, NULL);
@@ -231,7 +214,7 @@ void SetupPanelBoard(void) {
     *(int *)(data_ov015_020812e0->records + 0x601c) = 0;
     PXI_Init_0204f020(data_ov015_020812e0->records, ARCHIVE_FILE_ID(handleA, 0x0e));
     PXI_Init_0204f020(data_ov015_020812e0->records, ARCHIVE_FILE_ID(handleA, 0x0f));
-    PXI_Init_0204f020(data_ov015_020812e0->records, ARCHIVE_FILE_ID(handleA, data_ov015_0207a312[data_ov015_020812e0->theme].bgIndex & 0x1ff));
+    PXI_Init_0204f020(data_ov015_020812e0->records, ARCHIVE_FILE_ID(handleA, gWirelessThemes[data_ov015_020812e0->theme].bgIndex & 0x1ff));
 
     count = data_ov015_020812e0->entryCount;
     points = gWirelessModeDataTables[count];
@@ -244,9 +227,9 @@ void SetupPanelBoard(void) {
         Slot_SetMode2Bit(data_ov015_020812e0->records, data_ov015_020812e0->entries[i].animSlot, 1);
         SlotTable_SetEntryPriority(data_ov015_020812e0->records, data_ov015_020812e0->entries[i].animSlot, 0);
         SetSceneRecordValue(data_ov015_020812e0->entries[i].animSlot, &pos);
-        priority = data_ov015_0207a40c[data_ov015_020812e0->entries[i].styleId].priority;
+        priority = gWirelessSlotStyles[data_ov015_020812e0->entries[i].styleId].priority;
         data_ov015_020812e0->entries[i].markSlot =
-            PXI_Init_0204f0c8(data_ov015_020812e0->records, data_ov015_0207a40c[data_ov015_020812e0->entries[i].styleId].slotX,
+            PXI_Init_0204f0c8(data_ov015_020812e0->records, gWirelessSlotStyles[data_ov015_020812e0->entries[i].styleId].slotX,
                           priority);
         func_0204f18c(data_ov015_020812e0->records, data_ov015_020812e0->entries[i].markSlot, 0x67);
         Slot_SetMode2Bit(data_ov015_020812e0->records, data_ov015_020812e0->entries[i].markSlot, 2);
@@ -279,7 +262,7 @@ void SetupPanelBoard(void) {
         NNSi_FndFreeFromDefaultHeap(archiveB);
     }
 
-    themeArchive = func_0202c4a0(ARCHIVE_FILE_ID(handleB, data_ov015_0207a312[data_ov015_020812e0->theme].charIndex & 0x1ff),
+    themeArchive = func_0202c4a0(ARCHIVE_FILE_ID(handleB, gWirelessThemes[data_ov015_020812e0->theme].charIndex & 0x1ff),
                              0x10);
     GetBgDataFromArchive(&bgA, themeArchive, 0, 0, 0);
     GXS_LoadBGExtPltt(bgA.palette->rawData, 0, 0x200);

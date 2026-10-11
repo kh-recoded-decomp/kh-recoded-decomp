@@ -5,7 +5,7 @@ typedef struct {
     void *messages[5];
 } Ov101State;
 
-extern const char *data_ov101_020c19d0[];
+extern const char *gListMessageArchivePaths[];
 extern void *Msg_OpenContainerAndReadHeader(const char *name, u32 mode, BOOL allocFromEnd);
 
 void LoadStateMessages(Ov101State *state)
@@ -14,7 +14,7 @@ void LoadStateMessages(Ov101State *state)
 
     for (i = 0; i < 5; i++) {
         state->messages[i] = Msg_OpenContainerAndReadHeader(
-            data_ov101_020c19d0[i], 0xE, FALSE
+            gListMessageArchivePaths[i], 0xE, FALSE
         );
     }
 }

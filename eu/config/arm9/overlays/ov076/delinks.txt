@@ -96,6 +96,10 @@ src/overlays/ov076/calls/SlotMenu_IsSecondColumnMarked.c:
     complete
     .text       start:0x020c51d0 end:0x020c51ea
 
+src/overlays/ov076/calls/SlotMenu_IsSelectedRecordEquipped.c:
+    complete
+    .text       start:0x020c51ec end:0x020c5264
+
 src/overlays/ov076/auto/func_ov076_020c5264.c:
     complete
     .text       start:0x020c5264 end:0x020c5268

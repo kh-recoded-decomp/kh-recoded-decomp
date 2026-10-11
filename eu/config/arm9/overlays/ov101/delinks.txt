@@ -128,6 +128,10 @@ src/overlays/ov101/calls/UpdatePageBufferPositions.c:
     complete
     .text       start:0x020c0cc8 end:0x020c0d60
 
+src/overlays/ov101/calls/CommitPageInteractionBounds.c:
+    complete
+    .text       start:0x020c0d60 end:0x020c0ddc
+
 src/overlays/ov101/calls/ShutdownPageInteractionState.c:
     complete
     .text       start:0x020c0ddc end:0x020c0df4
@@ -200,10 +204,62 @@ src/overlays/ov101/data/strings/Strings_ov101_020c1f78.c:
     complete
     .data       start:0x020c1f78 end:0x020c1f9c
 
+src/overlays/ov101/data/strings/sListBattleStringsPath.c:
+    complete
+    .data       start:0x020c19b0 end:0x020c19c0
+
+src/overlays/ov101/data/strings/sListCharacterArchivePath.c:
+    complete
+    .data       start:0x020c19e4 end:0x020c19fc
+
+src/overlays/ov101/data/strings/sListLocalizedCharacterArchivePath.c:
+    complete
+    .data       start:0x020c19fc end:0x020c1a18
+
+src/overlays/ov101/data/strings/sListLocalizedCharacterObjectArchivePath.c:
+    complete
+    .data       start:0x020c1a34 end:0x020c1a54
+
+src/overlays/ov101/data/strings/sListStoryTextPath.c:
+    complete
+    .data       start:0x020c1a18 end:0x020c1a34
+
+src/overlays/ov101/data/tables/gListEntryTextIndices.c:
+    complete
+    .data       start:0x020c1c58 end:0x020c1d98
+
+src/overlays/ov101/data/tables/gListMessageArchivePaths.c:
+    complete
+    .data       start:0x020c19d0 end:0x020c19e4
+
 src/overlays/ov101/data/tables/gListPortraitLayouts.c:
     complete
     .data       start:0x020c1f9c end:0x020c5920
 
+src/overlays/ov101/data/tables/gListSceneDescriptor.c:
+    complete
+    .data       start:0x020c1a9c end:0x020c1ae0
+
+src/overlays/ov101/data/tables/gListTextArchivePaths.c:
+    complete
+    .data       start:0x020c19c0 end:0x020c19d0
+
 src/overlays/ov101/data/tables/gOv101Callbacks.c:
     complete
     .rodata     start:0x020c1984 end:0x020c198c
+
+src/overlays/ov101/data/tables/gPrimaryListScrollConfig.c:
+    complete
+    .data       start:0x020c1ae0 end:0x020c1b0c
+
+src/overlays/ov101/data/tables/gPrimaryListSlotTemplates.c:
+    complete
+    .data       start:0x020c1b38 end:0x020c1c58
+
+src/overlays/ov101/data/tables/gSecondaryListScrollConfig.c:
+    complete
+    .data       start:0x020c1b0c end:0x020c1b38
+
+src/overlays/ov101/data/tables/gSecondaryListSlotTemplates.c:
+    complete
+    .data       start:0x020c1d98 end:0x020c1f78

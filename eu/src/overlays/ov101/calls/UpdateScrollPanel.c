@@ -9,6 +9,6 @@
 #define _fgr _fgr
 #define _fmul _fmul
 #define _fsub _fsub
-#define data_ov101_020c0f38 data_ov101_020c1b38
-#define data_ov101_020c1198 data_ov101_020c1d98
+#define data_ov101_020c0f38 gPrimaryListSlotTemplates
+#define data_ov101_020c1198 gSecondaryListSlotTemplates
 #include "src/ov101/panel_state/UpdateScrollPanel_020c0274.c"

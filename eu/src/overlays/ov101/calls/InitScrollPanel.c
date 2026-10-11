@@ -1,20 +1,9 @@
 #include "nitro/types.h"
 #include "nitro/fx_types.h"
 #include "nitro/fx.h"
+#include "src/overlays/ov101/ListMenuData.h"
 
-typedef struct {
-    s32 listId;
-    s32 pageRows;
-    s32 totalRows;
-    s32 cursorEntry;
-    s32 upArrowEntry;
-    s32 downArrowEntry;
-    s32 barEntry;
-    s32 unk_1C;
-    s32 unk_20;
-    s32 unk_24;
-    s32 unk_28;
-} ScrollPanelConfig;
+typedef ListScrollPanelConfig ScrollPanelConfig;
 
 typedef struct {
     s32 listId;
@@ -68,10 +57,10 @@ void InitScrollPanel(ScrollPanelConfig *config, Ov101State *state)
     panel->upArrowEntry = config->upArrowEntry;
     panel->downArrowEntry = config->downArrowEntry;
     panel->barEntry = config->barEntry;
-    panel->unk_1C = config->unk_1C;
-    panel->unk_20 = config->unk_20;
-    panel->unk_24 = config->unk_24;
-    panel->unk_28 = config->unk_28;
+    panel->unk_1C = config->thumbEntry;
+    panel->unk_20 = config->firstPipEntry;
+    panel->unk_24 = config->lastPipEntry;
+    panel->unk_28 = config->barEndEntry;
     panel->scroll = 0;
     panel->cursor = 0;
     if (panel->barEntry >= 0) {
