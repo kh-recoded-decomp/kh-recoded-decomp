@@ -1,2 +1,3 @@
+#define data_ov035_020bc4e0 gMovieContextState
 #define SetStageDrawLayer_020bd740 SetStageDrawLayer
 #include "src/ov041/unclassified_helpers/SetStageDrawLayer_020bd740.c"

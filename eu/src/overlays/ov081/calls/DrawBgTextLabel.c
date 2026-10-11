@@ -1,6 +1,6 @@
 #define DrawBgTextLabel_020c5530 DrawBgTextLabel
-#define data_020c5c64 data_ov081_020c5c64
-#define data_020c5c74 data_ov081_020c5c74
+#define data_020c5c64 gBgCharacterLoaders
+#define data_020c5c74 gBgScreenAddressGetters
 #define G2D_InitializeLinearCanvas_02017a2c NNS_G2dCharCanvasInitForBG
 #define func_ov039_020bc994 GetMenuFont10
 #define DrawNnsG2dText_02017ff0 NNSi_G2dTextCanvasDrawTaggedText

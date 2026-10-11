@@ -1,3 +1,4 @@
+#define data_ov035_020bc4e0 gMovieContextState
 #define FreeManagerRecordTable_020be204 FreeManagerRecordTable
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define ZeroHalfThenFree_0202cd78 ZeroHalfThenFree

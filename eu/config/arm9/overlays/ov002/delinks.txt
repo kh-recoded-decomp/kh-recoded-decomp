@@ -856,6 +856,10 @@ src/overlays/ov002/calls/LookupTableOffset.c:
     complete
     .text       start:0x02069dd8 end:0x02069df8
 
+src/overlays/ov002/calls/GetRecordCategoryIconOffset.c:
+    complete
+    .text       start:0x02069df8 end:0x02069e8c
+
 src/overlays/ov002/calls/FillCategoryRecords.c:
     complete
     .text       start:0x02069e8c end:0x02069f9c

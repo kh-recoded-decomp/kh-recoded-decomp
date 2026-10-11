@@ -1,3 +1,5 @@
+#define data_02056050 gProjectionTextureImageOpcode
+#define data_0205605c gEnvironmentTextureImageParam
 #define GX_SendFifoWords NNS_G3dGeBufferOP_N
 #define NNSi_G3dFuncSbc_ENVMAP_0203a2f4 NNSi_G3dFuncSbc_ENVMAP
 #define data_0205a924 NNS_G3dGlb

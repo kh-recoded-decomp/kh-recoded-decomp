@@ -1,4 +1,5 @@
 #include "nitro/types.h"
+#include "src/overlays/ov001/InventoryEntry.h"
 
 typedef struct Widget {
     u8 pad_00[0xc];
@@ -64,11 +65,7 @@ typedef struct ResultsScreen {
     ResultsWork *work;
 } ResultsScreen;
 
-typedef struct ShopItem {
-    s16 itemId;
-    u8 level;
-    u8 kind;
-} ShopItem;
+typedef InventoryEntryDescriptor ShopItem;
 
 typedef struct ShopEntry {
     ShopItem item;
@@ -110,7 +107,6 @@ extern void StopSeqArcOrDefault(int seqArcNo, int player, int fadeFrames);
 extern void SetSecondaryBrightness(int value);
 extern unsigned int func_0202a9e4(unsigned int range);
 extern unsigned int random_next_scaled(unsigned int upperBound);
-extern int func_ov001_02064a38(ShopItem *item, int notify);
 extern void SetResultsMode(u32 mode);
 extern void EnterResultsTierMode(u32 mode);
 extern void CommitResultsRewards(void);
@@ -356,7 +352,7 @@ void HandleResultsInput(Widget *widget, u32 pressed)
                     item.itemId = entry->item.itemId;
                     item.level = entry->item.level;
                     item.kind = entry->item.kind;
-                    if (func_ov001_02064a38(&item, 0)) {
+                    if (AddInventoryEntry(&item, 0)) {
                         PARAMS->earnedAmount = PARAMS->earnedAmount - entry->price;
                         if (entry->unique != 0) {
                             if (WORK->selected < 0x10) {

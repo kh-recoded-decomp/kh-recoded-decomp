@@ -1,11 +1,11 @@
-#include "nitro/types.h"
+#include "src/overlays/ov081/BgTextTransfers.h"
 
-extern void GX_LoadBG0Char(void);
-extern void GX_LoadBG1Char(void);
-extern void GX_LoadBG2Char(void);
-extern void GX_LoadBG3Char(void);
+extern void GX_LoadBG0Char(const void *source, u32 offset, u32 size);
+extern void GX_LoadBG1Char(const void *source, u32 offset, u32 size);
+extern void GX_LoadBG2Char(const void *source, u32 offset, u32 size);
+extern void GX_LoadBG3Char(const void *source, u32 offset, u32 size);
 
-void (*const gBgCharacterLoaders[4])(void) = {
+const BgCharacterLoader gBgCharacterLoaders[4] = {
     GX_LoadBG0Char,
     GX_LoadBG1Char,
     GX_LoadBG2Char,

@@ -1,3 +1,4 @@
+#define data_ov035_020bc4e0 gMovieContextState
 #define FixedPointMultiply12 FX_Mul
 #define SetBrightnessAndSyncMain_02029e7c SetBrightnessAndSyncMain
 #define UpdateSceneFade_020bcce8 UpdateSceneFade

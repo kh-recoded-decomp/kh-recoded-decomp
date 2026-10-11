@@ -1,3 +1,8 @@
+#define data_020560a0 gBillboardCommandOpcodes
+#define data_020560a4 gBillboardRestoreModeParams
+#define data_020560ac gBillboardBasis
+#define data_020560d0 gBillboardTranslation
+#define data_020560dc gBillboardScale
 #define G3d_GetInverseCameraMtx NNS_G3dGlbGetInvV
 #define GetOrInitResource749c NNS_G3dGlbGetWV
 #define GetOrInitResource74cc NNS_G3dGlbGetInvWV

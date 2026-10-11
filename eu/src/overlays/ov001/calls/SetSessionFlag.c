@@ -1,6 +1,6 @@
-extern void WriteSessionPackedBits(void *dest, unsigned char val, unsigned int size);
+#include "src/overlays/ov001/SessionFlags.h"
 
-void SetSessionFlag(void *dest)
+void SetSessionFlag(int bitOffset)
 {
-    WriteSessionPackedBits(dest, 1, 1);
+    WriteSessionPackedBits(bitOffset, 1, 1);
 }

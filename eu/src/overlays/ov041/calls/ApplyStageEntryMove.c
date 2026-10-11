@@ -1,2 +1,3 @@
+#define data_ov035_020bc4e0 gMovieContextState
 #define ApplyStageEntryMove_020c0bf4 ApplyStageEntryMove
 #include "src/ov041/unclassified_helpers/ApplyStageEntryMove_020c0bf4.c"

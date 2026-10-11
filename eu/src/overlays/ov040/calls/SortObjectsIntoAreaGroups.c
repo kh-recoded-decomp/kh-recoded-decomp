@@ -1,3 +1,4 @@
+#define data_ov035_020bc4e0 gMovieContextState
 #define GetLargeTableEntry_0209c30c GetLargeTableEntry
 #define SortObjectsIntoAreaGroups_020bc970 SortObjectsIntoAreaGroups
 #define StageEvents_CheckEvent_02087824 StageEvents_CheckEvent

@@ -1,3 +1,4 @@
+#define data_ov035_020bc4e0 gMovieContextState
 #define FixedPointMultiply12 FX_Mul
 #define GetPositionAboveGround_020c2ae0 GetPositionAboveGround
 #define LoadStageActorModel_020c26b8 LoadStageActorModel

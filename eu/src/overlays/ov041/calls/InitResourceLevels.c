@@ -1,3 +1,4 @@
+#define data_ov035_020bc4e0 gMovieContextState
 #define InitResourceLevels_020bdc6c InitResourceLevels
 #define Msg_OpenContainerAndReadHeader_0202cc6c Msg_OpenContainerAndReadHeader
 #define data_ov041_020cf948 sOv041_RpgEfCoP2_020cf968

@@ -1,3 +1,4 @@
+#define data_ov035_020bc4e0 gMovieContextState
 #define SubScene9_Request_02066e50 SubScene9_Request
 #define UpdateAreaProgressLevel_020bc784 UpdateAreaProgressLevel
 #define func_0204d8d0 PlaySoundChecked

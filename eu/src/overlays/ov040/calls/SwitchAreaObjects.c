@@ -1,3 +1,4 @@
+#define data_ov035_020bc4e0 gMovieContextState
 #define SwitchAreaObjects_020bc650 SwitchAreaObjects
 #define func_ov001_0208635c func_ov001_02086384
 #define func_ov001_02087214 func_ov001_0208723c

@@ -1,3 +1,4 @@
+#define data_ov035_020bc4e0 gMovieContextState
 #define SetAnimationFrameIfChanged_020c389c SetAnimationFrameIfChanged
 #define SetStageActorFrame_020c2928 SetStageActorFrame
 #include "src/ov041/animation/SetStageActorFrame_020c2928.c"

@@ -152,10 +152,6 @@ src/ov081/data/Rodata_ov081_020c5c74.c:
     complete
     .rodata     start:0x020c5c74 end:0x020c5c84
 
-src/ov081/data/Rodata_ov081_020c5c94.c:
-    complete
-    .rodata     start:0x020c5c94 end:0x020c5ca4
-
 src/overlays/ov081/data/bss/Bss_ov081_020c5da0.c:
     complete
     .bss        start:0x020c5da0 end:0x020c5dc0
@@ -175,3 +171,7 @@ src/overlays/ov081/data/strings/Strings_ov081_020c5d48.c:
 src/overlays/ov081/data/tables/gBgCharacterLoaders.c:
     complete
     .rodata     start:0x020c5c84 end:0x020c5c94
+
+src/overlays/ov081/data/tables/gBgScreenAddressGetters.c:
+    complete
+    .rodata     start:0x020c5c94 end:0x020c5ca4

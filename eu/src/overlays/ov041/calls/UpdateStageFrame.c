@@ -1,3 +1,4 @@
+#define data_ov035_020bc4e0 gMovieContextState
 #define IsHudFlag9Set_02072884 IsHudFlag9Set
 #define RefreshActiveMenuEntry_02074f7c RefreshActiveMenuEntry
 #define UpdateChannelLevel_020bc250 UpdateChannelLevel

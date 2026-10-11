@@ -1,3 +1,4 @@
+#define data_ov035_020bc4e0 gMovieContextState
 #define ResetAreaGroupObjects_020bdaa8 ResetAreaGroupObjects
 #define SendStateEvent10_020a35bc SendStateEvent10
 #define func_ov001_0208635c func_ov001_02086384

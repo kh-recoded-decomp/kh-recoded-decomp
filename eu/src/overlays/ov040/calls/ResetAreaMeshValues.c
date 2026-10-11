@@ -1,3 +1,4 @@
+#define data_ov035_020bc4e0 gMovieContextState
 #define OS_SPrintf_02002428 OS_SPrintf
 #define ResetAreaMeshValues_020bcc60 ResetAreaMeshValues
 #define SetWorldMeshEntryValueByName_02036368 SetWorldMeshEntryValueByName

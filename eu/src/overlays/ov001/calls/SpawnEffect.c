@@ -1,4 +1,5 @@
 #define func_ov001_02072254 ShowChoiceDetails_02072254
+#define func_ov001_02064a38 AddInventoryEntry
 #define SpawnEffect_020660a0 SpawnEffect
 #define data_ov001_0209d98c data_ov001_0209d9b4
 #define data_ov001_020a0464 data_ov001_020a0484

@@ -1,3 +1,4 @@
+#define data_ov035_020bc4e0 gMovieContextState
 #define RefreshAreaEvents_020bc5b8 RefreshAreaEvents
 #define StageEvent_SetHoldBit2_02087db8 StageEvent_SetHoldBit2
 #define StageEvents_CheckEvent_02087824 StageEvents_CheckEvent

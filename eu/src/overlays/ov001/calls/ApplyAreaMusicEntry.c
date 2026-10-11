@@ -1,6 +1,6 @@
 #define ApplyAreaMusicEntry_02064734 ApplyAreaMusicEntry
 #define StoreGlobalArrayEntry_02025668 StoreGlobalArrayEntry
-#define data_ov001_0209d878 data_ov001_0209d8a0
+#define data_ov001_0209d878 gScriptHandlerBindingsSlot8
 #define data_ov001_020a0460 data_ov001_020a0480
 #define func_02029f78 func_02029f8c
 #include "src/ov001/field_manager/ApplyAreaMusicEntry_02064734.c"

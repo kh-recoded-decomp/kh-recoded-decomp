@@ -105,3 +105,5 @@ gBarGaugeClassDescriptor kind:data(any) addr:0x020bc4e8
 gMovieContextState kind:bss addr:0x020bc500
 data_ov035_020bc504 kind:bss addr:0x020bc504
 data_ov035_020bc508 kind:bss addr:0x020bc508
+func_020bd17c kind:label(thumb) addr:0x020bd17c
+func_020bd2a4 kind:label(thumb) addr:0x020bd2a4

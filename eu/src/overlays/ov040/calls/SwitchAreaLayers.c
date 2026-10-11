@@ -1,3 +1,4 @@
+#define data_ov035_020bc4e0 gMovieContextState
 #define SwitchAreaLayers_020bc710 SwitchAreaLayers
 #define func_ov001_0207f028 func_ov001_0207f050
 #define func_ov007_020a1b3c SetSlotSide

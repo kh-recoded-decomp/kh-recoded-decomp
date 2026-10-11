@@ -125,7 +125,7 @@ func_ov001_02064998 kind:function(thumb,size=0x20) addr:0x02064998
 GetSessionStateFlags2Bit kind:function(thumb,size=0x18) addr:0x020649b8
 GetPageVariantParams kind:function(thumb,size=0x60) addr:0x020649d0
 func_ov001_02064a30 kind:function(thumb,size=0x8) addr:0x02064a30
-func_ov001_02064a38 kind:function(thumb,size=0x6e) addr:0x02064a38
+AddInventoryEntry kind:function(thumb,size=0x6e) addr:0x02064a38
 func_ov001_02064aa8 kind:function(thumb,size=0x16) addr:0x02064aa8
 IsBattleModeOne kind:function(thumb,size=0x20) addr:0x02064ac0
 CommitChapterClearRecords kind:function(thumb,size=0x164) addr:0x02064ae0
@@ -2094,10 +2094,10 @@ VecToYawPitch kind:function(thumb,size=0x58) addr:0x0209d3ec
 ComputeArcTrajectory kind:function(thumb,size=0x138) addr:0x0209d444
 GetTrajectoryPosition kind:function(thumb,size=0xba) addr:0x0209d57c
 BuildSweptShape kind:function(thumb,size=0x268) addr:0x0209d638
-data_ov001_0209d8a0 kind:data(any) addr:0x0209d8a0
+gScriptHandlerBindingsSlot8 kind:data(word[10]) addr:0x0209d8a0
 data_ov001_0209d8c8 kind:data(any) addr:0x0209d8c8
-data_ov001_0209d8f8 kind:data(any) addr:0x0209d8f8
-data_ov001_0209d940 kind:data(any) addr:0x0209d940
+gScriptHandlerBindingsSlot7 kind:data(word[18]) addr:0x0209d8f8
+gSessionCounterLimits kind:data(word[29]) addr:0x0209d940
 data_ov001_0209d9b4 kind:data(any) addr:0x0209d9b4
 data_ov001_0209d9d0 kind:data(any) addr:0x0209d9d0
 data_ov001_0209d9e2 kind:data(any) addr:0x0209d9e2

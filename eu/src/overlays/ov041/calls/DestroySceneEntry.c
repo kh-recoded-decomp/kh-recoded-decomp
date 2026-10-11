@@ -1,3 +1,4 @@
+#define data_ov035_020bc4e0 gMovieContextState
 #define ActorSlot_Unlink_02035c48 ActorSlot_Unlink
 #define DestroyDisplayObject_020c37b4 DestroyDisplayObject
 #define DestroySceneEntry_020c0aac DestroySceneEntry

@@ -1,3 +1,4 @@
+#define data_ov035_020bc4e0 gMovieContextState
 #define FinishAreaTransition_020bd66c FinishAreaTransition
 #define GetBiasAdjustedField_0206dc80 GetBiasAdjustedField
 #define ReleaseResourceAndDetach_0202eee8 ReleaseResourceAndDetach

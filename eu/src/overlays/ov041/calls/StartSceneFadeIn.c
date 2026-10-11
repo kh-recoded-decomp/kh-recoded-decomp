@@ -1,3 +1,4 @@
+#define data_ov035_020bc4e0 gMovieContextState
 #define FX_Div_01ff9c84 FX_Div
 #define SetBrightnessAndSyncMain_02029e7c SetBrightnessAndSyncMain
 #define StartSceneFadeIn_020bcca8 StartSceneFadeIn

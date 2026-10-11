@@ -4,4 +4,5 @@
 #define ReleaseRecordSlot_02051dfc ReleaseRecordSlot
 #define ResetSelectionView_02067a84 ResetSelectionView
 #define SelectCategoryRecord_02067fd8 SelectCategoryRecord
+#define func_ov002_02069df8 GetRecordCategoryIconOffset
 #include "src/ov002/unclassified_helpers/SelectCategoryRecord_02067fd8.c"

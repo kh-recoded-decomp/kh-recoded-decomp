@@ -1,3 +1,6 @@
+#define data_02056050 gProjectionTextureImageOpcode
+#define data_02056054 gProjectionTextureImageWords
+#define data_02056060 gProjectionTextureMatrix
 #define G3d_GetInverseCameraMtx NNS_G3dGlbGetInvV
 #define GX_SendFifoWords NNS_G3dGeBufferOP_N
 #define NNSi_G3dFuncSbc_PRJMAP_0203a574 NNSi_G3dFuncSbc_PRJMAP

@@ -1,2 +1,3 @@
+#define data_ov035_020bc4e0 gMovieContextState
 #define CountActiveStageEntries_020bcc38 CountActiveStageEntries
 #include "src/ov041/unclassified_helpers/CountActiveStageEntries_020bcc38.c"

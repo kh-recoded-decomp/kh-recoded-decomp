@@ -1,3 +1,4 @@
+#define data_ov035_020bc4e0 gMovieContextState
 #define GetOrOpenMessageContainer_020bd62c GetOrOpenMessageContainer
 #define Msg_OpenContainerAndReadHeader_0202cc6c Msg_OpenContainerAndReadHeader
 #define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap

@@ -1,2 +1,3 @@
+#define data_ov035_020bc4e0 gMovieContextState
 #define HasEntryWithClearState_020bcbb8 HasEntryWithClearState
 #include "src/ov041/shared_records/HasEntryWithClearState_020bcbb8.c"

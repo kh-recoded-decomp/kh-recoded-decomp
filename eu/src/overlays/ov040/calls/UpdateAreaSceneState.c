@@ -24,7 +24,7 @@ typedef struct {
     s32 pendingReward;
 } FieldGlobals;
 
-extern AreaState *data_ov035_020bc4e0;
+extern AreaState *gMovieContextState;
 extern SceneState *data_ov040_020be280;
 extern FieldGlobals *data_ov001_020a0480;
 extern BOOL IsSessionFlagSet(int id);
@@ -48,7 +48,7 @@ extern void func_ov001_0206dfbc(void);
 extern void AddRegionProgress(u8 amount);
 
 int UpdateAreaSceneState(void) {
-    AreaState *state = data_ov035_020bc4e0;
+    AreaState *state = gMovieContextState;
 
     if (state->cooldown > 0) {
         state->cooldown--;

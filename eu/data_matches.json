@@ -1,6 +1,226 @@
 {
   "data": [
     {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209d8a0",
+      "end": "0x0209d8c8",
+      "source": "src/overlays/ov001/data/tables/gScriptHandlerBindingsSlot8.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gScriptHandlerBindingsSlot8",
+      "origin": "Engine handler table slot 8",
+      "behavior": "Pairs of script handler table pointers and the overlay IDs 16 through 20 that own those tables."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209d8f8",
+      "end": "0x0209d940",
+      "source": "src/overlays/ov001/data/tables/gScriptHandlerBindingsSlot7.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gScriptHandlerBindingsSlot7",
+      "origin": "Engine handler table slot 7",
+      "behavior": "An empty binding followed by script handler tables paired with their owning overlay IDs 5 through 12."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209d940",
+      "end": "0x0209d9b4",
+      "source": "src/overlays/ov001/data/tables/gSessionCounterLimits.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gSessionCounterLimits",
+      "origin": "AddSessionCounter positive-increment clamp",
+      "behavior": "Maximum values for the 29 session counters, indexed exactly as the session counter storage."
+    },
+    {
+      "module": "arm9",
+      "section": ".rodata",
+      "start": "0x02055618",
+      "end": "0x02055638",
+      "source": "src/data/tables/gBgCharacterTransferDestinationsCopy.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gBgCharacterTransferDestinationsCopy",
+      "origin": "reconstructed duplicate transfer destination table",
+      "behavior": "Eight BG character destinations for main/sub engines, byte-identical to gBgCharacterTransferDestinations; no direct code reference is recorded for this copy."
+    },
+    {
+      "module": "arm9",
+      "section": ".rodata",
+      "start": "0x02055718",
+      "end": "0x02055738",
+      "source": "src/data/tables/gBgScreenTransferDestinationsCopy.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gBgScreenTransferDestinationsCopy",
+      "origin": "reconstructed duplicate transfer destination table",
+      "behavior": "Eight BG screen destinations for main/sub engines, byte-identical to gBgScreenTransferDestinations; no direct code reference is recorded for this copy."
+    },
+    {
+      "module": "arm9",
+      "section": ".data",
+      "start": "0x02056050",
+      "end": "0x02056054",
+      "source": "src/data/tables/gProjectionTextureImageOpcode.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gProjectionTextureImageOpcode",
+      "origin": "reconstructed Nitro G3D command template",
+      "behavior": "Geometry FIFO command or parameter words used by the matching texture/billboard SBC handler."
+    },
+    {
+      "module": "arm9",
+      "section": ".data",
+      "start": "0x02056054",
+      "end": "0x0205605c",
+      "source": "src/data/tables/gProjectionTextureImageWords.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gProjectionTextureImageWords",
+      "origin": "reconstructed Nitro G3D command template",
+      "behavior": "Geometry FIFO command or parameter words used by the matching texture/billboard SBC handler."
+    },
+    {
+      "module": "arm9",
+      "section": ".data",
+      "start": "0x0205605c",
+      "end": "0x02056060",
+      "source": "src/data/tables/gEnvironmentTextureImageParam.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gEnvironmentTextureImageParam",
+      "origin": "reconstructed Nitro G3D command template",
+      "behavior": "Geometry FIFO command or parameter words used by the matching texture/billboard SBC handler."
+    },
+    {
+      "module": "arm9",
+      "section": ".data",
+      "start": "0x02056060",
+      "end": "0x020560a0",
+      "source": "src/data/tables/gProjectionTextureMatrix.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gProjectionTextureMatrix",
+      "origin": "reconstructed Nitro G3D command template",
+      "behavior": "Texture-size projection matrix; X/Y entries are updated by PRJMAP; initial Z/W scale is 65536."
+    },
+    {
+      "module": "arm9",
+      "section": ".data",
+      "start": "0x020560a0",
+      "end": "0x020560a4",
+      "source": "src/data/tables/gBillboardCommandOpcodes.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gBillboardCommandOpcodes",
+      "origin": "reconstructed Nitro G3D command template",
+      "behavior": "Geometry FIFO command or parameter words used by the matching texture/billboard SBC handler."
+    },
+    {
+      "module": "arm9",
+      "section": ".data",
+      "start": "0x020560a4",
+      "end": "0x020560ac",
+      "source": "src/data/tables/gBillboardRestoreModeParams.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gBillboardRestoreModeParams",
+      "origin": "reconstructed Nitro G3D command template",
+      "behavior": "Geometry FIFO command or parameter words used by the matching texture/billboard SBC handler."
+    },
+    {
+      "module": "arm9",
+      "section": ".data",
+      "start": "0x020560ac",
+      "end": "0x020560d0",
+      "source": "src/data/tables/gBillboardBasis.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gBillboardBasis",
+      "origin": "reconstructed Nitro G3D command template",
+      "behavior": "Initial identity basis of the mutable billboard 4x3 matrix FIFO packet."
+    },
+    {
+      "module": "arm9",
+      "section": ".data",
+      "start": "0x020560d0",
+      "end": "0x020560dc",
+      "source": "src/data/tables/gBillboardTranslation.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gBillboardTranslation",
+      "origin": "reconstructed Nitro G3D command template",
+      "behavior": "Mutable translation vector written by its billboard SBC handler and sent to the geometry FIFO."
+    },
+    {
+      "module": "arm9",
+      "section": ".data",
+      "start": "0x020560dc",
+      "end": "0x020560e8",
+      "source": "src/data/tables/gBillboardScale.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gBillboardScale",
+      "origin": "reconstructed Nitro G3D command template",
+      "behavior": "Mutable scale vector written by its billboard SBC handler and sent to the geometry FIFO."
+    },
+    {
+      "module": "arm9",
+      "section": ".data",
+      "start": "0x020560e8",
+      "end": "0x020560ec",
+      "source": "src/data/tables/gRollBillboardCommandOpcodes.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gRollBillboardCommandOpcodes",
+      "origin": "reconstructed Nitro G3D command template",
+      "behavior": "Geometry FIFO command or parameter words used by the matching texture/billboard SBC handler."
+    },
+    {
+      "module": "arm9",
+      "section": ".data",
+      "start": "0x020560ec",
+      "end": "0x020560f4",
+      "source": "src/data/tables/gRollBillboardRestoreModeParams.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gRollBillboardRestoreModeParams",
+      "origin": "reconstructed Nitro G3D command template",
+      "behavior": "Geometry FIFO command or parameter words used by the matching texture/billboard SBC handler."
+    },
+    {
+      "module": "arm9",
+      "section": ".data",
+      "start": "0x020560f4",
+      "end": "0x02056118",
+      "source": "src/data/tables/gRollBillboardBasis.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gRollBillboardBasis",
+      "origin": "reconstructed Nitro G3D command template",
+      "behavior": "Initial identity basis of the mutable billboard 4x3 matrix FIFO packet."
+    },
+    {
+      "module": "arm9",
+      "section": ".data",
+      "start": "0x02056118",
+      "end": "0x02056124",
+      "source": "src/data/tables/gRollBillboardTranslation.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gRollBillboardTranslation",
+      "origin": "reconstructed Nitro G3D command template",
+      "behavior": "Mutable translation vector written by its billboard SBC handler and sent to the geometry FIFO."
+    },
+    {
+      "module": "arm9",
+      "section": ".data",
+      "start": "0x02056124",
+      "end": "0x02056130",
+      "source": "src/data/tables/gRollBillboardScale.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gRollBillboardScale",
+      "origin": "reconstructed Nitro G3D command template",
+      "behavior": "Mutable scale vector written by its billboard SBC handler and sent to the geometry FIFO."
+    },
+    {
+      "module": "arm9",
+      "section": ".rodata",
+      "start": "0x020558ac",
+      "end": "0x020558b4",
+      "source": "src/data/tables/gSlideMovementKeepBoth.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gSlideMovementKeepBoth",
+      "origin": "reconstructed movement flags",
+      "behavior": "Initial keepFirst/keepSecond pair copied by ResolveSlideMovement before excluding already-processed movement constraints."
+    },
+    {
       "module": "ov002",
       "section": ".rodata",
       "start": "0x0206ada0",
@@ -6439,11 +6659,11 @@
       "section": ".rodata",
       "start": "0x020c5c94",
       "end": "0x020c5ca4",
-      "source": "src/ov081/data/Rodata_ov081_020c5c94.c",
+      "source": "src/overlays/ov081/data/tables/gBgScreenAddressGetters.c",
       "compiler": "mwccarm-3.0-139",
-      "name": "ov081 pointer tables",
-      "origin": "generated table",
-      "behavior": "Tables of function and data pointers, each entry named by its target."
+      "name": "gBgScreenAddressGetters",
+      "origin": "G2 background screen-address getters",
+      "behavior": "Gets the screen tilemap address for BG0 through BG3, used when mapping text glyphs to the selected background."
     },
     {
       "module": "ov081",

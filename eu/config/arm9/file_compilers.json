@@ -1,6 +1,7 @@
 {
   "src/overlays/ov027/calls/ResolveWidgetPositionComponents.c": "dsi/1.1",
   "src/overlays/ov002/calls/GetCategoryDisplayRecordId.c": "dsi/1.1",
+  "src/overlays/ov002/calls/GetRecordCategoryIconOffset.c": "dsi/1.1",
   "src/overlays/ov001/calls/FillMessageWindowTilePattern.c": "dsi/1.1",
   "libs/msl/c/calls/qsort.c": "dsi/1.1",
   "src/overlays/ov001/calls/StartPanelLayoutTransition.c": "dsi/1.3p1",
@@ -9004,5 +9005,6 @@
   "src/overlays/ov042/calls/CommitCameraFrame.c": "dsi/1.3p1",
   "src/overlays/ov001/calls/QueryStageFloor.c": "dsi/1.3p1",
   "src/overlays/ov001/calls/OpenStageModelGroup.c": "dsi/1.3p1",
-  "src/overlays/ov101/calls/CommitPageInteractionBounds.c": "dsi/1.3p1"
+  "src/overlays/ov101/calls/CommitPageInteractionBounds.c": "dsi/1.3p1",
+  "src/overlays/ov001/calls/AddInventoryEntry.c": "dsi/1.1"
 }

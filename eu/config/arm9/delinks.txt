@@ -10993,6 +10993,10 @@ src/data/tables/gBgCharacterTransferDestinations.c:
     complete
     .rodata     start:0x02055738 end:0x02055758
 
+src/data/tables/gBgCharacterTransferDestinationsCopy.c:
+    complete
+    .rodata     start:0x02055618 end:0x02055638
+
 src/data/tables/gBgExtendedControlDispatch.c:
     complete
     .rodata     start:0x02055658 end:0x02055678
@@ -11000,6 +11004,10 @@ src/data/tables/gBgExtendedControlDispatch.c:
 src/data/tables/gBgScreenTransferDestinations.c:
     complete
     .rodata     start:0x02055758 end:0x02055778
+
+src/data/tables/gBgScreenTransferDestinationsCopy.c:
+    complete
+    .rodata     start:0x02055718 end:0x02055738
 
 src/data/tables/gBgTextControlHandlers.c:
     complete
@@ -11009,9 +11017,29 @@ src/data/tables/gBgmSequenceVarPolicies.c:
     complete
     .rodata     start:0x020559ec end:0x02055a18
 
+src/data/tables/gBillboardBasis.c:
+    complete
+    .data       start:0x020560ac end:0x020560d0
+
+src/data/tables/gBillboardCommandOpcodes.c:
+    complete
+    .data       start:0x020560a0 end:0x020560a4
+
 src/data/tables/gBillboardMatrix.c:
     complete
     .data       start:0x02056020 end:0x02056050
+
+src/data/tables/gBillboardRestoreModeParams.c:
+    complete
+    .data       start:0x020560a4 end:0x020560ac
+
+src/data/tables/gBillboardScale.c:
+    complete
+    .data       start:0x020560dc end:0x020560e8
+
+src/data/tables/gBillboardTranslation.c:
+    complete
+    .data       start:0x020560d0 end:0x020560dc
 
 src/data/tables/gCalendarMonthStarts.c:
     complete
@@ -11028,6 +11056,10 @@ src/data/tables/gCollisionBoundsDispatch.c:
 src/data/tables/gCompressedRotationElementMap.c:
     complete
     .rodata     start:0x0205587c end:0x020558a0
+
+src/data/tables/gEnvironmentTextureImageParam.c:
+    complete
+    .data       start:0x0205605c end:0x02056060
 
 src/data/tables/gFlagSelectionScaleFactors.c:
     complete
@@ -11073,6 +11105,18 @@ src/data/tables/gPageVariantTable.c:
     complete
     .rodata     start:0x02055b10 end:0x02055b94
 
+src/data/tables/gProjectionTextureImageOpcode.c:
+    complete
+    .data       start:0x02056050 end:0x02056054
+
+src/data/tables/gProjectionTextureImageWords.c:
+    complete
+    .data       start:0x02056054 end:0x0205605c
+
+src/data/tables/gProjectionTextureMatrix.c:
+    complete
+    .data       start:0x02056060 end:0x020560a0
+
 src/data/tables/gQuaternionNextAxis.c:
     complete
     .rodata     start:0x02055848 end:0x0205584c
@@ -11097,6 +11141,26 @@ src/data/tables/gResourceTextureSetupEnabled.c:
     complete
     .data       start:0x02056014 end:0x02056018
 
+src/data/tables/gRollBillboardBasis.c:
+    complete
+    .data       start:0x020560f4 end:0x02056118
+
+src/data/tables/gRollBillboardCommandOpcodes.c:
+    complete
+    .data       start:0x020560e8 end:0x020560ec
+
+src/data/tables/gRollBillboardRestoreModeParams.c:
+    complete
+    .data       start:0x020560ec end:0x020560f4
+
+src/data/tables/gRollBillboardScale.c:
+    complete
+    .data       start:0x02056124 end:0x02056130
+
+src/data/tables/gRollBillboardTranslation.c:
+    complete
+    .data       start:0x02056118 end:0x02056124
+
 src/data/tables/gSelectionLoadBitOffsets.c:
     complete
     .rodata     start:0x02055a40 end:0x02055a4c
@@ -11108,6 +11172,10 @@ src/data/tables/gSelectionStatScales.c:
 src/data/tables/gSelectionStoreBitOffsets.c:
     complete
     .rodata     start:0x02055a4c end:0x02055a58
+
+src/data/tables/gSlideMovementKeepBoth.c:
+    complete
+    .rodata     start:0x020558ac end:0x020558b4
 
 src/data/tables/gSoundCategoryNames.c:
     complete

@@ -1,7 +1,7 @@
 #define AddSessionCounter_02063a80 AddSessionCounter
 #define PXI_Init_020880d8 func_ov001_02088100
 #define WriteSessionPackedBits_0206459c WriteSessionPackedBits
-#define data_ov001_0209d918 data_ov001_0209d940
+#define data_ov001_0209d918 gSessionCounterLimits
 #define data_ov001_020a0460 data_ov001_020a0480
 #define func_0202737c AddClampedGlobalPackedBits
 #define func_ov001_02064574 ReadSessionPackedBits

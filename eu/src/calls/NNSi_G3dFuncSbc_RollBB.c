@@ -1,3 +1,8 @@
+#define data_020560e8 gRollBillboardCommandOpcodes
+#define data_020560ec gRollBillboardRestoreModeParams
+#define data_020560f4 gRollBillboardBasis
+#define data_02056118 gRollBillboardTranslation
+#define data_02056124 gRollBillboardScale
 #define G3X_GetClipMtx_02006b90 G3X_GetClipMtx
 #define GetCachedInverseViewMatrix_02019378 NNS_G3dGlbGetInvV
 #define MTX_Concat44_02005a08 MTX_Concat44

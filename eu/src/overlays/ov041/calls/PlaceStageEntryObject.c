@@ -1,3 +1,4 @@
+#define data_ov035_020bc4e0 gMovieContextState
 #define GetStageGridPosition_020c2b5c GetStageGridPosition
 #define Obj_SetPosition_0203569c Obj_SetPosition
 #define PlaceStageEntryObject_020c0940 PlaceStageEntryObject

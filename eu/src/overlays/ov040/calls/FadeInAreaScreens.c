@@ -1,3 +1,4 @@
+#define data_ov035_020bc4e0 gMovieContextState
 #define FX_Div_01ff9c84 FX_Div
 #define FadeInAreaScreens_020bd464 FadeInAreaScreens
 #define FixedPointMultiply12 FX_Mul

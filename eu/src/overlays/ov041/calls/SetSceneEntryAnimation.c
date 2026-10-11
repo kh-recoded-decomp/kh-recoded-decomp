@@ -1,3 +1,4 @@
+#define data_ov035_020bc4e0 gMovieContextState
 #define BlendToAnimationTrack_0202f374 BlendToAnimationTrack
 #define SetAnimationFrameIfChanged_020c389c SetAnimationFrameIfChanged
 #define SetSceneEntryAnimation_020c278c SetSceneEntryAnimation

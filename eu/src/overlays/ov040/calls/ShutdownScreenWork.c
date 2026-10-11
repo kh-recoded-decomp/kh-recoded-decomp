@@ -1,3 +1,4 @@
+#define data_ov035_020bc4e0 gMovieContextState
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define PXI_Init_0202a638 PXI_Init_0202a64c

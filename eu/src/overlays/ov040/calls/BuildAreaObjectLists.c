@@ -1,3 +1,4 @@
+#define data_ov035_020bc4e0 gMovieContextState
 #define BuildAreaObjectLists_020bc838 BuildAreaObjectLists
 #define NNSi_FndAllocFromDefaultHeapEx_0202a19c NNS_FndAllocFromDefaultExpHeapEx
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap

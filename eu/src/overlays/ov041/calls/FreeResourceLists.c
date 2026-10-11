@@ -1,3 +1,4 @@
+#define data_ov035_020bc4e0 gMovieContextState
 #define FreeResourceLists_020bdf00 FreeResourceLists
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define ReleaseResourceAndDetach_0202eee8 ReleaseResourceAndDetach

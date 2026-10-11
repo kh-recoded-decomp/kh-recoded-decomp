@@ -5,9 +5,9 @@ typedef struct {
     u32 unk_52c;
 } Manager;
 
-extern u32 data_ov035_020bc4e0;
+extern u32 gMovieContextState;
 
 void func_ov041_020bcd78(void) {
-    Manager *manager = *(Manager **)(data_ov035_020bc4e0 + 0xb8);
+    Manager *manager = *(Manager **)(gMovieContextState + 0xb8);
     manager->unk_52c = 0;
 }

@@ -1,3 +1,4 @@
+#define data_ov035_020bc4e0 gMovieContextState
 #define func_ov001_020645c8 IsSessionFlagSet
 #define Camera_SaveSnapshot_020c0dd4 Camera_SaveSnapshot
 #define FadeBgmVolume_0204d9a8 FadeBgmVolume

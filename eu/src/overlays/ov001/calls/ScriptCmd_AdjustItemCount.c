@@ -1,3 +1,4 @@
 #define ScriptCmd_AdjustItemCount_02065dc8 ScriptCmd_AdjustItemCount
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
+#define func_ov001_02064a38 AddInventoryEntry
 #include "src/ov001/unclassified_helpers/ScriptCmd_AdjustItemCount_02065dc8.c"
