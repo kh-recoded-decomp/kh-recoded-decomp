@@ -1930,6 +1930,20 @@
     },
     {
       "module": "ov022",
+      "symbol": "DecodeMovieChunkType2",
+      "name": "DecodeMovieChunkType2",
+      "language": "asm",
+      "source": "src/ov022/asm/DecodeMovieChunkType2_020ab5f4.c",
+      "source_symbol": "DecodeMovieChunkType2_020ab5f4",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "DecodeMovieChunkType2Impl_020ac000": "0x20ac000"
+      },
+      "evidence": "Hand-written MobiClip veneer: a single b into DecodeMovieChunkType2Impl; C emits ldr ip/bx ip instead. Assembles byte-exact."
+    },
+    {
+      "module": "ov022",
       "symbol": "DecodeMovieChunkType2Impl",
       "name": "DecodeMovieChunkType2Impl",
       "language": "asm",

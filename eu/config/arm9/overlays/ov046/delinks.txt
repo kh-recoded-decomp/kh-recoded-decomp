@@ -331,6 +331,10 @@ src/overlays/ov046/calls/CameraPath_SetOverrideView.c:
     complete
     .text       start:0x020c3044 end:0x020c3094
 
+src/overlays/ov046/calls/func_ov046_020c3094.c:
+    complete
+    .text       start:0x020c3094 end:0x020c322c
+
 src/overlays/ov046/calls/CameraCollision_ShouldBlock.c:
     complete
     .text       start:0x020c322c end:0x020c3274

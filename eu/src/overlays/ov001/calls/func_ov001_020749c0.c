@@ -5,4 +5,5 @@
 #define data_ov001_0209edcc gGaugeScale
 #define data_ov001_020a04ac data_ov001_020a04cc
 #define func_01ff878c MIi_CpuCopyFast
+#define func_ov001_02073870 BlitFourPixelLabelPattern
 #include "src/ov001/field_manager/SetHudGaugeRange_020749c0.c"
