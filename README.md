@@ -1,7 +1,5 @@
 # Kingdom Hearts Re:coded decompilation
 
-[![Discord](https://img.shields.io/badge/Discord-Join%20the%20community-5865F2?logo=discord&logoColor=white)](https://discord.gg/rVeTPhPbsx)
-
 A matching decompilation of *Kingdom Hearts Re:coded* (Nintendo DS, US `BK9E`).
 Every counted function is C that compiles to the original bytes exactly.
 
