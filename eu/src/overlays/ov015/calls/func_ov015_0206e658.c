@@ -5,7 +5,7 @@ typedef struct {
 extern void *data_ov015_0207e960;
 extern IdTable data_ov015_02079f58;
 extern void *FindWidgetById(void *target, int id);
-extern void *func_ov027_020b9380(void *target, void *obj, int outVec[2], int mode);
+extern void *ResolveWidgetPositionComponents(void *target, void *obj, int outVec[2], int mode);
 extern void SetEntrySlotsVisible(void *target, void *obj, int flag);
 extern void func_ov027_020b9604(void *target, void *obj);
 extern void ApplySelectedSubitemValues(void *target, void *obj, int useAlt);
@@ -23,7 +23,7 @@ void func_ov015_0206e658(int slotIndex) {
 
     target = (char *)data_ov015_0207e960 + 0x6ac0;
     obj = FindWidgetById(target, id);
-    func_ov027_020b9380(target, obj, outVec, 0);
+    ResolveWidgetPositionComponents(target, obj, outVec, 0);
 
     target = (char *)data_ov015_0207e960 + 0x6ac0;
     obj = FindWidgetById(target, id);

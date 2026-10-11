@@ -1,4 +1,5 @@
 #define GetPackedFieldValue_02069504 GetPackedFieldValue
 #define GetWideStringLength_02066374 GetWideStringLength
+#define data_ov002_0206ada0 gMenuRecordCategoryCounts
 #define IsPlayerCardValid_020736e0 IsPlayerCardValid
 #include "src/ov015/wireless/IsPlayerCardValid_020736e0.c"

@@ -16,7 +16,7 @@
 #define func_ov076_020c9d98 ItemPicker_DrawRows_020c9db8
 #define MIi_CpuCopy32_01ff8710 MIi_CpuCopy32
 #define func_ov027_020b91c8 func_ov027_020b91e8
-#define func_ov027_020b9360 func_ov027_020b9380
+#define func_ov027_020b9360 ResolveWidgetPositionComponents
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define data_ov076_020cd190 data_ov076_020cd1b0
 #define data_ov076_020cd35c sOv076_ScrollCmx_020cd37c

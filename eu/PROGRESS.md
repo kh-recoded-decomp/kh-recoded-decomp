@@ -12,7 +12,7 @@ an identified name (NitroSDK, NNS, MSL, ...) but no source yet.
 | PART itcm | 91 | 27 | 1 | 8 | 127 | 71.7% | 66.2% |
 | PART ov000 | 76 | 0 | 0 | 2 | 78 | 97.4% | 92.5% |
 | PART ov001 | 2037 | 0 | 0 | 58 | 2095 | 97.2% | 88.8% |
-| PART ov002 | 224 | 0 | 1 | 7 | 232 | 96.6% | 83.3% |
+| PART ov002 | 225 | 0 | 1 | 6 | 232 | 97.0% | 83.7% |
 | PART ov003 | 43 | 0 | 0 | 1 | 44 | 97.7% | 91.2% |
 | PART ov004 | 36 | 0 | 0 | 5 | 41 | 87.8% | 81.7% |
 | DONE ov005 | 1 | 0 | 0 | 0 | 1 | 100.0% | 100.0% |
@@ -37,7 +37,7 @@ an identified name (NitroSDK, NNS, MSL, ...) but no source yet.
 | PART ov024 | 26 | 0 | 0 | 1 | 27 | 96.3% | 93.4% |
 | PART ov025 | 61 | 0 | 0 | 2 | 63 | 96.8% | 88.8% |
 | DONE ov026 | 8 | 0 | 0 | 0 | 8 | 100.0% | 100.0% |
-| PART ov027 | 131 | 0 | 0 | 3 | 134 | 97.8% | 93.2% |
+| PART ov027 | 132 | 0 | 0 | 2 | 134 | 98.5% | 95.0% |
 | PART ov028 | 35 | 0 | 0 | 2 | 37 | 94.6% | 85.2% |
 | DONE ov029 | 24 | 0 | 0 | 0 | 24 | 100.0% | 100.0% |
 | PART ov030 | 69 | 0 | 0 | 1 | 70 | 98.6% | 98.6% |
@@ -115,7 +115,7 @@ an identified name (NitroSDK, NNS, MSL, ...) but no source yet.
 | DONE ov102 | 3 | 0 | 0 | 0 | 3 | 100.0% | 100.0% |
 | PART ov103 | 37 | 0 | 0 | 2 | 39 | 94.9% | 89.2% |
 | PART ov104 | 33 | 24 | 0 | 0 | 57 | 57.9% | 75.8% |
-| **TOTAL** | **9912** | **171** | **10** | **329** | **10422** | **95.1%** | **85.55%** |
+| **TOTAL** | **9914** | **171** | **10** | **327** | **10422** | **95.1%** | **85.57%** |
 
 ## Byte progress
 
@@ -124,7 +124,7 @@ the matched set is dominated by small wrappers. Bytes count real C only.
 
 | C matched bytes | Total code bytes | % |
 |---:|---:|---:|
-| **1,418,612** | **1,658,216** | **85.55%** |
+| **1,418,988** | **1,658,216** | **85.57%** |
 
 ## DATA progress
 
@@ -133,5 +133,5 @@ Naming is tracked separately and does not count as reconstructed DATA.
 
 | Metric | Complete | Total | % |
 |---|---:|---:|---:|
-| Reconstructed byte-exact DATA | **222,622** | **228,172** | **97.57%** |
-| Named DATA symbols | **1,108** | **2,331** | **47.53%** |
+| Reconstructed byte-exact DATA | **223,178** | **228,172** | **97.81%** |
+| Named DATA symbols | **1,122** | **2,331** | **48.13%** |

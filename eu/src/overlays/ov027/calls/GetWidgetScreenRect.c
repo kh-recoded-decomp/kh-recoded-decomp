@@ -1,3 +1,3 @@
 #define GetWidgetScreenRect_020b86a4 GetWidgetScreenRect
-#define func_ov027_020b9360 func_ov027_020b9380
+#define func_ov027_020b9360 ResolveWidgetPositionComponents
 #include "src/ov027/resource_container/GetWidgetScreenRect_020b86a4.c"

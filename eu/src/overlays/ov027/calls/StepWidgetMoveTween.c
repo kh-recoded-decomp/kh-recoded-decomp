@@ -1,5 +1,5 @@
 #define SampleTweenValue_0205258c SampleTweenValue
 #define SetWidgetPosition_020b91c8 func_ov027_020b91e8
 #define StepWidgetMoveTween_020b8ac8 StepWidgetMoveTween
-#define func_ov027_020b9360 func_ov027_020b9380
+#define func_ov027_020b9360 ResolveWidgetPositionComponents
 #include "src/ov027/resource_container/StepWidgetMoveTween_020b8ac8.c"

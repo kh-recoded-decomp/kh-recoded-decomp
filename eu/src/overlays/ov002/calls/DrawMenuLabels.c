@@ -2,6 +2,6 @@
 #define func_ov002_02061964 ActivatePanelSlotCD
 #define func_ov002_02066c78 DispatchContextCommand
 #define func_ov027_020b90a4 FindWidgetById
-#define func_ov027_020b9360 func_ov027_020b9380
+#define func_ov027_020b9360 ResolveWidgetPositionComponents
 #define g_context_0206c464 data_ov002_0206c464
 #include "src/ov002/panel_state/DrawMenuLabels_020643a0.c"

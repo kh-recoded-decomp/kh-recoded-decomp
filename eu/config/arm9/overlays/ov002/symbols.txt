@@ -199,7 +199,7 @@ ApplyGroupElements kind:function(arm,size=0x4c) addr:0x020682c4
 ApplyGroupSlotsAlpha kind:function(arm,size=0xac) addr:0x02068310
 SyncMismatchedCategoryEntries kind:function(arm,size=0x70) addr:0x020683bc
 ReleaseGroupSlots kind:function(arm,size=0x6c) addr:0x0206842c
-func_ov002_02068498 kind:function(arm,size=0xb0) addr:0x02068498
+GetCategoryDisplayRecordId kind:function(arm,size=0xb0) addr:0x02068498
 ResolveCategorySelectionIds kind:function(arm,size=0x25c) addr:0x02068548
 ApplyRecordsToPackedFields kind:function(arm,size=0x9ec) addr:0x020687a4
 ApplyCategoryRecord kind:function(arm,size=0x178) addr:0x02069190
@@ -242,8 +242,8 @@ data_ov002_0206ad3c kind:data(any) addr:0x0206ad3c
 data_ov002_0206ad5c kind:data(any) addr:0x0206ad5c
 data_ov002_0206ad7c kind:data(any) addr:0x0206ad7c
 data_ov002_0206ad8c kind:data(any) addr:0x0206ad8c
-data_ov002_0206ada0 kind:data(any) addr:0x0206ada0
-data_ov002_0206adb4 kind:data(any) addr:0x0206adb4
+gMenuRecordCategoryCounts kind:data(byte[20]) addr:0x0206ada0
+gMenuRecordCategoryFlagBitOffsets kind:data(short[21]) addr:0x0206adb4
 data_ov002_0206adde kind:data(any) addr:0x0206adde
 data_ov002_0206ae0c kind:data(any) addr:0x0206ae0c
 data_ov002_0206ae24 kind:data(any) addr:0x0206ae24

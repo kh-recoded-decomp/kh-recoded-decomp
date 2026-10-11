@@ -7,5 +7,5 @@
 #define func_0202a9d0 func_0202a9e4
 #define func_ov027_020b90a4 FindWidgetById
 #define func_ov027_020b91c8 func_ov027_020b91e8
-#define func_ov027_020b9360 func_ov027_020b9380
+#define func_ov027_020b9360 ResolveWidgetPositionComponents
 #include "src/ov002/unclassified_helpers/func_ov002_02064d54.c"

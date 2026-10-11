@@ -1,6 +1,6 @@
 #define CopyPanelEntry_0206e954 CopyPanelEntry
 #define func_ov027_020b90a4 FindWidgetById
 #define func_ov027_020b91c8 func_ov027_020b91e8
-#define func_ov027_020b9360 func_ov027_020b9380
+#define func_ov027_020b9360 ResolveWidgetPositionComponents
 #define g_panelState_0206f9a0 data_ov014_0206f9a0
 #include "src/ov014/panel_state/CopyPanelEntry_0206e954.c"

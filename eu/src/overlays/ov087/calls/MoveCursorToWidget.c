@@ -3,6 +3,6 @@
 #define SetInfoWindowVisible_020c431c SetInfoWindowVisible
 #define func_ov027_020b90a4 FindWidgetById
 #define func_ov027_020b91c8 func_ov027_020b91e8
-#define func_ov027_020b9360 func_ov027_020b9380
+#define func_ov027_020b9360 ResolveWidgetPositionComponents
 #define func_ov039_020bc1bc func_ov039_020bc1dc
 #include "src/ov087/panel_state/MoveCursorToWidget_020c43c4.c"

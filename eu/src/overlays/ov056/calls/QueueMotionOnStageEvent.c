@@ -1,5 +1,5 @@
 #define QueueMotionOnStageEvent_020d7814 QueueMotionOnStageEvent
 #define StageRecord_SetCallback_02087d74 StageRecord_SetCallback
-#define data_02055838 data_0205584c
+#define data_02055838 gIdentityMotionQuaternion
 #define func_ov056_020d7728 OrbitActorAroundUnit
 #include "src/ov056/unclassified_helpers/QueueMotionOnStageEvent_020d7814.c"

@@ -7,7 +7,7 @@
 #define GrantStartingRecords_02027670 GrantStartingRecords
 #define PickRandomRecordInCategory_02027e18 PickRandomRecordInCategory
 #define ReleaseRecordSlot_02051dfc ReleaseRecordSlot
-#define data_020534a4 data_020534b8
+#define data_020534a4 gStartingRecordIds
 #define func_02004ac8 OS_GetMacAddress
 #define func_0202761c SetSharedFlagBits
 #define func_0202a9d0 func_0202a9e4

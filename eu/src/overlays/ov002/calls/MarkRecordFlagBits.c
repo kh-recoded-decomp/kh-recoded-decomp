@@ -3,5 +3,6 @@
 #define IsRecordFlagBitSet_0206991c IsRecordFlagBitSet
 #define IsRecordSlotAcquired_02051ea8 IsRecordSlotAcquired
 #define MarkRecordFlagBits_0206985c MarkRecordFlagBits
+#define data_ov002_0206adb4 gMenuRecordCategoryFlagBitOffsets
 #define ReleaseRecordSlot_02051dfc ReleaseRecordSlot
 #include "src/ov002/unclassified_helpers/MarkRecordFlagBits_0206985c.c"

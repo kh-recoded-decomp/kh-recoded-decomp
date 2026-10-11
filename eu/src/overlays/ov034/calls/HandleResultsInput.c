@@ -103,7 +103,7 @@ extern Widget *FindWidgetById(void *root, int id);
 extern void SetFocusedWidget(void *root, Widget *widget);
 extern void ApplyWidgetFocusAnims(void *root, Widget *widget, BOOL focused);
 extern void SetEntrySlotsVisible(void *root, Widget *widget, int visible);
-extern void func_ov027_020b9380(void *root, Widget *widget, WidgetPos *pos, int mode);
+extern void ResolveWidgetPositionComponents(void *root, Widget *widget, WidgetPos *pos, int mode);
 extern void func_ov027_020b91e8(void *root, Widget *widget, WidgetPos *pos, int mode);
 extern BOOL PlaySoundEffect(int seqArcNo, int index);
 extern void StopSeqArcOrDefault(int seqArcNo, int player, int fadeFrames);
@@ -217,7 +217,7 @@ void HandleResultsInput(Widget *widget, u32 pressed)
             }
         }
     }
-    func_ov027_020b9380(WORK->widgets, widget, &pos, 0);
+    ResolveWidgetPositionComponents(WORK->widgets, widget, &pos, 0);
     id = widget->id;
     if ((id >= 0x12 && id <= 0x14 && WORK->tab != id - 0x12) ||
         (id >= 0x74 && id <= 0x75 && WORK->tab != id - 0x74) ||
@@ -282,7 +282,7 @@ void HandleResultsInput(Widget *widget, u32 pressed)
             WORK->mode = 1;
             SetFocusedWidget(WORK->widgets, FindWidgetById(WORK->widgets, 0x19));
             ApplyWidgetFocusAnims(WORK->widgets, widget, TRUE);
-            func_ov027_020b9380(WORK->widgets, FindWidgetById(WORK->widgets, 0x19), &pos, 0);
+            ResolveWidgetPositionComponents(WORK->widgets, FindWidgetById(WORK->widgets, 0x19), &pos, 0);
             func_ov027_020b91e8(WORK->widgets, FindWidgetById(WORK->widgets, 10), &pos, 0);
             PARAMS->bonusAmount = PARAMS->earnedAmount * WORK->multipliers[WORK->tab] / 100;
             WORK->shownTotal = PARAMS->earnedAmount - PARAMS->bonusAmount;
@@ -434,7 +434,7 @@ void HandleResultsInput(Widget *widget, u32 pressed)
         case 1:
             WORK->mode = 0;
             SetFocusedWidget(WORK->widgets, FindWidgetById(WORK->widgets, WORK->tab + 0x12));
-            func_ov027_020b9380(WORK->widgets, FindWidgetById(WORK->widgets, WORK->tab + 0x12), &pos, 0);
+            ResolveWidgetPositionComponents(WORK->widgets, FindWidgetById(WORK->widgets, WORK->tab + 0x12), &pos, 0);
             func_ov027_020b91e8(WORK->widgets, FindWidgetById(WORK->widgets, 10), &pos, 0);
             WORK->shownTotal = PARAMS->earnedAmount;
             WORK->shownTicks = PARAMS->bonusAmount / 10;

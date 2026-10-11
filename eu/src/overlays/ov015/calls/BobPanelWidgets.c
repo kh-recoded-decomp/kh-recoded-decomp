@@ -6,5 +6,5 @@
 #define SetEntrySlotsVisible_020b9580 SetEntrySlotsVisible
 #define data_0205356c gSinFx12Table
 #define func_ov027_020b91c8 func_ov027_020b91e8
-#define func_ov027_020b9360 func_ov027_020b9380
+#define func_ov027_020b9360 ResolveWidgetPositionComponents
 #include "src/ov015/ui/BobPanelWidgets_0206f7d8.c"

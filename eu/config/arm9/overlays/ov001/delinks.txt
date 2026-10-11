@@ -7000,7 +7000,7 @@ src/overlays/ov001/calls/GetEntryNumberFromAddress.c:
     complete
     .text       start:0x0208f268 end:0x0208f280
 
-src/overlays/ov001/calls/func_ov001_0208f280.c:
+src/overlays/ov001/calls/GetHandlePoolElement.c:
     complete
     .text       start:0x0208f280 end:0x0208f290
 

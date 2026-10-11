@@ -11005,6 +11005,10 @@ src/data/tables/gBgTextControlHandlers.c:
     complete
     .rodata     start:0x020555f8 end:0x02055618
 
+src/data/tables/gBgmSequenceVarPolicies.c:
+    complete
+    .rodata     start:0x020559ec end:0x02055a18
+
 src/data/tables/gBillboardMatrix.c:
     complete
     .data       start:0x02056020 end:0x02056050
@@ -11013,13 +11017,29 @@ src/data/tables/gCalendarMonthStarts.c:
     complete
     .rodata     start:0x02053418 end:0x0205344c
 
+src/data/tables/gCameraAnimationForwardAxis.c:
+    complete
+    .rodata     start:0x020558a0 end:0x020558ac
+
 src/data/tables/gCollisionBoundsDispatch.c:
     complete
     .rodata     start:0x020559d4 end:0x020559ec
 
+src/data/tables/gCompressedRotationElementMap.c:
+    complete
+    .rodata     start:0x0205587c end:0x020558a0
+
+src/data/tables/gFlagSelectionScaleFactors.c:
+    complete
+    .rodata     start:0x02055af8 end:0x02055b10
+
 src/data/tables/gGameTitleStringTable.c:
     complete
     .data       start:0x02055f30 end:0x02055f38
+
+src/data/tables/gIdentityMotionQuaternion.c:
+    complete
+    .rodata     start:0x0205584c end:0x0205585c
 
 src/data/tables/gIdentityMtxFx33.c:
     complete
@@ -11041,13 +11061,37 @@ src/data/tables/gLanguageCodeTable.c:
     complete
     .data       start:0x02055ff8 end:0x02056014
 
+src/data/tables/gMaterialColorOverrideMasks.c:
+    complete
+    .rodata     start:0x0205585c end:0x0205587c
+
 src/data/tables/gMatrixCorrectionQuaternion.c:
     complete
     .rodata     start:0x02055838 end:0x02055848
 
+src/data/tables/gPageVariantTable.c:
+    complete
+    .rodata     start:0x02055b10 end:0x02055b94
+
 src/data/tables/gQuaternionNextAxis.c:
     complete
     .rodata     start:0x02055848 end:0x0205584c
+
+src/data/tables/gRandomRecordExclusions.c:
+    complete
+    .rodata     start:0x020534e4 end:0x02053530
+
+src/data/tables/gRecordCategoryCounts.c:
+    complete
+    .rodata     start:0x0205347c end:0x02053490
+
+src/data/tables/gRecordCategoryFirstIds.c:
+    complete
+    .rodata     start:0x02053530 end:0x02053580
+
+src/data/tables/gRecordCategoryFlagBitOffsets.c:
+    complete
+    .rodata     start:0x02053490 end:0x020534b8
 
 src/data/tables/gResourceTextureSetupEnabled.c:
     complete
@@ -11068,6 +11112,10 @@ src/data/tables/gSelectionStoreBitOffsets.c:
 src/data/tables/gSoundCategoryNames.c:
     complete
     .data       start:0x0205615c end:0x0205616c
+
+src/data/tables/gStartingRecordIds.c:
+    complete
+    .rodata     start:0x020534b8 end:0x020534e4
 
 src/data/tables/sBg3ExtendedDisplayModes.c:
     complete

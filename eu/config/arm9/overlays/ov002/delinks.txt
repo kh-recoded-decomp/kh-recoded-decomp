@@ -784,6 +784,10 @@ src/overlays/ov002/calls/ReleaseGroupSlots.c:
     complete
     .text       start:0x0206842c end:0x02068498
 
+src/overlays/ov002/calls/GetCategoryDisplayRecordId.c:
+    complete
+    .text       start:0x02068498 end:0x02068548
+
 src/overlays/ov002/calls/ResolveCategorySelectionIds.c:
     complete
     .text       start:0x02068548 end:0x020687a4
@@ -944,9 +948,9 @@ src/ov002/data/Rodata_ov002_0206ad7c.c:
     complete
     .rodata     start:0x0206ad7c end:0x0206ada0
 
-src/ov002/data/Rodata_ov002_0206ada0.c:
+src/ov002/data/Rodata_ov002_0206adde.c:
     complete
-    .rodata     start:0x0206ada0 end:0x0206ae0c
+    .rodata     start:0x0206adde end:0x0206ae0c
 
 src/ov002/data/Rodata_ov002_0206ae0c.c:
     complete
@@ -1015,6 +1019,14 @@ src/overlays/ov002/data/strings/Strings_ov002_0206c438.c:
 src/overlays/ov002/data/tables/PointerTables_ov002_0206c2f4.c:
     complete
     .data       start:0x0206c2f4 end:0x0206c35c
+
+src/overlays/ov002/data/tables/gMenuRecordCategoryCounts.c:
+    complete
+    .rodata     start:0x0206ada0 end:0x0206adb4
+
+src/overlays/ov002/data/tables/gMenuRecordCategoryFlagBitOffsets.c:
+    complete
+    .rodata     start:0x0206adb4 end:0x0206adde
 
 src/overlays/ov002/data/tables/gMenuStateCallbackTail.c:
     complete

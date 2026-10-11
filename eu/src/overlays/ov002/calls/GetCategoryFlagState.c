@@ -1,2 +1,4 @@
 #define GetCategoryFlagState_020699e8 GetCategoryFlagState
+#define data_ov002_0206ada0 gMenuRecordCategoryCounts
+#define data_ov002_0206adb4 gMenuRecordCategoryFlagBitOffsets
 #include "src/ov002/unclassified_helpers/GetCategoryFlagState_020699e8.c"

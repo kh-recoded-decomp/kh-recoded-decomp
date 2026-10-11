@@ -2,5 +2,5 @@
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define SelectWidgetAndSlideOut_0206f22c SelectWidgetAndSlideOut
 #define StartWidgetMoveTween_020b9428 StartWidgetMoveTween
-#define func_ov027_020b9360 func_ov027_020b9380
+#define func_ov027_020b9360 ResolveWidgetPositionComponents
 #include "src/ov015/ui/SelectWidgetAndSlideOut_0206f22c.c"

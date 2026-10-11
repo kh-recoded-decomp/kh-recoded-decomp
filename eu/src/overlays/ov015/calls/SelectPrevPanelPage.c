@@ -2,7 +2,7 @@
 #define SelectPrevPanelPage_020707f0 SelectPrevPanelPage
 #define func_ov027_020b90a4 FindWidgetById
 #define func_ov027_020b91c8 func_ov027_020b91e8
-#define func_ov027_020b9360 func_ov027_020b9380
+#define func_ov027_020b9360 ResolveWidgetPositionComponents
 #define func_ov027_020b96a0 func_ov027_020b96c0
 #define func_ov027_020b96e4 SetFocusedWidget
 #include "src/ov015/ui/SelectPrevPanelPage_020707f0.c"

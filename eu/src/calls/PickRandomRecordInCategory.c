@@ -1,8 +1,8 @@
 #define GetRecordTableBEntry_02052238 GetRecordTableBEntry
 #define IsValueInTable_02027ebc IsValueInTable
 #define PickRandomRecordInCategory_02027e18 PickRandomRecordInCategory
-#define data_02053468 data_0205347c
-#define data_0205351c data_02053530
+#define data_02053468 gRecordCategoryCounts
+#define data_0205351c gRecordCategoryFirstIds
 #define func_020277f4 TestRecordFlagBit
 #define func_0202a9d0 func_0202a9e4
 #include "src/arm9/indexed_records/PickRandomRecordInCategory_02027e18.c"

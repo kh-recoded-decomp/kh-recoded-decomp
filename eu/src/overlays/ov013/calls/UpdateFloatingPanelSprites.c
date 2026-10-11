@@ -1,5 +1,5 @@
 #define UpdateFloatingPanelSprites_0207449c UpdateFloatingPanelSprites
 #define func_0202a9d0 func_0202a9e4
 #define func_ov027_020b91c8 func_ov027_020b91e8
-#define func_ov027_020b9360 func_ov027_020b9380
+#define func_ov027_020b9360 ResolveWidgetPositionComponents
 #include "src/ov013/panel_state/UpdateFloatingPanelSprites_0207449c.c"

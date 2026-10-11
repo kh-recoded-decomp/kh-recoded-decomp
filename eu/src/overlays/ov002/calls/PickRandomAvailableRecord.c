@@ -1,6 +1,7 @@
 #define AcquireRecordSlot_02051d3c AcquireRecordSlot
 #define GetRecordTableBEntry_02052238 GetRecordTableBEntry
 #define PickRandomAvailableRecord_0206a888 PickRandomAvailableRecord
+#define data_ov002_0206ada0 gMenuRecordCategoryCounts
 #define ReleaseRecordSlot_02051dfc ReleaseRecordSlot
 #define func_0202a9d0 func_0202a9e4
 #define func_ov002_0206991c IsRecordFlagBitSet

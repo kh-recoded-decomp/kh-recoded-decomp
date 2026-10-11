@@ -1,4 +1,6 @@
 {
+  "src/overlays/ov027/calls/ResolveWidgetPositionComponents.c": "dsi/1.1",
+  "src/overlays/ov002/calls/GetCategoryDisplayRecordId.c": "dsi/1.1",
   "src/overlays/ov001/calls/FillMessageWindowTilePattern.c": "dsi/1.1",
   "libs/msl/c/calls/qsort.c": "dsi/1.1",
   "src/overlays/ov001/calls/StartPanelLayoutTransition.c": "dsi/1.3p1",
@@ -7908,7 +7910,7 @@
   "src/overlays/ov001/calls/func_ov001_02087270.c": "dsi/1.1",
   "src/overlays/ov001/calls/func_ov001_0208eba8.c": "dsi/1.1",
   "src/overlays/ov001/calls/func_ov001_0208ebb8.c": "dsi/1.1",
-  "src/overlays/ov001/calls/func_ov001_0208f280.c": "dsi/1.1",
+  "src/overlays/ov001/calls/GetHandlePoolElement.c": "dsi/1.1",
   "src/overlays/ov001/calls/func_ov001_020925f0.c": "dsi/1.1",
   "src/overlays/ov013/calls/func_ov013_02074598.c": "dsi/1.1",
   "src/overlays/ov013/calls/func_ov013_020745a8.c": "dsi/1.1",

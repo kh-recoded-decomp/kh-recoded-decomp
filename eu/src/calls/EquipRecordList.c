@@ -1,5 +1,5 @@
 #define EquipRecordList_02027858 EquipRecordList
 #define GetRecordTableBEntry_02052238 GetRecordTableBEntry
-#define data_0205351c data_02053530
+#define data_0205351c gRecordCategoryFirstIds
 #define g_mainDataHolder_0205fe00 data_0205fe00
 #include "src/arm9/indexed_records/EquipRecordList_02027858.c"

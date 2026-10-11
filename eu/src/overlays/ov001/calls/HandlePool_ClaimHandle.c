@@ -1,4 +1,4 @@
 #define HandlePool_ClaimHandle_0208f128 HandlePool_ClaimHandle
 #define func_02023fc8 _u32_div_f
-#define func_ov001_0208f258 func_ov001_0208f280
+#define func_ov001_0208f258 GetHandlePoolElement
 #include "src/ov001/unclassified_helpers/HandlePool_ClaimHandle_0208f128.c"

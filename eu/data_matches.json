@@ -1,6 +1,160 @@
 {
   "data": [
     {
+      "module": "ov002",
+      "section": ".rodata",
+      "start": "0x0206ada0",
+      "end": "0x0206adb4",
+      "source": "src/overlays/ov002/data/tables/gMenuRecordCategoryCounts.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gMenuRecordCategoryCounts",
+      "origin": "reconstructed record category table",
+      "behavior": "Counts used to validate one-based menu record selections; identical to the ARM9 category count table."
+    },
+    {
+      "module": "ov002",
+      "section": ".rodata",
+      "start": "0x0206adb4",
+      "end": "0x0206adde",
+      "source": "src/overlays/ov002/data/tables/gMenuRecordCategoryFlagBitOffsets.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gMenuRecordCategoryFlagBitOffsets",
+      "origin": "reconstructed record category table",
+      "behavior": "Flag bit offsets used by menu record selection and SetRecordFlagBit; the first 20 offsets equal ARM9, followed by the 815-bit end offset."
+    },
+    {
+    "module": "arm9",
+    "section": ".rodata",
+    "start": "0x0205585c",
+    "end": "0x0205587c",
+    "source": "src/data/tables/gMaterialColorOverrideMasks.c",
+    "compiler": "mwccarm-3.0-139",
+    "name": "gMaterialColorOverrideMasks",
+    "origin": "reconstructed runtime table",
+    "behavior": "Masks selected by material flags bits 6-8 and 9-11 when overriding diffuse/ambient and specular/emission geometry parameters."
+},
+    {
+    "module": "arm9",
+    "section": ".rodata",
+    "start": "0x020559ec",
+    "end": "0x02055a18",
+    "source": "src/data/tables/gBgmSequenceVarPolicies.c",
+    "compiler": "mwccarm-3.0-139",
+    "name": "gBgmSequenceVarPolicies",
+    "origin": "reconstructed runtime table",
+    "behavior": "Per-BGM policy bytes; value 1 makes SoundMgr_Update preserve sequence variable 0 when interrupting and resuming a track. Other policy values remain unnamed."
+},
+    {
+    "module": "arm9",
+    "section": ".rodata",
+    "start": "0x02055af8",
+    "end": "0x02055b10",
+    "source": "src/data/tables/gFlagSelectionScaleFactors.c",
+    "compiler": "mwccarm-3.0-139",
+    "name": "gFlagSelectionScaleFactors",
+    "origin": "reconstructed runtime table",
+    "behavior": "Six 20.12 multipliers selected by the low three save-flag bits at 0x2c66 and shown in the status menu."
+},
+    {
+    "module": "arm9",
+    "section": ".rodata",
+    "start": "0x02055b10",
+    "end": "0x02055b94",
+    "source": "src/data/tables/gPageVariantTable.c",
+    "compiler": "mwccarm-3.0-139",
+    "name": "gPageVariantTable",
+    "origin": "reconstructed runtime table",
+    "behavior": "Five compact 26-byte page entries: page/title indices and three primary plus three secondary record variants (ID, level, color index), followed by a two-byte zero terminator."
+},
+    {
+    "module": "arm9",
+    "section": ".rodata",
+    "start": "0x0205584c",
+    "end": "0x0205585c",
+    "source": "src/data/tables/gIdentityMotionQuaternion.c",
+    "compiler": "mwccarm-3.0-139",
+    "name": "gIdentityMotionQuaternion",
+    "origin": "reconstructed motion and animation constant",
+    "behavior": "Identity quaternion in w,x,y,z order, copied into group and orbit motion states."
+},
+    {
+    "module": "arm9",
+    "section": ".rodata",
+    "start": "0x0205587c",
+    "end": "0x020558a0",
+    "source": "src/data/tables/gCompressedRotationElementMap.c",
+    "compiler": "mwccarm-3.0-139",
+    "name": "gCompressedRotationElementMap",
+    "origin": "reconstructed motion and animation constant",
+    "behavior": "Four non-pivot matrix elements for each of the nine compressed rotation pivots."
+},
+    {
+    "module": "arm9",
+    "section": ".rodata",
+    "start": "0x020558a0",
+    "end": "0x020558ac",
+    "source": "src/data/tables/gCameraAnimationForwardAxis.c",
+    "compiler": "mwccarm-3.0-139",
+    "name": "gCameraAnimationForwardAxis",
+    "origin": "reconstructed motion and animation constant",
+    "behavior": "Negative Z unit vector transformed by CamAnim_ApplyPose."
+},
+    {
+    "module": "arm9",
+    "section": ".rodata",
+    "start": "0x0205347c",
+    "end": "0x02053490",
+    "source": "src/data/tables/gRecordCategoryCounts.c",
+    "compiler": "mwccarm-3.0-139",
+    "name": "gRecordCategoryCounts",
+    "origin": "reconstructed record category table",
+    "behavior": "Number of record IDs in each category; used to bound random record selection."
+},
+    {
+    "module": "arm9",
+    "section": ".rodata",
+    "start": "0x02053490",
+    "end": "0x020534b8",
+    "source": "src/data/tables/gRecordCategoryFlagBitOffsets.c",
+    "compiler": "mwccarm-3.0-139",
+    "name": "gRecordCategoryFlagBitOffsets",
+    "origin": "reconstructed record category table",
+    "behavior": "Starting bit offset of each category in the saved record possession flags."
+},
+    {
+    "module": "arm9",
+    "section": ".rodata",
+    "start": "0x020534b8",
+    "end": "0x020534e4",
+    "source": "src/data/tables/gStartingRecordIds.c",
+    "compiler": "mwccarm-3.0-139",
+    "name": "gStartingRecordIds",
+    "origin": "reconstructed record category table",
+    "behavior": "Eleven additional records granted by GrantStartingRecords."
+},
+    {
+    "module": "arm9",
+    "section": ".rodata",
+    "start": "0x020534e4",
+    "end": "0x02053530",
+    "source": "src/data/tables/gRandomRecordExclusions.c",
+    "compiler": "mwccarm-3.0-139",
+    "name": "gRandomRecordExclusions",
+    "origin": "reconstructed record category table",
+    "behavior": "Record IDs rejected by IsValueInTable during random record selection."
+},
+    {
+    "module": "arm9",
+    "section": ".rodata",
+    "start": "0x02053530",
+    "end": "0x02053580",
+    "source": "src/data/tables/gRecordCategoryFirstIds.c",
+    "compiler": "mwccarm-3.0-139",
+    "name": "gRecordCategoryFirstIds",
+    "origin": "reconstructed record category table",
+    "behavior": "First record ID in each category; -1 denotes the unavailable category."
+},
+    {
       "module": "arm9",
       "section": ".rodata",
       "start": "0x020555f8",
@@ -1323,9 +1477,9 @@
     {
       "module": "ov002",
       "section": ".rodata",
-      "start": "0x0206ada0",
+      "start": "0x0206adde",
       "end": "0x0206ae0c",
-      "source": "src/ov002/data/Rodata_ov002_0206ada0.c",
+      "source": "src/ov002/data/Rodata_ov002_0206adde.c",
       "compiler": "mwccarm-3.0-139",
       "name": "ov002 data words",
       "origin": "generated words",

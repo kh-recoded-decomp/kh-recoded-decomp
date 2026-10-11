@@ -1,4 +1,4 @@
 #define GetStageAuxRecord_0209c1b0 GetStageAuxRecord
-#define func_ov001_0208f258 func_ov001_0208f280
+#define func_ov001_0208f258 GetHandlePoolElement
 #define g_stageManager_020a0508 gStageManager
 #include "src/ov001/shared_engine/GetStageAuxRecord_0209c1b0.c"

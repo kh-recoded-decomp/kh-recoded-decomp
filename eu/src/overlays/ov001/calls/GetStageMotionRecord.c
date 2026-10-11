@@ -1,4 +1,4 @@
 #define GetStageMotionRecord_0209c18c GetStageMotionRecord
-#define func_ov001_0208f258 func_ov001_0208f280
+#define func_ov001_0208f258 GetHandlePoolElement
 #define g_stageManager_020a0508 gStageManager
 #include "src/ov001/shared_engine/GetStageMotionRecord_0209c18c.c"

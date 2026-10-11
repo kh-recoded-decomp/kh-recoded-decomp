@@ -1,4 +1,4 @@
 #define GetStageAttachment_0209c144 GetStageAttachment
-#define func_ov001_0208f258 func_ov001_0208f280
+#define func_ov001_0208f258 GetHandlePoolElement
 #define g_stageManager_020a0508 gStageManager
 #include "src/ov001/shared_engine/GetStageAttachment_0209c144.c"

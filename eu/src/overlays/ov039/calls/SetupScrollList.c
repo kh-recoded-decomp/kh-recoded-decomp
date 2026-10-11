@@ -1,5 +1,5 @@
 #define RefreshScrollListLayout_020be138 RefreshScrollListLayout
 #define SetEntrySlotsVisible_020b9580 SetEntrySlotsVisible
 #define SetupScrollList_020bdf10 SetupScrollList
-#define func_ov027_020b9360 func_ov027_020b9380
+#define func_ov027_020b9360 ResolveWidgetPositionComponents
 #include "src/ov039/widget_layers/SetupScrollList_020bdf10.c"

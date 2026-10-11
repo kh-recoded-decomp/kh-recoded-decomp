@@ -1,6 +1,6 @@
 #define ShiftFollowingSlotsUp_02073ed4 ShiftFollowingSlotsUp
 #define func_ov027_020b90a4 FindWidgetById
-#define func_ov027_020b9360 func_ov027_020b9380
+#define func_ov027_020b9360 ResolveWidgetPositionComponents
 #define func_ov027_020b9428 StartWidgetMoveTween
 #define func_ov027_020b984c SetWidgetRootTouchEnabled
 #define g_panelState_02074ce0 data_ov013_02074ce0

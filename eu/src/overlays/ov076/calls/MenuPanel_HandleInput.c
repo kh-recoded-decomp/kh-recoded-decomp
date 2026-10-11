@@ -14,7 +14,7 @@
 #define SetupScrollList_020bdf10 SetupScrollList
 #define func_0204f204 func_0204f218
 #define func_ov027_020b91c8 func_ov027_020b91e8
-#define func_ov027_020b9360 func_ov027_020b9380
+#define func_ov027_020b9360 ResolveWidgetPositionComponents
 #define func_ov039_020bc0d4 GetPrimaryElementEnabled
 #define func_ov039_020bc0ec GetSecondaryElementEnabled
 #define func_ov039_020bca00 GetMenuInputState

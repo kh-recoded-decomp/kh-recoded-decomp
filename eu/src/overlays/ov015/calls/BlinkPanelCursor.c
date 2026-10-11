@@ -2,5 +2,5 @@
 #define SetEntrySlotsVisible_020b9580 SetEntrySlotsVisible
 #define func_ov027_020b90a4 FindWidgetById
 #define func_ov027_020b91c8 func_ov027_020b91e8
-#define func_ov027_020b9360 func_ov027_020b9380
+#define func_ov027_020b9360 ResolveWidgetPositionComponents
 #include "src/ov015/ui/BlinkPanelCursor_02070438.c"

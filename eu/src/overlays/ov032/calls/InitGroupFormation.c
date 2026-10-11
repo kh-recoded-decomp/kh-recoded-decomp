@@ -4,7 +4,7 @@
 #define VEC_Add_01ff9e0c VEC_Add
 #define data_02053438 gZeroVecFx32
 #define data_0205356c gSinFx12Table
-#define data_02055838 data_0205584c
+#define data_02055838 gIdentityMotionQuaternion
 #define func_02036240 ActorRegistry_GetEntityByIndex
 #define func_ov001_0208635c func_ov001_02086384
 #define func_ov016_020a6a64 IsFieldUnitPhase6

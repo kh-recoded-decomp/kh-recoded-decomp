@@ -1,5 +1,6 @@
 #define AcquireRecordSlot_02051d3c AcquireRecordSlot
 #define GetRecordFlagState_02069aac GetRecordFlagState
+#define data_ov002_0206adb4 gMenuRecordCategoryFlagBitOffsets
 #define GetRecordTableBEntry_02052238 GetRecordTableBEntry
 #define IsRecordSlotAcquired_02051ea8 IsRecordSlotAcquired
 #define ReleaseRecordSlot_02051dfc ReleaseRecordSlot

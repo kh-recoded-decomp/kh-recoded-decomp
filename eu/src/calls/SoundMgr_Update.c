@@ -2,7 +2,7 @@
 #define NNS_SndPlayerPause_0201d4d0 NNS_SndPlayerStopSeq
 #define RequestSoundLoad_0204cfac RequestSoundLoad
 #define SoundMgr_Update_0204d150 SoundMgr_Update
-#define data_020559d8 data_020559ec
+#define data_020559d8 gBgmSequenceVarPolicies
 #define func_0201d290 NNS_SndMain
 #define func_0201d740 NNS_SndPlayerMoveVolume
 #define func_0201d850 NNS_SndPlayerReadVariable

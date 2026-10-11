@@ -9,5 +9,5 @@
 #define func_ov015_0206eba4 DrawPanelInfoText
 #define func_ov027_020b8ca8 UpdateWidgetRootOnly
 #define func_ov027_020b90a4 FindWidgetById
-#define func_ov027_020b9360 func_ov027_020b9380
+#define func_ov027_020b9360 ResolveWidgetPositionComponents
 #include "src/ov015/panel_state/UpdatePanelMenuState_02070c80.c"

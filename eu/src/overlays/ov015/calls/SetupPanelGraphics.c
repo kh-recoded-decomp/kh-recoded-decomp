@@ -144,7 +144,7 @@ extern void SetAllElementObjectModes(void *container, int mode);
 extern void *FindWidgetById(void *container, int elementId);
 extern void SetEntrySlotsVisible(void *container, void *element, BOOL enabled);
 extern void func_ov027_020b97d8(void *container, void *element, int mode);
-extern void func_ov027_020b9380(void *container, void *element, ElementPosition *position, int flags);
+extern void ResolveWidgetPositionComponents(void *container, void *element, ElementPosition *position, int flags);
 extern void func_ov027_020b91e8(void *container, void *element, ElementPosition *position, int flags);
 extern void func_ov027_020b9604(void *container, void *element);
 extern void func_ov027_020b96c0(void *container, void *element, u16 value);
@@ -171,7 +171,7 @@ static inline void SetElementMode(void *container, int elementId, int mode) {
 }
 
 static inline void GetElementPosition(void *container, int elementId, ElementPosition *position) {
-    func_ov027_020b9380(container, FindWidgetById(container, elementId), position, 0);
+    ResolveWidgetPositionComponents(container, FindWidgetById(container, elementId), position, 0);
 }
 
 static inline void SetElementPosition(void *container, int elementId, ElementPosition *position) {
@@ -291,7 +291,7 @@ void SetupPanelGraphics(void) {
         container = data_ov015_0207e960->subObj;
         SetEntrySlotsVisible(container, FindWidgetById(container, 14), 1);
         container = data_ov015_0207e960->subObj;
-        func_ov027_020b9380(container, FindWidgetById(container, 14), &position, 0);
+        ResolveWidgetPositionComponents(container, FindWidgetById(container, 14), &position, 0);
         *(volatile fx32 *)&position.x = ((position.x >> 12) - 10) << 12;
         container = (*(PanelState *volatile *)&data_ov015_0207e960)->subObj;
         func_ov027_020b91e8(container, FindWidgetById(container, 14), &position, 0);
@@ -301,7 +301,7 @@ void SetupPanelGraphics(void) {
         container = data_ov015_0207e960->subObj;
         SetEntrySlotsVisible(container, FindWidgetById(container, 13), 1);
         container = data_ov015_0207e960->subObj;
-        func_ov027_020b9380(container, FindWidgetById(container, 13), &position, 0);
+        ResolveWidgetPositionComponents(container, FindWidgetById(container, 13), &position, 0);
         *(volatile fx32 *)&position.x = ((position.x >> 12) - 10) << 12;
         container = (*(PanelState *volatile *)&data_ov015_0207e960)->subObj;
         func_ov027_020b91e8(container, FindWidgetById(container, 13), &position, 0);

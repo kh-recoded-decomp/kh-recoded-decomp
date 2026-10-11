@@ -1,3 +1,3 @@
 #define HandlePool_ReleaseHandle_0208f1a8 HandlePool_ReleaseHandle
-#define func_ov001_0208f258 func_ov001_0208f280
+#define func_ov001_0208f258 GetHandlePoolElement
 #include "src/ov001/unclassified_helpers/HandlePool_ReleaseHandle_0208f1a8.c"

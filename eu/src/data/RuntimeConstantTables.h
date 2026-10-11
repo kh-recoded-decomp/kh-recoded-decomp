@@ -18,10 +18,20 @@ typedef struct KindModeScaleTable {
     fx32 rates[2][4];
 } KindModeScaleTable;
 
+typedef struct FlagSelectionScaleTable {
+    fx32 rates[6];
+} FlagSelectionScaleTable;
+
 extern const RuntimeQuaternion gMatrixCorrectionQuaternion;
+extern const RuntimeQuaternion gIdentityMotionQuaternion;
+extern const u8 gCompressedRotationElementMap[9][4];
+extern const VecFx32 gCameraAnimationForwardAxis;
 extern const u8 gQuaternionNextAxis[4];
 extern const SelectionBitOffsets gSelectionLoadBitOffsets;
 extern const SelectionBitOffsets gSelectionStoreBitOffsets;
 extern const KindModeScaleTable gKindModeScaleFactors;
+extern const u32 gMaterialColorOverrideMasks[8];
+extern const u8 gBgmSequenceVarPolicies[44];
+extern const FlagSelectionScaleTable gFlagSelectionScaleFactors;
 
 #endif

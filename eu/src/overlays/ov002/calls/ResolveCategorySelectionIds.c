@@ -1,2 +1,3 @@
 #define ResolveCategorySelectionIds_02068548 ResolveCategorySelectionIds
+#define func_ov002_02068498 GetCategoryDisplayRecordId
 #include "src/ov002/unclassified_helpers/ResolveCategorySelectionIds_02068548.c"
