@@ -372,6 +372,10 @@ src/overlays/ov076/calls/ItemList_UpdateHeaderText.c:
     complete
     .text       start:0x020c95ec end:0x020c96b8
 
+src/overlays/ov076/calls/func_ov076_020c96b8.c:
+    complete
+    .text       start:0x020c96b8 end:0x020c9790
+
 src/overlays/ov076/calls/InitImageQuad_020c9790.c:
     complete
     .text       start:0x020c9790 end:0x020c97b2

@@ -68,6 +68,18 @@ def us_name(eu_name: str, address: int, us_symbol: str) -> str:
     return f"{eu_name.rstrip('_')}_{address:08x}"
 
 
+def inline_eu_headers(text: str) -> str:
+    """Paste in EU-only headers that sit under eu/, without their include guards."""
+    def expand(found):
+        path = EU / found.group(1)
+        if found.group(1).startswith("nitro/") or not path.is_file():
+            return found.group(0)
+        header = path.read_text(encoding="utf-8", errors="replace")
+        header = re.sub(r"(?m)^#(?:ifndef|define)\s+\w+_H\s*$|^#endif\s*$", "", header)
+        return header.strip()
+    return re.sub(r'(?m)^\s*#\s*include\s+"([^"]+)".*$', expand, text)
+
+
 def port(dry_run: bool) -> int:
     sys.path.insert(0, str(EU / "tools"))
     import audit_progress
@@ -79,6 +91,11 @@ def port(dry_run: bool) -> int:
     asm_matched = {(m["module"], m["symbol"]) for m in load()["matches"]}
     us_modules = module_functions(ROOT / "config" / "bk9e" / "arm9")
     eu_modules = module_functions(EU / "config" / "arm9")
+    eu_addresses = {}
+    for path in (EU / "config" / "arm9").rglob("symbols.txt"):
+        name = "arm9" if path.parent.name == "arm9" else path.parent.name
+        eu_addresses[name] = {m.group(1): int(m.group(2), 16) for m in re.finditer(
+            r"^(\S+) kind:.*?addr:0x([0-9a-fA-F]+)", path.read_text(encoding="utf-8"), re.M)}
     tried = ported = 0
     for module, us_rows in sorted(us_modules.items()):
         eu_rows = eu_modules.get(module, [])
@@ -92,6 +109,7 @@ def port(dry_run: bool) -> int:
             if not stub or (module, us_symbol) in c_matched or (module, us_symbol) in asm_matched:
                 continue
             text = (EU / stub["source"]).read_text(encoding="utf-8", errors="replace").lstrip("﻿")
+            text = inline_eu_headers(text)
             if re.search(r'#include "(?!nitro/)', text):
                 continue
             tried += 1
@@ -99,6 +117,11 @@ def port(dry_run: bool) -> int:
             for other, (other_address, _, _) in eu_to_us.items():
                 if re.search(rf"\b{re.escape(other)}\b", text):
                     text = re.sub(rf"\b{re.escape(other)}\b", f"{other}_{other_address:08x}", text)
+            # Other symbols of the same module move by the stub's own region offset.
+            delta = address - eu_addresses[module][eu_name]
+            for other, eu_address in eu_addresses[module].items():
+                if other not in eu_to_us and re.search(rf"\b{re.escape(other)}\b", text):
+                    text = re.sub(rf"\b{re.escape(other)}\b", f"{other}_{eu_address + delta:08x}", text)
             stem = f"{eu_name}_{address:08x}"
             target = ROOT / "src" / module / "asm" / f"{stem}.c"
             target.parent.mkdir(parents=True, exist_ok=True)

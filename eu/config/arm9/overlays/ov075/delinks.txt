@@ -240,6 +240,10 @@ src/overlays/ov075/calls/HandleMatrixBackButton.c:
     complete
     .text       start:0x020cba38 end:0x020cbb54
 
+src/overlays/ov075/calls/func_ov075_020cbb54.c:
+    complete
+    .text       start:0x020cbb54 end:0x020cbc5c
+
 src/overlays/ov075/calls/TryOpenMatrixMenuThree.c:
     complete
     .text       start:0x020cbc5c end:0x020cbccc
@@ -332,6 +336,10 @@ src/overlays/ov075/calls/UpdateItemDescription.c:
     complete
     .text       start:0x020cd3a4 end:0x020cd470
 
+src/overlays/ov075/calls/func_ov075_020cd470.c:
+    complete
+    .text       start:0x020cd470 end:0x020cd548
+
 src/overlays/ov075/calls/InitImageQuad.c:
     complete
     .text       start:0x020cd548 end:0x020cd56a
@@ -343,6 +351,10 @@ src/overlays/ov075/calls/InitCellImageQuad.c:
 src/overlays/ov075/calls/InitGridImageQuad.c:
     complete
     .text       start:0x020cd5b0 end:0x020cd602
+
+src/overlays/ov075/calls/func_ov075_020cd75c.c:
+    complete
+    .text       start:0x020cd75c end:0x020cd874
 
 src/overlays/ov075/calls/func_ov075_020cd874.c:
     complete
@@ -543,6 +555,10 @@ src/overlays/ov075/calls/HandleTabTouch.c:
 src/overlays/ov075/calls/InitMenuModel.c:
     complete
     .text       start:0x020d0b94 end:0x020d0c38
+
+src/overlays/ov075/calls/func_ov075_020d0c38.c:
+    complete
+    .text       start:0x020d0c38 end:0x020d0cf8
 
 src/overlays/ov075/calls/DrawImageQuadIfVisible.c:
     complete

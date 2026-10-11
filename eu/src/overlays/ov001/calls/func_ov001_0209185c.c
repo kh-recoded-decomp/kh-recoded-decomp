@@ -1,0 +1,7 @@
+#define CreateStageActor_02091834 func_ov001_0209185c
+#define GetStageActor_0209c040 GetStageActor
+#define ReleaseStageSlot_0209c008 ReleaseStageSlot
+#define data_ov001_020a0240 gNearestEntrySyncHandlers
+#define func_01ff8830 MI_CpuFill8
+#define func_ov001_02090d98 InitStageObjectActor
+#include "src/ov001/object_creation/CreateStageActor_02091834.c"

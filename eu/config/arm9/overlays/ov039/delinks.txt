@@ -180,9 +180,17 @@ src/overlays/ov039/calls/LoadSlotBgImage.c:
     complete
     .text       start:0x020bc28c end:0x020bc338
 
+src/overlays/ov039/calls/func_ov039_020bc338.c:
+    complete
+    .text       start:0x020bc338 end:0x020bc434
+
 src/overlays/ov039/calls/LoadSlotBgCharacters.c:
     complete
     .text       start:0x020bc434 end:0x020bc4a8
+
+src/overlays/ov039/calls/func_ov039_020bc4a8.c:
+    complete
+    .text       start:0x020bc4a8 end:0x020bc57c
 
 src/overlays/ov039/calls/LoadSlotSubBgImage.c:
     complete

@@ -1,0 +1,4 @@
+#define DecodeMovieChunkType2Impl_020ac000 DecodeMovieChunkType2Impl
+#define func_020ab878 func_ov022_020ab898
+#define func_020abe24 func_ov022_020abe44
+#include "src/ov022/asm/DecodeMovieChunkType2Impl_020ac000.c"

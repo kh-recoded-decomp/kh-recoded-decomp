@@ -1,0 +1,3 @@
+#define FindLevelCellCenter_020beeb8 func_ov032_020beed8
+#define ProbeGroundBelow_020bc6fc ProbeGroundBelow
+#include "src/ov032/object_group/FindLevelCellCenter_020beeb8.c"

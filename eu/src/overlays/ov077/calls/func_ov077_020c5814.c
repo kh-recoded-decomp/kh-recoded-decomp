@@ -1,0 +1,3 @@
+#define UpdateSlotTouchRegions_020c57f4 func_ov077_020c5814
+#define func_ov039_020bc0d4 GetPrimaryElementEnabled
+#include "src/ov077/unclassified_helpers/UpdateSlotTouchRegions_020c57f4.c"

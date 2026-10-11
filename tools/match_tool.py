@@ -133,6 +133,12 @@ RUNTIME_HELPERS = {
     # Double-precision compare and convert helpers.
     "_dflt": 0x0202363C,
     "_dleq": 0x02023714,
+    "_dgr": 0x0202367C,
+    "_dfix": 0x02024220,
+    "_dadd": 0x02022AF0,
+    "_dsub": 0x02022E20,
+    "_dmul": 0x020231D4,
+    "_ddiv": 0x02024E6C,
 }
 
 

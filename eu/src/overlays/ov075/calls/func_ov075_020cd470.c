@@ -1,0 +1,6 @@
+#define FindTextureResourceBlock_0201ac70 NNS_G3dGetTex
+#define LoadArchiveTextureParams_020cd450 func_ov075_020cd470
+#define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
+#define func_0202c48c func_0202c4a0
+#define func_0202d098 ValidateResourceTagAndDispatch
+#include "src/ov075/matrix_menu/LoadArchiveTextureParams_020cd450.c"

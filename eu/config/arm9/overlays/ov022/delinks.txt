@@ -468,6 +468,26 @@ src/overlays/ov022/calls/decodeMovieAdpcmSamples.cpp:
     complete
     .text       start:0x020aaafc end:0x020aac54
 
+src/overlays/ov022/asm_stubs/calls/func_ov022_020ab898.c:
+    complete
+    .text       start:0x020ab898 end:0x020abe04
+
+src/overlays/ov022/asm_stubs/calls/func_ov022_020abe44.c:
+    complete
+    .text       start:0x020abe44 end:0x020ac010
+
+src/overlays/ov022/asm_stubs/calls/DecodeMovieChunkType2Impl.c:
+    complete
+    .text       start:0x020ac020 end:0x020ac1c0
+
+src/overlays/ov022/asm_stubs/calls/func_ov022_020b728c.c:
+    complete
+    .text       start:0x020b728c end:0x020b73c4
+
+src/overlays/ov022/asm_stubs/calls/func_ov022_020b74b8.c:
+    complete
+    .text       start:0x020b74b8 end:0x020b75c0
+
 src/ov022/data/Data_ov022_020b7c00.c:
     complete
     .data       start:0x020b7c00 end:0x020b7c18

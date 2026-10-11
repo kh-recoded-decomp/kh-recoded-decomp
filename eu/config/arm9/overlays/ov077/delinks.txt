@@ -88,6 +88,10 @@ src/overlays/ov077/calls/DrawPartySlotIcons.c:
     complete
     .text       start:0x020c5714 end:0x020c5814
 
+src/overlays/ov077/calls/func_ov077_020c5814.c:
+    complete
+    .text       start:0x020c5814 end:0x020c5900
+
 src/overlays/ov077/calls/ShowSlotHeaderMessage.c:
     complete
     .text       start:0x020c5900 end:0x020c5950
@@ -156,6 +160,10 @@ src/overlays/ov077/calls/ItemList_UpdateHeaderText_020c6620.c:
     complete
     .text       start:0x020c6620 end:0x020c66ec
 
+src/overlays/ov077/calls/func_ov077_020c66ec.c:
+    complete
+    .text       start:0x020c66ec end:0x020c67c4
+
 src/overlays/ov077/calls/InitImageQuad_020c67c4.c:
     complete
     .text       start:0x020c67c4 end:0x020c67e6
@@ -163,6 +171,10 @@ src/overlays/ov077/calls/InitImageQuad_020c67c4.c:
 src/overlays/ov077/calls/InitGridImageQuad_020c67e8.c:
     complete
     .text       start:0x020c67e8 end:0x020c683a
+
+src/overlays/ov077/calls/func_ov077_020c6994.c:
+    complete
+    .text       start:0x020c6994 end:0x020c6aac
 
 src/overlays/ov077/calls/DrawSpriteRegionQuad.c:
     complete

@@ -39,7 +39,7 @@ PLACEHOLDER = re.compile(r"^func_(?:ov\d{3}_)?[0-9a-f]{8}$")
 SYMBOL_LINE = re.compile(r"^(\S+)\s+kind:(\w+)[^\r\n]*?addr:0x([0-9a-fA-F]+)")
 RELOC_LINE = re.compile(r"^from:0x([0-9a-fA-F]+)\s+kind:(\S+)\s+to:0x([0-9a-fA-F]+)\s+module:(\S+)")
 TEXT_LINE = re.compile(r"^\s*\.text\s+start:0x([0-9a-fA-F]+)\s+end:0x([0-9a-fA-F]+)")
-SCRATCH = ROOT / "build" / "us_to_eu"
+SCRATCH = EU / "build" / "us_to_eu"
 
 
 def config_dir(module: str) -> Path:
@@ -129,10 +129,11 @@ def eu_sources() -> set[str]:
             if path.is_file() and path.suffix.lower() in (".c", ".cpp", ".s")}
 
 
-def candidate_pairs(model: EuModel, only: str | None):
+def candidate_pairs(model: EuModel, only: str | None, asm: bool = False):
+    manifest = "asm_matches.json" if asm else "matches.json"
     us_matched = {(e["module"], e["symbol"]): e
-                  for e in json.loads((ROOT / "matches.json").read_text(encoding="utf-8"))["matches"]
-                  if e.get("language", "c") == "c"}
+                  for e in json.loads((ROOT / manifest).read_text(encoding="utf-8"))["matches"]
+                  if asm or e.get("language", "c") == "c"}
     us_modules = module_functions(ROOT / "config" / "bk9e" / "arm9")
     eu_modules = module_functions(EU / "config" / "arm9")
     have_source = eu_sources()
@@ -170,7 +171,7 @@ def read_object(path: Path, name: str):
                 return None, "has data"
         text = elf.get_section_by_name(".text")
         functions = [s for s in symtab.iter_symbols() if s["st_info"]["type"] == "STT_FUNC"
-                     and isinstance(s["st_shndx"], int)]
+                     and isinstance(s["st_shndx"], int) and not s.name.startswith("$")]
         if text is None or len(functions) != 1 or functions[0].name != name or functions[0]["st_value"] != 0:
             return None, "not one function"
         data = text.data()
@@ -182,7 +183,8 @@ def read_object(path: Path, name: str):
                 sym = symtab.get_symbol(rel["r_info_sym"])
                 offset = rel["r_offset"]
                 word = int.from_bytes(data[offset:offset + 4], "little")
-                relocs[offset] = (sym.name, rel["r_info_type"], word, sym["st_info"]["type"] == "STT_SECTION")
+                addend = rel.entry["r_addend"] if "r_addend" in rel.entry else word
+                relocs[offset] = (sym.name, rel["r_info_type"], addend, sym["st_info"]["type"] == "STT_SECTION")
         return (data, relocs), None
 
 
@@ -201,8 +203,9 @@ def wrapper_text(mapping: dict[str, str], us_source: str) -> str:
     return "\n".join(lines + [f'#include "{us_source}"', ""])
 
 
-def destination(module: str, name: str) -> str:
-    folder = f"src/overlays/{module}/calls" if module.startswith("ov") else "src/calls"
+def destination(module: str, name: str, asm: bool = False) -> str:
+    calls = "asm_stubs/calls" if asm else "calls"
+    folder = f"src/overlays/{module}/{calls}" if module.startswith("ov") else f"src/{calls}"
     return f"{folder}/{name}.c"
 
 
@@ -213,7 +216,7 @@ def try_pair(model: EuModel, pair, scratch: Path):
         return pair, None, "no rom bytes"
     rom, rom_relocs = expected
     mode = "thumb" if entry["mode"] == "thumb" else "arm"
-    unit = destination(module, eu_name)
+    unit = destination(module, eu_name, entry.get("language") == "asm")
     work = scratch / unit
     work.parent.mkdir(parents=True, exist_ok=True)
     out = work.with_suffix(".o")
@@ -241,9 +244,9 @@ def try_pair(model: EuModel, pair, scratch: Path):
                 status = "bytes differ"
                 break
             renames, ok = {}, True
-            for offset, (symbol, kind, word, is_section) in relocs.items():
+            for offset, (symbol, kind, addend, is_section) in relocs.items():
                 target, target_module = rom_relocs[offset]
-                addend = word if kind == R_ARM_ABS32 else 0
+                addend = addend if kind == R_ARM_ABS32 else 0
                 want = model.name_at(target - addend, target_module)
                 if want is None or is_section:
                     ok = False
@@ -276,9 +279,10 @@ def main() -> int:
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--module")
     parser.add_argument("--limit", type=int, default=0)
+    parser.add_argument("--asm", action="store_true", help="port asm_matches.json entries into EU asm_stubs/")
     args = parser.parse_args()
     model = EuModel()
-    pairs = candidate_pairs(model, args.module)
+    pairs = candidate_pairs(model, args.module, args.asm)
     if args.limit:
         pairs = pairs[:args.limit]
     print(f"{len(pairs)} US matches with an open EU twin ({sum(p[2][1] for p in pairs):,} bytes)", flush=True)
@@ -294,7 +298,7 @@ def main() -> int:
                 continue
             module, entry, (address, size, eu_name) = pair
             text, cc = found
-            unit = destination(module, eu_name)
+            unit = destination(module, eu_name, args.asm)
             ported.append({"module": module, "eu": eu_name, "us": entry["symbol"], "size": size, "source": unit})
             if args.dry_run:
                 continue

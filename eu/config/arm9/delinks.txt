@@ -76,6 +76,10 @@ libs/nitro/os/asm_stubs/auto/CpuSet.c:
     complete
     .text       start:0x02000788 end:0x0200078c
 
+src/asm_stubs/calls/Entry.c:
+    complete
+    .text       start:0x02000800 end:0x0200093c
+
 libs/nitro/os/asm_stubs/auto/func_0200093c.c:
     complete
     .text       start:0x0200093c end:0x02000950
@@ -87,6 +91,10 @@ libs/nitro/init/asm_stubs/auto/MIi_UncompressBackward.c:
 src/auto/AutoloadCallback.c:
     complete
     .text       start:0x02000a74 end:0x02000a78
+
+src/asm_stubs/calls/func_02000a78.c:
+    complete
+    .text       start:0x02000a78 end:0x02000b60
 
 src/calls/PanelState_NoOpA.c:
     complete
@@ -2444,6 +2452,10 @@ libs/nitro/math/calls/MATHi_CalcHMAC.c:
 libs/nitro/math/asm_stubs/auto/func_0200dc4c.c:
     complete
     .text       start:0x0200dc4c end:0x0200ded4
+
+src/asm_stubs/calls/MATHi_SHA1ProcessBlock.c:
+    complete
+    .text       start:0x0200dee4 end:0x0200e200
 
 src/calls/PXI_Init.c:
     complete
@@ -5452,6 +5464,14 @@ src/calls/MSL_Fabs.c:
 src/calls/PXI_Init_02022af8.c:
     complete
     .text       start:0x02022af8 end:0x02022b04
+
+src/asm_stubs/calls/func_020231e8.c:
+    complete
+    .text       start:0x020231e8 end:0x0202354c
+
+src/asm_stubs/calls/func_0202354c.c:
+    complete
+    .text       start:0x0202354c end:0x02023650
 
 src/asm_stubs/calls/_dflt.c:
     complete
@@ -8801,6 +8821,10 @@ src/calls/MinOfArray.c:
     complete
     .text       start:0x020496ec end:0x02049720
 
+src/calls/func_02049720.c:
+    complete
+    .text       start:0x02049720 end:0x020498aa
+
 src/calls/RemoveNormalComponent.c:
     complete
     .text       start:0x020498ac end:0x0204990c
@@ -9900,6 +9924,10 @@ src/calls/LoadStringPointerTable.c:
 src/calls/LoadStringPointerTableB.c:
     complete
     .text       start:0x02051594 end:0x0205162c
+
+src/calls/func_0205162c.c:
+    complete
+    .text       start:0x0205162c end:0x02051724
 
 src/calls/func_02051724.c:
     complete

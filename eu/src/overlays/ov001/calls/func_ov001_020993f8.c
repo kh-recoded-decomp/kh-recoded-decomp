@@ -1,0 +1,8 @@
+#define FSi_WaitForCardThread_01ff8140 FSi_WaitForCardThread
+#define LoadCellBankFile_020993d0 func_ov001_020993f8
+#define NNSi_FndAllocFromDefaultHeapEx_0202a19c NNS_FndAllocFromDefaultExpHeapEx
+#define ReadFileSync_0200b674 FS_ReadFile
+#define func_0200b394 FS_InitFile
+#define func_0200b5b0 FS_CloseFile
+#define openFileFromNitroRomArchive_0202ce60 openFileFromNitroRomArchive
+#include "src/ov001/stage_assets/LoadCellBankFile_020993d0.c"

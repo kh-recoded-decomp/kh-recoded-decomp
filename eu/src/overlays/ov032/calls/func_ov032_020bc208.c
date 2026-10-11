@@ -1,0 +1,14 @@
+#define ApplyGroupMemberKind_020bc1e8 func_ov032_020bc208
+#define InstallFieldObjectHitCallbacks_020a25c4 InstallFieldObjectHitCallbacks
+#define SetFieldObjectWeightByKind_020a29cc SetFieldObjectWeightByKind
+#define UpdateFieldObjectHighlight_020a227c UpdateFieldObjectHighlight
+#define data_02053438 gZeroVecFx32
+#define func_02033c3c QuadTree_InsertObject
+#define func_02036230 GetActorRegistry
+#define func_02036240 ActorRegistry_GetEntityByIndex
+#define func_ov001_02086434 func_ov001_0208645c
+#define func_ov016_020a6954 func_ov016_020a6974
+#define func_ov032_020bd518 UnlinkGroupMember
+#define nextRandom12_0202aa58 nextRandom12
+#define random_next_scaled_0202aa04 random_next_scaled
+#include "src/ov032/object_group/ApplyGroupMemberKind_020bc1e8.c"
