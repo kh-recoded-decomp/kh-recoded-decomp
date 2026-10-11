@@ -9121,6 +9121,83 @@
       "name": "gDefaultSceneBaseRotation",
       "origin": "EU original DATA",
       "behavior": "Identity fixed-point 3x3 base rotation copied into Nitro3D global state."
+    },
+    {
+      "module": "main",
+      "section": ".data",
+      "start": "0x02055da0",
+      "end": "0x02055e00",
+      "source": "src/data/gSceneTable.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gSceneTable",
+      "origin": "EU original DATA",
+      "behavior": "Twelve overlay ID/class-descriptor pairs indexed by AdvancePendingScene before loading and creating a scene."
+    },
+    {
+      "module": "main",
+      "section": ".data",
+      "start": "0x02055d8c",
+      "end": "0x02055da0",
+      "source": "src/data/gSceneSystemClassDescriptor.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gSceneSystemClassDescriptor",
+      "origin": "EU original DATA",
+      "behavior": "Scene-system class IDs, initialize/shutdown callbacks, eight-byte work allocation, and heap reference consumed by Obj_Construct."
+    },
+    {
+      "module": "main",
+      "section": ".data",
+      "start": "0x02055e00",
+      "end": "0x02055f30",
+      "source": "src/data/gScriptCommandTables.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gScriptCommandTables",
+      "origin": "EU original DATA",
+      "behavior": "Initial script busy flag, nine opcode-group table pointers, and 33 run/resume callback pairs used by ScriptVm_RunFrame."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x209df0c",
+      "end": "0x209df3c",
+      "source": "src/overlays/ov001/data/tables/gFieldMenuButtonRecords.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gFieldMenuButtonRecords",
+      "origin": "EU original DATA",
+      "behavior": "Menu button record IDs selected by alternate-control and swapped-action settings."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x209df3c",
+      "end": "0x209df4c",
+      "source": "src/overlays/ov001/data/tables/gCategoryLabelTextFrame.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gCategoryLabelTextFrame",
+      "origin": "EU original DATA",
+      "behavior": "Category-label text canvas dimensions, character base, palette, and spacing."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x209df4c",
+      "end": "0x209df78",
+      "source": "src/overlays/ov001/data/tables/gMessageWindowGraphicsSlots.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gMessageWindowGraphicsSlots",
+      "origin": "EU original DATA",
+      "behavior": "Primary VRAM graphics resource slots for eleven message-window modes; -1 suppresses loading."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x209df78",
+      "end": "0x209dfa8",
+      "source": "src/overlays/ov001/data/tables/gWindowScrollArrowTiles.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gWindowScrollArrowTiles",
+      "origin": "EU original DATA",
+      "behavior": "Four directional 3-by-2 tilemap patterns whose palette is applied by DrawWindowScrollArrow."
     }
   ]
 }

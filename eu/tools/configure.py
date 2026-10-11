@@ -67,6 +67,7 @@ ABSOLUTE_SYMBOLS = {
     # Geometry state also lives in the resident BSS.  Some recovered render
     # helpers address the material cache directly.
     "NNS_G3dGlb_prmMatColor0": 0x0205A9A4,
+    "NNS_G3dGlb_prmBaseRot": 0x0205A9B8,
     # Alternate names and interior views of reconstructed resident BSS blocks.
     "data_02056ae0": 0x02056AE0,
     "sVramTransferTaskQueueState": 0x0205A8D0,

@@ -5,6 +5,6 @@
 #define OpenMessageWindowLayers_0207a1d0 OpenMessageWindowLayers
 #define QueueFileLoadRequest_020ba114 QueueFileLoadRequest
 #define SetTextAndChoices_02079338 SetTextAndChoices
-#define data_ov001_0209df24 data_ov001_0209df4c
+#define data_ov001_0209df24 gMessageWindowGraphicsSlots
 #define data_ov001_020a04c4 data_ov001_020a04e4
 #include "src/ov001/text_rendering/OpenMessageWindow_0207a504.c"

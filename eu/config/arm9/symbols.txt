@@ -2729,11 +2729,11 @@ NNS_G3dAnmObjInitFuncArrayEnd kind:data(any) addr:0x02055d3c
 gJointAnimationResultDispatch kind:data(any) addr:0x02055d64
 gJointAnimationNodeDispatch kind:data(any) addr:0x02055d70
 gMaterialAnimationDispatch kind:data(any) addr:0x02055d7c
-data_02055d8c kind:data(any) addr:0x02055d8c
-gSceneTable kind:data(any) addr:0x02055da0
-gScriptState kind:data(any) addr:0x02055e00
-data_02055e04 kind:data(any) addr:0x02055e04
-data_02055e28 kind:data(any) addr:0x02055e28
+gSceneSystemClassDescriptor kind:data(word[5]) addr:0x02055d8c
+gSceneTable kind:data(word[24]) addr:0x02055da0
+gScriptState kind:data(word[1]) addr:0x02055e00
+gScriptHandlerTables kind:data(word[9]) addr:0x02055e04
+gCoreScriptCommandHandlers kind:data(word[66]) addr:0x02055e28
 gGameTitleStringTable kind:data(any) addr:0x02055f30
 sMain_KHRECODE_02055f38 kind:data(any) addr:0x02055f38
 sMain_PauseRefresh_02055f44 kind:data(any) addr:0x02055f44

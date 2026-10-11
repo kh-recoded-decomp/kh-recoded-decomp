@@ -22,6 +22,18 @@ typedef struct FieldWidgetLayerList {
     int ids[3];
 } FieldWidgetLayerList;
 
+typedef struct FieldMenuButtonRecordTable {
+    u32 recordIds[2][2][3];
+} FieldMenuButtonRecordTable;
+
+typedef struct FieldWindowScrollArrowTiles {
+    u16 tiles[4][3][2];
+} FieldWindowScrollArrowTiles;
+
+typedef struct FieldMessageWindowGraphicsSlots {
+    int slots[11];
+} FieldMessageWindowGraphicsSlots;
+
 extern const FieldTextFrame gMessageLineTextFrame;
 extern const FieldTextFrame gRecordNameTextFrame;
 extern const FieldTextFrame gSceneTextFrame4D8;
@@ -30,6 +42,10 @@ extern const FieldTextFrame gChoiceTextFrame;
 extern const FieldTextFrame gSlotLabelTextFrame;
 extern const FieldTextFrame gFieldHudTextFrame;
 extern const FieldTextFrame gFieldCommandTextFrame;
+extern const FieldTextFrame gCategoryLabelTextFrame;
+extern const FieldMenuButtonRecordTable gFieldMenuButtonRecords;
+extern const FieldWindowScrollArrowTiles gWindowScrollArrowTiles;
+extern const FieldMessageWindowGraphicsSlots gMessageWindowGraphicsSlots;
 extern const FieldSlotOrder gFieldSlotOrder;
 extern const FieldWidgetLayerList gVramRestoreWidgetLayers;
 extern const FieldWidgetLayerList gVramBackupWidgetLayers;

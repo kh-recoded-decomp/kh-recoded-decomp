@@ -55,7 +55,7 @@ HandleAltSelectForState kind:function(arm,size=0x150) addr:0x020c79b4
 HandleConfirmForState kind:function(arm,size=0x80) addr:0x020c7b04
 func_ov087_020c7b84 kind:function(arm,size=0x94) addr:0x020c7b84
 func_ov087_020c7c18 kind:function(arm,size=0x20) addr:0x020c7c18
-func_ov087_020c7c38 kind:function(arm,size=0x58) addr:0x020c7c38
+IsCurrentRecordPageUnavailable kind:function(arm,size=0x58) addr:0x020c7c38
 data_ov087_020c7c90 kind:data(any) addr:0x020c7c90
 data_ov087_020c7c98 kind:data(any) addr:0x020c7c98
 data_ov087_020c7ca0 kind:data(any) addr:0x020c7ca0

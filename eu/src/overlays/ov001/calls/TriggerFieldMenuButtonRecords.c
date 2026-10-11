@@ -2,6 +2,6 @@
 #define GetSceneTagTracker_020711b0 GetSceneTagTracker
 #define TagTracker_InvokeCallback_020b8210 func_ov027_020b8230
 #define TriggerFieldMenuButtonRecords_020771a8 TriggerFieldMenuButtonRecords
-#define data_ov001_0209dee4 data_ov001_0209df0c
+#define data_ov001_0209dee4 gFieldMenuButtonRecords
 #define g_saveData_0205fe0c data_0205fe0c
 #include "src/ov001/field_manager/TriggerFieldMenuButtonRecords_020771a8.c"

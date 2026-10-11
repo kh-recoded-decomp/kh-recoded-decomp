@@ -7868,6 +7868,10 @@ src/overlays/ov001/calls/LoadStageModels.cpp:
     complete
     .text       start:0x0209ab8c end:0x0209b49c
 
+src/overlays/ov001/calls/QueueStageResourceSounds.c:
+    complete
+    .text       start:0x0209b49c end:0x0209b520
+
 src/overlays/ov001/calls/ReleaseStageSlotLocks.c:
     complete
     .text       start:0x0209b520 end:0x0209b584
@@ -8644,6 +8648,10 @@ src/overlays/ov001/data/tables/gBgScreenLoaders.c:
     complete
     .data       start:0x0209ed10 end:0x0209ed2c
 
+src/overlays/ov001/data/tables/gCategoryLabelTextFrame.c:
+    complete
+    .rodata     start:0x0209df3c end:0x0209df4c
+
 src/overlays/ov001/data/tables/gChoiceTextFrame.c:
     complete
     .rodata     start:0x0209dc6c end:0x0209dc7c
@@ -8699,6 +8707,10 @@ src/overlays/ov001/data/tables/gFieldHudTextFrame.c:
 src/overlays/ov001/data/tables/gFieldManagerClassDescriptor.c:
     complete
     .data       start:0x0209ecfc end:0x0209ed10
+
+src/overlays/ov001/data/tables/gFieldMenuButtonRecords.c:
+    complete
+    .rodata     start:0x0209df0c end:0x0209df3c
 
 src/overlays/ov001/data/tables/gFieldMenuDrawHandlers.c:
     complete
@@ -8819,6 +8831,10 @@ src/overlays/ov001/data/tables/gMenuScreenCellIds.c:
 src/overlays/ov001/data/tables/gMessageLineTextFrame.c:
     complete
     .rodata     start:0x0209dc2c end:0x0209dc3c
+
+src/overlays/ov001/data/tables/gMessageWindowGraphicsSlots.c:
+    complete
+    .rodata     start:0x0209df4c end:0x0209df78
 
 src/overlays/ov001/data/tables/gMessageWindowStateHandlers.c:
     complete
@@ -8987,3 +9003,7 @@ src/overlays/ov001/data/tables/gVramBackupWidgetLayers.c:
 src/overlays/ov001/data/tables/gVramRestoreWidgetLayers.c:
     complete
     .rodata     start:0x0209dbd4 end:0x0209dbe0
+
+src/overlays/ov001/data/tables/gWindowScrollArrowTiles.c:
+    complete
+    .rodata     start:0x0209df78 end:0x0209dfa8

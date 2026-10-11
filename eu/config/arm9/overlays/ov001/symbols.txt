@@ -2005,7 +2005,7 @@ func_ov001_0209a4e4 kind:function(thumb,size=0x2c8) addr:0x0209a4e4
 LoadStageResource kind:function(thumb,size=0x128) addr:0x0209a7ac
 LoadStageModelEntry kind:function(thumb,size=0x2b8) addr:0x0209a8d4
 LoadStageModels kind:function(thumb,size=0x910) addr:0x0209ab8c
-func_ov001_0209b49c kind:function(thumb,size=0x84) addr:0x0209b49c
+QueueStageResourceSounds kind:function(thumb,size=0x84) addr:0x0209b49c
 ReleaseStageSlotLocks kind:function(thumb,size=0x64) addr:0x0209b520
 AddStageSlotLocks kind:function(thumb,size=0x5c) addr:0x0209b584
 func_ov001_0209b5e0 kind:function(thumb,size=0xc) addr:0x0209b5e0
@@ -2164,10 +2164,10 @@ gDefaultSceneBaseScale kind:data(word[3]) addr:0x0209debc
 gFieldSlotMessageIds kind:data(word[4]) addr:0x0209dec8
 gFieldCommandTextFrame kind:data(short[8]) addr:0x0209ded8
 gDefaultSceneBaseRotation kind:data(word[9]) addr:0x0209dee8
-data_ov001_0209df0c kind:data(any) addr:0x0209df0c
-data_ov001_0209df3c kind:data(any) addr:0x0209df3c
-data_ov001_0209df4c kind:data(any) addr:0x0209df4c
-data_ov001_0209df78 kind:data(any) addr:0x0209df78
+gFieldMenuButtonRecords kind:data(word[12]) addr:0x0209df0c
+gCategoryLabelTextFrame kind:data(short[8]) addr:0x0209df3c
+gMessageWindowGraphicsSlots kind:data(word[11]) addr:0x0209df4c
+gWindowScrollArrowTiles kind:data(short[24]) addr:0x0209df78
 data_ov001_0209dfa8 kind:data(any) addr:0x0209dfa8
 data_ov001_0209dfbc kind:data(any) addr:0x0209dfbc
 data_ov001_0209dfc4 kind:data(any) addr:0x0209dfc4

@@ -10777,6 +10777,18 @@ src/data/gRuntimeInitCleanupDescriptors.c:
     complete
     .rodata     start:0x020526d4 end:0x020526ec
 
+src/data/gSceneSystemClassDescriptor.c:
+    complete
+    .data       start:0x02055d8c end:0x02055da0
+
+src/data/gSceneTable.c:
+    complete
+    .data       start:0x02055da0 end:0x02055e00
+
+src/data/gScriptCommandTables.c:
+    complete
+    .data       start:0x02055e00 end:0x02055f30
+
 src/data/gTitleNoticePalette.c:
     complete
     .data       start:0x02055ba0 end:0x02055bc0

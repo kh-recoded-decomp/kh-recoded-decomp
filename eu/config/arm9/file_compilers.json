@@ -9086,5 +9086,6 @@
   "src/overlays/ov079/calls/func_ov079_020c4948.c": "dsi/1.3p1",
   "src/overlays/ov085/calls/func_ov085_020c1fd4.c": "dsi/1.3p1",
   "src/overlays/ov093/calls/func_ov093_020bfae4.c": "dsi/1.3p1",
-  "src/overlays/ov103/calls/func_ov103_020bf0c4.c": "dsi/1.3p1"
+  "src/overlays/ov103/calls/func_ov103_020bf0c4.c": "dsi/1.3p1",
+  "src/overlays/ov001/calls/QueueStageResourceSounds.c": "dsi/1.1"
 }
