@@ -1,6 +1,6 @@
 #define MI_CpuCopy8_01ff89a8 MI_CpuCopy8
 #define StoreSelectionPackedValues_020505b4 StoreSelectionPackedValues
 #define WriteGlobalPackedBits_02027360 WriteGlobalPackedBits
-#define data_02055a38 data_02055a4c
+#define data_02055a38 gSelectionStoreBitOffsets
 #define data_020608d0 gSelectionPackedValues
 #include "src/arm9/overlay_selection/StoreSelectionPackedValues_020505b4.c"

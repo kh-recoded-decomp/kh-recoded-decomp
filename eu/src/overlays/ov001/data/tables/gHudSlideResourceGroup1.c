@@ -1,11 +1,11 @@
 #include "nitro/types.h"
 
-extern u8 data_ov001_0209ec68[];
+extern u16 gModeCaptionGlyph03B7[];
 extern u32 gHudSlideResourceGroup1Descriptor[];
-extern u8 data_ov001_0209ec70[];
+extern u16 gModeCaptionGlyph03B9[];
 
 void *gHudSlideResourceGroup1[3] = {
-    data_ov001_0209ec68,
+    gModeCaptionGlyph03B7,
     gHudSlideResourceGroup1Descriptor,
-    data_ov001_0209ec70,
+    gModeCaptionGlyph03B9,
 };

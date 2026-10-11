@@ -1,4 +1,4 @@
 #define GFXi_EnqueueCommand NNS_GfdRegisterNewVramTransferTask
 #define Gfx_EnqueueTableCmdAt14_0202b448 Gfx_EnqueueTableCmdAt14
-#define data_02055724 data_02055738
+#define data_02055724 gBgCharacterTransferDestinations
 #include "src/arm9/shared_engine/Gfx_EnqueueTableCmdAt14_0202b448.c"

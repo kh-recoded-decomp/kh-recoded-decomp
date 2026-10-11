@@ -8,7 +8,7 @@
 #define data_ov001_0209dad4 data_ov001_0209dafc
 #define data_ov001_0209db20 data_ov001_0209db48
 #define data_ov001_0209db50 data_ov001_0209db78
-#define data_ov001_0209ec3c data_ov001_0209ec5c
+#define data_ov001_0209ec3c gLocalizedSpritePathFormat
 #define data_ov001_020a049c data_ov001_020a04bc
 #define func_ov021_020a89a8 func_ov021_020a89c8
 #include "src/ov001/unclassified_helpers/LoadModeSprites_0206d308.c"

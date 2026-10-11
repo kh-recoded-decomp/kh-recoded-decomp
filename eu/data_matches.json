@@ -3,6 +3,286 @@
     {
       "module": "arm9",
       "section": ".rodata",
+      "start": "0x020555f8",
+      "end": "0x02055618",
+      "source": "src/data/tables/gBgTextControlHandlers.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gBgTextControlHandlers",
+      "behavior": "Text-background control callbacks for BG0-BG3 on the main and sub display engines."
+    },
+    {
+      "module": "arm9",
+      "section": ".rodata",
+      "start": "0x02055678",
+      "end": "0x02055698",
+      "source": "src/data/tables/gBg3AffineModeMap.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gBg3AffineModeMap",
+      "behavior": "Maps the current display mode to a compatible mode for this background layer and format; used by the main and sub engines."
+    },
+    {
+      "module": "arm9",
+      "section": ".rodata",
+      "start": "0x02055698",
+      "end": "0x020556b8",
+      "source": "src/data/tables/gBg3TextModeMap.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gBg3TextModeMap",
+      "behavior": "Maps the current display mode to a compatible mode for this background layer and format; used by the main and sub engines."
+    },
+    {
+      "module": "arm9",
+      "section": ".rodata",
+      "start": "0x020556b8",
+      "end": "0x020556d8",
+      "source": "src/data/tables/gBg2ExtendedModeMap.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gBg2ExtendedModeMap",
+      "behavior": "Maps the current display mode to a compatible mode for this background layer and format; used by the main and sub engines."
+    },
+    {
+      "module": "arm9",
+      "section": ".rodata",
+      "start": "0x020556d8",
+      "end": "0x020556f8",
+      "source": "src/data/tables/gBg2AffineModeMap.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gBg2AffineModeMap",
+      "behavior": "Maps the current display mode to a compatible mode for this background layer and format; used by the main and sub engines."
+    },
+    {
+      "module": "arm9",
+      "section": ".rodata",
+      "start": "0x020556f8",
+      "end": "0x02055718",
+      "source": "src/data/tables/gBg2TextModeMap.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gBg2TextModeMap",
+      "behavior": "Maps the current display mode to a compatible mode for this background layer and format; used by the main and sub engines."
+    },
+    {
+      "module": "arm9",
+      "section": ".rodata",
+      "start": "0x02055738",
+      "end": "0x02055758",
+      "source": "src/data/tables/gBgCharacterTransferDestinations.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gBgCharacterTransferDestinations",
+      "behavior": "VRAM transfer destination IDs for all four backgrounds on both display engines."
+    },
+    {
+      "module": "arm9",
+      "section": ".rodata",
+      "start": "0x02055758",
+      "end": "0x02055778",
+      "source": "src/data/tables/gBgScreenTransferDestinations.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gBgScreenTransferDestinations",
+      "behavior": "VRAM transfer destination IDs for all four backgrounds on both display engines."
+    },
+    {
+      "module": "arm9",
+      "section": ".rodata",
+      "start": "0x02055838",
+      "end": "0x02055848",
+      "source": "src/data/tables/gMatrixCorrectionQuaternion.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gMatrixCorrectionQuaternion",
+      "behavior": "Fixed-point quaternion multiplied into a normalized rotation before restoring the original matrix scale."
+    },
+    {
+      "module": "arm9",
+      "section": ".rodata",
+      "start": "0x02055848",
+      "end": "0x0205584c",
+      "source": "src/data/tables/gQuaternionNextAxis.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gQuaternionNextAxis",
+      "behavior": "Cyclic next-axis indices used for the non-positive-trace matrix-to-quaternion conversion, plus alignment padding."
+    },
+    {
+      "module": "arm9",
+      "section": ".rodata",
+      "start": "0x02055a40",
+      "end": "0x02055a4c",
+      "source": "src/data/tables/gSelectionLoadBitOffsets.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gSelectionLoadBitOffsets",
+      "behavior": "Three starting bit offsets for the 16-bit selection values saved in the global packed-bit store."
+    },
+    {
+      "module": "arm9",
+      "section": ".rodata",
+      "start": "0x02055a4c",
+      "end": "0x02055a58",
+      "source": "src/data/tables/gSelectionStoreBitOffsets.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gSelectionStoreBitOffsets",
+      "behavior": "Three starting bit offsets for the 16-bit selection values saved in the global packed-bit store."
+    },
+    {
+      "module": "arm9",
+      "section": ".rodata",
+      "start": "0x02055a58",
+      "end": "0x02055a78",
+      "source": "src/data/tables/gKindModeScaleFactors.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gKindModeScaleFactors",
+      "behavior": "12-fractional-bit multipliers indexed by kind 1-2 and the two-bit game mode."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209ec60",
+      "end": "0x0209ec64",
+      "source": "src/overlays/ov001/data/tables/gEmptyModeCaption.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "empty mode caption",
+      "behavior": "A terminated game-font string; the default caption pointers refer to the empty string."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209ec64",
+      "end": "0x0209ec68",
+      "source": "src/overlays/ov001/data/tables/gModeCaptionGlyph03B3.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "mode caption font glyph 0x3b3",
+      "behavior": "A terminated game-font string; the default caption pointers refer to the empty string."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209ec68",
+      "end": "0x0209ec6c",
+      "source": "src/overlays/ov001/data/tables/gModeCaptionGlyph03B7.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "mode caption font glyph 0x3b7",
+      "behavior": "A terminated game-font string; the default caption pointers refer to the empty string."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209ec6c",
+      "end": "0x0209ec70",
+      "source": "src/overlays/ov001/data/tables/gModeCaptionGlyph03B1.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "mode caption font glyph 0x3b1",
+      "behavior": "A terminated game-font string; the default caption pointers refer to the empty string."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209ec70",
+      "end": "0x0209ec74",
+      "source": "src/overlays/ov001/data/tables/gModeCaptionGlyph03B9.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "mode caption font glyph 0x3b9",
+      "behavior": "A terminated game-font string; the default caption pointers refer to the empty string."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209ec74",
+      "end": "0x0209ec78",
+      "source": "src/overlays/ov001/data/tables/gModeCaptionGlyph03B2.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "mode caption font glyph 0x3b2",
+      "behavior": "A terminated game-font string; the default caption pointers refer to the empty string."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209ec78",
+      "end": "0x0209ec7c",
+      "source": "src/overlays/ov001/data/tables/gModeCaptionGlyph03B5.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "mode caption font glyph 0x3b5",
+      "behavior": "A terminated game-font string; the default caption pointers refer to the empty string."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209ec7c",
+      "end": "0x0209ec80",
+      "source": "src/overlays/ov001/data/tables/gModeCaptionGlyph03BB.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "mode caption font glyph 0x3bb",
+      "behavior": "A terminated game-font string; the default caption pointers refer to the empty string."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209ec80",
+      "end": "0x0209ec84",
+      "source": "src/overlays/ov001/data/tables/gModeCaptionGlyph03BA.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "mode caption font glyph 0x3ba",
+      "behavior": "A terminated game-font string; the default caption pointers refer to the empty string."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209ec84",
+      "end": "0x0209ec88",
+      "source": "src/overlays/ov001/data/tables/gModeCaptionGlyph03B4.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "mode caption font glyph 0x3b4",
+      "behavior": "A terminated game-font string; the default caption pointers refer to the empty string."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209ec88",
+      "end": "0x0209ec8c",
+      "source": "src/overlays/ov001/data/tables/gModeCaptionGlyph03B6.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "mode caption font glyph 0x3b6",
+      "behavior": "A terminated game-font string; the default caption pointers refer to the empty string."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209ec8c",
+      "end": "0x0209ec90",
+      "source": "src/overlays/ov001/data/tables/gModeCaptionGlyph03BC.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "mode caption font glyph 0x3bc",
+      "behavior": "A terminated game-font string; the default caption pointers refer to the empty string."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x020a02c8",
+      "end": "0x020a02fc",
+      "source": "src/overlays/ov001/data/tables/gStageObjectActorDescriptor.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "stage object actor descriptor",
+      "behavior": "Actor properties and nine callbacks copied by the stage object constructor."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209ec5c",
+      "end": "0x0209ec60",
+      "source": "src/overlays/ov001/data/tables/gLocalizedSpritePathFormat.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "localized sprite path format",
+      "behavior": "The %s format used when loading the localized mode sprites."
+    },
+    {
+      "module": "arm9",
+      "section": ".data",
+      "start": "0x02056014",
+      "end": "0x02056018",
+      "source": "src/data/tables/gResourceTextureSetupEnabled.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "resource texture setup enabled",
+      "behavior": "Initially true; resource dispatch saves and restores the flag controlling texture and palette allocation."
+    },
+    {
+      "module": "arm9",
+      "section": ".rodata",
       "start": "0x020526d4",
       "end": "0x020526ec",
       "source": "src/data/gRuntimeInitCleanupDescriptors.c",

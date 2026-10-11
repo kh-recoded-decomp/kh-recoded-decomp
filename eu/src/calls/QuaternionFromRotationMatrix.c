@@ -1,5 +1,5 @@
 #define FX_DivFx64c_01ff9c94 FX_DivFx64c
 #define FX_Sqrt_01ff9cfc FX_Sqrt
 #define QuaternionFromRotationMatrix_0202f628 QuaternionFromRotationMatrix
-#define g_nextAxisIndex_02055834 data_02055848
+#define g_nextAxisIndex_02055834 gQuaternionNextAxis
 #include "src/arm9/math/QuaternionFromRotationMatrix_0202f628.c"

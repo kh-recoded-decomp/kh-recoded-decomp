@@ -3680,6 +3680,10 @@ src/overlays/ov001/calls/RefreshWindowHighlight.c:
     complete
     .text       start:0x02079490 end:0x020794c6
 
+src/overlays/ov001/calls/FillMessageWindowTilePattern.c:
+    complete
+    .text       start:0x020794c8 end:0x02079522
+
 src/overlays/ov001/calls/StartWindow1Fade.c:
     complete
     .text       start:0x02079524 end:0x02079578
@@ -8576,6 +8580,10 @@ src/overlays/ov001/data/tables/gDefaultAttachPointName.c:
     complete
     .data       start:0x020a0314 end:0x020a0318
 
+src/overlays/ov001/data/tables/gEmptyModeCaption.c:
+    complete
+    .data       start:0x0209ec60 end:0x0209ec64
+
 src/overlays/ov001/data/tables/gEventTriggerTaskDescriptor.c:
     complete
     .data       start:0x0209eaec end:0x0209eb00
@@ -8640,6 +8648,10 @@ src/overlays/ov001/data/tables/gHudSlideResourceGroup4.c:
     complete
     .data       start:0x0209ecd4 end:0x0209ece0
 
+src/overlays/ov001/data/tables/gLocalizedSpritePathFormat.c:
+    complete
+    .data       start:0x0209ec5c end:0x0209ec60
+
 src/overlays/ov001/data/tables/gMainBgLayerIds.c:
     complete
     .rodata     start:0x0209dbbc end:0x0209dbc8
@@ -8651,6 +8663,50 @@ src/overlays/ov001/data/tables/gMenuOverlayStateHandlers.c:
 src/overlays/ov001/data/tables/gMessageWindowStateHandlers.c:
     complete
     .data       start:0x0209ef24 end:0x0209ef44
+
+src/overlays/ov001/data/tables/gModeCaptionGlyph03B1.c:
+    complete
+    .data       start:0x0209ec6c end:0x0209ec70
+
+src/overlays/ov001/data/tables/gModeCaptionGlyph03B2.c:
+    complete
+    .data       start:0x0209ec74 end:0x0209ec78
+
+src/overlays/ov001/data/tables/gModeCaptionGlyph03B3.c:
+    complete
+    .data       start:0x0209ec64 end:0x0209ec68
+
+src/overlays/ov001/data/tables/gModeCaptionGlyph03B4.c:
+    complete
+    .data       start:0x0209ec84 end:0x0209ec88
+
+src/overlays/ov001/data/tables/gModeCaptionGlyph03B5.c:
+    complete
+    .data       start:0x0209ec78 end:0x0209ec7c
+
+src/overlays/ov001/data/tables/gModeCaptionGlyph03B6.c:
+    complete
+    .data       start:0x0209ec88 end:0x0209ec8c
+
+src/overlays/ov001/data/tables/gModeCaptionGlyph03B7.c:
+    complete
+    .data       start:0x0209ec68 end:0x0209ec6c
+
+src/overlays/ov001/data/tables/gModeCaptionGlyph03B9.c:
+    complete
+    .data       start:0x0209ec70 end:0x0209ec74
+
+src/overlays/ov001/data/tables/gModeCaptionGlyph03BA.c:
+    complete
+    .data       start:0x0209ec80 end:0x0209ec84
+
+src/overlays/ov001/data/tables/gModeCaptionGlyph03BB.c:
+    complete
+    .data       start:0x0209ec7c end:0x0209ec80
+
+src/overlays/ov001/data/tables/gModeCaptionGlyph03BC.c:
+    complete
+    .data       start:0x0209ec8c end:0x0209ec90
 
 src/overlays/ov001/data/tables/gNearestEntrySyncHandlers.c:
     complete
@@ -8707,6 +8763,10 @@ src/overlays/ov001/data/tables/gStageManagerTaskDescriptor.c:
 src/overlays/ov001/data/tables/gStageMeshValues.c:
     complete
     .rodata     start:0x0209da18 end:0x0209da68
+
+src/overlays/ov001/data/tables/gStageObjectActorDescriptor.c:
+    complete
+    .data       start:0x020a02c8 end:0x020a02fc
 
 src/overlays/ov001/data/tables/gStageScriptStateHandlers.c:
     complete

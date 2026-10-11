@@ -39,6 +39,7 @@ typedef struct StageHeapConfig {
 extern char gDefaultAttachPointName[4];
 extern ActorControllerStateHandler gActorControllerStateHandlers[5];
 extern StageActorDescriptor gSpawnedActorDescriptor;
+extern StageActorDescriptor gStageObjectActorDescriptor;
 extern StageManagerTaskDescriptor gStageManagerTaskDescriptor;
 extern StageHeapConfig gStageHeapConfigs[2];
 extern s8 gExtendedSlotRemap[32];

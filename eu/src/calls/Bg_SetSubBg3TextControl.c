@@ -1,3 +1,3 @@
 #define Bg_SetSubBg3TextControl_0202b1e8 Bg_SetSubBg3TextControl
-#define data_02055684 data_02055698
+#define data_02055684 gBg3TextModeMap
 #include "src/arm9/shared_engine/Bg_SetSubBg3TextControl_0202b1e8.c"

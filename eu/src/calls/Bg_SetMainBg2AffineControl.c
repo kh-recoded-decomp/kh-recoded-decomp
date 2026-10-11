@@ -1,4 +1,4 @@
 #define Bg_SetMainBg2AffineControl_0202b03c Bg_SetMainBg2AffineControl
-#define data_020556c4 data_020556d8
+#define data_020556c4 gBg2AffineModeMap
 #define data_0205a920 sBGAreaOver
 #include "src/arm9/shared_engine/Bg_SetMainBg2AffineControl_0202b03c.c"

@@ -3,7 +3,7 @@
 extern void UpdateHudSlideTween(void); /* UpdateHudSlideTween */
 extern void func_ov001_0207031c(void);
 extern void CheckSceneTimeout(void); /* CheckSceneTimeout */
-extern u8 data_ov001_0209ec60[];
+extern u16 gEmptyModeCaption[2];
 
 void (*gHudSlideStateHandlers[5])(void) = {
     NULL,
@@ -14,6 +14,6 @@ void (*gHudSlideStateHandlers[5])(void) = {
 };
 
 void *gHudSlideData[2] = {
-    data_ov001_0209ec60,
-    data_ov001_0209ec60,
+    gEmptyModeCaption,
+    gEmptyModeCaption,
 };

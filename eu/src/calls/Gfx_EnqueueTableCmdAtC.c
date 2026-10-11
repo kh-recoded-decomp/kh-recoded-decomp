@@ -1,4 +1,4 @@
 #define GFXi_EnqueueCommand NNS_GfdRegisterNewVramTransferTask
 #define Gfx_EnqueueTableCmdAtC_0202b460 Gfx_EnqueueTableCmdAtC
-#define data_02055744 data_02055758
+#define data_02055744 gBgScreenTransferDestinations
 #include "src/arm9/shared_engine/Gfx_EnqueueTableCmdAtC_0202b460.c"

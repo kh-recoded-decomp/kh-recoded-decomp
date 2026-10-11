@@ -13,5 +13,5 @@
 #define data_02055c58 sDefaultFreePlttVramFunc
 #define func_02018978 Obj_SetWord2C
 #define func_0202d204 func_0202d218
-#define g_textureSetupEnabled_02056014 data_02056014
+#define g_textureSetupEnabled_02056014 gResourceTextureSetupEnabled
 #include "src/arm9/library_nns_g3d/SetupResourceTextures_0202cedc.c"

@@ -1,6 +1,6 @@
 #define GetOverlaySelectionRecord_0204f768 GetOverlaySelectionRecord
 #define LoadSelectionPackedValues_0205053c LoadSelectionPackedValues
 #define ReadGlobalPackedBits_02027348 ReadGlobalPackedBits
-#define data_02055a2c data_02055a40
+#define data_02055a2c gSelectionLoadBitOffsets
 #define data_020608d0 gSelectionPackedValues
 #include "src/arm9/overlay_selection/LoadSelectionPackedValues_0205053c.c"

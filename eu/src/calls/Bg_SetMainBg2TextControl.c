@@ -1,3 +1,3 @@
 #define Bg_SetMainBg2TextControl_0202afd4 Bg_SetMainBg2TextControl
-#define data_020556e4 data_020556f8
+#define data_020556e4 gBg2TextModeMap
 #include "src/arm9/shared_engine/Bg_SetMainBg2TextControl_0202afd4.c"

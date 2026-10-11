@@ -4,5 +4,5 @@
 #define NNSi_FndAllocFromDefaultHeapEx_0202a19c NNS_FndAllocFromDefaultExpHeapEx
 #define func_0202c940 AcquireOrRefreshResourceBlock
 #define func_0202d098 ValidateResourceTagAndDispatch
-#define g_reentryGuard_02056014 data_02056014
+#define g_reentryGuard_02056014 gResourceTextureSetupEnabled
 #include "src/arm9/archive_startup/func_0202c940.c"

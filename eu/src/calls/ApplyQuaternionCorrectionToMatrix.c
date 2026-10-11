@@ -4,7 +4,7 @@
 #define ScaleVector4ByReciprocalMagnitude_0202fc50 ScaleVector4ByReciprocalMagnitude
 #define VEC_Mag_01ff9f28 VEC_Mag
 #define func_0202f628 QuaternionFromRotationMatrix
-#define g_correctionQuat_02055824 data_02055838
+#define g_correctionQuat_02055824 gMatrixCorrectionQuaternion
 #define multiplyFixedPointQuaternions_0202f93c MultiplyFixedPointQuaternions
 #define func_01ffaff4 VEC_NormalizeLength
 #include "src/arm9/math/ApplyQuaternionCorrectionToMatrix_0202f090.c"
