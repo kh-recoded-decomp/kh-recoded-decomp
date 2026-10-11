@@ -1,0 +1,23 @@
+#define AcquireRecordSlot_02051d3c AcquireRecordSlot
+#define FindWidgetById_020b90a4 FindWidgetById
+#define FocusElementForState_020c5860 FocusElementForState
+#define InitPanelTextLayers_020c663c InitPanelTextLayers
+#define LoadPanelBackground_020c6590 LoadPanelBackground
+#define PushPanelState_020c61b0 PushPanelState
+#define ReadGlobalPackedBits_02027348 ReadGlobalPackedBits
+#define ReadSessionPackedBits_02064574 ReadSessionPackedBits
+#define SelectRecordPage_020c2060 SelectRecordPage
+#define SetSelectionIfChanged_020bc92c SetSelectionIfChanged_020bc94c
+#define UpdateEntryCountRecord_020c42a0 UpdateEntryCountRecord
+#define data_ov001_020a0460 data_ov001_020a0480
+#define func_0204d8b8 func_0204d8cc
+#define func_ov001_020645c8 IsSessionFlagSet
+#define func_ov039_020bc1bc func_ov039_020bc1dc
+#define func_ov039_020bc810 GetMenuStackDepth
+#define func_ov087_020c44a4 SelectChoiceWidget_020c44a4
+#define func_ov087_020c5758 FocusDefaultElementForState_020c5758
+#define func_ov087_020c5964 FocusKindElementForState_020c5964
+#define func_ov087_020c6378 SetupCarouselDisplay
+#define func_ov087_020c69a4 SetupPanelWidgetHandlers
+#define func_ov087_020c6ab0 func_ov087_020c6ad0
+#include "src/ov087/panel_state/InitPanelScene_020c713c.c"

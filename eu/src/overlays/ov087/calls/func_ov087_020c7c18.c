@@ -1,7 +1,7 @@
 #include "nitro/types.h"
 
 extern u32 GetActiveMenuScene();
-extern u32 func_ov087_020c6238();
+extern u32 PopPanelState_020c6218();
 
 void func_ov087_020c7c18(void) {
   int work;
@@ -10,5 +10,5 @@ void func_ov087_020c7c18(void) {
   if (*(int *)(work + 0x10) != 0) {
     return;
   }
-  func_ov087_020c6238(work,1);
+  PopPanelState_020c6218(work,1);
 }

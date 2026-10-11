@@ -27,6 +27,6 @@
 #define func_ov001_02087944 func_ov001_0208796c
 #define func_ov021_020a8ab4 ResetAnimationTrackState
 #define func_ov021_020a8ca0 func_ov021_020a8cc0
-#define func_ov021_020ac33c func_ov021_020ac35c
+#define func_ov021_020ac33c ApplyHitToTarget_020ac33c
 #define func_ov052_020ceb54 func_ov052_020ceb74
 #include "src/ov064/object_state/UpdateOv064BossSequence_020d8234.c"

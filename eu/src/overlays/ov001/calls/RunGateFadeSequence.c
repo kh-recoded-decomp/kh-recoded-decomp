@@ -4,6 +4,6 @@
 #define RunGateFadeSequence_02093b8c RunGateFadeSequence
 #define ScheduleSpawnerNextTime_02096928 ScheduleSpawnerNextTime
 #define Session_Exists_02063a24 func_ov001_02063a24
-#define func_ov001_02093330 func_ov001_02093358
+#define func_ov001_02093330 RefreshStageEventDisplay_02093330
 #define func_ov001_0209c3c0 func_ov001_0209c3e8
 #include "src/ov001/shared_engine/RunGateFadeSequence_02093b8c.c"

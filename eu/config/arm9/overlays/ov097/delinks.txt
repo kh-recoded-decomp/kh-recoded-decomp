@@ -64,9 +64,17 @@ src/overlays/ov097/calls/LoadEntryBackground.c:
     complete
     .text       start:0x020bf87c end:0x020bf95c
 
+src/overlays/ov097/calls/InitTextLayers_020bf95c.c:
+    complete
+    .text       start:0x020bf95c end:0x020bfae8
+
 src/overlays/ov097/calls/ReleaseTextLayers_020bfae8.c:
     complete
     .text       start:0x020bfae8 end:0x020bfb58
+
+src/overlays/ov097/calls/RefreshListPanels.c:
+    complete
+    .text       start:0x020bfb58 end:0x020bfd88
 
 src/overlays/ov097/calls/DrawShadowedAnchoredText_020bfd88.c:
     complete
@@ -108,6 +116,10 @@ src/overlays/ov097/calls/AlignUpTo4K_020c02f4.c:
     complete
     .text       start:0x020c02f4 end:0x020c0314
 
+src/overlays/ov097/calls/SetupScrollList_020c0314.c:
+    complete
+    .text       start:0x020c0314 end:0x020c057c
+
 src/overlays/ov097/calls/MoveListCursorUp.c:
     complete
     .text       start:0x020c057c end:0x020c06c8
@@ -123,6 +135,10 @@ src/overlays/ov097/calls/PageListUp.c:
 src/overlays/ov097/calls/PageListDown.c:
     complete
     .text       start:0x020c0870 end:0x020c08d4
+
+src/overlays/ov097/calls/RefreshScrollList.c:
+    complete
+    .text       start:0x020c08d4 end:0x020c0be0
 
 src/overlays/ov097/calls/CreateEntryPopups.c:
     complete
@@ -196,6 +212,10 @@ src/overlays/ov097/auto/func_ov097_020c159c.c:
     complete
     .text       start:0x020c159c end:0x020c15a0
 
+src/overlays/ov097/calls/TickEntryTransition.c:
+    complete
+    .text       start:0x020c15a0 end:0x020c1864
+
 src/overlays/ov097/calls/func_ov097_020c1864.c:
     complete
     .text       start:0x020c1864 end:0x020c188c
@@ -215,6 +235,10 @@ src/overlays/ov097/calls/ResetMenuOrthoCamera.c:
 src/overlays/ov097/auto/func_ov097_020c1a64.c:
     complete
     .text       start:0x020c1a64 end:0x020c1a66
+
+src/overlays/ov097/calls/DrawGaugeSprite.c:
+    complete
+    .text       start:0x020c1a68 end:0x020c1db8
 
 src/overlays/ov097/calls/func_ov097_020c1db8.c:
     complete

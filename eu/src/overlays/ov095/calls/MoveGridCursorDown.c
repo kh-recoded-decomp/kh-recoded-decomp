@@ -1,0 +1,5 @@
+#define GetGridCell_020c0a48 GetGridCell
+#define MoveGridCursorDown_020c0ce0 MoveGridCursorDown
+#define RefreshCursorMarkers_020c1168 RefreshCursorMarkers
+#define SetGridEntryPosition_020c02fc SetGridEntryPosition
+#include "src/ov095/panel_state/MoveGridCursorDown_020c0ce0.c"

@@ -7,7 +7,7 @@
 #define RespawnContactFieldObject_02084bcc RespawnContactFieldObject
 #define SpawnFieldActor_0208078c func_ov001_020807b4
 #define ZeroBytes0x14_020a8adc ZeroBytes0x14
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define data_020559c0 gCollisionBoundsDispatch
 #define data_ov001_0209f168 sOv001_BaEfDbhit_0209f188
 #define func_0202f4e8 Flags16_ClearBit1

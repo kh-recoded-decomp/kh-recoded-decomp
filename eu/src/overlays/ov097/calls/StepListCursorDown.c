@@ -1,4 +1,4 @@
 #define StepListCursorDown_020c06a8 StepListCursorDown
 #define func_ov097_020c00fc SetPanelSlotPosition
-#define func_ov097_020c08b4 func_ov097_020c08d4
+#define func_ov097_020c08b4 RefreshScrollList
 #include "src/ov097/panel_state/StepListCursorDown_020c06a8.c"

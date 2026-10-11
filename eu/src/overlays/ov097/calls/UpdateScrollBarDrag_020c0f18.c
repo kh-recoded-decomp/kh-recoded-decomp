@@ -3,11 +3,11 @@
 #define GetScrollTrackRow_020c13a8 GetScrollTrackRow
 #define IsScrollTrackSettled_020c1424 IsScrollTrackSettled
 #define JumpScrollTrack_020c1250 JumpScrollTrack
-#define RefreshListPanels_020bfb38 func_ov097_020bfb58
+#define RefreshListPanels_020bfb38 RefreshListPanels
 #define ResetScrollTrack_020c1228 ResetScrollTrack
 #define SetScrollTrackTarget_020c1328 SetScrollTrackTarget
 #define UpdateScrollBarDrag_020c0ef8 UpdateScrollBarDrag_020c0f18
 #define func_ov039_020bca00 GetMenuInputState
-#define func_ov097_020c08b4 func_ov097_020c08d4
+#define func_ov097_020c08b4 RefreshScrollList
 #define g_menuScene_020c2520 data_ov097_020c2540
 #include "src/ov097/panel_state/UpdateScrollBarDrag_020c0ef8.c"

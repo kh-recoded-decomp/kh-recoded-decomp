@@ -1,7 +1,7 @@
 #define OffsetBoxByDelta_0203ac70 OffsetBoxByDelta
 #define ResetObjectRotation_020a2968 ResetObjectRotation
 #define UpdateBoxAxisAlignedFlag_0203b1c0 UpdateBoxAxisAlignedFlag
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define data_020559c0 gCollisionBoundsDispatch
 #define func_01ff90ec MTX_Identity33_
 #define func_02036240 ActorRegistry_GetEntityByIndex

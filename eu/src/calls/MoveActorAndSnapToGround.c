@@ -5,7 +5,7 @@
 #define VEC_Add_01ff9e0c VEC_Add
 #define VEC_DotProduct_01ff9e6c VEC_DotProduct
 #define VEC_Subtract_01ff9e3c VEC_Subtract
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define func_01ff9cfc FX_Sqrt
 #define func_02023d9c _ll_mul
 #define func_02031fec func_02032000

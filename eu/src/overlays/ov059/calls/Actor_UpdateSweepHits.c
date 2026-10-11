@@ -27,7 +27,7 @@
 #define VEC_Normalize_01ffaff4 VEC_NormalizeLength
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define ZeroBytes0x28_020ac0f8 ZeroBytes0x28
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define func_0202f4b8 func_0202f4cc
 #define func_02036230 GetActorRegistry
 #define func_ov001_020863e0 func_ov001_02086408
@@ -37,5 +37,5 @@
 #define func_ov001_02087944 func_ov001_0208796c
 #define func_ov021_020a8ab4 ResetAnimationTrackState
 #define func_ov021_020a8ca0 func_ov021_020a8cc0
-#define func_ov021_020ac33c func_ov021_020ac35c
+#define func_ov021_020ac33c ApplyHitToTarget_020ac33c
 #include "src/ov059/unclassified_helpers/Actor_UpdateSweepHits_020c9d14.c"

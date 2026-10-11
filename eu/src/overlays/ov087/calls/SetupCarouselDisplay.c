@@ -1,0 +1,13 @@
+#define GX_BeginLoadOBJExtPltt_02008998 GX_SetBankForTexPltt
+#define GX_SetBankForBGExtPltt_0200868c GX_SetBankForBGExtPltt
+#define GX_SetBankForBG_02008358 GX_SetBankForBG
+#define GX_SetBankForOBJ_0200855c GX_SetBankForOBJ
+#define GX_SetBankForSubBG_02008a98 GX_SetBankForSubBG
+#define GX_SetBankForSubOBJ_02008b34 GX_SetBankForSubOBJ
+#define GX_SetBankForTex_02008820 GX_SetBankForTex
+#define GX_SetGraphicsMode_020066c4 GX_SetGraphicsMode
+#define NNS_GfdInitFrmTexVramManager_0201389c NNS_GfdInitFrmTexVramManager
+#define ResetDisplayHardware_02029bfc ResetDisplayHardware
+#define SetFrameProcessingMode_02013bcc NNS_GfdInitFrmPlttVramManager
+#define SetupCarouselDisplay_020c6378 SetupCarouselDisplay
+#include "src/ov087/panel_state/SetupCarouselDisplay_020c6378.c"

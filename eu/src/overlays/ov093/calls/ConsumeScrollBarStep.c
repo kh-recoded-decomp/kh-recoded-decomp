@@ -1,3 +1,3 @@
 #define ConsumeScrollBarStep_020c0bec ConsumeScrollBarStep
-#define func_ov093_020c0cb0 func_ov093_020c0cd0
+#define func_ov093_020c0cb0 RefreshScrollBar_020c0cb0
 #include "src/ov093/unclassified_helpers/ConsumeScrollBarStep_020c0bec.c"

@@ -4,7 +4,7 @@ extern unsigned int MI_CpuFill8();
 extern unsigned int InitSharedRecordAndDispatch();
 extern unsigned int func_ov099_020c1b6c();
 extern unsigned int ReleaseViewerModels();
-extern unsigned int func_ov099_020c1d7c();
+extern unsigned int ApplyViewerModelPose();
 extern unsigned int selectJointAnimationBlend();
 
 void func_ov099_020c2078(int work,int selection) {
@@ -34,5 +34,5 @@ void func_ov099_020c2078(int work,int selection) {
   }
   func_ov099_020c1b6c(work,selection);
   *(int *)(work + 0x5bc) = selection;
-  func_ov099_020c1d7c(work);
+  ApplyViewerModelPose(work);
 }

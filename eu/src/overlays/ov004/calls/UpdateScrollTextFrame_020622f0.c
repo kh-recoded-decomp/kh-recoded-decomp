@@ -1,0 +1,9 @@
+#define AlarmCallback_0204f12c AlarmCallback_0204f140
+#define FeedScrollTextLine_02062dc0 FeedScrollTextLine
+#define UpdateScrollTextScreens_02062990 UpdateScrollTextScreens
+#define func_0204f13c IndexedRecord_SetPair
+#define func_0204f160 IndexedRecord_GetPair
+#define func_0204f378 IndexedRecords_SetFlag2
+#define func_0204f3b0 IndexedRecord_GetFlag2
+#define g_scrollText_020645a0 data_ov004_020645a0
+#include "src/ov004/scroll_text/UpdateScrollTextFrame_020622f0.c"

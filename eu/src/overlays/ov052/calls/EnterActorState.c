@@ -22,7 +22,7 @@
 #define SetManagerEnabled_0206e160 SetManagerEnabled
 #define VEC_Add_01ff9e0c VEC_Add
 #define VEC_Subtract_01ff9e3c VEC_Subtract
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define data_0205356c data_02053580
 #define func_ov021_020a7504 func_ov021_020a7524
 #define func_ov021_020a7510 func_ov021_020a7530
@@ -33,7 +33,7 @@
 #define func_ov030_020bc38c SpawnSceneMarker
 #define func_ov040_020bdc94 ApplyPendingFlagReward
 #define func_ov040_020bddd8 UpdateRewardMenuClose
-#define func_ov052_020ca918 func_ov052_020ca938
+#define func_ov052_020ca918 UpdateGroundMovement
 #define func_ov052_020cac00 UpdateAnchoredMovement
 #define func_ov052_020cae20 ApplyRootMotion
 #define func_ov052_020caed4 UpdateGlideLanding

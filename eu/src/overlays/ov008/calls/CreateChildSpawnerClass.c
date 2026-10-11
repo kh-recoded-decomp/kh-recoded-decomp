@@ -25,7 +25,7 @@ typedef struct SpawnerClass {
 extern SpawnerClass *CreateByteGrid(u32 classSize, u32 objectSize, int count);
 extern void AcquireEffectRecordPair(void);
 extern void FieldObject_EnsureModelsLoaded(void);
-extern void func_ov008_020a06fc(void);
+extern void FieldObject_RespawnSegmented(void);
 extern void func_ov001_0207f210(void);
 extern void ReleaseChildObjects(void);
 extern void func_ov001_0207f26c(void);
@@ -50,7 +50,7 @@ SpawnerClass *CreateChildSpawnerClass(int count, int actorKind)
     objectClass->linkId = -1;
     objectClass->hooks[0] = AcquireEffectRecordPair;
     objectClass->hooks[1] = FieldObject_EnsureModelsLoaded;
-    objectClass->hooks[2] = func_ov008_020a06fc;
+    objectClass->hooks[2] = FieldObject_RespawnSegmented;
     objectClass->hooks[3] = func_ov001_0207f210;
     objectClass->hooks[4] = ReleaseChildObjects;
     objectClass->hooks[6] = func_ov001_0207f26c;

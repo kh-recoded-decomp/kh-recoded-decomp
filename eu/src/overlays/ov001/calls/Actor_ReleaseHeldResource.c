@@ -1,5 +1,5 @@
 #define Actor_ReleaseHeldResource_02088bc4 Actor_ReleaseHeldResource
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField
 #define ReleaseResourceAndDetach_0202eee8 ReleaseResourceAndDetach
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #include "src/ov001/scripted_actor_behavior/Actor_ReleaseHeldResource_02088bc4.c"

@@ -7,7 +7,7 @@
 #define VEC_CrossProduct_01ff9ea8 VEC_CrossProduct
 #define VEC_DotProduct_01ff9e6c VEC_DotProduct
 #define VEC_Subtract_01ff9e3c VEC_Subtract
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define data_0205372c data_02053740
 #define func_01ff9f88 VEC_Normalize
 #include "src/ov049/shared_engine/InitEventCameraShot_020c4330.c"

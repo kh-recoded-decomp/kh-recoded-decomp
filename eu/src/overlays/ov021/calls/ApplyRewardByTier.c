@@ -1,3 +1,4 @@
+#define func_ov001_02063d4c UpdateFieldTimer
 #define AddSessionCounter_02063a80 AddSessionCounter
 #define ApplyRewardByTier_020a7a40 ApplyRewardByTier
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField

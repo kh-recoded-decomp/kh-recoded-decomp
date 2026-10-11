@@ -1,3 +1,3 @@
 #define ScriptOp_JumpIfEntryInactive_020b3484 ScriptOp_JumpIfEntryInactive
-#define func_ov021_020b05e8 func_ov021_020b0608
+#define func_ov021_020b05e8 EvalScriptExpression
 #include "src/ov021/script_ops/ScriptOp_JumpIfEntryInactive_020b3484.c"

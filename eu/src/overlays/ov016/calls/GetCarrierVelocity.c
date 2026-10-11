@@ -1,6 +1,6 @@
 #define GetCarrierVelocity_020a3418 GetCarrierVelocity
 #define IsFieldUnitAction5Mode1_020a6ad4 IsFieldUnitAction5Mode1
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define func_02036240 ActorRegistry_GetEntityByIndex
 #define func_ov001_02087224 func_ov001_0208724c
 #include "src/ov016/field_objects/GetCarrierVelocity_020a3418.c"

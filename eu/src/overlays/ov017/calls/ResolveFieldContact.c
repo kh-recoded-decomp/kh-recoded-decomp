@@ -4,5 +4,5 @@
 #define VEC_Add_01ff9e0c VEC_Add
 #define VEC_DotProduct_01ff9e6c VEC_DotProduct
 #define VEC_Subtract_01ff9e3c VEC_Subtract
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #include "src/ov017/field_objects/ResolveFieldContact_020a4574.c"

@@ -14,6 +14,26 @@
     {
       "module": "arm9",
       "section": ".rodata",
+      "start": "0x02052700",
+      "end": "0x02052804",
+      "source": "src/data/sdk/FX_AtanTable_.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "FX_AtanTable_",
+      "behavior": "129 fixed-point atan samples with two bytes of alignment padding"
+    },
+    {
+      "module": "arm9",
+      "section": ".rodata",
+      "start": "0x02052804",
+      "end": "0x02052908",
+      "source": "src/data/sdk/FX_AtanIdxTable_.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "FX_AtanIdxTable_",
+      "behavior": "129 angle-index atan samples with two bytes of alignment padding"
+    },
+    {
+      "module": "arm9",
+      "section": ".rodata",
       "start": "0x02052978",
       "end": "0x02052980",
       "source": "src/data/tables/CARDiDmaUsingFormer.c",
@@ -30,6 +50,16 @@
       "compiler": "mwccarm-4.0-1036",
       "name": "VRAM transfer and heap allocator dispatch",
       "behavior": "Dispatch tables for VRAM transfer jobs and heap allocation backends."
+    },
+    {
+      "module": "arm9",
+      "section": ".rodata",
+      "start": "0x0205344c",
+      "end": "0x02053458",
+      "source": "src/data/sdk/gZeroVecFx32.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gZeroVecFx32",
+      "behavior": "Typed zero position/velocity vector shared by collision and movement helpers"
     },
     {
       "module": "arm9",
@@ -174,6 +204,16 @@
     {
       "module": "arm9",
       "section": ".data",
+      "start": "0x02055c78",
+      "end": "0x02055cf0",
+      "source": "src/data/sdk/sFrmTexVramRegions.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "sFrmTexVramRegions",
+      "behavior": "Five typed frame texture VRAM allocator regions with 4x4 index-bank metadata"
+    },
+    {
+      "module": "arm9",
+      "section": ".data",
       "start": "0x02055d64",
       "end": "0x02055d70",
       "source": "src/data/tables/gJointAnimationResultDispatch.c",
@@ -250,6 +290,16 @@
       "compiler": "mwccarm-4.0-1036",
       "name": "sound category name table",
       "behavior": "Pointers to sound category names used by the sound manager."
+    },
+    {
+      "module": "arm9",
+      "section": ".bss",
+      "start": "0x02056ee8",
+      "end": "0x02056f08",
+      "source": "src/data/sdk/MIi_GXDmaParams.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "MIi_GXDmaParams",
+      "behavior": "Asynchronous geometry FIFO DMA state, callback and saved IRQ configuration"
     },
     {
       "module": "dtcm",
@@ -4018,9 +4068,9 @@
       "start": "0x020d1474",
       "end": "0x020d1494",
       "source": "src/overlays/ov075/data/Rodata_ov075_020d1474.c",
-      "compiler": "mwccarm-4.0-1036",
-      "name": "matrix mode labels",
-      "behavior": "Four-byte labels selected for each matrix display mode."
+      "compiler": "mwccarm-3.0-139",
+      "name": "sMatrixCursorFrames",
+      "behavior": "Eight cursor frames: width, height and signed x/y offsets used by matrix rendering and directional input"
     },
     {
       "module": "ov075",

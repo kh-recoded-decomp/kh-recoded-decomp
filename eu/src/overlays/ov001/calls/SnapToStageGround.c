@@ -4,5 +4,5 @@
 #define SnapToStageGround_02098570 SnapToStageGround
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define addScaledVector_020301ac AddScaledVector
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #include "src/ov001/shared_engine/SnapToStageGround_02098570.c"

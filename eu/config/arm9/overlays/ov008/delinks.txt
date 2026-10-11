@@ -20,6 +20,10 @@ src/overlays/ov008/calls/ScriptCmd_CreateChildSpawner.c:
     complete
     .text       start:0x020a0688 end:0x020a06fa
 
+src/overlays/ov008/calls/FieldObject_RespawnSegmented.c:
+    complete
+    .text       start:0x020a06fc end:0x020a0948
+
 src/overlays/ov008/auto/func_ov008_020a0948.c:
     complete
     .text       start:0x020a0948 end:0x020a094c

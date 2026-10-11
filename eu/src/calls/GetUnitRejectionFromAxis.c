@@ -6,5 +6,5 @@
 #define VEC_DotProduct_01ff9e6c VEC_DotProduct
 #define VEC_Normalize_01ff9f88 VEC_Normalize
 #define VEC_Subtract_01ff9e3c VEC_Subtract
-#define g_zeroVec_02053438 data_0205344c
+#define g_zeroVec_02053438 gZeroVecFx32
 #include "src/arm9/math/GetUnitRejectionFromAxis_0204aea8.c"

@@ -3,6 +3,6 @@
 #define ScaleVecFx32ComponentsConditional_0204b6c4 ScaleVecFx32ComponentsConditional
 #define VEC_DotProduct_01ff9e6c VEC_DotProduct
 #define VEC_Normalize_01ff9f88 VEC_Normalize
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define func_0204bac4 func_0204bad8
 #include "src/arm9/math/GetNormalizedAxisRejectionMasked_0204bd6c.c"

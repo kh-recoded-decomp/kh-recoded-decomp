@@ -1,0 +1,15 @@
+#define ClearSessionFlagsWord_02064d70 ClearSessionFlagsWord
+#define EnterPanelState_020c6118 EnterPanelState_020c6138
+#define FindWidgetById_020b90a4 FindWidgetById
+#define MoveCursorToWidget_020c43c4 MoveCursorToWidget
+#define PlaySoundEffect_0204d924 PlaySoundEffect
+#define PopStackEntry_020bc8a0 PopStackEntry
+#define PushPanelState_020c61b0 PushPanelState
+#define SetEntrySlotsVisible_020b9580 SetEntrySlotsVisible
+#define SetFocusedWidget_020b96e4 SetFocusedWidget
+#define UpdateEntryCountRecord_020c42a0 UpdateEntryCountRecord
+#define data_ov001_020a0460 data_ov001_020a0480
+#define func_ov039_020bbf78 StartSubScene
+#define func_ov039_020bc1bc func_ov039_020bc1dc
+#define func_ov039_020bc810 GetMenuStackDepth
+#include "src/ov087/panel_state/PopPanelState_020c6218.c"

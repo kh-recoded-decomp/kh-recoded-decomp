@@ -7,7 +7,7 @@
 #define ResolveSlideMovement_0203deac ResolveSlideMovement
 #define VEC_DotProduct_01ff9e6c VEC_DotProduct
 #define VEC_Normalize_01ff9f88 VEC_Normalize
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define data_02055898 data_020558ac
 #define func_0203dde0 AreAxesMutuallyEnclosing
 #define func_0204a5e4 ScaleVecFx32InPlace

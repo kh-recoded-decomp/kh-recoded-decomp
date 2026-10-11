@@ -11,11 +11,11 @@ typedef struct MotionTarget {
     s8 mode;
 } MotionTarget;
 
-extern const VecFx32 data_0205344c;
+extern const VecFx32 gZeroVecFx32;
 
 void func_ov059_020c934c(MotionTarget *target)
 {
-    VecFx32 origin = data_0205344c;
+    VecFx32 origin = gZeroVecFx32;
 
     target->position = origin;
     target->destination = origin;

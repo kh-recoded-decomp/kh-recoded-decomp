@@ -1,0 +1,8 @@
+#define EvalScriptExpression_020b05e8 EvalScriptExpression
+#define FX_Div_01ff9c84 FX_Div
+#define FixedPointMultiply12 FX_Mul
+#define MIi_CpuCopy16_01ff869c MIi_CpuCopy16
+#define ResolveTaggedValueRef_020b0374 ResolveTaggedValueRef
+#define TaggedValueToFixed_020b03b0 TaggedValueToFixed
+#define TaggedValueToInt_020b0398 TaggedValueToInt
+#include "src/ov021/script_ops/EvalScriptExpression_020b05e8.c"

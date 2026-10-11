@@ -6,6 +6,6 @@
 #define FixedPointMultiply12 FX_Mul
 #define GetCameraToTargetDistance_020bca30 IsStatePhase4
 #define Obj_SetPosition_0203569c Obj_SetPosition
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define func_ov021_020af5f4 func_ov021_020af614
 #include "src/ov059/unclassified_helpers/Actor_HandleFallOut_020c837c.c"

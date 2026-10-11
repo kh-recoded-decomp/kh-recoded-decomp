@@ -1,0 +1,8 @@
+#define ConfirmPanelSelection_020c6dcc ConfirmPanelSelection
+#define ConfirmSelectedEntry_020c7040 ConfirmSelectedEntry
+#define HandleSelectForState_020c7810 HandleSelectForState
+#define PushPanelState_020c61b0 PushPanelState
+#define ReadSessionPackedBits_02064574 ReadSessionPackedBits
+#define func_ov039_020bc618 GetActiveMenuScene
+#define func_ov039_020bc810 GetMenuStackDepth
+#include "src/ov087/panel_state/HandleSelectForState_020c7810.c"

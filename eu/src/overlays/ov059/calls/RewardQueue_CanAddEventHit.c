@@ -3,7 +3,7 @@
 #define GetStageEventTargetInfo_02087960 GetStageEventTargetInfo
 #define RewardQueue_CanAddEventHit_020cf4c8 RewardQueue_CanAddEventHit
 #define ZeroBytes0x28_020ac0f8 ZeroBytes0x28
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define func_01ff8830 MI_CpuFill8
 #define func_ov001_020880b4 ForwardToActiveServiceInstance
 #include "src/ov059/unclassified_helpers/RewardQueue_CanAddEventHit_020cf4c8.c"

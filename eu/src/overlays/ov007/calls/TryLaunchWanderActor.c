@@ -30,7 +30,7 @@ typedef struct {
 } FieldState;
 
 extern FieldState *data_ov001_020a0480;
-extern VecFx32 data_0205344c;
+extern VecFx32 gZeroVecFx32;
 extern BOOL func_ov001_02063620(void);
 extern BOOL func_ov001_02064490(void);
 extern VecFx32 *func_ov007_020a100c(WanderActor *actor);
@@ -67,7 +67,7 @@ BOOL TryLaunchWanderActor(WanderActor *actor) {
     actor->motion[0].active = TRUE;
     actor->motion[0].airborne = TRUE;
     motion->timer = 0;
-    motion->velocity = data_0205344c;
+    motion->velocity = gZeroVecFx32;
     actor->drawFlags &= ~0x10;
     PlaySoundChecked(0, 0x3a);
     return FALSE;

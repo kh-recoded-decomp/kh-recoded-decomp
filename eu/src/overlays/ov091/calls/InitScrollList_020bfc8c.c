@@ -3,5 +3,5 @@
 #define InitScrollList_020bfc6c InitScrollList_020bfc8c
 #define SetListPanelSlotFlag_020bf918 SetListPanelSlotFlag
 #define func_ov091_020bfc00 GetListPanelSlotData
-#define func_ov091_020c0144 func_ov091_020c0164
+#define func_ov091_020c0144 RefreshScrollList_020c0144
 #include "src/ov091/panel_state/InitScrollList_020bfc6c.c"

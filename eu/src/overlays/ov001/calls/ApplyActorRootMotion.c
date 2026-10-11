@@ -9,7 +9,7 @@
 #define MTX_RotY43_01ff9530 MTX_RotY43_
 #define ScaleVecFx32_01ffafb4 ScaleVecFx32
 #define WriteSessionPackedBits_0206459c WriteSessionPackedBits
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define data_0205356c data_02053580
 #define func_ov001_02088b48 ClearActorFlagBit40
 #define selectJointAnimationBlend_0202f2cc selectJointAnimationBlend

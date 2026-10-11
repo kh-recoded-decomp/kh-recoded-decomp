@@ -2,6 +2,6 @@
 #define Actor_ResetMovementState_020cb680 Actor_ResetMovementState
 #define Actor_SetTimeScale_020c7d88 Actor_SetTimeScale
 #define SetClampedCursor_020a75d8 SetClampedCursor
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define func_0202f4b8 func_0202f4cc
 #include "src/ov059/unclassified_helpers/Actor_ResetMovementState_020cb680.c"

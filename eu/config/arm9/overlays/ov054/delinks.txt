@@ -40,6 +40,10 @@ src/overlays/ov054/calls/MapCodeToSlotIndex.c:
     complete
     .text       start:0x020d273c end:0x020d2794
 
+src/overlays/ov054/calls/HandleRewardActorCommand_020d2774.c:
+    complete
+    .text       start:0x020d2794 end:0x020d2ac0
+
 src/overlays/ov054/calls/RefreshModeMenuHighlights.c:
     complete
     .text       start:0x020d2ac0 end:0x020d2dcc

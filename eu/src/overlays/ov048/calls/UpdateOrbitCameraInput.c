@@ -2,7 +2,7 @@
 #define NegateVecFx32_0204aa40 NegateVecFx32
 #define TransformVectorByBasis_0204bee8 TransformVectorByBasis
 #define UpdateOrbitCameraInput_020c3530 UpdateOrbitCameraInput
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define data_0205a970 NNS_G3dGlb_cameraMtx
 #define func_0204b0ac RotateVecTowardVec
 #define func_ov046_020c0d78 Camera_GetStateFlags

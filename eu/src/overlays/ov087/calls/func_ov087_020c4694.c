@@ -1,6 +1,6 @@
-extern void func_ov087_020c6238(int state, int parameter);
+extern void PopPanelState_020c6218(int state, int parameter);
 
 void func_ov087_020c4694(int state)
 {
-    func_ov087_020c6238(state, -1);
+    PopPanelState_020c6218(state, -1);
 }

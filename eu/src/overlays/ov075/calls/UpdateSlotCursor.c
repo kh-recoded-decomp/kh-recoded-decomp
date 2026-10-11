@@ -1,0 +1,8 @@
+#define EncodeTouchSlot_020c48e8 EncodeTouchSlot
+#define FX_Sqrt_01ff9cfc FX_Sqrt
+#define GetSlotCellOffset_020c493c GetSlotCellOffset
+#define PlaySoundEffect_0204d924 PlaySoundEffect
+#define UpdateSlotCursor_020cc5a8 UpdateSlotCursor
+#define data_ov075_020d1480 data_ov075_020d14a0
+#define data_ov075_020d14a8 data_ov075_020d14c8
+#include "src/ov075/unclassified_helpers/UpdateSlotCursor_020cc5a8.c"

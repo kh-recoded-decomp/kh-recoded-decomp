@@ -10,7 +10,7 @@
 #define VEC_DotProduct_01ff9e6c VEC_DotProduct
 #define VEC_Normalize_01ff9f88 VEC_Normalize
 #define VEC_Subtract_01ff9e3c VEC_Subtract
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define func_0204a9e4 GetCrossIfNonParallel
 #define func_ov059_020cd724 Request_IsIdle
 #include "src/ov059/unclassified_helpers/Collider_ComputeBoxPushOut_020cd44c.c"

@@ -149,7 +149,7 @@ extern u16 data_02060500;
 extern const PageTab data_ov075_020d140a[];
 extern const OptionApplyFunc gOv075StateHandlers[];
 extern const OptionUpdateFunc gOv075CursorHandlers[];
-extern const FocusOffset sMatrixModeLabels[];
+extern const FocusOffset sMatrixCursorFrames[];
 extern const StatPreview sOv075_Empty_020d1568;
 
 extern u32 GetPrimaryElementEnabled(void);
@@ -167,7 +167,7 @@ extern void SetStatusPageAndCursor(int page, int index);
 extern BOOL HasUnvisitedLink(MatrixMenu *menu);
 extern void ResetDirectionRepeat(MatrixMenu *menu);
 extern CellOffset GetSlotCellOffset(int code);
-extern void func_ov075_020c5d30(MatrixMenu *menu, int a, int b, int c);
+extern void PreviewMatrixNodeStats_020c5d10(MatrixMenu *menu, int a, int b, int c);
 extern int GetOptionChangeNotice(MatrixMenu *menu);
 extern void ResetMatrixDescription(MatrixMenu *menu);
 extern void UpdateDirectionRepeat(MatrixMenu *menu);
@@ -227,7 +227,7 @@ static inline BOOL UpdateMenuEvent(MatrixMenu *menu)
                 } else {
                     slot = type - 2;
                 }
-                offset = &sMatrixModeLabels[slot];
+                offset = &sMatrixCursorFrames[slot];
                 menu->focusX = ((u32)offset->x >> 1) + (node->index % columns) * 16;
                 menu->focusY = menu->event->offsetY + (((u32)offset->y >> 1) + (node->index / columns) * 16 + 0x38);
                 menu->lastNode = NULL;
@@ -263,7 +263,7 @@ static inline BOOL UpdateMenuEvent(MatrixMenu *menu)
             if (enabled && HasUnvisitedLink(menu)) {
                 arg = 10;
             }
-            func_ov075_020c5d30(menu, -1, -1, arg);
+            PreviewMatrixNodeStats_020c5d10(menu, -1, -1, arg);
         }
     }
     return TRUE;

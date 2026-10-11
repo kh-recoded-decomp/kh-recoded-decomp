@@ -6,6 +6,6 @@
 #define SetActorAnimSlot_0208a54c SetActorAnimSlot
 #define VEC_Mag_01ff9f28 VEC_Mag
 #define VEC_Subtract_01ff9e3c VEC_Subtract
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define func_ov001_02088c1c GetActorFieldBySessionMode
 #include "src/ov001/actor_animation/Actor_RestoreAnimState_0208a8b8.c"

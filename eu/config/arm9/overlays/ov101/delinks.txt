@@ -16,6 +16,10 @@ src/overlays/ov101/calls/func_ov101_020bf3d8.c:
     complete
     .text       start:0x020bf3d8 end:0x020bf408
 
+src/overlays/ov101/calls/SetupListDisplay.c:
+    complete
+    .text       start:0x020bf488 end:0x020bf6d0
+
 src/overlays/ov101/calls/LoadStateMessages.c:
     complete
     .text       start:0x020bf6d0 end:0x020bf714

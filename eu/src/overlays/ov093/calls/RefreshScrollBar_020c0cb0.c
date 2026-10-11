@@ -1,0 +1,6 @@
+#define FX_Div_01ff9c84 FX_Div
+#define SetSlotAnimFlag_020c0310 SetSlotAnimFlag
+#define SetSlotPosition_020c0458 SetSlotPosition
+#define data_ov093_020c4108 data_ov093_020c4128
+#define data_ov093_020c4274 data_ov093_020c4294
+#include "src/ov093/unclassified_helpers/RefreshScrollBar_020c0cb0.c"

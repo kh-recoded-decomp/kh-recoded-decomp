@@ -3,7 +3,7 @@
 #define ResetGroupMemberPhases_020bea44 ResetGroupMemberPhases
 #define ScatterGroupMembers_020befbc ScatterGroupMembers_020befdc
 #define SetGroupFormation_020bbfc4 SetGroupFormation
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define data_02053444 data_02053458
 #define func_ov001_0208635c func_ov001_02086384
 #define func_ov032_020bbc78 func_ov032_020bbc98

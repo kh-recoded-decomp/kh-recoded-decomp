@@ -25,7 +25,7 @@ struct Actor {
     ActorChangeStateFunc changeState;
 };
 
-extern const VecFx32 data_0205344c;
+extern const VecFx32 gZeroVecFx32;
 
 extern void Actor_GetRootMotionDelta(Actor *actor, VecFx32 *target);
 extern void *func_ov001_0206db78(u32 playerIndex);
@@ -41,7 +41,7 @@ void func_ov059_020c9748(Actor *actor)
     u64 followUpQueued;
     VecFx32 target;
 
-    actor->velocity = data_0205344c;
+    actor->velocity = gZeroVecFx32;
     if (!(actor->inputFlags & 4)) {
         actor->changeState(actor, 3);
         return;

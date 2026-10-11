@@ -75,7 +75,7 @@ typedef struct {
 } CollisionWorld;
 
 extern CameraState *data_ov042_020be5e0;
-extern VecFx32 data_0205344c;
+extern VecFx32 gZeroVecFx32;
 extern int func_ov001_02063a4c(void);
 extern VecFx32 *func_ov001_0206dc4c(int index);
 extern InputEntry *GetBoundedEntryField(int index);
@@ -282,7 +282,7 @@ BOOL UpdateCameraScene(void) {
                                 if (cam->recenterTimer == 0) {
                                     cam->anchor = cam->focus;
                                 } else {
-                                    offset = data_0205344c;
+                                    offset = gZeroVecFx32;
                                 }
                             }
                             if (cam->recenterTimer != -1) {

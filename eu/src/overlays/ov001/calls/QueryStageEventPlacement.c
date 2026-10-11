@@ -2,5 +2,5 @@
 #define MI_CpuFill8_01ff8830 MI_CpuFill8
 #define QueryStageEventPlacement_02087bec QueryStageEventPlacement
 #define data_ov001_0209f2c8 g_stageEventsState
-#define func_ov001_0209661c func_ov001_02096644
+#define func_ov001_0209661c GetRouteWaypointPlacement
 #include "src/ov001/shared_engine/QueryStageEventPlacement_02087bec.c"

@@ -1,5 +1,5 @@
 #define HandleContactHit_02085888 HandleContactHit
 #define IsFacingContactNormal_020349d8 IsFacingContactNormal
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define func_ov001_020863e0 func_ov001_02086408
 #include "src/ov001/field_objects/HandleContactHit_02085888.c"

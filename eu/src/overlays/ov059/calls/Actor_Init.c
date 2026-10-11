@@ -16,7 +16,7 @@
 #define func_01ff86fc MIi_CpuClear32
 #define func_ov021_020a7cc8 func_ov021_020a7ce8
 #define func_ov021_020a89a8 func_ov021_020a89c8
-#define func_ov059_020c7acc func_ov059_020c7aec
+#define func_ov059_020c7acc Actor_InitModel_020c7acc
 #define func_ov059_020c932c func_ov059_020c934c
 #define func_ov059_020ca1e8 func_ov059_020ca208
 #define func_ov059_020cbe80 func_ov059_020cbea0

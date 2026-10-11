@@ -1,0 +1,13 @@
+#define ApplyTimeScaledSpeed_020c7d28 ApplyTimeScaledSpeed
+#define ApproachTargetValue_020d0e80 ApproachTargetValue
+#define ComputeFacingAndDirection_020cebbc ComputeFacingAndDirection
+#define FixedPointMultiply12 FX_Mul
+#define GetPlayerEntryCount_02050050 GetPlayerEntryCount
+#define IsPlayerEntryFlagSet_02050014 IsPlayerEntryFlagSet
+#define ResetIfIdMatches_020a8178 ResetIfIdMatches
+#define UpdateGroundMovement_020ca918 UpdateGroundMovement
+#define data_ov052_020d20c8 data_ov052_020d20e8
+#define func_ov001_0206db78 GetPlayerControlState
+#define func_ov021_020a7504 func_ov021_020a7524
+#define func_ov052_020c7edc SelectGroundAction
+#include "src/ov052/actor_motion/UpdateGroundMovement_020ca918.c"

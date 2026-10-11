@@ -52,7 +52,7 @@ typedef struct HitResult {
     u32 hitWall;
 } HitResult;
 
-extern const VecFx32 data_0205344c;
+extern const VecFx32 gZeroVecFx32;
 
 extern ObjectGroup *func_ov032_020bbc80(GroupObject *object);
 extern GroupMemberWork *func_ov032_020bbc98(GroupObject *object);
@@ -92,8 +92,8 @@ void UpdateBouncingGroupMember(GroupObject *object)
     HitResult *hit;
     BOOL reached;
 
-    zero = data_0205344c;
-    delta = data_0205344c;
+    zero = gZeroVecFx32;
+    delta = gZeroVecFx32;
     if (work->followLink != -1) {
         leader = func_ov001_02086384(world, work->followLink);
         leaderWork = func_ov032_020bbc98(leader);

@@ -1,0 +1,5 @@
+#define FX_Div_01ff9c84 FX_Div
+#define SetSlotEntryVisible_020bf678 SetSlotEntryVisible
+#define SetSlotPosition_020bf7b4 SetSlotPosition_020bf7d4
+#define data_ov103_020c05e8 data_ov103_020c0608
+#include "src/ov103/panel_state/RefreshListPanel_020bfe7c.c"

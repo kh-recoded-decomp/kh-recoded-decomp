@@ -11,14 +11,14 @@
 #define data_ov093_020c4038 data_ov093_020c4058
 #define data_ov093_020c4064 data_ov093_020c4084
 #define data_ov093_020c4d34 sOv093_VblankFunc_020c4d54
-#define func_ov093_020bf67c func_ov093_020bf69c
+#define func_ov093_020bf67c SetupEntryDisplay
 #define func_ov093_020bf880 func_ov093_020bf8a0
 #define func_ov093_020bf8e4 LoadSceneBackgrounds
 #define func_ov093_020bfac4 func_ov093_020bfae4
 #define func_ov093_020bfd60 RedrawEntryPanelText
 #define func_ov093_020c0100 InitEntrySlotSprites
 #define func_ov093_020c05b8 RefreshEntryListSlots
-#define func_ov093_020c06ec func_ov093_020c070c
+#define func_ov093_020c06ec SetupScrollBar_020c06ec
 #define func_ov093_020c0fb0 func_ov093_020c0fd0
 #define func_ov093_020c1ca8 UpdateDragAreaBounds
 #define func_ov093_020c231c SetSceneState

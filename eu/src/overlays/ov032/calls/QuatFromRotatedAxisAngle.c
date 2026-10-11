@@ -1,5 +1,5 @@
 #define QuatFromRotatedAxisAngle_020bd19c QuatFromRotatedAxisAngle
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define g_sinTable_0205356c data_02053580
 #define func_01ff9f88 VEC_Normalize
 #define MTX_RotY33_01ff923c MTX_RotY33_

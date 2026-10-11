@@ -2,5 +2,5 @@
 #define ResetMatrixDescription_020c6288 ResetMatrixDescription
 #define SetGlobalPackedBit_02027320 SetGlobalPackedBit
 #define func_ov075_020c493c GetSlotCellOffset
-#define func_ov075_020c5d10 func_ov075_020c5d30
+#define func_ov075_020c5d10 PreviewMatrixNodeStats_020c5d10
 #include "src/ov075/unclassified_helpers/CommitOptionChoice_020c6358.c"

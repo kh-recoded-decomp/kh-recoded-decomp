@@ -1,0 +1,10 @@
+#define CallVirtualHandlerSlot1_02001574 CallVirtualHandlerSlot1
+#define DrawCenteredTextLine_02001768 DrawCenteredTextLine
+#define FillBackgroundLayerRect_02001a60 FillBackgroundLayerRect
+#define FindWidgetById_020b90a4 FindWidgetById
+#define SetEntrySlotsVisible_020b9580 SetEntrySlotsVisible
+#define Text_UploadTileBuffer_02001520 Text_UploadTileBuffer
+#define UpdateScreenWidgetLayer_020bc1e4 UpdateScreenWidgetLayer
+#define func_020019f4 GetNestedModeByte
+#define func_ov039_020bc1bc func_ov039_020bc1dc
+#include "src/ov087/panel_state/DrawCenteredPromptText_020c4860.c"

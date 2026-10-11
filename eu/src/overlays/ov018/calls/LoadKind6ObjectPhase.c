@@ -10,7 +10,7 @@
 #define RebindAnimTracks_020809d0 RebindAnimTracks
 #define SetScaledPosition_020a34f4 SetScaledPosition
 #define ZeroBytes0x14_020a8adc ZeroBytes0x14
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define data_020559c0 gCollisionBoundsDispatch
 #define data_ov018_020a3850 sOv018_BaEfDbhit_020a3870
 #define func_0202ed9c func_0202edb0

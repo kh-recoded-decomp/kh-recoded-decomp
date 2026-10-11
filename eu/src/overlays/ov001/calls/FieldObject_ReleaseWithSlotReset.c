@@ -1,3 +1,4 @@
+#define func_ov001_02063d4c UpdateFieldTimer
 #define FieldObject_ReleaseWithSlotReset_02082ae0 FieldObject_ReleaseWithSlotReset
 #define ReleaseOwnerResource_0207f20c ReleaseOwnerResource
 #define SetSlotLayoutHighlight_0207d45c SetSlotLayoutHighlight

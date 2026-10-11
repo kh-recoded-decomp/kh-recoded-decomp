@@ -1,0 +1,6 @@
+#define FindWidgetById_020b90a4 FindWidgetById
+#define MoveCursorToWidget_020c43c4 MoveCursorToWidget
+#define RefreshChoiceMenuForKind_020c548c RefreshChoiceMenuForKind
+#define SetFocusedWidget_020b96e4 SetFocusedWidget
+#define func_ov039_020bc1bc func_ov039_020bc1dc
+#include "src/ov087/panel_state/FocusKindElementForState_020c5964.c"

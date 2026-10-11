@@ -11,5 +11,5 @@
 #define func_ov001_0208789c func_ov001_020878c4
 #define func_ov021_020abebc ComputeKnockbackVector
 #define func_ov021_020abfb0 func_ov021_020abfd0
-#define func_ov021_020ac33c func_ov021_020ac35c
+#define func_ov021_020ac33c ApplyHitToTarget_020ac33c
 #include "src/ov021/object_state/ResolveHitContacts_020abc40.c"

@@ -86,7 +86,7 @@ typedef struct Projectile {
     Box cached;
 } Projectile;
 
-extern const VecFx32 data_0205344c;
+extern const VecFx32 gZeroVecFx32;
 extern const s16 data_02053580[];
 extern BOOL CheckSurfaceFacing(void);
 extern BOOL HandleContactHit(void);
@@ -205,7 +205,7 @@ void MoveProjectileBody(Projectile *projectile, BOOL collide)
         if (hit == NULL && projectile->state == 1) {
             VecFx32 top = MakeVec(0, -0x3000, 0);
 
-            BuildSegmentShape(&shape, &storage, &data_0205344c, &top);
+            BuildSegmentShape(&shape, &storage, &gZeroVecFx32, &top);
             CollisionQuery_Init(&groundQuery, 0, projectile->body->anchor, 1, 2, 0, &shape, &groundWorkspace, NULL);
             sweep = groundQuery;
             SetShapePosition(&shape, &projectile->position);

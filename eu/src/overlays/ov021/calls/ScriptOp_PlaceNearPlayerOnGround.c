@@ -7,7 +7,7 @@
 #define TaggedValueToFixed_020b03b0 TaggedValueToFixed
 #define VEC_MultAdd_01ffa09c VEC_MultAdd
 #define addScaledVector_020301ac AddScaledVector
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define data_ov021_020b5104 data_ov021_020b5124
 #define data_ov021_020b56a4 data_ov021_020b56c4
 #define func_01ff8830 MI_CpuFill8

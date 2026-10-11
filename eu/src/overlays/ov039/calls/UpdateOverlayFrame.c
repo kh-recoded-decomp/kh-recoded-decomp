@@ -9,5 +9,5 @@
 #define UpdateWidgetRootAndResetList_020b8c80 func_ov027_020b8ca0
 #define func_ov027_020b7dd4 func_ov027_020b7df4
 #define func_ov027_020b9e60 FlushDirtyTileTableRows
-#define func_ov076_020c5d10 func_ov075_020c5d30
+#define func_ov076_020c5d10 PreviewMatrixNodeStats_020c5d10
 #include "src/ov039/overlay_lifecycle/UpdateOverlayFrame_020bbb6c.c"

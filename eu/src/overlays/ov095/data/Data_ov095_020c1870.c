@@ -9,13 +9,13 @@ extern void OpenEntryDetail(void);
 extern void ShowNextEntry(void);
 extern void ShowPreviousEntry(void);
 extern void UpdatePanelFrame(void);
-extern void func_ov095_020beb20(void);
+extern void InitGridMenu(void);
 extern void func_ov095_020bed84(void);
 extern void func_ov095_020befd4(void);
 extern void func_ov095_020beffc(void);
 
 void *gItemReportMenuCallbacks[17] = {
-    (void *)func_ov095_020beb20,
+    (void *)InitGridMenu,
     (void *)func_ov095_020bed84,
     (void *)UpdatePanelFrame,
     (void *)0x00000006,

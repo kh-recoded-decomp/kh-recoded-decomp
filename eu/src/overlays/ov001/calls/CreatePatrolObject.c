@@ -7,7 +7,7 @@
 #define SetSavedValueFlag7_02084750 SetSavedValueFlag7
 #define ShadowVolume_Init_02036b44 ShadowVolume_Init
 #define WriteSessionPackedBits_0206459c WriteSessionPackedBits
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define func_ov001_02083e70 UpdatePatrolIdle
 #define random_next_scaled_0202aa04 random_next_scaled
 #include "src/ov001/field_objects/CreatePatrolObject_02084a0c.c"

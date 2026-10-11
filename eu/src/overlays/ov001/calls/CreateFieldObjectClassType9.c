@@ -3,7 +3,7 @@
 #define func_ov001_0207f128 FieldObject_EnsureModelsLoaded
 #define func_ov001_0207f1e8 func_ov001_0207f210
 #define func_ov001_0207f380 CreateByteGrid
-#define func_ov001_02083730 func_ov001_02083758
+#define func_ov001_02083730 PatrolObject_Init
 #define func_ov001_02083a4c FreeLoaderBuffers
 #define func_ov001_02083a88 ResetPatrolObject
 #define func_ov001_02083b38 FieldObject_ResetToRandomPoint

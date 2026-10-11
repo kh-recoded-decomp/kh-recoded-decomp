@@ -14,7 +14,7 @@
 #define func_ov001_0208635c func_ov001_02086384
 #define VEC_Add_01ff9e0c VEC_Add
 #define UpdateFieldObjectBreakAnim_020a3554 UpdateFieldObjectBreakAnim
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #if defined(__MWERKS__)
 #include "../src/ov017/field_objects/UpdateMovingFieldObject_020a3610.c"
 #else

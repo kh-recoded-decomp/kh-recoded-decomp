@@ -72,6 +72,10 @@ src/overlays/ov075/calls/ApplyLinkedGroupBonuses.c:
     complete
     .text       start:0x020c5cc8 end:0x020c5d30
 
+src/overlays/ov075/calls/PreviewMatrixNodeStats_020c5d10.c:
+    complete
+    .text       start:0x020c5d30 end:0x020c5fcc
+
 src/overlays/ov075/calls/TryCompleteGridGroup.c:
     complete
     .text       start:0x020c5fcc end:0x020c60a0
@@ -212,6 +216,22 @@ src/overlays/ov075/calls/JumpCursorToEntry.c:
     complete
     .text       start:0x020cae78 end:0x020caf58
 
+src/overlays/ov075/calls/MoveMatrixCursorUp_020caf38.c:
+    complete
+    .text       start:0x020caf58 end:0x020cb198
+
+src/overlays/ov075/calls/MoveMatrixCursorDown_020cb178.c:
+    complete
+    .text       start:0x020cb198 end:0x020cb430
+
+src/overlays/ov075/calls/MoveMatrixCursorLeft_020cb410.c:
+    complete
+    .text       start:0x020cb430 end:0x020cb678
+
+src/overlays/ov075/calls/MoveMatrixCursorRight.c:
+    complete
+    .text       start:0x020cb678 end:0x020cb918
+
 src/overlays/ov075/calls/ToggleMatrixOverview.c:
     complete
     .text       start:0x020cb918 end:0x020cba38
@@ -232,6 +252,10 @@ src/overlays/ov075/calls/ToggleMatrixMapView.c:
     complete
     .text       start:0x020cbd3c end:0x020cbf5c
 
+src/overlays/ov075/calls/UpdateDialInput_020cbf3c.c:
+    complete
+    .text       start:0x020cbf5c end:0x020cc240
+
 src/overlays/ov075/calls/OpenDefaultRectDialog.c:
     complete
     .text       start:0x020cc240 end:0x020cc278
@@ -247,6 +271,10 @@ src/overlays/ov075/calls/UpdateFlagToggleGrid.c:
 src/overlays/ov075/calls/OpenPreviewDialog.c:
     complete
     .text       start:0x020cc570 end:0x020cc5c8
+
+src/overlays/ov075/calls/UpdateSlotCursor.c:
+    complete
+    .text       start:0x020cc5c8 end:0x020cc908
 
 src/overlays/ov075/auto/func_ov075_020cc908.c:
     complete

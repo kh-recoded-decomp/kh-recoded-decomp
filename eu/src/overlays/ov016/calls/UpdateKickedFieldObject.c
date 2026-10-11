@@ -4,7 +4,7 @@
 #define SpawnSoundSlot_0204da8c SpawnSoundSlot
 #define UpdateKickedFieldObject_020a4800 UpdateKickedFieldObject
 #define VEC_Mag_01ff9f28 VEC_Mag
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define func_01ff8830 MI_CpuFill8
 #define func_01ff9f88 VEC_Normalize
 #include "src/ov016/field_objects/UpdateKickedFieldObject_020a4800.c"

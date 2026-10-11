@@ -1,0 +1,12 @@
+#define FX_Div_01ff9c84 FX_Div
+#define FixedPointMultiply12 FX_Mul
+#define GetGlobalScaleValue_0209c3cc GetGlobalScaleValue
+#define GetStageActor_0209c040 GetStageActor
+#define GetStageAuxRecord_0209c1b0 GetStageAuxRecord
+#define GetStageController_0209c120 GetStageController
+#define ReleaseStageSlotEntry_0209c024 ReleaseStageSlotEntry
+#define RunOverrideTrack_020b4b9c RunOverrideTrack
+#define StartStageEventKind_02092bcc StartStageEventKind
+#define UpdateStageEventTimers_02092e38 UpdateStageEventTimers
+#define ZeroActorSubStruct_02092790 ZeroActorSubStruct
+#include "src/ov001/shared_engine/UpdateStageEventTimers_02092e38.c"

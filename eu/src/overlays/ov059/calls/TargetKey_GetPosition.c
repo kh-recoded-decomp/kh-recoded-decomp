@@ -1,5 +1,5 @@
 #define QueryStageEventPlacement_02087bec QueryStageEventPlacement
 #define TargetKey_GetPosition_020cf0a4 TargetKey_GetPosition
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define func_02036240 ActorRegistry_GetEntityByIndex
 #include "src/ov059/unclassified_helpers/TargetKey_GetPosition_020cf0a4.c"

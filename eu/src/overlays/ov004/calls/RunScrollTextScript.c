@@ -1,0 +1,7 @@
+#define FrameTimer_IsExpired_0206146c FrameTimer_IsExpired
+#define FrameTimer_Start_020613e0 FrameTimer_Start
+#define PrepareAndStartStream_0204dd4c PrepareAndStartStream
+#define RunScrollTextScript_020619a0 RunScrollTextScript
+#define StopSoundStreamAtIndex_0204deb0 StopSoundStreamAtIndex
+#define g_scrollText_020645a0 data_ov004_020645a0
+#include "src/ov004/scroll_text/RunScrollTextScript_020619a0.c"

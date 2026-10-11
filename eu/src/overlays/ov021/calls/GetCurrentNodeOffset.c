@@ -1,4 +1,4 @@
 #define GetCurrentNodeOffset_020ac814 GetCurrentNodeOffset
 #define VEC_Subtract_01ff9e3c VEC_Subtract
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #include "src/ov021/unclassified_helpers/GetCurrentNodeOffset_020ac814.c"

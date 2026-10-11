@@ -27,7 +27,7 @@ extern int func_ov086_020bf3b4(int group);
 extern int CountGroupFlaggedEntries_020bf4a4(int group);
 extern int SumUnlockedGroupEntryCounts(int group);
 extern int GetHighestSetFlagTier(int group);
-extern void func_ov086_020bee2c();
+extern void DrawRecordStatRow();
 
 void DrawRecordPanelStats(RecordPanel *panel)
 {
@@ -40,19 +40,19 @@ void DrawRecordPanelStats(RecordPanel *panel)
     SetScreenLayerDirty(0x18);
     MarkTileTableRowDirty(panel->tileTable, 0x19);
     group = panel->group;
-    func_ov086_020bee2c(panel, 0, CountSessionGroupFlags(group), table.values[group]);
+    DrawRecordStatRow(panel, 0, CountSessionGroupFlags(group), table.values[group]);
     group = panel->group;
     if (group < 5) {
-        func_ov086_020bee2c(panel, 1, ReadSessionPackedBits(data_ov086_020c2168[group], 2), 3);
+        DrawRecordStatRow(panel, 1, ReadSessionPackedBits(data_ov086_020c2168[group], 2), 3);
     } else {
-        func_ov086_020bee2c(panel, 6, group);
+        DrawRecordStatRow(panel, 6, group);
     }
     first = CountUnlockedGroupEntries(panel->group);
-    func_ov086_020bee2c(panel, 2, first, func_ov086_020bf3b4(panel->group));
+    DrawRecordStatRow(panel, 2, first, func_ov086_020bf3b4(panel->group));
     first = CountGroupFlaggedEntries_020bf4a4(panel->group);
-    func_ov086_020bee2c(panel, 3, first, SumUnlockedGroupEntryCounts(panel->group));
-    func_ov086_020bee2c(panel, 4, GetHighestSetFlagTier(panel->group));
+    DrawRecordStatRow(panel, 3, first, SumUnlockedGroupEntryCounts(panel->group));
+    DrawRecordStatRow(panel, 4, GetHighestSetFlagTier(panel->group));
     first = ReadSessionPackedBits(data_ov086_020c217c[panel->group], 7);
     second = IsSessionFlagSet(data_ov086_020c219c[panel->group]);
-    func_ov086_020bee2c(panel, 5, first + 1, second);
+    DrawRecordStatRow(panel, 5, first + 1, second);
 }

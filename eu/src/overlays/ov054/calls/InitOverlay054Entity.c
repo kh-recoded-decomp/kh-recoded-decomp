@@ -9,7 +9,7 @@
 #define func_ov054_020d2320 LoadOverlay054EntityResources
 #define func_ov054_020d24ec func_ov054_020d250c
 #define func_ov054_020d2554 RequestOverlay054ActorState
-#define func_ov054_020d2774 func_ov054_020d2794
+#define func_ov054_020d2774 HandleRewardActorCommand_020d2774
 #define func_ov054_020d2dac HandleOverlay054MenuCommand
 #define func_ov058_020d7e30 LoadSceneModelResources
 #include "src/ov054/object_factory/InitOverlay054Entity_020d21f4.c"

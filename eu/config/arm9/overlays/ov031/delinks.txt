@@ -107,6 +107,10 @@ src/overlays/ov031/calls/FindNearestStageEvent.c:
     complete
     .text       start:0x020bab94 end:0x020bac18
 
+src/overlays/ov031/calls/UpdateSceneRecord.c:
+    complete
+    .text       start:0x020bac18 end:0x020baf56
+
 src/overlays/ov031/calls/AdvanceGroupObjects.c:
     complete
     .text       start:0x020baf58 end:0x020bb030

@@ -14,6 +14,6 @@
 #define func_ov073_020c1eb4 RefreshStatusMenuData
 #define func_ov073_020c2ca4 SetStatusPageAndCursor
 #define func_ov075_020c4260 HasUnvisitedLink
-#define func_ov075_020c5d10 func_ov075_020c5d30
+#define func_ov075_020c5d10 PreviewMatrixNodeStats_020c5d10
 #define func_ov075_020d0014 UnlockableListPanel_Open
 #include "src/ov075/matrix_menu/SelectMatrixNode_020c4370.c"

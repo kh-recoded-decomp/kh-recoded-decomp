@@ -36,7 +36,7 @@ typedef struct Actor {
 } Actor;
 
 extern EffectManager *gActorWork;
-extern const VecFx32 data_0205344c;
+extern const VecFx32 gZeroVecFx32;
 extern BOOL func_ov021_020a9d24(u32 *flags);
 extern BOOL IsBit0Set(u32 *flags);
 extern void SetBit1WhenBit0Set(u32 *flags, s32 enable);
@@ -69,7 +69,7 @@ void UpdateToggleEffectTimer(Actor *actor)
         state.id = actor->playerIndex;
         state.flag25 = 2;
         state.flag24 = 0;
-        state.position = data_0205344c;
+        state.position = gZeroVecFx32;
         state.rotation = 0;
         state.scale = 0x1000;
         state.target = actor->attachPoint;

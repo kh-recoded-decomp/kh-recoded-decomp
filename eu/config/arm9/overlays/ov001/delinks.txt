@@ -336,6 +336,10 @@ src/overlays/ov001/calls/HandleFieldPanelCommand.c:
     complete
     .text       start:0x02063ccc end:0x02063d4c
 
+src/overlays/ov001/calls/UpdateFieldTimer.c:
+    complete
+    .text       start:0x02063d4c end:0x02063f90
+
 src/overlays/ov001/calls/GetClampedTimerValue.c:
     complete
     .text       start:0x02063f90 end:0x02063ff4
@@ -3000,6 +3004,10 @@ src/overlays/ov001/calls/SetFieldCaptionText.c:
     complete
     .text       start:0x02072178 end:0x02072254
 
+src/overlays/ov001/calls/ShowChoiceDetails_02072254.c:
+    complete
+    .text       start:0x02072254 end:0x0207248c
+
 src/overlays/ov001/calls/ClearHudPopup.c:
     complete
     .text       start:0x0207248c end:0x020724e0
@@ -3023,6 +3031,10 @@ src/overlays/ov001/calls/IsModeSetOrFlag370aClear.c:
 src/overlays/ov001/calls/IsHudFlag7Set.c:
     complete
     .text       start:0x020725bc end:0x020725dc
+
+src/overlays/ov001/calls/ShowChoiceBalloonAtWorldPos.c:
+    complete
+    .text       start:0x020725dc end:0x02072884
 
 src/overlays/ov001/calls/IsHudFlag9Set.c:
     complete
@@ -5183,6 +5195,10 @@ src/overlays/ov001/calls/FieldObject_CreateWithTimer.c:
 src/overlays/ov001/calls/DetachFromLeaderQuadTree.c:
     complete
     .text       start:0x02083700 end:0x02083758
+
+src/overlays/ov001/calls/PatrolObject_Init.c:
+    complete
+    .text       start:0x02083758 end:0x02083a74
 
 src/overlays/ov001/calls/FreeLoaderBuffers.c:
     complete
@@ -7380,6 +7396,10 @@ src/overlays/ov001/calls/StartStageEventKind.c:
     complete
     .text       start:0x02092bf4 end:0x02092e60
 
+src/overlays/ov001/calls/UpdateStageEventTimers.c:
+    complete
+    .text       start:0x02092e60 end:0x020930a8
+
 src/overlays/ov001/calls/RaycastMoveStep.c:
     complete
     .text       start:0x020930a8 end:0x0209313a
@@ -7391,6 +7411,10 @@ src/overlays/ov001/calls/GetCollisionShapeParams.c:
 src/overlays/ov001/calls/ResetStageActorFlags.c:
     complete
     .text       start:0x020931b0 end:0x02093358
+
+src/overlays/ov001/calls/RefreshStageEventDisplay_02093330.c:
+    complete
+    .text       start:0x02093358 end:0x02093604
 
 src/overlays/ov001/auto/func_ov001_02093604.c:
     complete
@@ -7483,6 +7507,10 @@ src/overlays/ov001/calls/ClearStageEventKindIfMatches.c:
 src/overlays/ov001/calls/IsCommandType8.c:
     complete
     .text       start:0x0209624c end:0x0209625a
+
+src/overlays/ov001/calls/GetRouteWaypointPlacement.c:
+    complete
+    .text       start:0x02096644 end:0x02096950
 
 src/overlays/ov001/calls/ScheduleSpawnerNextTime.c:
     complete
@@ -7735,6 +7763,10 @@ src/overlays/ov001/calls/UpdateStageEventSpawns.c:
 src/overlays/ov001/calls/ClearStageTables.c:
     complete
     .text       start:0x0209a0bc end:0x0209a19c
+
+src/overlays/ov001/calls/StartStageEvent.c:
+    complete
+    .text       start:0x0209a19c end:0x0209a4e4
 
 src/overlays/ov001/calls/LoadStageResource.c:
     complete

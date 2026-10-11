@@ -7,7 +7,7 @@
 #define OffsetCameraColliders_020bd2a0 OffsetCameraColliders
 #define SetCameraGoalTarget_020bd234 SetCameraGoalTarget
 #define VEC_Add_01ff9e0c VEC_Add
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define data_ov042_020be5c0 data_ov042_020be5e0
 #define func_02033c3c QuadTree_InsertObject
 #define func_02036230 GetActorRegistry

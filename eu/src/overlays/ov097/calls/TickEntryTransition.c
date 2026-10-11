@@ -1,0 +1,16 @@
+#define IsEntryFlagSet_020c1474 IsEntryFlagSet_020c1494
+#define LoadEntryBackground_020bf85c LoadEntryBackground
+#define NNS_GfdResetFrmTexVramState_0201391c NNS_GfdResetFrmTexVramState
+#define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
+#define ReleasePopupEntries_020c0d20 ReleasePopupEntries
+#define SetEntryFlag_020c14a0 SetEntryFlag_020c14c0
+#define SetGlobalPackedBit_02027320 SetGlobalPackedBit
+#define TickEntryTransition_020c1580 TickEntryTransition
+#define TickPanelSlotAnimation_020c020c TickPanelSlotAnimation
+#define data_ov097_020c1f1c sStoryReportEntryIds
+#define data_ov097_020c2124 sStoryReportGroupDefinitions
+#define func_02013d74 NNS_GfdResetFrmPlttVramState
+#define func_ov097_020c1558 func_ov097_020c1578
+#define func_ov097_020c1844 func_ov097_020c1864
+#define g_menuScene_020c2520 data_ov097_020c2540
+#include "src/ov097/panel_state/TickEntryTransition_020c1580.c"

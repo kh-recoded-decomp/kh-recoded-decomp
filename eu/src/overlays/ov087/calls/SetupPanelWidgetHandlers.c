@@ -1,0 +1,19 @@
+#define BuildSlotImageParams_020bc220 BuildSlotImageParams
+#define FindWidgetById_020b90a4 FindWidgetById
+#define HandleConfirmForState_020c7ae4 HandleConfirmForState
+#define HandleSlotInput_020c460c HandleSlotInput
+#define InitObjManagerAndMark_020b9060 InitObjManagerAndMark
+#define ResolveEntryStoreWord_020b9088 func_ov027_020b90a8
+#define SetAllElementObjectModes_020b97fc SetAllElementObjectModes
+#define SetFocusedWidget_020b96e4 SetFocusedWidget
+#define SetWidgetRootDpadEnabled_020b9874 SetWidgetRootDpadEnabled
+#define SetupPanelWidgetHandlers_020c69a4 SetupPanelWidgetHandlers
+#define data_ov087_020c7cec data_ov087_020c7d0c
+#define func_ov027_020b8f98 func_ov027_020b8fb8
+#define func_ov027_020b9098 func_ov027_020b90b8
+#define func_ov039_020bc1bc func_ov039_020bc1dc
+#define func_ov087_020c7810 HandleSelectForState
+#define func_ov087_020c7994 HandleAltSelectForState
+#define func_ov087_020c7b64 func_ov087_020c7b84
+#define func_ov087_020c7bf8 func_ov087_020c7c18
+#include "src/ov087/panel_state/SetupPanelWidgetHandlers_020c69a4.c"

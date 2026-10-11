@@ -1,0 +1,22 @@
+#define AddSessionCounter_02063a80 AddSessionCounter
+#define EnterActorState_020cd338 EnterActorState
+#define ExitActorState_020ccfa4 ExitActorState
+#define FixedPointAtan2_020062bc FX_Atan2Idx
+#define GetBoundedEntryField_0206db5c GetBoundedEntryField
+#define GetLinkedAngleOffset_020ceb7c GetLinkedAngleOffset
+#define IsWaitTargetReady_0206c3a4 IsWaitTargetReady
+#define PlaySoundChecked_0204d8d0 PlaySoundChecked
+#define ReleaseActiveDisplay_020d31b0 ReleaseActiveDisplay
+#define SelectFallStateHandler_020d1238 SelectFallStateHandler
+#define SetManagerEnabled_0206e160 SetManagerEnabled
+#define StartAnchorSequence_020d7f60 StartAnchorSequence
+#define TryRequestEnemyAction_020d64dc TryRequestEnemyAction
+#define UpdateRewardApproach_020d2f8c UpdateRewardApproach
+#define UpdateRewardCharge_020d3078 UpdateRewardCharge
+#define VEC_Subtract_01ff9e3c VEC_Subtract
+#define data_ov054_020d3700 gOv054WorkData
+#define func_ov021_020a81b8 func_ov021_020a81d8
+#define func_ov052_020ceb54 func_ov052_020ceb74
+#define func_ov052_020d083c UpdateGlideState
+#define func_ov054_020d3230 func_ov054_020d3250
+#include "src/ov054/unclassified_helpers/HandleRewardActorCommand_020d2774.c"

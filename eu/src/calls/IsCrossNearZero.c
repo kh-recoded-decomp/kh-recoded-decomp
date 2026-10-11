@@ -1,5 +1,5 @@
 #define AreVecsWithinRange16_0204a8f4 AreVecsWithinRange16
 #define IsCrossNearZero_0204b918 IsCrossNearZero
 #define VEC_CrossProduct_01ff9ea8 VEC_CrossProduct
-#define g_zeroVec_02053438 data_0205344c
+#define g_zeroVec_02053438 gZeroVecFx32
 #include "src/arm9/math/IsCrossNearZero_0204b918.c"

@@ -1,0 +1,24 @@
+#define CallVirtualHandlerSlot1_02001574 CallVirtualHandlerSlot1
+#define ClearChoiceHighlight_020701a8 ClearChoiceHighlight
+#define DrawTextAnchored_020015a0 DrawTextAnchored
+#define FillBackgroundLayerRect_02001a60 FillBackgroundLayerRect
+#define FindActiveRecordById_020b8184 FindActiveRecordById
+#define FlushBufferAndRunCallback_0200153c FlushBufferAndRunCallback
+#define GetPanelLayerScreen_0206ea08 GetPanelLayerScreen
+#define IsMenuSlotBusy_02078910 IsMenuSlotBusy
+#define MarkTileTableRowDirty_020b9e00 MarkTileTableRowDirty
+#define OS_GetTick_02003fd4 OS_GetTick
+#define Obj_SetField14_02001490 Obj_SetField14
+#define PlaySoundChecked_0204d8d0 PlaySoundChecked
+#define TagTracker_InvokeCallback_020b8210 func_ov027_020b8230
+#define UpdateWidgetLayerDefault_020b9df0 func_ov027_020b9e10
+#define data_ov001_0209dbe8 data_ov001_0209dc10
+#define data_ov001_0209ec90 gHudSlideResourceGroup1
+#define data_ov001_0209ec9c gHudSlideResourceGroup2
+#define data_ov001_0209eca8 gHudSlideResourceGroup3
+#define data_ov001_0209ecb4 gHudSlideResourceGroup4
+#define data_ov001_020a04a4 data_ov001_020a04c4
+#define func_02001908 func_0200191c
+#define func_0202b788 GetLanguageIndex
+#define func_ov027_020ba2e0 func_ov027_020ba300
+#include "src/ov001/text_rendering/ShowChoiceDetails_02072254.c"

@@ -1,0 +1,23 @@
+#define DrawPanelFadeQuad_020bad3c DrawPanelFadeQuad
+#define FlushGeometryState_02019230 NNS_G3dGlbFlushWVP
+#define MTX_OrthoW_02005f10 MTX_OrthoW
+#define QueueOrSendGeometryCommand_01ffa37c NNS_G3dGeBufferOP_N
+#define data_02053438 gZeroVecFx32
+#define data_0205a924 NNS_G3dGlb
+#define data_0205a92c NNS_G3dGlb_projMtx
+#define data_0205a970 NNS_G3dGlb_cameraMtx
+#define data_0205a9b8 NNS_G3dGlb_prmBaseRot
+#define data_0205ab3c NNS_G3dGlb_camPos
+#define data_0205ab48 NNS_G3dGlb_camUp
+#define data_0205ab54 NNS_G3dGlb_camTarget
+#define data_ov036_020c3360 data_ov036_020c3380
+#define data_ov036_020c336c data_ov036_020c338c
+#define data_ov036_020c3378 data_ov036_020c3398
+#define data_ov036_020c3384 data_ov036_020c33a4
+#define data_ov036_020c3920 data_ov036_020c3940
+#define func_01ff87c4 MI_Copy36B
+#define func_01ff90ec MTX_Identity33_
+#define func_020192ec NNS_G3dGlbSetBaseTrans
+#define func_0201931c NNS_G3dGlbSetBaseScale
+#define func_02028940 GetPanelFieldB8
+#include "src/ov036/panel_state/DrawPanelFadeQuad_020bad3c.c"

@@ -1,6 +1,6 @@
 #define Camera_ResetTracking_020c3884 Camera_ResetTracking
 #define VEC_Subtract_01ff9e3c VEC_Subtract
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define func_01ff9f88 VEC_Normalize
 #define func_ov046_020c19f0 Camera_GetModeDistance
 #define func_ov046_020c1a48 func_ov046_020c1a68

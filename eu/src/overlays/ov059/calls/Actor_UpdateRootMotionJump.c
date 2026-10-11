@@ -3,6 +3,6 @@
 #define Actor_UpdateRootMotionJump_020cad40 Actor_UpdateRootMotionJump
 #define GetFieldAt0x12_020a7560 SharedObject_GetMode
 #define VEC_Add_01ff9e0c VEC_Add
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define func_ov059_020c997c func_ov059_020c999c
 #include "src/ov059/unclassified_helpers/Actor_UpdateRootMotionJump_020cad40.c"

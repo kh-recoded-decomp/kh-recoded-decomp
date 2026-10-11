@@ -1,7 +1,7 @@
 #define UpdateCarriedActor_020bc110 UpdateCarriedActor
 #define data_ov030_020bd004 gMarkerResetConfig
 #define g_carryMotion_020bd004 gMarkerReset
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define func_ov001_0206db78 GetPlayerControlState
 #define func_ov001_020645c8 IsSessionFlagSet
 #define IsGroupMemberActive_020a8d1c IsGroupMemberActive

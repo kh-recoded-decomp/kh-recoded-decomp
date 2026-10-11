@@ -1,0 +1,24 @@
+#define AdvanceRecordStep_020bc554 AdvanceRecordStep
+#define BeginNextRecord_020bb62c BeginNextRecord
+#define CanLeaveActiveRecord_020bb010 CanLeaveActiveRecord
+#define EaseProgress_0204a174 EaseProgress
+#define FindNearestStageEvent_020bab74 FindNearestStageEvent
+#define GetStageEventTargetInfo_02087960 GetStageEventTargetInfo
+#define HideFieldMessageLine_0207166c HideFieldMessageLine
+#define QuadTree_RemoveObject_02033c60 QuadTree_RemoveObject
+#define QueryStageEventState_0209c758 QueryStageEventState
+#define ResetCameraUp_020bca50 ResetCameraUp
+#define ResetField44_020bbea4 ResetField44
+#define ShowFieldMessageLine_0207163c ShowFieldMessageLine
+#define StageRecord_IsDefeated_02087cc4 StageRecord_IsDefeated
+#define TestFlagBit9_020a37e4 TestFlagBit9
+#define UpdateSceneRecord_020babf8 UpdateSceneRecord
+#define func_02036230 GetActorRegistry
+#define func_ov001_0207b49c func_ov001_0207b4c4
+#define func_ov001_0208723c func_ov001_02087264
+#define func_ov001_02087928 ForwardToActiveServiceWithResult
+#define func_ov001_02087944 func_ov001_0208796c
+#define func_ov031_020bb5d8 func_ov031_020bb5f8
+#define func_ov031_020bc700 func_ov031_020bc720
+#define g_activeState_020bc800 data_ov031_020bc820
+#include "src/ov031/overlay_state/UpdateSceneRecord_020babf8.c"

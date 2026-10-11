@@ -2,7 +2,7 @@
 #define FlushGeometryState_02019230 NNS_G3dGlbFlushWVP
 #define MTX_OrthoW_02005f10 MTX_OrthoW
 #define QueueOrSendGeometryCommand_01ffa37c NNS_G3dGeBufferOP_N
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define data_0205a92c NNS_G3dGlb_projMtx
 #define data_0205a970 NNS_G3dGlb_cameraMtx
 #define data_0205a9a4 NNS_G3dGlb_prmMatColor0

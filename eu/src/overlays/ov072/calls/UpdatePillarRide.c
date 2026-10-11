@@ -148,7 +148,7 @@ struct Actor {
     void (*setMode)(Actor *actor, int mode);
 };
 
-extern const VecFx32 data_0205344c;
+extern const VecFx32 gZeroVecFx32;
 extern const s16 data_02053580[];
 
 extern void ComputeRootMotionDelta(Actor *actor, VecFx32 *out);
@@ -603,7 +603,7 @@ void UpdatePillarRide(Actor *actor)
         case 0:
         default:
             pos = task->position;
-            motion = data_0205344c;
+            motion = gZeroVecFx32;
             y = pos.y;
             switch (task->states.rideState) {
             case 2:
@@ -620,7 +620,7 @@ void UpdatePillarRide(Actor *actor)
             if ((input & 0xf0) != 0 && speed > 0) {
                 int index;
 
-                dir = data_0205344c;
+                dir = gZeroVecFx32;
                 switch (input & 0x30) {
                 case 0x20:
                     dir.x = -0x1000;

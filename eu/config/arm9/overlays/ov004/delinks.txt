@@ -52,6 +52,10 @@ src/overlays/ov004/calls/SetWindowCorners.c:
     complete
     .text       start:0x02061830 end:0x020619a0
 
+src/overlays/ov004/calls/RunScrollTextScript.c:
+    complete
+    .text       start:0x020619a0 end:0x02061d5c
+
 src/overlays/ov004/calls/CopyScrollTextTiles.c:
     complete
     .text       start:0x02061d5c end:0x02061e7c
@@ -79,6 +83,10 @@ src/overlays/ov004/calls/BeginScrollTextExit.c:
 src/overlays/ov004/calls/func_ov004_020622e4.c:
     complete
     .text       start:0x020622e4 end:0x020622f0
+
+src/overlays/ov004/calls/UpdateScrollTextFrame_020622f0.c:
+    complete
+    .text       start:0x020622f0 end:0x0206252c
 
 src/overlays/ov004/auto/func_ov004_0206252c.c:
     complete

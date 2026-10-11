@@ -44,7 +44,7 @@ typedef struct ObjectGroup {
     VecFx32 velocity;
 } ObjectGroup;
 
-extern const VecFx32 data_0205344c;
+extern const VecFx32 gZeroVecFx32;
 
 extern GroupMemberWork *func_ov032_020bbc98(GroupObject *object);
 extern ObjectGroup *func_ov032_020bbc80(GroupObject *object);
@@ -91,7 +91,7 @@ int UpdateGroupMember(GroupObject *object)
     case 8:
         if (group->arrivedCount == group->memberTotal) {
             object->work->state = 9;
-            work->moveDelta = data_0205344c;
+            work->moveDelta = gZeroVecFx32;
             if (!group->cueSoundPlayed) {
                 SpawnSoundSlot(0xf8, 7, &object->position, 0);
                 group->cueSoundPlayed = 1;
@@ -140,12 +140,12 @@ int UpdateGroupMember(GroupObject *object)
         } else {
             object->work->state = 11;
         }
-        RollGroupAndSteerMember(object, &data_0205344c);
+        RollGroupAndSteerMember(object, &gZeroVecFx32);
         break;
     case 11:
         if (object->work->leaderLink == -1) {
             BOOL landed = 0;
-            VecFx32 delta = data_0205344c;
+            VecFx32 delta = gZeroVecFx32;
             BOOL reached = UpdateHopWithSpeedRamp(object->world, work->groupIndex, work, &position, &group->velocity, 0x1b33, &delta, &landed);
 
             if (landed) {
@@ -167,7 +167,7 @@ int UpdateGroupMember(GroupObject *object)
             RollGroupAndSteerMember(object, &delta);
         } else {
             object->work->state = leader->work->state;
-            RollGroupAndSteerMember(object, &data_0205344c);
+            RollGroupAndSteerMember(object, &gZeroVecFx32);
         }
         break;
     case 12:
@@ -177,13 +177,13 @@ int UpdateGroupMember(GroupObject *object)
                 if (ComputePushTowardTarget(func_ov001_0206dc4c(0), &group->center, &work->unk_30, &push)) {
                     group->settleTimer += 0x89;
                 }
-                group->velocity = data_0205344c;
+                group->velocity = gZeroVecFx32;
                 VEC_Add(&group->center, &push, &group->center);
             } else {
                 group->isFinished = 1;
             }
         }
-        RollGroupAndSteerMember(object, &data_0205344c);
+        RollGroupAndSteerMember(object, &gZeroVecFx32);
         break;
     }
     MoveGroupObjectAndSyncActor(object, &work->moveDelta);

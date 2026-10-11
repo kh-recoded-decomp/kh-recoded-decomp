@@ -1,7 +1,7 @@
 #define ActorSlot_SetFlag8ByIndex_02036120 ActorSlot_SetFlag8ByIndex
 #define CacheEntry_SetActive_02087258 CacheEntry_SetActive
 #define RebindAnimTracks_020809d0 RebindAnimTracks
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define func_01ff8740 MIi_CpuClearFast
 #define func_0202f4e8 Flags16_ClearBit1
 #define func_02036240 ActorRegistry_GetEntityByIndex

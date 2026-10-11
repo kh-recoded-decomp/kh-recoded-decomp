@@ -5,5 +5,5 @@
 #define SpawnSoundSlot_0204da8c SpawnSoundSlot
 #define ZeroBytes0x28_020ac0f8 ZeroBytes0x28
 #define func_ov021_020a8ca0 func_ov021_020a8cc0
-#define func_ov021_020ac33c func_ov021_020ac35c
+#define func_ov021_020ac33c ApplyHitToTarget_020ac33c
 #include "src/ov056/unclassified_helpers/ApplyScaledPathHit_020d5a7c.c"

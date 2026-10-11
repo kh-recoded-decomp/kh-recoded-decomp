@@ -6,7 +6,7 @@ extern u32 RuntimeState_GetObjectId();
 extern u32 func_ov103_020bef14();
 extern u32 LoadGraphicsResources();
 extern u32 func_ov103_020bf0c4();
-extern u32 func_ov103_020bf1bc();
+extern u32 InitTextLayers_020bf1bc();
 extern u32 func_ov103_020bf3bc();
 extern u32 func_ov103_020bf5e8();
 extern u32 SetupListPanel();
@@ -30,7 +30,7 @@ void func_ov103_020c033c(int *work) {
   func_ov103_020bef14(work);
   LoadGraphicsResources(work);
   func_ov103_020bf0c4(work);
-  func_ov103_020bf1bc(work);
+  InitTextLayers_020bf1bc(work);
   func_ov103_020bf5e8(work);
   SetupListPanel(&data_ov103_020c0500,work);
   func_ov103_020bf3bc(0xffffffff,work);

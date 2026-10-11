@@ -3,5 +3,5 @@
 #define SetPanelMode_020c11f0 SetPanelMode_020c1210
 #define func_ov095_020bfa18 func_ov095_020bfa38
 #define func_ov095_020c0478 LayoutTabEntries
-#define func_ov095_020c0ce0 func_ov095_020c0d00
+#define func_ov095_020c0ce0 MoveGridCursorDown
 #include "src/ov095/unclassified_helpers/ConfirmGridMoveB_020beee0.c"

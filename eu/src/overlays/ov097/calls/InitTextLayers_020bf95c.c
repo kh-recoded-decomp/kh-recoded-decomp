@@ -1,0 +1,7 @@
+#define InitTextLayerDefault_02001494 InitTextLayerDefault
+#define InitTextLayers_020bf93c InitTextLayers_020bf95c
+#define LoadPackedFileView_020ba25c LoadPackedFileView
+#define data_ov097_020c1dcc gStoryReportTextPaths
+#define data_ov097_020c24f4 sOv097_TextFontEu10Nftr_020c2514
+#define func_02001458 func_0200146c
+#include "src/ov097/panel_state/InitTextLayers_020bf93c.c"

@@ -1,5 +1,5 @@
 #define DrawNodeWithExplicitProjection_0202f1b0 DrawNodeWithExplicitProjection
 #define FieldObject_DrawFrontView_020a0a7c FieldObject_DrawFrontView
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define func_ov021_020af5f4 func_ov021_020af614
 #include "src/ov010/shared_engine/FieldObject_DrawFrontView_020a0a7c.c"

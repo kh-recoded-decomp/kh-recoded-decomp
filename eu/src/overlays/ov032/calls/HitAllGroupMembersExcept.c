@@ -1,6 +1,6 @@
 #define HitAllGroupMembersExcept_020bd470 HitAllGroupMembersExcept
 #define MI_CpuFill8_01ff88c4 func_01ff88c4
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define func_ov001_0208635c func_ov001_02086384
 #define func_ov001_020863e0 func_ov001_02086408
 #define func_ov032_020bbc78 func_ov032_020bbc98

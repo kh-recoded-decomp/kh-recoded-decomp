@@ -69,7 +69,7 @@ struct StageObject {
     VecFx32 position;
 };
 
-extern const VecFx32 data_0205344c;
+extern const VecFx32 gZeroVecFx32;
 extern BOOL func_ov001_02063838(void);
 extern void UpdateEventTargetMode(WanderObject *object);
 extern BOOL StageEvents_CheckEvent(u16 eventIndex);
@@ -198,14 +198,14 @@ BOOL UpdateWanderActor(WanderObject *object)
         if (object->motion[0].active && SteerHomingParticle(object, &object->motion[0])) {
             object->motion[0].active = FALSE;
             object->motion[0].airborne = FALSE;
-            object->motion[0].velocity = data_0205344c;
+            object->motion[0].velocity = gZeroVecFx32;
         }
         if (object->motion[1].active) {
             if (!StepHomingBounceBody(object, &object->motion[1])) {
                 object->motion[1].velocity.y -= 0x7b;
             } else {
                 object->motion[1].active = FALSE;
-                object->motion[1].velocity = data_0205344c;
+                object->motion[1].velocity = gZeroVecFx32;
             }
         }
         if (!object->motion[0].active && !object->motion[1].active) {

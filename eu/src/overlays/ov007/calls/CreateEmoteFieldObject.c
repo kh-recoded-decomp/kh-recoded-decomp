@@ -1,5 +1,5 @@
 #define CreateEmoteFieldObject_020a183c CreateEmoteFieldObject
 #define FieldObject_Create_0207f440 FieldObject_Create
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define func_ov007_020a1118 UpdateWanderActor
 #include "src/ov007/shared_engine/CreateEmoteFieldObject_020a183c.c"

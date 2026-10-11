@@ -1,0 +1,15 @@
+#define AddClampedHealth_020a75ec AddClampedHealth
+#define AddSessionCounter_02063a80 AddSessionCounter
+#define AwardPartyGaugePoints_0206ded8 AwardPartyGaugePoints
+#define ComputeAttackDamage_020ac6cc ComputeAttackDamage
+#define DispatchStageEventArg_020878d4 DispatchStageEventArg
+#define FixedPointMultiply12 FX_Mul
+#define GetBoundedEntryField_0206db5c GetBoundedEntryField
+#define GetClampedPaletteSlot_02073598 GetClampedPaletteSlot
+#define GetStageEventTargetInfo_02087960 GetStageEventTargetInfo
+#define IsPlayerEntryFlagSet_02050014 IsPlayerEntryFlagSet
+#define ScaleValueByPercentField_020a7650 ScaleValueByPercentField
+#define data_ov021_020b4fd8 data_ov021_020b4ff8
+#define func_01ff8830 MI_CpuFill8
+#define random_next_scaled_0202aa04 random_next_scaled
+#include "src/ov021/object_state/ApplyHitToTarget_020ac33c.c"

@@ -1,5 +1,5 @@
 #define ClearStateBlock_02038a7c ClearStateBlock
 #define InitTrackingState_02038a90 InitTrackingState
 #define func_01ff86fc MIi_CpuClear32
-#define g_zeroVec_02053438 data_0205344c
+#define g_zeroVec_02053438 gZeroVecFx32
 #include "src/arm9/unclassified_helpers/InitTrackingState_02038a90.c"

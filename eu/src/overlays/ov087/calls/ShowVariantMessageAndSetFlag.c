@@ -3,5 +3,5 @@
 #define data_ov087_020c7c88 data_ov087_020c7ca8
 #define data_ov087_020c7cac data_ov087_020c7ccc
 #define func_ov027_020ba2a8 func_ov027_020ba2c8
-#define func_ov087_020c4860 func_ov087_020c4880
+#define func_ov087_020c4860 DrawCenteredPromptText_020c4860
 #include "src/ov087/panel_state/ShowVariantMessageAndSetFlag_020c4990.c"

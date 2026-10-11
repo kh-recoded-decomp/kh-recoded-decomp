@@ -1,4 +1,4 @@
 #define UpdatePendingSlotScene_020bafa8 UpdatePendingSlotScene
 #define data_ov036_020c3920 data_ov036_020c3940
-#define func_ov036_020bad3c func_ov036_020bad5c
+#define func_ov036_020bad3c DrawPanelFadeQuad
 #include "src/ov036/panel_state/UpdatePendingSlotScene_020bafa8.c"

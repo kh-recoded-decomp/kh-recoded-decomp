@@ -1,4 +1,4 @@
 #define ScrollBarStepDown_020c0a9c ScrollBarStepDown
 #define func_ov093_020c0458 SetSlotPosition
-#define func_ov093_020c0cb0 func_ov093_020c0cd0
+#define func_ov093_020c0cb0 RefreshScrollBar_020c0cb0
 #include "src/ov093/unclassified_helpers/ScrollBarStepDown_020c0a9c.c"

@@ -1,8 +1,8 @@
 #include "nitro/types.h"
 
-extern void func_ov087_020c5778(void);
+extern void FocusDefaultElementForState_020c5758(void);
 extern void FocusElementForState(void); /* FocusElementForState */
-extern void func_ov087_020c5984(void);
+extern void FocusKindElementForState_020c5964(void);
 extern void OpenTwoChoiceMenu(void);
 extern void OpenPromptMessage0F(void); /* OpenPromptMessage0F */
 extern void OpenEntryPromptForMode(void);
@@ -20,9 +20,9 @@ extern void ShowPromptAndStoreEntryCount(void);
 
 void (*gSelectionPanelStateHandlers[18])(void) = {
     NULL,
-    func_ov087_020c5778,
+    FocusDefaultElementForState_020c5758,
     FocusElementForState, /* FocusElementForState */
-    func_ov087_020c5984,
+    FocusKindElementForState_020c5964,
     OpenTwoChoiceMenu,
     OpenPromptMessage0F, /* OpenPromptMessage0F */
     OpenEntryPromptForMode,

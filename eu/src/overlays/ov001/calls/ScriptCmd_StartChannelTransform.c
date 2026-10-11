@@ -7,7 +7,7 @@
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
 #define ScriptVm_ResolveOperand_02025d08 ScriptVm_ResolveOperand
 #define VEC_Add_01ff9e0c VEC_Add
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define func_02025dac ByteCode_ResolveOperand
 #define func_02036240 ActorRegistry_GetEntityByIndex
 #define func_ov001_0208babc SetFieldCameraTarget

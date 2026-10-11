@@ -122,7 +122,7 @@ typedef struct FloorProbe {
 typedef void (*UnitTransformFunc)(VecFx32 **positionOut, u8 *transform);
 
 extern StageManager *data_ov001_020a0528;
-extern const VecFx32 data_0205344c;
+extern const VecFx32 gZeroVecFx32;
 extern char sEmptyNodeName_020a0458[];
 extern UnitTransformFunc gCollisionBoundsDispatch[];
 
@@ -206,7 +206,7 @@ void UpdateStageManager(u32 value)
     manager = data_ov001_020a0528;
     entry = CacheStageEntryValue(1);
     if (data_ov001_020a0528->flags & 1) {
-        manager->drift = data_0205344c;
+        manager->drift = gZeroVecFx32;
     } else if (entry != NULL) {
         if (VEC_Mag(&manager->drift) > 4) {
             if (entry->applyDrift != NULL) {
@@ -216,7 +216,7 @@ void UpdateStageManager(u32 value)
             manager->drift.y = FX_Mul(manager->drift.y, 0xe66);
             manager->drift.z = FX_Mul(manager->drift.z, 0xe66);
         } else {
-            manager->drift = data_0205344c;
+            manager->drift = gZeroVecFx32;
         }
     }
     manager = data_ov001_020a0528;

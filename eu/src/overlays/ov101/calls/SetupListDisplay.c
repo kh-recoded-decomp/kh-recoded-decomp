@@ -1,0 +1,18 @@
+#define GX_BeginLoadOBJExtPltt_02008998 GX_SetBankForTexPltt
+#define GX_SetBankForBGExtPltt_0200868c GX_SetBankForBGExtPltt
+#define GX_SetBankForBG_02008358 GX_SetBankForBG
+#define GX_SetBankForLCDC_02008a74 GX_SetBankForLCDC
+#define GX_SetBankForOBJ_0200855c GX_SetBankForOBJ
+#define GX_SetBankForSubBGExtPltt_02008ba4 GX_SetBankForSubBGExtPltt
+#define GX_SetBankForSubBG_02008a98 GX_SetBankForSubBG
+#define GX_SetBankForSubOBJ_02008b34 GX_SetBankForSubOBJ
+#define GX_SetBankForTex_02008820 GX_SetBankForTex
+#define GX_SetGraphicsMode_020066c4 GX_SetGraphicsMode
+#define MIi_CpuClearFast_01ff8740 MIi_CpuClearFast
+#define ResetDisplayHardware_02029bfc ResetDisplayHardware
+#define SetBrightnessAndSyncMain_02029e7c SetBrightnessAndSyncMain
+#define SetSecondaryBrightness_02029ed0 SetSecondaryBrightness
+#define SetupListDisplay_020bf004 SetupListDisplay
+#define func_02008ef4 GX_DisableBankForLCDC
+#define func_0202a794 TaskManager_SetEnabled
+#include "src/ov101/panel_state/SetupListDisplay_020bf004.c"

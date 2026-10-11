@@ -5,7 +5,7 @@
 #define SpawnSoundSlot_0204da8c SpawnSoundSlot
 #define UpdateGroupChaseState_020bf0b8 UpdateGroupChaseState
 #define VEC_Add_01ff9e0c VEC_Add
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define func_ov001_0208635c func_ov001_02086384
 #define func_ov032_020bbc0c GetRowCycleLimit
 #define func_ov032_020bbc60 func_ov032_020bbc80

@@ -1,0 +1,7 @@
+#define DrawGaugeSprite_020c1a48 DrawGaugeSprite
+#define FixedPointMultiply12_02006450 FX_Mul
+#define FlushGeometryState_02019230 NNS_G3dGlbFlushWVP
+#define QueueOrSendGeometryCommand_01ffa37c NNS_G3dGeBufferOP_N
+#define func_020192ec NNS_G3dGlbSetBaseTrans
+#define func_0201931c NNS_G3dGlbSetBaseScale
+#include "src/ov097/panel_state/DrawGaugeSprite_020c1a48.c"

@@ -1,7 +1,7 @@
 #define LowerFieldObjectStep_020a4d10 LowerFieldObjectStep
 #define Obj_SetPosition_0203569c Obj_SetPosition
 #define OffsetBoxByDelta_0203ac70 OffsetBoxByDelta
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define data_ov016_020a6e04 data_ov016_020a6e24
 #define func_02036240 ActorRegistry_GetEntityByIndex
 #define func_ov016_020a2558 func_ov016_020a2578

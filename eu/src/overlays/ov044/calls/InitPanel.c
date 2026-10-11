@@ -1,7 +1,7 @@
 #define InitPanel_020d05e8 InitPanel
 #define LoadDefaultProjectionValues_0202a7b4 LoadDefaultProjectionValues
 #define UpdatePanelState_020d0680 UpdatePanelState_020d06a0
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define func_ov044_020d0144 EnterPanelState
 #define g_panel_020d0ea0 data_ov044_020d0ec0
 #include "src/ov044/panel_state/InitPanel_020d05e8.c"

@@ -9,7 +9,7 @@
 #define VEC_MultAdd_01ffa09c VEC_MultAdd
 #define ZeroAndSetField0xd4_020ac150 ZeroAndSetField0xd4
 #define ZeroBytes0x28_020ac0f8 ZeroBytes0x28
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define data_0205356c data_02053580
 #define func_0203ad14 MakeSphereShape
 #define func_ov056_020d33f8 func_ov056_020d3418

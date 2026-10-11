@@ -45,7 +45,7 @@ typedef struct FieldObject {
     u8 hitCount;
 } FieldObject;
 
-extern const VecFx32 data_0205344c;
+extern const VecFx32 gZeroVecFx32;
 
 extern int GetMovieFrameCount(void);
 extern void SyncActorShapePosition(FieldObject *obj, const VecFx32 *position);
@@ -121,7 +121,7 @@ void RespawnKind6FieldObject(FieldObject *obj, const VecFx32 *position, int spaw
     }
     CacheEntry_SetActive(obj, TRUE);
     obj->flags &= 0xe1ff;
-    obj->velocity = data_0205344c;
+    obj->velocity = gZeroVecFx32;
     ResetKindDirection(obj);
     actor = ActorRegistry_GetEntityByIndex(obj->actorId);
     if (kind == 3) {

@@ -8,7 +8,7 @@
 #define StartOv070BossTurn_020d8138 StartOv070BossTurn
 #define StopOv070BossEffects_020d8210 StopOv070BossEffects
 #define ZeroBytes0x14_020a8adc ZeroBytes0x14
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define data_ov070_020d8a04 data_ov070_020d8a24
 #define data_ov070_020d8a10 data_ov070_020d8a30
 #define data_ov070_020d8a40 sOv070_BaEfFnDfP2_020d8a60

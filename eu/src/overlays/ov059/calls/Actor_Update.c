@@ -1,7 +1,7 @@
 #define Actor_Update_020cbe98 Actor_Update
 #define FixedPointMultiply12 FX_Mul
-#define func_ov059_020c7f8c func_ov059_020c7fac
+#define func_ov059_020c7f8c Actor_UpdateChargeAttack
 #define func_ov059_020c8470 Actor_UpdateCommandInput
 #define func_ov059_020c8794 Actor_ApplyFrameMotion
-#define func_ov059_020cf9f8 func_ov059_020cfa18
+#define func_ov059_020cf9f8 RewardQueue_GatherTargets
 #include "src/ov059/unclassified_helpers/Actor_Update_020cbe98.c"

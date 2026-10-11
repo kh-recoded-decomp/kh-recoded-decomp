@@ -1,7 +1,7 @@
 #define IsNodeFlagBitClear_020872b8 IsNodeFlagBitClear
 #define SetFieldUnitPosition_020a6cc4 SetFieldUnitPosition
 #define SpawnRowChainMembers_020bd288 SpawnRowChainMembers
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define data_02053444 data_02053458
 #define func_ov001_0208635c func_ov001_02086384
 #define func_ov016_020a6954 func_ov016_020a6974

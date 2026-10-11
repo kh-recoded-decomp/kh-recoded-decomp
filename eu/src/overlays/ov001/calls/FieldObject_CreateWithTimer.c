@@ -1,5 +1,5 @@
 #define FieldObject_CreateWithTimer_02083648 FieldObject_CreateWithTimer
 #define FieldObject_Create_0207f440 FieldObject_Create
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define func_ov001_02082c50 func_ov001_02082c78
 #include "src/ov001/field_objects/FieldObject_CreateWithTimer_02083648.c"

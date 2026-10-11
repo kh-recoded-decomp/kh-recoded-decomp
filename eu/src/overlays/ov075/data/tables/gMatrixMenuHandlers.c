@@ -5,10 +5,10 @@
 extern void func_ov075_020c49ec(void);
 extern void UpdateMatrixMenuView(void);
 extern void ShutdownMatrixMenu(void);
-extern void func_ov075_020caf58(void);
-extern void func_ov075_020cb198(void);
-extern void func_ov075_020cb430(void);
-extern void func_ov075_020cb678(void);
+extern void MoveMatrixCursorUp_020caf38(void);
+extern void MoveMatrixCursorDown_020cb178(void);
+extern void MoveMatrixCursorLeft_020cb410(void);
+extern void MoveMatrixCursorRight(void);
 extern void ToggleMatrixOverview(void);
 extern void HandleMatrixBackButton(void);
 extern void TryOpenMatrixMenuThree(void);
@@ -21,10 +21,10 @@ void *gMatrixMenuHandlers[17] = {
     (void *)UpdateMatrixMenuView,
     NULL,
     (void *)0x000178A8,
-    (void *)func_ov075_020caf58,
-    (void *)func_ov075_020cb198,
-    (void *)func_ov075_020cb430,
-    (void *)func_ov075_020cb678,
+    (void *)MoveMatrixCursorUp_020caf38,
+    (void *)MoveMatrixCursorDown_020cb178,
+    (void *)MoveMatrixCursorLeft_020cb410,
+    (void *)MoveMatrixCursorRight,
     (void *)ToggleMatrixOverview,
     (void *)HandleMatrixBackButton,
     NULL,

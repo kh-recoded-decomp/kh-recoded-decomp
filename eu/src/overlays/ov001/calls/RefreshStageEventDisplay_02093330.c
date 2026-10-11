@@ -1,0 +1,16 @@
+#define ArmObject_0205116c ArmObject_02051180
+#define FX_DivFx64c_01ff9c94 FX_DivFx64c
+#define FX_Mul32x64c_02006468 FX_Mul32x64cFunc
+#define FindStageAttachPoint_02097890 FindStageAttachPoint
+#define FixedPointMultiply12 FX_Mul
+#define GetLinkedStageActor_0209c2f0 GetLinkedStageActor
+#define GetStageActor_0209c040 GetStageActor
+#define GetStageController_0209c120 GetStageController
+#define HookMaterialAnimAlpha_0208f554 HookMaterialAnimAlpha
+#define LoadScaledOffsetPair_0209d230 LoadScaledOffsetPair
+#define Obj_SetField14_0209839c func_ov001_020983c4
+#define PlayActorAnimationSlot_02091a00 PlayActorAnimationSlot
+#define SpawnStageObjectActor_02096ae0 SpawnStageObjectActor
+#define data_ov001_0209e4b4 data_ov001_0209e4dc
+#define func_ov001_0209d064 func_ov001_0209d08c
+#include "src/ov001/shared_engine/RefreshStageEventDisplay_02093330.c"

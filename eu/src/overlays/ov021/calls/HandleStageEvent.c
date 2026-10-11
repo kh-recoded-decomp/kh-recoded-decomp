@@ -1,6 +1,6 @@
 #define HandleStageEvent_020b46cc HandleStageEvent
 #define ScheduleSpawnerNextTime_02096928 ScheduleSpawnerNextTime
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define data_ov021_020b56a4 data_ov021_020b56c4
 #define func_ov001_0209c3c0 func_ov001_0209c3e8
 #include "src/ov021/shared_engine/HandleStageEvent_020b46cc.c"

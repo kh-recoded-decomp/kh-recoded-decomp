@@ -1,11 +1,11 @@
 #define IsEntryFlagSet_020c1474 IsEntryFlagSet_020c1494
 #define PlaySoundEffect_0204d924 PlaySoundEffect
-#define RefreshListPanels_020bfb38 func_ov097_020bfb58
+#define RefreshListPanels_020bfb38 RefreshListPanels
 #define ResetScrollTrack_020c1228 ResetScrollTrack
 #define ScrollEntryCursorDown_020bf0b4 ScrollEntryCursorDown
 #define StepListCursorDown_020c06a8 StepListCursorDown
 #define data_ov097_020c1ef0 sStoryReportRootIndices
-#define func_ov097_020c02f4 func_ov097_020c0314
+#define func_ov097_020c02f4 SetupScrollList_020c0314
 #define func_ov097_020c1558 func_ov097_020c1578
 #define g_menuScene_020c2520 data_ov097_020c2540
 #include "src/ov097/panel_state/ScrollEntryCursorDown_020bf0b4.c"

@@ -38,7 +38,7 @@
 #define func_ov021_020b2c94 ScriptOp_DivideValues
 #define func_ov021_020b2f58 ScriptOp_SetStageMarker
 #define func_ov021_020b2fcc func_ov021_020b2fec
-#define func_ov021_020b3114 func_ov021_020b3134
+#define func_ov021_020b3114 ScriptOp_SpawnLinkedWalkers
 #define func_ov021_020b3030 ScriptCmd_SetActorGroupFlag
 #define func_ov021_020b3050 ScriptCmd_SetActorGroupFlag_020b3070
 #define func_ov021_020b3070 ScriptCmd_SetActorLinkValue

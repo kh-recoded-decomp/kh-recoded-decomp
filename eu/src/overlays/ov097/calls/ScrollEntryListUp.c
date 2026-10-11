@@ -1,6 +1,6 @@
 #define IsEntryFlagSet_020c1474 IsEntryFlagSet_020c1494
 #define PlaySoundEffect_0204d924 PlaySoundEffect
-#define RefreshListPanels_020bfb38 func_ov097_020bfb58
+#define RefreshListPanels_020bfb38 RefreshListPanels
 #define ResetScrollTrack_020c1228 ResetScrollTrack
 #define ScrollEntryListUp_020bf240 ScrollEntryListUp
 #define ScrollListBack_020c07f8 PageListUp

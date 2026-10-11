@@ -1,0 +1,7 @@
+#define AlignUpTo4K_020c02d4 AlignUpTo4K_020c02f4
+#define FX_Div_01ff9c84 FX_Div
+#define GetPanelSlotRecordData_020c0264 GetPanelSlotRecordData
+#define RefreshScrollList_020c08b4 RefreshScrollList
+#define SetPanelSlotFlag_020bff94 SetPanelSlotFlag
+#define SetupScrollList_020c02f4 SetupScrollList_020c0314
+#include "src/ov097/panel_state/SetupScrollList_020c02f4.c"

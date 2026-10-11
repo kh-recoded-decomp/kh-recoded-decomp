@@ -59,7 +59,7 @@ typedef struct {
     } arg;
 } WanderCommand;
 
-extern const VecFx32 data_0205344c;
+extern const VecFx32 gZeroVecFx32;
 extern int func_ov035_020bafc4(void);
 extern unsigned int func_0202a9e4(unsigned int range);
 
@@ -113,14 +113,14 @@ void ApplyWanderCommand(WanderObject *object, WanderCommand *command)
         break;
     case 1:
     case 2:
-        object->position = data_0205344c;
+        object->position = gZeroVecFx32;
         object->state = 1;
         object->waitId = command->arg.waitId;
         object->drawFlags &= ~0x10;
         break;
     }
     object->position.y += 0x800;
-    zero = data_0205344c;
+    zero = gZeroVecFx32;
     for (i = 0; i < 2; i++) {
         BOOL airborne;
         BOOL first = TRUE;

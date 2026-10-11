@@ -1,7 +1,7 @@
 #define FieldObject_HandleContact_020a33b8 FieldObject_HandleContact_020a33d8
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField
 #define VEC_DotProduct_01ff9e6c VEC_DotProduct
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define func_0204a5e4 ScaleVecFx32InPlace
 #define func_0204d8d0 PlaySoundChecked
 #define func_ov001_0208635c func_ov001_02086384

@@ -1,0 +1,13 @@
+#define AddSessionCounter_02063a80 AddSessionCounter
+#define AnySubObjectBit0Set_020cfb58 AnySubObjectBit0Set
+#define ConsumeActionInterruptFlag_020cc274 ConsumeActionInterruptFlag
+#define GetId10_020a755c SharedObject_GetId
+#define GetLinkedAngleOffset_020ceb7c GetLinkedAngleOffset
+#define HandleMemberMenuInput_020d0524 HandleMemberMenuInput
+#define HasFlagsAt0xc_020a751c HasFlagsAt0xc
+#define IsPlayerEntryFlagSet_02050014 IsPlayerEntryFlagSet
+#define func_ov001_020645c8 IsSessionFlagSet
+#define func_ov001_0206db78 GetPlayerControlState
+#define func_ov021_020a8ab4 ResetAnimationTrackState
+#define func_ov021_020a8ca0 func_ov021_020a8cc0
+#include "src/ov052/unclassified_helpers/TryStartChargedAction_020c88f4.c"

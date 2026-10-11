@@ -1,6 +1,6 @@
 #define BindActorAnimation_02089060 BindActorAnimation
 #define ReleaseResourceAndDetach_0202eee8 ReleaseResourceAndDetach
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define func_0202edd8 InitSharedRecordAndDispatchZero
 #define selectJointAnimationBlend_0202f2cc selectJointAnimationBlend
 #include "src/ov001/actor_animation/BindActorAnimation_02089060.c"

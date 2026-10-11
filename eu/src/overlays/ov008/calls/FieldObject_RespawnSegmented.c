@@ -1,0 +1,23 @@
+#define ActorSlot_PlaceAndLink_02035a18 ActorSlot_PlaceAndLink
+#define ActorSlot_SetFlag8ByIndex_02036120 ActorSlot_SetFlag8ByIndex
+#define FieldObject_RespawnSegmented_020a06dc FieldObject_RespawnSegmented
+#define FindResourceIndexByName_0201aafc NNS_G3dGetResDictIdxByName
+#define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
+#define OS_SPrintf_02002428 OS_SPrintf
+#define Obj_SetPosition_0203569c Obj_SetPosition
+#define RebindAnimTracks_020809d0 RebindAnimTracks
+#define SpawnFieldActor_0208078c func_ov001_020807b4
+#define data_ov008_020a1394 sOv008_BlockElevator_020a13b4
+#define data_ov008_020a13ee data_ov008_020a140e
+#define data_ov008_020a1408 sOv008_FormatSFormat02d_020a1428
+#define data_ov008_020a1410 sOv008_Metal_020a1430
+#define func_01ff86fc MIi_CpuClear32
+#define func_0202f4d8 Flags16_SetBit1
+#define func_02034050 IndexedBytes_SetAt10
+#define func_020358b0 ApplyRecordTableEntry2
+#define func_020359f8 ApplyRecordTableEntry5
+#define func_02036240 ActorRegistry_GetEntityByIndex
+#define func_020369c8 SetActorExtraPosition
+#define func_ov001_0207f050 func_ov001_0207f078
+#define func_ov001_0207f7a4 IsObjectFlagClear
+#include "src/ov008/field_objects/FieldObject_RespawnSegmented_020a06dc.c"

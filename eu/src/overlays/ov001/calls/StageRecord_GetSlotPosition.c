@@ -1,5 +1,5 @@
 #define GetStageEventRecord_0209c0ec GetStageEventRecord
 #define StageRecord_GetSlotPosition_02087c4c StageRecord_GetSlotPosition
-#define func_ov001_0209661c func_ov001_02096644
+#define func_ov001_0209661c GetRouteWaypointPlacement
 #define g_stageEventsState_0209f2c8 g_stageEventsState
 #include "src/ov001/shared_engine/StageRecord_GetSlotPosition_02087c4c.c"

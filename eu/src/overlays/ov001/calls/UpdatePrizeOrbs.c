@@ -45,7 +45,7 @@ extern BOOL func_ov001_02088100(VecFx32 *out);
 extern void func_ov001_020880f8(int payload);
 extern VecFx32 *func_ov001_0206dc60(int slot);
 extern OrbReceiver *GetBoundedEntryField(int slot);
-extern void func_ov001_02072254(int *payload, int count);
+extern void ShowChoiceDetails_02072254(int *payload, int count);
 extern void func_ov001_0206674c(PrizeOrb *orb);
 extern void VEC_Add(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
 extern void VEC_Subtract(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
@@ -101,7 +101,7 @@ void UpdatePrizeOrbs(void)
                         }
                     }
                 } else {
-                    func_ov001_02072254(&orb->payload, 1);
+                    ShowChoiceDetails_02072254(&orb->payload, 1);
                 }
                 func_ov001_0206674c(orb);
                 orb = next;

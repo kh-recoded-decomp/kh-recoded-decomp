@@ -10,7 +10,7 @@
 #define func_ov001_0208f018 func_ov001_0208f040
 #define func_ov001_020925bc func_ov001_020925e4
 #define func_ov001_02093188 ResetStageActorFlags
-#define func_ov001_02093330 func_ov001_02093358
+#define func_ov001_02093330 RefreshStageEventDisplay_02093330
 #define func_ov001_020950f8 func_ov001_02095120
 #define func_ov001_0209c3c0 func_ov001_0209c3e8
 #define random_next_scaled_0202aa04 random_next_scaled

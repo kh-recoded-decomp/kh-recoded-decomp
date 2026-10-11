@@ -1,3 +1,4 @@
+#define func_ov004_020619a0 RunScrollTextScript
 #define BeginScrollTextExit_02062264 BeginScrollTextExit
 #define FrameTimer_IsExpired_0206146c FrameTimer_IsExpired
 #define FrameTimer_Start_020613e0 FrameTimer_Start

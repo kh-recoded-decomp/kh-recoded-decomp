@@ -4,7 +4,7 @@
 #define UpdateSlidingFieldObject_020a393c UpdateSlidingFieldObject
 #define VEC_Add_01ff9e0c VEC_Add
 #define VEC_Subtract_01ff9e3c VEC_Subtract
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define func_02036240 ActorRegistry_GetEntityByIndex
 #define func_ov001_02086434 func_ov001_0208645c
 #define func_ov001_02087224 func_ov001_0208724c

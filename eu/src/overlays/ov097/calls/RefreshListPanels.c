@@ -1,0 +1,8 @@
+#define CallVirtualHandlerSlot1_02001574 CallVirtualHandlerSlot1
+#define DrawShadowedAnchoredText_020bfd68 DrawShadowedAnchoredText_020bfd88
+#define IsEntryFlagSet_020c1474 IsEntryFlagSet_020c1494
+#define RefreshListPanels_020bfb38 RefreshListPanels
+#define Text_UploadTileBuffer_02001520 Text_UploadTileBuffer
+#define func_020019f4 GetNestedModeByte
+#define func_ov027_020ba2a8 func_ov027_020ba2c8
+#include "src/ov097/panel_state/RefreshListPanels_020bfb38.c"

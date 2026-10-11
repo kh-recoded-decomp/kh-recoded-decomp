@@ -191,7 +191,7 @@ typedef struct {
 } SaveBlock;
 
 extern SaveBlock *data_0205fe0c;
-extern const CursorFrame sMatrixModeLabels[];
+extern const CursorFrame sMatrixCursorFrames[];
 extern const CellSize data_ov075_020d14a8;
 extern const CellSize data_ov075_020d14ac;
 extern const CellSize data_ov075_020d14b0;
@@ -271,7 +271,7 @@ void DrawMatrixMenu(MatrixMenu *menu)
     } else {
         frameIndex -= 2;
     }
-    frame = &sMatrixModeLabels[frameIndex];
+    frame = &sMatrixCursorFrames[frameIndex];
     menu->rect.left = menu->cursorX / 4096 - (frame->width >> 1) - frame->offsetX;
     menu->rect.top = menu->cursorY / 4096 - frame->offsetY;
     if (menu->closeRequested != 0) {

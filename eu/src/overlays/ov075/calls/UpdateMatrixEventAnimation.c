@@ -113,17 +113,17 @@ extern void HasSceneActiveMenu(int brightness);
 extern void RefreshStatusMenuData(SaveData *save, const RefreshArgs *args);
 extern void SetStatusPageAndCursor(int page, int index);
 extern u32 PropagateMatrixNodeVisit(MatrixMenu *menu, MatrixNode *node, int dir, BOOL quiet, BOOL keepSteps);
-extern void func_ov075_020c5d30(MatrixMenu *menu, int a, int b, int c);
+extern void PreviewMatrixNodeStats_020c5d10(MatrixMenu *menu, int a, int b, int c);
 extern BOOL TryCompleteGridGroup(MatrixMenu *menu, u32 group);
 extern void DrawMatrixCellGlyph(void *state, MatrixMap *map, MatrixNode *node, int index);
 extern void ClearGlyphCell(void *pixels, MatrixMap *grid, u32 cellIndex);
 extern void ShowDialogMessage(MatrixMenu *menu, int messageId, int dialogType, int cancelable, ...);
 extern void GetGridCellPosition(MatrixMenu *menu, MatrixNode *cell, fx32 *x, fx32 *y);
 extern void SetUnlockableElementsVisible(void *layout, BOOL visible);
-extern void func_ov075_020caf58(MatrixMenu *menu);
-extern void func_ov075_020cb198(MatrixMenu *menu);
-extern void func_ov075_020cb430(MatrixMenu *menu);
-extern void func_ov075_020cb678(MatrixMenu *menu);
+extern void MoveMatrixCursorUp_020caf38(MatrixMenu *menu);
+extern void MoveMatrixCursorDown_020cb178(MatrixMenu *menu);
+extern void MoveMatrixCursorLeft_020cb410(MatrixMenu *menu);
+extern void MoveMatrixCursorRight(MatrixMenu *menu);
 
 static inline void RefreshRevealedCell(MatrixMenu *menu, MatrixNode *cell)
 {
@@ -254,7 +254,7 @@ void UpdateMatrixEventAnimation(MatrixMenu *menu)
                         func_01ffb2f8(&menu->effects[4], 2, 0);
                         func_01ffb2f8(&menu->effects[4], 4, 0);
                         func_01ffb2f8(&menu->effects[4], 0, 0);
-                        func_ov075_020c5d30(menu, -1, -1, 0);
+                        PreviewMatrixNodeStats_020c5d10(menu, -1, -1, 0);
                         menu->groupMask ^= 1 << menu->eventParam;
                         menu->phase = 0;
                     }
@@ -302,13 +302,13 @@ void UpdateMatrixEventAnimation(MatrixMenu *menu)
                 menu->revealActive = 1;
                 link = node->links;
                 if (node->links[1] >= 0) {
-                    func_ov075_020caf58(menu);
+                    MoveMatrixCursorUp_020caf38(menu);
                 } else if (node->links[2] >= 0) {
-                    func_ov075_020cb678(menu);
+                    MoveMatrixCursorRight(menu);
                 } else if (node->links[0] >= 0) {
-                    func_ov075_020cb430(menu);
+                    MoveMatrixCursorLeft_020cb410(menu);
                 } else if (node->links[3] >= 0) {
-                    func_ov075_020cb198(menu);
+                    MoveMatrixCursorDown_020cb178(menu);
                 }
                 open = FALSE;
                 if (link[0] >= 0 && nodes[link[0]]->lockValue >= 0) {
@@ -363,7 +363,7 @@ void UpdateMatrixEventAnimation(MatrixMenu *menu)
                             anyOpen = FALSE;
                         }
                         if (completed) {
-                            func_ov075_020c5d30(menu, -1, -1, 0);
+                            PreviewMatrixNodeStats_020c5d10(menu, -1, -1, 0);
                             break;
                         }
                     }

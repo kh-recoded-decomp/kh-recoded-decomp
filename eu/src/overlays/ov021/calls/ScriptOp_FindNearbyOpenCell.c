@@ -10,7 +10,7 @@
 #define VEC_MultAdd_01ffa09c VEC_MultAdd
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define addScaledVector_020301ac AddScaledVector
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define data_ov021_020b5164 data_ov021_020b5184
 #define data_ov021_020b56a4 data_ov021_020b56c4
 #define func_01ff8830 MI_CpuFill8

@@ -17,7 +17,7 @@
 #define VEC_DotProduct_01ff9e6c VEC_DotProduct
 #define VEC_Mag_01ff9f28 VEC_Mag
 #define Vec_DotSelf_02048bac Vec_DotSelf_02048bc0
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define func_01ff9f88 VEC_Normalize
 #define func_0203fc24 IsVecZero
 #define func_0203ff74 GetSegmentHalfDelta

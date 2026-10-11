@@ -1,0 +1,15 @@
+#define CallVirtualHandlerSlot1_02001574 CallVirtualHandlerSlot1
+#define DrawTextAnchored_020015a0 DrawTextAnchored
+#define InitPanelTextLayers_020c663c InitPanelTextLayers
+#define InitTextLayerAt_020014b0 InitTextLayerAt
+#define LoadPackedFileView_020ba25c LoadPackedFileView
+#define RefreshSelectedEntryInfo_020c5ef0 RefreshSelectedEntryInfo
+#define SetScreenLayerDirty_020bc104 SetScreenLayerDirty
+#define Text_UploadTileBuffer_02001520 Text_UploadTileBuffer
+#define UpdateScreenWidgetLayer_020bc1e4 UpdateScreenWidgetLayer
+#define data_ov087_020c7cdc data_ov087_020c7cfc
+#define data_ov087_020c7e7c sOv087_UiMenuStrLanguageWstSZ_020c7e9c
+#define func_02051f48 GetGridTableValue
+#define func_ov027_020ba2a8 func_ov027_020ba2c8
+#define func_ov039_020bc994 GetMenuFont10
+#include "src/ov087/panel_state/InitPanelTextLayers_020c663c.c"

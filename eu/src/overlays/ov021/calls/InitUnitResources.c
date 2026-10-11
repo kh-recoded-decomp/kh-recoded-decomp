@@ -6,5 +6,5 @@
 #define data_ov021_020b5248 data_ov021_020b5268
 #define func_0202c48c func_0202c4a0
 #define func_ov021_020a9d68 RelocateUnitMotionData
-#define func_ov021_020a9ecc func_ov021_020a9eec
+#define func_ov021_020a9ecc BuildUnitNodes
 #include "src/ov021/unclassified_helpers/InitUnitResources_020aa264.c"

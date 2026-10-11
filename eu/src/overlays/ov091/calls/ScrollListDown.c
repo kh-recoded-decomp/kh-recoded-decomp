@@ -1,4 +1,4 @@
 #define ScrollListDown_020c0010 ScrollListDown
 #define SetListPanelSlotPos_020bfaa0 SetListPanelSlotPos
-#define func_ov091_020c0144 func_ov091_020c0164
+#define func_ov091_020c0144 RefreshScrollList_020c0144
 #include "src/ov091/panel_state/ScrollListDown_020c0010.c"

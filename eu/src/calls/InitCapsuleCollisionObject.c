@@ -2,7 +2,7 @@
 #define InitCollisionObject_02033c7c InitCollisionObject
 #define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
 #define VEC_Subtract_01ff9e3c VEC_Subtract
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define func_0203ae34 InitCapsuleShape
 #define func_01ffaff4 VEC_NormalizeLength
 #include "src/arm9/spatial_queries/InitCapsuleCollisionObject_02033d54.c"

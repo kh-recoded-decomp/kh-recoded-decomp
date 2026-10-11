@@ -5,7 +5,7 @@
 #define func_ov039_020bca00 GetMenuInputState
 #define func_ov093_020bfd60 RedrawEntryPanelText
 #define func_ov093_020c05b8 RefreshEntryListSlots
-#define func_ov093_020c0cb0 func_ov093_020c0cd0
+#define func_ov093_020c0cb0 RefreshScrollBar_020c0cb0
 #define func_ov093_020c2080 SetSmoothValueImmediate
 #define func_ov093_020c2158 SetSmoothValueTarget
 #define func_ov093_020c21f8 StepSmoothValue

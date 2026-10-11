@@ -1,4 +1,4 @@
 #define FieldObject_CreateAtOrigin_020a0c78 FieldObject_CreateAtOrigin
 #define FieldObject_Create_0207f440 FieldObject_Create
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #include "src/ov010/shared_engine/FieldObject_CreateAtOrigin_020a0c78.c"

@@ -1,0 +1,6 @@
+#define FX_Div_01ff9c84 FX_Div
+#define SetListPanelSlotFlag_020bf918 SetListPanelSlotFlag
+#define SetListPanelSlotPos_020bfaa0 SetListPanelSlotPos
+#define data_ov091_020c2bb4 data_ov091_020c2bd4
+#define data_ov091_020c3724 data_ov091_020c3744
+#include "src/ov091/panel_state/RefreshScrollList_020c0144.c"

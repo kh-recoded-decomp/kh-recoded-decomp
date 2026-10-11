@@ -1,0 +1,10 @@
+#define GetDialogInputMode_020c42b4 GetDialogInputMode
+#define IsMatrixInputReady_020caa6c IsMatrixInputReady
+#define JumpCursorToEntry_020cae58 JumpCursorToEntry
+#define PlaySoundEffect_0204d924 PlaySoundEffect
+#define ShowEntryHeaderMessage_020cad14 ShowEntryHeaderMessage
+#define ShowNextUnlockNotice_020cc9fc ShowNextUnlockNotice
+#define TracePipePath_020caa98 TracePipePath
+#define data_ov075_020d1454 sMatrixCursorFrames
+#define func_ov075_020cac34 func_ov075_020cac54
+#include "src/ov075/matrix_menu/MoveMatrixCursorDown_020cb178.c"

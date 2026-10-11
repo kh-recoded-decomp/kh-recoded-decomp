@@ -224,6 +224,10 @@ src/overlays/ov076/calls/func_ov076_020c7714.c:
     complete
     .text       start:0x020c7714 end:0x020c7728
 
+src/overlays/ov076/calls/SlotMenu_DrawSlotModels_020c7708.c:
+    complete
+    .text       start:0x020c7728 end:0x020c7a7c
+
 src/overlays/ov076/calls/SlotMenu_UploadLabel.c:
     complete
     .text       start:0x020c7b64 end:0x020c7c0c

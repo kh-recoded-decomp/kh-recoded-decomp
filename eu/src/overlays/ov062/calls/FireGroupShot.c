@@ -4,7 +4,7 @@
 #define SpawnSoundSlot_0204da8c SpawnSoundSlot
 #define TryConsumeLimitedUse_020ab098 TryConsumeLimitedUse
 #define ZeroBytes0x40_020ab08c ZeroBytes0x40
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define func_ov052_020ceb54 func_ov052_020ceb74
 #define func_01ffaff4 VEC_NormalizeLength
 #include "src/ov062/shared_engine/FireGroupShot_020d8254.c"

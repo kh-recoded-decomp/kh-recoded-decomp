@@ -4,7 +4,7 @@
 #define TryConsumeLimitedUse_020ab098 TryConsumeLimitedUse
 #define VEC_Normalize_01ff9f88 VEC_Normalize
 #define ZeroBytes0x40_020ab08c ZeroBytes0x40
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define data_ov056_020d7f4c data_ov056_020d7f6c
 #define func_ov021_020a8ab4 ResetAnimationTrackState
 #define func_ov021_020a8ca0 func_ov021_020a8cc0

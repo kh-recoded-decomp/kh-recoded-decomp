@@ -480,6 +480,10 @@ src/overlays/ov021/calls/BuildNodeGraph.c:
     complete
     .text       start:0x020a9e1c end:0x020a9eea
 
+src/overlays/ov021/calls/BuildUnitNodes.c:
+    complete
+    .text       start:0x020a9eec end:0x020aa126
+
 src/overlays/ov021/calls/ResetModelSlotIds.c:
     complete
     .text       start:0x020aa128 end:0x020aa162
@@ -767,6 +771,10 @@ src/overlays/ov021/calls/StepHitScan.c:
 src/overlays/ov021/calls/ProbeActorContact.c:
     complete
     .text       start:0x020ac284 end:0x020ac35c
+
+src/overlays/ov021/calls/ApplyHitToTarget_020ac33c.c:
+    complete
+    .text       start:0x020ac35c end:0x020ac6ec
 
 src/overlays/ov021/calls/ComputeAttackDamage.c:
     complete
@@ -1320,6 +1328,10 @@ src/overlays/ov021/calls/ResolveOffsetPosition.c:
     complete
     .text       start:0x020b0528 end:0x020b0608
 
+src/overlays/ov021/calls/EvalScriptExpression.c:
+    complete
+    .text       start:0x020b0608 end:0x020b0a66
+
 src/overlays/ov021/calls/func_ov021_020b0a68.c:
     complete
     .text       start:0x020b0a68 end:0x020b0ab0
@@ -1763,6 +1775,10 @@ src/overlays/ov021/calls/ScriptCmd_SetActorLinkValue.c:
 src/overlays/ov021/calls/ScriptCmd_SetPlayerFixedParam.c:
     complete
     .text       start:0x020b30f4 end:0x020b3134
+
+src/overlays/ov021/calls/ScriptOp_SpawnLinkedWalkers.c:
+    complete
+    .text       start:0x020b3134 end:0x020b3420
 
 src/overlays/ov021/calls/ScriptOp_SetContextFlag0.c:
     complete

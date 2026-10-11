@@ -46,7 +46,7 @@ typedef struct ObjectGroup {
     u16 respawnDelay;
 } ObjectGroup;
 
-extern const VecFx32 data_0205344c;
+extern const VecFx32 gZeroVecFx32;
 
 extern ObjectGroup *func_ov032_020bbc80(GroupObject *object);
 extern GroupMemberWork *func_ov032_020bbc98(GroupObject *object);
@@ -78,8 +78,8 @@ void UpdateRespawningGroupMember(GroupObject *object)
         return;
     }
     group = func_ov032_020bbc80(object);
-    zero = data_0205344c;
-    delta = data_0205344c;
+    zero = gZeroVecFx32;
+    delta = gZeroVecFx32;
     switch (work->state) {
     case 0:
         object->work->state = 0x19;

@@ -3,6 +3,6 @@
 #define IsKind4WithState0Or3_020a0a74 IsKind4WithState0Or3
 #define OffsetBoxByDelta_0203ac70 OffsetBoxByDelta
 #define SweepWorldCollision_020364a0 SweepWorldCollision
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define func_02036240 ActorRegistry_GetEntityByIndex
 #include "src/ov009/shared_engine/FieldObject_UpdateFall_020a0980.c"

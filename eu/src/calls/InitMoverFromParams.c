@@ -1,7 +1,7 @@
 #define InitMoverFromParams_02033428 InitMoverFromParams
 #define MI_CpuFill8_01ff8830 MI_CpuFill8
 #define VEC_Subtract_01ff9e3c VEC_Subtract
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define g_collHitRecord_027e0134 data_027e0134
 #define func_01ffaff4 VEC_NormalizeLength
 #include "src/arm9/spatial_queries/InitMoverFromParams_02033428.c"

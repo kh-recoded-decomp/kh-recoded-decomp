@@ -4,7 +4,7 @@
 #define UpdatePartyActorMotion_0208a114 UpdatePartyActorMotion
 #define VEC_Add_01ff9e0c VEC_Add
 #define VEC_Mag_01ff9f28 VEC_Mag
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define func_02038e6c func_02038e80
 #define func_ov001_02089208 ApplyActorRootMotion
 #define func_ov001_02089394 UpdateActorMotionTracks

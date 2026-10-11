@@ -4,7 +4,7 @@
 #define ProjectPositionDownward_020352e0 ProjectPositionDownward
 #define SpawnActorModelAt_02089db0 SpawnActorModelAt
 #define VEC_Add_01ff9e0c VEC_Add
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define func_01ff8830 MI_CpuFill8
 #define func_01ff89a8 MI_CpuCopy8
 #define func_02036230 GetActorRegistry

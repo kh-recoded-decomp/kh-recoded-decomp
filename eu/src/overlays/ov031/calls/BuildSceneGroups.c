@@ -8,7 +8,7 @@
 #define OffsetBoxByDelta_0203ac70 OffsetBoxByDelta
 #define SetShapePosition_0203afa0 SetShapePosition
 #define VEC_Add_01ff9e0c VEC_Add
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define func_01ff8710 MIi_CpuCopy32
 #define func_02036230 GetActorRegistry
 #define func_ov031_020bb598 func_ov031_020bb5b8

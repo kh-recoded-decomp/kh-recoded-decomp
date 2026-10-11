@@ -33,7 +33,7 @@ typedef struct Actor {
     s16 effectGroup;
 } Actor;
 
-extern const VecFx32 data_0205344c;
+extern const VecFx32 gZeroVecFx32;
 
 extern BOOL IsGroupMemberActive(s32 group, s32 index);
 extern void ResetAnimationTrackState(TrackState *state);
@@ -70,7 +70,7 @@ void func_ov059_020c9a74(Actor *actor, BOOL start)
         actor->effectActive = 1;
         ResetAnimationTrackState(&state);
         state.id = 0;
-        state.position = data_0205344c;
+        state.position = gZeroVecFx32;
         state.flag25 = 1;
         state.flag24 = 0;
         state.prevIndex = 0xcd;

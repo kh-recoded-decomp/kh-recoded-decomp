@@ -2,7 +2,7 @@
 #define UpdateDriftParticle_020afb94 UpdateDriftParticle
 #define VEC_Add_01ff9e0c VEC_Add
 #define VEC_Mag_01ff9f28 VEC_Mag
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define func_02023dbc _s32_div_f
 #define func_0204a174 EaseProgress
 #define func_0204a5e4 ScaleVecFx32InPlace

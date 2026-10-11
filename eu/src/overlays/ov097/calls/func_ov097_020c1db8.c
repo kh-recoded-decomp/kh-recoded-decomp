@@ -1,3 +1,3 @@
-#define NNS_FndInitList func_ov097_020c1a68
+#define NNS_FndInitList DrawGaugeSprite
 #define NNS_FndInitListWithOffset0_020c1d98 func_ov097_020c1db8
 #include "src/ov097/library_nitro_nns/NNS_FndInitListWithOffset0_020c1d98.c"

@@ -76,7 +76,7 @@ typedef struct {
     u8 player;
 } Actor;
 
-extern const VecFx32 data_0205344c;
+extern const VecFx32 gZeroVecFx32;
 extern void ResetAnimationTrackState(MarkerRequest *request);
 extern int func_ov021_020a8cc0(MarkerRequest *request, int groupId);
 extern void InitRecord60(HitAttack *attack);
@@ -124,7 +124,7 @@ void EmitPillarHitScan(EffectOwner *owner, Actor *actor, const VecFx32 *pos)
     axis = diff;
     shapeResult = InitCylinderShape(&cylinder, &top, &bottom, &axis, VEC_NormalizeLength(&axis, &axis), 0x1000);
     swept.shape = shapeResult;
-    swept.delta = data_0205344c;
+    swept.delta = gZeroVecFx32;
     OffsetBoxByDelta(&swept.shape.bounds, &swept.sweptBounds, &swept.delta);
     attack.volume = swept;
     ZeroBytes0x28(&options);

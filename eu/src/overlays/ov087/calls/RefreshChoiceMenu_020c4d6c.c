@@ -12,5 +12,5 @@
 #define func_ov039_020bc1bc func_ov039_020bc1dc
 #define func_ov039_020bc810 GetMenuStackDepth
 #define func_ov087_020c4714 func_ov087_020c4734
-#define func_ov087_020c4a48 func_ov087_020c4a68
+#define func_ov087_020c4a48 HideChoiceWidgets_020c4a48
 #include "src/ov087/panel_state/RefreshChoiceMenu_020c4d6c.c"

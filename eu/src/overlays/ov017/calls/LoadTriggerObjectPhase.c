@@ -4,7 +4,7 @@
 #define Obj_SetPosition_0203569c Obj_SetPosition
 #define OffsetBoxByDelta_0203ac70 OffsetBoxByDelta
 #define ZeroBytes0x14_020a8adc ZeroBytes0x14
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define data_020559c0 gCollisionBoundsDispatch
 #define data_ov017_020a5f18 sOv017_BaEfDbhit_020a5f38
 #define func_0202ed9c func_0202edb0

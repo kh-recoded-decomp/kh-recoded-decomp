@@ -48,7 +48,7 @@ typedef struct ObjectGroup {
     int trailSlot;
 } ObjectGroup;
 
-extern const VecFx32 data_0205344c;
+extern const VecFx32 gZeroVecFx32;
 
 extern ObjectGroup *func_ov032_020bbc80(GroupObject *object);
 extern GroupMemberWork *func_ov032_020bbc98(GroupObject *object);
@@ -83,8 +83,8 @@ int UpdateChainGroupMember(void *context, GroupObject *object)
     u32 oldSide;
     BOOL reached;
 
-    zero = data_0205344c;
-    delta = data_0205344c;
+    zero = gZeroVecFx32;
+    delta = gZeroVecFx32;
     if (work->leaderLink == -1) {
         leader = NULL;
     } else {

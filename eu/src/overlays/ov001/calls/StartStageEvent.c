@@ -1,0 +1,15 @@
+#define GetSessionModeOrZero_02098714 GetSessionModeOrZero
+#define GetSessionRankValue_020979dc GetSessionRankValue
+#define InitStageEventHeader_020988d4 InitStageEventHeader
+#define LoadStageModelEntry_0209a8ac LoadStageModelEntry
+#define LoadStageResource_0209a784 LoadStageResource
+#define RegisterSessionCallback_0206c704 RegisterSessionCallback
+#define RemapGroupMemberId_0209cfcc RemapGroupMemberId
+#define Session_Exists_0206c768 func_ov001_0206c768
+#define StartStageEvent_0209a174 StartStageEvent
+#define func_ov001_02099a84 DrawVisibleStageQuads
+#define func_ov001_0209a4bc func_ov001_0209a4e4
+#define func_ov001_0209ab64 LoadStageModels
+#define func_ov001_0209d064 func_ov001_0209d08c
+#define g_stageManager_020a0508 data_ov001_020a0528
+#include "src/ov001/shared_engine/StartStageEvent_0209a174.c"

@@ -1,3 +1,3 @@
 #define AdvanceScrollBarStep_020c0c48 AdvanceScrollBarStep
-#define func_ov093_020c0cb0 func_ov093_020c0cd0
+#define func_ov093_020c0cb0 RefreshScrollBar_020c0cb0
 #include "src/ov093/unclassified_helpers/AdvanceScrollBarStep_020c0c48.c"

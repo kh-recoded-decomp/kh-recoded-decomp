@@ -120,6 +120,10 @@ src/overlays/ov091/calls/ScrollListDown.c:
     complete
     .text       start:0x020c0030 end:0x020c0164
 
+src/overlays/ov091/calls/RefreshScrollList_020c0144.c:
+    complete
+    .text       start:0x020c0164 end:0x020c0468
+
 src/overlays/ov091/calls/UpdateEntryProgress.c:
     complete
     .text       start:0x020c0468 end:0x020c114c

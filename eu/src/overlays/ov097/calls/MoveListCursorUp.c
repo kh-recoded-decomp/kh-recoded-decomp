@@ -1,4 +1,4 @@
 #define MoveListCursorUp_020c055c MoveListCursorUp
 #define SetPanelSlotPosition_020c00fc SetPanelSlotPosition
-#define func_ov097_020c08b4 func_ov097_020c08d4
+#define func_ov097_020c08b4 RefreshScrollList
 #include "src/ov097/panel_state/MoveListCursorUp_020c055c.c"

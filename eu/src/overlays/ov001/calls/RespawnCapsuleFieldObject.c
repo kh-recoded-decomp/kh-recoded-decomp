@@ -8,7 +8,7 @@
 #define RespawnCapsuleFieldObject_020828f0 RespawnCapsuleFieldObject
 #define SpawnFieldActor_0208078c func_ov001_020807b4
 #define VEC_Subtract_01ff9e3c VEC_Subtract
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define func_0202f4e8 Flags16_ClearBit1
 #define func_020358b0 ApplyRecordTableEntry2
 #define func_020359f8 ApplyRecordTableEntry5

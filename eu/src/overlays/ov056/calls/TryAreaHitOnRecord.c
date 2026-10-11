@@ -4,7 +4,7 @@
 #define func_0204da8c SpawnSoundSlot
 #define func_ov021_020a8ca0 func_ov021_020a8cc0
 #define func_ov021_020ac104 InitPathSegment
-#define func_ov021_020ac33c func_ov021_020ac35c
+#define func_ov021_020ac33c ApplyHitToTarget_020ac33c
 #define func_ov056_020d4240 ComputeScaledStats
 #define func_ov056_020d56e8 CircleActorAroundUnit
 #include "src/ov056/unclassified_helpers/TryAreaHitOnRecord_020d51ec.c"

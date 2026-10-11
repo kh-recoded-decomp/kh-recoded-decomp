@@ -3,7 +3,7 @@
 #define IsBit0Set_020a9d1c IsBit0Set
 #define SetBit1WhenBit0Set_020a9ce8 SetBit1WhenBit0Set
 #define UpdateModelBlinkEffect_020d265c UpdateModelBlinkEffect
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define func_ov021_020a8ab4 ResetAnimationTrackState
 #define func_ov021_020a8ca0 func_ov021_020a8cc0
 #define func_ov021_020a9d04 func_ov021_020a9d24

@@ -4,6 +4,10 @@
     .data       start:0x020c1780 end:0x020c28e0 kind:data align:32
     .bss        start:0x020c28e0 end:0x020c2900 kind:bss align:32
 
+src/overlays/ov095/calls/InitGridMenu.c:
+    complete
+    .text       start:0x020beb20 end:0x020bed84
+
 src/overlays/ov095/calls/func_ov095_020bed84.c:
     complete
     .text       start:0x020bed84 end:0x020bee18
@@ -44,6 +48,10 @@ src/overlays/ov095/calls/OpenEntryDetail.c:
     complete
     .text       start:0x020bf064 end:0x020bf0a4
 
+src/overlays/ov095/calls/SetupGridMenuDisplay.c:
+    complete
+    .text       start:0x020bf0a4 end:0x020bf2e8
+
 src/overlays/ov095/calls/GetTiledPixelIndex.c:
     complete
     .text       start:0x020bf2e8 end:0x020bf370
@@ -59,6 +67,10 @@ src/overlays/ov095/calls/LoadMenuBackgrounds_020bf570.c:
 src/overlays/ov095/calls/FreeEntryBuffers.c:
     complete
     .text       start:0x020bf814 end:0x020bf844
+
+src/overlays/ov095/calls/InitTextLayers.c:
+    complete
+    .text       start:0x020bf844 end:0x020bf9c8
 
 src/overlays/ov095/calls/ReleaseScreenResources_020bf9c8.c:
     complete
@@ -139,6 +151,10 @@ src/overlays/ov095/calls/GetGridCell.c:
 src/overlays/ov095/calls/MoveGridCursorUp.c:
     complete
     .text       start:0x020c0a84 end:0x020c0d00
+
+src/overlays/ov095/calls/MoveGridCursorDown.c:
+    complete
+    .text       start:0x020c0d00 end:0x020c0f98
 
 src/overlays/ov095/calls/SelectNextGridRow.c:
     complete

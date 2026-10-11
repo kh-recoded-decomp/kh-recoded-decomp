@@ -1,0 +1,7 @@
+#define InitTextLayerDefault_02001494 InitTextLayerDefault
+#define InitTextLayers_020bf19c InitTextLayers_020bf1bc
+#define LoadPackedFileView_020ba25c LoadPackedFileView
+#define data_ov103_020c04a8 gTheaterReportTextPaths
+#define data_ov103_020c06d8 sOv103_TextFontEu10Nftr_020c06f8
+#define func_02001458 func_0200146c
+#include "src/ov103/panel_state/InitTextLayers_020bf19c.c"

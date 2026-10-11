@@ -3,5 +3,5 @@
 #define SetupListPanel_020bf994 SetupListPanel
 #define func_ov103_020bf678 SetSlotEntryVisible
 #define func_ov103_020bf8c0 GetSlotEntryResource
-#define func_ov103_020bfe7c func_ov103_020bfe9c
+#define func_ov103_020bfe7c RefreshListPanel_020bfe7c
 #include "src/ov103/panel_state/SetupListPanel_020bf994.c"

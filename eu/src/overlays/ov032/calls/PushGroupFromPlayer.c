@@ -1,6 +1,6 @@
 #define PushGroupFromPlayer_020be5c0 PushGroupFromPlayer
 #define VEC_Add_01ff9e0c VEC_Add
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define func_ov032_020bbc60 func_ov032_020bbc80
 #define func_ov032_020bbc78 func_ov032_020bbc98
 #define func_ov032_020bc6fc ProbeGroundBelow

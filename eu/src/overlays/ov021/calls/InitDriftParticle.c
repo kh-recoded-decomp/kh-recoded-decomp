@@ -1,5 +1,5 @@
 #define InitDriftParticle_020afb34 InitDriftParticle
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define func_ov021_020afadc StepDriftEffect
 #define random_next_scaled_0202aa04 random_next_scaled
 #include "src/ov021/shared_engine/InitDriftParticle_020afb34.c"

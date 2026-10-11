@@ -1,6 +1,6 @@
 #define IsFieldUnitPhase6_020a6a64 IsFieldUnitPhase6
 #define ResetGroupMemberFlags_020be654 ResetGroupMemberFlags
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define func_ov001_0208635c func_ov001_02086384
 #define func_ov032_020bbc60 func_ov032_020bbc80
 #define func_ov032_020bbc78 func_ov032_020bbc98

@@ -2,7 +2,7 @@
 #define RandomScaledDirection_020b0488 RandomScaledDirection
 #define VEC_Mag_01ff9f28 VEC_Mag
 #define VEC_Normalize_01ff9f88 VEC_Normalize
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define nextRandom12_0202aa58 nextRandom12
 #define random_next_scaled_0202aa04 random_next_scaled
 #include "src/ov021/animation/RandomScaledDirection_020b0488.c"

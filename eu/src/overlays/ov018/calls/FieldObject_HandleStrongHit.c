@@ -2,6 +2,6 @@
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField
 #define PlaySoundChecked_0204d8d0 PlaySoundChecked
 #define TestFlagBit10_020a380c TestFlagBit10
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define data_0205396c data_02053980
 #include "src/ov018/field_objects/FieldObject_HandleStrongHit_020a28d4.c"

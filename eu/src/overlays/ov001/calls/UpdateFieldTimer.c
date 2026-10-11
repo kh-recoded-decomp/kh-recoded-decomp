@@ -1,0 +1,14 @@
+#define GetClampedTimerValue_02063f90 GetClampedTimerValue
+#define StartCountdownTimer_0207d134 StartCountdownTimer
+#define StartPanelScrollOut_0207d28c StartPanelScrollOut
+#define UpdateFieldTimer_02063d4c UpdateFieldTimer
+#define WriteSessionPackedBits_0206459c WriteSessionPackedBits
+#define data_ov001_020a0460 data_ov001_020a0480
+#define func_ov001_020645c8 IsSessionFlagSet
+#define func_ov001_020645dc SetSessionFlag
+#define func_ov001_020645e8 ClearSessionPackedBit
+#define func_ov001_02068e08 ClearSessionFlagBit
+#define func_ov001_02068e34 SetSessionFlagBit
+#define func_ov001_0207d384 func_ov001_0207d3ac
+#define func_ov001_0207d3a4 func_ov001_0207d3cc
+#include "src/ov001/shared_engine/UpdateFieldTimer_02063d4c.c"

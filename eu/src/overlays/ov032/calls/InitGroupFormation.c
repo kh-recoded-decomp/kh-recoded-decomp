@@ -2,7 +2,7 @@
 #define InitGroupFormation_020be0c8 InitGroupFormation
 #define Mul64_02023d9c _ll_mul
 #define VEC_Add_01ff9e0c VEC_Add
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define data_0205356c data_02053580
 #define data_02055838 data_0205584c
 #define func_02036240 ActorRegistry_GetEntityByIndex

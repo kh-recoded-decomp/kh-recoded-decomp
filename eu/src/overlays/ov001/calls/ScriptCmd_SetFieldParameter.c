@@ -1,3 +1,4 @@
+#define func_ov001_02063d4c UpdateFieldTimer
 #define ScriptCmd_SetFieldParameter_020654d8 ScriptCmd_SetFieldParameter
 #define ScriptVm_ReadOperandFx32_02025df8 ScriptVm_ReadOperandFx32
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt

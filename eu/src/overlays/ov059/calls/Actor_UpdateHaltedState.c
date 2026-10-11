@@ -1,4 +1,4 @@
 #define Actor_UpdateHaltedState_020ca5f0 Actor_UpdateHaltedState
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define func_ov059_020c997c func_ov059_020c999c
 #include "src/ov059/unclassified_helpers/Actor_UpdateHaltedState_020ca5f0.c"

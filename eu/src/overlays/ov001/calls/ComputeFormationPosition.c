@@ -1,7 +1,7 @@
 #define ComputeFormationPosition_02098730 ComputeFormationPosition
 #define VEC_Add_01ff9e0c VEC_Add
 #define VEC_MultAdd_01ffa09c VEC_MultAdd
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define data_0205356c data_02053580
 #define func_02023dbc _s32_div_f
 #define nextRandom12_0202aa58 nextRandom12

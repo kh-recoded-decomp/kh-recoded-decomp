@@ -6,6 +6,6 @@
 #define ScriptVm_ResolveOperand_02025d08 ScriptVm_ResolveOperand
 #define SetCameraTargetParams_0208ba8c SetCameraTargetParams
 #define VEC_Add_01ff9e0c VEC_Add
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define func_02025dac ByteCode_ResolveOperand
 #include "src/ov001/field_manager/ScriptCmd_SetCameraTarget_0208d408.c"

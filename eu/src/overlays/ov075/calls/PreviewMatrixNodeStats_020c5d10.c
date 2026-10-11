@@ -1,0 +1,15 @@
+#define ApplyLevelBonus_020c5bb0 ApplyLevelBonus
+#define ApplyLinkedGroupBonuses_020c5ca8 ApplyLinkedGroupBonuses
+#define ArmObject_0205115c ArmObject
+#define ComputePlayerStats_02050b30 ComputePlayerStats
+#define DrawNodeGroupRecords_020c5c58 DrawNodeGroupRecords
+#define GetFieldCad0_020bcb00 GetFieldCad0
+#define GetRecordSlotPair0Entry_02051ec8 GetRecordSlotPair0Entry
+#define LoadLevelStats_0204f804 LoadLevelStats
+#define RefreshStatusMenuData_020c1eb4 RefreshStatusMenuData
+#define RevertLevelBonus_020c5c04 RevertLevelBonus
+#define ScaleStatsByPercent_02050a80 ScaleStatsByPercent
+#define data_ov001_020a0460 data_ov001_020a0480
+#define data_ov075_020d1530 data_ov075_020d1550
+#define func_02051124 GetMapBonusStats
+#include "src/ov075/matrix_menu/PreviewMatrixNodeStats_020c5d10.c"

@@ -36,7 +36,7 @@ struct Actor {
     ActorChangeStateFunc changeState;
 };
 
-extern const VecFx32 data_0205344c;
+extern const VecFx32 gZeroVecFx32;
 extern const s16 data_02053580[];
 extern InputRecord *GetPlayerControlState(u32 playerIndex);
 extern void Actor_UpdateJump(Actor *actor, int x, int y);
@@ -59,7 +59,7 @@ void Actor_UpdateDrift(Actor *actor)
     if (moving == 0) {
         Actor_UpdateJump(actor, 0, 0);
     } else {
-        actor->velocity = data_0205344c;
+        actor->velocity = gZeroVecFx32;
     }
     if (actor->getState != NULL) {
         state = actor->getState(actor);

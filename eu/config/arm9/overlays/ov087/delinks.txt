@@ -20,6 +20,10 @@ src/overlays/ov087/calls/MoveCursorToWidget.c:
     complete
     .text       start:0x020c43e4 end:0x020c44c4
 
+src/overlays/ov087/calls/SelectChoiceWidget_020c44a4.c:
+    complete
+    .text       start:0x020c44c4 end:0x020c462c
+
 src/overlays/ov087/calls/HandleSlotInput.c:
     complete
     .text       start:0x020c462c end:0x020c4694
@@ -44,6 +48,10 @@ src/overlays/ov087/calls/DrawPromptMessage.c:
     complete
     .text       start:0x020c4778 end:0x020c4880
 
+src/overlays/ov087/calls/DrawCenteredPromptText_020c4860.c:
+    complete
+    .text       start:0x020c4880 end:0x020c49b0
+
 src/overlays/ov087/calls/ShowVariantMessageAndSetFlag.c:
     complete
     .text       start:0x020c49b0 end:0x020c4a1c
@@ -51,6 +59,10 @@ src/overlays/ov087/calls/ShowVariantMessageAndSetFlag.c:
 src/overlays/ov087/calls/ShowPromptAndStoreEntryCount.c:
     complete
     .text       start:0x020c4a1c end:0x020c4a68
+
+src/overlays/ov087/calls/HideChoiceWidgets_020c4a48.c:
+    complete
+    .text       start:0x020c4a68 end:0x020c4b94
 
 src/overlays/ov087/calls/ShowChoiceWindows.c:
     complete
@@ -64,9 +76,25 @@ src/overlays/ov087/calls/RefreshChoiceMenu_020c4d6c.c:
     complete
     .text       start:0x020c4d8c end:0x020c5220
 
+src/overlays/ov087/calls/RefreshKindChoiceWindows_020c5200.c:
+    complete
+    .text       start:0x020c5220 end:0x020c54ac
+
+src/overlays/ov087/calls/RefreshChoiceMenuForKind.c:
+    complete
+    .text       start:0x020c54ac end:0x020c5778
+
+src/overlays/ov087/calls/FocusDefaultElementForState_020c5758.c:
+    complete
+    .text       start:0x020c5778 end:0x020c5880
+
 src/overlays/ov087/calls/FocusElementForState.c:
     complete
     .text       start:0x020c5880 end:0x020c5984
+
+src/overlays/ov087/calls/FocusKindElementForState_020c5964.c:
+    complete
+    .text       start:0x020c5984 end:0x020c5a94
 
 src/overlays/ov087/calls/OpenTwoChoiceMenu.c:
     complete
@@ -128,6 +156,14 @@ src/overlays/ov087/calls/PushPanelState.c:
     complete
     .text       start:0x020c61d0 end:0x020c6238
 
+src/overlays/ov087/calls/PopPanelState_020c6218.c:
+    complete
+    .text       start:0x020c6238 end:0x020c6398
+
+src/overlays/ov087/calls/SetupCarouselDisplay.c:
+    complete
+    .text       start:0x020c6398 end:0x020c64f8
+
 src/overlays/ov087/calls/SetupPanelDisplay.c:
     complete
     .text       start:0x020c64f8 end:0x020c65b0
@@ -135,6 +171,14 @@ src/overlays/ov087/calls/SetupPanelDisplay.c:
 src/overlays/ov087/calls/LoadPanelBackground.c:
     complete
     .text       start:0x020c65b0 end:0x020c665c
+
+src/overlays/ov087/calls/InitPanelTextLayers.c:
+    complete
+    .text       start:0x020c665c end:0x020c69c4
+
+src/overlays/ov087/calls/SetupPanelWidgetHandlers.c:
+    complete
+    .text       start:0x020c69c4 end:0x020c6ad0
 
 src/overlays/ov087/calls/ConfirmPanelSelection.c:
     complete
@@ -148,9 +192,21 @@ src/overlays/ov087/calls/ConfirmSelectedEntry.c:
     complete
     .text       start:0x020c7060 end:0x020c715c
 
+src/overlays/ov087/calls/InitPanelScene_020c713c.c:
+    complete
+    .text       start:0x020c715c end:0x020c7414
+
 src/overlays/ov087/calls/DestroyPanelScene.c:
     complete
     .text       start:0x020c7414 end:0x020c7510
+
+src/overlays/ov087/calls/HandleSelectForState.c:
+    complete
+    .text       start:0x020c7830 end:0x020c79b4
+
+src/overlays/ov087/calls/HandleAltSelectForState.c:
+    complete
+    .text       start:0x020c79b4 end:0x020c7b04
 
 src/overlays/ov087/calls/HandleConfirmForState.c:
     complete

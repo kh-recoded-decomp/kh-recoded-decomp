@@ -131,13 +131,13 @@ typedef struct StageController {
 
 typedef u32 (*StageEventHandler)(StageEvent *event);
 
-extern VecFx32 data_0205344c;
+extern VecFx32 gZeroVecFx32;
 extern StageEventHandler gStageScriptStateHandlers[];
 
 extern StageActor *GetStageActor(int id);
 extern fx32 ApplyActorScaleFactors(StageActor *actor);
 extern StageEntry *GetStageEntry(int id);
-extern void func_ov001_02092e60(StageEvent *event);
+extern void UpdateStageEventTimers(StageEvent *event);
 extern StageActor *GetLinkedStageActor(StageActor *actor);
 extern u32 func_ov001_0209c5ac(u32 mask);
 extern StageActor *FindRecordById_0209c304(int id);
@@ -273,8 +273,8 @@ void UpdateStageEvent(StageEvent *event)
     if (setup == NULL) {
         return;
     }
-    actor->push = data_0205344c;
-    func_ov001_02092e60(event);
+    actor->push = gZeroVecFx32;
+    UpdateStageEventTimers(event);
     if (setup->solid) {
         actor->behaviorFlags |= 0x100;
     }

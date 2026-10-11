@@ -3,7 +3,7 @@
 #define Actor_GetModelPosition_020cd0d8 Actor_GetModelPosition
 #define Actor_SyncAnimationSpeed_020c8a0c Actor_SyncAnimationSpeed
 #define VEC_Add_01ff9e0c VEC_Add
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define func_02038e6c func_02038e80
-#define func_ov059_020c8560 func_ov059_020c8580
+#define func_ov059_020c8560 Actor_ResolveSideWall_020c8560
 #include "src/ov059/unclassified_helpers/Actor_ApplyFrameMotion_020c8794.c"

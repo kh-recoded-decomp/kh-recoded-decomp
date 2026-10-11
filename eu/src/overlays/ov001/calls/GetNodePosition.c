@@ -1,5 +1,5 @@
 #define GetAttachedObject_0208f724 GetAttachedObject
 #define GetNodePosition_02091600 GetNodePosition
 #define GetObjectAttachment_0208f744 GetObjectAttachment
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #include "src/ov001/actor_animation/GetNodePosition_02091600.c"

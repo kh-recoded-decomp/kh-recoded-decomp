@@ -2,7 +2,7 @@
 #define GetPool4Entry_020a41f4 GetPool4Entry
 #define IsState2_020a40cc IsState2
 #define RefreshListHeadAndDispatch_020a423c RefreshListHeadAndDispatch
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define func_0204d8d0 PlaySoundChecked
 #define func_ov001_0208635c func_ov001_02086384
 #define func_ov001_020863e0 func_ov001_02086408

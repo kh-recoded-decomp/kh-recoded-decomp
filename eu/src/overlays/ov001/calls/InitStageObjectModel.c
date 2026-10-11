@@ -1,7 +1,7 @@
 #define ActorSlot_PlaceAndLink_02035a18 ActorSlot_PlaceAndLink
 #define InitStageObjectModel_0209beb4 InitStageObjectModel
 #define SetDefaultHeap_0202a134 SetDefaultHeap
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define func_0202a158 Heap_GetCurrent
 #define func_0202ea38 PrepareTextureAndDispatch
 #define func_02035930 ActivateEntrySubobject

@@ -6,6 +6,6 @@
 #define func_ov001_0206d95c UpdatePartyEntries
 #define func_ov001_0207ecc4 UpdateFieldObjectStates
 #define func_ov001_02087694 StageManager_Update
-#define func_ov031_020babf8 func_ov031_020bac18
+#define func_ov031_020babf8 UpdateSceneRecord
 #define func_ov031_020bb054 func_ov031_020bb074
 #include "src/ov031/overlay_state/ApplyOverlayScaleMode_020bab20.c"

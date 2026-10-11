@@ -1,0 +1,7 @@
+#define FX_Div_01ff9c84 FX_Div
+#define RefreshScrollList_020c08b4 RefreshScrollList
+#define SetPanelSlotFlag_020bff94 SetPanelSlotFlag
+#define SetPanelSlotPosition_020c00fc SetPanelSlotPosition
+#define data_ov097_020c1ff0 sStoryReportListLayout
+#define data_ov097_020c22c4 sStoryReportPanelLayout
+#include "src/ov097/panel_state/RefreshScrollList_020c08b4.c"

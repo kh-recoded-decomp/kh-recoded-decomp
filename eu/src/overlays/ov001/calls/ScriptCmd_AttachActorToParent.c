@@ -4,7 +4,7 @@
 #define ScriptCmd_AttachActorToParent_0208c918 ScriptCmd_AttachActorToParent
 #define ScriptCmd_ReturnValue_02025960 ScriptCmd_ReturnValue
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define func_02025dac ByteCode_ResolveOperand
 #define func_02036240 ActorRegistry_GetEntityByIndex
 #define func_ov001_02089db0 SpawnActorModelAt

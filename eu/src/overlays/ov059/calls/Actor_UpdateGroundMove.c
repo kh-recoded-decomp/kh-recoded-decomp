@@ -54,7 +54,7 @@ extern const s16 data_02053580[];
 extern const s16 data_02053780[];
 extern const TiltConfig data_02053740;
 extern GameSettings *data_0205fe0c;
-extern const VecFx32 data_0205344c;
+extern const VecFx32 gZeroVecFx32;
 
 extern void *GetPlayerControlState(u32 playerIndex);
 extern BOOL func_ov021_020a7524(void *input);
@@ -136,14 +136,14 @@ void Actor_UpdateGroundMove(Actor *actor)
             case 7:
             case 9:
             case 0x11:
-                actor->jump.drift = data_0205344c;
+                actor->jump.drift = gZeroVecFx32;
                 actor->onReset(actor);
                 return;
             }
         }
     } else {
         if (func_ov059_020c98a0(actor) && actor->mode != 0xc) {
-            actor->jump.drift = data_0205344c;
+            actor->jump.drift = gZeroVecFx32;
             actor->onReset(actor);
             return;
         }

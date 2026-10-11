@@ -6,7 +6,7 @@
 #define RebindAnimTracks_020809d0 RebindAnimTracks
 #define SetFieldUnitPosition_020a6cc4 SetFieldUnitPosition
 #define ZeroBytes0x14_020a8adc ZeroBytes0x14
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define data_020559c0 gCollisionBoundsDispatch
 #define data_ov016_020a6ea8 sOv016_BaEfDbhit_020a6ec8
 #define func_0202f4e8 Flags16_ClearBit1

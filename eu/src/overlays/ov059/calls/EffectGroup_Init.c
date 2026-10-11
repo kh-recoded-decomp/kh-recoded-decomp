@@ -2,7 +2,7 @@
 #define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
 #define ResetMotionState_020ab04c ResetMotionState
 #define SetupOwnerAndEntries_020ab010 SetupOwnerAndEntries
-#define data_02053438 data_0205344c
+#define data_02053438 gZeroVecFx32
 #define data_ov059_020cfeb8 data_ov059_020cfed8
 #define func_01ff86fc MIi_CpuClear32
 #define func_ov059_020cd780 EffectGroup_LoadModels
