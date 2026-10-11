@@ -9,7 +9,7 @@ extern const u8 gOv010ScriptObjectCreationHandlers[];
 extern const u8 gCrawlScriptCommandHandlers[];
 extern const u8 gDefaultStepHandler[];
 
-const ScriptHandlerOverlayBinding gScriptHandlerBindingsSlot7[9] = {
+const ScriptHandlerBindingsSlot7Table gScriptHandlerBindingsSlot7 = {{
     { 0, -1 },
     { gOv005HandlerTable, 5 },
     { gOv006Handlers, 6 },
@@ -19,4 +19,4 @@ const ScriptHandlerOverlayBinding gScriptHandlerBindingsSlot7[9] = {
     { gOv010ScriptObjectCreationHandlers, 10 },
     { gCrawlScriptCommandHandlers, 11 },
     { gDefaultStepHandler, 12 },
-};
+}};

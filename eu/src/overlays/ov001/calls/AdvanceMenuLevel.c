@@ -2,9 +2,9 @@
 #define AdvanceMenuLevel_02073388 AdvanceMenuLevel
 #define SelectSlotTitleLine_0206ff9c SelectSlotTitleLine
 #define SetFieldMenuMode_020781a4 SetFieldMenuMode
-#define data_ov001_0209dc64 data_ov001_0209dc8c
-#define data_ov001_0209dc84 data_ov001_0209dcac
-#define data_ov001_0209dca8 data_ov001_0209dcd0
+#define data_ov001_0209dc64 gMenuGaugeLevelFileIds
+#define data_ov001_0209dc84 gMenuGaugeLevelMidpoints
+#define data_ov001_0209dca8 gMenuGaugeCapacityByPartySize
 #define data_ov001_020a04a4 data_ov001_020a04c4
 #define func_ov001_0206f040 ApplyFieldResourceAndRelease
 #define func_ov001_020728e4 IsFieldFlag13OrSessionFlagSet

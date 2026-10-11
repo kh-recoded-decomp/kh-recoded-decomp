@@ -44,6 +44,10 @@ src/overlays/ov030/calls/func_ov030_020ba774.c:
     complete
     .text       start:0x020ba774 end:0x020ba7a8
 
+src/overlays/ov030/calls/ResolveMovieSceneAction.c:
+    complete
+    .text       start:0x020ba7a8 end:0x020ba844
+
 src/overlays/ov030/calls/func_ov030_020ba844.c:
     complete
     .text       start:0x020ba844 end:0x020ba874

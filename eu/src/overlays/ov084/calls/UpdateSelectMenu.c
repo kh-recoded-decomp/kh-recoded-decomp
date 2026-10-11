@@ -1,5 +1,5 @@
 #define UpdateSelectMenu_020bfb64 UpdateSelectMenu
 #define func_ov084_020bf9e8 RefreshSelectButtons
-#define func_ov084_020bfa44 func_ov084_020bfa64
+#define func_ov084_020bfa44 RefreshTwoChoicePanelText
 #define func_ov084_020bfadc DrawSelectMenuModel
 #include "src/ov084/select_menu/UpdateSelectMenu_020bfb64.c"

@@ -1,5 +1,5 @@
 #define func_ov001_020645c8 IsSessionFlagSet
-#define ApplyAreaMusicEntry_02064734 ApplyAreaMusicEntry
+#define ApplyAreaMusicEntry_02064734 BindScriptHandlersSlot8
 #define InstallMovieCallbacks_020bb79c InstallMovieCallbacks
 #define IsContextFlag10Clear_020bb554 IsContextFlag10Clear
 #define IsContextFlag20Set_020bb56c IsContextFlag20Set

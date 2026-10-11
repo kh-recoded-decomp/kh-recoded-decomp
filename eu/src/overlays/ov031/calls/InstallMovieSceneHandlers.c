@@ -1,4 +1,4 @@
-#define ApplyAreaMusicEntry_02064734 ApplyAreaMusicEntry
+#define ApplyAreaMusicEntry_02064734 BindScriptHandlersSlot8
 #define ApplyOverlayScaleMode_020bab20 ApplyOverlayScaleMode_020bab40
 #define ApplyStartParams_020bb518 ApplyStartParams
 #define InstallMovieSceneHandlers_020bbf7c InstallMovieSceneHandlers

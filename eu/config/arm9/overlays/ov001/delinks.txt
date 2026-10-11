@@ -444,11 +444,11 @@ src/overlays/ov001/calls/func_ov001_020646b8.c:
     complete
     .text       start:0x020646b8 end:0x020646e0
 
-src/overlays/ov001/calls/ApplyAreaSoundEntry.c:
+src/overlays/ov001/calls/BindScriptHandlersSlot7.c:
     complete
     .text       start:0x020646e0 end:0x02064734
 
-src/overlays/ov001/calls/ApplyAreaMusicEntry.c:
+src/overlays/ov001/calls/BindScriptHandlersSlot8.c:
     complete
     .text       start:0x02064734 end:0x02064784
 
@@ -8576,6 +8576,10 @@ src/overlays/ov001/data/tables/gBgScreenLoaders.c:
     complete
     .data       start:0x0209ed10 end:0x0209ed2c
 
+src/overlays/ov001/data/tables/gChoiceTextFrame.c:
+    complete
+    .rodata     start:0x0209dc6c end:0x0209dc7c
+
 src/overlays/ov001/data/tables/gDefaultActorAnimation.c:
     complete
     .data       start:0x020a0250 end:0x020a0254
@@ -8600,6 +8604,10 @@ src/overlays/ov001/data/tables/gExtendedSlotRemap.c:
     complete
     .data       start:0x020a038c end:0x020a03ac
 
+src/overlays/ov001/data/tables/gFieldHudTextFrame.c:
+    complete
+    .rodata     start:0x0209dc9c end:0x0209dcac
+
 src/overlays/ov001/data/tables/gFieldManagerClassDescriptor.c:
     complete
     .data       start:0x0209ecfc end:0x0209ed10
@@ -8623,6 +8631,26 @@ src/overlays/ov001/data/tables/gFieldScriptCommandHandlers.c:
 src/overlays/ov001/data/tables/gFieldSessionClassData.c:
     complete
     .data       start:0x0209e640 end:0x0209e6a0
+
+src/overlays/ov001/data/tables/gFieldSlotOrder.c:
+    complete
+    .rodata     start:0x0209dbc8 end:0x0209dbd4
+
+src/overlays/ov001/data/tables/gGaugeEmptyRow.c:
+    complete
+    .rodata     start:0x0209ddf2 end:0x0209ddf8
+
+src/overlays/ov001/data/tables/gGaugeFilledRow.c:
+    complete
+    .rodata     start:0x0209ddec end:0x0209ddf2
+
+src/overlays/ov001/data/tables/gGaugeTransitionRow1.c:
+    complete
+    .rodata     start:0x0209de0e end:0x0209de14
+
+src/overlays/ov001/data/tables/gGaugeTransitionRow2.c:
+    complete
+    .rodata     start:0x0209de14 end:0x0209de1a
 
 src/overlays/ov001/data/tables/gGroupEntries.c:
     complete
@@ -8660,9 +8688,33 @@ src/overlays/ov001/data/tables/gMainBgLayerIds.c:
     complete
     .rodata     start:0x0209dbbc end:0x0209dbc8
 
+src/overlays/ov001/data/tables/gMenuGaugeBlendThresholds.c:
+    complete
+    .rodata     start:0x0209dce4 end:0x0209dcf8
+
+src/overlays/ov001/data/tables/gMenuGaugeCapacityByPartySize.c:
+    complete
+    .rodata     start:0x0209dcd0 end:0x0209dce4
+
+src/overlays/ov001/data/tables/gMenuGaugeLevelFileIds.c:
+    complete
+    .rodata     start:0x0209dc8c end:0x0209dc9c
+
+src/overlays/ov001/data/tables/gMenuGaugeLevelMidpoints.c:
+    complete
+    .rodata     start:0x0209dcac end:0x0209dcbc
+
+src/overlays/ov001/data/tables/gMenuGaugePointThresholds.c:
+    complete
+    .rodata     start:0x0209dcf8 end:0x0209dd0c
+
 src/overlays/ov001/data/tables/gMenuOverlayStateHandlers.c:
     complete
     .data       start:0x0209ef6c end:0x0209ef88
+
+src/overlays/ov001/data/tables/gMessageLineTextFrame.c:
+    complete
+    .rodata     start:0x0209dc2c end:0x0209dc3c
 
 src/overlays/ov001/data/tables/gMessageWindowStateHandlers.c:
     complete
@@ -8720,6 +8772,10 @@ src/overlays/ov001/data/tables/gPartyStateClassDescriptor.c:
     complete
     .data       start:0x0209ec24 end:0x0209ec38
 
+src/overlays/ov001/data/tables/gRecordNameTextFrame.c:
+    complete
+    .rodata     start:0x0209dc3c end:0x0209dc4c
+
 src/overlays/ov001/data/tables/gRootObjectTaskDescriptor.c:
     complete
     .data       start:0x0209ead4 end:0x0209eae8
@@ -8727,6 +8783,14 @@ src/overlays/ov001/data/tables/gRootObjectTaskDescriptor.c:
 src/overlays/ov001/data/tables/gRootObjectTaskHandle.c:
     complete
     .data       start:0x0209ead0 end:0x0209ead4
+
+src/overlays/ov001/data/tables/gSceneTextFrame4D8.c:
+    complete
+    .rodata     start:0x0209dc4c end:0x0209dc5c
+
+src/overlays/ov001/data/tables/gSceneTextFrame51C.c:
+    complete
+    .rodata     start:0x0209dc5c end:0x0209dc6c
 
 src/overlays/ov001/data/tables/gSceneWorkClassDescriptor.c:
     complete
@@ -8764,6 +8828,10 @@ src/overlays/ov001/data/tables/gSessionTaskClassDescriptor.c:
     complete
     .data       start:0x0209eb5c end:0x0209eb70
 
+src/overlays/ov001/data/tables/gSlotLabelTextFrame.c:
+    complete
+    .rodata     start:0x0209dc7c end:0x0209dc8c
+
 src/overlays/ov001/data/tables/gSpawnedActorDescriptor.c:
     complete
     .data       start:0x020a032c end:0x020a0360
@@ -8795,3 +8863,11 @@ src/overlays/ov001/data/tables/gSubScene9TaskDescriptor.c:
 src/overlays/ov001/data/tables/gSubScene9TaskHandle.c:
     complete
     .data       start:0x0209ea1c end:0x0209ea20
+
+src/overlays/ov001/data/tables/gVramBackupWidgetLayers.c:
+    complete
+    .rodata     start:0x0209dbe0 end:0x0209dbec
+
+src/overlays/ov001/data/tables/gVramRestoreWidgetLayers.c:
+    complete
+    .rodata     start:0x0209dbd4 end:0x0209dbe0

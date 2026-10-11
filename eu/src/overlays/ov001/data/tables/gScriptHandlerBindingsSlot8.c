@@ -6,10 +6,10 @@ extern const u8 gScriptObjectCreationHandlers[];
 extern const u8 gLinkedObjectCreationHandlers[];
 extern const u8 gPanelObjectScriptCommandHandlers[];
 
-const ScriptHandlerOverlayBinding gScriptHandlerBindingsSlot8[5] = {
+const ScriptHandlerBindingsSlot8Table gScriptHandlerBindingsSlot8 = {{
     { data_ov016_020a6e60, 16 },
     { gPoolScriptCommandHandlers, 17 },
     { gScriptObjectCreationHandlers, 18 },
     { gLinkedObjectCreationHandlers, 19 },
     { gPanelObjectScriptCommandHandlers, 20 },
-};
+}};

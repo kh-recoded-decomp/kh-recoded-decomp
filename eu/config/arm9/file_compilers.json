@@ -1,4 +1,6 @@
 {
+  "src/overlays/ov084/calls/RefreshTwoChoicePanelText.c": "dsi/1.1",
+  "src/overlays/ov030/calls/ResolveMovieSceneAction.c": "dsi/1.1",
   "src/overlays/ov027/calls/ResolveWidgetPositionComponents.c": "dsi/1.1",
   "src/overlays/ov002/calls/GetCategoryDisplayRecordId.c": "dsi/1.1",
   "src/overlays/ov002/calls/GetRecordCategoryIconOffset.c": "dsi/1.1",
@@ -4375,7 +4377,7 @@
   "src/overlays/ov046/calls/CameraPath_ConsumeSkipRequest.c": "dsi/1.1",
   "src/overlays/ov048/calls/StartCameraDrift.c": "dsi/1.1",
   "src/overlays/ov059/calls/Body_ReflectVelocity.c": "dsi/1.1",
-  "src/overlays/ov001/calls/ApplyAreaMusicEntry.c": "dsi/1.1",
+  "src/overlays/ov001/calls/BindScriptHandlersSlot8.c": "dsi/1.1",
   "src/overlays/ov001/calls/StepFadeInTween.c": "dsi/1.1",
   "src/overlays/ov001/calls/SubScene9_StartFade.c": "dsi/1.1",
   "src/overlays/ov001/calls/IsWaitTargetReady.c": "dsi/1.1",

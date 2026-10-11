@@ -19,7 +19,7 @@ extern int func_ov030_020ba614(void);
 extern int func_ov030_020ba62c(void);
 extern int MoviePlayer_EnterPlayback(void);
 extern int func_ov030_020ba774(void);
-extern int func_ov030_020ba7a8(void);
+extern int ResolveMovieSceneAction(void);
 extern int func_ov030_020ba844(void);
 extern int func_ov030_020ba874(void);
 extern int SceneState_WaitScreenIdle_020ba894(void);
@@ -46,7 +46,7 @@ SceneStateFunc gMovieSceneStateHandlers[] = {
     func_ov030_020ba62c,
     MoviePlayer_EnterPlayback,
     func_ov030_020ba774,
-    func_ov030_020ba7a8,
+    ResolveMovieSceneAction,
     func_ov030_020ba844,
     func_ov030_020ba874,
     SceneState_WaitScreenIdle_020ba894,

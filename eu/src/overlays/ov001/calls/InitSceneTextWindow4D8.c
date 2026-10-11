@@ -1,4 +1,4 @@
 #define InitSceneTextWindow4D8_0206f694 InitSceneTextWindow4D8
-#define data_ov001_0209dc24 data_ov001_0209dc4c
+#define data_ov001_0209dc24 gSceneTextFrame4D8
 #define func_020014b0 InitTextLayerAt
 #include "src/ov001/text_rendering/InitSceneTextWindow4D8_0206f694.c"

@@ -1,7 +1,7 @@
 #define ApplyOverlayScaleMode_020baab4 ApplyOverlayScaleMode
 #define InstallSceneHandlers_020bb268 InstallSceneHandlers_020bb288
 #define IsSceneUnpaused_020bacb4 IsSceneUnpaused_020bacd4
-#define func_ov001_02064734 ApplyAreaMusicEntry
+#define func_ov001_02064734 BindScriptHandlersSlot8
 #define func_ov030_020baba8 func_ov030_020babc8
 #define func_ov030_020babc0 func_ov030_020babe0
 #define func_ov030_020babdc ClearMovieSceneFlag1

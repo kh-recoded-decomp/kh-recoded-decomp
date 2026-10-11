@@ -26,7 +26,7 @@ typedef struct LevelThresholdTable {
 
 extern GaugeGlobals data_ov001_020a04c4;
 extern LevelFileTable data_ov001_0209dc1c;
-extern LevelThresholdTable data_ov001_0209dcf8;
+extern const LevelThresholdTable gMenuGaugePointThresholds;
 
 extern u32 func_ov001_02064784(void);
 extern u32 IsSessionFlagSet(u32 id);
@@ -50,7 +50,7 @@ void AddGaugePoints(int delta, BOOL loadNow)
 {
     GaugeContext *context = data_ov001_020a04c4.context;
     LevelFileTable files = data_ov001_0209dc1c;
-    LevelThresholdTable thresholds = data_ov001_0209dcf8;
+    LevelThresholdTable thresholds = gMenuGaugePointThresholds;
     int maxLevel;
     int level;
     int slot;

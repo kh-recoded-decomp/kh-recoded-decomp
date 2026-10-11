@@ -3,7 +3,7 @@
 #define FreePointerIfSet_020ba294 FreePointerIfSet
 #define G2D_MeasureTextWidth_02016bc0 NNSi_G2dFontGetTextWidth
 #define GetWord20_020019f0 GetWord20
-#define data_ov001_0209dc44 data_ov001_0209dc6c
+#define data_ov001_0209dc44 gChoiceTextFrame
 #define func_020014b0 InitTextLayerAt
 #define func_020015a0 DrawTextAnchored
 #define func_02001914 func_02001928

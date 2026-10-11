@@ -2,7 +2,7 @@
 #define MobiClip_SrcClose_020ba9c0 MobiClip_SrcClose_020ba9e0
 #define MobiClip_SrcIsOpen_020ba9a4 MobiClip_SrcIsOpen_020ba9c4
 #define MobiClip_SrcOpen_020ba940 func_ov035_020ba960
-#define func_ov001_02064734 ApplyAreaMusicEntry
+#define func_ov001_02064734 BindScriptHandlersSlot8
 #define func_ov035_020ba7dc UpdateSceneSystems
 #define func_ov035_020ba958 func_ov035_020ba978
 #define func_ov035_020ba974 ClearMovieContextReadyFlag

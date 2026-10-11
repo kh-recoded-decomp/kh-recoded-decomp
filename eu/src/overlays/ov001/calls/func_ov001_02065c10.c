@@ -1,3 +1,3 @@
-#define Ov002_EnterPhase ApplyAreaSoundEntry
+#define Ov002_EnterPhase BindScriptHandlersSlot7
 #define ScriptCmd_EnterPhase_02065c10 func_ov001_02065c10
 #include "src/ov001/shared_engine/ScriptCmd_EnterPhase_02065c10.c"

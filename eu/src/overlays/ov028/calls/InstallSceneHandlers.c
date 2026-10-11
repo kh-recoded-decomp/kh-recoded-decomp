@@ -1,5 +1,5 @@
 #define func_ov001_020645c8 IsSessionFlagSet
-#define ApplyAreaMusicEntry_02064734 ApplyAreaMusicEntry
+#define ApplyAreaMusicEntry_02064734 BindScriptHandlersSlot8
 #define InstallSceneHandlers_020bb200 InstallSceneHandlers
 #define IsSceneUnpaused_020bb15c IsSceneUnpaused
 #define ReleaseHandle_020bb084 ReleaseHandle_020bb0a4

@@ -1,4 +1,4 @@
 #define CountAssignedFieldSlots_0207169c CountAssignedFieldSlots
 #define MapFieldSlotIndex_02072c6c MapFieldSlotIndex
-#define data_ov001_0209dba0 data_ov001_0209dbc8
+#define data_ov001_0209dba0 gFieldSlotOrder
 #include "src/ov001/field_manager/MapFieldSlotIndex_02072c6c.c"

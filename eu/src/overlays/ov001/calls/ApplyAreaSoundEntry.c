@@ -1,6 +1,0 @@
-#define ApplyAreaSoundEntry_020646e0 ApplyAreaSoundEntry
-#define StoreGlobalArrayEntry_02025668 StoreGlobalArrayEntry
-#define data_ov001_0209d8d0 gScriptHandlerBindingsSlot7
-#define data_ov001_020a0460 data_ov001_020a0480
-#define func_02029f78 func_02029f8c
-#include "src/ov001/field_manager/ApplyAreaSoundEntry_020646e0.c"

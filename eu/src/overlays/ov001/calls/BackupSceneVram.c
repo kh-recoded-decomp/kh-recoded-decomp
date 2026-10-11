@@ -2,6 +2,6 @@
 #define G2_GetBG2CharPtr_02007120 G2_GetBG2CharPtr
 #define NNSi_FndAllocFromDefaultHeapEx_0202a19c NNS_FndAllocFromDefaultExpHeapEx
 #define UpdateWidgetLayerDefault_020b9df0 func_ov027_020b9e10
-#define data_ov001_0209dbb8 data_ov001_0209dbe0
+#define data_ov001_0209dbb8 gVramBackupWidgetLayers
 #define func_01ff878c MIi_CpuCopyFast
 #include "src/ov001/shared_engine/BackupSceneVram_0206fcc8.c"

@@ -2,7 +2,7 @@
 #define FreePointerIfSet_020ba294 FreePointerIfSet
 #define GetWord20_020019f0 GetWord20
 #define InitTextLayerAt_020014b0 InitTextLayerAt
-#define data_ov001_0209dc04 data_ov001_0209dc2c
+#define data_ov001_0209dc04 gMessageLineTextFrame
 #define data_ov001_0209ed6c gEmptyMessageText
 #define func_0200160c func_02001620
 #define func_02001914 func_02001928

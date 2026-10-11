@@ -8736,6 +8736,215 @@
       "name": "ov103 data words",
       "origin": "generated words",
       "behavior": "Initialised data words, pointers named by their targets."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209dc2c",
+      "end": "0x0209dc3c",
+      "source": "src/overlays/ov001/data/tables/gMessageLineTextFrame.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gMessageLineTextFrame",
+      "origin": "EU original DATA",
+      "behavior": "Text-window frame parameters."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209dc3c",
+      "end": "0x0209dc4c",
+      "source": "src/overlays/ov001/data/tables/gRecordNameTextFrame.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gRecordNameTextFrame",
+      "origin": "EU original DATA",
+      "behavior": "Text-window frame parameters."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209dc4c",
+      "end": "0x0209dc5c",
+      "source": "src/overlays/ov001/data/tables/gSceneTextFrame4D8.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gSceneTextFrame4D8",
+      "origin": "EU original DATA",
+      "behavior": "Text-window frame parameters."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209dc5c",
+      "end": "0x0209dc6c",
+      "source": "src/overlays/ov001/data/tables/gSceneTextFrame51C.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gSceneTextFrame51C",
+      "origin": "EU original DATA",
+      "behavior": "Text-window frame parameters."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209dc6c",
+      "end": "0x0209dc7c",
+      "source": "src/overlays/ov001/data/tables/gChoiceTextFrame.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gChoiceTextFrame",
+      "origin": "EU original DATA",
+      "behavior": "Text-window frame parameters."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209dc7c",
+      "end": "0x0209dc8c",
+      "source": "src/overlays/ov001/data/tables/gSlotLabelTextFrame.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gSlotLabelTextFrame",
+      "origin": "EU original DATA",
+      "behavior": "Text-window frame parameters."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209dc9c",
+      "end": "0x0209dcac",
+      "source": "src/overlays/ov001/data/tables/gFieldHudTextFrame.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gFieldHudTextFrame",
+      "origin": "EU original DATA",
+      "behavior": "Text-window frame parameters."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209dbc8",
+      "end": "0x0209dbd4",
+      "source": "src/overlays/ov001/data/tables/gFieldSlotOrder.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gFieldSlotOrder",
+      "origin": "EU original DATA",
+      "behavior": "Field slot permutation."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209dbd4",
+      "end": "0x0209dbe0",
+      "source": "src/overlays/ov001/data/tables/gVramRestoreWidgetLayers.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gVramRestoreWidgetLayers",
+      "origin": "EU original DATA",
+      "behavior": "Widget layer IDs used when backing up or restoring VRAM."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209dbe0",
+      "end": "0x0209dbec",
+      "source": "src/overlays/ov001/data/tables/gVramBackupWidgetLayers.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gVramBackupWidgetLayers",
+      "origin": "EU original DATA",
+      "behavior": "Widget layer IDs used when backing up or restoring VRAM."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209ddec",
+      "end": "0x0209ddf2",
+      "source": "src/overlays/ov001/data/tables/gGaugeFilledRow.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gGaugeFilledRow",
+      "origin": "EU original DATA",
+      "behavior": "Six colour indices for one gauge raster row."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209ddf2",
+      "end": "0x0209ddf8",
+      "source": "src/overlays/ov001/data/tables/gGaugeEmptyRow.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gGaugeEmptyRow",
+      "origin": "EU original DATA",
+      "behavior": "Six colour indices for one gauge raster row."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209de0e",
+      "end": "0x0209de14",
+      "source": "src/overlays/ov001/data/tables/gGaugeTransitionRow1.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gGaugeTransitionRow1",
+      "origin": "EU original DATA",
+      "behavior": "Six colour indices for one gauge raster row."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209de14",
+      "end": "0x0209de1a",
+      "source": "src/overlays/ov001/data/tables/gGaugeTransitionRow2.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gGaugeTransitionRow2",
+      "origin": "EU original DATA",
+      "behavior": "Six colour indices for one gauge raster row."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209dc8c",
+      "end": "0x0209dc9c",
+      "source": "src/overlays/ov001/data/tables/gMenuGaugeLevelFileIds.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gMenuGaugeLevelFileIds",
+      "origin": "EU original DATA",
+      "behavior": "Resource file IDs for the four gauge levels."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209dcac",
+      "end": "0x0209dcbc",
+      "source": "src/overlays/ov001/data/tables/gMenuGaugeLevelMidpoints.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gMenuGaugeLevelMidpoints",
+      "origin": "EU original DATA",
+      "behavior": "Gauge point midpoints assigned when advancing a level."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209dcd0",
+      "end": "0x0209dce4",
+      "source": "src/overlays/ov001/data/tables/gMenuGaugeCapacityByPartySize.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gMenuGaugeCapacityByPartySize",
+      "origin": "EU original DATA",
+      "behavior": "Maximum gauge points for each party size."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209dce4",
+      "end": "0x0209dcf8",
+      "source": "src/overlays/ov001/data/tables/gMenuGaugeBlendThresholds.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gMenuGaugeBlendThresholds",
+      "origin": "EU original DATA",
+      "behavior": "Level boundaries used by the gauge graphics blend routine."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209dcf8",
+      "end": "0x0209dd0c",
+      "source": "src/overlays/ov001/data/tables/gMenuGaugePointThresholds.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gMenuGaugePointThresholds",
+      "origin": "EU original DATA",
+      "behavior": "Gauge level and capacity boundaries read by AddGaugePoints."
     }
   ]
 }

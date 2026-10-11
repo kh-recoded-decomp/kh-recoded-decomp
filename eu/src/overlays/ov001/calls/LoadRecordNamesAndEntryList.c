@@ -13,7 +13,7 @@
 #define OpenRecordManager_02051c80 AcquireRecordManager
 #define ReleaseRecordSlot_02051dfc ReleaseRecordSlot
 #define copy_padded_utf16_string_02022a74 Utf16CopyPadded
-#define data_ov001_0209dc14 data_ov001_0209dc3c
+#define data_ov001_0209dc14 gRecordNameTextFrame
 #define data_ov001_0209dd3c data_ov001_0209dd64
 #define func_0200160c func_02001620
 #define func_02001914 func_02001928

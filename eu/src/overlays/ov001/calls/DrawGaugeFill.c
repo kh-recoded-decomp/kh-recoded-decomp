@@ -8,10 +8,10 @@ typedef struct GaugeContext {
 
 extern GaugeContext *data_ov001_020a04cc;
 
-extern const u8 data_ov001_0209ddec[];
-extern const u8 data_ov001_0209ddf2[];
-extern const u8 data_ov001_0209de0e[];
-extern const u8 data_ov001_0209de14[];
+extern const u8 gGaugeFilledRow[];
+extern const u8 gGaugeEmptyRow[];
+extern const u8 gGaugeTransitionRow1[];
+extern const u8 gGaugeTransitionRow2[];
 
 extern void func_ov001_020738b8(void *tiles, s32 row, const u8 *pattern);
 extern void MIi_CpuCopyFast(const void *src, void *dst, u32 size);
@@ -22,12 +22,12 @@ void DrawGaugeFill(s32 filledRows)
     s32 row;
 
     for (row = 0; row < filledRows; row++) {
-        func_ov001_020738b8(gauge->workTiles, row, data_ov001_0209ddec);
+        func_ov001_020738b8(gauge->workTiles, row, gGaugeFilledRow);
     }
-    func_ov001_020738b8(gauge->workTiles, row++, data_ov001_0209de0e);
-    func_ov001_020738b8(gauge->workTiles, row++, data_ov001_0209de14);
+    func_ov001_020738b8(gauge->workTiles, row++, gGaugeTransitionRow1);
+    func_ov001_020738b8(gauge->workTiles, row++, gGaugeTransitionRow2);
     for (; row <= 50; row++) {
-        func_ov001_020738b8(gauge->workTiles, row, data_ov001_0209ddf2);
+        func_ov001_020738b8(gauge->workTiles, row, gGaugeEmptyRow);
     }
     MIi_CpuCopyFast(gauge->workTiles, gauge->vramTiles, 0xe0);
 }
