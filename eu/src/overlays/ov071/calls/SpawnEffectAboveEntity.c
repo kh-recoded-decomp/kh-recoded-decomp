@@ -4,6 +4,6 @@
 #define SpawnEffectAboveEntity_020d8138 SpawnEffectAboveEntity
 #define VEC_Add_01ff9e0c VEC_Add
 #define data_0205356c gSinFx12Table
-#define func_ov046_020c13e0 func_ov046_020c1400
+#define func_ov046_020c13e0 Camera_StartLocalTargetView
 #define func_ov052_020ceb54 func_ov052_020ceb74
 #include "src/ov071/unclassified_helpers/SpawnEffectAboveEntity_020d8138.c"

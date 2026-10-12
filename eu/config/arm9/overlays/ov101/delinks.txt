@@ -8,6 +8,10 @@ src/overlays/ov101/calls/Fx32_Ceil.c:
     complete
     .text       start:0x020beb20 end:0x020beb40
 
+src/overlays/ov101/calls/InitializeListScene.c:
+    complete
+    .text       start:0x020beb40 end:0x020bed5c
+
 src/overlays/ov101/calls/ShutdownListScene.c:
     complete
     .text       start:0x020bed5c end:0x020bedc8
@@ -15,6 +19,22 @@ src/overlays/ov101/calls/ShutdownListScene.c:
 src/overlays/ov101/calls/UpdateListScene.c:
     complete
     .text       start:0x020bedc8 end:0x020bee4c
+
+src/overlays/ov101/calls/HandleListUpInput.c:
+    complete
+    .text       start:0x020bee4c end:0x020befdc
+
+src/overlays/ov101/calls/HandleListDownInput.c:
+    complete
+    .text       start:0x020befdc end:0x020bf16c
+
+src/overlays/ov101/calls/HandleListRightInput.c:
+    complete
+    .text       start:0x020bf16c end:0x020bf294
+
+src/overlays/ov101/calls/HandleListLeftInput.c:
+    complete
+    .text       start:0x020bf294 end:0x020bf3b0
 
 src/overlays/ov101/calls/func_ov101_020bf3b0.c:
     complete
@@ -55,6 +75,10 @@ src/overlays/ov101/calls/InitListTextLayers.c:
 src/overlays/ov101/calls/ShutdownStateHandlers.c:
     complete
     .text       start:0x020bfa48 end:0x020bfab8
+
+src/overlays/ov101/calls/DrawListPanelText.c:
+    complete
+    .text       start:0x020bfab8 end:0x020bfd34
 
 src/overlays/ov101/calls/DrawShadowedAnchoredText_020bfd34.c:
     complete
@@ -136,6 +160,10 @@ src/overlays/ov101/calls/ShutdownPageInteractionState.c:
     complete
     .text       start:0x020c0ddc end:0x020c0df4
 
+src/overlays/ov101/calls/UpdateDescriptionScrollInput.c:
+    complete
+    .text       start:0x020c0df4 end:0x020c10e8
+
 src/overlays/ov101/calls/ResetPageScrollValue.c:
     complete
     .text       start:0x020c10e8 end:0x020c1110
@@ -183,6 +211,10 @@ src/overlays/ov101/calls/GetStatePhase.c:
 src/overlays/ov101/auto/func_ov101_020c17e0.c:
     complete
     .text       start:0x020c17e0 end:0x020c17e4
+
+src/overlays/ov101/calls/RunListScreenStep.c:
+    complete
+    .text       start:0x020c17e4 end:0x020c1980
 
 src/overlays/ov101/auto/func_ov101_020c1980.c:
     complete

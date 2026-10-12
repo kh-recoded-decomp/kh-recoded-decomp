@@ -1,5 +1,0 @@
-#define CreateExpandedHeap_020130f0 NNS_FndCreateExpHeapEx
-#define NNS_FndInitAllocatorForExpHeap_02013740 NNS_FndInitAllocatorForExpHeap
-#define PXI_Init_02013128 PXI_Init_0201313c
-#define func_0202a0f0 func_0202a104
-#include "src/arm9/shared_engine/func_0202a0f0.c"

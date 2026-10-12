@@ -3,5 +3,5 @@
 #define FixedPointMultiply12 FX_Mul
 #define data_0205356c gSinFx12Table
 #define func_ov047_020c6d34 Camera_RestoreSavedTracking
-#define g_cameraManager_020c34e0 data_ov046_020c3500
+#define g_cameraManager_020c34e0 gCameraManager
 #include "src/ov047/camera/Camera_SetTrackingAngle_020c381c.c"

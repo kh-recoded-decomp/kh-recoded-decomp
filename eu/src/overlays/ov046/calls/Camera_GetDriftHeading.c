@@ -1,5 +1,5 @@
 #define Camera_GetDriftHeading_020c14fc Camera_GetDriftHeading
 #define FixedPointAtan2_020062bc FX_Atan2Idx
 #define GetParticleDriftDirection_020af9a4 GetParticleDriftDirection
-#define g_cameraManager_020c34e0 data_ov046_020c3500
+#define g_cameraManager_020c34e0 gCameraManager
 #include "src/ov046/shared_engine/Camera_GetDriftHeading_020c14fc.c"

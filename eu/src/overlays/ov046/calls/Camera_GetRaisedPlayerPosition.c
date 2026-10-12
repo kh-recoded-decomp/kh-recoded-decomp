@@ -1,3 +1,3 @@
 #define Camera_GetRaisedPlayerPosition_020c14a8 Camera_GetRaisedPlayerPosition
-#define g_cameraManager_020c34e0 data_ov046_020c3500
+#define g_cameraManager_020c34e0 gCameraManager
 #include "src/ov046/shared_engine/Camera_GetRaisedPlayerPosition_020c14a8.c"

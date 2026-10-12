@@ -1,4 +1,5 @@
 #include "nitro/types.h"
+#include "src/overlays/ov001/FieldCommandLabels.h"
 
 typedef struct TextFrame {
     u16 x;
@@ -112,7 +113,6 @@ typedef struct FieldMenu {
 } FieldMenu;
 
 extern const TextFrame gFieldCommandTextFrame;
-extern const u16 data_ov001_0209ef00[];
 
 extern void *GetSceneFont(void);
 extern SelectionRecord *GetOverlaySelectionRecord(int index);
@@ -214,7 +214,7 @@ void InitFieldCommandMenu(FieldMenu *menu, u8 *tiles)
     MIi_CpuCopyFast(menu->frameTiles, menu->cells[13]->pixels, 0x200);
     equipped = GetRecordSlotPair1Entry(GetOverlaySelectionRecord(0)->equippedId);
     if (equipped == NULL) {
-        DrawTextAnchored(&menu->textLayer, 0, 4, 4, 0, data_ov001_0209ef00);
+        DrawTextAnchored(&menu->textLayer, 0, 4, 4, 0, gFieldFinishCommandLabel);
     } else {
         func_02001620(&menu->textLayer, 0, 4, 4, 0, equipped->nameId, GetFieldFont1(), 0x38);
     }

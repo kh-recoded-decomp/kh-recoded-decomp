@@ -1,4 +1,4 @@
 #define Camera_BlendToFollowView_020c1304 Camera_BlendToFollowView
-#define func_ov046_020c10d4 func_ov046_020c10f4
+#define func_ov046_020c10d4 Camera_BlendToView
 #define func_ov046_020c194c Camera_BuildFollowView
 #include "src/ov046/shared_engine/Camera_BlendToFollowView_020c1304.c"

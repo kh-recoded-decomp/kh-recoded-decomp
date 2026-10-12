@@ -56,7 +56,7 @@ RunRewardUnlockSequence kind:function(arm,size=0x240) addr:0x020c2630
 RunUnlockSequence kind:function(arm,size=0x100) addr:0x020c2870
 RunPrizeMessageSequence kind:function(arm,size=0x1b0) addr:0x020c2970
 func_ov093_020c2b20 kind:function(arm,size=0x4) addr:0x020c2b20
-func_ov093_020c2b24 kind:function(arm,size=0x178) addr:0x020c2b24
+LoadEntryGridTilesIncrementally kind:function(arm,size=0x178) addr:0x020c2b24
 GetPopupDefinition kind:function(arm,size=0x10) addr:0x020c2c9c
 func_ov093_020c2cac kind:function(arm,size=0xb8) addr:0x020c2cac
 ShutdownPopupSystem kind:function(arm,size=0x3c) addr:0x020c2d64
@@ -87,10 +87,10 @@ func_ov093_020c3c2c kind:function(arm,size=0xc) addr:0x020c3c2c
 func_ov093_020c3c38 kind:function(arm,size=0xc) addr:0x020c3c38
 func_ov093_020c3c44 kind:function(arm,size=0x1c) addr:0x020c3c44
 data_ov093_020c3c60 kind:data(any) addr:0x020c3c60
-data_ov093_020c3c74 kind:data(any) addr:0x020c3c74
+gEntryGridColumnStarts kind:data(any) addr:0x020c3c74
 data_ov093_020c3c88 kind:data(any) addr:0x020c3c88
 gTrophyReportStateHandlers kind:data(any) addr:0x020c3c9c
-data_ov093_020c3cb8 kind:data(any) addr:0x020c3cb8
+gEntryGridBatchBoundaries kind:data(any) addr:0x020c3cb8
 data_ov093_020c3cd4 kind:data(any) addr:0x020c3cd4
 data_ov093_020c3cf4 kind:data(any) addr:0x020c3cf4
 data_ov093_020c3d14 kind:data(any) addr:0x020c3d14

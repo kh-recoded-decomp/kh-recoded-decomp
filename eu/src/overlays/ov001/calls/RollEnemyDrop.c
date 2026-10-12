@@ -5,7 +5,7 @@
 #define RollLevelBonus_0206838c RollLevelBonus
 #define RollRandomRewardStats_020683e0 RollRandomRewardStats
 #define SetGlobalPackedBit_02027320 SetGlobalPackedBit
-#define data_ov001_0209da52 data_ov001_0209da7a
+#define data_ov001_0209da52 gRandomEnemyDropIds
 #define func_020275c8 CheckStatusAndThreshold
 #define func_0202a9d0 func_0202a9e4
 #define func_0204f768 GetOverlaySelectionRecord

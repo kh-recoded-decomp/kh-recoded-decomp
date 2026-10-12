@@ -10,5 +10,5 @@
 #define func_0203ad14 MakeSphereShape
 #define func_ov046_020c19f0 Camera_GetModeDistance
 #define func_ov046_020c1c40 CameraCollision_ShouldTestContact
-#define g_cameraManager_020c34e0 data_ov046_020c3500
+#define g_cameraManager_020c34e0 gCameraManager
 #include "src/ov046/shared_engine/Camera_ResolveCollision_020c1e54.c"

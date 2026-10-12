@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-extern s32 data_0205fde4;
+extern s32 gPanelActive;
 extern s32 data_ov001_020a04bc;
 extern s32 GXx_GetMasterBrightness_(u32 reg);
 extern void SetBrightnessAndSyncMain(s32 callerId);
@@ -29,7 +29,7 @@ s32 func_ov001_0206e750(s32 callerId)
     ok = 0;
 stillOwned:
     check = func_ov001_02064490();
-    if ((check != 0) || (data_0205fde4 != 0)) {
+    if ((check != 0) || (gPanelActive != 0)) {
         ok = 0;
     }
     if (ok != 0) {

@@ -1,3 +1,4 @@
+#define data_0205fde4 gPanelActive
 #define AlarmCallback_0206ad1c func_ov001_0206ad1c
 #define LayoutFrameCornerSprites_0207e4f4 LayoutFrameCornerSprites
 #define SetSpriteRectIfIdle_0207e4c8 SetSpriteRectIfIdle

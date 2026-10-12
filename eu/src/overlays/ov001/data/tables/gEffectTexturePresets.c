@@ -1,0 +1,11 @@
+#include "src/overlays/ov001/EffectTexturePresets.h"
+
+const EffectTexturePreset gEffectTexturePresets[7] = {
+    {0, 0x20, 0x20, 0},
+    {1, 0x20, 0x20, 0},
+    {2, 0x20, 0x20, 0},
+    {3, 0x20, 0x20, 0},
+    {4, 0x20, 0x20, 0},
+    {5, 0x20, 0x20, 0},
+    {6, 0x20, 0x20, 0}
+};

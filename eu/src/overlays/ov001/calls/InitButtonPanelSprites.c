@@ -1,5 +1,5 @@
 #define InitButtonPanelSprites_0206be78 InitButtonPanelSprites
 #define SetSlotKeyAndRebind_0206a94c SetSlotKeyAndRebind
-#define data_ov001_0209da8c data_ov001_0209dab4
+#define data_ov001_0209da8c gButtonPanelOffsets
 #define func_0202d3e0 NestedPointer_GetFirstWord
 #include "src/ov001/shared_engine/InitButtonPanelSprites_0206be78.c"

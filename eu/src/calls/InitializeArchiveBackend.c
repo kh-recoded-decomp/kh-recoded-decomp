@@ -1,5 +1,6 @@
 #define InitializeArchiveBackend_0203a858 InitializeArchiveBackend
 #define archive_backend_callbacks data_027e01f8
+#define func_01ffe280 NNSi_G3dFuncSbc_NODE
 #define func_01ffe3d8 NNSi_G3dFuncSbcMAT
 #define func_01ffe934 NNSi_G3dFuncSbcNODEDESC
 #define func_01ffec28 NNSi_G3dFuncSbcNODEMIX

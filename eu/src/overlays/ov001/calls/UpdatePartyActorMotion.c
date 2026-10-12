@@ -9,5 +9,5 @@
 #define func_ov001_02089208 ApplyActorRootMotion
 #define func_ov001_02089394 UpdateActorMotionTracks
 #define func_ov001_02089aa8 Actor_StepTowardTarget
-#define func_ov001_02089bd4 func_ov001_02089bfc
+#define func_ov001_02089bd4 UpdateActorTurn
 #include "src/ov001/actor_animation/UpdatePartyActorMotion_0208a114.c"

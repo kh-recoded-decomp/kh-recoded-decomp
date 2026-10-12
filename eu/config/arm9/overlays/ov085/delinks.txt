@@ -12,9 +12,17 @@ src/overlays/ov085/calls/GetItemMenuEntry.c:
     complete
     .text       start:0x020bf74c end:0x020bf774
 
+src/overlays/ov085/calls/BuildShopItemRecord.c:
+    complete
+    .text       start:0x020bf774 end:0x020bf810
+
 src/overlays/ov085/calls/UpdateItemListScroll.c:
     complete
     .text       start:0x020c0154 end:0x020c01d8
+
+src/overlays/ov085/calls/ResetShopMenuGraphics.c:
+    complete
+    .text       start:0x020c01d8 end:0x020c02a0
 
 src/overlays/ov085/calls/RedrawShopMenu.c:
     complete

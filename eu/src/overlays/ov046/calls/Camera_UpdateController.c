@@ -3,5 +3,5 @@
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define func_01ff9f88 VEC_Normalize
-#define g_cameraManager_020c34e0 data_ov046_020c3500
+#define g_cameraManager_020c34e0 gCameraManager
 #include "src/ov046/shared_engine/Camera_UpdateController_020c0a70.c"

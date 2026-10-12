@@ -4,7 +4,7 @@ extern void UpdateScrollPanel(int listId, Ov101ScrollPanelState *state);
 
 BOOL ScrollPanelPageDown(int panelIndex, Ov101ScrollPanelState *state)
 {
-    ScrollPanel *panel = &state->panels[panelIndex];
+    Ov101ScrollPanel *panel = &state->panels[panelIndex];
     int maxScroll;
     int nextScroll;
 

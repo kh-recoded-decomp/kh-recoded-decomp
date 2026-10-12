@@ -2,5 +2,5 @@
 #define Camera_GetViewState_020c15f4 Camera_GetViewState
 #define FixedPointAtan2_020062bc FX_Atan2Idx
 #define func_01ffa0f4 VEC_Distance
-#define g_cameraManager_020c34e0 data_ov046_020c3500
+#define g_cameraManager_020c34e0 gCameraManager
 #include "src/ov046/shared_engine/Camera_GetViewState_020c15f4.c"

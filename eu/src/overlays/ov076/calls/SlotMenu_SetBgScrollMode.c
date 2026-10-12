@@ -1,4 +1,4 @@
 #define SlotMenu_SetBgScrollMode_020c74e4 SlotMenu_SetBgScrollMode
 #define func_ov076_020c7254 SlotMenu_UpdateItemSprites
-#define func_ov076_020c7a5c func_ov076_020c7a7c
+#define func_ov076_020c7a5c SlotMenu_UpdateCursorLayout
 #include "src/ov076/unclassified_helpers/SlotMenu_SetBgScrollMode_020c74e4.c"

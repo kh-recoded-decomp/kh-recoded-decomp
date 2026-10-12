@@ -22,5 +22,5 @@
 #define func_ov001_020645dc SetSessionFlag
 #define func_ov039_020bc7f8 GetRuntimeStateFlags
 #define func_ov039_020bdf10 SetupScrollList
-#define func_ov085_020bf754 func_ov085_020bf774
+#define func_ov085_020bf754 BuildShopItemRecord
 #include "src/ov085/unclassified_helpers/SetShopMenuMode_020c0b90.c"

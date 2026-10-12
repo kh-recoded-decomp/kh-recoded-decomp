@@ -1,4 +1,4 @@
 #define Camera_HasPendingModeChange_020c1750 Camera_HasPendingModeChange
 #define func_ov047_020c6b84 Camera_IsFollowHeightChanging
-#define g_cameraManager_020c34e0 data_ov046_020c3500
+#define g_cameraManager_020c34e0 gCameraManager
 #include "src/ov046/shared_engine/Camera_HasPendingModeChange_020c1750.c"

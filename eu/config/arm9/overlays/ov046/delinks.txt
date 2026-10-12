@@ -3,6 +3,10 @@
     .data       start:0x020c33c0 end:0x020c3500 kind:data align:32
     .bss        start:0x020c3500 end:0x020c3520 kind:bss align:32
 
+src/overlays/ov046/calls/Camera_InitManager.c:
+    complete
+    .text       start:0x020c08c0 end:0x020c09cc
+
 src/overlays/ov046/calls/MaxOfArgs.c:
     complete
     .text       start:0x020c09cc end:0x020c0a1c
@@ -103,6 +107,10 @@ src/overlays/ov046/calls/func_ov046_020c10e4.c:
     complete
     .text       start:0x020c10e4 end:0x020c10f4
 
+src/overlays/ov046/calls/Camera_BlendToView.c:
+    complete
+    .text       start:0x020c10f4 end:0x020c11a0
+
 src/overlays/ov046/calls/func_ov046_020c11a0.c:
     complete
     .text       start:0x020c11a0 end:0x020c11b0
@@ -122,6 +130,10 @@ src/overlays/ov046/calls/Camera_BlendToVelocityAim.c:
 src/overlays/ov046/calls/Camera_BlendToPlayerBackView.c:
     complete
     .text       start:0x020c1380 end:0x020c1400
+
+src/overlays/ov046/calls/Camera_StartLocalTargetView.c:
+    complete
+    .text       start:0x020c1400 end:0x020c14c8
 
 src/overlays/ov046/calls/Camera_GetRaisedPlayerPosition.c:
     complete
@@ -367,6 +379,6 @@ src/ov046/data/gCameraLayerIds.c:
     complete
     .data       start:0x020c33c0 end:0x020c33d0
 
-src/overlays/ov046/data/bss/Bss_ov046_020c3500.c:
+src/overlays/ov046/data/bss/gCameraManager.c:
     complete
     .bss        start:0x020c3500 end:0x020c3520

@@ -6,7 +6,7 @@
 #define FreePointerIfSet_020ba294 FreePointerIfSet
 #define InitTextLayerAt_020014b0 InitTextLayerAt
 #define UpdateWidgetLayerDefault_020b9df0 func_ov027_020b9e10
-#define data_ov001_0209db8c data_ov001_0209dbb4
+#define data_ov001_0209db8c gSlotLabelMessageIds
 #define data_ov001_0209dc54 gSlotLabelTextFrame
 #define func_ov001_02073634 MakePrimaryVramKey_02073634
 #define func_ov027_020ba25c LoadPackedFileView

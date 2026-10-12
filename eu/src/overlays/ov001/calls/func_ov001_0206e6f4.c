@@ -8,7 +8,7 @@ typedef struct OverlayFactoryContext {
 
 } OverlayFactoryContext;
 
-extern s32 data_0205fde4;
+extern s32 gPanelActive;
 extern OverlayFactoryContext *data_ov001_020a04bc;
 extern s32 GXx_GetMasterBrightness_(u32 reg);
 extern void SetBrightnessAndSyncMain(s32 callerId);
@@ -31,7 +31,7 @@ s32 func_ov001_0206e6f4(s32 callerId)
         ok = 0;
     }
     busy = func_ov001_02064490();
-    if ((busy != 0) || (data_0205fde4 != 0)) {
+    if ((busy != 0) || (gPanelActive != 0)) {
         ok = 0;
     }
     if (ok != 0) {

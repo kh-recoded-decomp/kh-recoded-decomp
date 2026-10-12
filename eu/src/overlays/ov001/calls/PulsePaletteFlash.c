@@ -11,7 +11,7 @@ typedef struct PaletteFlash {
     s8 step;
 } PaletteFlash;
 
-extern u16 func_ov001_0207a968(int from, int to, int level, int maxLevel);
+extern u16 LerpColor555(u16 from, u16 to, int level, u16 maxLevel);
 extern int GFXi_EnqueueCommand_02014090(int command, int address, void *data, int size);
 
 void PulsePaletteFlash(PaletteFlash *flash)
@@ -20,7 +20,7 @@ void PulsePaletteFlash(PaletteFlash *flash)
     int i;
 
     flash->level += *(u8 *)&flash->step;
-    color = func_ov001_0207a968(0x1f, 0x7fff, flash->level, 0x1e);
+    color = LerpColor555(0x1f, 0x7fff, flash->level, 0x1e);
     for (i = 0; i < 6; i++) {
         if (flash->channelMask & (1 << i)) {
             flash->colors[i] = color;

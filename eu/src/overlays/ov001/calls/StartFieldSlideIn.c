@@ -1,3 +1,4 @@
+#define data_0205fde4 gPanelActive
 #define FlushAndFreeBgScreen_0206fdac FlushAndFreeBgScreen
 #define ResumeFieldAfterPause_020704fc ResumeFieldAfterPause
 #define SetFieldMenuSuspended_02077b90 SetFieldMenuSuspended

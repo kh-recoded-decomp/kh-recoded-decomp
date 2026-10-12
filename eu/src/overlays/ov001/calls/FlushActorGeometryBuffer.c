@@ -1,4 +1,8 @@
-#define FlushActorGeometryBuffer_020864b0 FlushActorGeometryBuffer
-#define FlushGeometryCommandBuffer_01ffa204 FlushGeometryCommandBuffer
-#define data_ov001_0209f174 data_ov001_0209f194
-#include "src/ov001/library_nns_g2d/FlushActorGeometryBuffer_020864b0.c"
+#include "src/overlays/ov001/ActorBoxDisplayList.h"
+
+extern void FlushGeometryCommandBuffer(const void *commands, u32 size);
+
+void FlushActorGeometryBuffer(void)
+{
+    FlushGeometryCommandBuffer(&gActorBoxDisplayList, sizeof(gActorBoxDisplayList));
+}

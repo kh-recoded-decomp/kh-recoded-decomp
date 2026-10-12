@@ -1,4 +1,4 @@
 #define Camera_GetSpeedScaledStep_020c19b4 Camera_GetSpeedScaledStep
 #define FixedPointMultiply12 FX_Mul
-#define g_cameraManager_020c34e0 data_ov046_020c3500
+#define g_cameraManager_020c34e0 gCameraManager
 #include "src/ov046/shared_engine/Camera_GetSpeedScaledStep_020c19b4.c"

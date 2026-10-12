@@ -5,27 +5,7 @@
 
 typedef ListScrollPanelConfig ScrollPanelConfig;
 
-typedef struct {
-    s32 listId;
-    s32 pageRows;
-    s32 totalRows;
-    s32 cursorEntry;
-    s32 upArrowEntry;
-    s32 downArrowEntry;
-    s32 barEntry;
-    s32 unk_1C;
-    s32 unk_20;
-    s32 unk_24;
-    s32 unk_28;
-    s32 scroll;
-    s32 cursor;
-    s32 trackLength;
-    s32 barMarginTop;
-    s32 barMarginBottom;
-    s32 barStep;
-    fx32 thumbLength;
-    s32 thumbSteps;
-} ScrollPanel;
+typedef Ov101ScrollPanel ScrollPanel;
 
 typedef struct {
     u8 pad_0000[0xCD6C];

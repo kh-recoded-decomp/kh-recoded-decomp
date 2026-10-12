@@ -3,7 +3,7 @@
 
 #include "nitro/types.h"
 
-typedef struct {
+typedef struct Ov101ScrollPanel {
     s32 listId;
     s32 pageRows;
     s32 totalRows;
@@ -23,11 +23,11 @@ typedef struct {
     s32 barStep;
     s32 thumbLength;
     s32 thumbSteps;
-} ScrollPanel;
+} Ov101ScrollPanel;
 
 typedef struct {
     u8 pad_0000[0xCD6C];
-    ScrollPanel panels[2];
+    Ov101ScrollPanel panels[2];
 } Ov101ScrollPanelState;
 
 #endif

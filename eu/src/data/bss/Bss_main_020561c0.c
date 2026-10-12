@@ -1,3 +1,3 @@
-#include "nitro/types.h"
+#include "src/calls/MainLoopState.h"
 
-static u32 data_020561c0[514];
+DisplayPowerState gMainDisplayState;

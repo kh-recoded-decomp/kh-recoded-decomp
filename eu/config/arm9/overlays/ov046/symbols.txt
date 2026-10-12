@@ -1,4 +1,4 @@
-func_ov046_020c08c0 kind:function(thumb,size=0x10c) addr:0x020c08c0
+Camera_InitManager kind:function(thumb,size=0x10c) addr:0x020c08c0
 MaxOfArgs kind:function(arm,size=0x50) addr:0x020c09cc
 func_ov046_020c0a1c kind:function(thumb,size=0x28) addr:0x020c0a1c
 Camera_ApplyOffsetClampHeight kind:function(thumb,size=0x4c) addr:0x020c0a44
@@ -24,13 +24,13 @@ Camera_StartDriftAlongView kind:function(thumb,size=0x40) addr:0x020c0ff4
 Camera_ChangeModeFromCurrentView kind:function(thumb,size=0x24) addr:0x020c1034
 Camera_SetViewMode kind:function(thumb,size=0x8c) addr:0x020c1058
 func_ov046_020c10e4 kind:function(thumb,size=0x10) addr:0x020c10e4
-func_ov046_020c10f4 kind:function(thumb,size=0xac) addr:0x020c10f4
+Camera_BlendToView kind:function(thumb,size=0xac) addr:0x020c10f4
 func_ov046_020c11a0 kind:function(thumb,size=0x10) addr:0x020c11a0
 Camera_StartPathViewFromState kind:function(thumb,size=0x174) addr:0x020c11b0
 Camera_BlendToFollowView kind:function(thumb,size=0x28) addr:0x020c1324
 Camera_BlendToVelocityAim kind:function(thumb,size=0x34) addr:0x020c134c
 Camera_BlendToPlayerBackView kind:function(thumb,size=0x80) addr:0x020c1380
-func_ov046_020c1400 kind:function(thumb,size=0xc8) addr:0x020c1400
+Camera_StartLocalTargetView kind:function(thumb,size=0xc8) addr:0x020c1400
 Camera_GetRaisedPlayerPosition kind:function(thumb,size=0x38) addr:0x020c14c8
 Camera_IsFlag19Set kind:function(thumb,size=0x1c) addr:0x020c1500
 Camera_GetDriftHeading kind:function(thumb,size=0x44) addr:0x020c151c
@@ -95,4 +95,4 @@ gCameraLayerIdsByMode kind:data(any) addr:0x020c33c0
 data_ov046_020c33d0 kind:data(any) addr:0x020c33d0
 data_ov046_020c33d4 kind:data(any) addr:0x020c33d4
 data_ov046_020c33d8 kind:data(any) addr:0x020c33d8
-data_ov046_020c3500 kind:bss addr:0x020c3500
+gCameraManager kind:bss addr:0x020c3500

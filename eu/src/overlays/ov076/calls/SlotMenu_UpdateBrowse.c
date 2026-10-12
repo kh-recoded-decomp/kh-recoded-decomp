@@ -37,7 +37,7 @@ extern void SetNavigationElementsVisible(void *container, BOOL visible);
 extern void ToggleSharedStateFlag(int flag);
 extern void RefreshScrollListLayout(ScrollList *list, void *layout);
 extern void SlotMenu_SetBgScrollMode(SlotMenu *menu, int mode, int scrollY);
-extern void func_ov076_020c4cc0(SlotMenu *menu);
+extern void SlotMenu_UpdateStatusHeader(SlotMenu *menu);
 extern void UpdateWidgetRootAndFireAlarm(void *layout, int arg);
 extern void SlotMenu_Draw3D(SlotMenu *menu, int mode);
 
@@ -64,7 +64,7 @@ void SlotMenu_UpdateBrowse(SlotMenu *menu)
     }
     RefreshScrollListLayout(&menu->list, layout);
     SlotMenu_SetBgScrollMode(menu, 0, menu->list.scrollY);
-    func_ov076_020c4cc0(menu);
+    SlotMenu_UpdateStatusHeader(menu);
     UpdateWidgetRootAndFireAlarm(layout, 0);
     SlotMenu_Draw3D(menu, 0);
 }

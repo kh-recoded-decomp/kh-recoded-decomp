@@ -1,4 +1,4 @@
 #define NNS_FndInitListWithOffset0_0206ad28 func_ov001_0206ad28
 #define PlaceCornerItems_0206c124 PlaceCornerItems
-#define data_ov001_0209da9c data_ov001_0209dac4
+#define data_ov001_0209da9c gCornerItemOffsets
 #include "src/ov001/shared_engine/PlaceCornerItems_0206c124.c"

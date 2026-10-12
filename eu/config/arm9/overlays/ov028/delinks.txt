@@ -43,6 +43,10 @@ src/overlays/ov028/calls/SceneState_WaitPanelReady.c:
     complete
     .text       start:0x020ba954 end:0x020ba99c
 
+src/overlays/ov028/calls/PollFieldTransition.c:
+    complete
+    .text       start:0x020ba99c end:0x020bab20
+
 src/overlays/ov028/calls/func_ov028_020bab20.c:
     complete
     .text       start:0x020bab20 end:0x020bab68

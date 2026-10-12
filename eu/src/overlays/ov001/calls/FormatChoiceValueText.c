@@ -1,6 +1,6 @@
 #define ClearChoiceHighlight_020701a8 ClearChoiceHighlight
 #define FormatChoiceValueText_020724fc FormatChoiceValueText
 #define OS_SNPrintf_0202e080 OS_SNPrintf_0202e094
-#define data_ov001_0209edc4 data_ov001_0209ede4
+#define data_ov001_0209edc4 gFieldChoiceStringFormat
 #define data_ov001_020a04a4 data_ov001_020a04c4
 #include "src/ov001/text_rendering/FormatChoiceValueText_020724fc.c"

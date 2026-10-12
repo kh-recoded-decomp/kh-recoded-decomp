@@ -1,4 +1,5 @@
 #define ScanObjectsForNearestTarget_0206b598 ScanObjectsForNearestTarget
+#define func_ov001_0206b614 IsEntryWithinFacingRange
 #define func_ov001_0206ba2c ClassifyTargetRange
 #define func_ov001_020863f4 func_ov001_0208641c
 #define func_ov001_0208723c func_ov001_02087264

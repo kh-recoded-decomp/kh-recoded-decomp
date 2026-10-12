@@ -1,4 +1,4 @@
 #define Camera_SetFlag18IfStandard_020c1724 Camera_SetFlag18IfStandard
 #define Camera_SetStateFlag18_020c2a84 Camera_SetStateFlag18
-#define g_cameraManager_020c34e0 data_ov046_020c3500
+#define g_cameraManager_020c34e0 gCameraManager
 #include "src/ov046/shared_engine/Camera_SetFlag18IfStandard_020c1724.c"

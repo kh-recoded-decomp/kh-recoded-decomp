@@ -26,8 +26,8 @@ typedef struct FileLoadRequest {
 } FileLoadRequest;
 
 extern NNSFndList *data_ov027_020ba3e4;
-extern int data_0205fde4;
-extern int data_0205fde0;
+extern int gPanelActive;
+extern int gPreviousPanelActive;
 
 extern void *NNS_FndGetNextListObject(void *list, void *obj);
 extern BOOL IsRecordIdFree(int id);
@@ -41,7 +41,7 @@ void ProcessFileLoadQueue(void)
     NNSFndList *queue = data_ov027_020ba3e4;
     FileLoadRequest *request;
 
-    if (data_0205fde4 != 0 || data_0205fde0 != 0) {
+    if (gPanelActive != 0 || gPreviousPanelActive != 0) {
         return;
     }
     request = NNS_FndGetNextListObject(queue, NULL);

@@ -3,8 +3,8 @@
 #define MakePrimaryVramKey_020711ec MakePrimaryVramKey
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define OpenArrowPrompt_0207dd14 OpenArrowPrompt
-#define data_ov001_0209ee2c data_ov001_0209ee4c
-#define data_ov001_0209ee9c data_ov001_0209eebc
+#define data_ov001_0209ee2c gFieldHudGaugeTaskDescriptor
+#define data_ov001_0209ee9c gFieldMenuTaskDescriptor
 #define data_ov001_0209eef0 gFieldHudTimerTaskDescriptor
 #define data_ov001_0209ef38 gFieldHudCounterTaskDescriptor
 #define data_ov001_0209ef94 gFieldHudStatusTaskDescriptor

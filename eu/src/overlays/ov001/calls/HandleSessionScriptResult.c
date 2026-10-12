@@ -7,7 +7,7 @@
 #define func_ov001_020645c8 IsSessionFlagSet
 #define ResetTrackState_02062cf8 ResetTrackState
 #define func_ov001_020630bc SaveElapsedSeconds
-#define func_020273d4 func_020273e8
+#define func_020273d4 UpdateElapsedIntervals
 #define ReleaseLowIdTaskNodes_02069194 ReleaseLowIdTaskNodes
 #define SetGlobalStateValue_0209d184 SetGlobalStateValue
 #define SESSION_FLAGS_29B4_QUALIFIER volatile

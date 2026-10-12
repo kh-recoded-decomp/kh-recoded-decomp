@@ -11,7 +11,7 @@ typedef struct CameraManager {
     fx32 mode3Value;
 } CameraManager;
 
-extern CameraManager *data_ov046_020c3500;
+extern CameraManager *gCameraManager;
 extern void func_ov048_020c3530(CameraModeEntry *entry, CameraManager *manager);
 extern CameraModeEntry *Camera_GetTopDownView(void);
 extern int Camera_GetModeValue(void);
@@ -23,8 +23,8 @@ void SetCameraMode3EntryState(int state)
 
     if (Camera_GetModeValue() == 3) {
         entry = Camera_GetTopDownView();
-        manager = data_ov046_020c3500;
-        func_ov048_020c3530(entry, data_ov046_020c3500);
+        manager = gCameraManager;
+        func_ov048_020c3530(entry, gCameraManager);
         entry->state = state;
         if (state == 1) {
             manager->mode3Value = 0x6000;

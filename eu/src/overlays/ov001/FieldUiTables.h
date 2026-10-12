@@ -124,7 +124,16 @@ typedef struct FieldCourseRewardEntry {
 extern const u32 gChoiceSceneAnimationRecords[3];
 extern const s32 gChoiceDetailTextColors[3];
 extern const u32 gMenuGaugePointLevelFileIds[4];
-extern const s32 gPanelPrimaryModeRecords[5];
+typedef struct PanelModeIdTable {
+    s32 values[5];
+} PanelModeIdTable;
+
+typedef struct PanelModeDataTable {
+    const void *values[5];
+} PanelModeDataTable;
+
+extern const PanelModeIdTable gPanelPrimaryModeRecords;
+extern PanelModeDataTable gPanelModeDataPointers;
 extern const FieldCourseRewardEntry gCourseFallbackReward;
 extern const u16 gCourseRecordBitOffsets[9][4];
 extern const u32 gCourseRankThresholds[9][3];

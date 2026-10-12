@@ -128,7 +128,7 @@ extern void IndexedRecord_ClearActive(void *layout, int index);
 extern void IndexedRecords_SetFlag2(void *layout, int index, int value);
 extern ItemInfo *GetItemMenuEntryInfo();
 extern ItemEntry *GetItemMenuEntry(ItemMenu *menu, int index);
-extern BOOL func_ov085_020bf774(ItemMenu *menu, int index, RecordEntry *record);
+extern BOOL BuildShopItemRecord(ItemMenu *menu, int index, RecordEntry *record);
 extern void SetPackedBit(int *bitWords, int bitIndex);
 extern int GetPackedBitMask(int *bitWords, int bitIndex);
 extern BOOL CanSelectItem(ItemMenu *menu, int index);
@@ -206,7 +206,7 @@ void RedrawShopMenu(ItemMenu *menu)
                         BOOL seen;
 
                         DrawItemNameWithRank(menu, index, 3, y, color);
-                        if (func_ov085_020bf774(menu, index, &record)) {
+                        if (BuildShopItemRecord(menu, index, &record)) {
                             maxed = record.level == 100 ? 1 : 0;
                             if (!maxed && record.level != 0) {
                                 FormatStateText(1, buffer, 8, record.level);
@@ -283,7 +283,7 @@ void RedrawShopMenu(ItemMenu *menu)
 
             DrawItemNameWithRank(menu, index, 0x10, 0x13, 2);
             DrawTextAnchored(&menu->layers[2], 0x10, 0x23, 2, 8, menu->ownedText);
-            if (func_ov085_020bf774(menu, index, &record)) {
+            if (BuildShopItemRecord(menu, index, &record)) {
                 BOOL maxed = TRUE;
                 if (record.level != 100) {
                     maxed = FALSE;

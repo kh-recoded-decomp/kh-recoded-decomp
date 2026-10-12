@@ -7,7 +7,7 @@ extern void func_ov028_020ba758(void);
 extern void func_ov028_020ba778(void);
 extern void ResumeFieldFromMenu(void);
 extern void SceneState_WaitPanelReady(void); /* SceneState_WaitPanelReady */
-extern void func_ov028_020ba99c(void);
+extern s32 PollFieldTransition(void);
 extern void func_ov028_020bab20(void);
 extern void func_ov028_020bab68(void);
 extern void SceneState_WaitScreenIdle(void); /* SceneState_WaitScreenIdle */
@@ -28,7 +28,7 @@ void (*gSceneStateHandlers[19])(void) = {
     func_ov028_020ba778,
     ResumeFieldFromMenu,
     SceneState_WaitPanelReady, /* SceneState_WaitPanelReady */
-    func_ov028_020ba99c,
+    (void (*)(void))PollFieldTransition,
     func_ov028_020bab20,
     func_ov028_020bab68,
     SceneState_WaitScreenIdle, /* SceneState_WaitScreenIdle */

@@ -1,3 +1,0 @@
-#define StackAlloc_FreeIfSet NNSi_FndFreeFromDefaultHeap
-#define StackAlloc_FreeIfSetB_0208f0b0 func_ov001_0208f0d8
-#include "src/ov001/library_msl_c/StackAlloc_FreeIfSetB_0208f0b0.c"

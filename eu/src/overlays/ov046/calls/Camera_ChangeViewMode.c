@@ -1,4 +1,4 @@
 #define Camera_ChangeViewMode_020c1578 Camera_ChangeViewMode
 #define func_ov047_020c3558 Camera_SetTrackingMode
-#define g_cameraManager_020c34e0 data_ov046_020c3500
+#define g_cameraManager_020c34e0 gCameraManager
 #include "src/ov046/shared_engine/Camera_ChangeViewMode_020c1578.c"

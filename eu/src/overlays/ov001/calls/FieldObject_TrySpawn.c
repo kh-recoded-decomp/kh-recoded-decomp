@@ -58,7 +58,8 @@ extern void func_0202edb0(void *anim, void *model, void *data, int mode);
 extern void RebindAnimTracks(void *anim, int blendIndex, int frame);
 extern void SetObjectProbeSphere(SpawnWork *work, BOOL enable, fx32 radius);
 extern void NNS_G3dMdlSetMdlPolygonIDAll(void *model, int polygonId);
-extern void func_ov001_0207f2e4(void);
+typedef struct LinkedActor LinkedActor;
+extern void DrawLinkedActorPass(LinkedActor *actor, int pass);
 
 BOOL FieldObject_TrySpawn(FieldObject *object)
 {
@@ -83,7 +84,7 @@ BOOL FieldObject_TrySpawn(FieldObject *object)
         if (objectClass->onSpawn != NULL) {
             objectClass->onSpawn(object);
             objectClass->spawnCount++;
-            Obj_SetWord1C8(object->work, func_ov001_0207f2e4);
+            Obj_SetWord1C8(object->work, DrawLinkedActorPass);
             if (objectClass->animIndex >= 0) {
                 object->anim = NNSi_FndAllocFromDefaultHeap(0x104);
                 func_0202edb0(object->anim, object->objectClass->modelData, object->objectClass->animData, 3);

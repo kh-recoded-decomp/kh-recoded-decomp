@@ -1,3 +1,4 @@
 #define UpdateGaugeFrameState_020761d8 UpdateGaugeFrameState
+#define func_ov001_02075d74 UploadFieldMenuRamp
 #define func_ov001_02075db8 FieldMenu_TryEnterState3
 #include "src/ov001/field_manager/UpdateGaugeFrameState_020761d8.c"

@@ -11,7 +11,7 @@ UpdateSceneFade kind:function(thumb,size=0x70) addr:0x020bcd08
 func_ov041_020bcd78 kind:function(thumb,size=0x18) addr:0x020bcd78
 GetStageKindSoundId kind:function(thumb,size=0xae) addr:0x020bcd90
 GetStageKindMusicId kind:function(thumb,size=0xac) addr:0x020bce40
-func_ov041_020bd48c kind:function(thumb,size=0x1c0) addr:0x020bd48c
+CreateStageResourceGroup kind:function(thumb,size=0x1c0) addr:0x020bd48c
 GetOrOpenMessageContainer kind:function(thumb,size=0x60) addr:0x020bd64c
 SetStageDrawLayer kind:function(thumb,size=0x80) addr:0x020bd760
 InitSlotGroups kind:function(thumb,size=0xec) addr:0x020bda88
@@ -36,10 +36,11 @@ InitStageEntry kind:function(thumb,size=0x404) addr:0x020c14e8
 SpawnStageEntryActor kind:function(thumb,size=0x44c) addr:0x020c18ec
 func_ov041_020c1d38 kind:function(thumb,size=0x498) addr:0x020c1d38
 FindFreeSlotId kind:function(thumb,size=0x24) addr:0x020c21d0
-func_ov041_020c21f4 kind:function(thumb,size=0x130) addr:0x020c21f4
-func_ov041_020c2324 kind:function(thumb,size=0xc8) addr:0x020c2324
+UpdateStageEntryAnimation kind:function(thumb,size=0x130) addr:0x020c21f4
+DrawStageEntryModels kind:function(thumb,size=0xc8) addr:0x020c2324
 UpdateStageShadowActor kind:function(thumb,size=0x64) addr:0x020c23ec
-func_ov041_020c2450 kind:function(thumb,size=0xe8) addr:0x020c2450
+DrawTrackedStageShadow kind:function(thumb,size=0x8c) addr:0x020c2450
+DrawStagePrimaryModel kind:function(thumb,size=0x5c) addr:0x020c24dc
 InstallModelRenderCallback kind:function(thumb,size=0xb4) addr:0x020c2538
 ModelRenderCallbackKindFF kind:function(thumb,size=0x50) addr:0x020c25ec
 ModelRenderCallbackKindFD kind:function(thumb,size=0x44) addr:0x020c263c
@@ -130,7 +131,7 @@ data_ov041_020cf6dc kind:data(any) addr:0x020cf6dc
 sOv041_TraTg_020cf710 kind:data(any) addr:0x020cf710
 data_ov041_020cf720 kind:data(any) addr:0x020cf720
 sOv041_Bip01_020cf730 kind:data(any) addr:0x020cf730
-data_ov041_020cf740 kind:data(any) addr:0x020cf740
+gStageShadowHeights kind:data(any) addr:0x020cf740
 data_ov041_020cf750 kind:data(any) addr:0x020cf750
 data_ov041_020cf760 kind:data(any) addr:0x020cf760
 sOv041_WeaponTg00_020cf770 kind:data(any) addr:0x020cf770

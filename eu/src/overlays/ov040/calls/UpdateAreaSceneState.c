@@ -44,7 +44,7 @@ extern s32 func_0202f4cc(void *anim, u32 track);
 extern s32 FX_Mul(s32 a, s32 b);
 extern int func_02029f5c(void);
 extern void SetFieldMenuSuspended(int a, int b);
-extern void func_ov001_0206dfbc(void);
+extern void AwardSlotLevelProgress(int amount);
 extern void AddRegionProgress(u8 amount);
 
 int UpdateAreaSceneState(void) {
@@ -112,7 +112,7 @@ int UpdateAreaSceneState(void) {
     }
     if (func_02029f5c() == 0) {
         if (data_ov001_020a0480->pendingReward > 0) {
-            func_ov001_0206dfbc();
+            AwardSlotLevelProgress(data_ov001_020a0480->pendingReward);
             data_ov001_020a0480->pendingReward = 0;
         }
         if (data_ov001_020a0480->regionProgress > 0) {

@@ -15,5 +15,5 @@
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define _ll_mul _ll_mul
 #define _ll_sdiv _ll_sdiv
-#define g_cameraManager_020c34e0 data_ov046_020c3500
+#define g_cameraManager_020c34e0 gCameraManager
 #include "src/ov047/camera/Camera_FindClearOrbit_020c6e10.c"

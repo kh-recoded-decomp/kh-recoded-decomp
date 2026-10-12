@@ -21,7 +21,7 @@ extern void ResumeTaskAndClearFlags(void);
 extern void SetMenuHighlight(int highlight);
 extern void func_ov001_02087650(int value);
 extern void SetFieldEntriesPaused(int paused);
-extern void func_ov001_02063ff4(void);
+extern void RestoreFieldTimer(void);
 extern void UpdateEventObjects(void);
 extern void ForwardToActiveService_02088074(void);
 extern void CacheSeqArcStatus(int index);
@@ -58,7 +58,7 @@ int ResumeFieldFromMenu(void) {
     if (scene->mode < 0 || scene->mode == 3) {
         scene->flags &= ~0x20;
     }
-    func_ov001_02063ff4();
+    RestoreFieldTimer();
     if (!IsSessionFlagSet(0x360c)) {
         UpdateEventObjects();
         ForwardToActiveService_02088074();

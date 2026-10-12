@@ -1,8 +1,8 @@
 #include "nitro/types.h"
 
-extern u8 *data_ov046_020c3500;
+extern u8 *gCameraManager;
 
 void *func_ov046_020c170c(void)
 {
-    return data_ov046_020c3500 + 0x50;
+    return gCameraManager + 0x50;
 }

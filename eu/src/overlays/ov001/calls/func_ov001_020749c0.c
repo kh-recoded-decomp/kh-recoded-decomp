@@ -2,7 +2,7 @@
 #define RefreshMenuGaugeState_02073a3c RefreshMenuGaugeState
 #define SetGaugeValues_02074688 SetGaugeValues
 #define SetHudGaugeRange_020749c0 func_ov001_020749c0
-#define data_ov001_0209edcc gGaugeScale
+#define data_ov001_0209edcc gHudGaugeTable
 #define data_ov001_020a04ac data_ov001_020a04cc
 #define func_01ff878c MIi_CpuCopyFast
 #define func_ov001_02073870 BlitFourPixelLabelPattern

@@ -104,6 +104,10 @@ src/calls/PanelState_NoOpB.c:
     complete
     .text       start:0x02000b64 end:0x02000b68
 
+src/calls/main.c:
+    complete
+    .text       start:0x02000bec end:0x02000f14
+
 src/calls/AppendNodeToListTail.c:
     complete
     .text       start:0x02000f14 end:0x02000f48
@@ -3393,7 +3397,7 @@ libs/nitro/nns/calls/NNS_FndCreateExpHeapEx.c:
     complete
     .text       start:0x02013104 end:0x0201313c
 
-src/calls/PXI_Init_0201313c.c:
+libs/nitro/nns/calls/NNS_FndDestroyExpHeap.c:
     complete
     .text       start:0x0201313c end:0x02013148
 
@@ -6073,6 +6077,10 @@ src/calls/GetSlotFlagsField.c:
     complete
     .text       start:0x020273d4 end:0x020273e8
 
+src/calls/UpdateElapsedIntervals.c:
+    complete
+    .text       start:0x020273e8 end:0x0202756c
+
 src/calls/InitDifficultyConfigBlock.c:
     complete
     .text       start:0x0202756c end:0x020275dc
@@ -6433,7 +6441,7 @@ src/calls/CreateHeapRecord.c:
     complete
     .text       start:0x0202a0c8 end:0x0202a104
 
-src/calls/func_0202a104.c:
+src/calls/ResetHeapRecord.c:
     complete
     .text       start:0x0202a104 end:0x0202a148
 
@@ -6445,7 +6453,7 @@ src/calls/Heap_GetCurrent.c:
     complete
     .text       start:0x0202a16c end:0x0202a17c
 
-src/calls/NNS_SndPlayerPause_0202a17c.c:
+src/calls/DestroyHeapRecord.c:
     complete
     .text       start:0x0202a17c end:0x0202a18c
 
@@ -10633,10 +10641,6 @@ src/data/bss/Bss_main_0205ffc4.c:
     complete
     .bss        start:0x0205ffc4 end:0x0205ffc8
 
-src/data/bss/Bss_main_0205ffc8.c:
-    complete
-    .bss        start:0x0205ffc8 end:0x0206005a
-
 src/data/bss/Bss_main_0206005a.c:
     complete
     .bss        start:0x0206005a end:0x02060088
@@ -10760,6 +10764,14 @@ src/data/bss/Bss_main_02060f24.c:
 src/data/bss/Bss_main_020613cc.c:
     complete
     .bss        start:0x020613cc end:0x020613e0
+
+src/data/bss/EquipmentSlotWorkTail.c:
+    complete
+    .bss        start:0x02060058 end:0x0206005a
+
+src/data/bss/gEquipmentSlotWork.c:
+    complete
+    .bss        start:0x0205ffc8 end:0x02060058
 
 src/data/gConsoleTypeCache.c:
     complete
@@ -11013,6 +11025,10 @@ src/data/tables/gAsciiUppercaseMap.c:
     complete
     .rodata     start:0x02053274 end:0x020532f4
 
+src/data/tables/gBg0ControlHandlers.c:
+    complete
+    .rodata     start:0x02055778 end:0x02055780
+
 src/data/tables/gBg2AffineModeMap.c:
     complete
     .rodata     start:0x020556d8 end:0x020556f8
@@ -11092,6 +11108,10 @@ src/data/tables/gBillboardTranslation.c:
 src/data/tables/gCalendarMonthStarts.c:
     complete
     .rodata     start:0x02053418 end:0x0205344c
+
+src/data/tables/gCalendarTimeTemplate.c:
+    complete
+    .rodata     start:0x020533f4 end:0x02053418
 
 src/data/tables/gCameraAnimationForwardAxis.c:
     complete

@@ -1,6 +1,6 @@
 # Kingdom Hearts Re:coded decompilation
 
-A matching decompilation of *Kingdom Hearts Re:coded* (Nintendo DS, US `BK9E`).
+A matching decompilation of *Kingdom Hearts Re:coded* (Nintendo DS, US `BK9E` and EU `BK9P`).
 Every counted function is C that compiles to the original bytes exactly.
 
 ## Multi-region merge
@@ -18,11 +18,11 @@ maintained by [@ricky074game](https://github.com/ricky074game) and [@Yokimitsuro
 | Region | C code bytes | % | Functions |
 |---|---:|---:|---:|
 | **US** `BK9E` | 1,444,740 / 1,768,220 | **81.7%** | 9,960 / 10,359 |
-| **EU** `BK9P` | 1,450,394 / 1,658,216 | **87.5%** | 10,006 / 10,422 |
+| **EU** `BK9P` | 1,461,780 / 1,658,216 | **88.2%** | 10,048 / 10,423 |
 | US verified original assembly (not C) | 22,966 | 1.3% | 171 |
-| **Shared** (same function, matched in both) | 1,393,518 | 84.0% of EU | 9,375 |
+| **Shared** (same function, matched in both) | 1,390,212 | 83.8% of EU | 9,356 |
 
-8,185 shared functions are stored once in `src/` and built for both regions; 1,190 still have separate EU copies. 585 matched functions are US-only so far and 631 are EU-only. EU numbers come from `eu/tools/audit_progress.py`; per-module EU detail is in [eu/PROGRESS.md](eu/PROGRESS.md).
+8,168 shared functions are stored once in `src/` and built for both regions; 1,188 still have separate EU copies. 604 matched functions are US-only so far and 692 are EU-only. EU numbers come from `eu/tools/audit_progress.py`; per-module EU detail is in [eu/PROGRESS.md](eu/PROGRESS.md).
 <!-- regions:end -->
 
 US detail:

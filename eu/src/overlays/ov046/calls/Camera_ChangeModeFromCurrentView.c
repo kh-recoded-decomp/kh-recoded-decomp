@@ -1,5 +1,5 @@
 #define Camera_ChangeModeFromCurrentView_020c1014 Camera_ChangeModeFromCurrentView
 #define func_ov021_020af9dc GetSegmentState
 #define func_ov046_020c1038 Camera_SetViewMode
-#define g_cameraManager_020c34e0 data_ov046_020c3500
+#define g_cameraManager_020c34e0 gCameraManager
 #include "src/ov046/shared_engine/Camera_ChangeModeFromCurrentView_020c1014.c"

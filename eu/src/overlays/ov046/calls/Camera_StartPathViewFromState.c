@@ -11,7 +11,7 @@
 #define func_ov049_020c363c StartEventCameraFollow
 #define Camera_SetViewBuilder_020c2d4c Camera_SetViewBuilder
 #define func_ov046_020c0a70 Camera_UpdateController
-#define g_cameraManager_020c34e0 data_ov046_020c3500
+#define g_cameraManager_020c34e0 gCameraManager
 #define data_ov046_020c33a0 gCameraLayerIdsByMode
 #define CameraLayerIds_020c33a0 gCameraLayerIds
 #define Camera_FollowAlongViewDirection_020c2bec Camera_FollowAlongViewDirection

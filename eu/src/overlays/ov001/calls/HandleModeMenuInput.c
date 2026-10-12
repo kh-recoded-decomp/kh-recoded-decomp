@@ -1,4 +1,5 @@
 #define HandleModeMenuInput_0207a370 HandleModeMenuInput
+#define func_ov001_0207a73c MoveGridMenuRow
 #define func_ov001_0207a68c UpdateMessageWindow_0207a68c
 #define g_activeContext_020a04c4 data_ov001_020a04e4
 #include "src/ov001/field_manager/HandleModeMenuInput_0207a370.c"

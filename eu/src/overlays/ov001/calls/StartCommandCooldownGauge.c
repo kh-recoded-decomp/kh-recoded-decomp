@@ -1,4 +1,5 @@
 #include "nitro/types.h"
+#include "src/overlays/ov001/FieldCommandLabels.h"
 
 typedef struct GaugeArt {
     u8 pad_00[0x24];
@@ -33,7 +34,6 @@ typedef struct CommandRecord {
 } CommandRecord;
 
 extern u8 gTaskManager;
-extern u16 data_ov001_0209eee8[];
 
 extern void MIi_CpuCopyFast(const void *src, void *dst, u32 size);
 extern CommandRecord *GetRecordSlotPair1Entry(s32 index);
@@ -90,7 +90,7 @@ void StartCommandCooldownGauge(GaugeWindow *window, CooldownGauge *gauge, u32 ow
         *flags = record->kind == 3 ? (repeat == 0 ? (*flags & 0xfffe) : (*flags | 1)) : (*flags & 0xfffe);
     }
     if (record == NULL) {
-        DrawTextAnchored(window, 0, 4, 4, 0, data_ov001_0209eee8);
+        DrawTextAnchored(window, 0, 4, 4, 0, gFieldEmptyCommandLabel);
     } else {
         func_02001620(window, 0, 4, 2, 0, record->nameId, GetFieldFont1(), 0x38);
     }

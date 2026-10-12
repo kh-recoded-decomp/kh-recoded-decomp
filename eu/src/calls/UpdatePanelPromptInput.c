@@ -12,7 +12,7 @@ typedef struct PanelState {
 } PanelState;
 
 extern PanelState *gPanelState;
-extern u32 data_0205fde0;
+extern u32 gPreviousPanelActive;
 extern u16 data_02060500;
 
 extern void func_0202819c(void);
@@ -29,7 +29,7 @@ BOOL UpdatePanelPromptInput(void)
 {
     PanelState *panel = gPanelState;
 
-    if (data_0205fde0 == 0) {
+    if (gPreviousPanelActive == 0) {
         return TRUE;
     }
     if (panel->confirmed != 0) {

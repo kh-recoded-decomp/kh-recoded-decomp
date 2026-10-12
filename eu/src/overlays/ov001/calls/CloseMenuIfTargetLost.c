@@ -1,4 +1,5 @@
 #define CloseMenuIfTargetLost_0206bc20 CloseMenuIfTargetLost
+#define func_ov001_0206b614 IsEntryWithinFacingRange
 #define IsActorNearLeader_0206b8d4 IsActorNearLeader
 #define IsActorTargetable_0206b4a4 IsActorTargetable
 #define IsEventSlotInRange_0206b800 IsEventSlotInRange

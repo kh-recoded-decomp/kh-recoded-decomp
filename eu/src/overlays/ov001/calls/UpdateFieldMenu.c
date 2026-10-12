@@ -1,3 +1,4 @@
+#define data_0205fde4 gPanelActive
 #define FillBackgroundLayerRect_02001a60 FillBackgroundLayerRect
 #define GetSceneTagTracker_020711b0 GetSceneTagTracker
 #define NNSi_FndGetCurrentRootHeap_0202a764 NNSi_FndGetCurrentRootHeap

@@ -5,5 +5,5 @@
 #define func_ov001_0206fcc8 BackupSceneVram
 #define func_ov001_020701a8 ClearChoiceHighlight
 #define func_ov001_02077b90 SetFieldMenuSuspended
-#define g_currentActive_0205fde4 data_0205fde4
+#define g_currentActive_0205fde4 gPanelActive
 #include "src/ov001/field_manager/OpenFieldPanel_020717e4.c"

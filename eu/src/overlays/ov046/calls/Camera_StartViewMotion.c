@@ -2,5 +2,5 @@
 #define MTX_Copy43To33_01ff913c MTX_Copy43To33
 #define data_0205a970 NNS_G3dGlb_cameraMtx
 #define func_ov021_020afa70 InitLaunchedParticle
-#define g_cameraManager_020c34e0 data_ov046_020c3500
+#define g_cameraManager_020c34e0 gCameraManager
 #include "src/ov046/shared_engine/Camera_StartViewMotion_020c0f8c.c"

@@ -1,4 +1,5 @@
 #define AddSlotLevelProgress_0202900c AddSlotLevelProgress
 #define GetActiveRecordEntryOrNull_02029548 GetActiveRecordEntryOrNull
 #define TruncateToU16_02029568 TruncateToU16
+#define data_0205ffc8 gEquipmentSlotWork
 #include "src/arm9/record_management/AddSlotLevelProgress_0202900c.c"

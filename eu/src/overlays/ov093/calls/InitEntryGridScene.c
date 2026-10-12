@@ -22,7 +22,7 @@
 #define func_ov093_020c0fb0 func_ov093_020c0fd0
 #define func_ov093_020c1ca8 UpdateDragAreaBounds
 #define func_ov093_020c231c SetSceneState
-#define func_ov093_020c2b04 func_ov093_020c2b24
+#define func_ov093_020c2b04 LoadEntryGridTilesIncrementally
 #define func_ov093_020c3bdc func_ov093_020c3bfc
 #define g_sceneWork_020c50e0 data_ov093_020c5100
 #include "src/ov093/panel_state/InitEntryGridScene_020beb20.c"

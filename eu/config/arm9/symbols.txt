@@ -847,7 +847,7 @@ AllocFromHead kind:function(arm,size=0xb4) addr:0x02012eb0
 AllocFromTail kind:function(arm,size=0xb0) addr:0x02012f64
 RecycleRegion kind:function(arm,size=0xf0) addr:0x02013014
 NNS_FndCreateExpHeapEx kind:function(arm,size=0x38) addr:0x02013104
-PXI_Init_0201313c kind:function(arm,size=0xc) addr:0x0201313c
+NNS_FndDestroyExpHeap kind:function(arm,size=0xc) addr:0x0201313c
 NNS_FndAllocFromExpHeapEx kind:function(arm,size=0x30) addr:0x02013148
 FreeExpandedHeapBlock kind:function(arm,size=0x160) addr:0x02013178
 NNS_FndFreeToExpHeap kind:function(arm,size=0x40) addr:0x020132d8
@@ -1523,7 +1523,7 @@ WriteGlobalPackedBits kind:function(thumb,size=0x1c) addr:0x02027374
 AddClampedGlobalPackedBits kind:function(thumb,size=0x2a) addr:0x02027390
 GetBit26Flag kind:function(thumb,size=0x18) addr:0x020273bc
 GetSlotFlagsField kind:function(thumb,size=0x14) addr:0x020273d4
-func_020273e8 kind:function(thumb,size=0x184) addr:0x020273e8
+UpdateElapsedIntervals kind:function(thumb,size=0x184) addr:0x020273e8
 InitDifficultyConfigBlock kind:function(thumb,size=0x70) addr:0x0202756c
 CheckStatusAndThreshold kind:function(thumb,size=0x1a) addr:0x020275dc
 CountSetBitsInMainFlagArray kind:function(thumb,size=0x38) addr:0x020275f8
@@ -1620,10 +1620,10 @@ func_02029fac kind:function(arm,size=0x20) addr:0x02029fac
 CreateEngineHeaps kind:function(arm,size=0x88) addr:0x02029fcc
 InitEngineHeaps kind:function(arm,size=0x74) addr:0x0202a054
 CreateHeapRecord kind:function(arm,size=0x3c) addr:0x0202a0c8
-func_0202a104 kind:function(arm,size=0x44) addr:0x0202a104
+ResetHeapRecord kind:function(arm,size=0x44) addr:0x0202a104
 SetDefaultHeap kind:function(arm,size=0x24) addr:0x0202a148
 Heap_GetCurrent kind:function(arm,size=0x10) addr:0x0202a16c
-NNS_SndPlayerPause_0202a17c kind:function(arm,size=0x10) addr:0x0202a17c
+DestroyHeapRecord kind:function(arm,size=0x10) addr:0x0202a17c
 NNSi_FndAllocFromDefaultHeap kind:function(arm,size=0x24) addr:0x0202a18c
 NNS_FndAllocFromDefaultExpHeapEx kind:function(arm,size=0x28) addr:0x0202a1b0
 NNSi_FndFreeFromDefaultHeap kind:function(arm,size=0x20) addr:0x0202a1d8
@@ -2624,7 +2624,7 @@ cAdpcmTablePadding kind:data(byte[2]) addr:0x020531f2
 sLowerCaseMap kind:data(byte[128]) addr:0x020531f4
 gAsciiUppercaseMap kind:data(any) addr:0x02053274
 gAsciiCtypeFlags kind:data(any) addr:0x020532f4
-data_020533f4 kind:data(any) addr:0x020533f4
+gCalendarTimeTemplate kind:data(any) addr:0x020533f4
 gCalendarMonthStarts kind:data(any) addr:0x02053418
 gZeroVecFx32 kind:data(any) addr:0x0205344c
 gIdentityMtxFx33 kind:data(any) addr:0x02053458
@@ -2663,6 +2663,7 @@ gBg2TextModeMap kind:data(word[8]) addr:0x020556f8
 gBgScreenTransferDestinationsCopy kind:data(word[8]) addr:0x02055718
 gBgCharacterTransferDestinations kind:data(word[8]) addr:0x02055738
 gBgScreenTransferDestinations kind:data(word[8]) addr:0x02055758
+gBg0ControlHandlers kind:data(any) addr:0x02055778
 gBg0TransferDispatch kind:data(any) addr:0x02055780
 gBgLayerTransferDispatch kind:data(any) addr:0x02055788
 gMatrixCorrectionQuaternion kind:data(word[4]) addr:0x02055838
@@ -2783,7 +2784,7 @@ sMain_DbLanguageP2_020561a4 kind:data(any) addr:0x020561a4
 SDK_OVERLAY_DIGEST kind:data(any) addr:0x020561ac
 SDK_OVERLAY_DIGEST_END kind:data(any) addr:0x020561ac
 sOverlayDigestPadding kind:data(byte[20]) addr:0x020561ac
-data_020561c0 kind:bss addr:0x020561c0
+gMainDisplayState kind:bss addr:0x020561c0
 data_020569c8 kind:bss addr:0x020569c8
 gVBlankCallbackState kind:bss addr:0x020569cc
 data_020569d8 kind:bss addr:0x020569d8
@@ -2976,8 +2977,8 @@ __global_destructor_chain kind:bss addr:0x0205fdc0
 gPanelEnabled kind:bss addr:0x0205fdc4
 data_0205fdc8 kind:bss addr:0x0205fdc8
 data_0205fdd4 kind:bss addr:0x0205fdd4
-data_0205fde0 kind:bss addr:0x0205fde0
-data_0205fde4 kind:bss addr:0x0205fde4
+gPreviousPanelActive kind:bss addr:0x0205fde0
+gPanelActive kind:bss addr:0x0205fde4
 gBusyCounterState kind:bss addr:0x0205fde8
 gSceneController kind:bss addr:0x0205fdec
 gSceneControllerStorage kind:bss addr:0x0205fdec
@@ -2993,7 +2994,8 @@ data_0205fe8c kind:bss addr:0x0205fe8c
 data_0205fea8 kind:bss addr:0x0205fea8
 data_0205fec4 kind:bss addr:0x0205fec4
 gRecordCounters kind:bss addr:0x0205ffc4
-data_0205ffc8 kind:bss addr:0x0205ffc8
+gEquipmentSlotWork kind:bss addr:0x0205ffc8
+data_02060058 kind:bss addr:0x02060058
 data_0206005a kind:bss addr:0x0206005a
 data_02060088 kind:bss addr:0x02060088
 data_02060388 kind:bss addr:0x02060388

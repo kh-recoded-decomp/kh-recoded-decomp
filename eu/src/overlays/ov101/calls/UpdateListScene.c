@@ -2,8 +2,8 @@
 
 extern void (*const gOv101Callbacks[])(ListSceneState *scene);
 extern u32 GetStatePhase(void);
-extern void func_ov101_020bfab8(int page, ListSceneState *scene);
-extern void func_ov101_020c0df4(ListSceneState *scene);
+extern void DrawListPanelText(int page, ListSceneState *scene);
+extern void UpdateDescriptionScrollInput(ListSceneState *scene);
 extern void InitStateLists(ListSceneState *scene);
 extern void UpdatePageBufferPositions(ListSceneState *scene);
 
@@ -17,9 +17,9 @@ void UpdateListScene(ListSceneState *scene)
     if (++scene->captionRefreshFrames >= 60) {
         scene->captionRefreshFrames = 0;
         scene->captionRefreshPhase = (scene->captionRefreshPhase + 1) % 2;
-        func_ov101_020bfab8(0, scene);
+        DrawListPanelText(0, scene);
     }
-    func_ov101_020c0df4(scene);
+    UpdateDescriptionScrollInput(scene);
     InitStateLists(scene);
     UpdatePageBufferPositions(scene);
 }

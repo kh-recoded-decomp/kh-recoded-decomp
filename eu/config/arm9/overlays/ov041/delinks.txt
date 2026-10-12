@@ -56,6 +56,10 @@ src/overlays/ov041/calls/GetStageKindMusicId.c:
     complete
     .text       start:0x020bce40 end:0x020bceec
 
+src/overlays/ov041/calls/CreateStageResourceGroup.c:
+    complete
+    .text       start:0x020bd48c end:0x020bd64c
+
 src/overlays/ov041/calls/GetOrOpenMessageContainer.c:
     complete
     .text       start:0x020bd64c end:0x020bd6ac
@@ -144,9 +148,25 @@ src/overlays/ov041/calls/FindFreeSlotId.c:
     complete
     .text       start:0x020c21d0 end:0x020c21f4
 
+src/overlays/ov041/calls/UpdateStageEntryAnimation.c:
+    complete
+    .text       start:0x020c21f4 end:0x020c2324
+
+src/overlays/ov041/calls/DrawStageEntryModels.c:
+    complete
+    .text       start:0x020c2324 end:0x020c23ec
+
 src/overlays/ov041/calls/UpdateStageShadowActor.c:
     complete
     .text       start:0x020c23ec end:0x020c2450
+
+src/overlays/ov041/calls/DrawTrackedStageShadow.c:
+    complete
+    .text       start:0x020c2450 end:0x020c24dc
+
+src/overlays/ov041/calls/DrawStagePrimaryModel.c:
+    complete
+    .text       start:0x020c24dc end:0x020c2538
 
 src/overlays/ov041/calls/InstallModelRenderCallback.c:
     complete
@@ -420,10 +440,6 @@ src/overlays/ov041/data/Rodata_ov041_020cf6ac.c:
     complete
     .rodata     start:0x020cf6ac end:0x020cf710
 
-src/overlays/ov041/data/Rodata_ov041_020cf740.c:
-    complete
-    .rodata     start:0x020cf740 end:0x020cf750
-
 src/overlays/ov041/data/Rodata_ov041_020cf750.c:
     complete
     .rodata     start:0x020cf750 end:0x020cf760
@@ -523,3 +539,7 @@ src/overlays/ov041/data/strings/Strings_ov041_020cfac0.c:
 src/overlays/ov041/data/tables/gOv041ResourceSets.c:
     complete
     .data       start:0x020cfac8 end:0x020cfae0
+
+src/overlays/ov041/data/tables/gStageShadowHeights.c:
+    complete
+    .rodata     start:0x020cf740 end:0x020cf750

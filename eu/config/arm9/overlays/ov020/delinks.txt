@@ -136,6 +136,10 @@ src/overlays/ov020/calls/ApplyTypeCapabilityFlag.c:
     complete
     .text       start:0x020a3158 end:0x020a316e
 
+src/overlays/ov020/calls/RefreshStackedBlockCollision.c:
+    complete
+    .text       start:0x020a3170 end:0x020a3212
+
 src/overlays/ov020/calls/CreatePanelEntryPool.c:
     complete
     .text       start:0x020a3214 end:0x020a3298

@@ -15,7 +15,7 @@ typedef struct FieldHudHandle {
 } FieldHudHandle;
 
 extern FieldHudHandle data_ov001_020a04c4;
-extern BOOL data_0205fde4;
+extern BOOL gPanelActive;
 extern BOOL IsHudFlag9Set(void);
 extern void *GetSceneTagTracker(void);
 extern void *FindActiveRecordById(void *pool, u32 recordId);
@@ -42,7 +42,7 @@ void SetFieldSlotHudRecord(int slot, int kind, BOOL useKind)
         int index = MapFieldSlotIndex(slot);
         FieldSlotHud *manager = data_ov001_020a04c4.manager;
 
-        if (manager->slotLabelsDirty || data_0205fde4) {
+        if (manager->slotLabelsDirty || gPanelActive) {
             manager->slotRecords[index] = record;
             return;
         }

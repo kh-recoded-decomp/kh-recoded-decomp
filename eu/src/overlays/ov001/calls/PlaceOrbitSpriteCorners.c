@@ -1,3 +1,4 @@
+#define data_0205fde4 gPanelActive
 #define PlaceOrbitSpriteCorners_0207e598 PlaceOrbitSpriteCorners
 #define SetSpriteRectIfIdle_0207e4c8 SetSpriteRectIfIdle
 #define data_0205356c gSinFx12Table

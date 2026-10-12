@@ -3,6 +3,28 @@
     {
       "module": "ov001",
       "section": ".rodata",
+      "start": "0x0209d9b4",
+      "end": "0x0209d9d0",
+      "source": "src/overlays/ov001/data/tables/gEffectTexturePresets.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gEffectTexturePresets",
+      "origin": "SpawnEffect texture presets",
+      "behavior": "Seven four-byte presets: a signed texture-slot index, signed parameters copied to Effect fields 0x1e and 0x1f, and an unused zero byte. Detailed parameter semantics remain unproven."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209ef44",
+      "end": "0x0209ef58",
+      "source": "src/overlays/ov001/data/tables/gPanelModeDataPointers.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gPanelModeDataPointers",
+      "origin": "EU original DATA",
+      "behavior": "Five panel-mode data pointers paired with overlay IDs 23, 24, 25, 23 and 26."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
       "start": "0x0209d8a0",
       "end": "0x0209d8c8",
       "source": "src/overlays/ov001/data/tables/gScriptHandlerBindingsSlot8.c",
@@ -4894,11 +4916,11 @@
       "section": ".rodata",
       "start": "0x020cf740",
       "end": "0x020cf750",
-      "source": "src/overlays/ov041/data/Rodata_ov041_020cf740.c",
-      "compiler": "mwccarm-4.0-1036",
-      "name": "ov041 data words",
-      "origin": "generated words",
-      "behavior": "Initialised data words, pointers named by their targets."
+      "source": "src/overlays/ov041/data/tables/gStageShadowHeights.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gStageShadowHeights",
+      "origin": "EU original DATA",
+      "behavior": "Four fixed-point Y coordinates selected by stageWork->shadowHeightIndex when drawing the ground-shadow model."
     },
     {
       "module": "ov041",
@@ -7742,11 +7764,11 @@
       "section": ".rodata",
       "start": "0x020c3c74",
       "end": "0x020c3c88",
-      "source": "src/ov093/data/Rodata_ov093_020c3c74.c",
+      "source": "src/overlays/ov093/data/tables/gEntryGridColumnStarts.c",
       "compiler": "mwccarm-3.0-139",
-      "name": "ov093 data words",
+      "name": "gEntryGridColumnStarts",
       "origin": "generated words",
-      "behavior": "Initialised data words, pointers named by their targets."
+      "behavior": "Five column start offsets in the 27-tile-wide entry-grid background."
     },
     {
       "module": "ov093",
@@ -7764,11 +7786,11 @@
       "section": ".rodata",
       "start": "0x020c3cb8",
       "end": "0x020c3cf4",
-      "source": "src/ov093/data/Rodata_ov093_020c3cb8.c",
+      "source": "src/overlays/ov093/data/tables/gEntryGridBatchBoundaries.c",
       "compiler": "mwccarm-3.0-139",
-      "name": "ov093 data words",
+      "name": "gEntryGridBatchBoundaries and adjacent IDs",
       "origin": "generated words",
-      "behavior": "Initialised data words, pointers named by their targets."
+      "behavior": "Seven boundaries for six five-entry upload batches, followed by eight original IDs."
     },
     {
       "module": "ov093",
@@ -9763,6 +9785,28 @@
     {
       "module": "ov001",
       "section": ".data",
+      "start": "0x0209ee4c",
+      "end": "0x0209ee60",
+      "source": "src/overlays/ov001/data/tables/gFieldHudGaugeTaskDescriptor.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gFieldHudGaugeTaskDescriptor",
+      "origin": "EU original DATA",
+      "behavior": "Gauge widget task descriptor: initializer, buffer cleanup, work size and parameter."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209eebc",
+      "end": "0x0209eed0",
+      "source": "src/overlays/ov001/data/tables/gFieldMenuTaskDescriptor.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gFieldMenuTaskDescriptor",
+      "origin": "EU original DATA",
+      "behavior": "Field menu task descriptor: initializer, shutdown, work size and parameter."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
       "start": "0x0209ef10",
       "end": "0x0209ef24",
       "source": "src/overlays/ov001/data/tables/gFieldHudTimerTaskDescriptor.c",
@@ -9913,6 +9957,237 @@
       "name": "gMenuScreenLayerConfig",
       "origin": "EU original DATA",
       "behavior": "Menu-screen pool capacities and piece draw/clear callbacks."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209da7a",
+      "end": "0x0209da94",
+      "source": "src/overlays/ov001/data/tables/gRandomEnemyDropIds.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gRandomEnemyDropIds",
+      "origin": "EU original DATA",
+      "behavior": "RollEnemyDrop chooses one of these thirteen reward IDs for random drop 0xcf."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209da94",
+      "end": "0x0209da9c",
+      "source": "src/overlays/ov001/data/tables/gCenteredScreenSpritePosition.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gCenteredScreenSpritePosition",
+      "origin": "EU original DATA",
+      "behavior": "Fixed-point center position for the screen sprite."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209da9c",
+      "end": "0x0209daa8",
+      "source": "src/overlays/ov001/data/tables/gCenteredScreenSpriteVariants.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gCenteredScreenSpriteVariants",
+      "origin": "EU original DATA",
+      "behavior": "Ten resource variants followed by two original alignment bytes."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209daa8",
+      "end": "0x0209dab4",
+      "source": "src/overlays/ov001/data/tables/gIrisFrameBaseScale.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gIrisFrameBaseScale",
+      "origin": "EU original DATA",
+      "behavior": "Unit model scale used by UpdateIrisFrame before drawing screen borders."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209dab4",
+      "end": "0x0209dac4",
+      "source": "src/overlays/ov001/data/tables/gButtonPanelOffsets.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gButtonPanelOffsets",
+      "origin": "EU original DATA",
+      "behavior": "Four horizontal button offsets in the panel."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209dac4",
+      "end": "0x0209dae4",
+      "source": "src/overlays/ov001/data/tables/gCornerItemOffsets.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gCornerItemOffsets",
+      "origin": "EU original DATA",
+      "behavior": "Four fixed-point corner offsets around the supplied center."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209db2c",
+      "end": "0x0209db48",
+      "source": "src/overlays/ov001/data/tables/gManagerSpriteFileIds.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gManagerSpriteFileIds",
+      "origin": "EU original DATA",
+      "behavior": "Seven sprite resources loaded into manager-owned slots."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209dbb4",
+      "end": "0x0209dbbc",
+      "source": "src/overlays/ov001/data/tables/gSlotLabelMessageIds.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gSlotLabelMessageIds",
+      "origin": "EU original DATA",
+      "behavior": "Two message IDs used by assigned slot label windows."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209f194",
+      "end": "0x0209f2e8",
+      "source": "src/overlays/ov001/data/tables/gActorBoxDisplayList.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gActorBoxDisplayList",
+      "origin": "EU original DATA",
+      "behavior": "Packed GX commands draw the same six-sided box twice with different polygon attributes."
+    },
+    {
+      "module": "main",
+      "section": ".rodata",
+      "start": "0x02055778",
+      "end": "0x02055780",
+      "source": "src/data/tables/gBg0ControlHandlers.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gBg0ControlHandlers",
+      "origin": "EU original DATA",
+      "behavior": "Leading control callbacks for the BG0 transfer entry: the five-argument main BG0 text-control setter and an absent basic-control setter."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209f2e8",
+      "end": "0x0209f2ec",
+      "source": "src/overlays/ov001/data/tables/g_stageEventsState.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "g_stageEventsState",
+      "origin": "EU original DATA",
+      "behavior": "The stage-event service begins inactive, encoded as -1."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209f2ec",
+      "end": "0x0209f300",
+      "source": "src/overlays/ov001/data/tables/gOverlayObjectSystemClass.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gOverlayObjectSystemClass",
+      "origin": "EU original DATA",
+      "behavior": "Typed lifecycle descriptor for the overlay object system: flags, initializer, shutdown callback, manager work size and reserved pointer."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209eee8",
+      "end": "0x0209ef00",
+      "source": "src/overlays/ov001/data/tables/gFieldEmptyCommandLabel.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gFieldEmptyCommandLabel",
+      "origin": "EU original DATA",
+      "behavior": "UTF-16 ten-dash placeholder used by empty field command slots and cooldown gauges, including the terminator and original alignment padding."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209ef00",
+      "end": "0x0209ef10",
+      "source": "src/overlays/ov001/data/tables/gFieldFinishCommandLabel.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gFieldFinishCommandLabel",
+      "origin": "EU original DATA",
+      "behavior": "UTF-16 Finish label used when initializing the field command menu, including the terminator and original alignment padding."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209ef88",
+      "end": "0x0209efb4",
+      "source": "src/overlays/ov001/data/tables/gFieldTextFormats.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gFieldTextFormats",
+      "origin": "EU original DATA",
+      "behavior": "Typed contiguous UTF-16 block containing the empty field-mode/panel fallback, space-colon-space and colon-space separators, single-string format and three-string concatenation format. All original terminators and alignment padding are retained."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209ede4",
+      "end": "0x0209edec",
+      "source": "src/overlays/ov001/data/tables/gFieldChoiceStringFormat.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gFieldChoiceStringFormat",
+      "origin": "EU original DATA",
+      "behavior": "UTF-16 single-string format used by field choice value text, including its terminator and alignment padding."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209edec",
+      "end": "0x0209ee14",
+      "source": "src/overlays/ov001/data/tables/gHudGaugeTable.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gHudGaugeTable",
+      "origin": "EU original DATA",
+      "behavior": "Mutable HUD gauge table: original -1 header and three typed layout rows containing packed asset offset, buffer size and drawable cell count."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209dfc4",
+      "end": "0x0209dfcc",
+      "source": "src/overlays/ov001/data/tables/gCounterHudDigitPosition.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gCounterHudDigitPosition",
+      "origin": "EU original DATA",
+      "behavior": "Fixed-point center position (128, 30) used by the counter HUD digit renderer."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209ee60",
+      "end": "0x0209eeba",
+      "source": "src/overlays/ov001/data/tables/gFieldMenuPalettes.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gFieldMenuPalettes",
+      "origin": "EU original DATA; shared US palette values cross-checked",
+      "behavior": "Seven RGB555 palette tables: blue/red/green ramps, normal and alternate mode ramps, and three-row background/highlight palettes. Every emitted symbol was independently checked against the EU image; two trailing alignment bytes remain unclaimed."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209d9d0",
+      "end": "0x0209d9e2",
+      "source": "src/overlays/ov001/data/tables/gAreaSoundArchiveIds.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gAreaSoundArchiveIds",
+      "origin": "EU original DATA",
+      "behavior": "Nine signed sequence archive IDs indexed by area mode; -1 means no additional archive. QueueAreaSoundArchives consumes the table."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209d9e2",
+      "end": "0x0209da18",
+      "source": "src/overlays/ov001/data/tables/gUnlockedAreaSoundArchiveIds.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gUnlockedAreaSoundArchiveIds",
+      "origin": "EU original DATA",
+      "behavior": "Seventeen rows of three byte-sized sequence archive IDs, selected by each unlocked-area bit and the active variant mask. A final reserved zero row preserves the original three alignment bytes without introducing an extra area or a separately aligned linker gap."
     }
   ]
 }

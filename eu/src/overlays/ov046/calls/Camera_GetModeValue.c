@@ -2,5 +2,5 @@
 
 s32 Camera_GetModeValue(void)
 {
-    return data_ov046_020c3500->mode;
+    return gCameraManager->mode;
 }

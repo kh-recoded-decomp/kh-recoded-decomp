@@ -2,5 +2,5 @@
 #define Camera_RestoreSnapshot_020c0e38 Camera_RestoreSnapshot
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define func_01ff9f88 VEC_Normalize
-#define g_cameraManager_020c34e0 data_ov046_020c3500
+#define g_cameraManager_020c34e0 gCameraManager
 #include "src/ov046/shared_engine/Camera_RestoreSnapshot_020c0e38.c"

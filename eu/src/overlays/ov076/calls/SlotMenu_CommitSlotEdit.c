@@ -1,4 +1,4 @@
 #define SlotMenu_CommitSlotEdit_020c8908 SlotMenu_CommitSlotEdit
 #define SlotMenu_ReloadSlot_020c6f60 SlotMenu_ReloadSlot
-#define func_ov076_020c83e4 func_ov076_020c8404
+#define func_ov076_020c83e4 SlotMenu_BeginSlotTransition
 #include "src/ov076/unclassified_helpers/SlotMenu_CommitSlotEdit_020c8908.c"

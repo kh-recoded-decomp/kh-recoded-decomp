@@ -1,3 +1,4 @@
+#define data_0205fde4 gPanelActive
 #define AlarmCallback_0206ad1c func_ov001_0206ad1c
 #define SetSpriteRectIfIdle_0207e4c8 SetSpriteRectIfIdle
 #include "src/ov001/unclassified_helpers/SetSpriteRectIfIdle_0207e4c8.c"

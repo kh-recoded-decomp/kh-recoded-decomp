@@ -1,3 +1,4 @@
+#define data_0205fde4 gPanelActive
 #define GFXi_EnqueueCommand_02014090 NNS_GfdRegisterNewVramTransferTask
 #define IsFieldPanelHidden_0207187c IsFieldPanelHidden
 #define PXI_Init_02028dac PXI_Init_02028dc0

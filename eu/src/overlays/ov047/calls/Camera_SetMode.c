@@ -3,5 +3,5 @@
 #define func_ov046_020c19f0 Camera_GetModeDistance
 #define func_ov046_020c1a48 func_ov046_020c1a68
 #define func_ov046_020c1a70 Camera_ComputeFollowDistance
-#define g_cameraManager_020c34e0 data_ov046_020c3500
+#define g_cameraManager_020c34e0 gCameraManager
 #include "src/ov047/camera/Camera_SetMode_020c36c8.c"

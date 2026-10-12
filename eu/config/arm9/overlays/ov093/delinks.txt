@@ -228,6 +228,10 @@ src/overlays/ov093/auto/func_ov093_020c2b20.c:
     complete
     .text       start:0x020c2b20 end:0x020c2b24
 
+src/overlays/ov093/calls/LoadEntryGridTilesIncrementally.c:
+    complete
+    .text       start:0x020c2b24 end:0x020c2c9c
+
 src/overlays/ov093/calls/GetPopupDefinition.c:
     complete
     .text       start:0x020c2c9c end:0x020c2cac
@@ -424,17 +428,9 @@ src/ov093/data/Rodata_ov093_020c3c60.c:
     complete
     .rodata     start:0x020c3c60 end:0x020c3c74
 
-src/ov093/data/Rodata_ov093_020c3c74.c:
-    complete
-    .rodata     start:0x020c3c74 end:0x020c3c88
-
 src/ov093/data/Rodata_ov093_020c3c88.c:
     complete
     .rodata     start:0x020c3c88 end:0x020c3c9c
-
-src/ov093/data/Rodata_ov093_020c3cb8.c:
-    complete
-    .rodata     start:0x020c3cb8 end:0x020c3cf4
 
 src/ov093/data/Rodata_ov093_020c3cf4.c:
     complete
@@ -491,6 +487,14 @@ src/overlays/ov093/data/strings/Strings_ov093_020c4d54.c:
 src/overlays/ov093/data/tables/PointerTables_ov093_020c3ea0.c:
     complete
     .data       start:0x020c3ea0 end:0x020c3ebc
+
+src/overlays/ov093/data/tables/gEntryGridBatchBoundaries.c:
+    complete
+    .rodata     start:0x020c3cb8 end:0x020c3cf4
+
+src/overlays/ov093/data/tables/gEntryGridColumnStarts.c:
+    complete
+    .rodata     start:0x020c3c74 end:0x020c3c88
 
 src/overlays/ov093/data/tables/gTrophyReportStateHandlers.c:
     complete

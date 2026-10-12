@@ -98,7 +98,7 @@ extern void func_ov001_02065f04(void);
 extern void func_ov001_02065f20(void); /* FS_UnloadOverlayImage */
 extern void func_ov001_02065f2c(void); /* MsgQueue_GetHeap */
 extern void func_ov001_02065f38(void); /* thumbStep */
-extern void func_ov001_02065f4c(void); /* ScriptCmd_EnterPhase */
+extern void ScriptCmd_AwardSlotLevelProgress(void);
 extern void func_ov001_02065f5c(void); /* ScriptCmd_SetLinkMode */
 extern void func_ov001_02065f80(void); /* FS_UnloadOverlayImage */
 extern void ScriptCmd_RestoreSelectionRecordValue(void); /* ScriptCmd_RestoreSelectionRecordValue */
@@ -286,7 +286,7 @@ void (*gFieldScriptCommandHandlers[190])(void) = {
     NULL,
     func_ov001_02065f2c, /* MsgQueue_GetHeap */
     func_ov001_02065f38, /* thumbStep */
-    func_ov001_02065f4c, /* ScriptCmd_EnterPhase */
+    ScriptCmd_AwardSlotLevelProgress,
     NULL,
     func_ov001_02065f5c, /* ScriptCmd_SetLinkMode */
     NULL,

@@ -1,6 +1,6 @@
 #define LoadCenteredScreenSprite_0206a860 LoadCenteredScreenSprite
-#define data_ov001_0209da6c data_ov001_0209da94
-#define data_ov001_0209da74 data_ov001_0209da9c
+#define data_ov001_0209da6c gCenteredScreenSpritePosition
+#define data_ov001_0209da74 gCenteredScreenSpriteVariants
 #define data_ov001_020a0480 data_ov001_020a04a0
 #define func_ov001_02069fb4 LoadSlotTextureFile
 #include "src/ov001/unclassified_helpers/LoadCenteredScreenSprite_0206a860.c"

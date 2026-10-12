@@ -2,5 +2,5 @@
 #define GetBiasAdjustedField_0206dc80 GetBiasAdjustedField
 #define func_ov046_020c0d68 Camera_GetModeValue
 #define func_ov046_020c2ab8 func_ov046_020c2ad8
-#define g_cameraManager_020c34e0 data_ov046_020c3500
+#define g_cameraManager_020c34e0 gCameraManager
 #include "src/ov046/shared_engine/Camera_RefreshTargetHeading_020c2bac.c"

@@ -9,6 +9,7 @@ extern const UnlockEntry gUnlockNoticeEntries[];
 extern BOOL IsGlobalPackedBitSet(u32 bitIndex);
 extern void SetGlobalPackedBit(u32 bitIndex);
 
+#pragma opt_common_subs off
 BOOL CheckOrMarkUnlockNoticeSeen(int unlockId, BOOL queryOnly)
 {
     u8 flagIndex = gUnlockNoticeEntries[unlockId].flagIndex;
@@ -20,13 +21,8 @@ BOOL CheckOrMarkUnlockNoticeSeen(int unlockId, BOOL queryOnly)
     }
 
     if (!seen && !queryOnly) {
-        u32 bitIndex;
-
-        asm {
-            mov bitIndex, #0xf5
-            lsl bitIndex, bitIndex, #4
-        }
-        SetGlobalPackedBit(flagIndex + bitIndex);
+        SetGlobalPackedBit(flagIndex + 0xf50);
     }
     return seen;
 }
+#pragma opt_common_subs on

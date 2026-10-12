@@ -5,4 +5,5 @@
 #define IsModeSetOrFlag370aClear_0207259c IsModeSetOrFlag370aClear
 #define data_ov001_020a04b0 data_ov001_020a04d0
 #define func_ov001_02075348 CycleMenuEntry
+#define func_ov001_02075d74 UploadFieldMenuRamp
 #include "src/ov001/field_manager/FieldMenu_TryOpenByMode_02077d64.c"

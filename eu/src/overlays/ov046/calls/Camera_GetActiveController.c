@@ -3,5 +3,5 @@
 #define func_ov048_020c3844 func_ov048_020c3864
 #define func_ov049_020c4220 func_ov049_020c4240
 #define func_ov050_020c3b9c func_ov050_020c3bbc
-#define g_cameraManager_020c34e0 data_ov046_020c3500
+#define g_cameraManager_020c34e0 gCameraManager
 #include "src/ov046/shared_engine/Camera_GetActiveController_020c15a4.c"

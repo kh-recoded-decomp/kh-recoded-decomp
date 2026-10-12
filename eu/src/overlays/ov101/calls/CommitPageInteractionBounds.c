@@ -11,10 +11,10 @@ void CommitPageInteractionBounds(ListSceneState *scene)
     scene->interactionActive = FALSE;
     RuntimeState_SetCondition(TRUE);
     global = data_ov101_020c5920;
-    clip = &global->interactionClip;
+    clip = &global->pageDrag.clip;
     bounds = &scene->interactionBounds;
-    clip->maxX = bounds->originX + bounds->maxX;
-    clip->maxY = bounds->originY + bounds->maxY;
-    global->interactionClip.minX = bounds->originX + bounds->minX;
-    clip->minY = bounds->originY + bounds->minY;
+    clip->minX = bounds->originX + bounds->x1;
+    clip->minY = bounds->originY + bounds->y1;
+    global->pageDrag.clip.maxX = bounds->originX + bounds->x0;
+    clip->maxY = bounds->originY + bounds->y0;
 }

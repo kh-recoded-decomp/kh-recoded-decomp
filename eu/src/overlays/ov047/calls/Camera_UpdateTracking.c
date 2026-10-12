@@ -6,5 +6,5 @@
 #define func_ov047_020c5d90 Camera_HandleDistanceToggle
 #define func_ov047_020c5e1c Camera_ConstrainEye
 #define func_ov047_020c603c Camera_UpdateUpVector
-#define g_cameraManager_020c34e0 data_ov046_020c3500
+#define g_cameraManager_020c34e0 gCameraManager
 #include "src/ov047/camera/Camera_UpdateTracking_020c631c.c"

@@ -56,6 +56,10 @@ src/overlays/ov076/calls/SlotMenu_Update.c:
     complete
     .text       start:0x020c4b68 end:0x020c4cc0
 
+src/overlays/ov076/calls/SlotMenu_UpdateStatusHeader.c:
+    complete
+    .text       start:0x020c4cc0 end:0x020c4db4
+
 src/overlays/ov076/calls/SlotMenu_UpdateBrowse.c:
     complete
     .text       start:0x020c4db4 end:0x020c4e9c
@@ -236,6 +240,10 @@ src/overlays/ov076/calls/SlotMenu_DrawSlotModels_020c7708.c:
     complete
     .text       start:0x020c7728 end:0x020c7a7c
 
+src/overlays/ov076/calls/SlotMenu_UpdateCursorLayout.c:
+    complete
+    .text       start:0x020c7a7c end:0x020c7b64
+
 src/overlays/ov076/calls/SlotMenu_UploadLabel.c:
     complete
     .text       start:0x020c7b64 end:0x020c7c0c
@@ -267,6 +275,10 @@ src/overlays/ov076/calls/SlotMenu_EquipSlotEntry.c:
 src/overlays/ov076/calls/SlotMenu_OpenSlotMessage.c:
     complete
     .text       start:0x020c83a8 end:0x020c8404
+
+src/overlays/ov076/calls/SlotMenu_BeginSlotTransition.c:
+    complete
+    .text       start:0x020c8404 end:0x020c84b0
 
 src/overlays/ov076/calls/SlotMenu_StartScrollAnimation.c:
     complete

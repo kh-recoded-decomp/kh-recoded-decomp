@@ -1,3 +1,4 @@
+#define data_0205fde4 gPanelActive
 #define FS_UnloadOverlayImage_0204f5dc FS_UnloadOverlayImage_0204f5f0
 #define PushTextWindowHistory_020be928 PushTextWindowHistory
 #define UpdateTextWindows_020be9a0 UpdateTextWindows

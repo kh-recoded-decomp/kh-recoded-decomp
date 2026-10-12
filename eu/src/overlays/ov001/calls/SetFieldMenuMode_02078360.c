@@ -3,8 +3,8 @@
 #define GetSceneTagTracker_020711b0 GetSceneTagTracker
 #define InvokeCallback40_020b8268 func_ov027_020b8288
 #define IsFieldFlag8Set_020728a4 IsFieldFlag8Set
-#define data_ov001_0209ee6a data_ov001_0209ee8a
-#define data_ov001_0209ee82 data_ov001_0209eea2
+#define data_ov001_0209ee6a gFieldMenuModeBackgroundPalettes
+#define data_ov001_0209ee82 gFieldMenuModeHighlightPalettes
 #define data_ov001_020a04b0 data_ov001_020a04d0
 #define func_ov001_020769f4 DrawMenuPanelPage
 #include "src/ov001/field_manager/SetFieldMenuMode_02078360.c"

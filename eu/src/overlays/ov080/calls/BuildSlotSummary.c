@@ -6,7 +6,7 @@
 #define RebuildRecordCounters_02028e6c RebuildRecordCounters
 #define data_ov080_020c5ddc data_ov080_020c5dfc
 #define data_ov080_020c5de4 data_ov080_020c5e04
-#define func_020273d4 func_020273e8
+#define func_020273d4 UpdateElapsedIntervals
 #define func_02050a44 func_02050a58
 #define func_ov039_020bcb20 func_ov039_020bcb40
 #define func_ov039_020be64c FormatPlayTimeText

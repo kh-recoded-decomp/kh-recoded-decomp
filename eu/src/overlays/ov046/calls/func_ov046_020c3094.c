@@ -10,5 +10,5 @@
 #define data_0205356c gSinFx12Table
 #define func_0203ad14 MakeSphereShape
 #define func_ov046_020c2cb8 Camera_GetEventFocusPoint
-#define g_cameraManager_020c34e0 data_ov046_020c3500
+#define g_cameraManager_020c34e0 gCameraManager
 #include "src/ov046/shared_engine/Camera_FindOpenAngle_020c3074.c"

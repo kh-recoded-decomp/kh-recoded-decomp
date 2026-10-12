@@ -9,5 +9,5 @@
 #define func_ov042_020bdb4c InitCameraScene
 #define func_ov043_020bcbcc InitCameraState_020bcbec
 #define func_ov044_020d05e8 InitPanel
-#define func_ov046_020c08a0 func_ov046_020c08c0
+#define func_ov046_020c08a0 Camera_InitManager
 #include "src/ov021/sub_mode/StartSubMode_020af260.c"

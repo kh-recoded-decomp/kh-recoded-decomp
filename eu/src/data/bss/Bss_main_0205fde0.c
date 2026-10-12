@@ -1,3 +1,3 @@
-#include "nitro/types.h"
+#include "src/calls/MainLoopState.h"
 
-static u32 data_0205fde0;
+BOOL gPreviousPanelActive;

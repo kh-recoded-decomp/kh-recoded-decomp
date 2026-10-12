@@ -12,4 +12,5 @@
 #define data_ov021_020b4fd8 data_ov021_020b4ff8
 #define func_01ff8830 MI_CpuFill8
 #define random_next_scaled_0202aa04 random_next_scaled
+#define func_ov001_0206dfbc AwardSlotLevelProgress
 #include "src/ov021/object_state/ApplyHitToTarget_020ac33c.c"

@@ -1,4 +1,4 @@
 #define Camera_AimAlongVelocity_020c199c Camera_AimAlongVelocity
 #define Camera_BlendToVelocityAim_020c132c Camera_BlendToVelocityAim
-#define func_ov046_020c10d4 func_ov046_020c10f4
+#define func_ov046_020c10d4 Camera_BlendToView
 #include "src/ov046/shared_engine/Camera_BlendToVelocityAim_020c132c.c"

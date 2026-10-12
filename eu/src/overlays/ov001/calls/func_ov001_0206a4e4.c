@@ -5,7 +5,7 @@
 #define UpdateIrisFrame_0206a4e4 func_ov001_0206a4e4
 #define data_0205a924 NNS_G3dGlb
 #define data_0205a92c NNS_G3dGlb_projMtx
-#define data_ov001_0209da80 data_ov001_0209daa8
+#define data_ov001_0209da80 gIrisFrameBaseScale
 #define data_ov001_020a0480 data_ov001_020a04a0
 #define func_020192ec NNS_G3dGlbSetBaseTrans
 #define func_0201931c NNS_G3dGlbSetBaseScale

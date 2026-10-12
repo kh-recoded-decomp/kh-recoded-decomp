@@ -1,3 +1,0 @@
-#define NNS_SndPlayerPause_0202a168 NNS_SndPlayerPause_0202a17c
-#define NNSi_SndPlayerPause PXI_Init_0201313c
-#include "src/arm9/library_nns_snd/NNS_SndPlayerPause_0202a168.c"
