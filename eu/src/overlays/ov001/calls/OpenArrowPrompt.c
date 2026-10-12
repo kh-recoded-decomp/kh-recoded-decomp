@@ -6,8 +6,8 @@
 #define SetupBgBlend_0207d6f4 SetupBgBlend
 #define ShowTwoDigitCounters_0207d984 ShowTwoDigitCounters
 #define TagTracker_InvokeCallback_020b8210 func_ov027_020b8230
-#define data_ov001_0209dff8 data_ov001_0209e020
-#define data_ov001_0209e008 data_ov001_0209e030
+#define data_ov001_0209dff8 gArrowPromptDifficultySteps
+#define data_ov001_0209e008 gArrowPromptTimeLimits
 #define data_ov001_020a04d0 data_ov001_020a04f0
 #define func_0202a7a4 func_0202a7b8
 #define func_ov001_0207d838 func_ov001_0207d860

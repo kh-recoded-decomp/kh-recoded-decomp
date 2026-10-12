@@ -1,4 +1,4 @@
 #define ReadGlobalPackedBits_02027348 ReadGlobalPackedBits
 #define ReadPackedRecord_0207ebac ReadPackedRecord
-#define data_ov001_0209e0cc data_ov001_0209e0f4
+#define data_ov001_0209e0cc gCourseRecordBitOffsets
 #include "src/ov001/unclassified_helpers/ReadPackedRecord_0207ebac.c"

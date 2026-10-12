@@ -1,0 +1,24 @@
+#define GetBoundedEntryField_0206db5c GetBoundedEntryField
+#define InitAreaRewardScene_020bd730 InitAreaRewardScene
+#define InitInstanceFromTemplate_020bca70 InitInstanceFromTemplate
+#define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
+#define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
+#define PushVramState_020365a4 PushVramState
+#define QueueFieldUpdate_020633a0 QueueFieldUpdate
+#define SetClampedCursor_020a75d8 SetClampedCursor
+#define UpdateRewardMenuHighlights_020bde68 UpdateRewardMenuHighlights
+#define data_ov001_0209eb18 gSceneWorkClassDescriptor
+#define data_ov035_020bc4e0 gMovieContextState
+#define data_ov040_020be234 sOv040_RpgEnpEP_020be254
+#define data_ov040_020be240 sOv040_RpgEnpBL_020be260
+#define data_ov040_020be260 data_ov040_020be280
+#define func_01ff86fc MIi_CpuClear32
+#define func_01ff8740 MIi_CpuClearFast
+#define func_01ff89a8 MI_CpuCopy8
+#define func_0202a448 func_0202a45c
+#define func_0202c48c func_0202c4a0
+#define func_0205125c GetMapFinalStats
+#define func_ov001_02068984 GetStageObjectCount
+#define func_ov001_02087214 func_ov001_0208723c
+#define func_ov001_02087248 func_ov001_02087270
+#include "src/ov040/shared_engine/InitAreaRewardScene_020bd730.c"

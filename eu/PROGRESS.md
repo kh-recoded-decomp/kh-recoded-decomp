@@ -12,7 +12,7 @@ an identified name (NitroSDK, NNS, MSL, ...) but no source yet.
 | PART itcm | 91 | 29 | 1 | 6 | 127 | 71.7% | 66.2% |
 | PART ov000 | 76 | 0 | 0 | 2 | 78 | 97.4% | 92.5% |
 | PART ov001 | 2057 | 0 | 0 | 38 | 2095 | 98.2% | 91.2% |
-| PART ov002 | 227 | 0 | 1 | 4 | 232 | 97.8% | 85.3% |
+| PART ov002 | 228 | 0 | 0 | 4 | 232 | 98.3% | 85.5% |
 | PART ov003 | 43 | 0 | 0 | 1 | 44 | 97.7% | 91.2% |
 | PART ov004 | 37 | 0 | 0 | 4 | 41 | 90.2% | 86.8% |
 | DONE ov005 | 1 | 0 | 0 | 0 | 1 | 100.0% | 100.0% |
@@ -50,7 +50,7 @@ an identified name (NitroSDK, NNS, MSL, ...) but no source yet.
 | PART ov037 | 39 | 0 | 0 | 1 | 40 | 97.5% | 94.5% |
 | PART ov038 | 44 | 0 | 0 | 1 | 45 | 97.8% | 94.7% |
 | PART ov039 | 130 | 0 | 0 | 1 | 131 | 99.2% | 97.4% |
-| PART ov040 | 52 | 2 | 0 | 1 | 55 | 94.5% | 92.9% |
+| PART ov040 | 53 | 2 | 0 | 0 | 55 | 96.4% | 99.6% |
 | PART ov041 | 59 | 0 | 1 | 6 | 66 | 89.4% | 80.3% |
 | PART ov042 | 43 | 0 | 0 | 1 | 44 | 97.7% | 95.9% |
 | PART ov043 | 27 | 0 | 0 | 2 | 29 | 93.1% | 64.2% |
@@ -86,7 +86,7 @@ an identified name (NitroSDK, NNS, MSL, ...) but no source yet.
 | PART ov073 | 89 | 0 | 0 | 2 | 91 | 97.8% | 91.1% |
 | PART ov074 | 11 | 0 | 0 | 2 | 13 | 84.6% | 37.8% |
 | PART ov075 | 154 | 1 | 0 | 5 | 160 | 96.2% | 85.1% |
-| PART ov076 | 154 | 2 | 0 | 12 | 168 | 91.7% | 87.8% |
+| PART ov076 | 155 | 2 | 0 | 11 | 168 | 92.3% | 89.1% |
 | PART ov077 | 104 | 0 | 0 | 5 | 109 | 95.4% | 91.8% |
 | PART ov078 | 16 | 0 | 0 | 2 | 18 | 88.9% | 75.1% |
 | PART ov079 | 14 | 0 | 0 | 1 | 15 | 93.3% | 90.6% |
@@ -115,7 +115,7 @@ an identified name (NitroSDK, NNS, MSL, ...) but no source yet.
 | DONE ov102 | 3 | 0 | 0 | 0 | 3 | 100.0% | 100.0% |
 | PART ov103 | 38 | 0 | 0 | 1 | 39 | 97.4% | 93.0% |
 | PART ov104 | 33 | 24 | 0 | 0 | 57 | 57.9% | 75.8% |
-| **TOTAL** | **9999** | **183** | **7** | **233** | **10422** | **95.9%** | **87.36%** |
+| **TOTAL** | **10002** | **183** | **6** | **231** | **10422** | **96.0%** | **87.43%** |
 
 ## Byte progress
 
@@ -124,7 +124,7 @@ the matched set is dominated by small wrappers. Bytes count real C only.
 
 | C matched bytes | Total code bytes | % |
 |---:|---:|---:|
-| **1,448,700** | **1,658,216** | **87.36%** |
+| **1,449,728** | **1,658,216** | **87.43%** |
 
 ## DATA progress
 
@@ -133,5 +133,5 @@ Naming is tracked separately and does not count as reconstructed DATA.
 
 | Metric | Complete | Total | % |
 |---|---:|---:|---:|
-| Reconstructed byte-exact DATA | **224,896** | **228,172** | **98.56%** |
-| Named DATA symbols | **1,185** | **2,334** | **50.77%** |
+| Reconstructed byte-exact DATA | **226,008** | **228,172** | **99.05%** |
+| Named DATA symbols | **1,213** | **2,334** | **51.97%** |

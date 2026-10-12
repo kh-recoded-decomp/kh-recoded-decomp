@@ -1,4 +1,4 @@
 #define BindHudNodeOffsets_0207e1c0 BindHudNodeOffsets
-#define data_ov001_0209e050 data_ov001_0209e078
-#define data_ov001_0209e080 data_ov001_0209e0a8
+#define data_ov001_0209e050 gHudNodeOrder
+#define data_ov001_0209e080 gHudNodePositions
 #include "src/ov001/shared_engine/BindHudNodeOffsets_0207e1c0.c"

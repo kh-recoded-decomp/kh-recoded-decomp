@@ -1,0 +1,11 @@
+#define MTX_OrthoW_02005f10 MTX_OrthoW
+#define OverlayId0_00000000 OVERLAY_0_ID
+#define SceneNode_Draw_01ffb12c SceneNode_Draw
+#define SlotMenu_Draw3D_020c7534 SlotMenu_Draw3D
+#define data_0205a924 NNS_G3dGlb
+#define data_0205a92c NNS_G3dGlb_projMtx
+#define data_0205a970 NNS_G3dGlb_cameraMtx
+#define func_ov076_020c44c0 SlotMenu_CanCombineSlotPair
+#define func_ov076_020c7708 SlotMenu_DrawSlotModels_020c7708
+#define func_ov076_020cc81c func_ov076_020cc83c
+#include "src/ov076/matrix_menu/SlotMenu_Draw3D_020c7534.c"

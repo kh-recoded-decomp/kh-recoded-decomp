@@ -10,7 +10,7 @@
 #define SceneNode_Draw_01ffb12c SceneNode_Draw
 #define StartTimerFromPackedPair_0207cb78 StartTimerFromPackedPair
 #define StopSeqArcOrDefault_0204d960 StopSeqArcOrDefault
-#define data_ov001_0209df94 data_ov001_0209dfbc
+#define data_ov001_0209df94 gScoreTallyPosition
 #define func_02052514 func_02052528
 #define func_0205255c func_02052570
 #define func_ov001_0207c960 func_ov001_0207c988

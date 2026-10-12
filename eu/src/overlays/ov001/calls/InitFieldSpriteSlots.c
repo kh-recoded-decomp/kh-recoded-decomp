@@ -1,4 +1,4 @@
 #define InitFieldSpriteSlots_0207e130 InitFieldSpriteSlots
-#define data_ov001_0209e020 data_ov001_0209e048
-#define data_ov001_0209e040 data_ov001_0209e068
+#define data_ov001_0209e020 gFieldSpriteDefaultPosition
+#define data_ov001_0209e040 gFieldSpriteSlotOrder
 #include "src/ov001/unclassified_helpers/InitFieldSpriteSlots_0207e130.c"

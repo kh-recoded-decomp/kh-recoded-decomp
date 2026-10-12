@@ -10,9 +10,9 @@ typedef struct G3dGlobalState {
 } G3dGlobalState;
 
 extern G3dGlobalState NNS_G3dGlb;
-extern const VecFx32 data_ov001_0209e050;
-extern const VecFx32 data_ov001_0209e05c;
-extern const MtxFx33 data_ov001_0209e0c8;
+extern const VecFx32 gCrossedGuideTranslation;
+extern const VecFx32 gCrossedGuideScale;
+extern const MtxFx33 gCrossedGuideIdentityRotation;
 
 extern void NNS_G3dGlbSetBaseScale(const VecFx32 *scale);
 extern void NNS_G3dGlbSetBaseTrans(const VecFx32 *trans);
@@ -41,9 +41,9 @@ static inline void GeVtx(fx16 x, fx16 y, fx16 z)
 
 void DrawCrossedGuideLines(void)
 {
-    VecFx32 trans = data_ov001_0209e050;
-    VecFx32 scale = data_ov001_0209e05c;
-    MtxFx33 rot = data_ov001_0209e0c8;
+    VecFx32 trans = gCrossedGuideTranslation;
+    VecFx32 scale = gCrossedGuideScale;
+    MtxFx33 rot = gCrossedGuideIdentityRotation;
 
     NNS_G3dGlbSetBaseScale(&scale);
     NNS_G3dGlbSetBaseTrans(&trans);

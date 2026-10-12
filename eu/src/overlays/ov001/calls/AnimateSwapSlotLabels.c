@@ -2,8 +2,8 @@
 #define FindActiveRecordById_020b8184 FindActiveRecordById
 #define GetSceneTagTracker_020711b0 GetSceneTagTracker
 #define TagTracker_InvokeCallback_020b8210 func_ov027_020b8230
-#define data_ov001_0209dfd8 data_ov001_0209e000
-#define data_ov001_0209dfe8 data_ov001_0209e010
+#define data_ov001_0209dfd8 gCounterSwapMovingRecords
+#define data_ov001_0209dfe8 gCounterSwapSettledRecords
 #define func_ov027_020b81e0 func_ov027_020b8200
 #define func_ov027_020b9d54 ClearTileTableRect
 #include "src/ov001/field_manager/AnimateSwapSlotLabels_0207db50.c"

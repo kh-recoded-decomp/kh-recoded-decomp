@@ -224,6 +224,10 @@ src/overlays/ov076/calls/SlotMenu_SetBgScrollMode.c:
     complete
     .text       start:0x020c7504 end:0x020c7554
 
+src/overlays/ov076/calls/SlotMenu_Draw3D.c:
+    complete
+    .text       start:0x020c7554 end:0x020c7714
+
 src/overlays/ov076/calls/func_ov076_020c7714.c:
     complete
     .text       start:0x020c7714 end:0x020c7728
@@ -388,7 +392,7 @@ src/overlays/ov076/calls/InitGridImageQuad_020c97b4.c:
     complete
     .text       start:0x020c97b4 end:0x020c9806
 
-src/overlays/ov076/calls/func_ov076_020c9808.c:
+src/overlays/ov076/calls/DrawSpriteQuad_020c9808.c:
     complete
     .text       start:0x020c9808 end:0x020c9960
 

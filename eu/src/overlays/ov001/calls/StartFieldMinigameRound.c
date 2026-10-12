@@ -3,8 +3,8 @@
 #define InitFieldSpriteSlots_0207e130 InitFieldSpriteSlots
 #define RandomizeFacing_0207e270 RandomizeFacing
 #define StartFieldMinigameRound_0207ea14 StartFieldMinigameRound
-#define data_ov001_0209e060 data_ov001_0209e088
-#define data_ov001_0209e070 data_ov001_0209e098
+#define data_ov001_0209e060 gMinigameStartingLevels
+#define data_ov001_0209e070 gMinigameTimeMultipliers
 #define data_ov001_020a04d4 data_ov001_020a04f4
 #define func_ov001_0207df44 func_ov001_0207df6c
 #define func_ov001_0207e244 func_ov001_0207e26c

@@ -2,6 +2,6 @@
 #define InvokeCallback40_020b8268 func_ov027_020b8288
 #define SetSceneAnimState_02072fc4 SetSceneAnimState
 #define TagTracker_InvokeCallback_020b8210 func_ov027_020b8230
-#define data_ov001_0209dbdc data_ov001_0209dc04
+#define data_ov001_0209dbdc gChoiceSceneAnimationRecords
 #define data_ov001_020a04a4 data_ov001_020a04c4
 #include "src/ov001/text_rendering/SetSceneAnimState_02072fc4.c"

@@ -9091,14 +9091,17 @@
   "src/overlays/ov001/calls/func_ov001_0206ed8c.c": "dsi/1.3p1",
   "src/overlays/ov025/calls/func_ov025_020b5f28.c": "dsi/1.3p1",
   "src/overlays/ov052/calls/func_ov052_020c9294.c": "dsi/1.3p1",
-  "src/overlays/ov075/calls/func_ov075_020cd604.c": "dsi/1.3p1",
   "src/overlays/ov075/calls/func_ov075_020cdbe0.c": "dsi/1.3p1",
-  "src/overlays/ov076/calls/func_ov076_020c9808.c": "dsi/1.3p1",
-  "src/overlays/ov077/calls/func_ov077_020c683c.c": "dsi/1.3p1",
   "src/overlays/ov031/calls/func_ov031_020bb074.c": "dsi/1.3p1",
   "src/overlays/ov075/calls/func_ov075_020c8940.c": "dsi/1.3p1",
   "src/overlays/ov001/calls/func_ov001_02073e40.c": "dsi/1.3p1",
   "src/overlays/ov039/calls/func_ov039_020bd888.c": "dsi/1.3p1",
   "src/overlays/ov076/calls/func_ov076_020c853c.c": "dsi/1.3p1",
-  "src/overlays/ov080/calls/func_ov080_020c55a4.c": "dsi/1.3p1"
+  "src/overlays/ov080/calls/func_ov080_020c55a4.c": "dsi/1.3p1",
+  "src/overlays/ov040/calls/InitAreaRewardScene.c": "dsi/1.3p1",
+  "src/overlays/ov075/calls/DrawSpriteQuad.c": "dsi/1.3p1",
+  "src/overlays/ov076/calls/DrawSpriteQuad_020c9808.c": "dsi/1.3p1",
+  "src/overlays/ov077/calls/DrawSpriteQuad_020c683c.c": "dsi/1.3p1",
+  "src/overlays/ov076/calls/SlotMenu_Draw3D.c": "dsi/1.3p1",
+  "src/overlays/ov002/calls/GetMenuCursorDelta.c": "dsi/1.1"
 }

@@ -1,5 +1,5 @@
 #define Panel_InitFromModeTables_0207b20c Panel_InitFromModeTables
-#define data_ov001_0209df80 data_ov001_0209dfa8
+#define data_ov001_0209df80 gPanelPrimaryModeRecords
 #define data_ov001_0209ef24 data_ov001_0209ef44
 #define func_02029f58 func_02029f6c
 #include "src/ov001/leaf_research/Panel_InitFromModeTables_0207b20c.c"

@@ -1,6 +1,6 @@
 #define RefreshCounterRecordPositions_0207d790 RefreshCounterRecordPositions
-#define data_ov001_0209dfd8 data_ov001_0209e000
-#define data_ov001_0209dfe8 data_ov001_0209e010
+#define data_ov001_0209dfd8 gCounterSwapMovingRecords
+#define data_ov001_0209dfe8 gCounterSwapSettledRecords
 #define func_ov001_020711b0 GetSceneTagTracker
 #define func_ov027_020b8184 FindActiveRecordById
 #define func_ov027_020b81e0 func_ov027_020b8200

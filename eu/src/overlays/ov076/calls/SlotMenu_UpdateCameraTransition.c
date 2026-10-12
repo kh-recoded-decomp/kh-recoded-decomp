@@ -10,6 +10,6 @@
 #define func_02052514 func_02052528
 #define func_0205255c func_02052570
 #define func_ov039_020bc1bc func_ov039_020bc1dc
-#define func_ov076_020c7534 func_ov076_020c7554
+#define func_ov076_020c7534 SlotMenu_Draw3D
 #define func_ov076_020c83e4 func_ov076_020c8404
 #include "src/ov076/unclassified_helpers/SlotMenu_UpdateCameraTransition_020c5d20.c"

@@ -1,7 +1,7 @@
 #define ApplyRegionChoiceEntry_02072530 ApplyRegionChoiceEntry
 #define ClearChoiceHighlight_020701a8 ClearChoiceHighlight
 #define PlaySoundEffect_0204d924 PlaySoundEffect
-#define data_ov001_0209dd68 data_ov001_0209dd90
+#define data_ov001_0209dd68 gWorldChoiceNameOffsets
 #define data_ov001_020a04a4 data_ov001_020a04c4
 #define func_0204f768 GetOverlaySelectionRecord
 #define func_ov001_0207b640 func_ov001_0207b668

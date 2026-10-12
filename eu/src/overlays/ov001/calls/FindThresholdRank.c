@@ -1,3 +1,3 @@
 #define FindThresholdRank_0207ebf4 FindThresholdRank
-#define data_ov001_0209e114 data_ov001_0209e13c
+#define data_ov001_0209e114 gCourseRankThresholds
 #include "src/ov001/unclassified_helpers/FindThresholdRank_0207ebf4.c"

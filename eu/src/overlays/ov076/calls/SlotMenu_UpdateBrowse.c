@@ -39,7 +39,7 @@ extern void RefreshScrollListLayout(ScrollList *list, void *layout);
 extern void SlotMenu_SetBgScrollMode(SlotMenu *menu, int mode, int scrollY);
 extern void func_ov076_020c4cc0(SlotMenu *menu);
 extern void UpdateWidgetRootAndFireAlarm(void *layout, int arg);
-extern void func_ov076_020c7554(SlotMenu *menu, int mode);
+extern void SlotMenu_Draw3D(SlotMenu *menu, int mode);
 
 void SlotMenu_UpdateBrowse(SlotMenu *menu)
 {
@@ -66,5 +66,5 @@ void SlotMenu_UpdateBrowse(SlotMenu *menu)
     SlotMenu_SetBgScrollMode(menu, 0, menu->list.scrollY);
     func_ov076_020c4cc0(menu);
     UpdateWidgetRootAndFireAlarm(layout, 0);
-    func_ov076_020c7554(menu, 0);
+    SlotMenu_Draw3D(menu, 0);
 }

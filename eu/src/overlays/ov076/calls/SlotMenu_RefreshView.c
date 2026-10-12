@@ -2,5 +2,5 @@
 #define func_ov027_020b8c94 UpdateWidgetRootAndFireAlarm
 #define func_ov039_020bc1bc func_ov039_020bc1dc
 #define func_ov076_020c74e4 SlotMenu_SetBgScrollMode
-#define func_ov076_020c7534 func_ov076_020c7554
+#define func_ov076_020c7534 SlotMenu_Draw3D
 #include "src/ov076/unclassified_helpers/SlotMenu_RefreshView_020c5be0.c"

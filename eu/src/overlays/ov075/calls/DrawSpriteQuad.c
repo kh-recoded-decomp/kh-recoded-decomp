@@ -1,4 +1,4 @@
-#define DrawSpriteQuad_020cd5e4 func_ov075_020cd604
+#define DrawSpriteQuad_020cd5e4 DrawSpriteQuad
 #define FlushGeometryState_02019230 NNS_G3dGlbFlushWVP
 #define MI_Copy36B_01ff87c4 MI_Copy36B
 #define QueueOrSendGeometryCommand_01ffa37c NNS_G3dGeBufferOP_N

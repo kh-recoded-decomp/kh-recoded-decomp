@@ -1,4 +1,4 @@
 #define WriteGlobalPackedBits_02027360 WriteGlobalPackedBits
 #define WritePackedRecord_0207ebd0 WritePackedRecord
-#define data_ov001_0209e0cc data_ov001_0209e0f4
+#define data_ov001_0209e0cc gCourseRecordBitOffsets
 #include "src/ov001/unclassified_helpers/WritePackedRecord_0207ebd0.c"

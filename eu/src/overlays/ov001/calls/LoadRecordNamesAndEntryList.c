@@ -14,7 +14,7 @@
 #define ReleaseRecordSlot_02051dfc ReleaseRecordSlot
 #define copy_padded_utf16_string_02022a74 Utf16CopyPadded
 #define data_ov001_0209dc14 gRecordNameTextFrame
-#define data_ov001_0209dd3c data_ov001_0209dd64
+#define data_ov001_0209dd3c gWorldLocationNameOffsets
 #define func_0200160c func_02001620
 #define func_02001914 func_02001928
 #include "src/ov001/text_rendering/LoadRecordNamesAndEntryList_0206f484.c"

@@ -12,7 +12,7 @@
 #define PlaySoundChecked_0204d8d0 PlaySoundChecked
 #define TagTracker_InvokeCallback_020b8210 func_ov027_020b8230
 #define UpdateWidgetLayerDefault_020b9df0 func_ov027_020b9e10
-#define data_ov001_0209dbe8 data_ov001_0209dc10
+#define data_ov001_0209dbe8 gChoiceDetailTextColors
 #define data_ov001_0209ec90 gHudSlideResourceGroup1
 #define data_ov001_0209ec9c gHudSlideResourceGroup2
 #define data_ov001_0209eca8 gHudSlideResourceGroup3

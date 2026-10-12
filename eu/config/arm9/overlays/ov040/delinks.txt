@@ -128,6 +128,10 @@ src/overlays/ov040/auto/func_ov040_020bd748.c:
     complete
     .text       start:0x020bd748 end:0x020bd74e
 
+src/overlays/ov040/calls/InitAreaRewardScene.c:
+    complete
+    .text       start:0x020bd750 end:0x020bd938
+
 src/overlays/ov040/calls/RunMenuStateMachine.c:
     complete
     .text       start:0x020bd938 end:0x020bd9b0
