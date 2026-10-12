@@ -3,7 +3,7 @@
 #define ObjectManager_GetSecondEntryParam_0207ee48 ObjectManager_GetSecondEntryParam
 #define RetainOrInitializeSharedRecord_0202c80c SND_RegisterSeq
 #define StepResourceSlotLoading_02086d00 StepResourceSlotLoading
-#define data_ov001_0209e3a0 data_ov001_0209e3c8
+#define data_ov001_0209e3a0 gResourceSlotLoadOrder
 #define data_ov001_020a04dc data_ov001_020a04fc
 #define func_0202c48c func_0202c4a0
 #include "src/ov001/unclassified_helpers/StepResourceSlotLoading_02086d00.c"

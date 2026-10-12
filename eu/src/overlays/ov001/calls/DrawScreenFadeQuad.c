@@ -10,11 +10,11 @@
 #define data_0205ab3c NNS_G3dGlb_camPos
 #define data_0205ab48 NNS_G3dGlb_camUp
 #define data_0205ab54 NNS_G3dGlb_camTarget
-#define data_ov001_0209e3f8 data_ov001_0209e420
-#define data_ov001_0209e400 data_ov001_0209e428
-#define data_ov001_0209e40c data_ov001_0209e434
-#define data_ov001_0209e418 data_ov001_0209e440
-#define data_ov001_0209e424 data_ov001_0209e44c
+#define data_ov001_0209e3f8 gScreenFadeColors
+#define data_ov001_0209e400 gScreenFadeCameraUp
+#define data_ov001_0209e40c gScreenFadeBaseScale
+#define data_ov001_0209e418 gScreenFadeBaseTranslation
+#define data_ov001_0209e424 gScreenFadeCameraPosition
 #define data_ov001_020a04e0 data_ov001_020a0500
 #define func_01ff87c4 MI_Copy36B
 #define func_01ff90ec MTX_Identity33_

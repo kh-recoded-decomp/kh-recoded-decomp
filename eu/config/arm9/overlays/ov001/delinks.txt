@@ -8724,9 +8724,17 @@ src/overlays/ov001/data/tables/gCrossedGuideTranslation.c:
     complete
     .rodata     start:0x0209e050 end:0x0209e05c
 
+src/overlays/ov001/data/tables/gCursorModelIds.c:
+    complete
+    .rodata     start:0x0209e374 end:0x0209e384
+
 src/overlays/ov001/data/tables/gDefaultActorAnimation.c:
     complete
     .data       start:0x020a0250 end:0x020a0254
+
+src/overlays/ov001/data/tables/gDefaultActorQuadPacket.c:
+    complete
+    .rodata     start:0x0209e39c end:0x0209e3c8
 
 src/overlays/ov001/data/tables/gDefaultAttachPointName.c:
     complete
@@ -8759,6 +8767,10 @@ src/overlays/ov001/data/tables/gEventTriggerTaskHandle.c:
 src/overlays/ov001/data/tables/gExtendedSlotRemap.c:
     complete
     .data       start:0x020a038c end:0x020a03ac
+
+src/overlays/ov001/data/tables/gFaceTargetDefaultOperand.c:
+    complete
+    .rodata     start:0x0209e458 end:0x0209e460
 
 src/overlays/ov001/data/tables/gFallingPieceSizes.c:
     complete
@@ -8844,6 +8856,10 @@ src/overlays/ov001/data/tables/gGaugeTransitionRow2.c:
     complete
     .rodata     start:0x0209de14 end:0x0209de1a
 
+src/overlays/ov001/data/tables/gGroupCommandResetStates.c:
+    complete
+    .rodata     start:0x0209e48c end:0x0209e4bc
+
 src/overlays/ov001/data/tables/gGroupEntries.c:
     complete
     .data       start:0x0209f62c end:0x020a0250
@@ -8879,6 +8895,10 @@ src/overlays/ov001/data/tables/gHudSlideResourceGroup3.c:
 src/overlays/ov001/data/tables/gHudSlideResourceGroup4.c:
     complete
     .data       start:0x0209ecd4 end:0x0209ece0
+
+src/overlays/ov001/data/tables/gLaunchedActorKindIds.c:
+    complete
+    .rodata     start:0x0209e478 end:0x0209e48c
 
 src/overlays/ov001/data/tables/gLocalizedSpritePathFormat.c:
     complete
@@ -8988,6 +9008,10 @@ src/overlays/ov001/data/tables/gNearestEntrySyncHandlers.c:
     complete
     .data       start:0x020a0260 end:0x020a0294
 
+src/overlays/ov001/data/tables/gNodeRotationCorrectionQuaternion.c:
+    complete
+    .rodata     start:0x0209e460 end:0x0209e470
+
 src/overlays/ov001/data/tables/gPanelPrimaryModeRecords.c:
     complete
     .rodata     start:0x0209dfa8 end:0x0209dfbc
@@ -8996,9 +9020,17 @@ src/overlays/ov001/data/tables/gPartyStateClassDescriptor.c:
     complete
     .data       start:0x0209ec24 end:0x0209ec38
 
+src/overlays/ov001/data/tables/gProximityGlowNearColor.c:
+    complete
+    .rodata     start:0x0209e358 end:0x0209e374
+
 src/overlays/ov001/data/tables/gRecordNameTextFrame.c:
     complete
     .rodata     start:0x0209dc3c end:0x0209dc4c
+
+src/overlays/ov001/data/tables/gResourceSlotLoadOrder.c:
+    complete
+    .rodata     start:0x0209e3c8 end:0x0209e41c
 
 src/overlays/ov001/data/tables/gResumeFieldLayerIds.c:
     complete
@@ -9032,6 +9064,26 @@ src/overlays/ov001/data/tables/gScoreTallyPosition.c:
     complete
     .rodata     start:0x0209dfbc end:0x0209dfc4
 
+src/overlays/ov001/data/tables/gScreenFadeBaseScale.c:
+    complete
+    .rodata     start:0x0209e434 end:0x0209e440
+
+src/overlays/ov001/data/tables/gScreenFadeBaseTranslation.c:
+    complete
+    .rodata     start:0x0209e440 end:0x0209e44c
+
+src/overlays/ov001/data/tables/gScreenFadeCameraPosition.c:
+    complete
+    .rodata     start:0x0209e44c end:0x0209e458
+
+src/overlays/ov001/data/tables/gScreenFadeCameraUp.c:
+    complete
+    .rodata     start:0x0209e428 end:0x0209e434
+
+src/overlays/ov001/data/tables/gScreenFadeColors.c:
+    complete
+    .rodata     start:0x0209e420 end:0x0209e428
+
 src/overlays/ov001/data/tables/gScreenFadeTaskDescriptor.c:
     complete
     .data       start:0x0209eb0c end:0x0209eb20
@@ -9056,6 +9108,10 @@ src/overlays/ov001/data/tables/gSessionCounterLimits.c:
     complete
     .rodata     start:0x0209d940 end:0x0209d9b4
 
+src/overlays/ov001/data/tables/gSessionRankValues.c:
+    complete
+    .rodata     start:0x0209e470 end:0x0209e478
+
 src/overlays/ov001/data/tables/gSessionScriptStateHandlers.c:
     complete
     .data       start:0x0209e6a0 end:0x0209e6d4
@@ -9071,6 +9127,18 @@ src/overlays/ov001/data/tables/gSlotLabelTextFrame.c:
 src/overlays/ov001/data/tables/gSpawnedActorDescriptor.c:
     complete
     .data       start:0x020a032c end:0x020a0360
+
+src/overlays/ov001/data/tables/gSpawnerDifficultyDelayRanges.c:
+    complete
+    .rodata     start:0x0209e4bc end:0x0209e4dc
+
+src/overlays/ov001/data/tables/gStageEventDisplayStyles.c:
+    complete
+    .rodata     start:0x0209e4dc end:0x0209e554
+
+src/overlays/ov001/data/tables/gStageEventKinds.c:
+    complete
+    .rodata     start:0x0209e554 end:0x0209e61c
 
 src/overlays/ov001/data/tables/gStageHeapConfigs.c:
     complete

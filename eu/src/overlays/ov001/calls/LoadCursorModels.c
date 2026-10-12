@@ -20,7 +20,7 @@ typedef struct {
     u32 startFrame;
 } CursorModelSet;
 
-extern ModelIdTable data_ov001_0209e374;
+extern ModelIdTable gCursorModelIds;
 
 extern u32 ObjectManager_GetFirstEntryParam(u32 id);
 extern u32 ObjectManager_GetSecondEntryParam(u32 id);
@@ -31,7 +31,7 @@ extern void NNSi_FndFreeFromDefaultHeap(void *block);
 
 void LoadCursorModels(CursorModelSet *set) {
     int i = 0;
-    ModelIdTable table = data_ov001_0209e374;
+    ModelIdTable table = gCursorModelIds;
     u32 *ids = table.ids;
 
     for (; i < 4; i++) {

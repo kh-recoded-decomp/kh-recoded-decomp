@@ -1,4 +1,5 @@
 {
+  "src/overlays/ov015/calls/ExtractTileRect.c": "dsi/1.1",
   "src/overlays/ov084/calls/RefreshTwoChoicePanelText.c": "dsi/1.1",
   "src/overlays/ov030/calls/ResolveMovieSceneAction.c": "dsi/1.1",
   "src/overlays/ov027/calls/ResolveWidgetPositionComponents.c": "dsi/1.1",

@@ -3,5 +3,5 @@
 #define FlushGeometryCommandBuffer_01ffa204 FlushGeometryCommandBuffer
 #define QueueOrSendGeometryCommand_01ffa37c NNS_G3dGeBufferOP_N
 #define TranslateAndFlushGeometry_020864c4 TranslateAndFlushGeometry
-#define data_ov001_0209e374 data_ov001_0209e39c
+#define data_ov001_0209e374 gDefaultActorQuadPacket
 #include "src/ov001/library_nns_g2d/TranslateAndFlushGeometry_020864c4.c"

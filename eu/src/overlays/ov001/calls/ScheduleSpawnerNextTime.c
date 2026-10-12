@@ -3,6 +3,6 @@
 #define GetLinkedStageActor_0209c2f0 GetLinkedStageActor
 #define GetStageActor_0209c040 GetStageActor
 #define ScheduleSpawnerNextTime_02096928 ScheduleSpawnerNextTime
-#define data_ov001_0209e494 data_ov001_0209e4bc
+#define data_ov001_0209e494 gSpawnerDifficultyDelayRanges
 #define random_next_scaled_0202aa04 random_next_scaled
 #include "src/ov001/shared_engine/ScheduleSpawnerNextTime_02096928.c"

@@ -9506,6 +9506,204 @@
       "name": "gCourseRewardEntries",
       "origin": "EU original DATA",
       "behavior": "Six reward cells per course, including item ID, category and rarity."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209e358",
+      "end": "0x0209e35b",
+      "source": "src/overlays/ov001/data/tables/gProximityGlowNearColor.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gProximityGlowNearColor",
+      "origin": "EU original DATA",
+      "behavior": "Base RGB used by proximity glow at the nearest distance."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209e35b",
+      "end": "0x0209e374",
+      "source": "src/overlays/ov001/data/tables/gProximityGlowNearColor.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gProximityGlowLevelColors",
+      "origin": "EU original DATA",
+      "behavior": "Four near/far RGB pairs used by proximity-glow levels, with explicit alignment."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209e374",
+      "end": "0x0209e384",
+      "source": "src/overlays/ov001/data/tables/gCursorModelIds.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gCursorModelIds",
+      "origin": "EU original DATA",
+      "behavior": "Four model record IDs loaded by LoadCursorModels."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209e39c",
+      "end": "0x0209e3c8",
+      "source": "src/overlays/ov001/data/tables/gDefaultActorQuadPacket.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gDefaultActorQuadPacket",
+      "origin": "EU original DATA",
+      "behavior": "Packed DS geometry commands for the default actor quad."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209e3c8",
+      "end": "0x0209e41c",
+      "source": "src/overlays/ov001/data/tables/gResourceSlotLoadOrder.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gResourceSlotLoadOrder",
+      "origin": "EU original DATA",
+      "behavior": "Priority order for the 21 resource-loader slots."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209e420",
+      "end": "0x0209e428",
+      "source": "src/overlays/ov001/data/tables/gScreenFadeColors.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gScreenFadeColors",
+      "origin": "EU original DATA",
+      "behavior": "Three RGB555 colours used by the screen fade, with explicit alignment."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209e428",
+      "end": "0x0209e434",
+      "source": "src/overlays/ov001/data/tables/gScreenFadeCameraUp.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gScreenFadeCameraUp",
+      "origin": "EU original DATA",
+      "behavior": "Up vector for the screen-fade camera."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209e434",
+      "end": "0x0209e440",
+      "source": "src/overlays/ov001/data/tables/gScreenFadeBaseScale.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gScreenFadeBaseScale",
+      "origin": "EU original DATA",
+      "behavior": "Base scale passed by DrawScreenFadeQuad."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209e440",
+      "end": "0x0209e44c",
+      "source": "src/overlays/ov001/data/tables/gScreenFadeBaseTranslation.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gScreenFadeBaseTranslation",
+      "origin": "EU original DATA",
+      "behavior": "Base translation passed by DrawScreenFadeQuad."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209e44c",
+      "end": "0x0209e458",
+      "source": "src/overlays/ov001/data/tables/gScreenFadeCameraPosition.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gScreenFadeCameraPosition",
+      "origin": "EU original DATA",
+      "behavior": "Camera position for the screen fade."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209e458",
+      "end": "0x0209e460",
+      "source": "src/overlays/ov001/data/tables/gFaceTargetDefaultOperand.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gFaceTargetDefaultOperand",
+      "origin": "EU original DATA",
+      "behavior": "Default script target operand used when choosing facing animations."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209e460",
+      "end": "0x0209e470",
+      "source": "src/overlays/ov001/data/tables/gNodeRotationCorrectionQuaternion.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gNodeRotationCorrectionQuaternion",
+      "origin": "EU original DATA",
+      "behavior": "Q12 quaternion multiplied into restored node rotations."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209e470",
+      "end": "0x0209e478",
+      "source": "src/overlays/ov001/data/tables/gSessionRankValues.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gSessionRankValues",
+      "origin": "EU original DATA",
+      "behavior": "Session rank-to-value mapping, with explicit three-byte alignment."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209e478",
+      "end": "0x0209e48c",
+      "source": "src/overlays/ov001/data/tables/gLaunchedActorKindIds.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gLaunchedActorKindIds",
+      "origin": "EU original DATA",
+      "behavior": "Actor IDs selected for each launched-actor kind."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209e48c",
+      "end": "0x0209e4bc",
+      "source": "src/overlays/ov001/data/tables/gGroupCommandResetStates.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gGroupCommandResetStates",
+      "origin": "EU original DATA",
+      "behavior": "Group command states that allow an immediate reset."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209e4bc",
+      "end": "0x0209e4dc",
+      "source": "src/overlays/ov001/data/tables/gSpawnerDifficultyDelayRanges.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gSpawnerDifficultyDelayRanges",
+      "origin": "EU original DATA",
+      "behavior": "Four difficulty-dependent minimum/maximum delay scale pairs."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209e4dc",
+      "end": "0x0209e554",
+      "source": "src/overlays/ov001/data/tables/gStageEventDisplayStyles.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gStageEventDisplayStyles",
+      "origin": "EU original DATA",
+      "behavior": "Five display styles: animation, alpha, offset, scale, blend and tint."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209e554",
+      "end": "0x0209e61c",
+      "source": "src/overlays/ov001/data/tables/gStageEventKinds.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gStageEventKinds",
+      "origin": "EU original DATA",
+      "behavior": "Ten stage-event descriptors with action, attachment, object, mirror and duration."
     }
   ]
 }

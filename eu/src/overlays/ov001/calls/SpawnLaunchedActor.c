@@ -6,7 +6,7 @@
 #define VEC_Mag_01ff9f28 VEC_Mag
 #define VEC_MultAdd_01ffa09c VEC_MultAdd
 #define WarpWalkerTo_02090f0c WarpWalkerTo
-#define data_ov001_0209e450 data_ov001_0209e478
+#define data_ov001_0209e450 gLaunchedActorKindIds
 #define func_ov001_020902e0 UpdateFieldActorMovement
 #define func_01ffaff4 VEC_NormalizeLength
 #include "src/ov001/object_creation/SpawnLaunchedActor_020929f4.c"

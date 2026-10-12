@@ -1,5 +1,5 @@
 #define GetSessionRankValue_020979dc GetSessionRankValue
 #define Session_Exists_02063a24 func_ov001_02063a24
-#define data_ov001_0209e448 data_ov001_0209e470
+#define data_ov001_0209e448 gSessionRankValues
 #define func_ov032_020bb808 func_ov032_020bb828
 #include "src/ov001/shared_engine/GetSessionRankValue_020979dc.c"

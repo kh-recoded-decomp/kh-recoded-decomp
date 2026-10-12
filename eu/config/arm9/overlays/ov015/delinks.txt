@@ -944,6 +944,10 @@ src/overlays/ov015/calls/OpenPanelMessageWindow.c:
     complete
     .text       start:0x02079a2c end:0x02079bc0
 
+src/overlays/ov015/calls/ExtractTileRect.c:
+    complete
+    .text       start:0x02079bc0 end:0x02079c54
+
 src/overlays/ov015/calls/CreateTileObject.c:
     complete
     .text       start:0x02079c54 end:0x02079cd4

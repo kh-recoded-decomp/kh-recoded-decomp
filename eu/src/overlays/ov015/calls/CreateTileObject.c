@@ -1,4 +1,5 @@
 #define CreateTileObject_02079c54 CreateTileObject
+#define func_ov015_02079bc0 ExtractTileRect
 #define func_020014b0 InitTextLayerAt
 #define func_0200153c FlushBufferAndRunCallback
 #define func_02001a60 FillBackgroundLayerRect
