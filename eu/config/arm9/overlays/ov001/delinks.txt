@@ -3100,6 +3100,10 @@ src/overlays/ov001/calls/MapFieldSlotIndex.c:
     complete
     .text       start:0x02072c6c end:0x02072c98
 
+src/overlays/ov001/calls/SetFieldSlotHudRecord.c:
+    complete
+    .text       start:0x02072c98 end:0x02072d44
+
 src/overlays/ov001/calls/GetHudLabelId.c:
     complete
     .text       start:0x02072d44 end:0x02072d5c
@@ -8684,6 +8688,10 @@ src/overlays/ov001/data/tables/gChoiceTextFrame.c:
     complete
     .rodata     start:0x0209dc6c end:0x0209dc7c
 
+src/overlays/ov001/data/tables/gCommonModeSprites.c:
+    complete
+    .rodata     start:0x0209db78 end:0x0209dbb4
+
 src/overlays/ov001/data/tables/gCounterFadePalette.c:
     complete
     .rodata     start:0x0209dff0 end:0x0209e000
@@ -8780,13 +8788,45 @@ src/overlays/ov001/data/tables/gFieldCommandTextFrame.c:
     complete
     .rodata     start:0x0209ded8 end:0x0209dee8
 
+src/overlays/ov001/data/tables/gFieldEffectGroups.c:
+    complete
+    .rodata     start:0x0209db14 end:0x0209db2c
+
 src/overlays/ov001/data/tables/gFieldEntryModes.c:
     complete
     .rodata     start:0x0209de90 end:0x0209de9c
 
+src/overlays/ov001/data/tables/gFieldGaugeLayouts.c:
+    complete
+    .data       start:0x0209ee14 end:0x0209ee4c
+
+src/overlays/ov001/data/tables/gFieldHudCounterTaskDescriptor.c:
+    complete
+    .data       start:0x0209ef58 end:0x0209ef6c
+
+src/overlays/ov001/data/tables/gFieldHudExtraTaskDescriptor.c:
+    complete
+    .data       start:0x0209f010 end:0x0209f024
+
+src/overlays/ov001/data/tables/gFieldHudRefreshLayerIds.c:
+    complete
+    .rodata     start:0x0209dbec end:0x0209dbf8
+
+src/overlays/ov001/data/tables/gFieldHudRestoreLayerIds.c:
+    complete
+    .rodata     start:0x0209dbf8 end:0x0209dc04
+
+src/overlays/ov001/data/tables/gFieldHudStatusTaskDescriptor.c:
+    complete
+    .data       start:0x0209efb4 end:0x0209efc8
+
 src/overlays/ov001/data/tables/gFieldHudTextFrame.c:
     complete
     .rodata     start:0x0209dc9c end:0x0209dcac
+
+src/overlays/ov001/data/tables/gFieldHudTimerTaskDescriptor.c:
+    complete
+    .data       start:0x0209ef10 end:0x0209ef24
 
 src/overlays/ov001/data/tables/gFieldManagerClassDescriptor.c:
     complete
@@ -8815,6 +8855,10 @@ src/overlays/ov001/data/tables/gFieldScriptCommandHandlers.c:
 src/overlays/ov001/data/tables/gFieldSessionClassData.c:
     complete
     .data       start:0x0209e640 end:0x0209e6a0
+
+src/overlays/ov001/data/tables/gFieldSlotHudRecordIds.c:
+    complete
+    .rodata     start:0x0209dd44 end:0x0209dd64
 
 src/overlays/ov001/data/tables/gFieldSlotMessageIds.c:
     complete
@@ -8900,6 +8944,14 @@ src/overlays/ov001/data/tables/gLaunchedActorKindIds.c:
     complete
     .rodata     start:0x0209e478 end:0x0209e48c
 
+src/overlays/ov001/data/tables/gLevelBonusWeights.c:
+    complete
+    .rodata     start:0x0209da68 end:0x0209da7a
+
+src/overlays/ov001/data/tables/gLocalizedFieldSprite.c:
+    complete
+    .rodata     start:0x0209dae4 end:0x0209daf0
+
 src/overlays/ov001/data/tables/gLocalizedSpritePathFormat.c:
     complete
     .data       start:0x0209ec5c end:0x0209ec60
@@ -8940,6 +8992,10 @@ src/overlays/ov001/data/tables/gMenuScreenCellIds.c:
     complete
     .rodata     start:0x0209dd0c end:0x0209dd28
 
+src/overlays/ov001/data/tables/gMenuScreenLayerConfig.c:
+    complete
+    .rodata     start:0x0209dcbc end:0x0209dcd0
+
 src/overlays/ov001/data/tables/gMessageLineTextFrame.c:
     complete
     .rodata     start:0x0209dc2c end:0x0209dc3c
@@ -8959,6 +9015,14 @@ src/overlays/ov001/data/tables/gMinigameStartingLevels.c:
 src/overlays/ov001/data/tables/gMinigameTimeMultipliers.c:
     complete
     .rodata     start:0x0209e098 end:0x0209e0a8
+
+src/overlays/ov001/data/tables/gMode4Sprites.c:
+    complete
+    .rodata     start:0x0209dafc end:0x0209db14
+
+src/overlays/ov001/data/tables/gMode6Sprite.c:
+    complete
+    .rodata     start:0x0209daf0 end:0x0209dafc
 
 src/overlays/ov001/data/tables/gModeCaptionGlyph03B1.c:
     complete
@@ -9012,6 +9076,10 @@ src/overlays/ov001/data/tables/gNodeRotationCorrectionQuaternion.c:
     complete
     .rodata     start:0x0209e460 end:0x0209e470
 
+src/overlays/ov001/data/tables/gNormalModeSprites.c:
+    complete
+    .rodata     start:0x0209db48 end:0x0209db78
+
 src/overlays/ov001/data/tables/gPanelPrimaryModeRecords.c:
     complete
     .rodata     start:0x0209dfa8 end:0x0209dfbc
@@ -9043,6 +9111,10 @@ src/overlays/ov001/data/tables/gRootObjectTaskDescriptor.c:
 src/overlays/ov001/data/tables/gRootObjectTaskHandle.c:
     complete
     .data       start:0x0209ead0 end:0x0209ead4
+
+src/overlays/ov001/data/tables/gSceneMinigameTaskDescriptor.c:
+    complete
+    .data       start:0x0209f024 end:0x0209f038
 
 src/overlays/ov001/data/tables/gSceneSlotSpawns.c:
     complete
@@ -9183,6 +9255,10 @@ src/overlays/ov001/data/tables/gVramBackupWidgetLayers.c:
 src/overlays/ov001/data/tables/gVramRestoreWidgetLayers.c:
     complete
     .rodata     start:0x0209dbd4 end:0x0209dbe0
+
+src/overlays/ov001/data/tables/gWideGaugeShadeRamp.c:
+    complete
+    .rodata     start:0x0209ddf8 end:0x0209de06
 
 src/overlays/ov001/data/tables/gWindowScrollArrowTiles.c:
     complete

@@ -4,7 +4,7 @@
 #define LoadMenuScreenGraphics_0206f064 LoadMenuScreenGraphics
 #define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
-#define data_ov001_0209dc94 data_ov001_0209dcbc
+#define data_ov001_0209dc94 gMenuScreenLayerConfig
 #define data_ov001_0209dce4 gMenuScreenCellIds
 #define func_01ff878c MIi_CpuCopyFast
 #define func_02007250 GX_LoadBGPltt

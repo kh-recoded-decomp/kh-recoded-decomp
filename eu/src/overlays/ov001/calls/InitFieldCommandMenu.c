@@ -131,7 +131,7 @@ extern void LoadPackedFileView(PackedFileView *view, u32 fileId, BOOL fromTail);
 extern void FreePointerIfSet(PackedFileView *view);
 extern BOOL InitTextLayerAt(TextLayer *layer, int index, u16 *screenBase, void *font, TextFrame *frame);
 extern TextCell *GetWord20(TextLayer *layer);
-extern TextCell *func_02001928(TextLayer *layer, int a, int b);
+extern TextCell *CreateTextSurface(TextLayer *layer, int a, int b);
 extern void func_ov001_02076a54(FieldMenu *menu, PackedFileView *view, int index);
 extern CommandRecord *GetRecordSlotPair1Entry(s32 index);
 extern void DrawTextAnchored(TextLayer *layer, int x, int y, int color, u32 flags, const u16 *text);
@@ -160,7 +160,7 @@ static inline void SetupLinkedGauge(FieldMenu *menu, CommandGauge *gauge, s32 li
     CommandRecord *linked = GetRecordSlotPair1Entry(linkId);
 
     gauge->duration = linked->cooldown << 1;
-    gauge->linkArt = func_02001928(&menu->gaugeLayer, 1, 0);
+    gauge->linkArt = CreateTextSurface(&menu->gaugeLayer, 1, 0);
     MIi_CpuCopyFast(menu->blankTiles, gauge->linkArt->pixels, 0x200);
     func_02001620(&menu->gaugeLayer, 0, 4, 2, 0, linked->nameId, GetFieldFont1(), 0x38);
 }
@@ -207,10 +207,10 @@ void InitFieldCommandMenu(FieldMenu *menu, u8 *tiles)
     menu->cells[0] = GetWord20(&menu->textLayer);
     func_ov001_02076a54(menu, &view, 0);
     for (index = 1; index < 13; index++) {
-        menu->cells[index] = func_02001928(&menu->textLayer, 1, 0);
+        menu->cells[index] = CreateTextSurface(&menu->textLayer, 1, 0);
         func_ov001_02076a54(menu, &view, index);
     }
-    menu->cells[index] = func_02001928(&menu->textLayer, 1, 0);
+    menu->cells[index] = CreateTextSurface(&menu->textLayer, 1, 0);
     MIi_CpuCopyFast(menu->frameTiles, menu->cells[13]->pixels, 0x200);
     equipped = GetRecordSlotPair1Entry(GetOverlaySelectionRecord(0)->equippedId);
     if (equipped == NULL) {
@@ -267,7 +267,7 @@ void InitFieldCommandMenu(FieldMenu *menu, u8 *tiles)
         if (slotIndex == 0) {
             gauge->art = GetWord20(&menu->gaugeLayer);
         } else {
-            gauge->art = func_02001928(&menu->gaugeLayer, 1, 0);
+            gauge->art = CreateTextSurface(&menu->gaugeLayer, 1, 0);
         }
         if (!IsFieldFlag10Set() && !IsHudFlag7Set()) {
             StartCommandCooldownGauge(menu, gauge, slotIndex, slot->recordId, slot->repeat, slot->bonusKind, slot->repeat);
@@ -325,7 +325,7 @@ void InitFieldCommandMenu(FieldMenu *menu, u8 *tiles)
         if (row == 0) {
             gauge->art = GetWord20(&menu->gaugeLayer);
         } else {
-            gauge->art = func_02001928(&menu->gaugeLayer, 1, 0);
+            gauge->art = CreateTextSurface(&menu->gaugeLayer, 1, 0);
         }
         StartCommandCooldownGauge(menu, gauge, row, -1, 0, slots->slots[row].bonusKind, slots->slots[row].repeat);
     }
@@ -341,7 +341,7 @@ void InitFieldCommandMenu(FieldMenu *menu, u8 *tiles)
         menu->itemCount = found;
         for (itemIndex = 0; itemIndex < 14; itemIndex++) {
             CommandGauge *item = &menu->secondary[itemIndex];
-            item->art = func_02001928(&menu->gaugeLayer, 1, 0);
+            item->art = CreateTextSurface(&menu->gaugeLayer, 1, 0);
             repeat = 0;
             for (index = 0; index < 8; index++) {
                 flag = GetPlayerFlagRecord(index);
@@ -367,7 +367,7 @@ void InitFieldCommandMenu(FieldMenu *menu, u8 *tiles)
             }
         }
         gauge = CycleMenuEntry(menu, 14, 1, NULL);
-        gauge->art = func_02001928(&menu->gaugeLayer, 1, 0);
+        gauge->art = CreateTextSurface(&menu->gaugeLayer, 1, 0);
         StartCommandCooldownGauge(menu, gauge, 14, -1, 0, flag->bonusKind, flag->repeat);
         menu->mode = 0;
         func_ov001_02075e10(menu, tracker, 0);
@@ -377,7 +377,7 @@ void InitFieldCommandMenu(FieldMenu *menu, u8 *tiles)
         for (index = 0; index < 3; index++) {
             gauge = &menu->tertiary[index];
             gauge->owner = -1;
-            gauge->art = func_02001928(&menu->gaugeLayer, 1, 0);
+            gauge->art = CreateTextSurface(&menu->gaugeLayer, 1, 0);
             DrawFieldSlotCell(menu, menu, gauge, &slotView, index);
         }
         FreePointerIfSet(&slotView);

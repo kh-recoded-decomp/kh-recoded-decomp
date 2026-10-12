@@ -1,4 +1,5 @@
 {
+  "src/calls/CreateImageEntry.c": "dsi/1.1",
   "src/overlays/ov015/calls/ExtractTileRect.c": "dsi/1.1",
   "src/overlays/ov084/calls/RefreshTwoChoicePanelText.c": "dsi/1.1",
   "src/overlays/ov030/calls/ResolveMovieSceneAction.c": "dsi/1.1",
@@ -9104,5 +9105,7 @@
   "src/overlays/ov076/calls/DrawSpriteQuad_020c9808.c": "dsi/1.3p1",
   "src/overlays/ov077/calls/DrawSpriteQuad_020c683c.c": "dsi/1.3p1",
   "src/overlays/ov076/calls/SlotMenu_Draw3D.c": "dsi/1.3p1",
-  "src/overlays/ov002/calls/GetMenuCursorDelta.c": "dsi/1.1"
+  "src/overlays/ov002/calls/GetMenuCursorDelta.c": "dsi/1.1",
+  "src/overlays/ov001/calls/SetFieldSlotHudRecord.c": "dsi/1.1",
+  "src/calls/CreateTextSurface.c": "dsi/1.1"
 }

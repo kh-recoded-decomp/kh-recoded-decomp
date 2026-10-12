@@ -1,5 +1,5 @@
 #define StartSceneMinigameTask_02070cfc StartSceneMinigameTask
-#define data_ov001_0209f004 data_ov001_0209f024
+#define data_ov001_0209f004 gSceneMinigameTaskDescriptor
 #define data_ov001_020a04a4 data_ov001_020a04c4
 #define func_0202a448 func_0202a45c
 #define func_0204f768 GetOverlaySelectionRecord

@@ -5,10 +5,10 @@
 #define OpenArrowPrompt_0207dd14 OpenArrowPrompt
 #define data_ov001_0209ee2c data_ov001_0209ee4c
 #define data_ov001_0209ee9c data_ov001_0209eebc
-#define data_ov001_0209eef0 data_ov001_0209ef10
-#define data_ov001_0209ef38 data_ov001_0209ef58
-#define data_ov001_0209ef94 data_ov001_0209efb4
-#define data_ov001_0209eff0 data_ov001_0209f010
+#define data_ov001_0209eef0 gFieldHudTimerTaskDescriptor
+#define data_ov001_0209ef38 gFieldHudCounterTaskDescriptor
+#define data_ov001_0209ef94 gFieldHudStatusTaskDescriptor
+#define data_ov001_0209eff0 gFieldHudExtraTaskDescriptor
 #define data_ov027_020ba380 data_ov027_020ba3a0
 #define data_ov027_020ba394 data_ov027_020ba3b4
 #define func_01ff8830 MI_CpuFill8

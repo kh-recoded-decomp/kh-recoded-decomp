@@ -3,11 +3,11 @@
 #define Msg_BuildLangPath_0202b798 Msg_BuildLangPath
 #define OS_SPrintf_02002428 OS_SPrintf
 #define ZeroBytes0x14_020a8adc ZeroBytes0x14
-#define data_ov001_0209dabc data_ov001_0209dae4
-#define data_ov001_0209dac8 data_ov001_0209daf0
-#define data_ov001_0209dad4 data_ov001_0209dafc
-#define data_ov001_0209db20 data_ov001_0209db48
-#define data_ov001_0209db50 data_ov001_0209db78
+#define data_ov001_0209dabc gLocalizedFieldSprite
+#define data_ov001_0209dac8 gMode6Sprite
+#define data_ov001_0209dad4 gMode4Sprites
+#define data_ov001_0209db20 gNormalModeSprites
+#define data_ov001_0209db50 gCommonModeSprites
 #define data_ov001_0209ec3c gLocalizedSpritePathFormat
 #define data_ov001_020a049c data_ov001_020a04bc
 #define func_ov021_020a89a8 func_ov021_020a89c8

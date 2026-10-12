@@ -1,7 +1,7 @@
 #define CreateFieldEffectGroups_0206d628 CreateFieldEffectGroups
 #define func_ov001_0206dba0 GetResourceArchiveId
 #define ZeroBytes0x14_020a8adc ZeroBytes0x14
-#define data_ov001_0209daec data_ov001_0209db14
+#define data_ov001_0209daec gFieldEffectGroups
 #define data_ov001_020a049c data_ov001_020a04bc
 #define func_ov021_020a89a8 func_ov021_020a89c8
 #include "src/ov001/field_objects/CreateFieldEffectGroups_0206d628.c"

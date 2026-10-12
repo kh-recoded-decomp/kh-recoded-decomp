@@ -42,6 +42,11 @@ extern StageActorDescriptor gSpawnedActorDescriptor;
 extern StageActorDescriptor gStageObjectActorDescriptor;
 extern StageManagerTaskDescriptor gStageManagerTaskDescriptor;
 extern StageHeapConfig gStageHeapConfigs[2];
+extern StageManagerTaskDescriptor gFieldHudTimerTaskDescriptor;
+extern StageManagerTaskDescriptor gFieldHudCounterTaskDescriptor;
+extern StageManagerTaskDescriptor gFieldHudStatusTaskDescriptor;
+extern StageManagerTaskDescriptor gFieldHudExtraTaskDescriptor;
+extern StageManagerTaskDescriptor gSceneMinigameTaskDescriptor;
 extern s8 gExtendedSlotRemap[32];
 extern s8 gGroupMemberRemap[72];
 

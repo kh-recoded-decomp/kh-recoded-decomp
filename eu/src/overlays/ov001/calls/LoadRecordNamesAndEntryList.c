@@ -16,5 +16,5 @@
 #define data_ov001_0209dc14 gRecordNameTextFrame
 #define data_ov001_0209dd3c gWorldLocationNameOffsets
 #define func_0200160c func_02001620
-#define func_02001914 func_02001928
+#define func_02001914 CreateTextSurface
 #include "src/ov001/text_rendering/LoadRecordNamesAndEntryList_0206f484.c"

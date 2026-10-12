@@ -1,6 +1,6 @@
 #define CallIndexedHandler_0202b3b8 CallIndexedHandler
 #define FillBackgroundTileRectangle_02017adc NNS_G2dMapScrToCharText
 #define InitTextLayer_020012c8 InitTextLayer
-#define func_02001914 func_02001928
+#define func_02001914 CreateTextSurface
 #define func_0201288c NNS_FndInitList
 #include "src/arm9/font/InitTextLayer_020012c8.c"

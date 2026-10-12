@@ -1,5 +1,5 @@
 #define ArmCountdown_02073cdc ArmCountdown
 #define StartGaugeTween_02073d00 func_ov001_02073d00
 #define UploadScreenSlotBlock_02071770 UploadScreenSlotBlock
-#define data_ov001_0209edf4 data_ov001_0209ee14
+#define data_ov001_0209edf4 gFieldGaugeLayouts
 #include "src/ov001/field_manager/StartGaugeTween_02073d00.c"

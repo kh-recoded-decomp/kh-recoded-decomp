@@ -9704,6 +9704,215 @@
       "name": "gStageEventKinds",
       "origin": "EU original DATA",
       "behavior": "Ten stage-event descriptors with action, attachment, object, mirror and duration."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209dbec",
+      "end": "0x0209dbf8",
+      "source": "src/overlays/ov001/data/tables/gFieldHudRefreshLayerIds.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gFieldHudRefreshLayerIds",
+      "origin": "EU original DATA",
+      "behavior": "Widget layers refreshed by the field HUD."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209dbf8",
+      "end": "0x0209dc04",
+      "source": "src/overlays/ov001/data/tables/gFieldHudRestoreLayerIds.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gFieldHudRestoreLayerIds",
+      "origin": "EU original DATA",
+      "behavior": "Three saved tile layers restored when the field HUD is closed."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209ddf8",
+      "end": "0x0209ddff",
+      "source": "src/overlays/ov001/data/tables/gWideGaugeShadeRamp.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gWideGaugeShadeRamp",
+      "origin": "EU original DATA",
+      "behavior": "Seven 4-bit palette indices for the 110-column gauge."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209ddff",
+      "end": "0x0209de06",
+      "source": "src/overlays/ov001/data/tables/gWideGaugeShadeRamp.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gNarrowGaugeShadeRamp",
+      "origin": "EU original DATA",
+      "behavior": "Seven 4-bit palette indices for the 48-column gauge."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209ee14",
+      "end": "0x0209ee4c",
+      "source": "src/overlays/ov001/data/tables/gFieldGaugeLayouts.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gFieldGaugeLayouts",
+      "origin": "EU original DATA",
+      "behavior": "Two typed gauge layouts with dimensions, shade ramps and row callbacks."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209ef10",
+      "end": "0x0209ef24",
+      "source": "src/overlays/ov001/data/tables/gFieldHudTimerTaskDescriptor.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gFieldHudTimerTaskDescriptor",
+      "origin": "EU original DATA",
+      "behavior": "Timer widget task: flags, initializer, shutdown, work size and parameter."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209ef58",
+      "end": "0x0209ef6c",
+      "source": "src/overlays/ov001/data/tables/gFieldHudCounterTaskDescriptor.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gFieldHudCounterTaskDescriptor",
+      "origin": "EU original DATA",
+      "behavior": "Counter widget task descriptor used by CreateFieldHudWidgets."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209efb4",
+      "end": "0x0209efc8",
+      "source": "src/overlays/ov001/data/tables/gFieldHudStatusTaskDescriptor.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gFieldHudStatusTaskDescriptor",
+      "origin": "EU original DATA",
+      "behavior": "Status widget task descriptor used by CreateFieldHudWidgets."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209f010",
+      "end": "0x0209f024",
+      "source": "src/overlays/ov001/data/tables/gFieldHudExtraTaskDescriptor.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gFieldHudExtraTaskDescriptor",
+      "origin": "EU original DATA",
+      "behavior": "Extra widget task descriptor used by minigame HUD scenes."
+    },
+    {
+      "module": "ov001",
+      "section": ".data",
+      "start": "0x0209f024",
+      "end": "0x0209f038",
+      "source": "src/overlays/ov001/data/tables/gSceneMinigameTaskDescriptor.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gSceneMinigameTaskDescriptor",
+      "origin": "EU original DATA",
+      "behavior": "Scene minigame task descriptor instantiated for modes one, two and three."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209dd44",
+      "end": "0x0209dd64",
+      "source": "src/overlays/ov001/data/tables/gFieldSlotHudRecordIds.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gFieldSlotHudRecordIds",
+      "origin": "EU original DATA",
+      "behavior": "HUD record IDs selected by field slot kind."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209da68",
+      "end": "0x0209da7a",
+      "source": "src/overlays/ov001/data/tables/gLevelBonusWeights.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gLevelBonusWeights",
+      "origin": "EU original DATA",
+      "behavior": "Level-tier probabilities used by RollLevelBonus."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209dae4",
+      "end": "0x0209daf0",
+      "source": "src/overlays/ov001/data/tables/gLocalizedFieldSprite.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gLocalizedFieldSprite",
+      "origin": "EU original DATA",
+      "behavior": "Localized field sprite path and instance count."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209daf0",
+      "end": "0x0209dafc",
+      "source": "src/overlays/ov001/data/tables/gMode6Sprite.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gMode6Sprite",
+      "origin": "EU original DATA",
+      "behavior": "Sprite resource for field mode six."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209dafc",
+      "end": "0x0209db14",
+      "source": "src/overlays/ov001/data/tables/gMode4Sprites.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gMode4Sprites",
+      "origin": "EU original DATA",
+      "behavior": "Two sprite resources for field mode four."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209db14",
+      "end": "0x0209db2c",
+      "source": "src/overlays/ov001/data/tables/gFieldEffectGroups.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gFieldEffectGroups",
+      "origin": "EU original DATA",
+      "behavior": "Two effect resource groups and their slot counts."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209db48",
+      "end": "0x0209db78",
+      "source": "src/overlays/ov001/data/tables/gNormalModeSprites.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gNormalModeSprites",
+      "origin": "EU original DATA",
+      "behavior": "Four sprite resources used by field modes zero and ten."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209db78",
+      "end": "0x0209dbb4",
+      "source": "src/overlays/ov001/data/tables/gCommonModeSprites.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gCommonModeSprites",
+      "origin": "EU original DATA",
+      "behavior": "Five shared field sprite resource definitions."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209dcbc",
+      "end": "0x0209dcd0",
+      "source": "src/overlays/ov001/data/tables/gMenuScreenLayerConfig.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gMenuScreenLayerConfig",
+      "origin": "EU original DATA",
+      "behavior": "Menu-screen pool capacities and piece draw/clear callbacks."
     }
   ]
 }

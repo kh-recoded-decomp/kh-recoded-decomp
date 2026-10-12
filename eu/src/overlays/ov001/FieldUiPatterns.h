@@ -19,10 +19,36 @@ typedef struct FieldSlotMessageIds {
     int messageIds[4];
 } FieldSlotMessageIds;
 
+typedef struct FieldSlotRecordIds {
+    int ids[8];
+} FieldSlotRecordIds;
+
+typedef struct FieldWidgetLayerIds {
+    int ids[3];
+} FieldWidgetLayerIds;
+
+typedef void (*FieldGaugeRowDraw)(u8 *tiles, int right, int row);
+
+typedef struct FieldGaugeLayout {
+    int reserved00;
+    int rowWidth;
+    int cellCount;
+    int topRow;
+    const u8 *shadeRamp;
+    int rowCount;
+    FieldGaugeRowDraw drawRow;
+} FieldGaugeLayout;
+
 extern const FieldCellIds gMenuScreenCellIds;
 extern const FieldResumeLayerIds gResumeFieldLayerIds;
 extern const FieldEntryModes gFieldEntryModes;
 extern const FieldSlotMessageIds gFieldSlotMessageIds;
+extern const FieldSlotRecordIds gFieldSlotHudRecordIds;
+extern const FieldWidgetLayerIds gFieldHudRefreshLayerIds;
+extern const FieldWidgetLayerIds gFieldHudRestoreLayerIds;
+extern const u8 gWideGaugeShadeRamp[7];
+extern const u8 gNarrowGaugeShadeRamp[7];
+extern FieldGaugeLayout gFieldGaugeLayouts[2];
 
 /* These are short patterns of 4-bit palette indices, not text strings. */
 extern const u8 gFourPixelLabelRows[5][4];
