@@ -3272,6 +3272,10 @@ src/overlays/ov001/calls/func_ov001_02073d00.c:
     complete
     .text       start:0x02073d00 end:0x02073e40
 
+src/overlays/ov001/calls/func_ov001_02073e40.c:
+    complete
+    .text       start:0x02073e40 end:0x020740d0
+
 src/overlays/ov001/calls/RunMenuEntryCallbacks.c:
     complete
     .text       start:0x020740d0 end:0x0207414c

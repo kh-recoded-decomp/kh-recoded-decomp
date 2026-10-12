@@ -1,0 +1,6 @@
+#define ClampScrollCursor_020bd694 ClampScrollCursor
+#define HandleListTouchInput_020bd868 func_ov039_020bd888
+#define RefreshScrollListLayout_020be138 RefreshScrollListLayout
+#define SnapScrollToStep_020bd750 SnapScrollToStep
+#define UpdateScrollInertia_020bd7b0 UpdateScrollInertia
+#include "src/ov039/input/HandleListTouchInput_020bd868.c"

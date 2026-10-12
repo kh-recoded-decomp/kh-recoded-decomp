@@ -356,6 +356,10 @@ src/overlays/ov075/calls/InitGridImageQuad.c:
     complete
     .text       start:0x020cd5b0 end:0x020cd602
 
+src/overlays/ov075/calls/func_ov075_020cd604.c:
+    complete
+    .text       start:0x020cd604 end:0x020cd75c
+
 src/overlays/ov075/calls/func_ov075_020cd75c.c:
     complete
     .text       start:0x020cd75c end:0x020cd874

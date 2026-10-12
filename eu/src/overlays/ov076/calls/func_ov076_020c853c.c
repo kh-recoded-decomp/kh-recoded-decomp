@@ -1,0 +1,11 @@
+#define GetActiveRecordEntryOrNull_02029548 GetActiveRecordEntryOrNull
+#define SetGlobalPackedBit_02027320 SetGlobalPackedBit
+#define SlotMenu_FuseSlotRecords_020c851c func_ov076_020c853c
+#define SlotMenu_LockTouchUntilCommit_020c88dc SlotMenu_LockTouchUntilCommit
+#define SlotMenu_UnequipSlotEntry_020c89e0 SlotMenu_UnequipSlotEntry
+#define data_ov076_020cd0c0 data_ov076_020cd0e0
+#define func_0202737c AddClampedGlobalPackedBits
+#define func_020293c4 func_020293d8
+#define func_ov076_020c82d8 SlotMenu_EquipRecordEntry
+#define nextRandom12_0202aa58 nextRandom12
+#include "src/ov076/unclassified_helpers/SlotMenu_FuseSlotRecords_020c851c.c"

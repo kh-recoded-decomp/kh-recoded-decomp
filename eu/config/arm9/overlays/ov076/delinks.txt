@@ -272,6 +272,10 @@ src/overlays/ov076/calls/SlotMenu_ReturnToBrowse.c:
     complete
     .text       start:0x020c8520 end:0x020c853c
 
+src/overlays/ov076/calls/func_ov076_020c853c.c:
+    complete
+    .text       start:0x020c853c end:0x020c88d4
+
 src/overlays/ov076/calls/SlotMenu_ClearSelectedSlot.c:
     complete
     .text       start:0x020c88d4 end:0x020c88fc
@@ -383,6 +387,10 @@ src/overlays/ov076/calls/InitImageQuad_020c9790.c:
 src/overlays/ov076/calls/InitGridImageQuad_020c97b4.c:
     complete
     .text       start:0x020c97b4 end:0x020c9806
+
+src/overlays/ov076/calls/func_ov076_020c9808.c:
+    complete
+    .text       start:0x020c9808 end:0x020c9960
 
 src/overlays/ov076/calls/DrawImageQuad_020c9a78.c:
     complete

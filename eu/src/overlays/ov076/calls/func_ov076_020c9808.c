@@ -1,0 +1,9 @@
+#define DrawSpriteQuad_020c97e8 func_ov076_020c9808
+#define FlushGeometryState_02019230 NNS_G3dGlbFlushWVP
+#define MI_Copy36B_01ff87c4 MI_Copy36B
+#define QueueOrSendGeometryCommand_01ffa37c NNS_G3dGeBufferOP_N
+#define data_0205a9a4 NNS_G3dGlb_prmMatColor0
+#define data_0205a9b8 NNS_G3dGlb_prmBaseRot
+#define func_020192ec NNS_G3dGlbSetBaseTrans
+#define func_0201931c NNS_G3dGlbSetBaseScale
+#include "src/ov076/unclassified_helpers/DrawSpriteQuad_020c97e8.c"

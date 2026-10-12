@@ -464,6 +464,10 @@ src/overlays/ov039/calls/UpdateScrollInertia.c:
     complete
     .text       start:0x020bd7d0 end:0x020bd886
 
+src/overlays/ov039/calls/func_ov039_020bd888.c:
+    complete
+    .text       start:0x020bd888 end:0x020bdc46
+
 src/overlays/ov039/calls/HandleListKeyInput.c:
     complete
     .text       start:0x020bdc48 end:0x020bdea4
