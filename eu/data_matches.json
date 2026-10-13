@@ -2029,11 +2029,11 @@
       "section": ".rodata",
       "start": "0x0206f7fc",
       "end": "0x0206f860",
-      "source": "src/ov014/data/Rodata_ov014_0206f7fc.c",
+      "source": "src/overlays/ov014/data/tables/PanelCategoryTables.c",
       "compiler": "mwccarm-3.0-139",
-      "name": "ov014 data words",
-      "origin": "generated words",
-      "behavior": "Initialised data words, pointers named by their targets."
+      "name": "ov014 category tables",
+      "origin": "reconstructed typed tables",
+      "behavior": "Group category ids and widths, category entry counts and storage offsets."
     },
     {
       "module": "ov014",

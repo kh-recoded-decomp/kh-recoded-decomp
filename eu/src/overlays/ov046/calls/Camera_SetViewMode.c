@@ -2,7 +2,7 @@
 #define data_ov046_020c33a0 gCameraLayerIdsByMode
 #define func_02029f78 func_02029f8c
 #define func_02029f98 func_02029fac
-#define func_ov047_020c70d8 func_ov047_020c70f8
+#define func_ov047_020c70d8 Camera_StartVectorTracking
 #define func_ov048_020c3858 InitCameraTarget
 #define func_ov050_020c3ba4 InitCameraPathState
 #define g_cameraManager_020c34e0 gCameraManager

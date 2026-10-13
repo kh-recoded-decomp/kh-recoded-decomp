@@ -30,6 +30,18 @@ Inline ASM or placeholder assembly for game code may be used temporarily while
 researching a function. It may match the original bytes, but it does not count
 as C-decompiled progress and belongs under `asm_stubs/`.
 
+## Authorized CLZ exception
+
+The user authorizes the same narrow exception used in khdays-decomp: a function
+may retain inline assembly for the `clz` instruction while its surrounding
+implementation is readable C. This does not authorize other inline assembly or
+assembly placeholders for game code.
+
+Such a function must still pass byte and relocation verification and the full
+module gate. It is an authorized assembly exception, not pure C, and must be
+reported separately without increasing real-C progress. Authorization alone
+does not add verified bytes or change the report totals.
+
 ## Named functions
 
 A function may have a known name (for example a NitroSDK name carried over from

@@ -1,3 +1,4 @@
+#define data_ov014_0206f7fc gPanelGroupWidths
 #define SelectPanelEntry_0206f230 SelectPanelEntry
 #define func_ov002_02069504 GetPackedFieldValue
 #define func_ov014_0206f0a0 BuildPanelGroupEntries

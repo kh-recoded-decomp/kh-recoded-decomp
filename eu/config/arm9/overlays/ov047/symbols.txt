@@ -42,7 +42,7 @@ func_ov047_020c6d44 kind:function(thumb,size=0xe) addr:0x020c6d44
 Camera_RestoreSavedTracking kind:function(thumb,size=0xb8) addr:0x020c6d54
 CameraTarget_IsTrackable kind:function(thumb,size=0x24) addr:0x020c6e0c
 Camera_FindClearOrbit kind:function(thumb,size=0x2c8) addr:0x020c6e30
-func_ov047_020c70f8 kind:function(thumb,size=0x17c) addr:0x020c70f8
+Camera_StartVectorTracking kind:function(thumb,size=0x17c) addr:0x020c70f8
 data_ov047_020c72a4 kind:data(any) addr:0x020c72a4
 data_ov047_020c72a8 kind:data(any) addr:0x020c72a8
 data_ov047_020c72ac kind:data(any) addr:0x020c72ac

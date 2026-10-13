@@ -1,4 +1,4 @@
 #define ChangeMenuAnimSequence_020b5b28 ChangeMenuAnimSequence
 #define SetSlotAnimSequence_0204f24c SetSlotAnimSequence
-#define func_0204f178 func_0204f18c
+#define func_0204f178 SetIndexedRecordPriority
 #include "src/ov023/menu_graphics/ChangeMenuAnimSequence_020b5b28.c"

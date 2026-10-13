@@ -1,4 +1,5 @@
 {
+  "src/overlays/ov014/calls/RefreshPanelCategorySlots.c": "dsi/1.1",
   "src/calls/func_0202f4cc.c": "dsi/1.1",
   "src/overlays/ov015/calls/UpdateWirelessPanelTouch.c": "dsi/1.1",
   "src/overlays/ov086/calls/DrawRecordStatisticsRow.c": "dsi/1.1",
@@ -9162,5 +9163,7 @@
   "src/overlays/ov013/calls/OpenPanelSelectionMenu.c": "dsi/1.1",
   "src/overlays/ov013/calls/ChangePanelMenuState.c": "dsi/1.1",
   "src/overlays/ov013/calls/ScrollPanelSlotWidgets.c": "dsi/1.1",
-  "src/overlays/ov013/calls/PulsePanelPaletteColor.c": "dsi/1.3p1"
+  "src/overlays/ov013/calls/PulsePanelPaletteColor.c": "dsi/1.3p1",
+  "src/overlays/ov047/calls/Camera_StartVectorTracking.c": "dsi/1.1",
+  "src/overlays/ov059/calls/Seeker_Start.c": "dsi/1.1"
 }

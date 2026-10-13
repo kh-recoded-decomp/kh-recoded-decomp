@@ -1,3 +1,4 @@
+#define data_ov014_0206f81c gPanelGroupCategories
 #define CopyRecordName_02069d5c CopyRecordName
 #define DispatchContextCommand_02066c78 DispatchContextCommand
 #define DrawSelectedEntryInfo_0206ea4c DrawSelectedEntryInfo

@@ -115,7 +115,7 @@ extern void NNS_G2dBGLoadScreenRect(void *dst, ScreenData *screen, int srcX, int
                                              int dstW, int dstH, int width, int height);
 extern void PXI_Init_0204f020(u8 *records, u32 fileId);
 extern int PXI_Init_0204f0c8(u8 *records, int x, int y);
-extern void func_0204f18c(u8 *records, int slot, int scale);
+extern void SetIndexedRecordPriority(u8 *records, int slot, int scale);
 extern void Slot_SetMode2Bit(u8 *records, int slot, int value);
 extern int *SlotTable_SetEntryPriority(u8 *records, int slot, int priority);
 
@@ -219,7 +219,7 @@ void SetupPanelBoard(void) {
         pos.y = points[i].y << 12;
         data_ov015_020812e0->entries[i].animSlot = PXI_Init_0204f0c8(data_ov015_020812e0->records, 0, 0);
         SetPanelEntrySequence(i, 8);
-        func_0204f18c(data_ov015_020812e0->records, data_ov015_020812e0->entries[i].animSlot, 0x66);
+        SetIndexedRecordPriority(data_ov015_020812e0->records, data_ov015_020812e0->entries[i].animSlot, 0x66);
         Slot_SetMode2Bit(data_ov015_020812e0->records, data_ov015_020812e0->entries[i].animSlot, 1);
         SlotTable_SetEntryPriority(data_ov015_020812e0->records, data_ov015_020812e0->entries[i].animSlot, 0);
         SetSceneRecordValue(data_ov015_020812e0->entries[i].animSlot, &pos);
@@ -227,7 +227,7 @@ void SetupPanelBoard(void) {
         data_ov015_020812e0->entries[i].markSlot =
             PXI_Init_0204f0c8(data_ov015_020812e0->records, gWirelessSlotStyles[data_ov015_020812e0->entries[i].styleId].slotX,
                           priority);
-        func_0204f18c(data_ov015_020812e0->records, data_ov015_020812e0->entries[i].markSlot, 0x67);
+        SetIndexedRecordPriority(data_ov015_020812e0->records, data_ov015_020812e0->entries[i].markSlot, 0x67);
         Slot_SetMode2Bit(data_ov015_020812e0->records, data_ov015_020812e0->entries[i].markSlot, 2);
         SlotTable_SetEntryPriority(data_ov015_020812e0->records, data_ov015_020812e0->entries[i].markSlot,
                                             priority);

@@ -548,6 +548,10 @@ src/overlays/ov059/calls/EffectGroup_Init.c:
     complete
     .text       start:0x020ceddc end:0x020cef1c
 
+src/overlays/ov059/calls/Seeker_Start.c:
+    complete
+    .text       start:0x020cef1c end:0x020cf0c4
+
 src/overlays/ov059/calls/TargetKey_GetPosition.c:
     complete
     .text       start:0x020cf0c4 end:0x020cf120

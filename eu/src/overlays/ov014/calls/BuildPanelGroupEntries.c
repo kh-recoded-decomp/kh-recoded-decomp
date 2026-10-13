@@ -1,3 +1,5 @@
+#define data_ov014_0206f838 gPanelGroupEntryOffsets
+#define data_ov014_0206f808 gPanelCategoryEntryCounts
 #define BuildPanelGroupEntries_0206f0a0 BuildPanelGroupEntries
 #define CheckRecordEntryRequirements_0206aa28 CheckRecordEntryRequirements
 #define GetPackedField_02069690 GetPackedField

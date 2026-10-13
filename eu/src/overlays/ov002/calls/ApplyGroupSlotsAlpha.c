@@ -1,4 +1,4 @@
 #define ApplyGroupSlotsAlpha_02068310 ApplyGroupSlotsAlpha
 #define Slot_SetMode2Bit_0204f480 Slot_SetMode2Bit
-#define func_0204f178 func_0204f18c
+#define func_0204f178 SetIndexedRecordPriority
 #include "src/ov002/panel_state/ApplyGroupSlotsAlpha_02068310.c"

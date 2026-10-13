@@ -171,6 +171,10 @@ src/overlays/ov047/calls/Camera_FindClearOrbit.c:
     complete
     .text       start:0x020c6e30 end:0x020c70f8
 
+src/overlays/ov047/calls/Camera_StartVectorTracking.c:
+    complete
+    .text       start:0x020c70f8 end:0x020c7274
+
 src/ov047/data/Rodata_ov047_020c7274.c:
     complete
     .rodata     start:0x020c7274 end:0x020c72a4

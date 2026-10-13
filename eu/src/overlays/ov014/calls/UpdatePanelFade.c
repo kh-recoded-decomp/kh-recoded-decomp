@@ -1,3 +1,4 @@
+#define data_ov014_0206f81c gPanelGroupCategories
 #define SyncMismatchedCategoryEntries_020683bc SyncMismatchedCategoryEntries
 #define UpdatePanelFade_0206e6a0 UpdatePanelFade
 #define func_ov002_020680a4 ResetGroupSlotsPosition

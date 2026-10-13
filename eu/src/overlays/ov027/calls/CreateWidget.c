@@ -4,7 +4,7 @@
 #define PXI_Init_0204f0b4 PXI_Init_0204f0c8
 #define func_01ff8830 MI_CpuFill8
 #define func_01ff89a8 MI_CpuCopy8
-#define func_0204f178 func_0204f18c
+#define func_0204f178 SetIndexedRecordPriority
 #define func_0204f298 func_0204f2ac
 #define func_0204f378 IndexedRecords_SetFlag2
 #define func_0204f3c8 IndexedRecords_SetFlag3

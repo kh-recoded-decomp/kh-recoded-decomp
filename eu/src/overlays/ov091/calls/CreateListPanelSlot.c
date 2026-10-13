@@ -2,7 +2,7 @@
 #define CreateListPanelSlot_020bf950 CreateListPanelSlot
 #define SetListPanelSlotPos_020bfaa0 SetListPanelSlotPos
 #define Slot_SetMode2Bit_0204f480 Slot_SetMode2Bit
-#define func_0204f178 func_0204f18c
+#define func_0204f178 SetIndexedRecordPriority
 #define func_0204f204 func_0204f218
 #define func_0204f2c0 IndexedRecord_SetActive
 #define func_0204f2e4 IndexedRecord_ClearActive

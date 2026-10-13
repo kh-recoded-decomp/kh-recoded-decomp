@@ -8,7 +8,7 @@
 #define func_0204f00c PXI_Init_0204f020
 #define func_0204f0b4 PXI_Init_0204f0c8
 #define func_0204f13c IndexedRecord_SetPair
-#define func_0204f178 func_0204f18c
+#define func_0204f178 SetIndexedRecordPriority
 #define func_0204f378 IndexedRecords_SetFlag2
 #define func_0204f3c8 IndexedRecords_SetFlag3
 #define func_0204f400 set_engine_alpha_blend

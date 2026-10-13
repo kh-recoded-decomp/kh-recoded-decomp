@@ -27,7 +27,7 @@
 #define data_ov013_02074c4c sOv013_WxcWlaP2_02074c4c
 #define func_0202c48c func_0202c4a0
 #define func_0202cc6c Msg_OpenContainerAndReadHeader
-#define func_0204f178 func_0204f18c
+#define func_0204f178 SetIndexedRecordPriority
 #define func_ov027_020b7d58 InitBackgroundContainer
 #define func_ov027_020b7e24 func_ov027_020b7e44
 #define func_ov027_020b8558 func_ov027_020b8578
