@@ -43,6 +43,40 @@
     .global gCameraDefaultProjection
     .equ gCameraDefaultProjection, 0x0205fe4c
 
+    /* Interior views of the saved camera, owned by gSavedCameraState. */
+    .global data_0205fe34
+    .equ data_0205fe34, 0x0205fe34
+    .global gCameraDefaultsTail
+    .equ gCameraDefaultsTail, 0x0205fe40
+    .global data_0205fe8c
+    .equ data_0205fe8c, 0x0205fe8c
+    .global data_0205fea8
+    .equ data_0205fea8, 0x0205fea8
+
+    /* Existing camera-field views inside the resident NNS_G3dGlb object. */
+    .global NNS_G3dGlb_projMtx
+    .equ NNS_G3dGlb_projMtx, 0x0205a92c
+    .global NNS_G3dGlb_cameraMtx
+    .equ NNS_G3dGlb_cameraMtx, 0x0205a970
+    .global NNS_G3dGlb_camUp
+    .equ NNS_G3dGlb_camUp, 0x0205ab48
+    .global NNS_G3dGlb_camTarget
+    .equ NNS_G3dGlb_camTarget, 0x0205ab54
+
+    /* Per-frame and exit-column views of the ov013 mode callback table. */
+    .global gPanelExitModeResolver
+    .equ gPanelExitModeResolver, 0x02074bbc
+    .global gPanelEntryStateHandler
+    .equ gPanelEntryStateHandler, 0x02074bc0
+    .global gPanelMenuStateHandlers
+    .equ gPanelMenuStateHandlers, 0x02074bc4
+
+    /* Original names for the record-selection configuration views. */
+    .global data_ov013_020749f4
+    .equ data_ov013_020749f4, 0x020749f4
+    .global data_ov013_02074a74
+    .equ data_ov013_02074a74, 0x02074a74
+
     /* Zero-byte view used by SHA-1 finalization. */
     .global sSha1PaddingZeros
     .equ sSha1PaddingZeros, 0x02052af5

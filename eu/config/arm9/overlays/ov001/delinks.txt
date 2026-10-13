@@ -4704,15 +4704,15 @@ src/overlays/ov001/calls/CallFieldObjectHook24.c:
     complete
     .text       start:0x0207f828 end:0x0207f836
 
-src/overlays/ov001/calls/func_ov001_0207f838.c:
+src/overlays/ov001/calls/FieldObject_GetPosition.c:
     complete
     .text       start:0x0207f838 end:0x0207f84a
 
-src/overlays/ov001/calls/func_ov001_0207f84c.c:
+src/overlays/ov001/calls/FieldObject_QueryHit.c:
     complete
     .text       start:0x0207f84c end:0x0207f872
 
-src/overlays/ov001/calls/func_ov001_0207f874.c:
+src/overlays/ov001/calls/FieldObject_ApplyHit.c:
     complete
     .text       start:0x0207f874 end:0x0207f896
 

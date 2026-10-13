@@ -112,11 +112,11 @@ src/overlays/ov037/calls/GetContinueTitleIndex.c:
     complete
     .text       start:0x020bad2c end:0x020bad44
 
-src/overlays/ov037/calls/func_ov037_020bad44.c:
+src/overlays/ov037/calls/BlitContinueMenuWidget.c:
     complete
     .text       start:0x020bad44 end:0x020bad64
 
-src/overlays/ov037/calls/func_ov037_020bad64.c:
+src/overlays/ov037/calls/ClearContinueMenuWidget.c:
     complete
     .text       start:0x020bad64 end:0x020bad84
 

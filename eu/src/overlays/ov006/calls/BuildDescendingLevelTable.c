@@ -1,5 +1,5 @@
 #define BuildDescendingLevelTable_020a0674 BuildDescendingLevelTable
 #define func_02023dbc _s32_div_f
 #define func_ov001_0207f038 func_ov001_0207f060
-#define func_ov001_0207f810 func_ov001_0207f838
+#define func_ov001_0207f810 FieldObject_GetPosition
 #include "src/ov006/unclassified_helpers/BuildDescendingLevelTable_020a0674.c"

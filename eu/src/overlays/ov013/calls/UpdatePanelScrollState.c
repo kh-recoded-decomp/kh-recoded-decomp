@@ -1,3 +1,5 @@
+#define func_ov013_020704a0 ScrollPanelSlotWidgets
+#define func_ov013_020716e4 ChangePanelMenuState
 #define DispatchTouchToWidget_020b8874 DispatchTouchToWidget
 #define GetMenuCursorPosition_02066bdc GetMenuCursorPosition
 #define GetMenuTouchHeld_02066b2c GetMenuTouchHeld

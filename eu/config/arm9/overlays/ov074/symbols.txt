@@ -9,13 +9,13 @@ SelectPreviousRootMenuItem kind:function(arm,size=0x60) addr:0x020c5510
 SelectNextRootMenuItem kind:function(arm,size=0x6c) addr:0x020c5570
 ToggleRootMenuOptionLeft kind:function(arm,size=0x38) addr:0x020c55dc
 ToggleRootMenuOptionRight kind:function(arm,size=0x38) addr:0x020c5614
-func_ov074_020c564c kind:function(arm,size=0x1b0) addr:0x020c564c
+HandleRootMenuConfirm kind:function(arm,size=0x1b0) addr:0x020c564c
 HandleRootMenuCancel kind:function(arm,size=0x144) addr:0x020c57fc
 sOv074_WeaponTg01_020c5940 kind:data(any) addr:0x020c5940
 sOv074_WeaponTg00_020c5950 kind:data(any) addr:0x020c5950
 data_ov074_020c5960 kind:data(any) addr:0x020c5960
 data_ov074_020c5970 kind:data(any) addr:0x020c5970
-data_ov074_020c59a0 kind:data(any) addr:0x020c59a0 ambiguous
+gRootMenuDefinition kind:data(any) addr:0x020c59a0 ambiguous
 sOv074_Root_020c59e4 kind:data(any) addr:0x020c59e4
 sOv074_Smenu_020c59ec kind:data(any) addr:0x020c59ec
 sOv074_UiMenuStrLanguageFormatSSZ_020c59f4 kind:data(any) addr:0x020c59f4

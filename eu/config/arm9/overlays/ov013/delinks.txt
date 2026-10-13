@@ -84,6 +84,10 @@ src/overlays/ov013/calls/RefreshPanelSlotDigits.c:
     complete
     .text       start:0x0206fe50 end:0x020704a0
 
+src/overlays/ov013/calls/ScrollPanelSlotWidgets.c:
+    complete
+    .text       start:0x020704a0 end:0x02070a18
+
 src/overlays/ov013/calls/func_ov013_02070a18.c:
     complete
     .text       start:0x02070a18 end:0x02070a50
@@ -128,6 +132,10 @@ src/overlays/ov013/calls/AnimatePanelPageScreens.c:
     complete
     .text       start:0x02071094 end:0x020711f8
 
+src/overlays/ov013/calls/PulsePanelPaletteColor.c:
+    complete
+    .text       start:0x020711f8 end:0x020712e8
+
 src/overlays/ov013/calls/RebuildPanelSelection.c:
     complete
     .text       start:0x020712e8 end:0x02071444
@@ -148,7 +156,7 @@ src/overlays/ov013/calls/RefreshInactivePanelSlots.c:
     complete
     .text       start:0x02071638 end:0x020716e4
 
-src/overlays/ov013/calls/func_ov013_020716e4.c:
+src/overlays/ov013/calls/ChangePanelMenuState.c:
     complete
     .text       start:0x020716e4 end:0x0207174c
 
@@ -179,6 +187,10 @@ src/overlays/ov013/calls/UpdatePanelScrollState.c:
 src/overlays/ov013/calls/ApplyPanelSubitem5.c:
     complete
     .text       start:0x02072228 end:0x0207225c
+
+src/overlays/ov013/calls/OpenPanelSelectionMenu.c:
+    complete
+    .text       start:0x0207225c end:0x020724c0
 
 src/overlays/ov013/calls/UpdatePanelResultState.c:
     complete
@@ -436,10 +448,6 @@ src/ov013/data/Data_ov013_02074cac.c:
     complete
     .data       start:0x02074cac end:0x02074ce0
 
-src/ov013/data/Rodata_ov013_020749f4.c:
-    complete
-    .rodata     start:0x020749f4 end:0x02074a08
-
 src/ov013/data/Rodata_ov013_02074a08.c:
     complete
     .rodata     start:0x02074a08 end:0x02074a1c
@@ -455,10 +463,6 @@ src/ov013/data/Rodata_ov013_02074a30.c:
 src/ov013/data/Rodata_ov013_02074a5c.c:
     complete
     .rodata     start:0x02074a5c end:0x02074a74
-
-src/ov013/data/Rodata_ov013_02074a74.c:
-    complete
-    .rodata     start:0x02074a74 end:0x02074a8c
 
 src/ov013/data/Rodata_ov013_02074a8c.c:
     complete
@@ -512,18 +516,22 @@ src/overlays/ov013/data/tables/PointerTables_ov013_02074b38.c:
     complete
     .data       start:0x02074b38 end:0x02074b58
 
-src/overlays/ov013/data/tables/PointerTables_ov013_02074bc0.c:
-    complete
-    .data       start:0x02074bc0 end:0x02074c4c
-
 src/overlays/ov013/data/tables/gPanelAssetPaths.c:
     complete
     .data       start:0x02074b20 end:0x02074b34
 
-src/overlays/ov013/data/tables/gPanelExitModeResolver.c:
-    complete
-    .data       start:0x02074bbc end:0x02074bc0
-
 src/overlays/ov013/data/tables/gPanelScrollStartCallback.c:
     complete
     .data       start:0x02074b34 end:0x02074b38
+
+src/overlays/ov013/data/tables/gPanelStateCallbacks.c:
+    complete
+    .data       start:0x02074bbc end:0x02074c4c
+
+src/overlays/ov013/data/tables/gRecordSelectionBgConfig.c:
+    complete
+    .rodata     start:0x020749f4 end:0x02074a08
+
+src/overlays/ov013/data/tables/gRecordSelectionObjConfig.c:
+    complete
+    .rodata     start:0x02074a74 end:0x02074a8c

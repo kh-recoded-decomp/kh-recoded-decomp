@@ -1,3 +1,4 @@
+#define func_ov013_020716e4 ChangePanelMenuState
 #define IsButtonBPressed_020632c8 IsButtonBPressed
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define RefreshProgressCaption_0206f06c RefreshProgressCaption

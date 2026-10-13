@@ -40,6 +40,10 @@ src/overlays/ov078/calls/RefreshPageTabs.c:
     complete
     .text       start:0x020c48fc end:0x020c49a0
 
+src/overlays/ov078/calls/DrawPageDetails.c:
+    complete
+    .text       start:0x020c49a0 end:0x020c4b38
+
 src/overlays/ov078/calls/DrawPageHeader.c:
     complete
     .text       start:0x020c4b38 end:0x020c4c4c

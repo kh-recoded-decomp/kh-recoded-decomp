@@ -66,7 +66,7 @@ extern void SetPanelSessionActive(void);
 extern void *func_ov001_0207123c(void);
 extern void InitTileTableFrom(void *widget, BgLayerDesc *desc);
 extern int Msg_OpenContainerAndReadHeader(const char *path, int heap, int flags);
-extern void func_ov027_020b7d78(void *animSet, Words5 *desc);
+extern void InitBackgroundContainer(void *animSet, Words5 *desc);
 extern void func_ov027_020b7e44(void *animSet, u32 key);
 extern void *func_ov001_0206468c(int value);
 extern void InitializeResourceContainer(void *objectSet, int value);
@@ -122,7 +122,7 @@ void *CreateBoardScreen(int mode)
     data_ov024_020b7540.state->resourceA = Msg_OpenContainerAndReadHeader(sOv024_UiBtlBtluiP2_020b74f4, 0xe, 0);
     data_ov024_020b7540.state->resourceB = Msg_OpenContainerAndReadHeader(sOv024_UiBtlBtlLanguageP2_020b7508, 0xe, 0);
     animDesc = data_ov024_020b7370;
-    func_ov027_020b7d78(state->animSet, &animDesc);
+    InitBackgroundContainer(state->animSet, &animDesc);
     func_ov027_020b7e44(state->animSet, BOARD_VRAM_KEY(data_ov024_020b7540.state->resourceA) | 0x8000000f);
     data_ov024_020b7540.cursor = func_ov001_0206468c(10);
     objDesc = data_ov024_020b7360;

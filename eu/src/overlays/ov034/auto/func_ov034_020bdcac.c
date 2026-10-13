@@ -1,2 +1,0 @@
-#define Gfd_DefaultFreeTexVram_020bdc8c func_ov034_020bdcac
-#include "src/ov034/library_nns_gfd/Gfd_DefaultFreeTexVram_020bdc8c.c"

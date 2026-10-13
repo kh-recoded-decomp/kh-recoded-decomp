@@ -3,5 +3,5 @@
 #define SetEntryFlag_020c16b4 SetEntryFlag_020c16d4
 #define SetGlobalPackedBit_02027320 SetGlobalPackedBit
 #define SyncEnemyEntryFlags_020c16d0 SyncEnemyEntryFlags
-#define data_ov099_020c241c data_ov099_020c243c
+#define data_ov099_020c241c gEnemyViewerEntryInfo
 #include "src/ov099/unclassified_helpers/SyncEnemyEntryFlags_020c16d0.c"

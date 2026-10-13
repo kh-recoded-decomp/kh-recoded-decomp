@@ -52,7 +52,7 @@ src/overlays/ov027/calls/UpdateTrackedPointerEntry.c:
     complete
     .text       start:0x020b7c50 end:0x020b7d78
 
-src/overlays/ov027/calls/func_ov027_020b7d78.c:
+src/overlays/ov027/calls/InitBackgroundContainer.c:
     complete
     .text       start:0x020b7d78 end:0x020b7df2
 

@@ -19,7 +19,7 @@ LeavePanelScene kind:function(arm,size=0x244) addr:0x0206f978
 func_ov013_0206fbbc kind:function(arm,size=0xb8) addr:0x0206fbbc
 LayoutPanelSlotWidgets kind:function(arm,size=0x1dc) addr:0x0206fc74
 RefreshPanelSlotDigits kind:function(arm,size=0x650) addr:0x0206fe50
-func_ov013_020704a0 kind:function(arm,size=0x578) addr:0x020704a0
+ScrollPanelSlotWidgets kind:function(arm,size=0x578) addr:0x020704a0
 func_ov013_02070a18 kind:function(arm,size=0x38) addr:0x02070a18
 func_ov013_02070a50 kind:function(arm,size=0x50) addr:0x02070a50
 func_ov013_02070aa0 kind:function(arm,size=0x7c) addr:0x02070aa0
@@ -31,13 +31,13 @@ ShiftPanelSlotsDown kind:function(arm,size=0x70) addr:0x02070dd0
 func_ov013_02070e40 kind:function(arm,size=0x110) addr:0x02070e40
 RecordPanelClear kind:function(arm,size=0x144) addr:0x02070f50
 AnimatePanelPageScreens kind:function(arm,size=0x164) addr:0x02071094
-func_ov013_020711f8 kind:function(arm,size=0xf0) addr:0x020711f8
+PulsePanelPaletteColor kind:function(arm,size=0xf0) addr:0x020711f8
 RebuildPanelSelection kind:function(arm,size=0x15c) addr:0x020712e8
 func_ov013_02071444 kind:function(arm,size=0x10) addr:0x02071444
 BlinkPanelCursor_02071454 kind:function(arm,size=0x13c) addr:0x02071454
 QueryPanelSlotStates kind:function(arm,size=0xa8) addr:0x02071590
 RefreshInactivePanelSlots kind:function(arm,size=0xac) addr:0x02071638
-func_ov013_020716e4 kind:function(arm,size=0x68) addr:0x020716e4
+ChangePanelMenuState kind:function(arm,size=0x68) addr:0x020716e4
 SetPanelPhase kind:function(arm,size=0x74) addr:0x0207174c
 ResolvePanelExitMode kind:function(arm,size=0x120) addr:0x020717c0
 UpdatePanelEntryState kind:function(arm,size=0x1b0) addr:0x020718e0
@@ -45,7 +45,7 @@ func_ov013_02071a90 kind:function(arm,size=0xc) addr:0x02071a90
 ResetPanelStepAndNotify kind:function(arm,size=0xd0) addr:0x02071a9c
 UpdatePanelScrollState kind:function(arm,size=0x6bc) addr:0x02071b6c
 ApplyPanelSubitem5 kind:function(arm,size=0x34) addr:0x02072228
-func_ov013_0207225c kind:function(arm,size=0x264) addr:0x0207225c
+OpenPanelSelectionMenu kind:function(arm,size=0x264) addr:0x0207225c
 UpdatePanelResultState kind:function(arm,size=0x1b4) addr:0x020724c0
 ResetPanelLayoutClearFlag kind:function(arm,size=0x140) addr:0x02072674
 OpenPanelResultMenu kind:function(arm,size=0x230) addr:0x020727b4
@@ -109,12 +109,14 @@ SelectPanelTint5 kind:function(arm,size=0x78) addr:0x02074974
 func_ov013_020749ec kind:function(arm,size=0x4) addr:0x020749ec
 func_ov013_020749f0 kind:function(arm,size=0x4) addr:0x020749f0
 data_ov013_020749f4 kind:data(any) addr:0x020749f4
+gRecordSelectionBgConfig kind:data(any) addr:0x020749f4
 data_ov013_02074a08 kind:data(any) addr:0x02074a08
 data_ov013_02074a1c kind:data(any) addr:0x02074a1c
 data_ov013_02074a30 kind:data(any) addr:0x02074a30
 data_ov013_02074a44 kind:data(any) addr:0x02074a44
 data_ov013_02074a5c kind:data(any) addr:0x02074a5c
 data_ov013_02074a74 kind:data(any) addr:0x02074a74
+gRecordSelectionObjConfig kind:data(any) addr:0x02074a74
 data_ov013_02074a8c kind:data(any) addr:0x02074a8c
 data_ov013_02074aa4 kind:data(any) addr:0x02074aa4
 data_ov013_02074ac4 kind:data(any) addr:0x02074ac4
@@ -128,6 +130,7 @@ sOv013_WxcWlal1LanguagePobjZ_02074b6c kind:data(any) addr:0x02074b6c
 sOv013_WxcWlfu1LanguagePobjZ_02074b80 kind:data(any) addr:0x02074b80
 sOv013_WxcWliu1LanguagePobjZ_02074b94 kind:data(any) addr:0x02074b94
 sOv013_WxcWlau1LanguagePobjZ_02074ba8 kind:data(any) addr:0x02074ba8
+gPanelStateCallbacks kind:data(any) addr:0x02074bbc
 gPanelExitModeResolver kind:data(any) addr:0x02074bbc
 gPanelEntryStateHandler kind:data(any) addr:0x02074bc0
 gPanelMenuStateHandlers kind:data(any) addr:0x02074bc4

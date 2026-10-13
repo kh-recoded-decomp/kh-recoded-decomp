@@ -20,7 +20,7 @@
 #define func_ov002_020626d4 OpenPanelTextWindow
 #define func_ov002_02067a84 ResetSelectionView
 #define func_ov002_02068248 SetGroupSlotsVisible
-#define func_ov027_020b7d58 func_ov027_020b7d78
+#define func_ov027_020b7d58 InitBackgroundContainer
 #define func_ov027_020b7dfc func_ov027_020b7e1c
 #define func_ov027_020b7e24 func_ov027_020b7e44
 #define func_ov027_020b8558 func_ov027_020b8578

@@ -1,3 +1,4 @@
+#define func_ov013_020716e4 ChangePanelMenuState
 #define AcquireRecordSlot_02051d3c AcquireRecordSlot
 #define DispatchContextCommand_02066c78 DispatchContextCommand
 #define InitScrollList_0206314c InitScrollList

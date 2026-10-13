@@ -71,7 +71,7 @@ sOv099_LSZ_020c2360 kind:data(any) addr:0x020c2360 ambiguous
 data_ov099_020c2368 kind:data(any) addr:0x020c2368 ambiguous
 gEnemyReportListHandlers kind:data(any) addr:0x020c2380 ambiguous
 data_ov099_020c23ac kind:data(any) addr:0x020c23ac
-data_ov099_020c243c kind:data(any) addr:0x020c243c
+gEnemyViewerEntryInfo kind:data(any) addr:0x020c243c
 data_ov099_020c257c kind:data(any) addr:0x020c257c
 sOv099_UiBtlStrLanguageP2_020c2774 kind:data(any) addr:0x020c2774
 sOv099_TextFontEu10Nftr_020c2784 kind:data(any) addr:0x020c2784

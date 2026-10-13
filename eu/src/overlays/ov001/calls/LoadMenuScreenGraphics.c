@@ -10,7 +10,7 @@
 #define func_02007250 GX_LoadBGPltt
 #define func_0202c478 Archive_LoadFile
 #define func_0202c48c func_0202c4a0
-#define func_ov027_020b7d58 func_ov027_020b7d78
+#define func_ov027_020b7d58 InitBackgroundContainer
 #define func_ov027_020b7e24 func_ov027_020b7e44
 #define func_ov027_020b9a0c InitTileTableFrom
 #include "src/ov001/field_manager/LoadMenuScreenGraphics_0206f064.c"

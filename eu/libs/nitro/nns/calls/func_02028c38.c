@@ -1,39 +1,4 @@
-typedef signed long fx32;
-typedef signed long long fx64;
-typedef signed long long fx64c;
-
-typedef struct VecFx32 {
-    fx32 x;
-    fx32 y;
-    fx32 z;
-} VecFx32;
-
-typedef struct MtxFx43 {
-    fx32 _00, _01, _02;
-    fx32 _10, _11, _12;
-    fx32 _20, _21, _22;
-    fx32 _30, _31, _32;
-} MtxFx43;
-
-typedef struct MtxFx44 {
-    fx32 _00, _01, _02, _03;
-    fx32 _10, _11, _12, _13;
-    fx32 _20, _21, _22, _23;
-    fx32 _30, _31, _32, _33;
-} MtxFx44;
-
-typedef unsigned long u32;
-
-typedef struct CameraProjectionState {
-    u32 unk00;
-    u32 cmd0;
-    u32 projectionMode;
-    MtxFx44 projection;
-    MtxFx43 camera;
-} CameraProjectionState;
-
-#define data_0205fe40 gCameraDefaultsTail
-extern CameraProjectionState data_0205fe40;
+#include "src/graphics/CameraState.h"
 
 extern void MTX_MultVec43(const VecFx32 *src, const MtxFx43 *mtx, VecFx32 *dst);
 extern void FX_InvAsync(fx32 value);
@@ -47,12 +12,12 @@ static inline fx32 FX_Mul32x64c(fx32 x, fx64c y)
 
 static inline const MtxFx44 *GetProjectionMatrix(void)
 {
-    return &data_0205fe40.projection;
+    return &gSavedCameraState.projection;
 }
 
 static inline const MtxFx43 *GetCameraMatrix(void)
 {
-    return &data_0205fe40.camera;
+    return &gSavedCameraState.camera;
 }
 
 int func_02028c38(const VecFx32 *worldPosition, int *screenX, int *screenY)

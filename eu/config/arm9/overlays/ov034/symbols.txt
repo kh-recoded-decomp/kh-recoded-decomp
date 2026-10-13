@@ -1,6 +1,6 @@
 func_ov034_020ba400 kind:function(arm,size=0x7b4) addr:0x020ba400
 CloseResultsScreen kind:function(arm,size=0xbc) addr:0x020babb4
-func_ov034_020bac70 kind:function(arm,size=0x1e4) addr:0x020bac70
+UpdateResultsScreen kind:function(arm,size=0x1e4) addr:0x020bac70
 CloseResultsSession kind:function(arm,size=0x218) addr:0x020bae54
 DrawResultsWidgetOnLayer kind:function(arm,size=0x24) addr:0x020bb06c
 ClearResultsWidgetOnLayer kind:function(arm,size=0x24) addr:0x020bb090
@@ -25,7 +25,7 @@ IsResultsShopEntryUnlocked kind:function(thumb,size=0x60) addr:0x020bdb90
 StartResultsScreen kind:function(thumb,size=0x48) addr:0x020bdbf0
 PollResultsScreen kind:function(thumb,size=0x24) addr:0x020bdc38
 FinishResultsScreen kind:function(thumb,size=0x50) addr:0x020bdc5c
-func_ov034_020bdcac kind:function(thumb,size=0x6) addr:0x020bdcac
+ResultsScreenIdle kind:function(thumb,size=0x6) addr:0x020bdcac
 func_ov034_020bdcb4 kind:function(thumb,size=0x15c) addr:0x020bdcb4
 func_ov034_020bde10 kind:function(thumb,size=0x18) addr:0x020bde10
 IsResultsInputEnabled kind:function(thumb,size=0x1c) addr:0x020bde28

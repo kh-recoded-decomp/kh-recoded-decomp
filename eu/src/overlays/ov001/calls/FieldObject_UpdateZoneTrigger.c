@@ -3,7 +3,7 @@
 #define func_ov001_020642a0 IsFieldTrackFlagSet
 #define ActorSlot_SetFlag8ByIndex_02036120 ActorSlot_SetFlag8ByIndex
 #define SceneObject_IsPointWithinOneUnit_02081a88 SceneObject_IsPointWithinOneUnit
-#define func_ov001_0207f810 func_ov001_0207f838
+#define func_ov001_0207f810 FieldObject_GetPosition
 #define SpawnSoundSlot_0204da8c SpawnSoundSlot
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField
 #define func_ov021_020a75d8 SetClampedCursor

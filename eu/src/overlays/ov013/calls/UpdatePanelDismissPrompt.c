@@ -1,3 +1,4 @@
+#define func_ov013_020716e4 ChangePanelMenuState
 #define GetMenuTouchPressed_02066b84 GetMenuTouchPressed
 #define GetMenuTouchHeld_02066b2c GetMenuTouchHeld
 #define IsButtonBPressed_020632c8 IsButtonBPressed

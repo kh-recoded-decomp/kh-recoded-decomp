@@ -1,3 +1,5 @@
+#define func_ov013_020704a0 ScrollPanelSlotWidgets
+#define func_ov013_020716e4 ChangePanelMenuState
 #define func_ov002_0206655c IsScreenFadeComplete
 #define DispatchContextCommand_02066c78 DispatchContextCommand
 #define RebuildPanelSelection_020712e8 RebuildPanelSelection

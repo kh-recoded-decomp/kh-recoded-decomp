@@ -8,7 +8,7 @@ InitSequence kind:function(thumb,size=0x2c) addr:0x020c473c
 PlaceCursorNode kind:function(thumb,size=0x2a) addr:0x020c4768
 ShowUnlockedPageTabs kind:function(thumb,size=0x168) addr:0x020c4794
 RefreshPageTabs kind:function(thumb,size=0xa4) addr:0x020c48fc
-func_ov078_020c49a0 kind:function(thumb,size=0x198) addr:0x020c49a0
+DrawPageDetails kind:function(thumb,size=0x198) addr:0x020c49a0
 DrawPageHeader kind:function(thumb,size=0x114) addr:0x020c4b38
 DrawLayoutLine kind:function(thumb,size=0x1ac) addr:0x020c4c4c
 func_ov078_020c4df8 kind:function(thumb,size=0xa8) addr:0x020c4df8
@@ -24,7 +24,7 @@ sOv078_UiMenuQuestP2_020c5168 kind:data(any) addr:0x020c5168
 sOv078_UiMenuLanguageQuestP2_020c517c kind:data(any) addr:0x020c517c
 sOv078_UiBtlStrLanguageP2_020c5190 kind:data(any) addr:0x020c5190
 sOv078_UiMenuStrLanguageQstSZ_020c51a0 kind:data(any) addr:0x020c51a0
-data_ov078_020c51b8 kind:data(any) addr:0x020c51b8
-data_ov078_020c51bc kind:data(any) addr:0x020c51bc
-data_ov078_020c51c8 kind:data(any) addr:0x020c51c8
+gPageEmptyText kind:data(any) addr:0x020c51b8
+gPageNameRankFormat kind:data(any) addr:0x020c51bc
+gPageLevelFormat kind:data(any) addr:0x020c51c8
 data_ov078_020c51e0 kind:bss addr:0x020c51e0

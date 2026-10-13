@@ -4,7 +4,7 @@
 #define data_ov086_020c20e8 data_ov086_020c2108
 #define data_ov086_020c21d0 data_ov086_020c21f0
 #define data_ov086_020c2fc4 sOv086_Empty_020c2fe4
-#define data_ov086_020c2fc8 data_ov086_020c2fe8
+#define data_ov086_020c2fc8 gRecordStatisticNumberFormat
 #define data_ov086_020c2fd0 data_ov086_020c2ff0
 #define func_ov027_020ba2a8 func_ov027_020ba2c8
 #define func_ov027_020ba2e0 func_ov027_020ba300

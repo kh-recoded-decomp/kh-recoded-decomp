@@ -1,5 +1,5 @@
-extern void func_020289c8(void);
+#include "src/graphics/CameraState.h"
 
 int func_020289c0(void) {
-    return (int)func_020289c8;
+    return (int)BeginOrthographicCamera;
 }

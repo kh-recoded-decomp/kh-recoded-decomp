@@ -1,23 +1,22 @@
-#include "nitro/types.h"
+#include "src/overlays/ov086/RecordPageMenu.h"
 
 typedef struct {
-    u8 pad_000[0xc];
-    u8 handlerContext[0x168];
+    RecordPageMenu menu;
+    u8 reserved140[0x34];
     u8 flagTracker[0x1c];
 } Ov086Menu;
 
 extern void CallVirtualHandlerSlot1(void *context, int arg);
 extern void SetScreenLayerDirty(int elementId);
 extern void MarkTileTableRowDirty(u8 *tracker, int id);
-extern void func_ov086_020bf9f4(Ov086Menu *menu, int slot);
 
 void func_ov086_020bfba0(Ov086Menu *menu)
 {
-    CallVirtualHandlerSlot1(menu->handlerContext, 0);
+    CallVirtualHandlerSlot1(menu->menu.textLayer, 0);
     SetScreenLayerDirty(0x18);
     MarkTileTableRowDirty(menu->flagTracker, 0x19);
-    func_ov086_020bf9f4(menu, 0);
-    func_ov086_020bf9f4(menu, 1);
-    func_ov086_020bf9f4(menu, 2);
-    func_ov086_020bf9f4(menu, 3);
+    DrawRecordStatisticsRow(&menu->menu, 0);
+    DrawRecordStatisticsRow(&menu->menu, 1);
+    DrawRecordStatisticsRow(&menu->menu, 2);
+    DrawRecordStatisticsRow(&menu->menu, 3);
 }

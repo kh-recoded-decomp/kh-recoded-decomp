@@ -132,7 +132,7 @@ extern void GXS_BeginLoadOBJExtPltt(void);
 extern void GXS_EndLoadOBJExtPltt(void);
 extern u16 func_0202a9e4(u16 range);
 
-extern void func_ov027_020b7d78(void *container, const BgContainerConfig *config);
+extern void InitBackgroundContainer(void *container, const BgContainerConfig *config);
 extern void func_ov027_020b7e44(void *container, u32 fileId);
 extern BgScreenEntry *func_ov027_020b8578(void *container, int entryId);
 extern BgScreenRecord *FindActiveRecordById(void *container, u32 recordId);
@@ -220,7 +220,7 @@ void SetupPanelGraphics(void) {
     fileId = ((handle + 0x8000) & 0xfffffc) << 7;
     mainObjConfig.cellFileId = fileId | 0x80000002;
     mainObjConfig.animFileId = fileId | 0x80000003;
-    func_ov027_020b7d78(data_ov015_0207e960->mainBg, &mainBgConfig);
+    InitBackgroundContainer(data_ov015_0207e960->mainBg, &mainBgConfig);
     func_ov027_020b7e44(data_ov015_0207e960->mainBg, fileId | 0x80000000);
     archive = func_0202c4a0(fileId | 0x80000001, 0x10);
     GetBgDataFromArchive(&bgData, archive, -1, 0, 0);
@@ -256,7 +256,7 @@ void SetupPanelGraphics(void) {
     ZeroHalfThenFree(handle);
 
     handle = Msg_OpenContainerAndReadHeader(sOv015_WxcWlaP2_0207e7ec, 0x10, 0);
-    func_ov027_020b7d78(data_ov015_0207e960->subBg, &subBgConfig);
+    InitBackgroundContainer(data_ov015_0207e960->subBg, &subBgConfig);
     fileId = ((handle + 0x8000) & 0xfffffc) << 7;
     func_ov027_020b7e44(data_ov015_0207e960->subBg, fileId | 0x80000000);
     archive = func_0202c4a0(fileId | 0x80000002, 0x10);

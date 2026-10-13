@@ -25,8 +25,8 @@ ApplyCommRequest kind:function(arm,size=0x54) addr:0x020bac50
 ContinueScene_GetResult kind:function(arm,size=0x14) addr:0x020baca4
 InitCommHandlerTable kind:function(arm,size=0x74) addr:0x020bacb8
 GetContinueTitleIndex kind:function(arm,size=0x18) addr:0x020bad2c
-func_ov037_020bad44 kind:function(arm,size=0x20) addr:0x020bad44
-func_ov037_020bad64 kind:function(arm,size=0x20) addr:0x020bad64
+BlitContinueMenuWidget kind:function(arm,size=0x20) addr:0x020bad44
+ClearContinueMenuWidget kind:function(arm,size=0x20) addr:0x020bad64
 RefreshMenuListLayout kind:function(arm,size=0xc8) addr:0x020bad84
 SetupMainBgLayers kind:function(arm,size=0x90) addr:0x020bae4c
 func_ov037_020baedc kind:function(arm,size=0x100) addr:0x020baedc
@@ -38,11 +38,11 @@ BuildMenuEntryList kind:function(arm,size=0xac) addr:0x020bb334
 CreateOv037Context kind:function(arm,size=0x88) addr:0x020bb3e0
 DestroyOv037Context kind:function(arm,size=0x74) addr:0x020bb468
 UpdateMenuSelection kind:function(arm,size=0x16c) addr:0x020bb4dc
-data_ov037_020bb648 kind:data(any) addr:0x020bb648
+gContinueMenuTileIds kind:data(any) addr:0x020bb648
 data_ov037_020bb650 kind:data(any) addr:0x020bb650
-data_ov037_020bb65c kind:data(any) addr:0x020bb65c
+gContinueMenuTileConfig kind:data(any) addr:0x020bb65c
 data_ov037_020bb66c kind:data(any) addr:0x020bb66c
-data_ov037_020bb67c kind:data(any) addr:0x020bb67c
+gContinueMenuListConfig kind:data(any) addr:0x020bb67c
 data_ov037_020bb690 kind:data(any) addr:0x020bb690
 data_ov037_020bb6c0 kind:data(any) addr:0x020bb6c0
 data_ov037_020bb6c4 kind:data(any) addr:0x020bb6c4

@@ -2,6 +2,6 @@
 #define func_ov078_020c4748 PlaceCursorNode
 #define func_ov078_020c4774 ShowUnlockedPageTabs
 #define func_ov078_020c48dc RefreshPageTabs
-#define func_ov078_020c4980 func_ov078_020c49a0
+#define func_ov078_020c4980 DrawPageDetails
 #define func_ov078_020c4b18 DrawPageHeader
 #include "src/ov078/unclassified_helpers/InitSequence_020c471c.c"

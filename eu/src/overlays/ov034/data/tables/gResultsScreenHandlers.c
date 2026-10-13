@@ -1,13 +1,12 @@
-#include "nitro/types.h"
+#include "src/overlays/ov034/ResultsScreen.h"
 
-extern void StartResultsScreen(void); /* StartResultsScreen */
-extern void PollResultsScreen(void); /* PollResultsScreen */
-extern void FinishResultsScreen(void); /* FinishResultsScreen */
-extern void func_ov034_020bdcac(void); /* Gfd_DefaultFreeTexVram */
+extern u32 StartResultsScreen(void);
+extern u32 PollResultsScreen(void);
+extern u32 FinishResultsScreen(void);
 
-void (*gResultsScreenHandlers[4])(void) = {
-    StartResultsScreen, /* StartResultsScreen */
-    PollResultsScreen, /* PollResultsScreen */
-    FinishResultsScreen, /* FinishResultsScreen */
-    func_ov034_020bdcac, /* Gfd_DefaultFreeTexVram */
+ResultsStateHandler gResultsScreenHandlers[4] = {
+    StartResultsScreen,
+    PollResultsScreen,
+    FinishResultsScreen,
+    ResultsScreenIdle,
 };

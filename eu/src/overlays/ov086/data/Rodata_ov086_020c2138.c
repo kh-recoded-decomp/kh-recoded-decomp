@@ -1,5 +1,5 @@
-#include "nitro/types.h"
+#include "src/overlays/ov086/RecordPageMenu.h"
 
-const u32 data_ov086_020c2138[4] = {
-    0x00000012, 0x00000013, 0x00000014, 0x00000015,
+const RecordRowMessageIds gRecordRankMessageIds = {
+    {18, 19, 20, 21},
 };

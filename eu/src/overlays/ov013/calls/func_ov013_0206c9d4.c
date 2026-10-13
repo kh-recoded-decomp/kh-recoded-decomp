@@ -15,7 +15,7 @@ typedef struct {
 } PanelFlags99;
 
 extern void AnimatePanelPageScreens(void);
-extern void func_ov013_020711f8(void);
+extern void PulsePanelPaletteColor(void);
 extern void func_ov013_02070b1c(void);
 extern void func_ov013_02070b78(int a, int b);
 extern int data_ov013_02074ce0;
@@ -26,7 +26,7 @@ void func_ov013_0206c9d4(void) {
         AnimatePanelPageScreens();
     }
     if (((PanelFlags99 *)(data_ov013_02074ce0 + 0x99))->doSecond) {
-        func_ov013_020711f8();
+        PulsePanelPaletteColor();
     }
     if (((PanelFlags98 *)(data_ov013_02074ce0 + 0x98))->doThird) {
         func_ov013_02070b1c();

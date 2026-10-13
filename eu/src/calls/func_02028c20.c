@@ -1,5 +1,5 @@
-extern void data_0205fe34(void);
+#include "src/graphics/CameraState.h"
 
 int func_02028c20(void) {
-    return (int)data_0205fe34;
+    return (int)&gSavedCameraState.position;
 }

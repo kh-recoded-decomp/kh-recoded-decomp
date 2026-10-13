@@ -1,3 +1,5 @@
+#define func_ov013_020704a0 ScrollPanelSlotWidgets
+#define func_ov013_020716e4 ChangePanelMenuState
 #define DispatchContextCommand_02066c78 DispatchContextCommand
 #define ShiftFollowingSlotsUp_02073ed4 ShiftFollowingSlotsUp
 #define ShiftPanelSlotsDown_02070dd0 ShiftPanelSlotsDown

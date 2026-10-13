@@ -1564,7 +1564,7 @@ PXI_Init_02028964 kind:function(thumb,size=0x8) addr:0x02028964
 SetPanelFieldA0 kind:function(thumb,size=0x10) addr:0x0202896c
 SetPanelReadyState kind:function(thumb,size=0x44) addr:0x0202897c
 func_020289c0 kind:function(thumb,size=0x8) addr:0x020289c0
-func_020289c8 kind:function(arm,size=0x164) addr:0x020289c8
+BeginOrthographicCamera kind:function(arm,size=0x164) addr:0x020289c8
 MSL_FpInitA kind:function(thumb,size=0x2) addr:0x02028b2c
 func_02028b30 kind:function(thumb,size=0x8) addr:0x02028b30
 ResetCameraToDefaults kind:function(arm,size=0xa4) addr:0x02028b38
@@ -2726,7 +2726,7 @@ NNS_G3dFuncBlendJntDefault kind:data(any) addr:0x02055d0c
 NNS_G3dFuncBlendMatDefault kind:data(any) addr:0x02055d10
 NNS_G3dAnmObjInitFuncArray kind:data(any) addr:0x02055d14
 NNS_G3dAnmObjInitFuncArray_func kind:data(any) addr:0x02055d18
-NNS_G3dAnmObjInitFuncArrayEnd kind:data(any) addr:0x02055d3c
+NNS_G3dAnmObjInitFuncArrayUnused kind:data(any) addr:0x02055d3c
 gJointAnimationResultDispatch kind:data(any) addr:0x02055d64
 gJointAnimationNodeDispatch kind:data(any) addr:0x02055d70
 gMaterialAnimationDispatch kind:data(any) addr:0x02055d7c
@@ -2986,12 +2986,13 @@ data_0205fe00 kind:bss addr:0x0205fe00
 data_0205fe0c kind:bss addr:0x0205fe0c
 data_0205fe20 kind:bss addr:0x0205fe20
 gPanelState kind:bss addr:0x0205fe24
-data_0205fe28 kind:bss addr:0x0205fe28
+gSavedCameraState kind:bss addr:0x0205fe28
 data_0205fe34 kind:bss addr:0x0205fe34
 gCameraDefaultsTail kind:bss addr:0x0205fe40
 gCameraDefaultProjection kind:bss addr:0x0205fe4c
 data_0205fe8c kind:bss addr:0x0205fe8c
 data_0205fea8 kind:bss addr:0x0205fea8
+data_0205febc kind:bss addr:0x0205febc
 data_0205fec4 kind:bss addr:0x0205fec4
 gRecordCounters kind:bss addr:0x0205ffc4
 gEquipmentSlotWork kind:bss addr:0x0205ffc8

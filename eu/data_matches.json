@@ -1908,11 +1908,11 @@
       "section": ".rodata",
       "start": "0x020749f4",
       "end": "0x02074a08",
-      "source": "src/ov013/data/Rodata_ov013_020749f4.c",
+      "source": "src/overlays/ov013/data/tables/gRecordSelectionBgConfig.c",
       "compiler": "mwccarm-3.0-139",
-      "name": "ov013 data words",
-      "origin": "generated words",
-      "behavior": "Initialised data words, pointers named by their targets."
+      "name": "gRecordSelectionBgConfig",
+      "origin": "EU original background-container configuration",
+      "behavior": "Five-word configuration for the record-selection screen: three entry slots, zero sprite slots and three tag slots. The remaining two configuration parameters are zero; their meaning is not established."
     },
     {
       "module": "ov013",
@@ -1963,11 +1963,11 @@
       "section": ".rodata",
       "start": "0x02074a74",
       "end": "0x02074a8c",
-      "source": "src/ov013/data/Rodata_ov013_02074a74.c",
+      "source": "src/overlays/ov013/data/tables/gRecordSelectionObjConfig.c",
       "compiler": "mwccarm-3.0-139",
-      "name": "ov013 data words",
-      "origin": "generated words",
-      "behavior": "Initialised data words, pointers named by their targets."
+      "name": "gRecordSelectionObjConfig",
+      "origin": "EU original object-resource configuration",
+      "behavior": "Six-word object-resource configuration copied by the record-selection initializer. Cell and animation resource IDs are assigned in its local copy before loading; the four intermediate parameters retain their original values."
     },
     {
       "module": "ov013",

@@ -1,5 +1,5 @@
-extern void *func_ov013_020716e4();
+#include "src/overlays/ov013/Ov013PanelState.h"
 
-void *func_ov013_02074598() {
-    return func_ov013_020716e4(9);
+void func_ov013_02074598(void) {
+    ChangePanelMenuState(9);
 }

@@ -5,6 +5,6 @@
 #define StartDistanceSqrt_020b613c StartDistanceSqrt
 #define UpdateMapTargetDistance_020b6364 UpdateMapTargetDistance
 #define func_0204f378 IndexedRecords_SetFlag2
-#define func_ov001_0207f810 func_ov001_0207f838
+#define func_ov001_0207f810 FieldObject_GetPosition
 #define func_ov023_020b6278 ShowMapTargetDistance
 #include "src/ov023/menu_graphics/UpdateMapTargetDistance_020b6364.c"

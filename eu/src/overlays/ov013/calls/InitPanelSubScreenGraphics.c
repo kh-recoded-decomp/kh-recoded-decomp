@@ -28,7 +28,7 @@
 #define func_0202c48c func_0202c4a0
 #define func_0202cc6c Msg_OpenContainerAndReadHeader
 #define func_0204f178 func_0204f18c
-#define func_ov027_020b7d58 func_ov027_020b7d78
+#define func_ov027_020b7d58 InitBackgroundContainer
 #define func_ov027_020b7e24 func_ov027_020b7e44
 #define func_ov027_020b8558 func_ov027_020b8578
 #define func_ov027_020b8f98 func_ov027_020b8fb8

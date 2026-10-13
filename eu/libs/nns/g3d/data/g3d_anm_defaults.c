@@ -66,7 +66,8 @@ NNSG3dFuncAnmVis NNS_G3dFuncAnmVisNsBvaDefault = NNSi_G3dAnmCalcNsBva;
 
 u32 NNS_G3dAnmFmtNum = 5;
 
-NNSG3dAnmObjInitFunc NNS_G3dAnmObjInitFuncArray[5] = {
+/* Five active formats followed by five zero-initialised descriptor slots. */
+NNSG3dAnmObjInitFunc NNS_G3dAnmObjInitFuncArray[10] = {
     {'M', 0, 'MA', AnmObj_InitMatTable},
     {'M', 0, 'TP', NNSi_G3dAnmObjInitNsBtp},
     {'M', 0, 'TA', AnmObj_InitVisTable},

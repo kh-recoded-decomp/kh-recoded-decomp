@@ -1,7 +1,7 @@
-#include "nitro/types.h"
+#include "src/overlays/ov086/RecordPageMenu.h"
 
 #pragma explicit_zero_data on
 
-u16 data_ov086_020c2fe8[4] = {
-    37, 100, 0, 0,
+u16 gRecordStatisticNumberFormat[4] = {
+    '%', 'd', 0, 0,
 };

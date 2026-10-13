@@ -4,5 +4,5 @@
 #define FieldObject_SetSavedValue_0207f9c8 FieldObject_SetSavedValue
 #define UpdateElevatorObject_020a0c00 UpdateElevatorObject
 #define func_ov001_0207f038 func_ov001_0207f060
-#define func_ov001_0207f810 func_ov001_0207f838
+#define func_ov001_0207f810 FieldObject_GetPosition
 #include "src/ov006/reviewed_helpers/UpdateElevatorObject_020a0c00.c"

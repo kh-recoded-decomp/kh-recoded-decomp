@@ -1,6 +1,6 @@
-#include "nitro/types.h"
+#include "src/overlays/ov086/RecordPageMenu.h"
 
-const u32 data_ov086_020c21bc[8] = {
-    0x00000E7A, 0x00000E8E, 0x00000EA2, 0x00000EB6,
-    0x00000ECA, 0x00000EDE, 0x00000EF2, 0x00000F06,
+const u32 gRecordStepCounterBitOffsets[2][4] = {
+    {0x0E7A, 0x0E8E, 0x0EA2, 0x0EB6},
+    {0x0ECA, 0x0EDE, 0x0EF2, 0x0F06},
 };

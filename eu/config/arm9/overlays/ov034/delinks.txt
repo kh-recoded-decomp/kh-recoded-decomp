@@ -8,6 +8,10 @@ src/overlays/ov034/calls/CloseResultsScreen.c:
     complete
     .text       start:0x020babb4 end:0x020bac70
 
+src/overlays/ov034/calls/UpdateResultsScreen.c:
+    complete
+    .text       start:0x020bac70 end:0x020bae54
+
 src/overlays/ov034/calls/CloseResultsSession.c:
     complete
     .text       start:0x020bae54 end:0x020bb06c
@@ -80,7 +84,7 @@ src/overlays/ov034/calls/FinishResultsScreen.c:
     complete
     .text       start:0x020bdc5c end:0x020bdcac
 
-src/overlays/ov034/auto/func_ov034_020bdcac.c:
+src/overlays/ov034/calls/ResultsScreenIdle.c:
     complete
     .text       start:0x020bdcac end:0x020bdcb2
 

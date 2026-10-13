@@ -236,3 +236,7 @@ src/overlays/ov104/DSProt-Extra.c:
     complete
     .bss        start:0x020d3740 end:0x020d3760
     .rodata     start:0x020d3700 end:0x020d3718
+
+src/overlays/ov104/data/gDSProtInitializers.c:
+    complete
+    .ctor       start:0x020d3720 end:0x020d3734

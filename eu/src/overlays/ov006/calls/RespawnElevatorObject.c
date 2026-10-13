@@ -18,6 +18,6 @@
 #define func_02036240 ActorRegistry_GetEntityByIndex
 #define func_020369c8 SetActorExtraPosition
 #define func_ov001_0207f038 func_ov001_0207f060
-#define func_ov001_0207f810 func_ov001_0207f838
+#define func_ov001_0207f810 FieldObject_GetPosition
 #define func_ov001_0208078c func_ov001_020807b4
 #include "src/ov006/reviewed_helpers/RespawnElevatorObject_020a07b4.c"

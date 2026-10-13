@@ -57,7 +57,7 @@ RC4_InitAndDecryptInstructions kind:function(arm,size=0x58,dsprot=0x58) addr:0x0
 __sinit_ov104_020d36b4 kind:function(arm,size=0x4c) addr:0x020d36b4
 Garbage kind:data(any) addr:0x020d3700
 bad_mac_addr kind:data(any) addr:0x020d3718
-.p__sinit_ov104_020d2028 kind:data(word) addr:0x020d3720
+gDSProtInitializers kind:data(any) addr:0x020d3720
 .p__sinit_ov104_020d25d0 kind:data(word) addr:0x020d3724
 .p__sinit_ov104_020d2958 kind:data(word) addr:0x020d3728
 .p__sinit_ov104_020d31fc kind:data(word) addr:0x020d372c

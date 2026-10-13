@@ -1,3 +1,4 @@
+#define func_ov013_020716e4 ChangePanelMenuState
 #define CheckClearCountMilestone_02074674 CheckClearCountMilestone
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #include "src/ov013/panel_state/CheckClearCountMilestone_02074674.c"

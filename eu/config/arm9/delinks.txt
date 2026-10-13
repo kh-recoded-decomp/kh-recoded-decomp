@@ -6237,6 +6237,10 @@ src/calls/func_020289c0.c:
     complete
     .text       start:0x020289c0 end:0x020289c8
 
+src/calls/BeginOrthographicCamera.c:
+    complete
+    .text       start:0x020289c8 end:0x02028b2c
+
 src/calls/MSL_FpInitA.c:
     complete
     .text       start:0x02028b2c end:0x02028b2e
@@ -10243,7 +10247,7 @@ libs/nns/g2d/data/g2d_screen_tables.c:
 
 libs/nns/g3d/data/g3d_anm_defaults.c:
     complete
-    .data       start:0x02055cf0 end:0x02055d3c
+    .data       start:0x02055cf0 end:0x02055d64
 
 libs/nns/g3d/data/g3d_glbstate.c:
     complete
@@ -10623,19 +10627,11 @@ src/data/bss/Bss_main_0205fe20.c:
 
 src/data/bss/Bss_main_0205fe24.c:
     complete
-    .bss        start:0x0205fe24 end:0x0205fe34
+    .bss        start:0x0205fe24 end:0x0205fe28
 
-src/data/bss/Bss_main_0205fe34.c:
+src/data/bss/Bss_main_0205febc.c:
     complete
-    .bss        start:0x0205fe34 end:0x0205fe40
-
-src/data/bss/Bss_main_0205fe8c.c:
-    complete
-    .bss        start:0x0205fe8c end:0x0205fea8
-
-src/data/bss/Bss_main_0205fea8.c:
-    complete
-    .bss        start:0x0205fea8 end:0x0205ffc4
+    .bss        start:0x0205febc end:0x0205ffc4
 
 src/data/bss/Bss_main_0205ffc4.c:
     complete
@@ -10849,9 +10845,9 @@ src/data/sdk/OSi_ThreadSystemState.c:
     complete
     .bss        start:0x02056b50 end:0x02056b6c
 
-src/data/sdk/gCameraDefaultsTail.c:
+src/data/sdk/gSavedCameraState.c:
     complete
-    .bss        start:0x0205fe40 end:0x0205fe8c
+    .bss        start:0x0205fe28 end:0x0205febc
 
 src/data/sdk/gSndDecibelToChannelVolume.c:
     complete
