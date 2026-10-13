@@ -1,3 +1,15 @@
-#define func_ov001_02089060 BindActorAnimation
-#define func_ov001_0208a3bc StartActorAnimState
-#include "src/ov001/actor_animation/func_ov001_0208a3bc.c"
+#include "nitro/types.h"
+
+typedef struct ActorAnimationState {
+    u8 reserved00[0x894];
+    u8 animState[0x660];
+    u32 flags;
+} ActorAnimationState;
+
+extern void BindActorAnimation(void *animState, int animationId, int blendIndex);
+
+void StartActorAnimState(ActorAnimationState *actor, int animationId, int blendIndex)
+{
+    BindActorAnimation(actor->animState, animationId, blendIndex);
+    actor->flags |= 0x180;
+}

@@ -892,6 +892,10 @@ src/overlays/ov015/calls/ClearSubBg2Screen.c:
     complete
     .text       start:0x02078f34 end:0x02078f58
 
+src/overlays/ov015/calls/UpdateWirelessPanelTouch.c:
+    complete
+    .text       start:0x02078f58 end:0x020790c0
+
 src/overlays/ov015/calls/func_ov015_020790c0.c:
     complete
     .text       start:0x020790c0 end:0x020790e8

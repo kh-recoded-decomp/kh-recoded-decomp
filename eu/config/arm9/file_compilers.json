@@ -1,4 +1,6 @@
 {
+  "src/calls/func_0202f4cc.c": "dsi/1.1",
+  "src/overlays/ov015/calls/UpdateWirelessPanelTouch.c": "dsi/1.1",
   "src/overlays/ov086/calls/DrawRecordStatisticsRow.c": "dsi/1.1",
   "src/overlays/ov034/calls/UpdateResultsScreen.c": "dsi/1.3p1",
   "src/overlays/ov034/calls/ResultsScreenIdle.c": "dsi/1.1",
