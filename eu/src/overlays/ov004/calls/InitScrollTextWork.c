@@ -1,5 +1,5 @@
 #define InitScrollTextWork_020614b8 InitScrollTextWork
 #define NNSi_FndGetCurrentRootHeap_0202a764 NNSi_FndGetCurrentRootHeap
 #define func_ov004_02061598 LoadScrollTextResources
-#define g_scrollText_020645a0 data_ov004_020645a0
+#define g_scrollText_020645a0 gScrollTextGlobals
 #include "src/ov004/scroll_text/InitScrollTextWork_020614b8.c"

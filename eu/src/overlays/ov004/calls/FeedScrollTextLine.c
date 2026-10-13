@@ -3,6 +3,6 @@
 #define GFXi_EnqueueCommand_02014090 NNS_GfdRegisterNewVramTransferTask
 #define RoundFx32ToInt_020614a4 RoundFx32ToInt
 #define Text_UploadTileBuffer_02001520 Text_UploadTileBuffer
-#define g_scrollText_020645a0 data_ov004_020645a0
+#define g_scrollText_020645a0 gScrollTextGlobals
 #define hasAngleBracketTerminator_02062d78 func_ov004_02062d78
 #include "src/ov004/scroll_text/FeedScrollTextLine_02062dc0.c"

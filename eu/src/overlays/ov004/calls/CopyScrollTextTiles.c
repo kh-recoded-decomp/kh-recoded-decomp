@@ -2,5 +2,5 @@
 #define GFXi_EnqueueCommand_02014090 NNS_GfdRegisterNewVramTransferTask
 #define MIi_CpuClearFast_01ff8740 MIi_CpuClearFast
 #define MIi_CpuCopyFast_01ff878c MIi_CpuCopyFast
-#define g_scrollText_020645a0 data_ov004_020645a0
+#define g_scrollText_020645a0 gScrollTextGlobals
 #include "src/ov004/scroll_text/CopyScrollTextTiles_02061d5c.c"

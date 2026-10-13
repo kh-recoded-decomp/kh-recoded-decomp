@@ -4,5 +4,5 @@
 #define func_01ff8710 MIi_CpuCopy32
 #define func_0204f13c IndexedRecord_SetPair
 #define func_0204f378 IndexedRecords_SetFlag2
-#define g_scrollText_020645a0 data_ov004_020645a0
+#define g_scrollText_020645a0 gScrollTextGlobals
 #include "src/ov004/scroll_text/DrawScrollTextLine_02062b70.c"

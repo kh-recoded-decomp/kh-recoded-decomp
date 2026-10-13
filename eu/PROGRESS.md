@@ -13,8 +13,8 @@ an identified name (NitroSDK, NNS, MSL, ...) but no source yet.
 | PART ov000 | 76 | 0 | 0 | 2 | 78 | 97.4% | 92.5% |
 | PART ov001 | 2067 | 0 | 0 | 28 | 2095 | 98.7% | 92.2% |
 | PART ov002 | 228 | 0 | 0 | 4 | 232 | 98.3% | 85.5% |
-| PART ov003 | 43 | 0 | 0 | 1 | 44 | 97.7% | 91.2% |
-| PART ov004 | 37 | 0 | 0 | 4 | 41 | 90.2% | 86.8% |
+| DONE ov003 | 44 | 0 | 0 | 0 | 44 | 100.0% | 100.0% |
+| PART ov004 | 38 | 0 | 0 | 3 | 41 | 92.7% | 88.9% |
 | DONE ov005 | 1 | 0 | 0 | 0 | 1 | 100.0% | 100.0% |
 | PART ov006 | 29 | 0 | 0 | 2 | 31 | 93.5% | 91.4% |
 | PART ov007 | 38 | 0 | 0 | 1 | 39 | 97.4% | 94.8% |
@@ -32,7 +32,7 @@ an identified name (NitroSDK, NNS, MSL, ...) but no source yet.
 | DONE ov019 | 35 | 0 | 0 | 0 | 35 | 100.0% | 100.0% |
 | DONE ov020 | 49 | 0 | 0 | 0 | 49 | 100.0% | 100.0% |
 | PART ov021 | 484 | 0 | 0 | 5 | 489 | 99.0% | 91.9% |
-| PART ov022 | 116 | 6 | 1 | 2 | 125 | 92.8% | 72.9% |
+| PART ov022 | 117 | 6 | 1 | 1 | 125 | 93.6% | 75.6% |
 | PART ov023 | 38 | 0 | 0 | 2 | 40 | 95.0% | 78.7% |
 | PART ov024 | 26 | 0 | 0 | 1 | 27 | 96.3% | 93.4% |
 | PART ov025 | 62 | 0 | 0 | 1 | 63 | 98.4% | 96.6% |
@@ -115,7 +115,7 @@ an identified name (NitroSDK, NNS, MSL, ...) but no source yet.
 | DONE ov102 | 3 | 0 | 0 | 0 | 3 | 100.0% | 100.0% |
 | PART ov103 | 38 | 0 | 0 | 1 | 39 | 97.4% | 93.0% |
 | PART ov104 | 33 | 24 | 0 | 0 | 57 | 57.9% | 75.8% |
-| **TOTAL** | **10061** | **179** | **4** | **179** | **10423** | **96.5%** | **88.57%** |
+| **TOTAL** | **10064** | **179** | **4** | **176** | **10423** | **96.6%** | **88.65%** |
 
 ## Byte progress
 
@@ -124,7 +124,7 @@ the matched set is dominated by small wrappers. Bytes count real C only.
 
 | C matched bytes | Total code bytes | % |
 |---:|---:|---:|
-| **1,468,748** | **1,658,216** | **88.57%** |
+| **1,469,968** | **1,658,216** | **88.65%** |
 
 ## DATA progress
 
@@ -134,4 +134,4 @@ Naming is tracked separately and does not count as reconstructed DATA.
 | Metric | Complete | Total | % |
 |---|---:|---:|---:|
 | Reconstructed byte-exact DATA | **228,132** | **228,172** | **99.98%** |
-| Named DATA symbols | **1,314** | **2,340** | **56.15%** |
+| Named DATA symbols | **1,315** | **2,340** | **56.20%** |

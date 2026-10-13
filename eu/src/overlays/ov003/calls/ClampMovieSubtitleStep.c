@@ -1,2 +1,3 @@
+#define func_ov003_02064c10 MeasureMovieSubtitleWidth
 #define ClampMovieSubtitleStep_02064e08 ClampMovieSubtitleStep
 #include "src/ov003/video_playback/ClampMovieSubtitleStep_02064e08.c"

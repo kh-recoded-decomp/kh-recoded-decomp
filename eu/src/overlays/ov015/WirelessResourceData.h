@@ -3,11 +3,29 @@
 
 #include "nitro/types.h"
 
-/* Fixed-size resource groups; individual halfword meanings remain unknown. */
+/* The reward selector reads weight; GrantRewardEntry consumes the first
+ * four halfwords and copies the whole 12-byte record into its output. */
+enum {
+    WIRELESS_REWARD_ITEM = 0,
+    WIRELESS_REWARD_RANDOM_RECORD = 9
+};
+
+typedef struct WirelessRewardEntry {
+    s16 type;
+    s16 id;
+    u16 level;
+    u16 kind;
+    u8 weight;
+    u8 reserved09[3];
+} WirelessRewardEntry;
+
+/* Each tier contains five weighted rewards. The selector includes all tiers
+ * up to the player's current tier when summing their weights. */
 typedef struct WirelessResourceData {
-    u16 groups[10][30];
+    WirelessRewardEntry tiers[10][5];
 } WirelessResourceData;
 
+typedef char WirelessRewardEntrySizeCheck[(sizeof(WirelessRewardEntry) == 12) ? 1 : -1];
 typedef char WirelessResourceDataSizeCheck[(sizeof(WirelessResourceData) == 600) ? 1 : -1];
 
 extern const WirelessResourceData *gWirelessResourceTableA[10];

@@ -1,3 +1,3 @@
 #define FrameTimer_IsExpired_0206146c FrameTimer_IsExpired
-#define g_frameCount_020645a0 data_ov004_020645a0
+#define g_frameCount_020645a0 gScrollTextGlobals
 #include "src/ov004/frame_timer/FrameTimer_IsExpired_0206146c.c"

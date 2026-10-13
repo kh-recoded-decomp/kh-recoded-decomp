@@ -34,7 +34,7 @@ ApplyScrollTextOffsets kind:function(arm,size=0x1ac) addr:0x0206306c
 InitTitleDisplay kind:function(arm,size=0x1fc) addr:0x02063218
 func_ov004_02063414 kind:function(arm,size=0x144) addr:0x02063414
 end_key_share_and_register_result kind:function(arm,size=0x40) addr:0x02063558
-func_ov004_02063598 kind:function(arm,size=0xd4) addr:0x02063598
+InitScrollTextImageLists kind:function(arm,size=0xd4) addr:0x02063598
 SetupScrollTextBackgrounds kind:function(arm,size=0x31c) addr:0x0206366c
 InitScrollTextLayer kind:function(arm,size=0xa0) addr:0x02063988
 InitScrollTextLayers kind:function(arm,size=0xc4) addr:0x02063a28
@@ -54,4 +54,4 @@ data_ov004_02064575 kind:data(any) addr:0x02064575 ambiguous
 sOv004_SfV_02064578 kind:data(any) addr:0x02064578
 sOv004_SfSfZ_02064580 kind:data(any) addr:0x02064580
 data_ov004_0206459d kind:data(any) addr:0x0206459d ambiguous
-data_ov004_020645a0 kind:bss addr:0x020645a0
+gScrollTextGlobals kind:bss addr:0x020645a0

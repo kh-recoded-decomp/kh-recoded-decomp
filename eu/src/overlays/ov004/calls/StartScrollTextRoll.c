@@ -4,5 +4,5 @@
 #define StartScrollTextRoll_02062090 StartScrollTextRoll
 #define data_ov004_02064578 sOv004_SfV_02064578
 #define func_ov004_0206306c ApplyScrollTextOffsets
-#define g_scrollText_020645a0 data_ov004_020645a0
+#define g_scrollText_020645a0 gScrollTextGlobals
 #include "src/ov004/scroll_text/StartScrollTextRoll_02062090.c"

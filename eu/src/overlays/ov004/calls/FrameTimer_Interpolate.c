@@ -1,4 +1,4 @@
 #define DivideU32_02023fc8 _u32_div_f
 #define FrameTimer_Interpolate_0206142c FrameTimer_Interpolate
-#define g_frameCount_020645a0 data_ov004_020645a0
+#define g_frameCount_020645a0 gScrollTextGlobals
 #include "src/ov004/frame_timer/FrameTimer_Interpolate_0206142c.c"

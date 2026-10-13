@@ -1,0 +1,3 @@
+#define MeasureMovieSubtitleWidth MeasureMovieSubtitleWidth_020a8d00
+#define ClampMovieSubtitleStep func_ov022_020a8ef8
+#include "src/overlays/ov003/calls/MeasureMovieSubtitleWidth.c"

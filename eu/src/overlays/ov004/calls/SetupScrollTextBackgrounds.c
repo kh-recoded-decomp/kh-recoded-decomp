@@ -11,4 +11,5 @@
 #define MIi_CpuClearFast_01ff8740 MIi_CpuClearFast
 #define SetupScrollTextBackgrounds_0206366c SetupScrollTextBackgrounds
 #define func_0202c364 func_0202c378
+#define data_ov004_020645a0 gScrollTextGlobals
 #include "src/ov004/scroll_text/SetupScrollTextBackgrounds_0206366c.c"

@@ -1,4 +1,7 @@
 {
+  "src/overlays/ov004/calls/InitScrollTextImageLists.c": "dsi/1.1",
+  "src/overlays/ov003/calls/MeasureMovieSubtitleWidth.c": "dsi/1.1",
+  "src/overlays/ov022/calls/MeasureMovieSubtitleWidth_020a8d00.c": "dsi/1.1",
   "src/overlays/ov014/calls/RefreshPanelCategorySlots.c": "dsi/1.1",
   "src/calls/func_0202f4cc.c": "dsi/1.1",
   "src/overlays/ov015/calls/UpdateWirelessPanelTouch.c": "dsi/1.1",

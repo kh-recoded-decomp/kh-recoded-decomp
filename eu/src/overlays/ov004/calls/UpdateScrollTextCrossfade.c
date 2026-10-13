@@ -1,5 +1,5 @@
 #define G2x_SetBlendAlpha_02006850 G2x_SetBlendAlpha_
 #define UpdateScrollTextCrossfade_02062768 UpdateScrollTextCrossfade
 #define func_ov004_0206142c FrameTimer_Interpolate
-#define g_scrollText_020645a0 data_ov004_020645a0
+#define g_scrollText_020645a0 gScrollTextGlobals
 #include "src/ov004/scroll_text/UpdateScrollTextCrossfade_02062768.c"

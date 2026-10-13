@@ -1,3 +1,3 @@
 #define FrameTimer_GetElapsed_02061400 FrameTimer_GetElapsed
-#define g_frameCount_020645a0 data_ov004_020645a0
+#define g_frameCount_020645a0 gScrollTextGlobals
 #include "src/ov004/frame_timer/FrameTimer_GetElapsed_02061400.c"

@@ -1,5 +1,5 @@
 #define ApplyScrollTextOffsets_0206306c ApplyScrollTextOffsets
 #define RoundFx32ToInt_020614a4 RoundFx32ToInt
 #define SaveScrollOffsets_02062ff4 SaveScrollOffsets
-#define g_scrollText_020645a0 data_ov004_020645a0
+#define g_scrollText_020645a0 gScrollTextGlobals
 #include "src/ov004/scroll_text/ApplyScrollTextOffsets_0206306c.c"

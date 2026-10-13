@@ -2,6 +2,7 @@
 #define InitScrollTextLayers_02063a28 InitScrollTextLayers
 #define InitTitleDisplay_02063218 InitTitleDisplay
 #define LoadScrollTextResources_02061598 LoadScrollTextResources
+#define func_ov004_02063598 InitScrollTextImageLists
 #define Msg_OpenContainerAndReadHeader_0202cc6c Msg_OpenContainerAndReadHeader
 #define SetBrightnessAndSyncMain_02029e7c SetBrightnessAndSyncMain
 #define SetSecondaryBrightness_02029ed0 SetSecondaryBrightness
@@ -15,5 +16,5 @@
 #define func_ov004_020629d0 RunScrollTextFrame
 #define func_ov004_0206366c SetupScrollTextBackgrounds
 #define func_ov004_02063aec LoadScrollTextEntryTable
-#define g_scrollText_020645a0 data_ov004_020645a0
+#define g_scrollText_020645a0 gScrollTextGlobals
 #include "src/ov004/scroll_text/LoadScrollTextResources_02061598.c"

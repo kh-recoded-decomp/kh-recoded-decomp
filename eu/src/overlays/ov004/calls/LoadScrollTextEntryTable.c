@@ -2,5 +2,5 @@
 #define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
 #define data_ov004_02064580 sOv004_SfSfZ_02064580
 #define func_0202c478 Archive_LoadFile
-#define g_scrollText_020645a0 data_ov004_020645a0
+#define g_scrollText_020645a0 gScrollTextGlobals
 #include "src/ov004/scroll_text/LoadScrollTextEntryTable_02063aec.c"

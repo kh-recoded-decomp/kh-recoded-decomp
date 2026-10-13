@@ -2,5 +2,5 @@
 #define InitScrollTextLayer_02063988 InitScrollTextLayer
 #define InitTextLayerAt_020014b0 InitTextLayerAt
 #define Text_UploadTileBuffer_02001520 Text_UploadTileBuffer
-#define g_scrollText_020645a0 data_ov004_020645a0
+#define g_scrollText_020645a0 gScrollTextGlobals
 #include "src/ov004/scroll_text/InitScrollTextLayer_02063988.c"

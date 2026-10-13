@@ -2,15 +2,77 @@
 /* Adapted from the US table; see eu/THIRD_PARTY_NOTICES.md. */
 #include "src/overlays/ov015/WirelessResourceData.h"
 
-const WirelessResourceData gWirelessResourceDataC0 = {{
-    {0, 128, 0, 0, 20, 0, 0, 128, 0, 0, 20, 0, 0, 128, 0, 0, 30, 0, 0, 0, 0, 0, 0, 0, 9, 7, 0, 0, 30, 0},
-    {0, 10, 3, 0, 20, 0, 0, 55, 3, 0, 20, 0, 0, 0, 3, 0, 30, 0, 0, 0, 0, 0, 0, 0, 9, 7, 0, 0, 30, 0},
-    {0, 56, 3, 0, 20, 0, 0, 31, 3, 0, 20, 0, 0, 58, 3, 0, 30, 0, 0, 0, 0, 0, 0, 0, 9, 7, 0, 0, 30, 0},
-    {0, 62, 3, 0, 20, 0, 0, 36, 3, 0, 20, 0, 0, 67, 3, 0, 30, 0, 0, 0, 0, 0, 0, 0, 9, 7, 0, 0, 30, 0},
-    {0, 47, 3, 0, 20, 0, 0, 59, 3, 0, 20, 0, 0, 21, 3, 0, 30, 0, 0, 0, 0, 0, 0, 0, 9, 7, 0, 0, 30, 0},
-    {0, 57, 3, 0, 20, 0, 0, 68, 3, 0, 20, 0, 0, 25, 3, 0, 30, 0, 0, 0, 0, 0, 0, 0, 9, 7, 0, 0, 30, 0},
-    {0, 60, 3, 0, 20, 0, 0, 48, 3, 0, 20, 0, 0, 71, 3, 0, 30, 0, 0, 0, 0, 0, 0, 0, 9, 7, 0, 0, 30, 0},
-    {0, 63, 3, 0, 20, 0, 0, 46, 3, 0, 20, 0, 0, 65, 3, 0, 30, 0, 0, 0, 0, 0, 0, 0, 9, 7, 0, 0, 30, 0},
-    {0, 53, 3, 0, 20, 0, 0, 80, 3, 0, 20, 0, 0, 46, 3, 0, 30, 0, 0, 0, 0, 0, 0, 0, 9, 7, 0, 0, 30, 0},
-    {0, 54, 3, 0, 20, 0, 0, 69, 3, 0, 20, 0, 0, 66, 3, 0, 30, 0, 0, 0, 0, 0, 0, 0, 9, 7, 0, 0, 30, 0},
-}};
+const WirelessResourceData gWirelessResourceDataC0 = {
+    .tiers = {
+        { /* Tier 0 */
+            {WIRELESS_REWARD_ITEM, 128, 0, 0, 20},
+            {WIRELESS_REWARD_ITEM, 128, 0, 0, 20},
+            {WIRELESS_REWARD_ITEM, 128, 0, 0, 30},
+            {WIRELESS_REWARD_ITEM, 0, 0, 0, 0},
+            {WIRELESS_REWARD_RANDOM_RECORD, 7, 0, 0, 30},
+        },
+        { /* Tier 1 */
+            {WIRELESS_REWARD_ITEM, 10, 3, 0, 20},
+            {WIRELESS_REWARD_ITEM, 55, 3, 0, 20},
+            {WIRELESS_REWARD_ITEM, 0, 3, 0, 30},
+            {WIRELESS_REWARD_ITEM, 0, 0, 0, 0},
+            {WIRELESS_REWARD_RANDOM_RECORD, 7, 0, 0, 30},
+        },
+        { /* Tier 2 */
+            {WIRELESS_REWARD_ITEM, 56, 3, 0, 20},
+            {WIRELESS_REWARD_ITEM, 31, 3, 0, 20},
+            {WIRELESS_REWARD_ITEM, 58, 3, 0, 30},
+            {WIRELESS_REWARD_ITEM, 0, 0, 0, 0},
+            {WIRELESS_REWARD_RANDOM_RECORD, 7, 0, 0, 30},
+        },
+        { /* Tier 3 */
+            {WIRELESS_REWARD_ITEM, 62, 3, 0, 20},
+            {WIRELESS_REWARD_ITEM, 36, 3, 0, 20},
+            {WIRELESS_REWARD_ITEM, 67, 3, 0, 30},
+            {WIRELESS_REWARD_ITEM, 0, 0, 0, 0},
+            {WIRELESS_REWARD_RANDOM_RECORD, 7, 0, 0, 30},
+        },
+        { /* Tier 4 */
+            {WIRELESS_REWARD_ITEM, 47, 3, 0, 20},
+            {WIRELESS_REWARD_ITEM, 59, 3, 0, 20},
+            {WIRELESS_REWARD_ITEM, 21, 3, 0, 30},
+            {WIRELESS_REWARD_ITEM, 0, 0, 0, 0},
+            {WIRELESS_REWARD_RANDOM_RECORD, 7, 0, 0, 30},
+        },
+        { /* Tier 5 */
+            {WIRELESS_REWARD_ITEM, 57, 3, 0, 20},
+            {WIRELESS_REWARD_ITEM, 68, 3, 0, 20},
+            {WIRELESS_REWARD_ITEM, 25, 3, 0, 30},
+            {WIRELESS_REWARD_ITEM, 0, 0, 0, 0},
+            {WIRELESS_REWARD_RANDOM_RECORD, 7, 0, 0, 30},
+        },
+        { /* Tier 6 */
+            {WIRELESS_REWARD_ITEM, 60, 3, 0, 20},
+            {WIRELESS_REWARD_ITEM, 48, 3, 0, 20},
+            {WIRELESS_REWARD_ITEM, 71, 3, 0, 30},
+            {WIRELESS_REWARD_ITEM, 0, 0, 0, 0},
+            {WIRELESS_REWARD_RANDOM_RECORD, 7, 0, 0, 30},
+        },
+        { /* Tier 7 */
+            {WIRELESS_REWARD_ITEM, 63, 3, 0, 20},
+            {WIRELESS_REWARD_ITEM, 46, 3, 0, 20},
+            {WIRELESS_REWARD_ITEM, 65, 3, 0, 30},
+            {WIRELESS_REWARD_ITEM, 0, 0, 0, 0},
+            {WIRELESS_REWARD_RANDOM_RECORD, 7, 0, 0, 30},
+        },
+        { /* Tier 8 */
+            {WIRELESS_REWARD_ITEM, 53, 3, 0, 20},
+            {WIRELESS_REWARD_ITEM, 80, 3, 0, 20},
+            {WIRELESS_REWARD_ITEM, 46, 3, 0, 30},
+            {WIRELESS_REWARD_ITEM, 0, 0, 0, 0},
+            {WIRELESS_REWARD_RANDOM_RECORD, 7, 0, 0, 30},
+        },
+        { /* Tier 9 */
+            {WIRELESS_REWARD_ITEM, 54, 3, 0, 20},
+            {WIRELESS_REWARD_ITEM, 69, 3, 0, 20},
+            {WIRELESS_REWARD_ITEM, 66, 3, 0, 30},
+            {WIRELESS_REWARD_ITEM, 0, 0, 0, 0},
+            {WIRELESS_REWARD_RANDOM_RECORD, 7, 0, 0, 30},
+        },
+    },
+};

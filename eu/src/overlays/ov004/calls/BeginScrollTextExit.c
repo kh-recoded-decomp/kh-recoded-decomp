@@ -3,5 +3,5 @@
 #define NotifyBothOrOne_02001154 NotifyBothOrOne
 #define StopSoundStreamAtIndex_0204deb0 StopSoundStreamAtIndex
 #define data_ov004_02064578 sOv004_SfV_02064578
-#define g_scrollText_020645a0 data_ov004_020645a0
+#define g_scrollText_020645a0 gScrollTextGlobals
 #include "src/ov004/scroll_text/BeginScrollTextExit_02062264.c"

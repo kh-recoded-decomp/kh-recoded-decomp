@@ -1,4 +1,4 @@
 #define data_ov022_020b7df0 data_ov022_020b7e10
-#define func_ov022_020a8ce0 func_ov022_020a8d00
+#define func_ov022_020a8ce0 MeasureMovieSubtitleWidth_020a8d00
 #define updateMovieStreamLeadTime_020a8efc updateMovieStreamLeadTime_020a8f1c
 #include "src/ov022/video_playback/updateMovieStreamLeadTime_020a8efc.c"

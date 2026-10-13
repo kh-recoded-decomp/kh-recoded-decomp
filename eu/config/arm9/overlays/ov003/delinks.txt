@@ -151,6 +151,10 @@ src/overlays/ov003/calls/decodeMovieSubtitleCodeUnit.c:
     complete
     .text       start:0x02064ac0 end:0x02064c10
 
+src/overlays/ov003/calls/MeasureMovieSubtitleWidth.c:
+    complete
+    .text       start:0x02064c10 end:0x02064e08
+
 src/overlays/ov003/calls/ClampMovieSubtitleStep.c:
     complete
     .text       start:0x02064e08 end:0x02064e2c

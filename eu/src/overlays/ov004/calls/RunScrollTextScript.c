@@ -3,5 +3,5 @@
 #define PrepareAndStartStream_0204dd4c PrepareAndStartStream
 #define RunScrollTextScript_020619a0 RunScrollTextScript
 #define StopSoundStreamAtIndex_0204deb0 StopSoundStreamAtIndex
-#define g_scrollText_020645a0 data_ov004_020645a0
+#define g_scrollText_020645a0 gScrollTextGlobals
 #include "src/ov004/scroll_text/RunScrollTextScript_020619a0.c"

@@ -1,5 +1,5 @@
 #define InitScrollTextLayers_02063a28 InitScrollTextLayers
 #define func_020169ec NNS_G2dFontInitUTF16
 #define func_ov004_02063988 InitScrollTextLayer
-#define g_scrollText_020645a0 data_ov004_020645a0
+#define g_scrollText_020645a0 gScrollTextGlobals
 #include "src/ov004/scroll_text/InitScrollTextLayers_02063a28.c"

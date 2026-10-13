@@ -5,5 +5,5 @@
 #define ReleaseScrollTextWork_020616d4 ReleaseScrollTextWork
 #define SetPendingScene_02025644 SetPendingScene
 #define ZeroHalfThenFree_0202cd78 ZeroHalfThenFree
-#define g_scrollText_020645a0 data_ov004_020645a0
+#define g_scrollText_020645a0 gScrollTextGlobals
 #include "src/ov004/scroll_text/ReleaseScrollTextWork_020616d4.c"

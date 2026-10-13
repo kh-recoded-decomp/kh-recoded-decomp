@@ -5,5 +5,5 @@
 #define func_0204f160 IndexedRecord_GetPair
 #define func_0204f378 IndexedRecords_SetFlag2
 #define func_0204f3b0 IndexedRecord_GetFlag2
-#define g_scrollText_020645a0 data_ov004_020645a0
+#define g_scrollText_020645a0 gScrollTextGlobals
 #include "src/ov004/scroll_text/UpdateScrollTextFrame_020622f0.c"
