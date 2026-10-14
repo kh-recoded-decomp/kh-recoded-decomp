@@ -1,4 +1,4 @@
 #define CloseEntryDetail_020bf00c CloseEntryDetail
 #define PlaySoundEffect_0204d924 PlaySoundEffect
-#define func_ov095_020bfa18 func_ov095_020bfa38
+#define func_ov095_020bfa18 RefreshItemReportText
 #include "src/ov095/unclassified_helpers/CloseEntryDetail_020bf00c.c"

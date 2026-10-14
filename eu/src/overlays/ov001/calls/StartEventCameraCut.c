@@ -1,3 +1,4 @@
+#define func_ov001_0206dc4c GetManagedActorPosition
 #define ActorChannel_ResetFields_0208ae3c ActorChannel_ResetFields
 #define FX_Div_01ff9c84 FX_Div
 #define Math_AsinIdx_0202aaa8 Math_AsinIdx

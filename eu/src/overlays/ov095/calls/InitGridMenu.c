@@ -24,7 +24,7 @@
 #define data_ov095_020c28c0 data_ov095_020c28e0
 #define func_ov039_020bc828 GetCurrentMenuStackEntry
 #define func_ov095_020bf824 InitTextLayers
-#define func_ov095_020bfa18 func_ov095_020bfa38
-#define func_ov095_020c09f8 func_ov095_020c0a18
+#define func_ov095_020bfa18 RefreshItemReportText
+#define func_ov095_020c09f8 CreateItemReportGridCell
 #define func_ov095_020c1608 func_ov095_020c1628
 #include "src/ov095/panel_state/InitGridMenu_020beb00.c"

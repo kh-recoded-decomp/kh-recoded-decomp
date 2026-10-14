@@ -1,3 +1,4 @@
+#define func_ov001_0206dc4c GetManagedActorPosition
 #define DivideVecFx32ByScalar_0204a700 DivideVecFx32ByScalar
 #define InitGroupFormation_020be0c8 InitGroupFormation
 #define Mul64_02023d9c _ll_mul

@@ -23,3 +23,7 @@ u16 gFieldMenuModeHighlightPalettes[3][4] = {
     {0x1a21, 0x2b02, 0x3761, 0x37f6},
     {0x5d23, 0x71a5, 0x7e29, 0x7f14}
 };
+
+#pragma define_section fieldPaletteAlignment ".data" RW
+/* Two retained alignment bytes before gFieldMenuTaskDescriptor. */
+__declspec(fieldPaletteAlignment) u8 gFieldMenuPaletteDataAlignment[2] = {0, 0};

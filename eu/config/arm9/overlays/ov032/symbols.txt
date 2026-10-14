@@ -63,7 +63,7 @@ func_ov032_020bbc80 kind:function(thumb,size=0x18) addr:0x020bbc80
 func_ov032_020bbc98 kind:function(thumb,size=0x6) addr:0x020bbc98
 func_ov032_020bbca0 kind:function(thumb,size=0x44) addr:0x020bbca0
 MoveGroupObjectAndSyncActor kind:function(thumb,size=0x9c) addr:0x020bbce4
-func_ov032_020bbd80 kind:function(thumb,size=0x124) addr:0x020bbd80
+OrientGroupActorCollisionFromDirection kind:function(thumb,size=0x124) addr:0x020bbd80
 PickWeightedIndex kind:function(thumb,size=0x48) addr:0x020bbea4
 RollRowDropItem kind:function(thumb,size=0x54) addr:0x020bbeec
 func_ov032_020bbf40 kind:function(thumb,size=0x10) addr:0x020bbf40
@@ -99,7 +99,7 @@ UpdateLedgeClimb kind:function(thumb,size=0xac) addr:0x020bce98
 UpdateHopWithSpeedRamp kind:function(thumb,size=0xa0) addr:0x020bcf44
 TurnTowardOpenDirection kind:function(thumb,size=0x66) addr:0x020bcfe4
 SelectGroupMemberPose kind:function(thumb,size=0xb0) addr:0x020bd04c
-func_ov032_020bd0fc kind:function(thumb,size=0xc0) addr:0x020bd0fc
+BuildDirectionPitchMatrix kind:function(thumb,size=0xc0) addr:0x020bd0fc
 QuatFromRotatedAxisAngle kind:function(thumb,size=0xa0) addr:0x020bd1bc
 Fx32ToIntTruncate kind:function(thumb,size=0xa) addr:0x020bd25c
 ApplyGroupScale kind:function(thumb,size=0x40) addr:0x020bd268
@@ -147,8 +147,8 @@ data_ov032_020bff78 kind:data(any) addr:0x020bff78
 data_ov032_020bff8c kind:data(any) addr:0x020bff8c
 data_ov032_020bff94 kind:data(any) addr:0x020bff94
 data_ov032_020bffac kind:data(any) addr:0x020bffac
-data_ov032_020bffb8 kind:data(any) addr:0x020bffb8
-data_ov032_020bffc4 kind:data(any) addr:0x020bffc4
+gGroupCollisionPivotOffset kind:data(any) addr:0x020bffb8
+gGroupCollisionPivotBase kind:data(any) addr:0x020bffc4
 data_ov032_020bffd0 kind:data(any) addr:0x020bffd0
 data_ov032_020bffe0 kind:data(any) addr:0x020bffe0
 data_ov032_020bffe4 kind:data(any) addr:0x020bffe4

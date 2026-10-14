@@ -1,3 +1,4 @@
+#define func_ov001_0206dc4c GetManagedActorPosition
 #define data_ov035_020bc4e0 gMovieContextState
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField
 #define UpdateAreaFromPosition_020bc500 UpdateAreaFromPosition

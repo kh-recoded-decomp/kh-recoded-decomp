@@ -77,7 +77,7 @@ typedef struct {
 extern CameraState *data_ov042_020be5e0;
 extern VecFx32 gZeroVecFx32;
 extern int func_ov001_02063a4c(void);
-extern VecFx32 *func_ov001_0206dc4c(int index);
+extern VecFx32 *GetManagedActorPosition(int index);
 extern InputEntry *GetBoundedEntryField(int index);
 extern VecFx32 *func_ov030_020bb374(void);
 extern void VEC_Add(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
@@ -187,7 +187,7 @@ BOOL UpdateCameraScene(void) {
     if (cam->locked == 0) {
         switch (cam->mode) {
         case 0:
-            move = SubtractVec(func_ov001_0206dc4c(0), &cam->focus);
+            move = SubtractVec(GetManagedActorPosition(0), &cam->focus);
             move.y = 0;
             TranslateCameraTarget(&move);
             break;
@@ -223,13 +223,13 @@ BOOL UpdateCameraScene(void) {
                     input = entry->getInputFlags(entry);
                 }
                 if (!(input & 0x10)) {
-                    player = func_ov001_0206dc4c(0);
+                    player = GetManagedActorPosition(0);
                     if (!VecEquals(&data_ov042_020be5e0->lastPlayerPos, player) && (cam->followFlags & 3)) {
                         u32 follow;
                         fx32 maxY;
                         fx32 minY;
                         fx32 z;
-                        player = func_ov001_0206dc4c(0);
+                        player = GetManagedActorPosition(0);
                         maxY = cam->maxY;
                         minY = cam->minY;
                         z = player->z;
@@ -339,6 +339,6 @@ finish:
         data_ov042_020be5e0->shake = data_ov042_020be5e0->particleShake;
     }
     ApplyCameraShake();
-    data_ov042_020be5e0->lastPlayerPos = *func_ov001_0206dc4c(0);
+    data_ov042_020be5e0->lastPlayerPos = *GetManagedActorPosition(0);
     return FALSE;
 }

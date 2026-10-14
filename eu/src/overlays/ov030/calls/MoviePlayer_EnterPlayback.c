@@ -26,7 +26,7 @@ extern void func_ov001_02087650(int value);
 extern BOOL IsSessionFlagSet(int flagId);
 extern void SetFieldEntriesPaused(int paused);
 extern void func_ov001_02082888(void);
-extern VecFx32 *func_ov001_0206dc4c(int index);
+extern VecFx32 *GetManagedActorPosition(int index);
 extern SubModeView *func_ov021_020af614(void);
 extern void UpdateEventObjects(void);
 extern void ForwardToActiveService_02088074(void);
@@ -57,7 +57,7 @@ int MoviePlayer_EnterPlayback(void)
         ctx->flags &= ~0x20;
     }
     func_ov001_02082888();
-    data_ov030_020bd020->cameraPos = *func_ov001_0206dc4c(0);
+    data_ov030_020bd020->cameraPos = *GetManagedActorPosition(0);
     data_ov030_020bd020->cameraTarget = func_ov021_020af614()->target;
     if (!IsSessionFlagSet(0x360c)) {
         UpdateEventObjects();

@@ -1,3 +1,4 @@
+#define func_ov001_0206dc4c GetManagedActorPosition
 #define Camera_GetFocusPosition_020c1780 Camera_GetFocusPosition
 #define FX_Div_01ff9c84 FX_Div
 #define FieldObject_HandlePush_0208334c func_ov001_02083374

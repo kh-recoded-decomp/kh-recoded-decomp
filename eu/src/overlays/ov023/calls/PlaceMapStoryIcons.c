@@ -1,3 +1,4 @@
+#define func_ov001_0206dc4c GetManagedActorPosition
 #define func_ov001_020645c8 IsSessionFlagSet
 #define PlaceMapStoryIcons_020b653c PlaceMapStoryIcons
 #define WorldToMapPosition_020b60d4 WorldToMapPosition

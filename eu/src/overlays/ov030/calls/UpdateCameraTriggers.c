@@ -1,3 +1,4 @@
+#define func_ov001_0206dc4c GetManagedActorPosition
 #define EaseProgress_0204a174 EaseProgress
 #define GetOrbitOffsetDegrees_020bd474 GetOrbitOffsetDegrees
 #define LerpVecFx32Q27InPlace_0204be6c LerpVecFx32Q27InPlace

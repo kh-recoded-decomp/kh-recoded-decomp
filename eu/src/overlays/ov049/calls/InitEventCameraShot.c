@@ -1,3 +1,4 @@
+#define func_ov001_0206dc4c GetManagedActorPosition
 #define AreVecsWithinRange16_0204a8f4 AreVecsWithinRange16
 #define ComputeEventCameraArcAngle_020c4260 ComputeEventCameraArcAngle
 #define CopyAnimTransform_020c4228 CopyAnimTransform

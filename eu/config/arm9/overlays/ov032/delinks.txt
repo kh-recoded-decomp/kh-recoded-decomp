@@ -260,6 +260,10 @@ src/overlays/ov032/calls/MoveGroupObjectAndSyncActor.c:
     complete
     .text       start:0x020bbce4 end:0x020bbd80
 
+src/overlays/ov032/calls/OrientGroupActorCollisionFromDirection.c:
+    complete
+    .text       start:0x020bbd80 end:0x020bbea4
+
 src/overlays/ov032/calls/PickWeightedIndex.c:
     complete
     .text       start:0x020bbea4 end:0x020bbeec
@@ -399,6 +403,10 @@ src/overlays/ov032/calls/TurnTowardOpenDirection.c:
 src/overlays/ov032/calls/SelectGroupMemberPose.c:
     complete
     .text       start:0x020bd04c end:0x020bd0fc
+
+src/overlays/ov032/calls/BuildDirectionPitchMatrix.c:
+    complete
+    .text       start:0x020bd0fc end:0x020bd1bc
 
 src/overlays/ov032/calls/QuatFromRotatedAxisAngle.c:
     complete
@@ -596,14 +604,6 @@ src/ov032/data/Rodata_ov032_020bffac.c:
     complete
     .rodata     start:0x020bffac end:0x020bffb8
 
-src/ov032/data/Rodata_ov032_020bffb8.c:
-    complete
-    .rodata     start:0x020bffb8 end:0x020bffc4
-
-src/ov032/data/Rodata_ov032_020bffc4.c:
-    complete
-    .rodata     start:0x020bffc4 end:0x020bffd0
-
 src/ov032/data/Rodata_ov032_020bffd0.c:
     complete
     .rodata     start:0x020bffd0 end:0x020bffdc
@@ -619,3 +619,11 @@ src/overlays/ov032/data/strings/Strings_ov032_020c0040.c:
 src/overlays/ov032/data/tables/gGroupActionStateHandlers.c:
     complete
     .data       start:0x020bfff8 end:0x020c0040
+
+src/overlays/ov032/data/tables/gGroupCollisionPivotBase.c:
+    complete
+    .rodata     start:0x020bffc4 end:0x020bffd0
+
+src/overlays/ov032/data/tables/gGroupCollisionPivotOffset.c:
+    complete
+    .rodata     start:0x020bffb8 end:0x020bffc4

@@ -1,3 +1,4 @@
+#define func_ov001_0206dc4c GetManagedActorPosition
 #define PushGroupFromPlayer_020be5c0 PushGroupFromPlayer
 #define VEC_Add_01ff9e0c VEC_Add
 #define data_02053438 gZeroVecFx32

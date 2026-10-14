@@ -1,3 +1,4 @@
+#define func_ov001_0206dc4c GetManagedActorPosition
 #define ComputeGroupOrbitPosition_020bc7f4 ComputeGroupOrbitPosition
 #define func_ov032_020bbc60 func_ov032_020bbc80
 #define func_ov032_020bbc78 func_ov032_020bbc98

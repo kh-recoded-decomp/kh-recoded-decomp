@@ -1,3 +1,4 @@
+#define func_ov001_0206dc4c GetManagedActorPosition
 #define SyncStageEntryPosition_02098fbc SyncStageEntryPosition
 #define data_02053438 gZeroVecFx32
 #define g_stageManager_020a0508 gStageManager

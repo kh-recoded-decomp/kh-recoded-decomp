@@ -1,3 +1,4 @@
+#define func_ov001_0206dc4c GetManagedActorPosition
 #define ComputeApproachTarget_020d8814 ComputeApproachTarget
 #define RotateOffsetAroundY_020a9160 RotateOffsetAroundY
 #define VEC_Mag_01ff9f28 VEC_Mag

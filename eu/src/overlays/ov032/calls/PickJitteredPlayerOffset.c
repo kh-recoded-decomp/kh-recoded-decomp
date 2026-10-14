@@ -1,3 +1,4 @@
+#define func_ov001_0206dc4c GetManagedActorPosition
 #define PickJitteredPlayerOffset_020bdd74 PickJitteredPlayerOffset
 #define ScaleVecFx32InPlace_0204a5e4 ScaleVecFx32InPlace
 #define VEC_Mag_01ff9f28 VEC_Mag

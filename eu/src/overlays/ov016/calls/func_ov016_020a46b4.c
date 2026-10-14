@@ -1,3 +1,4 @@
+#define func_ov001_0206dc4c GetManagedActorPosition
 #define FX_Div_01ff9c84 FX_Div
 #define IsMovingAgainstDirection_02086618 IsMovingAgainstDirection
 #define OnFieldUnitPushedUp_020a566c OnFieldUnitPushedUp

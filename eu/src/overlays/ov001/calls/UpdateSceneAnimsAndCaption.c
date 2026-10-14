@@ -1,3 +1,4 @@
+#define func_ov001_0206dc4c GetManagedActorPosition
 #define AdvanceAnimationTracks_0202ef24 AdvanceAnimationTracks
 #define SetFieldCaptionText_02072178 SetFieldCaptionText
 #define UpdateSceneAnimsAndCaption_02067d80 UpdateSceneAnimsAndCaption

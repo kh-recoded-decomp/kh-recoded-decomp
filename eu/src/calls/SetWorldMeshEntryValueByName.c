@@ -1,4 +1,4 @@
-#define FindMeshNamedEntry_020338c0 func_020338d4
+#define FindMeshNamedEntry_020338c0 FindMeshNamedEntry
 #define SetWorldMeshEntryValueByName_02036368 SetWorldMeshEntryValueByName
 #define g_collisionWorld_0206083c gActorRegistry
 #include "src/arm9/spatial_queries/SetWorldMeshEntryValueByName_02036368.c"

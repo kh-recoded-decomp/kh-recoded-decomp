@@ -1,3 +1,4 @@
+#define func_ov001_0206dc4c GetManagedActorPosition
 #define Camera_GetFocusPosition_020c1780 Camera_GetFocusPosition
 #define Camera_ShouldStartManualTurn_020c3ad8 Camera_ShouldStartManualTurn
 #include "src/ov047/camera/Camera_ShouldStartManualTurn_020c3ad8.c"

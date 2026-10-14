@@ -1,5 +1,5 @@
 #define GetActorCount_0206dc38 func_ov001_0206dc38
-#define GetActorPosition_0206dc4c func_ov001_0206dc4c
+#define GetActorPosition_0206dc4c GetManagedActorPosition
 #define IsLeadActorWithinRadius_02080e30 IsLeadActorWithinRadius
 #define VecFx32_Distance_01ffa0f4 VEC_Distance
 #include "src/ov001/unclassified_helpers/IsLeadActorWithinRadius_02080e30.c"

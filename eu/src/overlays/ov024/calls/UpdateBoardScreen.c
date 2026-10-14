@@ -1,3 +1,4 @@
+#define func_ov001_0206dc4c GetManagedActorPosition
 #define UpdateBoardScreen_020b6df4 UpdateBoardScreen
 #define func_0204f378 IndexedRecords_SetFlag2
 #define GetCursorScreenPos_020b7288 GetCursorScreenPos
@@ -25,7 +26,7 @@
 #define FindActiveRecordById_020b8184 FindActiveRecordById
 #define func_ov027_020b8284 func_ov027_020b82a4
 #define TagTracker_InvokeCallback_020b8210 func_ov027_020b8230
-#define func_ov024_020b6bb0 func_ov024_020b6bd0
+#define func_ov024_020b6bb0 UpdateBoardHelpText
 #define FlushDirtyTileTableRows_020b9e60 FlushDirtyTileTableRows
 #if defined(__MWERKS__)
 #include "../src/ov024/unclassified_helpers/UpdateBoardScreen_020b6df4.c"

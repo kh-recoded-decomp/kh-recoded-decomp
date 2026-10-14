@@ -25,7 +25,7 @@ typedef struct FacingQuery {
 } FacingQuery;
 
 extern const DirectionTableBlock sOv006ElevatorFrameData;
-extern VecFx32 *func_ov001_0206dc4c(int playerId);
+extern VecFx32 *GetManagedActorPosition(int playerId);
 extern void VEC_Subtract(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
 extern void VEC_Normalize(const VecFx32 *src, VecFx32 *dst);
 extern fx32 VEC_DotProduct(const VecFx32 *a, const VecFx32 *b);
@@ -39,7 +39,7 @@ BOOL IsPlayerInFacingHalfPlane(FacingObject *object, FacingQuery *query)
     facing.x = sOv006ElevatorFrameData.directions[index].x;
     facing.y = sOv006ElevatorFrameData.directions[index].y;
     facing.z = sOv006ElevatorFrameData.directions[index].z;
-    VEC_Subtract(func_ov001_0206dc4c(query->playerId), &object->position, &toTarget);
+    VEC_Subtract(GetManagedActorPosition(query->playerId), &object->position, &toTarget);
     toTarget.y = 0;
     VEC_Normalize(&toTarget, &toTarget);
     return VEC_DotProduct(&facing, &toTarget) >= 0;

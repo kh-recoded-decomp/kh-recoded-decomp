@@ -1,3 +1,4 @@
+#define func_ov001_02064184 PlayFieldBgm
 #define ScriptCmd_PlayFieldBgm_02065610 ScriptCmd_PlayFieldBgm
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
 #include "src/ov001/shared_engine/ScriptCmd_PlayFieldBgm_02065610.c"

@@ -1,3 +1,4 @@
+#define func_ov032_020bbd80 OrientGroupActorCollisionFromDirection
 #include "nitro/types.h"
 #include "nitro/fx_types.h"
 
@@ -57,7 +58,7 @@ extern const VecFx32 gZeroVecFx32;
 extern ObjectGroup *func_ov032_020bbc80(GroupObject *object);
 extern GroupMemberWork *func_ov032_020bbc98(GroupObject *object);
 extern GroupObject *func_ov001_02086384(void *world, int index);
-extern VecFx32 *func_ov001_0206dc4c(int index);
+extern VecFx32 *GetManagedActorPosition(int index);
 extern void ComputeGroupOrbitPosition(GroupObject *object, VecFx32 *target);
 extern void ComputeGroupAimDelta(GroupObject *object, GroupObject *leader, VecFx32 *delta);
 extern BOOL ComputePushTowardTarget(VecFx32 *target, VecFx32 *center, s32 *phase, VecFx32 *push);
@@ -108,7 +109,7 @@ void UpdateBouncingGroupMember(GroupObject *object)
         }
         break;
     case 0x13:
-        target = *func_ov001_0206dc4c(0);
+        target = *GetManagedActorPosition(0);
         ComputeGroupOrbitPosition(object, &target);
         if (leader == NULL) {
             if (ComputePushTowardTarget(&target, &object->position, &work->phase, &delta)) {
@@ -199,7 +200,7 @@ void UpdateBouncingGroupMember(GroupObject *object)
         }
         break;
     case 0x17:
-        VEC_Add(func_ov001_0206dc4c(0), &work->offset, &goal);
+        VEC_Add(GetManagedActorPosition(0), &work->offset, &goal);
         reached = ComputePushTowardTarget(&goal, &object->position, &work->phase, &delta);
         if (object->work->leaderLink == -1) {
             if (group->settleTimer < 4) {

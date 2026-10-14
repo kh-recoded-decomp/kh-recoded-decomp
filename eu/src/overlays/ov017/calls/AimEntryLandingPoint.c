@@ -1,3 +1,4 @@
+#define func_ov001_0206dc4c GetManagedActorPosition
 #define AimEntryLandingPoint_020a5048 AimEntryLandingPoint
 #define DispatchListHeadCallback_020a4100 DispatchListHeadCallback
 #define FX_Div_01ff9c84 FX_Div

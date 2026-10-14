@@ -1,3 +1,4 @@
+#define func_ov001_0206dc4c GetManagedActorPosition
 #define ApplyFieldObjectForceToPlayer_020a446c ApplyFieldObjectForceToPlayer
 #define CollisionQuery_Init_02034c74 CollisionQuery_Init
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField

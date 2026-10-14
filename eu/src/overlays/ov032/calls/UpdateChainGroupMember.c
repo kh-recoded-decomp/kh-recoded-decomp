@@ -1,3 +1,4 @@
+#define func_ov032_020bbd80 OrientGroupActorCollisionFromDirection
 #include "nitro/types.h"
 #include "nitro/fx_types.h"
 
@@ -53,7 +54,7 @@ extern const VecFx32 gZeroVecFx32;
 extern ObjectGroup *func_ov032_020bbc80(GroupObject *object);
 extern GroupMemberWork *func_ov032_020bbc98(GroupObject *object);
 extern GroupObject *func_ov001_02086384(void *world, int index);
-extern VecFx32 *func_ov001_0206dc4c(int index);
+extern VecFx32 *GetManagedActorPosition(int index);
 extern void VEC_Add(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
 extern BOOL ComputePushTowardTarget(const VecFx32 *target, const VecFx32 *center, s32 *phase, VecFx32 *push);
 extern void SpawnSoundSlot(int bank, int id, VecFx32 *position, int flags);
@@ -182,7 +183,7 @@ int UpdateChainGroupMember(void *context, GroupObject *object)
         delta = work->moveDelta;
         break;
     case 6:
-        VEC_Add(func_ov001_0206dc4c(0), &work->offset, &goal);
+        VEC_Add(GetManagedActorPosition(0), &work->offset, &goal);
         reached = ComputePushTowardTarget(&goal, &object->position, &work->phase, &delta);
         if (object->work->leaderLink == -1) {
             if (group->settleTimer < 4) {

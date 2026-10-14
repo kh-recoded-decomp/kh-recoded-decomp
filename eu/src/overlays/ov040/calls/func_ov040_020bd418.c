@@ -1,3 +1,4 @@
+#define func_ov001_02064184 PlayFieldBgm
 #include "nitro/types.h"
 
 extern u32 gMovieContextState;

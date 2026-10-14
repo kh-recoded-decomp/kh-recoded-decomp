@@ -1,3 +1,4 @@
+#define func_ov001_02075e10 UpdateFieldMenuSelectionTags
 #include "nitro/types.h"
 #include "src/overlays/ov001/FieldCommandLabels.h"
 

@@ -1,3 +1,4 @@
+#define func_ov001_0206dc4c GetManagedActorPosition
 #define ChooseNextPatrolPoint_02083c68 ChooseNextPatrolPoint
 #define FindActiveSlotEntry_02083c38 FindActiveSlotEntry
 #define GetCtxModeByte_02068084 func_ov001_02068084

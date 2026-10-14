@@ -1,3 +1,4 @@
+#define func_ov001_0206dc4c GetManagedActorPosition
 #define SteerFieldObjectToTarget_020a2bb0 SteerFieldObjectToTarget
 #define func_ov016_020a2aac PlaceFieldObjectNode
 #include "src/ov016/field_objects/SteerFieldObjectToTarget_020a2bb0.c"

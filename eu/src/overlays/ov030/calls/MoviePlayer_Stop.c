@@ -1,3 +1,4 @@
+#define func_ov001_0206dc4c GetManagedActorPosition
 #define MoviePlayer_Stop_020ba9d0 MoviePlayer_Stop
 #define ReleaseSeqArcHeapLevel_0204e040 ReleaseSeqArcHeapLevel
 #define SetStreamVolumePercent_0204e070 SetStreamVolumePercent

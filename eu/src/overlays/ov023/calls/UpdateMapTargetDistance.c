@@ -1,3 +1,4 @@
+#define func_ov001_0206dc4c GetManagedActorPosition
 #define GetFieldOffset58_02081ea0 GetFieldOffset58
 #define IsObjectFlagClear_0207f7a4 IsObjectFlagClear
 #define IsPlayerEntryFlagSet_02050014 IsPlayerEntryFlagSet

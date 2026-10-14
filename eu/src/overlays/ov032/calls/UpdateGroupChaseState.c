@@ -1,3 +1,4 @@
+#define func_ov001_0206dc4c GetManagedActorPosition
 #define ApplyGroupScale_020bd248 ApplyGroupScale
 #define ComputePushTowardTarget_020bc924 ComputePushTowardTarget
 #define MoveGroupObjectAndSyncActor_020bbcc4 MoveGroupObjectAndSyncActor

@@ -1,3 +1,4 @@
+#define func_ov001_0206dc4c GetManagedActorPosition
 #define FixedPointAtan2_020062bc FX_Atan2Idx
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField
 #define ScaleVecFx32_01ffafb4 ScaleVecFx32

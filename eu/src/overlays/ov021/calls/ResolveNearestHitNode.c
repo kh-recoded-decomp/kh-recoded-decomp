@@ -1,3 +1,4 @@
+#define func_ov001_0206dc4c GetManagedActorPosition
 #define Object_GetKindValue_0208744c Object_GetKindValue
 #define ResolveNearestHitNode_020aba18 ResolveNearestHitNode
 #define VEC_Mag_01ff9f28 VEC_Mag

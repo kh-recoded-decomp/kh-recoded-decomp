@@ -1,3 +1,4 @@
+#define func_ov001_0206dc4c GetManagedActorPosition
 #define FieldObject_GetClassValue4c_0207f8a8 FieldObject_GetClassValue4c
 #define GetBiasAdjustedField_0206dc80 GetBiasAdjustedField
 #define IsActorTargetable_0206b4a4 IsActorTargetable

@@ -1,3 +1,4 @@
+#define func_ov001_0206dc4c GetManagedActorPosition
 #define DisableOv029Sound_020ba768 DisableOv029Sound
 #define ReleaseSeqArcHeapLevel_0204e040 ReleaseSeqArcHeapLevel
 #define StoreToGlobalPtr4Field28_0202a778 StoreToGlobalPtr4Field28

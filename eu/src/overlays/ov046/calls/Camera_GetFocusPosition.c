@@ -1,3 +1,4 @@
+#define func_ov001_0206dc4c GetManagedActorPosition
 #define Camera_GetFocusPosition_020c1780 Camera_GetFocusPosition
 #define g_cameraManager_020c34e0 gCameraManager
 #include "src/ov046/shared_engine/Camera_GetFocusPosition_020c1780.c"

@@ -1,3 +1,4 @@
+#define func_ov001_0206dc4c GetManagedActorPosition
 #define HandleOverlayExitFlag_020ba708 HandleOverlayExitFlag
 #define func_ov001_0206e444 SetFieldEntriesPaused
 #define _data_02060500 data_02060500

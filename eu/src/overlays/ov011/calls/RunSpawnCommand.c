@@ -58,7 +58,7 @@ extern void CallFieldObjectHook24(FieldObject *object, VecFx32 *position);
 extern int func_ov001_0207f040(void);
 extern FieldObject *func_ov001_0207f050(int index);
 extern FieldObject *GetStridedBufferEntry(FieldObject *object, u32 index);
-extern VecFx32 *func_ov001_0206dc4c(int index);
+extern VecFx32 *GetManagedActorPosition(int index);
 extern void VEC_NormalizeLength(VecFx32 *src, VecFx32 *dst);
 extern int func_ov011_020a09d0(SpawnOwner *owner);
 extern void SetPanelActorState(FieldObject *object, int value);
@@ -117,7 +117,7 @@ void RunSpawnCommand(SpawnCommand *command, SpawnOwner *owner)
 
                 if (entry->category == 9) {
                     FieldObject *target = GetStridedBufferEntry(entry, 0);
-                    VecFx32 *destination = func_ov001_0206dc4c(0);
+                    VecFx32 *destination = GetManagedActorPosition(0);
                     VecFx32 position;
                     VecFx32 raised;
 

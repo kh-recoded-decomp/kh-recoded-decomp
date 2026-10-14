@@ -3,7 +3,7 @@
 
 typedef struct ActorEntry ActorEntry;
 /* Origin position, target position, and the target-defined range cap. */
-extern const VecFx32 *func_ov001_0206dc4c(s32 index);
+extern const VecFx32 *GetManagedActorPosition(s32 index);
 extern const VecFx32 *func_ov001_0208641c(ActorEntry *entry);
 extern fx32 func_ov001_0208643c(ActorEntry *entry);
 extern fx32 VEC_Distance(const VecFx32 *a, const VecFx32 *b);
@@ -20,7 +20,7 @@ static inline fx32 Absolute(fx32 value)
 
 BOOL IsEntryWithinFacingRange(s32 index, ActorEntry *entry, fx32 maximumRange)
 {
-    const VecFx32 *origin = func_ov001_0206dc4c(index);
+    const VecFx32 *origin = GetManagedActorPosition(index);
     const VecFx32 *target = func_ov001_0208641c(entry);
     fx32 range;
     VecFx32 direction;

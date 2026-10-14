@@ -5,6 +5,6 @@
 #define func_ov001_0207157c AddFieldListener
 #define func_ov024_020b5800 ReleaseSubObjectIfActive
 #define func_ov024_020b664c SetupBoardTextLayer
-#define func_ov024_020b6bb0 func_ov024_020b6bd0
+#define func_ov024_020b6bb0 UpdateBoardHelpText
 #define func_ov024_020b6df4 UpdateBoardScreen
 #include "src/ov024/unclassified_helpers/StartBoardScreen_020b6b40.c"

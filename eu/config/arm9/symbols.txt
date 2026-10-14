@@ -1860,7 +1860,7 @@ TestMoverAgainstModel kind:function(arm,size=0x158) addr:0x02033680
 GatherModelFaces kind:function(arm,size=0x84) addr:0x020337d8
 CopyShortTripleToIntTriple kind:function(arm,size=0x1c) addr:0x0203385c
 FindEntryByNameNoCase kind:function(arm,size=0x5c) addr:0x02033878
-func_020338d4 kind:function(arm,size=0x58) addr:0x020338d4
+FindMeshNamedEntry kind:function(arm,size=0x58) addr:0x020338d4
 ForEachFaceOnPoint kind:function(arm,size=0x178) addr:0x0203392c
 QuadTree_Insert kind:function(arm,size=0x15c) addr:0x02033aa4
 UnlinkNodeFromList kind:function(arm,size=0x50) addr:0x02033c00
@@ -2697,6 +2697,7 @@ gGXDataState kind:data(any) addr:0x02055c18
 GXi_DmaId kind:data(any) addr:0x02055c1c
 sCardRomConfig kind:data(any) addr:0x02055c20
 fsi_path_separator kind:data(short) addr:0x02055c28
+gPathSeparatorDataAlignment kind:data(byte[2]) addr:0x02055c2a
 fsi_overlay_rom_name kind:data(any) addr:0x02055c2c
 fsi_path_root_suffix kind:data(any) addr:0x02055c30
 fsi_rom_archive_name kind:data(any) addr:0x02055c34
@@ -2754,6 +2755,7 @@ sMain_Es_02055ff0 kind:data(any) addr:0x02055ff0
 sMain_Ja_02055ff4 kind:data(any) addr:0x02055ff4
 gLanguageCodeTable kind:data(any) addr:0x02055ff8
 gResourceTextureSetupEnabled kind:data(word) addr:0x02056014
+gBillboardMatrixDataAlignment kind:data(byte[8]) addr:0x02056018
 gBillboardMatrix kind:data(any) addr:0x02056020
 gProjectionTextureImageOpcode kind:data(word[1]) addr:0x02056050
 gProjectionTextureImageWords kind:data(word[2]) addr:0x02056054

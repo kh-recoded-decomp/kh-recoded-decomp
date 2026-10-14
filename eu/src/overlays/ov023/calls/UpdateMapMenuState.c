@@ -1,3 +1,4 @@
+#define func_ov001_0206dc4c GetManagedActorPosition
 #define CanOpenFieldMenu_020735d8 CanOpenFieldMenu
 #define CopySourceBlock_020b9f7c func_ov027_020b9f9c
 #define GetBiasAdjustedField_0206dc80 GetBiasAdjustedField

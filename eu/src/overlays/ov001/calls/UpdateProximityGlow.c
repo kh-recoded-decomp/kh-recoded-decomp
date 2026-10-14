@@ -28,7 +28,7 @@ typedef struct GlowObject {
 } GlowObject;
 
 extern u32 ReadSessionPackedBits(int bitOffset, u32 bitCount);
-extern VecFx32 *func_ov001_0206dc4c(int index);
+extern VecFx32 *GetManagedActorPosition(int index);
 extern fx32 VEC_Distance(const VecFx32 *a, const VecFx32 *b);
 extern fx32 FX_Div(fx32 numer, fx32 denom);
 extern fx32 FX_Mul(fx32 left, fx32 right);
@@ -55,7 +55,7 @@ int UpdateProximityGlow(GlowObject *object)
             level = 0;
         }
         ratio = 0;
-        distance = VEC_Distance(func_ov001_0206dc4c(0), &object->position);
+        distance = VEC_Distance(GetManagedActorPosition(0), &object->position);
         if (distance <= 0x5000) {
             from = gProximityGlowLevelColors.entries[level].nearColor;
             to = gProximityGlowNearColor;

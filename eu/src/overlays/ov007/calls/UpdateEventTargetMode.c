@@ -18,7 +18,7 @@ extern int ScriptCmd_ResetScreenLayer(unsigned int value, int layerId, int chann
 extern void ConfigureChannelSlot(int channel, int mode, int value);
 extern int func_ov001_0206dc38(void);
 extern unsigned int GetBoundedEntryField(int index);
-extern void *func_ov001_0206dc4c(int index);
+extern void *GetManagedActorPosition(int index);
 extern void *GetRaisedOwnerPosition(EventTargetWork *work);
 
 void UpdateEventTargetMode(EventTargetWork *work)
@@ -32,7 +32,7 @@ void UpdateEventTargetMode(EventTargetWork *work)
         return;
     }
     targetPosition = GetRaisedOwnerPosition(work);
-    playerPosition = func_ov001_0206dc4c(0);
+    playerPosition = GetManagedActorPosition(0);
     result = VEC_Distance(targetPosition, playerPosition);
     if (work->config->distanceLimit < result) {
         return;

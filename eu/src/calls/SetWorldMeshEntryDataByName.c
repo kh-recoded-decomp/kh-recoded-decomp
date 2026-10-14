@@ -1,4 +1,4 @@
-#define FindMeshNamedEntry_020338c0 func_020338d4
+#define FindMeshNamedEntry_020338c0 FindMeshNamedEntry
 #define MI_CpuCopy8_01ff89a8 MI_CpuCopy8
 #define SetWorldMeshEntryDataByName_020363a4 SetWorldMeshEntryDataByName
 #define g_collisionWorld_0206083c gActorRegistry

@@ -1,4 +1,6 @@
 {
+  "src/overlays/ov085/calls/FilterOwnedEntries.c": "dsi/1.1",
+  "src/overlays/ov095/calls/RefreshItemReportText.c": "dsi/1.1",
   "src/overlays/ov004/calls/InitScrollTextImageLists.c": "dsi/1.1",
   "src/overlays/ov003/calls/MeasureMovieSubtitleWidth.c": "dsi/1.1",
   "src/overlays/ov022/calls/MeasureMovieSubtitleWidth_020a8d00.c": "dsi/1.1",
@@ -7754,7 +7756,7 @@
   "src/overlays/ov015/calls/func_ov015_0206c6bc.c": "dsi/1.1",
   "src/overlays/ov021/calls/func_ov021_020b1c04.c": "dsi/1.1",
   "src/overlays/ov028/calls/func_ov028_020bacd0.c": "dsi/1.1",
-  "src/overlays/ov001/calls/func_ov001_020695b8.c": "dsi/1.1",
+  "src/overlays/ov001/calls/EvaluateManagedActorTrigger.c": "dsi/1.1",
   "src/overlays/ov023/calls/func_ov023_020b5944.c": "dsi/1.1",
   "src/overlays/ov039/calls/func_ov039_020bb4c8.c": "dsi/1.1",
   "src/overlays/ov076/calls/func_ov076_020c8d40.c": "dsi/1.1",
@@ -7959,7 +7961,7 @@
   "src/overlays/ov087/calls/func_ov087_020c4694.c": "dsi/1.1",
   "src/overlays/ov001/calls/func_ov001_02068d78.c": "dsi/1.1",
   "src/overlays/ov001/calls/func_ov001_0206c204.c": "dsi/1.1",
-  "src/overlays/ov001/calls/func_ov001_0206dc4c.c": "dsi/1.1",
+  "src/overlays/ov001/calls/GetManagedActorPosition.c": "dsi/1.1",
   "src/overlays/ov001/calls/func_ov001_02083334.c": "dsi/1.1",
   "src/overlays/ov001/calls/func_ov001_020869a0.c": "dsi/1.1",
   "src/overlays/ov016/calls/func_ov016_020a6df8.c": "dsi/1.1",
@@ -9168,5 +9170,12 @@
   "src/overlays/ov013/calls/ScrollPanelSlotWidgets.c": "dsi/1.1",
   "src/overlays/ov013/calls/PulsePanelPaletteColor.c": "dsi/1.3p1",
   "src/overlays/ov047/calls/Camera_StartVectorTracking.c": "dsi/1.1",
-  "src/overlays/ov059/calls/Seeker_Start.c": "dsi/1.1"
+  "src/overlays/ov059/calls/Seeker_Start.c": "dsi/1.1",
+  "src/calls/FindMeshNamedEntry.c": "dsi/1.1",
+  "src/overlays/ov095/calls/CreateItemReportGridCell.c": "dsi/1.1",
+  "src/overlays/ov001/calls/PlayFieldBgm.c": "dsi/1.1",
+  "src/overlays/ov001/calls/UpdateFieldMenuSelectionTags.c": "dsi/1.1",
+  "src/overlays/ov032/calls/BuildDirectionPitchMatrix.c": "dsi/1.1",
+  "src/overlays/ov032/calls/OrientGroupActorCollisionFromDirection.c": "dsi/1.1",
+  "src/overlays/ov024/calls/UpdateBoardHelpText.c": "dsi/1.1"
 }

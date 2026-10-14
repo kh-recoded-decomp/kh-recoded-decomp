@@ -1,3 +1,4 @@
+#define func_ov001_0206dc4c GetManagedActorPosition
 #define ComputeAttackDamage_020ac6cc ComputeAttackDamage
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField
 #define GetStageEventTargetInfo_02087960 GetStageEventTargetInfo

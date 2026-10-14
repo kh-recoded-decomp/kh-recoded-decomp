@@ -1,5 +1,5 @@
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define ShowNextEntry_020bef84 ShowNextEntry
-#define func_ov095_020bfa18 func_ov095_020bfa38
+#define func_ov095_020bfa18 RefreshItemReportText
 #define func_ov095_020c0f78 SelectNextGridRow
 #include "src/ov095/unclassified_helpers/ShowNextEntry_020bef84.c"

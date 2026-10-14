@@ -56,9 +56,13 @@ src/overlays/ov085/calls/CanSelectItem.c:
     complete
     .text       start:0x020c13ac end:0x020c1440
 
-src/overlays/ov085/calls/func_ov085_020c1440.c:
+src/overlays/ov085/calls/CompareOwnedItemOrder.c:
     complete
     .text       start:0x020c1440 end:0x020c1450
+
+src/overlays/ov085/calls/FilterOwnedEntries.c:
+    complete
+    .text       start:0x020c1450 end:0x020c14e0
 
 src/overlays/ov085/calls/FilterItemsForTab.c:
     complete

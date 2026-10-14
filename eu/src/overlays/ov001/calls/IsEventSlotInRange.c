@@ -1,3 +1,4 @@
+#define func_ov001_0206dc4c GetManagedActorPosition
 #define IsEventSlotInRange_0206b800 IsEventSlotInRange
 #define IsStageEventReady_02087c78 IsStageEventReady
 #define StageRecord_GetSlotPosition_02087c4c StageRecord_GetSlotPosition

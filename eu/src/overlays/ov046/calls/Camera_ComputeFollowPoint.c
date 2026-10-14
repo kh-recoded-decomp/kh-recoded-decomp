@@ -1,3 +1,4 @@
+#define func_ov001_0206dc4c GetManagedActorPosition
 #define Camera_ComputeFollowPoint_020c2c08 Camera_ComputeFollowPoint
 #define VEC_Add_01ff9e0c VEC_Add
 #define VEC_MultAdd_01ffa09c VEC_MultAdd

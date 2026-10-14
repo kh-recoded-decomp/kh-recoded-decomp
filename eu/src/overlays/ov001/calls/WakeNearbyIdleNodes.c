@@ -1,3 +1,4 @@
+#define func_ov001_0206dc4c GetManagedActorPosition
 #define IsEntryFlag2Active_020642d0 IsEntryFlag2Active
 #define SetNodeStateRandomDir_0206604c SetNodeStateRandomDir
 #define WakeNearbyIdleNodes_02066874 WakeNearbyIdleNodes

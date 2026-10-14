@@ -6,7 +6,7 @@
 #define func_ov001_0208635c func_ov001_02086384
 #define func_ov032_020bbc60 func_ov032_020bbc80
 #define func_ov032_020bbc78 func_ov032_020bbc98
-#define func_ov032_020bbd60 func_ov032_020bbd80
+#define func_ov032_020bbd60 OrientGroupActorCollisionFromDirection
 #define func_ov032_020bc8d4 SnapPositionToGround
 #define func_ov032_020bd624 SampleGroupTrailPosition
 #define func_01ffaff4 VEC_NormalizeLength

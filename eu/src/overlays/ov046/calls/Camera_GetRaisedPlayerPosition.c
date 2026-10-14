@@ -1,3 +1,4 @@
+#define func_ov001_0206dc4c GetManagedActorPosition
 #define Camera_GetRaisedPlayerPosition_020c14a8 Camera_GetRaisedPlayerPosition
 #define g_cameraManager_020c34e0 gCameraManager
 #include "src/ov046/shared_engine/Camera_GetRaisedPlayerPosition_020c14a8.c"

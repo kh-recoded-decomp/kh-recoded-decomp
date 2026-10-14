@@ -1,3 +1,4 @@
+#define func_ov001_02075e10 UpdateFieldMenuSelectionTags
 #define FillBackgroundLayerRect_02001a60 FillBackgroundLayerRect
 #define FindActiveRecordById_020b8184 FindActiveRecordById
 #define GetSceneTagTracker_020711b0 GetSceneTagTracker

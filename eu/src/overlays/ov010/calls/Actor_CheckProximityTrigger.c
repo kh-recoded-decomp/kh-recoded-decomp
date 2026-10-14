@@ -1,3 +1,4 @@
+#define func_ov001_0206dc4c GetManagedActorPosition
 #define Actor_CheckProximityTrigger_020a084c Actor_CheckProximityTrigger
 #define func_01ffa0f4 VEC_Distance
 #define func_ov001_0207f9c8 FieldObject_SetSavedValue

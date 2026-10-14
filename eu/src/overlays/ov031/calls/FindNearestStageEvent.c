@@ -1,3 +1,4 @@
+#define func_ov001_0206dc4c GetManagedActorPosition
 #define FindNearestStageEvent_020bab74 FindNearestStageEvent
 #define IsStageEventReady_02087c78 IsStageEventReady
 #define QueryStageEventPlacement_02087bec QueryStageEventPlacement

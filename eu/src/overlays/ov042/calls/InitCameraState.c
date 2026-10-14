@@ -1,3 +1,4 @@
+#define func_ov001_0206dc4c GetManagedActorPosition
 #define ApplyCameraConfig_020be4ac ApplyCameraConfig
 #define InitCameraState_020bd4bc InitCameraState
 #define data_02053438 gZeroVecFx32

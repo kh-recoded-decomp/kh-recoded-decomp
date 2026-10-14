@@ -1,3 +1,4 @@
+#define func_ov001_02075e10 UpdateFieldMenuSelectionTags
 #define data_0205fde4 gPanelActive
 #define FillBackgroundLayerRect_02001a60 FillBackgroundLayerRect
 #define GetSceneTagTracker_020711b0 GetSceneTagTracker

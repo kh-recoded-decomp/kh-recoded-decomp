@@ -1,3 +1,4 @@
+#define func_ov001_02075e10 UpdateFieldMenuSelectionTags
 #define FieldMenu_SetHidden_02077c98 FieldMenu_SetHidden
 #define FindActiveRecordById_020b8184 FindActiveRecordById
 #define GetSceneTagTracker_020711b0 GetSceneTagTracker

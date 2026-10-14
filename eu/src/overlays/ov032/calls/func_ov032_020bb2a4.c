@@ -14,7 +14,7 @@ extern unsigned int ShutdownSceneContext();
 extern unsigned int func_ov001_020685d4();
 extern unsigned int SetMenuHighlight();
 extern unsigned int func_ov001_0206dc38();
-extern unsigned int func_ov001_0206dc4c();
+extern unsigned int GetManagedActorPosition();
 extern unsigned int GetBiasAdjustedField();
 extern unsigned int func_ov001_0206de40();
 extern unsigned int Panel_TryBeginTransition4();
@@ -39,7 +39,7 @@ unsigned int func_ov032_020bb2a4(void) {
   if (0 < countOrGate) {
     do {
       func_ov001_0206de40(index);
-      firstValue = func_ov001_0206dc4c(index);
+      firstValue = GetManagedActorPosition(index);
       secondValue = GetBiasAdjustedField(index);
       StoreSessionSpawnPoint(index,firstValue,secondValue);
       index = index + 1;

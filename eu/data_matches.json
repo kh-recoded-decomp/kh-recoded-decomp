@@ -1,6 +1,50 @@
 {
   "data": [
     {
+      "module": "arm9",
+      "section": ".data",
+      "start": "0x02055c2a",
+      "end": "0x02055c2c",
+      "source": "src/data/tables/gPathSeparatorDataAlignment.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gPathSeparatorDataAlignment",
+      "origin": "EU original DATA",
+      "behavior": "Two zero bytes after the slash string used by FS_NormalizePath, retained separately from the string's two characters."
+    },
+    {
+      "module": "arm9",
+      "section": ".data",
+      "start": "0x02056018",
+      "end": "0x02056020",
+      "source": "src/data/tables/gBillboardMatrixDataAlignment.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gBillboardMatrixDataAlignment",
+      "origin": "EU original DATA",
+      "behavior": "Eight zero alignment bytes before gBillboardMatrix; no runtime consumer has been identified."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209e384",
+      "end": "0x0209e39c",
+      "source": "src/overlays/ov001/data/tables/gFieldConstantVectors.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gFieldConstantVectors",
+      "origin": "EU original DATA",
+      "behavior": "Two Q12 vectors, (1, 1, 0) and (1, 1, 1). Their consumer is unconfirmed; emitted values match the complete original 24-byte range."
+    },
+    {
+      "module": "ov001",
+      "section": ".rodata",
+      "start": "0x0209e41c",
+      "end": "0x0209e420",
+      "source": "src/overlays/ov001/data/tables/gFieldConstant0800.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gFieldConstant0800",
+      "origin": "EU original DATA",
+      "behavior": "Retained scalar 0x800 following the resource load-order table. Its purpose is unconfirmed; the emitted word matches the original four bytes."
+    },
+    {
       "module": "ov001",
       "section": ".rodata",
       "start": "0x0209d9b4",
@@ -3561,22 +3605,22 @@
       "section": ".rodata",
       "start": "0x020bffb8",
       "end": "0x020bffc4",
-      "source": "src/ov032/data/Rodata_ov032_020bffb8.c",
+      "source": "src/overlays/ov032/data/tables/gGroupCollisionPivotOffset.c",
       "compiler": "mwccarm-3.0-139",
-      "name": "ov032 data words",
-      "origin": "generated words",
-      "behavior": "Initialised data words, pointers named by their targets."
+      "name": "gGroupCollisionPivotOffset",
+      "origin": "reconstructed vector",
+      "behavior": "Local upward 0.75-unit pivot offset rotated with the group member collision box."
     },
     {
       "module": "ov032",
       "section": ".rodata",
       "start": "0x020bffc4",
       "end": "0x020bffd0",
-      "source": "src/ov032/data/Rodata_ov032_020bffc4.c",
+      "source": "src/overlays/ov032/data/tables/gGroupCollisionPivotBase.c",
       "compiler": "mwccarm-3.0-139",
-      "name": "ov032 data words",
-      "origin": "generated words",
-      "behavior": "Initialised data words, pointers named by their targets."
+      "name": "gGroupCollisionPivotBase",
+      "origin": "reconstructed vector",
+      "behavior": "Unrotated downward 0.75-unit offset cancelling the collision pivot translation at the default orientation."
     },
     {
       "module": "ov032",
@@ -10160,12 +10204,12 @@
       "module": "ov001",
       "section": ".data",
       "start": "0x0209ee60",
-      "end": "0x0209eeba",
+      "end": "0x0209eebc",
       "source": "src/overlays/ov001/data/tables/gFieldMenuPalettes.c",
       "compiler": "mwccarm-3.0-139",
       "name": "gFieldMenuPalettes",
       "origin": "EU original DATA; shared US palette values cross-checked",
-      "behavior": "Seven RGB555 palette tables: blue/red/green ramps, normal and alternate mode ramps, and three-row background/highlight palettes. Every emitted symbol was independently checked against the EU image; two trailing alignment bytes remain unclaimed."
+      "behavior": "Seven RGB555 palette tables: blue/red/green ramps, normal and alternate mode ramps, and three-row background/highlight palettes. Every emitted symbol and the two trailing zero alignment bytes are independently checked against the EU image."
     },
     {
       "module": "ov001",

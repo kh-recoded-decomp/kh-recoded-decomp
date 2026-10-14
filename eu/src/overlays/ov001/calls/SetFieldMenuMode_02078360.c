@@ -1,3 +1,4 @@
+#define func_ov001_02075e10 UpdateFieldMenuSelectionTags
 #define FindActiveRecordById_020b8184 FindActiveRecordById
 #define GFXi_EnqueueCommand_02014090 NNS_GfdRegisterNewVramTransferTask
 #define GetSceneTagTracker_020711b0 GetSceneTagTracker

@@ -1,3 +1,4 @@
+#define func_ov001_0206dc4c GetManagedActorPosition
 #define ReleaseSeqArcHeapLevel_0204e040 ReleaseSeqArcHeapLevel
 #define StoreToGlobalPtr4Field28_0202a778 StoreToGlobalPtr4Field28
 #define TryEnterState18_020baa34 TryEnterState18

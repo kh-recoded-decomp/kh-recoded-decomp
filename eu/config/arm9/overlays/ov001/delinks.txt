@@ -352,6 +352,10 @@ src/overlays/ov001/calls/SetupSlotPanelMode.c:
     complete
     .text       start:0x020640d8 end:0x02064184
 
+src/overlays/ov001/calls/PlayFieldBgm.c:
+    complete
+    .text       start:0x02064184 end:0x020641d4
+
 src/overlays/ov001/calls/OpenFieldMenuMode.c:
     complete
     .text       start:0x020641d4 end:0x02064280
@@ -1660,7 +1664,7 @@ src/overlays/ov001/calls/PlayWeightedRandomEntry.c:
     complete
     .text       start:0x02069530 end:0x020695b8
 
-src/overlays/ov001/calls/func_ov001_020695b8.c:
+src/overlays/ov001/calls/EvaluateManagedActorTrigger.c:
     complete
     .text       start:0x020695b8 end:0x02069606
 
@@ -2420,7 +2424,7 @@ src/overlays/ov001/calls/func_ov001_0206dc38.c:
     complete
     .text       start:0x0206dc38 end:0x0206dc4c
 
-src/overlays/ov001/calls/func_ov001_0206dc4c.c:
+src/overlays/ov001/calls/GetManagedActorPosition.c:
     complete
     .text       start:0x0206dc4c end:0x0206dc5e
 
@@ -3447,6 +3451,10 @@ src/overlays/ov001/calls/UploadFieldMenuRamp.c:
 src/overlays/ov001/calls/FieldMenu_TryEnterState3.c:
     complete
     .text       start:0x02075db8 end:0x02075e0e
+
+src/overlays/ov001/calls/UpdateFieldMenuSelectionTags.c:
+    complete
+    .text       start:0x02075e10 end:0x02075eec
 
 src/overlays/ov001/calls/func_ov001_02075eec.c:
     complete
@@ -8860,6 +8868,14 @@ src/overlays/ov001/data/tables/gFieldCommandTextFrame.c:
     complete
     .rodata     start:0x0209ded8 end:0x0209dee8
 
+src/overlays/ov001/data/tables/gFieldConstant0800.c:
+    complete
+    .rodata     start:0x0209e41c end:0x0209e420
+
+src/overlays/ov001/data/tables/gFieldConstantVectors.c:
+    complete
+    .rodata     start:0x0209e384 end:0x0209e39c
+
 src/overlays/ov001/data/tables/gFieldEffectGroups.c:
     complete
     .rodata     start:0x0209db14 end:0x0209db2c
@@ -8926,7 +8942,7 @@ src/overlays/ov001/data/tables/gFieldMenuDrawHandlers.c:
 
 src/overlays/ov001/data/tables/gFieldMenuPalettes.c:
     complete
-    .data       start:0x0209ee60 end:0x0209eeba
+    .data       start:0x0209ee60 end:0x0209eebc
 
 src/overlays/ov001/data/tables/gFieldMenuTaskDescriptor.c:
     complete

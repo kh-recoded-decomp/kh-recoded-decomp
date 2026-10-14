@@ -1,3 +1,4 @@
+#define func_ov001_0206dc4c GetManagedActorPosition
 #define FindSideTarget_0206b1ac FindSideTarget
 #define FixedPointMultiply12 FX_Mul
 #define ScanActorsForSideTarget_0206b25c ScanActorsForSideTarget

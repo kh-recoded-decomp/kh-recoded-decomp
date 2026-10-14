@@ -1,3 +1,4 @@
+#define func_ov001_0206dc4c GetManagedActorPosition
 #define CheckSideOffsetInRange_0206b3d4 CheckSideOffsetInRange
 #define FixedPointMultiply12 FX_Mul
 #define VEC_Subtract_01ff9e3c VEC_Subtract

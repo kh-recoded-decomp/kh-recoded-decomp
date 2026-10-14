@@ -2,5 +2,5 @@
 #define IsEntryFlagSet_020c1320 IsEntryFlagSet_020c1340
 #define SetPanelMode_020c11f0 SetPanelMode_020c1210
 #define UpdateGridScrollDisplay_020c1234 UpdateGridScrollDisplay
-#define func_ov095_020bfa18 func_ov095_020bfa38
+#define func_ov095_020bfa18 RefreshItemReportText
 #include "src/ov095/panel_state/UpdateGridScrollDisplay_020c1234.c"

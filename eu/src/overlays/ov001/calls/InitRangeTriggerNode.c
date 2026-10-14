@@ -1,3 +1,4 @@
+#define func_ov001_020695b8 EvaluateManagedActorTrigger
 #define InitRangeTriggerNode_020697ac InitRangeTriggerNode
 #define IsPointInNodeRange_02069644 IsPointInNodeRange
 #define IsPointWithinEntityRadius_02069618 IsPointWithinEntityRadius

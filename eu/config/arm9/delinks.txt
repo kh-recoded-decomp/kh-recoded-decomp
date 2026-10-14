@@ -7405,6 +7405,10 @@ src/calls/FindEntryByNameNoCase.c:
     complete
     .text       start:0x02033878 end:0x020338d4
 
+src/calls/FindMeshNamedEntry.c:
+    complete
+    .text       start:0x020338d4 end:0x0203392c
+
 src/calls/ForEachFaceOnPoint.c:
     complete
     .text       start:0x0203392c end:0x02033aa4
@@ -11089,6 +11093,10 @@ src/data/tables/gBillboardMatrix.c:
     complete
     .data       start:0x02056020 end:0x02056050
 
+src/data/tables/gBillboardMatrixDataAlignment.c:
+    complete
+    .data       start:0x02056018 end:0x02056020
+
 src/data/tables/gBillboardRestoreModeParams.c:
     complete
     .data       start:0x020560a4 end:0x020560ac
@@ -11168,6 +11176,10 @@ src/data/tables/gMatrixCorrectionQuaternion.c:
 src/data/tables/gPageVariantTable.c:
     complete
     .rodata     start:0x02055b10 end:0x02055b94
+
+src/data/tables/gPathSeparatorDataAlignment.c:
+    complete
+    .data       start:0x02055c2a end:0x02055c2c
 
 src/data/tables/gProjectionTextureImageOpcode.c:
     complete

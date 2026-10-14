@@ -1,7 +1,7 @@
 #define ConfirmGridMoveA_020bee6c ConfirmGridMoveA
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define SetPanelMode_020c11f0 SetPanelMode_020c1210
-#define func_ov095_020bfa18 func_ov095_020bfa38
+#define func_ov095_020bfa18 RefreshItemReportText
 #define func_ov095_020c0478 LayoutTabEntries
 #define func_ov095_020c0a64 MoveGridCursorUp
 #include "src/ov095/unclassified_helpers/ConfirmGridMoveA_020bee6c.c"

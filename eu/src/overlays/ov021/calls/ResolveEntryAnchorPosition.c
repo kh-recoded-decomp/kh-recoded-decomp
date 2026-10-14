@@ -1,3 +1,4 @@
+#define func_ov001_0206dc4c GetManagedActorPosition
 #define GetBiasAdjustedField_0206dc80 GetBiasAdjustedField
 #define MTX_MultVec33_01ff9404 MTX_MultVec33
 #define MTX_RotY33_01ff923c MTX_RotY33_

@@ -84,6 +84,10 @@ src/overlays/ov024/calls/StartBoardScreen.c:
     complete
     .text       start:0x020b6b60 end:0x020b6bd0
 
+src/overlays/ov024/calls/UpdateBoardHelpText.c:
+    complete
+    .text       start:0x020b6bd0 end:0x020b6d98
+
 src/overlays/ov024/calls/DestroyBoardScreen.c:
     complete
     .text       start:0x020b6d98 end:0x020b6e14

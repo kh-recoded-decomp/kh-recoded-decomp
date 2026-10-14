@@ -62,7 +62,7 @@ extern BOOL TurnTowardOpenDirection(GroupObject *object, VecFx32 *position, fx32
 extern void func_ov032_020bbca0(void *world, int groupIndex, int slotIndex, VecFx32 *out);
 extern BOOL UpdateHopWithSpeedRamp(void *world, int groupIndex, GroupMemberWork *work, VecFx32 *position, VecFx32 *velocity, fx32 radius, VecFx32 *delta, BOOL *landed);
 extern BOOL HasPendingNibbleChange(ObjectGroup *group);
-extern void *func_ov001_0206dc4c(int index);
+extern void *GetManagedActorPosition(int index);
 extern BOOL ComputePushTowardTarget(void *target, VecFx32 *center, s32 *phase, VecFx32 *push);
 extern void RollGroupAndSteerMember(GroupObject *object, const VecFx32 *delta);
 extern void MoveGroupObjectAndSyncActor(GroupObject *object, VecFx32 *delta);
@@ -174,7 +174,7 @@ int UpdateGroupMember(GroupObject *object)
         if (object->work->leaderLink == -1) {
             if (group->settleTimer < 4) {
                 VecFx32 push;
-                if (ComputePushTowardTarget(func_ov001_0206dc4c(0), &group->center, &work->unk_30, &push)) {
+                if (ComputePushTowardTarget(GetManagedActorPosition(0), &group->center, &work->unk_30, &push)) {
                     group->settleTimer += 0x89;
                 }
                 group->velocity = gZeroVecFx32;

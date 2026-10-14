@@ -12,7 +12,7 @@ extern void SuspendTaskAndSetFlag(void);
 extern void SetMenuHighlight(s32 enable);
 extern s32 func_ov001_0206dc38(void);
 extern void ReleaseActorSlotByIndex(s32 index);
-extern VecFx32 *func_ov001_0206dc4c(s32 index);
+extern VecFx32 *GetManagedActorPosition(s32 index);
 extern u16 GetBiasAdjustedField(s32 index);
 extern void StoreSessionSpawnPoint(s32 index, VecFx32 *position, u16 angle);
 extern void func_ov001_020685d4(void);
@@ -38,7 +38,7 @@ s32 ShutdownFieldAndSaveActorPoses(void)
     SetMenuHighlight(1);
     for (index = 0; index < func_ov001_0206dc38(); index++) {
         ReleaseActorSlotByIndex(index);
-        position = func_ov001_0206dc4c(index);
+        position = GetManagedActorPosition(index);
         StoreSessionSpawnPoint(index, position, GetBiasAdjustedField(index));
     }
     func_ov001_020685d4();

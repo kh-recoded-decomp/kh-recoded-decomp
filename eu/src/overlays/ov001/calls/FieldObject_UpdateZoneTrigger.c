@@ -1,3 +1,4 @@
+#define func_ov001_0206dc4c GetManagedActorPosition
 #define FieldObject_UpdateZoneTrigger_02081728 FieldObject_UpdateZoneTrigger
 #define data_ov001_020a0460 data_ov001_020a0480
 #define func_ov001_020642a0 IsFieldTrackFlagSet

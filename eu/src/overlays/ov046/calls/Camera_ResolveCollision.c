@@ -1,3 +1,4 @@
+#define func_ov001_0206dc4c GetManagedActorPosition
 #define Camera_GetFocusPosition_020c1780 Camera_GetFocusPosition
 #define Camera_ResolveCollision_020c1e54 Camera_ResolveCollision
 #define CollisionQuery_Init_02034c74 CollisionQuery_Init

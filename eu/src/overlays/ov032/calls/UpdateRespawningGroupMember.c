@@ -50,7 +50,7 @@ extern const VecFx32 gZeroVecFx32;
 
 extern ObjectGroup *func_ov032_020bbc80(GroupObject *object);
 extern GroupMemberWork *func_ov032_020bbc98(GroupObject *object);
-extern VecFx32 *func_ov001_0206dc4c(int index);
+extern VecFx32 *GetManagedActorPosition(int index);
 extern void ComputeGroupOrbitPosition(GroupObject *object, VecFx32 *target);
 extern BOOL ComputePushTowardTarget(const VecFx32 *target, const VecFx32 *center, fx32 *speed, VecFx32 *push);
 extern BOOL ProbeFlatGroundSquare(const VecFx32 *center, fx32 length, VecFx32 *out);
@@ -90,7 +90,7 @@ void UpdateRespawningGroupMember(GroupObject *object)
             work->moveDelta.y = -0x11e;
             object->work->state = 0x1a;
         } else {
-            target = *func_ov001_0206dc4c(0);
+            target = *GetManagedActorPosition(0);
             ComputeGroupOrbitPosition(object, &target);
             ComputePushTowardTarget(&target, &object->position, &work->phase, &delta);
         }

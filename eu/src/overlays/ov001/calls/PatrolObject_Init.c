@@ -1,3 +1,4 @@
+#define func_ov001_0206dc4c GetManagedActorPosition
 #define ActorSlot_SetFlag8ByIndex_02036120 ActorSlot_SetFlag8ByIndex
 #define DetachFromLeaderQuadTree_020836d8 DetachFromLeaderQuadTree
 #define FieldObject_GetSavedValue_0207f9a8 FieldObject_GetSavedValue

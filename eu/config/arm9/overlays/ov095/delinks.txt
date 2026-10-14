@@ -76,6 +76,10 @@ src/overlays/ov095/calls/ReleaseScreenResources_020bf9c8.c:
     complete
     .text       start:0x020bf9c8 end:0x020bfa38
 
+src/overlays/ov095/calls/RefreshItemReportText.c:
+    complete
+    .text       start:0x020bfa38 end:0x020c0000
+
 src/overlays/ov095/calls/DrawShadowedAnchoredText_020c0000.c:
     complete
     .text       start:0x020c0000 end:0x020c0064
@@ -143,6 +147,10 @@ src/overlays/ov095/calls/InitGridTable.c:
 src/overlays/ov095/calls/FreeGridCells.c:
     complete
     .text       start:0x020c09ac end:0x020c0a18
+
+src/overlays/ov095/calls/CreateItemReportGridCell.c:
+    complete
+    .text       start:0x020c0a18 end:0x020c0a68
 
 src/overlays/ov095/calls/GetGridCell.c:
     complete

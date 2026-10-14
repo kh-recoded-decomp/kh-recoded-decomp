@@ -1,4 +1,4 @@
-#define GetActorPosition_0206dc4c func_ov001_0206dc4c
+#define GetActorPosition_0206dc4c GetManagedActorPosition
 #define IsLeadActorNearPoint_02083d98 IsLeadActorNearPoint
 #define VecFx32_Distance_01ffa0f4 VEC_Distance
 #include "src/ov001/unclassified_helpers/IsLeadActorNearPoint_02083d98.c"
