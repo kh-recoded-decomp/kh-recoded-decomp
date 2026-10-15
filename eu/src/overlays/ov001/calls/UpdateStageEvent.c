@@ -166,7 +166,7 @@ extern void PlayActorSound(StageActor *actor, u16 bank, u16 soundId, u32 flags, 
 extern void SetActorGridCell(StageActor *actor, u16 column, u16 row);
 extern void ClearWalkerStepState(StageActor *actor);
 extern void UpdateFieldActorMovement(StageActor *actor);
-extern void func_ov001_02090a0c(StageActor *actor, int mode);
+extern void UpdateSceneObjectAttachments(StageActor *actor, int mode);
 
 static inline u32 GetEntrySectionCount(StageEntry *entry, int type)
 {
@@ -476,7 +476,7 @@ void UpdateStageEvent(StageEvent *event)
     for (rec = FindRecordById_0209c304(event->actorId); rec != NULL; rec = GetLinkedStageActor(rec)) {
         UpdateFieldActorMovement(rec);
         if (event->ownerKind != 4 && !(rec->drawFlags & 0x1000)) {
-            func_ov001_02090a0c(rec, 1);
+            UpdateSceneObjectAttachments(rec, 1);
         }
     }
 }
