@@ -212,6 +212,10 @@ src/overlays/ov075/calls/TracePipePath.c:
     complete
     .text       start:0x020caab8 end:0x020cac54
 
+src/overlays/ov075/calls/SelectLinkedMatrixNode.c:
+    complete
+    .text       start:0x020cac54 end:0x020cad34
+
 src/overlays/ov075/calls/ShowEntryHeaderMessage.c:
     complete
     .text       start:0x020cad34 end:0x020cae78

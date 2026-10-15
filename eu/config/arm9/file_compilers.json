@@ -9197,5 +9197,6 @@
   "src/overlays/ov076/calls/SlotMenu_HasUnpairedSlotAndStock.c": "dsi/1.1",
   "src/overlays/ov076/calls/MenuPanel_DrawItemRows.c": "dsi/1.3p1",
   "src/overlays/ov075/calls/MenuPanel_DrawItemRows_020d076c.c": "dsi/1.3p1",
-  "src/overlays/ov077/calls/MenuPanel_DrawItemRows_020c9870.c": "dsi/1.3p1"
+  "src/overlays/ov077/calls/MenuPanel_DrawItemRows_020c9870.c": "dsi/1.3p1",
+  "src/overlays/ov075/calls/SelectLinkedMatrixNode.c": "dsi/1.1"
 }

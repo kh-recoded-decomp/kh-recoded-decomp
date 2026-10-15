@@ -6,5 +6,5 @@
 #define ShowNextUnlockNotice_020cc9fc ShowNextUnlockNotice
 #define TracePipePath_020caa98 TracePipePath
 #define data_ov075_020d1454 sMatrixCursorFrames
-#define func_ov075_020cac34 func_ov075_020cac54
+#define func_ov075_020cac34 SelectLinkedMatrixNode
 #include "src/ov075/matrix_menu/MoveMatrixCursorUp_020caf38.c"
