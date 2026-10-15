@@ -1,4 +1,4 @@
 #define GXS_LoadOBJPltt_0200736c GXS_LoadOBJPltt
 #define SelectMenuPalette_020b5db4 SelectMenuPalette
-#define data_ov023_020b6eec data_ov023_020b6f0c
+#define data_ov023_020b6eec gMapTargetBasePalettes
 #include "src/ov023/menu_graphics/SelectMenuPalette_020b5db4.c"

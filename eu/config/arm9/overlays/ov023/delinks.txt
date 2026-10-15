@@ -92,6 +92,10 @@ src/overlays/ov023/calls/SqrtResultRounded.c:
     complete
     .text       start:0x020b61a4 end:0x020b61c0
 
+src/overlays/ov023/calls/BlendMapTargetPalette.c:
+    complete
+    .text       start:0x020b61c0 end:0x020b6298
+
 src/overlays/ov023/calls/ShowMapTargetDistance.c:
     complete
     .text       start:0x020b6298 end:0x020b6384
@@ -160,10 +164,6 @@ src/ov023/data/Data_ov023_020b6ee0.c:
     complete
     .data       start:0x020b6ee0 end:0x020b6ef4
 
-src/ov023/data/Data_ov023_020b6ef4.c:
-    complete
-    .data       start:0x020b6ef4 end:0x020b6f2c
-
 src/ov023/data/Data_ov023_020b6f2c.c:
     complete
     .data       start:0x020b6f2c end:0x020b6f40
@@ -191,3 +191,7 @@ src/overlays/ov023/data/bss/Bss_ov023_020b6f84.c:
 src/overlays/ov023/data/strings/Strings_ov023_020b6f40.c:
     complete
     .data       start:0x020b6f40 end:0x020b6f80
+
+src/overlays/ov023/data/tables/MapTargetPalettes.c:
+    complete
+    .data       start:0x020b6ef4 end:0x020b6f2c

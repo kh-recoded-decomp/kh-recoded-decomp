@@ -1,28 +1,28 @@
-#include "nitro/types.h"
+#include "src/overlays/ov001/CounterHud.h"
 
-extern void UpdateTimerHud(void);
-extern void UpdateAnimatedCounterHud(void);
-extern void DrawCounterHudParts(void); /* DrawCounterHudParts */
-extern void RefreshCounterDigits(void); /* RefreshCounterDigits */
-extern void UpdateCounterHudPanel(void);
-extern void RunLogoFadeSequence(void); /* RunLogoFadeSequence */
-extern void RunScoreTallySequence(void);
-extern void UpdateShortFadeSequence(void); /* UpdateShortFadeSequence */
-extern void UpdateFadeSequence(void); /* UpdateFadeSequence */
+extern void UpdateTimerHud(CounterHud *hud);
+extern void UpdateAnimatedCounterHud(CounterHud *hud);
+extern void DrawCounterHudParts(CounterHud *hud);
+extern void RefreshCounterDigits(CounterHud *hud);
+extern void UpdateCounterHudPanel(CounterHud *hud);
+extern void RunLogoFadeSequence(CounterHud *hud);
+extern void RunScoreTallySequence(CounterHud *hud);
+extern void UpdateShortFadeSequence(CounterHud *hud);
+extern void UpdateFadeSequence(CounterHud *hud);
 
-void (*gCounterHudStateHandlers[6])(void) = {
+CounterHandlers gCounterHudStateHandlers = {{
     NULL,
     UpdateTimerHud,
     UpdateAnimatedCounterHud,
-    DrawCounterHudParts, /* DrawCounterHudParts */
-    RefreshCounterDigits, /* RefreshCounterDigits */
+    DrawCounterHudParts,
+    RefreshCounterDigits,
     UpdateCounterHudPanel,
-};
+}};
 
-void (*gFadeSequenceHandlers[5])(void) = {
+FadeHandlers gFadeSequenceHandlers = {{
     NULL,
-    RunLogoFadeSequence, /* RunLogoFadeSequence */
+    RunLogoFadeSequence,
     RunScoreTallySequence,
-    UpdateShortFadeSequence, /* UpdateShortFadeSequence */
-    UpdateFadeSequence, /* UpdateFadeSequence */
-};
+    UpdateShortFadeSequence,
+    UpdateFadeSequence,
+}};

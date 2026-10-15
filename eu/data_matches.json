@@ -3297,11 +3297,11 @@
       "section": ".data",
       "start": "0x020b6ef4",
       "end": "0x020b6f2c",
-      "source": "src/ov023/data/Data_ov023_020b6ef4.c",
+      "source": "src/overlays/ov023/data/tables/MapTargetPalettes.c",
       "compiler": "mwccarm-3.0-139",
-      "name": "ov023 data words",
-      "origin": "generated words",
-      "behavior": "Initialised data words, pointers named by their targets."
+      "name": "Map target palettes and palette index table",
+      "origin": "generated words, typed from palette consumers",
+      "behavior": "Four four-color RGB555 base palettes, highlight colors and the existing index table."
     },
     {
       "module": "ov023",
