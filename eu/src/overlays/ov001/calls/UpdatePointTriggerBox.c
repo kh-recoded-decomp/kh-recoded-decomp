@@ -5,4 +5,5 @@
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define data_ov001_020a046c data_ov001_020a048c
 #define func_02036230 GetActorRegistry
+#define func_ov001_02067f08 FindRecordGroupByEntryId
 #include "src/ov001/field_objects/UpdatePointTriggerBox_02066f20.c"

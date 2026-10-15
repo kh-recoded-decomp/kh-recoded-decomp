@@ -9178,5 +9178,6 @@
   "src/overlays/ov032/calls/BuildDirectionPitchMatrix.c": "dsi/1.1",
   "src/overlays/ov032/calls/OrientGroupActorCollisionFromDirection.c": "dsi/1.1",
   "src/overlays/ov024/calls/UpdateBoardHelpText.c": "dsi/1.1",
-  "src/overlays/ov001/calls/UpdateSceneObjectAttachments.c": "dsi/1.1"
+  "src/overlays/ov001/calls/UpdateSceneObjectAttachments.c": "dsi/1.1",
+  "src/overlays/ov001/calls/FindRecordGroupByEntryId.c": "dsi/1.1"
 }
