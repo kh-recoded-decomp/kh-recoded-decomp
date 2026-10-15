@@ -18,7 +18,7 @@
 #define IsGlobalPackedBitSet_02027304 IsGlobalPackedBitSet
 #define func_ov039_020bc1bc func_ov039_020bc1dc
 #define SetFlagGatedElementsVisible_020c9d7c SetFlagGatedElementsVisible
-#define func_ov077_020c5944 func_ov077_020c5964
+#define func_ov077_020c5944 ItemScreen_DrawHintText
 #define FindWidgetById_020b90a4 FindWidgetById
 #define func_ov027_020b965c func_ov027_020b967c
 #define ShowStatusRecordList_020c2b10 ShowStatusRecordList

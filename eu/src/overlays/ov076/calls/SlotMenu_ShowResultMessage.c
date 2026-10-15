@@ -5,7 +5,7 @@
 #define func_ov027_020ba2a8 func_ov027_020ba2c8
 #define func_ov027_020ba2e0 func_ov027_020ba300
 #define func_ov076_020c4ea8 func_ov076_020c4ec8
-#define func_ov076_020c8178 func_ov076_020c8198
+#define func_ov076_020c8178 SlotMenu_DrawHintText
 #define func_ov076_020c8934 SlotMenu_OpenSlotPanel
 #define func_ov076_020c8a70 SlotMenu_OnMessageConfirm
 #define func_ov076_020cb2b8 MenuPanel_MeasureMessage

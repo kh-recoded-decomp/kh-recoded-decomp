@@ -1,7 +1,7 @@
 #define MenuPanel_InitStandard_020cb380 MenuPanel_InitStandard
 #define SlotMenu_OpenMessagePanel_020c6308 SlotMenu_OpenMessagePanel
 #define func_ov027_020ba2a8 func_ov027_020ba2c8
-#define func_ov076_020c8178 func_ov076_020c8198
+#define func_ov076_020c8178 SlotMenu_DrawHintText
 #define func_ov076_020c8a70 SlotMenu_OnMessageConfirm
 #define func_ov076_020cb2b8 MenuPanel_MeasureMessage
 #define func_ov076_020cb9a0 MessageWindow_DrawLines

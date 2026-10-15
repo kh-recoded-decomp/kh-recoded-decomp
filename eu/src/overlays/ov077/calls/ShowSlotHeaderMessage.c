@@ -1,4 +1,4 @@
 #define ShowSlotHeaderMessage_020c58e0 ShowSlotHeaderMessage
 #define func_ov027_020ba2a8 func_ov027_020ba2c8
-#define func_ov077_020c5944 func_ov077_020c5964
+#define func_ov077_020c5944 ItemScreen_DrawHintText
 #include "src/ov077/unclassified_helpers/ShowSlotHeaderMessage_020c58e0.c"

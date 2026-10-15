@@ -10243,6 +10243,50 @@
       "name": "gUnlockedAreaSoundArchiveIds",
       "origin": "EU original DATA",
       "behavior": "Seventeen rows of three byte-sized sequence archive IDs, selected by each unlocked-area bit and the active variant mask. A final reserved zero row preserves the original three alignment bytes without introducing an extra area or a separately aligned linker gap."
+    },
+    {
+      "module": "ov076",
+      "section": ".bss",
+      "start": "0x020cd400",
+      "end": "0x020cd40c",
+      "source": "src/overlays/ov076/calls/SlotMenu_DrawHintText.c",
+      "compiler": "mwccarm-dsi-1.3p1",
+      "name": "data_ov076_020cd400",
+      "origin": "EU original BSS",
+      "behavior": "A retained first word of unconfirmed purpose followed by the two text-tag colors initialized by the slot hint renderer. The renderer owns this twelve-byte state and passes its color array to the tag callback."
+    },
+    {
+      "module": "ov076",
+      "section": ".bss",
+      "start": "0x020cd40c",
+      "end": "0x020cd420",
+      "source": "src/overlays/ov076/data/bss/Bss_ov076_020cd40c.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gSlotMenuPanelWork",
+      "origin": "EU original BSS",
+      "behavior": "The existing twenty-byte slot panel work area, retained after separating the preceding text-tag color state into its renderer's translation unit."
+    },
+    {
+      "module": "ov077",
+      "section": ".bss",
+      "start": "0x020ca3a0",
+      "end": "0x020ca3ac",
+      "source": "src/overlays/ov077/calls/ItemScreen_DrawHintText.c",
+      "compiler": "mwccarm-dsi-1.3p1",
+      "name": "data_ov077_020ca3a0",
+      "origin": "EU original BSS",
+      "behavior": "A retained first word of unconfirmed purpose followed by the two text-tag colors initialized by the item-screen hint renderer. The renderer owns this twelve-byte state and passes its color array to the tag callback."
+    },
+    {
+      "module": "ov077",
+      "section": ".bss",
+      "start": "0x020ca3ac",
+      "end": "0x020ca3c0",
+      "source": "src/overlays/ov077/data/bss/Bss_ov077_020ca3ac.c",
+      "compiler": "mwccarm-3.0-139",
+      "name": "gItemListPanelWork",
+      "origin": "EU original BSS",
+      "behavior": "The existing twenty-byte item-list panel work area, retained after separating the preceding text-tag color state into its renderer's translation unit."
     }
   ]
 }

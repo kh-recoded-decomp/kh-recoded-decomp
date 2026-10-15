@@ -100,6 +100,11 @@ src/overlays/ov077/calls/SelectChooserValueByIndex.c:
     complete
     .text       start:0x020c5950 end:0x020c5964
 
+src/overlays/ov077/calls/ItemScreen_DrawHintText.c:
+    complete
+    .text       start:0x020c5964 end:0x020c5a6c
+    .bss        start:0x020ca3a0 end:0x020ca3ac
+
 src/overlays/ov077/calls/DrawPartySlotLabel.c:
     complete
     .text       start:0x020c5a6c end:0x020c5c3c
@@ -465,9 +470,9 @@ src/ov077/data/Rodata_ov077_020ca25c.c:
     complete
     .rodata     start:0x020ca25c end:0x020ca290
 
-src/overlays/ov077/data/bss/Bss_ov077_020ca3a0.c:
+src/overlays/ov077/data/bss/Bss_ov077_020ca3ac.c:
     complete
-    .bss        start:0x020ca3a0 end:0x020ca3c0
+    .bss        start:0x020ca3ac end:0x020ca3c0
 
 src/overlays/ov077/data/strings/Strings_ov077_020ca2f0.c:
     complete

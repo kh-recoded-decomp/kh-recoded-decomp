@@ -1,5 +1,5 @@
 #define SlotMenu_ShowSlotHint_020c827c SlotMenu_ShowSlotHint
 #define func_ov027_020ba2a8 func_ov027_020ba2c8
 #define func_ov076_020c44c0 SlotMenu_CanCombineSlotPair
-#define func_ov076_020c8178 func_ov076_020c8198
+#define func_ov076_020c8178 SlotMenu_DrawHintText
 #include "src/ov076/unclassified_helpers/SlotMenu_ShowSlotHint_020c827c.c"

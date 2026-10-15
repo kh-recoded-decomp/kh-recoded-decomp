@@ -20,7 +20,7 @@
 #define func_ov076_020c5d10 func_ov076_020c5d30
 #define func_ov076_020c5d18 func_ov076_020c5d38
 #define func_ov076_020c5d20 SlotMenu_UpdateCameraTransition
-#define func_ov076_020c8178 func_ov076_020c8198
+#define func_ov076_020c8178 SlotMenu_DrawHintText
 #define func_ov076_020c8b28 func_ov076_020c8b48
 #define func_ov076_020cb4a8 MessageWindow_Update
 #define func_ov076_020ccbb0 SlotMenu_HandleTabTouch
