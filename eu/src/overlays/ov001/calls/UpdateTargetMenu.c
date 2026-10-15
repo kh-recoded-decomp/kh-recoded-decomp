@@ -5,4 +5,5 @@
 #define data_ov001_020a0484 data_ov001_020a04a4
 #define func_ov001_0206bb74 SetMenuOpenState
 #define func_ov001_0206bd30 HandleShoulderLockOn
+#define func_ov001_0206b06c HandleSideTargetButtons
 #include "src/ov001/shared_engine/UpdateTargetMenu_0206bcbc.c"

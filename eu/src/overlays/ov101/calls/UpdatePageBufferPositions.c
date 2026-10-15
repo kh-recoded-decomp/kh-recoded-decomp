@@ -16,7 +16,7 @@ typedef struct {
     s32 pages[40];
 } Ov101State;
 
-extern void func_ov001_0206aa7c(void);
+extern void SetScreenOrthoCamera(void);
 extern BOOL IsStateFlagSet(int setIndex, int bitIndex);
 extern void func_ov001_0206ad28(void *list);
 
@@ -28,7 +28,7 @@ void UpdatePageBufferPositions(Ov101State *state)
     ListPortraitEntry *position;
     StateBuffer *buffer;
 
-    func_ov001_0206aa7c();
+    SetScreenOrthoCamera();
     if (!IsStateFlagSet(0, item) || state->bufferCount <= 0) {
         return;
     }

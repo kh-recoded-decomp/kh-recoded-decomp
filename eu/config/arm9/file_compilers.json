@@ -9179,5 +9179,10 @@
   "src/overlays/ov032/calls/OrientGroupActorCollisionFromDirection.c": "dsi/1.1",
   "src/overlays/ov024/calls/UpdateBoardHelpText.c": "dsi/1.1",
   "src/overlays/ov001/calls/UpdateSceneObjectAttachments.c": "dsi/1.1",
-  "src/overlays/ov001/calls/FindRecordGroupByEntryId.c": "dsi/1.1"
+  "src/overlays/ov001/calls/FindRecordGroupByEntryId.c": "dsi/1.1",
+  "src/overlays/ov001/calls/HandleSideTargetButtons.c": "dsi/1.1",
+  "src/overlays/ov001/calls/SetScreenOrthoCamera.c": "dsi/1.1",
+  "src/overlays/ov001/calls/SetFadeOrthoCamera.c": "dsi/1.1",
+  "src/overlays/ov045/calls/SetMenuOrthoCamera.c": "dsi/1.1",
+  "src/overlays/ov001/calls/AdjustActorCollisionMotion.c": "dsi/1.1"
 }

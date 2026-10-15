@@ -4,4 +4,5 @@
 #define SceneNode_Draw_01ffb12c SceneNode_Draw
 #define camera_commit_explicit_projection_0202a8c4 camera_commit_explicit_projection
 #define data_ov036_020c3920 data_ov036_020c3940
+#define func_ov001_0206aa7c SetScreenOrthoCamera
 #include "src/ov036/panel_state/DrawPanelSceneFrame_020bb130.c"

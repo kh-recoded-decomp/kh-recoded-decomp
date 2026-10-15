@@ -13,6 +13,6 @@
 #define data_ov001_0209df94 gScoreTallyPosition
 #define func_02052514 func_02052528
 #define func_0205255c func_02052570
-#define func_ov001_0207c960 func_ov001_0207c988
+#define func_ov001_0207c960 SetFadeOrthoCamera
 #define func_ov001_0207ca04 DrawScaledTextureQuad
 #include "src/ov001/unclassified_helpers/RunScoreTallySequence_0207cc8c.c"

@@ -18,5 +18,5 @@
 #define func_ov027_020b7dd4 func_ov027_020b7df4
 #define func_ov045_020bf248 ArmTagById
 #define func_ov045_020bf26c DisarmTagById
-#define func_ov045_020c0334 func_ov045_020c0354
+#define func_ov045_020c0334 SetMenuOrthoCamera
 #include "src/ov045/scene/RunNameRevealStep_020bfc30.c"

@@ -115,7 +115,7 @@ extern void DrawShadowedText(void *layer, int x, int y, const u16 *text, u8 colo
 extern int GetRemainingScoreTens(ResultWork *work);
 extern void CollectRecordPickup(ResultWork *work, int id);
 extern BOOL UpdateTweenIsFinished(Tween *tween);
-extern void func_ov045_020c0354(int left, int right, int top, int bottom);
+extern void SetMenuOrthoCamera(int left, int right, int top, int bottom);
 extern void DrawLayeredPanel(PanelSprite *sprite, BOOL split);
 extern void SampleTweenValue(Tween *tween, s32 *value);
 extern u32 ReadPackedRecord(int row, int column);
@@ -459,7 +459,7 @@ int RunResultTallyStep(void)
     }
     }
     func_ov027_020b7df4(work->records);
-    func_ov045_020c0354(0, 0x100000, 0, 0xc0000);
+    SetMenuOrthoCamera(0, 0x100000, 0, 0xc0000);
     DrawLayeredPanel(&work->panel, work->step >= 1);
     if (work->screensDirty) {
         NNS_GfdRegisterNewVramTransferTask(0xb, 0, work->subScreen, 0x600);

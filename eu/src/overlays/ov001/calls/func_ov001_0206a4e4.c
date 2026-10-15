@@ -9,4 +9,5 @@
 #define data_ov001_020a0480 data_ov001_020a04a0
 #define func_020192ec NNS_G3dGlbSetBaseTrans
 #define func_0201931c NNS_G3dGlbSetBaseScale
+#define func_ov001_0206aa7c SetScreenOrthoCamera
 #include "src/ov001/shared_engine/UpdateIrisFrame_0206a4e4.c"

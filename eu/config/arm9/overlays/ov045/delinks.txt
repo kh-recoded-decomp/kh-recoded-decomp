@@ -112,6 +112,10 @@ src/overlays/ov045/calls/ReleaseHeapBlockIfAllocated.c:
     complete
     .text       start:0x020c0340 end:0x020c0354
 
+src/overlays/ov045/calls/SetMenuOrthoCamera.c:
+    complete
+    .text       start:0x020c0354 end:0x020c03f0
+
 src/overlays/ov045/calls/DrawTexturedQuad.c:
     complete
     .text       start:0x020c03f0 end:0x020c04e2

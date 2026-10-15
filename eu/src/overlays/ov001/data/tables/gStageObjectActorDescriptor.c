@@ -7,7 +7,7 @@ extern void UpdateActorStageEvent();
 extern void TryTriggerActorEvent();
 extern void SweepActorStep();
 extern void ProbeGroundAhead();
-extern void func_ov001_02092274();
+extern void AdjustActorCollisionMotion();
 extern void ProbeGroundBetweenPoints();
 extern void ProbeCeilingAboveActor();
 
@@ -19,7 +19,7 @@ StageActorDescriptor gStageObjectActorDescriptor = {
     (void *)TryTriggerActorEvent,
     (void *)SweepActorStep,
     (void *)ProbeGroundAhead,
-    (void *)func_ov001_02092274,
+    (void *)AdjustActorCollisionMotion,
     (void *)ProbeGroundBetweenPoints,
     (void *)ProbeCeilingAboveActor
 };

@@ -1,4 +1,5 @@
 #define DrawGridSprites_020c0730 DrawGridSprites
 #define IsEntryFlagSet_020c1320 IsEntryFlagSet_020c1340
 #define MI_CpuCopy8_01ff89a8 MI_CpuCopy8
+#define func_ov001_0206aa7c SetScreenOrthoCamera
 #include "src/ov095/unclassified_helpers/DrawGridSprites_020c0730.c"

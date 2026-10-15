@@ -2,5 +2,5 @@
 #define SceneNode_Draw_01ffb12c SceneNode_Draw
 #define StartTimerFromPackedPair_0207cb78 StartTimerFromPackedPair
 #define UpdateFadeSequence_0207d0b8 UpdateFadeSequence
-#define func_ov001_0207c960 func_ov001_0207c988
+#define func_ov001_0207c960 SetFadeOrthoCamera
 #include "src/ov001/shared_engine/UpdateFadeSequence_0207d0b8.c"
