@@ -116,6 +116,10 @@ src/overlays/ov023/calls/PlaceMapStoryIcons.c:
     complete
     .text       start:0x020b655c end:0x020b65cc
 
+src/overlays/ov023/calls/UpdateMapObjectIcons.c:
+    complete
+    .text       start:0x020b65cc end:0x020b69bc
+
 src/overlays/ov023/calls/RemapIntoDisplayRange.c:
     complete
     .text       start:0x020b69bc end:0x020b69da

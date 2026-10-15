@@ -17,5 +17,5 @@
 #define func_ov001_0207b6b4 SetPanelInputActive
 #define func_ov001_0207b6c4 ClearPanelInputActive
 #define func_ov023_020b5c64 ScrollMapToPosition
-#define func_ov023_020b65ac func_ov023_020b65cc
+#define func_ov023_020b65ac UpdateMapObjectIcons
 #include "src/ov023/menu_graphics/UpdateMapMenuState_020b6afc.c"
