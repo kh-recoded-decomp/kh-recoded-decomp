@@ -2,5 +2,5 @@
 #define SlotMenu_SelectGuideStep_020c439c SlotMenu_SelectGuideStep
 #define func_ov076_020c4260 SlotMenu_BuildSlotMasks
 #define func_ov076_020c503c SlotMenu_HasFullyRankedSlot
-#define func_ov076_020c50e8 func_ov076_020c5108
+#define func_ov076_020c50e8 SlotMenu_HasUnpairedSlotAndStock
 #include "src/ov076/unclassified_helpers/SlotMenu_SelectGuideStep_020c439c.c"

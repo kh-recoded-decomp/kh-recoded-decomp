@@ -92,6 +92,10 @@ src/overlays/ov076/calls/SlotMenu_HasFullyRankedSlot.c:
     complete
     .text       start:0x020c505c end:0x020c5108
 
+src/overlays/ov076/calls/SlotMenu_HasUnpairedSlotAndStock.c:
+    complete
+    .text       start:0x020c5108 end:0x020c51b0
+
 src/overlays/ov076/calls/SlotMenu_IsThirdColumnMarked.c:
     complete
     .text       start:0x020c51b0 end:0x020c51ce
