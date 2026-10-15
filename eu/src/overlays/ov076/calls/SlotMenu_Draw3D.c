@@ -7,5 +7,5 @@
 #define data_0205a970 NNS_G3dGlb_cameraMtx
 #define func_ov076_020c44c0 SlotMenu_CanCombineSlotPair
 #define func_ov076_020c7708 SlotMenu_DrawSlotModels_020c7708
-#define func_ov076_020cc81c func_ov076_020cc83c
+#define func_ov076_020cc81c MenuPanel_DrawItemRows
 #include "src/ov076/matrix_menu/SlotMenu_Draw3D_020c7534.c"

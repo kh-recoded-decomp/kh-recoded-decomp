@@ -1,2 +1,7 @@
-#define _fp_init_02029570 MSL_FpInitC
-#include "src/arm9/library_msl_c/_fp_init_02029570.c"
+#include "nitro/types.h"
+
+/* Legacy symbol name for the record-progress identity helper. */
+u32 MSL_FpInitC(u32 progress)
+{
+    return progress;
+}

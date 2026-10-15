@@ -10,6 +10,15 @@ typedef struct MenuImage {
     u32 texParams[2];
 } MenuImage;
 
+typedef struct {
+    u8 columns;
+    u8 rows;
+    u8 column;
+    u8 row;
+} CellGrid;
+
+typedef char CellGridIsFourBytes[sizeof(CellGrid) == 4 ? 1 : -1];
+
 typedef struct ImageQuad {
     const MenuImage *image;
     s16 x;

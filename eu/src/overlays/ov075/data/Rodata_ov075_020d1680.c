@@ -1,5 +1,5 @@
-#include "nitro/types.h"
+#include "src/overlays/MenuImageQuad.h"
 
-const u32 data_ov075_020d1680[1] = {
-    0x00000201,
+const CellGrid data_ov075_020d1680 __attribute__((aligned(4))) = {
+    1, 2, 0, 0,
 };

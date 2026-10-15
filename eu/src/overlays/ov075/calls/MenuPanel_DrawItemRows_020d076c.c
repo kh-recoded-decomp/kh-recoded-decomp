@@ -1,0 +1,11 @@
+#define MenuPanel_DrawItemRows MenuPanel_DrawItemRows_020d076c
+#define CommandMatrix_GetStockForRecord MatrixMenu_GetStockForRecord
+#define InitGridImageQuad_020c97b4 InitGridImageQuad
+#define InitImageQuad_020c9790 InitImageQuad
+#define DrawImageQuad_020c9a78 func_ov075_020cd874
+#define DrawMenuImageModulated_020ccf34 DrawMenuImageModulated
+#define DrawSlotMenuGaugeAndDigits func_ov075_020cd75c
+#define data_ov076_020cd12c data_ov075_020d1680
+#define MessageWindow_IsFinished IsDialogTransitionDone
+#define MessageWindow_Update UpdateMessageDialog
+#include "src/overlays/ov076/calls/MenuPanel_DrawItemRows.c"

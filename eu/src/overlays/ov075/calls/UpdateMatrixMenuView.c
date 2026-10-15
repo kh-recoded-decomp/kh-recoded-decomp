@@ -109,7 +109,7 @@ extern u32 func_ov075_020c7d1c(void *tabs);
 extern void ResetMatrixCamera(void);
 extern void DrawMatrixMenu(MatrixMenu *menu);
 extern void UpdateMatrixEventAnimation(MatrixMenu *menu);
-extern void func_ov075_020d076c(void *tabs);
+extern void MenuPanel_DrawItemRows_020d076c(void *tabs);
 extern void ToggleSharedStateFlag(int flag);
 extern void SetMenuStateNoParam(int state);
 extern void RuntimeState_SetCondition(int value);
@@ -363,7 +363,7 @@ void UpdateMatrixMenuView(MatrixMenu *menu)
         DrawMatrixMenu(menu);
         UpdateMatrixEventAnimation(menu);
     }
-    func_ov075_020d076c(menu->tabs);
+    MenuPanel_DrawItemRows_020d076c(menu->tabs);
     if (menu->needsRedraw != 0) {
         menu->needsRedraw--;
         if (menu->needsRedraw != 0) {
