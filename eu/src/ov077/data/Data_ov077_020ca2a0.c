@@ -32,7 +32,3 @@ void *gEquipmentMatrixMenuDescriptor[17] = {
     NULL,
     (void *)func_ov077_020c5db8,
 };
-
-u32 data_ov077_020ca2a0[3] = {
-    0x0102514A, 0x00580040, 0x00000000,
-};

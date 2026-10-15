@@ -25,7 +25,7 @@ ShowSlotHeaderMessage kind:function(thumb,size=0x50) addr:0x020c5900
 SelectChooserValueByIndex kind:function(thumb,size=0x14) addr:0x020c5950
 func_ov077_020c5964 kind:function(thumb,size=0x108) addr:0x020c5964
 DrawPartySlotLabel kind:function(thumb,size=0x1d0) addr:0x020c5a6c
-func_ov077_020c5c3c kind:function(thumb,size=0x84) addr:0x020c5c3c
+OpenSlotHelpPrompt kind:function(thumb,size=0x84) addr:0x020c5c3c
 HandleEquipmentCursorUp kind:function(thumb,size=0x14) addr:0x020c5cc0
 HandleEquipmentCursorDown kind:function(thumb,size=0x14) addr:0x020c5cd4
 BeginSlotItemSelection kind:function(thumb,size=0xd0) addr:0x020c5ce8
@@ -107,8 +107,8 @@ EquipmentMatrix_GetStockForRecord kind:function(thumb,size=0x1c) addr:0x020c9dd4
 func_ov077_020c9df0 kind:function(thumb,size=0x18c) addr:0x020c9df0
 func_ov077_020c9f7c kind:function(thumb,size=0x2) addr:0x020c9f7c
 func_ov077_020c9f80 kind:function(thumb,size=0x184) addr:0x020c9f80
-data_ov077_020ca104 kind:data(any) addr:0x020ca104
-data_ov077_020ca110 kind:data(any) addr:0x020ca110
+gEquipmentSlot0HelpPrompt kind:data(any) addr:0x020ca104
+gEquipmentSlot1HelpPrompt kind:data(any) addr:0x020ca110
 data_ov077_020ca11c kind:data(any) addr:0x020ca11c
 data_ov077_020ca128 kind:data(any) addr:0x020ca128
 data_ov077_020ca154 kind:data(any) addr:0x020ca154
@@ -121,7 +121,7 @@ data_ov077_020ca1b8 kind:data(any) addr:0x020ca1b8
 data_ov077_020ca1e0 kind:data(any) addr:0x020ca1e0
 data_ov077_020ca25c kind:data(any) addr:0x020ca25c
 data_ov077_020ca26c kind:data(any) addr:0x020ca26c
-data_ov077_020ca2a0 kind:data(any) addr:0x020ca2a0
+gEquipmentOtherSlotHelpPrompt kind:data(any) addr:0x020ca2a0
 gEquipmentMatrixMenuDescriptor kind:data(any) addr:0x020ca2ac
 sOv077_UiMenuEqumtxP2_020ca2f0 kind:data(any) addr:0x020ca2f0
 sOv077_UiMenuLanguageEqumtxP2_020ca304 kind:data(any) addr:0x020ca304

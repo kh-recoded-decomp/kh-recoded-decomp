@@ -2,7 +2,7 @@ func_ov065_020d8120 kind:function(thumb,size=0x34) addr:0x020d8120
 ReleaseAuraBattleResources kind:function(thumb,size=0x2a) addr:0x020d8154
 FireMarkedGroupShot kind:function(thumb,size=0x134) addr:0x020d8180
 UpdateStoppingEffect kind:function(thumb,size=0x1a) addr:0x020d82b4
-func_ov065_020d82d0 kind:function(thumb,size=0x98) addr:0x020d82d0
+SetupAuraBattleGroup kind:function(thumb,size=0x98) addr:0x020d82d0
 UpdateAuraAttackAction kind:function(thumb,size=0xb8) addr:0x020d8368
 CreateAuraBattleObject kind:function(thumb,size=0x1d0) addr:0x020d8420
 sOv065_CmMR_020d8600 kind:data(any) addr:0x020d8600

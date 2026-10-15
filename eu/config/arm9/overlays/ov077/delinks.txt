@@ -104,6 +104,11 @@ src/overlays/ov077/calls/DrawPartySlotLabel.c:
     complete
     .text       start:0x020c5a6c end:0x020c5c3c
 
+src/overlays/ov077/calls/OpenSlotHelpPrompt.c:
+    complete
+    .text       start:0x020c5c3c end:0x020c5cc0
+    .data       start:0x020ca2a0 end:0x020ca2ac
+
 src/overlays/ov077/calls/HandleEquipmentCursorUp.c:
     complete
     .text       start:0x020c5cc0 end:0x020c5cd4
@@ -422,7 +427,7 @@ src/overlays/ov077/calls/func_ov077_020c9f80.c:
 
 src/ov077/data/Data_ov077_020ca2a0.c:
     complete
-    .data       start:0x020ca2a0 end:0x020ca2f0
+    .data       start:0x020ca2ac end:0x020ca2f0
 
 src/ov077/data/Data_ov077_020ca324.c:
     complete

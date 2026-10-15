@@ -6496,9 +6496,9 @@
       "end": "0x020ca110",
       "source": "src/ov077/data/Rodata_ov077_020ca104.c",
       "compiler": "mwccarm-3.0-139",
-      "name": "ov077 data words",
-      "origin": "generated words",
-      "behavior": "Initialised data words, pointers named by their targets."
+      "name": "gEquipmentSlot0HelpPrompt",
+      "origin": "EU original DATA",
+      "behavior": "Typed 12-byte help-prompt descriptor selected for equipment slot zero; includes the seen-flag index, message index, alignment and optional open callback."
     },
     {
       "module": "ov077",
@@ -6507,9 +6507,9 @@
       "end": "0x020ca11c",
       "source": "src/ov077/data/Rodata_ov077_020ca110.c",
       "compiler": "mwccarm-3.0-139",
-      "name": "ov077 data words",
-      "origin": "generated words",
-      "behavior": "Initialised data words, pointers named by their targets."
+      "name": "gEquipmentSlot1HelpPrompt",
+      "origin": "EU original DATA",
+      "behavior": "Typed 12-byte help-prompt descriptor selected for equipment slot one; two layout fields remain unidentified."
     },
     {
       "module": "ov077",
@@ -6570,12 +6570,23 @@
       "module": "ov077",
       "section": ".data",
       "start": "0x020ca2a0",
+      "end": "0x020ca2ac",
+      "source": "src/overlays/ov077/calls/OpenSlotHelpPrompt.c",
+      "compiler": "mwccarm-4.0-1036",
+      "name": "gEquipmentOtherSlotHelpPrompt",
+      "origin": "EU original DATA",
+      "behavior": "Mutable 12-byte help-prompt descriptor for the other equipment slots. OpenSlotHelpPrompt changes its alignment and 16-bit field at offset six for slots above two."
+    },
+    {
+      "module": "ov077",
+      "section": ".data",
+      "start": "0x020ca2ac",
       "end": "0x020ca2f0",
       "source": "src/ov077/data/Data_ov077_020ca2a0.c",
       "compiler": "mwccarm-3.0-139",
-      "name": "ov077 data words",
-      "origin": "generated words",
-      "behavior": "Initialised data words, pointers named by their targets."
+      "name": "gEquipmentMatrixMenuDescriptor",
+      "origin": "EU original DATA",
+      "behavior": "Existing 17-word equipment-menu descriptor and callback table, retained separately from the mutable help-prompt descriptor."
     },
     {
       "module": "ov077",

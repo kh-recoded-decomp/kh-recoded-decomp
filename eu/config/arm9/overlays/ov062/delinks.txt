@@ -11,6 +11,10 @@ src/overlays/ov062/calls/ReleaseBossBattleResources.c:
     complete
     .text       start:0x020d8154 end:0x020d817e
 
+src/overlays/ov062/calls/SetupBossBattleGroup.c:
+    complete
+    .text       start:0x020d8180 end:0x020d8204
+
 src/overlays/ov062/calls/AdvanceGroupUnitPhase.c:
     complete
     .text       start:0x020d8204 end:0x020d8272

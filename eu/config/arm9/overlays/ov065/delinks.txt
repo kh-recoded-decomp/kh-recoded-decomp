@@ -19,6 +19,10 @@ src/overlays/ov065/calls/UpdateStoppingEffect.c:
     complete
     .text       start:0x020d82b4 end:0x020d82ce
 
+src/overlays/ov065/calls/SetupAuraBattleGroup.c:
+    complete
+    .text       start:0x020d82d0 end:0x020d8368
+
 src/overlays/ov065/calls/UpdateAuraAttackAction.c:
     complete
     .text       start:0x020d8368 end:0x020d8420

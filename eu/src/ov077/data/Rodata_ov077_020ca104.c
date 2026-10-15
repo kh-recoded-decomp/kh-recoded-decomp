@@ -1,5 +1,5 @@
-#include "nitro/types.h"
+#include "src/overlays/ov077/SlotHelpPrompt.h"
 
-const u32 data_ov077_020ca104[3] = {
-    0x01014F43, 0x00200040, 0x00000000,
+const SlotHelpPromptDefinition gEquipmentSlot0HelpPrompt = {
+    0x43, 0x4f, 1, 1, 0x40, 0x20, 0
 };

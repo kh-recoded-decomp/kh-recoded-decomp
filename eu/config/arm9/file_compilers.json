@@ -9190,5 +9190,8 @@
   "src/overlays/ov001/calls/SetPanelHeaderText.c": "dsi/1.1",
   "src/overlays/ov001/calls/UpdateAndDrawCounterHud.c": "dsi/1.1",
   "src/overlays/ov023/calls/BlendMapTargetPalette.c": "dsi/1.1",
-  "src/overlays/ov023/calls/UpdateMapObjectIcons.c": "dsi/1.1"
+  "src/overlays/ov023/calls/UpdateMapObjectIcons.c": "dsi/1.1",
+  "src/overlays/ov062/calls/SetupBossBattleGroup.c": "dsi/1.1",
+  "src/overlays/ov077/calls/OpenSlotHelpPrompt.c": "dsi/1.1",
+  "src/overlays/ov065/calls/SetupAuraBattleGroup.c": "dsi/1.1"
 }
