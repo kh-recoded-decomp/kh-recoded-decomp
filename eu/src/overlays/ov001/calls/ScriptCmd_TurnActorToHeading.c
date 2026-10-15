@@ -4,5 +4,5 @@
 #define data_ov001_020a0230 gDefaultActorAnimation
 #define func_02023dbc _s32_div_f
 #define func_02025dac ByteCode_ResolveOperand
-#define func_ov001_0208a73c func_ov001_0208a764
+#define func_ov001_0208a73c PlayActorTurnAnimation
 #include "src/ov001/scripted_actor_behavior/ScriptCmd_TurnActorToHeading_0208ea94.c"

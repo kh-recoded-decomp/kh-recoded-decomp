@@ -7,6 +7,6 @@
 #define data_ov001_020a0230 gDefaultActorAnimation
 #define func_02036240 ActorRegistry_GetEntityByIndex
 #define func_02036810 ActorSlot_GetByIndex
-#define func_ov001_0208a73c func_ov001_0208a764
+#define func_ov001_0208a73c PlayActorTurnAnimation
 #define func_ov001_0208cf44 ComputeHeadingToScriptTarget
 #include "src/ov001/scripted_actor_behavior/ScriptCmd_FaceTargetWithAnims_0208ed2c.c"

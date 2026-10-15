@@ -12,4 +12,5 @@
 #define contextData_020c0060 data_ov032_020c0080
 #define func_ov001_02067870 QueueAreaSoundArchives
 #define func_ov032_020ba604 func_ov032_020ba624
+#define func_ov001_0207b0c0 SetPanelHeaderText
 #include "src/ov032/shared_engine/FinishMovieMenuLoad_020ba984.c"

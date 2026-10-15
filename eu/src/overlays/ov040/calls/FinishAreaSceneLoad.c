@@ -31,7 +31,7 @@ extern void *func_0202a45c(void *desc, void *arg);
 extern int func_ov001_02067ed4(void);
 extern u32 GetSceneEntryResourceId(int index);
 extern u32 GetSceneResourceHandle(void);
-extern void func_ov001_0207b0c0(u32 first, u32 second);
+extern void SetPanelHeaderText(const u16 *prefix, const u16 *name);
 extern void InitSharedRecordAndDispatch(void *state, void *desc, int a, int b);
 extern void LoadDefaultProjectionValues(void *projection);
 extern void selectJointAnimationBlend(void *state, int joint, void *target, int flags);
@@ -56,7 +56,7 @@ int FinishAreaSceneLoad(void)
             gMovieContextState->handle = func_0202a45c(AREA_SCENE_DESCRIPTOR, NULL);
         }
         entryValue = GetSceneEntryResourceId(func_ov001_02067ed4());
-        func_ov001_0207b0c0(GetSceneResourceHandle(), entryValue);
+        SetPanelHeaderText((const u16 *)GetSceneResourceHandle(), (const u16 *)entryValue);
     }
     InitSharedRecordAndDispatch(data_ov040_020be280, sOv040_RpgEfEcZ_020be248, 1, 2);
     LoadDefaultProjectionValues(data_ov040_020be280->projection);

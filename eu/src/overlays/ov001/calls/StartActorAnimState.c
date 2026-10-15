@@ -6,10 +6,10 @@ typedef struct ActorAnimationState {
     u32 flags;
 } ActorAnimationState;
 
-extern void BindActorAnimation(void *animState, int animationId, int blendIndex);
+extern void BindActorAnimation(void *animState, const char *name, int blendIndex);
 
-void StartActorAnimState(ActorAnimationState *actor, int animationId, int blendIndex)
+void StartActorAnimState(ActorAnimationState *actor, const char *name, int blendIndex)
 {
-    BindActorAnimation(actor->animState, animationId, blendIndex);
+    BindActorAnimation(actor->animState, name, blendIndex);
     actor->flags |= 0x180;
 }

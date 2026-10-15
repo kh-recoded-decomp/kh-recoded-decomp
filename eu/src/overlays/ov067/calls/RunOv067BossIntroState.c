@@ -7,5 +7,5 @@
 #define RunOv067BossIntroState_020d818c RunOv067BossIntroState
 #define UpdateIdleTimeout_0206e1c8 UpdateIdleTimeout
 #define func_ov052_020d1170 ActivateSlotModelGroup
-#define func_ov056_020d33f8 func_ov056_020d3418
+#define func_ov056_020d33f8 UpdateActionHitMarkers
 #include "src/ov067/object_state/RunOv067BossIntroState_020d818c.c"

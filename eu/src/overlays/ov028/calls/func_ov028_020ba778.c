@@ -15,7 +15,7 @@ extern u32 GetMenuItemValue(void);
 extern u32 func_ov001_020681c4(void);
 extern u32 func_ov001_020681d4(void);
 extern void func_ov001_020687b8(s32 value);
-extern void func_ov001_0207b0c0(u32 param1, u32 param2);
+extern void SetPanelHeaderText(const u16 *prefix, const u16 *name);
 extern void InvokeListNodeCallbacks(void);
 
 u32 func_ov028_020ba778(void)
@@ -38,7 +38,7 @@ u32 func_ov028_020ba778(void)
         func_ov001_02067ed4();
         arg1 = func_ov001_020681d4();
         arg2 = func_ov001_020681c4();
-        func_ov001_0207b0c0(arg2, arg1);
+        SetPanelHeaderText((const u16 *)arg2, (const u16 *)arg1);
         *(u16 *)(data_ov028_020bb3a0 + 6) = *(u16 *)(data_ov028_020bb3a0 + 6) | 0x8000;
         return 5;
     }

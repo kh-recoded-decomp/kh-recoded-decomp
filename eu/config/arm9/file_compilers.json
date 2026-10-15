@@ -9184,5 +9184,8 @@
   "src/overlays/ov001/calls/SetScreenOrthoCamera.c": "dsi/1.1",
   "src/overlays/ov001/calls/SetFadeOrthoCamera.c": "dsi/1.1",
   "src/overlays/ov045/calls/SetMenuOrthoCamera.c": "dsi/1.1",
-  "src/overlays/ov001/calls/AdjustActorCollisionMotion.c": "dsi/1.1"
+  "src/overlays/ov001/calls/AdjustActorCollisionMotion.c": "dsi/1.1",
+  "src/overlays/ov001/calls/PlayActorTurnAnimation.c": "dsi/1.1",
+  "src/overlays/ov056/calls/UpdateActionHitMarkers.c": "dsi/1.1",
+  "src/overlays/ov001/calls/SetPanelHeaderText.c": "dsi/1.1"
 }

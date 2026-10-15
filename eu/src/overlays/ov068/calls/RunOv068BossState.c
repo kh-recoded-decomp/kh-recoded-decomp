@@ -10,5 +10,5 @@
 #define func_ov021_020a8ab4 ResetAnimationTrackState
 #define func_ov021_020a8ca0 func_ov021_020a8cc0
 #define func_ov052_020d1170 ActivateSlotModelGroup
-#define func_ov056_020d33f8 func_ov056_020d3418
+#define func_ov056_020d33f8 UpdateActionHitMarkers
 #include "src/ov068/object_state/RunOv068BossState_020d81a0.c"

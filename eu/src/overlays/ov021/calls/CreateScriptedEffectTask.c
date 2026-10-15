@@ -22,7 +22,7 @@
 #define func_ov021_020adfb8 func_ov021_020adfd8
 #define func_ov021_020ad4a4 RollEntryReaction
 #define func_ov030_020bc4a8 EnterCarryState
-#define func_ov056_020d33f8 func_ov056_020d3418
+#define func_ov056_020d33f8 UpdateActionHitMarkers
 #define func_ov056_020d3530 UpdateRisingShockwaveSlot
 #define func_ov056_020d36dc UpdateRisingEffectSlots
 #define func_ov056_020d3904 UpdateGrabSweepHits

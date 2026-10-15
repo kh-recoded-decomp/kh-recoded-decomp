@@ -28,6 +28,10 @@ src/overlays/ov056/calls/UpdateGrabHoldState.c:
     complete
     .text       start:0x020d318c end:0x020d3418
 
+src/overlays/ov056/calls/UpdateActionHitMarkers.c:
+    complete
+    .text       start:0x020d3418 end:0x020d3550
+
 src/overlays/ov056/calls/UpdateRisingShockwaveSlot.c:
     complete
     .text       start:0x020d3550 end:0x020d36fc

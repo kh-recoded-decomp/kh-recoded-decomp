@@ -16,7 +16,7 @@ extern void InvokeListNodeCallbacks(void);
 extern void QueueAreaSoundArchives(void);
 extern u32 func_ov001_020681d4(void);
 extern u32 func_ov001_020681c4(void);
-extern void func_ov001_0207b0c0(u32 a, u32 b);
+extern void SetPanelHeaderText(const u16 *prefix, const u16 *name);
 
 u32 func_ov030_020ba62c(void)
 {
@@ -41,7 +41,7 @@ u32 func_ov030_020ba62c(void)
     func_ov001_02067ed4();
     valueA = func_ov001_020681d4();
     valueB = func_ov001_020681c4();
-    func_ov001_0207b0c0(valueB, valueA);
+    SetPanelHeaderText((const u16 *)valueB, (const u16 *)valueA);
     *(u16 *)(data_ov030_020bd020 + 6) = *(u16 *)(data_ov030_020bd020 + 6) | 0x8000;
     return 5;
 }

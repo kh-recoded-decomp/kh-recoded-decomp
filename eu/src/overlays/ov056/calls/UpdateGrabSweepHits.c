@@ -12,6 +12,6 @@
 #define data_02053438 gZeroVecFx32
 #define data_0205356c gSinFx12Table
 #define func_0203ad14 MakeSphereShape
-#define func_ov056_020d33f8 func_ov056_020d3418
+#define func_ov056_020d33f8 UpdateActionHitMarkers
 #define func_ov056_020d383c PullActorTowardSource
 #include "src/ov056/shared_engine/UpdateGrabSweepHits_020d3904.c"

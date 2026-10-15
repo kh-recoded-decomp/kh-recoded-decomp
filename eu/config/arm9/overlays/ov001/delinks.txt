@@ -3988,6 +3988,10 @@ src/overlays/ov001/calls/UpdatePanelScene.c:
     complete
     .text       start:0x0207aff0 end:0x0207b0c0
 
+src/overlays/ov001/calls/SetPanelHeaderText.c:
+    complete
+    .text       start:0x0207b0c0 end:0x0207b1a8
+
 src/overlays/ov001/calls/func_ov001_0207b1a8.c:
     complete
     .text       start:0x0207b1a8 end:0x0207b1c4
@@ -6439,6 +6443,10 @@ src/overlays/ov001/calls/ActorObject_ResetSecondarySlots.c:
 src/overlays/ov001/calls/ActorObject_SetSecondarySlot.c:
     complete
     .text       start:0x0208a74c end:0x0208a764
+
+src/overlays/ov001/calls/PlayActorTurnAnimation.c:
+    complete
+    .text       start:0x0208a764 end:0x0208a870
 
 src/overlays/ov001/calls/PlayActorAnimationByName.c:
     complete

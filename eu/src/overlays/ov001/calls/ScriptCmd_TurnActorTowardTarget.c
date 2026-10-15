@@ -3,6 +3,6 @@
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
 #define ScriptVm_ResolveOperand_02025d08 ScriptVm_ResolveOperand
 #define func_02025dac ByteCode_ResolveOperand
-#define func_ov001_0208a73c func_ov001_0208a764
+#define func_ov001_0208a73c PlayActorTurnAnimation
 #define func_ov001_0208cf44 ComputeHeadingToScriptTarget
 #include "src/ov001/scripted_actor_behavior/ScriptCmd_TurnActorTowardTarget_0208eb1c.c"
