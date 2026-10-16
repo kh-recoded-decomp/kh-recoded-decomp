@@ -16,7 +16,7 @@
 #define func_ov030_020bb368 func_ov030_020bb388
 #define func_ov042_020bd290 Camera_GetGoalPosition
 #define func_ov042_020bd324 Camera_GetColliderOffset
-#define func_ov042_020bd394 func_ov042_020bd3b4
+#define func_ov042_020bd394 SetCameraColliderOffsetAngle
 #define func_ov042_020bd584 func_ov042_020bd5a4
 #define func_ov042_020bd59c func_ov042_020bd5bc
 #define func_ov042_020bd5e0 SetCameraParameterBc

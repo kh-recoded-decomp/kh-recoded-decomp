@@ -11,7 +11,10 @@ typedef struct Ov042CameraState {
     VecFx32 colliderOffset;
 } Ov042CameraState;
 
+typedef char Ov042ColliderOffsetPosition[(u32)&((Ov042CameraState *)0)->colliderOffset == 0x11c ? 1 : -1];
+
 extern Ov042CameraState *data_ov042_020be5e0;
 #define gOv042CameraState data_ov042_020be5e0
+void SetCameraColliderOffsetAngle(fx32 degrees);
 
 #endif

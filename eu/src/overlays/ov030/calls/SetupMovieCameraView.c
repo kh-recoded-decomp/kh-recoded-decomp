@@ -1,7 +1,7 @@
 #define SetupMovieCamera_020bb2cc SetupMovieCameraView
 #define func_ov042_020bd4bc InitCameraState
 #define func_ov042_020be548 AimCameraAlongDirection
-#define func_ov042_020bd394 func_ov042_020bd3b4
+#define func_ov042_020bd394 SetCameraColliderOffsetAngle
 #define func_ov042_020bd334 MoveCameraAlongAxis
 #define VEC_Add_01ff9e0c VEC_Add
 #define func_ov042_020bd234 SetCameraGoalTarget
