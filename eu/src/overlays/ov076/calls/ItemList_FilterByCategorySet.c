@@ -1,3 +1,3 @@
 #define ItemList_FilterByCategorySet_020c95b8 ItemList_FilterByCategorySet
-#define func_ov076_020c93f8 func_ov076_020c9418
+#define func_ov076_020c93f8 ItemList_ApplyCategoryFilter
 #include "src/ov076/unclassified_helpers/ItemList_FilterByCategorySet_020c95b8.c"

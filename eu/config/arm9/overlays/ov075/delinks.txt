@@ -332,6 +332,10 @@ src/overlays/ov075/calls/func_ov075_020cd0c0.c:
     complete
     .text       start:0x020cd0c0 end:0x020cd1d0
 
+src/overlays/ov075/calls/ItemList_ApplyCategoryFilter_020cd1d0.c:
+    complete
+    .text       start:0x020cd1d0 end:0x020cd37c
+
 src/overlays/ov075/calls/BuildCategoryList.c:
     complete
     .text       start:0x020cd37c end:0x020cd390

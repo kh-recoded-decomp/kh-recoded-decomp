@@ -401,6 +401,10 @@ src/overlays/ov076/calls/ItemList_BuildForType.c:
     complete
     .text       start:0x020c9308 end:0x020c9418
 
+src/overlays/ov076/calls/ItemList_ApplyCategoryFilter.c:
+    complete
+    .text       start:0x020c9418 end:0x020c95c4
+
 src/overlays/ov076/calls/ItemList_FilterByCategory.c:
     complete
     .text       start:0x020c95c4 end:0x020c95d8

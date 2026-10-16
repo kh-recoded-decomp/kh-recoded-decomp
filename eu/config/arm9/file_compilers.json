@@ -9203,5 +9203,9 @@
   "src/overlays/ov077/calls/ItemScreen_DrawHintText.c": "dsi/1.3p1",
   "src/overlays/ov076/calls/SlotMenu_DrawRecordLabel.c": "dsi/1.3p1",
   "src/overlays/ov076/calls/SlotMenu_UpdateFirstRecordDisplay.c": "dsi/1.3p1",
-  "src/overlays/ov076/calls/SlotMenu_UpdateSecondRecordDisplay.c": "dsi/1.3p1"
+  "src/overlays/ov076/calls/SlotMenu_UpdateSecondRecordDisplay.c": "dsi/1.3p1",
+  "src/overlays/ov075/calls/ItemList_ApplyCategoryFilter_020cd1d0.c": "dsi/1.3p1",
+  "src/overlays/ov076/calls/ItemList_ApplyCategoryFilter.c": "dsi/1.3p1",
+  "src/overlays/ov077/calls/ItemList_ApplyCategoryFilter_020c644c.c": "dsi/1.3p1",
+  "src/overlays/ov085/calls/ItemList_ApplyCategoryFilter_020c1dec.c": "dsi/1.3p1"
 }

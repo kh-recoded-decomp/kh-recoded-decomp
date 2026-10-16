@@ -1,3 +1,3 @@
 #define BuildCategorySetList_020cd370 BuildCategorySetList
-#define func_ov075_020cd1b0 func_ov075_020cd1d0
+#define func_ov075_020cd1b0 ItemList_ApplyCategoryFilter_020cd1d0
 #include "src/ov075/unclassified_helpers/BuildCategorySetList_020cd370.c"

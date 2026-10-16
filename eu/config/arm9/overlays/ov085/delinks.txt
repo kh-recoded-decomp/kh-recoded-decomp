@@ -116,6 +116,10 @@ src/overlays/ov085/calls/func_ov085_020c1cdc.c:
     complete
     .text       start:0x020c1cdc end:0x020c1dec
 
+src/overlays/ov085/calls/ItemList_ApplyCategoryFilter_020c1dec.c:
+    complete
+    .text       start:0x020c1dec end:0x020c1f98
+
 src/overlays/ov085/calls/RefreshEntryListIfUnlocked.c:
     complete
     .text       start:0x020c1f98 end:0x020c1fac

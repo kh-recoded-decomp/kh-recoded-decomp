@@ -1,3 +1,3 @@
 #define BuildItemListForCategories_020c65ec BuildItemListForCategories
-#define func_ov077_020c642c func_ov077_020c644c
+#define func_ov077_020c642c ItemList_ApplyCategoryFilter_020c644c
 #include "src/ov077/unclassified_helpers/BuildItemListForCategories_020c65ec.c"

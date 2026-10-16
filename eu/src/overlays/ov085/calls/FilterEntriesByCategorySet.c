@@ -1,3 +1,3 @@
 #define FilterEntriesByCategorySet_020c1fa0 FilterEntriesByCategorySet
-#define func_ov085_020c1dcc func_ov085_020c1dec
+#define func_ov085_020c1dcc ItemList_ApplyCategoryFilter_020c1dec
 #include "src/ov085/unclassified_helpers/FilterEntriesByCategorySet_020c1fa0.c"
