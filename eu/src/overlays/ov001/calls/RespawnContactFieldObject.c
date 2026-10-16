@@ -5,7 +5,7 @@
 #define OffsetBoxByDelta_0203ac70 OffsetBoxByDelta
 #define RebindAnimTracks_020809d0 RebindAnimTracks
 #define RespawnContactFieldObject_02084bcc RespawnContactFieldObject
-#define SpawnFieldActor_0208078c func_ov001_020807b4
+#define SpawnFieldActor_0208078c SpawnFieldActor
 #define ZeroBytes0x14_020a8adc ZeroBytes0x14
 #define data_02053438 gZeroVecFx32
 #define data_020559c0 gCollisionBoundsDispatch

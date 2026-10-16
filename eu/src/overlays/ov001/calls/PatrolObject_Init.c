@@ -25,7 +25,7 @@
 #define func_020358b0 ApplyRecordTableEntry2
 #define func_020359f8 ApplyRecordTableEntry5
 #define func_02036240 ActorRegistry_GetEntityByIndex
-#define func_ov001_0208078c func_ov001_020807b4
+#define func_ov001_0208078c SpawnFieldActor
 #define func_ov001_02083730 PatrolObject_Init
 #define random_next_scaled_0202aa04 random_next_scaled
 #include "src/ov001/unclassified_helpers/func_ov001_02083730.c"

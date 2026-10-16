@@ -53,7 +53,7 @@ extern unsigned int ActorSlot_GetByIndex();
 extern unsigned int SetActorExtraPosition();
 extern unsigned int ActorRegistry_GetEntityByIndex();
 extern unsigned int func_ov001_0207f078();
-extern unsigned int func_ov001_020807b4();
+extern unsigned int SpawnFieldActor();
 extern unsigned int IsNodeFlagBitClear();
 
 void func_ov020_020a20b0(int work,int mode,u16 *actorCounter,int value) {
@@ -62,7 +62,7 @@ void func_ov020_020a20b0(int work,int mode,u16 *actorCounter,int value) {
   u8 configuration [20];
 
   if (mode == 2) {
-    func_ov001_020807b4
+    SpawnFieldActor
               (*(unsigned int *)(work + 8),*(u8 *)(*(int *)(work + 4) + 0x59),
                *(u8 *)(work + 0x33),*(u8 *)(work + 0x32),configuration,3,
                *(char *)(work + 0x49) * 0x1800,*(char *)(work + 0x4a) * 0x1800,

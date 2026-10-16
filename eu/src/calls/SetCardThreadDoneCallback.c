@@ -1,4 +1,6 @@
-#define SetCardThreadDoneCallback_02026ae0 SetCardThreadDoneCallback
-#define func_02027110 func_02027124
-#define g_cardThreadState_0205fe00 data_0205fe00
-#include "src/arm9/shared_engine/SetCardThreadDoneCallback_02026ae0.c"
+#include "src/SaveIoState.h"
+
+void SetCardThreadDoneCallback(void)
+{
+    data_0205fe00.doneCallback = BeginSaveSlotWrite;
+}

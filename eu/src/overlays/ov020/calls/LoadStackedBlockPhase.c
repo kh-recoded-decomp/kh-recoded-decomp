@@ -11,7 +11,7 @@
 #define func_02036240 ActorRegistry_GetEntityByIndex
 #define func_020369c8 SetActorExtraPosition
 #define func_ov001_0207f050 func_ov001_0207f078
-#define func_ov001_0208078c func_ov001_020807b4
+#define func_ov001_0208078c SpawnFieldActor
 #define func_ov001_020809d0 RebindAnimTracks
 #define func_ov001_020872b8 IsNodeFlagBitClear
 #define func_ov020_020a2878 func_ov020_020a2898

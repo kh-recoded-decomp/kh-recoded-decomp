@@ -48,7 +48,7 @@ typedef struct FieldActor {
     VecFx32 scale;
 } FieldActor;
 
-extern BOOL func_ov001_020807b4(void *entry, u8 group, u8 index, u32 slot, ShapeParams *shapeOut, s8 shapeKind, fx32 sizeX, fx32 sizeY, fx32 sizeZ, s32 angle, BOOL flag20, BOOL isKind2);
+extern BOOL SpawnFieldActor(void *entry, u8 group, u8 index, u32 slot, ShapeParams *shapeOut, s8 shapeKind, fx32 sizeX, fx32 sizeY, fx32 sizeZ, s32 angle, BOOL flag20, BOOL isKind2);
 extern void ApplyRecordTableEntry2(int index, int a1, int a2, int a3);
 extern FieldActor *ActorRegistry_GetEntityByIndex(u32 actorId);
 extern void Obj_SetPosition(FieldActor *entity, const VecFx32 *position);
@@ -65,7 +65,7 @@ void FieldObject_SpawnScaledActor(FieldObject *object)
     FieldActor *actor;
     u16 angle;
 
-    func_ov001_020807b4(object->entry, object->group, object->index, object->actorId, &shape, def->shapeKind, def->sizeX, def->sizeY, def->sizeZ, object->angle, !(object->stateFlags & 8), TRUE);
+    SpawnFieldActor(object->entry, object->group, object->index, object->actorId, &shape, def->shapeKind, def->sizeX, def->sizeY, def->sizeZ, object->angle, !(object->stateFlags & 8), TRUE);
     ApplyRecordTableEntry2(object->actorId, def->recordParamA, def->recordParamB, 3);
     actor = ActorRegistry_GetEntityByIndex(object->actorId);
     Obj_SetPosition(actor, &object->position);

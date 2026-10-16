@@ -17,7 +17,7 @@
 #define func_02036810 ActorSlot_GetByIndex
 #define func_020369c8 SetActorExtraPosition
 #define func_ov001_0207f050 func_ov001_0207f078
-#define func_ov001_0208078c func_ov001_020807b4
+#define func_ov001_0208078c SpawnFieldActor
 #define func_ov001_020872b8 IsNodeFlagBitClear
 #define func_ov016_020a2668 func_ov016_020a2688
 #define func_ov021_020a89a8 func_ov021_020a89c8

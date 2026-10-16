@@ -2,7 +2,7 @@
 #define FieldObject_SpawnActor_02080aa4 FieldObject_SpawnActor
 #define Obj_SetPosition_0203569c Obj_SetPosition
 #define RebindAnimTracks_020809d0 RebindAnimTracks
-#define SpawnFieldActor_0208078c func_ov001_020807b4
+#define SpawnFieldActor_0208078c SpawnFieldActor
 #define func_0202f4e8 Flags16_ClearBit1
 #define func_020358b0 ApplyRecordTableEntry2
 #define func_020359f8 ApplyRecordTableEntry5

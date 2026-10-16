@@ -3,7 +3,7 @@
 #define Obj_SetPosition_0203569c Obj_SetPosition
 #define RebindAnimTracks_020809d0 RebindAnimTracks
 #define RespawnScaledFieldObject_02085f3c RespawnScaledFieldObject
-#define SpawnFieldActor_0208078c func_ov001_020807b4
+#define SpawnFieldActor_0208078c SpawnFieldActor
 #define data_020536ac data_020536c0
 #define func_0202f4e8 Flags16_ClearBit1
 #define func_020358b0 ApplyRecordTableEntry2

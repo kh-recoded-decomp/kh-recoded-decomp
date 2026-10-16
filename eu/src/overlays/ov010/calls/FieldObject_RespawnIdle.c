@@ -1,6 +1,6 @@
 #define ActorSlot_SetFlag8ByIndex_02036120 ActorSlot_SetFlag8ByIndex
 #define FieldObject_RespawnIdle_020a09c4 FieldObject_RespawnIdle
-#define SpawnFieldActor_0208078c func_ov001_020807b4
+#define SpawnFieldActor_0208078c SpawnFieldActor
 #define func_020358b0 ApplyRecordTableEntry2
 #define func_020359f8 ApplyRecordTableEntry5
 #define func_02036240 ActorRegistry_GetEntityByIndex

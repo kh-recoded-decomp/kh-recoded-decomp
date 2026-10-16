@@ -6,7 +6,7 @@
 #define OffsetBoxByDelta_0203ac70 OffsetBoxByDelta
 #define RebindAnimTracks_020809d0 RebindAnimTracks
 #define RespawnCapsuleFieldObject_020828f0 RespawnCapsuleFieldObject
-#define SpawnFieldActor_0208078c func_ov001_020807b4
+#define SpawnFieldActor_0208078c SpawnFieldActor
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define data_02053438 gZeroVecFx32
 #define func_0202f4e8 Flags16_ClearBit1

@@ -4960,6 +4960,10 @@ src/overlays/ov001/calls/func_ov001_020807a4.c:
     complete
     .text       start:0x020807a4 end:0x020807b2
 
+src/overlays/ov001/calls/SpawnFieldActor.c:
+    complete
+    .text       start:0x020807b4 end:0x0208085c
+
 src/overlays/ov001/calls/BuildCollisionShape.c:
     complete
     .text       start:0x0208085c end:0x020809f8

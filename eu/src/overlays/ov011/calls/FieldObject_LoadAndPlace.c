@@ -15,6 +15,6 @@
 #define func_020358b0 ApplyRecordTableEntry2
 #define func_020359f8 ApplyRecordTableEntry5
 #define func_02036240 ActorRegistry_GetEntityByIndex
-#define func_ov001_0208078c func_ov001_020807b4
+#define func_ov001_0208078c SpawnFieldActor
 #define selectJointAnimationBlend_0202f2cc selectJointAnimationBlend
 #include "src/ov011/field_objects/FieldObject_LoadAndPlace_020a07bc.c"

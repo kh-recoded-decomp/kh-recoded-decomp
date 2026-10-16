@@ -22,6 +22,6 @@
 #define func_02036240 ActorRegistry_GetEntityByIndex
 #define func_020369c8 SetActorExtraPosition
 #define func_ov001_0207f050 func_ov001_0207f078
-#define func_ov001_0208078c func_ov001_020807b4
+#define func_ov001_0208078c SpawnFieldActor
 #define func_ov021_020a89a8 func_ov021_020a89c8
 #include "src/ov018/field_objects/LoadKind6ObjectPhase_020a1ef8.c"

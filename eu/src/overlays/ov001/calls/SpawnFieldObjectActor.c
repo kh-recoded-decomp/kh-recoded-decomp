@@ -3,7 +3,7 @@
 #define IsObjectFlagClear_0207f7a4 IsObjectFlagClear
 #define Obj_SetPosition_0203569c Obj_SetPosition
 #define RebindAnimTracks_020809d0 RebindAnimTracks
-#define SpawnFieldActor_0208078c func_ov001_020807b4
+#define SpawnFieldActor_0208078c SpawnFieldActor
 #define SpawnFieldObjectActor_02081aa8 SpawnFieldObjectActor
 #define func_0202f4e8 Flags16_ClearBit1
 #define func_02035930 ActivateEntrySubobject

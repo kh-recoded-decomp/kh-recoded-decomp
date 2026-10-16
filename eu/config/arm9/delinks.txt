@@ -6025,6 +6025,10 @@ src/calls/OnCardBackupUnlockDone.c:
     complete
     .text       start:0x020270f4 end:0x02027124
 
+src/calls/BeginSaveSlotWrite.c:
+    complete
+    .text       start:0x02027124 end:0x020271fc
+
 src/calls/InvokeCallback.c:
     complete
     .text       start:0x020271fc end:0x0202720c

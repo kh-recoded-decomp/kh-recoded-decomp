@@ -6,7 +6,7 @@
 #define func_020359f8 ApplyRecordTableEntry5
 #define func_02036240 ActorRegistry_GetEntityByIndex
 #define func_ov001_0207f050 func_ov001_0207f078
-#define func_ov001_0208078c func_ov001_020807b4
+#define func_ov001_0208078c SpawnFieldActor
 #define func_ov001_020809d0 RebindAnimTracks
 #define func_ov001_020872b8 IsNodeFlagBitClear
 #include "src/ov020/field_objects/LoadPanelStackPhase_020a349c.c"

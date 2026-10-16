@@ -17,5 +17,5 @@
 #define func_02036240 ActorRegistry_GetEntityByIndex
 #define func_020369c8 SetActorExtraPosition
 #define func_ov001_0207f050 func_ov001_0207f078
-#define func_ov001_0208078c func_ov001_020807b4
+#define func_ov001_0208078c SpawnFieldActor
 #include "src/ov019/unclassified_helpers/HandleLinkEvent_020a2418.c"
