@@ -1,4 +1,4 @@
 #define FindSlotByActiveOrder_0204f6dc FindSlotByActiveOrder
 #define UpdateSelectionCount_02050464 UpdateSelectionCount
-#define func_02029468 func_0202947c
+#define func_02029468 ConsumeSlotItemUse
 #include "src/arm9/overlay_selection/UpdateSelectionCount_02050464.c"

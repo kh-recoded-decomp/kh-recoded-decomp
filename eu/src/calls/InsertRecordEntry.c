@@ -17,8 +17,9 @@ typedef struct RecordEntry {
 
 typedef struct RecordSaveData {
     u8 unknown0000[0x28d8];
-    u8 ownedCategoryFlags[0x200];
-    u8 unknown2ad8[0x2e00 - 0x2ad8];
+    u8 itemCounts[0x390];
+    u8 extraSlotCount;
+    u8 unknown2c69[0x2e00 - 0x2c69];
     RecordEntry records[600];
 } RecordSaveData;
 
@@ -35,7 +36,7 @@ typedef union RecordCounterStorage {
 
 typedef char RecordEntryIsFourBytes[sizeof(RecordEntry) == 4 ? 1 : -1];
 typedef char RecordFlagsOffset[(u32)&((RecordEntry *)0)->flags == 2 ? 1 : -1];
-typedef char OwnedCategoryFlagsOffset[(u32)&((RecordSaveData *)0)->ownedCategoryFlags == 0x28d8 ? 1 : -1];
+typedef char RecordItemsOffset[(u32)&((RecordSaveData *)0)->itemCounts == 0x28d8 ? 1 : -1];
 typedef char RecordsOffset[(u32)&((RecordSaveData *)0)->records == 0x2e00 ? 1 : -1];
 typedef char TotalRecordCountOffset[(u32)&((RecordCounterState *)0)->totalCount == 0x100 ? 1 : -1];
 typedef char RecordCapacityOffset[(u32)&((RecordCounterState *)0)->capacity == 0x102 ? 1 : -1];
@@ -57,7 +58,7 @@ s16 InsertRecordEntry(const RecordEntry *source)
     u16 *categoryCounter = (u16 *)((u8 *)&data_0205fec4 + category * sizeof(u16));
     RecordEntry *end = entry + 600;
 
-    u8 *ownedFlag = &save->ownedCategoryFlags[(u8)category];
+    u8 *ownedFlag = &save->itemCounts[(u8)category];
     u16 index = 0;
 
     SetFlagAndBumpCounter(ownedFlag);

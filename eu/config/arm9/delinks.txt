@@ -6325,6 +6325,10 @@ src/calls/CanAllocateRecordSlot.c:
     complete
     .text       start:0x0202920c end:0x02029254
 
+src/calls/AddRecordItem.c:
+    complete
+    .text       start:0x02029254 end:0x02029300
+
 src/calls/InsertRecordEntry.c:
     complete
     .text       start:0x02029300 end:0x02029384
@@ -6337,7 +6341,7 @@ src/calls/ReleaseRecordEntry.c:
     complete
     .text       start:0x0202939c end:0x020293d8
 
-src/calls/func_0202947c.c:
+src/calls/ConsumeSlotItemUse.c:
     complete
     .text       start:0x0202947c end:0x020294cc
 

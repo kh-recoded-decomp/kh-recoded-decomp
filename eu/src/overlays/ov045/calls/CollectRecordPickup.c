@@ -3,5 +3,5 @@
 #define GetByteCounterOrDefault_020291cc GetByteCounterOrDefault
 #define GetRecordSlotPair0Entry_02051ec8 GetRecordSlotPair0Entry
 #define SetGlobalPackedBit_02027320 SetGlobalPackedBit
-#define func_02029240 func_02029254
+#define func_02029240 AddRecordItem
 #include "src/ov045/record_management/CollectRecordPickup_020bf324.c"

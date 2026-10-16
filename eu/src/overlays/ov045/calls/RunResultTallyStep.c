@@ -129,7 +129,7 @@ extern void SetGlobalPackedBit(int bitIndex);
 extern int func_ov001_020644b0(void);
 extern u32 ReadSessionPackedBits(int bitOffset, u32 bitCount);
 extern ItemEntry *GetRecordSlotPair0Entry(s32 index);
-extern void func_02029254(int id, ItemInfo *info);
+extern int AddRecordItem(int id, const ItemInfo *info);
 extern void MIi_CpuCopy16(const void *src, void *dst, u32 size);
 extern void MIi_CpuClear16(u16 value, void *dst, u32 size);
 extern void FillBackgroundLayerRect(void *layer, u16 *dst, int x, int y, u8 palette);
@@ -329,7 +329,7 @@ int RunResultTallyStep(void)
                     } else {
                         infoPtr = NULL;
                     }
-                    func_02029254(cell->itemId, infoPtr);
+                    AddRecordItem(cell->itemId, infoPtr);
                     SetGlobalPackedBit(cell->itemId);
                 }
             } else {

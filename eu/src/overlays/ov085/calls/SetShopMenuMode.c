@@ -17,7 +17,7 @@
 #define data_0205fe0c data_0205fe0c
 #define data_ov085_020c22c4 data_ov085_020c22e4
 #define func_020291b4 GetPrimaryRecordCount
-#define func_02029240 func_02029254
+#define func_02029240 AddRecordItem
 #define func_0204f378 IndexedRecords_SetFlag2
 #define func_ov001_020645dc SetSessionFlag
 #define func_ov039_020bc7f8 GetRuntimeStateFlags

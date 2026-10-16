@@ -1,4 +1,4 @@
-#define AddRecordItem_02029240 func_02029254
+#define AddRecordItem_02029240 AddRecordItem
 #define ApplyPendingLevelUps_0206ccd8 ApplyPendingLevelUps
 #define GetLevelExperience_020500fc GetEntryParam
 #define IsGlobalPackedBitSet_02027304 IsGlobalPackedBitSet

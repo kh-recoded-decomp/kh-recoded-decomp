@@ -1,5 +1,5 @@
 #define func_ov001_020645c8 IsSessionFlagSet
-#define AddRecordItem_02029240 func_02029254
+#define AddRecordItem_02029240 AddRecordItem
 #define AddRegionProgress_0206e074 AddRegionProgress
 #define ApplyRegionChoiceEntry_02072530 ApplyRegionChoiceEntry
 #define DecrementByteCounter_02029370 DecrementByteCounter
