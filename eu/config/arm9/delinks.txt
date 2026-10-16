@@ -6341,6 +6341,10 @@ src/calls/ReleaseRecordEntry.c:
     complete
     .text       start:0x0202939c end:0x020293d8
 
+src/calls/ApplyRecordMerge.c:
+    complete
+    .text       start:0x020293d8 end:0x0202947c
+
 src/calls/ConsumeSlotItemUse.c:
     complete
     .text       start:0x0202947c end:0x020294cc
