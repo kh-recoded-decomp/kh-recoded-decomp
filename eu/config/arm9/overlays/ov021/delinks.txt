@@ -452,6 +452,10 @@ src/overlays/ov021/calls/DrawModelWithAttachment.c:
     complete
     .text       start:0x020a9b10 end:0x020a9b92
 
+src/overlays/ov021/calls/BlendModelSetAnimations.c:
+    complete
+    .text       start:0x020a9b94 end:0x020a9c70
+
 src/overlays/ov021/calls/ApplyModelSetAnimations.c:
     complete
     .text       start:0x020a9c70 end:0x020a9cd4
@@ -727,6 +731,10 @@ src/overlays/ov021/calls/UpdateModelFadeAlpha.c:
 src/overlays/ov021/calls/DrawSlotMarker.c:
     complete
     .text       start:0x020ab8b8 end:0x020ab950
+
+src/overlays/ov021/calls/ResolveFieldObjectHits.c:
+    complete
+    .text       start:0x020ab950 end:0x020aba38
 
 src/overlays/ov021/calls/ResolveNearestHitNode.c:
     complete

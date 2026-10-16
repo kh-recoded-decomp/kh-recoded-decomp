@@ -118,7 +118,7 @@ ReleaseModelSet kind:function(thumb,size=0x64) addr:0x020a9948
 LoadModelObject kind:function(thumb,size=0x118) addr:0x020a99ac
 AdvanceObjectAnimationTracks kind:function(thumb,size=0x4c) addr:0x020a9ac4
 DrawModelWithAttachment kind:function(thumb,size=0x82) addr:0x020a9b10
-func_ov021_020a9b94 kind:function(thumb,size=0xdc) addr:0x020a9b94
+BlendModelSetAnimations kind:function(thumb,size=0xdc) addr:0x020a9b94
 ApplyModelSetAnimations kind:function(thumb,size=0x64) addr:0x020a9c70
 BlendModelAnimation kind:function(thumb,size=0x34) addr:0x020a9cd4
 SetBit1WhenBit0Set kind:function(thumb,size=0x1c) addr:0x020a9d08
@@ -188,7 +188,7 @@ ActivateSlotMarker kind:function(thumb,size=0x70) addr:0x020ab7ec
 ClearFlagAndField0x144 kind:function(thumb,size=0x18) addr:0x020ab85c
 UpdateModelFadeAlpha kind:function(thumb,size=0x44) addr:0x020ab874
 DrawSlotMarker kind:function(thumb,size=0x98) addr:0x020ab8b8
-func_ov021_020ab950 kind:function(thumb,size=0xe8) addr:0x020ab950
+ResolveFieldObjectHits kind:function(thumb,size=0xe8) addr:0x020ab950
 ResolveNearestHitNode kind:function(thumb,size=0x138) addr:0x020aba38
 BuildHitResult kind:function(thumb,size=0xf0) addr:0x020abb70
 ResolveHitContacts kind:function(thumb,size=0x214) addr:0x020abc60
@@ -505,8 +505,8 @@ data_ov021_020b4e5c kind:data(any) addr:0x020b4e5c
 data_ov021_020b4e80 kind:data(any) addr:0x020b4e80
 data_ov021_020b4ea4 kind:data(any) addr:0x020b4ea4
 data_ov021_020b4ec8 kind:data(any) addr:0x020b4ec8
-data_ov021_020b4fa0 kind:data(any) addr:0x020b4fa0
-data_ov021_020b4fb4 kind:data(any) addr:0x020b4fb4
+kSecondaryModelTrackOrder kind:data(any) addr:0x020b4fa0
+kPrimaryModelTrackOrder kind:data(any) addr:0x020b4fb4
 data_ov021_020b4fc8 kind:data(any) addr:0x020b4fc8
 data_ov021_020b4fdc kind:data(any) addr:0x020b4fdc
 sOv021_EfWindB01_020b4fe8 kind:data(any) addr:0x020b4fe8

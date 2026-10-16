@@ -5,7 +5,7 @@
 #define func_ov001_0207f08c func_ov001_0207f0b4
 #define func_ov001_0208723c func_ov001_02087264
 #define func_ov001_02087884 ForwardToActiveService
-#define func_ov021_020ab930 func_ov021_020ab950
+#define func_ov021_020ab930 ResolveFieldObjectHits
 #define func_ov021_020abe54 ProbeIdleActorContact
 #define func_ov021_020ac148 func_ov021_020ac168
 #include "src/ov021/object_state/StepHitScan_020ac164.c"

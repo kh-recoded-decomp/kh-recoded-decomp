@@ -1,6 +1,6 @@
-#include "nitro/types.h"
+#include "src/overlays/ov021/AnimationTrackOrder.h"
 
-const u32 data_ov021_020b4fa0[5] = {
+const AnimationTrackOrder kSecondaryModelTrackOrder = {{
     0x00000000, 0x00000001, 0x00000002, 0x00000004,
     0x00000003,
-};
+}};

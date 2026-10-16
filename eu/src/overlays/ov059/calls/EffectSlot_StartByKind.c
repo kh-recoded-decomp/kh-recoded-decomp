@@ -1,3 +1,3 @@
 #define EffectSlot_StartByKind_020cd184 EffectSlot_StartByKind
-#define func_ov021_020a9b74 func_ov021_020a9b94
+#define func_ov021_020a9b74 BlendModelSetAnimations
 #include "src/ov059/unclassified_helpers/EffectSlot_StartByKind_020cd184.c"

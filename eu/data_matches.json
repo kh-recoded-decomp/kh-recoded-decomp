@@ -3046,9 +3046,9 @@
       "end": "0x020b4fb4",
       "source": "src/ov021/data/Rodata_ov021_020b4fa0.c",
       "compiler": "mwccarm-3.0-139",
-      "name": "ov021 data words",
-      "origin": "generated words",
-      "behavior": "Initialised data words, pointers named by their targets."
+      "name": "Secondary model animation track order",
+      "origin": "independent data reconstruction",
+      "behavior": "Order of the five animation tracks applied to the secondary model by BlendModelSetAnimations."
     },
     {
       "module": "ov021",
@@ -3057,9 +3057,9 @@
       "end": "0x020b4fc8",
       "source": "src/ov021/data/Rodata_ov021_020b4fb4.c",
       "compiler": "mwccarm-3.0-139",
-      "name": "ov021 data words",
-      "origin": "generated words",
-      "behavior": "Initialised data words, pointers named by their targets."
+      "name": "Primary model animation track order",
+      "origin": "independent data reconstruction",
+      "behavior": "Order of the five animation tracks applied to the primary model by BlendModelSetAnimations."
     },
     {
       "module": "ov021",
