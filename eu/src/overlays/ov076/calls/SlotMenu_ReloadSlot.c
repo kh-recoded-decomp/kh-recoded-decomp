@@ -5,8 +5,8 @@
 #define ResolveMergedRecordEntry_020295c8 ResolveMergedRecordEntry
 #define SlotMenu_ReloadSlot_020c6f60 SlotMenu_ReloadSlot
 #define func_ov073_020c1eb4 RefreshStatusMenuData
-#define func_ov076_020c6d2c func_ov076_020c6d4c
-#define func_ov076_020c6e38 func_ov076_020c6e58
+#define func_ov076_020c6d2c SlotMenu_UpdateFirstRecordDisplay
+#define func_ov076_020c6e38 SlotMenu_UpdateSecondRecordDisplay
 #define func_ov076_020c7bec SlotMenu_DrawEmptyLabel
 #define func_ov076_020c7c20 SlotMenu_DrawRecordLabel
 #define func_ov076_020c7edc SlotMenu_DrawPanelLabel

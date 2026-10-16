@@ -9201,5 +9201,7 @@
   "src/overlays/ov075/calls/SelectLinkedMatrixNode.c": "dsi/1.1",
   "src/overlays/ov076/calls/SlotMenu_DrawHintText.c": "dsi/1.3p1",
   "src/overlays/ov077/calls/ItemScreen_DrawHintText.c": "dsi/1.3p1",
-  "src/overlays/ov076/calls/SlotMenu_DrawRecordLabel.c": "dsi/1.3p1"
+  "src/overlays/ov076/calls/SlotMenu_DrawRecordLabel.c": "dsi/1.3p1",
+  "src/overlays/ov076/calls/SlotMenu_UpdateFirstRecordDisplay.c": "dsi/1.3p1",
+  "src/overlays/ov076/calls/SlotMenu_UpdateSecondRecordDisplay.c": "dsi/1.3p1"
 }

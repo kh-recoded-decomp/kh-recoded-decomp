@@ -204,6 +204,14 @@ src/overlays/ov076/calls/SlotMenu_ReleaseSprites.c:
     complete
     .text       start:0x020c6c9c end:0x020c6d4c
 
+src/overlays/ov076/calls/SlotMenu_UpdateFirstRecordDisplay.c:
+    complete
+    .text       start:0x020c6d4c end:0x020c6e58
+
+src/overlays/ov076/calls/SlotMenu_UpdateSecondRecordDisplay.c:
+    complete
+    .text       start:0x020c6e58 end:0x020c6f80
+
 src/overlays/ov076/calls/SlotMenu_ReloadSlot.c:
     complete
     .text       start:0x020c6f80 end:0x020c7164
