@@ -6309,6 +6309,10 @@ src/calls/AddSlotLevelProgress.c:
     complete
     .text       start:0x02029020 end:0x020290cc
 
+src/calls/MoveEquipmentSlot.c:
+    complete
+    .text       start:0x020290cc end:0x020291c8
+
 src/calls/GetPrimaryRecordCount.c:
     complete
     .text       start:0x020291c8 end:0x020291d4

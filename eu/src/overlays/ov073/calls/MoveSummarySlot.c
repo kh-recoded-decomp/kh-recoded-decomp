@@ -1,6 +1,6 @@
 #define BuildSelectionEntryList_0204f98c BuildSelectionEntryList
 #define GetOverlaySelectionRecord_0204f768 GetOverlaySelectionRecord
-#define MoveRecordSlot_020290b8 func_020290cc
+#define MoveRecordSlot_020290b8 MoveEquipmentSlot
 #define MoveSummarySlot_020bebd0 MoveSummarySlot
 #define SlotMenu_ReloadAllSlots_020c8ef8 SlotMenu_ReloadAllSlots
 #define func_ov039_020bd624 func_ov039_020bd644
