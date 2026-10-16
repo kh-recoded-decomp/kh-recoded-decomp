@@ -1,8 +1,10 @@
 #include "nitro/types.h"
 
+typedef struct ModelViewer ModelViewer;
+
 extern unsigned int MI_CpuFill8();
 extern unsigned int InitSharedRecordAndDispatch();
-extern unsigned int func_ov099_020c1b6c();
+extern void AttachEnemyViewerModels(ModelViewer *viewer, int selectedEnemy);
 extern unsigned int ReleaseViewerModels();
 extern unsigned int ApplyViewerModelPose();
 extern unsigned int selectJointAnimationBlend();
@@ -32,7 +34,7 @@ void func_ov099_020c2078(int work,int selection) {
       modelIndex = modelIndex + 1;
     } while (modelIndex < **(int **)(resourceList + 4));
   }
-  func_ov099_020c1b6c(work,selection);
+  AttachEnemyViewerModels((ModelViewer *)work,selection);
   *(int *)(work + 0x5bc) = selection;
   ApplyViewerModelPose(work);
 }

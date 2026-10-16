@@ -9222,5 +9222,8 @@
   "src/overlays/ov006/calls/CollideElevatorWithShape.c": "dsi/1.1p1",
   "src/overlays/ov056/calls/InitActorHitEntryPool.c": "dsi/1.1p1",
   "src/overlays/ov056/calls/InitHomingProjectilePool.c": "dsi/1.1p1",
-  "src/overlays/ov099/calls/LoadEnemyCollectionProgress.c": "dsi/1.1p1"
+  "src/overlays/ov099/calls/LoadEnemyCollectionProgress.c": "dsi/1.1p1",
+  "src/overlays/ov099/calls/RefreshEnemyViewerIndicators.c": "dsi/1.1p1",
+  "src/overlays/ov099/calls/AttachEnemyViewerModels.c": "dsi/1.1p1",
+  "src/overlays/ov079/calls/ConfigMenu_CreateOption.c": "dsi/1.1p1"
 }

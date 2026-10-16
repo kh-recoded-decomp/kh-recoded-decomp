@@ -3,5 +3,5 @@
 #define func_ov091_020c1760 SetViewerMode
 #define func_ov099_020bf818 DrawEntryStatsPanels
 #define func_ov099_020c0ee0 StepListCursorDown_020c0f00
-#define func_ov099_020c156c func_ov099_020c158c
+#define func_ov099_020c156c RefreshEnemyViewerIndicators
 #include "src/ov099/unclassified_helpers/HandleListCursorDown_020bef40.c"

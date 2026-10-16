@@ -16,6 +16,10 @@ src/overlays/ov079/calls/ConfigMenu_Release.c:
     complete
     .text       start:0x020c46d8 end:0x020c4738
 
+src/overlays/ov079/calls/ConfigMenu_CreateOption.c:
+    complete
+    .text       start:0x020c4738 end:0x020c4820
+
 src/overlays/ov079/calls/ConfigMenu_SaveOptions.c:
     complete
     .text       start:0x020c4820 end:0x020c489c

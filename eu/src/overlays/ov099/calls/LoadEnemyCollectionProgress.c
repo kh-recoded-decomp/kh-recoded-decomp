@@ -1,28 +1,9 @@
 #include "src/overlays/ov099/EnemyViewerInfo.h"
-
-typedef struct EnemyDrop {
-    s16 itemId;
-    u8 bonus;
-    u8 extra;
-    u16 chance;
-} EnemyDrop;
+#include "src/overlays/ov099/EnemyViewerState.h"
 
 typedef struct EnemyDropIds {
     s32 itemId[4];
 } EnemyDropIds;
-
-typedef struct EnemyProgress {
-    s32 defeatCount;
-    BOOL dropsComplete;
-} EnemyProgress;
-
-typedef struct EnemyViewer {
-    u8 unknown0000[0xcf10];
-    EnemyProgress progress[40];
-} EnemyViewer;
-
-typedef char EnemyDropSize[sizeof(EnemyDrop) == 6 ? 1 : -1];
-typedef char EnemyProgressSize[sizeof(EnemyProgress) == 8 ? 1 : -1];
 
 extern EnemyDrop *GetRecordSlot5Entry(int recordId);
 extern u32 ReadGlobalPackedBits(u32 bitOffset, u32 bitCount);

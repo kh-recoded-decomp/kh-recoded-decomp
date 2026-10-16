@@ -19,7 +19,7 @@ extern u32 DrawEntryStatsPanels();
 extern u32 CreateViewerSlotObjs();
 extern u32 InitScrollList_020c0b5c();
 extern void LoadEnemyCollectionProgress(EnemyViewer *viewer);
-extern u32 func_ov099_020c158c();
+extern void RefreshEnemyViewerIndicators(EnemyViewer *viewer);
 extern u32 SyncEnemyEntryFlags();
 extern u32 SetViewerMode();
 extern u32 ResetModelViewer();
@@ -53,7 +53,7 @@ u32 func_ov099_020becb4(void *work) {
   InitViewerTextLayers(work);
   DrawEntryStatsPanels(0xffffffff,work);
   CreateViewerSlotObjs(work);
-  func_ov099_020c158c(work);
+  RefreshEnemyViewerIndicators(work);
   ResetModelViewer((int)work + 0xd0ec,0);
   SetViewerMode(1,work);
   return 1;
