@@ -1,5 +1,14 @@
-#define MeasureScriptTextBox_020bdb20 MeasureScriptTextBox
-#define Utf8ToUcs2Bounded_020bda5c Utf8ToUcs2Bounded
-#define func_ov036_020bdb00 ScriptVm_ReadTableOffsetPtr
-#define func_ov036_020c2b7c func_ov036_020c2b9c
-#include "src/ov036/unclassified_helpers/MeasureScriptTextBox_020bdb20.c"
+#include "src/overlays/ov036/Ov036TextWindowState.h"
+
+extern const char *ScriptVm_ReadTableOffsetPtr(void *vm, void *operand);
+extern int Utf8ToUcs2Bounded(const char *source, u16 *destination, int count);
+
+void MeasureScriptTextBox(Ov036TextWindowSize *outSize, void *vm, void *operand)
+{
+    Ov036TextWindowSize size;
+    u16 text[0x200];
+
+    Utf8ToUcs2Bounded(ScriptVm_ReadTableOffsetPtr(vm, operand), text, 0x200);
+    MeasureSegmentedTextWindowTiles(&size, 1, text, 0, 0);
+    *outSize = size;
+}

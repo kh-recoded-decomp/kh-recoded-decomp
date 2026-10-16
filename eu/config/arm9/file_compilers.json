@@ -9225,5 +9225,8 @@
   "src/overlays/ov099/calls/LoadEnemyCollectionProgress.c": "dsi/1.1p1",
   "src/overlays/ov099/calls/RefreshEnemyViewerIndicators.c": "dsi/1.1p1",
   "src/overlays/ov099/calls/AttachEnemyViewerModels.c": "dsi/1.1p1",
-  "src/overlays/ov079/calls/ConfigMenu_CreateOption.c": "dsi/1.1p1"
+  "src/overlays/ov079/calls/ConfigMenu_CreateOption.c": "dsi/1.1p1",
+  "src/overlays/ov041/calls/CreateStageResourceList.c": "dsi/1.1p1",
+  "src/overlays/ov036/calls/InitEvent2DPanel.c": "dsi/1.1p1",
+  "src/overlays/ov036/calls/MeasureSegmentedTextWindowTiles.c": "dsi/1.1p1"
 }

@@ -84,6 +84,10 @@ src/overlays/ov041/calls/OpenSlotHandleIfEmpty.c:
     complete
     .text       start:0x020bde1c end:0x020bde50
 
+src/overlays/ov041/calls/CreateStageResourceList.c:
+    complete
+    .text       start:0x020bde50 end:0x020bdf20
+
 src/overlays/ov041/calls/FreeResourceLists.c:
     complete
     .text       start:0x020bdf20 end:0x020be014

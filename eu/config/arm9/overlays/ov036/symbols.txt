@@ -1,5 +1,5 @@
 InvokeOptionalCallback_020ba400 kind:function(arm,size=0x18) addr:0x020ba400
-func_ov036_020ba418 kind:function(arm,size=0x228) addr:0x020ba418
+InitEvent2DPanel kind:function(arm,size=0x228) addr:0x020ba418
 RunPanelStateMachine kind:function(arm,size=0x84) addr:0x020ba640
 ShutdownSceneWork_020ba6c4 kind:function(arm,size=0xd8) addr:0x020ba6c4
 InitializePanelArchive kind:function(arm,size=0xa4) addr:0x020ba79c
@@ -192,7 +192,7 @@ CloseAllTextWindows kind:function(arm,size=0xe8) addr:0x020c2930
 ApplyTextWindowBgOffsets kind:function(arm,size=0x8c) addr:0x020c2a18
 GetTextWindowChoiceResult kind:function(arm,size=0x18) addr:0x020c2aa4
 AdvanceFinishedTextWindows kind:function(arm,size=0xe0) addr:0x020c2abc
-func_ov036_020c2b9c kind:function(arm,size=0x1cc) addr:0x020c2b9c
+MeasureSegmentedTextWindowTiles kind:function(arm,size=0x1cc) addr:0x020c2b9c
 func_ov036_020c2d68 kind:function(arm,size=0x74) addr:0x020c2d68
 DestroyPxiChannelState kind:function(arm,size=0x34) addr:0x020c2ddc
 func_ov036_020c2e10 kind:function(arm,size=0x8) addr:0x020c2e10

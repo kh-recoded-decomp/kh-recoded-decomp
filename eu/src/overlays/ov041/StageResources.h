@@ -48,5 +48,10 @@ typedef struct StageResourceContext {
 
 extern StageResourceContext *gMovieContextState;
 void CreateStageResourceGroup(int category, StageResourceContainer *container);
+void CreateStageResourceList(int index, int count, void *archive, u8 modelIndex, u8 blockIndex);
+
+typedef char StageResourceListSize[sizeof(StageResourceList) == 8 ? 1 : -1];
+typedef char StageResourceItemSize[sizeof(StageResourceItem) == 0x13c ? 1 : -1];
+typedef char StageResourceListsOffset[(u32)&((StageResourceWork *)0)->lists == 0x358 ? 1 : -1];
 
 #endif

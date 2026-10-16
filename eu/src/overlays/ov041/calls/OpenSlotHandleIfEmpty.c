@@ -1,4 +1,4 @@
 #define data_ov035_020bc4e0 gMovieContextState
 #define OpenSlotHandleIfEmpty_020bddfc OpenSlotHandleIfEmpty
-#define func_ov041_020bde30 func_ov041_020bde50
+#define func_ov041_020bde30 CreateStageResourceList
 #include "src/ov041/unclassified_helpers/OpenSlotHandleIfEmpty_020bddfc.c"
