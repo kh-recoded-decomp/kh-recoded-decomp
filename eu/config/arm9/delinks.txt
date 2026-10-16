@@ -6325,6 +6325,10 @@ src/calls/CanAllocateRecordSlot.c:
     complete
     .text       start:0x0202920c end:0x02029254
 
+src/calls/InsertRecordEntry.c:
+    complete
+    .text       start:0x02029300 end:0x02029384
+
 src/calls/DecrementByteCounter.c:
     complete
     .text       start:0x02029384 end:0x0202939c
