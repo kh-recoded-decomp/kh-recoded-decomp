@@ -1904,6 +1904,10 @@ src/overlays/ov021/calls/ScriptOp_DispatchIndexedCommand.c:
     complete
     .text       start:0x020b39c8 end:0x020b39f4
 
+src/overlays/ov021/calls/ScriptCmd_SetProperty.c:
+    complete
+    .text       start:0x020b39f4 end:0x020b46ec
+
 src/overlays/ov021/calls/HandleStageEvent.c:
     complete
     .text       start:0x020b46ec end:0x020b476c

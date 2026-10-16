@@ -21,7 +21,7 @@
 #define func_ov021_020b474c ScriptCmd_WaitPlayerScaledTime
 #define func_ov021_020b39a8 ScriptOp_DispatchIndexedCommand
 #define func_ov021_020b46cc HandleStageEvent
-#define func_ov021_020b39d4 func_ov021_020b39f4
+#define func_ov021_020b39d4 ScriptCmd_SetProperty
 #define func_ov021_020b34b0 DispatchScriptHandler
 #define func_ov021_020b34d4 ScriptOp_MoveObjectWithSpeed
 #define func_ov021_020b3534 ScriptOp_ApplyTwoObjectValues
