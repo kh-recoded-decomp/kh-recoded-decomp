@@ -6141,6 +6141,10 @@ src/calls/func_020281c8.c:
     complete
     .text       start:0x020281c8 end:0x020281e0
 
+src/calls/RestorePanelDisplayState.c:
+    complete
+    .text       start:0x020281e0 end:0x020282d0
+
 src/calls/InitPanelResources.c:
     complete
     .text       start:0x020282d0 end:0x02028324

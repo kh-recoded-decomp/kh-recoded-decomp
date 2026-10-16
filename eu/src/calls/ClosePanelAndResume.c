@@ -7,7 +7,7 @@
 #define StopSoundStreamAtIndex_0204deb0 StopSoundStreamAtIndex
 #define data_02055f54 sMain_PoffRefresh_02055f54
 #define func_02001194 SetVBlankStateWord
-#define func_020281cc func_020281e0
+#define func_020281cc RestorePanelDisplayState
 #define func_0204da20 SNDi_BroadcastChannelOp
 #define g_ptr_0205fe24 gPanelState
 #include "src/arm9/panel_state/ClosePanelAndResume_0202874c.c"

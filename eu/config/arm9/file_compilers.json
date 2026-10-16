@@ -9209,5 +9209,6 @@
   "src/overlays/ov077/calls/ItemList_ApplyCategoryFilter_020c644c.c": "dsi/1.3p1",
   "src/overlays/ov085/calls/ItemList_ApplyCategoryFilter_020c1dec.c": "dsi/1.3p1",
   "src/calls/ApplyRecordMerge.c": "dsi/1.1",
-  "src/calls/MoveEquipmentSlot.c": "dsi/1.1"
+  "src/calls/MoveEquipmentSlot.c": "dsi/1.1",
+  "src/calls/RestorePanelDisplayState.c": "dsi/1.1"
 }
