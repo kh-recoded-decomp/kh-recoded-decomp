@@ -9233,6 +9233,10 @@ src/calls/RecentRing_Record.c:
     complete
     .text       start:0x0204cbb0 end:0x0204cc70
 
+src/calls/AllocSoundHandleSlot.c:
+    complete
+    .text       start:0x0204cc70 end:0x0204cd04
+
 src/calls/FreeSoundHandleSlot.c:
     complete
     .text       start:0x0204cd04 end:0x0204cd78
