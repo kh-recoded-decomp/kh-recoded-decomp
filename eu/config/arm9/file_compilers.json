@@ -9218,5 +9218,9 @@
   "src/overlays/ov021/calls/ActivateSpawnUnit.c": "dsi/1.1p1",
   "src/overlays/ov021/calls/ScriptCmd_SpawnLinkedActor.c": "dsi/1.1p1",
   "src/overlays/ov021/calls/ScriptCmd_SetProperty.c": "dsi/1.1p1",
-  "src/overlays/ov006/calls/TraceGridDistancePath.c": "dsi/1.1p1"
+  "src/overlays/ov006/calls/TraceGridDistancePath.c": "dsi/1.1p1",
+  "src/overlays/ov006/calls/CollideElevatorWithShape.c": "dsi/1.1p1",
+  "src/overlays/ov056/calls/InitActorHitEntryPool.c": "dsi/1.1p1",
+  "src/overlays/ov056/calls/InitHomingProjectilePool.c": "dsi/1.1p1",
+  "src/overlays/ov099/calls/LoadEnemyCollectionProgress.c": "dsi/1.1p1"
 }

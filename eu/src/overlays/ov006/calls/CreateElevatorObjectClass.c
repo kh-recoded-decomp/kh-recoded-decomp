@@ -3,6 +3,9 @@
 
 typedef void (*FieldObjectHook)(void);
 
+typedef struct ElevatorCollisionBody ElevatorCollisionBody;
+typedef struct CollisionShape CollisionShape;
+
 typedef struct ElevatorDesc {
     VecFx32 position;
     fx32 scale;
@@ -47,7 +50,8 @@ extern void func_ov001_0207f210(void);
 extern void func_ov001_0207f26c(void);
 extern void func_ov006_020a0a58(void);
 extern void TryActivateElevatorSlot(void);
-extern void func_ov006_020a0b24(void);
+extern BOOL CollideElevatorWithShape(ElevatorCollisionBody *body, CollisionShape *other,
+                                    void *result);
 extern void func_ov006_020a0c0c(void);
 extern void ReleaseOwnerResource(void);
 
@@ -77,7 +81,7 @@ ElevatorClass *CreateElevatorObjectClass(int count, const ElevatorDesc *desc)
     objectClass->hooks[10] = func_ov006_020a0a58;
     objectClass->hooks[11] = TryActivateElevatorSlot;
     objectClass->hooks[14] = NULL;
-    objectClass->hooks[12] = func_ov006_020a0b24;
+    objectClass->hooks[12] = (FieldObjectHook)CollideElevatorWithShape;
     objectClass->hooks[13] = func_ov006_020a0c0c;
     objectClass->hooks[4] = ReleaseOwnerResource;
     objectClass->classType = 4;

@@ -1,5 +1,7 @@
 #include "nitro/types.h"
 
+typedef struct EnemyViewer EnemyViewer;
+
 extern u32 data_ov099_020c2900;
 extern u32 data_ov099_020c22b4;
 extern u32 sOv099_UiBtlStrLanguageP2_020c2774;
@@ -16,7 +18,7 @@ extern u32 InitViewerTextLayers();
 extern u32 DrawEntryStatsPanels();
 extern u32 CreateViewerSlotObjs();
 extern u32 InitScrollList_020c0b5c();
-extern u32 func_ov099_020c14d8();
+extern void LoadEnemyCollectionProgress(EnemyViewer *viewer);
 extern u32 func_ov099_020c158c();
 extern u32 SyncEnemyEntryFlags();
 extern u32 SetViewerMode();
@@ -47,7 +49,7 @@ u32 func_ov099_020becb4(void *work) {
   LoadMessageFiles(work);
   LoadViewerBackgrounds(work);
   InitScrollList_020c0b5c(&data_ov099_020c22b4,work);
-  func_ov099_020c14d8(work);
+  LoadEnemyCollectionProgress(work);
   InitViewerTextLayers(work);
   DrawEntryStatsPanels(0xffffffff,work);
   CreateViewerSlotObjs(work);

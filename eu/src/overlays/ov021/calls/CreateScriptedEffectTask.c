@@ -27,10 +27,10 @@
 #define func_ov056_020d36dc UpdateRisingEffectSlots
 #define func_ov056_020d3904 UpdateGrabSweepHits
 #define func_ov056_020d3b1c func_ov056_020d3b3c
-#define func_ov056_020d3d08 func_ov056_020d3d28
+#define func_ov056_020d3d08 InitHomingProjectilePool
 #define func_ov056_020d3dc8 UpdateAirborneActionState
 #define func_ov056_020d3f1c UpdateSlotGroupEntries
-#define func_ov056_020d3f70 func_ov056_020d3f90
+#define func_ov056_020d3f70 InitActorHitEntryPool
 #define func_ov056_020d402c PrepareEntryCommandAndSetMode
 #define func_ov056_020d3b30 ForwardTargetHandleValue
 #define func_ov056_020d3b24 ForwardTargetHandle
