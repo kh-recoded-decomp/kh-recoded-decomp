@@ -27,7 +27,7 @@
 #define func_ov021_020b3534 ScriptOp_ApplyTwoObjectValues
 #define func_ov021_020b25b4 ScriptOp_SpawnLinkedSlotEvent
 #define func_ov021_020b28f4 ScriptOp_SpawnStageObject
-#define func_ov021_020b2cf4 func_ov021_020b2d14
+#define func_ov021_020b2cf4 ScriptCmd_SpawnLinkedActor
 #define func_ov021_020b3400 ScriptOp_SetContextFlag0
 #define func_ov021_020b3428 ScriptOp_SetContextFlag16
 #define func_ov021_020b2a4c ScriptCmd_TriggerActorEvent

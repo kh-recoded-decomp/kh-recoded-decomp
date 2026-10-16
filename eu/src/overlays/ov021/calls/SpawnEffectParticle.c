@@ -2,5 +2,5 @@
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField
 #define SpawnEffectParticle_020af104 SpawnEffectParticle
 #define VEC_Subtract_01ff9e3c VEC_Subtract
-#define func_ov021_020aed24 func_ov021_020aed44
+#define func_ov021_020aed24 ActivateSpawnUnit
 #include "src/ov021/animation/SpawnEffectParticle_020af104.c"

@@ -1,4 +1,4 @@
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField
 #define InitSlotOwnerWithOrigin_020d6898 InitSlotOwnerWithOrigin
-#define func_ov021_020aed24 func_ov021_020aed44
+#define func_ov021_020aed24 ActivateSpawnUnit
 #include "src/ov056/unclassified_helpers/InitSlotOwnerWithOrigin_020d6898.c"

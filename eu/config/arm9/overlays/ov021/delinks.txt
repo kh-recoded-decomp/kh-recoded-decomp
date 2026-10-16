@@ -1136,6 +1136,10 @@ src/overlays/ov021/calls/InitializeUnitParameters.c:
     complete
     .text       start:0x020aecc4 end:0x020aed44
 
+src/overlays/ov021/calls/ActivateSpawnUnit.c:
+    complete
+    .text       start:0x020aed44 end:0x020aee34
+
 src/overlays/ov021/calls/LoadUnitSharedRecords.c:
     complete
     .text       start:0x020aee34 end:0x020aef84
@@ -1775,6 +1779,10 @@ src/overlays/ov021/calls/ScriptOp_MultiplyValues.c:
 src/overlays/ov021/calls/ScriptOp_DivideValues.c:
     complete
     .text       start:0x020b2cb4 end:0x020b2d14
+
+src/overlays/ov021/calls/ScriptCmd_SpawnLinkedActor.c:
+    complete
+    .text       start:0x020b2d14 end:0x020b2f78
 
 src/overlays/ov021/calls/ScriptOp_SetStageMarker.c:
     complete

@@ -3,5 +3,5 @@
 #define TryConsumeLimitedUse_020ab098 TryConsumeLimitedUse
 #define ZeroBytes0x40_020ab08c ZeroBytes0x40
 #define data_0205356c gSinFx12Table
-#define func_ov021_020aed24 func_ov021_020aed44
+#define func_ov021_020aed24 ActivateSpawnUnit
 #include "src/ov056/shared_engine/SpawnIndexedProjectile_020d5e7c.c"
