@@ -3276,6 +3276,10 @@ src/overlays/ov001/calls/func_ov001_020738b8.c:
     complete
     .text       start:0x020738b8 end:0x020738d2
 
+src/overlays/ov001/calls/UpdateGaugeMarker.c:
+    complete
+    .text       start:0x020738d4 end:0x020739d0
+
 src/overlays/ov001/calls/DrawGaugeFill.c:
     complete
     .text       start:0x020739d0 end:0x02073a3c

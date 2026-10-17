@@ -3,6 +3,15 @@
 
 #include "nitro/types.h"
 
+typedef enum HudGaugeMarkerStyle {
+    HUD_GAUGE_MARKER_FILLED_PAIR = 0,
+    HUD_GAUGE_MARKER_PARTIAL_PAIR = 1,
+    HUD_GAUGE_MARKER_EMPTY_PAIR = 2,
+    HUD_GAUGE_MARKER_FILLED_SINGLE = 3,
+    HUD_GAUGE_MARKER_EMPTY_SINGLE = 4,
+    HUD_GAUGE_MARKER_NONE = -1
+} HudGaugeMarkerStyle;
+
 typedef struct HudGaugeLayout {
     u32 offset;
     u32 size;
@@ -10,7 +19,7 @@ typedef struct HudGaugeLayout {
 } HudGaugeLayout;
 
 typedef struct HudGaugeTable {
-    s32 header;
+    s32 markerStyle;
     HudGaugeLayout layouts[3];
 } HudGaugeTable;
 

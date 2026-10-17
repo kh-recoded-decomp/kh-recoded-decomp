@@ -8,6 +8,10 @@ src/overlays/ov077/calls/TrackMaxParamValue.c:
     complete
     .text       start:0x020c4280 end:0x020c42a4
 
+src/overlays/ov077/calls/InitItemScreen.c:
+    complete
+    .text       start:0x020c42a4 end:0x020c439c
+
 src/overlays/ov077/calls/ShowSlotItemHeader.c:
     complete
     .text       start:0x020c439c end:0x020c4418

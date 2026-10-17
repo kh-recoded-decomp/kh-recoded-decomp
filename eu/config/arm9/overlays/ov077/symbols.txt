@@ -1,5 +1,5 @@
 TrackMaxParamValue kind:function(thumb,size=0x24) addr:0x020c4280
-func_ov077_020c42a4 kind:function(thumb,size=0xf8) addr:0x020c42a4
+InitItemScreen kind:function(thumb,size=0xf8) addr:0x020c42a4
 ShowSlotItemHeader kind:function(thumb,size=0x7c) addr:0x020c439c
 HandleItemTabTouch kind:function(thumb,size=0x11c) addr:0x020c4418
 MoveSlotCursor kind:function(thumb,size=0x84) addr:0x020c4534

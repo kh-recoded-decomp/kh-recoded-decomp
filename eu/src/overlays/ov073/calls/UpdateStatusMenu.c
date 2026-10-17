@@ -1,4 +1,5 @@
 #include "nitro/types.h"
+#include "src/overlays/ov073/ListView.h"
 
 typedef struct TouchState {
     u8 pad_00[4];
@@ -20,7 +21,8 @@ typedef struct PageHandlers {
 } PageHandlers;
 
 typedef struct StatusPanel {
-    u8 pad_000[0x148];
+    ListView list;
+    u8 pad_140[0x148 - 0x140];
     u8 tileTable[0x168 - 0x148];
     BOOL nameShown;
     BOOL listBusy;
@@ -97,8 +99,7 @@ extern void Obj_SetField14(void *layer, void *font);
 extern void *GetMenuFont10s(void);
 extern void *GetMenuFont10(void);
 extern u16 *func_ov027_020ba2c8(void *strings, int index);
-extern int func_ov027_020b9f9c(void *dst);
-extern void UpdateListScroll(StatusPanel *panel, BOOL refresh, u16 input);
+extern const ListTouchSample *func_ov027_020b9f9c(void *dst);
 extern void FlushDirtyTileTableRows(void *table);
 
 #define REG_POWCNT (*(vu16 *)0x04000304)
@@ -292,12 +293,12 @@ void UpdateStatusMenu(StatusMenu *menu)
         if (panel->listBusy == 0) {
             if (((REG_POWCNT & 0x8000) >> 15) == 1) {
                 if (menu->flags & 2) {
-                    UpdateListScroll(panel, func_ov027_020b9f9c(block), data_02060500);
+                    UpdateListScroll(&panel->list, func_ov027_020b9f9c(block), data_02060500);
                 } else {
-                    UpdateListScroll(panel, 0, 0);
+                    UpdateListScroll(&panel->list, NULL, 0);
                 }
             } else {
-                UpdateListScroll(panel, 0, (menu->flags & 2) ? data_02060500 : 0);
+                UpdateListScroll(&panel->list, NULL, (menu->flags & 2) ? data_02060500 : 0);
             }
             FlushDirtyTileTableRows(panel->tileTable);
         }

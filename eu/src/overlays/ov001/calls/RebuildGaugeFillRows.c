@@ -1,4 +1,5 @@
 #define RebuildGaugeFillRows_02073b38 RebuildGaugeFillRows
+#define func_ov001_020738d4 UpdateGaugeMarker
 #define data_ov001_020a04ac data_ov001_020a04cc
 #define func_02023dbc _s32_div_f
 #include "src/ov001/unclassified_helpers/RebuildGaugeFillRows_02073b38.c"

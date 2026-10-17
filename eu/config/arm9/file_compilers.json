@@ -9232,5 +9232,8 @@
   "src/overlays/ov036/calls/InitEvent2DPanel.c": "dsi/1.1p1",
   "src/overlays/ov036/calls/MeasureSegmentedTextWindowTiles.c": "dsi/1.1p1",
   "src/overlays/ov042/calls/SetCameraColliderOffsetAngle.c": "dsi/1.1p1",
-  "src/overlays/ov038/calls/DrawResultsTimeDigits.c": "dsi/1.1p1"
+  "src/overlays/ov038/calls/DrawResultsTimeDigits.c": "dsi/1.1p1",
+  "src/overlays/ov077/calls/InitItemScreen.c": "dsi/1.1",
+  "src/overlays/ov001/calls/UpdateGaugeMarker.c": "dsi/1.3p1",
+  "src/overlays/ov073/calls/HandleListTouchInput.c": "dsi/1.3p1"
 }

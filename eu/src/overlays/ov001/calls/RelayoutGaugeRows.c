@@ -1,4 +1,5 @@
 #define FindActiveRecordById_020b8184 FindActiveRecordById
+#define func_ov001_020738d4 UpdateGaugeMarker
 #define GetSceneTagTracker_020711b0 GetSceneTagTracker
 #define RelayoutGaugeRows_020742e0 RelayoutGaugeRows
 #define data_ov001_020a04ac data_ov001_020a04cc

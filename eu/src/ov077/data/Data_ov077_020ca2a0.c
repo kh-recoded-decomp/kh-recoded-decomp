@@ -4,7 +4,8 @@
 
 extern void BeginSlotItemSelection(void);
 extern void UsePartySlotItem(void);
-extern void func_ov077_020c42a4(void);
+typedef struct ItemScreen ItemScreen;
+extern BOOL InitItemScreen(ItemScreen *screen);
 extern void UpdateItemScreen(void);
 extern void ShutdownItemMenu(void);
 extern void HandleEquipmentCursorUp(void);
@@ -14,7 +15,7 @@ extern void func_ov077_020c5f14(void);
 extern void func_ov077_020c5f48(void);
 
 void *gEquipmentMatrixMenuDescriptor[17] = {
-    (void *)func_ov077_020c42a4,
+    (void *)InitItemScreen,
     (void *)ShutdownItemMenu,
     (void *)UpdateItemScreen,
     NULL,
