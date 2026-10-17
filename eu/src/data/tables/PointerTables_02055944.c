@@ -14,7 +14,7 @@ extern void SweepSegmentAgainstPolygon(void); /* SweepSegmentAgainstPolygon */
 extern void SweepCylinderAgainstInflatedSphereSwapped(void); /* SweepCylinderAgainstInflatedSphereSwapped */
 extern void SweepCylinderAgainstBoxSwapped(void); /* SweepCylinderAgainstBoxSwapped */
 extern void SweepCylinderAgainstSegmentSwapped(void); /* SweepCylinderAgainstSegmentSwapped */
-extern void func_02044928(void); /* func */
+extern void SweepCapsuleAgainstCapsule(void); /* SweepCapsuleAgainstCapsule */
 extern void func_020449c8(void); /* func */
 extern void func_020456d4(void); /* func */
 extern void SweepCappedCylinderAgainstSphereSwapped(void); /* SweepCappedCylinderAgainstSphereSwapped */
@@ -47,7 +47,7 @@ void (*const gCollisionSweepPairDispatch[31])(void) = {
     SweepCylinderAgainstInflatedSphereSwapped, /* SweepCylinderAgainstInflatedSphereSwapped */
     SweepCylinderAgainstBoxSwapped, /* SweepCylinderAgainstBoxSwapped */
     SweepCylinderAgainstSegmentSwapped, /* SweepCylinderAgainstSegmentSwapped */
-    func_02044928, /* func */
+    SweepCapsuleAgainstCapsule, /* SweepCapsuleAgainstCapsule */
     func_020449c8, /* func */
     func_020456d4, /* func */
     SweepCappedCylinderAgainstSphereSwapped, /* SweepCappedCylinderAgainstSphereSwapped */
