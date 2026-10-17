@@ -8685,6 +8685,10 @@ src/calls/SweepSwappedShapesAlt.c:
     complete
     .text       start:0x02041df8 end:0x02041e68
 
+src/calls/SweepSphereAgainstSphere.c:
+    complete
+    .text       start:0x02041e68 end:0x02041f40
+
 src/calls/SweepSphereAgainstCappedCylinder.c:
     complete
     .text       start:0x02042b98 end:0x02042f68

@@ -56,6 +56,10 @@ src/overlays/ov095/calls/GetTiledPixelIndex.c:
     complete
     .text       start:0x020bf2e8 end:0x020bf370
 
+src/overlays/ov095/calls/CopyScreenRectRightToLeft.c:
+    complete
+    .text       start:0x020bf370 end:0x020bf464
+
 src/overlays/ov095/calls/LoadScreenRegion.c:
     complete
     .text       start:0x020bf464 end:0x020bf570

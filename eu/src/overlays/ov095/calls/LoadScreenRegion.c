@@ -1,3 +1,3 @@
 #define LoadScreenRegion_020bf444 LoadScreenRegion
-#define func_ov095_020bf350 func_ov095_020bf370
+#define func_ov095_020bf350 CopyScreenRectRightToLeft
 #include "src/ov095/unclassified_helpers/LoadScreenRegion_020bf444.c"

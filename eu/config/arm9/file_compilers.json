@@ -1,4 +1,5 @@
 {
+  "src/calls/SweepSphereAgainstSphere.c": "dsi/1.3p1",
   "src/calls/SweepCapsuleAgainstCapsule.c": "dsi/1.3p1",
   "src/overlays/ov085/calls/FilterOwnedEntries.c": "dsi/1.1",
   "src/overlays/ov095/calls/RefreshItemReportText.c": "dsi/1.1",
