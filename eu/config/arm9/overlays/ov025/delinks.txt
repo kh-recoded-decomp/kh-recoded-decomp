@@ -180,6 +180,10 @@ src/overlays/ov025/calls/FindHorizontalNeighbor.c:
     complete
     .text       start:0x020b6e14 end:0x020b6e90
 
+src/overlays/ov025/calls/HandleListTouch.c:
+    complete
+    .text       start:0x020b6e90 end:0x020b6f98
+
 src/overlays/ov025/calls/HandleListInput.c:
     complete
     .text       start:0x020b6f98 end:0x020b7088
