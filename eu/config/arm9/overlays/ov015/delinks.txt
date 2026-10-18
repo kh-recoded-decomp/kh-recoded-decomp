@@ -140,6 +140,10 @@ src/overlays/ov015/calls/BlinkPanelCursor.c:
     complete
     .text       start:0x02070438 end:0x02070540
 
+src/overlays/ov015/calls/AnimateWirelessHighlightPalette.c:
+    complete
+    .text       start:0x02070540 end:0x02070674
+
 src/overlays/ov015/calls/RollPanelBonus.c:
     complete
     .text       start:0x02070674 end:0x020706f8

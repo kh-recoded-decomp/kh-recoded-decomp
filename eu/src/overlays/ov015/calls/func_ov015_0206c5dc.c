@@ -20,7 +20,7 @@ extern void func_ov015_02075338(void);
 extern void UpdateConnectTimer(void);
 extern void func_ov015_020702fc(void);
 extern void AnimatePanelBackground(void);
-extern void func_ov015_02070540(void);
+extern void AnimateWirelessHighlightPalette(void);
 
 void func_ov015_0206c5dc(void) {
     if (data_ov015_0207e960[0] == 5) {
@@ -38,5 +38,5 @@ void func_ov015_0206c5dc(void) {
     if (((PanelFlagsE2 *)(data_ov015_0207e960 + 0xe2))->flag1 == 0) {
         return;
     }
-    func_ov015_02070540();
+    AnimateWirelessHighlightPalette();
 }
