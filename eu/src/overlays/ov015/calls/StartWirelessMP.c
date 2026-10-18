@@ -2,4 +2,5 @@
 #define StartWirelessMP_02073aa0 StartWirelessMP
 #define WH_SetError_020737d4 WH_SetError
 #define WM_StartMP_02011b6c WM_StartMP
+#define func_ov015_02073b30 WH_StateOutStartParentMP
 #include "src/ov015/wireless/StartWirelessMP_02073aa0.c"

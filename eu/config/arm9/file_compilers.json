@@ -1,4 +1,6 @@
 {
+  "src/overlays/ov015/calls/WH_StateOutStartChildMP.c": "dsi/1.1",
+  "src/overlays/ov015/calls/WH_StateOutStartParentMP.c": "dsi/1.1",
   "src/calls/SweepSphereAgainstSphere.c": "dsi/1.3p1",
   "src/calls/SweepCapsuleAgainstCapsule.c": "dsi/1.3p1",
   "src/overlays/ov085/calls/FilterOwnedEntries.c": "dsi/1.1",

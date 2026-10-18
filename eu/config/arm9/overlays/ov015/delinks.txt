@@ -524,6 +524,10 @@ src/overlays/ov015/calls/StartWirelessMP.c:
     complete
     .text       start:0x02073aa0 end:0x02073b30
 
+src/overlays/ov015/calls/WH_StateOutStartParentMP.c:
+    complete
+    .text       start:0x02073b30 end:0x02073c48
+
 src/overlays/ov015/calls/func_ov015_02073c48.c:
     complete
     .text       start:0x02073c48 end:0x02073c7c
@@ -587,6 +591,10 @@ src/overlays/ov015/calls/WH_StateOutStartChild.c:
 src/overlays/ov015/calls/WH_StateInStartChildMP.c:
     complete
     .text       start:0x020743fc end:0x02074468
+
+src/overlays/ov015/calls/WH_StateOutStartChildMP.c:
+    complete
+    .text       start:0x02074468 end:0x02074584
 
 src/overlays/ov015/calls/StartWirelessKeySharing.c:
     complete
