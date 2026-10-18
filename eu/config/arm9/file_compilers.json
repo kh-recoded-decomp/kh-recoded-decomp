@@ -1,4 +1,5 @@
 {
+  "src/overlays/ov001/calls/DrawWindowFrameTiles.c": "dsi/1.1",
   "src/overlays/ov025/calls/HandleListTouch.c": "dsi/1.1",
   "src/overlays/ov015/calls/WH_StateOutStartChildMP.c": "dsi/1.1",
   "src/overlays/ov015/calls/WH_StateOutStartParentMP.c": "dsi/1.1",

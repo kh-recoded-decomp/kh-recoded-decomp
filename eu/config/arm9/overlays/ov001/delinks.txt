@@ -3776,6 +3776,10 @@ src/overlays/ov001/calls/func_ov001_020795c4.c:
     complete
     .text       start:0x020795c4 end:0x020795ee
 
+src/overlays/ov001/calls/DrawWindowFrameTiles.c:
+    complete
+    .text       start:0x020795f0 end:0x020796f6
+
 src/overlays/ov001/calls/DrawScaledWindowFrame.c:
     complete
     .text       start:0x020796f8 end:0x0207976e
