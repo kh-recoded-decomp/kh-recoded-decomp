@@ -140,6 +140,10 @@ src/overlays/ov002/calls/func_ov002_020629a8.c:
     complete
     .text       start:0x020629a8 end:0x020629b8
 
+src/overlays/ov002/calls/ResetMainPanelGraphics.c:
+    complete
+    .text       start:0x020629b8 end:0x02062b10
+
 src/overlays/ov002/calls/IsPanelBusy.c:
     complete
     .text       start:0x02062c6c end:0x02062c88

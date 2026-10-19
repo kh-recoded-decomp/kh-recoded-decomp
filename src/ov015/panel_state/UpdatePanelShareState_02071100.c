@@ -1,4 +1,5 @@
 #include "nitro/types.h"
+#include "ov027/WidgetPoint.h"
 
 typedef struct {
     u8 data[0x70];
@@ -44,7 +45,7 @@ extern WidgetIdList data_ov015_02079f7c;
 extern void SpawnDropsPerTenUnits_0206671c(void);
 extern BOOL PlaySoundEffect_0204d924(int bank, int id);
 extern void func_ov015_0206f310(int slot);
-extern void func_ov015_0206f688(int slot, int value);
+extern void func_ov015_0206f688(int slot, WidgetPoint *position);
 extern u16 *func_ov002_02062000(void);
 extern BOOL IsGlobalBit0Set_020632ac(void);
 extern BOOL IsButtonBPressed_020632c8(void);

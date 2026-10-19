@@ -1,3 +1,3 @@
-#include "nitro/types.h"
+#include "src/overlays/ov002/Ov002PanelState.h"
 
-static u32 data_ov002_0206c460;
+Ov002PanelState *data_ov002_0206c460;

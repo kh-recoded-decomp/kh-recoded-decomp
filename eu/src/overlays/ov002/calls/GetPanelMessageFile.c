@@ -2,5 +2,5 @@
 
 void *GetPanelMessageFile(void)
 {
-    return gOv002PanelState->messageFile;
+    return &gOv002PanelState->messageFiles[1];
 }

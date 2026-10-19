@@ -18,7 +18,7 @@ typedef struct {
 extern s8 *data_ov015_0207e960;
 extern void func_ov015_02075338(void);
 extern void UpdateConnectTimer(void);
-extern void func_ov015_020702fc(void);
+extern void AnimateWirelessBackgroundScroll(void);
 extern void AnimatePanelBackground(void);
 extern void AnimateWirelessHighlightPalette(void);
 
@@ -30,7 +30,7 @@ void func_ov015_0206c5dc(void) {
         UpdateConnectTimer();
     }
     if (((PanelFlagsE1 *)(data_ov015_0207e960 + 0xe1))->flag7 != 0) {
-        func_ov015_020702fc();
+        AnimateWirelessBackgroundScroll();
     }
     if (((PanelFlagsE1 *)(data_ov015_0207e960 + 0xe1))->flag3 != 0) {
         AnimatePanelBackground();

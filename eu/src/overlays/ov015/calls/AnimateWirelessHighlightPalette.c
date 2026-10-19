@@ -1,34 +1,8 @@
 #pragma opt_propagation off
 #pragma opt_common_subs off
-#include "nitro/types.h"
+#include "src/overlays/ov015/WirelessMenuContext.h"
 
-typedef union WirelessPaletteColor {
-    u16 value;
-    struct {
-        u16 red : 5;
-        u16 green : 5;
-        u16 blue : 5;
-        u16 unused : 1;
-    } rgb;
-} WirelessPaletteColor;
-
-typedef struct WirelessPaletteContext {
-    u8 reserved00[0xc2];
-    WirelessPaletteColor baseColor;
-    WirelessPaletteColor highlightColor;
-    u8 reservedc6[0x1c];
-    struct {
-        u8 increasing : 1;
-        u8 enabled : 1;
-        u8 subEngine : 1;
-        u8 reserved : 5;
-    } paletteFlags;
-} WirelessPaletteContext;
-
-typedef char WirelessPaletteColorSizeCheck[
-    sizeof(WirelessPaletteColor) == sizeof(u16) ? 1 : -1];
-
-extern WirelessPaletteContext *data_ov015_0207e960;
+extern WirelessMenuContext *data_ov015_0207e960;
 extern void GXS_BeginLoadOBJExtPltt(void);
 extern void GXS_EndLoadOBJExtPltt(void);
 extern void GX_BeginLoadOBJExtPltt(void);
@@ -36,7 +10,7 @@ extern void GX_EndLoadOBJExtPltt(void);
 
 void AnimateWirelessHighlightPalette(void)
 {
-    WirelessPaletteContext *context;
+    WirelessMenuContext *context;
     WirelessPaletteColor color, base;
     base = data_ov015_0207e960->baseColor;
     color = data_ov015_0207e960->highlightColor;

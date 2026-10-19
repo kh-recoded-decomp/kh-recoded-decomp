@@ -1,26 +1,14 @@
-#include "nitro/types.h"
+#include "src/overlays/ov002/Ov002PanelState.h"
 
-typedef struct PanelFlags {
-    u8 unused0 : 3;
-    u8 initialized : 1;
-    u8 unused4 : 4;
-} PanelFlags;
+extern BOOL DestroyFndObjectList(void *entry);
+extern BOOL InitTextLayerDefault(void *entry, int mode,
+                                 NNSG2dFont *font, const u16 *data);
 
-typedef struct PanelState {
-    u8 pad_00[0x10];
-    PanelFlags flags10;
-    u8 pad_11[0x7c - 0x11];
-} PanelState;
-
-extern PanelState *data_ov002_0206c460;
-extern void DestroyFndObjectList(void *entry);
-extern void InitTextLayerDefault(void *entry, int mode, int value, const u16 *data);
-
-void func_ov002_02062504(int value) {
+void func_ov002_02062504(NNSG2dFont *font) {
     u16 data[8];
 
-    if (data_ov002_0206c460->flags10.initialized) {
-        DestroyFndObjectList((u8 *)data_ov002_0206c460 + 0x7c);
+    if (data_ov002_0206c460->mainBg2TextInitialized) {
+        DestroyFndObjectList(&data_ov002_0206c460->textLayers[1]);
     }
 
     data[0] = 0;
@@ -32,6 +20,6 @@ void func_ov002_02062504(int value) {
     data[6] = 0;
     data[7] = 3;
 
-    InitTextLayerDefault((u8 *)data_ov002_0206c460 + 0x7c, 2, value, data);
-    data_ov002_0206c460->flags10.initialized = 1;
+    InitTextLayerDefault(&data_ov002_0206c460->textLayers[1], 2, font, data);
+    data_ov002_0206c460->mainBg2TextInitialized = 1;
 }

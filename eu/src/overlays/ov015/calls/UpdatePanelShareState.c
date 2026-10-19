@@ -20,4 +20,5 @@
 #define func_020254dc ClearBusyFlag
 #define func_ov015_0206f22c SelectWidgetAndSlideOut
 #define func_ov015_0206f310 SlideInPanelWidget
+#define func_ov015_0206f688 SetupWirelessSelectionSlot
 #include "src/ov015/panel_state/UpdatePanelShareState_02071100.c"

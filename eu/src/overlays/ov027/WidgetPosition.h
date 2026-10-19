@@ -1,10 +1,7 @@
 #ifndef KH_RECODED_WIDGET_POSITION_H
 #define KH_RECODED_WIDGET_POSITION_H
 
-/* Coordinates use 12 fractional bits. */
-typedef struct WidgetPoint {
-    int x, y;
-} WidgetPoint;
+#include "../include/ov027/WidgetPoint.h"
 
 typedef struct WidgetPositionRecord {
     unsigned char unknown[0x34];
