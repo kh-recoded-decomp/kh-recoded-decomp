@@ -1,0 +1,5 @@
+#define UpdateStageLinkPanels_020ba604 UpdateStageLinkPanels
+#define gStageLinkMenu data_ov032_020c0080
+#define SetScenePanelEnabled func_ov001_02067cd0
+#define GetIndexedFieldObject func_ov001_0207f060
+#include "src/ov032/panel_state/UpdateStageLinkPanels_020ba604.c"

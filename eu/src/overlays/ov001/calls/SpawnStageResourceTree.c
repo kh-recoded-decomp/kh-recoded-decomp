@@ -1,0 +1,2 @@
+#define SpawnStageResourceTree_0209a4bc SpawnStageResourceTree
+#include "src/ov001/shared_engine/SpawnStageResourceTree_0209a4bc.c"

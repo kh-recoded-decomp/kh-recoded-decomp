@@ -1,6 +1,6 @@
 InitSceneOverlayState kind:function(thumb,size=0x190) addr:0x020ba400
 ApplySlotStyleToSession kind:function(thumb,size=0x94) addr:0x020ba590
-func_ov032_020ba624 kind:function(thumb,size=0x18c) addr:0x020ba624
+UpdateStageLinkPanels kind:function(thumb,size=0x18c) addr:0x020ba624
 RunSceneStateMachine_020ba7b0 kind:function(thumb,size=0x74) addr:0x020ba7b0
 DestroySceneState kind:function(thumb,size=0x9c) addr:0x020ba824
 SetSlotDisplayStyle kind:function(thumb,size=0x6c) addr:0x020ba8c0

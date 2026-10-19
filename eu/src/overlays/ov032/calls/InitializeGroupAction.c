@@ -1,4 +1,4 @@
 #define InitializeGroupAction_020bb12c InitializeGroupAction
 #define contextData_020c0060 data_ov032_020c0080
-#define func_ov032_020ba604 func_ov032_020ba624
+#define func_ov032_020ba604 UpdateStageLinkPanels
 #include "src/ov032/object_group/InitializeGroupAction_020bb12c.c"

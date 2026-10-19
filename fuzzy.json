@@ -519,11 +519,6 @@
   "draft": "src/.port_scratch/b43/RefreshStageEventDisplay_02093330.c",
   "compiler": "mwccarm-4.0-1036"
  },
- "ov001:func_ov001_02093c70": {
-  "percent": 99.02,
-  "draft": "src/.port_scratch/b202/InitStageActorStats_02093c70.c",
-  "compiler": "mwccarm-4.0-1036"
- },
  "ov001:func_ov001_020958f4": {
   "percent": 98.0,
   "draft": "src/.port_scratch/b157x/il1/ApplyHitToEnemyGroup_020958f4.c",
@@ -572,11 +567,6 @@
  "ov001:func_ov001_0209a174": {
   "percent": 98.71,
   "draft": "src/.port_scratch/b204/v5/StartStageEvent_0209a174.c",
-  "compiler": "mwccarm-4.0-1036"
- },
- "ov001:func_ov001_0209a4bc": {
-  "percent": 99.4,
-  "draft": "src/.port_scratch/pragma_sweep/ov001_0209a4bc_8648/SpawnStageEventTree_0209a4bc.c",
   "compiler": "mwccarm-4.0-1036"
  },
  "ov001:func_ov001_0209b474": {
@@ -1042,11 +1032,6 @@
  "ov031:func_ov031_020bc04c": {
   "percent": 97.85,
   "draft": "src/.port_scratch/perm/ov031_func_ov031_020bc04c/LoadSceneData_020bc04c.c",
-  "compiler": "mwccarm-4.0-1036"
- },
- "ov032:func_ov032_020ba604": {
-  "percent": 64.89,
-  "draft": "src/.port_scratch/pragma_sweep/ov032_020ba604_2301/func_ov032_020ba604.c",
   "compiler": "mwccarm-4.0-1036"
  },
  "ov032:func_ov032_020bbd60": {

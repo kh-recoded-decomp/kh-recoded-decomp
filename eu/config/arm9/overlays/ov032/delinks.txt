@@ -12,6 +12,10 @@ src/overlays/ov032/calls/ApplySlotStyleToSession.c:
     complete
     .text       start:0x020ba590 end:0x020ba624
 
+src/overlays/ov032/calls/UpdateStageLinkPanels.c:
+    complete
+    .text       start:0x020ba624 end:0x020ba7b0
+
 src/overlays/ov032/calls/RunSceneStateMachine_020ba7b0.c:
     complete
     .text       start:0x020ba7b0 end:0x020ba824

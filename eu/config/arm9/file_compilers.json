@@ -9255,5 +9255,8 @@
   "src/overlays/ov046/calls/Camera_BuildOrbitView.c": "dsi/1.1",
   "src/overlays/ov011/calls/FieldObject_FindEscapeHeading.c": "dsi/1.1",
   "src/calls/SweepInflatedSphereAgainstCylinder.c": "dsi/1.1",
-  "src/overlays/ov000/calls/HandleTitleMenuInput.c": "dsi/1.1"
+  "src/overlays/ov000/calls/HandleTitleMenuInput.c": "dsi/1.1",
+  "src/overlays/ov001/calls/SpawnStageResourceTree.c": "dsi/1.1",
+  "src/overlays/ov001/calls/InitializeActorStats.c": "dsi/1.1",
+  "src/overlays/ov032/calls/UpdateStageLinkPanels.c": "dsi/1.1"
 }

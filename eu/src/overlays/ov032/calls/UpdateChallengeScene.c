@@ -19,5 +19,5 @@
 #define func_ov001_0207d384 func_ov001_0207d3ac
 #define func_ov027_020ba2a8 func_ov027_020ba2c8
 #define func_ov027_020ba2e0 func_ov027_020ba300
-#define func_ov032_020ba604 func_ov032_020ba624
+#define func_ov032_020ba604 UpdateStageLinkPanels
 #include "src/ov032/state_machine/UpdateChallengeScene_020bab04.c"

@@ -7628,6 +7628,10 @@ src/overlays/ov001/calls/RunGateFadeSequence.c:
     complete
     .text       start:0x02093bb4 end:0x02093c98
 
+src/overlays/ov001/calls/InitializeActorStats.c:
+    complete
+    .text       start:0x02093c98 end:0x02093e50
+
 src/overlays/ov001/calls/ResetActorMotion.c:
     complete
     .text       start:0x02093e50 end:0x02093e7c
@@ -7959,6 +7963,10 @@ src/overlays/ov001/calls/ClearStageTables.c:
 src/overlays/ov001/calls/StartStageEvent.c:
     complete
     .text       start:0x0209a19c end:0x0209a4e4
+
+src/overlays/ov001/calls/SpawnStageResourceTree.c:
+    complete
+    .text       start:0x0209a4e4 end:0x0209a7ac
 
 src/overlays/ov001/calls/LoadStageResource.c:
     complete
