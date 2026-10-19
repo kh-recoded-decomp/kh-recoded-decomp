@@ -1,0 +1,3 @@
+#define SweepSphereAgainstCylinder_02042678 func_0204268c
+#define SweepInflatedSphereAgainstCylinder_02042b04 SweepInflatedSphereAgainstCylinder
+#include "src/arm9/spatial_queries/SweepInflatedSphereAgainstCylinder_02042b04.c"

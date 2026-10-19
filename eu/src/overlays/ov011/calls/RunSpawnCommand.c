@@ -1,5 +1,6 @@
 #include "nitro/types.h"
 #include "nitro/fx_types.h"
+#include "../include/ov011/SpawnCollisionOwner.h"
 
 typedef struct SpawnCommand {
     s32 type;
@@ -13,11 +14,6 @@ typedef struct SpawnCommand {
     } target;
     s8 fallbackEffectId;
 } SpawnCommand;
-
-typedef struct SpawnOwner {
-    u8 pad_00[0x40];
-    VecFx32 position;
-} SpawnOwner;
 
 typedef struct StageEventRecord {
     u8 pad_00[0x10];
@@ -60,7 +56,7 @@ extern FieldObject *func_ov001_0207f050(int index);
 extern FieldObject *GetStridedBufferEntry(FieldObject *object, u32 index);
 extern VecFx32 *GetManagedActorPosition(int index);
 extern void VEC_NormalizeLength(VecFx32 *src, VecFx32 *dst);
-extern int func_ov011_020a09d0(SpawnOwner *owner);
+extern u16 FieldObject_FindEscapeHeading(const SpawnOwner *owner);
 extern void SetPanelActorState(FieldObject *object, int value);
 extern void *func_ov001_0208724c(u32 group, u32 index);
 extern void CacheEntry_SetActive(void *entry, BOOL active);
@@ -150,7 +146,7 @@ void RunSpawnCommand(SpawnCommand *command, SpawnOwner *owner)
         object = func_ov001_0207f060(command->target.object.group, command->target.object.index);
         FieldObject_SetEnabled(object, TRUE);
         CallFieldObjectHook24(object, &owner->position);
-        SetPanelActorState(object, func_ov011_020a09d0(owner));
+        SetPanelActorState(object, FieldObject_FindEscapeHeading(owner));
         SpawnSoundSlot(0x1a7, 0, &owner->position, 0);
         return;
     case 5: {

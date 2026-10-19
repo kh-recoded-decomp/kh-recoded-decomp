@@ -1,0 +1,2 @@
+#define FieldObject_FindEscapeHeading_020a09b0 FieldObject_FindEscapeHeading
+#include "src/ov011/actor_animation/FieldObject_FindEscapeHeading_020a09b0.c"

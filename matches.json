@@ -2,6 +2,51 @@
   "version": 1,
   "matches": [
     {
+      "name": "SweepInflatedSphereAgainstCylinder",
+      "behavior": "Copies a sphere with its radius increased by the cylinder radius, runs the existing sphere-cylinder sweep with flag 8, and sets contact kind 3 on success.",
+      "evidence": "Shared typed C rebuilt with the pinned compiler matches all 128 bytes in BK9E and BK9P, including the sweep call relocation.",
+      "uncertainty": "Shape-reference bounds and contact fields beyond kind are not needed by this wrapper; other sweep flags are passed through unchanged.",
+      "domain": "spatial_queries",
+      "origin": "inflated sphere-cylinder sweep",
+      "understanding": "subsystem",
+      "module": "arm9",
+      "symbol": "func_02042b04",
+      "language": "c",
+      "source": "src/arm9/spatial_queries/SweepInflatedSphereAgainstCylinder_02042b04.c",
+      "source_symbol": "SweepInflatedSphereAgainstCylinder_02042b04",
+      "compiler": "mwccarm-4.0-1018",
+      "mode": "arm",
+      "bindings": {
+        "SweepSphereAgainstCylinder_02042678": "0x2042678"
+      }
+    },
+    {
+      "name": "FieldObject_FindEscapeHeading",
+      "behavior": "Tests four quarter-turn directions with a swept sphere, selects an unobstructed direction or the latest collision time, and returns the corresponding facing angle.",
+      "evidence": "Shared typed C rebuilt with the pinned compiler matches all 332 bytes in BK9E and BK9P, including eight call sites and the sine-table reference.",
+      "uncertainty": "The query filter category and mask meanings are not established; collision query and workspace layouts are partial.",
+      "domain": "actor_animation",
+      "origin": "field-object clearance query",
+      "understanding": "subsystem",
+      "module": "ov011",
+      "symbol": "func_ov011_020a09b0",
+      "language": "c",
+      "source": "src/ov011/actor_animation/FieldObject_FindEscapeHeading_020a09b0.c",
+      "source_symbol": "FieldObject_FindEscapeHeading_020a09b0",
+      "compiler": "mwccarm-4.0-1018",
+      "mode": "thumb",
+      "bindings": {
+        "VEC_Add": "0x1ff9e0c",
+        "FX_Mul": "0x2006450",
+        "MakeSphereShape": "0x203ad14",
+        "OffsetBoxByDelta": "0x203ac70",
+        "CollisionQuery_Init": "0x2034c74",
+        "SweepWorldCollision": "0x20364a0",
+        "FX_Atan2Idx": "0x20062bc",
+        "gSinFx12Table": "0x205356c"
+      }
+    },
+    {
       "name": "Camera_BuildOrbitView",
       "behavior": "Builds an orbit view around the raised focus position, updates follow-mode heading caches, resolves collisions, and fills the direction, up vector, and field-of-view preset.",
       "evidence": "Shared C rebuilt with the pinned compiler matches all 432 bytes in BK9E and BK9P, including twenty call sites and two global references.",

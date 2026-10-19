@@ -1,4 +1,4 @@
 #define NegateVecFx32_0204aa40 NegateVecFx32
 #define SweepCylinderAgainstInflatedSphereSwapped_02041b44 SweepCylinderAgainstInflatedSphereSwapped
-#define func_02042b04 func_02042b18
+#define func_02042b04 SweepInflatedSphereAgainstCylinder
 #include "src/arm9/spatial_queries/SweepCylinderAgainstInflatedSphereSwapped_02041b44.c"
