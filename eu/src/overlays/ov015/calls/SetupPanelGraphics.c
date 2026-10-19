@@ -3,6 +3,7 @@
 #include "nitro/fx_types.h"
 #include "src/overlays/ov015/WirelessPanelInitData.h"
 #include "src/overlays/ov002/RecordSelectionView.h"
+#include "src/overlays/ov027/WidgetPosition.h"
 
 typedef WirelessPanelBgConfig BgContainerConfig;
 
@@ -92,7 +93,7 @@ extern u32 gLinkPanelAssetPaths[];
 extern const char sOv015_WxcWlmP2_0207e7e0[];
 extern const char sOv015_WxcWlaP2_0207e7ec[];
 
-extern void func_ov015_020724dc(void);
+extern void HandleWirelessPanelNavigation(WidgetPositionRecord *widget, u32 keys);
 extern void func_ov015_02072754(void);
 extern void func_ov015_02072758(void);
 extern void SetPanelFlagE2Bit3(void);
@@ -141,7 +142,8 @@ extern void func_ov027_020b96c0(void *container, void *element, u16 value);
 extern void SetFocusedWidget(void *container, void *element);
 extern void SetWidgetRootDpadEnabled(void *container, int value);
 extern void SetWidgetRootTouchEnabled(void *container, int value);
-extern void func_ov027_020b90b8(void *container, void (*callback)(void));
+extern void func_ov027_020b90b8(void *container,
+                             void (*callback)(WidgetPositionRecord *widget, u32 keys));
 extern void func_ov027_020b90a8(void *container, int elementId, void (*callback)(void));
 
 extern int DispatchContextCommand(int query, int arg1, int arg2, int arg3);
@@ -352,7 +354,7 @@ void SetupPanelGraphics(void) {
         void *element = FindWidgetById(data_ov015_0207e960->subObj, 10);
         SetFocusedWidget(data_ov015_0207e960->subObj, element);
     }
-    func_ov027_020b90b8(data_ov015_0207e960->subObj, func_ov015_020724dc);
+    func_ov027_020b90b8(data_ov015_0207e960->subObj, HandleWirelessPanelNavigation);
     func_ov027_020b90a8(data_ov015_0207e960->subObj, 4, func_ov015_02072754);
     func_ov027_020b90a8(data_ov015_0207e960->subObj, 9, func_ov015_02072758);
     func_ov027_020b90a8(data_ov015_0207e960->subObj, 17, SetPanelFlagE2Bit3);

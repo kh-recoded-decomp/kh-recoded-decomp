@@ -4,7 +4,9 @@
 #include "../include/ov027/WidgetPoint.h"
 
 typedef struct WidgetPositionRecord {
-    unsigned char unknown[0x34];
+    unsigned char unknown00[0xc];
+    int id;
+    unsigned char unknown10[0x24];
     WidgetPoint position;
     WidgetPoint offset;
 } WidgetPositionRecord;

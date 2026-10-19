@@ -9245,5 +9245,6 @@
   "src/overlays/ov015/calls/SetupWirelessSelectionSlot.c": "dsi/1.1",
   "src/overlays/ov002/calls/ResetMainPanelGraphics.c": "dsi/1.1",
   "src/overlays/ov002/calls/ResetSubPanelGraphics.c": "dsi/1.1",
-  "src/overlays/ov002/calls/BuildSelectionViewRecords.c": "dsi/1.1"
+  "src/overlays/ov002/calls/BuildSelectionViewRecords.c": "dsi/1.1",
+  "src/overlays/ov015/calls/HandleWirelessPanelNavigation.c": "dsi/1.1"
 }

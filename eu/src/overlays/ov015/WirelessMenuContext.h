@@ -22,7 +22,12 @@ typedef RecordSelectionView WirelessSelectionView;
 
 /* The menu allocates 0xdec4 bytes. Unrecovered fields remain opaque. */
 typedef struct WirelessMenuContext {
-    u8 reserved00[0xc2];
+    u8 reserved00[2];
+    s8 choiceType;
+    s8 choiceIndex;
+    u8 reserved04[0xbc - 4];
+    u8 focusMode;
+    u8 reservedbd[0xc2 - 0xbd];
     WirelessPaletteColor baseColor;
     WirelessPaletteColor highlightColor;
     u8 reservedc6[0x16];
@@ -52,5 +57,6 @@ typedef char WirelessSelectionViewSizeCheck[
     sizeof(WirelessSelectionView) == 0x4ac ? 1 : -1];
 
 void SetupWirelessSelectionSlot(s32 slot, WidgetPoint *position);
+void HandleWirelessPanelNavigation(WidgetPositionRecord *widget, u32 keys);
 
 #endif

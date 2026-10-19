@@ -288,6 +288,10 @@ src/overlays/ov015/calls/IsKnownMacAddress.c:
     complete
     .text       start:0x02072490 end:0x020724dc
 
+src/overlays/ov015/calls/HandleWirelessPanelNavigation.c:
+    complete
+    .text       start:0x020724dc end:0x02072718
+
 src/overlays/ov015/calls/UpdatePanelSelectionSound.c:
     complete
     .text       start:0x02072718 end:0x02072754
