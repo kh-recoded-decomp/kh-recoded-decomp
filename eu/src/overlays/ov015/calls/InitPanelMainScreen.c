@@ -18,6 +18,7 @@
 #define func_0202c48c func_0202c4a0
 #define func_0202cc6c Msg_OpenContainerAndReadHeader
 #define func_ov002_02067a84 ResetSelectionView
+#define func_ov002_02067c10 BuildSelectionViewRecords
 #define func_ov002_02068248 SetGroupSlotsVisible
 #define func_ov027_020b7d58 InitBackgroundContainer
 #define func_ov027_020b7e24 func_ov027_020b7e44

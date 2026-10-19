@@ -2,6 +2,7 @@
 #define RebuildPanelSelection_020712e8 RebuildPanelSelection
 #define ReleaseGroupSlots_0206842c ReleaseGroupSlots
 #define ResetSelectionView_02067a84 ResetSelectionView
+#define func_ov002_02067c10 BuildSelectionViewRecords
 #define SetGroupSlotsVisible_02068248 SetGroupSlotsVisible
 #define func_01ff8830 MI_CpuFill8
 #define g_panelState_02074ce0 data_ov013_02074ce0

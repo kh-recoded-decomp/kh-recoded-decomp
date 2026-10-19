@@ -2,6 +2,7 @@
 #include "src/overlays/ov015/WirelessBoardData.h"
 #include "nitro/fx_types.h"
 #include "src/overlays/ov015/WirelessPanelInitData.h"
+#include "src/overlays/ov002/RecordSelectionView.h"
 
 typedef WirelessPanelBgConfig BgContainerConfig;
 
@@ -43,10 +44,7 @@ typedef struct {
     s16 charOffset;
 } BgScreenRecord;
 
-typedef struct {
-    fx32 x;
-    fx32 y;
-} ElementPosition;
+typedef WidgetPoint ElementPosition;
 
 typedef struct {
     u32 words[4];
@@ -80,14 +78,7 @@ typedef struct {
     u8 flagE2Bit2 : 1;
     u8 : 5;
     u8 pad_E3[0x100 - 0xe3];
-    fx32 avatarX;
-    fx32 avatarY;
-    u8 pad_108[0x118 - 0x108];
-    ProfileBlock *profile;
-    u8 pad_11C[0x5aa - 0x11c];
-    u8 avatarAlpha;
-    u8 avatarMode : 2;
-    u8 : 6;
+    RecordSelectionView avatarView;
     u8 mainBg[0x4c];
     u8 subBg[0x4c];
     u8 mainObj[0x647c];
@@ -144,7 +135,6 @@ extern void SetAllElementObjectModes(void *container, int mode);
 extern void *FindWidgetById(void *container, int elementId);
 extern void SetEntrySlotsVisible(void *container, void *element, BOOL enabled);
 extern void func_ov027_020b97d8(void *container, void *element, int mode);
-extern void ResolveWidgetPositionComponents(void *container, void *element, ElementPosition *position, int flags);
 extern void func_ov027_020b91e8(void *container, void *element, ElementPosition *position, int flags);
 extern void func_ov027_020b9604(void *container, void *element);
 extern void func_ov027_020b96c0(void *container, void *element, u16 value);
@@ -158,9 +148,8 @@ extern int DispatchContextCommand(int query, int arg1, int arg2, int arg3);
 extern int CountSetFlagsInRange(void);
 extern ProfileBlock *GetPackedFields(void);
 extern void LoadAvatarObjPalette(BOOL useSubScreen);
-extern void ResetSelectionView(fx32 *position);
-extern void func_ov002_02067c10(void *container, fx32 *position);
-extern void SetGroupSlotsVisible(void *container, fx32 *position, int mode);
+extern void ResetSelectionView(RecordSelectionView *view);
+extern void SetGroupSlotsVisible(void *container, RecordSelectionView *view, int mode);
 
 static inline void SetElementEnabled(void *container, int elementId, BOOL enabled) {
     SetEntrySlotsVisible(container, FindWidgetById(container, elementId), enabled);
@@ -316,14 +305,16 @@ void SetupPanelGraphics(void) {
     LoadAvatarObjPalette(TRUE);
     state = data_ov015_0207e960;
     state->profileCopy = *GetPackedFields();
-    state->profile = &state->profileCopy;
-    ResetSelectionView(&data_ov015_0207e960->avatarX);
-    data_ov015_0207e960->avatarAlpha = 200;
-    data_ov015_0207e960->avatarMode = 3;
-    data_ov015_0207e960->avatarX = 0xc6000;
-    data_ov015_0207e960->avatarY = 0x29000;
-    func_ov002_02067c10(data_ov015_0207e960->subObj, &data_ov015_0207e960->avatarX);
-    SetGroupSlotsVisible(data_ov015_0207e960->subObj, &data_ov015_0207e960->avatarX, 1);
+    state->avatarView.selection = &state->profileCopy;
+    ResetSelectionView(&data_ov015_0207e960->avatarView);
+    data_ov015_0207e960->avatarView.basePriority = 200;
+    data_ov015_0207e960->avatarView.flags.mode = 3;
+    data_ov015_0207e960->avatarView.position.x = 0xc6000;
+    data_ov015_0207e960->avatarView.position.y = 0x29000;
+    BuildSelectionViewRecords(data_ov015_0207e960->subObj,
+                               &data_ov015_0207e960->avatarView);
+    SetGroupSlotsVisible(data_ov015_0207e960->subObj,
+                         &data_ov015_0207e960->avatarView, 1);
     SetWidgetRootDpadEnabled(data_ov015_0207e960->subObj, 1);
     SetWidgetRootTouchEnabled(data_ov015_0207e960->subObj, 1);
     SetElementEnabled(data_ov015_0207e960->subObj, 2, 0);

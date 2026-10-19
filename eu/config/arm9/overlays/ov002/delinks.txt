@@ -764,6 +764,10 @@ src/overlays/ov002/calls/LoadAvatarObjPalette.c:
     complete
     .text       start:0x02067b24 end:0x02067c10
 
+src/overlays/ov002/calls/BuildSelectionViewRecords.c:
+    complete
+    .text       start:0x02067c10 end:0x02067fd8
+
 src/overlays/ov002/calls/SelectCategoryRecord.c:
     complete
     .text       start:0x02067fd8 end:0x020680a4

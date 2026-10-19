@@ -3,6 +3,7 @@
 
 #include "nitro/types.h"
 #include "src/overlays/ov027/WidgetPosition.h"
+#include "src/overlays/ov002/RecordSelectionView.h"
 
 typedef union WirelessPaletteColor {
     u16 value;
@@ -17,28 +18,7 @@ typedef union WirelessPaletteColor {
 typedef struct WirelessSelectionResource {
     u8 data[0x70];
 } WirelessSelectionResource;
-
-typedef struct WirelessSelectionView {
-    WidgetPoint position;
-    WidgetPoint offset;
-    WidgetPoint scale;
-    WirelessSelectionResource *selection;
-    s32 recordIds[22];
-    u8 objSlots[22][16];
-    u8 recordSlots[22][16];
-    u8 priorities[22][16];
-    u8 counts[22];
-    u8 basePriority;
-    struct {
-        u8 mode : 2;
-        u8 flag2 : 1;
-        u8 visible : 1;
-        u8 flag4 : 1;
-        u8 flag5 : 1;
-        u8 flag6 : 1;
-        u8 flag7 : 1;
-    } flags;
-} WirelessSelectionView;
+typedef RecordSelectionView WirelessSelectionView;
 
 /* The menu allocates 0xdec4 bytes. Unrecovered fields remain opaque. */
 typedef struct WirelessMenuContext {

@@ -11,7 +11,6 @@ typedef struct SelectionWidget {
 extern WirelessMenuContext *data_ov015_0207e960;
 extern const PanelWidgetIds data_ov015_02079f64;
 extern void ResetSelectionView(WirelessSelectionView *view);
-extern void func_ov002_02067c10(void *manager, WirelessSelectionView *view);
 extern void SetGroupSlotsVisible(void *manager, WirelessSelectionView *view, BOOL visible);
 extern SelectionWidget *FindWidgetById(void *manager, s32 id);
 extern void SetIndexedRecordPriority(void *manager, s32 index, s32 priority);
@@ -37,7 +36,7 @@ void SetupWirelessSelectionSlot(s32 slot, WidgetPoint *position)
     if (position != NULL) {
         GetSelectionView(data_ov015_0207e960, slot)->position = *position;
     }
-    func_ov002_02067c10(data_ov015_0207e960->widgetManager,
+    BuildSelectionViewRecords(data_ov015_0207e960->widgetManager,
                        &data_ov015_0207e960->views[slot]);
     SetGroupSlotsVisible(data_ov015_0207e960->widgetManager,
                          &data_ov015_0207e960->views[slot], TRUE);
