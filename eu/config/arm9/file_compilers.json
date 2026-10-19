@@ -9247,5 +9247,8 @@
   "src/overlays/ov002/calls/ResetSubPanelGraphics.c": "dsi/1.1",
   "src/overlays/ov002/calls/BuildSelectionViewRecords.c": "dsi/1.1",
   "src/overlays/ov015/calls/HandleWirelessPanelNavigation.c": "dsi/1.1",
-  "src/calls/GetNormalizedPerpendicularVectorMasked.c": "dsi/1.3p1"
+  "src/calls/GetNormalizedPerpendicularVectorMasked.c": "dsi/1.3p1",
+  "src/overlays/ov034/calls/SetupResultsDisplay.c": "dsi/1.1",
+  "src/overlays/ov043/calls/UpdateCameraFrustumNormals.c": "dsi/1.1",
+  "src/overlays/ov103/calls/RedrawTheaterReportText.c": "dsi/1.1"
 }

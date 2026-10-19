@@ -7,7 +7,8 @@ extern u32 func_ov103_020bef14();
 extern u32 LoadGraphicsResources();
 extern u32 func_ov103_020bf0c4();
 extern u32 InitTextLayers_020bf1bc();
-extern u32 func_ov103_020bf3bc();
+typedef struct TheaterState TheaterState;
+extern void RedrawTheaterReportText(int unused, TheaterState *state);
 extern u32 func_ov103_020bf5e8();
 extern u32 SetupListPanel();
 extern u32 RefreshUnlockedEntries();
@@ -33,6 +34,6 @@ void func_ov103_020c033c(int *work) {
   InitTextLayers_020bf1bc(work);
   func_ov103_020bf5e8(work);
   SetupListPanel(&data_ov103_020c0500,work);
-  func_ov103_020bf3bc(0xffffffff,work);
+  RedrawTheaterReportText(0xffffffff,(TheaterState *)work);
   SetScenePhase(2,work);
 }

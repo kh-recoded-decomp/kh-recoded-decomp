@@ -3,12 +3,12 @@
 <!-- regions:start -->
 | Region | C code bytes | % | Functions |
 |---|---:|---:|---:|
-| **US** `BK9E` | 1,445,176 / 1,768,220 | **81.7%** | 9,961 / 10,359 |
-| **EU** `BK9P` | 1,500,868 / 1,658,216 | **90.5%** | 10,147 / 10,423 |
+| **US** `BK9E` | 1,446,312 / 1,768,220 | **81.8%** | 9,964 / 10,359 |
+| **EU** `BK9P` | 1,502,004 / 1,658,216 | **90.6%** | 10,150 / 10,423 |
 | US verified original assembly (not C) | 22,966 | 1.3% | 171 |
-| **Shared** (same function, matched in both) | 1,380,532 | 83.3% of EU | 9,312 |
+| **Shared** (same function, matched in both) | 1,381,496 | 83.3% of EU | 9,314 |
 
-8,138 shared functions are stored once in `src/` and built for both regions; 1,174 still have separate EU copies. 649 matched functions are US-only so far and 835 are EU-only. EU numbers come from `eu/tools/audit_progress.py`; per-module EU detail is in [eu/PROGRESS.md](eu/PROGRESS.md).
+8,141 shared functions are stored once in `src/` and built for both regions; 1,173 still have separate EU copies. 650 matched functions are US-only so far and 836 are EU-only. EU numbers come from `eu/tools/audit_progress.py`; per-module EU detail is in [eu/PROGRESS.md](eu/PROGRESS.md).
 <!-- regions:end -->
 
 ## US (BK9E revision 0)

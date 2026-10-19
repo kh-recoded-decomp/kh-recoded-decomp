@@ -1,0 +1,3 @@
+#define UpdateCameraFrustumNormals_020bd0a0 UpdateCameraFrustumNormals
+#define GetActiveCameraStateAddress func_ov021_020af614
+#include "src/ov043/camera/UpdateCameraFrustumNormals_020bd0a0.c"

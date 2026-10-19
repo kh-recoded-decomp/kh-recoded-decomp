@@ -88,6 +88,10 @@ src/overlays/ov034/calls/ResultsScreenIdle.c:
     complete
     .text       start:0x020bdcac end:0x020bdcb2
 
+src/overlays/ov034/calls/SetupResultsDisplay.c:
+    complete
+    .text       start:0x020bdcb4 end:0x020bde10
+
 src/overlays/ov034/calls/func_ov034_020bde10.c:
     complete
     .text       start:0x020bde10 end:0x020bde28

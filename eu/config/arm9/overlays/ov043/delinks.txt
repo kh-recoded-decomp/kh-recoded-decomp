@@ -102,6 +102,10 @@ src/overlays/ov043/calls/Ov043Camera_GetViewState.c:
     complete
     .text       start:0x020bd0ac end:0x020bd0c0
 
+src/overlays/ov043/calls/UpdateCameraFrustumNormals.c:
+    complete
+    .text       start:0x020bd0c0 end:0x020bd20c
+
 src/overlays/ov043/calls/IsShapeInViewDepth.c:
     complete
     .text       start:0x020bd20c end:0x020bd2a4

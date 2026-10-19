@@ -1094,11 +1094,6 @@
   "draft": "src/.port_scratch/big_020bb578/m1/UpdateResultsScreen_020bb578.c",
   "compiler": "mwccarm-4.0-1036"
  },
- "ov034:func_ov034_020bdc94": {
-  "percent": 99.38,
-  "draft": "src/.port_scratch/pragma_sweep/ov034_020bdc94_1513/SetupResultsDisplay_020bdc94.c",
-  "compiler": "mwccarm-4.0-1036"
- },
  "ov034:func_ov034_020be328": {
   "percent": 76.92,
   "draft": "src/.port_scratch/pragma_sweep/ov034_020be328_9725/SetupResultsShopList_020be328.c",
@@ -1237,11 +1232,6 @@
  "ov043:func_ov043_020bccc4": {
   "percent": 66.88,
   "draft": "src/.port_scratch/pragma_sweep/ov043_020bccc4_8856/UpdateFollowCamera_020bccc4.c",
-  "compiler": "mwccarm-4.0-1036"
- },
- "ov043:func_ov043_020bd0a0": {
-  "percent": 96.39,
-  "draft": "src/.port_scratch/pragma_sweep/ov043_020bd0a0_9676/UpdateViewPlanes_020bd0a0.c",
   "compiler": "mwccarm-4.0-1036"
  },
  "ov044:func_ov044_020d0728": {
@@ -1992,11 +1982,6 @@
  "ov103:func_ov103_020bf19c": {
   "percent": 67.65,
   "draft": "src/.port_scratch/pragma_sweep/ov103_020bf19c_8687/InitMenuTextLayers_020bf19c.c",
-  "compiler": "mwccarm-4.0-1036"
- },
- "ov103:func_ov103_020bf39c": {
-  "percent": 80.7,
-  "draft": "src/.port_scratch/b153/DrawMenuPage_020bf39c.c",
   "compiler": "mwccarm-4.0-1036"
  },
  "ov103:func_ov103_020bfe7c": {

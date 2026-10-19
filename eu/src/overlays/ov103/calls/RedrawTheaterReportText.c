@@ -1,0 +1,5 @@
+#define RedrawTheaterReportText_020bf39c RedrawTheaterReportText
+#define GetPackedText func_ov027_020ba2c8
+#define DrawShadowedAnchoredText DrawShadowedAnchoredText_020bf584
+#define IsTheaterEntryFlagSet IsEntryFlagSet_020c01a0
+#include "src/ov103/theater/RedrawTheaterReportText_020bf39c.c"
