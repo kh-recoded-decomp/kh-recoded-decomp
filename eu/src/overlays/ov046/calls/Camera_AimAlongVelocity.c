@@ -1,4 +1,4 @@
 #define Camera_AimAlongVelocity_020c199c Camera_AimAlongVelocity
 #define FixedPointAtan2_020062bc FX_Atan2Idx
-#define func_ov046_020c179c func_ov046_020c17bc
+#define func_ov046_020c179c Camera_BuildOrbitView
 #include "src/ov046/shared_engine/Camera_AimAlongVelocity_020c199c.c"

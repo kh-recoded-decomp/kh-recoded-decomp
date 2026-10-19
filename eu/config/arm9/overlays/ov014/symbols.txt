@@ -26,7 +26,7 @@ DrawSelectedEntryInfo kind:function(arm,size=0x1c8) addr:0x0206ea4c
 RefreshPanelCategorySlots kind:function(arm,size=0x48c) addr:0x0206ec14
 BuildPanelGroupEntries kind:function(arm,size=0x190) addr:0x0206f0a0
 SelectPanelEntry kind:function(arm,size=0x1fc) addr:0x0206f230
-func_ov014_0206f42c kind:function(arm,size=0x1a0) addr:0x0206f42c
+HitTestCategoryPanel kind:function(arm,size=0x1a0) addr:0x0206f42c
 func_ov014_0206f5cc kind:function(arm,size=0x174) addr:0x0206f5cc
 FindHitCellOam kind:function(arm,size=0x74) addr:0x0206f740
 HitTestPanelGroup kind:function(arm,size=0x48) addr:0x0206f7b4
@@ -35,7 +35,7 @@ data_ov014_0206f800 kind:data(any) addr:0x0206f800
 gPanelCategoryEntryCounts kind:data(any) addr:0x0206f808
 gPanelGroupCategories kind:data(any) addr:0x0206f81c
 gPanelGroupEntryOffsets kind:data(any) addr:0x0206f838
-data_ov014_0206f860 kind:data(any) addr:0x0206f860
+gPanelTouchProbeOffsets kind:data(any) addr:0x0206f860
 data_ov014_0206f86c kind:data(any) addr:0x0206f86c
 data_ov014_0206f880 kind:data(any) addr:0x0206f880
 data_ov014_0206f894 kind:data(any) addr:0x0206f894

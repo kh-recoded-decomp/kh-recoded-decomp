@@ -2,6 +2,6 @@
 #define FixedPointAtan2_020062bc FX_Atan2Idx
 #define GetBiasAdjustedField_0206dc80 GetBiasAdjustedField
 #define data_0205356c gSinFx12Table
-#define func_ov046_020c179c func_ov046_020c17bc
+#define func_ov046_020c179c Camera_BuildOrbitView
 #define g_cameraManager_020c34e0 gCameraManager
 #include "src/ov046/shared_engine/Camera_BuildFollowView_020c194c.c"

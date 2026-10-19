@@ -759,11 +759,6 @@
   "draft": "src/.port_scratch/b213/func_ov014_0206ec14.c",
   "compiler": "mwccarm-4.0-1036"
  },
- "ov014:func_ov014_0206f42c": {
-  "percent": 67.62,
-  "draft": "src/.port_scratch/b213/func_ov014_0206f42c.c",
-  "compiler": "mwccarm-4.0-1036"
- },
  "ov014:func_ov014_0206f5cc": {
   "percent": 45.16,
   "draft": "src/.port_scratch/pragma_sweep/ov014_0206f5cc_9044/func_ov014_0206f5cc.c",
@@ -1267,11 +1262,6 @@
  "ov046:func_ov046_020c13e0": {
   "percent": 96.63,
   "draft": "src/.port_scratch/pragma_sweep/ov046_020c13e0_3651/Camera_BlendToSideView_020c13e0.c",
-  "compiler": "mwccarm-4.0-1036"
- },
- "ov046:func_ov046_020c179c": {
-  "percent": 96.43,
-  "draft": "src/.port_scratch/pragma_sweep/ov046_020c179c_1253/Camera_BuildOrbitView_020c179c.c",
   "compiler": "mwccarm-4.0-1036"
  },
  "ov046:func_ov046_020c1fa0": {

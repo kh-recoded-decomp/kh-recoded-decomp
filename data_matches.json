@@ -7267,9 +7267,9 @@
       "end": "0x0206f880",
       "source": "src/ov014/data/Rodata_ov014_0206f860.c",
       "compiler": "mwccarm-4.0-1036",
-      "name": "ov014 data words",
-      "origin": "generated words",
-      "behavior": "Initialised data words, pointers named by their targets."
+      "name": "Panel touch probe offsets and adjacent configuration words",
+      "origin": "panel touch selection layout",
+      "behavior": "Five signed (x, y) probe offsets for the touch centre and four diagonal neighbours, two reserved bytes, and the unchanged adjacent configuration words."
     },
     {
       "module": "ov014",

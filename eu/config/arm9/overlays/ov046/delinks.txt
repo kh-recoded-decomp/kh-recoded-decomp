@@ -199,6 +199,10 @@ src/overlays/ov046/calls/Camera_GetFocusPosition.c:
     complete
     .text       start:0x020c17a0 end:0x020c17bc
 
+src/overlays/ov046/calls/Camera_BuildOrbitView.c:
+    complete
+    .text       start:0x020c17bc end:0x020c196c
+
 src/overlays/ov046/calls/Camera_BuildFollowView.c:
     complete
     .text       start:0x020c196c end:0x020c19bc

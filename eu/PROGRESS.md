@@ -24,7 +24,7 @@ an identified name (NitroSDK, NNS, MSL, ...) but no source yet.
 | PART ov011 | 26 | 0 | 0 | 1 | 27 | 96.3% | 89.3% |
 | DONE ov012 | 1 | 0 | 0 | 0 | 1 | 100.0% | 100.0% |
 | PART ov013 | 109 | 0 | 0 | 1 | 110 | 99.1% | 95.4% |
-| PART ov014 | 28 | 0 | 0 | 4 | 32 | 87.5% | 36.4% |
+| PART ov014 | 29 | 0 | 0 | 3 | 32 | 90.6% | 39.6% |
 | PART ov015 | 250 | 0 | 0 | 5 | 255 | 98.0% | 80.0% |
 | PART ov016 | 125 | 0 | 0 | 1 | 126 | 99.2% | 93.0% |
 | DONE ov017 | 149 | 0 | 0 | 0 | 149 | 100.0% | 100.0% |
@@ -56,7 +56,7 @@ an identified name (NitroSDK, NNS, MSL, ...) but no source yet.
 | PART ov043 | 28 | 0 | 0 | 1 | 29 | 96.6% | 76.4% |
 | DONE ov044 | 36 | 0 | 0 | 0 | 36 | 100.0% | 100.0% |
 | PART ov045 | 33 | 0 | 0 | 1 | 34 | 97.1% | 74.8% |
-| PART ov046 | 90 | 0 | 0 | 2 | 92 | 97.8% | 74.7% |
+| PART ov046 | 91 | 0 | 0 | 1 | 92 | 98.9% | 78.6% |
 | PART ov047 | 43 | 0 | 0 | 2 | 45 | 95.6% | 68.7% |
 | DONE ov048 | 9 | 0 | 0 | 0 | 9 | 100.0% | 100.0% |
 | DONE ov049 | 21 | 0 | 0 | 0 | 21 | 100.0% | 100.0% |
@@ -115,7 +115,7 @@ an identified name (NitroSDK, NNS, MSL, ...) but no source yet.
 | DONE ov102 | 3 | 0 | 0 | 0 | 3 | 100.0% | 100.0% |
 | DONE ov103 | 39 | 0 | 0 | 0 | 39 | 100.0% | 100.0% |
 | PART ov104 | 33 | 24 | 0 | 0 | 57 | 57.9% | 75.8% |
-| **TOTAL** | **10150** | **179** | **4** | **90** | **10423** | **97.4%** | **90.58%** |
+| **TOTAL** | **10152** | **179** | **4** | **88** | **10423** | **97.4%** | **90.63%** |
 
 ## Byte progress
 
@@ -124,7 +124,7 @@ the matched set is dominated by small wrappers. Bytes count real C only.
 
 | C matched bytes | Total code bytes | % |
 |---:|---:|---:|
-| **1,502,004** | **1,658,216** | **90.58%** |
+| **1,502,852** | **1,658,216** | **90.63%** |
 
 ## DATA progress
 
@@ -134,4 +134,4 @@ Naming is tracked separately and does not count as reconstructed DATA.
 | Metric | Complete | Total | % |
 |---|---:|---:|---:|
 | Reconstructed byte-exact DATA | **228,172** | **228,172** | **100.00%** |
-| Named DATA symbols | **1,336** | **2,345** | **56.97%** |
+| Named DATA symbols | **1,337** | **2,345** | **57.01%** |

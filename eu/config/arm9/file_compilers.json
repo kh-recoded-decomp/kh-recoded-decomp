@@ -9250,5 +9250,7 @@
   "src/calls/GetNormalizedPerpendicularVectorMasked.c": "dsi/1.3p1",
   "src/overlays/ov034/calls/SetupResultsDisplay.c": "dsi/1.1",
   "src/overlays/ov043/calls/UpdateCameraFrustumNormals.c": "dsi/1.1",
-  "src/overlays/ov103/calls/RedrawTheaterReportText.c": "dsi/1.1"
+  "src/overlays/ov103/calls/RedrawTheaterReportText.c": "dsi/1.1",
+  "src/overlays/ov014/calls/HitTestCategoryPanel.c": "dsi/1.1",
+  "src/overlays/ov046/calls/Camera_BuildOrbitView.c": "dsi/1.1"
 }

@@ -35,7 +35,7 @@ data_ov014_0206f800 kind:data(any) addr:0x0206f800
 data_ov014_0206f808 kind:data(any) addr:0x0206f808
 data_ov014_0206f81c kind:data(any) addr:0x0206f81c
 data_ov014_0206f838 kind:data(any) addr:0x0206f838
-data_ov014_0206f860 kind:data(any) addr:0x0206f860
+gPanelTouchProbeOffsets kind:data(any) addr:0x0206f860
 data_ov014_0206f86c kind:data(any) addr:0x0206f86c
 data_ov014_0206f880 kind:data(any) addr:0x0206f880
 data_ov014_0206f894 kind:data(any) addr:0x0206f894

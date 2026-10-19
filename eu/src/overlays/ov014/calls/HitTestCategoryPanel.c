@@ -1,0 +1,3 @@
+#define HitTestCategoryPanel_0206f42c HitTestCategoryPanel
+#define g_panelState_0206f9a0 data_ov014_0206f9a0
+#include "src/ov014/panel_state/HitTestCategoryPanel_0206f42c.c"
