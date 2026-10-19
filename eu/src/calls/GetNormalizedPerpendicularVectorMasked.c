@@ -1,0 +1,5 @@
+#define GetNormalizedPerpendicularVectorMasked_0204bac4 GetNormalizedPerpendicularVectorMasked
+#define NormalizeOrVerticalAxis_0204b8bc NormalizeOrVerticalAxis
+#define PickPerpendicularAxis_0204acb0 PickPerpendicularAxis
+#define VEC_CrossProduct_01ff9ea8 VEC_CrossProduct
+#include "src/arm9/math/GetNormalizedPerpendicularVectorMasked_0204bac4.c"

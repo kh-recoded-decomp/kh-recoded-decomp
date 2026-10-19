@@ -2,6 +2,27 @@
   "version": 1,
   "matches": [
     {
+      "name": "GetNormalizedPerpendicularVectorMasked",
+      "behavior": "Builds a normalized perpendicular fallback vector for axis rejection, with an optional vertical-only mode.",
+      "evidence": "Rebuilt C matches all 436 bytes in BK9E and BK9P, including six resolved call relocations.",
+      "uncertainty": "The historical skipHorizontal mode is retained, including its vertical fallback behavior.",
+      "domain": "fixed_point_math",
+      "origin": "ARM9 vector math",
+      "understanding": "subsystem",
+      "module": "arm9",
+      "symbol": "func_0204bac4",
+      "language": "c",
+      "source": "src/arm9/math/GetNormalizedPerpendicularVectorMasked_0204bac4.c",
+      "source_symbol": "GetNormalizedPerpendicularVectorMasked_0204bac4",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "PickPerpendicularAxis_0204acb0": "0x0204acb0",
+        "VEC_CrossProduct_01ff9ea8": "0x01ff9ea8",
+        "NormalizeOrVerticalAxis_0204b8bc": "0x0204b8bc"
+      }
+    },
+    {
       "name": "ModelAnimation_BlendJointRotation",
       "behavior": "Smoothly turns a model joint between animation poses and keeps its rotation axes normalized.",
       "evidence": "Decodes compressed joint rotations, blends two keyframes, and normalizes or reconstructs matrix basis vectors.",

@@ -24,6 +24,6 @@
 #define func_0204b834 AddScaledDirection
 #define func_0204b918 IsCrossNearZero
 #define func_0204b9c8 GetNormalizedCross
-#define func_0204bac4 func_0204bad8
+#define func_0204bac4 GetNormalizedPerpendicularVectorMasked
 #define func_0204bc78 GetAxisRejectionMasked
 #include "src/arm9/spatial_queries/TestBoxAgainstCylinder_0203b704.c"

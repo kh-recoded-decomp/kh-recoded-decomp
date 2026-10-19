@@ -1,5 +1,5 @@
 #define GetAxisRejectionMasked_0204bc78 GetAxisRejectionMasked
 #define ScaleVecFx32ComponentsConditional_0204b6c4 ScaleVecFx32ComponentsConditional
 #define VEC_DotProduct_01ff9e6c VEC_DotProduct
-#define func_0204bac4 func_0204bad8
+#define func_0204bac4 GetNormalizedPerpendicularVectorMasked
 #include "src/arm9/math/GetAxisRejectionMasked_0204bc78.c"

@@ -184,11 +184,6 @@
   "draft": "src/.port_scratch/pragma_sweep/arm9_0204970c_6606/SweepDiscAgainstEdge_0204970c.c",
   "compiler": "mwccarm-4.0-1036"
  },
- "arm9:func_0204bac4": {
-  "percent": 73.39,
-  "draft": "src/.port_scratch/pragma_sweep/arm9_0204bac4_1584/GetPerpendicularUnit_0204bac4.c",
-  "compiler": "mwccarm-4.0-1036"
- },
  "arm9:func_0204c6c0": {
   "percent": 30.86,
   "draft": "src/.port_scratch/pragma_sweep/arm9_0204c6c0_5786/SolveQuartic_0204c6c0.c",
