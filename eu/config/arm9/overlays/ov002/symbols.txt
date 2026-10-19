@@ -33,7 +33,7 @@ MeasurePanelTextSecondary kind:function(arm,size=0xa8) addr:0x02062890
 ReloadPanelResources kind:function(arm,size=0x70) addr:0x02062938
 func_ov002_020629a8 kind:function(arm,size=0x10) addr:0x020629a8
 ResetMainPanelGraphics kind:function(arm,size=0x158) addr:0x020629b8
-func_ov002_02062b10 kind:function(arm,size=0x15c) addr:0x02062b10
+ResetSubPanelGraphics kind:function(arm,size=0x15c) addr:0x02062b10
 IsPanelBusy kind:function(arm,size=0x1c) addr:0x02062c6c
 SetPanelStateFlag4 kind:function(arm,size=0x1c) addr:0x02062c88
 GetPanelMessageFile kind:function(arm,size=0x14) addr:0x02062ca4
@@ -250,7 +250,7 @@ data_ov002_0206ae24 kind:data(any) addr:0x0206ae24
 data_ov002_0206ae70 kind:data(any) addr:0x0206ae70
 data_ov002_0206aebc kind:data(any) addr:0x0206aebc
 data_ov002_0206af0c kind:data(any) addr:0x0206af0c
-data_ov002_0206af5c kind:data(any) addr:0x0206af5c
+gMenuRecordIconLayouts kind:data(any) addr:0x0206af5c
 gPanelResourcePaths kind:data(any) addr:0x0206c280
 sOv002_WxcWlmLanguageSZ_0206c290 kind:data(any) addr:0x0206c290
 sOv002_WxcWlm3EnSZ_0206c2a0 kind:data(any) addr:0x0206c2a0

@@ -20,19 +20,23 @@ typedef struct WirelessSelectionResource {
 
 typedef struct WirelessSelectionView {
     WidgetPoint position;
-    u8 reserved08[0x10];
+    WidgetPoint offset;
+    WidgetPoint scale;
     WirelessSelectionResource *selection;
     s32 recordIds[22];
     u8 objSlots[22][16];
     u8 recordSlots[22][16];
-    u8 extraSlots[22][16];
+    u8 priorities[22][16];
     u8 counts[22];
     u8 basePriority;
     struct {
         u8 mode : 2;
         u8 flag2 : 1;
         u8 visible : 1;
-        u8 reserved : 4;
+        u8 flag4 : 1;
+        u8 flag5 : 1;
+        u8 flag6 : 1;
+        u8 flag7 : 1;
     } flags;
 } WirelessSelectionView;
 

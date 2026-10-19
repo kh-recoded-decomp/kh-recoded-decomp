@@ -8,14 +8,19 @@ typedef struct RecordIconOffset {
     fx32 y;
 } RecordIconOffset;
 
-/* Only the signed offsets are interpreted by this helper. */
+/* A contiguous span of avatar resources and its signed display offsets. */
 typedef struct RecordCategoryIconEntry {
-    u16 metadata00;
-    u8 metadata02;
+    s16 firstEntry;
+    s8 entryCount;
     s8 xOffset;
     s8 yOffset;
-    u8 metadata05;
+    u8 reserved05;
 } RecordCategoryIconEntry;
+
+typedef char RecordCategoryIconEntrySizeCheck[
+    sizeof(RecordCategoryIconEntry) == 6 ? 1 : -1];
+
+extern const RecordCategoryIconEntry gMenuRecordIconLayouts[816];
 
 void GetRecordCategoryIconOffset(int category, int index, RecordIconOffset *out);
 

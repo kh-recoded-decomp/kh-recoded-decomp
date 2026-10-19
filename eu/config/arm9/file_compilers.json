@@ -9243,5 +9243,6 @@
   "src/overlays/ov015/calls/AnimateWirelessHighlightPalette.c": "dsi/1.1p1",
   "src/overlays/ov015/calls/AnimateWirelessBackgroundScroll.c": "dsi/1.1",
   "src/overlays/ov015/calls/SetupWirelessSelectionSlot.c": "dsi/1.1",
-  "src/overlays/ov002/calls/ResetMainPanelGraphics.c": "dsi/1.1"
+  "src/overlays/ov002/calls/ResetMainPanelGraphics.c": "dsi/1.1",
+  "src/overlays/ov002/calls/ResetSubPanelGraphics.c": "dsi/1.1"
 }

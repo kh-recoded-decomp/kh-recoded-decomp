@@ -144,6 +144,10 @@ src/overlays/ov002/calls/ResetMainPanelGraphics.c:
     complete
     .text       start:0x020629b8 end:0x02062b10
 
+src/overlays/ov002/calls/ResetSubPanelGraphics.c:
+    complete
+    .text       start:0x02062b10 end:0x02062c6c
+
 src/overlays/ov002/calls/IsPanelBusy.c:
     complete
     .text       start:0x02062c6c end:0x02062c88
@@ -976,10 +980,6 @@ src/ov002/data/Rodata_ov002_0206ae70.c:
     complete
     .rodata     start:0x0206ae70 end:0x0206af0c
 
-src/ov002/data/Rodata_ov002_0206af0c.c:
-    complete
-    .rodata     start:0x0206af0c end:0x0206c27c
-
 src/overlays/ov002/data/bss/Bss_ov002_0206c460.c:
     complete
     .bss        start:0x0206c460 end:0x0206c464
@@ -1035,6 +1035,10 @@ src/overlays/ov002/data/strings/Strings_ov002_0206c438.c:
 src/overlays/ov002/data/tables/PointerTables_ov002_0206c2f4.c:
     complete
     .data       start:0x0206c2f4 end:0x0206c35c
+
+src/overlays/ov002/data/tables/RecordCategoryIconTables.c:
+    complete
+    .rodata     start:0x0206af0c end:0x0206c27c
 
 src/overlays/ov002/data/tables/gMenuRecordCategoryCounts.c:
     complete

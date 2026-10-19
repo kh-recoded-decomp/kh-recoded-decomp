@@ -1798,11 +1798,11 @@
       "section": ".rodata",
       "start": "0x0206af0c",
       "end": "0x0206c27c",
-      "source": "src/ov002/data/Rodata_ov002_0206af0c.c",
+      "source": "src/overlays/ov002/data/tables/RecordCategoryIconTables.c",
       "compiler": "mwccarm-3.0-139",
-      "name": "ov002 data words",
-      "origin": "generated words",
-      "behavior": "Initialised data words, pointers named by their targets."
+      "name": "Menu record defaults and icon layouts",
+      "origin": "EU original DATA, typed from its renderer and icon-offset consumers",
+      "behavior": "Twenty default encoded record IDs and 816 six-byte avatar-resource layouts: signed first entry, signed entry count, signed X/Y offsets and a zero reserved byte. The final layout is a zero sentinel; the layout table contains no pointers."
     },
     {
       "module": "ov002",

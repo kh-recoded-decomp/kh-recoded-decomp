@@ -24,7 +24,9 @@ typedef struct Ov002PanelState {
     u8 modeDirty : 1;
     u8 mainBg3TextInitialized : 1;
     u8 mainBg2TextInitialized : 1;
-    u8 pad_10_bits : 4;
+    u8 subBg3TextInitialized : 1;
+    u8 subBg2TextInitialized : 1;
+    u8 pad_10_bits : 2;
     u8 stateFlags;
     u8 keyRepeat[0x1e];
     Ov002PanelFontResource fonts[2];   /* 0x30 */
@@ -36,6 +38,7 @@ typedef char Ov002PanelStateSizeCheck[
     sizeof(Ov002PanelState) == 0x130 ? 1 : -1];
 
 void ResetMainPanelGraphics(void);
+void ResetSubPanelGraphics(void);
 
 extern Ov002PanelState *data_ov002_0206c460;
 #define gOv002PanelState data_ov002_0206c460

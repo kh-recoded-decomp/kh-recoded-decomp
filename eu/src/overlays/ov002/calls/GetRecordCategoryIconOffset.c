@@ -3,8 +3,6 @@
 #include "src/overlays/ov002/MenuRecordCategories.h"
 #include "src/overlays/ov002/RecordCategoryIcons.h"
 
-extern const RecordCategoryIconEntry data_ov002_0206af5c[];
-
 void GetRecordCategoryIconOffset(int category, int index, RecordIconOffset *out)
 {
     int slot;
@@ -25,7 +23,7 @@ void GetRecordCategoryIconOffset(int category, int index, RecordIconOffset *out)
         slot += index;
         shift = 12;
     }
-    icon = &data_ov002_0206af5c[slot];
+    icon = &gMenuRecordIconLayouts[slot];
     out->x = -icon->xOffset << shift;
     out->y = -icon->yOffset << shift;
 }
