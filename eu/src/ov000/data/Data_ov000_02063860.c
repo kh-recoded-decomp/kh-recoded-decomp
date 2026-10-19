@@ -13,6 +13,7 @@ void *data_ov000_02063870[5] = {
     NULL,
 };
 
-u32 data_ov000_02063860[4] = {
+/* Selection index -> action returned by HandleTitleMenuInput. */
+u32 gTitleMenuActionCodes[4] = {
     0x00000007, 0x00000008, 0x00000009, 0x0000000A,
 };

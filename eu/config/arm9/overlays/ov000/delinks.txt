@@ -84,6 +84,10 @@ src/overlays/ov000/calls/SetPanelMode.c:
     complete
     .text       start:0x02061dc4 end:0x02061de8
 
+src/overlays/ov000/calls/HandleTitleMenuInput.c:
+    complete
+    .text       start:0x02061de8 end:0x02061f54
+
 src/overlays/ov000/calls/SubmitNumberedPanelRequest.c:
     complete
     .text       start:0x02061f54 end:0x02061fc0

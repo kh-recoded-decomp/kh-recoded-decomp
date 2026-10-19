@@ -234,11 +234,6 @@
   "draft": "src/.port_scratch/b276/t3/r/DrawModelFacingQuads_01fff9a0.c",
   "compiler": "mwccarm-4.0-1036"
  },
- "ov000:func_ov000_02061de8": {
-  "percent": 98.9,
-  "draft": "src/.port_scratch/me/g/HandleTitleMenuInput_02061de8.c",
-  "compiler": "mwccarm-4.0-1036"
- },
  "ov000:func_ov000_02062a98": {
   "percent": 66.67,
   "draft": "src/.port_scratch/pragma_sweep/ov000_02062a98_9699/UpdateTitleSaveCheck_02062a98.c",

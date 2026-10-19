@@ -2,6 +2,32 @@
   "version": 1,
   "matches": [
     {
+      "name": "HandleTitleMenuInput",
+      "behavior": "Navigates the four title-menu choices while skipping disabled entries, records navigation ticks, and starts the selected transition and audio before returning its action code on confirmation.",
+      "evidence": "Shared readable C rebuilt with the pinned compiler matches all 364 original bytes in BK9E and BK9P, including ten call sites and two DATA references.",
+      "uncertainty": "The meanings of the four action codes and individual sound/stream identifiers are not established.",
+      "domain": "panel_state",
+      "origin": "title-menu navigation and confirmation",
+      "understanding": "subsystem",
+      "module": "ov000",
+      "symbol": "func_ov000_02061de8",
+      "language": "c",
+      "source": "src/ov000/panel_state/HandleTitleMenuInput_02061de8.c",
+      "source_symbol": "HandleTitleMenuInput_02061de8",
+      "compiler": "mwccarm-4.0-1018",
+      "mode": "arm",
+      "bindings": {
+        "IsPanelFlagSet": "0x2061bb0",
+        "PlaySoundEffect": "0x204d924",
+        "OS_GetTick": "0x2003fd4",
+        "SetPanelState": "0x2061db0",
+        "PrepareAndStartStream": "0x204dd4c",
+        "StopSoundStreamAtIndex": "0x204deb0",
+        "data_02060500": "0x2060500",
+        "gTitleMenuActionCodes": "0x2063860"
+      }
+    },
+    {
       "name": "SweepInflatedSphereAgainstCylinder",
       "behavior": "Copies a sphere with its radius increased by the cylinder radius, runs the existing sphere-cylinder sweep with flag 8, and sets contact kind 3 on success.",
       "evidence": "Shared typed C rebuilt with the pinned compiler matches all 128 bytes in BK9E and BK9P, including the sweep call relocation.",

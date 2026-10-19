@@ -5,4 +5,5 @@
 #define StopSoundStreamAtIndex_0204deb0 StopSoundStreamAtIndex
 #define UpdatePanelInputWithTimeout_02062838 UpdatePanelInputWithTimeout
 #define func_0204f5ec ReadHalfword
+#define func_ov000_02061de8 HandleTitleMenuInput
 #include "src/ov000/panel_state/UpdatePanelInputWithTimeout_02062838.c"

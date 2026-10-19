@@ -18,7 +18,7 @@ ApplyPanelMenuFlags kind:function(arm,size=0x110) addr:0x02061bf4
 HighlightPanelCursorLayer kind:function(arm,size=0xac) addr:0x02061d04
 SetPanelState kind:function(arm,size=0x14) addr:0x02061db0
 SetPanelMode kind:function(arm,size=0x24) addr:0x02061dc4
-func_ov000_02061de8 kind:function(arm,size=0x16c) addr:0x02061de8
+HandleTitleMenuInput kind:function(arm,size=0x16c) addr:0x02061de8
 SubmitNumberedPanelRequest kind:function(arm,size=0x6c) addr:0x02061f54
 ShowTitleNotice kind:function(arm,size=0x2b0) addr:0x02061fc0
 EnterPanelPhase kind:function(arm,size=0x48) addr:0x02062270
@@ -85,7 +85,7 @@ data_ov000_020637d4 kind:data(any) addr:0x020637d4
 gTitleScreenTransitionHandlers kind:data(any) addr:0x02063840
 gTitleScreenInputHandlers kind:data(any) addr:0x02063848
 gTitleScreenOptionHandlers kind:data(any) addr:0x02063850
-data_ov000_02063860 kind:data(any) addr:0x02063860
+gTitleMenuActionCodes kind:data(any) addr:0x02063860
 data_ov000_02063870 kind:data(any) addr:0x02063870
 gPanelPhaseHandlers kind:data(any) addr:0x02063884
 gPanelInitialStateHandler kind:data(any) addr:0x02063888
