@@ -2,6 +2,52 @@
   "version": 1,
   "matches": [
     {
+      "name": "UpdateScrollScreenBrightness",
+      "behavior": "Updates a scroll-text screen fade from its timer and state, selects the plane mask from the work mode, and invokes the per-screen brightness and completion callbacks.",
+      "evidence": "Shared readable C matches all 364 original bytes in BK9E and BK9P, including both timer calls and the callback-table/global references. Uses the proven 32-byte global descriptor and 0x10940-byte screen stride.",
+      "uncertainty": "State values 1 and 2 are kept as observed fade branches; the full meaning of the work mode and unused descriptor fields remains partial.",
+      "domain": "scroll_text",
+      "origin": "scroll-text screen fade callbacks",
+      "understanding": "subsystem",
+      "module": "ov004",
+      "symbol": "func_ov004_020625fc",
+      "language": "c",
+      "source": "src/ov004/scroll_text/UpdateScrollScreenBrightness_020625fc.c",
+      "source_symbol": "UpdateScrollScreenBrightness_020625fc",
+      "compiler": "mwccarm-4.0-1018",
+      "mode": "arm",
+      "bindings": {
+        "FrameTimer_IsExpired": "0x206146c",
+        "FrameTimer_Interpolate": "0x206142c",
+        "gOv004Callbacks": "0x2063be0",
+        "gScrollTextGlobals": "0x20645a0"
+      }
+    },
+    {
+      "name": "LoadScrollTextBackground",
+      "behavior": "Loads a scroll-background layer and queues its palette; either places a scrolling window and copies the visible tiles, or queues complete character and screen-map uploads.",
+      "evidence": "Shared readable C matches all 324 original bytes, six call sites and two DATA references in BK9E and BK9P. The complete global descriptor is 32 bytes, as confirmed by its BSS owner; the four transfer recipes are typed and verified separately.",
+      "uncertainty": "The unused descriptor fields and most of the larger scroll-text work area are left unnamed; transfer-task and palette-slot values are preserved rather than inferred from UI appearance.",
+      "domain": "scroll_text",
+      "origin": "scroll-text background resources",
+      "understanding": "subsystem",
+      "module": "ov004",
+      "symbol": "func_ov004_02063414",
+      "language": "c",
+      "source": "src/ov004/scroll_text/LoadScrollTextBackground_02063414.c",
+      "source_symbol": "LoadScrollTextBackground_02063414",
+      "compiler": "mwccarm-4.0-1018",
+      "mode": "arm",
+      "bindings": {
+        "GetBgDataFromArchive": "0x202b555",
+        "NNS_GfdRegisterNewVramTransferTask": "0x2014090",
+        "SetWindowCorners": "0x2061830",
+        "CopyScrollTextTiles": "0x2061d5c",
+        "gScrollTextBackgroundTransfers": "0x2063bf0",
+        "gScrollTextGlobals": "0x20645a0"
+      }
+    },
+    {
       "name": "UpdateStageLinkPanels",
       "behavior": "Finds reciprocal links for the current node, maps their directions to rotated scene panels, toggles the selected-node field objects and requests a link-menu redraw.",
       "evidence": "Shared readable C with a typed six-node adjacency/rotation view matches all 396 original bytes, ten call sites and the menu-state reference in BK9E and BK9P.",

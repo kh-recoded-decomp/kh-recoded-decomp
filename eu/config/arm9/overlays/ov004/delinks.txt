@@ -96,6 +96,10 @@ src/overlays/ov004/calls/UpdateScrollTextFadeOut.c:
     complete
     .text       start:0x02062530 end:0x020625fc
 
+src/overlays/ov004/calls/UpdateScrollScreenBrightness.c:
+    complete
+    .text       start:0x020625fc end:0x02062768
+
 src/overlays/ov004/calls/UpdateScrollTextCrossfade.c:
     complete
     .text       start:0x02062768 end:0x02062990
@@ -131,6 +135,10 @@ src/overlays/ov004/calls/ApplyScrollTextOffsets.c:
 src/overlays/ov004/calls/InitTitleDisplay.c:
     complete
     .text       start:0x02063218 end:0x02063414
+
+src/overlays/ov004/calls/LoadScrollTextBackground.c:
+    complete
+    .text       start:0x02063414 end:0x02063558
 
 src/overlays/ov004/calls/end_key_share_and_register_result.c:
     complete

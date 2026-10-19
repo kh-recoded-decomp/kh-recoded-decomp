@@ -1,0 +1,2 @@
+#define UpdateScrollScreenBrightness_020625fc UpdateScrollScreenBrightness
+#include "src/ov004/scroll_text/UpdateScrollScreenBrightness_020625fc.c"

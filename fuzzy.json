@@ -639,19 +639,9 @@
   "draft": "src/.port_scratch/b209/h4/UpdateScrollTextFrame_020622f0.c",
   "compiler": "mwccarm-4.0-1036"
  },
- "ov004:func_ov004_020625fc": {
-  "percent": 91.21,
-  "draft": "src/.port_scratch/pragma_sweep/ov004_020625fc_6283/UpdateScrollTextFade_020625fc.c",
-  "compiler": "mwccarm-4.0-1036"
- },
  "ov004:func_ov004_02062b70": {
   "percent": 59.7,
   "draft": "src/.port_scratch/pragma_sweep/ov004_02062b70_7352/DrawScrollTextLine_02062b70.c",
-  "compiler": "mwccarm-4.0-1036"
- },
- "ov004:func_ov004_02063414": {
-  "percent": 68.29,
-  "draft": "src/.port_scratch/pragma_sweep/ov004_02063414_6249/LoadScrollTextBg_02063414.c",
   "compiler": "mwccarm-4.0-1036"
  },
  "ov004:func_ov004_02063598": {

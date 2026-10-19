@@ -6563,9 +6563,9 @@
       "end": "0x02064500",
       "source": "src/ov004/data/Rodata_ov004_02063bf0.c",
       "compiler": "mwccarm-4.0-1036",
-      "name": "ov004 data words",
-      "origin": "generated words",
-      "behavior": "Initialised data words, pointers named by their targets."
+      "name": "Scroll-text transfer recipes and data words",
+      "origin": "scroll-text background rendering",
+      "behavior": "Four typed per-layer VRAM task and palette-slot recipes, followed by the existing data-word tables. The complete DATA range remains byte-exact."
     },
     {
       "module": "ov004",

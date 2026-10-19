@@ -42,7 +42,7 @@ func_ov004_02063aec kind:function(arm,size=0xbc) addr:0x02063aec
 data_ov004_02063ba8 kind:data(any) addr:0x02063ba8
 data_ov004_02063bb0 kind:data(any) addr:0x02063bb0
 data_ov004_02063be0 kind:data(any) addr:0x02063be0
-data_ov004_02063bf0 kind:data(any) addr:0x02063bf0
+gScrollTextBackgroundTransfers kind:data(any) addr:0x02063bf0
 data_ov004_02063c30 kind:data(any) addr:0x02063c30
 data_ov004_02063ec0 kind:data(any) addr:0x02063ec0
 data_ov004_02064520 kind:data(any) addr:0x02064520

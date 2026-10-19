@@ -22,7 +22,7 @@ func_ov004_020622e4 kind:function(arm,size=0xc) addr:0x020622e4
 UpdateScrollTextFrame_020622f0 kind:function(arm,size=0x23c) addr:0x020622f0
 func_ov004_0206252c kind:function(arm,size=0x4) addr:0x0206252c
 UpdateScrollTextFadeOut kind:function(arm,size=0xcc) addr:0x02062530
-func_ov004_020625fc kind:function(arm,size=0x16c) addr:0x020625fc
+UpdateScrollScreenBrightness kind:function(arm,size=0x16c) addr:0x020625fc
 UpdateScrollTextCrossfade kind:function(arm,size=0x228) addr:0x02062768
 UpdateScrollTextScreens kind:function(arm,size=0x40) addr:0x02062990
 RunScrollTextFrame kind:function(arm,size=0x1a0) addr:0x020629d0
@@ -32,7 +32,7 @@ FeedScrollTextLine kind:function(arm,size=0x234) addr:0x02062dc0
 SaveScrollOffsets kind:function(arm,size=0x78) addr:0x02062ff4
 ApplyScrollTextOffsets kind:function(arm,size=0x1ac) addr:0x0206306c
 InitTitleDisplay kind:function(arm,size=0x1fc) addr:0x02063218
-func_ov004_02063414 kind:function(arm,size=0x144) addr:0x02063414
+LoadScrollTextBackground kind:function(arm,size=0x144) addr:0x02063414
 end_key_share_and_register_result kind:function(arm,size=0x40) addr:0x02063558
 InitScrollTextImageLists kind:function(arm,size=0xd4) addr:0x02063598
 SetupScrollTextBackgrounds kind:function(arm,size=0x31c) addr:0x0206366c
@@ -42,7 +42,7 @@ LoadScrollTextEntryTable kind:function(arm,size=0xbc) addr:0x02063aec
 data_ov004_02063ba8 kind:data(any) addr:0x02063ba8
 data_ov004_02063bb0 kind:data(any) addr:0x02063bb0
 gOv004Callbacks kind:data(any) addr:0x02063be0
-data_ov004_02063bf0 kind:data(any) addr:0x02063bf0
+gScrollTextBackgroundTransfers kind:data(any) addr:0x02063bf0
 data_ov004_02063c30 kind:data(any) addr:0x02063c30
 data_ov004_02063ec0 kind:data(any) addr:0x02063ec0
 gScrollTextHandlers kind:data(any) addr:0x02064520

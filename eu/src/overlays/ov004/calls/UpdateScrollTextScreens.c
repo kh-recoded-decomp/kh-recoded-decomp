@@ -1,4 +1,5 @@
 #define UpdateScrollTextCrossfade_02062768 UpdateScrollTextCrossfade
 #define UpdateScrollTextScreens_02062990 UpdateScrollTextScreens
+#define func_ov004_020625fc UpdateScrollScreenBrightness
 #define g_scrollText_020645a0 gScrollTextGlobals
 #include "src/ov004/scroll_text/UpdateScrollTextScreens_02062990.c"

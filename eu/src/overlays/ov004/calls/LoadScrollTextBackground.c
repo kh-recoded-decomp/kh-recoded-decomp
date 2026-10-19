@@ -1,0 +1,2 @@
+#define LoadScrollTextBackground_02063414 LoadScrollTextBackground
+#include "src/ov004/scroll_text/LoadScrollTextBackground_02063414.c"

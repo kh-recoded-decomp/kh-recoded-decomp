@@ -4,4 +4,5 @@
 #define RunScrollTextScript_020619a0 RunScrollTextScript
 #define StopSoundStreamAtIndex_0204deb0 StopSoundStreamAtIndex
 #define g_scrollText_020645a0 gScrollTextGlobals
+#define func_ov004_02063414 LoadScrollTextBackground
 #include "src/ov004/scroll_text/RunScrollTextScript_020619a0.c"
