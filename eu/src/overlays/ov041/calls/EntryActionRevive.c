@@ -11,7 +11,7 @@ typedef float f32;
 
 extern StageEntryAction *GetEntryAction(StageEntry *entry);
 extern int GetEntryAnimationFrame(StageEntry *entry);
-extern void func_ov041_020c347c(StageEntry *entry, fx32 frame);
+extern void PlayEntryActionSound(StageEntry *entry, fx32 frame);
 extern void SetSceneEntryAnimation(StageEntry *entry, int animation, int blend, int reset);
 extern void SetEntryState(StageEntry *entry, int state);
 extern u32 IsEntryFlag2Set(StageEntry *entry);
@@ -32,14 +32,14 @@ void EntryActionRevive(u8 entryIndex)
     int frame = GetEntryAnimationFrame(entry);
     int i;
 
-    func_ov041_020c347c(entry, frame);
+    PlayEntryActionSound(entry, frame);
     switch (entry->stateStep) {
     case 0:
         entry->stateStep++;
     case 1:
         SetSceneEntryAnimation(entry, action->animation, 1, 0);
         frame = GetEntryAnimationFrame(entry);
-        func_ov041_020c347c(entry, frame);
+        PlayEntryActionSound(entry, frame);
         entry->stateStep++;
     case 2:
         if (frame < FRAME_TO_FX32(action->castFrame)) {

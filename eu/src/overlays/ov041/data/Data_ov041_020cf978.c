@@ -8,7 +8,7 @@ extern void func_ov041_020c8f48(void);
 extern void func_ov041_020c948c(void);
 extern void func_ov041_020ca02c(void);
 extern void EntryActionRevive(void);
-extern void func_ov041_020ca5f4(void);
+extern void EntryActionHeal(void);
 extern void EntryActionOnSelf(void);
 extern void func_ov041_020ca8fc(void);
 extern void func_ov041_020cbcf0(void);
@@ -42,7 +42,7 @@ void (*gStageEntryActionHandlers[17])(void) = {
     func_ov041_020c948c,
     func_ov041_020ca02c,
     EntryActionRevive,
-    func_ov041_020ca5f4,
+    EntryActionHeal,
     EntryActionOnSelf,
     func_ov041_020ca8fc,
     func_ov041_020cbcf0,

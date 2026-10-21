@@ -8,7 +8,8 @@ typedef struct StageEntryNode {
     u16 flags;
     u8 reserved02[0x7a];
     u16 yaw; /* used while flags has STAGE_MODEL_USE_YAW */
-    u8 reserved07e[0x26];
+    u8 reserved07e[2];
+    MtxFx33 rotation;
     VecFx32 position;
     u8 reserved0b0[0xe4];
 } StageEntryNode;
@@ -50,6 +51,7 @@ typedef struct StageGroundShadow {
 #define STAGE_ENTRY_PRESSED_ATTACK 0x80 /* A pressed in time as the attacker */
 #define STAGE_ENTRY_PRESSED_GUARD 0x600 /* Y pressed in time as the defender (status 9 counts as one) */
 #define STAGE_ENTRY_PRESS_PANEL 0x10000 /* keep showing the lit press panel */
+#define STAGE_ENTRY_MISSED 0x100000 /* its last action missed */
 #define STAGE_ENTRY_FLAG_800 0x800
 #define STAGE_ENTRY_STEP_BACK 0x4000
 #define STAGE_ENTRY_FROZEN 0x8000
@@ -93,6 +95,21 @@ typedef struct StagePathModel {
     u16 angle; /* facing along direction: its cosine */
     u16 turn; /* and its sine */
 } StagePathModel;
+
+/* An item to spawn: SpawnStageItem's category, index and animation. */
+typedef struct StageItemSpec {
+    u16 category;
+    u8 index;
+    u8 animation;
+} StageItemSpec;
+
+/* What an entry's hit does (filled by func_ov041_020c4d58). */
+typedef struct StageEntryHit {
+    u8 reserved00[0xe];
+    StageItemSpec effect; /* shown on the target */
+    StageItemSpec altEffect; /* shown instead when a player entry's hit sets result bit 2 */
+    u8 reserved16[6];
+} StageEntryHit;
 
 /* StageEntryMove.phase: out to a destination, a pause there, then back to its grid place */
 #define STAGE_MOVE_IDLE 0
@@ -182,7 +199,8 @@ struct StageEntry {
     u8 actorSlot;
     u8 reserved32d[7];
     StageShadowActor *attachment;
-    u8 reserved338[0x20];
+    u8 reserved338[4];
+    StageEntryHit hit;
     StageEntryMove move;
     StageResourceItem *effects[5]; /* effect items following it */
     StageResourceItem *statusItem;

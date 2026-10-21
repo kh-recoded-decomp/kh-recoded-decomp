@@ -9473,5 +9473,9 @@
   "src/overlays/ov041/auto/SetStageCaptionLine.c": "dsi/1.1",
   "src/overlays/ov041/calls/GetEntryNeededRange.c": "dsi/1.1",
   "src/overlays/ov041/calls/ChooseEntryMainTarget.c": "dsi/1.1",
-  "src/overlays/ov041/calls/AimEntryPathModel.c": "dsi/1.1"
+  "src/overlays/ov041/calls/AimEntryPathModel.c": "dsi/1.1",
+  "src/overlays/ov041/calls/ApplyActionHit.c": "dsi/1.1",
+  "src/overlays/ov041/calls/PlayEntryActionSound.c": "dsi/1.1",
+  "src/overlays/ov041/calls/ApplyActionHitWithSound.c": "dsi/1.1",
+  "src/overlays/ov041/calls/EntryActionHeal.c": "dsi/1.1"
 }

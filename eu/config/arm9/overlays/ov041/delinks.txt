@@ -528,6 +528,10 @@ src/overlays/ov041/calls/UpdateEntryHpGauge.c:
     complete
     .text       start:0x020c33fc end:0x020c347a
 
+src/overlays/ov041/calls/PlayEntryActionSound.c:
+    complete
+    .text       start:0x020c347c end:0x020c34e2
+
 src/overlays/ov041/calls/PlaySoundOnEntryFrame.c:
     complete
     .text       start:0x020c34e4 end:0x020c3512
@@ -640,9 +644,17 @@ src/overlays/ov041/calls/ApplyActionToTargets.c:
     complete
     .text       start:0x020c46c4 end:0x020c46e8
 
+src/overlays/ov041/calls/ApplyActionHit.c:
+    complete
+    .text       start:0x020c46e8 end:0x020c48b4
+
 src/overlays/ov041/calls/ForEachActionTarget.c:
     complete
     .text       start:0x020c48b4 end:0x020c48de
+
+src/overlays/ov041/calls/ApplyActionHitWithSound.c:
+    complete
+    .text       start:0x020c48e0 end:0x020c4aa0
 
 src/overlays/ov041/calls/ClearEntryActionState.c:
     complete
@@ -687,6 +699,10 @@ src/overlays/ov041/calls/StageEntryStateHealed.c:
 src/overlays/ov041/calls/EntryActionRevive.c:
     complete
     .text       start:0x020ca4a8 end:0x020ca5f4
+
+src/overlays/ov041/calls/EntryActionHeal.c:
+    complete
+    .text       start:0x020ca5f4 end:0x020ca800
 
 src/overlays/ov041/calls/EntryActionOnSelf.c:
     complete

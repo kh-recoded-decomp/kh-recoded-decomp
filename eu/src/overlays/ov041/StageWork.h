@@ -68,7 +68,8 @@ typedef struct StageItemModel {
     u8 reserved07c[4];
     MtxFx33 rotation; /* with position: the 4x3 matrix it is drawn with */
     VecFx32 position;
-    u8 reserved0b0[0x28];
+    VecFx32 scale;
+    u8 reserved0bc[0x1c];
     u8 blend[0x24];
     u16 colorScale;
     u8 reserved0fe[0x3a];
@@ -142,7 +143,8 @@ typedef struct StageScaleFactors {
 /* An action an entry can take (from its list, or an item's). */
 typedef struct StageEntryAction {
     s16 soundSeqArc;
-    u8 reserved02[3];
+    u8 reserved02[2];
+    s8 hitSoundIndex; /* sound played when it hits */
     s8 soundIndex;
     s16 soundFrame; /* animation frame the sound plays on */
     u32 unk08; /* (word-sized: the action is copied by words) */
@@ -162,7 +164,10 @@ typedef struct StageEntryAction {
     u8 effectCategory;
     u8 effectIndex;
     u8 effectAnimation;
-    u8 reserved2e[6];
+    u8 healEffectCategory; /* the item shown over a healed entry */
+    u8 healEffectIndex; /* (3 on a kind 1 action: its hit sound plays even when it misses) */
+    u8 healEffectAnimation;
+    u8 reserved31[3];
     u8 statusTurns;
     u8 itemSlot;
     u8 effect;

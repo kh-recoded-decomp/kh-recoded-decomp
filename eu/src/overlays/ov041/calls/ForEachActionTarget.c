@@ -1,14 +1,14 @@
 #include "nitro/types.h"
 #include "src/overlays/ov041/StageEntryRender.h"
 
-extern void func_ov041_020c48e0(StageEntry *entry, u8 targetIndex, BOOL arg, int a, int b);
+extern void ApplyActionHitWithSound(StageEntry *entry, u8 targetIndex, BOOL pressCheck, int seqArcNo, int soundIndex);
 
-/* Runs func_ov041_020c48e0 on each of an entry's targets. */
-void ForEachActionTarget(StageEntry *entry, int a, int b)
+/* Applies an entry's hit to each of its targets, with the given hit sound. */
+void ForEachActionTarget(StageEntry *entry, int seqArcNo, int soundIndex)
 {
     int i;
 
     for (i = 0; i < entry->targetCount; i++) {
-        func_ov041_020c48e0(entry, entry->targets[i], TRUE, a, b);
+        ApplyActionHitWithSound(entry, entry->targets[i], TRUE, seqArcNo, soundIndex);
     }
 }
