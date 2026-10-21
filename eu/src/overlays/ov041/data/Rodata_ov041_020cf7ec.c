@@ -23,8 +23,8 @@ const u32 data_ov041_020cf7f8[3] = {
     0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF,
 };
 
-const u32 data_ov041_020cf7f0[2] = {
-    0x00000000, 0x00000001,
+const StageSoundChoices gStageStatusSounds = {
+    {0, 1},
 };
 
 const StageActionChoices gEmptyActionChoices = {

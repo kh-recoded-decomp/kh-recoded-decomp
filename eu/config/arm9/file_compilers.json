@@ -9478,5 +9478,8 @@
   "src/overlays/ov041/calls/PlayEntryActionSound.c": "dsi/1.1",
   "src/overlays/ov041/calls/ApplyActionHitWithSound.c": "dsi/1.1",
   "src/overlays/ov041/calls/EntryActionHeal.c": "dsi/1.1",
-  "src/overlays/ov041/calls/StageStateEndTurn.c": "dsi/1.1"
+  "src/overlays/ov041/calls/StageStateEndTurn.c": "dsi/1.1",
+  "src/overlays/ov041/calls/StageStateCommandMenu.c": "dsi/1.1",
+  "src/overlays/ov041/calls/StageStateRunCommands.c": "dsi/1.1",
+  "src/overlays/ov041/calls/EntryStateStatusCommand.c": "dsi/1.1"
 }

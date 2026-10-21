@@ -280,6 +280,14 @@ src/overlays/ov041/calls/StageStateRunTurn.c:
     complete
     .text       start:0x020bf82c end:0x020bf924
 
+src/overlays/ov041/calls/StageStateCommandMenu.c:
+    complete
+    .text       start:0x020bf924 end:0x020bfbe0
+
+src/overlays/ov041/calls/StageStateRunCommands.c:
+    complete
+    .text       start:0x020bfbe0 end:0x020bfe84
+
 src/overlays/ov041/calls/StageStateChooseTarget.c:
     complete
     .text       start:0x020bfe84 end:0x020bfff4
@@ -691,6 +699,10 @@ src/overlays/ov041/calls/StageEntryStateAdvance.c:
 src/overlays/ov041/calls/StageEntryStateAppear.c:
     complete
     .text       start:0x020c6654 end:0x020c6740
+
+src/overlays/ov041/calls/EntryStateStatusCommand.c:
+    complete
+    .text       start:0x020c6740 end:0x020c69cc
 
 src/overlays/ov041/calls/StageEntryStateRevived.c:
     complete

@@ -145,6 +145,11 @@ typedef struct StageHpThresholds {
 } StageHpThresholds;
 
 /* Entry indices (or columns) a target is picked from at random (-1 = none). */
+/* Two sounds of which one is picked at random. */
+typedef struct StageSoundChoices {
+    int indices[2];
+} StageSoundChoices;
+
 typedef struct StageTargetCandidates {
     int indices[9];
 } StageTargetCandidates;

@@ -189,15 +189,23 @@ typedef struct StageEntryAction {
 #define STAGE_WORK_SKIP_CHANCE_B 0x10
 #define STAGE_WORK_FIELD_OP_DONE 0x4000
 #define STAGE_WORK_PANEL_MOVING 0x4000000
+#define STAGE_WORK_RUNNING_COMMANDS 0x8000000 /* the chosen menu commands are being carried out */
 #define STAGE_WORK_TURN_STARTED 0x10000000
 #define STAGE_WORK_FAST_PANELS 0x20000000
 #define STAGE_WORK_CAPTION_DOWN 0x40000000
+#define STAGE_WORK_STOP_COMMANDS 0x80000000 /* go back to the menu after the current command */
 
 typedef struct StageEntry StageEntry;
 
 typedef void (*StageStateFunc)(void);
 
 /* The stage (gMovieContextState->stageWork): state machine, entries, models, markers and resource lists. */
+/* The actions of the items, as loaded for the stage. */
+typedef struct StageItemActionTable {
+    u32 count;
+    StageEntryAction actions[1];
+} StageItemActionTable;
+
 typedef struct StageWork {
     u32 frameCounter;
     u16 turn; /* turns played */
@@ -239,7 +247,10 @@ typedef struct StageWork {
     void *messages;
     StageResourceList *lists[0x3e];
     StageResourceGroup *groups[0x1b];
-    u8 reserved4bc[0x2328 - 0x4bc];
+    u8 reserved4bc[0x2314 - 0x4bc];
+    StageItemActionTable *itemActionTable;
+    int menuDepth; /* submenus opened in the command menu */
+    int menuStack[3]; /* the entry chosen at each depth, -1 above menuDepth */
     fx32 frameStep; /* how far animations and moves advance per frame */
 } StageWork;
 

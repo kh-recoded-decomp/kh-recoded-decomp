@@ -27,7 +27,7 @@ extern void EntryStateNoop8(void);
 extern void func_ov041_020c6418(void);
 extern void StageEntryStateAdvance(void);
 extern void StageEntryStateAppear(void);
-extern void func_ov041_020c6740(void);
+extern void EntryStateStatusCommand(void);
 extern void StageEntryStateRevived(void);
 extern void StageEntryStateHealed(void);
 
@@ -66,7 +66,7 @@ void (*gStageEntryStateHandlers[15])(void) = {
     func_ov041_020c6418,
     StageEntryStateAdvance,
     StageEntryStateAppear,
-    func_ov041_020c6740,
+    EntryStateStatusCommand,
     StageEntryStateRevived,
     StageEntryStateHealed,
 };
