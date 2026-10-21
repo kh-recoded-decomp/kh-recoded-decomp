@@ -264,6 +264,10 @@ src/overlays/ov041/calls/StageStateAfterTurn.c:
     complete
     .text       start:0x020bf39c end:0x020bf474
 
+src/overlays/ov041/calls/StageStatePlayerTurn.c:
+    complete
+    .text       start:0x020bf474 end:0x020bf5b0
+
 src/overlays/ov041/calls/StageStateRunTurn.c:
     complete
     .text       start:0x020bf82c end:0x020bf924
@@ -279,6 +283,10 @@ src/overlays/ov041/auto/StageStateNoop16.c:
 src/overlays/ov041/calls/StageStateRunFieldOp428.c:
     complete
     .text       start:0x020c0650 end:0x020c0678
+
+src/overlays/ov041/calls/StageStateRetreat.c:
+    complete
+    .text       start:0x020c0678 end:0x020c07b4
 
 src/overlays/ov041/calls/StageStateFadeOut.c:
     complete

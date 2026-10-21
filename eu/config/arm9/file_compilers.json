@@ -9417,5 +9417,7 @@
   "src/overlays/ov041/calls/EntryActionOnSelf.c": "dsi/1.1",
   "src/overlays/ov041/calls/HandleTimedPressWindow.c": "dsi/1.1",
   "src/overlays/ov041/calls/StageEntryStateAdvance.c": "dsi/1.1",
-  "src/overlays/ov041/calls/UpdateEntryStatusIcon.c": "dsi/1.1p1"
+  "src/overlays/ov041/calls/UpdateEntryStatusIcon.c": "dsi/1.1p1",
+  "src/overlays/ov041/calls/StageStatePlayerTurn.c": "dsi/1.1",
+  "src/overlays/ov041/calls/StageStateRetreat.c": "dsi/1.1"
 }

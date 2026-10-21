@@ -129,6 +129,12 @@ typedef struct StageEntryAction {
 
 typedef void (*StageEntryFunc)(u8 entryIndex);
 
+/* Something an entry still has to play out (the stage waits for all of them before it ends). */
+typedef struct StageEntryOrder {
+    u8 pending;
+    u8 reserved01[0x3f];
+} StageEntryOrder;
+
 /* The hp fractions (0.8, 0.6, 0.4, 0.2) whose crossing sets STAGE_ENTRY_FORCE_ACTION_2. */
 typedef struct StageHpThresholds {
     fx32 values[4];
@@ -154,7 +160,7 @@ struct StageEntry {
     u8 mainTarget; /* the entry its action is aimed at (itself when idle) */
     u8 targetCount;
     u8 targets[9]; /* indices of the entries the action is aimed at */
-    u8 reserved01c[0xdc - 0x1c];
+    StageEntryOrder orders[3];
     s16 hp;
     s16 maxHp;
     s16 shownHp; /* follows hp down a little at a time */

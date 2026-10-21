@@ -147,6 +147,7 @@ typedef struct StageScaleFactors {
 #define STAGE_WORK_PANEL_MOVING 0x4000000
 #define STAGE_WORK_TURN_STARTED 0x10000000
 #define STAGE_WORK_FAST_PANELS 0x20000000
+#define STAGE_WORK_CAPTION_DOWN 0x40000000
 
 typedef struct StageEntry StageEntry;
 

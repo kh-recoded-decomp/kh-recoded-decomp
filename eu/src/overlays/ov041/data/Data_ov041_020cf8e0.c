@@ -9,7 +9,7 @@ extern void StageStateIntro(void);
 extern void func_ov041_020bf924(void);
 extern void func_ov041_020bfbe0(void);
 extern void StageStateAfterTurn(void);
-extern void func_ov041_020bf474(void);
+extern void StageStatePlayerTurn(void);
 extern void func_ov041_020bf5b0(void);
 extern void StageStateRunTurn(void);
 extern void func_ov041_020bfe84(void);
@@ -19,7 +19,7 @@ extern void func_ov041_020c021c(void);
 extern void StageStateNoop16(void);
 extern void func_ov041_020c04a0(void);
 extern void StageStateRunFieldOp428(void);
-extern void func_ov041_020c0678(void);
+extern void StageStateRetreat(void);
 extern void StageStateFadeOut(void);
 extern void func_ov041_020c07ec(void);
 extern void StageStateNoop22(void);
@@ -36,7 +36,7 @@ void (*gStageStateHandlers[23])(void) = {
     func_ov041_020bf924,
     func_ov041_020bfbe0,
     StageStateAfterTurn,
-    func_ov041_020bf474,
+    StageStatePlayerTurn,
     func_ov041_020bf5b0,
     StageStateRunTurn,
     func_ov041_020bfe84,
@@ -46,7 +46,7 @@ void (*gStageStateHandlers[23])(void) = {
     StageStateNoop16,
     func_ov041_020c04a0,
     StageStateRunFieldOp428,
-    func_ov041_020c0678,
+    StageStateRetreat,
     StageStateFadeOut,
     func_ov041_020c07ec,
     StageStateNoop22,
