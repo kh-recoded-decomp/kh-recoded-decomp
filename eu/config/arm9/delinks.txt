@@ -8577,6 +8577,10 @@ src/calls/TestCapsuleAgainstCylinder.c:
     complete
     .text       start:0x0204055c end:0x020405c6
 
+src/calls/func_020405c8.c:
+    complete
+    .text       start:0x020405c8 end:0x02040ade
+
 src/calls/IsWithinDelta16.c:
     complete
     .text       start:0x02040ae0 end:0x02040b00

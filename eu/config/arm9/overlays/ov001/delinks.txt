@@ -16,6 +16,10 @@ src/overlays/ov001/calls/InitSessionRequestFromArgs.c:
     complete
     .text       start:0x02061430 end:0x02061468
 
+src/overlays/ov001/calls/func_ov001_02061468.c:
+    complete
+    .text       start:0x02061468 end:0x02061af4
+
 src/overlays/ov001/calls/RunFieldPhases.c:
     complete
     .text       start:0x02061af4 end:0x02061b54
