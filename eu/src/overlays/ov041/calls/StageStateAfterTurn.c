@@ -21,7 +21,7 @@ void StageStateAfterTurn(void)
         return;
     }
     if ((work->flags & 1) && work->entries[0].state != STAGE_ENTRY_OUT) {
-        work->unk04 = 1;
+        work->turn = 1;
         SetStageState(6, FALSE);
         work->flags &= ~1;
         return;

@@ -147,17 +147,26 @@ typedef struct StageEntryAction {
     s8 hitSoundIndex; /* sound played when it hits */
     s8 soundIndex;
     s16 soundFrame; /* animation frame the sound plays on */
-    u32 unk08; /* (word-sized: the action is copied by words) */
+    fx32 power; /* (word-sized: the action is copied by words) */
     u16 chance; /* out of 1000 */
-    u8 reserved0e[8];
+    u16 critical;
+    u16 accuracy;
+    u8 reserved12[4];
     u8 targetKind; /* below 7 the action is aimed at the secondary entries */
     u8 range; /* how many rows away it reaches */
     u16 pressWindow; /* frames before the hit in which the timed press counts */
     u8 reserved1a[2];
     u8 kind;
-    u8 reserved1d[3];
+    u8 element; /* 1-4 for an elemental action */
+    u8 reserved1e[2];
     u8 animation;
-    u8 reserved21[7];
+    u8 reserved21;
+    u8 hitEffectCategory; /* the item shown on a target it hits */
+    u8 hitEffectIndex;
+    u8 hitEffectAnimation;
+    u8 altEffectCategory;
+    u8 altEffectIndex;
+    u8 altEffectAnimation;
     u8 castFrame; /* animation frame its effect takes hold on */
     u8 effectFrame; /* animation frame its effect item appears on */
     u8 reserved2a;
@@ -191,7 +200,7 @@ typedef void (*StageStateFunc)(void);
 /* The stage (gMovieContextState->stageWork): state machine, entries, models, markers and resource lists. */
 typedef struct StageWork {
     u32 frameCounter;
-    u16 unk04;
+    u16 turn; /* turns played */
     u8 state;
     s8 stateStep;
     u32 flags;

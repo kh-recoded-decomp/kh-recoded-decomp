@@ -105,10 +105,16 @@ typedef struct StageItemSpec {
 
 /* What an entry's hit does (filled by func_ov041_020c4d58). */
 typedef struct StageEntryHit {
-    u8 reserved00[0xe];
+    fx32 amount; /* hp it takes (or gives), at most 9999 */
+    int accuracy;
+    u16 critical;
+    u16 unk0a;
+    u8 element; /* 1-4 for an elemental action */
+    u8 unk0d;
     StageItemSpec effect; /* shown on the target */
     StageItemSpec altEffect; /* shown instead when a player entry's hit sets result bit 2 */
-    u8 reserved16[6];
+    u8 reserved16[2];
+    struct StageEntry *source;
 } StageEntryHit;
 
 /* StageEntryMove.phase: out to a destination, a pause there, then back to its grid place */
@@ -172,7 +178,9 @@ struct StageEntry {
     s16 maxHp;
     s16 shownHp; /* follows hp down a little at a time */
     s16 checkedHp; /* hp when the hp thresholds were last checked */
-    u8 reserved0e4[0xf4 - 0xe4];
+    u16 strength;
+    u8 reserved0e6[0xa];
+    fx32 unkf0;
     BOOL countsForProgress; /* passed to TallyStageCharacter when the stage ends */
     u8 reserved0f8[0x108 - 0xf8];
     s8 actionCount;
@@ -206,7 +214,8 @@ struct StageEntry {
     StageResourceItem *statusItem;
     StagePathModel *pathModel;
     StageGroundShadow shadow;
-    u8 reserved4ac[6];
+    u8 reserved4ac[4];
+    u16 magic;
     u8 abilities; /* STAGE_ABILITY_* bits */
     u8 reserved4b3;
 };

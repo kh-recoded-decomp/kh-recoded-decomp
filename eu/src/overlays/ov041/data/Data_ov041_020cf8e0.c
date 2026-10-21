@@ -10,7 +10,7 @@ extern void func_ov041_020bf924(void);
 extern void func_ov041_020bfbe0(void);
 extern void StageStateAfterTurn(void);
 extern void StageStatePlayerTurn(void);
-extern void func_ov041_020bf5b0(void);
+extern void StageStateEndTurn(void);
 extern void StageStateRunTurn(void);
 extern void StageStateChooseTarget(void);
 extern void StageStateStartTurn(void);
@@ -37,7 +37,7 @@ void (*gStageStateHandlers[23])(void) = {
     func_ov041_020bfbe0,
     StageStateAfterTurn,
     StageStatePlayerTurn,
-    func_ov041_020bf5b0,
+    StageStateEndTurn,
     StageStateRunTurn,
     StageStateChooseTarget,
     StageStateStartTurn,
