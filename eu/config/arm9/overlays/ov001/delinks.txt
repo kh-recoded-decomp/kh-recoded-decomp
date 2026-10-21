@@ -5396,6 +5396,10 @@ src/overlays/ov001/calls/UpdatePatrolIdle.c:
     complete
     .text       start:0x02083e98 end:0x02083fc4
 
+src/overlays/ov001/calls/func_ov001_02083fc4.c:
+    complete
+    .text       start:0x02083fc4 end:0x02084604
+
 src/overlays/ov001/calls/func_ov001_02084604.c:
     complete
     .text       start:0x02084604 end:0x02084686
