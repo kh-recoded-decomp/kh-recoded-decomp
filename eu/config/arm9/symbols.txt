@@ -19,7 +19,7 @@ CpuSet kind:function(thumb,size=0x4) addr:0x02000788
 Entry kind:function(arm,size=0x13c) addr:0x02000800
 func_0200093c kind:function(arm,size=0x14) addr:0x0200093c
 MIi_UncompressBackward kind:function(arm,size=0xac) addr:0x02000950
-func_020009fc kind:function(arm,size=0x78) addr:0x020009fc
+INITi_DoAutoload kind:function(arm,size=0x78) addr:0x020009fc
 AutoloadCallback kind:function(arm,size=0x4) addr:0x02000a74
 func_02000a78 kind:function(arm,size=0xe8) addr:0x02000a78
 PanelState_NoOpA kind:function(arm,size=0x4) addr:0x02000b60
@@ -221,7 +221,7 @@ OSi_GetOriginalExceptionHandler kind:function(arm,size=0x10) addr:0x02003d24
 OSi_ExceptionHandler kind:function(arm,size=0x74) addr:0x02003d34
 OSi_GetAndDisplayContext kind:function(arm,size=0x14) addr:0x02003da8
 OSi_SetExContext kind:function(arm,size=0x80) addr:0x02003dbc
-func_02003e3c kind:function(arm,size=0x7c) addr:0x02003e3c
+OSi_DisplayExContext kind:function(arm,size=0x7c) addr:0x02003e3c
 OSi_SetTimerReserved kind:function(arm,size=0x24) addr:0x02003eb8
 OSi_UnsetTimerReserved kind:function(arm,size=0x24) addr:0x02003edc
 OS_InitTick kind:function(arm,size=0x70) addr:0x02003f00
@@ -1366,8 +1366,10 @@ Utf16Copy kind:function(arm,size=0x20) addr:0x02022a68
 Utf16CopyPadded kind:function(arm,size=0x50) addr:0x02022a88
 MSL_Fabs kind:function(arm,size=0x20) addr:0x02022ad8
 PXI_Init_02022af8 kind:function(arm,size=0xc) addr:0x02022af8
-func_02022b04 kind:function(arm,size=0x318) addr:0x02022b04
-func_02022e34 kind:function(arm,size=0x3b4) addr:0x02022e34
+_dadd kind:function(arm,size=0x318) addr:0x02022b04
+func_02022b14 kind:label(arm) addr:0x02022b14
+_dsub kind:function(arm,size=0x3b4) addr:0x02022e34
+func_02022e44 kind:label(arm) addr:0x02022e44
 func_020231e8 kind:function(arm,size=0x364) addr:0x020231e8
 func_0202354c kind:function(arm,size=0x104) addr:0x0202354c
 _dflt kind:function(arm,size=0x40) addr:0x02023650
@@ -1400,6 +1402,7 @@ _fadd kind:function(arm,size=0x21c) addr:0x020245fc
 func_02024608 kind:label(arm) addr:0x02024608
 GetMaxPositiveInt kind:function(arm,size=0x8) addr:0x02024818
 _fsub kind:function(arm,size=0x278) addr:0x0202482c
+func_02024838 kind:label(arm) addr:0x02024838
 _fdiv kind:function(arm,size=0x3b8) addr:0x02024ab0
 _ddiv kind:function(arm,size=0x544) addr:0x02024e80
 PanelState_NoOpD kind:function(arm,size=0x4) addr:0x020253c4

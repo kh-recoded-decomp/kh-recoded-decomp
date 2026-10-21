@@ -1,11 +1,11 @@
 extern void OSi_SetExContext(void);
-extern void func_02003e3c(void);
+extern void OSi_DisplayExContext(void);
 
 asm void OSi_GetAndDisplayContext(void)
 {
     stmdb sp!, {r0, lr}
     bl OSi_SetExContext
-    bl func_02003e3c
+    bl OSi_DisplayExContext
     ldmia sp!, {r0, lr}
     bx lr
 }

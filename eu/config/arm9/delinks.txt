@@ -88,6 +88,10 @@ libs/nitro/init/asm_stubs/auto/MIi_UncompressBackward.c:
     complete
     .text       start:0x02000950 end:0x020009fc
 
+src/asm_stubs/calls/INITi_DoAutoload.c:
+    complete
+    .text       start:0x020009fc end:0x02000a74
+
 src/auto/AutoloadCallback.c:
     complete
     .text       start:0x02000a74 end:0x02000a78
@@ -885,6 +889,10 @@ libs/nitro/os/asm_stubs/calls/OSi_GetAndDisplayContext.c:
 libs/nitro/os/asm_stubs/calls/OSi_SetExContext.c:
     complete
     .text       start:0x02003dbc end:0x02003e3c
+
+libs/nitro/os/asm_stubs/calls/OSi_DisplayExContext.c:
+    complete
+    .text       start:0x02003e3c end:0x02003eb8
 
 libs/nitro/os/calls/OSi_SetTimerReserved.c:
     complete
@@ -5473,6 +5481,14 @@ src/calls/PXI_Init_02022af8.c:
     complete
     .text       start:0x02022af8 end:0x02022b04
 
+src/asm_stubs/calls/_dadd.s:
+    complete
+    .text       start:0x02022b04 end:0x02022e1c
+
+src/asm_stubs/calls/_dsub.s:
+    complete
+    .text       start:0x02022e34 end:0x020231e8
+
 src/asm_stubs/calls/func_020231e8.c:
     complete
     .text       start:0x020231e8 end:0x0202354c
@@ -5581,11 +5597,15 @@ src/asm_stubs/calls/_fmul.c:
     complete
     .text       start:0x0202441c end:0x020245fc
 
+src/asm_stubs/calls/_fadd.s:
+    complete
+    .text       start:0x020245fc end:0x02024818
+
 src/calls/GetMaxPositiveInt.c:
     complete
     .text       start:0x02024818 end:0x02024820
 
-src/asm_stubs/calls/_fsub.c:
+src/asm_stubs/calls/_fsub.s:
     complete
     .text       start:0x0202482c end:0x02024aa4
 

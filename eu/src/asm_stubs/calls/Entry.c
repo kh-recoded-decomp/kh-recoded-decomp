@@ -1,4 +1,5 @@
 #define Entry_02000800 Entry
+#define func_020009fc INITi_DoAutoload
 #define data_027e0000 SDK_AUTOLOAD_DTCM_START
 #define func_02000950 MIi_UncompressBackward
 #define func_02000b60 PanelState_NoOpA

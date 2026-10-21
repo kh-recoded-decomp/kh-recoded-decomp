@@ -28,6 +28,15 @@ from:0x01ff85d4 kind:arm_call to:0x0200494c module:main
 from:0x01ff8664 kind:arm_call to:0x02004960 module:main
 from:0x01ff86ec kind:arm_call to:0x01ff869c module:itcm
 from:0x01ff86f4 kind:arm_call to:0x01ff86b8 module:itcm
+from:0x01ff8b64 kind:arm_branch to:0x01ff8b7c module:itcm
+from:0x01ff8b6c kind:arm_branch to:0x01ff8bb8 module:itcm
+from:0x01ff8b74 kind:arm_branch to:0x01ff8c50 module:itcm
+from:0x01ff8b78 kind:arm_branch to:0x01ff8ce8 module:itcm
+from:0x01ff8dd4 kind:arm_branch to:0x01ff8ad8 module:itcm
+from:0x01ff8e6c kind:arm_branch to:0x01ff8e84 module:itcm
+from:0x01ff8e74 kind:arm_branch to:0x01ff8ec0 module:itcm
+from:0x01ff8e7c kind:arm_branch to:0x01ff8f5c module:itcm
+from:0x01ff8e80 kind:arm_branch to:0x01ff8ff8 module:itcm
 from:0x01ff94f0 kind:arm_call to:0x01ff9158 module:itcm
 from:0x01ff9638 kind:arm_call to:0x01ff9d88 module:itcm
 from:0x01ff96f4 kind:arm_call to:0x01ff9d54 module:itcm

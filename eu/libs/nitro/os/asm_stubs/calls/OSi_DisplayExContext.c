@@ -1,0 +1,6 @@
+#define OSi_DisplayExContext_02003e28 OSi_DisplayExContext
+#define data_02056df0 OSi_ExceptionState
+#define data_02056e20 OSi_ExContext
+#define func_02003b50 OS_EnableProtectionUnit
+#define func_02003b60 OS_DisableProtectionUnit
+#include "src/arm9/library_nitro_os/OSi_DisplayExContext_02003e28.c"

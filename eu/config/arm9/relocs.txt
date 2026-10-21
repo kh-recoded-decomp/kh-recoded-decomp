@@ -10,6 +10,7 @@ from:0x02000908 kind:arm_call to:0x020253c8 module:main
 from:0x02000918 kind:load to:0x027e0000 module:dtcm
 from:0x02000930 kind:load to:0x01ff8158 module:itcm
 from:0x02000934 kind:load to:0x02000bec module:main
+from:0x02000a6c kind:load to:0x02000a74 module:main
 from:0x02000b44 kind:load to:0x027e0000 module:dtcm
 from:0x02000b88 kind:load to:0x0205e100 module:main
 from:0x02000b8c kind:load to:0x0205e118 module:main
@@ -451,10 +452,12 @@ from:0x02003dac kind:arm_call to:0x02003dbc module:main
 from:0x02003db0 kind:arm_call to:0x02003e3c module:main
 from:0x02003e38 kind:load to:0x02056e20 module:main
 from:0x02003e6c kind:arm_call to:0x02003b64 module:main
+from:0x02003e8c kind:arm_call to:0x02003b74 module:main
 from:0x02003ea0 kind:load to:0x02056df0 module:main
 from:0x02003ea8 kind:load to:0x02056e20 module:main
 from:0x02003eac kind:load to:0x02056df4 module:main
 from:0x02003eb0 kind:load to:0x02056dfc module:main
+from:0x02003eb4 kind:load to:0x02003e3c add:0x50 module:main
 from:0x02003ed8 kind:load to:0x02056e90 module:main
 from:0x02003efc kind:load to:0x02056e90 module:main
 from:0x02003f24 kind:arm_call to:0x02003eb8 module:main
@@ -3502,9 +3505,13 @@ from:0x020229c0 kind:arm_call to:0x02023650 module:main
 from:0x020229d4 kind:arm_call to:0x02022e34 module:main
 from:0x02022a14 kind:arm_call to:0x02022810 module:main
 from:0x02022b00 kind:load to:0x02021bec module:main
+from:0x02022b10 kind:arm_branch to:0x02022e44 module:main
+from:0x02022e40 kind:arm_branch to:0x02022b14 module:main
 from:0x02023bf4 kind:arm_call to:0x02023dd0 module:main
 from:0x02023d98 kind:arm_call to:0x02023fe4 module:main
 from:0x02024418 kind:load to:0x0205fdbc module:main
+from:0x02024604 kind:arm_branch to:0x02024838 module:main
+from:0x02024834 kind:arm_branch to:0x02024608 module:main
 from:0x020253f4 kind:link_time_const(ARM9_CTOR_START)
 from:0x02025404 kind:arm_call to:0x0202198c module:main
 from:0x02025440 kind:load to:0x0205fdd4 module:main
