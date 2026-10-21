@@ -3,6 +3,6 @@
 #define InitStageSpawnRequest_020982ac InitStageSpawnRequest
 #define data_ov001_020a030c gSpawnedActorDescriptor
 #define func_01ff8830 MI_CpuFill8
-#define func_ov001_02091834 func_ov001_0209185c
+#define func_ov001_02091834 CreateStageActor
 #define func_ov001_0209c3c0 GetStageManager
 #include "src/ov001/shared_engine/InitStageSpawnRequest_020982ac.c"

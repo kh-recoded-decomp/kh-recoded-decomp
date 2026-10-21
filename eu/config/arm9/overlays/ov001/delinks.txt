@@ -7424,7 +7424,7 @@ src/overlays/ov001/calls/ApplyActorScaleFactors.c:
     complete
     .text       start:0x02091840 end:0x0209185c
 
-src/overlays/ov001/calls/func_ov001_0209185c.c:
+src/overlays/ov001/calls/CreateStageActor.c:
     complete
     .text       start:0x0209185c end:0x02091944
 
@@ -7671,6 +7671,10 @@ src/overlays/ov001/calls/UpdateStageEvent.c:
 src/overlays/ov001/calls/SpawnStageGroup.c:
     complete
     .text       start:0x02094f88 end:0x02095120
+
+src/overlays/ov001/calls/SpawnStageGroupMember.c:
+    complete
+    .text       start:0x02095120 end:0x020958a8
 
 src/overlays/ov001/calls/ResetGroupCommandState.c:
     complete

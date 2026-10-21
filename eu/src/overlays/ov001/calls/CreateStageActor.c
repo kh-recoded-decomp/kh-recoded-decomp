@@ -1,4 +1,4 @@
-#define CreateStageActor_02091834 func_ov001_0209185c
+#define CreateStageActor_02091834 CreateStageActor
 #define GetStageActor_0209c040 GetStageActor
 #define ReleaseStageSlot_0209c008 ReleaseStageSlot
 #define data_ov001_020a0240 gNearestEntrySyncHandlers
