@@ -1,3 +1,3 @@
 #define TestPolygonAgainstSegment_0203b67c TestPolygonAgainstSegment
-#define TestSegmentAgainstPolygon_0203c258 func_0203c26c
+#define TestSegmentAgainstPolygon_0203c258 TestSegmentAgainstPolygon
 #include "src/arm9/spatial_queries/TestPolygonAgainstSegment_0203b67c.c"

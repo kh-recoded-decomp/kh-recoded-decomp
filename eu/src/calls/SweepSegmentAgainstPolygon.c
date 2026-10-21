@@ -3,7 +3,7 @@
 #define FlipVectorIfDotNegative_0204abd0 FlipVectorIfDotNegative
 #define SubtractVecFx32Out_02047d2c SubtractVecFx32Out
 #define SweepSegmentAgainstPolygon_02048c7c SweepSegmentAgainstPolygon
-#define TestSegmentAgainstPolygon_0203c258 func_0203c26c
+#define TestSegmentAgainstPolygon_0203c258 TestSegmentAgainstPolygon
 #define func_01ff9f88 VEC_Normalize
 #define func_0204792c ResolveSweepContact
 #define func_02047cec CopyInitializedRecord13
