@@ -47,9 +47,14 @@ typedef struct StageGroundShadow {
 /* StageEntry.flags */
 #define STAGE_ENTRY_ENEMY 1
 #define STAGE_ENTRY_SHOW_HP 8
+#define STAGE_ENTRY_HURT 0x10 /* it was hit */
+#define STAGE_ENTRY_DODGED 0x20 /* it dodged a hit */
 #define STAGE_ENTRY_TIMED_PRESS 0x40 /* the button was pressed in time during its action */
 #define STAGE_ENTRY_PRESSED_ATTACK 0x80 /* A pressed in time as the attacker */
 #define STAGE_ENTRY_PRESSED_GUARD 0x600 /* Y pressed in time as the defender (status 9 counts as one) */
+#define STAGE_ENTRY_GUARDED 0x200 /* the hit was guarded */
+#define STAGE_ENTRY_GUARDING 0x400
+#define STAGE_ENTRY_TURNED 0x2000 /* turned to face across while the menu is held */
 #define STAGE_ENTRY_PRESS_PANEL 0x10000 /* keep showing the lit press panel */
 #define STAGE_ENTRY_MISSED 0x100000 /* its last action missed */
 #define STAGE_ENTRY_FLAG_800 0x800
@@ -57,6 +62,8 @@ typedef struct StageGroundShadow {
 #define STAGE_ENTRY_FROZEN 0x8000
 #define STAGE_ENTRY_NOT_TALLIED 0x80000
 #define STAGE_ENTRY_FORCE_ACTION_2 0x200000
+#define STAGE_ENTRY_VOICE_TOGGLE 0x400000 /* which of its two hurt voices plays next */
+#define STAGE_ENTRY_ALT_VOICES 0x800000
 
 #define STAGE_ENTRY_STATUS_COUNT 11
 #define STAGE_ENTRY_STATUS_2 2 /* set by a self action */
@@ -202,9 +209,13 @@ struct StageEntry {
     fx32 groundHeight; /* how high it stands on its grid place */
     VecFx32 overheadOffset; /* from its position to where things are shown above it */
     u8 idleAnimation;
-    u8 reserved13d[2];
+    u8 hurtAnimation;
+    u8 reserved13e;
     u8 stepAnimation;
-    u8 reserved140[0x1c];
+    u8 guardAnimation;
+    u8 hurtVoices[2]; /* played in turn when it is hurt */
+    u8 altHurtVoices[2]; /* the same for entries with STAGE_ENTRY_ALT_VOICES */
+    u8 reserved145[0x17];
     StageEntrySlot slot;
     u8 reserved310[0x10];
     s16 frameStep;
@@ -219,7 +230,7 @@ struct StageEntry {
     StageResourceItem *statusItem;
     StagePathModel *pathModel;
     StageGroundShadow shadow;
-    u8 reserved4ac[4];
+    int voiceSeqArc; /* the sound archive of its voices */
     u16 magic;
     u8 abilities; /* STAGE_ABILITY_* bits */
     u8 reserved4b3;

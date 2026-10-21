@@ -688,6 +688,10 @@ src/overlays/ov041/calls/FinishEntryAction.c:
     complete
     .text       start:0x020c55e0 end:0x020c56c0
 
+src/overlays/ov041/calls/StageEntryStateWaiting.c:
+    complete
+    .text       start:0x020c56c0 end:0x020c5acc
+
 src/overlays/ov041/calls/StageEntryStateTurn.c:
     complete
     .text       start:0x020c5acc end:0x020c5c6c
