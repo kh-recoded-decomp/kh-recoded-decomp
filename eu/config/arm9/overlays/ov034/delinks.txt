@@ -136,6 +136,10 @@ src/overlays/ov034/calls/ApplyResultsPartyBonus.c:
     complete
     .text       start:0x020be278 end:0x020be348
 
+src/overlays/ov034/calls/SetupResultsShopList.c:
+    complete
+    .text       start:0x020be348 end:0x020be438
+
 src/overlays/ov034/calls/func_ov034_020be438.c:
     complete
     .text       start:0x020be438 end:0x020be518

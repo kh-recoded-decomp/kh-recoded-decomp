@@ -9272,5 +9272,6 @@
   "src/overlays/ov015/calls/WH_StateInStartScan.c": "dsi/1.1",
   "src/overlays/ov000/calls/WaitPanelWorldSession.c": "dsi/1.1",
   "src/calls/TestBoxAgainstPolygon.c": "dsi/1.1",
-  "src/overlays/ov001/calls/UpdateFieldHud.c": "dsi/1.1"
+  "src/overlays/ov001/calls/UpdateFieldHud.c": "dsi/1.1",
+  "src/overlays/ov034/calls/SetupResultsShopList.c": "dsi/1.1"
 }
