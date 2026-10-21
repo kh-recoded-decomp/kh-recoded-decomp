@@ -15,7 +15,7 @@ extern void NNSi_FndFreeFromDefaultHeap(void *block);
 void CreateStageResourceGroup(int category, StageResourceContainer *container)
 {
     StageResourceGroup *group;
-    StageResourceWork *work = gMovieContextState->stageWork;
+    StageWork *work = gMovieContextState->stageWork;
     int i;
     int j;
 
@@ -35,7 +35,7 @@ void CreateStageResourceGroup(int category, StageResourceContainer *container)
         switch (category) {
         case 22:
             if (i == 1) {
-                list->count = work->levelA;
+                list->count = work->primaryCount;
             }
             break;
         case 23:
@@ -68,7 +68,7 @@ void CreateStageResourceGroup(int category, StageResourceContainer *container)
         for (j = 0; j < list->count; ++j) {
             void *record = SND_RegisterSeq(RESOURCE_KEY(container, ++), 0x12);
             void *block = func_0202c4a0(RESOURCE_KEY(container, --), 0xf);
-            func_0202edb0(list->items[j].model, record, block, 0x12);
+            func_0202edb0(&list->items[j].model, record, block, 0x12);
             NNSi_FndFreeFromDefaultHeap(block);
         }
         container->cursor += 2;

@@ -2,7 +2,7 @@
 
 void DrawStageEntryModels(StageEntrySlot *slot, BOOL drawShadow)
 {
-    StageModelWork *work = gMovieContextState->stageWork;
+    StageWork *work = gMovieContextState->stageWork;
     StageEntry *entry;
     int i;
 

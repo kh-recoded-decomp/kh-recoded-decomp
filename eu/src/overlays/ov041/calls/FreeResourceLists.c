@@ -8,7 +8,7 @@ void FreeResourceLists(void)
 {
     StageResourceGroup *group;
     StageResourceList *list;
-    StageResourceWork *work;
+    StageWork *work;
     int i;
     int j;
     int k;
@@ -18,7 +18,7 @@ void FreeResourceLists(void)
         list = work->lists[i];
         if (list != NULL) {
             for (j = 0; j < list->count; ++j) {
-                ReleaseResourceAndDetach(list->items[j].model);
+                ReleaseResourceAndDetach(&list->items[j].model);
             }
             NNSi_FndFreeFromDefaultHeap(list->items);
             NNSi_FndFreeFromDefaultHeap(list);
@@ -32,7 +32,7 @@ void FreeResourceLists(void)
             for (j = 0; j < group->count; ++j) {
                 list = &group->lists[j];
                 for (k = 0; k < list->count; ++k) {
-                    ReleaseResourceAndDetach(list->items[k].model);
+                    ReleaseResourceAndDetach(&list->items[k].model);
                 }
                 NNSi_FndFreeFromDefaultHeap(list->items);
             }

@@ -2,7 +2,7 @@
 
 void DrawStagePrimaryModel(StageModelActor *actor)
 {
-    StageModelWork *work = gMovieContextState->stageWork;
+    StageWork *work = gMovieContextState->stageWork;
 
     if (actor == &work->primaryActor) {
         MtxFx43 *matrix = &work->primaryMatrix;

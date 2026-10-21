@@ -11,16 +11,16 @@ extern void *LoadResourceBlock(u32 key, int kind);
 extern void InitStageResourceModel(void *model, void *record, void *block, int kind);
 extern void NNSi_FndFreeFromDefaultHeap(void *block);
 
-static inline StageResourceList *ReadStageResourceListSlot(StageResourceWork *work, int index)
+static inline StageResourceList *ReadStageResourceListSlot(StageWork *work, int index)
 {
     /* Keep the indexed read separate from the writable slot used after allocation. */
     u8 *slot = (u8 *)work + index * sizeof(StageResourceList *);
-    return *(StageResourceList **)(slot + (u32)&((StageResourceWork *)0)->lists);
+    return *(StageResourceList **)(slot + (u32)&((StageWork *)0)->lists);
 }
 
 void CreateStageResourceList(int index, int count, void *archive, u8 modelIndex, u8 blockIndex)
 {
-    StageResourceWork *work = gMovieContextState->stageWork;
+    StageWork *work = gMovieContextState->stageWork;
     StageResourceList *list;
     StageResourceItem *items;
     int i;
@@ -42,7 +42,7 @@ void CreateStageResourceList(int index, int count, void *archive, u8 modelIndex,
         do {
             void *record = RetainOrInitializeSharedRecord(modelKey, 0x12);
             void *block = LoadResourceBlock(blockKey, 0xf);
-            InitStageResourceModel(items[i].model, record, block, 0x12);
+            InitStageResourceModel(&items[i].model, record, block, 0x12);
             NNSi_FndFreeFromDefaultHeap(block);
             i++;
         } while (i < list->count);

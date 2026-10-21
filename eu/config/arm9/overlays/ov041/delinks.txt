@@ -56,6 +56,50 @@ src/overlays/ov041/calls/GetStageKindMusicId.c:
     complete
     .text       start:0x020bce40 end:0x020bceec
 
+src/overlays/ov041/auto/GetStageKindSoundArc.c:
+    complete
+    .text       start:0x020bceec end:0x020bcf4a
+
+src/overlays/ov041/calls/PlayStageSound.c:
+    complete
+    .text       start:0x020bcf4c end:0x020bcf6a
+
+src/overlays/ov041/calls/ShowStageMarker.c:
+    complete
+    .text       start:0x020bcf6c end:0x020bd01c
+
+src/overlays/ov041/auto/ReleaseStageMarker.c:
+    complete
+    .text       start:0x020bd01c end:0x020bd03a
+
+src/overlays/ov041/calls/UpdateMarkerScreenPosition.c:
+    complete
+    .text       start:0x020bd03c end:0x020bd05e
+
+src/overlays/ov041/calls/SpawnStageItem.c:
+    complete
+    .text       start:0x020bd060 end:0x020bd07a
+
+src/overlays/ov041/calls/SpawnStageResourceItem.c:
+    complete
+    .text       start:0x020bd07c end:0x020bd17c
+
+src/overlays/ov041/calls/ReleaseFinishedStageItems.c:
+    complete
+    .text       start:0x020bd17c end:0x020bd2a4
+
+src/overlays/ov041/calls/DrawStageItems.c:
+    complete
+    .text       start:0x020bd2a4 end:0x020bd39c
+
+src/overlays/ov041/auto/ReleaseStageItem.c:
+    complete
+    .text       start:0x020bd39c end:0x020bd3a8
+
+src/overlays/ov041/calls/FaceStageItemAlong.c:
+    complete
+    .text       start:0x020bd3a8 end:0x020bd48c
+
 src/overlays/ov041/calls/CreateStageResourceGroup.c:
     complete
     .text       start:0x020bd48c end:0x020bd64c
@@ -64,13 +108,45 @@ src/overlays/ov041/calls/GetOrOpenMessageContainer.c:
     complete
     .text       start:0x020bd64c end:0x020bd6ac
 
+src/overlays/ov041/auto/GetStageObjectIndex.c:
+    complete
+    .text       start:0x020bd6ac end:0x020bd708
+
+src/overlays/ov041/calls/TallyStageCharacter.c:
+    complete
+    .text       start:0x020bd708 end:0x020bd760
+
 src/overlays/ov041/calls/SetStageDrawLayer.c:
     complete
     .text       start:0x020bd760 end:0x020bd7e0
 
+src/overlays/ov041/calls/StartStageFadeOut.c:
+    complete
+    .text       start:0x020bd7e0 end:0x020bd80c
+
+src/overlays/ov041/calls/AreSecondaryEntriesIdle.c:
+    complete
+    .text       start:0x020bd96c end:0x020bd9a0
+
+src/overlays/ov041/calls/SetStageState.c:
+    complete
+    .text       start:0x020bd9a0 end:0x020bd9d0
+
+src/overlays/ov041/calls/RollStageChance.c:
+    complete
+    .text       start:0x020bd9d0 end:0x020bda04
+
+src/overlays/ov041/calls/AreStageEntriesSettled.c:
+    complete
+    .text       start:0x020bda04 end:0x020bda88
+
 src/overlays/ov041/calls/InitSlotGroups.c:
     complete
     .text       start:0x020bda88 end:0x020bdb74
+
+src/overlays/ov041/calls/UpdateStageMarkers.c:
+    complete
+    .text       start:0x020bdb74 end:0x020bdc28
 
 src/overlays/ov041/calls/FreeSceneGroupObjects.c:
     complete
@@ -92,6 +168,14 @@ src/overlays/ov041/calls/FreeResourceLists.c:
     complete
     .text       start:0x020bdf20 end:0x020be014
 
+src/overlays/ov041/calls/AdvanceStageItemAnimation.c:
+    complete
+    .text       start:0x020be014 end:0x020be020
+
+src/overlays/ov041/calls/DrawStageItem.c:
+    complete
+    .text       start:0x020be020 end:0x020be086
+
 src/overlays/ov041/calls/func_ov041_020be088.c:
     complete
     .text       start:0x020be088 end:0x020be090
@@ -104,9 +188,33 @@ src/overlays/ov041/calls/UpdateStageHudMessage.c:
     complete
     .text       start:0x020be098 end:0x020be140
 
+src/overlays/ov041/calls/ShowStageHudMessage.c:
+    complete
+    .text       start:0x020be140 end:0x020be1d0
+
+src/overlays/ov041/calls/HideStageHudMessage.c:
+    complete
+    .text       start:0x020be1d0 end:0x020be200
+
+src/overlays/ov041/calls/IsStageHudMessageShowing.c:
+    complete
+    .text       start:0x020be200 end:0x020be224
+
 src/overlays/ov041/calls/FreeManagerRecordTable.c:
     complete
     .text       start:0x020be224 end:0x020be258
+
+src/overlays/ov041/calls/UpdateEntryStatusItems.c:
+    complete
+    .text       start:0x020be258 end:0x020be280
+
+src/overlays/ov041/calls/UpdateEntryStatusItem.c:
+    complete
+    .text       start:0x020be280 end:0x020be30c
+
+src/overlays/ov041/calls/ReleaseEntryStatusItem.c:
+    complete
+    .text       start:0x020be30c end:0x020be340
 
 src/overlays/ov041/calls/HasStageEntryKind.c:
     complete

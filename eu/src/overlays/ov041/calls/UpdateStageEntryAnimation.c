@@ -9,7 +9,7 @@ extern int func_0202f4cc(void *node, int animation);
 
 void UpdateStageEntryAnimation(StageEntrySlot *slot)
 {
-    StageModelWork *work = gMovieContextState->stageWork;
+    StageWork *work = gMovieContextState->stageWork;
     int i;
 
     for (i = 0; i < work->entryCount; ++i) {

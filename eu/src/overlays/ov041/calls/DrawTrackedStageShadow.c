@@ -3,7 +3,7 @@
 void DrawTrackedStageShadow(StageShadowActor *actor)
 {
     int i;
-    StageModelWork *work = gMovieContextState->stageWork;
+    StageWork *work = gMovieContextState->stageWork;
 
     for (i = 0; i < 2; ++i) {
         StageShadowActor *tracked = work->shadowActors[i];
