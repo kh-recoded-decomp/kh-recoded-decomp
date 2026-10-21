@@ -118,7 +118,10 @@ class EuModel:
             if overlay:
                 return by_key.get(f"overlay({int(overlay.group(1))})")
             base = re.sub(r"_[0-9a-f]{8}$", "", hint)
-            return base if base in names else None
+            if base in names:
+                return base
+            named = [name for name in names if not re.match(r"(?:func|data)_(?:ov\d{3}_)?[0-9a-f]{8}$", name)]
+            return named[0] if len(named) == 1 else None
         return next(iter(names)) if len(names) == 1 else None
 
     def function(self, module: str, address: int, size: int):
@@ -220,8 +223,17 @@ R_ARM_ABS32 = 2
 
 
 def wrapper_text(mapping: dict[str, str], us_source: str) -> str:
-    lines = [f"#define {us} {eu}" for us, eu in sorted(mapping.items()) if us != eu]
-    return "\n".join(lines + [f'#include "{us_source}"', ""])
+    """#defines from US to EU names; an EU name that is also a US name goes through a temporary symbol."""
+    taken = set(mapping) | set(re.findall(r"[A-Za-z_]\w*", (ROOT / us_source).read_text(encoding="utf-8")))
+    lines, renames = [], []
+    for us, eu in sorted(mapping.items()):
+        if us == eu:
+            continue
+        if eu in taken:
+            renames.append(f"// redefine-sym eu_{eu}={eu}")
+            eu = f"eu_{eu}"
+        lines.append(f"#define {us} {eu}")
+    return "\n".join(renames + lines + [f'#include "{us_source}"', ""])
 
 
 def destination(module: str, name: str, asm: bool = False) -> str:
@@ -263,8 +275,10 @@ def try_pair(model: EuModel, pair, scratch: Path):
     work.parent.mkdir(parents=True, exist_ok=True)
     out = work.with_suffix(".o")
     us_cc = US_COMPILER_DIRS.get(entry.get("compiler"))
-    status = "compile"
+    status, first_status = "compile", None
     for cc in dict.fromkeys([us_cc, *ALTERNATE_COMPILERS]):
+        if first_status is None and cc != us_cc:
+            first_status = status
         mapping = {entry["source_symbol"]: eu_name}
         for attempt in range(2):
             text = wrapper_text(mapping, entry["source"])
@@ -295,7 +309,10 @@ def try_pair(model: EuModel, pair, scratch: Path):
                     break
                 if symbol != want:
                     renames[symbol] = want
-            if not ok or set(rom_relocs) - set(relocs):
+            internal = {offset for offset in set(rom_relocs) - set(relocs)
+                        if address <= rom_relocs[offset][0] < address + size
+                        and data[offset:offset + 4] == rom[offset:offset + 4]}
+            if not ok or set(rom_relocs) - set(relocs) - internal:
                 status = "bytes differ"
                 break
             for offset, (symbol, kind, addend, is_section) in relocs.items():
@@ -323,7 +340,7 @@ def try_pair(model: EuModel, pair, scratch: Path):
                 status = "relocation names"
                 break
             mapping = {**mapping, **renames}
-    return pair, None, status
+    return pair, None, first_status or status
 
 
 def claim(module: str, unit: str, address: int, size: int):

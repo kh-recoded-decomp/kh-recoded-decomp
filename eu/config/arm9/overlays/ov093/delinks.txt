@@ -148,6 +148,10 @@ src/overlays/ov093/calls/RefreshScrollBar_020c0cb0.c:
     complete
     .text       start:0x020c0cd0 end:0x020c0fd0
 
+src/overlays/ov093/calls/func_ov093_020c0fd0.c:
+    complete
+    .text       start:0x020c0fd0 end:0x020c1cc8
+
 src/overlays/ov093/calls/UpdateDragAreaBounds.c:
     complete
     .text       start:0x020c1cc8 end:0x020c1d44

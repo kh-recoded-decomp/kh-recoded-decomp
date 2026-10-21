@@ -4,6 +4,10 @@
     .data       start:0x0206f8e0 end:0x0206f9a0 kind:data align:32
     .bss        start:0x0206f9a0 end:0x0206f9c0 kind:bss align:32
 
+src/overlays/ov014/calls/func_ov014_0206c480.c:
+    complete
+    .text       start:0x0206c480 end:0x0206cea0
+
 src/overlays/ov014/calls/ShutdownPanelObjects.c:
     complete
     .text       start:0x0206cea0 end:0x0206cf38
@@ -35,6 +39,10 @@ src/overlays/ov014/auto/func_ov014_0206d2e0.c:
 src/overlays/ov014/auto/func_ov014_0206d2e4.c:
     complete
     .text       start:0x0206d2e4 end:0x0206d2e8
+
+src/overlays/ov014/calls/func_ov014_0206d2e8.c:
+    complete
+    .text       start:0x0206d2e8 end:0x0206e66c
 
 src/overlays/ov014/calls/SetPanelDirection.c:
     complete
