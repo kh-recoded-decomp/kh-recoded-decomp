@@ -103,13 +103,22 @@ class EuModel:
                 self.blobs[module] = binary_path(module).read_bytes()
         self.defined = defined_symbols()
 
-    def name_at(self, target: int, module_name: str) -> str | None:
-        names = set()
+    def name_at(self, target: int, module_name: str, hint: str | None = None) -> str | None:
+        by_key = {}
         for key in target_keys(module_name):
             table = self.symbols.get(key, {})
             name = table.get(target) or table.get(target & ~1)
             if name:
-                names.add(name)
+                by_key[key] = name
+        names = set(by_key.values())
+        if len(names) > 1 and hint in names:
+            return hint
+        if len(names) > 1 and hint:
+            overlay = re.match(r"(?:func|data)_ov(\d{3})_", hint)
+            if overlay:
+                return by_key.get(f"overlay({int(overlay.group(1))})")
+            base = re.sub(r"_[0-9a-f]{8}$", "", hint)
+            return base if base in names else None
         return next(iter(names)) if len(names) == 1 else None
 
     def function(self, module: str, address: int, size: int):
@@ -259,7 +268,7 @@ def try_pair(model: EuModel, pair, scratch: Path):
             for offset, (symbol, kind, addend, is_section) in relocs.items():
                 target, target_module = rom_relocs[offset]
                 addend = addend if kind == R_ARM_ABS32 else 0
-                want = model.name_at(target - addend, target_module)
+                want = model.name_at(target - addend, target_module, symbol)
                 if want is not None and model.defined and want not in model.defined:
                     status = "undefined target"
                     ok = False

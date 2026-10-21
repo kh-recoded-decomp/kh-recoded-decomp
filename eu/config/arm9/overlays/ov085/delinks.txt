@@ -16,6 +16,10 @@ src/overlays/ov085/calls/BuildShopItemRecord.c:
     complete
     .text       start:0x020bf774 end:0x020bf810
 
+src/overlays/ov085/calls/func_ov085_020bf810.c:
+    complete
+    .text       start:0x020bf810 end:0x020c0154
+
 src/overlays/ov085/calls/UpdateItemListScroll.c:
     complete
     .text       start:0x020c0154 end:0x020c01d8
