@@ -8005,6 +8005,10 @@ src/calls/RefreshActorMeshCache.c:
     complete
     .text       start:0x02038144 end:0x020382c4
 
+src/calls/func_020382c4.c:
+    complete
+    .text       start:0x020382c4 end:0x02038a90
+
 src/calls/ClearStateBlock.c:
     complete
     .text       start:0x02038a90 end:0x02038aa4

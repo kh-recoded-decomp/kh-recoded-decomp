@@ -9296,5 +9296,8 @@
   "src/overlays/ov001/calls/func_ov001_0209591c.c": "dsi/1.3p1",
   "src/overlays/ov047/calls/func_ov047_020c3b7c.c": "dsi/1.3p1",
   "src/overlays/ov093/calls/func_ov093_020c0fd0.c": "dsi/1.3p1",
-  "src/overlays/ov014/calls/func_ov014_0206d2e8.c": "dsi/1.3p1"
+  "src/overlays/ov014/calls/func_ov014_0206d2e8.c": "dsi/1.3p1",
+  "src/calls/func_020382c4.c": "dsi/1.3p1",
+  "src/overlays/ov015/calls/func_ov015_0206d59c.c": "dsi/1.3p1",
+  "src/overlays/ov034/calls/func_ov034_020bb598.c": "dsi/1.3p1"
 }
