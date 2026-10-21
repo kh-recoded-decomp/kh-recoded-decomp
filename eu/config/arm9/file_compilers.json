@@ -9310,5 +9310,6 @@
   "src/overlays/ov075/calls/func_ov075_020c49ec.c": "dsi/1.3p1",
   "src/overlays/ov001/calls/func_ov001_0209734c.c": "dsi/1.3p1",
   "src/calls/func_01fff8b0.c": "dsi/1.3p1",
-  "src/overlays/ov013/calls/func_ov013_0206df40.c": "dsi/1.3p1"
+  "src/overlays/ov013/calls/func_ov013_0206df40.c": "dsi/1.3p1",
+  "src/calls/SweepCircleAgainstCircle.c": "dsi/1.1"
 }
