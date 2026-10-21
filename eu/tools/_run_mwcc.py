@@ -18,6 +18,30 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from project import BUILD_DIR, CFLAGS, LICENSE, MWCC_DIR, MWCCARM, ROOT  # noqa: E402
 
 
+# A wrapper whose EU names collide with US names in the shared source compiles
+# them under temporary names and renames them in the object afterwards.
+REDEFINE = re.compile(r"^// redefine-sym (\w+)=(\w+)\s*$", re.M)
+
+
+def find_objcopy():
+    import shutil
+    configured = shutil.which("arm-none-eabi-objcopy")
+    if configured:
+        return configured
+    candidates = sorted(Path("C:/Program Files (x86)").glob(
+        "Arm GNU Toolchain arm-none-eabi/*/bin/arm-none-eabi-objcopy.exe"))
+    if not candidates:
+        raise SystemExit("arm-none-eabi-objcopy was not found")
+    return str(candidates[0])
+
+
+def redefine_symbols(obj, pairs):
+    args = [find_objcopy()]
+    for old, new in pairs:
+        args += ["--redefine-sym", "%s=%s" % (old, new)]
+    subprocess.run(args + [str(obj)], check=True)
+
+
 def load_json_retry(path, attempts=20):
     """Read a generated JSON sidecar across a concurrent write window."""
     for attempt in range(attempts):
@@ -97,6 +121,9 @@ def main():
         if r.returncode == 0:
             sys.stdout.write(r.stdout)
             sys.stderr.write(r.stderr)
+            renames = REDEFINE.findall(src_path.read_text(encoding="utf-8", errors="replace"))
+            if renames:
+                redefine_symbols(out_path, renames)
             # mwcc emits one section per global and orders them by its own rule;
             # put data sections back in address order so a source that owns a
             # data range lays it down where its delinks claim says.
