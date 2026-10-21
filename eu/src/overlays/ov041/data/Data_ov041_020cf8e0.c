@@ -5,7 +5,7 @@ extern void StageStateStartMusic(void);
 extern void StageStateStartSubMode(void);
 extern void StageStateFadeBgm(void);
 extern void StageStateWaitScreenIdle(void);
-extern void func_ov041_020bf280(void);
+extern void StageStateIntro(void);
 extern void func_ov041_020bf924(void);
 extern void func_ov041_020bfbe0(void);
 extern void StageStateAfterTurn(void);
@@ -32,7 +32,7 @@ void (*gStageStateHandlers[23])(void) = {
     StageStateStartSubMode,
     StageStateFadeBgm,
     StageStateWaitScreenIdle,
-    func_ov041_020bf280,
+    StageStateIntro,
     func_ov041_020bf924,
     func_ov041_020bfbe0,
     StageStateAfterTurn,

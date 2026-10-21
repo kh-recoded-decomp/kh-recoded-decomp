@@ -18,7 +18,7 @@ void FinishEntryAction(StageEntry *entry)
     BOOL keep;
 
     ClearEntryActionState(entry);
-    entry->lastActor = entry->index;
+    entry->mainTarget = entry->index;
     for (i = 0; i < work->entryCount; i++) {
         work->entries[i].flags &= ~STAGE_ENTRY_SHOW_HP;
         work->entries[i].flags &= ~0x1000000;

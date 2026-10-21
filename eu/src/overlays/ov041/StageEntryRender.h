@@ -53,8 +53,10 @@ typedef struct StageGroundShadow {
 #define STAGE_ENTRY_FORCE_ACTION_2 0x200000
 
 #define STAGE_ENTRY_STATUS_COUNT 11
+#define STAGE_ENTRY_STATUS_2 2 /* set by a self action */
 #define STAGE_ENTRY_STATUS_3 3 /* cleared by a revive */
 #define STAGE_ENTRY_STATUS_9 9 /* blocks the defending press */
+#define STAGE_ENTRY_STATUS_10 10 /* widens the timed press window */
 
 /* StageMotion speed profiles */
 #define STAGE_MOTION_EASE_IN 0 /* starts at rest */
@@ -107,11 +109,20 @@ typedef struct StageEntryAction {
     u16 chance; /* out of 1000 */
     u8 reserved0e[0x17 - 0xe];
     u8 range; /* how many rows away it reaches */
-    u8 reserved18[4];
+    u16 pressWindow; /* frames before the hit in which the timed press counts */
+    u8 reserved1a[2];
     u8 kind;
     u8 reserved1d[3];
     u8 animation;
-    u8 reserved21[0x15];
+    u8 reserved21[8];
+    u8 effectFrame; /* animation frame its effect item appears on */
+    u8 reserved2a;
+    u8 effectCategory;
+    u8 effectIndex;
+    u8 effectAnimation;
+    u8 reserved2e[6];
+    u8 statusTurns;
+    u8 reserved35;
     u8 effect;
     u8 reserved37;
 } StageEntryAction;
@@ -133,9 +144,9 @@ struct StageEntry {
     u8 stateStep; /* progress inside the current state */
     u8 reserved007;
     u32 flags;
-    u8 reserved00c[4];
+    int waitFrames;
     s8 actionIndex; /* the action being carried out, or -1 */
-    u8 lastActor; /* set to its own index when its action ends */
+    u8 mainTarget; /* the entry its action is aimed at (itself when idle) */
     u8 targetCount;
     u8 targets[9]; /* indices of the entries the action is aimed at */
     u8 reserved01c[0xdc - 0x1c];
@@ -164,7 +175,9 @@ struct StageEntry {
     StageEntrySlot slot;
     u8 reserved310[0x10];
     s16 frameStep;
-    u8 reserved322[0x12];
+    u8 reserved322[0xa];
+    u8 actorSlot;
+    u8 reserved32d[7];
     StageShadowActor *attachment;
     u8 reserved338[0x20];
     StageEntryMove move;

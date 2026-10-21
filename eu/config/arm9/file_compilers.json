@@ -9410,5 +9410,11 @@
   "src/overlays/ov041/calls/StageStateRunTurn.c": "dsi/1.1",
   "src/overlays/ov041/calls/FinishEntryAction.c": "dsi/1.1",
   "src/overlays/ov041/calls/ClearEntryActionState.c": "dsi/1.1",
-  "src/overlays/ov041/calls/StageEntryStateRevived.c": "dsi/1.1"
+  "src/overlays/ov041/calls/StageEntryStateRevived.c": "dsi/1.1",
+  "src/overlays/ov041/calls/StageStateIntro.c": "dsi/1.1",
+  "src/overlays/ov041/calls/StageEntryStateAppear.c": "dsi/1.1",
+  "src/overlays/ov041/calls/GetStrikePosition.c": "dsi/1.1",
+  "src/overlays/ov041/calls/EntryActionOnSelf.c": "dsi/1.1",
+  "src/overlays/ov041/calls/HandleTimedPressWindow.c": "dsi/1.1",
+  "src/overlays/ov041/calls/StageEntryStateAdvance.c": "dsi/1.1"
 }

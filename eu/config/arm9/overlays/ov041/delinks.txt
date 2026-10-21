@@ -256,6 +256,10 @@ src/overlays/ov041/calls/StageStateWaitScreenIdle.c:
     complete
     .text       start:0x020bf234 end:0x020bf280
 
+src/overlays/ov041/calls/StageStateIntro.c:
+    complete
+    .text       start:0x020bf280 end:0x020bf39c
+
 src/overlays/ov041/calls/StageStateAfterTurn.c:
     complete
     .text       start:0x020bf39c end:0x020bf474
@@ -456,6 +460,10 @@ src/overlays/ov041/calls/HasActionInRange.c:
     complete
     .text       start:0x020c2cac end:0x020c2d4c
 
+src/overlays/ov041/calls/GetStrikePosition.c:
+    complete
+    .text       start:0x020c2f7c end:0x020c306c
+
 src/overlays/ov041/auto/SetEntryState.c:
     complete
     .text       start:0x020c306c end:0x020c3092
@@ -556,6 +564,10 @@ src/overlays/ov041/calls/StepStageMotion.c:
     complete
     .text       start:0x020c3fd8 end:0x020c40d8
 
+src/overlays/ov041/calls/HandleTimedPressWindow.c:
+    complete
+    .text       start:0x020c435c end:0x020c4454
+
 src/overlays/ov041/calls/ShowEntryPairPanel.c:
     complete
     .text       start:0x020c4454 end:0x020c4492
@@ -592,6 +604,14 @@ src/overlays/ov041/auto/EntryStateNoop8.c:
     complete
     .text       start:0x020c6414 end:0x020c6416
 
+src/overlays/ov041/calls/StageEntryStateAdvance.c:
+    complete
+    .text       start:0x020c651c end:0x020c6654
+
+src/overlays/ov041/calls/StageEntryStateAppear.c:
+    complete
+    .text       start:0x020c6654 end:0x020c6740
+
 src/overlays/ov041/calls/StageEntryStateRevived.c:
     complete
     .text       start:0x020c69cc end:0x020c6ac8
@@ -599,6 +619,10 @@ src/overlays/ov041/calls/StageEntryStateRevived.c:
 src/overlays/ov041/calls/StageEntryStateHealed.c:
     complete
     .text       start:0x020c6ac8 end:0x020c6b98
+
+src/overlays/ov041/calls/EntryActionOnSelf.c:
+    complete
+    .text       start:0x020ca800 end:0x020ca8fc
 
 src/overlays/ov041/calls/GetScaleLevel.c:
     complete
