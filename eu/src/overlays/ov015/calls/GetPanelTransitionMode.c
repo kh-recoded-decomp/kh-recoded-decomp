@@ -1,3 +1,3 @@
 #define GetPanelTransitionMode_020748e4 GetPanelTransitionMode
-#define panelState_0207e980 data_ov015_0207e980
+#define panelState_0207e980 gWhState
 #include "src/ov015/reviewed_helpers/GetPanelTransitionMode_020748e4.c"

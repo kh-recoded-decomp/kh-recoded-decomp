@@ -21,17 +21,17 @@ void WH_StateOutStartChildMP(void *argument)
 
     switch (callback->state) {
     case 10:
-        if (data_ov015_0207e980.mode == 3) {
-            if (data_ov015_0207e980.systemState == 6) {
+        if (gWhState.mode == 3) {
+            if (gWhState.systemState == 6) {
                 return;
             }
-            if (data_ov015_0207e980.systemState == 4) {
+            if (gWhState.systemState == 4) {
                 if (!StartWirelessKeySharing()) {
                     WH_Finalize();
                 }
                 return;
             }
-        } else if (data_ov015_0207e980.mode == 5) {
+        } else if (gWhState.mode == 5) {
             u16 sharingAidBitmap = 15;
             u16 sharingPort = 13;
 
@@ -44,15 +44,15 @@ void WH_StateOutStartChildMP(void *argument)
                 return;
             }
             WH_ChangeSysState(5);
-            if (data_ov015_0207e980.connectCallback != NULL) {
-                data_ov015_0207e980.connectCallback(callback);
+            if (gWhState.connectCallback != NULL) {
+                gWhState.connectCallback(callback);
             }
             return;
         }
 
         WH_ChangeSysState(4);
-        if (data_ov015_0207e980.connectCallback != NULL) {
-            data_ov015_0207e980.connectCallback(callback);
+        if (gWhState.connectCallback != NULL) {
+            gWhState.connectCallback(callback);
         }
         break;
     case 11:

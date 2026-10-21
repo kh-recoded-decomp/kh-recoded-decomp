@@ -17,7 +17,7 @@ typedef struct {
     BOOL (*judgeAccept)(WMStartParentCallback *cb);
 } WHState;
 
-extern WHState data_ov015_0207e980;
+extern WHState gWhState;
 
 extern void WH_SetError(int code);
 extern void WH_ChangeSysState(int state);
@@ -35,7 +35,7 @@ void WH_StateOutStartParent(WMStartParentCallback *cb) {
     }
     switch (cb->state) {
     case 7:
-        if (data_ov015_0207e980.judgeAccept != NULL && !data_ov015_0207e980.judgeAccept(cb)) {
+        if (gWhState.judgeAccept != NULL && !gWhState.judgeAccept(cb)) {
             result = WM_Disconnect(NULL, cb->aid);
             if (result != 2) {
                 WH_SetError(result);
@@ -43,15 +43,15 @@ void WH_StateOutStartParent(WMStartParentCallback *cb) {
             }
             break;
         }
-        data_ov015_0207e980.childBitmap |= targetBitmap;
-        if (data_ov015_0207e980.connectCallback != NULL) {
-            data_ov015_0207e980.connectCallback(cb);
+        gWhState.childBitmap |= targetBitmap;
+        if (gWhState.connectCallback != NULL) {
+            gWhState.connectCallback(cb);
         }
         break;
     case 9:
-        data_ov015_0207e980.childBitmap &= ~targetBitmap;
-        if (data_ov015_0207e980.connectCallback != NULL) {
-            data_ov015_0207e980.connectCallback(cb);
+        gWhState.childBitmap &= ~targetBitmap;
+        if (gWhState.connectCallback != NULL) {
+            gWhState.connectCallback(cb);
         }
         break;
     case 0:

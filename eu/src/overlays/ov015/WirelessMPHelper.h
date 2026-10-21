@@ -28,7 +28,7 @@ typedef char WirelessMPModeOffsetCheck[
 typedef char WirelessMPSystemStateOffsetCheck[
     (u32)&((WirelessMPHelper *)0)->systemState == 0x50 ? 1 : -1];
 
-extern WirelessMPHelper data_ov015_0207e980;
+extern WirelessMPHelper gWhState;
 extern WMDataSharingInfo data_ov015_0207fbc0;
 extern u32 sWirelessDataSharingDoubleMode;
 

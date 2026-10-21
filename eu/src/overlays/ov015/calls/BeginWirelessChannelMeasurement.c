@@ -2,5 +2,5 @@
 #define ReadMacAddress OS_GetMacAddress
 #define ReportWirelessResult WH_SetError
 #define SetWirelessState WH_ChangeSysState
-#define channelState data_ov015_0207e980
+#define channelState gWhState
 #include "src/ov015/wireless_channel_selection/BeginWirelessChannelMeasurement_020748f4.c"

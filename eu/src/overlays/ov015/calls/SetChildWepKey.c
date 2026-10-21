@@ -1,6 +1,6 @@
 #define SetChildWepKey_020741ec SetChildWepKey
 #define WM_SetWEPKey_0201228c WM_SetWEPKey
-#define data_0207e980 data_ov015_0207e980
+#define data_0207e980 gWhState
 #define data_0207e9e0 data_ov015_0207e9e0
 #define data_0207eb60 data_ov015_0207eb60
 #define func_020737c4 WH_ChangeSysState

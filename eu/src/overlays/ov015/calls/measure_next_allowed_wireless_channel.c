@@ -1,4 +1,4 @@
-#define func_020115ac GetTransitionFrame
+#define func_020115ac WM_GetAllowedChannel
 #define func_020737c4 WH_ChangeSysState
 #define func_020737d4 WH_SetError
 #define func_02074a58 RecordWirelessChannelMeasurement

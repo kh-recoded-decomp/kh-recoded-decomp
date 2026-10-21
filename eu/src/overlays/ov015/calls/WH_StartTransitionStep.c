@@ -1,3 +1,4 @@
+#define data_ov015_0207e980 gWhState
 #define ChoosePanelModeFromSelection_020748ac ChoosePanelModeFromSelection
 #define RunTransitionSlot2_0201170c RunTransitionSlot2
 #define SetPanelTransitionMode_020737c4 WH_ChangeSysState

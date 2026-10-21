@@ -1,3 +1,4 @@
+#define data_ov015_0207e980 gWhState
 #define ClearSlotEventHandler_02011ea4 ClearSlotEventHandler
 #define EndWirelessKeySharing_020745dc EndWirelessKeySharing
 #define EndWirelessScan_02074118 EndWirelessScan

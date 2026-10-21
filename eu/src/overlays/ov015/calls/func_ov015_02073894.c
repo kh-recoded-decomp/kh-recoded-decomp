@@ -7,7 +7,7 @@ typedef struct WirelessHelperState {
     ChildWepKeyGenerator childKeyGenerator;
 } WirelessHelperState;
 
-extern WirelessHelperState data_ov015_0207e980;
+extern WirelessHelperState gWhState;
 extern u16 data_ov015_0207e9e0[];
 extern u8 data_ov015_0207ea20[];
 extern void WH_ChangeSysState(int state);
@@ -21,7 +21,7 @@ BOOL func_ov015_02073894(void)
     u16 wepMode;
 
     WH_ChangeSysState(3);
-    wepMode = data_ov015_0207e980.childKeyGenerator(data_ov015_0207e9e0, data_ov015_0207ea20);
+    wepMode = gWhState.childKeyGenerator(data_ov015_0207e9e0, data_ov015_0207ea20);
     result = WM_SetWEPKey(func_ov015_020738f8, wepMode, data_ov015_0207e9e0);
     if (result == 2) {
         return TRUE;

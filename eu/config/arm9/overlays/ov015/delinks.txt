@@ -572,6 +572,10 @@ src/overlays/ov015/calls/WH_StartScan.c:
     complete
     .text       start:0x02073d68 end:0x02073e1c
 
+src/overlays/ov015/calls/WH_StateInStartScan.c:
+    complete
+    .text       start:0x02073e1c end:0x02073f34
+
 src/overlays/ov015/calls/WH_StateOutStartScanEx.c:
     complete
     .text       start:0x02073f34 end:0x02074118

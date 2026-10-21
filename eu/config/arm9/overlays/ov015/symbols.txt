@@ -141,7 +141,7 @@ func_ov015_02073cec kind:function(arm,size=0x30) addr:0x02073cec
 func_ov015_02073d1c kind:function(arm,size=0x28) addr:0x02073d1c
 HandlePanelPromptSelection kind:function(arm,size=0x24) addr:0x02073d44
 WH_StartScan kind:function(arm,size=0xb4) addr:0x02073d68
-func_ov015_02073e1c kind:function(arm,size=0x118) addr:0x02073e1c
+WH_StateInStartScan kind:function(arm,size=0x118) addr:0x02073e1c
 WH_StateOutStartScanEx kind:function(arm,size=0x1e4) addr:0x02073f34
 EndWirelessScan kind:function(arm,size=0x34) addr:0x02074118
 func_ov015_0207414c kind:function(arm,size=0x28) addr:0x0207414c
@@ -357,11 +357,11 @@ gWirelessResourceTableB kind:data(any) addr:0x0207e900
 gWirelessResourceTableC kind:data(any) addr:0x0207e928
 data_ov015_0207e960 kind:bss addr:0x0207e960
 data_ov015_0207e964 kind:bss addr:0x0207e964
-data_ov015_0207e980 kind:bss addr:0x0207e980
+gWhState kind:bss addr:0x0207e980
 data_ov015_0207e9e0 kind:bss addr:0x0207e9e0
 data_ov015_0207e9f4 kind:bss addr:0x0207e9f4
 data_ov015_0207ea20 kind:bss addr:0x0207ea20
-data_ov015_0207ea60 kind:bss addr:0x0207ea60
+gWhScanExParam kind:bss addr:0x0207ea60
 data_ov015_0207ea6a kind:bss addr:0x0207ea6a
 data_ov015_0207ea74 kind:bss addr:0x0207ea74
 data_ov015_0207eac0 kind:bss addr:0x0207eac0

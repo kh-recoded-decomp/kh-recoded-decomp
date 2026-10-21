@@ -1,3 +1,4 @@
+#define data_ov015_0207e980 gWhState
 #define AlarmCallback_02011834 AlarmCallback_02011848
 #define WH_SetError_020737d4 WH_SetError
 #define WH_StartScanStep_02073930 WH_StartScanStep

@@ -418,8 +418,8 @@ typedef u16 (*WhChildWEPKeyGeneratorFunc)(u16 *pWepKey, const WMBssDesc *pBssDes
 
 typedef struct WhStatics { u8 opaque00[4]; u16 nChannelBusyRatio; u8 opaque06[6]; u16 nChannelBitmap; u8 opaque0e[0x2a]; u32 nRand; } WhStatics;
 
-extern WhStatics data_ov015_0207e980;
-#define sWh data_ov015_0207e980
+extern WhStatics gWhState;
+#define sWh gWhState
 extern u16 data_ov105_020c0520[16];
 extern WMScanParam data_ov105_020c0540;
 extern u8 data_ov105_020c0560[24];

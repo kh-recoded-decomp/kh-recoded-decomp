@@ -1,3 +1,5 @@
+#define func_ov015_02073e1c WH_StateInStartScan
+#define data_ov015_0207e980 gWhState
 #define DC_InvalidateRange_02003414 DC_InvalidateRange
 #define data_ov015_0207efa0 gWirelessScanBuffer
 #define MI_CpuCopy8_01ff89a8 MI_CpuCopy8

@@ -1,3 +1,4 @@
+#define data_ov015_0207e980 gWhState
 #define SetPanelTransitionMode_020737c4 WH_ChangeSysState
 #define StartWirelessMP_02073aa0 StartWirelessMP
 #define WH_SetError_020737d4 WH_SetError

@@ -16,7 +16,7 @@ extern void *NNSi_FndAllocFromDefaultHeap(u32 size);
 extern void MI_CpuFill8(void *dst, int value, u32 size);
 extern void SetupMainBgLayers(void);
 extern void BuildMenuEntryList(void);
-extern void func_ov037_020baedc(void);
+extern void LoadContinueMenuBackground(void);
 extern void DrawMenuTexts(void);
 extern void LoadMenuModelResources(void);
 extern void ResetCameraProjectionOverrides(void);
@@ -34,7 +34,7 @@ void CreateOv037Context(void)
     gContinueScreenContext->enabled = 1;
     SetupMainBgLayers();
     BuildMenuEntryList();
-    func_ov037_020baedc();
+    LoadContinueMenuBackground();
     DrawMenuTexts();
     LoadMenuModelResources();
     ResetCameraProjectionOverrides();

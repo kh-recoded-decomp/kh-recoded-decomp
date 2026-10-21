@@ -1614,7 +1614,7 @@
   "src/calls/OS_UnlockCard.c": "dsi/1.1",
   "src/calls/SND_SetTrackParam0A.c": "dsi/1.1",
   "src/calls/WmInit.c": "dsi/1.1",
-  "src/calls/GetTransitionFrame.c": "dsi/1.1",
+  "src/calls/WM_GetAllowedChannel.c": "dsi/1.1",
   "src/calls/CTRDGi_InitCallback.c": "dsi/1.1",
   "src/calls/setDualArrayEntry.c": "dsi/1.1",
   "src/calls/IsGlobalPackedBitSet.c": "dsi/1.1",
@@ -9267,5 +9267,7 @@
   "src/overlays/ov001/calls/UnloadHudLayersAndRecordText.c": "dsi/1.1",
   "src/overlays/ov022/asm_stubs/calls/GetMovieChunkType1Size.c": "dsi/1.3p1",
   "src/overlays/ov022/asm_stubs/calls/func_ov022_020b715c.c": "dsi/1.3p1",
-  "libs/nitro/os/asm_stubs/calls/OSi_DoBoot.c": "dsi/1.1"
+  "libs/nitro/os/asm_stubs/calls/OSi_DoBoot.c": "dsi/1.1",
+  "src/overlays/ov037/calls/LoadContinueMenuBackground.c": "dsi/1.1",
+  "src/overlays/ov015/calls/WH_StateInStartScan.c": "dsi/1.1"
 }

@@ -5,7 +5,7 @@ typedef struct WirelessHelperState {
     int sysState;
 } WirelessHelperState;
 
-extern WirelessHelperState data_ov015_0207e980;
+extern WirelessHelperState gWhState;
 extern u8 data_ov015_0207f3a0[];
 extern void WH_ChangeSysState(int state);
 extern void WH_SetError(int errorCode);
@@ -16,7 +16,7 @@ BOOL EndWirelessKeySharing(void)
 {
     int result;
 
-    if (data_ov015_0207e980.sysState != 6) {
+    if (gWhState.sysState != 6) {
         return FALSE;
     }
 

@@ -1,3 +1,4 @@
+#define data_ov015_0207e980 gWhState
 #define SetPanelTransitionMode_020737c4 WH_ChangeSysState
 #define SetSlotEventHandler_0201144c SetSlotEventHandler
 #define WH_SetReceiver_02074e3c WH_SetReceiver

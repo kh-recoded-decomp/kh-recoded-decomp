@@ -1,3 +1,3 @@
 #define SelectWirelessChannelFromBitmap_02074b4c SelectWirelessChannelFromBitmap
-#define data_0207e980 data_ov015_0207e980
+#define data_0207e980 gWhState
 #include "src/ov015/wireless_channel_selection/SelectWirelessChannelFromBitmap_02074b4c.c"

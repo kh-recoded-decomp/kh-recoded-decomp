@@ -3,5 +3,5 @@
 #define func_ov015_020737c4 WH_ChangeSysState
 #define func_ov015_020737d4 WH_SetError
 #define func_ov015_020746f8 WH_StateInReset
-#define panelState_0207e980 data_ov015_0207e980
+#define panelState_0207e980 gWhState
 #include "src/ov015/reviewed_helpers/PollPanelTransition_02074e80.c"
