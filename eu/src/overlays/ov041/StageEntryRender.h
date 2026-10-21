@@ -6,10 +6,15 @@
 
 typedef struct StageEntryNode {
     u16 flags;
-    u8 reserved02[0xa2];
+    u8 reserved02[0x7a];
+    u16 yaw; /* used while flags has STAGE_MODEL_USE_YAW */
+    u8 reserved07e[0x26];
     VecFx32 position;
     u8 reserved0b0[0xe4];
 } StageEntryNode;
+
+/* StageEntrySlot.flags */
+#define STAGE_SLOT_FACING_LOCKED 0x20
 
 typedef struct StageEntrySlot {
     u8 reserved000[0x10];
@@ -22,7 +27,7 @@ typedef struct StageGroundShadow {
     u8 reserved00[0xa4];
     VecFx32 position;
     VecFx32 scale;
-    u8 reservedbc[0x50];
+    u8 reservedbc[0x48];
 } StageGroundShadow;
 
 typedef struct StageTrackedNode {
@@ -33,12 +38,22 @@ typedef struct StageTrackedNode {
 #define STAGE_ENTRY_WAITING 1
 #define STAGE_ENTRY_ACTIVE 2
 
+/* StageEntry.abilities: the first five only work at a quarter of the hp or less */
+#define STAGE_ABILITY_LOW_HP_MASK 0x1f
+#define STAGE_ABILITY_LEADER 0x20 /* checked on the first entry, for every non-enemy */
+#define STAGE_ABILITY_PLAYER 0x40
+
 /* StageEntry.state of an entry that is out */
 #define STAGE_ENTRY_OUT 6
 
+/* StageEntry.flags */
+#define STAGE_ENTRY_ENEMY 1
+#define STAGE_ENTRY_SHOW_HP 8
+#define STAGE_ENTRY_TIMED_PRESS 0x40 /* the button was pressed in time during its action */
 #define STAGE_ENTRY_FLAG_800 0x800
 
 #define STAGE_ENTRY_STATUS_COUNT 11
+#define STAGE_ENTRY_STATUS_9 9 /* blocks the defending press */
 
 /* StageMotion speed profiles */
 #define STAGE_MOTION_EASE_IN 0 /* starts at rest */
@@ -55,10 +70,43 @@ typedef struct StageMotion {
     fx32 accel;
 } StageMotion;
 
+/* A model played through an animation that also moves along path nodes (as GetPathNodeOffset reads them). */
+typedef struct StagePathModel {
+    u8 reserved000[0x20];
+    u32 renderFlags;
+    u8 reserved024[0x104 - 0x24];
+    void *nodes;
+    int nodeIndex;
+    u8 reserved10c[4];
+    fx32 frame;
+    int state;
+    VecFx32 position;
+} StagePathModel;
+
+/* StageEntryMove.phase: out to a destination, a pause there, then back to its grid place */
+#define STAGE_MOVE_IDLE 0
+#define STAGE_MOVE_OUT 1
+#define STAGE_MOVE_PAUSE 2
+#define STAGE_MOVE_BACK 3
+
+typedef struct StageEntryMove {
+    StageMotion motion;
+    fx32 duration;
+    fx32 pause; /* frames to wait at the destination */
+    u8 phase; /* STAGE_MOVE_* */
+    u8 reserved31[3];
+} StageEntryMove;
+
 typedef struct StageEntryAction {
-    u8 reserved00[0x1c];
+    s16 soundSeqArc;
+    u8 reserved02[3];
+    s8 soundIndex;
+    s16 soundFrame; /* animation frame the sound plays on */
+    u8 reserved08[0x1c - 8];
     u8 kind;
-    u8 reserved1d[0x1b];
+    u8 reserved1d[3];
+    u8 animation;
+    u8 reserved21[0x17];
 } StageEntryAction;
 
 typedef void (*StageEntryFunc)(u8 entryIndex);
@@ -66,7 +114,8 @@ typedef void (*StageEntryFunc)(u8 entryIndex);
 struct StageEntry {
     u8 kind;
     u8 index; /* its own place in StageWork.entries */
-    u8 reserved002[2];
+    s8 row;
+    u8 column;
     u8 state;
     u8 previousState;
     u8 pending;
@@ -77,7 +126,11 @@ struct StageEntry {
     u8 reserved011;
     u8 targetCount;
     u8 targets[9]; /* indices of the entries the action is aimed at */
-    u8 reserved01c[0x108 - 0x1c];
+    u8 reserved01c[0xdc - 0x1c];
+    s16 hp;
+    s16 maxHp;
+    s16 shownHp; /* follows hp down a little at a time */
+    u8 reserved0e2[0x108 - 0xe2];
     s8 actionCount;
     u8 reserved109[3];
     StageEntryAction *actions;
@@ -85,7 +138,11 @@ struct StageEntry {
     u8 reserved11b;
     int delay;
     int animationFrame;
-    u8 reserved124[0xc];
+    u8 animation;
+    u8 sceneSlot;
+    u8 reserved126[2];
+    fx32 radius;
+    u8 reserved12c[4];
     VecFx32 overheadOffset; /* from its position to where things are shown above it */
     u8 reserved13c[0x20];
     StageEntrySlot slot;
@@ -94,12 +151,14 @@ struct StageEntry {
     u8 reserved322[0x12];
     StageShadowActor *attachment;
     u8 reserved338[0x20];
-    StageMotion motion;
-    u8 reserved380[0xc];
+    StageEntryMove move;
     StageTrackedNode *trackedNodes[5];
     StageResourceItem *statusItem;
-    u8 reserved3a4[4];
+    StagePathModel *pathModel;
     StageGroundShadow shadow;
+    u8 reserved4ac[6];
+    u8 abilities; /* STAGE_ABILITY_* bits */
+    u8 reserved4b3;
 };
 
 typedef struct StageRenderCapture {
@@ -119,7 +178,11 @@ void UpdateStageEntryAnimation(StageEntrySlot *slot);
 typedef char StageEntrySize[sizeof(StageEntry) == 0x4b4 ? 1 : -1];
 typedef char StageEntryActionSize[sizeof(StageEntryAction) == 0x38 ? 1 : -1];
 typedef char StageEntryActionsOffset[(u32)&((StageEntry *)0)->actions == 0x10c ? 1 : -1];
-typedef char StageEntryMotionOffset[(u32)&((StageEntry *)0)->motion == 0x358 ? 1 : -1];
+typedef char StageEntryMoveOffset[(u32)&((StageEntry *)0)->move == 0x358 ? 1 : -1];
+typedef char StageEntryMoveSize[sizeof(StageEntryMove) == 0x34 ? 1 : -1];
+typedef char StageEntryHpOffset[(u32)&((StageEntry *)0)->hp == 0xdc ? 1 : -1];
+typedef char StageEntryRadiusOffset[(u32)&((StageEntry *)0)->radius == 0x128 ? 1 : -1];
+typedef char StageEntryAbilitiesOffset[(u32)&((StageEntry *)0)->abilities == 0x4b2 ? 1 : -1];
 typedef char StageEntryStatusesOffset[(u32)&((StageEntry *)0)->statuses == 0x110 ? 1 : -1];
 typedef char StageEntryStatusItemOffset[(u32)&((StageEntry *)0)->statusItem == 0x3a0 ? 1 : -1];
 typedef char StageEntryPositionOffset[(u32)&((StageEntry *)0)->slot.node.position == 0x214 ? 1 : -1];

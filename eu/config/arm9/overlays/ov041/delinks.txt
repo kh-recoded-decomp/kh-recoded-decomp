@@ -236,9 +236,25 @@ src/overlays/ov041/calls/ResetSlotHandles.c:
     complete
     .text       start:0x020bf0c0 end:0x020bf0ec
 
+src/overlays/ov041/calls/StageStateSetupSlots.c:
+    complete
+    .text       start:0x020bf0ec end:0x020bf130
+
+src/overlays/ov041/calls/StageStateStartMusic.c:
+    complete
+    .text       start:0x020bf130 end:0x020bf17e
+
+src/overlays/ov041/calls/StageStateStartSubMode.c:
+    complete
+    .text       start:0x020bf180 end:0x020bf218
+
 src/overlays/ov041/calls/StageStateFadeBgm.c:
     complete
     .text       start:0x020bf218 end:0x020bf232
+
+src/overlays/ov041/calls/StageStateWaitScreenIdle.c:
+    complete
+    .text       start:0x020bf234 end:0x020bf280
 
 src/overlays/ov041/auto/StageStateNoop16.c:
     complete
@@ -247,6 +263,10 @@ src/overlays/ov041/auto/StageStateNoop16.c:
 src/overlays/ov041/calls/StageStateRunFieldOp428.c:
     complete
     .text       start:0x020c0650 end:0x020c0678
+
+src/overlays/ov041/calls/StageStateFadeOut.c:
+    complete
+    .text       start:0x020c07b4 end:0x020c07ec
 
 src/overlays/ov041/auto/StageStateNoop22.c:
     complete
@@ -272,6 +292,10 @@ src/overlays/ov041/calls/ApplyStageEntryMove.c:
     complete
     .text       start:0x020c0c14 end:0x020c0cec
 
+src/overlays/ov041/calls/FaceStageEntryAcross.c:
+    complete
+    .text       start:0x020c0cec end:0x020c0d74
+
 src/overlays/ov041/calls/SetStageEntryFlag800.c:
     complete
     .text       start:0x020c0d74 end:0x020c0d98
@@ -283,6 +307,14 @@ src/overlays/ov041/calls/SetStageEntryState.c:
 src/overlays/ov041/calls/CheckStageEntryActions.c:
     complete
     .text       start:0x020c0e58 end:0x020c0e78
+
+src/overlays/ov041/calls/IsPrimaryEntryOutOfReach.c:
+    complete
+    .text       start:0x020c0e78 end:0x020c0ec0
+
+src/overlays/ov041/calls/FindStageEntryBySceneSlot.c:
+    complete
+    .text       start:0x020c0ec0 end:0x020c0f04
 
 src/overlays/ov041/calls/PickNearbyTarget.c:
     complete
@@ -396,6 +428,10 @@ src/overlays/ov041/calls/GetStageGridPosition.c:
     complete
     .text       start:0x020c2b7c end:0x020c2bd0
 
+src/overlays/ov041/calls/GetFarthestEnemyRow.c:
+    complete
+    .text       start:0x020c2bd0 end:0x020c2c1c
+
 src/overlays/ov041/auto/SetEntryState.c:
     complete
     .text       start:0x020c306c end:0x020c3092
@@ -404,9 +440,37 @@ src/overlays/ov041/auto/GetEntryAction.c:
     complete
     .text       start:0x020c3094 end:0x020c30ac
 
+src/overlays/ov041/calls/StartStagePanelTransition.c:
+    complete
+    .text       start:0x020c31e4 end:0x020c3220
+
+src/overlays/ov041/calls/FinishStagePanelTransition.c:
+    complete
+    .text       start:0x020c3220 end:0x020c325c
+
+src/overlays/ov041/calls/ShowEntryHpGauge.c:
+    complete
+    .text       start:0x020c33a8 end:0x020c33fc
+
+src/overlays/ov041/calls/UpdateEntryHpGauge.c:
+    complete
+    .text       start:0x020c33fc end:0x020c347a
+
 src/overlays/ov041/calls/PlaySoundOnEntryFrame.c:
     complete
     .text       start:0x020c34e4 end:0x020c3512
+
+src/overlays/ov041/calls/MoveStageEntryTo.c:
+    complete
+    .text       start:0x020c3514 end:0x020c354c
+
+src/overlays/ov041/calls/UpdateStageEntryMove.c:
+    complete
+    .text       start:0x020c354c end:0x020c35e2
+
+src/overlays/ov041/calls/GetEntryAbility.c:
+    complete
+    .text       start:0x020c35e4 end:0x020c3678
 
 src/overlays/ov041/calls/func_ov041_020c3678.c:
     complete
@@ -436,6 +500,10 @@ src/overlays/ov041/calls/SetAnimationFrameIfChanged.c:
     complete
     .text       start:0x020c38bc end:0x020c391c
 
+src/overlays/ov041/calls/StepEntryPathModel.c:
+    complete
+    .text       start:0x020c391c end:0x020c398e
+
 src/overlays/ov041/auto/EntryActionHookNoop.c:
     complete
     .text       start:0x020c3b04 end:0x020c3b06
@@ -455,6 +523,18 @@ src/overlays/ov041/calls/StepEntryMotion.c:
 src/overlays/ov041/calls/StepStageMotion.c:
     complete
     .text       start:0x020c3fd8 end:0x020c40d8
+
+src/overlays/ov041/calls/ShowEntryPairPanel.c:
+    complete
+    .text       start:0x020c4454 end:0x020c4492
+
+src/overlays/ov041/calls/CheckPairTimedPress.c:
+    complete
+    .text       start:0x020c460c end:0x020c4662
+
+src/overlays/ov041/calls/CheckTimedPress.c:
+    complete
+    .text       start:0x020c4664 end:0x020c46c4
 
 src/overlays/ov041/calls/ApplyActionToTargets.c:
     complete
@@ -483,6 +563,22 @@ src/overlays/ov041/calls/GetScaleLevelFactor.c:
 src/overlays/ov041/calls/LoadSharedRecordField.c:
     complete
     .text       start:0x020cdfb0 end:0x020ce004
+
+src/overlays/ov041/calls/SetStageOrbPhase.c:
+    complete
+    .text       start:0x020ce004 end:0x020ce05c
+
+src/overlays/ov041/calls/SpawnStageOrb.c:
+    complete
+    .text       start:0x020ce05c end:0x020ce08c
+
+src/overlays/ov041/calls/StartStageOrb.c:
+    complete
+    .text       start:0x020ce08c end:0x020ce104
+
+src/overlays/ov041/calls/UpdateStageOrb.c:
+    complete
+    .text       start:0x020ce104 end:0x020ce1c8
 
 src/overlays/ov041/calls/InitRecordOwnerSlots.c:
     complete

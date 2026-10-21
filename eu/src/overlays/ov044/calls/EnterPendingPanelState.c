@@ -1,4 +1,4 @@
-#define EnterPendingPanelState_020d0d80 NNSi_FndFreeFromDefaultHeap_2
+#define EnterPendingPanelState_020d0d80 EnterPendingPanelState
 #define SetPanelState_020d0278 NNS_FndFreeToExpHeap_2
 #define data_ov044_020d0ea0 data_ov044_020d0ec0
 #include "src/ov044/panel_state/EnterPendingPanelState_020d0d80.c"

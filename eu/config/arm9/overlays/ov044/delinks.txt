@@ -143,7 +143,7 @@ src/overlays/ov044/calls/StartScaledPanelTransition.c:
     complete
     .text       start:0x020d0d1c end:0x020d0da0
 
-src/overlays/ov044/calls/NNSi_FndFreeFromDefaultHeap_2.c:
+src/overlays/ov044/calls/EnterPendingPanelState.c:
     complete
     .text       start:0x020d0da0 end:0x020d0dc0
 

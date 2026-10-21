@@ -58,7 +58,7 @@ typedef struct StageResourceContainer {
 
 /* The model of an item: animation bindings and render object, then its placement. */
 /* StageItemModel.flags */
-#define STAGE_MODEL_AUTO_FACING 0x20 /* cleared once the item is given an explicit facing */
+#define STAGE_MODEL_USE_YAW 0x20 /* rotation from the yaw angle; cleared when a matrix is set instead */
 #define STAGE_MODEL_COLOR_SCALE 0x40
 
 typedef struct StageItemModel {
@@ -140,8 +140,12 @@ typedef struct StageScaleFactors {
 } StageScaleFactors;
 
 /* StageWork.flags */
+#define STAGE_WORK_NO_TIMED_INPUT 4
 #define STAGE_WORK_SKIP_CHANCE_A 8
 #define STAGE_WORK_SKIP_CHANCE_B 0x10
+#define STAGE_WORK_FIELD_OP_DONE 0x4000
+#define STAGE_WORK_PANEL_MOVING 0x4000000
+#define STAGE_WORK_FAST_PANELS 0x20000000
 
 typedef struct StageEntry StageEntry;
 
@@ -159,7 +163,8 @@ typedef struct StageWork {
     u8 entryCount;
     u8 primaryCount; /* entries [0, primaryCount) are the primary ones, the secondary ones follow */
     u8 secondaryCount;
-    u8 reserved01b[0x24 - 0x1b];
+    u8 reserved01b[0x20 - 0x1b];
+    void *subModeTask;
     u8 commandId;
     u8 reserved025;
     u8 targetIndex;
@@ -174,7 +179,8 @@ typedef struct StageWork {
     u8 reserved334[4];
     StageHudMessage hudMessage;
     u8 shadowHeightIndex;
-    u8 reserved349[3];
+    u8 panelState;
+    u8 reserved34a[2];
     StageShadowActor *shadowActors[2];
     void *messages;
     StageResourceList *lists[0x3e];
@@ -182,7 +188,9 @@ typedef struct StageWork {
 } StageWork;
 
 typedef struct StageContext {
-    u8 reserved000[0xb8];
+    u8 reserved000[6];
+    u16 flags;
+    u8 reserved008[0xb8 - 8];
     StageWork *stageWork;
 } StageContext;
 

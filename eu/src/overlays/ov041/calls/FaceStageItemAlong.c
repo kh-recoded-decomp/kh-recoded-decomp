@@ -51,5 +51,5 @@ void FaceStageItemAlong(StageResourceItem *item, const VecFx32 *direction)
     turn = Math_AsinIdx(sine);
     MTX_RotY33_(&rotation, gSinFx12Table[turn >> 4], gSinFx12Table[(0x400 - (angle >> 4)) & 0xfff]);
     item->model.rotation = rotation;
-    item->model.flags &= (u16)~STAGE_MODEL_AUTO_FACING;
+    item->model.flags &= (u16)~STAGE_MODEL_USE_YAW;
 }

@@ -10,6 +10,6 @@ void StageStateRunFieldOp428(void)
     StageWork *work = gMovieContextState->stageWork;
 
     InvokeFieldModeOp428();
-    work->flags |= 0x4000;
+    work->flags |= STAGE_WORK_FIELD_OP_DONE;
     SetStageState(0x14, FALSE);
 }

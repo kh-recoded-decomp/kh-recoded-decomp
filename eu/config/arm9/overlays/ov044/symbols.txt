@@ -33,7 +33,7 @@ ReapplyPanelState kind:function(arm,size=0x1c) addr:0x020d0ba8
 Panel_GetViewState kind:function(arm,size=0x14) addr:0x020d0bc4
 UpdatePanelViewAxes kind:function(arm,size=0x144) addr:0x020d0bd8
 StartScaledPanelTransition kind:function(arm,size=0x84) addr:0x020d0d1c
-NNSi_FndFreeFromDefaultHeap_2 kind:function(arm,size=0x20) addr:0x020d0da0
+EnterPendingPanelState kind:function(arm,size=0x20) addr:0x020d0da0
 data_ov044_020d0de0 kind:data(any) addr:0x020d0de0
 data_ov044_020d0de4 kind:data(any) addr:0x020d0de4
 data_ov044_020d0e10 kind:data(any) addr:0x020d0e10
