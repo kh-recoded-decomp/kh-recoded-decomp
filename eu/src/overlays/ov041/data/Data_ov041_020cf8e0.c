@@ -12,16 +12,16 @@ extern void StageStateAfterTurn(void);
 extern void StageStatePlayerTurn(void);
 extern void func_ov041_020bf5b0(void);
 extern void StageStateRunTurn(void);
-extern void func_ov041_020bfe84(void);
+extern void StageStateChooseTarget(void);
 extern void StageStateStartTurn(void);
-extern void func_ov041_020c00a8(void);
+extern void StageStateChooseItemTarget(void);
 extern void func_ov041_020c021c(void);
 extern void StageStateNoop16(void);
 extern void func_ov041_020c04a0(void);
 extern void StageStateRunFieldOp428(void);
 extern void StageStateRetreat(void);
 extern void StageStateFadeOut(void);
-extern void func_ov041_020c07ec(void);
+extern void StageStateFinish(void);
 extern void StageStateNoop22(void);
 
 #pragma explicit_zero_data on
@@ -39,15 +39,15 @@ void (*gStageStateHandlers[23])(void) = {
     StageStatePlayerTurn,
     func_ov041_020bf5b0,
     StageStateRunTurn,
-    func_ov041_020bfe84,
+    StageStateChooseTarget,
     StageStateStartTurn,
-    func_ov041_020c00a8,
+    StageStateChooseItemTarget,
     func_ov041_020c021c,
     StageStateNoop16,
     func_ov041_020c04a0,
     StageStateRunFieldOp428,
     StageStateRetreat,
     StageStateFadeOut,
-    func_ov041_020c07ec,
+    StageStateFinish,
     StageStateNoop22,
 };

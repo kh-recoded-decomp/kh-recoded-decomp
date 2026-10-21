@@ -28,6 +28,8 @@ typedef struct SceneEntryContext {
     SceneEntryTable *table;
     u8 pad_04[9];
     s8 currentEntry;
+    u8 pad_0e[0x10b8 - 0xe];
+    u8 unk10b8;
 } SceneEntryContext;
 
 extern SceneEntryContext *data_ov001_020a048c;

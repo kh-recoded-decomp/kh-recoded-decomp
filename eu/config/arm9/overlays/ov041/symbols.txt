@@ -28,6 +28,7 @@ GetCommandStatusIndex kind:function(thumb,size=0x5c) addr:0x020bd6ac
 TallyStageCharacter kind:function(thumb,size=0x58) addr:0x020bd708
 SetStageDrawLayer kind:function(thumb,size=0x80) addr:0x020bd760
 StartStageFadeOut kind:function(thumb,size=0x2c) addr:0x020bd7e0
+PickStageTarget kind:function(thumb,size=0x160) addr:0x020bd80c
 NoSecondaryEntryCanAct kind:function(thumb,size=0x34) addr:0x020bd96c
 SetStageState kind:function(thumb,size=0x30) addr:0x020bd9a0
 RollStageChance kind:function(thumb,size=0x34) addr:0x020bd9d0
@@ -51,6 +52,7 @@ FreeManagerRecordTable kind:function(thumb,size=0x34) addr:0x020be224
 UpdateEntryStatusItems kind:function(thumb,size=0x28) addr:0x020be258
 UpdateEntryStatusItem kind:function(thumb,size=0x8c) addr:0x020be280
 ReleaseEntryStatusItem kind:function(thumb,size=0x34) addr:0x020be30c
+func_ov041_020be478 kind:function(thumb,size=0x778) addr:0x020be478
 GetCommandEffectKind kind:function(thumb,size=0x5e) addr:0x020bebf0
 ReleaseCommandMarkers kind:function(thumb,size=0x30) addr:0x020bec50
 HasStageEntryKind kind:function(thumb,size=0x3c) addr:0x020bec80
@@ -68,16 +70,16 @@ func_ov041_020bf5b0 kind:function(thumb,size=0x27c) addr:0x020bf5b0
 StageStateRunTurn kind:function(thumb,size=0xf8) addr:0x020bf82c
 func_ov041_020bf924 kind:function(thumb,size=0x2bc) addr:0x020bf924
 func_ov041_020bfbe0 kind:function(thumb,size=0x2a4) addr:0x020bfbe0
-func_ov041_020bfe84 kind:function(thumb,size=0x170) addr:0x020bfe84
+StageStateChooseTarget kind:function(thumb,size=0x170) addr:0x020bfe84
 StageStateStartTurn kind:function(thumb,size=0xb4) addr:0x020bfff4
-func_ov041_020c00a8 kind:function(thumb,size=0x174) addr:0x020c00a8
+StageStateChooseItemTarget kind:function(thumb,size=0x174) addr:0x020c00a8
 func_ov041_020c021c kind:function(thumb,size=0x280) addr:0x020c021c
 StageStateNoop16 kind:function(thumb,size=0x2) addr:0x020c049c
 func_ov041_020c04a0 kind:function(thumb,size=0x1b0) addr:0x020c04a0
 StageStateRunFieldOp428 kind:function(thumb,size=0x28) addr:0x020c0650
 StageStateRetreat kind:function(thumb,size=0x13c) addr:0x020c0678
 StageStateFadeOut kind:function(thumb,size=0x38) addr:0x020c07b4
-func_ov041_020c07ec kind:function(thumb,size=0x170) addr:0x020c07ec
+StageStateFinish kind:function(thumb,size=0x170) addr:0x020c07ec
 StageStateNoop22 kind:function(thumb,size=0x2) addr:0x020c095c
 PlaceStageEntryObject kind:function(thumb,size=0x8c) addr:0x020c0960
 SpawnStageEntry kind:function(thumb,size=0xe0) addr:0x020c09ec
@@ -133,6 +135,7 @@ FinishStagePanelTransition kind:function(thumb,size=0x3c) addr:0x020c3220
 UpdateEntryStatusIcon kind:function(thumb,size=0x14c) addr:0x020c325c
 ShowEntryHpGauge kind:function(thumb,size=0x54) addr:0x020c33a8
 UpdateEntryHpGauge kind:function(thumb,size=0x7e) addr:0x020c33fc
+func_ov041_020c347c kind:function(thumb,size=0x66) addr:0x020c347c
 PlaySoundOnEntryFrame kind:function(thumb,size=0x2e) addr:0x020c34e4
 MoveStageEntryTo kind:function(thumb,size=0x38) addr:0x020c3514
 UpdateStageEntryMove kind:function(thumb,size=0x96) addr:0x020c354c
@@ -183,7 +186,7 @@ func_ov041_020c8910 kind:function(thumb,size=0x638) addr:0x020c8910
 func_ov041_020c8f48 kind:function(thumb,size=0x544) addr:0x020c8f48
 func_ov041_020c948c kind:function(thumb,size=0xba0) addr:0x020c948c
 func_ov041_020ca02c kind:function(thumb,size=0x47c) addr:0x020ca02c
-func_ov041_020ca4a8 kind:function(thumb,size=0x14c) addr:0x020ca4a8
+EntryActionRevive kind:function(thumb,size=0x14c) addr:0x020ca4a8
 func_ov041_020ca5f4 kind:function(thumb,size=0x20c) addr:0x020ca5f4
 EntryActionOnSelf kind:function(thumb,size=0xfc) addr:0x020ca800
 func_ov041_020ca8fc kind:function(thumb,size=0x13f4) addr:0x020ca8fc
@@ -265,9 +268,10 @@ data_ov041_020cf5e4 kind:data(any) addr:0x020cf5e4
 data_ov041_020cf5e8 kind:data(any) addr:0x020cf5e8
 data_ov041_020cf61c kind:data(any) addr:0x020cf61c
 data_ov041_020cf61d kind:label(arm) addr:0x020cf61d
-data_ov041_020cf6ac kind:data(any) addr:0x020cf6ac
+gEmptyColumnCandidates kind:data(any) addr:0x020cf6ac
 data_ov041_020cf6b8 kind:data(any) addr:0x020cf6b8
-data_ov041_020cf6dc kind:data(any) addr:0x020cf6dc
+gEmptyTargetCandidates kind:data(any) addr:0x020cf6dc
+data_ov041_020cf700 kind:data(any) addr:0x020cf700
 sOv041_TraTg_020cf710 kind:data(any) addr:0x020cf710
 data_ov041_020cf720 kind:data(any) addr:0x020cf720
 sOv041_Bip01_020cf730 kind:data(any) addr:0x020cf730

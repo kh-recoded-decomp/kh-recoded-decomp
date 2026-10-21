@@ -124,6 +124,10 @@ src/overlays/ov041/calls/StartStageFadeOut.c:
     complete
     .text       start:0x020bd7e0 end:0x020bd80c
 
+src/overlays/ov041/calls/PickStageTarget.c:
+    complete
+    .text       start:0x020bd80c end:0x020bd96c
+
 src/overlays/ov041/calls/NoSecondaryEntryCanAct.c:
     complete
     .text       start:0x020bd96c end:0x020bd9a0
@@ -272,9 +276,17 @@ src/overlays/ov041/calls/StageStateRunTurn.c:
     complete
     .text       start:0x020bf82c end:0x020bf924
 
+src/overlays/ov041/calls/StageStateChooseTarget.c:
+    complete
+    .text       start:0x020bfe84 end:0x020bfff4
+
 src/overlays/ov041/calls/StageStateStartTurn.c:
     complete
     .text       start:0x020bfff4 end:0x020c00a8
+
+src/overlays/ov041/calls/StageStateChooseItemTarget.c:
+    complete
+    .text       start:0x020c00a8 end:0x020c021c
 
 src/overlays/ov041/auto/StageStateNoop16.c:
     complete
@@ -291,6 +303,10 @@ src/overlays/ov041/calls/StageStateRetreat.c:
 src/overlays/ov041/calls/StageStateFadeOut.c:
     complete
     .text       start:0x020c07b4 end:0x020c07ec
+
+src/overlays/ov041/calls/StageStateFinish.c:
+    complete
+    .text       start:0x020c07ec end:0x020c095c
 
 src/overlays/ov041/auto/StageStateNoop22.c:
     complete
@@ -631,6 +647,10 @@ src/overlays/ov041/calls/StageEntryStateRevived.c:
 src/overlays/ov041/calls/StageEntryStateHealed.c:
     complete
     .text       start:0x020c6ac8 end:0x020c6b98
+
+src/overlays/ov041/calls/EntryActionRevive.c:
+    complete
+    .text       start:0x020ca4a8 end:0x020ca5f4
 
 src/overlays/ov041/calls/EntryActionOnSelf.c:
     complete

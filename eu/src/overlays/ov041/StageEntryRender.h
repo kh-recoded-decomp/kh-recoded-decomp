@@ -50,6 +50,7 @@ typedef struct StageGroundShadow {
 #define STAGE_ENTRY_FLAG_800 0x800
 #define STAGE_ENTRY_STEP_BACK 0x4000
 #define STAGE_ENTRY_FROZEN 0x8000
+#define STAGE_ENTRY_NOT_TALLIED 0x80000
 #define STAGE_ENTRY_FORCE_ACTION_2 0x200000
 
 #define STAGE_ENTRY_STATUS_COUNT 11
@@ -114,7 +115,8 @@ typedef struct StageEntryAction {
     u8 kind;
     u8 reserved1d[3];
     u8 animation;
-    u8 reserved21[8];
+    u8 reserved21[7];
+    u8 castFrame; /* animation frame its effect takes hold on */
     u8 effectFrame; /* animation frame its effect item appears on */
     u8 reserved2a;
     u8 effectCategory;
@@ -139,6 +141,15 @@ typedef struct StageEntryOrder {
 typedef struct StageHpThresholds {
     fx32 values[4];
 } StageHpThresholds;
+
+/* Entry indices (or columns) a target is picked from at random (-1 = none). */
+typedef struct StageTargetCandidates {
+    int indices[9];
+} StageTargetCandidates;
+
+typedef struct StageColumnCandidates {
+    int columns[3];
+} StageColumnCandidates;
 
 /* Indices of the actions an entry can pick from (-1 = none). */
 typedef struct StageActionChoices {
@@ -165,7 +176,9 @@ struct StageEntry {
     s16 maxHp;
     s16 shownHp; /* follows hp down a little at a time */
     s16 checkedHp; /* hp when the hp thresholds were last checked */
-    u8 reserved0e4[0x108 - 0xe4];
+    u8 reserved0e4[0xf4 - 0xe4];
+    BOOL countsForProgress; /* passed to TallyStageCharacter when the stage ends */
+    u8 reserved0f8[0x108 - 0xf8];
     s8 actionCount;
     u8 reserved109[3];
     StageEntryAction *actions;

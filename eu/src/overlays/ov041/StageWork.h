@@ -161,7 +161,8 @@ typedef struct StageWork {
     s8 stateStep;
     u32 flags;
     u8 stateTimer;
-    u8 reserved00d[2];
+    u8 targetSlot; /* scene slot of the entry the target cursor is on */
+    u8 reserved00e;
     u8 introStep;
     u8 introValue;
     u8 introKind;
@@ -177,7 +178,11 @@ typedef struct StageWork {
     u8 fieldSlot;
     u8 targetIndex;
     u8 commandEffectKind;
-    u8 reserved028[0xd4 - 0x28];
+    u8 reserved028[0x42 - 0x28];
+    u8 itemEffectKind;
+    u8 reserved043[0x62 - 0x43];
+    u8 itemId;
+    u8 reserved063[0xd4 - 0x63];
     StageMarker *commandMarkers[9];
     StageModelActor primaryActor;
     u8 reserved20c[0xc4];
@@ -200,7 +205,18 @@ typedef struct StageWork {
 typedef struct StageContext {
     u8 reserved000[6];
     u16 flags;
-    u8 reserved008[0xb8 - 8];
+    u8 reserved008[0x1c - 8];
+    s8 pendingChoice;
+    u8 sceneReady;
+    u8 reserved01e[3];
+    u8 endKind; /* how the stage ended: 1, 2 or 3 */
+    u8 reserved022[4];
+    s16 unk26;
+    s16 unk28;
+    u8 reserved02a[8];
+    s16 cooldown;
+    s16 effectTimer;
+    u8 reserved036[0xb8 - 0x36];
     StageWork *stageWork;
 } StageContext;
 
