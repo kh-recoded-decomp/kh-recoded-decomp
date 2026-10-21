@@ -1,0 +1,8 @@
+#define CopyWideStringBounded_020663d0 CopyWideStringBounded
+#define DispatchContextCommand_02066c78 DispatchContextCommand
+#define GeneratePanelRound_0207533c func_ov015_0207533c
+#define PickWeightedEntry_020788a8 PickWeightedEntry
+#define data_ov015_0207a310 gWirelessThemeData
+#define data_ov015_0207a40c gWirelessSlotStyles
+#define func_0202a9d0 func_0202a9e4
+#include "src/ov015/panel_state/GeneratePanelRound_0207533c.c"

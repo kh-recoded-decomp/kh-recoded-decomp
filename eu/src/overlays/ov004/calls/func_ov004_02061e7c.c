@@ -1,0 +1,7 @@
+#define CopyScrollTextTiles_02061d5c CopyScrollTextTiles
+#define DivideU32_02023fc8 _u32_div_f
+#define FrameTimer_GetDuration_0206148c FrameTimer_GetDuration
+#define FrameTimer_GetElapsed_02061400 FrameTimer_GetElapsed
+#define StepScrollTextScroll_02061e7c func_ov004_02061e7c
+#define g_scrollText_020645a0 gScrollTextGlobals
+#include "src/ov004/scroll_text/StepScrollTextScroll_02061e7c.c"

@@ -1,0 +1,17 @@
+#define AttachActorCollider_020912a8 AttachActorCollider
+#define AttachActorResource_020914b8 AttachActorResource
+#define FindStageObjectByOwner_020995c4 FindStageObjectByOwner
+#define GetCollisionShapeParams_02093114 GetCollisionShapeParams
+#define GetSmallTableEntry_0209c340 GetSmallTableEntry
+#define GetStageActor_0209c040 GetStageActor
+#define GetStageObjectRecord_0209c0a0 GetStageObjectRecord
+#define GetStageRowIndex_0209c228 GetStageRowIndex
+#define Msg_OpenContainerAndReadHeader_0202cc6c Msg_OpenContainerAndReadHeader
+#define OS_SNPrintf_02002468 OS_SNPrintf
+#define SetLinkedActorsInQuadTree_020917d8 SetLinkedActorsInQuadTree
+#define SpawnStageGroupActor_020950f8 func_ov001_02095120
+#define data_ov001_020a02a8 gStageObjectActorDescriptor
+#define data_ov001_020a02e4 sOv001_EnAmFormat04dAp2_020a0304
+#define func_ov001_0208f018 func_ov001_0208f040
+#define func_ov001_02091834 func_ov001_0209185c
+#include "src/ov001/shared_engine/SpawnStageGroupActor_020950f8.c"

@@ -1,0 +1,22 @@
+#define BuildMatrix33_020495b8 BuildMatrix33_020495cc
+#define CrossProductOut_02048438 CrossProductOut
+#define DivFx64Shifted_020496b4 DivFx64Shifted
+#define FX_Div_01ff9c84 FX_Div
+#define FX_Sqrt_01ff9cfc FX_Sqrt
+#define FixedPointMultiply12 FX_Mul
+#define MinOfArray_020496d8 MinOfArray
+#define MulFx64ByFx32_02049690 MulFx64ByFx32
+#define MultAddOut_02048c48 MultAddOut
+#define SignOf_02048ad8 SignOf
+#define SquareFx32_02048b74 SquareFx32_02048b88
+#define SubtractVecFx32Out_02047d2c SubtractVecFx32Out
+#define SweepCapsuleAgainstCapsule_02048f8c func_02048fa0
+#define TransformVectorByBasisOut_020495f8 TransformVectorByBasisOut_0204960c
+#define VEC_DotProduct_01ff9e6c VEC_DotProduct
+#define VEC_NormalizeUnchecked_01ff9f88 VEC_Normalize
+#define func_02047ff8 func_0204800c
+#define func_02048b30 func_02048b44
+#define func_02049628 func_0204963c
+#define func_02049658 func_0204966c
+#define func_0204c6c0 SolveQuartic
+#include "src/arm9/spatial_queries/SweepCapsuleAgainstCapsule_02048f8c.c"

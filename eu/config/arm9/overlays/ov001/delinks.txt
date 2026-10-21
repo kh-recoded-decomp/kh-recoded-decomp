@@ -5304,6 +5304,10 @@ src/overlays/ov001/auto/func_ov001_02082c74.c:
     complete
     .text       start:0x02082c74 end:0x02082c78
 
+src/overlays/ov001/calls/func_ov001_02082c78.c:
+    complete
+    .text       start:0x02082c78 end:0x020831d0
+
 src/overlays/ov001/calls/func_ov001_020831d0.c:
     complete
     .text       start:0x020831d0 end:0x02083334
@@ -7675,6 +7679,10 @@ src/overlays/ov001/calls/UpdateStageEvent.c:
 src/overlays/ov001/calls/SpawnStageGroup.c:
     complete
     .text       start:0x02094f88 end:0x02095120
+
+src/overlays/ov001/calls/func_ov001_02095120.c:
+    complete
+    .text       start:0x02095120 end:0x020958a8
 
 src/overlays/ov001/calls/ResetGroupCommandState.c:
     complete

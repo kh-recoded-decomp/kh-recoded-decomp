@@ -1,0 +1,21 @@
+// redefine-sym eu2_DrawTextAnchored=DrawTextAnchored
+#define DrawRecordSlotRows_020c06f0 func_ov073_020c0710
+#define DrawTextAnchored_020015a0 DrawTextAnchored
+#define FormatStateText_020bccac FormatStateText
+#define G2D_DrawAnchoredText_02017dec NNSi_G2dTextCanvasDrawText
+#define G2D_DrawCharGlyph_02017910 NNS_G2dCharCanvasDrawChar
+#define G2D_MeasureTextWidth_02016bc0 NNSi_G2dFontGetTextWidth
+#define OS_SNPrintf_0202e080 OS_SNPrintf_0202e094
+#define SetStatusHeaderMessage_020c1dbc SetStatusHeaderMessage
+#define data_02055fd4 gRankGlyphCodepoints
+#define data_ov073_020c41b4 data_ov073_020c41d4
+#define func_020015a0 eu2_DrawTextAnchored
+#define func_0204f13c IndexedRecord_SetPair
+#define func_0204f204 func_0204f218
+#define func_0204f378 IndexedRecords_SetFlag2
+#define func_ov027_020b822c func_ov027_020b824c
+#define func_ov027_020b8284 func_ov027_020b82a4
+#define func_ov027_020b91c8 func_ov027_020b91e8
+#define func_ov039_020bc994 GetMenuFont10
+#define func_ov039_020bc9ac GetMenuFont10s
+#include "src/ov073/status_menu/DrawRecordSlotRows_020c06f0.c"

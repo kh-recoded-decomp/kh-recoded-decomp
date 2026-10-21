@@ -9306,5 +9306,13 @@
   "src/overlays/ov075/calls/func_ov075_020c49ec.c": "dsi/1.3p1",
   "src/overlays/ov001/calls/func_ov001_0209734c.c": "dsi/1.3p1",
   "src/calls/func_01fff8b0.c": "dsi/1.3p1",
-  "src/overlays/ov013/calls/func_ov013_0206df40.c": "dsi/1.3p1"
+  "src/overlays/ov013/calls/func_ov013_0206df40.c": "dsi/1.3p1",
+  "src/overlays/ov014/calls/func_ov014_0206f5cc.c": "dsi/1.3p1",
+  "src/overlays/ov001/calls/func_ov001_02095120.c": "dsi/1.3p1",
+  "src/overlays/ov001/calls/func_ov001_02082c78.c": "dsi/1.3p1",
+  "src/overlays/ov004/calls/func_ov004_02061e7c.c": "dsi/1.3p1",
+  "src/overlays/ov015/calls/func_ov015_0207533c.c": "dsi/1.3p1",
+  "src/overlays/ov073/calls/func_ov073_020c0710.c": "dsi/1.3p1",
+  "src/calls/func_02048fa0.c": "dsi/1.3p1",
+  "src/overlays/ov015/calls/func_ov015_0207830c.c": "dsi/1.3p1"
 }
