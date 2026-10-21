@@ -9448,5 +9448,16 @@
   "src/overlays/ov041/auto/PopStageCaptionLine.c": "dsi/1.1",
   "src/overlays/ov041/auto/GetQueuedCaptionLine.c": "dsi/1.1",
   "src/overlays/ov041/calls/RestartStageCaption.c": "dsi/1.1",
-  "src/overlays/ov041/calls/StageCaptionState2.c": "dsi/1.1"
+  "src/overlays/ov041/calls/StageCaptionState2.c": "dsi/1.1",
+  "src/overlays/ov041/calls/DrawStageCaptionLines.c": "dsi/1.1",
+  "src/overlays/ov041/calls/RedrawStageCaption.c": "dsi/1.1",
+  "src/overlays/ov041/calls/ClearStageCaption.c": "dsi/1.1",
+  "src/overlays/ov041/calls/SlideStageCaptionLines.c": "dsi/1.1p1",
+  "src/overlays/ov041/calls/ShowStageCaptionDefaultLine.c": "dsi/1.1",
+  "src/overlays/ov041/calls/QueueStageCaptionLines.c": "dsi/1.1",
+  "src/overlays/ov041/calls/StageCaptionState0.c": "dsi/1.1p1",
+  "src/overlays/ov041/calls/AddStageCaptionLine.c": "dsi/1.1",
+  "src/overlays/ov041/calls/StageCaptionState4.c": "dsi/1.1",
+  "src/overlays/ov041/calls/ShowStageCaptionNotice.c": "dsi/1.1",
+  "src/overlays/ov041/auto/AdvanceQueuedCaptionLine.c": "dsi/1.1"
 }

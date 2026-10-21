@@ -3,7 +3,7 @@
 
 extern void (*gStageCaptionStates[])(StageCaption *caption);
 extern BOOL HasPendingSceneValue(void);
-extern void func_ov041_020cefb4(StageCaption *caption);
+extern void RedrawStageCaption(StageCaption *caption);
 
 /* Runs the caption for a frame: redraws it when it comes back from hidden, then runs its state's handler. */
 void UpdateStageCaption(StageCaption *caption)
@@ -12,7 +12,7 @@ void UpdateStageCaption(StageCaption *caption)
     void (*handler)(StageCaption *caption);
 
     if (caption->hidden && !hidden) {
-        func_ov041_020cefb4(caption);
+        RedrawStageCaption(caption);
     }
     caption->hidden = hidden;
     handler = gStageCaptionStates[caption->state];

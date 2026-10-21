@@ -17,9 +17,12 @@ typedef struct StageTextFrame {
 
 /* One line of text on the caption layer: its characters start at charStart (8 pixels each). */
 typedef struct StageTextLine {
-    const void *text;
+    union {
+        const void *text;
+        int hudId; /* a requested line names its HUD entry instead */
+    };
     s16 charStart;
-    u16 charBase;
+    s16 charBase;
     u16 width;
     u16 rows;
     int offset;
@@ -39,13 +42,12 @@ typedef struct StageCaption {
     u8 reserved02e[0x44 - 0x2e];
     int charOffset; /* where the next line's characters go, in pixels */
     int lineCount; /* lines laid out so far */
-    u8 reserved04c[4];
+    int unk4c;
     int unk50;
     int queuedCount;
     StageTextLine lines[3];
     StageTextLine queued[3];
-    u8 reserved0d0[0x10];
-    int unkE0;
+    StageTextLine notice;
     StageTextLine line;
     int state;
     int previousState;

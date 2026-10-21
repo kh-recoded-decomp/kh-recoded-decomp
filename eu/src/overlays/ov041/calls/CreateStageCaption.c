@@ -11,7 +11,7 @@ void CreateStageCaption(StageCaption *caption)
 {
     MI_CpuFill8(caption, 0, sizeof(StageCaption));
     caption->line.fixedStart = TRUE;
-    caption->unkE0 = 1;
+    caption->notice.fixedStart = TRUE;
     caption->hidden = HasPendingSceneValue();
     InitStageCaption(caption);
     LoadStageCaptionChars(caption);

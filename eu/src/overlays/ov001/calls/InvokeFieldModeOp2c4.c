@@ -1,4 +1,4 @@
 #define InvokeFieldModeOp2c4_02072e80 InvokeFieldModeOp2c4
 #define data_ov001_020a04a4 data_ov001_020a04c4
-#define func_020cf2c4 data_ov041_020cf2e4
+#define func_020cf2c4 ShowStageCaptionNotice
 #include "src/ov001/field_manager/InvokeFieldModeOp2c4_02072e80.c"
