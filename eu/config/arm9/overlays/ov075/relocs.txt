@@ -379,7 +379,7 @@ from:0x020c739e kind:thumb_call to:0x020c8d2c module:overlay(75)
 from:0x020c73b4 kind:thumb_call to:0x020cfc0c module:overlay(75)
 from:0x020c73bc kind:thumb_call to:0x020cf578 module:overlay(75)
 from:0x020c73c8 kind:load to:0x0205fe0c module:main
-from:0x020c73d0 kind:load to:0x020d143c add:0x18 module:overlay(75)
+from:0x020c73d0 kind:load to:0x020d1454 module:overlay(75)
 from:0x020c73e8 kind:load to:0x020d1474 module:overlay(75)
 from:0x020c7422 kind:thumb_call to:0x020c4280 module:overlay(75)
 from:0x020c7436 kind:thumb_call to:0x020c5d30 module:overlay(75)

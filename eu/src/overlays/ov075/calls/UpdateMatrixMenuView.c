@@ -90,7 +90,7 @@ extern BOOL IsStatePhaseActive(void);
 extern BOOL ShowNextUnlockNotice(MatrixMenu *menu, BOOL eventMode, BOOL queryOnly);
 extern int HandleTabTouch(void *tabs, int currentTab, BOOL allowChange);
 extern int UpdateMatrixOptionMenu(MatrixMenu *menu);
-extern int func_ov075_020c709c(MatrixMenu *menu);
+extern int UpdateMatrixMenu(MatrixMenu *menu);
 extern u32 func_ov075_020c7bdc(int value);
 extern fx32 FX_Sqrt(fx32 value);
 extern fx32 FX_Div(fx32 numer, fx32 denom);
@@ -147,7 +147,7 @@ void UpdateMatrixMenuView(MatrixMenu *menu)
         if (menu->dragMode) {
             moved = UpdateMatrixOptionMenu(menu);
         } else {
-            moved = func_ov075_020c709c(menu);
+            moved = UpdateMatrixMenu(menu);
         }
         if (touchPhase == 2) {
             menu->velocity.x = menu->drag.x;

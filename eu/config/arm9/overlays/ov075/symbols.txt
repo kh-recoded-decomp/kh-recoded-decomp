@@ -27,7 +27,7 @@ CommitOptionChoice kind:function(thumb,size=0x144) addr:0x020c6378
 UpdateMatrixMenuView kind:function(thumb,size=0x5e0) addr:0x020c64bc
 UpdateMatrixOptionMenu kind:function(thumb,size=0x5f0) addr:0x020c6a9c
 SetMenuStateNoParam kind:function(arm,size=0x10) addr:0x020c708c
-func_ov075_020c709c kind:function(thumb,size=0xb40) addr:0x020c709c
+UpdateMatrixMenu kind:function(thumb,size=0xb40) addr:0x020c709c
 func_ov075_020c7bdc kind:function(arm,size=0x18) addr:0x020c7bdc
 func_ov075_020c7bf4 kind:function(arm,size=0xc) addr:0x020c7bf4
 ScrollMatrixView kind:function(thumb,size=0xfc) addr:0x020c7c00
@@ -168,6 +168,7 @@ data_ov075_020d140a kind:data(any) addr:0x020d140a
 gOv075StateHandlers kind:data(any) addr:0x020d1414
 gOv075CursorHandlers kind:data(any) addr:0x020d1428
 sMatrixNavigationGraph kind:data(any) addr:0x020d143c
+sMatrixLevelStartCells kind:data(any) addr:0x020d1454
 sMatrixCursorFrames kind:data(any) addr:0x020d1474
 sVolumeSliderTouchRect kind:data(any) addr:0x020d1494
 sFlagGridTouchConfig kind:data(any) addr:0x020d1498
