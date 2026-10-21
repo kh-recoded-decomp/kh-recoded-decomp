@@ -1,3 +1,4 @@
+#define func_01fff9a0 DrawTexturedBox
 #define FieldObject_Draw_020a0e30 FieldObject_Draw
 #define SceneNode_Draw_01ffb12c SceneNode_Draw
 #define func_01ff90ec MTX_Identity33_

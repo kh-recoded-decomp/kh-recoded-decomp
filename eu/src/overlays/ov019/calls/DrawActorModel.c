@@ -1,3 +1,4 @@
+#define func_01fff9a0 DrawTexturedBox
 #define AttachAnimationToRenderObject_0201875c NNS_G3dRenderObjAddAnmObj
 #define DrawActorModel_020a2c4c DrawActorModel
 #define GetMaterialAlpha_0201a810 NNS_G3dMdlGetMdlAlpha

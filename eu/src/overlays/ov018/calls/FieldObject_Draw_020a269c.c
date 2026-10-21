@@ -70,7 +70,7 @@ extern void VEC_MultAdd(fx32 scale, const VecFx32 *v, const VecFx32 *add, VecFx3
 extern void NNS_G3dMdlSetMdlAlphaAll(void *model, int alpha);
 extern void SceneNode_Draw(SceneNode *node);
 extern fx32 func_ov031_020bc720(void);
-extern void func_01fff9a0(SceneNode *node, fx32 scale, MtxFx33 *rotation, int alpha, int flags);
+extern void DrawTexturedBox(SceneNode *node, fx32 scale, MtxFx33 *rotation, int alpha, int flags);
 
 static inline void ComputeBounds(CollisionShape *shape)
 {
@@ -146,7 +146,7 @@ void FieldObject_Draw_020a269c(FieldObject *obj)
             } else {
                 alpha = 31;
             }
-            func_01fff9a0(node, 0x1000, &node->rotation, alpha, 1);
+            DrawTexturedBox(node, 0x1000, &node->rotation, alpha, 1);
         }
     }
 }

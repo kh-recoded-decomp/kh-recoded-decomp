@@ -1,3 +1,4 @@
+#define func_01fff9a0 DrawTexturedBox
 #define ActorSlot_IsWarmupDoneByIndex_02035d40 ActorSlot_IsWarmupDoneByIndex
 #define ActorSlot_StartWarmupByIndex_02035d80 ActorSlot_StartWarmupByIndex
 #define ApplyFieldObjectBob_020a4950 ApplyFieldObjectBob
