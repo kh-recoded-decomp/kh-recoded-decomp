@@ -7740,6 +7740,10 @@ src/overlays/ov001/calls/func_ov001_02097158.c:
     complete
     .text       start:0x02097158 end:0x0209734c
 
+src/overlays/ov001/calls/func_ov001_0209734c.c:
+    complete
+    .text       start:0x0209734c end:0x020978b8
+
 src/overlays/ov001/calls/FindStageAttachPoint.c:
     complete
     .text       start:0x020978b8 end:0x02097978
