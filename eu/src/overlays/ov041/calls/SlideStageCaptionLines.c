@@ -4,7 +4,7 @@
 extern void *func_ov001_0207123c(void);
 extern void ClearTileTableRect(void *table, int layer, int x, int y, int width, int height);
 extern void MarkTileTableRowDirty(void *table, int layer);
-extern void func_ov041_020ce77c(StageCaption *caption, StageTextLine *line, int palette);
+extern void MapStageCaptionLine(StageCaption *caption, StageTextLine *line, int palette);
 
 /* Slides lines three characters further toward their place and redraws them; TRUE once all are in place. */
 BOOL SlideStageCaptionLines(StageCaption *caption, StageTextLine *lines, int count)
@@ -27,7 +27,7 @@ BOOL SlideStageCaptionLines(StageCaption *caption, StageTextLine *lines, int cou
         if (line->charStart != line->charBase) {
             done = FALSE;
         }
-        func_ov041_020ce77c(caption, line, 9);
+        MapStageCaptionLine(caption, line, 9);
     }
     if (!caption->hidden && count > 0) {
         MarkTileTableRowDirty(func_ov001_0207123c(), 0xb);

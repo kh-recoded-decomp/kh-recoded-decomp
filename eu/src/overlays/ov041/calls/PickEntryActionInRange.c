@@ -2,7 +2,7 @@
 #include "src/overlays/ov041/StageEntryRender.h"
 
 extern const StageActionChoices gEmptyActionChoices;
-extern int func_ov041_020c2c1c(StageEntry *entry);
+extern int GetEntryNeededRange(StageEntry *entry);
 extern u32 func_0202a9e4(u16 range);
 
 /*
@@ -27,7 +27,7 @@ int PickEntryActionInRange(StageEntry *entry)
 
     for (i = 0; i < entry->actionCount; i++) {
         action = &entry->actions[i];
-        if (func_ov041_020c2c1c(entry) <= action->range) {
+        if (GetEntryNeededRange(entry) <= action->range) {
             choices.indices[count] = i;
             count++;
             choiceCount++;

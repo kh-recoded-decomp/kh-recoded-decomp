@@ -3,10 +3,10 @@
 
 #define STAGE_HEALER_KIND 7
 
-extern int func_ov041_020c2c1c(StageEntry *entry);
+extern int GetEntryNeededRange(StageEntry *entry);
 
 /*
- * TRUE when an entry still in the fight has an action reaching as far as it needs (func_ov041_020c2c1c). A
+ * TRUE when an entry still in the fight has an action reaching as far as it needs (GetEntryNeededRange). A
  * healer (kind 7) has none while every secondary entry still in the fight is at full hp.
  */
 BOOL HasActionInRange(StageEntry *entry)
@@ -21,7 +21,7 @@ BOOL HasActionInRange(StageEntry *entry)
     if (entry->state == STAGE_ENTRY_OUT) {
         return usable;
     }
-    needed = func_ov041_020c2c1c(entry);
+    needed = GetEntryNeededRange(entry);
     for (i = 0; i < entry->actionCount; i++) {
         if (entry->actions[i].range >= needed) {
             usable = TRUE;

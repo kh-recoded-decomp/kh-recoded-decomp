@@ -47,6 +47,9 @@ typedef struct StageGroundShadow {
 #define STAGE_ENTRY_ENEMY 1
 #define STAGE_ENTRY_SHOW_HP 8
 #define STAGE_ENTRY_TIMED_PRESS 0x40 /* the button was pressed in time during its action */
+#define STAGE_ENTRY_PRESSED_ATTACK 0x80 /* A pressed in time as the attacker */
+#define STAGE_ENTRY_PRESSED_GUARD 0x600 /* Y pressed in time as the defender (status 9 counts as one) */
+#define STAGE_ENTRY_PRESS_PANEL 0x10000 /* keep showing the lit press panel */
 #define STAGE_ENTRY_FLAG_800 0x800
 #define STAGE_ENTRY_STEP_BACK 0x4000
 #define STAGE_ENTRY_FROZEN 0x8000
@@ -81,10 +84,14 @@ typedef struct StagePathModel {
     u8 reserved024[0x104 - 0x24];
     void *nodes;
     int nodeIndex;
-    u8 reserved10c[4];
+    int animation; /* -1 when none is set */
     fx32 frame;
     int state;
     VecFx32 position;
+    VecFx32 direction; /* where the path heads */
+    fx32 scale; /* of the horizontal movement */
+    u16 angle; /* facing along direction: its cosine */
+    u16 turn; /* and its sine */
 } StagePathModel;
 
 /* StageEntryMove.phase: out to a destination, a pause there, then back to its grid place */
@@ -194,6 +201,8 @@ typedef struct StageRenderCapture {
     int reviveWait; /* frames waited after a revive */
     u8 reserved0c[4];
     StageEntry *entry;
+    u8 reserved14[4];
+    VecFx32 panelOffset; /* from a defender to its timed press panel */
 } StageRenderCapture;
 
 extern StageRenderCapture data_ov041_020cff48;

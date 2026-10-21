@@ -3,7 +3,7 @@
 
 extern void ClearStageCaptionLayer(StageCaption *caption);
 extern StageHudEntry *GetHudEntry(int id);
-extern void func_ov041_020ce40c(StageCaption *caption, StageTextLine *line, u32 messageId, int rows, int columns,
+extern void SetStageCaptionLine(StageCaption *caption, StageTextLine *line, u32 messageId, int rows, int columns,
                                 BOOL fixedStart);
 extern void DrawStageCaptionLine(StageCaption *caption, StageTextLine *line, int arg);
 extern void UploadStageCaptionLayer(StageCaption *caption);
@@ -19,7 +19,7 @@ void QueueStageCaptionLines(StageCaption *caption)
         StageTextLine *line = &caption->queued[i];
 
         entry = GetHudEntry(caption->lines[i].messageId);
-        func_ov041_020ce40c(caption, line, entry->messageId, entry->rows, 1, FALSE);
+        SetStageCaptionLine(caption, line, entry->messageId, entry->rows, 1, FALSE);
         DrawStageCaptionLine(caption, line, 2);
     }
     UploadStageCaptionLayer(caption);

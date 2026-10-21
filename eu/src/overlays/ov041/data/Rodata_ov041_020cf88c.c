@@ -1,5 +1,7 @@
 #include "nitro/types.h"
+#include "nitro/fx.h"
 
-const u32 data_ov041_020cf88c[3] = {
-    0x00001000, 0x00002000, 0x00004000,
+/* The hp one orb restores, by scale level (GetScaleLevel). */
+const fx32 gStageOrbValues[3] = {
+    FX32_ONE, 2 * FX32_ONE, 4 * FX32_ONE,
 };

@@ -35,6 +35,17 @@ typedef struct StageOrbPool {
     u8 sprite[4];
 } StageOrbPool;
 
+#define STAGE_ORB_BURST_MAX 0x34
+
+/* The orbs one defeat throws out, all flying to the same collector. */
+typedef struct StageOrbBurst {
+    u8 active;
+    u8 count;
+    s8 orbs[STAGE_ORB_BURST_MAX]; /* indices into StageOrbPool.orbs, -1 once free */
+    struct StageEntry *collector;
+    fx32 timer;
+} StageOrbBurst;
+
 typedef char StageOrbSize[sizeof(StageOrb) == 0x38 ? 1 : -1];
 
 #endif

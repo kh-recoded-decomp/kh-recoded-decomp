@@ -488,6 +488,10 @@ src/overlays/ov041/calls/GetFarthestEnemyRow.c:
     complete
     .text       start:0x020c2bd0 end:0x020c2c1c
 
+src/overlays/ov041/calls/GetEntryNeededRange.c:
+    complete
+    .text       start:0x020c2c1c end:0x020c2cac
+
 src/overlays/ov041/calls/HasActionInRange.c:
     complete
     .text       start:0x020c2cac end:0x020c2d4c
@@ -584,6 +588,10 @@ src/overlays/ov041/auto/EntryActionHookNoop.c:
     complete
     .text       start:0x020c3b04 end:0x020c3b06
 
+src/overlays/ov041/calls/ChooseEntryMainTarget.c:
+    complete
+    .text       start:0x020c3b08 end:0x020c3c88
+
 src/overlays/ov041/calls/StartStageEntryMotion.c:
     complete
     .text       start:0x020c3f10 end:0x020c3f38
@@ -600,6 +608,14 @@ src/overlays/ov041/calls/StepStageMotion.c:
     complete
     .text       start:0x020c3fd8 end:0x020c40d8
 
+src/overlays/ov041/calls/AimEntryPathModel.c:
+    complete
+    .text       start:0x020c40d8 end:0x020c4258
+
+src/overlays/ov041/calls/MoveEntryAlongPath.c:
+    complete
+    .text       start:0x020c4258 end:0x020c435c
+
 src/overlays/ov041/calls/HandleTimedPressWindow.c:
     complete
     .text       start:0x020c435c end:0x020c4454
@@ -607,6 +623,10 @@ src/overlays/ov041/calls/HandleTimedPressWindow.c:
 src/overlays/ov041/calls/ShowEntryPairPanel.c:
     complete
     .text       start:0x020c4454 end:0x020c4492
+
+src/overlays/ov041/calls/UpdateTimedPressPanel.c:
+    complete
+    .text       start:0x020c4494 end:0x020c460c
 
 src/overlays/ov041/calls/CheckPairTimedPress.c:
     complete
@@ -708,6 +728,14 @@ src/overlays/ov041/calls/func_ov041_020ce200.c:
     complete
     .text       start:0x020ce200 end:0x020ce210
 
+src/overlays/ov041/calls/StartStageOrbBurst.c:
+    complete
+    .text       start:0x020ce210 end:0x020ce278
+
+src/overlays/ov041/calls/UpdateStageOrbBurst.c:
+    complete
+    .text       start:0x020ce278 end:0x020ce334
+
 src/overlays/ov041/calls/InitStageCaption.c:
     complete
     .text       start:0x020ce334 end:0x020ce3ac
@@ -728,6 +756,10 @@ src/overlays/ov041/auto/SetStageCaptionState.c:
     complete
     .text       start:0x020ce3fc end:0x020ce40c
 
+src/overlays/ov041/auto/SetStageCaptionLine.c:
+    complete
+    .text       start:0x020ce40c end:0x020ce480
+
 src/overlays/ov041/calls/ClearStageCaptionLayer.c:
     complete
     .text       start:0x020ce480 end:0x020ce49c
@@ -747,6 +779,10 @@ src/overlays/ov041/calls/DrawStageCaptionLine.c:
 src/overlays/ov041/calls/ClearStageCaptionRows.c:
     complete
     .text       start:0x020ce740 end:0x020ce77c
+
+src/overlays/ov041/calls/MapStageCaptionLine.c:
+    complete
+    .text       start:0x020ce77c end:0x020ce81c
 
 src/overlays/ov041/calls/SlideStageCaptionLines.c:
     complete

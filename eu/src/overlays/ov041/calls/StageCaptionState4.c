@@ -4,7 +4,7 @@
 extern BOOL CombineStageCaptionTriple(StageCaption *caption);
 extern BOOL QueueCombinedCaptionPair(StageCaption *caption);
 extern void QueueStageCaptionLines(StageCaption *caption);
-extern void func_ov041_020ce77c(StageCaption *caption, StageTextLine *line, int palette);
+extern void MapStageCaptionLine(StageCaption *caption, StageTextLine *line, int palette);
 extern void PlaySoundEffect(int seqArcNo, int index);
 extern void SetBrightnessAndSyncMain(int brightness);
 extern void SetStageCaptionState(StageCaption *caption, int state);
@@ -23,7 +23,7 @@ void StageCaptionState4(StageCaption *caption)
             QueueStageCaptionLines(caption);
         }
         for (i = 0; i < caption->queuedCount; i++) {
-            func_ov041_020ce77c(caption, &caption->queued[i], 1);
+            MapStageCaptionLine(caption, &caption->queued[i], 1);
         }
         PlaySoundEffect(0x1a0, 0x2d);
     }

@@ -3,7 +3,7 @@
 
 extern StageHudEntry *GetHudEntry(int id);
 extern int GetItemMenuIcon(int itemId);
-extern void func_ov041_020ce40c(StageCaption *caption, StageTextLine *line, u32 messageId, int rows, int columns,
+extern void SetStageCaptionLine(StageCaption *caption, StageTextLine *line, u32 messageId, int rows, int columns,
                                 BOOL fixedStart);
 extern void DrawStageCaptionLine(StageCaption *caption, StageTextLine *line, int arg);
 extern void UploadStageCaptionLayer(StageCaption *caption);
@@ -28,7 +28,7 @@ BOOL CombineStageCaptionTriple(StageCaption *caption)
         if (triple->first == GetItemMenuIcon(entries[0]->messageId) &&
             triple->second == GetItemMenuIcon(entries[1]->messageId) &&
             triple->third == GetItemMenuIcon(entries[2]->messageId)) {
-            func_ov041_020ce40c(caption, &caption->queued[0], triple->combined,
+            SetStageCaptionLine(caption, &caption->queued[0], triple->combined,
                                 (u32)(entries[0]->rows + entries[1]->rows + entries[2]->rows + 1) / 2, 3, FALSE);
             DrawStageCaptionLine(caption, &caption->queued[0], 2);
             UploadStageCaptionLayer(caption);

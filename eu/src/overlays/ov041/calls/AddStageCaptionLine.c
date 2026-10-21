@@ -2,7 +2,7 @@
 #include "src/overlays/ov041/StageCaption.h"
 
 extern StageHudEntry *GetHudEntry(int id);
-extern void func_ov041_020ce40c(StageCaption *caption, StageTextLine *line, u32 messageId, int rows, int columns,
+extern void SetStageCaptionLine(StageCaption *caption, StageTextLine *line, u32 messageId, int rows, int columns,
                                 BOOL fixedStart);
 extern void DrawStageCaptionLine(StageCaption *caption, StageTextLine *line, int arg);
 extern void UploadStageCaptionLayer(StageCaption *caption);
@@ -20,7 +20,7 @@ int AddStageCaptionLine(StageCaption *caption, int hudId)
         return caption->unk50;
     }
     line = &caption->lines[caption->lineCount];
-    func_ov041_020ce40c(caption, line, hudId, entry->rows, 1, TRUE);
+    SetStageCaptionLine(caption, line, hudId, entry->rows, 1, TRUE);
     DrawStageCaptionLine(caption, line, 1);
     UploadStageCaptionLayer(caption);
     caption->unk50 = ++caption->lineCount;

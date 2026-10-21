@@ -4,7 +4,7 @@
 extern void *func_ov001_0207123c(void);
 extern void ClearTileTableRect(void *table, int layer, int x, int y, int width, int height);
 extern void MarkTileTableRowDirty(void *table, int layer);
-extern void func_ov041_020ce77c(StageCaption *caption, StageTextLine *line, int palette);
+extern void MapStageCaptionLine(StageCaption *caption, StageTextLine *line, int palette);
 
 /* Caption state 0: slides the laid-out lines three characters further toward their place and redraws them. */
 void StageCaptionState0(StageCaption *caption)
@@ -23,7 +23,7 @@ void StageCaptionState0(StageCaption *caption)
                 line->charStart = line->charBase;
             }
         }
-        func_ov041_020ce77c(caption, line, 9);
+        MapStageCaptionLine(caption, line, 9);
     }
     if (!caption->hidden && caption->lineCount > 0) {
         MarkTileTableRowDirty(func_ov001_0207123c(), 0xb);

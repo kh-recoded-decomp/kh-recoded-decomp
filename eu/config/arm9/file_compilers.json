@@ -9464,5 +9464,14 @@
   "src/overlays/ov041/calls/CombineStageCaptionTriple.c": "dsi/1.1",
   "src/overlays/ov041/calls/QueueCombinedCaptionPair.c": "dsi/1.1",
   "src/overlays/ov041/calls/CloseStageCaptionNotice.c": "dsi/1.1",
-  "src/overlays/ov041/calls/DrawStageCaptionLine.c": "dsi/1.1"
+  "src/overlays/ov041/calls/DrawStageCaptionLine.c": "dsi/1.1",
+  "src/overlays/ov041/calls/MapStageCaptionLine.c": "dsi/1.1",
+  "src/overlays/ov041/calls/StartStageOrbBurst.c": "dsi/1.1",
+  "src/overlays/ov041/calls/UpdateStageOrbBurst.c": "dsi/1.1",
+  "src/overlays/ov041/calls/MoveEntryAlongPath.c": "dsi/1.1",
+  "src/overlays/ov041/calls/UpdateTimedPressPanel.c": "dsi/1.1",
+  "src/overlays/ov041/auto/SetStageCaptionLine.c": "dsi/1.1",
+  "src/overlays/ov041/calls/GetEntryNeededRange.c": "dsi/1.1",
+  "src/overlays/ov041/calls/ChooseEntryMainTarget.c": "dsi/1.1",
+  "src/overlays/ov041/calls/AimEntryPathModel.c": "dsi/1.1"
 }
