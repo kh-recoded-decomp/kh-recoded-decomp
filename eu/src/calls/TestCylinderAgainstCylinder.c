@@ -27,7 +27,7 @@
 #define Square_0203f268 SquareFx32ToFx64
 #define SubtractVecFx32Into_0203f4a8 SubtractVecFx32Into
 #define TestCylinderAgainstCylinder_020410a0 TestCylinderAgainstCylinder
-#define TestSeparatingAxis_0203fba4 func_0203fbb8
+#define TestSeparatingAxis_0203fba4 TestSignedSeparatingAxis
 #define TransformVectorByBasisOut_02041768 TransformVectorByBasisOut
 #define VEC_DotProduct_01ff9e6c VEC_DotProduct
 #define VEC_Mag_01ff9f28 VEC_Mag

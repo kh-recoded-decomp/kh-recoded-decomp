@@ -1,3 +1,3 @@
-#define TestBoxAgainstPolygon_02040024 func_02040038
+#define TestBoxAgainstPolygon_02040024 TestBoxAgainstPolygon
 #define TestPolygonAgainstBox_0203b660 TestPolygonAgainstBox
 #include "src/arm9/spatial_queries/TestPolygonAgainstBox_0203b660.c"

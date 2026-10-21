@@ -16,7 +16,7 @@ extern void FinishTitlePanel(void);
 extern void TryEnterPanelState(void); /* TryEnterPanelState */
 extern void func_ov000_02062a58(void); /* PXI_Init */
 extern void SetupPanelField(void); /* SetupPanelField */
-extern void func_ov000_02062a98(void);
+extern void WaitPanelWorldSession(void);
 extern void ReleaseFieldAndReset(void); /* ReleaseFieldAndReset */
 extern void UpdatePanelLookup(void); /* UpdatePanelLookup */
 extern void HandleSessionModeTransition(void); /* HandleSessionModeTransition */
@@ -58,10 +58,10 @@ void (*gPanelStateHandlers[43])(void) = {
     TryEnterPanelState, /* TryEnterPanelState */
     func_ov000_02062a58, /* PXI_Init */
     SetupPanelField, /* SetupPanelField */
-    func_ov000_02062a98,
+    WaitPanelWorldSession,
     ReleaseFieldAndReset, /* ReleaseFieldAndReset */
     SetupPanelField, /* SetupPanelField */
-    func_ov000_02062a98,
+    WaitPanelWorldSession,
     ReleaseFieldAndReset, /* ReleaseFieldAndReset */
     UpdatePanelLookup, /* UpdatePanelLookup */
     HandleSessionModeTransition, /* HandleSessionModeTransition */

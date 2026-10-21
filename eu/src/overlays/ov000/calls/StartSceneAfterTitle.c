@@ -9,7 +9,7 @@ extern Heap *NNSi_FndGetCurrentRootHeap(void);
 extern void SetPendingScene(int mode, int param2);
 extern void InitDifficultyConfigBlock(int flag);
 
-void func_ov000_02061b30(void)
+void StartSceneAfterTitle(void)
 {
     Heap *heap = NNSi_FndGetCurrentRootHeap();
 

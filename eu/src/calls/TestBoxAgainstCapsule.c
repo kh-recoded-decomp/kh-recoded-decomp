@@ -8,7 +8,7 @@
 #define SubtractVecFx32Into_0203f4a8 SubtractVecFx32Into
 #define TestBoxAgainstCapsule_0203fde0 TestBoxAgainstCapsule
 #define TestCapsuleAgainstBox_02044758 SweepSegmentAgainstObb
-#define TestSeparatingAxis_0203fba4 func_0203fbb8
+#define TestSeparatingAxis_0203fba4 TestSignedSeparatingAxis
 #define VEC_DotProduct_01ff9e6c VEC_DotProduct
 #define WritePenetrationContact_0203d8fc WritePenetrationContact
 #include "src/arm9/spatial_queries/TestBoxAgainstCapsule_0203fde0.c"

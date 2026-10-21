@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-u32 func_ov000_020613e0(void (*callback)(void))
+u32 RunProtectionCallback(void (*callback)(void))
 {
     if (callback != 0) {
         callback();

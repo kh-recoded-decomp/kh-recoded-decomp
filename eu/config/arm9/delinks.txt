@@ -8513,11 +8513,11 @@ src/calls/InitMaxDistanceHit.c:
     complete
     .text       start:0x0203fb88 end:0x0203fbb8
 
-src/calls/func_0203fbb8.c:
+src/calls/TestSignedSeparatingAxis.c:
     complete
     .text       start:0x0203fbb8 end:0x0203fbf8
 
-src/calls/func_0203fbf8.c:
+src/calls/TestSeparatingAxis.c:
     complete
     .text       start:0x0203fbf8 end:0x0203fc38
 
@@ -8544,6 +8544,10 @@ src/calls/GetSegmentDelta.c:
 src/calls/func_02040010.c:
     complete
     .text       start:0x02040010 end:0x02040038
+
+src/calls/TestBoxAgainstPolygon.c:
+    complete
+    .text       start:0x02040038 end:0x0204019a
 
 src/calls/TestSegmentAgainstSegment.c:
     complete

@@ -6,7 +6,7 @@
 #define SubtractVecFx32Into_0203f4a8 SubtractVecFx32Into
 #define GetHalfSegment_0203ff74 GetSegmentHalfDelta
 #define ComputeEdgeAxis_020404a0 func_020404b4
-#define TestSeparatingAxis_0203fba4 func_0203fbb8
+#define TestSeparatingAxis_0203fba4 TestSignedSeparatingAxis
 #define NormalizeCrossProduct_020404c8 NormalizeCrossProduct
 #define CrossNormalized_0203fffc func_02040010
 #define ComputeCrossProduct_02040500 ComputeCrossProduct

@@ -5,7 +5,7 @@
 #define ProjectBoxExtent_0203d4d0 GetObbProjectedRadius
 #define SubtractVecFx32Into_0203f4a8 SubtractVecFx32Into
 #define TestBoxAgainstBox_0203fc48 TestBoxAgainstBox
-#define TestSeparatingAxis_0203fba4 func_0203fbb8
+#define TestSeparatingAxis_0203fba4 TestSignedSeparatingAxis
 #define VEC_DotProduct_01ff9e6c VEC_DotProduct
 #define VEC_Normalize_01ff9f88 VEC_Normalize
 #define WritePenetrationContact_0203d8fc WritePenetrationContact

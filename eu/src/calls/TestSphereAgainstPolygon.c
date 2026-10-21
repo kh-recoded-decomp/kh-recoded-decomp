@@ -5,7 +5,7 @@
 #define TestSphereAgainstPolygon_0203fa38 TestSphereAgainstPolygon
 #define VEC_DotProduct_01ff9e6c VEC_DotProduct
 #define WritePenetrationContact_0203d8fc WritePenetrationContact
-#define func_0203fba4 func_0203fbb8
-#define func_0203fbe4 func_0203fbf8
+#define func_0203fba4 TestSignedSeparatingAxis
+#define func_0203fbe4 TestSeparatingAxis
 #define func_0204aea8 GetUnitRejectionFromAxis
 #include "src/arm9/spatial_queries/TestSphereAgainstPolygon_0203fa38.c"

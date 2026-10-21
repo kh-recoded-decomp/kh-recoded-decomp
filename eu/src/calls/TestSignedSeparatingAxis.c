@@ -1,4 +1,4 @@
 #define UpdateSignedPenetrationDepth_0203d854 UpdateSignedPenetrationDepth
 #define VEC_DotProduct_01ff9e6c VEC_DotProduct
-#define func_0203fba4 func_0203fbb8
+#define func_0203fba4 TestSignedSeparatingAxis
 #include "src/arm9/reviewed_helpers/func_0203fba4.c"

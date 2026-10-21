@@ -2473,8 +2473,8 @@
   "src/calls/func_02050a58.c": "dsi/1.1",
   "src/calls/func_02022688.c": "dsi/1.1",
   "src/calls/func_0202c44c.c": "dsi/1.1",
-  "src/calls/func_0203fbb8.c": "dsi/1.1",
-  "src/calls/func_0203fbf8.c": "dsi/1.1",
+  "src/calls/TestSignedSeparatingAxis.c": "dsi/1.1",
+  "src/calls/TestSeparatingAxis.c": "dsi/1.1",
   "src/calls/func_0204de64.c": "dsi/1.1",
   "src/calls/func_02026634.c": "dsi/1.1",
   "src/calls/ResetHeapRecord.c": "dsi/1.1",
@@ -8024,7 +8024,7 @@
   "src/overlays/ov001/calls/func_ov001_0207f0e0.c": "dsi/1.1",
   "src/overlays/ov001/calls/func_ov001_02085d84.c": "dsi/1.1",
   "src/overlays/ov017/calls/func_ov017_020a5a98.c": "dsi/1.1",
-  "src/overlays/ov000/calls/func_ov000_020613e0.c": "dsi/1.1",
+  "src/overlays/ov000/calls/RunProtectionCallback.c": "dsi/1.1",
   "src/overlays/ov001/calls/func_ov001_020613e0.c": "dsi/1.1",
   "src/overlays/ov001/calls/func_ov001_02062ac0.c": "dsi/1.1",
   "src/overlays/ov001/calls/func_ov001_02062ad8.c": "dsi/1.1",
@@ -8295,7 +8295,7 @@
   "src/overlays/ov001/calls/func_ov001_0207abdc.c": "dsi/1.1",
   "src/overlays/ov027/calls/func_ov027_020b8f7c.c": "dsi/1.1",
   "src/overlays/ov040/calls/func_ov040_020bcc44.c": "dsi/1.1",
-  "src/overlays/ov000/calls/func_ov000_02061b30.c": "dsi/1.1",
+  "src/overlays/ov000/calls/StartSceneAfterTitle.c": "dsi/1.1",
   "src/overlays/ov001/calls/func_ov001_02067a6c.c": "dsi/1.1",
   "src/overlays/ov001/calls/func_ov001_02067cd0.c": "dsi/1.1",
   "src/overlays/ov001/calls/func_ov001_02067d0c.c": "dsi/1.1",
@@ -9269,5 +9269,7 @@
   "src/overlays/ov022/asm_stubs/calls/func_ov022_020b715c.c": "dsi/1.3p1",
   "libs/nitro/os/asm_stubs/calls/OSi_DoBoot.c": "dsi/1.1",
   "src/overlays/ov037/calls/LoadContinueMenuBackground.c": "dsi/1.1",
-  "src/overlays/ov015/calls/WH_StateInStartScan.c": "dsi/1.1"
+  "src/overlays/ov015/calls/WH_StateInStartScan.c": "dsi/1.1",
+  "src/overlays/ov000/calls/WaitPanelWorldSession.c": "dsi/1.1",
+  "src/calls/TestBoxAgainstPolygon.c": "dsi/1.1"
 }

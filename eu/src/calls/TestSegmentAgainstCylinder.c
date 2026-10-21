@@ -33,7 +33,7 @@ extern VecFx32 NormalizeVectorInto(const VecFx32 *src);
 extern VecFx32 AddVecFx32Into(const VecFx32 *a, const VecFx32 *b);
 extern VecFx32 NegateVecFx32Into(const VecFx32 *src);
 extern PenetrationResult InitMaxDistanceHit(void);
-extern BOOL func_0203fbb8(fx32 extent, const VecFx32 *delta, const VecFx32 *axis, u8 featureId, PenetrationResult *result);
+extern BOOL TestSignedSeparatingAxis(fx32 extent, const VecFx32 *delta, const VecFx32 *axis, u8 featureId, PenetrationResult *result);
 extern VecFx32 GetSegmentHalfDelta(const CollisionCylinder *cylinder);
 extern VecFx32 ComputeCrossProduct(const VecFx32 *a, const VecFx32 *b);
 extern VecFx32 ComputeVectorRejection(const VecFx32 *v, const VecFx32 *axis);
@@ -68,7 +68,7 @@ BOOL TestSegmentAgainstCylinder(CylinderShapeRef *segmentRef, CylinderShapeRef *
         normal = cross;
     }
     VEC_NormalizeLength(&normal, &normal);
-    if (!func_0203fbb8(cylinder->radius, &delta, &normal, 0, &result)) {
+    if (!TestSignedSeparatingAxis(cylinder->radius, &delta, &normal, 0, &result)) {
         return FALSE;
     }
     {
@@ -97,7 +97,7 @@ BOOL TestSegmentAgainstCylinder(CylinderShapeRef *segmentRef, CylinderShapeRef *
                 }
                 extent = cylinder->radius;
                 extent += AbsDotProduct(&segmentHalf, &normal);
-                if (!func_0203fbb8(extent, &delta, &normal, 2, &result)) {
+                if (!TestSignedSeparatingAxis(extent, &delta, &normal, 2, &result)) {
                     return FALSE;
                 }
             }
@@ -117,7 +117,7 @@ BOOL TestSegmentAgainstCylinder(CylinderShapeRef *segmentRef, CylinderShapeRef *
                     {
                         fx32 segmentExtent = AbsDotProduct(&segmentHalf, &normal);
                         fx32 cylinderExtent = cylinder->radius + AbsDotProduct(&cylinderHalf, &normal);
-                        if (!func_0203fbb8(segmentExtent + cylinderExtent, &delta, &normal, 2, &result)) {
+                        if (!TestSignedSeparatingAxis(segmentExtent + cylinderExtent, &delta, &normal, 2, &result)) {
                             return FALSE;
                         }
                     }
@@ -125,7 +125,7 @@ BOOL TestSegmentAgainstCylinder(CylinderShapeRef *segmentRef, CylinderShapeRef *
             }
         } else {
             normal = cylinderAxis;
-            if (!func_0203fbb8(AbsDotProduct(&segmentHalf, &normal) + ComputeDirectionalExtent(cylinder, &cylinderAxis, length * 2, &normal), &delta, &normal, 0, &result)) {
+            if (!TestSignedSeparatingAxis(AbsDotProduct(&segmentHalf, &normal) + ComputeDirectionalExtent(cylinder, &cylinderAxis, length * 2, &normal), &delta, &normal, 0, &result)) {
                 return FALSE;
             }
         }
