@@ -15,7 +15,7 @@ void UpdateEntryHpGauge(StageEntry *entry)
     fx32 step;
 
     if ((entry->flags & STAGE_ENTRY_SHOW_HP) &&
-        (entry->shownHp != 0 || entry->state != STAGE_ENTRY_OUT || entry->pending != 3)) {
+        (entry->shownHp != 0 || entry->state != STAGE_ENTRY_OUT || entry->stateStep != 3)) {
         show = TRUE;
     }
     if (entry->state == 13 || entry->state == 14) {

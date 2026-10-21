@@ -13,7 +13,7 @@ extern void func_ov041_020bf474(void);
 extern void func_ov041_020bf5b0(void);
 extern void func_ov041_020bf82c(void);
 extern void func_ov041_020bfe84(void);
-extern void func_ov041_020bfff4(void);
+extern void StageStateStartTurn(void);
 extern void func_ov041_020c00a8(void);
 extern void func_ov041_020c021c(void);
 extern void StageStateNoop16(void);
@@ -40,7 +40,7 @@ void (*gStageStateHandlers[23])(void) = {
     func_ov041_020bf5b0,
     func_ov041_020bf82c,
     func_ov041_020bfe84,
-    func_ov041_020bfff4,
+    StageStateStartTurn,
     func_ov041_020c00a8,
     func_ov041_020c021c,
     StageStateNoop16,

@@ -28,7 +28,7 @@ GetCommandStatusIndex kind:function(thumb,size=0x5c) addr:0x020bd6ac
 TallyStageCharacter kind:function(thumb,size=0x58) addr:0x020bd708
 SetStageDrawLayer kind:function(thumb,size=0x80) addr:0x020bd760
 StartStageFadeOut kind:function(thumb,size=0x2c) addr:0x020bd7e0
-AreSecondaryEntriesIdle kind:function(thumb,size=0x34) addr:0x020bd96c
+NoSecondaryEntryCanAct kind:function(thumb,size=0x34) addr:0x020bd96c
 SetStageState kind:function(thumb,size=0x30) addr:0x020bd9a0
 RollStageChance kind:function(thumb,size=0x34) addr:0x020bd9d0
 AreStageEntriesSettled kind:function(thumb,size=0x84) addr:0x020bda04
@@ -69,7 +69,7 @@ func_ov041_020bf82c kind:function(thumb,size=0xf8) addr:0x020bf82c
 func_ov041_020bf924 kind:function(thumb,size=0x2bc) addr:0x020bf924
 func_ov041_020bfbe0 kind:function(thumb,size=0x2a4) addr:0x020bfbe0
 func_ov041_020bfe84 kind:function(thumb,size=0x170) addr:0x020bfe84
-func_ov041_020bfff4 kind:function(thumb,size=0xb4) addr:0x020bfff4
+StageStateStartTurn kind:function(thumb,size=0xb4) addr:0x020bfff4
 func_ov041_020c00a8 kind:function(thumb,size=0x174) addr:0x020c00a8
 func_ov041_020c021c kind:function(thumb,size=0x280) addr:0x020c021c
 StageStateNoop16 kind:function(thumb,size=0x2) addr:0x020c049c
@@ -86,8 +86,9 @@ UpdateStageEntry kind:function(thumb,size=0x54) addr:0x020c0bc0
 ApplyStageEntryMove kind:function(thumb,size=0xd8) addr:0x020c0c14
 FaceStageEntryAcross kind:function(thumb,size=0x88) addr:0x020c0cec
 SetStageEntryFlag800 kind:function(thumb,size=0x24) addr:0x020c0d74
+TickEntryStatuses kind:function(thumb,size=0xa0) addr:0x020c0d98
 SetStageEntryState kind:function(thumb,size=0x20) addr:0x020c0e38
-CheckStageEntryActions kind:function(thumb,size=0x20) addr:0x020c0e58
+StageEntryHasActionInRange kind:function(thumb,size=0x20) addr:0x020c0e58
 IsPrimaryEntryOutOfReach kind:function(thumb,size=0x48) addr:0x020c0e78
 FindStageEntryBySceneSlot kind:function(thumb,size=0x44) addr:0x020c0ec0
 PickNearbyTarget kind:function(thumb,size=0xc) addr:0x020c0f04
@@ -114,13 +115,15 @@ SetStageActorFrame kind:function(thumb,size=0xdc) addr:0x020c2948
 MatchesEitherSlotId kind:function(thumb,size=0x20) addr:0x020c2a24
 IsEntryFlag2Set kind:function(thumb,size=0x8) addr:0x020c2a44
 GetEntryAnimationFrame kind:function(thumb,size=0x8) addr:0x020c2a4c
-IsEntryFlag8000Set kind:function(thumb,size=0xa) addr:0x020c2af4
+FreezeStageEntry kind:function(thumb,size=0xa0) addr:0x020c2a54
+IsStageEntryFrozen kind:function(thumb,size=0xa) addr:0x020c2af4
 GetPositionAboveGround kind:function(thumb,size=0x32) addr:0x020c2b00
 GetEntryPosition kind:function(thumb,size=0x12) addr:0x020c2b34
 GetEntryOverheadPosition kind:function(thumb,size=0x34) addr:0x020c2b48
 GetStageGridPosition kind:function(thumb,size=0x54) addr:0x020c2b7c
 GetFarthestEnemyRow kind:function(thumb,size=0x4c) addr:0x020c2bd0
-func_ov041_020c2cac kind:function(thumb,size=0xa0) addr:0x020c2cac
+func_ov041_020c2c1c kind:function(thumb,size=0x90) addr:0x020c2c1c
+HasActionInRange kind:function(thumb,size=0xa0) addr:0x020c2cac
 func_ov041_020c2d4c kind:function(thumb,size=0xd8) addr:0x020c2d4c
 SetEntryState kind:function(thumb,size=0x26) addr:0x020c306c
 GetEntryAction kind:function(thumb,size=0x18) addr:0x020c3094
@@ -141,6 +144,8 @@ PlayActorAnimation kind:function(thumb,size=0x58) addr:0x020c3814
 GetPathNodeOffset kind:function(thumb,size=0x50) addr:0x020c386c
 SetAnimationFrameIfChanged kind:function(thumb,size=0x60) addr:0x020c38bc
 StepEntryPathModel kind:function(thumb,size=0x72) addr:0x020c391c
+PickEntryActionInRange kind:function(thumb,size=0xcc) addr:0x020c3990
+ChooseEntryAction kind:function(thumb,size=0xa8) addr:0x020c3a5c
 EntryActionHookNoop kind:function(thumb,size=0x2) addr:0x020c3b04
 StartStageEntryMotion kind:function(thumb,size=0x28) addr:0x020c3f10
 StartStageMotion kind:function(thumb,size=0x86) addr:0x020c3f38
@@ -166,7 +171,7 @@ func_ov041_020c651c kind:function(thumb,size=0x138) addr:0x020c651c
 func_ov041_020c6654 kind:function(thumb,size=0xec) addr:0x020c6654
 func_ov041_020c6740 kind:function(thumb,size=0x28c) addr:0x020c6740
 func_ov041_020c69cc kind:function(thumb,size=0xfc) addr:0x020c69cc
-func_ov041_020c6ac8 kind:function(thumb,size=0xd0) addr:0x020c6ac8
+StageEntryStateHealed kind:function(thumb,size=0xd0) addr:0x020c6ac8
 func_ov041_020c6b98 kind:function(thumb,size=0x6cc) addr:0x020c6b98
 func_ov041_020c7264 kind:function(thumb,size=0x9d0) addr:0x020c7264
 func_ov041_020c7c34 kind:function(thumb,size=0xcdc) addr:0x020c7c34
@@ -270,7 +275,7 @@ sOv041_Bip01RHand_020cf780 kind:data(any) addr:0x020cf780
 data_ov041_020cf790 kind:data(any) addr:0x020cf790
 data_ov041_020cf7a0 kind:data(any) addr:0x020cf7a0
 data_ov041_020cf7bc kind:data(any) addr:0x020cf7bc
-data_ov041_020cf7ec kind:data(any) addr:0x020cf7ec
+gEmptyActionChoices kind:data(any) addr:0x020cf7ec
 data_ov041_020cf7f0 kind:data(any) addr:0x020cf7f0
 data_ov041_020cf7f8 kind:data(any) addr:0x020cf7f8
 data_ov041_020cf804 kind:data(any) addr:0x020cf804

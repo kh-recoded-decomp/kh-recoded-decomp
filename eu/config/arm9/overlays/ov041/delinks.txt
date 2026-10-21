@@ -124,7 +124,7 @@ src/overlays/ov041/calls/StartStageFadeOut.c:
     complete
     .text       start:0x020bd7e0 end:0x020bd80c
 
-src/overlays/ov041/calls/AreSecondaryEntriesIdle.c:
+src/overlays/ov041/calls/NoSecondaryEntryCanAct.c:
     complete
     .text       start:0x020bd96c end:0x020bd9a0
 
@@ -256,6 +256,10 @@ src/overlays/ov041/calls/StageStateWaitScreenIdle.c:
     complete
     .text       start:0x020bf234 end:0x020bf280
 
+src/overlays/ov041/calls/StageStateStartTurn.c:
+    complete
+    .text       start:0x020bfff4 end:0x020c00a8
+
 src/overlays/ov041/auto/StageStateNoop16.c:
     complete
     .text       start:0x020c049c end:0x020c049e
@@ -300,11 +304,15 @@ src/overlays/ov041/calls/SetStageEntryFlag800.c:
     complete
     .text       start:0x020c0d74 end:0x020c0d98
 
+src/overlays/ov041/calls/TickEntryStatuses.c:
+    complete
+    .text       start:0x020c0d98 end:0x020c0e38
+
 src/overlays/ov041/calls/SetStageEntryState.c:
     complete
     .text       start:0x020c0e38 end:0x020c0e58
 
-src/overlays/ov041/calls/CheckStageEntryActions.c:
+src/overlays/ov041/calls/StageEntryHasActionInRange.c:
     complete
     .text       start:0x020c0e58 end:0x020c0e78
 
@@ -408,7 +416,11 @@ src/overlays/ov041/auto/GetEntryAnimationFrame.c:
     complete
     .text       start:0x020c2a4c end:0x020c2a54
 
-src/overlays/ov041/auto/IsEntryFlag8000Set.c:
+src/overlays/ov041/calls/FreezeStageEntry.c:
+    complete
+    .text       start:0x020c2a54 end:0x020c2af4
+
+src/overlays/ov041/auto/IsStageEntryFrozen.c:
     complete
     .text       start:0x020c2af4 end:0x020c2afe
 
@@ -431,6 +443,10 @@ src/overlays/ov041/calls/GetStageGridPosition.c:
 src/overlays/ov041/calls/GetFarthestEnemyRow.c:
     complete
     .text       start:0x020c2bd0 end:0x020c2c1c
+
+src/overlays/ov041/calls/HasActionInRange.c:
+    complete
+    .text       start:0x020c2cac end:0x020c2d4c
 
 src/overlays/ov041/auto/SetEntryState.c:
     complete
@@ -504,6 +520,14 @@ src/overlays/ov041/calls/StepEntryPathModel.c:
     complete
     .text       start:0x020c391c end:0x020c398e
 
+src/overlays/ov041/calls/PickEntryActionInRange.c:
+    complete
+    .text       start:0x020c3990 end:0x020c3a5c
+
+src/overlays/ov041/calls/ChooseEntryAction.c:
+    complete
+    .text       start:0x020c3a5c end:0x020c3b04
+
 src/overlays/ov041/auto/EntryActionHookNoop.c:
     complete
     .text       start:0x020c3b04 end:0x020c3b06
@@ -551,6 +575,10 @@ src/overlays/ov041/auto/EntryStateNoop5.c:
 src/overlays/ov041/auto/EntryStateNoop8.c:
     complete
     .text       start:0x020c6414 end:0x020c6416
+
+src/overlays/ov041/calls/StageEntryStateHealed.c:
+    complete
+    .text       start:0x020c6ac8 end:0x020c6b98
 
 src/overlays/ov041/calls/GetScaleLevel.c:
     complete

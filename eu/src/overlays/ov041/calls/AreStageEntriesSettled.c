@@ -6,8 +6,8 @@ extern u8 CountActiveStageEntries(BOOL primary);
 extern void SetStageEntryState(u8 entryIndex, int arg);
 
 /*
- * TRUE when no entry is active or waiting on something; also TRUE once no primary entry is left, in which
- * case every still active entry is stopped (SetStageEntryState).
+ * TRUE when no entry is active or waiting part-way through; also TRUE once no primary entry is left, in which
+ * case every active entry is set back to waiting.
  */
 BOOL AreStageEntriesSettled(void)
 {
@@ -18,7 +18,7 @@ BOOL AreStageEntriesSettled(void)
 
     for (i = 0; i < work->entryCount; i++) {
         entry = &work->entries[i];
-        if (entry->state == STAGE_ENTRY_ACTIVE || (entry->state == STAGE_ENTRY_WAITING && entry->pending)) {
+        if (entry->state == STAGE_ENTRY_ACTIVE || (entry->state == STAGE_ENTRY_WAITING && entry->stateStep)) {
             settled = FALSE;
             break;
         }

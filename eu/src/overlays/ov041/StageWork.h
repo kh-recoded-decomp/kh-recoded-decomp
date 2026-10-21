@@ -145,6 +145,7 @@ typedef struct StageScaleFactors {
 #define STAGE_WORK_SKIP_CHANCE_B 0x10
 #define STAGE_WORK_FIELD_OP_DONE 0x4000
 #define STAGE_WORK_PANEL_MOVING 0x4000000
+#define STAGE_WORK_TURN_STARTED 0x10000000
 #define STAGE_WORK_FAST_PANELS 0x20000000
 
 typedef struct StageEntry StageEntry;
@@ -153,7 +154,8 @@ typedef void (*StageStateFunc)(void);
 
 /* The stage (gMovieContextState->stageWork): state machine, entries, models, markers and resource lists. */
 typedef struct StageWork {
-    u8 reserved000[6];
+    u8 reserved000[4];
+    u16 unk04;
     u8 state;
     s8 stateStep;
     u32 flags;
@@ -163,10 +165,11 @@ typedef struct StageWork {
     u8 entryCount;
     u8 primaryCount; /* entries [0, primaryCount) are the primary ones, the secondary ones follow */
     u8 secondaryCount;
-    u8 reserved01b[0x20 - 0x1b];
+    u8 currentEntry; /* the entry whose turn it is */
+    u8 reserved01c[4];
     void *subModeTask;
     u8 commandId;
-    u8 reserved025;
+    u8 fieldSlot;
     u8 targetIndex;
     u8 commandEffectKind;
     u8 reserved028[0xd4 - 0x28];

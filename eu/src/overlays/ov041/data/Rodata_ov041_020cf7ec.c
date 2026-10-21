@@ -1,4 +1,5 @@
 #include "nitro/types.h"
+#include "src/overlays/ov041/StageEntryRender.h"
 
 const u32 data_ov041_020cf82c[24] = {
     0xFFFFB000, 0xFFFFD000, 0xFFFFF000, 0x00001000,
@@ -26,6 +27,6 @@ const u32 data_ov041_020cf7f0[2] = {
     0x00000000, 0x00000001,
 };
 
-const u32 data_ov041_020cf7ec[1] = {
-    0xFFFFFFFF,
+const StageActionChoices gEmptyActionChoices = {
+    {-1, -1, -1, -1},
 };

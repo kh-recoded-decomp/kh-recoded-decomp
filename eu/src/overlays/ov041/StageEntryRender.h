@@ -30,9 +30,6 @@ typedef struct StageGroundShadow {
     u8 reservedbc[0x48];
 } StageGroundShadow;
 
-typedef struct StageTrackedNode {
-    u8 flags;
-} StageTrackedNode;
 
 /* StageEntry.state */
 #define STAGE_ENTRY_WAITING 1
@@ -51,6 +48,8 @@ typedef struct StageTrackedNode {
 #define STAGE_ENTRY_SHOW_HP 8
 #define STAGE_ENTRY_TIMED_PRESS 0x40 /* the button was pressed in time during its action */
 #define STAGE_ENTRY_FLAG_800 0x800
+#define STAGE_ENTRY_FROZEN 0x8000
+#define STAGE_ENTRY_FORCE_ACTION_2 0x200000
 
 #define STAGE_ENTRY_STATUS_COUNT 11
 #define STAGE_ENTRY_STATUS_9 9 /* blocks the defending press */
@@ -102,7 +101,11 @@ typedef struct StageEntryAction {
     u8 reserved02[3];
     s8 soundIndex;
     s16 soundFrame; /* animation frame the sound plays on */
-    u8 reserved08[0x1c - 8];
+    u8 reserved08[4];
+    u16 chance; /* out of 1000 */
+    u8 reserved0e[0x17 - 0xe];
+    u8 range; /* how many rows away it reaches */
+    u8 reserved18[4];
     u8 kind;
     u8 reserved1d[3];
     u8 animation;
@@ -111,6 +114,11 @@ typedef struct StageEntryAction {
 
 typedef void (*StageEntryFunc)(u8 entryIndex);
 
+/* Indices of the actions an entry can pick from (-1 = none). */
+typedef struct StageActionChoices {
+    s8 indices[4];
+} StageActionChoices;
+
 struct StageEntry {
     u8 kind;
     u8 index; /* its own place in StageWork.entries */
@@ -118,7 +126,7 @@ struct StageEntry {
     u8 column;
     u8 state;
     u8 previousState;
-    u8 pending;
+    u8 stateStep; /* progress inside the current state */
     u8 reserved007;
     u32 flags;
     u8 reserved00c[4];
@@ -130,7 +138,8 @@ struct StageEntry {
     s16 hp;
     s16 maxHp;
     s16 shownHp; /* follows hp down a little at a time */
-    u8 reserved0e2[0x108 - 0xe2];
+    s16 unk0e2;
+    u8 reserved0e4[0x108 - 0xe4];
     s8 actionCount;
     u8 reserved109[3];
     StageEntryAction *actions;
@@ -144,7 +153,8 @@ struct StageEntry {
     fx32 radius;
     u8 reserved12c[4];
     VecFx32 overheadOffset; /* from its position to where things are shown above it */
-    u8 reserved13c[0x20];
+    u8 healAnimation;
+    u8 reserved13d[0x1f];
     StageEntrySlot slot;
     u8 reserved310[0x10];
     s16 frameStep;
@@ -152,7 +162,7 @@ struct StageEntry {
     StageShadowActor *attachment;
     u8 reserved338[0x20];
     StageEntryMove move;
-    StageTrackedNode *trackedNodes[5];
+    StageResourceItem *effects[5]; /* effect items following it */
     StageResourceItem *statusItem;
     StagePathModel *pathModel;
     StageGroundShadow shadow;

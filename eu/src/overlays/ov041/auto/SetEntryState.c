@@ -3,7 +3,7 @@
 
 /*
  * Moves an entry to another state, remembering the one it leaves. Going between waiting and active keeps its
- * pending mark; any other change clears it.
+ * step; any other change clears it.
  */
 void SetEntryState(StageEntry *entry, int state)
 {
@@ -20,5 +20,5 @@ void SetEntryState(StageEntry *entry, int state)
         }
     }
     entry->state = state;
-    entry->pending = 0;
+    entry->stateStep = 0;
 }

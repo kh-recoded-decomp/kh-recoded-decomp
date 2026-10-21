@@ -35,9 +35,9 @@ void UpdateStageEntryAnimation(StageEntrySlot *slot)
                         Flags16_ClearBit1(&entry->attachment->node.flags);
                     }
                     for (j = 0; j < 5; ++j) {
-                        StageTrackedNode *node = entry->trackedNodes[j];
-                        if (node != NULL) {
-                            node->flags &= 0xdf;
+                        StageResourceItem *effect = entry->effects[j];
+                        if (effect != NULL) {
+                            effect->flags &= (u8)~STAGE_ITEM_HELD;
                         }
                     }
                 }
