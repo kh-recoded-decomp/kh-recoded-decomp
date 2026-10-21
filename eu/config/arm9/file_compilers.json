@@ -2438,7 +2438,6 @@
   "src/calls/func_0204f854.c": "dsi/1.1",
   "src/calls/func_020257d8.c": "dsi/1.1",
   "src/calls/func_0202edb0.c": "dsi/1.1",
-  "src/calls/func_0202f4cc.c": "dsi/1.1",
   "src/calls/func_0202a438.c": "dsi/1.1",
   "src/calls/func_020359c4.c": "dsi/1.1",
   "src/calls/func_020257f8.c": "dsi/1.1",
@@ -9169,7 +9168,6 @@
   "src/overlays/ov074/calls/HandleRootMenuConfirm.c": "dsi/1.3p1",
   "src/overlays/ov078/calls/DrawPageDetails.c": "dsi/1.3p1",
   "src/calls/BeginOrthographicCamera.c": "dsi/1.1",
-  "src/calls/ResetCameraToDefaults.c": "dsi/1.1",
   "src/overlays/ov013/calls/OpenPanelSelectionMenu.c": "dsi/1.1",
   "src/overlays/ov013/calls/ChangePanelMenuState.c": "dsi/1.1",
   "src/overlays/ov013/calls/ScrollPanelSlotWidgets.c": "dsi/1.1",
@@ -9281,5 +9279,9 @@
   "src/overlays/ov093/calls/MoveGridCursorRight.c": "dsi/1.1",
   "src/calls/SolveMonicCubic.c": "dsi/1.1",
   "src/calls/TestSegmentAgainstPolygon.c": "dsi/1.1",
-  "src/calls/SweepSphereAgainstCylinder.c": "dsi/1.1"
+  "src/calls/SweepSphereAgainstCylinder.c": "dsi/1.1",
+  "src/overlays/ov059/calls/func_ov059_020ce3dc.c": "dsi/1.3p1",
+  "src/overlays/ov047/calls/func_ov047_020c5568.c": "dsi/1.3p1",
+  "src/overlays/ov085/calls/func_ov085_020bf810.c": "dsi/1.3p1",
+  "src/overlays/ov046/calls/func_ov046_020c1fc0.c": "dsi/1.3p1"
 }

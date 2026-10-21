@@ -91,6 +91,10 @@ src/overlays/ov047/calls/func_ov047_020c53d4.c:
     complete
     .text       start:0x020c53d4 end:0x020c5568
 
+src/overlays/ov047/calls/func_ov047_020c5568.c:
+    complete
+    .text       start:0x020c5568 end:0x020c5db0
+
 src/overlays/ov047/calls/Camera_HandleDistanceToggle.c:
     complete
     .text       start:0x020c5db0 end:0x020c5e3c
