@@ -8729,6 +8729,10 @@ src/calls/SweepSphereAgainstCappedCylinder.c:
     complete
     .text       start:0x02042b98 end:0x02042f68
 
+src/calls/func_02042f68.c:
+    complete
+    .text       start:0x02042f68 end:0x020434cc
+
 src/calls/SquareFx32.c:
     complete
     .text       start:0x020434cc end:0x020434e4

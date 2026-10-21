@@ -1,0 +1,18 @@
+#define AddScaledDirection_0204b834 AddScaledDirection
+#define BlendVectorsBySqrtComplement_0204b59c BlendVectorsBySqrtComplement
+#define ClipRayAgainstPlane_01fff6c8 ClipRayAgainstPlane
+#define FX_Div_01ff9c84 FX_Div
+#define FX_Sqrt_01ff9cfc FX_Sqrt
+#define GetNormalizedCross_0204b9c8 GetNormalizedCross
+#define InitHitQuery_0203ac24 InitHitQuery
+#define NormalizeIfShort_0204a9b4 NormalizeIfShort
+#define NormalizeOrVerticalAxis_0204b8bc NormalizeOrVerticalAxis
+#define ProjectPositionAtTimeMaybeVertical_0204b790 ProjectPositionAtTimeMaybeVertical
+#define ResolveSweepContact_0204792c ResolveSweepContact
+#define ScaleVecFx32ComponentsConditional_0204b6c4 ScaleVecFx32ComponentsConditional
+#define SweepIntervalOnAxis_0204774c SweepIntervalOnAxis
+#define SweepSphereAgainstPolygon_02042f54 func_02042f68
+#define VEC_CrossProduct_01ff9ea8 VEC_CrossProduct
+#define VEC_DotProduct_01ff9e6c VEC_DotProduct
+#define VEC_Subtract_01ff9e3c VEC_Subtract
+#include "src/arm9/spatial_queries/SweepSphereAgainstPolygon_02042f54.c"
