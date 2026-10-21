@@ -230,6 +230,27 @@ def destination(module: str, name: str, asm: bool = False) -> str:
     return f"{folder}/{name}.c"
 
 
+def eu_absolute_symbols() -> dict[str, int]:
+    text = (EU / "tools" / "configure.py").read_text(encoding="utf-8")
+    block = text[text.index("ABSOLUTE_SYMBOLS = {"):]
+    block = block[:block.index("\n}")]
+    return {name: int(value, 0) for name, value in re.findall(r'"(\w+)":\s*(0x[0-9a-fA-F]+|\d+)', block)}
+
+
+EU_ABSOLUTE = eu_absolute_symbols()
+
+
+def absolute_name(symbol: str, value: int) -> str | None:
+    """EU linker-absolute symbol for a US absolute reference (e.g. OverlayId104_00000068)."""
+    if EU_ABSOLUTE.get(symbol) == value:
+        return symbol
+    encoded = re.search(r"_([0-9a-f]{8})$", symbol)
+    if not encoded or int(encoded.group(1), 16) != value:
+        return None
+    names = sorted(name for name, v in EU_ABSOLUTE.items() if v == value)
+    return names[0] if len(names) == 1 else None
+
+
 def try_pair(model: EuModel, pair, scratch: Path):
     module, entry, (address, size, eu_name) = pair
     expected = model.function(module, address, size)
@@ -261,11 +282,25 @@ def try_pair(model: EuModel, pair, scratch: Path):
             if len(data) != size:
                 status = "size differs"
                 break
-            if set(relocs) != set(rom_relocs) or masked(data, relocs) != masked(rom, relocs):
+            if masked(data, relocs) != masked(rom, relocs):
                 status = "bytes differ"
                 break
             renames, ok = {}, True
+            for offset in set(relocs) - set(rom_relocs):
+                symbol, kind, addend, _ = relocs[offset]
+                word = int.from_bytes(rom[offset:offset + 4], "little")
+                want = absolute_name(symbol, word - addend) if kind == R_ARM_ABS32 else None
+                if want is None:
+                    ok = False
+                    break
+                if symbol != want:
+                    renames[symbol] = want
+            if not ok or set(rom_relocs) - set(relocs):
+                status = "bytes differ"
+                break
             for offset, (symbol, kind, addend, is_section) in relocs.items():
+                if offset not in rom_relocs:
+                    continue
                 target, target_module = rom_relocs[offset]
                 addend = addend if kind == R_ARM_ABS32 else 0
                 want = model.name_at(target - addend, target_module, symbol)
