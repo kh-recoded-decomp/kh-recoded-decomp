@@ -3184,6 +3184,10 @@ src/overlays/ov001/calls/GetHudEntry.c:
     complete
     .text       start:0x02072eb0 end:0x02072ec8
 
+src/overlays/ov001/calls/UnloadHudLayersAndRecordText.c:
+    complete
+    .text       start:0x02072ec8 end:0x02072fc4
+
 src/overlays/ov001/calls/SetSceneAnimState.c:
     complete
     .text       start:0x02072fc4 end:0x02073030

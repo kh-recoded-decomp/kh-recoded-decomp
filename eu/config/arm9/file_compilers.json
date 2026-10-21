@@ -9263,5 +9263,9 @@
   "libs/nitro/os/asm_stubs/calls/OSi_DisplayExContext.c": "dsi/1.1",
   "src/asm_stubs/calls/func_01ff8ad8.c": "dsi/1.1",
   "src/asm_stubs/calls/func_01ff8dc8.c": "dsi/1.1",
-  "src/asm_stubs/calls/INITi_DoAutoload.c": "dsi/1.1"
+  "src/asm_stubs/calls/INITi_DoAutoload.c": "dsi/1.1",
+  "src/overlays/ov001/calls/UnloadHudLayersAndRecordText.c": "dsi/1.1",
+  "src/overlays/ov022/asm_stubs/calls/GetMovieChunkType1Size.c": "dsi/1.3p1",
+  "src/overlays/ov022/asm_stubs/calls/func_ov022_020b715c.c": "dsi/1.3p1",
+  "libs/nitro/os/asm_stubs/calls/OSi_DoBoot.c": "dsi/1.1"
 }

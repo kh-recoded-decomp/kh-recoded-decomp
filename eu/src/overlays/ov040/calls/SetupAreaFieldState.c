@@ -1,4 +1,5 @@
 #define func_ov001_02064184 PlayFieldBgm
+#define func_ov001_02072ec8 UnloadHudLayersAndRecordText
 #define func_ov040_020bce50 SetupAreaFieldState
 #define data_ov035_020bc4e0 gMovieContextState
 #define data_ov040_020be260 data_ov040_020be280

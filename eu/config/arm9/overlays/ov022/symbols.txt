@@ -116,6 +116,7 @@ func_ov022_020aaa78 kind:function(arm,size=0x70) addr:0x020aaa78
 func_ov022_020aaae8 kind:function(arm,size=0x14) addr:0x020aaae8
 decodeMovieAdpcmSamples kind:function(arm,size=0x158) addr:0x020aaafc
 GetMovieChunkType1Size kind:function(arm,size=0x38) addr:0x020aac54
+func_ov022_020ab464 kind:label(arm) addr:0x020ab464
 DecodeMovieChunkType2 kind:function(arm,size=0x4) addr:0x020ab614
 func_ov022_020ab898 kind:function(arm,size=0x56c) addr:0x020ab898
 func_ov022_020abe44 kind:function(arm,size=0x1cc) addr:0x020abe44
@@ -125,7 +126,9 @@ gMovieDecoderCodeBlob kind:data(any) addr:0x020b0bc0
 gMovieDecoderLookupTable kind:data(any) addr:0x020ac9c0
 func_ov022_020b715c kind:function(arm,size=0xe4) addr:0x020b715c
 func_ov022_020b728c kind:function(arm,size=0x138) addr:0x020b728c
+func_ov022_020b73c4 kind:label(arm) addr:0x020b73c4
 func_ov022_020b74b8 kind:function(arm,size=0x108) addr:0x020b74b8
+data_ov022_020b75c0 kind:data(any) addr:0x020b75c0
 data_ov022_020b76a8 kind:data(any) addr:0x020b76a8
 data_ov022_020b7748 kind:data(any) addr:0x020b7748 ambiguous
 data_ov022_020b7828 kind:data(any) addr:0x020b7828
