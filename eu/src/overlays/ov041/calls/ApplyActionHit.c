@@ -64,7 +64,7 @@ void ApplyActionHit(StageEntry *entry, u8 targetIndex, BOOL pressCheck)
         }
     } else {
         entry->flags |= STAGE_ENTRY_MISSED;
-        if (action->kind == 1 && action->healEffectIndex == 3) {
+        if (action->kind == 1 && action->attackStyle == 3) {
             PlayStageSound(action->soundSeqArc, action->hitSoundIndex, TRUE);
         }
         switch (action->kind) {

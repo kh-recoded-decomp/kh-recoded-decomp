@@ -512,6 +512,10 @@ src/overlays/ov041/calls/HasActionInRange.c:
     complete
     .text       start:0x020c2cac end:0x020c2d4c
 
+src/overlays/ov041/calls/GetEntryMoveEnds.c:
+    complete
+    .text       start:0x020c2e24 end:0x020c2f7c
+
 src/overlays/ov041/calls/GetStrikePosition.c:
     complete
     .text       start:0x020c2f7c end:0x020c306c

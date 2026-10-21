@@ -9484,5 +9484,6 @@
   "src/overlays/ov041/calls/EntryStateStatusCommand.c": "dsi/1.1",
   "src/overlays/ov041/calls/StartQueuedItemCommand.c": "dsi/1.1",
   "src/overlays/ov041/calls/EntryActionSpell.c": "dsi/1.1",
-  "src/overlays/ov041/calls/ComputeEntryHit.c": "dsi/1.1"
+  "src/overlays/ov041/calls/ComputeEntryHit.c": "dsi/1.1",
+  "src/overlays/ov041/calls/GetEntryMoveEnds.c": "dsi/1.1"
 }

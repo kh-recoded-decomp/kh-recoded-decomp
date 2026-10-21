@@ -199,7 +199,7 @@ struct StageEntry {
     u8 sceneSlot;
     u8 reserved126[2];
     fx32 radius;
-    u8 reserved12c[4];
+    fx32 groundHeight; /* how high it stands on its grid place */
     VecFx32 overheadOffset; /* from its position to where things are shown above it */
     u8 idleAnimation;
     u8 reserved13d[2];

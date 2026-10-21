@@ -173,9 +173,18 @@ typedef struct StageEntryAction {
     u8 effectCategory;
     u8 effectIndex;
     u8 effectAnimation;
-    u8 healEffectCategory; /* the item shown over a healed entry */
-    u8 healEffectIndex; /* (3 on a kind 1 action: its hit sound plays even when it misses) */
-    u8 healEffectAnimation;
+    union {
+        struct {
+            u8 healEffectCategory; /* heals: the item shown over the healed entry */
+            u8 healEffectIndex;
+            u8 healEffectAnimation;
+        };
+        struct {
+            u8 reserved2e;
+            u8 attackStyle; /* kind 1: 3 plays the hit sound even on a miss; kind 0x10 attackers: 0 aims high */
+            u8 extraReach; /* kinds 1 and 6: tenths of a unit the attacker stops further away */
+        };
+    };
     u8 reserved31[3];
     u8 statusTurns;
     u8 itemSlot;
