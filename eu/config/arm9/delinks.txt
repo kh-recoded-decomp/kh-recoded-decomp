@@ -5489,11 +5489,11 @@ src/asm_stubs/calls/_dsub.s:
     complete
     .text       start:0x02022e34 end:0x020231e8
 
-src/asm_stubs/calls/func_020231e8.c:
+src/asm_stubs/calls/_dmul.c:
     complete
     .text       start:0x020231e8 end:0x0202354c
 
-src/asm_stubs/calls/func_0202354c.c:
+src/asm_stubs/calls/_d2f.c:
     complete
     .text       start:0x0202354c end:0x02023650
 
@@ -9256,6 +9256,10 @@ src/calls/NewtonSolveFloat.c:
 src/calls/SolveMonicQuadratic.c:
     complete
     .text       start:0x0204c190 end:0x0204c214
+
+src/calls/SolveMonicCubic.c:
+    complete
+    .text       start:0x0204c214 end:0x0204c6d4
 
 src/calls/SolveQuartic.c:
     complete

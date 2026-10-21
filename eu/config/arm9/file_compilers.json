@@ -9077,8 +9077,8 @@
   "src/asm_stubs/calls/Entry.c": "dsi/1.3p1",
   "src/asm_stubs/calls/func_02000a78.c": "dsi/1.3p1",
   "src/asm_stubs/calls/MATHi_SHA1ProcessBlock.c": "dsi/1.3p1",
-  "src/asm_stubs/calls/func_020231e8.c": "dsi/1.3p1",
-  "src/asm_stubs/calls/func_0202354c.c": "dsi/1.3p1",
+  "src/asm_stubs/calls/_dmul.c": "dsi/1.3p1",
+  "src/asm_stubs/calls/_d2f.c": "dsi/1.3p1",
   "src/asm_stubs/calls/func_01ff81b0.c": "dsi/1.3p1",
   "src/asm_stubs/calls/func_01ff88c4.c": "dsi/1.3p1",
   "src/overlays/ov022/asm_stubs/calls/DecodeMovieChunkType2Impl.c": "dsi/1.3p1",
@@ -9278,5 +9278,6 @@
   "src/overlays/ov078/calls/SetupPageMenuBackgrounds.c": "dsi/1.1",
   "src/overlays/ov001/calls/ProbeStageObjectHit.c": "dsi/1.1",
   "src/overlays/ov001/calls/HitTestRoutePoints.c": "dsi/1.1",
-  "src/overlays/ov093/calls/MoveGridCursorRight.c": "dsi/1.1"
+  "src/overlays/ov093/calls/MoveGridCursorRight.c": "dsi/1.1",
+  "src/calls/SolveMonicCubic.c": "dsi/1.1"
 }
