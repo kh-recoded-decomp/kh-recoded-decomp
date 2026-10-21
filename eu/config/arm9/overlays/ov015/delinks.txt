@@ -768,6 +768,10 @@ src/overlays/ov015/auto/func_ov015_02075338.c:
     complete
     .text       start:0x02075338 end:0x0207533c
 
+src/overlays/ov015/calls/func_ov015_0207533c.c:
+    complete
+    .text       start:0x0207533c end:0x020759cc
+
 src/overlays/ov015/calls/SetupPanelBoard.c:
     complete
     .text       start:0x020759cc end:0x0207634c
@@ -839,6 +843,10 @@ src/overlays/ov015/calls/HasNoPendingEntries.c:
 src/overlays/ov015/calls/SetContainerSubitem1Active.c:
     complete
     .text       start:0x02078228 end:0x0207830c
+
+src/overlays/ov015/calls/func_ov015_0207830c.c:
+    complete
+    .text       start:0x0207830c end:0x02078438
 
 src/overlays/ov015/calls/GrantRewardEntry.c:
     complete

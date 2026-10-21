@@ -120,7 +120,7 @@ src/overlays/ov014/calls/HitTestCategoryPanel.c:
     complete
     .text       start:0x0206f42c end:0x0206f5cc
 
-src/overlays/ov014/calls/HitTestCellOam.c:
+src/overlays/ov014/calls/IsCellOamPixelHit.c:
     complete
     .text       start:0x0206f5cc end:0x0206f740
 

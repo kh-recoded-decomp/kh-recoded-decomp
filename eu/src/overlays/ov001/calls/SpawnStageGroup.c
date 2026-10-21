@@ -11,7 +11,7 @@
 #define func_ov001_020925bc func_ov001_020925e4
 #define func_ov001_02093188 ResetStageActorFlags
 #define func_ov001_02093330 RefreshStageEventDisplay_02093330
-#define func_ov001_020950f8 SpawnStageGroupMember
+#define func_ov001_020950f8 SpawnStageGroupActor
 #define func_ov001_0209c3c0 GetStageManager
 #define random_next_scaled_0202aa04 random_next_scaled
 #include "src/ov001/shared_engine/SpawnStageGroup_02094f60.c"

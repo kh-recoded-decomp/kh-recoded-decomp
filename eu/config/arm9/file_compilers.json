@@ -9297,8 +9297,6 @@
   "src/overlays/ov047/calls/func_ov047_020c3b7c.c": "dsi/1.3p1",
   "src/overlays/ov093/calls/func_ov093_020c0fd0.c": "dsi/1.3p1",
   "src/overlays/ov014/calls/func_ov014_0206d2e8.c": "dsi/1.3p1",
-  "src/overlays/ov001/calls/SpawnStageGroupMember.c": "dsi/1.1",
-  "src/overlays/ov014/calls/HitTestCellOam.c": "dsi/1.1",
   "src/overlays/ov058/calls/UpdateEnemyCombatAi.c": "dsi/1.1",
   "src/overlays/ov054/calls/UpdateRewardActorPhase.c": "dsi/1.1",
   "src/calls/func_020382c4.c": "dsi/1.3p1",
@@ -9311,5 +9309,12 @@
   "src/overlays/ov001/calls/func_ov001_0209734c.c": "dsi/1.3p1",
   "src/calls/func_01fff8b0.c": "dsi/1.3p1",
   "src/overlays/ov013/calls/func_ov013_0206df40.c": "dsi/1.3p1",
-  "src/calls/SweepCircleAgainstCircle.c": "dsi/1.1"
+  "src/overlays/ov014/calls/IsCellOamPixelHit.c": "dsi/1.3p1",
+  "src/overlays/ov001/calls/SpawnStageGroupActor.c": "dsi/1.3p1",
+  "src/overlays/ov001/calls/func_ov001_02082c78.c": "dsi/1.3p1",
+  "src/overlays/ov004/calls/func_ov004_02061e7c.c": "dsi/1.3p1",
+  "src/overlays/ov015/calls/func_ov015_0207533c.c": "dsi/1.3p1",
+  "src/overlays/ov073/calls/func_ov073_020c0710.c": "dsi/1.3p1",
+  "src/calls/SweepCircleAgainstCircle.c": "dsi/1.3p1",
+  "src/overlays/ov015/calls/func_ov015_0207830c.c": "dsi/1.3p1"
 }

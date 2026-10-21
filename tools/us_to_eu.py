@@ -225,11 +225,16 @@ R_ARM_ABS32 = 2
 def wrapper_text(mapping: dict[str, str], us_source: str) -> str:
     """#defines from US to EU names; an EU name that is also a US name goes through a temporary symbol."""
     taken = set(mapping) | set(re.findall(r"[A-Za-z_]\w*", (ROOT / us_source).read_text(encoding="utf-8")))
-    lines, renames = [], []
+    lines, renames, targets = [], [], {}
     for us, eu in sorted(mapping.items()):
+        targets[eu] = targets.get(eu, 0) + 1
         if us == eu:
             continue
-        if eu in taken:
+        if targets[eu] > 1:
+            # Two US names for one EU symbol must stay distinct, or mwcc merges their calls.
+            renames.append(f"// redefine-sym eu{targets[eu]}_{eu}={eu}")
+            eu = f"eu{targets[eu]}_{eu}"
+        elif eu in taken:
             renames.append(f"// redefine-sym eu_{eu}={eu}")
             eu = f"eu_{eu}"
         lines.append(f"#define {us} {eu}")
