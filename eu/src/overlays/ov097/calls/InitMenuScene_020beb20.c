@@ -9,7 +9,7 @@
 #define RefreshListPanels_020bfb38 RefreshListPanels
 #define ResetScrollTrack_020c1228 ResetScrollTrack
 #define SetStateFlagBits_020bc688 SetStateFlagBits
-#define SetupMenuDisplay_020bf44c func_ov097_020bf46c
+#define SetupMenuDisplay_020bf44c SetupMenuDisplay_020bf46c
 #define SetupScrollList_020c02f4 SetupScrollList_020c0314
 #define SyncUnlockedEntryFlags_020c14c0 SyncUnlockedEntryFlags
 #define compareByteStrings_02021c54 CompareByteStrings

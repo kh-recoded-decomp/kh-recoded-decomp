@@ -16,6 +16,10 @@ src/overlays/ov078/calls/ShutdownPageMenu.c:
     complete
     .text       start:0x020c4374 end:0x020c43e0
 
+src/overlays/ov078/calls/SetupPageMenuBackgrounds.c:
+    complete
+    .text       start:0x020c43e0 end:0x020c4590
+
 src/overlays/ov078/calls/LoadPageMenuWidgets.c:
     complete
     .text       start:0x020c4590 end:0x020c4728

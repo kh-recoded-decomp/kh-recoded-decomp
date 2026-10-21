@@ -9273,5 +9273,7 @@
   "src/overlays/ov000/calls/WaitPanelWorldSession.c": "dsi/1.1",
   "src/calls/TestBoxAgainstPolygon.c": "dsi/1.1",
   "src/overlays/ov001/calls/UpdateFieldHud.c": "dsi/1.1",
-  "src/overlays/ov034/calls/SetupResultsShopList.c": "dsi/1.1"
+  "src/overlays/ov034/calls/SetupResultsShopList.c": "dsi/1.1",
+  "src/overlays/ov097/calls/SetupMenuDisplay_020bf46c.c": "dsi/1.1",
+  "src/overlays/ov078/calls/SetupPageMenuBackgrounds.c": "dsi/1.1"
 }

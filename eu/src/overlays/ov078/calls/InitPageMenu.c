@@ -11,6 +11,6 @@
 #define data_ov078_020c5180 sOv078_UiMenuStrLanguageQstSZ_020c51a0
 #define data_ov078_020c51c0 data_ov078_020c51e0
 #define func_01ff8830 MI_CpuFill8
-#define func_ov078_020c43c0 func_ov078_020c43e0
+#define func_ov078_020c43c0 SetupPageMenuBackgrounds
 #define func_ov078_020c4570 LoadPageMenuWidgets
 #include "src/ov078/unclassified_helpers/InitPageMenu_020c4260.c"
