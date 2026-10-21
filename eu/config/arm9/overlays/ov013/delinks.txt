@@ -48,6 +48,10 @@ src/overlays/ov013/calls/InitRecordScreenGraphics.c:
     complete
     .text       start:0x0206da20 end:0x0206df40
 
+src/overlays/ov013/calls/func_ov013_0206df40.c:
+    complete
+    .text       start:0x0206df40 end:0x0206e574
+
 src/overlays/ov013/calls/DrawPlayerCardDetails.c:
     complete
     .text       start:0x0206e574 end:0x0206eb18

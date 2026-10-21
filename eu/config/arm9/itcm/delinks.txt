@@ -489,6 +489,10 @@ src/calls/SetupModelDrawState.c:
     complete
     .text       start:0x01fff810 end:0x01fff8b0
 
+src/calls/func_01fff8b0.c:
+    complete
+    .text       start:0x01fff8b0 end:0x01fff9a0
+
 src/calls/DrawTexturedBox.c:
     complete
     .text       start:0x01fff9a0 end:0x01fffe28

@@ -48,6 +48,10 @@ src/overlays/ov075/calls/HasPendingUnlocks.c:
     complete
     .text       start:0x020c49c8 end:0x020c49ec
 
+src/overlays/ov075/calls/func_ov075_020c49ec.c:
+    complete
+    .text       start:0x020c49ec end:0x020c577c
+
 src/overlays/ov075/calls/GetMatrixModeLabel.c:
     complete
     .text       start:0x020c577c end:0x020c5798

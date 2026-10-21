@@ -75,6 +75,10 @@ src/overlays/ov018/calls/AdvanceObjectAnimations.c:
     complete
     .text       start:0x020a2c18 end:0x020a2ca4
 
+src/overlays/ov018/calls/func_ov018_020a2ca4.c:
+    complete
+    .text       start:0x020a2ca4 end:0x020a3154
+
 src/overlays/ov018/calls/BounceVelocityOffNormal.c:
     complete
     .text       start:0x020a3154 end:0x020a31b0

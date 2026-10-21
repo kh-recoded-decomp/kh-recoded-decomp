@@ -5396,6 +5396,10 @@ src/overlays/ov001/calls/UpdatePatrolIdle.c:
     complete
     .text       start:0x02083e98 end:0x02083fc4
 
+src/overlays/ov001/calls/func_ov001_02083fc4.c:
+    complete
+    .text       start:0x02083fc4 end:0x02084604
+
 src/overlays/ov001/calls/func_ov001_02084604.c:
     complete
     .text       start:0x02084604 end:0x02084686
@@ -7739,6 +7743,10 @@ src/overlays/ov001/calls/func_ov001_02096f60.c:
 src/overlays/ov001/calls/func_ov001_02097158.c:
     complete
     .text       start:0x02097158 end:0x0209734c
+
+src/overlays/ov001/calls/func_ov001_0209734c.c:
+    complete
+    .text       start:0x0209734c end:0x020978b8
 
 src/overlays/ov001/calls/FindStageAttachPoint.c:
     complete
