@@ -9428,5 +9428,10 @@
   "src/overlays/ov041/calls/StageEntryStateEnter.c": "dsi/1.1",
   "src/overlays/ov041/calls/StageStateWon.c": "dsi/1.1",
   "src/overlays/ov041/calls/StageStateUseItem.c": "dsi/1.1",
-  "src/overlays/ov041/calls/StageEntryStateTurn.c": "dsi/1.1"
+  "src/overlays/ov041/calls/StageEntryStateTurn.c": "dsi/1.1",
+  "src/overlays/ov041/calls/InitStageCaption.c": "dsi/1.1",
+  "src/overlays/ov041/calls/DestroyStageCaption.c": "dsi/1.1",
+  "src/overlays/ov041/calls/LoadStageCaptionChars.c": "dsi/1.1",
+  "src/overlays/ov041/calls/FreeStageCaptionChars.c": "dsi/1.1",
+  "src/overlays/ov041/auto/SetStageCaptionState.c": "dsi/1.1"
 }

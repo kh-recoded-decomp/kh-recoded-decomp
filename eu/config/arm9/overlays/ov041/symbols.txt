@@ -205,6 +205,11 @@ StartStageOrb kind:function(thumb,size=0x78) addr:0x020ce08c
 UpdateStageOrb kind:function(thumb,size=0xc4) addr:0x020ce104
 InitRecordOwnerSlots kind:function(thumb,size=0x38) addr:0x020ce1c8
 func_ov041_020ce200 kind:function(thumb,size=0x10) addr:0x020ce200
+InitStageCaption kind:function(arm,size=0x78) addr:0x020ce334
+DestroyStageCaption kind:function(arm,size=0x18) addr:0x020ce3ac
+LoadStageCaptionChars kind:function(arm,size=0x28) addr:0x020ce3c4
+FreeStageCaptionChars kind:function(arm,size=0x10) addr:0x020ce3ec
+SetStageCaptionState kind:function(arm,size=0x10) addr:0x020ce3fc
 data_ov041_020cedcc kind:function(arm,size=0xcc) addr:0x020cedcc
 data_ov041_020cee98 kind:function(arm,size=0x4) addr:0x020cee98
 data_ov041_020cee9c kind:function(arm,size=0x44) addr:0x020cee9c
@@ -291,7 +296,7 @@ data_ov041_020cf814 kind:data(any) addr:0x020cf814
 data_ov041_020cf82c kind:data(any) addr:0x020cf82c
 data_ov041_020cf88c kind:data(any) addr:0x020cf88c
 gStageScaleFactors kind:data(any) addr:0x020cf898
-data_ov041_020cf8a4 kind:data(any) addr:0x020cf8a4
+gStageCaptionFrame kind:data(any) addr:0x020cf8a4
 data_ov041_020cf8b4 kind:data(any) addr:0x020cf8b4
 gStageStateHandlers kind:data(any) addr:0x020cf8e0
 sOv041_RpgEnpPP_020cf93c kind:data(any) addr:0x020cf93c
