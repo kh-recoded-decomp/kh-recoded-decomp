@@ -15,9 +15,9 @@ extern void StageStateRunTurn(void);
 extern void StageStateChooseTarget(void);
 extern void StageStateStartTurn(void);
 extern void StageStateChooseItemTarget(void);
-extern void func_ov041_020c021c(void);
+extern void StageStateUseItem(void);
 extern void StageStateNoop16(void);
-extern void func_ov041_020c04a0(void);
+extern void StageStateWon(void);
 extern void StageStateRunFieldOp428(void);
 extern void StageStateRetreat(void);
 extern void StageStateFadeOut(void);
@@ -42,9 +42,9 @@ void (*gStageStateHandlers[23])(void) = {
     StageStateChooseTarget,
     StageStateStartTurn,
     StageStateChooseItemTarget,
-    func_ov041_020c021c,
+    StageStateUseItem,
     StageStateNoop16,
-    func_ov041_020c04a0,
+    StageStateWon,
     StageStateRunFieldOp428,
     StageStateRetreat,
     StageStateFadeOut,

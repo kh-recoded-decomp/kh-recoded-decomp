@@ -139,6 +139,36 @@ typedef struct StageScaleFactors {
     fx32 values[3];
 } StageScaleFactors;
 
+/* An action an entry can take (from its list, or an item's). */
+typedef struct StageEntryAction {
+    s16 soundSeqArc;
+    u8 reserved02[3];
+    s8 soundIndex;
+    s16 soundFrame; /* animation frame the sound plays on */
+    u32 unk08; /* (word-sized: the action is copied by words) */
+    u16 chance; /* out of 1000 */
+    u8 reserved0e[8];
+    u8 targetKind; /* below 7 the action is aimed at the secondary entries */
+    u8 range; /* how many rows away it reaches */
+    u16 pressWindow; /* frames before the hit in which the timed press counts */
+    u8 reserved1a[2];
+    u8 kind;
+    u8 reserved1d[3];
+    u8 animation;
+    u8 reserved21[7];
+    u8 castFrame; /* animation frame its effect takes hold on */
+    u8 effectFrame; /* animation frame its effect item appears on */
+    u8 reserved2a;
+    u8 effectCategory;
+    u8 effectIndex;
+    u8 effectAnimation;
+    u8 reserved2e[6];
+    u8 statusTurns;
+    u8 itemSlot;
+    u8 effect;
+    u8 effectArg;
+} StageEntryAction;
+
 /* StageWork.flags */
 #define STAGE_WORK_NO_TIMED_INPUT 4
 #define STAGE_WORK_SKIP_CHANCE_A 8
@@ -178,11 +208,8 @@ typedef struct StageWork {
     u8 fieldSlot;
     u8 targetIndex;
     u8 commandEffectKind;
-    u8 reserved028[0x42 - 0x28];
-    u8 itemEffectKind;
-    u8 reserved043[0x62 - 0x43];
-    u8 itemId;
-    u8 reserved063[0xd4 - 0x63];
+    u8 reserved028[4];
+    StageEntryAction itemActions[3]; /* what each primary entry does with the chosen item */
     StageMarker *commandMarkers[9];
     StageModelActor primaryActor;
     u8 reserved20c[0xc4];
@@ -229,6 +256,7 @@ typedef char StageMarkerSize[sizeof(StageMarker) == 0x34 ? 1 : -1];
 typedef char StageMarkerListsOffset[(u32)&((StageWork *)0)->markerLists == 0x314 ? 1 : -1];
 typedef char StageResourceListsOffset[(u32)&((StageWork *)0)->lists == 0x358 ? 1 : -1];
 
+typedef char StageEntryActionSize[sizeof(StageEntryAction) == 0x38 ? 1 : -1];
 typedef char StageWorkCommandMarkersOffset[(u32)&((StageWork *)0)->commandMarkers == 0xd4 ? 1 : -1];
 typedef char StageWorkPrimaryActorOffset[(u32)&((StageWork *)0)->primaryActor == 0xf8 ? 1 : -1];
 typedef char StageWorkPrimaryMatrixOffset[(u32)&((StageWork *)0)->primaryMatrix == 0x2d0 ? 1 : -1];

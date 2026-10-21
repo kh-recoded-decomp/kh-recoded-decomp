@@ -101,34 +101,6 @@ typedef struct StageEntryMove {
     u8 reserved31[3];
 } StageEntryMove;
 
-typedef struct StageEntryAction {
-    s16 soundSeqArc;
-    u8 reserved02[3];
-    s8 soundIndex;
-    s16 soundFrame; /* animation frame the sound plays on */
-    u8 reserved08[4];
-    u16 chance; /* out of 1000 */
-    u8 reserved0e[0x17 - 0xe];
-    u8 range; /* how many rows away it reaches */
-    u16 pressWindow; /* frames before the hit in which the timed press counts */
-    u8 reserved1a[2];
-    u8 kind;
-    u8 reserved1d[3];
-    u8 animation;
-    u8 reserved21[7];
-    u8 castFrame; /* animation frame its effect takes hold on */
-    u8 effectFrame; /* animation frame its effect item appears on */
-    u8 reserved2a;
-    u8 effectCategory;
-    u8 effectIndex;
-    u8 effectAnimation;
-    u8 reserved2e[6];
-    u8 statusTurns;
-    u8 reserved35;
-    u8 effect;
-    u8 reserved37;
-} StageEntryAction;
-
 typedef void (*StageEntryFunc)(u8 entryIndex);
 
 /* Something an entry still has to play out (the stage waits for all of them before it ends). */
@@ -234,7 +206,6 @@ void DrawStageEntryModels(StageEntrySlot *slot, BOOL drawShadow);
 void UpdateStageEntryAnimation(StageEntrySlot *slot);
 
 typedef char StageEntrySize[sizeof(StageEntry) == 0x4b4 ? 1 : -1];
-typedef char StageEntryActionSize[sizeof(StageEntryAction) == 0x38 ? 1 : -1];
 typedef char StageEntryActionsOffset[(u32)&((StageEntry *)0)->actions == 0x10c ? 1 : -1];
 typedef char StageEntryMoveOffset[(u32)&((StageEntry *)0)->move == 0x358 ? 1 : -1];
 typedef char StageEntryMoveSize[sizeof(StageEntryMove) == 0x34 ? 1 : -1];

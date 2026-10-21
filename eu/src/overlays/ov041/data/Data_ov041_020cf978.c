@@ -17,9 +17,9 @@ extern void func_ov041_020cc5e4(void);
 extern void func_ov041_020cca68(void);
 extern void func_ov041_020ccfc0(void);
 extern void func_ov041_020cd7ec(void);
-extern void func_ov041_020c6198(void);
+extern void StageEntryStateEnter(void);
 extern void func_ov041_020c56c0(void);
-extern void func_ov041_020c5acc(void);
+extern void StageEntryStateTurn(void);
 extern void EntryStateNoop5(void);
 extern void func_ov041_020c5c6c(void);
 extern void func_ov041_020c631c(void);
@@ -54,10 +54,10 @@ void (*gStageEntryActionHandlers[17])(void) = {
 };
 
 void (*gStageEntryStateHandlers[15])(void) = {
-    func_ov041_020c6198,
+    StageEntryStateEnter,
     func_ov041_020c56c0,
     func_ov041_020c56c0,
-    func_ov041_020c5acc,
+    StageEntryStateTurn,
     NULL,
     EntryStateNoop5,
     func_ov041_020c5c6c,

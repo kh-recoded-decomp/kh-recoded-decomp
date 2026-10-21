@@ -34,7 +34,7 @@ void StageStateChooseItemTarget(void)
     case 1:
         work->stateStep++;
     case 2:
-        if (work->itemEffectKind < 7) {
+        if (work->itemActions[0].targetKind < 7) {
             for (i = 0; i < work->secondaryCount; i++) {
                 if ((work->entries + work->primaryCount)[i].state != STAGE_ENTRY_OUT) {
                     work->targetSlot = work->entries[i + work->primaryCount].sceneSlot;
@@ -51,16 +51,16 @@ void StageStateChooseItemTarget(void)
         }
         work->stateStep++;
     case 3:
-        switch (work->itemId) {
+        switch (work->itemActions[0].effect) {
         case 0xb7:
         case 0xb8:
-            ShowStageHudMessage(11, work->itemId, 0);
+            ShowStageHudMessage(11, work->itemActions[0].effect, 0);
             break;
         }
     default:
         func_ov041_020be478(0);
         if (data_02060500 & PAD_BUTTON_A) {
-            switch (work->itemId) {
+            switch (work->itemActions[0].effect) {
             case 0xe4:
             case 0xe5:
             case 0xe6:

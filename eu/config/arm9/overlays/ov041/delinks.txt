@@ -1,5 +1,5 @@
-    .text       start:0x020bc520 end:0x020ce210 kind:code align:32
-    .rodata     start:0x020ce210 end:0x020cf8c8 kind:rodata align:4
+    .text       start:0x020bc520 end:0x020cf47c kind:code align:32
+    .rodata     start:0x020cf47c end:0x020cf8c8 kind:rodata align:4
     .ctor       start:0x020cf8c8 end:0x020cf8c8 kind:rodata align:4
     .data       start:0x020cf8e0 end:0x020cff40 kind:data align:32
     .bss        start:0x020cff40 end:0x020cff80 kind:bss align:32
@@ -288,9 +288,17 @@ src/overlays/ov041/calls/StageStateChooseItemTarget.c:
     complete
     .text       start:0x020c00a8 end:0x020c021c
 
+src/overlays/ov041/calls/StageStateUseItem.c:
+    complete
+    .text       start:0x020c021c end:0x020c049c
+
 src/overlays/ov041/auto/StageStateNoop16.c:
     complete
     .text       start:0x020c049c end:0x020c049e
+
+src/overlays/ov041/calls/StageStateWon.c:
+    complete
+    .text       start:0x020c04a0 end:0x020c0650
 
 src/overlays/ov041/calls/StageStateRunFieldOp428.c:
     complete
@@ -624,9 +632,17 @@ src/overlays/ov041/calls/FinishEntryAction.c:
     complete
     .text       start:0x020c55e0 end:0x020c56c0
 
+src/overlays/ov041/calls/StageEntryStateTurn.c:
+    complete
+    .text       start:0x020c5acc end:0x020c5c6c
+
 src/overlays/ov041/auto/EntryStateNoop5.c:
     complete
     .text       start:0x020c6194 end:0x020c6196
+
+src/overlays/ov041/calls/StageEntryStateEnter.c:
+    complete
+    .text       start:0x020c6198 end:0x020c631c
 
 src/overlays/ov041/auto/EntryStateNoop8.c:
     complete
@@ -759,38 +775,6 @@ src/overlays/ov041/data/RodataStrings_ov041_020cf760.c:
 src/overlays/ov041/data/RodataStrings_ov041_020cf790.c:
     complete
     .rodata     start:0x020cf790 end:0x020cf7a0
-
-src/overlays/ov041/data/Rodata_ov041_020ce210.c:
-    complete
-    .rodata     start:0x020ce210 end:0x020cedcc
-
-src/overlays/ov041/data/Rodata_ov041_020cedcc.c:
-    complete
-    .rodata     start:0x020cedcc end:0x020cee98
-
-src/overlays/ov041/data/Rodata_ov041_020cee98.c:
-    complete
-    .rodata     start:0x020cee98 end:0x020ceee0
-
-src/overlays/ov041/data/Rodata_ov041_020ceee0.c:
-    complete
-    .rodata     start:0x020ceee0 end:0x020cf170
-
-src/overlays/ov041/data/Rodata_ov041_020cf170.c:
-    complete
-    .rodata     start:0x020cf170 end:0x020cf1c4
-
-src/overlays/ov041/data/Rodata_ov041_020cf1c4.c:
-    complete
-    .rodata     start:0x020cf1c4 end:0x020cf288
-
-src/overlays/ov041/data/Rodata_ov041_020cf288.c:
-    complete
-    .rodata     start:0x020cf288 end:0x020cf448
-
-src/overlays/ov041/data/Rodata_ov041_020cf448.c:
-    complete
-    .rodata     start:0x020cf448 end:0x020cf47c
 
 src/overlays/ov041/data/Rodata_ov041_020cf480.c:
     complete
