@@ -1,18 +1,72 @@
 #include "nitro/types.h"
 
+extern void func_ov041_020c6b98(void);
+extern void func_ov041_020c7264(void);
+extern void func_ov041_020c7c34(void);
+extern void func_ov041_020c8910(void);
+extern void func_ov041_020c8f48(void);
+extern void func_ov041_020c948c(void);
+extern void func_ov041_020ca02c(void);
+extern void func_ov041_020ca4a8(void);
+extern void func_ov041_020ca5f4(void);
+extern void func_ov041_020ca800(void);
+extern void func_ov041_020ca8fc(void);
+extern void func_ov041_020cbcf0(void);
+extern void func_ov041_020cc2b8(void);
+extern void func_ov041_020cc5e4(void);
+extern void func_ov041_020cca68(void);
+extern void func_ov041_020ccfc0(void);
+extern void func_ov041_020cd7ec(void);
+extern void func_ov041_020c6198(void);
+extern void func_ov041_020c56c0(void);
+extern void func_ov041_020c5acc(void);
+extern void EntryStateNoop5(void);
+extern void func_ov041_020c5c6c(void);
+extern void func_ov041_020c631c(void);
+extern void EntryStateNoop8(void);
+extern void func_ov041_020c6418(void);
+extern void func_ov041_020c651c(void);
+extern void func_ov041_020c6654(void);
+extern void func_ov041_020c6740(void);
+extern void func_ov041_020c69cc(void);
+extern void func_ov041_020c6ac8(void);
+
 #pragma explicit_zero_data on
 
-u32 data_ov041_020cf9b4[17] = {
-    0x020C6B99, 0x020C7265, 0x020C7C35, 0x020C8911,
-    0x020C8F49, 0x020C948D, 0x020CA02D, 0x020CA4A9,
-    0x020CA5F5, 0x020CA801, 0x020CA8FD, 0x020CBCF1,
-    0x020CC2B9, 0x020CC5E5, 0x020CCA69, 0x020CCFC1,
-    0x020CD7ED,
+void (*gStageEntryActionHandlers[17])(void) = {
+    func_ov041_020c6b98,
+    func_ov041_020c7264,
+    func_ov041_020c7c34,
+    func_ov041_020c8910,
+    func_ov041_020c8f48,
+    func_ov041_020c948c,
+    func_ov041_020ca02c,
+    func_ov041_020ca4a8,
+    func_ov041_020ca5f4,
+    func_ov041_020ca800,
+    func_ov041_020ca8fc,
+    func_ov041_020cbcf0,
+    func_ov041_020cc2b8,
+    func_ov041_020cc5e4,
+    func_ov041_020cca68,
+    func_ov041_020ccfc0,
+    func_ov041_020cd7ec,
 };
 
-u32 data_ov041_020cf978[15] = {
-    0x020C6199, 0x020C56C1, 0x020C56C1, 0x020C5ACD,
-    0x00000000, 0x020C6195, 0x020C5C6D, 0x020C631D,
-    0x020C6415, 0x020C6419, 0x020C651D, 0x020C6655,
-    0x020C6741, 0x020C69CD, 0x020C6AC9,
+void (*gStageEntryStateHandlers[15])(void) = {
+    func_ov041_020c6198,
+    func_ov041_020c56c0,
+    func_ov041_020c56c0,
+    func_ov041_020c5acc,
+    NULL,
+    EntryStateNoop5,
+    func_ov041_020c5c6c,
+    func_ov041_020c631c,
+    EntryStateNoop8,
+    func_ov041_020c6418,
+    func_ov041_020c651c,
+    func_ov041_020c6654,
+    func_ov041_020c6740,
+    func_ov041_020c69cc,
+    func_ov041_020c6ac8,
 };

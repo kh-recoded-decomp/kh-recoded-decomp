@@ -134,6 +134,11 @@ typedef struct StageHudMessage {
     };
 } StageHudMessage;
 
+/* The factor of each scale level: 0.1, 0.15 and 0.2. */
+typedef struct StageScaleFactors {
+    fx32 values[3];
+} StageScaleFactors;
+
 /* StageWork.flags */
 #define STAGE_WORK_SKIP_CHANCE_A 8
 #define STAGE_WORK_SKIP_CHANCE_B 0x10
@@ -154,7 +159,13 @@ typedef struct StageWork {
     u8 entryCount;
     u8 primaryCount; /* entries [0, primaryCount) are the primary ones, the secondary ones follow */
     u8 secondaryCount;
-    u8 reserved01b[0xf8 - 0x1b];
+    u8 reserved01b[0x24 - 0x1b];
+    u8 commandId;
+    u8 reserved025;
+    u8 targetIndex;
+    u8 commandEffectKind;
+    u8 reserved028[0xd4 - 0x28];
+    StageMarker *commandMarkers[9];
     StageModelActor primaryActor;
     u8 reserved20c[0xc4];
     MtxFx43 primaryMatrix;
@@ -184,6 +195,7 @@ typedef char StageMarkerSize[sizeof(StageMarker) == 0x34 ? 1 : -1];
 typedef char StageMarkerListsOffset[(u32)&((StageWork *)0)->markerLists == 0x314 ? 1 : -1];
 typedef char StageResourceListsOffset[(u32)&((StageWork *)0)->lists == 0x358 ? 1 : -1];
 
+typedef char StageWorkCommandMarkersOffset[(u32)&((StageWork *)0)->commandMarkers == 0xd4 ? 1 : -1];
 typedef char StageWorkPrimaryActorOffset[(u32)&((StageWork *)0)->primaryActor == 0xf8 ? 1 : -1];
 typedef char StageWorkPrimaryMatrixOffset[(u32)&((StageWork *)0)->primaryMatrix == 0x2d0 ? 1 : -1];
 typedef char StageWorkHudMessageOffset[(u32)&((StageWork *)0)->hudMessage == 0x338 ? 1 : -1];

@@ -18,7 +18,7 @@ void UpdateEntryStatusItem(u8 entryIndex)
     int index;
     int animation;
 
-    if (entry->memberIndex < work->primaryCount || entry->kind == 0x15) {
+    if (entry->index < work->primaryCount || entry->kind == 0x15) {
         hasStatus = FALSE;
         for (i = 0; i < STAGE_ENTRY_STATUS_COUNT; i++) {
             if (entry->statuses[i] != 0) {

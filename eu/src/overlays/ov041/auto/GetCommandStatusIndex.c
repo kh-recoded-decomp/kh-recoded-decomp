@@ -1,11 +1,11 @@
 #include "nitro/types.h"
 
-/* Index of the stage object kinds 0xcb-0xd8 (0xd0-0xd3 have none), or -1. */
-int GetStageObjectIndex(int id)
+/* The entry status a command 0xcb-0xd8 inflicts (0xd0-0xd3 inflict none), or -1. */
+int GetCommandStatusIndex(int commandId)
 {
     int index = -1;
 
-    switch (id) {
+    switch (commandId) {
     case 0xcb:
         index = 0;
         break;
