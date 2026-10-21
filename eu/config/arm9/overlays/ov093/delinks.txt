@@ -32,6 +32,10 @@ src/overlays/ov093/calls/MoveGridCursorLeft.c:
     complete
     .text       start:0x020bf238 end:0x020bf3f8
 
+src/overlays/ov093/calls/MoveGridCursorRight.c:
+    complete
+    .text       start:0x020bf3f8 end:0x020bf5cc
+
 src/overlays/ov093/calls/func_ov093_020bf5cc.c:
     complete
     .text       start:0x020bf5cc end:0x020bf600

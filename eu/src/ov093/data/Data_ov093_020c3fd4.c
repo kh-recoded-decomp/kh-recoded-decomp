@@ -9,7 +9,7 @@ extern void MoveGridCursorLeft(void);
 extern void ToggleSceneOption(void);
 extern void UpdateSceneFrame(void);
 extern void func_ov093_020bed58(void);
-extern void func_ov093_020bf3f8(void);
+extern void MoveGridCursorRight(void);
 extern void func_ov093_020bf5cc(void);
 extern void func_ov093_020bf600(void);
 
@@ -22,7 +22,7 @@ void *data_ov093_020c4014[17] = {
     (void *)FinishGridPageScroll,
     (void *)FinishGridPageScrollDual,
     (void *)MoveGridCursorLeft,
-    (void *)func_ov093_020bf3f8,
+    (void *)MoveGridCursorRight,
     NULL,
     (void *)func_ov093_020bf5cc,
     (void *)ToggleSceneOption,
