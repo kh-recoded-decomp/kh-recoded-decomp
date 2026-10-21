@@ -8,10 +8,10 @@ extern void StageStateWaitScreenIdle(void);
 extern void func_ov041_020bf280(void);
 extern void func_ov041_020bf924(void);
 extern void func_ov041_020bfbe0(void);
-extern void func_ov041_020bf39c(void);
+extern void StageStateAfterTurn(void);
 extern void func_ov041_020bf474(void);
 extern void func_ov041_020bf5b0(void);
-extern void func_ov041_020bf82c(void);
+extern void StageStateRunTurn(void);
 extern void func_ov041_020bfe84(void);
 extern void StageStateStartTurn(void);
 extern void func_ov041_020c00a8(void);
@@ -35,10 +35,10 @@ void (*gStageStateHandlers[23])(void) = {
     func_ov041_020bf280,
     func_ov041_020bf924,
     func_ov041_020bfbe0,
-    func_ov041_020bf39c,
+    StageStateAfterTurn,
     func_ov041_020bf474,
     func_ov041_020bf5b0,
-    func_ov041_020bf82c,
+    StageStateRunTurn,
     func_ov041_020bfe84,
     StageStateStartTurn,
     func_ov041_020c00a8,

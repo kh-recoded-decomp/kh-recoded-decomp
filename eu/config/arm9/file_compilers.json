@@ -9405,5 +9405,10 @@
   "src/overlays/ov041/calls/ChooseEntryAction.c": "dsi/1.1",
   "src/overlays/ov041/calls/StageStateStartTurn.c": "dsi/1.1",
   "src/overlays/ov041/calls/PickEntryActionInRange.c": "dsi/1.1",
-  "src/overlays/ov041/calls/StageEntryStateHealed.c": "dsi/1.1"
+  "src/overlays/ov041/calls/StageEntryStateHealed.c": "dsi/1.1",
+  "src/overlays/ov041/calls/StageStateAfterTurn.c": "dsi/1.1",
+  "src/overlays/ov041/calls/StageStateRunTurn.c": "dsi/1.1",
+  "src/overlays/ov041/calls/FinishEntryAction.c": "dsi/1.1",
+  "src/overlays/ov041/calls/ClearEntryActionState.c": "dsi/1.1",
+  "src/overlays/ov041/calls/StageEntryStateRevived.c": "dsi/1.1"
 }

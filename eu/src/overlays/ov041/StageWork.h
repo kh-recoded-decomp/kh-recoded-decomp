@@ -160,7 +160,11 @@ typedef struct StageWork {
     s8 stateStep;
     u32 flags;
     u8 stateTimer;
-    u8 reserved00d[7];
+    u8 reserved00d[2];
+    u8 introStep;
+    u8 introValue;
+    u8 introKind;
+    u8 reserved012[2];
     StageEntry *entries;
     u8 entryCount;
     u8 primaryCount; /* entries [0, primaryCount) are the primary ones, the secondary ones follow */
@@ -188,6 +192,8 @@ typedef struct StageWork {
     void *messages;
     StageResourceList *lists[0x3e];
     StageResourceGroup *groups[0x1b];
+    u8 reserved4bc[0x2328 - 0x4bc];
+    fx32 frameStep; /* how far animations and moves advance per frame */
 } StageWork;
 
 typedef struct StageContext {

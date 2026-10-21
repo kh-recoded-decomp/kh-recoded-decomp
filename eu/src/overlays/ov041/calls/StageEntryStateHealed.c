@@ -11,8 +11,8 @@ extern fx32 FX_Mul(fx32 a, fx32 b);
 extern void SetEntryState(StageEntry *entry, int state);
 
 /*
- * Entry state 14 (healed): plays the heal animation and effect, gives back a tenth of the maximum hp, waits for
- * the effect to end and goes back to waiting.
+ * Entry state 14 (healed): blends back to its idle animation under the heal effect, gives back a tenth of the
+ * maximum hp, waits for the effect to end and goes back to waiting.
  */
 void StageEntryStateHealed(u8 entryIndex)
 {
@@ -23,7 +23,7 @@ void StageEntryStateHealed(u8 entryIndex)
     case 0:
         entry->stateStep++;
     case 1:
-        SetSceneEntryAnimation(entry, entry->healAnimation, 1, 0);
+        SetSceneEntryAnimation(entry, entry->idleAnimation, 1, 0);
         GetPositionAboveGround(&position, entry);
         entry->effects[0] = SpawnStageItem(entry, 0xff, 0x13, 0, &position, FALSE);
         PlayStageSound(0x1a0, 14, TRUE);

@@ -48,10 +48,12 @@ typedef struct StageGroundShadow {
 #define STAGE_ENTRY_SHOW_HP 8
 #define STAGE_ENTRY_TIMED_PRESS 0x40 /* the button was pressed in time during its action */
 #define STAGE_ENTRY_FLAG_800 0x800
+#define STAGE_ENTRY_STEP_BACK 0x4000
 #define STAGE_ENTRY_FROZEN 0x8000
 #define STAGE_ENTRY_FORCE_ACTION_2 0x200000
 
 #define STAGE_ENTRY_STATUS_COUNT 11
+#define STAGE_ENTRY_STATUS_3 3 /* cleared by a revive */
 #define STAGE_ENTRY_STATUS_9 9 /* blocks the defending press */
 
 /* StageMotion speed profiles */
@@ -109,7 +111,9 @@ typedef struct StageEntryAction {
     u8 kind;
     u8 reserved1d[3];
     u8 animation;
-    u8 reserved21[0x17];
+    u8 reserved21[0x15];
+    u8 effect;
+    u8 reserved37;
 } StageEntryAction;
 
 typedef void (*StageEntryFunc)(u8 entryIndex);
@@ -131,7 +135,7 @@ struct StageEntry {
     u32 flags;
     u8 reserved00c[4];
     s8 actionIndex; /* the action being carried out, or -1 */
-    u8 reserved011;
+    u8 lastActor; /* set to its own index when its action ends */
     u8 targetCount;
     u8 targets[9]; /* indices of the entries the action is aimed at */
     u8 reserved01c[0xdc - 0x1c];
@@ -153,8 +157,10 @@ struct StageEntry {
     fx32 radius;
     u8 reserved12c[4];
     VecFx32 overheadOffset; /* from its position to where things are shown above it */
-    u8 healAnimation;
-    u8 reserved13d[0x1f];
+    u8 idleAnimation;
+    u8 reserved13d[2];
+    u8 stepAnimation;
+    u8 reserved140[0x1c];
     StageEntrySlot slot;
     u8 reserved310[0x10];
     s16 frameStep;
@@ -172,7 +178,12 @@ struct StageEntry {
 };
 
 typedef struct StageRenderCapture {
-    u8 reserved00[0x10];
+    u8 unk00;
+    u8 reserved01;
+    u8 unk02;
+    u8 reserved03[5];
+    int reviveWait; /* frames waited after a revive */
+    u8 reserved0c[4];
     StageEntry *entry;
 } StageRenderCapture;
 

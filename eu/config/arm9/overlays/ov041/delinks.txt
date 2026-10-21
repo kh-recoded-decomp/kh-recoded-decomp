@@ -256,6 +256,14 @@ src/overlays/ov041/calls/StageStateWaitScreenIdle.c:
     complete
     .text       start:0x020bf234 end:0x020bf280
 
+src/overlays/ov041/calls/StageStateAfterTurn.c:
+    complete
+    .text       start:0x020bf39c end:0x020bf474
+
+src/overlays/ov041/calls/StageStateRunTurn.c:
+    complete
+    .text       start:0x020bf82c end:0x020bf924
+
 src/overlays/ov041/calls/StageStateStartTurn.c:
     complete
     .text       start:0x020bfff4 end:0x020c00a8
@@ -568,6 +576,14 @@ src/overlays/ov041/calls/ForEachActionTarget.c:
     complete
     .text       start:0x020c48b4 end:0x020c48de
 
+src/overlays/ov041/calls/ClearEntryActionState.c:
+    complete
+    .text       start:0x020c54d8 end:0x020c55e0
+
+src/overlays/ov041/calls/FinishEntryAction.c:
+    complete
+    .text       start:0x020c55e0 end:0x020c56c0
+
 src/overlays/ov041/auto/EntryStateNoop5.c:
     complete
     .text       start:0x020c6194 end:0x020c6196
@@ -575,6 +591,10 @@ src/overlays/ov041/auto/EntryStateNoop5.c:
 src/overlays/ov041/auto/EntryStateNoop8.c:
     complete
     .text       start:0x020c6414 end:0x020c6416
+
+src/overlays/ov041/calls/StageEntryStateRevived.c:
+    complete
+    .text       start:0x020c69cc end:0x020c6ac8
 
 src/overlays/ov041/calls/StageEntryStateHealed.c:
     complete

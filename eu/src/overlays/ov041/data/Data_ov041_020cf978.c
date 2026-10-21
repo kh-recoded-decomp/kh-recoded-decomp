@@ -28,7 +28,7 @@ extern void func_ov041_020c6418(void);
 extern void func_ov041_020c651c(void);
 extern void func_ov041_020c6654(void);
 extern void func_ov041_020c6740(void);
-extern void func_ov041_020c69cc(void);
+extern void StageEntryStateRevived(void);
 extern void StageEntryStateHealed(void);
 
 #pragma explicit_zero_data on
@@ -67,6 +67,6 @@ void (*gStageEntryStateHandlers[15])(void) = {
     func_ov041_020c651c,
     func_ov041_020c6654,
     func_ov041_020c6740,
-    func_ov041_020c69cc,
+    StageEntryStateRevived,
     StageEntryStateHealed,
 };
