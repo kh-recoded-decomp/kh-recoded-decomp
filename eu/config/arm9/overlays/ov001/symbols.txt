@@ -1927,14 +1927,14 @@ ClearStageEventKindIfMatches kind:function(thumb,size=0x10) addr:0x0209590c
 func_ov001_0209591c kind:function(thumb,size=0x930) addr:0x0209591c
 .L_0209623a kind:label(thumb) addr:0x0209623a
 IsCommandType8 kind:function(thumb,size=0xe) addr:0x0209624c
-func_ov001_0209625c kind:function(thumb,size=0x3e8) addr:0x0209625c
+HitTestRoutePoints kind:function(thumb,size=0x3e8) addr:0x0209625c
 GetRouteWaypointPlacement kind:function(thumb,size=0x30c) addr:0x02096644
 ScheduleSpawnerNextTime kind:function(thumb,size=0xb8) addr:0x02096950
 NotifyActorGroupMembers kind:function(thumb,size=0x22) addr:0x02096a08
 FindNearestCommandEntry kind:function(thumb,size=0xdc) addr:0x02096a2c
 SpawnStageObjectActor kind:function(thumb,size=0xc4) addr:0x02096b08
 GetEntryScaledValue kind:function(thumb,size=0x22) addr:0x02096bcc
-func_ov001_02096bf0 kind:function(thumb,size=0x370) addr:0x02096bf0
+ProbeStageObjectHit kind:function(thumb,size=0x370) addr:0x02096bf0
 func_ov001_02096f60 kind:function(thumb,size=0x1f8) addr:0x02096f60
 func_ov001_02097158 kind:function(thumb,size=0x1f4) addr:0x02097158
 func_ov001_0209734c kind:function(thumb,size=0x56c) addr:0x0209734c

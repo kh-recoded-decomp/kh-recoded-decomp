@@ -1,4 +1,4 @@
 #define GetStageEventRecord_0209c0ec GetStageEventRecord
 #define StartStageEventInstance_0209c900 StartStageEventInstance
-#define func_ov001_02096234 func_ov001_0209625c
+#define func_ov001_02096234 HitTestRoutePoints
 #include "src/ov001/shared_engine/StartStageEventInstance_0209c900.c"

@@ -7688,6 +7688,10 @@ src/overlays/ov001/calls/IsCommandType8.c:
     complete
     .text       start:0x0209624c end:0x0209625a
 
+src/overlays/ov001/calls/HitTestRoutePoints.c:
+    complete
+    .text       start:0x0209625c end:0x02096644
+
 src/overlays/ov001/calls/GetRouteWaypointPlacement.c:
     complete
     .text       start:0x02096644 end:0x02096950
@@ -7711,6 +7715,10 @@ src/overlays/ov001/calls/SpawnStageObjectActor.c:
 src/overlays/ov001/calls/GetEntryScaledValue.c:
     complete
     .text       start:0x02096bcc end:0x02096bee
+
+src/overlays/ov001/calls/ProbeStageObjectHit.c:
+    complete
+    .text       start:0x02096bf0 end:0x02096f60
 
 src/overlays/ov001/calls/func_ov001_02096f60.c:
     complete
