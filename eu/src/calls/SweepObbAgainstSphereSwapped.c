@@ -1,4 +1,4 @@
 #define NegateVecFx32_0204aa40 NegateVecFx32
 #define SweepObbAgainstSphereSwapped_02041914 SweepObbAgainstSphereSwapped
-#define SweepSphereAgainstObb_02041f2c func_02041f40
+#define SweepSphereAgainstObb_02041f2c SweepSphereAgainstObb
 #include "src/arm9/spatial_queries/SweepObbAgainstSphereSwapped_02041914.c"
