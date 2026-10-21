@@ -9433,5 +9433,13 @@
   "src/overlays/ov041/calls/DestroyStageCaption.c": "dsi/1.1",
   "src/overlays/ov041/calls/LoadStageCaptionChars.c": "dsi/1.1",
   "src/overlays/ov041/calls/FreeStageCaptionChars.c": "dsi/1.1",
-  "src/overlays/ov041/auto/SetStageCaptionState.c": "dsi/1.1"
+  "src/overlays/ov041/auto/SetStageCaptionState.c": "dsi/1.1",
+  "src/overlays/ov041/calls/ClearStageCaptionLayer.c": "dsi/1.1",
+  "src/overlays/ov041/auto/ResetStageCaptionLines.c": "dsi/1.1",
+  "src/overlays/ov041/calls/UploadStageCaptionLayer.c": "dsi/1.1",
+  "src/overlays/ov041/auto/GetItemMenuIcon.c": "dsi/1.1",
+  "src/overlays/ov041/calls/ShutDownStageCaption.c": "dsi/1.1",
+  "src/overlays/ov041/auto/StageCaptionState0Noop.c": "dsi/1.1",
+  "src/overlays/ov041/auto/StageCaptionState1Noop.c": "dsi/1.1",
+  "src/overlays/ov041/auto/StageCaptionState2Noop.c": "dsi/1.1"
 }

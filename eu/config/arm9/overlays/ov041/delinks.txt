@@ -728,6 +728,38 @@ src/overlays/ov041/auto/SetStageCaptionState.c:
     complete
     .text       start:0x020ce3fc end:0x020ce40c
 
+src/overlays/ov041/calls/ClearStageCaptionLayer.c:
+    complete
+    .text       start:0x020ce480 end:0x020ce49c
+
+src/overlays/ov041/auto/ResetStageCaptionLines.c:
+    complete
+    .text       start:0x020ce49c end:0x020ce4b4
+
+src/overlays/ov041/calls/UploadStageCaptionLayer.c:
+    complete
+    .text       start:0x020ce4b4 end:0x020ce4cc
+
+src/overlays/ov041/auto/GetItemMenuIcon.c:
+    complete
+    .text       start:0x020cec74 end:0x020cecac
+
+src/overlays/ov041/auto/StageCaptionState0Noop.c:
+    complete
+    .text       start:0x020cee98 end:0x020cee9c
+
+src/overlays/ov041/auto/StageCaptionState1Noop.c:
+    complete
+    .text       start:0x020ceee0 end:0x020ceee4
+
+src/overlays/ov041/auto/StageCaptionState2Noop.c:
+    complete
+    .text       start:0x020cefb0 end:0x020cefb4
+
+src/overlays/ov041/calls/ShutDownStageCaption.c:
+    complete
+    .text       start:0x020cf0bc end:0x020cf0d4
+
 src/overlays/ov041/data/Data_ov041_020cf8e0.c:
     complete
     .data       start:0x020cf8e0 end:0x020cf93c

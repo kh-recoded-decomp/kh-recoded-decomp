@@ -15,14 +15,38 @@ typedef struct StageTextFrame {
     u16 vSpace;
 } StageTextFrame;
 
+/* One line of text on the caption layer: its characters start at charStart (8 pixels each). */
+typedef struct StageTextLine {
+    const void *text;
+    u16 charStart;
+    u16 charBase;
+    u16 width;
+    u16 rows;
+    int offset;
+    int fixedStart;
+} StageTextLine;
+
 /* A caption line on a text layer, with its own character data and message file. */
 typedef struct StageCaption {
-    u8 textLayer[0xf8];
+    u8 reserved000[0x44]; /* the text layer */
+    int charOffset; /* where the next line's characters go, in pixels */
+    int unk48;
+    u8 reserved04c[4];
+    int unk50;
+    int unk54;
+    u8 reserved058[0xe4 - 0x58];
+    StageTextLine line;
     int state;
     int previousState;
     void *charData;
     void *unpackedChars;
     void *messages;
+    u8 reserved10c[8];
+    BOOL hidden;
 } StageCaption;
+
+typedef char StageCaptionLineOffset[(u32)&((StageCaption *)0)->line == 0xe4 ? 1 : -1];
+typedef char StageCaptionStateOffset[(u32)&((StageCaption *)0)->state == 0xf8 ? 1 : -1];
+typedef char StageCaptionHiddenOffset[(u32)&((StageCaption *)0)->hidden == 0x114 ? 1 : -1];
 
 #endif

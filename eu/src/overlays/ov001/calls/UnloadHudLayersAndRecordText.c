@@ -42,7 +42,7 @@ extern void *func_ov027_020b9e10(void *widgets, int layer);
 extern void MarkTileTableRowDirty(void *widgets, int layer);
 extern void MIi_CpuCopyFast(const void *src, void *dst, u32 size);
 extern void NNSi_FndFreeFromDefaultHeap(void *memory);
-extern void func_020cf0bc(void *object);
+extern void ShutDownStageCaption(void *object);
 extern void func_ov035_020bc3d8(void);
 extern void func_ov001_02078180(void);
 extern void CallVirtualHandlerSlot1(void *object, int arg);
@@ -73,7 +73,7 @@ void UnloadHudLayersAndRecordText(void)
         NNSi_FndFreeFromDefaultHeap(context->layerBuffers[i]);
         context->layerBuffers[i] = NULL;
     }
-    func_020cf0bc(context->unk_2F4);
+    ShutDownStageCaption(context->unk_2F4);
     NNSi_FndFreeFromDefaultHeap(context->entrySummaries);
     context->entrySummaries = NULL;
     NNSi_FndFreeFromDefaultHeap(context->recordText);

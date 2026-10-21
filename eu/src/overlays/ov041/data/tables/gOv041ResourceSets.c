@@ -1,17 +1,17 @@
 #include "nitro/types.h"
 
 extern u8 data_ov041_020cedcc[];
-extern u8 data_ov041_020cee98[];
+extern u8 StageCaptionState0Noop[];
 extern u8 data_ov041_020cee9c[];
-extern u8 data_ov041_020ceee0[];
+extern u8 StageCaptionState1Noop[];
 extern u8 data_ov041_020ceee4[];
-extern u8 data_ov041_020cefb0[];
+extern u8 StageCaptionState2Noop[];
 
 void *gOv041ResourceSets[6] = {
     data_ov041_020cedcc,
-    data_ov041_020cee98,
+    StageCaptionState0Noop,
     data_ov041_020cee9c,
-    data_ov041_020ceee0,
+    StageCaptionState1Noop,
     data_ov041_020ceee4,
-    data_ov041_020cefb0,
+    StageCaptionState2Noop,
 };
