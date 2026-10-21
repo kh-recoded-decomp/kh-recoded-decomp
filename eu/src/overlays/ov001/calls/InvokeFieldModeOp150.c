@@ -1,4 +1,4 @@
 #define InvokeFieldModeOp150_02072e08 InvokeFieldModeOp150
 #define data_ov001_020a04a4 data_ov001_020a04c4
-#define func_020cf150 data_ov041_020cf170
+#define func_020cf150 PopStageCaptionLine
 #include "src/ov001/field_manager/InvokeFieldModeOp150_02072e08.c"

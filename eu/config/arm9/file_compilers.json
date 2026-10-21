@@ -1481,7 +1481,7 @@
   "src/overlays/ov038/data/tables/gResultsResourcePaths.c": "dsi/1.1",
   "src/overlays/ov039/data/tables/PointerTables_ov039_020be800.c": "dsi/1.1",
   "src/overlays/ov040/data/tables/gAreaSceneStateHandlers.c": "dsi/1.1",
-  "src/overlays/ov041/data/tables/gOv041ResourceSets.c": "dsi/1.1",
+  "src/overlays/ov041/data/tables/gStageCaptionStates.c": "dsi/1.1",
   "src/overlays/ov075/data/tables/gOv075StateHandlers.c": "dsi/1.1",
   "src/overlays/ov075/data/tables/gOv075CursorHandlers.c": "dsi/1.1",
   "src/overlays/ov085/data/tables/gOv085InitHandlers.c": "dsi/1.1",
@@ -9439,7 +9439,14 @@
   "src/overlays/ov041/calls/UploadStageCaptionLayer.c": "dsi/1.1",
   "src/overlays/ov041/auto/GetItemMenuIcon.c": "dsi/1.1",
   "src/overlays/ov041/calls/ShutDownStageCaption.c": "dsi/1.1",
-  "src/overlays/ov041/auto/StageCaptionState0Noop.c": "dsi/1.1",
   "src/overlays/ov041/auto/StageCaptionState1Noop.c": "dsi/1.1",
-  "src/overlays/ov041/auto/StageCaptionState2Noop.c": "dsi/1.1"
+  "src/overlays/ov041/auto/StageCaptionState3Noop.c": "dsi/1.1",
+  "src/overlays/ov041/auto/StageCaptionState5Noop.c": "dsi/1.1",
+  "src/overlays/ov041/calls/ClearStageCaptionRows.c": "dsi/1.1",
+  "src/overlays/ov041/calls/CreateStageCaption.c": "dsi/1.1",
+  "src/overlays/ov041/calls/UpdateStageCaption.c": "dsi/1.1",
+  "src/overlays/ov041/auto/PopStageCaptionLine.c": "dsi/1.1",
+  "src/overlays/ov041/auto/GetQueuedCaptionLine.c": "dsi/1.1",
+  "src/overlays/ov041/calls/RestartStageCaption.c": "dsi/1.1",
+  "src/overlays/ov041/calls/StageCaptionState2.c": "dsi/1.1"
 }

@@ -5,7 +5,7 @@
 void ResetStageCaptionLines(StageCaption *caption)
 {
     caption->charOffset = 0;
-    caption->unk54 = 0;
+    caption->queuedCount = 0;
     caption->unk50 = 0;
-    caption->unk48 = 0;
+    caption->lineCount = 0;
 }

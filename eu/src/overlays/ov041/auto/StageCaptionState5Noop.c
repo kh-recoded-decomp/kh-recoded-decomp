@@ -2,6 +2,6 @@
 #include "src/overlays/ov041/StageCaption.h"
 
 /* The caption state handler's empty second callback. */
-void StageCaptionState0Noop(StageCaption *caption)
+void StageCaptionState5Noop(StageCaption *caption)
 {
 }

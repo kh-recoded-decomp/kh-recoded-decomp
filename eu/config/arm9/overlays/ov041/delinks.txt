@@ -740,25 +740,53 @@ src/overlays/ov041/calls/UploadStageCaptionLayer.c:
     complete
     .text       start:0x020ce4b4 end:0x020ce4cc
 
+src/overlays/ov041/calls/ClearStageCaptionRows.c:
+    complete
+    .text       start:0x020ce740 end:0x020ce77c
+
 src/overlays/ov041/auto/GetItemMenuIcon.c:
     complete
     .text       start:0x020cec74 end:0x020cecac
 
-src/overlays/ov041/auto/StageCaptionState0Noop.c:
+src/overlays/ov041/auto/StageCaptionState1Noop.c:
     complete
     .text       start:0x020cee98 end:0x020cee9c
 
-src/overlays/ov041/auto/StageCaptionState1Noop.c:
+src/overlays/ov041/calls/StageCaptionState2.c:
+    complete
+    .text       start:0x020cee9c end:0x020ceee0
+
+src/overlays/ov041/auto/StageCaptionState3Noop.c:
     complete
     .text       start:0x020ceee0 end:0x020ceee4
 
-src/overlays/ov041/auto/StageCaptionState2Noop.c:
+src/overlays/ov041/auto/StageCaptionState5Noop.c:
     complete
     .text       start:0x020cefb0 end:0x020cefb4
+
+src/overlays/ov041/calls/CreateStageCaption.c:
+    complete
+    .text       start:0x020cf02c end:0x020cf068
+
+src/overlays/ov041/calls/UpdateStageCaption.c:
+    complete
+    .text       start:0x020cf068 end:0x020cf0bc
 
 src/overlays/ov041/calls/ShutDownStageCaption.c:
     complete
     .text       start:0x020cf0bc end:0x020cf0d4
+
+src/overlays/ov041/auto/PopStageCaptionLine.c:
+    complete
+    .text       start:0x020cf170 end:0x020cf1c4
+
+src/overlays/ov041/auto/GetQueuedCaptionLine.c:
+    complete
+    .text       start:0x020cf1c4 end:0x020cf1f8
+
+src/overlays/ov041/calls/RestartStageCaption.c:
+    complete
+    .text       start:0x020cf448 end:0x020cf47c
 
 src/overlays/ov041/data/Data_ov041_020cf8e0.c:
     complete
@@ -1004,7 +1032,7 @@ src/overlays/ov041/data/strings/Strings_ov041_020cfac0.c:
     complete
     .data       start:0x020cfac0 end:0x020cfac8
 
-src/overlays/ov041/data/tables/gOv041ResourceSets.c:
+src/overlays/ov041/data/tables/gStageCaptionStates.c:
     complete
     .data       start:0x020cfac8 end:0x020cfae0
 
