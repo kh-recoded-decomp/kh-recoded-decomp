@@ -80,6 +80,10 @@ src/overlays/ov058/calls/InitTrackedRecordEntry.c:
     complete
     .text       start:0x020d5f08 end:0x020d5f24
 
+src/overlays/ov058/calls/UpdateEnemyCombatAi.c:
+    complete
+    .text       start:0x020d5f24 end:0x020d64e8
+
 src/overlays/ov058/calls/SetEnemyTargetAndClearFlag.c:
     complete
     .text       start:0x020d64e8 end:0x020d64fc
