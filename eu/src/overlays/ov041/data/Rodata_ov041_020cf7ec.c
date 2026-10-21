@@ -15,8 +15,8 @@ const u32 data_ov041_020cf814[6] = {
     0xFFFFFFFF, 0xFFFFFFFF,
 };
 
-const u32 data_ov041_020cf804[4] = {
-    0x00000CCD, 0x0000099A, 0x00000666, 0x00000333,
+const StageHpThresholds data_ov041_020cf804 = {
+    {0xccd, 0x99a, 0x666, 0x333},
 };
 
 const u32 data_ov041_020cf7f8[3] = {

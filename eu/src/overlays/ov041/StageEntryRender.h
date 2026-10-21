@@ -129,6 +129,11 @@ typedef struct StageEntryAction {
 
 typedef void (*StageEntryFunc)(u8 entryIndex);
 
+/* The hp fractions (0.8, 0.6, 0.4, 0.2) whose crossing sets STAGE_ENTRY_FORCE_ACTION_2. */
+typedef struct StageHpThresholds {
+    fx32 values[4];
+} StageHpThresholds;
+
 /* Indices of the actions an entry can pick from (-1 = none). */
 typedef struct StageActionChoices {
     s8 indices[4];
@@ -153,13 +158,13 @@ struct StageEntry {
     s16 hp;
     s16 maxHp;
     s16 shownHp; /* follows hp down a little at a time */
-    s16 unk0e2;
+    s16 checkedHp; /* hp when the hp thresholds were last checked */
     u8 reserved0e4[0x108 - 0xe4];
     s8 actionCount;
     u8 reserved109[3];
     StageEntryAction *actions;
     s8 statuses[STAGE_ENTRY_STATUS_COUNT];
-    u8 reserved11b;
+    u8 shownStatusIcon; /* the status icon on show (they take turns every 30 frames), 8 = none */
     int delay;
     int animationFrame;
     u8 animation;

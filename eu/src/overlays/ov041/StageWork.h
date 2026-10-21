@@ -154,7 +154,7 @@ typedef void (*StageStateFunc)(void);
 
 /* The stage (gMovieContextState->stageWork): state machine, entries, models, markers and resource lists. */
 typedef struct StageWork {
-    u8 reserved000[4];
+    u32 frameCounter;
     u16 unk04;
     u8 state;
     s8 stateStep;

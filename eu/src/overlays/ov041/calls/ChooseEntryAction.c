@@ -18,7 +18,7 @@ void ChooseEntryAction(u8 entryIndex)
     StageEntry *entry = &entries[entryIndex];
     f32 hp = entry->hp;
     f32 maxHp = entry->maxHp;
-    f32 unk = entry->unk0e2;
+    f32 checkedHp = entry->checkedHp;
 
     entry->actionIndex = PickEntryActionInRange(entry);
     switch (entries[entryIndex].kind) {

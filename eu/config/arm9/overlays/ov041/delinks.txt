@@ -480,6 +480,10 @@ src/overlays/ov041/calls/FinishStagePanelTransition.c:
     complete
     .text       start:0x020c3220 end:0x020c325c
 
+src/overlays/ov041/calls/UpdateEntryStatusIcon.c:
+    complete
+    .text       start:0x020c325c end:0x020c33a8
+
 src/overlays/ov041/calls/ShowEntryHpGauge.c:
     complete
     .text       start:0x020c33a8 end:0x020c33fc

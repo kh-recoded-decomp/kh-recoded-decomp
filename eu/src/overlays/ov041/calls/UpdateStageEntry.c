@@ -5,7 +5,7 @@ extern StageEntryFunc gStageEntryStateHandlers[];
 extern StageEntryFunc gStageEntryActionHandlers[];
 extern StageEntryAction *GetEntryAction(StageEntry *entry);
 extern void UpdateEntryHpGauge(StageEntry *entry);
-extern void func_ov041_020c325c(StageEntry *entry);
+extern void UpdateEntryStatusIcon(StageEntry *entry);
 
 /* Runs an entry's state handler for the frame (its action's handler while it acts), then its two updates. */
 void UpdateStageEntry(u8 entryIndex)
@@ -20,5 +20,5 @@ void UpdateStageEntry(u8 entryIndex)
         handler(entry->index);
     }
     UpdateEntryHpGauge(entry);
-    func_ov041_020c325c(entry);
+    UpdateEntryStatusIcon(entry);
 }
