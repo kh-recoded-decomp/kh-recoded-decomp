@@ -1,6 +1,6 @@
 #define AreVecsWithinRange16_0204a8f4 AreVecsWithinRange16
 #define GetSegmentDelta_0203ffcc GetSegmentDelta
-#define SweepSphereAgainstCylinder_02042678 func_0204268c
+#define SweepSphereAgainstCylinder_02042678 SweepSphereAgainstCylinder
 #define TestCapsuleAgainstCylinder_02040548 TestCapsuleAgainstCylinder
 #define TestSegmentAgainstCylinder_02040ca4 TestSegmentAgainstCylinder
 #include "src/arm9/spatial_queries/TestCapsuleAgainstCylinder_02040548.c"

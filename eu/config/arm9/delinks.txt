@@ -8717,6 +8717,10 @@ src/calls/SweepSphereAgainstSphere.c:
     complete
     .text       start:0x02041e68 end:0x02041f40
 
+src/calls/SweepSphereAgainstCylinder.c:
+    complete
+    .text       start:0x0204268c end:0x02042b18
+
 src/calls/SweepInflatedSphereAgainstCylinder.c:
     complete
     .text       start:0x02042b18 end:0x02042b98

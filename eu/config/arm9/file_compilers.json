@@ -9280,5 +9280,6 @@
   "src/overlays/ov001/calls/HitTestRoutePoints.c": "dsi/1.1",
   "src/overlays/ov093/calls/MoveGridCursorRight.c": "dsi/1.1",
   "src/calls/SolveMonicCubic.c": "dsi/1.1",
-  "src/calls/TestSegmentAgainstPolygon.c": "dsi/1.1"
+  "src/calls/TestSegmentAgainstPolygon.c": "dsi/1.1",
+  "src/calls/SweepSphereAgainstCylinder.c": "dsi/1.1"
 }
