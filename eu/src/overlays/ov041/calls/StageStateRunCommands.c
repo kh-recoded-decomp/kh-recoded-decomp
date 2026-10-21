@@ -1,12 +1,6 @@
 #include "nitro/types.h"
 #include "src/overlays/ov041/StageEntryRender.h"
 
-/* A command taken from the field's command queue. */
-typedef struct StageFieldCommand {
-    int id;
-    int arg;
-} StageFieldCommand;
-
 extern int data_ov041_020cff40[2];
 extern void SetMenuEntryHighlight(int listKind, int entryId, BOOL highlighted);
 extern int InvokeFieldModeOp150(void);
@@ -17,7 +11,7 @@ extern void SetStageState(int state, BOOL runNow);
 extern void TickFieldMenuEntry(int listKind, int entryId);
 extern int InvokeFieldModeOp1d8(void);
 extern StageFieldCommand *InvokeFieldModeOp1a4(StageFieldCommand *command);
-extern void func_ov041_020bed58(StageFieldCommand *command);
+extern void StartQueuedItemCommand(StageFieldCommand *command);
 extern BOOL HasEntryWithClearState(BOOL enemies);
 extern BOOL IsPrimaryEntryOutOfReach(void);
 extern void SetStageEntryState(u8 entryIndex, int state);
@@ -28,7 +22,7 @@ extern void UpdateStageEntry(u8 entryIndex);
 
 /*
  * Stage state that carries out the commands chosen in the menu: closes the menu (letting the highlighted
- * entries tick), then takes the queued commands one at a time (func_ov041_020bed58), waiting for every entry to
+ * entries tick), then takes the queued commands one at a time (StartQueuedItemCommand), waiting for every entry to
  * be idle or out between them; ends the fight when a side is gone (states 17 and 18) and goes back to the menu
  * (state 8) when the queue is empty or a stop was asked for. Entries are updated every frame.
  */
@@ -88,7 +82,7 @@ void StageStateRunCommands(void)
         if (InvokeFieldModeOp1a4(&command) == NULL) {
             break;
         }
-        func_ov041_020bed58(&command);
+        StartQueuedItemCommand(&command);
         work->stateStep++;
     case 6:
         for (i = 0; i < work->entryCount; i++) {

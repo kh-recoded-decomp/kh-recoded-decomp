@@ -155,7 +155,7 @@ typedef struct StageEntryAction {
     u8 targetKind; /* below 7 the action is aimed at the secondary entries */
     u8 range; /* how many rows away it reaches */
     u16 pressWindow; /* frames before the hit in which the timed press counts */
-    u8 reserved1a[2];
+    u16 effectLength; /* frames of its effect item's animation before the hit lands */
     u8 kind;
     u8 element; /* 1-4 for an elemental action */
     u8 reserved1e[2];
@@ -200,6 +200,12 @@ typedef struct StageEntry StageEntry;
 typedef void (*StageStateFunc)(void);
 
 /* The stage (gMovieContextState->stageWork): state machine, entries, models, markers and resource lists. */
+/* A command taken from the field's command queue: an item id and its level. */
+typedef struct StageFieldCommand {
+    int id;
+    int arg;
+} StageFieldCommand;
+
 /* The actions of the items, as loaded for the stage. */
 typedef struct StageItemActionTable {
     u32 count;

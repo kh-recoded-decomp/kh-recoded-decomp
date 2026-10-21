@@ -233,7 +233,7 @@ typedef struct StageRenderCapture {
     int reviveWait; /* frames waited after a revive */
     u8 reserved0c[4];
     StageEntry *entry;
-    u8 reserved14[4];
+    fx32 castTimer; /* frames since a spell was cast, while its caster is not frozen */
     VecFx32 panelOffset; /* from a defender to its timed press panel */
 } StageRenderCapture;
 

@@ -15,7 +15,7 @@ extern void GetEntryOverheadPosition(VecFx32 *out, StageEntry *entry);
 extern StageResourceItem *SpawnStageItem(StageEntry *owner, int category, u8 index, u8 animation,
                                          const VecFx32 *position, BOOL persistent);
 extern void MI_Copy48B(const void *src, void *dest);
-extern void func_ov041_020c4aa0(StageEntry *entry, StageEntryHit *hit);
+extern void ComputeEntryHit(StageEntry *entry, StageEntryHit *hit);
 extern void ApplyActionToTargets(StageEntry *entry);
 extern u32 IsEntryFlag2Set(StageEntry *entry);
 extern void FinishEntryAction(StageEntry *entry);
@@ -23,7 +23,7 @@ extern void FinishEntryAction(StageEntry *entry);
 /*
  * Action handler for a heal: aims at a random hurt secondary entry other than itself (itself when none is),
  * shows that entry's hp, plays the animation and on its effect frame shows the heal item over itself, then
- * resolves the hit (func_ov041_020c4aa0, ApplyActionToTargets) and ends the action.
+ * resolves the hit (ComputeEntryHit, ApplyActionToTargets) and ends the action.
  */
 void EntryActionHeal(u8 entryIndex)
 {
@@ -98,7 +98,7 @@ void EntryActionHeal(u8 entryIndex)
         item->model.position.y += FX32_ONE / 2;
         entry->stateStep++;
     case 3:
-        func_ov041_020c4aa0(entry, &entry->hit);
+        ComputeEntryHit(entry, &entry->hit);
         ApplyActionToTargets(entry);
         entry->stateStep++;
     case 4:

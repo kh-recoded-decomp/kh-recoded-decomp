@@ -236,6 +236,10 @@ src/overlays/ov041/calls/IsStageKindAvailable.c:
     complete
     .text       start:0x020becbc end:0x020bed58
 
+src/overlays/ov041/calls/StartQueuedItemCommand.c:
+    complete
+    .text       start:0x020bed58 end:0x020bf0c0
+
 src/overlays/ov041/calls/ResetSlotHandles.c:
     complete
     .text       start:0x020bf0c0 end:0x020bf0ec
@@ -668,6 +672,10 @@ src/overlays/ov041/calls/ApplyActionHitWithSound.c:
     complete
     .text       start:0x020c48e0 end:0x020c4aa0
 
+src/overlays/ov041/calls/ComputeEntryHit.c:
+    complete
+    .text       start:0x020c4aa0 end:0x020c4d58
+
 src/overlays/ov041/calls/ClearEntryActionState.c:
     complete
     .text       start:0x020c54d8 end:0x020c55e0
@@ -723,6 +731,10 @@ src/overlays/ov041/calls/EntryActionHeal.c:
 src/overlays/ov041/calls/EntryActionOnSelf.c:
     complete
     .text       start:0x020ca800 end:0x020ca8fc
+
+src/overlays/ov041/calls/EntryActionSpell.c:
+    complete
+    .text       start:0x020cc2b8 end:0x020cc5e4
 
 src/overlays/ov041/calls/GetScaleLevel.c:
     complete
