@@ -9,7 +9,7 @@ StageCaptionLineRef *GetQueuedCaptionLine(StageCaption *caption, StageCaptionLin
     if (caption->lineCount >= caption->queuedCount) {
         return NULL;
     }
-    out->text = line->text;
+    out->messageId = line->messageId;
     out->rows = line->rows;
     return out;
 }

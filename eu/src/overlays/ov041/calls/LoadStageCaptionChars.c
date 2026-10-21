@@ -3,7 +3,7 @@
 
 extern u32 MakePrimaryVramKey(u32 id);
 extern void *func_0202c4a0(u32 key, int kind);
-extern s32 NNS_G2dGetUnpackedBGCharacterData(void *resource, void **outPayload);
+extern BOOL NNS_G2dGetUnpackedBGCharacterData(void *resource, NNSG2dCharacterData **outData);
 
 /* Loads the caption's character data (resource 0xd) and unpacks it. */
 void LoadStageCaptionChars(StageCaption *caption)

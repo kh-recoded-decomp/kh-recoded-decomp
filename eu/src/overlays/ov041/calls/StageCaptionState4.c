@@ -1,8 +1,8 @@
 #include "nitro/types.h"
 #include "src/overlays/ov041/StageCaption.h"
 
-extern BOOL func_ov041_020cecac(StageCaption *caption);
-extern BOOL func_ov041_020ceb44(StageCaption *caption);
+extern BOOL CombineStageCaptionTriple(StageCaption *caption);
+extern BOOL QueueCombinedCaptionPair(StageCaption *caption);
 extern void QueueStageCaptionLines(StageCaption *caption);
 extern void func_ov041_020ce77c(StageCaption *caption, StageTextLine *line, int palette);
 extern void PlaySoundEffect(int seqArcNo, int index);
@@ -19,7 +19,7 @@ void StageCaptionState4(StageCaption *caption)
     int brightness;
 
     if (caption->unk4c == 0) {
-        if (!func_ov041_020cecac(caption) && !func_ov041_020ceb44(caption)) {
+        if (!CombineStageCaptionTriple(caption) && !QueueCombinedCaptionPair(caption)) {
             QueueStageCaptionLines(caption);
         }
         for (i = 0; i < caption->queuedCount; i++) {

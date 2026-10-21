@@ -2,9 +2,8 @@
 #include "src/overlays/ov041/StageWork.h"
 #include "src/overlays/ov041/StageCaption.h"
 
-const u32 data_ov041_020cf8b4[5] = {
-    0x000000E0, 0x00000020, 0x00000020, 0x00000020,
-    0x000001A0,
+const StageCaptionFrameTiles gStageCaptionFrameTiles = {
+    {0xe0, 0x20, 0x20, 0x20, 0x1a0},
 };
 
 const StageTextFrame gStageCaptionFrame = {

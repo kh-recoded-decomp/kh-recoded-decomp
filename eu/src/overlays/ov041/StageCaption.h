@@ -2,6 +2,7 @@
 #define STAGE_CAPTION_H
 
 #include "nitro/types.h"
+#include "nnsys/g2d.h"
 
 /* Where and how a text layer draws (tiles, character base and palette). */
 typedef struct StageTextFrame {
@@ -17,10 +18,7 @@ typedef struct StageTextFrame {
 
 /* One line of text on the caption layer: its characters start at charStart (8 pixels each). */
 typedef struct StageTextLine {
-    union {
-        const void *text;
-        int hudId; /* a requested line names its HUD entry instead */
-    };
+    u32 messageId; /* for a requested line: the HUD entry id */
     s16 charStart;
     s16 charBase;
     u16 width;
@@ -29,15 +27,50 @@ typedef struct StageTextLine {
     int fixedStart;
 } StageTextLine;
 
-/* A queued line as handed out: its text and how many rows it takes. */
+/* A HUD entry: the message it shows and how many rows it takes. */
+typedef struct StageHudEntry {
+    u32 id;
+    u32 messageId;
+    int rows;
+} StageHudEntry;
+
+/* Two messages that, shown one after the other, are replaced by a single combined one. */
+typedef struct StageCaptionCombo {
+    u32 first;
+    u32 second;
+    u32 combined;
+} StageCaptionCombo;
+
+/* Three caption lines whose items show these menu icons are shown as the combined entry. */
+typedef struct StageCaptionTriple {
+    u32 first;
+    u32 second;
+    u32 third;
+    u32 combined;
+} StageCaptionTriple;
+
+/* Where each line style's frame tiles start in the caption characters, in bytes. */
+typedef struct StageCaptionFrameTiles {
+    u32 offsets[5];
+} StageCaptionFrameTiles;
+
+/* A queued line as handed out: its message and how many rows it takes. */
 typedef struct StageCaptionLineRef {
-    const void *text;
+    u32 messageId;
     int rows;
 } StageCaptionLineRef;
 
+/* The surface a text layer draws into: its character canvas and the characters themselves. */
+typedef struct StageTextSurface {
+    u8 reserved00[0x24];
+    u8 *chars;
+} StageTextSurface;
+
 /* A caption line on a text layer, with its own character data and message file. */
 typedef struct StageCaption {
-    u8 reserved000[0x2c]; /* the text layer */
+    u8 reserved000[0x20]; /* the text layer */
+    StageTextSurface *surface;
+    u8 reserved024[8];
     u16 tileBase;
     u8 reserved02e[0x44 - 0x2e];
     int charOffset; /* where the next line's characters go, in pixels */
@@ -52,7 +85,7 @@ typedef struct StageCaption {
     int state;
     int previousState;
     void *charData;
-    void *unpackedChars;
+    NNSG2dCharacterData *unpackedChars;
     void *messages;
     u8 reserved10c[8];
     BOOL hidden;

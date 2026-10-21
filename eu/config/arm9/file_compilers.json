@@ -9459,5 +9459,10 @@
   "src/overlays/ov041/calls/AddStageCaptionLine.c": "dsi/1.1",
   "src/overlays/ov041/calls/StageCaptionState4.c": "dsi/1.1",
   "src/overlays/ov041/calls/ShowStageCaptionNotice.c": "dsi/1.1",
-  "src/overlays/ov041/auto/AdvanceQueuedCaptionLine.c": "dsi/1.1"
+  "src/overlays/ov041/auto/AdvanceQueuedCaptionLine.c": "dsi/1.1",
+  "src/overlays/ov041/calls/CombineStageCaptionLines.c": "dsi/1.1",
+  "src/overlays/ov041/calls/CombineStageCaptionTriple.c": "dsi/1.1",
+  "src/overlays/ov041/calls/QueueCombinedCaptionPair.c": "dsi/1.1",
+  "src/overlays/ov041/calls/CloseStageCaptionNotice.c": "dsi/1.1",
+  "src/overlays/ov041/calls/DrawStageCaptionLine.c": "dsi/1.1"
 }

@@ -740,6 +740,10 @@ src/overlays/ov041/calls/UploadStageCaptionLayer.c:
     complete
     .text       start:0x020ce4b4 end:0x020ce4cc
 
+src/overlays/ov041/calls/DrawStageCaptionLine.c:
+    complete
+    .text       start:0x020ce4cc end:0x020ce740
+
 src/overlays/ov041/calls/ClearStageCaptionRows.c:
     complete
     .text       start:0x020ce740 end:0x020ce77c
@@ -760,9 +764,21 @@ src/overlays/ov041/calls/QueueStageCaptionLines.c:
     complete
     .text       start:0x020ce9c0 end:0x020cea54
 
+src/overlays/ov041/calls/CombineStageCaptionLines.c:
+    complete
+    .text       start:0x020cea54 end:0x020ceb44
+
+src/overlays/ov041/calls/QueueCombinedCaptionPair.c:
+    complete
+    .text       start:0x020ceb44 end:0x020cec74
+
 src/overlays/ov041/auto/GetItemMenuIcon.c:
     complete
     .text       start:0x020cec74 end:0x020cecac
+
+src/overlays/ov041/calls/CombineStageCaptionTriple.c:
+    complete
+    .text       start:0x020cecac end:0x020cedcc
 
 src/overlays/ov041/calls/StageCaptionState0.c:
     complete
@@ -827,6 +843,10 @@ src/overlays/ov041/calls/ClearStageCaption.c:
 src/overlays/ov041/calls/ShowStageCaptionNotice.c:
     complete
     .text       start:0x020cf2e4 end:0x020cf360
+
+src/overlays/ov041/calls/CloseStageCaptionNotice.c:
+    complete
+    .text       start:0x020cf360 end:0x020cf448
 
 src/overlays/ov041/calls/RestartStageCaption.c:
     complete
