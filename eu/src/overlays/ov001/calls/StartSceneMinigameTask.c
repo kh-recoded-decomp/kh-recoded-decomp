@@ -1,3 +1,4 @@
+#define func_ov001_02070e98 UpdateFieldHud
 #define StartSceneMinigameTask_02070cfc StartSceneMinigameTask
 #define data_ov001_0209f004 gSceneMinigameTaskDescriptor
 #define data_ov001_020a04a4 data_ov001_020a04c4

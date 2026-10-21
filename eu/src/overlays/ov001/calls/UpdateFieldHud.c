@@ -1,0 +1,27 @@
+#define ClearChoiceHighlight_020701a8 ClearChoiceHighlight
+#define CountAssignedFieldSlots_0207169c CountAssignedFieldSlots
+#define FillBackgroundLayerRect_02001a60 FillBackgroundLayerRect
+#define FindActiveRecordById_020b8184 FindActiveRecordById
+#define InvokeCallback40_020b8268 func_ov027_020b8288
+#define IsHudFlag9Set_02072884 IsHudFlag9Set
+#define IsModeSetOrFlag370aClear_0207259c IsModeSetOrFlag370aClear
+#define OS_GetTick_02003fd4 OS_GetTick
+#define SetFieldMenuSuspended_02077b90 SetFieldMenuSuspended
+#define TagTracker_InvokeCallback_020b8210 func_ov027_020b8230
+#define Text_UploadTileBuffer_02001520 Text_UploadTileBuffer
+#define UpdateFieldHud_02070e98 UpdateFieldHud
+#define data_ov001_0209dbc4 gFieldHudRefreshLayerIds
+#define data_ov001_0209eccc gHudNoticeStateHandlers
+#define data_ov001_020a04a4 data_ov001_020a04c4
+#define func_020cf048 func_020cf068
+#define func_ov001_020645c8 IsSessionFlagSet
+#define func_ov001_0207023c ExpireNoticeWindow
+#define func_ov001_0207036c RunOwnerStateMachine
+#define func_ov001_020728a4 IsFieldFlag8Set
+#define func_ov001_020736b4 UpdateFieldWidgetLayer
+#define func_ov001_0207b3cc func_ov001_0207b3f4
+#define func_ov027_020b7dd4 func_ov027_020b7df4
+#define func_ov027_020b81e0 func_ov027_020b8200
+#define func_ov027_020b9e30 ClearTileTableRowDirty
+#define func_ov027_020b9e60 FlushDirtyTileTableRows
+#include "src/ov001/field_manager/UpdateFieldHud_02070e98.c"
