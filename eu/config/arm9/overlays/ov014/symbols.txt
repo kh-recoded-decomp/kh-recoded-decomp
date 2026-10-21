@@ -1,4 +1,4 @@
-func_ov014_0206c480 kind:function(arm,size=0xa20) addr:0x0206c480
+InitRecordPanel kind:function(arm,size=0xa20) addr:0x0206c480
 ShutdownPanelObjects kind:function(arm,size=0x98) addr:0x0206cea0
 UpdatePanelState_0206cf38 kind:function(arm,size=0x68) addr:0x0206cf38
 UpdatePanelBanner kind:function(arm,size=0x220) addr:0x0206cfa0
@@ -40,8 +40,8 @@ data_ov014_0206f86c kind:data(any) addr:0x0206f86c
 data_ov014_0206f880 kind:data(any) addr:0x0206f880
 data_ov014_0206f894 kind:data(any) addr:0x0206f894
 data_ov014_0206f8ac kind:data(any) addr:0x0206f8ac
-data_ov014_0206f8e0 kind:data(any) addr:0x0206f8e0
-data_ov014_0206f8e8 kind:data(any) addr:0x0206f8e8
+gRecordPanelTileIds kind:data(any) addr:0x0206f8e0
+gRecordPanelTileSource kind:data(any) addr:0x0206f8e8
 gPanelInitialUpdateCallback kind:data(any) addr:0x0206f8f8
 gPanelOpenStepHandler kind:data(any) addr:0x0206f8fc
 gPanelLifecycleHandlers kind:data(any) addr:0x0206f900

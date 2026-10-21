@@ -91,6 +91,38 @@ def _read_addends(o_path, name):
     return out
 
 
+def _section_relocs_to_own_globals(o_path, mine_relocs, addends):
+    """{offset: global name} for relocations against a section symbol of our own object.
+
+    A function that shares its source with the data it uses can address that data off
+    the section start (`.data` + offset) instead of naming each object. When a global
+    object of ours begins exactly at that offset, the relocation resolves to that global
+    once linked, which is the name the delinked ROM records."""
+    from elftools.elf.elffile import ELFFile
+
+    out = {}
+    with open(o_path, "rb") as stream:
+        elf = ELFFile(stream)
+        symtab = elf.get_section_by_name(".symtab")
+        if symtab is None:
+            return out
+        for off, (mine_name, reloc_type) in mine_relocs.items():
+            if reloc_type != 2:
+                continue
+            for symbol in symtab.get_symbol_by_name(mine_name) or []:
+                if symbol["st_info"]["type"] != "STT_SECTION":
+                    continue
+                section_index = symbol["st_shndx"]
+                target = symbol["st_value"] + addends.get(off, 0)
+                for other in symtab.iter_symbols():
+                    if (other["st_shndx"] == section_index and other["st_value"] == target
+                            and other["st_info"]["bind"] == "STB_GLOBAL"
+                            and other["st_info"]["type"] == "STT_OBJECT"):
+                        out[off] = other.name
+                        break
+    return out
+
+
 def _verified_local_data_relocs(o_path, original_relocs, mine_relocs, addends, module):
     """Accept compiler-local DATA labels only when their complete section is proved.
 
@@ -240,6 +272,7 @@ def check(cpath, name, thumb, object_name=None):
     local_relocs, local_data_note = _verified_local_data_relocs(
         o, orel, mrel_full, maddend, e.get("module")
     )
+    own_globals = _section_relocs_to_own_globals(o, mrel_full, maddend)
     size = len(orig)
     if len(mine) != size:
         return 1, ">>> MISMATCH <<< size %d != %d" % (len(mine), size)
@@ -293,6 +326,7 @@ def check(cpath, name, thumb, object_name=None):
             (o in orel and (mrel[o] == orel[o]
                             or (_mine_addr(o) is not None
                                 and _mine_addr(o) == _symbol_address(orel[o]))
+                            or own_globals.get(o) == orel[o]
                             or o in local_relocs))
             or _abs_ok(o)
             for o in mrel) and all(o in mrel for o in orel)
