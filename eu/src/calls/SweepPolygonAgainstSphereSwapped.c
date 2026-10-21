@@ -1,4 +1,4 @@
 #define NegateVecFx32_0204aa40 NegateVecFx32
 #define SweepPolygonAgainstSphereSwapped_02041c94 SweepPolygonAgainstSphereSwapped
-#define SweepSphereAgainstPolygon_02042f54 func_02042f68
+#define SweepSphereAgainstPolygon_02042f54 SweepSphereAgainstPolygon
 #include "src/arm9/spatial_queries/SweepPolygonAgainstSphereSwapped_02041c94.c"

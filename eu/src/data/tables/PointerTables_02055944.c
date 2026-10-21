@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-extern void func_02042f68(void); /* func */
+extern void SweepSphereAgainstPolygon(void); /* SweepSphereAgainstPolygon */
 extern void SweepObbAgainstSphereSwapped(void); /* SweepObbAgainstSphereSwapped */
 extern void SweepObbAgainstObb(void); /* SweepObbAgainstObb */
 extern void SweepObbAgainstSegment(void); /* SweepObbAgainstSegment */
@@ -31,7 +31,7 @@ extern void SweepInflatedSphereAgainstCylinder(void); /* SweepInflatedSphereAgai
 extern void SweepSphereAgainstCappedCylinder(void); /* SweepSphereAgainstCappedCylinder */
 
 void (*const gCollisionSweepPairDispatch[31])(void) = {
-    func_02042f68, /* func */
+    SweepSphereAgainstPolygon, /* SweepSphereAgainstPolygon */
     SweepObbAgainstSphereSwapped, /* SweepObbAgainstSphereSwapped */
     SweepObbAgainstObb, /* SweepObbAgainstObb */
     SweepObbAgainstSegment, /* SweepObbAgainstSegment */
