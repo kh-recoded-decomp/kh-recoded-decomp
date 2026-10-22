@@ -168,8 +168,14 @@ typedef struct StageEntryAction {
     u8 altEffectCategory;
     u8 altEffectIndex;
     u8 altEffectAnimation;
-    u8 castFrame; /* animation frame its effect takes hold on */
-    u8 effectFrame; /* animation frame its effect item appears on */
+    union {
+        u8 castFrame; /* animation frame its effect takes hold on */
+        u8 variant; /* path attacks: which of their three runs (0-2) */
+    };
+    union {
+        u8 effectFrame; /* animation frame its effect item appears on */
+        u8 recoverAnimation; /* path attacks: played on the way back */
+    };
     u8 returnFrame; /* melee: animation frame the walk back starts on */
     union {
         u8 effectCategory;

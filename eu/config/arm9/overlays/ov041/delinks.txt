@@ -748,6 +748,14 @@ src/overlays/ov041/calls/EntryActionSpell.c:
     complete
     .text       start:0x020cc2b8 end:0x020cc5e4
 
+src/overlays/ov041/calls/EntryActionPathAttack.c:
+    complete
+    .text       start:0x020cc5e4 end:0x020cca68
+
+src/overlays/ov041/calls/EntryActionTeamAttack.c:
+    complete
+    .text       start:0x020cca68 end:0x020ccfc0
+
 src/overlays/ov041/calls/GetScaleLevel.c:
     complete
     .text       start:0x020cdf6c end:0x020cdf8c

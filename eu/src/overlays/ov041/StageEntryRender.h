@@ -238,7 +238,8 @@ typedef struct StageRenderCapture {
     u8 unk00;
     u8 reserved01;
     u8 comboCount; /* extra melee hits made in a row */
-    u8 reserved03[5];
+    u8 reserved03;
+    int teamLeader; /* the entry whose sounds a team attack plays */
     int reviveWait; /* frames waited after a revive */
     u8 reserved0c[4];
     StageEntry *entry;

@@ -13,8 +13,8 @@ extern void EntryActionOnSelf(void);
 extern void func_ov041_020ca8fc(void);
 extern void func_ov041_020cbcf0(void);
 extern void EntryActionSpell(void);
-extern void func_ov041_020cc5e4(void);
-extern void func_ov041_020cca68(void);
+extern void EntryActionPathAttack(void);
+extern void EntryActionTeamAttack(void);
 extern void func_ov041_020ccfc0(void);
 extern void func_ov041_020cd7ec(void);
 extern void StageEntryStateEnter(void);
@@ -47,8 +47,8 @@ void (*gStageEntryActionHandlers[17])(void) = {
     func_ov041_020ca8fc,
     func_ov041_020cbcf0,
     EntryActionSpell,
-    func_ov041_020cc5e4,
-    func_ov041_020cca68,
+    EntryActionPathAttack,
+    EntryActionTeamAttack,
     func_ov041_020ccfc0,
     func_ov041_020cd7ec,
 };
