@@ -28,7 +28,7 @@ extern u32 GetPlayerEntryCount(int player, u32 id);
 extern int GetFlagTableValue(void);
 extern fx32 FX_Mul(fx32 a, fx32 b);
 extern fx32 FX_Div(fx32 numer, fx32 denom);
-extern void func_ov041_020c30ac(StageEntry *entry);
+extern void CheckEntryHpThresholds(StageEntry *entry);
 extern u8 CountActiveStageEntries(BOOL primary);
 extern StageEntryAction *GetEntryAction(StageEntry *entry);
 extern int GetStageKindSoundArc(int kind);
@@ -313,7 +313,7 @@ u32 ResolveEntryHit(StageEntry *entry, StageEntry *target, StageEntryHit *hit)
     }
     target->checkedHp = target->hp;
     target->hp -= (s16)damage;
-    func_ov041_020c30ac(target);
+    CheckEntryHpThresholds(target);
     if (landed) {
         target->flags |= STAGE_ENTRY_HURT;
     }

@@ -14,7 +14,8 @@ const StageOrbShares gNoOrbShares = {
     {{-1, -1}, {-1, -1}, {-1, -1}},
 };
 
-const StageHpThresholds data_ov041_020cf804 = {
+/* Fractions of an entry's maximum hp (0.8, 0.6, 0.4, 0.2) whose crossing forces its second action. */
+const StageHpThresholds gEntryHpThresholds = {
     {0xccd, 0x99a, 0x666, 0x333},
 };
 

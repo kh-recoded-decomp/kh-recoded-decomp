@@ -133,7 +133,7 @@ GetEntryMoveEnds kind:function(thumb,size=0x158) addr:0x020c2e24
 GetStrikePosition kind:function(thumb,size=0xf0) addr:0x020c2f7c
 SetEntryState kind:function(thumb,size=0x26) addr:0x020c306c
 GetEntryAction kind:function(thumb,size=0x18) addr:0x020c3094
-func_ov041_020c30ac kind:function(thumb,size=0x138) addr:0x020c30ac
+CheckEntryHpThresholds kind:function(thumb,size=0x138) addr:0x020c30ac
 StartStagePanelTransition kind:function(thumb,size=0x3c) addr:0x020c31e4
 FinishStagePanelTransition kind:function(thumb,size=0x3c) addr:0x020c3220
 UpdateEntryStatusIcon kind:function(thumb,size=0x14c) addr:0x020c325c
@@ -317,7 +317,7 @@ data_ov041_020cf7bc kind:data(any) addr:0x020cf7bc
 gEmptyActionChoices kind:data(any) addr:0x020cf7ec
 gStageStatusSounds kind:data(any) addr:0x020cf7f0
 gNoOrbAmounts kind:data(any) addr:0x020cf7f8
-data_ov041_020cf804 kind:data(any) addr:0x020cf804
+gEntryHpThresholds kind:data(any) addr:0x020cf804
 gNoOrbShares kind:data(any) addr:0x020cf814
 data_ov041_020cf82c kind:data(any) addr:0x020cf82c
 gStageOrbValues kind:data(any) addr:0x020cf88c

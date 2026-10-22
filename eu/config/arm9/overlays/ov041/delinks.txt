@@ -540,6 +540,10 @@ src/overlays/ov041/auto/GetEntryAction.c:
     complete
     .text       start:0x020c3094 end:0x020c30ac
 
+src/overlays/ov041/calls/CheckEntryHpThresholds.c:
+    complete
+    .text       start:0x020c30ac end:0x020c31e4
+
 src/overlays/ov041/calls/StartStagePanelTransition.c:
     complete
     .text       start:0x020c31e4 end:0x020c3220
