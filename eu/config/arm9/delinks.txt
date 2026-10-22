@@ -5485,6 +5485,10 @@ src/asm_stubs/calls/_dadd.s:
     complete
     .text       start:0x02022b04 end:0x02022e1c
 
+src/asm_stubs/calls/_drsb.s:
+    complete
+    .text       start:0x02022e1c end:0x02022e34
+
 src/asm_stubs/calls/_dsub.s:
     complete
     .text       start:0x02022e34 end:0x020231e8
@@ -5605,13 +5609,25 @@ src/calls/GetMaxPositiveInt.c:
     complete
     .text       start:0x02024818 end:0x02024820
 
+src/asm_stubs/calls/_frsb.s:
+    complete
+    .text       start:0x02024820 end:0x0202482c
+
 src/asm_stubs/calls/_fsub.s:
     complete
     .text       start:0x0202482c end:0x02024aa4
 
+src/asm_stubs/calls/_frdiv.s:
+    complete
+    .text       start:0x02024aa4 end:0x02024ab0
+
 src/asm_stubs/calls/_fdiv.c:
     complete
     .text       start:0x02024ab0 end:0x02024e68
+
+src/asm_stubs/calls/_drdiv.s:
+    complete
+    .text       start:0x02024e68 end:0x02024e80
 
 src/asm_stubs/calls/_ddiv.c:
     complete

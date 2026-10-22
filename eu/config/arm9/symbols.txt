@@ -1368,6 +1368,7 @@ MSL_Fabs kind:function(arm,size=0x20) addr:0x02022ad8
 PXI_Init_02022af8 kind:function(arm,size=0xc) addr:0x02022af8
 _dadd kind:function(arm,size=0x318) addr:0x02022b04
 func_02022b14 kind:label(arm) addr:0x02022b14
+_drsb kind:function(arm,size=0x18,unknown) addr:0x02022e1c
 _dsub kind:function(arm,size=0x3b4) addr:0x02022e34
 func_02022e44 kind:label(arm) addr:0x02022e44
 _dmul kind:function(arm,size=0x364) addr:0x020231e8
@@ -1401,9 +1402,12 @@ _fmul kind:function(arm,size=0x1e0) addr:0x0202441c
 _fadd kind:function(arm,size=0x21c) addr:0x020245fc
 func_02024608 kind:label(arm) addr:0x02024608
 GetMaxPositiveInt kind:function(arm,size=0x8) addr:0x02024818
+_frsb kind:function(arm,size=0xc,unknown) addr:0x02024820
 _fsub kind:function(arm,size=0x278) addr:0x0202482c
 func_02024838 kind:label(arm) addr:0x02024838
+_frdiv kind:function(arm,size=0xc,unknown) addr:0x02024aa4
 _fdiv kind:function(arm,size=0x3b8) addr:0x02024ab0
+_drdiv kind:function(arm,size=0x18,unknown) addr:0x02024e68
 _ddiv kind:function(arm,size=0x544) addr:0x02024e80
 PanelState_NoOpD kind:function(arm,size=0x4) addr:0x020253c4
 RunGlobalConstructors kind:function(arm,size=0x30) addr:0x020253c8
