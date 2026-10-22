@@ -496,9 +496,17 @@ src/overlays/ov022/asm_stubs/calls/func_ov022_020b715c.c:
     complete
     .text       start:0x020b715c end:0x020b7240
 
+src/overlays/ov022/asm_stubs/calls/gMobiClipDeblockThresholds.s:
+    complete
+    .text       start:0x020b7240 end:0x020b728c
+
 src/overlays/ov022/asm_stubs/calls/func_ov022_020b728c.c:
     complete
     .text       start:0x020b728c end:0x020b73c4
+
+src/overlays/ov022/asm_stubs/calls/MobiClip_DeblockLumaHorizontalEdges.s:
+    complete
+    .text       start:0x020b73c4 end:0x020b74b8
 
 src/overlays/ov022/asm_stubs/calls/func_ov022_020b74b8.c:
     complete

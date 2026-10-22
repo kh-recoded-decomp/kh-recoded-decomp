@@ -1,0 +1,31 @@
+/* MobiClip deblocking thresholds, indexed by quantiser 12..48 (the filter reads them from base - 12):
+ * alpha bounds |p0 - q0|, beta bounds |p1 - p0| and |q1 - q0|; two fill bytes word-align the luma
+ * vertical-edge routine that follows. */
+    .syntax unified
+    .arch armv5te
+    .text
+    .arm
+    .align 2
+    .global gMobiClipDeblockThresholds
+    .type gMobiClipDeblockThresholds, %object
+gMobiClipDeblockThresholds:
+    /* |p0 - q0| threshold, qp 12..48 (read from base - 12) */
+    .global gMobiClipDeblockAlpha
+    .type gMobiClipDeblockAlpha, %object
+gMobiClipDeblockAlpha:
+    .byte 0x00, 0x00, 0x00, 0x00, 0x03, 0x04, 0x05, 0x05, 0x06, 0x07, 0x08, 0x0a, 0x0b, 0x0d, 0x0f, 0x11
+    .byte 0x13, 0x16, 0x19, 0x1d, 0x21, 0x26, 0x2c, 0x32, 0x39, 0x42, 0x4b, 0x56, 0x62, 0x70, 0x80, 0x93
+    .byte 0xa8, 0xc0, 0xdb, 0xfb, 0xff
+    /* |p1 - p0| and |q1 - q0| threshold, qp 12..48 (read from base - 12) */
+    .global gMobiClipDeblockBeta
+    .type gMobiClipDeblockBeta, %object
+gMobiClipDeblockBeta:
+    .byte 0x00, 0x00, 0x00, 0x01, 0x01, 0x02, 0x02, 0x03, 0x03, 0x04, 0x04, 0x05, 0x05, 0x06, 0x06, 0x07
+    .byte 0x07, 0x08, 0x08, 0x09, 0x09, 0x0a, 0x0b, 0x0b, 0x0c, 0x0c, 0x0d, 0x0d, 0x0e, 0x0e, 0x0f, 0x0f
+    .byte 0x10, 0x10, 0x11, 0x11, 0x12
+    /* word-alignment fill before the luma vertical-edge routine */
+    .global gMobiClipDeblockPad
+    .type gMobiClipDeblockPad, %object
+gMobiClipDeblockPad:
+    .byte 0x00, 0x00
+    .size gMobiClipDeblockThresholds, . - gMobiClipDeblockThresholds
