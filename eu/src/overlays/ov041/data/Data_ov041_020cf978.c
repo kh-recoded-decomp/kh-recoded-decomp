@@ -15,7 +15,7 @@ extern void EntryActionBarrage(void);
 extern void EntryActionSpell(void);
 extern void EntryActionPathAttack(void);
 extern void EntryActionTeamAttack(void);
-extern void func_ov041_020ccfc0(void);
+extern void EntryActionTeamSlash(void);
 extern void EntryActionTeamBlast(void);
 extern void StageEntryStateEnter(void);
 extern void StageEntryStateWaiting(void);
@@ -49,7 +49,7 @@ void (*gStageEntryActionHandlers[17])(void) = {
     EntryActionSpell,
     EntryActionPathAttack,
     EntryActionTeamAttack,
-    func_ov041_020ccfc0,
+    EntryActionTeamSlash,
     EntryActionTeamBlast,
 };
 
