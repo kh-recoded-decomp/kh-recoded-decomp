@@ -59,7 +59,7 @@ void ComputeEntryHit(StageEntry *entry, StageEntryHit *hit)
     hit->accuracy = action->accuracy;
     hit->critical = action->critical;
     hit->source = entry;
-    hit->unk0a = entry->unkf0 >> FX32_SHIFT;
+    hit->minDamage = entry->minDamage >> FX32_SHIFT;
     hit->element = action->element;
     hit->effect.category = action->hitEffectCategory;
     hit->effect.index = action->hitEffectIndex;
@@ -73,26 +73,26 @@ void ComputeEntryHit(StageEntry *entry, StageEntryHit *hit)
         switch (action->effect) {
         case 0xb7:
             hit->amount = 30 * FX32_ONE;
-            hit->unk0d = 2;
+            hit->heal = STAGE_HEAL_HP;
             break;
         case 0xb8:
             hit->amount = 50 * FX32_ONE;
-            hit->unk0d = 2;
+            hit->heal = STAGE_HEAL_HP;
             break;
         case 0xeb:
-            hit->unk0d = 1;
+            hit->heal = STAGE_HEAL_REVIVE;
             break;
         default:
-            hit->unk0d = 0;
+            hit->heal = STAGE_HEAL_NONE;
             break;
         }
         break;
     case 8:
-        hit->unk0d = 2;
+        hit->heal = STAGE_HEAL_HP;
         hit->amount = F32_TO_FX32((f32)(work->entries[entry->mainTarget].maxHp / 5));
         break;
     default:
-        hit->unk0d = 0;
+        hit->heal = STAGE_HEAL_NONE;
         break;
     }
     switch (action->kind) {

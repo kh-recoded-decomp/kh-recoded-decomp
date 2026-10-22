@@ -203,7 +203,7 @@ void EntryActionCombo(u8 entryIndex)
     case COMBO_HIT:
         switch (entry->kind) {
         case 0xff:
-            seqArc = work->hitSeqArc;
+            seqArc = work->weapon.seqArc;
             switch (data_ov041_020cff48.comboStage) {
             case 0:
                 sound = 0;

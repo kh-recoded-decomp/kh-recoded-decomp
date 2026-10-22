@@ -8,7 +8,7 @@ extern void NNS_G3dGlbFlushP(void);
 extern void func_01fff67c(int colorScale);
 extern void NNS_G3dDraw(StageModelRenderObject *renderObject);
 
-void DrawTrackedStageShadow(StageShadowActor *actor);
-void DrawStagePrimaryModel(StageModelActor *actor);
+void DrawTrackedStageShadow(StageFollowerActor *actor);
+void DrawStagePrimaryModel(StageFollowerActor *actor);
 
 #endif

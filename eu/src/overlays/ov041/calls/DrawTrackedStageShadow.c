@@ -1,12 +1,12 @@
 #include "src/overlays/ov041/StageModelRender.h"
 
-void DrawTrackedStageShadow(StageShadowActor *actor)
+void DrawTrackedStageShadow(StageFollowerActor *actor)
 {
     int i;
     StageWork *work = gMovieContextState->stageWork;
 
     for (i = 0; i < 2; ++i) {
-        StageShadowActor *tracked = work->shadowActors[i];
+        StageFollowerActor *tracked = work->shadowActors[i];
         if (tracked == actor) {
             if (!(tracked->stateFlags & 1)) {
                 tracked->stateFlags = tracked->stateFlags & 0xfd;
@@ -20,7 +20,7 @@ void DrawTrackedStageShadow(StageShadowActor *actor)
                 if (actor->node.flags & 0x40) {
                     func_01fff67c(actor->node.colorScale);
                 }
-                NNS_G3dGeBufferOP_N(0x17, &tracked->shadowMatrix, 12);
+                NNS_G3dGeBufferOP_N(0x17, &tracked->matrix, 12);
                 NNS_G3dDraw(&actor->node.renderObject);
             }
             return;

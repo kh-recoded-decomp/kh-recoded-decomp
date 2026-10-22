@@ -1,11 +1,11 @@
 #include "src/overlays/ov041/StageModelRender.h"
 
-void DrawStagePrimaryModel(StageModelActor *actor)
+void DrawStagePrimaryModel(StageFollowerActor *actor)
 {
     StageWork *work = gMovieContextState->stageWork;
 
-    if (actor == &work->primaryActor) {
-        MtxFx43 *matrix = &work->primaryMatrix;
+    if (actor == &work->weapon) {
+        MtxFx43 *matrix = &work->weapon.matrix;
         fx32 scale = actor->node.renderObject.model->positionScale;
         VecFx32 scaling = {scale, scale, scale};
 

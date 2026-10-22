@@ -25,7 +25,7 @@ void UpdateStageEntryAnimation(StageEntrySlot *slot)
                     Flags16_ClearBit1(&entry->slot.node.flags);
                     entry->flags &= 0xffff7fff;
                     if (entry->kind == 0xff) {
-                        Flags16_ClearBit1(&work->primaryActor.node.flags);
+                        Flags16_ClearBit1(&work->weapon.node.flags);
                         Flags16_ClearBit1(&work->shadowActors[0]->node.flags);
                         work->shadowActors[0]->stateFlags &= 0xdf;
                     } else if (entry->kind == 0xfd) {

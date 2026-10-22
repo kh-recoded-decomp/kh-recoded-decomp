@@ -19,7 +19,7 @@ void FreezeStageEntry(StageEntry *entry, int frames)
     entry->delay = frames;
     entry->flags |= STAGE_ENTRY_FROZEN;
     if (entry->kind == 0xff) {
-        Flags16_SetBit1(&work->primaryActor.node.flags);
+        Flags16_SetBit1(&work->weapon.node.flags);
         Flags16_SetBit1(&work->shadowActors[0]->node.flags);
         work->shadowActors[0]->stateFlags |= 0x20;
     } else if (entry->kind == 0xfd) {

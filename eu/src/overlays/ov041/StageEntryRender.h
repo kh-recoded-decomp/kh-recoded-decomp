@@ -13,7 +13,9 @@ typedef struct StageEntryNode {
     u8 reserved07e[2];
     MtxFx33 rotation;
     VecFx32 position;
-    u8 reserved0b0[0xe4];
+    u8 reserved0b0[0x28];
+    u8 jointAnimation[0x24]; /* the animation its joints play */
+    u8 reserved0fc[0x98];
 } StageEntryNode;
 
 /* StageEntrySlot.flags */
@@ -99,14 +101,19 @@ typedef struct StageItemSpec {
     u8 animation;
 } StageItemSpec;
 
+/* StageEntryHit.heal */
+#define STAGE_HEAL_NONE 0
+#define STAGE_HEAL_REVIVE 1 /* heals, and brings back an entry that is out */
+#define STAGE_HEAL_HP 2
+
 /* What an entry's hit does (filled by func_ov041_020c4d58). */
 typedef struct StageEntryHit {
     fx32 amount; /* hp it takes (or gives), at most 9999 */
     int accuracy;
     u16 critical;
-    u16 unk0a;
+    s16 minDamage; /* hp the hit takes at the least */
     u8 element; /* 1-4 for an elemental action */
-    u8 unk0d;
+    u8 heal; /* STAGE_HEAL_*: whether it heals instead */
     StageItemSpec effect; /* shown on the target */
     StageItemSpec altEffect; /* shown instead when a player entry's hit sets result bit 2 */
     u8 reserved16[2];
@@ -183,13 +190,18 @@ struct StageEntry {
     s16 shownHp; /* follows hp down a little at a time */
     s16 checkedHp; /* hp when the hp thresholds were last checked */
     u16 strength;
-    u8 reserved0e6[0xa];
-    fx32 unkf0;
+    u16 defense; /* a hit's power over it is weighed against this */
+    u8 reserved0e8[4];
+    u16 hitRate; /* percent of an action's accuracy that lands on it */
+    u8 reserved0ee[2];
+    fx32 minDamage; /* copied to its hits */
     BOOL countsForProgress; /* passed to TallyStageCharacter when the stage ends */
     u8 reserved0f8[4];
     u8 orbsMin; /* the hp its orbs give back on defeat: a random amount in [orbsMin, orbsMax] */
     u8 orbsMax;
-    u8 reserved0fe[0x108 - 0xfe];
+    u8 reserved0fe[2];
+    u8 elementRates[4]; /* percent of an elemental hit's damage it takes, by element 1-4 */
+    u8 reserved104[4];
     s8 actionCount;
     u8 reserved109[3];
     StageEntryAction *actions;
@@ -217,8 +229,9 @@ struct StageEntry {
     s16 frameStep;
     u8 reserved322[0xa];
     u8 actorSlot;
-    u8 reserved32d[7];
-    StageShadowActor *attachment;
+    u8 reserved32d[3];
+    StageResourceContainer *resources; /* of its model */
+    StageFollowerActor *attachment;
     u8 reserved338[4];
     StageEntryHit hit;
     StageEntryMove move;

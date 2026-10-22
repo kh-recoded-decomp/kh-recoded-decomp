@@ -13,30 +13,19 @@ typedef struct StageModelResource {
 typedef struct StageModelRenderObject {
     u32 flags;
     StageModelResource *model;
-    u8 reserved08[0x54];
+    u8 reserved08[0x50];
+    StageModelResource *drawModel; /* the model whose polygon ids are set */
 } StageModelRenderObject;
 
 typedef struct StageModelNode {
     u16 flags;
     u8 reserved02[0x1e];
     StageModelRenderObject renderObject;
-    u8 reserved7c[0x80];
+    u8 reserved7c[0x5c];
+    u8 jointAnimation[0x24]; /* the animation its joints play */
     u16 colorScale;
     u8 reservedfe[2];
 } StageModelNode;
-
-typedef struct StageModelActor {
-    u8 reserved000[0x14];
-    StageModelNode node;
-} StageModelActor;
-
-typedef struct StageShadowActor {
-    u8 reserved000[0x14];
-    StageModelNode node;
-    u8 reserved114[0xc4];
-    MtxFx43 shadowMatrix;
-    u8 stateFlags;
-} StageShadowActor;
 
 typedef struct StageResourceHeader {
     u16 reserved00;
@@ -48,6 +37,24 @@ typedef struct StageResourceContainer {
     u8 cursor;
     u8 reserved05[3];
 } StageResourceContainer;
+
+/* A model that follows a joint of an entry's model: the weapon in the primary entry's hand, an entry's shadow. */
+typedef struct StageFollowerActor {
+    u8 reserved000[0x14];
+    StageModelNode node;
+    u8 reserved114[0xbc];
+    u8 slotId; /* its actor slot */
+    u8 reserved1d1[3];
+    int jointIndex; /* the owner's joint it follows, -1 for none */
+    MtxFx43 matrix; /* where it is drawn */
+    u8 stateFlags;
+    u8 reserved209[3];
+    StageResourceContainer container; /* the weapon's resources */
+    int seqArc; /* the weapon's sound archive (of its hit sounds) */
+    struct StageEntry *owner;
+} StageFollowerActor;
+
+typedef char StageFollowerActorSize[sizeof(StageFollowerActor) == 0x21c ? 1 : -1];
 
 /* StageResourceItem.flags */
 #define STAGE_ITEM_VISIBLE 1
@@ -332,19 +339,14 @@ typedef struct StageWork {
     u8 reserved028[4];
     StageEntryAction itemActions[3]; /* what each primary entry does with the chosen item */
     StageMarker *commandMarkers[9];
-    StageModelActor primaryActor;
-    u8 reserved20c[0xc4];
-    MtxFx43 primaryMatrix;
-    u8 reserved300[0xc];
-    int hitSeqArc; /* the sound archive of the hit sounds */
-    u8 reserved310[4];
+    StageFollowerActor weapon; /* in the primary entry's hand */
     StageMarkerList markerLists[4];
     u8 reserved334[4];
     StageHudMessage hudMessage;
     u8 shadowHeightIndex;
     u8 panelState;
     u8 reserved34a[2];
-    StageShadowActor *shadowActors[2];
+    StageFollowerActor *shadowActors[2];
     void *messages;
     StageResourceList *lists[0x3e];
     StageResourceGroup *groups[0x1b];
@@ -389,8 +391,7 @@ typedef char StageResourceListsOffset[(u32)&((StageWork *)0)->lists == 0x358 ? 1
 
 typedef char StageEntryActionSize[sizeof(StageEntryAction) == 0x38 ? 1 : -1];
 typedef char StageWorkCommandMarkersOffset[(u32)&((StageWork *)0)->commandMarkers == 0xd4 ? 1 : -1];
-typedef char StageWorkPrimaryActorOffset[(u32)&((StageWork *)0)->primaryActor == 0xf8 ? 1 : -1];
-typedef char StageWorkPrimaryMatrixOffset[(u32)&((StageWork *)0)->primaryMatrix == 0x2d0 ? 1 : -1];
+typedef char StageWorkWeaponOffset[(u32)&((StageWork *)0)->weapon == 0xf8 ? 1 : -1];
 typedef char StageWorkHudMessageOffset[(u32)&((StageWork *)0)->hudMessage == 0x338 ? 1 : -1];
 typedef char StageWorkShadowActorsOffset[(u32)&((StageWork *)0)->shadowActors == 0x34c ? 1 : -1];
 typedef char StageWorkGroupsOffset[(u32)&((StageWork *)0)->groups == 0x450 ? 1 : -1];

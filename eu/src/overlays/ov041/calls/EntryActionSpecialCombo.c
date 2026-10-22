@@ -173,7 +173,7 @@ void EntryActionSpecialCombo(u8 entryIndex)
             entry->hit.altEffect.category = 0xff;
             entry->hit.altEffect.index = 0x2e;
             entry->hit.altEffect.animation = 0;
-            ForEachActionTarget(entry, work->hitSeqArc, 4);
+            ForEachActionTarget(entry, work->weapon.seqArc, 4);
             StartSceneFadeIn(10 * FX32_ONE);
         }
         if (data_ov041_020cff48.comboStage == COMBO_FINISHER && frame >= 6 * FX32_ONE && frame < 7 * FX32_ONE) {
@@ -207,7 +207,7 @@ void EntryActionSpecialCombo(u8 entryIndex)
             (entry->flags & STAGE_ENTRY_PRESS_PANEL)) {
             entry->flags |= STAGE_ENTRY_COMBO_FINISHED;
         }
-        ForEachActionTarget(entry, work->hitSeqArc, 4);
+        ForEachActionTarget(entry, work->weapon.seqArc, 4);
         if ((entry->flags & STAGE_ENTRY_PRESSED_ATTACK) && !(entry->flags & STAGE_ENTRY_MISSED)) {
             StartSceneFadeIn(10 * FX32_ONE);
         }
