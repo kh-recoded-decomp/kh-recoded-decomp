@@ -55,9 +55,12 @@ of these gates for the checked-in source:
    in the game uses deblocking, FastAudio or coding 1, so the capture script
    forces those paths once each and restores the player's state afterwards.
 
-A receipt only applies while the source's SHA-256 is unchanged. These blocks are
-reported in their own `Verified library` column and in a separate
-"C + verified library" total; they never count inside the C figures.
+A receipt only applies while the source's SHA-256 is unchanged. In PROGRESS.md
+these blocks are reported in their own `Verified library` column and in a
+separate "C + verified library" total; they never count inside the C figures.
+The objdiff report published to decomp.dev counts them as matched code under
+their own category, "MobiClip: verified library (hand-written ARM)", so a unit
+whose remaining code is all verified library shows as complete there.
 
 ## ASM stubs
 

@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 """Generate build/report.json in the objdiff report format for decomp.dev.
 
-Code only counts when a real C source is classified as byte-exact. DATA totals
-come from each module's section table; matched DATA comes only from source-owned
-ranges retained in delinks.txt after byte-exact verification.
+Code counts when a real C source is classified as byte-exact, or when a MobiClip
+block holds a verified-library receipt (eu/mobiclip_receipts.json, see
+docs/PROGRESS_POLICY.md); those blocks are reported in their own category. DATA
+totals come from each module's section table; matched DATA comes only from
+source-owned ranges retained in delinks.txt after byte-exact verification.
 """
 import json
 import re
@@ -19,6 +21,8 @@ from project import BUILD_DIR  # noqa: E402
 LIB_LABELS = {
     "nitro": "NitroSDK", "nns": "NitroSystem", "msl": "MSL", "mobiclip": "MobiClip",
 }
+VERIFIED_LIBRARY = "mobiclip/verified"
+MATCHED = ("c_decompiled_matched", "library_verified")
 
 
 def category_for(src_path, unit):
@@ -32,6 +36,8 @@ def category_for(src_path, unit):
 
 
 def label_for(cid):
+    if cid == VERIFIED_LIBRARY:
+        return "MobiClip: verified library (hand-written ARM)"
     if cid == "main":
         return "Main + ITCM + DTCM"
     if cid.startswith("overlays/ov"):
@@ -92,8 +98,9 @@ def build_report(functions, data_units=None):
         units[func["unit"]].append({
             "name": func["name"],
             "size": func["size"],
-            "category": category_for(func.get("source"), func["unit"]),
-            "matched": func["category"] == "c_decompiled_matched",
+            "category": (VERIFIED_LIBRARY if func["category"] == "library_verified"
+                         else category_for(func.get("source"), func["unit"])),
+            "matched": func["category"] in MATCHED,
         })
 
     report_units = []
@@ -104,9 +111,13 @@ def build_report(functions, data_units=None):
         data = data_units.get(unit, {"sections": [], "total": 0, "matched": 0})
         weight = defaultdict(int)
         for func in funcs:
-            weight[func["category"]] += func["size"] or 1
+            if func["category"] != VERIFIED_LIBRARY:
+                weight[func["category"]] += func["size"] or 1
             all_categories.add(func["category"])
         primary = max(weight, key=weight.get) if weight else category_for(None, unit)
+        progress_categories = [primary]
+        if any(func["category"] == VERIFIED_LIBRARY for func in funcs):
+            progress_categories.append(VERIFIED_LIBRARY)
 
         data_category = category_for(None, unit)
         category_data[data_category][0] += data["total"]
@@ -133,7 +144,7 @@ def build_report(functions, data_units=None):
                     all(func["matched"] for func in funcs)
                     and data["matched"] == data["total"]
                 ),
-                "progressCategories": [primary],
+                "progressCategories": progress_categories,
             },
         })
 
