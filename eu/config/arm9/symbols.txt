@@ -24,6 +24,7 @@ AutoloadCallback kind:function(arm,size=0x4) addr:0x02000a74
 func_02000a78 kind:function(arm,size=0xe8) addr:0x02000a78
 PanelState_NoOpA kind:function(arm,size=0x4) addr:0x02000b60
 PanelState_NoOpB kind:function(arm,size=0x4) addr:0x02000b64
+SDK_ModuleParamsBlock kind:function(arm,size=0x84,unknown) addr:0x02000b68
 BuildInfo kind:data(any) addr:0x02000b88
 cardi_backup_assert kind:data(any) addr:0x02000bac
 main kind:function(arm,size=0x328) addr:0x02000bec

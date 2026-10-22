@@ -108,6 +108,10 @@ src/calls/PanelState_NoOpB.c:
     complete
     .text       start:0x02000b64 end:0x02000b68
 
+libs/nitro/init/asm_stubs/auto/SDK_ModuleParamsBlock.s:
+    complete
+    .text       start:0x02000b68 end:0x02000bec
+
 src/calls/main.c:
     complete
     .text       start:0x02000bec end:0x02000f14
