@@ -472,9 +472,9 @@ src/overlays/ov022/calls/decodeMovieAdpcmSamples.cpp:
     complete
     .text       start:0x020aaafc end:0x020aac54
 
-src/overlays/ov022/asm_stubs/calls/GetMovieChunkType1Size.c:
+src/overlays/ov022/asm_stubs/calls/MobiClip_AudioTransformDecode.s:
     complete
-    .text       start:0x020aac54 end:0x020aac8c
+    .text       start:0x020aac54 end:0x020ab614
 
 src/overlays/ov022/calls/DecodeMovieChunkType2.c:
     complete

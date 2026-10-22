@@ -1,3 +1,4 @@
+#define GetMovieChunkType1Size MobiClip_AudioTransformDecode
 #define func_01ff869c MIi_CpuCopy16
 #define func_ov022_020aaac8 func_ov022_020aaae8
 #define func_ov022_020aaadc decodeMovieAdpcmSamples

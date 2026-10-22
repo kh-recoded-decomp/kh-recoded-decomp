@@ -115,7 +115,7 @@ func_ov022_020aaa08 kind:function(arm,size=0x70) addr:0x020aaa08
 func_ov022_020aaa78 kind:function(arm,size=0x70) addr:0x020aaa78
 func_ov022_020aaae8 kind:function(arm,size=0x14) addr:0x020aaae8
 decodeMovieAdpcmSamples kind:function(arm,size=0x158) addr:0x020aaafc
-GetMovieChunkType1Size kind:function(arm,size=0x38) addr:0x020aac54
+MobiClip_AudioTransformDecode kind:function(arm,size=0x9c0,unknown) addr:0x020aac54
 func_ov022_020ab464 kind:label(arm) addr:0x020ab464
 DecodeMovieChunkType2 kind:function(arm,size=0x4) addr:0x020ab614
 func_ov022_020ab898 kind:function(arm,size=0x56c) addr:0x020ab898
