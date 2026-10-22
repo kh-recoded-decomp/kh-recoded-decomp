@@ -18,7 +18,7 @@ void ClearEntryActionState(StageEntry *entry)
 
     entry->flags &= ~STAGE_ENTRY_TIMED_PRESS;
     entry->flags &= ~0x10000;
-    entry->flags &= ~0x100;
+    entry->flags &= ~STAGE_ENTRY_COMBO_FINISHED;
     entry->flags &= ~0x80;
     entry->flags &= ~STAGE_ENTRY_MISSED;
     for (i = 0; i < entry->targetCount; i++) {

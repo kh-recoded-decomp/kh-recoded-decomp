@@ -9494,5 +9494,6 @@
   "src/overlays/ov041/calls/StageEntryStateStepForward.c": "dsi/1.1",
   "src/overlays/ov041/calls/HandleCommandMenuShortcuts.c": "dsi/1.1",
   "src/overlays/ov041/calls/StageEntryStateDefeated.c": "dsi/1.1",
-  "src/overlays/ov041/calls/EntryActionBarrage.c": "dsi/1.1"
+  "src/overlays/ov041/calls/EntryActionBarrage.c": "dsi/1.1",
+  "src/overlays/ov041/calls/EntryActionSpecialCombo.c": "dsi/1.1"
 }

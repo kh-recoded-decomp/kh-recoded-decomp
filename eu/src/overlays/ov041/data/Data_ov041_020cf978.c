@@ -3,7 +3,7 @@
 extern void func_ov041_020c6b98(void);
 extern void func_ov041_020c7264(void);
 extern void func_ov041_020c7c34(void);
-extern void func_ov041_020c8910(void);
+extern void EntryActionSpecialCombo(void);
 extern void func_ov041_020c8f48(void);
 extern void func_ov041_020c948c(void);
 extern void EntryActionMelee(void);
@@ -37,7 +37,7 @@ void (*gStageEntryActionHandlers[17])(void) = {
     func_ov041_020c6b98,
     func_ov041_020c7264,
     func_ov041_020c7c34,
-    func_ov041_020c8910,
+    EntryActionSpecialCombo,
     func_ov041_020c8f48,
     func_ov041_020c948c,
     EntryActionMelee,

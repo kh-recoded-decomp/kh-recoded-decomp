@@ -61,7 +61,7 @@ static inline VecFx32 OverheadOf(StageEntry *entry)
 }
 
 /*
- * Action handler for a barrage: picks how many shots to fire (minShots to maxShots), shows the cast effect on
+ * Action handler for a barrage: picks how many shots to fire (minRepeats to maxRepeats), shows the cast effect on
  * the cast frame and the aim effect on the effect frame, then every shotInterval frames fires a shot at the next
  * standing primary entry, flying it from beside the attacker to the target's head. A shot that arrives hits its
  * target (shown on the press panel while it flies, with the guard press checked early when no shot flies just
@@ -87,9 +87,9 @@ void EntryActionBarrage(u8 entryIndex)
     case 0:
         data_ov041_020cff48.shotsFired = 0;
         data_ov041_020cff48.shotCount =
-            func_0202a9e4((action->maxShots - action->minShots) * 1000) / 1000 + action->minShots - 1;
-        if (action->minShots == action->maxShots) {
-            data_ov041_020cff48.shotCount = action->minShots - 1;
+            func_0202a9e4((action->maxRepeats - action->minRepeats) * 1000) / 1000 + action->minRepeats - 1;
+        if (action->minRepeats == action->maxRepeats) {
+            data_ov041_020cff48.shotCount = action->minRepeats - 1;
         }
         entry->stateStep++;
     case 1:

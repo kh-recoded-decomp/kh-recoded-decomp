@@ -191,7 +191,7 @@ StageEntryStateHealed kind:function(thumb,size=0xd0) addr:0x020c6ac8
 func_ov041_020c6b98 kind:function(thumb,size=0x6cc) addr:0x020c6b98
 func_ov041_020c7264 kind:function(thumb,size=0x9d0) addr:0x020c7264
 func_ov041_020c7c34 kind:function(thumb,size=0xcdc) addr:0x020c7c34
-func_ov041_020c8910 kind:function(thumb,size=0x638) addr:0x020c8910
+EntryActionSpecialCombo kind:function(thumb,size=0x638) addr:0x020c8910
 func_ov041_020c8f48 kind:function(thumb,size=0x544) addr:0x020c8f48
 func_ov041_020c948c kind:function(thumb,size=0xba0) addr:0x020c948c
 EntryActionMelee kind:function(thumb,size=0x47c) addr:0x020ca02c
@@ -295,10 +295,7 @@ data_ov041_020cf554 kind:data(any) addr:0x020cf554
 data_ov041_020cf568 kind:data(any) addr:0x020cf568
 gSpecialStagePositionTable kind:data(any) addr:0x020cf580
 data_ov041_020cf594 kind:data(any) addr:0x020cf594
-data_ov041_020cf5d4 kind:data(any) addr:0x020cf5d4
-data_ov041_020cf5d8 kind:data(any) addr:0x020cf5d8
-data_ov041_020cf5e4 kind:data(any) addr:0x020cf5e4
-data_ov041_020cf5e8 kind:data(any) addr:0x020cf5e8
+gAttackVoices kind:data(any) addr:0x020cf5d4
 data_ov041_020cf61c kind:data(any) addr:0x020cf61c
 data_ov041_020cf61d kind:label(arm) addr:0x020cf61d
 gEmptyColumnCandidates kind:data(any) addr:0x020cf6ac

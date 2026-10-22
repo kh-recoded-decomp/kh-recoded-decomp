@@ -53,6 +53,7 @@ typedef struct StageGroundShadow {
 #define STAGE_ENTRY_DODGED 0x20 /* it dodged a hit */
 #define STAGE_ENTRY_TIMED_PRESS 0x40 /* the button was pressed in time during its action */
 #define STAGE_ENTRY_PRESSED_ATTACK 0x80 /* A pressed in time as the attacker */
+#define STAGE_ENTRY_COMBO_FINISHED 0x100 /* landed the last hit of a combo with the press panel lit */
 #define STAGE_ENTRY_PRESSED_GUARD 0x600 /* Y pressed in time as the defender (status 9 counts as one) */
 #define STAGE_ENTRY_GUARDED 0x200 /* the hit was guarded */
 #define STAGE_ENTRY_GUARDING 0x400
@@ -134,6 +135,15 @@ typedef struct StageHpThresholds {
 } StageHpThresholds;
 
 /* Entry indices (or columns) a target is picked from at random (-1 = none). */
+/* A sound: its archive and its index there. */
+typedef struct StageSoundRef {
+    int seqArc;
+    int index;
+} StageSoundRef;
+
+/* What a player entry calls out as it attacks: by 0xff - kind, then a random pick. */
+extern const StageSoundRef gAttackVoices[3][3];
+
 /* Two sounds of which one is picked at random. */
 typedef struct StageSoundChoices {
     int indices[2];
@@ -224,15 +234,17 @@ struct StageEntry {
 
 typedef struct StageRenderCapture {
     u8 unk00;
-    u8 reserved01;
+    u8 comboStage; /* combos: which of the four attacks comes next (3 is the finisher, 0 ends it) */
     union {
         u8 comboCount; /* extra melee hits made in a row */
         u8 shotsFired; /* barrages */
+        u8 comboHit; /* combos: the hit being made, from 1 */
     };
     u8 reserved03;
     union {
         int teamLeader; /* the entry whose sounds a team attack plays */
         int shotCount; /* barrages: one less than the shots they fire */
+        int comboLength; /* combos: one less than the hits they make */
     };
     union {
         int reviveWait; /* frames waited after a revive */

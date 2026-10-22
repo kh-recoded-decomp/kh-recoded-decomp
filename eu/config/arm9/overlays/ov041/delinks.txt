@@ -744,6 +744,10 @@ src/overlays/ov041/calls/StageEntryStateHealed.c:
     complete
     .text       start:0x020c6ac8 end:0x020c6b98
 
+src/overlays/ov041/calls/EntryActionSpecialCombo.c:
+    complete
+    .text       start:0x020c8910 end:0x020c8f48
+
 src/overlays/ov041/calls/EntryActionMelee.c:
     complete
     .text       start:0x020ca02c end:0x020ca4a8
@@ -1020,14 +1024,6 @@ src/overlays/ov041/data/RodataStrings_ov041_020cf49c.c:
     complete
     .rodata     start:0x020cf49c end:0x020cf4a0
 
-src/overlays/ov041/data/RodataStrings_ov041_020cf5d4.c:
-    complete
-    .rodata     start:0x020cf5d4 end:0x020cf5d8
-
-src/overlays/ov041/data/RodataStrings_ov041_020cf5e4.c:
-    complete
-    .rodata     start:0x020cf5e4 end:0x020cf5e8
-
 src/overlays/ov041/data/RodataStrings_ov041_020cf720.c:
     complete
     .rodata     start:0x020cf720 end:0x020cf730
@@ -1104,13 +1100,9 @@ src/overlays/ov041/data/Rodata_ov041_020cf580.c:
     complete
     .rodata     start:0x020cf580 end:0x020cf5d4
 
-src/overlays/ov041/data/Rodata_ov041_020cf5d8.c:
+src/overlays/ov041/data/Rodata_ov041_020cf5d4.c:
     complete
-    .rodata     start:0x020cf5d8 end:0x020cf5e4
-
-src/overlays/ov041/data/Rodata_ov041_020cf5e8.c:
-    complete
-    .rodata     start:0x020cf5e8 end:0x020cf61c
+    .rodata     start:0x020cf5d4 end:0x020cf61c
 
 src/overlays/ov041/data/Rodata_ov041_020cf61c.c:
     complete
