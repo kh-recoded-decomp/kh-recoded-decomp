@@ -476,21 +476,9 @@ src/overlays/ov022/asm_stubs/calls/MobiClip_AudioTransformDecode.s:
     complete
     .text       start:0x020aac54 end:0x020ab614
 
-src/overlays/ov022/calls/DecodeMovieChunkType2.c:
+src/overlays/ov022/asm_stubs/calls/MobiClip_FastAudioDecode.s:
     complete
-    .text       start:0x020ab614 end:0x020ab618
-
-src/overlays/ov022/asm_stubs/calls/func_ov022_020ab898.c:
-    complete
-    .text       start:0x020ab898 end:0x020abe04
-
-src/overlays/ov022/asm_stubs/calls/func_ov022_020abe44.c:
-    complete
-    .text       start:0x020abe44 end:0x020ac010
-
-src/overlays/ov022/asm_stubs/calls/DecodeMovieChunkType2Impl.c:
-    complete
-    .text       start:0x020ac020 end:0x020ac1c0
+    .text       start:0x020ab614 end:0x020ac9c0
 
 src/overlays/ov022/asm_stubs/calls/func_ov022_020b715c.c:
     complete
