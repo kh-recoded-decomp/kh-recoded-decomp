@@ -9509,5 +9509,6 @@
   "src/asm_stubs/calls/func_01ff8ec0.c": "dsi/1.1",
   "src/asm_stubs/calls/func_01ff8f5c.c": "dsi/1.1",
   "src/asm_stubs/calls/func_01ff8ff8.c": "dsi/1.1",
-  "src/asm_stubs/calls/func_01ff9094.c": "dsi/1.1"
+  "src/asm_stubs/calls/func_01ff9094.c": "dsi/1.1",
+  "src/overlays/ov041/calls/EntryActionMagic.c": "dsi/1.1"
 }
