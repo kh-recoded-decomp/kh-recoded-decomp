@@ -12,7 +12,7 @@ typedef float f32;
 extern StageEntryAction *GetEntryAction(StageEntry *entry);
 extern int GetEntryAnimationFrame(StageEntry *entry);
 extern BOOL IsStageEntryFrozen(StageEntry *entry);
-extern void func_ov041_020c3c88(StageEntry *entry);
+extern void FillActionTargets(StageEntry *entry);
 extern void SetSceneEntryAnimation(StageEntry *entry, int animation, int blend, int reset);
 extern int func_0202a9e4(u16 range);
 extern void PlayStageSound(int seqArcNo, int index, BOOL checked);
@@ -58,7 +58,7 @@ void EntryActionSpell(u8 entryIndex)
         data_ov041_020cff48.castTimer = 0;
         entry->stateStep++;
     case 1:
-        func_ov041_020c3c88(entry);
+        FillActionTargets(entry);
         SetSceneEntryAnimation(entry, action->animation, 0, 1);
         frame = GetEntryAnimationFrame(entry);
         if (func_0202a9e4(2000) / 1000 == 0) {

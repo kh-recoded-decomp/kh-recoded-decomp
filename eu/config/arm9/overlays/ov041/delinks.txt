@@ -624,6 +624,10 @@ src/overlays/ov041/calls/ChooseEntryMainTarget.c:
     complete
     .text       start:0x020c3b08 end:0x020c3c88
 
+src/overlays/ov041/calls/FillActionTargets.c:
+    complete
+    .text       start:0x020c3c88 end:0x020c3f10
+
 src/overlays/ov041/calls/StartStageEntryMotion.c:
     complete
     .text       start:0x020c3f10 end:0x020c3f38

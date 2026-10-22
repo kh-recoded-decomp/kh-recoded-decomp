@@ -21,7 +21,7 @@ extern void PlayStageSound(int seqArcNo, int index, BOOL checked);
 extern s32 GetHudLabelId(int labelIndex);
 extern void ShowFieldMessageLine_02072ad0(int kind, ...);
 extern int PickStageTarget(int mode);
-extern void func_ov041_020c3c88(StageEntry *entry);
+extern void FillActionTargets(StageEntry *entry);
 extern void FinishEntryAction(StageEntry *entry);
 extern void SetSceneEntryAnimation(StageEntry *entry, int animation, int blend, int reset);
 extern void GetEntryMoveEnds(StageEntry *entry, VecFx32 *start, VecFx32 *end, BOOL toTarget);
@@ -94,7 +94,7 @@ void EntryActionDash(u8 entryIndex)
             break;
         }
         entry->mainTarget = PickStageTarget(action->targetKind);
-        func_ov041_020c3c88(entry);
+        FillActionTargets(entry);
         if (entry->mainTarget == entry->index) {
             FinishEntryAction(entry);
             return;

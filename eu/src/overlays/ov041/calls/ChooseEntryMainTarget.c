@@ -4,10 +4,10 @@
 extern BOOL HasEntryWithClearState(BOOL enemies);
 extern BOOL HasActionInRange(StageEntry *entry);
 extern int func_ov041_020c2d4c(StageEntry *entry, int range);
-extern void func_ov041_020c3c88(StageEntry *entry);
+extern void FillActionTargets(StageEntry *entry);
 
 /*
- * Picks the entry its action aims at (mainTarget) and fills its targets (func_ov041_020c3c88): nobody left to
+ * Picks the entry its action aims at (mainTarget) and fills its targets (FillActionTargets): nobody left to
  * aim at keeps it on itself; a player entry in a stage with flags 0x20 aims at the kind 0x17 entry once no kind
  * 0 secondary entry is left (flag 0x400000) or else at the first enemy; otherwise the target is kept unless the
  * action kind or a target that is out calls for a new one in range (func_ov041_020c2d4c).
@@ -57,7 +57,7 @@ void ChooseEntryMainTarget(StageEntry *entry)
             }
         }
         if (picked) {
-            func_ov041_020c3c88(entry);
+            FillActionTargets(entry);
             return;
         }
     }
@@ -91,6 +91,6 @@ void ChooseEntryMainTarget(StageEntry *entry)
     }
     if (target != entry->index) {
         entry->mainTarget = target;
-        func_ov041_020c3c88(entry);
+        FillActionTargets(entry);
     }
 }

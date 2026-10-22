@@ -18,7 +18,7 @@ extern StageEntryAction *GetEntryAction(StageEntry *entry);
 extern int GetEntryAnimationFrame(StageEntry *entry);
 extern void ReleaseEntryStatusItem(u8 entryIndex);
 extern int func_0202a9e4(u16 range);
-extern void func_ov041_020c3c88(StageEntry *entry);
+extern void FillActionTargets(StageEntry *entry);
 extern void SetSceneEntryAnimation(StageEntry *entry, int animation, int blend, int reset);
 extern void GetEntryMoveEnds(StageEntry *entry, VecFx32 *start, VecFx32 *end, BOOL toTarget);
 extern void GetStageGridPosition(VecFx32 *position, u8 row, u8 column);
@@ -134,7 +134,7 @@ void EntryActionTeamSlash(u8 entryIndex)
             entry->waitFrames--;
             break;
         }
-        func_ov041_020c3c88(entry);
+        FillActionTargets(entry);
         SetSceneEntryAnimation(entry, action->animation, 1, 0);
         GetEntryAnimationFrame(entry);
         GetEntryMoveEnds(entry, &start, &end, TRUE);
@@ -191,7 +191,7 @@ void EntryActionTeamSlash(u8 entryIndex)
         again = TRUE;
         break;
     case TEAM_RUN_LOW:
-        func_ov041_020c3c88(entry);
+        FillActionTargets(entry);
         SetSceneEntryAnimation(entry, action->animation, 1, 0);
         frame = GetEntryAnimationFrame(entry);
         SpawnRunDust(entry);
@@ -261,7 +261,7 @@ void EntryActionTeamSlash(u8 entryIndex)
             entry->waitFrames--;
             break;
         }
-        func_ov041_020c3c88(entry);
+        FillActionTargets(entry);
         SetSceneEntryAnimation(entry, action->animation, 1, 0);
         GetEntryAnimationFrame(entry);
         GetEntryMoveEnds(entry, &start, &end, TRUE);

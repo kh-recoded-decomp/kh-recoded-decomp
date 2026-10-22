@@ -168,15 +168,18 @@ typedef struct StageScaleFactors {
 #define FLURRY_RECOVER_ANIMATION 9
 
 /*
- * StageEntryAction.targetKind and StageWork.commandEffectKind: what the target cursor picks. Scene slots go in rows of
- * three: slot / 3 is the row (0 for the primary entries, 1-3 for the secondary ones), slot % 3 the column.
+ * StageEntryAction.targetKind and StageWork.commandEffectKind: what an action is aimed at. Scene slots go in rows of
+ * three: slot / 3 is the row (0 for the primary entries, 1-3 for the secondary ones), slot % 3 the column. Kinds
+ * below 7 aim at the other side.
  */
-#define STAGE_TARGET_ONE 0 /* one secondary entry: up and down change its column, left and right its row */
-#define STAGE_TARGET_COLUMN 1 /* every secondary entry in the column of the one under the cursor */
-#define STAGE_TARGET_ALL 4 /* every secondary entry */
-#define STAGE_TARGET_ONE_PRIMARY 7 /* one primary entry, moved up and down */
-#define STAGE_TARGET_ALL_PRIMARY 8 /* every primary entry */
-#define STAGE_TARGET_FIELD_MENU 10 /* no cursor move: L with the d-pad works the field menu */
+#define STAGE_TARGET_ONE 0
+#define STAGE_TARGET_COLUMN 1 /* every entry in the main target's column on its side */
+#define STAGE_TARGET_ROW 2 /* every entry in the main target's row */
+#define STAGE_TARGET_ALL 4 /* every entry on the main target's side */
+#define STAGE_TARGET_ONE_PRIMARY 7
+#define STAGE_TARGET_ALL_PRIMARY 8
+#define STAGE_TARGET_ONE_EVEN_OUT 9 /* the main target, even when it is out */
+#define STAGE_TARGET_FIELD_MENU 10 /* no target cursor: L with the d-pad works the field menu */
 
 typedef struct StageEntryAction {
     s16 soundSeqArc;
@@ -191,7 +194,7 @@ typedef struct StageEntryAction {
     u8 reserved12[2];
     u8 minRepeats; /* barrages and combos: how many shots or hits they make, from minRepeats to maxRepeats */
     u8 maxRepeats;
-    u8 targetKind; /* STAGE_TARGET_*: below 7 the action is aimed at the secondary entries */
+    u8 targetKind; /* STAGE_TARGET_*: below 7 the action is aimed at the other side */
     u8 range; /* how many rows away it reaches */
     u16 pressWindow; /* frames before the hit in which the timed press counts */
     u16 effectLength; /* frames of its effect item's animation before the hit lands */

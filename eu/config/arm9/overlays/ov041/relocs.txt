@@ -1154,6 +1154,14 @@ from:0x020c3bdc kind:thumb_call to:0x020c2cac module:overlay(41)
 from:0x020c3c62 kind:thumb_call to:0x020c2d4c module:overlay(41)
 from:0x020c3c78 kind:thumb_call to:0x020c3c88 module:overlay(41)
 from:0x020c3c80 kind:load to:0x020bc500 module:overlays(35,38)
+from:0x020c3c96 kind:thumb_call to:0x020c3094 module:overlay(41)
+from:0x020c3d14 kind:thumb_call to:0x020c0ec0 module:overlay(41)
+from:0x020c3d30 kind:thumb_call_arm to:0x02023dd0 module:main
+from:0x020c3d3c kind:thumb_call_arm to:0x02023dd0 module:main
+from:0x020c3d94 kind:thumb_call to:0x020c0ec0 module:overlay(41)
+from:0x020c3db6 kind:thumb_call_arm to:0x02023dd0 module:main
+from:0x020c3dc0 kind:thumb_call_arm to:0x02023dd0 module:main
+from:0x020c3f04 kind:load to:0x020bc500 module:overlays(35,38)
 from:0x020c3f30 kind:thumb_call to:0x020c3f38 module:overlay(41)
 from:0x020c3f6a kind:thumb_call_arm to:0x01ffa0f4 module:itcm
 from:0x020c3f70 kind:thumb_call_arm to:0x01ff9c84 module:itcm

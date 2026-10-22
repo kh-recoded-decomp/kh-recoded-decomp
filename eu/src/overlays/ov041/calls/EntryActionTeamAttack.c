@@ -17,7 +17,7 @@ extern StageEntryAction *GetEntryAction(StageEntry *entry);
 extern int GetEntryAnimationFrame(StageEntry *entry);
 extern void ReleaseEntryStatusItem(u8 entryIndex);
 extern int func_0202a9e4(u16 range);
-extern void func_ov041_020c3c88(StageEntry *entry);
+extern void FillActionTargets(StageEntry *entry);
 extern void SetSceneEntryAnimation(StageEntry *entry, int animation, int blend, int reset);
 extern void GetEntryMoveEnds(StageEntry *entry, VecFx32 *start, VecFx32 *end, BOOL toTarget);
 extern void AimEntryPathModel(StageEntry *entry, const VecFx32 *start, const VecFx32 *end, BOOL reverse,
@@ -117,7 +117,7 @@ void EntryActionTeamAttack(u8 entryIndex)
             entry->waitFrames--;
             break;
         }
-        func_ov041_020c3c88(entry);
+        FillActionTargets(entry);
         SetSceneEntryAnimation(entry, action->animation, 1, 0);
         frame = GetEntryAnimationFrame(entry);
         GetEntryMoveEnds(entry, &start, &end, TRUE);
@@ -138,7 +138,7 @@ void EntryActionTeamAttack(u8 entryIndex)
     case TEAM_RUN_LOW:
         entry->stateStep++;
     case TEAM_RUN_LOW + 1:
-        func_ov041_020c3c88(entry);
+        FillActionTargets(entry);
         SetSceneEntryAnimation(entry, action->animation, 1, 0);
         frame = GetEntryAnimationFrame(entry);
         GetEntryMoveEnds(entry, &lowStart, &lowEnd, TRUE);
@@ -174,7 +174,7 @@ void EntryActionTeamAttack(u8 entryIndex)
             entry->waitFrames--;
             break;
         }
-        func_ov041_020c3c88(entry);
+        FillActionTargets(entry);
         SetSceneEntryAnimation(entry, action->animation, 1, 0);
         frame = GetEntryAnimationFrame(entry);
         if (data_ov041_020cff48.teamLeader == entry->index) {

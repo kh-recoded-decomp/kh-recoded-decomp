@@ -15,7 +15,7 @@ typedef float f32;
 extern StageEntryAction *GetEntryAction(StageEntry *entry);
 extern int GetEntryAnimationFrame(StageEntry *entry);
 extern void ReleaseEntryStatusItem(u8 entryIndex);
-extern void func_ov041_020c3c88(StageEntry *entry);
+extern void FillActionTargets(StageEntry *entry);
 extern void SetSceneEntryAnimation(StageEntry *entry, int animation, int blend, int reset);
 extern void GetEntryMoveEnds(StageEntry *entry, VecFx32 *start, VecFx32 *end, BOOL toTarget);
 extern void AimEntryPathModel(StageEntry *entry, const VecFx32 *start, const VecFx32 *end, BOOL reverse,
@@ -72,7 +72,7 @@ void EntryActionPathAttack(u8 entryIndex)
         VecFx32 start;
         VecFx32 end;
 
-        func_ov041_020c3c88(entry);
+        FillActionTargets(entry);
         SetSceneEntryAnimation(entry, action->animation, 1, 0);
         frame = GetEntryAnimationFrame(entry);
         GetEntryMoveEnds(entry, &start, &end, TRUE);
@@ -92,7 +92,7 @@ void EntryActionPathAttack(u8 entryIndex)
         VecFx32 start;
         VecFx32 end;
 
-        func_ov041_020c3c88(entry);
+        FillActionTargets(entry);
         SetSceneEntryAnimation(entry, action->animation, 1, 0);
         GetEntryAnimationFrame(entry);
         PlayStageSound(0x30, 3, TRUE);
@@ -129,7 +129,7 @@ void EntryActionPathAttack(u8 entryIndex)
         VecFx32 start;
         VecFx32 end;
 
-        func_ov041_020c3c88(entry);
+        FillActionTargets(entry);
         SetSceneEntryAnimation(entry, action->animation, 1, 0);
         frame = GetEntryAnimationFrame(entry);
         PlayStageSound(0x35, 0, TRUE);

@@ -58,7 +58,7 @@ void MoveTargetCursor(int source)
         break;
     }
     switch (kind) {
-    case STAGE_TARGET_ONE:
+    case STAGE_TARGET_ONE: /* up and down change the column, left and right the row */
         if (data_02060500 & PAD_KEY_UP) {
             do {
                 if (work->targetSlot % 3 == 0) {
@@ -213,7 +213,7 @@ void MoveTargetCursor(int source)
             } while (!SLOT_IN_FIGHT(work->targetSlot));
         }
         break;
-    case STAGE_TARGET_ONE_PRIMARY:
+    case STAGE_TARGET_ONE_PRIMARY: /* up and down along the primary row */
         if (data_02060500 & PAD_KEY_UP) {
             do {
                 if (work->targetSlot % 3 == 0) {
