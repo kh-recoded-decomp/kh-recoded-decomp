@@ -160,6 +160,13 @@ typedef struct StageScaleFactors {
 } StageScaleFactors;
 
 /* An action an entry can take (from its list, or an item's). */
+/* StageEntryAction.flurry */
+#define FLURRY_START_FRAME 0 /* animation frame the attacker sets off on */
+#define FLURRY_RETURN_LENGTH 1 /* frames of the walk back */
+#define FLURRY_ANIMATION 2 /* the first hit's animation; each hit plays the next one */
+#define FLURRY_HIT_END 3 /* [3 + hit]: the frame each hit's animation ends on */
+#define FLURRY_RECOVER_ANIMATION 9
+
 typedef struct StageEntryAction {
     s16 soundSeqArc;
     u8 reserved02[2];
@@ -190,47 +197,51 @@ typedef struct StageEntryAction {
     u8 altEffectAnimation;
     union {
         struct {
-        union {
-            u8 castFrame; /* animation frame its effect takes hold on */
-            u8 variant; /* path attacks: which of their three runs (0-2) */
-        };
-        union {
-            u8 effectFrame; /* animation frame its effect item appears on */
-            u8 recoverAnimation; /* path attacks: played on the way back */
-        };
-        union {
-            u8 returnFrame; /* melee: animation frame the walk back starts on */
-            u8 shotInterval; /* barrages: frames between two shots */
-        };
-        union {
-            u8 effectCategory;
-            u8 returnEndFrame; /* melee: and ends on */
-        };
-        union {
-            u8 effectIndex;
-            u8 windupAnimation; /* dashes: played before and after the run */
-        };
-        u8 effectAnimation;
-        union {
-            struct {
-                u8 healEffectCategory; /* heals: the item shown over the healed entry */
-                u8 healEffectIndex;
-                u8 healEffectAnimation;
+            union {
+                u8 castFrame; /* animation frame its effect takes hold on */
+                u8 variant; /* path attacks: which of their three runs (0-2) */
             };
-            struct {
-                u8 reserved2e;
-                u8 attackStyle; /* kind 1: 3 plays the hit sound even on a miss; kind 0x10 attackers: 0 aims high */
-                u8 extraReach; /* kinds 1 and 6: tenths of a unit the attacker stops further away */
+            union {
+                u8 effectFrame; /* animation frame its effect item appears on */
+                u8 recoverAnimation; /* path attacks: played on the way back */
             };
-            struct {
-                u8 aimEffectCategory; /* barrages: the item shown over the attacker as it starts shooting */
-                u8 aimEffectIndex;
-                u8 aimEffectAnimation;
+            union {
+                u8 returnFrame; /* melee: animation frame the walk back starts on */
+                u8 shotInterval; /* barrages: frames between two shots */
             };
-        };
-        u8 shotCategory; /* barrages: the item each shot flies as */
-        u8 shotIndex;
-        u8 shotAnimation;
+            union {
+                u8 effectCategory;
+                u8 returnEndFrame; /* melee: and ends on */
+            };
+            union {
+                u8 effectIndex;
+                u8 windupAnimation; /* dashes: played before and after the run */
+            };
+            u8 effectAnimation;
+            union {
+                struct {
+                    u8 healEffectCategory; /* heals: the item shown over the healed entry */
+                    u8 healEffectIndex;
+                    u8 healEffectAnimation;
+                };
+                struct {
+                    u8 reserved2e;
+                    u8 attackStyle; /* kind 1: 3 plays the hit sound even on a miss; kind 0x10 attackers: 0 aims high */
+                    u8 extraReach; /* kinds 1 and 6: tenths of a unit the attacker stops further away */
+                };
+                struct {
+                    u8 aimEffectCategory; /* barrages: the item shown over the attacker as it starts shooting */
+                    u8 aimEffectIndex;
+                    u8 aimEffectAnimation;
+                };
+            };
+            u8 shotCategory; /* barrages: the item each shot flies as */
+            u8 shotIndex;
+            u8 shotAnimation;
+            u8 statusTurns;
+            u8 itemSlot;
+            u8 effect;
+            u8 effectArg;
         };
         struct {
             u8 reserved28[4];
@@ -244,11 +255,11 @@ typedef struct StageEntryAction {
             u8 comboRecoverFrame; /* where the walk back joins the first animation */
             u8 comboStyle; /* 0-2: how far each attack carries the attacker */
         };
+        struct {
+            u8 flurry[10]; /* flurries: FLURRY_* timings and animations */
+            u8 flurryPressFrames[6]; /* the hit frames the timed press is checked against */
+        };
     };
-    u8 statusTurns;
-    u8 itemSlot;
-    u8 effect;
-    u8 effectArg;
 } StageEntryAction;
 
 /* StageWork.flags */

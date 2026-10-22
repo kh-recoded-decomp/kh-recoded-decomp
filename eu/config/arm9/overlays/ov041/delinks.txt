@@ -756,6 +756,10 @@ src/overlays/ov041/calls/EntryActionSpecialCombo.c:
     complete
     .text       start:0x020c8910 end:0x020c8f48
 
+src/overlays/ov041/calls/EntryActionDash.c:
+    complete
+    .text       start:0x020c8f48 end:0x020c948c
+
 src/overlays/ov041/calls/EntryActionMelee.c:
     complete
     .text       start:0x020ca02c end:0x020ca4a8

@@ -233,12 +233,16 @@ struct StageEntry {
 };
 
 typedef struct StageRenderCapture {
-    u8 unk00;
+    union {
+        u8 unk00;
+        u8 flurryRound; /* flurries: counts the rounds of three hits */
+    };
     u8 comboStage; /* combos: which of the four attacks comes next (3 is the finisher, 0 ends it) */
     union {
         u8 comboCount; /* extra melee hits made in a row */
         u8 shotsFired; /* barrages */
         u8 comboHit; /* combos: the hit being made, from 1 */
+        u8 flurryHit; /* flurries: hits made so far */
     };
     u8 reserved03;
     union {
@@ -250,7 +254,7 @@ typedef struct StageRenderCapture {
         int reviveWait; /* frames waited after a revive */
         int shotTimer; /* barrages: counts down; a shot goes off whenever it is a multiple of the interval */
     };
-    u8 reserved0c[4];
+    fx32 flurryHitEnd; /* flurries: the frame the current hit's animation ends on */
     StageEntry *entry;
     fx32 castTimer; /* frames since a spell was cast, while its caster is not frozen */
     VecFx32 panelOffset; /* from a defender to its timed press panel */
