@@ -10,7 +10,7 @@ extern void RequestFieldRefresh(void);
 extern void InvokeFieldModeOp2c4(int commandId);
 extern int GetCommandEffectKind(int commandId);
 extern StageMarker *ShowStageMarker(int listIndex, const VecFx32 *position, BOOL persistent);
-extern void func_ov041_020be478(int arg);
+extern void MoveTargetCursor(int source);
 extern StageEntry *FindStageEntryBySceneSlot(int sceneSlot);
 extern void ReleaseCommandMarkers(void);
 extern void SetStageState(int state, BOOL runNow);
@@ -59,7 +59,7 @@ void StageStateChooseTarget(void)
         work->stateStep++;
     case 3:
     default:
-        func_ov041_020be478(1);
+        MoveTargetCursor(1);
         if (data_02060500 & PAD_BUTTON_A) {
             work->targetIndex = FindStageEntryBySceneSlot(work->targetSlot)->index;
             ReleaseCommandMarkers();

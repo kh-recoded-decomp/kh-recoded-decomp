@@ -9500,5 +9500,6 @@
   "src/overlays/ov041/calls/EntryActionTeamSlash.c": "dsi/1.1",
   "src/overlays/ov041/calls/EntryActionCombo.c": "dsi/1.1",
   "src/overlays/ov041/calls/EntryActionRushAttack.c": "dsi/1.1",
-  "src/overlays/ov041/calls/EntryActionDash.c": "dsi/1.1"
+  "src/overlays/ov041/calls/EntryActionDash.c": "dsi/1.1",
+  "src/overlays/ov041/calls/MoveTargetCursor.c": "dsi/1.1"
 }

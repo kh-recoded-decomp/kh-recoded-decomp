@@ -166,7 +166,7 @@ struct StageEntry {
     u8 kind;
     u8 index; /* its own place in StageWork.entries */
     s8 row;
-    u8 column;
+    s8 column;
     u8 state;
     u8 previousState;
     u8 stateStep; /* progress inside the current state */

@@ -8,7 +8,7 @@
 extern u16 data_02060500;
 extern void RequestFieldRefresh(void);
 extern void ShowStageHudMessage(u8 kind, ...);
-extern void func_ov041_020be478(int arg);
+extern void MoveTargetCursor(int source);
 extern StageEntry *FindStageEntryBySceneSlot(int sceneSlot);
 extern void ReleaseCommandMarkers(void);
 extern void PlayStageSound(int seqArcNo, int index, BOOL checked);
@@ -58,7 +58,7 @@ void StageStateChooseItemTarget(void)
             break;
         }
     default:
-        func_ov041_020be478(0);
+        MoveTargetCursor(0);
         if (data_02060500 & PAD_BUTTON_A) {
             switch (work->itemActions[0].effect) {
             case 0xe4:

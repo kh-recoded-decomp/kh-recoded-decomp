@@ -224,6 +224,10 @@ src/overlays/ov041/calls/HandleCommandMenuShortcuts.c:
     complete
     .text       start:0x020be340 end:0x020be478
 
+src/overlays/ov041/calls/MoveTargetCursor.c:
+    complete
+    .text       start:0x020be478 end:0x020bebf0
+
 src/overlays/ov041/auto/GetCommandEffectKind.c:
     complete
     .text       start:0x020bebf0 end:0x020bec4e

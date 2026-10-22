@@ -167,6 +167,17 @@ typedef struct StageScaleFactors {
 #define FLURRY_HIT_END 3 /* [3 + hit]: the frame each hit's animation ends on */
 #define FLURRY_RECOVER_ANIMATION 9
 
+/*
+ * StageEntryAction.targetKind and StageWork.commandEffectKind: what the target cursor picks. Scene slots go in columns
+ * of three (slot / 3 is the column, slot % 3 the row): column 0 holds the primary entries, columns 1-3 the secondary.
+ */
+#define STAGE_TARGET_ONE 0 /* one secondary entry, moved over every column */
+#define STAGE_TARGET_COLUMN 1 /* every secondary entry in a column, moved a column at a time */
+#define STAGE_TARGET_ALL 4 /* every secondary entry */
+#define STAGE_TARGET_ONE_PRIMARY 7 /* one primary entry, moved up and down its column */
+#define STAGE_TARGET_ALL_PRIMARY 8 /* every primary entry */
+#define STAGE_TARGET_FIELD_MENU 10 /* no cursor move: L with the d-pad works the field menu */
+
 typedef struct StageEntryAction {
     s16 soundSeqArc;
     u8 reserved02[2];
@@ -180,7 +191,7 @@ typedef struct StageEntryAction {
     u8 reserved12[2];
     u8 minRepeats; /* barrages and combos: how many shots or hits they make, from minRepeats to maxRepeats */
     u8 maxRepeats;
-    u8 targetKind; /* below 7 the action is aimed at the secondary entries */
+    u8 targetKind; /* STAGE_TARGET_*: below 7 the action is aimed at the secondary entries */
     u8 range; /* how many rows away it reaches */
     u16 pressWindow; /* frames before the hit in which the timed press counts */
     u16 effectLength; /* frames of its effect item's animation before the hit lands */
@@ -299,7 +310,7 @@ typedef struct StageWork {
     u32 flags;
     u8 stateTimer;
     u8 targetSlot; /* scene slot of the entry the target cursor is on */
-    u8 reserved00e;
+    u8 targetRow; /* top or bottom row the cursor last changed column from; a change from the middle row starts there */
     u8 introStep;
     u8 introValue;
     u8 introKind;
@@ -314,7 +325,7 @@ typedef struct StageWork {
     u8 commandId;
     u8 fieldSlot;
     u8 targetIndex;
-    u8 commandEffectKind;
+    u8 commandEffectKind; /* STAGE_TARGET_* of the chosen command */
     u8 reserved028[4];
     StageEntryAction itemActions[3]; /* what each primary entry does with the chosen item */
     StageMarker *commandMarkers[9];
