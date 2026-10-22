@@ -1,7 +1,7 @@
 #include "nitro/types.h"
 
-extern void func_ov041_020c6b98(void);
-extern void func_ov041_020c7264(void);
+extern void EntryActionCombo(void);
+extern void EntryActionRushAttack(void);
 extern void func_ov041_020c7c34(void);
 extern void EntryActionSpecialCombo(void);
 extern void func_ov041_020c8f48(void);
@@ -34,8 +34,8 @@ extern void StageEntryStateHealed(void);
 #pragma explicit_zero_data on
 
 void (*gStageEntryActionHandlers[17])(void) = {
-    func_ov041_020c6b98,
-    func_ov041_020c7264,
+    EntryActionCombo,
+    EntryActionRushAttack,
     func_ov041_020c7c34,
     EntryActionSpecialCombo,
     func_ov041_020c8f48,

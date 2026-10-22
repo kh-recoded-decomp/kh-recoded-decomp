@@ -744,6 +744,14 @@ src/overlays/ov041/calls/StageEntryStateHealed.c:
     complete
     .text       start:0x020c6ac8 end:0x020c6b98
 
+src/overlays/ov041/calls/EntryActionCombo.c:
+    complete
+    .text       start:0x020c6b98 end:0x020c7264
+
+src/overlays/ov041/calls/EntryActionRushAttack.c:
+    complete
+    .text       start:0x020c7264 end:0x020c7c34
+
 src/overlays/ov041/calls/EntryActionSpecialCombo.c:
     complete
     .text       start:0x020c8910 end:0x020c8f48

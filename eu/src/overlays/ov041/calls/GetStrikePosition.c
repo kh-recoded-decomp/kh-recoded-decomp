@@ -15,9 +15,9 @@ extern void ScaleVecFx32(fx32 scale, const VecFx32 *source, VecFx32 *dest);
 /*
  * Where an attacker stops to strike a target: 70% of the way from the attacker to the near edge of the target
  * (its radius on the attacker's side), both lifted by the current height row; a player never passes x = 0 and
- * kind 0x12 stands one unit higher.
+ * kind 0x12 stands one unit higher. The action is passed along but not looked at.
  */
-void GetStrikePosition(VecFx32 *out, StageEntry *attacker, StageEntry *target)
+void GetStrikePosition(VecFx32 *out, StageEntry *attacker, StageEntry *target, StageEntryAction *action)
 {
     StageWork *work = gMovieContextState->stageWork;
     fx32 radius;

@@ -233,6 +233,12 @@ typedef struct StageEntryAction {
         u8 shotAnimation;
         };
         struct {
+            u8 reserved28[4];
+            u8 rushEffectCategory; /* melee rushes: the item that rushes in with the attacker */
+            u8 rushEffectIndex;
+            u8 rushEffectAnimation;
+        };
+        struct {
             u8 comboAnimations[4]; /* combos: the animation of each of the four attacks (3 is the finisher) */
             u8 comboEndFrames[4]; /* and the frame each one ends on */
             u8 comboRecoverFrame; /* where the walk back joins the first animation */
