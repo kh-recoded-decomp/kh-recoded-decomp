@@ -168,13 +168,13 @@ typedef struct StageScaleFactors {
 #define FLURRY_RECOVER_ANIMATION 9
 
 /*
- * StageEntryAction.targetKind and StageWork.commandEffectKind: what the target cursor picks. Scene slots go in columns
- * of three (slot / 3 is the column, slot % 3 the row): column 0 holds the primary entries, columns 1-3 the secondary.
+ * StageEntryAction.targetKind and StageWork.commandEffectKind: what the target cursor picks. Scene slots go in rows of
+ * three: slot / 3 is the row (0 for the primary entries, 1-3 for the secondary ones), slot % 3 the column.
  */
-#define STAGE_TARGET_ONE 0 /* one secondary entry, moved over every column */
-#define STAGE_TARGET_COLUMN 1 /* every secondary entry in a column, moved a column at a time */
+#define STAGE_TARGET_ONE 0 /* one secondary entry: up and down change its column, left and right its row */
+#define STAGE_TARGET_COLUMN 1 /* every secondary entry in the column of the one under the cursor */
 #define STAGE_TARGET_ALL 4 /* every secondary entry */
-#define STAGE_TARGET_ONE_PRIMARY 7 /* one primary entry, moved up and down its column */
+#define STAGE_TARGET_ONE_PRIMARY 7 /* one primary entry, moved up and down */
 #define STAGE_TARGET_ALL_PRIMARY 8 /* every primary entry */
 #define STAGE_TARGET_FIELD_MENU 10 /* no cursor move: L with the d-pad works the field menu */
 
@@ -310,7 +310,7 @@ typedef struct StageWork {
     u32 flags;
     u8 stateTimer;
     u8 targetSlot; /* scene slot of the entry the target cursor is on */
-    u8 targetRow; /* top or bottom row the cursor last changed column from; a change from the middle row starts there */
+    u8 targetColumn; /* edge column the cursor last changed row from; a change from the middle column starts there */
     u8 introStep;
     u8 introValue;
     u8 introKind;

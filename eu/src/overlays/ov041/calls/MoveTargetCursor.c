@@ -76,7 +76,8 @@ void MoveTargetCursor(int source)
                 }
             } while (!SLOT_IN_FIGHT(work->targetSlot));
         } else if (data_02060500 & PAD_KEY_LEFT) {
-            int row = previousSlot % 3;
+            /* the next row back, after the last one the first */
+            int column = previousSlot % 3;
 
             do {
                 if (work->targetSlot / 3 == 3) {
@@ -85,10 +86,11 @@ void MoveTargetCursor(int source)
                     work->targetSlot += 3;
                 }
                 if (!SLOT_IN_FIGHT(work->targetSlot)) {
+                    /* nobody there: look along the new row, from the column the cursor came from (or remembers) */
                     int slot;
                     int start;
 
-                    if (row == 0) {
+                    if (column == 0) {
                         start = work->targetSlot / 3 * 3;
                         for (slot = start; slot < start + 3; slot++) {
                             if (slot / 3 != start / 3) {
@@ -99,7 +101,7 @@ void MoveTargetCursor(int source)
                                 break;
                             }
                         }
-                    } else if (row == 2) {
+                    } else if (column == 2) {
                         start = work->targetSlot / 3 * 3 + 2;
                         for (slot = start; slot > start - 3; slot--) {
                             if (slot / 3 != start / 3) {
@@ -111,7 +113,7 @@ void MoveTargetCursor(int source)
                             }
                         }
                     } else {
-                        start = work->targetRow + work->targetSlot / 3 * 3;
+                        start = work->targetColumn + work->targetSlot / 3 * 3;
                         for (slot = start; slot < start + 3; slot++) {
                             if (slot / 3 != start / 3) {
                                 slot -= 3;
@@ -124,11 +126,12 @@ void MoveTargetCursor(int source)
                     }
                 }
             } while (!SLOT_IN_FIGHT(work->targetSlot));
-            if (row != 1) {
-                work->targetRow = row;
+            if (column != 1) {
+                work->targetColumn = column;
             }
         } else if (data_02060500 & PAD_KEY_RIGHT) {
-            int row = previousSlot % 3;
+            /* the next row forward, before the first one the last */
+            int column = previousSlot % 3;
 
             do {
                 if (work->targetSlot / 3 == 1) {
@@ -137,10 +140,11 @@ void MoveTargetCursor(int source)
                     work->targetSlot -= 3;
                 }
                 if (!SLOT_IN_FIGHT(work->targetSlot)) {
+                    /* nobody there: look along the new row, from the column the cursor came from (or remembers) */
                     int slot;
                     int start;
 
-                    if (row == 0) {
+                    if (column == 0) {
                         start = work->targetSlot / 3 * 3;
                         for (slot = start; slot < start + 3; slot++) {
                             if (slot / 3 != start / 3) {
@@ -151,7 +155,7 @@ void MoveTargetCursor(int source)
                                 break;
                             }
                         }
-                    } else if (row == 2) {
+                    } else if (column == 2) {
                         start = work->targetSlot / 3 * 3 + 2;
                         for (slot = start; slot > start - 3; slot--) {
                             if (slot / 3 != start / 3) {
@@ -163,7 +167,7 @@ void MoveTargetCursor(int source)
                             }
                         }
                     } else {
-                        start = work->targetRow + work->targetSlot / 3 * 3;
+                        start = work->targetColumn + work->targetSlot / 3 * 3;
                         for (slot = start; slot < start + 3; slot++) {
                             if (slot / 3 != start / 3) {
                                 slot -= 3;
@@ -176,13 +180,13 @@ void MoveTargetCursor(int source)
                     }
                 }
             } while (!SLOT_IN_FIGHT(work->targetSlot));
-            if (row != 1) {
-                work->targetRow = row;
+            if (column != 1) {
+                work->targetColumn = column;
             }
         }
         break;
     case STAGE_TARGET_COLUMN:
-        /* up and down both go to the next column */
+        /* up and down both go to the next row of the same column */
         if (data_02060500 & PAD_KEY_UP) {
             do {
                 for (i = 0; i < 3; i++) {
