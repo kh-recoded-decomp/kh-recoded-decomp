@@ -52,7 +52,7 @@ FreeManagerRecordTable kind:function(thumb,size=0x34) addr:0x020be224
 UpdateEntryStatusItems kind:function(thumb,size=0x28) addr:0x020be258
 UpdateEntryStatusItem kind:function(thumb,size=0x8c) addr:0x020be280
 ReleaseEntryStatusItem kind:function(thumb,size=0x34) addr:0x020be30c
-func_ov041_020be340 kind:function(thumb,size=0x138) addr:0x020be340
+HandleCommandMenuShortcuts kind:function(thumb,size=0x138) addr:0x020be340
 func_ov041_020be478 kind:function(thumb,size=0x778) addr:0x020be478
 GetCommandEffectKind kind:function(thumb,size=0x5e) addr:0x020bebf0
 ReleaseCommandMarkers kind:function(thumb,size=0x30) addr:0x020bec50
@@ -177,12 +177,12 @@ ClearEntryActionState kind:function(thumb,size=0x108) addr:0x020c54d8
 FinishEntryAction kind:function(thumb,size=0xe0) addr:0x020c55e0
 StageEntryStateWaiting kind:function(thumb,size=0x40c) addr:0x020c56c0
 StageEntryStateTurn kind:function(thumb,size=0x1a0) addr:0x020c5acc
-func_ov041_020c5c6c kind:function(thumb,size=0x528) addr:0x020c5c6c
+StageEntryStateDefeated kind:function(thumb,size=0x528) addr:0x020c5c6c
 EntryStateNoop5 kind:function(thumb,size=0x2) addr:0x020c6194
 StageEntryStateEnter kind:function(thumb,size=0x184) addr:0x020c6198
-func_ov041_020c631c kind:function(thumb,size=0xf8) addr:0x020c631c
+StageEntryStateStepBack kind:function(thumb,size=0xf8) addr:0x020c631c
 EntryStateNoop8 kind:function(thumb,size=0x2) addr:0x020c6414
-func_ov041_020c6418 kind:function(thumb,size=0x104) addr:0x020c6418
+StageEntryStateStepForward kind:function(thumb,size=0x104) addr:0x020c6418
 StageEntryStateAdvance kind:function(thumb,size=0x138) addr:0x020c651c
 StageEntryStateAppear kind:function(thumb,size=0xec) addr:0x020c6654
 EntryStateStatusCommand kind:function(thumb,size=0x28c) addr:0x020c6740
@@ -318,9 +318,9 @@ data_ov041_020cf7a0 kind:data(any) addr:0x020cf7a0
 data_ov041_020cf7bc kind:data(any) addr:0x020cf7bc
 gEmptyActionChoices kind:data(any) addr:0x020cf7ec
 gStageStatusSounds kind:data(any) addr:0x020cf7f0
-data_ov041_020cf7f8 kind:data(any) addr:0x020cf7f8
+gNoOrbAmounts kind:data(any) addr:0x020cf7f8
 data_ov041_020cf804 kind:data(any) addr:0x020cf804
-data_ov041_020cf814 kind:data(any) addr:0x020cf814
+gNoOrbShares kind:data(any) addr:0x020cf814
 data_ov041_020cf82c kind:data(any) addr:0x020cf82c
 gStageOrbValues kind:data(any) addr:0x020cf88c
 gStageScaleFactors kind:data(any) addr:0x020cf898

@@ -21,10 +21,10 @@ extern void StageEntryStateEnter(void);
 extern void StageEntryStateWaiting(void);
 extern void StageEntryStateTurn(void);
 extern void EntryStateNoop5(void);
-extern void func_ov041_020c5c6c(void);
-extern void func_ov041_020c631c(void);
+extern void StageEntryStateDefeated(void);
+extern void StageEntryStateStepBack(void);
 extern void EntryStateNoop8(void);
-extern void func_ov041_020c6418(void);
+extern void StageEntryStateStepForward(void);
 extern void StageEntryStateAdvance(void);
 extern void StageEntryStateAppear(void);
 extern void EntryStateStatusCommand(void);
@@ -60,10 +60,10 @@ void (*gStageEntryStateHandlers[15])(void) = {
     StageEntryStateTurn,
     NULL,
     EntryStateNoop5,
-    func_ov041_020c5c6c,
-    func_ov041_020c631c,
+    StageEntryStateDefeated,
+    StageEntryStateStepBack,
     EntryStateNoop8,
-    func_ov041_020c6418,
+    StageEntryStateStepForward,
     StageEntryStateAdvance,
     StageEntryStateAppear,
     EntryStateStatusCommand,

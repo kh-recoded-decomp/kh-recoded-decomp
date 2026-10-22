@@ -220,6 +220,10 @@ src/overlays/ov041/calls/ReleaseEntryStatusItem.c:
     complete
     .text       start:0x020be30c end:0x020be340
 
+src/overlays/ov041/calls/HandleCommandMenuShortcuts.c:
+    complete
+    .text       start:0x020be340 end:0x020be478
+
 src/overlays/ov041/auto/GetCommandEffectKind.c:
     complete
     .text       start:0x020bebf0 end:0x020bec4e
@@ -696,6 +700,10 @@ src/overlays/ov041/calls/StageEntryStateTurn.c:
     complete
     .text       start:0x020c5acc end:0x020c5c6c
 
+src/overlays/ov041/calls/StageEntryStateDefeated.c:
+    complete
+    .text       start:0x020c5c6c end:0x020c6194
+
 src/overlays/ov041/auto/EntryStateNoop5.c:
     complete
     .text       start:0x020c6194 end:0x020c6196
@@ -704,9 +712,17 @@ src/overlays/ov041/calls/StageEntryStateEnter.c:
     complete
     .text       start:0x020c6198 end:0x020c631c
 
+src/overlays/ov041/calls/StageEntryStateStepBack.c:
+    complete
+    .text       start:0x020c631c end:0x020c6414
+
 src/overlays/ov041/auto/EntryStateNoop8.c:
     complete
     .text       start:0x020c6414 end:0x020c6416
+
+src/overlays/ov041/calls/StageEntryStateStepForward.c:
+    complete
+    .text       start:0x020c6418 end:0x020c651c
 
 src/overlays/ov041/calls/StageEntryStateAdvance.c:
     complete

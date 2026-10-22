@@ -46,6 +46,24 @@ typedef struct StageOrbBurst {
     fx32 timer;
 } StageOrbBurst;
 
+/* The primary entries and their hp, sorted to share out the orbs of a defeat (index -1 = none). */
+typedef struct StageOrbShare {
+    int index;
+    int hp;
+} StageOrbShare;
+
+typedef struct StageOrbShares {
+    StageOrbShare entries[3];
+} StageOrbShares;
+
+/* The hp each primary entry gets back from a defeat, fx32 (-1 = none). */
+typedef struct StageOrbAmounts {
+    fx32 values[3];
+} StageOrbAmounts;
+
+extern const StageOrbShares gNoOrbShares;
+extern const StageOrbAmounts gNoOrbAmounts;
+
 typedef char StageOrbSize[sizeof(StageOrb) == 0x38 ? 1 : -1];
 
 #endif

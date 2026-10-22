@@ -181,7 +181,10 @@ typedef struct StageEntryAction {
         u8 effectCategory;
         u8 returnEndFrame; /* melee: and ends on */
     };
-    u8 effectIndex;
+    union {
+        u8 effectIndex;
+        u8 windupAnimation; /* dashes: played before and after the run */
+    };
     u8 effectAnimation;
     union {
         struct {

@@ -6,7 +6,9 @@
 
 typedef struct StageEntryNode {
     u16 flags;
-    u8 reserved02[0x7a];
+    u8 reserved02[0x22];
+    void *modelResource;
+    u8 reserved028[0x54];
     u16 yaw; /* used while flags has STAGE_MODEL_USE_YAW */
     u8 reserved07e[2];
     MtxFx33 rotation;
@@ -60,6 +62,7 @@ typedef struct StageGroundShadow {
 #define STAGE_ENTRY_FLAG_800 0x800
 #define STAGE_ENTRY_STEP_BACK 0x4000
 #define STAGE_ENTRY_FROZEN 0x8000
+#define STAGE_ENTRY_STRUCK 0x20000 /* already hit by the dash going through it */
 #define STAGE_ENTRY_NOT_TALLIED 0x80000
 #define STAGE_ENTRY_FORCE_ACTION_2 0x200000
 #define STAGE_ENTRY_VOICE_TOGGLE 0x400000 /* which of its two hurt voices plays next */

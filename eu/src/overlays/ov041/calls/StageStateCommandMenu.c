@@ -14,7 +14,7 @@ extern u16 data_02060500; /* buttons newly pressed */
 extern void ForceHudState6IfActive(void);
 extern void HideStageHudMessage(void);
 extern BOOL func_ov001_02077ef4(void);
-extern void func_ov041_020be340(BOOL canSwitchMode);
+extern void HandleCommandMenuShortcuts(BOOL canSwitchMode);
 extern void ShowStageHudMessage(u8 kind, ...);
 extern void SetMenuEntryHighlight(int listKind, int entryId, BOOL highlighted);
 extern int InvokeFieldModeOp150(void);
@@ -34,7 +34,7 @@ extern s16 *GetPlayerFlagRecord(int index);
 extern void UpdateStageEntry(u8 entryIndex);
 
 /*
- * Stage state for the command menu: after a two-frame wait it runs the shortcuts (func_ov041_020be340), then
+ * Stage state for the command menu: after a two-frame wait it runs the shortcuts (HandleCommandMenuShortcuts), then
  * reads the menu: holding R for 30 frames closes every submenu and flees (state 8), B backs out of a submenu,
  * A goes to state 7; X picks the highlighted entry, which opens a submenu (up to three deep), uses an item
  * (state 14, with the item's action loaded) or, outside the main page, a command (state 12). Entries are
@@ -67,7 +67,7 @@ void StageStateCommandMenu(void)
         }
         work->stateStep++;
     case 2:
-        func_ov041_020be340(TRUE);
+        HandleCommandMenuShortcuts(TRUE);
         if (data_020604fc & PAD_BUTTON_R) {
             data_ov041_020cff40[1]++;
             work->flags |= 0x100;

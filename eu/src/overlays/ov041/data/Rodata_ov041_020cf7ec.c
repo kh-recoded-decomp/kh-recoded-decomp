@@ -10,17 +10,16 @@ const u32 data_ov041_020cf82c[24] = {
     0xFFFFE000, 0x00004000, 0x00005000, 0x00006000,
 };
 
-const u32 data_ov041_020cf814[6] = {
-    0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF,
-    0xFFFFFFFF, 0xFFFFFFFF,
+const StageOrbShares gNoOrbShares = {
+    {{-1, -1}, {-1, -1}, {-1, -1}},
 };
 
 const StageHpThresholds data_ov041_020cf804 = {
     {0xccd, 0x99a, 0x666, 0x333},
 };
 
-const u32 data_ov041_020cf7f8[3] = {
-    0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF,
+const StageOrbAmounts gNoOrbAmounts = {
+    {-1, -1, -1},
 };
 
 const StageSoundChoices gStageStatusSounds = {
