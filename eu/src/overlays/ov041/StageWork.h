@@ -62,18 +62,36 @@ typedef struct StageResourceContainer {
 #define STAGE_MODEL_USE_YAW 0x20 /* rotation from the yaw angle; cleared when a matrix is set instead */
 #define STAGE_MODEL_COLOR_SCALE 0x40
 
+/* StageMotion speed profiles */
+#define STAGE_MOTION_EASE_IN 0 /* starts at rest */
+#define STAGE_MOTION_EASE_OUT 1 /* comes to rest */
+#define STAGE_MOTION_STEADY 2
+
+/* A move from start to end over duration frames: speed plus accel per elapsed frame, in units per frame. */
+typedef struct StageMotion {
+    fx32 elapsed;
+    fx32 duration;
+    VecFx32 start;
+    VecFx32 end;
+    fx32 speed;
+    fx32 accel;
+} StageMotion;
+
 typedef struct StageItemModel {
     u16 flags;
     u8 reserved02[0x1e];
     StageModelRenderObject renderObject;
-    u8 reserved07c[4];
+    u16 yaw; /* used while flags has STAGE_MODEL_USE_YAW */
+    u8 reserved07e[2];
     MtxFx33 rotation; /* with position: the 4x3 matrix it is drawn with */
     VecFx32 position;
     VecFx32 scale;
     u8 reserved0bc[0x1c];
     u8 blend[0x24];
     u16 colorScale;
-    u8 reserved0fe[0x3a];
+    u8 reserved0fe[6];
+    StageMotion motion; /* moves position (projectiles) */
+    u8 reserved12c[0xc];
 } StageItemModel;
 
 typedef struct StageResourceItem {
@@ -152,7 +170,9 @@ typedef struct StageEntryAction {
     u16 chance; /* out of 1000 */
     u16 critical;
     u16 accuracy;
-    u8 reserved12[4];
+    u8 reserved12[2];
+    u8 minShots; /* barrages: how many shots they fire, at random in [minShots, maxShots] */
+    u8 maxShots;
     u8 targetKind; /* below 7 the action is aimed at the secondary entries */
     u8 range; /* how many rows away it reaches */
     u16 pressWindow; /* frames before the hit in which the timed press counts */
@@ -176,7 +196,10 @@ typedef struct StageEntryAction {
         u8 effectFrame; /* animation frame its effect item appears on */
         u8 recoverAnimation; /* path attacks: played on the way back */
     };
-    u8 returnFrame; /* melee: animation frame the walk back starts on */
+    union {
+        u8 returnFrame; /* melee: animation frame the walk back starts on */
+        u8 shotInterval; /* barrages: frames between two shots */
+    };
     union {
         u8 effectCategory;
         u8 returnEndFrame; /* melee: and ends on */
@@ -197,8 +220,15 @@ typedef struct StageEntryAction {
             u8 attackStyle; /* kind 1: 3 plays the hit sound even on a miss; kind 0x10 attackers: 0 aims high */
             u8 extraReach; /* kinds 1 and 6: tenths of a unit the attacker stops further away */
         };
+        struct {
+            u8 aimEffectCategory; /* barrages: the item shown over the attacker as it starts shooting */
+            u8 aimEffectIndex;
+            u8 aimEffectAnimation;
+        };
     };
-    u8 reserved31[3];
+    u8 shotCategory; /* barrages: the item each shot flies as */
+    u8 shotIndex;
+    u8 shotAnimation;
     u8 statusTurns;
     u8 itemSlot;
     u8 effect;

@@ -760,6 +760,10 @@ src/overlays/ov041/calls/EntryActionOnSelf.c:
     complete
     .text       start:0x020ca800 end:0x020ca8fc
 
+src/overlays/ov041/calls/EntryActionBarrage.c:
+    complete
+    .text       start:0x020cbcf0 end:0x020cc2b8
+
 src/overlays/ov041/calls/EntryActionSpell.c:
     complete
     .text       start:0x020cc2b8 end:0x020cc5e4

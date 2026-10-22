@@ -74,21 +74,6 @@ typedef struct StageGroundShadow {
 #define STAGE_ENTRY_STATUS_9 9 /* blocks the defending press */
 #define STAGE_ENTRY_STATUS_10 10 /* widens the timed press window */
 
-/* StageMotion speed profiles */
-#define STAGE_MOTION_EASE_IN 0 /* starts at rest */
-#define STAGE_MOTION_EASE_OUT 1 /* comes to rest */
-#define STAGE_MOTION_STEADY 2
-
-/* A move from start to end over duration frames: speed plus accel per elapsed frame, in units per frame. */
-typedef struct StageMotion {
-    fx32 elapsed;
-    fx32 duration;
-    VecFx32 start;
-    VecFx32 end;
-    fx32 speed;
-    fx32 accel;
-} StageMotion;
-
 /* A model played through an animation that also moves along path nodes (as GetPathNodeOffset reads them). */
 typedef struct StagePathModel {
     u8 reserved000[0x20];
@@ -240,10 +225,19 @@ struct StageEntry {
 typedef struct StageRenderCapture {
     u8 unk00;
     u8 reserved01;
-    u8 comboCount; /* extra melee hits made in a row */
+    union {
+        u8 comboCount; /* extra melee hits made in a row */
+        u8 shotsFired; /* barrages */
+    };
     u8 reserved03;
-    int teamLeader; /* the entry whose sounds a team attack plays */
-    int reviveWait; /* frames waited after a revive */
+    union {
+        int teamLeader; /* the entry whose sounds a team attack plays */
+        int shotCount; /* barrages: one less than the shots they fire */
+    };
+    union {
+        int reviveWait; /* frames waited after a revive */
+        int shotTimer; /* barrages: counts down; a shot goes off whenever it is a multiple of the interval */
+    };
     u8 reserved0c[4];
     StageEntry *entry;
     fx32 castTimer; /* frames since a spell was cast, while its caster is not frozen */
