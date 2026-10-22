@@ -255,6 +255,10 @@ src/overlays/ov031/auto/func_ov031_020bc060.c:
     complete
     .text       start:0x020bc060 end:0x020bc06c
 
+src/overlays/ov031/calls/LoadSceneData.c:
+    complete
+    .text       start:0x020bc06c end:0x020bc510
+
 src/overlays/ov031/calls/ResetOverlaySelection.c:
     complete
     .text       start:0x020bc510 end:0x020bc544
