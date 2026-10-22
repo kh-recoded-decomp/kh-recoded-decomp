@@ -2,7 +2,7 @@
 #include "src/overlays/ov041/StageEntryRender.h"
 
 extern StageEntryAction *GetEntryAction(StageEntry *entry);
-extern u32 func_ov041_020c4d58(StageEntry *entry, StageEntry *target, StageEntryHit *hit);
+extern u32 ResolveEntryHit(StageEntry *entry, StageEntry *target, StageEntryHit *hit);
 extern void GetEntryOverheadPosition(VecFx32 *out, StageEntry *entry);
 extern StageResourceItem *SpawnStageItem(StageEntry *owner, int category, u8 index, u8 animation,
                                          const VecFx32 *position, BOOL persistent);
@@ -35,7 +35,7 @@ static inline VecFx32 GridOf(u8 row, u8 column)
 }
 
 /*
- * Resolves an entry's hit on one target (func_ov041_020c4d58) and shows it: the hit effect above the target and
+ * Resolves an entry's hit on one target (ResolveEntryHit) and shows it: the hit effect above the target and
  * the action's hit sound, or on a miss the effect at the target's column for actions of kind 2, 10 and 11; result
  * bit 0x10 adds a double-size effect. With pressCheck, a landed hit where either side pressed in time freezes
  * both for 9 frames.
@@ -50,7 +50,7 @@ void ApplyActionHit(StageEntry *entry, u8 targetIndex, BOOL pressCheck)
     u32 result;
     BOOL landed;
 
-    result = func_ov041_020c4d58(entry, &work->entries[targetIndex], hit);
+    result = ResolveEntryHit(entry, &work->entries[targetIndex], hit);
     landed = result & 1;
     if (landed) {
         if (!(entry->flags & STAGE_ENTRY_ENEMY) && (result & 2)) {

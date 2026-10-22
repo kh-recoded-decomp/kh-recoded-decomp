@@ -9503,5 +9503,6 @@
   "src/overlays/ov041/calls/EntryActionDash.c": "dsi/1.1",
   "src/overlays/ov041/calls/MoveTargetCursor.c": "dsi/1.1",
   "src/overlays/ov041/calls/FillActionTargets.c": "dsi/1.1",
-  "src/overlays/ov041/calls/PickTargetInRange.c": "dsi/1.1"
+  "src/overlays/ov041/calls/PickTargetInRange.c": "dsi/1.1",
+  "src/overlays/ov041/calls/ResolveEntryHit.c": "dsi/1.1"
 }

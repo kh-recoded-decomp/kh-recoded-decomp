@@ -287,7 +287,8 @@ typedef struct StageEntryAction {
 #define STAGE_WORK_NO_TIMED_INPUT 4
 #define STAGE_WORK_SKIP_CHANCE_A 8
 #define STAGE_WORK_SKIP_CHANCE_B 0x10
-#define STAGE_WORK_FIELD_OP_DONE 0x4000
+#define STAGE_WORK_WON 0x2000 /* the decisive enemy went out */
+#define STAGE_WORK_FIELD_OP_DONE 0x4000 /* also set when the leader goes out */
 #define STAGE_WORK_PANEL_MOVING 0x4000000
 #define STAGE_WORK_RUNNING_COMMANDS 0x8000000 /* the chosen menu commands are being carried out */
 #define STAGE_WORK_TURN_STARTED 0x10000000

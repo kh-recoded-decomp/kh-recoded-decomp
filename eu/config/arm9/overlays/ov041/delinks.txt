@@ -696,6 +696,10 @@ src/overlays/ov041/calls/ComputeEntryHit.c:
     complete
     .text       start:0x020c4aa0 end:0x020c4d58
 
+src/overlays/ov041/calls/ResolveEntryHit.c:
+    complete
+    .text       start:0x020c4d58 end:0x020c54d8
+
 src/overlays/ov041/calls/ClearEntryActionState.c:
     complete
     .text       start:0x020c54d8 end:0x020c55e0

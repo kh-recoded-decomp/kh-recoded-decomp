@@ -69,7 +69,8 @@ typedef struct StageGroundShadow {
 #define STAGE_ENTRY_NOT_TALLIED 0x80000
 #define STAGE_ENTRY_FORCE_ACTION_2 0x200000
 #define STAGE_ENTRY_VOICE_TOGGLE 0x400000 /* which of its two hurt voices plays next */
-#define STAGE_ENTRY_ALT_VOICES 0x800000
+#define STAGE_ENTRY_ALT_VOICES 0x800000 /* also set by a critical hit */
+#define STAGE_ENTRY_ENDURE 0x1000000 /* survives a deadly hit with 1 hp */
 
 #define STAGE_ENTRY_STATUS_COUNT 11
 #define STAGE_ENTRY_STATUS_2 2 /* set by a self action */
@@ -106,7 +107,7 @@ typedef struct StageItemSpec {
 #define STAGE_HEAL_REVIVE 1 /* heals, and brings back an entry that is out */
 #define STAGE_HEAL_HP 2
 
-/* What an entry's hit does (filled by func_ov041_020c4d58). */
+/* What an entry's hit does (filled by ComputeEntryHit, applied by ResolveEntryHit). */
 typedef struct StageEntryHit {
     fx32 amount; /* hp it takes (or gives), at most 9999 */
     int accuracy;

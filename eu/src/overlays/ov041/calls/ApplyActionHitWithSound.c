@@ -2,7 +2,7 @@
 #include "src/overlays/ov041/StageEntryRender.h"
 
 extern StageEntryAction *GetEntryAction(StageEntry *entry);
-extern u32 func_ov041_020c4d58(StageEntry *entry, StageEntry *target, StageEntryHit *hit);
+extern u32 ResolveEntryHit(StageEntry *entry, StageEntry *target, StageEntryHit *hit);
 extern void GetEntryOverheadPosition(VecFx32 *out, StageEntry *entry);
 extern StageResourceItem *SpawnStageItem(StageEntry *owner, int category, u8 index, u8 animation,
                                          const VecFx32 *position, BOOL persistent);
@@ -48,7 +48,7 @@ void ApplyActionHitWithSound(StageEntry *entry, u8 targetIndex, BOOL pressCheck,
     u32 result;
     BOOL landed;
 
-    result = func_ov041_020c4d58(entry, &work->entries[targetIndex], hit);
+    result = ResolveEntryHit(entry, &work->entries[targetIndex], hit);
     landed = result & 1;
     if (landed) {
         if (!(entry->flags & STAGE_ENTRY_ENEMY) && (result & 2)) {
