@@ -9507,5 +9507,15 @@
   "src/overlays/ov041/calls/ResolveEntryHit.c": "dsi/1.1",
   "src/overlays/ov041/calls/CheckEntryHpThresholds.c": "dsi/1.1",
   "src/overlays/ov041/calls/EntryActionCast.c": "dsi/1.1",
-  "src/overlays/ov031/calls/LoadSceneData.c": "dsi/1.1"
+  "src/overlays/ov031/calls/LoadSceneData.c": "dsi/1.1",
+  "src/asm_stubs/calls/func_01ff8b7c.c": "dsi/1.1",
+  "src/asm_stubs/calls/func_01ff8e84.c": "dsi/1.1",
+  "src/asm_stubs/calls/func_01ff8bb8.c": "dsi/1.1",
+  "src/asm_stubs/calls/func_01ff8c50.c": "dsi/1.1",
+  "src/asm_stubs/calls/func_01ff8ce8.c": "dsi/1.1",
+  "src/asm_stubs/calls/func_01ff8d80.c": "dsi/1.1",
+  "src/asm_stubs/calls/func_01ff8ec0.c": "dsi/1.1",
+  "src/asm_stubs/calls/func_01ff8f5c.c": "dsi/1.1",
+  "src/asm_stubs/calls/func_01ff8ff8.c": "dsi/1.1",
+  "src/asm_stubs/calls/func_01ff9094.c": "dsi/1.1"
 }

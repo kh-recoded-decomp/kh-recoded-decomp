@@ -113,9 +113,49 @@ src/asm_stubs/calls/func_01ff8ad8.c:
     complete
     .text       start:0x01ff8ad8 end:0x01ff8b7c
 
+src/asm_stubs/calls/func_01ff8b7c.c:
+    complete
+    .text       start:0x01ff8b7c end:0x01ff8bb8
+
+src/asm_stubs/calls/func_01ff8bb8.c:
+    complete
+    .text       start:0x01ff8bb8 end:0x01ff8c50
+
+src/asm_stubs/calls/func_01ff8c50.c:
+    complete
+    .text       start:0x01ff8c50 end:0x01ff8ce8
+
+src/asm_stubs/calls/func_01ff8ce8.c:
+    complete
+    .text       start:0x01ff8ce8 end:0x01ff8d80
+
+src/asm_stubs/calls/func_01ff8d80.c:
+    complete
+    .text       start:0x01ff8d80 end:0x01ff8dc8
+
 src/asm_stubs/calls/func_01ff8dc8.c:
     complete
     .text       start:0x01ff8dc8 end:0x01ff8e84
+
+src/asm_stubs/calls/func_01ff8e84.c:
+    complete
+    .text       start:0x01ff8e84 end:0x01ff8ec0
+
+src/asm_stubs/calls/func_01ff8ec0.c:
+    complete
+    .text       start:0x01ff8ec0 end:0x01ff8f5c
+
+src/asm_stubs/calls/func_01ff8f5c.c:
+    complete
+    .text       start:0x01ff8f5c end:0x01ff8ff8
+
+src/asm_stubs/calls/func_01ff8ff8.c:
+    complete
+    .text       start:0x01ff8ff8 end:0x01ff9094
+
+src/asm_stubs/calls/func_01ff9094.c:
+    complete
+    .text       start:0x01ff9094 end:0x01ff90dc
 
 libs/nitro/mi/asm_stubs/auto/MI_Zero36B.c:
     complete
