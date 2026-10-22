@@ -1041,6 +1041,12 @@ from:0x020c2c28 kind:thumb_call to:0x020c2bd0 module:overlay(41)
 from:0x020c2ca4 kind:load to:0x020bc500 module:overlays(35,38)
 from:0x020c2cc6 kind:thumb_call to:0x020c2c1c module:overlay(41)
 from:0x020c2d44 kind:load to:0x020bc500 module:overlays(35,38)
+from:0x020c2d70 kind:thumb_call_arm to:0x0202a9e4 module:main
+from:0x020c2d76 kind:thumb_call_arm to:0x02023dd0 module:main
+from:0x020c2d90 kind:thumb_call_arm to:0x0202a9e4 module:main
+from:0x020c2d9e kind:thumb_call_arm to:0x02023dd0 module:main
+from:0x020c2e04 kind:thumb_call to:0x020c2d4c module:overlay(41)
+from:0x020c2e1c kind:load to:0x020bc500 module:overlays(35,38)
 from:0x020c2e42 kind:thumb_call to:0x020c3094 module:overlay(41)
 from:0x020c2e6a kind:thumb_call_arm to:0x02023aac module:main
 from:0x020c2e74 kind:thumb_call_arm to:0x020245fc module:main

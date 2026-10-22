@@ -520,6 +520,10 @@ src/overlays/ov041/calls/HasActionInRange.c:
     complete
     .text       start:0x020c2cac end:0x020c2d4c
 
+src/overlays/ov041/calls/PickTargetInRange.c:
+    complete
+    .text       start:0x020c2d4c end:0x020c2e24
+
 src/overlays/ov041/calls/GetEntryMoveEnds.c:
     complete
     .text       start:0x020c2e24 end:0x020c2f7c

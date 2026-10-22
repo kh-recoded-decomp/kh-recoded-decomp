@@ -3,14 +3,14 @@
 
 extern BOOL HasEntryWithClearState(BOOL enemies);
 extern BOOL HasActionInRange(StageEntry *entry);
-extern int func_ov041_020c2d4c(StageEntry *entry, int range);
+extern int PickTargetInRange(StageEntry *entry, int range);
 extern void FillActionTargets(StageEntry *entry);
 
 /*
  * Picks the entry its action aims at (mainTarget) and fills its targets (FillActionTargets): nobody left to
  * aim at keeps it on itself; a player entry in a stage with flags 0x20 aims at the kind 0x17 entry once no kind
  * 0 secondary entry is left (flag 0x400000) or else at the first enemy; otherwise the target is kept unless the
- * action kind or a target that is out calls for a new one in range (func_ov041_020c2d4c).
+ * action kind or a target that is out calls for a new one in range (PickTargetInRange).
  */
 void ChooseEntryMainTarget(StageEntry *entry)
 {
@@ -71,23 +71,23 @@ void ChooseEntryMainTarget(StageEntry *entry)
         case 5:
         case 6:
         case 10:
-            target = func_ov041_020c2d4c(entry, entry->actions[entry->actionIndex].range);
+            target = PickTargetInRange(entry, entry->actions[entry->actionIndex].range);
             break;
         case 2:
             if (entry->kind == 0x17) {
-                target = func_ov041_020c2d4c(entry, entry->actions[entry->actionIndex].range);
+                target = PickTargetInRange(entry, entry->actions[entry->actionIndex].range);
             }
             break;
         default:
             if (work->entries[entry->mainTarget].state != STAGE_ENTRY_OUT) {
                 target = entry->mainTarget;
             } else {
-                target = func_ov041_020c2d4c(entry, entry->actions[entry->actionIndex].range);
+                target = PickTargetInRange(entry, entry->actions[entry->actionIndex].range);
             }
             break;
         }
     } else {
-        target = func_ov041_020c2d4c(entry, entry->actions[entry->actionIndex].range);
+        target = PickTargetInRange(entry, entry->actions[entry->actionIndex].range);
     }
     if (target != entry->index) {
         entry->mainTarget = target;
