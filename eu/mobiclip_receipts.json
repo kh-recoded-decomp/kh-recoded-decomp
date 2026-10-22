@@ -1,0 +1,586 @@
+{
+ "schema_version": 1,
+ "receipts": {
+  "mobiclip_audio_transform": {
+   "schema_version": 1,
+   "kind": "mobiclip_block",
+   "name": "mobiclip_audio_transform",
+   "unit": "ov022",
+   "symbol": "MobiClip_AudioTransformDecode",
+   "source": "eu/src/overlays/ov022/asm_stubs/calls/MobiClip_AudioTransformDecode.s",
+   "source_sha256": "5883eb8314bb06609d1cdff385b4814f66fe775a87059e53b29eb1160af848fc",
+   "start": "0x020aac54",
+   "end": "0x020ab614",
+   "sha256": "b3af1d9dee9fc48c65e53c816c7158032b8d67524c3f1d60cb4e39b75cb6d798",
+   "gates": {
+    "source": {
+     "result": "mobiclip_audio_transform 2496 bytes, 597 ARM instructions, 108 embedded DATA bytes, GAS+MWLD exact",
+     "instruction_count": 597,
+     "embedded_data_bytes": 108
+    },
+    "inventory": {
+     "result": "0x954 bytes of reachable ARM code + 0x6c bytes of DATA tile the block",
+     "code_bytes": 2388,
+     "data_bytes": 108
+    },
+    "semantics": {
+     "result": "random records: 360 frames in 60 chains byte-exact against the ROM routine (78 restart, 65 silence, 217 predicted) / audio_transform_0.json: lag 127, mode 2: record, 128 samples and 12 consumed bytes match the hardware / audio_transform_1.json: lag 37, mode 2: record, 128 samples and 12 consumed bytes match the hardware / audio_transform_2.json: lag 126, mode 0: record, 128 samples and 20 consumed bytes match the hardware",
+     "captures": [
+      {
+       "manifest": "audio_transform_0.json",
+       "manifest_sha256": "a4ea7e3553ed31200064b016813fa065e6d5432992579a953f0b60c2efc8e1b7"
+      },
+      {
+       "manifest": "audio_transform_1.json",
+       "manifest_sha256": "e62698c44008228dd9d0d4366819ababe879cfa5dfed407f7e71a612d51b0d15"
+      },
+      {
+       "manifest": "audio_transform_2.json",
+       "manifest_sha256": "35f0b6040bcc810766fd992e99bc2b4231a9ab925806b61a0d911b3ff1656a33"
+      }
+     ]
+    }
+   }
+  },
+  "mobiclip_blit_rows": {
+   "schema_version": 1,
+   "kind": "mobiclip_block",
+   "name": "mobiclip_blit_rows",
+   "unit": "ov022",
+   "symbol": "MobiClip_BlitRows",
+   "source": "eu/libs/mobiclip/video/asm_stubs/auto/MobiClip_BlitRows.s",
+   "source_sha256": "a27ea117b60494bf1683f07560a224ecec665ec76126a8ed370775a45d177a3d",
+   "start": "0x020aa300",
+   "end": "0x020aa8c0",
+   "sha256": "d73c01e5683150a7a650c444be0d65e7aa5c127c229631df07dab513fc253937",
+   "gates": {
+    "source": {
+     "result": "mobiclip_blit_rows 1472 bytes, 368 ARM instructions, 0 embedded DATA bytes, GAS+MWLD exact",
+     "instruction_count": 368,
+     "embedded_data_bytes": 0
+    },
+    "inventory": {
+     "result": "0x5c0 bytes of reachable ARM code + 0x0 bytes of DATA tile the block",
+     "code_bytes": 1472,
+     "data_bytes": 0
+    },
+    "semantics": {
+     "result": "random planes: 40 frames byte-exact against the ROM routine / OP.mods: 10 decoded frames byte-exact against the ROM routine / colour.json: 256x160 model matches the captured RGB555 rows",
+     "captures": [
+      {
+       "manifest": "colour.json",
+       "manifest_sha256": "cddcee7b969dcbb3bf50d10acd7acbd6b5566a51e015cc673065798dced627b6"
+      }
+     ]
+    }
+   }
+  },
+  "mobiclip_deblock": {
+   "schema_version": 1,
+   "kind": "mobiclip_block",
+   "name": "mobiclip_deblock",
+   "unit": "ov022",
+   "symbol": "MobiClip_DeblockFrame",
+   "source": "eu/src/overlays/ov022/asm_stubs/calls/MobiClip_DeblockFrame.s",
+   "source_sha256": "baf90e8d7328ed46001f8d249e45c2630fdabaf1ae5275166a0f48ff8bc7a44e",
+   "start": "0x020b715c",
+   "end": "0x020b76a8",
+   "sha256": "d748ec3b7058688d234cc06e71acbd78be5b621d31a7acb2857b1dee6e2a7c1e",
+   "gates": {
+    "source": {
+     "result": "mobiclip_deblock 1356 bytes, 316 ARM instructions, 92 embedded DATA bytes, GAS+MWLD exact",
+     "instruction_count": 316,
+     "embedded_data_bytes": 92
+    },
+    "inventory": {
+     "result": "0x4f0 bytes of reachable ARM code + 0x5c bytes of DATA tile the block",
+     "code_bytes": 1264,
+     "data_bytes": 92
+    },
+    "semantics": {
+     "result": "random frames: 40 requests byte-exact against the ROM kernel / eu/dsd_extract/files/mv/OP.mods: 30 decoded frames x 2 modes byte-exact against the ROM kernel / eu/build/mobiclip/kernel_captures/deblock.json: 256x160 qp 23 vertical_only=False: model and ARM replay match the captured planes byte for byte",
+     "captures": [
+      {
+       "manifest": "deblock.json",
+       "manifest_sha256": "37ab6e41f6d59f73b507938c3f74203c597cd8f05010eaac14b9a42f4a3d7024"
+      }
+     ]
+    }
+   }
+  },
+  "mobiclip_decoder_payload": {
+   "schema_version": 1,
+   "kind": "mobiclip_block",
+   "name": "mobiclip_decoder_payload",
+   "unit": "ov022",
+   "symbol": "gMovieDecoderCodeBlob",
+   "source": "eu/src/overlays/ov022/asm_stubs/calls/gMovieDecoderCodeBlob.s",
+   "source_sha256": "2d52ac56f7e9a4a3cbbd9d34db31e7ffcf2599576537b0bfd9d316df3fce7ecc",
+   "start": "0x020b0bc0",
+   "end": "0x020b715c",
+   "sha256": "5508ae5f765eb86e81b2ad8d76dccf6d4a30e3381d3e8b248fb8d4a6204b83f5",
+   "gates": {
+    "source": {
+     "result": "mobiclip_decoder_payload 26012 bytes, 5899 ARM instructions, 2416 embedded DATA bytes, GAS+MWLD exact",
+     "instruction_count": 5899,
+     "embedded_data_bytes": 2416
+    },
+    "inventory": {
+     "result": "0x5c2c bytes of reachable ARM code + 0x970 bytes of DATA tile the block",
+     "code_bytes": 23596,
+     "data_bytes": 2416
+    },
+    "semantics": {
+     "result": "15 complete streams (31139 frames) equal FFmpeg; 1 hardware capture(s) reproduced",
+     "streams": [
+      {
+       "mods_name": "OP.mods",
+       "mods_sha256": "6c871997525afe846b1cc9d3d98159d9ea685dbe89c3cce5949e9ef9ccfa2a11",
+       "verified_frames": 2610,
+       "i_frames": 212,
+       "p_frames": 2398
+      },
+      {
+       "mods_name": "Secret.mods",
+       "mods_sha256": "5b3c1e3924b85c8dcecf5899edf2a555580fec6f5156a62dee8d82b458811821",
+       "verified_frames": 2191,
+       "i_frames": 20,
+       "p_frames": 2171
+      },
+      {
+       "mods_name": "w1_ED.mods",
+       "mods_sha256": "effa43d3eadf09f382ae73ac30c963eef0a28c94806360c76d146e0768eddc46",
+       "verified_frames": 1989,
+       "i_frames": 53,
+       "p_frames": 1936
+      },
+      {
+       "mods_name": "w1_OP.mods",
+       "mods_sha256": "e475712133d70d43fc169a13840f322b2f4d2ca26ad63399c7352db81e2a8f55",
+       "verified_frames": 3442,
+       "i_frames": 77,
+       "p_frames": 3365
+      },
+      {
+       "mods_name": "w2_ED.mods",
+       "mods_sha256": "3962c44f848e4c20e4046f69df91a50754dc918f4f3148dbce4978ff2b91eb5e",
+       "verified_frames": 2651,
+       "i_frames": 74,
+       "p_frames": 2577
+      },
+      {
+       "mods_name": "w2_OP.mods",
+       "mods_sha256": "af9a026cebcc9aa9d27a1607779e883224c42e366bd08c42e2f35e01bc9d0146",
+       "verified_frames": 515,
+       "i_frames": 10,
+       "p_frames": 505
+      },
+      {
+       "mods_name": "w3_ED.mods",
+       "mods_sha256": "62b0630ca252e1d81f4434591941cdb0dc8bbc8fd2d109d09a1f20b5174b0053",
+       "verified_frames": 4123,
+       "i_frames": 96,
+       "p_frames": 4027
+      },
+      {
+       "mods_name": "w4_ED.mods",
+       "mods_sha256": "cb974b180fc84e804324bee426e37baed389c92e684645f9b406522ce3bc1b20",
+       "verified_frames": 1342,
+       "i_frames": 24,
+       "p_frames": 1318
+      },
+      {
+       "mods_name": "w5_ED.mods",
+       "mods_sha256": "26402d28d0b7b6bf34f50826cf9bf090808579979b15893cd5130993b4bc0799",
+       "verified_frames": 2509,
+       "i_frames": 62,
+       "p_frames": 2447
+      },
+      {
+       "mods_name": "w6_ED.mods",
+       "mods_sha256": "2fa0ca911531e5b4ccb399ea56bd8265faa26c974fe3dd6ca739b699e79135ec",
+       "verified_frames": 2072,
+       "i_frames": 48,
+       "p_frames": 2024
+      },
+      {
+       "mods_name": "w7_ED.mods",
+       "mods_sha256": "c9e339883ae5294fa25b7b320624b0c510236bfae4a71e38aa06218f2437d052",
+       "verified_frames": 1250,
+       "i_frames": 29,
+       "p_frames": 1221
+      },
+      {
+       "mods_name": "w8_ED1.mods",
+       "mods_sha256": "1a8c67a16f3a5688afecad7b6cb95916585a1c7ea19b794cb0b93d30ad8a5007",
+       "verified_frames": 2828,
+       "i_frames": 42,
+       "p_frames": 2786
+      },
+      {
+       "mods_name": "w8_ED2.mods",
+       "mods_sha256": "5e908cc9ff387b1bd5f00955419854559e6f4769138c4b579c4be69212bc2d3f",
+       "verified_frames": 1290,
+       "i_frames": 26,
+       "p_frames": 1264
+      },
+      {
+       "mods_name": "w8_ED3.mods",
+       "mods_sha256": "467a9f45f731b5d0311cc0f715f0b525850e742422294ccebcf62502bb9bf3cb",
+       "verified_frames": 427,
+       "i_frames": 18,
+       "p_frames": 409
+      },
+      {
+       "mods_name": "w8_OP.mods",
+       "mods_sha256": "296067992023e8216c36e2af32922d57369096950af707a9f94af04e3a7855db",
+       "verified_frames": 1900,
+       "i_frames": 31,
+       "p_frames": 1869
+      }
+     ],
+     "captures": [
+      {
+       "manifest": "frame_0001_manifest.json",
+       "manifest_sha256": "e7bd46ec5ea75e8dd7ed9f6d3d9bba73575e904934f6c5b2a949e15d84185e3b",
+       "checks": [
+        "chroma",
+        "coefficientTableState",
+        "decoderReturnBytes",
+        "formatState",
+        "historyBuffersUnchanged",
+        "luma",
+        "quantizerState"
+       ]
+      }
+     ]
+    }
+   }
+  },
+  "mobiclip_fastaudio": {
+   "schema_version": 1,
+   "kind": "mobiclip_block",
+   "name": "mobiclip_fastaudio",
+   "unit": "ov022",
+   "symbol": "MobiClip_FastAudioDecode",
+   "source": "eu/src/overlays/ov022/asm_stubs/calls/MobiClip_FastAudioDecode.s",
+   "source_sha256": "c3cd054f8d591c1302376ac02ad139823636c2d9230859e56984be53549a51f5",
+   "start": "0x020ab614",
+   "end": "0x020ac9c0",
+   "sha256": "3d82c3d30e49e47275fc84945d3977e32065c5357a4ed52e19dcb91ac505cfff",
+   "gates": {
+    "source": {
+     "result": "mobiclip_fastaudio 5036 bytes, 567 ARM instructions, 2768 embedded DATA bytes, GAS+MWLD exact",
+     "instruction_count": 567,
+     "embedded_data_bytes": 2768
+    },
+    "inventory": {
+     "result": "0x8dc bytes of reachable ARM code + 0xad0 bytes of DATA tile the block",
+     "code_bytes": 2268,
+     "data_bytes": 2768
+    },
+    "semantics": {
+     "result": "single blocks: 200 byte-exact against the ROM kernel (samples, fields, state) / streams: 4 x 100 consecutive blocks byte-exact with the channel state carried / eu/build/mobiclip/kernel_captures/fastaudio.json: model and ARM replay match the captured samples, fields and channel state",
+     "captures": [
+      {
+       "manifest": "fastaudio.json",
+       "manifest_sha256": "2e7277efb21e619a9b3f975e1c9b30ce40a4abe3108f15087346b3ef2f5eb42b"
+      }
+     ]
+    }
+   }
+  },
+  "mobiclip_run_level_table_0": {
+   "schema_version": 1,
+   "kind": "mobiclip_block",
+   "name": "mobiclip_run_level_table_0",
+   "unit": "ov022",
+   "symbol": "gMovieDecodeTableBlob",
+   "source": "eu/src/overlays/ov022/asm_stubs/calls/gMovieDecodeTableBlob.s",
+   "source_sha256": "a3e560ab4f7bb984e074345e7c7ecb637f287d519598e77c4cf1539c91125e62",
+   "start": "0x020aeac0",
+   "end": "0x020b0bc0",
+   "sha256": "ac8144a6df0e54508d5286082029cd3a496ffe54034282690608e901dd8b0b72",
+   "gates": {
+    "source": {
+     "result": "4096 entries + 256 residue bytes, GAS exact",
+     "entries": 4096
+    },
+    "inventory": {
+     "result": "pure table: 0x2000 bytes of entries and 0x100 residue bytes"
+    },
+    "semantics": {
+     "result": "15 complete streams (31139 frames) equal FFmpeg; 1 hardware capture(s) reproduced",
+     "streams": [
+      {
+       "mods_name": "OP.mods",
+       "mods_sha256": "6c871997525afe846b1cc9d3d98159d9ea685dbe89c3cce5949e9ef9ccfa2a11",
+       "verified_frames": 2610,
+       "i_frames": 212,
+       "p_frames": 2398
+      },
+      {
+       "mods_name": "Secret.mods",
+       "mods_sha256": "5b3c1e3924b85c8dcecf5899edf2a555580fec6f5156a62dee8d82b458811821",
+       "verified_frames": 2191,
+       "i_frames": 20,
+       "p_frames": 2171
+      },
+      {
+       "mods_name": "w1_ED.mods",
+       "mods_sha256": "effa43d3eadf09f382ae73ac30c963eef0a28c94806360c76d146e0768eddc46",
+       "verified_frames": 1989,
+       "i_frames": 53,
+       "p_frames": 1936
+      },
+      {
+       "mods_name": "w1_OP.mods",
+       "mods_sha256": "e475712133d70d43fc169a13840f322b2f4d2ca26ad63399c7352db81e2a8f55",
+       "verified_frames": 3442,
+       "i_frames": 77,
+       "p_frames": 3365
+      },
+      {
+       "mods_name": "w2_ED.mods",
+       "mods_sha256": "3962c44f848e4c20e4046f69df91a50754dc918f4f3148dbce4978ff2b91eb5e",
+       "verified_frames": 2651,
+       "i_frames": 74,
+       "p_frames": 2577
+      },
+      {
+       "mods_name": "w2_OP.mods",
+       "mods_sha256": "af9a026cebcc9aa9d27a1607779e883224c42e366bd08c42e2f35e01bc9d0146",
+       "verified_frames": 515,
+       "i_frames": 10,
+       "p_frames": 505
+      },
+      {
+       "mods_name": "w3_ED.mods",
+       "mods_sha256": "62b0630ca252e1d81f4434591941cdb0dc8bbc8fd2d109d09a1f20b5174b0053",
+       "verified_frames": 4123,
+       "i_frames": 96,
+       "p_frames": 4027
+      },
+      {
+       "mods_name": "w4_ED.mods",
+       "mods_sha256": "cb974b180fc84e804324bee426e37baed389c92e684645f9b406522ce3bc1b20",
+       "verified_frames": 1342,
+       "i_frames": 24,
+       "p_frames": 1318
+      },
+      {
+       "mods_name": "w5_ED.mods",
+       "mods_sha256": "26402d28d0b7b6bf34f50826cf9bf090808579979b15893cd5130993b4bc0799",
+       "verified_frames": 2509,
+       "i_frames": 62,
+       "p_frames": 2447
+      },
+      {
+       "mods_name": "w6_ED.mods",
+       "mods_sha256": "2fa0ca911531e5b4ccb399ea56bd8265faa26c974fe3dd6ca739b699e79135ec",
+       "verified_frames": 2072,
+       "i_frames": 48,
+       "p_frames": 2024
+      },
+      {
+       "mods_name": "w7_ED.mods",
+       "mods_sha256": "c9e339883ae5294fa25b7b320624b0c510236bfae4a71e38aa06218f2437d052",
+       "verified_frames": 1250,
+       "i_frames": 29,
+       "p_frames": 1221
+      },
+      {
+       "mods_name": "w8_ED1.mods",
+       "mods_sha256": "1a8c67a16f3a5688afecad7b6cb95916585a1c7ea19b794cb0b93d30ad8a5007",
+       "verified_frames": 2828,
+       "i_frames": 42,
+       "p_frames": 2786
+      },
+      {
+       "mods_name": "w8_ED2.mods",
+       "mods_sha256": "5e908cc9ff387b1bd5f00955419854559e6f4769138c4b579c4be69212bc2d3f",
+       "verified_frames": 1290,
+       "i_frames": 26,
+       "p_frames": 1264
+      },
+      {
+       "mods_name": "w8_ED3.mods",
+       "mods_sha256": "467a9f45f731b5d0311cc0f715f0b525850e742422294ccebcf62502bb9bf3cb",
+       "verified_frames": 427,
+       "i_frames": 18,
+       "p_frames": 409
+      },
+      {
+       "mods_name": "w8_OP.mods",
+       "mods_sha256": "296067992023e8216c36e2af32922d57369096950af707a9f94af04e3a7855db",
+       "verified_frames": 1900,
+       "i_frames": 31,
+       "p_frames": 1869
+      }
+     ],
+     "captures": [
+      {
+       "manifest": "frame_0001_manifest.json",
+       "manifest_sha256": "e7bd46ec5ea75e8dd7ed9f6d3d9bba73575e904934f6c5b2a949e15d84185e3b",
+       "checks": [
+        "chroma",
+        "coefficientTableState",
+        "decoderReturnBytes",
+        "formatState",
+        "historyBuffersUnchanged",
+        "luma",
+        "quantizerState"
+       ]
+      }
+     ]
+    }
+   }
+  },
+  "mobiclip_run_level_table_1": {
+   "schema_version": 1,
+   "kind": "mobiclip_block",
+   "name": "mobiclip_run_level_table_1",
+   "unit": "ov022",
+   "symbol": "gMovieDecoderLookupTable",
+   "source": "eu/src/overlays/ov022/asm_stubs/calls/gMovieDecoderLookupTable.s",
+   "source_sha256": "9df32c9d4cb5bd0cb5e06451189362d43aac2d1b6895372d81d7c44c2fb92901",
+   "start": "0x020ac9c0",
+   "end": "0x020aeac0",
+   "sha256": "3eb846a146e1311b9240244ec6e33a92222998249e188e424237ee336b32f4f3",
+   "gates": {
+    "source": {
+     "result": "4096 entries + 256 residue bytes, GAS exact",
+     "entries": 4096
+    },
+    "inventory": {
+     "result": "pure table: 0x2000 bytes of entries and 0x100 residue bytes"
+    },
+    "semantics": {
+     "result": "15 complete streams (31139 frames) equal FFmpeg; 1 hardware capture(s) reproduced",
+     "streams": [
+      {
+       "mods_name": "OP.mods",
+       "mods_sha256": "6c871997525afe846b1cc9d3d98159d9ea685dbe89c3cce5949e9ef9ccfa2a11",
+       "verified_frames": 2610,
+       "i_frames": 212,
+       "p_frames": 2398
+      },
+      {
+       "mods_name": "Secret.mods",
+       "mods_sha256": "5b3c1e3924b85c8dcecf5899edf2a555580fec6f5156a62dee8d82b458811821",
+       "verified_frames": 2191,
+       "i_frames": 20,
+       "p_frames": 2171
+      },
+      {
+       "mods_name": "w1_ED.mods",
+       "mods_sha256": "effa43d3eadf09f382ae73ac30c963eef0a28c94806360c76d146e0768eddc46",
+       "verified_frames": 1989,
+       "i_frames": 53,
+       "p_frames": 1936
+      },
+      {
+       "mods_name": "w1_OP.mods",
+       "mods_sha256": "e475712133d70d43fc169a13840f322b2f4d2ca26ad63399c7352db81e2a8f55",
+       "verified_frames": 3442,
+       "i_frames": 77,
+       "p_frames": 3365
+      },
+      {
+       "mods_name": "w2_ED.mods",
+       "mods_sha256": "3962c44f848e4c20e4046f69df91a50754dc918f4f3148dbce4978ff2b91eb5e",
+       "verified_frames": 2651,
+       "i_frames": 74,
+       "p_frames": 2577
+      },
+      {
+       "mods_name": "w2_OP.mods",
+       "mods_sha256": "af9a026cebcc9aa9d27a1607779e883224c42e366bd08c42e2f35e01bc9d0146",
+       "verified_frames": 515,
+       "i_frames": 10,
+       "p_frames": 505
+      },
+      {
+       "mods_name": "w3_ED.mods",
+       "mods_sha256": "62b0630ca252e1d81f4434591941cdb0dc8bbc8fd2d109d09a1f20b5174b0053",
+       "verified_frames": 4123,
+       "i_frames": 96,
+       "p_frames": 4027
+      },
+      {
+       "mods_name": "w4_ED.mods",
+       "mods_sha256": "cb974b180fc84e804324bee426e37baed389c92e684645f9b406522ce3bc1b20",
+       "verified_frames": 1342,
+       "i_frames": 24,
+       "p_frames": 1318
+      },
+      {
+       "mods_name": "w5_ED.mods",
+       "mods_sha256": "26402d28d0b7b6bf34f50826cf9bf090808579979b15893cd5130993b4bc0799",
+       "verified_frames": 2509,
+       "i_frames": 62,
+       "p_frames": 2447
+      },
+      {
+       "mods_name": "w6_ED.mods",
+       "mods_sha256": "2fa0ca911531e5b4ccb399ea56bd8265faa26c974fe3dd6ca739b699e79135ec",
+       "verified_frames": 2072,
+       "i_frames": 48,
+       "p_frames": 2024
+      },
+      {
+       "mods_name": "w7_ED.mods",
+       "mods_sha256": "c9e339883ae5294fa25b7b320624b0c510236bfae4a71e38aa06218f2437d052",
+       "verified_frames": 1250,
+       "i_frames": 29,
+       "p_frames": 1221
+      },
+      {
+       "mods_name": "w8_ED1.mods",
+       "mods_sha256": "1a8c67a16f3a5688afecad7b6cb95916585a1c7ea19b794cb0b93d30ad8a5007",
+       "verified_frames": 2828,
+       "i_frames": 42,
+       "p_frames": 2786
+      },
+      {
+       "mods_name": "w8_ED2.mods",
+       "mods_sha256": "5e908cc9ff387b1bd5f00955419854559e6f4769138c4b579c4be69212bc2d3f",
+       "verified_frames": 1290,
+       "i_frames": 26,
+       "p_frames": 1264
+      },
+      {
+       "mods_name": "w8_ED3.mods",
+       "mods_sha256": "467a9f45f731b5d0311cc0f715f0b525850e742422294ccebcf62502bb9bf3cb",
+       "verified_frames": 427,
+       "i_frames": 18,
+       "p_frames": 409
+      },
+      {
+       "mods_name": "w8_OP.mods",
+       "mods_sha256": "296067992023e8216c36e2af32922d57369096950af707a9f94af04e3a7855db",
+       "verified_frames": 1900,
+       "i_frames": 31,
+       "p_frames": 1869
+      }
+     ],
+     "captures": [
+      {
+       "manifest": "frame_0001_manifest.json",
+       "manifest_sha256": "e7bd46ec5ea75e8dd7ed9f6d3d9bba73575e904934f6c5b2a949e15d84185e3b",
+       "checks": [
+        "chroma",
+        "coefficientTableState",
+        "decoderReturnBytes",
+        "formatState",
+        "historyBuffersUnchanged",
+        "luma",
+        "quantizerState"
+       ]
+      }
+     ]
+    }
+   }
+  }
+ }
+}

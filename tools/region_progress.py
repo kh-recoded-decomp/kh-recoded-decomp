@@ -119,6 +119,8 @@ def main() -> int:
                "matched_functions": us_measures["matched_functions"],
                "total_functions": us_measures["total_functions"]},
         "eu": {"matched_code": eu_summary["code_bytes"]["c_decompiled_matched"],
+               "verified_library_code": eu_summary["code_bytes"].get("library_verified", 0),
+               "verified_library_functions": eu_summary["counts"].get("library_verified", 0),
                "total_code": eu_summary["total_code_bytes"],
                "matched_functions": eu_summary["counts"]["c_decompiled_matched"],
                "total_functions": eu_summary["total_functions"]},
@@ -140,6 +142,10 @@ def main() -> int:
         f"| {e['matched_functions']:,} / {e['total_functions']:,} |",
         f"| US verified original assembly (not C) | {asm_bytes:,} | {pct(asm_bytes, u['total_code'])} "
         f"| {len(asm_entries):,} |",
+        f"| EU verified MobiClip library code (hand-written ARM, not C) | {e['verified_library_code']:,} "
+        f"| {pct(e['verified_library_code'], e['total_code'])} | {e['verified_library_functions']:,} |",
+        f"| EU C + verified library code | {e['matched_code'] + e['verified_library_code']:,} / {e['total_code']:,} "
+        f"| **{pct(e['matched_code'] + e['verified_library_code'], e['total_code'])}** | |",
         f"| **Shared** (same function, matched in both) | {s['bytes']:,} | {pct(s['bytes'], e['total_code'])} of EU "
         f"| {s['functions']:,} |",
         "",

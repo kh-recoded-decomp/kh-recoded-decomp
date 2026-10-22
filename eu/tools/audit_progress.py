@@ -3,16 +3,20 @@
 
 Categories:
   c_decompiled_matched  real C source in an auto/ or calls/ directory
+  library_verified      hand-written library assembly (MobiClip) whose source holds a
+                        valid receipt from tools/mobiclip/verify_mobiclip.py
   asm_stub_matched      ASM-based source (asm_stubs/, inline asm, .s)
   named                 no source yet, but a real (non-placeholder) name
   todo                  no source, placeholder func_XXXXXXXX name
 
-Only the first counts as C decompilation progress; see docs/PROGRESS_POLICY.md.
+Only the first counts as C decompilation progress; library_verified counts as
+reconstructed library code, shown beside it; see docs/PROGRESS_POLICY.md.
 Byte-exactness itself is proved by tools/verify_idx.py and the module gate,
 not by this script.
 
     python tools/audit_progress.py     # writes build/progress_audit.{json,md}
 """
+import hashlib
 import json
 import re
 import sys
@@ -25,7 +29,30 @@ import data_progress  # noqa: E402
 
 SUBTREES = ["auto", "calls", "asm_stubs/auto", "asm_stubs/calls"]
 PLACEHOLDER = re.compile(r"^func_(?:ov\d{3}_)?[0-9a-f]{8}$")
-CATEGORIES = ("c_decompiled_matched", "asm_stub_matched", "named", "todo")
+CATEGORIES = ("c_decompiled_matched", "library_verified", "asm_stub_matched", "named", "todo")
+RECEIPTS = ROOT / "mobiclip_receipts.json"
+
+
+def verified_library_sources():
+    """eu-relative source paths whose MobiClip receipt still matches the file.
+
+    The receipts are written by tools/mobiclip/verify_mobiclip.py, which runs the
+    source, inventory and semantic gates; a receipt stops applying as soon as its
+    source changes."""
+    out = set()
+    if not RECEIPTS.is_file():
+        return out
+    for receipt in json.loads(RECEIPTS.read_text(encoding="utf-8")).get("receipts", {}).values():
+        source = receipt.get("source", "")
+        if not source.startswith("eu/"):
+            continue
+        local = ROOT / source[3:]
+        if local.is_file() and hashlib.sha256(local.read_bytes()).hexdigest() == receipt.get("source_sha256"):
+            out.add(source[3:])
+    return out
+
+
+VERIFIED_LIBRARY = verified_library_sources()
 
 
 def _discover_src_dirs():
@@ -60,6 +87,8 @@ SYM_RE = re.compile(r"(\S+)\s+kind:function\((arm|thumb),[^\r\n]*size=0x([0-9a-f
 
 
 def source_category(path):
+    if path.relative_to(ROOT).as_posix() in VERIFIED_LIBRARY:
+        return "library_verified"
     if path.suffix == ".s" or "asm_stubs" in path.parts:
         return "asm_stub_matched"
     if ASM_RE.search(path.read_text(encoding="utf-8", errors="replace")):
@@ -131,6 +160,7 @@ def summarize(functions, unknown, data_units=None):
 def write_markdown(summary):
     labels = {
         "c_decompiled_matched": "Real C matched",
+        "library_verified": "Verified library code (MobiClip)",
         "asm_stub_matched": "ASM stub matched",
         "named": "Named, not decompiled",
         "todo": "Not decompiled",
@@ -174,8 +204,9 @@ def main():
     (BUILD_DIR / "progress_audit.md").write_text(write_markdown(summary), encoding="utf-8", newline="\n")
     c = summary["counts"]
     d = summary["data"]
-    print("progress_audit -> C=%d, ASM=%d, named=%d, todo=%d, total=%d; DATA=%d/%d bytes" % (
-        c["c_decompiled_matched"], c["asm_stub_matched"], c["named"], c["todo"], summary["total_functions"],
+    print("progress_audit -> C=%d, verified library=%d, ASM=%d, named=%d, todo=%d, total=%d; DATA=%d/%d bytes" % (
+        c["c_decompiled_matched"], c["library_verified"], c["asm_stub_matched"], c["named"], c["todo"],
+        summary["total_functions"],
         d["matched_data_bytes"], d["total_data_bytes"]))
 
 

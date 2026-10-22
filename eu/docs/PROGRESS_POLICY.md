@@ -24,6 +24,41 @@ compiler (`mcr`/`mrc`, `mrs`/`msr`, `swi`). They live under
 `libs/**/asm_stubs/` as that original assembly, verify byte-exact and are shown
 separately. They never count as C.
 
+## Verified library code (MobiClip)
+
+The MobiClip movie library in ov022 (Actimagine, "Mobiclip SDK V1.1.1") is
+hand-written ARM: the video decoder the player copies into its arena, the
+colour converter, the deblocking filter, the FastAudio decoder, the coding-1
+speech decoder, and the two run/level prefix tables the video decoder reads.
+It returns with `mov pc, lr`, keeps tables between its routines and carries
+values in r4-r11 across inner calls, so no compiler produces it and it can
+never match as C.
+
+A block of it counts as reconstructed library code only when
+`tools/mobiclip/verify_mobiclip.py` issues its receipt, which requires every one
+of these gates for the checked-in source:
+
+1. **Source.** Every instruction is an ARM mnemonic with its own address label;
+   raw bytes only appear inside named DATA regions; dispatch entries are
+   symbolic relative words; `.incbin`, `.inst` and numeric opcode words are
+   refused. GNU as must reproduce the ROM bytes at the block's addresses, and a
+   partial link through the project's mwldarm must keep them. The run/level
+   tables are 4096 `vlc bits, level, run, last` entries plus 256 residue bytes.
+2. **Inventory.** The instructions reachable from the block's entry points and
+   the declared DATA ranges tile the block exactly, with no gap or overlap.
+3. **Semantics.** A portable implementation (`tools/mobiclip/`) reproduces the
+   original code: complete movie streams decoded by `mobiclip_reference.py`
+   equal FFmpeg frame for frame; the colour, deblocking, FastAudio and coding-1
+   models agree with the ROM's own instructions run in `arm_exec.py`; and each
+   block reproduces a capture of a real call taken from this ROM in DeSmuME
+   (`capture_mobiclip_decoder.lua`, `capture_mobiclip_kernels.lua`). No movie
+   in the game uses deblocking, FastAudio or coding 1, so the capture script
+   forces those paths once each and restores the player's state afterwards.
+
+A receipt only applies while the source's SHA-256 is unchanged. These blocks are
+reported in their own `Verified library` column and in a separate
+"C + verified library" total; they never count inside the C figures.
+
 ## ASM stubs
 
 Inline ASM or placeholder assembly for game code may be used temporarily while

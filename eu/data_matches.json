@@ -3176,11 +3176,11 @@
       "section": ".rodata",
       "start": "0x020b75c0",
       "end": "0x020b76a8",
-      "source": "src/ov022/data/Rodata_ov022_020b75c0.c",
-      "compiler": "mwccarm-3.0-139",
-      "name": "ov022 data words",
-      "origin": "generated words",
-      "behavior": "Initialised data words, pointers named by their targets."
+      "source": "src/overlays/ov022/asm_stubs/calls/MobiClip_DeblockFrame.s",
+      "compiler": "gas",
+      "name": "MobiClip deblocking, chroma horizontal edges",
+      "origin": "ARM mnemonic source (tools/mobiclip/verify_payload.py)",
+      "behavior": "Hand-written ARM of the deblocking filter stored at the start of .rodata, and its four constant words."
     },
     {
       "module": "ov022",

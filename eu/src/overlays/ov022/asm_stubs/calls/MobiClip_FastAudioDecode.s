@@ -11,8 +11,8 @@
     .global MobiClip_FastAudioDecode
     .type MobiClip_FastAudioDecode, %function
 MobiClip_FastAudioDecode:
-    /* FastAudio_DecodeBlock (entry: branch over the quantiser tables) */
-MobiClip_Code_020ab614:
+    /* MobiClip_FastAudioDecode (entry: branch over the quantiser tables) */
+MobiClip_Code_020AB614:
     b MobiClip_Code_020AC020
     /* k0 and k1 quantiser (Q15), 64 levels */
     .global gFastAudioReflection6Bit
@@ -78,7 +78,7 @@ gFastAudioReflection6:
 gFastAudioReflection7:
     .byte 0x64, 0xe6, 0xff, 0xff, 0xe4, 0xf4, 0xff, 0xff, 0x68, 0x03, 0x00, 0x00, 0xe8, 0x11, 0x00, 0x00
     .byte 0x68, 0x20, 0x00, 0x00, 0xec, 0x2e, 0x00, 0x00, 0x6c, 0x3d, 0x00, 0x00, 0xec, 0x4b, 0x00, 0x00
-    /* FastAudio_ParseBlock */
+    /* MobiClip_FastAudioParseBlock */
 MobiClip_Code_020AB898:
     ldrh r3, [r0], #2
 MobiClip_Code_020AB89C:
@@ -129,83 +129,83 @@ MobiClip_Code_020AB8F4:
     and r4, r4, #0xf
 MobiClip_Code_020AB8F8:
     ldr r5, [ip, r4, lsl #2]
-MobiClip_Code_020ab8fc:
+MobiClip_Code_020AB8FC:
     str r5, [r2, #0x10]
-MobiClip_Code_020ab900:
+MobiClip_Code_020AB900:
     sub ip, pc, #0xb0
-MobiClip_Code_020ab904:
+MobiClip_Code_020AB904:
     lsr r4, r3, #3
 MobiClip_Code_020AB908:
     and r4, r4, #7
-MobiClip_Code_020ab90c:
+MobiClip_Code_020AB90C:
     ldr r5, [ip, r4, lsl #2]
-MobiClip_Code_020ab910:
+MobiClip_Code_020AB910:
     str r5, [r2, #0x18]
-MobiClip_Code_020ab914:
+MobiClip_Code_020AB914:
     sub ip, pc, #0xa4
 MobiClip_Code_020AB918:
     and r3, r3, #7
-MobiClip_Code_020ab91c:
+MobiClip_Code_020AB91C:
     ldr r5, [ip, r3, lsl #2]
-MobiClip_Code_020ab920:
+MobiClip_Code_020AB920:
     str r5, [r2, #0x1c]
-MobiClip_Code_020ab924:
+MobiClip_Code_020AB924:
     ldrh r3, [r0], #2
 MobiClip_Code_020AB928:
     ldrh r4, [r0], #2
-MobiClip_Code_020ab92c:
+MobiClip_Code_020AB92C:
     orr r3, r3, r4, lsl #16
-MobiClip_Code_020ab930:
+MobiClip_Code_020AB930:
     lsr r4, r3, #0x1a
-MobiClip_Code_020ab934:
+MobiClip_Code_020AB934:
     str r4, [r2, #0x3c]
 MobiClip_Code_020AB938:
     lsr r4, r3, #0x14
-MobiClip_Code_020ab93c:
+MobiClip_Code_020AB93C:
     and r4, r4, #0x3f
-MobiClip_Code_020ab940:
+MobiClip_Code_020AB940:
     str r4, [r2, #0x38]
-MobiClip_Code_020ab944:
+MobiClip_Code_020AB944:
     lsr r4, r3, #0xe
 MobiClip_Code_020AB948:
     and r4, r4, #0x3f
-MobiClip_Code_020ab94c:
+MobiClip_Code_020AB94C:
     str r4, [r2, #0x34]
-MobiClip_Code_020ab950:
+MobiClip_Code_020AB950:
     lsr r4, r3, #8
-MobiClip_Code_020ab954:
+MobiClip_Code_020AB954:
     and r4, r4, #0x3f
 MobiClip_Code_020AB958:
     str r4, [r2, #0x30]
-MobiClip_Code_020ab95c:
+MobiClip_Code_020AB95C:
     lsr r4, r3, #6
-MobiClip_Code_020ab960:
+MobiClip_Code_020AB960:
     and r4, r4, #3
-MobiClip_Code_020ab964:
+MobiClip_Code_020AB964:
     str r4, [r2, #0x2c]
 MobiClip_Code_020AB968:
     lsr r4, r3, #4
-MobiClip_Code_020ab96c:
+MobiClip_Code_020AB96C:
     and r4, r4, #3
-MobiClip_Code_020ab970:
+MobiClip_Code_020AB970:
     str r4, [r2, #0x28]
-MobiClip_Code_020ab974:
+MobiClip_Code_020AB974:
     lsr r4, r3, #2
 MobiClip_Code_020AB978:
     and r4, r4, #3
-MobiClip_Code_020ab97c:
+MobiClip_Code_020AB97C:
     str r4, [r2, #0x24]
-MobiClip_Code_020ab980:
+MobiClip_Code_020AB980:
     and r3, r3, #3
-MobiClip_Code_020ab984:
+MobiClip_Code_020AB984:
     str r3, [r2, #0x20]
 MobiClip_Code_020AB988:
     ldrh r3, [r0], #2
-MobiClip_Code_020ab98c:
+MobiClip_Code_020AB98C:
     ldrh r4, [r0], #2
-MobiClip_Code_020ab990:
+MobiClip_Code_020AB990:
     orr r3, r3, r4, lsl #16
-MobiClip_Code_020ab994:
+MobiClip_Code_020AB994:
     lsr r4, r3, #0x1d
 MobiClip_Code_020AB998:
     str r4, [r2, #0x40]
@@ -257,83 +257,83 @@ MobiClip_Code_020AB9F4:
     and r4, r4, #7
 MobiClip_Code_020AB9F8:
     str r4, [r2, #0x60]
-MobiClip_Code_020ab9fc:
+MobiClip_Code_020AB9FC:
     lsr r4, r3, #2
-MobiClip_Code_020aba00:
+MobiClip_Code_020ABA00:
     and r4, r4, #7
-MobiClip_Code_020aba04:
+MobiClip_Code_020ABA04:
     str r4, [r2, #0x64]
 MobiClip_Code_020ABA08:
     ldrh r5, [r0], #2
-MobiClip_Code_020aba0c:
+MobiClip_Code_020ABA0C:
     ldrh r4, [r0], #2
-MobiClip_Code_020aba10:
+MobiClip_Code_020ABA10:
     orr r5, r5, r4, lsl #16
-MobiClip_Code_020aba14:
+MobiClip_Code_020ABA14:
     lsr r4, r5, #0x1d
 MobiClip_Code_020ABA18:
     str r4, [r2, #0x68]
-MobiClip_Code_020aba1c:
+MobiClip_Code_020ABA1C:
     lsr r4, r5, #0x1a
-MobiClip_Code_020aba20:
+MobiClip_Code_020ABA20:
     and r4, r4, #7
-MobiClip_Code_020aba24:
+MobiClip_Code_020ABA24:
     str r4, [r2, #0x6c]
 MobiClip_Code_020ABA28:
     lsr r4, r5, #0x17
-MobiClip_Code_020aba2c:
+MobiClip_Code_020ABA2C:
     and r4, r4, #7
-MobiClip_Code_020aba30:
+MobiClip_Code_020ABA30:
     str r4, [r2, #0x70]
-MobiClip_Code_020aba34:
+MobiClip_Code_020ABA34:
     lsr r4, r5, #0x14
 MobiClip_Code_020ABA38:
     and r4, r4, #7
-MobiClip_Code_020aba3c:
+MobiClip_Code_020ABA3C:
     str r4, [r2, #0x74]
-MobiClip_Code_020aba40:
+MobiClip_Code_020ABA40:
     lsr r4, r5, #0x11
-MobiClip_Code_020aba44:
+MobiClip_Code_020ABA44:
     and r4, r4, #7
 MobiClip_Code_020ABA48:
     str r4, [r2, #0x78]
-MobiClip_Code_020aba4c:
+MobiClip_Code_020ABA4C:
     lsr r4, r5, #0xe
-MobiClip_Code_020aba50:
+MobiClip_Code_020ABA50:
     and r4, r4, #7
-MobiClip_Code_020aba54:
+MobiClip_Code_020ABA54:
     str r4, [r2, #0x7c]
 MobiClip_Code_020ABA58:
     lsr r4, r5, #0xb
-MobiClip_Code_020aba5c:
+MobiClip_Code_020ABA5C:
     and r4, r4, #7
-MobiClip_Code_020aba60:
+MobiClip_Code_020ABA60:
     str r4, [r2, #0x80]
-MobiClip_Code_020aba64:
+MobiClip_Code_020ABA64:
     lsr r4, r5, #8
 MobiClip_Code_020ABA68:
     and r4, r4, #7
-MobiClip_Code_020aba6c:
+MobiClip_Code_020ABA6C:
     str r4, [r2, #0x84]
-MobiClip_Code_020aba70:
+MobiClip_Code_020ABA70:
     lsr r4, r5, #5
-MobiClip_Code_020aba74:
+MobiClip_Code_020ABA74:
     and r4, r4, #7
 MobiClip_Code_020ABA78:
     str r4, [r2, #0x88]
-MobiClip_Code_020aba7c:
+MobiClip_Code_020ABA7C:
     lsr r4, r5, #2
-MobiClip_Code_020aba80:
+MobiClip_Code_020ABA80:
     and r4, r4, #7
-MobiClip_Code_020aba84:
+MobiClip_Code_020ABA84:
     str r4, [r2, #0x8c]
 MobiClip_Code_020ABA88:
     and r3, r3, #3
-MobiClip_Code_020aba8c:
+MobiClip_Code_020ABA8C:
     lsr r4, r5, #1
-MobiClip_Code_020aba90:
+MobiClip_Code_020ABA90:
     and r4, r4, #1
-MobiClip_Code_020aba94:
+MobiClip_Code_020ABA94:
     orr r4, r4, r3, lsl #1
 MobiClip_Code_020ABA98:
     str r4, [r2, #0x90]
@@ -385,83 +385,83 @@ MobiClip_Code_020ABAF4:
     str r4, [r2, #0xac]
 MobiClip_Code_020ABAF8:
     lsr r4, r3, #8
-MobiClip_Code_020abafc:
+MobiClip_Code_020ABAFC:
     and r4, r4, #7
-MobiClip_Code_020abb00:
+MobiClip_Code_020ABB00:
     str r4, [r2, #0xb0]
-MobiClip_Code_020abb04:
+MobiClip_Code_020ABB04:
     lsr r4, r3, #5
 MobiClip_Code_020ABB08:
     and r4, r4, #7
-MobiClip_Code_020abb0c:
+MobiClip_Code_020ABB0C:
     str r4, [r2, #0xb4]
-MobiClip_Code_020abb10:
+MobiClip_Code_020ABB10:
     lsr r4, r3, #2
-MobiClip_Code_020abb14:
+MobiClip_Code_020ABB14:
     and r4, r4, #7
 MobiClip_Code_020ABB18:
     str r4, [r2, #0xb8]
-MobiClip_Code_020abb1c:
+MobiClip_Code_020ABB1C:
     ldrh r6, [r0], #2
-MobiClip_Code_020abb20:
+MobiClip_Code_020ABB20:
     ldrh r4, [r0], #2
-MobiClip_Code_020abb24:
+MobiClip_Code_020ABB24:
     orr r6, r6, r4, lsl #16
 MobiClip_Code_020ABB28:
     lsr r4, r6, #0x1d
-MobiClip_Code_020abb2c:
+MobiClip_Code_020ABB2C:
     str r4, [r2, #0xbc]
-MobiClip_Code_020abb30:
+MobiClip_Code_020ABB30:
     lsr r4, r6, #0x1a
-MobiClip_Code_020abb34:
+MobiClip_Code_020ABB34:
     and r4, r4, #7
 MobiClip_Code_020ABB38:
     str r4, [r2, #0xc0]
-MobiClip_Code_020abb3c:
+MobiClip_Code_020ABB3C:
     lsr r4, r6, #0x17
-MobiClip_Code_020abb40:
+MobiClip_Code_020ABB40:
     and r4, r4, #7
-MobiClip_Code_020abb44:
+MobiClip_Code_020ABB44:
     str r4, [r2, #0xc4]
 MobiClip_Code_020ABB48:
     lsr r4, r6, #0x14
-MobiClip_Code_020abb4c:
+MobiClip_Code_020ABB4C:
     and r4, r4, #7
-MobiClip_Code_020abb50:
+MobiClip_Code_020ABB50:
     str r4, [r2, #0xc8]
-MobiClip_Code_020abb54:
+MobiClip_Code_020ABB54:
     lsr r4, r6, #0x11
 MobiClip_Code_020ABB58:
     and r4, r4, #7
-MobiClip_Code_020abb5c:
+MobiClip_Code_020ABB5C:
     str r4, [r2, #0xcc]
-MobiClip_Code_020abb60:
+MobiClip_Code_020ABB60:
     lsr r4, r6, #0xe
-MobiClip_Code_020abb64:
+MobiClip_Code_020ABB64:
     and r4, r4, #7
 MobiClip_Code_020ABB68:
     str r4, [r2, #0xd0]
-MobiClip_Code_020abb6c:
+MobiClip_Code_020ABB6C:
     lsr r4, r6, #0xb
-MobiClip_Code_020abb70:
+MobiClip_Code_020ABB70:
     and r4, r4, #7
-MobiClip_Code_020abb74:
+MobiClip_Code_020ABB74:
     str r4, [r2, #0xd4]
 MobiClip_Code_020ABB78:
     lsr r4, r6, #8
-MobiClip_Code_020abb7c:
+MobiClip_Code_020ABB7C:
     and r4, r4, #7
-MobiClip_Code_020abb80:
+MobiClip_Code_020ABB80:
     str r4, [r2, #0xd8]
-MobiClip_Code_020abb84:
+MobiClip_Code_020ABB84:
     lsr r4, r6, #5
 MobiClip_Code_020ABB88:
     and r4, r4, #7
-MobiClip_Code_020abb8c:
+MobiClip_Code_020ABB8C:
     str r4, [r2, #0xdc]
-MobiClip_Code_020abb90:
+MobiClip_Code_020ABB90:
     lsr r4, r6, #2
-MobiClip_Code_020abb94:
+MobiClip_Code_020ABB94:
     and r4, r4, #7
 MobiClip_Code_020ABB98:
     str r4, [r2, #0xe0]
@@ -513,83 +513,83 @@ MobiClip_Code_020ABBF4:
     lsr r4, r3, #0xe
 MobiClip_Code_020ABBF8:
     and r4, r4, #7
-MobiClip_Code_020abbfc:
+MobiClip_Code_020ABBFC:
     str r4, [r2, #0xfc]
-MobiClip_Code_020abc00:
+MobiClip_Code_020ABC00:
     lsr r4, r3, #0xb
-MobiClip_Code_020abc04:
+MobiClip_Code_020ABC04:
     and r4, r4, #7
 MobiClip_Code_020ABC08:
     str r4, [r2, #0x100]
-MobiClip_Code_020abc0c:
+MobiClip_Code_020ABC0C:
     lsr r4, r3, #8
-MobiClip_Code_020abc10:
+MobiClip_Code_020ABC10:
     and r4, r4, #7
-MobiClip_Code_020abc14:
+MobiClip_Code_020ABC14:
     str r4, [r2, #0x104]
 MobiClip_Code_020ABC18:
     lsr r4, r3, #5
-MobiClip_Code_020abc1c:
+MobiClip_Code_020ABC1C:
     and r4, r4, #7
-MobiClip_Code_020abc20:
+MobiClip_Code_020ABC20:
     str r4, [r2, #0x108]
-MobiClip_Code_020abc24:
+MobiClip_Code_020ABC24:
     lsr r4, r3, #2
 MobiClip_Code_020ABC28:
     and r4, r4, #7
-MobiClip_Code_020abc2c:
+MobiClip_Code_020ABC2C:
     str r4, [r2, #0x10c]
-MobiClip_Code_020abc30:
+MobiClip_Code_020ABC30:
     ldrh r7, [r0], #2
-MobiClip_Code_020abc34:
+MobiClip_Code_020ABC34:
     ldrh r4, [r0], #2
 MobiClip_Code_020ABC38:
     orr r7, r7, r4, lsl #16
-MobiClip_Code_020abc3c:
+MobiClip_Code_020ABC3C:
     lsr r4, r7, #0x1d
-MobiClip_Code_020abc40:
+MobiClip_Code_020ABC40:
     str r4, [r2, #0x110]
-MobiClip_Code_020abc44:
+MobiClip_Code_020ABC44:
     lsr r4, r7, #0x1a
 MobiClip_Code_020ABC48:
     and r4, r4, #7
-MobiClip_Code_020abc4c:
+MobiClip_Code_020ABC4C:
     str r4, [r2, #0x114]
-MobiClip_Code_020abc50:
+MobiClip_Code_020ABC50:
     lsr r4, r7, #0x17
-MobiClip_Code_020abc54:
+MobiClip_Code_020ABC54:
     and r4, r4, #7
 MobiClip_Code_020ABC58:
     str r4, [r2, #0x118]
-MobiClip_Code_020abc5c:
+MobiClip_Code_020ABC5C:
     lsr r4, r7, #0x14
-MobiClip_Code_020abc60:
+MobiClip_Code_020ABC60:
     and r4, r4, #7
-MobiClip_Code_020abc64:
+MobiClip_Code_020ABC64:
     str r4, [r2, #0x11c]
 MobiClip_Code_020ABC68:
     lsr r4, r7, #0x11
-MobiClip_Code_020abc6c:
+MobiClip_Code_020ABC6C:
     and r4, r4, #7
-MobiClip_Code_020abc70:
+MobiClip_Code_020ABC70:
     str r4, [r2, #0x120]
-MobiClip_Code_020abc74:
+MobiClip_Code_020ABC74:
     lsr r4, r7, #0xe
 MobiClip_Code_020ABC78:
     and r4, r4, #7
-MobiClip_Code_020abc7c:
+MobiClip_Code_020ABC7C:
     str r4, [r2, #0x124]
-MobiClip_Code_020abc80:
+MobiClip_Code_020ABC80:
     lsr r4, r7, #0xb
-MobiClip_Code_020abc84:
+MobiClip_Code_020ABC84:
     and r4, r4, #7
 MobiClip_Code_020ABC88:
     str r4, [r2, #0x128]
-MobiClip_Code_020abc8c:
+MobiClip_Code_020ABC8C:
     lsr r4, r7, #8
-MobiClip_Code_020abc90:
+MobiClip_Code_020ABC90:
     and r4, r4, #7
-MobiClip_Code_020abc94:
+MobiClip_Code_020ABC94:
     str r4, [r2, #0x12c]
 MobiClip_Code_020ABC98:
     lsr r4, r7, #5
@@ -781,7 +781,7 @@ gFastAudioReflection5:
     .byte 0xbc, 0xfb, 0xff, 0xff, 0x44, 0x04, 0x00, 0x00, 0xcc, 0x0c, 0x00, 0x00, 0x54, 0x15, 0x00, 0x00
     .byte 0xdc, 0x1d, 0x00, 0x00, 0x68, 0x26, 0x00, 0x00, 0xf0, 0x2e, 0x00, 0x00, 0x78, 0x37, 0x00, 0x00
     .byte 0x00, 0x40, 0x00, 0x00, 0x88, 0x48, 0x00, 0x00, 0x10, 0x51, 0x00, 0x00, 0xff, 0x57, 0x00, 0x00
-    /* FastAudio_ExpandSubBlock */
+    /* MobiClip_FastAudioExpandSubBlock */
 MobiClip_Code_020ABE44:
     cmp r8, #0
 MobiClip_Code_020ABE48:
@@ -1017,7 +1017,7 @@ MobiClip_Code_020AC00C:
     .type gFastAudioSynthesisConstants, %object
 gFastAudioSynthesisConstants:
     .byte 0x14, 0x6e, 0x00, 0x00, 0x00, 0x40, 0x00, 0x00, 0x00, 0x80, 0xff, 0xff, 0xff, 0x7f, 0x00, 0x00
-    /* FastAudio_DecodeBlockBody */
+    /* MobiClip_FastAudioDecodeBlockBody */
 MobiClip_Code_020AC020:
     push {r4, r5, r6, r7, r8, sb, sl, fp, ip, lr}
 MobiClip_Code_020AC024:

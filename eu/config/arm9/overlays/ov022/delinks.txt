@@ -428,7 +428,7 @@ src/overlays/ov022/auto/func_ov022_020aa2fc.c:
     complete
     .text       start:0x020aa2fc end:0x020aa300
 
-libs/mobiclip/video/asm_stubs/auto/func_ov022_020aa300.c:
+libs/mobiclip/video/asm_stubs/auto/MobiClip_BlitRows.s:
     complete
     .text       start:0x020aa300 end:0x020aa8c0
 
@@ -492,25 +492,10 @@ src/overlays/ov022/asm_stubs/calls/gMovieDecoderCodeBlob.s:
     complete
     .text       start:0x020b0bc0 end:0x020b715c
 
-src/overlays/ov022/asm_stubs/calls/func_ov022_020b715c.c:
+src/overlays/ov022/asm_stubs/calls/MobiClip_DeblockFrame.s:
     complete
-    .text       start:0x020b715c end:0x020b7240
-
-src/overlays/ov022/asm_stubs/calls/gMobiClipDeblockThresholds.s:
-    complete
-    .text       start:0x020b7240 end:0x020b728c
-
-src/overlays/ov022/asm_stubs/calls/func_ov022_020b728c.c:
-    complete
-    .text       start:0x020b728c end:0x020b73c4
-
-src/overlays/ov022/asm_stubs/calls/MobiClip_DeblockLumaHorizontalEdges.s:
-    complete
-    .text       start:0x020b73c4 end:0x020b74b8
-
-src/overlays/ov022/asm_stubs/calls/func_ov022_020b74b8.c:
-    complete
-    .text       start:0x020b74b8 end:0x020b75c0
+    .text       start:0x020b715c end:0x020b75c0
+    .rodata     start:0x020b75c0 end:0x020b76a8
 
 src/ov022/data/Data_ov022_020b7c00.c:
     complete
@@ -527,10 +512,6 @@ src/ov022/data/Data_ov022_020b7c40.c:
 src/ov022/data/Data_ov022_020b7c64.c:
     complete
     .data       start:0x020b7c64 end:0x020b7cec
-
-src/ov022/data/Rodata_ov022_020b75c0.c:
-    complete
-    .rodata     start:0x020b75c0 end:0x020b76a8
 
 src/ov022/data/Rodata_ov022_020b76a8.c:
     complete

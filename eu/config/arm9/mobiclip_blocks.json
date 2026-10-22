@@ -1,0 +1,150 @@
+{
+ "schema_version": 1,
+ "blocks": [
+  {
+   "name": "mobiclip_blit_rows",
+   "unit": "ov022",
+   "format": "arm_mnemonic_payload_v1",
+   "start": "0x020aa300",
+   "end": "0x020aa8c0",
+   "sections": [
+    [
+     "text",
+     "0x020aa300",
+     "0x020aa8c0"
+    ]
+   ],
+   "symbol": "MobiClip_BlitRows",
+   "source": "eu/libs/mobiclip/video/asm_stubs/auto/MobiClip_BlitRows.s",
+   "sha256": "d73c01e5683150a7a650c444be0d65e7aa5c127c229631df07dab513fc253937",
+   "instruction_count": 368,
+   "embedded_data_bytes": 0,
+   "semantics": "colour",
+   "inventory": "colour"
+  },
+  {
+   "name": "mobiclip_audio_transform",
+   "unit": "ov022",
+   "format": "arm_mnemonic_payload_v1",
+   "start": "0x020aac54",
+   "end": "0x020ab614",
+   "sections": [
+    [
+     "text",
+     "0x020aac54",
+     "0x020ab614"
+    ]
+   ],
+   "symbol": "MobiClip_AudioTransformDecode",
+   "source": "eu/src/overlays/ov022/asm_stubs/calls/MobiClip_AudioTransformDecode.s",
+   "sha256": "b3af1d9dee9fc48c65e53c816c7158032b8d67524c3f1d60cb4e39b75cb6d798",
+   "instruction_count": 597,
+   "embedded_data_bytes": 108,
+   "semantics": "audio",
+   "inventory": "audio"
+  },
+  {
+   "name": "mobiclip_fastaudio",
+   "unit": "ov022",
+   "format": "arm_mnemonic_payload_v1",
+   "start": "0x020ab614",
+   "end": "0x020ac9c0",
+   "sections": [
+    [
+     "text",
+     "0x020ab614",
+     "0x020ac9c0"
+    ]
+   ],
+   "symbol": "MobiClip_FastAudioDecode",
+   "source": "eu/src/overlays/ov022/asm_stubs/calls/MobiClip_FastAudioDecode.s",
+   "sha256": "3d82c3d30e49e47275fc84945d3977e32065c5357a4ed52e19dcb91ac505cfff",
+   "instruction_count": 567,
+   "embedded_data_bytes": 2768,
+   "semantics": "fastaudio",
+   "inventory": "fastaudio"
+  },
+  {
+   "name": "mobiclip_run_level_table_1",
+   "unit": "ov022",
+   "format": "run_level_table_v1",
+   "start": "0x020ac9c0",
+   "end": "0x020aeac0",
+   "sections": [
+    [
+     "text",
+     "0x020ac9c0",
+     "0x020aeac0"
+    ]
+   ],
+   "symbol": "gMovieDecoderLookupTable",
+   "source": "eu/src/overlays/ov022/asm_stubs/calls/gMovieDecoderLookupTable.s",
+   "sha256": "3eb846a146e1311b9240244ec6e33a92222998249e188e424237ee336b32f4f3",
+   "semantics": "decoder"
+  },
+  {
+   "name": "mobiclip_run_level_table_0",
+   "unit": "ov022",
+   "format": "run_level_table_v1",
+   "start": "0x020aeac0",
+   "end": "0x020b0bc0",
+   "sections": [
+    [
+     "text",
+     "0x020aeac0",
+     "0x020b0bc0"
+    ]
+   ],
+   "symbol": "gMovieDecodeTableBlob",
+   "source": "eu/src/overlays/ov022/asm_stubs/calls/gMovieDecodeTableBlob.s",
+   "sha256": "ac8144a6df0e54508d5286082029cd3a496ffe54034282690608e901dd8b0b72",
+   "semantics": "decoder"
+  },
+  {
+   "name": "mobiclip_decoder_payload",
+   "unit": "ov022",
+   "format": "arm_mnemonic_payload_v1",
+   "start": "0x020b0bc0",
+   "end": "0x020b715c",
+   "sections": [
+    [
+     "text",
+     "0x020b0bc0",
+     "0x020b715c"
+    ]
+   ],
+   "symbol": "gMovieDecoderCodeBlob",
+   "source": "eu/src/overlays/ov022/asm_stubs/calls/gMovieDecoderCodeBlob.s",
+   "sha256": "5508ae5f765eb86e81b2ad8d76dccf6d4a30e3381d3e8b248fb8d4a6204b83f5",
+   "instruction_count": 5899,
+   "embedded_data_bytes": 2416,
+   "semantics": "decoder"
+  },
+  {
+   "name": "mobiclip_deblock",
+   "unit": "ov022",
+   "format": "arm_mnemonic_payload_v1",
+   "start": "0x020b715c",
+   "end": "0x020b76a8",
+   "sections": [
+    [
+     "text",
+     "0x020b715c",
+     "0x020b75c0"
+    ],
+    [
+     "rodata",
+     "0x020b75c0",
+     "0x020b76a8"
+    ]
+   ],
+   "symbol": "MobiClip_DeblockFrame",
+   "source": "eu/src/overlays/ov022/asm_stubs/calls/MobiClip_DeblockFrame.s",
+   "sha256": "d748ec3b7058688d234cc06e71acbd78be5b621d31a7acb2857b1dee6e2a7c1e",
+   "instruction_count": 316,
+   "embedded_data_bytes": 92,
+   "semantics": "deblock",
+   "inventory": "deblock"
+  }
+ ]
+}
