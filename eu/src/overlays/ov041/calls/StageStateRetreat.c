@@ -50,7 +50,7 @@ void StageStateRetreat(void)
     case 4:
         for (i = 0; i < work->entryCount; i++) {
             for (j = 0; j < 3; j++) {
-                if (work->entries[i].orders[j].pending) {
+                if (work->entries[i].orbBursts[j].active) {
                     busy = TRUE;
                     break;
                 }

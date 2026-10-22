@@ -111,7 +111,7 @@ void ComputeEntryHit(StageEntry *entry, StageEntryHit *hit)
         hit->critical = 0;
         break;
     }
-    if (action->kind == 0 && data_ov041_020cff48.unk02 != 1) {
+    if (action->kind == 0 && data_ov041_020cff48.comboCount != 1) {
         hit->amount = FX_Mul(hit->amount, 0xe66);
     }
     hit->amount = hit->amount > STAGE_HIT_MAX ? STAGE_HIT_MAX : (hit->amount < 0 ? 0 : hit->amount);

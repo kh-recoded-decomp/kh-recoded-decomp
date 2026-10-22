@@ -9486,5 +9486,6 @@
   "src/overlays/ov041/calls/EntryActionSpell.c": "dsi/1.1",
   "src/overlays/ov041/calls/ComputeEntryHit.c": "dsi/1.1",
   "src/overlays/ov041/calls/GetEntryMoveEnds.c": "dsi/1.1",
-  "src/overlays/ov041/calls/StageEntryStateWaiting.c": "dsi/1.1"
+  "src/overlays/ov041/calls/StageEntryStateWaiting.c": "dsi/1.1",
+  "src/overlays/ov041/calls/EntryActionMelee.c": "dsi/1.1"
 }

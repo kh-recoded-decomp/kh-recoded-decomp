@@ -140,12 +140,6 @@ typedef struct StageEntryMove {
 
 typedef void (*StageEntryFunc)(u8 entryIndex);
 
-/* Something an entry still has to play out (the stage waits for all of them before it ends). */
-typedef struct StageEntryOrder {
-    u8 pending;
-    u8 reserved01[0x3f];
-} StageEntryOrder;
-
 /* The hp fractions (0.8, 0.6, 0.4, 0.2) whose crossing sets STAGE_ENTRY_FORCE_ACTION_2. */
 typedef struct StageHpThresholds {
     fx32 values[4];
@@ -185,7 +179,7 @@ struct StageEntry {
     u8 mainTarget; /* the entry its action is aimed at (itself when idle) */
     u8 targetCount;
     u8 targets[9]; /* indices of the entries the action is aimed at */
-    StageEntryOrder orders[3];
+    StageOrbBurst orbBursts[3]; /* the orbs of its defeat (the stage waits for them before it ends) */
     s16 hp;
     s16 maxHp;
     s16 shownHp; /* follows hp down a little at a time */
@@ -194,7 +188,10 @@ struct StageEntry {
     u8 reserved0e6[0xa];
     fx32 unkf0;
     BOOL countsForProgress; /* passed to TallyStageCharacter when the stage ends */
-    u8 reserved0f8[0x108 - 0xf8];
+    u8 reserved0f8[4];
+    u8 orbsMin; /* the hp its orbs give back on defeat: a random amount in [orbsMin, orbsMax] */
+    u8 orbsMax;
+    u8 reserved0fe[0x108 - 0xfe];
     s8 actionCount;
     u8 reserved109[3];
     StageEntryAction *actions;
@@ -210,12 +207,13 @@ struct StageEntry {
     VecFx32 overheadOffset; /* from its position to where things are shown above it */
     u8 idleAnimation;
     u8 hurtAnimation;
-    u8 reserved13e;
+    u8 downAnimation; /* played by a player entry that goes out */
     u8 stepAnimation;
     u8 guardAnimation;
     u8 hurtVoices[2]; /* played in turn when it is hurt */
-    u8 altHurtVoices[2]; /* the same for entries with STAGE_ENTRY_ALT_VOICES */
-    u8 reserved145[0x17];
+    u8 altHurtVoices[2]; /* the same for entries with STAGE_ENTRY_ALT_VOICES (enemies use them when they go out) */
+    u8 downVoice; /* played when it goes out */
+    u8 reserved146[0x16];
     StageEntrySlot slot;
     u8 reserved310[0x10];
     s16 frameStep;
@@ -239,7 +237,7 @@ struct StageEntry {
 typedef struct StageRenderCapture {
     u8 unk00;
     u8 reserved01;
-    u8 unk02;
+    u8 comboCount; /* extra melee hits made in a row */
     u8 reserved03[5];
     int reviveWait; /* frames waited after a revive */
     u8 reserved0c[4];

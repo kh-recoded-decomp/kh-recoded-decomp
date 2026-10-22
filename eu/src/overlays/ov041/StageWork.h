@@ -2,6 +2,7 @@
 #define STAGE_WORK_H
 
 #include "nitro/types.h"
+#include "src/overlays/ov041/StageOrbs.h"
 #include "nitro/fx.h"
 
 typedef struct StageModelResource {
@@ -169,8 +170,11 @@ typedef struct StageEntryAction {
     u8 altEffectAnimation;
     u8 castFrame; /* animation frame its effect takes hold on */
     u8 effectFrame; /* animation frame its effect item appears on */
-    u8 reserved2a;
-    u8 effectCategory;
+    u8 returnFrame; /* melee: animation frame the walk back starts on */
+    union {
+        u8 effectCategory;
+        u8 returnEndFrame; /* melee: and ends on */
+    };
     u8 effectIndex;
     u8 effectAnimation;
     union {
@@ -262,12 +266,17 @@ typedef struct StageWork {
     void *messages;
     StageResourceList *lists[0x3e];
     StageResourceGroup *groups[0x1b];
-    u8 reserved4bc[0x2314 - 0x4bc];
+    u8 reserved4bc[0x53c - 0x4bc];
+    StageOrbPool orbPool;
+    u8 reserved2310[4];
     StageItemActionTable *itemActionTable;
     int menuDepth; /* submenus opened in the command menu */
     int menuStack[3]; /* the entry chosen at each depth, -1 above menuDepth */
     fx32 frameStep; /* how far animations and moves advance per frame */
 } StageWork;
+
+typedef char StageWorkOrbPoolOffset[(u32)&((StageWork *)0)->orbPool == 0x53c ? 1 : -1];
+typedef char StageWorkItemTableOffset[(u32)&((StageWork *)0)->itemActionTable == 0x2314 ? 1 : -1];
 
 typedef struct StageContext {
     u8 reserved000[6];

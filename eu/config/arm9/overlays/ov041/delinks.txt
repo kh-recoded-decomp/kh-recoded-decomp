@@ -728,6 +728,10 @@ src/overlays/ov041/calls/StageEntryStateHealed.c:
     complete
     .text       start:0x020c6ac8 end:0x020c6b98
 
+src/overlays/ov041/calls/EntryActionMelee.c:
+    complete
+    .text       start:0x020ca02c end:0x020ca4a8
+
 src/overlays/ov041/calls/EntryActionRevive.c:
     complete
     .text       start:0x020ca4a8 end:0x020ca5f4

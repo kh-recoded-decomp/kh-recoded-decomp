@@ -32,10 +32,10 @@ void ClearEntryActionState(StageEntry *entry)
         return;
     }
     kind = entry->actions[entry->actionIndex].kind;
-    if (kind == 0 && data_ov041_020cff48.unk02 != 0) {
+    if (kind == 0 && data_ov041_020cff48.comboCount != 0) {
         return;
     }
-    if (kind == 3 && data_ov041_020cff48.unk02 != 0) {
+    if (kind == 3 && data_ov041_020cff48.comboCount != 0) {
         return;
     }
     if (kind == 6 || kind == 10) {
