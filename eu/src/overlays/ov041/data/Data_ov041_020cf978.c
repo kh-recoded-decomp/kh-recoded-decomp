@@ -10,7 +10,7 @@ extern void EntryActionMelee(void);
 extern void EntryActionRevive(void);
 extern void EntryActionHeal(void);
 extern void EntryActionOnSelf(void);
-extern void func_ov041_020ca8fc(void);
+extern void EntryActionCast(void);
 extern void EntryActionBarrage(void);
 extern void EntryActionSpell(void);
 extern void EntryActionPathAttack(void);
@@ -44,7 +44,7 @@ void (*gStageEntryActionHandlers[17])(void) = {
     EntryActionRevive,
     EntryActionHeal,
     EntryActionOnSelf,
-    func_ov041_020ca8fc,
+    EntryActionCast,
     EntryActionBarrage,
     EntryActionSpell,
     EntryActionPathAttack,

@@ -251,24 +251,33 @@ typedef struct StageRenderCapture {
         u8 unk00;
         u8 flurryRound; /* flurries: counts the rounds of three hits */
     };
-    u8 comboStage; /* combos: which of the four attacks comes next (3 is the finisher, 0 ends it) */
+    union {
+        u8 comboStage; /* combos: which of the four attacks comes next (3 is the finisher, 0 ends it) */
+        u8 sweepStage; /* cast sweeps: which side entry is struck next */
+    };
     union {
         u8 comboCount; /* extra melee hits made in a row */
         u8 shotsFired; /* barrages */
         u8 comboHit; /* combos: the hit being made, from 1 */
         u8 flurryHit; /* flurries: hits made so far */
+        u8 castsDone; /* enemy spells: casts made after the first */
     };
     u8 reserved03;
     union {
         int teamLeader; /* the entry whose sounds a team attack plays */
         int shotCount; /* barrages: one less than the shots they fire */
         int comboLength; /* combos: one less than the hits they make */
+        int castCount; /* enemy spells: how many times the spell is cast */
     };
     union {
         int reviveWait; /* frames waited after a revive */
         int shotTimer; /* barrages: counts down; a shot goes off whenever it is a multiple of the interval */
+        int castWait; /* cast actions: frames left before the next step */
     };
-    fx32 flurryHitEnd; /* flurries: the frame the current hit's animation ends on */
+    union {
+        fx32 flurryHitEnd; /* flurries: the frame the current hit's animation ends on */
+        fx32 castDelay; /* cast actions: frames waited before the mark appears */
+    };
     StageEntry *entry;
     fx32 castTimer; /* frames since a spell was cast, while its caster is not frozen */
     VecFx32 panelOffset; /* from a defender to its timed press panel */

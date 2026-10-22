@@ -255,11 +255,24 @@ typedef struct StageEntryAction {
                     u8 aimEffectIndex;
                     u8 aimEffectAnimation;
                 };
+                struct {
+                    u8 castEffectCategory; /* cast actions: the item shown where the spell forms */
+                    u8 castEffectIndex;
+                    u8 castEffectAnimation;
+                };
+                struct {
+                    u8 reserved2e2;
+                    u8 volleyPause; /* cast volleys: frames waited after the volley */
+                    u8 dropPause; /* and before the last shot drops on the target */
+                };
             };
             u8 shotCategory; /* barrages: the item each shot flies as */
             u8 shotIndex;
             u8 shotAnimation;
-            u8 statusTurns;
+            union {
+                u8 statusTurns;
+                u8 castStyle; /* enemy spells: how the spell reaches the target (CAST_*), 0x32 for none */
+            };
             u8 itemSlot;
             u8 effect;
             u8 effectArg;
