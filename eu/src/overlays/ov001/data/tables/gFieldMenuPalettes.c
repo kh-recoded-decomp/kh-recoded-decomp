@@ -1,8 +1,10 @@
 #include "src/overlays/ov001/FieldMenuPalettes.h"
 
-u16 gFieldMenuBlueRamp[3] = {0x2840, 0x54c1, 0x6d24};
-u16 gFieldMenuRedRamp[3] = {0x006f, 0x04b7, 0x0cfe};
-u16 gFieldMenuGreenRamp[3] = {0x00c0, 0x11a0, 0x1a60};
+u16 gFieldMenuStateRamps[3][3] = {
+    {0x2840, 0x54c1, 0x6d24},
+    {0x006f, 0x04b7, 0x0cfe},
+    {0x00c0, 0x11a0, 0x1a60}
+};
 
 u16 gFieldMenuNormalRamps[2][3] = {
     {0x5d23, 0x71a5, 0x7e29},

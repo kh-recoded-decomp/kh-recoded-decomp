@@ -2317,9 +2317,7 @@ data_ov001_0209edf4 kind:data(any) addr:0x0209edf4
 data_ov001_0209edf8 kind:data(any) addr:0x0209edf8
 gFieldGaugeLayouts kind:data(word[14]) addr:0x0209ee14
 gFieldHudGaugeTaskDescriptor kind:data(word[5]) addr:0x0209ee4c
-gFieldMenuBlueRamp kind:data(short[3]) addr:0x0209ee60
-gFieldMenuRedRamp kind:data(short[3]) addr:0x0209ee66
-gFieldMenuGreenRamp kind:data(short[3]) addr:0x0209ee6c
+gFieldMenuStateRamps kind:data(short[9]) addr:0x0209ee60
 gFieldMenuNormalRamps kind:data(short[6]) addr:0x0209ee72
 gFieldMenuAlternateRamps kind:data(short[6]) addr:0x0209ee7e
 gFieldMenuModeBackgroundPalettes kind:data(short[12]) addr:0x0209ee8a

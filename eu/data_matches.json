@@ -10297,7 +10297,7 @@
       "compiler": "mwccarm-3.0-139",
       "name": "gFieldMenuPalettes",
       "origin": "EU original DATA; shared US palette values cross-checked",
-      "behavior": "Seven RGB555 palette tables: blue/red/green ramps, normal and alternate mode ramps, and three-row background/highlight palettes. Every emitted symbol and the two trailing zero alignment bytes are independently checked against the EU image."
+      "behavior": "Five RGB555 palette tables: the three-row state ramps (blue, red and green), normal and alternate mode ramps, and three-row background/highlight palettes. Every emitted symbol and the two trailing zero alignment bytes are independently checked against the EU image."
     },
     {
       "module": "ov001",
