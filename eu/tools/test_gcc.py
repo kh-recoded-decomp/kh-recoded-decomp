@@ -64,6 +64,21 @@ class GccObjectTests(unittest.TestCase):
                 self.assertEqual(code, bytes.fromhex(expected))
                 self.assertEqual(relocations, {})
 
+    def test_countdown_preserves_subtraction_and_borrow_branch(self):
+        code, relocations = self.compile(
+            "void probe(unsigned int cycles) "
+            "{ while (!__builtin_usub_overflow(cycles, 4u, &cycles)) {} }\n")
+        self.assertEqual(code, bytes.fromhex("040050e2fdffff2a1eff2fe1"))
+        self.assertEqual(relocations, {})
+
+    def test_long_tail_call_preserves_argument_and_literal_relocation(self):
+        code, relocations = self.compile(
+            "extern void external(int value) __attribute__((long_call));\n"
+            "void probe(int value) { external(value); }\n",
+            selected=COMPILER_ID + "/scratch-r1")
+        self.assertEqual(code, bytes.fromhex("00109fe511ff2fe100000000"))
+        self.assertEqual(relocations, {8: ("external", 2)})  # R_ARM_ABS32
+
 
 if __name__ == "__main__":
     unittest.main()

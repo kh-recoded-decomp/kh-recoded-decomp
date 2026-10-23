@@ -9570,5 +9570,7 @@
   "libs/nitro/os/auto/OS_SetDPermissionsForProtectionRegion.c": "gcc/12.2.1/scratch-r2",
   "libs/nitro/os/auto/DC_WaitWriteBufferEmpty.c": "gcc/12.2.1/scratch-r0",
   "libs/nitro/os/auto/IC_InvalidateAll.c": "gcc/12.2.1/scratch-r0",
-  "libs/nitro/os/auto/OS_Halt.c": "gcc/12.2.1/scratch-r0"
+  "libs/nitro/os/auto/OS_Halt.c": "gcc/12.2.1/scratch-r0",
+  "libs/nitro/os/auto/OS_SpinWaitCpuCycles.c": "gcc/12.2.1",
+  "libs/nitro/os/calls/OS_UnLockCartridge.c": "gcc/12.2.1/scratch-r1"
 }

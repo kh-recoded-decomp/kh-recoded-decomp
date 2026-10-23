@@ -59,10 +59,11 @@ these hashes, addresses will not line up.
    `tools/mwccarm/license.dat`. The paths live in `tools/project.py`.
 4. **Arm GNU Toolchain 12.2.1**, with `arm-none-eabi-as` and
    `arm-none-eabi-gcc` on `PATH`. The assembler handles `.s` sources. GCC is
-   used only by original assembly routines converted to byte-exact C with
-   ARM intrinsics, explicitly selected as `gcc/12.2.1` in
-   `config/arm9/file_compilers.json`. Set `ARM_NONE_EABI_GCC` to select a GCC
-   executable outside `PATH`; its version is checked before compiling.
+   used only by original assembly routines converted to byte-exact C,
+   including hardware intrinsics. Each unit selects `gcc/12.2.1` or one of
+   its profiles in `config/arm9/file_compilers.json`. Set `ARM_NONE_EABI_GCC`
+   to select a GCC executable outside `PATH`; its version is checked before
+   compiling.
 
 GCC units remain subject to the same per-function verifier and full module
 gate. They use ARM946E-S, soft float and the GNU APCS ABI; GNU relocation
@@ -71,11 +72,11 @@ No GCC runtime library is linked. All other C units keep their existing
 CodeWarrior compiler selections.
 
 The GCC selections `gcc/12.2.1/scratch-r0`, `scratch-r1` and `scratch-r2`
-(all with the same version prefix) are restricted to original CP15 leaf
-routines. Each reserves the other argument registers with `-ffixed-rN` and
-disables temporary-expression replacement with `-fno-tree-ter`, preserving
-the original scratch register and operand order. These profiles do not
-change the function signatures or calling convention.
+(all with the same version prefix) are restricted to original assembly leaf
+routines and tail-call wrappers. Each reserves the other argument registers
+with `-ffixed-rN` and disables temporary-expression replacement with
+`-fno-tree-ter`, preserving the original scratch register and operand order.
+These profiles do not change the function signatures or calling convention.
 
 ### Extract and index
 

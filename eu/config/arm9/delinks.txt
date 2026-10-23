@@ -409,7 +409,7 @@ libs/nitro/os/calls/OS_UnlockCartridge_0x020022c8.c:
     complete
     .text       start:0x020022c8 end:0x020022e8
 
-libs/nitro/os/asm_stubs/calls/OS_UnLockCartridge.c:
+libs/nitro/os/calls/OS_UnLockCartridge.c:
     complete
     .text       start:0x020022e8 end:0x020022f4
 
@@ -1034,7 +1034,7 @@ libs/nitro/os/asm_stubs/auto/OS_GetProcMode.c:
     complete
     .text       start:0x020049b0 end:0x020049bc
 
-libs/nitro/os/asm_stubs/auto/OS_SpinWaitCpuCycles.c:
+libs/nitro/os/auto/OS_SpinWaitCpuCycles.c:
     complete
     .text       start:0x020049bc end:0x020049c8
 

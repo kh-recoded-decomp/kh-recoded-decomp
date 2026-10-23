@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Compile explicitly selected ARM intrinsic units with Arm GNU GCC."""
+"""Compile explicitly selected original ARM routines implemented in C."""
 import os
 import shutil
 import subprocess
@@ -42,8 +42,8 @@ def compiler_command(source, output, mode="arm", selected=COMPILER_ID, compiler=
                              check=True, capture_output=True, text=True).stdout.strip()
     if version != "12.2.1":
         raise SystemExit("expected Arm GNU GCC 12.2.1, found " + version)
-    # Original CP15 leaf routines use one scratch argument register. Reserve
-    # the others, and retain expression operand order through RTL expansion.
+    # Original leaf routines and tail-call wrappers use one scratch argument
+    # register. Reserve the others and retain expression operand order.
     profile_flags = ["-ffixed-" + register for register in REGISTER_PROFILES[selected]]
     if profile_flags:
         profile_flags.append("-fno-tree-ter")
