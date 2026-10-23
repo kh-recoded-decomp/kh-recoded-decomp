@@ -6,25 +6,7 @@ typedef struct {
     fx32 y;
 } Position2D;
 
-typedef struct {
-    u8 pad_00[0x10];
-    int bgId;
-} SlotFrame;
-
-typedef struct {
-    s32 status : 8;
-    s32 frameIndex : 8;
-    u32 statusHigh : 16;
-    u8 pad_04[2];
-    s16 emptyElement;
-    s16 filledElement;
-    u8 pad_0A[2];
-    void *cursorElement;
-    SlotFrame *frames[5];
-    u16 playerName[11];
-    u16 worldName[10];
-    u16 playTime[(0x3830 - 0x4e) / 2];
-} SaveSlot;
+#include "src/overlays/ov080/SaveSlot.h"
 
 typedef struct {
     u8 slotIndex;
@@ -41,7 +23,7 @@ typedef struct {
     u8 pad_58[0x20];
     SaveSlot slots[2];
     u8 pad_70D8[0x3760];
-    const u16 *playTimeLabel;
+    const u16 *levelLabel;
     u8 pad_A83C[4];
     const u16 *emptyLabel;
     u8 pad_A844[0x68];
@@ -80,7 +62,7 @@ void DrawSlotDetailPanel(SaveSelectScreen *screen, int slotIndex)
     u16 text[128];
     SaveSlot *other;
     BOOL visible;
-    int nameWidth;
+    int levelLabelWidth;
     const u16 *emptyLabel;
     const u16 *label;
     int topY;
@@ -126,19 +108,19 @@ void DrawSlotDetailPanel(SaveSelectScreen *screen, int slotIndex)
                 }
                 IndexedRecords_SetFlag2(panel, slot->emptyElement, visible);
                 IndexedRecord_SetPair(panel, slot->emptyElement, &positions[1]);
-                nameWidth = func_0200191c(screen->textLayer, screen->playTimeLabel, 0);
-                label = screen->playTimeLabel;
+                levelLabelWidth = func_0200191c(screen->textLayer, screen->levelLabel, 0);
+                label = screen->levelLabel;
                 topY = y + 15;
                 DrawTextAnchored(screen->textLayer, 0x1f, topY, 7, 8, label);
                 bottomY = y + 14;
                 DrawTextAnchored(screen->textLayer, 0x1e, bottomY, 6, 8, label);
-                DrawTextAnchored(screen->textLayer, nameWidth + 0x25, topY, 3, 8, slot->playerName);
-                nameWidth += 0x24;
-                DrawTextAnchored(screen->textLayer, nameWidth, bottomY, 2, 8, slot->playerName);
-                func_ov039_020be548(screen->textLayer, 0x1e, y, 2, 8, slot->playTime, 0xac);
+                DrawTextAnchored(screen->textLayer, levelLabelWidth + 0x25, topY, 3, 8, slot->levelText);
+                levelLabelWidth += 0x24;
+                DrawTextAnchored(screen->textLayer, levelLabelWidth, bottomY, 2, 8, slot->levelText);
+                func_ov039_020be548(screen->textLayer, 0x1e, y, 2, 8, slot->titleText, 0xac);
                 Obj_SetField14(screen->textLayer, font);
-                DrawTextAnchored(screen->textLayer, 0xc7, topY, 3, 0x20, slot->worldName);
-                DrawTextAnchored(screen->textLayer, 0xc6, bottomY, 2, 0x20, slot->worldName);
+                DrawTextAnchored(screen->textLayer, 0xc7, topY, 3, 0x20, slot->playTimeText);
+                DrawTextAnchored(screen->textLayer, 0xc6, bottomY, 2, 0x20, slot->playTimeText);
                 break;
             }
         }
