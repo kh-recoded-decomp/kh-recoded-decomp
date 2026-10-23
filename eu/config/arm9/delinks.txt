@@ -674,11 +674,11 @@ src/auto/DC_FlushRange.c:
     complete
     .text       start:0x02003460 end:0x02003484
 
-libs/nitro/os/asm_stubs/auto/DC_WaitWriteBufferEmpty.c:
+libs/nitro/os/auto/DC_WaitWriteBufferEmpty.c:
     complete
     .text       start:0x02003484 end:0x02003490
 
-libs/nitro/os/asm_stubs/auto/IC_InvalidateAll.c:
+libs/nitro/os/auto/IC_InvalidateAll.c:
     complete
     .text       start:0x02003490 end:0x0200349c
 
@@ -762,39 +762,39 @@ libs/nitro/os/asm_stubs/auto/OS_GetDTCMAddress.c:
     complete
     .text       start:0x02003b50 end:0x02003b64
 
-libs/nitro/os/asm_stubs/auto/OS_EnableProtectionUnit.c:
+libs/nitro/os/auto/OS_EnableProtectionUnit.c:
     complete
     .text       start:0x02003b64 end:0x02003b74
 
-libs/nitro/os/asm_stubs/auto/OS_DisableProtectionUnit.c:
+libs/nitro/os/auto/OS_DisableProtectionUnit.c:
     complete
     .text       start:0x02003b74 end:0x02003b84
 
-libs/nitro/os/asm_stubs/auto/OS_EnableICacheForProtectionRegion.c:
+libs/nitro/os/auto/OS_EnableICacheForProtectionRegion.c:
     complete
     .text       start:0x02003b84 end:0x02003b94
 
-libs/nitro/os/asm_stubs/auto/OS_DisableICacheForProtectionRegion.c:
+libs/nitro/os/auto/OS_DisableICacheForProtectionRegion.c:
     complete
     .text       start:0x02003b94 end:0x02003ba4
 
-libs/nitro/os/asm_stubs/auto/OS_EnableDCacheForProtectionRegion.c:
+libs/nitro/os/auto/OS_EnableDCacheForProtectionRegion.c:
     complete
     .text       start:0x02003ba4 end:0x02003bb4
 
-libs/nitro/os/asm_stubs/auto/OS_DisableDCacheForProtectionRegion.c:
+libs/nitro/os/auto/OS_DisableDCacheForProtectionRegion.c:
     complete
     .text       start:0x02003bb4 end:0x02003bc4
 
-libs/nitro/os/asm_stubs/auto/OS_SetDPermissionsForProtectionRegion.c:
+libs/nitro/os/auto/OS_SetDPermissionsForProtectionRegion.c:
     complete
     .text       start:0x02003bc4 end:0x02003bd8
 
-libs/nitro/os/asm_stubs/auto/OS_EnableWriteBufferForProtectionRegion.c:
+libs/nitro/os/auto/OS_EnableWriteBufferForProtectionRegion.c:
     complete
     .text       start:0x02003bd8 end:0x02003be8
 
-libs/nitro/os/asm_stubs/auto/OS_DisableWriteBufferForProtectionRegion.c:
+libs/nitro/os/auto/OS_DisableWriteBufferForProtectionRegion.c:
     complete
     .text       start:0x02003be8 end:0x02003bf8
 
@@ -1095,7 +1095,7 @@ libs/nitro/os/calls/OSi_TerminateCore.c:
     complete
     .text       start:0x02004d34 end:0x02004d44
 
-libs/nitro/os/asm_stubs/auto/OS_Halt.c:
+libs/nitro/os/auto/OS_Halt.c:
     complete
     .text       start:0x02004d44 end:0x02004d50
 

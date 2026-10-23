@@ -70,6 +70,13 @@ encoding keeps their objects compatible with the existing mwldarm linker.
 No GCC runtime library is linked. All other C units keep their existing
 CodeWarrior compiler selections.
 
+The GCC selections `gcc/12.2.1/scratch-r0`, `scratch-r1` and `scratch-r2`
+(all with the same version prefix) are restricted to original CP15 leaf
+routines. Each reserves the other argument registers with `-ffixed-rN` and
+disables temporary-expression replacement with `-fno-tree-ter`, preserving
+the original scratch register and operand order. These profiles do not
+change the function signatures or calling convention.
+
 ### Extract and index
 
 ```sh

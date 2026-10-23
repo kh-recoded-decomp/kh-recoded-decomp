@@ -10,6 +10,12 @@ from project import ROOT
 
 
 COMPILER_ID = "gcc/12.2.1"
+REGISTER_PROFILES = {
+    COMPILER_ID: (),
+    COMPILER_ID + "/scratch-r0": ("r1", "r2", "r3"),
+    COMPILER_ID + "/scratch-r1": ("r0", "r2", "r3"),
+    COMPILER_ID + "/scratch-r2": ("r0", "r1", "r3"),
+}
 
 
 def find_compiler():
@@ -27,7 +33,7 @@ def find_compiler():
 
 
 def compiler_command(source, output, mode="arm", selected=COMPILER_ID, compiler=None):
-    if selected != COMPILER_ID:
+    if selected not in REGISTER_PROFILES:
         raise SystemExit("unsupported GCC selection: " + selected)
     if mode not in ("arm", "thumb"):
         raise SystemExit("unsupported instruction mode: " + mode)
@@ -36,6 +42,11 @@ def compiler_command(source, output, mode="arm", selected=COMPILER_ID, compiler=
                              check=True, capture_output=True, text=True).stdout.strip()
     if version != "12.2.1":
         raise SystemExit("expected Arm GNU GCC 12.2.1, found " + version)
+    # Original CP15 leaf routines use one scratch argument register. Reserve
+    # the others, and retain expression operand order through RTL expansion.
+    profile_flags = ["-ffixed-" + register for register in REGISTER_PROFILES[selected]]
+    if profile_flags:
+        profile_flags.append("-fno-tree-ter")
     return [
         str(compiler), "-c", "-O2", "-std=c99", "-mcpu=arm946e-s", "-m" + mode,
         "-mthumb-interwork", "-mfloat-abi=soft", "-mabi=apcs-gnu",
@@ -44,6 +55,7 @@ def compiler_command(source, output, mode="arm", selected=COMPILER_ID, compiler=
         "-fno-common", "-fno-pic", "-fno-pie", "-fno-unwind-tables",
         "-fno-asynchronous-unwind-tables", "-I", str(ROOT),
         "-I", str(ROOT.parent / "include"),
+        *profile_flags,
         "-o", str(output), str(source),
     ]
 

@@ -9558,5 +9558,17 @@
   "libs/nitro/os/auto/OS_SetProtectionRegion5.c": "gcc/12.2.1",
   "libs/nitro/os/auto/OS_SetProtectionRegion6.c": "gcc/12.2.1",
   "libs/nitro/os/auto/OS_SetProtectionRegion7.c": "gcc/12.2.1",
-  "libs/nitro/math/auto/CountLeadingZeros32.c": "gcc/12.2.1"
+  "libs/nitro/math/auto/CountLeadingZeros32.c": "gcc/12.2.1",
+  "libs/nitro/os/auto/OS_EnableProtectionUnit.c": "gcc/12.2.1/scratch-r0",
+  "libs/nitro/os/auto/OS_DisableProtectionUnit.c": "gcc/12.2.1/scratch-r0",
+  "libs/nitro/os/auto/OS_EnableDCacheForProtectionRegion.c": "gcc/12.2.1/scratch-r1",
+  "libs/nitro/os/auto/OS_DisableDCacheForProtectionRegion.c": "gcc/12.2.1/scratch-r1",
+  "libs/nitro/os/auto/OS_EnableICacheForProtectionRegion.c": "gcc/12.2.1/scratch-r1",
+  "libs/nitro/os/auto/OS_DisableICacheForProtectionRegion.c": "gcc/12.2.1/scratch-r1",
+  "libs/nitro/os/auto/OS_EnableWriteBufferForProtectionRegion.c": "gcc/12.2.1/scratch-r1",
+  "libs/nitro/os/auto/OS_DisableWriteBufferForProtectionRegion.c": "gcc/12.2.1/scratch-r1",
+  "libs/nitro/os/auto/OS_SetDPermissionsForProtectionRegion.c": "gcc/12.2.1/scratch-r2",
+  "libs/nitro/os/auto/DC_WaitWriteBufferEmpty.c": "gcc/12.2.1/scratch-r0",
+  "libs/nitro/os/auto/IC_InvalidateAll.c": "gcc/12.2.1/scratch-r0",
+  "libs/nitro/os/auto/OS_Halt.c": "gcc/12.2.1/scratch-r0"
 }

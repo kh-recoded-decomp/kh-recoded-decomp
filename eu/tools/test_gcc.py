@@ -5,18 +5,18 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-from _run_gcc import compiler_command
+from _run_gcc import COMPILER_ID, compiler_command
 from match import text_relocs
 
 
 class GccObjectTests(unittest.TestCase):
-    def compile(self, text, mode="arm"):
+    def compile(self, text, mode="arm", selected=COMPILER_ID):
         temporary = tempfile.TemporaryDirectory(prefix="recoded-gcc-")
         self.addCleanup(temporary.cleanup)
         source = Path(temporary.name) / "probe.c"
         output = source.with_suffix(".o")
         source.write_text(text, encoding="utf-8")
-        subprocess.run(compiler_command(source, output, mode), check=True,
+        subprocess.run(compiler_command(source, output, mode, selected), check=True,
                        capture_output=True, text=True)
         return text_relocs(output, "probe")
 
@@ -44,6 +44,25 @@ class GccObjectTests(unittest.TestCase):
         with patch("_run_gcc.subprocess.run", return_value=result):
             with self.assertRaisesRegex(SystemExit, "expected Arm GNU GCC 12.2.1"):
                 compiler_command("source.c", "output.o", compiler="arm-none-eabi-gcc")
+
+    def test_cp15_leaf_register_profiles(self):
+        cases = [
+            ("scratch-r0", "void probe(void) { __builtin_arm_mcr(15,0,0,7,10,4); }",
+             "0000a0e39a0f07ee1eff2fe1"),
+            ("scratch-r1", "void probe(unsigned int mask) { "
+             "unsigned int regions=__builtin_arm_mrc(15,0,2,0,0); "
+             "__builtin_arm_mcr(15,0,regions|mask,2,0,0); }",
+             "101f12ee001081e1101f02ee1eff2fe1"),
+            ("scratch-r2", "void probe(unsigned int mask, unsigned int flags) { "
+             "unsigned int access=__builtin_arm_mrc(15,0,5,0,2); "
+             "__builtin_arm_mcr(15,0,(access&~mask)|flags,5,0,2); }",
+             "502f15ee0020c2e1012082e1502f05ee1eff2fe1"),
+        ]
+        for profile, source, expected in cases:
+            with self.subTest(profile=profile):
+                code, relocations = self.compile(source, selected=COMPILER_ID + "/" + profile)
+                self.assertEqual(code, bytes.fromhex(expected))
+                self.assertEqual(relocations, {})
 
 
 if __name__ == "__main__":
