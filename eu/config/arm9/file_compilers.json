@@ -9510,5 +9510,8 @@
   "src/asm_stubs/calls/func_01ff8f5c.c": "dsi/1.1",
   "src/asm_stubs/calls/func_01ff8ff8.c": "dsi/1.1",
   "src/asm_stubs/calls/func_01ff9094.c": "dsi/1.1",
-  "src/overlays/ov041/calls/EntryActionMagic.c": "dsi/1.1"
+  "src/overlays/ov041/calls/EntryActionMagic.c": "dsi/1.1",
+  "libs/nitro/math/data/tables/MATHi_SHA1RoundConstants.c": "dsi/1.1",
+  "libs/nns/g3d/data/tables/gTexMtxMode2Builders.c": "dsi/1.1",
+  "libs/nns/g3d/data/tables/gTexMtxAltBuilders.c": "dsi/1.1"
 }

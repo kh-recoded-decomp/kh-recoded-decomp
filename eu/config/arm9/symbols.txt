@@ -614,7 +614,7 @@ ComputeHash kind:function(arm,size=0x44) addr:0x0200d9c4
 MATH_CalcHMACSHA1 kind:function(arm,size=0x94) addr:0x0200da08
 MATHi_CalcHMAC kind:function(arm,size=0x1b0) addr:0x0200da9c
 func_0200dc4c kind:function(arm,size=0x288) addr:0x0200dc4c
-MATHi_SHA1RoundConstants kind:function(arm,size=0x10,unknown) addr:0x0200ded4
+MATHi_SHA1RoundConstants kind:data(word[4]) addr:0x0200ded4
 MATHi_SHA1ProcessBlock kind:function(arm,size=0x31c) addr:0x0200dee4
 PXI_Init kind:function(thumb,size=0x8) addr:0x0200e200
 PXI_InitFifo kind:function(thumb,size=0xa8) addr:0x0200e208

@@ -349,10 +349,6 @@ src/calls/func_01ffa624.c:
     complete
     .text       start:0x01ffa624 end:0x01ffa660
 
-libs/nns/g3d/asm_stubs/calls/gTexMtxMode2Builders.s:
-    complete
-    .text       start:0x01ffa660 end:0x01ffa680
-
 src/calls/EmitJointAnimationResult.c:
     complete
     .text       start:0x01ffa680 end:0x01ffa73c
@@ -396,10 +392,6 @@ src/calls/func_01ffacdc.c:
 src/calls/NNSi_G3dSendTexMtxMode2.c:
     complete
     .text       start:0x01ffad00 end:0x01ffae38
-
-libs/nns/g3d/asm_stubs/calls/gTexMtxAltBuilders.s:
-    complete
-    .text       start:0x01ffae38 end:0x01ffae58
 
 src/calls/func_01ffae58.c:
     complete
@@ -552,6 +544,14 @@ src/calls/CaptureSelectedJointMtx_01fffe28.c:
 src/calls/CaptureContextJointMtx.c:
     complete
     .text       start:0x01fffe7c end:0x01fffe94
+
+libs/nns/g3d/data/tables/gTexMtxAltBuilders.c:
+    complete
+    .text       start:0x01ffae38 end:0x01ffae58
+
+libs/nns/g3d/data/tables/gTexMtxMode2Builders.c:
+    complete
+    .text       start:0x01ffa660 end:0x01ffa680
 
 src/data/itcm/bss/Bss_itcm_01fffea0.c:
     complete

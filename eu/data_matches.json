@@ -1,6 +1,39 @@
 {
   "data": [
     {
+      "module": "itcm",
+      "section": ".text",
+      "start": "0x01ffae38",
+      "end": "0x01ffae58",
+      "source": "libs/nns/g3d/data/tables/gTexMtxAltBuilders.c",
+      "compiler": "dsi/1.1",
+      "name": "gTexMtxAltBuilders",
+      "origin": "EU original DATA",
+      "behavior": "Alternate texture-matrix dispatch table, indexed by scale, rotation and translation flags."
+    },
+    {
+      "module": "itcm",
+      "section": ".text",
+      "start": "0x01ffa660",
+      "end": "0x01ffa680",
+      "source": "libs/nns/g3d/data/tables/gTexMtxMode2Builders.c",
+      "compiler": "dsi/1.1",
+      "name": "gTexMtxMode2Builders",
+      "origin": "EU original DATA",
+      "behavior": "Texture-matrix mode 2 dispatch table, indexed by scale, rotation and translation flags."
+    },
+    {
+      "module": "arm9",
+      "section": ".text",
+      "start": "0x0200ded4",
+      "end": "0x0200dee4",
+      "source": "libs/nitro/math/data/tables/MATHi_SHA1RoundConstants.c",
+      "compiler": "dsi/1.1",
+      "name": "MATHi_SHA1RoundConstants",
+      "origin": "EU original DATA",
+      "behavior": "SHA-1 round constants loaded relative to the block routine."
+    },
+    {
       "module": "arm9",
       "section": ".data",
       "start": "0x02055c2a",
