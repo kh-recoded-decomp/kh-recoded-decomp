@@ -65,7 +65,7 @@ extern void *createMovieStream_020a91a0(void *file, int slotCount);
 extern u32 ReleaseIfSet_020a92a8(void *stream);
 extern u32 ReleaseIfSet_020a92c0(void *stream);
 extern u32 ReleaseIfSet_020a92d8(void *stream);
-extern void func_020033b4(void);
+extern u32 func_020033b4(void);
 extern void InitializeAlarmSystem_0200417c(void);
 extern void OS_CreateAlarm_02004204(void *alarm);
 extern void func_ov022_020a92f0(void *stream);

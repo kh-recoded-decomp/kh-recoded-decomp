@@ -654,7 +654,7 @@ libs/nitro/os/auto/OSi_DequeueItem.c:
     complete
     .text       start:0x020033a4 end:0x020033c8
 
-libs/nitro/os/asm_stubs/auto/DC_StoreAll.c:
+libs/nitro/os/auto/DC_StoreAll.c:
     complete
     .text       start:0x020033c8 end:0x020033f4
 

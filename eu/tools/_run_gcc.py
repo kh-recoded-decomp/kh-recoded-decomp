@@ -16,6 +16,7 @@ REGISTER_PROFILES = {
     COMPILER_ID + "/scratch-r0": ("r1", "r2", "r3"),
     COMPILER_ID + "/scratch-r1": ("r0", "r2", "r3"),
     COMPILER_ID + "/scratch-r2": ("r0", "r1", "r3"),
+    COMPILER_ID + "/cache-sets": ("r3",),
 }
 
 
@@ -48,6 +49,10 @@ def compiler_command(source, output, mode="arm", selected=COMPILER_ID, compiler=
     profile_flags = ["-ffixed-" + register for register in REGISTER_PROFILES[selected]]
     if profile_flags or selected == COMPILER_ID + "/operand-order":
         profile_flags.append("-fno-tree-ter")
+    if selected == COMPILER_ID + "/cache-sets":
+        # Retain the original cache-set loops and separate arithmetic/compares.
+        profile_flags.extend(("-fno-tree-vrp", "-fno-tree-loop-optimize",
+                              "-fdisable-rtl-combine"))
     return [
         str(compiler), "-c", "-O2", "-std=c99", "-mcpu=arm946e-s", "-m" + mode,
         "-mthumb-interwork", "-mfloat-abi=soft", "-mabi=apcs-gnu",

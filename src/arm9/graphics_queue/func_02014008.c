@@ -1,7 +1,7 @@
 extern int *func_02013f74(int *queueState);
 extern int func_02013f94(int *queueState);
 extern void func_02013ee4(int *command, int underBudget);
-extern void DC_StoreAll(void);
+extern unsigned int DC_StoreAll(void);
 extern char data_0205a8d0;
 extern char data_0205a8d0_budget;
 

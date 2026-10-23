@@ -9584,5 +9584,6 @@
   "libs/nitro/os/auto/OS_DisableInterrupts.c": "clang/22.1.3/source-order",
   "libs/nitro/os/auto/OS_DisableInterrupts_IrqAndFiq.c": "clang/22.1.3/source-order",
   "src/overlays/ov041/calls/EntryActionFlurry.c": "dsi/1.1",
-  "src/overlays/ov001/calls/SetHudGaugeValue.c": "dsi/1.1"
+  "src/overlays/ov001/calls/SetHudGaugeValue.c": "dsi/1.1",
+  "libs/nitro/os/auto/DC_StoreAll.c": "gcc/12.2.1/cache-sets"
 }
