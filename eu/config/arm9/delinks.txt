@@ -2537,7 +2537,7 @@ libs/nitro/rtc/auto/RtcGetResultCallback.c:
     complete
     .text       start:0x0200e8d4 end:0x0200e8e0
 
-libs/nitro/rtc/asm_stubs/calls/RtcWaitBusy.c:
+libs/nitro/rtc/calls/RtcWaitBusy.c:
     complete
     .text       start:0x0200e8e0 end:0x0200e8f8
 
