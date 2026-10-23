@@ -9557,5 +9557,6 @@
   "libs/nitro/os/auto/OS_SetProtectionRegion4.c": "gcc/12.2.1",
   "libs/nitro/os/auto/OS_SetProtectionRegion5.c": "gcc/12.2.1",
   "libs/nitro/os/auto/OS_SetProtectionRegion6.c": "gcc/12.2.1",
-  "libs/nitro/os/auto/OS_SetProtectionRegion7.c": "gcc/12.2.1"
+  "libs/nitro/os/auto/OS_SetProtectionRegion7.c": "gcc/12.2.1",
+  "libs/nitro/math/auto/CountLeadingZeros32.c": "gcc/12.2.1"
 }

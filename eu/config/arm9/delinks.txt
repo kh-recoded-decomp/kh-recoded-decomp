@@ -2421,7 +2421,7 @@ libs/nitro/fs/calls/FS_Init.c:
     .text       start:0x0200d574 end:0x0200d5a0
     .bss        start:0x02057b80 end:0x02057b84
 
-libs/nitro/os/asm_stubs/auto/func_0200d5a0.c:
+libs/nitro/math/auto/CountLeadingZeros32.c:
     complete
     .text       start:0x0200d5a0 end:0x0200d5a8
 
