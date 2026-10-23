@@ -1,3 +1,4 @@
+#define func_ov001_020747fc SetHudGaugeValue
 #define RefreshActiveMenuEntry_02074f7c RefreshActiveMenuEntry
 #define data_ov001_020a04ac data_ov001_020a04cc
 #include "src/ov001/field_manager/RefreshActiveMenuEntry_02074f7c.c"

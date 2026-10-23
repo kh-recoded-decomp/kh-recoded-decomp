@@ -3360,6 +3360,10 @@ src/overlays/ov001/calls/RepaintPanelGaugeRows.c:
     complete
     .text       start:0x020746e8 end:0x020747fc
 
+src/overlays/ov001/calls/SetHudGaugeValue.c:
+    complete
+    .text       start:0x020747fc end:0x020749c0
+
 src/overlays/ov001/calls/func_ov001_020749c0.c:
     complete
     .text       start:0x020749c0 end:0x02074b7c

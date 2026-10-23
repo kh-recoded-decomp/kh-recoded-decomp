@@ -1,3 +1,4 @@
+#define func_ov001_020747fc SetHudGaugeValue
 #define DrawShortLabel_0207384c DrawShortLabel
 #define RefreshMenuGaugeState_02073a3c RefreshMenuGaugeState
 #define SetGaugeValues_02074688 SetGaugeValues
