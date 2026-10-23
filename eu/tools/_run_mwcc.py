@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Compile one source with mwccarm, or dispatch an explicit GCC selection.
+"""Compile one source with mwccarm, or dispatch an explicit GCC/Clang selection.
 
 Usage: _run_mwcc.py <out.o> <in.c> [--mode=arm|thumb] [--cc=default|<mwccarm dir>]
 
@@ -87,6 +87,9 @@ def main():
             opt_cc = load_json_retry(comp_path).get(rel)
     if opt_cc and opt_cc.startswith("gcc/"):
         from _run_gcc import compiler_command
+        return subprocess.run(compiler_command(src_path, out_path, opt_mode or "arm", opt_cc)).returncode
+    if opt_cc and opt_cc.startswith("clang/"):
+        from _run_clang import compiler_command
         return subprocess.run(compiler_command(src_path, out_path, opt_mode or "arm", opt_cc)).returncode
     if opt_cc and opt_cc != "default":
         mwcc_bin = MWCC_DIR / opt_cc / "mwccarm.exe"

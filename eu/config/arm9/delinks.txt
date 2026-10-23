@@ -1006,11 +1006,11 @@ libs/nitro/os/calls/OSi_GetVFrame.c:
     complete
     .text       start:0x020048fc end:0x02004938
 
-libs/nitro/os/asm_stubs/auto/OS_EnableInterrupts.c:
+libs/nitro/os/auto/OS_EnableInterrupts.c:
     complete
     .text       start:0x02004938 end:0x0200494c
 
-libs/nitro/os/asm_stubs/auto/OS_DisableInterrupts.c:
+libs/nitro/os/auto/OS_DisableInterrupts.c:
     complete
     .text       start:0x0200494c end:0x02004960
 
@@ -1018,7 +1018,7 @@ libs/nitro/os/asm_stubs/auto/OS_RestoreInterrupts.c:
     complete
     .text       start:0x02004960 end:0x02004978
 
-libs/nitro/os/asm_stubs/auto/OS_DisableInterrupts_IrqAndFiq.c:
+libs/nitro/os/auto/OS_DisableInterrupts_IrqAndFiq.c:
     complete
     .text       start:0x02004978 end:0x0200498c
 
@@ -1026,11 +1026,11 @@ libs/nitro/os/asm_stubs/auto/OS_RestoreInterrupts_IrqAndFiq.c:
     complete
     .text       start:0x0200498c end:0x020049a4
 
-libs/nitro/os/asm_stubs/auto/OS_GetCpsrIrq.c:
+libs/nitro/os/auto/OS_GetCpsrIrq.c:
     complete
     .text       start:0x020049a4 end:0x020049b0
 
-libs/nitro/os/asm_stubs/auto/OS_GetProcMode.c:
+libs/nitro/os/auto/OS_GetProcMode.c:
     complete
     .text       start:0x020049b0 end:0x020049bc
 

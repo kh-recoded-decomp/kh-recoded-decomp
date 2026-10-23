@@ -45,6 +45,9 @@ def source_compiler(cpath):
     if selected.startswith("gcc/"):
         from _run_gcc import find_compiler
         return Path(find_compiler()), selected
+    if selected.startswith("clang/"):
+        from _run_clang import find_compiler
+        return Path(find_compiler()), selected
     return MWCC_DIR / selected / "mwccarm.exe", selected
 
 
@@ -82,6 +85,11 @@ def compile_c(cpath, thumb=False, out=None):
     compiler, selected = source_compiler(cpath)
     if selected and selected.startswith("gcc/"):
         from _run_gcc import compiler_command
+        command = compiler_command(cpath, o, "thumb" if thumb else "arm", selected, compiler)
+        subprocess.run(command, check=True)
+        return o
+    if selected and selected.startswith("clang/"):
+        from _run_clang import compiler_command
         command = compiler_command(cpath, o, "thumb" if thumb else "arm", selected, compiler)
         subprocess.run(command, check=True)
         return o

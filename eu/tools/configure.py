@@ -207,6 +207,11 @@ def emit_ninja(ninja_path, src_files):
         "  description = ARMASM $in",
         "  restat = 1",
         "",
+        "rule clang",
+        "  command = $python tools/_run_clang.py $out $in --mode=$mode --cc=$cc",
+        "  description = CLANG $in",
+        "  restat = 1",
+        "",
         "rule mwld",
         "  command = $python tools/_run_mwld.py $out $lcf $out.rsp",
         "  description = MWLD $out",
@@ -228,6 +233,8 @@ def emit_ninja(ninja_path, src_files):
         if source_rule(src) == "mwcc":
             selected = cmap.get(src) or "default"
             rule = "gcc" if selected.startswith("gcc/") else "mwcc"
+            if selected.startswith("clang/"):
+                rule = "clang"
             lines.append(f"build {obj}: {rule} {src}")
             lines.append(f"  mode = {modes.get(src, 'arm')}")
             lines.append(f"  cc = {selected}")

@@ -64,11 +64,20 @@ these hashes, addresses will not line up.
    its profiles in `config/arm9/file_compilers.json`. Set `ARM_NONE_EABI_GCC`
    to select a GCC executable outside `PATH`; its version is checked before
    compiling.
+5. **Clang 22.1.3** for explicitly selected original assembly routines whose
+   hardware intrinsics produce byte-exact C. These units select `clang/22.1.3`
+   in `config/arm9/file_compilers.json`. Set `ARM_NONE_EABI_CLANG` to choose
+   the executable; otherwise the driver checks `PATH` and Visual Studio's
+   bundled x64 LLVM directory. The driver checks the version before compiling.
 
-GCC units remain subject to the same per-function verifier and full module
+GCC and Clang units remain subject to the same per-function verifier and full module
 gate. They use ARM946E-S, soft float and the GNU APCS ABI; GNU relocation
 encoding keeps their objects compatible with the existing mwldarm linker.
-No GCC runtime library is linked. All other C units keep their existing
+Clang uses the assembler alongside the selected Arm GNU GCC 12.2.1 executable
+to emit the same GNU relocation format. No compiler runtime library is linked.
+Unwind tables are disabled; Clang also selects the DWARF exception model to
+avoid EHABI's implicit `.ARM.exidx` entries, which mwldarm cannot relocate.
+All other C units keep their existing
 CodeWarrior compiler selections.
 
 The GCC selections `gcc/12.2.1/scratch-r0`, `scratch-r1` and `scratch-r2`
@@ -82,6 +91,10 @@ The `gcc/12.2.1/operand-order` selection uses `-fno-tree-ter` without reserving
 registers. It preserves the address arithmetic in original cache-maintenance
 loops. These implementations take the starting address as a 32-bit unsigned
 value, with the same ARM argument representation as the original pointer.
+
+The `clang/22.1.3/source-order` selection disables scheduling after register
+allocation. It preserves the original order of CPSR writes and result masks
+in interrupt-control routines.
 
 ### Extract and index
 
