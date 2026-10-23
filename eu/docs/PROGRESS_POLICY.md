@@ -24,6 +24,12 @@ compiler (`mcr`/`mrc`, `mrs`/`msr`, `swi`). They live under
 `libs/**/asm_stubs/` as that original assembly, verify byte-exact and are shown
 separately. They never count as C.
 
+An original assembly routine may instead count as real C when a readable C
+implementation using compiler intrinsics reproduces every byte. Such units
+explicitly select Arm GNU GCC 12.2.1 in the compiler map and pass the same
+per-function verification and full gate. Inline assembly remains excluded
+from real-C progress regardless of the selected compiler.
+
 ## Verified library code (MobiClip)
 
 The MobiClip movie library in ov022 (Actimagine, "Mobiclip SDK V1.1.1") is

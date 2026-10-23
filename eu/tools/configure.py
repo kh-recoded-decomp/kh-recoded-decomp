@@ -197,6 +197,11 @@ def emit_ninja(ninja_path, src_files):
         "  description = MWCC $in",
         "  restat = 1",
         "",
+        "rule gcc",
+        "  command = $python tools/_run_gcc.py $out $in --mode=$mode --cc=$cc",
+        "  description = GCC $in",
+        "  restat = 1",
+        "",
         "rule armasm",
         "  command = $python tools/_run_armasm.py $out $in",
         "  description = ARMASM $in",
@@ -221,9 +226,11 @@ def emit_ninja(ninja_path, src_files):
         obj = rel(obj_path)
         compiled_objs.append(obj)
         if source_rule(src) == "mwcc":
-            lines.append(f"build {obj}: mwcc {src}")
+            selected = cmap.get(src) or "default"
+            rule = "gcc" if selected.startswith("gcc/") else "mwcc"
+            lines.append(f"build {obj}: {rule} {src}")
             lines.append(f"  mode = {modes.get(src, 'arm')}")
-            lines.append(f"  cc = {cmap.get(src) or 'default'}")
+            lines.append(f"  cc = {selected}")
         else:
             lines.append(f"build {obj}: armasm {src}")
 

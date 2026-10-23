@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Compile one C function with mwccarm and compare it byte-for-byte.
+"""Compile one C function with its selected compiler and compare it byte-for-byte.
 
 Simple mode (no relocations):
     python tools/match.py <file.c> <original_hex> [--thumb]
@@ -16,6 +16,7 @@ import json
 import os
 import subprocess
 import sys
+from pathlib import Path
 
 from capstone import CS_ARCH_ARM, CS_MODE_ARM, CS_MODE_THUMB, Cs
 from elftools.elf.elffile import ELFFile
@@ -41,6 +42,9 @@ def source_compiler(cpath):
     selected = _COMPILER_MAP.get(rel)
     if not selected or selected == "default":
         return MWCCARM, selected
+    if selected.startswith("gcc/"):
+        from _run_gcc import find_compiler
+        return Path(find_compiler()), selected
     return MWCC_DIR / selected / "mwccarm.exe", selected
 
 
@@ -76,6 +80,11 @@ def compile_c(cpath, thumb=False, out=None):
         return o
     env = dict(os.environ, LM_LICENSE_FILE=str(LICENSE))
     compiler, selected = source_compiler(cpath)
+    if selected and selected.startswith("gcc/"):
+        from _run_gcc import compiler_command
+        command = compiler_command(cpath, o, "thumb" if thumb else "arm", selected, compiler)
+        subprocess.run(command, check=True)
+        return o
     flags = source_flags(cpath)
     if selected == "2.0/sp2p3":
         flags.extend(["-fp", "soft", "-ipa", "file"])

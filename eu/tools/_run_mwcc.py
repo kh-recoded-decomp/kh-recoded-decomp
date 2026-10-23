@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Compile one source with mwccarm for the ninja build.
+"""Compile one source with mwccarm, or dispatch an explicit GCC selection.
 
 Usage: _run_mwcc.py <out.o> <in.c> [--mode=arm|thumb] [--cc=default|<mwccarm dir>]
 
@@ -85,6 +85,9 @@ def main():
         comp_path = BUILD_DIR / "file_compilers.json"
         if comp_path.exists():
             opt_cc = load_json_retry(comp_path).get(rel)
+    if opt_cc and opt_cc.startswith("gcc/"):
+        from _run_gcc import compiler_command
+        return subprocess.run(compiler_command(src_path, out_path, opt_mode or "arm", opt_cc)).returncode
     if opt_cc and opt_cc != "default":
         mwcc_bin = MWCC_DIR / opt_cc / "mwccarm.exe"
 

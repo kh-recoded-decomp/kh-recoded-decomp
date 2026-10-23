@@ -57,7 +57,18 @@ these hashes, addresses will not line up.
    `tools/mwccarm/3.0_patch4/` and `mwldarm` 2.0 SP2p4 under
    `tools/mwccarm/2.0/sp2p4/`, with the license file at
    `tools/mwccarm/license.dat`. The paths live in `tools/project.py`.
-4. **arm-none-eabi-as** (Arm GNU Toolchain) on `PATH`, for the `.s` sources.
+4. **Arm GNU Toolchain 12.2.1**, with `arm-none-eabi-as` and
+   `arm-none-eabi-gcc` on `PATH`. The assembler handles `.s` sources. GCC is
+   used only by original assembly routines converted to byte-exact C with
+   ARM intrinsics, explicitly selected as `gcc/12.2.1` in
+   `config/arm9/file_compilers.json`. Set `ARM_NONE_EABI_GCC` to select a GCC
+   executable outside `PATH`; its version is checked before compiling.
+
+GCC units remain subject to the same per-function verifier and full module
+gate. They use ARM946E-S, soft float and the GNU APCS ABI; GNU relocation
+encoding keeps their objects compatible with the existing mwldarm linker.
+No GCC runtime library is linked. All other C units keep their existing
+CodeWarrior compiler selections.
 
 ### Extract and index
 
