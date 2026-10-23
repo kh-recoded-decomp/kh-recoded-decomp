@@ -9524,5 +9524,22 @@
   "src/overlays/ov104/data/gDSProtIntegrityFunctions.c": "dsi/1.1",
   "src/overlays/ov104/data/gDSProtEncryptionFunctions.c": "dsi/1.1",
   "src/overlays/ov104/data/gDSProtRuntimeFunctions.c": "dsi/1.1",
-  "src/overlays/ov104/data/gDSProtCipherFunctions.c": "dsi/1.1"
+  "src/overlays/ov104/data/gDSProtCipherFunctions.c": "dsi/1.1",
+  "src/overlays/ov104/data/gDSProtDetectDummyContext.c": "dsi/1.1",
+  "src/overlays/ov104/data/gDSProtDetectEmulatorContext.c": "dsi/1.1",
+  "src/overlays/ov104/data/gDSProtDetectFlashcartContext.c": "dsi/1.1",
+  "src/overlays/ov104/data/gDSProtDetectNotDummyContext.c": "dsi/1.1",
+  "src/overlays/ov104/data/gDSProtDetectNotEmulatorContext.c": "dsi/1.1",
+  "src/overlays/ov104/data/gDSProtDetectNotFlashcartContext.c": "dsi/1.1",
+  "src/overlays/ov104/data/gDSProtDummyIsBadContext.c": "dsi/1.1",
+  "src/overlays/ov104/data/gDSProtDummyIsGoodContext.c": "dsi/1.1",
+  "src/overlays/ov104/data/gDSProtIntegrityMACOwnerIsBadContext.c": "dsi/1.1",
+  "src/overlays/ov104/data/gDSProtIntegrityMACOwnerIsGoodContext.c": "dsi/1.1",
+  "src/overlays/ov104/data/gDSProtIntegrityROMTestIsBadContext.c": "dsi/1.1",
+  "src/overlays/ov104/data/gDSProtIntegrityROMTestIsGoodContext.c": "dsi/1.1",
+  "src/overlays/ov104/data/gDSProtMACOwnerIsBadContext.c": "dsi/1.1",
+  "src/overlays/ov104/data/gDSProtMACOwnerIsGoodContext.c": "dsi/1.1",
+  "src/overlays/ov104/data/gDSProtROMTestIsBadContext.c": "dsi/1.1",
+  "src/overlays/ov104/data/gDSProtROMTestIsGoodContext.c": "dsi/1.1",
+  "src/overlays/ov104/data/gDSProtROMUtilCRC32Context.c": "dsi/1.1"
 }

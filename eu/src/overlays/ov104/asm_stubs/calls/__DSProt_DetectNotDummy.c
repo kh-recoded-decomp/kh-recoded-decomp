@@ -1,7 +1,5 @@
 #include "src/overlays/ov104/asm_stubs/calls/dsprot_wrappers.h"
 
-extern u32 DetectNotDummy(void);
-
 asm u32 __DSProt_DetectNotDummy(void)
 {
     orr    ip, pc, pc
@@ -13,10 +11,4 @@ asm u32 __DSProt_DetectNotDummy(void)
     stmfd  sp!, {ip}
     orr    ip, pc, pc
     ldmfd  sp!, {pc}
-    DCD    DSProt_BSS + 1
-    DCD    DSProt_BSS + 0x18e22
-    DCD    DetectNotDummy + 0x1000
-    DCD    DSProt_BSS + 0x1080
-    DCD    0
-    DCD    Encryptor_DecryptionWrapperFragment + 0x1000
 }

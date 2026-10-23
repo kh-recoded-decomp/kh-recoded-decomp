@@ -29,27 +29,27 @@ src/overlays/ov104/calls/DetectNotDummy.c:
 
 src/overlays/ov104/asm_stubs/calls/__DSProt_DetectFlashcart.c:
     complete
-    .text       start:0x020d1ec0 end:0x020d1efc
+    .text       start:0x020d1ec0 end:0x020d1ee4
 
 src/overlays/ov104/asm_stubs/calls/__DSProt_DetectNotFlashcart.c:
     complete
-    .text       start:0x020d1efc end:0x020d1f38
+    .text       start:0x020d1efc end:0x020d1f20
 
 src/overlays/ov104/asm_stubs/calls/__DSProt_DetectEmulator.c:
     complete
-    .text       start:0x020d1f38 end:0x020d1f74
+    .text       start:0x020d1f38 end:0x020d1f5c
 
 src/overlays/ov104/asm_stubs/calls/__DSProt_DetectNotEmulator.c:
     complete
-    .text       start:0x020d1f74 end:0x020d1fb0
+    .text       start:0x020d1f74 end:0x020d1f98
 
 src/overlays/ov104/asm_stubs/calls/__DSProt_DetectDummy.c:
     complete
-    .text       start:0x020d1fb0 end:0x020d1fec
+    .text       start:0x020d1fb0 end:0x020d1fd4
 
 src/overlays/ov104/asm_stubs/calls/__DSProt_DetectNotDummy.c:
     complete
-    .text       start:0x020d1fec end:0x020d2028
+    .text       start:0x020d1fec end:0x020d2010
 
 src/overlays/ov104/asm_stubs/calls/__sinit_ov104_020d2028.c:
     complete
@@ -73,19 +73,19 @@ src/overlays/ov104/calls/Integrity_ROMTest_IsGood.c:
 
 src/overlays/ov104/asm_stubs/calls/RunEncrypted_Integrity_MACOwner_IsBad.c:
     complete
-    .text       start:0x020d24e0 end:0x020d251c
+    .text       start:0x020d24e0 end:0x020d2504
 
 src/overlays/ov104/asm_stubs/calls/RunEncrypted_Integrity_MACOwner_IsGood.c:
     complete
-    .text       start:0x020d251c end:0x020d2558
+    .text       start:0x020d251c end:0x020d2540
 
 src/overlays/ov104/asm_stubs/calls/RunEncrypted_Integrity_ROMTest_IsBad.c:
     complete
-    .text       start:0x020d2558 end:0x020d2594
+    .text       start:0x020d2558 end:0x020d257c
 
 src/overlays/ov104/asm_stubs/calls/RunEncrypted_Integrity_ROMTest_IsGood.c:
     complete
-    .text       start:0x020d2594 end:0x020d25d0
+    .text       start:0x020d2594 end:0x020d25b8
 
 src/overlays/ov104/asm_stubs/calls/__sinit_ov104_020d25d0.c:
     complete
@@ -126,11 +126,11 @@ src/overlays/ov104/calls/MACOwner_IsGood.c:
 
 src/overlays/ov104/asm_stubs/calls/RunEncrypted_MACOwner_IsBad.c:
     complete
-    .text       start:0x020d2ae4 end:0x020d2b20
+    .text       start:0x020d2ae4 end:0x020d2b08
 
 src/overlays/ov104/asm_stubs/calls/RunEncrypted_MACOwner_IsGood.c:
     complete
-    .text       start:0x020d2b20 end:0x020d2b5c
+    .text       start:0x020d2b20 end:0x020d2b44
 
 src/overlays/ov104/calls/ROMUtil_CRC32.c:
     complete
@@ -138,7 +138,7 @@ src/overlays/ov104/calls/ROMUtil_CRC32.c:
 
 src/overlays/ov104/asm_stubs/calls/RunEncrypted_ROMUtil_CRC32.c:
     complete
-    .text       start:0x020d2bf0 end:0x020d2c2c
+    .text       start:0x020d2bf0 end:0x020d2c14
 
 src/overlays/ov104/calls/ROMTest_IsBad.c:
     complete
@@ -174,11 +174,11 @@ src/overlays/ov104/calls/ROMTest_IsGood_CARD_UnlockRom_Thunk.c:
 
 src/overlays/ov104/asm_stubs/calls/RunEncrypted_ROMTest_IsBad.c:
     complete
-    .text       start:0x020d30f4 end:0x020d3130
+    .text       start:0x020d30f4 end:0x020d3118
 
 src/overlays/ov104/asm_stubs/calls/RunEncrypted_ROMTest_IsGood.c:
     complete
-    .text       start:0x020d3130 end:0x020d316c
+    .text       start:0x020d3130 end:0x020d3154
 
 src/overlays/ov104/calls/Dummy_IsBad.c:
     complete
@@ -190,11 +190,11 @@ src/overlays/ov104/calls/Dummy_IsGood.c:
 
 src/overlays/ov104/asm_stubs/calls/RunEncrypted_Dummy_IsBad.c:
     complete
-    .text       start:0x020d3184 end:0x020d31c0
+    .text       start:0x020d3184 end:0x020d31a8
 
 src/overlays/ov104/asm_stubs/calls/RunEncrypted_Dummy_IsGood.c:
     complete
-    .text       start:0x020d31c0 end:0x020d31fc
+    .text       start:0x020d31c0 end:0x020d31e4
 
 src/overlays/ov104/asm_stubs/calls/__sinit_ov104_020d31fc.c:
     complete
@@ -241,9 +241,41 @@ src/overlays/ov104/data/gDSProtCipherFunctions.c:
     complete
     .text       start:0x020d36c0 end:0x020d3700
 
+src/overlays/ov104/data/gDSProtDetectDummyContext.c:
+    complete
+    .text       start:0x020d1fd4 end:0x020d1fec
+
+src/overlays/ov104/data/gDSProtDetectEmulatorContext.c:
+    complete
+    .text       start:0x020d1f5c end:0x020d1f74
+
+src/overlays/ov104/data/gDSProtDetectFlashcartContext.c:
+    complete
+    .text       start:0x020d1ee4 end:0x020d1efc
+
+src/overlays/ov104/data/gDSProtDetectNotDummyContext.c:
+    complete
+    .text       start:0x020d2010 end:0x020d2028
+
+src/overlays/ov104/data/gDSProtDetectNotEmulatorContext.c:
+    complete
+    .text       start:0x020d1f98 end:0x020d1fb0
+
+src/overlays/ov104/data/gDSProtDetectNotFlashcartContext.c:
+    complete
+    .text       start:0x020d1f20 end:0x020d1f38
+
 src/overlays/ov104/data/gDSProtDetectionFunctions.c:
     complete
     .text       start:0x020d2034 end:0x020d2070
+
+src/overlays/ov104/data/gDSProtDummyIsBadContext.c:
+    complete
+    .text       start:0x020d31a8 end:0x020d31c0
+
+src/overlays/ov104/data/gDSProtDummyIsGoodContext.c:
+    complete
+    .text       start:0x020d31e4 end:0x020d31fc
 
 src/overlays/ov104/data/gDSProtEncryptionFunctions.c:
     complete
@@ -256,6 +288,42 @@ src/overlays/ov104/data/gDSProtInitializers.c:
 src/overlays/ov104/data/gDSProtIntegrityFunctions.c:
     complete
     .text       start:0x020d25dc end:0x020d2604
+
+src/overlays/ov104/data/gDSProtIntegrityMACOwnerIsBadContext.c:
+    complete
+    .text       start:0x020d2504 end:0x020d251c
+
+src/overlays/ov104/data/gDSProtIntegrityMACOwnerIsGoodContext.c:
+    complete
+    .text       start:0x020d2540 end:0x020d2558
+
+src/overlays/ov104/data/gDSProtIntegrityROMTestIsBadContext.c:
+    complete
+    .text       start:0x020d257c end:0x020d2594
+
+src/overlays/ov104/data/gDSProtIntegrityROMTestIsGoodContext.c:
+    complete
+    .text       start:0x020d25b8 end:0x020d25d0
+
+src/overlays/ov104/data/gDSProtMACOwnerIsBadContext.c:
+    complete
+    .text       start:0x020d2b08 end:0x020d2b20
+
+src/overlays/ov104/data/gDSProtMACOwnerIsGoodContext.c:
+    complete
+    .text       start:0x020d2b44 end:0x020d2b5c
+
+src/overlays/ov104/data/gDSProtROMTestIsBadContext.c:
+    complete
+    .text       start:0x020d3118 end:0x020d3130
+
+src/overlays/ov104/data/gDSProtROMTestIsGoodContext.c:
+    complete
+    .text       start:0x020d3154 end:0x020d316c
+
+src/overlays/ov104/data/gDSProtROMUtilCRC32Context.c:
+    complete
+    .text       start:0x020d2c14 end:0x020d2c2c
 
 src/overlays/ov104/data/gDSProtRuntimeFunctions.c:
     complete

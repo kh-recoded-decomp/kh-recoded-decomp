@@ -10419,6 +10419,193 @@
       "name": "gDSProtCipherFunctions",
       "origin": "EU original DATA",
       "behavior": "Encoded function addresses and byte lengths consumed and cleared by Encryptor_DecodeFunctionTable."
+    },
+    {
+      "module": "ov104",
+      "section": ".text",
+      "start": "0x020d1fd4",
+      "end": "0x020d1fec",
+      "source": "src/overlays/ov104/data/gDSProtDetectDummyContext.c",
+      "compiler": "dsi/1.1",
+      "name": "gDSProtDetectDummyContext",
+      "origin": "EU original DATA",
+      "behavior": "Mutable invocation context for __DSProt_DetectDummy, containing encoded key/function metadata and saved dispatcher registers."
+    },
+    {
+      "module": "ov104",
+      "section": ".text",
+      "start": "0x020d1f5c",
+      "end": "0x020d1f74",
+      "source": "src/overlays/ov104/data/gDSProtDetectEmulatorContext.c",
+      "compiler": "dsi/1.1",
+      "name": "gDSProtDetectEmulatorContext",
+      "origin": "EU original DATA",
+      "behavior": "Mutable invocation context for __DSProt_DetectEmulator, containing encoded key/function metadata and saved dispatcher registers."
+    },
+    {
+      "module": "ov104",
+      "section": ".text",
+      "start": "0x020d1ee4",
+      "end": "0x020d1efc",
+      "source": "src/overlays/ov104/data/gDSProtDetectFlashcartContext.c",
+      "compiler": "dsi/1.1",
+      "name": "gDSProtDetectFlashcartContext",
+      "origin": "EU original DATA",
+      "behavior": "Mutable invocation context for __DSProt_DetectFlashcart, containing encoded key/function metadata and saved dispatcher registers."
+    },
+    {
+      "module": "ov104",
+      "section": ".text",
+      "start": "0x020d2010",
+      "end": "0x020d2028",
+      "source": "src/overlays/ov104/data/gDSProtDetectNotDummyContext.c",
+      "compiler": "dsi/1.1",
+      "name": "gDSProtDetectNotDummyContext",
+      "origin": "EU original DATA",
+      "behavior": "Mutable invocation context for __DSProt_DetectNotDummy, containing encoded key/function metadata and saved dispatcher registers."
+    },
+    {
+      "module": "ov104",
+      "section": ".text",
+      "start": "0x020d1f98",
+      "end": "0x020d1fb0",
+      "source": "src/overlays/ov104/data/gDSProtDetectNotEmulatorContext.c",
+      "compiler": "dsi/1.1",
+      "name": "gDSProtDetectNotEmulatorContext",
+      "origin": "EU original DATA",
+      "behavior": "Mutable invocation context for __DSProt_DetectNotEmulator, containing encoded key/function metadata and saved dispatcher registers."
+    },
+    {
+      "module": "ov104",
+      "section": ".text",
+      "start": "0x020d1f20",
+      "end": "0x020d1f38",
+      "source": "src/overlays/ov104/data/gDSProtDetectNotFlashcartContext.c",
+      "compiler": "dsi/1.1",
+      "name": "gDSProtDetectNotFlashcartContext",
+      "origin": "EU original DATA",
+      "behavior": "Mutable invocation context for __DSProt_DetectNotFlashcart, containing encoded key/function metadata and saved dispatcher registers."
+    },
+    {
+      "module": "ov104",
+      "section": ".text",
+      "start": "0x020d31a8",
+      "end": "0x020d31c0",
+      "source": "src/overlays/ov104/data/gDSProtDummyIsBadContext.c",
+      "compiler": "dsi/1.1",
+      "name": "gDSProtDummyIsBadContext",
+      "origin": "EU original DATA",
+      "behavior": "Mutable invocation context for RunEncrypted_Dummy_IsBad, containing encoded key/function metadata and saved dispatcher registers."
+    },
+    {
+      "module": "ov104",
+      "section": ".text",
+      "start": "0x020d31e4",
+      "end": "0x020d31fc",
+      "source": "src/overlays/ov104/data/gDSProtDummyIsGoodContext.c",
+      "compiler": "dsi/1.1",
+      "name": "gDSProtDummyIsGoodContext",
+      "origin": "EU original DATA",
+      "behavior": "Mutable invocation context for RunEncrypted_Dummy_IsGood, containing encoded key/function metadata and saved dispatcher registers."
+    },
+    {
+      "module": "ov104",
+      "section": ".text",
+      "start": "0x020d2504",
+      "end": "0x020d251c",
+      "source": "src/overlays/ov104/data/gDSProtIntegrityMACOwnerIsBadContext.c",
+      "compiler": "dsi/1.1",
+      "name": "gDSProtIntegrityMACOwnerIsBadContext",
+      "origin": "EU original DATA",
+      "behavior": "Mutable invocation context for RunEncrypted_Integrity_MACOwner_IsBad, containing encoded key/function metadata and saved dispatcher registers."
+    },
+    {
+      "module": "ov104",
+      "section": ".text",
+      "start": "0x020d2540",
+      "end": "0x020d2558",
+      "source": "src/overlays/ov104/data/gDSProtIntegrityMACOwnerIsGoodContext.c",
+      "compiler": "dsi/1.1",
+      "name": "gDSProtIntegrityMACOwnerIsGoodContext",
+      "origin": "EU original DATA",
+      "behavior": "Mutable invocation context for RunEncrypted_Integrity_MACOwner_IsGood, containing encoded key/function metadata and saved dispatcher registers."
+    },
+    {
+      "module": "ov104",
+      "section": ".text",
+      "start": "0x020d257c",
+      "end": "0x020d2594",
+      "source": "src/overlays/ov104/data/gDSProtIntegrityROMTestIsBadContext.c",
+      "compiler": "dsi/1.1",
+      "name": "gDSProtIntegrityROMTestIsBadContext",
+      "origin": "EU original DATA",
+      "behavior": "Mutable invocation context for RunEncrypted_Integrity_ROMTest_IsBad, containing encoded key/function metadata and saved dispatcher registers."
+    },
+    {
+      "module": "ov104",
+      "section": ".text",
+      "start": "0x020d25b8",
+      "end": "0x020d25d0",
+      "source": "src/overlays/ov104/data/gDSProtIntegrityROMTestIsGoodContext.c",
+      "compiler": "dsi/1.1",
+      "name": "gDSProtIntegrityROMTestIsGoodContext",
+      "origin": "EU original DATA",
+      "behavior": "Mutable invocation context for RunEncrypted_Integrity_ROMTest_IsGood, containing encoded key/function metadata and saved dispatcher registers."
+    },
+    {
+      "module": "ov104",
+      "section": ".text",
+      "start": "0x020d2b08",
+      "end": "0x020d2b20",
+      "source": "src/overlays/ov104/data/gDSProtMACOwnerIsBadContext.c",
+      "compiler": "dsi/1.1",
+      "name": "gDSProtMACOwnerIsBadContext",
+      "origin": "EU original DATA",
+      "behavior": "Mutable invocation context for RunEncrypted_MACOwner_IsBad, containing encoded key/function metadata and saved dispatcher registers."
+    },
+    {
+      "module": "ov104",
+      "section": ".text",
+      "start": "0x020d2b44",
+      "end": "0x020d2b5c",
+      "source": "src/overlays/ov104/data/gDSProtMACOwnerIsGoodContext.c",
+      "compiler": "dsi/1.1",
+      "name": "gDSProtMACOwnerIsGoodContext",
+      "origin": "EU original DATA",
+      "behavior": "Mutable invocation context for RunEncrypted_MACOwner_IsGood, containing encoded key/function metadata and saved dispatcher registers."
+    },
+    {
+      "module": "ov104",
+      "section": ".text",
+      "start": "0x020d3118",
+      "end": "0x020d3130",
+      "source": "src/overlays/ov104/data/gDSProtROMTestIsBadContext.c",
+      "compiler": "dsi/1.1",
+      "name": "gDSProtROMTestIsBadContext",
+      "origin": "EU original DATA",
+      "behavior": "Mutable invocation context for RunEncrypted_ROMTest_IsBad, containing encoded key/function metadata and saved dispatcher registers."
+    },
+    {
+      "module": "ov104",
+      "section": ".text",
+      "start": "0x020d3154",
+      "end": "0x020d316c",
+      "source": "src/overlays/ov104/data/gDSProtROMTestIsGoodContext.c",
+      "compiler": "dsi/1.1",
+      "name": "gDSProtROMTestIsGoodContext",
+      "origin": "EU original DATA",
+      "behavior": "Mutable invocation context for RunEncrypted_ROMTest_IsGood, containing encoded key/function metadata and saved dispatcher registers."
+    },
+    {
+      "module": "ov104",
+      "section": ".text",
+      "start": "0x020d2c14",
+      "end": "0x020d2c2c",
+      "source": "src/overlays/ov104/data/gDSProtROMUtilCRC32Context.c",
+      "compiler": "dsi/1.1",
+      "name": "gDSProtROMUtilCRC32Context",
+      "origin": "EU original DATA",
+      "behavior": "Mutable invocation context for RunEncrypted_ROMUtil_CRC32, containing encoded key/function metadata and saved dispatcher registers."
     }
   ]
 }
