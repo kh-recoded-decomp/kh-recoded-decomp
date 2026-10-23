@@ -316,6 +316,10 @@ src/overlays/ov039/calls/GetFieldCad0.c:
     complete
     .text       start:0x020bcb20 end:0x020bcb40
 
+src/overlays/ov039/calls/FormatSaveLocationLabel.c:
+    complete
+    .text       start:0x020bcb40 end:0x020bcccc
+
 src/overlays/ov039/calls/FormatStateText.c:
     complete
     .text       start:0x020bcccc end:0x020bcd24

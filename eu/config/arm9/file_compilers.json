@@ -9576,5 +9576,6 @@
   "libs/nitro/os/auto/DC_InvalidateRange.c": "gcc/12.2.1/operand-order",
   "libs/nitro/os/auto/DC_StoreRange.c": "gcc/12.2.1/operand-order",
   "libs/nitro/os/auto/IC_InvalidateRange.c": "gcc/12.2.1/operand-order",
-  "libs/nitro/rtc/calls/RtcWaitBusy.c": "gcc/12.2.1/scratch-r0"
+  "libs/nitro/rtc/calls/RtcWaitBusy.c": "gcc/12.2.1/scratch-r0",
+  "src/overlays/ov039/calls/FormatSaveLocationLabel.c": "dsi/1.1"
 }

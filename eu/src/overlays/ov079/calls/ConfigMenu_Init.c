@@ -19,7 +19,7 @@
 #define func_ov039_020bc318 func_ov039_020bc338
 #define func_ov039_020bc414 IsPxiFifoTagSet_020bc434
 #define func_ov039_020bc914 GetMenuSelection
-#define func_ov039_020bcb20 func_ov039_020bcb40
+#define func_ov039_020bcb20 FormatSaveLocationLabel
 
 #include "nitro/types.h"
 

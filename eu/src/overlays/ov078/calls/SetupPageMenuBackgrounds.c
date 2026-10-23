@@ -39,7 +39,7 @@ extern void G2x_SetBlendAlpha_(vu16 *registerAddress, int firstPlanes, int secon
 extern void *G2_GetBG2CharPtr(void);
 extern void *G2_GetBG2ScrPtr(void);
 extern void MIi_CpuClearFast(u32 value, void *destination, u32 byteCount);
-extern const u16 *func_ov039_020bcb40(RecordSaveData *save);
+extern const u16 *FormatSaveLocationLabel(RecordSaveData *save);
 extern void DrawLayoutLine(PageMenu *menu, int line, const void *text, const void *suffix);
 extern const u16 *func_ov027_020ba2c8(int *view, int index);
 extern void *Archive_LoadFile(u32 fileId, int heapId);
@@ -145,7 +145,7 @@ void SetupPageMenuBackgrounds(PageMenu *menu)
     MIi_CpuClearFast(0, G2_GetBG2CharPtr(), 0x20);
     MIi_CpuClearFast(0, G2_GetBG2ScrPtr(), 0x600);
 
-    DrawLayoutLine(menu, 0, func_ov039_020bcb40(data_0205fe0c), NULL);
+    DrawLayoutLine(menu, 0, FormatSaveLocationLabel(data_0205fe0c), NULL);
     DrawLayoutLine(menu, 5, func_ov027_020ba2c8(menu->messageView, 0), NULL);
     DrawLayoutLine(menu, 6, func_ov027_020ba2c8(menu->messageView, 1), NULL);
 

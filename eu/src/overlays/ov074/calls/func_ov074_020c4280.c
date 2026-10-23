@@ -57,7 +57,7 @@
 #define func_ov039_020bc828 GetCurrentMenuStackEntry
 #define func_ov039_020bc914 GetMenuSelection
 #define func_ov039_020bcb00 GetFieldCad0
-#define func_ov039_020bcb20 func_ov039_020bcb40
+#define func_ov039_020bcb20 FormatSaveLocationLabel
 #define func_ov039_020bcd04 SetTextColorIfFits
 #define func_ov039_020be5b8 OpenTextFrame
 #define func_ov039_020be6a0 SetupMainBgLayers_020be6c0

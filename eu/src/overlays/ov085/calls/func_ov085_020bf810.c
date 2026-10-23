@@ -42,6 +42,6 @@
 #define func_ov039_020bc318 func_ov039_020bc338
 #define func_ov039_020bc84c GetPreviousMenuStackEntry
 #define func_ov039_020bc914 GetMenuSelection
-#define func_ov039_020bcb20 func_ov039_020bcb40
+#define func_ov039_020bcb20 FormatSaveLocationLabel
 #define func_ov085_020c1fb4 func_ov085_020c1fd4
 #include "src/ov085/unclassified_helpers/InitShopMenu_020bf7f0.c"

@@ -19,6 +19,6 @@
 #define func_01ff8740 MIi_CpuClearFast
 #define func_0200672c GXS_SetGraphicsMode
 #define func_0202c48c func_0202c4a0
-#define func_ov039_020bcb20 func_ov039_020bcb40
+#define func_ov039_020bcb20 FormatSaveLocationLabel
 #define func_ov081_020c5bd8 func_ov081_020c5bf8
 #include "src/ov082/unclassified_helpers/SetupOv082Screen_020beb48.c"

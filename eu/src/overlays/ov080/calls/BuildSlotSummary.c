@@ -8,7 +8,7 @@
 #define data_ov080_020c5de4 data_ov080_020c5e04
 #define func_020273d4 UpdateElapsedIntervals
 #define func_02050a44 func_02050a58
-#define func_ov039_020bcb20 func_ov039_020bcb40
+#define func_ov039_020bcb20 FormatSaveLocationLabel
 #define func_ov039_020be64c FormatPlayTimeText
 #define func_ov073_020c1eb4 RefreshStatusMenuData
 #include "src/ov080/unclassified_helpers/BuildSlotSummary_020c4b84.c"

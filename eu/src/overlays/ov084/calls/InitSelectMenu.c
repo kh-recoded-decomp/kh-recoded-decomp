@@ -8,7 +8,7 @@
 #define OpenTextFrame_020be5b8 OpenTextFrame
 #define LoadPackedFileView_020ba25c LoadPackedFileView
 #define func_ov027_020ba2a8 func_ov027_020ba2c8
-#define func_ov039_020bcb20 func_ov039_020bcb40
+#define func_ov039_020bcb20 FormatSaveLocationLabel
 #define SetTextColorIfFits_020bcd04 SetTextColorIfFits
 #define DrawTextAnchored_020015a0 DrawTextAnchored
 #define BuildSlotImageParams_020bc220 BuildSlotImageParams
