@@ -14,8 +14,8 @@ BOOL SlotMenu_GetPanelStateAlt(SlotMenu *menu)
 {
     BOOL state = menu->panel.state;
 
-    asm {
-        cmp state, #0
+    if (state) {
+        state = menu->panel.state;
     }
     return state;
 }
