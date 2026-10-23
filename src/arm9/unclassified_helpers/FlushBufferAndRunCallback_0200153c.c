@@ -17,7 +17,7 @@ typedef struct {
 } Context_0200153c;
 
 extern void func_0200344c(void *dst, u32 size);
-extern void func_020033e0(void);
+extern unsigned int func_020033e0(void);
 extern void Callbacks_RunTableEntry_0202b3d4(int index, int arg1, int arg2, int arg3);
 
 void FlushBufferAndRunCallback_0200153c(Context_0200153c *context)

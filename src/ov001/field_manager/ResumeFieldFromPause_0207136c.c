@@ -54,7 +54,7 @@ extern const WidgetLayerIds data_ov001_0209dd00;
 extern const ScreenLoaders data_ov001_0209ecf0;
 
 extern BOOL func_ov001_02072040(void);
-extern void func_020033e0(void);
+extern unsigned int func_020033e0(void);
 extern void func_ov001_0206ec80(void);
 extern void SetFieldMenuSuspended_02077b90(int enable, int arg1);
 extern void func_ov001_0207b4c0(void);

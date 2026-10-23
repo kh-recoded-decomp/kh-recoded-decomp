@@ -14,7 +14,7 @@ typedef struct BgScreen {
 
 extern LayerList data_ov001_0209dbac;
 extern int func_ov001_0207123c(void);
-extern void func_020033e0(void);
+extern unsigned int func_020033e0(void);
 extern int UpdateWidgetLayerDefault_020b9df0(int widgets, int layer);
 extern void func_ov027_020b9e00(int widgets, int layer);
 extern void func_01ff878c(const void *src, void *dst, u32 size);

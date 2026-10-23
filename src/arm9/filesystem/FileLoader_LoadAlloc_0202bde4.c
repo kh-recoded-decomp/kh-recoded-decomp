@@ -34,7 +34,7 @@ extern void func_0200b1e4(void *file);
 extern int func_0200b6c8(void *file, void *dst, int size);
 extern void RunResetCallbackAndIdle_02004cf0(void);
 extern int func_02005794(void *context, void *src, int len);
-extern void func_020033e0(void);
+extern unsigned int func_020033e0(void);
 extern void func_0200344c(void *buffer, u32 size);
 extern u32 PXI_Init_0200b750(void *file);
 extern void *AllocFromHeapOrDefaultEx_0202a210(u32 size, int align, void **heap);

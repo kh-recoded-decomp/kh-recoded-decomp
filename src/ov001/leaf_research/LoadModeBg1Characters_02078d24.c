@@ -23,7 +23,7 @@ extern void *func_ov027_020ba1d8(void *resource);
 extern void func_ov027_020ba1e0(void *resource, BOOL freeData);
 extern BOOL func_02014d38(void *file, CharacterData **out);
 extern void func_ov001_02078ba8(void *charData, int layout);
-extern void func_020033e0(void);
+extern unsigned int func_020033e0(void);
 extern void GX_LoadBG1Char_020079b0(const void *src, u32 offset, u32 size);
 extern void func_ov001_0207a1a8(void *modeState, int layout);
 

@@ -26,7 +26,7 @@ extern ThresholdTable data_ov001_0209dcbc;
 extern BOOL func_ov001_020728e4(void);
 extern int func_ov001_0207b590(void);
 extern void func_01ff878c(const void *src, void *dst, u32 size);
-extern void func_020033e0(void);
+extern unsigned int func_020033e0(void);
 extern void GX_LoadBG3Char_02007b70(const void *src, u32 offset, u32 size);
 
 void BlendIconTiles_0206ed8c(u16 value)

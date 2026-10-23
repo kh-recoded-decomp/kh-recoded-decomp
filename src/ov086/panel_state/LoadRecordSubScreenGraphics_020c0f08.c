@@ -30,7 +30,7 @@ extern void GXS_LoadBGPltt_020072b4(const void *src, u32 offset, u32 size);
 extern void GXS_LoadBG3Char_02007be0(const void *src, u32 offset, u32 size);
 extern void NNSi_FndFreeFromDefaultHeap_0202a1c4(void *block);
 extern int func_02014d38(void *file, CharacterBlock **character);
-extern void func_020033e0(void);
+extern unsigned int func_020033e0(void);
 extern void func_ov027_020b7d58(void *tracker, TagTrackerConfig *config);
 extern void func_ov027_020b7e24(void *tracker, u32 imageParams);
 extern void *FindActiveRecordById_020b8184(void *pool, u32 recordId);

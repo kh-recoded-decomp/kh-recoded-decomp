@@ -1,7 +1,7 @@
 #include "nitro/types.h"
 
 extern void MIi_CpuCopyFast(u32 dest, u32 src, u32 size);
-extern void DC_FlushAll(void);
+extern unsigned int DC_FlushAll(void);
 extern void GX_LoadBGPltt(u32 dest, u32 value, u32 size);
 extern void GX_LoadBG3Char(u32 dest, u32 value, u32 size);
 extern s32 NNS_G2dGetUnpackedBGCharacterData(u32 resourceManager, s32 *outPayload);

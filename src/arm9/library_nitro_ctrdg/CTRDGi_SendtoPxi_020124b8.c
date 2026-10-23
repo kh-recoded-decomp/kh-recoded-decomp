@@ -18,7 +18,7 @@ extern void CTRDGi_ChangeLatestAccessCycle(CTRDGRomCycle *r);
 extern void CTRDGi_RestoreAccessCycle(CTRDGRomCycle *r);
 extern void CTRDGi_SendtoPxi_020124b8(u32 data);
 extern void DC_InvalidateRange(void *startAddr, u32 nBytes);
-extern void DC_FlushAll(void);
+extern unsigned int DC_FlushAll(void);
 extern void MI_DmaCopy16(u32 dmaNo, const void *src, void *dest, u32 size);
 extern void MIi_CpuCopy32(const void *src, void *dest, u32 size);
 extern int PXI_SendWordByFifo(int tag, u32 data, BOOL err);

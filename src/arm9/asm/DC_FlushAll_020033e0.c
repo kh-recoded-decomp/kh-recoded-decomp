@@ -7,7 +7,7 @@ typedef unsigned int u32;
 #define HW_CACHE_LINE_SIZE           32
 #define HW_DCACHE_SIZE               0x1000
 
-asm void DC_FlushAll_020033e0 (void)
+asm u32 DC_FlushAll_020033e0 (void)
 {
     mov r12, #0
     mov r1, #0

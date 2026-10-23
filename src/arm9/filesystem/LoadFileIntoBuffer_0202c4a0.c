@@ -27,7 +27,7 @@ extern int func_0200b6c8(void *file, void *dst, int size);
 extern void RunResetCallbackAndIdle_02004cf0(void);
 extern int func_02005794(void *ctx, void *src, int len);
 extern void func_0200344c(void *dst, u32 size);
-extern void func_020033e0(void);
+extern unsigned int func_020033e0(void);
 extern void func_0200b5b0(void *file);
 
 u32 LoadFileIntoBuffer_0202c4a0(u32 data, void *buffer, u32 size, u32 param4)

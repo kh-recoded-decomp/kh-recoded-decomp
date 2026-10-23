@@ -1,7 +1,7 @@
 #include "nitro/types.h"
 
 extern void func_01ff878c(u32 dest, u32 src, u32 size);
-extern void func_020033e0(void);
+extern unsigned int func_020033e0(void);
 extern void func_02007250(u32 dest, u32 value, u32 size);
 extern void func_02007b70(u32 dest, u32 value, u32 size);
 extern s32 func_02014d38(u32 resourceManager, s32 *outPayload);

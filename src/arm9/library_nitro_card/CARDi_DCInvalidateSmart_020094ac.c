@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-extern void DC_FlushAll_020033e0(void);
+extern unsigned int DC_FlushAll_020033e0(void);
 extern void DC_StoreRange_02003430(void *address, u32 length);
 extern void DC_InvalidateRange_02003414(void *address, u32 length);
 extern void DC_WaitWriteBufferEmpty_02003470(void);

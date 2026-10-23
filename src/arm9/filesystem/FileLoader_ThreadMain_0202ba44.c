@@ -61,7 +61,7 @@ extern void RunResetCallbackAndIdle_02004cf0(void);
 extern int func_02005794(void *context, void *src, int len);
 extern void func_0200b1e4(void *file);
 extern void func_0200b5b0(void *file);
-extern void func_020033e0(void);
+extern unsigned int func_020033e0(void);
 extern void func_0200344c(void *buffer, u32 size);
 extern void OS_RescheduleThread_02002bb4(void);
 extern void NNS_SndArcLoadSeq_0201f318(u32 dataId, void *heap);

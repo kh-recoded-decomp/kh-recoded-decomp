@@ -10,7 +10,7 @@ extern int OS_DisableInterrupts_02004938(void);
 extern void OS_RestoreInterrupts_0200494c(int state);
 extern BOOL CTRDGi_HasValidModuleInfo_02012320(void);
 extern u32 OS_SetDPermissionsForProtectionRegion_02003bb0(u32 mask, u32 access);
-extern void DC_FlushAll_020033e0(void);
+extern unsigned int DC_FlushAll_020033e0(void);
 extern void DC_WaitWriteBufferEmpty_02003470(void);
 extern void OS_EnableICacheForProtectionRegion_02003b70(u32 regions);
 extern void OS_DisableICacheForProtectionRegion_02003b80(u32 regions);

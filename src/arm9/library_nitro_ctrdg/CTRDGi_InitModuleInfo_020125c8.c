@@ -22,7 +22,7 @@ extern void CTRDGi_ChangeLatestAccessCycle_02012408(CTRDGRomCycle *cycle);
 extern void CTRDGi_RestoreAccessCycle_0201243c(CTRDGRomCycle *cycle);
 extern void CTRDGi_SendtoPxi_020124b8(u32 data);
 extern void DC_InvalidateRange_02003414(void *start, u32 size);
-extern void DC_FlushAll_020033e0(void);
+extern unsigned int DC_FlushAll_020033e0(void);
 extern void StartHalfwordDmaTransferChecked_02004f6c(int dmaNo, u32 src, u32 dest, u32 size, int mode);
 extern void MIi_CpuCopy32_01ff8710(const void *src, void *dest, u32 size);
 extern BOOL CTRDG_IsExisting_02012364(void);

@@ -12,7 +12,7 @@ typedef struct BgGraphics {
 #define REG_DISPCNT (*(vu32 *)0x04000000)
 
 extern BgGraphics *data_ov036_020ca1e4;
-extern void func_020033e0(void);
+extern unsigned int func_020033e0(void);
 extern void func_ov036_020c2e84(void);
 extern void GX_LoadBG2Scr_02007710(const void *src, u32 offset, u32 size);
 extern void GX_LoadBG3Scr_020077f0(const void *src, u32 offset, u32 size);

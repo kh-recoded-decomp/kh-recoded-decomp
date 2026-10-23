@@ -27,7 +27,7 @@ typedef struct MenuScreen {
 
 extern void GetBgDataFromArchive_0202b554(BgGraphicsData *out, void *archive, int screenIndex, int characterIndex,
                                           int paletteIndex);
-extern void func_020033e0(void);
+extern unsigned int func_020033e0(void);
 extern void GXS_LoadBG1Char_02007a20(const void *src, u32 offset, u32 size);
 extern void GXS_LoadBGPltt_020072b4(const void *src, u32 offset, u32 size);
 extern void DispatchDrawCommand_020b75b0(u32 entity, int mode);

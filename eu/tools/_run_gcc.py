@@ -17,6 +17,7 @@ REGISTER_PROFILES = {
     COMPILER_ID + "/scratch-r1": ("r0", "r2", "r3"),
     COMPILER_ID + "/scratch-r2": ("r0", "r1", "r3"),
     COMPILER_ID + "/cache-sets": ("r3",),
+    COMPILER_ID + "/cache-flush": ("r3",),
 }
 
 
@@ -49,10 +50,17 @@ def compiler_command(source, output, mode="arm", selected=COMPILER_ID, compiler=
     profile_flags = ["-ffixed-" + register for register in REGISTER_PROFILES[selected]]
     if profile_flags or selected == COMPILER_ID + "/operand-order":
         profile_flags.append("-fno-tree-ter")
-    if selected == COMPILER_ID + "/cache-sets":
+    if selected in (COMPILER_ID + "/cache-sets", COMPILER_ID + "/cache-flush"):
         # Retain the original cache-set loops and separate arithmetic/compares.
         profile_flags.extend(("-fno-tree-vrp", "-fno-tree-loop-optimize",
                               "-fdisable-rtl-combine"))
+    if selected == COMPILER_ID + "/cache-flush":
+        # Keep the independent drain operand before the cache-set initializer.
+        profile_flags.extend(("-fira-algorithm=priority", "-fdisable-rtl-cse2",
+                              "-fdisable-rtl-postreload", "-fno-tree-ccp",
+                              "-fno-tree-copy-prop", "-fno-tree-forwprop",
+                              "-fno-tree-fre", "-fno-tree-dominator-opts",
+                              "-fdisable-tree-pre", "-fno-tree-reassoc"))
     return [
         str(compiler), "-c", "-O2", "-std=c99", "-mcpu=arm946e-s", "-m" + mode,
         "-mthumb-interwork", "-mfloat-abi=soft", "-mabi=apcs-gnu",
