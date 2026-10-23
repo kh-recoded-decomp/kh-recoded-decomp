@@ -10,7 +10,7 @@ functions have an identified name (NitroSDK, NNS, MSL, ...) but no source yet.
 
 | Module | C matched | Verified library | ASM stubs | Named | Not started | Total | C % | C bytes % | Done bytes % |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| PART main | 2477 | 0 | 95 | 0 | 5 | 2577 | 96.1% | 90.5% | 90.5% |
+| PART main | 2480 | 0 | 92 | 0 | 5 | 2577 | 96.2% | 90.6% | 90.6% |
 | PART itcm | 96 | 0 | 40 | 0 | 1 | 137 | 70.1% | 69.1% | 69.1% |
 | DONE ov000 | 78 | 0 | 0 | 0 | 0 | 78 | 100.0% | 100.0% | 100.0% |
 | PART ov001 | 2093 | 0 | 0 | 0 | 2 | 2095 | 99.9% | 99.7% | 99.7% |
@@ -117,7 +117,7 @@ functions have an identified name (NitroSDK, NNS, MSL, ...) but no source yet.
 | DONE ov102 | 3 | 0 | 0 | 0 | 0 | 3 | 100.0% | 100.0% | 100.0% |
 | DONE ov103 | 39 | 0 | 0 | 0 | 0 | 39 | 100.0% | 100.0% | 100.0% |
 | PART ov104 | 33 | 0 | 24 | 0 | 0 | 57 | 57.9% | 83.7% | 83.7% |
-| **TOTAL** | **10438** | **7** | **160** | **0** | **20** | **10625** | **98.2%** | **93.41%** | **96.41%** |
+| **TOTAL** | **10441** | **7** | **157** | **0** | **20** | **10625** | **98.3%** | **93.42%** | **96.41%** |
 
 ## Byte progress
 
@@ -127,9 +127,9 @@ verified library code is listed beside it, never inside the C row.
 
 | Category | Bytes | Total code bytes | % |
 |---|---:|---:|---:|
-| C matched | **1,654,398** | 1,771,024 | **93.41%** |
+| C matched | **1,654,482** | 1,771,024 | **93.42%** |
 | Verified library code (MobiClip) | **53,036** | 1,771,024 | **2.99%** |
-| C + verified library | **1,707,434** | 1,771,024 | **96.41%** |
+| C + verified library | **1,707,518** | 1,771,024 | **96.41%** |
 
 ## DATA progress
 

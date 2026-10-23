@@ -79,6 +79,17 @@ class GccObjectTests(unittest.TestCase):
         self.assertEqual(code, bytes.fromhex("00109fe511ff2fe100000000"))
         self.assertEqual(relocations, {8: ("external", 2)})  # R_ARM_ABS32
 
+    def test_cache_loop_preserves_address_operands_and_signed_branch(self):
+        code, relocations = self.compile(
+            "void probe(unsigned int start, unsigned int size) { "
+            "unsigned int end = size + start; unsigned int line = start & ~31u; "
+            "do { __builtin_arm_mcr(15,0,line,7,6,1); line += 32; } "
+            "while ((int)line < (int)end); }\n",
+            selected=COMPILER_ID + "/operand-order")
+        self.assertEqual(code, bytes.fromhex(
+            "001081e01f00c0e3360f07ee200080e2010050e1fbffffba1eff2fe1"))
+        self.assertEqual(relocations, {})
+
 
 if __name__ == "__main__":
     unittest.main()

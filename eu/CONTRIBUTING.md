@@ -78,6 +78,11 @@ with `-ffixed-rN` and disables temporary-expression replacement with
 `-fno-tree-ter`, preserving the original scratch register and operand order.
 These profiles do not change the function signatures or calling convention.
 
+The `gcc/12.2.1/operand-order` selection uses `-fno-tree-ter` without reserving
+registers. It preserves the address arithmetic in original cache-maintenance
+loops. These implementations take the starting address as a 32-bit unsigned
+value, with the same ARM argument representation as the original pointer.
+
 ### Extract and index
 
 ```sh

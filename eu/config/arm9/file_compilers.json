@@ -9572,5 +9572,8 @@
   "libs/nitro/os/auto/IC_InvalidateAll.c": "gcc/12.2.1/scratch-r0",
   "libs/nitro/os/auto/OS_Halt.c": "gcc/12.2.1/scratch-r0",
   "libs/nitro/os/auto/OS_SpinWaitCpuCycles.c": "gcc/12.2.1",
-  "libs/nitro/os/calls/OS_UnLockCartridge.c": "gcc/12.2.1/scratch-r1"
+  "libs/nitro/os/calls/OS_UnLockCartridge.c": "gcc/12.2.1/scratch-r1",
+  "libs/nitro/os/auto/DC_InvalidateRange.c": "gcc/12.2.1/operand-order",
+  "libs/nitro/os/auto/DC_StoreRange.c": "gcc/12.2.1/operand-order",
+  "libs/nitro/os/auto/IC_InvalidateRange.c": "gcc/12.2.1/operand-order"
 }

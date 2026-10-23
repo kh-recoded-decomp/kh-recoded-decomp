@@ -12,6 +12,7 @@ from project import ROOT
 COMPILER_ID = "gcc/12.2.1"
 REGISTER_PROFILES = {
     COMPILER_ID: (),
+    COMPILER_ID + "/operand-order": (),
     COMPILER_ID + "/scratch-r0": ("r1", "r2", "r3"),
     COMPILER_ID + "/scratch-r1": ("r0", "r2", "r3"),
     COMPILER_ID + "/scratch-r2": ("r0", "r1", "r3"),
@@ -45,7 +46,7 @@ def compiler_command(source, output, mode="arm", selected=COMPILER_ID, compiler=
     # Original leaf routines and tail-call wrappers use one scratch argument
     # register. Reserve the others and retain expression operand order.
     profile_flags = ["-ffixed-" + register for register in REGISTER_PROFILES[selected]]
-    if profile_flags:
+    if profile_flags or selected == COMPILER_ID + "/operand-order":
         profile_flags.append("-fno-tree-ter")
     return [
         str(compiler), "-c", "-O2", "-std=c99", "-mcpu=arm946e-s", "-m" + mode,
