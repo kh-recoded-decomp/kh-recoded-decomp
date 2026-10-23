@@ -9515,5 +9515,9 @@
   "libs/nns/g3d/data/tables/gTexMtxMode2Builders.c": "dsi/1.1",
   "libs/nns/g3d/data/tables/gTexMtxAltBuilders.c": "dsi/1.1",
   "libs/nitro/mi/auto/MIi_CpuClear16.c": "dsi/1.1",
-  "libs/nitro/mi/auto/MIi_CpuCopy16.c": "dsi/1.1"
+  "libs/nitro/mi/auto/MIi_CpuCopy16.c": "dsi/1.1",
+  "libs/nitro/init/data/tables/SDK_ModuleParamsBlock.c": "dsi/1.1",
+  "libs/nitro/init/data/tables/BuildInfo.c": "dsi/1.1",
+  "libs/nitro/init/data/strings/cardi_backup_assert.c": "dsi/1.1",
+  "libs/nitro/init/data/strings/gMobiClipLibraryTag.c": "dsi/1.1"
 }

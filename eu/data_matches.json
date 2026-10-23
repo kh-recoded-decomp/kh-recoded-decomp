@@ -1,6 +1,50 @@
 {
   "data": [
     {
+      "module": "arm9",
+      "section": ".text",
+      "start": "0x02000b68",
+      "end": "0x02000b88",
+      "source": "libs/nitro/init/data/tables/SDK_ModuleParamsBlock.c",
+      "compiler": "dsi/1.1",
+      "name": "SDK_ModuleParamsBlock",
+      "origin": "EU original DATA",
+      "behavior": "Loader marker preceding the SDK build information."
+    },
+    {
+      "module": "arm9",
+      "section": ".text",
+      "start": "0x02000b88",
+      "end": "0x02000bac",
+      "source": "libs/nitro/init/data/tables/BuildInfo.c",
+      "compiler": "dsi/1.1",
+      "name": "BuildInfo",
+      "origin": "EU original DATA",
+      "behavior": "SDK autoload, static BSS, compression and version parameters read by the loader."
+    },
+    {
+      "module": "arm9",
+      "section": ".text",
+      "start": "0x02000bac",
+      "end": "0x02000bc4",
+      "source": "libs/nitro/init/data/strings/cardi_backup_assert.c",
+      "compiler": "dsi/1.1",
+      "name": "cardi_backup_assert",
+      "origin": "EU original DATA",
+      "behavior": "Embedded backup-library identification tag, including alignment padding."
+    },
+    {
+      "module": "arm9",
+      "section": ".text",
+      "start": "0x02000bc4",
+      "end": "0x02000bec",
+      "source": "libs/nitro/init/data/strings/gMobiClipLibraryTag.c",
+      "compiler": "dsi/1.1",
+      "name": "gMobiClipLibraryTag",
+      "origin": "EU original DATA",
+      "behavior": "Embedded video-library identification tag, including alignment padding."
+    },
+    {
       "module": "itcm",
       "section": ".text",
       "start": "0x01ffae38",

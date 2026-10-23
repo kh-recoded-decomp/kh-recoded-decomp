@@ -108,10 +108,6 @@ src/calls/PanelState_NoOpB.c:
     complete
     .text       start:0x02000b64 end:0x02000b68
 
-libs/nitro/init/asm_stubs/auto/SDK_ModuleParamsBlock.s:
-    complete
-    .text       start:0x02000b68 end:0x02000bec
-
 src/calls/main.c:
     complete
     .text       start:0x02000bec end:0x02000f14
@@ -10336,6 +10332,22 @@ libs/nitro/fs/data/fsi_default_command.c:
 libs/nitro/gx/data/gx_state.c:
     complete
     .data       start:0x02055c18 end:0x02055c20
+
+libs/nitro/init/data/strings/cardi_backup_assert.c:
+    complete
+    .text       start:0x02000bac end:0x02000bc4
+
+libs/nitro/init/data/strings/gMobiClipLibraryTag.c:
+    complete
+    .text       start:0x02000bc4 end:0x02000bec
+
+libs/nitro/init/data/tables/BuildInfo.c:
+    complete
+    .text       start:0x02000b88 end:0x02000bac
+
+libs/nitro/init/data/tables/SDK_ModuleParamsBlock.c:
+    complete
+    .text       start:0x02000b68 end:0x02000b88
 
 libs/nitro/math/data/MATHi_OverlayTableMode.c:
     complete
