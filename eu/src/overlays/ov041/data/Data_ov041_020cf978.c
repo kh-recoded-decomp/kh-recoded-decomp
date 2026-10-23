@@ -5,7 +5,7 @@ extern void EntryActionRushAttack(void);
 extern void EntryActionMagic(void);
 extern void EntryActionSpecialCombo(void);
 extern void EntryActionDash(void);
-extern void func_ov041_020c948c(void);
+extern void EntryActionFlurry(void);
 extern void EntryActionMelee(void);
 extern void EntryActionRevive(void);
 extern void EntryActionHeal(void);
@@ -39,7 +39,7 @@ void (*gStageEntryActionHandlers[17])(void) = {
     EntryActionMagic,
     EntryActionSpecialCombo,
     EntryActionDash,
-    func_ov041_020c948c,
+    EntryActionFlurry,
     EntryActionMelee,
     EntryActionRevive,
     EntryActionHeal,
