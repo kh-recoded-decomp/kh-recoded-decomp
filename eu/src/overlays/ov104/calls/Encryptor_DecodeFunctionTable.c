@@ -1,9 +1,6 @@
 typedef unsigned long u32;
 
-typedef struct FuncInfo {
-    u32 obfs_addr;
-    u32 obfs_size;
-} FuncInfo;
+#include "src/overlays/ov104/DSProtFunctionInfo.h"
 
 extern unsigned char DSProt_BSS[];
 extern u32 Encryptor_CategorizeInstruction(u32 instruction);
@@ -31,7 +28,7 @@ static inline void clearDataAndInstructionCache(void)
     }
 }
 
-void Encryptor_DecodeFunctionTable(FuncInfo *functions)
+void Encryptor_DecodeFunctionTable(DSProtFunctionInfo *functions)
 {
     u32 *addr;
     u32 size;
@@ -44,8 +41,8 @@ void Encryptor_DecodeFunctionTable(FuncInfo *functions)
 
     do {
         xorval = 0xf0b9a2ea;
-        addr = (u32 *)(functions->obfs_addr - 0x1000);
-        size = functions->obfs_size - (u32)&DSProt_BSS - 0x1000;
+        addr = (u32 *)(functions->encodedAddress - 0x1000);
+        size = functions->encodedSize - (u32)&DSProt_BSS - 0x1000;
         end_addr = addr + size / 4;
 
         for (; addr < end_addr; addr++) {
@@ -73,7 +70,7 @@ void Encryptor_DecodeFunctionTable(FuncInfo *functions)
         }
 
         clearDataAndInstructionCache();
-        functions->obfs_addr = functions->obfs_size = 0;
+        functions->encodedAddress = functions->encodedSize = 0;
         functions++;
-    } while (functions->obfs_addr != 0);
+    } while (functions->encodedAddress != 0);
 }

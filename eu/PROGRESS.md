@@ -116,8 +116,8 @@ functions have an identified name (NitroSDK, NNS, MSL, ...) but no source yet.
 | DONE ov101 | 54 | 0 | 0 | 0 | 0 | 54 | 100.0% | 100.0% | 100.0% |
 | DONE ov102 | 3 | 0 | 0 | 0 | 0 | 3 | 100.0% | 100.0% | 100.0% |
 | DONE ov103 | 39 | 0 | 0 | 0 | 0 | 39 | 100.0% | 100.0% | 100.0% |
-| PART ov104 | 33 | 0 | 24 | 0 | 0 | 57 | 57.9% | 75.8% | 75.8% |
-| **TOTAL** | **10406** | **7** | **192** | **0** | **20** | **10625** | **97.9%** | **93.36%** | **96.35%** |
+| PART ov104 | 33 | 0 | 24 | 0 | 0 | 57 | 57.9% | 78.7% | 78.7% |
+| **TOTAL** | **10406** | **7** | **192** | **0** | **20** | **10625** | **97.9%** | **93.37%** | **96.37%** |
 
 ## Byte progress
 
@@ -127,9 +127,9 @@ verified library code is listed beside it, never inside the C row.
 
 | Category | Bytes | Total code bytes | % |
 |---|---:|---:|---:|
-| C matched | **1,654,046** | 1,771,692 | **93.36%** |
-| Verified library code (MobiClip) | **53,036** | 1,771,692 | **2.99%** |
-| C + verified library | **1,707,082** | 1,771,692 | **96.35%** |
+| C matched | **1,654,046** | 1,771,432 | **93.37%** |
+| Verified library code (MobiClip) | **53,036** | 1,771,432 | **2.99%** |
+| C + verified library | **1,707,082** | 1,771,432 | **96.37%** |
 
 ## DATA progress
 

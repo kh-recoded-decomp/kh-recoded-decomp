@@ -10364,6 +10364,61 @@
       "name": "gItemListPanelWork",
       "origin": "EU original BSS",
       "behavior": "The existing twenty-byte item-list panel work area, retained after separating the preceding text-tag color state into its renderer's translation unit."
+    },
+    {
+      "module": "ov104",
+      "section": ".text",
+      "start": "0x020d2034",
+      "end": "0x020d2070",
+      "source": "src/overlays/ov104/data/gDSProtDetectionFunctions.c",
+      "compiler": "dsi/1.1",
+      "name": "gDSProtDetectionFunctions",
+      "origin": "EU original DATA",
+      "behavior": "Encoded function addresses and byte lengths consumed and cleared by Encryptor_DecodeFunctionTable. Includes the encoded trailer after the terminator."
+    },
+    {
+      "module": "ov104",
+      "section": ".text",
+      "start": "0x020d25dc",
+      "end": "0x020d2604",
+      "source": "src/overlays/ov104/data/gDSProtIntegrityFunctions.c",
+      "compiler": "dsi/1.1",
+      "name": "gDSProtIntegrityFunctions",
+      "origin": "EU original DATA",
+      "behavior": "Encoded function addresses and byte lengths consumed and cleared by Encryptor_DecodeFunctionTable."
+    },
+    {
+      "module": "ov104",
+      "section": ".text",
+      "start": "0x020d2964",
+      "end": "0x020d2984",
+      "source": "src/overlays/ov104/data/gDSProtEncryptionFunctions.c",
+      "compiler": "dsi/1.1",
+      "name": "gDSProtEncryptionFunctions",
+      "origin": "EU original DATA",
+      "behavior": "Encoded function addresses and byte lengths consumed and cleared by Encryptor_DecodeFunctionTable."
+    },
+    {
+      "module": "ov104",
+      "section": ".text",
+      "start": "0x020d3208",
+      "end": "0x020d3248",
+      "source": "src/overlays/ov104/data/gDSProtRuntimeFunctions.c",
+      "compiler": "dsi/1.1",
+      "name": "gDSProtRuntimeFunctions",
+      "origin": "EU original DATA",
+      "behavior": "Encoded function addresses and byte lengths consumed and cleared by Encryptor_DecodeFunctionTable."
+    },
+    {
+      "module": "ov104",
+      "section": ".text",
+      "start": "0x020d36c0",
+      "end": "0x020d3700",
+      "source": "src/overlays/ov104/data/gDSProtCipherFunctions.c",
+      "compiler": "dsi/1.1",
+      "name": "gDSProtCipherFunctions",
+      "origin": "EU original DATA",
+      "behavior": "Encoded function addresses and byte lengths consumed and cleared by Encryptor_DecodeFunctionTable."
     }
   ]
 }

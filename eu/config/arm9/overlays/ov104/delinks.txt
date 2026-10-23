@@ -53,7 +53,7 @@ src/overlays/ov104/asm_stubs/calls/__DSProt_DetectNotDummy.c:
 
 src/overlays/ov104/asm_stubs/calls/__sinit_ov104_020d2028.c:
     complete
-    .text       start:0x020d2028 end:0x020d2070
+    .text       start:0x020d2028 end:0x020d2034
 
 src/overlays/ov104/calls/Integrity_MACOwner_IsBad.c:
     complete
@@ -89,7 +89,7 @@ src/overlays/ov104/asm_stubs/calls/RunEncrypted_Integrity_ROMTest_IsGood.c:
 
 src/overlays/ov104/asm_stubs/calls/__sinit_ov104_020d25d0.c:
     complete
-    .text       start:0x020d25d0 end:0x020d2604
+    .text       start:0x020d25d0 end:0x020d25dc
 
 src/overlays/ov104/calls/Encryptor_CategorizeInstruction.c:
     complete
@@ -113,7 +113,7 @@ src/overlays/ov104/calls/Encryptor_DecryptionWrapperFragment.c:
 
 src/overlays/ov104/asm_stubs/calls/__sinit_ov104_020d2958.c:
     complete
-    .text       start:0x020d2958 end:0x020d2984
+    .text       start:0x020d2958 end:0x020d2964
 
 src/overlays/ov104/calls/MACOwner_IsBad.c:
     complete
@@ -198,7 +198,7 @@ src/overlays/ov104/asm_stubs/calls/RunEncrypted_Dummy_IsGood.c:
 
 src/overlays/ov104/asm_stubs/calls/__sinit_ov104_020d31fc.c:
     complete
-    .text       start:0x020d31fc end:0x020d3248
+    .text       start:0x020d31fc end:0x020d3208
 
 src/overlays/ov104/calls/RC4_Init.c:
     complete
@@ -230,13 +230,33 @@ src/overlays/ov104/calls/RC4_InitAndDecryptInstructions.c:
 
 src/overlays/ov104/asm_stubs/calls/__sinit_ov104_020d36b4.c:
     complete
-    .text       start:0x020d36b4 end:0x020d3700
+    .text       start:0x020d36b4 end:0x020d36c0
 
 src/overlays/ov104/DSProt-Extra.c:
     complete
     .bss        start:0x020d3740 end:0x020d3760
     .rodata     start:0x020d3700 end:0x020d3718
 
+src/overlays/ov104/data/gDSProtCipherFunctions.c:
+    complete
+    .text       start:0x020d36c0 end:0x020d3700
+
+src/overlays/ov104/data/gDSProtDetectionFunctions.c:
+    complete
+    .text       start:0x020d2034 end:0x020d2070
+
+src/overlays/ov104/data/gDSProtEncryptionFunctions.c:
+    complete
+    .text       start:0x020d2964 end:0x020d2984
+
 src/overlays/ov104/data/gDSProtInitializers.c:
     complete
     .ctor       start:0x020d3720 end:0x020d3734
+
+src/overlays/ov104/data/gDSProtIntegrityFunctions.c:
+    complete
+    .text       start:0x020d25dc end:0x020d2604
+
+src/overlays/ov104/data/gDSProtRuntimeFunctions.c:
+    complete
+    .text       start:0x020d3208 end:0x020d3248

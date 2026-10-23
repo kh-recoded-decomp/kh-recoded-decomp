@@ -9519,5 +9519,10 @@
   "libs/nitro/init/data/tables/SDK_ModuleParamsBlock.c": "dsi/1.1",
   "libs/nitro/init/data/tables/BuildInfo.c": "dsi/1.1",
   "libs/nitro/init/data/strings/cardi_backup_assert.c": "dsi/1.1",
-  "libs/nitro/init/data/strings/gMobiClipLibraryTag.c": "dsi/1.1"
+  "libs/nitro/init/data/strings/gMobiClipLibraryTag.c": "dsi/1.1",
+  "src/overlays/ov104/data/gDSProtDetectionFunctions.c": "dsi/1.1",
+  "src/overlays/ov104/data/gDSProtIntegrityFunctions.c": "dsi/1.1",
+  "src/overlays/ov104/data/gDSProtEncryptionFunctions.c": "dsi/1.1",
+  "src/overlays/ov104/data/gDSProtRuntimeFunctions.c": "dsi/1.1",
+  "src/overlays/ov104/data/gDSProtCipherFunctions.c": "dsi/1.1"
 }

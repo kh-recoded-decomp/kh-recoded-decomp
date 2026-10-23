@@ -10,7 +10,8 @@ __DSProt_DetectEmulator kind:function(arm,size=0x3c,dsprot=0x24) addr:0x020d1f38
 __DSProt_DetectNotEmulator kind:function(arm,size=0x3c,dsprot=0x24) addr:0x020d1f74
 __DSProt_DetectDummy kind:function(arm,size=0x3c,dsprot=0x24) addr:0x020d1fb0
 __DSProt_DetectNotDummy kind:function(arm,size=0x3c,dsprot=0x24) addr:0x020d1fec
-__sinit_ov104_020d2028 kind:function(arm,size=0x48) addr:0x020d2028
+__sinit_ov104_020d2028 kind:function(arm,size=0xc) addr:0x020d2028
+gDSProtDetectionFunctions kind:data(any) addr:0x020d2034
 Integrity_MACOwner_IsBad kind:function(arm,size=0x11c,dsprot=(0x110,0x180ac)) addr:0x020d2070
 Integrity_MACOwner_IsGood kind:function(arm,size=0x11c,dsprot=(0x110,0x181dc)) addr:0x020d218c
 Integrity_ROMTest_IsBad kind:function(arm,size=0x11c,dsprot=(0x110,0x1830c)) addr:0x020d22a8
@@ -19,13 +20,15 @@ RunEncrypted_Integrity_MACOwner_IsBad kind:function(arm,size=0x3c,dsprot=0x24) a
 RunEncrypted_Integrity_MACOwner_IsGood kind:function(arm,size=0x3c,dsprot=0x24) addr:0x020d251c
 RunEncrypted_Integrity_ROMTest_IsBad kind:function(arm,size=0x3c,dsprot=0x24) addr:0x020d2558
 RunEncrypted_Integrity_ROMTest_IsGood kind:function(arm,size=0x3c,dsprot=0x24) addr:0x020d2594
-__sinit_ov104_020d25d0 kind:function(arm,size=0x34) addr:0x020d25d0
+__sinit_ov104_020d25d0 kind:function(arm,size=0xc) addr:0x020d25d0
+gDSProtIntegrityFunctions kind:data(any) addr:0x020d25dc
 Encryptor_CategorizeInstruction kind:function(arm,size=0x3c) addr:0x020d2604
 Encryptor_DecodeFunctionTable kind:function(arm,size=0x130) addr:0x020d2640
 Encryptor_DecryptFunction kind:function(arm,size=0xc0,dsprot=0xbc) addr:0x020d2770
 Encryptor_EncryptFunction kind:function(arm,size=0xd8,dsprot=0xd0) addr:0x020d2830
 Encryptor_DecryptionWrapperFragment kind:function(arm,size=0x50,dsprot=0x50) addr:0x020d2908
-__sinit_ov104_020d2958 kind:function(arm,size=0x2c) addr:0x020d2958
+__sinit_ov104_020d2958 kind:function(arm,size=0xc) addr:0x020d2958
+gDSProtEncryptionFunctions kind:data(any) addr:0x020d2964
 MACOwner_IsBad kind:function(arm,size=0xb0,dsprot=(0xac,0x7d65)) addr:0x020d2984
 MACOwner_IsGood kind:function(arm,size=0xb0,dsprot=(0xac,0x7e45)) addr:0x020d2a34
 RunEncrypted_MACOwner_IsBad kind:function(arm,size=0x3c,dsprot=0x24) addr:0x020d2ae4
@@ -46,7 +49,8 @@ Dummy_IsBad kind:function(arm,size=0xc,dsprot=(0x8,0x8785)) addr:0x020d316c
 Dummy_IsGood kind:function(arm,size=0xc,dsprot=(0x8,0x8795)) addr:0x020d3178
 RunEncrypted_Dummy_IsBad kind:function(arm,size=0x3c,dsprot=0x24) addr:0x020d3184
 RunEncrypted_Dummy_IsGood kind:function(arm,size=0x3c,dsprot=0x24) addr:0x020d31c0
-__sinit_ov104_020d31fc kind:function(arm,size=0x4c) addr:0x020d31fc
+__sinit_ov104_020d31fc kind:function(arm,size=0xc) addr:0x020d31fc
+gDSProtRuntimeFunctions kind:data(any) addr:0x020d3208
 RC4_Init kind:function(arm,size=0x8c,dsprot=0x84) addr:0x020d3248
 RC4_Byte kind:function(arm,size=0x58,dsprot=0x58) addr:0x020d32d4
 RC4_InitSBox kind:function(arm,size=0x38,dsprot=0x30) addr:0x020d332c
@@ -54,7 +58,8 @@ RC4_EncryptInstructions kind:function(arm,size=0x118,dsprot=0x118) addr:0x020d33
 RC4_DecryptInstructions kind:function(arm,size=0x188,dsprot=0x184) addr:0x020d347c
 RC4_InitAndEncryptInstructions kind:function(arm,size=0x58,dsprot=0x58) addr:0x020d3604
 RC4_InitAndDecryptInstructions kind:function(arm,size=0x58,dsprot=0x58) addr:0x020d365c
-__sinit_ov104_020d36b4 kind:function(arm,size=0x4c) addr:0x020d36b4
+__sinit_ov104_020d36b4 kind:function(arm,size=0xc) addr:0x020d36b4
+gDSProtCipherFunctions kind:data(any) addr:0x020d36c0
 Garbage kind:data(any) addr:0x020d3700
 bad_mac_addr kind:data(any) addr:0x020d3718
 gDSProtInitializers kind:data(any) addr:0x020d3720
