@@ -18,6 +18,7 @@ REGISTER_PROFILES = {
     COMPILER_ID + "/scratch-r2": ("r0", "r1", "r3"),
     COMPILER_ID + "/cache-sets": ("r3",),
     COMPILER_ID + "/cache-flush": ("r3",),
+    COMPILER_ID + "/control-mask": ("r2", "r3"),
 }
 
 
@@ -61,6 +62,9 @@ def compiler_command(source, output, mode="arm", selected=COMPILER_ID, compiler=
                               "-fno-tree-copy-prop", "-fno-tree-forwprop",
                               "-fno-tree-fre", "-fno-tree-dominator-opts",
                               "-fdisable-tree-pre", "-fno-tree-reassoc"))
+    if selected == COMPILER_ID + "/control-mask":
+        # Retain the loaded control-register mask and the separate AND.
+        profile_flags.append("-fdisable-rtl-combine")
     return [
         str(compiler), "-c", "-O2", "-std=c99", "-mcpu=arm946e-s", "-m" + mode,
         "-mthumb-interwork", "-mfloat-abi=soft", "-mabi=apcs-gnu",

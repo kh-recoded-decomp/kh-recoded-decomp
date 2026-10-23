@@ -9586,5 +9586,6 @@
   "src/overlays/ov041/calls/EntryActionFlurry.c": "dsi/1.1",
   "src/overlays/ov001/calls/SetHudGaugeValue.c": "dsi/1.1",
   "libs/nitro/os/auto/DC_StoreAll.c": "gcc/12.2.1/cache-sets",
-  "libs/nitro/os/auto/DC_FlushAll.c": "gcc/12.2.1/cache-flush"
+  "libs/nitro/os/auto/DC_FlushAll.c": "gcc/12.2.1/cache-flush",
+  "libs/nitro/os/auto/OS_GetDTCMAddress.c": "gcc/12.2.1/control-mask"
 }

@@ -758,7 +758,7 @@ libs/nitro/os/calls/OS_IsOnVram.c:
     complete
     .text       start:0x02003b2c end:0x02003b50
 
-libs/nitro/os/asm_stubs/auto/OS_GetDTCMAddress.c:
+libs/nitro/os/auto/OS_GetDTCMAddress.c:
     complete
     .text       start:0x02003b50 end:0x02003b64
 
