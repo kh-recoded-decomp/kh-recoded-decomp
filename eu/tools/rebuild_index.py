@@ -5,9 +5,13 @@ dsd config (symbols.txt / relocs.txt / delinks.txt).
 The delink objects only contain the functions that are still gaps: once a function has a
 source it leaves them, so an index built from delinks can never cover finished functions.
 
-A function's bytes are just the ROM at its address, and its relocations are in relocs.txt. Neither
-depends on what has been decompiled, so this reconstruction is complete and stable: it indexes all
-of them, done or not, and can be re-run at any time.
+A function's bytes are the ROM at its address. This indexes functions with an explicit size in
+symbols.txt and relocations recorded in relocs.txt, whether decompiled or not. Existing entries
+may contain additional compiler-derived relocations, so merging never replaces them.
+
+Configured relocation targets, including addends, are checked against linked ROM instructions
+and pointers before any cross-check or write. Historical symbol names may differ only when their
+resolved addresses or linked relocation bytes agree with the reconstruction.
 
 At a relocated word an entry holds the ROM's linked value. Every consumer of this index
 (verify_idx.py, dedupprop.py, port_days.py) masks relocated words before comparing; do not
@@ -21,13 +25,12 @@ Usage:  python tools/rebuild_index.py [--write]
 import glob, json, os, re, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-WRITE = "--write" in sys.argv
 INDEX_PATH = os.path.join(ROOT, "build", "func_index.json")
 
 SEC_RE = re.compile(r"^\s*\.text\s+start:0x([0-9a-fA-F]+)\s+end:0x([0-9a-fA-F]+)")
 SYM_RE = re.compile(r"^(\S+)\s+kind:(\w+)\(?([^,)]*),?[^)]*\)?[^a-z]*.*addr:0x([0-9a-fA-F]+)")
 FUNC_RE = re.compile(r"^(\S+)\s+kind:function\((arm|thumb),size=0x([0-9a-fA-F]+)\)\s+addr:0x([0-9a-fA-F]+)")
-REL_RE = re.compile(r"^from:0x([0-9a-fA-F]+)\s+kind:(\S+)\s+to:0x([0-9a-fA-F]+)\s+module:(\S+)")
+REL_RE = re.compile(r"^from:0x([0-9a-fA-F]+)\s+kind:(\S+)\s+to:0x([0-9a-fA-F]+)(?:\s+add:(-?0x[0-9a-fA-F]+))?\s+module:(\S+)")
 
 
 def module_dirs():
@@ -65,16 +68,28 @@ def mod_key(d):
 
 
 by_mod = {}
-for d, _bin in module_dirs():
-    p = os.path.join(d, "symbols.txt")
-    if not os.path.exists(p):
-        continue
-    m2 = by_mod.setdefault(mod_key(d), {})
-    with open(p, encoding="utf-8", errors="replace") as f:
-        for ln in f:
-            m = SYM_RE.match(ln)
-            if m:
-                m2.setdefault(int(m.group(4), 16), m.group(1))
+symbol_addresses = {}
+thumb_targets = set()
+
+
+def load_symbols():
+    by_mod.clear()
+    symbol_addresses.clear()
+    thumb_targets.clear()
+    for d, _bin in module_dirs():
+        p = os.path.join(d, "symbols.txt")
+        if not os.path.exists(p):
+            continue
+        m2 = by_mod.setdefault(mod_key(d), {})
+        with open(p, encoding="utf-8", errors="replace") as f:
+            for ln in f:
+                m = SYM_RE.match(ln)
+                if m:
+                    m2.setdefault(int(m.group(4), 16), m.group(1))
+                    symbol_addresses.setdefault(m.group(1), set()).add(int(m.group(4), 16))
+                m = FUNC_RE.match(ln)
+                if m and m.group(2) == "thumb":
+                    thumb_targets.add((mod_key(d), int(m.group(4), 16)))
 
 
 def candidate_mods(mod):
@@ -102,50 +117,106 @@ def sym_at(t, mod):
         table = by_mod.get(key, {})
         if t in table:
             return table[t]
-        if (t & ~1) in table:
+        if (key, t & ~1) in thumb_targets and (t & ~1) in table:
             return table[t & ~1]
     return "0x%08x" % t
 
-# Pass 2: rebuild each module's functions.
-rebuilt = {}
-for d, binpath in module_dirs():
-    sp, rp, dp = (os.path.join(d, n) for n in ("symbols.txt", "relocs.txt", "delinks.txt"))
-    if not (os.path.exists(sp) and os.path.exists(dp) and os.path.exists(binpath)):
-        continue
-    base = text_start(dp)
-    if base is None:
-        continue
-    blob = open(binpath, "rb").read()
-    mod = os.path.basename(d) if d != os.path.join(ROOT, "config", "arm9") else "main"
 
-    rels = {}
-    if os.path.exists(rp):
-        with open(rp, encoding="utf-8", errors="replace") as f:
+def linked_target(word, address, kind):
+    """Decode a linked ARM9 relocation, rejecting an unexpected instruction kind."""
+    def signed(value, bits):
+        return value - (1 << bits) if value & (1 << (bits - 1)) else value
+
+    if kind == "load":
+        return word
+    if kind in ("arm_call", "arm_branch"):
+        opcode = 0x0b000000 if kind == "arm_call" else 0x0a000000
+        if word >> 28 == 15 or word & 0x0f000000 != opcode:
+            raise ValueError("unexpected ARM branch opcode")
+        return (address + 8 + signed(word & 0xffffff, 24) * 4) & 0xffffffff
+    if kind == "arm_call_thumb":
+        if word & 0xfe000000 != 0xfa000000:
+            raise ValueError("unexpected ARM BLX opcode")
+        return (address + 8 + signed(word & 0xffffff, 24) * 4
+                + ((word >> 23) & 2)) & 0xffffffff
+    if kind in ("thumb_call", "thumb_call_arm"):
+        first, second = word & 0xffff, word >> 16
+        opcode = 0xf800 if kind == "thumb_call" else 0xe800
+        if first & 0xf800 != 0xf000 or second & 0xf800 != opcode:
+            raise ValueError("unexpected Thumb BL/BLX opcode")
+        displacement = signed(((first & 0x7ff) << 12) | ((second & 0x7ff) << 1), 23)
+        target = (address + 4 + displacement) & 0xffffffff
+        return target & ~3 if kind == "thumb_call_arm" else target
+    raise ValueError("unsupported relocation kind: " + kind)
+
+
+def check_linked_target(blob, offset, address, target, kind, target_module):
+    if offset < 0 or offset + 4 > len(blob):
+        raise ValueError("relocation extends outside its function")
+    actual = linked_target(int.from_bytes(blob[offset:offset + 4], "little"), address, kind)
+    if actual == target:
+        return
+    # Only a known Thumb function may acquire bit zero in an absolute pointer.
+    if (kind == "load" and actual == (target | 1)
+            and any((key, target) in thumb_targets for key in candidate_mods(target_module))):
+        return
+    raise ValueError("ROM target 0x%08x != configured target 0x%08x" % (actual, target))
+
+
+def rebuild():
+    # Pass 2: rebuild each module's functions.
+    rebuilt = {}
+    invalid = []
+    for d, binpath in module_dirs():
+        sp, rp, dp = (os.path.join(d, n) for n in ("symbols.txt", "relocs.txt", "delinks.txt"))
+        if not (os.path.exists(sp) and os.path.exists(dp) and os.path.exists(binpath)):
+            continue
+        base = text_start(dp)
+        if base is None:
+            continue
+        with open(binpath, "rb") as stream:
+            blob = stream.read()
+        mod = os.path.basename(d) if d != os.path.join(ROOT, "config", "arm9") else "main"
+
+        rels = {}
+        if os.path.exists(rp):
+            with open(rp, encoding="utf-8", errors="replace") as f:
+                for ln in f:
+                    m = REL_RE.match(ln)
+                    if m:
+                        rels[int(m.group(1), 16)] = (
+                            int(m.group(3), 16) + int(m.group(4) or "0", 16), m.group(5), m.group(2))
+                    elif ln.startswith("from:") and "kind:link_time_const(" not in ln:
+                        raise ValueError("unrecognized relocation: " + ln.strip())
+
+        with open(sp, encoding="utf-8", errors="replace") as f:
             for ln in f:
-                m = REL_RE.match(ln)
-                if m:
-                    rels[int(m.group(1), 16)] = (int(m.group(3), 16), m.group(4))
+                m = FUNC_RE.match(ln)
+                if not m:
+                    continue
+                name, mode, size, addr = m.group(1), m.group(2), int(m.group(3), 16), int(m.group(4), 16)
+                off = addr - base
+                if size == 0 or off < 0 or off + size > len(blob):
+                    continue
+                r = []
+                for a, (t, tm, kind) in rels.items():
+                    if not addr <= a < addr + size:
+                        continue
+                    try:
+                        check_linked_target(blob[off:off + size], a - addr, a, t, kind, tm)
+                    except ValueError as exc:
+                        invalid.append("%s +0x%x: %s" % (name, a - addr, exc))
+                    r.append((a - addr, sym_at(t, tm)))
+                r.sort()
+                rebuilt[name] = {"hex": blob[off:off + size].hex(), "size": size,
+                                 "relocs": [list(x) for x in r], "module": mod, "mode": mode}
 
-    with open(sp, encoding="utf-8", errors="replace") as f:
-        for ln in f:
-            m = FUNC_RE.match(ln)
-            if not m:
-                continue
-            name, mode, size, addr = m.group(1), m.group(2), int(m.group(3), 16), int(m.group(4), 16)
-            off = addr - base
-            if size == 0 or off < 0 or off + size > len(blob):
-                continue
-            r = sorted((a - addr, sym_at(t, tm))
-                       for a, (t, tm) in rels.items() if addr <= a < addr + size)
-            rebuilt[name] = {"hex": blob[off:off + size].hex(), "size": size,
-                             "relocs": [list(x) for x in r], "module": mod, "mode": mode}
+    print("rebuilt from ROM+config: %d functions" % len(rebuilt))
+    if invalid:
+        print("\n".join(invalid[:20]))
+        raise SystemExit("refusing to merge: %d relocation targets disagree with the ROM" % len(invalid))
+    return rebuilt
 
-print("rebuilt from ROM+config: %d functions" % len(rebuilt))
-
-index = {}
-if os.path.exists(INDEX_PATH):
-    index = json.load(open(INDEX_PATH))
-print("current index: %d functions" % len(index))
 
 def masked(entry):
     """hex with every reloc'd word zeroed -- the only place the ROM and the object legitimately
@@ -157,51 +228,105 @@ def masked(entry):
     return bytes(b)
 
 
-# Self-check: for every function BOTH have, the reconstruction must agree once the relocated
-# words are masked. If it does not, the reconstruction is wrong and must not be merged.
-same = bad = 0
-for n, e in index.items():
-    if n not in rebuilt:
-        continue
-    got = rebuilt[n]
-    ok = (masked(got) == masked(e) and got["size"] == e["size"]
-          and [list(x) for x in got["relocs"]] == [list(x) for x in e["relocs"]])
-    if ok:
-        same += 1
-    else:
-        bad += 1
-        if bad <= 5:
-            print("  MISMATCH %s" % n)
-            if masked(got) != masked(e):
-                mg, me = masked(got), masked(e)
-                d = [i for i in range(min(len(mg), len(me))) if mg[i] != me[i]]
-                print("    bytes differ at %d offsets (first: %s), sizes %d vs %d"
-                      % (len(d), d[:6], len(mg), len(me)))
-            if [list(x) for x in got["relocs"]] != [list(x) for x in e["relocs"]]:
-                print("    relocs: rebuilt=%s" % got["relocs"][:4])
-                print("            index  =%s" % [list(x) for x in e["relocs"]][:4])
-print("cross-check vs existing entries (reloc words masked): %d agree, %d DISAGREE" % (same, bad))
+def symbol_address(name):
+    addresses = symbol_addresses.get(name, set())
+    if len(addresses) == 1:
+        return next(iter(addresses))
+    if addresses:
+        return None
+    if re.fullmatch(r"0x[0-9a-fA-F]{8}", name):
+        return int(name, 16)
+    m = re.search(r"_([0-9a-fA-F]{8})$", name)
+    return int(m.group(1), 16) if m else None
 
-missing = [n for n in rebuilt if n not in index]
-print("functions the index is missing: %d" % len(missing))
 
-# A handful of disagreements is expected and harmless: relocs.txt only records relocations dsd
-# resolved against real symbols, so a reference to a LINKER-defined symbol (ARM9_CTOR_START and
-# friends) is invisible here. Those functions are already in the index and this script only ADDS
-# missing entries, so their good entries are never touched. A large count would mean the
-# reconstruction itself is broken, and that must not be merged.
-if bad > 5:
-    print("\nrefusing to merge: %d disagreements is too many to be linker symbols -- the"
-          " reconstruction is wrong." % bad)
-    sys.exit(1)
-if bad:
-    print("  (those %d are already in the index and are NOT overwritten; expected cause is a"
-          " reloc to a linker-defined symbol, which relocs.txt does not record)" % bad)
-if not WRITE:
-    print("\ndry run; pass --write to merge the missing entries in.")
-    sys.exit(0)
+def same_relocations(old, new):
+    """Compare an old index with a reconstruction already checked against the ROM.
 
-for n in missing:
-    index[n] = rebuilt[n]
-json.dump(index, open(INDEX_PATH, "w"))
-print("merged. index now: %d functions" % len(index))
+    Historical indexes retain names that have since been renamed or merged. A
+    changed spelling is allowed only at the same offset and with either the same
+    resolved address or identical linked bytes. The latter handles names that no
+    longer exist; the new target has independently been decoded from those bytes.
+    Zeroed object relocations cannot establish that proof.
+    """
+    previous, current = dict(old["relocs"]), dict(new["relocs"])
+    if previous.keys() != current.keys():
+        return False
+    old_bytes, new_bytes = bytes.fromhex(old["hex"]), bytes.fromhex(new["hex"])
+    for off, name in previous.items():
+        if name == current[off]:
+            continue
+        address = symbol_address(name)
+        if address is not None and address == symbol_address(current[off]):
+            continue
+        if (0 <= off <= len(old_bytes) - 4
+                and old_bytes[off:off + 4] == new_bytes[off:off + 4]
+                and old_bytes[off:off + 4] != b"\0\0\0\0"):
+            continue
+        return False
+    return True
+
+
+def main(argv=None):
+    argv = sys.argv[1:] if argv is None else argv
+    load_symbols()
+    rebuilt = rebuild()
+    index = {}
+    if os.path.exists(INDEX_PATH):
+        with open(INDEX_PATH) as stream:
+            index = json.load(stream)
+    print("current index: %d functions" % len(index))
+    # Self-check: for every function BOTH have, the reconstruction must agree once the relocated
+    # words are masked. If it does not, the reconstruction is wrong and must not be merged.
+    same = bad = 0
+    for n, e in index.items():
+        if n not in rebuilt:
+            continue
+        got = rebuilt[n]
+        ok = (masked(got) == masked(e) and got["size"] == e["size"]
+              and got["mode"] == e["mode"]
+              and got["module"] == e.get("module", got["module"])
+              and same_relocations(e, got))
+        if ok:
+            same += 1
+        else:
+            bad += 1
+            if bad <= 5:
+                print("  MISMATCH %s" % n)
+                if masked(got) != masked(e):
+                    mg, me = masked(got), masked(e)
+                    d = [i for i in range(min(len(mg), len(me))) if mg[i] != me[i]]
+                    print("    bytes differ at %d offsets (first: %s), sizes %d vs %d"
+                          % (len(d), d[:6], len(mg), len(me)))
+                if [list(x) for x in got["relocs"]] != [list(x) for x in e["relocs"]]:
+                    print("    relocs: rebuilt=%s" % got["relocs"][:4])
+                    print("            index  =%s" % [list(x) for x in e["relocs"]][:4])
+    print("cross-check vs existing entries (reloc words masked): %d agree, %d DISAGREE" % (same, bad))
+
+    missing = [n for n in rebuilt if n not in index]
+    print("functions the index is missing: %d" % len(missing))
+
+    # Keep the existing guard against widespread disagreement. Old compiler-derived entries
+    # can include relocations absent from relocs.txt (including linker-defined symbols).
+    # Preserve them: this command only adds missing entries.
+    if bad > 5:
+        print("\nrefusing to merge: %d disagreements exceed the existing-entry tolerance --"
+              " inspect the existing index and configuration." % bad)
+        return 1
+    if bad:
+        print("  (those %d entries are NOT overwritten; the existing index may contain"
+              " compiler-derived relocations absent from relocs.txt)" % bad)
+    if "--write" not in argv:
+        print("\ndry run; pass --write to merge the missing entries in.")
+        return 0
+
+    for n in missing:
+        index[n] = rebuilt[n]
+    with open(INDEX_PATH, "w") as stream:
+        json.dump(index, stream)
+    print("merged. index now: %d functions" % len(index))
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

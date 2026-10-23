@@ -71,6 +71,8 @@ def _symbol_address(name):
     address = SYM_ADDR.get(name)
     if address is not None:
         return address
+    if re.fullmatch(r"0x[0-9a-fA-F]{8}", name or ""):
+        return int(name, 16)
     match = re.search(r"_(?:ov[0-9]+_)?([0-9a-fA-F]{8})$", name or "")
     return int(match.group(1), 16) if match else None
 
