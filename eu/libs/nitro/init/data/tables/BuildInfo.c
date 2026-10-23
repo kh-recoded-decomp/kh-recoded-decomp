@@ -29,4 +29,3 @@ __declspec(sdkModuleParameters) const SDKBuildInfo BuildInfo = {
     0xdec00621,
     0x2106c0de
 };
-

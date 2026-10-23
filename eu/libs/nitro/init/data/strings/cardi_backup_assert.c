@@ -4,4 +4,3 @@
 
 __declspec(sdkModuleParameters) const char cardi_backup_assert[24] =
     "[SDK+NINTENDO:BACKUP]";
-
