@@ -91,6 +91,12 @@ registers. It preserves the address arithmetic in original cache-maintenance
 loops. These implementations take the starting address as a 32-bit unsigned
 value, with the same ARM argument representation as the original pointer.
 
+The `gcc/12.2.1/wait-state` selection reserves r2 and r3 and disables
+temporary-expression replacement. `OSi_CancelDma0` then retains the scanline
+in r0, the saved IME in r1 and the hardware base in ip. Its 64-bit result
+packs the final scanline into the low word and the saved IME into the high
+word; its caller declares that result consistently and discards it.
+
 The `clang/22.1.3/source-order` selection disables scheduling after register
 allocation. It preserves the original order of CPSR writes and result masks
 in interrupt-control routines.

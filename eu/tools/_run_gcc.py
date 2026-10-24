@@ -19,6 +19,7 @@ REGISTER_PROFILES = {
     COMPILER_ID + "/cache-sets": ("r3",),
     COMPILER_ID + "/cache-flush": ("r3",),
     COMPILER_ID + "/control-mask": ("r2", "r3"),
+    COMPILER_ID + "/wait-state": ("r2", "r3"),
 }
 
 

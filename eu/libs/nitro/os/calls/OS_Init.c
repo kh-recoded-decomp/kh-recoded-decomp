@@ -41,7 +41,7 @@ void CARD_Init(void);
 void MI_Init(void);
 void PM_Init(void);
 void CTRDG_Init(void);
-extern void OSi_CancelDma0 (void);
+extern u64 OSi_CancelDma0(void);
 
 /* NitroSDK operating-system initialization. */
 void OS_Init(void)

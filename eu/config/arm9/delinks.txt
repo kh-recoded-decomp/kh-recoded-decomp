@@ -686,7 +686,7 @@ libs/nitro/os/auto/IC_InvalidateRange.c:
     complete
     .text       start:0x0200349c end:0x020034b8
 
-libs/nitro/os/asm_stubs/auto/OSi_CancelDma0.c:
+libs/nitro/os/auto/OSi_CancelDma0.c:
     complete
     .text       start:0x020034b8 end:0x020034d8
 
