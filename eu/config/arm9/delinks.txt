@@ -1022,7 +1022,7 @@ libs/nitro/os/auto/OS_DisableInterrupts_IrqAndFiq.c:
     complete
     .text       start:0x02004978 end:0x0200498c
 
-libs/nitro/os/asm_stubs/auto/OS_RestoreInterrupts_IrqAndFiq.c:
+libs/nitro/os/auto/OS_RestoreInterrupts_IrqAndFiq.c:
     complete
     .text       start:0x0200498c end:0x020049a4
 

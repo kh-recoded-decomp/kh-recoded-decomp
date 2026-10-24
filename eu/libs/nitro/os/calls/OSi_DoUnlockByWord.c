@@ -1,7 +1,8 @@
+#include "libs/nitro/os/os_interrupt_state.h"
+
 extern int OS_DisableInterrupts(void);
 extern void OS_RestoreInterrupts(int state);
 extern int OS_DisableInterrupts_IrqAndFiq(void);
-extern void OS_RestoreInterrupts_IrqAndFiq(int state);
 
 /* Releases a hardware lock word. Fails with -2 if the caller is not the owner. */
 int OSi_DoUnlockByWord(unsigned short id, char *lock, void (*onUnlock)(void), int fiq) {

@@ -77,8 +77,7 @@ Clang uses the assembler alongside the selected Arm GNU GCC 12.2.1 executable
 to emit the same GNU relocation format. No compiler runtime library is linked.
 Unwind tables are disabled; Clang also selects the DWARF exception model to
 avoid EHABI's implicit `.ARM.exidx` entries, which mwldarm cannot relocate.
-All other C units keep their existing
-CodeWarrior compiler selections.
+Other C units use their per-file CodeWarrior compiler selections.
 
 The GCC selections `gcc/12.2.1/scratch-r0`, `scratch-r1` and `scratch-r2`
 (all with the same version prefix) are restricted to original assembly leaf
@@ -95,6 +94,16 @@ value, with the same ARM argument representation as the original pointer.
 The `clang/22.1.3/source-order` selection disables scheduling after register
 allocation. It preserves the original order of CPSR writes and result masks
 in interrupt-control routines.
+
+`OS_RestoreInterrupts_IrqAndFiq` exposes the original leaf routine's three
+register results as `OSInterruptState`: the previous interrupt mask, previous
+CPSR and updated CPSR. Its Clang `swiftcall` definition and MWCC dsi/1.1
+`value_in_regs` declarations pass the argument in r0 and return those fields
+in r0-r2. Both callers discard the result and retain their exact ROM bytes.
+The shared header keeps their declarations consistent with the definition;
+this compatibility is specific to this signature, not a general interchange
+of the two calling conventions. The callers explicitly select dsi/1.1 because
+the default CodeWarrior version does not accept `value_in_regs`.
 
 ### Extract and index
 
