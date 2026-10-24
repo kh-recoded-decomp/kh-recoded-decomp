@@ -13,7 +13,9 @@ typedef struct PMSleepState {
 extern PMSleepState data_020597c0;
 
 extern u32 func_02004938(void);
+#ifndef NITRO_OS_INTERRUPT_STATE_H
 extern void func_0200494c(u32 state);
+#endif
 extern u32 OS_DisableIrqMask(u32 mask);
 extern u32 OS_SetIrqMask(u32 mask);
 extern u32 func_02003f5c(void);

@@ -1,5 +1,7 @@
 extern int OS_DisableInterrupts(void);
+#ifndef NITRO_OS_INTERRUPT_STATE_H
 extern void OS_RestoreInterrupts(int state);
+#endif
 extern char *data_0205fdc0;
 
 void FS_RunOverlayCleanupCallbacks_0200bc64(char *overlay) {

@@ -90,7 +90,6 @@ enum {
 #define OS_IE_GXFIFO 0x00200000
 
 OSIntrMode OS_DisableInterrupts(void);
-OSIntrMode OS_RestoreInterrupts(OSIntrMode mode);
 u32 OS_EnableIrqMask(u32 mask);
 u32 OS_DisableIrqMask(u32 mask);
 u32 OS_ResetRequestIrqMask(u32 mask);

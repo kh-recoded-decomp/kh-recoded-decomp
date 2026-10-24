@@ -1,7 +1,9 @@
 #include "nitro/types.h"
 
 extern int func_02004938(void);
+#ifndef NITRO_OS_INTERRUPT_STATE_H
 extern void func_0200494c(int state);
+#endif
 
 void WaitDmaChannel_02005218(int channel)
 {

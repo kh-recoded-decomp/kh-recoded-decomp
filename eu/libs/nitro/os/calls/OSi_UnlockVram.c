@@ -1,3 +1,5 @@
+#include "eu/libs/nitro/os/os_interrupt_state.h"
+
 #define UnlockOwnedVramBanks_02004ba0 OSi_UnlockVram
 #define data_02056ec8 OSi_VramExclusive
 #define data_02056ecc OSi_VramLockId

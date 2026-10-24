@@ -1,3 +1,5 @@
+#include "eu/libs/nitro/os/os_interrupt_state.h"
+
 #define AlarmCallback_0201e3a8 AlarmCallback
 #define AppendIntrusiveListObject_020128d0 NNS_FndAppendListObject
 #define NNS_SndStrmSetup_0201e058 NNS_SndStrmSetup

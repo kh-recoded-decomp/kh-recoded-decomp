@@ -19,7 +19,9 @@ typedef volatile unsigned char vu8;
 #define HW_MAIN_MEM 0x02000000
 
 extern OSIntrMode OS_DisableInterrupts(void);
+#ifndef NITRO_OS_INTERRUPT_STATE_H
 extern OSIntrMode OS_RestoreInterrupts(OSIntrMode state);
+#endif
 typedef struct CPContext {
     u64 div_numer;
     u64 div_denom;

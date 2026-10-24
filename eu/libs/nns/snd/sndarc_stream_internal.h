@@ -219,7 +219,6 @@ extern void NNS_FndAppendListObject(NNSFndList *list, void *object);
 extern void *NNS_FndGetNextListObject(NNSFndList *list, void *object);
 extern void NNS_FndRemoveListObject(NNSFndList *list, void *object);
 extern u32 OS_DisableInterrupts(void);
-extern u32 OS_RestoreInterrupts(u32 state);
 extern void OS_InitMutex(void *mutex);
 extern void OS_LockMutex(void *mutex);
 extern void OS_UnlockMutex(void *mutex);

@@ -6,7 +6,9 @@ typedef struct PxiSystemWork {
 } PxiSystemWork;
 
 extern int func_02004938(void);
+#ifndef NITRO_OS_INTERRUPT_STATE_H
 extern void func_0200494c(int state);
+#endif
 extern void *data_02057b8c[32];
 
 void PXI_SetFifoRecvCallback_0200e29c(u32 fifoTag, void *callback)

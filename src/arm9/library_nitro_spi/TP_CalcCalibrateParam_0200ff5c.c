@@ -99,7 +99,9 @@ extern struct {
 #define tpState data_02046390
 
 extern OSIntrMode OS_DisableInterrupts(void);
+#ifndef NITRO_OS_INTERRUPT_STATE_H
 extern OSIntrMode OS_RestoreInterrupts(OSIntrMode state);
+#endif
 extern void OS_Terminate(void);
 extern u32 TP_CalcCalibrateParam_0200ff5c(TPCalibrateParam *calibrate, u16 raw_x1, u16 raw_y1, u16 dx1, u16 dy1, u16 raw_x2, u16 raw_y2, u16 dx2, u16 dy2);
 

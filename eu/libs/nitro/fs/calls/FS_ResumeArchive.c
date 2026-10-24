@@ -1,3 +1,5 @@
+#include "eu/libs/nitro/os/os_interrupt_state.h"
+
 #define FS_ResumeArchive_0200b11c FS_ResumeArchive
 #define func_02004938 OS_DisableInterrupts
 #define func_0200494c OS_RestoreInterrupts

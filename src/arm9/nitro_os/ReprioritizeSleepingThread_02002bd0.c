@@ -15,7 +15,9 @@ typedef struct {
 extern SchedulerGlobals_02056b50 data_02056b50;
 extern OSThread data_02056b7c;
 extern int func_02004938(void);
+#ifndef NITRO_OS_INTERRUPT_STATE_H
 extern void func_0200494c(int state);
+#endif
 extern void InsertThreadByPriority_020025e4(OSThread *thread);
 extern void func_02002688(void);
 

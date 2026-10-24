@@ -95,15 +95,24 @@ The `clang/22.1.3/source-order` selection disables scheduling after register
 allocation. It preserves the original order of CPSR writes and result masks
 in interrupt-control routines.
 
-`OS_RestoreInterrupts_IrqAndFiq` exposes the original leaf routine's three
-register results as `OSInterruptState`: the previous interrupt mask, previous
-CPSR and updated CPSR. Its Clang `swiftcall` definition and MWCC dsi/1.1
-`value_in_regs` declarations pass the argument in r0 and return those fields
-in r0-r2. Both callers discard the result and retain their exact ROM bytes.
-The shared header keeps their declarations consistent with the definition;
-this compatibility is specific to this signature, not a general interchange
-of the two calling conventions. The callers explicitly select dsi/1.1 because
-the default CodeWarrior version does not accept `value_in_regs`.
+`OS_RestoreInterrupts` and `OS_RestoreInterrupts_IrqAndFiq` expose the original
+leaf routines' three register results as `OSInterruptState`: the previous
+interrupt mask, previous CPSR and updated CPSR. Their Clang `swiftcall`
+definitions and MWCC DSi `value_in_regs` declarations pass the argument in r0
+and return those fields in r0-r2. All callers discard the result and retain
+their exact ROM bytes. The shared header keeps their declarations consistent
+with the definitions. This compatibility is specific to this signature, not a general interchange
+of the two calling conventions. Callers previously using older CodeWarrior
+versions explicitly select dsi/1.1 to support `value_in_regs`; existing DSi
+selections remain in place. `CARDi_NotifyEvent` and `FS_RegisterArchiveName`
+also use `#pragma ipa file` to retain the original list-head address loads.
+
+EU wrappers include `os_interrupt_state.h` before their shared source. Those
+sources omit their legacy scalar declaration when this header is present;
+the US build retains its original declarations and preprocessed code.
+Filesystem wait helpers that call the interrupt API live in
+`libs/nitro/fs/fs_wait_internal.h`, so other filesystem units do not need the
+register-result calling convention.
 
 ### Extract and index
 

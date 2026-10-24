@@ -1,7 +1,7 @@
 #include "libs/nitro/os/os_interrupt_state.h"
 
 extern int OS_DisableInterrupts(void);
-extern void OS_RestoreInterrupts(int state);
+
 extern int OS_DisableInterrupts_IrqAndFiq(void);
 
 extern int MI_SwapWord(unsigned short id, void *lock);

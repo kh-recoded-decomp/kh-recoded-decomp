@@ -1,3 +1,7 @@
+#pragma ipa file
+
+#include "libs/nitro/os/os_interrupt_state.h"
+
 typedef unsigned long u32;
 typedef u32 CARDEvent;
 typedef unsigned long OSIntrMode;
@@ -11,9 +15,9 @@ typedef struct CARDHookContext {
     CARDHookFunction callback;
 } CARDHookContext;
 
-static CARDHookContext *CARDiHookChain;
+CARDHookContext *CARDiHookChain;
 extern OSIntrMode OS_DisableInterrupts(void);
-extern OSIntrMode OS_RestoreInterrupts(OSIntrMode mode);
+
 
 void CARDi_NotifyEvent(CARDEvent event, void *argument)
 {

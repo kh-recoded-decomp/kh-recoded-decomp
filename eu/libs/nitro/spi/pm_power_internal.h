@@ -116,7 +116,6 @@ extern u32 PMi_PreDmaCnt[4];
 extern int PMi_WaitBusyMethod;
 
 OSIntrMode OS_DisableInterrupts(void);
-OSIntrMode OS_RestoreInterrupts(OSIntrMode mode);
 void OS_SpinWait(u32 cycles);
 void OS_Halt(void);
 void MI_StopAllDma(void);

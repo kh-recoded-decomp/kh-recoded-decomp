@@ -21,7 +21,9 @@ extern SNDCommand *data_02057c74[8];
 extern SNDCommand data_02057f20[0x100];
 
 extern int OS_DisableInterrupts(void);
+#ifndef NITRO_OS_INTERRUPT_STATE_H
 extern void OS_RestoreInterrupts(int interruptState);
+#endif
 extern void DC_FlushRange(void *address, unsigned int size);
 extern SNDCommand *func_0200eec0(int block);
 extern int func_0200e30c(int channel, unsigned int data, int err);

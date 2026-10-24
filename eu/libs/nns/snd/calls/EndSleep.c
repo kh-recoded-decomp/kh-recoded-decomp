@@ -1,3 +1,5 @@
+#include "eu/libs/nitro/os/os_interrupt_state.h"
+
 #define EndSleep_0201e4b4 EndSleep
 #define func_02004938 OS_DisableInterrupts
 #define func_0200494c OS_RestoreInterrupts

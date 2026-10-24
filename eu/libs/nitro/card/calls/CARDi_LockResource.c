@@ -1,3 +1,5 @@
+#include "eu/libs/nitro/os/os_interrupt_state.h"
+
 #define CARDi_LockResource_020091d4 CARDi_LockResource
 #define OS_DisableInterrupts_02004938 OS_DisableInterrupts
 #define OS_RestoreInterrupts_0200494c OS_RestoreInterrupts

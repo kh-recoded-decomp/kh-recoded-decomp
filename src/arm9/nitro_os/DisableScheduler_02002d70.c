@@ -7,7 +7,9 @@ typedef struct {
 
 extern ThreadInfo_02056b50 data_02056b50;
 extern int func_02004938(void);
+#ifndef NITRO_OS_INTERRUPT_STATE_H
 extern void func_0200494c(int state);
+#endif
 
 u32 DisableScheduler_02002d70(void)
 {

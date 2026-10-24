@@ -1,3 +1,5 @@
+#include "eu/libs/nitro/os/os_interrupt_state.h"
+
 #define ForcePowerOffAndHalt_0201057c PMi_ForceToPowerOff
 #define GetU16Field_020049f0 OS_GetBootType
 #define PM_GetBackLight_020105c8 PM_GetBackLight

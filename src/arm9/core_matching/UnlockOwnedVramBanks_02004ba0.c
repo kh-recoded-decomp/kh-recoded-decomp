@@ -1,6 +1,8 @@
 /* CC0 Yokimitsuro/khdays-decomp revision ab832f38b943c15f461228968a89002e1a99c03e. */
 extern int func_02004938(void);
+#ifndef NITRO_OS_INTERRUPT_STATE_H
 extern void func_0200494c(int state);
+#endif
 extern int func_02004b64(unsigned int value);
 extern unsigned int data_02056ec8;
 extern unsigned short data_02056ecc[];

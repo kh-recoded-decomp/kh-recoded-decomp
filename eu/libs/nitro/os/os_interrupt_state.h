@@ -14,6 +14,7 @@ typedef struct OSInterruptState {
 #define OS_INTERRUPT_STATE_RESULT __declspec(value_in_regs)
 #endif
 
+OS_INTERRUPT_STATE_RESULT OSInterruptState OS_RestoreInterrupts(unsigned long state);
 OS_INTERRUPT_STATE_RESULT OSInterruptState OS_RestoreInterrupts_IrqAndFiq(unsigned state);
 
 #endif

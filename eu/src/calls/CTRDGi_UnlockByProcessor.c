@@ -1,2 +1,4 @@
+#include "eu/libs/nitro/os/os_interrupt_state.h"
+
 #define CTRDGi_UnlockByProcessor_020124a0 CTRDGi_UnlockByProcessor
 #include "src/arm9/library_nitro_nitro/CTRDGi_UnlockByProcessor_020124a0.c"

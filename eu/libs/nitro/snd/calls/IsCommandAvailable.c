@@ -1,3 +1,5 @@
+#include "eu/libs/nitro/os/os_interrupt_state.h"
+
 #define CheckCommandProcessorReady_0200f490 IsCommandAvailable
 #define func_02002f24 CommandPort_IsEnabled
 #include "src/arm9/processor_communication/CheckCommandProcessorReady_0200f490.c"

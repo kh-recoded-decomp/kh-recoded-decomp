@@ -1,7 +1,9 @@
 #include "nitro/types.h"
 
 extern int func_02004938(void);
+#ifndef NITRO_OS_INTERRUPT_STATE_H
 extern void func_0200494c(int state, u32 value);
+#endif
 
 void MI_StopDma_02005274(int channel)
 {
@@ -25,5 +27,9 @@ void MI_StopDma_02005274(int channel)
         regs[1] = 0;
         regs[2] = value;
     }
+#ifdef NITRO_OS_INTERRUPT_STATE_H
+    func_0200494c(state);
+#else
     func_0200494c(state, value);
+#endif
 }

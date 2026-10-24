@@ -26,7 +26,9 @@ extern void *data_02059834[];
 extern u16 data_020598a0[10][0x80];
 
 extern int func_02004938(void);
+#ifndef NITRO_OS_INTERRUPT_STATE_H
 extern void func_0200494c(int state);
+#endif
 extern BOOL IsGraphicsMemoryAddress_02003b18(void *addr);
 extern void PXI_Init_0200e1ec(void);
 extern BOOL PXI_IsCallbackReady_0200e2e8(int tag, int proc);

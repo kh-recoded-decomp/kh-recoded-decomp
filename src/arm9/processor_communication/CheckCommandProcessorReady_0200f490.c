@@ -1,5 +1,7 @@
 extern int OS_DisableInterrupts(void);
+#ifndef NITRO_OS_INTERRUPT_STATE_H
 extern void OS_RestoreInterrupts(int state);
+#endif
 extern int func_02002f24(void);
 
 int CheckCommandProcessorReady_0200f490(void) {

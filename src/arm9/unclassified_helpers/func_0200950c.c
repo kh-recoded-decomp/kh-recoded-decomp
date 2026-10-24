@@ -18,7 +18,9 @@ extern void func_02003414(void *ptr, u32 size);
 extern void func_0200344c(void *ptr, u32 size);
 extern void func_02003470(void);
 extern u32 func_02004938(void);
+#ifndef NITRO_OS_INTERRUPT_STATE_H
 extern void func_0200494c(u32 value);
+#endif
 extern void func_020049b4(u32 value);
 extern int func_0200e2e8(int slot, int arg1);
 extern int func_0200e30c(int slot, u32 value, int arg2);

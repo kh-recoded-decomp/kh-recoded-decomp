@@ -12,7 +12,9 @@ typedef struct {
 
 extern OSiVAlarmState data_02056eb0;
 extern int OS_DisableInterrupts_02004938(void);
+#ifndef NITRO_OS_INTERRUPT_STATE_H
 extern int OS_RestoreInterrupts_0200494c(int state);
+#endif
 
 s32 OSi_GetVFrame_020048e8(s32 vcount)
 {

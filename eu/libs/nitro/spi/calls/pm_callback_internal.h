@@ -22,7 +22,6 @@ extern PMGenCallbackInfo *PMi_PreSleepCallbackList;
 extern PMGenCallbackInfo *PMi_PostSleepCallbackList;
 
 extern OSIntrMode OS_DisableInterrupts(void);
-extern OSIntrMode OS_RestoreInterrupts(OSIntrMode mode);
 
 void PMi_InsertList(
     PMGenCallbackInfo **list,

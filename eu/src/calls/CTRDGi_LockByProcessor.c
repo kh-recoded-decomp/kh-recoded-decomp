@@ -1,3 +1,5 @@
+#include "eu/libs/nitro/os/os_interrupt_state.h"
+
 #define CTRDGi_LockByProcessor_02012464 CTRDGi_LockByProcessor
 #define OS_DisableInterrupts_02004938 OS_DisableInterrupts
 #define OS_ReadOwnerOfLockWord_02002398 OS_ReadOwnerOfLockWord

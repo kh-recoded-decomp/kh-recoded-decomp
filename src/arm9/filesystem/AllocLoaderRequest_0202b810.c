@@ -12,7 +12,9 @@ typedef struct FileLoader {
 extern FileLoader data_02060564;
 
 extern int func_02004938(void);
+#ifndef NITRO_OS_INTERRUPT_STATE_H
 extern void func_0200494c(int state);
+#endif
 extern int func_0202c438(void);
 
 LoaderRequest *AllocLoaderRequest_0202b810(void)

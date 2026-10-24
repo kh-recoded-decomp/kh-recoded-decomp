@@ -25,7 +25,9 @@ extern u16 *WmGetSharedDataAddress_02012250(WMDataSharingInfo *dsInfo, u32 aidBi
 extern void MIi_CpuCopy16_01ff869c(const void *src, void *dest, u32 size);
 extern void MIi_CpuClear16_01ff8684(u16 data, void *dest, u32 size);
 extern OSIntrMode OS_DisableInterrupts_02004938(void);
+#ifndef NITRO_OS_INTERRUPT_STATE_H
 extern OSIntrMode OS_RestoreInterrupts_0200494c(OSIntrMode state);
+#endif
 
 void WmDataSharingReceiveData_020120cc(WMDataSharingInfo *dsInfo, u16 aid, u16 *data)
 {

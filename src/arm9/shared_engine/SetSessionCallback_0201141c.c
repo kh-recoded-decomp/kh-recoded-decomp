@@ -1,5 +1,7 @@
 extern int OS_DisableInterrupts(void);
+#ifndef NITRO_OS_INTERRUPT_STATE_H
 extern void OS_RestoreInterrupts(int state);
+#endif
 
 extern int Ov105_IsDeviceReady(void);
 extern char *Ov105_GetContext(void);

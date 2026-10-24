@@ -12,7 +12,9 @@ typedef struct {
 } NNSSndStrm;
 
 extern int func_02004938(void);
+#ifndef NITRO_OS_INTERRUPT_STATE_H
 extern int func_0200494c(int state);
+#endif
 extern void func_0201e3b8(NNSSndStrm *stream, int status);
 extern void func_0200ead4(u32 channelMask, u32 captureMask, u32 alarmMask, u32 reserved);
 

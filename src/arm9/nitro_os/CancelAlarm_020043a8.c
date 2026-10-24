@@ -7,7 +7,9 @@ typedef struct OSAlarm {OSAlarmHandler handler; void *arg; u32 tag; OSTick fire;
 typedef struct {u16 active,padding; OSAlarm *head,*tail;} AlarmQueue;
 extern AlarmQueue alarmQueue;
 extern int OS_DisableInterrupts(void);
+#ifndef NITRO_OS_INTERRUPT_STATE_H
 extern int OS_RestoreInterrupts(int state);
+#endif
 extern void OS_Terminate(void);
 extern OSTick OS_GetTick(void);
 extern void InsertAlarmByDeadline(OSAlarm *alarm, OSTick fire);

@@ -2,7 +2,9 @@
 
 
 extern int OS_DisableInterrupts(void);
+#ifndef NITRO_OS_INTERRUPT_STATE_H
 extern void OS_RestoreInterrupts(int state);
+#endif
 
 typedef struct SNDCommand {
     struct SNDCommand *next;

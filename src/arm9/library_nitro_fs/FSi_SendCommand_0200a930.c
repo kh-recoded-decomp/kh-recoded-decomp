@@ -21,7 +21,9 @@ typedef struct FSArchive {
 
 extern void RunResetCallbackAndIdle_02004cf0(void);
 extern u32 func_02004938(void);
+#ifndef NITRO_OS_INTERRUPT_STATE_H
 extern void func_0200494c(u32 state);
+#endif
 extern void func_0200a200(FSFile *file, u32 result);
 extern FSFile *FSi_NextCommand_0200a67c(FSArchive *arc, BOOL owner);
 extern void AdvanceCommandQueue_0200a8ac(FSFile *file);

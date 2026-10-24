@@ -19,7 +19,9 @@ typedef struct OSVAlarm {
 #define reg_GX_VCOUNT (*(vu16 *)0x04000006)
 
 extern int OS_DisableInterrupts_02004938(void);
+#ifndef NITRO_OS_INTERRUPT_STATE_H
 extern int OS_RestoreInterrupts_0200494c(int state);
+#endif
 extern void RunResetCallbackAndIdle_02004cf0(void);
 extern s32 OSi_GetVFrame_020048e8(s32 vcount);
 extern void OSi_InsertVAlarm_02004568(OSVAlarm *alarm);

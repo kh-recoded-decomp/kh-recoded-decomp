@@ -1,3 +1,5 @@
+#include "eu/libs/nitro/os/os_interrupt_state.h"
+
 #define OS_DisableInterrupts_02004938 OS_DisableInterrupts
 #define OS_RestoreInterrupts_0200494c OS_RestoreInterrupts
 #define WmDataSharingReceiveCallback_Parent_02011f68 WmDataSharingReceiveCallback_Parent

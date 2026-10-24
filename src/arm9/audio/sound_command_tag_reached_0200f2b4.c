@@ -1,5 +1,7 @@
 extern int OS_DisableInterrupts();
+#ifndef NITRO_OS_INTERRUPT_STATE_H
 extern void OS_RestoreInterrupts(int interruptState);
+#endif
 extern unsigned int data_02057c50[];
 
 int sound_command_tag_reached_0200f2b4(unsigned int requestedTag) {

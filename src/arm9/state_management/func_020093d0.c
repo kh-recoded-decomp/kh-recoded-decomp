@@ -1,7 +1,9 @@
 #include "nitro/types.h"
 
 extern u32 func_02004938(void);
+#ifndef NITRO_OS_INTERRUPT_STATE_H
 extern void func_0200494c(u32 state);
+#endif
 extern void func_02002aa8(u32 *queue);
 
 BOOL func_020093d0(u32 *request, int setArgs, u32 arg1, u32 arg2) {

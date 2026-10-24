@@ -1,2 +1,4 @@
+#include "eu/libs/nitro/os/os_interrupt_state.h"
+
 #define TP_CalcCalibrateParam_0200ff5c TP_CalcCalibrateParam
 #include "src/arm9/library_nitro_spi/TP_CalcCalibrateParam_0200ff5c.c"

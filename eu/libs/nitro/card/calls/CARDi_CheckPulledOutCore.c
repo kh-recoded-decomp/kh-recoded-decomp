@@ -1,9 +1,11 @@
+#include "libs/nitro/os/os_interrupt_state.h"
+
 typedef unsigned long u32;
 typedef int BOOL;
 typedef int OSIntrMode;
 
 extern OSIntrMode OS_DisableInterrupts(void);
-extern OSIntrMode OS_RestoreInterrupts(OSIntrMode state);
+
 extern void CARDi_PulledOutCallback(int tag, u32 data, BOOL error);
 
 void CARDi_CheckPulledOutCore(u32 id)

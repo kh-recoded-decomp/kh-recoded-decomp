@@ -7,7 +7,9 @@ typedef void (*OSAlarmHandler)(void *arg);
 extern void OS_CreateAlarm(OSAlarm *alarm);
 extern void OS_SetAlarm(OSAlarm *alarm, OSTick fire_tick, OSAlarmHandler handler, void *arg);
 extern int OS_DisableInterrupts(void);
+#ifndef NITRO_OS_INTERRUPT_STATE_H
 extern void OS_RestoreInterrupts(int mask);
+#endif
 extern void OS_SleepThread(void *arg);
 extern void OSi_SleepAlarmCallback(void *arg);
 extern void **data_02056b50[];

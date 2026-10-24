@@ -1014,7 +1014,7 @@ libs/nitro/os/auto/OS_DisableInterrupts.c:
     complete
     .text       start:0x0200494c end:0x02004960
 
-libs/nitro/os/asm_stubs/auto/OS_RestoreInterrupts.c:
+libs/nitro/os/auto/OS_RestoreInterrupts.c:
     complete
     .text       start:0x02004960 end:0x02004978
 

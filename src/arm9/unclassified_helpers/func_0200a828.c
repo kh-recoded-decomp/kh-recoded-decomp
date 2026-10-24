@@ -9,7 +9,9 @@ typedef struct {
 } SoundState;
 
 extern void *func_02004938(void);
+#ifndef NITRO_OS_INTERRUPT_STATE_H
 extern void func_0200494c(void *token);
+#endif
 extern void func_02002af8(void *buffer);
 extern int func_0200a2fc(SoundState *state, u32 type);
 extern SoundState *func_0200a67c(void *handle, int flag);

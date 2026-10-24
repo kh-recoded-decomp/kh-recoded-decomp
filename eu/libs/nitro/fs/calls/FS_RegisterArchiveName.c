@@ -1,3 +1,7 @@
+#pragma ipa file
+
+#include "libs/nitro/os/os_interrupt_state.h"
+
 #include "libs/nitro/fs/fs_internal.h"
 
 char current_dir_path[260];

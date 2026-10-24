@@ -1,7 +1,9 @@
+#include "libs/nitro/os/os_interrupt_state.h"
+
 #include "libs/nitro/card/card_rom_internal.h"
 
 extern OSIntrMode OS_DisableInterrupts(void);
-extern OSIntrMode OS_RestoreInterrupts(OSIntrMode state);
+
 extern void OS_SetIrqFunction(u32 mask, void (*function)(void));
 extern u32 OS_ResetRequestIrqMask(u32 mask);
 extern u32 OS_EnableIrqMask(u32 mask);

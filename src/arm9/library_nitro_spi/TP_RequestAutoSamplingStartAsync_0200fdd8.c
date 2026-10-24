@@ -22,7 +22,9 @@ struct TPState {
 };
 
 extern int OS_DisableInterrupts(void);
+#ifndef NITRO_OS_INTERRUPT_STATE_H
 extern void OS_RestoreInterrupts(int state);
+#endif
 extern int PXI_SendWordByFifo(int channel, int word, int flag);
 extern struct TPState data_02059784;
 

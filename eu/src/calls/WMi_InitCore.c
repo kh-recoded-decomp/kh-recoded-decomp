@@ -1,3 +1,5 @@
+#include "eu/libs/nitro/os/os_interrupt_state.h"
+
 #define IsGraphicsMemoryAddress_02003b18 OS_IsOnVram
 #define Ov105_ClearSharedRequestBit_02011378 Ov105_ClearSharedRequestBit
 #define PXI_Init_0200e1ec PXI_Init

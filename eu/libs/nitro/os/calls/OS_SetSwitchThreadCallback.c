@@ -1,3 +1,5 @@
+#include "eu/libs/nitro/os/os_interrupt_state.h"
+
 #define SetSchedulerField28_02002d38 OS_SetSwitchThreadCallback
 #define data_02056b50 OSi_ThreadSystemState
 #define func_02004938 OS_DisableInterrupts

@@ -1,3 +1,5 @@
+#include "libs/nitro/os/os_interrupt_state.h"
+
 #include "libs/nitro/mi/mi_dma_internal.h"
 
 void MI_SendGXCommandAsync(

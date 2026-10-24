@@ -1,5 +1,7 @@
 extern int OS_DisableInterrupts(void);
+#ifndef NITRO_OS_INTERRUPT_STATE_H
 extern void OS_RestoreInterrupts(int state);
+#endif
 extern void *DLExtract(void *list, void *node);
 extern void *DLInsert(void *list, void *node);
 extern char *data_02044590[];

@@ -7,7 +7,9 @@ extern struct {
 } data_0205a2a0;
 
 extern int OS_DisableInterrupts_02004938(void);
+#ifndef NITRO_OS_INTERRUPT_STATE_H
 extern void OS_RestoreInterrupts_0200494c(int state);
+#endif
 extern BOOL CTRDGi_HasValidModuleInfo_02012320(void);
 extern u32 OS_SetDPermissionsForProtectionRegion_02003bb0(u32 mask, u32 access);
 extern unsigned int DC_FlushAll_020033e0(void);

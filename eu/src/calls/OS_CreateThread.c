@@ -1,3 +1,5 @@
+#include "eu/libs/nitro/os/os_interrupt_state.h"
+
 #define OS_CreateThread_02002898 OS_CreateThread
 #define func_02004938 OS_DisableInterrupts
 #define func_0200494c OS_RestoreInterrupts

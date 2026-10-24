@@ -12,7 +12,9 @@ struct CardCommon {
 
 extern CardCommon data_02056fe0;
 extern int OS_DisableInterrupts_02004938(void);
+#ifndef NITRO_OS_INTERRUPT_STATE_H
 extern int OS_RestoreInterrupts_0200494c(int state);
+#endif
 extern void OS_SleepThread_02002aa8(void *queue);
 extern BOOL CARDi_ExecuteOldTypeTask_02009344(CardTaskFunc task, BOOL async);
 

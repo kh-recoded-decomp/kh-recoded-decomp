@@ -1,3 +1,5 @@
+#include "libs/nitro/os/os_interrupt_state.h"
+
 typedef unsigned int u32;
 typedef int OSIntrMode;
 
@@ -19,7 +21,7 @@ typedef struct LoadCommand {
 } LoadCommand;
 
 extern OSIntrMode OS_DisableInterrupts(void);
-extern OSIntrMode OS_RestoreInterrupts(OSIntrMode state);
+
 extern void NNS_FndRemoveListObject(NNSFndList *list, void *object);
 extern void *NNS_FndGetNextListObject(NNSFndList *list, void *object);
 

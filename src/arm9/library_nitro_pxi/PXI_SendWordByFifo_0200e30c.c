@@ -13,7 +13,9 @@ typedef struct IpcFifoRegs {
 } IpcFifoRegs;
 
 extern int  OS_DisableInterrupts(void);
+#ifndef NITRO_OS_INTERRUPT_STATE_H
 extern void OS_RestoreInterrupts(int state);
+#endif
 
 s32 PXI_SendWordByFifo_0200e30c(u32 nTag, u32 nData, u32 bErr)
 {

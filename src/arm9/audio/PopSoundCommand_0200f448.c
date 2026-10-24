@@ -1,5 +1,7 @@
 extern int OS_DisableInterrupts();
+#ifndef NITRO_OS_INTERRUPT_STATE_H
 extern void OS_RestoreInterrupts(int interrupt_state);
+#endif
 extern int *sound_command_manager[];
 
 int *PopSoundCommand_0200f448(void) {

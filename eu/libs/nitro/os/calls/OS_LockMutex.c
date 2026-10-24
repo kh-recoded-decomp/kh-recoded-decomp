@@ -1,3 +1,5 @@
+#include "eu/libs/nitro/os/os_interrupt_state.h"
+
 #define LockSyncObjectRetry_02003158 OS_LockMutex
 #define SleepCurrentThread_02002aa8 OS_SleepThread
 #define data_02056b6c OSi_ThreadInfo

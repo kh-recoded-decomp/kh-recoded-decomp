@@ -1,5 +1,7 @@
 extern int OS_DisableInterrupts(void);
+#ifndef NITRO_OS_INTERRUPT_STATE_H
 extern void OS_RestoreInterrupts(int state);
+#endif
 extern void MI_CpuFill8(void *dst, int value, int size);
 extern void OS_SleepThread(void *queue);
 extern void OS_ExitThread(void);

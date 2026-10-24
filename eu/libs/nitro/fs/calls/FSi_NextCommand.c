@@ -1,3 +1,5 @@
+#include "eu/libs/nitro/os/os_interrupt_state.h"
+
 #define FSi_NextCommand_0200a67c FSi_NextCommand
 #define OS_WakeupThread_02002af8 OS_WakeupThread
 #define func_02004938 OS_DisableInterrupts

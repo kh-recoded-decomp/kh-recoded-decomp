@@ -38,7 +38,9 @@ extern void AppendIntrusiveListObject_020128d0(void *list, void *obj);
 extern void AlarmCallback_0201e3a8(void *arg);
 extern void StrmCallback_0201e3b8(NNSSndStrm *stream, int status);
 extern int func_02004938(void);
+#ifndef NITRO_OS_INTERRUPT_STATE_H
 extern void func_0200494c(int state);
+#endif
 
 BOOL NNS_SndStrmSetup_0201e058(NNSSndStrm *stream, int format, void *buffer, u32 bufSize, int timer, int interval, NNSSndStrmCallback callback, void *arg)
 {

@@ -1,5 +1,7 @@
 extern int OS_DisableInterrupts(void);
+#ifndef NITRO_OS_INTERRUPT_STATE_H
 extern void OS_RestoreInterrupts(int state);
+#endif
 extern void func_02001f10(void *queue);
 extern void OS_WakeupThread(void *queue);
 extern long long func_02020400(int a, int b);

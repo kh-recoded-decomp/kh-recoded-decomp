@@ -354,7 +354,6 @@ extern FSRomArchiveState fsi_rom_archive_state;
 #define FS_ARCHIVE_FLAG_SUSPENDING 0x00000040UL
 
 extern OSIntrMode OS_DisableInterrupts(void);
-extern OSIntrMode OS_RestoreInterrupts(OSIntrMode state);
 extern void OS_SleepThread(OSThreadQueue *queue);
 extern void OS_WakeupThread(OSThreadQueue *queue);
 
@@ -456,28 +455,6 @@ BOOL FSi_OverrideRomArchive(FSArchive *archive);
 static inline FSCommandType FSi_GetCurrentCommand(const FSFile *file)
 {
     return (file->status >> FS_FILE_STATUS_CMD_SHIFT) & FS_FILE_STATUS_CMD_MASK;
-}
-
-static inline void FSi_WaitConditionOn(u32 *flags, u32 bits,
-                                       OSThreadQueue *queue)
-{
-    OSIntrMode interruptState = OS_DisableInterrupts();
-
-    while ((*flags & bits) == 0) {
-        OS_SleepThread(queue);
-    }
-    (void)OS_RestoreInterrupts(interruptState);
-}
-
-static inline void FSi_WaitConditionOff(u32 *flags, u32 bits,
-                                        OSThreadQueue *queue)
-{
-    OSIntrMode interruptState = OS_DisableInterrupts();
-
-    while ((*flags & bits) != 0) {
-        OS_SleepThread(queue);
-    }
-    (void)OS_RestoreInterrupts(interruptState);
 }
 
 #endif

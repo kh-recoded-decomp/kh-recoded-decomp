@@ -13,7 +13,9 @@ typedef struct {
 
 extern OSiTickState data_02056e94;
 extern OSIntrMode OS_DisableInterrupts_02004938(void);
+#ifndef NITRO_OS_INTERRUPT_STATE_H
 extern OSIntrMode OS_RestoreInterrupts_0200494c(OSIntrMode state);
+#endif
 
 OSTick OS_GetTick_02003fd4(void)
 {

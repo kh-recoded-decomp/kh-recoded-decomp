@@ -1,3 +1,5 @@
+#include "eu/libs/nitro/os/os_interrupt_state.h"
+
 #define AdvanceCommandQueue_0200a8ac FSi_ExecuteSyncCommand
 #define FS_WaitAsync_0200b1e4 FS_WaitAsync
 #define SleepCurrentThread_02002aa8 OS_SleepThread

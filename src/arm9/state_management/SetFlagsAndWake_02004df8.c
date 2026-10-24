@@ -1,7 +1,9 @@
 #include "nitro/types.h"
 
 extern u32 func_02004938(void);
+#ifndef NITRO_OS_INTERRUPT_STATE_H
 extern void func_0200494c(u32 state);
+#endif
 extern void OS_WakeupThread(void *queue);
 
 void SetFlagsAndWake_02004df8(u32 *flags, u32 mask) {

@@ -1,3 +1,5 @@
+#include "eu/libs/nitro/os/os_interrupt_state.h"
+
 #define func_0201ee28 NNS_SndArcGetFileAddress
 #define func_0201ee50 NNS_SndArcSetFileAddress
 #define func_0201f9cc DisposeCallback

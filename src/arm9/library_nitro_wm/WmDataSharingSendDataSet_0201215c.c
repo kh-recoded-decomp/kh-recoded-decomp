@@ -26,7 +26,9 @@ typedef struct {
 typedef void (*WMCallbackFunc)(void *arg);
 
 extern OSIntrMode OS_DisableInterrupts_02004938(void);
+#ifndef NITRO_OS_INTERRUPT_STATE_H
 extern OSIntrMode OS_RestoreInterrupts_0200494c(OSIntrMode state);
+#endif
 extern u16 GetSessionLinkState_020113b8(void);
 extern void MIi_CpuClear16_01ff8684(u16 data, void *dest, u32 size);
 extern int WM_SetMPDataToPortEx_02011ba8(WMCallbackFunc callback, void *arg, const u16 *sendData, u16 sendDataSize, u16 destBitmap, u16 port, u16 prio);

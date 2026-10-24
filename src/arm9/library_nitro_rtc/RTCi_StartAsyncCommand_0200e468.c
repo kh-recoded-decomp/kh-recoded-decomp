@@ -14,7 +14,9 @@ typedef struct RtcWork {
 
 extern RtcWork data_02057c0c;
 extern int func_02004938(void);
+#ifndef NITRO_OS_INTERRUPT_STATE_H
 extern void func_0200494c(int state);
+#endif
 extern int func_0200e8f0(void);
 
 int RTCi_StartAsyncCommand_0200e468(int arg1, int arg2, int arg3)

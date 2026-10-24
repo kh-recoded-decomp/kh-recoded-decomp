@@ -1,3 +1,5 @@
+#include "libs/nitro/os/os_interrupt_state.h"
+
 #include "libs/nitro/card/card_rom_internal.h"
 
 typedef void (*MIDmaCallback)(void *argument);
@@ -12,7 +14,7 @@ extern const CARDDmaInterface *CARDi_GetDmaInterface(u32 channel);
 extern void CARDi_ICInvalidateSmart(void *destination, u32 length, u32 threshold);
 extern void CARDi_DCInvalidateSmart(void *destination, u32 length, u32 threshold);
 extern OSIntrMode OS_DisableInterrupts(void);
-extern OSIntrMode OS_RestoreInterrupts(OSIntrMode state);
+
 extern void CARDi_ReadRomWithDMA(CARDTransferInfo *info);
 extern void CARD_WaitRomAsync(void);
 extern BOOL CARDi_ExecuteOldTypeTask(void (*task)(CARDiCommon *), BOOL asynchronous);

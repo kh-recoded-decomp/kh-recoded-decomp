@@ -55,7 +55,9 @@ typedef struct {
 extern void *data_02044590[OS_ARENA_MAX];
 #define OSiHeapInfo data_02044590
 extern OSIntrMode OS_DisableInterrupts(void);
+#ifndef NITRO_OS_INTERRUPT_STATE_H
 extern OSIntrMode OS_RestoreInterrupts(OSIntrMode state);
+#endif
 extern Cell *DLAddFront(Cell *list, Cell *cell);
 extern Cell *DLExtract(Cell *list, Cell *cell);
 

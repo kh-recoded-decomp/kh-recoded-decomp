@@ -8,7 +8,9 @@ typedef struct Registration {
 } Registration;
 
 extern void *func_02004938(void);
+#ifndef NITRO_OS_INTERRUPT_STATE_H
 extern void func_0200494c(void *token);
+#endif
 extern void *ResolveTaggedPointer_0200b034(int *value);
 extern int func_02010ce0(int offset, void *context, char *name);
 extern Registration *data_020578ec;

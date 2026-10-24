@@ -1,3 +1,5 @@
+#include "eu/libs/nitro/os/os_interrupt_state.h"
+
 #define MIi_CpuClear16_01ff8684 MIi_CpuClear16
 #define MIi_CpuCopy16_01ff869c MIi_CpuCopy16
 #define OS_DisableInterrupts_02004938 OS_DisableInterrupts

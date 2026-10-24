@@ -18,7 +18,9 @@ typedef struct FSArchive {
 } FSArchive;
 
 extern u32 func_02004938(void);
+#ifndef NITRO_OS_INTERRUPT_STATE_H
 extern void func_0200494c(u32 state);
+#endif
 extern FSFile *func_0200a67c(FSArchive *arc, BOOL owner);
 extern void func_0200a828(FSFile *file);
 

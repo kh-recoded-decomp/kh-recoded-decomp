@@ -1,3 +1,5 @@
+#include "eu/libs/nitro/os/os_interrupt_state.h"
+
 #define CancelAlarm OS_CancelAlarm
 #define SetAlarmTimer OSi_SetTimer
 #define alarmQueue OSi_AlarmState

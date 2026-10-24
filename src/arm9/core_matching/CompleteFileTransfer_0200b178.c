@@ -1,6 +1,8 @@
 /* Target-derived C from the Ghidra body at arm9:func_0200b178. */
 extern int func_02004938(void);
+#ifndef NITRO_OS_INTERRUPT_STATE_H
 extern void func_0200494c(int state);
+#endif
 extern void func_02002af8(void *queue);
 extern void func_0200a200(void *file);
 extern int func_0200a67c(void *archive, int arg);

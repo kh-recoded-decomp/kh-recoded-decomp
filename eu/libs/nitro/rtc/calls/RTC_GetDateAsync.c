@@ -1,3 +1,5 @@
+#include "eu/libs/nitro/os/os_interrupt_state.h"
+
 #define RTCi_StartAsyncCommand_0200e468 RTC_GetDateAsync
 #define data_02057c0c RTCi_Bss
 #define func_02004938 OS_DisableInterrupts

@@ -1,3 +1,5 @@
+#include "eu/libs/nitro/os/os_interrupt_state.h"
+
 #define CARDi_ExecuteOldTypeTask_02009344 CARDi_ExecuteOldTypeTask
 #define CARDi_TaskThread_02009398 CARDi_OldTypeTaskThread
 #define OS_DisableInterrupts_02004938 OS_DisableInterrupts

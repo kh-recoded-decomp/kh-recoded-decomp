@@ -1,3 +1,5 @@
+#include "eu/libs/nitro/os/os_interrupt_state.h"
+
 #define Retry_0200950c CARDi_Request
 #define data_02056b6c OSi_ThreadInfo
 #define func_02002aa8 OS_SleepThread

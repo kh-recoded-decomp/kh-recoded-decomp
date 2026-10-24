@@ -1,3 +1,5 @@
+#include "eu/libs/nitro/os/os_interrupt_state.h"
+
 #define AdvanceCommandQueue_0200a8ac FSi_ExecuteSyncCommand
 #define FSi_NextCommand_0200a67c FSi_NextCommand
 #define FSi_SendCommand_0200a930 FSi_SendCommand

@@ -11,7 +11,9 @@ typedef struct FSFile {
 } FSFile;
 
 extern u32 func_02004938(void);
+#ifndef NITRO_OS_INTERRUPT_STATE_H
 extern void func_0200494c(u32 state);
+#endif
 extern void SleepCurrentThread_02002aa8(void *queue);
 extern void AdvanceCommandQueue_0200a8ac(FSFile *file);
 

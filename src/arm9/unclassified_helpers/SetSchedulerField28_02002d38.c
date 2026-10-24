@@ -7,7 +7,9 @@ typedef struct {
 
 extern SchedulerGlobals_02056b50 data_02056b50;
 extern u32 func_02004938(void);
+#ifndef NITRO_OS_INTERRUPT_STATE_H
 extern void func_0200494c(u32 state);
+#endif
 
 u32 SetSchedulerField28_02002d38(u32 value)
 {

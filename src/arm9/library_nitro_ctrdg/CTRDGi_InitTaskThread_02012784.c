@@ -1,7 +1,9 @@
 extern void OS_CreateThread(void *thread, void (*func)(void *), void *arg, void *stack, unsigned stackSize, unsigned prio);
 extern void OS_WakeupThreadDirect(void *thread);
 extern int OS_DisableInterrupts(void);
+#ifndef NITRO_OS_INTERRUPT_STATE_H
 extern void OS_RestoreInterrupts(int state);
+#endif
 extern void MIi_CpuFill24(void *p);
 extern void JobQueue_WorkerLoop(void *arg);
 

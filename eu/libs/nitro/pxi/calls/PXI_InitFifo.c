@@ -1,3 +1,5 @@
+#include "eu/libs/nitro/os/os_interrupt_state.h"
+
 #define OS_SetIrqFunction_02001d90 OS_SetIrqFunction
 #define PXI_InitFifo_0200e1f4 PXI_InitFifo
 #define PXIi_HandlerRecvFifoNotEmpty_0200e374 PXIi_HandlerRecvFifoNotEmpty

@@ -3,7 +3,9 @@
 typedef void (*CompletionCallback)(u32 arg);
 
 extern u32 func_02004938(void);
+#ifndef NITRO_OS_INTERRUPT_STATE_H
 extern void func_0200494c(u32 state);
+#endif
 extern void OS_WakeupThread(void *queue);
 
 void func_02009434(int request) {

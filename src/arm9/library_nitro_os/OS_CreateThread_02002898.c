@@ -29,7 +29,9 @@ typedef struct OSThread {
 } OSThread;
 
 extern u32 func_02004938(void);
+#ifndef NITRO_OS_INTERRUPT_STATE_H
 extern void func_0200494c(u32 state);
+#endif
 extern u32 AllocateNextThreadId_0200249c(void);
 extern void InsertThreadByPriority_020025e4(OSThread *thread);
 extern void func_02002ddc(OSThread *thread, OSThreadFunc func, u32 stack);

@@ -40,7 +40,9 @@ typedef struct {
 extern void WmDataSharingReceiveData_020120cc(WMDataSharingInfo *dsInfo, u16 aid, u16 *data);
 extern BOOL WmDataSharingSendDataSet_0201215c(WMDataSharingInfo *dsInfo, BOOL delegate);
 extern OSIntrMode OS_DisableInterrupts_02004938(void);
+#ifndef NITRO_OS_INTERRUPT_STATE_H
 extern OSIntrMode OS_RestoreInterrupts_0200494c(OSIntrMode state);
+#endif
 
 void WmDataSharingReceiveCallback_Parent_02011f68(void *arg) {
     WMPortRecvCallback *cb = (WMPortRecvCallback *)arg;

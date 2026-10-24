@@ -1,3 +1,5 @@
+#include "eu/libs/nitro/os/os_interrupt_state.h"
+
 #define FindRegisteredEntryByName_0200aa68 FS_FindArchive
 #define ResolveTaggedPointer_0200b034 FS_GetArchiveName
 #define data_020578ec arc_list

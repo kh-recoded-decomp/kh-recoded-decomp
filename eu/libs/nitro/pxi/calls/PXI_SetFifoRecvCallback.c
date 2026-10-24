@@ -1,3 +1,5 @@
+#include "eu/libs/nitro/os/os_interrupt_state.h"
+
 #define PXI_SetFifoRecvCallback_0200e29c PXI_SetFifoRecvCallback
 #define data_02057b8c FifoRecvCallbackTable
 #define func_02004938 OS_DisableInterrupts

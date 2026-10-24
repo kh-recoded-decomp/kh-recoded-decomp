@@ -1,5 +1,7 @@
+#include "libs/nitro/os/os_interrupt_state.h"
+
 extern int OS_DisableInterrupts(void);
-extern void OS_RestoreInterrupts(int state);
+
 extern void MI_CpuFill8(void *dst, int value, int size);
 extern void OS_GetMacAddress(void *dst);
 extern int IsDeviceReady(void);

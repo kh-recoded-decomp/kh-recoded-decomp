@@ -1,3 +1,5 @@
+#include "eu/libs/nitro/os/os_interrupt_state.h"
+
 #define PXIi_HandlerRecvFifoNotEmpty_0200e374 PXIi_HandlerRecvFifoNotEmpty
 #define data_02057b8c FifoRecvCallbackTable
 #include "src/arm9/library_nitro_pxi/PXIi_HandlerRecvFifoNotEmpty_0200e374.c"

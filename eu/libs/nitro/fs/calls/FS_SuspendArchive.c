@@ -1,3 +1,5 @@
+#include "eu/libs/nitro/os/os_interrupt_state.h"
+
 #define FS_SuspendArchive_0200b08c FS_SuspendArchive
 #define SleepCurrentThread_02002aa8 OS_SleepThread
 #define func_02004938 OS_DisableInterrupts

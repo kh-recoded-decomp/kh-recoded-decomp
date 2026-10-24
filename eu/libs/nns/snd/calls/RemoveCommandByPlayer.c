@@ -1,3 +1,5 @@
+#include "libs/nitro/os/os_interrupt_state.h"
+
 #include "libs/nns/snd/sndarc_stream_internal.h"
 
 void RemoveCommandByPlayer(

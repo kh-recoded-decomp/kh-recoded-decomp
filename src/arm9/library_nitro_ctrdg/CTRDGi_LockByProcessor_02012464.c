@@ -2,7 +2,9 @@
 #include "nitro/ctrdg.h"
 
 extern OSIntrMode OS_DisableInterrupts_02004938(void);
+#ifndef NITRO_OS_INTERRUPT_STATE_H
 extern OSIntrMode OS_RestoreInterrupts_0200494c(OSIntrMode state);
+#endif
 extern u16 OS_ReadOwnerOfLockWord_02002398(void *lockWord);
 extern s32 OS_TryLockCartridge_020022e0(u16 lockID);
 extern void WaitByLoop(s32 count);

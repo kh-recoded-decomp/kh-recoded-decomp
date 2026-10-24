@@ -1,3 +1,5 @@
+#include "eu/libs/nitro/os/os_interrupt_state.h"
+
 #define GetSessionLinkState_020113b8 GetSessionLinkState
 #define MIi_CpuClear16_01ff8684 MIi_CpuClear16
 #define OS_DisableInterrupts_02004938 OS_DisableInterrupts

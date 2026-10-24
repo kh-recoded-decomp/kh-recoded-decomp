@@ -16,7 +16,9 @@ typedef enum {
 } OSEventMode;
 
 extern int OS_DisableInterrupts_02004938(void);
+#ifndef NITRO_OS_INTERRUPT_STATE_H
 extern int OS_RestoreInterrupts_0200494c(int state);
+#endif
 extern void SleepCurrentThread_02002aa8(OSThreadQueue *queue);
 
 u32 OS_WaitEventEx_02004d50(OSEvent *event, u32 pattern, OSEventMode mode, u32 clearBit)

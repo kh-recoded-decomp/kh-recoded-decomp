@@ -1,6 +1,8 @@
 /* CC0 Yokimitsuro/khdays-decomp revision ab832f38b943c15f461228968a89002e1a99c03e. */
 extern int OS_DisableInterrupts();
+#ifndef NITRO_OS_INTERRUPT_STATE_H
 extern void OS_RestoreInterrupts(int mask);
+#endif
 extern int data_02057c50[];
 
 int func_0200f288(void) {

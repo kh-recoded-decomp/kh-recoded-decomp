@@ -10,7 +10,9 @@ struct PMSleepCallbackInfo {
 };
 
 extern OSIntrMode OS_DisableInterrupts_02004938(void);
+#ifndef NITRO_OS_INTERRUPT_STATE_H
 extern OSIntrMode OS_RestoreInterrupts_0200494c(OSIntrMode state);
+#endif
 
 void PMi_InsertList_02010a1c(PMSleepCallbackInfo **listp, PMSleepCallbackInfo *info, int priority, int method)
 {

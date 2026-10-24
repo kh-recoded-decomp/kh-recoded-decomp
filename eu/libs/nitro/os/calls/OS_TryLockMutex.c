@@ -1,3 +1,5 @@
+#include "eu/libs/nitro/os/os_interrupt_state.h"
+
 #define TryLockSyncObject_02003200 OS_TryLockMutex
 #define data_02056b6c OSi_ThreadInfo
 #define func_02004938 OS_DisableInterrupts

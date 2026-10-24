@@ -28,7 +28,9 @@ typedef void (*PXIFifoCallback)(PXIFifoTag tag, u32 data, BOOL err);
 #define reg_PXI_RECV_FIFO  (*(vu32 *)0x04100000)
 
 extern OSIntrMode OS_DisableInterrupts(void);
+#ifndef NITRO_OS_INTERRUPT_STATE_H
 extern OSIntrMode OS_RestoreInterrupts(OSIntrMode state);
+#endif
 extern PXIFifoCallback data_02057b8c[32];
 #define FifoRecvCallbackTable data_02057b8c
 

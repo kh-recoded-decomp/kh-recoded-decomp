@@ -9,7 +9,9 @@ typedef struct {
 } CommandState;
 
 extern void *func_02004938(void);
+#ifndef NITRO_OS_INTERRUPT_STATE_H
 extern void func_0200494c(void *token);
+#endif
 extern void func_02002aa8(void *queue);
 extern int func_0200a2fc(CommandState *state, u32 type);
 extern void func_0200a200(u32 *node, u32 value);

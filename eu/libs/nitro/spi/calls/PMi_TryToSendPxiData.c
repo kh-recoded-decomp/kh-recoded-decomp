@@ -1,3 +1,5 @@
+#include "eu/libs/nitro/os/os_interrupt_state.h"
+
 #define PMi_SendPxiCommandArray_02010300 PMi_TryToSendPxiData
 #define PMi_SendPxiData_0201060c PMi_SendPxiData
 #define data_020597c0 PMi_Bss

@@ -2,7 +2,9 @@
 #include "nitro/os.h"
 
 extern int func_02004938(void);
+#ifndef NITRO_OS_INTERRUPT_STATE_H
 extern void func_0200494c(int state);
+#endif
 extern unsigned int OS_ResetRequestIrqMask(unsigned int mask);
 extern void OS_SetIrqFunction_02001d90(unsigned int intrBits, OSIrqFunction function);
 extern unsigned int OS_EnableIrqMask(unsigned int mask);

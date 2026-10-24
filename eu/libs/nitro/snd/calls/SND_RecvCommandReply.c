@@ -1,3 +1,5 @@
+#include "libs/nitro/os/os_interrupt_state.h"
+
 typedef unsigned long u32;
 typedef u32 OSIntrMode;
 
@@ -25,7 +27,7 @@ typedef struct SNDCommandState {
 extern SNDCommandState data_02057c50;
 extern SNDCommand *data_02057c74[SND_PXI_FIFO_MESSAGE_BUFSIZE + 1];
 extern OSIntrMode OS_DisableInterrupts(void);
-extern OSIntrMode OS_RestoreInterrupts(OSIntrMode state);
+
 extern void OS_SpinWait(u32 cycles);
 extern u32 SNDi_GetFinishedCommandTag(void);
 

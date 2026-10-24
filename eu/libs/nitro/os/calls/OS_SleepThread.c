@@ -1,3 +1,5 @@
+#include "libs/nitro/os/os_interrupt_state.h"
+
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned int u32;
@@ -25,7 +27,7 @@ typedef volatile unsigned char vu8;
 #define OSi_GetCurrentThread() (*OSi_CurrentThreadPtr)
 
 extern OSIntrMode OS_DisableInterrupts(void);
-extern OSIntrMode OS_RestoreInterrupts(OSIntrMode state);
+
 typedef struct CPContext {
     u64 div_numer;
     u64 div_denom;

@@ -1,7 +1,9 @@
 #include "nitro/types.h"
 
 extern u32 OS_DisableInterrupts(void);
+#ifndef NITRO_OS_INTERRUPT_STATE_H
 extern void OS_RestoreInterrupts(u32);
+#endif
 extern s32 PXI_SendWordByFifo(u32 a, u32 b, u32 c);
 
 typedef void (*Callback)(u32, u32, u32);

@@ -1,5 +1,7 @@
 extern int OS_DisableInterrupts(void);
+#ifndef NITRO_OS_INTERRUPT_STATE_H
 extern void OS_RestoreInterrupts(int state);
+#endif
 extern char *OSi_RemoveLinkFromQueue(void *queue);
 extern void OSi_RescheduleThread(void);
 

@@ -2,7 +2,9 @@
 #include "nitro/os.h"
 
 extern OSIntrMode OS_DisableInterrupts(void);
+#ifndef NITRO_OS_INTERRUPT_STATE_H
 extern void OS_RestoreInterrupts(OSIntrMode state);
+#endif
 extern void OS_SleepThread(void *queue);
 
 extern u32 data_027e0000;

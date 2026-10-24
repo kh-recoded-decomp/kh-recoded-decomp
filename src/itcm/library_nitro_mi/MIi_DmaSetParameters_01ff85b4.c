@@ -1,7 +1,9 @@
 #include "nitro/types.h"
 
 extern int OS_DisableInterrupts_02004938(void);
+#ifndef NITRO_OS_INTERRUPT_STATE_H
 extern int OS_RestoreInterrupts_0200494c(int enabled);
+#endif
 
 void MIi_DmaSetParameters_01ff85b4(u32 dmaNo, u32 src, u32 dest, u32 ctrl, u32 mode) {
     int enabled;

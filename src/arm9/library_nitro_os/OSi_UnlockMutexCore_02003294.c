@@ -31,7 +31,9 @@ typedef struct {
 
 extern OSThreadInfo data_02056b6c;
 extern OSIntrMode OS_DisableInterrupts_02004938(void);
+#ifndef NITRO_OS_INTERRUPT_STATE_H
 extern OSIntrMode OS_RestoreInterrupts_0200494c(OSIntrMode state);
+#endif
 extern void OSi_DequeueItem_02003390(OSThread *thread, OSMutex *mutex);
 extern void OS_WakeupThread_02002af8(OSThreadQueue *queue);
 

@@ -1,3 +1,5 @@
+#include "eu/libs/nitro/os/os_interrupt_state.h"
+
 #define CTRDG_Enable_020124e8 CTRDG_Enable
 #define CTRDGi_HasValidModuleInfo_02012320 CTRDGi_HasValidModuleInfo
 #define DC_FlushAll_020033e0 DC_FlushAll

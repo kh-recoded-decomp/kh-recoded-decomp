@@ -12,7 +12,9 @@ typedef struct PMAsyncState {
 
 extern PMAsyncState data_020597c0;
 extern u32 func_02004938(void);
+#ifndef NITRO_OS_INTERRUPT_STATE_H
 extern void func_0200494c(u32 state);
+#endif
 extern void PMi_SendPxiData_0201060c(int command);
 
 /* locks and streams PXI command words */

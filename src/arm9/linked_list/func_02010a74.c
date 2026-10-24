@@ -6,7 +6,9 @@ typedef struct Node {
 } Node;
 
 extern int func_02004938(void);
+#ifndef NITRO_OS_INTERRUPT_STATE_H
 extern void func_0200494c(int state);
+#endif
 
 void func_02010a74(Node **listHead, Node *target)
 {

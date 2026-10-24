@@ -1,3 +1,5 @@
+#include "eu/libs/nitro/os/os_interrupt_state.h"
+
 #define InsertThreadByPriority_020025e4 OSi_InsertThreadToList
 #define ReprioritizeSleepingThread_02002bd0 OS_SetThreadPriority
 #define data_02056b50 OSi_ThreadSystemState
