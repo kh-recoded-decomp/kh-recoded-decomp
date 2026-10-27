@@ -9,7 +9,7 @@
 #define ShowSelectedRecordName_020c1a00 ShowSelectedRecordName
 #define TagTracker_InvokeCallback_020b8210 func_ov027_020b8230
 #define func_0200160c func_02001620
-#define func_02001908 func_0200191c
+#define func_02001908 GetTextLayerLineWidth
 #define func_ov027_020ba2a8 func_ov027_020ba2c8
 #define func_ov039_020bc994 GetMenuFont10
 #define func_ov039_020bc9ac GetMenuFont10s

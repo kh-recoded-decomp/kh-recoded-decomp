@@ -8,7 +8,7 @@ extern const u16 *func_ov027_020ba2c8(void *messages, int index);
 extern u16 *func_ov027_020ba300(void *messages, int index, u16 *buffer, int capacity, ...);
 extern s32 GetHudLabelId(int labelIndex);
 extern int OS_SNPrintf_0202e094(u16 *buffer, int capacity, const u16 *format, ...);
-extern int func_0200191c(void *layer, const u16 *text, int flags);
+extern int GetTextLayerLineWidth(void *layer, const u16 *text, const u16 **nextLine);
 extern void *GetFieldFont1(void);
 extern void *GetSceneFont(void);
 extern void Obj_SetField14(void *layer, void *font);
@@ -67,10 +67,10 @@ void DrawStageCaptionLine(StageCaption *caption, StageTextLine *line, int style)
         OS_SNPrintf_0202e094(text, 0x40, gStageCaptionTextFormat, GetHudLabelId(line->messageId));
         break;
     }
-    width = func_0200191c(caption, text, 0);
+    width = GetTextLayerLineWidth(caption, text, 0);
     if (width >= line->width * 8 - 12) {
         Obj_SetField14(caption, GetFieldFont1());
-        width = func_0200191c(caption, text, 0);
+        width = GetTextLayerLineWidth(caption, text, 0);
     }
     DrawTextAnchored(caption, line->offset * 8 + (line->width * 8 - width) / 2, 4, 2, 0x209, text);
     Obj_SetField14(caption, GetSceneFont());

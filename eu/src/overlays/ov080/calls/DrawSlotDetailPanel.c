@@ -37,7 +37,7 @@ extern void CallStateWidget(int bgId, int x, int y, int width, int height);
 extern void IndexedRecords_SetFlag2(void *panel, int index, BOOL visible);
 extern void IndexedRecord_SetPair(void *panel, int index, Position2D *position);
 extern void DrawTextAnchored(int *layer, int x, int y, int color, u32 flags, const u16 *text);
-extern int func_0200191c(int *layer, const u16 *text, int flags);
+extern int GetTextLayerLineWidth(int *layer, const u16 *text, const u16 **nextLine);
 extern void func_ov039_020be548(int *layer, int x, int y, int color, u32 flags, const u16 *text, u32 style);
 extern void func_ov039_020be594(int *layer, int x, int y, int color, const u16 *text);
 extern void func_ov027_020b8208(void *tracker, SlotFrame *frame, int x, int y);
@@ -108,7 +108,7 @@ void DrawSlotDetailPanel(SaveSelectScreen *screen, int slotIndex)
                 }
                 IndexedRecords_SetFlag2(panel, slot->emptyElement, visible);
                 IndexedRecord_SetPair(panel, slot->emptyElement, &positions[1]);
-                levelLabelWidth = func_0200191c(screen->textLayer, screen->levelLabel, 0);
+                levelLabelWidth = GetTextLayerLineWidth(screen->textLayer, screen->levelLabel, 0);
                 label = screen->levelLabel;
                 topY = y + 15;
                 DrawTextAnchored(screen->textLayer, 0x1f, topY, 7, 8, label);

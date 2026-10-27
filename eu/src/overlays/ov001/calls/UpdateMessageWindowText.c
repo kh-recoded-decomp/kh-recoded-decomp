@@ -2,7 +2,7 @@
 #define DrawTextAnchored_020015a0 DrawTextAnchored
 #define SampleTweenValue_0205258c SampleTweenValue
 #define Text_UploadTileBuffer_02001520 Text_UploadTileBuffer
-#define func_02001908 func_0200191c
+#define func_02001908 GetTextLayerLineWidth
 #define func_020019f4 GetNestedModeByte
 #define func_ov001_02079524 StartWindow1Fade
 #define func_ov001_02079c88 UpdateMessageWindowText

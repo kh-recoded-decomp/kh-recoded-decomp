@@ -11,7 +11,7 @@
 #define data_ov099_020c277c data_ov099_020c279c
 #define data_ov099_020c2784 data_ov099_020c27a4
 #define data_ov099_020c27a8 data_ov099_020c27c8
-#define func_02001908 func_0200191c
+#define func_02001908 GetTextLayerLineWidth
 #define func_020019f4 GetNestedModeByte
 #define func_020275c8 CheckStatusAndThreshold
 #define func_0202e060 SPrintfUnbounded

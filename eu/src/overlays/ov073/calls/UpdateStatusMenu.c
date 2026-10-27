@@ -94,7 +94,7 @@ extern void CallVirtualHandlerSlot1(void *layer, int arg);
 extern void FlushBufferAndRunCallback(void *layer);
 extern void DrawTextAnchored(void *layer, int x, int y, int color, u32 flags, const u16 *text);
 extern void DrawTextColored(void *layer, int x, int y, int color, int altColor, const u16 *text);
-extern int func_0200191c(void *layer, const u16 *text, const u16 **next);
+extern int GetTextLayerLineWidth(void *layer, const u16 *text, const u16 **next);
 extern void Obj_SetField14(void *layer, void *font);
 extern void *GetMenuFont10s(void);
 extern void *GetMenuFont10(void);
@@ -243,7 +243,7 @@ void UpdateStatusMenu(StatusMenu *menu)
                         DrawTextAnchored(menu->infoLayer, 4, y, 10, 8, title);
                         if (mode == 0 && menu->caption[0] != 0) {
                             if (menu->captionModes[mode] == 1) {
-                                DrawTextAnchored(menu->infoLayer, func_0200191c(menu->infoLayer, title, NULL) + 12,
+                                DrawTextAnchored(menu->infoLayer, GetTextLayerLineWidth(menu->infoLayer, title, NULL) + 12,
                                                           y, 6, 8, menu->caption);
                             } else if (menu->captionModes[mode] != 0) {
                                 DrawTextAnchored(menu->infoLayer, 0xfc, y, 6, 0x20, menu->caption);
@@ -270,7 +270,7 @@ void UpdateStatusMenu(StatusMenu *menu)
                 text = menu->bodies[mode];
                 next = text;
                 do {
-                    width = func_0200191c(panel->textLayer, next, &next);
+                    width = GetTextLayerLineWidth(panel->textLayer, next, &next);
                     if (maxWidth < width) {
                         maxWidth = width;
                     }

@@ -18,7 +18,7 @@
 #define data_ov001_0209eca8 gHudSlideResourceGroup3
 #define data_ov001_0209ecb4 gHudSlideResourceGroup4
 #define data_ov001_020a04a4 data_ov001_020a04c4
-#define func_02001908 func_0200191c
+#define func_02001908 GetTextLayerLineWidth
 #define func_0202b788 GetLanguageIndex
 #define func_ov027_020ba2e0 func_ov027_020ba300
 #include "src/ov001/text_rendering/ShowChoiceDetails_02072254.c"

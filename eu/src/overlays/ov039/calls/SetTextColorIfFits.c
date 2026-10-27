@@ -1,5 +1,5 @@
 #define Obj_SetField14_02001490 Obj_SetField14
 #define SetTextColorIfFits_020bcd04 SetTextColorIfFits
 #define data_ov039_020bea00 data_ov039_020bea20
-#define func_02001908 func_0200191c
+#define func_02001908 GetTextLayerLineWidth
 #include "src/ov039/widget_layers/SetTextColorIfFits_020bcd04.c"
