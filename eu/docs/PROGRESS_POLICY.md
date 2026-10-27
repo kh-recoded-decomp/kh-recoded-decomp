@@ -32,6 +32,13 @@ records its executable variant and source/object hashes for each compilation.
 Inline assembly, including assembly in included headers, remains excluded
 from real-C progress regardless of the selected compiler.
 
+C register-binding declarations, such as `register u32 mask __asm("r1");`,
+are permitted for original assembly routines. They name a register without
+supplying instructions. Only complete declarations naming a core register are
+excluded from the assembly scan; instruction blocks and other assembly forms
+remain excluded from real-C progress. These implementations must preserve the
+callers' interface and pass the same byte, relocation and full-module gates.
+
 ## Verified library code (MobiClip)
 
 The MobiClip movie library in ov022 (Actimagine, "Mobiclip SDK V1.1.1") is

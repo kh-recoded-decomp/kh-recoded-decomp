@@ -86,12 +86,24 @@ ASM_RE = re.compile("|".join([
 SYM_RE = re.compile(r"(\S+)\s+kind:function\((arm|thumb),[^\r\n]*size=0x([0-9a-fA-F]+)[^\r\n]*\)\s+addr:0x([0-9a-fA-F]+)")
 
 
+# A register name annotates a C variable; it contains no assembly instruction.
+REGISTER_BINDING_RE = re.compile(
+    r'^[ \t]*register[ \t]+(?:(?:const|volatile|signed|unsigned|long|short)[ \t]+)*'
+    r'[A-Za-z_]\w*[ \t]+(?:\*[ \t]*)?[A-Za-z_]\w*[ \t]+'
+    r'__asm\([ \t]*"r(?:[0-9]|1[0-5])"[ \t]*\)[ \t]*;[ \t]*$', re.M)
+
+
+def contains_assembly(text):
+    """Exclude only complete C register declarations from the assembly scan."""
+    return bool(ASM_RE.search(REGISTER_BINDING_RE.sub("", text)))
+
+
 def source_category(path):
     if path.relative_to(ROOT).as_posix() in VERIFIED_LIBRARY:
         return "library_verified"
     if path.suffix == ".s" or "asm_stubs" in path.parts:
         return "asm_stub_matched"
-    if ASM_RE.search(path.read_text(encoding="utf-8", errors="replace")):
+    if contains_assembly(path.read_text(encoding="utf-8", errors="replace")):
         return "asm_stub_matched"
     return "c_decompiled_matched"
 

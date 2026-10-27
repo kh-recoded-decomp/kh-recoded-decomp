@@ -181,7 +181,7 @@ libs/nitro/mtx/auto/MTX_RotX33_.c:
     complete
     .text       start:0x01ff9220 end:0x01ff923c
 
-libs/nitro/mtx/asm_stubs/auto/MTX_RotY33_.c:
+libs/nitro/mtx/auto/MTX_RotY33_.c:
     complete
     .text       start:0x01ff923c end:0x01ff9258
 
