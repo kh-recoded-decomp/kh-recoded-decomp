@@ -26,8 +26,10 @@ separately. They never count as C.
 
 An original assembly routine may instead count as real C when a readable C
 implementation using compiler intrinsics reproduces every byte. Such units
-explicitly select Arm GNU GCC 12.2.1 in the compiler map and pass the same
-per-function verification and full gate. Inline assembly remains excluded
+explicitly select a supported GCC, Clang or ARMCC profile in the compiler map
+and pass the same per-function verification and full gate. The ARMCC driver
+records its executable variant and source/object hashes for each compilation.
+Inline assembly, including assembly in included headers, remains excluded
 from real-C progress regardless of the selected compiler.
 
 ## Verified library code (MobiClip)

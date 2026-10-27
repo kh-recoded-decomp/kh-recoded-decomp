@@ -48,6 +48,9 @@ def source_compiler(cpath):
     if selected.startswith("clang/"):
         from _run_clang import find_compiler
         return Path(find_compiler()), selected
+    if selected.startswith("armcc/"):
+        from _run_armcc import find_compiler
+        return Path(find_compiler()), selected
     return MWCC_DIR / selected / "mwccarm.exe", selected
 
 
@@ -83,6 +86,9 @@ def compile_c(cpath, thumb=False, out=None):
         return o
     env = dict(os.environ, LM_LICENSE_FILE=str(LICENSE))
     compiler, selected = source_compiler(cpath)
+    if selected and selected.startswith("armcc/"):
+        from _run_armcc import compile_source
+        return compile_source(cpath, o, "thumb" if thumb else "arm", selected, compiler)
     if selected and selected.startswith("gcc/"):
         from _run_gcc import compiler_command
         command = compiler_command(cpath, o, "thumb" if thumb else "arm", selected, compiler)

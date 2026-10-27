@@ -1175,7 +1175,7 @@ libs/nitro/mi/calls/MIi_DMAFastCallback.c:
     complete
     .text       start:0x020056b4 end:0x020056e0
 
-libs/nitro/mi/asm_stubs/auto/MI_SwapWord.c:
+libs/nitro/mi/auto/MI_SwapWord.c:
     complete
     .text       start:0x020056e0 end:0x020056e8
 

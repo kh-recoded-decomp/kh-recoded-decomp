@@ -16,6 +16,7 @@
 
 # Toolchain: each contributor provides their own (see CONTRIBUTING.md)
 /tools/mwccarm/
+/tools/armcc/
 /tools/dsd.exe
 /tools/dsd
 *.exe

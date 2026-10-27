@@ -69,6 +69,29 @@ these hashes, addresses will not line up.
    in `config/arm9/file_compilers.json`. Set `ARM_NONE_EABI_CLANG` to choose
    the executable; otherwise the driver checks `PATH` and Visual Studio's
    bundled x64 LLVM directory. The driver checks the version before compiling.
+6. **ARM Compiler 5.06 update 7, build 960**, for explicitly selected original
+   assembly routines whose native C intrinsics match the ROM. These units select
+   `armcc/5.06u7`. Set `ARMCC5` to the executable, or place the local installation
+   under `tools/armcc/5.06u7/ARM/ARMCC/bin/armcc.exe`. Existing
+   `ARM_PRODUCT_PATH` and `ARM_TOOL_VARIANT` settings are preserved; the MDK
+   directory layout defaults to its `ARM/sw/mappings` and `mdk_lite` settings.
+   The driver requires native ELF output and records compiler, source and object
+   hashes beside each output. No object conversion or instruction patching is
+   performed by the ARMCC driver. The existing common linker preparation still
+   normalizes `.text` alignment metadata from four to two; instruction bytes
+   are unchanged.
+
+The ARMCC driver accepts the original build-960 executable (SHA-256
+`52fcff95b164ef766b7ba8931b6fc4cc9504018db94d7f10f8b62107df74f963`) and the
+locally requested CPU/ELF capability variant
+(`90366b3b7879aa7d2909cbade2c25b9cbfc2bae352100fd9915471b7f7f8b597`). The latter
+is a modified executable: its 18 changed bytes affect the CPU entitlement and
+restricted object-format checks. Its code-generation implementation is retained.
+The selected variant is included in every compilation receipt. Compiler binaries
+are local dependencies and are not distributed in this repository.
+
+`MI_SwapWord` uses ARMCC's native `__swp` intrinsic with a typedef-only SDK
+header. Its C implementation and included header contain no assembly.
 
 GCC and Clang units remain subject to the same per-function verifier and full module
 gate. They use ARM946E-S, soft float and the GNU APCS ABI; GNU relocation

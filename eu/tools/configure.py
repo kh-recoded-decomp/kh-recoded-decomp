@@ -212,6 +212,11 @@ def emit_ninja(ninja_path, src_files):
         "  description = CLANG $in",
         "  restat = 1",
         "",
+        "rule armcc",
+        "  command = $python tools/_run_armcc.py $out $in --mode=$mode --cc=$cc",
+        "  description = ARMCC $in",
+        "  restat = 1",
+        "",
         "rule mwld",
         "  command = $python tools/_run_mwld.py $out $lcf $out.rsp",
         "  description = MWLD $out",
@@ -235,6 +240,8 @@ def emit_ninja(ninja_path, src_files):
             rule = "gcc" if selected.startswith("gcc/") else "mwcc"
             if selected.startswith("clang/"):
                 rule = "clang"
+            if selected.startswith("armcc/"):
+                rule = "armcc"
             lines.append(f"build {obj}: {rule} {src}")
             lines.append(f"  mode = {modes.get(src, 'arm')}")
             lines.append(f"  cc = {selected}")
