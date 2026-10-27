@@ -9615,5 +9615,6 @@
   "libs/nitro/os/auto/OSi_CancelDma0.c": "gcc/12.2.1/wait-state",
   "libs/nitro/mi/auto/MI_SwapWord.c": "armcc/5.06u7",
   "libs/nitro/os/auto/OS_ReleaseLockID.c": "armcc/5.06u7",
-  "libs/nitro/mtx/auto/MTX_RotY33_.c": "armcc/5.06u7"
+  "libs/nitro/mtx/auto/MTX_RotY33_.c": "armcc/5.06u7",
+  "libs/nitro/mtx/auto/MTX_RotZ33_.c": "armcc/5.06u7"
 }
