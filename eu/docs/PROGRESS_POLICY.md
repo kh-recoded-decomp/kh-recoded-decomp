@@ -29,6 +29,10 @@ implementation using compiler intrinsics reproduces every byte. Such units
 explicitly select a supported GCC, Clang or ARMCC profile in the compiler map
 and pass the same per-function verification and full gate. The ARMCC driver
 records its executable variant and source/object hashes for each compilation.
+The ARMCC `armv4t-interwork` profile selects an instruction subset compatible
+with ARM946E-S and retains separate register-restore and `BX` return sequences.
+It uses the same compiler and public calling convention; every native instruction
+and linked module must still match the original.
 Inline assembly, including assembly in included headers, remains excluded
 from real-C progress regardless of the selected compiler.
 

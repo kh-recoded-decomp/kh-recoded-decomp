@@ -11,6 +11,11 @@ from project import ROOT
 
 
 COMPILER_ID = "armcc/5.06u7"
+COMPILER_PROFILES = {
+    COMPILER_ID: ("ARM946E-S", ()),
+    # This compatible ISA subset retains separate register restore/BX returns.
+    COMPILER_ID + "/armv4t-interwork": ("ARM7TDMI", ("--apcs=interwork",)),
+}
 COMPILER_HASHES = {
     "52fcff95b164ef766b7ba8931b6fc4cc9504018db94d7f10f8b62107df74f963": "original build 960",
     "90366b3b7879aa7d2909cbade2c25b9cbfc2bae352100fd9915471b7f7f8b597": "local CPU/ELF capability variant of build 960",
@@ -35,7 +40,7 @@ def compiler_environment(compiler):
 
 
 def compiler_command(source, output, mode="arm", selected=COMPILER_ID, compiler=None):
-    if selected != COMPILER_ID:
+    if selected not in COMPILER_PROFILES:
         raise SystemExit("unsupported ARMCC selection: " + selected)
     if mode not in ("arm", "thumb"):
         raise SystemExit("unsupported instruction mode: " + mode)
@@ -43,7 +48,8 @@ def compiler_command(source, output, mode="arm", selected=COMPILER_ID, compiler=
     digest = hashlib.sha256(Path(compiler).read_bytes()).hexdigest()
     if digest not in COMPILER_HASHES:
         raise SystemExit("unsupported ARMCC executable SHA-256: " + digest)
-    return [str(compiler), "--cpu=ARM946E-S", "--" + mode, "--c99",
+    cpu, profile_flags = COMPILER_PROFILES[selected]
+    return [str(compiler), "--cpu=" + cpu, *profile_flags, "--" + mode, "--c99",
             "-O3", "-Ospace", "--signed_chars", "--enum_is_int",
             "-I", str(ROOT), "-I", str(ROOT.parent / "include"),
             "-c", str(source), "-o", str(output)]
@@ -57,6 +63,7 @@ def compile_source(source, output, mode="arm", selected=COMPILER_ID, compiler=No
         raise SystemExit("ARMCC must emit native ELF; restricted-format output is not supported")
     digest = hashlib.sha256(Path(command[0]).read_bytes()).hexdigest()
     provenance = {"compiler": command[0], "compiler_sha256": digest,
+                  "compiler_profile": selected, "instruction_mode": mode,
                   "compiler_variant": COMPILER_HASHES[digest], "command": command,
                   "source_sha256": hashlib.sha256(Path(source).read_bytes()).hexdigest(),
                   "object_sha256": hashlib.sha256(Path(output).read_bytes()).hexdigest()}

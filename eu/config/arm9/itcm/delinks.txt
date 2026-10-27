@@ -85,15 +85,15 @@ libs/nitro/mi/asm_stubs/auto/MIi_CpuCopyFast.c:
     complete
     .text       start:0x01ff878c end:0x01ff87c4
 
-libs/nitro/mi/asm_stubs/auto/MI_Copy36B.c:
+libs/nitro/mi/auto/MI_Copy36B.c:
     complete
     .text       start:0x01ff87c4 end:0x01ff87e0
 
-libs/nitro/mi/asm_stubs/auto/MI_Copy48B.c:
+libs/nitro/mi/auto/MI_Copy48B.c:
     complete
     .text       start:0x01ff87e0 end:0x01ff8804
 
-libs/nitro/mi/asm_stubs/auto/MI_Copy64B.c:
+libs/nitro/mi/auto/MI_Copy64B.c:
     complete
     .text       start:0x01ff8804 end:0x01ff8830
 

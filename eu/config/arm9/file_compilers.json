@@ -8883,7 +8883,7 @@
   "src/overlays/ov041/calls/HasStageEntryKind.c": "dsi/1.1",
   "src/overlays/ov041/calls/UpdateStageShadowActor.c": "dsi/1.1",
   "src/calls/MTX_Copy33To43.c": "dsi/1.1",
-  "src/calls/MTX_Copy43To33.c": "dsi/1.1",
+  "src/calls/MTX_Copy43To33.c": "armcc/5.06u7/armv4t-interwork",
   "libs/nitro/mi/asm_stubs/calls/MIi_CpuCopy16Backward.c": "dsi/1.1",
   "src/overlays/ov101/calls/IsPageScrollSettled.c": "dsi/1.2",
   "src/asm_stubs/calls/_fflt.c": "dsi/1.1",
@@ -9616,5 +9616,8 @@
   "libs/nitro/mi/auto/MI_SwapWord.c": "armcc/5.06u7",
   "libs/nitro/os/auto/OS_ReleaseLockID.c": "armcc/5.06u7",
   "libs/nitro/mtx/auto/MTX_RotY33_.c": "armcc/5.06u7",
-  "libs/nitro/mtx/auto/MTX_RotZ33_.c": "armcc/5.06u7"
+  "libs/nitro/mtx/auto/MTX_RotZ33_.c": "armcc/5.06u7",
+  "libs/nitro/mi/auto/MI_Copy36B.c": "armcc/5.06u7",
+  "libs/nitro/mi/auto/MI_Copy48B.c": "armcc/5.06u7",
+  "libs/nitro/mi/auto/MI_Copy64B.c": "armcc/5.06u7"
 }
