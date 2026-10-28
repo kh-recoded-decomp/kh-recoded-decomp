@@ -9619,5 +9619,6 @@
   "libs/nitro/mtx/auto/MTX_RotZ33_.c": "armcc/5.06u7",
   "libs/nitro/mi/auto/MI_Copy36B.c": "armcc/5.06u7",
   "libs/nitro/mi/auto/MI_Copy48B.c": "armcc/5.06u7",
-  "libs/nitro/mi/auto/MI_Copy64B.c": "armcc/5.06u7"
+  "libs/nitro/mi/auto/MI_Copy64B.c": "armcc/5.06u7",
+  "libs/nitro/gx/auto/GX_SendFifo48B.c": "armcc/5.06u7"
 }
