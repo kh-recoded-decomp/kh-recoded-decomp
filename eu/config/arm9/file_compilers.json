@@ -8882,7 +8882,7 @@
   "src/overlays/ov041/calls/ModelRenderCallbackKindFF.c": "dsi/1.1",
   "src/overlays/ov041/calls/HasStageEntryKind.c": "dsi/1.1",
   "src/overlays/ov041/calls/UpdateStageShadowActor.c": "dsi/1.1",
-  "src/calls/MTX_Copy33To43.c": "dsi/1.1",
+  "src/calls/MTX_Copy33To43.c": "armcc/5.06u7",
   "src/calls/MTX_Copy43To33.c": "armcc/5.06u7/armv4t-interwork",
   "libs/nitro/mi/asm_stubs/calls/MIi_CpuCopy16Backward.c": "dsi/1.1",
   "src/overlays/ov101/calls/IsPageScrollSettled.c": "dsi/1.2",
