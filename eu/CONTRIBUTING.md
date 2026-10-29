@@ -38,6 +38,13 @@ or make it C. Pending sources stay in `nonmatching/`, outside coverage and the
 linked build. See [COLLISION_GEOMETRY.md](docs/COLLISION_GEOMETRY.md) for a worked
 example of recovered layouts, behavioral checks and an explicitly pending source.
 
+Pending routines with executable behavior contracts are documented in
+[CONTACT_MOTION.md](docs/CONTACT_MOTION.md) and
+[WIDGET_POSITION.md](docs/WIDGET_POSITION.md). Their C drafts live in
+`src/nonmatching/`; passing those behavior tests does not replace byte/relocation
+verification or add matching-C credit. Porting notes distinguish recovered field
+layouts from complete object sizes and record input/output aliasing requirements.
+
 ## Claiming work
 
 Functions are grouped by **module** (`main`, `itcm`, `ov000` ... `ov104`).
