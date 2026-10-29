@@ -97,7 +97,7 @@ libs/nitro/mi/auto/MI_Copy64B.c:
     complete
     .text       start:0x01ff8804 end:0x01ff8830
 
-libs/nitro/mi/asm_stubs/auto/MI_CpuFill8.c:
+libs/nitro/mi/auto/MI_CpuFill8.c:
     complete
     .text       start:0x01ff8830 end:0x01ff88c4
 
@@ -105,7 +105,7 @@ src/asm_stubs/calls/func_01ff88c4.c:
     complete
     .text       start:0x01ff88c4 end:0x01ff89a8
 
-libs/nitro/mi/asm_stubs/auto/MI_CpuCopy8.c:
+libs/nitro/mi/auto/MI_CpuCopy8.c:
     complete
     .text       start:0x01ff89a8 end:0x01ff8ad8
 

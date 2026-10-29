@@ -9072,7 +9072,6 @@
   "src/overlays/ov077/calls/func_ov077_020c66ec.c": "dsi/1.3p1",
   "src/overlays/ov077/calls/func_ov077_020c6994.c": "dsi/1.3p1",
   "src/asm_stubs/calls/Entry.c": "dsi/1.3p1",
-  "src/asm_stubs/calls/func_02000a78.c": "dsi/1.3p1",
   "src/asm_stubs/calls/MATHi_SHA1ProcessBlock.c": "dsi/1.3p1",
   "src/asm_stubs/calls/_dmul.c": "dsi/1.3p1",
   "src/asm_stubs/calls/_d2f.c": "dsi/1.3p1",
@@ -9622,5 +9621,13 @@
   "libs/nitro/gx/auto/GX_SendFifo48B.c": "armcc/5.06u7",
   "libs/nitro/gx/auto/GXi_NopClearFifo128_.c": "gcc/12.2.1/fifo-zeros",
   "libs/nitro/os/auto/OS_InitContext.c": "gcc/12.2.1/mode-select",
-  "libs/nitro/mi/calls/MIi_CpuCopy16Backward.c": "gcc/12.2.1"
+  "libs/nitro/mi/calls/MIi_CpuCopy16Backward.c": "gcc/12.2.1",
+  "libs/nitro/mi/auto/MI_CpuFill8.c": "gcc/12.2.1/byte-copy",
+  "libs/nitro/mi/auto/MI_CpuCopy8.c": "gcc/12.2.1/byte-copy",
+  "src/overlays/ov015/calls/func_ov015_020766d0.c": "dsi/1.3p1",
+  "src/calls/func_020434e4.c": "dsi/1.3p1",
+  "src/overlays/ov080/calls/func_ov080_020c4e8c.c": "dsi/1.3p1",
+  "libs/msl/c/auto/_ll_mul.c": "gcc/12.2.1/armv4t-return",
+  "src/calls/func_02000a78.c": "gcc/12.2.1/cp15-setup",
+  "src/calls/func_020449c8.c": "dsi/1.3p1"
 }

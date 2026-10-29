@@ -22,6 +22,9 @@ REGISTER_PROFILES = {
     COMPILER_ID + "/wait-state": ("r2", "r3"),
     COMPILER_ID + "/fifo-zeros": (),
     COMPILER_ID + "/mode-select": (),
+    COMPILER_ID + "/byte-copy": (),
+    COMPILER_ID + "/armv4t-return": (),
+    COMPILER_ID + "/cp15-setup": (),
 }
 
 
@@ -74,6 +77,25 @@ def compiler_command(source, output, mode="arm", selected=COMPILER_ID, compiler=
     if selected == COMPILER_ID + "/mode-select":
         # Keep the masked mode bit as the flag-setting AND's result.
         profile_flags.extend(("-fno-tree-dominator-opts", "-fno-tree-vrp", "-fno-tree-sink"))
+    if selected == COMPILER_ID + "/byte-copy":
+        # Retain the original size compares, block order and unscheduled accesses.
+        profile_flags.extend(("-fno-tree-sink", "-fno-tree-vrp", "-fno-schedule-insns",
+                              "-fno-schedule-insns2", "-fno-move-loop-invariants",
+                              "-fno-thread-jumps", "-fno-tree-ccp", "-fno-tree-forwprop",
+                              "-fno-tree-fre", "-fno-tree-pre", "-fno-tree-copy-prop",
+                              "-fno-tree-dominator-opts", "-fno-reorder-blocks"))
+    if selected == COMPILER_ID + "/armv4t-return":
+        # ARMv4T subset: separate register restore and BX return.
+        profile_flags.extend(("-march=armv4t", "-fno-schedule-insns", "-fno-schedule-insns2",
+                              "-fno-tree-fre", "-fno-tree-pre", "-fno-tree-dominator-opts",
+                              "-fno-tree-dce", "-fno-dce"))
+    if selected == COMPILER_ID + "/cp15-setup":
+        # Keep every coprocessor value in r0 and each mask as a pool literal.
+        profile_flags.extend(("-ffixed-r1", "-ffixed-r2", "-ffixed-r3", "-fno-tree-vrp",
+                              "-fno-tree-ccp", "-fno-tree-forwprop", "-fno-tree-fre",
+                              "-fno-tree-pre", "-fno-tree-copy-prop", "-fno-tree-dominator-opts",
+                              "-fdisable-rtl-cse1", "-fdisable-rtl-cse2",
+                              "-fdisable-rtl-postreload"))
     return [
         str(compiler), "-c", "-O2", "-std=c99", "-mcpu=arm946e-s", "-m" + mode,
         "-mthumb-interwork", "-mfloat-abi=soft", "-mabi=apcs-gnu",

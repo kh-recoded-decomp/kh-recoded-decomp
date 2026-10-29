@@ -96,7 +96,7 @@ src/auto/AutoloadCallback.c:
     complete
     .text       start:0x02000a74 end:0x02000a78
 
-src/asm_stubs/calls/func_02000a78.c:
+src/calls/func_02000a78.c:
     complete
     .text       start:0x02000a78 end:0x02000b60
 
@@ -5569,7 +5569,7 @@ libs/msl/c/asm_stubs/calls/_ull_mod.s:
     complete
     .text       start:0x02023d74 end:0x02023db0
 
-libs/msl/c/asm_stubs/auto/_ll_mul.c:
+libs/msl/c/auto/_ll_mul.c:
     complete
     .text       start:0x02023db0 end:0x02023dd0
 
@@ -8765,6 +8765,10 @@ src/calls/SquareFx32.c:
     complete
     .text       start:0x020434cc end:0x020434e4
 
+src/calls/func_020434e4.c:
+    complete
+    .text       start:0x020434e4 end:0x0204476c
+
 src/calls/SweepSegmentAgainstObb.c:
     complete
     .text       start:0x0204476c end:0x02044928
@@ -8772,6 +8776,10 @@ src/calls/SweepSegmentAgainstObb.c:
 src/calls/SweepCapsuleAgainstCapsule.c:
     complete
     .text       start:0x02044928 end:0x020449c8
+
+src/calls/func_020449c8.c:
+    complete
+    .text       start:0x020449c8 end:0x020456d4
 
 src/calls/SweepIntervalOnAxis.c:
     complete

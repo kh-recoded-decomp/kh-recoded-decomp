@@ -130,6 +130,24 @@ range propagation and code sinking without reserving registers.
 `OS_InitContext` then keeps the masked program-counter bit as the result of the
 original flag-setting `ands` before selecting the initial processor mode.
 
+The `gcc/12.2.1/byte-copy` selection disables the tree constant, copy and
+redundancy passes, value range propagation, sinking, jump threading, scheduling,
+loop-invariant motion and block reordering without reserving registers.
+`MI_CpuFill8` and `MI_CpuCopy8` then keep the original `cmp #2` size tests,
+the separate odd-byte tests, their operand order and their block layout.
+
+The `gcc/12.2.1/armv4t-return` selection adds `-march=armv4t`, an instruction
+subset compatible with ARM946E-S, which keeps the separate register restore and
+`BX` return, and disables scheduling, tree redundancy elimination and dead-code
+elimination. `_ll_mul` binds its result words to r4 and r5 and writes a dead
+r14 local so lr stays in the saved set.
+
+The `gcc/12.2.1/cp15-setup` selection reserves r1-r3 and disables the tree
+constant, copy and redundancy passes, value range propagation and the RTL CSE
+and post-reload passes. `INITi_InitCp15` (`func_02000a78`) then keeps every
+coprocessor value in r0, loads its masks into a bound r1 from the literal pool
+and retains the original separate `orr` steps and repeated constants.
+
 `MIi_CpuCopy16Backward` selects plain `gcc/12.2.1` and states its optimization
 options in the source with GCC's `optimize("Os", "no-move-loop-invariants",
 "no-expensive-optimizations")` function attribute; the equivalent command-line
