@@ -9629,5 +9629,6 @@
   "src/overlays/ov080/calls/func_ov080_020c4e8c.c": "dsi/1.3p1",
   "libs/msl/c/auto/_ll_mul.c": "gcc/12.2.1/armv4t-return",
   "src/calls/func_02000a78.c": "gcc/12.2.1/cp15-setup",
-  "src/calls/func_020449c8.c": "dsi/1.3p1"
+  "src/calls/func_020449c8.c": "dsi/1.3p1",
+  "src/overlays/ov007/calls/func_ov007_020a09ac.c": "dsi/1.3p1"
 }

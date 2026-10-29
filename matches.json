@@ -228844,6 +228844,30 @@
       "domain": "spatial_queries",
       "origin": "Ghidra output, reviewed and reconstructed",
       "understanding": "subsystem"
+    },
+    {
+      "module": "ov007",
+      "symbol": "func_ov007_020a098c",
+      "name": "SweepTouchSphere",
+      "language": "c",
+      "source": "src/ov007/shared_engine/SweepTouchSphere_020a098c.c",
+      "source_symbol": "SweepTouchSphere_020a098c",
+      "compiler": "mwccarm-4.0-1036",
+      "mode": "arm",
+      "bindings": {
+        "MakeSphereShape_0203ad14": "0x203ad14",
+        "OffsetBoxByDelta_0203ac70": "0x203ac70",
+        "CollisionQuery_Init_02034c74": "0x2034c74",
+        "SweepWorldCollision_020364a0": "0x20364a0",
+        "VEC_Add_01ff9e0c": "0x1ff9e0c",
+        "CanTouchedObjectAct_020a08a8": "0x20a08a8"
+      },
+      "behavior": "Sweeps a small sphere from a position along a motion vector and returns the hit point or the unobstructed end point.",
+      "evidence": "Rebuilt C matches all 304 bytes including relocations.",
+      "uncertainty": "The query id 0xf and kind 9 meanings are unknown.",
+      "domain": "shared_engine",
+      "origin": "Ghidra output, reviewed and reconstructed",
+      "understanding": "subsystem"
     }
   ]
 }

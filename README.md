@@ -17,24 +17,24 @@ maintained by [@ricky074game](https://github.com/ricky074game) and [@Yokimitsuro
 <!-- regions:start -->
 | Region | C code bytes | % | Functions |
 |---|---:|---:|---:|
-| **US** `BK9E` | 1,537,160 / 1,768,220 | **86.9%** | 10,013 / 10,359 |
-| **EU** `BK9P` | 1,673,334 / 1,771,024 | **94.5%** | 10,477 / 10,625 |
+| **US** `BK9E` | 1,537,464 / 1,768,220 | **86.9%** | 10,014 / 10,359 |
+| **EU** `BK9P` | 1,673,638 / 1,771,024 | **94.5%** | 10,478 / 10,625 |
 | US verified original assembly (not C) | 22,966 | 1.3% | 171 |
 | EU verified MobiClip library code (hand-written ARM, not C) | 53,036 | 3.0% | 7 |
-| EU C + verified library code | 1,726,370 / 1,771,024 | **97.5%** | |
-| **Shared** (same function, matched in both) | 1,471,256 | 83.1% of EU | 9,362 |
+| EU C + verified library code | 1,726,674 / 1,771,024 | **97.5%** | |
+| **Shared** (same function, matched in both) | 1,471,560 | 83.1% of EU | 9,363 |
 
-8,189 shared functions are stored once in `src/` and built for both regions; 1,173 still have separate EU copies. 651 matched functions are US-only so far and 1,115 are EU-only. EU numbers come from `eu/tools/audit_progress.py`; per-module EU detail is in [eu/PROGRESS.md](eu/PROGRESS.md).
+8,190 shared functions are stored once in `src/` and built for both regions; 1,173 still have separate EU copies. 651 matched functions are US-only so far and 1,115 are EU-only. EU numbers come from `eu/tools/audit_progress.py`; per-module EU detail is in [eu/PROGRESS.md](eu/PROGRESS.md).
 <!-- regions:end -->
 
 US detail:
 
 | | Matched | Total | % |
 |---|---:|---:|---:|
-| **ARM9 code (C bytes)** | **1,537,160** | 1,768,220 | **86.9%** |
+| **ARM9 code (C bytes)** | **1,537,464** | 1,768,220 | **86.9%** |
 | ARM9 core + autoloads | 324,272 | 370,004 | 87.6% |
-| ARM9 overlays (105) | 1,212,888 | 1,398,216 | 86.7% |
-| Functions | 10,013 | 10,359 | 96.7% |
+| ARM9 overlays (105) | 1,213,192 | 1,398,216 | 86.8% |
+| Functions | 10,014 | 10,359 | 96.7% |
 | Data bytes (.rodata/.data/.bss) | 228,100 | 228,140 | 99.98% |
 
 Updated 2026-10-29. Per-module numbers are in [PROGRESS.md](PROGRESS.md).

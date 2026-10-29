@@ -1,0 +1,8 @@
+#define CanTouchedObjectAct_020a08a8 CanTouchedObjectAct
+#define CollisionQuery_Init_02034c74 CollisionQuery_Init
+#define MakeSphereShape_0203ad14 MakeSphereShape
+#define OffsetBoxByDelta_0203ac70 OffsetBoxByDelta
+#define SweepTouchSphere_020a098c func_ov007_020a09ac
+#define SweepWorldCollision_020364a0 SweepWorldCollision
+#define VEC_Add_01ff9e0c VEC_Add
+#include "src/ov007/shared_engine/SweepTouchSphere_020a098c.c"
