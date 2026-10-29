@@ -1,0 +1,4 @@
+#define apply_all_pending_entry_edits_020b84f4 apply_all_pending_entry_edits
+#define func_020b81e8 func_ov027_020b8208
+#define func_020b8210 TagTracker_InvokeCallback
+#include "src/ov027/runtime/apply_all_pending_entry_edits_020b84f4.c"

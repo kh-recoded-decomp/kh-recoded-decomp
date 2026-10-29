@@ -1,4 +1,4 @@
-#define FreeBufferAndClearStatus_0206a918 func_ov001_0206a918
+#define FreeBufferAndClearStatus_0206a918 FreeBufferAndClearStatus
 #define FreeBufferList_0206c850 FreeBufferList
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #include "src/ov001/shared_engine/FreeBufferList_0206c850.c"

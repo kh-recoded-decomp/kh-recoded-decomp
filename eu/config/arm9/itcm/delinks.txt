@@ -21,7 +21,7 @@ libs/nitro/os/asm_stubs/calls/func_01ff8158.c:
     complete
     .text       start:0x01ff8158 end:0x01ff81b0
 
-src/asm_stubs/calls/func_01ff81b0.c:
+src/asm_stubs/calls/OS_IrqHandler_ThreadSwitch.c:
     complete
     .text       start:0x01ff81b0 end:0x01ff8310
 
@@ -445,7 +445,7 @@ src/calls/QueryCollisionSegment.c:
     complete
     .text       start:0x01ffceb4 end:0x01ffcedc
 
-libs/nitro/nns/calls/func_01ffcedc.c:
+libs/nitro/nns/calls/QueueOrSendGeometryCommandPair.c:
     complete
     .text       start:0x01ffcedc end:0x01ffcf74
 
@@ -465,7 +465,7 @@ src/calls/GetJointSRTAnimResult.c:
     complete
     .text       start:0x01ffd6ac end:0x01ffd934
 
-libs/nitro/nns/calls/func_01ffd934.c:
+libs/nitro/nns/calls/HandleJointAnimationStreamCommand.c:
     complete
     .text       start:0x01ffd934 end:0x01ffda04
 
@@ -497,7 +497,7 @@ src/calls/NNSi_G3dFuncSbcMAT.c:
     complete
     .text       start:0x01ffe3d8 end:0x01ffe8a0
 
-libs/nitro/nns/calls/func_01ffe8a0.c:
+libs/nitro/nns/calls/EmitJointAnimationFramePayload.c:
     complete
     .text       start:0x01ffe8a0 end:0x01ffe934
 
@@ -517,7 +517,7 @@ src/calls/NNS_G3dDraw1Mat1Shp.c:
     complete
     .text       start:0x01fff3dc end:0x01fff67c
 
-src/calls/func_01fff67c.c:
+src/calls/setMaterialColorScale.c:
     complete
     .text       start:0x01fff67c end:0x01fff6c8
 
@@ -529,7 +529,7 @@ src/calls/SetupModelDrawState.c:
     complete
     .text       start:0x01fff810 end:0x01fff8b0
 
-src/calls/func_01fff8b0.c:
+src/calls/SetModelFirstTexture.c:
     complete
     .text       start:0x01fff8b0 end:0x01fff9a0
 

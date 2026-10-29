@@ -8,7 +8,7 @@
 #define func_ov059_020c90c8 Actor_BuildJointHitSphere
 #define func_ov059_020cbce8 Actor_ReleaseResources
 #define func_ov059_020cbfec GetObjectPayload964
-#define func_ov059_020cbff8 func_ov059_020cc018
+#define func_ov059_020cbff8 Actor_ChangeState
 #define func_ov059_020cc814 Actor_ChangeMotion
 #define func_ov059_020cc860 Actor_SetAnimFrame
 #define func_ov059_020cca14 Actor_PlaySurfaceSound

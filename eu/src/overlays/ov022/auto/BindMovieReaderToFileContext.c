@@ -1,0 +1,2 @@
+#define BindMovieReaderToFileContext_020aa130 BindMovieReaderToFileContext
+#include "src/ov022/leaf_research/func_ov022_020aa130.c"

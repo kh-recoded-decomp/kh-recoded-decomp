@@ -176,7 +176,7 @@ extern u16 FX_Atan2Idx(fx32 y, fx32 x);
 extern void MTX_RotY33_(MtxFx33 *mtx, fx32 sinVal, fx32 cosVal);
 extern void MTX_MultVec33(const VecFx32 *vec, const MtxFx33 *m, VecFx32 *dst);
 extern int func_ov001_02063a38(void);
-extern BOOL func_ov052_020c9294(Actor *actor, VecFx32 *position);
+extern BOOL IsLedgeClimbSpaceClear(Actor *actor, VecFx32 *position);
 
 static inline int GetActorState(Actor *actor)
 {
@@ -448,7 +448,7 @@ BOOL TryGrabLedge(Actor *actor)
     if (func_ov001_02063a38() == 4) {
         climb->target.z = 0;
     }
-    if (!func_ov052_020c9294(actor, &climb->target)) {
+    if (!IsLedgeClimbSpaceClear(actor, &climb->target)) {
         return FALSE;
     }
     return TRUE;

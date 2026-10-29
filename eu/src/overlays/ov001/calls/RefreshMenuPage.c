@@ -1,0 +1,5 @@
+#define Ov008_DrawMenuPageTexts func_ov001_020887a4
+#define Ov008_RaiseSelectedItemWidget NotifyFlaggedActors
+#define Ov008_RegisterSlotCells DrawScreenFadeQuad
+#define RefreshMenuPage_02088548 RefreshMenuPage
+#include "src/ov001/shared_engine/RefreshMenuPage_02088548.c"

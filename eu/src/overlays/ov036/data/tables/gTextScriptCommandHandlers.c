@@ -6,7 +6,7 @@ extern void func_ov036_020bdd10(void);
 extern void func_ov036_020bdd50(void);
 extern void func_ov036_020bdd74(void); /* ScriptCmd_EnterPhase */
 extern void func_ov036_020bdd84(void);
-extern void func_ov036_020bddb4(void); /* IsSceneState0 */
+extern void IsSceneState0_020bddb4(void); /* IsSceneState0 */
 extern void ScriptCmd_OpenActorTextWindow(void); /* ScriptCmd_OpenActorTextWindow */
 extern void ScriptCmd_OpenTextWindowAtCursor(void); /* ScriptCmd_OpenTextWindowAtCursor */
 extern void ScriptCmd_OpenWindowAtPoint(void); /* ScriptCmd_OpenWindowAtPoint */
@@ -39,7 +39,7 @@ extern void ScriptCmd_OpenFormattedTextWindow(void); /* ScriptCmd_OpenFormattedT
 extern void func_ov036_020be78c(void); /* FSi_CloseFileCommand */
 extern void IsResourceReadyOrInitialize_020be790(void); /* IsResourceReadyOrInitialize */
 extern void ScriptCmd_StartMosaicTransition(void); /* ScriptCmd_StartMosaicTransition */
-extern void func_ov036_020be7e0(void); /* IsSceneState0 */
+extern void IsSceneState0_020be7e0(void); /* IsSceneState0 */
 extern void ScriptCmd_SetCursorOverride(void); /* ScriptCmd_SetCursorOverride */
 
 void (*gTextScriptCommandHandlers[64])(void) = {
@@ -52,7 +52,7 @@ void (*gTextScriptCommandHandlers[64])(void) = {
     func_ov036_020bdd74, /* ScriptCmd_EnterPhase */
     NULL,
     func_ov036_020bdd84,
-    func_ov036_020bddb4, /* IsSceneState0 */
+    IsSceneState0_020bddb4, /* IsSceneState0 */
     ScriptCmd_OpenActorTextWindow, /* ScriptCmd_OpenActorTextWindow */
     NULL,
     ScriptCmd_OpenTextWindowAtCursor, /* ScriptCmd_OpenTextWindowAtCursor */
@@ -104,7 +104,7 @@ void (*gTextScriptCommandHandlers[64])(void) = {
     func_ov036_020be78c, /* FSi_CloseFileCommand */
     IsResourceReadyOrInitialize_020be790, /* IsResourceReadyOrInitialize */
     ScriptCmd_StartMosaicTransition, /* ScriptCmd_StartMosaicTransition */
-    func_ov036_020be7e0, /* IsSceneState0 */
+    IsSceneState0_020be7e0, /* IsSceneState0 */
     ScriptCmd_SetCursorOverride, /* ScriptCmd_SetCursorOverride */
     NULL,
 };

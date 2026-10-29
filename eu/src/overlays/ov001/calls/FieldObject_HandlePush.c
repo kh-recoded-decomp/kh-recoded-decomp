@@ -1,0 +1,19 @@
+#define func_ov001_0206dc4c GetManagedActorPosition
+#define Camera_GetFocusPosition_020c1780 Camera_GetFocusPosition
+#define FX_Div_01ff9c84 FX_Div
+#define FieldObject_HandlePush_0208334c FieldObject_HandlePush
+#define FieldObject_SetSavedValue_0207f9c8 FieldObject_SetSavedValue
+#define FixedPointMultiply12 FX_Mul
+#define GetCtxModeByte_02068084 GetCtxModeByte
+#define NegateVecFx32_0204aa40 NegateVecFx32
+#define VEC_Add_01ff9e0c VEC_Add
+#define VEC_DotProduct_01ff9e6c VEC_DotProduct
+#define func_01ff9f88 VEC_Normalize
+#define func_02023d9c _ll_mul
+#define func_0204a5e4 ScaleVecFx32InPlace
+#define func_0204da8c SpawnSoundSlot
+#define func_0204dc3c func_0204dc50
+#define func_ov001_02063d4c UpdateFieldTimer
+#define func_ov001_0207d45c SetSlotLayoutHighlight
+#define func_ov046_020c0d68 Camera_GetModeValue
+#include "src/ov001/field_objects/FieldObject_HandlePush_0208334c.c"

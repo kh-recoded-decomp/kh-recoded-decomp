@@ -8,7 +8,7 @@
 #define ReleaseModelSet_020a9928 ReleaseModelSet
 #define ReleaseResourceAndDetach_0202eee8 ReleaseResourceAndDetach
 #define ReleaseRootMenu_020c4fa4 ReleaseRootMenu
-#define SweepElements_020b831c func_ov027_020b833c
+#define SweepElements_020b831c SweepElements
 #define ZeroHalfThenFree_0202cd78 ZeroHalfThenFree
 #define func_02006d3c G3X_SetHOffset
 #define func_02013d74 NNS_GfdResetFrmPlttVramState

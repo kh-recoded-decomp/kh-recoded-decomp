@@ -1,0 +1,12 @@
+#define ProbeNearestFacingTarget_02097130 ProbeNearestFacingTarget
+#define Session_Exists_02063a24 func_ov001_02063a24
+#define VEC_DotProduct_01ff9e6c VEC_DotProduct
+#define VEC_Mag_01ff9f28 VEC_Mag
+#define VEC_Normalize_01ffaff4 VEC_NormalizeLength
+#define VEC_Subtract_01ff9e3c VEC_Subtract
+#define data_02053438 gZeroVecFx32
+#define func_ov001_020863e0 func_ov001_02086408
+#define func_ov001_0208723c func_ov001_02087264
+#define func_ov016_020a69f0 func_ov016_020a6a10
+#define func_ov017_020a3d50 IsFieldObjectActive
+#include "src/ov001/shared_engine/ProbeNearestFacingTarget_02097130.c"

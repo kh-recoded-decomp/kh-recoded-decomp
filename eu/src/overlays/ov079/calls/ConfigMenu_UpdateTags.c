@@ -1,6 +1,6 @@
 #define ConfigMenu_UpdateTags_020c487c ConfigMenu_UpdateTags
 #define SetTagRecordArmed_020b83e8 SetTagRecordArmed
-#define TagTracker_InvokeCallback_020b8210 func_ov027_020b8230
-#define apply_all_pending_entry_edits_020b84f4 func_ov027_020b8514
+#define TagTracker_InvokeCallback_020b8210 TagTracker_InvokeCallback
+#define apply_all_pending_entry_edits_020b84f4 apply_all_pending_entry_edits
 #define func_ov027_020b845c RestartTagRecord
 #include "src/ov079/unclassified_helpers/ConfigMenu_UpdateTags_020c487c.c"

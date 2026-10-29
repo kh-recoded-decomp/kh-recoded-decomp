@@ -38,16 +38,16 @@ typedef struct TagRecord {
 
 extern void *GetSceneTagTracker(void);
 extern int func_ov001_0207123c(void);
-extern u16 *func_ov027_020b9e10(int layers, int layerIndex);
+extern u16 *UpdateWidgetLayerDefault_020b9e10(int layers, int layerIndex);
 extern void ClearTileTableRect(int screen, int layer, int x, int y, int width, int height);
 extern void MarkTileTableRowDirty(int widgets, int layer);
 extern void FillTextWindowBackground(GridLayout *grid, u16 *dst, u16 *other,
                                      int windowIndex, int x, int y, int scale);
 extern TagRecord *FindLoadedElementById(void *tracker, int id);
 extern void SetTagRecordArmed(void *tracker, TagRecord *record, int value);
-extern void func_ov027_020b8230(void *tracker, void *callback);
+extern void TagTracker_InvokeCallback(void *tracker, void *callback);
 extern void PositionListRecords(void *tracker, TagRecord *record, s16 y);
-extern void func_ov027_020b8514(void *tracker, TagRecord *record, s16 x, s16 y);
+extern void apply_all_pending_entry_edits(void *tracker, TagRecord *record, s16 x, s16 y);
 
 void DrawGridMenuCells(GridMenu *menu, BOOL hideCursor)
 {
@@ -73,8 +73,8 @@ void DrawGridMenuCells(GridMenu *menu, BOOL hideCursor)
     grid = &menu->grid;
     tracker = GetSceneTagTracker();
     screen = func_ov001_0207123c();
-    layerA = func_ov027_020b9e10(screen, 10);
-    layerB = func_ov027_020b9e10(screen, 11);
+    layerA = UpdateWidgetLayerDefault_020b9e10(screen, 10);
+    layerB = UpdateWidgetLayerDefault_020b9e10(screen, 11);
     ClearTileTableRect(screen, 10, grid->x, grid->y, grid->width, grid->height - 2);
     ClearTileTableRect(screen, 11, grid->x, grid->y, grid->width, grid->height - 2);
     if (grid->cursor < grid->scroll) {
@@ -137,7 +137,7 @@ void DrawGridMenuCells(GridMenu *menu, BOOL hideCursor)
             if (grid->scroll == 0) {
                 SetTagRecordArmed(tracker, up, 0);
             } else {
-                func_ov027_020b8230(tracker, up->callbacks[up->index]);
+                TagTracker_InvokeCallback(tracker, up->callbacks[up->index]);
             }
         } else if (grid->scroll != 0) {
             PositionListRecords(tracker, up, minY - 3);
@@ -147,7 +147,7 @@ void DrawGridMenuCells(GridMenu *menu, BOOL hideCursor)
             if (grid->totalRows == grid->scroll + grid->rows) {
                 SetTagRecordArmed(tracker, down, 0);
             } else {
-                func_ov027_020b8230(tracker, down->callbacks[down->index]);
+                TagTracker_InvokeCallback(tracker, down->callbacks[down->index]);
             }
         } else if (grid->scroll + grid->rows < grid->totalRows) {
             PositionListRecords(tracker, down, maxY + 2);
@@ -156,7 +156,7 @@ void DrawGridMenuCells(GridMenu *menu, BOOL hideCursor)
     }
     if (!hideCursor) {
         TagRecord *cursor = FindLoadedElementById(tracker, 6);
-        func_ov027_020b8514(tracker, cursor, cursorX - 2, cursorY + 1);
+        apply_all_pending_entry_edits(tracker, cursor, cursorX - 2, cursorY + 1);
         SetTagRecordArmed(tracker, cursor, 1);
     }
     MarkTileTableRowDirty(screen, 10);

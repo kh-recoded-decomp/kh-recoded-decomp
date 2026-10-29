@@ -4,7 +4,7 @@
 #define GetBgDataFromArchive_0202b554 GetBgDataFromArchive
 #define LoadMenuBackgrounds_020bf398 LoadMenuBackgrounds
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
-#define TagTracker_InvokeCallback_020b8210 func_ov027_020b8230
+#define TagTracker_InvokeCallback_020b8210 TagTracker_InvokeCallback
 #define func_02007250 GX_LoadBGPltt
 #define func_02014d38 NNS_G2dGetUnpackedBGCharacterData
 #define func_0202c48c func_0202c4a0

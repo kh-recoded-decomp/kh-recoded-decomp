@@ -1,4 +1,4 @@
 #define RefreshFieldLayerIfUnbound_020736d0 RefreshFieldLayerIfUnbound
-#define UpdateWidgetLayerDefault_020b9df0 func_ov027_020b9e10
+#define UpdateWidgetLayerDefault_020b9df0 UpdateWidgetLayerDefault_020b9e10
 #define data_ov001_020a04a4 data_ov001_020a04c4
 #include "src/ov001/field_manager/RefreshFieldLayerIfUnbound_020736d0.c"

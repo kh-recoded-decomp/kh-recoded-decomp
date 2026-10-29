@@ -1,4 +1,4 @@
-#define CopySourceBlock_020b9f7c func_ov027_020b9f9c
+#define CopySourceBlock_020b9f7c CopySourceBlock
 #define TryCopySourceBlock_020c6b58 TryCopySourceBlock
 #define func_ov001_0207b3cc func_ov001_0207b3f4
 #include "src/ov047/unclassified_helpers/TryCopySourceBlock_020c6b58.c"

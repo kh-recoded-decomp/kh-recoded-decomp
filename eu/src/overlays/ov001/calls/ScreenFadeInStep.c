@@ -1,3 +1,4 @@
+#define func_ov001_0206a4e4 UpdateIrisFrame
 #define NotifyBothOrOne_02001154 NotifyBothOrOne
 #define func_ov001_0206a138 SelectScreenFadeHandler
 #define ScreenFadeInStep_0206a184 ScreenFadeInStep

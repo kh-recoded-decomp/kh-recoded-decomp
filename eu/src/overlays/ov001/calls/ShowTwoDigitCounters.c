@@ -1,6 +1,6 @@
 #define FindActiveRecordById_020b8184 FindActiveRecordById
 #define GetSceneTagTracker_020711b0 GetSceneTagTracker
 #define ShowTwoDigitCounters_0207d984 ShowTwoDigitCounters
-#define TagTracker_InvokeCallback_020b8210 func_ov027_020b8230
+#define TagTracker_InvokeCallback_020b8210 TagTracker_InvokeCallback
 #define func_ov027_020b81d8 func_ov027_020b81f8
 #include "src/ov001/field_manager/ShowTwoDigitCounters_0207d984.c"

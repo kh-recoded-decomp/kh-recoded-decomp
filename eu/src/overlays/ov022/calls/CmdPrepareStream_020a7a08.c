@@ -1,0 +1,3 @@
+#define CmdPrepareStream_020a79e8 CmdPrepareStream_020a7a08
+#define SoundMgr_PrepareStream OpenSoundStream
+#include "src/ov022/shared_engine/CmdPrepareStream_020a79e8.c"

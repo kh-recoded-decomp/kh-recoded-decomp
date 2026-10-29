@@ -1,5 +1,5 @@
 #define UpdateFieldWidgetLayer_020736b4 UpdateFieldWidgetLayer
-#define UpdateWidgetLayerDefault_020b9df0 func_ov027_020b9e10
+#define UpdateWidgetLayerDefault_020b9df0 UpdateWidgetLayerDefault_020b9e10
 #define data_ov001_020a04a4 data_ov001_020a04c4
 #define func_ov001_0206ea08 GetPanelLayerScreen
 #include "src/ov001/field_manager/UpdateFieldWidgetLayer_020736b4.c"

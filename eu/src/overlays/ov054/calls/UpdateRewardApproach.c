@@ -3,5 +3,5 @@
 #define IsLockedOnActiveFieldUnit_020d10f0 IsLockedOnActiveFieldUnit
 #define UpdateRewardApproach_020d2f8c UpdateRewardApproach
 #define UpdateRewardCharge_020d3078 UpdateRewardCharge
-#define func_ov054_020d34b0 func_ov054_020d34d0
+#define func_ov054_020d34b0 HandleFieldMenuSelection
 #include "src/ov054/unclassified_helpers/UpdateRewardApproach_020d2f8c.c"

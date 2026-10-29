@@ -1,5 +1,0 @@
-#define DestroyFileLoadRequest_020ba1e0 func_ov027_020ba200
-#define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
-#define RemoveIntrusiveListObject_020129d8 NNS_FndRemoveListObject
-#define data_ov027_020ba3c4 data_ov027_020ba3e4
-#include "src/ov027/overlay_handling/DestroyFileLoadRequest_020ba1e0.c"

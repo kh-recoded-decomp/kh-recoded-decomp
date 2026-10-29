@@ -1,7 +1,7 @@
 #define FindActiveRecordById_020b8184 FindActiveRecordById
-#define InvokeCallback40_020b8268 func_ov027_020b8288
+#define InvokeCallback40_020b8268 InvokeCallback40
 #define SetSceneAnimState_02072fc4 SetSceneAnimState
-#define TagTracker_InvokeCallback_020b8210 func_ov027_020b8230
+#define TagTracker_InvokeCallback_020b8210 TagTracker_InvokeCallback
 #define data_ov001_0209dbdc gChoiceSceneAnimationRecords
 #define data_ov001_020a04a4 data_ov001_020a04c4
 #include "src/ov001/text_rendering/SetSceneAnimState_02072fc4.c"

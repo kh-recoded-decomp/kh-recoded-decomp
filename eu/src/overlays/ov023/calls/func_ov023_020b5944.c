@@ -4,7 +4,7 @@
 extern unsigned int data_ov023_020b6e94;
 extern unsigned int GetFieldFont3();
 extern unsigned int InitTextLayerAtFromEnd();
-extern unsigned int func_ov027_020b9e10();
+extern unsigned int UpdateWidgetLayerDefault_020b9e10();
 extern unsigned int func_ov001_0207123c();
 extern unsigned int MarkTileTableRowDirty();
 
@@ -31,7 +31,7 @@ void func_ov023_020b5944
     layerManager = layerManager + -1;
   } while (layerManager != 0);
   layerManager = func_ov001_0207123c();
-  screenBase = (void *)func_ov027_020b9e10(layerManager,0x1a);
+  screenBase = (void *)UpdateWidgetLayerDefault_020b9e10(layerManager,0x1a);
   font = GetFieldFont3();
   InitTextLayerAtFromEnd((void *)(work + 0xc),6,screenBase,font,frame);
   MarkTileTableRowDirty(layerManager,0x1a);

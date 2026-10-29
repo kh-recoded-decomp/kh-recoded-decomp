@@ -1,4 +1,4 @@
-#define GetCtxModeByte_02068084 func_ov001_02068084
+#define GetCtxModeByte_02068084 GetCtxModeByte
 #define func_ov001_0206700c SelectMode3StateHandler
 #define func_ov007_020a0884 func_ov007_020a08a4
 #include "src/ov001/shared_engine/func_ov001_0206700c.c"

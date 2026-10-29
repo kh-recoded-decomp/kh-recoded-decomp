@@ -91,7 +91,7 @@ extern BOOL ShowNextUnlockNotice(MatrixMenu *menu, BOOL eventMode, BOOL queryOnl
 extern int HandleTabTouch(void *tabs, int currentTab, BOOL allowChange);
 extern int UpdateMatrixOptionMenu(MatrixMenu *menu);
 extern int UpdateMatrixMenu(MatrixMenu *menu);
-extern u32 func_ov075_020c7bdc(int value);
+extern u32 SquareFixedPoint(int value);
 extern fx32 FX_Sqrt(fx32 value);
 extern fx32 FX_Div(fx32 numer, fx32 denom);
 extern fx32 FX_Mul(fx32 a, fx32 b);
@@ -121,7 +121,7 @@ static inline fx32 GetDistance(fx32 fromX, fx32 fromY, fx32 toX, fx32 toY)
 {
     fx32 dx = toX - fromX;
     fx32 dy = toY - fromY;
-    return FX_Sqrt(func_ov075_020c7bdc(dx) + func_ov075_020c7bdc(dy));
+    return FX_Sqrt(SquareFixedPoint(dx) + SquareFixedPoint(dy));
 }
 
 void UpdateMatrixMenuView(MatrixMenu *menu)
@@ -175,7 +175,7 @@ void UpdateMatrixMenuView(MatrixMenu *menu)
             fx32 dy = targetY - menu->scrollY;
 
             len = 0;
-            dist = FX_Sqrt(func_ov075_020c7bdc(dx) + func_ov075_020c7bdc(dy));
+            dist = FX_Sqrt(SquareFixedPoint(dx) + SquareFixedPoint(dy));
         }
         menu->distance = dist;
         if (dist != 0) {

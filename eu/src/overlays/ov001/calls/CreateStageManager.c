@@ -6,7 +6,7 @@
 #define Msg_OpenContainerAndReadHeader_0202cc6c Msg_OpenContainerAndReadHeader
 #define func_0202a158 Heap_GetCurrent
 #define SetDefaultHeap_0202a134 SetDefaultHeap
-#define func_ov001_0208f038 func_ov001_0208f060
+#define func_ov001_0208f038 HandlePool_Create
 #define g_stageManager_020a0508 gStageManager
 #define data_ov001_020a0354 gStageHeapConfigs
 #define data_ov001_020a03d4 sOv001_EnPaDPP2f_020a03f4

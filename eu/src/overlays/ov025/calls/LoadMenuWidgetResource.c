@@ -3,5 +3,5 @@
 #define func_ov025_020b582c AdvanceMenuDelayCounter
 #define func_ov025_020b5908 LoadSubBgGraphics
 #define func_ov027_020ba1d8 func_ov027_020ba1f8
-#define func_ov027_020ba1e0 func_ov027_020ba200
+#define func_ov027_020ba1e0 DestroyFileLoadRequest
 #include "src/ov025/menu_widgets/LoadMenuWidgetResource_020b5954.c"

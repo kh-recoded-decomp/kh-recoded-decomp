@@ -4,8 +4,8 @@
 #define func_ov022_020a9170 initializeMovieStreamWrapper
 #define func_ov022_020a93d4 func_ov022_020a93f4
 #define func_ov022_020a93e0 func_ov022_020a9400
-#define func_ov022_020a93ec func_ov022_020a940c
-#define func_ov022_020a941c func_ov022_020a943c
+#define func_ov022_020a93ec initializeMovieStreamResources
+#define func_ov022_020a941c destroyMovieStreamContext
 #define func_ov022_020aa118 func_ov022_020aa138
-#define func_ov022_020aa130 func_ov022_020aa150
+#define func_ov022_020aa130 BindMovieReaderToFileContext
 #include "src/ov022/video_playback/createMovieStream_020a91a0.cpp"

@@ -1,0 +1,3 @@
+#define UpdateWidgetRootAndResetList_020b8c80 UpdateWidgetRootAndResetList
+#define func_ov027_020b8b48 UpdateWidgetRoot
+#include "src/ov027/resource_container/UpdateWidgetRootAndResetList_020b8c80.c"

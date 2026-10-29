@@ -55,7 +55,7 @@ extern void VEC_MultAdd(fx32 scale, const VecFx32 *a, const VecFx32 *b, VecFx32 
 extern void VEC_Subtract(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
 extern VecFx32 *func_ov021_020af5d4(void);
 extern void TransformVectorByBasis(const VecFx32 *vec, const MtxFx33 *basis, VecFx32 *out);
-extern void func_01fff8b0(ModelDrawObject *object, fx32 *width, fx32 *height);
+extern void SetModelFirstTexture(ModelDrawObject *object, fx32 *width, fx32 *height);
 extern void GXi_FlushCommandList(void);
 
 /* The corner colours of the face on `side` (0 = positive, 1 = negative) of a pair. */
@@ -86,7 +86,7 @@ void DrawTexturedBox(ModelDrawObject *object, fx32 size, const MtxFx33 *rotation
     if (rotation->_00 != FX32_ONE || rotation->_11 != FX32_ONE || rotation->_22 != FX32_ONE) {
         TransformVectorByBasis(&toCamera, rotation, &toCamera);
     }
-    func_01fff8b0(object, &width, &height);
+    SetModelFirstTexture(object, &width, &height);
     GXi_FlushCommandList();
     reg_G3_BEGIN_VTXS = GX_BEGIN_QUADS;
     if ((toCamera.x < 0 ? -toCamera.x : toCamera.x) > half) {

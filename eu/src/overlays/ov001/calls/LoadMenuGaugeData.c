@@ -32,7 +32,7 @@ extern void func_ov001_02073cb0(void **outBuffer, void *source, u32 size);
 extern void *NNSi_FndAllocFromDefaultHeap(u32 size);
 extern void MIi_CpuCopyFast(const void *src, void *dst, u32 size);
 extern BOOL IsHudFlag7Set(void);
-extern void func_ov001_020749c0(int a, int b, int c, int d, int e, int f);
+extern void SetHudGaugeRange(int a, int b, int c, int d, int e, int f);
 extern void SetHudGaugeValue(int index, int x, int y, int redraw, int arg4, int arg5);
 
 void LoadMenuGaugeData(GaugeSave *save) {
@@ -62,7 +62,7 @@ void LoadMenuGaugeData(GaugeSave *save) {
         }
         menu->buffers[i] = NNSi_FndAllocFromDefaultHeap(layout->size);
         if (i == 0 && IsHudFlag7Set()) {
-            func_ov001_020749c0(0, 0x3c, 0x3c, 0x3c, 7, 1);
+            SetHudGaugeRange(0, 0x3c, 0x3c, 0x3c, 7, 1);
         }
         MIi_CpuCopyFast(menu->packed[i], menu->buffers[i], layout->size);
         SetHudGaugeValue(i, save->limits[i], 7, 0, 1, 0);

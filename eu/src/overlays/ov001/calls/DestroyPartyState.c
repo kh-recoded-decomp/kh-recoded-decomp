@@ -1,6 +1,6 @@
 #define DestroyPartyState_0206d84c DestroyPartyState
-#define FreeBufferAndClearStatus_0206a918 func_ov001_0206a918
-#define FreeCueTable_020a7cac func_ov021_020a7ccc
+#define FreeBufferAndClearStatus_0206a918 FreeBufferAndClearStatus
+#define FreeCueTable_020a7cac FreeCueTable_020a7ccc
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define ResetGaugeDisplay_020734f8 ResetGaugeDisplay
 #define data_ov001_020a049c data_ov001_020a04bc

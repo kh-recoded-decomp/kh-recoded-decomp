@@ -137,7 +137,7 @@ extern void Text_UploadTileBuffer(void *layer);
 extern void CallVirtualHandlerSlot1(void *context, int arg);
 extern BOOL PlaySoundEffect(int seqArcNo, int index);
 extern Record *FindActiveRecordById(void *pool, u16 recordId);
-extern void func_ov027_020b8288(void *pool, Record *record);
+extern void InvokeCallback40(void *pool, Record *record);
 extern void *func_ov001_0207123c(void);
 extern void ClearTileTableRowAndMarkDirty(void *table, int row);
 extern void func_ov027_020b7df4(void *pool);
@@ -409,7 +409,7 @@ int RunResultTallyStep(void)
             DisarmTagById(work->records, tag);
             if (work->rewardCount > 0) {
                 work->step = 8;
-                func_ov027_020b8288(work->records,
+                InvokeCallback40(work->records,
                     FindActiveRecordById(work->records, work->isNewRecord ? 0x23c : 0x174));
                 work->started = FALSE;
                 work->counter = 0;

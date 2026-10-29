@@ -1,5 +1,5 @@
 #define ResetMenuLayerTransforms_020b6194 ResetMenuLayerTransforms
-#define UpdateWidgetLayerDefault_020b9df0 func_ov027_020b9e10
+#define UpdateWidgetLayerDefault_020b9df0 UpdateWidgetLayerDefault_020b9e10
 #define _data_ov025_020b7760 data_ov025_020b7780
 #define data_ov025_020b7680 data_ov025_020b76a0
 #define data_ov025_020b7720 gSubBgScreenLoaders

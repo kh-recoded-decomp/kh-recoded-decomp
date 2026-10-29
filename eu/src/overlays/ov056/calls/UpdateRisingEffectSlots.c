@@ -6,6 +6,6 @@
 #define UpdateRisingEffectSlots_020d36dc UpdateRisingEffectSlots
 #define func_ov021_020a8ab4 ResetAnimationTrackState
 #define func_ov021_020a8ca0 func_ov021_020a8cc0
-#define func_ov052_020cfdb4 func_ov052_020cfdd4
+#define func_ov052_020cfdb4 SelectHitReaction
 #define func_ov052_020d03b8 HandlePendingCommand
 #include "src/ov056/unclassified_helpers/UpdateRisingEffectSlots_020d36dc.c"

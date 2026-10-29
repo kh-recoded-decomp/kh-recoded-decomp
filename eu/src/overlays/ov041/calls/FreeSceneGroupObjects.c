@@ -2,7 +2,7 @@
 
 extern int gMovieContextState;
 extern int NNSi_FndFreeFromDefaultHeap();
-extern int func_ov001_0206a918();
+extern int FreeBufferAndClearStatus();
 extern int RemoveTaggedListEntries();
 
 void FreeSceneGroupObjects(void)
@@ -20,7 +20,7 @@ void FreeSceneGroupObjects(void)
         group = work + groupIndex * 8;
         if (index < (int)(u32)*(u8 *)(group + 0x318)) {
             do {
-                func_ov001_0206a918(*(int *)(group + 0x314) + index * 0x34);
+                FreeBufferAndClearStatus(*(int *)(group + 0x314) + index * 0x34);
                 index = index + 1;
             } while (index < (int)(u32)*(u8 *)(group + 0x318));
         }

@@ -1,4 +1,4 @@
-#define GetCtxModeByte_02068084 func_ov001_02068084
+#define GetCtxModeByte_02068084 GetCtxModeByte
 #define ItemList_IsRewardEntryLocked_020cab38 ItemList_IsRewardEntryLocked
 #define data_ov001_020a0460 data_ov001_020a0480
 #define func_ov076_020caa14 func_ov076_020caa34

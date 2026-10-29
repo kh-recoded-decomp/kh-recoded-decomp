@@ -5,7 +5,7 @@ extern SharedState data_ov036_020c3940;
 extern u32 MI_CpuFill8();
 extern u32 ReleaseSharedRecordSlot();
 extern u32 ReleaseResourceSlot();
-extern u32 func_ov001_0206a918();
+extern u32 FreeBufferAndClearStatus();
 extern u32 FindOrAcquireOwnerSlot();
 
 void func_ov036_020bd090(int ownerId) {
@@ -19,7 +19,7 @@ void func_ov036_020bd090(int ownerId) {
     ReleaseResourceSlot(*(int *)(record + 0x74));
     ReleaseSharedRecordSlot(*(u32 *)(record + 0x74));
   }
-  func_ov001_0206a918(record);
+  FreeBufferAndClearStatus(record);
   MI_CpuFill8(record,0,0x9c);
   *(u32 *)(record + 0x8c) = 0xffffffff;
   *(u32 *)(record + 0x98) = 0xffffffff;

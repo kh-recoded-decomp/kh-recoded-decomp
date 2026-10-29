@@ -56,7 +56,7 @@ extern void MI_CpuFill8(void *dst, int value, u32 size);
 extern int GetLanguageIndex(void);
 extern int OS_SNPrintf(char *dst, u32 size, const char *fmt, ...);
 extern int findSharedResourceByName(u8 *table, void *name);
-extern ModelHeader *func_ov001_020993f8(u32 fileId, u32 mode, BOOL allocFromEnd);
+extern ModelHeader *LoadCellBankFile(u32 fileId, u32 mode, BOOL allocFromEnd);
 extern ModelHeader *Msg_OpenContainerAndReadHeader(const char *name, u32 mode, BOOL allocFromEnd);
 extern void *func_0202c4a0(u32 fileId, u32 mode);
 extern void InitSharedRecordAndDispatchAlt(void *dst, u32 fileId, void *buffer, u32 mode);
@@ -175,7 +175,7 @@ inline s16 LoadStageModelEntry(u16 id, int variant, int type) __attribute__((wea
         OS_SNPrintf(name, sizeof(name), sOv001_Format04dP2_020a0440, id);
         index = findSharedResourceByName(archive, name);
         if (index >= 0) {
-            loaded = func_ov001_020993f8(ARCHIVE_FILE_ID(archive) | (index & 0x1ff), 0xb, FALSE);
+            loaded = LoadCellBankFile(ARCHIVE_FILE_ID(archive) | (index & 0x1ff), 0xb, FALSE);
         }
         if (loaded == NULL) {
             header = (ModelHeader *)NULL;

@@ -2,7 +2,7 @@
     .ctor       start:0x020c3c18 end:0x020c3c18 kind:rodata align:4
     .bss        start:0x020c3c20 end:0x020c3c20 kind:bss align:32
 
-src/overlays/ov050/calls/func_ov050_020c3520.c:
+src/overlays/ov050/calls/ReturnToCommitPage_ov050_020c3520.c:
     complete
     .text       start:0x020c3520 end:0x020c3530
 

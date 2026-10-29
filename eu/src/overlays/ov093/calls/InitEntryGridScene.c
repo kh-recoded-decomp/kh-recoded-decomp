@@ -14,12 +14,12 @@
 #define func_ov093_020bf67c SetupEntryDisplay
 #define func_ov093_020bf880 func_ov093_020bf8a0
 #define func_ov093_020bf8e4 LoadSceneBackgrounds
-#define func_ov093_020bfac4 func_ov093_020bfae4
+#define func_ov093_020bfac4 InitEntryTextLayers
 #define func_ov093_020bfd60 RedrawEntryPanelText
 #define func_ov093_020c0100 InitEntrySlotSprites
 #define func_ov093_020c05b8 RefreshEntryListSlots
 #define func_ov093_020c06ec SetupScrollBar_020c06ec
-#define func_ov093_020c0fb0 func_ov093_020c0fd0
+#define func_ov093_020c0fb0 BuildAchievementList
 #define func_ov093_020c1ca8 UpdateDragAreaBounds
 #define func_ov093_020c231c SetSceneState
 #define func_ov093_020c2b04 LoadEntryGridTilesIncrementally

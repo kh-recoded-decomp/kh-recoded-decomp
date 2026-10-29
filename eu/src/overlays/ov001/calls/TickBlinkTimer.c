@@ -1,6 +1,6 @@
 #define FindActiveRecordById_020b8184 FindActiveRecordById
 #define GFXi_EnqueueCommand_02014090 NNS_GfdRegisterNewVramTransferTask
 #define GetSceneTagTracker_020711b0 GetSceneTagTracker
-#define InvokeCallback40_020b8268 func_ov027_020b8288
+#define InvokeCallback40_020b8268 InvokeCallback40
 #define TickBlinkTimer_0207db00 TickBlinkTimer
 #include "src/ov001/unclassified_helpers/TickBlinkTimer_0207db00.c"

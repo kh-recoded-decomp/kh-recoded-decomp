@@ -1,0 +1,9 @@
+#define GetBoundedEntryField_0206db5c GetBoundedEntryField
+#define IsMovingAgainstDirection_02086618 IsMovingAgainstDirection
+#define OnFieldUnitPushedUp_020a566c OnFieldUnitPushedUp
+#define OnMode3FieldObjectHit_020a56bc OnMode3FieldObjectHit
+#define SendPushMessage_02086534 SendPushMessage
+#define SpawnSoundSlot_0204da8c SpawnSoundSlot
+#define func_ov021_020a8ab4 ResetAnimationTrackState
+#define func_ov021_020a8ca0 InitializeEntryGroupSlot
+#include "src/ov016/field_objects/OnMode3FieldObjectHit_020a56bc.c"

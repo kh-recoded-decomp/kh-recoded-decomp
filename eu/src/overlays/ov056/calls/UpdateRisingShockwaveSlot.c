@@ -11,7 +11,7 @@
 #define func_ov021_020a8ab4 ResetAnimationTrackState
 #define func_ov021_020a8ca0 func_ov021_020a8cc0
 #define func_ov052_020ceb54 func_ov052_020ceb74
-#define func_ov052_020cfdb4 func_ov052_020cfdd4
+#define func_ov052_020cfdb4 SelectHitReaction
 #define func_ov052_020d03b8 HandlePendingCommand
 #define func_ov056_020d3b4c SpawnTimedAuraMarker
 #include "src/ov056/unclassified_helpers/UpdateRisingShockwaveSlot_020d3530.c"

@@ -67,7 +67,7 @@ src/overlays/ov046/calls/Camera_RequestMode.c:
     complete
     .text       start:0x020c0da8 end:0x020c0dd4
 
-src/overlays/ov046/calls/func_ov046_020c0dd4.c:
+src/overlays/ov046/calls/ArmObject_020c0dd4.c:
     complete
     .text       start:0x020c0dd4 end:0x020c0de4
 
@@ -103,7 +103,7 @@ src/overlays/ov046/calls/Camera_SetViewMode.c:
     complete
     .text       start:0x020c1058 end:0x020c10e4
 
-src/overlays/ov046/calls/func_ov046_020c10e4.c:
+src/overlays/ov046/calls/Panel_DrawCounter_020c10e4.c:
     complete
     .text       start:0x020c10e4 end:0x020c10f4
 
@@ -111,7 +111,7 @@ src/overlays/ov046/calls/Camera_BlendToView.c:
     complete
     .text       start:0x020c10f4 end:0x020c11a0
 
-src/overlays/ov046/calls/func_ov046_020c11a0.c:
+src/overlays/ov046/calls/Panel_DrawCounter_020c11a0.c:
     complete
     .text       start:0x020c11a0 end:0x020c11b0
 
@@ -247,7 +247,7 @@ src/overlays/ov046/calls/Camera_ResolveCollision.c:
     complete
     .text       start:0x020c1e74 end:0x020c1fc0
 
-src/overlays/ov046/calls/func_ov046_020c1fc0.c:
+src/overlays/ov046/calls/Camera_SlideEyeAlongWalls.c:
     complete
     .text       start:0x020c1fc0 end:0x020c28f0
 
@@ -351,7 +351,7 @@ src/overlays/ov046/calls/CameraPath_SetOverrideView.c:
     complete
     .text       start:0x020c3044 end:0x020c3094
 
-src/overlays/ov046/calls/func_ov046_020c3094.c:
+src/overlays/ov046/calls/Camera_FindOpenAngle.c:
     complete
     .text       start:0x020c3094 end:0x020c322c
 

@@ -4,5 +4,5 @@
 #define data_0205356c gSinFx12Table
 #define data_ov058_020d8a24 data_ov058_020d8a44
 #define func_ov046_020c3024 CameraPath_SetOverrideView
-#define func_ov046_020c3074 func_ov046_020c3094
+#define func_ov046_020c3074 Camera_FindOpenAngle
 #include "src/ov058/unclassified_helpers/UpdateSceneCameraTransform_020d720c.c"

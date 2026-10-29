@@ -2,10 +2,10 @@
 
 #pragma explicit_zero_data on
 
-extern void func_ov001_02061468(void);
+extern void StartFieldSession(void);
 extern void ShutdownFieldSession(void);
 
-#define InitFieldSession func_ov001_02061468
+#define InitFieldSession StartFieldSession
 
 u32 gSessionStateOverlayIds[13] = {
     0x0000001C, 0x00000016, 0x0000001C, 0x0000001D,

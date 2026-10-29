@@ -1,0 +1,3 @@
+#define OS_UnlockByWord_0x0200ae4c FS_ReadFile
+#define readStreamBytesSynchronously_020aa1b4 readStreamBytesSynchronously_020aa1d4
+#include "src/ov022/filesystem/readStreamBytesSynchronously_020aa1b4.c"

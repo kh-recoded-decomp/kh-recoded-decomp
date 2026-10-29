@@ -1,11 +1,11 @@
 #define func_ov001_020645c8 IsSessionFlagSet
 #define FindActiveRecordById_020b8184 FindActiveRecordById
-#define GetCtxModeByte_02068084 func_ov001_02068084
+#define GetCtxModeByte_02068084 GetCtxModeByte
 #define IsFieldFlag10Set_020728c4 IsFieldFlag10Set
 #define IsFieldFlag8Set_020728a4 IsFieldFlag8Set
 #define IsHudFlag7Set_020725bc IsHudFlag7Set
 #define IsHudFlag9Set_02072884 IsHudFlag9Set
 #define LoadSlotIconGraphics_0207001c LoadSlotIconGraphics
 #define RefreshHudTagsAndIcons_020700d4 RefreshHudTagsAndIcons
-#define TagTracker_InvokeCallback_020b8210 func_ov027_020b8230
+#define TagTracker_InvokeCallback_020b8210 TagTracker_InvokeCallback
 #include "src/ov001/field_manager/RefreshHudTagsAndIcons_020700d4.c"

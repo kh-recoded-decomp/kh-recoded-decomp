@@ -1,3 +1,4 @@
+#define func_01fff8b0 SetModelFirstTexture
 #define DrawTexturedGridQuads_020866ac DrawTexturedGridQuads
 #define func_01ff80e4 GXi_FlushCommandList
 #define func_01fff810 SetupModelDrawState

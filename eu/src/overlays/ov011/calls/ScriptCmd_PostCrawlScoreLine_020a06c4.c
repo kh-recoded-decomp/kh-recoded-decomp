@@ -1,0 +1,5 @@
+#define Ov002_PostCrawlScoreLine FieldObjects_ResetAllAndShuffle
+#define Ov022_GetEntryField66 func_ov001_0207f050
+#define QueryActiveStateOrDelegate ScriptVm_ReadOperandInt
+#define ScriptCmd_PostCrawlScoreLine_020a06a4 ScriptCmd_PostCrawlScoreLine_020a06c4
+#include "src/ov011/shared_engine/ScriptCmd_PostCrawlScoreLine_020a06a4.c"

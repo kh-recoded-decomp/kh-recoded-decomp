@@ -1,5 +1,5 @@
 #define RefreshSelectButtons_020bf9e8 RefreshSelectButtons
-#define TagTracker_InvokeCallback_020b8210 func_ov027_020b8230
-#define apply_all_pending_entry_edits_020b84f4 func_ov027_020b8514
+#define TagTracker_InvokeCallback_020b8210 TagTracker_InvokeCallback
+#define apply_all_pending_entry_edits_020b84f4 apply_all_pending_entry_edits
 #define func_ov027_020b845c RestartTagRecord
 #include "src/ov084/select_menu/RefreshSelectButtons_020bf9e8.c"

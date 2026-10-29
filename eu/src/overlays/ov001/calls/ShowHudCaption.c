@@ -2,8 +2,8 @@
 #define FillBackgroundLayerRect_02001a60 FillBackgroundLayerRect
 #define FindActiveRecordById_020b8184 FindActiveRecordById
 #define ShowHudCaption_02072bac ShowHudCaption
-#define TagTracker_InvokeCallback_020b8210 func_ov027_020b8230
-#define UpdateWidgetLayerDefault_020b9df0 func_ov027_020b9e10
+#define TagTracker_InvokeCallback_020b8210 TagTracker_InvokeCallback
+#define UpdateWidgetLayerDefault_020b9df0 UpdateWidgetLayerDefault_020b9e10
 #define data_020a04a4 data_ov001_020a04c4
 #define func_02001520 Text_UploadTileBuffer
 #define func_020015a0 DrawTextAnchored

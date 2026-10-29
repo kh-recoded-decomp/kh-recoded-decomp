@@ -1,4 +1,4 @@
-#define CopySourceBlock_020b9f7c func_ov027_020b9f9c
+#define CopySourceBlock_020b9f7c CopySourceBlock
 #define GetLatestValidInputRecord_020b8774 GetLatestValidInputRecord
 #define HitTestWidget_020b86fc HitTestWidget
 #define NNS_FndGetNextListObject_02012a38 NNS_FndGetNextListObject

@@ -1,4 +1,0 @@
-#define FS_LoadOverlay PlaySoundChecked
-#define FSi_WaitForCardThread QueueSoundCommandForArc
-#define LoadOverlaySync_020ce800 func_ov075_020ce820
-#include "src/ov075/shared_engine/LoadOverlaySync_020ce800.c"

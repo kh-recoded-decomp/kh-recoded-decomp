@@ -17,5 +17,5 @@
 #define func_0202c48c func_0202c4a0
 #define func_0202cb7c OpenAndClassifyFile
 #define func_0202ed3c InitSharedRecordAndDispatchAlt
-#define func_ov001_020993d0 func_ov001_020993f8
+#define func_ov001_020993d0 LoadCellBankFile
 #include "src/ov001/shared_engine/LoadStageModelEntry_0209a8ac.c"

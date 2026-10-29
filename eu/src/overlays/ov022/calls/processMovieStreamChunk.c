@@ -1,7 +1,7 @@
 #define DecodeMovieChunkType2 MobiClip_FastAudioDecode
 #define GetMovieChunkType1Size MobiClip_AudioTransformDecode
 #define func_01ff869c MIi_CpuCopy16
-#define func_ov022_020aaac8 func_ov022_020aaae8
+#define func_ov022_020aaac8 copyMovieChunkHeaderFields
 #define func_ov022_020aaadc decodeMovieAdpcmSamples
 #define processMovieStreamChunk_020a9f68 processMovieStreamChunk
 #include "src/ov022/video_playback/processMovieStreamChunk_020a9f68.c"

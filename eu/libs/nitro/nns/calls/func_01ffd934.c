@@ -1,5 +1,0 @@
-#define HandleJointAnimationStreamCommand_01ffd934 func_01ffd934
-#define data_0205ab60 NNS_G3dRS
-#define func_01ffd6ac GetJointSRTAnimResult
-#define func_02039a54 ModelAnimation_GetJointSRTResult
-#include "src/itcm/library_nitro_nns/func_01ffd934.c"

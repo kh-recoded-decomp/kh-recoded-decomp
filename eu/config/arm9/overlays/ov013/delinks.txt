@@ -48,7 +48,7 @@ src/overlays/ov013/calls/InitRecordScreenGraphics.c:
     complete
     .text       start:0x0206da20 end:0x0206df40
 
-src/overlays/ov013/calls/func_ov013_0206df40.c:
+src/overlays/ov013/calls/InitRecordResultScreen.c:
     complete
     .text       start:0x0206df40 end:0x0206e574
 

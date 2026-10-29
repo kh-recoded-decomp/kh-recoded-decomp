@@ -1,5 +1,5 @@
 #define CameraSweep_CollectContact_020c63b4 CameraSweep_CollectContact
-#define GetCtxModeByte_02068084 func_ov001_02068084
+#define GetCtxModeByte_02068084 GetCtxModeByte
 #define IsFacingContactNormal_020349d8 IsFacingContactNormal
 #define PushContact_02032008 PushContact
 #define SetShapePosition_0203afa0 SetShapePosition

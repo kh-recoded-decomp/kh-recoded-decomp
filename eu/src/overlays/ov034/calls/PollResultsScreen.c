@@ -1,4 +1,4 @@
 #define PollResultsScreen_020bdc18 PollResultsScreen
-#define func_ov034_020bb578 func_ov034_020bb598
+#define func_ov034_020bb578 RefreshResultsScreen
 #define resultsState_020c0f80 data_ov034_020c0fa0
 #include "src/ov034/reviewed_helpers/PollResultsScreen_020bdc18.c"

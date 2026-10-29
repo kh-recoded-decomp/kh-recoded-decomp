@@ -5,7 +5,7 @@
 #define LoadSlotSubBgImage_020bc55c LoadSlotSubBgImage
 #define MarkTileTableRowDirty_020b9e00 MarkTileTableRowDirty
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
-#define UpdateWidgetLayerDefault_020b9df0 func_ov027_020b9e10
+#define UpdateWidgetLayerDefault_020b9df0 UpdateWidgetLayerDefault_020b9e10
 #define data_ov039_020bea00 data_ov039_020bea20
 #define func_01ff869c MIi_CpuCopy16
 #define func_0202c478 Archive_LoadFile

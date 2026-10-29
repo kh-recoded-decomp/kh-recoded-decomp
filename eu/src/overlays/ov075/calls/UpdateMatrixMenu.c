@@ -40,6 +40,6 @@
 #define func_ov075_020c4370 SelectMatrixNode
 #define func_ov075_020c5d10 PreviewMatrixNodeStats_020c5d10
 #define func_ov075_020c7fa8 DrawMatrixCellGlyph
-#define func_ov075_020cbb34 func_ov075_020cbb54
+#define func_ov075_020cbb34 CycleNodeCategory
 #define func_ov075_020d026c ItemMenu_Update_020d026c
 #include "src/ov075/matrix_menu/UpdateMatrixMenu_020c707c.c"

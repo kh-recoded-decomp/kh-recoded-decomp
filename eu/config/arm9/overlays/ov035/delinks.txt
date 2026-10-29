@@ -344,7 +344,7 @@ src/overlays/ov035/calls/UpdateChannelLevel.c:
     complete
     .text       start:0x020bc270 end:0x020bc310
 
-src/overlays/ov035/calls/func_ov035_020bc310.c:
+src/overlays/ov035/calls/QueueGaugeLevelEntry.c:
     complete
     .text       start:0x020bc310 end:0x020bc3ac
 

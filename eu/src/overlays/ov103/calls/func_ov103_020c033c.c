@@ -5,7 +5,7 @@ extern u32 MIi_CpuClearFast();
 extern u32 RuntimeState_GetObjectId();
 extern u32 func_ov103_020bef14();
 extern u32 LoadGraphicsResources();
-extern u32 func_ov103_020bf0c4();
+extern u32 LoadEntryBackground_020bf0c4();
 extern u32 InitTextLayers_020bf1bc();
 typedef struct TheaterState TheaterState;
 extern void RedrawTheaterReportText(int unused, TheaterState *state);
@@ -30,7 +30,7 @@ void func_ov103_020c033c(int *work) {
   RefreshUnlockedEntries(work);
   func_ov103_020bef14(work);
   LoadGraphicsResources(work);
-  func_ov103_020bf0c4(work);
+  LoadEntryBackground_020bf0c4(work);
   InitTextLayers_020bf1bc(work);
   func_ov103_020bf5e8(work);
   SetupListPanel(&data_ov103_020c0500,work);

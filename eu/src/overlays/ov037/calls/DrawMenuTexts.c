@@ -4,11 +4,11 @@
 #define FlushBufferAndRunCallback_0200153c FlushBufferAndRunCallback
 #define FreePointerIfSet_020ba294 FreePointerIfSet
 #define FreeResourceBufferAndProbeHeap_02001474 FreeResourceBufferAndProbeHeap
-#define GetCtxModeByte_02068084 func_ov001_02068084
+#define GetCtxModeByte_02068084 GetCtxModeByte
 #define InitTextLayerAt_020014b0 InitTextLayerAt
 #define LoadPackedFileView_020ba25c LoadPackedFileView
 #define MarkTileTableRowDirty_020b9e00 MarkTileTableRowDirty
-#define UpdateWidgetLayerDefault_020b9df0 func_ov027_020b9e10
+#define UpdateWidgetLayerDefault_020b9df0 UpdateWidgetLayerDefault_020b9e10
 #define data_ov037_020bb64c data_ov037_020bb66c
 #define data_ov037_020bb670 data_ov037_020bb690
 #define func_02001458 func_0200146c

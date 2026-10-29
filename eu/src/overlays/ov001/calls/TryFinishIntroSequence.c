@@ -1,7 +1,7 @@
 #define func_ov001_0206e444 SetFieldEntriesPaused
 #define func_ov001_020645c8 IsSessionFlagSet
 #define ArePartyActorsSettled_0206e5b8 ArePartyActorsSettled
-#define CanAdvancePastIntro_02063cac func_ov001_02063cac
+#define CanAdvancePastIntro_02063cac CanAdvancePastIntro
 #define RefreshMenuEntries_0206e378 RefreshMenuEntries
 #define SetSubModeFrozen_020af434 SetSubModeFrozen
 #define TryFinishIntroSequence_02088384 TryFinishIntroSequence

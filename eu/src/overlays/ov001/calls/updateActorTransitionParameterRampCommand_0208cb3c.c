@@ -1,0 +1,9 @@
+#define func_02025718 EvaluateInterpolationCurve
+#define func_020257b0 ScaleAroundPivot
+#define func_02025de4 ScriptVm_ReadOperandInt
+#define func_02025df8 ScriptVm_ReadOperandFx32
+#define func_02025e18 ScriptCmd_SetElemField
+#define func_02036198 SetWorldObjectProbeSphere
+#define func_02036240 ActorRegistry_GetEntityByIndex
+#define updateActorTransitionParameterRampCommand_0208cb14 updateActorTransitionParameterRampCommand_0208cb3c
+#include "src/ov001/scripted_actor_behavior/updateActorTransitionParameterRampCommand_0208cb14.c"

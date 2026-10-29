@@ -3,7 +3,7 @@
 #define ProcessTargetHitEntries_020d012c ProcessTargetHitEntries
 #define UpdateActionPhase_020d0294 UpdateActionPhase
 #define UpdateAirborneActionState_020d3dc8 UpdateAirborneActionState
-#define func_ov052_020cfdb4 func_ov052_020cfdd4
+#define func_ov052_020cfdb4 SelectHitReaction
 #define func_ov052_020d03b8 HandlePendingCommand
 #define func_ov056_020d2d1c FireMarkedLinkedShot
 #include "src/ov056/unclassified_helpers/UpdateAirborneActionState_020d3dc8.c"

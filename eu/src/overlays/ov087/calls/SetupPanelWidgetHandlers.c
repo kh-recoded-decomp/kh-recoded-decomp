@@ -3,7 +3,7 @@
 #define HandleConfirmForState_020c7ae4 HandleConfirmForState
 #define HandleSlotInput_020c460c HandleSlotInput
 #define InitObjManagerAndMark_020b9060 InitObjManagerAndMark
-#define ResolveEntryStoreWord_020b9088 func_ov027_020b90a8
+#define ResolveEntryStoreWord_020b9088 ResolveEntryStoreWord
 #define SetAllElementObjectModes_020b97fc SetAllElementObjectModes
 #define SetFocusedWidget_020b96e4 SetFocusedWidget
 #define SetWidgetRootDpadEnabled_020b9874 SetWidgetRootDpadEnabled

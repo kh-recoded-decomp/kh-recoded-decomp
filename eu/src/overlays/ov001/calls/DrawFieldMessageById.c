@@ -2,7 +2,7 @@
 #define FillBackgroundLayerRect_02001a60 FillBackgroundLayerRect
 #define FlushBufferAndRunCallback_0200153c FlushBufferAndRunCallback
 #define SelectListNodeOrFirst_020019b8 SelectListNodeOrFirst
-#define UpdateWidgetLayerDefault_020b9df0 func_ov027_020b9e10
+#define UpdateWidgetLayerDefault_020b9df0 UpdateWidgetLayerDefault_020b9e10
 #define fieldState_020a04a4 data_ov001_020a04c4
 #define func_ov001_0206ea08 GetPanelLayerScreen
 #define func_ov027_020b9e00 MarkTileTableRowDirty

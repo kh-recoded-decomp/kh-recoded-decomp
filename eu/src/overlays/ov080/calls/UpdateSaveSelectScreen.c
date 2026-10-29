@@ -35,5 +35,5 @@
 #define func_ov080_020c4260 CountValidSlots
 #define func_ov080_020c4b84 BuildSlotSummary
 #define func_ov080_020c4cb8 HandleSlotReadResult
-#define func_ov080_020c5584 func_ov080_020c55a4
+#define func_ov080_020c5584 RedrawSaveSelectScreen
 #include "src/ov080/unclassified_helpers/UpdateSaveSelectScreen_020c4740.c"

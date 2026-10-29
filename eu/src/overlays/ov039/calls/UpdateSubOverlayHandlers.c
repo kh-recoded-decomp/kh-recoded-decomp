@@ -26,8 +26,8 @@ extern u32 func_ov039_020bd694(void);
 extern int func_ov039_020bd654(void);
 extern void *NNSi_FndAllocFromDefaultHeap(u32 size);
 extern void MI_CpuFill8(void *dst, int value, u32 size);
-extern int func_ov039_020bced0(int work);
-extern int func_ov039_020bcfec(int work);
+extern int DispatchActiveOverlayCallback(int work);
+extern int dispatchSelectedMenuCallback(int work);
 extern void func_ov039_020bcf40(int work);
 extern void func_ov039_020bd074(int work);
 extern void InitStreamBufferPair(int blockCount, u32 flag);
@@ -47,7 +47,7 @@ void UpdateSubOverlayHandlers(void)
         MI_CpuFill8(state->primaryWork, 0, size);
     }
     if (state->primaryReady == 0) {
-        state->primaryReady = func_ov039_020bced0((int)state->primaryWork);
+        state->primaryReady = DispatchActiveOverlayCallback((int)state->primaryWork);
     } else {
         func_ov039_020bcf40((int)state->primaryWork);
     }
@@ -60,7 +60,7 @@ void UpdateSubOverlayHandlers(void)
             MI_CpuFill8(state->secondaryWork, 0, size);
         }
         if (state->secondaryReady == 0) {
-            state->secondaryReady = func_ov039_020bcfec((int)state->secondaryWork);
+            state->secondaryReady = dispatchSelectedMenuCallback((int)state->secondaryWork);
         } else {
             func_ov039_020bd074((int)state->secondaryWork);
         }

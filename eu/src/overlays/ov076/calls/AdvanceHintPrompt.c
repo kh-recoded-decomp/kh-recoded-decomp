@@ -1,0 +1,9 @@
+#define AdvanceHintPrompt_020caf8c AdvanceHintPrompt
+#define MenuPanel_InitStandard_020cb380 MenuPanel_InitStandard
+#define MenuPanel_MeasureMessage_020cb2b8 MenuPanel_MeasureMessage
+#define MenuScreen_RefreshMarker_020cbb3c MenuScreen_RefreshMarker
+#define SetGlobalPackedBit_02027320 SetGlobalPackedBit
+#define func_ov027_020b90a4 FindWidgetById
+#define func_ov027_020b9580 SetEntrySlotsVisible
+#define func_ov027_020ba2a8 func_ov027_020ba2c8
+#include "src/ov076/unclassified_helpers/AdvanceHintPrompt_020caf8c.c"

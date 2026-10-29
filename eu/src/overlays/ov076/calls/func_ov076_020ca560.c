@@ -24,7 +24,7 @@ extern GameState *data_0205fe0c;
 
 extern int ReadSessionPackedBits(int id, int mode);
 extern BOOL IsSessionFlagSet(u32 value);
-extern s8 func_ov001_02068084(void);
+extern s8 GetCtxModeByte(void);
 extern PlayerParams *GetSelectionPackedValueBlock(void);
 extern void SetParamHalf18(u16 value);
 extern void SyncSharedListScroll(void);
@@ -32,13 +32,13 @@ extern void SyncSharedListScroll(void);
 void func_ov076_020ca560(int bonus) {
     ThresholdTable table = data_ov076_020cd188;
     int state = ReadSessionPackedBits(0x1a00, 2);
-    if (func_ov001_02068084() == 5 && state != 2) {
+    if (GetCtxModeByte() == 5 && state != 2) {
         if (IsSessionFlagSet(0x3609) && IsSessionFlagSet(0x360a) && bonus > 0) {
             SetParamHalf18(0xce4);
         }
     } else {
         BOOL skip = FALSE;
-        if (func_ov001_02068084() == 3) {
+        if (GetCtxModeByte() == 3) {
             BOOL outside = FALSE;
             if (data_0205fe0c->worldId != 0x1d && data_0205fe0c->worldId != 0x1e) {
                 outside = TRUE;

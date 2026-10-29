@@ -15,7 +15,7 @@
 #define func_ov001_0207b5f4 func_ov001_0207b61c
 #define FindWidgetById_020b90a4 FindWidgetById
 #define SetEntrySlotsVisible_020b9580 SetEntrySlotsVisible
-#define CopySourceBlock_020b9f7c func_ov027_020b9f9c
+#define CopySourceBlock_020b9f7c CopySourceBlock
 #define data_ov024_020b7520 data_ov024_020b7540
 #define data_ov024_020b7384 data_ov024_020b73a4
 #define func_ov001_0207b6b4 SetPanelInputActive
@@ -24,8 +24,8 @@
 #define func_ov001_0207b6c4 ClearPanelInputActive
 #define func_01ff89a8 MI_CpuCopy8
 #define FindActiveRecordById_020b8184 FindActiveRecordById
-#define func_ov027_020b8284 func_ov027_020b82a4
-#define TagTracker_InvokeCallback_020b8210 func_ov027_020b8230
+#define func_ov027_020b8284 StampTileRegionPalette
+#define TagTracker_InvokeCallback_020b8210 TagTracker_InvokeCallback
 #define func_ov024_020b6bb0 UpdateBoardHelpText
 #define FlushDirtyTileTableRows_020b9e60 FlushDirtyTileTableRows
 #if defined(__MWERKS__)

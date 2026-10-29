@@ -1,5 +1,5 @@
 #define InitSceneTextWindow51C_0206f6dc InitSceneTextWindow51C
-#define UpdateWidgetLayerDefault_020b9df0 func_ov027_020b9e10
+#define UpdateWidgetLayerDefault_020b9df0 UpdateWidgetLayerDefault_020b9e10
 #define data_ov001_0209dc34 gSceneTextFrame51C
 #define func_020014b0 InitTextLayerAt
 #include "src/ov001/text_rendering/InitSceneTextWindow51C_0206f6dc.c"

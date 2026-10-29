@@ -9,6 +9,6 @@
 #define func_ov032_020bbc18 GetRowRespawnLimit
 #define func_ov032_020bbc78 func_ov032_020bbc98
 #define func_ov032_020bbd60 OrientGroupActorCollisionFromDirection
-#define func_ov032_020bc1e8 func_ov032_020bc208
+#define func_ov032_020bc1e8 ApplyGroupMemberKind
 #define func_ov032_020bd518 UnlinkGroupMember
 #include "src/ov032/object_group/SpawnRowChainMembers_020bd288.c"

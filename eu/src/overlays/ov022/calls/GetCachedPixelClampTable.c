@@ -1,0 +1,4 @@
+#define GetCachedPixelClampTable_020aaa58 GetCachedPixelClampTable
+#define decoder_cache_arena data_ov022_020b7e14
+#define pixel_clamp_table data_ov022_020b76a8
+#include "src/ov022/video_playback/GetCachedPixelClampTable_020aaa58.c"

@@ -47,7 +47,7 @@ extern int func_02029f5c(void);
 extern void ClearScreenLayerGraphics(ScreenLayer *layer, int screen);
 extern BOOL ReleaseResourceSlot(void *slot);
 extern int ReleaseSharedRecordSlot(void *slot);
-extern int func_ov001_0206a918(SlotEntry *slot);
+extern int FreeBufferAndClearStatus(SlotEntry *slot);
 extern void ReleaseResourceAndDetach(u8 *object);
 extern void ResetSlotScene(void);
 extern void ReleaseSeqArcHeapLevel(int index);
@@ -79,7 +79,7 @@ int ShutdownPanelScene_020bab74(void)
                 ReleaseResourceSlot(scene->slots[i].record);
                 ReleaseSharedRecordSlot(scene->slots[i].record);
             }
-            func_ov001_0206a918(&scene->slots[i]);
+            FreeBufferAndClearStatus(&scene->slots[i]);
         }
         for (i = 0; i < 5; i++) {
             if (scene->actors[i].active != 0) {

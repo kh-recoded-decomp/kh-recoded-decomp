@@ -32,7 +32,7 @@ src/overlays/ov080/calls/PollSaveSlotReads.c:
     complete
     .text       start:0x020c4d28 end:0x020c4e8c
 
-src/overlays/ov080/calls/func_ov080_020c4e8c.c:
+src/overlays/ov080/calls/DrawSaveSlotPanel.c:
     complete
     .text       start:0x020c4e8c end:0x020c5118
 
@@ -44,7 +44,7 @@ src/overlays/ov080/calls/HideSaveSlotsShowPrompt.c:
     complete
     .text       start:0x020c54d8 end:0x020c55a4
 
-src/overlays/ov080/calls/func_ov080_020c55a4.c:
+src/overlays/ov080/calls/RedrawSaveSelectScreen.c:
     complete
     .text       start:0x020c55a4 end:0x020c58e4
 

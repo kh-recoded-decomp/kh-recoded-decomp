@@ -3,7 +3,7 @@
 #define ResetKindDirection_020a1ebc ResetKindDirection
 #define func_ov001_02086308 func_ov001_02086330
 #define func_ov018_020a29e0 FieldObject_ShiftWithArea
-#define func_ov018_020a2c84 func_ov018_020a2ca4
+#define func_ov018_020a2c84 FieldObject_UpdatePushedMotion
 #define func_ov031_020bc5b0 MakeCommandRecord
 #define func_ov031_020bc5e0 LinkPendingNode
 #include "src/ov018/field_objects/CreateKind6FieldObject_020a3234.c"

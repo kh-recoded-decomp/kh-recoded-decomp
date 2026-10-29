@@ -1,4 +1,4 @@
-func_ov050_020c3520 kind:function(thumb,size=0x10) addr:0x020c3520
+ReturnToCommitPage_ov050_020c3520 kind:function(thumb,size=0x10) addr:0x020c3520
 func_ov050_020c3530 kind:function(thumb,size=0x26) addr:0x020c3530
 CameraCollision_ShouldBlockFacing kind:function(thumb,size=0x74) addr:0x020c3558
 func_ov050_020c35cc kind:function(thumb,size=0x32) addr:0x020c35cc

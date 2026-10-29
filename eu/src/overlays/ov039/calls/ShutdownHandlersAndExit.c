@@ -27,7 +27,7 @@ extern void LoadBgLayerSet3(void);
 extern void UnloadPrimarySubOverlay(void);
 extern void RuntimeState_SetMode(int value);
 extern int GetCurrentSceneId(void);
-extern void func_ov000_02063668(int value);
+extern void World_SetField4(int value);
 extern void HasOv029ObjectField28(int mode);
 extern void SetupOverlayDisplay(void);
 
@@ -59,7 +59,7 @@ void ShutdownHandlersAndExit(void)
     if (state->nextEntry == -1) {
         RuntimeState_SetMode(0);
         if (GetCurrentSceneId() == 1) {
-            func_ov000_02063668(state->altExit ? 2 : 1);
+            World_SetField4(state->altExit ? 2 : 1);
             return;
         }
         if (GetCurrentSceneId() == 4) {

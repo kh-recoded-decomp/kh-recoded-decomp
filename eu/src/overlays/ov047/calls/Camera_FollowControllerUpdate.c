@@ -6,5 +6,5 @@
 #define IsLeaderFlag3Active_0206e198 IsLeaderFlag3Active
 #define func_02029f48 func_02029f5c
 #define func_ov046_020c1a48 func_ov046_020c1a68
-#define func_ov047_020c3b5c func_ov047_020c3b7c
+#define func_ov047_020c3b5c Camera_UpdateFollowInput
 #include "src/ov047/camera/Camera_FollowControllerUpdate_020c4768.c"

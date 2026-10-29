@@ -1,3 +1,0 @@
-#define DrawItemGaugeAndDigits_020c6974 func_ov077_020c6994
-#define func_ov077_020c681c DrawSpriteQuad_020c683c
-#include "src/ov077/unclassified_helpers/DrawItemGaugeAndDigits_020c6974.c"

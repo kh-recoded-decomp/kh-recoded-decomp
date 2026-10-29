@@ -1,3 +1,0 @@
-#define Ov002_PanelDrawCounter Camera_BlendToView
-#define Panel_DrawCounter_020c10c4 func_ov046_020c10e4
-#include "src/ov046/shared_engine/Panel_DrawCounter_020c10c4.c"

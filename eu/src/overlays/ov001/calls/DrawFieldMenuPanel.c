@@ -4,9 +4,9 @@
 #define FindActiveRecordById_020b8184 FindActiveRecordById
 #define GetSceneTagTracker_020711b0 GetSceneTagTracker
 #define IsModeSetOrFlag370aClear_0207259c IsModeSetOrFlag370aClear
-#define TagTracker_InvokeCallback_020b8210 func_ov027_020b8230
+#define TagTracker_InvokeCallback_020b8210 TagTracker_InvokeCallback
 #define UpdateFieldPromptTag_02075ccc UpdateFieldPromptTag
-#define UpdateWidgetLayerDefault_020b9df0 func_ov027_020b9e10
+#define UpdateWidgetLayerDefault_020b9df0 UpdateWidgetLayerDefault_020b9e10
 #define func_ov001_02075348 CycleMenuEntry
 #define func_ov027_020b822c func_ov027_020b824c
 #include "src/ov001/field_manager/DrawFieldMenuPanel_02075f5c.c"

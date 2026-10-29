@@ -2,7 +2,7 @@
 #define LoadSelectedHandlerAndStart_020bb40c LoadSelectedHandlerAndStart
 #define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
 #define data_ov039_020bea00 data_ov039_020bea20
-#define dispatchSelectedMenuCallback_020bcfcc func_ov039_020bcfec
+#define dispatchSelectedMenuCallback_020bcfcc dispatchSelectedMenuCallback
 #define func_01ff8830 MI_CpuFill8
 #define func_ov039_020baae0 RuntimeState_SetMode
 #define func_ov039_020bcf20 func_ov039_020bcf40

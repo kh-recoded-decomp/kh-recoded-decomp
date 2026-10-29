@@ -1,4 +1,4 @@
-#define GetCtxModeByte_02068084 func_ov001_02068084
+#define GetCtxModeByte_02068084 GetCtxModeByte
 #define Msg_OpenContainerAndReadHeader_0202cc6c Msg_OpenContainerAndReadHeader
 #define OS_SPrintf_02002428 OS_SPrintf
 #define ReloadModeMessageArchive_020883fc ReloadModeMessageArchive

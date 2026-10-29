@@ -3,7 +3,7 @@
 #define NNS_GfdResetFrmPlttVramState_02013d74 NNS_GfdResetFrmPlttVramState
 #define NNS_GfdResetFrmTexVramState_0201391c NNS_GfdResetFrmTexVramState
 #define ReleaseResourceAndDetach_0202eee8 ReleaseResourceAndDetach
-#define SweepElements_020b831c func_ov027_020b833c
+#define SweepElements_020b831c SweepElements
 #define TeardownSceneResources_020bf9a4 TeardownSceneResources
 #define func_02006d3c G3X_SetHOffset
 #define func_ov039_020bc18c GetPrimaryMenuElement

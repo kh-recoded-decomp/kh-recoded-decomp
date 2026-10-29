@@ -1,4 +1,4 @@
-#define ClearWords124And128_0206c038 func_ov001_0206c038
+#define ClearWords124And128_0206c038 ClearWords124And128
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define ResumeOrResetRequest_0206bbe4 ResumeOrResetRequest
 #define SetMenuOpenState_0206bb74 SetMenuOpenState

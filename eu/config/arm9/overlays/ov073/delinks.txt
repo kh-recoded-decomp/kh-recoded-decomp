@@ -76,7 +76,7 @@ src/overlays/ov073/calls/HandleSlotListInput.c:
     complete
     .text       start:0x020c034c end:0x020c0710
 
-src/overlays/ov073/calls/func_ov073_020c0710.c:
+src/overlays/ov073/calls/DrawRecordSlotRows.c:
     complete
     .text       start:0x020c0710 end:0x020c0da8
 
@@ -92,7 +92,7 @@ src/overlays/ov073/calls/UpdateStatusListInput.c:
     complete
     .text       start:0x020c0e58 end:0x020c0ed8
 
-src/overlays/ov073/calls/func_ov073_020c0ed8.c:
+src/overlays/ov073/calls/DrawStatusItemRows.c:
     complete
     .text       start:0x020c0ed8 end:0x020c1044
 
@@ -108,7 +108,7 @@ src/overlays/ov073/calls/UpdateStatusPanelInput.c:
     complete
     .text       start:0x020c10a8 end:0x020c111c
 
-src/overlays/ov073/calls/func_ov073_020c111c.c:
+src/overlays/ov073/calls/DrawStatusListRows.c:
     complete
     .text       start:0x020c111c end:0x020c1250
 

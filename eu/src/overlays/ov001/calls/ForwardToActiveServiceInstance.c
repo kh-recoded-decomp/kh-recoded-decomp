@@ -1,4 +1,4 @@
 #define func_ov001_020880b4 ForwardToActiveServiceInstance
-#define func_ov001_02097a84 func_ov001_02097aac
+#define func_ov001_02097a84 ComputeAttackDamage_02097aac
 #define func_ov001_0209c0ec GetStageEventRecord
 #include "src/ov001/shared_engine/func_ov001_020880b4.c"

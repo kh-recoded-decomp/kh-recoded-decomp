@@ -1,3 +1,3 @@
-#define func_ov027_020b8c80 func_ov027_020b8ca0
+#define func_ov027_020b8c80 UpdateWidgetRootAndResetList
 #define func_ov027_020b8c94 UpdateWidgetRootAndFireAlarm
 #include "src/ov026/display_session/UpdateOverlayDisplaySession.c"

@@ -1,6 +1,6 @@
 #define EventTrigger_EvaluateBitChain_020699a8 EventTrigger_EvaluateBitChain
 #define InitBitChainTrigger_02069a54 InitBitChainTrigger
 #define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
-#define ReleaseNodePairs_02069a30 func_ov001_02069a30
+#define ReleaseNodePairs_02069a30 ReleaseNodePairs
 #define func_ov001_02069a44 ResetBitChainTrigger
 #include "src/ov001/shared_engine/InitBitChainTrigger_02069a54.c"

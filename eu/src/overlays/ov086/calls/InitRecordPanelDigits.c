@@ -4,7 +4,7 @@
 #define InitializeResourceContainer_020b8bd4 InitializeResourceContainer
 #define OnSliderTouched_020c2040 OnSliderTouched
 #define PXI_Init_020b9078 func_ov027_020b9098
-#define ResolveEntryStoreWord_020b9088 func_ov027_020b90a8
+#define ResolveEntryStoreWord_020b9088 ResolveEntryStoreWord
 #define SetAllElementObjectModes_020b97fc SetAllElementObjectModes
 #define data_ov086_020c2128 data_ov086_020c2148
 #define data_ov086_020c228c data_ov086_020c22ac

@@ -9,6 +9,6 @@
 #define func_ov077_020c53a0 UpdateItemScreenStatusLink
 #define func_ov077_020c5510 SyncScreenSpriteSlots
 #define func_ov077_020c5618 SetPanelShifted
-#define func_ov077_020c57f4 func_ov077_020c5814
+#define func_ov077_020c57f4 UpdateSlotTouchRegions
 #define func_ov077_020c58e0 ShowSlotHeaderMessage
 #include "src/ov077/unclassified_helpers/UpdateItemScreenDisplay_020c4be0.c"

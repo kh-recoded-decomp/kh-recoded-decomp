@@ -19,7 +19,7 @@ src/overlays/ov011/calls/ClearFixedSlots.c:
     complete
     .text       start:0x020a0690 end:0x020a06c4
 
-src/overlays/ov011/calls/func_ov011_020a06c4.c:
+src/overlays/ov011/calls/ScriptCmd_PostCrawlScoreLine_020a06c4.c:
     complete
     .text       start:0x020a06c4 end:0x020a06d6
 

@@ -1,6 +1,6 @@
 #define func_ov001_020645c8 IsSessionFlagSet
 #define DrawWindowScrollArrow_02079e2c DrawWindowScrollArrow
-#define UpdateWidgetLayerDefault_020b9df0 func_ov027_020b9e10
+#define UpdateWidgetLayerDefault_020b9df0 UpdateWidgetLayerDefault_020b9e10
 #define data_ov001_0209df50 gWindowScrollArrowTiles
 #define data_ov001_020a04c4 data_ov001_020a04e4
 #define func_ov027_020b9e00 MarkTileTableRowDirty

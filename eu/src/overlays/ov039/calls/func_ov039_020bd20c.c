@@ -1,6 +1,0 @@
-#define data_020be8d0 data_ov039_020be8f0
-#define data_020be930 data_ov039_020be950
-#define data_020bea84 data_ov039_020beaa4
-#define dispatch_input_handler_pair_20_020bd1ec func_ov039_020bd20c
-#define func_020bcd98 func_ov039_020bcdb8
-#include "src/ov039/input/dispatch_input_handler_pair_20_020bd1ec.c"

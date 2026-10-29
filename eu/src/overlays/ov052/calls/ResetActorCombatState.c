@@ -6,7 +6,7 @@
 #define InitSlotTable_020a98e8 InitSlotTable
 #define IsFieldFlag16Set_020735b8 IsFieldFlag16Set
 #define ResetActorCombatState_020ccae8 ResetActorCombatState
-#define func_ov021_020a7cc8 func_ov021_020a7ce8
+#define func_ov021_020a7cc8 LoadPathGraph
 #define func_ov052_020c7460 InitPlayerActorModel_020c7460
 #define func_ov052_020c9f88 ResetMotionState_020c9fa8
 #define func_ov052_020ca20c LoadSlotModels

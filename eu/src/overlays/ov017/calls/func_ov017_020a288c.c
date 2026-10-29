@@ -43,7 +43,7 @@ typedef struct ScriptOperand {
     LayoutU8 undecodedPayload[6];
 } ScriptOperand;
 extern unsigned int ActorRegistry_GetEntityByIndex();
-extern unsigned int func_ov001_02068084();
+extern unsigned int GetCtxModeByte();
 extern unsigned int DrawTexturedGridQuads();
 
 void func_ov017_020a288c(int work) {
@@ -51,7 +51,7 @@ void func_ov017_020a288c(int work) {
   int mode;
 
   actor = ActorRegistry_GetEntityByIndex((u32)*(u8 *)(work + 0x32));
-  mode = func_ov001_02068084();
+  mode = GetCtxModeByte();
   DrawTexturedGridQuads
             (&actor->flags_004,0x1800,(int)*(char *)(work + 0x49),(int)*(char *)(work + 0x4a)
              ,(u8 *)&actor->flags_004 + 0x80,0x1f,mode != 6);

@@ -1,4 +1,4 @@
 #define PositionListRecords_020b8498 PositionListRecords
 #define func_ov027_020b81e0 func_ov027_020b8200
-#define func_ov027_020b8210 func_ov027_020b8230
+#define func_ov027_020b8210 TagTracker_InvokeCallback
 #include "src/ov027/resource_container/PositionListRecords_020b8498.c"

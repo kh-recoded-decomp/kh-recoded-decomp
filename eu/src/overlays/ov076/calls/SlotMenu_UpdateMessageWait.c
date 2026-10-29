@@ -1,5 +1,5 @@
 #define MessageWindow_IsFinished_020cbb90 MessageWindow_IsFinished
 #define SlotMenu_RefreshView_020c5be0 SlotMenu_RefreshView
 #define SlotMenu_UpdateMessageWait_020c5c14 SlotMenu_UpdateMessageWait
-#define func_ov076_020c851c func_ov076_020c853c
+#define func_ov076_020c851c SlotMenu_FuseSlotRecords
 #include "src/ov076/unclassified_helpers/SlotMenu_UpdateMessageWait_020c5c14.c"

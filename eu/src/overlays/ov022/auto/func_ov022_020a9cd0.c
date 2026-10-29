@@ -1,2 +1,0 @@
-#define DecodeMovieFrameIntoRing_020a9cb0 func_ov022_020a9cd0
-#include "src/ov022/video_playback/DecodeMovieFrameIntoRing_020a9cb0.c"

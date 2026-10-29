@@ -1,7 +1,7 @@
-#define ArmObject_020c0db4 func_ov046_020c0dd4
+#define ArmObject_020c0db4 ArmObject_020c0dd4
 #define Camera_BlendToPlayerBackView_020c1360 Camera_BlendToPlayerBackView
 #define GetBiasAdjustedField_0206dc80 GetBiasAdjustedField
-#define Panel_DrawCounter_020c10c4 func_ov046_020c10e4
+#define Panel_DrawCounter_020c10c4 Panel_DrawCounter_020c10e4
 #define data_0205356c gSinFx12Table
 #define func_ov046_020c2bf8 func_ov046_020c2c18
 #include "src/ov046/shared_engine/Camera_BlendToPlayerBackView_020c1360.c"

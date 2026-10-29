@@ -2,8 +2,8 @@
 #define IsFieldFlag10Set_020728c4 IsFieldFlag10Set
 #define IsHudFlag7Set_020725bc IsHudFlag7Set
 #define IsModeSetOrFlag370aClear_0207259c IsModeSetOrFlag370aClear
-#define TagTracker_InvokeCallback_020b8210 func_ov027_020b8230
+#define TagTracker_InvokeCallback_020b8210 TagTracker_InvokeCallback
 #define UpdateFieldPromptTag_02075ccc UpdateFieldPromptTag
 #define func_ov027_020b822c func_ov027_020b824c
-#define func_ov027_020b8284 func_ov027_020b82a4
+#define func_ov027_020b8284 StampTileRegionPalette
 #include "src/ov001/field_manager/UpdateFieldPromptTag_02075ccc.c"

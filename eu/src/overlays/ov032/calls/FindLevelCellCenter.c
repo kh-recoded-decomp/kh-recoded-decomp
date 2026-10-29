@@ -1,0 +1,4 @@
+#define func_ov001_0206dc4c GetManagedActorPosition
+#define FindLevelCellCenter_020beeb8 FindLevelCellCenter
+#define ProbeGroundBelow_020bc6fc ProbeGroundBelow
+#include "src/ov032/object_group/FindLevelCellCenter_020beeb8.c"

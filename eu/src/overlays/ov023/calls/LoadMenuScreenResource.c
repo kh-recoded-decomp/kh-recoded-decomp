@@ -3,5 +3,5 @@
 #define func_0202b554 GetBgDataFromArchive
 #define func_ov001_0207b4d8 SetPanelSessionActive
 #define func_ov027_020ba1d8 func_ov027_020ba1f8
-#define func_ov027_020ba1e0 func_ov027_020ba200
+#define func_ov027_020ba1e0 DestroyFileLoadRequest
 #include "src/ov023/menu_graphics/LoadMenuScreenResource_020b5b94.c"

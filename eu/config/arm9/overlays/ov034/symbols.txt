@@ -9,7 +9,7 @@ AdvanceResultsTransition kind:function(thumb,size=0x40) addr:0x020bb254
 SetResultsMode kind:function(thumb,size=0x1c) addr:0x020bb294
 EnterResultsTierMode kind:function(thumb,size=0x74) addr:0x020bb2b0
 InitResultsScreen kind:function(thumb,size=0x274) addr:0x020bb324
-func_ov034_020bb598 kind:function(thumb,size=0x1878) addr:0x020bb598
+RefreshResultsScreen kind:function(thumb,size=0x1878) addr:0x020bb598
 .L_020bb6b2 kind:label(thumb) addr:0x020bb6b2
 .L_020bc208 kind:label(thumb) addr:0x020bc208
 .L_020bcdf0 kind:label(thumb) addr:0x020bcdf0 local
@@ -39,10 +39,10 @@ CreateObjectSlot_020bdec4 kind:function(thumb,size=0x6c) addr:0x020bdec4
 SetupStageParams kind:function(thumb,size=0x348) addr:0x020bdf30
 ApplyResultsPartyBonus kind:function(thumb,size=0xd0) addr:0x020be278
 SetupResultsShopList kind:function(thumb,size=0xf0) addr:0x020be348
-func_ov034_020be438 kind:function(thumb,size=0xe0) addr:0x020be438
+GetResultsShopItemInfo kind:function(thumb,size=0xe0) addr:0x020be438
 ClassifyResultsShopEntry kind:function(thumb,size=0x50) addr:0x020be518
 InitResultsMovieSourceOps kind:function(thumb,size=0x40) addr:0x020be568
-func_ov034_020be5a8 kind:function(thumb,size=0x18c) addr:0x020be5a8
+LoadResultsIconCells kind:function(thumb,size=0x18c) addr:0x020be5a8
 func_ov034_020be734 kind:function(thumb,size=0x2) addr:0x020be734
 func_ov034_020be738 kind:function(thumb,size=0x184) addr:0x020be738
 data_ov034_020be8bc kind:data(any) addr:0x020be8bc

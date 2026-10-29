@@ -3,7 +3,7 @@
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define ReleaseIfMarked_020b903c ReleaseIfMarked
 #define ShutdownOv082Screen_020bf300 ShutdownOv082Screen
-#define SweepElements_020b831c func_ov027_020b833c
+#define SweepElements_020b831c SweepElements
 #define func_ov039_020bc1a4 GetSecondaryMenuElement
 #define func_ov039_020bc1cc GetMenuWidgetContainer
 #include "src/ov082/unclassified_helpers/ShutdownOv082Screen_020bf300.c"

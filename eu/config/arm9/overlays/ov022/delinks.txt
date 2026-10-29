@@ -116,7 +116,7 @@ src/overlays/ov022/calls/func_ov022_020a79f4.c:
     complete
     .text       start:0x020a79f4 end:0x020a7a06
 
-src/overlays/ov022/calls/func_ov022_020a7a08.c:
+src/overlays/ov022/calls/CmdPrepareStream_020a7a08.c:
     complete
     .text       start:0x020a7a08 end:0x020a7a1a
 
@@ -140,15 +140,15 @@ src/overlays/ov022/calls/SetupSubScreenForMovie.c:
     complete
     .text       start:0x020a7c78 end:0x020a7d84
 
-src/overlays/ov022/calls/func_ov022_020a7d84.c:
+src/overlays/ov022/calls/GetFrameBuffer.c:
     complete
     .text       start:0x020a7d84 end:0x020a7d9c
 
-src/overlays/ov022/calls/func_ov022_020a7d9c.c:
+src/overlays/ov022/calls/GetSubScreenBuffer.c:
     complete
     .text       start:0x020a7d9c end:0x020a7db4
 
-src/overlays/ov022/calls/func_ov022_020a7db4.c:
+src/overlays/ov022/calls/EnableMovieAudioChannels.c:
     complete
     .text       start:0x020a7db4 end:0x020a7dd4
 
@@ -320,7 +320,7 @@ src/overlays/ov022/calls/func_ov022_020a93a0.c:
     complete
     .text       start:0x020a93a0 end:0x020a93b8
 
-src/overlays/ov022/calls/func_ov022_020a93b8.c:
+src/overlays/ov022/calls/processMovieStreamChunkIfContextPresent.c:
     complete
     .text       start:0x020a93b8 end:0x020a93dc
 
@@ -340,11 +340,11 @@ src/overlays/ov022/calls/func_ov022_020a9400.c:
     complete
     .text       start:0x020a9400 end:0x020a940c
 
-src/overlays/ov022/auto/func_ov022_020a940c.c:
+src/overlays/ov022/auto/initializeMovieStreamResources.c:
     complete
     .text       start:0x020a940c end:0x020a943c
 
-src/overlays/ov022/calls/func_ov022_020a943c.c:
+src/overlays/ov022/calls/destroyMovieStreamContext.c:
     complete
     .text       start:0x020a943c end:0x020a9450
 
@@ -364,7 +364,7 @@ src/overlays/ov022/auto/func_ov022_020a9b6c.c:
     complete
     .text       start:0x020a9b6c end:0x020a9b74
 
-src/overlays/ov022/auto/func_ov022_020a9b74.c:
+src/overlays/ov022/auto/movieFrameBufferStatus.c:
     complete
     .text       start:0x020a9b74 end:0x020a9b98
 
@@ -372,7 +372,7 @@ src/overlays/ov022/calls/queueNextMovieFrame.cpp:
     complete
     .text       start:0x020a9b98 end:0x020a9cd0
 
-src/overlays/ov022/auto/func_ov022_020a9cd0.c:
+src/overlays/ov022/auto/DecodeMovieFrameIntoRing.c:
     complete
     .text       start:0x020a9cd0 end:0x020a9db4
 
@@ -380,7 +380,7 @@ src/overlays/ov022/calls/renderDecodedMovieFrame.c:
     complete
     .text       start:0x020a9db4 end:0x020a9f38
 
-src/overlays/ov022/auto/func_ov022_020a9f38.c:
+src/overlays/ov022/auto/DropDecodedMovieFrame.c:
     complete
     .text       start:0x020a9f38 end:0x020a9f78
 
@@ -400,19 +400,19 @@ src/overlays/ov022/calls/func_ov022_020aa144.c:
     complete
     .text       start:0x020aa144 end:0x020aa150
 
-src/overlays/ov022/auto/func_ov022_020aa150.c:
+src/overlays/ov022/auto/BindMovieReaderToFileContext.c:
     complete
     .text       start:0x020aa150 end:0x020aa188
 
-src/overlays/ov022/calls/func_ov022_020aa188.c:
+src/overlays/ov022/calls/SeekBitstreamCursor_020aa188.c:
     complete
     .text       start:0x020aa188 end:0x020aa1d4
 
-src/overlays/ov022/calls/func_ov022_020aa1d4.c:
+src/overlays/ov022/calls/readStreamBytesSynchronously_020aa1d4.c:
     complete
     .text       start:0x020aa1d4 end:0x020aa244
 
-src/overlays/ov022/calls/func_ov022_020aa244.c:
+src/overlays/ov022/calls/beginAlignedFileReadAhead_020aa244.c:
     complete
     .text       start:0x020aa244 end:0x020aa2c0
 
@@ -420,7 +420,7 @@ src/overlays/ov022/calls/func_ov022_020aa2c0.c:
     complete
     .text       start:0x020aa2c0 end:0x020aa2e8
 
-src/overlays/ov022/auto/func_ov022_020aa2e8.c:
+src/overlays/ov022/auto/CallVirt14_020aa2e8.c:
     complete
     .text       start:0x020aa2e8 end:0x020aa2fc
 
@@ -432,7 +432,7 @@ libs/mobiclip/video/asm_stubs/auto/MobiClip_BlitRows.s:
     complete
     .text       start:0x020aa300 end:0x020aa8c0
 
-src/overlays/ov022/auto/func_ov022_020aa8c0.c:
+src/overlays/ov022/auto/getMovieDecoderCodeSize.c:
     complete
     .text       start:0x020aa8c0 end:0x020aa8cc
 
@@ -440,11 +440,11 @@ src/overlays/ov022/auto/func_ov022_020aa8cc.c:
     complete
     .text       start:0x020aa8cc end:0x020aa8d4
 
-src/overlays/ov022/calls/func_ov022_020aa8d4.c:
+src/overlays/ov022/calls/ResetMovieDecoderCodeArena.c:
     complete
     .text       start:0x020aa8d4 end:0x020aa8f4
 
-src/overlays/ov022/calls/func_ov022_020aa8f4.c:
+src/overlays/ov022/calls/ResetMovieLookupTableArena.c:
     complete
     .text       start:0x020aa8f4 end:0x020aa91c
 
@@ -456,15 +456,15 @@ src/overlays/ov022/calls/GetCachedMovieDecodeTable.c:
     complete
     .text       start:0x020aa998 end:0x020aaa08
 
-src/overlays/ov022/calls/func_ov022_020aaa08.c:
+src/overlays/ov022/calls/get_cached_movie_saturation_table.c:
     complete
     .text       start:0x020aaa08 end:0x020aaa78
 
-src/overlays/ov022/calls/func_ov022_020aaa78.c:
+src/overlays/ov022/calls/GetCachedPixelClampTable.c:
     complete
     .text       start:0x020aaa78 end:0x020aaae8
 
-src/overlays/ov022/auto/func_ov022_020aaae8.c:
+src/overlays/ov022/auto/copyMovieChunkHeaderFields.c:
     complete
     .text       start:0x020aaae8 end:0x020aaafc
 

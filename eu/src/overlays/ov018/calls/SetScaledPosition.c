@@ -1,5 +1,5 @@
 #define FX_Div_01ff9c84 FX_Div
-#define GetCtxModeByte_02068084 func_ov001_02068084
+#define GetCtxModeByte_02068084 GetCtxModeByte
 #define ScaleVecFx32InPlace_0204a5e4 ScaleVecFx32InPlace
 #define SetScaledPosition_020a34f4 SetScaledPosition
 #define func_ov018_020a3530 SyncActorShapePosition

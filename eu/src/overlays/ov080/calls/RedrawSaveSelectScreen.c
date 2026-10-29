@@ -1,0 +1,18 @@
+#define CallVirtualHandlerSlot1_02001574 CallVirtualHandlerSlot1
+#define DrawSaveSlotPanel_020c4e6c DrawSaveSlotPanel
+#define DrawSlotDetailPanel_020c50f8 DrawSlotDetailPanel
+#define DrawTextAnchored_020015a0 DrawTextAnchored
+#define HideSaveSlotsShowPrompt_020c54b8 HideSaveSlotsShowPrompt
+#define InvokeCallback40_020b8268 InvokeCallback40
+#define OS_GetTick_02003fd4 OS_GetTick
+#define OS_SNPrintf_0202e080 OS_SNPrintf_0202e094
+#define RedrawSaveSelectScreen_020c5584 RedrawSaveSelectScreen
+#define SetEntrySlotsVisible_020b9580 SetEntrySlotsVisible
+#define TagTracker_InvokeCallback_020b8210 TagTracker_InvokeCallback
+#define Text_UploadTileBuffer_02001520 Text_UploadTileBuffer
+#define func_ov027_020b81e8 func_ov027_020b8208
+#define func_ov027_020b91a8 GetWidgetPosition
+#define func_ov027_020b91c8 func_ov027_020b91e8
+#define func_ov027_020ba2a8 func_ov027_020ba2c8
+#define func_ov039_020bc914 GetMenuSelection
+#include "src/ov080/unclassified_helpers/RedrawSaveSelectScreen_020c5584.c"

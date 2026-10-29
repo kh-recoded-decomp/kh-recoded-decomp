@@ -1,7 +1,0 @@
-#define Animation_SetFrameWithSingleWrap func_01ffb2f8
-#define Script_SetActorAnimationFrame_0208df04 func_ov001_0208df2c
-#define func_02025960 ScriptCmd_ReturnValue
-#define func_02025de4 ScriptVm_ReadOperandInt
-#define func_02025df8 ScriptVm_ReadOperandFx32
-#define func_02036240 ActorRegistry_GetEntityByIndex
-#include "src/ov001/actor_animation/Script_SetActorAnimationFrame_0208df04.c"

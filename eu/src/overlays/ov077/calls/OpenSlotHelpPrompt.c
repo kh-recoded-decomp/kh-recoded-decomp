@@ -14,7 +14,7 @@ SlotHelpPromptDefinition gEquipmentOtherSlotHelpPrompt = {
 typedef char ItemMenuModeOffset[(u32)&((ItemMenuWork *)0)->mode == 0x11ff4 ? 1 : -1];
 typedef char ItemMenuSlotOffset[(u32)&((ItemMenuWork *)0)->slot == 0x11ff8 ? 1 : -1];
 
-extern BOOL func_ov077_020c8bf4(void *, void *, BOOL (*)(void *), void *,
+extern BOOL OpenItemPrompt(void *, void *, BOOL (*)(void *), void *,
                              const SlotHelpPromptDefinition *, void *);
 extern void SetModeTwoAndRefresh(ItemMenuWork *);
 extern void *func_ov039_020bc1dc(void);
@@ -26,11 +26,11 @@ BOOL OpenSlotHelpPrompt(ItemMenuWork *work)
 
     switch (work->slot) {
     case 0:
-        opened = func_ov077_020c8bf4(work->promptScreen, work, NULL,
+        opened = OpenItemPrompt(work->promptScreen, work, NULL,
             (void *)SetModeTwoAndRefresh, &gEquipmentSlot0HelpPrompt, (void *)1);
         break;
     case 1:
-        opened = func_ov077_020c8bf4(work->promptScreen, work, NULL,
+        opened = OpenItemPrompt(work->promptScreen, work, NULL,
             (void *)SetModeTwoAndRefresh, &gEquipmentSlot1HelpPrompt, (void *)1);
         break;
     default:
@@ -38,7 +38,7 @@ BOOL OpenSlotHelpPrompt(ItemMenuWork *work)
             gEquipmentOtherSlotHelpPrompt.align = -1;
             gEquipmentOtherSlotHelpPrompt.unknown06 += (u16)((u32)(work->slot - 2) << 4);
         }
-        opened = func_ov077_020c8bf4(work->promptScreen, work, NULL,
+        opened = OpenItemPrompt(work->promptScreen, work, NULL,
             (void *)SetModeTwoAndRefresh, &gEquipmentOtherSlotHelpPrompt, (void *)1);
         break;
     }

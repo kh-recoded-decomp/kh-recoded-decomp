@@ -10,7 +10,7 @@ typedef struct {
 
 extern SceneState *data_ov028_020bb3a0;
 
-extern s8 func_ov001_02068084(void);
+extern s8 GetCtxModeByte(void);
 extern void LoadContextResourceGroups(int sound);
 extern BOOL IsSessionFlagSet(u32 flag);
 extern void SetupSlotPanelMode(int mode, int enable);
@@ -29,7 +29,7 @@ extern void CacheSeqArcStatus(int index);
 int ResumeFieldFromMenu(void) {
     SceneState *scene = data_ov028_020bb3a0;
 
-    switch (func_ov001_02068084()) {
+    switch (GetCtxModeByte()) {
     case 2:
         LoadContextResourceGroups(9);
         if (IsSessionFlagSet(0x3716)) {

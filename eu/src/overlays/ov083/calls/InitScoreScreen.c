@@ -115,8 +115,8 @@ extern void *FindWidgetById(void *container, int id);
 extern void func_ov027_020b97d8(void *container, void *widget, int mode);
 extern int *GetWidgetPosition(void *container, void *widget);
 extern s16 SetWidgetDigitDisplay(void *cells, int widgetId, int key, u32 value);
-extern s16 func_ov039_020be378(void *cells, int widgetId, int key, u32 value);
-extern void func_ov039_020bc4a8(int a, int b, int c, int d, int e);
+extern s16 DrawWidgetPlayTime(void *cells, int widgetId, int key, u32 value);
+extern void LoadSubBgAndTriggerTags(int a, int b, int c, int d, int e);
 extern BOOL GetMenuStackDepth(void);
 extern BOOL GetPreviousMenuStackEntry(void);
 extern void *Archive_LoadFile(u32 fileId, int mode);
@@ -214,13 +214,13 @@ BOOL InitScoreScreen(ScoreScreen *screen)
     screen->valueColumn = (GetWidgetPosition(container, columnWidget)[0] >> 12) - 16;
 
     screen->bestDigits = SetWidgetDigitDisplay(container, 0x14, 8, *(u32 *)(data_0205fe0c + 0x28d0));
-    screen->timerDigits = func_ov039_020be378(container, 1, 1, screen->elapsedSeconds);
+    screen->timerDigits = DrawWidgetPlayTime(container, 1, 1, screen->elapsedSeconds);
     screen->digitsB = SetWidgetDigitDisplay(container, 0x15, 9, 0);
     screen->digitsC = SetWidgetDigitDisplay(container, 0, 0, 0);
     screen->cells = container;
     screen->records = elements;
 
-    func_ov039_020bc4a8(2, 0, 0, 1, 0);
+    LoadSubBgAndTriggerTags(2, 0, 0, 1, 0);
     if (GetMenuStackDepth() && GetPreviousMenuStackEntry()) {
         screen->bgFile = Archive_LoadFile(BuildSlotImageParams(2, 0), 0xe);
         GetBgDataFromArchive(screen->bgData, screen->bgFile, -1, -1, 0);

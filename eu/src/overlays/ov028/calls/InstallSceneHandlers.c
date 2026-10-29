@@ -4,7 +4,7 @@
 #define IsSceneUnpaused_020bb15c IsSceneUnpaused
 #define ReleaseHandle_020bb084 ReleaseHandle_020bb0a4
 #define SetFieldModeFlag_020bb03c SetFieldModeFlag
-#define SetupSceneFromParams_020bb0a4 func_ov028_020bb0c4
+#define SetupSceneFromParams_020bb0a4 SetupSceneFromParams
 #define func_ov028_020bae68 func_ov028_020bae88
 #define func_ov028_020bafc8 func_ov028_020bafe8
 #define func_ov028_020bafec func_ov028_020bb00c

@@ -1,7 +1,7 @@
 InitEntryTables kind:function(thumb,size=0x9ce) addr:0x020c4280
 InitOv081Screen kind:function(thumb,size=0x184) addr:0x020c4c50
 AdvanceListAndRedraw kind:function(thumb,size=0x34) addr:0x020c4dd4
-func_ov081_020c4e08 kind:function(thumb,size=0x12) addr:0x020c4e08
+BindDescriptor0_020c4e08 kind:function(thumb,size=0x12) addr:0x020c4e08
 UpdateScrollArrows kind:function(thumb,size=0x9c) addr:0x020c4e1c
 BuildVisibleEntryIndex kind:function(thumb,size=0x2c8) addr:0x020c4eb8
 LoadBitIndexTable kind:function(thumb,size=0x30) addr:0x020c5180
@@ -15,7 +15,7 @@ func_ov081_020c5478 kind:function(thumb,size=0x8) addr:0x020c5478
 CountUnlockedListEntries kind:function(thumb,size=0xb0) addr:0x020c5480
 ApplyTextColorTag kind:function(thumb,size=0x20) addr:0x020c5530
 DrawBgTextLabel kind:function(thumb,size=0x110) addr:0x020c5550
-func_ov081_020c5660 kind:function(thumb,size=0x12) addr:0x020c5660
+BindDescriptor0_020c5660 kind:function(thumb,size=0x12) addr:0x020c5660
 DrawListPageCounter kind:function(thumb,size=0x54) addr:0x020c5674
 DrawListTitle kind:function(thumb,size=0x74) addr:0x020c56c8
 DestroyOv081Screen kind:function(thumb,size=0x74) addr:0x020c573c

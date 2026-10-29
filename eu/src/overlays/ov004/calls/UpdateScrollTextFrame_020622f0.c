@@ -1,3 +1,4 @@
+#define func_ov004_02061e7c StepScrollTextScroll
 #define AlarmCallback_0204f12c AlarmCallback_0204f140
 #define FeedScrollTextLine_02062dc0 FeedScrollTextLine
 #define UpdateScrollTextScreens_02062990 UpdateScrollTextScreens

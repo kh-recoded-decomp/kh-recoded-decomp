@@ -1,3 +1,4 @@
+#define func_ov001_020716e8 UploadPaletteSlotBlock
 #define func_ov001_020645c8 IsSessionFlagSet
 #define RefreshMenuGaugeState_02073a3c RefreshMenuGaugeState
 #define SetMenuGaugeActive_0207512c SetMenuGaugeActive

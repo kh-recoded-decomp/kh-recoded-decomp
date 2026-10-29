@@ -392,7 +392,7 @@ src/overlays/ov036/calls/func_ov036_020bdd84.c:
     complete
     .text       start:0x020bdd84 end:0x020bddb4
 
-src/overlays/ov036/calls/func_ov036_020bddb4.c:
+src/overlays/ov036/calls/IsSceneState0_020bddb4.c:
     complete
     .text       start:0x020bddb4 end:0x020bddc6
 
@@ -548,7 +548,7 @@ src/overlays/ov036/calls/ScriptCmd_StartMosaicTransition.c:
     complete
     .text       start:0x020be7b4 end:0x020be7de
 
-src/overlays/ov036/calls/func_ov036_020be7e0.c:
+src/overlays/ov036/calls/IsSceneState0_020be7e0.c:
     complete
     .text       start:0x020be7e0 end:0x020be7f2
 

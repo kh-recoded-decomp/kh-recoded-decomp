@@ -2,7 +2,7 @@
 #define FindActiveRecordById_020b8184 FindActiveRecordById
 #define GFXi_EnqueueCommand_02014090 NNS_GfdRegisterNewVramTransferTask
 #define GetSceneTagTracker_020711b0 GetSceneTagTracker
-#define InvokeCallback40_020b8268 func_ov027_020b8288
+#define InvokeCallback40_020b8268 InvokeCallback40
 #define IsFieldFlag8Set_020728a4 IsFieldFlag8Set
 #define data_ov001_0209ee6a gFieldMenuModeBackgroundPalettes
 #define data_ov001_0209ee82 gFieldMenuModeHighlightPalettes

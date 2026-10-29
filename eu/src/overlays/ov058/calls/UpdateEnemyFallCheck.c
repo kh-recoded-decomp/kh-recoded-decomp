@@ -1,4 +1,4 @@
-#define GetCtxModeByte_02068084 func_ov001_02068084
+#define GetCtxModeByte_02068084 GetCtxModeByte
 #define UpdateEnemyFallCheck_020d6f58 UpdateEnemyFallCheck
 #define func_ov052_020ceb54 func_ov052_020ceb74
 #define func_ov058_020d50ac func_ov058_020d50cc

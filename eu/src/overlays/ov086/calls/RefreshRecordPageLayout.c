@@ -38,7 +38,7 @@ extern void SelectListNodeOrFirst(void *self, void *target);
 extern void Text_UploadTileBuffer(void *surface);
 extern void *FindActiveRecordById(void *pool, u32 recordId);
 extern void func_ov027_020b8200(void *pool, void *record, s16 y);
-extern void func_ov027_020b8230(void *pool, void *record);
+extern void TagTracker_InvokeCallback(void *pool, void *record);
 extern void func_ov027_020b824c(void *pool, void *record, u16 x, u16 y);
 extern void DrawRecordHintText(Ov086Menu *menu);
 
@@ -133,7 +133,7 @@ void RefreshRecordPageLayout(Ov086Menu *menu)
                 for (col = 0; col < 3; col++) {
                     if (mask & (1 << (col + row * 3))) {
                         func_ov027_020b8200(menu->recordPool, record, row * 9 + col * 2 + 5);
-                        func_ov027_020b8230(menu->recordPool, record);
+                        TagTracker_InvokeCallback(menu->recordPool, record);
                     }
                 }
             }

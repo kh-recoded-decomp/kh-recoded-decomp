@@ -26,7 +26,7 @@ and `SQRT_PARAM` (0x2B8, 64-bit). The context is the SDK's `CPContext`, 0x1C
 bytes: `u64 div_numer; u64 div_denom; u64 sqrt; u16 div_mode; u16 sqrt_mode;`.
 Thread switches save and restore it so that every thread owns the unit:
 `OS_SaveContext` / `OS_LoadContext`, the ITCM IRQ thread-switch handler
-`func_01ff81b0` and the game's `DispObjList_Update` call these two routines.
+`OS_IrqHandler_ThreadSwitch` and the game's `DispObjList_Update` call these two routines.
 
 ### `CP_SaveContext`
 

@@ -1,6 +1,6 @@
 #define func_ov001_020645c8 IsSessionFlagSet
 #define ApplyLevelRankParam_020ce730 ApplyLevelRankParam
-#define GetCtxModeByte_02068084 func_ov001_02068084
+#define GetCtxModeByte_02068084 GetCtxModeByte
 #define SetParamHalf18_02050630 SetParamHalf18
 #define data_ov075_020d16e0 sLevelRankThresholds
 #define func_020505a8 GetSelectionPackedValueBlock

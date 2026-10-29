@@ -39,8 +39,8 @@ This is a bounds operation, not collision detection or a position update.
 
 ## Matched touched-object sweep
 
-`func_ov007_020a09ac` is now matched through
-`src/overlays/ov007/calls/func_ov007_020a09ac.c`, which maps the shared
+`SweepTouchSphere` is now matched through
+`src/overlays/ov007/calls/SweepTouchSphere.c`, which maps the shared
 `src/ov007/shared_engine/SweepTouchSphere_020a098c.c` implementation to EU
 symbols. Commit `8725d677` supplied this match; the older local nonmatching
 candidate has been removed. The operation name does not claim a particular
@@ -77,7 +77,7 @@ python tools/verify_idx.py src/calls/MakeSphereShape.c MakeSphereShape
 python tools/verify_idx.py src/calls/SphereToBounds.c SphereToBounds
 python tools/verify_idx.py src/calls/OffsetBoxByDelta.c OffsetBoxByDelta
 python tools/test_collision_geometry.py -v
-python tools/verify_idx.py src/overlays/ov007/calls/func_ov007_020a09ac.c func_ov007_020a09ac
+python tools/verify_idx.py src/overlays/ov007/calls/SweepTouchSphere.c SweepTouchSphere
 ```
 
 The four function checks must match (64, 60, 164 and 304 bytes).

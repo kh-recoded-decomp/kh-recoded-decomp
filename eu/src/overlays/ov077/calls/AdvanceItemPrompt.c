@@ -1,0 +1,9 @@
+#define AdvanceItemPrompt_020c7fc0 AdvanceItemPrompt
+#define InitDefaultMessageWindow_020c83b4 InitDefaultMessageWindow
+#define MeasureMessageTiles_020c82ec MeasureOv077MessageTiles
+#define MenuScreen_RefreshMarker_020c8b70 MenuScreen_RefreshMarker_020c8b90
+#define SetGlobalPackedBit_02027320 SetGlobalPackedBit
+#define func_ov027_020b90a4 FindWidgetById
+#define func_ov027_020b9580 SetEntrySlotsVisible
+#define func_ov027_020ba2a8 func_ov027_020ba2c8
+#include "src/ov077/unclassified_helpers/AdvanceItemPrompt_020c7fc0.c"

@@ -1,0 +1,4 @@
+#define CanAdvancePastIntro_02063cac CanAdvancePastIntro
+#define Ov006_ShouldEnterConfirmState func_ov021_020af830
+#define Session_IsSceneInterruptible func_ov001_0206685c
+#include "src/ov001/shared_engine/CanAdvancePastIntro_02063cac.c"

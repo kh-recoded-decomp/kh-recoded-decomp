@@ -9,7 +9,7 @@
 #define func_0202cc6c Msg_OpenContainerAndReadHeader
 #define func_0202cd78 ZeroHalfThenFree
 #define func_ov001_020711e0 GetFieldFont3
-#define func_ov027_020b9df0 func_ov027_020b9e10
+#define func_ov027_020b9df0 UpdateWidgetLayerDefault_020b9e10
 #define func_ov027_020b9e00 MarkTileTableRowDirty
 #define func_ov027_020ba25c LoadPackedFileView
 #include "src/ov024/unclassified_helpers/SetupBoardTextLayer_020b664c.c"

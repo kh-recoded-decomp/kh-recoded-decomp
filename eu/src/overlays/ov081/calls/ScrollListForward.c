@@ -1,4 +1,4 @@
-#define BindDescriptor0_020c5640 func_ov081_020c5660
+#define BindDescriptor0_020c5640 BindDescriptor0_020c5660
 #define DrawListTitle_020c56a8 DrawListTitle
 #define FX_Div_020c542c func_ov081_020c544c
 #define PlaySoundEffect_0204d924 PlaySoundEffect

@@ -1,2 +1,0 @@
-#define FreeBufferAndClearStatus_0206a918 func_ov001_0206a918
-#include "src/ov001/shared_engine/FreeBufferAndClearStatus_0206a918.c"

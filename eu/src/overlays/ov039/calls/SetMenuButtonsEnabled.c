@@ -1,4 +1,4 @@
-#define SetFlagBit0_020b85a8 func_ov027_020b85c8
+#define SetFlagBit0_020b85a8 SetFlagBit0
 #define SetMenuButtonsEnabled_020bae84 SetMenuButtonsEnabled
 #define SetWidgetRootDpadEnabled_020b9874 SetWidgetRootDpadEnabled
 #define SetWidgetRootTouchEnabled_020b984c SetWidgetRootTouchEnabled

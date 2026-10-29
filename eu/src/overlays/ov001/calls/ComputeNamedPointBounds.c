@@ -1,5 +1,5 @@
 #define ComputeNamedPointBounds_02068268 ComputeNamedPointBounds
-#define FindNextNamedEntry_020670b4 func_ov001_020670b4
+#define FindNextNamedEntry_020670b4 FindNextNamedEntry
 #define ForEachFaceOnPoint_02033918 ForEachFaceOnPoint
 #define OS_SPrintf_02002428 OS_SPrintf
 #define Strlen_02021e44 strlen

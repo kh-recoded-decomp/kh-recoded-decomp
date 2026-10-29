@@ -1,4 +1,4 @@
 #define CameraCollision_ShouldTestContact_020c1c40 CameraCollision_ShouldTestContact
 #define ContainsMatchingEntry_02034900 ContainsMatchingEntry
-#define GetCtxModeByte_02068084 func_ov001_02068084
+#define GetCtxModeByte_02068084 GetCtxModeByte
 #include "src/ov046/shared_engine/CameraCollision_ShouldTestContact_020c1c40.c"

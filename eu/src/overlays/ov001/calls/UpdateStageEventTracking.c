@@ -13,7 +13,7 @@
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define data_ov001_020a02dc sOv001_TraTg_020a02fc
 #define func_ov001_020909e4 UpdateSceneObjectAttachments
-#define func_ov001_02097324 func_ov001_0209734c
+#define func_ov001_02097324 ProcessStageCues
 #define func_ov021_020af5f4 func_ov021_020af614
 #define func_01ffaff4 VEC_NormalizeLength
 #include "src/ov001/shared_engine/UpdateStageEventTracking_02093eec.c"

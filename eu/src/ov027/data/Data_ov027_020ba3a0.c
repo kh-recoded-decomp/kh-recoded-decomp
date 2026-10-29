@@ -5,12 +5,12 @@
 extern void func_ov027_020b9f74(void);
 extern void func_ov027_020b9f8c(void);
 extern void func_ov027_020ba060(void);
-extern void func_ov027_020ba094(void);
+extern void ClearOverlayLoadQueues(void);
 
 void *data_ov027_020ba3b4[11] = {
     (void *)0x000E0012,
     (void *)func_ov027_020ba060,
-    (void *)func_ov027_020ba094,
+    (void *)ClearOverlayLoadQueues,
     (void *)0x00000018,
     NULL,
     NULL,

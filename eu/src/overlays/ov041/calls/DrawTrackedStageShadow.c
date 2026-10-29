@@ -18,7 +18,7 @@ void DrawTrackedStageShadow(StageFollowerActor *actor)
                 NNS_G3dGeBufferOP_N(0x1b, &scaling, 3);
                 NNS_G3dGlbFlushP();
                 if (actor->node.flags & 0x40) {
-                    func_01fff67c(actor->node.colorScale);
+                    setMaterialColorScale(actor->node.colorScale);
                 }
                 NNS_G3dGeBufferOP_N(0x17, &tracked->matrix, 12);
                 NNS_G3dDraw(&actor->node.renderObject);

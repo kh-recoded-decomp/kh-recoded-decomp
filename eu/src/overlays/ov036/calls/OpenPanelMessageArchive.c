@@ -15,7 +15,7 @@ typedef struct PanelManager {
 extern PanelManager data_ov036_020c3940;
 extern const char sOv036_Ev2DEVW0FormatDP2_020c3748[];
 
-extern s8 func_ov001_02068084(void);
+extern s8 GetCtxModeByte(void);
 extern void *OS_SPrintf(char *dst, const char *format, ...);
 extern u32 Msg_OpenContainerAndReadHeader(const char *path, int mode, int flags);
 extern int findSharedResourceByName(void *table, void *name);
@@ -31,7 +31,7 @@ void OpenPanelMessageArchive(char *name)
     char path[16];
 
     if (work->resourceTable == 0) {
-        OS_SPrintf(path, sOv036_Ev2DEVW0FormatDP2_020c3748, func_ov001_02068084() + 1);
+        OS_SPrintf(path, sOv036_Ev2DEVW0FormatDP2_020c3748, GetCtxModeByte() + 1);
         work->resourceTable = Msg_OpenContainerAndReadHeader(path, 0xd, 0);
     }
     resourceIndex = findSharedResourceByName((void *)work->resourceTable, name);

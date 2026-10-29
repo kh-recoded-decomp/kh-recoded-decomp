@@ -1,2 +1,0 @@
-#define copyMovieChunkHeaderFields_020aaac8 func_ov022_020aaae8
-#include "src/ov022/video_playback/copyMovieChunkHeaderFields_020aaac8.c"

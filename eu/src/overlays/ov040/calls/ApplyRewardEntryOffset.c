@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-extern unsigned int func_ov031_020bb074(void);
+extern unsigned int UpdateSceneScroll(void);
 extern void AdvanceToRoutedSlot(int entry, unsigned int value);
 
 void ApplyRewardEntryOffset(int entry, int offset)
@@ -8,7 +8,7 @@ void ApplyRewardEntryOffset(int entry, int offset)
     int baseValue;
 
     if (entry != 0) {
-        baseValue = func_ov031_020bb074();
+        baseValue = UpdateSceneScroll();
         AdvanceToRoutedSlot(entry, baseValue + offset);
     }
 }

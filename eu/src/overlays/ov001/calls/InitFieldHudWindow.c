@@ -5,7 +5,7 @@
 #define InitTextLayerAt_020014b0 InitTextLayerAt
 #define LoadFieldBottomRowTiles_0206ed30 LoadFieldBottomRowTiles
 #define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
-#define UpdateWidgetLayerDefault_020b9df0 func_ov027_020b9e10
+#define UpdateWidgetLayerDefault_020b9df0 UpdateWidgetLayerDefault_020b9e10
 #define data_ov001_0209dc74 gFieldHudTextFrame
 #define func_01ff878c MIi_CpuCopyFast
 #define func_ov001_02073634 MakePrimaryVramKey_02073634

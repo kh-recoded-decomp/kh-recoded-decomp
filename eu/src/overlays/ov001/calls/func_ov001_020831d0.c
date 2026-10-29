@@ -1,9 +1,0 @@
-#define CollisionQuery_Init_02034c74 CollisionQuery_Init
-#define FallCylinderObject_020831a8 func_ov001_020831d0
-#define InitCylinderShape_0203aeac InitCylinderShape
-#define OffsetBoxByDelta_0203ac70 OffsetBoxByDelta
-#define SweepWorldCollision_020364a0 SweepWorldCollision
-#define VEC_Subtract_01ff9e3c VEC_Subtract
-#define func_01ffaff4 VEC_NormalizeLength
-#define func_02036240 ActorRegistry_GetEntityByIndex
-#include "src/ov001/field_objects/FallCylinderObject_020831a8.c"

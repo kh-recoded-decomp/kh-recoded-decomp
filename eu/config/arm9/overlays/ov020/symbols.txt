@@ -44,7 +44,7 @@ func_ov020_020a359c kind:function(arm,size=0x8) addr:0x020a359c
 TryCollidePanelShape kind:function(arm,size=0x17c) addr:0x020a35a4
 TryGetFieldHandle_020a3720 kind:function(arm,size=0x24) addr:0x020a3720
 DrawStackedPanels kind:function(arm,size=0xb4) addr:0x020a3744
-func_ov020_020a37f8 kind:function(arm,size=0x168) addr:0x020a37f8
+UpdateElevatorPanel kind:function(arm,size=0x168) addr:0x020a37f8
 CreateKind3EntryPool kind:function(thumb,size=0x58) addr:0x020a3960
 SpawnPanelCollider kind:function(thumb,size=0x98) addr:0x020a39b8
 data_ov020_020a3a50 kind:data(any) addr:0x020a3a50

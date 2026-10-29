@@ -12,7 +12,7 @@
 #define func_ov001_020863e0 func_ov001_02086408
 #define func_ov001_02087224 func_ov001_0208724c
 #define func_ov001_0208764c func_ov001_02087674
-#define func_ov001_020958f4 func_ov001_0209591c
+#define func_ov001_020958f4 ApplyHitToEnemyGroup
 #define func_ov032_020bbc60 func_ov032_020bbc80
 #define func_ov032_020bfba4 ApplyGroupLeaderHit
 #include "src/ov016/field_objects/HandleFieldObjectHit_020a3d90.c"

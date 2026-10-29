@@ -1,3 +1,4 @@
+#define func_ov001_02073d00 StartGaugeTween
 #define UpdateGaugeUnits_02074b7c UpdateGaugeUnits
 #define data_ov001_020a04ac data_ov001_020a04cc
 #define func_ov001_02073894 BlitFourPixelInsetPattern

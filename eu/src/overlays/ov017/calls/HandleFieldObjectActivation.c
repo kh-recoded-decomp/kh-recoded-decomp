@@ -57,7 +57,7 @@ typedef struct DropRequest {
 } DropRequest;
 
 extern BOOL func_ov001_02087674(void);
-extern s8 func_ov001_02068084(void);
+extern s8 GetCtxModeByte(void);
 extern BOOL IsFieldTypeOneOrTen(FieldObject *object);
 extern void AddSessionCounter(int id, int arg);
 extern u8 *ActorRegistry_GetEntityByIndex(int slot);
@@ -87,7 +87,7 @@ int HandleFieldObjectActivation(FieldObject *object, HitInfo *hit)
             return 0x10;
         }
     }
-    if (object->kind == 2 || (object->kind == 3 && func_ov001_02068084() == 6)) {
+    if (object->kind == 2 || (object->kind == 3 && GetCtxModeByte() == 6)) {
         if (hit->damage < 0x7fffffff) {
             return 1;
         }

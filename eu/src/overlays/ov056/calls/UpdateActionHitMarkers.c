@@ -67,7 +67,7 @@ typedef char ActionMarkerStateOffsetCheck[
     (u32)&((ActionMarkerActor *)0)->action == 0x1078 ? 1 : -1];
 
 extern BOOL func_ov001_02072040(void);
-extern void func_ov052_020cfdd4(ActionMarkerActor *, ActionRecord *, int);
+extern void SelectHitReaction(ActionMarkerActor *, ActionRecord *, int);
 extern void ApplyAnimRootMotion(ActionMarkerActor *, ActionRecord *);
 extern void InitSlotEntryFromRecord(ActionHitEntry *, void *, int, void *, int);
 extern void SpawnGroupHitMarker(ActionMarkerActor *, void *, void *);
@@ -87,7 +87,7 @@ void UpdateActionHitMarkers(ActionMarkerActor *actor)
     ActionHitEntry hitEntry;
     s16 groupId;
 
-    func_ov052_020cfdd4(actor, record, which);
+    SelectHitReaction(actor, record, which);
     ApplyAnimRootMotion(actor, record);
     InitSlotEntryFromRecord(&hitEntry, record, which, state, actor->player);
     if (state->emitHitMarkers != FALSE) {

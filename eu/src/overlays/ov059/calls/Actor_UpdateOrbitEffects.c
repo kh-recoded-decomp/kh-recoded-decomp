@@ -1,5 +1,5 @@
 #define Actor_UpdateOrbitEffects_020cabc0 Actor_UpdateOrbitEffects
 #define VEC_Add_01ff9e0c VEC_Add
 #define func_ov021_020a8eec GetGroupMemberData
-#define func_ov059_020cac38 func_ov059_020cac58
+#define func_ov059_020cac38 Orbit_StepSpiralOffset
 #include "src/ov059/unclassified_helpers/Actor_UpdateOrbitEffects_020cabc0.c"

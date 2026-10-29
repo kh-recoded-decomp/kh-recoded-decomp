@@ -1,0 +1,16 @@
+#define Actor_GetModelPosition_020cd0d8 Actor_GetModelPosition
+#define BuildBasisMatrix_0204bf28 BuildBasisMatrix
+#define FixedPointMultiply12 FX_Mul
+#define GetLinkedAngleOffset_020cd0e4 GetLinkedAngleOffset_020cd104
+#define PlaySoundEffect_0204d924 PlaySoundEffect
+#define RotateVectorAroundAxis_0204b34c RotateVectorAroundAxis
+#define ScaleVecFx32InPlace_0204a5e4 ScaleVecFx32InPlace
+#define SpawnHitEffects_020caea0 SpawnHitEffects
+#define SpawnSoundSlot_0204da8c SpawnSoundSlot
+#define VEC_Add_01ff9e0c VEC_Add
+#define VEC_MultAdd_01ffa09c VEC_MultAdd
+#define data_0205356c gSinFx12Table
+#define data_ov059_020cfe60 data_ov059_020cfe80
+#define func_ov059_020ceefc Seeker_Start
+#define random_next_scaled_0202aa04 random_next_scaled
+#include "src/ov059/actor_effects/SpawnHitEffects_020caea0.c"

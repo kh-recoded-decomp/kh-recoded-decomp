@@ -1,5 +1,5 @@
 #define CameraProbe_TestContact_020c64b0 CameraProbe_TestContact
-#define GetCtxModeByte_02068084 func_ov001_02068084
+#define GetCtxModeByte_02068084 GetCtxModeByte
 #define IsFacingContactNormal_020349d8 IsFacingContactNormal
 #define SetShapePosition_0203afa0 SetShapePosition
 #define VEC_Add_01ff9e0c VEC_Add

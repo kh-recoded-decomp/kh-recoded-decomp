@@ -6,7 +6,7 @@ extern char sOv025_Ocuitask_020b775c[];
 extern u32 MakePrimaryVramKey(u32 id);
 extern void func_ov027_020b7e44(u32 ctx, u32 id);
 extern u32 FindActiveRecordById(u32 ctx, u32 id);
-extern void func_ov027_020b8230(int *tracker, int arg);
+extern void TagTracker_InvokeCallback(int *tracker, int arg);
 extern void AdvanceMenuDelayCounter(u32 ctx);
 extern void InvokeForChannelOrBoth(int kind, void *data, u32 handler, u32 duration);
 extern void SetWidgetRootTouchEnabled(u32 ctx, u32 enable);
@@ -19,9 +19,9 @@ u32 RefreshTagCallbacksAndSchedule(void)
 
     func_ov027_020b7e44(ctx, sound);
     tag = FindActiveRecordById(ctx, 0);
-    func_ov027_020b8230((int *)ctx, tag);
+    TagTracker_InvokeCallback((int *)ctx, tag);
     tag = FindActiveRecordById(ctx, 1);
-    func_ov027_020b8230((int *)ctx, tag);
+    TagTracker_InvokeCallback((int *)ctx, tag);
     AdvanceMenuDelayCounter(ctx);
     InvokeForChannelOrBoth(1, sOv025_Ocuitask_020b775c, 0x020b5821, 0xffffffff);
     SetWidgetRootTouchEnabled(ctx + 0x4c, 1);

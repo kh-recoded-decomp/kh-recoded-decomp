@@ -1,0 +1,4 @@
+#define BindDescriptor0_020c5640 BindDescriptor0_020c5660
+#define Ov008_GetDescriptor0 func_ov081_020c544c
+#define Ov008_SetWord0And20 DrawListPageCounter
+#include "src/ov081/shared_engine/BindDescriptor0_020c5640.c"

@@ -1,6 +1,0 @@
-#define CreateFieldTaskNode_02069274 CreateFieldTaskNode
-#define NNSi_FndAllocFromDefaultHeapEx_0202a19c NNS_FndAllocFromDefaultExpHeapEx
-#define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
-#define ScriptCmd_QueueFlagTaskKind2_02065010 func_ov001_02065010
-#define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
-#include "src/ov001/scripted_actor_behavior/ScriptCmd_QueueFlagTaskKind2_02065010.c"

@@ -1,6 +1,6 @@
 #define FindActiveRecordById_020b8184 FindActiveRecordById
 #define G2_GetBG2CharPtr_02007120 G2_GetBG2CharPtr
-#define InvokeCallback40_020b8268 func_ov027_020b8288
+#define InvokeCallback40_020b8268 InvokeCallback40
 #define NNSi_FndAllocFromDefaultHeapEx_0202a19c NNS_FndAllocFromDefaultExpHeapEx
 #define SuspendFieldForPause_02071270 SuspendFieldForPause
 #define data_ov001_020a04a4 data_ov001_020a04c4

@@ -1,7 +1,7 @@
 #define FindActiveRecordById_020b8184 FindActiveRecordById
 #define SelectListNodeOrFirst_020019b8 SelectListNodeOrFirst
 #define ShowPrimaryRecordList_020bfe24 ShowPrimaryRecordList
-#define TagTracker_InvokeCallback_020b8210 func_ov027_020b8230
+#define TagTracker_InvokeCallback_020b8210 TagTracker_InvokeCallback
 #define Text_UploadTileBuffer_02001520 Text_UploadTileBuffer
 #define func_ov027_020b90a4 FindWidgetById
 #define func_ov027_020b9580 SetEntrySlotsVisible

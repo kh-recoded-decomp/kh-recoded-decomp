@@ -1,4 +1,4 @@
-#define GetCtxModeByte_02068084 func_ov001_02068084
+#define GetCtxModeByte_02068084 GetCtxModeByte
 #define InitItemPanel_02085ea4 InitItemPanel
 #define PlaceRecordPanels_020bbce8 PlaceRecordPanels
 #define ScaleVecFx32InPlace_0204a5e4 ScaleVecFx32InPlace

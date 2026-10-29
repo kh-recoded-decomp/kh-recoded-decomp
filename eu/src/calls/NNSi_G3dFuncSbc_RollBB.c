@@ -7,7 +7,7 @@
 #define GetCachedInverseViewMatrix_02019378 NNS_G3dGlbGetInvV
 #define MTX_Concat44_02005a08 MTX_Concat44
 #define NNSi_G3dFuncSbc_RollBB_02039fec NNSi_G3dFuncSbc_RollBB
-#define QueueOrSendGeometryCommandPair_01ffcedc func_01ffcedc
+#define QueueOrSendGeometryCommandPair_01ffcedc QueueOrSendGeometryCommandPair
 #define VEC_CrossProduct_01ff9ea8 VEC_CrossProduct
 #define VEC_Mag_01ff9f28 VEC_Mag
 #define data_0205a924 NNS_G3dGlb

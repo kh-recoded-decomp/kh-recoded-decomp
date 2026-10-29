@@ -16,7 +16,7 @@ extern BOOL OpenFieldPanel(void);
 extern int func_02029f5c(void);
 extern int func_02029f6c(void);
 extern int abs(int x);
-extern int func_ov001_02088580(int script, int operand);
+extern int CmdOpenDialog_02088580(int script, int operand);
 
 s32 func_ov001_020882d8(void)
 {
@@ -32,7 +32,7 @@ s32 func_ov001_020882d8(void)
                 manager->axes[axisIndex].value = 0;
             }
         }
-        return (s32)func_ov001_02088580;
+        return (s32)CmdOpenDialog_02088580;
     }
     return 0;
 }

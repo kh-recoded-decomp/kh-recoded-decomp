@@ -3,5 +3,5 @@
 #define SpawnPanelCollider_020a3998 SpawnPanelCollider
 #define data_02053438 gZeroVecFx32
 #define func_ov001_02086308 func_ov001_02086330
-#define func_ov020_020a37d8 func_ov020_020a37f8
+#define func_ov020_020a37d8 UpdateElevatorPanel
 #include "src/ov020/unclassified_helpers/SpawnPanelCollider_020a3998.c"

@@ -1,5 +1,5 @@
 #define ClearScreenLayerDirty_020bc128 ClearScreenLayerDirty
-#define CopySourceBlock_020b9f7c func_ov027_020b9f9c
+#define CopySourceBlock_020b9f7c CopySourceBlock
 #define GetCardThreadStartTick_0202726c GetCardThreadStartTick
 #define OS_GetTick_02003fd4 OS_GetTick
 #define SetPrimaryElementEnabled_020bc054 SetPrimaryElementEnabled

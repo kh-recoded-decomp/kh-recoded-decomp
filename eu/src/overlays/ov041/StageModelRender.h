@@ -5,7 +5,7 @@
 
 extern void NNS_G3dGeBufferOP_N(u32 command, const void *data, u32 words);
 extern void NNS_G3dGlbFlushP(void);
-extern void func_01fff67c(int colorScale);
+extern void setMaterialColorScale(int colorScale);
 extern void NNS_G3dDraw(StageModelRenderObject *renderObject);
 
 void DrawTrackedStageShadow(StageFollowerActor *actor);

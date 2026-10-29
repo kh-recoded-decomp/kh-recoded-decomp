@@ -1,3 +1,3 @@
-#define GetCtxModeByte_02068084 func_ov001_02068084
+#define GetCtxModeByte_02068084 GetCtxModeByte
 #define IsStageAllowedForMode_020c8008 IsStageAllowedForMode
 #include "src/ov052/unclassified_helpers/IsStageAllowedForMode_020c8008.c"

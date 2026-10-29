@@ -1,0 +1,2 @@
+#define StampTileRegionPalette_020b8284 StampTileRegionPalette
+#include "src/ov027/display_session/StampTileRegionPalette_020b8284.c"

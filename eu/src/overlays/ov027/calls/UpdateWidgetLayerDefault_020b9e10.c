@@ -1,0 +1,3 @@
+#define Ov000_UpdateWidgetLayer GetTileTableRow
+#define UpdateWidgetLayerDefault_020b9df0 UpdateWidgetLayerDefault_020b9e10
+#include "src/ov027/shared_engine/UpdateWidgetLayerDefault_020b9df0.c"

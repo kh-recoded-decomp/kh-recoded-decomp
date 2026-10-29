@@ -264,7 +264,7 @@ src/overlays/ov059/calls/func_ov059_020cac3c.c:
     complete
     .text       start:0x020cac3c end:0x020cac58
 
-src/overlays/ov059/calls/func_ov059_020cac58.c:
+src/overlays/ov059/calls/Orbit_StepSpiralOffset.c:
     complete
     .text       start:0x020cac58 end:0x020cad60
 
@@ -272,7 +272,7 @@ src/overlays/ov059/calls/Actor_UpdateRootMotionJump.c:
     complete
     .text       start:0x020cad60 end:0x020caec0
 
-src/overlays/ov059/calls/func_ov059_020caec0.c:
+src/overlays/ov059/calls/SpawnHitEffects.c:
     complete
     .text       start:0x020caec0 end:0x020cb418
 
@@ -360,7 +360,7 @@ src/overlays/ov059/calls/GetObjectPayload964.c:
     complete
     .text       start:0x020cc00c end:0x020cc018
 
-src/overlays/ov059/calls/func_ov059_020cc018.c:
+src/overlays/ov059/calls/Actor_ChangeState.c:
     complete
     .text       start:0x020cc018 end:0x020cc834
 
@@ -464,7 +464,7 @@ src/overlays/ov059/calls/func_ov059_020cd384.c:
     complete
     .text       start:0x020cd384 end:0x020cd3d8
 
-src/overlays/ov059/calls/func_ov059_020cd3d8.c:
+src/overlays/ov059/calls/UpdateWidgetLayerDefault_020cd3d8.c:
     complete
     .text       start:0x020cd3d8 end:0x020cd3e4
 
@@ -536,7 +536,7 @@ src/overlays/ov059/calls/Seeker_Update.c:
     complete
     .text       start:0x020cde8c end:0x020ce3dc
 
-src/overlays/ov059/calls/func_ov059_020ce3dc.c:
+src/overlays/ov059/calls/Projectile_UpdateCollision.c:
     complete
     .text       start:0x020ce3dc end:0x020cebf4
 

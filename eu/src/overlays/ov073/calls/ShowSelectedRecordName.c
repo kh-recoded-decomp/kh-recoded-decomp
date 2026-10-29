@@ -7,12 +7,12 @@
 #define SetDigitDisplay_020be2c8 SetDigitDisplay
 #define SetStatusElementVisible_020beb5c SetStatusElementVisible
 #define ShowSelectedRecordName_020c1a00 ShowSelectedRecordName
-#define TagTracker_InvokeCallback_020b8210 func_ov027_020b8230
+#define TagTracker_InvokeCallback_020b8210 TagTracker_InvokeCallback
 #define func_0200160c func_02001620
 #define func_02001908 GetTextLayerLineWidth
 #define func_ov027_020ba2a8 func_ov027_020ba2c8
 #define func_ov039_020bc994 GetMenuFont10
 #define func_ov039_020bc9ac GetMenuFont10s
-#define func_ov039_020be450 func_ov039_020be470
+#define func_ov039_020be450 DrawPlayTimeDigits_020be470
 #define func_ov073_020c3fa4 func_ov073_020c3fc4
 #include "src/ov073/status_menu/ShowSelectedRecordName_020c1a00.c"

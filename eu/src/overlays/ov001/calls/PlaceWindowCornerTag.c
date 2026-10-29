@@ -1,6 +1,6 @@
 #define GetSceneTagTracker_020711b0 GetSceneTagTracker
 #define PlaceWindowCornerTag_02079578 PlaceWindowCornerTag
-#define apply_all_pending_entry_edits_020b84f4 func_ov027_020b8514
+#define apply_all_pending_entry_edits_020b84f4 apply_all_pending_entry_edits
 #define func_ov027_020b8390 FindLoadedElementById
 #define func_ov027_020b83e8 SetTagRecordArmed
 #include "src/ov001/field_manager/PlaceWindowCornerTag_02079578.c"

@@ -1,0 +1,5 @@
+#define ClearOverlayLoadQueues_020ba074 ClearOverlayLoadQueues
+#define func_0202c438 func_0202c44c
+#define func_020ba1e0 DestroyFileLoadRequest
+#define overlay_load_queues data_ov027_020ba3e4
+#include "src/ov027/overlay_handling/ClearOverlayLoadQueues_020ba074.c"

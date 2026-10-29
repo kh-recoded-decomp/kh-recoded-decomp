@@ -1,5 +1,5 @@
 #define EnterPanelState_020d0144 EnterPanelState
 #define data_ov044_020d0df0 data_ov044_020d0e10
-#define func_ov044_020d0728 func_ov044_020d0748
+#define func_ov044_020d0728 ComputePanelAxesFromAngles
 #define g_panel_020d0ea0 data_ov044_020d0ec0
 #include "src/ov044/panel_state/EnterPanelState_020d0144.c"

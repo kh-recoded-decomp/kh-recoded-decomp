@@ -2,12 +2,12 @@
 #define DrawTextAnchored_020015a0 DrawTextAnchored
 #define FindActiveRecordById_020b8184 FindActiveRecordById
 #define FlushBufferAndRunCallback_0200153c FlushBufferAndRunCallback
-#define InvokeCallback40_020b8268 func_ov027_020b8288
+#define InvokeCallback40_020b8268 InvokeCallback40
 #define ResetStatusHeaderText_020beb7c ResetStatusHeaderText
 #define SetDigitDisplay_020be2c8 SetDigitDisplay
 #define SetStatusElementVisible_020beb5c SetStatusElementVisible
 #define ShowStatusPageContents_020c1b28 ShowStatusPageContents
 #define func_ov027_020ba2a8 func_ov027_020ba2c8
 #define func_ov039_020bc914 GetMenuSelection
-#define func_ov039_020be450 func_ov039_020be470
+#define func_ov039_020be450 DrawPlayTimeDigits_020be470
 #include "src/ov073/status_menu/ShowStatusPageContents_020c1b28.c"

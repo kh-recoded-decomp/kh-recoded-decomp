@@ -52,7 +52,7 @@ src/overlays/ov023/calls/PlayEnabledMenuSound.c:
     complete
     .text       start:0x020b5b70 end:0x020b5b8c
 
-src/overlays/ov023/auto/func_ov023_020b5b8c.c:
+src/overlays/ov023/auto/FindChainEntryById.c:
     complete
     .text       start:0x020b5b8c end:0x020b5bb2
 

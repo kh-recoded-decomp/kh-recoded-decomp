@@ -1,0 +1,16 @@
+#define BuildSweptShape_0209d610 BuildSweptShape
+#define FindActorResourceIndexByName_02091248 FindActorResourceIndexByName
+#define FixedPointMultiply12 FX_Mul
+#define GetNodeMatrix_020915ac GetNodeMatrix
+#define GetStageEntry_0209c074 GetStageEntry
+#define ProcessStageCues_02097324 ProcessStageCues
+#define RaycastMoveStep_02093080 RaycastMoveStep
+#define RunOverrideTrack_020b4b9c RunOverrideTrack
+#define SpawnLaunchedActor_020929f4 SpawnLaunchedActor
+#define func_01ff8830 MI_CpuFill8
+#define func_ov001_0208f018 func_ov001_0208f040
+#define func_ov001_02096bc8 ProbeStageObjectHit
+#define func_ov001_02096f38 ProbeKnockbackStageTarget
+#define func_ov001_02097130 ProbeNearestFacingTarget
+#define func_ov001_0209c3c0 GetStageManager
+#include "src/ov001/shared_engine/ProcessStageCues_02097324.c"

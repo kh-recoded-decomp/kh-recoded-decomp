@@ -1,5 +1,5 @@
 #define AcquireRecordSlot_02051d3c AcquireRecordSlot
-#define GetCtxModeByte_02068084 func_ov001_02068084
+#define GetCtxModeByte_02068084 GetCtxModeByte
 #define ModeTable_GetIdCount_0205213c GetTableEntryValue
 #define ModeTable_GetId_0205215c GetTableEntryElement
 #define ModeTable_GetTripleCount_02052188 GetSecondTableEntryValue

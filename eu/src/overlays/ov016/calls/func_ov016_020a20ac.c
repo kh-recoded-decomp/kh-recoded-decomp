@@ -10,7 +10,7 @@ typedef struct {
 extern u32 ScriptCmd_ReadEntityParams();
 extern void func_ov016_020a2084(ObjectState *obj, u32 source, u32 *cursor);
 extern u32 func_ov001_0208723c(u32 value);
-extern void func_ov016_020a6358();
+extern void SpawnFieldObjectTree();
 
 u32 func_ov016_020a20ac(u32 messageId, u32 arg1, u32 unused, u32 arg2)
 {
@@ -24,6 +24,6 @@ u32 func_ov016_020a20ac(u32 messageId, u32 arg1, u32 unused, u32 arg2)
     context = ScriptCmd_ReadEntityParams(&buffer, messageId, &cursor);
     func_ov016_020a2084(&buffer, messageId, &cursor);
     context = func_ov001_0208723c(context);
-    func_ov016_020a6358(context, &buffer);
+    SpawnFieldObjectTree(context, &buffer);
     return 1;
 }

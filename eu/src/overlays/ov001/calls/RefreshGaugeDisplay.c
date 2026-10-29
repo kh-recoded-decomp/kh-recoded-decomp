@@ -2,7 +2,7 @@
 #define FindActiveRecordById_020b8184 FindActiveRecordById
 #define GetSceneTagTracker_020711b0 GetSceneTagTracker
 #define RefreshGaugeDisplay_0207421c RefreshGaugeDisplay
-#define TagTracker_InvokeCallback_020b8210 func_ov027_020b8230
+#define TagTracker_InvokeCallback_020b8210 TagTracker_InvokeCallback
 #define data_ov001_020a04ac data_ov001_020a04cc
 #define func_ov001_02073894 BlitFourPixelInsetPattern
 #include "src/ov001/unclassified_helpers/RefreshGaugeDisplay_0207421c.c"

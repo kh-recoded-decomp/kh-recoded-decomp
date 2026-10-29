@@ -63,7 +63,7 @@ extern void MarkTileTableRowDirty(void *widgets, int layer);
 extern void func_ov001_02078180(void);
 extern int CountAssignedFieldSlots(void);
 extern void *FindActiveRecordById(void *pool, u16 recordId);
-extern void func_ov027_020b8230(void *pool, void *record);
+extern void TagTracker_InvokeCallback(void *pool, void *record);
 extern void BuildSlotLabelWindows(HudContext *context);
 extern void func_020cf02c(void *object, int arg);
 extern void AcquireRecordManager(void);
@@ -124,7 +124,7 @@ void LoadHudLayersAndRecordText(void)
         EnableIme();
     }
     func_ov001_02078180();
-    func_ov027_020b8230(
+    TagTracker_InvokeCallback(
         tracker,
         FindActiveRecordById(tracker, CountAssignedFieldSlots() + 0x50));
     BuildSlotLabelWindows(context);

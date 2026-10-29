@@ -19,9 +19,9 @@ extern void ScriptCmd_AttachActorObject(void); /* ScriptCmd_AttachActorObject */
 extern void ScriptCmd_ShowActor(void); /* ScriptCmd_ShowActor */
 extern void ScriptCmd_HideActor(void); /* ScriptCmd_HideActor */
 extern void ScriptCmd_SetActorProbeSphere(void); /* ScriptCmd_SetActorProbeSphere */
-extern void func_ov001_0208cb3c(void); /* updateActorTransitionParameterRampCommand */
+extern void updateActorTransitionParameterRampCommand_0208cb3c(void); /* updateActorTransitionParameterRampCommand */
 extern void func_ov001_0208cbbc(void);
-extern void func_ov001_0208ded8(void); /* Script_MakeActorTranslucentAndClearVerticalOffset */
+extern void Script_MakeActorTranslucentAndClearVerticalOffset_0208ded8(void); /* Script_MakeActorTranslucentAndClearVerticalOffset */
 extern void PlaceActorRelativeToActor(void); /* PlaceActorRelativeToActor */
 extern void Script_SetActorParameterFromInteger(void); /* Script_SetActorParameterFromInteger */
 extern void ScriptCmd_PlaceActor_0208e114(void); /* ScriptCmd_PlaceActor */
@@ -36,10 +36,10 @@ extern void ScriptCmd_StartActorRotation(void); /* ScriptCmd_StartActorRotation 
 extern void func_ov001_0208debc(void); /* DefaultStepDone */
 extern void func_ov001_0208dd08(void); /* DefaultStepDone */
 extern void ScriptCmd_PlayActorMotionOrBlend(void); /* ScriptCmd_PlayActorMotionOrBlend */
-extern void func_ov001_0208cda8(void); /* ScriptCmd_StoreIfFree */
+extern void ScriptCmd_StoreIfFree_0208cda8(void); /* ScriptCmd_StoreIfFree */
 extern void ScriptCmd_TestActorSlotMaskBit(void); /* ScriptCmd_TestActorSlotMaskBit */
 extern void ScriptCmd_PlayActorMotion(void); /* ScriptCmd_PlayActorMotion */
-extern void func_ov001_0208df2c(void); /* Script_SetActorAnimationFrame */
+extern void Script_SetActorAnimationFrame_0208df2c(void); /* Script_SetActorAnimationFrame */
 extern void ScriptCmd_SetActorMoveTarget(void); /* ScriptCmd_SetActorMoveTarget */
 extern void ScriptCmd_WaitActorReady(void); /* ScriptCmd_WaitActorReady */
 extern void ScriptCmd_SetActorHeadingTowardTarget(void); /* ScriptCmd_SetActorHeadingTowardTarget */
@@ -138,10 +138,10 @@ void (*gActorScriptCommandHandlers[186])(void) = {
     ScriptCmd_HideActor, /* ScriptCmd_HideActor */
     NULL,
     ScriptCmd_SetActorProbeSphere, /* ScriptCmd_SetActorProbeSphere */
-    func_ov001_0208cb3c, /* updateActorTransitionParameterRampCommand */
+    updateActorTransitionParameterRampCommand_0208cb3c, /* updateActorTransitionParameterRampCommand */
     func_ov001_0208cbbc,
     NULL,
-    func_ov001_0208ded8, /* Script_MakeActorTranslucentAndClearVerticalOffset */
+    Script_MakeActorTranslucentAndClearVerticalOffset_0208ded8, /* Script_MakeActorTranslucentAndClearVerticalOffset */
     NULL,
     PlaceActorRelativeToActor, /* PlaceActorRelativeToActor */
     NULL,
@@ -167,11 +167,11 @@ void (*gActorScriptCommandHandlers[186])(void) = {
     NULL,
     ScriptCmd_PlayActorMotionOrBlend, /* ScriptCmd_PlayActorMotionOrBlend */
     NULL,
-    func_ov001_0208cda8, /* ScriptCmd_StoreIfFree */
+    ScriptCmd_StoreIfFree_0208cda8, /* ScriptCmd_StoreIfFree */
     ScriptCmd_TestActorSlotMaskBit, /* ScriptCmd_TestActorSlotMaskBit */
     ScriptCmd_PlayActorMotion, /* ScriptCmd_PlayActorMotion */
     NULL,
-    func_ov001_0208df2c, /* Script_SetActorAnimationFrame */
+    Script_SetActorAnimationFrame_0208df2c, /* Script_SetActorAnimationFrame */
     NULL,
     ScriptCmd_SetActorMoveTarget, /* ScriptCmd_SetActorMoveTarget */
     NULL,

@@ -1,3 +1,4 @@
+#define func_01ffe8a0 EmitJointAnimationFramePayload
 #define InitializeArchiveBackend_0203a858 InitializeArchiveBackend
 #define archive_backend_callbacks data_027e01f8
 #define func_01ffe280 NNSi_G3dFuncSbc_NODE

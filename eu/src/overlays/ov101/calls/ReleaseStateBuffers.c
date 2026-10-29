@@ -10,14 +10,14 @@ typedef struct {
     s32 bufferCount;
 } Ov101State;
 
-extern int func_ov001_0206a918(StateBuffer *buffer);
+extern int FreeBufferAndClearStatus(StateBuffer *buffer);
 
 void ReleaseStateBuffers(Ov101State *state)
 {
     int i;
 
     for (i = 0; i < state->bufferCount; i++) {
-        func_ov001_0206a918(&state->buffers[i]);
+        FreeBufferAndClearStatus(&state->buffers[i]);
     }
     state->bufferCount = 0;
 }

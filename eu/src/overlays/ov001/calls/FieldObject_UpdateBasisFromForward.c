@@ -1,0 +1,3 @@
+#define BuildBasisFromForward_0204bf70 BuildBasisFromForward
+#define FieldObject_UpdateBasisFromForward_02083d2c FieldObject_UpdateBasisFromForward
+#include "src/ov001/field_objects/FieldObject_UpdateBasisFromForward_02083d2c.c"

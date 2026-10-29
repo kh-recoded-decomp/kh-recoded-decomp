@@ -38,7 +38,7 @@ extern const LayerIdTable gFieldHudRestoreLayerIds;
 
 extern void *func_ov001_0207123c(void);
 extern void func_ov001_0206fa2c(HudContext *context);
-extern void *func_ov027_020b9e10(void *widgets, int layer);
+extern void *UpdateWidgetLayerDefault_020b9e10(void *widgets, int layer);
 extern void MarkTileTableRowDirty(void *widgets, int layer);
 extern void MIi_CpuCopyFast(const void *src, void *dst, u32 size);
 extern void NNSi_FndFreeFromDefaultHeap(void *memory);
@@ -67,7 +67,7 @@ void UnloadHudLayersAndRecordText(void)
     context->unk_2E8 = 0;
     for (i = 0; i < 3; i++) {
         layer = layers.ids[i];
-        tile = func_ov027_020b9e10(widgets, layer);
+        tile = UpdateWidgetLayerDefault_020b9e10(widgets, layer);
         MIi_CpuCopyFast(context->layerBuffers[i], tile, 0x800);
         MarkTileTableRowDirty(widgets, layer);
         NNSi_FndFreeFromDefaultHeap(context->layerBuffers[i]);

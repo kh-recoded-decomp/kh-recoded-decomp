@@ -1,0 +1,12 @@
+#define LoadPathGraph_020a7cc8 LoadPathGraph
+#define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
+#define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
+#define data_ov021_020b5604 data_ov021_020b5624
+#define func_01ff8830 MI_CpuFill8
+#define func_02025658 GetCurrentSceneId
+#define func_0202c48c func_0202c4a0
+#define func_0204f768 GetOverlaySelectionRecord
+#define func_ov001_020645c8 IsSessionFlagSet
+#define func_ov021_020a7c60 CallEntryHandler
+#define func_ov021_020a7c88 func_ov021_020a7ca8
+#include "src/ov021/object_state/LoadPathGraph_020a7cc8.c"

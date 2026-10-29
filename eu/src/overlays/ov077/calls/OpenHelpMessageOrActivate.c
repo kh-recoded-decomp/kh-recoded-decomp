@@ -6,5 +6,5 @@
 #define func_ov077_020c4bb0 SetModeTwoAndRefresh
 #define func_ov077_020c4be0 UpdateItemScreenDisplay
 #define func_ov077_020c58e0 ShowSlotHeaderMessage
-#define func_ov077_020c8bd4 func_ov077_020c8bf4
+#define func_ov077_020c8bd4 OpenItemPrompt
 #include "src/ov077/unclassified_helpers/OpenHelpMessageOrActivate_020c4b50.c"

@@ -1,7 +1,7 @@
 #define GetMenuTouchPressed_02066b84 GetMenuTouchPressed
 #define GetMenuTouchHeld_02066b2c GetMenuTouchHeld
 #define IsButtonBPressed_020632c8 IsButtonBPressed
-#define IsGlobalBit0Set_020632ac func_ov002_020632ac
+#define IsGlobalBit0Set_020632ac IsGlobalBit0Set
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define UpdatePanelConfirmSequence_02071fdc UpdatePanelConfirmSequence
 #define func_ov002_0206671c UpdateMenuTouch

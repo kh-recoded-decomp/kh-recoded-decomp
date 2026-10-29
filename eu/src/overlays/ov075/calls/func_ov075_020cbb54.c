@@ -1,8 +1,0 @@
-#define CycleNodeCategory_020cbb34 func_ov075_020cbb54
-#define FindPageEntryById_020ba348 FindPageEntryById
-#define GetDialogInputMode_020c42b4 GetDialogInputMode
-#define PlaySoundEffect_0204d924 PlaySoundEffect
-#define ShowEntryHeaderMessage_020cad14 ShowEntryHeaderMessage
-#define ShowNextUnlockNotice_020cc9fc ShowNextUnlockNotice
-#define data_ov075_020d13ea data_ov075_020d140a
-#include "src/ov075/unclassified_helpers/CycleNodeCategory_020cbb34.c"

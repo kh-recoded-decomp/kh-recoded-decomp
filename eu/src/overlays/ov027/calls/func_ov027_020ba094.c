@@ -1,5 +1,0 @@
-#define ClearOverlayLoadQueues_020ba074 func_ov027_020ba094
-#define func_0202c438 func_0202c44c
-#define func_020ba1e0 func_ov027_020ba200
-#define overlay_load_queues data_ov027_020ba3e4
-#include "src/ov027/overlay_handling/ClearOverlayLoadQueues_020ba074.c"

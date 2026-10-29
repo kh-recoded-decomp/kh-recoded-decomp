@@ -1,4 +1,0 @@
-#define Ov002_ScriptIsEntryFree ScriptCmd_TestActorSlotMaskBit
-#define ScriptCmd_StoreIfFree_0208cd80 func_ov001_0208cda8
-#define Slot48_StoreAtCurrentIndex ScriptCmd_SetElemField
-#include "src/ov001/shared_engine/ScriptCmd_StoreIfFree_0208cd80.c"

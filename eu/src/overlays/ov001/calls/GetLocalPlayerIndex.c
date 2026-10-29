@@ -1,0 +1,3 @@
+#define GetLocalPlayerIndex_0208696c GetLocalPlayerIndex
+#define Session_GetLocalPlayerIndex IsSessionFlagSet
+#include "src/ov001/shared_engine/GetLocalPlayerIndex_0208696c.c"

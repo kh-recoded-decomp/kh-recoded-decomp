@@ -190,7 +190,7 @@ extern s32 CheckStatusAndThreshold(void);
 extern StatBlock *GetOverlaySelectionRecord(unsigned int selectionIndex);
 extern int OS_SNPrintf_0202e094(void *dst, u32 len, const char *fmt, ...);
 extern void SetDigitDisplay(void *cells, int first, int value, void *origin);
-extern void func_ov039_020be470(void *cells, int first, int value, void *origin);
+extern void DrawPlayTimeDigits_020be470(void *cells, int first, int value, void *origin);
 extern BOOL ResolveMergedRecordEntry(int index, MergedRecord *entry, u32 *outValue);
 extern SlotPair0Entry *GetRecordSlotPair0Entry(s32 index);
 extern SlotPair1Entry *GetRecordSlotPair1Entry(s32 index);
@@ -312,7 +312,7 @@ void RefreshStatusMenuData(SaveData *save, StatPreview *preview)
             OS_SNPrintf_0202e094(text->nextLevel, 9, data_ov073_020c41d4, remaining);
             if (!menu->isCurrent || (menu->busy == 0 && (menu->flags & 2))) {
                 SetDigitDisplay(menu->container, menu->digitBase, save->munny, NULL);
-                func_ov039_020be470(menu->container, menu->numberBase, save->heartCount, NULL);
+                DrawPlayTimeDigits_020be470(menu->container, menu->numberBase, save->heartCount, NULL);
             }
             menu->text.changedMask = changed;
             menu->text.decreasedMask = decreased;
@@ -564,7 +564,7 @@ void RefreshStatusMenuData(SaveData *save, StatPreview *preview)
     } else {
         MI_CpuFill8(text, 0, (u32)text->pad_100 - (u32)text);
         SetDigitDisplay(menu->container, menu->digitBase, 0, NULL);
-        func_ov039_020be470(menu->container, menu->numberBase, 0, NULL);
+        DrawPlayTimeDigits_020be470(menu->container, menu->numberBase, 0, NULL);
         LoadStatusLabels(menu);
     }
     menu->loaded = 1;

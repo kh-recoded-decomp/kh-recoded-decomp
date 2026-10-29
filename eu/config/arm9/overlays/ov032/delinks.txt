@@ -308,7 +308,7 @@ src/overlays/ov032/calls/RollRowStepChance.c:
     complete
     .text       start:0x020bc1b0 end:0x020bc208
 
-src/overlays/ov032/calls/func_ov032_020bc208.c:
+src/overlays/ov032/calls/ApplyGroupMemberKind.c:
     complete
     .text       start:0x020bc208 end:0x020bc3d0
 
@@ -524,7 +524,7 @@ src/overlays/ov032/calls/UpdateBouncingGroupMember.c:
     complete
     .text       start:0x020beb8c end:0x020beed6
 
-src/overlays/ov032/calls/func_ov032_020beed8.c:
+src/overlays/ov032/calls/FindLevelCellCenter.c:
     complete
     .text       start:0x020beed8 end:0x020befda
 

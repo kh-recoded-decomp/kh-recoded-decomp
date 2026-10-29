@@ -12,7 +12,7 @@ src/overlays/ov088/calls/LoadOverlay088Graphics.c:
     complete
     .text       start:0x020beb0c end:0x020bebe8
 
-src/overlays/ov088/calls/func_ov088_020bebe8.c:
+src/overlays/ov088/calls/ReleaseOverlay088Graphics_020bebe8.c:
     complete
     .text       start:0x020bebe8 end:0x020bebfc
 

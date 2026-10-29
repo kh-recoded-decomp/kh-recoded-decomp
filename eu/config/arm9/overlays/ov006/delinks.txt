@@ -124,7 +124,7 @@ src/overlays/ov006/calls/GetStageJointPosition.c:
     complete
     .text       start:0x020a16b4 end:0x020a1760
 
-src/overlays/ov006/calls/func_ov006_020a1760.c:
+src/overlays/ov006/calls/RunGridPathCommand.c:
     complete
     .text       start:0x020a1760 end:0x020a1854
 

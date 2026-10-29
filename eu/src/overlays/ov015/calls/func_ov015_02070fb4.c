@@ -9,12 +9,12 @@ typedef struct {
     u32 exitRequest;
 } PanelState;
 
-extern void func_ov015_0206d59c(void);
+extern void InitPanelScreenGraphics(void);
 extern void func_ov015_0206edc8(void);
 extern PanelState *data_ov015_0207e960;
 
 void func_ov015_02070fb4(void) {
-    func_ov015_0206d59c();
+    InitPanelScreenGraphics();
     func_ov015_0206edc8();
     data_ov015_0207e960->panelActive = 0;
     data_ov015_0207e960->exitRequest = 0;

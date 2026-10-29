@@ -79,7 +79,7 @@ extern int func_ov035_020bafd4(void);
 extern StageObject *func_ov001_0208724c(u32 group, u32 index);
 extern void StartLaunchMotion(WanderObject *object, const VecFx32 *velocity);
 extern void ActorSlot_SetFlag8ByIndex(int index, BOOL enable);
-extern BOOL func_ov007_020a09ac(WanderObject *owner, const VecFx32 *from, const VecFx32 *delta, VecFx32 *out);
+extern BOOL SweepTouchSphere(WanderObject *owner, const VecFx32 *from, const VecFx32 *delta, VecFx32 *out);
 extern fx32 VEC_Mag(const VecFx32 *v);
 extern BOOL StepBounceBody(WanderObject *owner, LaunchMotion *motion);
 extern BOOL SteerHomingParticle(WanderObject *owner, LaunchMotion *motion);
@@ -178,7 +178,7 @@ BOOL UpdateWanderActor(WanderObject *object)
             VecFx32 hit;
             VecFx32 down = MakeVec(0, -0x64000, 0);
 
-            func_ov007_020a09ac(object, &object->motion[0].origin, &down, &hit);
+            SweepTouchSphere(object, &object->motion[0].origin, &down, &hit);
             if (hit.y < object->motion[0].origin.y) {
                 object->flags |= 1;
                 object->drawFlags &= ~0x10;

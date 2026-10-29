@@ -7,7 +7,7 @@
 #define RefreshSharedUploadSlot_020c13f0 RefreshSharedUploadSlot
 #define SetEntrySlotsVisible_020b9580 SetEntrySlotsVisible
 #define ShowStatusRecordList_020c2b10 ShowStatusRecordList
-#define UpdateWidgetLayerDefault_020b9df0 func_ov027_020b9e10
+#define UpdateWidgetLayerDefault_020b9df0 UpdateWidgetLayerDefault_020b9e10
 #define UploadListPalette_020c3f6c UploadListPalette
 #define func_020505a8 GetSelectionPackedValueBlock
 #define func_ov039_020bc0d4 GetPrimaryElementEnabled

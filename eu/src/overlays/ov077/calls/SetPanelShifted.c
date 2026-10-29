@@ -1,4 +1,4 @@
 #define SetPanelShifted_020c5618 SetPanelShifted
 #define func_ov077_020c5510 SyncScreenSpriteSlots
-#define func_ov077_020c57f4 func_ov077_020c5814
+#define func_ov077_020c57f4 UpdateSlotTouchRegions
 #include "src/ov077/unclassified_helpers/SetPanelShifted_020c5618.c"

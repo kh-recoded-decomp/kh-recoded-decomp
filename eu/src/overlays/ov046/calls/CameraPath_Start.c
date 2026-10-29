@@ -30,14 +30,14 @@ typedef struct EventCameraWork {
 
 extern s32 Camera_GetModeValue(void);
 extern EventCameraWork *Camera_GetEventWork(void);
-extern int func_ov046_020c11a0(s32 cameraType, CameraPathNode *node, s32 curveType, fx32 duration);
+extern int Panel_DrawCounter_020c11a0(s32 cameraType, CameraPathNode *node, s32 curveType, fx32 duration);
 
 void CameraPath_Start(CameraPath *path)
 {
     EventCameraWork *work;
 
     path->currentNode = 0;
-    func_ov046_020c11a0(Camera_GetModeValue(), &path->nodes[path->currentNode],
+    Panel_DrawCounter_020c11a0(Camera_GetModeValue(), &path->nodes[path->currentNode],
                                path->nodes[path->currentNode].curveType,
                                path->nodes[path->currentNode].duration);
     work = Camera_GetEventWork();

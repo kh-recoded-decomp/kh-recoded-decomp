@@ -3,7 +3,7 @@
 #define func_0205144c LoadTextEntryTables
 #define func_020514e8 LoadStringPointerTable
 #define func_02051580 LoadStringPointerTableB
-#define func_02051618 func_0205162c
+#define func_02051618 LoadLinkedChunkTables
 #define func_02051710 func_02051724
 #define func_0205175c func_02051770
 #define func_020517a8 LoadRelocatedOffsetTable

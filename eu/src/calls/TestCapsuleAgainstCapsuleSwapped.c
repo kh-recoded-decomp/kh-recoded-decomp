@@ -1,3 +1,3 @@
 #define TestCapsuleAgainstCapsuleSwapped_0203b60c TestCapsuleAgainstCapsuleSwapped
-#define TestCapsuleAgainstCapsule_020405b4 func_020405c8
+#define TestCapsuleAgainstCapsule_020405b4 TestCapsuleAgainstCapsule
 #include "src/arm9/spatial_queries/TestCapsuleAgainstCapsuleSwapped_0203b60c.c"

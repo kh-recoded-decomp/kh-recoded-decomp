@@ -2,13 +2,13 @@
 #define Anim_GetFrame_0202f4a0 Anim_GetFrame
 #define ChooseNextPatrolPoint_02083c68 ChooseNextPatrolPoint
 #define DetachFromLeaderQuadTree_020836d8 DetachFromLeaderQuadTree
-#define GetCtxModeByte_02068084 func_ov001_02068084
+#define GetCtxModeByte_02068084 GetCtxModeByte
 #define SetPackedStateLowBit_02084774 SetPackedStateLowBit
 #define SetSavedValueFlag7_02084750 SetSavedValueFlag7
 #define SpawnSoundSlot_0204da8c SpawnSoundSlot
 #define UpdateFieldPointActivation_02083dbc UpdateFieldPointActivation
 #define UpdatePatrolIdle_02083e70 UpdatePatrolIdle
 #define func_0204b1fc TurnVecTowardVecLimited
-#define func_ov001_02083d2c func_ov001_02083d54
-#define func_ov001_02083f9c func_ov001_02083fc4
+#define func_ov001_02083d2c FieldObject_UpdateBasisFromForward
+#define func_ov001_02083f9c UpdatePatrolMove
 #include "src/ov001/field_objects/UpdatePatrolIdle_02083e70.c"

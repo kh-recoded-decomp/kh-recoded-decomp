@@ -146,7 +146,7 @@ extern SceneState *data_ov031_020bc820;
 
 extern void FreeSceneRecords(void);
 extern void ResetCameraDefault(void);
-extern int func_ov001_02068084(void);
+extern int GetCtxModeByte(void);
 extern u8 *func_ov001_020636e4(void);
 extern int findSharedResourceByName(void *table, const char *name);
 extern void *func_0202c4a0(u32 fileId, u32 flags);
@@ -217,7 +217,7 @@ void LoadSceneData(const char *areaFile, const char *recordFile)
 
     FreeSceneRecords();
     ResetCameraDefault();
-    if (func_ov001_02068084() == 6) {
+    if (GetCtxModeByte() == 6) {
         data_ov031_020bc820->field_b8 = 30 << 12;
     } else {
         data_ov031_020bc820->field_b8 = 15 << 12;

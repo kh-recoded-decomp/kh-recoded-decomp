@@ -3,7 +3,7 @@
 #define FreePointerIfSet_020ba294 FreePointerIfSet
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define ReleaseScreenResources_020bf2f0 ReleaseScreenResources_020bf310
-#define SweepElements_020b831c func_ov027_020b833c
+#define SweepElements_020b831c SweepElements
 #define func_ov027_020b903c ReleaseIfMarked
 #define func_ov039_020bc1a4 GetSecondaryMenuElement
 #define func_ov039_020bc1cc GetMenuWidgetContainer

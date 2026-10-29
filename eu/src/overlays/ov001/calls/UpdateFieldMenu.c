@@ -7,7 +7,7 @@
 #define PXI_Init_02028db8 PXI_Init_02028dcc
 #define UpdateFieldMenu_020779f0 UpdateFieldMenu
 #define func_ov001_020758c4 DrawPartyGauges
-#define UpdateWidgetLayerDefault_020b9df0 func_ov027_020b9e10
+#define UpdateWidgetLayerDefault_020b9df0 UpdateWidgetLayerDefault_020b9e10
 #define func_01ff8684 MIi_CpuClear16
 #define func_ov001_020736b4 UpdateFieldWidgetLayer
 #define func_ov001_020736d0 RefreshFieldLayerIfUnbound

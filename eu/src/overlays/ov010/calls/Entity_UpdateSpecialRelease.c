@@ -3,7 +3,7 @@
 #define data_ov010_020a1d20 data_ov010_020a1d40
 #define data_ov010_020a1dc0 gSpecialActionWork
 #define func_ov010_020a0d00 func_ov010_020a0d20
-#define func_ov010_020a10b8 func_ov010_020a10d8
+#define func_ov010_020a10b8 Entity_ProbeReleaseTarget
 #define func_ov010_020a13cc Entity_UpdateSpecialStrike
 #define func_ov021_020a8ab4 ResetAnimationTrackState
 #define func_ov021_020a8ca0 func_ov021_020a8cc0

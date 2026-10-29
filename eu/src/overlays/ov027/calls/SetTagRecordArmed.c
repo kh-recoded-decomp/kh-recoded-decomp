@@ -1,4 +1,4 @@
 #define OS_GetTick_02003fd4 OS_GetTick
 #define SetTagRecordArmed_020b83e8 SetTagRecordArmed
-#define TagTracker_InvokeCallback_020b8210 func_ov027_020b8230
+#define TagTracker_InvokeCallback_020b8210 TagTracker_InvokeCallback
 #include "src/ov027/shared_engine/SetTagRecordArmed_020b83e8.c"

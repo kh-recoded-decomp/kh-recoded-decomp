@@ -112,8 +112,8 @@ extern void GXS_LoadBGPltt(void *data, u32 offset, u32 size);
 extern void GXS_LoadBG2Char(void *data, u32 offset, u32 size);
 extern void NNSi_FndFreeFromDefaultHeap(void *block);
 extern void *FindActiveRecordById(void *animSet, u16 id);
-extern void func_ov027_020b8230(void *animSet, void *record);
-extern void func_ov027_020b82a4(void *animSet, void *record, u8 sequence);
+extern void TagTracker_InvokeCallback(void *animSet, void *record);
+extern void StampTileRegionPalette(void *animSet, void *record, u8 sequence);
 extern int NNS_GfdRegisterNewVramTransferTask(int command, int offset, void *data, int size);
 extern void DrawWidgetNumber(void *manager, int widgetId, int layer, int value, int spacing, int *slots, BOOL reset);
 extern void IndexedRecords_SetFlag2(void *manager, int slot, int value);
@@ -167,9 +167,9 @@ void BuildBoardLayout(BoardCursor *cursor, int loadBackground)
         GXS_LoadBG2Char(bgData.character->data, 0, bgData.character->size);
         NNSi_FndFreeFromDefaultHeap(archive);
     }
-    func_ov027_020b8230(data_ov024_020b7540.state->animSet,
+    TagTracker_InvokeCallback(data_ov024_020b7540.state->animSet,
                                        FindActiveRecordById(data_ov024_020b7540.state->animSet, 1000));
-    func_ov027_020b8230(data_ov024_020b7540.state->animSet,
+    TagTracker_InvokeCallback(data_ov024_020b7540.state->animSet,
                                        FindActiveRecordById(data_ov024_020b7540.state->animSet, 1010));
 
     for (i = 0; i < 6; i++) {
@@ -184,9 +184,9 @@ void BuildBoardLayout(BoardCursor *cursor, int loadBackground)
             if (cursor->items[i]) {
                 sequence = 0xd;
             }
-            func_ov027_020b82a4(data_ov024_020b7540.state->animSet,
+            StampTileRegionPalette(data_ov024_020b7540.state->animSet,
                                 FindActiveRecordById(data_ov024_020b7540.state->animSet, i + 1001), sequence);
-            func_ov027_020b8230(data_ov024_020b7540.state->animSet,
+            TagTracker_InvokeCallback(data_ov024_020b7540.state->animSet,
                                                FindActiveRecordById(data_ov024_020b7540.state->animSet, i + 1001));
         } else {
             data_ov024_020b754c[i] = 0;

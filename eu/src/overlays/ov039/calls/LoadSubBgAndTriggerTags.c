@@ -1,0 +1,11 @@
+#define BuildSlotImageParams_020bc220 BuildSlotImageParams
+#define FindActiveRecordById_020b8184 FindActiveRecordById
+#define GXS_LoadBG3Char_02007be0 GXS_LoadBG3Char
+#define GXS_LoadBGPltt_020072b4 GXS_LoadBGPltt
+#define GetBgDataFromArchive_0202b554 GetBgDataFromArchive
+#define LoadSubBgAndTriggerTags_020bc488 LoadSubBgAndTriggerTags
+#define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
+#define TagTracker_InvokeCallback_020b8210 TagTracker_InvokeCallback
+#define data_ov039_020bea00 data_ov039_020bea20
+#define func_0202c478 Archive_LoadFile
+#include "src/ov039/widget_layers/LoadSubBgAndTriggerTags_020bc488.c"

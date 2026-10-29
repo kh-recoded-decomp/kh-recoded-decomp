@@ -1,5 +1,5 @@
 #define ApplyFieldResourceAndRelease_0206f040 ApplyFieldResourceAndRelease
 #define data_ov001_020a04a4 data_ov001_020a04c4
 #define func_ov027_020ba1d8 func_ov027_020ba1f8
-#define func_ov027_020ba1e0 func_ov027_020ba200
+#define func_ov027_020ba1e0 DestroyFileLoadRequest
 #include "src/ov001/field_manager/ApplyFieldResourceAndRelease_0206f040.c"

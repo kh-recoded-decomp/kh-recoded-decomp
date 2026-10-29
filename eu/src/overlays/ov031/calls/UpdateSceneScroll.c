@@ -1,0 +1,17 @@
+#define AdvanceGroupObjects_020baf38 AdvanceGroupObjects
+#define GetBoundedEntryField_0206db5c GetBoundedEntryField
+#define NegateVecFx32_0204aa40 NegateVecFx32
+#define Obj_SetPosition_0203569c Obj_SetPosition
+#define OffsetBoxByDelta_0203ac70 OffsetBoxByDelta
+#define QuadTree_ReinsertNodeIfFlagSet_02033f10 QuadTree_ReinsertNodeIfFlagSet
+#define QuadTree_RemoveObject_02033c60 QuadTree_RemoveObject
+#define ScaleVecFx32InPlace_0204a5e4 ScaleVecFx32InPlace
+#define SetShapePosition_0203afa0 SetShapePosition
+#define UpdateSceneScroll_020bb054 UpdateSceneScroll
+#define VEC_Add_01ff9e0c VEC_Add
+#define func_02036230 GetActorRegistry
+#define func_ov031_020bc650 CanStartIdleRecord
+#define func_ov043_020bc8f8 Ov043Camera_GetFlags
+#define func_ov043_020bca1c Ov043Camera_GetActiveController
+#define g_activeState_020bc800 data_ov031_020bc820
+#include "src/ov031/overlay_state/UpdateSceneScroll_020bb054.c"

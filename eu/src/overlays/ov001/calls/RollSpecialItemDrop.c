@@ -23,7 +23,7 @@ enum { RANDOM_SPECIAL_ITEM = 0x87, ITEM_EFFECT_KIND = 6 };
 typedef char SpecialDropRowSizeCheck[(sizeof(SpecialDropRow) == 0x18) ? 1 : -1];
 
 extern SpecialDrops *data_ov001_020a04fc;
-extern s8 func_ov001_02068084(void);
+extern s8 GetCtxModeByte(void);
 extern u32 func_0202a9e4(u32 range);
 extern void SpawnRewardOrbs(RewardAmounts *amounts, void *target, int mode);
 extern u32 func_ov001_020664f0(u32 kind, u32 size, void *target, u32 mode);
@@ -51,7 +51,7 @@ void RollSpecialItemDrop(int itemId, void *target)
     int i;
 
     if (itemId == RANDOM_SPECIAL_ITEM) {
-        row = &drops->rows[func_ov001_02068084()];
+        row = &drops->rows[GetCtxModeByte()];
         roll = func_0202a9e4(10000);
         first = row->orbWeights[0];
         second = first + row->orbWeights[1];

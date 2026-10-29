@@ -1,5 +1,5 @@
 #define ApplyPendingTargetRequest_0206bdbc ApplyPendingTargetRequest
-#define ClearWords124And128_0206c038 func_ov001_0206c038
+#define ClearWords124And128_0206c038 ClearWords124And128
 #define ProjectWorldToScreenFx_0206ad34 ProjectWorldToScreenFx
 #define SelectCursorTarget_0206bf7c SelectCursorTarget
 #define data_ov001_020a0484 data_ov001_020a04a4

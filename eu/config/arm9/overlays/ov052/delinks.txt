@@ -72,7 +72,7 @@ src/overlays/ov052/calls/TryGrabLedge.c:
     complete
     .text       start:0x020c8bcc end:0x020c9292
 
-src/overlays/ov052/calls/func_ov052_020c9294.c:
+src/overlays/ov052/calls/IsLedgeClimbSpaceClear.c:
     complete
     .text       start:0x020c9294 end:0x020c9504
 
@@ -444,7 +444,7 @@ src/overlays/ov052/calls/MarkStateThreeFlag.c:
     complete
     .text       start:0x020cfda4 end:0x020cfdd4
 
-src/overlays/ov052/calls/func_ov052_020cfdd4.c:
+src/overlays/ov052/calls/SelectHitReaction.c:
     complete
     .text       start:0x020cfdd4 end:0x020cffac
 

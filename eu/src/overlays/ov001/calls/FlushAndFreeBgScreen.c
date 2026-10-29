@@ -2,7 +2,7 @@
 #define GX_LoadBG2Char_02007a90 GX_LoadBG2Char
 #define GX_LoadBG3Char_02007b70 GX_LoadBG3Char
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
-#define UpdateWidgetLayerDefault_020b9df0 func_ov027_020b9e10
+#define UpdateWidgetLayerDefault_020b9df0 UpdateWidgetLayerDefault_020b9e10
 #define data_ov001_0209dbac gVramRestoreWidgetLayers
 #define func_01ff878c MIi_CpuCopyFast
 #define func_020033e0 DC_FlushAll

@@ -1,3 +1,4 @@
+#define func_01ffd934 HandleJointAnimationStreamCommand
 #define NNSi_G3dAnmBlendJnt_01ffda04 NNSi_G3dAnmBlendJntItcm
 #define func_01ff8740 MIi_CpuClearFast
 #define FX_Div_01ff9c84 FX_Div

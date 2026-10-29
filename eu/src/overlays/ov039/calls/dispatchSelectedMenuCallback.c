@@ -1,0 +1,4 @@
+#define data_020be8d0 data_ov039_020be8f0
+#define data_020bea84 data_ov039_020beaa4
+#define dispatchSelectedMenuCallback_020bcfcc dispatchSelectedMenuCallback
+#include "src/ov039/menu_dispatch/dispatchSelectedMenuCallback_020bcfcc.c"

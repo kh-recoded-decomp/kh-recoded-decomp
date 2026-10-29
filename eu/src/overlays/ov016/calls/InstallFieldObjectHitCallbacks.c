@@ -1,8 +1,8 @@
 #define InstallFieldObjectHitCallbacks_020a25c4 InstallFieldObjectHitCallbacks
 #define OnMode11FieldObjectHit_020a3b44 OnMode11FieldObjectHit
 #define func_02036240 ActorRegistry_GetEntityByIndex
-#define func_ov016_020a4694 func_ov016_020a46b4
+#define func_ov016_020a4694 OnMode7FieldObjectHit
 #define func_ov016_020a565c ForwardModeCheck
 #define func_ov016_020a566c OnFieldUnitPushedUp
-#define func_ov016_020a56bc func_ov016_020a56dc
+#define func_ov016_020a56bc OnMode3FieldObjectHit
 #include "src/ov016/field_objects/InstallFieldObjectHitCallbacks_020a25c4.c"

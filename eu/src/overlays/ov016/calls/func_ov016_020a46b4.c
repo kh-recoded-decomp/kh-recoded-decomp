@@ -1,8 +1,0 @@
-#define func_ov001_0206dc4c GetManagedActorPosition
-#define FX_Div_01ff9c84 FX_Div
-#define IsMovingAgainstDirection_02086618 IsMovingAgainstDirection
-#define OnFieldUnitPushedUp_020a566c OnFieldUnitPushedUp
-#define OnMode7FieldObjectHit_020a4694 func_ov016_020a46b4
-#define ScaleVecFx32InPlace_0204a5e4 ScaleVecFx32InPlace
-#define func_01ff9f88 VEC_Normalize
-#include "src/ov016/field_objects/OnMode7FieldObjectHit_020a4694.c"

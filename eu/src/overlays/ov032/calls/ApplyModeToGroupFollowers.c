@@ -1,5 +1,5 @@
 #define ApplyModeToGroupFollowers_020bc3b0 ApplyModeToGroupFollowers
 #define IsNodeFlagBitClear_020872b8 IsNodeFlagBitClear
 #define func_ov001_0208635c func_ov001_02086384
-#define func_ov032_020bc1e8 func_ov032_020bc208
+#define func_ov032_020bc1e8 ApplyGroupMemberKind
 #include "src/ov032/object_group/ApplyModeToGroupFollowers_020bc3b0.c"

@@ -1,4 +1,4 @@
-#define SetFlagBit0_020b85a8 func_ov027_020b85c8
+#define SetFlagBit0_020b85a8 SetFlagBit0
 #define SetPrimaryElementEnabled_020bc054 SetPrimaryElementEnabled
 #define data_ov039_020bea00 data_ov039_020bea20
 #include "src/ov039/event_state/SetPrimaryElementEnabled_020bc054.c"

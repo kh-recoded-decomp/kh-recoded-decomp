@@ -1,4 +1,4 @@
-#define GetCtxModeByte_02068084 func_ov001_02068084
+#define GetCtxModeByte_02068084 GetCtxModeByte
 #define IsPartyLevelSufficient_020cec34 IsPartyLevelSufficient
 #define IsRewardEntryLocked_020ced28 IsRewardEntryLocked
 #define data_ov001_020a0460 data_ov001_020a0480

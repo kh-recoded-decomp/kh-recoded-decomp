@@ -1,0 +1,3 @@
+#define DrawGaugeWithNumber_020cd73c DrawGaugeWithNumber
+#define func_ov075_020cd5e4 DrawSpriteQuad
+#include "src/ov075/unclassified_helpers/DrawGaugeWithNumber_020cd73c.c"

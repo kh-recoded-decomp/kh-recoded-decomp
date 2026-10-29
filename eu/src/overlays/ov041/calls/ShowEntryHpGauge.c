@@ -1,7 +1,7 @@
 #include "nitro/types.h"
 #include "src/overlays/ov041/StageEntryRender.h"
 
-extern void func_ov035_020bc310(const VecFx32 *position, u16 hp, u16 shownHp, u16 maxHp, BOOL enemy);
+extern void QueueGaugeLevelEntry(const VecFx32 *position, u16 hp, u16 shownHp, u16 maxHp, BOOL enemy);
 
 /* Shows an entry's hp gauge at its feet; enemies of kinds 0x16-0x1a and 0xfd get the enemy style. */
 void ShowEntryHpGauge(StageEntry *entry)
@@ -20,5 +20,5 @@ void ShowEntryHpGauge(StageEntry *entry)
         }
         break;
     }
-    func_ov035_020bc310(&entry->slot.node.position, entry->hp, entry->shownHp, entry->maxHp, enemy);
+    QueueGaugeLevelEntry(&entry->slot.node.position, entry->hp, entry->shownHp, entry->maxHp, enemy);
 }

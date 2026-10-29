@@ -1,4 +1,4 @@
 #define BufferSlotSet_FreeAll_020cf9d0 BufferSlotSet_FreeAll
 #define BufferSlots_FreePair_020cf2e8 BufferSlots_FreePair
-#define FreeBufferAndClearStatus_0206a918 func_ov001_0206a918
+#define FreeBufferAndClearStatus_0206a918 FreeBufferAndClearStatus
 #include "src/ov059/unclassified_helpers/BufferSlotSet_FreeAll_020cf9d0.c"

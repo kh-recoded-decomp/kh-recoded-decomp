@@ -10,8 +10,8 @@
 #define OS_GetTick_02003fd4 OS_GetTick
 #define Obj_SetField14_02001490 Obj_SetField14
 #define PlaySoundChecked_0204d8d0 PlaySoundChecked
-#define TagTracker_InvokeCallback_020b8210 func_ov027_020b8230
-#define UpdateWidgetLayerDefault_020b9df0 func_ov027_020b9e10
+#define TagTracker_InvokeCallback_020b8210 TagTracker_InvokeCallback
+#define UpdateWidgetLayerDefault_020b9df0 UpdateWidgetLayerDefault_020b9e10
 #define data_ov001_0209dbe8 gChoiceDetailTextColors
 #define data_ov001_0209ec90 gHudSlideResourceGroup1
 #define data_ov001_0209ec9c gHudSlideResourceGroup2

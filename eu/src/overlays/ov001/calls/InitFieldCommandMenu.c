@@ -126,7 +126,7 @@ extern void ReleaseRecordManager(void);
 extern int AcquireRecordSlot(int slot, int param);
 extern BOOL ReleaseRecordSlot(s32 slot);
 extern int func_ov001_0207123c(void);
-extern int func_ov027_020b9e10(int layer, int mode);
+extern int UpdateWidgetLayerDefault_020b9e10(int layer, int mode);
 extern unsigned int MakePrimaryVramKey_02073634(unsigned int slot);
 extern void LoadPackedFileView(PackedFileView *view, u32 fileId, BOOL fromTail);
 extern void FreePointerIfSet(PackedFileView *view);
@@ -202,7 +202,7 @@ void InitFieldCommandMenu(FieldMenu *menu, u8 *tiles)
     MIi_CpuCopyFast(tiles + 0x200, menu->frameTiles, 0x200);
     AcquireRecordManager();
     AcquireRecordSlot(1, 1);
-    layer = func_ov027_020b9e10(func_ov001_0207123c(), 0xb);
+    layer = UpdateWidgetLayerDefault_020b9e10(func_ov001_0207123c(), 0xb);
     LoadPackedFileView(&view, MakePrimaryVramKey_02073634(1), 1);
     InitTextLayerAt(&menu->textLayer, 3, (u16 *)layer, font, &frame);
     menu->cells[0] = GetWord20(&menu->textLayer);

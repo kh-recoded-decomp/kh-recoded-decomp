@@ -1,0 +1,2 @@
+#define DropDecodedMovieFrame_020a9f18 DropDecodedMovieFrame
+#include "src/ov022/video_playback/DropDecodedMovieFrame_020a9f18.c"

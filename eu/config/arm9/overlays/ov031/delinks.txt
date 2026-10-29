@@ -119,7 +119,7 @@ src/overlays/ov031/calls/CanLeaveActiveRecord.c:
     complete
     .text       start:0x020bb030 end:0x020bb074
 
-src/overlays/ov031/calls/func_ov031_020bb074.c:
+src/overlays/ov031/calls/UpdateSceneScroll.c:
     complete
     .text       start:0x020bb074 end:0x020bb2f4
 

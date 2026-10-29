@@ -33,7 +33,7 @@
   },
   "CP_SaveContext": {
    "doc": "eu/docs/library/sdk_misc.md",
-   "doc_sha256": "3817d4fea7ba2441d83e415e71f36780fd85fcbfdade388f2f7437b389bc3822",
+   "doc_sha256": "2f7418ce380003462e55d4acc70149b338f3e2178aa4fb99d4e7ffa9ce0a3351",
    "end": "0x0200a1b0",
    "gates": {
     "documentation": {
@@ -64,7 +64,7 @@
   },
   "CPi_RestoreContext": {
    "doc": "eu/docs/library/sdk_misc.md",
-   "doc_sha256": "3817d4fea7ba2441d83e415e71f36780fd85fcbfdade388f2f7437b389bc3822",
+   "doc_sha256": "2f7418ce380003462e55d4acc70149b338f3e2178aa4fb99d4e7ffa9ce0a3351",
    "end": "0x0200a1ec",
    "gates": {
     "documentation": {
@@ -436,7 +436,7 @@
   },
   "MI_ReadUncompLZ8": {
    "doc": "eu/docs/library/sdk_misc.md",
-   "doc_sha256": "3817d4fea7ba2441d83e415e71f36780fd85fcbfdade388f2f7437b389bc3822",
+   "doc_sha256": "2f7418ce380003462e55d4acc70149b338f3e2178aa4fb99d4e7ffa9ce0a3351",
    "end": "0x0200592c",
    "gates": {
     "documentation": {
@@ -648,7 +648,7 @@
   },
   "MIi_UncompressBackward": {
    "doc": "eu/docs/library/sdk_misc.md",
-   "doc_sha256": "3817d4fea7ba2441d83e415e71f36780fd85fcbfdade388f2f7437b389bc3822",
+   "doc_sha256": "2f7418ce380003462e55d4acc70149b338f3e2178aa4fb99d4e7ffa9ce0a3351",
    "end": "0x020009fc",
    "gates": {
     "documentation": {
@@ -989,7 +989,7 @@
   },
   "OS_GetLockID": {
    "doc": "eu/docs/library/sdk_misc.md",
-   "doc_sha256": "3817d4fea7ba2441d83e415e71f36780fd85fcbfdade388f2f7437b389bc3822",
+   "doc_sha256": "2f7418ce380003462e55d4acc70149b338f3e2178aa4fb99d4e7ffa9ce0a3351",
    "end": "0x0200240c",
    "gates": {
     "documentation": {
@@ -1020,7 +1020,7 @@
   },
   "OSi_AlarmHandler": {
    "doc": "eu/docs/library/sdk_misc.md",
-   "doc_sha256": "3817d4fea7ba2441d83e415e71f36780fd85fcbfdade388f2f7437b389bc3822",
+   "doc_sha256": "2f7418ce380003462e55d4acc70149b338f3e2178aa4fb99d4e7ffa9ce0a3351",
    "end": "0x02004450",
    "gates": {
     "documentation": {
@@ -1051,7 +1051,7 @@
   },
   "OSi_GetAndDisplayContext": {
    "doc": "eu/docs/library/sdk_misc.md",
-   "doc_sha256": "3817d4fea7ba2441d83e415e71f36780fd85fcbfdade388f2f7437b389bc3822",
+   "doc_sha256": "2f7418ce380003462e55d4acc70149b338f3e2178aa4fb99d4e7ffa9ce0a3351",
    "end": "0x02003dbc",
    "gates": {
     "documentation": {

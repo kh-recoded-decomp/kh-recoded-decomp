@@ -112,7 +112,7 @@ extern int FX_Mul(int left, int right);
 extern void VEC_Subtract(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
 extern fx32 VEC_DotProduct(const VecFx32 *a, const VecFx32 *b);
 extern void VEC_Normalize(const VecFx32 *src, VecFx32 *dst);
-extern void func_ov052_020cfdd4(Actor *actor, AnimEntry *entry, int arg);
+extern void SelectHitReaction(Actor *actor, AnimEntry *entry, int arg);
 extern void ApplyAnimRootMotion(Actor *actor, AnimEntry *entry);
 extern void InitSlotEntryFromRecord(SlotEntry *entry, void *source, int mirrored, SceneObject *record, int player);
 extern int ProcessTargetHitEntries(Actor *actor, AnimEntry *target, SlotEntry *entry);
@@ -336,7 +336,7 @@ void UpdateOv069BossMotion(Actor *actor)
     }
     entries = obj->entries;
     index = actor->animIndex;
-    func_ov052_020cfdd4(actor, &entries[index], 1);
+    SelectHitReaction(actor, &entries[index], 1);
     ApplyAnimRootMotion(actor, &entries[index]);
     InitSlotEntryFromRecord(&slot, &entries[index], 1, obj, actor->player);
     slot.callback = AimOv069BossAtHit;

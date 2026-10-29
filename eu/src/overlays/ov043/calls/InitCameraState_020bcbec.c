@@ -4,6 +4,6 @@
 #define VEC_MultAdd_01ffa09c VEC_MultAdd
 #define data_02053438 gZeroVecFx32
 #define data_ov043_020bd2c0 gOv043CameraState
-#define func_ov043_020bccc4 func_ov043_020bcce4
+#define func_ov043_020bccc4 UpdateFollowCamera
 #define func_ov043_020bd088 func_ov043_020bd0a8
 #include "src/ov043/camera/InitCameraState_020bcbcc.c"

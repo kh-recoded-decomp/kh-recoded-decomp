@@ -1,6 +1,6 @@
 #define CallWithZeroFlag_020a3594 CallWithZeroFlag
 #define FieldObject_SetDisabled_020a333c FieldObject_SetDisabled
-#define GetCtxModeByte_02068084 func_ov001_02068084
+#define GetCtxModeByte_02068084 GetCtxModeByte
 #define ScaleVecFx32InPlace_0204a5e4 ScaleVecFx32InPlace
 #define UpdateRecordActors_020bbb88 UpdateRecordActors
 #define VEC_Subtract_01ff9e3c VEC_Subtract

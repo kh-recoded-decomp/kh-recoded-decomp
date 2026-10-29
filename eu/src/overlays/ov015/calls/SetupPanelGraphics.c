@@ -143,7 +143,7 @@ extern void SetWidgetRootDpadEnabled(void *container, int value);
 extern void SetWidgetRootTouchEnabled(void *container, int value);
 extern void func_ov027_020b90b8(void *container,
                              void (*callback)(WidgetPositionRecord *widget, u32 keys));
-extern void func_ov027_020b90a8(void *container, int elementId, void (*callback)(void));
+extern void ResolveEntryStoreWord(void *container, int elementId, void (*callback)(void));
 
 extern int DispatchContextCommand(int query, int arg1, int arg2, int arg3);
 extern int CountSetFlagsInRange(void);
@@ -354,13 +354,13 @@ void SetupPanelGraphics(void) {
         SetFocusedWidget(data_ov015_0207e960->subObj, element);
     }
     func_ov027_020b90b8(data_ov015_0207e960->subObj, HandleWirelessPanelNavigation);
-    func_ov027_020b90a8(data_ov015_0207e960->subObj, 4, func_ov015_02072754);
-    func_ov027_020b90a8(data_ov015_0207e960->subObj, 9, func_ov015_02072758);
-    func_ov027_020b90a8(data_ov015_0207e960->subObj, 17, SetPanelFlagE2Bit3);
-    func_ov027_020b90a8(data_ov015_0207e960->subObj, 30, func_ov015_02072830);
-    func_ov027_020b90a8(data_ov015_0207e960->subObj, 31, func_ov015_0207283c);
-    func_ov027_020b90a8(data_ov015_0207e960->subObj, 32, func_ov015_02072848);
-    func_ov027_020b90a8(data_ov015_0207e960->subObj, 33, func_ov015_02072854);
+    ResolveEntryStoreWord(data_ov015_0207e960->subObj, 4, func_ov015_02072754);
+    ResolveEntryStoreWord(data_ov015_0207e960->subObj, 9, func_ov015_02072758);
+    ResolveEntryStoreWord(data_ov015_0207e960->subObj, 17, SetPanelFlagE2Bit3);
+    ResolveEntryStoreWord(data_ov015_0207e960->subObj, 30, func_ov015_02072830);
+    ResolveEntryStoreWord(data_ov015_0207e960->subObj, 31, func_ov015_0207283c);
+    ResolveEntryStoreWord(data_ov015_0207e960->subObj, 32, func_ov015_02072848);
+    ResolveEntryStoreWord(data_ov015_0207e960->subObj, 33, func_ov015_02072854);
     NNSi_FndFreeFromDefaultHeap(archive);
     ZeroHalfThenFree(handle);
 

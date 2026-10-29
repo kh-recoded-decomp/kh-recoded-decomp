@@ -1,0 +1,13 @@
+#define CanUseMemberSlot_020d0600 CanUseMemberSlot
+#define GetFieldAt0x12_020a7560 SharedObject_GetMode
+#define GetId10_020a755c SharedObject_GetId
+#define HandleMemberMenuInput_020d0524 HandleMemberMenuInput
+#define HasFlagsAt0xc_020a751c HasFlagsAt0xc
+#define IsFrameInSubObjectRange_020aa568 IsFrameInSubObjectRange
+#define IsObjHandleOverLimit_020aa674 IsObjHandleOverLimit
+#define IsPlayerEntryFlagSet_02050014 IsPlayerEntryFlagSet
+#define SelectHitReaction_020cfdb4 SelectHitReaction
+#define func_ov001_0206db78 GetPlayerControlState
+#define func_ov001_0207e07c SetArrowPromptFlag1
+#define func_ov021_020ad8c4 func_ov021_020ad8e4
+#include "src/ov052/unclassified_helpers/SelectHitReaction_020cfdb4.c"

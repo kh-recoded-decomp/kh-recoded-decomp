@@ -60,13 +60,13 @@ typedef struct {
 
 extern HudGaugeSet *data_ov001_020a04cc;
 extern FieldGlobal *data_ov001_020a0480;
-extern BOOL func_ov001_02073e40(GaugeCounter *fill, GaugeCounter *drain, int gaugeIndex, void *handle);
+extern BOOL UpdateHudGaugeCounters(GaugeCounter *fill, GaugeCounter *drain, int gaugeIndex, void *handle);
 extern void RedrawHudGaugeRows(void);
 extern void RepaintPanelGaugeRows(void);
 extern BOOL AdvanceGaugeSlot(int index, GaugeSlot *slot);
 extern void NNS_GfdRegisterNewVramTransferTask(int command, int offset, void *data, int size);
 extern u64 OS_GetTick(void);
-extern void func_ov001_020716e8(int index, int mode);
+extern void UploadPaletteSlotBlock(int index, int mode);
 extern void UploadScreenSlotBlock(int index, int mode);
 extern BOOL IsSessionFlagSet(int bitOffset);
 extern BOOL IsFieldPanelHidden(void);
@@ -86,10 +86,10 @@ int UpdateHudGauges(void)
     BOOL keepShown;
     BOOL blocked;
 
-    if (func_ov001_02073e40(&set->fillA, &set->drainA, 0, set->handles[0])) {
+    if (UpdateHudGaugeCounters(&set->fillA, &set->drainA, 0, set->handles[0])) {
         RedrawHudGaugeRows();
     }
-    if (set->drainEnabled == 1 && func_ov001_02073e40(&set->fillB, &set->drainB, 1, set->handles[6])) {
+    if (set->drainEnabled == 1 && UpdateHudGaugeCounters(&set->fillB, &set->drainB, 1, set->handles[6])) {
         RepaintPanelGaugeRows();
     }
     for (i = 0; i < 3; i++) {
@@ -104,7 +104,7 @@ int UpdateHudGauges(void)
             if (set->flashTicks[i] + 0x1991b < now) {
                 set->flashTicks[i] = 0;
                 if (set->counts[i].count != 0) {
-                    func_ov001_020716e8(i, 0);
+                    UploadPaletteSlotBlock(i, 0);
                     if (i == 0 && set->slots[0].active) {
                         UploadScreenSlotBlock(i, 2);
                     } else {
@@ -117,7 +117,7 @@ int UpdateHudGauges(void)
                         keepShown = FALSE;
                     }
                     if (!keepShown) {
-                        func_ov001_020716e8(i, 2);
+                        UploadPaletteSlotBlock(i, 2);
                     }
                     UploadScreenSlotBlock(i, 2);
                 }

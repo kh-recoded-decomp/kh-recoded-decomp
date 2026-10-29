@@ -8,7 +8,7 @@ extern unsigned int NNS_G2dGetUnpackedBGCharacterData();
 extern unsigned int NNSi_FndFreeFromDefaultHeap();
 extern unsigned int GetBgDataFromArchive();
 extern unsigned int func_0202c4a0();
-extern unsigned int func_ov027_020b9e10();
+extern unsigned int UpdateWidgetLayerDefault_020b9e10();
 extern unsigned int ClearScreenLayerDirty();
 extern unsigned int UpdateScreenWidgetLayer();
 extern unsigned int BuildSlotImageParams();
@@ -49,7 +49,7 @@ void LoadStatusScreenResources(unsigned int event, int work)
     file = func_0202c4a0(file, 0xe);
     NNS_G2dGetUnpackedScreenData(file, &firstScreen);
     size = *(unsigned int *)(firstScreen + 8);
-    destination = func_ov027_020b9e10(work + 0x148, 0x1b);
+    destination = UpdateWidgetLayerDefault_020b9e10(work + 0x148, 0x1b);
     MIi_CpuCopy16(firstScreen + 0xc, destination, size);
     NNSi_FndFreeFromDefaultHeap(file);
     file = BuildSlotImageParams(0, 0xb);

@@ -140,7 +140,7 @@ src/overlays/ov010/calls/SpawnEffectAtTarget.c:
     complete
     .text       start:0x020a1048 end:0x020a10d8
 
-src/overlays/ov010/calls/func_ov010_020a10d8.c:
+src/overlays/ov010/calls/Entity_ProbeReleaseTarget.c:
     complete
     .text       start:0x020a10d8 end:0x020a12b8
 
@@ -176,7 +176,7 @@ src/overlays/ov010/calls/func_ov010_020a1978.c:
     complete
     .text       start:0x020a1978 end:0x020a1998
 
-src/overlays/ov010/calls/func_ov010_020a1998.c:
+src/overlays/ov010/calls/Entity_ChangeSpecialState.c:
     complete
     .text       start:0x020a1998 end:0x020a1ac8
 

@@ -1,3 +1,4 @@
+#define func_ov015_0207533c GeneratePanelRound
 #define MIi_CpuFill8_01ff8830 MI_CpuFill8
 #define func_ov015_02079d6c InstallResultPanelCallbacks
 #define MeasureTextWidth_02078950 MeasureTextWidth

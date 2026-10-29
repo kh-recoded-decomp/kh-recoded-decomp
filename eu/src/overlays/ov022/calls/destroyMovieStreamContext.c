@@ -1,0 +1,3 @@
+#define destroyMovieStreamContext_020a941c destroyMovieStreamContext
+#define releaseMovieDecodeContext_020a99dc releaseMovieDecodeContext
+#include "src/ov022/video_playback/destroyMovieStreamContext_020a941c.c"

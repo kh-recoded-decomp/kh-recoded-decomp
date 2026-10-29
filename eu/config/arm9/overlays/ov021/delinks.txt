@@ -140,11 +140,11 @@ src/overlays/ov021/calls/func_ov021_020a7cb0.c:
     complete
     .text       start:0x020a7cb0 end:0x020a7ccc
 
-src/overlays/ov021/calls/func_ov021_020a7ccc.c:
+src/overlays/ov021/calls/FreeCueTable_020a7ccc.c:
     complete
     .text       start:0x020a7ccc end:0x020a7ce8
 
-src/overlays/ov021/calls/func_ov021_020a7ce8.c:
+src/overlays/ov021/calls/LoadPathGraph.c:
     complete
     .text       start:0x020a7ce8 end:0x020a7f20
 
@@ -188,7 +188,7 @@ src/overlays/ov021/calls/InitModelObject.c:
     complete
     .text       start:0x020a8204 end:0x020a8254
 
-src/overlays/ov021/calls/func_ov021_020a8254.c:
+src/overlays/ov021/calls/UnpackExtendedData.c:
     complete
     .text       start:0x020a8254 end:0x020a8260
 

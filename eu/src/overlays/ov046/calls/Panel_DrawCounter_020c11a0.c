@@ -1,0 +1,3 @@
+#define Ov002_PanelDrawCounter Camera_StartPathViewFromState
+#define Panel_DrawCounter_020c1180 Panel_DrawCounter_020c11a0
+#include "src/ov046/shared_engine/Panel_DrawCounter_020c1180.c"

@@ -28,7 +28,7 @@ InitPathCursor kind:function(thumb,size=0x3c) addr:0x020a1530
 AddTouchPoint kind:function(thumb,size=0x22) addr:0x020a156c
 AnimSequence_Update kind:function(thumb,size=0x124) addr:0x020a1590
 GetStageJointPosition kind:function(thumb,size=0xac) addr:0x020a16b4
-func_ov006_020a1760 kind:function(thumb,size=0xf4) addr:0x020a1760
+RunGridPathCommand kind:function(thumb,size=0xf4) addr:0x020a1760
 sOv006ElevatorFrameData kind:data(any) addr:0x020a1854
 sOv006CardinalStepIndices kind:data(any) addr:0x020a1864
 sOv006JointRotation kind:data(any) addr:0x020a1874

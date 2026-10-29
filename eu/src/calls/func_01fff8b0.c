@@ -1,3 +1,0 @@
-#define QueueOrSendGeometryCommand_01ffa37c NNS_G3dGeBufferOP_N
-#define SetModelFirstTexture_01fff8b0 func_01fff8b0
-#include "src/itcm/library_nns_g3d/SetModelFirstTexture_01fff8b0.c"

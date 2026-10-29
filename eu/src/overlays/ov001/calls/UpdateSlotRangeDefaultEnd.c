@@ -1,2 +1,3 @@
+#define func_ov001_020749c0 SetHudGaugeRange
 #define UpdateSlotRangeDefaultEnd_02074fbc UpdateSlotRangeDefaultEnd
 #include "src/ov001/field_manager/UpdateSlotRangeDefaultEnd_02074fbc.c"

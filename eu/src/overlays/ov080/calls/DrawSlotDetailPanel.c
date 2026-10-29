@@ -41,7 +41,7 @@ extern int GetTextLayerLineWidth(int *layer, const u16 *text, const u16 **nextLi
 extern void func_ov039_020be548(int *layer, int x, int y, int color, u32 flags, const u16 *text, u32 style);
 extern void func_ov039_020be594(int *layer, int x, int y, int color, const u16 *text);
 extern void func_ov027_020b8208(void *tracker, SlotFrame *frame, int x, int y);
-extern void func_ov027_020b8230(void *tracker, SlotFrame *frame);
+extern void TagTracker_InvokeCallback(void *tracker, SlotFrame *frame);
 extern Position2D *GetWidgetPosition(void *panel, void *element);
 extern void SetEntrySlotsVisible(void *panel, void *element, BOOL visible);
 extern void func_ov027_020b91e8(void *panel, void *element, Position2D *position, int mode);
@@ -146,7 +146,7 @@ void DrawSlotDetailPanel(SaveSelectScreen *screen, int slotIndex)
     }
 
     func_ov027_020b8208(screen->tagTracker, slot->frames[slot->frameIndex], 3, (s16)(row + 7));
-    func_ov027_020b8230(screen->tagTracker, slot->frames[slot->frameIndex]);
+    TagTracker_InvokeCallback(screen->tagTracker, slot->frames[slot->frameIndex]);
     positions[2] = *GetWidgetPosition(screen->panel, screen->slots[0].cursorElement);
     positions[2].x += positions[0].x;
     positions[2].y += row << 15;

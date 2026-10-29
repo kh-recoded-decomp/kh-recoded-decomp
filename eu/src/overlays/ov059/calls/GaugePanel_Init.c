@@ -3,7 +3,7 @@
 #define ReleaseSharedRecordSlot_0202c8a8 ReleaseSharedRecordSlot
 #define RetainOrInitializeSharedRecord_0202c80c SND_RegisterSeq
 #define SetSlotKeyAndRebind_0206a94c SetSlotKeyAndRebind
-#define Slot_SetCellData_0206a93c func_ov001_0206a93c
+#define Slot_SetCellData_0206a93c Slot_SetCellData
 #define data_ov059_020cff88 sOv059_BaEfStTaPZ_020cffa8
 #define func_0202c690 func_0202c6a4
 #define func_0202c940 AcquireOrRefreshResourceBlock

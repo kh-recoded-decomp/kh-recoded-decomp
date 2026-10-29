@@ -4,7 +4,7 @@
 #define IsObjHandleBit0Set_020aa4e4 IsObjHandleBit0Set
 #define IsPlayerEntryFlagSet_02050014 IsPlayerEntryFlagSet
 #define UpdateTargetSlotsAndMode_020cb6dc UpdateTargetSlotsAndMode
-#define func_ov052_020cfdb4 func_ov052_020cfdd4
+#define func_ov052_020cfdb4 SelectHitReaction
 #define func_ov052_020cff8c ApplyAnimRootMotion
 #define func_ov052_020d012c ProcessTargetHitEntries
 #define func_ov052_020d0294 UpdateActionPhase

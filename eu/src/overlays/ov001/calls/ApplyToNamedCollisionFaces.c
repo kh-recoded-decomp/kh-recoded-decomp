@@ -1,5 +1,5 @@
 #define ApplyToNamedCollisionFaces_020680fc ApplyToNamedCollisionFaces
-#define FindNextNamedEntry_020670b4 func_ov001_020670b4
+#define FindNextNamedEntry_020670b4 FindNextNamedEntry
 #define ForEachFaceOnPoint_02033918 ForEachFaceOnPoint
 #define func_02036230 GetActorRegistry
 #define func_ov001_02068180 SetMeshEnabled

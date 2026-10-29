@@ -4,5 +4,5 @@
 #define func_ov001_020711b0 GetSceneTagTracker
 #define func_ov027_020b8184 FindActiveRecordById
 #define func_ov027_020b81e0 func_ov027_020b8200
-#define func_ov027_020b8210 func_ov027_020b8230
+#define func_ov027_020b8210 TagTracker_InvokeCallback
 #include "src/ov001/field_manager/RefreshCounterRecordPositions_0207d790.c"

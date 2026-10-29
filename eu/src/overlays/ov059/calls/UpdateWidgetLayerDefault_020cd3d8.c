@@ -1,0 +1,3 @@
+#define Ov000_UpdateWidgetLayer SpawnSourceRewardOrbs
+#define UpdateWidgetLayerDefault_020cd3b8 UpdateWidgetLayerDefault_020cd3d8
+#include "src/ov059/shared_engine/UpdateWidgetLayerDefault_020cd3b8.c"

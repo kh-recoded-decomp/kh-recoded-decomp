@@ -1,6 +1,6 @@
 #define CallVirtualHandlerSlot1_02001574 CallVirtualHandlerSlot1
 #define FindActiveRecordById_020b8184 FindActiveRecordById
-#define InvokeCallback40_020b8268 func_ov027_020b8288
+#define InvokeCallback40_020b8268 InvokeCallback40
 #define ResetResultsObjects_020bce50 ResetResultsObjects
 #define Text_UploadTileBuffer_02001520 Text_UploadTileBuffer
 #define func_0204f0c0 func_0204f0d4

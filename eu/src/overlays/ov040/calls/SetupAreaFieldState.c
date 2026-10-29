@@ -37,7 +37,7 @@
 #define func_ov001_02087e34 CallIfSessionActive
 #define func_ov001_02087f00 ResetStageEntries
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField
-#define func_ov031_020bb054 func_ov031_020bb074
+#define func_ov031_020bb054 UpdateSceneScroll
 #define func_ov021_020a75d8 SetClampedCursor
 #define func_ov040_020bc81c func_ov040_020bc83c
 #define func_ov001_02087ed0 ForwardToActiveService_02087ef8

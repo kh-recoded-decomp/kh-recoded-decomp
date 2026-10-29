@@ -1,6 +1,6 @@
 #define LoadBgLayerSet3_020bab8c LoadBgLayerSet3
 #define PXI_Init_020b9d48 func_ov027_020b9d68
-#define UpdateWidgetLayerDefault_020b9df0 func_ov027_020b9e10
+#define UpdateWidgetLayerDefault_020b9df0 UpdateWidgetLayerDefault_020b9e10
 #define data_ov039_020be734 data_ov039_020be754
 #define data_ov039_020be7e0 gMainBgScreenLoaders
 #define data_ov039_020bea00 data_ov039_020bea20

@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-extern int func_ov001_02068084(void);
+extern int GetCtxModeByte(void);
 extern void SetSessionFlag(u32 flag);
 extern void AddSessionCounter(int category, int amount);
 extern u32 ReadSessionPackedBits(u32 category, u32 index);
@@ -11,7 +11,7 @@ void func_ov001_0206df78(void)
     int flagSet;
     u32 count;
 
-    flagSet = func_ov001_02068084();
+    flagSet = GetCtxModeByte();
     if (flagSet == 0) {
         SetSessionFlag(0x3707);
     }

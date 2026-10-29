@@ -19,7 +19,7 @@ extern u32 RunProtectionCallback(void (*callback)(void));
 extern void DSProt_OnDetection(void);
 extern void StartSceneAfterTitle(void);
 extern int World_GetField4(void);
-extern int func_ov000_0206364c(void);
+extern int IsSessionReady(void);
 extern void SetPanelState(Panel *panel, s32 state, u32 param1, u32 param2);
 extern void ApplyPanelMenuFlags(Panel *panel, BOOL selectContinue);
 
@@ -58,7 +58,7 @@ int WaitPanelWorldSession(Panel *panel)
         switch (World_GetField4()) {
         case 1:
             SetPanelState(panel, 1, 0, 0x10);
-            panel->usedSlotCount = func_ov000_0206364c();
+            panel->usedSlotCount = IsSessionReady();
             ApplyPanelMenuFlags(panel, FALSE);
             result = 6;
             break;

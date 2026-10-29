@@ -8,7 +8,7 @@ src/overlays/ov027/calls/func_ov027_020b77a0.c:
     complete
     .text       start:0x020b77a0 end:0x020b77de
 
-src/overlays/ov027/calls/func_ov027_020b77e0.c:
+src/overlays/ov027/calls/build_and_place_record_sprites.c:
     complete
     .text       start:0x020b77e0 end:0x020b7848
 
@@ -128,7 +128,7 @@ src/overlays/ov027/calls/func_ov027_020b8208.c:
     complete
     .text       start:0x020b8208 end:0x020b8230
 
-src/overlays/ov027/auto/func_ov027_020b8230.c:
+src/overlays/ov027/auto/TagTracker_InvokeCallback.c:
     complete
     .text       start:0x020b8230 end:0x020b824c
 
@@ -136,15 +136,15 @@ src/overlays/ov027/calls/func_ov027_020b824c.c:
     complete
     .text       start:0x020b824c end:0x020b8288
 
-src/overlays/ov027/auto/func_ov027_020b8288.c:
+src/overlays/ov027/auto/InvokeCallback40.c:
     complete
     .text       start:0x020b8288 end:0x020b82a4
 
-src/overlays/ov027/calls/func_ov027_020b82a4.c:
+src/overlays/ov027/calls/StampTileRegionPalette.c:
     complete
     .text       start:0x020b82a4 end:0x020b833c
 
-src/overlays/ov027/calls/func_ov027_020b833c.c:
+src/overlays/ov027/calls/SweepElements.c:
     complete
     .text       start:0x020b833c end:0x020b8354
 
@@ -168,7 +168,7 @@ src/overlays/ov027/calls/PositionListRecords.c:
     complete
     .text       start:0x020b84b8 end:0x020b8514
 
-src/overlays/ov027/calls/func_ov027_020b8514.c:
+src/overlays/ov027/calls/apply_all_pending_entry_edits.c:
     complete
     .text       start:0x020b8514 end:0x020b8578
 
@@ -176,7 +176,7 @@ src/overlays/ov027/auto/func_ov027_020b8578.c:
     complete
     .text       start:0x020b8578 end:0x020b85c8
 
-src/overlays/ov027/auto/func_ov027_020b85c8.c:
+src/overlays/ov027/auto/SetFlagBit0.c:
     complete
     .text       start:0x020b85c8 end:0x020b85e4
 
@@ -232,7 +232,7 @@ src/overlays/ov027/calls/DestroyObjectsAndRelease.c:
     complete
     .text       start:0x020b8c78 end:0x020b8ca0
 
-src/overlays/ov027/calls/func_ov027_020b8ca0.c:
+src/overlays/ov027/calls/UpdateWidgetRootAndResetList.c:
     complete
     .text       start:0x020b8ca0 end:0x020b8cb4
 
@@ -280,7 +280,7 @@ src/overlays/ov027/auto/func_ov027_020b90a0.c:
     complete
     .text       start:0x020b90a0 end:0x020b90a6
 
-src/overlays/ov027/calls/func_ov027_020b90a8.c:
+src/overlays/ov027/calls/ResolveEntryStoreWord.c:
     complete
     .text       start:0x020b90a8 end:0x020b90b8
 
@@ -444,7 +444,7 @@ src/overlays/ov027/calls/ClearTileTableRect.c:
     complete
     .text       start:0x020b9d74 end:0x020b9e10
 
-src/overlays/ov027/calls/func_ov027_020b9e10.c:
+src/overlays/ov027/calls/UpdateWidgetLayerDefault_020b9e10.c:
     complete
     .text       start:0x020b9e10 end:0x020b9e20
 
@@ -476,7 +476,7 @@ src/overlays/ov027/calls/func_ov027_020b9f90.c:
     complete
     .text       start:0x020b9f90 end:0x020b9f9a
 
-src/overlays/ov027/calls/func_ov027_020b9f9c.c:
+src/overlays/ov027/calls/CopySourceBlock.c:
     complete
     .text       start:0x020b9f9c end:0x020b9fbc
 
@@ -492,7 +492,7 @@ src/overlays/ov027/calls/func_ov027_020ba060.c:
     complete
     .text       start:0x020ba060 end:0x020ba094
 
-src/overlays/ov027/calls/func_ov027_020ba094.c:
+src/overlays/ov027/calls/ClearOverlayLoadQueues.c:
     complete
     .text       start:0x020ba094 end:0x020ba124
 
@@ -512,7 +512,7 @@ src/overlays/ov027/auto/func_ov027_020ba1f8.c:
     complete
     .text       start:0x020ba1f8 end:0x020ba200
 
-src/overlays/ov027/calls/func_ov027_020ba200.c:
+src/overlays/ov027/calls/DestroyFileLoadRequest.c:
     complete
     .text       start:0x020ba200 end:0x020ba27c
 

@@ -1,0 +1,7 @@
+#define Camera_StepFollowTarget_020c53b4 Camera_StepFollowTarget
+#define FixedPointMultiply12 FX_Mul
+#define VEC_Mag_01ff9f28 VEC_Mag
+#define VEC_MultAdd_01ffa09c VEC_MultAdd
+#define VEC_NormalizeUnchecked_01ff9f88 VEC_Normalize
+#define VEC_Subtract_01ff9e3c VEC_Subtract
+#include "src/ov047/camera/Camera_StepFollowTarget_020c53b4.c"

@@ -1,6 +1,6 @@
 #define CallSelectionHandler_0200b740 FS_OpenFile
-#define GetFrameBuffer_020a7d64 func_ov022_020a7d84
-#define GetSubScreenBuffer_020a7d7c func_ov022_020a7d9c
+#define GetFrameBuffer_020a7d64 GetFrameBuffer
+#define GetSubScreenBuffer_020a7d7c GetSubScreenBuffer
 #define InitializeAlarmSystem_0200417c OS_InitAlarm
 #define InvokeForChannelOrBoth_0200110c InvokeForChannelOrBoth
 #define Msg_BuildLangPath_0202b798 Msg_BuildLangPath

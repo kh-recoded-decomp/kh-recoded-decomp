@@ -130,7 +130,7 @@ extern EventRecord *GetStageEventRecord(u32 id);
 extern void func_01ff88c4(void *dst, int value, u32 size);
 extern void MI_CpuFill8(void *dst, int value, u32 size);
 extern int SpawnStageObjectActor(EventRecord *record, SpawnParams *params, VecFx32 *position);
-extern void func_ov001_0209591c(EventRecord *record, EventMessage *message);
+extern void ApplyHitToEnemyGroup(EventRecord *record, EventMessage *message);
 extern FieldUnit *func_ov001_0208724c(u32 id, u32 index);
 extern void CacheEntry_SetActive(FieldUnit *unit, int active);
 extern void func_ov016_020a6a1c(FieldUnit *unit);
@@ -237,7 +237,7 @@ void UpdateStageManager(u32 value)
         func_01ff88c4(&message, 0, sizeof(EventMessage));
         message.mode = 1;
         message.flags |= 0x400;
-        func_ov001_0209591c(record, &message);
+        ApplyHitToEnemyGroup(record, &message);
         gStageManager->eventStarted = 1;
         gStageManager->eventRecordId = 0;
         gStageManager->eventTimer = 0;

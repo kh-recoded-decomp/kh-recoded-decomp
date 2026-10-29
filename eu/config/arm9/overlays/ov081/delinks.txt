@@ -16,7 +16,7 @@ src/overlays/ov081/calls/AdvanceListAndRedraw.c:
     complete
     .text       start:0x020c4dd4 end:0x020c4e08
 
-src/overlays/ov081/calls/func_ov081_020c4e08.c:
+src/overlays/ov081/calls/BindDescriptor0_020c4e08.c:
     complete
     .text       start:0x020c4e08 end:0x020c4e1a
 
@@ -72,7 +72,7 @@ src/overlays/ov081/calls/DrawBgTextLabel.c:
     complete
     .text       start:0x020c5550 end:0x020c5660
 
-src/overlays/ov081/calls/func_ov081_020c5660.c:
+src/overlays/ov081/calls/BindDescriptor0_020c5660.c:
     complete
     .text       start:0x020c5660 end:0x020c5672
 

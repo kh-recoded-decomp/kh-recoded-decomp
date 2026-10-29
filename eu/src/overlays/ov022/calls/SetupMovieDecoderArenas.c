@@ -2,11 +2,11 @@
 #define GetTableAEntry_0200367c OS_GetArenaHi
 #define GetTableBEntry_02003690 OS_GetArenaLo
 #define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
-#define ResetMovieDecoderCodeArena_020aa8b4 func_ov022_020aa8d4
-#define ResetMovieLookupTableArena_020aa8d4 func_ov022_020aa8f4
+#define ResetMovieDecoderCodeArena_020aa8b4 ResetMovieDecoderCodeArena
+#define ResetMovieLookupTableArena_020aa8d4 ResetMovieLookupTableArena
 #define SetupMovieDecoderArenas_020a8264 SetupMovieDecoderArenas
 #define data_ov022_020b7d94 data_ov022_020b7db4
 #define func_01ff89a8 MI_CpuCopy8
 #define func_02003b3c OS_GetDTCMAddress
-#define getMovieDecoderCodeSize_020aa8a0 func_ov022_020aa8c0
+#define getMovieDecoderCodeSize_020aa8a0 getMovieDecoderCodeSize
 #include "src/ov022/video_playback/SetupMovieDecoderArenas_020a8264.c"

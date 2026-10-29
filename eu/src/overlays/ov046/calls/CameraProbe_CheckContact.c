@@ -1,6 +1,6 @@
 #define AbsDotProduct_0204a96c AbsDotProduct
 #define CameraProbe_CheckContact_020c1cc8 CameraProbe_CheckContact
-#define GetCtxModeByte_02068084 func_ov001_02068084
+#define GetCtxModeByte_02068084 GetCtxModeByte
 #define IsFacingContactNormal_020349d8 IsFacingContactNormal
 #define SetShapePosition_0203afa0 SetShapePosition
 #define VEC_Add_01ff9e0c VEC_Add

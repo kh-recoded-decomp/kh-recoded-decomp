@@ -1,7 +1,0 @@
-#define GetPanelPageCount_020779dc GetPanelPageCount
-#define GrantRewardEntry_02078438 GrantRewardEntry
-#define PickWeightedReward_0207830c func_ov015_0207830c
-#define ReadGlobalPackedBits_02027348 ReadGlobalPackedBits
-#define data_ov015_0207e868 gWirelessResourceTables
-#define func_0202a9d0 func_0202a9e4
-#include "src/ov015/panel_state/PickWeightedReward_0207830c.c"

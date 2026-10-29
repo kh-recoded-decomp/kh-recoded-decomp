@@ -26,14 +26,14 @@ typedef struct CameraManager {
 } CameraManager;
 
 extern CameraManager *gCameraManager;
-extern fx32 func_ov046_020c0dd4(void);
+extern fx32 ArmObject_020c0dd4(void);
 extern void Camera_AimViewAtPlayer(CameraState *state);
 extern void Camera_GetRaisedPlayerPosition(VecFx32 *out);
 extern fx32 VEC_Distance(const VecFx32 *a, const VecFx32 *b);
 extern void Camera_BuildSideView(BasisFrame *frame);
 extern void VEC_Subtract(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
 extern void TransformVectorByBasis(const VecFx32 *vec, const VecFx32 *axes, VecFx32 *out);
-extern void func_ov046_020c11a0(int mode, CameraState *state, int curve, int duration);
+extern void Panel_DrawCounter_020c11a0(int mode, CameraState *state, int curve, int duration);
 
 static inline VecFx32 MakeVec(fx32 x, fx32 y, fx32 z)
 {
@@ -51,7 +51,7 @@ void Camera_StartLocalTargetView(const VecFx32 *position, int curve, int duratio
     BasisFrame frame;
 
     state.position = *position;
-    state.fov = func_ov046_020c0dd4();
+    state.fov = ArmObject_020c0dd4();
     Camera_AimViewAtPlayer(&state);
     state.isRaw = 0;
     state.isLocal = 1;
@@ -69,5 +69,5 @@ void Camera_StartLocalTargetView(const VecFx32 *position, int curve, int duratio
     TransformVectorByBasis(&state.position, frame.axes, &state.position);
     TransformVectorByBasis(&state.target, frame.axes, &state.target);
     TransformVectorByBasis(&state.up, frame.axes, &state.up);
-    func_ov046_020c11a0(3, &state, curve, duration);
+    Panel_DrawCounter_020c11a0(3, &state, curve, duration);
 }

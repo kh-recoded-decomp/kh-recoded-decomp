@@ -2,5 +2,5 @@
 #define DrawModelWithAttachment_020a9af0 DrawModelWithAttachment
 #define QueueOrSendGeometryCommand_01ffa37c NNS_G3dGeBufferOP_N
 #define func_02019188 NNS_G3dGlbFlushP
-#define setMaterialColorScale_01fff67c func_01fff67c
+#define setMaterialColorScale_01fff67c setMaterialColorScale
 #include "src/ov021/animation/DrawModelWithAttachment_020a9af0.c"

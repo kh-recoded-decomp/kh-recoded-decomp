@@ -16,7 +16,7 @@ extern FieldSelectionState *data_0205fe0c;
 extern void *FindLoadedElementById(void *tracker, u32 id);
 extern void SetTagRecordArmed(void *tracker, void *record, BOOL armed);
 extern void *FindActiveRecordById(void *tracker, u16 id);
-extern void func_ov027_020b8288(void *tracker, void *record);
+extern void InvokeCallback40(void *tracker, void *record);
 
 static inline int SetSelectionTagArmed(void *tracker, u32 id, BOOL armed)
 {
@@ -36,7 +36,7 @@ void UpdateFieldMenuSelectionTags(FieldMenu *menu, void *tracker, int mode)
     secondId = SetSelectionTagArmed(tracker, 12, FALSE);
     SetSelectionTagArmed(tracker, 17, FALSE);
     SetSelectionTagArmed(tracker, 18, FALSE);
-    func_ov027_020b8288(tracker, FindActiveRecordById(tracker, 0x55));
+    InvokeCallback40(tracker, FindActiveRecordById(tracker, 0x55));
     if (mode == 2) {
         selected = 18;
     } else if (menu->listedCount > 0) {

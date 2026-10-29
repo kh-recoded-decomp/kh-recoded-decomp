@@ -1,7 +1,0 @@
-#define Model_SetAllMaterialAlpha NNS_G3dMdlSetMdlAlphaAll
-#define Model_SetAllPolygonIds NNS_G3dMdlSetMdlPolygonIDAll
-#define Script_MakeActorTranslucentAndClearVerticalOffset_0208deb0 func_ov001_0208ded8
-#define func_02025960 ScriptCmd_ReturnValue
-#define func_02025de4 ScriptVm_ReadOperandInt
-#define func_02036240 ActorRegistry_GetEntityByIndex
-#include "src/ov001/scripted_actor_behavior/Script_MakeActorTranslucentAndClearVerticalOffset_0208deb0.c"

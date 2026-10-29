@@ -1,13 +1,13 @@
 #define CallVirtualHandlerSlot1_02001574 CallVirtualHandlerSlot1
 #define FillBackgroundLayerRect_02001a60 FillBackgroundLayerRect
 #define FindActiveRecordById_020b8184 FindActiveRecordById
-#define InvokeCallback40_020b8268 func_ov027_020b8288
+#define InvokeCallback40_020b8268 InvokeCallback40
 #define IsHudFlag9Set_02072884 IsHudFlag9Set
 #define OS_GetTick_02003fd4 OS_GetTick
-#define TagTracker_InvokeCallback_020b8210 func_ov027_020b8230
+#define TagTracker_InvokeCallback_020b8210 TagTracker_InvokeCallback
 #define Text_UploadTileBuffer_02001520 Text_UploadTileBuffer
 #define UpdateHudNoticeMessage_020705a4 UpdateHudNoticeMessage
-#define UpdateWidgetLayerDefault_020b9df0 func_ov027_020b9e10
+#define UpdateWidgetLayerDefault_020b9df0 UpdateWidgetLayerDefault_020b9e10
 #define func_0200160c func_02001620
 #define func_02029f48 func_02029f5c
 #define func_0204d8d0 PlaySoundChecked

@@ -47,7 +47,7 @@ extern void RefreshScrollListLayout(void);
 extern void LoadOverlay053EntityResources(void);
 extern void UpdateModelBlinkEffect(void);
 extern void Entity_HandleSpecialAction(void);
-extern void func_ov010_020a1998(void);
+extern void Entity_ChangeSpecialState(void);
 
 void InitOverlay053Entity(Entity *entity, u8 kind)
 {
@@ -76,6 +76,6 @@ void InitOverlay053Entity(Entity *entity, u8 kind)
     entity->thinkCallback = UpdateModelBlinkEffect;
     if (func_ov001_0206e31c()) {
         entity->handleCallback = Entity_HandleSpecialAction;
-        entity->specialCallback = func_ov010_020a1998;
+        entity->specialCallback = Entity_ChangeSpecialState;
     }
 }

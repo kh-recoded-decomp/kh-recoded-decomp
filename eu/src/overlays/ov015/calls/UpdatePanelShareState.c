@@ -6,7 +6,7 @@
 #define GetMenuTouchHeld_02066b2c GetMenuTouchHeld
 #define HidePanelOptionSlots_020718fc HidePanelOptionSlots
 #define IsButtonBPressed_020632c8 IsButtonBPressed
-#define IsGlobalBit0Set_020632ac func_ov002_020632ac
+#define IsGlobalBit0Set_020632ac IsGlobalBit0Set
 #define IsWidgetMoveFinished_020b9100 IsWidgetMoveFinished
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define SetEntrySlotsVisible_020b9580 SetEntrySlotsVisible

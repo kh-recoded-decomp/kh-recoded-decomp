@@ -1,0 +1,6 @@
+#define build_and_place_record_sprites_020b77c0 build_and_place_record_sprites
+#define data_020ba364 data_ov027_020ba384
+#define data_020ba368 data_ov027_020ba388
+#define func_020b7e5c func_ov027_020b7e7c
+#define func_020b81e8 func_ov027_020b8208
+#include "src/ov027/runtime/build_and_place_record_sprites_020b77c0.c"

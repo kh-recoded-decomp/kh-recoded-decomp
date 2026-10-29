@@ -4,5 +4,5 @@
 #define GetStageObjectRecord_0209c0a0 GetStageObjectRecord
 #define SetModelMaterialPolygonId_0208f5fc SetModelMaterialPolygonId
 #define func_ov001_020909e4 UpdateSceneObjectAttachments
-#define func_ov001_02097324 func_ov001_0209734c
+#define func_ov001_02097324 ProcessStageCues
 #include "src/ov001/shared_engine/FinishStageObjectSpawn_020981e8.c"

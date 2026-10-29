@@ -9,11 +9,11 @@ extern void SelectNextRootMenuItem(void);
 extern void SelectPreviousRootMenuItem(void);
 extern void ToggleRootMenuOptionLeft(void);
 extern void ToggleRootMenuOptionRight(void);
-extern void func_ov074_020c4280(void);
+extern void InitRootMenu(void);
 extern void UpdateRootMenuFrame(void);
 
 void *gRootMenuDefinition[17] = {
-    (void *)func_ov074_020c4280,
+    (void *)InitRootMenu,
     (void *)ReleaseRootMenu,
     (void *)UpdateRootMenuFrame,
     NULL,

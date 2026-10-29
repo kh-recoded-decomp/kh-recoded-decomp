@@ -1,4 +1,4 @@
 #define Camera_BuildOrbitView_020c179c Camera_BuildOrbitView
 #define GetCameraOrbitHeight func_ov046_020c1a68
-#define func_ov046_020c1fa0 func_ov046_020c1fc0
+#define func_ov046_020c1fa0 Camera_SlideEyeAlongWalls
 #include "src/ov046/shared_engine/Camera_BuildOrbitView_020c179c.c"

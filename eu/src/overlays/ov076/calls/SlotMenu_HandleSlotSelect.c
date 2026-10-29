@@ -17,5 +17,5 @@
 #define func_ov076_020c44c0 SlotMenu_CanCombineSlotPair
 #define func_ov076_020c52f8 SlotMenu_MoveCursorToSlot
 #define func_ov076_020c8388 SlotMenu_OpenSlotMessage
-#define func_ov076_020cbba0 func_ov076_020cbbc0
+#define func_ov076_020cbba0 OpenHintPrompt
 #include "src/ov076/unclassified_helpers/SlotMenu_HandleSlotSelect_020c8b60.c"

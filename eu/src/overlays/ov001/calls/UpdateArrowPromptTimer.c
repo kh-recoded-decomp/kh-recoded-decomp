@@ -1,8 +1,8 @@
 #define FindActiveRecordById_020b8184 FindActiveRecordById
 #define GetSceneTagTracker_020711b0 GetSceneTagTracker
-#define InvokeCallback40_020b8268 func_ov027_020b8288
+#define InvokeCallback40_020b8268 InvokeCallback40
 #define RunHudExitCallback_02071fec RunHudExitCallback
-#define TagTracker_InvokeCallback_020b8210 func_ov027_020b8230
+#define TagTracker_InvokeCallback_020b8210 TagTracker_InvokeCallback
 #define UpdateArrowPromptTimer_0207d848 UpdateArrowPromptTimer
 #define func_0202a7a4 func_0202a7b8
 #define func_ov027_020b81d8 func_ov027_020b81f8

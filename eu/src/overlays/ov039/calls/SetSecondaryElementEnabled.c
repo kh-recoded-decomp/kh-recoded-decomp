@@ -1,4 +1,4 @@
-#define SetFlagBit0_020b85a8 func_ov027_020b85c8
+#define SetFlagBit0_020b85a8 SetFlagBit0
 #define SetSecondaryElementEnabled_020bc084 SetSecondaryElementEnabled
 #define data_ov039_020bea00 data_ov039_020bea20
 #define func_ov027_020b984c SetWidgetRootTouchEnabled

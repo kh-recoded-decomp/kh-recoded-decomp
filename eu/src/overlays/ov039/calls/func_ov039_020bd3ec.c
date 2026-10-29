@@ -1,6 +1,0 @@
-#define DispatchOverlayEventPairC_020bd3cc func_ov039_020bd3ec
-#define active_handler_indices data_ov039_020beaa4
-#define func_020bcd98 func_ov039_020bcdb8
-#define primary_handler_table data_ov039_020be950
-#define secondary_handler_table data_ov039_020be8f0
-#include "src/ov039/overlay_event_dispatch/DispatchOverlayEventPairC_020bd3cc.c"

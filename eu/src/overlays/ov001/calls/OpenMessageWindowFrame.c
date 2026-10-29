@@ -1,0 +1,11 @@
+#define FlushBufferAndRunCallback_0200153c FlushBufferAndRunCallback
+#define G2x_SetBlendAlpha_02006850 G2x_SetBlendAlpha_
+#define GetFieldFont3_020711e0 GetFieldFont3
+#define InitTextLayerAt_020014b0 InitTextLayerAt
+#define MeasureMessageTiles_02078dd8 MeasureMessageTiles
+#define OpenMessageWindowFrame_020791e0 OpenMessageWindowFrame
+#define PlaceMessageWindow_02078ff8 PlaceMessageWindow
+#define UpdateWidgetLayerDefault_020b9df0 UpdateWidgetLayerDefault_020b9e10
+#define data_ov001_020a04c4 data_ov001_020a04e4
+#define func_ov027_020b9e00 MarkTileTableRowDirty
+#include "src/ov001/text_rendering/OpenMessageWindowFrame_020791e0.c"

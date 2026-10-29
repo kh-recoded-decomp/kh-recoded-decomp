@@ -1,0 +1,5 @@
+#define EaseProgress_0204a174 EaseProgress
+#define FixedPointMultiply12 FX_Mul
+#define Orbit_StepSpiralOffset_020cac38 Orbit_StepSpiralOffset
+#define g_sinTable_0205356c gSinFx12Table
+#include "src/ov059/unclassified_helpers/Orbit_StepSpiralOffset_020cac38.c"

@@ -13,7 +13,7 @@
 #define QueueFileLoadRequest_020ba114 QueueFileLoadRequest
 #define SetEntrySlotsVisible_020b9580 SetEntrySlotsVisible
 #define SetupSubBgLayers_020b5a0c SetupSubBgLayers
-#define UpdateWidgetLayerDefault_020b9df0 func_ov027_020b9e10
+#define UpdateWidgetLayerDefault_020b9df0 UpdateWidgetLayerDefault_020b9e10
 #define data_ov025_020b7688 data_ov025_020b76a8
 #define data_ov025_020b7690 data_ov025_020b76b0
 #define data_ov025_020b76a0 data_ov025_020b76c0

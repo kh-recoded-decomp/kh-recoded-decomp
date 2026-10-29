@@ -16,7 +16,7 @@
 #define func_02037528 ResolveSteepSurfaceContact
 #define func_02037858 Container_IsOperationAllowed
 #define func_02038130 RefreshActorMeshCache
-#define func_020382b0 func_020382c4
+#define func_020382b0 ResolveContactPushOut
 #define func_0203ad14 MakeSphereShape
 #define func_0203ae34 InitCapsuleShape
 #define func_0204a5e4 ScaleVecFx32InPlace

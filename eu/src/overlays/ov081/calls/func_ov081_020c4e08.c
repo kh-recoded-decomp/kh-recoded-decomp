@@ -1,4 +1,0 @@
-#define BindDescriptor0_020c4de8 func_ov081_020c4e08
-#define Ov008_GetDescriptor0 func_ov081_020c544c
-#define Ov008_SetWord0And20 UpdateScrollArrows
-#include "src/ov081/shared_engine/BindDescriptor0_020c4de8.c"

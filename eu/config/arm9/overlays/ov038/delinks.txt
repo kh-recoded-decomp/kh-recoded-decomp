@@ -96,7 +96,7 @@ src/overlays/ov038/calls/StopOv038SoundStream.c:
     complete
     .text       start:0x020bac44 end:0x020bac5c
 
-src/overlays/ov038/calls/func_ov038_020bac5c.c:
+src/overlays/ov038/calls/InitDisplayForScene.c:
     complete
     .text       start:0x020bac5c end:0x020bae00
 

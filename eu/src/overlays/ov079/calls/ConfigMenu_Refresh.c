@@ -1,4 +1,4 @@
 #define ConfigMenu_Refresh_020c4a6c ConfigMenu_Refresh
 #define func_ov079_020c487c ConfigMenu_UpdateTags
-#define func_ov079_020c4928 func_ov079_020c4948
+#define func_ov079_020c4928 ConfigMenu_DrawText
 #include "src/ov079/unclassified_helpers/ConfigMenu_Refresh_020c4a6c.c"

@@ -15,7 +15,7 @@
 #define IsTargetInVerticalRange_020cf100 IsTargetInVerticalRange
 #define ResetStageEntries_02087f00 ResetStageEntries
 #define StageRecord_IsDefeated_02087cc4 StageRecord_IsDefeated
-#define UpdateWidgetLayerDefault_020cd3b8 func_ov059_020cd3d8
+#define UpdateWidgetLayerDefault_020cd3b8 UpdateWidgetLayerDefault_020cd3d8
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define ZeroBytes0x28_020ac0f8 ZeroBytes0x28
 #define data_02053438 gZeroVecFx32

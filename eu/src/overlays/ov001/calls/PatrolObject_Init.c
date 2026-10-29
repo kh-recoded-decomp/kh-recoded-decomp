@@ -4,7 +4,7 @@
 #define FieldObject_GetSavedValue_0207f9a8 FieldObject_GetSavedValue
 #define FindActiveSlotEntry_02083c38 FindActiveSlotEntry
 #define FindResourceIndexByName_0201aafc NNS_G3dGetResDictIdxByName
-#define GetCtxModeByte_02068084 func_ov001_02068084
+#define GetCtxModeByte_02068084 GetCtxModeByte
 #define IsObjectFlagClear_0207f7a4 IsObjectFlagClear
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define OS_SPrintf_02002428 OS_SPrintf

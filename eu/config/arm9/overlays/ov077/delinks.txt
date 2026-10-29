@@ -92,7 +92,7 @@ src/overlays/ov077/calls/DrawPartySlotIcons.c:
     complete
     .text       start:0x020c5714 end:0x020c5814
 
-src/overlays/ov077/calls/func_ov077_020c5814.c:
+src/overlays/ov077/calls/UpdateSlotTouchRegions.c:
     complete
     .text       start:0x020c5814 end:0x020c5900
 
@@ -194,7 +194,7 @@ src/overlays/ov077/calls/DrawSpriteQuad_020c683c.c:
     complete
     .text       start:0x020c683c end:0x020c6994
 
-src/overlays/ov077/calls/func_ov077_020c6994.c:
+src/overlays/ov077/calls/DrawItemGaugeAndDigits.c:
     complete
     .text       start:0x020c6994 end:0x020c6aac
 
@@ -322,7 +322,7 @@ src/overlays/ov077/calls/HandleYesNoWindowInput.c:
     complete
     .text       start:0x020c7e90 end:0x020c7fe0
 
-src/overlays/ov077/calls/func_ov077_020c7fe0.c:
+src/overlays/ov077/calls/AdvanceItemPrompt.c:
     complete
     .text       start:0x020c7fe0 end:0x020c8120
 
@@ -378,7 +378,7 @@ src/overlays/ov077/calls/IsMessageWindowActive.c:
     complete
     .text       start:0x020c8be4 end:0x020c8bf4
 
-src/overlays/ov077/calls/func_ov077_020c8bf4.c:
+src/overlays/ov077/calls/OpenItemPrompt.c:
     complete
     .text       start:0x020c8bf4 end:0x020c8d20
 

@@ -1,4 +1,4 @@
-#define FreeCueTable_020bdfec func_ov040_020be00c
+#define FreeCueTable_020bdfec FreeCueTable_020be00c
 #define ShutdownOverlay053_020d2628 ShutdownOverlay053
 #define func_ov010_020a1808 ReleaseSpecialActionWork
 #define func_ov052_020ccc60 DestroyActorResources

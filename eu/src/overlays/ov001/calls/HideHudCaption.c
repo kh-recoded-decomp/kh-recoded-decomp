@@ -1,5 +1,5 @@
 #define FindActiveRecordById_020b8184 FindActiveRecordById
 #define HideHudCaption_02072c40 HideHudCaption
-#define InvokeCallback40_020b8268 func_ov027_020b8288
+#define InvokeCallback40_020b8268 InvokeCallback40
 #define data_020a04a4 data_ov001_020a04c4
 #include "src/ov001/shared_engine/HideHudCaption_02072c40.c"

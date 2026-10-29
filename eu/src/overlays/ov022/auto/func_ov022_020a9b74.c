@@ -1,2 +1,0 @@
-#define movieFrameBufferStatus_020a9b54 func_ov022_020a9b74
-#include "src/ov022/video_playback/movieFrameBufferStatus_020a9b54.c"

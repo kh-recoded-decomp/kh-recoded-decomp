@@ -1,4 +1,4 @@
 #define NegateVecFx32_0204aa40 NegateVecFx32
 #define SweepSwappedShapesAlt_02041de4 SweepSwappedShapesAlt
-#define func_020456c0 func_020456d4
+#define func_020456c0 SweepCylinderAgainstPolygon
 #include "src/arm9/spatial_queries/SweepSwappedShapesAlt_02041de4.c"

@@ -45,7 +45,7 @@ typedef char IconCellSizeCheck[(sizeof(IconCell) == 12) ? 1 : -1];
 
 extern void *func_ov039_020bc1dc(void);
 extern void *GetPrimaryMenuElement(void);
-extern void func_ov027_020b833c(void);
+extern void SweepElements(void);
 extern void FreePointerIfSet(void **ptr);
 extern void DestroyAllContainerElements(void *container);
 extern void ReleaseIfMarked(void *container);
@@ -65,7 +65,7 @@ void ResetShopMenuGraphics(ShopMenu *menu)
     void *container = func_ov039_020bc1dc();
 
     GetPrimaryMenuElement();
-    func_ov027_020b833c();
+    SweepElements();
     FreePointerIfSet(&menu->ownedPointer);
     DestroyAllContainerElements(container);
     ReleaseIfMarked(container);

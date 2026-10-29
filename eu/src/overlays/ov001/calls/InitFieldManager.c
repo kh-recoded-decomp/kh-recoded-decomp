@@ -95,10 +95,10 @@ extern void BuildChoiceWindow(FieldManager *manager, void *charData);
 extern void CreateFieldHudWidgets(FieldManager *manager, GraphicsView *view);
 extern void RefreshHudTagsAndIcons(FieldManager *manager);
 extern void *FindActiveRecordById(void *pool, u32 recordId);
-extern void func_ov027_020b8230(void *pool, void *record);
+extern void TagTracker_InvokeCallback(void *pool, void *record);
 extern void func_ov001_0207b430(void);
 extern void *func_ov001_0207123c(void);
-extern u16 *func_ov027_020b9e10(void *widgets, int layer);
+extern u16 *UpdateWidgetLayerDefault_020b9e10(void *widgets, int layer);
 extern void FillBackgroundLayerRect(void *window, u16 *dst, int x, int y, u8 palette);
 extern void InvokeForChannelOrBoth(u32 arg0, void *arg1, void *arg2, int channel);
 extern void RunFieldListCallbacks(void);
@@ -111,7 +111,7 @@ extern BOOL IsHudFlag7Set(void);
 extern BOOL IsFieldFlag10Set(void);
 extern BOOL IsFieldFlag8Set(void);
 extern u32 ReadSessionPackedBits(int bitOffset, u32 bitCount);
-extern s8 func_ov001_02068084(void);
+extern s8 GetCtxModeByte(void);
 extern BOOL IsSessionFlagSet(u32 flagId);
 extern void SetParamHalf18(int value);
 extern void SetParamWord20(int value);
@@ -183,21 +183,21 @@ void *InitFieldManager(FieldParams *params)
         RefreshHudTagsAndIcons(manager);
         break;
     case 1:
-        func_ov027_020b8230(manager->records, FindActiveRecordById(manager->records, 0x192));
-        func_ov027_020b8230(manager->records, FindActiveRecordById(manager->records, 0x190));
-        func_ov027_020b8230(manager->records, FindActiveRecordById(manager->records, 0x32));
+        TagTracker_InvokeCallback(manager->records, FindActiveRecordById(manager->records, 0x192));
+        TagTracker_InvokeCallback(manager->records, FindActiveRecordById(manager->records, 0x190));
+        TagTracker_InvokeCallback(manager->records, FindActiveRecordById(manager->records, 0x32));
         func_ov001_0207b430();
         break;
     case 2:
         RefreshHudTagsAndIcons(manager);
-        func_ov027_020b8230(manager->records, FindActiveRecordById(manager->records, 5));
+        TagTracker_InvokeCallback(manager->records, FindActiveRecordById(manager->records, 5));
         break;
     case 3:
         RefreshHudTagsAndIcons(manager);
         func_ov001_0207b430();
         break;
     }
-    FillBackgroundLayerRect(manager->textWindow, func_ov027_020b9e10(func_ov001_0207123c(), 9), 1, 2, 9);
+    FillBackgroundLayerRect(manager->textWindow, UpdateWidgetLayerDefault_020b9e10(func_ov001_0207123c(), 9), 1, 2, 9);
     manager->panelState = 0;
     InvokeForChannelOrBoth(1, sOv001_BTLUITASK_0209edd8, RunFieldListCallbacks, 0);
     if (file != NULL) {
@@ -211,7 +211,7 @@ void *InitFieldManager(FieldParams *params)
     manager->tickerSpeed = 0x28;
     if (!IsHudFlag7Set() && !IsFieldFlag10Set() && !IsFieldFlag8Set()) {
         progressBits = ReadSessionPackedBits(0x1A00, 2);
-        if (func_ov001_02068084() == 5 && progressBits != 2
+        if (GetCtxModeByte() == 5 && progressBits != 2
             && (!IsSessionFlagSet(0x3609) || !IsSessionFlagSet(0x360A))) {
             resetParams = TRUE;
         }

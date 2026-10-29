@@ -1,0 +1,4 @@
+#define ByteCode_ResolveOperand ScriptVm_ReadOperandFx32
+#define Ov002_SpawnStateSpots func_ov001_0207fa24
+#define ScriptCmd_SpawnStateSpot_02080140 ScriptCmd_SpawnStateSpot_02080168
+#include "src/ov001/shared_engine/ScriptCmd_SpawnStateSpot_02080140.c"

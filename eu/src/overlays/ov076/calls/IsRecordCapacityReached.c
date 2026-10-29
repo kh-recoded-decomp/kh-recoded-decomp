@@ -1,5 +1,5 @@
 #define func_ov001_020645c8 IsSessionFlagSet
-#define GetCtxModeByte_02068084 func_ov001_02068084
+#define GetCtxModeByte_02068084 GetCtxModeByte
 #define IsRecordCapacityReached_020caa44 IsRecordCapacityReached
 #define ReadSessionPackedBits_02064574 ReadSessionPackedBits
 #define data_ov076_020cd110 data_ov076_020cd130

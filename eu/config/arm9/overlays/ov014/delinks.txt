@@ -40,7 +40,7 @@ src/overlays/ov014/auto/func_ov014_0206d2e4.c:
     complete
     .text       start:0x0206d2e4 end:0x0206d2e8
 
-src/overlays/ov014/calls/func_ov014_0206d2e8.c:
+src/overlays/ov014/calls/UpdatePanelEditInput.c:
     complete
     .text       start:0x0206d2e8 end:0x0206e66c
 

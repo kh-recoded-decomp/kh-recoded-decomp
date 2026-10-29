@@ -1,0 +1,5 @@
+#define GFXi_EnqueueCommand_02014090 NNS_GfdRegisterNewVramTransferTask
+#define UploadPaletteSlotBlock_020716e8 UploadPaletteSlotBlock
+#define data_ov001_020a04a4 data_ov001_020a04c4
+#define func_01ff878c MIi_CpuCopyFast
+#include "src/ov001/field_manager/UploadPaletteSlotBlock_020716e8.c"

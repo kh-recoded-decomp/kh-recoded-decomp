@@ -64,7 +64,7 @@ src/overlays/ov002/calls/func_ov002_02061dc8.c:
     complete
     .text       start:0x02061dc8 end:0x02061e34
 
-src/overlays/ov002/calls/func_ov002_02061e34.c:
+src/overlays/ov002/calls/DrawPanelTextOutlined.c:
     complete
     .text       start:0x02061e34 end:0x02062000
 
@@ -280,7 +280,7 @@ src/overlays/ov002/calls/SetScrollListPosition.c:
     complete
     .text       start:0x02063280 end:0x020632ac
 
-src/overlays/ov002/calls/func_ov002_020632ac.c:
+src/overlays/ov002/calls/IsGlobalBit0Set.c:
     complete
     .text       start:0x020632ac end:0x020632c8
 

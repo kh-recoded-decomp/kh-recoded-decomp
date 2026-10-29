@@ -42,7 +42,7 @@ extern void ApplyFieldResourceAndRelease(void *request, void *userData);
 extern void SelectSlotTitleLine(GaugeContext *context, int slot);
 extern void func_ov001_0207b520(void);
 extern void ResetGaugeDisplay(void);
-extern void func_ov001_0206ed8c(u32 value);
+extern void BlendIconTiles(u32 value);
 
 #define LEVEL_FILE(archive, index) ((((archive) + 0x8000) & 0xfffffc) << 7 | 0x80000000 | ((index) & 0x1ff))
 
@@ -137,7 +137,7 @@ void AddGaugePoints(int delta, BOOL loadNow)
         } else if (context->gauge == 0) {
             ResetGaugeDisplay();
         } else {
-            func_ov001_0206ed8c(context->gauge);
+            BlendIconTiles(context->gauge);
         }
     } else if (context->displayedLevel != maxLevel && context->displayedLevel != slot) {
         if (slot < context->displayedLevel) {
@@ -167,7 +167,7 @@ void AddGaugePoints(int delta, BOOL loadNow)
             QueueFileLoadRequest(LEVEL_FILE(context->archive, files.fileIds[slot]), 1, ApplyFieldResourceAndRelease, NULL);
         }
     } else {
-        func_ov001_0206ed8c(context->gauge);
+        BlendIconTiles(context->gauge);
     }
     context->displayedLevel = slot;
 }

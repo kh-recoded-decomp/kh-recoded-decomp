@@ -32,7 +32,7 @@ typedef struct GeometryGlobalState {
 extern void NNS_G3dGeBufferOP_N(u32 op, const void *args, u32 numWords);
 extern void MTX_RotY33_(MtxFx33 *mtx, fx32 sinVal, fx32 cosVal);
 extern void NNS_G3dGlbFlushP(void);
-extern void func_01fff67c(int packedRgb);
+extern void setMaterialColorScale(int packedRgb);
 extern void NNS_G3dDraw(void *renderObj);
 extern BOOL NNS_G3dGetResultMtx(void *renderObj, MtxFx43 *pos, MtxFx33 *nrm, u32 nodeID);
 
@@ -80,7 +80,7 @@ void SceneNode_Draw(SceneNode *node)
     }
 
     if (node->flags & 0x40) {
-        func_01fff67c(node->colorScale);
+        setMaterialColorScale(node->colorScale);
     }
     NNS_G3dDraw(node->renderObj);
 

@@ -1,5 +1,5 @@
 #define FieldObject_AdvanceRandomVariant_020846a4 FieldObject_AdvanceRandomVariant
-#define GetCtxModeByte_02068084 func_ov001_02068084
+#define GetCtxModeByte_02068084 GetCtxModeByte
 #define ReleaseOwnerResource_0207f20c ReleaseOwnerResource
 #define ReleaseResourceAndDetach_0202eee8 ReleaseResourceAndDetach
 #define ResetPatrolObject_02083a88 ResetPatrolObject

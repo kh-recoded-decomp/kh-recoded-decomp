@@ -1,5 +1,5 @@
 #define func_ov001_020645c8 IsSessionFlagSet
 #define ClassifySessionStateForMode_020ba544 ClassifySessionStateForMode
-#define GetCtxModeByte_02068084 func_ov001_02068084
+#define GetCtxModeByte_02068084 GetCtxModeByte
 #define ReadSessionPackedBits_02064574 ReadSessionPackedBits
 #include "src/ov037/unclassified_helpers/ClassifySessionStateForMode_020ba544.c"

@@ -60,7 +60,7 @@ src/overlays/ov004/calls/CopyScrollTextTiles.c:
     complete
     .text       start:0x02061d5c end:0x02061e7c
 
-src/overlays/ov004/calls/func_ov004_02061e7c.c:
+src/overlays/ov004/calls/StepScrollTextScroll.c:
     complete
     .text       start:0x02061e7c end:0x02062034
 
@@ -116,11 +116,11 @@ src/overlays/ov004/calls/RunScrollTextFrame.c:
     complete
     .text       start:0x020629d0 end:0x02062b70
 
-src/overlays/ov004/calls/func_ov004_02062b70.c:
+src/overlays/ov004/calls/DrawScrollTextLine.c:
     complete
     .text       start:0x02062b70 end:0x02062d78
 
-src/overlays/ov004/auto/func_ov004_02062d78.c:
+src/overlays/ov004/auto/hasAngleBracketTerminator.c:
     complete
     .text       start:0x02062d78 end:0x02062dc0
 

@@ -2,5 +2,5 @@
 #define DestroyFndObjectList_020014f0 DestroyFndObjectList
 #define FreePointerIfSet_020ba294 FreePointerIfSet
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
-#define SweepElements_020b831c func_ov027_020b833c
+#define SweepElements_020b831c SweepElements
 #include "src/ov079/unclassified_helpers/ConfigMenu_Release_020c46b8.c"

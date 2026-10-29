@@ -16,7 +16,7 @@ typedef struct {
 
 extern void VEC_Subtract(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
 extern void VEC_MultAdd(fx32 scale, const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
-extern BOOL func_ov007_020a09ac(BounceOwner *owner, const VecFx32 *position, const VecFx32 *velocity, VecFx32 *hit);
+extern BOOL SweepTouchSphere(BounceOwner *owner, const VecFx32 *position, const VecFx32 *velocity, VecFx32 *hit);
 extern BOOL DampBounceVelocity(BounceOwner *owner, BounceBody *body);
 
 static inline VecFx32 MakeVec(fx32 x, fx32 y, fx32 z)
@@ -51,7 +51,7 @@ BOOL StepHomingBounceBody(BounceOwner *owner, BounceBody *body)
     fallSpeed = body->velocity.y;
     if (fallSpeed != 0) {
         fall = MakeVec(0, fallSpeed, 0);
-        if (fallSpeed < 0 && func_ov007_020a09ac(owner, &body->position, &fall, &hit)) {
+        if (fallSpeed < 0 && SweepTouchSphere(owner, &body->position, &fall, &hit)) {
             if (DampBounceVelocity(owner, body)) {
                 body->velocity.y += 0x7b;
             }

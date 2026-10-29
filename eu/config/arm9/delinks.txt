@@ -3309,7 +3309,7 @@ src/calls/MIi_CpuFill24.c:
     complete
     .text       start:0x020127fc end:0x02012808
 
-src/calls/func_02012808.c:
+src/calls/JobQueue_WorkerLoop_02012808.c:
     complete
     .text       start:0x02012808 end:0x020128a0
 
@@ -8025,7 +8025,7 @@ src/calls/RefreshActorMeshCache.c:
     complete
     .text       start:0x02038144 end:0x020382c4
 
-src/calls/func_020382c4.c:
+src/calls/ResolveContactPushOut.c:
     complete
     .text       start:0x020382c4 end:0x02038a90
 
@@ -8601,7 +8601,7 @@ src/calls/TestCapsuleAgainstCylinder.c:
     complete
     .text       start:0x0204055c end:0x020405c6
 
-src/calls/func_020405c8.c:
+src/calls/TestCapsuleAgainstCapsule.c:
     complete
     .text       start:0x020405c8 end:0x02040ade
 
@@ -8769,7 +8769,7 @@ src/calls/SquareFx32.c:
     complete
     .text       start:0x020434cc end:0x020434e4
 
-src/calls/func_020434e4.c:
+src/calls/SweepBoxAgainstCylinder.c:
     complete
     .text       start:0x020434e4 end:0x0204476c
 
@@ -8781,11 +8781,11 @@ src/calls/SweepCapsuleAgainstCapsule.c:
     complete
     .text       start:0x02044928 end:0x020449c8
 
-src/calls/func_020449c8.c:
+src/calls/SweepCylinderAgainstCylinder.c:
     complete
     .text       start:0x020449c8 end:0x020456d4
 
-src/calls/func_020456d4.c:
+src/calls/SweepCylinderAgainstPolygon.c:
     complete
     .text       start:0x020456d4 end:0x02047198
 
@@ -8961,7 +8961,7 @@ src/calls/MinOfArray.c:
     complete
     .text       start:0x020496ec end:0x02049720
 
-src/calls/func_02049720.c:
+src/calls/SweepDiscAgainstEdge.c:
     complete
     .text       start:0x02049720 end:0x020498aa
 
@@ -10081,7 +10081,7 @@ src/calls/LoadStringPointerTableB.c:
     complete
     .text       start:0x02051594 end:0x0205162c
 
-src/calls/func_0205162c.c:
+src/calls/LoadLinkedChunkTables.c:
     complete
     .text       start:0x0205162c end:0x02051724
 

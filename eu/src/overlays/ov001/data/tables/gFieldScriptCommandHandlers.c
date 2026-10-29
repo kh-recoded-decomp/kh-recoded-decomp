@@ -8,7 +8,7 @@ extern void func_ov001_02064edc(void); /* ScriptCmd_EnterPhase */
 extern void ScriptCmd_LoadFieldObjectSet(void); /* ScriptCmd_LoadFieldObjectSet */
 extern void ScriptOp_StartFieldMotion(void); /* ScriptOp_StartFieldMotion */
 extern void ScriptCmd_QueueFlagTaskKind1(void); /* ScriptCmd_QueueFlagTaskKind1 */
-extern void func_ov001_02065010(void);
+extern void ScriptCmd_QueueFlagTaskKind2(void);
 extern void ScriptOp_StartFieldTimerAt(void); /* ScriptOp_StartFieldTimerAt */
 extern void ScriptOp_StartFieldTimer(void); /* ScriptOp_StartFieldTimer */
 extern void func_ov001_020651f0(void); /* CmdOpenDialog */
@@ -120,7 +120,7 @@ void (*gFieldScriptCommandHandlers[190])(void) = {
     NULL,
     ScriptCmd_QueueFlagTaskKind1, /* ScriptCmd_QueueFlagTaskKind1 */
     NULL,
-    func_ov001_02065010,
+    ScriptCmd_QueueFlagTaskKind2,
     NULL,
     ScriptOp_StartFieldTimerAt, /* ScriptOp_StartFieldTimerAt */
     NULL,

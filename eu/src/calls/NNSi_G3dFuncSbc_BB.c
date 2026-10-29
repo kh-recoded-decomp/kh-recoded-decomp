@@ -7,6 +7,6 @@
 #define GetOrInitResource749c NNS_G3dGlbGetWV
 #define GetOrInitResource74cc NNS_G3dGlbGetInvWV
 #define NNSi_G3dFuncSbc_BB_02039da4 NNSi_G3dFuncSbc_BB
-#define NNSi_G3dGeBufferCommand1 func_01ffcedc
+#define NNSi_G3dGeBufferCommand1 QueueOrSendGeometryCommandPair
 #define data_0205a924 NNS_G3dGlb
 #include "src/arm9/library_nns_g3d/NNSi_G3dFuncSbc_BB_02039da4.c"

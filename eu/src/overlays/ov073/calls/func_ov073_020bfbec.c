@@ -7,7 +7,7 @@ extern unsigned int DestroyFndObjectList();
 extern unsigned int FreePointerIfSet();
 extern unsigned int ReleaseRecordSlot();
 extern unsigned int ReleaseStatusPage();
-extern unsigned int func_ov027_020b833c();
+extern unsigned int SweepElements();
 extern unsigned int func_02050a58();
 extern unsigned int ReleaseRecordManager();
 extern unsigned int ReleaseIfMarked();
@@ -32,7 +32,7 @@ void func_ov073_020bfbec(char *work) {
   ReleaseRecordManager();
   UpdateSlotFillCounts(work + 0x16c,((NibbleFlags *)(data_0205fe0c + 0x28d7))->low);
   records = GetSecondaryMenuElement();
-  func_ov027_020b833c(records);
+  SweepElements(records);
   DestroyAllContainerElements(container);
   ReleaseIfMarked(container);
 }

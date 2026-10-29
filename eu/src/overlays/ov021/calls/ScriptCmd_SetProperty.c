@@ -275,7 +275,7 @@ extern u16 FindNearestCommandEntry(PropertyEvent *event, int kind);
 extern void ResetGroupCommandState(PropertyEvent *event);
 extern void StartStageEventEffect(PropertyEvent *event);
 extern void ReleaseEventLinkedEntries(PropertyEvent *event);
-extern void func_ov001_0209591c(PropertyEvent *event, EventPacket *packet);
+extern void ApplyHitToEnemyGroup(PropertyEvent *event, EventPacket *packet);
 extern void func_ov001_02095904(PropertyEvent *event, u16 kind);
 extern void *GetSmallTableEntry(u16 id);
 extern void func_ov001_020664f0(int kind, int unknown, const VecFx32 *position, int option);
@@ -288,7 +288,7 @@ extern fx32 VEC_Mag(const VecFx32 *vector);
 extern fx32 FX_Div(fx32 numerator, fx32 denominator);
 extern void VEC_Add(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
 extern void func_ov001_02068968(int kind, int index);
-extern void func_ov006_020a1760(PropertyEvent *event, u16 property);
+extern void RunGridPathCommand(PropertyEvent *event, u16 property);
 extern void BindLinkSlotTable(PropertyEvent *event, u16 index);
 extern void ClaimSlot(u32 *table, u32 slot);
 extern void ReleaseSlot(u32 *table, u32 slot);
@@ -648,7 +648,7 @@ s32 ScriptCmd_SetProperty(void *thread, PropertyCommand *command)
                 func_01ff88c4(&valuePacket, 0, sizeof(valuePacket));
                 valuePacket.animationId = actor->animationId;
                 valuePacket.value = TaggedValueToFixed(argument);
-                func_ov001_0209591c(event, &valuePacket);
+                ApplyHitToEnemyGroup(event, &valuePacket);
                 handled = TRUE;
                 break;
             case 0x80:
@@ -800,13 +800,13 @@ s32 ScriptCmd_SetProperty(void *thread, PropertyCommand *command)
                 func_ov001_02068968(0, event->objectId - 1);
                 break;
             case 0x61:
-                func_ov006_020a1760(event, property->value);
+                RunGridPathCommand(event, property->value);
                 break;
             case 0x62:
-                func_ov006_020a1760(event, property->value);
+                RunGridPathCommand(event, property->value);
                 break;
             case 0x63:
-                func_ov006_020a1760(event, property->value);
+                RunGridPathCommand(event, property->value);
                 break;
             case 0x74:
                 BindLinkSlotTable(event, argument->value);
@@ -827,7 +827,7 @@ s32 ScriptCmd_SetProperty(void *thread, PropertyCommand *command)
                         func_01ff88c4(&copiedValuePacket, 0, sizeof(copiedValuePacket));
                         copiedValuePacket.value = event->value74;
                         event->value70 = 1;
-                        func_ov001_0209591c(event, &copiedValuePacket);
+                        ApplyHitToEnemyGroup(event, &copiedValuePacket);
                     }
                 }
                 break;

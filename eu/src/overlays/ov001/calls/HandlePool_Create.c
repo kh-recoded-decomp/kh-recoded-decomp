@@ -1,0 +1,4 @@
+#define ClearBuffer_0208f02c ClearBuffer
+#define HandlePool_Create_0208f038 HandlePool_Create
+#define NNSi_FndAllocFromDefaultHeapEx_0202a19c NNS_FndAllocFromDefaultExpHeapEx
+#include "src/ov001/unclassified_helpers/HandlePool_Create_0208f038.c"

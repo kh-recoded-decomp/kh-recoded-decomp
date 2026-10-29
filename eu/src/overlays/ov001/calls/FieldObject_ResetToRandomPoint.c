@@ -1,7 +1,7 @@
 #define DetachFromLeaderQuadTree_020836d8 DetachFromLeaderQuadTree
 #define FieldObject_AdvanceRandomVariant_020846a4 FieldObject_AdvanceRandomVariant
 #define FieldObject_ResetToRandomPoint_02083b38 FieldObject_ResetToRandomPoint
-#define GetCtxModeByte_02068084 func_ov001_02068084
+#define GetCtxModeByte_02068084 GetCtxModeByte
 #define SetCollisionObjectPosition_02033f48 SetCollisionObjectPosition
 #define random_next_scaled_0202aa04 random_next_scaled
 #include "src/ov001/field_objects/FieldObject_ResetToRandomPoint_02083b38.c"

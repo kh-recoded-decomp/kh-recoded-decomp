@@ -1,0 +1,7 @@
+#define ApplyBlockLift_020a3398 ApplyBlockLift
+#define BuildCollisionShape_02080834 BuildCollisionShape
+#define Obj_SetPosition_0203569c Obj_SetPosition
+#define SetBlockHidden_020a3408 SetBlockHidden
+#define UpdateElevatorPanel_020a37d8 UpdateElevatorPanel
+#define func_02036240 ActorRegistry_GetEntityByIndex
+#include "src/ov020/panel_state/UpdateElevatorPanel_020a37d8.c"

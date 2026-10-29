@@ -1,7 +1,0 @@
-#define G2_GetBG3CharPtr_020071b0 G2_GetBG3CharPtr
-#define G2_GetBG3ScrPtr_02006f80 G2_GetBG3ScrPtr
-#define G3X_SetToonTable_02006bf0 G3X_SetToonTable
-#define MIi_CpuCopyFast_01ff878c MIi_CpuCopyFast
-#define UpdateMatrixMenuBackground_020c8920 func_ov075_020c8940
-#define data_ov075_020d18e0 data_ov075_020d1900
-#include "src/ov075/matrix_menu/UpdateMatrixMenuBackground_020c8920.c"

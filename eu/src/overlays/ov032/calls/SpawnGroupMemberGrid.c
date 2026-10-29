@@ -6,8 +6,8 @@
 #define data_02053444 gIdentityMtxFx33
 #define func_0202a9d0 func_0202a9e4
 #define func_ov001_0208635c func_ov001_02086384
-#define func_ov016_020a6338 func_ov016_020a6358
+#define func_ov016_020a6338 SpawnFieldObjectTree
 #define func_ov016_020a6954 func_ov016_020a6974
-#define func_ov032_020bc1e8 func_ov032_020bc208
+#define func_ov032_020bc1e8 ApplyGroupMemberKind
 #define func_ov032_020bd518 UnlinkGroupMember
 #include "src/ov032/object_group/SpawnGroupMemberGrid_020bf468.c"

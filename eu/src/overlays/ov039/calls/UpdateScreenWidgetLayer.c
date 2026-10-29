@@ -1,4 +1,4 @@
 #define UpdateScreenWidgetLayer_020bc1e4 UpdateScreenWidgetLayer
-#define UpdateWidgetLayerDefault_020b9df0 func_ov027_020b9e10
+#define UpdateWidgetLayerDefault_020b9df0 UpdateWidgetLayerDefault_020b9e10
 #define data_ov039_020bea00 data_ov039_020bea20
 #include "src/ov039/widget_layers/UpdateScreenWidgetLayer_020bc1e4.c"

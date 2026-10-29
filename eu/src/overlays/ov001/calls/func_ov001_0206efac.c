@@ -6,7 +6,7 @@ extern void GX_LoadBGPltt(u32 dest, u32 value, u32 size);
 extern void GX_LoadBG3Char(u32 dest, u32 value, u32 size);
 extern s32 NNS_G2dGetUnpackedBGCharacterData(u32 resourceManager, s32 *outPayload);
 extern s32 GetClampedPaletteSlot(void);
-extern void func_ov001_0206ed8c(u16 flags);
+extern void BlendIconTiles(u16 flags);
 
 void func_ov001_0206efac(s32 context, u32 resourceManager, u32 unused1, u32 unused2)
 {
@@ -24,5 +24,5 @@ void func_ov001_0206efac(s32 context, u32 resourceManager, u32 unused1, u32 unus
     GX_LoadBG3Char(*(u32 *)(payload + 0x14) + 0x180, 0x5900, *(u32 *)(payload + 0x10) - 0x180);
     slotIndex = GetClampedPaletteSlot();
     GX_LoadBGPltt(*(u32 *)(context + 0x470) + slotIndex * 0x20, 0x100, 0x20);
-    func_ov001_0206ed8c(*(u16 *)(context + 0x476));
+    BlendIconTiles(*(u16 *)(context + 0x476));
 }

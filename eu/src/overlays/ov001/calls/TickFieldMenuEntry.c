@@ -6,7 +6,7 @@
 #define func_ov027_020b8390 FindLoadedElementById
 #define func_ov027_020b83e8 SetTagRecordArmed
 #define FindActiveRecordById_020b8184 FindActiveRecordById
-#define InvokeCallback40_020b8268 func_ov027_020b8288
+#define InvokeCallback40_020b8268 InvokeCallback40
 #define func_ov001_02078360 SetFieldMenuMode_02078360
 #define RemoveIntrusiveListObject_020129d8 NNS_FndRemoveListObject
 #define func_ov001_020769f4 DrawMenuPanelPage

@@ -4,8 +4,8 @@
 #define FindActiveRecordById_020b8184 FindActiveRecordById
 #define FlushBufferAndRunCallback_0200153c FlushBufferAndRunCallback
 #define OS_GetTick_02003fd4 OS_GetTick
-#define TagTracker_InvokeCallback_020b8210 func_ov027_020b8230
-#define UpdateWidgetLayerDefault_020b9df0 func_ov027_020b9e10
+#define TagTracker_InvokeCallback_020b8210 TagTracker_InvokeCallback
+#define UpdateWidgetLayerDefault_020b9df0 UpdateWidgetLayerDefault_020b9e10
 #define data_ov001_020a04a4 data_ov001_020a04c4
 #define func_ov027_020ba31c func_ov027_020ba33c
 #include "src/ov001/field_manager/ShowFieldMessageLine_02072ad0.c"

@@ -1,4 +1,4 @@
-#define GetCtxModeByte_02068084 func_ov001_02068084
+#define GetCtxModeByte_02068084 GetCtxModeByte
 #define ReportContextError_020bc524 ReportContextError
 #define func_ov001_0206459c WriteSessionPackedBits
 #define g_activeState_020bc800 data_ov031_020bc820

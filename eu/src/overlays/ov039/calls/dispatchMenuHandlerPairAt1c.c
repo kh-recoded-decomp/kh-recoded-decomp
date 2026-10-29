@@ -1,0 +1,6 @@
+#define data_020be8d0 data_ov039_020be8f0
+#define data_020be930 data_ov039_020be950
+#define data_020bea84 data_ov039_020beaa4
+#define dispatchMenuHandlerPairAt1c_020bd174 dispatchMenuHandlerPairAt1c
+#define func_020bcd98 InvokeIfPresent_020bcdb8
+#include "src/ov039/menu_dispatch/dispatchMenuHandlerPairAt1c_020bd174.c"

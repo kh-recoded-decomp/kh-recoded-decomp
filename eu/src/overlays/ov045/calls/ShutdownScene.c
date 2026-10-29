@@ -5,7 +5,7 @@
 #define ReleaseRecordSlot_02051dfc ReleaseRecordSlot
 #define SetMenuGaugeActive_0207512c SetMenuGaugeActive
 #define ShutdownScene_020bef74 ShutdownScene
-#define SweepElements_020b831c func_ov027_020b833c
+#define SweepElements_020b831c SweepElements
 #define ZeroHalfThenFree_0202cd78 ZeroHalfThenFree
 #define data_ov045_020c0880 data_ov045_020c08a0
 #define func_ov027_020b7dfc func_ov027_020b7e1c

@@ -16,7 +16,7 @@ src/overlays/ov085/calls/BuildShopItemRecord.c:
     complete
     .text       start:0x020bf774 end:0x020bf810
 
-src/overlays/ov085/calls/func_ov085_020bf810.c:
+src/overlays/ov085/calls/InitShopMenu.c:
     complete
     .text       start:0x020bf810 end:0x020c0154
 

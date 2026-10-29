@@ -1,4 +1,4 @@
 #define InitCameraTarget_020c3858 InitCameraTarget
-#define ReturnToCommitPage_020c3500 func_ov048_020c3520
+#define ReturnToCommitPage_020c3500 ReturnToCommitPage_ov048_020c3520
 #define func_ov048_020c3510 func_ov048_020c3530
 #include "src/ov048/shared_engine/InitCameraTarget_020c3858.c"

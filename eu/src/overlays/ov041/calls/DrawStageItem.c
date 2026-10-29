@@ -20,7 +20,7 @@ BOOL DrawStageItem(StageResourceItem *item)
         NNS_G3dGeBufferOP_N(0x1b, &scaling, 3);
         NNS_G3dGlbFlushP();
         if (item->model.flags & STAGE_MODEL_COLOR_SCALE) {
-            func_01fff67c(item->model.colorScale);
+            setMaterialColorScale(item->model.colorScale);
         }
         NNS_G3dGeBufferOP_N(0x17, &item->model.rotation, 12);
         NNS_G3dDraw(&item->model.renderObject);

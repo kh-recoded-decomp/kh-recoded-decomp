@@ -1,5 +1,5 @@
 #define CanUseItemEntry_020c7b6c CanUseItemEntry
-#define GetCtxModeByte_02068084 func_ov001_02068084
+#define GetCtxModeByte_02068084 GetCtxModeByte
 #define IsPartyLevelSufficient_020c7a78 IsPartyLevelSufficient_020c7a98
 #define data_ov001_020a0460 data_ov001_020a0480
 #define func_ov077_020c7a48 func_ov077_020c7a68

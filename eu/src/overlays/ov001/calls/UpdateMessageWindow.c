@@ -2,7 +2,7 @@
 #define FinishMessageWindowPage_02079f2c FinishMessageWindowPage
 #define GetSceneTagTracker_020711b0 GetSceneTagTracker
 #define OS_GetTick_02003fd4 OS_GetTick
-#define TagTracker_InvokeCallback_020b8210 func_ov027_020b8230
+#define TagTracker_InvokeCallback_020b8210 TagTracker_InvokeCallback
 #define Text_UploadTileBuffer_02001520 Text_UploadTileBuffer
 #define UpdateMessageWindow_02079ff8 UpdateMessageWindow
 #define func_ov001_02079b4c DrawMessageWindowPage

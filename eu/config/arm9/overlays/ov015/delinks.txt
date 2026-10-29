@@ -36,7 +36,7 @@ src/overlays/ov015/calls/SetupPanelGraphics.c:
     complete
     .text       start:0x0206c708 end:0x0206d59c
 
-src/overlays/ov015/calls/func_ov015_0206d59c.c:
+src/overlays/ov015/calls/InitPanelScreenGraphics.c:
     complete
     .text       start:0x0206d59c end:0x0206e658
 
@@ -516,7 +516,7 @@ src/overlays/ov015/calls/WH_SetError.c:
     complete
     .text       start:0x020737d4 end:0x020737f0
 
-src/overlays/ov015/calls/func_ov015_020737f0.c:
+src/overlays/ov015/calls/advance_wireless_task_step.c:
     complete
     .text       start:0x020737f0 end:0x02073830
 
@@ -688,7 +688,7 @@ src/overlays/ov015/calls/RecordWirelessChannelMeasurement.c:
     complete
     .text       start:0x02074a58 end:0x02074b04
 
-src/overlays/ov015/calls/func_ov015_02074b04.c:
+src/overlays/ov015/calls/RequestWirelessChannelMeasurement_02074b04.c:
     complete
     .text       start:0x02074b04 end:0x02074b24
 
@@ -768,7 +768,7 @@ src/overlays/ov015/auto/func_ov015_02075338.c:
     complete
     .text       start:0x02075338 end:0x0207533c
 
-src/overlays/ov015/calls/func_ov015_0207533c.c:
+src/overlays/ov015/calls/GeneratePanelRound.c:
     complete
     .text       start:0x0207533c end:0x020759cc
 
@@ -788,7 +788,7 @@ src/overlays/ov015/calls/UpdatePanelBoard.c:
     complete
     .text       start:0x020764c4 end:0x020766d0
 
-src/overlays/ov015/calls/func_ov015_020766d0.c:
+src/overlays/ov015/calls/UpdatePanelMinigame.c:
     complete
     .text       start:0x020766d0 end:0x02077904
 
@@ -848,7 +848,7 @@ src/overlays/ov015/calls/SetContainerSubitem1Active.c:
     complete
     .text       start:0x02078228 end:0x0207830c
 
-src/overlays/ov015/calls/func_ov015_0207830c.c:
+src/overlays/ov015/calls/PickWeightedReward.c:
     complete
     .text       start:0x0207830c end:0x02078438
 

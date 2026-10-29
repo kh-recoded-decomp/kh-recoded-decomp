@@ -1,3 +1,4 @@
+#define func_ov001_0206a4e4 UpdateIrisFrame
 #define ScreenFadeOutStep_0206a208 ScreenFadeOutStep
 #define func_ov001_0206a138 SelectScreenFadeHandler
 #define SetBrightnessAndSyncMain_02029e7c SetBrightnessAndSyncMain

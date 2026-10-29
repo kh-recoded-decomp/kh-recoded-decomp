@@ -4,11 +4,11 @@
 #define GetBgDataFromArchive_0202b554 GetBgDataFromArchive
 #define GetSceneTagTracker_020711b0 GetSceneTagTracker
 #define LoadMenuBackground_020b5800 LoadMenuBackground
-#define TagTracker_InvokeCallback_020b8210 func_ov027_020b8230
+#define TagTracker_InvokeCallback_020b8210 TagTracker_InvokeCallback
 #define data_ov023_020b6f60 data_ov023_020b6f80
 #define func_01ff869c MIi_CpuCopy16
 #define func_ov001_0207b1f4 func_ov001_0207b21c
 #define func_ov027_020b9d18 ClearTileTableRowAndMarkDirty
 #define func_ov027_020ba1d8 func_ov027_020ba1f8
-#define func_ov027_020ba1e0 func_ov027_020ba200
+#define func_ov027_020ba1e0 DestroyFileLoadRequest
 #include "src/ov023/menu_graphics/LoadMenuBackground_020b5800.c"

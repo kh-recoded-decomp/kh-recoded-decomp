@@ -46,9 +46,9 @@ extern HudGaugeSet *data_ov001_020a04cc;
 
 extern BOOL RedrawGaugeCells(void *target, u16 value, u16 scale, HudGaugeSlot *counts, GaugeCellFn draw, BOOL rebuild);
 extern void RefreshMenuGaugeState(HudGaugeSet *set, int index, BOOL force);
-extern void func_ov001_02073d00(GaugeTween *dst, GaugeTween *src, u16 value, GaugeCellFn draw, void *layer, int notify,
+extern void StartGaugeTween(GaugeTween *dst, GaugeTween *src, u16 value, GaugeCellFn draw, void *layer, int notify,
                                 int setupIndex);
-extern void func_ov001_020716e8(int index, int mode);
+extern void UploadPaletteSlotBlock(int index, int mode);
 extern void UploadScreenSlotBlock(int index, int mode);
 extern u64 OS_GetTick(void);
 extern int _s32_div_f(int numerator, int denominator);
@@ -76,7 +76,7 @@ void SetHudGaugeValue(int index, u16 value, int notifyIndex, BOOL animate, BOOL 
                 cells = 1;
             }
             if (shown == cells && set->slots[index].value > value) {
-                func_ov001_020716e8(index, 1);
+                UploadPaletteSlotBlock(index, 1);
                 UploadScreenSlotBlock(index, 1);
                 set->changeTicks[index] = OS_GetTick();
                 set->slots[index].value = value;
@@ -84,7 +84,7 @@ void SetHudGaugeValue(int index, u16 value, int notifyIndex, BOOL animate, BOOL 
                 return;
             }
             set->slots[index].value = value;
-            func_ov001_02073d00(&set->tween, &set->previousTween, cells, DrawShortLayoutRow, set->layers[0], 1, 0);
+            StartGaugeTween(&set->tween, &set->previousTween, cells, DrawShortLayoutRow, set->layers[0], 1, 0);
             set->shownCells = cells;
         } else {
             int count;

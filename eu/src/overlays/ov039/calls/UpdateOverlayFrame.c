@@ -3,10 +3,10 @@
 #define NNS_FndGetNextListObject_02012a38 NNS_FndGetNextListObject
 #define RemoveListEntry_020bc70c RemoveListEntry
 #define FS_UnloadOverlayImage_0204f5dc FS_UnloadOverlayImage_0204f5f0
-#define CopySourceBlock_020b9f7c func_ov027_020b9f9c
+#define CopySourceBlock_020b9f7c CopySourceBlock
 #define func_0204f5ec ReadHalfword
 #define func_ov039_020bb6e8 func_ov039_020bb708
-#define UpdateWidgetRootAndResetList_020b8c80 func_ov027_020b8ca0
+#define UpdateWidgetRootAndResetList_020b8c80 UpdateWidgetRootAndResetList
 #define func_ov027_020b7dd4 func_ov027_020b7df4
 #define func_ov027_020b9e60 FlushDirtyTileTableRows
 #define func_ov076_020c5d10 PreviewMatrixNodeStats_020c5d10

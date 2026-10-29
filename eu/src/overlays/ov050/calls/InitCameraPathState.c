@@ -1,4 +1,4 @@
 #define InitCameraPathState_020c3ba4 InitCameraPathState
-#define ReturnToCommitPage_020c3500 func_ov050_020c3520
+#define ReturnToCommitPage_020c3500 ReturnToCommitPage_ov050_020c3520
 #define func_ov050_020c3510 func_ov050_020c3530
 #include "src/ov050/shared_engine/InitCameraPathState_020c3ba4.c"

@@ -1,3 +1,4 @@
+#define func_ov015_020766d0 UpdatePanelMinigame
 #define func_ov002_0206655c IsScreenFadeComplete
 #define func_ov015_02078f58 UpdateWirelessPanelTouch
 #define RunPanelIntroSequence_020763a8 RunPanelIntroSequence

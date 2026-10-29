@@ -1,0 +1,3 @@
+#define NNSi_G2dUnpackUserExCellAttrBank ReleaseResourceAndDetach
+#define UnpackExtendedData_020a8234 UnpackExtendedData
+#include "src/ov021/library_nns_g2d/UnpackExtendedData_020a8234.c"

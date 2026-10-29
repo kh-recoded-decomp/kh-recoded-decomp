@@ -76,7 +76,7 @@ extern u16 data_020604fc;
 extern u16 data_02060500;
 
 extern u64 OS_GetTick(void);
-extern void func_ov039_020be470(void *cells, int first, int value, void *origin);
+extern void DrawPlayTimeDigits_020be470(void *cells, int first, int value, void *origin);
 extern int IsStatePhase4(void);
 extern TouchState *GetMenuInputState(void);
 extern BOOL IsStatePhaseActive(void);
@@ -99,7 +99,7 @@ extern void Obj_SetField14(void *layer, void *font);
 extern void *GetMenuFont10s(void);
 extern void *GetMenuFont10(void);
 extern u16 *func_ov027_020ba2c8(void *strings, int index);
-extern const ListTouchSample *func_ov027_020b9f9c(void *dst);
+extern const ListTouchSample *CopySourceBlock(void *dst);
 extern void FlushDirtyTileTableRows(void *table);
 
 #define REG_POWCNT (*(vu16 *)0x04000304)
@@ -115,7 +115,7 @@ void UpdateStatusMenu(StatusMenu *menu)
 
     if (menu->timerActive && menu->busy == 0 && menu->page != 4) {
         menu->playSeconds = menu->heartCount + (int)(((OS_GetTick() - menu->openTick) * 64) / 0x1ff6210);
-        func_ov039_020be470(menu->widgets, menu->timeDigits, menu->playSeconds, NULL);
+        DrawPlayTimeDigits_020be470(menu->widgets, menu->timeDigits, menu->playSeconds, NULL);
     }
     if (IsStatePhase4()) {
         return;
@@ -293,7 +293,7 @@ void UpdateStatusMenu(StatusMenu *menu)
         if (panel->listBusy == 0) {
             if (((REG_POWCNT & 0x8000) >> 15) == 1) {
                 if (menu->flags & 2) {
-                    UpdateListScroll(&panel->list, func_ov027_020b9f9c(block), data_02060500);
+                    UpdateListScroll(&panel->list, CopySourceBlock(block), data_02060500);
                 } else {
                     UpdateListScroll(&panel->list, NULL, 0);
                 }

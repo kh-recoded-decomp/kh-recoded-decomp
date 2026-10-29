@@ -1,0 +1,2 @@
+#define QueueOrSendGeometryCommandPair_01ffcedc QueueOrSendGeometryCommandPair
+#include "src/itcm/library_nitro_nns/func_01ffcedc.c"

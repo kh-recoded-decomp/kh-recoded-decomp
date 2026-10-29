@@ -1,7 +1,7 @@
 #define HandleListScrollDown_020bebc4 HandleListScrollDown
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define RefreshRowHighlights_020bf92c RefreshRowHighlights
-#define func_ov103_020bf0a4 func_ov103_020bf0c4
+#define func_ov103_020bf0a4 LoadEntryBackground_020bf0c4
 #define func_ov103_020bf39c RedrawTheaterReportText
 #define func_ov103_020bfc00 ScrollListUp_020bfc20
 #define func_ov103_020c030c func_ov103_020c032c

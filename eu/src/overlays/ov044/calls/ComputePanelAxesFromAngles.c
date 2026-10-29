@@ -1,0 +1,4 @@
+#define ComputePanelAxesFromAngles_020d0728 ComputePanelAxesFromAngles
+#define RotateVectorAroundAxis_0204b34c RotateVectorAroundAxis
+#define data_0205356c gSinFx12Table
+#include "src/ov044/panel_state/ComputePanelAxesFromAngles_020d0728.c"

@@ -1,5 +1,5 @@
 #define ApplyTagAndMarkEntryReady_020b6c0c ApplyTagAndMarkEntryReady
 #define func_ov025_020b6ab8 SetupSlotListView
 #define func_ov027_020ba1d8 func_ov027_020ba1f8
-#define func_ov027_020ba1e0 func_ov027_020ba200
+#define func_ov027_020ba1e0 DestroyFileLoadRequest
 #include "src/ov025/leaf_research/ApplyTagAndMarkEntryReady_020b6c0c.c"

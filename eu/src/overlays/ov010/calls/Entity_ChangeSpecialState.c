@@ -1,0 +1,11 @@
+#define Entity_ChangeSpecialState_020a1978 Entity_ChangeSpecialState
+#define Entity_UpdateSpecialCharge_020a1708 Entity_UpdateSpecialCharge
+#define Entity_UpdateSpecialRelease_020a1298 Entity_UpdateSpecialRelease
+#define FixedPointAtan2_020062bc FX_Atan2Idx
+#define SpawnSoundSlot_0204da8c SpawnSoundSlot
+#define VEC_Subtract_01ff9e3c VEC_Subtract
+#define func_ov001_0206db78 GetPlayerControlState
+#define func_ov052_020ccfa4 ExitActorState
+#define func_ov052_020cd338 EnterActorState
+#define func_ov052_020ceb54 func_ov052_020ceb74
+#include "src/ov010/actor_state/Entity_ChangeSpecialState_020a1978.c"

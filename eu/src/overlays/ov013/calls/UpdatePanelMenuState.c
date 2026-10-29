@@ -1,7 +1,7 @@
 #define func_ov013_020716e4 ChangePanelMenuState
 #define func_ov002_0206655c IsScreenFadeComplete
 #define IsButtonXPressed_020632e4 IsButtonXPressed
-#define IsGlobalBit0Set_020632ac func_ov002_020632ac
+#define IsGlobalBit0Set_020632ac IsGlobalBit0Set
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define UpdatePanelMenuState_020733f0 UpdatePanelMenuState
 #define func_ov013_0206e574 DrawPlayerCardDetails

@@ -1,2 +1,0 @@
-#define hasAngleBracketTerminator_02062d78 func_ov004_02062d78
-#include "src/ov004/text_processing/hasAngleBracketTerminator_02062d78.c"

@@ -1,7 +1,7 @@
 #define func_ov001_020645c8 IsSessionFlagSet
 #define func_ov001_020645dc SetSessionFlag
 #define CommitChapterClearRecords_02064ae0 CommitChapterClearRecords
-#define GetCtxModeByte_02068084 func_ov001_02068084
+#define GetCtxModeByte_02068084 GetCtxModeByte
 #define IsGlobalPackedBitSet_02027304 IsGlobalPackedBitSet
 #define func_02027348 ReadGlobalPackedBits
 #define func_ov001_02064574 ReadSessionPackedBits

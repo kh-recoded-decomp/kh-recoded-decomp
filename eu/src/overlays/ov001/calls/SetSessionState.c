@@ -55,7 +55,7 @@ extern int DeferredDraw_Release();
 extern void LoadSharedModel(void *resource);
 extern BOOL IsSessionFlagSet(u32 value);
 extern void ClearSessionPackedBit(u32 value);
-extern s8 func_ov001_02068084(void);
+extern s8 GetCtxModeByte(void);
 extern void ShutdownSessionOverlays(void);
 extern void func_02029f8c(int processor, int overlayId);
 extern void func_02029fac(int processor, int overlayId);
@@ -93,7 +93,7 @@ s32 SetSessionState(s32 newState, s32 mode) {
         machine->params.mode = mode;
     }
 
-    machine->params.ctxMode = func_ov001_02068084();
+    machine->params.ctxMode = GetCtxModeByte();
     machine->params.unk_02 = session->unk_208;
     machine->params.unk_04 = session->unk_20A;
     machine->params.unk_06 = 0;

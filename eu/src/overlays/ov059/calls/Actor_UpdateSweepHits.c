@@ -20,7 +20,7 @@
 #define StageRecord_IsDefeated_02087cc4 StageRecord_IsDefeated
 #define TestFlagBit10_020a380c TestFlagBit10
 #define TurnVecTowardVecLimited_0204b1fc TurnVecTowardVecLimited
-#define UpdateWidgetLayerDefault_020cd3b8 func_ov059_020cd3d8
+#define UpdateWidgetLayerDefault_020cd3b8 UpdateWidgetLayerDefault_020cd3d8
 #define VEC_Add_01ff9e0c VEC_Add
 #define VEC_MultAdd_01ffa09c VEC_MultAdd
 #define VEC_NormalizeUnchecked_01ff9f88 VEC_Normalize

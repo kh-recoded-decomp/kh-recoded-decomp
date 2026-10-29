@@ -309,7 +309,7 @@ src/overlays/ov076/calls/SlotMenu_ReturnToBrowse.c:
     complete
     .text       start:0x020c8520 end:0x020c853c
 
-src/overlays/ov076/calls/func_ov076_020c853c.c:
+src/overlays/ov076/calls/SlotMenu_FuseSlotRecords.c:
     complete
     .text       start:0x020c853c end:0x020c88d4
 
@@ -489,7 +489,7 @@ src/overlays/ov076/calls/func_ov076_020ca628.c:
     complete
     .text       start:0x020ca628 end:0x020ca630
 
-src/overlays/ov076/calls/func_ov076_020ca630.c:
+src/overlays/ov076/calls/LoadOverlaySync_020ca630.c:
     complete
     .text       start:0x020ca630 end:0x020ca644
 
@@ -561,7 +561,7 @@ src/overlays/ov076/calls/MessageWindow_UpdateYesNoInput.c:
     complete
     .text       start:0x020cae5c end:0x020cafac
 
-src/overlays/ov076/calls/func_ov076_020cafac.c:
+src/overlays/ov076/calls/AdvanceHintPrompt.c:
     complete
     .text       start:0x020cafac end:0x020cb0ec
 
@@ -617,7 +617,7 @@ src/overlays/ov076/calls/MessageWindow_IsFinished.c:
     complete
     .text       start:0x020cbbb0 end:0x020cbbc0
 
-src/overlays/ov076/calls/func_ov076_020cbbc0.c:
+src/overlays/ov076/calls/OpenHintPrompt.c:
     complete
     .text       start:0x020cbbc0 end:0x020cbcec
 

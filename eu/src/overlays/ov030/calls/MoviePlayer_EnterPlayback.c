@@ -16,7 +16,7 @@ typedef struct {
 } SubModeView;
 
 extern MoviePlayerCtx *data_ov030_020bd020;
-extern s8 func_ov001_02068084(void);
+extern s8 GetCtxModeByte(void);
 extern void LoadContextResourceGroups(int mode);
 extern void ForwardSubModePairB(int a, int b);
 extern void SetOverlayLayerVisible(int visible);
@@ -38,7 +38,7 @@ int MoviePlayer_EnterPlayback(void)
     MoviePlayerCtx *ctx = data_ov030_020bd020;
     int mode;
 
-    if (func_ov001_02068084() == 1) {
+    if (GetCtxModeByte() == 1) {
         mode = 3;
     } else {
         mode = 0x23;

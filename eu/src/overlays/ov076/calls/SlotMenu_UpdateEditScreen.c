@@ -35,7 +35,7 @@
 #define SlotMenu_UpdatePairedCategory_020c53c8 SlotMenu_UpdatePairedCategory
 #define ToggleSharedStateFlag_020c1d1c ToggleSharedStateFlag
 #define UpdateWidgetRootAndFireAlarm_020b8c94 UpdateWidgetRootAndFireAlarm
-#define UpdateWidgetRootAndResetList_020b8c80 func_ov027_020b8ca0
+#define UpdateWidgetRootAndResetList_020b8c80 UpdateWidgetRootAndResetList
 #define data_ov076_020cd284 data_ov076_020cd2a4
 #define data_ov076_020cd290 data_ov076_020cd2b0
 #define data_ov076_020cd29c data_ov076_020cd2bc
@@ -51,5 +51,5 @@
 #define func_ov076_020c51cc SlotMenu_IsSelectedRecordEquipped
 #define func_ov076_020c7534 SlotMenu_Draw3D
 #define func_ov076_020c7a5c SlotMenu_UpdateCursorLayout
-#define func_ov076_020cbba0 func_ov076_020cbbc0
+#define func_ov076_020cbba0 OpenHintPrompt
 #include "src/ov076/unclassified_helpers/SlotMenu_UpdateEditScreen_020c546c.c"

@@ -1,4 +1,4 @@
-#define GetCachedPixelClampTable_020aaa58 func_ov022_020aaa78
+#define GetCachedPixelClampTable_020aaa58 GetCachedPixelClampTable
 #define func_ov022_020a79fc func_ov022_020a7a1c
 #define func_ov022_020aa2e0 MobiClip_BlitRows
 #define func_ov022_020b713c MobiClip_DeblockFrame

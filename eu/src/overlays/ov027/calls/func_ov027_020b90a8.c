@@ -1,4 +1,0 @@
-#define Ov008_FindEntryById FindWidgetById
-#define Ov008_StoreWordAt0x98 func_ov027_020b90a0
-#define ResolveEntryStoreWord_020b9088 func_ov027_020b90a8
-#include "src/ov027/shared_engine/ResolveEntryStoreWord_020b9088.c"

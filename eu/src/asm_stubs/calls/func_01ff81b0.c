@@ -1,5 +1,0 @@
-#define CP_SaveContext_0200a15c CP_SaveContext
-#define CPi_RestoreContext_0200a19c CPi_RestoreContext
-#define OS_IrqHandler_ThreadSwitch_01ff81b0 func_01ff81b0
-#define data_02056b6c OSi_ThreadInfo
-#include "src/itcm/asm/OS_IrqHandler_ThreadSwitch_01ff81b0.c"

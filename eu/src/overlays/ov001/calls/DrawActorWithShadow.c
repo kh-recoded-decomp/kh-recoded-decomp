@@ -2,7 +2,7 @@
 #define AdvanceAnimationTracks_0202ef24 AdvanceAnimationTracks
 #define ClearSbcCallback_020188b8 NNS_G3dRenderObjResetCallBack
 #define DrawActorWithShadow_020848a0 DrawActorWithShadow
-#define GetCtxModeByte_02068084 func_ov001_02068084
+#define GetCtxModeByte_02068084 GetCtxModeByte
 #define QueueOrSendGeometryCommand_01ffa37c NNS_G3dGeBufferOP_N
 #define RegisterSbcCallback_020188a4 NNS_G3dRenderObjSetCallBack
 #define SceneNode_Draw_01ffb12c SceneNode_Draw
@@ -11,5 +11,5 @@
 #define func_02036240 ActorRegistry_GetEntityByIndex
 #define func_ov001_02084798 CaptureJointMatrix
 #define func_ov001_020847e4 SweepShadowToGround
-#define setMaterialColorScale_01fff67c func_01fff67c
+#define setMaterialColorScale_01fff67c setMaterialColorScale
 #include "src/ov001/actor_animation/DrawActorWithShadow_020848a0.c"

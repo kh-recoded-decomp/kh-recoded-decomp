@@ -48,7 +48,7 @@ src/overlays/ov075/calls/HasPendingUnlocks.c:
     complete
     .text       start:0x020c49c8 end:0x020c49ec
 
-src/overlays/ov075/calls/func_ov075_020c49ec.c:
+src/overlays/ov075/calls/InitMatrixMenu.c:
     complete
     .text       start:0x020c49ec end:0x020c577c
 
@@ -124,7 +124,7 @@ src/overlays/ov075/calls/UpdateMatrixMenu.c:
     complete
     .text       start:0x020c709c end:0x020c7bdc
 
-src/overlays/ov075/auto/func_ov075_020c7bdc.c:
+src/overlays/ov075/auto/SquareFixedPoint.c:
     complete
     .text       start:0x020c7bdc end:0x020c7bf4
 
@@ -164,7 +164,7 @@ src/overlays/ov075/calls/ClearGlyphCell.c:
     complete
     .text       start:0x020c8890 end:0x020c8940
 
-src/overlays/ov075/calls/func_ov075_020c8940.c:
+src/overlays/ov075/calls/UpdateMatrixMenuBackground.c:
     complete
     .text       start:0x020c8940 end:0x020c8bc0
 
@@ -256,7 +256,7 @@ src/overlays/ov075/calls/HandleMatrixBackButton.c:
     complete
     .text       start:0x020cba38 end:0x020cbb54
 
-src/overlays/ov075/calls/func_ov075_020cbb54.c:
+src/overlays/ov075/calls/CycleNodeCategory.c:
     complete
     .text       start:0x020cbb54 end:0x020cbc5c
 
@@ -376,7 +376,7 @@ src/overlays/ov075/calls/DrawSpriteQuad.c:
     complete
     .text       start:0x020cd604 end:0x020cd75c
 
-src/overlays/ov075/calls/func_ov075_020cd75c.c:
+src/overlays/ov075/calls/DrawGaugeWithNumber.c:
     complete
     .text       start:0x020cd75c end:0x020cd874
 
@@ -388,7 +388,7 @@ src/overlays/ov075/calls/DrawImageQuad.c:
     complete
     .text       start:0x020cda30 end:0x020cdbe0
 
-src/overlays/ov075/calls/func_ov075_020cdbe0.c:
+src/overlays/ov075/calls/DrawRotatedImageQuad.c:
     complete
     .text       start:0x020cdbe0 end:0x020cde24
 
@@ -440,7 +440,7 @@ src/overlays/ov075/calls/func_ov075_020ce818.c:
     complete
     .text       start:0x020ce818 end:0x020ce820
 
-src/overlays/ov075/calls/func_ov075_020ce820.c:
+src/overlays/ov075/calls/LoadOverlaySync_020ce820.c:
     complete
     .text       start:0x020ce820 end:0x020ce834
 
@@ -588,7 +588,7 @@ src/overlays/ov075/calls/InitMenuModel.c:
     complete
     .text       start:0x020d0b94 end:0x020d0c38
 
-src/overlays/ov075/calls/func_ov075_020d0c38.c:
+src/overlays/ov075/calls/LoadTextureImageParams.c:
     complete
     .text       start:0x020d0c38 end:0x020d0cf8
 

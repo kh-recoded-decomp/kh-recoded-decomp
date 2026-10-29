@@ -1,0 +1,10 @@
+#define ClassifyResultsShopEntry_020be4f8 ClassifyResultsShopEntry
+#define GetRecordSlotPair0Entry_02051ec8 GetRecordSlotPair0Entry
+#define GetResultsShopItemInfo_020be418 GetResultsShopItemInfo
+#define OS_SNPrintf_0202e080 OS_SNPrintf_0202e094
+#define data_ov034_020bed4c gResultsShopEntries
+#define func_ov027_020ba2a8 func_ov027_020ba2c8
+#define g_resultsExtraInfo_020c0fc8 data_ov034_020c0fe8
+#define g_resultsExtraName_020c0f88 data_ov034_020c0fa8
+#define g_resultsScreen_020c0f80 data_ov034_020c0fa0
+#include "src/ov034/reviewed_helpers/GetResultsShopItemInfo_020be418.c"

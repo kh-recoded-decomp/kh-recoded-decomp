@@ -5,6 +5,6 @@
 #define func_ov001_0208635c func_ov001_02086384
 #define func_ov032_020bbc60 func_ov032_020bbc80
 #define func_ov032_020bbc78 func_ov032_020bbc98
-#define func_ov032_020beeb8 func_ov032_020beed8
+#define func_ov032_020beeb8 FindLevelCellCenter
 #define random_next_scaled_0202aa04 random_next_scaled
 #include "src/ov032/object_group/ScatterGroupMembers_020befbc.c"

@@ -1,5 +1,5 @@
 #define func_ov001_020645c8 IsSessionFlagSet
-#define GetCtxModeByte_02068084 func_ov001_02068084
+#define GetCtxModeByte_02068084 GetCtxModeByte
 #define IsFieldFlag10Set_020728c4 IsFieldFlag10Set
 #define IsFieldFlag13OrSessionFlagSet_020728e4 IsFieldFlag13OrSessionFlagSet
 #define IsFieldFlag8Set_020728a4 IsFieldFlag8Set

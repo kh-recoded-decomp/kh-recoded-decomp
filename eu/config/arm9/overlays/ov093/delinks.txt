@@ -68,7 +68,7 @@ src/overlays/ov093/calls/FreeResourceBlocks.c:
     complete
     .text       start:0x020bfab4 end:0x020bfae4
 
-src/overlays/ov093/calls/func_ov093_020bfae4.c:
+src/overlays/ov093/calls/InitEntryTextLayers.c:
     complete
     .text       start:0x020bfae4 end:0x020bfd10
 
@@ -148,7 +148,7 @@ src/overlays/ov093/calls/RefreshScrollBar_020c0cb0.c:
     complete
     .text       start:0x020c0cd0 end:0x020c0fd0
 
-src/overlays/ov093/calls/func_ov093_020c0fd0.c:
+src/overlays/ov093/calls/BuildAchievementList.c:
     complete
     .text       start:0x020c0fd0 end:0x020c1cc8
 

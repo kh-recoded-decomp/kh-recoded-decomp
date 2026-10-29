@@ -2,7 +2,7 @@
 #define func_02003fd4 OS_GetTick
 #define GetCardThreadStartTick_0202726c GetCardThreadStartTick
 #define func_02023d54 _ll_udiv
-#define func_ov039_020be450 func_ov039_020be470
+#define func_ov039_020be450 DrawPlayTimeDigits_020be470
 #define func_ov039_020bca30 IsStatePhase4
 #define ApplyScoreEvents_020bf388 ApplyScoreEvents
 #define GetFieldCa4a_020bc9e0 GetFieldCa4a
@@ -22,7 +22,7 @@
 #define Text_UploadTileBuffer_02001520 Text_UploadTileBuffer
 #define DrawTextAnchored_020015a0 DrawTextAnchored
 #define FindActiveRecordById_020b8184 FindActiveRecordById
-#define TagTracker_InvokeCallback_020b8210 func_ov027_020b8230
+#define TagTracker_InvokeCallback_020b8210 TagTracker_InvokeCallback
 #if defined(__MWERKS__)
 #include "../src/ov083/unclassified_helpers/UpdateScoreScreen_020bef1c.c"
 #else

@@ -288,11 +288,11 @@ src/overlays/ov000/calls/World_GetField4.c:
     complete
     .text       start:0x02063630 end:0x0206364c
 
-src/overlays/ov000/calls/func_ov000_0206364c.c:
+src/overlays/ov000/calls/IsSessionReady.c:
     complete
     .text       start:0x0206364c end:0x02063668
 
-src/overlays/ov000/calls/func_ov000_02063668.c:
+src/overlays/ov000/calls/World_SetField4.c:
     complete
     .text       start:0x02063668 end:0x02063680
 

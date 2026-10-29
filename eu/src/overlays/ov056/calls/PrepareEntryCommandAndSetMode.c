@@ -1,5 +1,5 @@
 #define PrepareEntryCommandAndSetMode_020d402c PrepareEntryCommandAndSetMode
-#define func_ov052_020cfdb4 func_ov052_020cfdd4
+#define func_ov052_020cfdb4 SelectHitReaction
 #define func_ov052_020cff8c ApplyAnimRootMotion
 #define func_ov052_020d012c ProcessTargetHitEntries
 #define func_ov052_020d0294 UpdateActionPhase

@@ -22,7 +22,7 @@
 #define func_0203fc24 IsVecZero
 #define func_0203ff74 GetSegmentHalfDelta
 #define func_02040548 TestCapsuleAgainstCylinder
-#define func_020405b4 func_020405c8
+#define func_020405b4 TestCapsuleAgainstCapsule
 #define func_02040fdc GetSegmentHalfDirection
 #define func_0204792c ResolveSweepContact
 #define func_02047cec CopyInitializedRecord13
@@ -35,7 +35,7 @@
 #define func_02048b74 SquareFx32_02048b88
 #define func_02048bd0 MakeSegment
 #define func_02048c10 func_02048c24
-#define func_0204970c func_02049720
+#define func_0204970c SweepDiscAgainstEdge
 #define func_0204a9b4 NormalizeIfShort
 #define func_0204a9e4 GetCrossIfNonParallel
 #define func_0204ad4c GetPerpendicularVector

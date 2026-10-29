@@ -4,7 +4,7 @@
 #define InitImageQuad_020c9790 InitImageQuad_020c67c4
 #define DrawImageQuad_020c9a78 DrawSpriteRegionQuad
 #define DrawMenuImageModulated_020ccf34 func_ov077_020c9f80
-#define DrawSlotMenuGaugeAndDigits func_ov077_020c6994
+#define DrawSlotMenuGaugeAndDigits DrawItemGaugeAndDigits
 #define data_ov076_020cd12c data_ov077_020ca15c
 #define MessageWindow_IsFinished IsMessageWindowActive
 #define MessageWindow_Update MessageWindow_Update_020c84fc

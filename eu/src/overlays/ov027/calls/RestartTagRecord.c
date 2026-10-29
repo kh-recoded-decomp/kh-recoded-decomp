@@ -17,7 +17,7 @@ typedef struct TagRecord {
 } TagRecord;
 
 extern u64 OS_GetTick(void);
-extern void func_ov027_020b8230(void *tracker, int tag);
+extern void TagTracker_InvokeCallback(void *tracker, int tag);
 
 void RestartTagRecord(void *tracker, TagRecord *record)
 {
@@ -30,5 +30,5 @@ void RestartTagRecord(void *tracker, TagRecord *record)
     record->lastTick = tick;
     tag = record->tags[frame];
     record->frame = frame;
-    func_ov027_020b8230(tracker, tag);
+    TagTracker_InvokeCallback(tracker, tag);
 }

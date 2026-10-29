@@ -1,4 +1,4 @@
 #define DrawRotatedImageQuadIfVisible_020d0d80 DrawRotatedImageQuadIfVisible
 #define func_ov075_020cd528 InitImageQuad
-#define func_ov075_020cdbc0 func_ov075_020cdbe0
+#define func_ov075_020cdbc0 DrawRotatedImageQuad
 #include "src/ov075/unclassified_helpers/DrawRotatedImageQuadIfVisible_020d0d80.c"

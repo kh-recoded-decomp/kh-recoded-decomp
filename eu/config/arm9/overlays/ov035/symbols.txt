@@ -83,7 +83,7 @@ UpdateGaugeFrame kind:function(thumb,size=0xe8) addr:0x020bc10c
 SetMovieMenuRow kind:function(thumb,size=0x1c) addr:0x020bc1f4
 SetChannelRatioLevels kind:function(thumb,size=0x60) addr:0x020bc210
 UpdateChannelLevel kind:function(thumb,size=0xa0) addr:0x020bc270
-func_ov035_020bc310 kind:function(thumb,size=0x9c) addr:0x020bc310
+QueueGaugeLevelEntry kind:function(thumb,size=0x9c) addr:0x020bc310
 func_ov035_020bc3ac kind:function(thumb,size=0x2a) addr:0x020bc3ac
 func_ov035_020bc3d8 kind:function(thumb,size=0x28) addr:0x020bc3d8
 sOv035EventEffectOffset kind:data(any) addr:0x020bc400

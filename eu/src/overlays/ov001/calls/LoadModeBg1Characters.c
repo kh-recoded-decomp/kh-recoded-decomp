@@ -5,6 +5,6 @@
 #define func_ov001_02078ba8 DrawCategoryLabel
 #define func_ov001_0207a1a8 LoadMenuEntryGraphic
 #define func_ov027_020ba1d8 func_ov027_020ba1f8
-#define func_ov027_020ba1e0 func_ov027_020ba200
+#define func_ov027_020ba1e0 DestroyFileLoadRequest
 #define g_activeContext_020a04c4 data_ov001_020a04e4
 #include "src/ov001/leaf_research/LoadModeBg1Characters_02078d24.c"

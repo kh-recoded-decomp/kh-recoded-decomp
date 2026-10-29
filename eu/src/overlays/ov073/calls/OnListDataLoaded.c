@@ -1,5 +1,5 @@
 #define OnListDataLoaded_020c3684 OnListDataLoaded
 #define func_ov027_020ba1d8 func_ov027_020ba1f8
-#define func_ov027_020ba1e0 func_ov027_020ba200
+#define func_ov027_020ba1e0 DestroyFileLoadRequest
 #define func_ov073_020c3530 LoadListViewGraphics
 #include "src/ov073/status_menu/OnListDataLoaded_020c3684.c"

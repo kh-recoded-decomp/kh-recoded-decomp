@@ -2,7 +2,7 @@
 #define FindWidgetById_020b90a4 FindWidgetById
 #define InitObjManagerAndMark_020b9060 InitObjManagerAndMark
 #define LoadEntryMenuWidgets_020bf9c0 LoadEntryMenuWidgets
-#define ResolveEntryStoreWord_020b9088 func_ov027_020b90a8
+#define ResolveEntryStoreWord_020b9088 ResolveEntryStoreWord
 #define SetAllElementObjectModes_020b97fc SetAllElementObjectModes
 #define SetEntrySlotsVisible_020b9580 SetEntrySlotsVisible
 #define SetFocusedWidget_020b96e4 SetFocusedWidget

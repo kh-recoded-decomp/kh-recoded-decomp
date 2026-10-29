@@ -8,7 +8,7 @@
 #define LoadSelectionPackedValues_0205053c LoadSelectionPackedValues
 #define RebuildRecordCounters_02028e6c RebuildRecordCounters
 #define ReleaseIfMarked_020b903c ReleaseIfMarked
-#define SweepElements_020b831c func_ov027_020b833c
+#define SweepElements_020b831c SweepElements
 #define SyncSelectionRecordFromSlotEntry_0204fabc SyncSelectionRecordFromSlotEntry
 #define data_ov080_020c5e00 data_ov080_020c5e20
 #define func_0204fba0 func_0204fbb4

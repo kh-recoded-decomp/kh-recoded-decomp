@@ -8,7 +8,7 @@
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define NNSi_FndGetCurrentRootHeap_0202a764 NNSi_FndGetCurrentRootHeap
 #define SetTagRecordArmed_020b83e8 SetTagRecordArmed
-#define TagTracker_InvokeCallback_020b8210 func_ov027_020b8230
+#define TagTracker_InvokeCallback_020b8210 TagTracker_InvokeCallback
 #define data_ov035_020bc4e8 data_ov035_020bc508
 #define func_01ff8740 MIi_CpuClearFast
 #define func_01ff878c MIi_CpuCopyFast

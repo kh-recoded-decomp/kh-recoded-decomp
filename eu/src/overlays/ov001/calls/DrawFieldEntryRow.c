@@ -15,7 +15,7 @@ extern void SelectListNodeOrFirst(void *text, void *node);
 extern void SetFieldAt2C(void *text, u16 value);
 extern void WriteTileBlockToScreen(void *text, u16 *screen, int x, int y, int palette);
 extern void *FindActiveRecordById(void *pool, u16 recordId);
-extern void func_ov027_020b82a4(void *pool, void *record, u8 palette);
+extern void StampTileRegionPalette(void *pool, void *record, u8 palette);
 extern void func_ov027_020b824c(void *tracker, void *record, s16 x, s16 y);
 extern void Text_UploadTileBuffer(void *text);
 
@@ -38,21 +38,21 @@ void DrawFieldEntryRow(void *text, FieldEntry *entry, u16 *screen, int slot, int
     case 3:
         count = entry->count > 9 ? 9 : entry->count;
         digit = count + 0x28;
-        func_ov027_020b82a4(tracker, FindActiveRecordById(tracker, digit), palette);
+        StampTileRegionPalette(tracker, FindActiveRecordById(tracker, digit), palette);
         func_ov027_020b824c(tracker, FindActiveRecordById(tracker, digit), x + 7, y + 1);
         break;
     case 5:
         count = entry->count > 99 ? 99 : entry->count;
         if (count >= 10) {
             tens = count / 10 + 0x28;
-            func_ov027_020b82a4(tracker, FindActiveRecordById(tracker, tens), palette);
+            StampTileRegionPalette(tracker, FindActiveRecordById(tracker, tens), palette);
             func_ov027_020b824c(tracker, FindActiveRecordById(tracker, tens), x + 7, y + 1);
             ones = count % 10;
-            func_ov027_020b82a4(tracker, FindActiveRecordById(tracker, ones + 0x28), palette);
+            StampTileRegionPalette(tracker, FindActiveRecordById(tracker, ones + 0x28), palette);
             func_ov027_020b824c(tracker, FindActiveRecordById(tracker, ones + 0x46), x + 8, y + 1);
         } else {
             digit = count + 0x28;
-            func_ov027_020b82a4(tracker, FindActiveRecordById(tracker, digit), palette);
+            StampTileRegionPalette(tracker, FindActiveRecordById(tracker, digit), palette);
             func_ov027_020b824c(tracker, FindActiveRecordById(tracker, digit), x + 7, y + 1);
         }
         break;

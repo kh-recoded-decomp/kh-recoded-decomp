@@ -1,0 +1,2 @@
+#define DecodeMovieFrameIntoRing_020a9cb0 DecodeMovieFrameIntoRing
+#include "src/ov022/video_playback/DecodeMovieFrameIntoRing_020a9cb0.c"

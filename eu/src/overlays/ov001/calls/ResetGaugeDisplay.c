@@ -1,4 +1,4 @@
-#define BlendIconTiles_0206ed8c func_ov001_0206ed8c
+#define BlendIconTiles_0206ed8c BlendIconTiles
 #define QueueFileLoadRequest_020ba114 QueueFileLoadRequest
 #define ResetGaugeDisplay_020734f8 ResetGaugeDisplay
 #define data_ov001_020a04a4 data_ov001_020a04c4

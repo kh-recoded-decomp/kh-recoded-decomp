@@ -1,0 +1,4 @@
+#define NNSi_FndGetCurrentRootHeap ResetCameraView
+#define Ov008_CommitSelectedPage func_ov048_020c3530
+#define ReturnToCommitPage_020c3500 ReturnToCommitPage_ov048_020c3520
+#include "src/ov048/shared_engine/ReturnToCommitPage_020c3500.c"

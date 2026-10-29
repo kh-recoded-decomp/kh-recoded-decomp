@@ -3,7 +3,7 @@
 #define FindActiveRecordById_020b8184 FindActiveRecordById
 #define FindWidgetById_020b90a4 FindWidgetById
 #define GetSecondaryRecordCount_020291c0 GetSecondaryRecordCount
-#define InvokeCallback40_020b8268 func_ov027_020b8288
+#define InvokeCallback40_020b8268 InvokeCallback40
 #define MoveTabCursor_020c1164 MoveTabCursor
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define PushPendingPair_020bf614 PushPendingPair
@@ -12,7 +12,7 @@
 #define SetEntrySlotsVisible_020b9580 SetEntrySlotsVisible
 #define SetGlobalPackedBit_02027320 SetGlobalPackedBit
 #define SetShopMenuMode_020c0b90 SetShopMenuMode
-#define TagTracker_InvokeCallback_020b8210 func_ov027_020b8230
+#define TagTracker_InvokeCallback_020b8210 TagTracker_InvokeCallback
 #define _u32_div_f _u32_div_f
 #define data_0205fe0c data_0205fe0c
 #define data_ov085_020c22c4 data_ov085_020c22e4

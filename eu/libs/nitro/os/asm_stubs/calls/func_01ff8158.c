@@ -1,7 +1,7 @@
 extern char SDK_AUTOLOAD_DTCM_START[];
-extern void func_01ff81b0(void);
+extern void OS_IrqHandler_ThreadSwitch(void);
 
-/* NitroSDK IRQ dispatcher entry; callback return continues at func_01ff81b0. */
+/* NitroSDK IRQ dispatcher entry; callback return continues at OS_IrqHandler_ThreadSwitch. */
 asm void func_01ff8158(void)
 {
     stmdb   sp!, {lr}
@@ -23,6 +23,6 @@ selectHighestPriority:
     rsbs    r0, r0, #31
     ldr     r1, =SDK_AUTOLOAD_DTCM_START
     ldr     r0, [r1, r0, lsl #2]
-    ldr     lr, =func_01ff81b0
+    ldr     lr, =OS_IrqHandler_ThreadSwitch
     bx      r0
 }

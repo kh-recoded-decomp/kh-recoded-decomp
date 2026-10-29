@@ -44,7 +44,7 @@ src/overlays/ov034/calls/InitResultsScreen.c:
     complete
     .text       start:0x020bb324 end:0x020bb598
 
-src/overlays/ov034/calls/func_ov034_020bb598.c:
+src/overlays/ov034/calls/RefreshResultsScreen.c:
     complete
     .text       start:0x020bb598 end:0x020bce10
 
@@ -144,7 +144,7 @@ src/overlays/ov034/calls/SetupResultsShopList.c:
     complete
     .text       start:0x020be348 end:0x020be438
 
-src/overlays/ov034/calls/func_ov034_020be438.c:
+src/overlays/ov034/calls/GetResultsShopItemInfo.c:
     complete
     .text       start:0x020be438 end:0x020be518
 
@@ -156,7 +156,7 @@ src/overlays/ov034/calls/InitResultsMovieSourceOps.c:
     complete
     .text       start:0x020be568 end:0x020be5a8
 
-src/overlays/ov034/calls/func_ov034_020be5a8.c:
+src/overlays/ov034/calls/LoadResultsIconCells.c:
     complete
     .text       start:0x020be5a8 end:0x020be734
 

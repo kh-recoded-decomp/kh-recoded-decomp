@@ -37,7 +37,7 @@ extern u32 func_ov001_0207b3f4(void);
 extern BOOL func_ov001_0207b610(void);
 extern void ClearPanelInputActive(void);
 extern int LookupChannelEntry_020b62ac(int channel);
-extern int func_ov027_020b9f9c(TouchSample *sample);
+extern int CopySourceBlock(TouchSample *sample);
 extern void ClearCapturedTouchState(void);
 
 int UpdatePanelScene(void)
@@ -72,7 +72,7 @@ int UpdatePanelScene(void)
         PulsePaletteFlash(panel);
     }
     if (panel->touchActive != 0) {
-        func_ov027_020b9f9c(&sample);
+        CopySourceBlock(&sample);
         if (sample.touch == 0) {
             ClearPanelInputActive();
         } else {

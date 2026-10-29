@@ -1,6 +1,6 @@
 #define FindActiveRecordById_020b8184 FindActiveRecordById
 #define GetSceneTagTracker_020711b0 GetSceneTagTracker
-#define InvokeCallback40_020b8268 func_ov027_020b8288
+#define InvokeCallback40_020b8268 InvokeCallback40
 #define ReleasePendingSceneTags_020750c8 ReleasePendingSceneTags
 #define data_ov001_020a04ac data_ov001_020a04cc
 #define func_ov027_020b7f60 func_ov027_020b7f80

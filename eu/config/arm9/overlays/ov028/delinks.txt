@@ -127,7 +127,7 @@ src/overlays/ov028/calls/ReleaseHandle_020bb0a4.c:
     complete
     .text       start:0x020bb0a4 end:0x020bb0c4
 
-src/overlays/ov028/calls/func_ov028_020bb0c4.c:
+src/overlays/ov028/calls/SetupSceneFromParams.c:
     complete
     .text       start:0x020bb0c4 end:0x020bb17c
 
