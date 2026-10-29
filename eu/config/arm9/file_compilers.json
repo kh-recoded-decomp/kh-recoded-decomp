@@ -9636,5 +9636,6 @@
   "src/calls/func_020456d4.c": "dsi/1.3p1",
   "src/calls/func_02034d78.c": "dsi/1.3p1",
   "src/overlays/ov027/calls/func_ov027_020b91e8.c": "dsi/1.3p1",
-  "src/overlays/ov043/calls/func_ov043_020bcce4.c": "dsi/1.3p1"
+  "src/overlays/ov043/calls/func_ov043_020bcce4.c": "dsi/1.3p1",
+  "src/nonmatching/UpdateFieldMenuPalette.c": "dsi/1.1"
 }

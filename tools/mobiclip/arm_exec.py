@@ -20,10 +20,11 @@ THUMB state covers the 16-bit formats the SDK's THUMB routines use: shifts by
 an immediate, ADD/SUB register or 3-bit immediate, MOV/CMP/ADD/SUB 8-bit
 immediate, the sixteen ALU operations, hi-register ADD/CMP/MOV and BX/BLX,
 PC-relative LDR, loads and stores with a register or immediate offset (word,
-byte, halfword, signed), PUSH/POP, LDMIA/STMIA, conditional and unconditional
+byte, halfword, signed), SP-relative word transfers, PC/SP-relative address
+generation, ADD/SUB SP by an immediate, PUSH/POP, LDMIA/STMIA, conditional and unconditional
 B, the BL/BLX prefix-suffix pair (run as one 4-byte instruction) and SWI,
-logged in `Cpu.swi_log` as (8-bit comment, r0-r3). SP-relative transfers,
-ADD to SP/PC, BKPT, undefined and UNPREDICTABLE encodings are refused. BX,
+logged in `Cpu.swi_log` as (8-bit comment, r0-r3). BKPT, undefined and
+UNPREDICTABLE encodings are refused. BX,
 BLX, POP {pc} and ARM LDR/LDM into pc switch state on bit 0 as ARMv5 does;
 `call()` takes a THUMB entry as address | 1.
 
@@ -533,6 +534,15 @@ class Cpu:
         elif (ins >> 12) == 8:                          # format 10: immediate offset, halfword
             address = (self.r[(ins >> 3) & 7] + ((ins >> 6) & 0x1F) * 2) & MASK
             self._thumb_transfer(ins & 7, address, "ldrh" if ins & 0x800 else "strh")
+        elif (ins >> 12) == 9:                          # format 11: SP-relative word transfer
+            address = (self.r[13] + (ins & 0xFF) * 4) & MASK
+            self._thumb_transfer((ins >> 8) & 7, address, "ldr" if ins & 0x800 else "str")
+        elif (ins >> 12) == 0xA:                        # format 12: PC/SP-relative address
+            base = self.r[13] if ins & 0x800 else (self.pc + 4) & ~3
+            self.r[(ins >> 8) & 7] = (base + (ins & 0xFF) * 4) & MASK
+        elif (ins >> 8) == 0xB0:                        # format 13: ADD/SUB SP, #imm7*4
+            offset = (ins & 0x7F) * 4
+            self.r[13] = (self.r[13] + (-offset if ins & 0x80 else offset)) & MASK
         elif (ins & 0xF600) == 0xB400:                  # format 14: PUSH {list, lr} / POP {list, pc}
             self._thumb_push_pop(ins)
         elif (ins >> 12) == 0xC:                        # format 15: LDMIA/STMIA Rb!, {list}
