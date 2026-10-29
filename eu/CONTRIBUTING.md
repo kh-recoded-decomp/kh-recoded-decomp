@@ -32,18 +32,29 @@ Do not change a public calling convention or add artificial side effects solely
 to obtain a match. Prefer GCC or Clang for new SDK conversions when they reproduce
 the required bytes with the correct interface.
 
+Keep scratch values local. An incoming register that is overwritten before its
+first use is not evidence of a parameter. Do not introduce arguments just to
+influence register or stack allocation; document actual caller inputs and leave
+the C pending when the correct interface still differs from the ROM.
+
+New absolute symbols must represent recovered program or SDK/linker symbols.
+Do not invent an object address merely to force an integer into a literal pool.
+
 Hardware-specific assembly can remain assembly with a documented contract and
 separate accounting. Reproducing its bytes alone does not establish its semantics
 or make it C. Pending sources stay in `nonmatching/`, outside coverage and the
 linked build. See [COLLISION_GEOMETRY.md](docs/COLLISION_GEOMETRY.md) for a worked
 example of recovered layouts, behavioral checks and an explicitly pending source.
 
-Pending routines with executable behavior contracts are documented in
-[CONTACT_MOTION.md](docs/CONTACT_MOTION.md) and
-[WIDGET_POSITION.md](docs/WIDGET_POSITION.md). Their C drafts live in
-`src/nonmatching/`; passing those behavior tests does not replace byte/relocation
-verification or add matching-C credit. Porting notes distinguish recovered field
-layouts from complete object sizes and record input/output aliasing requirements.
+Executable behavior contracts are documented in
+[CONTACT_MOTION.md](docs/CONTACT_MOTION.md),
+[WIDGET_POSITION.md](docs/WIDGET_POSITION.md) and
+[CAROUSEL_MODELS.md](docs/CAROUSEL_MODELS.md) and
+[SCENE_LOAD_STEP.md](docs/SCENE_LOAD_STEP.md). They identify each implementation's
+matching status and the boundary of its tests. Porting notes distinguish
+recovered prefixes from complete object sizes and document aliasing, mutability
+and ownership. Behavior tests supplement the byte and relocation verifier;
+passing them alone does not add matching-C credit.
 
 ## Claiming work
 

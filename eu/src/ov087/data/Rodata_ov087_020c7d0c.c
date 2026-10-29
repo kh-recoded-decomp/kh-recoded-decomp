@@ -1,9 +1,9 @@
-#include "nitro/types.h"
+#include "src/overlays/ov087/CarouselModels.h"
 
-const u32 data_ov087_020c7d1c[8] = {
+const CarouselResourceIds data_ov087_020c7d1c = {{
     0x00000009, 0x0000000F, 0x00000003, 0x0000000B,
     0x00000001, 0x0000000D, 0x0000000D, 0x00000007,
-};
+}};
 
 const u32 data_ov087_020c7d0c[4] = {
     0x00000000, 0x00000001, 0x00000000, 0x00000000,
