@@ -8,7 +8,7 @@ src/overlays/ov095/calls/InitGridMenu.c:
     complete
     .text       start:0x020beb20 end:0x020bed84
 
-src/overlays/ov095/calls/func_ov095_020bed84.c:
+src/overlays/ov095/calls/ShutdownItemReport.c:
     complete
     .text       start:0x020bed84 end:0x020bee18
 
@@ -32,11 +32,11 @@ src/overlays/ov095/calls/ShowNextEntry.c:
     complete
     .text       start:0x020befa4 end:0x020befd4
 
-src/overlays/ov095/calls/func_ov095_020befd4.c:
+src/overlays/ov095/calls/ItemReport_ReturnToParentMenu.c:
     complete
     .text       start:0x020befd4 end:0x020beffc
 
-src/overlays/ov095/calls/func_ov095_020beffc.c:
+src/overlays/ov095/calls/ItemReport_ReturnToRootMenu.c:
     complete
     .text       start:0x020beffc end:0x020bf02c
 

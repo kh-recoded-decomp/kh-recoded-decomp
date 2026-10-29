@@ -3,16 +3,17 @@
 extern u32 PlaySoundEffect();
 extern u32 StartSubScene();
 extern u32 PopStackEntry();
-extern u32 func_ov093_020c2368();
+extern u32 TrophyReport_GetState();
 
-void func_ov093_020bf5cc(void) {
+void TrophyReport_ReturnToRootMenu(void) {
   int state;
 
-  state = func_ov093_020c2368();
+  state = TrophyReport_GetState();
   if (state != 6) {
     return;
   }
   PopStackEntry();
-  StartSubScene(0xb,0xffffffff,1);
+  PopStackEntry();
+  StartSubScene(0,0xffffffff,1);
   PlaySoundEffect(0,3);
 }

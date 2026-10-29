@@ -36,11 +36,11 @@ src/overlays/ov101/calls/HandleListLeftInput.c:
     complete
     .text       start:0x020bf294 end:0x020bf3b0
 
-src/overlays/ov101/calls/func_ov101_020bf3b0.c:
+src/overlays/ov101/calls/ListScene_ReturnToParentMenu.c:
     complete
     .text       start:0x020bf3b0 end:0x020bf3d8
 
-src/overlays/ov101/calls/func_ov101_020bf3d8.c:
+src/overlays/ov101/calls/ListScene_ReturnToRootMenu.c:
     complete
     .text       start:0x020bf3d8 end:0x020bf408
 

@@ -8,7 +8,7 @@ extern void MoveEntryCursorDown(void);
 extern void MoveEntryCursorUp(void);
 extern void OpenSelectedEntryScene(void);
 extern void TryCloseEntryMenu(void);
-extern void func_ov091_020bed84(void);
+extern void UpdateRecordMenuScene(void);
 
 u32 data_ov091_020c2bd4[36] = {
     0x00000000, 0x00000000, 0x00000078, 0x00000028,
@@ -36,7 +36,7 @@ u32 data_ov091_020c2b5c[30] = {
 void *data_ov091_020c2b18[17] = {
     (void *)InitRecordMenuScene,
     (void *)DestroyMenuScene,
-    (void *)func_ov091_020bed84,
+    (void *)UpdateRecordMenuScene,
     (void *)0x00000004,
     (void *)0x0000CC80,
     (void *)MoveEntryCursorUp,

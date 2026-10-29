@@ -3,21 +3,21 @@
 extern void HandleListCursorDown(void); /* HandleListCursorDown */
 extern void HandleListPageUp(void);
 extern void HandleListPageDown(void); /* HandleListPageDown */
-extern void func_ov099_020bf0a4(void);
+extern void EnemyReport_ReturnToParentMenu(void);
 extern void CloseSubBgPanel(void);
 extern void OpenSubBgPanel(void);
-extern void func_ov099_020bf0cc(void);
+extern void EnemyReport_ReturnToRootMenu(void);
 
 void (*gEnemyReportListHandlers[11])(void) = {
     HandleListCursorDown, /* HandleListCursorDown */
     HandleListPageUp,
     HandleListPageDown, /* HandleListPageDown */
     NULL,
-    func_ov099_020bf0a4,
+    EnemyReport_ReturnToParentMenu,
     NULL,
     NULL,
     CloseSubBgPanel,
     OpenSubBgPanel,
     NULL,
-    func_ov099_020bf0cc,
+    EnemyReport_ReturnToRootMenu,
 };

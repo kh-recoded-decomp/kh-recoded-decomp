@@ -10,13 +10,13 @@ extern void ShowNextEntry(void);
 extern void ShowPreviousEntry(void);
 extern void UpdatePanelFrame(void);
 extern void InitGridMenu(void);
-extern void func_ov095_020bed84(void);
-extern void func_ov095_020befd4(void);
-extern void func_ov095_020beffc(void);
+extern void ShutdownItemReport(void);
+extern void ItemReport_ReturnToParentMenu(void);
+extern void ItemReport_ReturnToRootMenu(void);
 
 void *gItemReportMenuCallbacks[17] = {
     (void *)InitGridMenu,
-    (void *)func_ov095_020bed84,
+    (void *)ShutdownItemReport,
     (void *)UpdatePanelFrame,
     (void *)0x00000006,
     (void *)0x0001150C,
@@ -25,11 +25,11 @@ void *gItemReportMenuCallbacks[17] = {
     (void *)ShowPreviousEntry,
     (void *)ShowNextEntry,
     NULL,
-    (void *)func_ov095_020befd4,
+    (void *)ItemReport_ReturnToParentMenu,
     NULL,
     NULL,
     (void *)CloseEntryDetail,
     (void *)OpenEntryDetail,
     NULL,
-    (void *)func_ov095_020beffc,
+    (void *)ItemReport_ReturnToRootMenu,
 };

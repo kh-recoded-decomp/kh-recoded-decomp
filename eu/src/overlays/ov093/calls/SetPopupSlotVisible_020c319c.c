@@ -11,7 +11,7 @@ extern int IndexedRecord_SetActive(void *objManager, int slotIndex);
 extern void IndexedRecord_ClearActive(void *objManager, int slotIndex);
 extern void IndexedRecords_SetFlag2(void *objManager, int slotIndex, int value);
 
-void func_ov093_020c319c(int slotIndex, BOOL visible)
+void SetPopupSlotVisible_020c319c(int slotIndex, BOOL visible)
 {
     void *objManager = data_ov093_020c5104->objManager;
 

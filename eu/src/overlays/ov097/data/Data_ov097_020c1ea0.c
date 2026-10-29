@@ -10,8 +10,8 @@ extern void ScrollEntryListDown(void);
 extern void ScrollEntryListUp(void);
 extern void ToggleListMode(void);
 extern void UpdateMenuScene(void);
-extern void func_ov097_020bf3c8(void);
-extern void func_ov097_020bf3f0(void);
+extern void StoryReport_ReturnToParentMenu(void);
+extern void StoryReport_ReturnToRootMenu(void);
 
 void *gStoryReportCommandTable[17] = {
     (void *)InitMenuScene_020beb20,
@@ -24,11 +24,11 @@ void *gStoryReportCommandTable[17] = {
     (void *)ScrollEntryListUp,
     (void *)ScrollEntryListDown,
     NULL,
-    (void *)func_ov097_020bf3c8,
+    (void *)StoryReport_ReturnToParentMenu,
     (void *)ToggleListMode,
     NULL,
     NULL,
     NULL,
     NULL,
-    (void *)func_ov097_020bf3f0,
+    (void *)StoryReport_ReturnToRootMenu,
 };

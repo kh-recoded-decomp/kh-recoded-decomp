@@ -1,5 +1,5 @@
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define SetSlotAnimFlag_020c0310 SetSlotAnimFlag
 #define ToggleSceneOption_020bf61c ToggleSceneOption
-#define func_ov093_020c2348 func_ov093_020c2368
+#define func_ov093_020c2348 TrophyReport_GetState
 #include "src/ov093/unclassified_helpers/ToggleSceneOption_020bf61c.c"

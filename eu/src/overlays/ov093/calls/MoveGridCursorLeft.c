@@ -9,6 +9,6 @@
 #define func_ov093_020c0564 RestartSlotAnim
 #define func_ov093_020c05b8 RefreshEntryListSlots
 #define func_ov093_020c0bec ConsumeScrollBarStep
-#define func_ov093_020c2348 func_ov093_020c2368
+#define func_ov093_020c2348 TrophyReport_GetState
 #define g_sceneWork_020c50e0 data_ov093_020c5100
 #include "src/ov093/unclassified_helpers/MoveGridCursorLeft_020bf218.c"

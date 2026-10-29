@@ -4,6 +4,6 @@
 #define func_020019f4 GetNestedModeByte
 #define func_ov093_020c2e04 DrawPopupText_020c2e24
 #define func_ov093_020c308c SetPopupPosition
-#define func_ov093_020c317c func_ov093_020c319c
+#define func_ov093_020c317c SetPopupSlotVisible_020c319c
 #define g_popupManager_020c50e4 data_ov093_020c5104
 #include "src/ov093/unclassified_helpers/OpenPopupWindow_020c3418.c"

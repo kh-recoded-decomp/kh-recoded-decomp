@@ -8,14 +8,14 @@ extern void InitEntryGridScene(void);
 extern void MoveGridCursorLeft(void);
 extern void ToggleSceneOption(void);
 extern void UpdateSceneFrame(void);
-extern void func_ov093_020bed58(void);
+extern void ShutdownTrophyReport(void);
 extern void MoveGridCursorRight(void);
-extern void func_ov093_020bf5cc(void);
-extern void func_ov093_020bf600(void);
+extern void TrophyReport_ReturnToParentMenu(void);
+extern void TrophyReport_ReturnToRootMenu(void);
 
 void *data_ov093_020c4014[17] = {
     (void *)InitEntryGridScene,
-    (void *)func_ov093_020bed58,
+    (void *)ShutdownTrophyReport,
     (void *)UpdateSceneFrame,
     (void *)0x00000005,
     (void *)0x0000D224,
@@ -24,13 +24,13 @@ void *data_ov093_020c4014[17] = {
     (void *)MoveGridCursorLeft,
     (void *)MoveGridCursorRight,
     NULL,
-    (void *)func_ov093_020bf5cc,
+    (void *)TrophyReport_ReturnToParentMenu,
     (void *)ToggleSceneOption,
     NULL,
     NULL,
     NULL,
     NULL,
-    (void *)func_ov093_020bf600,
+    (void *)TrophyReport_ReturnToRootMenu,
 };
 
 u32 data_ov093_020c3fd4[16] = {

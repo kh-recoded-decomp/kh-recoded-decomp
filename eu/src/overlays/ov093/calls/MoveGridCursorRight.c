@@ -22,7 +22,7 @@ typedef struct SceneWork {
 extern SceneWork *data_ov093_020c5100;
 extern u16 data_02060500;
 
-extern int func_ov093_020c2368(void);
+extern int TrophyReport_GetState(void);
 extern BOOL IsEntryFlagSet_020c22c4(int flagSet, int entryIndex);
 extern void SetEntryFlag_020c22f4(int flagSet, int entryIndex);
 extern void SetGlobalPackedBit(int bitIndex);
@@ -59,7 +59,7 @@ void MoveGridCursorRight(SceneWork *work)
     int page;
     int flagIndex;
 
-    if (func_ov093_020c2368() != 6) {
+    if (TrophyReport_GetState() != 6) {
         return;
     }
     if (work->isClosing == 0 && work->isLocked == 0) {

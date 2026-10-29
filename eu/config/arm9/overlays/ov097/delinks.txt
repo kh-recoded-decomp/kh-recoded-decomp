@@ -32,11 +32,11 @@ src/overlays/ov097/calls/ScrollEntryListDown.c:
     complete
     .text       start:0x020bf314 end:0x020bf3c8
 
-src/overlays/ov097/calls/func_ov097_020bf3c8.c:
+src/overlays/ov097/calls/StoryReport_ReturnToParentMenu.c:
     complete
     .text       start:0x020bf3c8 end:0x020bf3f0
 
-src/overlays/ov097/calls/func_ov097_020bf3f0.c:
+src/overlays/ov097/calls/StoryReport_ReturnToRootMenu.c:
     complete
     .text       start:0x020bf3f0 end:0x020bf420
 

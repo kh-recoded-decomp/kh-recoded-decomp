@@ -40,11 +40,11 @@ src/overlays/ov099/calls/HandleListPageDown.c:
     complete
     .text       start:0x020bf038 end:0x020bf0a4
 
-src/overlays/ov099/calls/func_ov099_020bf0a4.c:
+src/overlays/ov099/calls/EnemyReport_ReturnToParentMenu.c:
     complete
     .text       start:0x020bf0a4 end:0x020bf0cc
 
-src/overlays/ov099/calls/func_ov099_020bf0cc.c:
+src/overlays/ov099/calls/EnemyReport_ReturnToRootMenu.c:
     complete
     .text       start:0x020bf0cc end:0x020bf0fc
 

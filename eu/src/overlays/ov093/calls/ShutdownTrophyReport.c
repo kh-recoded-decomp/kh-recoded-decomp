@@ -12,7 +12,7 @@ extern u32 ReleaseSceneObjManagers();
 extern u32 ResetTouchActive();
 extern u32 func_ov093_020c3c2c();
 
-void func_ov093_020bed58(int work) {
+void ShutdownTrophyReport(int work) {
   func_ov093_020c3c2c(*(u32 *)(work + 0xd1c8));
   NotifyBothOrOne(1,&sOv093_VblankFunc_020c4d54,0);
   ResetTouchActive(work);

@@ -1,7 +1,7 @@
 AlignUpTo4K kind:function(arm,size=0x20) addr:0x020beb20
 InitRecordMenuScene kind:function(arm,size=0x1f4) addr:0x020beb40
 DestroyMenuScene kind:function(arm,size=0x50) addr:0x020bed34
-func_ov091_020bed84 kind:function(arm,size=0x3c) addr:0x020bed84
+UpdateRecordMenuScene kind:function(arm,size=0x3c) addr:0x020bed84
 MoveEntryCursorUp kind:function(arm,size=0xa0) addr:0x020bedc0
 MoveEntryCursorDown kind:function(arm,size=0xa0) addr:0x020bee60
 OpenSelectedEntryScene kind:function(arm,size=0x84) addr:0x020bef00

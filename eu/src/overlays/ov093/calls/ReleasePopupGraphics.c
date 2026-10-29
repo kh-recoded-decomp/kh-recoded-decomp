@@ -9,7 +9,7 @@ extern u32 MIi_CpuClearFast();
 extern u32 func_ov093_020c3bc4();
 extern u32 func_ov093_020c3bd8();
 
-void func_ov093_020c2f3c(int work) {
+void ReleasePopupGraphics(int work) {
   int ready;
   void *screen;
 

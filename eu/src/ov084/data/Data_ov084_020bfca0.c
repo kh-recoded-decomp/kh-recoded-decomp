@@ -6,21 +6,21 @@ extern void ResetMenuCursorWithSound(void);
 extern void SelectPrevOption(void);
 extern void TeardownSceneResources(void);
 extern void InitSelectMenu(void);
-extern void func_ov084_020bf9bc(void);
+extern void UpdateSelectMenuScene(void);
 extern void SelectNextOption(void);
-extern void func_ov084_020bfc28(void);
+extern void SelectMenu_ConfirmSelection(void);
 
 void *data_ov084_020bfca0[17] = {
     (void *)InitSelectMenu,
     (void *)TeardownSceneResources,
-    (void *)func_ov084_020bf9bc,
+    (void *)UpdateSelectMenuScene,
     (void *)0x00000001,
     (void *)0x000001D4,
     (void *)SelectPrevOption,
     (void *)SelectNextOption,
     NULL,
     NULL,
-    (void *)func_ov084_020bfc28,
+    (void *)SelectMenu_ConfirmSelection,
     (void *)ResetMenuCursorWithSound,
     NULL,
     NULL,

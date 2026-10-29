@@ -1,12 +1,12 @@
 InitGridMenu kind:function(arm,size=0x264) addr:0x020beb20
-func_ov095_020bed84 kind:function(arm,size=0x94) addr:0x020bed84
+ShutdownItemReport kind:function(arm,size=0x94) addr:0x020bed84
 UpdatePanelFrame kind:function(arm,size=0x74) addr:0x020bee18
 ConfirmGridMoveA kind:function(arm,size=0x74) addr:0x020bee8c
 ConfirmGridMoveB kind:function(arm,size=0x74) addr:0x020bef00
 ShowPreviousEntry kind:function(arm,size=0x30) addr:0x020bef74
 ShowNextEntry kind:function(arm,size=0x30) addr:0x020befa4
-func_ov095_020befd4 kind:function(arm,size=0x28) addr:0x020befd4
-func_ov095_020beffc kind:function(arm,size=0x30) addr:0x020beffc
+ItemReport_ReturnToParentMenu kind:function(arm,size=0x28) addr:0x020befd4
+ItemReport_ReturnToRootMenu kind:function(arm,size=0x30) addr:0x020beffc
 CloseEntryDetail kind:function(arm,size=0x38) addr:0x020bf02c
 OpenEntryDetail kind:function(arm,size=0x40) addr:0x020bf064
 SetupGridMenuDisplay kind:function(arm,size=0x244) addr:0x020bf0a4

@@ -12,7 +12,7 @@
 #define data_ov093_020c4064 data_ov093_020c4084
 #define data_ov093_020c4d34 sOv093_VblankFunc_020c4d54
 #define func_ov093_020bf67c SetupEntryDisplay
-#define func_ov093_020bf880 func_ov093_020bf8a0
+#define func_ov093_020bf880 LoadTrophyReportMessages
 #define func_ov093_020bf8e4 LoadSceneBackgrounds
 #define func_ov093_020bfac4 InitEntryTextLayers
 #define func_ov093_020bfd60 RedrawEntryPanelText
@@ -23,6 +23,6 @@
 #define func_ov093_020c1ca8 UpdateDragAreaBounds
 #define func_ov093_020c231c SetSceneState
 #define func_ov093_020c2b04 LoadEntryGridTilesIncrementally
-#define func_ov093_020c3bdc func_ov093_020c3bfc
+#define func_ov093_020c3bdc CreatePopupManager
 #define g_sceneWork_020c50e0 data_ov093_020c5100
 #include "src/ov093/panel_state/InitEntryGridScene_020beb20.c"

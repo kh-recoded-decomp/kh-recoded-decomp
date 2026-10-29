@@ -1,6 +1,6 @@
 #define FX_Div_01ff9c84 FX_Div
 #define FadeOutPopup_020c351c FadeOutPopup
 #define StateMachine_SetState_020c3bc4 StateMachine_SetState
-#define func_ov093_020c2f1c func_ov093_020c2f3c
+#define func_ov093_020c2f1c ReleasePopupGraphics
 #define func_ov093_020c369c DrawPopupWindowFrame_020c369c
 #include "src/ov093/unclassified_helpers/FadeOutPopup_020c351c.c"

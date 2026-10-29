@@ -16,7 +16,7 @@ src/overlays/ov091/calls/DestroyMenuScene.c:
     complete
     .text       start:0x020bed34 end:0x020bed84
 
-src/overlays/ov091/calls/func_ov091_020bed84.c:
+src/overlays/ov091/calls/UpdateRecordMenuScene.c:
     complete
     .text       start:0x020bed84 end:0x020bedc0
 

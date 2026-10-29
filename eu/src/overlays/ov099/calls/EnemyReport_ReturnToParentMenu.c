@@ -4,7 +4,7 @@ extern u32 PlaySoundEffect();
 extern u32 StartSubScene();
 extern u32 PopStackEntry();
 
-void func_ov099_020bf0a4(void) {
+void EnemyReport_ReturnToParentMenu(void) {
   PopStackEntry();
   StartSubScene(0xb,0xffffffff,1);
   PlaySoundEffect(0,3);

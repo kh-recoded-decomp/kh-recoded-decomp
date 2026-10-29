@@ -8,7 +8,7 @@ extern unsigned int GetBgDataFromArchive();
 extern unsigned int NNSi_FndGetCurrentRootHeap();
 extern unsigned int Archive_LoadFile();
 
-code * func_ov093_020c2cac(unsigned int *initialValues) {
+code * InitPopupManager(unsigned int *initialValues) {
   u32 resource;
 
   data_ov093_020c5104 = NNSi_FndGetCurrentRootHeap();

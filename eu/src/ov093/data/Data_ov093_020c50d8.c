@@ -3,11 +3,11 @@
 #pragma explicit_zero_data on
 
 extern void ShutdownPopupSystem(void);
-extern void func_ov093_020c2cac(void);
+extern void InitPopupManager(void);
 
 void *data_ov093_020c50d8[10] = {
     (void *)0x000E001B,
-    (void *)func_ov093_020c2cac,
+    (void *)InitPopupManager,
     (void *)ShutdownPopupSystem,
     (void *)0x00000270,
     NULL,

@@ -13,7 +13,7 @@ extern u32 ReleaseSlotPool();
 extern u32 FreeSlotBuffers_020c0724();
 extern u32 FreeGridCells();
 
-void func_ov095_020bed84(int work) {
+void ShutdownItemReport(int work) {
   int containerIndex;
 
   containerIndex = 0;

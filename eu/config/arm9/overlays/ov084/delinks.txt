@@ -8,7 +8,7 @@ src/overlays/ov084/calls/InitSelectMenu.c:
     complete
     .text       start:0x020bf720 end:0x020bf9bc
 
-src/overlays/ov084/calls/func_ov084_020bf9bc.c:
+src/overlays/ov084/calls/UpdateSelectMenuScene.c:
     complete
     .text       start:0x020bf9bc end:0x020bf9c4
 
@@ -40,7 +40,7 @@ src/overlays/ov084/calls/SelectNextOption.c:
     complete
     .text       start:0x020bfbe4 end:0x020bfc28
 
-src/overlays/ov084/calls/func_ov084_020bfc28.c:
+src/overlays/ov084/calls/SelectMenu_ConfirmSelection.c:
     complete
     .text       start:0x020bfc28 end:0x020bfc46
 

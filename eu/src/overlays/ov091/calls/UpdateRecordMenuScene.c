@@ -7,7 +7,7 @@ extern unsigned int DrawRecordSummaryText();
 extern unsigned int ResetListCursor_020bf8cc();
 extern unsigned int func_ov091_020c1774();
 
-void func_ov091_020bed84(unsigned int work) {
+void UpdateRecordMenuScene(unsigned int work) {
   int state;
 
   state = func_ov091_020c1774();

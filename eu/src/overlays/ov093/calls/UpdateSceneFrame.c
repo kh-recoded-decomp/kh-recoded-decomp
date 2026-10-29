@@ -3,5 +3,5 @@
 #define UpdateScrollBarDrag_020c1d48 UpdateScrollBarDrag
 #define data_ov093_020c3c7c gTrophyReportStateHandlers
 #define func_ov093_020bfd60 RedrawEntryPanelText
-#define func_ov093_020c2348 func_ov093_020c2368
+#define func_ov093_020c2348 TrophyReport_GetState
 #include "src/ov093/unclassified_helpers/UpdateSceneFrame_020bedb0.c"

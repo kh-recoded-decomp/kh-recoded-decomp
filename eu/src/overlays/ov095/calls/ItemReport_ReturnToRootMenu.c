@@ -4,7 +4,7 @@ extern u32 PlaySoundEffect();
 extern u32 StartSubScene();
 extern u32 PopStackEntry();
 
-void func_ov099_020bf0cc(void) {
+void ItemReport_ReturnToRootMenu(void) {
   PopStackEntry();
   PopStackEntry();
   StartSubScene(0,0xffffffff,1);
