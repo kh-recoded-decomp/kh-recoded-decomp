@@ -23,6 +23,35 @@ from project import BUILD_DIR, CFLAGS, LICENSE, MWCC_DIR, MWCCARM, ROOT  # noqa:
 REDEFINE = re.compile(r"^// redefine-sym (\w+)=(\w+)\s*$", re.M)
 
 
+def write_depfile(output, compiler_cwd=ROOT):
+    """Normalize CodeWarrior's native Windows makefile for Ninja's GCC reader."""
+    output = Path(output)
+    native = output.with_suffix(".d")
+    text = native.read_text(encoding="utf-8")
+    _, separator, dependencies = text.partition(": ")
+    if not separator:
+        raise ValueError("invalid CodeWarrior dependency file: " + str(native))
+    # Keep escaped spaces and line continuations, but normalize path separators.
+    dependencies = re.sub(r"\\(?![ \t#\r\n])", "/", dependencies)
+    dependencies = dependencies.replace("\\\n", " ")
+
+    def escape(path):
+        return str(path).replace("\\", "/").replace("$", "$$").replace("#", "\\#").replace(" ", "\\ ")
+
+    paths = []
+    for token in re.findall(r"(?:\\[ \t#]|[^\s])+", dependencies):
+        value = token.replace("\\ ", " ").replace("\\\t", "\t").replace("\\#", "#")
+        path = Path(value)
+        # CodeWarrior can shorten even an absolute input relative to its cwd.
+        # Wrappers run from the shared root; Ninja always runs from eu/.
+        if not path.is_absolute() and not re.match(r"^[A-Za-z]:/", value):
+            path = (Path(compiler_cwd) / path).resolve()
+        paths.append(escape(path))
+    Path(str(output) + ".d").write_text(escape(output) + ": " + " \\\n\t".join(paths) + "\n",
+                                       encoding="utf-8", newline="\n")
+    native.unlink()
+
+
 def find_objcopy():
     import shutil
     configured = shutil.which("arm-none-eabi-objcopy")
@@ -112,11 +141,11 @@ def main():
         flags[flags.index("c99")] = "c++"
 
     env = dict(os.environ, LM_LICENSE_FILE=str(LICENSE))
-    if is_wrapper:
-        out_arg, src_arg = str(out_path.resolve()), str(src_path.resolve())
-    else:
-        out_arg, src_arg = str(out_path), str(src_path)
-    cmd = [str(mwcc_bin), "-c", *flags, *extra, "-o", out_arg, src_arg]
+    # Absolute inputs keep dependencies unambiguous when wrappers compile from
+    # the shared root rather than eu/. -gccdep writes beside the output object.
+    out_arg, src_arg = str(out_path.resolve()), str(src_path.resolve())
+    cmd = [str(mwcc_bin), "-c", *flags, *extra, "-gccdep", "-MD",
+           "-o", out_arg, src_arg]
 
     # The FLEXlm license check fails intermittently under a parallel build: an
     # arbitrary translation unit dies and the same command succeeds on its own.
@@ -127,6 +156,7 @@ def main():
         if r.returncode == 0:
             sys.stdout.write(r.stdout)
             sys.stderr.write(r.stderr)
+            write_depfile(out_path, shared_root if is_wrapper else ROOT)
             renames = REDEFINE.findall(src_path.read_text(encoding="utf-8", errors="replace"))
             if renames:
                 redefine_symbols(out_path, renames)
@@ -138,6 +168,10 @@ def main():
             from share_bss import share, wants_sharing
             if wants_sharing(src_path):
                 share(out_path)
+            # Finish metadata preparation before Ninja records the output time.
+            # Doing this first at link time invalidates the dependency cache.
+            from patch_align import patch_o
+            patch_o(out_path)
             return 0
         time.sleep(0.25 * (attempt + 1))
 

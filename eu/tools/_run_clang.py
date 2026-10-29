@@ -62,6 +62,7 @@ def compiler_command(source, output, mode="arm", selected=COMPILER_ID, compiler=
         "-fno-exceptions", "-Xclang", "-exception-model=dwarf",
         "-I", str(ROOT), "-I", str(ROOT.parent / "include"),
         *PROFILES[selected],
+        "-MD", "-MF", str(output) + ".d", "-MQ", str(output),
         "-o", str(output), str(source),
     ]
 
@@ -75,7 +76,11 @@ def main():
     parser.add_argument("--cc", default=COMPILER_ID)
     args = parser.parse_args()
     Path(args.output).parent.mkdir(parents=True, exist_ok=True)
-    return subprocess.run(compiler_command(args.source, args.output, args.mode, args.cc)).returncode
+    rc = subprocess.run(compiler_command(args.source, args.output, args.mode, args.cc)).returncode
+    if rc == 0:
+        from patch_align import patch_o
+        patch_o(Path(args.output))
+    return rc
 
 
 if __name__ == "__main__":

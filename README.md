@@ -22,9 +22,9 @@ maintained by [@ricky074game](https://github.com/ricky074game) and [@Yokimitsuro
 | US verified original assembly (not C) | 22,966 | 1.3% | 171 |
 | EU verified MobiClip library code (hand-written ARM, not C) | 53,036 | 3.0% | 7 |
 | EU C + verified library code | 1,726,674 / 1,771,024 | **97.5%** | |
-| **Shared** (same function, matched in both) | 1,471,560 | 83.1% of EU | 9,363 |
+| **Shared** (same function, matched in both) | 1,471,336 | 83.1% of EU | 9,361 |
 
-8,190 shared functions are stored once in `src/` and built for both regions; 1,173 still have separate EU copies. 651 matched functions are US-only so far and 1,115 are EU-only. EU numbers come from `eu/tools/audit_progress.py`; per-module EU detail is in [eu/PROGRESS.md](eu/PROGRESS.md).
+8,187 shared functions are stored once in `src/` and built for both regions; 1,174 still have separate EU copies. 653 matched functions are US-only so far and 1,117 are EU-only. EU numbers come from `eu/tools/audit_progress.py`; per-module EU detail is in [eu/PROGRESS.md](eu/PROGRESS.md).
 <!-- regions:end -->
 
 US detail:

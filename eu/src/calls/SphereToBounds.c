@@ -1,4 +1,14 @@
-#define SphereToBounds_020499c4 SphereToBounds
-#define Vec3AddScalar_0204a534 Vec3AddScalar
-#define Vec3SubScalar_0204a55c Vec3SubScalar
-#include "src/arm9/spatial_queries/SphereToBounds_020499c4.c"
+#include "src/collision/CollisionGeometry.h"
+
+extern void Vec3AddScalar(VecFx32 *value, fx32 amount);
+extern void Vec3SubScalar(VecFx32 *value, fx32 amount);
+
+void SphereToBounds(CollisionShape *shape, CollisionBounds *bounds)
+{
+    CollisionSphere *sphere = shape->geometry;
+
+    bounds->max = sphere->center;
+    bounds->min = bounds->max;
+    Vec3AddScalar(&bounds->max, sphere->radius);
+    Vec3SubScalar(&bounds->min, sphere->radius);
+}

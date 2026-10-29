@@ -195,26 +195,36 @@ def emit_ninja(ninja_path, src_files):
         # either recompiles exactly that file.
         "  command = $python tools/_run_mwcc.py $out $in --mode=$mode --cc=$cc",
         "  description = MWCC $in",
+        "  depfile = $out.d",
+        "  deps = gcc",
         "  restat = 1",
         "",
         "rule gcc",
         "  command = $python tools/_run_gcc.py $out $in --mode=$mode --cc=$cc",
         "  description = GCC $in",
+        "  depfile = $out.d",
+        "  deps = gcc",
         "  restat = 1",
         "",
         "rule armasm",
         "  command = $python tools/_run_armasm.py $out $in",
         "  description = ARMASM $in",
+        "  depfile = $out.d",
+        "  deps = gcc",
         "  restat = 1",
         "",
         "rule clang",
         "  command = $python tools/_run_clang.py $out $in --mode=$mode --cc=$cc",
         "  description = CLANG $in",
+        "  depfile = $out.d",
+        "  deps = gcc",
         "  restat = 1",
         "",
         "rule armcc",
         "  command = $python tools/_run_armcc.py $out $in --mode=$mode --cc=$cc",
         "  description = ARMCC $in",
+        "  depfile = $out.d",
+        "  deps = gcc",
         "  restat = 1",
         "",
         "rule mwld",
@@ -242,11 +252,16 @@ def emit_ninja(ninja_path, src_files):
                 rule = "clang"
             if selected.startswith("armcc/"):
                 rule = "armcc"
-            lines.append(f"build {obj}: {rule} {src}")
+            driver = {"mwcc": "_run_mwcc.py", "gcc": "_run_gcc.py",
+                      "clang": "_run_clang.py", "armcc": "_run_armcc.py"}[rule]
+            helpers = " tools/reorder_data_sections.py tools/share_bss.py" if rule == "mwcc" else ""
+            if rule == "clang":
+                helpers += " tools/_run_gcc.py"
+            lines.append(f"build {obj}: {rule} {src} | tools/{driver} tools/project.py tools/patch_align.py{helpers}")
             lines.append(f"  mode = {modes.get(src, 'arm')}")
             lines.append(f"  cc = {selected}")
         else:
-            lines.append(f"build {obj}: armasm {src}")
+            lines.append(f"build {obj}: armasm {src} | tools/_run_armasm.py tools/patch_align.py")
 
     lines.append("")
     lines.append("build compile: phony " + " ".join(compiled_objs))
@@ -263,7 +278,7 @@ def emit_ninja(ninja_path, src_files):
     # mwldarm resolves the LCF's `> build/*.bin` redirects relative to the ELF,
     # so the module images land in build/build/, where config.yaml expects them.
     elf_out = rel(BUILD_DIR / "arm9.elf")
-    lines.append(f"build {elf_out}: mwld {' '.join(compiled_objs)} | {lcf}")
+    lines.append(f"build {elf_out}: mwld {' '.join(compiled_objs)} | {lcf} tools/_run_mwld.py tools/patch_align.py tools/fix_interwork.py")
     lines.append(f"  lcf = {lcf}")
     lines.append(f"  rspcontent = {' '.join(all_link_inputs)}")
     lines.append("")

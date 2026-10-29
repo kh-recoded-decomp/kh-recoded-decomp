@@ -52,6 +52,7 @@ def compiler_command(source, output, mode="arm", selected=COMPILER_ID, compiler=
     return [str(compiler), "--cpu=" + cpu, *profile_flags, "--" + mode, "--c99",
             "-O3", "-Ospace", "--signed_chars", "--enum_is_int",
             "-I", str(ROOT), "-I", str(ROOT.parent / "include"),
+            "--depend", str(output) + ".d", "--depend_format=unix_escaped",
             "-c", str(source), "-o", str(output)]
 
 
@@ -61,11 +62,16 @@ def compile_source(source, output, mode="arm", selected=COMPILER_ID, compiler=No
     subprocess.run(command, env=compiler_environment(command[0]), check=True)
     if Path(output).read_bytes()[:4] != b"\x7fELF":
         raise SystemExit("ARMCC must emit native ELF; restricted-format output is not supported")
+    native_object_sha256 = hashlib.sha256(Path(output).read_bytes()).hexdigest()
+    from patch_align import patch_o
+    prepared = patch_o(Path(output))
     digest = hashlib.sha256(Path(command[0]).read_bytes()).hexdigest()
     provenance = {"compiler": command[0], "compiler_sha256": digest,
                   "compiler_profile": selected, "instruction_mode": mode,
                   "compiler_variant": COMPILER_HASHES[digest], "command": command,
                   "source_sha256": hashlib.sha256(Path(source).read_bytes()).hexdigest(),
+                  "compiler_object_sha256": native_object_sha256,
+                  "object_preparation": "ELF .text alignment 4 -> 2" if prepared else "none",
                   "object_sha256": hashlib.sha256(Path(output).read_bytes()).hexdigest()}
     Path(str(output) + ".compiler.json").write_text(json.dumps(provenance, indent=2) + "\n")
     return str(output)

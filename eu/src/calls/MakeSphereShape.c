@@ -1,21 +1,4 @@
-#include "nitro/types.h"
-#include "nitro/fx_types.h"
-
-typedef struct CollisionBounds {
-    VecFx32 max;
-    VecFx32 min;
-} CollisionBounds;
-
-typedef struct CollisionShape {
-    void *geometry;
-    CollisionBounds bounds;
-    s32 kind;
-} CollisionShape;
-
-typedef struct CollisionSphere {
-    VecFx32 center;
-    fx32 radius;
-} CollisionSphere;
+#include "src/collision/CollisionGeometry.h"
 
 typedef void (*ShapeBoundsFunc)(CollisionShape *shape, CollisionBounds *bounds);
 

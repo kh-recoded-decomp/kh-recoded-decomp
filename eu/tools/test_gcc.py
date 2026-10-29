@@ -45,6 +45,15 @@ class GccObjectTests(unittest.TestCase):
             with self.assertRaisesRegex(SystemExit, "expected Arm GNU GCC 12.2.1"):
                 compiler_command("source.c", "output.o", compiler="arm-none-eabi-gcc")
 
+    def test_mpacbti_with_the_same_short_version_is_rejected(self):
+        responses = [subprocess.CompletedProcess([], 0, stdout="12.2.1\n"),
+                     subprocess.CompletedProcess([], 0, stdout=(
+                         "arm-none-eabi-gcc (Arm GNU Toolchain 12.2.MPACBTI-Rel1) "
+                         "12.2.1 20230214\n"))]
+        with patch("_run_gcc.subprocess.run", side_effect=responses):
+            with self.assertRaisesRegex(SystemExit, "12.2.Rel1"):
+                compiler_command("source.c", "output.o", compiler="arm-none-eabi-gcc")
+
     def test_cp15_leaf_register_profiles(self):
         cases = [
             ("scratch-r0", "void probe(void) { __builtin_arm_mcr(15,0,0,7,10,4); }",

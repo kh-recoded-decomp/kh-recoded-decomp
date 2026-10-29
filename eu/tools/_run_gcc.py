@@ -10,6 +10,8 @@ from project import ROOT
 
 
 COMPILER_ID = "gcc/12.2.1"
+COMPILER_RELEASE = "Arm GNU Toolchain 12.2.Rel1"
+COMPILER_DATE = "20221205"
 REGISTER_PROFILES = {
     COMPILER_ID: (),
     COMPILER_ID + "/operand-order": (),
@@ -32,6 +34,11 @@ def find_compiler():
     configured = os.environ.get("ARM_NONE_EABI_GCC")
     if configured:
         return configured
+    executable = "arm-none-eabi-gcc.exe" if os.name == "nt" else "arm-none-eabi-gcc"
+    bundled = sorted((ROOT.parent / ".tools/arm-gnu-12.2.rel1").glob(
+        "arm-gnu-toolchain-12.2.rel1-*/bin/" + executable))
+    if bundled:
+        return str(bundled[0])
     found = shutil.which("arm-none-eabi-gcc")
     if found:
         return found
@@ -52,6 +59,11 @@ def compiler_command(source, output, mode="arm", selected=COMPILER_ID, compiler=
                              check=True, capture_output=True, text=True).stdout.strip()
     if version != "12.2.1":
         raise SystemExit("expected Arm GNU GCC 12.2.1, found " + version)
+    banner = subprocess.run([str(compiler), "--version"],
+                            check=True, capture_output=True, text=True).stdout.splitlines()[0]
+    if COMPILER_RELEASE not in banner or "12.2.1 " + COMPILER_DATE not in banner:
+        raise SystemExit("expected Arm GNU 12.2.Rel1 (12.2.1 20221205), found " + banner +
+                         "; run python tools/install_gcc.py from eu/, or set ARM_NONE_EABI_GCC")
     # Original leaf routines and tail-call wrappers use one scratch argument
     # register. Reserve the others and retain expression operand order.
     profile_flags = ["-ffixed-" + register for register in REGISTER_PROFILES[selected]]
@@ -105,6 +117,7 @@ def compiler_command(source, output, mode="arm", selected=COMPILER_ID, compiler=
         "-fno-asynchronous-unwind-tables", "-I", str(ROOT),
         "-I", str(ROOT.parent / "include"),
         *profile_flags,
+        "-MD", "-MF", str(output) + ".d", "-MQ", str(output),
         "-o", str(output), str(source),
     ]
 
@@ -118,7 +131,11 @@ def main():
     parser.add_argument("--cc", default=COMPILER_ID)
     args = parser.parse_args()
     Path(args.output).parent.mkdir(parents=True, exist_ok=True)
-    return subprocess.run(compiler_command(args.source, args.output, args.mode, args.cc)).returncode
+    rc = subprocess.run(compiler_command(args.source, args.output, args.mode, args.cc)).returncode
+    if rc == 0:
+        from patch_align import patch_o
+        patch_o(Path(args.output))
+    return rc
 
 
 if __name__ == "__main__":

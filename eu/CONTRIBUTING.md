@@ -21,6 +21,23 @@ When contributing, please say whether a function is:
 - ASM stub
 - a symbol/name-only improvement
 
+## Understanding and reuse
+
+The EU reconstruction should be understandable and editable by contributors,
+including people who may later write a port. Matching is necessary, but does not
+replace documenting a function's inputs, outputs, ownership and hardware needs.
+Use recovered structures and names supported by evidence. Keep unknown fields
+explicit; an address-based name is preferable to an unsupported gameplay claim.
+Do not change a public calling convention or add artificial side effects solely
+to obtain a match. Prefer GCC or Clang for new SDK conversions when they reproduce
+the required bytes with the correct interface.
+
+Hardware-specific assembly can remain assembly with a documented contract and
+separate accounting. Reproducing its bytes alone does not establish its semantics
+or make it C. Pending sources stay in `nonmatching/`, outside coverage and the
+linked build. See [COLLISION_GEOMETRY.md](docs/COLLISION_GEOMETRY.md) for a worked
+example of recovered layouts, behavioral checks and an explicitly pending source.
+
 ## Claiming work
 
 Functions are grouped by **module** (`main`, `itcm`, `ov000` ... `ov104`).
@@ -57,13 +74,20 @@ these hashes, addresses will not line up.
    `tools/mwccarm/3.0_patch4/` and `mwldarm` 2.0 SP2p4 under
    `tools/mwccarm/2.0/sp2p4/`, with the license file at
    `tools/mwccarm/license.dat`. The paths live in `tools/project.py`.
-4. **Arm GNU Toolchain 12.2.1**, with `arm-none-eabi-as` and
+4. **Arm GNU Toolchain 12.2.Rel1 (GCC 12.2.1 20221205)**, with `arm-none-eabi-as` and
    `arm-none-eabi-gcc` on `PATH`. The assembler handles `.s` sources. GCC is
    used only by original assembly routines converted to byte-exact C,
    including hardware intrinsics. Each unit selects `gcc/12.2.1` or one of
    its profiles in `config/arm9/file_compilers.json`. Set `ARM_NONE_EABI_GCC`
    to select a GCC executable outside `PATH`; its version is checked before
-   compiling.
+   compiling. The MPACBTI release also reports `12.2.1` but generates different
+   bytes for several routines and is rejected. From `eu/`, run
+   `python tools/install_gcc.py` to install the pinned free Windows archive under
+   the shared repository's `.tools/arm-gnu-12.2.rel1/` without changing PATH.
+   The driver prefers that local installation, unless `ARM_NONE_EABI_GCC` is set.
+   The archive is downloaded from Arm and checked against its published SHA-256:
+   `ad1427496cde9bbe7604bc448ec6e115c6538e04af1c8275795ebb1c2b7b2830`.
+   Other hosts can install the same release and select it with `ARM_NONE_EABI_GCC`.
 5. **Clang 22.1.3** for explicitly selected original assembly routines whose
    hardware intrinsics produce byte-exact C. These units select `clang/22.1.3`
    in `config/arm9/file_compilers.json`. Set `ARM_NONE_EABI_CLANG` to choose
@@ -77,9 +101,10 @@ these hashes, addresses will not line up.
    directory layout defaults to its `ARM/sw/mappings` and `mdk_lite` settings.
    The driver requires native ELF output and records compiler, source and object
    hashes beside each output. No object conversion or instruction patching is
-   performed by the ARMCC driver. The existing common linker preparation still
-   normalizes `.text` alignment metadata from four to two; instruction bytes
-   are unchanged.
+   performed. The common `.text` alignment preparation, from four to two, runs
+   before Ninja records each compiled object; instruction bytes are unchanged.
+   ARMCC receipts retain the native compiler object's SHA-256 separately from
+   the prepared object's SHA-256 and describe any alignment preparation.
 
 The ARMCC driver accepts the original build-960 executable (SHA-256
 `52fcff95b164ef766b7ba8931b6fc4cc9504018db94d7f10f8b62107df74f963`) and the
@@ -201,6 +226,16 @@ links the whole ARM9 program (`ninja build/arm9.elf`) and hashes every linked
 module against the ROM. The expected result is `GATE PASSED (108/108 ...)`.
 The packed ROM differs from the reference only in 4 non-functional CRC bytes
 (0x6C/0x6D secure-area CRC and 0x15E/0x15F header CRC).
+
+Ninja records compiler-generated dependencies for CodeWarrior, GCC, Clang and
+ARMCC, and assembler-generated dependencies for GNU as. Changes to transitive
+headers, included shared C sources, or the relevant compiler driver therefore
+rebuild the affected objects before linking. The first build after enabling this
+tracking recompiles existing objects to populate `.ninja_deps`.
+Object alignment is prepared before these dependencies are recorded, so linking
+does not invalidate them or force all functions to compile again next time.
+`python tools/test_build_dependencies.py -v` tests actual incremental rebuilds,
+including nested includes, shared wrappers and paths with spaces, without a ROM.
 
 ## Decompiling a function
 
