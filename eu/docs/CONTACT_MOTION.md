@@ -1,8 +1,9 @@
 # EU contact-motion projection
 
 `func_02034d78` modifies a motion vector using selected collision normals.
-The readable implementation is `src/nonmatching/ProjectContactMotion.c`.
-It is research source, not an accepted match or a linked build input.
+The matching implementation is `src/calls/func_02034d78.c`, included in the linked
+EU build. It uses the recovered `CollisionContacts` type shared with query
+initialization. The superseded nonmatching draft has been removed.
 
 `src/collision/CollisionContacts.h` records only the recovered workspace fields:
 sixteen `VecFx32` normals at `0xc0`, the byte at `0x180`, three selected normal
@@ -34,30 +35,24 @@ caller `SweepSphereAgainstWorld` applies it to the contact result vector; this
 alone does not identify a particular enemy or player action.
 
 The axis used to scale the final result is a saved value; a separate immutable
-snapshot is exposed to the dot-product helpers. The C candidate keeps those
+snapshot is exposed to the dot-product helpers. The matching C keeps those
 objects and the helper return values explicit. Its public interface remains
 the original two pointers.
 
-## What is verified, and what remains
+## Verification
 
-With CodeWarrior `dsi/1.1`, this C emits 528 bytes and the same thirteen relocation
-targets as the ROM. Three stack-address immediates still differ:
+With CodeWarrior `dsi/1.3p1`, the implementation matches all 528 original bytes
+and thirteen relocations through the ordinary verifier. Its public interface is
+two pointers, with the contact workspace read through a const view.
 
-| Instruction offset | ROM stack offset | Current C stack offset |
-|---|---:|---:|
-| `0x0a4` | `0x54` | `0x30` |
-| `0x16c` | `0x30` | `0x0c` |
-| `0x184` | `0x0c` | `0x54` |
-
-These are observed differences, not masks or permitted exceptions. The function
-must remain outside matching coverage until the ordinary verifier accepts all
-bytes and relocations and the full module gate passes. No instructions, ROM
-bytes or verification rules were changed to accommodate the candidate.
+```sh
+python tools/verify_idx.py src/calls/func_02034d78.c func_02034d78
+```
 
 `python tools/test_contact_motion.py -v`, run from `eu/`, separately checks:
 
 - 1,260 inputs against an independent integer model, executing both the ROM ARM
-  instructions and the compiled C candidate, including their actual SDK vector
+  instructions and the compiled matching C, including their actual SDK vector
   helpers. Modes `0`, `1`, `2`, `3`, `4` and `255`, randomized selected indices,
   negative motion, threshold equality and every modeled outcome are covered.
 - 260 SDK normalization inputs against the integer normalization model.
@@ -67,7 +62,7 @@ bytes or verification rules were changed to accommodate the candidate.
   slots and reserved data.
 - Rejection of unsupported arithmetic-unit modes and division by zero.
 
-The test links the candidate's ELF relocations using the symbol addresses and
+The test links the implementation's ELF relocations using the symbol addresses and
 addends, checks their offsets and targets, and executes the resulting memory
 image. It does not alter the object, ROM, index, or production verifier.
 

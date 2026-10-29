@@ -136,7 +136,6 @@ extern void SetAllElementObjectModes(void *container, int mode);
 extern void *FindWidgetById(void *container, int elementId);
 extern void SetEntrySlotsVisible(void *container, void *element, BOOL enabled);
 extern void func_ov027_020b97d8(void *container, void *element, int mode);
-extern void func_ov027_020b91e8(void *container, void *element, ElementPosition *position, int flags);
 extern void func_ov027_020b9604(void *container, void *element);
 extern void func_ov027_020b96c0(void *container, void *element, u16 value);
 extern void SetFocusedWidget(void *container, void *element);

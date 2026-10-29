@@ -27,8 +27,17 @@ typedef enum WidgetPositionMode {
     WIDGET_POSITION_OFFSET_Y
 } WidgetPositionMode;
 
-/* This getter returns OFFSET_Y in out->x. The pending setter
- * (src/nonmatching/SetWidgetPositionComponents.c) reads both Y modes from input->y. */
+/* The context is retained by the widget API; this accessor only uses widget. */
+WidgetPoint *GetWidgetPosition(void *context, WidgetPositionRecord *widget);
+
+/* SetWidgetPosition: widget is a const read view of mutable storage. The setter
+ * writes widget->offset and the indexed destination records. Both Y modes read
+ * input->y; the getter convention below differs for OFFSET_Y. */
+void func_ov027_020b91e8(void *context, const WidgetPositionRecord *widget,
+                       const WidgetPoint *input, int mode);
+
+/* This getter returns OFFSET_Y in out->x. The setter reads both Y modes from
+ * input->y. */
 WidgetPoint *ResolveWidgetPositionComponents(void *context,
                                             WidgetPositionRecord *widget,
                                             WidgetPoint *out, int mode);

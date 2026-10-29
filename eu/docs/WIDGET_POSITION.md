@@ -1,9 +1,9 @@
-# Widget position setter
+# Widget positioning
 
-`func_ov027_020b91e8` is reconstructed in
-`src/nonmatching/SetWidgetPositionComponents.c`. It remains outside the linked
-build and matching-C coverage. Its four arguments are the indexed-record array,
-a widget, a two-coordinate input and a mode.
+`func_ov027_020b91e8` (`SetWidgetPosition`) is matched C in
+`src/overlays/ov027/calls/func_ov027_020b91e8.c`, included in the linked EU build.
+Its four arguments are the indexed-record array, a widget, a two-coordinate
+input and a mode. The superseded nonmatching draft has been removed.
 
 ## Data and behavior
 
@@ -37,9 +37,24 @@ The getter `ResolveWidgetPositionComponents` has a specific asymmetry:
 Y in `out.y`. Do not copy the `OFFSET_Y` convention into this setter: the setter
 reads both Y modes from `input.y`.
 
+`GetWidgetPosition` simply returns `&widget->position`; its context argument is
+unused. The EU definition now uses this typed two-argument interface, replacing
+the old four-word decompiler placeholder, and still matches all eight ROM bytes.
+Both getter declarations live in `WidgetPosition.h`.
+
+The getter clears its eight-byte output before reading the widget. With output
+pointing at the complete base or offset field, that field is therefore cleared
+before the coordinates are resolved. This is distinct from the setter's alias
+behavior. Invalid getter modes still clear the output and return its address.
+
 ## Arithmetic and overlap observations
 
-Coordinate addition and subtraction wrap at 32 bits. The draft expresses that
+The widget must refer to mutable storage. The matching source takes a const
+read view and obtains a mutable target view before changing the offset; the
+qualifier does not make this a read-only operation. A port can expose an ordinary
+mutable-widget setter without retaining this compiler aliasing pattern.
+
+Coordinate addition and subtraction wrap at 32 bits. The implementation expresses that
 through unsigned arithmetic before conversion to signed `s32`, avoiding signed
 arithmetic overflow in the calculation. A port must retain signed 32-bit
 coordinate storage and the target's two's-complement interpretation; changing
@@ -48,7 +63,7 @@ these operations to saturating arithmetic changes behavior.
 The executable tests include input pointing at the widget's complete `position`
 or `offset` pair. They also stress the original machine code with input starting
 at `0x38` or `0x40`, shifted by one coordinate. In absolute XY mode the ROM reads
-both subtraction inputs before storing either offset component; the draft keeps
+both subtraction inputs before storing either offset component; the implementation keeps
 explicit snapshots to describe that observed sequence.
 
 These shifted pointers are machine-code stress cases, not a recovered public C
@@ -65,12 +80,16 @@ establish a general overlap guarantee or a `memmove` contract for that SDK API.
 `python tools/test_widget_position.py -v`, run from `eu/`, checks:
 
 - 2,376 combinations of coordinates, six valid modes and destination-index
-  pairs, on each of the original and compiled candidate images. Inputs include
+  pairs, on each of the original and compiled matching C images. Inputs include
   signed endpoints and random full-width words. Whole data-buffer comparisons
   check unchanged bytes as well as results; observed record writes check order.
 - Six invalid modes on both images, with no widget/input/record mutations.
 - Original getter execution confirming the different Y output conventions,
   followed by setter checks confirming both modes consume `input.y`.
+- 864 getter cases per image: 32 coordinate pairs, six valid and three invalid
+  modes, and output separate from the widget or pointing at its complete base
+  or offset point. Original, matching CodeWarrior C, GCC and Clang images are
+  checked for wrapped results, returned output pointers and all unchanged bytes.
 - Twenty-four input/widget alias cases on both images, comparing complete
   data buffers and destination-write order.
 - The same valid-mode arithmetic model and overlap stress cases on GCC 12.2.1
@@ -91,11 +110,17 @@ for execution without changing the production verifier or matching policy.
 
 ## Matching status
 
-The current draft compiles with CodeWarrior `dsi/1.1` to 408 bytes, the original
-size, with the same five relocation offsets and targets. Twenty-four ordinary
-instruction bytes still differ in the absolute single-axis cases. The first
-difference reported by the ordinary verifier is `0x95`; the remaining issue is
-arithmetic/store scheduling and register allocation. The propagation pragma
-preserves this closer instruction layout and has no effect on the documented
-operation. These remain mismatches, and passing the behavior tests does not
-award matching-C credit.
+The setter compiles with CodeWarrior `dsi/1.3p1` to exactly 408 bytes and five
+relocations. The const read view and mutable target preserve the original
+single-axis instruction scheduling. Explicit unsigned coordinate arithmetic and
+named modes retain the complete match; the earlier 24-byte gap is closed.
+`GetWidgetPosition` matches eight bytes, and `ResolveWidgetPositionComponents`
+matches 200 bytes with three relocations. The getter also uses unsigned
+arithmetic for wrapping additions.
+
+```sh
+python tools/verify_idx.py src/overlays/ov027/calls/func_ov027_020b91e8.c func_ov027_020b91e8
+python tools/verify_idx.py src/overlays/ov027/calls/GetWidgetPosition.c GetWidgetPosition
+python tools/verify_idx.py src/overlays/ov027/calls/ResolveWidgetPositionComponents.c ResolveWidgetPositionComponents
+python tools/test_widget_position.py -v
+```

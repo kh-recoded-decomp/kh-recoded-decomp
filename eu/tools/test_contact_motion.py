@@ -1,4 +1,4 @@
-"""Differential tests for pending contact-motion C; never credits matching bytes.
+"""Differential behavior tests for the recovered contact-motion C.
 
 Both the original and compiled candidate execute their ARM instructions, including
 the SDK vector helpers. Only the DIV/SQRT register results used by VEC_Normalize
@@ -100,8 +100,8 @@ class ContactMotionTests(unittest.TestCase):
     def setUpClass(cls):
         if not FUNC_INDEX.is_file():
             raise unittest.SkipTest("requires the local EU ROM-derived function index")
-        if not (MWCC_DIR / "dsi/1.1/mwccarm.exe").is_file():
-            raise unittest.SkipTest("requires CodeWarrior dsi/1.1")
+        if not (MWCC_DIR / "dsi/1.3p1/mwccarm.exe").is_file():
+            raise unittest.SkipTest("requires CodeWarrior dsi/1.3p1")
         import match
         import verify_idx
         from elftools.elf.elffile import ELFFile
@@ -109,19 +109,19 @@ class ContactMotionTests(unittest.TestCase):
         cls.addresses = verify_idx.SYM_ADDR
         cls.entry = cls.addresses["func_02034d78"]
         cls.original = bytes.fromhex(cls.index["func_02034d78"]["hex"])
-        source = ROOT / "src/nonmatching/ProjectContactMotion.c"
+        source = ROOT / "src/calls/func_02034d78.c"
         previous = match._COMPILER_MAP
         previous_cwd = Path.cwd()
         try:
             os.chdir(ROOT)
-            match._COMPILER_MAP = {source.relative_to(ROOT).as_posix(): "dsi/1.1"}
+            match._COMPILER_MAP = {source.relative_to(ROOT).as_posix(): "dsi/1.3p1"}
             with tempfile.TemporaryDirectory(prefix="contact-motion-", dir=BUILD_DIR) as temporary:
                 output = Path(temporary) / "candidate.o"
                 match.compile_c(str(source), out=str(output))
-                code, refs = match.text_relocs(str(output), "ProjectContactMotion")
+                code, refs = match.text_relocs(str(output), "func_02034d78")
                 with output.open("rb") as stream:
                     elf = ELFFile(stream)
-                    section_index = match.func_section(elf, "ProjectContactMotion")
+                    section_index = match.func_section(elf, "func_02034d78")
                     addends = {relocation["r_offset"]: relocation["r_addend"]
                                for section in elf.iter_sections()
                                if section["sh_type"] == "SHT_RELA" and section["sh_info"] == section_index

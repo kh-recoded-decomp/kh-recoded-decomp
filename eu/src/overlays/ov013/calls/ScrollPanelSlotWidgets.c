@@ -7,8 +7,6 @@ extern void SetScrollListPixels(PanelScrollList *list, int pixels, BOOL keepCurs
 extern void func_ov013_0206fbbc(void);
 extern void SetEntrySlotsVisible(int root, int *widget, int visible);
 extern WidgetPositionRecord *FindWidgetById(void *root, int id);
-extern void func_ov027_020b91e8(void *root, WidgetPositionRecord *widget,
-                                const WidgetPoint *point, int mode);
 extern void RefreshPanelSlotDigits(void);
 extern void RefreshProgressCaption(void);
 

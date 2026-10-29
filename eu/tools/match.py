@@ -14,6 +14,7 @@ original bytes from build/func_index.json instead of a delink object.
 """
 import json
 import os
+import re
 import subprocess
 import sys
 from pathlib import Path
@@ -98,6 +99,21 @@ def compile_c(cpath, thumb=False, out=None):
         from _run_clang import compiler_command
         command = compiler_command(cpath, o, "thumb" if thumb else "arm", selected, compiler)
         subprocess.run(command, check=True)
+        return o
+    # Shared-source wrappers must use the build's include roots, working
+    # directory and explicit symbol aliases, just as Ninja does. A bare mwcc
+    # invocation from eu/ otherwise cannot even find a newly shared source.
+    shared = re.search(r'#include "(src/[^\"]+\.(?:c|cpp|cp|cc))"',
+                       Path(cpath).read_text(encoding="utf-8", errors="replace"))
+    if shared and (Path(ROOT).parent / shared.group(1)).is_file():
+        command = [sys.executable, str(Path(ROOT) / "tools/_run_mwcc.py"),
+                   os.path.abspath(o), os.path.abspath(cpath),
+                   "--mode=" + ("thumb" if thumb else "arm"),
+                   "--cc=" + (selected or "default")]
+        result = subprocess.run(command, capture_output=True, text=True, cwd=ROOT)
+        if result.returncode:
+            print(result.stdout, result.stderr)
+            raise SystemExit("compilation failed")
         return o
     flags = source_flags(cpath)
     if selected == "2.0/sp2p3":

@@ -10,7 +10,6 @@ extern void DrawPanelInfoText(void);
 extern BOOL PlaySoundEffect(int group, int sound);
 extern void *FindWidgetById(void *manager, int id);
 extern void func_ov027_020b96c0(void *manager, void *widget, int mode);
-extern void func_ov027_020b91e8(void *manager, void *widget, WidgetPoint *position, int flags);
 
 void HandleWirelessPanelNavigation(WidgetPositionRecord *widget, u32 keys)
 {
