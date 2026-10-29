@@ -20,6 +20,8 @@ REGISTER_PROFILES = {
     COMPILER_ID + "/cache-flush": ("r3",),
     COMPILER_ID + "/control-mask": ("r2", "r3"),
     COMPILER_ID + "/wait-state": ("r2", "r3"),
+    COMPILER_ID + "/fifo-zeros": (),
+    COMPILER_ID + "/mode-select": (),
 }
 
 
@@ -66,6 +68,12 @@ def compiler_command(source, output, mode="arm", selected=COMPILER_ID, compiler=
     if selected == COMPILER_ID + "/control-mask":
         # Retain the loaded control-register mask and the separate AND.
         profile_flags.append("-fdisable-rtl-combine")
+    if selected == COMPILER_ID + "/fifo-zeros":
+        # Keep each bound zero register's own initialization.
+        profile_flags.extend(("-fdisable-rtl-cse2", "-fdisable-rtl-postreload"))
+    if selected == COMPILER_ID + "/mode-select":
+        # Keep the masked mode bit as the flag-setting AND's result.
+        profile_flags.extend(("-fno-tree-dominator-opts", "-fno-tree-vrp", "-fno-tree-sink"))
     return [
         str(compiler), "-c", "-O2", "-std=c99", "-mcpu=arm946e-s", "-m" + mode,
         "-mthumb-interwork", "-mfloat-abi=soft", "-mabi=apcs-gnu",

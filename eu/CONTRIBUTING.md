@@ -120,6 +120,16 @@ in r0, the saved IME in r1 and the hardware base in ip. Its 64-bit result
 packs the final scanline into the low word and the saved IME into the high
 word; its caller declares that result consistently and discards it.
 
+The `gcc/12.2.1/fifo-zeros` selection disables the second CSE pass and
+post-reload CSE without reserving registers. `GXi_NopClearFifo128_` binds four
+zero values to r1, r2, r3 and r12 and stores them as 32 four-word groups; the
+two passes would otherwise merge the separate zero initializations.
+
+The `gcc/12.2.1/mode-select` selection disables dominator optimization, value
+range propagation and code sinking without reserving registers.
+`OS_InitContext` then keeps the masked program-counter bit as the result of the
+original flag-setting `ands` before selecting the initial processor mode.
+
 The `clang/22.1.3/source-order` selection disables scheduling after register
 allocation. It preserves the original order of CPSR writes and result masks
 in interrupt-control routines.

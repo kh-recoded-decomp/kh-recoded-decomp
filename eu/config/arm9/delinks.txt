@@ -581,7 +581,7 @@ src/auto/OS_SetThreadDestructor.c:
     complete
     .text       start:0x02002de8 end:0x02002df0
 
-libs/nitro/os/asm_stubs/auto/OS_InitContext.c:
+libs/nitro/os/auto/OS_InitContext.c:
     complete
     .text       start:0x02002df0 end:0x02002e5c
 
@@ -1355,7 +1355,7 @@ libs/nitro/gx/auto/G3X_SetHOffset.c:
     complete
     .text       start:0x02006d50 end:0x02006d60
 
-libs/nitro/gx/asm_stubs/auto/GXi_NopClearFifo128_.c:
+libs/nitro/gx/auto/GXi_NopClearFifo128_.c:
     complete
     .text       start:0x02006d60 end:0x02006df4
 
