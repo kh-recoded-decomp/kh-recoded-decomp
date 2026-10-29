@@ -8,7 +8,7 @@ typedef struct {
     u16 tileHeight;
 } MenuWork;
 
-void func_ov076_020cae28(MenuWork *work, int *outTop, int *outLeft, int *outRight)
+void GetDialogPixelBounds_020c7e5c(MenuWork *work, int *outTop, int *outLeft, int *outRight)
 {
     int centerX = work->tileX + ((u32)work->tileWidth >> 1);
 

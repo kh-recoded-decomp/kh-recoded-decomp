@@ -89,18 +89,18 @@ class FieldMenuPaletteTests(unittest.TestCase):
     @classmethod
     def compile_candidate(cls, compiler):
         externs = {name: cls.addresses[name] for name in (
-            'func_ov001_02076e30', 'NNS_GfdRegisterNewVramTransferTask',
+            'LerpColor555_02076e30', 'NNS_GfdRegisterNewVramTransferTask',
             'gFieldMenuStateRamps', 'data_ov001_020a04d0')}
-        externs['func_ov001_02076e30'] |= 1
+        externs['LerpColor555_02076e30'] |= 1
         return compile_thumb_image(ROOT / 'src/nonmatching/UpdateFieldMenuPalette.c',
                                    'UpdateFieldMenuPalette', compiler, cls.entry, externs,
-                                   thumb_functions={'func_ov001_02076e30'})
+                                   thumb_functions={'LerpColor555_02076e30'})
 
     def cpu(self, image, change_pointer=False, queue_result=1):
         memory = Memory()
         for address, code in image[1]:
             memory.map(address, code)
-        for name in ('func_ov001_02076e30', '_s32_div_f'):
+        for name in ('LerpColor555_02076e30', '_s32_div_f'):
             memory.map(self.addresses[name], bytes.fromhex(self.index[name]['hex']))
         memory.map(MENU, bytes([0xa5]) * 0x10000)
         memory.map(self.handle, bytes([0xa5]) * 0x20)

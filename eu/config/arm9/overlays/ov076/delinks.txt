@@ -553,7 +553,7 @@ src/overlays/ov076/calls/func_ov076_020cad10.c:
     complete
     .text       start:0x020cad10 end:0x020cae28
 
-src/overlays/ov076/calls/func_ov076_020cae28.c:
+src/overlays/ov076/calls/GetDialogPixelBounds_020cae28.c:
     complete
     .text       start:0x020cae28 end:0x020cae5c
 

@@ -3544,7 +3544,7 @@ src/overlays/ov001/calls/RefreshFieldMenuHighlights.c:
     complete
     .text       start:0x02076cac end:0x02076e30
 
-src/overlays/ov001/calls/func_ov001_02076e30.c:
+src/overlays/ov001/calls/LerpColor555_02076e30.c:
     complete
     .text       start:0x02076e30 end:0x02076ebc
 

@@ -2,5 +2,5 @@
 #define MessageWindow_UpdateYesNoInput_020cae3c MessageWindow_UpdateYesNoInput
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define func_ov039_020bca00 GetMenuInputState
-#define func_ov076_020cae08 func_ov076_020cae28
+#define func_ov076_020cae08 GetDialogPixelBounds_020cae28
 #include "src/ov076/unclassified_helpers/MessageWindow_UpdateYesNoInput_020cae3c.c"

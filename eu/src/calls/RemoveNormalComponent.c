@@ -1,5 +1,5 @@
 #define RemoveNormalComponent_02049898 RemoveNormalComponent
 #define SubtractVecFx32Out_02047d2c SubtractVecFx32Out
 #define VEC_DotProduct_01ff9e6c VEC_DotProduct
-#define func_02048b30 func_02048b44
+#define func_02048b30 VecFx32ScaledCopy_02048b44
 #include "src/arm9/math/RemoveNormalComponent_02049898.c"

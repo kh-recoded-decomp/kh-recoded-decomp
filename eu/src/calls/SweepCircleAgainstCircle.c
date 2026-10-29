@@ -15,7 +15,7 @@
 #define VEC_DotProduct_01ff9e6c VEC_DotProduct
 #define VEC_NormalizeUnchecked_01ff9f88 VEC_Normalize
 #define func_02047ff8 func_0204800c
-#define func_02048b30 func_02048b44
+#define func_02048b30 VecFx32ScaledCopy_02048b44
 #define func_02049628 func_0204963c
 #define func_02049658 func_0204966c
 #define func_0204c6c0 SolveQuartic

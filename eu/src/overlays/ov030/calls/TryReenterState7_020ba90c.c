@@ -4,7 +4,7 @@ extern s32 IsScreenModeIdle(void);
 extern void SetFieldStateValue(u32 a, u32 b);
 extern void MarkFieldValueNegative(void);
 
-u32 func_ov030_020ba90c(void)
+u32 TryReenterState7_020ba90c(void)
 {
     s32 ready;
 

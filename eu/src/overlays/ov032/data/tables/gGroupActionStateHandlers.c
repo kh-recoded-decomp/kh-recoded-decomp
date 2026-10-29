@@ -3,7 +3,7 @@
 extern void SetSlotDisplayStyle(void); /* SetSlotDisplayStyle */
 extern void LoadShadowAndFlagScene(void); /* LoadShadowAndFlagScene */
 extern void AcknowledgeGroupTransition(void); /* AcknowledgeGroupTransition */
-extern void func_ov032_020ba98c(void);
+extern void TryEnterState4_020ba98c(void);
 extern void FinishMovieMenuLoad(void); /* FinishMovieMenuLoad */
 extern void ResumeSceneAndAdvance(void); /* ResumeSceneAndAdvance */
 extern void CompleteGroupTransition(void); /* CompleteGroupTransition */
@@ -23,7 +23,7 @@ void (*gGroupActionStateHandlers[18])(void) = {
     SetSlotDisplayStyle, /* SetSlotDisplayStyle */
     LoadShadowAndFlagScene, /* LoadShadowAndFlagScene */
     AcknowledgeGroupTransition, /* AcknowledgeGroupTransition */
-    func_ov032_020ba98c,
+    TryEnterState4_020ba98c,
     FinishMovieMenuLoad, /* FinishMovieMenuLoad */
     ResumeSceneAndAdvance, /* ResumeSceneAndAdvance */
     CompleteGroupTransition, /* CompleteGroupTransition */

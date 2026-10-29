@@ -14,7 +14,7 @@
 #define func_ov039_020bc1bc func_ov039_020bc1dc
 #define func_ov039_020bca00 GetMenuInputState
 #define func_ov077_020c7d24 func_ov077_020c7d44
-#define func_ov077_020c7e3c func_ov077_020c7e5c
+#define func_ov077_020c7e3c GetDialogPixelBounds_020c7e5c
 #define func_ov077_020c7e70 HandleYesNoWindowInput
 #define func_ov077_020c889c DrawPanelTextBlock
 #include "src/ov077/unclassified_helpers/MessageWindow_Update_020c84dc.c"

@@ -31,10 +31,10 @@
 #define func_02048ac4 IsNearOrigin_02048ad8
 #define func_02048ad8 SignOf
 #define func_02048af0 ScaleAxisByDot
-#define func_02048b30 func_02048b44
+#define func_02048b30 VecFx32ScaledCopy_02048b44
 #define func_02048b74 SquareFx32_02048b88
 #define func_02048bd0 MakeSegment
-#define func_02048c10 func_02048c24
+#define func_02048c10 VecFx32DividedByScalar_02048c24
 #define func_0204970c SweepDiscAgainstEdge
 #define func_0204a9b4 NormalizeIfShort
 #define func_0204a9e4 GetCrossIfNonParallel

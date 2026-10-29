@@ -2,5 +2,5 @@
 #define MessageWindow_BeginClosing_020c849c MessageWindow_BeginClosing_020c84bc
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define func_ov039_020bca00 GetMenuInputState
-#define func_ov077_020c7e3c func_ov077_020c7e5c
+#define func_ov077_020c7e3c GetDialogPixelBounds_020c7e5c
 #include "src/ov077/unclassified_helpers/HandleYesNoWindowInput_020c7e70.c"

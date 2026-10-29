@@ -6901,7 +6901,7 @@ src/calls/EnqueueGfxCmd0.c:
     complete
     .text       start:0x0202c198 end:0x0202c1b0
 
-src/calls/func_0202c1b0.c:
+src/calls/Gfd_LoadTex_0202c1b0.c:
     complete
     .text       start:0x0202c1b0 end:0x0202c1dc
 
@@ -6909,7 +6909,7 @@ src/calls/EnqueueGfxCmd1.c:
     complete
     .text       start:0x0202c1dc end:0x0202c1f4
 
-src/calls/func_0202c1f4.c:
+src/calls/Gfd_LoadTexPltt_0202c1f4.c:
     complete
     .text       start:0x0202c1f4 end:0x0202c220
 
@@ -8877,7 +8877,7 @@ src/calls/ScaleAxisByDot.c:
     complete
     .text       start:0x02048b04 end:0x02048b44
 
-src/calls/func_02048b44.c:
+src/calls/VecFx32ScaledCopy_02048b44.c:
     complete
     .text       start:0x02048b44 end:0x02048b7c
 
@@ -8909,7 +8909,7 @@ src/calls/MakeSegment.c:
     complete
     .text       start:0x02048be4 end:0x02048c24
 
-src/calls/func_02048c24.c:
+src/calls/VecFx32DividedByScalar_02048c24.c:
     complete
     .text       start:0x02048c24 end:0x02048c5c
 

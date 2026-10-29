@@ -3,10 +3,13 @@
 extern s32 StepResourceSlotLoading(void);
 extern void ResetSceneSlots(void);
 
-s32 func_ov032_020ba98c(void) {
-    s32 ready = StepResourceSlotLoading();
+u32 TryEnterState4_020ba614(void)
+{
+    s32 ready;
+
+    ready = StepResourceSlotLoading();
     if (ready == 0) {
-        return -1;
+        return 0xffffffff;
     }
     ResetSceneSlots();
     return 4;

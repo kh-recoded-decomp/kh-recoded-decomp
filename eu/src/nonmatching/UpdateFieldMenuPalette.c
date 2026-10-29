@@ -1,7 +1,7 @@
 /* Pending func_ov001_02076ebc; excluded from the linked build and C coverage. */
 #include "src/overlays/ov001/FieldMenuPalette.h"
 
-extern u16 func_ov001_02076e30(u16 from, u16 to, int level, u16 maxLevel);
+extern u16 LerpColor555_02076e30(u16 from, u16 to, int level, u16 maxLevel);
 extern BOOL NNS_GfdRegisterNewVramTransferTask(u32 type, u32 destination,
                                              const void *source, u32 size);
 
@@ -40,12 +40,12 @@ void UpdateFieldMenuPalette(FieldMenuPaletteView *menu, BOOL advance)
             menu->fadeLevel = menu->fadeLevel > 8 ? 8 :
                               menu->fadeLevel < 0 ? 0 : menu->fadeLevel;
         }
-        handle->fade[0] = func_ov001_02076e30(
+        handle->fade[0] = LerpColor555_02076e30(
             gFieldMenuStateRamps[FIELD_MENU_RAMP_RED][0], 0x0210, menu->fadeLevel, 8);
-        handle->fade[1] = func_ov001_02076e30(
+        handle->fade[1] = LerpColor555_02076e30(
             gFieldMenuStateRamps[FIELD_MENU_RAMP_RED][1], 0x0318, menu->fadeLevel, 8);
         /* RGB555 yellow (31,31,0), a real integer constant. */
-        handle->fade[2] = func_ov001_02076e30(
+        handle->fade[2] = LerpColor555_02076e30(
             gFieldMenuStateRamps[FIELD_MENU_RAMP_RED][2], 0x03ff, menu->fadeLevel, 8);
         handle->palette = palette = data_ov001_020a04d0.fade;
         break;

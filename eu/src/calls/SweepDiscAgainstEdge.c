@@ -15,5 +15,5 @@
 #define VEC_DotProduct_01ff9e6c VEC_DotProduct
 #define VEC_Normalize_01ff9f88 VEC_Normalize
 #define func_02047dac PXI_Init_02047dc0
-#define func_02048b30 func_02048b44
+#define func_02048b30 VecFx32ScaledCopy_02048b44
 #include "src/arm9/spatial_queries/SweepDiscAgainstEdge_0204970c.c"

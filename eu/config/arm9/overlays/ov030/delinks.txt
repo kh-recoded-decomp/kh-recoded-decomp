@@ -28,7 +28,7 @@ src/overlays/ov030/calls/func_ov030_020ba5e8.c:
     complete
     .text       start:0x020ba5e8 end:0x020ba614
 
-src/overlays/ov030/calls/func_ov030_020ba614.c:
+src/overlays/ov030/calls/TryEnterState4_020ba614.c:
     complete
     .text       start:0x020ba614 end:0x020ba62c
 
@@ -64,7 +64,7 @@ src/overlays/ov030/calls/EnterState12WithHalfRate_020ba8f0.c:
     complete
     .text       start:0x020ba8f0 end:0x020ba90a
 
-src/overlays/ov030/calls/func_ov030_020ba90c.c:
+src/overlays/ov030/calls/TryReenterState7_020ba90c.c:
     complete
     .text       start:0x020ba90c end:0x020ba92e
 
