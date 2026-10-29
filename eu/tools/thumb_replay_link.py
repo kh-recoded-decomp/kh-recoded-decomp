@@ -39,11 +39,14 @@ def compile_thumb_image(source, name, compiler, address, externs, thumb_function
                 if undefined != set(externs):
                     raise AssertionError('candidate external symbols differ from replay manifest: ' +
                                          str(undefined ^ set(externs)))
+                called_functions = set()
                 for section in elf.iter_sections():
                     if section['sh_type'] in ('SHT_REL', 'SHT_RELA'):
                         for relocation in section.iter_relocations():
                             if relocation['r_info_type'] not in (2, 10):
                                 raise AssertionError('unexpected candidate relocation type')
+                            if relocation['r_info_type'] == 10:
+                                called_functions.add(symbols.get_symbol(relocation['r_info_sym']).name)
                 if compiler.startswith('dsi/'):
                     section_index = match.func_section(elf, name)
                     code = bytearray(elf.get_section(section_index).data())
@@ -83,8 +86,8 @@ def compile_thumb_image(source, name, compiler, address, externs, thumb_function
             script.write_text(
                 'SECTIONS { . = %d; .text : { *(.text*) *(.rodata*) }\n'
                 '/DISCARD/ : { *(.comment*) *(.ARM.attributes*) } }\n' % address, encoding='ascii')
-            # A linker-script integer lacks the Thumb function type. GNU ld
-            # would generate an ARM veneer even when that integer is odd.
+            # Both ARM and Thumb calls need function metadata. An untyped
+            # absolute symbol can leave a BL in Thumb state at an ARM callee.
             # This object contains only absolute symbol metadata, no instructions.
             manifest = directory / 'externs.s'
             lines = []
@@ -96,6 +99,10 @@ def compile_thumb_image(source, name, compiler, address, externs, thumb_function
                     lines += ['.type %s, %%function' % symbol,
                               '.thumb_set %s, %d' % (symbol, value)]
                 else:
+                    if symbol in called_functions:
+                        if value % 4:
+                            raise AssertionError('ARM function address must be word aligned')
+                        lines.append('.type %s, %%function' % symbol)
                     lines.append('.set %s, %d' % (symbol, value))
             manifest.write_text('\n'.join(lines) + '\n', encoding='ascii')
             tool_dir = Path(find_compiler()).parent

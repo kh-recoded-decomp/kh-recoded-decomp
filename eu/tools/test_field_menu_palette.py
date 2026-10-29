@@ -46,6 +46,8 @@ class QueueBoundaryCpu(Cpu):
     def step(self):
         if self.r[15] != self.queue:
             return super().step()
+        if self.thumb:
+            raise AssertionError('VRAM queue must be entered in ARM state')
         kind, destination, source, size = self.r[:4]
         self.events.append((kind, destination, source, size, self.mem.bytes(source, size)))
         if len(self.events) == 1 and self.change_pointer:

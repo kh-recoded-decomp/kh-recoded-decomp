@@ -56,10 +56,77 @@ stack slots in the resource-allocation block:
 | `0x3de` | `0x0c` | `0x08` |
 
 The ordinary verifier reports this mismatch; these offsets are not exceptions
-or additional masks. There is not yet an executable behavior model for this
-callback's filesystem, graphics, upload and scene-handler interactions. The
-matching comparison alone does not verify those external implementations.
+or additional masks. The texture-state replay below covers state `5`; the
+callback's other states and the external implementations still need separate
+behavior verification. This work grants no matching-C or verified-library credit.
 
 ```sh
 python tools/verify_idx.py src/nonmatching/RunSceneLoadStep.c func_ov045_020be730 --thumb --object-symbol func_ov045_020be730
 ```
+
+## Executable texture-state contract
+
+Run `python tools/test_scene_texture_load.py -v` from `eu/`. It compares 720
+scenarios on each of ROM, CodeWarrior dsi/1.3p1, GCC 12.2.Rel1 and Clang 22.1.3
+instruction images. These cover empty/nonempty resources, 1 KiB chunk boundaries,
+allocator failures, the palette-allocation flag and upload substates
+`0..6`, `100` and `99`. Incoming r0-r3 values vary; none is an input to this
+zero-argument callback. The test also verifies that the relocated CodeWarrior
+image differs from ROM at exactly the four stack bytes listed above, including
+all resolved calls and literal-pool addresses in that comparison.
+
+The size-query and key-assignment SDK helpers execute their actual ROM code.
+So does the 66-byte `StepTextureUpload`: each invocation transfers at most
+`0x400` bytes, advances the source/destination, subtracts the transferred amount
+and reports whether the remainder reached zero. Tests compare complete scene
+and texture buffers, ordered calls and transferred bytes, callee-saved registers,
+SP and the callback's zero return value. They check ARM/Thumb state at backend
+boundaries as well as arguments.
+
+The recovered upload view starts at scene `+0x1a08`:
+
+| Relative offset | Field |
+|---|---|
+| `0x0c` | Texture resource pointer. |
+| `0x10` | Remaining transfer bytes. |
+| `0x14` | Destination byte offset in VRAM. |
+| `0x18` | Source pointer. |
+| `0x1c` | Palette-transfer flag. |
+| `0x20` | 16-bit upload substate. |
+| `0x24` | Loaded file pointer. |
+
+Resource sizes are stored in units of eight bytes. Allocation requests occur
+in normal-texture, compressed-texture, palette order and are skipped for zero
+sizes. The palette allocator receives `tex4x4Info.flag & 0x8000`, as in the
+original instructions, without reducing it to `1`. Zero normal/compressed keys
+leave the old keys unchanged in `NNS_G3dTexSetTexKey`; the palette key setter
+stores zero too. The callback continues after a zero allocator result. This
+describes observed behavior, not a claim that allocation failure is recoverable.
+
+Normal texture completion sets its loaded flag. Compressed data and its palette
+index data use separate transfers; completing the index transfer sets the
+compressed loaded flag. Palette loading waits for VBlank, begins the load,
+transfers the entire palette, ends the load and waits for VBlank again, even
+for a zero-byte palette. It sets the palette loaded flag and upload substate
+`100`; the enclosing callback then clears its timer and advances to state `6`.
+
+One boundary remains to investigate in the surrounding engine: when upload
+substate `2` prepares nonempty compressed texture data, this callback leaves the
+substate at `2`; it does not assign `3` in that branch. The tests preserve that
+ROM behavior. Tests starting at substates `3` and `4` check their local handling
+without claiming to prove how those substates become reachable. Do not add an
+unverified transition while porting this routine.
+
+Container lookup, the two indirect allocators, VBlank and graphics transfers
+are modeled boundaries; filesystem parsing, actual allocation, DMA/VRAM and
+display behavior are outside this test. GCC/Clang arithmetic helpers used only
+by other callback states are explicit trap boundaries and must never execute
+in these scenarios. This is not a full replay of the scene state machine.
+Clang currently diagnoses a redundant null test retained from the inlined
+dictionary accessor in state `6`; that state is outside this replay and the
+guard still affects CodeWarrior's matching output.
+
+The temporary replay linker marks both ARM and Thumb call targets as functions.
+GNU ld requires that metadata to generate interworking calls correctly; plain
+absolute data symbols are insufficient. Its images remain test-only and neither
+compiler objects nor matching reference bytes are modified.
