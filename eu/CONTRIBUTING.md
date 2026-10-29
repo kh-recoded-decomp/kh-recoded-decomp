@@ -130,6 +130,12 @@ range propagation and code sinking without reserving registers.
 `OS_InitContext` then keeps the masked program-counter bit as the result of the
 original flag-setting `ands` before selecting the initial processor mode.
 
+`MIi_CpuCopy16Backward` selects plain `gcc/12.2.1` and states its optimization
+options in the source with GCC's `optimize("Os", "no-move-loop-invariants",
+"no-expensive-optimizations")` function attribute; the equivalent command-line
+options lay out the loop differently. The attribute selects passes only and
+emits no instructions.
+
 The `clang/22.1.3/source-order` selection disables scheduling after register
 allocation. It preserves the original order of CPSR writes and result masks
 in interrupt-control routines.

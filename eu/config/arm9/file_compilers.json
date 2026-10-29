@@ -8884,7 +8884,6 @@
   "src/overlays/ov041/calls/UpdateStageShadowActor.c": "dsi/1.1",
   "src/calls/MTX_Copy33To43.c": "armcc/5.06u7",
   "src/calls/MTX_Copy43To33.c": "armcc/5.06u7/armv4t-interwork",
-  "libs/nitro/mi/asm_stubs/calls/MIi_CpuCopy16Backward.c": "dsi/1.1",
   "src/overlays/ov101/calls/IsPageScrollSettled.c": "dsi/1.2",
   "src/asm_stubs/calls/_fflt.c": "dsi/1.1",
   "src/asm_stubs/calls/_ffltu.c": "dsi/1.1",
@@ -9622,5 +9621,6 @@
   "libs/nitro/mi/auto/MI_Copy64B.c": "armcc/5.06u7",
   "libs/nitro/gx/auto/GX_SendFifo48B.c": "armcc/5.06u7",
   "libs/nitro/gx/auto/GXi_NopClearFifo128_.c": "gcc/12.2.1/fifo-zeros",
-  "libs/nitro/os/auto/OS_InitContext.c": "gcc/12.2.1/mode-select"
+  "libs/nitro/os/auto/OS_InitContext.c": "gcc/12.2.1/mode-select",
+  "libs/nitro/mi/calls/MIi_CpuCopy16Backward.c": "gcc/12.2.1"
 }
