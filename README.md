@@ -17,24 +17,24 @@ maintained by [@ricky074game](https://github.com/ricky074game) and [@Yokimitsuro
 <!-- regions:start -->
 | Region | C code bytes | % | Functions |
 |---|---:|---:|---:|
-| **US** `BK9E` | 1,537,464 / 1,768,220 | **86.9%** | 10,014 / 10,359 |
-| **EU** `BK9P` | 1,673,638 / 1,771,024 | **94.5%** | 10,478 / 10,625 |
+| **US** `BK9E` | 1,548,820 / 1,768,220 | **87.6%** | 10,021 / 10,359 |
+| **EU** `BK9P` | 1,684,682 / 1,771,024 | **95.1%** | 10,484 / 10,625 |
 | US verified original assembly (not C) | 22,966 | 1.3% | 171 |
-| EU verified MobiClip library code (hand-written ARM, not C) | 53,036 | 3.0% | 7 |
-| EU C + verified library code | 1,726,674 / 1,771,024 | **97.5%** | |
-| **Shared** (same function, matched in both) | 1,471,336 | 83.1% of EU | 9,361 |
+| EU verified library code (hand-written ARM: MobiClip, NitroSDK, MSL; not C) | 68,082 | 3.8% | 99 |
+| EU C + verified library code | 1,752,764 / 1,771,024 | **99.0%** | |
+| **Shared** (same function, matched in both) | 1,482,380 | 83.7% of EU | 9,367 |
 
-8,187 shared functions are stored once in `src/` and built for both regions; 1,174 still have separate EU copies. 653 matched functions are US-only so far and 1,117 are EU-only. EU numbers come from `eu/tools/audit_progress.py`; per-module EU detail is in [eu/PROGRESS.md](eu/PROGRESS.md).
+8,193 shared functions are stored once in `src/` and built for both regions; 1,174 still have separate EU copies. 654 matched functions are US-only so far and 1,117 are EU-only. EU numbers come from `eu/tools/audit_progress.py`; per-module EU detail is in [eu/PROGRESS.md](eu/PROGRESS.md).
 <!-- regions:end -->
 
 US detail:
 
 | | Matched | Total | % |
 |---|---:|---:|---:|
-| **ARM9 code (C bytes)** | **1,537,464** | 1,768,220 | **86.9%** |
-| ARM9 core + autoloads | 324,272 | 370,004 | 87.6% |
-| ARM9 overlays (105) | 1,213,192 | 1,398,216 | 86.8% |
-| Functions | 10,014 | 10,359 | 96.7% |
+| **ARM9 code (C bytes)** | **1,548,820** | 1,768,220 | **87.6%** |
+| ARM9 core + autoloads | 331,652 | 370,004 | 89.6% |
+| ARM9 overlays (105) | 1,217,168 | 1,398,216 | 87.1% |
+| Functions | 10,021 | 10,359 | 96.7% |
 | Data bytes (.rodata/.data/.bss) | 228,100 | 228,140 | 99.98% |
 
 Updated 2026-10-29. Per-module numbers are in [PROGRESS.md](PROGRESS.md).

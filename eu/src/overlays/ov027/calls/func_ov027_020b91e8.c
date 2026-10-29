@@ -1,0 +1,6 @@
+#define GetWidgetPosition_020b91a8 GetWidgetPosition
+#define MI_CpuCopy8_01ff89a8 MI_CpuCopy8
+#define MI_CpuFill8_01ff8830 MI_CpuFill8
+#define SetWidgetPosition_020b91c8 func_ov027_020b91e8
+#define func_0204f13c IndexedRecord_SetPair
+#include "src/ov027/resource_container/SetWidgetPosition_020b91c8.c"

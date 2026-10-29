@@ -1,0 +1,11 @@
+#define EaseCameraVectors_020bcf44 EaseCameraVectors
+#define FX_Sqrt_01ff9cfc FX_Sqrt
+#define MoveCameraTargetTo_020bc974 MoveCameraTargetTo
+#define UpdateFollowCamera_020bccc4 func_ov043_020bcce4
+#define VEC_Add_01ff9e0c VEC_Add
+#define data_0205356c gSinFx12Table
+#define data_ov043_020bd2c0 gOv043CameraState
+#define func_ov001_0206dc4c GetManagedActorPosition
+#define func_ov021_020af84c GetCameraRollAngle
+#define func_ov021_020afb94 UpdateDriftParticle
+#include "src/ov043/camera/UpdateFollowCamera_020bccc4.c"

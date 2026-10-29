@@ -1,0 +1,2820 @@
+{
+ "receipts": {
+  "BitUnPack": {
+   "doc": "eu/docs/library/sdk_bios.md",
+   "doc_sha256": "6b4e86620a274f1fbdd65cdce4b84d278b777f07d80739aee5f3c359a3ac9710",
+   "end": "0x02000436",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/sdk_bios.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 2,
+     "result": "0x4 bytes: 2 reachable THUMB instructions + 0 literal words tile 0x02000432-0x02000436",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 503,
+     "result": "503 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 4 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "6e20b0803117ba9fffba8ee7e11d8d62b4ddf8fe18230eb3f90251c58614806e",
+   "source": "eu/libs/nitro/os/asm_stubs/auto/BitUnPack.c",
+   "source_sha256": "3ed5008515593787b05d9567e228b0dc6ac8e48d3acf7452259d5081f545538e",
+   "start": "0x02000432",
+   "symbol": "BitUnPack"
+  },
+  "CP_SaveContext": {
+   "doc": "eu/docs/library/sdk_misc.md",
+   "doc_sha256": "3817d4fea7ba2441d83e415e71f36780fd85fcbfdade388f2f7437b389bc3822",
+   "end": "0x0200a1b0",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/sdk_misc.md"
+    },
+    "inventory": {
+     "data_words": 1,
+     "external_literals": 0,
+     "instructions": 15,
+     "result": "0x40 bytes: 15 reachable ARM instructions + 1 literal/DATA words tile 0x0200a170-0x0200a1b0",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 418,
+     "result": "418 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 64 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "4034224020f4081f046cdf7cf9d0c004aad1275f050493662b665c1e016c3c7e",
+   "source": "eu/libs/nitro/gx/asm_stubs/auto/CP_SaveContext.c",
+   "source_sha256": "64dcead51ee367f132b1f205ca874e5eea428c4c55142f3b9e70262c4d21a7ed",
+   "start": "0x0200a170",
+   "symbol": "CP_SaveContext"
+  },
+  "CPi_RestoreContext": {
+   "doc": "eu/docs/library/sdk_misc.md",
+   "doc_sha256": "3817d4fea7ba2441d83e415e71f36780fd85fcbfdade388f2f7437b389bc3822",
+   "end": "0x0200a1ec",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/sdk_misc.md"
+    },
+    "inventory": {
+     "data_words": 1,
+     "external_literals": 0,
+     "instructions": 14,
+     "result": "0x3c bytes: 14 reachable ARM instructions + 1 literal/DATA words tile 0x0200a1b0-0x0200a1ec",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 418,
+     "result": "418 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 60 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "116153100f79a8346639bb3b83dcb56112764eaf5a3067e0dfeab0d24f543244",
+   "source": "eu/libs/nitro/gx/asm_stubs/auto/CPi_RestoreContext.c",
+   "source_sha256": "cafbb8a631f5c10f6657cb358abee63ad84a72911f67c5e5b50479eb86ee2052",
+   "start": "0x0200a1b0",
+   "symbol": "CPi_RestoreContext"
+  },
+  "CpuFastSet": {
+   "doc": "eu/docs/library/sdk_bios.md",
+   "doc_sha256": "6b4e86620a274f1fbdd65cdce4b84d278b777f07d80739aee5f3c359a3ac9710",
+   "end": "0x02000532",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/sdk_bios.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 2,
+     "result": "0x4 bytes: 2 reachable THUMB instructions + 0 literal words tile 0x0200052e-0x02000532",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 503,
+     "result": "503 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 4 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "dedc152a89df8aadc9dc9526881c29e92f681504cf9bf438bbac1c6362fd9b42",
+   "source": "eu/libs/nitro/os/asm_stubs/auto/CpuFastSet.c",
+   "source_sha256": "d22d5110d1f5942fb01d47dacbe06e334cd0aac6a2d8c6e48861a9a0206a51d8",
+   "start": "0x0200052e",
+   "symbol": "CpuFastSet"
+  },
+  "CpuSet": {
+   "doc": "eu/docs/library/sdk_bios.md",
+   "doc_sha256": "6b4e86620a274f1fbdd65cdce4b84d278b777f07d80739aee5f3c359a3ac9710",
+   "end": "0x0200078c",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/sdk_bios.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 2,
+     "result": "0x4 bytes: 2 reachable THUMB instructions + 0 literal words tile 0x02000788-0x0200078c",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 503,
+     "result": "503 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 4 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "07967ebdc3979cd4fd4de37fd22b3e6de8965b00dae4ac5585577c9709839652",
+   "source": "eu/libs/nitro/os/asm_stubs/auto/CpuSet.c",
+   "source_sha256": "5abe466f4042e3a68594170a35ee27b619207fff683ee7532c81199834657240",
+   "start": "0x02000788",
+   "symbol": "CpuSet"
+  },
+  "Div": {
+   "doc": "eu/docs/library/sdk_bios.md",
+   "doc_sha256": "6b4e86620a274f1fbdd65cdce4b84d278b777f07d80739aee5f3c359a3ac9710",
+   "end": "0x0200065a",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/sdk_bios.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 2,
+     "result": "0x4 bytes: 2 reachable THUMB instructions + 0 literal words tile 0x02000656-0x0200065a",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 503,
+     "result": "503 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 4 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "8911c2f5cca009dc112aed3996c2516b5949669109b1c79881bfb940b0f14e7c",
+   "source": "eu/libs/nitro/os/asm_stubs/auto/Div.c",
+   "source_sha256": "86e0c5d79a9f86ea91273832d7fd62c0652db92118e6436c6ea1ed129e5db0ff",
+   "start": "0x02000656",
+   "symbol": "Div"
+  },
+  "GetCRC16": {
+   "doc": "eu/docs/library/sdk_bios.md",
+   "doc_sha256": "6b4e86620a274f1fbdd65cdce4b84d278b777f07d80739aee5f3c359a3ac9710",
+   "end": "0x020001c4",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/sdk_bios.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 2,
+     "result": "0x4 bytes: 2 reachable THUMB instructions + 0 literal words tile 0x020001c0-0x020001c4",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 503,
+     "result": "503 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 4 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "7db5376a9255b6f3b335a2a0553165e6f8fb14695e62f9b3797fb876191ee72a",
+   "source": "eu/libs/nitro/os/asm_stubs/auto/GetCRC16.c",
+   "source_sha256": "44a409f205a7107c41be46c70c410718038ee805de24b64e2f9972063fd35724",
+   "start": "0x020001c0",
+   "symbol": "GetCRC16"
+  },
+  "Halt": {
+   "doc": "eu/docs/library/sdk_bios.md",
+   "doc_sha256": "6b4e86620a274f1fbdd65cdce4b84d278b777f07d80739aee5f3c359a3ac9710",
+   "end": "0x02000600",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/sdk_bios.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 2,
+     "result": "0x4 bytes: 2 reachable THUMB instructions + 0 literal words tile 0x020005fc-0x02000600",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 503,
+     "result": "503 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 4 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "8e93a1720c694e06005b83e2dbaf36a800649ab8948fc4e15efa39309f4c5ce6",
+   "source": "eu/libs/nitro/os/asm_stubs/auto/Halt.c",
+   "source_sha256": "b3bc764fa307fabaddc426be070c359ad1667155b630d8bbe207e03dcb286b0c",
+   "start": "0x020005fc",
+   "symbol": "Halt"
+  },
+  "HuffUnCompReadByCallback": {
+   "doc": "eu/docs/library/sdk_bios.md",
+   "doc_sha256": "6b4e86620a274f1fbdd65cdce4b84d278b777f07d80739aee5f3c359a3ac9710",
+   "end": "0x0200059c",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/sdk_bios.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 2,
+     "result": "0x4 bytes: 2 reachable THUMB instructions + 0 literal words tile 0x02000598-0x0200059c",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 503,
+     "result": "503 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 4 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "6f60ae217f4bca5053cbb060d3927260ca950e3fda49650c28311d325ab5858e",
+   "source": "eu/libs/nitro/os/asm_stubs/auto/HuffUnCompReadByCallback.c",
+   "source_sha256": "931a88c521486e2922a9b52f1501f6cadf30859b41f5d974da37f83647771a30",
+   "start": "0x02000598",
+   "symbol": "HuffUnCompReadByCallback"
+  },
+  "IntrWait": {
+   "doc": "eu/docs/library/sdk_bios.md",
+   "doc_sha256": "6b4e86620a274f1fbdd65cdce4b84d278b777f07d80739aee5f3c359a3ac9710",
+   "end": "0x02000362",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/sdk_bios.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 2,
+     "result": "0x4 bytes: 2 reachable THUMB instructions + 0 literal words tile 0x0200035e-0x02000362",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 503,
+     "result": "503 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 4 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "485d13214d02ed051e795d47865ceea1fe4d5b310e8efae318bee4a62cb63b47",
+   "source": "eu/libs/nitro/os/asm_stubs/auto/IntrWait.c",
+   "source_sha256": "0170fe090b6153692d34eecbb6e14d83dfdb6879f5a0f592486feff1b1a068d3",
+   "start": "0x0200035e",
+   "symbol": "IntrWait"
+  },
+  "IsDebugger": {
+   "doc": "eu/docs/library/sdk_bios.md",
+   "doc_sha256": "6b4e86620a274f1fbdd65cdce4b84d278b777f07d80739aee5f3c359a3ac9710",
+   "end": "0x020002a4",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/sdk_bios.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 2,
+     "result": "0x4 bytes: 2 reachable THUMB instructions + 0 literal words tile 0x020002a0-0x020002a4",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 503,
+     "result": "503 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 4 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "9f004ab9239029bc7e051e24763751da64c47109e542f1d19f241ac89ceccb39",
+   "source": "eu/libs/nitro/os/asm_stubs/auto/IsDebugger.c",
+   "source_sha256": "eebe661a3a0c0f401bbdd1bf90b7a2bb5cc66a57fea42ebc6a50b86ddec89f1b",
+   "start": "0x020002a0",
+   "symbol": "IsDebugger"
+  },
+  "LZ77UnCompReadByCallbackWrite16bit": {
+   "doc": "eu/docs/library/sdk_bios.md",
+   "doc_sha256": "6b4e86620a274f1fbdd65cdce4b84d278b777f07d80739aee5f3c359a3ac9710",
+   "end": "0x020003c2",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/sdk_bios.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 2,
+     "result": "0x4 bytes: 2 reachable THUMB instructions + 0 literal words tile 0x020003be-0x020003c2",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 503,
+     "result": "503 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 4 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "4f32a5a0727704ed8cc1e46af9875d484bb379b73cdd4ae15086deeb7426b8a0",
+   "source": "eu/libs/nitro/os/asm_stubs/auto/LZ77UnCompReadByCallbackWrite16bit.c",
+   "source_sha256": "63065bd70d28a7feda6a9c16b7865c7141b93fdbd31356b0ff183f1c819c016c",
+   "start": "0x020003be",
+   "symbol": "LZ77UnCompReadByCallbackWrite16bit"
+  },
+  "LZ77UnCompReadNormalWrite8bit": {
+   "doc": "eu/docs/library/sdk_bios.md",
+   "doc_sha256": "6b4e86620a274f1fbdd65cdce4b84d278b777f07d80739aee5f3c359a3ac9710",
+   "end": "0x020000ee",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/sdk_bios.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 2,
+     "result": "0x4 bytes: 2 reachable THUMB instructions + 0 literal words tile 0x020000ea-0x020000ee",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 503,
+     "result": "503 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 4 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "ec6d14bbc6d782be7f74aa1a98008404ecc1d3324187a7989458b17708869e80",
+   "source": "eu/libs/nitro/os/asm_stubs/auto/LZ77UnCompReadNormalWrite8bit.c",
+   "source_sha256": "9ec2c0eb5e5962317b92ddd255f0687bff6febd070ac711c740bc2018147200e",
+   "start": "0x020000ea",
+   "symbol": "LZ77UnCompReadNormalWrite8bit"
+  },
+  "MATHi_SHA1ProcessBlock": {
+   "doc": "eu/docs/library/sdk_math.md",
+   "doc_sha256": "af3240bf4089732f91a19289db6ad8c933f7268e95b0edceabb6831cff659157",
+   "end": "0x0200e200",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/sdk_math.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 4,
+     "instructions": 199,
+     "result": "0x31c bytes: 199 reachable ARM instructions + 0 literal/DATA words tile 0x0200dee4-0x0200e200",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 1553,
+     "result": "1553 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 796 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "a97d9dee9c8fde47622d3b7f462a6ac0401523cc60562b94ddf059bc276edc20",
+   "source": "eu/src/asm_stubs/calls/MATHi_SHA1ProcessBlock.c",
+   "source_sha256": "cf7b430f17e7b6664f6f50e5665e5c54ccb1b12db353d516cbb5986dd63a8c02",
+   "start": "0x0200dee4",
+   "symbol": "MATHi_SHA1ProcessBlock"
+  },
+  "MI_ReadUncompLZ8": {
+   "doc": "eu/docs/library/sdk_misc.md",
+   "doc_sha256": "3817d4fea7ba2441d83e415e71f36780fd85fcbfdade388f2f7437b389bc3822",
+   "end": "0x0200592c",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/sdk_misc.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 97,
+     "result": "0x184 bytes: 97 reachable ARM instructions + 0 literal/DATA words tile 0x020057a8-0x0200592c",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 9049,
+     "result": "9049 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 388 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "3bc1beb64a0de5abb0c883eda6b32c6e2028ec260ca0ea071439d34692e15b8c",
+   "source": "eu/libs/nitro/mi/asm_stubs/calls/MI_ReadUncompLZ8.c",
+   "source_sha256": "f7039d62c03a61272f36ecc86664986934d5bb82ba840a2918f2835a8053814b",
+   "start": "0x020057a8",
+   "symbol": "MI_ReadUncompLZ8"
+  },
+  "MI_Zero36B": {
+   "doc": "eu/docs/library/sdk_mtx.md",
+   "doc_sha256": "2a32b5f4d48306fcf2ba31b58f11bfee66b0e323b531fd4b41b2e115bb27100a",
+   "end": "0x01ff90ea",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/sdk_mtx.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 7,
+     "result": "0xe bytes: 7 reachable THUMB instructions + 0 literal words tile 0x01ff90dc-0x01ff90ea",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 302,
+     "result": "302 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 14 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "9346be17ffed8b6569f19dbca263f47f5c29991a8431170b97ece7d6bc64ebc9",
+   "source": "eu/libs/nitro/mi/asm_stubs/auto/MI_Zero36B.c",
+   "source_sha256": "c19b7715c2bb626e04ed0420bf9582cfaeab636d442eb5446ee96a41bb3e8b1e",
+   "start": "0x01ff90dc",
+   "symbol": "MI_Zero36B"
+  },
+  "MIi_CpuClear32": {
+   "doc": "eu/docs/library/sdk_memory.md",
+   "doc_sha256": "6f5546008b5c407f6a202168d6be4a12ae9c64c225b0ca77f3810121085e90d9",
+   "end": "0x01ff8710",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/sdk_memory.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 5,
+     "result": "0x14 bytes: 5 reachable ARM instructions + 0 literal/DATA words tile 0x01ff86fc-0x01ff8710"
+    },
+    "semantics": {
+     "cases": 507,
+     "result": "507 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 20 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "3cfd563af82d5813c8180f4b189a1e34d77a9c562334d174657e0d116c7d988e",
+   "source": "eu/libs/nitro/mi/asm_stubs/auto/MIi_CpuClear32.c",
+   "source_sha256": "1490105c51ed5fbaf8302789e846ad83270aeb6b526c363833be6e9527e61cfb",
+   "start": "0x01ff86fc",
+   "symbol": "MIi_CpuClear32"
+  },
+  "MIi_CpuClearFast": {
+   "doc": "eu/docs/library/sdk_memory.md",
+   "doc_sha256": "6f5546008b5c407f6a202168d6be4a12ae9c64c225b0ca77f3810121085e90d9",
+   "end": "0x01ff878c",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/sdk_memory.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 19,
+     "result": "0x4c bytes: 19 reachable ARM instructions + 0 literal/DATA words tile 0x01ff8740-0x01ff878c"
+    },
+    "semantics": {
+     "cases": 507,
+     "result": "507 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 76 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "78d9fa528b10650a11d403d7be899508367353e15fa6b5fb691566cf9b9e2f71",
+   "source": "eu/libs/nitro/mi/asm_stubs/auto/MIi_CpuClearFast.c",
+   "source_sha256": "471648d05af276792ef8479f5ee7bc013f2bd7b9053aa123a5c17e10d305d51a",
+   "start": "0x01ff8740",
+   "symbol": "MIi_CpuClearFast"
+  },
+  "MIi_CpuCopy32": {
+   "doc": "eu/docs/library/sdk_memory.md",
+   "doc_sha256": "6f5546008b5c407f6a202168d6be4a12ae9c64c225b0ca77f3810121085e90d9",
+   "end": "0x01ff8728",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/sdk_memory.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 6,
+     "result": "0x18 bytes: 6 reachable ARM instructions + 0 literal/DATA words tile 0x01ff8710-0x01ff8728"
+    },
+    "semantics": {
+     "cases": 1014,
+     "result": "1014 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 24 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "11b33393cb66eec6392d208c96cdea91fc66ad9d1ea9b3ad8d32a727d66489b8",
+   "source": "eu/libs/nitro/mi/asm_stubs/auto/MIi_CpuCopy32.c",
+   "source_sha256": "e6afdce5bf86fc957654906bd98ee41b3c0b05eeb91d26b9acfcdc59cfeb1d5e",
+   "start": "0x01ff8710",
+   "symbol": "MIi_CpuCopy32"
+  },
+  "MIi_CpuCopyFast": {
+   "doc": "eu/docs/library/sdk_memory.md",
+   "doc_sha256": "6f5546008b5c407f6a202168d6be4a12ae9c64c225b0ca77f3810121085e90d9",
+   "end": "0x01ff87c4",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/sdk_memory.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 14,
+     "result": "0x38 bytes: 14 reachable ARM instructions + 0 literal/DATA words tile 0x01ff878c-0x01ff87c4"
+    },
+    "semantics": {
+     "cases": 1014,
+     "result": "1014 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 56 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "03dedb056d93e4d67f696cbce2aa102d149753258cf8d227ad819003781b5a3d",
+   "source": "eu/libs/nitro/mi/asm_stubs/auto/MIi_CpuCopyFast.c",
+   "source_sha256": "89ec46e5f682efacb1296dcb5bb1c6754537aee9ef1b8180b9ac1154d8af6b36",
+   "start": "0x01ff878c",
+   "symbol": "MIi_CpuCopyFast"
+  },
+  "MIi_CpuSend32": {
+   "doc": "eu/docs/library/sdk_memory.md",
+   "doc_sha256": "6f5546008b5c407f6a202168d6be4a12ae9c64c225b0ca77f3810121085e90d9",
+   "end": "0x01ff8740",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/sdk_memory.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 6,
+     "result": "0x18 bytes: 6 reachable ARM instructions + 0 literal/DATA words tile 0x01ff8728-0x01ff8740"
+    },
+    "semantics": {
+     "cases": 507,
+     "result": "507 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 24 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "ed10452abe309f9ccabb5a302958ab0346751b510769f47abc86894b97589a5f",
+   "source": "eu/libs/nitro/mi/asm_stubs/auto/MIi_CpuSend32.c",
+   "source_sha256": "2ec608007531c937058bbc683bb91d60efb944f13adcbf42aba56fb0773304b4",
+   "start": "0x01ff8728",
+   "symbol": "MIi_CpuSend32"
+  },
+  "MIi_UncompressBackward": {
+   "doc": "eu/docs/library/sdk_misc.md",
+   "doc_sha256": "3817d4fea7ba2441d83e415e71f36780fd85fcbfdade388f2f7437b389bc3822",
+   "end": "0x020009fc",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/sdk_misc.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 43,
+     "result": "0xac bytes: 43 reachable ARM instructions + 0 literal/DATA words tile 0x02000950-0x020009fc",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 391,
+     "result": "391 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 172 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "c3979e93bb0e390fbef9cf64dd91479895dee1945ad61c964af19e34fefb976f",
+   "source": "eu/libs/nitro/init/asm_stubs/auto/MIi_UncompressBackward.c",
+   "source_sha256": "f8d2c9f157fa8e842691db590a3dba31d633cd33e3799bdf024de9fdf0df1795",
+   "start": "0x02000950",
+   "symbol": "MIi_UncompressBackward"
+  },
+  "MSL_Sqrt": {
+   "doc": "eu/docs/library/msl_float_arith.md",
+   "doc_sha256": "65ce42d8229f336ce0e75e0adcabfd8a5749fd4d7ebc562824712b039f93bbcc",
+   "end": "0x0202441c",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/msl_float_arith.md"
+    },
+    "inventory": {
+     "data_words": 3,
+     "external_literals": 0,
+     "instructions": 100,
+     "result": "0x19c bytes: 100 reachable ARM instructions + 3 literal/DATA words tile 0x02024280-0x0202441c",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 24064,
+     "result": "24064 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 412 bytes, 1 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "9c6e336b5a4541103bbbcde9721be27c295d9336a48d0ba26c295ddbf0b959e3",
+   "source": "eu/src/asm_stubs/calls/MSL_Sqrt.c",
+   "source_sha256": "51a2f0ceeaa71e7acbd0f345948bb930a7f592b23569fd77011bc1acb7f3f9e3",
+   "start": "0x02024280",
+   "symbol": "MSL_Sqrt"
+  },
+  "MTX_Copy43To44_": {
+   "doc": "eu/docs/library/sdk_mtx.md",
+   "doc_sha256": "2a32b5f4d48306fcf2ba31b58f11bfee66b0e323b531fd4b41b2e115bb27100a",
+   "end": "0x01ff94dc",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/sdk_mtx.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 13,
+     "result": "0x34 bytes: 13 reachable ARM instructions + 0 literal/DATA words tile 0x01ff94a8-0x01ff94dc",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 297,
+     "result": "297 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 52 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "75b0254b3a5e01952ca153c4fcbfc61814d772d542a0b4838fb701a3fb43b580",
+   "source": "eu/libs/nitro/mtx/asm_stubs/auto/MTX_Copy43To44_.c",
+   "source_sha256": "ba9cffeffbf9e6f31f87eda4725996ef2342656cdb2664b65d511ee586001cdc",
+   "start": "0x01ff94a8",
+   "symbol": "MTX_Copy43To44_"
+  },
+  "MTX_Copy44To43_": {
+   "doc": "eu/docs/library/sdk_mtx.md",
+   "doc_sha256": "2a32b5f4d48306fcf2ba31b58f11bfee66b0e323b531fd4b41b2e115bb27100a",
+   "end": "0x02005a1c",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/sdk_mtx.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 13,
+     "result": "0x34 bytes: 13 reachable ARM instructions + 0 literal/DATA words tile 0x020059e8-0x02005a1c",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 343,
+     "result": "343 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 52 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "3aee4c529747747514bd3ed75e62d2341524c3a8e4c1805a0533e78a948e6f7e",
+   "source": "eu/libs/nitro/mtx/asm_stubs/auto/MTX_Copy44To43_.c",
+   "source_sha256": "36c2dced1efa074e644efb36acdfff41ba37ff1cd30acf21ad5fce6d8360aac1",
+   "start": "0x020059e8",
+   "symbol": "MTX_Copy44To43_"
+  },
+  "MTX_Identity22_": {
+   "doc": "eu/docs/library/sdk_mtx.md",
+   "doc_sha256": "2a32b5f4d48306fcf2ba31b58f11bfee66b0e323b531fd4b41b2e115bb27100a",
+   "end": "0x0200595c",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/sdk_mtx.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 6,
+     "result": "0x18 bytes: 6 reachable ARM instructions + 0 literal/DATA words tile 0x02005944-0x0200595c",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 302,
+     "result": "302 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 24 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "c81d030a5417f4aa6653a35f3a046793ae668a9d621fea3d6f4ca5a1f1209d70",
+   "source": "eu/libs/nitro/mtx/asm_stubs/auto/MTX_Identity22_.c",
+   "source_sha256": "33fd3f5f5e8e46ca2e5de618db5bc78c7ad235249ca15a4ec836749e8b8d5a84",
+   "start": "0x02005944",
+   "symbol": "MTX_Identity22_"
+  },
+  "MTX_Identity33_": {
+   "doc": "eu/docs/library/sdk_mtx.md",
+   "doc_sha256": "2a32b5f4d48306fcf2ba31b58f11bfee66b0e323b531fd4b41b2e115bb27100a",
+   "end": "0x01ff9110",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/sdk_mtx.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 9,
+     "result": "0x24 bytes: 9 reachable ARM instructions + 0 literal/DATA words tile 0x01ff90ec-0x01ff9110",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 302,
+     "result": "302 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 36 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "2f436dbece5b115fccfb27246b8ddaacbd01e820707ac3d57181122f12b64f37",
+   "source": "eu/libs/nitro/mtx/asm_stubs/auto/MTX_Identity33_.c",
+   "source_sha256": "2418acb658c5156070b1d0839be67a15845dd58a3050567c94f5fb54f8e22d26",
+   "start": "0x01ff90ec",
+   "symbol": "MTX_Identity33_"
+  },
+  "MTX_Identity43_": {
+   "doc": "eu/docs/library/sdk_mtx.md",
+   "doc_sha256": "2a32b5f4d48306fcf2ba31b58f11bfee66b0e323b531fd4b41b2e115bb27100a",
+   "end": "0x01ff94a8",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/sdk_mtx.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 10,
+     "result": "0x28 bytes: 10 reachable ARM instructions + 0 literal/DATA words tile 0x01ff9480-0x01ff94a8",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 302,
+     "result": "302 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 40 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "5aa80ef15096ef9bcf995983c2a274f91eaa7f9d8c9b2a733d0b29e1fb61d460",
+   "source": "eu/libs/nitro/mtx/asm_stubs/auto/MTX_Identity43_.c",
+   "source_sha256": "480f3e026f6d8bbba7789fdc77a8175938609005efda28b9a4ff4c31f1322dae",
+   "start": "0x01ff9480",
+   "symbol": "MTX_Identity43_"
+  },
+  "MTX_Identity44_": {
+   "doc": "eu/docs/library/sdk_mtx.md",
+   "doc_sha256": "2a32b5f4d48306fcf2ba31b58f11bfee66b0e323b531fd4b41b2e115bb27100a",
+   "end": "0x020059e8",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/sdk_mtx.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 11,
+     "result": "0x2c bytes: 11 reachable ARM instructions + 0 literal/DATA words tile 0x020059bc-0x020059e8",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 302,
+     "result": "302 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 44 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "48842e5c2a9162e6ae1312b49d49ca81fb9660851fee699519e102f3831093dc",
+   "source": "eu/libs/nitro/mtx/asm_stubs/auto/MTX_Identity44_.c",
+   "source_sha256": "46230957a6b7bc8136d6b3f7e00167e5c7ed276d849cbcf7d3ffe6870820b2fe",
+   "start": "0x020059bc",
+   "symbol": "MTX_Identity44_"
+  },
+  "MTX_RotX43_": {
+   "doc": "eu/docs/library/sdk_mtx.md",
+   "doc_sha256": "2a32b5f4d48306fcf2ba31b58f11bfee66b0e323b531fd4b41b2e115bb27100a",
+   "end": "0x01ff952e",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/sdk_mtx.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 15,
+     "result": "0x1e bytes: 15 reachable THUMB instructions + 0 literal words tile 0x01ff9510-0x01ff952e",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 1243,
+     "result": "1243 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 30 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "714d2cd17ba947201e28b76261c3db637fcdccc56d609e5fbb637c0677f3fab3",
+   "source": "eu/libs/nitro/mtx/asm_stubs/auto/MTX_RotX43_.c",
+   "source_sha256": "9dda368f7541aaeddc0d7aa0a5c5e4d8d60cc856c4957e62b9cc5f932299049c",
+   "start": "0x01ff9510",
+   "symbol": "MTX_RotX43_"
+  },
+  "MTX_RotY43_": {
+   "doc": "eu/docs/library/sdk_mtx.md",
+   "doc_sha256": "2a32b5f4d48306fcf2ba31b58f11bfee66b0e323b531fd4b41b2e115bb27100a",
+   "end": "0x01ff954a",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/sdk_mtx.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 13,
+     "result": "0x1a bytes: 13 reachable THUMB instructions + 0 literal words tile 0x01ff9530-0x01ff954a",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 1243,
+     "result": "1243 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 26 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "1bb0b5b0d900b6f7d79c1b969c29ec6eed6cc12a4bf9b4b8419b66da56561296",
+   "source": "eu/libs/nitro/mtx/asm_stubs/auto/MTX_RotY43_.c",
+   "source_sha256": "9e3ad9d73d44636f03f61b1d443b15ff43c99a719ead321b36e892d3a29d541f",
+   "start": "0x01ff9530",
+   "symbol": "MTX_RotY43_"
+  },
+  "Mod": {
+   "doc": "eu/docs/library/sdk_bios.md",
+   "doc_sha256": "6b4e86620a274f1fbdd65cdce4b84d278b777f07d80739aee5f3c359a3ac9710",
+   "end": "0x020006b6",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/sdk_bios.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 3,
+     "result": "0x6 bytes: 3 reachable THUMB instructions + 0 literal words tile 0x020006b0-0x020006b6",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 503,
+     "result": "503 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 6 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "60fbe450e50aaefd910a0b8dc4b96ebf7f2e159fcf32ef9592c6641842f866e6",
+   "source": "eu/libs/nitro/os/asm_stubs/auto/Mod.c",
+   "source_sha256": "38ba7c701c31aefe99a68da897c8184cc468cd8ed4515a2f347586fe6fef536a",
+   "start": "0x020006b0",
+   "symbol": "Mod"
+  },
+  "OS_GetLockID": {
+   "doc": "eu/docs/library/sdk_misc.md",
+   "doc_sha256": "3817d4fea7ba2441d83e415e71f36780fd85fcbfdade388f2f7437b389bc3822",
+   "end": "0x0200240c",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/sdk_misc.md"
+    },
+    "inventory": {
+     "data_words": 2,
+     "external_literals": 0,
+     "instructions": 20,
+     "result": "0x58 bytes: 20 reachable ARM instructions + 2 literal/DATA words tile 0x020023b4-0x0200240c",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 804,
+     "result": "804 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 88 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "b903f66b35dd3cf34528e87cc1882b5e8fb9e9e690f9c76101f341377225b211",
+   "source": "eu/libs/nitro/os/asm_stubs/auto/OS_GetLockID.c",
+   "source_sha256": "85fa3e7daebebea21e08cf7f2414d6e2c0abd47b8919c6d51d081d0ca026f7dc",
+   "start": "0x020023b4",
+   "symbol": "OS_GetLockID"
+  },
+  "OSi_AlarmHandler": {
+   "doc": "eu/docs/library/sdk_misc.md",
+   "doc_sha256": "3817d4fea7ba2441d83e415e71f36780fd85fcbfdade388f2f7437b389bc3822",
+   "end": "0x02004450",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/sdk_misc.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 4,
+     "result": "0x10 bytes: 4 reachable ARM instructions + 0 literal/DATA words tile 0x02004440-0x02004450",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 400,
+     "result": "400 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 16 bytes, 1 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "785ae0872480afca27d740a8210a281fc5ac2d64ff610e3ae61c04cec102b2ab",
+   "source": "eu/libs/nitro/os/asm_stubs/calls/OSi_AlarmHandler.c",
+   "source_sha256": "4c5be236c80ff5eceac7e58250c42ab145d859a4115ebf3b1274cfb1511d643b",
+   "start": "0x02004440",
+   "symbol": "OSi_AlarmHandler"
+  },
+  "OSi_GetAndDisplayContext": {
+   "doc": "eu/docs/library/sdk_misc.md",
+   "doc_sha256": "3817d4fea7ba2441d83e415e71f36780fd85fcbfdade388f2f7437b389bc3822",
+   "end": "0x02003dbc",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/sdk_misc.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 5,
+     "result": "0x14 bytes: 5 reachable ARM instructions + 0 literal/DATA words tile 0x02003da8-0x02003dbc",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 400,
+     "result": "400 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 20 bytes, 2 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "3f51c5d9889b1ed2816d99eb8a45a525a8460d0e7216e859cc0a2fa9b5257c02",
+   "source": "eu/libs/nitro/os/asm_stubs/calls/OSi_GetAndDisplayContext.c",
+   "source_sha256": "7bf5cb70023cc1b85e019aa3a35b31470041ad97b302691d4e3f7e946502ff6c",
+   "start": "0x02003da8",
+   "symbol": "OSi_GetAndDisplayContext"
+  },
+  "RLUnCompReadByCallbackWrite16bit": {
+   "doc": "eu/docs/library/sdk_bios.md",
+   "doc_sha256": "6b4e86620a274f1fbdd65cdce4b84d278b777f07d80739aee5f3c359a3ac9710",
+   "end": "0x02000094",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/sdk_bios.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 2,
+     "result": "0x4 bytes: 2 reachable THUMB instructions + 0 literal words tile 0x02000090-0x02000094",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 503,
+     "result": "503 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 4 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "92180fdd5a99d438bbf8c27c41c529abc571a5cd47d4e6d10311a84b4c44859c",
+   "source": "eu/libs/nitro/os/asm_stubs/auto/RLUnCompReadByCallbackWrite16bit.c",
+   "source_sha256": "d69d2ccdabe37d7fb61aaf383c380a136a8abc97be154ed233f8ae73adb3b807",
+   "start": "0x02000090",
+   "symbol": "RLUnCompReadByCallbackWrite16bit"
+  },
+  "RLUnCompReadNormalWrite8bit": {
+   "doc": "eu/docs/library/sdk_bios.md",
+   "doc_sha256": "6b4e86620a274f1fbdd65cdce4b84d278b777f07d80739aee5f3c359a3ac9710",
+   "end": "0x0200049e",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/sdk_bios.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 2,
+     "result": "0x4 bytes: 2 reachable THUMB instructions + 0 literal words tile 0x0200049a-0x0200049e",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 503,
+     "result": "503 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 4 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "f1048b99d6e37687865f22863a77e61648b8054a57ca380b03dad2594796b86d",
+   "source": "eu/libs/nitro/os/asm_stubs/auto/RLUnCompReadNormalWrite8bit.c",
+   "source_sha256": "d422c50fdf2f018e56541233d5f23856adf29e7a9e93f0c22347bc69e94e7b94",
+   "start": "0x0200049a",
+   "symbol": "RLUnCompReadNormalWrite8bit"
+  },
+  "SoftReset": {
+   "doc": "eu/docs/library/sdk_bios.md",
+   "doc_sha256": "6b4e86620a274f1fbdd65cdce4b84d278b777f07d80739aee5f3c359a3ac9710",
+   "end": "0x0200015e",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/sdk_bios.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 2,
+     "result": "0x4 bytes: 2 reachable THUMB instructions + 0 literal words tile 0x0200015a-0x0200015e",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 503,
+     "result": "503 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 4 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "0047f9d2959e3a3cd24f18be3adbfeddd3b2259e27e52eb8fcffac6211c15407",
+   "source": "eu/libs/nitro/os/asm_stubs/auto/SoftReset.c",
+   "source_sha256": "573f856f19a0a8b3c488e4f8efd6e771d636f7cfeaac4ae0c793c61e0c25e075",
+   "start": "0x0200015a",
+   "symbol": "SoftReset"
+  },
+  "Sqrt": {
+   "doc": "eu/docs/library/sdk_bios.md",
+   "doc_sha256": "6b4e86620a274f1fbdd65cdce4b84d278b777f07d80739aee5f3c359a3ac9710",
+   "end": "0x0200071e",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/sdk_bios.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 2,
+     "result": "0x4 bytes: 2 reachable THUMB instructions + 0 literal words tile 0x0200071a-0x0200071e",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 503,
+     "result": "503 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 4 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "51890e29a359e96d6336ed379d2ddeb11fc12facb36bbb2f55afb650f4fb9375",
+   "source": "eu/libs/nitro/os/asm_stubs/auto/Sqrt.c",
+   "source_sha256": "d364778b3d3f17dca208ae6e824e52cc3b5570c9b68e85125a5b0db72e001eae",
+   "start": "0x0200071a",
+   "symbol": "Sqrt"
+  },
+  "VBlankIntrWait": {
+   "doc": "eu/docs/library/sdk_bios.md",
+   "doc_sha256": "6b4e86620a274f1fbdd65cdce4b84d278b777f07d80739aee5f3c359a3ac9710",
+   "end": "0x02000300",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/sdk_bios.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 3,
+     "result": "0x6 bytes: 3 reachable THUMB instructions + 0 literal words tile 0x020002fa-0x02000300",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 503,
+     "result": "503 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 6 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "bf9fc420439437739d9c6b74b51fbe54a172af5a3d24fd499ba4acd0bc9c4050",
+   "source": "eu/libs/nitro/os/asm_stubs/auto/VBlankIntrWait.c",
+   "source_sha256": "bd356b007fc129f44e2fb6b6b5bdcbc863b486c43da576368e624db1c44df8a2",
+   "start": "0x020002fa",
+   "symbol": "VBlankIntrWait"
+  },
+  "WaitByLoop": {
+   "doc": "eu/docs/library/sdk_bios.md",
+   "doc_sha256": "6b4e86620a274f1fbdd65cdce4b84d278b777f07d80739aee5f3c359a3ac9710",
+   "end": "0x02000236",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/sdk_bios.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 2,
+     "result": "0x4 bytes: 2 reachable THUMB instructions + 0 literal words tile 0x02000232-0x02000236",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 503,
+     "result": "503 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 4 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "498a35dfd2a6c72167d58697263323cd3392f37ed1ef8eddc11ed0852fb1720b",
+   "source": "eu/libs/nitro/os/asm_stubs/auto/WaitByLoop.c",
+   "source_sha256": "cbe15bf7e67f31886c4d0254946f1839c3e8d74abcf17d4c6586b1f6f10e6ab8",
+   "start": "0x02000232",
+   "symbol": "WaitByLoop"
+  },
+  "_d2f": {
+   "doc": "eu/docs/library/msl_float_convert.md",
+   "doc_sha256": "f4fd2744c5e997554dcdf2ab781901b656c0f1647d0fa89a5cd3fc746b5c0f2a",
+   "end": "0x02023650",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/msl_float_convert.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 65,
+     "result": "0x104 bytes: 65 reachable ARM instructions + 0 literal/DATA words tile 0x0202354c-0x02023650"
+    },
+    "semantics": {
+     "cases": 7384,
+     "result": "7384 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 260 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "46d1b63c88842e40fffdc01550cd8902742a3ced15bb4c22b9cc8cf0ebf7d459",
+   "source": "eu/src/asm_stubs/calls/_d2f.c",
+   "source_sha256": "0d2c0d5bfe853b1f602216827d33cd56c5864e5269c69d562f3bfa205062a513",
+   "start": "0x0202354c",
+   "symbol": "_d2f"
+  },
+  "_dadd": {
+   "doc": "eu/docs/library/msl_float_arith.md",
+   "doc_sha256": "65ce42d8229f336ce0e75e0adcabfd8a5749fd4d7ebc562824712b039f93bbcc",
+   "end": "0x02022e1c",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/msl_float_arith.md"
+    },
+    "inventory": {
+     "data_words": 1,
+     "external_literals": 0,
+     "instructions": 193,
+     "result": "0x318 bytes: 193 reachable ARM instructions + 1 literal/DATA words + 4 unreachable instruction words tile 0x02022b04-0x02022e1c",
+     "unreachable_words": 4
+    },
+    "semantics": {
+     "cases": 38096,
+     "result": "38096 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 792 bytes, 1 relocs -> func_02022e44+0 (object vs ROM image)"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "08f582c08a19603cfb063d185e7ec8a9bba5cbc3b48d274ae0274cf23f85dd02",
+   "source": "eu/src/asm_stubs/calls/_dadd.s",
+   "source_sha256": "e098289276810ad0299283199284ede6c499c176856baa9315d5b7b871aaa86a",
+   "start": "0x02022b04",
+   "symbol": "_dadd"
+  },
+  "_ddiv": {
+   "doc": "eu/docs/library/msl_float_arith.md",
+   "doc_sha256": "65ce42d8229f336ce0e75e0adcabfd8a5749fd4d7ebc562824712b039f93bbcc",
+   "end": "0x020253c4",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/msl_float_arith.md"
+    },
+    "inventory": {
+     "data_words": 65,
+     "external_literals": 0,
+     "instructions": 272,
+     "result": "0x544 bytes: 272 reachable ARM instructions + 65 literal/DATA words tile 0x02024e80-0x020253c4",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 38096,
+     "result": "38096 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 1348 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "7149929ee02390c1ba274df15d3864c58fde29827f500330717cc0391376a559",
+   "source": "eu/src/asm_stubs/calls/_ddiv.c",
+   "source_sha256": "53fcb2e9d0df40980f0e9b67ad34ec76bd735a81749fec3f87c8f9f89bd03736",
+   "start": "0x02024e80",
+   "symbol": "_ddiv"
+  },
+  "_dfix": {
+   "doc": "eu/docs/library/msl_float_convert.md",
+   "doc_sha256": "f4fd2744c5e997554dcdf2ab781901b656c0f1647d0fa89a5cd3fc746b5c0f2a",
+   "end": "0x02024280",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/msl_float_convert.md"
+    },
+    "inventory": {
+     "data_words": 1,
+     "external_literals": 0,
+     "instructions": 18,
+     "result": "0x4c bytes: 18 reachable ARM instructions + 1 literal/DATA words tile 0x02024234-0x02024280"
+    },
+    "semantics": {
+     "cases": 7384,
+     "result": "7384 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 76 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "f391de4cee74649ab1507aed3892b723664fe078e8495b127d167e92a53aa2a0",
+   "source": "eu/src/asm_stubs/calls/_dfix.c",
+   "source_sha256": "d9d0b079d8906f6b07b8f67cc2016b4090cc269d306bc8236bf90121579f5440",
+   "start": "0x02024234",
+   "symbol": "_dfix"
+  },
+  "_dflt": {
+   "doc": "eu/docs/library/msl_float_convert.md",
+   "doc_sha256": "f4fd2744c5e997554dcdf2ab781901b656c0f1647d0fa89a5cd3fc746b5c0f2a",
+   "end": "0x02023690",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/msl_float_convert.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 16,
+     "result": "0x40 bytes: 16 reachable ARM instructions + 0 literal/DATA words tile 0x02023650-0x02023690"
+    },
+    "semantics": {
+     "cases": 5367,
+     "result": "5367 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 64 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "7478e16a269a5835b5258a7df8529b2bf9021a7106421a7ae9623a01b9ac4a4a",
+   "source": "eu/src/asm_stubs/calls/_dflt.c",
+   "source_sha256": "b77e534cd614664cf21d4f2b22dca87b3a0b1d308dd411ad8a2c4d5f54086dc6",
+   "start": "0x02023650",
+   "symbol": "_dflt"
+  },
+  "_dgr": {
+   "doc": "eu/docs/library/msl_float_convert.md",
+   "doc_sha256": "f4fd2744c5e997554dcdf2ab781901b656c0f1647d0fa89a5cd3fc746b5c0f2a",
+   "end": "0x02023728",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/msl_float_convert.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 38,
+     "result": "0x98 bytes: 38 reachable ARM instructions + 0 literal/DATA words tile 0x02023690-0x02023728"
+    },
+    "semantics": {
+     "cases": 28600,
+     "result": "28600 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 152 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "ca8000309ac178595c6eb23e7f8c27797667224867a56b90b5ebdf5f4bbae12d",
+   "source": "eu/src/asm_stubs/calls/_dgr.c",
+   "source_sha256": "74573f5f55ffc3484147fc09feed76d7a54ae8b94ddf0edba02fb21eca73ee68",
+   "start": "0x02023690",
+   "symbol": "_dgr"
+  },
+  "_dleq": {
+   "doc": "eu/docs/library/msl_float_convert.md",
+   "doc_sha256": "f4fd2744c5e997554dcdf2ab781901b656c0f1647d0fa89a5cd3fc746b5c0f2a",
+   "end": "0x020237cc",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/msl_float_convert.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 41,
+     "result": "0xa4 bytes: 41 reachable ARM instructions + 0 literal/DATA words tile 0x02023728-0x020237cc"
+    },
+    "semantics": {
+     "cases": 28600,
+     "result": "28600 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 164 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "0107b9d5fd30718d14dce4f537f3393c3f8ac4d8b4ee4414796e8e35384265a3",
+   "source": "eu/src/asm_stubs/calls/_dleq.c",
+   "source_sha256": "c4a6659944a143bc92d2da1bdb94e3ffcae115f12143367337c37039ca079785",
+   "start": "0x02023728",
+   "symbol": "_dleq"
+  },
+  "_dmul": {
+   "doc": "eu/docs/library/msl_float_arith.md",
+   "doc_sha256": "65ce42d8229f336ce0e75e0adcabfd8a5749fd4d7ebc562824712b039f93bbcc",
+   "end": "0x0202354c",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/msl_float_arith.md"
+    },
+    "inventory": {
+     "data_words": 1,
+     "external_literals": 0,
+     "instructions": 216,
+     "result": "0x364 bytes: 216 reachable ARM instructions + 1 literal/DATA words tile 0x020231e8-0x0202354c",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 38096,
+     "result": "38096 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 868 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "16a30a586ebe9ac165d52d79b8d6ece3be666b610328fe3fc4a778744e676c4e",
+   "source": "eu/src/asm_stubs/calls/_dmul.c",
+   "source_sha256": "2c3f89c2df4f724f6eebee848a904d66878e2f45f07637cd532ec89f1a27fc11",
+   "start": "0x020231e8",
+   "symbol": "_dmul"
+  },
+  "_drdiv": {
+   "doc": "eu/docs/library/msl_float_arith.md",
+   "doc_sha256": "65ce42d8229f336ce0e75e0adcabfd8a5749fd4d7ebc562824712b039f93bbcc",
+   "end": "0x02024e80",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/msl_float_arith.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 6,
+     "result": "0x18 bytes: 6 reachable ARM instructions + 0 literal/DATA words tile 0x02024e68-0x02024e80",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 38096,
+     "result": "38096 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 24 bytes, 0 relocs (object vs ROM image)"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "47f95b86526be309cc0725bc933ef9fd65599ac26893f93dc82bf44b7e749f00",
+   "source": "eu/src/asm_stubs/calls/_drdiv.s",
+   "source_sha256": "9a960c9224918f5b8de888ef55a89bedfb2f2fe6da60778fdf847e0626e44af9",
+   "start": "0x02024e68",
+   "symbol": "_drdiv"
+  },
+  "_drsb": {
+   "doc": "eu/docs/library/msl_float_arith.md",
+   "doc_sha256": "65ce42d8229f336ce0e75e0adcabfd8a5749fd4d7ebc562824712b039f93bbcc",
+   "end": "0x02022e34",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/msl_float_arith.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 6,
+     "result": "0x18 bytes: 6 reachable ARM instructions + 0 literal/DATA words tile 0x02022e1c-0x02022e34",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 38096,
+     "result": "38096 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 24 bytes, 0 relocs (object vs ROM image)"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "47f95b86526be309cc0725bc933ef9fd65599ac26893f93dc82bf44b7e749f00",
+   "source": "eu/src/asm_stubs/calls/_drsb.s",
+   "source_sha256": "29c1f69233e950ede12b128166d065028331cc17deb1d4fa951058e8cee052d9",
+   "start": "0x02022e1c",
+   "symbol": "_drsb"
+  },
+  "_dsub": {
+   "doc": "eu/docs/library/msl_float_arith.md",
+   "doc_sha256": "65ce42d8229f336ce0e75e0adcabfd8a5749fd4d7ebc562824712b039f93bbcc",
+   "end": "0x020231e8",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/msl_float_arith.md"
+    },
+    "inventory": {
+     "data_words": 1,
+     "external_literals": 0,
+     "instructions": 236,
+     "result": "0x3b4 bytes: 236 reachable ARM instructions + 1 literal/DATA words tile 0x02022e34-0x020231e8",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 38096,
+     "result": "38096 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 948 bytes, 1 relocs -> func_02022b14+0 (object vs ROM image)"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "dbeaf6aee540d5755b85669163b690dfbf2a20d926a79b1bc86e16f15d89d685",
+   "source": "eu/src/asm_stubs/calls/_dsub.s",
+   "source_sha256": "3e606082e1c6c268eb61ac6d16fbc34c27127a945d828673b99ad1a92f46b4a6",
+   "start": "0x02022e34",
+   "symbol": "_dsub"
+  },
+  "_f2d": {
+   "doc": "eu/docs/library/msl_float_convert.md",
+   "doc_sha256": "f4fd2744c5e997554dcdf2ab781901b656c0f1647d0fa89a5cd3fc746b5c0f2a",
+   "end": "0x02023a34",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/msl_float_convert.md"
+    },
+    "inventory": {
+     "data_words": 1,
+     "external_literals": 0,
+     "instructions": 32,
+     "result": "0x84 bytes: 32 reachable ARM instructions + 1 literal/DATA words tile 0x020239b0-0x02023a34"
+    },
+    "semantics": {
+     "cases": 4644,
+     "result": "4644 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 132 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "29e8c250fe28c58be66a491d6465ae3c794af8831906ec999a9e1ed1450d766c",
+   "source": "eu/src/asm_stubs/calls/_f2d.c",
+   "source_sha256": "dda99ea0f9942be1202e50a93e191291704144cd41b7ba6a6cfa4943b48a62ba",
+   "start": "0x020239b0",
+   "symbol": "_f2d"
+  },
+  "_fadd": {
+   "doc": "eu/docs/library/msl_float_arith.md",
+   "doc_sha256": "65ce42d8229f336ce0e75e0adcabfd8a5749fd4d7ebc562824712b039f93bbcc",
+   "end": "0x02024818",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/msl_float_arith.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 135,
+     "result": "0x21c bytes: 135 reachable ARM instructions + 0 literal/DATA words tile 0x020245fc-0x02024818",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 37600,
+     "result": "37600 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 540 bytes, 1 relocs -> func_02024838+0 (object vs ROM image)"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "3856a7bf7fffaf57757d9ff815f1af34e2cd90135be57b47dcca9b4c3656f813",
+   "source": "eu/src/asm_stubs/calls/_fadd.s",
+   "source_sha256": "86e2a2e98fea8a909392b378b1d86027c29e5c30acb0a7fe631e2cbaec823f7c",
+   "start": "0x020245fc",
+   "symbol": "_fadd"
+  },
+  "_fdiv": {
+   "doc": "eu/docs/library/msl_float_arith.md",
+   "doc_sha256": "65ce42d8229f336ce0e75e0adcabfd8a5749fd4d7ebc562824712b039f93bbcc",
+   "end": "0x02024e68",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/msl_float_arith.md"
+    },
+    "inventory": {
+     "data_words": 64,
+     "external_literals": 0,
+     "instructions": 174,
+     "result": "0x3b8 bytes: 174 reachable ARM instructions + 64 literal/DATA words tile 0x02024ab0-0x02024e68",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 37600,
+     "result": "37600 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 952 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "ebb0569ce19f6815efb0cdcf0aafb524739ef4b6e3a6dc2092e42402ef686236",
+   "source": "eu/src/asm_stubs/calls/_fdiv.c",
+   "source_sha256": "4399a8e3d87bd46339e078b394495d2316ce5ac7072383a5dd1aa91e124a44ad",
+   "start": "0x02024ab0",
+   "symbol": "_fdiv"
+  },
+  "_feq": {
+   "doc": "eu/docs/library/msl_float_convert.md",
+   "doc_sha256": "f4fd2744c5e997554dcdf2ab781901b656c0f1647d0fa89a5cd3fc746b5c0f2a",
+   "end": "0x020239b0",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/msl_float_convert.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 26,
+     "result": "0x68 bytes: 26 reachable ARM instructions + 0 literal/DATA words tile 0x02023948-0x020239b0"
+    },
+    "semantics": {
+     "cases": 7624,
+     "result": "7624 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 104 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "b8b930efa19ca1d0a51b1f8eb45f326f673e959f4550cec7c5772ee338101c7e",
+   "source": "eu/src/asm_stubs/calls/_feq.c",
+   "source_sha256": "a44fea7b3516baaf5aaf1bb56dcf66b1579b325575b6ba9056fa3b6856d9bc6c",
+   "start": "0x02023948",
+   "symbol": "_feq"
+  },
+  "_ffix": {
+   "doc": "eu/docs/library/msl_float_convert.md",
+   "doc_sha256": "f4fd2744c5e997554dcdf2ab781901b656c0f1647d0fa89a5cd3fc746b5c0f2a",
+   "end": "0x020241f4",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/msl_float_convert.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 13,
+     "result": "0x34 bytes: 13 reachable ARM instructions + 0 literal/DATA words tile 0x020241c0-0x020241f4"
+    },
+    "semantics": {
+     "cases": 4644,
+     "result": "4644 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 52 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "d5fd0208b26ed20e8eb752c2d96599d06f504fdb31f79713269d19abe2fb9e91",
+   "source": "eu/src/asm_stubs/calls/_ffix.c",
+   "source_sha256": "a35172bfb07f52fba3b019e127b9ee3104185ed84bede5fc6aa4600f67f4c235",
+   "start": "0x020241c0",
+   "symbol": "_ffix"
+  },
+  "_ffixu": {
+   "doc": "eu/docs/library/msl_float_convert.md",
+   "doc_sha256": "f4fd2744c5e997554dcdf2ab781901b656c0f1647d0fa89a5cd3fc746b5c0f2a",
+   "end": "0x02024234",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/msl_float_convert.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 16,
+     "result": "0x40 bytes: 16 reachable ARM instructions + 0 literal/DATA words tile 0x020241f4-0x02024234"
+    },
+    "semantics": {
+     "cases": 4644,
+     "result": "4644 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 64 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "bca10f90b1a31d2b3ff9aab49f848e3c98c2e0a2f6df92a6b62e56ebe8c3c7dd",
+   "source": "eu/src/asm_stubs/calls/_ffixu.c",
+   "source_sha256": "37b3c886d0eb1df8a81ea365938fc88cfef52f613f560074cf92b75e680ec119",
+   "start": "0x020241f4",
+   "symbol": "_ffixu"
+  },
+  "_fflt": {
+   "doc": "eu/docs/library/msl_float_convert.md",
+   "doc_sha256": "f4fd2744c5e997554dcdf2ab781901b656c0f1647d0fa89a5cd3fc746b5c0f2a",
+   "end": "0x02023af4",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/msl_float_convert.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 18,
+     "result": "0x48 bytes: 18 reachable ARM instructions + 0 literal/DATA words tile 0x02023aac-0x02023af4"
+    },
+    "semantics": {
+     "cases": 5367,
+     "result": "5367 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 72 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "23ede7780499aa4d14fc532deb5e0ea7b35ee3b155dc70327368c88037330563",
+   "source": "eu/src/asm_stubs/calls/_fflt.c",
+   "source_sha256": "a3835d6b01bacee2f82dbdf1abb0fc265c61ae7d074e927bbd88c21b2d04ee2b",
+   "start": "0x02023aac",
+   "symbol": "_fflt"
+  },
+  "_ffltu": {
+   "doc": "eu/docs/library/msl_float_convert.md",
+   "doc_sha256": "f4fd2744c5e997554dcdf2ab781901b656c0f1647d0fa89a5cd3fc746b5c0f2a",
+   "end": "0x02023b3c",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/msl_float_convert.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 18,
+     "result": "0x48 bytes: 18 reachable ARM instructions + 0 literal/DATA words tile 0x02023af4-0x02023b3c"
+    },
+    "semantics": {
+     "cases": 5367,
+     "result": "5367 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 72 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "770a6347a450031c316f34fcb22fcf452a2bd1a0f2fcd1abb3b7b70f146dd8ba",
+   "source": "eu/src/asm_stubs/calls/_ffltu.c",
+   "source_sha256": "0f4659734746c2acfe6d8556ac81dfe7d2faa0009f903d7c637e07cecc4514f0",
+   "start": "0x02023af4",
+   "symbol": "_ffltu"
+  },
+  "_fgeq": {
+   "doc": "eu/docs/library/msl_float_convert.md",
+   "doc_sha256": "f4fd2744c5e997554dcdf2ab781901b656c0f1647d0fa89a5cd3fc746b5c0f2a",
+   "end": "0x02023828",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/msl_float_convert.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 23,
+     "result": "0x5c bytes: 23 reachable ARM instructions + 0 literal/DATA words tile 0x020237cc-0x02023828"
+    },
+    "semantics": {
+     "cases": 7624,
+     "result": "7624 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 92 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "386719fa984453de893ef70eba0989bb085c318f7ae0adbeac1480436480944a",
+   "source": "eu/src/asm_stubs/calls/_fgeq.c",
+   "source_sha256": "9541eed55ee94e9afb79343c0a2463deb6a6450ad5ea9147c1cc60af14a84365",
+   "start": "0x020237cc",
+   "symbol": "_fgeq"
+  },
+  "_fgr": {
+   "doc": "eu/docs/library/msl_float_convert.md",
+   "doc_sha256": "f4fd2744c5e997554dcdf2ab781901b656c0f1647d0fa89a5cd3fc746b5c0f2a",
+   "end": "0x02023884",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/msl_float_convert.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 23,
+     "result": "0x5c bytes: 23 reachable ARM instructions + 0 literal/DATA words tile 0x02023828-0x02023884"
+    },
+    "semantics": {
+     "cases": 7624,
+     "result": "7624 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 92 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "14781c4eadc2af64900cd3236124dc5851c1e0d73aff5ec1592c0ca0036849a2",
+   "source": "eu/src/asm_stubs/calls/_fgr.c",
+   "source_sha256": "2cb46da6bb3122f774226c51917de62b8155aa832610505f3f6d09b40f80efa8",
+   "start": "0x02023828",
+   "symbol": "_fgr"
+  },
+  "_fleq": {
+   "doc": "eu/docs/library/msl_float_convert.md",
+   "doc_sha256": "f4fd2744c5e997554dcdf2ab781901b656c0f1647d0fa89a5cd3fc746b5c0f2a",
+   "end": "0x020238ec",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/msl_float_convert.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 26,
+     "result": "0x68 bytes: 26 reachable ARM instructions + 0 literal/DATA words tile 0x02023884-0x020238ec"
+    },
+    "semantics": {
+     "cases": 7624,
+     "result": "7624 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 104 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "843c40fd75846b9dfc4d506851d6179e2f7b910a6b0fa8b9ed857077ca064e37",
+   "source": "eu/src/asm_stubs/calls/_fleq.c",
+   "source_sha256": "893fb2746641f1596a0fddc49cf5586e3c7b42705e82c86789734f5cf29e8664",
+   "start": "0x02023884",
+   "symbol": "_fleq"
+  },
+  "_fls": {
+   "doc": "eu/docs/library/msl_float_convert.md",
+   "doc_sha256": "f4fd2744c5e997554dcdf2ab781901b656c0f1647d0fa89a5cd3fc746b5c0f2a",
+   "end": "0x02023948",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/msl_float_convert.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 23,
+     "result": "0x5c bytes: 23 reachable ARM instructions + 0 literal/DATA words tile 0x020238ec-0x02023948"
+    },
+    "semantics": {
+     "cases": 7624,
+     "result": "7624 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 92 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "999e8951fe0432f49ad3a5549f38a01df9936278ce8082e476c7902ead23cd2f",
+   "source": "eu/src/asm_stubs/calls/_fls.c",
+   "source_sha256": "550ca7bd31c7712e9ea37f59006115c49dd721dab8059719010574edabfa9c11",
+   "start": "0x020238ec",
+   "symbol": "_fls"
+  },
+  "_fmul": {
+   "doc": "eu/docs/library/msl_float_arith.md",
+   "doc_sha256": "65ce42d8229f336ce0e75e0adcabfd8a5749fd4d7ebc562824712b039f93bbcc",
+   "end": "0x020245fc",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/msl_float_arith.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 120,
+     "result": "0x1e0 bytes: 120 reachable ARM instructions + 0 literal/DATA words tile 0x0202441c-0x020245fc",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 37600,
+     "result": "37600 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 480 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "21410393c8ab1edc30019dd39efd54e8e35b8ca31c39c92fbd114e2211af8bed",
+   "source": "eu/src/asm_stubs/calls/_fmul.c",
+   "source_sha256": "899e6ed0f7355ebe3a642e6d201add0476455a5ff16273c3fbec6eebbdf51d2a",
+   "start": "0x0202441c",
+   "symbol": "_fmul"
+  },
+  "_frdiv": {
+   "doc": "eu/docs/library/msl_float_arith.md",
+   "doc_sha256": "65ce42d8229f336ce0e75e0adcabfd8a5749fd4d7ebc562824712b039f93bbcc",
+   "end": "0x02024ab0",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/msl_float_arith.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 3,
+     "result": "0xc bytes: 3 reachable ARM instructions + 0 literal/DATA words tile 0x02024aa4-0x02024ab0",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 37600,
+     "result": "37600 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 12 bytes, 0 relocs (object vs ROM image)"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "5ba1e2094e054bddf2ecb653b5b245f6d9d011a21b400525d5235de813c7f229",
+   "source": "eu/src/asm_stubs/calls/_frdiv.s",
+   "source_sha256": "1eaafd9500134d44f0827cc3499684d802696b8d6504d7e759724d12d33f9b56",
+   "start": "0x02024aa4",
+   "symbol": "_frdiv"
+  },
+  "_frsb": {
+   "doc": "eu/docs/library/msl_float_arith.md",
+   "doc_sha256": "65ce42d8229f336ce0e75e0adcabfd8a5749fd4d7ebc562824712b039f93bbcc",
+   "end": "0x0202482c",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/msl_float_arith.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 3,
+     "result": "0xc bytes: 3 reachable ARM instructions + 0 literal/DATA words tile 0x02024820-0x0202482c",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 37600,
+     "result": "37600 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 12 bytes, 0 relocs (object vs ROM image)"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "5ba1e2094e054bddf2ecb653b5b245f6d9d011a21b400525d5235de813c7f229",
+   "source": "eu/src/asm_stubs/calls/_frsb.s",
+   "source_sha256": "58daf571dd464e87306b1efc4453956a22624005214f9ef34fef50df001d6f91",
+   "start": "0x02024820",
+   "symbol": "_frsb"
+  },
+  "_fsub": {
+   "doc": "eu/docs/library/msl_float_arith.md",
+   "doc_sha256": "65ce42d8229f336ce0e75e0adcabfd8a5749fd4d7ebc562824712b039f93bbcc",
+   "end": "0x02024aa4",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/msl_float_arith.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 152,
+     "result": "0x278 bytes: 152 reachable ARM instructions + 0 literal/DATA words + 6 unreachable instruction words tile 0x0202482c-0x02024aa4",
+     "unreachable_words": 6
+    },
+    "semantics": {
+     "cases": 37600,
+     "result": "37600 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 632 bytes, 1 relocs -> func_02024608+0 (object vs ROM image)"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "34b9d8a3a9cd46adc99b3c5d9791825f9878f2c2033d19cd79fa6a3948b38ac9",
+   "source": "eu/src/asm_stubs/calls/_fsub.s",
+   "source_sha256": "58b70279b22c296d3322baded936522262d132a1b4174a68e97427b9f488dab7",
+   "start": "0x0202482c",
+   "symbol": "_fsub"
+  },
+  "_ll_mod": {
+   "doc": "eu/docs/library/msl_div64.md",
+   "doc_sha256": "e1d42351d1f78c9997779b89f878bcfffe835bf33daf093c0ef2321b910268b6",
+   "end": "0x02023bb8",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/msl_div64.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 4,
+     "result": "0x10 bytes: 4 reachable ARM instructions + 0 literal/DATA words tile 0x02023ba8-0x02023bb8",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 35955,
+     "result": "35955 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 16 bytes, 1 relocs -> __ll_div_signed_entry+0 (object vs ROM image)"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "0cfcdfd477eb7435e397b84772021f2fbf7050853cf54815d11154e2be979bd7",
+   "source": "eu/libs/msl/c/asm_stubs/calls/_ll_mod.s",
+   "source_sha256": "0816cd884863cc56c18e667ff989cd9197a9fd5208844e7b158187abd8cd80fa",
+   "start": "0x02023ba8",
+   "symbol": "_ll_mod"
+  },
+  "_ll_sdiv": {
+   "doc": "eu/docs/library/msl_div64.md",
+   "doc_sha256": "e1d42351d1f78c9997779b89f878bcfffe835bf33daf093c0ef2321b910268b6",
+   "end": "0x02023d68",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/msl_div64.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 106,
+     "result": "0x1b0 bytes: 106 reachable ARM instructions + 0 literal/DATA words + 2 unreachable instruction words tile 0x02023bb8-0x02023d68",
+     "unreachable_words": 2
+    },
+    "semantics": {
+     "cases": 35955,
+     "result": "35955 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 432 bytes, 1 relocs -> _s32_div_f+0 (object vs ROM image)"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "d3074a755593af60455da034ffaa8829a18a4a6e3872817c1f2fcb7cc250bfc2",
+   "source": "eu/libs/msl/c/asm_stubs/calls/_ll_sdiv.s",
+   "source_sha256": "afb00bd7450aef8ddbb0d3cd3b6d4d327f1013aabb56a27dd30215b35f091fe7",
+   "start": "0x02023bb8",
+   "symbol": "_ll_sdiv"
+  },
+  "_ll_sfrom_f": {
+   "doc": "eu/docs/library/msl_float_convert.md",
+   "doc_sha256": "f4fd2744c5e997554dcdf2ab781901b656c0f1647d0fa89a5cd3fc746b5c0f2a",
+   "end": "0x02023aac",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/msl_float_convert.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 30,
+     "result": "0x78 bytes: 30 reachable ARM instructions + 0 literal/DATA words tile 0x02023a34-0x02023aac"
+    },
+    "semantics": {
+     "cases": 4644,
+     "result": "4644 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 120 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "273e4e9a92e05daf809abd6eba1a5609797adcbb2261e88330b1c5db0326f604",
+   "source": "eu/src/asm_stubs/calls/_ll_sfrom_f.c",
+   "source_sha256": "691fb25551834e8c7e16b405ce2d31a92199f1fd455b17ce3b2a1b7c4b341d76",
+   "start": "0x02023a34",
+   "symbol": "_ll_sfrom_f"
+  },
+  "_ll_sto_f": {
+   "doc": "eu/docs/library/msl_float_convert.md",
+   "doc_sha256": "f4fd2744c5e997554dcdf2ab781901b656c0f1647d0fa89a5cd3fc746b5c0f2a",
+   "end": "0x02023ba8",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/msl_float_convert.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 27,
+     "result": "0x6c bytes: 27 reachable ARM instructions + 0 literal/DATA words tile 0x02023b3c-0x02023ba8"
+    },
+    "semantics": {
+     "cases": 6154,
+     "result": "6154 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 108 bytes, 1 relocs -> _fflt+12 (object vs ROM image)"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "3fdbaf51ae4b33f6390b1e1785054f9cf4ed053adcb5b71f2fa7047db3613863",
+   "source": "eu/libs/msl/c/asm_stubs/calls/_ll_sto_f.s",
+   "source_sha256": "f34d0dcdd759933f93d2d78aa21a8d58f3fd74d89495a455419dd2482b4074a7",
+   "start": "0x02023b3c",
+   "symbol": "_ll_sto_f"
+  },
+  "_ll_udiv": {
+   "doc": "eu/docs/library/msl_div64.md",
+   "doc_sha256": "e1d42351d1f78c9997779b89f878bcfffe835bf33daf093c0ef2321b910268b6",
+   "end": "0x02023d74",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/msl_div64.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 3,
+     "result": "0xc bytes: 3 reachable ARM instructions + 0 literal/DATA words tile 0x02023d68-0x02023d74",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 11985,
+     "result": "11985 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 12 bytes, 1 relocs -> __ull_div_common+0 (object vs ROM image)"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "1ebc0f6fa62024d985b12560ce08f6c2f79752aed0fd5e0111a55f54acbd802f",
+   "source": "eu/libs/msl/c/asm_stubs/calls/_ll_udiv.s",
+   "source_sha256": "99bfe8b59e1c8e9bf6a75df1d48766ebb0fc0efc57165d50feead0a84a4b06c1",
+   "start": "0x02023d68",
+   "symbol": "_ll_udiv"
+  },
+  "_s32_div_f": {
+   "doc": "eu/docs/library/msl_runtime.md",
+   "doc_sha256": "5b34ecf844683060de15dba561a9de829ea64af8bafee006cc443daa90267c6c",
+   "end": "0x02023fdc",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/msl_runtime.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 131,
+     "result": "0x20c bytes: 131 reachable ARM instructions + 0 literal/DATA words tile 0x02023dd0-0x02023fdc",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 14355,
+     "result": "14355 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 524 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "e8183a62ffe6a54210cd7d025b01431ff792025c1b45a0e8537abd8cec16ccfb",
+   "source": "eu/libs/msl/c/asm_stubs/calls/_s32_div_f.s",
+   "source_sha256": "8031110cebdd25a790e12bf3f17adf48013801d6a5e8fdd07ee3acfc90ed0c1b",
+   "start": "0x02023dd0",
+   "symbol": "_s32_div_f"
+  },
+  "_u32_div_f": {
+   "doc": "eu/docs/library/msl_runtime.md",
+   "doc_sha256": "5b34ecf844683060de15dba561a9de829ea64af8bafee006cc443daa90267c6c",
+   "end": "0x020241c0",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/msl_runtime.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 121,
+     "result": "0x1e4 bytes: 121 reachable ARM instructions + 0 literal/DATA words tile 0x02023fdc-0x020241c0",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 4785,
+     "result": "4785 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 484 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "3b0403581ea03e86bdfc0cde00ea2ca13f522291aec399b93ecdf2fef57944eb",
+   "source": "eu/libs/msl/c/asm_stubs/calls/_u32_div_f.s",
+   "source_sha256": "ad0b2870d749c4335345485177a0334385823a595ce388223e95d1edb7711c2d",
+   "start": "0x02023fdc",
+   "symbol": "_u32_div_f"
+  },
+  "_ull_mod": {
+   "doc": "eu/docs/library/msl_div64.md",
+   "doc_sha256": "e1d42351d1f78c9997779b89f878bcfffe835bf33daf093c0ef2321b910268b6",
+   "end": "0x02023db0",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/msl_div64.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 15,
+     "result": "0x3c bytes: 15 reachable ARM instructions + 0 literal/DATA words tile 0x02023d74-0x02023db0",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 11985,
+     "result": "11985 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 60 bytes, 2 relocs -> __ll_div_magnitude_common+0, _u32_div_not_0_f+0 (object vs ROM image)"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "ec20ea526d86012a89c9257f431ffe738c379a6ebc77dba608657a429fb29b01",
+   "source": "eu/libs/msl/c/asm_stubs/calls/_ull_mod.s",
+   "source_sha256": "e59b3434d242690c0f2fe24caa44a9670c634cb95f451fe9475210ec18315d90",
+   "start": "0x02023d74",
+   "symbol": "_ull_mod"
+  },
+  "func_01ff840c": {
+   "doc": "eu/docs/library/sdk_memory.md",
+   "doc_sha256": "6f5546008b5c407f6a202168d6be4a12ae9c64c225b0ca77f3810121085e90d9",
+   "end": "0x01ff8420",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/sdk_memory.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 5,
+     "result": "0x14 bytes: 5 reachable ARM instructions + 0 literal/DATA words tile 0x01ff840c-0x01ff8420"
+    },
+    "semantics": {
+     "cases": 507,
+     "result": "507 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 20 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "3cfd563af82d5813c8180f4b189a1e34d77a9c562334d174657e0d116c7d988e",
+   "source": "eu/libs/nitro/os/asm_stubs/auto/func_01ff840c.c",
+   "source_sha256": "9050c53af2b613721872745bc809b52e5e0d826e7044f33511556bdab3b9d586",
+   "start": "0x01ff840c",
+   "symbol": "func_01ff840c"
+  },
+  "func_01ff88c4": {
+   "doc": "eu/docs/library/sdk_memory.md",
+   "doc_sha256": "6f5546008b5c407f6a202168d6be4a12ae9c64c225b0ca77f3810121085e90d9",
+   "end": "0x01ff89a8",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/sdk_memory.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 57,
+     "result": "0xe4 bytes: 57 reachable ARM instructions + 0 literal/DATA words tile 0x01ff88c4-0x01ff89a8"
+    },
+    "semantics": {
+     "cases": 2121,
+     "result": "2121 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 228 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "aa4760f488f28c8c5a96399f2055d4017d4902e6d692b99d7f1a43dad50dea4a",
+   "source": "eu/src/asm_stubs/calls/func_01ff88c4.c",
+   "source_sha256": "5a37676aa55075004e6da4942ad72ae73d09bb7a0c2047a781be741891d42e84",
+   "start": "0x01ff88c4",
+   "symbol": "func_01ff88c4"
+  },
+  "func_01ff8ad8": {
+   "doc": "eu/docs/library/sdk_memory.md",
+   "doc_sha256": "6f5546008b5c407f6a202168d6be4a12ae9c64c225b0ca77f3810121085e90d9",
+   "end": "0x01ff8b7c",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/sdk_memory.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 41,
+     "result": "0xa4 bytes: 41 reachable ARM instructions + 0 literal/DATA words tile 0x01ff8ad8-0x01ff8b7c"
+    },
+    "semantics": {
+     "cases": 7627,
+     "result": "7627 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 164 bytes, 4 relocs -> func_01ff8b7c+0, func_01ff8bb8+0, func_01ff8c50+0, func_01ff8ce8+0 (object vs ROM image)"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "dd1498dd7a7bf892bfba268ac4dd34bd3c527024a623696b4b21741f6ee80e1b",
+   "source": "eu/src/asm_stubs/calls/func_01ff8ad8.c",
+   "source_sha256": "b0c4e6cc5e18837287cba77c920672561d8e591e0060df7e76ca0ff90434c6f3",
+   "start": "0x01ff8ad8",
+   "symbol": "func_01ff8ad8"
+  },
+  "func_01ff8b7c": {
+   "doc": "eu/docs/library/sdk_memory.md",
+   "doc_sha256": "6f5546008b5c407f6a202168d6be4a12ae9c64c225b0ca77f3810121085e90d9",
+   "end": "0x01ff8bb8",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/sdk_memory.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 15,
+     "result": "0x3c bytes: 15 reachable ARM instructions + 0 literal/DATA words tile 0x01ff8b7c-0x01ff8bb8"
+    },
+    "semantics": {
+     "cases": 1080,
+     "result": "1080 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 60 bytes, 1 relocs -> func_01ff8d80+0 (object vs ROM image)"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "fce47d74db81caaca3700ba79d5409826469ef3ce476287357fa2847640fad8b",
+   "source": "eu/src/asm_stubs/calls/func_01ff8b7c.c",
+   "source_sha256": "42b033b342d0613a82a1b792cd8ad9e1f4d8a38386c2cbe1e832522b5b8cbfda",
+   "start": "0x01ff8b7c",
+   "symbol": "func_01ff8b7c"
+  },
+  "func_01ff8bb8": {
+   "doc": "eu/docs/library/sdk_memory.md",
+   "doc_sha256": "6f5546008b5c407f6a202168d6be4a12ae9c64c225b0ca77f3810121085e90d9",
+   "end": "0x01ff8c50",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/sdk_memory.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 38,
+     "result": "0x98 bytes: 38 reachable ARM instructions + 0 literal/DATA words tile 0x01ff8bb8-0x01ff8c50"
+    },
+    "semantics": {
+     "cases": 1052,
+     "result": "1052 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 152 bytes, 1 relocs -> func_01ff8d80+0 (object vs ROM image)"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "69f0e6b4590701d7852bf229d71db6af0462b5d416631bfcb73d31d12c1204ce",
+   "source": "eu/src/asm_stubs/calls/func_01ff8bb8.c",
+   "source_sha256": "06c08fc6ad4af60be436553b7702b3afa70329195988dcb9be3904cc9afd2447",
+   "start": "0x01ff8bb8",
+   "symbol": "func_01ff8bb8"
+  },
+  "func_01ff8c50": {
+   "doc": "eu/docs/library/sdk_memory.md",
+   "doc_sha256": "6f5546008b5c407f6a202168d6be4a12ae9c64c225b0ca77f3810121085e90d9",
+   "end": "0x01ff8ce8",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/sdk_memory.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 38,
+     "result": "0x98 bytes: 38 reachable ARM instructions + 0 literal/DATA words tile 0x01ff8c50-0x01ff8ce8"
+    },
+    "semantics": {
+     "cases": 1089,
+     "result": "1089 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 152 bytes, 1 relocs -> func_01ff8d80+0 (object vs ROM image)"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "5fab1583249177cc94951aeeda93dc5a9ce740a225843cbf3cacc2b171c515e9",
+   "source": "eu/src/asm_stubs/calls/func_01ff8c50.c",
+   "source_sha256": "c2c94f4673402de548c09611495c7b263093cbb687a95795511fc527ea68898d",
+   "start": "0x01ff8c50",
+   "symbol": "func_01ff8c50"
+  },
+  "func_01ff8ce8": {
+   "doc": "eu/docs/library/sdk_memory.md",
+   "doc_sha256": "6f5546008b5c407f6a202168d6be4a12ae9c64c225b0ca77f3810121085e90d9",
+   "end": "0x01ff8d80",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/sdk_memory.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 38,
+     "result": "0x98 bytes: 38 reachable ARM instructions + 0 literal/DATA words tile 0x01ff8ce8-0x01ff8d80"
+    },
+    "semantics": {
+     "cases": 1068,
+     "result": "1068 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 152 bytes, 1 relocs -> func_01ff8d80+0 (object vs ROM image)"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "01e62e14456df902705f37399842d5bc397c34a600d88c1033380663fb8ad19a",
+   "source": "eu/src/asm_stubs/calls/func_01ff8ce8.c",
+   "source_sha256": "01443ef3aa7c885e68844bfb07bbd9d68cae9b12f51b474db2be9a3cdf1d185e",
+   "start": "0x01ff8ce8",
+   "symbol": "func_01ff8ce8"
+  },
+  "func_01ff8d80": {
+   "doc": "eu/docs/library/sdk_memory.md",
+   "doc_sha256": "6f5546008b5c407f6a202168d6be4a12ae9c64c225b0ca77f3810121085e90d9",
+   "end": "0x01ff8dc8",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/sdk_memory.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 18,
+     "result": "0x48 bytes: 18 reachable ARM instructions + 0 literal/DATA words tile 0x01ff8d80-0x01ff8dc8"
+    },
+    "semantics": {
+     "cases": 392,
+     "result": "392 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 72 bytes, 0 relocs (object vs ROM image)"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "6a16b3c0fe6ecb156d68c675e57232a50a42b7a2b3777a732afe19892d50ca1d",
+   "source": "eu/src/asm_stubs/calls/func_01ff8d80.c",
+   "source_sha256": "54d26baf59fc2a7703f90a5a6c41c78339f1772acfe295f28eb8c731eae19d0e",
+   "start": "0x01ff8d80",
+   "symbol": "func_01ff8d80"
+  },
+  "func_01ff8dc8": {
+   "doc": "eu/docs/library/sdk_memory.md",
+   "doc_sha256": "6f5546008b5c407f6a202168d6be4a12ae9c64c225b0ca77f3810121085e90d9",
+   "end": "0x01ff8e84",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/sdk_memory.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 47,
+     "result": "0xbc bytes: 47 reachable ARM instructions + 0 literal/DATA words tile 0x01ff8dc8-0x01ff8e84"
+    },
+    "semantics": {
+     "cases": 9224,
+     "result": "9224 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 188 bytes, 5 relocs -> func_01ff8ad8+0, func_01ff8e84+0, func_01ff8ec0+0, func_01ff8f5c+0, func_01ff8ff8+0 (object vs ROM image)"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "ef3c5013ffea6adf1a85d3c0adce71de854b20bc1a7b6af690909e1a60edf33e",
+   "source": "eu/src/asm_stubs/calls/func_01ff8dc8.c",
+   "source_sha256": "84fdb9de3c35622d685b9a5a05222e9a39698e8c6937632a347dd0572e1f1546",
+   "start": "0x01ff8dc8",
+   "symbol": "func_01ff8dc8"
+  },
+  "func_01ff8e84": {
+   "doc": "eu/docs/library/sdk_memory.md",
+   "doc_sha256": "6f5546008b5c407f6a202168d6be4a12ae9c64c225b0ca77f3810121085e90d9",
+   "end": "0x01ff8ec0",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/sdk_memory.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 15,
+     "result": "0x3c bytes: 15 reachable ARM instructions + 0 literal/DATA words tile 0x01ff8e84-0x01ff8ec0"
+    },
+    "semantics": {
+     "cases": 1288,
+     "result": "1288 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 60 bytes, 1 relocs -> func_01ff9094+0 (object vs ROM image)"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "49d643265f810378d34bb38f73f6e2843be74590965d511acfe9749b68d6e68a",
+   "source": "eu/src/asm_stubs/calls/func_01ff8e84.c",
+   "source_sha256": "2711d7f8b679831d2456d15c0cdc62ea50de987ba7cfb01038c07ed69a144c3c",
+   "start": "0x01ff8e84",
+   "symbol": "func_01ff8e84"
+  },
+  "func_01ff8ec0": {
+   "doc": "eu/docs/library/sdk_memory.md",
+   "doc_sha256": "6f5546008b5c407f6a202168d6be4a12ae9c64c225b0ca77f3810121085e90d9",
+   "end": "0x01ff8f5c",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/sdk_memory.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 39,
+     "result": "0x9c bytes: 39 reachable ARM instructions + 0 literal/DATA words tile 0x01ff8ec0-0x01ff8f5c"
+    },
+    "semantics": {
+     "cases": 1294,
+     "result": "1294 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 156 bytes, 1 relocs -> func_01ff9094+0 (object vs ROM image)"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "3fb156f8c618fe96c458b80bf642d46f476e348131336505a25a466bd23177e5",
+   "source": "eu/src/asm_stubs/calls/func_01ff8ec0.c",
+   "source_sha256": "62d391b473535d2a9ff62908549f6d666b771e0842b9d2f4f52b3ad7b2cbf8f7",
+   "start": "0x01ff8ec0",
+   "symbol": "func_01ff8ec0"
+  },
+  "func_01ff8f5c": {
+   "doc": "eu/docs/library/sdk_memory.md",
+   "doc_sha256": "6f5546008b5c407f6a202168d6be4a12ae9c64c225b0ca77f3810121085e90d9",
+   "end": "0x01ff8ff8",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/sdk_memory.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 39,
+     "result": "0x9c bytes: 39 reachable ARM instructions + 0 literal/DATA words tile 0x01ff8f5c-0x01ff8ff8"
+    },
+    "semantics": {
+     "cases": 1294,
+     "result": "1294 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 156 bytes, 1 relocs -> func_01ff9094+0 (object vs ROM image)"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "599ec720d724b08dd8f67853a991e37a4adc4523ec4bcd2e4f57760c10dee0ba",
+   "source": "eu/src/asm_stubs/calls/func_01ff8f5c.c",
+   "source_sha256": "a236457f206392528ab2eee9292254477222aba3def7128484d8776e35d4dd8e",
+   "start": "0x01ff8f5c",
+   "symbol": "func_01ff8f5c"
+  },
+  "func_01ff8ff8": {
+   "doc": "eu/docs/library/sdk_memory.md",
+   "doc_sha256": "6f5546008b5c407f6a202168d6be4a12ae9c64c225b0ca77f3810121085e90d9",
+   "end": "0x01ff9094",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/sdk_memory.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 39,
+     "result": "0x9c bytes: 39 reachable ARM instructions + 0 literal/DATA words tile 0x01ff8ff8-0x01ff9094"
+    },
+    "semantics": {
+     "cases": 1298,
+     "result": "1298 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 156 bytes, 1 relocs -> func_01ff9094+0 (object vs ROM image)"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "1341dd3171e8f7551fc28928940f6abcbde06c1b71edc2fe46ab2d3fe23c2539",
+   "source": "eu/src/asm_stubs/calls/func_01ff8ff8.c",
+   "source_sha256": "86e8ebe8892bb681cbbf2b433683aee7b497c6b6a76c97a025374ba2372b7cc6",
+   "start": "0x01ff8ff8",
+   "symbol": "func_01ff8ff8"
+  },
+  "func_01ff9094": {
+   "doc": "eu/docs/library/sdk_memory.md",
+   "doc_sha256": "6f5546008b5c407f6a202168d6be4a12ae9c64c225b0ca77f3810121085e90d9",
+   "end": "0x01ff90dc",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/sdk_memory.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 18,
+     "result": "0x48 bytes: 18 reachable ARM instructions + 0 literal/DATA words tile 0x01ff9094-0x01ff90dc"
+    },
+    "semantics": {
+     "cases": 392,
+     "result": "392 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 72 bytes, 0 relocs (object vs ROM image)"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "596a19833976d46a5cf9c7dbf37bd7c87458df6dcee15df52364d129f5ce2aa2",
+   "source": "eu/src/asm_stubs/calls/func_01ff9094.c",
+   "source_sha256": "82a68c72939ef9d3d5a433dd23ca1fe4de8c1b50eedcec983ea6aa361aa7d23d",
+   "start": "0x01ff9094",
+   "symbol": "func_01ff9094"
+  },
+  "func_0200093c": {
+   "doc": "eu/docs/library/sdk_memory.md",
+   "doc_sha256": "6f5546008b5c407f6a202168d6be4a12ae9c64c225b0ca77f3810121085e90d9",
+   "end": "0x02000950",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/sdk_memory.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 5,
+     "result": "0x14 bytes: 5 reachable ARM instructions + 0 literal/DATA words tile 0x0200093c-0x02000950"
+    },
+    "semantics": {
+     "cases": 507,
+     "result": "507 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 20 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "3cfd563af82d5813c8180f4b189a1e34d77a9c562334d174657e0d116c7d988e",
+   "source": "eu/libs/nitro/os/asm_stubs/auto/func_0200093c.c",
+   "source_sha256": "1617aef7f2424fbbee6be94f0d0f57ac176920ed2fccf8f46a07396700f071ed",
+   "start": "0x0200093c",
+   "symbol": "func_0200093c"
+  },
+  "func_0200dc4c": {
+   "doc": "eu/docs/library/sdk_math.md",
+   "doc_sha256": "af3240bf4089732f91a19289db6ad8c933f7268e95b0edceabb6831cff659157",
+   "end": "0x0200ded4",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/sdk_math.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 162,
+     "result": "0x288 bytes: 162 reachable ARM instructions + 0 literal/DATA words tile 0x0200dc4c-0x0200ded4",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 2333,
+     "result": "2333 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 648 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "54aa3756d22c704c48e99081f6fbc020ea68f4be1fe4787f5f2564b841ad4502",
+   "source": "eu/libs/nitro/math/asm_stubs/auto/func_0200dc4c.c",
+   "source_sha256": "118c8ad5fbd6aa42f9b76a3357e7f647dd274114ffc9a99b2b86c4dddc81007e",
+   "start": "0x0200dc4c",
+   "symbol": "func_0200dc4c"
+  }
+ },
+ "schema_version": 1
+}

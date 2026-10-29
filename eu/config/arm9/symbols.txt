@@ -1391,8 +1391,11 @@ _ffltu kind:function(arm,size=0x48) addr:0x02023af4
 _ll_sto_f kind:function(arm,size=0x6c) addr:0x02023b3c
 _ll_mod kind:function(arm,size=0x10) addr:0x02023ba8
 _ll_sdiv kind:function(arm,size=0x1b0) addr:0x02023bb8
+__ll_div_signed_entry kind:label(arm) addr:0x02023bc8
+__ll_div_magnitude_common kind:label(arm) addr:0x02023c2c
 _ll_udiv kind:function(arm,size=0xc) addr:0x02023d68
 _ull_mod kind:function(arm,size=0x3c) addr:0x02023d74
+__ull_div_common kind:label(arm) addr:0x02023d7c
 _ll_mul kind:function(arm,size=0x20) addr:0x02023db0
 _s32_div_f kind:function(arm,size=0x20c) addr:0x02023dd0
 _u32_div_f kind:function(arm,size=0x1e4) addr:0x02023fdc

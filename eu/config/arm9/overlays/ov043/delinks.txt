@@ -86,6 +86,10 @@ src/overlays/ov043/auto/func_ov043_020bcce0.c:
     complete
     .text       start:0x020bcce0 end:0x020bcce4
 
+src/overlays/ov043/calls/func_ov043_020bcce4.c:
+    complete
+    .text       start:0x020bcce4 end:0x020bcf64
+
 src/overlays/ov043/calls/EaseCameraVectors.c:
     complete
     .text       start:0x020bcf64 end:0x020bd0a4

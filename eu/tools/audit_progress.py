@@ -3,8 +3,9 @@
 
 Categories:
   c_decompiled_matched  real C source in an auto/ or calls/ directory
-  library_verified      hand-written library assembly (MobiClip) whose source holds a
-                        valid receipt from tools/mobiclip/verify_mobiclip.py
+  library_verified      hand-written library assembly (MobiClip, NitroSDK, MSL) whose
+                        source holds a valid receipt from tools/mobiclip/verify_mobiclip.py
+                        or tools/sdklib/verify_sdklib.py
   asm_stub_matched      ASM-based source (asm_stubs/, inline asm, .s)
   named                 no source yet, but a real (non-placeholder) name
   todo                  no source, placeholder func_XXXXXXXX name
@@ -31,23 +32,32 @@ SUBTREES = ["auto", "calls", "asm_stubs/auto", "asm_stubs/calls"]
 PLACEHOLDER = re.compile(r"^func_(?:ov\d{3}_)?[0-9a-f]{8}$")
 CATEGORIES = ("c_decompiled_matched", "library_verified", "asm_stub_matched", "named", "todo")
 RECEIPTS = ROOT / "mobiclip_receipts.json"
+LIBRARY_RECEIPTS = ROOT / "library_receipts.json"
+
+
+def _sha256_matches(relative, digest):
+    local = ROOT / relative
+    return local.is_file() and hashlib.sha256(local.read_bytes()).hexdigest() == digest
 
 
 def verified_library_sources():
-    """eu-relative source paths whose MobiClip receipt still matches the file.
+    """eu-relative source paths whose library receipt still matches the file.
 
-    The receipts are written by tools/mobiclip/verify_mobiclip.py, which runs the
-    source, inventory and semantic gates; a receipt stops applying as soon as its
-    source changes."""
+    MobiClip receipts are written by tools/mobiclip/verify_mobiclip.py, SDK and
+    MSL routine receipts by tools/sdklib/verify_sdklib.py (which also requires
+    the routine's documentation); a receipt stops applying as soon as its source
+    or documentation changes."""
     out = set()
-    if not RECEIPTS.is_file():
-        return out
-    for receipt in json.loads(RECEIPTS.read_text(encoding="utf-8")).get("receipts", {}).values():
-        source = receipt.get("source", "")
-        if not source.startswith("eu/"):
+    for path in (RECEIPTS, LIBRARY_RECEIPTS):
+        if not path.is_file():
             continue
-        local = ROOT / source[3:]
-        if local.is_file() and hashlib.sha256(local.read_bytes()).hexdigest() == receipt.get("source_sha256"):
+        for receipt in json.loads(path.read_text(encoding="utf-8")).get("receipts", {}).values():
+            source = receipt.get("source", "")
+            if not source.startswith("eu/") or not _sha256_matches(source[3:], receipt.get("source_sha256")):
+                continue
+            doc = receipt.get("doc")
+            if doc is not None and not (doc.startswith("eu/") and _sha256_matches(doc[3:], receipt.get("doc_sha256"))):
+                continue
             out.add(source[3:])
     return out
 

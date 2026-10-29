@@ -7569,6 +7569,10 @@ src/calls/AttachToAnchor.c:
     complete
     .text       start:0x02034d00 end:0x02034d78
 
+src/calls/func_02034d78.c:
+    complete
+    .text       start:0x02034d78 end:0x02034f88
+
 src/calls/Obj_AllocDataBuffers.c:
     complete
     .text       start:0x02034f88 end:0x02035004
@@ -8780,6 +8784,10 @@ src/calls/SweepCapsuleAgainstCapsule.c:
 src/calls/func_020449c8.c:
     complete
     .text       start:0x020449c8 end:0x020456d4
+
+src/calls/func_020456d4.c:
+    complete
+    .text       start:0x020456d4 end:0x02047198
 
 src/calls/SweepIntervalOnAxis.c:
     complete

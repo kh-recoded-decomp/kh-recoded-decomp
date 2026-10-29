@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Generate build/report.json in the objdiff report format for decomp.dev.
 
-Code counts when a real C source is classified as byte-exact, or when a MobiClip
-block holds a verified-library receipt (eu/mobiclip_receipts.json, see
+Code counts when a real C source is classified as byte-exact, or when a library
+block holds a verified-library receipt (eu/mobiclip_receipts.json or
+eu/library_receipts.json, see
 docs/PROGRESS_POLICY.md); those blocks are reported in their own category. DATA
 totals come from each module's section table; matched DATA comes only from
 source-owned ranges retained in delinks.txt after byte-exact verification.
@@ -37,7 +38,7 @@ def category_for(src_path, unit):
 
 def label_for(cid):
     if cid == VERIFIED_LIBRARY:
-        return "MobiClip: verified library (hand-written ARM)"
+        return "Verified library (hand-written ARM: MobiClip, NitroSDK, MSL)"
     if cid == "main":
         return "Main + ITCM + DTCM"
     if cid.startswith("overlays/ov"):

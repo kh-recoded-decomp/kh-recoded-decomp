@@ -249,7 +249,7 @@ func_02022e44:
     pop {r4, lr}
     bx lr
 .L_0368:
-    ldr r1, .L_pool_03b0
+    ldr r1, =0x7ff00000
     orr r1, lr, r1
     mov r0, #0
     pop {r4, lr}
@@ -271,6 +271,5 @@ func_02022e44:
     mov r0, #0
     pop {r4, lr}
     bx lr
-.L_pool_03b0:
-    .word 0x7ff00000
+    .ltorg
     .size _dsub, .-_dsub

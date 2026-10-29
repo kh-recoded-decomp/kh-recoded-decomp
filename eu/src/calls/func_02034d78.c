@@ -1,0 +1,9 @@
+#define AbsDotProduct_0204a96c AbsDotProduct
+#define ConstrainVectorToContacts_02034d64 func_02034d78
+#define ScaleVecFx32InPlace_0204a5e4 ScaleVecFx32InPlace
+#define VEC_CrossProduct_01ff9ea8 VEC_CrossProduct
+#define VEC_DotProduct_01ff9e6c VEC_DotProduct
+#define VEC_NormalizeUnchecked_01ff9f88 VEC_Normalize
+#define VEC_Subtract_01ff9e3c VEC_Subtract
+#define data_02053438 gZeroVecFx32
+#include "src/arm9/spatial_queries/ConstrainVectorToContacts_02034d64.c"

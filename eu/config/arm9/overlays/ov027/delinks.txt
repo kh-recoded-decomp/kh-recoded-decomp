@@ -316,6 +316,10 @@ src/overlays/ov027/calls/func_ov027_020b91d0.c:
     complete
     .text       start:0x020b91d0 end:0x020b91e8
 
+src/overlays/ov027/calls/func_ov027_020b91e8.c:
+    complete
+    .text       start:0x020b91e8 end:0x020b9380
+
 src/overlays/ov027/calls/ResolveWidgetPositionComponents.c:
     complete
     .text       start:0x020b9380 end:0x020b9448

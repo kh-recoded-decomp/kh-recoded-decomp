@@ -81,6 +81,34 @@ The objdiff report published to decomp.dev counts them as matched code under
 their own category, "MobiClip: verified library (hand-written ARM)", so a unit
 whose remaining code is all verified library shows as complete there.
 
+## Verified library code (NitroSDK and MSL)
+
+The NitroSDK and CodeWarrior runtime routines that their authors wrote in
+assembly (division and floating-point helpers, copy and fill kernels, context
+switches) may be reported the same way, in the same `Verified library` column
+and never inside the C figures. Matching bytes alone is not enough: a routine
+counts only when `tools/sdklib/verify_sdklib.py` issues its receipt, which
+requires all of these gates for the checked-in source:
+
+1. **Source.** The asm stub holds instructions, not raw words, and rebuilds the
+   ROM bytes and relocations exactly.
+2. **Inventory.** The instructions reachable from the entry and the literal
+   pools they load tile the routine's symbol range exactly. Instructions no
+   path reaches are allowed only when declared, documented with the evidence
+   that nothing branches to them, and counted separately in the receipt.
+3. **Semantics.** A portable Python model (`tools/sdklib/families/`) and the
+   ROM's own instructions, run in `tools/mobiclip/arm_exec.py`, agree on at least
+   100 random and edge-case inputs, register results, flags and memory alike.
+4. **Documentation.** The routine's section in `docs/library/` states its
+   interface (registers, clobbers, stack and calling convention), its behavior
+   (including edge cases where it differs from C) and its hardware dependencies,
+   so a port can replace it without reading the assembly.
+
+Receipts are kept in `library_receipts.json`. A receipt applies only while both
+the source's and the documentation's SHA-256 are unchanged. Where GCC or Clang
+reproduce such a routine from readable C, that C is preferred and counts as C
+under the rules above; its section in `docs/library/` documents it the same way.
+
 ## ASM stubs
 
 Inline ASM or placeholder assembly for game code may be used temporarily while

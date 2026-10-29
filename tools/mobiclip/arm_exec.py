@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""A small ARMv5TE (ARM state) interpreter for replaying original payload code.
+"""A small ARMv5TE interpreter (ARM state, and a strict THUMB subset) for replaying original code.
 
 Hand-written middleware routines that live in DATA (the MobiClip decoder's
 in-place kernels in ov022) cannot be compared with a C build, so their semantic
@@ -7,8 +7,25 @@ reimplementations are checked by running the ROM's own instructions on the same
 inputs. This interpreter covers the ARM-state integer instruction set those
 routines use: data processing with every shifter form, MUL/MLA and the long and
 DSP multiplies, CLZ, single/halfword/doubleword transfers with every addressing
-mode, LDM/STM, B/BL/BX/BLX. It refuses anything else (coprocessor, SWI, mode
-changes, THUMB) instead of guessing.
+mode, LDM/STM, SWP/SWPB, B/BL/BX/BLX, MRS/MSR restricted to the CPSR condition flags
+(the runtime compare helpers return their result there), and the ARM946E-S CP15
+c7 cache and write-buffer maintenance MCRs, which change no architectural state
+and are only recorded in `Cpu.cp15_log`. An ARM SWI is recorded in
+`Cpu.swi_log` with r0-r3 and otherwise skipped: the BIOS is not emulated, so
+the registers reach the next instruction unchanged. It refuses anything else
+(other coprocessor operations, mode or control-field changes) instead of
+guessing.
+
+THUMB state covers the 16-bit formats the SDK's THUMB routines use: shifts by
+an immediate, ADD/SUB register or 3-bit immediate, MOV/CMP/ADD/SUB 8-bit
+immediate, the sixteen ALU operations, hi-register ADD/CMP/MOV and BX/BLX,
+PC-relative LDR, loads and stores with a register or immediate offset (word,
+byte, halfword, signed), PUSH/POP, LDMIA/STMIA, conditional and unconditional
+B, the BL/BLX prefix-suffix pair (run as one 4-byte instruction) and SWI,
+logged in `Cpu.swi_log` as (8-bit comment, r0-r3). SP-relative transfers,
+ADD to SP/PC, BKPT, undefined and UNPREDICTABLE encodings are refused. BX,
+BLX, POP {pc} and ARM LDR/LDM into pc switch state on bit 0 as ARMv5 does;
+`call()` takes a THUMB entry as address | 1.
 
     cpu = Cpu(Memory())
     cpu.mem.map(0x020b715c, code_bytes)
@@ -72,7 +89,10 @@ class Cpu:
         self.mem = mem
         self.r = [0] * 16
         self.n = self.z = self.c = self.v = 0
+        self.thumb = False
         self.steps = 0
+        self.cp15_log = []                      # (CRm, opcode2, Rd value) per c7 maintenance op
+        self.swi_log = []                       # (comment, (r0, r1, r2, r3)) per SWI: 24-bit ARM, 8-bit THUMB
 
     # -- helpers -----------------------------------------------------------------
     def _reg(self, index: int, pc_offset: int = 8) -> int:
@@ -154,6 +174,25 @@ class Cpu:
             self.next_pc = value & ~3
         else:
             self.r[index] = value
+
+    def _interwork(self, target: int) -> None:
+        """BX-style branch: bit 0 selects THUMB; an ARM target must be word-aligned."""
+        target &= MASK
+        if target & 1:
+            self.thumb = True
+            self.next_pc = target & ~1
+        elif target & 2:
+            raise ArmFault("unaligned ARM branch target 0x%08x at 0x%08x" % (target, self.pc))
+        else:
+            self.thumb = False
+            self.next_pc = target
+
+    def _load_reg(self, index: int, value: int) -> None:
+        """A loaded value: into pc it interworks (ARMv5 LDR/LDM/POP)."""
+        if index == 15:
+            self._interwork(value)
+        else:
+            self.r[index] = value & MASK
 
     # -- instruction classes -----------------------------------------------------
     def _data_processing(self, ins: int) -> None:
@@ -305,7 +344,7 @@ class Cpu:
         if (not pre or wb) and not (load and rn == rd):
             self._write_reg(rn, updated)
         if load:
-            self._write_reg(rd, value)
+            self._load_reg(rd, value)
 
     def _halfword_transfer(self, ins: int) -> None:
         pre = (ins >> 24) & 1
@@ -385,18 +424,283 @@ class Cpu:
             self.r[rn] = final & MASK
         for reg in regs:
             if reg in values:
-                self._write_reg(reg, values[reg])
+                self._load_reg(reg, values[reg])
+
+    def _swap(self, ins: int) -> None:
+        """SWP/SWPB Rd, Rm, [Rn]: read the old value, then write Rm, as one locked access.
+
+        Refuses the UNPREDICTABLE forms (any register r15, Rn equal to Rd or
+        Rm) and a word swap on an unaligned address."""
+        byte = (ins >> 22) & 1
+        rn = (ins >> 16) & 0xF
+        rd = (ins >> 12) & 0xF
+        rm = ins & 0xF
+        if 15 in (rn, rd, rm) or rn in (rd, rm):
+            raise ArmFault("unpredictable swap 0x%08x at 0x%08x" % (ins, self.pc))
+        address = self.r[rn]
+        if not byte and address & 3:
+            raise ArmFault("unaligned SWP at 0x%08x" % self.pc)
+        size = 1 if byte else 4
+        old = self.mem.read(address, size)
+        self.mem.write(address, size, self.r[rm])
+        self._write_reg(rd, old)
+
+    def _status_access(self, ins: int) -> None:
+        """MRS from CPSR and MSR to the CPSR flag field only."""
+        flags = (self.n << 31) | (self.z << 30) | (self.c << 29) | (self.v << 28)
+        if (ins & 0x0FFF0FFF) == 0x010F0000:            # MRS rd, CPSR
+            self._write_reg((ins >> 12) & 0xF, flags | 0x1F)
+            return
+        if (ins & 0x0FFFFFF0) == 0x0128F000:            # MSR CPSR_f, rm
+            value = self.r[ins & 0xF]
+        elif (ins & 0x0FFFF000) == 0x0328F000:          # MSR CPSR_f, #imm
+            rotate = ((ins >> 8) & 0xF) * 2
+            value = ((ins & 0xFF) >> rotate | (ins & 0xFF) << (32 - rotate)) & MASK
+        else:
+            raise ArmFault("status-register access 0x%08x at 0x%08x" % (ins, self.pc))
+        self.n, self.z, self.c, self.v = (value >> 31) & 1, (value >> 30) & 1, (value >> 29) & 1, (value >> 28) & 1
+
+    # ARM946E-S CP15 c7 operations (CRm, opcode2) on caches and the write buffer:
+    # invalidate I-cache (all / line), invalidate D-cache (all / line), clean D line
+    # (address / index), drain write buffer, prefetch I line, clean+invalidate D line
+    # (address / index). Wait-for-interrupt (c0,4 and c8,2) is not among them.
+    CP15_C7_MAINTENANCE = {(5, 0), (5, 1), (6, 0), (6, 1), (10, 1), (10, 2), (10, 4), (13, 1), (14, 1), (14, 2)}
+
+    def _coprocessor(self, ins: int) -> None:
+        """MCR p15, 0, Rd, c7, CRm, op2 for cache/write-buffer maintenance only: recorded, no effect."""
+        crm, opcode2, rd = ins & 0xF, (ins >> 5) & 7, (ins >> 12) & 0xF
+        if (ins & 0x0FFF0F10) != 0x0E070F10 or (crm, opcode2) not in self.CP15_C7_MAINTENANCE or rd == 15:
+            raise ArmFault("coprocessor instruction 0x%08x at 0x%08x" % (ins, self.pc))
+        self.cp15_log.append((crm, opcode2, self.r[rd]))
+
+    # -- THUMB state ---------------------------------------------------------------
+    def _thumb_fault(self, ins: int, what: str = "unsupported THUMB instruction"):
+        raise ArmFault("%s 0x%04x at 0x%08x" % (what, ins, self.pc))
+
+    def _thumb_step(self) -> None:
+        self.pc = self.r[15]
+        if self.pc & 1:
+            raise ArmFault("odd THUMB pc 0x%08x" % self.pc)
+        ins = self.mem.read(self.pc, 2)
+        self.next_pc = (self.pc + 2) & MASK
+        self.steps += 1
+        self._thumb_execute(ins)
+        self.r[15] = self.next_pc
+
+    def _thumb_execute(self, ins: int) -> None:
+        top = ins >> 11
+        if top <= 2:                                    # format 1: LSL/LSR/ASR Rd, Rs, #imm5
+            value, carry = self._shift(self.r[(ins >> 3) & 7], top, (ins >> 6) & 0x1F, False)
+            self.r[ins & 7] = value
+            self._set_nz(value)
+            self.c = carry
+        elif top == 3:                                  # format 2: ADD/SUB Rd, Rs, Rn|#imm3
+            a = self.r[(ins >> 3) & 7]
+            b = (ins >> 6) & 7 if ins & 0x400 else self.r[(ins >> 6) & 7]
+            if ins & 0x200:
+                result, self.c, self.v = self._add(a, (~b) & MASK, 1)
+            else:
+                result, self.c, self.v = self._add(a, b, 0)
+            self.r[ins & 7] = result
+            self._set_nz(result)
+        elif top <= 7:                                  # format 3: MOV/CMP/ADD/SUB Rd, #imm8
+            op, rd, imm = (ins >> 11) & 3, (ins >> 8) & 7, ins & 0xFF
+            if op == 0:
+                result = imm
+            elif op == 2:
+                result, self.c, self.v = self._add(self.r[rd], imm, 0)
+            else:
+                result, self.c, self.v = self._add(self.r[rd], (~imm) & MASK, 1)
+            if op != 1:
+                self.r[rd] = result
+            self._set_nz(result)
+        elif (ins >> 10) == 0x10:                       # format 4: ALU operations
+            self._thumb_alu(ins)
+        elif (ins >> 10) == 0x11:                       # format 5: hi-register operations, BX/BLX
+            self._thumb_hi(ins)
+        elif top == 9:                                  # format 6: LDR Rd, [pc, #imm8*4]
+            address = ((self.pc + 4) & ~3) + (ins & 0xFF) * 4
+            self.r[(ins >> 8) & 7] = self.mem.read(address, 4)
+        elif (ins >> 12) == 5:                          # formats 7/8: register offset
+            address = (self.r[(ins >> 3) & 7] + self.r[(ins >> 6) & 7]) & MASK
+            kind = ("str", "strh", "strb", "ldrsb", "ldr", "ldrh", "ldrb", "ldrsh")[(ins >> 9) & 7]
+            self._thumb_transfer(ins & 7, address, kind)
+        elif (ins >> 13) == 3:                          # format 9: immediate offset, word/byte
+            byte, load = (ins >> 12) & 1, (ins >> 11) & 1
+            offset = ((ins >> 6) & 0x1F) * (1 if byte else 4)
+            address = (self.r[(ins >> 3) & 7] + offset) & MASK
+            self._thumb_transfer(ins & 7, address, ("str", "ldr", "strb", "ldrb")[byte * 2 + load])
+        elif (ins >> 12) == 8:                          # format 10: immediate offset, halfword
+            address = (self.r[(ins >> 3) & 7] + ((ins >> 6) & 0x1F) * 2) & MASK
+            self._thumb_transfer(ins & 7, address, "ldrh" if ins & 0x800 else "strh")
+        elif (ins & 0xF600) == 0xB400:                  # format 14: PUSH {list, lr} / POP {list, pc}
+            self._thumb_push_pop(ins)
+        elif (ins >> 12) == 0xC:                        # format 15: LDMIA/STMIA Rb!, {list}
+            self._thumb_multiple(ins)
+        elif (ins >> 12) == 0xD:
+            cond = (ins >> 8) & 0xF
+            if cond == 0xF:                             # format 17: SWI, logged, BIOS not run
+                self.swi_log.append((ins & 0xFF, tuple(self.r[0:4])))
+            elif cond == 0xE:
+                self._thumb_fault(ins, "undefined THUMB instruction")
+            elif self._cond(cond):                      # format 16: B<cond>
+                self.next_pc = (self.pc + 4 + (_sx(ins & 0xFF, 8) << 1)) & MASK
+        elif top == 0x1C:                               # format 18: B
+            self.next_pc = (self.pc + 4 + (_sx(ins & 0x7FF, 11) << 1)) & MASK
+        elif top == 0x1E:                               # format 19: BL/BLX prefix + suffix
+            self._thumb_long_branch(ins)
+        else:
+            self._thumb_fault(ins)
+
+    def _thumb_transfer(self, rd: int, address: int, kind: str) -> None:
+        size = {"ldr": 4, "str": 4, "ldrh": 2, "strh": 2, "ldrsh": 2}.get(kind, 1)
+        if address % size:
+            raise ArmFault("unaligned THUMB %s at 0x%08x (address 0x%08x)" % (kind, self.pc, address))
+        if kind.startswith("str"):
+            self.mem.write(address, size, self.r[rd])
+            return
+        value = self.mem.read(address, size)
+        if kind == "ldrsb":
+            value = _sx(value, 8) & MASK
+        elif kind == "ldrsh":
+            value = _sx(value, 16) & MASK
+        self.r[rd] = value
+
+    def _thumb_alu(self, ins: int) -> None:
+        op, rd, rm = (ins >> 6) & 0xF, ins & 7, (ins >> 3) & 7
+        a, b = self.r[rd], self.r[rm]
+        write = True
+        if op == 0:                                     # AND
+            result = a & b
+        elif op == 1:                                   # EOR
+            result = a ^ b
+        elif op in (2, 3, 4, 7):                        # LSL, LSR, ASR, ROR by register
+            result, self.c = self._shift(a, {2: 0, 3: 1, 4: 2, 7: 3}[op], b & 0xFF, True)
+        elif op == 5:                                   # ADC
+            result, self.c, self.v = self._add(a, b, self.c)
+        elif op == 6:                                   # SBC
+            result, self.c, self.v = self._add(a, (~b) & MASK, self.c)
+        elif op == 8:                                   # TST
+            result, write = a & b, False
+        elif op == 9:                                   # NEG
+            result, self.c, self.v = self._add(0, (~b) & MASK, 1)
+        elif op == 10:                                  # CMP
+            (result, self.c, self.v), write = self._add(a, (~b) & MASK, 1), False
+        elif op == 11:                                  # CMN
+            (result, self.c, self.v), write = self._add(a, b, 0), False
+        elif op == 12:                                  # ORR
+            result = a | b
+        elif op == 13:                                  # MUL (ARMv5: C and V unaffected)
+            result = (a * b) & MASK
+        elif op == 14:                                  # BIC
+            result = a & ~b & MASK
+        else:                                           # MVN
+            result = (~b) & MASK
+        if write:
+            self.r[rd] = result
+        self._set_nz(result)
+
+    def _thumb_hi(self, ins: int) -> None:
+        op, h1, h2 = (ins >> 8) & 3, (ins >> 7) & 1, (ins >> 6) & 1
+        rd, rm = (ins & 7) | (h1 << 3), ((ins >> 3) & 7) | (h2 << 3)
+        value = (self.pc + 4) & MASK if rm == 15 else self.r[rm]
+        if op == 3:                                     # BX / BLX Rm
+            if ins & 7:
+                self._thumb_fault(ins, "BX/BLX with non-zero SBZ bits")
+            if h1:
+                if rm == 15:
+                    self._thumb_fault(ins, "BLX pc")
+                self.r[14] = ((self.pc + 2) | 1) & MASK
+            self._interwork(value)
+            return
+        if not (h1 or h2):
+            self._thumb_fault(ins, "UNPREDICTABLE low-register hi operation")
+        current = (self.pc + 4) & MASK if rd == 15 else self.r[rd]
+        if op == 1:                                     # CMP
+            result, self.c, self.v = self._add(current, (~value) & MASK, 1)
+            self._set_nz(result)
+            return
+        result = (current + value) & MASK if op == 0 else value
+        if rd == 15:                                    # ADD/MOV pc: branch, stays THUMB
+            self.next_pc = result & ~1
+        else:
+            self.r[rd] = result
+
+    def _thumb_push_pop(self, ins: int) -> None:
+        load, extra = (ins >> 11) & 1, (ins >> 8) & 1
+        regs = [i for i in range(8) if ins & (1 << i)] + ([15 if load else 14] if extra else [])
+        if not regs:
+            self._thumb_fault(ins, "empty PUSH/POP list")
+        sp = self.r[13]
+        if sp & 3:
+            raise ArmFault("unaligned sp 0x%08x at 0x%08x" % (sp, self.pc))
+        if load:
+            values = [self.mem.read(sp + 4 * k, 4) for k in range(len(regs))]
+            self.r[13] = (sp + 4 * len(regs)) & MASK
+            for reg, value in zip(regs, values):
+                self._load_reg(reg, value)
+        else:
+            sp = (sp - 4 * len(regs)) & MASK
+            for k, reg in enumerate(regs):
+                self.mem.write(sp + 4 * k, 4, self.r[reg])
+            self.r[13] = sp
+
+    def _thumb_multiple(self, ins: int) -> None:
+        load, rb = (ins >> 11) & 1, (ins >> 8) & 7
+        regs = [i for i in range(8) if ins & (1 << i)]
+        if not regs:
+            self._thumb_fault(ins, "empty LDMIA/STMIA list")
+        if not load and rb in regs and rb != regs[0]:
+            self._thumb_fault(ins, "UNPREDICTABLE STMIA storing a written-back base")
+        base = self.r[rb]
+        if base & 3:
+            raise ArmFault("unaligned LDMIA/STMIA base 0x%08x at 0x%08x" % (base, self.pc))
+        values = {}
+        for k, reg in enumerate(regs):
+            if load:
+                values[reg] = self.mem.read(base + 4 * k, 4)
+            else:
+                self.mem.write(base + 4 * k, 4, self.r[reg])
+        if not (load and rb in regs):                   # ARMv5: no writeback when the base is loaded
+            self.r[rb] = (base + 4 * len(regs)) & MASK
+        for reg, value in values.items():
+            self.r[reg] = value
+
+    def _thumb_long_branch(self, ins: int) -> None:
+        """BL/BLX prefix (11110) and its suffix (11111 BL, 11101 BLX) as one instruction."""
+        suffix = self.mem.read(self.pc + 2, 2)
+        kind = suffix >> 11
+        if kind not in (0x1F, 0x1D):
+            self._thumb_fault(ins, "BL/BLX prefix without a suffix")
+        target = (self.pc + 4 + (_sx(ins & 0x7FF, 11) << 12) + ((suffix & 0x7FF) << 1)) & MASK
+        self.r[14] = ((self.pc + 4) | 1) & MASK
+        if kind == 0x1F:
+            self.next_pc = target
+        else:
+            if suffix & 1:
+                self._thumb_fault(suffix, "BLX suffix with bit 0 set")
+            self.thumb = False
+            self.next_pc = target & ~3
 
     # -- execution ---------------------------------------------------------------
     def step(self) -> None:
+        if self.thumb:
+            self._thumb_step()
+            return
         self.pc = self.r[15]
+        if self.pc & 3:
+            raise ArmFault("unaligned ARM pc 0x%08x" % self.pc)
         ins = self.mem.read(self.pc, 4)
         self.next_pc = (self.pc + 4) & MASK
         cond = ins >> 28
         self.steps += 1
         if cond == 0xF:
-            if (ins & 0x0E000000) == 0x0A000000:        # BLX immediate
-                raise ArmFault("BLX to THUMB at 0x%08x" % self.pc)
+            if (ins & 0x0E000000) == 0x0A000000:        # BLX immediate: always to THUMB
+                self.r[14] = (self.pc + 4) & MASK
+                self.thumb = True
+                self.next_pc = (self.pc + 8 + (_sx(ins & 0xFFFFFF, 24) << 2) + ((ins >> 23) & 2)) & MASK
+                self.r[15] = self.next_pc
+                return
             raise ArmFault("unconditional-space instruction 0x%08x at 0x%08x" % (ins, self.pc))
         if self._cond(cond):
             self._execute(ins)
@@ -404,16 +708,13 @@ class Cpu:
 
     def _execute(self, ins: int) -> None:
         if (ins & 0x0FFFFFF0) == 0x012FFF10:            # BX
-            target = self.r[ins & 0xF]
-            if target & 1:
-                raise ArmFault("BX to THUMB at 0x%08x" % self.pc)
-            self.next_pc = target & ~3
+            self._interwork(self._reg(ins & 0xF))
         elif (ins & 0x0FFFFFF0) == 0x012FFF30:          # BLX register
+            if ins & 0xF == 15:
+                raise ArmFault("BLX pc at 0x%08x" % self.pc)
             target = self.r[ins & 0xF]
-            if target & 1:
-                raise ArmFault("BLX to THUMB at 0x%08x" % self.pc)
             self.r[14] = (self.pc + 4) & MASK
-            self.next_pc = target & ~3
+            self._interwork(target)
         elif (ins & 0x0FFF0FF0) == 0x016F0F10:          # CLZ
             value = self.r[ins & 0xF]
             self._write_reg((ins >> 12) & 0xF, 32 - value.bit_length())
@@ -425,11 +726,14 @@ class Cpu:
             self._dsp_multiply(ins)
         elif (ins & 0x0E000090) == 0x00000090 and (ins & 0x60):
             self._halfword_transfer(ins)
-        elif (ins & 0x0F900FF0) == 0x01000050 or (ins & 0x0FB00FF0) == 0x01000090:
-            raise ArmFault("saturating/swap instruction 0x%08x at 0x%08x" % (ins, self.pc))
+        elif (ins & 0x0FB00FF0) == 0x01000090:
+            self._swap(ins)
+        elif (ins & 0x0F900FF0) == 0x01000050:
+            raise ArmFault("saturating instruction 0x%08x at 0x%08x" % (ins, self.pc))
         elif (ins & 0x0C000000) == 0x00000000:
             if (ins & 0x01900000) == 0x01000000:
-                raise ArmFault("status-register access 0x%08x at 0x%08x" % (ins, self.pc))
+                self._status_access(ins)
+                return
             self._data_processing(ins)
         elif (ins & 0x0C000000) == 0x04000000:
             if (ins & 0x02000010) == 0x02000010:
@@ -441,19 +745,27 @@ class Cpu:
             if ins & (1 << 24):
                 self.r[14] = (self.pc + 4) & MASK
             self.next_pc = (self.pc + 8 + (_sx(ins & 0xFFFFFF, 24) << 2)) & MASK
+        elif (ins & 0x0F000010) == 0x0E000010:
+            self._coprocessor(ins)
+        elif (ins & 0x0F000000) == 0x0F000000:          # SWI: logged, BIOS not run
+            self.swi_log.append((ins & 0xFFFFFF, tuple(self.r[0:4])))
         else:
             raise ArmFault("unsupported instruction 0x%08x at 0x%08x" % (ins, self.pc))
 
     def call(self, entry: int, args=(), sp: int | None = None, limit: int = 50_000_000) -> int:
-        """Run a function until it returns to the sentinel; returns r0."""
+        """Run a function (THUMB if entry bit 0 is set) until it returns to the sentinel; returns r0.
+
+        The sentinel is an ARM address, so a THUMB routine's `bx lr` or `pop {pc}`
+        returns to it by switching state, as it would to an ARM caller."""
         for i, value in enumerate(args):
             self.r[i] = value & MASK
         if sp is not None:
             self.r[13] = sp
         self.r[14] = RETURN_SENTINEL
-        self.r[15] = entry
+        self.thumb = bool(entry & 1)
+        self.r[15] = entry & ~1
         start = self.steps
-        while self.r[15] != RETURN_SENTINEL:
+        while self.thumb or self.r[15] != RETURN_SENTINEL:
             if self.steps - start > limit:
                 raise ArmFault("step limit reached at 0x%08x" % self.r[15])
             self.step()

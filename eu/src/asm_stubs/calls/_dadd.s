@@ -201,7 +201,7 @@ func_02022b14:
     pop {r4, lr}
     bx lr
 .L_02bc:
-    ldr r1, .L_pool_0314
+    ldr r1, =0x7ff00000
     orr r1, lr, r1
     mov r0, #0
     pop {r4, lr}
@@ -221,11 +221,10 @@ func_02022b14:
     cmp ip, #0x800
     movge lr, #0x80000000
     movlt lr, #0
-    ldr r1, .L_pool_0314
+    ldr r1, =0x7ff00000
     orr r1, lr, r1
     mov r0, #0
     pop {r4, lr}
     bx lr
-.L_pool_0314:
-    .word 0x7ff00000
+    .ltorg
     .size _dadd, .-_dadd
