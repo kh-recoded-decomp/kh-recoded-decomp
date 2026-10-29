@@ -186,6 +186,37 @@
    "start": "0x02000656",
    "symbol": "Div"
   },
+  "GX_SendFifo48B": {
+   "doc": "eu/docs/library/sdk_gx.md",
+   "doc_sha256": "d6217ba650a676f8e4b6366fd07407d52d6ac25c95b01f701ca7c168b9a6a778",
+   "end": "0x01ffa1e8",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/sdk_gx.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 9,
+     "result": "0x24 bytes: 9 reachable ARM instructions + 0 literal/DATA words tile 0x01ffa1c4-0x01ffa1e8",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 400,
+     "result": "400 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 36 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "ecb39de0efdc5098c0ec15af8680ae4059d24aa68073f502354c1a80dab27a84",
+   "source": "eu/libs/nitro/gx/asm_stubs/auto/GX_SendFifo48B.c",
+   "source_sha256": "ec044b6a8f5cbd5b37b853b12a32c6c99a6e30d1d39b3a0fa26af03c8748d28c",
+   "start": "0x01ffa1c4",
+   "symbol": "GX_SendFifo48B"
+  },
   "GetCRC16": {
    "doc": "eu/docs/library/sdk_bios.md",
    "doc_sha256": "6b4e86620a274f1fbdd65cdce4b84d278b777f07d80739aee5f3c359a3ac9710",

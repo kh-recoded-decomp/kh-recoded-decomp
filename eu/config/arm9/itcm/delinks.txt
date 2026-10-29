@@ -317,7 +317,7 @@ libs/nitro/gx/calls/G3_MultMtx33.c:
     complete
     .text       start:0x01ffa1a8 end:0x01ffa1c4
 
-libs/nitro/gx/auto/GX_SendFifo48B.c:
+libs/nitro/gx/asm_stubs/auto/GX_SendFifo48B.c:
     complete
     .text       start:0x01ffa1c4 end:0x01ffa1e8
 
