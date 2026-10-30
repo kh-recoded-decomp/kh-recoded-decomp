@@ -192,6 +192,7 @@ def gate_source_object(routine: Routine, symbols: dict) -> str:
 
 def gate_inventory(routine: Routine, symbols: dict, mem: Memory) -> dict:
     from capstone import CS_ARCH_ARM, CS_MODE_ARM, Cs
+    from capstone.arm import ARM_CC_AL
     start, size, mode = symbols[routine.symbol]
     size = routine.extent or size
     if mode == "thumb":
@@ -229,7 +230,7 @@ def gate_inventory(routine: Routine, symbols: dict, mem: Memory) -> dict:
                     todo.append(target)
             if ins.mnemonic == "b" or (ins.mnemonic == "bx" and ins.op_str == "lr") \
                     or ("pc" in ins.op_str.split(",")[0] and ins.mnemonic in ("mov", "ldr", "sub", "add")) \
-                    or (ins.mnemonic.startswith(("pop", "ldm")) and "pc" in ins.op_str and len(ins.mnemonic) <= 5):
+                    or (ins.mnemonic.startswith(("pop", "ldm")) and "pc" in ins.op_str and ins.cc in (0, ARM_CC_AL)):
                 break
             pc += 4
     if dead & code:

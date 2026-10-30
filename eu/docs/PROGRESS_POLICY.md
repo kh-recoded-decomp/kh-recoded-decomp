@@ -137,6 +137,13 @@ module gate. It is an authorized assembly exception, not pure C, and must be
 reported separately without increasing real-C progress. Authorization alone
 does not add verified bytes or change the report totals.
 
+When such a function is NitroSDK library code rather than game code, it may be
+reported as verified library code under the four gates above, never as C: its
+model lives in `tools/sdklib/families/` and its documentation in
+`docs/library/`. The wireless helper's `WH_StateInStartScan` (ov015, the SDK's
+`MATH_CountLeadingZeros` inlined in `wh.c`) is the one case so far, documented
+in `docs/library/sdk_wh.md`.
+
 ## Named functions
 
 A function may have a known name (for example a NitroSDK name carried over from

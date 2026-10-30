@@ -1669,6 +1669,37 @@
    "start": "0x020002fa",
    "symbol": "VBlankIntrWait"
   },
+  "WH_StateInStartScan": {
+   "doc": "eu/docs/library/sdk_wh.md",
+   "doc_sha256": "97516e0ccf4bb3e242312671f0c287b0c40a5b02c86bb66a709dd1a91000749b",
+   "end": "0x02073f34",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/sdk_wh.md"
+    },
+    "inventory": {
+     "data_words": 5,
+     "external_literals": 0,
+     "instructions": 65,
+     "result": "0x118 bytes: 65 reachable ARM instructions + 5 literal/DATA words tile 0x02073e1c-0x02073f34",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 300,
+     "result": "300 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 280 bytes, 12 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "d57336c3df4d2a0bee2c870172e6c4f432172f280e8de38f003bc22b8794adaf",
+   "source": "eu/src/overlays/ov015/calls/WH_StateInStartScan.c",
+   "source_sha256": "7c8b36827f380393dce0d0ee83913a0583f5af07eda702720d16327cf2ad1f6b",
+   "start": "0x02073e1c",
+   "symbol": "WH_StateInStartScan"
+  },
   "WaitByLoop": {
    "doc": "eu/docs/library/sdk_bios.md",
    "doc_sha256": "6b4e86620a274f1fbdd65cdce4b84d278b777f07d80739aee5f3c359a3ac9710",
