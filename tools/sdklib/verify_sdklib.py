@@ -32,6 +32,7 @@ import argparse
 import hashlib
 import importlib
 import json
+import os
 import random
 import re
 import sys
@@ -79,6 +80,7 @@ class Routine:
     extent: int | None = None       # bytes to inventory when the symbol size is not the routine
     object_gate: bool = False       # check branches into other routines against the ROM image
     unreachable: tuple = ()         # (start, end) code no path reaches; documented, reported apart
+    module: str | None = None       # overlay holding the routine (e.g. "ov104"); main and ITCM are always mapped
 
 
 def load_symbols() -> dict:
@@ -93,11 +95,25 @@ def load_symbols() -> dict:
     return out
 
 
-def rom_memory() -> Memory:
+def overlay_base(module: str) -> int:
+    """Load address of an overlay, from the extracted overlay table."""
+    table = (EU / "dsd_extract" / "arm9_overlays" / "overlays.yaml").read_text(encoding="utf-8")
+    number = int(module[2:])
+    for block in re.split(r"\n\s*- ", table):
+        if re.search(r"^\s*id:\s*%d\s*$" % number, block, re.M):
+            return int(re.search(r"base_address:\s*(\d+)", block).group(1))
+    raise AssertionError("no overlay " + module)
+
+
+def rom_memory(module: str | None = None) -> Memory:
     mem = Memory()
     main = bytearray(MAIN_SIZE)
     image = (EU / "dsd_extract" / "arm9" / "arm9.bin").read_bytes()
     main[:len(image)] = image
+    if module:                      # overlays load into main RAM above the ARM9 image
+        image = (EU / "dsd_extract" / "arm9_overlays" / (module + ".bin")).read_bytes()
+        base = overlay_base(module) - MAIN_BASE
+        main[base:base + len(image)] = image
     mem.map(MAIN_BASE, main)
     itcm = bytearray(ITCM_SIZE)
     image = (EU / "dsd_extract" / "arm9" / "itcm.bin").read_bytes()
@@ -138,7 +154,7 @@ def gate_source_object(routine: Routine, symbols: dict) -> str:
     from elftools.elf.elffile import ELFFile
     start, size, mode = symbols[routine.symbol]
     obj = match.compile_c(str(EU / routine.source), mode == "thumb")
-    rom = rom_memory().bytes(start, size)
+    rom = rom_memory(routine.module).bytes(start, size)
     resolved = []
     with open(obj, "rb") as fh:
         elf = ELFFile(fh)
@@ -358,12 +374,13 @@ def main() -> int:
     parser.add_argument("names", nargs="*")
     parser.add_argument("--check", action="store_true", help="verify without writing receipts")
     args = parser.parse_args()
+    os.chdir(EU)                    # stubs include "src/..." headers relative to eu/, as the build does
     symbols = load_symbols()
     routines = [r for r in registered() if not args.names or r.symbol in args.names]
     receipts = json.loads(RECEIPTS.read_text(encoding="utf-8")) if RECEIPTS.is_file() else {"schema_version": 1, "receipts": {}}
     failed = 0
     for routine in routines:
-        mem = rom_memory()
+        mem = rom_memory(routine.module)
         start, size, _ = symbols[routine.symbol]
         try:
             gates = {"source": {"result": gate_source(routine, symbols)},
@@ -380,7 +397,7 @@ def main() -> int:
             "source": "eu/" + routine.source, "source_sha256": sha256(EU / routine.source),
             "doc": "eu/" + routine.doc, "doc_sha256": sha256(EU / routine.doc),
             "start": "0x%08x" % start, "end": "0x%08x" % (start + size),
-            "sha256": hashlib.sha256(rom_memory().bytes(start, size)).hexdigest(), "gates": gates}
+            "sha256": hashlib.sha256(rom_memory(routine.module).bytes(start, size)).hexdigest(), "gates": gates}
     if not args.check:
         RECEIPTS.write_text(json.dumps(receipts, indent=1, sort_keys=True) + "\n", encoding="utf-8", newline="\n")
     return 1 if failed else 0

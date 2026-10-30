@@ -186,6 +186,68 @@
    "start": "0x02000656",
    "symbol": "Div"
   },
+  "Encryptor_DecodeFunctionTable": {
+   "doc": "eu/docs/library/dsprot.md",
+   "doc_sha256": "fd8967e53f99dbb8f0c6cfc57d0cf095f650b9f20b3d6adfcd759680bae3641c",
+   "end": "0x020d2770",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/dsprot.md"
+    },
+    "inventory": {
+     "data_words": 4,
+     "external_literals": 0,
+     "instructions": 72,
+     "result": "0x130 bytes: 72 reachable ARM instructions + 4 literal/DATA words tile 0x020d2640-0x020d2770",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 120,
+     "result": "120 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 304 bytes, 2 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "35bd07213c04a4405f776fd018e95d5c31f550bd2b72aa579cb47826af446cdc",
+   "source": "eu/src/overlays/ov104/calls/Encryptor_DecodeFunctionTable.c",
+   "source_sha256": "dbfc392cc58bf30557200baf9704d2bd73800c8a645be4b9385ddff04c7af149",
+   "start": "0x020d2640",
+   "symbol": "Encryptor_DecodeFunctionTable"
+  },
+  "Encryptor_DecryptionWrapperFragment": {
+   "doc": "eu/docs/library/dsprot.md",
+   "doc_sha256": "fd8967e53f99dbb8f0c6cfc57d0cf095f650b9f20b3d6adfcd759680bae3641c",
+   "end": "0x020d2958",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/dsprot.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 20,
+     "result": "0x50 bytes: 20 reachable ARM instructions + 0 literal/DATA words tile 0x020d2908-0x020d2958",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 150,
+     "result": "150 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 80 bytes, 2 relocs -> Encryptor_DecryptFunction+0, Encryptor_EncryptFunction+0 (object vs ROM image)"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "530e88f41fa5154c7847929b5a044f516ae46c73a346001cee6db7173584deac",
+   "source": "eu/src/overlays/ov104/calls/Encryptor_DecryptionWrapperFragment.c",
+   "source_sha256": "0060c1b6d91c5883a077937242ac3d89c36bd5a73d9a1654e0482de313596620",
+   "start": "0x020d2908",
+   "symbol": "Encryptor_DecryptionWrapperFragment"
+  },
   "GX_SendFifo48B": {
    "doc": "eu/docs/library/sdk_gx.md",
    "doc_sha256": "d6217ba650a676f8e4b6366fd07407d52d6ac25c95b01f701ca7c168b9a6a778",
@@ -1173,6 +1235,347 @@
    "start": "0x0200049a",
    "symbol": "RLUnCompReadNormalWrite8bit"
   },
+  "RunEncrypted_Dummy_IsBad": {
+   "doc": "eu/docs/library/dsprot.md",
+   "doc_sha256": "fd8967e53f99dbb8f0c6cfc57d0cf095f650b9f20b3d6adfcd759680bae3641c",
+   "end": "0x020d31a8",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/dsprot.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 9,
+     "result": "0x24 bytes: 9 reachable ARM instructions + 0 literal/DATA words tile 0x020d3184-0x020d31a8",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 150,
+     "result": "150 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 36 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "71010c84fe17f0f70f9231793cba02a6dcdd7480a618ab87a7b61233e0c5128e",
+   "source": "eu/src/overlays/ov104/asm_stubs/calls/RunEncrypted_Dummy_IsBad.c",
+   "source_sha256": "b79cd3e91836603034eb7032d4b55f6767be60ac79aca6d9ba9d34f2345371f6",
+   "start": "0x020d3184",
+   "symbol": "RunEncrypted_Dummy_IsBad"
+  },
+  "RunEncrypted_Dummy_IsGood": {
+   "doc": "eu/docs/library/dsprot.md",
+   "doc_sha256": "fd8967e53f99dbb8f0c6cfc57d0cf095f650b9f20b3d6adfcd759680bae3641c",
+   "end": "0x020d31e4",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/dsprot.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 9,
+     "result": "0x24 bytes: 9 reachable ARM instructions + 0 literal/DATA words tile 0x020d31c0-0x020d31e4",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 150,
+     "result": "150 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 36 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "71010c84fe17f0f70f9231793cba02a6dcdd7480a618ab87a7b61233e0c5128e",
+   "source": "eu/src/overlays/ov104/asm_stubs/calls/RunEncrypted_Dummy_IsGood.c",
+   "source_sha256": "a35a30504be1d3ee9e1946178bfa69ff47dba0eb84ed933ece18610b45a0d14d",
+   "start": "0x020d31c0",
+   "symbol": "RunEncrypted_Dummy_IsGood"
+  },
+  "RunEncrypted_Integrity_MACOwner_IsBad": {
+   "doc": "eu/docs/library/dsprot.md",
+   "doc_sha256": "fd8967e53f99dbb8f0c6cfc57d0cf095f650b9f20b3d6adfcd759680bae3641c",
+   "end": "0x020d2504",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/dsprot.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 9,
+     "result": "0x24 bytes: 9 reachable ARM instructions + 0 literal/DATA words tile 0x020d24e0-0x020d2504",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 150,
+     "result": "150 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 36 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "71010c84fe17f0f70f9231793cba02a6dcdd7480a618ab87a7b61233e0c5128e",
+   "source": "eu/src/overlays/ov104/asm_stubs/calls/RunEncrypted_Integrity_MACOwner_IsBad.c",
+   "source_sha256": "68d66d82addb50621a81d2c5d4c8fae1367db7edc329e681724c904cea3315bf",
+   "start": "0x020d24e0",
+   "symbol": "RunEncrypted_Integrity_MACOwner_IsBad"
+  },
+  "RunEncrypted_Integrity_MACOwner_IsGood": {
+   "doc": "eu/docs/library/dsprot.md",
+   "doc_sha256": "fd8967e53f99dbb8f0c6cfc57d0cf095f650b9f20b3d6adfcd759680bae3641c",
+   "end": "0x020d2540",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/dsprot.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 9,
+     "result": "0x24 bytes: 9 reachable ARM instructions + 0 literal/DATA words tile 0x020d251c-0x020d2540",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 150,
+     "result": "150 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 36 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "71010c84fe17f0f70f9231793cba02a6dcdd7480a618ab87a7b61233e0c5128e",
+   "source": "eu/src/overlays/ov104/asm_stubs/calls/RunEncrypted_Integrity_MACOwner_IsGood.c",
+   "source_sha256": "5dec124fa30f7b3c2bc1ffcb0d5770d87c7acead8bfcc4600144ca7ad872768c",
+   "start": "0x020d251c",
+   "symbol": "RunEncrypted_Integrity_MACOwner_IsGood"
+  },
+  "RunEncrypted_Integrity_ROMTest_IsBad": {
+   "doc": "eu/docs/library/dsprot.md",
+   "doc_sha256": "fd8967e53f99dbb8f0c6cfc57d0cf095f650b9f20b3d6adfcd759680bae3641c",
+   "end": "0x020d257c",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/dsprot.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 9,
+     "result": "0x24 bytes: 9 reachable ARM instructions + 0 literal/DATA words tile 0x020d2558-0x020d257c",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 150,
+     "result": "150 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 36 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "71010c84fe17f0f70f9231793cba02a6dcdd7480a618ab87a7b61233e0c5128e",
+   "source": "eu/src/overlays/ov104/asm_stubs/calls/RunEncrypted_Integrity_ROMTest_IsBad.c",
+   "source_sha256": "deea89dbabe0c43a14cbf6432e1d7c23a5b5298819e33d9a47b21b5555970b6f",
+   "start": "0x020d2558",
+   "symbol": "RunEncrypted_Integrity_ROMTest_IsBad"
+  },
+  "RunEncrypted_Integrity_ROMTest_IsGood": {
+   "doc": "eu/docs/library/dsprot.md",
+   "doc_sha256": "fd8967e53f99dbb8f0c6cfc57d0cf095f650b9f20b3d6adfcd759680bae3641c",
+   "end": "0x020d25b8",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/dsprot.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 9,
+     "result": "0x24 bytes: 9 reachable ARM instructions + 0 literal/DATA words tile 0x020d2594-0x020d25b8",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 150,
+     "result": "150 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 36 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "71010c84fe17f0f70f9231793cba02a6dcdd7480a618ab87a7b61233e0c5128e",
+   "source": "eu/src/overlays/ov104/asm_stubs/calls/RunEncrypted_Integrity_ROMTest_IsGood.c",
+   "source_sha256": "b82c9a85d2c87be492e4d1d5d1de32b05dec7361432e206cf16e7e1f84d43990",
+   "start": "0x020d2594",
+   "symbol": "RunEncrypted_Integrity_ROMTest_IsGood"
+  },
+  "RunEncrypted_MACOwner_IsBad": {
+   "doc": "eu/docs/library/dsprot.md",
+   "doc_sha256": "fd8967e53f99dbb8f0c6cfc57d0cf095f650b9f20b3d6adfcd759680bae3641c",
+   "end": "0x020d2b08",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/dsprot.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 9,
+     "result": "0x24 bytes: 9 reachable ARM instructions + 0 literal/DATA words tile 0x020d2ae4-0x020d2b08",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 150,
+     "result": "150 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 36 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "71010c84fe17f0f70f9231793cba02a6dcdd7480a618ab87a7b61233e0c5128e",
+   "source": "eu/src/overlays/ov104/asm_stubs/calls/RunEncrypted_MACOwner_IsBad.c",
+   "source_sha256": "d78123e6b3a376d655fc38f6b01ef5abb637ea2f4ee4408659756e385a53167b",
+   "start": "0x020d2ae4",
+   "symbol": "RunEncrypted_MACOwner_IsBad"
+  },
+  "RunEncrypted_MACOwner_IsGood": {
+   "doc": "eu/docs/library/dsprot.md",
+   "doc_sha256": "fd8967e53f99dbb8f0c6cfc57d0cf095f650b9f20b3d6adfcd759680bae3641c",
+   "end": "0x020d2b44",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/dsprot.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 9,
+     "result": "0x24 bytes: 9 reachable ARM instructions + 0 literal/DATA words tile 0x020d2b20-0x020d2b44",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 150,
+     "result": "150 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 36 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "71010c84fe17f0f70f9231793cba02a6dcdd7480a618ab87a7b61233e0c5128e",
+   "source": "eu/src/overlays/ov104/asm_stubs/calls/RunEncrypted_MACOwner_IsGood.c",
+   "source_sha256": "e892b00365f4f5985ece830a92746224787fd96311f50f03bbe3ea449c3bf5ec",
+   "start": "0x020d2b20",
+   "symbol": "RunEncrypted_MACOwner_IsGood"
+  },
+  "RunEncrypted_ROMTest_IsBad": {
+   "doc": "eu/docs/library/dsprot.md",
+   "doc_sha256": "fd8967e53f99dbb8f0c6cfc57d0cf095f650b9f20b3d6adfcd759680bae3641c",
+   "end": "0x020d3118",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/dsprot.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 9,
+     "result": "0x24 bytes: 9 reachable ARM instructions + 0 literal/DATA words tile 0x020d30f4-0x020d3118",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 150,
+     "result": "150 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 36 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "71010c84fe17f0f70f9231793cba02a6dcdd7480a618ab87a7b61233e0c5128e",
+   "source": "eu/src/overlays/ov104/asm_stubs/calls/RunEncrypted_ROMTest_IsBad.c",
+   "source_sha256": "44e1547a291688acf84b7e1d81e21cb69ca269713a3a4790a11868c0f93015d3",
+   "start": "0x020d30f4",
+   "symbol": "RunEncrypted_ROMTest_IsBad"
+  },
+  "RunEncrypted_ROMTest_IsGood": {
+   "doc": "eu/docs/library/dsprot.md",
+   "doc_sha256": "fd8967e53f99dbb8f0c6cfc57d0cf095f650b9f20b3d6adfcd759680bae3641c",
+   "end": "0x020d3154",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/dsprot.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 9,
+     "result": "0x24 bytes: 9 reachable ARM instructions + 0 literal/DATA words tile 0x020d3130-0x020d3154",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 150,
+     "result": "150 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 36 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "71010c84fe17f0f70f9231793cba02a6dcdd7480a618ab87a7b61233e0c5128e",
+   "source": "eu/src/overlays/ov104/asm_stubs/calls/RunEncrypted_ROMTest_IsGood.c",
+   "source_sha256": "1cd71987af28986dc7c83f985d73e991c78cbf7f17d51966ba91cbf51429d1a7",
+   "start": "0x020d3130",
+   "symbol": "RunEncrypted_ROMTest_IsGood"
+  },
+  "RunEncrypted_ROMUtil_CRC32": {
+   "doc": "eu/docs/library/dsprot.md",
+   "doc_sha256": "fd8967e53f99dbb8f0c6cfc57d0cf095f650b9f20b3d6adfcd759680bae3641c",
+   "end": "0x020d2c14",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/dsprot.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 9,
+     "result": "0x24 bytes: 9 reachable ARM instructions + 0 literal/DATA words tile 0x020d2bf0-0x020d2c14",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 150,
+     "result": "150 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 36 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "71010c84fe17f0f70f9231793cba02a6dcdd7480a618ab87a7b61233e0c5128e",
+   "source": "eu/src/overlays/ov104/asm_stubs/calls/RunEncrypted_ROMUtil_CRC32.c",
+   "source_sha256": "0eb39c40e21c9798c90d6d2adea9f2978da882fd0d01ffe05588d44ac51ac114",
+   "start": "0x020d2bf0",
+   "symbol": "RunEncrypted_ROMUtil_CRC32"
+  },
   "SoftReset": {
    "doc": "eu/docs/library/sdk_bios.md",
    "doc_sha256": "6b4e86620a274f1fbdd65cdce4b84d278b777f07d80739aee5f3c359a3ac9710",
@@ -1296,6 +1699,347 @@
    "source_sha256": "cbe15bf7e67f31886c4d0254946f1839c3e8d74abcf17d4c6586b1f6f10e6ab8",
    "start": "0x02000232",
    "symbol": "WaitByLoop"
+  },
+  "__DSProt_DetectDummy": {
+   "doc": "eu/docs/library/dsprot.md",
+   "doc_sha256": "fd8967e53f99dbb8f0c6cfc57d0cf095f650b9f20b3d6adfcd759680bae3641c",
+   "end": "0x020d1fd4",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/dsprot.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 9,
+     "result": "0x24 bytes: 9 reachable ARM instructions + 0 literal/DATA words tile 0x020d1fb0-0x020d1fd4",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 150,
+     "result": "150 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 36 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "71010c84fe17f0f70f9231793cba02a6dcdd7480a618ab87a7b61233e0c5128e",
+   "source": "eu/src/overlays/ov104/asm_stubs/calls/__DSProt_DetectDummy.c",
+   "source_sha256": "00c33536b21cf8b11bceadc04498691997560ce12932c8ba99a5103f4cf4d640",
+   "start": "0x020d1fb0",
+   "symbol": "__DSProt_DetectDummy"
+  },
+  "__DSProt_DetectEmulator": {
+   "doc": "eu/docs/library/dsprot.md",
+   "doc_sha256": "fd8967e53f99dbb8f0c6cfc57d0cf095f650b9f20b3d6adfcd759680bae3641c",
+   "end": "0x020d1f5c",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/dsprot.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 9,
+     "result": "0x24 bytes: 9 reachable ARM instructions + 0 literal/DATA words tile 0x020d1f38-0x020d1f5c",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 150,
+     "result": "150 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 36 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "71010c84fe17f0f70f9231793cba02a6dcdd7480a618ab87a7b61233e0c5128e",
+   "source": "eu/src/overlays/ov104/asm_stubs/calls/__DSProt_DetectEmulator.c",
+   "source_sha256": "dee03fd59536c3381b4df8c799ee66b66f87a86c307ce32b44af2645dcb47bd9",
+   "start": "0x020d1f38",
+   "symbol": "__DSProt_DetectEmulator"
+  },
+  "__DSProt_DetectFlashcart": {
+   "doc": "eu/docs/library/dsprot.md",
+   "doc_sha256": "fd8967e53f99dbb8f0c6cfc57d0cf095f650b9f20b3d6adfcd759680bae3641c",
+   "end": "0x020d1ee4",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/dsprot.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 9,
+     "result": "0x24 bytes: 9 reachable ARM instructions + 0 literal/DATA words tile 0x020d1ec0-0x020d1ee4",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 150,
+     "result": "150 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 36 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "71010c84fe17f0f70f9231793cba02a6dcdd7480a618ab87a7b61233e0c5128e",
+   "source": "eu/src/overlays/ov104/asm_stubs/calls/__DSProt_DetectFlashcart.c",
+   "source_sha256": "9027516017909dbc5c82f363a8dc50e5394e2882f7ff2fc15594e28b48cf4bae",
+   "start": "0x020d1ec0",
+   "symbol": "__DSProt_DetectFlashcart"
+  },
+  "__DSProt_DetectNotDummy": {
+   "doc": "eu/docs/library/dsprot.md",
+   "doc_sha256": "fd8967e53f99dbb8f0c6cfc57d0cf095f650b9f20b3d6adfcd759680bae3641c",
+   "end": "0x020d2010",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/dsprot.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 9,
+     "result": "0x24 bytes: 9 reachable ARM instructions + 0 literal/DATA words tile 0x020d1fec-0x020d2010",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 150,
+     "result": "150 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 36 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "71010c84fe17f0f70f9231793cba02a6dcdd7480a618ab87a7b61233e0c5128e",
+   "source": "eu/src/overlays/ov104/asm_stubs/calls/__DSProt_DetectNotDummy.c",
+   "source_sha256": "d1664dfc0bb0fe09f0093f7b3a7cdb83d08fab2361e507e16f18897057cec7bb",
+   "start": "0x020d1fec",
+   "symbol": "__DSProt_DetectNotDummy"
+  },
+  "__DSProt_DetectNotEmulator": {
+   "doc": "eu/docs/library/dsprot.md",
+   "doc_sha256": "fd8967e53f99dbb8f0c6cfc57d0cf095f650b9f20b3d6adfcd759680bae3641c",
+   "end": "0x020d1f98",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/dsprot.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 9,
+     "result": "0x24 bytes: 9 reachable ARM instructions + 0 literal/DATA words tile 0x020d1f74-0x020d1f98",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 150,
+     "result": "150 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 36 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "71010c84fe17f0f70f9231793cba02a6dcdd7480a618ab87a7b61233e0c5128e",
+   "source": "eu/src/overlays/ov104/asm_stubs/calls/__DSProt_DetectNotEmulator.c",
+   "source_sha256": "9325fbf444ff4789a956995beaedc912eb769d36e9c594c9cbaa8fa2ef102fbb",
+   "start": "0x020d1f74",
+   "symbol": "__DSProt_DetectNotEmulator"
+  },
+  "__DSProt_DetectNotFlashcart": {
+   "doc": "eu/docs/library/dsprot.md",
+   "doc_sha256": "fd8967e53f99dbb8f0c6cfc57d0cf095f650b9f20b3d6adfcd759680bae3641c",
+   "end": "0x020d1f20",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/dsprot.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 9,
+     "result": "0x24 bytes: 9 reachable ARM instructions + 0 literal/DATA words tile 0x020d1efc-0x020d1f20",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 150,
+     "result": "150 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 36 bytes, 0 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "71010c84fe17f0f70f9231793cba02a6dcdd7480a618ab87a7b61233e0c5128e",
+   "source": "eu/src/overlays/ov104/asm_stubs/calls/__DSProt_DetectNotFlashcart.c",
+   "source_sha256": "6af2936ecb55d62275ec2901e0a91e16df9f7c46871d1dd4987597450757c6e8",
+   "start": "0x020d1efc",
+   "symbol": "__DSProt_DetectNotFlashcart"
+  },
+  "__sinit_ov104_020d2028": {
+   "doc": "eu/docs/library/dsprot.md",
+   "doc_sha256": "fd8967e53f99dbb8f0c6cfc57d0cf095f650b9f20b3d6adfcd759680bae3641c",
+   "end": "0x020d2034",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/dsprot.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 3,
+     "result": "0xc bytes: 3 reachable ARM instructions + 0 literal/DATA words tile 0x020d2028-0x020d2034",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 120,
+     "result": "120 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 12 bytes, 1 relocs -> Encryptor_DecodeFunctionTable+0 (object vs ROM image)"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "35e0dcebf8e1a848da30c37bd8dbf120b0f6a7224b962edaa2c94aee51429589",
+   "source": "eu/src/overlays/ov104/asm_stubs/calls/__sinit_ov104_020d2028.c",
+   "source_sha256": "3df1f3bfd392c08151fbf7cadc70fef0258db6e6aacb83a25a6b16f85f4c610d",
+   "start": "0x020d2028",
+   "symbol": "__sinit_ov104_020d2028"
+  },
+  "__sinit_ov104_020d25d0": {
+   "doc": "eu/docs/library/dsprot.md",
+   "doc_sha256": "fd8967e53f99dbb8f0c6cfc57d0cf095f650b9f20b3d6adfcd759680bae3641c",
+   "end": "0x020d25dc",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/dsprot.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 3,
+     "result": "0xc bytes: 3 reachable ARM instructions + 0 literal/DATA words tile 0x020d25d0-0x020d25dc",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 120,
+     "result": "120 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 12 bytes, 1 relocs -> Encryptor_DecodeFunctionTable+0 (object vs ROM image)"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "f32b6d9880d1bf0e4c2d0e69d88a2d03613116fdaf7e2c2fef8ab724f8a42006",
+   "source": "eu/src/overlays/ov104/asm_stubs/calls/__sinit_ov104_020d25d0.c",
+   "source_sha256": "957ea17b21e76820d1e3ed231cc325926ef4d1bc1962e7dba0e3287c85b60f0e",
+   "start": "0x020d25d0",
+   "symbol": "__sinit_ov104_020d25d0"
+  },
+  "__sinit_ov104_020d2958": {
+   "doc": "eu/docs/library/dsprot.md",
+   "doc_sha256": "fd8967e53f99dbb8f0c6cfc57d0cf095f650b9f20b3d6adfcd759680bae3641c",
+   "end": "0x020d2964",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/dsprot.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 3,
+     "result": "0xc bytes: 3 reachable ARM instructions + 0 literal/DATA words tile 0x020d2958-0x020d2964",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 120,
+     "result": "120 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 12 bytes, 1 relocs -> Encryptor_DecodeFunctionTable+0 (object vs ROM image)"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "0394d0cede2cfe9fa5c409ee9b16a086c2c9c67bf1d1c6913bc4088e9eb1d1df",
+   "source": "eu/src/overlays/ov104/asm_stubs/calls/__sinit_ov104_020d2958.c",
+   "source_sha256": "f626bd1451d2a7d33bf8588fa9fadebb3b172697c76af0f8ec5ce3387b55eb16",
+   "start": "0x020d2958",
+   "symbol": "__sinit_ov104_020d2958"
+  },
+  "__sinit_ov104_020d31fc": {
+   "doc": "eu/docs/library/dsprot.md",
+   "doc_sha256": "fd8967e53f99dbb8f0c6cfc57d0cf095f650b9f20b3d6adfcd759680bae3641c",
+   "end": "0x020d3208",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/dsprot.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 3,
+     "result": "0xc bytes: 3 reachable ARM instructions + 0 literal/DATA words tile 0x020d31fc-0x020d3208",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 120,
+     "result": "120 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 12 bytes, 1 relocs -> Encryptor_DecodeFunctionTable+0 (object vs ROM image)"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "80222cf7c917feaeebcac92dae5e4fdf8e5896d2f937a6ada8f5556e6a475f2e",
+   "source": "eu/src/overlays/ov104/asm_stubs/calls/__sinit_ov104_020d31fc.c",
+   "source_sha256": "d4ba975032300ca195983b30fb0756c81031a5e5b61c1260a8e75aff0b419940",
+   "start": "0x020d31fc",
+   "symbol": "__sinit_ov104_020d31fc"
+  },
+  "__sinit_ov104_020d36b4": {
+   "doc": "eu/docs/library/dsprot.md",
+   "doc_sha256": "fd8967e53f99dbb8f0c6cfc57d0cf095f650b9f20b3d6adfcd759680bae3641c",
+   "end": "0x020d36c0",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/dsprot.md"
+    },
+    "inventory": {
+     "data_words": 0,
+     "external_literals": 0,
+     "instructions": 3,
+     "result": "0xc bytes: 3 reachable ARM instructions + 0 literal/DATA words tile 0x020d36b4-0x020d36c0",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 120,
+     "result": "120 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 12 bytes, 1 relocs -> Encryptor_DecodeFunctionTable+0 (object vs ROM image)"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "11a6bbe59f452e2f255daed58788f8930d0cd4faa093062dd471c3c346932f1f",
+   "source": "eu/src/overlays/ov104/asm_stubs/calls/__sinit_ov104_020d36b4.c",
+   "source_sha256": "d2cb696ab0fe73ddbedbc2867298fc1681a002e6687bd9c0f4d333c86c55cdf8",
+   "start": "0x020d36b4",
+   "symbol": "__sinit_ov104_020d36b4"
   },
   "_d2f": {
    "doc": "eu/docs/library/msl_float_convert.md",

@@ -142,7 +142,7 @@ def main() -> int:
         f"| {e['matched_functions']:,} / {e['total_functions']:,} |",
         f"| US verified original assembly (not C) | {asm_bytes:,} | {pct(asm_bytes, u['total_code'])} "
         f"| {len(asm_entries):,} |",
-        f"| EU verified library code (hand-written ARM: MobiClip, NitroSDK, MSL; not C) | {e['verified_library_code']:,} "
+        f"| EU verified library code (hand-written ARM: MobiClip, NitroSDK, MSL, DS Protect; not C) | {e['verified_library_code']:,} "
         f"| {pct(e['verified_library_code'], e['total_code'])} | {e['verified_library_functions']:,} |",
         f"| EU C + verified library code | {e['matched_code'] + e['verified_library_code']:,} / {e['total_code']:,} "
         f"| **{pct(e['matched_code'] + e['verified_library_code'], e['total_code'])}** | |",

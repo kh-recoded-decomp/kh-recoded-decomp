@@ -3,7 +3,7 @@
 
 Categories:
   c_decompiled_matched  real C source in an auto/ or calls/ directory
-  library_verified      hand-written library assembly (MobiClip, NitroSDK, MSL) whose
+  library_verified      hand-written library assembly (MobiClip, NitroSDK, MSL, DS Protect) whose
                         source holds a valid receipt from tools/mobiclip/verify_mobiclip.py
                         or tools/sdklib/verify_sdklib.py
   asm_stub_matched      ASM-based source (asm_stubs/, inline asm, .s)

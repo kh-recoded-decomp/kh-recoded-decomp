@@ -109,6 +109,16 @@ the source's and the documentation's SHA-256 are unchanged. Where GCC or Clang
 reproduce such a routine from readable C, that C is preferred and counts as C
 under the rules above; its section in `docs/library/` documents it the same way.
 
+## Verified library code (DS Protect)
+
+The DS Protect anti-piracy library in ov104 keeps its checks encrypted behind
+hand-written ARM: seventeen dispatch trampolines that read `pc`, five static
+initializers, the shared decrypt-call-encrypt dispatcher and the table decoder,
+whose cache maintenance is an inline `mcr` block. No compiler produces this code,
+so it is reported in the same `Verified library` column under the same four
+gates, with its model in `tools/sdklib/families/dsprot.py` and its documentation
+in `docs/library/dsprot.md`. The encrypted checks themselves are C and count as C.
+
 ## ASM stubs
 
 Inline ASM or placeholder assembly for game code may be used temporarily while

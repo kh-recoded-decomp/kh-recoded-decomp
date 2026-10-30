@@ -38,7 +38,7 @@ def category_for(src_path, unit):
 
 def label_for(cid):
     if cid == VERIFIED_LIBRARY:
-        return "Verified library (hand-written ARM: MobiClip, NitroSDK, MSL)"
+        return "Verified library (hand-written ARM: MobiClip, NitroSDK, MSL, DS Protect)"
     if cid == "main":
         return "Main + ITCM + DTCM"
     if cid.startswith("overlays/ov"):
