@@ -2,7 +2,7 @@
 
 Only the VRAM queue boundary is modeled. Tests compare state, RGB555 words,
 queued source addresses/data, callback effects and the calling convention.
-The pending C is also compiled with GCC/Clang; no matching coverage is awarded.
+The matching C is also compiled with GCC/Clang to check the same behavior.
 """
 import struct
 import sys
@@ -14,7 +14,7 @@ from thumb_replay_link import compile_thumb_image
 sys.path.insert(0, str(ROOT.parent / 'tools/mobiclip'))
 from arm_exec import Cpu, Memory
 
-TARGET = 'func_ov001_02076ebc'
+TARGET = 'UpdateFieldMenuPalette'
 MENU = 0x01000000
 STACK = MENU + 0xfff0
 OTHER_PALETTE = MENU + 0x1000
@@ -92,7 +92,10 @@ class FieldMenuPaletteTests(unittest.TestCase):
             'LerpColor555_02076e30', 'NNS_GfdRegisterNewVramTransferTask',
             'gFieldMenuStateRamps', 'data_ov001_020a04d0')}
         externs['LerpColor555_02076e30'] |= 1
-        return compile_thumb_image(ROOT / 'src/nonmatching/UpdateFieldMenuPalette.c',
+        # The two linker-absolute steering symbols of the source (tools/configure.py).
+        externs['gFieldMenuFadeRamps'] = cls.ramps
+        externs['FieldMenuFadeYellow'] = 0x3ff
+        return compile_thumb_image(ROOT / 'src/overlays/ov001/calls/UpdateFieldMenuPalette.c',
                                    'UpdateFieldMenuPalette', compiler, cls.entry, externs,
                                    thumb_functions={'LerpColor555_02076e30'})
 
@@ -191,9 +194,13 @@ class FieldMenuPaletteTests(unittest.TestCase):
     def test_original_palette_words(self):
         self.assertEqual(struct.unpack('<9H', self.original_colors), COLORS)
 
-    def test_rom_and_pending_c(self):
+    def test_rom_and_matching_c(self):
         self.check_image(self.original)
         self.check_image(self.candidate)
+
+    def test_matching_image_is_identical_to_the_rom(self):
+        self.assertEqual(self.candidate[1][0][0], self.entry)
+        self.assertEqual(self.candidate[1][0][1], self.original[1][0][1])
 
     def test_continuous_pulse_and_restore_sentinel(self):
         for image in (self.original, self.candidate):

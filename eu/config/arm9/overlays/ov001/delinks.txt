@@ -3548,6 +3548,10 @@ src/overlays/ov001/calls/LerpColor555_02076e30.c:
     complete
     .text       start:0x02076e30 end:0x02076ebc
 
+src/overlays/ov001/calls/UpdateFieldMenuPalette.c:
+    complete
+    .text       start:0x02076ebc end:0x02076ff4
+
 src/overlays/ov001/calls/DrawItemCountBadge.c:
     complete
     .text       start:0x02076ff4 end:0x02077118

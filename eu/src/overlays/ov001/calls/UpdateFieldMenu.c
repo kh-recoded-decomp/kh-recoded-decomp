@@ -18,4 +18,5 @@
 #define func_ov001_020771a8 TriggerFieldMenuButtonRecords
 #define func_ov027_020b9d54 ClearTileTableRect
 #define func_ov027_020b9e00 MarkTileTableRowDirty
+#define func_ov001_02076ebc UpdateFieldMenuPalette
 #include "src/ov001/field_manager/UpdateFieldMenu_020779f0.c"

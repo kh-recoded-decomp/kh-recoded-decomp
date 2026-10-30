@@ -9634,7 +9634,7 @@
   "src/calls/func_02034d78.c": "dsi/1.3p1",
   "src/overlays/ov027/calls/func_ov027_020b91e8.c": "dsi/1.3p1",
   "src/overlays/ov043/calls/UpdateFollowCamera.c": "dsi/1.3p1",
-  "src/nonmatching/UpdateFieldMenuPalette.c": "dsi/1.1",
   "src/overlays/ov087/calls/LoadCarouselModels.c": "dsi/1.3p1",
-  "src/overlays/ov045/calls/RunSceneLoadStep.c": "dsi/1.3p1"
+  "src/overlays/ov045/calls/RunSceneLoadStep.c": "dsi/1.3p1",
+  "src/overlays/ov001/calls/UpdateFieldMenuPalette.c": "dsi/1.1"
 }

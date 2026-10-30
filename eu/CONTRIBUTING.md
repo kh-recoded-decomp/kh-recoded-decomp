@@ -41,7 +41,9 @@ declared a parameter its callers never pass, is described under "Parameters the
 callers do not pass" in [PROGRESS_POLICY.md](docs/PROGRESS_POLICY.md).
 
 New absolute symbols must represent recovered program or SDK/linker symbols.
-Do not invent an object address merely to force an integer into a literal pool.
+Do not invent an object address merely to force an integer into a literal pool;
+the single accepted exception, with its conditions, is under "Steering symbols"
+in [PROGRESS_POLICY.md](docs/PROGRESS_POLICY.md).
 
 Hardware-specific assembly can remain assembly with a documented contract and
 separate accounting. Reproducing its bytes alone does not establish its semantics

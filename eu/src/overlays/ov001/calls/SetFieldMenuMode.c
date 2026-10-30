@@ -14,4 +14,5 @@
 #define func_ov001_020769f4 DrawMenuPanelPage
 #define func_ov001_02078360 SetFieldMenuMode_02078360
 #define func_ov027_020b9e00 MarkTileTableRowDirty
+#define func_ov001_02076ebc UpdateFieldMenuPalette
 #include "src/ov001/field_manager/SetFieldMenuMode_020781a4.c"

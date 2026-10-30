@@ -68,6 +68,12 @@ ABSOLUTE_SYMBOLS = {
     # helpers address the material cache directly.
     "NNS_G3dGlb_prmMatColor0": 0x0205A9A4,
     "NNS_G3dGlb_prmBaseRot": 0x0205A9B8,
+    # UpdateFieldMenuPalette (ov001) keeps two pool words for 0x0209ee60 and loads
+    # RGB555 yellow 0x3ff from its pool. C can only reproduce that with a second
+    # name for gFieldMenuStateRamps and the colour as a linker-absolute symbol;
+    # see "Steering symbols" in docs/PROGRESS_POLICY.md.
+    "gFieldMenuFadeRamps": 0x0209EE60,
+    "FieldMenuFadeYellow": 0x3FF,
     # Alternate names and interior views of reconstructed resident BSS blocks.
     "data_02056ae0": 0x02056AE0,
     "sVramTransferTaskQueueState": 0x0205A8D0,

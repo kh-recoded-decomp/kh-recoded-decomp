@@ -67,8 +67,11 @@ IDX = os.path.join(ROOT, "build", "func_index.json")
 
 
 def _symbol_address(name):
-    """Address of a current symbol or an address-style historical name."""
+    """Address of a current symbol, a linker-absolute alternate name or an address-style
+    historical name."""
     address = SYM_ADDR.get(name)
+    if address is None:
+        address = ABS_SYM.get(name)
     if address is not None:
         return address
     if re.fullmatch(r"0x[0-9a-fA-F]{8}", name or ""):

@@ -19,12 +19,6 @@ typedef struct FieldMenuPaletteHandleView {
     u16 fade[3];
 } FieldMenuPaletteHandleView;
 
-enum {
-    FIELD_MENU_RAMP_BLUE,
-    FIELD_MENU_RAMP_RED,
-    FIELD_MENU_RAMP_GREEN
-};
-
 /* fade begins at the separately named BSS symbol data_ov001_020a04dc. */
 extern FieldMenuPaletteHandleView data_ov001_020a04d0;
 

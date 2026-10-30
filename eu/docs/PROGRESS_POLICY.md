@@ -33,8 +33,28 @@ parameter counts as real C only when all of these hold:
 
 The cases accepted so far are `RunSceneLoadStep` (ov045,
 [SCENE_LOAD_STEP.md](SCENE_LOAD_STEP.md)) and `LoadCarouselModels` (ov087,
-[CAROUSEL_MODELS.md](CAROUSEL_MODELS.md)). This does not extend to other devices
-that steer the compiler, such as invented absolute symbols for constants.
+[CAROUSEL_MODELS.md](CAROUSEL_MODELS.md)). Symbols that steer the compiler are
+covered separately below.
+
+## Steering symbols
+
+A source may reference a linker-absolute symbol that the original program did
+not have, a second name for existing data or a constant passed as a symbol's
+address, only when no C spelling reproduces the original and the user has
+accepted the exception. It still counts as real C, under these conditions:
+
+1. The symbol's value is the original value (the address of the existing data,
+   or the integer the ROM holds), defined in `ABSOLUTE_SYMBOLS` in
+   `tools/configure.py` with a comment naming the function.
+2. The source states why the symbol is needed and that the original spelling is
+   unknown; the function's document lists the alternatives tried.
+3. Behavior does not depend on the symbol: a port can use the plain data or the
+   integer.
+
+The one case is `UpdateFieldMenuPalette` (ov001,
+[FIELD_MENU_PALETTE.md](FIELD_MENU_PALETTE.md)): `gFieldMenuFadeRamps` names
+`gFieldMenuStateRamps` a second time and `FieldMenuFadeYellow` is RGB555 yellow
+`0x3ff`.
 
 ## Library assembly
 
