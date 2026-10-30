@@ -1,15 +1,22 @@
-# Pending carousel model initialization
+# Carousel model initialization
 
-`func_ov087_020c6ad0` is reconstructed in
-`src/nonmatching/LoadCarouselModels.c`. It remains outside the linked build and
-matching-C coverage. `InitPanelScene_020c713c` passes the scene and either its
-locked resource ID or `-1`.
+`LoadCarouselModels` (ov087, `0x020c6ad0`) is matching C in
+`src/overlays/ov087/calls/LoadCarouselModels.c`. `InitPanelScene_020c713c`
+passes the scene and either its locked resource ID or `-1`.
 
-The incoming shared reconstruction matched by declaring an additional `index`
-parameter, then overwriting it with zero before its first use. That is a local
-loop counter, not an input supplied by the established caller. EU keeps the
-two-input version pending instead of counting an altered C interface as complete.
-The shared US source is preserved; EU no longer claims that wrapper as linked C.
+The definition declares a third parameter, `entry`, that neither call passes:
+at the first call r2 still holds the entry count the caller has just stored, at
+the second whatever an earlier call left there. It is only the loop counter and
+is set to zero before use. The parameter stays because the original register
+assignment requires it. mwcc numbers an incoming parameter before every local and
+colours higher numbers first, so the counter is coloured last and lands in r8,
+after the info pointer (r7) and the entry offset (r6), as in the ROM. Declared as
+a local, the counter is numbered between those two values and they trade r6 and
+r7 (ten bytes); no local spelling tried (declaration order, block scope, a
+separate counter, a slot pointer, an early return, the permuter) changes that.
+See "Parameters the callers do not pass" in
+[PROGRESS_POLICY.md](PROGRESS_POLICY.md). A port should call it with two
+arguments.
 
 ## Recovered layout and behavior
 
@@ -53,9 +60,9 @@ the buffer's contents. A port must preserve that engine-side contract too.
 
 `BuildSlotImageParams` produces a packed resource locator, not a path string.
 The effective inputs of loader `func_0202c4a0` are the locator and kind `14`.
-The existing shared wrapper still declares four words: its third is unused and
-its fourth reaches the unused fourth parameter of `FileLoader_LoadAlloc`.
-The draft expresses the effective two-input boundary. Before compiling these
+The shared US source still declares four words: its third is unused and its
+fourth reaches the unused fourth parameter of `FileLoader_LoadAlloc`. The EU
+source declares the effective two inputs. Before compiling these
 services together in a portable C program, reconcile their legacy declarations
 and definitions; do not carry the placeholder register parameters into a port.
 
@@ -65,7 +72,7 @@ cache it for the entire loop if its callbacks can modify the scene.
 ## Executable checks and limits
 
 `python tools/test_carousel_models.py -v`, from `eu/`, runs 93 scenarios on each
-of the original ARM function, CodeWarrior reconstruction, GCC 12.2.1 and Clang
+of the original ARM function, the matching CodeWarrior build, GCC 12.2.1 and Clang
 22.1.3 builds. It checks zero/negative counts, counts 1 through 8, all valid
 locked IDs plus `-1`, and three callback-driven count changes. It compares the
 entire scene buffer and ordered call arguments, checks all five tracks and
@@ -76,15 +83,13 @@ from the original extracted EU overlay and checked against the recovered IDs.
 The projection helper executes its original instructions. Resource packing,
 allocation, model initialization, animation binding and free are explicit
 modeled engine boundaries. These tests validate the caller; they do not execute
-the filesystem, renderer, heap or animation system. They are neither a library
-verification receipt nor evidence of matching-C progress.
+the filesystem, renderer, heap or animation system. They supplement the byte
+verifier and are not a library verification receipt.
 
-The current CodeWarrior draft is 468 bytes with the same 15 relocation offsets
-and targets. Ten non-relocation bytes differ, solely from exchanging registers
-r6 and r7 for the entry model address and info pointer. The ordinary verifier
-still reports `MISMATCH` at `0x10a`. GCC emits 424 bytes and Clang 496; these
-are separate behavior builds. Reproduce the strict pending check with:
+The CodeWarrior `dsi/1.3p1` build is the original's 468 bytes with the same 15
+relocation offsets and targets; the GCC and Clang builds are separate behavior
+builds. Verify the match with:
 
 ```sh
-python tools/verify_idx.py src/nonmatching/LoadCarouselModels.c func_ov087_020c6ad0 --object-symbol LoadCarouselModels
+python tools/verify_idx.py src/overlays/ov087/calls/LoadCarouselModels.c LoadCarouselModels
 ```

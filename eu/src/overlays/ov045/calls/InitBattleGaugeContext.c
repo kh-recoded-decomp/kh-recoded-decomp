@@ -11,7 +11,7 @@ extern unsigned int NNSi_FndGetCurrentRootHeap();
 extern unsigned int SetMenuGaugeActive();
 extern unsigned int func_ov001_02075248();
 extern unsigned int OpenMessageContainer();
-extern void func_ov045_020be730(void);
+extern void RunSceneLoadStep(void);
 
 unsigned int InitBattleGaugeContext(unsigned int arguments)
 {
@@ -36,5 +36,5 @@ unsigned int InitBattleGaugeContext(unsigned int arguments)
     }
     OpenMessageContainer(work + 0x12, work + 0x16, layout, mode);
     REG_BLDCNT = 0;
-    return (u32)func_ov045_020be730;
+    return (u32)RunSceneLoadStep;
 }

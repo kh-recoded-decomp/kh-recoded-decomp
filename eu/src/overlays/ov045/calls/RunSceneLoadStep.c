@@ -1,49 +1,3 @@
-/* Pending func_ov045_020be730: no input arguments; outside the linked build. */
-// redefine-sym eu_data_ov045_020c0794=data_ov045_020c0794
-#define AcquireRecordManager_02051c80 AcquireRecordManager
-#define AcquireRecordSlot_02051d3c AcquireRecordSlot
-#define FindActiveRecordById_020b8184 FindActiveRecordById
-#define FindTextureResourceBlock_0201ac70 NNS_G3dGetTex
-#define FinishTextureSlotLoad_020c0214 FinishTextureSlotLoad
-#define GX_BeginLoadTexPltt_020081e0 GX_BeginLoadTexPltt
-#define GX_EndLoadTexPltt_02008284 GX_EndLoadTexPltt
-#define GX_LoadTexPltt_02008214 GX_LoadTexPltt
-#define GetByteCounterOrDefault_020291cc GetByteCounterOrDefault
-#define GetCompressedTextureBytes_020188e0 NNS_G3dTex4x4GetRequiredSize
-#define GetFieldFont3_020711e0 GetFieldFont3
-#define GetPaletteBytes_02018964 NNS_G3dPlttGetRequiredSize
-#define GetSceneTagTracker_020711b0 GetSceneTagTracker
-#define GetTextureImageBytes_020188cc NNS_G3dTexGetRequiredSize
-#define InitTextLayerAt_020014b0 InitTextLayerAt
-#define IsRecordIdFree_0202c38c IsRecordIdFree
-#define LoadBg3Graphics_020be5e0 LoadBg3Graphics
-#define Msg_OpenContainerAndReadHeader_0202cc6c Msg_OpenContainerAndReadHeader
-#define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
-#define OS_WaitVBlankIntr_020049d0 OS_WaitVBlankIntr
-#define OpenMessageContainer_020be668 OpenMessageContainer
-#define ReleaseTextureResourceKeys_020188f4 NNS_G3dTexSetTexKey
-#define RunIntroSequenceStep_020bfea0 RunIntroSequenceStep
-#define RunNameRevealStep_020bfc30 RunNameRevealStep
-#define RunSceneLoadStep_020be710 func_ov045_020be730
-#define SetGlobalPackedBit_02027320 SetGlobalPackedBit
-#define StepTextureUpload_020c02dc StepTextureUpload
-#define UpdateResultFadeOut_020c0044 UpdateResultFadeOut
-#define data_02055c4c sDefaultAllocTexVramFunc
-#define data_02055c54 sDefaultAllocPlttVramFunc
-#define data_ov045_020c0774 eu_data_ov045_020c0794
-#define data_ov045_020c0784 data_ov045_020c07a4
-#define data_ov045_020c0794 data_ov045_020c07b4
-#define data_ov045_020c07a8 data_ov045_020c07c8
-#define data_ov045_020c0838 sOv045_UiBtlGwLanguageP2_020c0858
-#define data_ov045_020c0848 sOv045_UiBtlBtlLanguageP2_020c0868
-#define data_ov045_020c085c sOv045_UiBtlWresP2_020c087c
-#define data_ov045_020c0880 data_ov045_020c08a0
-#define func_02018978 Obj_SetWord2C
-#define func_02029240 AddRecordItem
-#define func_0202c364 func_0202c378
-#define func_ov027_020b7d58 InitBackgroundContainer
-#define func_ov027_020b7e24 func_ov027_020b7e44
-#define func_ov045_020bf3d0 RunResultTallyStep
 #pragma opt_lifetimes off
 #include "nitro/types.h"
 #include "nnsys/g3d.h"
@@ -127,51 +81,51 @@ typedef struct SceneWork {
 
 typedef int (*SceneStep)(void);
 
-extern SceneWork *data_ov045_020c0880;
-extern char data_ov045_020c0838[];
-extern char data_ov045_020c0848[];
-extern char data_ov045_020c085c[];
-extern PoolConfig data_ov045_020c0794;
-extern PoolConfig data_ov045_020c07a8;
-extern TextFrame data_ov045_020c0784;
-extern TextFrame data_ov045_020c0774;
-extern u32 (*data_02055c4c)(u32 size, BOOL is4x4comp, u32 opt);
-extern u32 (*data_02055c54)(u32 size, BOOL is4pltt, u32 opt);
+extern SceneWork *data_ov045_020c08a0;
+extern char sOv045_UiBtlGwLanguageP2_020c0858[];
+extern char sOv045_UiBtlBtlLanguageP2_020c0868[];
+extern char sOv045_UiBtlWresP2_020c087c[];
+extern PoolConfig data_ov045_020c07b4;
+extern PoolConfig data_ov045_020c07c8;
+extern TextFrame data_ov045_020c07a4;
+extern TextFrame data_ov045_020c0794;
+extern u32 (*sDefaultAllocTexVramFunc)(u32 size, BOOL is4x4comp, u32 opt);
+extern u32 (*sDefaultAllocPlttVramFunc)(u32 size, BOOL is4pltt, u32 opt);
 
-extern BOOL IsRecordIdFree_0202c38c(void *file);
-extern void OpenMessageContainer_020be668(void **outHeader, void **outHandle, const char *name, u32 slot);
-extern void *Msg_OpenContainerAndReadHeader_0202cc6c(const char *name, u32 mode, BOOL allocFromEnd);
-extern void *func_0202c364(u32 fileId, u32 param2);
-extern RecordPool *GetSceneTagTracker_020711b0(void);
-extern void LoadBg3Graphics_020be5e0(void *archive, int characterIndex, int paletteIndex, BOOL loadPalette,
+extern BOOL IsRecordIdFree(void *file);
+extern void OpenMessageContainer(void **outHeader, void **outHandle, const char *name, u32 slot);
+extern void *Msg_OpenContainerAndReadHeader(const char *name, u32 mode, BOOL allocFromEnd);
+extern void *func_0202c378(u32 fileId, u32 param2);
+extern RecordPool *GetSceneTagTracker(void);
+extern void LoadBg3Graphics(void *archive, int characterIndex, int paletteIndex, BOOL loadPalette,
                                      void *characterFile, u32 characterOffset);
-extern Record *FindActiveRecordById_020b8184(void *pool, u16 recordId);
-extern void func_ov027_020b7d58(void *pool, PoolConfig *config);
-extern void func_ov027_020b7e24(void *pool, u32 fileId);
-extern void *GetFieldFont3_020711e0(void);
-extern BOOL InitTextLayerAt_020014b0(void *layer, int index, u16 *screenBase, void *font, TextFrame *frame);
-extern BOOL AcquireRecordManager_02051c80(void);
-extern int AcquireRecordSlot_02051d3c(int slot, int param);
-extern NNSG3dResTex *FindTextureResourceBlock_0201ac70(void *file);
-extern u32 GetTextureImageBytes_020188cc(NNSG3dResTex *tex);
-extern u32 GetCompressedTextureBytes_020188e0(NNSG3dResTex *tex);
-extern u32 GetPaletteBytes_02018964(NNSG3dResTex *tex);
-extern void ReleaseTextureResourceKeys_020188f4(NNSG3dResTex *tex, u32 texKey, u32 tex4x4Key);
-extern void func_02018978(NNSG3dResTex *tex, u32 plttKey);
-extern BOOL StepTextureUpload_020c02dc(void *upload);
-extern void OS_WaitVBlankIntr_020049d0(void);
-extern void GX_BeginLoadTexPltt_020081e0(void);
-extern void GX_LoadTexPltt_02008214(const void *src, u32 destSlotAddr, u32 size);
-extern void GX_EndLoadTexPltt_02008284(void);
-extern void NNSi_FndFreeFromDefaultHeap_0202a1c4(void *memory);
-extern void FinishTextureSlotLoad_020c0214(void *slot);
-extern u16 GetByteCounterOrDefault_020291cc(int index);
-extern void func_02029240(int id, int count);
-extern void SetGlobalPackedBit_02027320(int bitIndex);
-extern int RunIntroSequenceStep_020bfea0(void);
-extern int UpdateResultFadeOut_020c0044(void);
-extern int func_ov045_020bf3d0(void);
-extern int RunNameRevealStep_020bfc30(void);
+extern Record *FindActiveRecordById(void *pool, u16 recordId);
+extern void InitBackgroundContainer(void *pool, PoolConfig *config);
+extern void func_ov027_020b7e44(void *pool, u32 fileId);
+extern void *GetFieldFont3(void);
+extern BOOL InitTextLayerAt(void *layer, int index, u16 *screenBase, void *font, TextFrame *frame);
+extern BOOL AcquireRecordManager(void);
+extern int AcquireRecordSlot(int slot, int param);
+extern NNSG3dResTex *NNS_G3dGetTex(void *file);
+extern u32 NNS_G3dTexGetRequiredSize(NNSG3dResTex *tex);
+extern u32 NNS_G3dTex4x4GetRequiredSize(NNSG3dResTex *tex);
+extern u32 NNS_G3dPlttGetRequiredSize(NNSG3dResTex *tex);
+extern void NNS_G3dTexSetTexKey(NNSG3dResTex *tex, u32 texKey, u32 tex4x4Key);
+extern void Obj_SetWord2C(NNSG3dResTex *tex, u32 plttKey);
+extern BOOL StepTextureUpload(void *upload);
+extern void OS_WaitVBlankIntr(void);
+extern void GX_BeginLoadTexPltt(void);
+extern void GX_LoadTexPltt(const void *src, u32 destSlotAddr, u32 size);
+extern void GX_EndLoadTexPltt(void);
+extern void NNSi_FndFreeFromDefaultHeap(void *memory);
+extern void FinishTextureSlotLoad(void *slot);
+extern u16 GetByteCounterOrDefault(int index);
+extern void AddRecordItem(int id, int count);
+extern void SetGlobalPackedBit(int bitIndex);
+extern int RunIntroSequenceStep(void);
+extern int UpdateResultFadeOut(void);
+extern int RunResultTallyStep(void);
+extern int RunNameRevealStep(void);
 
 #define REG_DISPCNT (*(vu32 *)0x04000000)
 #define REG_BG0CNT (*(vu16 *)0x04000008)
@@ -205,11 +159,21 @@ static inline BOOL DictHasIndex(const NNSG3dResDict *dict, u32 idx)
     return idx < dict->numEntry;
 }
 
-SceneStep RunSceneLoadStep_020be710(void)
+/*
+ * Step the battle-gauge scene's loading sequence: open the message containers, load the
+ * backgrounds and fonts, upload the gauge textures and palettes, then hand over to the
+ * name reveal.
+ *
+ * The definition takes a parameter, `plttSize`, that the caller does not pass: the scene
+ * runner calls its steps through a `SceneStep (*)(void)` pointer, so r0 holds no argument.
+ * Case 5 overwrites it with the palette size before reading it. The ROM's frame still shows
+ * the original declared it here: plttSize is spilled to sp+8 and texKey to sp+0xc, an order
+ * mwcc gives only to an incoming parameter (numbered before every local); as a local it
+ * takes the opposite slots.
+ */
+SceneStep RunSceneLoadStep(u32 plttSize)
 {
-    /* Size queried from the texture below; never an incoming callback value. */
-    u32 plttSize;
-    SceneWork *work = data_ov045_020c0880;
+    SceneWork *work = data_ov045_020c08a0;
     u32 texKey;
     NNSG3dResTex *tex;
     u32 texSize;
@@ -230,25 +194,25 @@ SceneStep RunSceneLoadStep_020be710(void)
         const char *name;
         u32 slot;
 
-        if (!IsRecordIdFree_0202c38c(work->file0)) {
+        if (!IsRecordIdFree(work->file0)) {
             break;
         }
         if (work->mode == 3) {
-            name = data_ov045_020c0838;
+            name = sOv045_UiBtlGwLanguageP2_020c0858;
             slot = 0;
         } else {
             slot = 0x1b;
-            name = data_ov045_020c0848;
+            name = sOv045_UiBtlBtlLanguageP2_020c0868;
             if (work->mode != 2) {
                 slot = 0x1c;
             }
         }
-        OpenMessageContainer_020be668(&work->header1, &work->file1, name, slot);
+        OpenMessageContainer(&work->header1, &work->file1, name, slot);
         work->step = 1;
         break;
     }
     case 1:
-        if (!IsRecordIdFree_0202c38c(work->file1)) {
+        if (!IsRecordIdFree(work->file1)) {
             break;
         }
         if (work->mode == 0) {
@@ -266,9 +230,9 @@ SceneStep RunSceneLoadStep_020be710(void)
             if (count > 6) {
                 count = 6;
             }
-            header = Msg_OpenContainerAndReadHeader_0202cc6c(data_ov045_020c085c, 0xe, FALSE);
+            header = Msg_OpenContainerAndReadHeader(sOv045_UiBtlWresP2_020c087c, 0xe, FALSE);
             work->header2 = header;
-            work->texLoad.file = func_0202c364(FILE_ID(header, count), 0x11);
+            work->texLoad.file = func_0202c378(FILE_ID(header, count), 0x11);
             work->step = 2;
         } else if (work->mode == 3) {
             int id = work->id;
@@ -279,38 +243,38 @@ SceneStep RunSceneLoadStep_020be710(void)
             } else {
                 slot = id - 400;
             }
-            work->resultFile = func_0202c364(FILE_ID(work->header0, slot), 0x11);
+            work->resultFile = func_0202c378(FILE_ID(work->header0, slot), 0x11);
             work->step = 8;
         } else {
             BOOL isMode2 = work->mode == 2;
 
-            work->tracker = GetSceneTagTracker_020711b0();
+            work->tracker = GetSceneTagTracker();
             work->step = 0;
             if (work->mode == 2) {
                 int i;
 
-                LoadBg3Graphics_020be5e0(work->file0, -(isMode2 != FALSE), 1, isMode2, work->file1, 0);
+                LoadBg3Graphics(work->file0, -(isMode2 != FALSE), 1, isMode2, work->file1, 0);
                 for (i = 0; i < 10; i++) {
-                    work->records.labels.first[i] = FindActiveRecordById_020b8184(work->tracker, 500 + i);
-                    work->records.labels.second[i] = FindActiveRecordById_020b8184(work->tracker, 510 + i);
-                    work->records.labels.third[i] = FindActiveRecordById_020b8184(work->tracker, 520 + i);
-                    work->records.labels.fourth[i] = FindActiveRecordById_020b8184(work->tracker, 530 + i);
+                    work->records.labels.first[i] = FindActiveRecordById(work->tracker, 500 + i);
+                    work->records.labels.second[i] = FindActiveRecordById(work->tracker, 510 + i);
+                    work->records.labels.third[i] = FindActiveRecordById(work->tracker, 520 + i);
+                    work->records.labels.fourth[i] = FindActiveRecordById(work->tracker, 530 + i);
                 }
                 work->done = TRUE;
-                return RunIntroSequenceStep_020bfea0;
+                return RunIntroSequenceStep;
             }
-            LoadBg3Graphics_020be5e0(work->file0, isMode2 != FALSE, 0, isMode2, NULL, 0);
+            LoadBg3Graphics(work->file0, isMode2 != FALSE, 0, isMode2, NULL, 0);
             work->done = TRUE;
-            return UpdateResultFadeOut_020c0044;
+            return UpdateResultFadeOut;
         }
         break;
     case 2: {
         PoolConfig config;
 
-        if (!IsRecordIdFree_0202c38c(work->texLoad.file)) {
+        if (!IsRecordIdFree(work->texLoad.file)) {
             break;
         }
-        config = data_ov045_020c0794;
+        config = data_ov045_020c07b4;
         work->step = 0;
         REG_BG3CNT = (u16)((REG_BG3CNT & 0x43) | 0x1d80);
         REG_BG2CNT = (u16)((REG_BG2CNT & 0x43) | 0x1e80);
@@ -318,20 +282,20 @@ SceneStep RunSceneLoadStep_020be710(void)
         REG_BG1CNT = (u16)((REG_BG1CNT & ~3) | 0);
         REG_BG2CNT = (u16)((REG_BG2CNT & ~3) | 1);
         REG_BG3CNT = (u16)((REG_BG3CNT & ~3) | 2);
-        LoadBg3Graphics_020be5e0(work->file0, -1, 0, TRUE, work->file1, 0);
-        func_ov027_020b7d58(work->records.pool, &config);
-        func_ov027_020b7e24(work->records.pool, FILE_ID(work->header0, 1));
-        work->iconValue = FindActiveRecordById_020b8184(work->records.pool, 0x173)->value;
+        LoadBg3Graphics(work->file0, -1, 0, TRUE, work->file1, 0);
+        InitBackgroundContainer(work->records.pool, &config);
+        func_ov027_020b7e44(work->records.pool, FILE_ID(work->header0, 1));
+        work->iconValue = FindActiveRecordById(work->records.pool, 0x173)->value;
         work->step = 3;
         break;
     }
     case 3: {
-        TextFrame frame = data_ov045_020c0784;
+        TextFrame frame = data_ov045_020c07a4;
         int i;
 
-        InitTextLayerAt_020014b0(work->textLayer, 2, NULL, GetFieldFont3_020711e0(), &frame);
+        InitTextLayerAt(work->textLayer, 2, NULL, GetFieldFont3(), &frame);
         for (i = 0; i < 12; i++) {
-            work->icons[i] = FindActiveRecordById_020b8184(work->records.pool, 300 + i);
+            work->icons[i] = FindActiveRecordById(work->records.pool, 300 + i);
         }
         REG_DISPCNT = (REG_DISPCNT & ~0x1f00) | 0xf00;
         REG_DISPCNT &= ~0xe000;
@@ -341,8 +305,8 @@ SceneStep RunSceneLoadStep_020be710(void)
     }
     case 4:
         if (work->timer == 0) {
-            AcquireRecordManager_02051c80();
-            AcquireRecordSlot_02051d3c(0, 0);
+            AcquireRecordManager();
+            AcquireRecordSlot(0, 0);
         }
         work->timer++;
         if (work->timer < 2) {
@@ -353,28 +317,28 @@ SceneStep RunSceneLoadStep_020be710(void)
         break;
     case 5:
         if (work->texLoad.state == 0) {
-            tex = FindTextureResourceBlock_0201ac70(work->texLoad.file);
-            texSize = GetTextureImageBytes_020188cc(tex);
-            tex4x4Size = GetCompressedTextureBytes_020188e0(tex);
-            plttSize = GetPaletteBytes_02018964(tex);
+            tex = NNS_G3dGetTex(work->texLoad.file);
+            texSize = NNS_G3dTexGetRequiredSize(tex);
+            tex4x4Size = NNS_G3dTex4x4GetRequiredSize(tex);
+            plttSize = NNS_G3dPlttGetRequiredSize(tex);
 
             if (texSize) {
-                texKey = data_02055c4c(texSize, FALSE, 0);
+                texKey = sDefaultAllocTexVramFunc(texSize, FALSE, 0);
             } else {
                 texKey = 0;
             }
             if (tex4x4Size) {
-                tex4x4Size = data_02055c4c(tex4x4Size, TRUE, 0);
+                tex4x4Size = sDefaultAllocTexVramFunc(tex4x4Size, TRUE, 0);
             } else {
                 tex4x4Size = 0;
             }
             if (plttSize) {
-                texSize = data_02055c54(plttSize, tex->tex4x4Info.flag & 0x8000, 0);
+                texSize = sDefaultAllocPlttVramFunc(plttSize, tex->tex4x4Info.flag & 0x8000, 0);
             } else {
                 texSize = 0;
             }
-            ReleaseTextureResourceKeys_020188f4(tex, texKey, tex4x4Size);
-            func_02018978(tex, texSize);
+            NNS_G3dTexSetTexKey(tex, texKey, tex4x4Size);
+            Obj_SetWord2C(tex, texSize);
             work->texLoad.remaining = tex->texInfo.sizeTex << 3;
             if (work->texLoad.remaining != 0) {
                 work->texLoad.source = (u8 *)tex + tex->texInfo.ofsTex;
@@ -386,7 +350,7 @@ SceneStep RunSceneLoadStep_020be710(void)
             }
             work->texLoad.tex = tex;
         }
-        if (work->texLoad.state == 1 && StepTextureUpload_020c02dc(&work->texLoad)) {
+        if (work->texLoad.state == 1 && StepTextureUpload(&work->texLoad)) {
             work->texLoad.state = 2;
             work->texLoad.tex->texInfo.flag |= 1;
         }
@@ -401,7 +365,7 @@ SceneStep RunSceneLoadStep_020be710(void)
                 work->texLoad.state = 5;
             }
         }
-        if (work->texLoad.state == 3 && StepTextureUpload_020c02dc(&work->texLoad)) {
+        if (work->texLoad.state == 3 && StepTextureUpload(&work->texLoad)) {
             tex = work->texLoad.tex;
             u32 addr;
 
@@ -412,7 +376,7 @@ SceneStep RunSceneLoadStep_020be710(void)
             work->texLoad.isPalette = FALSE;
             work->texLoad.state = 4;
         }
-        if (work->texLoad.state == 4 && StepTextureUpload_020c02dc(&work->texLoad)) {
+        if (work->texLoad.state == 4 && StepTextureUpload(&work->texLoad)) {
             work->texLoad.state = 5;
             work->texLoad.tex->tex4x4Info.flag |= 1;
         }
@@ -425,11 +389,11 @@ SceneStep RunSceneLoadStep_020be710(void)
             work->texLoad.state = 6;
         }
         if (work->texLoad.state == 6) {
-            OS_WaitVBlankIntr_020049d0();
-            GX_BeginLoadTexPltt_020081e0();
-            GX_LoadTexPltt_02008214(work->texLoad.source, work->texLoad.vramOffset, work->texLoad.remaining);
-            GX_EndLoadTexPltt_02008284();
-            OS_WaitVBlankIntr_020049d0();
+            OS_WaitVBlankIntr();
+            GX_BeginLoadTexPltt();
+            GX_LoadTexPltt(work->texLoad.source, work->texLoad.vramOffset, work->texLoad.remaining);
+            GX_EndLoadTexPltt();
+            OS_WaitVBlankIntr();
             work->texLoad.state = 100;
             work->texLoad.tex->plttInfo.flag |= 1;
         }
@@ -444,7 +408,7 @@ SceneStep RunSceneLoadStep_020be710(void)
         if (work->timer < 2) {
             break;
         }
-        tex6 = FindTextureResourceBlock_0201ac70(work->texLoad.file);
+        tex6 = NNS_G3dGetTex(work->texLoad.file);
         if (tex6 != NULL) {
             if (&tex6->dict != NULL && DictHasIndex(&tex6->dict, 0)) {
                 entries = (const NNSG3dResDictEntryHeader *)((u8 *)&tex6->dict + tex6->dict.ofsEntry);
@@ -482,7 +446,7 @@ SceneStep RunSceneLoadStep_020be710(void)
         work->texLoad.imageParam = (texData->texImageParam + texKey6) | 0x20000000;
         work->texLoad.plttBase = (u16)(plttOffset + plttKey6);
         work->texLoad.alpha = 0x1f;
-        NNSi_FndFreeFromDefaultHeap_0202a1c4(work->texLoad.file);
+        NNSi_FndFreeFromDefaultHeap(work->texLoad.file);
         work->texLoad.file = NULL;
         work->timer = 0;
         work->step = 7;
@@ -496,14 +460,14 @@ SceneStep RunSceneLoadStep_020be710(void)
         work->step = 0;
         work->done = TRUE;
         work->timer = 0;
-        return func_ov045_020bf3d0;
+        return RunResultTallyStep;
     case 8: {
         PoolConfig config;
 
-        if (!IsRecordIdFree_0202c38c(work->resultFile)) {
+        if (!IsRecordIdFree(work->resultFile)) {
             break;
         }
-        config = data_ov045_020c07a8;
+        config = data_ov045_020c07c8;
         work->step = 0;
         REG_BG3CNT = (u16)((REG_BG3CNT & 0x43) | 0x1d80);
         REG_BG2CNT = (u16)((REG_BG2CNT & 0x43) | 0x1e00);
@@ -511,31 +475,31 @@ SceneStep RunSceneLoadStep_020be710(void)
         REG_BG1CNT = (u16)((REG_BG1CNT & ~3) | 0);
         REG_BG2CNT = (u16)((REG_BG2CNT & ~3) | 1);
         REG_BG3CNT = (u16)((REG_BG3CNT & ~3) | 3);
-        LoadBg3Graphics_020be5e0(work->file0, 0, 0, TRUE, work->file1, 0x4800);
-        func_ov027_020b7d58(work->records.pool, &config);
-        func_ov027_020b7e24(work->records.pool, FILE_ID(work->header0, 1));
+        LoadBg3Graphics(work->file0, 0, 0, TRUE, work->file1, 0x4800);
+        InitBackgroundContainer(work->records.pool, &config);
+        func_ov027_020b7e44(work->records.pool, FILE_ID(work->header0, 1));
         work->step = 9;
         break;
     }
     case 9: {
-        TextFrame frame = data_ov045_020c0774;
+        TextFrame frame = data_ov045_020c0794;
         BOOL unlock = FALSE;
         int id;
 
         work->step = 0;
-        InitTextLayerAt_020014b0(work->resultLayer, 2, NULL, GetFieldFont3_020711e0(), &frame);
-        FinishTextureSlotLoad_020c0214(work->resultSlot);
+        InitTextLayerAt(work->resultLayer, 2, NULL, GetFieldFont3(), &frame);
+        FinishTextureSlotLoad(work->resultSlot);
         REG_DISPCNT = (REG_DISPCNT & ~0x1f00) | 0xd00;
         REG_DISPCNT &= ~0xe000;
-        AcquireRecordManager_02051c80();
-        AcquireRecordSlot_02051d3c(0, 0);
+        AcquireRecordManager();
+        AcquireRecordSlot(0, 0);
         id = work->id;
         if (id >= 0xd0 && id <= 0x10f) {
             int base = (id - 0xd0) / 5 * 5 + 0xd0;
             int i;
 
             for (i = 0; i < 5; i++) {
-                unlock += GetByteCounterOrDefault_020291cc(base + i);
+                unlock += GetByteCounterOrDefault(base + i);
             }
             if (unlock == 0) {
                 unlock = TRUE;
@@ -543,14 +507,14 @@ SceneStep RunSceneLoadStep_020be710(void)
                 unlock = FALSE;
             }
         } else if (id >= 0x19c && id <= 0x1ad) {
-            unlock = GetByteCounterOrDefault_020291cc(id) == 0;
+            unlock = GetByteCounterOrDefault(id) == 0;
         }
         if (unlock) {
-            func_02029240(work->id, 0);
-            SetGlobalPackedBit_02027320(work->id);
+            AddRecordItem(work->id, 0);
+            SetGlobalPackedBit(work->id);
         }
         work->done = TRUE;
-        return RunNameRevealStep_020bfc30;
+        return RunNameRevealStep;
     }
     }
     return NULL;

@@ -1,4 +1,4 @@
-"""Replay the pending carousel initializer at explicit engine-call boundaries.
+"""Replay the carousel initializer at explicit engine-call boundaries.
 
 The initializer and projection helper execute ARM instructions. File allocation,
 model initialization, animation binding and free are modeled calls: this tests
@@ -20,7 +20,7 @@ from arm_exec import Cpu, Memory
 SCENE = 0x01000000
 STACK = SCENE + 0xfff0
 SCENE_BYTES = 0x1000
-TARGET = 'func_ov087_020c6ad0'
+TARGET = 'LoadCarouselModels'
 RECORD_IDS = (9, 15, 3, 11, 1, 13, 13, 7)
 INFO_IDS = (8, 14, 2, 10, 0, 12, 12, 6)
 PROJECTION = (0x800, 0xddb, 0x1555, 0x1000, 0x3e8000,
@@ -87,8 +87,8 @@ class CarouselModelTests(unittest.TestCase):
     def setUpClass(cls):
         if not FUNC_INDEX.is_file():
             raise unittest.SkipTest('requires the local EU ROM-derived function index')
-        if not (MWCC_DIR / 'dsi/1.1/mwccarm.exe').is_file():
-            raise unittest.SkipTest('requires CodeWarrior dsi/1.1')
+        if not (MWCC_DIR / 'dsi/1.3p1/mwccarm.exe').is_file():
+            raise unittest.SkipTest('requires CodeWarrior dsi/1.3p1')
         import verify_idx
         cls.index = verify_idx._index()
         cls.addresses = verify_idx.SYM_ADDR
@@ -102,11 +102,11 @@ class CarouselModelTests(unittest.TestCase):
         if original_overlay[code_offset:code_offset + len(cls.original)] != cls.original:
             raise AssertionError('overlay and function index do not describe the same original code')
         cls.resource_bytes = original_overlay[0x020c7d1c - 0x020c4280:0x020c7d5c - 0x020c4280]
-        cls.candidate = cls.compile_candidate('dsi/1.1')
+        cls.candidate = cls.compile_candidate('dsi/1.3p1')
 
     @classmethod
     def compile_candidate(cls, compiler):
-        return compile_image(ROOT / 'src/nonmatching/LoadCarouselModels.c',
+        return compile_image(ROOT / 'src/overlays/ov087/calls/LoadCarouselModels.c',
                              'LoadCarouselModels', TARGET, compiler, cls.index, cls.addresses)
 
     def cpu(self, code, count, changes):
@@ -174,7 +174,7 @@ class CarouselModelTests(unittest.TestCase):
     def test_resource_tables_match_original_overlay(self):
         self.assertEqual(struct.unpack('<16I', self.resource_bytes), RECORD_IDS + INFO_IDS)
 
-    def test_original_and_pending_c_control_flow_and_lifetime(self):
+    def test_original_and_matching_c_control_flow_and_lifetime(self):
         self.check_image(self.original)
         self.check_image(self.candidate)
 

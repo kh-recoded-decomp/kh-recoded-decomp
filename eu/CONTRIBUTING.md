@@ -33,9 +33,12 @@ to obtain a match. Prefer GCC or Clang for new SDK conversions when they reprodu
 the required bytes with the correct interface.
 
 Keep scratch values local. An incoming register that is overwritten before its
-first use is not evidence of a parameter. Do not introduce arguments just to
-influence register or stack allocation; document actual caller inputs and leave
-the C pending when the correct interface still differs from the ROM.
+first use is not, by itself, evidence of a parameter. Do not introduce arguments
+just to influence register or stack allocation; document actual caller inputs and
+leave the C pending when the correct interface still differs from the ROM. The
+narrow exception, where the allocation itself shows that the original definition
+declared a parameter its callers never pass, is described under "Parameters the
+callers do not pass" in [PROGRESS_POLICY.md](docs/PROGRESS_POLICY.md).
 
 New absolute symbols must represent recovered program or SDK/linker symbols.
 Do not invent an object address merely to force an integer into a literal pool.

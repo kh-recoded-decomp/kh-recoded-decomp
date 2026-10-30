@@ -19,5 +19,5 @@
 #define func_ov087_020c5964 FocusKindElementForState_020c5964
 #define func_ov087_020c6378 SetupCarouselDisplay
 #define func_ov087_020c69a4 SetupPanelWidgetHandlers
-#define func_ov087_020c6ab0 func_ov087_020c6ad0
+#define func_ov087_020c6ab0 LoadCarouselModels
 #include "src/ov087/panel_state/InitPanelScene_020c713c.c"

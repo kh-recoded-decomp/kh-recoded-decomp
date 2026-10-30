@@ -14,6 +14,28 @@ Functions ported from khdays-decomp (see [PORTING_FROM_DAYS.md](PORTING_FROM_DAY
 are held to exactly the same standard: they are real C that recompiles to this
 ROM's bytes, and each one is verified here, not assumed from the other project.
 
+## Parameters the callers do not pass
+
+A definition may keep a parameter that no caller supplies when the original
+code's allocation proves the parameter existed. mwcc numbers incoming parameters
+before every local and allocates in that order, so a value that the ROM colours
+or spills as an incoming parameter cannot be reproduced by any local. Such a
+parameter counts as real C only when all of these hold:
+
+1. Every caller is checked: none sets the register deliberately (it holds a value
+   left from earlier code, or the function is called through a pointer type that
+   takes no such argument).
+2. The parameter is assigned before any read, so no behavior depends on it.
+3. The same source written with a local differs from the ROM only in the
+   allocation the parameter explains, and the alternatives tried are recorded.
+4. The source comment and the function's document state the above, so a port
+   calls the function with its real inputs.
+
+The cases accepted so far are `RunSceneLoadStep` (ov045,
+[SCENE_LOAD_STEP.md](SCENE_LOAD_STEP.md)) and `LoadCarouselModels` (ov087,
+[CAROUSEL_MODELS.md](CAROUSEL_MODELS.md)). This does not extend to other devices
+that steer the compiler, such as invented absolute symbols for constants.
+
 ## Library assembly
 
 Some library functions were written in assembly by their authors: NitroSDK's

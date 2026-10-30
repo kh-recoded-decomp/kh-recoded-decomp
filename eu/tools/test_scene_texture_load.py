@@ -1,4 +1,4 @@
-"""Replay state 5 of the pending EU scene callback and its real upload helper.
+"""Replay state 5 of the EU scene callback and its real upload helper.
 
 Texture-size/key helpers and StepTextureUpload execute their ROM instructions.
 Container lookup, VRAM allocation, VBlank waits and graphics transfers are
@@ -15,7 +15,7 @@ from thumb_replay_link import compile_thumb_image
 sys.path.insert(0, str(ROOT.parent / 'tools/mobiclip'))
 from arm_exec import Cpu, Memory
 
-TARGET = 'func_ov045_020be730'
+TARGET = 'RunSceneLoadStep'
 SCENE, TEXTURE = 0x01000000, 0x01100000
 FILE = SCENE + 0x8000
 STACK = SCENE + 0xfff0
@@ -98,8 +98,7 @@ class SceneTextureLoadTests(unittest.TestCase):
             raise AssertionError('overlay and index do not describe the same original callback')
         cls.original = (cls.entry | 1, [(cls.entry, original)])
         # Current EU names for the same original relocation targets.
-        aliases = {'data_ov045_020c0794': 'eu_data_ov045_020c0794',
-                   'func_02029254': 'AddRecordItem',
+        aliases = {'func_02029254': 'AddRecordItem',
                    'func_ov027_020b7d78': 'InitBackgroundContainer',
                    'func_ov045_020bf3f0': 'RunResultTallyStep'}
         manifest, thumb = {}, set()
@@ -125,7 +124,7 @@ class SceneTextureLoadTests(unittest.TestCase):
                 '__udivsi3': RUNTIME_TRAPS['__udivsi3']}
             manifest.update(runtime)
         return compile_thumb_image(
-            ROOT / 'src/nonmatching/RunSceneLoadStep.c', TARGET,
+            ROOT / 'src/overlays/ov045/calls/RunSceneLoadStep.c', TARGET,
             compiler, cls.entry, manifest, thumb_functions=cls.thumb_functions)
 
     def cpu(self, image, state, sizes, flag, fail, remaining):
@@ -272,19 +271,15 @@ class SceneTextureLoadTests(unittest.TestCase):
             with self.subTest(state=state, remaining=remaining, compressed=compressed, palette=palette):
                 self.check_case(image, state, (129, compressed, palette), 0x8000, False, remaining)
 
-    def test_rom_and_pending_c_texture_allocation_and_upload_states(self):
+    def test_rom_and_matching_c_texture_allocation_and_upload_states(self):
         self.check_image(self.original)
         self.check_image(self.candidate)
 
-    def test_pending_image_retains_only_the_four_known_stack_byte_differences(self):
+    def test_matching_image_is_identical_to_the_rom(self):
         # This also checks the replay linker's branch state, addends and data
-        # addresses against the already-linked ROM. It awards no matching credit.
-        original = self.original[1][0][1]
+        # addresses against the already-linked ROM.
         self.assertEqual(self.candidate[1][0][0], self.entry)
-        candidate = self.candidate[1][0][1]
-        self.assertEqual(len(candidate), len(original))
-        self.assertEqual([offset for offset, (a, b) in enumerate(zip(original, candidate)) if a != b],
-                         [0x394, 0x3aa, 0x3c2, 0x3de])
+        self.assertEqual(self.candidate[1][0][1], self.original[1][0][1])
 
     def test_gcc_texture_state(self):
         self.check_image(self.compile_candidate('gcc/12.2.1'))
