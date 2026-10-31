@@ -296,6 +296,10 @@ src/overlays/ov002/calls/IsButtonYPressed.c:
     complete
     .text       start:0x02063300 end:0x0206331c
 
+src/overlays/ov002/calls/InitMenuContext.c:
+    complete
+    .text       start:0x0206331c end:0x020642b8
+
 src/overlays/ov002/calls/ReleaseContextResources.c:
     complete
     .text       start:0x020642b8 end:0x02064328

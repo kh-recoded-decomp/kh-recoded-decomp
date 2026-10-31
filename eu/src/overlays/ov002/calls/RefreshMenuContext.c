@@ -1,4 +1,4 @@
-#define InitMenuContext_0206331c func_ov002_0206331c
+#define InitMenuContext_0206331c InitMenuContext
 #define RefreshMenuContext_02062d0c RefreshMenuContext
 #define g_panelState_0206c460 data_ov002_0206c460
 #include "src/ov002/panel_state/RefreshMenuContext_02062d0c.c"
