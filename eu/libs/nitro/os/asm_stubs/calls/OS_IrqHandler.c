@@ -2,7 +2,7 @@ extern char SDK_AUTOLOAD_DTCM_START[];
 extern void OS_IrqHandler_ThreadSwitch(void);
 
 /* NitroSDK IRQ dispatcher entry; callback return continues at OS_IrqHandler_ThreadSwitch. */
-asm void func_01ff8158(void)
+asm void OS_IrqHandler(void)
 {
     stmdb   sp!, {lr}
     mov     ip, #0x04000000

@@ -1,3 +1,4 @@
+#define func_01ff8158 OS_IrqHandler
 #define Entry_02000800 Entry
 #define func_020009fc INITi_DoAutoload
 #define data_027e0000 SDK_AUTOLOAD_DTCM_START

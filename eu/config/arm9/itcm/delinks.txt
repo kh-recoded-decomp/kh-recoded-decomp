@@ -17,7 +17,7 @@ libs/nitro/fs/calls/FSi_WaitForCardThread.c:
     complete
     .text       start:0x01ff8140 end:0x01ff8158
 
-libs/nitro/os/asm_stubs/calls/func_01ff8158.c:
+libs/nitro/os/asm_stubs/calls/OS_IrqHandler.c:
     complete
     .text       start:0x01ff8158 end:0x01ff81b0
 
