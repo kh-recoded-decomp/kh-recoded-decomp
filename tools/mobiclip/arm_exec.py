@@ -7,14 +7,21 @@ reimplementations are checked by running the ROM's own instructions on the same
 inputs. This interpreter covers the ARM-state integer instruction set those
 routines use: data processing with every shifter form, MUL/MLA and the long and
 DSP multiplies, CLZ, single/halfword/doubleword transfers with every addressing
-mode, LDM/STM, SWP/SWPB, B/BL/BX/BLX, MRS/MSR restricted to the CPSR condition flags
-(the runtime compare helpers return their result there), and the ARM946E-S CP15
-c7 cache and write-buffer maintenance MCRs, which change no architectural state
-and are only recorded in `Cpu.cp15_log`. An ARM SWI is recorded in
-`Cpu.swi_log` with r0-r3 and otherwise skipped: the BIOS is not emulated, so
-the registers reach the next instruction unchanged. It refuses anything else
-(other coprocessor operations, mode or control-field changes) instead of
-guessing.
+mode, LDM/STM, SWP/SWPB, B/BL/BX/BLX, and the ARM946E-S CP15 c7 cache and
+write-buffer maintenance MCRs, which change no architectural state and are only
+recorded in `Cpu.cp15_log`. The processor modes are modelled for the SDK's
+start-up and context-switch code: the CPSR mode, I and F bits, the banked
+r13-r14 of each exception mode (r8-r14 for FIQ), one SPSR per exception mode,
+MRS/MSR on either status register with any field mask, LDM/STM with `^` (the
+user bank, or with pc an exception return that copies the SPSR to the CPSR)
+and data processing with S into pc, the other exception return. A call starts
+in system mode with IRQ and FIQ enabled (`Cpu.reset_system`), so code that
+never touches the mode sees the plain user-bank register file. An ARM SWI is
+recorded in `Cpu.swi_log` with r0-r3 and otherwise skipped: the BIOS is not
+emulated, so the registers reach the next instruction unchanged; exceptions
+are never raised. It refuses anything else (other coprocessor operations, an
+MSR that would change the T bit, user-bank transfers with writeback) instead
+of guessing.
 
 THUMB state covers the 16-bit formats the SDK's THUMB routines use: shifts by
 an immediate, ADD/SUB register or 3-bit immediate, MOV/CMP/ADD/SUB 8-bit
@@ -94,6 +101,97 @@ class Cpu:
         self.steps = 0
         self.cp15_log = []                      # (CRm, opcode2, Rd value) per c7 maintenance op
         self.swi_log = []                       # (comment, (r0, r1, r2, r3)) per SWI: 24-bit ARM, 8-bit THUMB
+        self.unpredictable_log = []             # (what, pc) per UNPREDICTABLE operation given a fixed result
+        self.reset_system()
+
+    # -- processor modes ---------------------------------------------------------
+    # CPSR mode field -> register bank. User and system mode share one bank; FIQ
+    # banks r8-r14, the other exception modes r13-r14, and each exception mode
+    # has its own SPSR. Routines start in system mode with IRQ and FIQ enabled.
+    MODES = {0x10: "usr", 0x11: "fiq", 0x12: "irq", 0x13: "svc", 0x17: "abt", 0x1B: "und", 0x1F: "usr"}
+
+    def reset_system(self) -> None:
+        """System mode, interrupts enabled, every banked register and SPSR zero."""
+        self.mode = 0x1F
+        self.i = self.f = 0
+        self.spsr = {}                          # bank name -> saved status of that exception mode
+        self.banks = {}                         # bank name -> {register: value} while not current
+        self.shared_r8_12 = [0] * 5             # r8-r12 of every mode but FIQ, while FIQ is current
+
+    @property
+    def cpsr(self) -> int:
+        return (self.n << 31) | (self.z << 30) | (self.c << 29) | (self.v << 28) | (self.i << 7) | \
+            (self.f << 6) | (int(self.thumb) << 5) | self.mode
+
+    def _bank_of(self, mode: int) -> str:
+        if mode not in self.MODES:
+            raise ArmFault("invalid processor mode 0x%02x at 0x%08x" % (mode, self.r[15]))
+        return self.MODES[mode]
+
+    def _switch_mode(self, mode: int) -> None:
+        old, new = self._bank_of(self.mode), self._bank_of(mode)
+        if old != new:
+            if old == "fiq":
+                self.banks["fiq"] = {i: self.r[i] for i in range(8, 15)}
+                self.r[8:13] = self.shared_r8_12
+            else:
+                self.banks[old] = {13: self.r[13], 14: self.r[14]}
+            if new == "fiq":
+                self.shared_r8_12 = self.r[8:13]
+                saved = self.banks.get("fiq", {})
+                for i in range(8, 15):
+                    self.r[i] = saved.get(i, 0)
+            else:
+                saved = self.banks.get(new, {})
+                self.r[13], self.r[14] = saved.get(13, 0), saved.get(14, 0)
+        self.mode = mode
+
+    def bank_register(self, mode: int, index: int) -> int:
+        """Register `index` (0-14) as `mode` sees it, wherever it is held now."""
+        bank, current = self._bank_of(mode), self._bank_of(self.mode)
+        if index < 8:
+            return self.r[index]
+        if index < 13 and bank != "fiq":
+            return self.shared_r8_12[index - 8] if current == "fiq" else self.r[index]
+        if bank == current:
+            return self.r[index]
+        return self.banks.get(bank, {}).get(index, 0)
+
+    def set_bank_register(self, mode: int, index: int, value: int) -> None:
+        bank, current = self._bank_of(mode), self._bank_of(self.mode)
+        value &= MASK
+        if index < 8 or (index < 13 and bank != "fiq" and current != "fiq") or bank == current:
+            self.r[index] = value
+        elif index < 13 and bank != "fiq":
+            self.shared_r8_12[index - 8] = value
+        else:
+            self.banks.setdefault(bank, {})[index] = value
+
+    def _write_cpsr(self, value: int, fields: int) -> None:
+        """MSR CPSR or an exception return; `fields` is the MSR field mask (bit 0 control, bit 3 flags).
+        User mode can change the flags only. Writing the T bit with MSR is refused (UNPREDICTABLE)."""
+        if fields & 8:
+            self.n, self.z, self.c, self.v = (value >> 31) & 1, (value >> 30) & 1, (value >> 29) & 1, (value >> 28) & 1
+        if fields & 1 and self.mode != 0x10:
+            self.i, self.f = (value >> 7) & 1, (value >> 6) & 1
+            self._switch_mode(value & 0x1F)
+
+    def _restore_cpsr(self) -> None:
+        """CPSR = SPSR of the current exception mode, as an exception return does."""
+        bank = self._bank_of(self.mode)
+        if bank == "usr":
+            raise ArmFault("exception return without an SPSR at 0x%08x" % self.pc)
+        value = self.spsr.get(bank, 0)
+        self._write_cpsr(value, 9)
+        self.thumb = bool(value & 0x20)
+
+    def _user_reg(self, index: int) -> int:
+        """Register `index` of the user bank (STM with ^)."""
+        return self._reg(15, 12) if index == 15 else self.bank_register(0x10, index)
+
+    def _set_user_reg(self, index: int, value: int) -> None:
+        """Load into register `index` of the user bank (LDM with ^ and no pc)."""
+        self.set_bank_register(0x10, index, value)
 
     # -- helpers -----------------------------------------------------------------
     def _reg(self, index: int, pc_offset: int = 8) -> int:
@@ -232,9 +330,11 @@ class Cpu:
         if 8 <= opcode <= 11:
             if not s:
                 raise ArmFault("unsupported status-register instruction 0x%08x" % ins)
+        elif s and rd == 15:                            # exception return: CPSR = SPSR, then branch
+            self._restore_cpsr()
+            self.next_pc = result & ~(1 if self.thumb else 3)
+            return
         else:
-            if s and rd == 15:
-                raise ArmFault("mode-changing data processing at 0x%08x" % self.pc)
             self._write_reg(rd, result)
         if s:
             self._set_nz(result)
@@ -396,14 +496,32 @@ class Cpu:
     def _block_transfer(self, ins: int) -> None:
         pre = (ins >> 24) & 1
         up = (ins >> 23) & 1
-        if ins & (1 << 22):
-            raise ArmFault("user-bank LDM/STM at 0x%08x" % self.pc)
         wb = (ins >> 21) & 1
         load = (ins >> 20) & 1
         rn = (ins >> 16) & 0xF
         regs = [i for i in range(16) if ins & (1 << i)]
         if not regs:
             raise ArmFault("empty register list at 0x%08x" % self.pc)
+        if ins & (1 << 22):                             # S bit: user bank, or LDM ... pc ^ exception return
+            start, final = self._block_addresses(ins, len(regs))
+            if load and 15 in regs:
+                values = [self.mem.read(start + 4 * k, 4) for k in range(len(regs))]
+                if wb and rn not in regs:
+                    self.r[rn] = final
+                for reg, value in zip(regs, values):
+                    if reg != 15:
+                        self.r[reg] = value
+                self._restore_cpsr()
+                self.next_pc = values[-1] & ~(1 if self.thumb else 3)
+                return
+            if wb or self._bank_of(self.mode) == "usr":
+                raise ArmFault("user-bank LDM/STM with writeback or outside an exception mode at 0x%08x" % self.pc)
+            for k, reg in enumerate(regs):
+                if load:
+                    self._set_user_reg(reg, self.mem.read(start + 4 * k, 4))
+                else:
+                    self.mem.write(start + 4 * k, 4, self._user_reg(reg))
+            return
         base = self.r[rn]
         count = len(regs)
         if up:
@@ -427,6 +545,16 @@ class Cpu:
             if reg in values:
                 self._load_reg(reg, values[reg])
 
+    def _block_addresses(self, ins: int, count: int):
+        """(lowest address transferred, written-back base) of an LDM/STM of `count` registers."""
+        base = self.r[(ins >> 16) & 0xF]
+        pre, up = (ins >> 24) & 1, (ins >> 23) & 1
+        if up:
+            start, final = (base + 4 if pre else base), base + 4 * count
+        else:
+            start, final = (base - 4 * count if pre else base - 4 * count + 4), base - 4 * count
+        return start & MASK, final & MASK
+
     def _swap(self, ins: int) -> None:
         """SWP/SWPB Rd, Rm, [Rn]: read the old value, then write Rm, as one locked access.
 
@@ -447,19 +575,36 @@ class Cpu:
         self._write_reg(rd, old)
 
     def _status_access(self, ins: int) -> None:
-        """MRS from CPSR and MSR to the CPSR flag field only."""
-        flags = (self.n << 31) | (self.z << 30) | (self.c << 29) | (self.v << 28)
-        if (ins & 0x0FFF0FFF) == 0x010F0000:            # MRS rd, CPSR
-            self._write_reg((ins >> 12) & 0xF, flags | 0x1F)
+        """MRS and MSR on the CPSR or the current mode's SPSR, every field."""
+        spsr = (ins >> 22) & 1
+        if (ins & 0x0FBF0FFF) == 0x010F0000:            # MRS rd, CPSR / SPSR
+            if spsr:
+                bank = self._bank_of(self.mode)
+                if bank == "usr":                       # UNPREDICTABLE: read as 0 and recorded
+                    self.unpredictable_log.append(("MRS SPSR in user/system mode", self.pc))
+                value = self.spsr.get(bank, 0)
+            else:
+                value = self.cpsr
+            self._write_reg((ins >> 12) & 0xF, value)
             return
-        if (ins & 0x0FFFFFF0) == 0x0128F000:            # MSR CPSR_f, rm
+        if (ins & 0x0FB0FFF0) == 0x0120F000:            # MSR CPSR/SPSR_<fields>, rm
             value = self.r[ins & 0xF]
-        elif (ins & 0x0FFFF000) == 0x0328F000:          # MSR CPSR_f, #imm
+        elif (ins & 0x0FB0F000) == 0x0320F000:          # MSR CPSR/SPSR_<fields>, #imm
             rotate = ((ins >> 8) & 0xF) * 2
             value = ((ins & 0xFF) >> rotate | (ins & 0xFF) << (32 - rotate)) & MASK
         else:
             raise ArmFault("status-register access 0x%08x at 0x%08x" % (ins, self.pc))
-        self.n, self.z, self.c, self.v = (value >> 31) & 1, (value >> 30) & 1, (value >> 29) & 1, (value >> 28) & 1
+        fields = (ins >> 16) & 0xF
+        if spsr:
+            bank = self._bank_of(self.mode)
+            if bank == "usr":
+                raise ArmFault("MSR SPSR outside an exception mode at 0x%08x" % self.pc)
+            mask = sum(0xFF << (8 * k) for k in range(4) if fields & (1 << k))
+            self.spsr[bank] = (self.spsr.get(bank, 0) & ~mask | value & mask) & MASK
+            return
+        if fields & 1 and self.mode != 0x10 and ((value >> 5) & 1) != int(self.thumb):
+            raise ArmFault("MSR changing the T bit at 0x%08x" % self.pc)
+        self._write_cpsr(value, fields)
 
     # ARM946E-S CP15 c7 operations (CRm, opcode2) on caches and the write buffer:
     # invalidate I-cache (all / line), invalidate D-cache (all / line), clean D line
@@ -762,11 +907,13 @@ class Cpu:
         else:
             raise ArmFault("unsupported instruction 0x%08x at 0x%08x" % (ins, self.pc))
 
-    def call(self, entry: int, args=(), sp: int | None = None, limit: int = 50_000_000) -> int:
+    def call(self, entry: int, args=(), sp: int | None = None, limit: int = 50_000_000, stop=()) -> int:
         """Run a function (THUMB if entry bit 0 is set) until it returns to the sentinel; returns r0.
 
         The sentinel is an ARM address, so a THUMB routine's `bx lr` or `pop {pc}`
-        returns to it by switching state, as it would to an ARM caller."""
+        returns to it by switching state, as it would to an ARM caller. Execution
+        also ends, before running it, at any ARM address in `stop` (for code that
+        never returns, such as a final wait loop)."""
         for i, value in enumerate(args):
             self.r[i] = value & MASK
         if sp is not None:
@@ -775,7 +922,7 @@ class Cpu:
         self.thumb = bool(entry & 1)
         self.r[15] = entry & ~1
         start = self.steps
-        while self.thumb or self.r[15] != RETURN_SENTINEL:
+        while self.thumb or (self.r[15] != RETURN_SENTINEL and self.r[15] not in stop):
             if self.steps - start > limit:
                 raise ArmFault("step limit reached at 0x%08x" % self.r[15])
             self.step()

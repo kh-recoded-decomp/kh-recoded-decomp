@@ -67,6 +67,8 @@ class Case:
     setup: Callable[[Memory], None] | None = None
     check: Callable[[Cpu], str | None] | None = None   # returns a mismatch text or None
     label: str = ""
+    prepare: Callable[[Cpu], None] | None = None   # processor state (mode, banked registers, SPSR) before the call
+    stop: tuple = ()                               # ARM addresses that end the run (code that never returns)
 
 
 @dataclass
@@ -314,8 +316,12 @@ def run_case(cpu: Cpu, entry: int, case: Case) -> str | None:
         case.setup(cpu.mem)
     cpu.r = [0] * 16
     cpu.n = cpu.z = cpu.c = cpu.v = 0
+    cpu.thumb = False
+    cpu.reset_system()
+    if case.prepare:
+        case.prepare(cpu)
     try:
-        cpu.call(entry, case.args, sp=STACK_TOP, limit=5_000_000)
+        cpu.call(entry, case.args, sp=STACK_TOP, limit=5_000_000, stop=case.stop)
     except ArmFault as fault:
         return "fault: %s" % fault
     for reg, value in case.regs.items():

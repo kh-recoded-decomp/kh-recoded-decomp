@@ -15,6 +15,33 @@ jumping to another routine are tested with that target replaced by a stub.
 
 ## crt0
 
+### `Entry`
+
+- **Interface:** the ARM9 program's entry point (0x02000800, crt0's
+  `_start`), jumped to by the BIOS or by `OSi_DoBoot` with interrupts masked.
+  It never returns: it ends with `bx` to `main` with `lr = 0xFFFF0000` (the
+  BIOS), in system mode on the system stack.
+- **Behavior:** disables interrupts (writes 0x04000000, bit 0 clear, to
+  `REG_IME`), waits for `VCOUNT` to read line 0 and calls the CP15 set-up
+  (`func_02000A78`: protection regions, TCMs, caches). It sets the SVC stack
+  to DTCM + 0x3FC0, the IRQ stack to DTCM + 0x3F7C (0x40 below, rounded) and,
+  in system mode with the flags cleared, the system stack 0x800 bytes below
+  the IRQ stack, rounded down to eight bytes (0x027E3778). It clears all of
+  DTCM and the 1 KB of standard palette RAM, fills the 1 KB of OAM with
+  0x00000200 words (every sprite hidden), decompresses the static module with
+  `MIi_UncompressBackward(BuildInfo.compressedEnd)`, runs
+  `INITi_DoAutoload`, clears .bss from `BuildInfo + 0x0C` up to
+  `BuildInfo + 0x10` (unsigned, word steps) and flushes its cache lines as the
+  autoload copier does. It clears the word at 0x02FFFF9C, stores
+  `OS_IrqHandler` in the IRQ handler slot at the end of DTCM (0x027E3FFC),
+  calls two empty start-up hooks and `RunGlobalConstructors`, and jumps to
+  `main`.
+- **Hardware:** `REG_IME` (0x04000208), `VCOUNT` (0x04000006), palette RAM
+  (0x05000000), OAM (0x07000000) and DTCM; the stacks are the banked SVC, IRQ
+  and system/user `sp`; CP15 cache maintenance as in `INITi_DoAutoload`. The
+  BIOS reads the IRQ handler address from the last word of DTCM. A port
+  replaces all of this with its own start-up before `main`.
+
 ### `INITi_DoAutoload`
 
 - **Interface:** `void INITi_DoAutoload(void)`, ARM, called once by `Entry`
@@ -62,6 +89,37 @@ jumping to another routine are tested with that target replaced by a stub.
   `REG_IF` (0x04000214) and writes `REG_IF`; writing a 1 bit to `REG_IF`
   clears that pending flag on the hardware. A port dispatches its own
   interrupt sources to the same handler table in the same priority order.
+
+### `OS_IrqHandler_ThreadSwitch`
+
+- **Interface:** `void OS_IrqHandler_ThreadSwitch(void)`, ARM in ITCM
+  (0x01FF81B0), reached in IRQ mode as the return address of the interrupt
+  handler `OS_IrqHandler` called. The IRQ stack holds the `lr` that
+  `OS_IrqHandler` pushed, then the BIOS's frame `r0`-`r3`, `r12`, `lr` of the
+  interrupted code. It returns by popping that first `lr`, back into the BIOS,
+  which restores the frame and returns from the interrupt.
+- **Behavior:** wakes every thread waiting for an interrupt: each one in
+  `OSi_IrqThreadQueue` (DTCM 0x027E00A0, linked at +0x80) becomes ready
+  (state 1) with its queue fields cleared, the queue is emptied and a
+  reschedule is requested. Without a pending reschedule
+  (`OSi_ThreadInfo.isNeedRescheduling`) it returns. Otherwise it clears the
+  request and, in IRQ mode with IRQ and FIQ disabled, picks the first ready
+  thread of the priority-ordered thread list (linked at +0x68). If there is
+  none, or it is the current thread, it returns with FIQ enabled again.
+  Otherwise it calls the switch callback, if any, with the old and new
+  threads, makes the new thread current and switches: the old context gets
+  the SPSR as its CPSR, `r0`-`r3`, `r12` and the return address from the
+  BIOS frame, `r4`-`r11` and the user-bank `sp` and `lr` as they are, and the
+  SVC `sp`; the divider context is saved with `CP_SaveContext` and the new
+  one restored with `CPi_RestoreContext`. It loads the new SVC `sp`, puts the
+  new CPSR in the IRQ SPSR (flags and control fields), loads the user-bank
+  `r0`-`r14` from the new context and rewrites the BIOS frame with the new
+  `r0`-`r3`, `r12` and resume address, so that the BIOS's return lands in the
+  new thread.
+- **Hardware:** the IRQ and SVC banked stacks and the IRQ SPSR are the
+  ARM9's; the divider context belongs to the math unit. A port switches
+  threads with its own scheduler at the same points: after an interrupt
+  handler, when a reschedule was requested.
 
 ## Reboot
 
@@ -111,3 +169,106 @@ jumping to another routine are tested with that target replaced by a stub.
   invalidate I-cache (c7,c5,0) and drain write buffer (c7,c10,4) make the
   reloaded code visible. 0x02FFFxxx is the system area in the main RAM
   mirror.
+
+## Thread contexts
+
+`OSContext` is 0x64 bytes: `u32 cpsr; u32 r[13]; u32 sp; u32 lr; u32
+pc_plus4; u32 sp_svc; CPContext cp_context;` (the divider context, see
+[sdk_misc.md](sdk_misc.md)). Threads switch by saving one context and loading
+another.
+
+### `OS_SaveContext`
+
+- **Interface:** `BOOL OS_SaveContext(OSContext *context)`, ARM, standard
+  procedure call; callable from any privileged mode. Like `setjmp` it returns
+  0 now and 1 when the context is later loaded.
+- **Behavior:** saves the divider context with `CP_SaveContext`
+  (`context + 0x48`), then stores the CPSR as it is, switches to SVC mode
+  with IRQ and FIQ disabled just long enough to store the SVC-mode `sp` in
+  `sp_svc`, and returns to the caller's mode. It stores `r0`-`r14` of the
+  current mode with `r0` replaced by 1 (the value a resumed context returns),
+  so `r1` holds `context + 4` and `r2` the saved CPSR, and stores as
+  `pc_plus4` the address after its own final `bx lr` plus four, so that
+  loading the context resumes at that `bx lr` with `r0 = 1`. The flags and
+  mode are unchanged on return.
+- **Hardware:** `CP_SaveContext` reads the divider and square-root unit.
+  Switching through SVC mode uses the banked SVC stack pointer; a port keeps
+  one stack pointer per thread instead.
+
+### `OS_LoadContext`
+
+- **Interface:** `void OS_LoadContext(OSContext *context)`, ARM, from any
+  privileged mode. It does not return to its caller: it continues the saved
+  thread.
+- **Behavior:** restores the divider context with `CPi_RestoreContext`
+  (`context + 0x48`), switches to SVC mode with IRQ and FIQ disabled, puts
+  the saved CPSR in the SVC SPSR, loads the SVC `sp` from `sp_svc` and the SVC
+  `lr` from `pc_plus4`, loads the user-bank `r0`-`r14` from the context (so a
+  context saved in an exception mode gets its `sp` and `lr` in the user bank,
+  not its own), and returns with `subs pc, lr, #4`, which copies the SPSR to
+  the CPSR and continues at `pc_plus4 - 4` in the saved mode with the saved
+  flags and interrupt masks.
+- **Hardware:** `CPi_RestoreContext` writes the divider and square-root
+  unit; the mode switch, SPSR and banked registers are the ARM9's own.
+
+## Exceptions
+
+`OSi_ExContext` (0x02056E20) receives the state of the code an abort or
+undefined-instruction exception interrupted; `OSi_ExceptionState`
+(0x02056DF0) holds the debugger hook, the argument and the address of the
+game's exception handler.
+
+### `OSi_ExceptionHandler`
+
+- **Interface:** `void OSi_ExceptionHandler(void)`, ARM, installed as the
+  BIOS's exception hook and entered in the exception's mode. It never
+  returns: it ends in a wait loop. The instructions after the loop (restore
+  and `bx lr`) are unreachable and declared so in the inventory.
+- **Behavior:** calls the debugger hook in `OSi_ExceptionState` first when
+  one is set (`movne lr, pc; bxne`, so the saved `lr` is then the address
+  after that call). It pushes `r0`-`r3`, `sp` and `lr` to the top of ITCM
+  (0x01FFFFE8-0x01FFFFFF), makes that its stack, and in abort or undefined
+  mode calls `OSi_GetAndDisplayContext` with `r0 = sp & 1` and `r1` the mode.
+  It then waits forever: in a one-instruction loop when there is no debugger
+  hook, in a `nop` loop otherwise. The test stops at the first loop and
+  checks which way it goes.
+- **Hardware:** none beyond the exception modes and the ITCM it uses as a
+  stack, chosen because main RAM may be what faulted. A port reports the fault
+  and stops.
+
+### `OSi_SetExContext`
+
+- **Interface:** `void OSi_SetExContext(u32 arg)`, ARM, called with `r12`
+  pointing at the six words `OSi_ExceptionHandler` pushed (`r0`-`r3`, the
+  exception-mode `sp`, `lr`) and `r4`-`r11` still those of the interrupted
+  code. Returns to its caller in its caller's mode with its CPSR restored.
+- **Behavior:** fills `OSi_ExContext`: `arg` at 0x6C, the pushed `r0`-`r3`
+  at 0x04-0x10, `r4`-`r11` at 0x14-0x30, and from the BIOS's four-word
+  exception frame at the pushed `sp` (bit 0 cleared) the CPSR of the
+  interrupted code at 0x00, its `r12` at 0x34, its `pc` at 0x40 and the first
+  word at 0x64. It then switches to the interrupted mode (with IRQ disabled
+  and the T bit cleared) to store that mode's `sp` and `lr` at 0x38 and 0x3C,
+  reads that mode's SPSR into a register it never uses, and switches back.
+  The other words of the context are left as they are. The interrupted mode
+  must be privileged: from user mode the switch back would be refused by the
+  CPU, which the SDK never meets because games run in system mode.
+- **Hardware:** the mode switches use the ARM9's banked registers. In system
+  mode the SPSR read is UNPREDICTABLE on ARM; the emulator reads 0 and
+  records it, and the result is dead.
+
+### `OSi_DisplayExContext`
+
+- **Interface:** `void OSi_DisplayExContext(void)`, ARM, a C function with an
+  inline assembly block, called in the exception's mode after
+  `OSi_SetExContext`. Returns normally.
+- **Behavior:** does nothing when no game handler is installed
+  (`OSi_ExceptionState + 0x0C` is null). Otherwise it switches to system mode
+  with IRQ disabled but keeps the exception-mode stack, saving the system
+  `sp` and the CPSR on it, enables the protection unit, calls the handler
+  with `OSi_ExContext` and the argument from `OSi_ExceptionState + 4`,
+  disables the protection unit, restores the system `sp` and returns to the
+  exception mode. The restored flags are those of its own `handler != 0`
+  test, not the caller's.
+- **Hardware:** `OS_EnableProtectionUnit` and `OS_DisableProtectionUnit` set
+  and clear the protection-unit bit of the CP15 control register around the
+  handler; the test replaces them with logging stubs.

@@ -248,6 +248,37 @@
    "start": "0x020d2908",
    "symbol": "Encryptor_DecryptionWrapperFragment"
   },
+  "Entry": {
+   "doc": "eu/docs/library/sdk_os.md",
+   "doc_sha256": "c0c5c3f3022432be6e8d7bd72131a4b9a3ea0fbfad76b3d7ac941518d8c293c3",
+   "end": "0x0200093c",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/sdk_os.md"
+    },
+    "inventory": {
+     "data_words": 9,
+     "external_literals": 0,
+     "instructions": 70,
+     "result": "0x13c bytes: 70 reachable ARM instructions + 9 literal/DATA words tile 0x02000800-0x0200093c",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 106,
+     "result": "106 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 316 bytes, 12 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "7eecde6a16585e0746eb6a80a7405c6ef632dae4b9b61b892f4d77c9c38d2208",
+   "source": "eu/src/asm_stubs/calls/Entry.c",
+   "source_sha256": "68c36c6709607d6285996d844e0880e599d6ff3df8bbf6415333d0ce73645370",
+   "start": "0x02000800",
+   "symbol": "Entry"
+  },
   "GX_SendFifo48B": {
    "doc": "eu/docs/library/sdk_gx.md",
    "doc_sha256": "d6217ba650a676f8e4b6366fd07407d52d6ac25c95b01f701ca7c168b9a6a778",
@@ -374,7 +405,7 @@
   },
   "INITi_DoAutoload": {
    "doc": "eu/docs/library/sdk_os.md",
-   "doc_sha256": "7eb752775e9eedb3e4ab123ae3b5277c694f07a0a019f0ed22eb769e53e9a9dc",
+   "doc_sha256": "c0c5c3f3022432be6e8d7bd72131a4b9a3ea0fbfad76b3d7ac941518d8c293c3",
    "end": "0x02000a74",
    "gates": {
     "documentation": {
@@ -1144,7 +1175,7 @@
   },
   "OS_IrqHandler": {
    "doc": "eu/docs/library/sdk_os.md",
-   "doc_sha256": "7eb752775e9eedb3e4ab123ae3b5277c694f07a0a019f0ed22eb769e53e9a9dc",
+   "doc_sha256": "c0c5c3f3022432be6e8d7bd72131a4b9a3ea0fbfad76b3d7ac941518d8c293c3",
    "end": "0x01ff81b0",
    "gates": {
     "documentation": {
@@ -1172,6 +1203,99 @@
    "source_sha256": "f4986bcacdbb5d4036c639aeef3d95976fd7878283f22c22284b27a892445261",
    "start": "0x01ff8158",
    "symbol": "OS_IrqHandler"
+  },
+  "OS_IrqHandler_ThreadSwitch": {
+   "doc": "eu/docs/library/sdk_os.md",
+   "doc_sha256": "c0c5c3f3022432be6e8d7bd72131a4b9a3ea0fbfad76b3d7ac941518d8c293c3",
+   "end": "0x01ff8310",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/sdk_os.md"
+    },
+    "inventory": {
+     "data_words": 4,
+     "external_literals": 0,
+     "instructions": 84,
+     "result": "0x160 bytes: 84 reachable ARM instructions + 4 literal/DATA words tile 0x01ff81b0-0x01ff8310",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 160,
+     "result": "160 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 352 bytes, 4 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "070f6d82f1bd97ce7f65d317fca3a86d7308021dffed818266dd2641ce4053cc",
+   "source": "eu/src/asm_stubs/calls/OS_IrqHandler_ThreadSwitch.c",
+   "source_sha256": "478c813dcc9e0e2428e5994300a4ed714616a0964dcca2c8f698a2771590a75f",
+   "start": "0x01ff81b0",
+   "symbol": "OS_IrqHandler_ThreadSwitch"
+  },
+  "OS_LoadContext": {
+   "doc": "eu/docs/library/sdk_os.md",
+   "doc_sha256": "c0c5c3f3022432be6e8d7bd72131a4b9a3ea0fbfad76b3d7ac941518d8c293c3",
+   "end": "0x02002eec",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/sdk_os.md"
+    },
+    "inventory": {
+     "data_words": 1,
+     "external_literals": 0,
+     "instructions": 16,
+     "result": "0x44 bytes: 16 reachable ARM instructions + 1 literal/DATA words tile 0x02002ea8-0x02002eec",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 126,
+     "result": "126 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 68 bytes, 1 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "758d607ffff276560eab3c181ce7533be93189a930107e70c44fa506884884d5",
+   "source": "eu/libs/nitro/os/asm_stubs/calls/OS_LoadContext.c",
+   "source_sha256": "220968f347390cd043c1c94dc3320c9dd4685a08e4e7b2bacea5bd836e0998d5",
+   "start": "0x02002ea8",
+   "symbol": "OS_LoadContext"
+  },
+  "OS_SaveContext": {
+   "doc": "eu/docs/library/sdk_os.md",
+   "doc_sha256": "c0c5c3f3022432be6e8d7bd72131a4b9a3ea0fbfad76b3d7ac941518d8c293c3",
+   "end": "0x02002ea8",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/sdk_os.md"
+    },
+    "inventory": {
+     "data_words": 1,
+     "external_literals": 0,
+     "instructions": 18,
+     "result": "0x4c bytes: 18 reachable ARM instructions + 1 literal/DATA words tile 0x02002e5c-0x02002ea8",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 120,
+     "result": "120 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 76 bytes, 1 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "4c251cc98056f5405bdf2a7d16e27bb2d2f7ed94630e360b55cf42804d01ee14",
+   "source": "eu/libs/nitro/os/asm_stubs/calls/OS_SaveContext.c",
+   "source_sha256": "548a76fb9d90cee5ae5c36cdb026aa40995361ab834fabd20eaba936b3bb3d70",
+   "start": "0x02002e5c",
+   "symbol": "OS_SaveContext"
   },
   "OSi_AlarmHandler": {
    "doc": "eu/docs/library/sdk_misc.md",
@@ -1204,9 +1328,40 @@
    "start": "0x02004440",
    "symbol": "OSi_AlarmHandler"
   },
+  "OSi_DisplayExContext": {
+   "doc": "eu/docs/library/sdk_os.md",
+   "doc_sha256": "c0c5c3f3022432be6e8d7bd72131a4b9a3ea0fbfad76b3d7ac941518d8c293c3",
+   "end": "0x02003eb8",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/sdk_os.md"
+    },
+    "inventory": {
+     "data_words": 6,
+     "external_literals": 0,
+     "instructions": 25,
+     "result": "0x7c bytes: 25 reachable ARM instructions + 6 literal/DATA words tile 0x02003e3c-0x02003eb8",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 120,
+     "result": "120 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 124 bytes, 7 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "29294fbd9b492b0d2a8756aaeda88184ace6c02123149d199090c17bb7508cd4",
+   "source": "eu/libs/nitro/os/asm_stubs/calls/OSi_DisplayExContext.c",
+   "source_sha256": "e66a721746461893ebbb7ca79fdcf4b65851dd289d1785953a4339f57bf1aba1",
+   "start": "0x02003e3c",
+   "symbol": "OSi_DisplayExContext"
+  },
   "OSi_DoBoot": {
    "doc": "eu/docs/library/sdk_os.md",
-   "doc_sha256": "7eb752775e9eedb3e4ab123ae3b5277c694f07a0a019f0ed22eb769e53e9a9dc",
+   "doc_sha256": "c0c5c3f3022432be6e8d7bd72131a4b9a3ea0fbfad76b3d7ac941518d8c293c3",
    "end": "0x01ff840c",
    "gates": {
     "documentation": {
@@ -1234,6 +1389,37 @@
    "source_sha256": "72b98a0f096e872b73c531cf6220745e8bc3df649d50c666d59ced14bf69d6f2",
    "start": "0x01ff833c",
    "symbol": "OSi_DoBoot"
+  },
+  "OSi_ExceptionHandler": {
+   "doc": "eu/docs/library/sdk_os.md",
+   "doc_sha256": "c0c5c3f3022432be6e8d7bd72131a4b9a3ea0fbfad76b3d7ac941518d8c293c3",
+   "end": "0x02003da8",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/sdk_os.md"
+    },
+    "inventory": {
+     "data_words": 2,
+     "external_literals": 0,
+     "instructions": 24,
+     "result": "0x74 bytes: 24 reachable ARM instructions + 2 literal/DATA words + 3 unreachable instruction words tile 0x02003d34-0x02003da8",
+     "unreachable_words": 3
+    },
+    "semantics": {
+     "cases": 120,
+     "result": "120 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 116 bytes, 3 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "6a207a36ffb217adcabe11891fc52e4f8e771e3002707c9e9a7cf3ac41fde2ec",
+   "source": "eu/libs/nitro/os/asm_stubs/calls/OSi_ExceptionHandler.c",
+   "source_sha256": "0f64a5e95b9ee286dff788a799b96a142af5da1806c594cc7716c6853f7898e2",
+   "start": "0x02003d34",
+   "symbol": "OSi_ExceptionHandler"
   },
   "OSi_GetAndDisplayContext": {
    "doc": "eu/docs/library/sdk_misc.md",
@@ -1268,7 +1454,7 @@
   },
   "OSi_ReloadRomData": {
    "doc": "eu/docs/library/sdk_os.md",
-   "doc_sha256": "7eb752775e9eedb3e4ab123ae3b5277c694f07a0a019f0ed22eb769e53e9a9dc",
+   "doc_sha256": "c0c5c3f3022432be6e8d7bd72131a4b9a3ea0fbfad76b3d7ac941518d8c293c3",
    "end": "0x01ff84e0",
    "gates": {
     "documentation": {
@@ -1296,6 +1482,37 @@
    "source_sha256": "9b828896d2255acfae73de2b2286107dd8692cb9e94b1a331d9e181068ab9cf2",
    "start": "0x01ff8420",
    "symbol": "OSi_ReloadRomData"
+  },
+  "OSi_SetExContext": {
+   "doc": "eu/docs/library/sdk_os.md",
+   "doc_sha256": "c0c5c3f3022432be6e8d7bd72131a4b9a3ea0fbfad76b3d7ac941518d8c293c3",
+   "end": "0x02003e3c",
+   "gates": {
+    "documentation": {
+     "result": "interface, behavior and hardware documented in docs/library/sdk_os.md"
+    },
+    "inventory": {
+     "data_words": 1,
+     "external_literals": 0,
+     "instructions": 31,
+     "result": "0x80 bytes: 31 reachable ARM instructions + 1 literal/DATA words tile 0x02003dbc-0x02003e3c",
+     "unreachable_words": 0
+    },
+    "semantics": {
+     "cases": 144,
+     "result": "144 cases agree with the ROM instructions"
+    },
+    "source": {
+     "result": "MATCH 128 bytes, 1 relocs"
+    }
+   },
+   "kind": "sdk_library_routine",
+   "schema_version": 1,
+   "sha256": "9faffcacd58f511fc3d4d6e054e91f9d1c99bcaa4684488b72c1a2323e7a01aa",
+   "source": "eu/libs/nitro/os/asm_stubs/calls/OSi_SetExContext.c",
+   "source_sha256": "757ce44c9a7bc337e27a0e1b1732f7681490ea0566ebedf2ef0f40b4db0bb64d",
+   "start": "0x02003dbc",
+   "symbol": "OSi_SetExContext"
   },
   "RLUnCompReadByCallbackWrite16bit": {
    "doc": "eu/docs/library/sdk_bios.md",
