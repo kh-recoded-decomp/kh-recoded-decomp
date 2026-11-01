@@ -408,6 +408,10 @@ src/overlays/ov041/calls/SpawnStageEntryActor.c:
     complete
     .text       start:0x020c18ec end:0x020c1d38
 
+src/overlays/ov041/calls/SpawnPlayerStageEntryActor.c:
+    complete
+    .text       start:0x020c1d38 end:0x020c21d0
+
 src/overlays/ov041/calls/FindFreeSlotId.c:
     complete
     .text       start:0x020c21d0 end:0x020c21f4
