@@ -90,3 +90,5 @@ These tests do not issue library receipts or change progress categories.
 
 The subsequent contact response is documented in [CONTACT_MOTION.md](CONTACT_MOTION.md),
 including its independently checked pending C implementation and current byte differences.
+The query's tree traversal and retry state are described in
+[COLLISION_TRAVERSAL.md](COLLISION_TRAVERSAL.md).

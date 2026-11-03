@@ -9638,5 +9638,6 @@
   "src/overlays/ov045/calls/RunSceneLoadStep.c": "dsi/1.3p1",
   "src/overlays/ov001/calls/UpdateFieldMenuPalette.c": "dsi/1.1",
   "src/overlays/ov002/calls/InitMenuContext.c": "dsi/1.1",
-  "src/overlays/ov041/calls/SpawnPlayerStageEntryActor.c": "dsi/1.1p1"
+  "src/overlays/ov041/calls/SpawnPlayerStageEntryActor.c": "dsi/1.1p1",
+  "src/calls/func_01ffb4f8.c": "dsi/1.1"
 }
