@@ -85,5 +85,6 @@ data_ov034_020c0f58 kind:data(any) addr:0x020c0f58
 sOv034_UiMenuTipsP2_020c0f64 kind:data(any) addr:0x020c0f64
 sOv034_UiMenuLanguageTipsP2_020c0f74 kind:data(any) addr:0x020c0f74
 data_ov034_020c0fa0 kind:bss addr:0x020c0fa0
+data_ov034_020c0fa4 kind:bss addr:0x020c0fa4
 data_ov034_020c0fa8 kind:bss addr:0x020c0fa8
 data_ov034_020c0fe8 kind:bss addr:0x020c0fe8

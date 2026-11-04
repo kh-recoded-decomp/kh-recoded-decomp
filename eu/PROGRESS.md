@@ -46,7 +46,7 @@ functions have an identified name (NitroSDK, NNS, MSL, ...) but no source yet.
 | DONE ov031 | 79 | 0 | 0 | 0 | 0 | 79 | 100.0% | 100.0% | 100.0% |
 | DONE ov032 | 144 | 0 | 0 | 0 | 0 | 144 | 100.0% | 100.0% | 100.0% |
 | DONE ov033 | 21 | 0 | 0 | 0 | 0 | 21 | 100.0% | 100.0% | 100.0% |
-| PART ov034 | 41 | 0 | 0 | 0 | 1 | 42 | 97.6% | 88.8% | 88.8% |
+| DONE ov034 | 42 | 0 | 0 | 0 | 0 | 42 | 100.0% | 100.0% | 100.0% |
 | DONE ov035 | 88 | 0 | 0 | 0 | 0 | 88 | 100.0% | 100.0% | 100.0% |
 | DONE ov036 | 215 | 0 | 0 | 0 | 0 | 215 | 100.0% | 100.0% | 100.0% |
 | DONE ov037 | 40 | 0 | 0 | 0 | 0 | 40 | 100.0% | 100.0% | 100.0% |
@@ -117,7 +117,7 @@ functions have an identified name (NitroSDK, NNS, MSL, ...) but no source yet.
 | DONE ov102 | 3 | 0 | 0 | 0 | 0 | 3 | 100.0% | 100.0% | 100.0% |
 | DONE ov103 | 39 | 0 | 0 | 0 | 0 | 39 | 100.0% | 100.0% | 100.0% |
 | DONE ov104 | 33 | 24 | 0 | 0 | 0 | 57 | 57.9% | 83.7% | 100.0% |
-| **TOTAL** | **10487** | **136** | **0** | **0** | **2** | **10625** | **98.7%** | **95.78%** | **99.81%** |
+| **TOTAL** | **10488** | **136** | **0** | **0** | **1** | **10625** | **98.7%** | **95.89%** | **99.92%** |
 
 ## Byte progress
 
@@ -127,9 +127,9 @@ verified library code is listed beside it, never inside the C row.
 
 | Category | Bytes | Total code bytes | % |
 |---|---:|---:|---:|
-| C matched | **1,696,330** | 1,771,024 | **95.78%** |
+| C matched | **1,698,302** | 1,771,024 | **95.89%** |
 | Verified library code | **71,242** | 1,771,024 | **4.02%** |
-| C + verified library | **1,767,572** | 1,771,024 | **99.81%** |
+| C + verified library | **1,769,544** | 1,771,024 | **99.92%** |
 
 ## DATA progress
 
@@ -139,4 +139,4 @@ Naming is tracked separately and does not count as reconstructed DATA.
 | Metric | Complete | Total | % |
 |---|---:|---:|---:|
 | Reconstructed byte-exact DATA | **223,456** | **223,456** | **100.00%** |
-| Named DATA symbols | **1,362** | **2,330** | **58.45%** |
+| Named DATA symbols | **1,362** | **2,331** | **58.43%** |
