@@ -1,4 +1,5 @@
 #include "nitro/types.h"
+#include "src/overlays/ov027/CapturedTouch.h"
 #include "nitro/fx_types.h"
 
 typedef struct Ov039State {
@@ -67,7 +68,6 @@ extern char sOv039_TextFontEu10Nftr_020be860[];
 extern char sOv039_TextFontEu08sNftr_020be878[];
 extern char sOv039_TextFontEu10sNftr_020be890[];
 extern char sOv039_UiMenuStrLanguageShareSZ_020be8a8[];
-extern void data_ov027_020ba3a0(void);
 extern char OVERLAY_27_ID[];
 
 extern void func_02029f8c(int processor, int overlayId);
@@ -150,7 +150,7 @@ void InitOverlayState(u32 entryArg)
     if (state->mode != 8) {
         LoadSlotImagePair(state, 2, state->mode);
     }
-    state->heapHandle = func_0202a45c(data_ov027_020ba3a0, NULL);
+    state->heapHandle = func_0202a45c(&gCapturedTouchTaskDescriptor, NULL);
     NNS_FndInitList(state->taskList, 4);
     state->brightness = -16 * 0x1000;
     state->subBrightness = -16 * 0x1000;

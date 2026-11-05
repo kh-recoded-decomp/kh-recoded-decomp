@@ -98,6 +98,22 @@ consistent caller declarations, explicit free argument and the unresolved
 context/table-capacity boundary. The context itself is not renamed by inference
 from one of its subobjects.
 
+## Captured touch task
+
+| Previous name | Current name | Evidence |
+|---|---|---|
+| `func_ov027_020b9f74` | `InitCapturedTouchTask` | Descriptor initialization callback; retains current task work as the captured record and returns the update callback. |
+| `func_ov027_020b9f8c` | `ShutdownCapturedTouchTask` | Descriptor shutdown callback; the two-byte Thumb implementation returns without work. |
+| `func_ov027_020b9f90` | `UpdateCapturedTouchTask` | Calls the established capture routine and returns zero. The shared source's former message-queue label did not describe this EU binding. |
+| `data_ov027_020ba3a0` | `gCapturedTouchTaskDescriptor` | Five-word descriptor names these callbacks and an eight-byte task work allocation; profile, HUD and overlay-39 callers pass it to the task constructor. |
+| `data_ov027_020ba3e0` | `gCapturedTouchRecord` | Four-byte BSS pointer initialized from task work, filled by touch capture, copied by `CopySourceBlock` and cleared at record offset four. |
+
+[CAPTURED_TOUCH.md](CAPTURED_TOUCH.md) records the recovered layout, selection
+fallback, partial-clear behavior, task ownership, empty shutdown and legacy
+copy ABI views. The neighboring queue-state storage is not folded into this
+type. The initializer's ignored argument is evidenced by the actual
+`Obj_Construct` call, rather than introduced to alter code generation.
+
 ## Explicitly unresolved
 
 The vector view at `data_027e0160` overlaps `data_027e0164`, used by the older

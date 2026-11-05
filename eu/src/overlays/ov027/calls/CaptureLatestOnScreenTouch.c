@@ -1,5 +1,24 @@
-#define CaptureLatestOnScreenTouch_020b9ef4 CaptureLatestOnScreenTouch
-#define CopyRecentInputRecords_0202b6d0 CopyRecentInputRecords
-#define data_ov027_020ba3c0 data_ov027_020ba3e0
-#define func_01ff89a8 MI_CpuCopy8
-#include "src/ov027/resource_container/CaptureLatestOnScreenTouch_020b9ef4.c"
+#include "src/overlays/ov027/CapturedTouch.h"
+
+extern int CopyRecentInputRecords(CapturedTouchRecord *records);
+extern void MI_CpuCopy8(const void *src, void *dst, u32 size);
+
+void CaptureLatestOnScreenTouch(void)
+{
+    CapturedTouchRecord records[4];
+    int count;
+    int i;
+    int last;
+
+    count = CopyRecentInputRecords(records);
+    last = count - 1;
+    for (i = last; i >= 0; i--) {
+        if (records[i].invalid == 0 && records[i].x < 256 && records[i].y < 192) {
+            MI_CpuCopy8(&records[i], gCapturedTouchRecord, sizeof(CapturedTouchRecord));
+            return;
+        }
+    }
+    if (count >= 1) {
+        MI_CpuCopy8(&records[last], gCapturedTouchRecord, sizeof(CapturedTouchRecord));
+    }
+}

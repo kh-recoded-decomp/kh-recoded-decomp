@@ -1,4 +1,5 @@
 #include "nitro/types.h"
+#include "src/overlays/ov027/CapturedTouch.h"
 
 typedef struct {
     u8 header[4];
@@ -31,7 +32,6 @@ extern u8 sOv002_WXCVB_0206c35c[];
 extern SharedSettings data_0206085c;
 extern u16 data_02060878[];
 extern u16 data_0206088e[];
-extern u8 data_ov027_020ba3a0[];
 extern char OVERLAY_27_ID[];
 
 extern PanelState *NNSi_FndGetCurrentRootHeap(void);
@@ -90,7 +90,7 @@ void *InitProfilePanel(BOOL resumed)
     if (DispatchContextCommand(0x12, 0, 0, 0) == 0) {
         DispatchContextCommand(0x80000017, 1, 0, 0);
     }
-    state->task = func_0202a45c(data_ov027_020ba3a0, NULL);
+    state->task = func_0202a45c(&gCapturedTouchTaskDescriptor, NULL);
     func_0202b5e8();
     if (!resumed) {
         SetSelectionIfChanged(1);

@@ -113,9 +113,9 @@ MarkTileTableRowDirty kind:function(arm,size=0x30) addr:0x020b9e20
 ClearTileTableRowDirty kind:function(arm,size=0x30) addr:0x020b9e50
 FlushDirtyTileTableRows kind:function(arm,size=0x94) addr:0x020b9e80
 CaptureLatestOnScreenTouch kind:function(thumb,size=0x60) addr:0x020b9f14
-func_ov027_020b9f74 kind:function(thumb,size=0x18) addr:0x020b9f74
-func_ov027_020b9f8c kind:function(thumb,size=0x2) addr:0x020b9f8c
-func_ov027_020b9f90 kind:function(thumb,size=0xa) addr:0x020b9f90
+InitCapturedTouchTask kind:function(thumb,size=0x18) addr:0x020b9f74
+ShutdownCapturedTouchTask kind:function(thumb,size=0x2) addr:0x020b9f8c
+UpdateCapturedTouchTask kind:function(thumb,size=0xa) addr:0x020b9f90
 CopySourceBlock kind:function(thumb,size=0x20) addr:0x020b9f9c
 ClearCapturedTouchState kind:function(thumb,size=0x10) addr:0x020b9fbc
 ProcessFileLoadQueue kind:function(thumb,size=0x94) addr:0x020b9fcc
@@ -134,7 +134,7 @@ func_ov027_020ba33c kind:function(arm,size=0x2c) addr:0x020ba33c
 FindPageEntryById kind:function(thumb,size=0x1c) addr:0x020ba368
 data_ov027_020ba384 kind:data(any) addr:0x020ba384
 data_ov027_020ba388 kind:data(any) addr:0x020ba388
-data_ov027_020ba3a0 kind:data(any) addr:0x020ba3a0
+gCapturedTouchTaskDescriptor kind:data(any) addr:0x020ba3a0
 data_ov027_020ba3b4 kind:data(any) addr:0x020ba3b4
-data_ov027_020ba3e0 kind:bss addr:0x020ba3e0
+gCapturedTouchRecord kind:bss addr:0x020ba3e0
 data_ov027_020ba3e4 kind:bss addr:0x020ba3e4
