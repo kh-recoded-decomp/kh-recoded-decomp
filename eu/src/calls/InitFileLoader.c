@@ -1,3 +1,5 @@
+#define data_020605a4 gFileLoaderThreadStorage
+#define data_02060664 gFileLoaderMessages
 #define AllocFromHeapOrDefaultEx_0202a210 AllocFromHeapOrDefaultEx
 #define InitFileLoader_0202c20c InitFileLoader
 #define NNSi_FndAllocFromExpHeapEx_0202a1e4 NNSi_FndAllocFromExpHeapEx
@@ -9,5 +11,5 @@
 #define func_0202ba44 FileLoader_ThreadMain
 #define func_0202c184 EnqueueGfxCmd0
 #define func_0202c1c8 EnqueueGfxCmd1
-#define message_queue_02060584 data_02060584
+#define message_queue_02060584 gFileLoaderMessageQueue
 #include "src/arm9/filesystem/InitFileLoader_0202c20c.c"

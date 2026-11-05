@@ -10,8 +10,8 @@
 #define data_ov004_02064550 sOv004_SfSffont10Nftr_02064550
 #define data_ov004_02064564 sOv004_SfSffont8Nftr_02064564
 #define func_0202a794 TaskManager_SetEnabled
-#define func_0202c364 func_0202c378
-#define func_0202c438 func_0202c44c
+#define func_0202c364 RequestFileLoadFromHeapHead
+#define func_0202c438 SleepIfFileLoaderBusy
 #define func_ov004_02062034 ResetScrollTextScript
 #define func_ov004_020629d0 RunScrollTextFrame
 #define func_ov004_0206366c SetupScrollTextBackgrounds

@@ -95,7 +95,7 @@ extern u32 (*sDefaultAllocPlttVramFunc)(u32 size, BOOL is4pltt, u32 opt);
 extern BOOL IsRecordIdFree(void *file);
 extern void OpenMessageContainer(void **outHeader, void **outHandle, const char *name, u32 slot);
 extern void *Msg_OpenContainerAndReadHeader(const char *name, u32 mode, BOOL allocFromEnd);
-extern void *func_0202c378(u32 fileId, u32 param2);
+extern void *RequestFileLoadFromHeapHead(u32 fileId, u32 param2);
 extern RecordPool *GetSceneTagTracker(void);
 extern void LoadBg3Graphics(void *archive, int characterIndex, int paletteIndex, BOOL loadPalette,
                                      void *characterFile, u32 characterOffset);
@@ -232,7 +232,7 @@ SceneStep RunSceneLoadStep(u32 plttSize)
             }
             header = Msg_OpenContainerAndReadHeader(sOv045_UiBtlWresP2_020c087c, 0xe, FALSE);
             work->header2 = header;
-            work->texLoad.file = func_0202c378(FILE_ID(header, count), 0x11);
+            work->texLoad.file = RequestFileLoadFromHeapHead(FILE_ID(header, count), 0x11);
             work->step = 2;
         } else if (work->mode == 3) {
             int id = work->id;
@@ -243,7 +243,7 @@ SceneStep RunSceneLoadStep(u32 plttSize)
             } else {
                 slot = id - 400;
             }
-            work->resultFile = func_0202c378(FILE_ID(work->header0, slot), 0x11);
+            work->resultFile = RequestFileLoadFromHeapHead(FILE_ID(work->header0, slot), 0x11);
             work->step = 8;
         } else {
             BOOL isMode2 = work->mode == 2;

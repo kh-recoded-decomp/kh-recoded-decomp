@@ -2,5 +2,5 @@
 #define PrepareAndStartStream_0204dd4c PrepareAndStartStream
 #define QueueTypedMessageWithHandle_0202cb24 QueueTypedMessageWithHandle_0202cb38
 #define data_0206084c gSoundWork
-#define func_0202c438 func_0202c44c
+#define func_0202c438 SleepIfFileLoaderBusy
 #include "src/arm9/audio/PrepareAndStartStream_0204dd4c.c"

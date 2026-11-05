@@ -1,5 +1,8 @@
 # File-load queue task
 
+[FILE_LOADER.md](FILE_LOADER.md) documents the separate main-loader queue,
+allocation direction and wait semantics.
+
 The overlay-27 queue task keeps pending and completed intrusive lists in its
 24-byte task work. `FileLoadQueue.h` now supplies the common request/work
 layout for the EU initializer, processor, allocation, destruction and shutdown
@@ -41,7 +44,7 @@ The initializer sets each list's link offset to `0x18`.
 | `0x20` | four bytes | Cleared with the 36-byte request; meaning unresolved. |
 
 The buffer/activity-key interpretation follows the lower-level loader too:
-`func_0202c378` and `func_0202c38c` forward to `RequestFileLoad`, which allocates
+`RequestFileLoadFromHeapHead` and `RequestFileLoadFromHeapTail` forward to `RequestFileLoad`, which allocates
 the destination buffer before queueing the read and returns that buffer's DS
 address. `IsRecordIdFree` searches active and queued loader handles for that
 address at handle offset `0x28`. The request's word `+0x08` is therefore not an
@@ -71,7 +74,7 @@ unrelated numeric request ID or a pointer to the loader handle.
    before its final null check, so it does not accept a null request.
 6. `ClearOverlayLoadQueues`, the descriptor's shutdown entry, walks pending
    requests using saved next pointers. For state-one requests it calls the
-   existing loader wait helper and frees a non-null buffer. It then unlinks
+   `SleepIfFileLoaderBusy` helper and frees a non-null buffer. It then unlinks
    and frees pending requests and owned paths. It destroys completed requests
    with buffer release enabled. It does not clear the retained work address.
 

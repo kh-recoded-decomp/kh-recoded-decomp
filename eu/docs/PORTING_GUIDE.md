@@ -20,6 +20,8 @@ This is a matching decompilation; a host port is a separate project.
   selection fallback, partial clear and legacy copy interface.
 - [File-load queue](FILE_LOAD_QUEUE.md) describes request states, intrusive
   lists, resource encoding, callback timing and buffer/path ownership.
+- [Main file loader](FILE_LOADER.md) records heap direction, shared file/audio
+  messages, buffer-key queries, waiting and the DS queue/thread storage.
 - [Results scene](RESULTS_SCENE.md), [scene loading](SCENE_LOAD_STEP.md),
   [carousel models](CAROUSEL_MODELS.md), [widgets](WIDGET_POSITION.md) and
   [field-menu palette](FIELD_MENU_PALETTE.md) record behavior and the matching

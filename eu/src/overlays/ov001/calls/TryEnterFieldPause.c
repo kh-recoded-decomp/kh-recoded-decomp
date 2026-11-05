@@ -13,6 +13,6 @@
 #define TryEnterFieldPause_020703a8 TryEnterFieldPause
 #define data_ov001_020a04a4 data_ov001_020a04c4
 #define func_02028958 SetPanelFieldA0
-#define func_0202c438 func_0202c44c
+#define func_0202c438 SleepIfFileLoaderBusy
 #define func_ov001_0207b3cc func_ov001_0207b3f4
 #include "src/ov001/field_manager/TryEnterFieldPause_020703a8.c"

@@ -1,4 +1,4 @@
-#define Loader_SleepIfBusy func_0202c44c
+#define Loader_SleepIfBusy SleepIfFileLoaderBusy
 #define SoundMgr_IsState1 IsSceneState1
 #define SoundMgr_WaitLoaderIfState1_0204d6c0 SoundMgr_WaitLoaderIfState1
 #include "src/arm9/shared_engine/SoundMgr_WaitLoaderIfState1_0204d6c0.c"

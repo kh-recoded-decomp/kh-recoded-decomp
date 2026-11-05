@@ -1,4 +1,4 @@
 #define Msg_OpenContainerAndReadHeader_0202cc6c Msg_OpenContainerAndReadHeader
 #define OpenMessageContainer_020be668 OpenMessageContainer
-#define func_0202c364 func_0202c378
+#define func_0202c364 RequestFileLoadFromHeapHead
 #include "src/ov045/shared_engine/OpenMessageContainer_020be668.c"

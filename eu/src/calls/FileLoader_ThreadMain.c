@@ -19,5 +19,5 @@
 #define func_02020240 NNS_SndArcStrmPrepare
 #define func_0202b86c func_0202b880
 #define func_0204df80 GetSoundStreamHandle
-#define message_queue_02060584 data_02060584
+#define message_queue_02060584 gFileLoaderMessageQueue
 #include "src/arm9/filesystem/FileLoader_ThreadMain_0202ba44.c"

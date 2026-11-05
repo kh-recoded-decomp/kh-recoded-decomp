@@ -1736,10 +1736,10 @@ Gfd_LoadTex_0202c1b0 kind:function(arm,size=0x2c) addr:0x0202c1b0
 EnqueueGfxCmd1 kind:function(arm,size=0x18) addr:0x0202c1dc
 Gfd_LoadTexPltt_0202c1f4 kind:function(arm,size=0x2c) addr:0x0202c1f4
 InitFileLoader kind:function(arm,size=0x158) addr:0x0202c220
-func_0202c378 kind:function(arm,size=0x14) addr:0x0202c378
-func_0202c38c kind:function(arm,size=0x14) addr:0x0202c38c
+RequestFileLoadFromHeapHead kind:function(arm,size=0x14) addr:0x0202c378
+RequestFileLoadFromHeapTail kind:function(arm,size=0x14) addr:0x0202c38c
 IsRecordIdFree kind:function(arm,size=0xac) addr:0x0202c3a0
-func_0202c44c kind:function(arm,size=0x40) addr:0x0202c44c
+SleepIfFileLoaderBusy kind:function(arm,size=0x40) addr:0x0202c44c
 Archive_LoadFile kind:function(arm,size=0x14) addr:0x0202c48c
 func_0202c4a0 kind:function(arm,size=0x14) addr:0x0202c4a0
 LoadFileIntoBuffer kind:function(arm,size=0x1f0) addr:0x0202c4b4
@@ -3035,9 +3035,9 @@ gLanguagePath kind:bss addr:0x0206055c
 gFileLoader kind:bss addr:0x02060564
 data_02060570 kind:bss addr:0x02060570
 data_02060574 kind:bss addr:0x02060574
-data_02060584 kind:bss addr:0x02060584
-data_020605a4 kind:bss addr:0x020605a4
-data_02060664 kind:bss addr:0x02060664
+gFileLoaderMessageQueue kind:bss addr:0x02060584
+gFileLoaderThreadStorage kind:bss addr:0x020605a4
+gFileLoaderMessages kind:bss addr:0x02060664
 data_02060764 kind:bss addr:0x02060764
 data_0206076c kind:bss addr:0x0206076c
 data_02060770 kind:bss addr:0x02060770

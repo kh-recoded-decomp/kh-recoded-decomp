@@ -6917,11 +6917,11 @@ src/calls/InitFileLoader.c:
     complete
     .text       start:0x0202c220 end:0x0202c378
 
-src/calls/func_0202c378.c:
+src/calls/RequestFileLoadFromHeapHead.c:
     complete
     .text       start:0x0202c378 end:0x0202c38c
 
-src/calls/func_0202c38c.c:
+src/calls/RequestFileLoadFromHeapTail.c:
     complete
     .text       start:0x0202c38c end:0x0202c3a0
 
@@ -6929,7 +6929,7 @@ src/calls/IsRecordIdFree.c:
     complete
     .text       start:0x0202c3a0 end:0x0202c44c
 
-src/calls/func_0202c44c.c:
+src/calls/SleepIfFileLoaderBusy.c:
     complete
     .text       start:0x0202c44c end:0x0202c48c
 

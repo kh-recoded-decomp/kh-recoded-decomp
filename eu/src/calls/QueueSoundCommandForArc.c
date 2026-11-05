@@ -1,7 +1,7 @@
 #define QueueSoundCommandForArc_0204d670 QueueSoundCommandForArc
 #define func_0201ecbc NNS_SndArcGetSeqArcSeqCount
 #define func_0201ee80 NNS_SndArcGetSeqArcIdxSymbol
-#define func_0202c438 func_0202c44c
+#define func_0202c438 SleepIfFileLoaderBusy
 #define func_0202cacc QueueTypedMessageWithHandle
 #define g_soundWork_0206084c gSoundWork
 #include "src/arm9/audio/QueueSoundCommandForArc_0204d670.c"

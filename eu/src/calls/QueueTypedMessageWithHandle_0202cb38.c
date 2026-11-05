@@ -1,4 +1,4 @@
 #define QueueTypedMessageWithHandle_0202cb24 QueueTypedMessageWithHandle_0202cb38
 #define func_0202b810 AllocLoaderRequest
-#define message_queue_02060584 data_02060584
+#define message_queue_02060584 gFileLoaderMessageQueue
 #include "src/arm9/runtime_data_utilities/QueueTypedMessageWithHandle_0202cb24.c"

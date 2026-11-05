@@ -11,6 +11,6 @@
 #define func_0202b810 AllocLoaderRequest
 #define func_0202b9a4 PrepareCompressedLoad
 #define func_0202ce18 TileMap_GetHighBit
-#define message_queue_02060584 data_02060584
+#define message_queue_02060584 gFileLoaderMessageQueue
 #define openFileFromNitroRomArchive_0202ce60 openFileFromNitroRomArchive
 #include "src/arm9/filesystem/RequestFileLoad_0202c000.c"

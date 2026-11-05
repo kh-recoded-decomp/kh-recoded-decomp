@@ -1,7 +1,7 @@
-#include "nitro/types.h"
+#include "src/filesystem/FileLoaderState.h"
 
-static u32 data_02060664[64];
-static u32 data_020605a4[48];
-static u32 data_02060584[8];
+void *gFileLoaderMessages[64];
+u32 gFileLoaderThreadStorage[48];
+FileLoaderMessageQueue gFileLoaderMessageQueue;
 static u32 data_02060574[4];
 static u32 data_02060570;

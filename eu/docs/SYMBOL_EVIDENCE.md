@@ -128,6 +128,22 @@ type. The initializer's ignored argument is evidenced by the actual
 buffer/activity-key evidence, callback ordering, ownership, partial empty
 predicate, explicit getter arguments and unassigned storage boundaries.
 
+## Main file loader
+
+| Previous name | Current name | Evidence |
+|---|---|---|
+| `func_0202c378` | `RequestFileLoadFromHeapHead` | Selector zero reaches positive-32-byte-aligned destination allocation in both plain and compressed paths; the allocator selects `AllocFromHead`. |
+| `func_0202c38c` | `RequestFileLoadFromHeapTail` | Selector one reaches negative-32 alignment in both paths; the allocator selects `AllocFromTail`. |
+| `func_0202c44c` | `SleepIfFileLoaderBusy` | Conditionally sleeps using pending count/current request, then returns one; it is not a completion result. |
+| `data_02060584` | `gFileLoaderMessageQueue` | OS initialization, file/audio producers, worker receive and the ring activity query establish the queue and its 32-byte layout. |
+| `data_020605a4` | `gFileLoaderThreadStorage` | Passed to thread construction and direct wakeup; 192-byte storage retained without inferred thread fields. |
+| `data_02060664` | `gFileLoaderMessages` | The queue is initialized with this backing table and a capacity of 64. |
+
+[FILE_LOADER.md](FILE_LOADER.md) records the recovered layout, shared file/audio
+use, count-word overlap, worker wake ordering, unresolved wrapper ABI views and
+host pointer/thread boundaries. Shared US identifiers stay separate from EU
+semantic names even when their old numeric spellings collide.
+
 ## Explicitly unresolved
 
 The vector view at `data_027e0160` overlaps `data_027e0164`, used by the older

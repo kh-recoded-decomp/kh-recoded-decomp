@@ -1,9 +1,9 @@
 #include "src/overlays/ov027/FileLoadQueue.h"
+#include "src/filesystem/FileLoaderState.h"
 
 extern void *NNS_FndGetNextListObject(void *list, void *object);
 extern void NNS_FndRemoveListObject(void *list, void *object);
 extern void NNSi_FndFreeFromDefaultHeap(void *block);
-extern void func_0202c44c(void);
 
 void ClearOverlayLoadQueues(void)
 {
@@ -16,7 +16,7 @@ void ClearOverlayLoadQueues(void)
     while (request != NULL) {
         next = NNS_FndGetNextListObject(&work->pending, request);
         if (request->state == 1) {
-            func_0202c44c();
+            SleepIfFileLoaderBusy();
             if (request->buffer != NULL) {
                 NNSi_FndFreeFromDefaultHeap(request->buffer);
             }

@@ -5,8 +5,8 @@ extern int gPreviousPanelActive;
 
 extern void *NNS_FndGetNextListObject(void *list, void *obj);
 extern BOOL IsRecordIdFree(int id);
-extern void *func_0202c378(char *path, int mode);
-extern void *func_0202c38c(char *path, int mode);
+extern void *RequestFileLoadFromHeapHead(char *path, int mode);
+extern void *RequestFileLoadFromHeapTail(char *path, int mode);
 extern void NNS_FndRemoveListObject(FileLoadList *list, void *object);
 extern void NNS_FndAppendListObject(FileLoadList *list, void *object);
 
@@ -26,9 +26,9 @@ void ProcessFileLoadQueue(void)
     case 0:
         if (IsRecordIdFree(0)) {
             if (request->loadMode != 0) {
-                request->buffer = func_0202c38c(request->pathOrId, 14);
+                request->buffer = RequestFileLoadFromHeapTail(request->pathOrId, 14);
             } else {
-                request->buffer = func_0202c378(request->pathOrId, 14);
+                request->buffer = RequestFileLoadFromHeapHead(request->pathOrId, 14);
             }
             request->state = 1;
         }
