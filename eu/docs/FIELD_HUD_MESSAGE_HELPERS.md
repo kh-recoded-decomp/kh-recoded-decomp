@@ -187,8 +187,9 @@ finished, cancelled or successful for those states.
 `StartSubsceneOverlayLoad(panel,overlayId)` waits for the existing GX geometry
 transfer helper, calls `FS_LoadOverlayInfo(panel+0xa4,0,overlayId)`, then calls
 `FS_LoadOverlayImageAsync` with that info and file work at `panel+0x5c`.
-The second argument is an overlay ID, not a count. The wrapper is void, discards
-the SDK results and does not wait for asynchronous image-load completion.
+The second argument is an overlay ID, not a count. The current C wrapper declares void and does not test either SDK result; it
+does not wait for asynchronous image-load completion. A last-call result may
+remain in native R0, which alone does not establish a public status-return ABI.
 The historic directory of `WaitForGeometryTransfer` is not evidence of a card
 thread operation.
 
@@ -244,7 +245,7 @@ or reconstruction-credit change follows from these names.
 | `ov001:02079f70`, 16 B | `DrawGridMenuCellsAndEnterState6` | void; calls DrawGridMenuCells with argument 0 and writes state 6 at object+8. | `eu/src/overlays/ov001/calls/DrawGridMenuCellsAndEnterState6.c` |
 | `ov001:0207a4a0`, 48 B | `ReleaseMessageWindowWork` | void; releases owned children and clears the global; no outer task-work free. | `eu/src/overlays/ov001/calls/ReleaseMessageWindowWork.c` |
 | `ov001:0207a648`, 68 B | `GetMessageWindowPhaseGroup` | u32; exact 0/1/2/3/4 grouping, with default 0 and no inferred phase labels. | `eu/src/overlays/ov001/calls/GetMessageWindowPhaseGroup.c` |
-| `ov001:0207a920`, 36 B | `StartSubsceneOverlayLoad` | void; waits for geometry transfer, starts async loading by overlay ID and discards SDK results. | `eu/src/overlays/ov001/calls/StartSubsceneOverlayLoad.c` |
+| `ov001:0207a920`, 36 B | `StartSubsceneOverlayLoad` | void C view; waits for geometry transfer, starts async loading by overlay ID and does not test SDK results. | `eu/src/overlays/ov001/calls/StartSubsceneOverlayLoad.c` |
 | `ov001:0207a944`, 36 B | `UnloadSubsceneOverlayAndDestroyTask` | void; a null task prevents both destruction and overlay unload. | `eu/src/overlays/ov001/calls/UnloadSubsceneOverlayAndDestroyTask.c` |
 | `ov001:0207ab68`, 20 B | `ReleaseSubscenePanelBuffers` | void; frees 0x1c without clearing, but the pointer-field helper clears 0x20. | `eu/src/overlays/ov001/calls/ReleaseSubscenePanelBuffers.c` |
 | `ov001:0207abdc`, 58 B | `ReloadSubsceneOverlayAfterFade` | void; fade is stepped every call; panel/overlay mutations require fade-ready and empty queue. | `eu/src/overlays/ov001/calls/ReloadSubsceneOverlayAfterFade.c` |

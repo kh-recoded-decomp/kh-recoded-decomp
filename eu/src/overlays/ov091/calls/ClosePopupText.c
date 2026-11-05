@@ -1,10 +1,10 @@
 #define CallVirtualHandlerSlot1_02001574 CallVirtualHandlerSlot1
-#define ClearPopupFlags_020c2764 func_ov091_020c2784
+#define ClearPopupFlags_020c2764 ReportTopPopup_ClearFlags
 #define ClosePopupText_020c1ae8 ClosePopupText
 #define DestroyFndObjectList_020014f0 DestroyFndObjectList
 #define FlushBufferAndRunCallback_0200153c FlushBufferAndRunCallback
 #define G2S_GetBG2ScrPtr_02006f0c G2S_GetBG2ScrPtr
 #define MIi_CpuClearFast_01ff8740 MIi_CpuClearFast
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
-#define TestPopupFlags_020c2778 func_ov091_020c2798
+#define TestPopupFlags_020c2778 ReportTopPopup_GetMaskedFlags
 #include "src/ov091/panel_state/ClosePopupText_020c1ae8.c"

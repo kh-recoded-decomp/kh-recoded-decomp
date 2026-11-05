@@ -1,4 +1,4 @@
 #define ItemList_ReleaseCursorEntry_020c73cc ItemList_ReleaseCursorEntry_020c73ec
 #define ReleaseRecordEntry_02029388 ReleaseRecordEntry
-#define func_ov077_020c792c func_ov077_020c794c
+#define func_ov077_020c792c ClearItemScreenBg1AndRedrawList
 #include "src/ov077/unclassified_helpers/ItemList_ReleaseCursorEntry_020c73cc.c"

@@ -17,8 +17,8 @@ ToggleOptionOnRight kind:function(thumb,size=0x30) addr:0x020c59fc
 ConfirmSaveSelectStep kind:function(thumb,size=0x1fc) addr:0x020c5a2c
 CancelSaveSelectStep kind:function(thumb,size=0xac) addr:0x020c5c28
 ConfirmSelectedSlot kind:function(thumb,size=0x54) addr:0x020c5cd4
-func_ov080_020c5d28 kind:function(thumb,size=0x2) addr:0x020c5d28
-func_ov080_020c5d2c kind:function(thumb,size=0x2) addr:0x020c5d2c
+SaveSelect_ConsumeLButtonNoop kind:function(thumb,size=0x2) addr:0x020c5d28
+SaveSelect_ConsumeRButtonNoop kind:function(thumb,size=0x2) addr:0x020c5d2c
 UpdateValidSlotCount kind:function(thumb,size=0x18) addr:0x020c5d30
 gSaveSelectObjManagerConfig kind:data(any) addr:0x020c5d48
 data_ov080_020c5d58 kind:data(any) addr:0x020c5d58

@@ -1,5 +1,5 @@
 #define DestroyMenuScene_020bed14 DestroyMenuScene
-#define DestroyTask_020c27cc func_ov091_020c27ec
+#define DestroyTask_020c27cc ReportTopPopup_DestroyTask
 #define FreeGraphicsResources_020bf3e0 FreeGraphicsResources
 #define FreeMessageBuffers_020bf1d8 FreeMessageBuffers
 #define ReleaseListPanels_020bf87c ReleaseListPanels

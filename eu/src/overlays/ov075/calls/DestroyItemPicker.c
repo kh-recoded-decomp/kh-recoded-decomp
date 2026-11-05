@@ -6,6 +6,6 @@
 #define ReleaseResourceAndDetach_0202eee8 ReleaseResourceAndDetach
 #define SetSecondaryElementEnabled_020bc084 SetSecondaryElementEnabled
 #define ZeroHalfThenFree_0202cd78 ZeroHalfThenFree
-#define _fp_init_020d10dc func_ov075_020d10fc
+#define _fp_init_020d10dc DestroyItemPickerSubstateNoop
 #define func_ov027_020b903c ReleaseIfMarked
 #include "src/ov075/unclassified_helpers/DestroyItemPicker_020cffb8.c"

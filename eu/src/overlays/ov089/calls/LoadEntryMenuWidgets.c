@@ -11,8 +11,8 @@
 #define func_ov027_020b8f98 func_ov027_020b8fb8
 #define func_ov027_020b9098 func_ov027_020b90b8
 #define func_ov039_020bc1bc func_ov039_020bc1dc
-#define func_ov089_020befc0 func_ov089_020befe0
-#define func_ov089_020c040c func_ov089_020c042c
-#define func_ov089_020c045c func_ov089_020c047c
-#define func_ov089_020c04c8 func_ov089_020c04e8
+#define func_ov089_020befc0 MovePopupCursorOnDirectionalInput
+#define func_ov089_020c040c ConfirmOrClosePopup
+#define func_ov089_020c045c CommitPopupSelectionToSessionBits
+#define func_ov089_020c04c8 ResetPopupConfirmModeWithSound
 #include "src/ov089/panel_state/LoadEntryMenuWidgets_020bf9c0.c"

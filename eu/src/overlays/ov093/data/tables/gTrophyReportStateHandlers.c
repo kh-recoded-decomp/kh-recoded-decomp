@@ -1,19 +1,19 @@
 #include "nitro/types.h"
 
-extern void func_ov093_020c2374(void);
+extern void TrophyReport_HandleState0Noop(void);
 extern void WaitForBrightnessReset(void); /* WaitForBrightnessReset */
 extern void RunEntryUnlockSequence(void);
 extern void RunRewardUnlockSequence(void);
 extern void RunUnlockSequence(void);
 extern void RunPrizeMessageSequence(void);
-extern void func_ov093_020c2b20(void);
+extern void TrophyReport_HandleState6Noop(void);
 
 void (*const gTrophyReportStateHandlers[7])(void) = {
-    func_ov093_020c2374,
+    TrophyReport_HandleState0Noop,
     WaitForBrightnessReset, /* WaitForBrightnessReset */
     RunEntryUnlockSequence,
     RunRewardUnlockSequence,
     RunUnlockSequence,
     RunPrizeMessageSequence,
-    func_ov093_020c2b20,
+    TrophyReport_HandleState6Noop,
 };

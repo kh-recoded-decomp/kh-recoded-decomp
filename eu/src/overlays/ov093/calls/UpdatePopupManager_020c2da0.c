@@ -2,6 +2,6 @@
 #define UpdatePopupManager_020c2d80 UpdatePopupManager_020c2da0
 #define data_ov093_020c3e54 data_ov093_020c3e74
 #define func_01ff8740 MIi_CpuClearFast
-#define func_ov093_020c3bd4 func_ov093_020c3bf4
+#define func_ov093_020c3bd4 TrophyPopup_GetState
 #define g_popupManager_020c50e4 data_ov093_020c5104
 #include "src/ov093/unclassified_helpers/UpdatePopupManager_020c2d80.c"

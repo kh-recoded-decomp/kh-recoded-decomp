@@ -112,11 +112,11 @@ src/overlays/ov087/calls/OpenPromptMessage0E.c:
     complete
     .text       start:0x020c5c64 end:0x020c5cb0
 
-src/overlays/ov087/auto/func_ov087_020c5cb0.c:
+src/overlays/ov087/auto/SelectionPanel_EnterState8Noop.c:
     complete
     .text       start:0x020c5cb0 end:0x020c5cb4
 
-src/overlays/ov087/auto/func_ov087_020c5cb4.c:
+src/overlays/ov087/auto/SelectionPanel_EnterState9Noop.c:
     complete
     .text       start:0x020c5cb4 end:0x020c5cb8
 

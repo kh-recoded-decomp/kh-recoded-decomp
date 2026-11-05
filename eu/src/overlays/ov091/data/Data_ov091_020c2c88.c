@@ -3,7 +3,7 @@
 #pragma explicit_zero_data on
 
 extern void DestroyPopupManager(void);
-extern void func_ov091_020c1878(void);
+extern void ReportTopPopup_InitTaskWork(void);
 
 typedef struct {
     u16 summaryFormat[6];
@@ -20,7 +20,7 @@ ReportPopupTables data_ov091_020c2c88 = {
 },
 {
     (void *)0x000E001B,
-    (void *)func_ov091_020c1878,
+    (void *)ReportTopPopup_InitTaskWork,
     (void *)DestroyPopupManager,
     (void *)0x00000270,
     NULL,

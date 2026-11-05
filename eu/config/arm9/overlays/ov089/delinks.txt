@@ -12,7 +12,7 @@ src/overlays/ov089/calls/MoveCursorToElement.c:
     complete
     .text       start:0x020bef54 end:0x020befe0
 
-src/overlays/ov089/calls/func_ov089_020befe0.c:
+src/overlays/ov089/calls/MovePopupCursorOnDirectionalInput.c:
     complete
     .text       start:0x020befe0 end:0x020bf014
 
@@ -92,15 +92,15 @@ src/overlays/ov089/calls/UpdateEntryCarousel.c:
     complete
     .text       start:0x020c0214 end:0x020c042c
 
-src/overlays/ov089/calls/func_ov089_020c042c.c:
+src/overlays/ov089/calls/ConfirmOrClosePopup.c:
     complete
     .text       start:0x020c042c end:0x020c047c
 
-src/overlays/ov089/calls/func_ov089_020c047c.c:
+src/overlays/ov089/calls/CommitPopupSelectionToSessionBits.c:
     complete
     .text       start:0x020c047c end:0x020c04e8
 
-src/overlays/ov089/calls/func_ov089_020c04e8.c:
+src/overlays/ov089/calls/ResetPopupConfirmModeWithSound.c:
     complete
     .text       start:0x020c04e8 end:0x020c0514
 

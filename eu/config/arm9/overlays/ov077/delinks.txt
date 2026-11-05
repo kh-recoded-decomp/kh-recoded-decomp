@@ -36,7 +36,7 @@ src/overlays/ov077/calls/OpenHelpMessageOrActivate.c:
     complete
     .text       start:0x020c4b70 end:0x020c4bcc
 
-src/overlays/ov077/auto/func_ov077_020c4bcc.c:
+src/overlays/ov077/auto/ItemScreen_HandleState1Noop.c:
     complete
     .text       start:0x020c4bcc end:0x020c4bce
 
@@ -266,15 +266,15 @@ src/overlays/ov077/calls/OpenItemConfirmWindow.c:
     complete
     .text       start:0x020c7810 end:0x020c7914
 
-src/overlays/ov077/calls/func_ov077_020c7914.c:
+src/overlays/ov077/calls/OpenItemScreenDiscardConfirmation.c:
     complete
     .text       start:0x020c7914 end:0x020c7930
 
-src/overlays/ov077/calls/func_ov077_020c7930.c:
+src/overlays/ov077/calls/OpenItemScreenRewardConfirmation.c:
     complete
     .text       start:0x020c7930 end:0x020c794c
 
-src/overlays/ov077/calls/func_ov077_020c794c.c:
+src/overlays/ov077/calls/ClearItemScreenBg1AndRedrawList.c:
     complete
     .text       start:0x020c794c end:0x020c79c4
 
@@ -286,7 +286,7 @@ src/overlays/ov077/calls/MenuPanel_ConfirmSelection_020c79dc.c:
     complete
     .text       start:0x020c79dc end:0x020c7a68
 
-src/overlays/ov077/calls/func_ov077_020c7a68.c:
+src/overlays/ov077/calls/IsItemScreenPartyHpFull.c:
     complete
     .text       start:0x020c7a68 end:0x020c7a98
 
@@ -434,7 +434,7 @@ src/overlays/ov077/calls/LoadItemScreenMenuTipImages.c:
     complete
     .text       start:0x020c9df0 end:0x020c9f7c
 
-src/overlays/ov077/auto/func_ov077_020c9f7c.c:
+src/overlays/ov077/auto/DestroyItemScreenSubstateNoop.c:
     complete
     .text       start:0x020c9f7c end:0x020c9f7e
 

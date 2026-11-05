@@ -208,7 +208,7 @@ src/overlays/ov093/auto/TrophyReport_GetState.c:
     complete
     .text       start:0x020c2368 end:0x020c2374
 
-src/overlays/ov093/auto/func_ov093_020c2374.c:
+src/overlays/ov093/auto/TrophyReport_HandleState0Noop.c:
     complete
     .text       start:0x020c2374 end:0x020c2378
 
@@ -232,7 +232,7 @@ src/overlays/ov093/calls/RunPrizeMessageSequence.c:
     complete
     .text       start:0x020c2970 end:0x020c2b20
 
-src/overlays/ov093/auto/func_ov093_020c2b20.c:
+src/overlays/ov093/auto/TrophyReport_HandleState6Noop.c:
     complete
     .text       start:0x020c2b20 end:0x020c2b24
 
@@ -276,7 +276,7 @@ src/overlays/ov093/calls/SetPopupSlotVisible_020c319c.c:
     complete
     .text       start:0x020c319c end:0x020c31f4
 
-src/overlays/ov093/auto/func_ov093_020c31f4.c:
+src/overlays/ov093/auto/TrophyPopup_HandleState0Noop.c:
     complete
     .text       start:0x020c31f4 end:0x020c31f8
 
@@ -320,15 +320,15 @@ src/overlays/ov093/calls/SetBgSubLayerVisible.c:
     complete
     .text       start:0x020c3b7c end:0x020c3bb4
 
-src/overlays/ov093/auto/func_ov093_020c3bb4.c:
+src/overlays/ov093/auto/TrophyPopup_SetFlags.c:
     complete
     .text       start:0x020c3bb4 end:0x020c3bc4
 
-src/overlays/ov093/auto/func_ov093_020c3bc4.c:
+src/overlays/ov093/auto/TrophyPopup_ClearFlags.c:
     complete
     .text       start:0x020c3bc4 end:0x020c3bd8
 
-src/overlays/ov093/auto/func_ov093_020c3bd8.c:
+src/overlays/ov093/auto/TrophyPopup_GetMaskedFlags.c:
     complete
     .text       start:0x020c3bd8 end:0x020c3be4
 
@@ -336,7 +336,7 @@ src/overlays/ov093/calls/StateMachine_SetState.c:
     complete
     .text       start:0x020c3be4 end:0x020c3bf4
 
-src/overlays/ov093/auto/func_ov093_020c3bf4.c:
+src/overlays/ov093/auto/TrophyPopup_GetState.c:
     complete
     .text       start:0x020c3bf4 end:0x020c3bfc
 
@@ -344,15 +344,15 @@ src/overlays/ov093/calls/CreatePopupManager.c:
     complete
     .text       start:0x020c3bfc end:0x020c3c2c
 
-src/overlays/ov093/calls/func_ov093_020c3c2c.c:
+src/overlays/ov093/calls/TrophyPopup_DestroyTask.c:
     complete
     .text       start:0x020c3c2c end:0x020c3c38
 
-src/overlays/ov093/calls/func_ov093_020c3c38.c:
+src/overlays/ov093/calls/TrophyPopup_QueueMessage.c:
     complete
     .text       start:0x020c3c38 end:0x020c3c44
 
-src/overlays/ov093/calls/func_ov093_020c3c44.c:
+src/overlays/ov093/calls/TrophyPopup_GetCurrentState.c:
     complete
     .text       start:0x020c3c44 end:0x020c3c60
 

@@ -8,6 +8,6 @@
 #define data_ov093_020c4e60 data_ov093_020c4e80
 #define func_0202b788 GetLanguageIndex
 #define func_ov027_020ba2a8 GetPackedFileEntry
-#define func_ov093_020c3c18 func_ov093_020c3c38
-#define func_ov093_020c3c24 func_ov093_020c3c44
+#define func_ov093_020c3c18 TrophyPopup_QueueMessage
+#define func_ov093_020c3c24 TrophyPopup_GetCurrentState
 #include "src/ov093/unclassified_helpers/RunPrizeMessageSequence_020c2950.c"

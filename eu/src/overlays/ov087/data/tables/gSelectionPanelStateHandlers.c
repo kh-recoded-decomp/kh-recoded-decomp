@@ -7,8 +7,8 @@ extern void OpenTwoChoiceMenu(void);
 extern void OpenPromptMessage0F(void); /* OpenPromptMessage0F */
 extern void OpenEntryPromptForMode(void);
 extern void OpenPromptMessage0E(void); /* OpenPromptMessage0E */
-extern void func_ov087_020c5cb0(void);
-extern void func_ov087_020c5cb4(void);
+extern void SelectionPanel_EnterState8Noop(void);
+extern void SelectionPanel_EnterState9Noop(void);
 extern void OpenPromptMessage12(void); /* OpenPromptMessage12 */
 extern void OpenPromptMessage10(void);
 extern void OpenSelectionPanel(void); /* OpenSelectionPanel */
@@ -27,8 +27,8 @@ void (*gSelectionPanelStateHandlers[18])(void) = {
     OpenPromptMessage0F, /* OpenPromptMessage0F */
     OpenEntryPromptForMode,
     OpenPromptMessage0E, /* OpenPromptMessage0E */
-    func_ov087_020c5cb0,
-    func_ov087_020c5cb4,
+    SelectionPanel_EnterState8Noop,
+    SelectionPanel_EnterState9Noop,
     OpenPromptMessage12, /* OpenPromptMessage12 */
     OpenPromptMessage10,
     OpenSelectionPanel, /* OpenSelectionPanel */

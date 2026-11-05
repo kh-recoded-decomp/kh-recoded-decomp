@@ -156,7 +156,7 @@ extern void SetEntrySlotsVisible(void *widgets, void *widget, int visible);
 extern void RuntimeState_SetCondition(BOOL flag);
 
 extern void OpenStatusPageView(StatusMenu *menu, void *page);
-extern void func_ov073_020bff88(StatusMenu *menu, void *page);
+extern void StatusMenu_UpdateOverviewInputNoop(StatusMenu *menu, void *page);
 extern void DrawStatusPanel(StatusMenu *menu, void *page);
 extern void HideStatusPageIcons(StatusMenu *menu, void *page);
 extern void SetupStatusPageScroll(StatusMenu *menu, void *page);
@@ -327,7 +327,7 @@ int InitStatusMenu(StatusMenu *menu)
     LoadStatusLabels(menu);
 
     menu->handlers[0].open = OpenStatusPageView;
-    menu->handlers[0].update = func_ov073_020bff88;
+    menu->handlers[0].update = StatusMenu_UpdateOverviewInputNoop;
     menu->handlers[0].draw = DrawStatusPanel;
     menu->handlers[0].close = HideStatusPageIcons;
     menu->handlers[0].page = menu->statText;

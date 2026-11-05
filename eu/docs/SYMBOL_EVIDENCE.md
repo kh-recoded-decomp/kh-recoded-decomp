@@ -496,3 +496,13 @@ queries, message-window resource callbacks and subscene overlay loading.
 work owners, exact teardown and upload order, numeric ID narrowing, queue
 callbacks, asynchronous load limits and per-call fade behavior. Existing script
 and loader-queue references use the accepted EU names.
+
+## Menu descriptors, popup tasks and registered empty hooks
+
+Eighty entrypoints now name confirmation/selection operations, popup task/window
+helpers, overlay-qualified lifecycle callbacks and registered empty hooks.
+[MENU_CALLBACKS_AND_POPUP_CONTRACTS.md](MENU_CALLBACKS_AND_POPUP_CONTRACTS.md)
+records descriptor layout differences, callback-presence input consumption,
+consumed versus residual returns, task/work/window ownership, text-copy lifetime,
+HP predicates and unresolved state/category meanings. The native empty handlers
+and their distinct descriptor registrations remain intact.

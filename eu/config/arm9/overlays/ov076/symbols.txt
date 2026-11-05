@@ -123,12 +123,12 @@ LoadOverlaySync_020ca630 kind:function(thumb,size=0x14) addr:0x020ca630
 ApplySlotMenuItemReward kind:function(thumb,size=0xd2) addr:0x020ca644
 ItemList_ReturnCursorItem kind:function(thumb,size=0xc4) addr:0x020ca718
 ItemList_OpenConfirmWindow kind:function(thumb,size=0x104) addr:0x020ca7dc
-func_ov076_020ca8e0 kind:function(thumb,size=0x1c) addr:0x020ca8e0
-func_ov076_020ca8fc kind:function(thumb,size=0x1c) addr:0x020ca8fc
-func_ov076_020ca918 kind:function(thumb,size=0x78) addr:0x020ca918
+OpenSlotMenuDiscardConfirmation kind:function(thumb,size=0x1c) addr:0x020ca8e0
+OpenSlotMenuRewardConfirmation kind:function(thumb,size=0x1c) addr:0x020ca8fc
+ClearSlotMenuBg1AndRedrawSelection kind:function(thumb,size=0x78) addr:0x020ca918
 MenuPanel_Close kind:function(thumb,size=0x18) addr:0x020ca990
 MenuPanel_ConfirmSelection kind:function(thumb,size=0x8c) addr:0x020ca9a8
-func_ov076_020caa34 kind:function(thumb,size=0x30) addr:0x020caa34
+IsSlotMenuPartyHpFull kind:function(thumb,size=0x30) addr:0x020caa34
 IsRecordCapacityReached kind:function(thumb,size=0x9c) addr:0x020caa64
 AreSlotMenuSessionStatesZero kind:function(thumb,size=0x3c) addr:0x020cab00
 func_ov076_020cab3c kind:function(thumb,size=0x1c) addr:0x020cab3c
@@ -164,7 +164,7 @@ ShowMarkerElementAt kind:function(thumb,size=0x30) addr:0x020ccd20
 SetNavigationElementsVisible kind:function(thumb,size=0x38) addr:0x020ccd50
 CommandMatrix_GetStockForRecord kind:function(thumb,size=0x1c) addr:0x020ccd88
 LoadSlotMenuTipImages kind:function(thumb,size=0x18c) addr:0x020ccda4
-func_ov076_020ccf30 kind:function(thumb,size=0x2) addr:0x020ccf30
+DestroySlotMenuPanelSubstateNoop kind:function(thumb,size=0x2) addr:0x020ccf30
 DrawMenuImageModulated_020ccf34 kind:function(thumb,size=0x184) addr:0x020ccf34
 data_ov076_020cd0c0 kind:data(any) addr:0x020cd0c0
 data_ov076_020cd0d8 kind:data(any) addr:0x020cd0d8

@@ -3,5 +3,5 @@
 #define ItemList_ReturnCursorItem_020c772c ItemList_ReturnCursorItem_020c774c
 #define func_ov073_020c1eb4 RefreshStatusMenuData
 #define func_ov077_020c7658 ApplyItemScreenItemReward
-#define func_ov077_020c792c func_ov077_020c794c
+#define func_ov077_020c792c ClearItemScreenBg1AndRedrawList
 #include "src/ov077/unclassified_helpers/ItemList_ReturnCursorItem_020c772c.c"

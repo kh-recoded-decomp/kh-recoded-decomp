@@ -52,8 +52,8 @@ extern void *GetPackedFileEntry(PackedFileView *view, int index);
 extern u32 GetLanguageIndex(void);
 extern void *OS_SNPrintf_0202e094(char *dst, unsigned int len, const char *fmt, ...);
 extern s32 SetSharedFlagBits(u32 handle);
-extern void func_ov093_020c3c38(int x, int y, char *text, int charBase);
-extern BOOL func_ov093_020c3c44(void);
+extern void TrophyPopup_QueueMessage(int x, int y, char *text, int charBase);
+extern BOOL TrophyPopup_GetCurrentState(void);
 
 void RunRewardUnlockSequence(SceneWork *work)
 {
@@ -126,11 +126,11 @@ void RunRewardUnlockSequence(SceneWork *work)
             break;
         }
         SetSharedFlagBits(handle);
-        func_ov093_020c3c38(0x80, 0x60, text, charBase);
+        TrophyPopup_QueueMessage(0x80, 0x60, text, charBase);
         work->rewardState++;
         break;
     case 2:
-        if (!func_ov093_020c3c44()) {
+        if (!TrophyPopup_GetCurrentState()) {
             work->rewardState = 0;
         }
         break;

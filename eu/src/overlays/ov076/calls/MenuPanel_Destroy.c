@@ -7,5 +7,5 @@
 #define SetSecondaryElementEnabled_020bc084 SetSecondaryElementEnabled
 #define ZeroHalfThenFree_0202cd78 ZeroHalfThenFree
 #define func_ov027_020b903c ReleaseIfMarked
-#define func_ov076_020ccf10 func_ov076_020ccf30
+#define func_ov076_020ccf10 DestroySlotMenuPanelSubstateNoop
 #include "src/ov076/unclassified_helpers/MenuPanel_Destroy_020cc088.c"

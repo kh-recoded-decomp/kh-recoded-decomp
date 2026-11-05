@@ -7,7 +7,7 @@ InitOverlay088CaptionLayer kind:function(arm,size=0xc4) addr:0x020bed2c
 DestroyOverlay088CaptionLayer kind:function(arm,size=0x1c) addr:0x020bedf0
 InitializeOverlay088 kind:function(arm,size=0x2c) addr:0x020bee0c
 ShutdownOverlay088 kind:function(arm,size=0x20) addr:0x020bee38
-func_ov088_020bee58 kind:function(arm,size=0x4) addr:0x020bee58
+UpdateOverlay088CaptionLayerNoop kind:function(arm,size=0x4) addr:0x020bee58
 data_ov088_020bee5c kind:data(any) addr:0x020bee5c
 data_ov088_020bee6c kind:data(any) addr:0x020bee6c
 data_ov088_020bee80 kind:data(any) addr:0x020bee80 ambiguous

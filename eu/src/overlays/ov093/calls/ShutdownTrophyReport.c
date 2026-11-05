@@ -10,10 +10,10 @@ extern u32 FreeResourceBlocks();
 extern u32 ReleaseSceneResources();
 extern u32 ReleaseSceneObjManagers();
 extern u32 ResetTouchActive();
-extern u32 func_ov093_020c3c2c();
+extern u32 TrophyPopup_DestroyTask();
 
 void ShutdownTrophyReport(int work) {
-  func_ov093_020c3c2c(*(u32 *)(work + 0xd1c8));
+  TrophyPopup_DestroyTask(*(u32 *)(work + 0xd1c8));
   NotifyBothOrOne(1,&sOv093_VblankFunc_020c4d54,0);
   ResetTouchActive(work);
   ReleaseSceneObjManagers(work);

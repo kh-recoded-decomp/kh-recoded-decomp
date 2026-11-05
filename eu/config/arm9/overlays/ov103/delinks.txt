@@ -28,11 +28,11 @@ src/overlays/ov103/calls/HandleListScrollUp.c:
     complete
     .text       start:0x020bec54 end:0x020becc4
 
-src/overlays/ov103/calls/func_ov103_020becc4.c:
+src/overlays/ov103/calls/CommitTheaterEntrySelection.c:
     complete
     .text       start:0x020becc4 end:0x020bed20
 
-src/overlays/ov103/calls/func_ov103_020bed20.c:
+src/overlays/ov103/calls/CancelTheaterEntrySelection.c:
     complete
     .text       start:0x020bed20 end:0x020bed5c
 

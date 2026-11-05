@@ -19,6 +19,6 @@
 #define func_ov039_020bc0ec GetSecondaryElementEnabled
 #define func_ov039_020bca00 GetMenuInputState
 #define func_ov077_020c6dcc ItemPicker_DrawRows_020c6dec
-#define func_ov077_020c78f4 func_ov077_020c7914
-#define func_ov077_020c7910 func_ov077_020c7930
+#define func_ov077_020c78f4 OpenItemScreenDiscardConfirmation
+#define func_ov077_020c7910 OpenItemScreenRewardConfirmation
 #include "src/ov077/unclassified_helpers/MenuPanel_HandleInput_020c9370.c"

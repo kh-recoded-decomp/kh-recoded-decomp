@@ -6,10 +6,10 @@ extern void InitPageMenu(void);
 extern void SelectNextPage(void);
 extern void StepCursorBack(void);
 extern void StepCursorForward(void);
-extern void func_ov078_020c4370(void);
+extern void UpdatePageMenuNoop(void);
 extern void ShutdownPageMenu(void);
-extern void func_ov078_020c4df8(void);
-extern void func_ov078_020c4f44(void);
+extern void SelectPreviousMenuPage(void);
+extern void CloseOverlay078Menu(void);
 
 u32 data_ov078_020c5024[64] = {
     0xFFFFFFFF, 0x0000000A, 0x00000000, 0x00000016,
@@ -33,19 +33,19 @@ u32 data_ov078_020c5024[64] = {
 void *data_ov078_020c4fe0[17] = {
     (void *)InitPageMenu,
     (void *)ShutdownPageMenu,
-    (void *)func_ov078_020c4370,
+    (void *)UpdatePageMenuNoop,
     NULL,
     (void *)0x000005D8,
-    (void *)func_ov078_020c4df8,
+    (void *)SelectPreviousMenuPage,
     (void *)SelectNextPage,
     NULL,
     NULL,
     NULL,
-    (void *)func_ov078_020c4f44,
+    (void *)CloseOverlay078Menu,
     NULL,
     NULL,
     (void *)StepCursorBack,
     (void *)StepCursorForward,
     NULL,
-    (void *)func_ov078_020c4f44,
+    (void *)CloseOverlay078Menu,
 };

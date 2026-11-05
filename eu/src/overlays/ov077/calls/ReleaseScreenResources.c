@@ -6,6 +6,6 @@
 #define ReleaseScreenResources_020c90bc ReleaseScreenResources
 #define SetSecondaryElementEnabled_020bc084 SetSecondaryElementEnabled
 #define ZeroHalfThenFree_0202cd78 ZeroHalfThenFree
-#define _fp_init_020c9f5c func_ov077_020c9f7c
+#define _fp_init_020c9f5c DestroyItemScreenSubstateNoop
 #define func_ov027_020b903c ReleaseIfMarked
 #include "src/ov077/unclassified_helpers/ReleaseScreenResources_020c90bc.c"

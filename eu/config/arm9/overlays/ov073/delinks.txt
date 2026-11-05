@@ -48,7 +48,7 @@ src/overlays/ov073/calls/OpenStatusPageView.c:
     complete
     .text       start:0x020bff1c end:0x020bff88
 
-src/overlays/ov073/auto/func_ov073_020bff88.c:
+src/overlays/ov073/auto/StatusMenu_UpdateOverviewInputNoop.c:
     complete
     .text       start:0x020bff88 end:0x020bff8c
 

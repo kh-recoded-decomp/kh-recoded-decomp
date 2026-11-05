@@ -505,15 +505,15 @@ src/overlays/ov076/calls/ItemList_OpenConfirmWindow.c:
     complete
     .text       start:0x020ca7dc end:0x020ca8e0
 
-src/overlays/ov076/calls/func_ov076_020ca8e0.c:
+src/overlays/ov076/calls/OpenSlotMenuDiscardConfirmation.c:
     complete
     .text       start:0x020ca8e0 end:0x020ca8fc
 
-src/overlays/ov076/calls/func_ov076_020ca8fc.c:
+src/overlays/ov076/calls/OpenSlotMenuRewardConfirmation.c:
     complete
     .text       start:0x020ca8fc end:0x020ca918
 
-src/overlays/ov076/calls/func_ov076_020ca918.c:
+src/overlays/ov076/calls/ClearSlotMenuBg1AndRedrawSelection.c:
     complete
     .text       start:0x020ca918 end:0x020ca990
 
@@ -525,7 +525,7 @@ src/overlays/ov076/calls/MenuPanel_ConfirmSelection.c:
     complete
     .text       start:0x020ca9a8 end:0x020caa34
 
-src/overlays/ov076/calls/func_ov076_020caa34.c:
+src/overlays/ov076/calls/IsSlotMenuPartyHpFull.c:
     complete
     .text       start:0x020caa34 end:0x020caa64
 
@@ -669,7 +669,7 @@ src/overlays/ov076/calls/LoadSlotMenuTipImages.c:
     complete
     .text       start:0x020ccda4 end:0x020ccf30
 
-src/overlays/ov076/auto/func_ov076_020ccf30.c:
+src/overlays/ov076/auto/DestroySlotMenuPanelSubstateNoop.c:
     complete
     .text       start:0x020ccf30 end:0x020ccf32
 

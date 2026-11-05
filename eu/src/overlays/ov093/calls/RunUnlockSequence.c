@@ -3,6 +3,6 @@
 #define SetGlobalPackedBit_02027320 SetGlobalPackedBit
 #define SetSceneState_020c231c SetSceneState
 #define func_ov027_020ba2a8 GetPackedFileEntry
-#define func_ov093_020c3c18 func_ov093_020c3c38
-#define func_ov093_020c3c24 func_ov093_020c3c44
+#define func_ov093_020c3c18 TrophyPopup_QueueMessage
+#define func_ov093_020c3c24 TrophyPopup_GetCurrentState
 #include "src/ov093/unclassified_helpers/RunUnlockSequence_020c2850.c"

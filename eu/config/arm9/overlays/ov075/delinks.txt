@@ -296,11 +296,11 @@ src/overlays/ov075/calls/UpdateSlotCursor.c:
     complete
     .text       start:0x020cc5c8 end:0x020cc908
 
-src/overlays/ov075/auto/func_ov075_020cc908.c:
+src/overlays/ov075/auto/MatrixMenu_UpdatePage1CursorNoop.c:
     complete
     .text       start:0x020cc908 end:0x020cc90a
 
-src/overlays/ov075/auto/func_ov075_020cc90c.c:
+src/overlays/ov075/auto/MatrixMenu_UpdatePage5CursorNoop.c:
     complete
     .text       start:0x020cc90c end:0x020cc90e
 
@@ -308,7 +308,7 @@ src/overlays/ov075/calls/MoveCursorToSelectedColumn.c:
     complete
     .text       start:0x020cc910 end:0x020cc934
 
-src/overlays/ov075/auto/func_ov075_020cc934.c:
+src/overlays/ov075/auto/MatrixMenu_UpdatePage2CursorNoop.c:
     complete
     .text       start:0x020cc934 end:0x020cc936
 
@@ -448,7 +448,7 @@ src/overlays/ov075/calls/ApplyDialogReward.c:
     complete
     .text       start:0x020ce834 end:0x020ce906
 
-src/overlays/ov075/calls/func_ov075_020ce908.c:
+src/overlays/ov075/calls/ConsumeItemPickerSelectionAndApplyReward.c:
     complete
     .text       start:0x020ce908 end:0x020ce9cc
 
@@ -456,11 +456,11 @@ src/overlays/ov075/calls/OpenItemPicker.c:
     complete
     .text       start:0x020ce9cc end:0x020cead0
 
-src/overlays/ov075/calls/func_ov075_020cead0.c:
+src/overlays/ov075/calls/OpenItemPickerDiscardConfirmation.c:
     complete
     .text       start:0x020cead0 end:0x020ceaec
 
-src/overlays/ov075/calls/func_ov075_020ceaec.c:
+src/overlays/ov075/calls/OpenItemPickerRewardConfirmation.c:
     complete
     .text       start:0x020ceaec end:0x020ceb08
 
@@ -476,7 +476,7 @@ src/overlays/ov075/calls/ConfirmItemPicker.c:
     complete
     .text       start:0x020ceb98 end:0x020cec24
 
-src/overlays/ov075/calls/func_ov075_020cec24.c:
+src/overlays/ov075/calls/IsItemPickerPartyHpFull.c:
     complete
     .text       start:0x020cec24 end:0x020cec54
 
@@ -632,7 +632,7 @@ src/overlays/ov075/calls/LoadItemPickerMenuTipImages.c:
     complete
     .text       start:0x020d0f70 end:0x020d10fc
 
-src/overlays/ov075/auto/func_ov075_020d10fc.c:
+src/overlays/ov075/auto/DestroyItemPickerSubstateNoop.c:
     complete
     .text       start:0x020d10fc end:0x020d10fe
 

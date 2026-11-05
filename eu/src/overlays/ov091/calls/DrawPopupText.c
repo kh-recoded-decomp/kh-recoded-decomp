@@ -8,6 +8,6 @@
 #define InitTextLayerAt_020014b0 InitTextLayerAt
 #define NNSi_G2dFontGetTextHeight_02016b4c NNSi_G2dFontGetTextHeight
 #define data_ov091_020c373c data_ov091_020c375c
-#define func_ov091_020c2754 func_ov091_020c2774
-#define func_ov091_020c2778 func_ov091_020c2798
+#define func_ov091_020c2754 ReportTopPopup_SetFlags
+#define func_ov091_020c2778 ReportTopPopup_GetMaskedFlags
 #include "src/ov091/panel_state/DrawPopupText_020c19d0.c"

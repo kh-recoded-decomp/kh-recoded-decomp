@@ -40,7 +40,7 @@ src/overlays/ov088/calls/ShutdownOverlay088.c:
     complete
     .text       start:0x020bee38 end:0x020bee58
 
-src/overlays/ov088/auto/func_ov088_020bee58.c:
+src/overlays/ov088/auto/UpdateOverlay088CaptionLayerNoop.c:
     complete
     .text       start:0x020bee58 end:0x020bee5c
 

@@ -22,5 +22,5 @@
 #define func_ov091_020c12b4 UpdateReportTopFlagProgress
 #define func_ov091_020c1350 UpdateReportTopCounterProgress
 #define func_ov091_020c1400 SyncRecordFlags
-#define func_ov091_020c279c func_ov091_020c27bc
+#define func_ov091_020c279c ReportTopPopup_CreateTask
 #include "src/ov091/panel_state/InitRecordMenuScene_020beb20.c"

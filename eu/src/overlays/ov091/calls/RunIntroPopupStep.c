@@ -1,6 +1,6 @@
-#define GetPopupState_020c27e4 func_ov091_020c2804
+#define GetPopupState_020c27e4 ReportTopPopup_GetCurrentState
 #define IsGlobalPackedBitSet_02027304 IsGlobalPackedBitSet
-#define QueuePopup_020c27d8 func_ov091_020c27f8
+#define QueuePopup_020c27d8 ReportTopPopup_QueueMessage
 #define RunIntroPopupStep_020c1790 RunIntroPopupStep
 #define SetGlobalPackedBit_02027320 SetGlobalPackedBit
 #define SetSceneMode_020c173c SetSceneMode

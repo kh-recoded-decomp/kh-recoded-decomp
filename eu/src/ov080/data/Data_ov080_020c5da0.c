@@ -12,8 +12,8 @@ extern void SelectSlotOnUp(void);
 extern void ToggleOptionOnLeft(void);
 extern void ToggleOptionOnRight(void);
 extern void UpdateSaveSelectScreen(void);
-extern void func_ov080_020c5d28(void);
-extern void func_ov080_020c5d2c(void);
+extern void SaveSelect_ConsumeLButtonNoop(void);
+extern void SaveSelect_ConsumeRButtonNoop(void);
 
 void *data_ov080_020c5da0[17] = {
     (void *)InitSaveSelectScreen,
@@ -29,8 +29,8 @@ void *data_ov080_020c5da0[17] = {
     (void *)CancelSaveSelectStep,
     NULL,
     (void *)ConfirmSelectedSlot,
-    (void *)func_ov080_020c5d28,
-    (void *)func_ov080_020c5d2c,
+    (void *)SaveSelect_ConsumeLButtonNoop,
+    (void *)SaveSelect_ConsumeRButtonNoop,
     NULL,
     NULL,
 };

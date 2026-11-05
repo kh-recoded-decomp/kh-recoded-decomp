@@ -1,5 +1,5 @@
 InitPageMenu kind:function(thumb,size=0xf0) addr:0x020c4280
-func_ov078_020c4370 kind:function(thumb,size=0x2) addr:0x020c4370
+UpdatePageMenuNoop kind:function(thumb,size=0x2) addr:0x020c4370
 ShutdownPageMenu kind:function(thumb,size=0x6c) addr:0x020c4374
 SetupPageMenuBackgrounds kind:function(thumb,size=0x1b0) addr:0x020c43e0
 LoadPageMenuWidgets kind:function(thumb,size=0x198) addr:0x020c4590
@@ -11,9 +11,9 @@ RefreshPageTabs kind:function(thumb,size=0xa4) addr:0x020c48fc
 DrawPageDetails kind:function(thumb,size=0x198) addr:0x020c49a0
 DrawPageHeader kind:function(thumb,size=0x114) addr:0x020c4b38
 DrawLayoutLine kind:function(thumb,size=0x1ac) addr:0x020c4c4c
-func_ov078_020c4df8 kind:function(thumb,size=0xa8) addr:0x020c4df8
+SelectPreviousMenuPage kind:function(thumb,size=0xa8) addr:0x020c4df8
 SelectNextPage kind:function(thumb,size=0xa4) addr:0x020c4ea0
-func_ov078_020c4f44 kind:function(thumb,size=0x1c) addr:0x020c4f44
+CloseOverlay078Menu kind:function(thumb,size=0x1c) addr:0x020c4f44
 StepCursorBack kind:function(thumb,size=0x26) addr:0x020c4f60
 StepCursorForward kind:function(thumb,size=0x26) addr:0x020c4f88
 data_ov078_020c4fb0 kind:data(any) addr:0x020c4fb0

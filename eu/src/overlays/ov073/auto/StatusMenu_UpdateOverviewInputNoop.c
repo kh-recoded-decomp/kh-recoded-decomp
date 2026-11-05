@@ -1,0 +1,2 @@
+#define FSi_CloseFileCommand_020bff68 StatusMenu_UpdateOverviewInputNoop
+#include "src/ov073/library_nitro_fs/FSi_CloseFileCommand_020bff68.c"

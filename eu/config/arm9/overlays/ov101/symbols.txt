@@ -49,7 +49,7 @@ SetStateFlag kind:function(arm,size=0x20) addr:0x020c1360
 RefreshEntryUnlocks kind:function(arm,size=0x424) addr:0x020c1380
 SetStatePhase kind:function(arm,size=0x24) addr:0x020c17a4
 GetStatePhase kind:function(arm,size=0x18) addr:0x020c17c8
-func_ov101_020c17e0 kind:function(arm,size=0x4) addr:0x020c17e0
+Ov101List_HandleState0Noop kind:function(arm,size=0x4) addr:0x020c17e0
 RunListScreenStep kind:function(arm,size=0x19c) addr:0x020c17e4
 func_ov101_020c1980 kind:function(arm,size=0x4) addr:0x020c1980
 gOv101Callbacks kind:data(any) addr:0x020c1984

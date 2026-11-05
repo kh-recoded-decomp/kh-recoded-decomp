@@ -4,7 +4,7 @@
 #define MessageWindow_Update_020c84dc MessageWindow_Update_020c84fc
 #define TabBar_HandleTouch_020c9be4 ItemMenu_HandleTabTouch
 #define OpenHelpMessageOrActivate_020c4b50 OpenHelpMessageOrActivate
-#define func_ov077_020c4bac func_ov077_020c4bcc
+#define func_ov077_020c4bac ItemScreen_HandleState1Noop
 #define UpdateItemScreenDisplay_020c4be0 UpdateItemScreenDisplay
 #define func_020505a8 GetSelectionPackedValueBlock
 #define func_ov077_020c43f8 HandleItemTabTouch

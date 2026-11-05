@@ -7,7 +7,7 @@
 #define G2S_GetBG2ScrPtr_02006f0c G2S_GetBG2ScrPtr
 #define InitTextLayerAt_020014b0 InitTextLayerAt
 #define NNSi_G2dFontGetTextHeight_02016b4c NNSi_G2dFontGetTextHeight
-#define func_ov093_020c3b94 func_ov093_020c3bb4
-#define func_ov093_020c3bb8 func_ov093_020c3bd8
+#define func_ov093_020c3b94 TrophyPopup_SetFlags
+#define func_ov093_020c3bb8 TrophyPopup_GetMaskedFlags
 #define g_popupManager_020c50e4 data_ov093_020c5104
 #include "src/ov093/unclassified_helpers/DrawPopupText_020c2e04.c"

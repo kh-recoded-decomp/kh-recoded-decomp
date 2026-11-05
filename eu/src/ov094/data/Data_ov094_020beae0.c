@@ -2,14 +2,14 @@
 
 #pragma explicit_zero_data on
 
-extern void func_ov094_020beac0(void);
-extern void func_ov094_020beac8(void);
-extern void func_ov094_020beacc(void);
+extern void InitOv094SecondaryMenu(void);
+extern void DestroyOv094SecondaryMenu(void);
+extern void UpdateOv094SecondaryMenu(void);
 
 void *data_ov094_020beae0[16] = {
-    (void *)func_ov094_020beac0,
-    (void *)func_ov094_020beac8,
-    (void *)func_ov094_020beacc,
+    (void *)InitOv094SecondaryMenu,
+    (void *)DestroyOv094SecondaryMenu,
+    (void *)UpdateOv094SecondaryMenu,
     (void *)0x00000004,
     NULL,
     NULL,

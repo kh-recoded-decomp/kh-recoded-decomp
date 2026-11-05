@@ -4,7 +4,7 @@
 
 extern void InitializeOverlay088(void);
 extern void ShutdownOverlay088(void);
-extern void func_ov088_020bee58(void);
+extern void UpdateOverlay088CaptionLayerNoop(void);
 
 u32 data_ov088_020beec0[18] = {
     0x00000006, 0x00000007, 0x00000008, 0x00000009,
@@ -17,7 +17,7 @@ u32 data_ov088_020beec0[18] = {
 void *data_ov088_020bee80[16] = {
     (void *)InitializeOverlay088,
     (void *)ShutdownOverlay088,
-    (void *)func_ov088_020bee58,
+    (void *)UpdateOverlay088CaptionLayerNoop,
     (void *)0x00000040,
     NULL,
     NULL,

@@ -1,4 +1,4 @@
 #define ItemList_ReleaseCursorEntry_020ca398 ItemList_ReleaseCursorEntry
 #define ReleaseRecordEntry_02029388 ReleaseRecordEntry
-#define func_ov076_020ca8f8 func_ov076_020ca918
+#define func_ov076_020ca8f8 ClearSlotMenuBg1AndRedrawSelection
 #include "src/ov076/unclassified_helpers/ItemList_ReleaseCursorEntry_020ca398.c"

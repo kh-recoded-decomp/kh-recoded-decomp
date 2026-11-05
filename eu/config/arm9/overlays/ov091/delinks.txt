@@ -160,7 +160,7 @@ src/overlays/ov091/auto/GetReportTopMode.c:
     complete
     .text       start:0x020c1774 end:0x020c1780
 
-src/overlays/ov091/auto/func_ov091_020c1780.c:
+src/overlays/ov091/auto/ReportTop_HandleState0Noop.c:
     complete
     .text       start:0x020c1780 end:0x020c1784
 
@@ -172,7 +172,7 @@ src/overlays/ov091/calls/RunIntroPopupStep.c:
     complete
     .text       start:0x020c17b0 end:0x020c1878
 
-src/overlays/ov091/calls/func_ov091_020c1878.c:
+src/overlays/ov091/calls/ReportTopPopup_InitTaskWork.c:
     complete
     .text       start:0x020c1878 end:0x020c1930
 
@@ -204,7 +204,7 @@ src/overlays/ov091/calls/SetPopupSlotVisible.c:
     complete
     .text       start:0x020c1d68 end:0x020c1dc0
 
-src/overlays/ov091/auto/func_ov091_020c1dc0.c:
+src/overlays/ov091/auto/ReportTopPopup_HandleState0Noop.c:
     complete
     .text       start:0x020c1dc0 end:0x020c1dc4
 
@@ -248,15 +248,15 @@ src/overlays/ov091/calls/SetSubBg2Visible.c:
     complete
     .text       start:0x020c273c end:0x020c2774
 
-src/overlays/ov091/auto/func_ov091_020c2774.c:
+src/overlays/ov091/auto/ReportTopPopup_SetFlags.c:
     complete
     .text       start:0x020c2774 end:0x020c2784
 
-src/overlays/ov091/auto/func_ov091_020c2784.c:
+src/overlays/ov091/auto/ReportTopPopup_ClearFlags.c:
     complete
     .text       start:0x020c2784 end:0x020c2798
 
-src/overlays/ov091/auto/func_ov091_020c2798.c:
+src/overlays/ov091/auto/ReportTopPopup_GetMaskedFlags.c:
     complete
     .text       start:0x020c2798 end:0x020c27a4
 
@@ -264,23 +264,23 @@ src/overlays/ov091/calls/SetPopupState.c:
     complete
     .text       start:0x020c27a4 end:0x020c27b4
 
-src/overlays/ov091/auto/func_ov091_020c27b4.c:
+src/overlays/ov091/auto/ReportTopPopup_GetState.c:
     complete
     .text       start:0x020c27b4 end:0x020c27bc
 
-src/overlays/ov091/calls/func_ov091_020c27bc.c:
+src/overlays/ov091/calls/ReportTopPopup_CreateTask.c:
     complete
     .text       start:0x020c27bc end:0x020c27ec
 
-src/overlays/ov091/calls/func_ov091_020c27ec.c:
+src/overlays/ov091/calls/ReportTopPopup_DestroyTask.c:
     complete
     .text       start:0x020c27ec end:0x020c27f8
 
-src/overlays/ov091/calls/func_ov091_020c27f8.c:
+src/overlays/ov091/calls/ReportTopPopup_QueueMessage.c:
     complete
     .text       start:0x020c27f8 end:0x020c2804
 
-src/overlays/ov091/calls/func_ov091_020c2804.c:
+src/overlays/ov091/calls/ReportTopPopup_GetCurrentState.c:
     complete
     .text       start:0x020c2804 end:0x020c2820
 

@@ -208,7 +208,7 @@ src/overlays/ov101/calls/GetStatePhase.c:
     complete
     .text       start:0x020c17c8 end:0x020c17e0
 
-src/overlays/ov101/auto/func_ov101_020c17e0.c:
+src/overlays/ov101/auto/Ov101List_HandleState0Noop.c:
     complete
     .text       start:0x020c17e0 end:0x020c17e4
 

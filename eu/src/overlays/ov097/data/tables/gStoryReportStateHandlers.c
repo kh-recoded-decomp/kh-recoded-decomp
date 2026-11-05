@@ -1,9 +1,9 @@
 #include "nitro/types.h"
 
-extern void func_ov097_020c159c(void);
+extern void StoryReport_HandleState0Noop(void);
 extern void TickEntryTransition(void);
 
 void (*const gStoryReportStateHandlers[2])(void) = {
-    func_ov097_020c159c,
+    StoryReport_HandleState0Noop,
     TickEntryTransition,
 };

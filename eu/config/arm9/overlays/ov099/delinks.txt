@@ -180,7 +180,7 @@ src/overlays/ov099/auto/func_ov099_020c1798.c:
     complete
     .text       start:0x020c1798 end:0x020c17a4
 
-src/overlays/ov099/auto/func_ov099_020c17a4.c:
+src/overlays/ov099/auto/EnemyViewer_HandleState0Noop.c:
     complete
     .text       start:0x020c17a4 end:0x020c17a8
 

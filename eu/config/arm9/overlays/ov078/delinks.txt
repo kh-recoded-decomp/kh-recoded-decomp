@@ -8,7 +8,7 @@ src/overlays/ov078/calls/InitPageMenu.c:
     complete
     .text       start:0x020c4280 end:0x020c4370
 
-src/overlays/ov078/auto/func_ov078_020c4370.c:
+src/overlays/ov078/auto/UpdatePageMenuNoop.c:
     complete
     .text       start:0x020c4370 end:0x020c4372
 
@@ -56,7 +56,7 @@ src/overlays/ov078/calls/DrawLayoutLine.c:
     complete
     .text       start:0x020c4c4c end:0x020c4df8
 
-src/overlays/ov078/calls/func_ov078_020c4df8.c:
+src/overlays/ov078/calls/SelectPreviousMenuPage.c:
     complete
     .text       start:0x020c4df8 end:0x020c4ea0
 
@@ -64,7 +64,7 @@ src/overlays/ov078/calls/SelectNextPage.c:
     complete
     .text       start:0x020c4ea0 end:0x020c4f44
 
-src/overlays/ov078/calls/func_ov078_020c4f44.c:
+src/overlays/ov078/calls/CloseOverlay078Menu.c:
     complete
     .text       start:0x020c4f44 end:0x020c4f60
 

@@ -7,8 +7,8 @@ extern void HandleListScrollDown(void);
 extern void HandleListScrollUp(void);
 extern void InitMenuScene_020beb40(void);
 extern void RunSceneStateHandler(void);
-extern void func_ov103_020becc4(void);
-extern void func_ov103_020bed20(void);
+extern void CommitTheaterEntrySelection(void);
+extern void CancelTheaterEntrySelection(void);
 
 u32 data_ov103_020c0608[60] = {
     0x00000000, 0x0000000A, 0x00000028, 0x00000001,
@@ -38,8 +38,8 @@ void *data_ov103_020c05c4[17] = {
     (void *)HandleListScrollUp,
     NULL,
     NULL,
-    (void *)func_ov103_020becc4,
-    (void *)func_ov103_020bed20,
+    (void *)CommitTheaterEntrySelection,
+    (void *)CancelTheaterEntrySelection,
     NULL,
     NULL,
     NULL,

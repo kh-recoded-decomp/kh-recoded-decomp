@@ -18,6 +18,6 @@
 #define func_ov039_020bc0ec GetSecondaryElementEnabled
 #define func_ov039_020bca00 GetMenuInputState
 #define func_ov075_020cdf88 ItemPicker_DrawRows
-#define func_ov075_020ceab0 func_ov075_020cead0
-#define func_ov075_020ceacc func_ov075_020ceaec
+#define func_ov075_020ceab0 OpenItemPickerDiscardConfirmation
+#define func_ov075_020ceacc OpenItemPickerRewardConfirmation
 #include "src/ov075/unclassified_helpers/ItemMenu_Update_020d026c.c"
