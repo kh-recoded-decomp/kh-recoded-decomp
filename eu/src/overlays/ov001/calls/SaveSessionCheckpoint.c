@@ -1,3 +1,4 @@
+#define func_ov001_02067ed4 GetCurrentSceneEntryIndex
 #define func_ov001_02063a38 GetFieldSessionState
 #define func_ov001_020645c8 IsSessionFlagSet
 #define CaptureSaveSnapshot_02062eb4 CaptureSaveSnapshot

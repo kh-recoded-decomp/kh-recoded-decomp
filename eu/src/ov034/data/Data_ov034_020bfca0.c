@@ -7,7 +7,7 @@ extern u8 data_ov015_02080303[];
 extern u8 data_ov015_02080504[];
 extern u8 data_ov015_02080605[];
 extern u8 sOv001_EnPaDDP2f_020a0404[];
-extern void func_ov006_020a0604(void);
+extern void ScriptCmd_CreateElevatorObject(void);
 
 typedef struct UnalignedPtr {
     void *ptr __attribute__((packed));
@@ -162,7 +162,7 @@ struct {
         0xFF, 0xF8, 0x07, 0x00,
     },
     {
-        {(void *)func_ov006_020a0604},
+        {(void *)ScriptCmd_CreateElevatorObject},
     },
     {
         0x02, 0x00, 0x00, 0x01, 0x11, 0x00, 0x00, 0x00, 0xFF, 0x00, 0xE8, 0x03, 0x00, 0x00, 0x00, 0x00,

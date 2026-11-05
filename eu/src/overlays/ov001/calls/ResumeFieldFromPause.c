@@ -25,9 +25,9 @@
 #define func_0202d60c func_0202d620
 #define func_ov001_0206ec80 SetupFieldBgLayers
 #define func_ov001_020728a4 IsFieldFlag8Set
-#define func_ov001_0207b3cc func_ov001_0207b3f4
-#define func_ov001_0207b4c0 func_ov001_0207b4e8
-#define func_ov001_0207b5cc func_ov001_0207b5f4
+#define func_ov001_0207b3cc GetLoadedSubsceneMode
+#define func_ov001_0207b4c0 MarkPanelMapTransformDirty
+#define func_ov001_0207b5cc ReloadPanelListBgScreens
 #define func_ov001_0207e108 TryFinishPendingTask
 #define setStopwatchHeld_02052648 SetTweenPaused
 #include "src/ov001/field_manager/ResumeFieldFromPause_0207136c.c"

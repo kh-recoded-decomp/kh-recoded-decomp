@@ -3,7 +3,7 @@
 #define func_02036240 ActorRegistry_GetEntityByIndex
 #define func_0203afa0 SetShapePosition
 #define func_ov016_020a27ac SnapFieldObjectToGround
-#define func_ov016_020a2b78 func_ov016_020a2b98
+#define func_ov016_020a2b78 UpdateFieldObjectAuxAnimTrack
 #define func_ov016_020a31f0 func_ov016_020a3210
 #define func_ov016_020a34fc MoveFieldObjectWithCollision
 #define func_ov016_020a393c UpdateSlidingFieldObject

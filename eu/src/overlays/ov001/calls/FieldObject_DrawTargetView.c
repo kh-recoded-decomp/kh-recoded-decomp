@@ -1,3 +1,4 @@
+#define func_ov001_02067ed4 GetCurrentSceneEntryIndex
 #define DrawNodeWithExplicitProjection_0202f1b0 DrawNodeWithExplicitProjection
 #define FieldObject_DrawTargetView_02081cbc FieldObject_DrawTargetView
 #define data_ov001_020a0460 data_ov001_020a0480

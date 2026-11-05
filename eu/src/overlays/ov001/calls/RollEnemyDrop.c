@@ -1,3 +1,4 @@
+#define func_ov001_020664f0 TrySpawnFieldEffect
 #define ComputeScaledPercentPlusOne_02051134 ComputeScaledPercentPlusOne
 #define GetRecordSlot5Entry_0205208c GetRecordSlot5Entry
 #define GetSessionStateFlags2Bit_020649b8 GetSessionStateFlags2Bit

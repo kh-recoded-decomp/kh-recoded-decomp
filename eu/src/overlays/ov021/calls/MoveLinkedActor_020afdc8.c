@@ -120,7 +120,7 @@ extern int SpawnStageObjectActor(StageEvent *record, SpawnParams *params, VecFx3
 extern StageActor *GetStageActor(int id);
 extern StageController *GetStageController(u32 id);
 extern void SetActorGridCell(StageActor *actor, u16 column, u16 row);
-extern const char *func_ov001_0208f040(LinkData *data, int index);
+extern const char *GetStageResourceNameByIndex(LinkData *data, int index);
 extern u16 FindActorResourceIndexByName(StageActor *actor, const char *name);
 extern void GetNodePosition(StageActor *owner, u32 nodeId, VecFx32 *out);
 extern void VEC_Add(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
@@ -279,7 +279,7 @@ void MoveLinkedActor_020afdc8(StageEvent *record, int unused, u16 column, u16 ro
     }
     SetActorGridCell(actor, column, row);
     if (path->nodeNameIndex != 0) {
-        nodeName = func_ov001_0208f040(link->data, path->nodeNameIndex);
+        nodeName = GetStageResourceNameByIndex(link->data, path->nodeNameIndex);
         if (nodeName != NULL) {
             GetNodePosition(owner, FindActorResourceIndexByName(owner, nodeName), &actor->position);
             VEC_Add(&path->offset, &actor->position, &actor->position);

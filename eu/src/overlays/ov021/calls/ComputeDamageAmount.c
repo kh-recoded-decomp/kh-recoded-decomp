@@ -1,3 +1,4 @@
+#define func_ov001_02075248 GetHudGaugeBlinkActive
 #define ComputeDamageAmount_020a766c ComputeDamageAmount
 #define data_ov021_020b4de4 gDamageScaleTable
 #define func_02050014 IsPlayerEntryFlagSet

@@ -9,7 +9,7 @@ extern unsigned int MI_CpuFill8();
 extern unsigned int MI_CpuCopy8();
 extern unsigned int GetRunningTaskWork();
 extern unsigned int SetMenuGaugeActive();
-extern unsigned int func_ov001_02075248();
+extern unsigned int GetHudGaugeBlinkActive();
 extern unsigned int OpenMessageContainer();
 extern void RunSceneLoadStep(void);
 
@@ -25,7 +25,7 @@ unsigned int InitBattleGaugeContext(unsigned int arguments)
     MI_CpuFill8(work, 0, 0x1a4c);
     MI_CpuCopy8(arguments, work, 0x10);
     data_ov045_020c08a0 = (u32)work;
-    scene = func_ov001_02075248(0);
+    scene = GetHudGaugeBlinkActive(0);
     *(unsigned int *)(work + 0x10) = scene;
     SetMenuGaugeActive(0, 0);
     if (*work == 3) {

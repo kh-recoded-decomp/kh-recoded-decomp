@@ -3,7 +3,7 @@
 #define RestoreActiveRecordItems_020bbc84 RestoreActiveRecordItems
 #define SetFields30And34_020bc008 SetFields30And34
 #define StartSlotLayoutAnimation_0207d3d8 StartSlotLayoutAnimation
-#define func_ov001_0207d440 func_ov001_0207d468
+#define func_ov001_0207d440 SetCounterHudFadeEnabled
 #define func_ov031_020bb6f0 BuildSceneGroups
 #define func_ov031_020bbb88 UpdateRecordActors
 #define func_ov031_020bbce8 PlaceRecordPanels

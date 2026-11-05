@@ -1,0 +1,3 @@
+#define NNS_FndInitList SettleLinkHeight
+#define NNS_FndInitListWithOffset0_020a23a0 SettleLinkHeightAtZeroOffset
+#include "src/ov019/library_nitro_nns/NNS_FndInitListWithOffset0_020a23a0.c"

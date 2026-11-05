@@ -5,7 +5,7 @@
 #define func_ov017_020a2750 func_ov017_020a2770
 #define func_ov017_020a2754 CollideGridObjectActor
 #define func_ov017_020a2868 func_ov017_020a2888
-#define func_ov017_020a286c func_ov017_020a288c
-#define func_ov017_020a28ac func_ov017_020a28cc
+#define func_ov017_020a286c DrawGridObjectActorQuads
+#define func_ov017_020a28ac UpdateGridObjectDropOffsetFromRay
 #define func_ov017_020a2920 BuildFieldObjectCellGrid
 #include "src/ov017/unclassified_helpers/CreateGridEntryPool_020a2a40.c"

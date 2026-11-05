@@ -1,3 +1,4 @@
+#define func_ov001_02067ed4 GetCurrentSceneEntryIndex
 #define EaseCameraVectors_020bcf44 EaseCameraVectors
 #define FX_Sqrt_01ff9cfc FX_Sqrt
 #define MoveCameraTargetTo_020bc974 MoveCameraTargetTo

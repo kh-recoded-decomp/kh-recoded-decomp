@@ -9,7 +9,7 @@
 #define data_ov010_020a1dc0 gSpecialActionWork
 #define func_01ff9f88 VEC_Normalize
 #define func_ov001_020645e8 ClearSessionPackedBit
-#define func_ov010_020a0d00 func_ov010_020a0d20
+#define func_ov010_020a0d00 ResetSpecialActionState
 #define func_ov010_020a1028 SpawnEffectAtTarget
 #define func_ov021_020a8ab4 ResetAnimationTrackState
 #define func_ov021_020a8ca0 func_ov021_020a8cc0

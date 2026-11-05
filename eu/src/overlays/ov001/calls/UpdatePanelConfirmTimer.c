@@ -11,13 +11,13 @@ extern s32 GetFieldSessionState(void);
 extern BOOL IsSessionFlagSet(u32 value);
 extern int func_ov001_02064784(void);
 extern BOOL func_ov001_0207b360(int choice);
-extern s32 func_ov001_0207b3f4(void);
+extern s32 GetLoadedSubsceneMode(void);
 
 void UpdatePanelConfirmTimer(PanelScene *panel)
 {
     if (panel->confirmTimer != 0) {
         if (panel->confirmTimer == 1) {
-            if (func_ov001_0207b3f4() != 2 && func_ov001_0207b360(2)) {
+            if (GetLoadedSubsceneMode() != 2 && func_ov001_0207b360(2)) {
                 panel->waitingForConfirm = TRUE;
                 if (func_ov001_02064784() == 0 && IsSessionFlagSet(0x370b)) {
                     panel->confirmTimer = 0;

@@ -1,3 +1,4 @@
+#define func_ov001_02067ed4 GetCurrentSceneEntryIndex
 #define IsObjectFlagClear_0207f7a4 IsObjectFlagClear
 #define UpdateFieldObjectStates_0207ecc4 UpdateFieldObjectStates
 #define data_ov001_020a0460 data_ov001_020a0480

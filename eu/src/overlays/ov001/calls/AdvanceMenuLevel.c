@@ -9,7 +9,7 @@
 #define data_ov001_020a04a4 data_ov001_020a04c4
 #define func_ov001_0206f040 ApplyFieldResourceAndRelease
 #define func_ov001_020728e4 IsFieldFlag13OrSessionFlagSet
-#define func_ov001_0207b4f8 func_ov001_0207b520
+#define func_ov001_0207b4f8 RequestTemporaryPanelListDisplay
 #define func_ov001_0207b590 GetPartySize
 #define func_ov027_020ba114 QueueFileLoadRequest
 #include "src/ov001/field_manager/AdvanceMenuLevel_02073388.c"

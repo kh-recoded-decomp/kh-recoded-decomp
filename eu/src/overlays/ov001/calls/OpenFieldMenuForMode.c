@@ -1,5 +1,5 @@
 #define OpenFieldMenuForMode_0207214c OpenFieldMenuForMode
 #define data_ov001_020a04a4 data_ov001_020a04c4
-#define func_ov001_0207b3e4 func_ov001_0207b40c
-#define func_ov001_0207b408 func_ov001_0207b430
+#define func_ov001_0207b3e4 SetPanelMapEntry
+#define func_ov001_0207b408 RequestPanelMapReset
 #include "src/ov001/field_manager/OpenFieldMenuForMode_0207214c.c"

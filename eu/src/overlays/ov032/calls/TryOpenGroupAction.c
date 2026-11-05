@@ -1,3 +1,4 @@
+#define func_ov001_0206685c HasActiveFieldEffects
 #define TryOpenGroupAction_020bb220 TryOpenGroupAction
 #define func_ov001_0206a7c0 BeginScreenFadeOut
 #define func_ov001_0206a814 IsScreenModeIdle

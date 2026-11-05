@@ -44,7 +44,7 @@ struct FieldObject {
     s32 kind;
 };
 
-extern BOOL func_ov001_02087674(FieldObject *obj, HitInfo *hit);
+extern BOOL GetFieldObjectInteractionBlockMask(FieldObject *obj, HitInfo *hit);
 extern void AddSessionCounter(int index, int amount);
 extern void ClearRecordSlotFlag(int index);
 extern void Flags16_ClearBit1(void *anim);
@@ -62,7 +62,7 @@ int FieldObject_TakeDamage(FieldObject *obj, HitInfo *hit)
     DropRequest request;
     int health;
 
-    if (func_ov001_02087674(obj, hit)) {
+    if (GetFieldObjectInteractionBlockMask(obj, hit)) {
         return 0x10;
     }
     if (obj->kind == 2) {

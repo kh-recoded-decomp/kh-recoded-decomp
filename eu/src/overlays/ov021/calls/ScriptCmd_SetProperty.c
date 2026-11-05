@@ -278,7 +278,7 @@ extern void ReleaseEventLinkedEntries(PropertyEvent *event);
 extern void ApplyHitToEnemyGroup(PropertyEvent *event, EventPacket *packet);
 extern void SetStageEventKindWrapper(PropertyEvent *event, u16 kind);
 extern void *GetSmallTableEntry(u16 id);
-extern void func_ov001_020664f0(int kind, int unknown, const VecFx32 *position, int option);
+extern void TrySpawnFieldEffect(int kind, int unknown, const VecFx32 *position, int option);
 extern u32 random_next_scaled(u32 limit);
 extern void SpawnRewardOrbs(RewardParams *params, const VecFx32 *position, int option);
 extern void MoveLinkedActor_020afdc8(PropertyEvent *event, int unused, u16 column, u16 row, LinkMoveCommand *command);
@@ -659,7 +659,7 @@ s32 ScriptCmd_SetProperty(void *thread, PropertyCommand *command)
                 void *entry = GetSmallTableEntry(event->tableId);
                 if (event != NULL && entry != NULL) {
                     if (event->kind == 0x2b) {
-                        func_ov001_020664f0(5, 0, &actor->position, 0);
+                        TrySpawnFieldEffect(5, 0, &actor->position, 0);
                     } else if (event->kind == 0x3f) {
                         RewardParams *params = &rewards;
                         params->unknown00 = 0;

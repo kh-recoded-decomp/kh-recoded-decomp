@@ -10,5 +10,5 @@
 #define func_ov001_02088b58 func_ov001_02088b80
 #define func_ov001_02088fe4 AdvanceAnimationRequestQueue
 #define func_ov001_0208a3e0 ClearActorTimerFields
-#define func_ov001_0208a458 func_ov001_0208a480
+#define func_ov001_0208a458 ResetActorVelocityAndExtraSlots
 #include "src/ov001/actor_animation/UpdateActorMotionTracks_02089394.c"

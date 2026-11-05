@@ -1,0 +1,3 @@
+#define Ov002_EnterPhase CommitSideResult
+#define ScriptCmd_EnterPhase_020a0650 ScriptCmd_CommitSideResult
+#include "src/ov007/shared_engine/ScriptCmd_EnterPhase_020a0650.c"

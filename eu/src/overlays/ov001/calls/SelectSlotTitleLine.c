@@ -4,5 +4,5 @@
 #define SelectSlotTitleLine_0206ff9c SelectSlotTitleLine
 #define func_02001520 Text_UploadTileBuffer
 #define func_020505a8 GetSelectionPackedValueBlock
-#define func_ov001_0207b660 func_ov001_0207b688
+#define func_ov001_0207b660 GetPanelListPathNodeId
 #include "src/ov001/shared_engine/SelectSlotTitleLine_0206ff9c.c"

@@ -1,3 +1,4 @@
+#define func_ov001_02075248 GetHudGaugeBlinkActive
 #define ComputeAttackDamage_020ac6cc ComputeAttackDamage
 #define FixedPointMultiply12 FX_Mul
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField

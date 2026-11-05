@@ -1,3 +1,4 @@
+#define func_ov001_02067ed4 GetCurrentSceneEntryIndex
 #define ApplyActorVelocity_020c76cc ApplyActorVelocity
 #define FixedPointMultiply12 FX_Mul
 #define GetPlayerEntryCount_02050050 GetPlayerEntryCount

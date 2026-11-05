@@ -19,10 +19,10 @@
 #define func_020016f0 DrawTaggedTextWithFontFallback
 #define func_02029f58 GetSubBrightnessSetting
 #define func_ov001_020645c8 IsSessionFlagSet
-#define func_ov001_0207b5f4 func_ov001_0207b61c
-#define func_ov001_0207b6d4 func_ov001_0207b6fc
-#define func_ov001_0207b6e0 func_ov001_0207b708
-#define func_ov001_0207b748 func_ov001_0207b770
+#define func_ov001_0207b5f4 IsSubscenePanelState6
+#define func_ov001_0207b6d4 GetPanelInputActive
+#define func_ov001_0207b6e0 GetPanelEntryName
+#define func_ov001_0207b748 GetPanelMessageView
 #define func_ov025_020b74bc func_ov025_020b74dc
 #define func_ov025_020b7658 ClearEntityCounters
 #define func_ov027_020b7dd4 func_ov027_020b7df4

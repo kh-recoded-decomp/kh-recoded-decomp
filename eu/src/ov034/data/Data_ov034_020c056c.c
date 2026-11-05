@@ -5,7 +5,7 @@
 extern u8 data_ov015_02080404[];
 extern u8 data_ov015_02080606[];
 extern u8 sOv001_EnPaDDP2f_020a0404[];
-extern void func_ov006_020a0604(void);
+extern void ScriptCmd_CreateElevatorObject(void);
 
 typedef struct UnalignedPtr {
     void *ptr __attribute__((packed));
@@ -221,7 +221,7 @@ ResultsShopConfigurationData gResultsShopConfiguration = {
         0x1F, 0xF8, 0x07, 0x00,
     },
     {
-        {(void *)func_ov006_020a0604},
+        {(void *)ScriptCmd_CreateElevatorObject},
     },
     {
         0x02, 0x00, 0x02, 0x00, 0x17, 0x00, 0x00, 0x00, 0x05, 0x00, 0x15, 0x00, 0x15, 0x00, 0x15, 0x00,

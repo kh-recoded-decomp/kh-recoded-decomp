@@ -48,7 +48,7 @@ src/overlays/ov019/calls/SettleLinkHeight.c:
     complete
     .text       start:0x020a2270 end:0x020a23c0
 
-src/overlays/ov019/calls/func_ov019_020a23c0.c:
+src/overlays/ov019/calls/SettleLinkHeightAtZeroOffset.c:
     complete
     .text       start:0x020a23c0 end:0x020a23cc
 

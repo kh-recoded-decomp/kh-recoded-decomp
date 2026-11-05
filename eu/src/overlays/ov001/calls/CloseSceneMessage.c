@@ -3,5 +3,5 @@
 #define data_ov001_020a04a4 data_ov001_020a04c4
 #define func_02003fd4 OS_GetTick
 #define func_ov001_0206ed30 LoadFieldBottomRowTiles
-#define func_ov001_0207b3cc func_ov001_0207b3f4
+#define func_ov001_0207b3cc GetLoadedSubsceneMode
 #include "src/ov001/text_rendering/CloseSceneMessage_0206fe7c.c"

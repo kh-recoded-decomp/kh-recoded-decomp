@@ -56,7 +56,7 @@ typedef struct DropRequest {
     u8 data[0x18];
 } DropRequest;
 
-extern BOOL func_ov001_02087674(void);
+extern BOOL GetFieldObjectInteractionBlockMask(void);
 extern s8 GetCtxModeByte(void);
 extern BOOL IsFieldTypeOneOrTen(FieldObject *object);
 extern void AddSessionCounter(int id, int arg);
@@ -77,7 +77,7 @@ int HandleFieldObjectActivation(FieldObject *object, HitInfo *hit)
     HitHandler handler;
     DropRequest request;
 
-    if (func_ov001_02087674()) {
+    if (GetFieldObjectInteractionBlockMask()) {
         return 0x10;
     }
     trigger = object->trigger;

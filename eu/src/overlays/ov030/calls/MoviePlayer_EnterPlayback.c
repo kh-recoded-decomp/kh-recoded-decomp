@@ -22,10 +22,10 @@ extern void ForwardSubModePairB(int a, int b);
 extern void SetOverlayLayerVisible(int visible);
 extern void ResumeTaskAndClearFlags(void);
 extern void SetMenuHighlight(int highlight);
-extern void func_ov001_02087650(int value);
+extern void SetFieldObjectInteractionsBlocked(int value);
 extern BOOL IsSessionFlagSet(int flagId);
 extern void SetFieldEntriesPaused(int paused);
-extern void func_ov001_02082888(void);
+extern void ReloadFirstType11FieldObjectModels(void);
 extern VecFx32 *GetManagedActorPosition(int index);
 extern SubModeView *func_ov021_020af614(void);
 extern void UpdateEventObjects(void);
@@ -48,7 +48,7 @@ int MoviePlayer_EnterPlayback(void)
     SetOverlayLayerVisible(0);
     ResumeTaskAndClearFlags();
     SetMenuHighlight(1);
-    func_ov001_02087650(0);
+    SetFieldObjectInteractionsBlocked(0);
     if (!IsSessionFlagSet(0x3309) && ctx->pendingEntry != 3) {
         SetFieldEntriesPaused(0);
     }
@@ -56,7 +56,7 @@ int MoviePlayer_EnterPlayback(void)
     if (ctx->pendingEntry == 0) {
         ctx->flags &= ~0x20;
     }
-    func_ov001_02082888();
+    ReloadFirstType11FieldObjectModels();
     data_ov030_020bd020->cameraPos = *GetManagedActorPosition(0);
     data_ov030_020bd020->cameraTarget = func_ov021_020af614()->target;
     if (!IsSessionFlagSet(0x360c)) {

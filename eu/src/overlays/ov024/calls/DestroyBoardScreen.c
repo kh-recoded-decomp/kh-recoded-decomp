@@ -4,7 +4,7 @@
 #define func_02001154 NotifyBothOrOne
 #define func_0202cd78 ZeroHalfThenFree
 #define func_ov001_020715ac FreeSceneListObject
-#define func_ov001_0207b200 func_ov001_0207b228
+#define func_ov001_0207b200 SetSubsceneBgSetupCallback
 #define func_ov024_020b5dc0 ReleaseOverlayResourceSlots
 #define func_ov024_020b6730 TeardownContextState
 #define func_ov027_020b7dfc func_ov027_020b7e1c

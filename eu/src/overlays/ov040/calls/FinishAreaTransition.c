@@ -1,3 +1,5 @@
+#define func_ov001_0206685c HasActiveFieldEffects
+#define func_ov001_02067a6c ReleaseAllSceneSlotResources
 #define func_ov001_0206dc38 GetManagedActorCount
 #define func_ov001_020788b8 SetFieldMenuActiveSlotById
 #define func_ov001_0206dc4c GetManagedActorPosition
@@ -11,7 +13,7 @@
 #define SuspendTaskAndSetFlag_020667b4 SuspendTaskAndSetFlag
 #define data_ov001_020a046c data_ov001_020a048c
 #define data_ov040_020be260 data_ov040_020be280
-#define func_ov001_0207d658 func_ov001_0207d680
+#define func_ov001_0207d658 ReleaseCounterHudModels
 #define func_ov001_0206de40 ReleaseActorSlotByIndex
 #define func_ov035_020bb64c func_ov035_020bb66c
 #include "src/ov040/unclassified_helpers/FinishAreaTransition_020bd66c.c"

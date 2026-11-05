@@ -537,3 +537,14 @@ records list strides, real callback/veneer inputs and returns, per-channel time
 units, task versus heap ownership, stage guards and unresolved flag meanings.
 SceneEntry byte members and setters at +0x18/+0x19 now use their demonstrated
 BGM role, preserving all layout and native code.
+
+## Early field, effect, object and panel contracts
+
+One hundred thirty-five entrypoints now identify field requests/effects, class
+and pool operations, actor/camera work, stage state/list/resource access and
+subscene/counter/arrow interfaces.
+[EARLY_FIELD_PANEL_CONTRACTS.md](EARLY_FIELD_PANEL_CONTRACTS.md) records each
+native identity, owner, logical inputs/results and limits, including callback
+registration, borrowed pointers, map/list mode guards and copied palette data.
+Earlier held records are reconciled with subsequent evidence rather than
+counted as permanently unresolved.

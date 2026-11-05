@@ -1,0 +1,3 @@
+#define FS_EndOverlay EnsureFieldEffectPool
+#define FS_UnloadOverlayImage_02065448 ScriptCmd_EnsureFieldEffectPool
+#include "src/ov001/library_nitro_fs/FS_UnloadOverlayImage_02065448.c"

@@ -4,7 +4,7 @@
 #define func_ov001_020645c8 IsSessionFlagSet
 #define func_ov001_0206c328 ReadActiveMenuState
 #define func_ov001_0207f8f4 func_ov001_0207f91c
-#define func_ov007_020a1b08 func_ov007_020a1b28
+#define func_ov007_020a1b08 GetEventTargetLayerAndChannel
 #define func_ov001_02078360 SetFieldMenuMode_02078360
 #define func_ov036_020be0f8 ScriptCmd_WaitScreenLayerIdle_020be118
 #define func_ov036_020be0c4 ScriptCmd_ResetScreenLayer
@@ -12,6 +12,6 @@
 #define func_ov001_02077c98 FieldMenu_SetHidden
 #define func_ov001_02064280 IsBattleModeNotTwo
 #define func_ov001_020642a0 IsFieldTrackFlagSet
-#define func_ov010_020a1958 func_ov010_020a1978
+#define func_ov010_020a1958 IsSpecialActionStateNonzero
 #define func_ov001_02072064 SelectFieldMenuPage
 #include "src/ov001/unclassified_helpers/UpdateActionCommand_0206d0ac.c"

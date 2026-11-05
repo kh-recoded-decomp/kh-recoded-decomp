@@ -1,3 +1,4 @@
+#define func_ov001_02067ed4 GetCurrentSceneEntryIndex
 #define GetCtxModeByte_02068084 GetCtxModeByte
 #define IsStageAllowedForMode_020c8008 IsStageAllowedForMode
 #include "src/ov052/unclassified_helpers/IsStageAllowedForMode_020c8008.c"

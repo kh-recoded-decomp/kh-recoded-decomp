@@ -3,7 +3,7 @@
 #define IsState1Or2_020a2e4c IsState1Or2
 #define ResetPoolDefaultParams_020a4e50 ResetPoolDefaultParams
 #define func_ov017_020a2bd0 LoadTriggerObjectPhase
-#define func_ov017_020a2e64 func_ov017_020a2e84
+#define func_ov017_020a2e64 DiscardKind4MessageNodesKeepingPinned
 #define func_ov017_020a2ea0 ReleaseFieldObjectResources
 #define func_ov017_020a2f08 HandleFieldObjectActivation
 #define func_ov017_020a30e4 CollideFieldObjectActor

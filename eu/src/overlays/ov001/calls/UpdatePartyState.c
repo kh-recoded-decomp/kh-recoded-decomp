@@ -7,7 +7,7 @@
 #define UpdatePartyState_0206cbd0 UpdatePartyState
 #define UpdatePrimaryEventRecord_0206cd9c UpdatePrimaryEventRecord
 #define func_0205125c GetMapFinalStats
-#define func_ov001_0207b45c func_ov001_0207b484
+#define func_ov001_0207b45c GetPanelFormationType
 #define func_ov021_020af3e8 func_ov021_020af408
 #define func_ov035_020bc250 UpdateChannelLevel
 #define func_ov001_02074fa8 SetHudGaugeValueDefault

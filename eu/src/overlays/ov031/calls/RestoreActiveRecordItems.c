@@ -1,3 +1,4 @@
+#define func_ov001_020688d4 ReleaseOrDisableStageEvent
 #define CallIfSessionActive_02087e98 CallIfSessionActive_02087ec0
 #define CallIfSessionActive_02087eb4 CallIfSessionActive_02087edc
 #define RestoreActiveRecordItems_020bbc84 RestoreActiveRecordItems

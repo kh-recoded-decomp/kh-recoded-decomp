@@ -8,10 +8,10 @@ typedef struct TaskCallbacks {
     u8 result;
 } TaskCallbacks;
 
-extern void func_ov007_020a1ba0(void *task);
+extern void EvaluateSceneEntryFlag40Trigger(void *task);
 
 void ResetTaskUpdateCallback(TaskCallbacks *task)
 {
-    task->update = func_ov007_020a1ba0;
+    task->update = EvaluateSceneEntryFlag40Trigger;
     task->result = 0;
 }

@@ -1,5 +1,5 @@
 #define EnterState15_020ba9a8 EnterState15
 #define func_ov001_02066810 StartIdleSceneObjects
-#define func_ov001_02087628 func_ov001_02087650
+#define func_ov001_02087628 SetFieldObjectInteractionsBlocked
 #define g_activeState_020bc800 data_ov031_020bc820
 #include "src/ov031/state_machine/EnterState15_020ba9a8.c"

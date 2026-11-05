@@ -1,3 +1,3 @@
 #define SetFieldVisiblePlanes_0206ec3c SetFieldVisiblePlanes
-#define func_ov001_0207b3cc func_ov001_0207b3f4
+#define func_ov001_0207b3cc GetLoadedSubsceneMode
 #include "src/ov001/field_manager/SetFieldVisiblePlanes_0206ec3c.c"

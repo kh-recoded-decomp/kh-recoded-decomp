@@ -1,3 +1,4 @@
+#define func_ov001_02067ed4 GetCurrentSceneEntryIndex
 #define CheckLeaderHpTrigger_02069c10 CheckLeaderHpTrigger
 #define func_ov001_02069464 UpdateEventTriggerDelay
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField

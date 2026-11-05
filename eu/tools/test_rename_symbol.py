@@ -1,6 +1,7 @@
 """Regression checks for C/C++ library scope and safe rename preflight."""
 import contextlib
 import io
+import json
 from pathlib import Path
 import sys
 import tempfile
@@ -128,6 +129,51 @@ class RenameSymbolTest(unittest.TestCase):
             self.rename()
         self.assertEqual(self.snapshot(), before)
 
+
+    def rename_batch(self, pairs):
+        plan = self.root / 'reviewed_pairs.json'
+        plan.write_text(json.dumps({'candidates': [{'old': a, 'new': b} for a, b in pairs]}))
+        with mock.patch.object(sys, 'argv', ['rename_symbol.py', '--map-file', str(plan)]):
+            with contextlib.redirect_stdout(io.StringIO()):
+                rename_symbol.main()
+
+    def test_batch_preserves_cross_references_cpp_extensions_and_region(self):
+        self.put('src/calls/OldFunction.c', 'int OtherOld(void);\nint OldFunction(void) { return OtherOld(); }\n')
+        self.put('libs/runtime/OtherOld.cpp', 'int OldFunction(void);\nint OtherOld() { return OldFunction(); }\n')
+        caller = self.put('src/calls/Caller.c', '\ufeffint OldFunction(void);\nint OtherOld(void);\n')
+        config = self.put('config/arm9/delinks.txt', 'src/calls/OldFunction.c:\nlibs/runtime/OtherOld.cpp:\n')
+        external = self.put('shared_region/OldFunction.c', 'OldFunction OtherOld\n')
+        self.rename_batch([('OldFunction', 'NewFunction'), ('OtherOld', 'OtherNew')])
+        self.assertIn('return OtherNew();', (self.root / 'src/calls/NewFunction.c').read_text())
+        self.assertIn('return NewFunction();', (self.root / 'libs/runtime/OtherNew.cpp').read_text())
+        self.assertTrue(caller.read_bytes().startswith(b'\xef\xbb\xbf'))
+        self.assertIn('OtherNew.cpp:', config.read_text())
+        self.assertEqual(external.read_text(), 'OldFunction OtherOld\n')
+
+    def test_batch_missing_second_definition_does_not_apply_first(self):
+        self.put('src/calls/OldFunction.c', 'int OldFunction(void) { return 1; }\n')
+        before = self.snapshot()
+        with self.assertRaisesRegex(SystemExit, 'expected one defining source for Missing'):
+            with contextlib.redirect_stdout(io.StringIO()):
+                rename_symbol.rename_symbols([('OldFunction', 'NewFunction'), ('Missing', 'OtherNew')])
+        self.assertEqual(self.snapshot(), before)
+
+    def test_batch_late_collision_leaves_all_names_unchanged(self):
+        self.put('src/calls/OldFunction.c', 'int OldFunction(void) { return 1; }\n')
+        self.put('src/calls/OtherOld.c', 'int OtherOld(void) { return OldFunction(); }\n')
+        self.put('libs/runtime/used.h', 'int OtherNew(void);\n')
+        before = self.snapshot()
+        with self.assertRaisesRegex(SystemExit, 'new symbol already appears'):
+            rename_symbol.rename_symbols([('OldFunction', 'NewFunction'), ('OtherOld', 'OtherNew')])
+        self.assertEqual(self.snapshot(), before)
+
+    def test_batch_rejects_name_chains_before_writes(self):
+        self.put('src/calls/OldFunction.c', 'void OldFunction(void) {}\n')
+        self.put('src/calls/NewFunction.c', 'void NewFunction(void) {}\n')
+        before = self.snapshot()
+        with self.assertRaisesRegex(SystemExit, 'chains or cycles'):
+            rename_symbol.rename_symbols([('OldFunction', 'NewFunction'), ('NewFunction', 'OtherNew')])
+        self.assertEqual(self.snapshot(), before)
 
 if __name__ == "__main__":
     unittest.main()

@@ -19,7 +19,7 @@ extern void ForwardSubModePairB(int value, int arg);
 extern void SetOverlayLayerVisible(int visible);
 extern void ResumeTaskAndClearFlags(void);
 extern void SetMenuHighlight(int highlight);
-extern void func_ov001_02087650(int value);
+extern void SetFieldObjectInteractionsBlocked(int value);
 extern void SetFieldEntriesPaused(int paused);
 extern void RestoreFieldTimer(void);
 extern void UpdateEventObjects(void);
@@ -50,7 +50,7 @@ int ResumeFieldFromMenu(void) {
     SetOverlayLayerVisible(0);
     ResumeTaskAndClearFlags();
     SetMenuHighlight(0);
-    func_ov001_02087650(0);
+    SetFieldObjectInteractionsBlocked(0);
     if (!IsSessionFlagSet(0x3309) && scene->mode != 3) {
         SetFieldEntriesPaused(0);
     }

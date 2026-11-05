@@ -1,3 +1,4 @@
+#define func_ov001_02067ed4 GetCurrentSceneEntryIndex
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField
 #define GetCtxModeByte_02068084 GetCtxModeByte
 #define InitOv072ActorState_020d8138 InitOv072ActorState

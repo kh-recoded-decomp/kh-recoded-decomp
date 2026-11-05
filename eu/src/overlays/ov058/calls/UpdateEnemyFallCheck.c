@@ -1,3 +1,4 @@
+#define func_ov001_02067ed4 GetCurrentSceneEntryIndex
 #define GetCtxModeByte_02068084 GetCtxModeByte
 #define UpdateEnemyFallCheck_020d6f58 UpdateEnemyFallCheck
 #define func_ov052_020ceb54 func_ov052_020ceb74

@@ -1,5 +1,5 @@
 #define LoadMenuPhaseGraphics_0207e0b8 LoadMenuPhaseGraphics
 #define data_ov001_020a04d0 data_ov001_020a04f0
 #define func_0202a7a4 GetTaskUpdateCount
-#define func_ov001_0207d800 func_ov001_0207d828
+#define func_ov001_0207d800 QueueArrowPromptFlashTiles
 #include "src/ov001/unclassified_helpers/LoadMenuPhaseGraphics_0207e0b8.c"

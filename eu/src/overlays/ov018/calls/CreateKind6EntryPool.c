@@ -4,8 +4,8 @@
 #define GetRaisedTargetPosition_020a2600 GetRaisedTargetPosition
 #define func_ov018_020a1ef8 LoadKind6ObjectPhase
 #define func_ov018_020a2200 func_ov018_020a2220
-#define func_ov018_020a2214 func_ov018_020a2234
-#define func_ov018_020a2240 func_ov018_020a2260
+#define func_ov018_020a2214 ReleaseKind6ObjectAttachment
+#define func_ov018_020a2240 ReleaseKind6ObjectChannelAndResources
 #define func_ov018_020a229c FieldObject_TakeDamage
 #define func_ov018_020a2400 FieldObject_TryCollideWithVolume
 #define func_ov018_020a267c FieldObject_Draw_020a269c

@@ -1,6 +1,6 @@
 #define HandleFieldObjectHit_020a5084 HandleFieldObjectHit_020a50a4
 #define InitializeFieldEffect_020a3be4 InitializeFieldEffect
-#define func_ov001_0208764c func_ov001_02087674
+#define func_ov001_0208764c GetFieldObjectInteractionBlockMask
 #define func_ov016_020a3258 PushFieldObject
 #define func_ov016_020a6d40 EnterFieldUnitPhase5
 #define func_ov032_020bfba4 ApplyGroupLeaderHit

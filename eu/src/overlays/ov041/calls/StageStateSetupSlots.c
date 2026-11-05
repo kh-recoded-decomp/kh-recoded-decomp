@@ -2,7 +2,7 @@
 
 extern int GetCurrentSceneEntrySlotId(void);
 extern void func_ov001_02067d0c(int slot, BOOL arg);
-extern void func_ov001_02067cd0(int slot, BOOL arg);
+extern void SetSceneSlotDrawingEnabled(int slot, BOOL arg);
 extern void ResetSceneSlots(void);
 extern void SetStageState(int state, BOOL runNow);
 
@@ -14,10 +14,10 @@ void StageStateSetupSlots(void)
 
     for (slot = 0; slot < last; slot++) {
         func_ov001_02067d0c(slot, FALSE);
-        func_ov001_02067cd0(slot, FALSE);
+        SetSceneSlotDrawingEnabled(slot, FALSE);
     }
     func_ov001_02067d0c(last, TRUE);
-    func_ov001_02067cd0(last, TRUE);
+    SetSceneSlotDrawingEnabled(last, TRUE);
     ResetSceneSlots();
     SetStageState(1, FALSE);
 }

@@ -33,8 +33,8 @@ extern int func_ov001_02064784(void);
 extern void PulsePaletteFlash(PanelScene *panel);
 extern void UpdateIdleTimerToggle(PanelScene *panel);
 extern void UpdatePanelConfirmTimer(PanelScene *panel);
-extern u32 func_ov001_0207b3f4(void);
-extern BOOL func_ov001_0207b610(void);
+extern u32 GetLoadedSubsceneMode(void);
+extern BOOL GetSubsceneReadyValue(void);
 extern void ClearPanelInputActive(void);
 extern int LookupChannelEntry_020b62ac(int channel);
 extern int CopySourceBlock(TouchSample *sample);
@@ -50,7 +50,7 @@ int UpdatePanelScene(void)
     if (table.handlers[panel->state] != NULL) {
         table.handlers[panel->state](panel);
     }
-    if (panel->channel != channel && func_ov001_0207b3f4() == 2 && func_ov001_0207b610()) {
+    if (panel->channel != channel && GetLoadedSubsceneMode() == 2 && GetSubsceneReadyValue()) {
         LookupChannelEntry_020b62ac(channel);
         panel->channel = channel;
     }
@@ -68,7 +68,7 @@ int UpdatePanelScene(void)
             break;
         }
     }
-    if (func_ov001_0207b3f4() == 0 && func_ov001_0207b610()) {
+    if (GetLoadedSubsceneMode() == 0 && GetSubsceneReadyValue()) {
         PulsePaletteFlash(panel);
     }
     if (panel->touchActive != 0) {

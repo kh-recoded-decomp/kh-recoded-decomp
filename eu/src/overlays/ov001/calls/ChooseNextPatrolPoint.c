@@ -1,3 +1,4 @@
+#define func_ov001_02067ed4 GetCurrentSceneEntryIndex
 #define func_ov001_0206dc4c GetManagedActorPosition
 #define ChooseNextPatrolPoint_02083c68 ChooseNextPatrolPoint
 #define FindActiveSlotEntry_02083c38 FindActiveSlotEntry

@@ -1,3 +1,4 @@
+#define func_ov001_0206685c HasActiveFieldEffects
 #define func_ov001_02068e54 PauseSessionTimerUpdates
 #define func_ov001_0206dc38 GetManagedActorCount
 #define func_ov001_020645f4 StorePackedSessionPlacement
@@ -10,7 +11,7 @@
 #define SelectNextSessionState_02062150 SelectNextSessionState
 #define WriteSessionPackedBits_0206459c WriteSessionPackedBits
 #define data_ov001_020a0460 data_ov001_020a0480
-#define func_ov000_02062c64 func_ov001_02062c64
+#define func_ov000_02062c64 IsSessionScriptEntryReady
 #define func_ov001_020630bc SaveElapsedSeconds
 #define func_ov001_02063f90 GetClampedTimerValue
 #define func_ov001_020642d0 IsEntryFlag2Active
@@ -20,7 +21,7 @@
 #define func_ov001_0206c2f8 SetMenuHighlight
 #define func_ov001_0206e4f0 NotifySceneActorsPaused
 #define func_ov001_0206e690 DispatchPartyEntryByMode
-#define func_ov001_0207b45c func_ov001_0207b484
+#define func_ov001_0207b45c GetPanelFormationType
 #define func_ov001_02087054 func_ov001_0208707c
 #define func_ov046_020c0dd4 Camera_SaveSnapshot
 #define func_ov001_02063130 SetFieldStateValue

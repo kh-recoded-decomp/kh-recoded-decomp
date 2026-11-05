@@ -19,7 +19,7 @@ extern void ResetStageEventContext(void);
 extern void SetOverlayLayerVisible(s32 value);
 extern void func_ov001_0207efa0(void);
 extern void ShutdownSceneContext(void);
-extern void func_ov001_0207d680(void);
+extern void ReleaseCounterHudModels(void);
 extern void func_ov001_02064d88(void);
 extern void PopVramState(void);
 extern void ActorRegistry_ClearCollisionResult(void);
@@ -46,7 +46,7 @@ s32 ShutdownFieldAndSaveActorPoses(void)
     func_ov001_0207efa0();
     ShutdownSceneContext();
     data_ov028_020bb3a0->flags &= ~0xC;
-    func_ov001_0207d680();
+    ReleaseCounterHudModels();
     func_ov001_02064d88();
     PopVramState();
     ActorRegistry_ClearCollisionResult();

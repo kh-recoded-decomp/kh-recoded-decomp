@@ -9,7 +9,7 @@
 #define VEC_Normalize_01ff9f88 VEC_Normalize
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define func_0202fba8 RotateVectorByQuaternion
-#define func_ov001_02090f04 func_ov001_02090f2c
+#define func_ov001_02090f04 GetStageActorPosition
 #define func_ov001_020958e4 ClearStageEventKindIfMatches
 #define multiplyFixedPointQuaternions_0202f93c MultiplyFixedPointQuaternions
 #include "src/ov056/shared_engine/OrbitActorAroundUnit_020d7728.c"

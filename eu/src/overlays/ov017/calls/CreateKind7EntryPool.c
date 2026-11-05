@@ -8,6 +8,6 @@
 #define func_ov017_020a56f4 GetRaisedPosition
 #define func_ov017_020a5734 GetListHead
 #define func_ov017_020a574c DrawKind7EntryStack
-#define func_ov017_020a5a78 func_ov017_020a5a98
+#define func_ov017_020a5a78 SyncKind7ActorFlagToActiveState
 #define func_ov017_020a5a90 SyncKind7EntryStackHeight
 #include "src/ov017/unclassified_helpers/CreateKind7EntryPool_020a5b48.c"

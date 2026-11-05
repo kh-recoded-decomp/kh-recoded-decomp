@@ -2,5 +2,5 @@
 #define ClearSbcCallback_020188b8 NNS_G3dRenderObjResetCallBack
 #define RegisterSbcCallback_020188a4 NNS_G3dRenderObjSetCallBack
 #define func_ov001_02089724 ApplyPartRotationToGeometry
-#define func_ov001_02089834 func_ov001_0208985c
+#define func_ov001_02089834 ApplyPartRotationAndCaptureNodeCallback
 #include "src/ov001/actor_animation/Actor_InstallNodeStateCallback_02089844.c"

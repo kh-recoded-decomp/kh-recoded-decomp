@@ -8,6 +8,6 @@
 #define func_ov020_020a2830 func_ov020_020a2850
 #define func_ov020_020a2904 LoadStackedBlockPhase
 #define func_ov020_020a2e58 GetRaisedBlockFocus
-#define func_ov020_020a2ebc func_ov020_020a2edc
+#define func_ov020_020a2ebc DrawPanelBlockVisibleParts
 #define func_ov020_020a3150 RefreshStackedBlockCollision
 #include "src/ov020/unclassified_helpers/CreatePanelEntryPool_020a31f4.c"

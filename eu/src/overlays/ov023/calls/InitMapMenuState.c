@@ -14,5 +14,5 @@
 #define data_ov023_020b6f30 sOv023_UiBtlMapchrP2_020b6f50
 #define data_ov023_020b6f64 data_ov023_020b6f84
 #define func_01ff8830 MI_CpuFill8
-#define func_ov001_0207b45c func_ov001_0207b484
+#define func_ov001_0207b45c GetPanelFormationType
 #include "src/ov023/menu_graphics/InitMapMenuState_020b6a18.c"

@@ -8,6 +8,6 @@
 #define data_02053438 gZeroVecFx32
 #define func_ov001_020863e0 func_ov001_02086408
 #define func_ov001_0208723c GetFieldEntryListHead
-#define func_ov016_020a69f0 func_ov016_020a6a10
+#define func_ov016_020a69f0 GetFieldObjectHiddenMask
 #define func_ov017_020a3d50 IsFieldObjectActive
 #include "src/ov001/shared_engine/ProbeNearestFacingTarget_02097130.c"

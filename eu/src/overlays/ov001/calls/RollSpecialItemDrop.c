@@ -26,7 +26,7 @@ extern SpecialDrops *data_ov001_020a04fc;
 extern s8 GetCtxModeByte(void);
 extern u32 NextSharedRandom16Scaled(u32 range);
 extern void SpawnRewardOrbs(RewardAmounts *amounts, void *target, int mode);
-extern u32 func_ov001_020664f0(u32 kind, u32 size, void *target, u32 mode);
+extern u32 TrySpawnFieldEffect(u32 kind, u32 size, void *target, u32 mode);
 
 static inline void ClearRewardAmounts(RewardAmounts *reward)
 {
@@ -76,11 +76,11 @@ void RollSpecialItemDrop(int itemId, void *target)
         for (i = 0; i < 7; i++) {
             cumulative += row->itemWeights[i];
             if (roll < cumulative) {
-                func_ov001_020664f0(ITEM_EFFECT_KIND, drops->itemIds[i], target, 0);
+                TrySpawnFieldEffect(ITEM_EFFECT_KIND, drops->itemIds[i], target, 0);
                 return;
             }
         }
     } else {
-        func_ov001_020664f0(ITEM_EFFECT_KIND, itemId, target, 0);
+        TrySpawnFieldEffect(ITEM_EFFECT_KIND, itemId, target, 0);
     }
 }

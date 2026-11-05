@@ -44,5 +44,5 @@
 #define func_ov001_0207ef40 func_ov001_0207ef68
 #define func_ov001_0207ef68 SetOverlayLayerVisible
 #define func_ov035_020bc1f0 SetChannelRatioLevels
-#define func_ov001_02087628 func_ov001_02087650
+#define func_ov001_02087628 SetFieldObjectInteractionsBlocked
 #include "src/ov040/unclassified_helpers/func_ov040_020bce50.c"

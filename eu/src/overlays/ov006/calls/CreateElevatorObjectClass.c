@@ -48,11 +48,11 @@ extern void FieldObject_EnsureModelsLoaded(void);
 extern void RespawnElevatorObject(void);
 extern void FreeFieldObjectClassAnimationBuffers(void);
 extern void FreeFieldObjectShapeStorage(void);
-extern void func_ov006_020a0a58(void);
+extern void GetElevatorObjectPosition(void);
 extern void TryActivateElevatorSlot(void);
 extern BOOL CollideElevatorWithShape(ElevatorCollisionBody *body, CollisionShape *other,
                                     void *result);
-extern void func_ov006_020a0c0c(void);
+extern void GetElevatorCenterIfEnabled(void);
 extern void ReleaseOwnerResource(void);
 
 ElevatorClass *CreateElevatorObjectClass(int count, const ElevatorDesc *desc)
@@ -78,11 +78,11 @@ ElevatorClass *CreateElevatorObjectClass(int count, const ElevatorDesc *desc)
     objectClass->hooks[3] = FreeFieldObjectClassAnimationBuffers;
     objectClass->hooks[6] = FreeFieldObjectShapeStorage;
     objectClass->hooks[7] = NULL;
-    objectClass->hooks[10] = func_ov006_020a0a58;
+    objectClass->hooks[10] = GetElevatorObjectPosition;
     objectClass->hooks[11] = TryActivateElevatorSlot;
     objectClass->hooks[14] = NULL;
     objectClass->hooks[12] = (FieldObjectHook)CollideElevatorWithShape;
-    objectClass->hooks[13] = func_ov006_020a0c0c;
+    objectClass->hooks[13] = GetElevatorCenterIfEnabled;
     objectClass->hooks[4] = ReleaseOwnerResource;
     objectClass->classType = 4;
     objectClass->activeStop = -1;

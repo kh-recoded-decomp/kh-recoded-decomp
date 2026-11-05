@@ -8,7 +8,7 @@
 #define GetStageController_0209c120 GetStageController
 #define HookMaterialAnimAlpha_0208f554 HookMaterialAnimAlpha
 #define LoadScaledOffsetPair_0209d230 LoadScaledOffsetPair
-#define Obj_SetField14_0209839c func_ov001_020983c4
+#define Obj_SetField14_0209839c SetStageControllerUniformScale
 #define PlayActorAnimationSlot_02091a00 PlayActorAnimationSlot
 #define SpawnStageObjectActor_02096ae0 SpawnStageObjectActor
 #define data_ov001_0209e4b4 gStageEventDisplayStyles

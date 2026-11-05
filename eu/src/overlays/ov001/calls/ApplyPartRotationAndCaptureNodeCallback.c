@@ -1,0 +1,4 @@
+#define NNS_G2dBindAnimCtrl ApplyPartRotationToGeometry
+#define NNS_G2dSetCellAnimationSequence_02089834 ApplyPartRotationAndCaptureNodeCallback
+#define func_020897d0 CopySessionResourceBuffer
+#include "src/ov001/library_nns_g2d/NNS_G2dSetCellAnimationSequence_02089834.c"

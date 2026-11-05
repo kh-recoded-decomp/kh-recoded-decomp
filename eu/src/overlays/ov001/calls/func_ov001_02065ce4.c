@@ -1,3 +1,0 @@
-#define Ov002_EnterPhase func_ov001_02064884
-#define ScriptCmd_EnterPhase_02065ce4 func_ov001_02065ce4
-#include "src/ov001/shared_engine/ScriptCmd_EnterPhase_02065ce4.c"

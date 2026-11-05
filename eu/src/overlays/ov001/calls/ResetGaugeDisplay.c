@@ -5,5 +5,5 @@
 #define func_ov001_0206f040 ApplyFieldResourceAndRelease
 #define func_ov001_020728e4 IsFieldFlag13OrSessionFlagSet
 #define func_ov001_020781a4 SetFieldMenuMode
-#define func_ov001_0207b548 func_ov001_0207b570
+#define func_ov001_0207b548 ResetPanelListToFirstEntryIfReady
 #include "src/ov001/field_manager/ResetGaugeDisplay_020734f8.c"

@@ -18,7 +18,7 @@ typedef struct FieldSession {
 } FieldSession;
 
 extern FieldSession *data_ov001_020a0480;
-extern int func_ov001_02067ed4(void);
+extern int GetCurrentSceneEntryIndex(void);
 extern BOOL IsSessionFlagSet(u32 value);
 extern BOOL IsEntryFlag2Active(int index);
 extern int QueueSoundKind4(int track, int fade);
@@ -30,7 +30,7 @@ extern u8 GetSceneEntrySecondaryBgmId(int index);
 void UpdateFieldBgm(FieldSession *session) {
     BgmState *bgm = &session->bgm;
     int battle = 0;
-    int area = func_ov001_02067ed4();
+    int area = GetCurrentSceneEntryIndex();
     BOOL change;
 
     if (session->bgmLocked) {
@@ -68,7 +68,7 @@ void UpdateFieldBgm(FieldSession *session) {
             return;
         }
         bgm->timer = 0;
-        bgm->track = GetSceneEntrySecondaryBgmId(func_ov001_02067ed4());
+        bgm->track = GetSceneEntrySecondaryBgmId(GetCurrentSceneEntryIndex());
         QueueSoundKind4(bgm->track, 30);
         bgm->mode = 1;
         return;
@@ -82,11 +82,11 @@ void UpdateFieldBgm(FieldSession *session) {
         } else {
             bgm->timer++;
         }
-    } else if (bgm->track != GetSceneEntryPrimaryBgmId(func_ov001_02067ed4())) {
+    } else if (bgm->track != GetSceneEntryPrimaryBgmId(GetCurrentSceneEntryIndex())) {
         change = TRUE;
     }
     if (change) {
-        bgm->track = GetSceneEntryPrimaryBgmId(func_ov001_02067ed4());
+        bgm->track = GetSceneEntryPrimaryBgmId(GetCurrentSceneEntryIndex());
         QueueSoundKind4(bgm->track, 30);
         bgm->mode = 2;
     }

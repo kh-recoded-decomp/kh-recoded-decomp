@@ -2,5 +2,5 @@
 #define ScriptCmd_WaitMenuState_0208ef64 ScriptCmd_WaitMenuState
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
 #define func_ov001_0207b320 RequestPanelModeWithStyle2
-#define func_ov001_0207b3cc func_ov001_0207b3f4
+#define func_ov001_0207b3cc GetLoadedSubsceneMode
 #include "src/ov001/scripted_actor_behavior/ScriptCmd_WaitMenuState_0208ef64.c"

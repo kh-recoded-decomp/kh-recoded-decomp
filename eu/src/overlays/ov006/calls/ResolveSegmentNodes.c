@@ -1,3 +1,3 @@
 #define ResolveSegmentNodes_020a121c ResolveSegmentNodes
-#define func_ov006_020a1318 func_ov006_020a1338
+#define func_ov006_020a1318 GetGridRowMajorIndex
 #include "src/ov006/reviewed_helpers/ResolveSegmentNodes_020a121c.c"

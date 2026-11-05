@@ -1,3 +1,4 @@
+#define func_ov001_02067ed4 GetCurrentSceneEntryIndex
 #define PushVramState_020365a4 PushVramState
 #define SetSlotDisplayStyle_020ba8a0 SetSlotDisplayStyle
 #define func_ov001_020680cc SetSceneEntryPrimaryBgmId

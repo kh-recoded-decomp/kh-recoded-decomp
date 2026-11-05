@@ -46,7 +46,7 @@ struct DropObject {
     s16 linkIndex;
 };
 
-extern int func_ov001_02087674(void);
+extern int GetFieldObjectInteractionBlockMask(void);
 extern void AddSessionCounter(int index, int amount);
 extern void Flags16_ClearBit1(void *target);
 extern u8 *ActorRegistry_GetEntityByIndex(int actorId);
@@ -54,7 +54,7 @@ extern void RebindAnimTracks(void *anim, int blendIndex, int frame);
 extern LinkedObject *GetEntryPoolObjectAtIndex(void *manager, int index);
 extern void *FindInactiveAncestor(DropObject *self);
 extern void *FindInactiveOwnerAncestor(DropObject *self);
-extern void func_ov017_020a525c(void *target, DropObject *self);
+extern void PropagateStackHeightWrapper(void *target, DropObject *self);
 extern void func_ov017_020a5264(void *target, DropObject *self);
 extern void DropRequest_InitKind0(void *request, int dropIndex, int variant, int saveGroup, int saveIndex);
 extern void DropRequest_InitKind1(void *request, int dropIndex, int variant, int saveGroup, int saveIndex);
@@ -67,7 +67,7 @@ int FieldDrop_OnCollect(DropObject *self, DropEvent *event)
     u8 request[0x18];
     void *target;
 
-    if (func_ov001_02087674()) {
+    if (GetFieldObjectInteractionBlockMask()) {
         return 0x10;
     }
     if ((self->flags & 2) && event->state != 3) {
@@ -89,7 +89,7 @@ int FieldDrop_OnCollect(DropObject *self, DropEvent *event)
     GetEntryPoolObjectAtIndex(self->manager, self->linkIndex)->flags |= 4;
     target = FindInactiveAncestor(self);
     if (target) {
-        func_ov017_020a525c(target, self);
+        PropagateStackHeightWrapper(target, self);
     }
     target = FindInactiveOwnerAncestor(self);
     if (target) {

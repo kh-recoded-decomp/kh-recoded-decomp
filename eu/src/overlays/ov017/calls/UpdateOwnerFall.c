@@ -15,7 +15,7 @@
 #define func_ov017_020a3e10 ResetFieldObjectToIdle
 #define func_ov017_020a4b0c CanUseSwitchTarget
 #define func_ov017_020a5ddc func_ov017_020a5dfc
-#define func_ov017_020a5de8 func_ov017_020a5e08
-#define func_ov017_020a5df0 func_ov017_020a5e10
+#define func_ov017_020a5de8 FindLastInactiveObjectInParentChainWrapper
+#define func_ov017_020a5df0 FindRootObjectWrapper
 #define func_ov042_020bd78c func_ov042_020bd7ac
 #include "src/ov017/unclassified_helpers/UpdateOwnerFall_020a48cc.c"

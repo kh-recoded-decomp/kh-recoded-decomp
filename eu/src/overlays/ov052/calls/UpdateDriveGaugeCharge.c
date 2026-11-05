@@ -14,7 +14,7 @@
 #define UpdateDriveGaugeCharge_020cc910 UpdateDriveGaugeCharge
 #define data_ov052_020d20ec data_ov052_020d210c
 #define func_02023dbc _s32_div_f
-#define func_ov001_0207b560 func_ov001_0207b588
+#define func_ov001_0207b560 GetSubsceneSlotValue
 #define func_ov021_020a8ab4 ResetAnimationTrackState
 #define func_ov021_020a8ca0 func_ov021_020a8cc0
 #include "src/ov052/unclassified_helpers/UpdateDriveGaugeCharge_020cc910.c"

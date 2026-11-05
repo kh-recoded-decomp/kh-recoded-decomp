@@ -1,3 +1,4 @@
+#define func_ov001_02067ed4 GetCurrentSceneEntryIndex
 #define func_ov001_020687b8 TriggerQueuedStageEventPairs
 #define FinishMovieMenuLoad_020ba984 FinishMovieMenuLoad
 #define GetMenuItemValue_0206802c GetMenuItemValue

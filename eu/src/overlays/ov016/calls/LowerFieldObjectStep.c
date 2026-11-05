@@ -4,5 +4,5 @@
 #define data_02053438 gZeroVecFx32
 #define data_ov016_020a6e04 data_ov016_020a6e24
 #define func_02036240 ActorRegistry_GetEntityByIndex
-#define func_ov016_020a2558 func_ov016_020a2578
+#define func_ov016_020a2558 ReinsertFieldObjectActorInQuadTree
 #include "src/ov016/field_objects/LowerFieldObjectStep_020a4d10.c"

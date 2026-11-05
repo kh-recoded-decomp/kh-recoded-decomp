@@ -121,7 +121,7 @@ Previously `func_020351cc`; 20 bytes, arm. Current source: `src/calls/QueryModel
 - Writes query+8=0 then invokes QueryModelCollision. Evidence: `src/arm9/unclassified_helpers/func_020351b8.c`:1.
 - MoverCastParams+8 is radius; radius0 selects segment-cylinder representation from start+delta. Evidence: `src/arm9/spatial_queries/InitMoverCast_02032b0c.c`:49.
 - Tree query returns shared CollisionResult pointer or null. Evidence: `src/itcm/spatial_queries/QueryModelCollision_01ffce24.c`:1.
-- Native caller consumes pointer result. Evidence: `eu/src/overlays/ov017/calls/func_ov017_020a28cc.c`:28.
+- Native caller consumes pointer result. Evidence: `eu/src/overlays/ov017/calls/UpdateGridObjectDropOffsetFromRay.c`:28.
 
 The cleared field is radius, NOT resultFlags. Existing QueryCollisionSegment private names end/resultFlags are misleading; source actually means delta/radius. Input query is mutated. Return is borrowed shared collision result, overwritten by later queries. Legacy void return loses the actual observed pointer result; recover it with exact check.
 

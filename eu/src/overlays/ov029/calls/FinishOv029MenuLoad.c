@@ -1,3 +1,4 @@
+#define func_ov001_02067ed4 GetCurrentSceneEntryIndex
 #define func_ov001_020687b8 TriggerQueuedStageEventPairs
 #define AreAllListNodesReady_0207ed2c AreAllListNodesReady
 #define FinishOv029MenuLoad_020ba5dc FinishOv029MenuLoad

@@ -2,5 +2,5 @@
 #define GetStageEntry_0209c074 GetStageEntry
 #define data_ov001_020a02f4 gDefaultAttachPointName
 #define func_01ff8830 MI_CpuFill8
-#define func_ov001_0208f018 func_ov001_0208f040
+#define func_ov001_0208f018 GetStageResourceNameByIndex
 #include "src/ov001/shared_engine/FindStageAttachPoint_02097890.c"

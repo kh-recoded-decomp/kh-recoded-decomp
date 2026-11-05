@@ -139,9 +139,9 @@ extern void SetFieldUnitPosition(FieldUnit *unit, const VecFx32 *position);
 extern void Obj_SetPosition(void *object, const VecFx32 *position);
 extern BOOL IsFieldUnitPhase6(FieldUnit *unit);
 extern BOOL QueryStageFloor(VecFx32 *position, VecFx32 *floorPoint);
-extern void *func_ov001_0208f2a4(void *list);
+extern void *GetStageListFirstOrNull(void *list);
 extern StageCommand *BindDescriptor0(void *list, void *node);
-extern void *func_ov001_0208f2b4(void *node);
+extern void *GetStageListNext(void *node);
 extern BOOL IsCommandType8(StageCommand *command);
 extern void ReleaseEventResources(StageCommand *command);
 extern u16 GetStageRowIndex(StageCommand *command);
@@ -299,10 +299,10 @@ void UpdateStageManager(u32 value)
         }
     }
     MI_CpuFill8(gStageManager->kindCounts, 0, sizeof(gStageManager->kindCounts));
-    node = func_ov001_0208f2a4(gStageManager->commandList);
+    node = GetStageListFirstOrNull(gStageManager->commandList);
     while (node != NULL) {
         command = BindDescriptor0(gStageManager->commandList, node);
-        node = func_ov001_0208f2b4(node);
+        node = GetStageListNext(node);
         if (IsCommandType8(command)) {
             ReleaseEventResources(command);
         } else if (command->active != 0) {
@@ -314,10 +314,10 @@ void UpdateStageManager(u32 value)
             }
         }
     }
-    node = func_ov001_0208f2a4(gStageManager->triggerList);
+    node = GetStageListFirstOrNull(gStageManager->triggerList);
     while (node != NULL) {
         command = BindDescriptor0(gStageManager->triggerList, node);
-        node = func_ov001_0208f2b4(node);
+        node = GetStageListNext(node);
         if (command->actorId != 0 && (actor = GetStageActor((s16)command->actorId)) != NULL) {
             release = IsCommandType4(command);
             if (!release && command->recordId != 0 && (record = GetStageEventRecord(command->recordId)) != NULL) {
@@ -351,10 +351,10 @@ void UpdateStageManager(u32 value)
             }
         }
     }
-    node = func_ov001_0208f2a4(gStageManager->actorList);
+    node = GetStageListFirstOrNull(gStageManager->actorList);
     while (node != NULL) {
         actor = (StageActor *)BindDescriptor0(gStageManager->actorList, node);
-        node = func_ov001_0208f2b4(node);
+        node = GetStageListNext(node);
         if (actor->slotIndex != 0 && !IsSlotEntryUsed(gStageManager->actorList, actor->slotIndex)) {
             actor->slotIndex = 0;
         }

@@ -7,7 +7,7 @@
 #define data_ov001_020a04f4 gActorChannelContext
 #define func_ov001_0208afb8 UpdateEventCameraTransform
 #define func_ov001_0208b0d8 InterpolateFieldCamera
-#define func_ov001_0208b5a8 func_ov001_0208b5d0
-#define func_ov001_0208b6c4 func_ov001_0208b6ec
+#define func_ov001_0208b5a8 UpdateFieldCameraPoseTween
+#define func_ov001_0208b6c4 UpdateFieldCameraHeadingTween
 #define func_ov021_020af4ac DispatchModeUpdate
 #include "src/ov001/shared_engine/UpdateFieldCamera_0208b780.c"

@@ -1,6 +1,6 @@
 #include "src/overlays/ov001/FieldTaskState.h"
 
-extern int func_ov001_02067ed4(void);
+extern int GetCurrentSceneEntryIndex(void);
 extern int IsSceneEntryFlag2Set(int value);
 extern int UpdateEventTriggerDelay(FieldTaskState *task);
 
@@ -9,7 +9,7 @@ int CheckSceneEntryTrigger(FieldTaskState *task)
     int result;
 
     task->active = FALSE;
-    result = func_ov001_02067ed4();
+    result = GetCurrentSceneEntryIndex();
     if ((s8)task->kind != result) {
         return FALSE;
     }

@@ -14,7 +14,7 @@
 #define func_01ff89a8 MI_CpuCopy8
 #define func_0204f378 IndexedRecords_SetFlag2
 #define func_ov001_0207b320 RequestPanelModeWithStyle2
-#define func_ov001_0207b5f4 func_ov001_0207b61c
+#define func_ov001_0207b5f4 IsSubscenePanelState6
 #define func_ov001_0207b6b4 SetPanelInputActive
 #define func_ov001_0207b6c4 ClearPanelInputActive
 #define func_ov023_020b5c64 ScrollMapToPosition

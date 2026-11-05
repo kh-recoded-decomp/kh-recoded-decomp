@@ -5,7 +5,7 @@
 #define StartObjectEffects_020a0e6c StartObjectEffects
 #define data_ov010_020a1dc0 gSpecialActionWork
 #define func_ov001_020645e8 ClearSessionPackedBit
-#define func_ov010_020a0d00 func_ov010_020a0d20
+#define func_ov010_020a0d00 ResetSpecialActionState
 #define func_ov010_020a0d98 UpdateObjectEffects
 #define func_ov010_020a0f60 UpdateTargetEffect
 #include "src/ov010/actor_state/Entity_UpdateEventEffect_020a18ac.c"

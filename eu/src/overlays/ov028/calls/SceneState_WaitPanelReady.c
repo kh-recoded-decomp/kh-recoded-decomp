@@ -7,11 +7,11 @@ typedef struct {
 
 extern SceneState *data_ov028_020bb3a0;
 
-extern BOOL func_ov001_0207b6b0(void);
+extern BOOL RequestSubsceneMode0Or1FromMode4(void);
 extern void StoreToGlobalPtr4Field28(int value);
 
 int SceneState_WaitPanelReady(void) {
-    if (!func_ov001_0207b6b0()) {
+    if (!RequestSubsceneMode0Or1FromMode4()) {
         return -1;
     }
     if (data_ov028_020bb3a0->flags & 1) {

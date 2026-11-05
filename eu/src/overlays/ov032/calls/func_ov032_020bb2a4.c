@@ -18,7 +18,7 @@ extern unsigned int GetManagedActorPosition();
 extern unsigned int GetBiasAdjustedField();
 extern unsigned int func_ov001_0206de40();
 extern unsigned int Panel_TryBeginTransition4();
-extern unsigned int func_ov001_0207d680();
+extern unsigned int ReleaseCounterHudModels();
 extern unsigned int SetOverlayLayerVisible();
 extern unsigned int func_ov001_0207efa0();
 
@@ -51,7 +51,7 @@ unsigned int func_ov032_020bb2a4(void) {
   SetOverlayLayerVisible(1);
   func_ov001_0207efa0();
   *(u16 *)(data_ov032_020c0080.value + 6) = *(u16 *)(data_ov032_020c0080.value + 6) & 0xfff3;
-  func_ov001_0207d680();
+  ReleaseCounterHudModels();
   func_ov001_02064d88();
   PopVramState();
   ActorRegistry_ClearCollisionResult();

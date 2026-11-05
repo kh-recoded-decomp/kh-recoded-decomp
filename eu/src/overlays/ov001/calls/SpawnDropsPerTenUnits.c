@@ -1,3 +1,4 @@
+#define func_ov001_020664f0 TrySpawnFieldEffect
 #define SpawnDropsPerTenUnits_0206671c SpawnDropsPerTenUnits
 #define func_02023dbc _s32_div_f
 #include "src/ov001/unclassified_helpers/SpawnDropsPerTenUnits_0206671c.c"

@@ -8,7 +8,7 @@ src/overlays/ov020/calls/ScriptCmd_CreateSlotObjectKind2.c:
     complete
     .text       start:0x020a1e00 end:0x020a1e2e
 
-src/overlays/ov020/calls/func_ov020_020a1e30.c:
+src/overlays/ov020/calls/ScriptCmd_SpawnPanelBlock.c:
     complete
     .text       start:0x020a1e30 end:0x020a1ef0
 
@@ -80,7 +80,7 @@ src/overlays/ov020/calls/FindLiveNextBlock.c:
     complete
     .text       start:0x020a285c end:0x020a2898
 
-src/overlays/ov020/calls/func_ov020_020a2898.c:
+src/overlays/ov020/calls/FindLastLiveBlockInPreviousChain.c:
     complete
     .text       start:0x020a2898 end:0x020a28cc
 
@@ -88,7 +88,7 @@ src/overlays/ov020/calls/SettleBlockGround.c:
     complete
     .text       start:0x020a28cc end:0x020a2914
 
-src/overlays/ov020/calls/func_ov020_020a2914.c:
+src/overlays/ov020/calls/SettleBlockGroundWrapper.c:
     complete
     .text       start:0x020a2914 end:0x020a2920
 
@@ -120,7 +120,7 @@ src/overlays/ov020/calls/TryGetFieldHandle.c:
     complete
     .text       start:0x020a2eb8 end:0x020a2edc
 
-src/overlays/ov020/calls/func_ov020_020a2edc.c:
+src/overlays/ov020/calls/DrawPanelBlockVisibleParts.c:
     complete
     .text       start:0x020a2edc end:0x020a2f18
 

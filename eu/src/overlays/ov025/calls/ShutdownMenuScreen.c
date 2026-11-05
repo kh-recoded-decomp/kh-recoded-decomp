@@ -3,7 +3,7 @@
 #define FreeAllocatedBuffers_020b9a60 FreeAllocatedBuffers
 #define NotifyBothOrOne_02001154 NotifyBothOrOne
 #define ShutdownMenuScreen_020b5e8c ShutdownMenuScreen
-#define func_ov001_0207b200 func_ov001_0207b228
+#define func_ov001_0207b200 SetSubsceneBgSetupCallback
 #define func_ov025_020b71d8 CloseSlotListView
 #define func_ov027_020b7dfc func_ov027_020b7e1c
 #define func_ov027_020b984c SetWidgetRootTouchEnabled

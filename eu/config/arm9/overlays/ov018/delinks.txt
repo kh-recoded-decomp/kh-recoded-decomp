@@ -27,11 +27,11 @@ src/overlays/ov018/calls/func_ov018_020a2220.c:
     complete
     .text       start:0x020a2220 end:0x020a2234
 
-src/overlays/ov018/calls/func_ov018_020a2234.c:
+src/overlays/ov018/calls/ReleaseKind6ObjectAttachment.c:
     complete
     .text       start:0x020a2234 end:0x020a225e
 
-src/overlays/ov018/calls/func_ov018_020a2260.c:
+src/overlays/ov018/calls/ReleaseKind6ObjectChannelAndResources.c:
     complete
     .text       start:0x020a2260 end:0x020a22ba
 

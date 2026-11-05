@@ -1,3 +1,4 @@
+#define func_ov001_02067ed4 GetCurrentSceneEntryIndex
 #define EventTrigger_EvaluateCallback_02069e1c EventTrigger_EvaluateCallback
 #define func_ov001_02069464 UpdateEventTriggerDelay
 #define func_ov001_0208635c GetEntryPoolObjectAtIndex

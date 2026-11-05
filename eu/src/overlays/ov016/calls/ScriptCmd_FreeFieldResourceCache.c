@@ -1,0 +1,3 @@
+#define FS_EndOverlay ResourceCache_FreeAll
+#define FS_UnloadOverlayImage_020a2264 ScriptCmd_FreeFieldResourceCache
+#include "src/ov016/library_nitro_fs/FS_UnloadOverlayImage_020a2264.c"

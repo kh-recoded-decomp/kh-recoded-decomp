@@ -2,7 +2,7 @@
 #define StartMenuOverlayWindow_0207ac18 StartMenuOverlayWindow
 #define StartOverlay_0200bb74 FS_StartOverlay
 #define func_02029f58 GetSubBrightnessSetting
-#define func_ov001_0207b3cc func_ov001_0207b3f4
+#define func_ov001_0207b3cc GetLoadedSubsceneMode
 #define func_ov023_020b6c48 PrepareMenuScreenEntry
 #define func_ov023_020b6cf4 ResetMapMenuScreen
 #include "src/ov001/field_manager/StartMenuOverlayWindow_0207ac18.c"

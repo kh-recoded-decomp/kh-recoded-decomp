@@ -7,10 +7,10 @@ typedef struct CounterPanel {
     u32 vramAddress;
 } CounterPanel;
 
-extern void func_ov001_0207d828(CounterPanel *panel, u32 vramAddress);
+extern void QueueArrowPromptFlashTiles(CounterPanel *panel, u32 vramAddress);
 
 void ScrollCounterPanelUp(CounterPanel *panel)
 {
     panel->posY -= 0x1e;
-    func_ov001_0207d828(panel, panel->vramAddress);
+    QueueArrowPromptFlashTiles(panel, panel->vramAddress);
 }

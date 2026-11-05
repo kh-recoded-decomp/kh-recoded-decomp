@@ -1,0 +1,3 @@
+#define PXI_InitFifo FindLastInactiveObjectInParentChain
+#define PXI_Init_020a5de8 FindLastInactiveObjectInParentChainWrapper
+#include "src/ov017/library_nitro_pxi/PXI_Init_020a5de8.c"

@@ -108,11 +108,11 @@ src/overlays/ov010/calls/FieldObject_CreateAtOrigin.c:
     complete
     .text       start:0x020a0c98 end:0x020a0cf8
 
-src/overlays/ov010/calls/func_ov010_020a0cf8.c:
+src/overlays/ov010/calls/EnterSpecialActionState2.c:
     complete
     .text       start:0x020a0cf8 end:0x020a0d20
 
-src/overlays/ov010/calls/func_ov010_020a0d20.c:
+src/overlays/ov010/calls/ResetSpecialActionState.c:
     complete
     .text       start:0x020a0d20 end:0x020a0d44
 
@@ -156,7 +156,7 @@ src/overlays/ov010/calls/Entity_UpdateSpecialCharge.c:
     complete
     .text       start:0x020a1728 end:0x020a17c0
 
-src/overlays/ov010/calls/func_ov010_020a17c0.c:
+src/overlays/ov010/calls/InitSpecialActionWork.c:
     complete
     .text       start:0x020a17c0 end:0x020a1828
 
@@ -172,7 +172,7 @@ src/overlays/ov010/calls/Entity_UpdateEventEffect.c:
     complete
     .text       start:0x020a18cc end:0x020a1978
 
-src/overlays/ov010/calls/func_ov010_020a1978.c:
+src/overlays/ov010/calls/IsSpecialActionStateNonzero.c:
     complete
     .text       start:0x020a1978 end:0x020a1998
 

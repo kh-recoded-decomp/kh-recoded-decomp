@@ -46,7 +46,7 @@ extern void AddStageScoreWrapper(int payload);
 extern VecFx32 *GetManagedActorPositionWithCallback(int slot);
 extern OrbReceiver *GetBoundedEntryField(int slot);
 extern void ShowChoiceDetails_02072254(int *payload, int count);
-extern void func_ov001_0206674c(PrizeOrb *orb);
+extern void ReleaseFieldEffectSlot(PrizeOrb *orb);
 extern void VEC_Add(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
 extern void VEC_Subtract(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
 extern fx32 VEC_NormalizeLength(const VecFx32 *src, VecFx32 *dst);
@@ -103,7 +103,7 @@ void UpdatePrizeOrbs(void)
                 } else {
                     ShowChoiceDetails_02072254(&orb->payload, 1);
                 }
-                func_ov001_0206674c(orb);
+                ReleaseFieldEffectSlot(orb);
                 orb = next;
                 continue;
             }
@@ -131,7 +131,7 @@ void UpdatePrizeOrbs(void)
             VEC_Add(&orb->pos, &orb->velocity, &orb->pos);
             orb->velocity.y -= 0x45;
             if (orb->despawnOnFall && orb->pos.y < -0xa000) {
-                func_ov001_0206674c(orb);
+                ReleaseFieldEffectSlot(orb);
                 orb = next;
                 continue;
             }

@@ -22,7 +22,7 @@ typedef struct FieldObject {
 extern BOOL IsPlayerInFacingHalfPlane(FieldObject *object, void *query);
 extern u16 FieldObject_GetSavedValue(FieldObject *object);
 extern void FieldObject_SetSavedValue(FieldObject *object, u16 value);
-extern void func_ov006_020a0708(FieldObject *object);
+extern void RestartElevatorStateAnimation(FieldObject *object);
 
 int TryActivateElevatorSlot(FieldObject *object, void *query)
 {
@@ -54,7 +54,7 @@ int TryActivateElevatorSlot(FieldObject *object, void *query)
     }
     if (object->state == 0) {
         object->state = 1;
-        func_ov006_020a0708(object);
+        RestartElevatorStateAnimation(object);
     }
     object->cooldown = 15;
     return 0;

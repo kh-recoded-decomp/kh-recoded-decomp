@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-#define GetCurrentFieldAreaIndex func_ov001_02067ed4
+#define GetCurrentFieldAreaIndex GetCurrentSceneEntryIndex
 #define GetAreaNormalBgm GetSceneEntryPrimaryBgmId
 #define GetAreaBattleBgm GetSceneEntrySecondaryBgmId
 #define QueueBgmTrackChange QueueSoundKind4

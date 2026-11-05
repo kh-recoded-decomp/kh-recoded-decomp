@@ -14,7 +14,7 @@ extern void SetupMenuSubBgLayers(void);
 extern u32 Obj_CreateWithTailWork(void *arg0, u32 arg1);
 extern u32 MakePrimaryVramKey_02071214(u32 arg0);
 extern void QueueFileLoadRequest(u32 arg0, u32 arg1, u32 arg2, u32 arg3);
-extern u32 func_ov001_0207b228(u32 callback);
+extern u32 SetSubsceneBgSetupCallback(u32 callback);
 extern void LoadMenuBackground(void);
 extern void EnterMenuScreenState(void);
 
@@ -23,7 +23,7 @@ u32 InitMenuResourceCache(void)
     ResourceCacheState *state;
     u32 value;
 
-    func_ov001_0207b228((u32)SetupMenuSubBgLayers);
+    SetSubsceneBgSetupCallback((u32)SetupMenuSubBgLayers);
     state = (ResourceCacheState *)GetRunningTaskWork();
     data_ov023_020b6f80 = state;
     MI_CpuFill8(state, 0, 0x40);

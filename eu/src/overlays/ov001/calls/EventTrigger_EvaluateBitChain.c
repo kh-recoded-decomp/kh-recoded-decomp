@@ -1,3 +1,4 @@
+#define func_ov001_02067ed4 GetCurrentSceneEntryIndex
 #define EventTrigger_EvaluateBitChain_020699a8 EventTrigger_EvaluateBitChain
 #define func_ov001_02069464 UpdateEventTriggerDelay
 #define ReadSessionPackedBits_02064574 ReadSessionPackedBits

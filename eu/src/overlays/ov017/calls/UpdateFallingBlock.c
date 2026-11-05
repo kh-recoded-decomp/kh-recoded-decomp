@@ -10,7 +10,7 @@
 #define BuildCollisionShape_02080834 BuildCollisionShape
 #define func_02036240 ActorRegistry_GetEntityByIndex
 #define Obj_SetPosition_0203569c Obj_SetPosition
-#define func_ov017_020a51c8 func_ov017_020a51e8
+#define func_ov017_020a51c8 FindLastInactiveObjectInParentChain
 #define Obj_RemoveFromQuadTree_020355f4 Obj_RemoveFromQuadTree
 #define ResizeBoxCollisionObject_02033e6c ResizeBoxCollisionObject
 #define func_ov017_020a5854 func_ov017_020a5874

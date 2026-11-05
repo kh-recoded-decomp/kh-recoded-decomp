@@ -6,8 +6,8 @@
 #define func_ov001_0206daf8 UpdateEventObjects
 #define func_ov001_0207d120 LoadContextResourceGroups
 #define func_ov001_0207ef40 SetOverlayLayerVisible
-#define func_ov001_02082860 func_ov001_02082888
-#define func_ov001_02087628 func_ov001_02087650
+#define func_ov001_02082860 ReloadFirstType11FieldObjectModels
+#define func_ov001_02087628 SetFieldObjectInteractionsBlocked
 #define func_ov001_0208804c ForwardToActiveService_02088074
 #define func_ov021_020af57c ForwardSubModePairB
 #define g_activeState_020bc800 data_ov031_020bc820

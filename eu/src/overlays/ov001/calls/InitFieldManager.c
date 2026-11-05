@@ -96,7 +96,7 @@ extern void CreateFieldHudWidgets(FieldManager *manager, GraphicsView *view);
 extern void RefreshHudTagsAndIcons(FieldManager *manager);
 extern void *FindActiveRecordById(void *pool, u32 recordId);
 extern void TagTracker_InvokeCallback(void *pool, void *record);
-extern void func_ov001_0207b430(void);
+extern void RequestPanelMapReset(void);
 extern void *GetFieldSceneManager(void);
 extern u16 *UpdateWidgetLayerDefault_020b9e10(void *widgets, int layer);
 extern void FillBackgroundLayerRect(void *window, u16 *dst, int x, int y, u8 palette);
@@ -186,7 +186,7 @@ void *InitFieldManager(FieldParams *params)
         TagTracker_InvokeCallback(manager->records, FindActiveRecordById(manager->records, 0x192));
         TagTracker_InvokeCallback(manager->records, FindActiveRecordById(manager->records, 0x190));
         TagTracker_InvokeCallback(manager->records, FindActiveRecordById(manager->records, 0x32));
-        func_ov001_0207b430();
+        RequestPanelMapReset();
         break;
     case 2:
         RefreshHudTagsAndIcons(manager);
@@ -194,7 +194,7 @@ void *InitFieldManager(FieldParams *params)
         break;
     case 3:
         RefreshHudTagsAndIcons(manager);
-        func_ov001_0207b430();
+        RequestPanelMapReset();
         break;
     }
     FillBackgroundLayerRect(manager->textWindow, UpdateWidgetLayerDefault_020b9e10(GetFieldSceneManager(), 9), 1, 2, 9);

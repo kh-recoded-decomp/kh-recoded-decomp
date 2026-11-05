@@ -4,5 +4,5 @@
 #define Entity_HandleSpecialAction_020a1838 Entity_HandleSpecialAction
 #define GetId10_020a755c SharedObject_GetId
 #define data_ov010_020a1dc0 gSpecialActionWork
-#define func_ov010_020a0cd8 func_ov010_020a0cf8
+#define func_ov010_020a0cd8 EnterSpecialActionState2
 #include "src/ov010/actor_state/Entity_HandleSpecialAction_020a1838.c"

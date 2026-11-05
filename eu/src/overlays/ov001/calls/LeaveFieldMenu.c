@@ -1,3 +1,4 @@
+#define func_ov001_02067ed4 GetCurrentSceneEntryIndex
 #define func_ov001_02068e44 ResumeSessionTimerUpdates
 #define LeaveFieldMenu_02061fc0 LeaveFieldMenu
 #define func_ov046_020c0e38 Camera_RestoreSnapshot

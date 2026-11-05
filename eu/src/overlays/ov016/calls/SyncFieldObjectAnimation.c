@@ -3,5 +3,5 @@
 #define SyncFieldObjectAnimation_020a6064 SyncFieldObjectAnimation
 #define func_0202f4e8 Flags16_ClearBit1
 #define func_02036240 ActorRegistry_GetEntityByIndex
-#define func_ov016_020a2668 func_ov016_020a2688
+#define func_ov016_020a2668 SetFieldObjectActorEnabled
 #include "src/ov016/field_objects/SyncFieldObjectAnimation_020a6064.c"

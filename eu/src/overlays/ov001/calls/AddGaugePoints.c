@@ -40,7 +40,7 @@ extern void NNSi_FndFreeFromDefaultHeap(void *ptr);
 extern void *QueueFileLoadRequest(u32 path, int loadMode, void (*callback)(void *, void *), void *userData);
 extern void ApplyFieldResourceAndRelease(void *request, void *userData);
 extern void SelectSlotTitleLine(GaugeContext *context, int slot);
-extern void func_ov001_0207b520(void);
+extern void RequestTemporaryPanelListDisplay(void);
 extern void ResetGaugeDisplay(void);
 extern void BlendIconTiles(u32 value);
 
@@ -155,7 +155,7 @@ void AddGaugePoints(int delta, BOOL loadNow)
             i = 0;
         }
         for (; i < slot; i++) {
-            func_ov001_0207b520();
+            RequestTemporaryPanelListDisplay();
         }
         context->flags |= 0x8000;
         if (loadNow) {

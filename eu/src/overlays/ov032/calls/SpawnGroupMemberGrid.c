@@ -7,7 +7,7 @@
 #define func_0202a9d0 NextSharedRandom16Scaled
 #define func_ov001_0208635c GetEntryPoolObjectAtIndex
 #define func_ov016_020a6338 SpawnFieldObjectTree
-#define func_ov016_020a6954 func_ov016_020a6974
+#define func_ov016_020a6954 SetFieldObjectCompletionCallback
 #define func_ov032_020bc1e8 ApplyGroupMemberKind
 #define func_ov032_020bd518 UnlinkGroupMember
 #include "src/ov032/object_group/SpawnGroupMemberGrid_020bf468.c"

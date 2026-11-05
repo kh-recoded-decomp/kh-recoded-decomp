@@ -1,5 +1,5 @@
 #define ScriptCmd_ReturnValue_02025960 ScriptCmd_ReturnValue
 #define ScriptCmd_WaitActorReady_0208dce4 ScriptCmd_WaitActorReady
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
-#define func_ov001_0208a424 func_ov001_0208a44c
+#define func_ov001_0208a424 IsActorScriptWaitSatisfied
 #include "src/ov001/scripted_actor_behavior/ScriptCmd_WaitActorReady_0208dce4.c"

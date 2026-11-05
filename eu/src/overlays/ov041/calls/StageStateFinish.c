@@ -11,7 +11,7 @@ extern void SumStageTotals(StageWork **work, int *totals);
 extern void StoreMovieCounter(int index, int value);
 extern void AddSessionCounter(int index, int amount);
 extern void TallyStageCharacter(int character, BOOL counted);
-extern void func_ov001_02067a6c(void);
+extern void ReleaseAllSceneSlotResources(void);
 extern void func_ov035_020bb66c(void);
 extern void SetSessionFlag(u32 id);
 extern void ClearSessionPackedBit(int id);
@@ -61,7 +61,7 @@ void StageStateFinish(void)
         }
     }
     context->flags &= 0xfff3;
-    func_ov001_02067a6c();
+    ReleaseAllSceneSlotResources();
     data_ov001_020a048c->unk10b8 = 0;
     func_ov035_020bb66c();
     context->pendingChoice = 2;

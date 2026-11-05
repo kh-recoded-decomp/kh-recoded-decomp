@@ -1,3 +1,4 @@
+#define func_ov001_02067ed4 GetCurrentSceneEntryIndex
 #define IsEntryFlag2Active_020642d0 IsEntryFlag2Active
 #define IsGlobalPackedBitSet_02027304 IsGlobalPackedBitSet
 #define SetFieldEntriesPaused_0206e444 SetFieldEntriesPaused
@@ -16,7 +17,7 @@
 #define func_ov001_020645c8 IsSessionFlagSet
 #define func_ov001_020680cc SetSceneEntryPrimaryBgmId
 #define func_ov001_020680e4 SetSceneEntrySecondaryBgmId
-#define func_ov001_0207d384 func_ov001_0207d3ac
+#define func_ov001_0207d384 SetCounterHudEnabledIfActive
 #define func_ov027_020ba2a8 GetPackedFileEntry
 #define func_ov027_020ba2e0 FormatPackedWideText
 #define func_ov032_020ba604 UpdateStageLinkPanels

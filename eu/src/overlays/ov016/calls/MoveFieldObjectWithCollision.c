@@ -13,8 +13,8 @@
 #define data_02053444 gIdentityMtxFx33
 #define data_ov016_020a6e1c data_ov016_020a6e3c
 #define func_02036240 ActorRegistry_GetEntityByIndex
-#define func_ov016_020a2558 func_ov016_020a2578
+#define func_ov016_020a2558 ReinsertFieldObjectActorInQuadTree
 #define func_ov016_020a3354 OnFieldObjectBumped
 #define func_ov016_020a33fc IsFieldStateAvailable
-#define func_ov016_020a34c8 func_ov016_020a34e8
+#define func_ov016_020a34c8 ScaleFieldObjectVelocityBy85Percent
 #include "src/ov016/field_objects/MoveFieldObjectWithCollision_020a34fc.c"

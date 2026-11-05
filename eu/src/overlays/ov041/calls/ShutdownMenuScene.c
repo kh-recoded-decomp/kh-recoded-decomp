@@ -7,7 +7,7 @@
 #define SetMenuEntryHighlight_0207830c SetMenuEntryHighlight
 #define ShutdownMenuScene_020bca3c ShutdownMenuScene
 #define ZeroHalfThenFree_0202cd78 ZeroHalfThenFree
-#define func_ov001_0207d658 func_ov001_0207d680
+#define func_ov001_0207d658 ReleaseCounterHudModels
 #define func_ov041_020bdc08 FreeSceneGroupObjects
 #define func_ov041_020bdf00 FreeResourceLists
 #define func_ov041_020c0aac DestroySceneEntry

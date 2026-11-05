@@ -1,5 +1,5 @@
 #define Obj_SetPosition_0203569c Obj_SetPosition
 #define SetFieldUnitPosition_020a6cc4 SetFieldUnitPosition
 #define func_02036240 ActorRegistry_GetEntityByIndex
-#define func_ov016_020a2598 func_ov016_020a25b8
+#define func_ov016_020a2598 BuildFieldObjectBoxCollision
 #include "src/ov016/field_objects/SetFieldUnitPosition_020a6cc4.c"

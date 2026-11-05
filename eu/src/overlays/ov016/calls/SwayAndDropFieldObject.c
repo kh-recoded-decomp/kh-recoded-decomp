@@ -7,6 +7,6 @@
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define data_0205356c gSinFx12Table
 #define func_02036240 ActorRegistry_GetEntityByIndex
-#define func_ov016_020a2558 func_ov016_020a2578
+#define func_ov016_020a2558 ReinsertFieldObjectActorInQuadTree
 #define func_ov016_020a4a64 CheckFieldUnitHeightLimit
 #include "src/ov016/field_objects/SwayAndDropFieldObject_020a4a94.c"

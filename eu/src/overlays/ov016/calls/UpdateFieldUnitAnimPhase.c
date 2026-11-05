@@ -1,5 +1,5 @@
 #define EnterFieldUnitPhase6_020a29a4 EnterFieldUnitPhase6
 #define StepFieldObjectAnim_020a2b1c StepFieldObjectAnim
 #define UpdateFieldUnitAnimPhase_020a57e8 UpdateFieldUnitAnimPhase
-#define func_ov016_020a2c44 func_ov016_020a2c64
+#define func_ov016_020a2c44 UpdateFieldObjectActorAnimation
 #include "src/ov016/field_objects/UpdateFieldUnitAnimPhase_020a57e8.c"

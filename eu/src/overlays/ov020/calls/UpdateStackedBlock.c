@@ -6,6 +6,6 @@
 #define ResizeBoxCollisionObject_02033e6c ResizeBoxCollisionObject
 #define UpdateStackedBlock_020a2f98 UpdateStackedBlock
 #define func_02036240 ActorRegistry_GetEntityByIndex
-#define func_ov020_020a2878 func_ov020_020a2898
+#define func_ov020_020a2878 FindLastLiveBlockInPreviousChain
 #define func_ov020_020a2ef8 UpdatePanelAnimations
 #include "src/ov020/collision/UpdateStackedBlock_020a2f98.c"

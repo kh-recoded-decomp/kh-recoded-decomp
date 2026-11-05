@@ -1,3 +1,4 @@
+#define func_ov001_02075248 GetHudGaugeBlinkActive
 #define ComputeAndApplyLevelScaledValue_020d4d5c ComputeAndApplyLevelScaledValue
 #define FixedPointMultiply12 FX_Mul
 #define func_02023dbc _s32_div_f

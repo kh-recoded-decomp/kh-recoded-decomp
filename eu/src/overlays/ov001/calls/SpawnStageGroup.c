@@ -7,8 +7,8 @@
 #define ReleaseStageSlot_0209c008 ReleaseStageSlot
 #define ScheduleSpawnerNextTime_02096928 ScheduleSpawnerNextTime
 #define SpawnStageGroup_02094f60 SpawnStageGroup
-#define func_ov001_0208f018 func_ov001_0208f040
-#define func_ov001_020925bc func_ov001_020925e4
+#define func_ov001_0208f018 GetStageResourceNameByIndex
+#define func_ov001_020925bc SetStageEventHandlerState
 #define func_ov001_02093188 ResetStageActorFlags
 #define func_ov001_02093330 RefreshStageEventDisplay_02093330
 #define func_ov001_020950f8 SpawnStageGroupActor

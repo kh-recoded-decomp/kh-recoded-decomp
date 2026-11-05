@@ -11,7 +11,7 @@ typedef char PanelHeaderTextOffsetCheck[
 extern PanelHeaderState *data_ov001_020a04e8;
 extern s32 GetLanguageIndex(void);
 extern s32 GetCtxModeByte(void);
-extern s32 func_ov001_02067ed4(void);
+extern s32 GetCurrentSceneEntryIndex(void);
 extern s32 OS_SNPrintf_0202e094(u16 *out, u32 length, const u16 *format, ...);
 extern void NNSi_FndFreeFromDefaultHeap(void *block);
 extern u32 Utf16Length(const u16 *text);
@@ -36,7 +36,7 @@ void SetPanelHeaderText(const u16 *prefix, const u16 *name)
 
     separator = GetLanguageIndex() == 2 ? gFieldTextFormats.spacedColon : gFieldTextFormats.colonSpace;
     mode = GetCtxModeByte();
-    panelId = func_ov001_02067ed4();
+    panelId = GetCurrentSceneEntryIndex();
     if (mode == 0) {
         switch (panelId) {
         case 1:

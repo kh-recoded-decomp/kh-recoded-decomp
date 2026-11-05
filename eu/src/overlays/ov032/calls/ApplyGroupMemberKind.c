@@ -7,7 +7,7 @@
 #define func_02036230 GetActorRegistry
 #define func_02036240 ActorRegistry_GetEntityByIndex
 #define func_ov001_02086434 SetFieldEntryActorAnimationGroup
-#define func_ov016_020a6954 func_ov016_020a6974
+#define func_ov016_020a6954 SetFieldObjectCompletionCallback
 #define func_ov032_020bd518 UnlinkGroupMember
 #define nextRandom12_0202aa58 nextRandom12
 #define random_next_scaled_0202aa04 random_next_scaled

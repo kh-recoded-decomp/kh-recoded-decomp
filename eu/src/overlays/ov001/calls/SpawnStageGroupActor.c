@@ -12,6 +12,6 @@
 #define SpawnStageGroupActor_020950f8 SpawnStageGroupActor
 #define data_ov001_020a02a8 gStageObjectActorDescriptor
 #define data_ov001_020a02e4 sOv001_EnAmFormat04dAp2_020a0304
-#define func_ov001_0208f018 func_ov001_0208f040
+#define func_ov001_0208f018 GetStageResourceNameByIndex
 #define func_ov001_02091834 CreateStageActor
 #include "src/ov001/shared_engine/SpawnStageGroupActor_020950f8.c"

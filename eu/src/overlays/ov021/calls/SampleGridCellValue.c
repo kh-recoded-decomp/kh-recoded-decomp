@@ -3,5 +3,5 @@
 #define SampleGridCellValue_020b0e60 SampleGridCellValue
 #define data_ov021_020b56a4 data_ov021_020b56c4
 #define func_ov001_02091c34 NotifySceneObjectHandler
-#define func_ov006_020a14c0 func_ov006_020a14e0
+#define func_ov006_020a14c0 GetFieldGridCellValue
 #include "src/ov021/shared_engine/SampleGridCellValue_020b0e60.c"

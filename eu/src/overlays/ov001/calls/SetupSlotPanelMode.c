@@ -6,5 +6,5 @@
 #define data_ov001_020a0460 data_ov001_020a0480
 #define func_0200d594 PopCount32
 #define func_ov001_020645e8 ClearSessionPackedBit
-#define func_ov001_0207d384 func_ov001_0207d3ac
+#define func_ov001_0207d384 SetCounterHudEnabledIfActive
 #include "src/ov001/field_manager/SetupSlotPanelMode_020640d8.c"

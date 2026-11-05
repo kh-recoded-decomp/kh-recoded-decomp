@@ -1,3 +1,4 @@
+#define func_ov001_02067ed4 GetCurrentSceneEntryIndex
 #define SetSessionMarkerActive_02081d6c SetSessionMarkerActive
 #define data_ov001_020a0460 data_ov001_020a0480
 #include "src/ov001/unclassified_helpers/SetSessionMarkerActive_02081d6c.c"

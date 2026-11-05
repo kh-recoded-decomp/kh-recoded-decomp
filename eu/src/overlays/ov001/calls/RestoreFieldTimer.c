@@ -19,7 +19,7 @@ extern u32 ReadSessionPackedBits(int bit, int count);
 extern void SetFieldTimerCounterMilliseconds(u32 value, s32 index);
 extern BOOL StartCountdownTimer(int seconds, s32 userData);
 extern void StartPanelScrollOut(int seconds);
-extern void func_ov001_0207d3ac(BOOL enable);
+extern void SetCounterHudEnabledIfActive(BOOL enable);
 extern void ClearSessionFlagBit(int index);
 extern void SetSessionFlagBit(int index);
 
@@ -63,7 +63,7 @@ void RestoreFieldTimer(void)
         StartPanelScrollOut((u16)timeLimit);
     }
     if (visible) {
-        func_ov001_0207d3ac(visible);
+        SetCounterHudEnabledIfActive(visible);
     }
     if (running) {
         ClearSessionFlagBit(0);

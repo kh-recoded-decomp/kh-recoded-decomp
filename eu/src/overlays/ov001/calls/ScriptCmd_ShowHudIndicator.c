@@ -1,5 +1,5 @@
 #define ScriptCmd_ShowHudIndicator_0206572c ScriptCmd_ShowHudIndicator
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
 #define func_ov001_0207d3d8 StartSlotLayoutAnimation
-#define func_ov001_0207d440 func_ov001_0207d468
+#define func_ov001_0207d440 SetCounterHudFadeEnabled
 #include "src/ov001/shared_engine/ScriptCmd_ShowHudIndicator_0206572c.c"

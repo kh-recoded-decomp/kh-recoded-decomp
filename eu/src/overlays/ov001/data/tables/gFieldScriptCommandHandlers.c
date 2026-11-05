@@ -12,7 +12,7 @@ extern void ScriptCmd_QueueFlagTaskKind2(void);
 extern void ScriptOp_StartFieldTimerAt(void); /* ScriptOp_StartFieldTimerAt */
 extern void ScriptOp_StartFieldTimer(void); /* ScriptOp_StartFieldTimer */
 extern void ScriptCmd_StartSessionScene(void); /* return 0; ByteCode_ResolveOperand */
-extern void func_ov001_02065200(void);
+extern void ScriptCmd_UnpauseFieldEntriesIfFlag20Clear(void);
 extern void ScriptCmd_LoadLevelTableFile(void); /* FS_UnloadOverlayImage */
 extern void ScriptCmd_QueueEventPair(void); /* ScriptCmd_QueueEventPair */
 extern void ScriptCmd_SetMapGimmickState(void); /* ScriptCmd_SetMapGimmickState */
@@ -21,10 +21,10 @@ extern void ScriptCmd_SetSpawnPoint(void); /* ScriptCmd_SetSpawnPoint */
 extern void ScriptCmd_LoadSceneTable(void); /* return 1; ScriptVm_ReadOperandInt */
 extern void ScriptCmd_SetMapGimmickFlags(void); /* ScriptCmd_SetMapGimmickFlags */
 extern void ScriptCmd_SetNamedMapNodesVisible(void); /* ScriptCmd_SetNamedMapNodesVisible */
-extern void func_ov001_02065388(void);
+extern void ScriptCmd_ReleaseOrDisableStageEvent(void);
 extern void ScriptCmd_QueueFlagTaskKind3(void); /* ScriptCmd_QueueFlagTaskKind3 */
 extern void ScriptCmd_ShowSessionNameEntry(void); /* return 1; ScriptVm_ReadOperandInt */
-extern void func_ov001_02065448(void); /* FS_UnloadOverlayImage */
+extern void ScriptCmd_EnsureFieldEffectPool(void); /* FS_UnloadOverlayImage */
 extern void ScriptCmd_LoadOffsetTableFile(void); /* FS_UnloadOverlayImage */
 extern void ScriptCmd_CommitChapterClearRecords(void); /* return 1; no local decode */
 extern void func_ov001_02065460(void); /* ScriptCmd_SetWorldByte8D68 */
@@ -34,7 +34,7 @@ extern void ScriptCmd_SetSessionFlag35e3(void);
 extern void ScriptCmd_SetFieldParameter(void); /* ScriptCmd_SetFieldParameter */
 extern void func_ov001_0206550c(void); /* FS_UnloadOverlayImage */
 extern void ScriptCmd_SetMenuItemKind(void);
-extern void func_ov001_02065550(void);
+extern void ScriptCmd_SetSceneSlotDrawingEnabled(void);
 extern void ScriptOp_SetVector4(void); /* ScriptOp_SetVector4 */
 extern void ScriptCmd_RequestSubScene9(void); /* ScriptCmd_RequestSubScene9 */
 extern void func_ov001_020655c4(void); /* IsSceneState0 */
@@ -78,17 +78,17 @@ extern void func_ov001_02065a70(void);
 extern void func_ov001_02065a94(void);
 extern void ScriptCmd_ConfigureEventSlot(void); /* ScriptCmd_ConfigureEventSlot */
 extern void ScriptCmd_SpawnRewardAtActor(void); /* ScriptCmd_SpawnRewardAtActor */
-extern void func_ov001_02065b8c(void);
+extern void ScriptCmd_WaitForFieldEffectsThenSuspend(void);
 extern void ScriptCmd_PlacePartyMember(void);
 extern void ScriptCmd_BindScriptHandlersSlot7(void); /* return 1; ScriptVm_ReadOperandInt */
 extern void ScriptCmd_StoreRandomBits(void); /* ScriptCmd_StoreRandomBits */
 extern void ScriptCmd_AllocSessionNameTable(void); /* return 1; ScriptVm_ReadOperandInt */
 extern void ScriptCmd_SetSessionTableName(void); /* ScriptCmd_SetLinkMode */
 extern void ScriptCmd_QueueFlagTaskKind8(void); /* ScriptCmd_QueueFlagTaskKind8 */
-extern void func_ov001_02065ce4(void); /* ScriptCmd_EnterPhase */
+extern void ScriptCmd_QueueStage900AndSavePlacement(void); /* ScriptCmd_EnterPhase */
 extern void ScriptCmd_StorePageVariantParams(void); /* ScriptCmd_StorePageVariantParams */
 extern void ScriptCmd_StoreFifoReady(void);
-extern void func_ov001_02065db0(void); /* FS_UnloadOverlayImage */
+extern void ScriptCmd_QueueFieldFromSavedSceneIds(void); /* FS_UnloadOverlayImage */
 extern void func_ov001_02065e44(void); /* FS_UnloadOverlayImage */
 extern void ScriptCmd_SetupSlotPanelMode(void);
 extern void ScriptCmd_ToggleSessionBit15(void); /* ScriptCmd_ToggleSessionBit15 */
@@ -127,7 +127,7 @@ void (*gFieldScriptCommandHandlers[190])(void) = {
     ScriptOp_StartFieldTimer, /* ScriptOp_StartFieldTimer */
     NULL,
     ScriptCmd_StartSessionScene, /* return 0; ByteCode_ResolveOperand */
-    func_ov001_02065200,
+    ScriptCmd_UnpauseFieldEntriesIfFlag20Clear,
     ScriptCmd_LoadLevelTableFile, /* FS_UnloadOverlayImage */
     NULL,
     ScriptCmd_QueueEventPair, /* ScriptCmd_QueueEventPair */
@@ -144,13 +144,13 @@ void (*gFieldScriptCommandHandlers[190])(void) = {
     NULL,
     ScriptCmd_SetNamedMapNodesVisible, /* ScriptCmd_SetNamedMapNodesVisible */
     NULL,
-    func_ov001_02065388,
+    ScriptCmd_ReleaseOrDisableStageEvent,
     NULL,
     ScriptCmd_QueueFlagTaskKind3, /* ScriptCmd_QueueFlagTaskKind3 */
     NULL,
     ScriptCmd_ShowSessionNameEntry, /* return 1; ScriptVm_ReadOperandInt */
     NULL,
-    func_ov001_02065448, /* FS_UnloadOverlayImage */
+    ScriptCmd_EnsureFieldEffectPool, /* FS_UnloadOverlayImage */
     NULL,
     ScriptCmd_LoadOffsetTableFile, /* FS_UnloadOverlayImage */
     NULL,
@@ -170,7 +170,7 @@ void (*gFieldScriptCommandHandlers[190])(void) = {
     NULL,
     ScriptCmd_SetMenuItemKind,
     NULL,
-    func_ov001_02065550,
+    ScriptCmd_SetSceneSlotDrawingEnabled,
     NULL,
     ScriptOp_SetVector4, /* ScriptOp_SetVector4 */
     NULL,
@@ -249,7 +249,7 @@ void (*gFieldScriptCommandHandlers[190])(void) = {
     ScriptCmd_ConfigureEventSlot, /* ScriptCmd_ConfigureEventSlot */
     NULL,
     ScriptCmd_SpawnRewardAtActor, /* ScriptCmd_SpawnRewardAtActor */
-    func_ov001_02065b8c,
+    ScriptCmd_WaitForFieldEffectsThenSuspend,
     ScriptCmd_PlacePartyMember,
     NULL,
     ScriptCmd_BindScriptHandlersSlot7, /* return 1; ScriptVm_ReadOperandInt */
@@ -262,13 +262,13 @@ void (*gFieldScriptCommandHandlers[190])(void) = {
     NULL,
     ScriptCmd_QueueFlagTaskKind8, /* ScriptCmd_QueueFlagTaskKind8 */
     NULL,
-    func_ov001_02065ce4, /* ScriptCmd_EnterPhase */
+    ScriptCmd_QueueStage900AndSavePlacement, /* ScriptCmd_EnterPhase */
     NULL,
     ScriptCmd_StorePageVariantParams, /* ScriptCmd_StorePageVariantParams */
     NULL,
     ScriptCmd_StoreFifoReady,
     NULL,
-    func_ov001_02065db0, /* FS_UnloadOverlayImage */
+    ScriptCmd_QueueFieldFromSavedSceneIds, /* FS_UnloadOverlayImage */
     NULL,
     func_ov001_02065e44, /* FS_UnloadOverlayImage */
     NULL,

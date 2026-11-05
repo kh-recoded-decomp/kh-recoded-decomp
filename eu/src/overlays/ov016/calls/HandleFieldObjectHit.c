@@ -11,7 +11,7 @@
 #define func_ov001_0207f84c FieldObject_ApplyHit
 #define func_ov001_020863e0 func_ov001_02086408
 #define func_ov001_02087224 GetFieldEntryByPoolAndIndex
-#define func_ov001_0208764c func_ov001_02087674
+#define func_ov001_0208764c GetFieldObjectInteractionBlockMask
 #define func_ov001_020958f4 ApplyHitToEnemyGroup
 #define func_ov032_020bbc60 func_ov032_020bbc80
 #define func_ov032_020bfba4 ApplyGroupLeaderHit

@@ -118,7 +118,7 @@ extern StageEntry *GetStageEntry(int id);
 extern StageActor *GetLinkedStageActor(StageActor *owner);
 extern int HasSessionContext(void);
 extern s32 GetFieldSessionState(void);
-extern s32 func_ov001_0208f040(RouteContext *ctx, int index);
+extern s32 GetStageResourceNameByIndex(RouteContext *ctx, int index);
 extern int FindActorResourceIndexByName(StageActor *actor, const char *name);
 extern void GetNodePosition(StageActor *owner, u32 nodeId, VecFx32 *out);
 extern void VEC_Add(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
@@ -350,7 +350,7 @@ u32 HitTestRoutePoints(RouteActor *actor, int slot, BOOL sweep, CollSweep *targe
             }
             node = 0xffff;
             if (point->nameIndex != 0) {
-                node = FindActorResourceIndexByName(current, (const char *)func_ov001_0208f040(entry->route, point->nameIndex));
+                node = FindActorResourceIndexByName(current, (const char *)GetStageResourceNameByIndex(entry->route, point->nameIndex));
             }
             GetNodePosition(current, (u16)node, &center);
             VEC_Add(&center, &point->offset, &center);

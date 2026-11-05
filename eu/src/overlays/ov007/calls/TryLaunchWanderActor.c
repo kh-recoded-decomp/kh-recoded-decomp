@@ -33,7 +33,7 @@ extern FieldState *data_ov001_020a0480;
 extern VecFx32 gZeroVecFx32;
 extern BOOL func_ov001_02063620(void);
 extern BOOL InvokeSessionCheckCallbackOrDefault(void);
-extern VecFx32 *func_ov007_020a100c(WanderActor *actor);
+extern VecFx32 *GetWanderActorPosition(WanderActor *actor);
 extern int GetBoundedEntryField(int index);
 extern BOOL GrantRewardItem(int entry, int *heading, u32 *facing);
 extern VecFx32 *GetManagedActorPositionWithCallback(int index);
@@ -54,7 +54,7 @@ BOOL TryLaunchWanderActor(WanderActor *actor) {
     }
     heading = actor->heading;
     facing = actor->facing;
-    actor->position = *func_ov007_020a100c(actor);
+    actor->position = *GetWanderActorPosition(actor);
     player = 0;
     if (GrantRewardItem(GetBoundedEntryField(0), &heading, &facing)) {
         actor->heading = heading;

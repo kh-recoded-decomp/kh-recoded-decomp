@@ -2,6 +2,6 @@
 #define VEC_Mag_01ff9f28 VEC_Mag
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define data_ov021_020b56a4 data_ov021_020b56c4
-#define func_ov001_02090f04 func_ov001_02090f2c
+#define func_ov001_02090f04 GetStageActorPosition
 #define func_ov001_02091c34 NotifySceneObjectHandler
 #include "src/ov021/script_ops/ScriptOp_GetPlayerHorizontalOffset_020b131c.c"

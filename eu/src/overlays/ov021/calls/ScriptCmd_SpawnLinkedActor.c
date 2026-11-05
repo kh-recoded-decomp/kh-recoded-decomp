@@ -117,7 +117,7 @@ extern u16 FindStageObjectByOwner(u16 slot, u32 owner);
 extern int ReleaseStageSlot(int slot);
 extern StageController *GetStageController(u32 id);
 extern int InitStageSpawnRequest(StageController *request, int type, int argument);
-extern s32 func_ov001_0208f040(LinkData *data, int index);
+extern s32 GetStageResourceNameByIndex(LinkData *data, int index);
 extern u16 FindActorResourceIndexByName(StageActor *actor, const char *name);
 extern void GetNodePosition(StageActor *actor, u32 node, VecFx32 *out);
 extern void VEC_Add(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
@@ -305,7 +305,7 @@ s32 ScriptCmd_SpawnLinkedActor(void *thread, ScriptCommand *command)
         actor = GetStageActor(spawnController->actorId);
         actor->spawnArg = path->spawnArg;
         if (path->nodeNameIndex != 0) {
-            nodeName = (const char *)func_ov001_0208f040(link->data, path->nodeNameIndex);
+            nodeName = (const char *)GetStageResourceNameByIndex(link->data, path->nodeNameIndex);
             if (nodeName != NULL) {
                 GetNodePosition(owner, FindActorResourceIndexByName(owner, nodeName),
                                 &actor->position);

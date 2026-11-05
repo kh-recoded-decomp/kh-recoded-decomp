@@ -1,6 +1,6 @@
 #define InitializeFieldEffect_020a3be4 InitializeFieldEffect
 #define func_0204da8c SpawnSoundSlot
-#define func_ov016_020a296c func_ov016_020a298c
+#define func_ov016_020a296c FinishFieldObjectAndMaybeGrantReward
 #define func_ov016_020a2b38 StartFieldUnitMotion
-#define func_ov016_020a2c0c func_ov016_020a2c2c
+#define func_ov016_020a2c0c StartFieldObjectActorAnimation1
 #include "src/ov016/field_objects/InitializeFieldEffect_020a3be4.c"

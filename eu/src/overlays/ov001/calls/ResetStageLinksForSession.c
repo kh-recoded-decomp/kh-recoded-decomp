@@ -5,6 +5,6 @@
 #define ResetStageLinksForSession_0209c430 ResetStageLinksForSession
 #define Session_Exists_02063a24 HasSessionContext
 #define data_ov001_020a0508 gStageManager
-#define func_ov001_0208f27c func_ov001_0208f2a4
-#define func_ov001_0208f28c func_ov001_0208f2b4
+#define func_ov001_0208f27c GetStageListFirstOrNull
+#define func_ov001_0208f28c GetStageListNext
 #include "src/ov001/shared_engine/ResetStageLinksForSession_0209c430.c"

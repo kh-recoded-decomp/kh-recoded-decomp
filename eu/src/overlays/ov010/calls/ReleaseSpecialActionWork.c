@@ -9,7 +9,7 @@ typedef struct {
 
 extern SpecialActionWork *gSpecialActionWork;
 
-extern void func_ov010_020a0d20(SpecialActionWork *work);
+extern void ResetSpecialActionState(SpecialActionWork *work);
 extern void ZeroHalfThenFree(void *handle);
 extern void CameraPath_Free(void *path);
 extern void NNSi_FndFreeFromDefaultHeap(void *ptr);
@@ -17,7 +17,7 @@ extern void NNSi_FndFreeFromDefaultHeap(void *ptr);
 void ReleaseSpecialActionWork(void)
 {
     if (gSpecialActionWork != NULL) {
-        func_ov010_020a0d20(gSpecialActionWork);
+        ResetSpecialActionState(gSpecialActionWork);
         ZeroHalfThenFree(gSpecialActionWork->messageHandle);
         CameraPath_Free(gSpecialActionWork->cameraPath);
         NNSi_FndFreeFromDefaultHeap(gSpecialActionWork);

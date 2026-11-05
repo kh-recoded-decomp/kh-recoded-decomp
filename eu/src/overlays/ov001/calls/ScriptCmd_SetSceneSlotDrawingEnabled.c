@@ -1,0 +1,4 @@
+#define func_ov001_02065550 ScriptCmd_SetSceneSlotDrawingEnabled
+#define func_02025de4 ScriptVm_ReadOperandInt
+#define func_02067cd0 SetSceneSlotDrawingEnabled
+#include "src/ov001/reviewed_helpers/func_ov001_02065550.c"

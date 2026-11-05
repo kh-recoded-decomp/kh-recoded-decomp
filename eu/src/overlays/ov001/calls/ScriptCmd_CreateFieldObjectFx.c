@@ -2,5 +2,5 @@
 #define ScriptVm_ReadOperandFx32_02025df8 ScriptVm_ReadOperandFx32
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
 #define func_ov001_0207f028 GetFieldObjectClassAtIndex
-#define func_ov001_02085c7c func_ov001_02085ca4
+#define func_ov001_02085c7c CreateSpawnerFieldObject
 #include "src/ov001/field_objects/ScriptCmd_CreateFieldObjectFx_02080570.c"

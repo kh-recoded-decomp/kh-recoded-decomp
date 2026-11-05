@@ -37,7 +37,7 @@ extern void UpdateAreaFromPosition(void);
 extern u32 func_ov035_020bae84(void);
 extern void func_ov040_020bc83c(u32 value);
 extern void StartIdleSceneObjects(void);
-extern void func_ov001_02087650(int arg);
+extern void SetFieldObjectInteractionsBlocked(int arg);
 extern u8 *GetBoundedEntryField(u32 index);
 extern s32 Anim_GetFrame(void *anim, u32 track);
 extern s32 GetModelAnimationDurationFx32(void *anim, u32 track);
@@ -77,7 +77,7 @@ int UpdateAreaSceneState(void) {
     func_ov040_020bc83c(func_ov035_020bae84());
     if (state->sceneReady) {
         StartIdleSceneObjects();
-        func_ov001_02087650(1);
+        SetFieldObjectInteractionsBlocked(1);
         state->displayFlags &= ~0x10;
         {
             s32 frame;

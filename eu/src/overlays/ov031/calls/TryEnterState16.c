@@ -1,3 +1,4 @@
+#define func_ov001_0206685c HasActiveFieldEffects
 #define TryEnterState16_020ba9d0 TryEnterState16
 #define func_ov001_0206a7c0 BeginScreenFadeOut
 #define func_ov001_0206a814 IsScreenModeIdle

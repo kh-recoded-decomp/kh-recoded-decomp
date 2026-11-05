@@ -28,7 +28,7 @@ extern BOOL UpdateMenuItemLoading(void);
 extern void LoadFadeModel(int mode);
 extern void HighlightSelectedMenuPanels(void);
 extern void *CreateTaskObject(void *desc, void *arg);
-extern int func_ov001_02067ed4(void);
+extern int GetCurrentSceneEntryIndex(void);
 extern u32 GetSceneEntryResourceId(int index);
 extern u32 GetSceneResourceHandle(void);
 extern void SetPanelHeaderText(const u16 *prefix, const u16 *name);
@@ -55,7 +55,7 @@ int FinishAreaSceneLoad(void)
         if ((int)gMovieContextState->handle == -1) {
             gMovieContextState->handle = CreateTaskObject(AREA_SCENE_DESCRIPTOR, NULL);
         }
-        entryValue = GetSceneEntryResourceId(func_ov001_02067ed4());
+        entryValue = GetSceneEntryResourceId(GetCurrentSceneEntryIndex());
         SetPanelHeaderText((const u16 *)GetSceneResourceHandle(), (const u16 *)entryValue);
     }
     InitSharedRecordAndDispatch(data_ov040_020be280, sOv040_RpgEfEcZ_020be248, 1, 2);
@@ -69,8 +69,8 @@ int FinishAreaSceneLoad(void)
     selectJointAnimationBlend(state, 0, state->blendTarget, 0);
     selectJointAnimationBlend(data_ov040_020be280, 2, data_ov040_020be280->blendTarget, 0);
     InvokeSceneCallback();
-    slotValue = GetSlotEntryValue(func_ov001_02067ed4());
-    SetCachedSoundParams(slotValue, GetMenuItemValue(func_ov001_02067ed4()), 0x7f);
+    slotValue = GetSlotEntryValue(GetCurrentSceneEntryIndex());
+    SetCachedSoundParams(slotValue, GetMenuItemValue(GetCurrentSceneEntryIndex()), 0x7f);
     data_ov040_020be280->flags |= 0x8000;
     return 3;
 }

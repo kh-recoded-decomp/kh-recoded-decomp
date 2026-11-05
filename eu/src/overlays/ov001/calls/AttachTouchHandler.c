@@ -21,8 +21,8 @@ typedef struct FieldObject {
 
 extern void *NNSi_FndAllocFromDefaultHeap(u32 size);
 extern TouchHandler MakeCommandRecord(void (*callback)(FieldObject *), FieldObject *owner, int mode, int flags);
-extern void func_ov001_02085d74(FieldObject *object);
-extern void func_ov001_02085d84(FieldObject *object);
+extern void ReleaseFieldObjectTouchHandler(FieldObject *object);
+extern void DispatchFieldObjectTouchCommandAndUnlinkHandler(FieldObject *object);
 extern void ScrollObjectAndFade(FieldObject *object);
 
 void AttachTouchHandler(FieldObject *object)
@@ -31,8 +31,8 @@ void AttachTouchHandler(FieldObject *object)
     if (object->touchHandler == NULL) {
         object->touchHandler = NNSi_FndAllocFromDefaultHeap(sizeof(TouchHandler));
     }
-    object->onTouchStart = func_ov001_02085d74;
-    object->onTouchEnd = func_ov001_02085d84;
+    object->onTouchStart = ReleaseFieldObjectTouchHandler;
+    object->onTouchEnd = DispatchFieldObjectTouchCommandAndUnlinkHandler;
     object->touchState = 0;
     *object->touchHandler = MakeCommandRecord(ScrollObjectAndFade, object, 2, 0);
 }

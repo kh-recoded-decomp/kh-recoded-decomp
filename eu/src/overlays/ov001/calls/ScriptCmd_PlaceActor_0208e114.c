@@ -12,5 +12,5 @@
 #define func_02036230 GetActorRegistry
 #define func_02036240 ActorRegistry_GetEntityByIndex
 #define func_02038e6c ApplyActorMovementAndUpdateSpatialIndex
-#define func_ov001_0208a458 func_ov001_0208a480
+#define func_ov001_0208a458 ResetActorVelocityAndExtraSlots
 #include "src/ov001/scripted_actor_behavior/ScriptCmd_PlaceActor_0208e0ec.c"

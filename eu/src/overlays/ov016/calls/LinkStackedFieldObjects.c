@@ -39,7 +39,7 @@ struct FieldObjectPool {
 
 extern BOOL IsNodeFlagBitClear(FieldObject *object);
 extern FieldObject *GetEntryPoolObjectAtIndex(FieldObjectPool *pool, int index);
-extern void func_ov016_020a232c(FieldObject *object);
+extern void UpdateFieldObjectDrawFlagFromPreviousLink(FieldObject *object);
 
 void LinkStackedFieldObjects(FieldObject *object)
 {
@@ -55,7 +55,7 @@ void LinkStackedFieldObjects(FieldObject *object)
             if (object->linkLocked == 0 && object->linkPrev == -1 && object->linkNext != -1) {
                 other = GetEntryPoolObjectAtIndex(pool, object->linkNext);
                 while (other != NULL) {
-                    func_ov016_020a232c(other);
+                    UpdateFieldObjectDrawFlagFromPreviousLink(other);
                     other->linkActive = 0;
                     if (object->linkNext != -1) {
                         other = NULL;

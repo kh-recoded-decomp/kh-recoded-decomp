@@ -10,5 +10,5 @@
 #define func_ov001_0207f244 FreeFieldObjectShapeStorage
 #define func_ov001_0207f380 CreateByteGrid
 #define func_ov001_02081aa8 SpawnFieldObjectActor
-#define func_ov001_02081d44 func_ov001_02081d6c
+#define func_ov001_02081d44 DisableTargetViewForSavedFlag
 #include "src/ov001/unclassified_helpers/CreateTargetViewClass_02081da8.c"

@@ -43,7 +43,7 @@ extern u8 *ActorRegistry_GetEntityByIndex(int actorId);
 extern void RebindAnimTracks(void *model, int track, int flags);
 extern LinkedPanel *GetEntryPoolObjectAtIndex(void *owner, int index);
 extern int FindLivePrevBlock(Panel *panel);
-extern void func_ov020_020a2914(int value, Panel *panel);
+extern void SettleBlockGroundWrapper(int value, Panel *panel);
 extern int FindLiveNextBlock(Panel *panel);
 extern void func_ov020_020a2920(int value, Panel *panel);
 extern void PlayWeightedRandomEntry(int itemId, VecFx32 *position);
@@ -73,7 +73,7 @@ int ActivatePanel(Panel *panel, PanelEvent *event)
     GetEntryPoolObjectAtIndex(panel->owner, panel->linkIndex)->flags |= 4;
     result = FindLivePrevBlock(panel);
     if (result != 0) {
-        func_ov020_020a2914(result, panel);
+        SettleBlockGroundWrapper(result, panel);
     }
     result = FindLiveNextBlock(panel);
     if (result != 0) {

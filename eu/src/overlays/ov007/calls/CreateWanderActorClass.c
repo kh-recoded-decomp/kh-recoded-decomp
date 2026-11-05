@@ -30,7 +30,7 @@ extern void FreeFieldObjectClassAnimationBuffers(void);
 extern void ReleaseOwnerResource(void);
 extern void FreeFieldObjectShapeStorage(void);
 extern void FreeEntryArray(void);
-extern void func_ov007_020a100c(void);
+extern void GetWanderActorPosition(void);
 extern void TryLaunchWanderActor(void);
 extern void GetRaisedOwnerPosition(void);
 
@@ -56,7 +56,7 @@ WanderActorClass *CreateWanderActorClass(int count, int actorKind, int param, in
     objectClass->hooks[4] = ReleaseOwnerResource;
     objectClass->hooks[6] = FreeFieldObjectShapeStorage;
     objectClass->hooks[7] = FreeEntryArray;
-    objectClass->hooks[10] = func_ov007_020a100c;
+    objectClass->hooks[10] = GetWanderActorPosition;
     objectClass->hooks[11] = NULL;
     objectClass->hooks[14] = TryLaunchWanderActor;
     objectClass->hooks[12] = NULL;

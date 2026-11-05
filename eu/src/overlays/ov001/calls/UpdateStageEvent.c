@@ -143,13 +143,13 @@ extern StageActor *GetLinkedStageActor(StageActor *actor);
 extern StageActor *FindRecordById_0209c304(int id);
 extern void func_ov001_02091ae8(StageActor *actor, u32 firstId, u32 secondId, u32 flags);
 extern void CopySourceWords(void *cache);
-extern void func_ov001_020925e4(StageEvent *event, u32 state);
+extern void SetStageEventHandlerState(StageEvent *event, u32 state);
 extern void VEC_Add(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
 extern fx32 FX_Mul(fx32 a, fx32 b);
 extern int HasSessionContext(void);
 extern s32 GetFieldSessionState(void);
 extern u8 *GetStageManager(void);
-extern s32 func_ov001_0208f2a4(void *pool);
+extern s32 GetStageListFirstOrNull(void *pool);
 extern u32 FindFirstActiveStageEvent(void);
 extern StageEvent *GetStageEventRecord(u32 handle);
 extern BOOL IsCommandType8(StageEvent *event);
@@ -349,7 +349,7 @@ void UpdateStageEvent(StageEvent *event)
             func_ov001_02091ae8(rec, 0xffff, 0xffff, 0);
             CopySourceWords(rec->sequencer);
         }
-        func_ov001_020925e4(event, 0xb);
+        SetStageEventHandlerState(event, 0xb);
         return;
     }
     result = gStageScriptStateHandlers[event->kind](event);
@@ -361,7 +361,7 @@ void UpdateStageEvent(StageEvent *event)
         if (event->kind != 9) {
             CopySourceWords(actor->sequencer);
         }
-        func_ov001_020925e4(event, (u16)result);
+        SetStageEventHandlerState(event, (u16)result);
     }
     if (event->kind == 1) {
         actor->behaviorFlags &= ~1;
@@ -373,14 +373,14 @@ void UpdateStageEvent(StageEvent *event)
         actor->behaviorFlags &= ~1;
     }
     if (actor->behaviorFlags & 1) {
-        func_ov001_020925e4(event, 7);
+        SetStageEventHandlerState(event, 7);
         return;
     }
     VEC_Add(&actor->velocity, &actor->push, &actor->push);
     SetVec(&actor->velocity, FX_Mul(actor->velocity.x, 0x666), FX_Mul(actor->velocity.y, 0x666), FX_Mul(actor->velocity.z, 0x666));
     actor->pushed = 0;
     if (actor->pushMode == 1 && GetSessionMode() != 7) {
-        func_ov001_0208f2a4(*(void **)(GetStageManager() + 0x18d7c));
+        GetStageListFirstOrNull(*(void **)(GetStageManager() + 0x18d7c));
         for (handle = FindFirstActiveStageEvent(); handle != 0; handle = FindNextActiveStageEvent(handle)) {
             other = GetStageEventRecord(handle);
             if (other == NULL) {

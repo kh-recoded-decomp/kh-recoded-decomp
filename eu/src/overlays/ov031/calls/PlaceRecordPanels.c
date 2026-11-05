@@ -6,7 +6,7 @@
 #define func_ov001_0207f018 GetFieldObjectClassCount
 #define func_ov001_0207f028 GetFieldObjectClassAtIndex
 #define func_ov001_0207f038 GetFieldObjectByClassAndIndex
-#define func_ov001_02082708 func_ov001_02082730
+#define func_ov001_02082708 GetFieldObjectActorSlotFlag8
 #define func_ov001_0208723c GetFieldEntryListHead
 #define g_activeState_020bc800 data_ov031_020bc820
 #include "src/ov031/overlay_state/PlaceRecordPanels_020bbce8.c"

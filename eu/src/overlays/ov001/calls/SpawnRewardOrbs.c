@@ -1,3 +1,4 @@
+#define func_ov001_020664f0 TrySpawnFieldEffect
 #define GetDifficultyScale_0205117c GetDifficultyScale
 #define ReadSessionPackedBits_02064574 ReadSessionPackedBits
 #define SpawnRewardOrbs_02066514 SpawnRewardOrbs

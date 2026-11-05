@@ -7,5 +7,5 @@
 #define func_ov001_0207f244 FreeFieldObjectShapeStorage
 #define func_ov001_0207f380 CreateByteGrid
 #define func_ov001_02081ea8 RespawnFieldObjectActor
-#define func_ov001_02081f84 func_ov001_02081fac
+#define func_ov001_02081f84 DrawProjectionViewFieldObject
 #include "src/ov001/unclassified_helpers/CreateProjectionViewClass_02081fac.c"

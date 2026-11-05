@@ -13,6 +13,6 @@
 #define func_ov001_020645e8 ClearSessionPackedBit
 #define func_ov001_02068e08 ClearSessionFlagBit
 #define func_ov001_02068e34 SetSessionFlagBit
-#define func_ov001_0207d384 func_ov001_0207d3ac
-#define func_ov001_0207d3a4 func_ov001_0207d3cc
+#define func_ov001_0207d384 SetCounterHudEnabledIfActive
+#define func_ov001_0207d3a4 AccumulateCounterHudDelta
 #include "src/ov001/shared_engine/UpdateFieldTimer_02063d4c.c"

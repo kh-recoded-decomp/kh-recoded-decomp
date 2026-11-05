@@ -7,5 +7,5 @@
 #define ResolveSegmentNodes_020a121c ResolveSegmentNodes
 #define RunGridPathCommand_020a1740 RunGridPathCommand
 #define SyncStageEntryPosition_02098fbc SyncStageEntryPosition
-#define func_ov006_020a1318 func_ov006_020a1338
+#define func_ov006_020a1318 GetGridRowMajorIndex
 #include "src/ov006/grid/RunGridPathCommand_020a1740.c"

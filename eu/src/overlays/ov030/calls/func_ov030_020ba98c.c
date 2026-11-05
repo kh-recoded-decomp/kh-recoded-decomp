@@ -1,7 +1,7 @@
 #include "nitro/types.h"
 
 extern u32 data_ov030_020bd020;
-extern s32 func_ov001_0206685c(void);
+extern s32 HasActiveFieldEffects(void);
 extern s32 IsScreenModeIdle(void);
 extern void BeginScreenFadeOut(s32 arg);
 
@@ -12,7 +12,7 @@ u32 func_ov030_020ba98c(void)
 
     ctx = data_ov030_020bd020;
     if (((*(u16 *)(data_ov030_020bd020 + 6) & 0x10) == 0) &&
-        (ready = func_ov001_0206685c(), ready != 0)) {
+        (ready = HasActiveFieldEffects(), ready != 0)) {
         return 0xffffffff;
     }
     ready = IsScreenModeIdle();

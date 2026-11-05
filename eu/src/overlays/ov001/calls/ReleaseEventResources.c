@@ -1,5 +1,5 @@
 #define GetStageActor_0209c040 GetStageActor
 #define ReleaseEventResources_02093e54 ReleaseEventResources
 #define ReleaseStageSlotEntry_0209c024 ReleaseStageSlotEntry
-#define func_ov001_020925bc func_ov001_020925e4
+#define func_ov001_020925bc SetStageEventHandlerState
 #include "src/ov001/shared_engine/ReleaseEventResources_02093e54.c"

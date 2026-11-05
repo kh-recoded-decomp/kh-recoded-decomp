@@ -13,7 +13,7 @@
 #define ApplyDirectionOffset_020b7228 ApplyDirectionOffset
 #define DrawWidgetNumber_020b5de4 DrawWidgetNumber
 #define CanOpenFieldMenu_020735d8 CanOpenFieldMenu
-#define func_ov001_0207b5f4 func_ov001_0207b61c
+#define func_ov001_0207b5f4 IsSubscenePanelState6
 #define FindWidgetById_020b90a4 FindWidgetById
 #define SetEntrySlotsVisible_020b9580 SetEntrySlotsVisible
 #define CopySourceBlock_020b9f7c CopySourceBlock

@@ -1,3 +1,4 @@
+#define func_ov001_02067ed4 GetCurrentSceneEntryIndex
 #define EventTrigger_Evaluate_02069b80 EventTrigger_Evaluate
 #define func_ov001_02069464 UpdateEventTriggerDelay
 #define StageEvents_CheckEvent_02087824 StageEvents_CheckEvent

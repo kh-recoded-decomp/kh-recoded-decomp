@@ -9,15 +9,15 @@ extern void ScriptCmd_ApplyPackedIds(void);
 extern void ScriptCmd_LoadOverlayKind9(void);
 extern void ScriptCmd_SetGroupFlag21(void);
 extern void ScriptCmd_StoreFieldUnitRecord(void);
-extern void func_ov016_020a2020(void);
-extern void func_ov016_020a20ac(void);
-extern void func_ov016_020a2244(void);
-extern void func_ov016_020a2284(void);
+extern void ScriptCmd_SpawnFieldObjectTree(void);
+extern void ScriptCmd_SpawnFieldObjectTreeWithExtraVector(void);
+extern void ScriptCmd_SetFieldObjectFlag22(void);
+extern void ScriptCmd_FreeFieldResourceCache(void);
 
 void *data_ov016_020a6e60[26] = {
     (void *)ScriptCmd_LoadOverlayKind9,
     NULL,
-    (void *)func_ov016_020a2020,
+    (void *)ScriptCmd_SpawnFieldObjectTree,
     NULL,
     (void *)ScriptCmd_ApplyEntityColorParams,
     NULL,
@@ -33,12 +33,12 @@ void *data_ov016_020a6e60[26] = {
     NULL,
     (void *)ScriptCmd_SetGroupFlag21,
     NULL,
-    (void *)func_ov016_020a20ac,
+    (void *)ScriptCmd_SpawnFieldObjectTreeWithExtraVector,
     NULL,
     (void *)ScriptCmd_ApplyEntityColorVecParams,
     NULL,
-    (void *)func_ov016_020a2284,
+    (void *)ScriptCmd_FreeFieldResourceCache,
     NULL,
-    (void *)func_ov016_020a2244,
+    (void *)ScriptCmd_SetFieldObjectFlag22,
     NULL,
 };

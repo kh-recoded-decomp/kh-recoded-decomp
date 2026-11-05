@@ -1,3 +1,4 @@
+#define func_ov001_02067ed4 GetCurrentSceneEntryIndex
 #define IsNodeFlagBitClear_020872b8 IsNodeFlagBitClear
 #define UpdateEffectManager_02086c60 UpdateEffectManager
 #define data_ov001_020a04dc data_ov001_020a04fc

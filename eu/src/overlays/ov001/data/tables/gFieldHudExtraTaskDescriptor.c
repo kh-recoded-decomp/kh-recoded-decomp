@@ -2,13 +2,13 @@
 
 #pragma explicit_zero_data on
 
-extern void func_ov001_0207dc68(void);
-extern void func_ov001_0207dcbc(void);
+extern void InitArrowPromptWork(void);
+extern void ReleaseArrowPromptWork(void);
 
 StageManagerTaskDescriptor gFieldHudExtraTaskDescriptor = {
     0x000e0013,
-    (void *)func_ov001_0207dc68,
-    (void *)func_ov001_0207dcbc,
+    (void *)InitArrowPromptWork,
+    (void *)ReleaseArrowPromptWork,
     0x4c,
     NULL,
 };

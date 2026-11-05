@@ -1,0 +1,3 @@
+#define AlarmCallback_020a2e64 DiscardKind4MessageNodesKeepingPinned
+#define StrmCallback DiscardMessageNodes
+#include "src/ov017/library_nns_snd/AlarmCallback_020a2e64.c"

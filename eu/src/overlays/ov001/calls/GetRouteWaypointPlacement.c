@@ -10,5 +10,5 @@
 #define Session_Exists_02063a24 HasSessionContext
 #define Surface_GetKindValue_02034c24 Surface_GetKindValue
 #define VEC_Add_01ff9e0c VEC_Add
-#define func_ov001_0208f018 func_ov001_0208f040
+#define func_ov001_0208f018 GetStageResourceNameByIndex
 #include "src/ov001/shared_engine/GetRouteWaypointPlacement_0209661c.c"

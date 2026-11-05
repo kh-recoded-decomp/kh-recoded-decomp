@@ -61,7 +61,7 @@ extern void MI_CpuFill8(void *dest, int value, int size);
 extern void MIi_CpuClear32(int value, void *dest, int size);
 extern BOOL IsSessionFlagSet(int flag);
 extern BOOL IsFieldFlag13OrSessionFlagSet(void);
-extern void func_ov001_0207b228(void (*callback)(void));
+extern void SetSubsceneBgSetupCallback(void (*callback)(void));
 extern void SetupSubScreenBgLayers(void);
 extern void SetPanelSessionActive(void);
 extern void *GetFieldSceneManager(void);
@@ -102,7 +102,7 @@ void *CreateBoardScreen(int mode)
         state->showTutorial = 1;
     }
     if (!data_ov024_020b7540.state->useChannel) {
-        func_ov001_0207b228(SetupSubScreenBgLayers);
+        SetSubsceneBgSetupCallback(SetupSubScreenBgLayers);
     }
     SetupSubScreenBgLayers();
     if (!data_ov024_020b7540.state->useChannel) {

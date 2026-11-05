@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-extern u32 func_ov001_0207b3f4(void);
+extern u32 GetLoadedSubsceneMode(void);
 
 u32 func_ov001_0207a8fc(s32 panel)
 {
@@ -8,7 +8,7 @@ u32 func_ov001_0207a8fc(s32 panel)
     u32 result;
 
     result = 0;
-    mode = func_ov001_0207b3f4();
+    mode = GetLoadedSubsceneMode();
     if ((mode == 0) &&
         (((mode = *(s32 *)(panel + 0x30), mode == 4 || (mode == 6)) || (mode == 3)))) {
         result = 1;

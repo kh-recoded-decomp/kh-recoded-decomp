@@ -1,6 +1,6 @@
 #define GetPartySize_0207b590 GetPartySize
 #define func_020505a8 GetSelectionPackedValueBlock
-#define func_ov001_0207b3cc func_ov001_0207b3f4
-#define func_ov001_0207b5e8 func_ov001_0207b610
+#define func_ov001_0207b3cc GetLoadedSubsceneMode
+#define func_ov001_0207b5e8 GetSubsceneReadyValue
 #define func_ov025_020b6310 func_ov025_020b6330
 #include "src/ov001/unclassified_helpers/GetPartySize_0207b590.c"

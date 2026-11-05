@@ -4,11 +4,11 @@
     .data       start:0x020a18e0 end:0x020a1900 kind:data align:32
     .bss        start:0x020a1900 end:0x020a1900 kind:bss align:32
 
-src/overlays/ov006/calls/func_ov006_020a0540.c:
+src/overlays/ov006/calls/ScriptCmd_CreateElevatorClass.c:
     complete
     .text       start:0x020a0540 end:0x020a0604
 
-src/overlays/ov006/calls/func_ov006_020a0604.c:
+src/overlays/ov006/calls/ScriptCmd_CreateElevatorObject.c:
     complete
     .text       start:0x020a0604 end:0x020a0692
 
@@ -16,7 +16,7 @@ src/overlays/ov006/calls/BuildDescendingLevelTable.c:
     complete
     .text       start:0x020a0694 end:0x020a0706
 
-src/overlays/ov006/calls/func_ov006_020a0708.c:
+src/overlays/ov006/calls/RestartElevatorStateAnimation.c:
     complete
     .text       start:0x020a0708 end:0x020a0774
 
@@ -28,7 +28,7 @@ src/overlays/ov006/calls/RespawnElevatorObject.c:
     complete
     .text       start:0x020a07d4 end:0x020a0a58
 
-src/overlays/ov006/auto/func_ov006_020a0a58.c:
+src/overlays/ov006/auto/GetElevatorObjectPosition.c:
     complete
     .text       start:0x020a0a58 end:0x020a0a5c
 
@@ -40,7 +40,7 @@ src/overlays/ov006/calls/CollideElevatorWithShape.c:
     complete
     .text       start:0x020a0b24 end:0x020a0c0c
 
-src/overlays/ov006/calls/func_ov006_020a0c0c.c:
+src/overlays/ov006/calls/GetElevatorCenterIfEnabled.c:
     complete
     .text       start:0x020a0c0c end:0x020a0c20
 
@@ -84,7 +84,7 @@ src/overlays/ov006/calls/GetGridCellIndex.c:
     complete
     .text       start:0x020a12f4 end:0x020a1338
 
-src/overlays/ov006/auto/func_ov006_020a1338.c:
+src/overlays/ov006/auto/GetGridRowMajorIndex.c:
     complete
     .text       start:0x020a1338 end:0x020a1342
 
@@ -100,7 +100,7 @@ src/overlays/ov006/calls/IsGridLineClear.c:
     complete
     .text       start:0x020a13bc end:0x020a14e0
 
-src/overlays/ov006/auto/func_ov006_020a14e0.c:
+src/overlays/ov006/auto/GetFieldGridCellValue.c:
     complete
     .text       start:0x020a14e0 end:0x020a14e8
 

@@ -5,7 +5,7 @@
 #define IsCommandType8_02096224 IsCommandType8
 #define VEC_Mag_01ff9f28 VEC_Mag
 #define VEC_Subtract_01ff9e3c VEC_Subtract
-#define func_ov001_0208f27c func_ov001_0208f2a4
-#define func_ov001_0208f28c func_ov001_0208f2b4
+#define func_ov001_0208f27c GetStageListFirstOrNull
+#define func_ov001_0208f28c GetStageListNext
 #define func_ov001_0209c3c0 GetStageManager
 #include "src/ov001/shared_engine/FindNearestCommandEntry_02096a04.c"

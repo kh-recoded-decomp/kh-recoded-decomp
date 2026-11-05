@@ -1,0 +1,3 @@
+#define Ov002_EnterPhase QueueStage900AndSaveLeaderPlacement
+#define ScriptCmd_EnterPhase_02065ce4 ScriptCmd_QueueStage900AndSavePlacement
+#include "src/ov001/shared_engine/ScriptCmd_EnterPhase_02065ce4.c"

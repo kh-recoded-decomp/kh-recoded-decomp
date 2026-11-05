@@ -4,7 +4,7 @@
 #define func_ov001_0207f128 FieldObject_EnsureModelsLoaded
 #define func_ov001_0207f1e8 FreeFieldObjectClassAnimationBuffers
 #define func_ov001_02084bcc RespawnContactFieldObject
-#define func_ov001_02084d5c func_ov001_02084d84
+#define func_ov001_02084d5c ReleaseFieldObjectDataAndShape
 #define func_ov001_02084d7c FieldObject_ReleaseGroupAndClose
 #define func_ov001_02084da4 func_ov001_02084dcc
 #define func_ov001_02084da8 GetFieldOffset40_02084dd0

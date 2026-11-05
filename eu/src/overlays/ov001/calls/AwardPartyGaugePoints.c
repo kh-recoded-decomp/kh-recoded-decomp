@@ -1,3 +1,4 @@
+#define func_ov001_02075248 GetHudGaugeBlinkActive
 #define func_ov001_02063a38 GetFieldSessionState
 #define AddGaugePoints_02073074 AddGaugePoints
 #define AwardPartyGaugePoints_0206ded8 AwardPartyGaugePoints

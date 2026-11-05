@@ -14,7 +14,7 @@
 #define TestFlagBit9_020a37e4 TestFlagBit9
 #define UpdateSceneRecord_020babf8 UpdateSceneRecord
 #define func_02036230 GetActorRegistry
-#define func_ov001_0207b49c func_ov001_0207b4c4
+#define func_ov001_0207b49c UpdatePanelMapRangePosition
 #define func_ov001_0208723c GetFieldEntryListHead
 #define func_ov001_02087928 ForwardToActiveServiceWithResult
 #define func_ov001_02087944 FindNextActiveStageEventIfActive

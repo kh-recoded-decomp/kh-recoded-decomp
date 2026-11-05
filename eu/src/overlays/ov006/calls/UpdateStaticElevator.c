@@ -8,5 +8,5 @@
 #define UpdateStaticElevator_020a0cc8 UpdateStaticElevator
 #define data_ov006_020a1834 sOv006ElevatorFrameData
 #define func_02036240 ActorRegistry_GetEntityByIndex
-#define func_ov006_020a06e8 func_ov006_020a0708
+#define func_ov006_020a06e8 RestartElevatorStateAnimation
 #include "src/ov006/reviewed_helpers/UpdateStaticElevator_020a0cc8.c"

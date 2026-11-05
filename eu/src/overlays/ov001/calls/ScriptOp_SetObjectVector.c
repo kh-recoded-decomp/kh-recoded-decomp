@@ -2,5 +2,5 @@
 #define ScriptVm_ReadOperandFx32_02025df8 ScriptVm_ReadOperandFx32
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
 #define func_ov001_0207f038 GetFieldObjectByClassAndIndex
-#define func_ov001_020814b4 func_ov001_020814dc
+#define func_ov001_020814b4 SetFieldObjectPositionPlusOffset
 #include "src/ov001/scripted_actor_behavior/ScriptOp_SetObjectVector_0208001c.c"

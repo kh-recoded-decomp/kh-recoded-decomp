@@ -1,0 +1,3 @@
+#define FS_EndOverlay QueueFieldFromSavedSceneIds
+#define FS_UnloadOverlayImage_02065db0 ScriptCmd_QueueFieldFromSavedSceneIds
+#include "src/ov001/library_nitro_fs/FS_UnloadOverlayImage_02065db0.c"

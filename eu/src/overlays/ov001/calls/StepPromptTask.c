@@ -1,5 +1,5 @@
 #define StepPromptTask_020704cc StepPromptTask
 #define UpdatePanelPromptInput_0202867c UpdatePanelPromptInput
 #define data_ov001_020a04a4 data_ov001_020a04c4
-#define func_ov001_0207b5dc func_ov001_0207b604
+#define func_ov001_0207b5dc GetSubsceneTaskObject
 #include "src/ov001/field_manager/StepPromptTask_020704cc.c"

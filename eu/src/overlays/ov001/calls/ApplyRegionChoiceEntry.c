@@ -4,5 +4,5 @@
 #define data_ov001_0209dd68 gWorldChoiceNameOffsets
 #define data_ov001_020a04a4 data_ov001_020a04c4
 #define func_0204f768 GetOverlaySelectionRecord
-#define func_ov001_0207b640 func_ov001_0207b668
+#define func_ov001_0207b640 SetPanelListDepthLimitAndRefreshLabel
 #include "src/ov001/text_rendering/ApplyRegionChoiceEntry_02072530.c"

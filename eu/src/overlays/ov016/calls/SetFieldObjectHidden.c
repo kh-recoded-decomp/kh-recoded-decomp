@@ -2,6 +2,6 @@
 #define Obj_SetPosition_0203569c Obj_SetPosition
 #define SetFieldObjectHidden_020a6968 SetFieldObjectHidden
 #define func_02036240 ActorRegistry_GetEntityByIndex
-#define func_ov016_020a2668 func_ov016_020a2688
-#define func_ov016_020a69f0 func_ov016_020a6a10
+#define func_ov016_020a2668 SetFieldObjectActorEnabled
+#define func_ov016_020a69f0 GetFieldObjectHiddenMask
 #include "src/ov016/field_objects/SetFieldObjectHidden_020a6968.c"

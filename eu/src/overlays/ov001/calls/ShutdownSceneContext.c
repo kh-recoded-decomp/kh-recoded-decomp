@@ -12,7 +12,7 @@ typedef struct SceneContext {
 } SceneContext;
 
 extern SceneContext *data_ov001_020a048c;
-extern void func_ov001_02067a6c(void);
+extern void ReleaseAllSceneSlotResources(void);
 extern void NNSi_FndFreeFromDefaultHeap(void *ptr);
 extern void ShutdownAllActorSlots(void);
 
@@ -20,7 +20,7 @@ void ShutdownSceneContext(void)
 {
     SceneContext *ctx = data_ov001_020a048c;
 
-    func_ov001_02067a6c();
+    ReleaseAllSceneSlotResources();
     if (ctx->buffer != NULL) {
         NNSi_FndFreeFromDefaultHeap(ctx->buffer);
         ctx->buffer = NULL;

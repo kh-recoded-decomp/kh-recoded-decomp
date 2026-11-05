@@ -1,7 +1,7 @@
 #define BindDescriptor0_0208f268 BindDescriptor0
 #define DrawVisibleStageQuads_02099a84 DrawVisibleStageQuads
 #define NNS_FndInitListWithOffset0_0206ad28 DrawSpriteFrameQuadWithoutDepthUpdate
-#define func_ov001_0208f27c func_ov001_0208f2a4
-#define func_ov001_0208f28c func_ov001_0208f2b4
+#define func_ov001_0208f27c GetStageListFirstOrNull
+#define func_ov001_0208f28c GetStageListNext
 #define g_stageManager_020a0508 gStageManager
 #include "src/ov001/shared_engine/DrawVisibleStageQuads_02099a84.c"

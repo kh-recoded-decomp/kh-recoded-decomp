@@ -13,7 +13,7 @@
 #define GetStageController_0209c120 GetStageController
 #define GetStageEntry_0209c074 GetStageEntry
 #define GetStageRowIndex_0209c228 GetStageRowIndex
-#define Obj_SetField14_0209839c func_ov001_020983c4
+#define Obj_SetField14_0209839c SetStageControllerUniformScale
 #define PlayAlternatingStageSound_0209279c PlayAlternatingStageSound
 #define PlayStageSoundAt_0209d080 PlayStageSoundAt
 #define ResetGroupLeaderAndSetState_02097a1c ResetGroupLeaderAndSetState
@@ -27,7 +27,7 @@
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define data_02053438 gZeroVecFx32
 #define func_ov001_02091ac0 func_ov001_02091ae8
-#define func_ov001_020925bc func_ov001_020925e4
+#define func_ov001_020925bc SetStageEventHandlerState
 #define func_ov001_020925c8 func_ov001_020925f0
 #define func_ov001_02093188 ResetStageActorFlags
 #define func_ov001_02097a84 ComputeAttackDamage_02097aac

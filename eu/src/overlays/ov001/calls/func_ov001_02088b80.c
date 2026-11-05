@@ -46,7 +46,7 @@ extern unsigned int ActorSlot_GetFlagsByIndex();
 extern unsigned int ActorSlot_GetByIndex();
 extern unsigned int ActorRegistry_GetEntityByIndex();
 extern unsigned int ClearActorTimerFields();
-extern unsigned int func_ov001_0208a480();
+extern unsigned int ResetActorVelocityAndExtraSlots();
 
 void func_ov001_02088b80(int *owner) {
   u32 flags;
@@ -54,7 +54,7 @@ void func_ov001_02088b80(int *owner) {
   int work;
 
   ClearActorTimerFields(owner);
-  func_ov001_0208a480(owner);
+  ResetActorVelocityAndExtraSlots(owner);
   work = *owner;
   if (work != 0) {
     *(int *)(work + 0xf04) = *(int *)(work + 0xf04) + -1;

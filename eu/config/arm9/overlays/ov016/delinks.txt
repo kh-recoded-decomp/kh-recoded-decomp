@@ -20,7 +20,7 @@ src/overlays/ov016/calls/ScriptCmd_ReadEntityParams.c:
     complete
     .text       start:0x020a1e84 end:0x020a2020
 
-src/overlays/ov016/calls/func_ov016_020a2020.c:
+src/overlays/ov016/calls/ScriptCmd_SpawnFieldObjectTree.c:
     complete
     .text       start:0x020a2020 end:0x020a2044
 
@@ -28,11 +28,11 @@ src/overlays/ov016/calls/ScriptCmd_ApplyEntityColorParams.c:
     complete
     .text       start:0x020a2044 end:0x020a2082
 
-src/overlays/ov016/calls/func_ov016_020a2084.c:
+src/overlays/ov016/calls/ReadFieldObjectSpawnExtraVector.c:
     complete
     .text       start:0x020a2084 end:0x020a20ac
 
-src/overlays/ov016/calls/func_ov016_020a20ac.c:
+src/overlays/ov016/calls/ScriptCmd_SpawnFieldObjectTreeWithExtraVector.c:
     complete
     .text       start:0x020a20ac end:0x020a20e0
 
@@ -52,11 +52,11 @@ src/overlays/ov016/calls/ScriptCmd_SetGroupFlag21.c:
     complete
     .text       start:0x020a2208 end:0x020a2244
 
-src/overlays/ov016/calls/func_ov016_020a2244.c:
+src/overlays/ov016/calls/ScriptCmd_SetFieldObjectFlag22.c:
     complete
     .text       start:0x020a2244 end:0x020a2282
 
-src/overlays/ov016/calls/func_ov016_020a2284.c:
+src/overlays/ov016/calls/ScriptCmd_FreeFieldResourceCache.c:
     complete
     .text       start:0x020a2284 end:0x020a228e
 
@@ -68,7 +68,7 @@ src/overlays/ov016/calls/UpdateFieldObjectHighlight.c:
     complete
     .text       start:0x020a229c end:0x020a232c
 
-src/overlays/ov016/calls/func_ov016_020a232c.c:
+src/overlays/ov016/calls/UpdateFieldObjectDrawFlagFromPreviousLink.c:
     complete
     .text       start:0x020a232c end:0x020a234c
 
@@ -76,11 +76,11 @@ src/overlays/ov016/calls/LinkStackedFieldObjects.c:
     complete
     .text       start:0x020a234c end:0x020a2578
 
-src/overlays/ov016/calls/func_ov016_020a2578.c:
+src/overlays/ov016/calls/ReinsertFieldObjectActorInQuadTree.c:
     complete
     .text       start:0x020a2578 end:0x020a25b8
 
-src/overlays/ov016/calls/func_ov016_020a25b8.c:
+src/overlays/ov016/calls/BuildFieldObjectBoxCollision.c:
     complete
     .text       start:0x020a25b8 end:0x020a25e2
 
@@ -88,7 +88,7 @@ src/overlays/ov016/calls/InstallFieldObjectHitCallbacks.c:
     complete
     .text       start:0x020a25e4 end:0x020a2688
 
-src/overlays/ov016/calls/func_ov016_020a2688.c:
+src/overlays/ov016/calls/SetFieldObjectActorEnabled.c:
     complete
     .text       start:0x020a2688 end:0x020a2706
 
@@ -120,7 +120,7 @@ src/overlays/ov016/calls/GrantFieldObjectReward.c:
     complete
     .text       start:0x020a28f0 end:0x020a298c
 
-src/overlays/ov016/calls/func_ov016_020a298c.c:
+src/overlays/ov016/calls/FinishFieldObjectAndMaybeGrantReward.c:
     complete
     .text       start:0x020a298c end:0x020a29c4
 
@@ -144,7 +144,7 @@ src/overlays/ov016/calls/PlaceFieldObjectNode.c:
     complete
     .text       start:0x020a2acc end:0x020a2b28
 
-src/overlays/ov016/calls/func_ov016_020a2b28.c:
+src/overlays/ov016/calls/InitFieldObjectNode8AnimTrack.c:
     complete
     .text       start:0x020a2b28 end:0x020a2b3c
 
@@ -160,7 +160,7 @@ src/overlays/ov016/calls/StartFieldUnitMotion.c:
     complete
     .text       start:0x020a2b58 end:0x020a2b96
 
-src/overlays/ov016/calls/func_ov016_020a2b98.c:
+src/overlays/ov016/calls/UpdateFieldObjectAuxAnimTrack.c:
     complete
     .text       start:0x020a2b98 end:0x020a2bd0
 
@@ -168,11 +168,11 @@ src/overlays/ov016/calls/SteerFieldObjectToTarget.c:
     complete
     .text       start:0x020a2bd0 end:0x020a2c2a
 
-src/overlays/ov016/calls/func_ov016_020a2c2c.c:
+src/overlays/ov016/calls/StartFieldObjectActorAnimation1.c:
     complete
     .text       start:0x020a2c2c end:0x020a2c62
 
-src/overlays/ov016/calls/func_ov016_020a2c64.c:
+src/overlays/ov016/calls/UpdateFieldObjectActorAnimation.c:
     complete
     .text       start:0x020a2c64 end:0x020a2ca6
 
@@ -204,7 +204,7 @@ src/overlays/ov016/calls/GetCarrierVelocity.c:
     complete
     .text       start:0x020a3438 end:0x020a34e8
 
-src/overlays/ov016/calls/func_ov016_020a34e8.c:
+src/overlays/ov016/calls/ScaleFieldObjectVelocityBy85Percent.c:
     complete
     .text       start:0x020a34e8 end:0x020a351a
 
@@ -440,7 +440,7 @@ src/overlays/ov016/calls/StoreFieldUnitEntry.c:
     complete
     .text       start:0x020a695c end:0x020a6974
 
-src/overlays/ov016/calls/func_ov016_020a6974.c:
+src/overlays/ov016/calls/SetFieldObjectCompletionCallback.c:
     complete
     .text       start:0x020a6974 end:0x020a6986
 
@@ -448,7 +448,7 @@ src/overlays/ov016/calls/SetFieldObjectHidden.c:
     complete
     .text       start:0x020a6988 end:0x020a6a0e
 
-src/overlays/ov016/auto/func_ov016_020a6a10.c:
+src/overlays/ov016/auto/GetFieldObjectHiddenMask.c:
     complete
     .text       start:0x020a6a10 end:0x020a6a1a
 
@@ -500,11 +500,11 @@ src/overlays/ov016/calls/TryEnterFieldUnitPhase5.c:
     complete
     .text       start:0x020a6dac end:0x020a6de4
 
-src/overlays/ov016/calls/func_ov016_020a6de4.c:
+src/overlays/ov016/calls/DispatchIndexedFieldObjectCollision.c:
     complete
     .text       start:0x020a6de4 end:0x020a6df8
 
-src/overlays/ov016/calls/func_ov016_020a6df8.c:
+src/overlays/ov016/calls/ApplyIndexedFieldGroupLeaderHit.c:
     complete
     .text       start:0x020a6df8 end:0x020a6e0a
 

@@ -1,3 +1,4 @@
+#define func_ov001_02067ed4 GetCurrentSceneEntryIndex
 #define data_0205fde4 gPanelActive
 #define GFXi_EnqueueCommand_02014090 NNS_GfdRegisterNewVramTransferTask
 #define IsFieldPanelHidden_0207187c IsFieldPanelHidden

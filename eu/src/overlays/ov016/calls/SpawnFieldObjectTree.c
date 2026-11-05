@@ -7,6 +7,6 @@
 #define SpawnGroupMemberGrid_020bf468 SpawnGroupMemberGrid
 #define UpdateFieldObjectHighlight_020a227c UpdateFieldObjectHighlight
 #define func_ov001_02086308 ActivateEntryPoolSlot
-#define func_ov016_020a2598 func_ov016_020a25b8
+#define func_ov016_020a2598 BuildFieldObjectBoxCollision
 #define func_ov016_020a596c UpdateFieldObject
 #include "src/ov016/field_objects/SpawnFieldObjectTree_020a6338.c"
