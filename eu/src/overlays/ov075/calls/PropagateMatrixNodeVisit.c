@@ -56,7 +56,7 @@ extern SaveData *data_0205fe0c;
 extern NeighborIds data_ov075_020d14f0;
 
 extern int GetPackedBitMask(u32 *bitWords, int bitIndex);
-extern void func_01ffb2f8(void *effect, int kind, int arg);
+extern void SetModelAnimationFrameWithSingleWrap(void *effect, int kind, int arg);
 extern BOOL PlaySoundEffect(int seqArcNo, int index);
 extern void DrawMatrixCellGlyph(void *state, MatrixMap *map, MatrixNode *node, int index);
 
@@ -104,9 +104,9 @@ u32 PropagateMatrixNodeVisit(MatrixMenu *menu, MatrixNode *node, int dir, BOOL q
         }
         menu->eventFlags |= 0x300;
         menu->eventNode = node;
-        func_01ffb2f8(menu->effects[1], 2, 0);
-        func_01ffb2f8(menu->effects[1], 4, 0);
-        func_01ffb2f8(menu->effects[1], 0, 0);
+        SetModelAnimationFrameWithSingleWrap(menu->effects[1], 2, 0);
+        SetModelAnimationFrameWithSingleWrap(menu->effects[1], 4, 0);
+        SetModelAnimationFrameWithSingleWrap(menu->effects[1], 0, 0);
         break;
     case 8:
         bit = 1 << node->bitIndex;
@@ -123,9 +123,9 @@ u32 PropagateMatrixNodeVisit(MatrixMenu *menu, MatrixNode *node, int dir, BOOL q
         }
         menu->eventFlags |= 0x400;
         menu->eventNode = node;
-        func_01ffb2f8(menu->effects[2], 2, 0);
-        func_01ffb2f8(menu->effects[2], 4, 0);
-        func_01ffb2f8(menu->effects[2], 0, 0);
+        SetModelAnimationFrameWithSingleWrap(menu->effects[2], 2, 0);
+        SetModelAnimationFrameWithSingleWrap(menu->effects[2], 4, 0);
+        SetModelAnimationFrameWithSingleWrap(menu->effects[2], 0, 0);
         break;
     case 9:
     case 10:
@@ -136,9 +136,9 @@ u32 PropagateMatrixNodeVisit(MatrixMenu *menu, MatrixNode *node, int dir, BOOL q
             menu->eventFlags |= 0x600;
             menu->eventParam = node->type - 9;
             menu->eventNode = node;
-            func_01ffb2f8(menu->effects[2], 2, 0);
-            func_01ffb2f8(menu->effects[2], 4, 0);
-            func_01ffb2f8(menu->effects[2], 0, 0);
+            SetModelAnimationFrameWithSingleWrap(menu->effects[2], 2, 0);
+            SetModelAnimationFrameWithSingleWrap(menu->effects[2], 4, 0);
+            SetModelAnimationFrameWithSingleWrap(menu->effects[2], 0, 0);
             PlaySoundEffect(1, 0xb);
         }
         data_0205fe0c->portalBits |= (u8)(1 << (node->type - 9));
@@ -239,9 +239,9 @@ u32 PropagateMatrixNodeVisit(MatrixMenu *menu, MatrixNode *node, int dir, BOOL q
                         if (!quiet) {
                             menu->eventFlags |= 0x200;
                             menu->eventNode = child;
-                            func_01ffb2f8(menu->effects[0], 2, 0);
-                            func_01ffb2f8(menu->effects[0], 4, 0);
-                            func_01ffb2f8(menu->effects[0], 0, 0);
+                            SetModelAnimationFrameWithSingleWrap(menu->effects[0], 2, 0);
+                            SetModelAnimationFrameWithSingleWrap(menu->effects[0], 4, 0);
+                            SetModelAnimationFrameWithSingleWrap(menu->effects[0], 0, 0);
                         }
                         data_0205fe0c->clearedMask |= 1 << child->bitIndex;
                     }

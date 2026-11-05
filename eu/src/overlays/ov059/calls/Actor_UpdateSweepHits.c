@@ -28,7 +28,7 @@
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define ZeroBytes0x28_020ac0f8 ZeroBytes0x28
 #define data_02053438 gZeroVecFx32
-#define func_0202f4b8 func_0202f4cc
+#define func_0202f4b8 GetModelAnimationDurationFx32
 #define func_02036230 GetActorRegistry
 #define func_ov001_020863e0 func_ov001_02086408
 #define func_ov001_0208723c func_ov001_02087264

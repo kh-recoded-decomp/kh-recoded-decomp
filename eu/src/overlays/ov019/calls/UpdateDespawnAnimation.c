@@ -26,7 +26,7 @@ typedef struct Actor {
     u16 flags;
 } Actor;
 
-extern int func_0202f4cc(void *resource, int index);
+extern int GetModelAnimationDurationFx32(void *resource, int index);
 extern ActorNode *ActorRegistry_GetEntityByIndex(u8 actorId);
 extern u16 AdvanceAnimationTracks(void *state, fx32 delta);
 extern void Obj_RemoveFromQuadTree(void *entity);
@@ -37,7 +37,7 @@ BOOL UpdateDespawnAnimation(Actor *self)
     Owner *owner = self->owner;
     if (self->flags & 0x20) {
         self->frame++;
-        if (func_0202f4cc(owner->resource, 0) <= (self->frame + 1) << 12) {
+        if (GetModelAnimationDurationFx32(owner->resource, 0) <= (self->frame + 1) << 12) {
             self->flags &= ~0x20;
         }
     }

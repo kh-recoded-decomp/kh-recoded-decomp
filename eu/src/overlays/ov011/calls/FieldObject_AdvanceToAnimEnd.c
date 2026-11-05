@@ -1,4 +1,4 @@
 #define FieldObject_AdvanceToAnimEnd_020a0ecc FieldObject_AdvanceToAnimEnd
-#define func_0202f4b8 func_0202f4cc
+#define func_0202f4b8 GetModelAnimationDurationFx32
 #define func_ov011_020a06e8 FieldObject_SetState
 #include "src/ov011/field_objects/FieldObject_AdvanceToAnimEnd_020a0ecc.c"

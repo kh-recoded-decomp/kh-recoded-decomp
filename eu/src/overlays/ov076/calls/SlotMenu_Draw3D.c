@@ -1,3 +1,4 @@
+#define func_01ffb2f8 SetModelAnimationFrameWithSingleWrap
 #define func_01ff9b70 BuildCameraLookAtMatrix
 #define MTX_OrthoW_02005f10 MTX_OrthoW
 #define OverlayId0_00000000 OVERLAY_0_ID

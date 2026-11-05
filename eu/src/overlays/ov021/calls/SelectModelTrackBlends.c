@@ -1,3 +1,4 @@
+#define func_01ffb2f8 SetModelAnimationFrameWithSingleWrap
 #define func_ov021_020a867c SelectModelTrackBlends
 #define selectJointAnimationBlend_0202f2cc selectJointAnimationBlend
 #include "src/ov021/unclassified_helpers/func_ov021_020a867c.c"

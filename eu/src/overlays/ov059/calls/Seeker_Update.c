@@ -23,7 +23,7 @@
 #define VEC_Normalize_01ffaff4 VEC_NormalizeLength
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define data_0205356c gSinFx12Table
-#define func_0202f4b8 func_0202f4cc
+#define func_0202f4b8 GetModelAnimationDurationFx32
 #define func_ov059_020ce3bc Projectile_UpdateCollision
 #define func_ov059_020cec30 func_ov059_020cec50
 #define func_ov059_020cf394 func_ov059_020cf3b4

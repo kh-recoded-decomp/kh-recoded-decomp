@@ -1,3 +1,4 @@
+#define func_01ffb2f8 SetModelAnimationFrameWithSingleWrap
 #define DrawFieldObjectEffects_020a32bc DrawFieldObjectEffects
 #define DrawTexturedGridQuads_020866ac DrawTexturedGridQuads
 #define GetCtxModeByte_02068084 GetCtxModeByte

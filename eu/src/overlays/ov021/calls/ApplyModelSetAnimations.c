@@ -1,3 +1,4 @@
+#define func_01ffb2f8 SetModelAnimationFrameWithSingleWrap
 #define ApplyModelSetAnimations_020a9c50 ApplyModelSetAnimations
 #define data_ov021_020b4fa8 data_ov021_020b4fc8
 #include "src/ov021/object_state/ApplyModelSetAnimations_020a9c50.c"

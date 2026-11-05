@@ -205,7 +205,7 @@ extern BOOL GetPrimaryElementEnabled(void);
 extern u32 func_01ff80d4(void);
 extern int GetPackedBitMask(u32 *bitWords, int bitIndex);
 extern int Anim_GetFrame(void *node, int channel);
-extern int *func_01ffb2f8(void *node, int channel, int frame);
+extern int *SetModelAnimationFrameWithSingleWrap(void *node, int channel, int frame);
 extern BOOL IsMenuModeUnlocked(int mode);
 extern u16 GetModeLabelColor(MatrixMenu *menu, int mode);
 extern void DrawImageQuadIfVisible(const MenuImage *image, int x, int y, int depth, u16 color, BOOL highlighted);
@@ -534,7 +534,7 @@ void DrawMatrixMenu(MatrixMenu *menu)
             } else if (gaugeFrame > menu->gaugeTarget) {
                 gaugeFrame -= 0x800;
             }
-            func_01ffb2f8(&menu->gaugeNode, 3, gaugeFrame);
+            SetModelAnimationFrameWithSingleWrap(&menu->gaugeNode, 3, gaugeFrame);
             break;
         }
         }

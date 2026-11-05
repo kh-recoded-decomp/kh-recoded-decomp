@@ -4,7 +4,7 @@
 #define IsGroupMemberActive_020a8d1c IsGroupMemberActive
 #define StopAndClearSoundEmitter_020a8e14 StopAndClearSoundEmitter
 #define UpdateTargetEffect_020a0f60 UpdateTargetEffect
-#define func_0202f4b8 func_0202f4cc
+#define func_0202f4b8 GetModelAnimationDurationFx32
 #define func_ov021_020a8ab4 ResetAnimationTrackState
 #define func_ov021_020a8ca0 func_ov021_020a8cc0
 #include "src/ov010/shared_engine/UpdateTargetEffect_020a0f60.c"

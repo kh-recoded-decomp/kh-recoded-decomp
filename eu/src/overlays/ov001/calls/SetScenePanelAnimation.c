@@ -1,3 +1,4 @@
+#include "src/animation/ModelAnimation.h"
 #include "nitro/types.h"
 
 typedef struct ScenePanelAnim {
@@ -20,7 +21,6 @@ typedef struct MenuScene {
 extern MenuScene *data_ov001_020a048c;
 
 extern void BlendToAnimationTrack(ScenePanelAnim *state, u16 trackIndex, s16 *table, s16 blendIndex, int frameCount);
-extern int *func_01ffb2f8(ScenePanelAnim *state, u16 trackIndex, int arg);
 
 void SetScenePanelAnimation(int panelIndex, int blendIndex, int arg, BOOL keepFlag)
 {
@@ -38,7 +38,7 @@ void SetScenePanelAnimation(int panelIndex, int blendIndex, int arg, BOOL keepFl
         for (i = 0; i < 5; i++) {
             if (panel->tracks[(u16)i] > 0) {
                 BlendToAnimationTrack(panel, i, panel->tracks, blendIndex, 0);
-                func_01ffb2f8(panel, i, arg);
+                SetModelAnimationFrameWithSingleWrap(panel, (u16)i, arg);
             }
         }
     }

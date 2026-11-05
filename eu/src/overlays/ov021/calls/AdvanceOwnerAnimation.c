@@ -1,4 +1,4 @@
 #define AdvanceAnimationTracks_0202ef24 AdvanceAnimationTracks
 #define AdvanceOwnerAnimation_020ab41c AdvanceOwnerAnimation
-#define func_0202f4b8 func_0202f4cc
+#define func_0202f4b8 GetModelAnimationDurationFx32
 #include "src/ov021/shared_engine/AdvanceOwnerAnimation_020ab41c.c"

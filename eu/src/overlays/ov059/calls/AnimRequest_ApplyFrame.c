@@ -1,2 +1,3 @@
+#define func_01ffb2f8 SetModelAnimationFrameWithSingleWrap
 #define AnimRequest_ApplyFrame_020cd97c AnimRequest_ApplyFrame
 #include "src/ov059/unclassified_helpers/AnimRequest_ApplyFrame_020cd97c.c"

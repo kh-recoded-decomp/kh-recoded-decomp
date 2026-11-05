@@ -1,3 +1,4 @@
+#include "src/animation/ModelAnimation.h"
 #pragma opt_common_subs off
 
 #include "nitro/types.h"
@@ -40,7 +41,6 @@ typedef char ActorTurnTargetAngleOffsetCheck[
 extern void SetActorAnimSlot(TurningActor *actor, const char *name, int animationId,
                              int slot, u32 parameter);
 extern void UpdateActorTurn(TurningActor *actor);
-extern fx32 func_0202f4cc(u16 *state, int index);
 extern fx32 FX_Div(fx32 numerator, fx32 denominator);
 extern void StartActorAnimState(TurningActor *actor, const char *name, int blendIndex);
 
@@ -92,7 +92,7 @@ void PlayActorTurnAnimation(TurningActor *actor, u32 angle, const char *name,
         frameCount++;
     }
     actor->angle = previousAngle;
-    turn->speed = FX_Div(frameCount << 12, func_0202f4cc(&(*actor->model)->animationFlags, 0));
+    turn->speed = FX_Div(frameCount << 12, GetModelAnimationDurationFx32(&(*actor->model)->animationFlags, 0));
     if (followAnimation != NULL && GetTurnAnimation(turn, animationOffset)->blendIndex > 0) {
         StartActorAnimState(actor, followAnimation, GetTurnAnimation(turn, animationOffset)->blendIndex);
     }

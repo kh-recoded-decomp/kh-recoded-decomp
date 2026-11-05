@@ -1,3 +1,4 @@
+#define func_01ffb2f8 SetModelAnimationFrameWithSingleWrap
 #define LoadFadeModel_020bb50c LoadFadeModel
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define OS_SPrintf_02002428 OS_SPrintf

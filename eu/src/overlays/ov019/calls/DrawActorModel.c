@@ -9,6 +9,6 @@
 #define RemoveAnimationFromRenderObject_02018850 NNS_G3dRenderObjRemoveAnmObj
 #define SceneNode_Draw_01ffb12c SceneNode_Draw
 #define func_02036240 ActorRegistry_GetEntityByIndex
-#define func_ov001_02080a10 func_ov001_02080a38
+#define func_ov001_02080a10 SetActiveModelAnimationFrames
 #define func_ov035_020bae74 func_ov035_020bae94
 #include "src/ov019/rendering/DrawActorModel_020a2c4c.c"

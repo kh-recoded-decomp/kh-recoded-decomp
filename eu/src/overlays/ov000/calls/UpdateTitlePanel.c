@@ -1,3 +1,4 @@
+#include "src/animation/ModelAnimation.h"
 #include "nitro/types.h"
 
 typedef struct Panel Panel;
@@ -36,8 +37,6 @@ extern Panel *NNSi_FndGetCurrentRootHeap(void);
 extern void SetPanelMode(Panel *panel, u32 mode);
 extern void NNS_FndInitListWithOffset0_0204f130(void *list);
 extern u16 AdvanceAnimationTracks(void *animation, int delta);
-extern int func_0202f4cc(void *animation, int track);
-extern int *func_01ffb2f8(void *animation, int track, int frame);
 extern void SceneNode_Draw(void *animation);
 
 int UpdateTitlePanel(void)
@@ -63,10 +62,10 @@ int UpdateTitlePanel(void)
     }
     if (panel->hasAnimation) {
         if (!panel->animationLooped && AdvanceAnimationTracks(panel->animation, 0x1000)) {
-            int frame = func_0202f4cc(panel->animation, 0);
+            int frame = GetModelAnimationDurationFx32(panel->animation, 0);
 
-            func_01ffb2f8(panel->animation, 0, frame - 0x1000);
-            func_01ffb2f8(panel->animation, 2, frame - 0x1000);
+            SetModelAnimationFrameWithSingleWrap(panel->animation, 0, frame - 0x1000);
+            SetModelAnimationFrameWithSingleWrap(panel->animation, 2, frame - 0x1000);
             panel->animationLooped = TRUE;
         }
         SceneNode_Draw(panel->animation);

@@ -1,7 +1,7 @@
 #define Anim_GetFrame_0202f4a0 Anim_GetFrame
 #define Gimmick_WaitOpenAnimEnd_020a0df0 Gimmick_WaitOpenAnimEnd
 #define SpawnSoundSlot_0204da8c SpawnSoundSlot
-#define func_0202f4b8 func_0202f4cc
+#define func_0202f4b8 GetModelAnimationDurationFx32
 #define func_ov008_020a0e68 Gimmick_UpdateOpening
 #define selectJointAnimationBlend_0202f2cc selectJointAnimationBlend
 #include "src/ov008/field_objects/Gimmick_WaitOpenAnimEnd_020a0df0.c"

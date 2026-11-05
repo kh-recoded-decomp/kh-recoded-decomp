@@ -1,3 +1,4 @@
+#define func_01ffb2f8 SetModelAnimationFrameWithSingleWrap
 #define TransitionState_020ac94c TransitionState
 #define func_01ffb12c SceneNode_Draw
 #define func_ov021_020ac814 GetCurrentNodeOffset

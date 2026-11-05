@@ -1,3 +1,4 @@
+#define func_01ffb2f8 SetModelAnimationFrameWithSingleWrap
 #define PlayActorAnimation_020c37f4 PlayActorAnimation
 #define func_ov041_020c3698 GetActorAnimTrack
 #define selectJointAnimationBlend_0202f2cc selectJointAnimationBlend

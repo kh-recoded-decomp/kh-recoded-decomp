@@ -70,7 +70,7 @@ typedef struct Gimmick {
 } Gimmick;
 
 extern int Anim_GetFrame(AnimModel *model, int track);
-extern int func_0202f4cc(AnimModel *model, int track);
+extern int GetModelAnimationDurationFx32(AnimModel *model, int track);
 extern void selectJointAnimationBlend(void *animationState, u16 trackIndex, void *blendTable, s16 blendIndex);
 extern void ActorSlot_SetFlag8ByIndex(int index, BOOL enable);
 extern void VEC_MultAdd(fx32 scale, const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
@@ -118,7 +118,7 @@ int Gimmick_UpdateOpening(Gimmick *gimmick)
             gimmick->speed = 0x34cd;
         }
         frame = Anim_GetFrame(&gimmick->work->model, 0);
-        if (frame + 0x1000 >= func_0202f4cc(&gimmick->work->model, 0)) {
+        if (frame + 0x1000 >= GetModelAnimationDurationFx32(&gimmick->work->model, 0)) {
             gimmick->phase = 3;
             Gimmick_SetBlend(gimmick, 0, 2);
             Gimmick_SetBlend(gimmick, 2, 2);
@@ -129,7 +129,7 @@ int Gimmick_UpdateOpening(Gimmick *gimmick)
         gimmick->timer += 0x1000;
         if (gimmick->timer >= 0x3c000) {
             frame = Anim_GetFrame(&gimmick->work->model, 0);
-            if (frame + 0x1000 >= func_0202f4cc(&gimmick->work->model, 0)) {
+            if (frame + 0x1000 >= GetModelAnimationDurationFx32(&gimmick->work->model, 0)) {
                 gimmick->phase = 4;
                 Gimmick_SetBlend(gimmick, 0, 3);
                 Gimmick_SetBlend(gimmick, 2, 3);
@@ -143,7 +143,7 @@ int Gimmick_UpdateOpening(Gimmick *gimmick)
             gimmick->speed = 0;
         }
         frame = Anim_GetFrame(&gimmick->work->model, 0);
-        if (frame + 0x1000 >= func_0202f4cc(&gimmick->work->model, 0)) {
+        if (frame + 0x1000 >= GetModelAnimationDurationFx32(&gimmick->work->model, 0)) {
             gimmick->timer = 0;
             gimmick->phase = 0;
             ActorSlot_SetFlag8ByIndex(gimmick->actorId, FALSE);

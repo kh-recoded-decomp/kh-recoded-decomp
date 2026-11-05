@@ -3,5 +3,5 @@
 #define EffectSlot_StartByKind_020cd184 EffectSlot_StartByKind
 #define GetStateTransitionDelay_020cc8bc GetStateTransitionDelay
 #define SelectAnimationById_020ac8f4 SelectAnimationById
-#define func_0202f4b8 func_0202f4cc
+#define func_0202f4b8 GetModelAnimationDurationFx32
 #include "src/ov059/unclassified_helpers/Actor_ChangeAnimation_020cc950.c"

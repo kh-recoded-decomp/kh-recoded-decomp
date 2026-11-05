@@ -1,9 +1,9 @@
+#include "src/animation/ModelAnimation.h"
 #include "nitro/types.h"
 #include "nitro/fx.h"
 #include "src/overlays/ov041/StageResources.h"
 
 extern void selectJointAnimationBlend(void *model, u16 track, void *blend, int animation);
-extern void func_01ffb2f8(void *model, u16 track, int frame);
 extern void MTX_RotY33_(MtxFx33 *mtx, fx32 sinVal, fx32 cosVal);
 
 /*
@@ -41,7 +41,7 @@ StageResourceItem *SpawnStageResourceItem(int category, u8 index, u8 animation, 
     model = &list->items[slot].model;
     for (i = 0; i < 5; i++) {
         selectJointAnimationBlend(model, i, model->blend, animation);
-        func_01ffb2f8(model, i, 0);
+        SetModelAnimationFrameWithSingleWrap(model, (u16)i, 0);
     }
     model->position = *position;
     MTX_RotY33_(&model->rotation, 0, FX32_ONE);

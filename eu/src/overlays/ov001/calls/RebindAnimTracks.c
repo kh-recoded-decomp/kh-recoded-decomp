@@ -1,3 +1,4 @@
+#define func_01ffb2f8 SetModelAnimationFrameWithSingleWrap
 #define RebindAnimTracks_020809d0 RebindAnimTracks
 #define selectJointAnimationBlend_0202f2cc selectJointAnimationBlend
 #include "src/ov001/unclassified_helpers/RebindAnimTracks_020809d0.c"

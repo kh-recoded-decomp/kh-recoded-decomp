@@ -1,8 +1,9 @@
+#define func_01ffb2f8 SetModelAnimationFrameWithSingleWrap
 #define func_ov001_0206dc4c GetManagedActorPosition
 #define AdvanceAnimationTracks_0202ef24 AdvanceAnimationTracks
 #define SetFieldCaptionText_02072178 SetFieldCaptionText
 #define UpdateSceneAnimsAndCaption_02067d80 UpdateSceneAnimsAndCaption
 #define data_ov001_020a046c data_ov001_020a048c
-#define func_0202f4b8 func_0202f4cc
+#define func_0202f4b8 GetModelAnimationDurationFx32
 #define func_0202f4d8 Flags16_SetBit1
 #include "src/ov001/shared_engine/UpdateSceneAnimsAndCaption_02067d80.c"

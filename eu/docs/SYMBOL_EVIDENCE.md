@@ -217,6 +217,21 @@ legacy shared caller views and descriptor erasure remain explicit port work.
 The game's saved-camera projector is classified under `src/calls`, retaining
 its original address and byte-exact code.
 
+## Model animation tracks
+
+| Previous symbol | Current name | Direct behavior and consumers |
+|---|---|---|
+| `func_01ffb2d4` | `GetModelAnimationTrackState` | Reads an indexed track pointer; bit 4 selects a separate pointer for index zero. `Anim_GetFrame`, the duration getter and frame setter consume its track state. |
+| `func_01ffb2f8` | `SetModelAnimationFrameWithSingleWrap` | Stores a frame and subtracts one duration when it is at least that duration. Title, panel, stage-item and path-model callers use it to set animation frames. |
+| `func_0202f4cc` | `GetModelAnimationDurationFx32` | Reads the bound resource's unsigned halfword frame count and shifts it left by 12. Turning animation, title animation and path-model callers use it as a duration/last-frame bound. |
+| `func_ov001_02080a38` | `SetActiveModelAnimationFrames` | Visits five signed halfword track selectors at state `+0xd8`; applies the same frame only where a selector is positive. |
+
+
+[MODEL_ANIMATION_TRACKS.md](MODEL_ANIMATION_TRACKS.md) records the interior
+lookup origin, pointer/resource prefixes, index-zero override, null result,
+fx32 duration, single-subtraction behavior and explicit caller narrowing.
+Six native consumers share the recovered interface.
+
 ## Explicitly unresolved
 
 The vector view at `data_027e0160` overlaps `data_027e0164`, used by the older

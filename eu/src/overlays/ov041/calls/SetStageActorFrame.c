@@ -1,3 +1,4 @@
+#define func_01ffb2f8 SetModelAnimationFrameWithSingleWrap
 #define data_ov035_020bc4e0 gMovieContextState
 #define SetAnimationFrameIfChanged_020c389c SetAnimationFrameIfChanged
 #define SetStageActorFrame_020c2928 SetStageActorFrame

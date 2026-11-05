@@ -7221,7 +7221,7 @@ src/calls/Anim_GetFrame.c:
     complete
     .text       start:0x0202f4b4 end:0x0202f4cc
 
-src/calls/func_0202f4cc.c:
+src/calls/GetModelAnimationDurationFx32.c:
     complete
     .text       start:0x0202f4cc end:0x0202f4ec
 

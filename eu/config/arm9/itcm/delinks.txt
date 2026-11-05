@@ -413,11 +413,11 @@ src/calls/SceneNode_Draw.c:
     complete
     .text       start:0x01ffb12c end:0x01ffb2d4
 
-src/calls/func_01ffb2d4.c:
+src/calls/GetModelAnimationTrackState.c:
     complete
     .text       start:0x01ffb2d4 end:0x01ffb2f8
 
-src/calls/func_01ffb2f8.c:
+src/calls/SetModelAnimationFrameWithSingleWrap.c:
     complete
     .text       start:0x01ffb2f8 end:0x01ffb328
 

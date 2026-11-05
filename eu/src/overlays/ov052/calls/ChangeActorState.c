@@ -2,6 +2,6 @@
 #define GetTransitionReaction_020ce01c GetTransitionReaction
 #define SelectAnimationById_020ac8f4 SelectAnimationById
 #define SetBlendTableAndBlendTrack_020cbf58 SetBlendTableAndBlendTrack
-#define func_0202f4b8 func_0202f4cc
+#define func_0202f4b8 GetModelAnimationDurationFx32
 #define func_ov052_020cfb88 SelectSlotAnimation
 #include "src/ov052/unclassified_helpers/ChangeActorState_020ce0c0.c"

@@ -40,7 +40,7 @@ extern void StartIdleSceneObjects(void);
 extern void func_ov001_02087650(int arg);
 extern u8 *GetBoundedEntryField(u32 index);
 extern s32 Anim_GetFrame(void *anim, u32 track);
-extern s32 func_0202f4cc(void *anim, u32 track);
+extern s32 GetModelAnimationDurationFx32(void *anim, u32 track);
 extern s32 FX_Mul(s32 a, s32 b);
 extern int func_02029f5c(void);
 extern void SetFieldMenuSuspended(int a, int b);
@@ -88,7 +88,7 @@ int UpdateAreaSceneState(void) {
             (*scene)->starCount = 0;
             anim = GetBoundedEntryField(0) + 0x18;
             frame = Anim_GetFrame(anim, 0);
-            stars = (FX_Mul(func_0202f4cc(anim, 0), 0x666) - frame) >> 12;
+            stars = (FX_Mul(GetModelAnimationDurationFx32(anim, 0), 0x666) - frame) >> 12;
             if (stars > 0) {
                 if (stars > 5) {
                     (*scene)->starCount = 5;

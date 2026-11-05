@@ -1,3 +1,4 @@
+#define func_01ffb2f8 SetModelAnimationFrameWithSingleWrap
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define UpdateFlagToggleGrid_020cc3bc UpdateFlagToggleGrid
 #define data_ov075_020d1478 sFlagGridTouchConfig

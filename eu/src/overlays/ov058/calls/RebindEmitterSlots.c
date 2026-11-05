@@ -1,4 +1,4 @@
-#define Anim_SetFrameWrapped func_01ffb2f8
+#define Anim_SetFrameWrapped SetModelAnimationFrameWithSingleWrap
 #define BindAnimTrack selectJointAnimationBlend
 #define RebindEmitterSlots_020d7498 RebindEmitterSlots
 #include "src/ov058/shared_variants/RebindEmitterSlots_020d7498.c"

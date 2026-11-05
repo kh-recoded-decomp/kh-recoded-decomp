@@ -1,3 +1,4 @@
+#define func_01ffb2f8 SetModelAnimationFrameWithSingleWrap
 #define DecrementByteCounter_02029370 DecrementByteCounter
 #define GetRecordSlotPair1Entry_02051ef4 GetRecordSlotPair1Entry
 #define IsMenuModeUnlocked_020c4324 IsMenuModeUnlocked

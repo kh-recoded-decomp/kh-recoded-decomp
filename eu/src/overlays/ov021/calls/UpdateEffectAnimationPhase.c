@@ -1,6 +1,6 @@
 #define UpdateEffectAnimationPhase_020ab564 UpdateEffectAnimationPhase
 #define data_02053438 gZeroVecFx32
-#define func_0202f4b8 func_0202f4cc
+#define func_0202f4b8 GetModelAnimationDurationFx32
 #define func_ov021_020ab0c8 FindStrongestHit
 #define func_ov021_020ab41c AdvanceOwnerAnimation
 #include "src/ov021/unclassified_helpers/UpdateEffectAnimationPhase_020ab564.c"

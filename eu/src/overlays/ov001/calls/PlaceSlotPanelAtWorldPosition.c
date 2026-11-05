@@ -1,3 +1,4 @@
+#include "src/animation/ModelAnimation.h"
 #include "src/graphics/CameraState.h"
 
 typedef struct Context {
@@ -6,7 +7,6 @@ typedef struct Context {
 } Context;
 
 extern Context *data_ov001_020a04ec;
-extern int *func_01ffb2f8(int arg0, int arg1, int arg2);
 
 BOOL PlaceSlotPanelAtWorldPosition(int slot, const VecFx32 *position, int animate)
 {
@@ -37,6 +37,6 @@ BOOL PlaceSlotPanelAtWorldPosition(int slot, const VecFx32 *position, int animat
     if (animate) {
         frame = 1;
     }
-    func_01ffb2f8((int)panel, 3, frame << 12);
+    SetModelAnimationFrameWithSingleWrap(panel, 3, frame << 12);
     return TRUE;
 }

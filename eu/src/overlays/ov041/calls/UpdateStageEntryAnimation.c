@@ -5,7 +5,7 @@ typedef struct ActorRegistry ActorRegistry;
 extern u32 Flags16_ClearBit1(void *flags);
 extern ActorRegistry *GetActorRegistry(void);
 extern u32 Obj_UpdateQuadTreeLink(ActorRegistry *registry, void *entity, int frameStep);
-extern int func_0202f4cc(void *node, int animation);
+extern int GetModelAnimationDurationFx32(void *node, int animation);
 
 void UpdateStageEntryAnimation(StageEntrySlot *slot)
 {
@@ -45,7 +45,7 @@ void UpdateStageEntryAnimation(StageEntrySlot *slot)
             if (!(entry->flags & 0x8000)) {
                 Obj_UpdateQuadTreeLink(GetActorRegistry(), (u8 *)slot + 0x10, step);
                 entry->animationFrame += step;
-                if (func_0202f4cc(&slot->node.flags, 0) <= entry->animationFrame + step) {
+                if (GetModelAnimationDurationFx32(&slot->node.flags, 0) <= entry->animationFrame + step) {
                     entry->flags &= ~2;
                 }
             }

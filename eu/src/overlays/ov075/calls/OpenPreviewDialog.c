@@ -1,3 +1,4 @@
+#define func_01ffb2f8 SetModelAnimationFrameWithSingleWrap
 #define OpenPreviewDialog_020cc550 OpenPreviewDialog
 #define data_ov075_020d14c0 sPreviewDialogRect
 #define func_ov075_020cbf3c UpdateDialInput_020cbf3c

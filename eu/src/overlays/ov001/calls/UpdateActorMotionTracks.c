@@ -1,9 +1,10 @@
+#define func_01ffb2f8 SetModelAnimationFrameWithSingleWrap
 #define ActorSlot_UnlinkByIndex_02035c28 ActorSlot_UnlinkByIndex
 #define Anim_GetFrame_0202f4a0 Anim_GetFrame
 #define ApplyPendingSeqRequests_02089a14 ApplyPendingSeqRequests
 #define BuildSlotMask_0202f034 BuildSlotMask
 #define UpdateActorMotionTracks_02089394 UpdateActorMotionTracks
-#define func_0202f4b8 func_0202f4cc
+#define func_0202f4b8 GetModelAnimationDurationFx32
 #define func_020367f0 ActorSlot_GetField1C4ByIndex
 #define func_ov001_02088b48 ClearActorFlagBit40
 #define func_ov001_02088b58 func_ov001_02088b80

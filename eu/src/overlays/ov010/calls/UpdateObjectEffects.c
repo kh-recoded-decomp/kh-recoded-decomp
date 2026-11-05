@@ -3,7 +3,7 @@
 #define IsGroupMemberActive_020a8d1c IsGroupMemberActive
 #define StopAndClearSoundEmitter_020a8e14 StopAndClearSoundEmitter
 #define UpdateObjectEffects_020a0d98 UpdateObjectEffects
-#define func_0202f4b8 func_0202f4cc
+#define func_0202f4b8 GetModelAnimationDurationFx32
 #define func_ov021_020a8ab4 ResetAnimationTrackState
 #define func_ov021_020a8ca0 func_ov021_020a8cc0
 #include "src/ov010/shared_engine/UpdateObjectEffects_020a0d98.c"

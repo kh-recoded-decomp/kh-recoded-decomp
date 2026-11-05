@@ -1,3 +1,4 @@
+#define func_01ffb2f8 SetModelAnimationFrameWithSingleWrap
 #define AdvanceAnimationTracks_0202ef24 AdvanceAnimationTracks
 #define FindStageObjectByOwner_020995c4 FindStageObjectByOwner
 #define GetStageJointPosition_020a1694 GetStageJointPosition

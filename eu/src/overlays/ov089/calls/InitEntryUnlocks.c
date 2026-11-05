@@ -1,3 +1,4 @@
+#define func_01ffb2f8 SetModelAnimationFrameWithSingleWrap
 #define func_ov001_020645c8 IsSessionFlagSet
 #define InitEntryUnlocks_020bfc4c InitEntryUnlocks
 #define ReadSessionPackedBits_02064574 ReadSessionPackedBits

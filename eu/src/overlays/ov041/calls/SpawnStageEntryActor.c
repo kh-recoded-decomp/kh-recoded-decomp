@@ -1,3 +1,4 @@
+#define func_01ffb2f8 SetModelAnimationFrameWithSingleWrap
 #define data_ov035_020bc4e0 gMovieContextState
 #define ActorEntry_Init_020357d8 ActorEntry_Init
 #define ActorSlot_AttachToParent_02035b74 ActorSlot_AttachToParent

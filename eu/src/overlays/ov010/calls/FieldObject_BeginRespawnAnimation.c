@@ -38,7 +38,7 @@ typedef struct ActorRegistry {
     ActorStorage *actors[1];
 } ActorRegistry;
 
-extern unsigned int func_01ffb2f8();
+extern unsigned int SetModelAnimationFrameWithSingleWrap();
 extern unsigned int Anim_GetFrame();
 extern unsigned int Flags16_ClearBit1();
 extern unsigned int ActorSlot_SetFlag8ByIndex();
@@ -71,8 +71,8 @@ unsigned int FieldObject_BeginRespawnAnimation(int work)
             animation = Anim_GetFrame(node, 0);
             selectJointAnimationBlend(node, 0, node + 0xd8, 1);
             selectJointAnimationBlend(node, 2, node + 0xd8, 1);
-            func_01ffb2f8(node, 0, animation);
-            func_01ffb2f8(node, 2, animation);
+            SetModelAnimationFrameWithSingleWrap(node, 0, animation);
+            SetModelAnimationFrameWithSingleWrap(node, 2, animation);
             indexOrMode = indexOrMode + 1;
         } while (indexOrMode <= 2);
         *(unsigned int *)(work + 0x58) = 1;

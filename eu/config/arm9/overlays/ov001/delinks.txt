@@ -5000,7 +5000,7 @@ src/overlays/ov001/calls/RebindAnimTracks.c:
     complete
     .text       start:0x020809f8 end:0x02080a36
 
-src/overlays/ov001/calls/func_ov001_02080a38.c:
+src/overlays/ov001/calls/SetActiveModelAnimationFrames.c:
     complete
     .text       start:0x02080a38 end:0x02080a60
 

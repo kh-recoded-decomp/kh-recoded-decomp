@@ -3,7 +3,7 @@
 #define SetupStreamSlot_02088c3c SetupStreamSlot
 #define Strlen_02021e44 strlen
 #define data_ov001_0209f2f0 sP2Extension_0209f310
-#define func_0202f4b8 func_0202f4cc
+#define func_0202f4b8 GetModelAnimationDurationFx32
 #define func_020367f0 ActorSlot_GetField1C4ByIndex
 #define strcmp_02021fa8 strcmp
 #define strcpy_02021e60 strcpy

@@ -1,3 +1,4 @@
+#define func_01ffb2f8 SetModelAnimationFrameWithSingleWrap
 #define AcquireMapLayout_020506dc AcquireMapLayout
 #define CountUnlockedTiers_020c4988 CountUnlockedTiers
 #define DrawMatrixCellGlyph_020c7fa8 DrawMatrixCellGlyph

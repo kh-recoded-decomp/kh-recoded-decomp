@@ -1,3 +1,3 @@
 #define AdvanceAnimFrame_02080a38 AdvanceAnimFrame_02080a60
-#define func_ov001_02080a10 func_ov001_02080a38
+#define func_ov001_02080a10 SetActiveModelAnimationFrames
 #include "src/ov001/unclassified_helpers/AdvanceAnimFrame_02080a38.c"

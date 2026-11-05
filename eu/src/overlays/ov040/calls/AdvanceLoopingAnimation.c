@@ -1,5 +1,6 @@
+#define func_01ffb2f8 SetModelAnimationFrameWithSingleWrap
 #define AdvanceAnimationTracks_0202ef24 AdvanceAnimationTracks
 #define AdvanceLoopingAnimation_020bdb0c AdvanceLoopingAnimation
 #define data_ov040_020be260 data_ov040_020be280
-#define func_0202f4b8 func_0202f4cc
+#define func_0202f4b8 GetModelAnimationDurationFx32
 #include "src/ov040/animation/AdvanceLoopingAnimation_020bdb0c.c"

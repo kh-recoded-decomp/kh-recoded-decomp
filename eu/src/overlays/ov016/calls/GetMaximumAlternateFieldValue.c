@@ -1,3 +1,3 @@
 #define GetMaximumAlternateFieldValue_020a2788 GetMaximumAlternateFieldValue
-#define func_0202f4b8 func_0202f4cc
+#define func_0202f4b8 GetModelAnimationDurationFx32
 #include "src/ov016/field_objects/GetMaximumAlternateFieldValue_020a2788.c"

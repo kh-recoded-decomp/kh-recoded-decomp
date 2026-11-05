@@ -1,3 +1,4 @@
+#define func_01ffb2f8 SetModelAnimationFrameWithSingleWrap
 #define func_ov001_020645c8 IsSessionFlagSet
 #define ActorAnim_AdvanceAndGetRootDelta_02089118 ActorAnim_AdvanceAndGetRootDelta
 #define Actor_FireExpiredTrackCues_02089180 Actor_FireExpiredTrackCues

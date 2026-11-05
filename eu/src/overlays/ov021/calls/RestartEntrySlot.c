@@ -1,3 +1,4 @@
+#define func_01ffb2f8 SetModelAnimationFrameWithSingleWrap
 #define FindEntryGroupById_020a8810 FindEntryGroupById
 #define RestartEntrySlot_020a8d54 RestartEntrySlot
 #define SpawnSoundSlot_0204da8c SpawnSoundSlot

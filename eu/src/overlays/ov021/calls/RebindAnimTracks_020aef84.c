@@ -1,3 +1,4 @@
+#define func_01ffb2f8 SetModelAnimationFrameWithSingleWrap
 #define RebindAnimTracks_020aef64 RebindAnimTracks_020aef84
 #define RemoveAnimationFromRenderObject_02018850 NNS_G3dRenderObjRemoveAnmObj
 #define selectJointAnimationBlend_0202f2cc selectJointAnimationBlend

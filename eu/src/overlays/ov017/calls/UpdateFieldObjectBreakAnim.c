@@ -19,7 +19,7 @@ typedef struct FieldObject {
     fx32 timer;
 } FieldObject;
 
-extern fx32 func_0202f4cc(void *anim, int track);
+extern fx32 GetModelAnimationDurationFx32(void *anim, int track);
 extern u8 *ActorRegistry_GetEntityByIndex(int slot);
 extern BOOL AdvanceAnimationTracks(void *animation, fx32 step);
 extern void ActorSlot_UnlinkByIndex(int index);
@@ -30,7 +30,7 @@ int UpdateFieldObjectBreakAnim(FieldObject *object)
 
     if (object->flags & 8) {
         object->timer += 0x1000;
-        if (object->timer >= func_0202f4cc(manager->breakAnim, 0)) {
+        if (object->timer >= GetModelAnimationDurationFx32(manager->breakAnim, 0)) {
             object->flags &= ~8;
         }
     }

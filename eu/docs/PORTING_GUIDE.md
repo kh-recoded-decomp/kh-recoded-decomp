@@ -26,6 +26,8 @@ This is a matching decompilation; a host port is a separate project.
   conditional clearing and the boundary between proven fields and unknown bits.
 - [Widget record operations](WIDGET_RECORD_OPS.md) records two-ID iteration,
   animation frame selection, active bits, mode replacement and legacy ABI views.
+- [Model animation tracks](MODEL_ANIMATION_TRACKS.md) records borrowed track
+  lookup, fx32 duration, single-wrap frame writes and native index conversions.
 - [Saved camera](SAVED_CAMERA.md) records snapshot lifetime, typed callbacks,
   restore behavior, fixed-point projection and viewport/clipping limits.
 - [Packed resources](PACKED_RESOURCES.md) records variable-length entry lookup,

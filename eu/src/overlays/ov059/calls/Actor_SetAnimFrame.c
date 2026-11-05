@@ -1,3 +1,4 @@
+#define func_01ffb2f8 SetModelAnimationFrameWithSingleWrap
 #define Actor_SetAnimFrame_020cc860 Actor_SetAnimFrame
 #define ApplyModelSetAnimations_020a9c50 ApplyModelSetAnimations
 #define ResetCueGroupBefore_020a8128 ResetCueGroupBefore

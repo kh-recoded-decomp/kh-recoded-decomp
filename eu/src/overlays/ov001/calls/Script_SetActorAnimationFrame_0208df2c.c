@@ -1,4 +1,4 @@
-#define Animation_SetFrameWithSingleWrap func_01ffb2f8
+#define Animation_SetFrameWithSingleWrap SetModelAnimationFrameWithSingleWrap
 #define Script_SetActorAnimationFrame_0208df04 Script_SetActorAnimationFrame_0208df2c
 #define func_02025960 ScriptCmd_ReturnValue
 #define func_02025de4 ScriptVm_ReadOperandInt

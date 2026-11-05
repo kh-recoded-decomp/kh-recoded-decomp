@@ -1,3 +1,4 @@
+#define func_01ffb2f8 SetModelAnimationFrameWithSingleWrap
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define UpdateVolumeSlider_020cc258 UpdateVolumeSlider
 #define data_ov075_020d1474 sVolumeSliderTouchRect

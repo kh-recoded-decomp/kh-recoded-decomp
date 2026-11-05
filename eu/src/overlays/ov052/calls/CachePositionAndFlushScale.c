@@ -1,4 +1,4 @@
 #define CachePositionAndFlushScale_020cb8b0 CachePositionAndFlushScale
-#define func_0202f4b8 func_0202f4cc
+#define func_0202f4b8 GetModelAnimationDurationFx32
 #define func_ov052_020ce9d4 ComputeRootMotionDelta
 #include "src/ov052/unclassified_helpers/CachePositionAndFlushScale_020cb8b0.c"

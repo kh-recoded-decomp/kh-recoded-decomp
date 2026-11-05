@@ -54,7 +54,7 @@ extern void BuildBasisFromForward(const VecFx32 *forward, const VecFx32 *up, Mtx
 extern void NNS_G3dMdlSetMdlPolygonID(void *model, u32 matId, int polygonId);
 extern void AnimRequest_ApplyFrame(EffectParams *params, GroupModel *model);
 extern void SceneNode_Draw(GroupModel *model);
-extern int *func_01ffb2f8(GroupModel *model, int channel, int frame);
+extern int *SetModelAnimationFrameWithSingleWrap(GroupModel *model, int channel, int frame);
 
 void EffectGroup_Draw(EffectGroup *group)
 {
@@ -131,8 +131,8 @@ void EffectGroup_Draw(EffectGroup *group)
     for (i = 0; i < 10; i++) {
         if (group->trails[i].frame != -1) {
             group->models[group->trails[i].modelIndex].position = group->trails[i].position;
-            func_01ffb2f8(&group->models[group->trails[i].modelIndex], 0, group->trails[i].frame);
-            func_01ffb2f8(&group->models[group->trails[i].modelIndex], 2, group->trails[i].frame);
+            SetModelAnimationFrameWithSingleWrap(&group->models[group->trails[i].modelIndex], 0, group->trails[i].frame);
+            SetModelAnimationFrameWithSingleWrap(&group->models[group->trails[i].modelIndex], 2, group->trails[i].frame);
             SceneNode_Draw(&group->models[group->trails[i].modelIndex]);
         }
     }

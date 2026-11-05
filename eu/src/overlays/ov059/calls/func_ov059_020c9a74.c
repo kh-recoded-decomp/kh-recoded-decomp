@@ -41,7 +41,7 @@ extern void func_ov021_020a8cc0(TrackState *state, s32 group);
 extern void Actor_TrySpawnIdleEffect(Actor *actor);
 extern void *GetGroupMemberData(s32 group, s32 index);
 extern int Anim_GetFrame(void *anim, int channel);
-extern int func_0202f4cc(void *anim, int channel);
+extern int GetModelAnimationDurationFx32(void *anim, int channel);
 extern FieldSystem *GetActorRegistry(void);
 extern void QuadTree_RemoveObject(int *root, void *node);
 extern void InvokeHandlerOnIndexedRecord(s32 group, s32 index, u32 value);
@@ -82,7 +82,7 @@ void func_ov059_020c9a74(Actor *actor, BOOL start)
         void *anim = GetGroupMemberData(actor->effectGroup, 0);
         int frame = Anim_GetFrame(anim, 0);
 
-        if (frame >= func_0202f4cc(anim, 0) - 0x1000) {
+        if (frame >= GetModelAnimationDurationFx32(anim, 0) - 0x1000) {
             FieldSystem *system = GetActorRegistry();
 
             actor->effectActive = 0;

@@ -13,7 +13,7 @@
 #define UpdateIdleTimeout_0206e1c8 UpdateIdleTimeout
 #define UpdateOv070BossTurnState_020d85c8 UpdateOv070BossTurnState
 #define func_01ff9f88 VEC_Normalize
-#define func_0202f4b8 func_0202f4cc
+#define func_0202f4b8 GetModelAnimationDurationFx32
 #define func_ov021_020a8ab4 ResetAnimationTrackState
 #define func_ov021_020a8ca0 func_ov021_020a8cc0
 #define func_ov046_020c0d68 Camera_GetModeValue

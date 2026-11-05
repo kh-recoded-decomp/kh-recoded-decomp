@@ -22,7 +22,7 @@ extern void *G2_GetBG1ScrPtr(void);
 extern void MIi_CpuClearFast(u32 value, void *dst, u32 size);
 extern BOOL PlaySoundEffect(int group, int id);
 extern void func_ov076_020c7714(s32 x, s32 y, fx32 *outX, fx32 *outY);
-extern int *func_01ffb2f8(void *animations, int index, int frame);
+extern int *SetModelAnimationFrameWithSingleWrap(void *animations, int index, int frame);
 
 void SlotMenu_BeginSlotTransition(SlotMenu *menu)
 {
@@ -39,9 +39,9 @@ void SlotMenu_BeginSlotTransition(SlotMenu *menu)
     menu->modelPosition.y = ((192 - y) << 12) - 0x800;
 
     /* Reset the three model animation tracks before starting the transition. */
-    func_01ffb2f8(menu->modelAnimations, 2, 0);
-    func_01ffb2f8(menu->modelAnimations, 4, 0);
-    func_01ffb2f8(menu->modelAnimations, 0, 0);
+    SetModelAnimationFrameWithSingleWrap(menu->modelAnimations, 2, 0);
+    SetModelAnimationFrameWithSingleWrap(menu->modelAnimations, 4, 0);
+    SetModelAnimationFrameWithSingleWrap(menu->modelAnimations, 0, 0);
 
     menu->transitionActive = 1;
     menu->transitionFrames = 25;

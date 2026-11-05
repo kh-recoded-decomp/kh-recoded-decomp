@@ -103,7 +103,7 @@ extern const GroupPair sMatrixNavigationGraph[];
 
 extern BOOL AdvanceAnimationTracks(SceneNode *node, fx32 delta);
 extern void SceneNode_Draw(SceneNode *node);
-extern void func_01ffb2f8(void *effect, int kind, int arg);
+extern void SetModelAnimationFrameWithSingleWrap(void *effect, int kind, int arg);
 extern BOOL PlaySoundEffect(int seqArcNo, int index);
 extern void SetPackedBit(int *bitWords, int bitIndex);
 extern SlotEntry *GetRecordSlotPair1Entry(s32 index);
@@ -251,9 +251,9 @@ void UpdateMatrixEventAnimation(MatrixMenu *menu)
                     PropagateMatrixNodeVisit(menu, menu->pendingNode, 4, FALSE, FALSE);
                     if (menu->eventParam >= 0 && menu->state == 0 && TryCompleteGridGroup(menu, menu->eventParam)) {
                         menu->state = 0x500;
-                        func_01ffb2f8(&menu->effects[4], 2, 0);
-                        func_01ffb2f8(&menu->effects[4], 4, 0);
-                        func_01ffb2f8(&menu->effects[4], 0, 0);
+                        SetModelAnimationFrameWithSingleWrap(&menu->effects[4], 2, 0);
+                        SetModelAnimationFrameWithSingleWrap(&menu->effects[4], 4, 0);
+                        SetModelAnimationFrameWithSingleWrap(&menu->effects[4], 0, 0);
                         PreviewMatrixNodeStats_020c5d10(menu, -1, -1, 0);
                         menu->groupMask ^= 1 << menu->eventParam;
                         menu->phase = 0;
@@ -344,9 +344,9 @@ void UpdateMatrixEventAnimation(MatrixMenu *menu)
                         completed = FALSE;
                         if (child->type == 1 && TryCompleteGridGroup(menu, child->bitIndex)) {
                             menu->state |= 0x500;
-                            func_01ffb2f8(&menu->effects[4], 2, 0);
-                            func_01ffb2f8(&menu->effects[4], 4, 0);
-                            func_01ffb2f8(&menu->effects[4], 0, 0);
+                            SetModelAnimationFrameWithSingleWrap(&menu->effects[4], 2, 0);
+                            SetModelAnimationFrameWithSingleWrap(&menu->effects[4], 4, 0);
+                            SetModelAnimationFrameWithSingleWrap(&menu->effects[4], 0, 0);
                             menu->eventParam = child->bitIndex;
                             menu->groupMask ^= 1 << menu->eventParam;
                             menu->phase = 0;
@@ -465,7 +465,7 @@ void UpdateMatrixEventAnimation(MatrixMenu *menu)
                             effect = &menu->portalEffect4;
                             break;
                         }
-                        func_01ffb2f8(effect, 2, 0x1000);
+                        SetModelAnimationFrameWithSingleWrap(effect, 2, 0x1000);
                     }
                 } else if (menu->timer <= 0x20) {
                     HasSceneActiveMenu(0x20 - menu->timer);

@@ -1,3 +1,4 @@
+#define func_01ffb2f8 SetModelAnimationFrameWithSingleWrap
 #define EffectGroup_RewindEntry_020cb9ec EffectGroup_RewindEntry
 #define StopAndClearSoundEmitter_020a8e14 StopAndClearSoundEmitter
 #define func_ov021_020a8eec GetGroupMemberData
