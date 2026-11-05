@@ -14,7 +14,7 @@
 #define data_ov034_020c0f00 data_ov034_020c0f20
 #define data_ov034_020c0f1c data_ov034_020c0f3c
 #define data_ov034_020c0f24 data_ov034_020c0f44
-#define func_0200160c func_02001620
+#define func_0200160c DrawTextAnchoredWithFontFallback
 #define func_02001768 DrawCenteredTextLine
 #define func_0202b788 GetLanguageIndex
 #define func_0204f378 IndexedRecords_SetFlag2

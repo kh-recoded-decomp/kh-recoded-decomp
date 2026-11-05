@@ -3,5 +3,5 @@
 #define LoadPackedFileView_020ba25c LoadPackedFileView
 #define data_ov099_020c2280 gEnemyReportTextPaths
 #define data_ov099_020c2764 sOv099_TextFontEu10Nftr_020c2784
-#define func_02001458 func_0200146c
+#define func_02001458 LoadUtf16FontResource
 #include "src/ov099/panel_state/InitViewerTextLayers_020bf5d4.c"

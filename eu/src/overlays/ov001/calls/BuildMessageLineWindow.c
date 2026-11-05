@@ -4,7 +4,7 @@
 #define InitTextLayerAt_020014b0 InitTextLayerAt
 #define data_ov001_0209dc04 gMessageLineTextFrame
 #define data_ov001_0209ed6c gEmptyMessageText
-#define func_0200160c func_02001620
+#define func_0200160c DrawTextAnchoredWithFontFallback
 #define func_02001914 CreateTextSurface
 #define func_ov001_02073634 MakePrimaryVramKey_02073634
 #define func_ov027_020ba25c LoadPackedFileView

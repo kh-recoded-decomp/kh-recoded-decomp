@@ -58,7 +58,7 @@ extern void RefreshEntryCaption(Ov089Menu *menu, BOOL playSound);
 extern int GetGridTableValue(int row, int column);
 extern int OS_SNPrintf_0202e094(u16 *dst, u32 len, const u16 *fmt, ...);
 extern void CallVirtualHandlerSlot1(TextLayer *layer, int arg);
-extern void func_02001620(TextLayer *layer, u32 x, u32 y, u32 color, u32 flags, u16 *text, u32 overrideValue, int maxWidth);
+extern void DrawTextAnchoredWithFontFallback(TextLayer *layer, u32 x, u32 y, u32 color, u32 flags, u16 *text, u32 overrideValue, int maxWidth);
 extern void Text_UploadTileBuffer(TextLayer *layer);
 extern void *GetPackedFileEntry(void *messages, int index);
 extern void DrawTextAnchored(TextLayer *layer, int x, int y, int color, u32 flags, const void *text);
@@ -96,7 +96,7 @@ void DrawEntryMenuTexts_020bf49c(Ov089Menu *menu)
     frame.charBase += 0x20;
     InitTextLayerAt(&menu->titleLayer, 2, screen, GetMenuFont10(), &frame);
     CallVirtualHandlerSlot1(&menu->titleLayer, 0);
-    func_02001620(&menu->titleLayer, 0x8e, 2, 2, 0x821, title, GetMenuFont10s(), 0x8e);
+    DrawTextAnchoredWithFontFallback(&menu->titleLayer, 0x8e, 2, 2, 0x821, title, GetMenuFont10s(), 0x8e);
     Text_UploadTileBuffer(&menu->titleLayer);
 
     frame.x = 8;

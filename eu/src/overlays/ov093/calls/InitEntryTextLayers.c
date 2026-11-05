@@ -3,5 +3,5 @@
 #define LoadPackedFileView_020ba25c LoadPackedFileView
 #define data_ov093_020c3e8c gTrophyReportTextPaths
 #define data_ov093_020c4d40 sOv093_TextFontEu10Nftr_020c4d60
-#define func_02001458 func_0200146c
+#define func_02001458 LoadUtf16FontResource
 #include "src/ov093/panel_state/InitEntryTextLayers_020bfac4.c"

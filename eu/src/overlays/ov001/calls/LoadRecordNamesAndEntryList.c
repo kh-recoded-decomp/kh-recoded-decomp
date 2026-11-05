@@ -15,6 +15,6 @@
 #define copy_padded_utf16_string_02022a74 Utf16CopyPadded
 #define data_ov001_0209dc14 gRecordNameTextFrame
 #define data_ov001_0209dd3c gWorldLocationNameOffsets
-#define func_0200160c func_02001620
+#define func_0200160c DrawTextAnchoredWithFontFallback
 #define func_02001914 CreateTextSurface
 #include "src/ov001/text_rendering/LoadRecordNamesAndEntryList_0206f484.c"

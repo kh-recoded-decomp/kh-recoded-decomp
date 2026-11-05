@@ -4,5 +4,5 @@
 #define LoadPackedFileView_020ba25c LoadPackedFileView
 #define data_ov101_020c0dc0 gListTextArchivePaths
 #define data_ov101_020c1384 sOv101_TextFontEu10Nftr_020c1f84
-#define func_02001458 func_0200146c
+#define func_02001458 LoadUtf16FontResource
 #include "src/ov101/panel_state/InitListTextLayers_020bf400.c"

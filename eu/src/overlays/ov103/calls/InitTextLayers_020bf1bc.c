@@ -3,5 +3,5 @@
 #define LoadPackedFileView_020ba25c LoadPackedFileView
 #define data_ov103_020c04a8 gTheaterReportTextPaths
 #define data_ov103_020c06d8 sOv103_TextFontEu10Nftr_020c06f8
-#define func_02001458 func_0200146c
+#define func_02001458 LoadUtf16FontResource
 #include "src/ov103/panel_state/InitTextLayers_020bf19c.c"

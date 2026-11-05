@@ -43,7 +43,7 @@ extern u16 *FormatPackedWideText(const PackedTextView *view, unsigned index,
                               u16 *buffer, unsigned capacity, ...);
 extern void CallVirtualHandlerSlot1(void *layer, u32 value);
 extern void *GetFieldFont2(void);
-extern void func_02001620(void *layer, u32 x, u32 y, u32 color, u32 flags,
+extern void DrawTextAnchoredWithFontFallback(void *layer, u32 x, u32 y, u32 color, u32 flags,
                          const u16 *text, void *font, int maxWidth);
 extern void FlushBufferAndRunCallback(void *layer);
 
@@ -115,10 +115,10 @@ void UpdateBoardHelpText(void)
     if (text != NULL) {
         CallVirtualHandlerSlot1(data_ov024_020b7540.state->textLayer, 0);
         if (data_ov024_020b7540.state->useCustomFont) {
-            func_02001620(data_ov024_020b7540.state->textLayer, 0, 4, 2, 0,
+            DrawTextAnchoredWithFontFallback(data_ov024_020b7540.state->textLayer, 0, 4, 2, 0,
                          text, data_ov024_020b7540.state->smallFont, 0xe0);
         } else {
-            func_02001620(data_ov024_020b7540.state->textLayer, 0, 4, 2, 0,
+            DrawTextAnchoredWithFontFallback(data_ov024_020b7540.state->textLayer, 0, 4, 2, 0,
                          text, GetFieldFont2(), 0xe0);
         }
         FlushBufferAndRunCallback(data_ov024_020b7540.state->textLayer);

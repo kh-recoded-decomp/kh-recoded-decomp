@@ -160,7 +160,7 @@ src/calls/InitTextLayer.c:
     complete
     .text       start:0x020012dc end:0x0200146c
 
-src/calls/func_0200146c.c:
+src/calls/LoadUtf16FontResource.c:
     complete
     .text       start:0x0200146c end:0x02001486
 
@@ -208,7 +208,7 @@ src/calls/DrawTextAnchored.c:
     complete
     .text       start:0x020015b4 end:0x02001620
 
-src/calls/func_02001620.c:
+src/calls/DrawTextAnchoredWithFontFallback.c:
     complete
     .text       start:0x02001620 end:0x0200167a
 
@@ -216,7 +216,7 @@ src/calls/DrawTextColored.c:
     complete
     .text       start:0x0200167c end:0x02001704
 
-src/calls/func_02001704.c:
+src/calls/DrawTaggedTextWithFontFallback.c:
     complete
     .text       start:0x02001704 end:0x0200175e
 

@@ -433,3 +433,11 @@ callback/address adapter. [SESSION_HANDLERS_PLACEMENT.md](SESSION_HANDLERS_PLACE
 records the twelve heterogeneous callback slots and null rules, bank lifetimes,
 packed-bit widths/order and unresolved host address protocol. The placement
 definitions use actual vector/angle storage without pointer truncation.
+
+## Font resources and width fallback
+
+Three helpers now use explicit font-resource, text-layer, text and fallback
+inputs. [FONT_RESOURCE_FALLBACK.md](FONT_RESOURCE_FALLBACK.md) records the native
+12-byte resource ownership, cached-default restoration, strict width threshold,
+flags versus alternate color, UTF16 controls and actual two-input loader chain.
+The partial layer view does not define a complete host allocation.

@@ -47,7 +47,7 @@ extern void GX_SetGraphicsMode(int dispMode, int bgMode, int bg0as3d);
 extern void *G2_GetBG3ScrPtr(void);
 extern void *MIi_CpuClearFast(u32 value, void *dest, u32 size);
 extern int GetLanguageIndex(void);
-extern int func_0200146c(FontResource *font, const char *path);
+extern int LoadUtf16FontResource(FontResource *font, const char *path);
 extern void GX_LoadBGPltt(const void *palette, u32 paletteOffset, u32 size);
 extern BOOL InitTextLayerDefault(TextLayer *layer, int bgLayer, FontResource *font, TextFrame *frame);
 extern void CallVirtualHandlerSlot1(TextLayer *layer, int color);
@@ -79,7 +79,7 @@ void ShowTitleNotice(void *owner, int noticeType)
     REG_BG3CNT = (u16)((REG_BG3CNT & 0x43) | 0x204);
     MIi_CpuClearFast(0, G2_GetBG3ScrPtr(), 0x600);
     LoadPackedFileView(&messages, (u32)sOv000_TtlTitleLanguageSZ_0206393c.messageArchive, 0);
-    func_0200146c(&font, GetLanguageIndex() != 0 ? sOv000_TtlTitleLanguageSZ_0206393c.fontEu : sOv000_TtlTitleLanguageSZ_0206393c.fontJp);
+    LoadUtf16FontResource(&font, GetLanguageIndex() != 0 ? sOv000_TtlTitleLanguageSZ_0206393c.fontEu : sOv000_TtlTitleLanguageSZ_0206393c.fontJp);
     GX_LoadBGPltt(data_ov000_02063a00, 0, 2);
     GX_LoadBGPltt(gTitleNoticePalette, 0x1a0, 0x20);
     REG_POWCNT |= 0x8000;

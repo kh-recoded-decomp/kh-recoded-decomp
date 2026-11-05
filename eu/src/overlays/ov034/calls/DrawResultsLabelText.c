@@ -3,6 +3,6 @@
 #define data_ov034_020be954 gResultsScreenResourceSet
 #define data_ov034_020c0f2c data_ov034_020c0f4c
 #define data_ov034_020c0f38 data_ov034_020c0f58
-#define func_0200160c func_02001620
+#define func_0200160c DrawTextAnchoredWithFontFallback
 #define g_resultsScreen_020c0f80 data_ov034_020c0fa0
 #include "src/ov034/unclassified_helpers/DrawResultsLabelText_020bd010.c"

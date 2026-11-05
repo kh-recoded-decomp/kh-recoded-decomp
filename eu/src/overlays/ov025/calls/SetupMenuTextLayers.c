@@ -15,7 +15,7 @@
 #define UpdateWidgetLayerDefault_020b9df0 UpdateWidgetLayerDefault_020b9e10
 #define data_ov025_020b76b0 data_ov025_020b76d0
 #define data_ov025_020b76c0 data_ov025_020b76e0
-#define func_0200160c func_02001620
+#define func_0200160c DrawTextAnchoredWithFontFallback
 #define func_ov027_020b7d58 InitBackgroundContainer
 #define g_uiContext_020b7760 data_ov025_020b7780
 #include "src/ov025/shared_engine/SetupMenuTextLayers_020b5c78.c"

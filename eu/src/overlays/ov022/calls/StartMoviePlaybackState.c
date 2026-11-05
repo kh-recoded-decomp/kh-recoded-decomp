@@ -5,7 +5,7 @@
 #define func_01ff8830 MI_CpuFill8
 #define func_ov022_020a7798 func_ov022_020a77b8
 #define func_020257c4 AllocateScriptVmBuffer
-#define func_02001458 func_0200146c
+#define func_02001458 LoadUtf16FontResource
 #define func_02007250 GX_LoadBGPltt
 #define GXS_LoadBGPltt_020072b4 GXS_LoadBGPltt
 #define StoreGlobalArrayEntry_02025668 StoreGlobalArrayEntry

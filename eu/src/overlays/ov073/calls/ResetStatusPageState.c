@@ -2,7 +2,7 @@
 #define FindWidgetById_020b90a4 FindWidgetById
 #define FlushBufferAndRunCallback_0200153c FlushBufferAndRunCallback
 #define ResetStatusPageState_020beaa0 ResetStatusPageState
-#define func_0200160c func_02001620
+#define func_0200160c DrawTextAnchoredWithFontFallback
 #define func_ov027_020b91c8 SetWidgetPosition
 #define func_ov027_020b96a0 SetWidgetAnimationFrame
 #define func_ov027_020ba2a8 GetPackedFileEntry

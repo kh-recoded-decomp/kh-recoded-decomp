@@ -12,7 +12,7 @@
 #define UpdateStatusPanel_020c15b0 UpdateStatusPanel
 #define UpdateWidgetLayerDefault_020b9df0 UpdateWidgetLayerDefault_020b9e10
 #define UploadListPalette_020c3f6c UploadListPalette
-#define func_020016f0 func_02001704
+#define func_020016f0 DrawTaggedTextWithFontFallback
 #define func_ov027_020ba2a8 GetPackedFileEntry
 #define func_ov039_020bc0d4 GetPrimaryElementEnabled
 #define func_ov039_020bc1cc GetMenuWidgetContainer

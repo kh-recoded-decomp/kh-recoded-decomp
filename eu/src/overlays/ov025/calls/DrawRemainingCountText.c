@@ -2,7 +2,7 @@
 #define DrawRemainingCountText_020b5858 DrawRemainingCountText
 #define GetFieldFont2_020711d4 GetFieldFont2
 #define Text_UploadTileBuffer_02001520 Text_UploadTileBuffer
-#define func_0200160c func_02001620
+#define func_0200160c DrawTextAnchoredWithFontFallback
 #define func_ov001_0207b73c func_ov001_0207b764
 #define func_ov001_0207b748 func_ov001_0207b770
 #define func_ov027_020ba2e0 FormatPackedWideText

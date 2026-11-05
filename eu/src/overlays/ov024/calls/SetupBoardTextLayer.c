@@ -4,7 +4,7 @@
 #define data_ov024_020b74ac sOv024_TextFontEu10sNftr_020b74cc
 #define data_ov024_020b74c4 sOv024_UiBtlStrLanguageP2_020b74e4
 #define data_ov024_020b7520 data_ov024_020b7540
-#define func_02001458 func_0200146c
+#define func_02001458 LoadUtf16FontResource
 #define func_020014d0 InitTextLayerAtFromEnd
 #define func_0202cc6c Msg_OpenContainerAndReadHeader
 #define func_0202cd78 ZeroHalfThenFree

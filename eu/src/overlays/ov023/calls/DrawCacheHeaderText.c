@@ -1,7 +1,7 @@
 #define DrawCacheHeaderText_020b5a30 DrawCacheHeaderText
 #define func_02001520 Text_UploadTileBuffer
 #define func_02001574 CallVirtualHandlerSlot1
-#define func_0200160c func_02001620
+#define func_0200160c DrawTextAnchoredWithFontFallback
 #define func_ov001_020711d4 GetFieldFont2
 #define g_resourceCache_020b6f60 data_ov023_020b6f80
 #include "src/ov023/shared_engine/DrawCacheHeaderText_020b5a30.c"

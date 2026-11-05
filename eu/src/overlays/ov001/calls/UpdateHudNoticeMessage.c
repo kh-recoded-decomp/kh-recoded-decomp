@@ -8,7 +8,7 @@
 #define Text_UploadTileBuffer_02001520 Text_UploadTileBuffer
 #define UpdateHudNoticeMessage_020705a4 UpdateHudNoticeMessage
 #define UpdateWidgetLayerDefault_020b9df0 UpdateWidgetLayerDefault_020b9e10
-#define func_0200160c func_02001620
+#define func_0200160c DrawTextAnchoredWithFontFallback
 #define func_02029f48 GetMainBrightnessSetting
 #define func_0204d8d0 PlaySoundChecked
 #define func_ov027_020b822c func_ov027_020b824c

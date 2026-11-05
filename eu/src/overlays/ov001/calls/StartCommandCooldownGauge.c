@@ -42,7 +42,7 @@ extern BOOL IsHudFlag7Set(void);
 extern BOOL IsFieldFlag8Set(void);
 extern u32 GetVBlankCounter(void);
 extern void *GetFieldFont1(void);
-extern void func_02001620(GaugeWindow *window, u32 x, u32 y, u32 color, u32 flags, int value, void *font, u32 width);
+extern void DrawTextAnchoredWithFontFallback(GaugeWindow *window, u32 x, u32 y, u32 color, u32 flags, int value, void *font, u32 width);
 extern void DrawTextAnchored(GaugeWindow *window, int x, int y, int color, u32 flags, const u16 *text);
 
 void StartCommandCooldownGauge(GaugeWindow *window, CooldownGauge *gauge, u32 owner, s32 recordId, u16 repeat, u8 bonusKind, u8 bonusPercent)
@@ -92,6 +92,6 @@ void StartCommandCooldownGauge(GaugeWindow *window, CooldownGauge *gauge, u32 ow
     if (record == NULL) {
         DrawTextAnchored(window, 0, 4, 4, 0, gFieldEmptyCommandLabel);
     } else {
-        func_02001620(window, 0, 4, 2, 0, record->nameId, GetFieldFont1(), 0x38);
+        DrawTextAnchoredWithFontFallback(window, 0, 4, 2, 0, record->nameId, GetFieldFont1(), 0x38);
     }
 }

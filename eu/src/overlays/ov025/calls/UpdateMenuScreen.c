@@ -14,7 +14,7 @@
 #define UpdateListScrollAnimation_020b7268 UpdateListScrollAnimation
 #define UpdateMenuScreen_020b5f08 UpdateMenuScreen
 #define UpdateWidgetRootAndResetList_020b8c80 UpdateWidgetRootAndResetList
-#define func_020016f0 func_02001704
+#define func_020016f0 DrawTaggedTextWithFontFallback
 #define func_02029f58 GetSubBrightnessSetting
 #define func_ov001_020645c8 IsSessionFlagSet
 #define func_ov001_0207b5f4 func_ov001_0207b61c

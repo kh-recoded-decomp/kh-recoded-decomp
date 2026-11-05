@@ -1,6 +1,6 @@
 #define ReloadPanelResources_02062938 ReloadPanelResources
 #define ResetDisplayHardware_02029bfc ResetDisplayHardware
 #define data_ov002_0206c280 gPanelResourcePaths
-#define func_02001458 func_0200146c
+#define func_02001458 LoadUtf16FontResource
 #define func_ov027_020ba25c LoadPackedFileView
 #include "src/ov002/panel_state/ReloadPanelResources_02062938.c"

@@ -43,7 +43,7 @@ extern void InitPxiChannelsPair(void);
 extern void LoadOverlayAfterGeometryTransfer(int processor, int overlayId);
 extern void MoviePlayer_SetupDisplay(void);
 extern void MI_CpuFill8(void *dst, int value, int size);
-extern int func_0200146c(void *font, char *name);
+extern int LoadUtf16FontResource(void *font, char *name);
 extern void GX_LoadBGPltt(void *src, u32 offset, u32 size);
 extern void GXS_LoadBGPltt(const void *src, u32 offset, u32 size);
 extern int GetLanguageIndex(void);
@@ -83,7 +83,7 @@ void *MovieScene_Init(int fromTitle)
     scene->field_8b8 = 0;
     scene->visiblePlanes = 0;
     MI_CpuFill8(&scene->streamOwner, 0, 0x1d4);
-    func_0200146c(scene->font, sOv003_FontEu10allNftr_02065854);
+    LoadUtf16FontResource(scene->font, sOv003_FontEu10allNftr_02065854);
     GX_LoadBGPltt(data_ov003_020650f4, 0x1a0, 0x20);
     GXS_LoadBGPltt(data_ov003_020650f4, 0x1a0, 0x20);
     scene->streamOwner = scene->stream;

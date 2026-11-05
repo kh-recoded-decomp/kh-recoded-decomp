@@ -8,7 +8,7 @@
 #define SetStatusElementVisible_020beb5c SetStatusElementVisible
 #define ShowSelectedRecordName_020c1a00 ShowSelectedRecordName
 #define TagTracker_InvokeCallback_020b8210 TagTracker_InvokeCallback
-#define func_0200160c func_02001620
+#define func_0200160c DrawTextAnchoredWithFontFallback
 #define func_02001908 GetTextLayerLineWidth
 #define func_ov027_020ba2a8 GetPackedFileEntry
 #define func_ov039_020bc994 GetMenuFont10

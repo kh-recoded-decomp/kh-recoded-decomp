@@ -1,7 +1,7 @@
 #define DrawNumberInPanelSlot_020b62c4 DrawNumberInPanelSlot
 #define func_02001520 Text_UploadTileBuffer
 #define func_02001574 CallVirtualHandlerSlot1
-#define func_0200160c func_02001620
+#define func_0200160c DrawTextAnchoredWithFontFallback
 #define func_ov001_020711d4 GetFieldFont2
 #define g_uiContext_020b7760 data_ov025_020b7780
 #include "src/ov025/panel_state/DrawNumberInPanelSlot_020b62c4.c"

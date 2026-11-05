@@ -134,7 +134,7 @@ extern TextCell *CreateTextSurface(TextLayer *layer, int a, int b);
 extern CommandRecord *GetRecordSlotPair1Entry(s32 index);
 extern void DrawTextAnchored(TextLayer *layer, int x, int y, int color, u32 flags, const u16 *text);
 extern void *GetFieldFont1(void);
-extern void func_02001620(TextLayer *layer, u32 x, u32 y, u32 color, u32 flags, int value, void *font, u32 width);
+extern void DrawTextAnchoredWithFontFallback(TextLayer *layer, u32 x, u32 y, u32 color, u32 flags, int value, void *font, u32 width);
 extern void SelectListNodeOrFirst(TextLayer *layer, TextCell *target);
 extern void Text_UploadTileBuffer(TextLayer *layer);
 extern BOOL func_ov001_02077148(FieldMenu *menu, CommandRecord *record);
@@ -160,7 +160,7 @@ static inline void SetupLinkedGauge(FieldMenu *menu, CommandGauge *gauge, s32 li
     gauge->duration = linked->cooldown << 1;
     gauge->linkArt = CreateTextSurface(&menu->gaugeLayer, 1, 0);
     MIi_CpuCopyFast(menu->blankTiles, gauge->linkArt->pixels, 0x200);
-    func_02001620(&menu->gaugeLayer, 0, 4, 2, 0, linked->nameId, GetFieldFont1(), 0x38);
+    DrawTextAnchoredWithFontFallback(&menu->gaugeLayer, 0, 4, 2, 0, linked->nameId, GetFieldFont1(), 0x38);
 }
 
 void InitFieldCommandMenu(FieldMenu *menu, u8 *tiles)
@@ -214,7 +214,7 @@ void InitFieldCommandMenu(FieldMenu *menu, u8 *tiles)
     if (equipped == NULL) {
         DrawTextAnchored(&menu->textLayer, 0, 4, 4, 0, gFieldFinishCommandLabel);
     } else {
-        func_02001620(&menu->textLayer, 0, 4, 4, 0, equipped->nameId, GetFieldFont1(), 0x38);
+        DrawTextAnchoredWithFontFallback(&menu->textLayer, 0, 4, 4, 0, equipped->nameId, GetFieldFont1(), 0x38);
     }
     FreePointerIfSet(&view.file);
     SelectListNodeOrFirst(&menu->textLayer, menu->cells[0]);

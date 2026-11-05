@@ -4,7 +4,7 @@
 #define DrawTextColored_02001668 DrawTextColored
 #define DrawTextPackedColor_0200174c DrawTextPackedColor
 #define Text_UploadTileBuffer_02001520 Text_UploadTileBuffer
-#define func_0200160c func_02001620
+#define func_0200160c DrawTextAnchoredWithFontFallback
 #define func_ov027_020ba2a8 GetPackedFileEntry
 #define func_ov039_020bc9ac GetMenuFont10s
 #include "src/ov074/root_menu/DrawRootMenuText_020c5250.c"

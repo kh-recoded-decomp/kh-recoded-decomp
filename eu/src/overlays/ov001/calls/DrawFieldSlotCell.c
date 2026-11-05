@@ -36,7 +36,7 @@ extern const SlotNameTable gFieldSlotMessageIds;
 extern int GetFieldSlotValue(int index);
 extern void MIi_CpuCopyFast(const void *src, void *dst, u32 size);
 extern void *GetFieldFont1(void);
-extern void func_02001620(int *context, u32 x, u32 y, u32 color, u32 flags, const u16 *text,
+extern void DrawTextAnchoredWithFontFallback(int *context, u32 x, u32 y, u32 color, u32 flags, const u16 *text,
                           void *overrideFont, int maxWidth);
 
 void DrawFieldSlotCell(SlotPanel *panel, int *layer, SlotCell *cell, MessageSet *messages, int slot)
@@ -70,5 +70,5 @@ void DrawFieldSlotCell(SlotPanel *panel, int *layer, SlotCell *cell, MessageSet 
     cell->flags |= 1;
     cell->flags |= 4;
     MIi_CpuCopyFast(panel->blankTiles, cell->canvas->pixels, 0x200);
-    func_02001620(layer, 0, 4, 4, 0, text, GetFieldFont1(), 0x38);
+    DrawTextAnchoredWithFontFallback(layer, 0, 4, 4, 0, text, GetFieldFont1(), 0x38);
 }

@@ -3,5 +3,5 @@
 #define LoadPackedFileView_020ba25c LoadPackedFileView
 #define data_ov091_020c2a20 gReportTopTextPath
 #define data_ov091_020c2c44 sOv091_TextFontEu10Nftr_020c2c64
-#define func_02001458 func_0200146c
+#define func_02001458 LoadUtf16FontResource
 #include "src/ov091/panel_state/InitMenuTextLayers_020bf410.c"
