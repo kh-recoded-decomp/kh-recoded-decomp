@@ -5,5 +5,5 @@
 #define data_ov073_020c4110 data_ov073_020c4130
 #define func_020275c8 CheckStatusAndThreshold
 #define func_0204f378 IndexedRecords_SetFlag2
-#define func_ov027_020b822c func_ov027_020b824c
+#define func_ov027_020b822c InvokeTrackerRecordAtPosition
 #include "src/ov073/status_menu/DrawStatusPanel_020bff6c.c"

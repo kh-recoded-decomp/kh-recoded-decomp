@@ -9685,11 +9685,11 @@ src/calls/Slot_UnlinkAll.c:
     complete
     .text       start:0x0204f118 end:0x0204f12e
 
-src/calls/NNS_FndInitListWithOffset0_0204f130.c:
+src/calls/UpdateDisplayObjectListQueued.c:
     complete
     .text       start:0x0204f130 end:0x0204f140
 
-src/calls/AlarmCallback_0204f140.c:
+src/calls/UpdateDisplayObjectListImmediate.c:
     complete
     .text       start:0x0204f140 end:0x0204f150
 

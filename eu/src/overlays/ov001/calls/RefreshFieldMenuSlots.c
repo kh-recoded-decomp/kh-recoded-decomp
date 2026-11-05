@@ -11,5 +11,5 @@
 #define func_ov001_02075348 CycleMenuEntry
 #define func_ov001_02075ccc UpdateFieldPromptTag
 #define func_ov001_02075db8 FieldMenu_TryEnterState3
-#define func_ov027_020b822c func_ov027_020b824c
+#define func_ov027_020b822c InvokeTrackerRecordAtPosition
 #include "src/ov001/field_manager/RefreshFieldMenuSlots_0207651c.c"

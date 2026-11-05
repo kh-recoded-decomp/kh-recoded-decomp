@@ -24,6 +24,6 @@
 #define func_02036240 ActorRegistry_GetEntityByIndex
 #define func_0203ad14 MakeSphereShape
 #define func_ov021_020a9230 AreZoneMeshesClear
-#define func_ov021_020ac148 func_ov021_020ac168
+#define func_ov021_020ac148 InitHitResultHeader
 #define func_ov056_020d5f50 IsScenePhaseInterruptible
 #include "src/ov056/shared_engine/UpdateHomingArcProjectile_020d5f7c.c"

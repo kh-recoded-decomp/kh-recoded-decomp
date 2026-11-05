@@ -1,6 +1,6 @@
 #define ConfirmPanelSelection_020c6dcc ConfirmPanelSelection
 #define IsGlobalPackedBitSet_02027304 IsGlobalPackedBitSet
 #define PushPanelState_020c61b0 PushPanelState
-#define func_ov027_020b90f4 func_ov027_020b9114
+#define func_ov027_020b90f4 GetFocusedWidget
 #define func_ov039_020bc1bc func_ov039_020bc1dc
 #include "src/ov087/panel_state/ConfirmPanelSelection_020c6dcc.c"

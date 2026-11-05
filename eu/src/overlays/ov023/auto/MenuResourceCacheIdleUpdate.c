@@ -1,0 +1,2 @@
+#define FSi_CloseFileCommand_020b5a2c MenuResourceCacheIdleUpdate
+#include "src/ov023/library_nitro_fs/FSi_CloseFileCommand_020b5a2c.c"

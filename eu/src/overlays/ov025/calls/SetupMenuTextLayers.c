@@ -1,6 +1,6 @@
 #define func_ov001_0207123c GetFieldSceneManager
 #define ClearTileTableRowAndMarkDirty_020b9d18 ClearTileTableRowAndMarkDirty
-#define CountActiveSlots_020b74d8 CountActiveSlots
+#define CountActiveSlots_020b74d8 GetListPathEntryCount
 #define DrawRemainingCountText_020b5858 DrawRemainingCountText
 #define FlushBufferAndRunCallback_0200153c FlushBufferAndRunCallback
 #define GXS_LoadBG0Scr_020075c0 GXS_LoadBG0Scr

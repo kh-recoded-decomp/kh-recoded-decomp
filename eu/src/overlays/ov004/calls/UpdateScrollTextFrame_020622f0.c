@@ -1,5 +1,5 @@
 #define func_ov004_02061e7c StepScrollTextScroll
-#define AlarmCallback_0204f12c AlarmCallback_0204f140
+#define AlarmCallback_0204f12c UpdateDisplayObjectListImmediate
 #define FeedScrollTextLine_02062dc0 FeedScrollTextLine
 #define UpdateScrollTextScreens_02062990 UpdateScrollTextScreens
 #define func_0204f13c IndexedRecord_SetPair

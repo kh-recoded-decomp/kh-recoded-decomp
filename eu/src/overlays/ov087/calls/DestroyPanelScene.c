@@ -5,9 +5,9 @@
 #define ReleaseRecordSlot_02051dfc ReleaseRecordSlot
 #define ReleaseResourceAndDetach_0202eee8 ReleaseResourceAndDetach
 #define SetSecondaryElementEnabled_020bc084 SetSecondaryElementEnabled
-#define func_ov027_020b7f8c func_ov027_020b7fac
+#define func_ov027_020b7f8c DeactivateAllTrackerRecords
 #define func_ov027_020b903c ReleaseIfMarked
-#define func_ov027_020b9098 func_ov027_020b90b8
+#define func_ov027_020b9098 SetWidgetRootInputCallback
 #define func_ov039_020bc18c GetPrimaryMenuElement
 #define func_ov039_020bc1bc func_ov039_020bc1dc
 #define func_ov087_020c64d8 SetupPanelDisplay

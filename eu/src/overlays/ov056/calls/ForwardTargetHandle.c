@@ -1,3 +1,3 @@
 #define ForwardTargetHandle_020d3b24 ForwardTargetHandle
-#define func_ov021_020aafd4 func_ov021_020aaff4
+#define func_ov021_020aafd4 DrawEntrySource
 #include "src/ov056/unclassified_helpers/ForwardTargetHandle_020d3b24.c"

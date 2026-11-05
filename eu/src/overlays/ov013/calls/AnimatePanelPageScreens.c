@@ -1,5 +1,5 @@
 #define AnimatePanelPageScreens_02071094 AnimatePanelPageScreens
 #define GX_LoadBG1Scr_02007630 GX_LoadBG1Scr
-#define func_ov027_020b8558 func_ov027_020b8578
+#define func_ov027_020b8558 FindActiveBackgroundScreenResourceById
 #define g_panelState_02074ce0 data_ov013_02074ce0
 #include "src/ov013/panel_state/AnimatePanelPageScreens_02071094.c"

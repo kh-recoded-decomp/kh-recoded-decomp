@@ -1,6 +1,6 @@
 #define func_ov002_020629a8 ResetOv002PanelGraphics
 // redefine-sym eu_data_ov014_0206f8e0=gRecordPanelTileIds
-// redefine-sym eu_func_ov027_020b9098=func_ov027_020b9098
+// redefine-sym eu_func_ov027_020b9098=CreateWidgetImageEntry
 #define AcquireRecordSlot_02051d3c AcquireRecordSlot
 #define BuildPanelGroupEntries_0206f0a0 BuildPanelGroupEntries
 #define ChangePanelState_0206d1c0 ChangePanelState
@@ -56,11 +56,11 @@
 #define func_ov014_0206ea30 SetPanelInfoMode128
 #define func_ov014_0206ec14 RefreshPanelCategorySlots
 #define func_ov027_020b7d58 InitBackgroundContainer
-#define func_ov027_020b7e24 func_ov027_020b7e44
-#define func_ov027_020b8558 func_ov027_020b8578
-#define func_ov027_020b8f98 func_ov027_020b8fb8
+#define func_ov027_020b7e24 LoadTagTrackerResourceFile
+#define func_ov027_020b8558 FindActiveBackgroundScreenResourceById
+#define func_ov027_020b8f98 LoadWidgetDescriptorsFromFile
 #define func_ov027_020b9078 eu_func_ov027_020b9098
-#define func_ov027_020b9098 func_ov027_020b90b8
+#define func_ov027_020b9098 SetWidgetRootInputCallback
 #define func_ov027_020b90a4 FindWidgetById
 #define func_ov027_020b9580 SetEntrySlotsVisible
 #define func_ov027_020b95e4 ClearWidgetRecordActiveBits

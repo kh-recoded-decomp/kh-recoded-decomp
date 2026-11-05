@@ -21,7 +21,7 @@ extern void *GetSceneTagTracker(void);
 extern void *FindActiveRecordById(void *pool, u32 recordId);
 extern int MapFieldSlotIndex(int slot);
 extern int CountAssignedFieldSlots(void);
-extern void func_ov027_020b8200(void *pool, void *record, s16 y);
+extern void SetTrackerRecordY(void *pool, void *record, s16 y);
 extern void TagTracker_InvokeCallback(void *pool, void *record);
 
 void SetFieldSlotHudRecord(int slot, int kind, BOOL useKind)
@@ -48,7 +48,7 @@ void SetFieldSlotHudRecord(int slot, int kind, BOOL useKind)
         }
 
         int top = 22 - CountAssignedFieldSlots() * 2 + index * 2;
-        func_ov027_020b8200(pool, record, (s16)top);
+        SetTrackerRecordY(pool, record, (s16)top);
         TagTracker_InvokeCallback(pool, record);
     }
 }

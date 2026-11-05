@@ -27,7 +27,7 @@ typedef struct ModelGroup {
 extern VecFx32 data_ov056_020d7fb4;
 extern void VEC_Normalize(const VecFx32 *src, VecFx32 *dst);
 extern void VEC_CrossProduct(const VecFx32 *a, const VecFx32 *b, VecFx32 *dst);
-extern void func_ov021_020ae8ac(u16 *node);
+extern void DrawModelOutsideCameraProximity(u16 *node);
 
 void UpdateEntryRotations(ModelGroup *group)
 {
@@ -57,10 +57,10 @@ void UpdateEntryRotations(ModelGroup *group)
             rotation._22 = zAxis.z;
             entry->rotation = rotation;
             entry->nodeFlags &= ~0x20;
-            func_ov021_020ae8ac(&entry->nodeFlags);
+            DrawModelOutsideCameraProximity(&entry->nodeFlags);
         }
     }
     if (group->groupFlags & 1) {
-        func_ov021_020ae8ac(&group->groupNode);
+        DrawModelOutsideCameraProximity(&group->groupNode);
     }
 }

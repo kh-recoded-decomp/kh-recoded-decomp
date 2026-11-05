@@ -4,7 +4,7 @@
 #define LoadBitIndexTable_020c5160 LoadBitIndexTable
 #define LoadPackedFileView_020ba25c LoadPackedFileView
 #define Msg_OpenContainerAndReadHeader_0202cc6c Msg_OpenContainerAndReadHeader
-#define PXI_Init_020b9078 func_ov027_020b9098
+#define PXI_Init_020b9078 CreateWidgetImageEntry
 #define data_020c5c44 data_ov081_020c5c64
 #define data_020c5c54 data_ov081_020c5c74
 #define data_020c5ce4 sOv081_UiMenuTutorialP2_020c5d04
@@ -14,7 +14,7 @@
 #define data_020c5d80 data_ov081_020c5da0
 #define func_02052514 ConfigureTween
 #define func_0205255c StartTween
-#define func_ov027_020b8f98 func_ov027_020b8fb8
+#define func_ov027_020b8f98 LoadWidgetDescriptorsFromFile
 #define func_ov027_020b97b8 SetWidgetRecordMode
 #define func_ov039_020bc1bc func_ov039_020bc1dc
 #define func_ov039_020bc1cc GetMenuWidgetContainer

@@ -1,8 +1,8 @@
 #include "nitro/types.h"
 
-extern unsigned int func_ov021_020aaff4();
+extern unsigned int DrawEntrySource();
 
 void DrawSceneTaskEffectEntries(unsigned int unused,int entry) {
 
-  (*func_ov021_020aaff4)(*(unsigned int *)(entry + 88));
+  (*DrawEntrySource)(*(unsigned int *)(entry + 88));
 }

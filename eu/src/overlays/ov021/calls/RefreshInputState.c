@@ -1,5 +1,5 @@
 #define Camera_IsFlag3JustSet_020c298c Camera_IsFlag3JustSet
 #define QuerySubModeStatus_020af3f4 QuerySubModeStatus
 #define RefreshInputState_020a6edc RefreshInputState
-#define func_ov021_020af3e8 func_ov021_020af408
+#define func_ov021_020af3e8 GetActiveSubMode
 #include "src/ov021/unclassified_helpers/RefreshInputState_020a6edc.c"

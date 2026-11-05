@@ -12,10 +12,10 @@
 #define SetTextColorIfFits_020bcd04 SetTextColorIfFits
 #define DrawTextAnchored_020015a0 DrawTextAnchored
 #define BuildSlotImageParams_020bc220 BuildSlotImageParams
-#define func_ov027_020b7e24 func_ov027_020b7e44
+#define func_ov027_020b7e24 LoadTagTrackerResourceFile
 #define FindActiveRecordById_020b8184 FindActiveRecordById
 #define AddRecordFromTemplate_020b7ecc AddRecordFromTemplate
-#define func_ov027_020b81e8 func_ov027_020b8208
+#define func_ov027_020b81e8 SetTrackerRecordPosition
 #define FindLoadedElementById_020b8390 FindLoadedElementById
 #define apply_all_pending_entry_edits_020b84f4 apply_all_pending_entry_edits
 #define SetTagRecordArmed_020b83e8 SetTagRecordArmed

@@ -8,14 +8,14 @@ typedef struct AuraBattleWork {
 } AuraBattleWork;
 
 extern void ZeroHalfThenFree(void *ptr);
-extern void func_ov021_020adfd8(AuraBattleWork *work, u32 flags);
+extern void ReleaseScriptedEffectTaskExtraResources(AuraBattleWork *work, u32 flags);
 extern void CameraPath_Free(void *path);
 extern void NNSi_FndFreeFromDefaultHeap(void *ptr);
 
 void ReleaseAuraBattleResources(AuraBattleWork *work, u32 flags)
 {
     ZeroHalfThenFree(work->resourceBlock);
-    func_ov021_020adfd8(work, flags);
+    ReleaseScriptedEffectTaskExtraResources(work, flags);
     CameraPath_Free(work->cameraPath);
     NNSi_FndFreeFromDefaultHeap(work->cameraPath);
 }

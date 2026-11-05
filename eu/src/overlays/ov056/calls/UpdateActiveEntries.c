@@ -1,4 +1,4 @@
 #define UpdateActiveEntries_020d4a40 UpdateActiveEntries
 #define func_ov021_020ab370 DrawOrientedModel
-#define func_ov021_020ae88c func_ov021_020ae8ac
+#define func_ov021_020ae88c DrawModelOutsideCameraProximity
 #include "src/ov056/unclassified_helpers/UpdateActiveEntries_020d4a40.c"

@@ -1,4 +1,4 @@
 #define ClearTileTableRowAndMarkDirty_020b9d18 ClearTileTableRowAndMarkDirty
-#define func_ov027_020b9cd8 func_ov027_020b9cf8
+#define func_ov027_020b9cd8 ClearTileTableRowById
 
 #include "src/ov027/resource_container/ClearTileTableRowAndMarkDirty_020b9d18.c"

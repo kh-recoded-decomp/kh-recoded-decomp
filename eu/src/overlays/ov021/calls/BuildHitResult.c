@@ -7,5 +7,5 @@
 #define VEC_Add_01ff9e0c VEC_Add
 #define func_ov001_020863e0 func_ov001_02086408
 #define func_ov021_020abebc ComputeKnockbackVector
-#define func_ov021_020ac148 func_ov021_020ac168
+#define func_ov021_020ac148 InitHitResultHeader
 #include "src/ov021/object_state/BuildHitResult_020abb50.c"

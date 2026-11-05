@@ -106,7 +106,7 @@ extern void GX_SetBankForSubOBJExtPltt(int bank);
 extern void GX_SetBankForOBJExtPltt(int bank);
 extern void ResetOv002PanelGraphics(void);
 extern void InitBackgroundContainer(void *container, const BgContainerConfig *config);
-extern void func_ov027_020b7e44(void *container, u32 resourceId);
+extern void LoadTagTrackerResourceFile(void *container, u32 resourceId);
 extern void *LoadFileAllocFromHeapTail(u32 resourceId, u32 kind);
 extern void GetBgDataFromArchive(BgGraphicsData *out, void *archive, int screenIndex, int characterIndex,
                                  int paletteIndex);
@@ -119,12 +119,12 @@ extern void GXS_LoadBG0Char(void *data, u32 offset, u32 size);
 extern void GXS_LoadBG0Scr(void *data, u32 offset, u32 size);
 extern void GXS_LoadBG1Scr(void *data, u32 offset, u32 size);
 extern void NNSi_FndFreeFromDefaultHeap(void *block);
-extern BgEntry *func_ov027_020b8578(void *container, int entryId);
+extern BgEntry *FindActiveBackgroundScreenResourceById(void *container, int entryId);
 extern BgRecord *FindActiveRecordById(void *container, int id);
 extern void InitializeResourceContainer(void *container, ObjManagerConfig *config);
 extern void InitObjManagerAndMark(void *container, ObjManagerConfig *config);
-extern void func_ov027_020b9098(void *container, u32 value);
-extern void func_ov027_020b8fb8(void *container, u32 resourceId, int count);
+extern void CreateWidgetImageEntry(void *container, u32 value);
+extern void LoadWidgetDescriptorsFromFile(void *container, u32 resourceId, int count);
 extern void SetAllElementObjectModes(void *container, int mode);
 extern void *FindWidgetById(void *container, int id);
 extern void SetIndexedRecordPriority(void *container, int animIndex, int value);
@@ -141,7 +141,7 @@ extern void SetGroupSlotsVisible(void *container, RecordSelectionView *view, BOO
 extern void SetWidgetRootDpadEnabled(void *container, BOOL enabled);
 extern void SetWidgetRootTouchEnabled(void *container, BOOL enabled);
 extern void SetFocusedWidget(void *container, void *element);
-extern void func_ov027_020b90b8(void *container, void (*callback)(void *element));
+extern void SetWidgetRootInputCallback(void *container, void (*callback)(void *element));
 extern void ResolveEntryStoreWord(void *container, int id, void (*callback)(void *element));
 extern fx32 NextSharedRandom16Scaled(u32 range);
 extern void ChangeMenuState(int state);
@@ -228,7 +228,7 @@ void InitMenuContext(int entryMode)
     mainObjConfig.cellResourceId = RESOURCE_KEY(data_ov002_0206c464->messageHandle, 2);
     mainObjConfig.animResourceId = RESOURCE_KEY(data_ov002_0206c464->messageHandle, 3);
     InitBackgroundContainer(data_ov002_0206c464->mainBg, &mainBgConfig);
-    func_ov027_020b7e44(data_ov002_0206c464->mainBg, RESOURCE_KEY(data_ov002_0206c464->messageHandle, 0));
+    LoadTagTrackerResourceFile(data_ov002_0206c464->mainBg, RESOURCE_KEY(data_ov002_0206c464->messageHandle, 0));
     archive = LoadFileAllocFromHeapTail(RESOURCE_KEY(data_ov002_0206c464->messageHandle, 1), 0x10);
     GetBgDataFromArchive(&bgData, archive, -1, 0, 0);
     GX_LoadBGPltt(bgData.palette->data, 0, bgData.palette->size);
@@ -238,16 +238,16 @@ void InitMenuContext(int entryMode)
     GetBgDataFromArchive(&bgData, archive, -1, 0, 0);
     GX_LoadBG0Char(bgData.character->data, 0x7000, bgData.character->size);
     NNSi_FndFreeFromDefaultHeap(archive);
-    entry = func_ov027_020b8578(data_ov002_0206c464->mainBg, 0);
+    entry = FindActiveBackgroundScreenResourceById(data_ov002_0206c464->mainBg, 0);
     GX_LoadBG1Scr(entry->screen->data, 0, entry->screen->size);
-    entry = func_ov027_020b8578(data_ov002_0206c464->mainBg, 2);
+    entry = FindActiveBackgroundScreenResourceById(data_ov002_0206c464->mainBg, 2);
     GX_LoadBG0Scr(entry->screen->data, FindActiveRecordById(data_ov002_0206c464->mainBg, 2)->scrollY << 6,
                   entry->screen->size);
 
     InitializeResourceContainer(data_ov002_0206c464->mainObj, NULL);
     InitObjManagerAndMark(data_ov002_0206c464->mainObj, &mainObjConfig);
-    func_ov027_020b9098(data_ov002_0206c464->mainObj, gPanelUiResourcePaths[1]);
-    func_ov027_020b8fb8(data_ov002_0206c464->mainObj, mainObjConfig.animResourceId, 0x14);
+    CreateWidgetImageEntry(data_ov002_0206c464->mainObj, gPanelUiResourcePaths[1]);
+    LoadWidgetDescriptorsFromFile(data_ov002_0206c464->mainObj, mainObjConfig.animResourceId, 0x14);
     SetAllElementObjectModes(data_ov002_0206c464->mainObj, 3);
     SetElementMode(data_ov002_0206c464->mainObj, 4, 0);
     SetElementMode(data_ov002_0206c464->mainObj, 5, 0);
@@ -282,21 +282,21 @@ void InitMenuContext(int entryMode)
     subObjConfig.cellResourceId = RESOURCE_KEY(data_ov002_0206c464->messageHandle, 6);
     subObjConfig.animResourceId = RESOURCE_KEY(data_ov002_0206c464->messageHandle, 7);
     InitBackgroundContainer(data_ov002_0206c464->subBg, &subBgConfig);
-    func_ov027_020b7e44(data_ov002_0206c464->subBg, RESOURCE_KEY(data_ov002_0206c464->messageHandle, 4));
+    LoadTagTrackerResourceFile(data_ov002_0206c464->subBg, RESOURCE_KEY(data_ov002_0206c464->messageHandle, 4));
     subArchive = LoadFileAllocFromHeapTail(RESOURCE_KEY(data_ov002_0206c464->messageHandle, 5), 0x10);
     GetBgDataFromArchive(&bgData, subArchive, -1, 0, 0);
     GXS_LoadBGPltt(bgData.palette->data, 0, bgData.palette->size);
     GXS_LoadBG0Char(bgData.character->data, 0, bgData.character->size);
-    entry = func_ov027_020b8578(data_ov002_0206c464->subBg, 0);
+    entry = FindActiveBackgroundScreenResourceById(data_ov002_0206c464->subBg, 0);
     GXS_LoadBG1Scr(entry->screen->data, 0, entry->screen->size);
-    entry = func_ov027_020b8578(data_ov002_0206c464->subBg, 2);
+    entry = FindActiveBackgroundScreenResourceById(data_ov002_0206c464->subBg, 2);
     record = FindActiveRecordById(data_ov002_0206c464->subBg, 2);
     GXS_LoadBG0Scr(entry->screen->data, record->scrollY << 6, entry->screen->size);
 
     InitializeResourceContainer(data_ov002_0206c464->subObj, NULL);
     InitObjManagerAndMark(data_ov002_0206c464->subObj, &subObjConfig);
-    func_ov027_020b9098(data_ov002_0206c464->subObj, gPanelUiResourcePaths[3]);
-    func_ov027_020b8fb8(data_ov002_0206c464->subObj, subObjConfig.animResourceId, 0xd);
+    CreateWidgetImageEntry(data_ov002_0206c464->subObj, gPanelUiResourcePaths[3]);
+    LoadWidgetDescriptorsFromFile(data_ov002_0206c464->subObj, subObjConfig.animResourceId, 0xd);
     SetAllElementObjectModes(data_ov002_0206c464->subObj, 3);
     SetWidgetRecordMode(data_ov002_0206c464->subObj, (const struct WidgetPositionRecord *)(FindWidgetById(data_ov002_0206c464->subObj, 11)), 1);
     SetWidgetRecordMode(data_ov002_0206c464->subObj, (const struct WidgetPositionRecord *)(FindWidgetById(data_ov002_0206c464->subObj, 12)), 1);
@@ -379,7 +379,7 @@ void InitMenuContext(int entryMode)
         break;
     }
     SetFocusedWidget(data_ov002_0206c464->subObj, FindWidgetById(data_ov002_0206c464->subObj, focus));
-    func_ov027_020b90b8(data_ov002_0206c464->subObj, OnPopupElementTouched);
+    SetWidgetRootInputCallback(data_ov002_0206c464->subObj, OnPopupElementTouched);
     ResolveEntryStoreWord(data_ov002_0206c464->subObj, 1, SelectMenuEntry1);
     ResolveEntryStoreWord(data_ov002_0206c464->subObj, 2, SelectMenuEntry2);
     ResolveEntryStoreWord(data_ov002_0206c464->subObj, 3, SelectMenuEntry3);

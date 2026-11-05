@@ -1,4 +1,4 @@
-#define AlarmCallback_0204f12c AlarmCallback_0204f140
+#define AlarmCallback_0204f12c UpdateDisplayObjectListImmediate
 #define CloseStatusScreen_020c1864 CloseStatusScreen
 #define FillBackgroundLayerRect_02001a60 FillBackgroundLayerRect
 #define FindWidgetById_020b90a4 FindWidgetById

@@ -1,0 +1,4 @@
+#define func_0202a1c4 NNSi_FndFreeFromDefaultHeap
+#define func_020b831c SweepElements
+#define func_ov027_020b7dfc FreeTagTrackerPools
+#include "src/ov027/reviewed_helpers/func_ov027_020b7dfc.c"

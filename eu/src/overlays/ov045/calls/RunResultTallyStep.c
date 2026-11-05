@@ -140,7 +140,7 @@ extern Record *FindActiveRecordById(void *pool, u16 recordId);
 extern void InvokeCallback40(void *pool, Record *record);
 extern void *GetFieldSceneManager(void);
 extern void ClearTileTableRowAndMarkDirty(void *table, int row);
-extern void func_ov027_020b7df4(void *pool);
+extern void UpdateTagTrackerAndTouch(void *pool);
 extern int NNS_GfdRegisterNewVramTransferTask(int engine, int offset, void *src, int size);
 
 int RunResultTallyStep(void)
@@ -458,7 +458,7 @@ int RunResultTallyStep(void)
         break;
     }
     }
-    func_ov027_020b7df4(work->records);
+    UpdateTagTrackerAndTouch(work->records);
     SetMenuOrthoCamera(0, 0x100000, 0, 0xc0000);
     DrawLayeredPanel(&work->panel, work->step >= 1);
     if (work->screensDirty) {

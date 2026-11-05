@@ -1,4 +1,4 @@
 #define FixedPointAtan2_020062bc FX_Atan2Idx
 #define UpdateGroupAngles_020aeacc UpdateGroupAngles
-#define func_ov021_020ae88c func_ov021_020ae8ac
+#define func_ov021_020ae88c DrawModelOutsideCameraProximity
 #include "src/ov021/shared_engine/UpdateGroupAngles_020aeacc.c"

@@ -18,7 +18,7 @@ extern MenuContext *data_ov002_0206c464;
 extern MenuStateCallbacks gMenuStateTable[];
 extern void ScrollMenuClouds(void);
 extern void UpdateDriftingPanelWidgets(void);
-extern void NNS_FndInitListWithOffset0_0204f130(void *list);
+extern void UpdateDisplayObjectListQueued(void *list);
 extern u32 IsScreenFadeComplete(void);
 
 int UpdateMenuContext(void)
@@ -26,8 +26,8 @@ int UpdateMenuContext(void)
     gMenuStateTable[data_ov002_0206c464->state].update();
     ScrollMenuClouds();
     UpdateDriftingPanelWidgets();
-    NNS_FndInitListWithOffset0_0204f130(data_ov002_0206c464->listA);
-    NNS_FndInitListWithOffset0_0204f130(data_ov002_0206c464->listB);
+    UpdateDisplayObjectListQueued(data_ov002_0206c464->listA);
+    UpdateDisplayObjectListQueued(data_ov002_0206c464->listB);
     if (IsScreenFadeComplete()) {
         return data_ov002_0206c464->result;
     }

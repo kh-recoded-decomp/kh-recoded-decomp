@@ -32,7 +32,7 @@ src/overlays/ov023/calls/DestroyResourceCache.c:
     complete
     .text       start:0x020b5a28 end:0x020b5a4c
 
-src/overlays/ov023/auto/func_ov023_020b5a4c.c:
+src/overlays/ov023/auto/MenuResourceCacheIdleUpdate.c:
     complete
     .text       start:0x020b5a4c end:0x020b5a50
 

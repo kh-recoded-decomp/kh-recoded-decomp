@@ -11,5 +11,5 @@
 #define func_02014d38 NNS_G2dGetUnpackedBGCharacterData
 #define func_0202c48c LoadFileAllocFromHeapTail
 #define func_ov027_020b7d58 InitBackgroundContainer
-#define func_ov027_020b7e24 func_ov027_020b7e44
+#define func_ov027_020b7e24 LoadTagTrackerResourceFile
 #include "src/ov086/panel_state/LoadRecordSubScreenGraphics_020c0f08.c"

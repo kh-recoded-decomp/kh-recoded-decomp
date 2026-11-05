@@ -1,0 +1,7 @@
+#define func_0202a1c4 NNSi_FndFreeFromDefaultHeap
+#define func_0202c48c LoadFileAllocFromHeapTail
+#define func_020b7780 LoadTrackerScreenResourcesFromSection
+#define func_020b77c0 build_and_place_record_sprites
+#define func_020b7828 CreateTrackerTagSequencesFromSection
+#define func_ov027_020b7e24 LoadTagTrackerResourceFile
+#include "src/ov027/reviewed_helpers/func_ov027_020b7e24.c"

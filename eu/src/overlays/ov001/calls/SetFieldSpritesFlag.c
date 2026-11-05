@@ -14,7 +14,7 @@ typedef struct FieldSpriteSet {
 } FieldSpriteSet;
 
 extern FieldSpriteSet *data_ov001_020a04bc;
-extern void func_ov021_020a7510(void *cell);
+extern void ClearFieldButtonInput(void *cell);
 
 void SetFieldSpritesFlag(BOOL enable)
 {
@@ -30,7 +30,7 @@ void SetFieldSpritesFlag(BOOL enable)
             } else {
                 sprite->flags &= ~0x20;
             }
-            func_ov021_020a7510(sprite->cell);
+            ClearFieldButtonInput(sprite->cell);
         }
     }
 }

@@ -31,12 +31,12 @@ extern char OVERLAY_56_ID[];
 extern char OVERLAY_58_ID[];
 extern void InitializeEntryGroupRegistry(void);
 extern void EnsureFieldMessageLoaderManager(void);
-extern void func_ov021_020a7cb0(void);
+extern void OpenCharacterSoundCueArchive(void);
 extern void LoadMsgContainers(void);
 extern int *AcquireMapLayout(BOOL reload, BOOL discard);
 extern void LoadOverlayAfterGeometryTransfer(int processor, int overlayId);
 extern int LoadOverlayForMode(unsigned int selectionIndex, int mode);
-extern void func_ov021_020a7480(void *tracker, int index);
+extern void InitFieldButtonForEntryIndex(void *tracker, int index);
 extern void LoadModeSprites(void);
 extern void CreateFieldEffectGroups(void);
 extern void ClearHandleActiveFlags(void);
@@ -54,7 +54,7 @@ void InitPartyState(int mode) {
     party->selected = mode;
     InitializeEntryGroupRegistry();
     EnsureFieldMessageLoaderManager();
-    func_ov021_020a7cb0();
+    OpenCharacterSoundCueArchive();
     LoadMsgContainers();
     AcquireMapLayout(FALSE, FALSE);
     LoadOverlayAfterGeometryTransfer(0, (int)OVERLAY_51_ID);
@@ -78,7 +78,7 @@ void InitPartyState(int mode) {
         entry->overlayId = LoadOverlayForMode(i, mode);
         if (data_ov001_020a04bc.factory != NULL) {
             entry->actor = data_ov001_020a04bc.factory(i);
-            func_ov021_020a7480(entry->tracker, i);
+            InitFieldButtonForEntryIndex(entry->tracker, i);
             entry->flags |= 1;
             entry->flags |= 0x10;
         }

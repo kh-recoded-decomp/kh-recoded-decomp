@@ -1,6 +1,6 @@
 #define defaultGridSettings data_ov088_020bee6c
 #define func_ov001_02064574 ReadSessionPackedBits
-#define func_ov027_020b8f98 func_ov027_020b8fb8
+#define func_ov027_020b8f98 LoadWidgetDescriptorsFromFile
 #define func_ov027_020b9060 InitObjManagerAndMark
 #define func_ov027_020b90a4 FindWidgetById
 #define func_ov027_020b95e4 ClearWidgetRecordActiveBits

@@ -2,7 +2,7 @@
 
 extern u32 GetLoadedSubsceneMode(void);
 extern u32 GetSubsceneReadyValue(void);
-extern void func_ov025_020b619c(void);
+extern void ResetMenuListToFirstEntry(void);
 
 void ResetPanelListToFirstEntryIfReady(void)
 {
@@ -10,6 +10,6 @@ void ResetPanelListToFirstEntryIfReady(void)
 
     fault = GetLoadedSubsceneMode();
     if ((fault == 2) && (fault = GetSubsceneReadyValue(), fault != 0)) {
-        func_ov025_020b619c();
+        ResetMenuListToFirstEntry();
     }
 }

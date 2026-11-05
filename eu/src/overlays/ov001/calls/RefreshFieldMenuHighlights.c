@@ -10,6 +10,6 @@
 #define UpdateWidgetLayerDefault_020b9df0 UpdateWidgetLayerDefault_020b9e10
 #define func_ov001_02075348 CycleMenuEntry
 #define func_ov001_02075ccc UpdateFieldPromptTag
-#define func_ov027_020b822c func_ov027_020b824c
+#define func_ov027_020b822c InvokeTrackerRecordAtPosition
 #define func_ov027_020b9d54 ClearTileTableRect
 #include "src/ov001/field_manager/RefreshFieldMenuHighlights_02076cac.c"

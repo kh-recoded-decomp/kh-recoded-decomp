@@ -57,7 +57,7 @@ extern GameSettings *data_0205fe0c;
 extern const VecFx32 gZeroVecFx32;
 
 extern void *GetPlayerControlState(u32 playerIndex);
-extern BOOL func_ov021_020a7524(void *input);
+extern BOOL GetFieldDirectionActiveAndPollSubMode(void *input);
 extern s32 Actor_SelectInputState(Actor *actor, JumpState *jump);
 extern s32 Actor_DispatchSharedControlAction(Actor *actor);
 extern u16 QuantizeSummedAngle(void *input);
@@ -103,7 +103,7 @@ static inline fx32 StickScale(s16 cosine, BOOL airborne)
 void Actor_UpdateGroundMove(Actor *actor)
 {
     void *input = GetPlayerControlState(actor->playerIndex);
-    BOOL tilted = func_ov021_020a7524(input);
+    BOOL tilted = GetFieldDirectionActiveAndPollSubMode(input);
     s32 state;
     s8 phase = actor->jump.phase;
     BOOL airborne = phase != -1;

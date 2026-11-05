@@ -18,8 +18,8 @@ extern void SampleTweenValue(void *tween, s32 *value);
 extern void SetClampedFadeLevel(WidgetRoot *root, int level);
 extern BOOL RouteNewTouchToWidget(WidgetRoot *root);
 extern void MoveFocusByDpad(WidgetRoot *root, u16 keys);
-extern void AlarmCallback_0204f140(WidgetRoot *root);
-extern void NNS_FndInitListWithOffset0_0204f130(WidgetRoot *root);
+extern void UpdateDisplayObjectListImmediate(WidgetRoot *root);
+extern void UpdateDisplayObjectListQueued(WidgetRoot *root);
 
 void UpdateWidgetRoot(WidgetRoot *root, u16 keys, BOOL notify, BOOL fireAlarm)
 {
@@ -43,9 +43,9 @@ void UpdateWidgetRoot(WidgetRoot *root, u16 keys, BOOL notify, BOOL fireAlarm)
     }
     if (notify) {
         if (fireAlarm) {
-            AlarmCallback_0204f140(root);
+            UpdateDisplayObjectListImmediate(root);
         } else {
-            NNS_FndInitListWithOffset0_0204f130(root);
+            UpdateDisplayObjectListQueued(root);
         }
     }
 }

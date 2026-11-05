@@ -1,0 +1,2 @@
+#define FSi_CloseFileCommand_020b4880 StageScriptOp_DefaultNoOp
+#include "src/ov021/library_nitro_fs/FSi_CloseFileCommand_020b4880.c"

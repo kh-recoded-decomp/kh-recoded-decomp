@@ -2,7 +2,7 @@
 #define func_01ffb12c SceneNode_Draw
 #define func_ov059_020c9048 Actor_DrawPendingEffectNode
 #define func_ov021_020a9af0 DrawModelWithAttachment
-#define func_ov021_020aafd4 func_ov021_020aaff4
+#define func_ov021_020aafd4 DrawEntrySource
 #define func_ov059_020cd0e4 GetLinkedAngleOffset_020cd104
 #define func_ov021_020a8b44 DrawAllGroupSlots
 #define func_ov059_020c7ee4 Actor_DrawGroundShadow

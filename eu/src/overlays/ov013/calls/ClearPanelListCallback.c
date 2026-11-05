@@ -1,3 +1,3 @@
 #define ClearPanelListCallback_020738ec ClearPanelListCallback
-#define func_ov027_020b9098 func_ov027_020b90b8
+#define func_ov027_020b9098 SetWidgetRootInputCallback
 #include "src/ov013/panel_state/ClearPanelListCallback_020738ec.c"

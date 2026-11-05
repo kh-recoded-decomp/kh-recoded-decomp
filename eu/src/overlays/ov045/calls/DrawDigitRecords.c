@@ -1,3 +1,3 @@
 #define DrawDigitRecords_020bf19c DrawDigitRecords
-#define func_ov027_020b822c func_ov027_020b824c
+#define func_ov027_020b822c InvokeTrackerRecordAtPosition
 #include "src/ov045/record_management/DrawDigitRecords_020bf19c.c"

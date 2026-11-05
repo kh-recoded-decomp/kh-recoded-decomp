@@ -41,7 +41,7 @@ extern SceneTagTracker *GetSceneTagTracker(void);
 extern SceneRecord *FindActiveRecordById(SceneTagTracker *tracker, u32 id);
 extern SceneRecord *CopyElementLayout(SceneTagTracker *tracker, SceneRecord *record, const SceneRecord *layout);
 extern SceneRecord *AddRecordFromTemplate(SceneTagTracker *tracker, const SceneRecord *layout, u16 id, int userData);
-extern void func_ov027_020b8208(SceneTagTracker *tracker, SceneRecord *record, s16 x, s16 y);
+extern void SetTrackerRecordPosition(SceneTagTracker *tracker, SceneRecord *record, s16 x, s16 y);
 extern void TagTracker_InvokeCallback(SceneTagTracker *tracker, SceneRecord *record);
 
 /* Two gauge rows share a marker; retain the first row's style until it is complete. */
@@ -77,7 +77,7 @@ void UpdateGaugeMarker(int row, BOOL filled, BOOL last)
         } else {
             s16 x = state->markerTemplates[0]->originX;
             record = AddRecordFromTemplate(tracker, state->markerTemplates[*style], id, 11);
-            func_ov027_020b8208(tracker, record, (s16)(x - half), state->markerTemplates[0]->originY);
+            SetTrackerRecordPosition(tracker, record, (s16)(x - half), state->markerTemplates[0]->originY);
         }
         TagTracker_InvokeCallback(tracker, record);
         *style = HUD_GAUGE_MARKER_NONE;

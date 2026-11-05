@@ -1,9 +1,9 @@
 #define func_ov001_0206db78 GetPlayerControlState
-#define AlarmCallback_020a7504 func_ov021_020a7524
+#define AlarmCallback_020a7504 GetFieldDirectionActiveAndPollSubMode
 #define FixedPointAtan2_020062bc FX_Atan2Idx
 #define UpdateFacingTowardTarget_020cec9c UpdateFacingTowardTarget
 #define VEC_Subtract_01ff9e3c VEC_Subtract
-#define func_ov021_020a7544 func_ov021_020a7564
+#define func_ov021_020a7544 GetSummedFieldDirectionAngle
 #define func_ov052_020ceb54 GetActorModelPosition
 #define func_ov052_020ceb7c GetLinkedAngleOffset
 #include "src/ov052/unclassified_helpers/UpdateFacingTowardTarget_020cec9c.c"

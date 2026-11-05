@@ -122,8 +122,8 @@ extern BOOL IsStageAllowedForMode(void);
 extern void *GetWorldMeshNamedEntry(int index);
 extern BOOL WorldNamedEntryHasKind(void *entry, u32 kind);
 extern fx32 VEC_DotProduct(const VecFx32 *a, const VecFx32 *b);
-extern BOOL func_ov021_020a7524(void *unit);
-extern u16 func_ov021_020a7564(void *unit);
+extern BOOL GetFieldDirectionActiveAndPollSubMode(void *unit);
+extern u16 GetSummedFieldDirectionAngle(void *unit);
 extern void VEC_MultAdd(fx32 scale, const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
 extern void VEC_Subtract(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
 extern fx32 VEC_NormalizeLength(const VecFx32 *src, VecFx32 *dst);
@@ -296,7 +296,7 @@ BOOL TryLedgeClimb(Actor *actor, ClimbState *state)
             if (found) {
                 climb = TRUE;
             }
-        } else if (actor->climbMode == 1 && func_ov021_020a7524(unit)) {
+        } else if (actor->climbMode == 1 && GetFieldDirectionActiveAndPollSubMode(unit)) {
             state->timer += 0x1000;
             boosted = TRUE;
         }
@@ -444,10 +444,10 @@ BOOL TryLedgeClimb(Actor *actor, ClimbState *state)
             state->speed = 0;
         }
     } else {
-        if (!func_ov021_020a7524(unit)) {
+        if (!GetFieldDirectionActiveAndPollSubMode(unit)) {
             return FALSE;
         }
-        index = func_ov021_020a7564(unit) >> 4;
+        index = GetSummedFieldDirectionAngle(unit) >> 4;
         facing.x = -gSinFx12Table[index];
         facing.z = -gSinFx12Table[(0x400 - index) & 0xfff];
         start = pos;

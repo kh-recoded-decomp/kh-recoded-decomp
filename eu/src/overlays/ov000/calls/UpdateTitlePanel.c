@@ -35,7 +35,7 @@ extern PanelStateHandlers gPanelStateHandlers[];
 
 extern Panel *GetRunningTaskWork(void);
 extern void SetPanelMode(Panel *panel, u32 mode);
-extern void NNS_FndInitListWithOffset0_0204f130(void *list);
+extern void UpdateDisplayObjectListQueued(void *list);
 extern u16 AdvanceAnimationTracks(void *animation, int delta);
 extern void SceneNode_Draw(void *animation);
 
@@ -58,7 +58,7 @@ int UpdateTitlePanel(void)
         }
     }
     if (panel->resetList) {
-        NNS_FndInitListWithOffset0_0204f130(panel->list);
+        UpdateDisplayObjectListQueued(panel->list);
     }
     if (panel->hasAnimation) {
         if (!panel->animationLooped && AdvanceAnimationTracks(panel->animation, 0x1000)) {

@@ -1,5 +1,5 @@
 #define ResetListToFirstEntry_020b74f0 ResetListToFirstEntry
-#define func_ov025_020b65c4 func_ov025_020b65e4
-#define func_ov025_020b6ca0 func_ov025_020b6cc0
-#define func_ov025_020b6d00 func_ov025_020b6d20
+#define func_ov025_020b65c4 RebuildListEntryStatesAndRedraw
+#define func_ov025_020b6ca0 SetListHighlightEntry
+#define func_ov025_020b6d00 SetListCursorEntry
 #include "src/ov025/status_menu/ResetListToFirstEntry_020b74f0.c"

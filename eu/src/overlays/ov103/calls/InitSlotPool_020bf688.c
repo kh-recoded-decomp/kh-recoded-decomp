@@ -1,3 +1,3 @@
 #define InitSlotPool_020bf668 InitSlotPool_020bf688
-#define NNS_FndInitListWithOffset0_0204f11c NNS_FndInitListWithOffset0_0204f130
+#define NNS_FndInitListWithOffset0_0204f11c UpdateDisplayObjectListQueued
 #include "src/ov103/panel_state/InitSlotPool_020bf668.c"

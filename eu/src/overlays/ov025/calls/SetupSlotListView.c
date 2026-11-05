@@ -5,5 +5,5 @@
 #define func_0204f0b4 PXI_Init_0204f0c8
 #define func_0204f13c IndexedRecord_SetPair
 #define func_020505a8 GetSelectionPackedValueBlock
-#define func_ov025_020b65c4 func_ov025_020b65e4
+#define func_ov025_020b65c4 RebuildListEntryStatesAndRedraw
 #include "src/ov025/status_menu/SetupSlotListView_020b6ab8.c"

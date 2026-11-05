@@ -8,5 +8,5 @@
 #define TryRequestEnemyAction_020d64dc TryRequestEnemyAction
 #define data_ov054_020d3700 gOv054WorkData
 #define func_ov001_0206db78 GetPlayerControlState
-#define func_ov021_020a81b8 func_ov021_020a81d8
+#define func_ov021_020a81b8 ReplaceActiveCueHandle
 #include "src/ov054/unclassified_helpers/HandleFieldMenuSelection_020d34b0.c"

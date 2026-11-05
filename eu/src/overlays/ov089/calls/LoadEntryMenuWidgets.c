@@ -8,8 +8,8 @@
 #define SetFocusedWidget_020b96e4 SetFocusedWidget
 #define SetWidgetRootDpadEnabled_020b9874 SetWidgetRootDpadEnabled
 #define data_ov089_020c0500 data_ov089_020c0520
-#define func_ov027_020b8f98 func_ov027_020b8fb8
-#define func_ov027_020b9098 func_ov027_020b90b8
+#define func_ov027_020b8f98 LoadWidgetDescriptorsFromFile
+#define func_ov027_020b9098 SetWidgetRootInputCallback
 #define func_ov039_020bc1bc func_ov039_020bc1dc
 #define func_ov089_020befc0 MovePopupCursorOnDirectionalInput
 #define func_ov089_020c040c ConfirmOrClosePopup

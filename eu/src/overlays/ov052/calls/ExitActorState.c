@@ -9,7 +9,7 @@
 #define IsField1078Clear_020d0668 IsField1078Clear
 #define ResetObjHandle_020aa4c8 ResetObjHandle
 #define SetActorPaused_020d12f0 SetActorPaused
-#define func_ov021_020a7504 func_ov021_020a7524
-#define func_ov021_020a7544 func_ov021_020a7564
+#define func_ov021_020a7504 GetFieldDirectionActiveAndPollSubMode
+#define func_ov021_020a7544 GetSummedFieldDirectionAngle
 #define func_ov052_020c9628 FilterEntityEventAndClearInhibitFlag
 #include "src/ov052/unclassified_helpers/ExitActorState_020ccfa4.c"

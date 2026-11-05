@@ -53,7 +53,7 @@ extern u16 data_027e0078[2][4];
 extern void SetupModelDrawState(ModelDrawObject *object, fx32 scale, const MtxFx33 *rotation, u32 alpha);
 extern void VEC_MultAdd(fx32 scale, const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
 extern void VEC_Subtract(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
-extern VecFx32 *func_ov021_020af5d4(void);
+extern VecFx32 *GetActiveCameraCullingOrigin(void);
 extern void TransformVectorByBasis(const VecFx32 *vec, const MtxFx33 *basis, VecFx32 *out);
 extern void SetModelFirstTexture(ModelDrawObject *object, fx32 *width, fx32 *height);
 extern void GXi_FlushCommandList(void);
@@ -82,7 +82,7 @@ void DrawTexturedBox(ModelDrawObject *object, fx32 size, const MtxFx33 *rotation
     } else {
         VEC_MultAdd(half, (const VecFx32 *)rotation->m[1], &center, &center);
     }
-    VEC_Subtract(func_ov021_020af5d4(), &center, &toCamera);
+    VEC_Subtract(GetActiveCameraCullingOrigin(), &center, &toCamera);
     if (rotation->_00 != FX32_ONE || rotation->_11 != FX32_ONE || rotation->_22 != FX32_ONE) {
         TransformVectorByBasis(&toCamera, rotation, &toCamera);
     }

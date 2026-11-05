@@ -6,6 +6,6 @@
 #define func_02007860 GXS_LoadBG3Scr
 #define func_02007be0 GXS_LoadBG3Char
 #define func_02023dbc _s32_div_f
-#define func_0204f12c AlarmCallback_0204f140
+#define func_0204f12c UpdateDisplayObjectListImmediate
 #define func_ov027_020b9df0 UpdateWidgetLayerDefault_020b9e10
 #include "src/ov023/menu_graphics/RefreshScaledMenuScreen_020b5a80.c"

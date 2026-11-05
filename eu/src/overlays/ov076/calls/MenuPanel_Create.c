@@ -17,8 +17,8 @@
 #define func_ov039_020bca00 GetMenuInputState
 #define func_0202cc6c Msg_OpenContainerAndReadHeader
 #define InitObjManagerAndMark_020b9060 InitObjManagerAndMark
-#define func_ov027_020b9078 func_ov027_020b9098
-#define func_ov027_020b8f98 func_ov027_020b8fb8
+#define func_ov027_020b9078 CreateWidgetImageEntry
+#define func_ov027_020b8f98 LoadWidgetDescriptorsFromFile
 #define func_ov027_020b90a4 FindWidgetById
 #define func_ov027_020b95e4 ClearWidgetRecordActiveBits
 #define func_ov027_020b96a0 SetWidgetAnimationFrame

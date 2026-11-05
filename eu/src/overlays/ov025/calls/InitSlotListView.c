@@ -5,6 +5,6 @@
 #define SetParamWord8_02050620 SetParamWord8
 #define func_01ff8830 MI_CpuFill8
 #define func_020505a8 GetSelectionPackedValueBlock
-#define func_ov025_020b6ca0 func_ov025_020b6cc0
-#define func_ov025_020b6d00 func_ov025_020b6d20
+#define func_ov025_020b6ca0 SetListHighlightEntry
+#define func_ov025_020b6d00 SetListCursorEntry
 #include "src/ov025/status_menu/InitSlotListView_020b7068.c"

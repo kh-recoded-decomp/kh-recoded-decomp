@@ -1,6 +1,6 @@
 #define ClearCircleMask_02079228 ClearCircleMask
 #define ConvertTileGrid_02078d14 ConvertTileGrid
-#define NNS_FndInitListWithOffset0_0204f11c NNS_FndInitListWithOffset0_0204f130
+#define NNS_FndInitListWithOffset0_0204f11c UpdateDisplayObjectListQueued
 #define SetEntrySlotsVisible_020b9580 SetEntrySlotsVisible
 #define UpdatePanelBoard_020764c4 UpdatePanelBoard
 #define data_ov015_0207e884 gWirelessModeDataTables

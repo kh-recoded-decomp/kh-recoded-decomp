@@ -4,7 +4,7 @@ extern u32 data_ov025_020b7780;
 extern char sOv025_Ocuitask_020b775c[];
 
 extern u32 MakePrimaryVramKey(u32 id);
-extern void func_ov027_020b7e44(u32 ctx, u32 id);
+extern void LoadTagTrackerResourceFile(u32 ctx, u32 id);
 extern u32 FindActiveRecordById(u32 ctx, u32 id);
 extern void TagTracker_InvokeCallback(int *tracker, int arg);
 extern void AdvanceMenuDelayCounter(u32 ctx);
@@ -17,7 +17,7 @@ u32 RefreshTagCallbacksAndSchedule(void)
     u32 sound = MakePrimaryVramKey(0x6a);
     u32 tag;
 
-    func_ov027_020b7e44(ctx, sound);
+    LoadTagTrackerResourceFile(ctx, sound);
     tag = FindActiveRecordById(ctx, 0);
     TagTracker_InvokeCallback((int *)ctx, tag);
     tag = FindActiveRecordById(ctx, 1);

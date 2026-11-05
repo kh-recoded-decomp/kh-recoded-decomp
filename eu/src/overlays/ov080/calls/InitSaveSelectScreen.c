@@ -21,9 +21,9 @@
 #define func_ov039_020bc1bc func_ov039_020bc1dc
 #define BuildSlotImageParams_020bc220 BuildSlotImageParams
 #define InitObjManagerAndMark_020b9060 InitObjManagerAndMark
-#define PXI_Init_020b9078 func_ov027_020b9098
-#define func_ov027_020b8f98 func_ov027_020b8fb8
-#define func_ov027_020b7e24 func_ov027_020b7e44
+#define PXI_Init_020b9078 CreateWidgetImageEntry
+#define func_ov027_020b8f98 LoadWidgetDescriptorsFromFile
+#define func_ov027_020b7e24 LoadTagTrackerResourceFile
 #define FindActiveRecordById_020b8184 FindActiveRecordById
 #define FindWidgetById_020b90a4 FindWidgetById
 #define func_ov027_020b91c8 SetWidgetPosition
@@ -35,7 +35,7 @@
 #define data_ov080_020c5d28 gSaveSelectObjManagerConfig
 #define data_ov080_020c5d48 data_ov080_020c5d68
 #define AddRecordFromTemplate_020b7ecc AddRecordFromTemplate
-#define func_ov027_020b81e0 func_ov027_020b8200
+#define func_ov027_020b81e0 SetTrackerRecordY
 #define func_ov027_020b97b8 SetWidgetRecordMode
 #define func_ov039_020bc7e0 RuntimeState_SetFlags
 #define func_0204f498 SetBank6Word1C

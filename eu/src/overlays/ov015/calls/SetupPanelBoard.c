@@ -122,8 +122,8 @@ extern int *SlotTable_SetEntryPriority(u8 *records, int slot, int priority);
 
 extern int InitializeResourceContainer(void *container, void *config);
 extern void InitObjManagerAndMark(void *container, ObjManagerConfig *config);
-extern void func_ov027_020b9098(void *container, u32 fileId);
-extern void func_ov027_020b8fb8(void *container, u32 fileId, int count);
+extern void CreateWidgetImageEntry(void *container, u32 fileId);
+extern void LoadWidgetDescriptorsFromFile(void *container, u32 fileId, int count);
 extern void SetAllElementObjectModes(void *container, int mode);
 extern void *FindWidgetById(void *container, int elementId);
 extern void SetEntrySlotsVisible(void *container, void *element, int visible);
@@ -188,8 +188,8 @@ void SetupPanelBoard(void) {
     config.animFileId = ARCHIVE_FILE_ID(handleA, 0x10);
     InitializeResourceContainer(data_ov015_020812e0->container, NULL);
     InitObjManagerAndMark(data_ov015_020812e0->container, &config);
-    func_ov027_020b9098(data_ov015_020812e0->container, ARCHIVE_FILE_ID(handleB, 0x0b));
-    func_ov027_020b8fb8(data_ov015_020812e0->container, config.animFileId, config.count);
+    CreateWidgetImageEntry(data_ov015_020812e0->container, ARCHIVE_FILE_ID(handleB, 0x0b));
+    LoadWidgetDescriptorsFromFile(data_ov015_020812e0->container, config.animFileId, config.count);
     data_ov015_020812e0->records = data_ov015_020812e0->container;
     SetAllElementObjectModes(data_ov015_020812e0->container, 1);
     SetWidgetRecordMode(data_ov015_020812e0->container, (const struct WidgetPositionRecord *)(FindWidgetById(data_ov015_020812e0->container, 0x10)), 0);

@@ -1,7 +1,7 @@
 #define SetEntrySlotsVisible_020b9580 SetEntrySlotsVisible
 #define func_ov002_020643a0 DrawMenuLabels
 #define func_ov002_02064c9c ApplyMenuEntryValues
-#define func_ov027_020b9098 func_ov027_020b90b8
+#define func_ov027_020b9098 SetWidgetRootInputCallback
 #define func_ov027_020b90a4 FindWidgetById
 #define func_ov027_020b9620 SetWidgetRecordActiveBits
 #define func_ov027_020b96e4 SetFocusedWidget

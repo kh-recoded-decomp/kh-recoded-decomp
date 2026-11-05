@@ -3,8 +3,8 @@
 #define ABS(x) ((x) < 0 ? -(x) : (x))
 
 extern void HandleListInput(ListTouchView *list, u32 keys);
-extern void func_ov025_020b6cc0(ListTouchView *list, int index);
-extern void func_ov025_020b6d20(ListTouchView *list, int index);
+extern void SetListHighlightEntry(ListTouchView *list, int index);
+extern void SetListCursorEntry(ListTouchView *list, int index);
 
 void UpdateListScrollAnimation(ListTouchView *list, const ListTouchInput *touch,
                                u32 keys)
@@ -23,7 +23,7 @@ void UpdateListScrollAnimation(ListTouchView *list, const ListTouchInput *touch,
         } else {
             list->scrollPos += (delta / ABS(delta)) * 40;
         }
-        func_ov025_020b6cc0(list, list->selectedIndex);
-        func_ov025_020b6d20(list, list->cursorIndex);
+        SetListHighlightEntry(list, list->selectedIndex);
+        SetListCursorEntry(list, list->cursorIndex);
     }
 }

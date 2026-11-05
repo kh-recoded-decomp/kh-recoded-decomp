@@ -29,7 +29,7 @@ extern const VecFx32 gZeroVecFx32;
 
 extern void Actor_GetRootMotionDelta(Actor *actor, VecFx32 *target);
 extern void *func_ov001_0206db78(u32 playerIndex);
-extern BOOL func_ov021_020a7524(void *record);
+extern BOOL GetFieldDirectionActiveAndPollSubMode(void *record);
 extern BOOL HasFlagsAt0xc(void *record, u16 mask);
 extern BOOL Actor_TryAcquireTargetAngle(Actor *actor);
 extern void Actor_LatchSharedControlId1Trigger(Actor *actor);
@@ -49,7 +49,7 @@ void Actor_UpdateState5RootMotion(Actor *actor)
     Actor_GetRootMotionDelta(actor, &target);
     actor->moveTarget = target;
     record = func_ov001_0206db78(actor->playerIndex);
-    if (actor->animFrame >= 0x9000 && !(actor->statusFlags & 2) && func_ov021_020a7524(record) &&
+    if (actor->animFrame >= 0x9000 && !(actor->statusFlags & 2) && GetFieldDirectionActiveAndPollSubMode(record) &&
         HasFlagsAt0xc(record, 0x800) && Actor_TryAcquireTargetAngle(actor)) {
         actor->statusFlags |= 2;
     }

@@ -1,5 +1,5 @@
 #define Anim_GetFrame_0202f4a0 Anim_GetFrame
 #define UpdateSlotGroupEntries_020d3f1c UpdateSlotGroupEntries
-#define func_ov021_020aafc4 func_ov021_020aafe4
+#define func_ov021_020aafc4 UpdateEntrySource
 #define func_ov021_020ab2f0 RebindModelAnimTracks
 #include "src/ov056/unclassified_helpers/UpdateSlotGroupEntries_020d3f1c.c"

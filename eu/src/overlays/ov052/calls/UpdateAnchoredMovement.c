@@ -1,6 +1,6 @@
 #define func_ov001_02063a38 GetFieldSessionState
 #define func_ov001_0206db78 GetPlayerControlState
-#define AlarmCallback_020a7504 func_ov021_020a7524
+#define AlarmCallback_020a7504 GetFieldDirectionActiveAndPollSubMode
 #define EnterRecoilState_020c957c EnterRecoilState
 #define ForwardIfWorkMode12_0207fa14 ForwardIfWorkMode12
 #define GetLinkedAngleOffset_020ceb7c GetLinkedAngleOffset
@@ -13,7 +13,7 @@
 #define func_ov001_0207f038 GetFieldObjectByClassAndIndex
 #define func_ov001_020863cc func_ov001_020863f4
 #define func_ov001_02087224 GetFieldEntryByPoolAndIndex
-#define func_ov021_020a7544 func_ov021_020a7564
+#define func_ov021_020a7544 GetSummedFieldDirectionAngle
 #define func_ov052_020c9274 IsLedgeClimbSpaceClear
 #define func_ov052_020ceb60 SetActorModelPosition
 #include "src/ov052/actor_motion/UpdateAnchoredMovement_020cac00.c"

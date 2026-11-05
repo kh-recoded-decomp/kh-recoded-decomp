@@ -1,5 +1,5 @@
 #define func_ov001_0206db78 GetPlayerControlState
-#define AlarmCallback_020a7504 func_ov021_020a7524
+#define AlarmCallback_020a7504 GetFieldDirectionActiveAndPollSubMode
 #define FixedPointAtan2_020062bc FX_Atan2Idx
 #define FixedPointMultiply12 FX_Mul
 #define GetGroupMemberData_020a8eec GetGroupMemberData
@@ -9,7 +9,7 @@
 #define VEC_Add_01ff9e0c VEC_Add
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define data_0205356c gSinFx12Table
-#define func_ov021_020a7544 func_ov021_020a7564
+#define func_ov021_020a7544 GetSummedFieldDirectionAngle
 #define func_ov052_020cebbc ComputeFacingAndDirection
 #define func_ov052_020d012c ProcessTargetHitEntries
 #define func_ov052_020d0294 UpdateActionPhase

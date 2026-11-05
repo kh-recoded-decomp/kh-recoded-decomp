@@ -12,7 +12,7 @@ src/overlays/ov026/calls/BeginOverlayDisplaySession.c:
     complete
     .text       start:0x020b5868 end:0x020b58e8
 
-src/overlays/ov026/calls/func_ov026_020b58e8.c:
+src/overlays/ov026/calls/OverlayDisplaySessionNoOpCallback.c:
     complete
     .text       start:0x020b58e8 end:0x020b58f8
 

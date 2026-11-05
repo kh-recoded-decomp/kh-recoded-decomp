@@ -2,5 +2,5 @@
 #define func_020505a8 GetSelectionPackedValueBlock
 #define func_ov001_0207b3cc GetLoadedSubsceneMode
 #define func_ov001_0207b5e8 GetSubsceneReadyValue
-#define func_ov025_020b6310 func_ov025_020b6330
+#define func_ov025_020b6310 GetMenuListPathEntryCount
 #include "src/ov001/unclassified_helpers/GetPartySize_0207b590.c"

@@ -6,6 +6,6 @@
 #define TagTracker_InvokeCallback_020b8210 TagTracker_InvokeCallback
 #define UpdateArrowPromptTimer_0207d848 UpdateArrowPromptTimer
 #define func_0202a7a4 GetTaskUpdateCount
-#define func_ov027_020b81d8 func_ov027_020b81f8
+#define func_ov027_020b81d8 SetTrackerRecordX
 #define func_ov027_020b9d54 ClearTileTableRect
 #include "src/ov001/unclassified_helpers/UpdateArrowPromptTimer_0207d848.c"

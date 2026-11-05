@@ -1,0 +1,3 @@
+#define NNS_FndInitList GetSubModeState
+#define NNS_FndInitListWithOffset0_020a7510 GetFieldDirectionActive
+#include "src/ov021/library_nitro_nns/NNS_FndInitListWithOffset0_020a7510.c"

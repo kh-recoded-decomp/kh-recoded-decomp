@@ -1,0 +1,4 @@
+#define func_020b81e8 SetTrackerRecordPosition
+#define func_020b8210 TagTracker_InvokeCallback
+#define func_ov027_020b822c InvokeTrackerRecordAtPosition
+#include "src/ov027/reviewed_helpers/func_ov027_020b822c.c"

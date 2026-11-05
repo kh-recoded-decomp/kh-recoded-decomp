@@ -1,0 +1,19 @@
+#include "nitro/types.h"
+
+extern u32 VEC_Mag();
+extern u32 GetStageManager();
+extern u32 ResolveTaggedValueRef();
+
+u32 StageScriptExpr_StageVectorMagnitude(int self)
+{
+    s32 base;
+    s32 state;
+    u32 magnitude;
+
+    base = ResolveTaggedValueRef();
+    state = GetStageManager();
+    *(u16 *)(self + 0x2c) = 0x10;
+    magnitude = VEC_Mag(state + 0x18e60 + *(s32 *)(base + 4) * 0xc);
+    *(u32 *)(self + 0x30) = magnitude;
+    return 0;
+}

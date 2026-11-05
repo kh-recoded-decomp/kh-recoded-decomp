@@ -16,12 +16,12 @@ typedef struct Overlay27Timing {
 } Overlay27Timing;
 
 extern u8 *data_ov013_02074ce0;
-extern Overlay27Entry *func_ov027_020b8578(u8 *context, int entryId);
+extern Overlay27Entry *FindActiveBackgroundScreenResourceById(u8 *context, int entryId);
 extern Overlay27Timing *FindActiveRecordById(u8 *context, int entryId);
 extern void GXS_LoadBG0Scr(Overlay27Target *dest, s32 angle, s32 extra);
 
 void UploadOv013SubBg0ScreenEntry1(void) {
-    Overlay27Entry *entry = func_ov027_020b8578(data_ov013_02074ce0 + 0x350, 1);
+    Overlay27Entry *entry = FindActiveBackgroundScreenResourceById(data_ov013_02074ce0 + 0x350, 1);
     Overlay27Timing *timing = FindActiveRecordById(data_ov013_02074ce0 + 0x350, 1);
     Overlay27Target *target = entry->target;
     GXS_LoadBG0Scr(target + 1, timing->angle << 6, target->extra);

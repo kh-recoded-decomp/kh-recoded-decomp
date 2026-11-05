@@ -16,7 +16,7 @@
 #define data_ov045_020c0880 data_ov045_020c08a0
 #define func_02052514 ConfigureTween
 #define func_0205255c StartTween
-#define func_ov027_020b7dd4 func_ov027_020b7df4
+#define func_ov027_020b7dd4 UpdateTagTrackerAndTouch
 #define func_ov045_020bf248 ArmTagById
 #define func_ov045_020bf26c DisarmTagById
 #define func_ov045_020c0334 SetMenuOrthoCamera

@@ -1,5 +1,5 @@
 #define ScrollListDownOneRow_020b72e8 ScrollListDownOneRow
-#define func_ov025_020b65c4 func_ov025_020b65e4
-#define func_ov025_020b6ca0 func_ov025_020b6cc0
-#define func_ov025_020b6d00 func_ov025_020b6d20
+#define func_ov025_020b65c4 RebuildListEntryStatesAndRedraw
+#define func_ov025_020b6ca0 SetListHighlightEntry
+#define func_ov025_020b6d00 SetListCursorEntry
 #include "src/ov025/status_menu/ScrollListDownOneRow_020b72e8.c"

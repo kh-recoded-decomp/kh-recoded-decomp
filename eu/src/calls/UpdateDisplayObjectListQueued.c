@@ -1,0 +1,3 @@
+#define NNS_FndInitList DispObjList_Update
+#define NNS_FndInitListWithOffset0_0204f11c UpdateDisplayObjectListQueued
+#include "src/arm9/library_nitro_nns/NNS_FndInitListWithOffset0_0204f11c.c"

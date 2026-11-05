@@ -3,5 +3,5 @@
 #define Handle_WritePayloadIfLive_0204db9c Handle_WritePayloadIfLive
 #define UpdateSpinGroupSounds_020d747c UpdateSpinGroupSounds
 #define func_0204dc3c IsSoundHandleCurrentAndBound
-#define func_ov021_020ae88c func_ov021_020ae8ac
+#define func_ov021_020ae88c DrawModelOutsideCameraProximity
 #include "src/ov056/unclassified_helpers/UpdateSpinGroupSounds_020d747c.c"

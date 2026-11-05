@@ -1,7 +1,7 @@
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define func_ov002_02064584 ShowSaveMessage
 #define func_ov002_02064c9c ApplyMenuEntryValues
-#define func_ov027_020b9098 func_ov027_020b90b8
+#define func_ov027_020b9098 SetWidgetRootInputCallback
 #define func_ov027_020b90a4 FindWidgetById
 #define func_ov027_020b9580 SetEntrySlotsVisible
 #define func_ov027_020b95e4 ClearWidgetRecordActiveBits

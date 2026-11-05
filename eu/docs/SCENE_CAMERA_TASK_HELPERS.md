@@ -75,12 +75,12 @@ The evidence column points to the inspected implementation/caller origin. Shared
 | `func_ov042_020bd7ac` | `IsCameraShakeActive` | THUMB / 0x1c | `src/overlays/ov042/calls/IsCameraShakeActive.c` | `eu/src/overlays/ov042/calls/UpdateCameraScene.c:335` |
 | `func_ov042_020bd7c8` | `SetCameraHorizontalFollowBounds` | THUMB / 0x68 | `src/overlays/ov042/calls/SetCameraHorizontalFollowBounds.c` | `eu/src/overlays/ov042/calls/UpdateCameraScene.c:237` |
 | `func_ov042_020bd830` | `GetCameraAdjustedHorizontalBounds` | THUMB / 0x48 | `src/overlays/ov042/calls/GetCameraAdjustedHorizontalBounds.c` | `src/ov042/camera/BuildCameraFrustumColliders_020bd858.c:98` |
-| `func_ov042_020bde3c` | `ReleaseOv042CameraNoop` | THUMB / 0x2 | `src/overlays/ov042/auto/ReleaseOv042CameraNoop.c` | `eu/src/overlays/ov021/calls/func_ov021_020af3a0.c:18` |
-| `func_ov043_020bcce0` | `ReleaseOv043CameraNoop` | ARM / 0x4 | `src/overlays/ov043/auto/ReleaseOv043CameraNoop.c` | `eu/src/overlays/ov021/calls/func_ov021_020af3a0.c:21` |
+| `func_ov042_020bde3c` | `ReleaseOv042CameraNoop` | THUMB / 0x2 | `src/overlays/ov042/auto/ReleaseOv042CameraNoop.c` | `eu/src/overlays/ov021/calls/ReleaseActiveSubModeOverlay.c:18` |
+| `func_ov043_020bcce0` | `ReleaseOv043CameraNoop` | ARM / 0x4 | `src/overlays/ov043/auto/ReleaseOv043CameraNoop.c` | `eu/src/overlays/ov021/calls/ReleaseActiveSubModeOverlay.c:21` |
 | `func_ov044_020d00a0` | `CommitPanelProjectionAndViewAxes` | ARM / 0x10 | `src/overlays/ov044/calls/CommitPanelProjectionAndViewAxes.c` | `src/arm9/graphics/camera_commit_projection_0202a814.c:27` |
 | `func_ov044_020d00b0` | `CommitPanelCameraFrame` | ARM / 0x60 | `src/overlays/ov044/calls/CommitPanelCameraFrame.c` | `src/ov044/panel_state/SetPanelFlagBit1_020d0120.c:9` |
 | `func_ov044_020d0130` | `GetPanelCameraState` | ARM / 0x10 | `src/overlays/ov044/calls/GetPanelCameraState.c` | `eu/src/overlays/ov044/PanelState.h:16` |
-| `func_ov044_020d069c` | `ReleaseOv044PanelCameraNoop` | ARM / 0x4 | `src/overlays/ov044/auto/ReleaseOv044PanelCameraNoop.c` | `eu/src/overlays/ov021/calls/func_ov021_020af3a0.c:24` |
+| `func_ov044_020d069c` | `ReleaseOv044PanelCameraNoop` | ARM / 0x4 | `src/overlays/ov044/auto/ReleaseOv044PanelCameraNoop.c` | `eu/src/overlays/ov021/calls/ReleaseActiveSubModeOverlay.c:24` |
 | `func_ov046_020c170c` | `Camera_GetViewPlaneNormals` | THUMB / 0xc | `src/overlays/ov046/auto/Camera_GetViewPlaneNormals.c` | `src/arm9/spatial_queries/IsWithinPlaneSet_0203e958.c:48` |
 | `func_ov046_020c2ad8` | `Camera_UsesDefaultFocusInPreset19Or21` | THUMB / 0x26 | `src/overlays/ov046/calls/Camera_UsesDefaultFocusInPreset19Or21.c` | `src/ov046/shared_engine/Camera_GetFocusPosition_020c1780.c:14` |
 | `func_ov049_020c359c` | `InitEventCameraMotionPreset2` | THUMB / 0x1c | `src/overlays/ov049/calls/InitEventCameraMotionPreset2.c` | `eu/src/overlays/ov049/data/tables/gCameraMotionInitializers.c:13` |

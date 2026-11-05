@@ -9,7 +9,7 @@
 #define MakePrimaryVramKey_020711ec MakePrimaryVramKey
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define NNSi_FndGetCurrentRootHeap_0202a764 GetRunningTaskWork
-#define PXI_Init_020b9078 func_ov027_020b9098
+#define PXI_Init_020b9078 CreateWidgetImageEntry
 #define QueueFileLoadRequest_020ba114 QueueFileLoadRequest
 #define SetEntrySlotsVisible_020b9580 SetEntrySlotsVisible
 #define SetupSubBgLayers_020b5a0c SetupSubBgLayers
@@ -22,7 +22,7 @@
 #define func_ov001_0207b200 SetSubsceneBgSetupCallback
 #define func_ov001_0207b62c GetCachedPanelListDepthLimit
 #define func_ov025_020b5c78 SetupMenuTextLayers
-#define func_ov027_020b8f98 func_ov027_020b8fb8
+#define func_ov027_020b8f98 LoadWidgetDescriptorsFromFile
 #define func_ov027_020b90a4 FindWidgetById
 #define func_ov027_020b9a0c InitTileTableFrom
 #define g_uiContext_020b7760 data_ov025_020b7780

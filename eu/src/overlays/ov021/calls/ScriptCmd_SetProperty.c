@@ -258,7 +258,7 @@ extern PropertyActor *GetStageActor(s16 id);
 extern PropertyMotion *GetStageMotionRecord(u16 id);
 extern void SetLinkedActorPartHidden(PropertyActor *actor, int part, BOOL hidden);
 extern void SetWalkerActive(PropertyActor *actor, int active);
-extern s32 func_ov021_020b4ac4(void *thread, s32 offset);
+extern s32 ResolveStageScriptCommandDataOffset(void *thread, s32 offset);
 extern void CacheActorNameIndex(PropertyActor *actor, const char *name);
 extern void SetActorFacingDegrees(PropertyActor *actor, int degrees);
 extern void SetActorTiltDegrees(PropertyActor *actor, int degrees);
@@ -354,7 +354,7 @@ s32 ScriptCmd_SetProperty(void *thread, PropertyCommand *command)
             handled = TRUE;
             break;
         case 0xa5:
-            CacheActorNameIndex(actor, (const char *)func_ov021_020b4ac4(thread, argument->value));
+            CacheActorNameIndex(actor, (const char *)ResolveStageScriptCommandDataOffset(thread, argument->value));
             handled = TRUE;
             break;
         case 0xa4:
@@ -523,7 +523,7 @@ s32 ScriptCmd_SetProperty(void *thread, PropertyCommand *command)
             handled = TRUE;
             break;
         case 0x3a:
-            manager->spawn.name = (void *)func_ov021_020b4ac4(thread, argument->value);
+            manager->spawn.name = (void *)ResolveStageScriptCommandDataOffset(thread, argument->value);
             handled = TRUE;
             break;
         case 0x3b:

@@ -3,7 +3,7 @@
 #define AnySubObjectBit0Set_020cfb58 AnySubObjectBit0Set
 #define HasFlagsAt0xc_020a751c HasFlagsAt0xc
 #define IsPlayerEntryFlagSet_02050014 IsPlayerEntryFlagSet
-#define NNS_FndInitListWithOffset0_020a7510 func_ov021_020a7530
+#define NNS_FndInitListWithOffset0_020a7510 GetFieldDirectionActive
 #define SelectGroundAction_020c7edc SelectGroundAction
 #define func_ov052_020c8040 FindDashWallTarget
 #define func_ov052_020cefe8 TryLedgeClimb

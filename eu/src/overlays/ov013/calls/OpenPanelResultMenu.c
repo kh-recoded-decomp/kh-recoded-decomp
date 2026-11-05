@@ -9,7 +9,7 @@
 #define RefreshProgressCaption_0206f06c RefreshProgressCaption
 #define SetEntrySlotsVisible_020b9580 SetEntrySlotsVisible
 #define SetFocusedWidget_020b96e4 SetFocusedWidget
-#define func_ov027_020b9098 func_ov027_020b90b8
+#define func_ov027_020b9098 SetWidgetRootInputCallback
 #define func_ov027_020b95e4 ClearWidgetRecordActiveBits
 #define func_ov027_020b96a0 SetWidgetAnimationFrame
 #include "src/ov013/panel_state/OpenPanelResultMenu_020727b4.c"

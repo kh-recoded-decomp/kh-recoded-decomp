@@ -1,7 +1,7 @@
 #define func_ov002_020620fc ResetOv002SubPanelText
 #define ApplySelectedSubitemValues_020b94fc ApplySelectedSubitemValues
 #define HidePanelOptionSlots_020718fc HidePanelOptionSlots
-#define func_ov027_020b9098 func_ov027_020b90b8
+#define func_ov027_020b9098 SetWidgetRootInputCallback
 #define func_ov027_020b90a4 FindWidgetById
 #define func_ov027_020b9580 SetEntrySlotsVisible
 #define func_ov027_020b9620 SetWidgetRecordActiveBits

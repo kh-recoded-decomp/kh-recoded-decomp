@@ -2,5 +2,5 @@
 #define FindActiveRecordById_020b8184 FindActiveRecordById
 #define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
 #define func_01ff8830 MI_CpuFill8
-#define func_ov027_020b7934 func_ov027_020b7954
+#define func_ov027_020b7934 FindFreeTrackerTagSequence
 #include "src/ov027/record_management/CreateTagRecord_020b7fc0.c"

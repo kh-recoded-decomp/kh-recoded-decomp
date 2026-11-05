@@ -8,14 +8,14 @@ typedef struct BossBattleWork {
 } BossBattleWork;
 
 extern void ZeroHalfThenFree(void *ptr);
-extern void func_ov021_020adfd8(BossBattleWork *work, u32 flags);
+extern void ReleaseScriptedEffectTaskExtraResources(BossBattleWork *work, u32 flags);
 extern void CameraPath_Free(void *path);
 extern void NNSi_FndFreeFromDefaultHeap(void *ptr);
 
 void ReleaseBossBattleResources(BossBattleWork *work, u32 flags)
 {
     ZeroHalfThenFree(work->resourceBlock);
-    func_ov021_020adfd8(work, flags);
+    ReleaseScriptedEffectTaskExtraResources(work, flags);
     CameraPath_Free(work->cameraPath);
     NNSi_FndFreeFromDefaultHeap(work->cameraPath);
 }

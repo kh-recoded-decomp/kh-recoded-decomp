@@ -13,15 +13,15 @@ struct Entry {
 };
 
 extern u8 *data_ov013_02074ce0;
-extern Entry *func_ov027_020b8578(u8 *context, int entryId);
+extern Entry *FindActiveBackgroundScreenResourceById(u8 *context, int entryId);
 extern void GXS_LoadBG0Scr(void *dest, s32 value, s32 size);
 
 void DrawOv013ListPositionCounter(s32 param1, s32 param2) {
     s32 position = 0;
-    Entry *entry = func_ov027_020b8578(data_ov013_02074ce0 + 0x350, 3);
+    Entry *entry = FindActiveBackgroundScreenResourceById(data_ov013_02074ce0 + 0x350, 3);
     GXS_LoadBG0Scr((u8 *)entry->target + 0xc, 0, entry->target->value08);
 
-    entry = func_ov027_020b8578(data_ov013_02074ce0 + 0x350, 2);
+    entry = FindActiveBackgroundScreenResourceById(data_ov013_02074ce0 + 0x350, 2);
     do {
         s32 row = (12 - position) * 2;
         GXS_LoadBG0Scr((u8 *)entry->target + 0xe + (param1 % 10) * 2, row + 0x80, 2);

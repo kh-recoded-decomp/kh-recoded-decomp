@@ -18,7 +18,7 @@ extern void *AddFieldListener(void (*callback)(void));
 extern void RunOverlayDisplayUpdate(void);
 extern int ShouldRestorePositiveBrightness(OverlayDisplaySession *session);
 extern void RequestPanelBrightnessRestore(void);
-extern int func_ov026_020b58e8(void);
+extern int OverlayDisplaySessionNoOpCallback(void);
 int (*BeginOverlayDisplaySession(void))(void) {
     OverlayDisplaySession *session = GetRunningTaskWork();
     unsigned short paletteValue = 0;
@@ -30,5 +30,5 @@ int (*BeginOverlayDisplaySession(void))(void) {
     SetPanelSessionActive();
     session->updateRegistration = AddFieldListener(RunOverlayDisplayUpdate);
     if (ShouldRestorePositiveBrightness(session)) RequestPanelBrightnessRestore();
-    return func_ov026_020b58e8;
+    return OverlayDisplaySessionNoOpCallback;
 }

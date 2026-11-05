@@ -16,8 +16,8 @@
 #define data_02053438 gZeroVecFx32
 #define data_0205356c gSinFx12Table
 #define func_0203adcc InitAxisCylinderShape
-#define func_ov021_020a7504 func_ov021_020a7524
-#define func_ov021_020a7544 func_ov021_020a7564
+#define func_ov021_020a7504 GetFieldDirectionActiveAndPollSubMode
+#define func_ov021_020a7544 GetSummedFieldDirectionAngle
 #define func_ov021_020a9474 AnyLinkedObjectHasStateSeven
 #define func_ov052_020ceb54 GetActorModelPosition
 #define func_01ffaff4 VEC_NormalizeLength

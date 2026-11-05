@@ -32,7 +32,7 @@ extern void PrepareOpponentProfile(void);
 extern u8 TickConnectState(void);
 extern void UpdateDriftingElementsByMode(void);
 extern void BlinkPanelCursor(void);
-extern void NNS_FndInitListWithOffset0_0204f130(void *list);
+extern void UpdateDisplayObjectListQueued(void *list);
 extern void BobPanelWidgets(void);
 
 int func_ov015_0206c4f0(void) {
@@ -53,13 +53,13 @@ int func_ov015_0206c4f0(void) {
         BlinkPanelCursor();
     }
     if (((PanelFlagsE0c *)(data_ov015_0207e960 + 0xe0))->flag3 == 0) {
-        NNS_FndInitListWithOffset0_0204f130(data_ov015_0207e960 + 0x644);
+        UpdateDisplayObjectListQueued(data_ov015_0207e960 + 0x644);
         state = data_ov015_0207e960[0];
         if (state != 5) {
             if (!(state == 1 || state == 0 || state == 7)) {
                 BobPanelWidgets();
             }
-            NNS_FndInitListWithOffset0_0204f130(data_ov015_0207e960 + 0x6ac0);
+            UpdateDisplayObjectListQueued(data_ov015_0207e960 + 0x6ac0);
         }
     }
     return data_ov015_0207e960[1];

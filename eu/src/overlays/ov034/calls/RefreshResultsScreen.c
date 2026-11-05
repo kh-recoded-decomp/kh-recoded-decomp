@@ -22,7 +22,7 @@
 #define func_ov024_020b72e4 ResetBoardCursor
 #define func_ov027_020b90a4 FindWidgetById
 #define func_ov027_020b91a8 GetWidgetPosition
-#define func_ov027_020b91b0 func_ov027_020b91d0
+#define func_ov027_020b91b0 SetWidgetBasePosition
 #define func_ov027_020b91c8 SetWidgetPosition
 #define func_ov027_020b9360 ResolveWidgetPositionComponents
 #define func_ov027_020b9580 SetEntrySlotsVisible

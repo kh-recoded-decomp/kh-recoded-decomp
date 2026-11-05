@@ -12,7 +12,7 @@
 #define VEC_NormalizeUnchecked_01ff9f88 VEC_Normalize
 #define data_ov030_020bd000 data_ov030_020bd020
 #define func_ov001_0207b49c UpdatePanelMapRangePosition
-#define func_ov021_020af5f4 func_ov021_020af614
+#define func_ov021_020af5f4 GetActiveSubModeCameraWork
 #define func_ov030_020bb368 func_ov030_020bb388
 #define func_ov042_020bd290 Camera_GetGoalPosition
 #define func_ov042_020bd324 Camera_GetColliderOffset

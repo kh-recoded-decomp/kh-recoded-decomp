@@ -1,5 +1,5 @@
 #define AnimateMenuBgFrames_02064b34 AnimateMenuBgFrames
 #define GXS_LoadBG1Scr_020076a0 GXS_LoadBG1Scr
-#define func_ov027_020b8558 func_ov027_020b8578
+#define func_ov027_020b8558 FindActiveBackgroundScreenResourceById
 #define g_context_0206c464 data_ov002_0206c464
 #include "src/ov002/panel_state/AnimateMenuBgFrames_02064b34.c"

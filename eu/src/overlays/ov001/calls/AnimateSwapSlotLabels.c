@@ -5,6 +5,6 @@
 #define TagTracker_InvokeCallback_020b8210 TagTracker_InvokeCallback
 #define data_ov001_0209dfd8 gCounterSwapMovingRecords
 #define data_ov001_0209dfe8 gCounterSwapSettledRecords
-#define func_ov027_020b81e0 func_ov027_020b8200
+#define func_ov027_020b81e0 SetTrackerRecordY
 #define func_ov027_020b9d54 ClearTileTableRect
 #include "src/ov001/field_manager/AnimateSwapSlotLabels_0207db50.c"

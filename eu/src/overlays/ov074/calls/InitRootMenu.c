@@ -41,8 +41,8 @@
 #define func_ov021_020a98e8 InitSlotTable
 #define func_ov021_020a998c LoadModelObject
 #define func_ov021_020a9d28 SetObjectAnimationEnabled
-#define func_ov027_020b7e24 func_ov027_020b7e44
-#define func_ov027_020b8f98 func_ov027_020b8fb8
+#define func_ov027_020b7e24 LoadTagTrackerResourceFile
+#define func_ov027_020b8f98 LoadWidgetDescriptorsFromFile
 #define func_ov027_020b90a4 FindWidgetById
 #define func_ov027_020b9580 SetEntrySlotsVisible
 #define func_ov027_020b97b8 SetWidgetRecordMode

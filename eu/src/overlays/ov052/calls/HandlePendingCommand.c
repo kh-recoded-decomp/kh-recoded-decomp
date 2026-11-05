@@ -1,5 +1,5 @@
 #define func_ov001_0206db78 GetPlayerControlState
-#define AlarmCallback_020a7504 func_ov021_020a7524
+#define AlarmCallback_020a7504 GetFieldDirectionActiveAndPollSubMode
 #define CanUseMemberSlot_020d0600 CanUseMemberSlot
 #define ConsumeActionInterruptFlag_020cc274 ConsumeActionInterruptFlag
 #define HandlePendingCommand_020d03b8 HandlePendingCommand

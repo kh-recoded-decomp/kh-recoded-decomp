@@ -8,7 +8,7 @@
 #define data_ov030_020bd004 gMarkerResetConfig
 #define func_ov021_020a8ab4 ResetAnimationTrackState
 #define func_ov021_020a8ca0 func_ov021_020a8cc0
-#define func_ov021_020af5f4 func_ov021_020af614
+#define func_ov021_020af5f4 GetActiveSubModeCameraWork
 #define func_ov030_020bb468 func_ov030_020bb488
 #define func_ov042_020bd590 GetCameraFrustumBounds
 #define func_ov052_020ceb54 GetActorModelPosition

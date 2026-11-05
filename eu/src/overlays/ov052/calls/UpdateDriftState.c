@@ -34,7 +34,7 @@ struct DriftActor {
 
 extern s16 gSinFx12Table[];
 extern u16 *GetPlayerControlState(int pool);
-extern BOOL func_ov021_020a7524(u16 *self);
+extern BOOL GetFieldDirectionActiveAndPollSubMode(u16 *self);
 extern BOOL HasFlagsAt0xc(u16 *holder, u16 mask);
 extern int NextSharedRandom16Scaled(u32 range);
 extern int FX_Mul(int left, int right);
@@ -76,7 +76,7 @@ void UpdateDriftState(DriftActor *actor)
     }
     active = FALSE;
     angle = -1;
-    if (func_ov021_020a7524(self)) {
+    if (GetFieldDirectionActiveAndPollSubMode(self)) {
         if (self[1] != self[0]) {
             active = TRUE;
         }

@@ -1,6 +1,6 @@
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define PushPanelState_020c61b0 PushPanelState
-#define func_ov027_020b90f4 func_ov027_020b9114
+#define func_ov027_020b90f4 GetFocusedWidget
 #define func_ov039_020bc1bc func_ov039_020bc1dc
 #define func_ov087_020c6118 EnterPanelState_020c6138
 #include "src/ov087/panel_state/PushPanelState_020c61b0.c"

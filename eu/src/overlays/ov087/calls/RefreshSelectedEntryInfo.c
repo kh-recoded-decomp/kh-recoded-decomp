@@ -8,7 +8,7 @@
 #define DrawTextAnchored_020015a0 DrawTextAnchored
 #define Text_UploadTileBuffer_02001520 Text_UploadTileBuffer
 #define func_02050050 GetPlayerEntryCount
-#define func_ov027_020b90f4 func_ov027_020b9114
+#define func_ov027_020b90f4 GetFocusedWidget
 #define func_ov087_020c431c SetInfoWindowVisible
 #define func_ov027_020b90a4 FindWidgetById
 #define func_ov027_020b9580 SetEntrySlotsVisible

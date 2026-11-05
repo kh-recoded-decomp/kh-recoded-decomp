@@ -23,12 +23,12 @@ typedef struct LodObject {
     u16 flags;
 } LodObject;
 
-extern VecFx32 *func_ov021_020af5d4(void);
+extern VecFx32 *GetActiveCameraCullingOrigin(void);
 extern fx32 VEC_Distance(const VecFx32 *a, const VecFx32 *b);
 extern void SceneNode_Draw(void *node);
 
 void DrawLodSceneObject(LodObject *object) {
-    fx32 distance = VEC_Distance(func_ov021_020af5d4(), &object->position);
+    fx32 distance = VEC_Distance(GetActiveCameraCullingOrigin(), &object->position);
 
     if (object->flags & 0x8000) {
         if (distance <= object->ranges->farExit) {

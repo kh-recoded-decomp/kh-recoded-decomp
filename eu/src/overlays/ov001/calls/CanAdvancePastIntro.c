@@ -1,4 +1,4 @@
 #define CanAdvancePastIntro_02063cac CanAdvancePastIntro
-#define Ov006_ShouldEnterConfirmState func_ov021_020af830
+#define Ov006_ShouldEnterConfirmState HasDefaultSubModeCameraChangePending
 #define Session_IsSceneInterruptible HasActiveFieldEffects
 #include "src/ov001/shared_engine/CanAdvancePastIntro_02063cac.c"

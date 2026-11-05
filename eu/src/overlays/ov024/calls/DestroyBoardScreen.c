@@ -7,7 +7,7 @@
 #define func_ov001_0207b200 SetSubsceneBgSetupCallback
 #define func_ov024_020b5dc0 ReleaseOverlayResourceSlots
 #define func_ov024_020b6730 TeardownContextState
-#define func_ov027_020b7dfc func_ov027_020b7e1c
+#define func_ov027_020b7dfc FreeTagTrackerPools
 #define func_ov027_020b8c58 DestroyObjectsAndRelease
 #define func_ov027_020b9a60 FreeAllocatedBuffers
 #include "src/ov024/unclassified_helpers/DestroyBoardScreen_020b6d78.c"

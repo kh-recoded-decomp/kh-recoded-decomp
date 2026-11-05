@@ -4,7 +4,7 @@
 #define func_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define func_0202b554 GetBgDataFromArchive
 #define func_0202c48c LoadFileAllocFromHeapTail
-#define func_ov027_020b7e24 func_ov027_020b7e44
+#define func_ov027_020b7e24 LoadTagTrackerResourceFile
 #define func_ov027_020b8184 FindActiveRecordById
 #define func_ov027_020b8210 TagTracker_InvokeCallback
 #define func_ov039_020bc1a4 GetSecondaryMenuElement

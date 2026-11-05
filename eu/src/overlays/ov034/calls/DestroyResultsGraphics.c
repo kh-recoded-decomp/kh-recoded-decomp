@@ -7,7 +7,7 @@ extern u32 FreePointerIfSet();
 extern u32 NotifyBothOrOne();
 extern u32 FreeResourceBufferAndProbeHeap();
 extern u32 ReleaseRecordSlot();
-extern u32 func_ov027_020b7e1c();
+extern u32 FreeTagTrackerPools();
 extern u32 DestroyObjectsAndRelease();
 
 void DestroyResultsGraphics(void)
@@ -18,7 +18,7 @@ void DestroyResultsGraphics(void)
     DestroyFndObjectList(resultsWork + 0x6b60);
     FreeResourceBufferAndProbeHeap(resultsWork + 0x6b48);
     FreeResourceBufferAndProbeHeap(resultsWork + 0x6b54);
-    func_ov027_020b7e1c(resultsWork + 0x10);
+    FreeTagTrackerPools(resultsWork + 0x10);
     DestroyObjectsAndRelease(resultsWork + 0x5c);
     return;
 }

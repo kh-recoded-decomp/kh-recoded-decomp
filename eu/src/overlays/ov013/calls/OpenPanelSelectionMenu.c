@@ -12,7 +12,7 @@ extern void UploadOv013SubBg0ScreenEntry1(void);
 extern void SetEntrySlotsVisible(int root, int *widget, int visible);
 struct Ov008SubitemBlock;
 extern void ApplySelectedSubitemValues(int root, struct Ov008SubitemBlock *widget, int useAlt);
-extern void func_ov027_020b90b8(void *root, u32 callback);
+extern void SetWidgetRootInputCallback(void *root, u32 callback);
 extern void SetOv013WidgetSelectionAWithSound(int context);
 
 void OpenPanelSelectionMenu(void)
@@ -51,7 +51,7 @@ void OpenPanelSelectionMenu(void)
     ApplySelectedSubitemValues((int)root, (struct Ov008SubitemBlock *)FindWidgetById(root, 2), 0);
     root = gOv013PanelState->widgets;
     ApplySelectedSubitemValues((int)root, (struct Ov008SubitemBlock *)FindWidgetById(root, 3), 0);
-    func_ov027_020b90b8(gOv013PanelState->widgets, (u32)SetOv013WidgetSelectionAWithSound);
+    SetWidgetRootInputCallback(gOv013PanelState->widgets, (u32)SetOv013WidgetSelectionAWithSound);
     PlaySoundEffect(2, 1);
     root = gOv013PanelState->widgets;
     ClearWidgetRecordActiveBits(root, (const struct WidgetPositionRecord *)(FindWidgetById(root, 5)));

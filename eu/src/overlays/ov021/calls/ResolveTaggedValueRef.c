@@ -1,3 +1,3 @@
 #define ResolveTaggedValueRef_020b0374 ResolveTaggedValueRef
-#define func_ov021_020b036c func_ov021_020b038c
+#define func_ov021_020b036c ResolveStageScriptDataOffset
 #include "src/ov021/unclassified_helpers/ResolveTaggedValueRef_020b0374.c"

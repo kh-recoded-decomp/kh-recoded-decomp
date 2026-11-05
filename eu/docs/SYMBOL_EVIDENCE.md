@@ -568,3 +568,16 @@ owner-specific guards, raw results, packed-value aliasing, rank thresholds,
 borrowed text, exact destination dispatch and empty-hook/VBlank lifetimes.
 The old arithmetic, browse-reset and generic-success labels do not establish
 these native contracts.
+
+## Display lists, stage scripts and tracker/widget services
+
+One hundred six entrypoints now identify display-list update modes, the
+stage-script/camera/task interfaces, menu cache/list/session helpers and
+tracker/widget/tile resource operations. The contracts are grouped by owner:
+
+- [DISPLAY_OBJECT_LIST_UPDATE_CONTRACTS.md](DISPLAY_OBJECT_LIST_UPDATE_CONTRACTS.md): 2 entrypoints.
+- [STAGE_SCRIPT_CAMERA_TASK_SERVICE_CONTRACTS.md](STAGE_SCRIPT_CAMERA_TASK_SERVICE_CONTRACTS.md): 60 entrypoints.
+- [MENU_RESOURCE_CACHE_IDLE_CONTRACT.md](MENU_RESOURCE_CACHE_IDLE_CONTRACT.md): 1 entrypoints.
+- [MENU_LIST_PATH_CONTRACTS.md](MENU_LIST_PATH_CONTRACTS.md): 10 entrypoints.
+- [OVERLAY_DISPLAY_SESSION_CALLBACK_CONTRACT.md](OVERLAY_DISPLAY_SESSION_CALLBACK_CONTRACT.md): 1 entrypoints.
+- [TRACKER_WIDGET_TILE_RESOURCE_CONTRACTS.md](TRACKER_WIDGET_TILE_RESOURCE_CONTRACTS.md): 32 entrypoints.

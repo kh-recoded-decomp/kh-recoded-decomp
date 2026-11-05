@@ -18,8 +18,8 @@
 #define func_ov021_020ade38 FreeResourceSlots
 #define func_ov021_020addcc StopEntrySounds
 #define func_ov021_020ad470 ResetObjectSlots
-#define func_ov021_020ad494 func_ov021_020ad4b4
-#define func_ov021_020adfb8 func_ov021_020adfd8
+#define func_ov021_020ad494 ResetCurrentScriptTaskSlots
+#define func_ov021_020adfb8 ReleaseScriptedEffectTaskExtraResources
 #define func_ov021_020ad4a4 RollEntryReaction
 #define func_ov030_020bc4a8 EnterCarryState
 #define func_ov056_020d33f8 UpdateActionHitMarkers

@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-#define AlarmCallback func_ov021_020a7524
+#define AlarmCallback GetFieldDirectionActiveAndPollSubMode
 
 typedef struct ActionSource {
     u8 pad_00[0xc];

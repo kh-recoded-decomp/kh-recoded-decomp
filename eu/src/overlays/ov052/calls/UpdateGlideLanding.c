@@ -1,5 +1,5 @@
 #define func_ov001_0206db78 GetPlayerControlState
-#define AlarmCallback_020a7504 func_ov021_020a7524
+#define AlarmCallback_020a7504 GetFieldDirectionActiveAndPollSubMode
 #define ComputeRootMotionDelta_020ce9d4 ComputeRootMotionDelta
 #define GetPlayerEntryCount_02050050 GetPlayerEntryCount
 #define HasFlagsAt0xc_020a751c HasFlagsAt0xc

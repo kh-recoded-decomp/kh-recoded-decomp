@@ -20,7 +20,7 @@
 #define func_ov001_0206db78 GetPlayerControlState
 #define func_ov021_020a8ab4 ResetAnimationTrackState
 #define func_ov021_020a8ca0 func_ov021_020a8cc0
-#define func_ov021_020af5f4 func_ov021_020af614
+#define func_ov021_020af5f4 GetActiveSubModeCameraWork
 #define func_ov059_020ca794 Actor_UpdateFinisher
 #define func_ov059_020cfdec func_ov059_020cfe0c
 #include "src/ov059/unclassified_helpers/Actor_UpdateChargeAttack_020c7f8c.c"

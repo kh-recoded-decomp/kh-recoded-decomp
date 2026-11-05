@@ -21,10 +21,10 @@
 #define func_ov002_02067c10 BuildSelectionViewRecords
 #define func_ov002_02068248 SetGroupSlotsVisible
 #define func_ov027_020b7d58 InitBackgroundContainer
-#define func_ov027_020b7e24 func_ov027_020b7e44
-#define func_ov027_020b8558 func_ov027_020b8578
-#define func_ov027_020b8f98 func_ov027_020b8fb8
-#define func_ov027_020b9078 func_ov027_020b9098
+#define func_ov027_020b7e24 LoadTagTrackerResourceFile
+#define func_ov027_020b8558 FindActiveBackgroundScreenResourceById
+#define func_ov027_020b8f98 LoadWidgetDescriptorsFromFile
+#define func_ov027_020b9078 CreateWidgetImageEntry
 #define func_ov027_020b90a4 FindWidgetById
 #define func_ov027_020b9580 SetEntrySlotsVisible
 #define func_ov027_020b95e4 ClearWidgetRecordActiveBits

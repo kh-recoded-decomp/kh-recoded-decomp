@@ -1,5 +1,5 @@
 #define SteerCarriedActorInView_020bb870 SteerCarriedActorInView
-#define func_ov021_020af5f4 func_ov021_020af614
+#define func_ov021_020af5f4 GetActiveSubModeCameraWork
 #define func_ov042_020bd324 Camera_GetColliderOffset
 #define func_ov042_020bd590 GetCameraFrustumBounds
 #define func_ov052_020ceb54 GetActorModelPosition

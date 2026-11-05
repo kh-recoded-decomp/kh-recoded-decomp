@@ -3,7 +3,7 @@
 #define LoadPageMenuWidgets_020c4570 LoadPageMenuWidgets
 #define ReadGlobalPackedBits_02027348 ReadGlobalPackedBits
 #define data_ov078_020c4f90 data_ov078_020c4fb0
-#define func_ov027_020b8f98 func_ov027_020b8fb8
+#define func_ov027_020b8f98 LoadWidgetDescriptorsFromFile
 #define func_ov027_020b95e4 ClearWidgetRecordActiveBits
 #define func_ov027_020b96a0 SetWidgetAnimationFrame
 #define func_ov027_020b97b8 SetWidgetRecordMode

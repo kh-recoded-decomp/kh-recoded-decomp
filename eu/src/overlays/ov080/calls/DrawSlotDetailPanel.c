@@ -40,7 +40,7 @@ extern void DrawTextAnchored(int *layer, int x, int y, int color, u32 flags, con
 extern int GetTextLayerLineWidth(int *layer, const u16 *text, const u16 **nextLine);
 extern void func_ov039_020be548(int *layer, int x, int y, int color, u32 flags, const u16 *text, u32 style);
 extern void func_ov039_020be594(int *layer, int x, int y, int color, const u16 *text);
-extern void func_ov027_020b8208(void *tracker, SlotFrame *frame, int x, int y);
+extern void SetTrackerRecordPosition(void *tracker, SlotFrame *frame, int x, int y);
 extern void TagTracker_InvokeCallback(void *tracker, SlotFrame *frame);
 extern Position2D *GetWidgetPosition(void *panel, void *element);
 extern void SetEntrySlotsVisible(void *panel, void *element, BOOL visible);
@@ -145,7 +145,7 @@ void DrawSlotDetailPanel(SaveSelectScreen *screen, int slotIndex)
         DrawTextAnchored(screen->textLayer, 0x9c, 0x53, 2, 0x10, GetPackedFileEntry(&screen->messages, 0xc));
     }
 
-    func_ov027_020b8208(screen->tagTracker, slot->frames[slot->frameIndex], 3, (s16)(row + 7));
+    SetTrackerRecordPosition(screen->tagTracker, slot->frames[slot->frameIndex], 3, (s16)(row + 7));
     TagTracker_InvokeCallback(screen->tagTracker, slot->frames[slot->frameIndex]);
     positions[2] = *GetWidgetPosition(screen->panel, screen->slots[0].cursorElement);
     positions[2].x += positions[0].x;

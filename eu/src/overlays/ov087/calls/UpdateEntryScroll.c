@@ -7,7 +7,7 @@
 #define _s32_div_f _s32_div_f
 #define data_020604fc data_020604fc
 #define data_02060500 data_02060500
-#define func_ov027_020b90f4 func_ov027_020b9114
+#define func_ov027_020b90f4 GetFocusedWidget
 #define func_ov039_020bc0d4 GetPrimaryElementEnabled
 #define func_ov039_020bc1bc func_ov039_020bc1dc
 #define func_ov087_020c44a4 SelectChoiceWidget_020c44a4

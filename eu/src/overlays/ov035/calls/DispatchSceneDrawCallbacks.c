@@ -7,7 +7,7 @@ extern unsigned int func_ov001_020876d4(void);
 extern unsigned int UpdateActorSlotsAndBillboards(void);
 extern unsigned int func_020bd2a4(void);
 extern unsigned int GetManagedActorCount(void);
-extern unsigned int func_ov021_020af528(int);
+extern unsigned int UpdateActiveSubModeCamera(int);
 extern unsigned int func_ov035_020bae94(void);
 extern unsigned int DrawMovieSceneIfVisible(void);
 extern unsigned int func_ov040_020bdb70(void);
@@ -20,7 +20,7 @@ void DispatchSceneDrawCallbacks(void)
 
     work = gMovieContextState;
     if ((*(u16 *)(gMovieContextState + 0x24) & 0x80) != 0) {
-        func_ov021_020af528(1);
+        UpdateActiveSubModeCamera(1);
     }
     if ((*(u16 *)(work + 0x22) & 1) != 0) {
         DrawVisibleSceneSlots();

@@ -14,10 +14,10 @@ typedef struct {
     NNSFndList secondList;
 } Ov101State;
 
-extern void NNS_FndInitListWithOffset0_0204f130(NNSFndList *list);
+extern void UpdateDisplayObjectListQueued(NNSFndList *list);
 
 void InitStateLists(Ov101State *state)
 {
-    NNS_FndInitListWithOffset0_0204f130(&state->firstList);
-    NNS_FndInitListWithOffset0_0204f130(&state->secondList);
+    UpdateDisplayObjectListQueued(&state->firstList);
+    UpdateDisplayObjectListQueued(&state->secondList);
 }

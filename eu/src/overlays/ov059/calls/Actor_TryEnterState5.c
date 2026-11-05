@@ -1,6 +1,6 @@
 #define func_ov001_0206db78 GetPlayerControlState
 #define Actor_TryEnterState5_020ca700 Actor_TryEnterState5
-#define AlarmCallback_020a7504 func_ov021_020a7524
+#define AlarmCallback_020a7504 GetFieldDirectionActiveAndPollSubMode
 #define GetId10_020a755c SharedObject_GetId
 #define func_ov021_020a751c HasFlagsAt0xc
 #define func_ov059_020c997c Actor_LatchSharedControlId1Trigger

@@ -6,7 +6,7 @@
 #define SampleTweenValue_0205258c SampleTweenValue
 #define StartUnitTween_020bf1f8 StartUnitTween
 #define data_ov045_020c0880 data_ov045_020c08a0
-#define func_ov027_020b7dd4 func_ov027_020b7df4
+#define func_ov027_020b7dd4 UpdateTagTrackerAndTouch
 #define func_ov045_020bf19c DrawDigitRecords
 #define func_ov045_020bf248 ArmTagById
 #define func_ov045_020bf26c DisarmTagById

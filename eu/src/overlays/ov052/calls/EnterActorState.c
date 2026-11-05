@@ -25,9 +25,9 @@
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define data_02053438 gZeroVecFx32
 #define data_0205356c gSinFx12Table
-#define func_ov021_020a7504 func_ov021_020a7524
-#define func_ov021_020a7510 func_ov021_020a7530
-#define func_ov021_020a7544 func_ov021_020a7564
+#define func_ov021_020a7504 GetFieldDirectionActiveAndPollSubMode
+#define func_ov021_020a7510 GetFieldDirectionActive
+#define func_ov021_020a7544 GetSummedFieldDirectionAngle
 #define func_ov021_020a8ab4 ResetAnimationTrackState
 #define func_ov021_020a8ca0 func_ov021_020a8cc0
 #define func_ov030_020bc110 UpdateCarriedActor

@@ -5,7 +5,7 @@
 #define ApplySelectedSubitemValues_020b94fc ApplySelectedSubitemValues
 #define ResetPanelLayoutClearFlag_02072674 ResetPanelLayoutClearFlag
 #define func_ov013_0206f06c RefreshProgressCaption
-#define func_ov027_020b9098 func_ov027_020b90b8
+#define func_ov027_020b9098 SetWidgetRootInputCallback
 #define func_ov027_020b90a4 FindWidgetById
 #define func_ov027_020b9620 SetWidgetRecordActiveBits
 #define g_panelState_02074ce0 data_ov013_02074ce0

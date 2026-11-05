@@ -1,4 +1,4 @@
 #define AssignSceneGroupPolygonIds_020ae0a4 AssignSceneGroupPolygonIds
-#define func_ov021_020ae88c func_ov021_020ae8ac
-#define func_ov021_020ae924 func_ov021_020ae944
+#define func_ov021_020ae88c DrawModelOutsideCameraProximity
+#define func_ov021_020ae924 SetModelPolygonIdAndDrawOutsideCameraProximity
 #include "src/ov021/shared_engine/AssignSceneGroupPolygonIds_020ae0a4.c"

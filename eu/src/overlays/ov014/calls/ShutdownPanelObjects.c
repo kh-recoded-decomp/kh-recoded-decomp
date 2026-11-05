@@ -2,7 +2,7 @@
 #define ShutdownPanelObjects_0206cea0 ShutdownPanelObjects
 #define ZeroHalfThenFree_0202cd78 ZeroHalfThenFree
 #define func_02051dfc ReleaseRecordSlot
-#define func_ov027_020b7dfc func_ov027_020b7e1c
+#define func_ov027_020b7dfc FreeTagTrackerPools
 #define func_ov027_020b8c58 DestroyObjectsAndRelease
 #define func_ov027_020b9a60 FreeAllocatedBuffers
 #define g_panelState_0206f9a0 data_ov014_0206f9a0

@@ -3,12 +3,12 @@
 #pragma explicit_zero_data on
 
 extern void BeginSubModeTask(void);
-extern void func_ov021_020af3a0(void);
+extern void ReleaseActiveSubModeOverlay(void);
 
 void *gSubModeTaskDefinition[5] = {
     (void *)0x00070009,
     (void *)BeginSubModeTask,
-    (void *)func_ov021_020af3a0,
+    (void *)ReleaseActiveSubModeOverlay,
     (void *)0x00000010,
     NULL,
 };

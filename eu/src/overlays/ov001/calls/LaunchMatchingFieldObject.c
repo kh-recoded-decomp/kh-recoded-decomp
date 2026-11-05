@@ -2,6 +2,6 @@
 #define func_02036810 ActorSlot_GetByIndex
 #define func_ov001_0207f4b4 GetStridedBufferEntry
 #define func_ov001_02082784 FieldObject_ActivateAtPosition
-#define func_ov021_020af5b4 func_ov021_020af5d4
+#define func_ov021_020af5b4 GetActiveCameraCullingOrigin
 #define func_ov042_020bd584 GetCameraFrustumExtent
 #include "src/ov001/field_objects/LaunchMatchingFieldObject_020827d4.c"

@@ -9,5 +9,5 @@
 #define IsField1078Clear_020d0668 IsField1078Clear
 #define PlaySoundChecked_0204d8d0 PlaySoundChecked
 #define func_ov001_02078360 SetFieldMenuMode_02078360
-#define func_ov021_020a753c func_ov021_020a755c
+#define func_ov021_020a753c GetFieldShortcutInjectionFlag
 #include "src/ov052/unclassified_helpers/HandleMemberMenuInput_020d0524.c"

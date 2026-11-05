@@ -50,8 +50,8 @@ extern StageEvent *GetStageEventRecord(u32 id);
 extern StageLink *GetStageController(u32 id);
 extern void *GetStageActor(int id);
 extern int ApplyActorScaleFactors(void *actor);
-extern ScriptOpcode *func_ov021_020b0370(ScriptThread *thread);
-extern u32 func_ov021_020b037c(ScriptThread *thread);
+extern ScriptOpcode *GetStageScriptOpcode(ScriptThread *thread);
+extern u32 GetStageScriptOperands(ScriptThread *thread);
 
 s32 RunScriptThread(ScriptThread *thread)
 {
@@ -77,11 +77,11 @@ s32 RunScriptThread(ScriptThread *thread)
         return 0;
     }
     do {
-        ScriptOpcode *op = func_ov021_020b0370(thread);
+        ScriptOpcode *op = GetStageScriptOpcode(thread);
         u32 operand = 0;
         ScriptHandler handler;
         if (op->length >= 4) {
-            operand = func_ov021_020b037c(thread);
+            operand = GetStageScriptOperands(thread);
         }
         handler = gScriptHandlerTable[op->handler];
         if (handler == NULL) {

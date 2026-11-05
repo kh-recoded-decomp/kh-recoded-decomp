@@ -7,6 +7,6 @@
 #define TagTracker_InvokeCallback_020b8210 TagTracker_InvokeCallback
 #define func_02007250 GX_LoadBGPltt
 #define func_0202c48c LoadFileAllocFromHeapTail
-#define func_ov027_020b7e24 func_ov027_020b7e44
+#define func_ov027_020b7e24 LoadTagTrackerResourceFile
 #define func_ov039_020bc18c GetPrimaryMenuElement
 #include "src/ov087/panel_state/LoadPanelBackground_020c6590.c"

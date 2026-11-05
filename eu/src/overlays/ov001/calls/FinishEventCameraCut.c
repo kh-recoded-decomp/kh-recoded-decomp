@@ -7,7 +7,7 @@
 #define func_ov001_02088960 GetManagerUnknownValue
 #define func_ov001_0208ae68 ResetFieldCamera
 #define func_ov001_0208b77c func_ov001_0208b7a4
-#define func_ov021_020af508 func_ov021_020af528
+#define func_ov021_020af508 UpdateActiveSubModeCamera
 #define func_ov021_020af694 ForwardSubModeValue
 #define func_ov021_020af6c4 NotifySubModeEvent
 #include "src/ov001/field_manager/FinishEventCameraCut_0208be1c.c"

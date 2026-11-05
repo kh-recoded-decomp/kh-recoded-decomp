@@ -4,7 +4,7 @@
 #define Actor_TryAcquireTargetAngle_020cb910 Actor_TryAcquireTargetAngle
 #define HasFlagsAt0xc_020a751c HasFlagsAt0xc
 #define IsPlayerEntryFlagSet_02050014 IsPlayerEntryFlagSet
-#define func_ov021_020a7504 func_ov021_020a7524
+#define func_ov021_020a7504 GetFieldDirectionActiveAndPollSubMode
 #define func_ov059_020c9880 Actor_DispatchSharedControlAction
 #define func_ov059_020c9b6c Actor_UpdateChargeCommand
 #define func_ov059_020cd154 Actor_AnyAnimSlotBit0Set

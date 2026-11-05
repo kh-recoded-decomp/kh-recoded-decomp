@@ -1,6 +1,6 @@
 #define func_ov013_0207445c SetOv013WidgetSelectionBWithSound
 #define func_ov013_020746f4 SetOv013ResultMode2AndPlaySound
-// redefine-sym eu_func_ov027_020b9098=func_ov027_020b9098
+// redefine-sym eu_func_ov027_020b9098=CreateWidgetImageEntry
 #define CopyRecordTableBField_02069d04 CopyRecordTableBField
 #define DestroyObjectsAndRelease_020b8c58 DestroyObjectsAndRelease
 #define DispatchContextCommand_02066c78 DispatchContextCommand
@@ -31,12 +31,12 @@
 #define func_ov002_020629b8 ResetMainPanelGraphics
 #define func_ov002_02068248 SetGroupSlotsVisible
 #define func_ov027_020b7d58 InitBackgroundContainer
-#define func_ov027_020b7dfc func_ov027_020b7e1c
-#define func_ov027_020b7e24 func_ov027_020b7e44
-#define func_ov027_020b8558 func_ov027_020b8578
-#define func_ov027_020b8f98 func_ov027_020b8fb8
+#define func_ov027_020b7dfc FreeTagTrackerPools
+#define func_ov027_020b7e24 LoadTagTrackerResourceFile
+#define func_ov027_020b8558 FindActiveBackgroundScreenResourceById
+#define func_ov027_020b8f98 LoadWidgetDescriptorsFromFile
 #define func_ov027_020b9078 eu_func_ov027_020b9098
-#define func_ov027_020b9098 func_ov027_020b90b8
+#define func_ov027_020b9098 SetWidgetRootInputCallback
 #define func_ov027_020b90a4 FindWidgetById
 #define func_ov027_020b9580 SetEntrySlotsVisible
 #define func_ov027_020b95e4 ClearWidgetRecordActiveBits

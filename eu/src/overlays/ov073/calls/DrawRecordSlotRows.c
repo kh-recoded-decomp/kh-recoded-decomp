@@ -13,7 +13,7 @@
 #define func_0204f13c IndexedRecord_SetPair
 #define func_0204f204 SetIndexedRecordAnimationFrame
 #define func_0204f378 IndexedRecords_SetFlag2
-#define func_ov027_020b822c func_ov027_020b824c
+#define func_ov027_020b822c InvokeTrackerRecordAtPosition
 #define func_ov027_020b8284 StampTileRegionPalette
 #define func_ov027_020b91c8 SetWidgetPosition
 #define func_ov039_020bc994 GetMenuFont10

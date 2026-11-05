@@ -1,0 +1,4 @@
+#define func_020b7aa0 TickTagRecords
+#define func_020b7c30 UpdateTrackedPointerEntry
+#define func_ov027_020b7dd4 UpdateTagTrackerAndTouch
+#include "src/ov027/reviewed_helpers/func_ov027_020b7dd4.c"

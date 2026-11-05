@@ -3,6 +3,6 @@
 #define PositionListRecords_020b8498 PositionListRecords
 #define RefreshMenuListLayout_020bad64 RefreshMenuListLayout
 #define SetTagRecordArmed_020b83e8 SetTagRecordArmed
-#define func_ov027_020b822c func_ov027_020b824c
+#define func_ov027_020b822c InvokeTrackerRecordAtPosition
 #define g_ov037Context_020bb764 gContinueScreenContext
 #include "src/ov037/unclassified_helpers/RefreshMenuListLayout_020bad64.c"

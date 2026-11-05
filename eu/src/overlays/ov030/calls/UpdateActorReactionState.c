@@ -3,7 +3,7 @@
 #define HasFlagsAt0xc_020a751c HasFlagsAt0xc
 #define IsPlayerEntryFlagSet_02050014 IsPlayerEntryFlagSet
 #define UpdateActorReactionState_020bbe00 UpdateActorReactionState
-#define func_ov021_020a7510 func_ov021_020a7530
+#define func_ov021_020a7510 GetFieldDirectionActive
 #define func_ov052_020cefe8 TryLedgeClimb
 #define func_ov052_020cfb58 AnySubObjectBit0Set
 #include "src/ov030/shared_engine/UpdateActorReactionState_020bbe00.c"

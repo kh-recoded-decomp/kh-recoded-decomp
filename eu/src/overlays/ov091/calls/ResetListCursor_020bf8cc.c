@@ -1,4 +1,4 @@
-#define NNS_FndInitListWithOffset0_0204f11c NNS_FndInitListWithOffset0_0204f130
+#define NNS_FndInitListWithOffset0_0204f11c UpdateDisplayObjectListQueued
 #define ResetListCursor_020bf8ac ResetListCursor_020bf8cc
 #define SetListPanelSlotPos_020bfaa0 SetListPanelSlotPos
 #define func_020019f4 GetNestedModeByte

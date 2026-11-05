@@ -1,6 +1,6 @@
 #define UpdateTrackedPointerEntry_020b7c30 UpdateTrackedPointerEntry
 #define func_01ff89a8 MI_CpuCopy8
 #define func_02012a38 NNS_FndGetNextListObject
-#define func_020b7860 func_ov027_020b7880
-#define func_020b7a30 func_ov027_020b7a50
+#define func_020b7860 IsPointInTrackerTouchBounds
+#define func_020b7a30 GetTrackerTouchSample
 #include "src/ov027/pointer_entries/UpdateTrackedPointerEntry_020b7c30.c"

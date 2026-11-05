@@ -12,7 +12,7 @@
 #define StopSeqArcOrDefault_0204d960 StopSeqArcOrDefault
 #define StopSoundSeqHandle_0204dbe4 StopSoundSeqHandle
 #define UpdateAllPoolEntries_020a8ae8 UpdateAllPoolEntries
-#define func_ov021_020aafc4 func_ov021_020aafe4
+#define func_ov021_020aafc4 UpdateEntrySource
 #define func_ov031_020bc018 GetSeekStep
 #define func_ov031_020bc040 func_ov031_020bc060
 #include "src/ov059/unclassified_helpers/Actor_AdvanceFrame_020cce7c.c"

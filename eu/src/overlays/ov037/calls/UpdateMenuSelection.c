@@ -6,7 +6,7 @@
 #define Text_UploadTileBuffer_02001520 Text_UploadTileBuffer
 #define UpdateMenuSelection_020bb4bc UpdateMenuSelection
 #define camera_commit_projection_0202a814 camera_commit_projection
-#define func_ov027_020b7dd4 func_ov027_020b7df4
+#define func_ov027_020b7dd4 UpdateTagTrackerAndTouch
 #define func_ov027_020b9e60 FlushDirtyTileTableRows
 #define g_ov037Context_020bb764 gContinueScreenContext
 #include "src/ov037/unclassified_helpers/UpdateMenuSelection_020bb4bc.c"

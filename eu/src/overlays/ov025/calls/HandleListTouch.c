@@ -7,8 +7,8 @@ extern int func_ov001_02064784(void);
 extern BOOL IsSessionFlagSet(u32 flag);
 extern BOOL TrySelectListEntry(ListTouchView *list, int index);
 extern BOOL PlaySoundEffect(int archive, int sound);
-extern void func_ov025_020b6cc0(ListTouchView *list, int index);
-extern void func_ov025_020b6d20(ListTouchView *list, int index);
+extern void SetListHighlightEntry(ListTouchView *list, int index);
+extern void SetListCursorEntry(ListTouchView *list, int index);
 extern void MI_CpuCopy8(const void *source, void *destination, u32 size);
 
 void HandleListTouch(ListTouchView *list, const ListTouchInput *touch)
@@ -59,8 +59,8 @@ void HandleListTouch(ListTouchView *list, const ListTouchInput *touch)
                 scroll = -256;
             }
             list->scrollPos = scroll;
-            func_ov025_020b6cc0(list, list->selectedIndex);
-            func_ov025_020b6d20(list, list->cursorIndex);
+            SetListHighlightEntry(list, list->selectedIndex);
+            SetListCursorEntry(list, list->cursorIndex);
         }
     }
     MI_CpuCopy8(touch, &list->previousTouch, sizeof(*touch));

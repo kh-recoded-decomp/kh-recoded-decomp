@@ -1,7 +1,7 @@
 #define ReleaseContextResources_020642b8 ReleaseContextResources
 #define ZeroHalfThenFree_0202cd78 ZeroHalfThenFree
 #define func_0202a1c4 NNSi_FndFreeFromDefaultHeap
-#define func_ov027_020b7dfc func_ov027_020b7e1c
+#define func_ov027_020b7dfc FreeTagTrackerPools
 #define func_ov027_020b8c58 DestroyObjectsAndRelease
 #define func_ov027_020ba294 FreePointerIfSet
 #define g_context_0206c464 data_ov002_0206c464

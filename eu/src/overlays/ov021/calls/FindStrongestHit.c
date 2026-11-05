@@ -4,6 +4,6 @@
 #define func_ov021_020aaad4 BuildEntryHitShape
 #define func_ov021_020aacb8 BuildDrawParams
 #define func_ov021_020ac0d4 GetObjectKindValue
-#define func_ov021_020ac148 func_ov021_020ac168
+#define func_ov021_020ac148 InitHitResultHeader
 #define func_ov021_020ac164 StepHitScan
 #include "src/ov021/object_state/FindStrongestHit_020ab0c8.c"

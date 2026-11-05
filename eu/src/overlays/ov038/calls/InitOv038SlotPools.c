@@ -1,4 +1,4 @@
 #define InitOv038SlotPools_020bb104 InitOv038SlotPools
-#define NNS_FndInitListWithOffset0_0204f11c NNS_FndInitListWithOffset0_0204f130
+#define NNS_FndInitListWithOffset0_0204f11c UpdateDisplayObjectListQueued
 #define g_ov038Context_020bd144 data_ov038_020bd164
 #include "src/ov038/unclassified_helpers/InitOv038SlotPools_020bb104.c"

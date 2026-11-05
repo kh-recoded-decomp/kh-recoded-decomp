@@ -5,5 +5,5 @@
 #define ScanObjectsForSideTarget_0206b2c0 ScanObjectsForSideTarget
 #define ScanRecordSlotsForSideTarget_0206b334 ScanRecordSlotsForSideTarget
 #define VEC_Subtract_01ff9e3c VEC_Subtract
-#define func_ov021_020af5b4 func_ov021_020af5d4
+#define func_ov021_020af5b4 GetActiveCameraCullingOrigin
 #include "src/ov001/shared_engine/FindSideTarget_0206b1ac.c"

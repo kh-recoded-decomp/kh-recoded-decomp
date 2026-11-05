@@ -3,5 +3,5 @@
 #define FixedPointAtan2_020062bc FX_Atan2Idx
 #define QueueOrSendGeometryCommand_01ffa37c NNS_G3dGeBufferOP_N
 #define func_02019188 NNS_G3dGlbFlushP
-#define func_ov021_020ae88c func_ov021_020ae8ac
+#define func_ov021_020ae88c DrawModelOutsideCameraProximity
 #include "src/ov056/unclassified_helpers/DrawSpinGroupEntries_020d7bcc.c"

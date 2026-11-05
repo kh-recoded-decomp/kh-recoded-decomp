@@ -1,4 +1,4 @@
 #define TrySelectListEntry_020b6d10 TrySelectListEntry
-#define func_ov025_020b6830 func_ov025_020b6850
-#define func_ov025_020b6ca0 func_ov025_020b6cc0
+#define func_ov025_020b6830 TryChangeListPathAtEntry
+#define func_ov025_020b6ca0 SetListHighlightEntry
 #include "src/ov025/status_menu/TrySelectListEntry_020b6d10.c"

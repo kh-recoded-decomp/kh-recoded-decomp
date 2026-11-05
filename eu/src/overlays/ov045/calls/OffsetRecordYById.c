@@ -1,4 +1,4 @@
 #define FindActiveRecordById_020b8184 FindActiveRecordById
 #define OffsetRecordYById_020bf0dc OffsetRecordYById
-#define func_ov027_020b822c func_ov027_020b824c
+#define func_ov027_020b822c InvokeTrackerRecordAtPosition
 #include "src/ov045/record_management/OffsetRecordYById_020bf0dc.c"

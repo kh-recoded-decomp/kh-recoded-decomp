@@ -8,6 +8,6 @@
 #define func_ov021_020a6edc RefreshInputState
 #define func_ov021_020a6f34 UpdateDirectionInput
 #define func_ov021_020a6fd8 ToggleFieldButtonFlags
-#define func_ov021_020a74f0 func_ov021_020a7510
+#define func_ov021_020a74f0 ClearFieldButtonInput
 #define func_ov058_020d5f04 UpdateEnemyCombatAi
 #include "src/ov021/unclassified_helpers/UpdateFieldButton_020a746c.c"

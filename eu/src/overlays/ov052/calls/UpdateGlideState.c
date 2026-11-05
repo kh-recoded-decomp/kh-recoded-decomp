@@ -7,6 +7,6 @@
 #define IsPlayerEntryFlagSet_02050014 IsPlayerEntryFlagSet
 #define ReactToEvent_020c8598 ReactToEvent
 #define UpdateGlideState_020d083c UpdateGlideState
-#define func_ov021_020a7504 func_ov021_020a7524
-#define func_ov021_020a7544 func_ov021_020a7564
+#define func_ov021_020a7504 GetFieldDirectionActiveAndPollSubMode
+#define func_ov021_020a7544 GetSummedFieldDirectionAngle
 #include "src/ov052/actor_motion/UpdateGlideState_020d083c.c"

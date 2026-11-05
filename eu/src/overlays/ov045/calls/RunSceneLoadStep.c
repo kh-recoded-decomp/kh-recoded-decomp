@@ -101,7 +101,7 @@ extern void LoadBg3Graphics(void *archive, int characterIndex, int paletteIndex,
                                      void *characterFile, u32 characterOffset);
 extern Record *FindActiveRecordById(void *pool, u16 recordId);
 extern void InitBackgroundContainer(void *pool, PoolConfig *config);
-extern void func_ov027_020b7e44(void *pool, u32 fileId);
+extern void LoadTagTrackerResourceFile(void *pool, u32 fileId);
 extern void *GetFieldFont3(void);
 extern BOOL InitTextLayerAt(void *layer, int index, u16 *screenBase, void *font, TextFrame *frame);
 extern BOOL AcquireRecordManager(void);
@@ -284,7 +284,7 @@ SceneStep RunSceneLoadStep(u32 plttSize)
         REG_BG3CNT = (u16)((REG_BG3CNT & ~3) | 2);
         LoadBg3Graphics(work->file0, -1, 0, TRUE, work->file1, 0);
         InitBackgroundContainer(work->records.pool, &config);
-        func_ov027_020b7e44(work->records.pool, FILE_ID(work->header0, 1));
+        LoadTagTrackerResourceFile(work->records.pool, FILE_ID(work->header0, 1));
         work->iconValue = FindActiveRecordById(work->records.pool, 0x173)->value;
         work->step = 3;
         break;
@@ -477,7 +477,7 @@ SceneStep RunSceneLoadStep(u32 plttSize)
         REG_BG3CNT = (u16)((REG_BG3CNT & ~3) | 3);
         LoadBg3Graphics(work->file0, 0, 0, TRUE, work->file1, 0x4800);
         InitBackgroundContainer(work->records.pool, &config);
-        func_ov027_020b7e44(work->records.pool, FILE_ID(work->header0, 1));
+        LoadTagTrackerResourceFile(work->records.pool, FILE_ID(work->header0, 1));
         work->step = 9;
         break;
     }

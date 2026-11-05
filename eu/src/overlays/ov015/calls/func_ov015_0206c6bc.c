@@ -7,7 +7,7 @@ typedef struct {
 } PanelFlagsE0b;
 
 extern void *data_ov015_0207e960;
-extern void func_ov027_020b7e1c(void *block);
+extern void FreeTagTrackerPools(void *block);
 extern void DestroyObjectsAndRelease(void *block);
 
 void func_ov015_0206c6bc(void) {
@@ -16,6 +16,6 @@ void func_ov015_0206c6bc(void) {
         return;
     }
     flags->flag5 = 0;
-    func_ov027_020b7e1c((u8 *)data_ov015_0207e960 + 0x5f8);
+    FreeTagTrackerPools((u8 *)data_ov015_0207e960 + 0x5f8);
     DestroyObjectsAndRelease((u8 *)data_ov015_0207e960 + 0x6ac0);
 }

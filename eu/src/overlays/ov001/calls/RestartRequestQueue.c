@@ -4,5 +4,5 @@
 #define data_ov001_020a04ac data_ov001_020a04cc
 #define func_ov001_0207421c RefreshGaugeDisplay
 #define func_ov001_020742e0 RelayoutGaugeRows
-#define func_ov027_020b7f60 func_ov027_020b7f80
+#define func_ov027_020b7f60 DeactivateTrackerRecord
 #include "src/ov001/field_manager/RestartRequestQueue_02075008.c"

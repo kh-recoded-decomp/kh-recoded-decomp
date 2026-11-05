@@ -23,9 +23,9 @@
 #define func_ov001_0207b6d4 GetPanelInputActive
 #define func_ov001_0207b6e0 GetPanelEntryName
 #define func_ov001_0207b748 GetPanelMessageView
-#define func_ov025_020b74bc func_ov025_020b74dc
+#define func_ov025_020b74bc GetListCursorDepth
 #define func_ov025_020b7658 ClearEntityCounters
-#define func_ov027_020b7dd4 func_ov027_020b7df4
+#define func_ov027_020b7dd4 UpdateTagTrackerAndTouch
 #define func_ov027_020b90a4 FindWidgetById
 #define func_ov027_020b9e60 FlushDirtyTileTableRows
 #define func_ov027_020ba2a8 GetPackedFileEntry

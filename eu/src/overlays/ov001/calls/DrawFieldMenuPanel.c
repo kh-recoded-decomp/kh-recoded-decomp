@@ -9,5 +9,5 @@
 #define UpdateFieldPromptTag_02075ccc UpdateFieldPromptTag
 #define UpdateWidgetLayerDefault_020b9df0 UpdateWidgetLayerDefault_020b9e10
 #define func_ov001_02075348 CycleMenuEntry
-#define func_ov027_020b822c func_ov027_020b824c
+#define func_ov027_020b822c InvokeTrackerRecordAtPosition
 #include "src/ov001/field_manager/DrawFieldMenuPanel_02075f5c.c"

@@ -37,9 +37,9 @@ extern void RefreshSecondaryPanel(Ov086Menu *menu);
 extern void SelectListNodeOrFirst(void *self, void *target);
 extern void Text_UploadTileBuffer(void *surface);
 extern void *FindActiveRecordById(void *pool, u32 recordId);
-extern void func_ov027_020b8200(void *pool, void *record, s16 y);
+extern void SetTrackerRecordY(void *pool, void *record, s16 y);
 extern void TagTracker_InvokeCallback(void *pool, void *record);
-extern void func_ov027_020b824c(void *pool, void *record, u16 x, u16 y);
+extern void InvokeTrackerRecordAtPosition(void *pool, void *record, u16 x, u16 y);
 extern void DrawRecordHintText(Ov086Menu *menu);
 
 void RefreshRecordPageLayout(Ov086Menu *menu)
@@ -117,7 +117,7 @@ void RefreshRecordPageLayout(Ov086Menu *menu)
 
         if (page == 7 || (page == 6 && menu->stepCount == 2)) {
             if ((page == 7 ? menu->bonusUnlocked : menu->extraUnlocked) != 0) {
-                func_ov027_020b824c(menu->recordPool, record, 0x17, 9);
+                InvokeTrackerRecordAtPosition(menu->recordPool, record, 0x17, 9);
             }
         } else {
             u16 mask;
@@ -132,7 +132,7 @@ void RefreshRecordPageLayout(Ov086Menu *menu)
             for (row = 0; row < 4; row++) {
                 for (col = 0; col < 3; col++) {
                     if (mask & (1 << (col + row * 3))) {
-                        func_ov027_020b8200(menu->recordPool, record, row * 9 + col * 2 + 5);
+                        SetTrackerRecordY(menu->recordPool, record, row * 9 + col * 2 + 5);
                         TagTracker_InvokeCallback(menu->recordPool, record);
                     }
                 }

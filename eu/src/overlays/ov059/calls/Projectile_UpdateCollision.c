@@ -29,7 +29,7 @@
 #define func_ov001_020863e0 func_ov001_02086408
 #define func_ov001_020878b8 StartStageEventInstanceIfActive
 #define func_ov018_020a3470 func_ov018_020a3490
-#define func_ov021_020ac148 func_ov021_020ac168
+#define func_ov021_020ac148 InitHitResultHeader
 #define func_ov021_020ac33c ApplyHitToTarget_020ac33c
 #define func_ov031_020bc700 func_ov031_020bc720
 #define func_ov043_020bca1c Ov043Camera_GetActiveController

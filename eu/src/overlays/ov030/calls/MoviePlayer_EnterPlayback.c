@@ -27,7 +27,7 @@ extern BOOL IsSessionFlagSet(int flagId);
 extern void SetFieldEntriesPaused(int paused);
 extern void ReloadFirstType11FieldObjectModels(void);
 extern VecFx32 *GetManagedActorPosition(int index);
-extern SubModeView *func_ov021_020af614(void);
+extern SubModeView *GetActiveSubModeCameraWork(void);
 extern void UpdateEventObjects(void);
 extern void ForwardToActiveService_02088074(void);
 extern void CacheSeqArcStatus(int level);
@@ -58,7 +58,7 @@ int MoviePlayer_EnterPlayback(void)
     }
     ReloadFirstType11FieldObjectModels();
     data_ov030_020bd020->cameraPos = *GetManagedActorPosition(0);
-    data_ov030_020bd020->cameraTarget = func_ov021_020af614()->target;
+    data_ov030_020bd020->cameraTarget = GetActiveSubModeCameraWork()->target;
     if (!IsSessionFlagSet(0x360c)) {
         UpdateEventObjects();
         ForwardToActiveService_02088074();

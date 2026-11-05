@@ -21,8 +21,8 @@
 #define func_ov001_020728a4 IsFieldFlag8Set
 #define func_ov001_020736b4 UpdateFieldWidgetLayer
 #define func_ov001_0207b3cc GetLoadedSubsceneMode
-#define func_ov027_020b7dd4 func_ov027_020b7df4
-#define func_ov027_020b81e0 func_ov027_020b8200
+#define func_ov027_020b7dd4 UpdateTagTrackerAndTouch
+#define func_ov027_020b81e0 SetTrackerRecordY
 #define func_ov027_020b9e30 ClearTileTableRowDirty
 #define func_ov027_020b9e60 FlushDirtyTileTableRows
 #include "src/ov001/field_manager/UpdateFieldHud_02070e98.c"

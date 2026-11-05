@@ -1,3 +1,3 @@
 #define ForwardTargetHandleValue_020d3b30 ForwardTargetHandleValue
-#define func_ov021_020aafc4 func_ov021_020aafe4
+#define func_ov021_020aafc4 UpdateEntrySource
 #include "src/ov056/unclassified_helpers/ForwardTargetHandleValue_020d3b30.c"

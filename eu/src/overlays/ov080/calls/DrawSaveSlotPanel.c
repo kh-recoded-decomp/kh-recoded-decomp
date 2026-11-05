@@ -5,7 +5,7 @@
 #define func_02001908 GetTextLayerLineWidth
 #define func_0204f13c IndexedRecord_SetPair
 #define func_0204f378 IndexedRecords_SetFlag2
-#define func_ov027_020b81e8 func_ov027_020b8208
+#define func_ov027_020b81e8 SetTrackerRecordPosition
 #define func_ov027_020b91a8 GetWidgetPosition
 #define func_ov027_020b91c8 SetWidgetPosition
 #define func_ov027_020b9580 SetEntrySlotsVisible

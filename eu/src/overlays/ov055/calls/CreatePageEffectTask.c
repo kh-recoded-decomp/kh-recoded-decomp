@@ -4,8 +4,8 @@
 #define DispatchPageHandler_020d3a94 DispatchPageHandler
 #define InitScriptTask_020adc5c InitScriptTask
 #define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
-#define func_ov021_020adc80 func_ov021_020adca0
-#define func_ov021_020adc8c func_ov021_020adcac
+#define func_ov021_020adc80 UpdateEffectTaskSource
+#define func_ov021_020adc8c DrawEffectTaskSource
 #define func_ov055_020d3acc ReleaseSceneObjectAndFreeWork
 #define func_ov055_020d3afc ResumeEffectOwnerActor
 #define func_ov055_020d3c00 UpdateEffectOwnerMotion

@@ -1,4 +1,4 @@
 #define AddQuantizedViewAngle_020cd2c4 AddQuantizedViewAngle
 #define QuantizeSummedAngle_020cd334 QuantizeSummedAngle
-#define func_ov021_020a7544 func_ov021_020a7564
+#define func_ov021_020a7544 GetSummedFieldDirectionAngle
 #include "src/ov059/unclassified_helpers/QuantizeSummedAngle_020cd334.c"

@@ -6,5 +6,5 @@
 #define UpdateActionCommand_0206d0ac UpdateActionCommand
 #define data_ov001_020a049c data_ov001_020a04bc
 #define func_020359f8 ApplyRecordTableEntry5
-#define func_ov021_020a74f0 func_ov021_020a7510
+#define func_ov021_020a74f0 ClearFieldButtonInput
 #include "src/ov001/field_manager/ActivateFieldPlayerEntry_0206dd90.c"

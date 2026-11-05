@@ -40,7 +40,7 @@ extern const VecFx32 gZeroVecFx32;
 extern const s16 gSinFx12Table[];
 extern InputRecord *GetPlayerControlState(u32 playerIndex);
 extern void Actor_UpdateJump(Actor *actor, int x, int y);
-extern BOOL func_ov021_020a7524(InputRecord *record);
+extern BOOL GetFieldDirectionActiveAndPollSubMode(InputRecord *record);
 extern BOOL HasFlagsAt0xc(InputRecord *record, u16 mask);
 extern int NextSharedRandom16Scaled(u32 mask);
 extern fx32 FX_Mul(fx32 a, fx32 b);
@@ -75,7 +75,7 @@ void Actor_UpdateDrift(Actor *actor)
     }
     pressed = FALSE;
     angle = -1;
-    if (func_ov021_020a7524(record)) {
+    if (GetFieldDirectionActiveAndPollSubMode(record)) {
         if (record->previous != record->current) {
             pressed = TRUE;
         }

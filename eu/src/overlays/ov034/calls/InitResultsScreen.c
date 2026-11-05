@@ -75,7 +75,7 @@ extern BOOL InitTextLayerAt(void *text, int layer, u16 *screenBase, void *font, 
 extern void MarkTileTableRowDirty(void *layer, int id);
 extern int AcquireRecordSlot(int slot, int param);
 extern void InitBackgroundContainer(void *tracker, TagConfig *config);
-extern void func_ov027_020b7e44(void *tracker, u32 fileId);
+extern void LoadTagTrackerResourceFile(void *tracker, u32 fileId);
 extern void *LoadFileAllocFromHeapTail(u32 fileId, u32 mode);
 extern void GetBgDataFromArchive(BgGraphicsData *out, void *archive, int screenIndex, int characterIndex,
                                           int paletteIndex);
@@ -84,13 +84,13 @@ extern void GX_LoadBG3Char(const void *src, u32 offset, u32 size);
 extern void NNSi_FndFreeFromDefaultHeap(void *block);
 extern int InitializeResourceContainer(void *container, void *params);
 extern void InitObjManagerAndMark(void *objects, ObjConfig *config);
-extern void func_ov027_020b9098(void *objects, u32 fileId);
-extern void func_ov027_020b8fb8(void *objects, u32 fileId, int count);
+extern void CreateWidgetImageEntry(void *objects, u32 fileId);
+extern void LoadWidgetDescriptorsFromFile(void *objects, u32 fileId, int count);
 extern void SetAllElementObjectModes(void *objects, int mode);
 extern void *FindWidgetById(void *objects, int id);
 extern void SetWidgetRootDpadEnabled(void *objects, BOOL enabled);
 extern int func_ov034_020bdea8(void *manager, int animation, int resource, int x, int y);
-extern void func_ov027_020b90b8(void *objects, void (*callback)(void));
+extern void SetWidgetRootInputCallback(void *objects, void (*callback)(void));
 extern void HandleResultsInput(void);
 extern void InvokeForChannelOrBoth(u32 arg0, void *arg1, void (*callback)(void), int channel);
 extern void UpdateResultsFade(void);
@@ -126,7 +126,7 @@ void InitResultsScreen(void)
     tagConfig = data_ov034_020be8ec;
     InitBackgroundContainer(WORK->tagTracker, &tagConfig);
     base = CONTAINER_BASE(objContainer);
-    func_ov027_020b7e44(WORK->tagTracker, base | 0x80000011);
+    LoadTagTrackerResourceFile(WORK->tagTracker, base | 0x80000011);
     archive = LoadFileAllocFromHeapTail(base | 0x80000012, 0xe);
     GetBgDataFromArchive(&bg, archive, -1, 0, 0);
     GX_LoadBGPltt(bg.palette->data, 0, bg.palette->size);
@@ -138,8 +138,8 @@ void InitResultsScreen(void)
     objConfig.fileId = base | 0x80000015;
     InitializeResourceContainer(WORK->objects, NULL);
     InitObjManagerAndMark(WORK->objects, &objConfig);
-    func_ov027_020b9098(WORK->objects, CONTAINER_BASE(iconContainer) | 0x8000001a);
-    func_ov027_020b8fb8(WORK->objects, base | 0x80000016, 0x4a);
+    CreateWidgetImageEntry(WORK->objects, CONTAINER_BASE(iconContainer) | 0x8000001a);
+    LoadWidgetDescriptorsFromFile(WORK->objects, base | 0x80000016, 0x4a);
     SetAllElementObjectModes(WORK->objects, 1);
     SetWidgetRecordMode(WORK->objects, (const struct WidgetPositionRecord *)(FindWidgetById(WORK->objects, 200)), 0);
     SetWidgetRootDpadEnabled(WORK->objects, TRUE);
@@ -149,7 +149,7 @@ void InitResultsScreen(void)
     for (i = 0; i < 6; i++) {
         WORK->rowEntries[i] = func_ov034_020bdea8(WORK->objects, 1, 0xc, 0xb8, i * 16 + 0x51);
     }
-    func_ov027_020b90b8(WORK->objects, HandleResultsInput);
+    SetWidgetRootInputCallback(WORK->objects, HandleResultsInput);
     InvokeForChannelOrBoth(1, sOv034_SYSAREAMENU_020c0f10, UpdateResultsFade, 0);
     WORK->isActive = 1;
 }

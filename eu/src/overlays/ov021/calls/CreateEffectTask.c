@@ -54,11 +54,11 @@ extern u32 GetResourceArchiveId(int index);
 extern int MapKindToSlot(int kind);
 extern void *AcquireRecordHandle(EffectOwner *owner, void *desc, int id, u32 key);
 extern void LoadResGroupHandles(EffectTask *task, EffectOwner *owner, void *desc);
-extern void func_ov021_020ad064(void);
-extern void func_ov021_020adca0(void);
-extern void func_ov021_020adcac(void);
+extern void ReleaseEffectTaskSource(void);
+extern void UpdateEffectTaskSource(void);
+extern void DrawEffectTaskSource(void);
 extern void BeginEntryReaction(void);
-extern void func_ov021_020ad078(void);
+extern void DispatchEffectTaskSourceKind(void);
 extern void UpdateGrabHoldState(void);
 
 EffectTask *CreateEffectTask(EffectOwner *owner, void *resDesc, EffectDesc *desc)
@@ -69,11 +69,11 @@ EffectTask *CreateEffectTask(EffectOwner *owner, void *resDesc, EffectDesc *desc
     int slot;
 
     InitScriptTask(task, 2, desc->id, desc->arg);
-    task->update = func_ov021_020ad064;
-    task->draw = func_ov021_020adca0;
-    task->cleanup = func_ov021_020adcac;
+    task->update = ReleaseEffectTaskSource;
+    task->draw = UpdateEffectTaskSource;
+    task->cleanup = DrawEffectTaskSource;
     task->onResume = BeginEntryReaction;
-    task->onPause = func_ov021_020ad078;
+    task->onPause = DispatchEffectTaskSourceKind;
     task->onEvent = UpdateGrabHoldState;
     def = desc->def;
     task->source = DispatchModeHandler(def, desc->arg, owner->player);

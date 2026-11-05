@@ -8,6 +8,6 @@
 #define UpdateGroundMovement_020ca918 UpdateGroundMovement
 #define data_ov052_020d20c8 data_ov052_020d20e8
 #define func_ov001_0206db78 GetPlayerControlState
-#define func_ov021_020a7504 func_ov021_020a7524
+#define func_ov021_020a7504 GetFieldDirectionActiveAndPollSubMode
 #define func_ov052_020c7edc SelectGroundAction
 #include "src/ov052/actor_motion/UpdateGroundMovement_020ca918.c"

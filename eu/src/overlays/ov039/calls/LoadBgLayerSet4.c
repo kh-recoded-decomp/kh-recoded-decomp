@@ -1,5 +1,5 @@
 #define LoadBgLayerSet4_020bac24 LoadBgLayerSet4
-#define PXI_Init_020b9d48 func_ov027_020b9d68
+#define PXI_Init_020b9d48 ClearTileTableRowByIdAdapter
 #define UpdateWidgetLayerDefault_020b9df0 UpdateWidgetLayerDefault_020b9e10
 #define data_ov039_020be740 data_ov039_020be760
 #define data_ov039_020be7ec gOv039SubBgScreenLoaders

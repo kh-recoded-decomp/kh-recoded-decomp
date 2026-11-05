@@ -9,7 +9,7 @@
 #define IsGlobalPackedBitSet_02027304 IsGlobalPackedBitSet
 #define LoadPackedFileView_020ba25c LoadPackedFileView
 #define OpenTextFrame_020be5b8 OpenTextFrame
-#define PXI_Init_020b9078 func_ov027_020b9098
+#define PXI_Init_020b9078 CreateWidgetImageEntry
 #define RefreshEntryListIfUnlocked_020c1f78 RefreshEntryListIfUnlocked
 #define SetEntrySlotsVisible_020b9580 SetEntrySlotsVisible
 #define SetTextColorIfFits_020bcd04 SetTextColorIfFits
@@ -29,8 +29,8 @@
 #define func_0204f2e4 IndexedRecord_ClearActive
 #define func_0204f378 IndexedRecords_SetFlag2
 #define func_02052224 GetRecordTableAEntry
-#define func_ov027_020b7e24 func_ov027_020b7e44
-#define func_ov027_020b8f98 func_ov027_020b8fb8
+#define func_ov027_020b7e24 LoadTagTrackerResourceFile
+#define func_ov027_020b8f98 LoadWidgetDescriptorsFromFile
 #define func_ov027_020b91a8 GetWidgetPosition
 #define func_ov027_020b91c8 SetWidgetPosition
 #define func_ov027_020b97b8 SetWidgetRecordMode

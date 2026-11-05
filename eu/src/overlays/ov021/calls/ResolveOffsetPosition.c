@@ -9,5 +9,5 @@
 #define data_ov021_020b56a4 data_ov021_020b56c4
 #define func_02023dbc _s32_div_f
 #define func_ov021_020b0450 SetXZVectorFromAngle
-#define func_ov021_020b4aa4 func_ov021_020b4ac4
+#define func_ov021_020b4aa4 ResolveStageScriptCommandDataOffset
 #include "src/ov021/script_ops/ResolveOffsetPosition_020b0508.c"

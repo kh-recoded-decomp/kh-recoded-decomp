@@ -5,14 +5,14 @@ extern void ScriptOp_GetPlayerHorizontalDrift(void); /* ScriptOp_GetPlayerHorizo
 extern void func_ov021_020b12b8(void);
 extern void ScriptOp_GetObjectVectorMagnitude(void); /* ScriptOp_GetObjectVectorMagnitude */
 extern void ScriptOp_IsStageEntryKind24(void); /* ScriptOp_IsStageEntryKind24 */
-extern void func_ov021_020b1250(void);
+extern void StageScriptExpr_GetSequenceId(void);
 extern void ScriptOp_GetPlayerLockFlag(void); /* ScriptOp_GetPlayerLockFlag */
 extern void ScriptCmd_GetTargetFacingDot(void); /* ScriptCmd_GetTargetFacingDot */
 extern void ScriptOp_GetObjectVerticalOffset(void); /* ScriptOp_GetObjectVerticalOffset */
 extern void ScriptOp_IsObjectCounterNonpositive(void); /* ScriptOp_IsObjectCounterNonpositive */
-extern void func_ov021_020b1134(void);
-extern void func_ov021_020b1128(void);
-extern void func_ov021_020b111c(void);
+extern void StageScriptExpr_GetVectorX(void);
+extern void StageScriptExpr_GetVectorY(void);
+extern void StageScriptExpr_GetVectorZ(void);
 extern void ReadContextFlagBit8(void); /* ReadContextFlagBit8 */
 extern void ScriptOp_GetObjectFixedField(void); /* ScriptOp_GetObjectFixedField */
 extern void func_ov021_020b10c0(void);
@@ -21,7 +21,7 @@ extern void ReadContextFlagBit9(void); /* ReadContextFlagBit9 */
 extern void ScriptOp_GetPlayerStateBit0(void); /* ScriptOp_GetPlayerStateBit0 */
 extern void ScriptOp_GetAttachPointScale(void); /* ScriptOp_GetAttachPointScale */
 extern void ScriptOp_GetOwnerIntegerField(void); /* ScriptOp_GetOwnerIntegerField */
-extern void func_ov021_020b0fd4(void);
+extern void StageExpr_GetSelectedCommandEntryId(void);
 extern void ScriptOp_GetPlayerAngleDegrees(void); /* ScriptOp_GetPlayerAngleDegrees */
 extern void ScriptCmd_CheckTargetLineOfSight(void); /* ScriptCmd_CheckTargetLineOfSight */
 extern void func_ov021_020b0edc(void);
@@ -30,9 +30,9 @@ extern void ScriptOp_GetObjectTypeId(void); /* ScriptOp_GetObjectTypeId */
 extern void func_ov021_020b0e24(void);
 extern void func_ov021_020b0df0(void);
 extern void func_ov021_020b0dd4(void);
-extern void func_ov021_020b0d8c(void);
+extern void StageExpr_FindFarthestFreeSlotAtOrAboveHeight(void);
 extern void ScriptOp_FindNearestFreeSlot(void); /* ScriptOp_FindNearestFreeSlot */
-extern void func_ov021_020b0cfc(void);
+extern void StageExpr_FindNearestFreeSlot(void);
 extern void ScriptOp_GetActiveObjectValue(void); /* ScriptOp_GetActiveObjectValue */
 extern void ReadContextFlagBit10(void); /* ReadContextFlagBit10 */
 extern void ScriptOp_GetFirstSharedValue(void); /* ScriptOp_GetFirstSharedValue */
@@ -41,18 +41,18 @@ extern void ReadContextFlagBit11(void); /* ReadContextFlagBit11 */
 extern void ScriptOp_IsPlayerAnimDone(void); /* ScriptOp_IsPlayerAnimDone */
 extern void func_ov021_020b0bec(void);
 extern void ScriptOp_GetEventActorValue(void); /* ScriptOp_GetEventActorValue */
-extern void func_ov021_020b0b74(void);
+extern void StageScriptExpr_TestSessionFlag3713(void);
 extern void ScriptOp_GetEventFlagPairBits(void); /* ScriptOp_GetEventFlagPairBits */
 extern void ReadContextFlagBit13(void); /* ReadContextFlagBit13 */
 extern void func_ov021_020b0b0c(void);
 extern void func_ov021_020b0af0(void);
 extern void func_ov021_020b0ad4(void);
 extern void ScriptOp_GetPlayerHiddenFlag(void); /* ScriptOp_GetPlayerHiddenFlag */
-extern void func_ov021_020b0a68(void);
+extern void StageExpr_FindFarthestFreeSlot(void);
 extern void SetScriptContextVector(void); /* SetScriptContextVector */
 extern void AddScriptContextVector(void); /* AddScriptContextVector */
 extern void SubmitActorRender(void); /* SubmitActorRender */
-extern void func_ov021_020b1f54(void);
+extern void StageScriptVec_AddRandomHorizontalOffset(void);
 extern void PickSpawnPointNearPlayer(void); /* PickSpawnPointNearPlayer */
 extern void ScriptOp_GetObjectPosition(void); /* ScriptOp_GetObjectPosition */
 extern void ScriptOp_DropToGround(void); /* ScriptOp_DropToGround */
@@ -60,13 +60,13 @@ extern void ScriptOp_MoveAlongPlayerFacing(void); /* ScriptOp_MoveAlongPlayerFac
 extern void ScriptOp_MoveAgainstPlayerFacing(void); /* ScriptOp_MoveAgainstPlayerFacing */
 extern void ScriptOp_StepTowardPlayer(void); /* ScriptOp_StepTowardPlayer */
 extern void ScriptOp_GetCameraTarget(void); /* ScriptOp_GetCameraTarget */
-extern void func_ov021_020b1c04(void);
+extern void StageScriptVec_GetActorNodePosition(void);
 extern void ScriptOp_GetObjectPositionById(void); /* ScriptOp_GetObjectPositionById */
 extern void ScriptOp_GetStageAnchorB(void); /* ScriptOp_GetStageAnchorB */
 extern void ScriptOp_GetStageAnchorA(void); /* ScriptOp_GetStageAnchorA */
 extern void LoadSavedPosition(void); /* LoadSavedPosition */
 extern void ScriptOp_GetGridCellPosition(void); /* ScriptOp_GetGridCellPosition */
-extern void func_ov021_020b1af4(void);
+extern void StageCmd_StoreCurrentMotionGridCellCenter(void);
 extern void func_ov021_020b1a9c(void);
 extern void ScriptOp_GetSlotPosition(void); /* ScriptOp_GetSlotPosition */
 extern void ScriptOp_ProjectObjectMovement(void); /* ScriptOp_ProjectObjectMovement */
@@ -86,16 +86,16 @@ void (*gScriptQueryHandlers[173])(void) = {
     func_ov021_020b12b8,
     ScriptOp_GetObjectVectorMagnitude, /* ScriptOp_GetObjectVectorMagnitude */
     ScriptOp_IsStageEntryKind24, /* ScriptOp_IsStageEntryKind24 */
-    func_ov021_020b1250,
+    StageScriptExpr_GetSequenceId,
     ScriptOp_GetPlayerLockFlag, /* ScriptOp_GetPlayerLockFlag */
     ScriptCmd_GetTargetFacingDot, /* ScriptCmd_GetTargetFacingDot */
     ScriptOp_GetObjectVerticalOffset, /* ScriptOp_GetObjectVerticalOffset */
     ScriptOp_IsObjectCounterNonpositive, /* ScriptOp_IsObjectCounterNonpositive */
     NULL,
     NULL,
-    func_ov021_020b1134,
-    func_ov021_020b1128,
-    func_ov021_020b111c,
+    StageScriptExpr_GetVectorX,
+    StageScriptExpr_GetVectorY,
+    StageScriptExpr_GetVectorZ,
     NULL,
     ReadContextFlagBit8, /* ReadContextFlagBit8 */
     NULL,
@@ -144,7 +144,7 @@ void (*gScriptQueryHandlers[173])(void) = {
     NULL,
     NULL,
     NULL,
-    func_ov021_020b0fd4,
+    StageExpr_GetSelectedCommandEntryId,
     NULL,
     NULL,
     NULL,
@@ -197,9 +197,9 @@ void (*gScriptQueryHandlers[173])(void) = {
     NULL,
     func_ov021_020b0dd4,
     NULL,
-    func_ov021_020b0d8c,
+    StageExpr_FindFarthestFreeSlotAtOrAboveHeight,
     ScriptOp_FindNearestFreeSlot, /* ScriptOp_FindNearestFreeSlot */
-    func_ov021_020b0cfc,
+    StageExpr_FindNearestFreeSlot,
     NULL,
     NULL,
     ScriptOp_GetActiveObjectValue, /* ScriptOp_GetActiveObjectValue */
@@ -227,7 +227,7 @@ void (*gScriptQueryHandlers[173])(void) = {
     NULL,
     ScriptOp_GetEventActorValue, /* ScriptOp_GetEventActorValue */
     NULL,
-    func_ov021_020b0b74,
+    StageScriptExpr_TestSessionFlag3713,
     NULL,
     ScriptOp_GetEventFlagPairBits, /* ScriptOp_GetEventFlagPairBits */
     NULL,
@@ -250,7 +250,7 @@ void (*gScriptQueryHandlers[173])(void) = {
     NULL,
     NULL,
     ScriptOp_GetPlayerHiddenFlag, /* ScriptOp_GetPlayerHiddenFlag */
-    func_ov021_020b0a68,
+    StageExpr_FindFarthestFreeSlot,
     NULL,
     NULL,
 };
@@ -260,7 +260,7 @@ void (*gScriptVectorHandlers[33])(void) = {
     SetScriptContextVector, /* SetScriptContextVector */
     AddScriptContextVector, /* AddScriptContextVector */
     SubmitActorRender, /* SubmitActorRender */
-    func_ov021_020b1f54,
+    StageScriptVec_AddRandomHorizontalOffset,
     PickSpawnPointNearPlayer, /* PickSpawnPointNearPlayer */
     ScriptOp_GetObjectPosition, /* ScriptOp_GetObjectPosition */
     ScriptOp_DropToGround, /* ScriptOp_DropToGround */
@@ -268,7 +268,7 @@ void (*gScriptVectorHandlers[33])(void) = {
     ScriptOp_MoveAgainstPlayerFacing, /* ScriptOp_MoveAgainstPlayerFacing */
     ScriptOp_StepTowardPlayer, /* ScriptOp_StepTowardPlayer */
     ScriptOp_GetCameraTarget, /* ScriptOp_GetCameraTarget */
-    func_ov021_020b1c04,
+    StageScriptVec_GetActorNodePosition,
     ScriptOp_GetObjectPositionById, /* ScriptOp_GetObjectPositionById */
     ScriptOp_GetStageAnchorB, /* ScriptOp_GetStageAnchorB */
     ScriptOp_GetStageAnchorA, /* ScriptOp_GetStageAnchorA */
@@ -277,7 +277,7 @@ void (*gScriptVectorHandlers[33])(void) = {
     NULL,
     NULL,
     ScriptOp_GetGridCellPosition, /* ScriptOp_GetGridCellPosition */
-    func_ov021_020b1af4,
+    StageCmd_StoreCurrentMotionGridCellCenter,
     func_ov021_020b1a9c,
     ScriptOp_GetSlotPosition, /* ScriptOp_GetSlotPosition */
     ScriptOp_ProjectObjectMovement, /* ScriptOp_ProjectObjectMovement */

@@ -126,20 +126,20 @@ extern void GXS_EndLoadOBJExtPltt(void);
 extern u16 NextSharedRandom16Scaled(u16 range);
 
 extern void InitBackgroundContainer(void *container, const BgContainerConfig *config);
-extern void func_ov027_020b7e44(void *container, u32 fileId);
-extern BgScreenEntry *func_ov027_020b8578(void *container, int entryId);
+extern void LoadTagTrackerResourceFile(void *container, u32 fileId);
+extern BgScreenEntry *FindActiveBackgroundScreenResourceById(void *container, int entryId);
 extern BgScreenRecord *FindActiveRecordById(void *container, u32 recordId);
 extern int InitializeResourceContainer(void *container, void *config);
 extern void InitObjManagerAndMark(void *container, ObjManagerConfig *config);
-extern void func_ov027_020b9098(void *container, u32 value);
-extern void func_ov027_020b8fb8(void *container, u32 fileId, int count);
+extern void CreateWidgetImageEntry(void *container, u32 value);
+extern void LoadWidgetDescriptorsFromFile(void *container, u32 fileId, int count);
 extern void SetAllElementObjectModes(void *container, int mode);
 extern void *FindWidgetById(void *container, int elementId);
 extern void SetEntrySlotsVisible(void *container, void *element, BOOL enabled);
 extern void SetFocusedWidget(void *container, void *element);
 extern void SetWidgetRootDpadEnabled(void *container, int value);
 extern void SetWidgetRootTouchEnabled(void *container, int value);
-extern void func_ov027_020b90b8(void *container,
+extern void SetWidgetRootInputCallback(void *container,
                              void (*callback)(WidgetPositionRecord *widget, u32 keys));
 extern void ResolveEntryStoreWord(void *container, int elementId, void (*callback)(void));
 
@@ -209,21 +209,21 @@ void SetupPanelGraphics(void) {
     mainObjConfig.cellFileId = fileId | 0x80000002;
     mainObjConfig.animFileId = fileId | 0x80000003;
     InitBackgroundContainer(data_ov015_0207e960->mainBg, &mainBgConfig);
-    func_ov027_020b7e44(data_ov015_0207e960->mainBg, fileId | 0x80000000);
+    LoadTagTrackerResourceFile(data_ov015_0207e960->mainBg, fileId | 0x80000000);
     archive = LoadFileAllocFromHeapTail(fileId | 0x80000001, 0x10);
     GetBgDataFromArchive(&bgData, archive, -1, 0, 0);
     GX_LoadBGPltt(bgData.palette->rawData, 0, bgData.palette->size);
     GX_LoadBG1Char(bgData.character->rawData, 0, bgData.character->size);
-    entry = func_ov027_020b8578(data_ov015_0207e960->mainBg, 0);
+    entry = FindActiveBackgroundScreenResourceById(data_ov015_0207e960->mainBg, 0);
     GX_LoadBG1Scr(entry->screen->rawData, 0, entry->screen->size);
-    entry = func_ov027_020b8578(data_ov015_0207e960->mainBg, 1);
+    entry = FindActiveBackgroundScreenResourceById(data_ov015_0207e960->mainBg, 1);
     GX_LoadBG0Scr(entry->screen->rawData,
                            FindActiveRecordById(data_ov015_0207e960->mainBg, 1)->charOffset << 6,
                            entry->screen->size);
     InitializeResourceContainer(data_ov015_0207e960->mainObj, NULL);
     InitObjManagerAndMark(data_ov015_0207e960->mainObj, &mainObjConfig);
-    func_ov027_020b9098(data_ov015_0207e960->mainObj, gLinkPanelAssetPaths[1]);
-    func_ov027_020b8fb8(data_ov015_0207e960->mainObj, mainObjConfig.animFileId, 0x14);
+    CreateWidgetImageEntry(data_ov015_0207e960->mainObj, gLinkPanelAssetPaths[1]);
+    LoadWidgetDescriptorsFromFile(data_ov015_0207e960->mainObj, mainObjConfig.animFileId, 0x14);
     SetAllElementObjectModes(data_ov015_0207e960->mainObj, 3);
     SetElementEnabled(data_ov015_0207e960->mainObj, 4, 0);
     SetElementEnabled(data_ov015_0207e960->mainObj, 5, 0);
@@ -246,14 +246,14 @@ void SetupPanelGraphics(void) {
     handle = Msg_OpenContainerAndReadHeader(sOv015_WxcWlaP2_0207e7ec, 0x10, 0);
     InitBackgroundContainer(data_ov015_0207e960->subBg, &subBgConfig);
     fileId = ((handle + 0x8000) & 0xfffffc) << 7;
-    func_ov027_020b7e44(data_ov015_0207e960->subBg, fileId | 0x80000000);
+    LoadTagTrackerResourceFile(data_ov015_0207e960->subBg, fileId | 0x80000000);
     archive = LoadFileAllocFromHeapTail(fileId | 0x80000002, 0x10);
     GetBgDataFromArchive(&bgData, archive, -1, 0, 0);
     GXS_LoadBGPltt(bgData.palette->rawData, 0, bgData.palette->size);
     GXS_LoadBG1Char(bgData.character->rawData, 0, bgData.character->size);
-    entry = func_ov027_020b8578(data_ov015_0207e960->subBg, 0);
+    entry = FindActiveBackgroundScreenResourceById(data_ov015_0207e960->subBg, 0);
     GXS_LoadBG1Scr(entry->screen->rawData, 0, entry->screen->size);
-    entry = func_ov027_020b8578(data_ov015_0207e960->subBg, 2);
+    entry = FindActiveBackgroundScreenResourceById(data_ov015_0207e960->subBg, 2);
     GXS_LoadBG0Scr(entry->screen->rawData,
                             FindActiveRecordById(data_ov015_0207e960->subBg, 2)->charOffset << 6,
                             entry->screen->size);
@@ -261,8 +261,8 @@ void SetupPanelGraphics(void) {
     subObjConfig.animFileId = fileId | 0x80000007;
     InitializeResourceContainer(data_ov015_0207e960->subObj, NULL);
     InitObjManagerAndMark(data_ov015_0207e960->subObj, &subObjConfig);
-    func_ov027_020b9098(data_ov015_0207e960->subObj, gLinkPanelAssetPaths[3]);
-    func_ov027_020b8fb8(data_ov015_0207e960->subObj, subObjConfig.animFileId, 0x19);
+    CreateWidgetImageEntry(data_ov015_0207e960->subObj, gLinkPanelAssetPaths[3]);
+    LoadWidgetDescriptorsFromFile(data_ov015_0207e960->subObj, subObjConfig.animFileId, 0x19);
     SetAllElementObjectModes(data_ov015_0207e960->subObj, 3);
     if (DispatchContextCommand(5, 0, 0, 0) != 0) {
         SetElementEnabled(data_ov015_0207e960->subObj, 8, 1);
@@ -351,7 +351,7 @@ void SetupPanelGraphics(void) {
         void *element = FindWidgetById(data_ov015_0207e960->subObj, 10);
         SetFocusedWidget(data_ov015_0207e960->subObj, element);
     }
-    func_ov027_020b90b8(data_ov015_0207e960->subObj, HandleWirelessPanelNavigation);
+    SetWidgetRootInputCallback(data_ov015_0207e960->subObj, HandleWirelessPanelNavigation);
     ResolveEntryStoreWord(data_ov015_0207e960->subObj, 4, func_ov015_02072754);
     ResolveEntryStoreWord(data_ov015_0207e960->subObj, 9, func_ov015_02072758);
     ResolveEntryStoreWord(data_ov015_0207e960->subObj, 17, SetPanelFlagE2Bit3);

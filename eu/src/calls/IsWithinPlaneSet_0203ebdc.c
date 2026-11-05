@@ -1,6 +1,6 @@
 #define IsWithinPlaneSet_0203ebc8 IsWithinPlaneSet_0203ebdc
 #define VEC_DotProduct_01ff9e6c VEC_DotProduct
 #define func_01ff9e3c VEC_Subtract
-#define func_ov021_020af5b4 func_ov021_020af5d4
-#define func_ov021_020af6fc func_ov021_020af71c
+#define func_ov021_020af5b4 GetActiveCameraCullingOrigin
+#define func_ov021_020af6fc GetActiveCameraViewPlaneNormals
 #include "src/arm9/spatial_queries/IsWithinPlaneSet_0203ebc8.c"

@@ -19,7 +19,7 @@ extern PanelItem *FindWidgetById(void *container, int itemId);
 extern void SetEntrySlotsVisible(void *container, PanelItem *item, int flag);
 extern void ApplySelectedSubitemValues(void *container, PanelItem *item, int useAlt);
 extern void SetFocusedWidget(void *container, PanelItem *item);
-extern void func_ov027_020b90b8(void *container, u32 callback);
+extern void SetWidgetRootInputCallback(void *container, u32 callback);
 extern void func_ov015_0206eefc(void);
 extern BOOL PlaySoundEffect(int seqArcNo, int index);
 extern void UpdatePanelSelectionSound(PanelItem *item);
@@ -48,7 +48,7 @@ void func_ov015_020716f8(void) {
     data_ov015_0207e960->selectedValue = FindWidgetById(data_ov015_0207e960->container, 8)->value;
     func_ov015_0206eefc();
     data_ov015_0207e960->unk_BB = 0;
-    func_ov027_020b90b8(data_ov015_0207e960->container, (u32)UpdatePanelSelectionSound);
+    SetWidgetRootInputCallback(data_ov015_0207e960->container, (u32)UpdatePanelSelectionSound);
     PlaySoundEffect(2, 2);
     container = data_ov015_0207e960->container;
     ClearWidgetRecordActiveBits(container, (const struct WidgetPositionRecord *)(FindWidgetById(container, 9)));
