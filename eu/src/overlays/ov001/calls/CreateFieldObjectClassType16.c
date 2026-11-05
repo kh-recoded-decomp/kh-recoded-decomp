@@ -6,10 +6,10 @@
 #define func_ov001_0207f244 FreeFieldObjectShapeStorage
 #define func_ov001_0207f380 CreateByteGrid
 #define func_ov001_02085f3c RespawnScaledFieldObject
-#define func_ov001_02086060 func_ov001_02086088
-#define func_ov001_02086064 func_ov001_0208608c
+#define func_ov001_02086060 ScaledFieldObject_OnEnabledChangedNoop
+#define func_ov001_02086064 ScaledFieldObject_GetPosition
 #define func_ov001_02086068 SetPanelPosition
-#define func_ov001_020860a4 func_ov001_020860cc
-#define func_ov001_020860ac func_ov001_020860d4
+#define func_ov001_020860a4 ScaledFieldObject_GetClassHitResult
+#define func_ov001_020860ac ScaledFieldObject_QueryHitFalse
 #define func_ov001_020860b0 DrawObjectWithDepthScale
 #include "src/ov001/unclassified_helpers/CreateFieldObjectClassType16_0208614c.c"

@@ -3,5 +3,5 @@
 #define GetLinkedStageActor_0209c2f0 GetLinkedStageActor
 #define GetStageActor_0209c040 GetStageActor
 #define SetStageEventKind_02092afc SetStageEventKind
-#define func_ov001_02091ac0 func_ov001_02091ae8
+#define func_ov001_02091ac0 ReleaseActorSoundSlotsByKey
 #include "src/ov001/shared_engine/SetStageEventKind_02092afc.c"

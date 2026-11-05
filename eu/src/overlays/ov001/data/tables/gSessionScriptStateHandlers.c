@@ -10,7 +10,7 @@ extern void WaitSessionPollAndClearFlags(void); /* WaitSessionPollAndClearFlags 
 extern void HandleMenuPromptResult(void); /* HandleMenuPromptResult */
 extern void Session_Advance_Or_Lock(void);
 extern void StepSessionScriptOrAbort(void); /* StepSessionScriptOrAbort */
-extern void func_ov001_02062654(void);
+extern void ReleaseSessionTaskAndFlushPendingWork(void);
 extern void WaitSessionPollCallback(void); /* WaitSessionPollCallback */
 extern void func_ov001_0206269c(void); /* HandleSessionScriptResult */
 extern void ExitSessionAndCommitSave(void); /* ExitSessionAndCommitSave */
@@ -25,7 +25,7 @@ void (*gSessionScriptStateHandlers[13])(void) = {
     HandleMenuPromptResult, /* HandleMenuPromptResult */
     Session_Advance_Or_Lock,
     StepSessionScriptOrAbort, /* StepSessionScriptOrAbort */
-    func_ov001_02062654,
+    ReleaseSessionTaskAndFlushPendingWork,
     WaitSessionPollCallback, /* WaitSessionPollCallback */
     func_ov001_0206269c, /* HandleSessionScriptResult */
     ExitSessionAndCommitSave, /* ExitSessionAndCommitSave */

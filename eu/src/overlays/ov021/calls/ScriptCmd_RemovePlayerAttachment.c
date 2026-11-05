@@ -2,5 +2,5 @@
 #define ScriptCmd_RemovePlayerAttachment_020b3888 ScriptCmd_RemovePlayerAttachment
 #define TaggedValueToInt_020b0398 TaggedValueToInt
 #define data_ov021_020b56a4 data_ov021_020b56c4
-#define func_ov001_02091ac0 func_ov001_02091ae8
+#define func_ov001_02091ac0 ReleaseActorSoundSlotsByKey
 #include "src/ov021/script_ops/ScriptCmd_RemovePlayerAttachment_020b3888.c"

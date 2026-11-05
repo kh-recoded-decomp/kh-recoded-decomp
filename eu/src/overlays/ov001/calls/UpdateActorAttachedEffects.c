@@ -1,6 +1,6 @@
 #define Effect_IsAlive_0204dc3c IsSoundHandleCurrentAndBound
 #define Effect_SetPosition_0204db9c Handle_WritePayloadIfLive
 #define GetStageEntrySlot_0209c1fc GetStageEntrySlot
-#define ReleaseActorEffect_02091ac0 func_ov001_02091ae8
+#define ReleaseActorEffect_02091ac0 ReleaseActorSoundSlotsByKey
 #define UpdateActorAttachedEffects_0208fb7c UpdateActorAttachedEffects
 #include "src/ov001/shared_engine/UpdateActorAttachedEffects_0208fb7c.c"

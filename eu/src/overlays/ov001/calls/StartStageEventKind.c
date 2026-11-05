@@ -14,6 +14,6 @@
 #define StartStageEventKind_02092bcc StartStageEventKind
 #define ZeroActorSubStruct_02092790 ZeroActorSubStruct
 #define data_ov001_0209e52c gStageEventKinds
-#define func_ov001_02091ac0 func_ov001_02091ae8
+#define func_ov001_02091ac0 ReleaseActorSoundSlotsByKey
 #define func_ov001_020925bc SetStageEventHandlerState
 #include "src/ov001/shared_engine/StartStageEventKind_02092bcc.c"

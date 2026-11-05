@@ -1,3 +1,4 @@
+#define func_ov001_02064d44 StopPostIntroElapsedTimerIfActive
 #define ScriptCmd_ToggleSessionBit15_02065e74 ScriptCmd_ToggleSessionBit15
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
 #define func_ov001_02064d1c MarkSessionIntroDone

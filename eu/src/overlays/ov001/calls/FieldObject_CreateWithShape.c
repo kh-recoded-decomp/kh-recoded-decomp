@@ -1,5 +1,5 @@
 #define BuildCollisionShape_02080834 BuildCollisionShape
 #define FieldObject_CreateWithShape_02080d9c FieldObject_CreateWithShape
 #define FieldObject_Create_0207f440 FieldObject_Create
-#define func_ov001_02080a74 func_ov001_02080a9c
+#define func_ov001_02080a74 FieldObject_IdleUpdate
 #include "src/ov001/field_objects/FieldObject_CreateWithShape_02080d9c.c"

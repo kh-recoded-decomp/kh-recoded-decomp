@@ -1,3 +1,4 @@
+#define func_ov001_02068a74 RollStageEntryMappedDrop
 #define func_ov001_02063a38 GetFieldSessionState
 #define AddSessionCounter_02063a80 AddSessionCounter
 #define ApplyHitToEnemyGroup_020958f4 ApplyHitToEnemyGroup
@@ -26,9 +27,9 @@
 #define VEC_Normalize_01ffaff4 VEC_NormalizeLength
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define data_02053438 gZeroVecFx32
-#define func_ov001_02091ac0 func_ov001_02091ae8
+#define func_ov001_02091ac0 ReleaseActorSoundSlotsByKey
 #define func_ov001_020925bc SetStageEventHandlerState
-#define func_ov001_020925c8 func_ov001_020925f0
+#define func_ov001_020925c8 SetStageActorVariantLevel
 #define func_ov001_02093188 ResetStageActorFlags
 #define func_ov001_02097a84 ComputeAttackDamage_02097aac
 #define func_ov001_0209c3c0 GetStageManager

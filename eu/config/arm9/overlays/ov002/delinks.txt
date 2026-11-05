@@ -180,11 +180,11 @@ src/overlays/ov002/calls/ClosePanelAndQueueScene.c:
     complete
     .text       start:0x02062da0 end:0x02062dd8
 
-src/overlays/ov002/auto/func_ov002_02062dd8.c:
+src/overlays/ov002/auto/Ov002Panel_UpdateMode1Noop.c:
     complete
     .text       start:0x02062dd8 end:0x02062ddc
 
-src/overlays/ov002/auto/func_ov002_02062ddc.c:
+src/overlays/ov002/auto/Ov002Panel_LeaveMode1Noop.c:
     complete
     .text       start:0x02062ddc end:0x02062de0
 
@@ -212,7 +212,7 @@ src/overlays/ov002/calls/UnloadPanelOverlay13.c:
     complete
     .text       start:0x02062e98 end:0x02062ec8
 
-src/overlays/ov002/auto/func_ov002_02062ec8.c:
+src/overlays/ov002/auto/Ov002Panel_EnterMode5Noop.c:
     complete
     .text       start:0x02062ec8 end:0x02062ecc
 
@@ -220,7 +220,7 @@ src/overlays/ov002/calls/SwitchOv002PanelToMode0.c:
     complete
     .text       start:0x02062ecc end:0x02062edc
 
-src/overlays/ov002/auto/func_ov002_02062edc.c:
+src/overlays/ov002/auto/Ov002Panel_LeaveMode5Noop.c:
     complete
     .text       start:0x02062edc end:0x02062ee0
 
@@ -240,11 +240,11 @@ src/overlays/ov002/calls/SetPanelStateFlag0.c:
     complete
     .text       start:0x02062f60 end:0x02062f80
 
-src/overlays/ov002/auto/func_ov002_02062f80.c:
+src/overlays/ov002/auto/Ov002Panel_UpdateMode4Noop.c:
     complete
     .text       start:0x02062f80 end:0x02062f84
 
-src/overlays/ov002/auto/func_ov002_02062f84.c:
+src/overlays/ov002/auto/Ov002Panel_LeaveMode4Noop.c:
     complete
     .text       start:0x02062f84 end:0x02062f88
 
@@ -664,11 +664,11 @@ src/overlays/ov002/calls/SetClampedPercentValue.c:
     complete
     .text       start:0x020674fc end:0x02067524
 
-src/overlays/ov002/auto/func_ov002_02067524.c:
+src/overlays/ov002/auto/GetRecordPanelProgress.c:
     complete
     .text       start:0x02067524 end:0x02067538
 
-src/overlays/ov002/auto/func_ov002_02067538.c:
+src/overlays/ov002/auto/SetContextIndexedGlobalFlag.c:
     complete
     .text       start:0x02067538 end:0x02067548
 
@@ -740,7 +740,7 @@ src/overlays/ov002/calls/WriteGlobalPackedFlag.c:
     complete
     .text       start:0x020679dc end:0x020679fc
 
-src/overlays/ov002/auto/func_ov002_020679fc.c:
+src/overlays/ov002/auto/ReadGlobalPackedFlag.c:
     complete
     .text       start:0x020679fc end:0x02067a0c
 

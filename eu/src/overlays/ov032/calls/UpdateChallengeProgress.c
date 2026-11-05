@@ -1,3 +1,4 @@
+#define func_ov001_02063b68 GetSessionCounter
 #define RTC_GetTime_0200e520 RTC_GetTime
 #define RTCi_RunAsyncCommandAndWait_0200e4b0 RTC_GetDate
 #define UpdateChallengeProgress_020bb57c UpdateChallengeProgress

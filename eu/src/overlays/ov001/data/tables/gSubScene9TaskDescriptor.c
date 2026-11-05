@@ -2,12 +2,12 @@
 
 /* Only callback addresses are stored; their signatures are task-specific. */
 extern void SubScene9_Create_02066c80();
-extern void func_ov001_02066ca0();
+extern void ClearSubScene9WorkOnDestroy();
 
 StageManagerTaskDescriptor gSubScene9TaskDescriptor = {
     0x00020008,
     (void *)SubScene9_Create_02066c80,
-    (void *)func_ov001_02066ca0,
+    (void *)ClearSubScene9WorkOnDestroy,
     0x24,
     NULL
 };

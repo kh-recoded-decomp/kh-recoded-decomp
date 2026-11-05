@@ -12,7 +12,7 @@ typedef struct MovieScene {
 
 extern MovieScene *GetRunningTaskWork(void);
 extern void NNSi_FndFreeFromDefaultHeap(void *ptr);
-extern void func_ov003_02064974(void *arg);
+extern void DestroyMovieSceneObjectListForwarder(void *arg);
 extern void FreeResourceBufferAndProbeHeap(void *resources);
 extern void StoreGlobalArrayEntry(int index, int value);
 extern void ReleaseScriptVmBuffer(void *sound);
@@ -27,7 +27,7 @@ void MovieScene_Shutdown(void)
     MovieScene *scene = GetRunningTaskWork();
 
     NNSi_FndFreeFromDefaultHeap(scene->buffer);
-    func_ov003_02064974(scene->pxi);
+    DestroyMovieSceneObjectListForwarder(scene->pxi);
     FreeResourceBufferAndProbeHeap(scene->resources);
     StoreGlobalArrayEntry(3, 0);
     ReleaseScriptVmBuffer(scene->sound);

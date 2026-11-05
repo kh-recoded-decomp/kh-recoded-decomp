@@ -25,7 +25,7 @@ extern char data_ov045_020c0820[];
 extern char OVERLAY_45_ID[];
 extern void LoadOverlayAfterGeometryTransfer(int processor, int overlay_id);
 extern void *CreateTaskObject(void *descriptor, void *userData);
-extern u32 func_ov001_02063b68(s32 index);
+extern u32 GetSessionCounter(s32 index);
 extern s32 func_ov001_020644c0(void);
 extern int ReadSessionPackedBits(int bitOffset, u32 bitCount);
 extern u32 GetPostIntroElapsedMilliseconds(void);
@@ -39,7 +39,7 @@ void OpenResultScreen(int rank, int arg)
     LoadOverlayAfterGeometryTransfer(0, (int)OVERLAY_45_ID);
     params.flags = 0;
     params.mode = rank - 1;
-    params.score = func_ov001_02063b68(0);
+    params.score = GetSessionCounter(0);
     params.extra = GetPostIntroElapsedMilliseconds();
     params.arg = arg;
     if (scene->resultScreen != NULL) {
@@ -59,7 +59,7 @@ void OpenResultScreen(int rank, int arg)
             params.mode = 5;
             break;
         }
-        params.score = ReadSessionPackedBits(0x35a7, 0x20) + func_ov001_02063b68(0) + CountAreaEntriesOfKind0() * 1000;
+        params.score = ReadSessionPackedBits(0x35a7, 0x20) + GetSessionCounter(0) + CountAreaEntriesOfKind0() * 1000;
     }
     scene->sceneFlags = (scene->sceneFlags & ~1) | 0x40;
     scene->resultScreen = CreateTaskObject(data_ov045_020c0820, &params);

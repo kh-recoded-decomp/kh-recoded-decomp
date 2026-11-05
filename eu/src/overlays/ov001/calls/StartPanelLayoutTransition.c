@@ -20,7 +20,7 @@ typedef struct ScrollPanel {
 
 extern ScrollPanel *data_ov001_020a04ec;
 extern void ApplyVerticalLayoutOffset(BOOL raised);
-extern u32 func_ov001_02063b68(int index);
+extern u32 GetSessionCounter(int index);
 
 BOOL StartPanelLayoutTransition(int layoutMode)
 {
@@ -34,9 +34,9 @@ BOOL StartPanelLayoutTransition(int layoutMode)
             ApplyVerticalLayoutOffset(FALSE);
         }
         if (layoutMode == 0) {
-            resourceId = func_ov001_02063b68(0);
+            resourceId = GetSessionCounter(0);
         } else {
-            resourceId = func_ov001_02063b68(1);
+            resourceId = GetSessionCounter(1);
         }
         panel->resourceId = resourceId;
         panel->transitionValue164 = 0;

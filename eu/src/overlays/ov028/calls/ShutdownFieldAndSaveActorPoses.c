@@ -20,7 +20,7 @@ extern void SetOverlayLayerVisible(s32 value);
 extern void ResetFieldObjectManagerResources(void);
 extern void ShutdownSceneContext(void);
 extern void ReleaseCounterHudModels(void);
-extern void func_ov001_02064d88(void);
+extern void SnapshotManagedActorStateBlocks(void);
 extern void PopVramState(void);
 extern void ActorRegistry_ClearCollisionResult(void);
 extern void ReleaseSeqArcHeapLevel(int index);
@@ -47,7 +47,7 @@ s32 ShutdownFieldAndSaveActorPoses(void)
     ShutdownSceneContext();
     data_ov028_020bb3a0->flags &= ~0xC;
     ReleaseCounterHudModels();
-    func_ov001_02064d88();
+    SnapshotManagedActorStateBlocks();
     PopVramState();
     ActorRegistry_ClearCollisionResult();
     ReleaseSeqArcHeapLevel(1);

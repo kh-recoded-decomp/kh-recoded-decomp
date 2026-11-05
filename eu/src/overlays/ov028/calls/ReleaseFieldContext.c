@@ -1,3 +1,4 @@
+#define func_ov001_02063c54 DestroySessionNameMenu
 #define func_ov001_0206a714 DestroyScreenFadeTaskAndClearHandle
 #define ArmObject_0206c6f4 DestroySessionCallbackTask
 #define PXI_Init_0202a638 DestroyTaskObjectWrapper

@@ -141,7 +141,7 @@ extern StageEntry *GetStageEntry(int id);
 extern void UpdateStageEventTimers(StageEvent *event);
 extern StageActor *GetLinkedStageActor(StageActor *actor);
 extern StageActor *FindRecordById_0209c304(int id);
-extern void func_ov001_02091ae8(StageActor *actor, u32 firstId, u32 secondId, u32 flags);
+extern void ReleaseActorSoundSlotsByKey(StageActor *actor, u32 firstId, u32 secondId, u32 flags);
 extern void CopySourceWords(void *cache);
 extern void SetStageEventHandlerState(StageEvent *event, u32 state);
 extern void VEC_Add(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
@@ -346,7 +346,7 @@ void UpdateStageEvent(StageEvent *event)
         event->cueStep = 0;
         rec = FindRecordById_0209c304(event->actorId);
         if (rec != NULL) {
-            func_ov001_02091ae8(rec, 0xffff, 0xffff, 0);
+            ReleaseActorSoundSlotsByKey(rec, 0xffff, 0xffff, 0);
             CopySourceWords(rec->sequencer);
         }
         SetStageEventHandlerState(event, 0xb);

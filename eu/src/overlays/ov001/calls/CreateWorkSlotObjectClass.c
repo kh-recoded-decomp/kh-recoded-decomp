@@ -2,7 +2,7 @@
 #define FieldObject_SyncWorkState_0208168c FieldObject_SyncWorkState
 #define GetFieldOffset40_02081684 GetFieldOffset40_020816ac
 #define GetFieldOffset40_02081688 GetFieldOffset40_020816b0
-#define _fp_init_02081680 func_ov001_020816a8
+#define _fp_init_02081680 WorkSlotObject_OnEnabledChangedNoop
 #define func_ov001_0207f0d0 AcquireEffectRecordPair
 #define func_ov001_0207f128 FieldObject_EnsureModelsLoaded
 #define func_ov001_0207f1e8 FreeFieldObjectClassAnimationBuffers

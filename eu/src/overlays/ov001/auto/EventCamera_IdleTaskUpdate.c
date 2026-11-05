@@ -1,0 +1,2 @@
+#define FSi_CloseFileCommand_0208b77c EventCamera_IdleTaskUpdate
+#include "src/ov001/library_nitro_fs/FSi_CloseFileCommand_0208b77c.c"

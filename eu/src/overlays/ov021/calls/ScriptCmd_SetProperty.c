@@ -287,7 +287,7 @@ extern fx32 ApplyActorScaleFactors(PropertyActor *actor);
 extern fx32 VEC_Mag(const VecFx32 *vector);
 extern fx32 FX_Div(fx32 numerator, fx32 denominator);
 extern void VEC_Add(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
-extern void func_ov001_02068968(int kind, int index);
+extern void QueueStageEventRequestIfEmpty(int kind, int index);
 extern void RunGridPathCommand(PropertyEvent *event, u16 property);
 extern void BindLinkSlotTable(PropertyEvent *event, u16 index);
 extern void ClaimSlot(u32 *table, u32 slot);
@@ -797,7 +797,7 @@ s32 ScriptCmd_SetProperty(void *thread, PropertyCommand *command)
                 handled = TRUE;
                 break;
             case 0x68:
-                func_ov001_02068968(0, event->objectId - 1);
+                QueueStageEventRequestIfEmpty(0, event->objectId - 1);
                 break;
             case 0x61:
                 RunGridPathCommand(event, property->value);

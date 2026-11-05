@@ -8,7 +8,7 @@ extern unsigned int ActorRegistry_ClearCollisionResult();
 extern unsigned int PopVramState();
 extern unsigned int ReleaseSeqArcHeapLevel();
 extern unsigned int StoreSessionSpawnPoint();
-extern unsigned int func_ov001_02064d88();
+extern unsigned int SnapshotManagedActorStateBlocks();
 extern unsigned int SuspendTaskAndSetFlag();
 extern unsigned int ShutdownSceneContext();
 extern unsigned int ResetStageEventContext();
@@ -52,7 +52,7 @@ unsigned int GroupSceneState_SaveActorPosesAndExit(void) {
   ResetFieldObjectManagerResources();
   *(u16 *)(data_ov032_020c0080.value + 6) = *(u16 *)(data_ov032_020c0080.value + 6) & 0xfff3;
   ReleaseCounterHudModels();
-  func_ov001_02064d88();
+  SnapshotManagedActorStateBlocks();
   PopVramState();
   ActorRegistry_ClearCollisionResult();
   ReleaseSeqArcHeapLevel(1);

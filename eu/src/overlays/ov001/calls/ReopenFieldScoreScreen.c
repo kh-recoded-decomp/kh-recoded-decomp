@@ -36,7 +36,7 @@ extern char data_ov045_020c0820[];
 extern char OVERLAY_45_ID[];
 extern void LoadOverlayAfterGeometryTransfer(int processor, int overlay_id);
 extern void *CreateTaskObject(void *descriptor, void *userData);
-extern u32 func_ov001_02063b68(s32 index);
+extern u32 GetSessionCounter(s32 index);
 extern u32 ReadSessionPackedBits(int bitOffset, u32 bitCount);
 extern void WriteSessionPackedBits(int bitOffset, u32 bitCount, u32 value);
 extern int CountAreaEntriesOfKind0(void);
@@ -54,7 +54,7 @@ void ReopenFieldScoreScreen(void)
 
     LoadOverlayAfterGeometryTransfer(0, (int)OVERLAY_45_ID);
     params.flags = 2;
-    params.bonus = func_ov001_02063b68(0);
+    params.bonus = GetSessionCounter(0);
     params.timeScore = CountAreaEntriesOfKind0() * 1000;
     params.total = params.timeScore + (saved + params.bonus);
     WriteSessionPackedBits(0x35a7, 0x20, params.total);

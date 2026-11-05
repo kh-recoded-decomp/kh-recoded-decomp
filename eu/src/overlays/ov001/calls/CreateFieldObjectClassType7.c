@@ -10,5 +10,5 @@
 #define func_ov001_02082bd4 GetFieldOffset40_02082bfc
 #define func_ov001_02082bd8 FieldObject_SetActorPosition
 #define func_ov001_02082c44 GetWorkFieldOffset50_02082c6c
-#define func_ov001_02082c4c func_ov001_02082c74
+#define func_ov001_02082c4c CapsuleFieldObject_QueryHitFalse
 #include "src/ov001/unclassified_helpers/CreateFieldObjectClassType7_02083598.c"

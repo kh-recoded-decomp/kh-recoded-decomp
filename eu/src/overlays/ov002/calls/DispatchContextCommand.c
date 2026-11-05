@@ -1,3 +1,6 @@
+#define func_ov002_02067524 GetRecordPanelProgress
+#define func_ov002_02067538 SetContextIndexedGlobalFlag
+#define func_ov002_020679fc ReadGlobalPackedFlag
 #define func_ov002_020678cc MarkGlobalMenuRecordFlagBits
 #define func_ov002_020678fc ApplySingleGlobalMenuRecord
 #define func_ov002_0206793c ApplyGlobalMenuCategoryRecord

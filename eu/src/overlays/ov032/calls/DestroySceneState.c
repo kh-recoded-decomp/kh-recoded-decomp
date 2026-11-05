@@ -1,3 +1,4 @@
+#define func_ov001_02063c54 DestroySessionNameMenu
 #define func_ov001_0206a714 DestroyScreenFadeTaskAndClearHandle
 #include "eu/nitro/types.h"
 #include "eu/src/overlays/ov001/SessionBuffers.h"

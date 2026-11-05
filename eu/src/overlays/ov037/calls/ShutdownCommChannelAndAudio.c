@@ -1,3 +1,4 @@
+#define func_ov001_02063c54 DestroySessionNameMenu
 #define func_ov001_0206a714 DestroyScreenFadeTaskAndClearHandle
 #define SetParamHalf18_02050630 SetParamHalf18
 #define SetParamWord20_02050640 SetParamWord20

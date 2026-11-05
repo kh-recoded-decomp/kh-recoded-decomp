@@ -1,5 +1,5 @@
 #define ReleaseActorAnimationSet_0209bfdc ReleaseActorAnimationSet
-#define ReleaseActorEffect_02091ac0 func_ov001_02091ae8
+#define ReleaseActorEffect_02091ac0 ReleaseActorSoundSlotsByKey
 #define ReleaseActorResources_02090240 ReleaseActorResources
 #define ReleaseAttachedObjects_02091570 ReleaseActorAttachments
 #define ReleaseLinkedActors_02091400 ReleaseAllAttachments

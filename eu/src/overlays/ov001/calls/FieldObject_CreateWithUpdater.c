@@ -1,4 +1,4 @@
 #define FieldObject_CreateWithUpdater_020861fc FieldObject_CreateWithUpdater
 #define FieldObject_Create_0207f440 FieldObject_Create
-#define func_ov001_02080a74 func_ov001_02080a9c
+#define func_ov001_02080a74 FieldObject_IdleUpdate
 #include "src/ov001/unclassified_helpers/FieldObject_CreateWithUpdater_020861fc.c"

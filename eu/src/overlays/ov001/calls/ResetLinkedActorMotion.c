@@ -1,4 +1,4 @@
 #define GetStageActor_0209c040 GetStageActor
 #define ResetLinkedActorMotion_02097a64 ResetLinkedActorMotion
-#define func_ov001_02091ac0 func_ov001_02091ae8
+#define func_ov001_02091ac0 ReleaseActorSoundSlotsByKey
 #include "src/ov001/scripted_actor_behavior/ResetLinkedActorMotion_02097a64.c"

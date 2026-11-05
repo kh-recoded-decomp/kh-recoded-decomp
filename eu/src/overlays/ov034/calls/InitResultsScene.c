@@ -212,7 +212,7 @@ extern void LoadOverlayAfterGeometryTransfer(int bank, int value);
 extern void InitTileTableFrom(void *table, const TileTableSource *source);
 extern int InitKeyRepeatState(s16 *record, s16 *limits);
 extern void QueueSoundCommandForArc(u32 archive);
-extern u32 func_ov001_02063b68(int index);
+extern u32 GetSessionCounter(int index);
 extern u32 NextSharedRandom16Scaled(u32 range);
 extern u32 random_next_scaled(u32 range);
 extern void SetupStageParams(ResultsParams *params, int worldId, int stage);
@@ -300,7 +300,7 @@ ResultsStateFn InitResultsScene(ResultsArgs *args)
             } else {
                 data_ov034_020c0fa0->worldId = data_ov034_020c0fa4->shopSection;
                 if (data_ov001_020a0480->replay) {
-                    data_ov034_020c0fa0->earnedAmount = func_ov001_02063b68(1);
+                    data_ov034_020c0fa0->earnedAmount = GetSessionCounter(1);
                 } else {
                     data_0206085c.rank = 1;
                     data_0206085c.seed = NextSharedRandom16Scaled(0x10000 - 1) + random_next_scaled(-1);
@@ -345,7 +345,7 @@ ResultsStateFn InitResultsScene(ResultsArgs *args)
         } else {
             data_ov034_020c0fa0 = (ResultsParams *)GetSessionBufferAddress(10);
             data_ov034_020c0fa4->mode = 2;
-            data_ov034_020c0fa0->earnedAmount = func_ov001_02063b68(1);
+            data_ov034_020c0fa0->earnedAmount = GetSessionCounter(1);
             data_ov034_020c0fa4->shownBase = data_ov034_020c0fa0->earnedAmount;
             data_ov034_020c0fa4->shownTotal = data_ov034_020c0fa4->shownBase;
             data_ov034_020c0fa4->shopSection = data_ov034_020c0fa0->worldId;

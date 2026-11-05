@@ -31,8 +31,8 @@ extern void BeginTitleSaveFormat(void);
 extern void WaitTitleSaveFormat(void);
 extern void SetupTitleDisplayBanksAndLayersWrapper(void); /* PXI_Init */
 extern void ShowTitleFormatNotice(void);
-extern void func_ov000_02063038(void);
-extern void func_ov000_02063040(void);
+extern void UpdateTitleFormatNoticeKeepState(void);
+extern void LeaveTitleFormatNoticeNoop(void);
 
 void (*gPanelStateHandlers[43])(void) = {
     StopTouchPanelSampling, /* StopTouchPanelSampling */
@@ -76,8 +76,8 @@ void (*gPanelStateHandlers[43])(void) = {
     WaitTitleSaveFormat,
     SetupTitleDisplayBanksAndLayersWrapper, /* PXI_Init */
     ShowTitleFormatNotice,
-    func_ov000_02063038,
-    func_ov000_02063040,
+    UpdateTitleFormatNoticeKeepState,
+    LeaveTitleFormatNoticeNoop,
 };
 
 void (*gPanelInitialStateHandler[1])(void) = {

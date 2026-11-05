@@ -224,11 +224,11 @@ src/overlays/ov000/calls/ShowTitleFormatNotice.c:
     complete
     .text       start:0x02063018 end:0x02063038
 
-src/overlays/ov000/auto/func_ov000_02063038.c:
+src/overlays/ov000/auto/UpdateTitleFormatNoticeKeepState.c:
     complete
     .text       start:0x02063038 end:0x02063040
 
-src/overlays/ov000/auto/func_ov000_02063040.c:
+src/overlays/ov000/auto/LeaveTitleFormatNoticeNoop.c:
     complete
     .text       start:0x02063040 end:0x02063044
 

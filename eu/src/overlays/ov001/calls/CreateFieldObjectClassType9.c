@@ -10,7 +10,7 @@
 #define func_ov001_02083c00 GetFieldOffset40_02083c28
 #define func_ov001_02083c04 SetActorTargetPosition
 #define func_ov001_02083c2c GetWorkFieldOffset50_02083c54
-#define func_ov001_02083c34 func_ov001_02083c5c
+#define func_ov001_02083c34 PatrolFieldObject_QueryHitFalse
 #define func_ov001_02084690 func_ov001_020846b8
 #define func_ov001_02084794 GetFieldOffset40_020847bc
 #define func_ov001_020848a0 DrawActorWithShadow

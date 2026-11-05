@@ -1,0 +1,2 @@
+#define FSi_CloseFileCommand_02082c4c CapsuleFieldObject_QueryHitFalse
+#include "src/ov001/library_nitro_fs/FSi_CloseFileCommand_02082c4c.c"

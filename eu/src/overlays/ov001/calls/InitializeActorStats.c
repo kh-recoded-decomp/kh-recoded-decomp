@@ -2,6 +2,6 @@
 #define func_ov001_02063a38 GetFieldSessionState
 #define InitializeActorStats_02093c70 InitializeActorStats
 #define func_ov032_020bb808 func_ov032_020bb828
-#define func_ov001_020925c8 func_ov001_020925f0
+#define func_ov001_020925c8 SetStageActorVariantLevel
 #define func_ov001_020925bc SetStageEventHandlerState
 #include "src/ov001/shared_engine/InitializeActorStats_02093c70.c"

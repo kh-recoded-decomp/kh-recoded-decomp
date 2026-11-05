@@ -7,7 +7,7 @@
 #define SetSubModeFrozen_020af434 SetSubModeFrozen
 #define TryFinishIntroSequence_02088384 TryFinishIntroSequence
 #define func_ov001_020645e8 ClearSessionPackedBit
-#define func_ov001_020882b0 func_ov001_020882d8
+#define func_ov001_020882b0 WaitForFieldPanelAndCacheExtremeBrightness
 #define func_ov001_0208bd38 InitFieldCameraFromPreset
 #define func_ov021_020af3e8 GetActiveSubMode
 #define func_ov021_020af7e4 ForwardSubModeEnd

@@ -59,7 +59,7 @@ src/overlays/ov003/calls/MovieScene_FadeOutBgPlanes.c:
     complete
     .text       start:0x02064230 end:0x020642fc
 
-src/overlays/ov003/auto/func_ov003_020642fc.c:
+src/overlays/ov003/auto/MovieEvent_HoldCurrentEvent.c:
     complete
     .text       start:0x020642fc end:0x02064304
 
@@ -127,7 +127,7 @@ src/overlays/ov003/calls/openVideoStreamFromHeader.c:
     complete
     .text       start:0x02064934 end:0x02064974
 
-src/overlays/ov003/calls/func_ov003_02064974.c:
+src/overlays/ov003/calls/DestroyMovieSceneObjectListForwarder.c:
     complete
     .text       start:0x02064974 end:0x02064980
 

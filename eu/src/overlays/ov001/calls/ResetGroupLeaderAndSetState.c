@@ -1,7 +1,7 @@
 #define ClearActorMotionState_02091194 ClearActorMotionState
 #define ResetGroupLeaderAndSetState_02097a1c ResetGroupLeaderAndSetState
 #define func_ov001_02091964 ClearWalkerStepState
-#define func_ov001_02091ac0 func_ov001_02091ae8
+#define func_ov001_02091ac0 ReleaseActorSoundSlotsByKey
 #define func_ov001_020925bc SetStageEventHandlerState
 #define func_ov001_0209c040 GetStageActor
 #define func_ov021_020b4b7c CopySourceWords

@@ -9,7 +9,7 @@ typedef struct ScriptOperand {
 typedef struct ScriptContext ScriptContext;
 
 extern int ScriptVm_ReadOperandInt(ScriptContext *context, ScriptOperand *operand);
-extern void *func_ov001_02064a30(void);
+extern void *GetScriptInventoryEntryCount(void);
 extern void WriteSessionPackedBits(u16 bitOffset, u8 bitCount, u32 value);
 
 BOOL ScriptCmd_StoreFifoReady(ScriptContext *context, ScriptOperand *operands)
@@ -20,7 +20,7 @@ BOOL ScriptCmd_StoreFifoReady(ScriptContext *context, ScriptOperand *operands)
     BOOL ready;
 
     ScriptVm_ReadOperandInt(context, &operands[1]);
-    if (func_ov001_02064a30() != NULL) {
+    if (GetScriptInventoryEntryCount() != NULL) {
         ready = TRUE;
     } else {
         ready = FALSE;

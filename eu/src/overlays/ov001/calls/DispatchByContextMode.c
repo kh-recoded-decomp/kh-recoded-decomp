@@ -1,5 +1,5 @@
 #define DispatchByContextMode_0207e8f8 DispatchByContextMode
-#define _fp_init_0207e2a0 func_ov001_0207e2c8
-#define _fp_init_0207e2a4 func_ov001_0207e2cc
+#define _fp_init_0207e2a0 CleanupFallingPieceMinigameNoop
+#define _fp_init_0207e2a4 CleanupSpinningPromptMinigameNoop
 #define data_ov001_020a04d4 data_ov001_020a04f4
 #include "src/ov001/unclassified_helpers/DispatchByContextMode_0207e8f8.c"

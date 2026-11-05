@@ -6,7 +6,7 @@
 #define func_ov001_0207f244 FreeFieldObjectShapeStorage
 #define func_ov001_0207f380 CreateByteGrid
 #define func_ov001_02080aa4 FieldObject_SpawnActor
-#define func_ov001_02080b80 func_ov001_02080ba8
+#define func_ov001_02080b80 BaseFieldObject_OnEnabledChangedNoop
 #define func_ov001_02080b84 GetFieldOffset40
 #define func_ov001_02080b88 FieldObject_SetPosition
 #define func_ov001_02080bf4 GetWorkFieldOffset50

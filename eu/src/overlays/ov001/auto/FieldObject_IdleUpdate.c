@@ -1,0 +1,2 @@
+#define FSi_CloseFileCommand_02080a74 FieldObject_IdleUpdate
+#include "src/ov001/library_nitro_fs/FSi_CloseFileCommand_02080a74.c"

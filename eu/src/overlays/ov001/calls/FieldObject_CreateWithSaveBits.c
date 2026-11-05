@@ -1,4 +1,4 @@
-#define FSi_CloseFileCommand_02081f80 func_ov001_02081fa8
+#define FSi_CloseFileCommand_02081f80 SaveBitFieldObject_IdleUpdate
 #define FieldObject_CreateWithSaveBits_02082038 FieldObject_CreateWithSaveBits
 #define FieldObject_Create_0207f440 FieldObject_Create
 #define data_02053438 gZeroVecFx32

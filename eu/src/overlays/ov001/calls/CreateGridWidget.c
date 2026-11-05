@@ -6,7 +6,7 @@
 #define func_ov001_02084bcc RespawnContactFieldObject
 #define func_ov001_02084d5c ReleaseFieldObjectDataAndShape
 #define func_ov001_02084d7c FieldObject_ReleaseGroupAndClose
-#define func_ov001_02084da4 func_ov001_02084dcc
+#define func_ov001_02084da4 ContactFieldObject_OnEnabledChangedNoop
 #define func_ov001_02084da8 GetFieldOffset40_02084dd0
 #define func_ov001_02084dac MoveLinkedActor
 #define func_ov001_02084de0 GetWorkFieldOffset50_02084e08

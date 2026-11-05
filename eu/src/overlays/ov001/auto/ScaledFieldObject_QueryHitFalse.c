@@ -1,0 +1,2 @@
+#define FSi_CloseFileCommand_020860ac ScaledFieldObject_QueryHitFalse
+#include "src/ov001/library_nitro_fs/FSi_CloseFileCommand_020860ac.c"

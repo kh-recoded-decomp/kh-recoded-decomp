@@ -1,3 +1,4 @@
+#define func_ov001_02063c54 DestroySessionNameMenu
 #define PXI_Init_0202a638 DestroyTaskObjectWrapper
 #define ShutdownOv029SoundCtx_020ba52c ShutdownOv029SoundCtx
 #define func_0204df9c SetSoundListenersEnabled

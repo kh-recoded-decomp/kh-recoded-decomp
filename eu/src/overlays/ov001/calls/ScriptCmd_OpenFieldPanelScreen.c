@@ -1,7 +1,7 @@
 #define IsFieldPanelShown_02071860 IsFieldPanelShown
 #define ScriptCmd_OpenFieldPanelScreen_0208e7d0 ScriptCmd_OpenFieldPanelScreen
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
-#define _fp_init_02071aa4 func_ov001_02071aa4
+#define _fp_init_02071aa4 OpenFieldPanelScreen1Noop
 #define func_ov001_02071aac OpenResultScreen
 #define func_ov001_02071be4 ReopenFieldScoreScreen
 #define func_ov001_02071cd4 OpenOverlayWidgets

@@ -1,3 +1,4 @@
+#define func_ov001_02063b68 GetSessionCounter
 #define DigitCount_0207b7a4 DigitCount
 #define FixedPointMultiply12 FX_Mul
 #define IntPow_0207b788 IntPow

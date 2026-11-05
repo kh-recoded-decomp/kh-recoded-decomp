@@ -673,3 +673,16 @@ Constructors and native dispatch establish class callback slots separately
 from EntryPool slots. Full logical state tables preserve enter/update/exit
 roles across physical DATA fragments. The wireless callback setter is game
 connection work despite its inherited sound-archive type and directory.
+
+## Field VM, session resources, title and profile helpers
+
+Sixty-four entrypoints now identify field-class callbacks, resource/session
+operations, VM no-ops, title/profile states, packed flags and timeline hooks:
+
+- [FIELD_VM_CALLBACK_RESOURCE_CONTRACTS.md](FIELD_VM_CALLBACK_RESOURCE_CONTRACTS.md): 50 overlay 001 entrypoints.
+- [TITLE_PROFILE_TIMELINE_HELPER_CONTRACTS.md](TITLE_PROFILE_TIMELINE_HELPER_CONTRACTS.md): 14 entrypoints in overlays 000-004.
+
+Native callback continuations, signed keep-state sentinels, true descriptor
+slots and current operand consumption remain explicit. Actor snapshot storage
+and packed progress are documented without expanding unproved array bounds
+or treating progress rows as percentages.

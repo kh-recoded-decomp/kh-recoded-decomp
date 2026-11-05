@@ -1,3 +1,4 @@
+#define func_ov001_02063b68 GetSessionCounter
 #define func_ov001_02075248 GetHudGaugeBlinkActive
 #define AddClampedHealth_020a75ec AddClampedHealth
 #define AddSessionCounter_02063a80 AddSessionCounter

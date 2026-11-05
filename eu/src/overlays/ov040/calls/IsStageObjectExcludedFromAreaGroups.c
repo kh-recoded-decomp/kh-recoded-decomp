@@ -23,10 +23,10 @@ typedef struct {
     SlotEntry *slots[1];
 } ItemContext;
 
-extern ItemContext *func_ov001_020689a4(void);
+extern ItemContext *GetLoadedStageEntryFile(void);
 
 BOOL IsStageObjectExcludedFromAreaGroups(int itemIndex) {
-    ItemContext *context = func_ov001_020689a4();
+    ItemContext *context = GetLoadedStageEntryFile();
     ItemEntry *item = &context->items[itemIndex];
     if (item->isActive != 0) {
         return TRUE;

@@ -56,7 +56,7 @@ enum { FIELD_OBJECT_VOLUME_SHADOW = 0x80 };
 typedef char ShadowVolumeSizeCheck[(sizeof(ShadowVolume) == 0x18) ? 1 : -1];
 
 extern LinkedFieldObject *QueryLinkTarget(LinkedActor *actor);
-extern BOOL func_ov001_0207ef90(void);
+extern BOOL GetFieldObjectDrawBlockMask(void);
 extern void DrawLodSceneObject(LinkedFieldObject *object);
 extern void SceneNode_Draw(void *node);
 extern void ShadowVolume_Draw(ShadowVolume *shadow);
@@ -69,7 +69,7 @@ void DrawLinkedActorPass(LinkedActor *actor, int pass)
     VecFx32 position;
 
     if (pass == 0) {
-        if (func_ov001_0207ef90()) {
+        if (GetFieldObjectDrawBlockMask()) {
             return;
         }
         if (object->objectClass->draw != NULL) {

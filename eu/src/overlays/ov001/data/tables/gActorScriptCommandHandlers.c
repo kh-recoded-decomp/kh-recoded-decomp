@@ -1,14 +1,14 @@
 #include "nitro/types.h"
 
 extern void ScriptCmd_SetScreenSwap(void); /* ScriptCmd_SetScreenSwap */
-extern void func_ov001_0208c764(void); /* DefaultStepDone */
+extern void ScriptCmd_ActorNop01(void); /* DefaultStepDone */
 extern void ScriptCmd_PushActorVramState(void); /* FS_UnloadOverlayImage */
 extern void ScriptCmd_ReleaseSceneActors(void); /* ScriptCmd_ReleaseSceneActors */
 extern void ScriptOp_RunActorPass(void); /* ScriptOp_RunActorPass */
 extern void ScriptCmd_BeginBrightnessFade(void); /* ScriptCmd_BeginBrightnessFade */
 extern void ScriptCmd_UpdateScreenBrightnessFades(void); /* ScriptCmd_UpdateScreenBrightnessFades */
-extern void func_ov001_0208d5c0(void); /* DefaultStepDone */
-extern void func_ov001_0208d5c4(void); /* DefaultStepDone */
+extern void ScriptCmd_ActorNop06(void); /* DefaultStepDone */
+extern void ScriptResume_ActorNop06(void); /* DefaultStepDone */
 extern void ScriptCmd_InitActorCollision(void); /* ScriptCmd_InitActorCollision */
 extern void ScriptCmd_PlaceActor(void); /* ScriptCmd_PlaceActor */
 extern void ScriptCmd_DetachActorAnimation(void); /* ScriptCmd_DetachActorAnimation */
@@ -33,8 +33,8 @@ extern void ScriptCmd_SetActorPrimarySlot(void); /* ScriptCmd_SetActorPrimarySlo
 extern void ScriptCmd_SetActorAlpha(void); /* ScriptCmd_SetActorAlpha */
 extern void ScriptCmd_UpdateActorAlphaFade(void); /* ScriptCmd_UpdateActorAlphaFade */
 extern void ScriptCmd_StartActorRotation(void); /* ScriptCmd_StartActorRotation */
-extern void func_ov001_0208debc(void); /* DefaultStepDone */
-extern void func_ov001_0208dd08(void); /* DefaultStepDone */
+extern void ScriptCmd_ActorNop1C(void); /* DefaultStepDone */
+extern void ScriptCmd_ActorNop1D(void); /* DefaultStepDone */
 extern void ScriptCmd_PlayActorMotionOrBlend(void); /* ScriptCmd_PlayActorMotionOrBlend */
 extern void ScriptCmd_StoreIfFree_0208cda8(void); /* ScriptCmd_StoreIfFree */
 extern void ScriptCmd_TestActorSlotMaskBit(void); /* ScriptCmd_TestActorSlotMaskBit */
@@ -53,11 +53,11 @@ extern void ScriptCmd_RestoreSavedFieldCamera(void); /* FS_UnloadOverlayImage */
 extern void ScriptCmd_SetCameraTarget(void); /* ScriptCmd_SetCameraTarget */
 extern void ScriptCmd_ActorTimerOrAnim(void); /* ScriptCmd_ActorTimerOrAnim */
 extern void ScriptCmd_ClearActorTimers(void); /* ScriptCmd_ClearActorTimers */
-extern void func_ov001_0208e4ac(void); /* DefaultStepDone */
-extern void func_ov001_0208e4b0(void); /* DefaultStepDone */
+extern void ScriptCmd_ActorNop2F(void); /* DefaultStepDone */
+extern void ScriptCmd_ActorNop30(void); /* DefaultStepDone */
 extern void ScriptCmd_PlaySoundAtActor(void); /* ScriptCmd_PlaySoundAtActor */
 extern void ScriptCmd_ShowActorMessage(void); /* ScriptCmd_ShowActorMessage */
-extern void func_ov001_0208dc54(void);
+extern void ScriptCmd_ShowPendingActorDialogText(void);
 extern void ScriptCmd_ResetAndSetElemField(void); /* ScriptCmd_ResetAndSetElemField */
 extern void ScriptCmd_SetElemFieldAndDispatch(void); /* ScriptCmd_SetElemFieldAndDispatch */
 extern void ScriptCmd_SetEntityFlag(void); /* ScriptCmd_SetEntityFlag */
@@ -67,7 +67,7 @@ extern void ScriptCmd_PlayActorNamedMotion(void); /* ScriptCmd_PlayActorNamedMot
 extern void ScriptCmd_ShowSpeakerMessage(void); /* ScriptCmd_ShowSpeakerMessage */
 extern void ScriptCmd_ShowTwoChoiceMessage(void); /* ScriptCmd_ShowTwoChoiceMessage */
 extern void ScriptCmd_ShowMessageWindow(void); /* ScriptCmd_ShowMessageWindow */
-extern void func_ov001_0208e778(void); /* DefaultStepDone */
+extern void ScriptCmd_ActorNop3B(void); /* DefaultStepDone */
 extern void ScriptCmd_DispatchToHandler(void);
 extern void ScriptCmd_StartScreenFade(void); /* ScriptCmd_StartScreenFade */
 extern void IsResourceReadyOrInitialize(void); /* IsResourceReadyOrInitialize */
@@ -83,8 +83,8 @@ extern void ScriptCmd_TurnActorTowardTarget(void); /* ScriptCmd_TurnActorTowardT
 extern void ScriptCmd_IsActorHeadingReached(void); /* ScriptCmd_IsActorHeadingReached */
 extern void ScriptCmd_SetWorkString(void); /* ScriptCmd_SetWorkString */
 extern void FreeScriptWorkBuffers(void); /* FreeScriptWorkBuffers */
-extern void func_ov001_0208dab8(void); /* DefaultStepDone */
-extern void func_ov001_0208dabc(void); /* DefaultStepDone */
+extern void ScriptCmd_ActorNop4A(void); /* DefaultStepDone */
+extern void ScriptResume_ActorNop4A(void); /* DefaultStepDone */
 extern void PickRandomUnsetSessionFlag(void); /* PickRandomUnsetSessionFlag */
 extern void ScriptCmd_BeginEventCameraAndFreezeSubMode(void);
 extern void ScriptCmd_FinishEventCameraAndUnfreezeSubMode(void);
@@ -102,12 +102,12 @@ extern void RecordPlayerStateFlags(void); /* RecordPlayerStateFlags */
 extern void Actor_BroadcastCallback(void); /* Actor_BroadcastCallback */
 extern void ScriptCmd_WaitMenuState(void); /* ScriptCmd_WaitMenuState */
 extern void ScriptCmd_RefreshFieldHudIconRecords(void); /* FS_UnloadOverlayImage */
-extern void func_ov001_0208efe0(void); /* thumbStep */
+extern void ScriptCmd_TryStartPanelListScroll(void); /* thumbStep */
 
 void (*gActorScriptCommandHandlers[186])(void) = {
     ScriptCmd_SetScreenSwap, /* ScriptCmd_SetScreenSwap */
     NULL,
-    func_ov001_0208c764, /* DefaultStepDone */
+    ScriptCmd_ActorNop01, /* DefaultStepDone */
     NULL,
     ScriptCmd_PushActorVramState, /* FS_UnloadOverlayImage */
     NULL,
@@ -117,8 +117,8 @@ void (*gActorScriptCommandHandlers[186])(void) = {
     NULL,
     ScriptCmd_BeginBrightnessFade, /* ScriptCmd_BeginBrightnessFade */
     ScriptCmd_UpdateScreenBrightnessFades, /* ScriptCmd_UpdateScreenBrightnessFades */
-    func_ov001_0208d5c0, /* DefaultStepDone */
-    func_ov001_0208d5c4, /* DefaultStepDone */
+    ScriptCmd_ActorNop06, /* DefaultStepDone */
+    ScriptResume_ActorNop06, /* DefaultStepDone */
     ScriptCmd_InitActorCollision, /* ScriptCmd_InitActorCollision */
     NULL,
     ScriptCmd_PlaceActor, /* ScriptCmd_PlaceActor */
@@ -161,9 +161,9 @@ void (*gActorScriptCommandHandlers[186])(void) = {
     ScriptCmd_UpdateActorAlphaFade, /* ScriptCmd_UpdateActorAlphaFade */
     ScriptCmd_StartActorRotation, /* ScriptCmd_StartActorRotation */
     NULL,
-    func_ov001_0208debc, /* DefaultStepDone */
+    ScriptCmd_ActorNop1C, /* DefaultStepDone */
     NULL,
-    func_ov001_0208dd08, /* DefaultStepDone */
+    ScriptCmd_ActorNop1D, /* DefaultStepDone */
     NULL,
     ScriptCmd_PlayActorMotionOrBlend, /* ScriptCmd_PlayActorMotionOrBlend */
     NULL,
@@ -199,15 +199,15 @@ void (*gActorScriptCommandHandlers[186])(void) = {
     NULL,
     ScriptCmd_ClearActorTimers, /* ScriptCmd_ClearActorTimers */
     NULL,
-    func_ov001_0208e4ac, /* DefaultStepDone */
+    ScriptCmd_ActorNop2F, /* DefaultStepDone */
     NULL,
-    func_ov001_0208e4b0, /* DefaultStepDone */
+    ScriptCmd_ActorNop30, /* DefaultStepDone */
     NULL,
     ScriptCmd_PlaySoundAtActor, /* ScriptCmd_PlaySoundAtActor */
     NULL,
     ScriptCmd_ShowActorMessage, /* ScriptCmd_ShowActorMessage */
     NULL,
-    func_ov001_0208dc54,
+    ScriptCmd_ShowPendingActorDialogText,
     NULL,
     ScriptCmd_ResetAndSetElemField, /* ScriptCmd_ResetAndSetElemField */
     ScriptCmd_SetElemFieldAndDispatch, /* ScriptCmd_SetElemFieldAndDispatch */
@@ -223,7 +223,7 @@ void (*gActorScriptCommandHandlers[186])(void) = {
     NULL,
     ScriptCmd_ShowMessageWindow, /* ScriptCmd_ShowMessageWindow */
     NULL,
-    func_ov001_0208e778, /* DefaultStepDone */
+    ScriptCmd_ActorNop3B, /* DefaultStepDone */
     NULL,
     ScriptCmd_DispatchToHandler,
     NULL,
@@ -253,8 +253,8 @@ void (*gActorScriptCommandHandlers[186])(void) = {
     NULL,
     FreeScriptWorkBuffers, /* FreeScriptWorkBuffers */
     NULL,
-    func_ov001_0208dab8, /* DefaultStepDone */
-    func_ov001_0208dabc, /* DefaultStepDone */
+    ScriptCmd_ActorNop4A, /* DefaultStepDone */
+    ScriptResume_ActorNop4A, /* DefaultStepDone */
     PickRandomUnsetSessionFlag, /* PickRandomUnsetSessionFlag */
     NULL,
     ScriptCmd_BeginEventCameraAndFreezeSubMode,
@@ -289,6 +289,6 @@ void (*gActorScriptCommandHandlers[186])(void) = {
     NULL,
     ScriptCmd_RefreshFieldHudIconRecords, /* FS_UnloadOverlayImage */
     NULL,
-    func_ov001_0208efe0, /* thumbStep */
+    ScriptCmd_TryStartPanelListScroll, /* thumbStep */
     NULL,
 };

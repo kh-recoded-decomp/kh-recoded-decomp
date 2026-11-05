@@ -12,6 +12,6 @@
 #define func_02025dac ByteCode_ResolveOperand
 #define func_02036240 ActorRegistry_GetEntityByIndex
 #define func_02036810 ActorSlot_GetByIndex
-#define func_ov001_02088b20 func_ov001_02088b48
+#define func_ov001_02088b20 GetActorSpeechBalloonStyle
 #define strcpy_02021e60 strcpy
 #include "src/ov001/dialog_balloon/OpenScriptChoiceBalloon_0208d738.c"

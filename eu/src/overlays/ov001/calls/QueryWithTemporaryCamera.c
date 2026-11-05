@@ -1,7 +1,7 @@
 #define func_ov001_020645c8 IsSessionFlagSet
 #define PXI_Init_02028dac BeginOrthographicCameraWrapper
 #define PXI_Init_02028db8 RestoreSavedCameraWrapper
-#define PXI_Init_02088b20 func_ov001_02088b48
+#define PXI_Init_02088b20 GetActorSpeechBalloonStyle
 #define QueryWithTemporaryCamera_0208c0b4 QueryWithTemporaryCamera
 #define data_ov001_020a04f4 gActorChannelContext
 #define func_ov001_0208babc SetFieldCameraTarget

@@ -7,5 +7,5 @@
 #define func_02036240 ActorRegistry_GetEntityByIndex
 #define func_02036810 ActorSlot_GetByIndex
 #define func_ov001_02088a88 ProjectWorldPositionWithSavedCameraWrapper
-#define func_ov001_02088b20 func_ov001_02088b48
+#define func_ov001_02088b20 GetActorSpeechBalloonStyle
 #include "src/ov001/dialog_balloon/OpenActorSpeechBalloon_0208c534.c"

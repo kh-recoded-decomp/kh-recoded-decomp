@@ -1,0 +1,3 @@
+#define Ov012_IsGlobalByte8be1Clear TryStartPanelListScroll
+#define thumbStep_0208efb8 ScriptCmd_TryStartPanelListScroll
+#include "src/ov001/shared_engine/thumbStep_0208efb8.c"
