@@ -1,6 +1,11 @@
 """Keep register annotations distinct from assembly instructions in progress."""
+import hashlib
+from pathlib import Path
+import tempfile
 import unittest
+from unittest import mock
 
+import audit_progress
 from audit_progress import contains_assembly
 
 
@@ -32,6 +37,45 @@ class RegisterBindingClassification(unittest.TestCase):
         ]:
             with self.subTest(source=source):
                 self.assertTrue(contains_assembly(source))
+
+
+class LibraryReceiptFreshness(unittest.TestCase):
+    def setUp(self):
+        base = Path(__file__).resolve().parents[1] / 'build'
+        self.temp = tempfile.TemporaryDirectory(prefix='receipt_test_', dir=base)
+        root = Path(self.temp.name).resolve()
+        assert root.is_relative_to(base.resolve())
+        self.addCleanup(self.temp.cleanup)
+        self.source = root / 'Entry.c'
+        self.doc = root / 'sdk_os.md'
+        self.source.write_bytes(b'original source\n')
+        self.doc.write_bytes(b'original documentation\n')
+        self.receipt = {'source': 'eu/Entry.c', 'source_sha256': hashlib.sha256(self.source.read_bytes()).hexdigest(),
+                        'doc': 'eu/sdk_os.md', 'doc_sha256': hashlib.sha256(self.doc.read_bytes()).hexdigest()}
+        patch = mock.patch.object(audit_progress, 'ROOT', root)
+        patch.start()
+        self.addCleanup(patch.stop)
+        patch = mock.patch.object(audit_progress, 'library_receipts',
+                                  return_value=[('library_receipts.json', 'Entry', self.receipt)])
+        patch.start()
+        self.addCleanup(patch.stop)
+
+    def test_current_receipt_passes(self):
+        audit_progress.check_library_receipts()
+        self.assertEqual(audit_progress.verified_library_sources(), {'Entry.c'})
+
+    def test_source_rename_alias_invalidates_receipt_without_refreshing_it(self):
+        self.source.write_bytes(b'#define OldName NewName\noriginal source\n')
+        original_digest = self.receipt['source_sha256']
+        with self.assertRaisesRegex(SystemExit, 'library_receipts.json: Entry'):
+            audit_progress.check_library_receipts()
+        self.assertEqual(audit_progress.verified_library_sources(), set())
+        self.assertEqual(self.receipt['source_sha256'], original_digest)
+
+    def test_documentation_edit_also_invalidates_receipt(self):
+        self.doc.write_bytes(b'changed documentation\n')
+        with self.assertRaisesRegex(SystemExit, 'Entry'):
+            audit_progress.check_library_receipts()
 
 
 if __name__ == '__main__':

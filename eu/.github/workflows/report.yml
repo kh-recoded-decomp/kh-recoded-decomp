@@ -13,8 +13,10 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.x'
+      - name: Check receipt policy
+        run: python tools/test_audit_progress.py
       - name: Generate progress audit
-        run: python tools/audit_progress.py
+        run: python tools/audit_progress.py --check-receipts
       - name: Generate progress report
         run: python tools/gen_report.py
       - name: Upload report

@@ -275,7 +275,7 @@
    "schema_version": 1,
    "sha256": "7eecde6a16585e0746eb6a80a7405c6ef632dae4b9b61b892f4d77c9c38d2208",
    "source": "eu/src/asm_stubs/calls/Entry.c",
-   "source_sha256": "68c36c6709607d6285996d844e0880e599d6ff3df8bbf6415333d0ce73645370",
+   "source_sha256": "5148ed75ff17164210fddf58d933d5081645c919e402929549372f572c668808",
    "start": "0x02000800",
    "symbol": "Entry"
   },

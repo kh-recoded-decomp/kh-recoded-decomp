@@ -186,6 +186,17 @@ model lives in `tools/sdklib/families/` and its documentation in
 `MATH_CountLeadingZeros` inlined in `wh.c`) is the one case so far, documented
 in `docs/library/sdk_wh.md`.
 
+Library receipts include the exact source and documentation hashes. A source
+alias added during a rename invalidates its receipt even when the linked bytes
+are unchanged. Re-run the original verifier for each affected routine; do not
+edit hashes by hand or count an invalid receipt. For example, from the repository
+root, `python tools/sdklib/verify_sdklib.py Entry` repeats all four library gates.
+
+The report job runs `python tools/audit_progress.py --check-receipts` from `eu/`.
+It refuses to publish when an existing library receipt is stale, naming the
+routine that needs revalidation. The ordinary audit still excludes stale
+receipts from progress; the strict flag does not grant reconstruction credit.
+
 ## Named functions
 
 A function may have a known name (for example a NitroSDK name carried over from

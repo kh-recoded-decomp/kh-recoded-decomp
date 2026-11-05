@@ -818,7 +818,7 @@ def entry_case(rng, mode: int, bss_start: int, bss_size: int, label: str):
             break
     dtcm_after = bytearray(DTCM_SIZE)
     struct.pack_into("<I", dtcm_after, DTCM_SIZE - 4, address("OS_IrqHandler"))
-    calls = [(address("func_02000a78"), entry + 0x18), (address("MIi_UncompressBackward"), entry + 0xA4),
+    calls = [(address("ConfigureArm9MemorySystem"), entry + 0x18), (address("MIi_UncompressBackward"), entry + 0xA4),
              (address("INITi_DoAutoload"), entry + 0xA8), (address("RunGlobalConstructors"), entry + 0x10C)]
 
     def setup(mem):

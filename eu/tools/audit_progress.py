@@ -17,6 +17,7 @@ not by this script.
 
     python tools/audit_progress.py     # writes build/progress_audit.{json,md}
 """
+import argparse
 import hashlib
 import json
 import re
@@ -40,26 +41,39 @@ def _sha256_matches(relative, digest):
     return local.is_file() and hashlib.sha256(local.read_bytes()).hexdigest() == digest
 
 
-def verified_library_sources():
-    """eu-relative source paths whose library receipt still matches the file.
-
-    MobiClip receipts are written by tools/mobiclip/verify_mobiclip.py, SDK and
-    MSL routine receipts by tools/sdklib/verify_sdklib.py (which also requires
-    the routine's documentation); a receipt stops applying as soon as its source
-    or documentation changes."""
-    out = set()
+def library_receipts():
+    """Read the receipts without changing or refreshing their evidence."""
     for path in (RECEIPTS, LIBRARY_RECEIPTS):
         if not path.is_file():
             continue
-        for receipt in json.loads(path.read_text(encoding="utf-8")).get("receipts", {}).values():
-            source = receipt.get("source", "")
-            if not source.startswith("eu/") or not _sha256_matches(source[3:], receipt.get("source_sha256")):
-                continue
-            doc = receipt.get("doc")
-            if doc is not None and not (doc.startswith("eu/") and _sha256_matches(doc[3:], receipt.get("doc_sha256"))):
-                continue
-            out.add(source[3:])
-    return out
+        for name, receipt in json.loads(path.read_text(encoding="utf-8")).get("receipts", {}).items():
+            yield path.name, name, receipt
+
+
+def receipt_is_current(receipt):
+    source = receipt.get("source", "")
+    if not source.startswith("eu/") or not _sha256_matches(source[3:], receipt.get("source_sha256")):
+        return False
+    doc = receipt.get("doc")
+    return doc is None or (doc.startswith("eu/") and _sha256_matches(doc[3:], receipt.get("doc_sha256")))
+
+
+def verified_library_sources():
+    """EU-relative sources with current verifier-written source/doc receipts.
+
+    A source or documentation edit invalidates the receipt, including a rename.
+    Only the original library verifier can produce renewed evidence.
+    """
+    return {receipt["source"][3:] for _, _, receipt in library_receipts()
+            if receipt_is_current(receipt)}
+
+
+def check_library_receipts():
+    stale = [f"{path}: {name}" for path, name, receipt in library_receipts()
+             if not receipt_is_current(receipt)]
+    if stale:
+        raise SystemExit("Stale verified-library receipts:\n  " + "\n  ".join(stale)
+                         + "\nRe-run the relevant library verifier before publishing the report.")
 
 
 VERIFIED_LIBRARY = verified_library_sources()
@@ -217,6 +231,12 @@ def write_markdown(summary):
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--check-receipts", action="store_true",
+                        help="reject stale library receipts before generating the report")
+    args = parser.parse_args()
+    if args.check_receipts:
+        check_library_receipts()
     functions, unknown = classify_functions()
     summary = summarize(functions, unknown)
     BUILD_DIR.mkdir(exist_ok=True)
