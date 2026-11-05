@@ -40,8 +40,8 @@
 #define func_01ff8830 MI_CpuFill8
 #define func_01ff89a8 MI_CpuCopy8
 #define func_02025438 SetPanelEnabled
-#define func_02029f78 func_02029f8c
-#define func_02029f98 func_02029fac
+#define func_02029f78 LoadOverlayAfterGeometryTransfer
+#define func_02029f98 UnloadOverlayAfterGeometryTransfer
 #define func_0202a448 func_0202a45c
 #define func_0202a754 func_0202a768
 #define func_0202b5d4 func_0202b5e8

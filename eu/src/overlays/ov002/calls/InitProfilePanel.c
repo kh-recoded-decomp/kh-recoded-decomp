@@ -38,7 +38,7 @@ extern PanelState *NNSi_FndGetCurrentRootHeap(void);
 extern void MIi_CpuClearFast(int value, void *dst, u32 size);
 extern s32 func_0202a768(void);
 extern int func_0204f5a0(short *record, short *limits);
-extern void func_02029f8c(int processor, int overlay_id);
+extern void LoadOverlayAfterGeometryTransfer(int processor, int overlay_id);
 extern void ReloadPanelResources(void);
 extern void InvokeForChannelOrBoth(u32 arg0, u32 arg1, int arg2, int channel);
 extern void AcquireRecordManager(void);
@@ -68,7 +68,7 @@ void *InitProfilePanel(BOOL resumed)
     state->heapId = func_0202a768();
     state->selection = -1;
     func_0204f5a0(state->record, NULL);
-    func_02029f8c(0, (int)OVERLAY_27_ID);
+    LoadOverlayAfterGeometryTransfer(0, (int)OVERLAY_27_ID);
     ReloadPanelResources();
     InvokeForChannelOrBoth(1, (u32)sOv002_WXCVB_0206c35c, (int)RunPanelDispatchAction, 0);
     AcquireRecordManager();

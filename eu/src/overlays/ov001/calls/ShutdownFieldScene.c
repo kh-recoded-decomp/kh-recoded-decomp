@@ -41,7 +41,7 @@ extern void func_ov001_0206f464(FieldScene *scene);
 extern void func_ov001_0206f1dc(FieldScene *scene);
 extern void func_ov001_0206f174(FieldScene *scene);
 extern int ZeroHalfThenFree(void *archive);
-extern void func_02029fac(int processor, int overlayId);
+extern void UnloadOverlayAfterGeometryTransfer(int processor, int overlayId);
 extern void *PXI_Init_02028964(void);
 extern void NNSi_FndFreeFromDefaultHeap(void *block);
 extern void SetParamHalf18(u16 value);
@@ -74,7 +74,7 @@ void ShutdownFieldScene(void)
     ZeroHalfThenFree(scene->archives[2]);
     ZeroHalfThenFree(scene->archives[1]);
     ZeroHalfThenFree(scene->archives[0]);
-    func_02029fac(0, (int)OVERLAY_27_ID);
+    UnloadOverlayAfterGeometryTransfer(0, (int)OVERLAY_27_ID);
     PXI_Init_02028964();
     ZeroHalfThenFree(scene->archives[3]);
     NNSi_FndFreeFromDefaultHeap(scene->screenBuffers[0]);

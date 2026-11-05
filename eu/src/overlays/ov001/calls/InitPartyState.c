@@ -34,7 +34,7 @@ extern void func_ov001_0206c9c0(void);
 extern void func_ov021_020a7cb0(void);
 extern void LoadMsgContainers(void);
 extern int *AcquireMapLayout(BOOL reload, BOOL discard);
-extern void func_02029f8c(int processor, int overlayId);
+extern void LoadOverlayAfterGeometryTransfer(int processor, int overlayId);
 extern int LoadOverlayForMode(unsigned int selectionIndex, int mode);
 extern void func_ov021_020a7480(void *tracker, int index);
 extern void LoadModeSprites(void);
@@ -57,10 +57,10 @@ void InitPartyState(int mode) {
     func_ov021_020a7cb0();
     LoadMsgContainers();
     AcquireMapLayout(FALSE, FALSE);
-    func_02029f8c(0, (int)OVERLAY_51_ID);
+    LoadOverlayAfterGeometryTransfer(0, (int)OVERLAY_51_ID);
     party->handles[0] = (int)OVERLAY_51_ID;
     if (party->selected != 1) {
-        func_02029f8c(0, (int)OVERLAY_52_ID);
+        LoadOverlayAfterGeometryTransfer(0, (int)OVERLAY_52_ID);
         party->handles[1] = (int)OVERLAY_52_ID;
         if (data_020608c8 == 1) {
             party->handles[2] = (int)OVERLAY_56_ID;
@@ -68,7 +68,7 @@ void InitPartyState(int mode) {
             party->handles[2] = (int)OVERLAY_58_ID;
         }
         if (party->handles[2] != -1) {
-            func_02029f8c(0, party->handles[2]);
+            LoadOverlayAfterGeometryTransfer(0, party->handles[2]);
         }
     }
     for (i = 0; i < data_020608c8; i++) {

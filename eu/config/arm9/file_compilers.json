@@ -2069,7 +2069,7 @@
   "src/calls/ScriptVm_PushFrame.c": "dsi/1.1",
   "src/calls/PollCardThreadResult.c": "dsi/1.1",
   "src/calls/ActorRegistry_ForEachCallback.c": "dsi/1.1",
-  "src/calls/InitializeArchiveBackend.c": "dsi/1.1",
+  "src/calls/InitSbcHandlersAndFastDma.c": "dsi/1.1",
   "src/calls/GetProjectedInterval.c": "dsi/1.1",
   "src/calls/GetPointAlongDirectionQ27.c": "dsi/1.1",
   "src/calls/LoadSeqArcIfChanged.c": "dsi/1.1",

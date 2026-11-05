@@ -1,5 +1,5 @@
 #define LoadOverlay22AndClearFlag_02062d38 LoadOverlay22AndClearFlag
 #define SDK_OVERLAY_ov022_ID_00000016 OVERLAY_22_ID
-#define func_02029f78 func_02029f8c
+#define func_02029f78 LoadOverlayAfterGeometryTransfer
 
 #include "src/ov000/panel_state/LoadOverlay22AndClearFlag_02062d38.c"

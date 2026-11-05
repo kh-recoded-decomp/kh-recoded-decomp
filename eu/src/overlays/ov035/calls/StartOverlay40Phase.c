@@ -1,6 +1,6 @@
 #define StartOverlay40Phase_020bacc4 StartOverlay40Phase
 #define g_movieContext_020bc4e0 gMovieContextState
-#define func_02029f78 func_02029f8c
+#define func_02029f78 LoadOverlayAfterGeometryTransfer
 #define func_ov040_020bd730 InitAreaRewardScene
 #define OverlayId40_00000028 OVERLAY_40_ID
 

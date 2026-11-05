@@ -1,7 +1,7 @@
 #define Camera_SetViewMode_020c1038 Camera_SetViewMode
 #define data_ov046_020c33a0 gCameraLayerIdsByMode
-#define func_02029f78 func_02029f8c
-#define func_02029f98 func_02029fac
+#define func_02029f78 LoadOverlayAfterGeometryTransfer
+#define func_02029f98 UnloadOverlayAfterGeometryTransfer
 #define func_ov047_020c70d8 Camera_StartVectorTracking
 #define func_ov048_020c3858 InitCameraTarget
 #define func_ov050_020c3ba4 InitCameraPathState

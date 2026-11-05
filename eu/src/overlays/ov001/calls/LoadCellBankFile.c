@@ -1,4 +1,4 @@
-#define FSi_WaitForCardThread_01ff8140 FSi_WaitForCardThread
+#define FSi_WaitForCardThread_01ff8140 WaitForGeometryTransfer
 #define LoadCellBankFile_020993d0 LoadCellBankFile
 #define NNSi_FndAllocFromDefaultHeapEx_0202a19c NNS_FndAllocFromDefaultExpHeapEx
 #define ReadFileSync_0200b674 FS_ReadFile

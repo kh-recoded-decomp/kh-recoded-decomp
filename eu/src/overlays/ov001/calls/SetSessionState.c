@@ -57,8 +57,8 @@ extern BOOL IsSessionFlagSet(u32 value);
 extern void ClearSessionPackedBit(u32 value);
 extern s8 GetCtxModeByte(void);
 extern void ShutdownSessionOverlays(void);
-extern void func_02029f8c(int processor, int overlayId);
-extern void func_02029fac(int processor, int overlayId);
+extern void LoadOverlayAfterGeometryTransfer(int processor, int overlayId);
+extern void UnloadOverlayAfterGeometryTransfer(int processor, int overlayId);
 extern void InitScriptHandlerTable(void);
 extern void ClearStageTablesIfActive(void);
 extern void func_ov001_02062ac0(void);
@@ -107,12 +107,12 @@ s32 SetSessionState(s32 newState, s32 mode) {
         if (newState != 1) {
             if (session->overlayId == -1) {
                 session->overlayId = (s32)OVERLAY_21_ID;
-                func_02029f8c(0, (s32)OVERLAY_21_ID);
+                LoadOverlayAfterGeometryTransfer(0, (s32)OVERLAY_21_ID);
                 InitScriptHandlerTable();
             }
         } else {
             if (session->overlayId != -1) {
-                func_02029fac(0, session->overlayId);
+                UnloadOverlayAfterGeometryTransfer(0, session->overlayId);
                 session->overlayId = -1;
             }
             ClearStageTablesIfActive();
@@ -121,7 +121,7 @@ s32 SetSessionState(s32 newState, s32 mode) {
         overlayId = gSessionStateOverlayIds[newState];
         if (overlayId != -1) {
             machine->overlayId = overlayId;
-            func_02029f8c(0, overlayId);
+            LoadOverlayAfterGeometryTransfer(0, overlayId);
         }
 
         switch (newState) {

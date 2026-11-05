@@ -2,5 +2,5 @@
 #define data_ov039_020be8cc sOv039_I_020be8ec
 #define data_ov039_020be92c sOv039_J_020be94c
 #define data_ov039_020bea84 data_ov039_020beaa4
-#define func_02029f98 func_02029fac
+#define func_02029f98 UnloadOverlayAfterGeometryTransfer
 #include "src/ov039/overlay_handling/UnloadAllSubOverlays_020bcdd0.c"

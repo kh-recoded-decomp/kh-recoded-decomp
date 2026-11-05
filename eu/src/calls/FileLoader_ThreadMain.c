@@ -1,4 +1,4 @@
-#define FSi_WaitForCardThread_01ff8140 FSi_WaitForCardThread
+#define FSi_WaitForCardThread_01ff8140 WaitForGeometryTransfer
 #define FileLoader_ThreadMain_0202ba44 FileLoader_ThreadMain
 #define NNS_SndArcLoadSeq_0201f318 NNS_SndArcLoadSeq
 #define NNS_SndArcLoadSeq_0201f348 NNS_SndArcLoadSeqArc

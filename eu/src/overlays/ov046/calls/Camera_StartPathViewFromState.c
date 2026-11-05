@@ -6,8 +6,8 @@
 #define VEC_DotProduct_01ff9e6c VEC_DotProduct
 #define ScaleVecFx32InPlace_0204a5e4 ScaleVecFx32InPlace
 #define VEC_Add_01ff9e0c VEC_Add
-#define func_02029f98 func_02029fac
-#define func_02029f78 func_02029f8c
+#define func_02029f98 UnloadOverlayAfterGeometryTransfer
+#define func_02029f78 LoadOverlayAfterGeometryTransfer
 #define func_ov049_020c363c StartEventCameraFollow
 #define Camera_SetViewBuilder_020c2d4c Camera_SetViewBuilder
 #define func_ov046_020c0a70 Camera_UpdateController

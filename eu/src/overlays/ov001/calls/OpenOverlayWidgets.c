@@ -26,7 +26,7 @@ typedef struct TaskParams {
 extern OverlayGlobals data_ov001_020a04c4;
 extern char data_ov045_020c0820[];
 extern char OVERLAY_45_ID[];
-extern void func_02029f8c(int processor, int overlayId);
+extern void LoadOverlayAfterGeometryTransfer(int processor, int overlayId);
 extern void SetupFieldBgLayers(void);
 extern void SetFieldVisiblePlanes(void);
 extern void GX_LoadBG3Char(const void *src, u32 offset, u32 size);
@@ -39,7 +39,7 @@ void OpenOverlayWidgets(void)
     OverlayState *state = data_ov001_020a04c4.state;
     TaskParams params;
 
-    func_02029f8c(0, (int)OVERLAY_45_ID);
+    LoadOverlayAfterGeometryTransfer(0, (int)OVERLAY_45_ID);
     params.mode = 2;
     if (state->handle == NULL) {
         state->released = 0;

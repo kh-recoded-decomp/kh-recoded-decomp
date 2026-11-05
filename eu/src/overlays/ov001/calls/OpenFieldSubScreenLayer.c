@@ -22,7 +22,7 @@ typedef struct FieldManagerHandle {
 extern FieldManagerHandle data_ov001_020a04c4;
 extern const u8 data_ov045_020c0820[];
 extern char OVERLAY_45_ID[];
-extern void func_02029f8c(int processor, int overlayId);
+extern void LoadOverlayAfterGeometryTransfer(int processor, int overlayId);
 extern void *func_0202a45c(const void *descriptor, LayerSpec *spec);
 
 void OpenFieldSubScreenLayer(int argument)
@@ -30,7 +30,7 @@ void OpenFieldSubScreenLayer(int argument)
     FieldManager *manager = data_ov001_020a04c4.manager;
     LayerSpec spec;
 
-    func_02029f8c(0, (int)OVERLAY_45_ID);
+    LoadOverlayAfterGeometryTransfer(0, (int)OVERLAY_45_ID);
     spec.kind = 3;
     spec.flags = 0;
     spec.argument = argument;

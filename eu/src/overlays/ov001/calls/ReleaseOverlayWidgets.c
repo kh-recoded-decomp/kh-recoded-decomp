@@ -19,7 +19,7 @@ extern OverlayGlobals data_ov001_020a04c4;
 extern int func_ov001_0207123c(void);
 extern void PXI_Init_0202a64c(u32 handle);
 extern void ClearTileTableRowAndMarkDirty(int widgets, int layer);
-extern void func_02029fac(int processor, int overlayId);
+extern void UnloadOverlayAfterGeometryTransfer(int processor, int overlayId);
 extern char OVERLAY_45_ID[];
 
 void ReleaseOverlayWidgets(void) {
@@ -34,6 +34,6 @@ void ReleaseOverlayWidgets(void) {
         ClearTileTableRowAndMarkDirty(widgets, 9);
         ClearTileTableRowAndMarkDirty(widgets, 10);
         ClearTileTableRowAndMarkDirty(widgets, 11);
-        func_02029fac(0, (int)OVERLAY_45_ID);
+        UnloadOverlayAfterGeometryTransfer(0, (int)OVERLAY_45_ID);
     }
 }

@@ -20,7 +20,7 @@ extern void func_01ff88c4(void *dest, u32 value, u32 size);
 extern void LoadDefaultProjectionValues(void *projection);
 extern void Obj_AllocDataBuffers(void *buffers, int size, int first, int second, int third);
 extern void Camera_LoadOptionFlags(void);
-extern void func_02029f8c(int layer, int id);
+extern void LoadOverlayAfterGeometryTransfer(int layer, int id);
 extern CameraController Camera_ResetTracking(void *data, CameraManager *camera);
 extern int Camera_UpdateController(void);
 
@@ -51,7 +51,7 @@ CameraUpdate Camera_InitManager(void *context, CameraManager *camera)
     camera->field130 = 0x14cd;
     camera->viewDistance = 0x6000;
     Camera_LoadOptionFlags();
-    func_02029f8c(0, gCameraLayerIds[0]);
+    LoadOverlayAfterGeometryTransfer(0, gCameraLayerIds[0]);
     gCameraManager->controller = Camera_ResetTracking(gCameraManager->controllerData, camera);
     return Camera_UpdateController;
 }

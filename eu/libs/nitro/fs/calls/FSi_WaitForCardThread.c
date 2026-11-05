@@ -1,2 +1,0 @@
-#define FSi_WaitForCardThread_01ff8140 FSi_WaitForCardThread
-#include "src/itcm/library_nitro_fs/FSi_WaitForCardThread_01ff8140.c"

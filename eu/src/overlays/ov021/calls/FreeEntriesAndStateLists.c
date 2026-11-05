@@ -3,6 +3,6 @@
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define ReleaseSharedRecordState_020a9084 ReleaseSharedRecordState
 #define RemoveIntrusiveListObject_020129d8 NNS_FndRemoveListObject
-#define func_02029f98 func_02029fac
+#define func_02029f98 UnloadOverlayAfterGeometryTransfer
 #define func_ov021_020acd8c ReleaseMemberResources
 #include "src/ov021/unclassified_helpers/FreeEntriesAndStateLists_020ad600.c"

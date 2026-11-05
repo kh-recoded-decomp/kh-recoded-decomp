@@ -1,6 +1,6 @@
 #define ReleaseTitleOverlayTask_02062f0c ReleaseTitleOverlayTask
 #define PXI_Init_0202a638 PXI_Init_0202a64c
-#define func_02029f98 func_02029fac
+#define func_02029f98 UnloadOverlayAfterGeometryTransfer
 #define SetupDisplayBanksAndLayers_0206141c SetupDisplayBanksAndLayers
 #define OverlayId3_00000003 OVERLAY_3_ID
 

@@ -70,7 +70,7 @@ extern char sOv039_TextFontEu10sNftr_020be890[];
 extern char sOv039_UiMenuStrLanguageShareSZ_020be8a8[];
 extern char OVERLAY_27_ID[];
 
-extern void func_02029f8c(int processor, int overlayId);
+extern void LoadOverlayAfterGeometryTransfer(int processor, int overlayId);
 extern void *NNSi_FndAllocFromDefaultHeap(u32 size);
 extern void MI_CpuFill8(void *dst, int value, u32 size);
 extern BOOL PlaySoundEffect(int seqArcNo, int index);
@@ -104,7 +104,7 @@ void InitOverlayState(u32 entryArg)
     int scene;
     Ov039State *state;
 
-    func_02029f8c(0, (int)OVERLAY_27_ID);
+    LoadOverlayAfterGeometryTransfer(0, (int)OVERLAY_27_ID);
     state = NNSi_FndAllocFromDefaultHeap(sizeof(Ov039State));
     data_ov039_020bea20 = state;
     MI_CpuFill8(state, 0, sizeof(Ov039State));

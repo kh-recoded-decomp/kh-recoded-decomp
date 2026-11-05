@@ -13,7 +13,7 @@ src/calls/GXi_FlushCommandList.c:
     complete
     .text       start:0x01ff80e4 end:0x01ff8140
 
-libs/nitro/fs/calls/FSi_WaitForCardThread.c:
+libs/nitro/fs/calls/WaitForGeometryTransfer.c:
     complete
     .text       start:0x01ff8140 end:0x01ff8158
 
@@ -321,11 +321,11 @@ libs/nitro/gx/asm_stubs/auto/GX_SendFifo48B.c:
     complete
     .text       start:0x01ffa1c4 end:0x01ffa1e8
 
-src/auto/func_01ffa1e8.c:
+src/auto/ClearGeometryTransferBusy.c:
     complete
     .text       start:0x01ffa1e8 end:0x01ffa1f4
 
-src/calls/func_01ffa1f4.c:
+src/calls/SetGeometryDmaFastMode.c:
     complete
     .text       start:0x01ffa1f4 end:0x01ffa204
 

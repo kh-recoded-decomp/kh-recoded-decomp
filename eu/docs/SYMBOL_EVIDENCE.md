@@ -375,3 +375,12 @@ delegates. [CAMERA_HELPER_CONTRACTS.md](CAMERA_HELPER_CONTRACTS.md) records the
 old/current names, native offsets, borrowed lifetimes and real return evidence.
 Getter types expose proved pointers and the consumed magnitude result; the
 remaining opaque controller layouts and legacy shared adapters are explicit.
+
+## Geometry DMA and overlay barriers
+
+Seven rendering helpers now describe their actual geometry command/DMA roles,
+including the misleading previous names `FSi_WaitForCardThread` and
+`InitializeArchiveBackend`. [GEOMETRY_TRANSFERS.md](GEOMETRY_TRANSFERS.md) records
+the busy word, callback, full buffer extent, fast-mode selector, overlay barriers
+and legacy DS adapters. The eight-word BSS allocation is preserved; its first
+word is a DMA selector rather than an RNG seed.

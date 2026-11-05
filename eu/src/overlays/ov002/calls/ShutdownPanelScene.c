@@ -37,7 +37,7 @@ extern void FreePointerIfSet(void **ptr);
 extern BOOL DestroyFndObjectList(TextLayer *layer);
 extern BOOL FreeResourceBufferAndProbeHeap(FontResource *resource);
 extern void NotifyBothOrOne(u32 a, void *b, int index);
-extern void func_02029fac(int processor, int overlayId);
+extern void UnloadOverlayAfterGeometryTransfer(int processor, int overlayId);
 extern void FSi_DefaultStepDoneB(void *keyRepeat);
 extern void ReleaseRecordManager(void);
 
@@ -58,7 +58,7 @@ void ShutdownPanelScene(void)
     FreeResourceBufferAndProbeHeap(&data_ov002_0206c460->fonts[0]);
     FreeResourceBufferAndProbeHeap(&data_ov002_0206c460->fonts[1]);
     NotifyBothOrOne(1, sOv002_WXCVB_0206c35c, 0);
-    func_02029fac(0, (int)OVERLAY_27_ID);
+    UnloadOverlayAfterGeometryTransfer(0, (int)OVERLAY_27_ID);
     FSi_DefaultStepDoneB(data_ov002_0206c460->keyRepeat);
     ReleaseRecordManager();
 }

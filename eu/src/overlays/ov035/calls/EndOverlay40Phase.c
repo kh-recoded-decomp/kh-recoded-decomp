@@ -1,5 +1,5 @@
 #define EndOverlay40Phase_020bace8 EndOverlay40Phase
-#define func_02029f98 func_02029fac
+#define func_02029f98 UnloadOverlayAfterGeometryTransfer
 #define func_ov040_020bd990 ShutdownScreenWork
 #define g_movieContext_020bc4e0 gMovieContextState
 #include "src/ov035/unclassified_helpers/EndOverlay40Phase_020bace8.c"

@@ -34,7 +34,7 @@ extern FieldSceneHandle data_ov001_020a04c4;
 extern SessionWork *data_ov001_020a0480;
 extern char data_ov045_020c0820[];
 extern char OVERLAY_45_ID[];
-extern void func_02029f8c(int processor, int overlay_id);
+extern void LoadOverlayAfterGeometryTransfer(int processor, int overlay_id);
 extern void *func_0202a45c(void *descriptor, void *userData);
 extern u32 func_ov001_02063b68(s32 index);
 extern u32 ReadSessionPackedBits(int bitOffset, u32 bitCount);
@@ -52,7 +52,7 @@ void ReopenFieldScoreScreen(void)
     u32 saved = ReadSessionPackedBits(0x35a7, 0x20);
     ScoreScreenParams params;
 
-    func_02029f8c(0, (int)OVERLAY_45_ID);
+    LoadOverlayAfterGeometryTransfer(0, (int)OVERLAY_45_ID);
     params.flags = 2;
     params.bonus = func_ov001_02063b68(0);
     params.timeScore = func_ov035_020bb2c0() * 1000;

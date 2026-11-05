@@ -1,6 +1,6 @@
 #define AllocFromHeapOrDefaultEx_0202a210 AllocFromHeapOrDefaultEx
 #define CallSelectionHandler_0200b740 FS_OpenFile
-#define FSi_WaitForCardThread_01ff8140 FSi_WaitForCardThread
+#define FSi_WaitForCardThread_01ff8140 WaitForGeometryTransfer
 #define Msg_BuildLangPath_0202b798 Msg_BuildLangPath
 #define RequestFileLoad_0202c000 RequestFileLoad
 #define Strlen_02021e44 strlen

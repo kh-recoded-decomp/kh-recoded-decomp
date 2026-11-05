@@ -21,8 +21,8 @@ extern CameraManager *gCameraManager;
 extern int gCameraLayerIdsByMode[];
 extern int gCameraLayerIds[];
 extern void GetSegmentState(CameraManager *manager, CameraView *view);
-extern void func_02029fac(int layer, int id);
-extern void func_02029f8c(int layer, int id);
+extern void UnloadOverlayAfterGeometryTransfer(int layer, int id);
+extern void LoadOverlayAfterGeometryTransfer(int layer, int id);
 extern void *StartEventCamera(void *data, CameraView *current, CameraView *target,
                               int curve, int duration, int returnMode);
 extern void Camera_SetViewBuilder(CameraViewBuilder builder);
@@ -38,8 +38,8 @@ void Camera_BlendToView(int returnMode, CameraView *target, int curve, int durat
 
     GetSegmentState(gCameraManager, &current);
     if (gCameraManager->type != 2) {
-        func_02029fac(0, gCameraLayerIdsByMode[gCameraManager->type]);
-        func_02029f8c(0, gCameraLayerIds[2]);
+        UnloadOverlayAfterGeometryTransfer(0, gCameraLayerIdsByMode[gCameraManager->type]);
+        LoadOverlayAfterGeometryTransfer(0, gCameraLayerIds[2]);
     }
     gCameraManager->controller = StartEventCamera(
         gCameraManager->controllerData, &current, target, curve, duration, returnMode);

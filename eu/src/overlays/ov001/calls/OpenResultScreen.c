@@ -23,7 +23,7 @@ typedef struct FieldSceneHandle {
 extern FieldSceneHandle data_ov001_020a04c4;
 extern char data_ov045_020c0820[];
 extern char OVERLAY_45_ID[];
-extern void func_02029f8c(int processor, int overlay_id);
+extern void LoadOverlayAfterGeometryTransfer(int processor, int overlay_id);
 extern void *func_0202a45c(void *descriptor, void *userData);
 extern u32 func_ov001_02063b68(s32 index);
 extern s32 func_ov001_020644c0(void);
@@ -36,7 +36,7 @@ void OpenResultScreen(int rank, int arg)
     FieldScene *scene = data_ov001_020a04c4.scene;
     ResultScreenParams params;
 
-    func_02029f8c(0, (int)OVERLAY_45_ID);
+    LoadOverlayAfterGeometryTransfer(0, (int)OVERLAY_45_ID);
     params.flags = 0;
     params.mode = rank - 1;
     params.score = func_ov001_02063b68(0);

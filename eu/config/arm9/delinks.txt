@@ -4369,7 +4369,7 @@ libs/nns/g3d/auto/NNSi_G3dAnmBlendVis.c:
     complete
     .text       start:0x02019c6c end:0x02019cf4
 
-src/calls/func_02019cf4.c:
+src/calls/SetGeometryCommandBufferIfUnset.c:
     complete
     .text       start:0x02019cf4 end:0x02019d14
 
@@ -6485,11 +6485,11 @@ src/calls/func_02029f7c.c:
     complete
     .text       start:0x02029f7c end:0x02029f8c
 
-src/calls/func_02029f8c.c:
+src/calls/LoadOverlayAfterGeometryTransfer.c:
     complete
     .text       start:0x02029f8c end:0x02029fac
 
-src/calls/func_02029fac.c:
+src/calls/UnloadOverlayAfterGeometryTransfer.c:
     complete
     .text       start:0x02029fac end:0x02029fcc
 
@@ -8117,7 +8117,7 @@ src/calls/NNSi_G3dFuncSbc_PRJMAP.c:
     complete
     .text       start:0x0203a588 end:0x0203a86c
 
-src/calls/InitializeArchiveBackend.c:
+src/calls/InitSbcHandlersAndFastDma.c:
     complete
     .text       start:0x0203a86c end:0x0203a8ec
 

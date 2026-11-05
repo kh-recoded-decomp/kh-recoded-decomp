@@ -36,7 +36,7 @@ extern void FSi_DefaultStepDoneB(void *image);
 extern void FreeAllocatedBuffers(void *buffers);
 extern void func_ov034_020be734(void *menu);
 extern void PXI_Init_0202a64c(void *task);
-extern void func_02029fac(int processor, int overlayId);
+extern void UnloadOverlayAfterGeometryTransfer(int processor, int overlayId);
 extern u64 OS_GetTick(void);
 extern u64 GetCardThreadStartTick(void);
 extern u64 _ll_udiv(u64 dividend, u64 divisor);
@@ -60,8 +60,8 @@ void CloseResultsSession(void)
     if (data_ov034_020c0fa0.work->task != NULL) {
         PXI_Init_0202a64c(data_ov034_020c0fa0.work->task);
     }
-    func_02029fac(0, (int)OVERLAY_27_ID);
-    func_02029fac(0, (int)OVERLAY_24_ID);
+    UnloadOverlayAfterGeometryTransfer(0, (int)OVERLAY_27_ID);
+    UnloadOverlayAfterGeometryTransfer(0, (int)OVERLAY_24_ID);
     if (data_ov034_020c0fa0.work->savedSlot != -1) {
         if (data_ov034_020c0fa0.work->syncPlayTime == 1) {
             data_0206085c = *data_ov034_020c0fa0.params;

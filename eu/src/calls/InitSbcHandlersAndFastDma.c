@@ -1,5 +1,5 @@
 #define func_01ffe8a0 EmitJointAnimationFramePayload
-#define InitializeArchiveBackend_0203a858 InitializeArchiveBackend
+#define InitializeArchiveBackend_0203a858 InitSbcHandlersAndFastDma
 #define archive_backend_callbacks data_027e01f8
 #define func_01ffe280 NNSi_G3dFuncSbc_NODE
 #define func_01ffe3d8 NNSi_G3dFuncSbcMAT
@@ -13,5 +13,5 @@
 #define func_0203a28c Sbc_CallDl
 #define func_0203a2f4 NNSi_G3dFuncSbc_ENVMAP
 #define func_0203a574 NNSi_G3dFuncSbc_PRJMAP
-#define srand_0x02016284 func_01ffa1f4
+#define srand_0x02016284 SetGeometryDmaFastMode
 #include "src/arm9/archive_startup/InitializeArchiveBackend_0203a858.c"

@@ -10,8 +10,8 @@ typedef struct Panel {
 extern char OVERLAY_104_ID[];
 
 extern BOOL IsSoundStreamActive(int stream);
-extern void func_02029f8c(int processor, int overlayId);
-extern void func_02029fac(int processor, int overlayId);
+extern void LoadOverlayAfterGeometryTransfer(int processor, int overlayId);
+extern void UnloadOverlayAfterGeometryTransfer(int processor, int overlayId);
 extern s32 __DSProt_DetectFlashcart(void *task, void *callback, int arg);
 extern s32 __DSProt_DetectEmulator(void *task, void *callback, int arg);
 extern s32 __DSProt_DetectNotDummy(void *task, void *callback, int arg);
@@ -35,7 +35,7 @@ int WaitPanelWorldSession(Panel *panel)
             BOOL detected;
             void *callback;
 
-            func_02029f8c(0, (int)OVERLAY_104_ID);
+            LoadOverlayAfterGeometryTransfer(0, (int)OVERLAY_104_ID);
             detected = __DSProt_DetectFlashcart(RunProtectionCallback, DSProt_OnDetection, 0) ==
                        ~(u32)DSProt_OnDetection;
             if (!detected) {
@@ -51,7 +51,7 @@ int WaitPanelWorldSession(Panel *panel)
                     }
                 }
             }
-            func_02029fac(0, (int)OVERLAY_104_ID);
+            UnloadOverlayAfterGeometryTransfer(0, (int)OVERLAY_104_ID);
             result = -2;
         }
     } else {

@@ -13,7 +13,7 @@
 #define TP_WaitBusy_0201018c TP_WaitBusy
 #define ZeroHalfThenFree_0202cd78 ZeroHalfThenFree
 #define data_ov001_020a0460 data_ov001_020a0480
-#define func_02029f98 func_02029fac
+#define func_02029f98 UnloadOverlayAfterGeometryTransfer
 #define func_0202a638 PXI_Init_0202a64c
 #define func_02035774 ShutdownActorRegistry
 #define func_02050a44 func_02050a58

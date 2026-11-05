@@ -1,5 +1,5 @@
 #define CallSelectionHandler_0200b740 FS_OpenFile
-#define FSi_WaitForCardThread_01ff8140 FSi_WaitForCardThread
+#define FSi_WaitForCardThread_01ff8140 WaitForGeometryTransfer
 #define Msg_BuildLangPath_0202b798 Msg_BuildLangPath
 #define Strlen_02021e44 strlen
 #define data_02053260 gAsciiUppercaseMap

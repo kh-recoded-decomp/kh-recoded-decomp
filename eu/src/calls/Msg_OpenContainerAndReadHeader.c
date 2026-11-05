@@ -1,6 +1,6 @@
 #define Msg_OpenContainerAndReadHeader_0202cc6c Msg_OpenContainerAndReadHeader
 #define func_0200b394 FS_InitFile
-#define FSi_WaitForCardThread_01ff8140 FSi_WaitForCardThread
+#define FSi_WaitForCardThread_01ff8140 WaitForGeometryTransfer
 #define Msg_BuildLangPath_0202b798 Msg_BuildLangPath
 #define CallSelectionHandler_0200b740 FS_OpenFile
 #define ReadFileSync_0200b674 FS_ReadFile

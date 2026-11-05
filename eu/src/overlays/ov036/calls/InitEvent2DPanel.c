@@ -3,8 +3,8 @@
 #define GetCurrentTaskWork NNSi_FndGetCurrentRootHeap
 #define InitPcmChannel func_020257d8
 #define CreateTask func_0202a45c
-#define LoadOverlaySync func_02029f8c
-#define UnloadOverlaySync func_02029fac
+#define LoadOverlaySync LoadOverlayAfterGeometryTransfer
+#define UnloadOverlaySync UnloadOverlayAfterGeometryTransfer
 
 typedef void (*ProtectionCallback)(void);
 typedef u32 (*ProtectionCallbackRunner)(ProtectionCallback callback);

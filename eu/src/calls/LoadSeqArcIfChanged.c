@@ -1,4 +1,4 @@
-#define FSi_WaitForCardThread_01ff8140 FSi_WaitForCardThread
+#define FSi_WaitForCardThread_01ff8140 WaitForGeometryTransfer
 #define LoadSeqArcIfChanged_0204d5f0 LoadSeqArcIfChanged
 #define NNS_SndArcLoadSeq_0201f348 NNS_SndArcLoadSeqArc
 #define SoundMgr_WaitLoaderIfState1_0204d6c0 SoundMgr_WaitLoaderIfState1

@@ -38,8 +38,8 @@ extern char OVERLAY_27_ID[];
 
 #define FS_OVERLAY_ID_ov027 ((u32)OVERLAY_27_ID)
 
-extern void func_02029f8c(int processor, int overlayId);
-extern void func_02029fac(int processor, int overlayId);
+extern void LoadOverlayAfterGeometryTransfer(int processor, int overlayId);
+extern void UnloadOverlayAfterGeometryTransfer(int processor, int overlayId);
 extern void func_ov000_02061b88(int value, int waitVBlank);
 extern void GX_SetBankForBG(int bank);
 extern void GX_SetBankForBGExtPltt(int bank);
@@ -71,7 +71,7 @@ void ShowTitleNotice(void *owner, int noticeType)
     TextFrame frame = data_ov000_020637a4;
     MessageSet messages;
 
-    func_02029f8c(0, FS_OVERLAY_ID_ov027);
+    LoadOverlayAfterGeometryTransfer(0, FS_OVERLAY_ID_ov027);
     func_ov000_02061b88(-0x10, 1);
     GX_SetBankForBG(0x10);
     GX_SetBankForBGExtPltt(0);
@@ -106,5 +106,5 @@ void ShowTitleNotice(void *owner, int noticeType)
     DestroyFndObjectList(&layer);
     FreeResourceBufferAndProbeHeap(&font);
     FreePointerIfSet(&messages.file);
-    func_02029fac(0, FS_OVERLAY_ID_ov027);
+    UnloadOverlayAfterGeometryTransfer(0, FS_OVERLAY_ID_ov027);
 }

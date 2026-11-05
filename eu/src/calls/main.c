@@ -22,11 +22,11 @@ typedef struct {
 } ObjectSystem;
 
 extern void InitEngine(void);
-extern void InitializeArchiveBackend(void);
+extern void InitSbcHandlersAndFastDma(void);
 extern void func_0202abbc(void);
 extern void OS_GetOwnerInfo(OwnerInfo *owner);
 extern void func_0202b774(int language, int unused);
-extern void func_02019cf4(RootWork *work);
+extern void SetGeometryCommandBufferIfUnset(RootWork *work);
 extern u32 FS_TryLoadTable(void *table, u32 size);
 extern void *NNSi_FndAllocFromExpHeapEx(u32 size, void *heap);
 extern void func_0202a438(void);
@@ -85,7 +85,7 @@ int main(void)
 
     wasActive = FALSE;
     InitEngine();
-    InitializeArchiveBackend();
+    InitSbcHandlersAndFastDma();
     func_0202abbc();
     OS_GetOwnerInfo(&owner);
     language = owner.language;
@@ -101,7 +101,7 @@ int main(void)
         func_0202b774(LANGUAGE_ENGLISH, 0);
         break;
     }
-    func_02019cf4(&rootWork);
+    SetGeometryCommandBufferIfUnset(&rootWork);
     gMainDisplayState.resourceTable = NNSi_FndAllocFromExpHeapEx(FS_TryLoadTable(NULL, 0), data_02060394);
     FS_TryLoadTable(gMainDisplayState.resourceTable, FS_TryLoadTable(NULL, 0));
     func_0202a438();

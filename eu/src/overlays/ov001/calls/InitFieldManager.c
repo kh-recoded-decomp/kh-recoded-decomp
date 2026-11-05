@@ -80,7 +80,7 @@ extern void NNS_FndInitList(void *list, u32 linkOffset);
 extern void *AddFieldListener(void (*callback)(void));
 extern void UpdateFieldWindowFade(void);
 extern void ApplyFieldBgScroll(void);
-extern void func_02029f8c(int processor, int overlayId);
+extern void LoadOverlayAfterGeometryTransfer(int processor, int overlayId);
 extern void *func_0202c4a0(u32 fileId, u32 heapId);
 extern void *Archive_LoadFile(u32 fileId, u32 heapId);
 extern void InitSubScreenVramBanks(void);
@@ -145,7 +145,7 @@ void *InitFieldManager(FieldParams *params)
     NNS_FndInitList(manager->taskList, 4);
     AddFieldListener(UpdateFieldWindowFade);
     AddFieldListener(ApplyFieldBgScroll);
-    func_02029f8c(0, (int)OVERLAY_27_ID);
+    LoadOverlayAfterGeometryTransfer(0, (int)OVERLAY_27_ID);
     manager->messages68 = Msg_OpenContainerAndReadHeader(sOv001_UiBtlBtluiP2_0209eda0, 0xE, FALSE);
     manager->messages6C = (u32)Msg_OpenContainerAndReadHeader(sOv001_UiBtlBtlLanguageP2_0209edb4, 0xE, FALSE);
     manager->messages70 = Msg_OpenContainerAndReadHeader(sOv001_UiBtlFaceP2_0209edc8, 0xE, FALSE);

@@ -5,7 +5,7 @@
 #define data_ov021_020b56a0 data_ov021_020b56c0
 #define func_01ff86fc MIi_CpuClear32
 #define func_01ff8830 MI_CpuFill8
-#define func_02029f78 func_02029f8c
+#define func_02029f78 LoadOverlayAfterGeometryTransfer
 #define func_ov042_020bdb4c InitCameraScene
 #define func_ov043_020bcbcc InitCameraState_020bcbec
 #define func_ov044_020d05e8 InitPanel

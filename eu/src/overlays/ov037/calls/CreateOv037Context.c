@@ -11,7 +11,7 @@ typedef struct Ov037Context {
 
 extern Ov037Context *gContinueScreenContext;
 extern char OVERLAY_27_ID[];
-extern void func_02029f8c(int target, int overlayId);
+extern void LoadOverlayAfterGeometryTransfer(int target, int overlayId);
 extern void *NNSi_FndAllocFromDefaultHeap(u32 size);
 extern void MI_CpuFill8(void *dst, int value, u32 size);
 extern void SetupMainBgLayers(void);
@@ -27,7 +27,7 @@ void CreateOv037Context(void)
     if (gContinueScreenContext != NULL) {
         return;
     }
-    func_02029f8c(0, (int)OVERLAY_27_ID);
+    LoadOverlayAfterGeometryTransfer(0, (int)OVERLAY_27_ID);
     gContinueScreenContext = NNSi_FndAllocFromDefaultHeap(sizeof(Ov037Context));
     MI_CpuFill8(gContinueScreenContext, 0, sizeof(Ov037Context));
     gContinueScreenContext->state = 0;

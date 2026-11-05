@@ -20,7 +20,7 @@ typedef struct {
 extern char OVERLAY_27_ID[];
 extern SoundCtx *data_ov038_020bd160;
 extern void *NNSi_FndGetCurrentRootHeap(void);
-extern void func_02029f8c(int processor, int overlayId);
+extern void LoadOverlayAfterGeometryTransfer(int processor, int overlayId);
 extern void BuildCompletionStats(void);
 extern void *func_ov038_020bbcb0(void);
 extern void SetPanelEnabled(int value);
@@ -35,7 +35,7 @@ void *StartOv038SoundCtx(SoundCtxArgs *args)
     data_ov038_020bd160->flags = 0x23;
     data_ov038_020bd160->mode = args->mode;
     data_ov038_020bd160->state = 0;
-    func_02029f8c(0, (int)OVERLAY_27_ID);
+    LoadOverlayAfterGeometryTransfer(0, (int)OVERLAY_27_ID);
     BuildCompletionStats();
     func_ov038_020bbcb0();
     SetPanelEnabled(0);

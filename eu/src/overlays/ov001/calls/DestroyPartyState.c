@@ -4,7 +4,7 @@
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define ResetGaugeDisplay_020734f8 ResetGaugeDisplay
 #define data_ov001_020a049c data_ov001_020a04bc
-#define func_02029f98 func_02029fac
+#define func_02029f98 UnloadOverlayAfterGeometryTransfer
 #define func_02050a44 func_02050a58
 #define func_ov021_020a892c DestroyAllPools
 #define func_ov021_020a9568 FreeSharedBuffers

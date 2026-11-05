@@ -3,9 +3,9 @@
 extern unsigned int gCameraManager;
 extern unsigned int gCameraLayerIdsByMode;
 extern unsigned int Obj_FreeDataBuffers();
-extern unsigned int func_02029fac();
+extern unsigned int UnloadOverlayAfterGeometryTransfer();
 
 void ReleaseCameraLayerResources(void) {
   Obj_FreeDataBuffers((void *)(gCameraManager + 0xf8));
-  func_02029fac(0,((int *)&gCameraLayerIdsByMode)[*(int *)(gCameraManager + 0x80)]);
+  UnloadOverlayAfterGeometryTransfer(0,((int *)&gCameraLayerIdsByMode)[*(int *)(gCameraManager + 0x80)]);
 }

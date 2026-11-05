@@ -1,4 +1,4 @@
-#define LoadOverlay func_02029f8c
+#define LoadOverlay LoadOverlayAfterGeometryTransfer
 #define availableOverlayIds data_ov051_020c7420
 #define loadedOverlayIds data_ov051_020c7460
 #define overlayInitializers data_ov051_020c73f0

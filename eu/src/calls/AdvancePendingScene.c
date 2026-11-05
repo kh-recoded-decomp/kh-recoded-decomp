@@ -11,8 +11,8 @@ static inline void ResetSceneHeapRecord(void *storage)
 #define data_0205fdec gSceneController
 #define data_0205fdec_alias gSceneControllerStorage
 #define func_020253f8 ResetCallbackTable
-#define func_02029f78 func_02029f8c
-#define func_02029f98 func_02029fac
+#define func_02029f78 LoadOverlayAfterGeometryTransfer
+#define func_02029f98 UnloadOverlayAfterGeometryTransfer
 #define func_0202a0f0 ResetSceneHeapRecord
 #define func_0202a448 func_0202a45c
 #define func_0202a5a4 StoreWord0

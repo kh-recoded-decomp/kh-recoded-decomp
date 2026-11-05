@@ -10,8 +10,8 @@
 #define func_020023a0 OS_GetLockID
 #define func_02009a54 CARD_IdentifyBackup
 #define func_02026ce0 VerifyCardIdMatchesReference
-#define func_02029f78 func_02029f8c
-#define func_02029f98 func_02029fac
+#define func_02029f78 LoadOverlayAfterGeometryTransfer
+#define func_02029f98 UnloadOverlayAfterGeometryTransfer
 #define func_ov104_020d1edc __DSProt_DetectNotFlashcart
 #define func_ov104_020d1f18 __DSProt_DetectEmulator
 #define func_ov104_020d1fcc __DSProt_DetectNotDummy
