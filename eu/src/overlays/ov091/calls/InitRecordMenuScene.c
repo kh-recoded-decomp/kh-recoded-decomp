@@ -16,11 +16,11 @@
 #define func_ov091_020bef9c SetupRecordMenuDisplay
 #define func_ov091_020bf194 LoadReportTopMessageContainers
 #define func_ov091_020bf410 InitMenuTextLayers
-#define func_ov091_020bf788 func_ov091_020bf7a8
+#define func_ov091_020bf788 CreateReportTopPanelSlots
 #define func_ov091_020bfbac SetListPanelSlotValue
 #define func_ov091_020bfc6c InitScrollList_020bfc8c
-#define func_ov091_020c12b4 func_ov091_020c12d4
-#define func_ov091_020c1350 func_ov091_020c1370
+#define func_ov091_020c12b4 UpdateReportTopFlagProgress
+#define func_ov091_020c1350 UpdateReportTopCounterProgress
 #define func_ov091_020c1400 SyncRecordFlags
 #define func_ov091_020c279c func_ov091_020c27bc
 #include "src/ov091/panel_state/InitRecordMenuScene_020beb20.c"

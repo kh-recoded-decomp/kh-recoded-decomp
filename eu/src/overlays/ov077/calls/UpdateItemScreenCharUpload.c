@@ -24,7 +24,7 @@ extern void *G2_GetBG1CharPtr(void);
 extern void MIi_CpuCopyFast(const void *src, void *dest, u32 size);
 extern void UpdateWidgetRootAndFireAlarm(TextRenderer *renderer, int mode);
 
-void func_ov077_020c7ce8(void)
+void UpdateItemScreenCharUpload(void)
 {
     MenuWork *work = gItemListPanelWork;
 

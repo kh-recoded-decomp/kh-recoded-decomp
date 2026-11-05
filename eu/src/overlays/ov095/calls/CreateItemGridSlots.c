@@ -4,7 +4,7 @@ extern unsigned char gItemGridLayoutRecords;
 extern unsigned int InitObjManager();
 extern unsigned int CreateGridEntry();
 
-void func_ov095_020c0148(int work) {
+void CreateItemGridSlots(int work) {
   int index;
   u32 configuration [4];
 

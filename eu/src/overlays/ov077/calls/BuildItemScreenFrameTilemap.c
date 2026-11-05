@@ -15,7 +15,7 @@ extern FrameTiles data_ov077_020ca180;
 extern void func_01ff88c4(void *dest, int value, u32 size);
 extern void MIi_CpuClear16(u16 value, void *dest, u32 size);
 
-void func_ov077_020c7d44(int x, int y, int width, int height, u16 (*screen)[32])
+void BuildItemScreenFrameTilemap(int x, int y, int width, int height, u16 (*screen)[32])
 {
     FrameTiles tiles = data_ov077_020ca180;
     u16 left = x;

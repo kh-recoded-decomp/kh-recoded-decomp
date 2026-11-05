@@ -8,7 +8,7 @@ typedef struct {
 extern u8 data_020608c8;
 extern Session *data_ov001_020a0480;
 
-BOOL func_ov077_020c7b34(void)
+BOOL AreSlotMenuSessionStatesZero(void)
 {
     BOOL allIdle = TRUE;
     int index;

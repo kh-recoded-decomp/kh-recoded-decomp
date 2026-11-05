@@ -345,7 +345,7 @@ src/overlays/ov076/calls/SlotMenu_OnMessageConfirm.c:
     complete
     .text       start:0x020c8a90 end:0x020c8b48
 
-src/overlays/ov076/calls/func_ov076_020c8b48.c:
+src/overlays/ov076/calls/IsSlotMenuTotalWithinLimit.c:
     complete
     .text       start:0x020c8b48 end:0x020c8b70
 
@@ -493,7 +493,7 @@ src/overlays/ov076/calls/LoadOverlaySync_020ca630.c:
     complete
     .text       start:0x020ca630 end:0x020ca644
 
-src/overlays/ov076/calls/func_ov076_020ca644.c:
+src/overlays/ov076/calls/ApplySlotMenuItemReward.c:
     complete
     .text       start:0x020ca644 end:0x020ca716
 
@@ -533,7 +533,7 @@ src/overlays/ov076/calls/IsRecordCapacityReached.c:
     complete
     .text       start:0x020caa64 end:0x020cab00
 
-src/overlays/ov076/calls/func_ov076_020cab00.c:
+src/overlays/ov076/calls/AreSlotMenuSessionStatesZero.c:
     complete
     .text       start:0x020cab00 end:0x020cab3c
 

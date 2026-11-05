@@ -26,6 +26,8 @@ This is a matching decompilation; a host port is a separate project.
   conditional clearing and the boundary between proven fields and unknown bits.
 - [Widget record operations](WIDGET_RECORD_OPS.md) records two-ID iteration,
   animation frame selection, active bits, mode replacement and legacy ABI views.
+- [UI progress and slots](UI_PROGRESS_SLOTS.md) records slot construction,
+  progress mappings, reward dispatch, zero-state scans and mode-word ownership.
 - [Calendar helpers](CALENDAR_HELPERS.md) records the year origin, checked
   carry mutation, preserved calendar storage and native 32-bit result boundary.
 - [Menu rendering and resources](UI_RENDER_HELPERS.md) records texture metadata,

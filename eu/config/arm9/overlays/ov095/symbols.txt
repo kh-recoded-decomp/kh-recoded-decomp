@@ -21,7 +21,7 @@ RefreshItemReportText kind:function(arm,size=0x5c8) addr:0x020bfa38
 DrawShadowedAnchoredText_020c0000 kind:function(arm,size=0x64) addr:0x020c0000
 DrawItemGridTextWithShadow kind:function(arm,size=0x5c) addr:0x020c0064
 DrawShadowedTextFitted kind:function(arm,size=0x88) addr:0x020c00c0
-func_ov095_020c0148 kind:function(arm,size=0x84) addr:0x020c0148
+CreateItemGridSlots kind:function(arm,size=0x84) addr:0x020c0148
 ReleaseSlotPool kind:function(arm,size=0x1c) addr:0x020c01cc
 InitSlotPool kind:function(arm,size=0x10) addr:0x020c01e8
 SetGridEntryVisible kind:function(arm,size=0x3c) addr:0x020c01f8
@@ -51,7 +51,7 @@ IsEntryFlagSet_020c1340 kind:function(arm,size=0x34) addr:0x020c1340
 SetEntryFlag_020c1374 kind:function(arm,size=0x28) addr:0x020c1374
 ClearEntryFlag_020c139c kind:function(arm,size=0x28) addr:0x020c139c
 GrantUnlockedEntries kind:function(arm,size=0x264) addr:0x020c13c4
-func_ov095_020c1628 kind:function(arm,size=0xec) addr:0x020c1628
+UpdateItemGridBackgroundVariant kind:function(arm,size=0xec) addr:0x020c1628
 data_ov095_020c1714 kind:data(any) addr:0x020c1714
 gItemReportStateHandlers kind:data(any) addr:0x020c171c
 data_ov095_020c1728 kind:data(any) addr:0x020c1728

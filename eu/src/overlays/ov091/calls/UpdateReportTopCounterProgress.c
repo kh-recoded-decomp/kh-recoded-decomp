@@ -6,7 +6,7 @@ extern unsigned int ReadGlobalPackedBits();
 extern unsigned int SetEntryFlag();
 extern unsigned int SetGlobalPackedBit();
 
-void func_ov091_020c1370(int work) {
+void UpdateReportTopCounterProgress(int work) {
   u32 progress;
   int flag;
   int completed;

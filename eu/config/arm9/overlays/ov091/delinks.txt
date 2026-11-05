@@ -72,7 +72,7 @@ src/overlays/ov091/calls/DrawShadowedAnchoredText.c:
     complete
     .text       start:0x020bf744 end:0x020bf7a8
 
-src/overlays/ov091/calls/func_ov091_020bf7a8.c:
+src/overlays/ov091/calls/CreateReportTopPanelSlots.c:
     complete
     .text       start:0x020bf7a8 end:0x020bf89c
 
@@ -132,11 +132,11 @@ src/overlays/ov091/calls/ComputeCompletionPercent.c:
     complete
     .text       start:0x020c114c end:0x020c12d4
 
-src/overlays/ov091/calls/func_ov091_020c12d4.c:
+src/overlays/ov091/calls/UpdateReportTopFlagProgress.c:
     complete
     .text       start:0x020c12d4 end:0x020c1370
 
-src/overlays/ov091/calls/func_ov091_020c1370.c:
+src/overlays/ov091/calls/UpdateReportTopCounterProgress.c:
     complete
     .text       start:0x020c1370 end:0x020c1420
 
@@ -156,7 +156,7 @@ src/overlays/ov091/calls/SetSceneMode.c:
     complete
     .text       start:0x020c175c end:0x020c1774
 
-src/overlays/ov091/auto/func_ov091_020c1774.c:
+src/overlays/ov091/auto/GetReportTopMode.c:
     complete
     .text       start:0x020c1774 end:0x020c1780
 

@@ -36,7 +36,7 @@ the following contracts record both their shared behavior and their differences.
 | `func_ov103_020c033c` | `InitTheaterReportScreen` | ClearsCBC4h work; clamps negative restored selection to0; loads messages/graphics/background/text/slots, setups list/unlocks, redraws and sets phase2. No upper selection guard. |
 | `func_ov103_020bf5e8` | `CreateTheaterReportSlotEntries` | Initializes manager at work+174h from container entryDh, creates12 slots with14h descriptor stride. No complete descriptor schema inferred. |
 | `func_ov086_020bfba0` | `RefreshRecordStatisticsRows` | Clears text via virtualslot1; dirties layer18h/trackerrow19h; draws statistic rows0..3 using established RecordPageMenu. |
-| `func_ov086_020bf3b4` | `CountUnlockedRecordGroupEntries` | Sums earlier group counts for base, scans group and counts IsSessionFlagSet(base+i+581h). No group bounds validation or further flag-role claim. |
+| `func_ov086_020bf3b4` | `CountSetRecordGroupFlags` | Sums earlier group counts for base, scans group and counts IsSessionFlagSet(base+i+581h). No group bounds validation or further flag-role claim. |
 | `func_ov088_020bed2c` | `InitOverlay088CaptionLayer` | Loads literal ui/menu/str/&/cd.s.z into packed view+34h; inits text layer, draws entry0 at(4,0), uploads and dirties1Ah. Does not expand unknown cd abbreviation. |
 | `func_ov088_020bedf0` | `DestroyOverlay088CaptionLayer` | FreePointerIfSet at owner slot context+34h, then DestroyFndObjectList. Normalize actual void** release if changing types; cached view fields become stale. |
 | `func_ov097_020c1864` | `InitStoryReportSpriteFromFile` | Clears2Ch prefix; loads resource at+28h with flags11h; RebindSpriteToCell(slot,1,1,0); true return. No load failure guard. |

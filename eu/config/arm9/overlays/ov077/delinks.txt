@@ -254,7 +254,7 @@ src/overlays/ov077/calls/QueueAndPlaySound.c:
     complete
     .text       start:0x020c7664 end:0x020c7678
 
-src/overlays/ov077/calls/func_ov077_020c7678.c:
+src/overlays/ov077/calls/ApplyItemScreenItemReward.c:
     complete
     .text       start:0x020c7678 end:0x020c774a
 
@@ -294,7 +294,7 @@ src/overlays/ov077/calls/IsPartyLevelSufficient_020c7a98.c:
     complete
     .text       start:0x020c7a98 end:0x020c7b34
 
-src/overlays/ov077/calls/func_ov077_020c7b34.c:
+src/overlays/ov077/calls/AreItemScreenSessionStatesZero.c:
     complete
     .text       start:0x020c7b34 end:0x020c7b70
 
@@ -306,11 +306,11 @@ src/overlays/ov077/calls/CanUseItemEntry.c:
     complete
     .text       start:0x020c7b8c end:0x020c7ce8
 
-src/overlays/ov077/calls/func_ov077_020c7ce8.c:
+src/overlays/ov077/calls/UpdateItemScreenCharUpload.c:
     complete
     .text       start:0x020c7ce8 end:0x020c7d44
 
-src/overlays/ov077/calls/func_ov077_020c7d44.c:
+src/overlays/ov077/calls/BuildItemScreenFrameTilemap.c:
     complete
     .text       start:0x020c7d44 end:0x020c7e5c
 
@@ -330,7 +330,7 @@ src/overlays/ov077/calls/MeasureTextLine_020c8120.c:
     complete
     .text       start:0x020c8120 end:0x020c8188
 
-src/overlays/ov077/calls/func_ov077_020c8188.c:
+src/overlays/ov077/calls/HandleItemScreenTextTag.c:
     complete
     .text       start:0x020c8188 end:0x020c81f8
 

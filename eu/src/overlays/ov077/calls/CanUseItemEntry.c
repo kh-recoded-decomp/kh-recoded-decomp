@@ -3,6 +3,6 @@
 #define IsPartyLevelSufficient_020c7a78 IsPartyLevelSufficient_020c7a98
 #define data_ov001_020a0460 data_ov001_020a0480
 #define func_ov077_020c7a48 func_ov077_020c7a68
-#define func_ov077_020c7b14 func_ov077_020c7b34
+#define func_ov077_020c7b14 AreItemScreenSessionStatesZero
 #define func_ov077_020c7b50 func_ov077_020c7b70
 #include "src/ov077/unclassified_helpers/CanUseItemEntry_020c7b6c.c"

@@ -4,5 +4,5 @@
 #define ScrollListDown_020c0010 ScrollListDown
 #define SetEntryFlag_020c1718 SetEntryFlag
 #define SetListPanelSlotValue_020bfbac SetListPanelSlotValue
-#define func_ov091_020c1754 func_ov091_020c1774
+#define func_ov091_020c1754 GetReportTopMode
 #include "src/ov091/panel_state/MoveEntryCursorDown_020bee40.c"

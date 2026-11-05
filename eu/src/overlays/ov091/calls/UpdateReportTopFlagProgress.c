@@ -5,7 +5,7 @@ extern unsigned int IsGlobalPackedBitSet();
 extern unsigned int SetEntryFlag();
 extern unsigned int SetGlobalPackedBit();
 
-void func_ov091_020c12d4(int work) {
+void UpdateReportTopFlagProgress(int work) {
   int flag;
   int completed;
   int index;

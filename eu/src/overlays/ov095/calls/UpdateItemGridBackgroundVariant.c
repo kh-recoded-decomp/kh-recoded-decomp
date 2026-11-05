@@ -4,7 +4,7 @@ extern unsigned int data_ov095_020c28e0;
 extern unsigned int NNS_G2dBGLoadScreenRect();
 extern unsigned int G2_GetBG3ScrPtr();
 
-void func_ov095_020c1628(void) {
+void UpdateItemGridBackgroundVariant(void) {
   int work;
   void *pScreenDst;
   u16 *screen;

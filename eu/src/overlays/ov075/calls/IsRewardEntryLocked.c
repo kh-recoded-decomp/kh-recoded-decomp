@@ -3,6 +3,6 @@
 #define IsRewardEntryLocked_020ced28 IsRewardEntryLocked
 #define data_ov001_020a0460 data_ov001_020a0480
 #define func_ov075_020cec04 func_ov075_020cec24
-#define func_ov075_020cecd0 func_ov075_020cecf0
+#define func_ov075_020cecd0 AreItemPickerSessionStatesZero
 #define func_ov075_020ced0c func_ov075_020ced2c
 #include "src/ov075/unclassified_helpers/IsRewardEntryLocked_020ced28.c"

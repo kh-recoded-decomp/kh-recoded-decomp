@@ -484,7 +484,7 @@ src/overlays/ov075/calls/IsPartyLevelSufficient.c:
     complete
     .text       start:0x020cec54 end:0x020cecf0
 
-src/overlays/ov075/calls/func_ov075_020cecf0.c:
+src/overlays/ov075/calls/AreItemPickerSessionStatesZero.c:
     complete
     .text       start:0x020cecf0 end:0x020ced2c
 

@@ -8,7 +8,7 @@ typedef struct {
 
 extern int MeasureTextLine_020c8120(NNSG2dTagCallbackInfo *info, const void *str, int stopAtTag);
 
-void func_ov077_020c8188(u16 tag, NNSG2dTagCallbackInfo *info)
+void HandleItemScreenTextTag(u16 tag, NNSG2dTagCallbackInfo *info)
 {
     MenuWork *work = info->cbParam;
 

@@ -6,7 +6,7 @@ extern unsigned int InitObjManager();
 extern unsigned int PXI_Init_0204f020();
 extern unsigned int CreateListPanelSlot();
 
-void func_ov091_020bf7a8(int work) {
+void CreateReportTopPanelSlots(int work) {
   int index;
   u32 configuration [4];
 

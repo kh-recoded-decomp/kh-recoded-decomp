@@ -96,7 +96,7 @@ src/overlays/ov095/calls/DrawShadowedTextFitted.c:
     complete
     .text       start:0x020c00c0 end:0x020c0148
 
-src/overlays/ov095/calls/func_ov095_020c0148.c:
+src/overlays/ov095/calls/CreateItemGridSlots.c:
     complete
     .text       start:0x020c0148 end:0x020c01cc
 
@@ -216,7 +216,7 @@ src/overlays/ov095/calls/GrantUnlockedEntries.c:
     complete
     .text       start:0x020c13c4 end:0x020c1628
 
-src/overlays/ov095/calls/func_ov095_020c1628.c:
+src/overlays/ov095/calls/UpdateItemGridBackgroundVariant.c:
     complete
     .text       start:0x020c1628 end:0x020c1714
 

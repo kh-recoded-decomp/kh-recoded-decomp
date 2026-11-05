@@ -5,5 +5,5 @@
 #define G2D_FindGlyphIndex_02016a10 NNS_G2dFontFindGlyphIndex
 #define G2D_GetGlyphWidths_02016a58 NNS_G2dFontGetCharWidthsFromIndex
 #define DrawNnsG2dText_02017ff0 NNSi_G2dTextCanvasDrawTaggedText
-#define func_ov077_020c8168 func_ov077_020c8188
+#define func_ov077_020c8168 HandleItemScreenTextTag
 #include "src/ov077/unclassified_helpers/DrawDialogText_020c89d4.c"

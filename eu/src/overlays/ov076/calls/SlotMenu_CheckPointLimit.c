@@ -1,4 +1,4 @@
 #define SlotMenu_CheckPointLimit_020c544c SlotMenu_CheckPointLimit
-#define SlotMenu_IsPointTotalWithinLimit_020c8b28 func_ov076_020c8b48
+#define SlotMenu_IsPointTotalWithinLimit_020c8b28 IsSlotMenuTotalWithinLimit
 #define SlotMenu_ShowPointLimitWarning_020c89a0 SlotMenu_ShowPointLimitWarning
 #include "src/ov076/unclassified_helpers/SlotMenu_CheckPointLimit_020c544c.c"

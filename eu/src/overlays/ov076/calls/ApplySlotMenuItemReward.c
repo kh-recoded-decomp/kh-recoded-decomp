@@ -6,7 +6,7 @@ extern u32 func_ov076_020ca560();
 extern u32 func_ov076_020ca628();
 extern u32 LoadOverlaySync_020ca630();
 
-void func_ov076_020ca644(u32 reward)
+void ApplySlotMenuItemReward(u32 reward)
 
 {
   switch(reward) {

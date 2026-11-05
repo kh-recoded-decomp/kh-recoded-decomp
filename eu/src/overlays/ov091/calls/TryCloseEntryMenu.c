@@ -2,5 +2,5 @@
 #define func_0204d924 PlaySoundEffect
 #define func_ov039_020bbf78 StartSubScene
 #define func_ov039_020bc8a0 PopStackEntry
-#define func_ov091_020c1754 func_ov091_020c1774
+#define func_ov091_020c1754 GetReportTopMode
 #include "src/ov091/reviewed_helpers/TryCloseEntryMenu_020bef64.c"

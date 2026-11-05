@@ -3,7 +3,7 @@
 extern unsigned char data_ov086_020c2360;
 extern unsigned int IsSessionFlagSet();
 
-int CountUnlockedRecordGroupEntries(int group) {
+int CountSetRecordGroupFlags(int group) {
   int flag;
   int countOrIndex;
   int baseIndex;

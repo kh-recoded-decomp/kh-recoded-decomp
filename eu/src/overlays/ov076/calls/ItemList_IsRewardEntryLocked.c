@@ -3,6 +3,6 @@
 #define data_ov001_020a0460 data_ov001_020a0480
 #define func_ov076_020caa14 func_ov076_020caa34
 #define func_ov076_020caa44 IsRecordCapacityReached
-#define func_ov076_020caae0 func_ov076_020cab00
+#define func_ov076_020caae0 AreSlotMenuSessionStatesZero
 #define func_ov076_020cab1c func_ov076_020cab3c
 #include "src/ov076/unclassified_helpers/ItemList_IsRewardEntryLocked_020cab38.c"

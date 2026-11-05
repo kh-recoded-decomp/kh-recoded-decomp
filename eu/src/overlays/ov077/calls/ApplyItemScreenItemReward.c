@@ -6,7 +6,7 @@ extern u32 func_ov077_020c7594();
 extern u32 func_ov077_020c765c();
 extern void QueueAndPlaySound(int soundId, int index);
 
-void func_ov077_020c7678(u32 reward)
+void ApplyItemScreenItemReward(u32 reward)
 
 {
   switch(reward) {

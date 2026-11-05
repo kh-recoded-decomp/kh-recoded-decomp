@@ -40,7 +40,7 @@ src/overlays/ov086/calls/CountUnlockedGroupEntries.c:
     complete
     .text       start:0x020bf344 end:0x020bf3b4
 
-src/overlays/ov086/calls/CountUnlockedRecordGroupEntries.c:
+src/overlays/ov086/calls/CountSetRecordGroupFlags.c:
     complete
     .text       start:0x020bf3b4 end:0x020bf428
 

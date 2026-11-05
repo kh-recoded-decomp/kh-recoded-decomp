@@ -23,7 +23,7 @@ extern u32 ReadSessionPackedBits(int bitOffset, u32 bitCount);
 extern BOOL IsSessionFlagSet(u32 flagId);
 extern int CountSessionGroupFlags(int group);
 extern int CountUnlockedGroupEntries(int group);
-extern int CountUnlockedRecordGroupEntries(int group);
+extern int CountSetRecordGroupFlags(int group);
 extern int CountGroupFlaggedEntries_020bf4a4(int group);
 extern int SumUnlockedGroupEntryCounts(int group);
 extern int GetHighestSetFlagTier(int group);
@@ -48,7 +48,7 @@ void DrawRecordPanelStats(RecordPanel *panel)
         DrawRecordStatRow(panel, 6, group);
     }
     first = CountUnlockedGroupEntries(panel->group);
-    DrawRecordStatRow(panel, 2, first, CountUnlockedRecordGroupEntries(panel->group));
+    DrawRecordStatRow(panel, 2, first, CountSetRecordGroupFlags(panel->group));
     first = CountGroupFlaggedEntries_020bf4a4(panel->group);
     DrawRecordStatRow(panel, 3, first, SumUnlockedGroupEntryCounts(panel->group));
     DrawRecordStatRow(panel, 4, GetHighestSetFlagTier(panel->group));

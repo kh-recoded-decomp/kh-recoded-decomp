@@ -3,5 +3,5 @@
 #define PushStackEntry_020bc874 PushStackEntry
 #define data_ov091_020c2814 data_ov091_020c2834
 #define func_ov039_020bbf78 StartSubScene
-#define func_ov091_020c1754 func_ov091_020c1774
+#define func_ov091_020c1754 GetReportTopMode
 #include "src/ov091/panel_state/OpenSelectedEntryScene_020beee0.c"

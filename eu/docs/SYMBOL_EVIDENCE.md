@@ -296,7 +296,7 @@ zero return; names do not imply a shared success/advance protocol.
 | `func_ov103_020c033c` | `InitTheaterReportScreen` | ClearsCBC4h work; clamps negative restored selection to0; loads messages/graphics/background/text/slots, setups list/unlocks, redraws and sets phase2. No upper selection guard. |
 | `func_ov103_020bf5e8` | `CreateTheaterReportSlotEntries` | Initializes manager at work+174h from container entryDh, creates12 slots with14h descriptor stride. No complete descriptor schema inferred. |
 | `func_ov086_020bfba0` | `RefreshRecordStatisticsRows` | Clears text via virtualslot1; dirties layer18h/trackerrow19h; draws statistic rows0..3 using established RecordPageMenu. |
-| `func_ov086_020bf3b4` | `CountUnlockedRecordGroupEntries` | Sums earlier group counts for base, scans group and counts IsSessionFlagSet(base+i+581h). No group bounds validation or further flag-role claim. |
+| `func_ov086_020bf3b4` | `CountSetRecordGroupFlags` | Sums earlier group counts for base, scans group and counts IsSessionFlagSet(base+i+581h). No group bounds validation or further flag-role claim. |
 | `func_ov088_020bed2c` | `InitOverlay088CaptionLayer` | Loads literal ui/menu/str/&/cd.s.z into packed view+34h; inits text layer, draws entry0 at(4,0), uploads and dirties1Ah. Does not expand unknown cd abbreviation. |
 | `func_ov088_020bedf0` | `DestroyOverlay088CaptionLayer` | FreePointerIfSet at owner slot context+34h, then DestroyFndObjectList. Normalize actual void** release if changing types; cached view fields become stale. |
 | `func_ov097_020c1864` | `InitStoryReportSpriteFromFile` | Clears2Ch prefix; loads resource at+28h with flags11h; RebindSpriteToCell(slot,1,1,0); true return. No load failure guard. |
@@ -323,6 +323,32 @@ meaning; local view names do not claim complete allocation layouts.
 checked floor carry, copy-on-success behavior, 36-byte storage and reserved
 ninth word. The helpers expose their actual pointer inputs and logical argument
 counts; native time and long widths remain explicit port constraints.
+
+## UI progress and slot/state contracts
+
+| Previous name | Current name | Evidence |
+|---|---|---|
+| `func_ov077_020c7ce8` | `UpdateItemScreenCharUpload` | Same paused/parity-gated2400h copy to BG1char+140h and idle-renderer update as075/076, using gItemListPanelWork. |
+| `func_ov077_020c7d44` | `BuildItemScreenFrameTilemap` | Same32x24 three-style frame-tilemap algorithm as075/076 with item-screen frame table. |
+| `func_ov077_020c8188` | `HandleItemScreenTextTag` | Same colorsF2/highlight/FA and1F centered-next-line tag callback, using MeasureTextLine_020c8120 and item-screen owner. |
+| `func_ov095_020c0148` | `CreateItemGridSlots` | Builds manager at180h from container entry31h and creates13 grid slots using gItemGridLayoutRecords with14h stride. |
+| `func_ov091_020bf7a8` | `CreateReportTopPanelSlots` | Initializes managerF4h from entry7, binds extra resource, creates6slots with18h descriptor stride; initializes second manager6528h from entry4 and creates one slot. |
+| `func_ov095_020c1628` | `UpdateItemGridBackgroundVariant` | Changes BG3screen to resource154h when selected variant1 and stored variant1, marks stored2; otherwise restores resource144h when stored2, marks1. |
+| `func_ov091_020c12d4` | `UpdateReportTopFlagProgress` | Counts8table-selected global flags, sets11B2h+i for found entries, marksnew entry category(2,2) when unacknowledged, stores percentageC9FCh. |
+| `func_ov091_020c1370` | `UpdateReportTopCounterProgress` | Counts40nonzero17-bit counters selected by table, sets1172h+i, marks new-entry category(2,3) when unacknowledged, stores percentCA00h. |
+| `func_ov076_020c8b48` | `IsSlotMenuTotalWithinLimit` | Sums eight unsigned-halfword values at49818h and returns total<=100. |
+| `func_ov076_020ca644` | `ApplySlotMenuItemReward` | Called by ItemList_ReturnCursorItem with selected definition reward. Dispatches B7h..BDh into counters, level-threshold helper, resets and feedback requests. |
+| `func_ov077_020c7678` | `ApplyItemScreenItemReward` | Equivalent selected-item reward dispatch B7h..BDh, using item-screen helper bindings and QueueAndPlaySound feedback. |
+| `func_ov075_020cecf0` | `AreItemPickerSessionStatesZero` | Returns true only when every session state word selected by global byte count is zero; zero count is true. |
+| `func_ov076_020cab00` | `AreSlotMenuSessionStatesZero` | Same zero-state scan for slot-menu copy; global array begins session+27A8h. |
+| `func_ov077_020c7b34` | `AreItemScreenSessionStatesZero` | Same zero-state scan for item-screen copy. |
+| `func_ov091_020c1774` | `GetReportTopMode` | ReturnsCC68h word; paired SetSceneMode writes same field and UpdateRecordMenuScene dispatches by getter. |
+| `CountUnlockedRecordGroupEntries` | `CountSetRecordGroupFlags` | Counts set flags at0x581+group base+index; no unlocked/completed meaning assigned. |
+
+[UI_PROGRESS_SLOTS.md](UI_PROGRESS_SLOTS.md) records fixed slot counts/strides,
+report flags and counters, native reward dispatch, zero-state scans and the
+report mode word. The previous unlocked wording for the record-group counter
+is corrected to a set-flag operation; gameplay meaning remains unproven.
 
 ## Explicitly unresolved
 

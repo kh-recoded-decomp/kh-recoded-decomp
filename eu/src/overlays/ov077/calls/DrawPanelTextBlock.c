@@ -4,5 +4,5 @@
 #define NNSi_G2dFontGetTextHeight_02016b4c NNSi_G2dFontGetTextHeight
 #define MeasureTextLine_020c8100 MeasureTextLine_020c8120
 #define DrawNnsG2dText_02017ff0 NNSi_G2dTextCanvasDrawTaggedText
-#define func_ov077_020c8168 func_ov077_020c8188
+#define func_ov077_020c8168 HandleItemScreenTextTag
 #include "src/ov077/unclassified_helpers/DrawPanelTextBlock_020c889c.c"

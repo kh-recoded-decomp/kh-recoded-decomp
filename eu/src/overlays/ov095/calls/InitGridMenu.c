@@ -11,7 +11,7 @@
 #define LoadMenuBackgrounds_020bf550 LoadMenuBackgrounds_020bf570
 #define MIi_CpuClearFast_01ff8740 MIi_CpuClearFast
 #define Msg_OpenContainerAndReadHeader_0202cc6c Msg_OpenContainerAndReadHeader
-#define RefreshSecondaryPanelList_020c0128 func_ov095_020c0148
+#define RefreshSecondaryPanelList_020c0128 CreateItemGridSlots
 #define SetPanelMode_020c11f0 SetPanelMode_020c1210
 #define SetStateFlagBits_020bc688 SetStateFlagBits
 #define SetupGridMenuDisplay_020bf084 SetupGridMenuDisplay
@@ -26,5 +26,5 @@
 #define func_ov095_020bf824 InitTextLayers
 #define func_ov095_020bfa18 RefreshItemReportText
 #define func_ov095_020c09f8 CreateItemReportGridCell
-#define func_ov095_020c1608 func_ov095_020c1628
+#define func_ov095_020c1608 UpdateItemGridBackgroundVariant
 #include "src/ov095/panel_state/InitGridMenu_020beb00.c"

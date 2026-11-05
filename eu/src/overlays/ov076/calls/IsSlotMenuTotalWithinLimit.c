@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-BOOL func_ov076_020c8b48(int work) {
+BOOL IsSlotMenuTotalWithinLimit(int work) {
   int offset;
   int total;
   int index;
