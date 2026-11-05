@@ -1,3 +1,5 @@
+#define data_027e00b0 gCollisionTraversalTop
+#define data_027e00b4 gCollisionTraversalFrames
 #define CollWorld_FindHitPreserveState_02034ab4 CollWorld_FindHitPreserveState
 #define CollWorld_FindHit_020351cc CollWorld_FindHit
 #define func_01ff878c MIi_CpuCopyFast

@@ -7,7 +7,7 @@
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define func_01ff9f88 VEC_Normalize
 #define func_0203ac24 InitHitQuery
-#define func_02047184 func_02047198
+#define func_02047184 SweepSphereAgainstRim
 #define func_0204774c SweepIntervalOnAxis
 #define func_0204792c ResolveSweepContact
 #define func_0204a5e4 ScaleVecFx32InPlace

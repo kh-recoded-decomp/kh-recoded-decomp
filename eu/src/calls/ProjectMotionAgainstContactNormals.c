@@ -21,7 +21,7 @@ static inline VecFx32 VecScaled(VecFx32 v, fx32 scale)
     return v;
 }
 
-void func_02034d78(VecFx32 *vec, const CollisionContacts *set)
+void ProjectMotionAgainstContactNormals(VecFx32 *vec, const CollisionContacts *set)
 {
     VecFx32 dir;
     VecFx32 result;

@@ -1,3 +1,5 @@
+#define data_027e00b0 gCollisionTraversalTop
+#define data_027e00b4 gCollisionTraversalFrames
 #define TestMoverAgainstModelWalls_020330c0 TestMoverAgainstModelWalls
 #define func_02030d48 TestMoverAgainstFace
 #define func_02032c18 ResetCollTraversal

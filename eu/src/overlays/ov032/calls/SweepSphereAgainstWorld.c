@@ -1,5 +1,5 @@
 #define CollisionQuery_Init_02034c74 CollisionQuery_Init
-#define ConstrainVectorToContacts_02034d64 func_02034d78
+#define ConstrainVectorToContacts_02034d64 ProjectMotionAgainstContactNormals
 #define IsQueryFacingContact_020bca90 IsQueryFacingContact
 #define OffsetBoxByDelta_0203ac70 OffsetBoxByDelta
 #define SweepSphereAgainstWorld_020bcaa4 SweepSphereAgainstWorld

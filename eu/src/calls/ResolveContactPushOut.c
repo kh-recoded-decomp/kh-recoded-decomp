@@ -10,7 +10,7 @@
 #define func_01ff9f88 VEC_Normalize
 #define func_01ffaff4 VEC_NormalizeLength
 #define func_02032008 PushContact
-#define func_02034d64 func_02034d78
+#define func_02034d64 ProjectMotionAgainstContactNormals
 #define func_020351cc CollWorld_FindHit
 #define func_0203afa0 SetShapePosition
 #define func_0203d4d0 GetObbProjectedRadius

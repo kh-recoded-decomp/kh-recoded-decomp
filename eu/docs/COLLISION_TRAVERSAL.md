@@ -44,11 +44,46 @@ geometry and displacement. For mode zero, the final displacement is also stored
 in `data_027e0160` and may be limited by `maxDistance`; `0x7fffffff` disables that
 final distance limit.
 
-The traversal uses the shared frame cursor `data_027e00b0` and the frame storage
-beginning at `data_027e00b4`. A port must preserve this shared-state contract or
+The traversal uses the shared frame cursor `gCollisionTraversalTop` and the frame storage
+beginning at `gCollisionTraversalFrames`. A port must preserve this shared-state contract or
 move it into a per-query traversal context before allowing concurrent or nested
 queries. The contact-response helpers are documented separately in
 [CONTACT_MOTION.md](CONTACT_MOTION.md).
+
+## Recovered traversal workspace
+
+`src/collision/CollisionTraversal.h` gives the EU frame and region types.
+The complete workspace at DTCM `0x027e00b0..0x027e0134` is a four-byte cursor
+followed by eight 16-byte frames. This size is supported independently by the
+claimed BSS span and `ResetCollTraversal`, which initializes eight region sizes
+by repeatedly halving the root size. The first frame also receives the root's
+X/Z center. The reset does not initialize every child index or flag word.
+
+| Symbol | Address | Recovered purpose |
+|---|---|---|
+| `gCollisionTraversalTop` | `0x027e00b0` | Pointer to the current frame; reset to the first frame, advanced on descent and restored during backtracking. |
+| `gCollisionTraversalFrames` | `0x027e00b4` | Eight frames, 128 bytes in total, ending immediately before the next BSS object at `0x027e0134`. |
+
+| Frame offset | Type | Meaning |
+|---|---|---|
+| `0x00` | `s16` | Child index used by backtracking. |
+| `0x02` | `u16` | Saved parent-node flags used to select remaining siblings. |
+| `0x04` | `s32` | Region center X. |
+| `0x08` | `s32` | Region center Z. |
+| `0x0c` | `s32` | Region size for that depth. |
+
+The traversal assumes that the input tree fits the eight-frame workspace; it
+does not add a bounds check on descent. The shared `FindQuadTreeContact` source
+retains its older `QuadCell` view of this same storage: child/quadrant at zero,
+two otherwise unused bytes, then the same region fields. Its EU wrapper maps
+the cursor to the same symbol. A port should unify these declarations with its
+chosen frame type rather than assume distinct C structure types are
+interchangeable merely because their DS layouts agree.
+
+The remaining scratch at `0x027e0160` is not renamed in this block: the existing
+symbol at `0x027e0164` lies inside its vector-sized view, so naming it as a new
+independent allocation would hide a storage overlap that still needs a lifetime
+analysis. See [SYMBOL_EVIDENCE.md](SYMBOL_EVIDENCE.md) for the naming evidence.
 
 ## Matching and porting
 

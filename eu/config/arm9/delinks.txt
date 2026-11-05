@@ -7569,7 +7569,7 @@ src/calls/AttachToAnchor.c:
     complete
     .text       start:0x02034d00 end:0x02034d78
 
-src/calls/func_02034d78.c:
+src/calls/ProjectMotionAgainstContactNormals.c:
     complete
     .text       start:0x02034d78 end:0x02034f88
 
@@ -8789,7 +8789,7 @@ src/calls/SweepCylinderAgainstPolygon.c:
     complete
     .text       start:0x020456d4 end:0x02047198
 
-src/calls/func_02047198.c:
+src/calls/SweepSphereAgainstRim.c:
     complete
     .text       start:0x02047198 end:0x02047760
 

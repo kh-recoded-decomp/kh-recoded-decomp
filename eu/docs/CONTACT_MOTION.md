@@ -1,7 +1,7 @@
 # EU contact-motion projection
 
-`func_02034d78` modifies a motion vector using selected collision normals.
-The matching implementation is `src/calls/func_02034d78.c`, included in the linked
+`ProjectMotionAgainstContactNormals` (formerly `func_02034d78`, EU `0x02034d78`) modifies a motion vector using selected collision normals.
+The matching implementation is `src/calls/ProjectMotionAgainstContactNormals.c`, included in the linked
 EU build. It uses the recovered `CollisionContacts` type shared with query
 initialization. The superseded nonmatching draft has been removed.
 
@@ -46,7 +46,7 @@ and thirteen relocations through the ordinary verifier. Its public interface is
 two pointers, with the contact workspace read through a const view.
 
 ```sh
-python tools/verify_idx.py src/calls/func_02034d78.c func_02034d78
+python tools/verify_idx.py src/calls/ProjectMotionAgainstContactNormals.c ProjectMotionAgainstContactNormals
 ```
 
 `python tools/test_contact_motion.py -v`, run from `eu/`, separately checks:

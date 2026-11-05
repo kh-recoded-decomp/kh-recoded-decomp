@@ -8,6 +8,7 @@
 #pragma inline_max_size(10000)
 #endif
 #include "src/collision/CollisionGeometry.h"
+#include "src/collision/CollisionTraversal.h"
 
 #define COLLISION_CONTACT_LIMIT 16
 
@@ -104,14 +105,6 @@ typedef struct CollNode {
     struct CollNode *children[4];
 } CollNode;
 
-typedef struct CollTraversalFrame {
-    s16 childIndex;
-    u16 nodeFlags;
-    s32 centerX;
-    s32 centerZ;
-    s32 size;
-} CollTraversalFrame;
-
 typedef struct CollModel {
     u8 pad_00[0x9c];
     CollNode *root;
@@ -170,8 +163,6 @@ typedef BOOL (*ShapeSweepFn)(CollSweep *sweep, CollShape *other, ContactPlane *p
 extern const ShapeTestFn gCollisionTestDispatch[][6];
 extern const ShapeSweepFn gCollisionSweepDispatch[][6];
 extern const VecFx32 gZeroVecFx32;
-extern CollTraversalFrame *data_027e00b0;
-extern CollTraversalFrame data_027e00b4;
 extern VecFx32 data_027e0160;
 
 extern void VEC_Add(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
@@ -648,39 +639,39 @@ void func_01ffb4f8(CollNode *node, CollMover *mover, CollModel *model)
             processedPrefixes[FACE_PREFIX_CEILING] = ceilHits;
         }
 
-        frame = data_027e00b0;
+        frame = gCollisionTraversalTop;
         nodeFlags = node->flags;
         if (nodeFlags != 0) {
             nextFrame = frame + 1;
-            quarter = frame->size / 4;
-            centerX = frame->centerX;
+            quarter = frame->region.size / 4;
+            centerX = frame->region.centerX;
             if (box->max.x < centerX) {
                 nodeFlags &= 0x5555;
             } else if (box->min.x > centerX) {
                 nodeFlags &= 0xaaaa;
             }
-            if (box->max.z < frame->centerZ) {
+            if (box->max.z < frame->region.centerZ) {
                 nodeFlags &= 0x3333;
-            } else if (box->min.z > frame->centerZ) {
+            } else if (box->min.z > frame->region.centerZ) {
                 nodeFlags &= 0xcccc;
             }
 
             descentChild = 0xf;
             if (nodeFlags & mask0) {
-                nextFrame->centerX = centerX - quarter;
-                nextFrame->centerZ = frame->centerZ - quarter;
+                nextFrame->region.centerX = centerX - quarter;
+                nextFrame->region.centerZ = frame->region.centerZ - quarter;
                 descentChild = 0;
             } else if (nodeFlags & mask1) {
-                nextFrame->centerX = centerX + quarter;
-                nextFrame->centerZ = frame->centerZ - quarter;
+                nextFrame->region.centerX = centerX + quarter;
+                nextFrame->region.centerZ = frame->region.centerZ - quarter;
                 descentChild = 1;
             } else if (nodeFlags & mask2) {
-                nextFrame->centerX = centerX - quarter;
-                nextFrame->centerZ = frame->centerZ + quarter;
+                nextFrame->region.centerX = centerX - quarter;
+                nextFrame->region.centerZ = frame->region.centerZ + quarter;
                 descentChild = 2;
             } else if (nodeFlags & mask3) {
-                nextFrame->centerX = centerX + quarter;
-                nextFrame->centerZ = frame->centerZ + quarter;
+                nextFrame->region.centerX = centerX + quarter;
+                nextFrame->region.centerZ = frame->region.centerZ + quarter;
                 descentChild = 3;
             }
 
@@ -688,12 +679,12 @@ void func_01ffb4f8(CollNode *node, CollMover *mover, CollModel *model)
                 node = node->children[descentChild];
                 nextFrame->childIndex = descentChild;
                 frame->nodeFlags = nodeFlags;
-                data_027e00b0 = nextFrame;
+                gCollisionTraversalTop = nextFrame;
                 goto restart;
             }
         }
 
-        while (frame != &data_027e00b4) {
+        while (frame != gCollisionTraversalFrames) {
             previousChild = frame->childIndex;
             if (previousChild == 3) {
                 frame--;
@@ -704,29 +695,29 @@ void func_01ffb4f8(CollNode *node, CollMover *mover, CollModel *model)
             parentFrame = frame - 1;
             node = node->parent;
             siblingFlags = parentFrame->nodeFlags;
-            quarter = parentFrame->size / 4;
+            quarter = parentFrame->region.size / 4;
             siblingChild = 0;
 
             switch (previousChild) {
             case 0:
                 if (siblingFlags & mask1) {
-                    frame->centerX = parentFrame->centerX + quarter;
+                    frame->region.centerX = parentFrame->region.centerX + quarter;
                     siblingChild = 1;
-                    frame->centerZ = parentFrame->centerZ - quarter;
+                    frame->region.centerZ = parentFrame->region.centerZ - quarter;
                     break;
                 }
             case 1:
                 if (siblingFlags & mask2) {
-                    frame->centerX = parentFrame->centerX - quarter;
+                    frame->region.centerX = parentFrame->region.centerX - quarter;
                     siblingChild = 2;
-                    frame->centerZ = parentFrame->centerZ + quarter;
+                    frame->region.centerZ = parentFrame->region.centerZ + quarter;
                     break;
                 }
             case 2:
                 if (siblingFlags & mask3) {
-                    frame->centerX = parentFrame->centerX + quarter;
+                    frame->region.centerX = parentFrame->region.centerX + quarter;
                     siblingChild = 3;
-                    frame->centerZ = parentFrame->centerZ + quarter;
+                    frame->region.centerZ = parentFrame->region.centerZ + quarter;
                 }
                 break;
             }
@@ -734,7 +725,7 @@ void func_01ffb4f8(CollNode *node, CollMover *mover, CollModel *model)
             if (siblingChild != 0) {
                 node = node->children[siblingChild];
                 frame->childIndex = siblingChild;
-                data_027e00b0 = frame;
+                gCollisionTraversalTop = frame;
                 goto restart;
             }
             frame--;

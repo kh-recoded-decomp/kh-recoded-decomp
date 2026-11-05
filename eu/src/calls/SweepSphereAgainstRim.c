@@ -109,7 +109,7 @@ inline static VecFx32 NormalizeVectorIfShort(VecFx32 vec)
     return vec;
 }
 
-fx32 func_02047198(const CollisionSphere *sphere, const VecFx32 *direction,
+fx32 SweepSphereAgainstRim(const CollisionSphere *sphere, const VecFx32 *direction,
                    const VecFx32 *rimCenter, fx32 rimRadius, fx32 sphereRadius,
                    const VecFx32 *rimAxis, fx32 *candidateDistances,
                    VecFx32 *outNormal)

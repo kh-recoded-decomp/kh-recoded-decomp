@@ -12,6 +12,8 @@ This is a matching decompilation; a host port is a separate project.
   [contact motion](CONTACT_MOTION.md) and [sphere/rim sweep](SPHERE_RIM.md)
   describe recovered layouts, fixed-point math, ownership and the relevant
   calling conventions.
+- [Symbol evidence](SYMBOL_EVIDENCE.md) records justified semantic renames and
+  the recovered traversal workspace, including unresolved overlapping views.
 - [Results scene](RESULTS_SCENE.md), [scene loading](SCENE_LOAD_STEP.md),
   [carousel models](CAROUSEL_MODELS.md), [widgets](WIDGET_POSITION.md) and
   [field-menu palette](FIELD_MENU_PALETTE.md) record behavior and the matching

@@ -26,5 +26,5 @@
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define Vec2Add_0204a2e0 Vec2Add
 #define data_02053438 gZeroVecFx32
-#define func_02047184 func_02047198
+#define func_02047184 SweepSphereAgainstRim
 #include "src/arm9/spatial_queries/SweepCylinderAgainstCylinder_020449b4.c"

@@ -1,6 +1,6 @@
 #define AreVecsWithinRange128_0204a87c AreVecsWithinRange128
 #define CollisionQuery_Init_02034c74 CollisionQuery_Init
-#define ConstrainVectorToContacts_02034d64 func_02034d78
+#define ConstrainVectorToContacts_02034d64 ProjectMotionAgainstContactNormals
 #define GetCarrierVelocity_020a3418 GetCarrierVelocity
 #define InitBoxShape_0203ad54 InitBoxShape
 #define MoveFieldObjectWithCollision_020a34fc MoveFieldObjectWithCollision

@@ -1,7 +1,7 @@
 # Sphere sweep against a circular rim
 
-`src/calls/func_02047198.c` reconstructs the EU ARM function at `0x02047198`
-(1480 bytes). Its C body comes from the matching candidate supplied by the user
+`src/calls/SweepSphereAgainstRim.c` reconstructs the EU ARM function at `0x02047198`
+(1480 bytes; formerly `func_02047198`). Its C body comes from the matching candidate supplied by the user
 in `func_02047198_MATCH_VERIFICADO.zip`. The production unit uses the existing
 `CollisionSphere` definition and the repository's `SolveQuartic` symbol.
 
@@ -115,7 +115,7 @@ Metrowerks ARM 4.0 build 1018, ARM mode, C99, with the normal project flags.
 From `eu/`, reproduce the official function check and linked-module gate:
 
 ```sh
-python tools/verify_idx.py src/calls/func_02047198.c func_02047198
+python tools/verify_idx.py src/calls/SweepSphereAgainstRim.c SweepSphereAgainstRim
 bash tools/gate.sh
 ```
 

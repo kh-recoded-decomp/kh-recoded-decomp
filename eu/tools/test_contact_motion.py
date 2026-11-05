@@ -107,9 +107,9 @@ class ContactMotionTests(unittest.TestCase):
         from elftools.elf.elffile import ELFFile
         cls.index = verify_idx._index()
         cls.addresses = verify_idx.SYM_ADDR
-        cls.entry = cls.addresses["func_02034d78"]
-        cls.original = bytes.fromhex(cls.index["func_02034d78"]["hex"])
-        source = ROOT / "src/calls/func_02034d78.c"
+        cls.entry = cls.addresses["ProjectMotionAgainstContactNormals"]
+        cls.original = bytes.fromhex(cls.index["ProjectMotionAgainstContactNormals"]["hex"])
+        source = ROOT / "src/calls/ProjectMotionAgainstContactNormals.c"
         previous = match._COMPILER_MAP
         previous_cwd = Path.cwd()
         try:
@@ -118,16 +118,16 @@ class ContactMotionTests(unittest.TestCase):
             with tempfile.TemporaryDirectory(prefix="contact-motion-", dir=BUILD_DIR) as temporary:
                 output = Path(temporary) / "candidate.o"
                 match.compile_c(str(source), out=str(output))
-                code, refs = match.text_relocs(str(output), "func_02034d78")
+                code, refs = match.text_relocs(str(output), "ProjectMotionAgainstContactNormals")
                 with output.open("rb") as stream:
                     elf = ELFFile(stream)
-                    section_index = match.func_section(elf, "func_02034d78")
+                    section_index = match.func_section(elf, "ProjectMotionAgainstContactNormals")
                     addends = {relocation["r_offset"]: relocation["r_addend"]
                                for section in elf.iter_sections()
                                if section["sh_type"] == "SHT_RELA" and section["sh_info"] == section_index
                                for relocation in section.iter_relocations()}
                 cls.candidate = bytearray(code)
-                expected = dict(cls.index["func_02034d78"]["relocs"])
+                expected = dict(cls.index["ProjectMotionAgainstContactNormals"]["relocs"])
                 if set(refs) != set(expected):
                     raise AssertionError("candidate relocation offsets differ")
                 for offset, (name, kind) in refs.items():

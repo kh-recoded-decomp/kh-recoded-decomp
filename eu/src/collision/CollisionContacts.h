@@ -16,7 +16,7 @@ typedef struct CollisionContacts {
 
 typedef char CollisionContactsSizeCheck[sizeof(CollisionContacts) == 0x1a4 ? 1 : -1];
 
-/* ProjectContactMotion: preserves the workspace unless motion aliases a normal. */
-void func_02034d78(VecFx32 *motion, const CollisionContacts *contacts);
+/* ProjectMotionAgainstContactNormals: preserves the workspace unless motion aliases a normal. */
+void ProjectMotionAgainstContactNormals(VecFx32 *motion, const CollisionContacts *contacts);
 
 #endif

@@ -4,5 +4,5 @@
 #define func_020348cc InitPlaneContact
 #define g_motionQueue_027e0134 data_027e0134
 #define g_objectHit_027e0164 data_027e0164
-#define g_quadCellTop_027e00b0 data_027e00b0
+#define g_quadCellTop_027e00b0 gCollisionTraversalTop
 #include "src/arm9/spatial_queries/FindQuadTreeContact_02031164.c"
