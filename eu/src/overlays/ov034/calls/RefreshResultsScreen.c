@@ -18,7 +18,7 @@
 #define func_02001768 DrawCenteredTextLine
 #define func_0202b788 GetLanguageIndex
 #define func_0204f378 IndexedRecords_SetFlag2
-#define func_ov024_020b72dc func_ov024_020b72fc
+#define func_ov024_020b72dc RerollBoardSlotsWrapper
 #define func_ov024_020b72e4 ResetBoardCursor
 #define func_ov027_020b90a4 FindWidgetById
 #define func_ov027_020b91a8 GetWidgetPosition

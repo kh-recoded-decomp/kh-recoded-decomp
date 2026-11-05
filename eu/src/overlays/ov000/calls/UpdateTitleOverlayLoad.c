@@ -11,7 +11,7 @@ typedef struct TitlePanel {
 
 extern u8 UpdateMenuTouchSelect[];
 
-extern int func_ov003_02064744(void);
+extern int IsMovieSceneFlag8Set(void);
 extern BOOL HasNonzeroStreamPlaybackPosition(int handleIndex);
 extern void *CreateTaskObject(void *descriptor, void *userData);
 extern void SetPanelState(TitlePanel *panel, s32 state, u32 param1, u32 param2);
@@ -21,7 +21,7 @@ int UpdateTitleOverlayLoad(TitlePanel *panel)
     int result = -1;
 
     if (panel->overlayLoaded != 0) {
-        if (func_ov003_02064744() != 0) {
+        if (IsMovieSceneFlag8Set() != 0) {
             if (panel->skipFade != 0) {
                 SetPanelState(panel, 1, 0, 0);
                 result = -2;

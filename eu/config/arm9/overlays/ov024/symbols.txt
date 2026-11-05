@@ -9,8 +9,8 @@ PlaceBoardBonuses kind:function(thumb,size=0x1d8) addr:0x020b620c
 TryLinkNodes kind:function(thumb,size=0x110) addr:0x020b63e4
 GetLinkDistance kind:function(thumb,size=0x80) addr:0x020b64f4
 PickRandomSetBit kind:function(thumb,size=0x4e) addr:0x020b6574
-func_ov024_020b65c4 kind:function(thumb,size=0x24) addr:0x020b65c4
-func_ov024_020b65e8 kind:function(thumb,size=0x14) addr:0x020b65e8
+BlitBoardWidgetAndFinishPendingTeardown kind:function(thumb,size=0x24) addr:0x020b65c4
+ClearBoardWidgetTileArea kind:function(thumb,size=0x14) addr:0x020b65e8
 SetupSubScreenBgLayers kind:function(thumb,size=0x70) addr:0x020b65fc
 SetupBoardTextLayer kind:function(thumb,size=0xe4) addr:0x020b666c
 TeardownContextState kind:function(thumb,size=0x48) addr:0x020b6750
@@ -23,7 +23,7 @@ DestroyBoardScreen kind:function(thumb,size=0x7c) addr:0x020b6d98
 UpdateBoardScreen kind:function(thumb,size=0x434) addr:0x020b6e14
 ApplyDirectionOffset kind:function(thumb,size=0x60) addr:0x020b7248
 GetCursorScreenPos kind:function(thumb,size=0x54) addr:0x020b72a8
-func_ov024_020b72fc kind:function(thumb,size=0x8) addr:0x020b72fc
+RerollBoardSlotsWrapper kind:function(thumb,size=0x8) addr:0x020b72fc
 ResetBoardCursor kind:function(thumb,size=0x3c) addr:0x020b7304
 data_ov024_020b7340 kind:data(any) addr:0x020b7340
 data_ov024_020b7350 kind:data(any) addr:0x020b7350

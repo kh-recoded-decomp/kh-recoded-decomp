@@ -87,11 +87,11 @@ src/overlays/ov003/calls/MovieScene_IsFlag8b9Clear.c:
     complete
     .text       start:0x02064724 end:0x02064744
 
-src/overlays/ov003/calls/func_ov003_02064744.c:
+src/overlays/ov003/calls/IsMovieSceneFlag8Set.c:
     complete
     .text       start:0x02064744 end:0x02064764
 
-src/overlays/ov003/calls/func_ov003_02064764.c:
+src/overlays/ov003/calls/MovieScriptCmd_StartStream.c:
     complete
     .text       start:0x02064764 end:0x020647a6
 
@@ -99,11 +99,11 @@ src/overlays/ov003/calls/MovieScene_BeginDefaultFade.c:
     complete
     .text       start:0x020647a8 end:0x020647b6
 
-src/overlays/ov003/calls/func_ov003_020647b8.c:
+src/overlays/ov003/calls/MovieScriptCmd_WaitForSubtitleFrame.c:
     complete
     .text       start:0x020647b8 end:0x020647ee
 
-src/overlays/ov003/calls/func_ov003_020647f0.c:
+src/overlays/ov003/calls/MovieScriptPoll_SubtitleFrame.c:
     complete
     .text       start:0x020647f0 end:0x02064818
 
@@ -111,11 +111,11 @@ src/overlays/ov003/calls/ResyncMovieSubtitleStream.c:
     complete
     .text       start:0x02064818 end:0x02064844
 
-src/overlays/ov003/calls/func_ov003_02064844.c:
+src/overlays/ov003/calls/MovieScriptCmd_RequestStop.c:
     complete
     .text       start:0x02064844 end:0x0206484e
 
-src/overlays/ov003/calls/func_ov003_02064850.c:
+src/overlays/ov003/calls/MovieScriptPoll_StopRequestClear.c:
     complete
     .text       start:0x02064850 end:0x02064862
 
@@ -135,7 +135,7 @@ src/overlays/ov003/calls/SubtitleText_BeginDraw.c:
     complete
     .text       start:0x02064980 end:0x020649a0
 
-src/overlays/ov003/auto/func_ov003_020649a0.c:
+src/overlays/ov003/auto/SetMovieSubtitleAlignmentMode.c:
     complete
     .text       start:0x020649a0 end:0x020649a8
 
@@ -143,7 +143,7 @@ src/overlays/ov003/calls/advanceMovieStreamWindow.c:
     complete
     .text       start:0x020649a8 end:0x020649fc
 
-src/overlays/ov003/calls/func_ov003_020649fc.c:
+src/overlays/ov003/calls/HandleMovieSubtitleControlCode.c:
     complete
     .text       start:0x020649fc end:0x02064ac0
 
@@ -163,7 +163,7 @@ src/overlays/ov003/calls/updateMovieStreamLeadTime.c:
     complete
     .text       start:0x02064e2c end:0x02064ec4
 
-src/overlays/ov003/calls/func_ov003_02064ec4.c:
+src/overlays/ov003/calls/DrawNextMovieSubtitleGlyph.c:
     complete
     .text       start:0x02064ec4 end:0x02064fd8
 
@@ -171,7 +171,7 @@ src/overlays/ov003/calls/IsMovieStreamReady.c:
     complete
     .text       start:0x02064fd8 end:0x02065028
 
-src/overlays/ov003/calls/func_ov003_02065028.c:
+src/overlays/ov003/calls/DrawMovieSubtitleTextImmediate.c:
     complete
     .text       start:0x02065028 end:0x0206507c
 

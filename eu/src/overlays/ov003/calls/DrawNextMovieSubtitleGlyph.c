@@ -30,7 +30,7 @@ extern char *strchr(char *s, int c);
 extern int GetNestedModeByte(SubtitleStream *stream);
 extern void CallVirtualHandler(SubtitleStream *stream, int x, int y, int color, GlyphRef *ref);
 
-BOOL func_ov003_02064ec4(SubtitleStream *stream)
+BOOL DrawNextMovieSubtitleGlyph(SubtitleStream *stream)
 {
     GlyphRef ref;
     int codeUnit;

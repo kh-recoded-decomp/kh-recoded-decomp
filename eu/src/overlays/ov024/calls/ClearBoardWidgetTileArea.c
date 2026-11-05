@@ -8,6 +8,6 @@ typedef struct Ov024Context {
 extern Ov024Context *data_ov024_020b7540;
 extern void ClearWidgetTileArea(void *handle, int value);
 
-void func_ov024_020b65e8(int value) {
+void ClearBoardWidgetTileArea(int value) {
     ClearWidgetTileArea(data_ov024_020b7540->handle, value);
 }

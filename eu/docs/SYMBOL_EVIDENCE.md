@@ -469,3 +469,12 @@ scene-task deactivation. [ACTOR_OPERATION_CONTRACTS.md](ACTOR_OPERATION_CONTRACT
 records separate owners and concrete fields, callback arguments/results,
 borrowed velocity, radial effect geometry and unresolved gameplay labels.
 The overlay052 velocity getter is distinct from overlay017's existing API.
+
+## Subtitle, scroll and board-widget contracts
+
+Nineteen helpers now describe movie-script waits/stream requests, subtitle
+control and glyph rendering, scroll blend adapters, text-layer setup and
+board-widget blit/clear/deferred cleanup.
+[SUBTITLE_SCROLL_WIDGET_CONTRACTS.md](SUBTITLE_SCROLL_WIDGET_CONTRACTS.md)
+records byte-string decoding, cursor/alignment distinctions, captured draw
+coordinates, MMIO effects, borrowed buffers and native return boundaries.

@@ -1,3 +1,4 @@
+#define func_ov003_020647b8 MovieScriptCmd_WaitForSubtitleFrame
 #define func_02025de4 ScriptVm_ReadOperandInt
 #define func_02025e18 ScriptCmd_SetElemField
 #define func_02063fe4 MovieScene_IsAnyStateTwo

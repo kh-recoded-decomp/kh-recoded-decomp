@@ -10,7 +10,7 @@ typedef struct MovieStream {
 extern void SubtitleText_BeginDraw(MovieStream *stream);
 extern int advanceMovieStreamWindow(MovieStream *stream);
 
-BOOL func_ov003_020649fc(MovieStream *stream, int event)
+BOOL HandleMovieSubtitleControlCode(MovieStream *stream, int event)
 {
     s32 *counter;
 

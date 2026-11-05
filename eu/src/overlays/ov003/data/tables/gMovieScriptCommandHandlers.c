@@ -2,21 +2,21 @@
 
 extern void MovieScene_BeginDefaultFade(void); /* MovieScene_BeginDefaultFade */
 extern void ResyncMovieSubtitleStream(void); /* ResyncMovieSubtitleStream */
-extern void func_ov003_02064764(void);
-extern void func_ov003_020647b8(void);
-extern void func_ov003_020647f0(void);
-extern void func_ov003_02064844(void); /* MsgQueue_GetHeap */
-extern void func_ov003_02064850(void); /* thumbStep */
+extern void MovieScriptCmd_StartStream(void);
+extern void MovieScriptCmd_WaitForSubtitleFrame(void);
+extern void MovieScriptPoll_SubtitleFrame(void);
+extern void MovieScriptCmd_RequestStop(void); /* MsgQueue_GetHeap */
+extern void MovieScriptPoll_StopRequestClear(void); /* thumbStep */
 
 void (*gMovieScriptCommandHandlers[10])(void) = {
     MovieScene_BeginDefaultFade, /* MovieScene_BeginDefaultFade */
     NULL,
     ResyncMovieSubtitleStream, /* ResyncMovieSubtitleStream */
     NULL,
-    func_ov003_02064764,
+    MovieScriptCmd_StartStream,
     NULL,
-    func_ov003_020647b8,
-    func_ov003_020647f0,
-    func_ov003_02064844, /* MsgQueue_GetHeap */
-    func_ov003_02064850, /* thumbStep */
+    MovieScriptCmd_WaitForSubtitleFrame,
+    MovieScriptPoll_SubtitleFrame,
+    MovieScriptCmd_RequestStop, /* MsgQueue_GetHeap */
+    MovieScriptPoll_StopRequestClear, /* thumbStep */
 };

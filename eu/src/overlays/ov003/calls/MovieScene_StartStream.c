@@ -1,3 +1,4 @@
+#define func_ov003_020649a0 SetMovieSubtitleAlignmentMode
 #define CallIndexedHandler_0202b3b8 CallIndexedHandler
 #define FillBackgroundTileRectangle_02017adc NNS_G2dMapScrToCharText
 #define MovieScene_StartStream_02063e94 MovieScene_StartStream

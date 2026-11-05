@@ -36,11 +36,11 @@ src/overlays/ov004/calls/LoadScrollTextResources.c:
     complete
     .text       start:0x02061598 end:0x02061694
 
-src/overlays/ov004/calls/func_ov004_02061694.c:
+src/overlays/ov004/calls/SetScrollMainBlendBrightness.c:
     complete
     .text       start:0x02061694 end:0x020616b4
 
-src/overlays/ov004/calls/func_ov004_020616b4.c:
+src/overlays/ov004/calls/SetScrollSubBlendBrightness.c:
     complete
     .text       start:0x020616b4 end:0x020616d4
 
@@ -72,11 +72,11 @@ src/overlays/ov004/calls/StartScrollTextRoll.c:
     complete
     .text       start:0x02062090 end:0x0206223c
 
-src/overlays/ov004/auto/func_ov004_0206223c.c:
+src/overlays/ov004/auto/ClearScrollMainBlendControl.c:
     complete
     .text       start:0x0206223c end:0x02062250
 
-src/overlays/ov004/auto/func_ov004_02062250.c:
+src/overlays/ov004/auto/ClearScrollSubBlendControl.c:
     complete
     .text       start:0x02062250 end:0x02062264
 
@@ -84,7 +84,7 @@ src/overlays/ov004/calls/BeginScrollTextExit.c:
     complete
     .text       start:0x02062264 end:0x020622e4
 
-src/overlays/ov004/calls/func_ov004_020622e4.c:
+src/overlays/ov004/calls/UpdateScrollTextScreensWrapper.c:
     complete
     .text       start:0x020622e4 end:0x020622f0
 

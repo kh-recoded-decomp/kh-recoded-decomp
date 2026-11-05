@@ -1,2 +1,3 @@
+#define func_ov003_020649fc HandleMovieSubtitleControlCode
 #define decodeMovieSubtitleCodeUnit_02064ac0 decodeMovieSubtitleCodeUnit
 #include "src/ov003/video_playback/decodeMovieSubtitleCodeUnit_02064ac0.c"

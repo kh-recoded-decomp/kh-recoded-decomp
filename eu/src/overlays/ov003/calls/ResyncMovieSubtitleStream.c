@@ -1,3 +1,4 @@
+#define func_ov003_02065028 DrawMovieSubtitleTextImmediate
 #define ResyncMovieSubtitleStream_02064818 ResyncMovieSubtitleStream
 #define func_02025dac ByteCode_ResolveOperand
 #define func_ov003_02064980 SubtitleText_BeginDraw

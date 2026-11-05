@@ -8,7 +8,7 @@ extern unsigned int UpdateWidgetLayerDefault_020b9e10();
 extern unsigned int func_ov001_0207123c();
 extern unsigned int MarkTileTableRowDirty();
 
-void func_ov023_020b5944
+void InitOv023TextLayer26
                (int work,unsigned int arg2,unsigned int arg3,unsigned int frameExtra) {
   u16 value;
   void *screenBase;
