@@ -92,3 +92,6 @@ The subsequent contact response is documented in [CONTACT_MOTION.md](CONTACT_MOT
 including its independently checked pending C implementation and current byte differences.
 The query's tree traversal and retry state are described in
 [COLLISION_TRAVERSAL.md](COLLISION_TRAVERSAL.md).
+
+The matched sphere-versus-rim calculation, its fixed-point polynomial and solver
+calling convention are documented in [SPHERE_RIM.md](SPHERE_RIM.md).
