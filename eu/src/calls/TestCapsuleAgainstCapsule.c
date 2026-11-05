@@ -3,7 +3,7 @@
 #define ApplySignToVecFx32_02040c0c NegateVecFx32IfNegativeOut
 #define ComputeCrossProduct_02040500 ComputeCrossProduct
 #define ComputeVectorRejection_02040aec ComputeVectorRejection
-#define CrossNormalized_0203fffc func_02040010
+#define CrossNormalized_0203fffc GetCollisionTestUnitCross
 #define FX_DivQ27_0203f4d8 DivideShifted27
 #define FX_Div_0203f9ec FX_Div_0203fa00
 #define FX_Sqrt_01ff9cfc FX_Sqrt

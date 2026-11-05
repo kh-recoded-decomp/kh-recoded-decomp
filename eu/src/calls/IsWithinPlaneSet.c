@@ -4,7 +4,7 @@
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define abs_0203b430 MSL_AbsA
 #define func_0203b2cc GetShapeProjectedRadius
-#define func_0204abf4 ApplyScalarToVec3
+#define func_0204abf4 TransformVec3Components
 #define func_ov021_020af5b4 func_ov021_020af5d4
 #define func_ov021_020af6fc func_ov021_020af71c
 #include "src/arm9/spatial_queries/IsWithinPlaneSet_0203e958.c"

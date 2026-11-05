@@ -1,3 +1,3 @@
 #define QueryCollisionSegment_01ffceb4 QueryCollisionSegment
-#define func_020351b8 func_020351cc
+#define func_020351b8 QueryModelSegmentCollision
 #include "src/itcm/spatial_queries/QueryCollisionSegment_01ffceb4.c"

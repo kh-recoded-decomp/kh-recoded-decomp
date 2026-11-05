@@ -1,6 +1,6 @@
 #define ProbeBlockGroundOffset_020a252c ProbeBlockGroundOffset
 #define addScaledVector_020301ac AddScaledVector
 #define data_ov020_020a3a30 data_ov020_020a3a50
-#define func_020351b8 func_020351cc
+#define func_020351b8 QueryModelSegmentCollision
 #define func_02036230 GetActorRegistry
 #include "src/ov020/collision/ProbeBlockGroundOffset_020a252c.c"

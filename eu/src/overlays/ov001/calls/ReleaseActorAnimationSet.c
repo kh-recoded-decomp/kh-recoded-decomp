@@ -1,4 +1,4 @@
 #define ReleaseActorAnimationSet_0209bfdc ReleaseActorAnimationSet
 #define RemoveAnimationFromRenderObject_02018850 NNS_G3dRenderObjRemoveAnmObj
-#define func_0202eaf4 func_0202eb08
+#define func_0202eaf4 ReleaseModelAnimationResources
 #include "src/ov001/actor_animation/ReleaseActorAnimationSet_0209bfdc.c"

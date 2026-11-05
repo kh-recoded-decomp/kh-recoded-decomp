@@ -1,3 +1,3 @@
 #define Ov022_GetEffectAnchor GetUnitCrossReportDegenerate
-#define func_020404a0 func_020404b4
+#define func_020404a0 GetCollisionTestUnitCrossWithDegeneracy
 #include "src/arm9/shared_engine/func_020404a0.c"

@@ -1,6 +1,6 @@
 #define FindActorRewardValue_020bd9fc FindActorRewardValue
 #define GetActorRecord_020364f4 GetActorRecord
 #define data_ov040_020be1a4 data_ov040_020be1c4
-#define func_020351b8 func_020351cc
+#define func_020351b8 QueryModelSegmentCollision
 #define func_02036230 GetActorRegistry
 #include "src/ov040/shared_engine/FindActorRewardValue_020bd9fc.c"

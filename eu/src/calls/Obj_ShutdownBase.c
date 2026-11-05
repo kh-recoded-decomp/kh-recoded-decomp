@@ -1,5 +1,5 @@
 #define Obj_RemoveFromQuadTree_020355f4 Obj_RemoveFromQuadTree
 #define Obj_ShutdownBase_02035554 Obj_ShutdownBase
-#define func_020353a4 func_020353b8
+#define func_020353a4 ReleaseEmbeddedModelOnce
 #define func_020418dc FreeStateBuffer
 #include "src/arm9/shared_engine/Obj_ShutdownBase_02035554.c"

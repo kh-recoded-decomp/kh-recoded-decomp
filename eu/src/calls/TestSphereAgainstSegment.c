@@ -3,7 +3,7 @@
 #define ComputeOneMinusSquareFraction_02049d6c ComputeOneMinusSquareFraction
 #define FX_DivQ27_0203f4d8 DivideShifted27
 #define FixedPointMultiply12 FX_Mul
-#define GetSegmentPointAtTime_0203f5ac func_0203f5c0
+#define GetSegmentPointAtTime_0203f5ac GetCollisionTestSegmentHitPoint
 #define IsNearZeroVec_0203f534 IsNearOrigin
 #define MultiplyShiftRight27_0203f600 MultiplyShiftRight27
 #define NormalizeVecAlt_0203f5d4 NormalizeVectorAltInto

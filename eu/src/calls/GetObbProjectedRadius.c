@@ -2,5 +2,5 @@
 #define TransformVectorByBasis_0204bee8 TransformVectorByBasis
 #define VEC_DotProduct_01ff9e6c VEC_DotProduct
 #define abs_0203b430 MSL_AbsA
-#define func_0204abf4 ApplyScalarToVec3
+#define func_0204abf4 TransformVec3Components
 #include "src/arm9/spatial_queries/GetObbProjectedRadius_0203d4d0.c"

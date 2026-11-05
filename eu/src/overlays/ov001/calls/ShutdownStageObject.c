@@ -2,7 +2,7 @@
 #define SetDefaultHeap_0202a134 SetDefaultHeap
 #define ShutdownStageObject_0209bf54 ShutdownStageObject
 #define func_0202a158 Heap_GetCurrent
-#define func_020359b0 func_020359c4
+#define func_020359b0 ReleaseFlaggedEmbeddedModel
 #define func_02035c48 ActorSlot_Unlink
 #define g_stageManager_020a0508 gStageManager
 #include "src/ov001/shared_engine/ShutdownStageObject_0209bf54.c"

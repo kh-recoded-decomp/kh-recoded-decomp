@@ -1,6 +1,6 @@
 #define Obj_ConditionalShutdown_020368c8 Obj_ConditionalShutdown
 #define Obj_ShutdownBase_02035554 Obj_ShutdownBase
-#define func_020359b0 func_020359c4
+#define func_020359b0 ReleaseFlaggedEmbeddedModel
 #define func_02035c48 ActorSlot_Unlink
 #define func_02036874 ActorRegistry_UnregisterSlot
 #include "src/arm9/shared_engine/Obj_ConditionalShutdown_020368c8.c"

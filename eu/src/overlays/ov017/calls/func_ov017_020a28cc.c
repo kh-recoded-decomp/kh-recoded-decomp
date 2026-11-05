@@ -25,7 +25,7 @@ typedef struct Block {
 
 extern const VecFx32 data_ov017_020a5e18;
 extern int GetActorRegistry(void);
-extern RayHit *func_020351cc(int handle, RayQuery *query);
+extern RayHit *QueryModelSegmentCollision(int handle, RayQuery *query);
 extern void AddScaledVector(fx32 scale, const VecFx32 *scaledVector, const VecFx32 *baseVector,
                                     VecFx32 *resultVector);
 
@@ -45,7 +45,7 @@ void func_ov017_020a28cc(Block *block)
     query.mode = 1;
     query.mask = 0;
     query.context = block;
-    hit = func_020351cc(GetActorRegistry(), &query);
+    hit = QueryModelSegmentCollision(GetActorRegistry(), &query);
     if (hit != NULL) {
         AddScaledVector(hit->distance, &down, &block->position, &hitPos);
         diff = block->position.y - hitPos.y;

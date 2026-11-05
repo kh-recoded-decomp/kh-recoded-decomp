@@ -3,5 +3,5 @@
 #define ScaleVecFx32InPlace_0204a5e4 ScaleVecFx32InPlace
 #define VEC_Add_01ff9e0c VEC_Add
 #define abs_02049b60 MSL_AbsD
-#define func_0204abf4 ApplyScalarToVec3
+#define func_0204abf4 TransformVec3Components
 #include "src/arm9/spatial_queries/GetShapeBounds_02049a00.c"

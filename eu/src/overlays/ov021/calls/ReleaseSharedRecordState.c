@@ -1,4 +1,4 @@
 #define ReleaseSharedRecordState_020a9084 ReleaseSharedRecordState
 #define func_0202c8a8 ReleaseSharedRecordSlot
-#define func_0202eaf4 func_0202eb08
+#define func_0202eaf4 ReleaseModelAnimationResources
 #include "src/ov021/unclassified_helpers/ReleaseSharedRecordState_020a9084.c"

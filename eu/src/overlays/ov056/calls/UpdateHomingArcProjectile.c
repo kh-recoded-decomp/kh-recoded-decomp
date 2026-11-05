@@ -20,7 +20,7 @@
 #define data_0205356c gSinFx12Table
 #define data_ov056_020d7f64 data_ov056_020d7f84
 #define func_01ffa0f4 VEC_Distance
-#define func_0202fba8 func_0202fbbc
+#define func_0202fba8 RotateVectorByQuaternion
 #define func_02036240 ActorRegistry_GetEntityByIndex
 #define func_0203ad14 MakeSphereShape
 #define func_ov021_020a9230 AreZoneMeshesClear

@@ -88,7 +88,7 @@ existing `CameraManager` declaration (native size 0x414).
 +0x18/+0x1c/+0x20, which are manager +0x110/+0x114/+0x118. It then calls the
 existing overlay-unload helper for the layer ID selected by manager
 mode +0x80. It does not free the manager itself or validate the mode index.
-The current dependency `func_02029fac` is the geometry-wait/unload wrapper; the
+The dependency `UnloadOverlayAfterGeometryTransfer` is the geometry-wait/unload wrapper; the
 name of its old source is not a reason to drop the synchronization step.
 
 `Camera_GetPresetHeight(index)` reads the first word of a 12-byte preset row,

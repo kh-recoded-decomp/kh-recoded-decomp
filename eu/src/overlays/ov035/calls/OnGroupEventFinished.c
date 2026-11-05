@@ -6,7 +6,7 @@
 #define addScaledVector_020301ac AddScaledVector
 #define data_ov035_020bc3e0 sOv035EventEffectOffset
 #define data_ov035_020bc4e0 gMovieContextState
-#define func_020351b8 func_020351cc
+#define func_020351b8 QueryModelSegmentCollision
 #define func_02036230 GetActorRegistry
 #define func_ov001_0207f038 func_ov001_0207f060
 #define func_ov001_02087224 func_ov001_0208724c

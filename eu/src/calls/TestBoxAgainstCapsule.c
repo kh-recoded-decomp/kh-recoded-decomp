@@ -1,7 +1,7 @@
 #define AbsDotProduct_0204a96c AbsDotProduct
 #define Abs_0203f228 PXI_Init_0203f23c
 #define AverageVecFx32_0204b604 AverageVecs
-#define CrossNormalized_0203fffc func_02040010
+#define CrossNormalized_0203fffc GetCollisionTestUnitCross
 #define FixedPointMultiply12 FX_Mul
 #define GetCapsuleHalfSegment_0203ff74 GetSegmentHalfDelta
 #define MakeEmptyPenetration_0203fb74 InitMaxDistanceHit

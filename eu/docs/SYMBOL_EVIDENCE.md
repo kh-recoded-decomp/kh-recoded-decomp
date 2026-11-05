@@ -400,3 +400,11 @@ buffer and archive roles. [TASK_INPUT_VM_HELPERS.md](TASK_INPUT_VM_HELPERS.md)
 records the 44-byte task/native manager view, borrowed work lookup, collection
 lifetime, real delegate/WM returns, sampling units and buffer ownership limits.
 The former root-heap lookup is the running task's work getter.
+
+## Vector callbacks and collision helper lifetimes
+
+Seventeen operations now describe quaternion rotation, per-component callbacks,
+segment/cylinder queries, collision-vector adapters and guarded resource release.
+[VECTOR_COLLISION_HELPERS.md](VECTOR_COLLISION_HELPERS.md) records the real
+quaternion/input order, callback sequencing, query radius and borrowed result,
+flag guards and ownership limits. No collision algorithm is rewritten.

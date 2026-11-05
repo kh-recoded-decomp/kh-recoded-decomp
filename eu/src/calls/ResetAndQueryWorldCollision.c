@@ -1,4 +1,4 @@
 #define ResetAndQueryWorldCollision_0203644c ResetAndQueryWorldCollision
-#define func_020351b8 func_020351cc
+#define func_020351b8 QueryModelSegmentCollision
 #define g_collisionWorld_0206083c gActorRegistry
 #include "src/arm9/spatial_queries/ResetAndQueryWorldCollision_0203644c.c"

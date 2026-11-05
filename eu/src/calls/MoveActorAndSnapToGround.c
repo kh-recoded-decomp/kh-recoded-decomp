@@ -8,7 +8,7 @@
 #define data_02053438 gZeroVecFx32
 #define func_01ff9cfc FX_Sqrt
 #define func_02023d9c _ll_mul
-#define func_02031fec func_02032000
+#define func_02031fec PushContactWithDefaultMetadata
 #define func_020351cc CollWorld_FindHit
 #define func_02036230 GetActorRegistry
 #define func_02036cd8 GetModeContext

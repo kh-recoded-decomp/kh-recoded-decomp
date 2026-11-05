@@ -193,7 +193,7 @@ extern BOOL IsObjectType111(RideTask *task);
 extern CollisionShape InitCylinderShape(CylinderStorage *storage, const VecFx32 *start, const VecFx32 *end, const VecFx32 *axis, fx32 length, fx32 radius);
 extern void OffsetBoxByDelta(const Box *src, Box *dst, const VecFx32 *delta);
 extern void CollisionQuery_Init(CollisionQuery *query, u16 id, void *actor, u8 kind, u8 unk3C, u8 unk3D, void *shape, QueryWorkspace *workspace, void *filter);
-extern void func_02032000(QueryWorkspace *workspace, VecFx32 *normal);
+extern void PushContactWithDefaultMetadata(QueryWorkspace *workspace, VecFx32 *normal);
 extern SweepHit *SweepWorldCollision(CollisionQuery *query);
 extern void NegateVecFx32(VecFx32 *vec);
 extern VecFx32 ResolveSlideMovement(const Movement *move, const VecFx32 *normals, int count, u32 *outType, u8 *outPair, u8 *outList, const VecFx32 *motion, void *extraA, void *extraB);
@@ -689,7 +689,7 @@ void UpdatePillarRide(Actor *actor)
             contact.arg = NULL;
             sweep.contact = contact;
             if (pushed) {
-                func_02032000(&workspace, &pushNormal);
+                PushContactWithDefaultMetadata(&workspace, &pushNormal);
             }
             hit = SweepWorldCollision(&sweep);
             if (hit == NULL) {
@@ -807,7 +807,7 @@ void UpdatePillarRide(Actor *actor)
             contact.arg = NULL;
             sweep.contact = contact;
             if (pushed) {
-                func_02032000(&workspace, &pushNormal);
+                PushContactWithDefaultMetadata(&workspace, &pushNormal);
             }
             hit = SweepWorldCollision(&sweep);
             if (hit != NULL) {

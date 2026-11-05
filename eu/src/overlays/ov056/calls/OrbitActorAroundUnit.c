@@ -8,7 +8,7 @@
 #define VEC_MultAdd_01ffa09c VEC_MultAdd
 #define VEC_Normalize_01ff9f88 VEC_Normalize
 #define VEC_Subtract_01ff9e3c VEC_Subtract
-#define func_0202fba8 func_0202fbbc
+#define func_0202fba8 RotateVectorByQuaternion
 #define func_ov001_02090f04 func_ov001_02090f2c
 #define func_ov001_020958e4 ClearStageEventKindIfMatches
 #define multiplyFixedPointQuaternions_0202f93c MultiplyFixedPointQuaternions

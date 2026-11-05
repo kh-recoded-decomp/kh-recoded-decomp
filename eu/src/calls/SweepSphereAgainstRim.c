@@ -18,7 +18,7 @@ extern void VEC_MultAdd(fx32 scale, const VecFx32 *a, const VecFx32 *b, VecFx32 
 extern VecFx32 PickPerpendicularAxis(const VecFx32 *vec);
 extern void BuildBasisMatrix(const VecFx32 *forward, const VecFx32 *up, Basis3x3 *out);
 extern void TransformVectorByBasis(const VecFx32 *vec, const Basis3x3 *rimBasis, VecFx32 *out);
-extern void ApplyScalarToVec3(VecFx32 *vec, fx32 (*func)(fx32 value));
+extern void TransformVec3Components(VecFx32 *vec, fx32 (*func)(fx32 value));
 extern fx32 SquareFx32(fx32 value);
 extern void MulVecFx32InPlace(VecFx32 *vec, const VecFx32 *scale);
 extern void SolveQuartic(fx32 cubicCoeff, fx32 quadraticCoeff, fx32 linearCoeff, s64 constantCoeff,
@@ -71,7 +71,7 @@ inline static VecFx32 RotateComponents(const VecFx32 *vec)
 
 inline static VecFx32 SquareComponents(VecFx32 vec)
 {
-    ApplyScalarToVec3(&vec, SquareFx32);
+    TransformVec3Components(&vec, SquareFx32);
     return vec;
 }
 

@@ -5,10 +5,10 @@
 #define AverageVecFx32_0204b604 AverageVecs
 #define SubtractVecFx32Into_0203f4a8 SubtractVecFx32Into
 #define GetHalfSegment_0203ff74 GetSegmentHalfDelta
-#define ComputeEdgeAxis_020404a0 func_020404b4
+#define ComputeEdgeAxis_020404a0 GetCollisionTestUnitCrossWithDegeneracy
 #define TestSeparatingAxis_0203fba4 TestSignedSeparatingAxis
 #define NormalizeCrossProduct_020404c8 NormalizeCrossProduct
-#define CrossNormalized_0203fffc func_02040010
+#define CrossNormalized_0203fffc GetCollisionTestUnitCross
 #define ComputeCrossProduct_02040500 ComputeCrossProduct
 #define MakeVec2Fx32_02040530 SetFx32Pair
 #define VEC_DotProduct_01ff9e6c VEC_DotProduct

@@ -11,6 +11,6 @@
 #define func_02047cec CopyInitializedRecord13
 #define func_02047d5c DotProductForward
 #define func_02047dac PXI_Init_02047dc0
-#define func_02047ff8 func_0204800c
+#define func_02047ff8 GetSweepUnitCross
 #define func_0204b604 AverageVecs
 #include "src/arm9/spatial_queries/SweepObbAgainstSegment_02047dc4.c"

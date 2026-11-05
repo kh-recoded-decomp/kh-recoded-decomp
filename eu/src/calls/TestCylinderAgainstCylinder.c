@@ -6,7 +6,7 @@
 #define ComputeCrossProduct_02040500 ComputeCrossProduct
 #define ComputeDirectionalExtent_0203d718 ComputeDirectionalExtent
 #define ComputeVectorRejection_02040aec ComputeVectorRejection
-#define CrossNormalized_0203fffc func_02040010
+#define CrossNormalized_0203fffc GetCollisionTestUnitCross
 #define FX_Div_01ff9c84 FX_Div
 #define FX_Sqrt_01ff9cfc FX_Sqrt
 #define FixedPointMultiply12 FX_Mul

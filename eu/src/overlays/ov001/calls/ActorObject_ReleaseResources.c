@@ -8,7 +8,7 @@
 #define Obj_ConditionalShutdown_020368c8 Obj_ConditionalShutdown
 #define ReleaseResourceAndDetach_0202eee8 ReleaseResourceAndDetach
 #define ZeroHalfThenFree_0202cd78 ZeroHalfThenFree
-#define func_0202eaf4 func_0202eb08
+#define func_0202eaf4 ReleaseModelAnimationResources
 #define func_02036588 ActorSlot_GetFlagsByIndex
 #define func_020367d0 ActorSlot_SetField1C4ByIndex
 #define func_02036810 ActorSlot_GetByIndex

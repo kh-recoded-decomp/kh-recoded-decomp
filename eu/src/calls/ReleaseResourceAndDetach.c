@@ -2,5 +2,5 @@
 #define detach_object_tree_node_0202ee1c DetachObjectTreeNode
 #define func_0202c8a8 ReleaseSharedRecordSlot
 #define func_0202ca18 ReleaseResourceSlot
-#define func_0202eaf4 func_0202eb08
+#define func_0202eaf4 ReleaseModelAnimationResources
 #include "src/arm9/runtime/ReleaseResourceAndDetach_0202eee8.c"

@@ -7145,7 +7145,7 @@ src/calls/DispatchResourceLoad.c:
     complete
     .text       start:0x0202ea8c end:0x0202eb08
 
-src/calls/func_0202eb08.c:
+src/calls/ReleaseModelAnimationResources.c:
     complete
     .text       start:0x0202eb08 end:0x0202eb98
 
@@ -7269,7 +7269,7 @@ src/calls/QuatFromAxisAngle.c:
     complete
     .text       start:0x0202fb0c end:0x0202fbbc
 
-src/calls/func_0202fbbc.c:
+src/calls/RotateVectorByQuaternion.c:
     complete
     .text       start:0x0202fbbc end:0x0202fbf0
 
@@ -7397,7 +7397,7 @@ src/calls/RecordContactPlane.c:
     complete
     .text       start:0x02031d38 end:0x02032000
 
-src/calls/func_02032000.c:
+src/calls/PushContactWithDefaultMetadata.c:
     complete
     .text       start:0x02032000 end:0x0203201c
 
@@ -7597,7 +7597,7 @@ src/calls/FreeRecordArrayAndReset.c:
     complete
     .text       start:0x0203518c end:0x020351ca
 
-src/calls/func_020351cc.c:
+src/calls/QueryModelSegmentCollision.c:
     complete
     .text       start:0x020351cc end:0x020351e0
 
@@ -7629,7 +7629,7 @@ src/calls/Obj_InitLinkState.c:
     complete
     .text       start:0x020353a0 end:0x020353b8
 
-src/calls/func_020353b8.c:
+src/calls/ReleaseEmbeddedModelOnce.c:
     complete
     .text       start:0x020353b8 end:0x020353e4
 
@@ -7705,7 +7705,7 @@ src/calls/ApplyRecordTableEntry3.c:
     complete
     .text       start:0x020359ac end:0x020359c4
 
-src/calls/func_020359c4.c:
+src/calls/ReleaseFlaggedEmbeddedModel.c:
     complete
     .text       start:0x020359c4 end:0x020359e8
 
@@ -7945,7 +7945,7 @@ src/calls/ClearRecordSlotFlag.c:
     complete
     .text       start:0x02036988 end:0x020369a8
 
-src/calls/func_020369a8.c:
+src/calls/RemoveEmbeddedObjectFromQuadTreeIfFlagged.c:
     complete
     .text       start:0x020369a8 end:0x020369dc
 
@@ -8485,7 +8485,7 @@ src/calls/NormalizeVectorInto.c:
     complete
     .text       start:0x0203f594 end:0x0203f5c0
 
-src/calls/func_0203f5c0.c:
+src/calls/GetCollisionTestSegmentHitPoint.c:
     complete
     .text       start:0x0203f5c0 end:0x0203f5e8
 
@@ -8569,7 +8569,7 @@ src/calls/GetSegmentDelta.c:
     complete
     .text       start:0x0203ffe0 end:0x02040010
 
-src/calls/func_02040010.c:
+src/calls/GetCollisionTestUnitCross.c:
     complete
     .text       start:0x02040010 end:0x02040038
 
@@ -8581,7 +8581,7 @@ src/calls/TestSegmentAgainstSegment.c:
     complete
     .text       start:0x0204019c end:0x020404b2
 
-src/calls/func_020404b4.c:
+src/calls/GetCollisionTestUnitCrossWithDegeneracy.c:
     complete
     .text       start:0x020404b4 end:0x020404dc
 
@@ -8649,7 +8649,7 @@ src/calls/GetSegmentHalfDirection.c:
     complete
     .text       start:0x02040ff0 end:0x02041048
 
-src/calls/func_02041048.c:
+src/calls/SetCollisionTestVectorComponents.c:
     complete
     .text       start:0x02041048 end:0x02041070
 
@@ -8657,7 +8657,7 @@ src/calls/SetVec3.c:
     complete
     .text       start:0x02041070 end:0x02041078
 
-src/calls/func_02041078.c:
+src/calls/TestCapsuleAgainstCylinderWithRadiusSum.c:
     complete
     .text       start:0x02041078 end:0x020410b4
 
@@ -8837,7 +8837,7 @@ src/calls/NegateVecFx32Out.c:
     complete
     .text       start:0x02047fdc end:0x0204800c
 
-src/calls/func_0204800c.c:
+src/calls/GetSweepUnitCross.c:
     complete
     .text       start:0x0204800c end:0x02048034
 
@@ -8853,7 +8853,7 @@ src/calls/SweepSegmentAgainstSegment.c:
     complete
     .text       start:0x02048228 end:0x020483f6
 
-src/calls/func_020483f8.c:
+src/calls/GetSweepUnitCrossWithDegeneracy.c:
     complete
     .text       start:0x020483f8 end:0x02048420
 
@@ -8941,7 +8941,7 @@ src/calls/TransformVectorByBasisOut_0204960c.c:
     complete
     .text       start:0x0204960c end:0x0204963c
 
-src/calls/func_0204963c.c:
+src/calls/SetSweepVectorComponents.c:
     complete
     .text       start:0x0204963c end:0x02049664
 
@@ -8949,7 +8949,7 @@ src/calls/SetVec3Values.c:
     complete
     .text       start:0x02049664 end:0x0204966c
 
-src/calls/func_0204966c.c:
+src/calls/CopyVec3WithComponentTransform.c:
     complete
     .text       start:0x0204966c end:0x020496a4
 
@@ -9181,7 +9181,7 @@ src/calls/FlipVectorIfDotNegative.c:
     complete
     .text       start:0x0204abe4 end:0x0204ac08
 
-src/calls/ApplyScalarToVec3.c:
+src/calls/TransformVec3Components.c:
     complete
     .text       start:0x0204ac08 end:0x0204ac3c
 

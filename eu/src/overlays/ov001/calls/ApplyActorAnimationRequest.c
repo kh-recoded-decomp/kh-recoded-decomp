@@ -8,7 +8,7 @@
 #define data_ov001_0209f2f4 sOv001_Z_0209f314
 #define data_ov001_0209f2f8 sOv001_MiMoFormatSZ_0209f318
 #define func_0202e9ec InitSharedRecordThenTexture
-#define func_0202eaf4 func_0202eb08
+#define func_0202eaf4 ReleaseModelAnimationResources
 #define func_ov001_02088c1c GetActorFieldBySessionMode
 #define func_ov021_020a9cb4 BlendModelAnimation
 #define func_ov052_020ce168 func_ov052_020ce188

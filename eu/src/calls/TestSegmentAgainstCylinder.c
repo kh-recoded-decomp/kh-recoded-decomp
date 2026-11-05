@@ -38,7 +38,7 @@ extern VecFx32 GetSegmentHalfDelta(const CollisionCylinder *cylinder);
 extern VecFx32 ComputeCrossProduct(const VecFx32 *a, const VecFx32 *b);
 extern VecFx32 ComputeVectorRejection(const VecFx32 *v, const VecFx32 *axis);
 extern VecFx32 GetSegmentHalfDirection(const CollisionCylinder *cylinder);
-extern void func_02041048(VecFx32 *out, fx32 x, fx32 y, fx32 z);
+extern void SetCollisionTestVectorComponents(VecFx32 *out, fx32 x, fx32 y, fx32 z);
 extern fx32 AbsDotProduct(const VecFx32 *a, const VecFx32 *b);
 extern void GetPerpendicularVector(VecFx32 *out, const VecFx32 *v);
 extern VecFx32 AverageVecs(s32 count, ...);
@@ -110,7 +110,7 @@ BOOL TestSegmentAgainstCylinder(CylinderShapeRef *segmentRef, CylinderShapeRef *
                     VecFx32 cylinderPoint = k == 0 ? cylinder->start : cylinder->end;
                     VecFx32 diff = SubtractVecFx32Into(&segmentPoint, &cylinderPoint);
                     if (IsNearOrigin(&diff)) {
-                        func_02041048(&normal, 0x1000, 0, 0);
+                        SetCollisionTestVectorComponents(&normal, 0x1000, 0, 0);
                     } else {
                         normal = NormalizeVectorInto(&diff);
                     }

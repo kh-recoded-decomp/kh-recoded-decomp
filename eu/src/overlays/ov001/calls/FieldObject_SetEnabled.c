@@ -31,7 +31,7 @@ extern void ActorSlot_SetFlag8(ObjectWork *work, BOOL enabled);
 extern BOOL Container_HasFlag1(ObjectWork *work);
 extern void ActorSlot_PlaceAndLink(ObjectWork *work, int a, int b);
 extern void ActorSlot_AddToWorld(ObjectWork *work);
-extern void func_020369a8(ObjectWork *work);
+extern void RemoveEmbeddedObjectFromQuadTreeIfFlagged(ObjectWork *work);
 
 void FieldObject_SetEnabled(FieldObject *object, BOOL enabled)
 {
@@ -60,7 +60,7 @@ void FieldObject_SetEnabled(FieldObject *object, BOOL enabled)
         } else {
             ActorSlot_SetFlag8(object->work, FALSE);
             if (object->work->flags & 0x100) {
-                func_020369a8(object->work);
+                RemoveEmbeddedObjectFromQuadTreeIfFlagged(object->work);
             }
         }
     }
