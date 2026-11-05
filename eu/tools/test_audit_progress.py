@@ -42,6 +42,7 @@ class RegisterBindingClassification(unittest.TestCase):
 class LibraryReceiptFreshness(unittest.TestCase):
     def setUp(self):
         base = Path(__file__).resolve().parents[1] / 'build'
+        base.mkdir(parents=True, exist_ok=True)
         self.temp = tempfile.TemporaryDirectory(prefix='receipt_test_', dir=base)
         root = Path(self.temp.name).resolve()
         assert root.is_relative_to(base.resolve())
