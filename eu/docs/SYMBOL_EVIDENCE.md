@@ -416,3 +416,11 @@ animation, brightness, platform-clock and RNG operations.
 [ENGINE_SERVICE_HELPERS.md](ENGINE_SERVICE_HELPERS.md) records evidence for each
 entrypoint, the actual tween argument order, clock/flag units, queue ownership
 limits and exact three-word RNG arithmetic without merging split DATA owners.
+
+## Overlay-qualified entry identities
+
+`InstallSessionOv036Handlers` and `IsShapeWithinActiveCameraView` now bind to
+their proved ov036/ov043 targets rather than unrelated ov035 DATA and ov039
+input code at equal RAM addresses. [OVERLAY_IDENTITY_BINDINGS.md](OVERLAY_IDENTITY_BINDINGS.md)
+records state/mode loading evidence, exact relocation-owner narrowing, preserved
+entry bytes and the remaining native callback/visibility boundaries.

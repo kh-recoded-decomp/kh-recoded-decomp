@@ -15,6 +15,6 @@
 #define func_ov016_020a2bb0 SteerFieldObjectToTarget
 #define func_ov016_020a41ac func_ov016_020a41cc
 #define func_ov016_020a4438 func_ov016_020a4458
-#define func_ov021_020af738 func_ov021_020af758
+#define func_ov021_020af738 IsShapeWithinActiveCameraView
 #define func_ov032_020bf9dc DrawGroupMemberModel
 #include "src/ov016/field_objects/DrawFieldUnitObject_020a537c.c"

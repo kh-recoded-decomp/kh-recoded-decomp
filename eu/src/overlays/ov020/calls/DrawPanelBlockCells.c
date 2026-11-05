@@ -2,5 +2,5 @@
 #define SceneNode_Draw_01ffb12c SceneNode_Draw
 #define TranslateAndFlushGeometry_020864c4 TranslateAndFlushGeometry
 #define func_02036240 ActorRegistry_GetEntityByIndex
-#define func_ov021_020af738 func_ov021_020af758
+#define func_ov021_020af738 IsShapeWithinActiveCameraView
 #include "src/ov020/field_objects/DrawPanelBlockCells_020a2348.c"

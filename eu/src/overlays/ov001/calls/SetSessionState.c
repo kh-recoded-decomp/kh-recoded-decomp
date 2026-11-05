@@ -68,7 +68,7 @@ extern void func_ov001_02062ad8(void);
 extern void ActivateResumeModeHandlers(void);
 extern void func_ov001_02062b84(void);
 extern void func_ov001_02062af0(void);
-extern void func_ov001_02062c0c(void);
+extern void InstallSessionOv036Handlers(void);
 extern void ResumeSessionPanel(void);
 extern void func_ov001_02062bdc(void);
 extern void ActivateSubModeHandlers(void);
@@ -147,7 +147,7 @@ s32 SetSessionState(s32 newState, s32 mode) {
             func_ov001_02062af0();
             break;
         case 8:
-            func_ov001_02062c0c();
+            InstallSessionOv036Handlers();
             break;
         case 9:
             ResumeSessionPanel();
