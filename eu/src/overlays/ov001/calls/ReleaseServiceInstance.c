@@ -1,4 +1,4 @@
 #define ReleaseServiceInstance_02068e64 ReleaseServiceInstance
 #define data_0209eab0 gRootObjectTaskHandle
-#define func_0202a638 PXI_Init_0202a64c
+#define func_0202a638 DestroyTaskObjectWrapper
 #include "src/ov001/shared_engine/ReleaseServiceInstance_02068e64.c"

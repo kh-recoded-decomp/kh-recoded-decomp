@@ -38,7 +38,7 @@ extern u8 sOv003_OpScrZ_02065874[];
 extern void MovieScene_Run(void);
 extern char OVERLAY_22_ID[];
 
-extern void *NNSi_FndGetCurrentRootHeap(void);
+extern void *GetRunningTaskWork(void);
 extern void InitPxiChannelsPair(void);
 extern void LoadOverlayAfterGeometryTransfer(int processor, int overlayId);
 extern void MoviePlayer_SetupDisplay(void);
@@ -52,7 +52,7 @@ extern void *Archive_LoadFile(u32 fileId, u32 heapId);
 extern void ZeroHalfThenFree(int handle);
 extern void GetBgDataFromArchive(MovieBgView *out, void *archive, int screenIndex, int characterIndex, int paletteIndex);
 extern void StoreGlobalArrayEntry(int index, void *value);
-extern void func_020257d8(void *archive, u32 size, u32 heapId);
+extern void AllocateScriptVmBuffer(void *archive, u32 size, u32 heapId);
 extern int RoundAndInitArchive(void *archive, void *name, int flag, void *extra);
 extern void WriteGlobalPackedBits(u32 bitOffset, u32 bitCount, u32 value);
 
@@ -66,7 +66,7 @@ void *MovieScene_Init(int fromTitle)
     u16 buttons;
     u16 held;
 
-    scene = NNSi_FndGetCurrentRootHeap();
+    scene = GetRunningTaskWork();
     InitPxiChannelsPair();
     LoadOverlayAfterGeometryTransfer(0, (int)OVERLAY_22_ID);
     MoviePlayer_SetupDisplay();
@@ -102,7 +102,7 @@ void *MovieScene_Init(int fromTitle)
         }
     }
     StoreGlobalArrayEntry(3, gMovieScriptCommandHandlers);
-    func_020257d8(scene->archive, 0x2000, 0x11);
+    AllocateScriptVmBuffer(scene->archive, 0x2000, 0x11);
     RoundAndInitArchive(scene->archive, sOv003_OpScrZ_02065874, 0, &scene->streamOwner);
     scene->flags |= 1;
     scene->field_8b9 = 0;

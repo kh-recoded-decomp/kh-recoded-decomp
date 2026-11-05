@@ -1,5 +1,5 @@
 #define WM_GetAID_02011394 GetSessionChannel
-#define WMi_GetSystemWork_0201103c func_02011050
+#define WMi_GetSystemWork_0201103c WMi_GetSystemWork
 #define WmDataSharingSetDataCallback_02011ed8 WmDataSharingSetDataCallback
 #define func_02011f68 WmDataSharingReceiveCallback_Parent
 #define func_0201202c WmDataSharingReceiveCallback_Child

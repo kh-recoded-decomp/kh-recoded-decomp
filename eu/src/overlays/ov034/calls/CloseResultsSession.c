@@ -35,7 +35,7 @@ extern void SetSoundListenersEnabled(int enabled);
 extern void FSi_DefaultStepDoneB(void *image);
 extern void FreeAllocatedBuffers(void *buffers);
 extern void func_ov034_020be734(void *menu);
-extern void PXI_Init_0202a64c(void *task);
+extern void DestroyTaskObjectWrapper(void *task);
 extern void UnloadOverlayAfterGeometryTransfer(int processor, int overlayId);
 extern u64 OS_GetTick(void);
 extern u64 GetCardThreadStartTick(void);
@@ -58,7 +58,7 @@ void CloseResultsSession(void)
     FreeAllocatedBuffers(data_ov034_020c0fa0.work->tileTable);
     func_ov034_020be734(data_ov034_020c0fa0.work->menuState);
     if (data_ov034_020c0fa0.work->task != NULL) {
-        PXI_Init_0202a64c(data_ov034_020c0fa0.work->task);
+        DestroyTaskObjectWrapper(data_ov034_020c0fa0.work->task);
     }
     UnloadOverlayAfterGeometryTransfer(0, (int)OVERLAY_27_ID);
     UnloadOverlayAfterGeometryTransfer(0, (int)OVERLAY_24_ID);

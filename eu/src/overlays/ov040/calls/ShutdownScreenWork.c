@@ -1,7 +1,7 @@
 #define data_ov035_020bc4e0 gMovieContextState
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
-#define PXI_Init_0202a638 PXI_Init_0202a64c
+#define PXI_Init_0202a638 DestroyTaskObjectWrapper
 #define PopVramState_020365f0 PopVramState
 #define ShutdownScreenWork_020bd990 ShutdownScreenWork
 #define data_ov040_020be260 data_ov040_020be280

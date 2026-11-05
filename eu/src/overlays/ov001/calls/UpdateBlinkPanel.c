@@ -1,7 +1,7 @@
 #define TickBlinkTimer_0207db00 TickBlinkTimer
 #define UpdateBlinkPanel_0207dcb8 UpdateBlinkPanel
 #define data_ov001_020a04d0 data_ov001_020a04f0
-#define func_0202a7a4 func_0202a7b8
+#define func_0202a7a4 GetTaskUpdateCount
 #define func_ov001_0207d848 UpdateArrowPromptTimer
 #define func_ov001_0207db50 AnimateSwapSlotLabels
 #include "src/ov001/unclassified_helpers/UpdateBlinkPanel_0207dcb8.c"

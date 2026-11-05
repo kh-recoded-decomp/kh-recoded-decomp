@@ -1,4 +1,4 @@
-#define NNSi_FndGetCurrentRootHeap_0202a764 NNSi_FndGetCurrentRootHeap
+#define NNSi_FndGetCurrentRootHeap_0202a764 GetRunningTaskWork
 #define StartTimerState_02068c50 StartTimerState
 #define func_02003fd4 OS_GetTick
 #define func_02023d54 _ll_udiv

@@ -6,6 +6,6 @@
 #define data_ov001_0209ecdc gFieldManagerClassDescriptor
 #define data_ov001_020a0460 data_ov001_020a0480
 #define func_01ff86fc MIi_CpuClear32
-#define func_0202a448 func_0202a45c
+#define func_0202a448 CreateTaskObject
 #define func_ov035_020baf88 ShowMovieMessage3700
 #include "src/ov001/unclassified_helpers/CreateSessionNameMenu_02063ba4.c"

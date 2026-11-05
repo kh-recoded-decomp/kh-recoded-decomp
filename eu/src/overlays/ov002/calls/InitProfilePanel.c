@@ -34,10 +34,10 @@ extern u16 data_02060878[];
 extern u16 data_0206088e[];
 extern char OVERLAY_27_ID[];
 
-extern PanelState *NNSi_FndGetCurrentRootHeap(void);
+extern PanelState *GetRunningTaskWork(void);
 extern void MIi_CpuClearFast(int value, void *dst, u32 size);
-extern s32 func_0202a768(void);
-extern int func_0204f5a0(short *record, short *limits);
+extern s32 GetCurrentTaskObject(void);
+extern int InitKeyRepeatState(short *record, short *limits);
 extern void LoadOverlayAfterGeometryTransfer(int processor, int overlay_id);
 extern void ReloadPanelResources(void);
 extern void InvokeForChannelOrBoth(u32 arg0, u32 arg1, int arg2, int channel);
@@ -48,8 +48,8 @@ extern u16 *CopyWideString(u16 *dst, const u16 *src);
 extern BOOL CensorBannedWords(u16 *out, void *unused, const u16 *text);
 extern void QueueSoundCommandForArc(int command);
 extern int DispatchContextCommand(u32 arg0, int arg1, int arg2, int arg3);
-extern void *func_0202a45c(void *descriptor, void *userData);
-extern void func_0202b5e8(void);
+extern void *CreateTaskObject(void *descriptor, void *userData);
+extern void StartTouchSamplingRing(void);
 extern void SetSelectionIfChanged(int selection);
 extern void ResetContextCommandFlag(void);
 extern void SetContextCommandFlag(int language);
@@ -62,12 +62,12 @@ void *InitProfilePanel(BOOL resumed)
 {
     PanelState *state;
 
-    state = NNSi_FndGetCurrentRootHeap();
+    state = GetRunningTaskWork();
     data_ov002_0206c460 = state;
     MIi_CpuClearFast(0, state, 0x130);
-    state->heapId = func_0202a768();
+    state->heapId = GetCurrentTaskObject();
     state->selection = -1;
-    func_0204f5a0(state->record, NULL);
+    InitKeyRepeatState(state->record, NULL);
     LoadOverlayAfterGeometryTransfer(0, (int)OVERLAY_27_ID);
     ReloadPanelResources();
     InvokeForChannelOrBoth(1, (u32)sOv002_WXCVB_0206c35c, (int)RunPanelDispatchAction, 0);
@@ -90,8 +90,8 @@ void *InitProfilePanel(BOOL resumed)
     if (DispatchContextCommand(0x12, 0, 0, 0) == 0) {
         DispatchContextCommand(0x80000017, 1, 0, 0);
     }
-    state->task = func_0202a45c(&gCapturedTouchTaskDescriptor, NULL);
-    func_0202b5e8();
+    state->task = CreateTaskObject(&gCapturedTouchTaskDescriptor, NULL);
+    StartTouchSamplingRing();
     if (!resumed) {
         SetSelectionIfChanged(1);
         ResetContextCommandFlag();

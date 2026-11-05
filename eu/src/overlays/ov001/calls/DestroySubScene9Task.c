@@ -1,7 +1,7 @@
 #include "src/overlays/ov001/SceneTaskTables.h"
 
 /* The legacy linker name belongs to the task-release routine. */
-#define ReleaseSceneTask PXI_Init_0202a64c
+#define ReleaseSceneTask DestroyTaskObjectWrapper
 extern void ReleaseSceneTask(u32 handle);
 extern BOOL IsSubScene9TaskActive(void);
 

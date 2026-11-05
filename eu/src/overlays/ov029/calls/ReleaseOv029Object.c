@@ -1,4 +1,4 @@
-#define PXI_Init_0202a638 PXI_Init_0202a64c
+#define PXI_Init_0202a638 DestroyTaskObjectWrapper
 #define ReleaseOv029Object_020baa64 ReleaseOv029Object
 #define g_ov029ObjHandle_020bab60 data_ov029_020bab80
 #include "src/ov029/reviewed_helpers/ReleaseOv029Object_020baa64.c"

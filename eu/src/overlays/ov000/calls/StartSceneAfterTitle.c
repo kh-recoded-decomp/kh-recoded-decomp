@@ -5,13 +5,13 @@ typedef struct {
     s32 mode;
 } Heap;
 
-extern Heap *NNSi_FndGetCurrentRootHeap(void);
+extern Heap *GetRunningTaskWork(void);
 extern void SetPendingScene(int mode, int param2);
 extern void InitDifficultyConfigBlock(int flag);
 
 void StartSceneAfterTitle(void)
 {
-    Heap *heap = NNSi_FndGetCurrentRootHeap();
+    Heap *heap = GetRunningTaskWork();
 
     if (heap->mode == 2) {
         SetPendingScene(3, 0);

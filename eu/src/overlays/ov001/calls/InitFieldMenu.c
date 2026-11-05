@@ -4,7 +4,7 @@
 #define GetSceneTagTracker_020711b0 GetSceneTagTracker
 #define InitFieldMenu_020778bc InitFieldMenu
 #define func_ov001_0207723c InitFieldCommandMenu
-#define NNSi_FndGetCurrentRootHeap_0202a764 NNSi_FndGetCurrentRootHeap
+#define NNSi_FndGetCurrentRootHeap_0202a764 GetRunningTaskWork
 #define UpdateFieldMenu_020779f0 UpdateFieldMenu
 #define data_ov001_020a04b0 data_ov001_020a04d0
 #define func_01ff8830 MI_CpuFill8

@@ -1,9 +1,9 @@
 #define StartMoviePlaybackState_020a7000 StartMoviePlaybackState
-#define NNSi_FndGetCurrentRootHeap_0202a764 NNSi_FndGetCurrentRootHeap
+#define NNSi_FndGetCurrentRootHeap_0202a764 GetRunningTaskWork
 #define func_02028bf4 InitPxiChannelsPair
 #define func_01ff8830 MI_CpuFill8
 #define func_ov022_020a7798 func_ov022_020a77b8
-#define func_020257c4 func_020257d8
+#define func_020257c4 AllocateScriptVmBuffer
 #define func_02001458 func_0200146c
 #define func_02007250 GX_LoadBGPltt
 #define GXS_LoadBGPltt_020072b4 GXS_LoadBGPltt

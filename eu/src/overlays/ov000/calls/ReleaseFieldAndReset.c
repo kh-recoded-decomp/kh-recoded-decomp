@@ -1,4 +1,4 @@
-#define PXI_Init_0202a638 PXI_Init_0202a64c
+#define PXI_Init_0202a638 DestroyTaskObjectWrapper
 #define ReleaseFieldAndReset_02062bdc ReleaseFieldAndReset
 #define func_ov000_0206141c SetupDisplayBanksAndLayers
 #include "src/ov000/panel_state/ReleaseFieldAndReset_02062bdc.c"

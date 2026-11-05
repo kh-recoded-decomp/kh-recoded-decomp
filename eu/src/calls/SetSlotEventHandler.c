@@ -5,7 +5,7 @@ extern int OS_DisableInterrupts(void);
 extern void MI_CpuFill8(void *dst, int value, int size);
 extern void OS_GetMacAddress(void *dst);
 extern int IsDeviceReady(void);
-extern char *func_02011050(void);
+extern char *WMi_GetSystemWork(void);
 extern unsigned short GetSessionLinkState(void);
 extern int GetSessionChannel(void);
 
@@ -34,7 +34,7 @@ int SetSlotEventHandler(int slot, void (*callback)(void *), void *arg) {
         OS_RestoreInterrupts(enabled);
         return err;
     }
-    state = func_02011050() + slot * 4;
+    state = WMi_GetSystemWork() + slot * 4;
     *(void **)(state + 0xcc) = (void *)callback;
     *(void **)(state + 0x10c) = arg;
     if (callback != 0) {

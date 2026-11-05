@@ -32,7 +32,7 @@ typedef struct MovieStateGlobals {
 extern MovieStateGlobals data_ov022_020b7da0;
 extern u16 data_02060500;
 
-extern MovieState *NNSi_FndGetCurrentRootHeap(void);
+extern MovieState *GetRunningTaskWork(void);
 extern BOOL TickSubtitleTimer(void);
 extern BOOL func_ov022_020a7414(void);
 extern void MarkPendingActionIfTargetSet(MovieLoader *loader);
@@ -61,7 +61,7 @@ extern void func_ov022_020a77b0(void);
 
 void *RunMoviePlaybackState(void)
 {
-    MovieState *state = NNSi_FndGetCurrentRootHeap();
+    MovieState *state = GetRunningTaskWork();
 
     if (state->active == 0) {
         return NULL;

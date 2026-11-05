@@ -14,7 +14,7 @@ typedef struct MovieRunScene {
     int skipHeld;
 } MovieRunScene;
 
-extern void *NNSi_FndGetCurrentRootHeap(void);
+extern void *GetRunningTaskWork(void);
 extern u32 func_01ff80d4(void);
 extern u64 OS_GetTick(void);
 extern int TickSubtitleTimer(void);
@@ -45,7 +45,7 @@ void *MovieScene_Run(void)
     u32 skip;
     int exitScene;
 
-    scene = NNSi_FndGetCurrentRootHeap();
+    scene = GetRunningTaskWork();
     if ((scene->flags & 2) == 0 && (scene->field_8b0 == 2 || scene->streamActive == 2)) {
         prevCount = func_01ff80d4();
         startTick = OS_GetTick();

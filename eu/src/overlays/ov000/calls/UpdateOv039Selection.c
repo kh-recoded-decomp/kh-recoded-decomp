@@ -7,7 +7,7 @@ typedef struct SelectionSession {
 
 extern s32 gOv039SelectionResultMap[];
 
-extern SelectionSession *NNSi_FndGetCurrentRootHeap(void);
+extern SelectionSession *GetRunningTaskWork(void);
 extern void UpdateOverlayFrame(void *arg);
 extern BOOL IsStatePhaseIdle(void);
 extern int RuntimeState_GetObjectId(void);
@@ -15,7 +15,7 @@ extern void ShutdownOverlay(int arg);
 
 int UpdateOv039Selection(void)
 {
-    SelectionSession *session = NNSi_FndGetCurrentRootHeap();
+    SelectionSession *session = GetRunningTaskWork();
     int result;
 
     switch (session->status) {

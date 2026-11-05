@@ -1,5 +1,5 @@
 #define INITi_CpuClear32_0x01ff86fc MIi_CpuClear32
-#define Ov105_GetContext func_02011050
+#define Ov105_GetContext WMi_GetSystemWork
 #define Ov105_SetCommandArg SetCommandArg
 #define Ov105_WM_GetMPReceiveBufferSize WM_GetMPReceiveBufferSize
 #define Ov105_WM_GetMPSendBufferSize WM_GetMPSendBufferSize

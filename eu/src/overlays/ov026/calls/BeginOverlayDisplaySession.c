@@ -10,7 +10,7 @@ typedef struct OverlayDisplaySession {
     void *updateRegistration;
 } OverlayDisplaySession;
 extern OverlayDisplaySession *data_ov026_020b5b20;
-extern OverlayDisplaySession *NNSi_FndGetCurrentRootHeap(void);
+extern OverlayDisplaySession *GetRunningTaskWork(void);
 extern void GXS_LoadBGPltt(const void *source, unsigned offset, unsigned size);
 extern void InitializeOverlayDisplaySession(OverlayDisplaySession *session, int *alternateUpdate);
 extern void SetPanelSessionActive(void);
@@ -20,7 +20,7 @@ extern int ShouldRestorePositiveBrightness(OverlayDisplaySession *session);
 extern void RequestPanelBrightnessRestore(void);
 extern int func_ov026_020b58e8(void);
 int (*BeginOverlayDisplaySession(void))(void) {
-    OverlayDisplaySession *session = NNSi_FndGetCurrentRootHeap();
+    OverlayDisplaySession *session = GetRunningTaskWork();
     unsigned short paletteValue = 0;
     int alternateUpdate;
     data_ov026_020b5b20 = session;

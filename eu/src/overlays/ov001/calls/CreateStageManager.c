@@ -1,5 +1,5 @@
 #define CreateStageManager_02099628 CreateStageManager
-#define NNSi_FndGetCurrentRootHeap_0202a764 NNSi_FndGetCurrentRootHeap
+#define NNSi_FndGetCurrentRootHeap_0202a764 GetRunningTaskWork
 #define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
 #define func_01ff8830 MI_CpuFill8
 #define CreateHeapRecord_0202a0b4 CreateHeapRecord

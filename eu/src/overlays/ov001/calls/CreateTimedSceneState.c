@@ -1,7 +1,7 @@
 #define CreateTimedSceneState_02074c08 CreateTimedSceneState
 #define FindActiveRecordById_020b8184 FindActiveRecordById
 #define GetSceneTagTracker_020711b0 GetSceneTagTracker
-#define NNSi_FndGetCurrentRootHeap_0202a764 NNSi_FndGetCurrentRootHeap
+#define NNSi_FndGetCurrentRootHeap_0202a764 GetRunningTaskWork
 #define data_ov001_0209de74 gTimedSceneRecordIds
 #define data_ov001_020a04ac data_ov001_020a04cc
 #define func_01ff8830 MI_CpuFill8

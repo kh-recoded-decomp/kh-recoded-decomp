@@ -32,7 +32,7 @@ extern void TP_RequestAutoSamplingStopAsync(void);
 extern void TP_WaitBusy(u32 mask);
 extern u32 TP_CheckError(u32 mask);
 extern BOOL ReleaseRecordSlot(s32 slot);
-extern void PXI_Init_0202a64c(void *handle);
+extern void DestroyTaskObjectWrapper(void *handle);
 extern void FreePointerIfSet(void **ptr);
 extern BOOL DestroyFndObjectList(TextLayer *layer);
 extern BOOL FreeResourceBufferAndProbeHeap(FontResource *resource);
@@ -48,7 +48,7 @@ void ShutdownPanelScene(void)
     TP_CheckError(4);
     ReleaseRecordSlot(9);
     ReleaseRecordSlot(0xb);
-    PXI_Init_0202a64c(data_ov002_0206c460->unk_04);
+    DestroyTaskObjectWrapper(data_ov002_0206c460->unk_04);
     FreePointerIfSet(&data_ov002_0206c460->messages[0].file);
     FreePointerIfSet(&data_ov002_0206c460->messages[1].file);
     DestroyFndObjectList(&data_ov002_0206c460->layers[0]);

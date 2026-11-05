@@ -1,5 +1,5 @@
 #define InitSceneWork_0206adc8 InitSceneWork
-#define NNSi_FndGetCurrentRootHeap_0202a764 NNSi_FndGetCurrentRootHeap
+#define NNSi_FndGetCurrentRootHeap_0202a764 GetRunningTaskWork
 #define ReleaseSharedRecordSlot_0202c8a8 ReleaseSharedRecordSlot
 #define RetainOrInitializeSharedRecord_0202c80c SND_RegisterSeq
 #define data_ov001_0209eb2c sOv001_BaEfTaPZ_0209eb4c

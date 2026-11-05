@@ -1,6 +1,6 @@
 #define Camera_IsFlag19Set_020c14e0 Camera_IsFlag19Set
 #define IsHudFlag9Set_02072884 IsHudFlag9Set
-#define NNSi_FndGetCurrentRootHeap_0202a764 NNSi_FndGetCurrentRootHeap
+#define NNSi_FndGetCurrentRootHeap_0202a764 GetRunningTaskWork
 #define RefreshActiveMenuEntry_02074f7c RefreshActiveMenuEntry
 #define ScaleByKindAndMode_0204fd24 ScaleByKindAndMode
 #define TogglePanelFormation_0207b428 TogglePanelFormation

@@ -1,7 +1,7 @@
 #define FreeManagerRecordTable_020be204 FreeManagerRecordTable
 #define GetPlayerFlagRecord_0205036c GetPlayerFlagRecord
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
-#define PXI_Init_0202a638 PXI_Init_0202a64c
+#define PXI_Init_0202a638 DestroyTaskObjectWrapper
 #define PXI_Init_020be070 UnloadHudLayersAndRecordTextWrapper
 #define PopVramState_020365f0 PopVramState
 #define SetMenuEntryHighlight_0207830c SetMenuEntryHighlight

@@ -1,5 +1,5 @@
 #define func_ov001_02068efc InitEventTriggerScene
-#define NNSi_FndGetCurrentRootHeap_0202a764 NNSi_FndGetCurrentRootHeap
+#define NNSi_FndGetCurrentRootHeap_0202a764 GetRunningTaskWork
 #define func_01ff8740 MIi_CpuClearFast
 #define func_01ff8684 MIi_CpuClear16
 #define func_0202a178 NNSi_FndAllocFromDefaultHeap

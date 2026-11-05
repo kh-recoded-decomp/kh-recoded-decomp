@@ -1,9 +1,9 @@
 #define InitTitleScreen_02063240 InitTitleScreen
-#define NNSi_FndGetCurrentRootHeap_0202a764 NNSi_FndGetCurrentRootHeap
+#define NNSi_FndGetCurrentRootHeap_0202a764 GetRunningTaskWork
 #define func_0202cc6c Msg_OpenContainerAndReadHeader
 #define func_0202a794 TaskManager_SetEnabled
 #define func_0204f718 InitPlayerData
-#define func_0204f58c func_0204f5a0
+#define func_0204f58c InitKeyRepeatState
 #define SetupDisplayBanksAndLayers_0206141c SetupDisplayBanksAndLayers
 #define SetParamHalf18_02050630 SetParamHalf18
 #define SetParamWord20_02050640 SetParamWord20

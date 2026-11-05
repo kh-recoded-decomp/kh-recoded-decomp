@@ -1,4 +1,4 @@
-#define NNSi_FndGetCurrentRootHeap_0202a764 NNSi_FndGetCurrentRootHeap
+#define NNSi_FndGetCurrentRootHeap_0202a764 GetRunningTaskWork
 #define RunFieldPhases_02061af4 RunFieldPhases
 #define UpdateFieldBgm_02062d1c UpdateFieldBgm
 #define data_ov001_0209e680 gSessionScriptStateHandlers

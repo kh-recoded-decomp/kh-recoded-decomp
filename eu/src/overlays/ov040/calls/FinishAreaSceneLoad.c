@@ -27,7 +27,7 @@ extern u8 sOv040_RpgEfEcZ_020be248[];
 extern BOOL UpdateMenuItemLoading(void);
 extern void LoadFadeModel(int mode);
 extern void HighlightSelectedMenuPanels(void);
-extern void *func_0202a45c(void *desc, void *arg);
+extern void *CreateTaskObject(void *desc, void *arg);
 extern int func_ov001_02067ed4(void);
 extern u32 GetSceneEntryResourceId(int index);
 extern u32 GetSceneResourceHandle(void);
@@ -53,7 +53,7 @@ int FinishAreaSceneLoad(void)
         u32 entryValue;
         HighlightSelectedMenuPanels();
         if ((int)gMovieContextState->handle == -1) {
-            gMovieContextState->handle = func_0202a45c(AREA_SCENE_DESCRIPTOR, NULL);
+            gMovieContextState->handle = CreateTaskObject(AREA_SCENE_DESCRIPTOR, NULL);
         }
         entryValue = GetSceneEntryResourceId(func_ov001_02067ed4());
         SetPanelHeaderText((const u16 *)GetSceneResourceHandle(), (const u16 *)entryValue);

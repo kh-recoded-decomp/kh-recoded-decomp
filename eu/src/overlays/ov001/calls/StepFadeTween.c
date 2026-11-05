@@ -1,4 +1,4 @@
-#define NNSi_FndGetCurrentRootHeap_0202a764 NNSi_FndGetCurrentRootHeap
+#define NNSi_FndGetCurrentRootHeap_0202a764 GetRunningTaskWork
 #define func_ov001_02066cb4 FinishFadeTween
 #define SampleTweenValue_0205258c SampleTweenValue
 #define StepFadeTween_02066d70 StepFadeTween

@@ -24,7 +24,7 @@ extern u8 data_ov024_020b74a0[];
 
 extern u32 func_ov001_02063620(void);
 extern void func_ov001_020648c8(u32 value);
-extern void *func_0202a45c(void *descriptor, void *userData);
+extern void *CreateTaskObject(void *descriptor, void *userData);
 extern void func_ov024_020b72fc(ResultsParams *params);
 extern void ApplyResultsPartyBonus(ResultsParams *params);
 extern void CommitResultsRewards(void);
@@ -41,7 +41,7 @@ int CloseResultsScreen(void)
             func_ov001_020648c8(data_ov034_020c0fa0.work->nextScene);
         } else {
             if (data_ov034_020c0fa0.params->needsSave != 0) {
-                data_ov034_020c0fa0.work->saveTask = func_0202a45c(data_ov024_020b74a0, (void *)0x7b);
+                data_ov034_020c0fa0.work->saveTask = CreateTaskObject(data_ov024_020b74a0, (void *)0x7b);
                 func_ov024_020b72fc(data_ov034_020c0fa0.params);
                 ApplyResultsPartyBonus(data_ov034_020c0fa0.params);
                 data_ov034_020c0fa0.params->needsSave = 0;

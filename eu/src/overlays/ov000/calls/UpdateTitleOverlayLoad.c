@@ -13,7 +13,7 @@ extern u8 UpdateMenuTouchSelect[];
 
 extern int func_ov003_02064744(void);
 extern BOOL IsSoundStreamActive(int handleIndex);
-extern void *func_0202a45c(void *descriptor, void *userData);
+extern void *CreateTaskObject(void *descriptor, void *userData);
 extern void SetPanelState(TitlePanel *panel, s32 state, u32 param1, u32 param2);
 
 int UpdateTitleOverlayLoad(TitlePanel *panel)
@@ -31,7 +31,7 @@ int UpdateTitleOverlayLoad(TitlePanel *panel)
             }
         }
     } else if (!IsSoundStreamActive(0)) {
-        panel->overlayTask = func_0202a45c(UpdateMenuTouchSelect, (void *)result);
+        panel->overlayTask = CreateTaskObject(UpdateMenuTouchSelect, (void *)result);
         panel->overlayLoaded = 1;
     }
     return result;

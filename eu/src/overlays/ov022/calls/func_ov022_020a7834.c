@@ -1,4 +1,4 @@
-extern void PXI_Init_0202a64c();
+extern void DestroyTaskObjectWrapper();
 extern int data_ov022_020b7c00;
 
 void func_ov022_020a7834(void) {
@@ -6,5 +6,5 @@ void func_ov022_020a7834(void) {
     if (v == -1) {
         return;
     }
-    PXI_Init_0202a64c(v);
+    DestroyTaskObjectWrapper(v);
 }

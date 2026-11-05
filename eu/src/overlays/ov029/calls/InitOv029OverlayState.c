@@ -1,12 +1,12 @@
 #define CreateSessionNameMenu_02063ba4 CreateSessionNameMenu
 #define InitOv029OverlayState_020ba3e0 InitOv029OverlayState
-#define NNSi_FndGetCurrentRootHeap_0202a764 NNSi_FndGetCurrentRootHeap
+#define NNSi_FndGetCurrentRootHeap_0202a764 GetRunningTaskWork
 #define QueueFieldUpdate_020633a0 QueueFieldUpdate
 #define RunSceneStateMachine_020ba4a4 RunSceneStateMachine_020ba4c4
 #define data_0209eb18 gSceneWorkClassDescriptor
 #define data_020b52a0 gSubModeTaskDefinition
 #define data_ov029_020baba0 data_ov029_020babc0
 #define func_0202a158 Heap_GetCurrent
-#define func_0202a448 func_0202a45c
+#define func_0202a448 CreateTaskObject
 #define func_ov029_020ba8b8 SetupOv029Display
 #include "src/ov029/overlay_state/InitOv029OverlayState_020ba3e0.c"

@@ -23,16 +23,16 @@ typedef struct {
 
 extern void InitEngine(void);
 extern void InitSbcHandlersAndFastDma(void);
-extern void func_0202abbc(void);
+extern void ResetPadSampleState(void);
 extern void OS_GetOwnerInfo(OwnerInfo *owner);
-extern void func_0202b774(int language, int unused);
+extern void SetResourceLanguage(int language, int unused);
 extern void SetGeometryCommandBufferIfUnset(RootWork *work);
 extern u32 FS_TryLoadTable(void *table, u32 size);
 extern void *NNSi_FndAllocFromExpHeapEx(u32 size, void *heap);
-extern void func_0202a438(void);
+extern void ResetTaskManagerState(void);
 extern void ResetCallbackTable(void);
 extern void InitSoundSystem(void);
-extern void *func_0202a45c(void *descriptor, void *userData);
+extern void *CreateTaskObject(void *descriptor, void *userData);
 extern void Pad_Sample(void);
 extern void OS_WaitVBlankIntr(void);
 extern u32 func_01ff80d4(void);
@@ -86,7 +86,7 @@ int main(void)
     wasActive = FALSE;
     InitEngine();
     InitSbcHandlersAndFastDma();
-    func_0202abbc();
+    ResetPadSampleState();
     OS_GetOwnerInfo(&owner);
     language = owner.language;
     switch (language) {
@@ -95,19 +95,19 @@ int main(void)
     case LANGUAGE_GERMAN:
     case LANGUAGE_ITALIAN:
     case LANGUAGE_SPANISH:
-        func_0202b774(language, 0);
+        SetResourceLanguage(language, 0);
         break;
     default:
-        func_0202b774(LANGUAGE_ENGLISH, 0);
+        SetResourceLanguage(LANGUAGE_ENGLISH, 0);
         break;
     }
     SetGeometryCommandBufferIfUnset(&rootWork);
     gMainDisplayState.resourceTable = NNSi_FndAllocFromExpHeapEx(FS_TryLoadTable(NULL, 0), data_02060394);
     FS_TryLoadTable(gMainDisplayState.resourceTable, FS_TryLoadTable(NULL, 0));
-    func_0202a438();
+    ResetTaskManagerState();
     ResetCallbackTable();
     InitSoundSystem();
-    func_0202a45c(&gSceneSystemClassDescriptor, (void *)1);
+    CreateTaskObject(&gSceneSystemClassDescriptor, (void *)1);
     Pad_Sample();
 
     for (;;) {

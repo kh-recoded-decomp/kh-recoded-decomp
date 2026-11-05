@@ -1,5 +1,5 @@
 #define AdvanceTweenChannels_02068c88 AdvanceTweenChannels
-#define NNSi_FndGetCurrentRootHeap_0202a764 NNSi_FndGetCurrentRootHeap
+#define NNSi_FndGetCurrentRootHeap_0202a764 GetRunningTaskWork
 #define OS_GetTick_02003fd4 OS_GetTick
 #define func_ov001_02068c50 StartTimerState
 #include "src/ov001/shared_engine/AdvanceTweenChannels_02068c88.c"

@@ -7,5 +7,5 @@
 #define UpdateStageEventMessage_0206c528 UpdateStageEventMessage
 #define UpdateTargetMenuState_0206ae84 UpdateTargetMenuState
 #define UpdateTargetMenu_0206bcbc UpdateTargetMenu
-#define func_0202a764 NNSi_FndGetCurrentRootHeap
+#define func_0202a764 GetRunningTaskWork
 #include "src/ov001/shared_engine/UpdateTargetMenuState_0206ae84.c"

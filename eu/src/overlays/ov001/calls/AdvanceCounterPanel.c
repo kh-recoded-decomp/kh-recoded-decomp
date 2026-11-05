@@ -3,7 +3,7 @@
 #define RefreshCounterRecordPositions_0207d790 RefreshCounterRecordPositions
 #define ShowTwoDigitCounters_0207d984 ShowTwoDigitCounters
 #define data_ov001_0209dfc8 gCounterFadePalette
-#define func_0202a7a4 func_0202a7b8
+#define func_0202a7a4 GetTaskUpdateCount
 #define func_ov001_0207d800 func_ov001_0207d828
 #define func_ov001_0207d838 func_ov001_0207d860
 #include "src/ov001/field_manager/AdvanceCounterPanel_0207da58.c"

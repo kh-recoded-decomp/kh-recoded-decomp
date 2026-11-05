@@ -1,5 +1,5 @@
 #define CreateSubScene9Task_02066e00 CreateSubScene9Task
 #define data_ov001_0209e9fc gSubScene9TaskHandle
 #define data_ov001_0209ea00 gSubScene9TaskDescriptor
-#define func_0202a448 func_0202a45c
+#define func_0202a448 CreateTaskObject
 #include "src/ov001/shared_engine/CreateSubScene9Task_02066e00.c"

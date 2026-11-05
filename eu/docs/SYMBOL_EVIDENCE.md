@@ -392,3 +392,11 @@ from their GX operations. [JOINT_TEXTURE_HELPERS.md](JOINT_TEXTURE_HELPERS.md)
 records identity flags, exact command payloads, unconditional cursor advance,
 untouched fields and the two-argument texture hook contract. Separate texture
 entrypoints remain separate; neither helper initializes an entire matrix.
+
+## Task, input and VM resource helpers
+
+Twenty-two operations now name their actual task, mutex, input, wireless, script
+buffer and archive roles. [TASK_INPUT_VM_HELPERS.md](TASK_INPUT_VM_HELPERS.md)
+records the 44-byte task/native manager view, borrowed work lookup, collection
+lifetime, real delegate/WM returns, sampling units and buffer ownership limits.
+The former root-heap lookup is the running task's work getter.

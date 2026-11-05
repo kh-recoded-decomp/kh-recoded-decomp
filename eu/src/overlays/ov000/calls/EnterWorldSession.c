@@ -2,7 +2,7 @@
 #define data_02063a04 gWorldSession
 #define OverlayId27_0000001b OVERLAY_27_ID
 #define OverlayId39_00000027 OVERLAY_39_ID
-#define NNSi_FndGetCurrentRootHeap_0202a764 NNSi_FndGetCurrentRootHeap
+#define NNSi_FndGetCurrentRootHeap_0202a764 GetRunningTaskWork
 #define func_02029f78 LoadOverlayAfterGeometryTransfer
 #define InitOverlayState_020bb888 InitOverlayState
 #define NotifyOv039OfWorld_02063614 NotifyOv039OfWorld

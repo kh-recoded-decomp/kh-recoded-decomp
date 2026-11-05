@@ -14,7 +14,7 @@
 #include "src/overlays/ov001/SessionBuffers.h"
 
 /* Legacy symbol binding: this reads the current task work pointer and allocates nothing. */
-#define GetCurrentTaskWork NNSi_FndGetCurrentRootHeap
+#define GetCurrentTaskWork GetRunningTaskWork
 
 /* Session buffer records contain a pointer followed by their allocated byte size. */
 #define GetSessionBufferSize SessionBuffer_GetSize
@@ -210,7 +210,7 @@ extern void MIi_CpuClear32(u32 value, void *dst, u32 size);
 extern void SetupResultsDisplay(void);
 extern void LoadOverlayAfterGeometryTransfer(int bank, int value);
 extern void InitTileTableFrom(void *table, const TileTableSource *source);
-extern int func_0204f5a0(s16 *record, s16 *limits);
+extern int InitKeyRepeatState(s16 *record, s16 *limits);
 extern void QueueSoundCommandForArc(u32 archive);
 extern u32 func_ov001_02063b68(int index);
 extern u32 func_0202a9e4(u32 range);
@@ -266,7 +266,7 @@ ResultsStateFn InitResultsScene(ResultsArgs *args)
     LoadOverlayAfterGeometryTransfer(0, (int)OVERLAY_27_ID);
     LoadOverlayAfterGeometryTransfer(0, (int)OVERLAY_24_ID);
     InitResultsTiles(data_ov034_020c0fa4, &tileIds, &source);
-    func_0204f5a0((s16 *)&data_ov034_020c0fa4->keyRepeat, NULL);
+    InitKeyRepeatState((s16 *)&data_ov034_020c0fa4->keyRepeat, NULL);
     QueueSoundCommandForArc(3 + 0x198);
     data_ov034_020c0fa4->state = 0;
 

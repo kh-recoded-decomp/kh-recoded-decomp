@@ -75,7 +75,7 @@ extern void *NNSi_FndAllocFromDefaultHeap(u32 size);
 extern void MI_CpuFill8(void *dst, int value, u32 size);
 extern BOOL PlaySoundEffect(int seqArcNo, int index);
 extern void LoadSlotImagePair();
-extern void *func_0202a45c(void *descriptor, void *userData);
+extern void *CreateTaskObject(void *descriptor, void *userData);
 extern void NNS_FndInitList(void *list, int offset);
 extern int func_0200146c(void *script, char *path);
 extern void SetupOverlayDisplay(void);
@@ -91,7 +91,7 @@ extern void LoadPackedFileView(void *view, char *path, BOOL fromTail);
 extern void AcquireRecordManager(void);
 extern void AcquireRecordSlot(int slot, int arg);
 extern void SetMenuButtonsEnabled(int event);
-extern int func_0204f5a0(u16 *record, InputLimits *limits);
+extern int InitKeyRepeatState(u16 *record, InputLimits *limits);
 extern void SetupMainBgLayers_020be6c0(void);
 extern void StartSubScene(int scene, int arg1, int arg2);
 
@@ -150,7 +150,7 @@ void InitOverlayState(u32 entryArg)
     if (state->mode != 8) {
         LoadSlotImagePair(state, 2, state->mode);
     }
-    state->heapHandle = func_0202a45c(&gCapturedTouchTaskDescriptor, NULL);
+    state->heapHandle = CreateTaskObject(&gCapturedTouchTaskDescriptor, NULL);
     NNS_FndInitList(state->taskList, 4);
     state->brightness = -16 * 0x1000;
     state->subBrightness = -16 * 0x1000;
@@ -184,7 +184,7 @@ void InitOverlayState(u32 entryArg)
     AcquireRecordSlot(0, 0);
     AcquireRecordSlot(2, 0);
     SetMenuButtonsEnabled(0);
-    func_0204f5a0(state->inputSource, &limits);
+    InitKeyRepeatState(state->inputSource, &limits);
     state->vblankPending = TRUE;
     state->firstVisit = FALSE;
     switch (state->mode) {

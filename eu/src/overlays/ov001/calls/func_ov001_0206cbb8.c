@@ -1,3 +1,4 @@
+#define NNSi_FndGetCurrentRootHeap GetRunningTaskWork
 #define DestroyEventContext_0206cbb8 func_ov001_0206cbb8
 #define Ov002_ResetLinkState func_ov001_0206d718
 #define data_020a049c data_ov001_020a04bc

@@ -1,4 +1,4 @@
-#define PXI_Init_0202a638 PXI_Init_0202a64c
+#define PXI_Init_0202a638 DestroyTaskObjectWrapper
 #define ShutdownOv029SoundCtx_020ba52c ShutdownOv029SoundCtx
 #define func_0204df9c SetSoundListenersEnabled
 #define g_ov029SoundCtx_020baba0 data_ov029_020babc0

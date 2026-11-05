@@ -1,4 +1,4 @@
-#define Ov105_GetContext func_02011050
+#define Ov105_GetContext WMi_GetSystemWork
 #define Ov105_SetCommandArg SetCommandArg
 #define Ov105_WMi_CheckStateEx WMi_CheckStateEx
 #define Ov105_WMi_SendCommandDirect WMi_SendCommandDirect

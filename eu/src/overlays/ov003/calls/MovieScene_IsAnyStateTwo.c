@@ -1,3 +1,3 @@
 #define MovieScene_IsAnyStateTwo_02063fe4 MovieScene_IsAnyStateTwo
-#define NNSi_FndGetCurrentRootHeap_0202a764 NNSi_FndGetCurrentRootHeap
+#define NNSi_FndGetCurrentRootHeap_0202a764 GetRunningTaskWork
 #include "src/ov003/video_playback/MovieScene_IsAnyStateTwo_02063fe4.c"

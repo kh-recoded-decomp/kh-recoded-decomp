@@ -9,7 +9,7 @@
 #define func_ov001_0207d120 func_ov001_0207d148
 #define func_ov001_0207d148 LoadContextResourceGroups
 #define func_0202a158 Heap_GetCurrent
-#define func_0202a448 func_0202a45c
+#define func_0202a448 CreateTaskObject
 #define func_ov021_020af57c func_ov021_020af59c
 #define func_ov021_020af59c ForwardSubModePairB
 #define func_ov021_020af7b8 ForwardSubModeStart

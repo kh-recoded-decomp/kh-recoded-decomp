@@ -1,5 +1,5 @@
 #define ArmObject_0206c6f4 func_ov001_0206c6f4
-#define PXI_Init_0202a638 PXI_Init_0202a64c
+#define PXI_Init_0202a638 DestroyTaskObjectWrapper
 #define ReleaseFieldContext_020ba60c ReleaseFieldContext
 #define func_0204df9c SetSoundListenersEnabled
 #define func_ov001_020667b4 SuspendTaskAndSetFlag

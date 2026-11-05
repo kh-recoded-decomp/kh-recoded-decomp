@@ -1,4 +1,4 @@
 #define MobiClip_SrcClose_020ba9c0 MobiClip_SrcClose_020ba9e0
-#define PXI_Init_0202a638 PXI_Init_0202a64c
+#define PXI_Init_0202a638 DestroyTaskObjectWrapper
 #define data_ov035_020bc460 gMovieSourceHandle
 #include "src/ov035/shared_engine/MobiClip_SrcClose_020ba9c0.c"

@@ -1,4 +1,4 @@
-#define InstantiateClass func_0202a45c
+#define InstantiateClass CreateTaskObject
 #define Ov002_Roster_Reset ClearSecondaryTaskCount
 #define Roster_Create_02069090 Roster_Create
 #define data_0209eac8 gEventTriggerTaskHandle

@@ -1,6 +1,6 @@
-#define NNSi_FndGetCurrentRootHeap_0202a764 NNSi_FndGetCurrentRootHeap
+#define NNSi_FndGetCurrentRootHeap_0202a764 GetRunningTaskWork
 #define StartScreenFade_0206656c StartScreenFade
 #define func_01ff8740 MIi_CpuClearFast
-#define func_0202a754 func_0202a768
+#define func_0202a754 GetCurrentTaskObject
 #define func_ov002_020665e8 UpdateScreenFade
 #include "src/ov002/panel_state/StartScreenFade_0206656c.c"

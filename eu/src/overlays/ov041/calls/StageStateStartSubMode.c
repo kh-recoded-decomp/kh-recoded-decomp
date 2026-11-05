@@ -10,7 +10,7 @@ typedef struct StageTaskParams {
 
 extern const void *gSubModeTaskDefinition[];
 extern void *Heap_GetCurrent(void);
-extern void *func_0202a45c(const void *definition, StageTaskParams *params);
+extern void *CreateTaskObject(const void *definition, StageTaskParams *params);
 extern void LoadHudLayersAndRecordText(void);
 extern int CountAssignedFieldSlots(void);
 extern void SetMovieMenuRow(int row);
@@ -40,7 +40,7 @@ void StageStateStartSubMode(void)
     StageTaskParams params = MakeTaskParams(Heap_GetCurrent());
     int slot;
 
-    work->subModeTask = func_0202a45c(gSubModeTaskDefinition, &params);
+    work->subModeTask = CreateTaskObject(gSubModeTaskDefinition, &params);
     LoadHudLayersAndRecordText();
     SetMovieMenuRow(CountAssignedFieldSlots() + 1);
     for (slot = 0; slot < 3; slot++) {

@@ -1,4 +1,4 @@
-#define Ov105_GetContext func_02011050
+#define Ov105_GetContext WMi_GetSystemWork
 #define Ov105_WMi_CheckStateEx WMi_CheckStateEx
 #define Ov105_WMi_SendCommand WMi_SendCommand
 #define WM_SetMPDataToPortEx_02011ba8 WM_SetMPDataToPortEx

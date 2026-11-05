@@ -1,4 +1,4 @@
-#define Ov105_GetContext func_02011050
+#define Ov105_GetContext WMi_GetSystemWork
 #define Ov105_WMi_CheckStateEx WMi_CheckStateEx
 #define WM_GetMPSendBufferSize_020114e0 WM_GetMPSendBufferSize
 #include "src/arm9/library_nitro_wm/WM_GetMPSendBufferSize_020114e0.c"

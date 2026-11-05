@@ -24,7 +24,7 @@ extern FieldSceneHandle data_ov001_020a04c4;
 extern char data_ov045_020c0820[];
 extern char OVERLAY_45_ID[];
 extern void LoadOverlayAfterGeometryTransfer(int processor, int overlay_id);
-extern void *func_0202a45c(void *descriptor, void *userData);
+extern void *CreateTaskObject(void *descriptor, void *userData);
 extern u32 func_ov001_02063b68(s32 index);
 extern s32 func_ov001_020644c0(void);
 extern int ReadSessionPackedBits(int bitOffset, u32 bitCount);
@@ -62,6 +62,6 @@ void OpenResultScreen(int rank, int arg)
         params.score = ReadSessionPackedBits(0x35a7, 0x20) + func_ov001_02063b68(0) + func_ov035_020bb2c0() * 1000;
     }
     scene->sceneFlags = (scene->sceneFlags & ~1) | 0x40;
-    scene->resultScreen = func_0202a45c(data_ov045_020c0820, &params);
+    scene->resultScreen = CreateTaskObject(data_ov045_020c0820, &params);
     *(vu32 *)0x04000000 = (*(vu32 *)0x04000000 & ~0x1f00) | 0xf00;
 }

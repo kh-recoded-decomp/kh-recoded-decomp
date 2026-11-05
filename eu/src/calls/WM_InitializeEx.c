@@ -3,5 +3,5 @@
 #define WM_InitializeEx_020116a8 WM_InitializeEx
 #define WMi_SendCommand_02010f80 WMi_SendCommand
 #define WmInit_02010d64 WmInit
-#define func_0201103c func_02011050
+#define func_0201103c WMi_GetSystemWork
 #include "src/arm9/shared_engine/WM_InitializeEx_020116a8.c"

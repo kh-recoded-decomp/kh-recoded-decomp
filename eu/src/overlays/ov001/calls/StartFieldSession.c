@@ -17,7 +17,7 @@
 #define LoadDifficultyPresetIntoSession_020644d4 LoadDifficultyPresetIntoSession
 #define LoadSeqArcIfChanged_0204d5f0 LoadSeqArcIfChanged
 #define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
-#define NNSi_FndGetCurrentRootHeap_0202a764 NNSi_FndGetCurrentRootHeap
+#define NNSi_FndGetCurrentRootHeap_0202a764 GetRunningTaskWork
 #define OverlayId104_00000068 gSaveCheckOverlayId
 #define ReadGlobalPackedBits_02027348 ReadGlobalPackedBits
 #define ReadSessionPackedBits_02064574 ReadSessionPackedBits
@@ -42,9 +42,9 @@
 #define func_02025438 SetPanelEnabled
 #define func_02029f78 LoadOverlayAfterGeometryTransfer
 #define func_02029f98 UnloadOverlayAfterGeometryTransfer
-#define func_0202a448 func_0202a45c
-#define func_0202a754 func_0202a768
-#define func_0202b5d4 func_0202b5e8
+#define func_0202a448 CreateTaskObject
+#define func_0202a754 GetCurrentTaskObject
+#define func_0202b5d4 StartTouchSamplingRing
 #define func_0203574c InitActorRegistry
 #define func_0204fba0 func_0204fbb4
 #define func_0205125c GetMapFinalStats

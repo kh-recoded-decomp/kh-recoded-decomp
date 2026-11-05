@@ -1,7 +1,7 @@
 #define func_02001520 Text_UploadTileBuffer
 #define func_02004990 OS_GetCpsrIrq
 #define func_020273d4 UpdateElapsedIntervals
-#define func_0202a764 NNSi_FndGetCurrentRootHeap
+#define func_0202a764 GetRunningTaskWork
 #define func_0204f5dc FS_UnloadOverlayImage_0204f5f0
 #define func_ov002_0206162c UpdatePanelState
 #define g_dispatchTable_0206c2f0 gPanelModeExitCallback

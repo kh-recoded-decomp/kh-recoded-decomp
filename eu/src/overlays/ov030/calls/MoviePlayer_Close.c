@@ -1,7 +1,7 @@
 #define ArmObject_0206c6f4 func_ov001_0206c6f4
 #define MoviePlayer_Close_020ba518 MoviePlayer_Close
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
-#define PXI_Init_0202a638 PXI_Init_0202a64c
+#define PXI_Init_0202a638 DestroyTaskObjectWrapper
 #define func_0204df9c SetSoundListenersEnabled
 #define func_ov001_020667b4 SuspendTaskAndSetFlag
 #define g_moviePlayerCtx_020bd000 data_ov030_020bd020

@@ -5,13 +5,13 @@ typedef unsigned int code();
 extern unsigned int UpdatePopupManager();
 extern unsigned int data_ov091_020c375c;
 extern unsigned int GetBgDataFromArchive();
-extern unsigned int NNSi_FndGetCurrentRootHeap();
+extern unsigned int GetRunningTaskWork();
 extern unsigned int Archive_LoadFile();
 
 code * func_ov091_020c1878(unsigned int *initialValues) {
   u32 resource;
 
-  data_ov091_020c375c = NNSi_FndGetCurrentRootHeap();
+  data_ov091_020c375c = GetRunningTaskWork();
   *(unsigned int *)((int)data_ov091_020c375c + 4) = *initialValues;
   *(unsigned int *)((int)data_ov091_020c375c + 8) = initialValues[1];
   *(unsigned int *)((int)data_ov091_020c375c + 0xc) = initialValues[2];

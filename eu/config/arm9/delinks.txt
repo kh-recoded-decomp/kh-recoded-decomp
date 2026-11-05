@@ -2669,7 +2669,7 @@ libs/nitro/snd/calls/SND_Init.c:
     complete
     .text       start:0x0200eda4 end:0x0200eddc
 
-src/calls/func_0200eddc.c:
+src/calls/LockSoundCommandMutex.c:
     complete
     .text       start:0x0200eddc end:0x0200edf0
 
@@ -3049,7 +3049,7 @@ src/calls/WMi_SendCommandDirect.c:
     complete
     .text       start:0x02011008 end:0x02011050
 
-src/calls/func_02011050.c:
+src/calls/WMi_GetSystemWork.c:
     complete
     .text       start:0x02011050 end:0x0201105c
 
@@ -3225,7 +3225,7 @@ src/calls/WmGetSharedDataAddress.c:
     complete
     .text       start:0x02012264 end:0x02012282
 
-src/calls/func_02012284.c:
+src/calls/WM_StartKeySharing.c:
     complete
     .text       start:0x02012284 end:0x02012298
 
@@ -3297,7 +3297,7 @@ src/calls/CTRDG_TerminateForPulledOut.c:
     complete
     .text       start:0x0201277c end:0x0201278a
 
-src/calls/func_0201278c.c:
+src/calls/CTRDGi_Channel17Callback.c:
     complete
     .text       start:0x0201278c end:0x02012798
 
@@ -5733,11 +5733,11 @@ src/calls/ScaleAroundPivot.c:
     complete
     .text       start:0x020257c4 end:0x020257d6
 
-src/calls/func_020257d8.c:
+src/calls/AllocateScriptVmBuffer.c:
     complete
     .text       start:0x020257d8 end:0x020257f8
 
-src/calls/func_020257f8.c:
+src/calls/ReleaseScriptVmBuffer.c:
     complete
     .text       start:0x020257f8 end:0x02025820
 
@@ -6561,11 +6561,11 @@ src/calls/unlink_object_registry_node.c:
     complete
     .text       start:0x0202a3bc end:0x0202a438
 
-src/calls/func_0202a438.c:
+src/calls/ResetTaskManagerState.c:
     complete
     .text       start:0x0202a438 end:0x0202a45c
 
-src/calls/func_0202a45c.c:
+src/calls/CreateTaskObject.c:
     complete
     .text       start:0x0202a45c end:0x0202a490
 
@@ -6589,7 +6589,7 @@ src/calls/DestroyRegisteredObject.c:
     complete
     .text       start:0x0202a5c8 end:0x0202a64c
 
-src/calls/PXI_Init_0202a64c.c:
+src/calls/DestroyTaskObjectWrapper.c:
     complete
     .text       start:0x0202a64c end:0x0202a658
 
@@ -6597,15 +6597,15 @@ src/calls/Obj_UpdateAll.c:
     complete
     .text       start:0x0202a658 end:0x0202a734
 
-src/calls/func_0202a734.c:
+src/calls/CollectFinishedTask.c:
     complete
     .text       start:0x0202a734 end:0x0202a768
 
-src/calls/func_0202a768.c:
+src/calls/GetCurrentTaskObject.c:
     complete
     .text       start:0x0202a768 end:0x0202a778
 
-libs/nitro/nns/calls/NNSi_FndGetCurrentRootHeap.c:
+libs/nitro/nns/calls/GetRunningTaskWork.c:
     complete
     .text       start:0x0202a778 end:0x0202a78c
 
@@ -6621,7 +6621,7 @@ src/calls/TaskManager_SetEnabled.c:
     complete
     .text       start:0x0202a7a8 end:0x0202a7b8
 
-src/calls/func_0202a7b8.c:
+src/calls/GetTaskUpdateCount.c:
     complete
     .text       start:0x0202a7b8 end:0x0202a7c8
 
@@ -6661,7 +6661,7 @@ src/calls/Math_AcosIdx.c:
     complete
     .text       start:0x0202ab34 end:0x0202abbc
 
-src/calls/func_0202abbc.c:
+src/calls/ResetPadSampleState.c:
     complete
     .text       start:0x0202abbc end:0x0202abdc
 
@@ -6845,7 +6845,7 @@ src/calls/GetBgDataFromArchive.c:
     complete
     .text       start:0x0202b568 end:0x0202b5e6
 
-src/calls/func_0202b5e8.c:
+src/calls/StartTouchSamplingRing.c:
     complete
     .text       start:0x0202b5e8 end:0x0202b62c
 
@@ -6857,7 +6857,7 @@ src/calls/CopyRecentInputRecords.c:
     complete
     .text       start:0x0202b6e4 end:0x0202b774
 
-src/calls/func_0202b774.c:
+src/calls/SetResourceLanguage.c:
     complete
     .text       start:0x0202b774 end:0x0202b79c
 
@@ -9785,7 +9785,7 @@ src/calls/UpdateKeyRepeat.c:
     complete
     .text       start:0x0204f518 end:0x0204f5a0
 
-src/calls/func_0204f5a0.c:
+src/calls/InitKeyRepeatState.c:
     complete
     .text       start:0x0204f5a0 end:0x0204f5ec
 
@@ -10089,11 +10089,11 @@ src/calls/LoadLinkedChunkTables.c:
     complete
     .text       start:0x0205162c end:0x02051724
 
-src/calls/func_02051724.c:
+src/calls/LoadRecordManagerArchiveEntry3.c:
     complete
     .text       start:0x02051724 end:0x02051770
 
-src/calls/func_02051770.c:
+src/calls/LoadRecordManagerArchiveEntry4.c:
     complete
     .text       start:0x02051770 end:0x020517bc
 
@@ -10101,11 +10101,11 @@ src/calls/LoadRelocatedOffsetTable.c:
     complete
     .text       start:0x020517bc end:0x0205182c
 
-src/calls/func_0205182c.c:
+src/calls/LoadRecordManagerArchiveEntry6.c:
     complete
     .text       start:0x0205182c end:0x02051878
 
-src/calls/func_02051878.c:
+src/calls/LoadRecordManagerArchiveEntry7.c:
     complete
     .text       start:0x02051878 end:0x020518c4
 
@@ -10121,7 +10121,7 @@ src/calls/LoadNamedRecordTables.c:
     complete
     .text       start:0x020519ec end:0x02051ab8
 
-src/calls/func_02051ab8.c:
+src/calls/LoadRecordManagerArchiveEntry11.c:
     complete
     .text       start:0x02051ab8 end:0x02051b04
 

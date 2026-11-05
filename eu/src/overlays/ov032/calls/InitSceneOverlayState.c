@@ -19,7 +19,7 @@ static inline struct SceneContext *GetSceneContextBuffer(s32 index)
 #define LoadPackedFileView_020ba25c LoadPackedFileView
 #define LoadPzTextureParams_02066488 LoadPzTextureParams
 #define Msg_OpenContainerAndReadHeader_0202cc6c Msg_OpenContainerAndReadHeader
-#define NNSi_FndGetCurrentRootHeap_0202a764 NNSi_FndGetCurrentRootHeap
+#define NNSi_FndGetCurrentRootHeap_0202a764 GetRunningTaskWork
 #define RunSceneStateMachine_020ba790 RunSceneStateMachine_020ba7b0
 #define SetGroupMenuPercent_020bbb7c SetGroupMenuPercent
 #define SetupFlaggedSelectionRecords_0204f778 SetupFlaggedSelectionRecords
@@ -31,7 +31,7 @@ static inline struct SceneContext *GetSceneContextBuffer(s32 index)
 #define data_ov032_020c0030 data_ov032_020c0050
 #define data_ov032_020c0060 data_ov032_020c0080
 #define func_0202a158 Heap_GetCurrent
-#define func_0202a448 func_0202a45c
+#define func_0202a448 CreateTaskObject
 #define func_ov001_020633a0 QueueFieldUpdate
 #define func_ov001_020633d4 FlushPendingFieldUpdate
 #include "src/ov032/unclassified_helpers/InitSceneOverlayState_020ba3e0.c"

@@ -1,5 +1,5 @@
 #define MobiClip_CloseDecoder_020bac28 MobiClip_CloseDecoder
-#define PXI_Init_0202a638 PXI_Init_0202a64c
+#define PXI_Init_0202a638 DestroyTaskObjectWrapper
 #define func_0204f98c BuildSelectionEntryList
 #define func_0204fabc SyncSelectionRecordFromSlotEntry
 #define g_mobiClipSrcHandle_020bcf80 gMobiClipSourceHandle

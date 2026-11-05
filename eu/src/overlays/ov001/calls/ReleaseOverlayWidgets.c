@@ -17,7 +17,7 @@ typedef struct OverlayGlobals {
 
 extern OverlayGlobals data_ov001_020a04c4;
 extern int func_ov001_0207123c(void);
-extern void PXI_Init_0202a64c(u32 handle);
+extern void DestroyTaskObjectWrapper(u32 handle);
 extern void ClearTileTableRowAndMarkDirty(int widgets, int layer);
 extern void UnloadOverlayAfterGeometryTransfer(int processor, int overlayId);
 extern char OVERLAY_45_ID[];
@@ -27,7 +27,7 @@ void ReleaseOverlayWidgets(void) {
     int widgets = func_ov001_0207123c();
 
     if (state->handle != 0) {
-        PXI_Init_0202a64c(state->handle);
+        DestroyTaskObjectWrapper(state->handle);
         state->handle = 0;
         state->released = 1;
         state->selection = -2;

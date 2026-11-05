@@ -10,12 +10,12 @@ typedef struct MovieScene {
     void *buffer;
 } MovieScene;
 
-extern MovieScene *NNSi_FndGetCurrentRootHeap(void);
+extern MovieScene *GetRunningTaskWork(void);
 extern void NNSi_FndFreeFromDefaultHeap(void *ptr);
 extern void func_ov003_02064974(void *arg);
 extern void FreeResourceBufferAndProbeHeap(void *resources);
 extern void StoreGlobalArrayEntry(int index, int value);
-extern void func_020257f8(void *sound);
+extern void ReleaseScriptVmBuffer(void *sound);
 extern void UnloadOverlayAfterGeometryTransfer(int processor, int overlay_id);
 extern void CreateManagerObjects(void);
 extern char OVERLAY_22_ID[];
@@ -24,13 +24,13 @@ extern s32 data_ov003_020650c0;
 
 void MovieScene_Shutdown(void)
 {
-    MovieScene *scene = NNSi_FndGetCurrentRootHeap();
+    MovieScene *scene = GetRunningTaskWork();
 
     NNSi_FndFreeFromDefaultHeap(scene->buffer);
     func_ov003_02064974(scene->pxi);
     FreeResourceBufferAndProbeHeap(scene->resources);
     StoreGlobalArrayEntry(3, 0);
-    func_020257f8(scene->sound);
+    ReleaseScriptVmBuffer(scene->sound);
     UnloadOverlayAfterGeometryTransfer(0, (int)OVERLAY_22_ID);
     data_ov003_020658c0 = NULL;
     data_ov003_020650c0 = -1;

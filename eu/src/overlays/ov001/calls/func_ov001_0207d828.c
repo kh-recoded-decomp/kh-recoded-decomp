@@ -4,7 +4,7 @@ extern u32 GetSceneTagTracker(void);
 extern void NNS_GfdRegisterNewVramTransferTask(u32 a, u32 b, u32 c, u32 d);
 extern u32 FindActiveRecordById(u32 handle, u32 tag);
 extern void TagTracker_InvokeCallback(u32 handle, u32 value);
-extern u32 func_0202a7b8(void);
+extern u32 GetTaskUpdateCount(void);
 
 void func_ov001_0207d828(u8 *context, u32 param)
 {
@@ -15,5 +15,5 @@ void func_ov001_0207d828(u8 *context, u32 param)
     NNS_GfdRegisterNewVramTransferTask(7, 0x5400, param, 0x300);
     value = FindActiveRecordById(handle, 0x134);
     TagTracker_InvokeCallback(handle, value);
-    *(u32 *)(context + 0x14) = func_0202a7b8();
+    *(u32 *)(context + 0x14) = GetTaskUpdateCount();
 }

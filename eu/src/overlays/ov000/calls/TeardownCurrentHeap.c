@@ -1,4 +1,4 @@
-#define NNSi_FndGetCurrentRootHeap_0202a764 NNSi_FndGetCurrentRootHeap
+#define NNSi_FndGetCurrentRootHeap_0202a764 GetRunningTaskWork
 #define ReleaseHeapExtensions_02061818 ReleaseHeapExtensions
 #define TeardownCurrentHeap_020633d8 TeardownCurrentHeap
 #define ZeroHalfThenFree_0202cd78 ZeroHalfThenFree

@@ -1,4 +1,4 @@
 #define currentDisplaySession data_ov026_020b5b20
-#define func_0202a764 NNSi_FndGetCurrentRootHeap
+#define func_0202a764 GetRunningTaskWork
 #define func_ov001_020715ac FreeSceneListObject
 #include "src/ov026/display_session/EndOverlayDisplaySession.c"

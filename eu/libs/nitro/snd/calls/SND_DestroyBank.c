@@ -36,7 +36,7 @@ typedef struct SNDBankData {
     u32 instCount;
 } SNDBankData;
 
-extern void func_0200eddc(void);
+extern void LockSoundCommandMutex(void);
 extern void SNDi_UnlockMutex(void);
 extern void DC_StoreRange(const void *addr, u32 size);
 
@@ -45,7 +45,7 @@ void SND_DestroyBank(SNDBankData *bank)
     SNDWaveArc *waveArc;
     int i;
 
-    func_0200eddc();
+    LockSoundCommandMutex();
 
     for (i = 0; i < SND_BANK_TO_WAVEARC_MAX; i++) {
         waveArc = bank->waveArcLink[i].waveArc;

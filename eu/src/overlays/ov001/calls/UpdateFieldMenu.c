@@ -2,7 +2,7 @@
 #define data_0205fde4 gPanelActive
 #define FillBackgroundLayerRect_02001a60 FillBackgroundLayerRect
 #define GetSceneTagTracker_020711b0 GetSceneTagTracker
-#define NNSi_FndGetCurrentRootHeap_0202a764 NNSi_FndGetCurrentRootHeap
+#define NNSi_FndGetCurrentRootHeap_0202a764 GetRunningTaskWork
 #define PXI_Init_02028dac BeginOrthographicCameraWrapper
 #define PXI_Init_02028db8 RestoreSavedCameraWrapper
 #define UpdateFieldMenu_020779f0 UpdateFieldMenu

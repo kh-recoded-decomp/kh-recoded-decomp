@@ -1,4 +1,4 @@
-#define NNSi_FndGetCurrentRootHeap_0202a764 NNSi_FndGetCurrentRootHeap
+#define NNSi_FndGetCurrentRootHeap_0202a764 GetRunningTaskWork
 #define StepFadeTween_02066d70 StepFadeTween
 #define WaitFadeDelay_02066d30 WaitFadeDelay
 #define func_02003fd4 OS_GetTick

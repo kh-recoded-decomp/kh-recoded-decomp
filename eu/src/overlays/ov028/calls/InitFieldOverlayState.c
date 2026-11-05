@@ -4,7 +4,7 @@
 #define CreateSessionTask_0206c6dc CreateSessionTask
 #define InitFieldOverlayState_020ba3e0 InitFieldOverlayState
 #define LoadPzTextureParams_02066488 LoadPzTextureParams
-#define NNSi_FndGetCurrentRootHeap_0202a764 NNSi_FndGetCurrentRootHeap
+#define NNSi_FndGetCurrentRootHeap_0202a764 GetRunningTaskWork
 #define RebuildRecordCounters_02028e6c RebuildRecordCounters
 #define SetupAllSelectionRecords_0204f85c SetupAllSelectionRecords
 #define SetupFlaggedSelectionRecords_0204f778 SetupFlaggedSelectionRecords
@@ -13,7 +13,7 @@
 #define data_020b52a0 gSubModeTaskDefinition
 #define data_ov028_020bb380 data_ov028_020bb3a0
 #define func_0202a158 Heap_GetCurrent
-#define func_0202a448 func_0202a45c
+#define func_0202a448 CreateTaskObject
 #define func_0204f8dc FillSelectionRecordFromGroup
 #define func_0204f98c BuildSelectionEntryList
 #define func_0204fba0 func_0204fbb4

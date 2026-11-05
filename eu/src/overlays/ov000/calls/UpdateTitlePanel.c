@@ -33,7 +33,7 @@ extern PanelPhaseTable gTitleScreenOptionHandlers;
 extern PanelStateHandlers gPanelInitialStateHandler[];
 extern PanelStateHandlers gPanelStateHandlers[];
 
-extern Panel *NNSi_FndGetCurrentRootHeap(void);
+extern Panel *GetRunningTaskWork(void);
 extern void SetPanelMode(Panel *panel, u32 mode);
 extern void NNS_FndInitListWithOffset0_0204f130(void *list);
 extern u16 AdvanceAnimationTracks(void *animation, int delta);
@@ -41,7 +41,7 @@ extern void SceneNode_Draw(void *animation);
 
 int UpdateTitlePanel(void)
 {
-    Panel *panel = NNSi_FndGetCurrentRootHeap();
+    Panel *panel = GetRunningTaskWork();
     PanelPhaseTable phases = gTitleScreenOptionHandlers;
     int result = 0;
 

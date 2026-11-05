@@ -1,5 +1,5 @@
 #define NNSi_FndAllocFromExpHeapEx_0202a1e4 NNSi_FndAllocFromExpHeapEx
-#define NNSi_FndGetCurrentRootHeap_0202a764 NNSi_FndGetCurrentRootHeap
+#define NNSi_FndGetCurrentRootHeap_0202a764 GetRunningTaskWork
 #define StartSubMode_020af260 StartSubMode
 #define data_ov021_020b5290 gSubModeOverlayIds
 #define data_ov021_020b56a0 data_ov021_020b56c0

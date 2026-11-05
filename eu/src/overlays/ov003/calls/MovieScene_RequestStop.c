@@ -1,3 +1,3 @@
 #define MovieScene_RequestStop_020646e8 MovieScene_RequestStop
-#define NNSi_FndGetCurrentRootHeap_0202a764 NNSi_FndGetCurrentRootHeap
+#define NNSi_FndGetCurrentRootHeap_0202a764 GetRunningTaskWork
 #include "src/ov003/video_playback/MovieScene_RequestStop_020646e8.c"

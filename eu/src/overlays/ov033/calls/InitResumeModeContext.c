@@ -22,7 +22,7 @@ typedef struct ResumeModeParams {
 
 extern ResumeModeContext *data_ov033_020baae0;
 extern char OVERLAY_104_ID[];
-extern ResumeModeContext *NNSi_FndGetCurrentRootHeap(void);
+extern ResumeModeContext *GetRunningTaskWork(void);
 extern void LoadOverlayAfterGeometryTransfer(int processor, int overlayId);
 extern void UnloadOverlayAfterGeometryTransfer(int processor, int overlayId);
 extern s32 __DSProt_DetectNotEmulator(void *task, void *callback, int arg);
@@ -39,7 +39,7 @@ void *InitResumeModeContext(ResumeModeParams *params)
     void *setter;
     BOOL failed;
 
-    data_ov033_020baae0 = NNSi_FndGetCurrentRootHeap();
+    data_ov033_020baae0 = GetRunningTaskWork();
     LoadOverlayAfterGeometryTransfer(0, (int)OVERLAY_104_ID);
     setter = NULL;
     failed = __DSProt_DetectNotEmulator(func_ov033_020ba400, setter, 0) == ~(u32)setter;

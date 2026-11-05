@@ -1,5 +1,5 @@
 /* Unlinks and clears the whole wave-archive chain under the sound mutex. */
-extern void func_0200eddc(void);
+extern void LockSoundCommandMutex(void);
 extern void SNDi_UnlockMutex(void);
 extern void DC_StoreRange(void *p, unsigned int len);
 
@@ -8,7 +8,7 @@ void SND_DestroyWaveArc(int **owner) {
     int zero;
     int len;
     int *next;
-    func_0200eddc();
+    LockSoundCommandMutex();
     node = (int *)owner[6];
     if (node != 0) {
         zero = 0;

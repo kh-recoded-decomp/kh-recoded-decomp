@@ -5,13 +5,13 @@ typedef unsigned int code();
 extern unsigned int UpdatePopupManager_020c2da0();
 extern unsigned int data_ov093_020c5104;
 extern unsigned int GetBgDataFromArchive();
-extern unsigned int NNSi_FndGetCurrentRootHeap();
+extern unsigned int GetRunningTaskWork();
 extern unsigned int Archive_LoadFile();
 
 code * InitPopupManager(unsigned int *initialValues) {
   u32 resource;
 
-  data_ov093_020c5104 = NNSi_FndGetCurrentRootHeap();
+  data_ov093_020c5104 = GetRunningTaskWork();
   *(unsigned int *)((int)data_ov093_020c5104 + 4) = *initialValues;
   *(unsigned int *)((int)data_ov093_020c5104 + 8) = initialValues[1];
   *(unsigned int *)((int)data_ov093_020c5104 + 0xc) = initialValues[2];

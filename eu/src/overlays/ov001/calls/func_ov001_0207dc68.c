@@ -1,7 +1,7 @@
 #include "nitro/types.h"
 
 extern u32 data_ov001_020a04f0;
-extern void *NNSi_FndGetCurrentRootHeap(void);
+extern void *GetRunningTaskWork(void);
 extern void MI_CpuFill8(void *dest, s32 value, u32 size);
 extern void LoadBg2CharAndFrames(void *context);
 extern void *NNSi_FndAllocFromDefaultHeap(u32 size);
@@ -12,7 +12,7 @@ u32 func_ov001_0207dc68(u8 *param)
 {
     u8 *context;
 
-    context = NNSi_FndGetCurrentRootHeap();
+    context = GetRunningTaskWork();
     data_ov001_020a04f0 = (u32)context;
     MI_CpuFill8(context, 0, 0x4c);
     LoadBg2CharAndFrames(context);

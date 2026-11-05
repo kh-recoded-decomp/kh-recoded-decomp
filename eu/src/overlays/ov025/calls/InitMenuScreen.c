@@ -8,7 +8,7 @@
 #define LoadSubBgGraphics_020b5908 LoadSubBgGraphics
 #define MakePrimaryVramKey_020711ec MakePrimaryVramKey
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
-#define NNSi_FndGetCurrentRootHeap_0202a764 NNSi_FndGetCurrentRootHeap
+#define NNSi_FndGetCurrentRootHeap_0202a764 GetRunningTaskWork
 #define PXI_Init_020b9078 func_ov027_020b9098
 #define QueueFileLoadRequest_020ba114 QueueFileLoadRequest
 #define SetEntrySlotsVisible_020b9580 SetEntrySlotsVisible

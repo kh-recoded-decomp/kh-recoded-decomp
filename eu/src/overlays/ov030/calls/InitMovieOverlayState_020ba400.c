@@ -5,13 +5,13 @@
 #define GetOverlaySelectionRecord_0204f768 GetOverlaySelectionRecord
 #define InitMovieOverlayState_020ba3e0 InitMovieOverlayState_020ba400
 #define LoadPzTextureParams_02066488 LoadPzTextureParams
-#define NNSi_FndGetCurrentRootHeap_0202a764 NNSi_FndGetCurrentRootHeap
+#define NNSi_FndGetCurrentRootHeap_0202a764 GetRunningTaskWork
 #define RunSceneStateMachine_020ba4c0 RunSceneStateMachine_020ba4e0
 #define SetupMovieDisplay_020bab00 SetupMovieDisplay_020bab20
 #define data_ov001_0209eb18 gSceneWorkClassDescriptor
 #define data_ov021_020b52a0 gSubModeTaskDefinition
 #define func_0202a158 Heap_GetCurrent
-#define func_0202a448 func_0202a45c
+#define func_0202a448 CreateTaskObject
 #define func_ov001_020633a0 QueueFieldUpdate
 #define func_ov030_020bc424 InitMovieSelectionItems
 #define g_moviePlayerCtx_020bd000 data_ov030_020bd020

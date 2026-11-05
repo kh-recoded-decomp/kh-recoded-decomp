@@ -1,5 +1,5 @@
 #define EnterOv039Selection_02063680 EnterOv039Selection
-#define NNSi_FndGetCurrentRootHeap_0202a764 NNSi_FndGetCurrentRootHeap
+#define NNSi_FndGetCurrentRootHeap_0202a764 GetRunningTaskWork
 #define func_02029f78 LoadOverlayAfterGeometryTransfer
 #define InitOverlayState_020bb888 InitOverlayState
 #define func_ov039_020bcd68 RuntimeState_SetObjectId

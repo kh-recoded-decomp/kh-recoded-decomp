@@ -1,8 +1,8 @@
 #include "src/overlays/ov036/Event2DPanel.h"
 
-#define GetCurrentTaskWork NNSi_FndGetCurrentRootHeap
-#define InitPcmChannel func_020257d8
-#define CreateTask func_0202a45c
+#define GetCurrentTaskWork GetRunningTaskWork
+#define InitPcmChannel AllocateScriptVmBuffer
+#define CreateTask CreateTaskObject
 #define LoadOverlaySync LoadOverlayAfterGeometryTransfer
 #define UnloadOverlaySync UnloadOverlayAfterGeometryTransfer
 

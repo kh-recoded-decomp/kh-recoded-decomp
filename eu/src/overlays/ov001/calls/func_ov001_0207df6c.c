@@ -2,7 +2,7 @@
 
 extern u32 data_ov001_020a04f0;
 extern u32 GetSceneTagTracker(void);
-extern u32 func_0202a7b8(void);
+extern u32 GetTaskUpdateCount(void);
 extern u32 FindActiveRecordById(u32 handle, u32 tag);
 extern void TagTracker_InvokeCallback(u32 handle, u32 value);
 extern void ShowTwoDigitCounters(void *context);
@@ -17,7 +17,7 @@ void func_ov001_0207df6c(u32 param, u8 flag)
     handle = GetSceneTagTracker();
     context[0] = 0;
     context[1] = flag;
-    value = func_0202a7b8();
+    value = GetTaskUpdateCount();
     *(u32 *)(context + 0x10) = value;
     *(u32 *)(context + 0x18) = 0;
     *(u32 *)(context + 0x1c) = param;

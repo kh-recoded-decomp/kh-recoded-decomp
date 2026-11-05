@@ -23,7 +23,7 @@ extern FieldManagerHandle data_ov001_020a04c4;
 extern const u8 data_ov045_020c0820[];
 extern char OVERLAY_45_ID[];
 extern void LoadOverlayAfterGeometryTransfer(int processor, int overlayId);
-extern void *func_0202a45c(const void *descriptor, LayerSpec *spec);
+extern void *CreateTaskObject(const void *descriptor, LayerSpec *spec);
 
 void OpenFieldSubScreenLayer(int argument)
 {
@@ -37,7 +37,7 @@ void OpenFieldSubScreenLayer(int argument)
     if (manager->subLayer == NULL) {
         manager->flags &= ~1;
         manager->flags |= 0x40;
-        manager->subLayer = func_0202a45c(data_ov045_020c0820, &spec);
+        manager->subLayer = CreateTaskObject(data_ov045_020c0820, &spec);
         *(vu32 *)0x04000000 = (*(vu32 *)0x04000000 & ~0x1f00) | 0xf00;
     }
 }

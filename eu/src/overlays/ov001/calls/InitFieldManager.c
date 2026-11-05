@@ -69,7 +69,7 @@ extern char sOv001_UiBtlFaceP2_0209edc8[];
 extern u8 sOv001_BTLUITASK_0209edd8[];
 extern u8 OVERLAY_27_ID[];
 
-extern void *NNSi_FndGetCurrentRootHeap(void);
+extern void *GetRunningTaskWork(void);
 extern void MI_CpuFill8(void *dst, int value, u32 size);
 extern void *Msg_OpenContainerAndReadHeader(const char *name, u32 mode, BOOL allocFromEnd);
 extern BOOL IsModeSetOrFlag370aClear(void);
@@ -131,7 +131,7 @@ void *InitFieldManager(FieldParams *params)
     u32 progressBits;
     SaveSlots *slots;
 
-    manager = NNSi_FndGetCurrentRootHeap();
+    manager = GetRunningTaskWork();
     data_ov001_020a04c4.manager = manager;
     MI_CpuFill8(manager, 0, 0x1358);
     data_ov001_020a04c4.active = 1;

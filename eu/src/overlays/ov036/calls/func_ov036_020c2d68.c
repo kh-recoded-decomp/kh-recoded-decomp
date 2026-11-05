@@ -9,14 +9,14 @@ extern unsigned int CloseOverlayPanel();
 extern unsigned int data_ov036_020ca204;
 extern unsigned int ConfigureOverlay036BackgroundControls();
 extern unsigned int setDualArrayEntry();
-extern unsigned int NNSi_FndGetCurrentRootHeap();
+extern unsigned int GetRunningTaskWork();
 extern unsigned int func_ov036_020c2854();
 extern unsigned int SetupOverlayVramBanks();
 
 code * func_ov036_020c2d68(void) {
   unsigned int instance;
 
-  data_ov036_020ca204 = NNSi_FndGetCurrentRootHeap();
+  data_ov036_020ca204 = GetRunningTaskWork();
   SetupOverlayVramBanks();
   ConfigureOverlay036BackgroundControls();
   setDualArrayEntry(0,func_ov036_020c32bc,0);

@@ -1,7 +1,7 @@
 #include "nitro/types.h"
 
 extern unsigned int gMovieContextState;
-extern unsigned int PXI_Init_0202a64c();
+extern unsigned int DestroyTaskObjectWrapper();
 extern unsigned int PopVramState();
 extern unsigned int ReleaseMovieResources();
 extern unsigned int ReleaseSeqArcHeapLevel();
@@ -29,7 +29,7 @@ unsigned int func_ov035_020ba6e4(void) {
   func_ov001_0207efa0();
   func_ov035_020bb7a8();
   if (*(int *)(gMovieContextState + 0x14) != -1) {
-    PXI_Init_0202a64c(*(int *)(gMovieContextState + 0x14));
+    DestroyTaskObjectWrapper(*(int *)(gMovieContextState + 0x14));
     *(unsigned int *)(gMovieContextState + 0x14) = 0xffffffff;
   }
   SuspendTaskAndSetFlag();

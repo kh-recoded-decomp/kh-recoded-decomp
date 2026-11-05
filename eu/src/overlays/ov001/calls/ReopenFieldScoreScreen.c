@@ -35,7 +35,7 @@ extern SessionWork *data_ov001_020a0480;
 extern char data_ov045_020c0820[];
 extern char OVERLAY_45_ID[];
 extern void LoadOverlayAfterGeometryTransfer(int processor, int overlay_id);
-extern void *func_0202a45c(void *descriptor, void *userData);
+extern void *CreateTaskObject(void *descriptor, void *userData);
 extern u32 func_ov001_02063b68(s32 index);
 extern u32 ReadSessionPackedBits(int bitOffset, u32 bitCount);
 extern void WriteSessionPackedBits(int bitOffset, u32 bitCount, u32 value);
@@ -71,6 +71,6 @@ void ReopenFieldScoreScreen(void)
         if (scene->objChar != NULL) {
             GX_LoadBGPltt(scene->objChar, 0, 0x200);
         }
-        scene->resultScreen = func_0202a45c(data_ov045_020c0820, &params);
+        scene->resultScreen = CreateTaskObject(data_ov045_020c0820, &params);
     }
 }

@@ -2,7 +2,7 @@
 #define DestroyFieldObjectManager_0207ed6c DestroyFieldObjectManager
 #define LoadSeqArcIfChanged_0204d5f0 LoadSeqArcIfChanged
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
-#define NNSi_FndGetCurrentRootHeap_0202a764 NNSi_FndGetCurrentRootHeap
+#define NNSi_FndGetCurrentRootHeap_0202a764 GetRunningTaskWork
 #define ReleaseRecordManager_02051cdc ReleaseRecordManager
 #define ReleaseServiceInstance_02068e64 ReleaseServiceInstance
 #define ShutdownFieldSession_02061b54 ShutdownFieldSession
@@ -14,7 +14,7 @@
 #define ZeroHalfThenFree_0202cd78 ZeroHalfThenFree
 #define data_ov001_020a0460 data_ov001_020a0480
 #define func_02029f98 UnloadOverlayAfterGeometryTransfer
-#define func_0202a638 PXI_Init_0202a64c
+#define func_0202a638 DestroyTaskObjectWrapper
 #define func_02035774 ShutdownActorRegistry
 #define func_02050a44 func_02050a58
 #define func_ov001_02066e18 DestroySubScene9Task

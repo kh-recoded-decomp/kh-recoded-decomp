@@ -56,7 +56,7 @@ extern int data_ov024_020b754c[6];
 extern char sOv024_UiBtlBtluiP2_020b74f4[];
 extern char sOv024_UiBtlBtlLanguageP2_020b7508[];
 
-extern BoardState *NNSi_FndGetCurrentRootHeap(void);
+extern BoardState *GetRunningTaskWork(void);
 extern void MI_CpuFill8(void *dest, int value, int size);
 extern void MIi_CpuClear32(int value, void *dest, int size);
 extern BOOL IsSessionFlagSet(int flag);
@@ -87,7 +87,7 @@ void *CreateBoardScreen(int mode)
     BoardState *state;
     int i;
 
-    state = NNSi_FndGetCurrentRootHeap();
+    state = GetRunningTaskWork();
     data_ov024_020b7540.state = state;
     MI_CpuFill8(state, 0, 0x6700);
     MIi_CpuClear32(-1, data_ov024_020b7540.state->cellIds, 0x48);

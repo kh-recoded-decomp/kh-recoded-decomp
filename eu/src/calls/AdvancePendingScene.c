@@ -14,7 +14,7 @@ static inline void ResetSceneHeapRecord(void *storage)
 #define func_02029f78 LoadOverlayAfterGeometryTransfer
 #define func_02029f98 UnloadOverlayAfterGeometryTransfer
 #define func_0202a0f0 ResetSceneHeapRecord
-#define func_0202a448 func_0202a45c
+#define func_0202a448 CreateTaskObject
 #define func_0202a5a4 StoreWord0
-#define func_0202a720 func_0202a734
+#define func_0202a720 CollectFinishedTask
 #include "src/arm9/scene_dispatch/AdvancePendingScene_02025570.c"

@@ -4,7 +4,7 @@
 #define ArmObject_0206c6f4 func_ov001_0206c6f4
 #define DestroySceneState_020ba804 DestroySceneState
 #define FreePointerIfSet_020ba294 FreePointerIfSet
-#define PXI_Init_0202a638 PXI_Init_0202a64c
+#define PXI_Init_0202a638 DestroyTaskObjectWrapper
 #define SetSoundListenersEnabled_0204df9c SetSoundListenersEnabled
 #define SuspendTaskAndSetFlag_020667b4 SuspendTaskAndSetFlag
 #define data_ov001_020a0460 data_ov001_020a0480

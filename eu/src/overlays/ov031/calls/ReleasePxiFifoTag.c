@@ -1,4 +1,4 @@
-#define PXI_Init_0202a638 PXI_Init_0202a64c
+#define PXI_Init_0202a638 DestroyTaskObjectWrapper
 #define ReleasePxiFifoTag_020bb4f8 ReleasePxiFifoTag
 #define func_0204f98c BuildSelectionEntryList
 #define func_0204fabc SyncSelectionRecordFromSlotEntry

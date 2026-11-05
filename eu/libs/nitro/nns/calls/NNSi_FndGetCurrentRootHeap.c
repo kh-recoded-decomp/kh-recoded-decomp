@@ -1,3 +1,0 @@
-#define NNSi_FndGetCurrentRootHeap_0202a764 NNSi_FndGetCurrentRootHeap
-#define data_020603c8 gTaskManager
-#include "src/arm9/library_nitro_nns/NNSi_FndGetCurrentRootHeap_0202a764.c"

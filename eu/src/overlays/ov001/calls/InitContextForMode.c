@@ -1,5 +1,5 @@
 #define InitContextForMode_0207e8a4 InitContextForMode
-#define NNSi_FndGetCurrentRootHeap_0202a764 NNSi_FndGetCurrentRootHeap
+#define NNSi_FndGetCurrentRootHeap_0202a764 GetRunningTaskWork
 #define data_ov001_020a04d4 data_ov001_020a04f4
 #define func_ov001_0207e130 InitFieldSpriteSlots
 #define func_ov001_0207e244 func_ov001_0207e26c

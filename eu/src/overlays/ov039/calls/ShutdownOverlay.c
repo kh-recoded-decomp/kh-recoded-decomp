@@ -40,7 +40,7 @@ extern int FSi_DefaultStepDoneB(void *step);
 extern BOOL FreeResourceBufferAndProbeHeap(FreeableResource *resource);
 extern BOOL ReleaseRecordSlot(s32 slot);
 extern void ReleaseRecordManager(void);
-extern void PXI_Init_0202a64c(void *resource);
+extern void DestroyTaskObjectWrapper(void *resource);
 extern void FreeSlotPair(Ov039State *state, int slot);
 extern void NNSi_FndFreeFromDefaultHeap(void *block);
 extern void UnloadOverlayAfterGeometryTransfer(int processor, int overlayId);
@@ -76,7 +76,7 @@ void ShutdownOverlay(void)
     ReleaseRecordSlot(0);
     ReleaseRecordSlot(1);
     ReleaseRecordManager();
-    PXI_Init_0202a64c(state->sharedResource);
+    DestroyTaskObjectWrapper(state->sharedResource);
     FreeSlotPair(state, 0);
     FreeSlotPair(state, 2);
     if (state != NULL) {

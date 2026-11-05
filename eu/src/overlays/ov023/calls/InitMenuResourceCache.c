@@ -8,7 +8,7 @@ typedef struct {
 
 extern ResourceCacheState *data_ov023_020b6f80;
 extern u32 data_ov023_020b6f2c;
-extern void *NNSi_FndGetCurrentRootHeap(void);
+extern void *GetRunningTaskWork(void);
 extern void MI_CpuFill8(void *dst, u32 val, u32 size);
 extern void SetupMenuSubBgLayers(void);
 extern u32 Obj_CreateWithTailWork(void *arg0, u32 arg1);
@@ -24,7 +24,7 @@ u32 InitMenuResourceCache(void)
     u32 value;
 
     func_ov001_0207b228((u32)SetupMenuSubBgLayers);
-    state = (ResourceCacheState *)NNSi_FndGetCurrentRootHeap();
+    state = (ResourceCacheState *)GetRunningTaskWork();
     data_ov023_020b6f80 = state;
     MI_CpuFill8(state, 0, 0x40);
     SetupMenuSubBgLayers();

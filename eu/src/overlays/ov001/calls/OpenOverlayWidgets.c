@@ -32,7 +32,7 @@ extern void SetFieldVisiblePlanes(void);
 extern void GX_LoadBG3Char(const void *src, u32 offset, u32 size);
 extern void GX_LoadBG2Char(const void *src, u32 offset, u32 size);
 extern void GX_LoadBGPltt(const void *src, u32 offset, u32 size);
-extern void *func_0202a45c(void *descriptor, void *userData);
+extern void *CreateTaskObject(void *descriptor, void *userData);
 
 void OpenOverlayWidgets(void)
 {
@@ -52,6 +52,6 @@ void OpenOverlayWidgets(void)
         if (state->palette != NULL) {
             GX_LoadBGPltt(state->palette, 0, 0x200);
         }
-        state->handle = func_0202a45c(data_ov045_020c0820, &params);
+        state->handle = CreateTaskObject(data_ov045_020c0820, &params);
     }
 }
