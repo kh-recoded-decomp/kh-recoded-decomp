@@ -15,7 +15,7 @@
 #define func_020019f4 GetNestedModeByte
 #define func_020275c8 CheckStatusAndThreshold
 #define func_0202e060 SPrintfUnbounded
-#define func_ov027_020ba2a8 func_ov027_020ba2c8
+#define func_ov027_020ba2a8 GetPackedFileEntry
 #define func_ov099_020beb20 RemapModelId
 #define func_ov099_020c0588 DrawShadowedAnchoredText_020c05a8
 #define func_ov099_020c05ec func_ov099_020c060c

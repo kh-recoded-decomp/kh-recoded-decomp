@@ -3,5 +3,5 @@
 #define SetStatusHeaderMessage_020c1dbc SetStatusHeaderMessage
 #define ShowEntryHeaderMessage_020cad14 ShowEntryHeaderMessage
 #define data_ov075_020d1858 sLockedRecordDescription
-#define func_ov027_020ba2a8 func_ov027_020ba2c8
+#define func_ov027_020ba2a8 GetPackedFileEntry
 #include "src/ov075/unclassified_helpers/ShowEntryHeaderMessage_020cad14.c"

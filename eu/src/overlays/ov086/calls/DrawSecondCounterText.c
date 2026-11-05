@@ -5,5 +5,5 @@
 #define data_ov086_020c2fc4 sOv086_Empty_020c2fe4
 #define data_ov086_020c2fc8 gRecordStatisticNumberFormat
 #define func_ov001_02064574 ReadSessionPackedBits
-#define func_ov027_020ba2a8 func_ov027_020ba2c8
+#define func_ov027_020ba2a8 GetPackedFileEntry
 #include "src/ov086/panel_state/DrawSecondCounterText_020bfd0c.c"

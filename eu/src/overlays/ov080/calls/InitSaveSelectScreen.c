@@ -17,7 +17,7 @@
 #define func_ov039_020bcb20 FormatSaveLocationLabel
 #define SetTextColorIfFits_020bcd04 SetTextColorIfFits
 #define DrawTextAnchored_020015a0 DrawTextAnchored
-#define func_ov027_020ba2a8 func_ov027_020ba2c8
+#define func_ov027_020ba2a8 GetPackedFileEntry
 #define func_ov039_020bc1bc func_ov039_020bc1dc
 #define BuildSlotImageParams_020bc220 BuildSlotImageParams
 #define InitObjManagerAndMark_020b9060 InitObjManagerAndMark

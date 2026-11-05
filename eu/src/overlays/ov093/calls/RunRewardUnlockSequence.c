@@ -48,7 +48,7 @@ extern void ClearEntryFlag(int flagSet, int entryIndex);
 extern void SetGlobalPackedBit(int bitIndex);
 extern void SetSceneState(int state, SceneWork *work);
 extern RecordB *GetRecordTableBEntry(s32 index);
-extern void *func_ov027_020ba2c8(PackedFileView *view, int index);
+extern void *GetPackedFileEntry(PackedFileView *view, int index);
 extern u32 GetLanguageIndex(void);
 extern void *OS_SNPrintf_0202e094(char *dst, unsigned int len, const char *fmt, ...);
 extern s32 SetSharedFlagBits(u32 handle);
@@ -101,10 +101,10 @@ void RunRewardUnlockSequence(SceneWork *work)
         handle = entry->handle;
         record = GetRecordTableBEntry(handle);
         views = &work->views[0];
-        label = func_ov027_020ba2c8(views, 4);
-        prefix = func_ov027_020ba2c8(views, 5);
+        label = GetPackedFileEntry(views, 4);
+        prefix = GetPackedFileEntry(views, 5);
         nameId = record->nameId;
-        suffix = func_ov027_020ba2c8(views, 6);
+        suffix = GetPackedFileEntry(views, 6);
         switch (GetLanguageIndex()) {
         case 3:
             OS_SNPrintf_0202e094(text, 0x100, data_ov093_020c4db4, label, entry->itemId, prefix, nameId, suffix);

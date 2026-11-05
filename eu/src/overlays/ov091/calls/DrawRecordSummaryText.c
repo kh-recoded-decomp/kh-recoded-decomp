@@ -6,5 +6,5 @@
 #define data_ov091_020c2c68 data_ov091_020c2c88
 #define func_020019f4 GetNestedModeByte
 #define func_0202e060 SPrintfUnbounded
-#define func_ov027_020ba2a8 func_ov027_020ba2c8
+#define func_ov027_020ba2a8 GetPackedFileEntry
 #include "src/ov091/panel_state/DrawRecordSummaryText_020bf540.c"

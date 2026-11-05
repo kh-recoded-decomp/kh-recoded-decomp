@@ -28,8 +28,8 @@
 #define func_ov027_020b95e4 ClearWidgetRecordActiveBits
 #define func_ov027_020b96a0 SetWidgetAnimationFrame
 #define func_ov027_020b96e4 SetFocusedWidget
-#define func_ov027_020ba2a8 func_ov027_020ba2c8
-#define func_ov027_020ba2e0 func_ov027_020ba300
+#define func_ov027_020ba2a8 GetPackedFileEntry
+#define func_ov027_020ba2e0 FormatPackedWideText
 #define func_ov034_020bb234 AdvanceResultsTransition
 #define func_ov034_020bce50 ResetResultsObjects
 #define func_ov034_020bcf30 DrawResultsCounter

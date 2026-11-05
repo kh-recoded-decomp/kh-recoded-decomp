@@ -6,7 +6,7 @@
 #define SetScreenLayerDirty_020bc104 SetScreenLayerDirty
 #define ToggleMatrixOverview_020cb8f8 ToggleMatrixOverview
 #define UpdateScreenWidgetLayer_020bc1e4 UpdateScreenWidgetLayer
-#define func_ov027_020ba2a8 func_ov027_020ba2c8
+#define func_ov027_020ba2a8 GetPackedFileEntry
 #define func_ov039_020bca00 GetMenuInputState
 #define func_ov075_020c4370 SelectMatrixNode
 #include "src/ov075/unclassified_helpers/ToggleMatrixOverview_020cb8f8.c"

@@ -98,7 +98,7 @@ extern int GetTextLayerLineWidth(void *layer, const u16 *text, const u16 **next)
 extern void Obj_SetField14(void *layer, void *font);
 extern void *GetMenuFont10s(void);
 extern void *GetMenuFont10(void);
-extern u16 *func_ov027_020ba2c8(void *strings, int index);
+extern u16 *GetPackedFileEntry(void *strings, int index);
 extern const ListTouchSample *CopySourceBlock(void *dst);
 extern void FlushDirtyTileTableRows(void *table);
 
@@ -252,7 +252,7 @@ void UpdateStatusMenu(StatusMenu *menu)
                         y += 12;
                     }
                     if (menu->captionModes[mode] == 4 && menu->page == 1 && mode != 0) {
-                        DrawTextAnchored(menu->infoLayer, 4, 0x18, 10, 8, func_ov027_020ba2c8(menu->strings, 0x23));
+                        DrawTextAnchored(menu->infoLayer, 4, 0x18, 10, 8, GetPackedFileEntry(menu->strings, 0x23));
                     }
                     DrawTextColored(menu->infoLayer, 4, y, 2, 6, menu->bodies[mode]);
                 }

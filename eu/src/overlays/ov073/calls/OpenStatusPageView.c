@@ -1,7 +1,7 @@
 #define OpenStatusPageView_020bfefc OpenStatusPageView
 #define SetupScrollList_020bdf10 SetupStageParams
 #define SetStatusElementVisible_020beb5c SetStatusElementVisible
-#define func_ov027_020ba2a8 func_ov027_020ba2c8
+#define func_ov027_020ba2a8 GetPackedFileEntry
 #define OS_SNPrintf_0202e080 OS_SNPrintf_0202e094
 #define ShowStatusPageContents_020c1b28 ShowStatusPageContents
 #define data_ov073_020c4180 data_ov073_020c41a0

@@ -8,6 +8,6 @@
 #define data_ov078_020c5104 data_ov078_020c5124
 #define data_ov078_020c519c gPageNameRankFormat
 #define data_ov078_020c51a8 gPageLevelFormat
-#define func_ov027_020ba2a8 func_ov027_020ba2c8
+#define func_ov027_020ba2a8 GetPackedFileEntry
 #define func_ov078_020c4c2c DrawLayoutLine
 #include "src/ov078/unclassified_helpers/DrawPageHeader_020c4b18.c"

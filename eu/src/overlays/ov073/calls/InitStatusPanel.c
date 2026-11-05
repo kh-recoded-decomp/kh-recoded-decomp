@@ -58,7 +58,7 @@ extern Record *CloneRecord(Record **out, u32 id, int useTailAlloc, int heapTag);
 extern void SetupStageParams(void *list, void *container, int arg);
 extern u16 *UpdateScreenWidgetLayer(int widget);
 extern BOOL InitTextLayerAt(void *obj, int layer, u16 *screenBase, void *font, TextFrame *frame);
-extern u16 *func_ov027_020ba2c8(void *table, int index);
+extern u16 *GetPackedFileEntry(void *table, int index);
 extern void DrawTextAnchored(void *layer, int x, int y, int color, u32 flags, const u16 *text);
 extern void FlushBufferAndRunCallback(void *context);
 extern int AcquireRecordSlot(int slot, int param);
@@ -83,7 +83,7 @@ void InitStatusPanel(StatusMenu *menu, StatusPanel *panel)
     SetupStageParams(menu->list, menu->container, 0);
     screenBase = UpdateScreenWidgetLayer(0x18);
     InitTextLayerAt(panel->titleLayer, 4, screenBase, menu->font, &titleFrame);
-    DrawTextAnchored(panel->titleLayer, 0, 5, 2, 8, func_ov027_020ba2c8(menu->strings, 5));
+    DrawTextAnchored(panel->titleLayer, 0, 5, 2, 8, GetPackedFileEntry(menu->strings, 5));
     InitTextLayerAt(panel->textLayer, 4, screenBase, menu->font, &textFrame);
     FlushBufferAndRunCallback(panel->textLayer);
     AcquireRecordSlot(1, 1);

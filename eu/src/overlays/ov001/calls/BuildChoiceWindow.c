@@ -9,5 +9,5 @@
 #define func_02001914 CreateTextSurface
 #define func_ov001_02073634 MakePrimaryVramKey_02073634
 #define func_ov027_020ba25c LoadPackedFileView
-#define func_ov027_020ba2a8 func_ov027_020ba2c8
+#define func_ov027_020ba2a8 GetPackedFileEntry
 #include "src/ov001/text_rendering/BuildChoiceWindow_0206f730.c"

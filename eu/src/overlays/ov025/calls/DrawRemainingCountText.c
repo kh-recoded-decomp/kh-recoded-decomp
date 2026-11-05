@@ -5,5 +5,5 @@
 #define func_0200160c func_02001620
 #define func_ov001_0207b73c func_ov001_0207b764
 #define func_ov001_0207b748 func_ov001_0207b770
-#define func_ov027_020ba2e0 func_ov027_020ba300
+#define func_ov027_020ba2e0 FormatPackedWideText
 #include "src/ov025/menu_widgets/DrawRemainingCountText_020b5858.c"

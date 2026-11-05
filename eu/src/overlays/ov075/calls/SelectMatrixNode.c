@@ -10,7 +10,7 @@
 #define data_ov075_020d13f4 gOv075StateHandlers
 #define data_ov075_020d1408 gOv075CursorHandlers
 #define data_ov075_020d1518 data_ov075_020d1538
-#define func_ov027_020ba2a8 func_ov027_020ba2c8
+#define func_ov027_020ba2a8 GetPackedFileEntry
 #define func_ov073_020c1eb4 RefreshStatusMenuData
 #define func_ov073_020c2ca4 SetStatusPageAndCursor
 #define func_ov075_020c4260 HasUnvisitedLink

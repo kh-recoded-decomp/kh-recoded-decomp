@@ -8,5 +8,5 @@
 #define MapKindToCategory_02078b04 MapKindToCategory
 #define data_ov001_0209df14 gCategoryLabelTextFrame
 #define func_01ff878c MIi_CpuCopyFast
-#define func_ov027_020ba2a8 func_ov027_020ba2c8
+#define func_ov027_020ba2a8 GetPackedFileEntry
 #include "src/ov001/text_rendering/DrawCategoryLabel_02078ba8.c"

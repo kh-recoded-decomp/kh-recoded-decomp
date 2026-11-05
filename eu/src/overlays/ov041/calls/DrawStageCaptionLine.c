@@ -4,8 +4,8 @@
 extern const StageCaptionFrameTiles gStageCaptionFrameTiles;
 extern const u16 gStageCaptionTextFormat[];
 extern void MIi_CpuCopyFast(const void *src, void *dest, u32 size);
-extern const u16 *func_ov027_020ba2c8(void *messages, int index);
-extern u16 *func_ov027_020ba300(void *messages, int index, u16 *buffer, int capacity, ...);
+extern const u16 *GetPackedFileEntry(void *messages, int index);
+extern u16 *FormatPackedWideText(void *messages, int index, u16 *buffer, int capacity, ...);
 extern s32 GetHudLabelId(int labelIndex);
 extern int OS_SNPrintf_0202e094(u16 *buffer, int capacity, const u16 *format, ...);
 extern int GetTextLayerLineWidth(void *layer, const u16 *text, const u16 **nextLine);
@@ -58,10 +58,10 @@ void DrawStageCaptionLine(StageCaption *caption, StageTextLine *line, int style)
     }
     switch (style) {
     case 0:
-        OS_SNPrintf_0202e094(text, 0x40, gStageCaptionTextFormat, func_ov027_020ba2c8(&caption->messages, line->messageId));
+        OS_SNPrintf_0202e094(text, 0x40, gStageCaptionTextFormat, GetPackedFileEntry(&caption->messages, line->messageId));
         break;
     case 2:
-        func_ov027_020ba300(&caption->messages, 0xd, text, 0x40, GetHudLabelId(line->messageId), line->rows);
+        FormatPackedWideText(&caption->messages, 0xd, text, 0x40, GetHudLabelId(line->messageId), line->rows);
         break;
     default:
         OS_SNPrintf_0202e094(text, 0x40, gStageCaptionTextFormat, GetHudLabelId(line->messageId));

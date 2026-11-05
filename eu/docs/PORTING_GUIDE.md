@@ -26,6 +26,8 @@ This is a matching decompilation; a host port is a separate project.
   conditional clearing and the boundary between proven fields and unknown bits.
 - [Widget record operations](WIDGET_RECORD_OPS.md) records two-ID iteration,
   animation frame selection, active bits, mode replacement and legacy ABI views.
+- [Packed resources](PACKED_RESOURCES.md) records variable-length entry lookup,
+  buffer ownership, 16-bit formatting capacities and the native argument ABI.
 - [Results scene](RESULTS_SCENE.md), [scene loading](SCENE_LOAD_STEP.md),
   [carousel models](CAROUSEL_MODELS.md), [widgets](WIDGET_POSITION.md) and
   [field-menu palette](FIELD_MENU_PALETTE.md) record behavior and the matching

@@ -15,7 +15,7 @@ extern u16 gRankGlyphCodepoints[];
 extern u8 *GetPageTableEntry(u32 index);
 extern BOOL IsGlobalPackedBitSet(int bit);
 extern u32 ReadGlobalPackedBits(u32 bit, u32 width);
-extern void *func_ov027_020ba2c8(int *view, int index);
+extern void *GetPackedFileEntry(int *view, int index);
 extern int GetGridTableValue(int row, int column);
 extern RecordSlotPair0Entry *GetRecordSlotPair0Entry(s32 index);
 extern void *OS_SNPrintf_0202e094(char *dst, u32 length, const char *format, ...);
@@ -42,7 +42,7 @@ void DrawPageDetails(PageMenu *menu)
     }
     if ((s32)cursor >= limit) {
         data_ov078_020c5024[1 * 9 + 7] = 4;
-        DrawLayoutLine(menu, 1, func_ov027_020ba2c8(menu->messageView, 2), NULL);
+        DrawLayoutLine(menu, 1, GetPackedFileEntry(menu->messageView, 2), NULL);
         data_ov078_020c5024[1 * 9 + 7] = 2;
     } else {
         DrawLayoutLine(menu, 1, (void *)GetGridTableValue(cursor, -1), NULL);
@@ -59,7 +59,7 @@ void DrawPageDetails(PageMenu *menu)
     if ((s32)cursor >= limit) {
 locked:
         data_ov078_020c5024[2 * 9 + 7] = 4;
-        DrawLayoutLine(menu, 2, func_ov027_020ba2c8(menu->messageView, 2), NULL);
+        DrawLayoutLine(menu, 2, GetPackedFileEntry(menu->messageView, 2), NULL);
         data_ov078_020c5024[2 * 9 + 7] = 2;
         DrawLayoutLine(menu, 3, gPageEmptyText, NULL);
         DrawLayoutLine(menu, 4, gPageEmptyText, NULL);

@@ -26,6 +26,6 @@
 #define func_ov027_020b7dd4 func_ov027_020b7df4
 #define func_ov027_020b90a4 FindWidgetById
 #define func_ov027_020b9e60 FlushDirtyTileTableRows
-#define func_ov027_020ba2a8 func_ov027_020ba2c8
+#define func_ov027_020ba2a8 GetPackedFileEntry
 #define g_uiContext_020b7760 data_ov025_020b7780
 #include "src/ov025/menu_widgets/UpdateMenuScreen_020b5f08.c"

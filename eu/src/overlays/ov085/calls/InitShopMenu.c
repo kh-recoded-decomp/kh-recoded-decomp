@@ -34,7 +34,7 @@
 #define func_ov027_020b91a8 GetWidgetPosition
 #define func_ov027_020b91c8 SetWidgetPosition
 #define func_ov027_020b97b8 SetWidgetRecordMode
-#define func_ov027_020ba2a8 func_ov027_020ba2c8
+#define func_ov027_020ba2a8 GetPackedFileEntry
 #define func_ov034_020bde84 func_ov034_020bdea4
 #define func_ov036_020bc414 IsPxiFifoTagSet_020bc434
 #define func_ov039_020bc18c GetPrimaryMenuElement

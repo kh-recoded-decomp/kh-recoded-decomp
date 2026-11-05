@@ -178,6 +178,21 @@ The existing widget position prefix and position-control implementations are
 preserved. Relocation-name refresh uses ROM proof without changing indexed
 bytes or the official verifier.
 
+## Packed resources and text wrappers
+
+| Previous name | Current name | Evidence |
+|---|---|---|
+| `func_ov027_020ba2c8` | `GetPackedFileEntry` | Uses the loaded view's count/payload, follows variable per-record byte strides and returns the selected payload after its four-byte prefix; it performs no text decoding. |
+| `func_ov027_020ba300` | `FormatPackedWideText` | Builds the native DS variadic argument stream and delegates to the V wrapper, returning the destination. |
+| `func_ov027_020ba33c` | `VFormatPackedWideText` | Selects a packed entry as a 16-bit format, delegates to `Text_VSNPrintfWide` and returns the destination. |
+| `func_ov001_02076a54` | `DrawPackedFieldMenuEntry` | Copies the frame template to the indexed menu cell and draws the corresponding packed entry through the field text helper. |
+
+[PACKED_RESOURCES.md](PACKED_RESOURCES.md) records the 8-byte header and 12-byte
+DS view, generic borrowed payload, stride/index behavior, explicit owner-word
+release, code-unit capacity, custom formatter semantics and host variadic ABI
+boundary. The common owner pointer stays `void *` for the actual `void **`
+release contract; a typed header is used when interpreting its data.
+
 ## Explicitly unresolved
 
 The vector view at `data_027e0160` overlaps `data_027e0164`, used by the older

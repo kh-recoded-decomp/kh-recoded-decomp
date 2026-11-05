@@ -11,5 +11,5 @@
 #define func_01ff869c MIi_CpuCopy16
 #define func_01ff878c MIi_CpuCopyFast
 #define func_02052514 func_02052528
-#define func_ov027_020ba2a8 func_ov027_020ba2c8
+#define func_ov027_020ba2a8 GetPackedFileEntry
 #include "src/ov001/field_manager/ShowFieldPopupText_02071e44.c"

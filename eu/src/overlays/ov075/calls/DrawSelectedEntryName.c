@@ -2,5 +2,5 @@
 #define G2D_InitializeLinearCanvas_02017a2c NNS_G2dCharCanvasInitForBG
 #define G2D_DrawAnchoredText_02017dec NNSi_G2dTextCanvasDrawText
 #define func_ov039_020bc994 GetMenuFont10
-#define func_ov027_020ba2a8 func_ov027_020ba2c8
+#define func_ov027_020ba2a8 GetPackedFileEntry
 #include "src/ov075/unclassified_helpers/DrawSelectedEntryName_020ce5c4.c"

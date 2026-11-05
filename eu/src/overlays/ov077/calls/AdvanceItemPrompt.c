@@ -5,5 +5,5 @@
 #define SetGlobalPackedBit_02027320 SetGlobalPackedBit
 #define func_ov027_020b90a4 FindWidgetById
 #define func_ov027_020b9580 SetEntrySlotsVisible
-#define func_ov027_020ba2a8 func_ov027_020ba2c8
+#define func_ov027_020ba2a8 GetPackedFileEntry
 #include "src/ov077/unclassified_helpers/AdvanceItemPrompt_020c7fc0.c"

@@ -158,7 +158,7 @@ extern void SetWidgetPosition(void *root, Widget *widget, WidgetPos *pos, int mo
 extern void SetIndexedRecordAnimationFrame(void *root, int index, int value);
 extern void SetEntrySlotsVisible(void *root, Widget *widget, BOOL visible);
 extern MatrixNode *FindPageEntryById(MatrixMap *map, u32 id);
-extern void *func_ov027_020ba2c8(int *bank, int index);
+extern void *GetPackedFileEntry(int *bank, int index);
 extern BOOL PlaySoundEffect(int seqArcNo, int index);
 extern int func_ov001_020644b0(void);
 extern void ComputePlayerStats(SaveData *save, PlayerStats *out, BOOL recompute, int scaleParam);
@@ -189,7 +189,7 @@ static inline BOOL IsMenuInactive(void)
 
 static inline void *GetBankMessage(MatrixMenu *menu, int index)
 {
-    return index >= 0 ? func_ov027_020ba2c8(menu->messageBank, index) : NULL;
+    return index >= 0 ? GetPackedFileEntry(menu->messageBank, index) : NULL;
 }
 
 static inline BOOL UpdateMenuEvent(MatrixMenu *menu)

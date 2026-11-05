@@ -137,7 +137,7 @@ extern int FormatStateText(int id, u16 *buffer, int format, ...);
 extern void DrawTextAnchored(TextLayer *obj, int x, int y, int color, u32 flags, const u16 *text);
 extern void DrawTextColored(TextLayer *obj, int x, int y, int color, int altColor, const u16 *text);
 extern void Obj_SetField14(TextLayer *obj, int value);
-extern void *func_ov027_020ba2c8(void *strings, int index);
+extern void *GetPackedFileEntry(void *strings, int index);
 extern u16 *FormatItemValue(ItemMenu *menu, int index, u16 *buffer);
 extern int GetItemSellPrice(ItemEntry *entry);
 extern void SetEntrySlotsVisible(void *layout, int *widget, int visible);
@@ -219,7 +219,7 @@ void RedrawShopMenu(ItemMenu *menu)
 
                             soldOut = (limit != 0 && *slot->count >= limit) ? 1 : 0;
                             if (menu->cursor == index && limit != 0) {
-                                tip = func_ov027_020ba2c8(menu->strings, 0x1e);
+                                tip = GetPackedFileEntry(menu->strings, 0x1e);
                             }
                         } else {
                             locked = entry->used != 0 ? 1 : 0;
@@ -268,9 +268,9 @@ void RedrawShopMenu(ItemMenu *menu)
             break;
         case 2:
             DrawTextAnchored(&menu->layers[2], 0x68, 0x4b, 2, 0x10,
-                                      func_ov027_020ba2c8(menu->strings, menu->useCatalog ? 0x11 : 0x10));
-            DrawTextAnchored(&menu->layers[2], 0x2c, 0x5b, 2, 0x10, func_ov027_020ba2c8(menu->strings, 0x12));
-            DrawTextAnchored(&menu->layers[2], 0x90, 0x5b, 2, 0x10, func_ov027_020ba2c8(menu->strings, 0x13));
+                                      GetPackedFileEntry(menu->strings, menu->useCatalog ? 0x11 : 0x10));
+            DrawTextAnchored(&menu->layers[2], 0x2c, 0x5b, 2, 0x10, GetPackedFileEntry(menu->strings, 0x12));
+            DrawTextAnchored(&menu->layers[2], 0x90, 0x5b, 2, 0x10, GetPackedFileEntry(menu->strings, 0x13));
         case 1: {
             s16 index = menu->cursor;
             ItemInfo *info = GetItemMenuEntry(menu, index)->info;
@@ -326,7 +326,7 @@ void RedrawShopMenu(ItemMenu *menu)
             PushPendingPair(3, (data_0205fe0c + menu->itemId)[0x28d8] +
                                             (menu->useCatalog ? -menu->quantity : menu->quantity));
             if (menu->mode == 1) {
-                tip = func_ov027_020ba2c8(menu->strings, 0x14);
+                tip = GetPackedFileEntry(menu->strings, 0x14);
             }
             break;
         }

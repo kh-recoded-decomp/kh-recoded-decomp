@@ -9,5 +9,5 @@
 #define Text_UploadTileBuffer_02001520 Text_UploadTileBuffer
 #define func_0202e060 SPrintfUnbounded
 #define func_ov015_020789b8 DrawCenteredLayerText
-#define func_ov027_020ba2a8 func_ov027_020ba2c8
+#define func_ov027_020ba2a8 GetPackedFileEntry
 #include "src/ov015/panel_state/SetupResultPanel_0207509c.c"

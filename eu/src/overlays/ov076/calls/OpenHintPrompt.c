@@ -4,5 +4,5 @@
 #define MenuPanel_MeasureMessage_020cb2b8 MenuPanel_MeasureMessage
 #define MenuScreen_RefreshMarker_020cbb3c MenuScreen_RefreshMarker
 #define OpenHintPrompt_020cbba0 OpenHintPrompt
-#define func_ov027_020ba2a8 func_ov027_020ba2c8
+#define func_ov027_020ba2a8 GetPackedFileEntry
 #include "src/ov076/unclassified_helpers/OpenHintPrompt_020cbba0.c"

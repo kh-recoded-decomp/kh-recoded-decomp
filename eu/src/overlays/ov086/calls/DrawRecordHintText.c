@@ -2,6 +2,6 @@
 #define DrawRecordHintText_020bebe8 DrawRecordHintText
 #define DrawTextAnchored_020015a0 DrawTextAnchored
 #define Text_UploadTileBuffer_02001520 Text_UploadTileBuffer
-#define func_ov027_020ba2a8 func_ov027_020ba2c8
+#define func_ov027_020ba2a8 GetPackedFileEntry
 #define func_ov086_020c2080 IsRecordPageUnavailable
 #include "src/ov086/panel_state/DrawRecordHintText_020bebe8.c"

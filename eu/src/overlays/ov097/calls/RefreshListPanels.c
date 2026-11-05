@@ -4,5 +4,5 @@
 #define RefreshListPanels_020bfb38 RefreshListPanels
 #define Text_UploadTileBuffer_02001520 Text_UploadTileBuffer
 #define func_020019f4 GetNestedModeByte
-#define func_ov027_020ba2a8 func_ov027_020ba2c8
+#define func_ov027_020ba2a8 GetPackedFileEntry
 #include "src/ov097/panel_state/RefreshListPanels_020bfb38.c"

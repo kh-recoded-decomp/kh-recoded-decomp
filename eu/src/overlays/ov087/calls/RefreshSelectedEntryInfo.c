@@ -3,7 +3,7 @@
 #define func_ov039_020bc1bc func_ov039_020bc1dc
 #define CallVirtualHandlerSlot1_02001574 CallVirtualHandlerSlot1
 #define func_02051f48 GetGridTableValue
-#define func_ov027_020ba2a8 func_ov027_020ba2c8
+#define func_ov027_020ba2a8 GetPackedFileEntry
 #define OS_SNPrintf_0202e080 OS_SNPrintf_0202e094
 #define DrawTextAnchored_020015a0 DrawTextAnchored
 #define Text_UploadTileBuffer_02001520 Text_UploadTileBuffer

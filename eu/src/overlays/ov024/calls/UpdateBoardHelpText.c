@@ -38,8 +38,8 @@ typedef struct BoardHelpGlobals {
 
 extern BoardHelpGlobals data_ov024_020b7540;
 extern int GetLanguageIndex(void);
-extern const u16 *func_ov027_020ba2c8(const PackedTextView *view, int index);
-extern u16 *func_ov027_020ba300(const PackedTextView *view, unsigned index,
+extern const u16 *GetPackedFileEntry(const PackedTextView *view, int index);
+extern u16 *FormatPackedWideText(const PackedTextView *view, unsigned index,
                               u16 *buffer, unsigned capacity, ...);
 extern void CallVirtualHandlerSlot1(void *layer, u32 value);
 extern void *GetFieldFont2(void);
@@ -62,19 +62,19 @@ void UpdateBoardHelpText(void)
         data_ov024_020b7540.state->helpMode = 0;
         if (data_ov024_020b7540.cursor->selectedType == 0x16 &&
             data_ov024_020b7540.cursor->value == 1) {
-            text = func_ov027_020ba2c8(&data_ov024_020b7540.state->messages, 0x3e);
+            text = GetPackedFileEntry(&data_ov024_020b7540.state->messages, 0x3e);
         } else if (data_ov024_020b7540.cursor->selectedType == 0x18 &&
                    data_ov024_020b7540.cursor->value == 1) {
-            text = func_ov027_020ba2c8(&data_ov024_020b7540.state->messages, 0x3f);
+            text = GetPackedFileEntry(&data_ov024_020b7540.state->messages, 0x3f);
         } else if (data_ov024_020b7540.cursor->selectedType == 0x19 &&
                    data_ov024_020b7540.cursor->value == 1) {
-            text = func_ov027_020ba2c8(&data_ov024_020b7540.state->messages, 0x40);
+            text = GetPackedFileEntry(&data_ov024_020b7540.state->messages, 0x40);
         } else if (data_ov024_020b7540.cursor->selectedType == 0x1d &&
                    data_ov024_020b7540.cursor->value == 1) {
-            text = func_ov027_020ba2c8(&data_ov024_020b7540.state->messages, 0x41);
+            text = GetPackedFileEntry(&data_ov024_020b7540.state->messages, 0x41);
         } else if (data_ov024_020b7540.cursor->selectedType == 0x1e &&
                    data_ov024_020b7540.cursor->value == 1) {
-            text = func_ov027_020ba2c8(&data_ov024_020b7540.state->messages, 0x42);
+            text = GetPackedFileEntry(&data_ov024_020b7540.state->messages, 0x42);
         } else {
             value = data_ov024_020b7540.cursor->value;
             if (value != 0) {
@@ -83,34 +83,34 @@ void UpdateBoardHelpText(void)
                     GetLanguageIndex() != 0) {
                     value--;
                 }
-                text = func_ov027_020ba300(&data_ov024_020b7540.state->messages,
+                text = FormatPackedWideText(&data_ov024_020b7540.state->messages,
                        data_ov024_020b7540.cursor->selectedType + 3,
                        valueText, 0x40, value);
             } else {
-                text = func_ov027_020ba2c8(&data_ov024_020b7540.state->messages,
+                text = GetPackedFileEntry(&data_ov024_020b7540.state->messages,
                        data_ov024_020b7540.cursor->selectedType + 3);
             }
         }
-        text = func_ov027_020ba300(&data_ov024_020b7540.state->messages,
+        text = FormatPackedWideText(&data_ov024_020b7540.state->messages,
                                  0x2a, helpText, 0x40, text);
     } else if (!data_ov024_020b7540.cursor->finished) {
         if (data_ov024_020b7540.state->helpMode == 1) {
             return;
         }
         data_ov024_020b7540.state->helpMode = 1;
-        text = func_ov027_020ba2c8(&data_ov024_020b7540.state->messages, 0x2b);
+        text = GetPackedFileEntry(&data_ov024_020b7540.state->messages, 0x2b);
     } else if (data_ov024_020b7540.cursor->progress == data_ov024_020b7540.cursor->goal) {
         if (data_ov024_020b7540.state->helpMode == 2) {
             return;
         }
         data_ov024_020b7540.state->helpMode = 2;
-        text = func_ov027_020ba2c8(&data_ov024_020b7540.state->messages, 0x30);
+        text = GetPackedFileEntry(&data_ov024_020b7540.state->messages, 0x30);
     } else {
         if (data_ov024_020b7540.state->helpMode == 3) {
             return;
         }
         data_ov024_020b7540.state->helpMode = 3;
-        text = func_ov027_020ba2c8(&data_ov024_020b7540.state->messages, 0x2f);
+        text = GetPackedFileEntry(&data_ov024_020b7540.state->messages, 0x2f);
     }
     if (text != NULL) {
         CallVirtualHandlerSlot1(data_ov024_020b7540.state->textLayer, 0);

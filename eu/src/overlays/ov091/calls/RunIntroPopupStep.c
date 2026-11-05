@@ -4,5 +4,5 @@
 #define RunIntroPopupStep_020c1790 RunIntroPopupStep
 #define SetGlobalPackedBit_02027320 SetGlobalPackedBit
 #define SetSceneMode_020c173c SetSceneMode
-#define func_ov027_020ba2a8 func_ov027_020ba2c8
+#define func_ov027_020ba2a8 GetPackedFileEntry
 #include "src/ov091/panel_state/RunIntroPopupStep_020c1790.c"

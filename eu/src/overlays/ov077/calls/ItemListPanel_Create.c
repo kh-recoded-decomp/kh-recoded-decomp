@@ -13,7 +13,7 @@
 #define func_ov039_020bc994 GetMenuFont10
 #define FillBackgroundTileRectangle_02017adc NNS_G2dMapScrToCharText
 #define func_ov027_020ba25c LoadPackedFileView
-#define func_ov027_020ba2a8 func_ov027_020ba2c8
+#define func_ov027_020ba2a8 GetPackedFileEntry
 #define func_ov039_020bca00 GetMenuInputState
 #define func_0202cc6c Msg_OpenContainerAndReadHeader
 #define InitObjManagerAndMark_020b9060 InitObjManagerAndMark

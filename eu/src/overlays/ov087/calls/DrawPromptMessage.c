@@ -3,6 +3,6 @@
 #define DrawTextAnchored_020015a0 DrawTextAnchored
 #define FillBackgroundLayerRect_02001a60 FillBackgroundLayerRect
 #define Text_UploadTileBuffer_02001520 Text_UploadTileBuffer
-#define func_ov027_020ba2a8 func_ov027_020ba2c8
+#define func_ov027_020ba2a8 GetPackedFileEntry
 #define func_ov039_020bc1e4 UpdateScreenWidgetLayer
 #include "src/ov087/panel_state/DrawPromptMessage_020c4758.c"

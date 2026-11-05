@@ -1,4 +1,4 @@
 #define GetFieldChunkEntry_02072dd4 GetFieldChunkEntry
 #define data_ov001_020a04a4 data_ov001_020a04c4
-#define func_ov027_020ba2a8 func_ov027_020ba2c8
+#define func_ov027_020ba2a8 GetPackedFileEntry
 #include "src/ov001/field_manager/GetFieldChunkEntry_02072dd4.c"

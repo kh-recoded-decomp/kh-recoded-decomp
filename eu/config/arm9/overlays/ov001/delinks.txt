@@ -3528,7 +3528,7 @@ src/overlays/ov001/calls/DrawMenuPanelPage.c:
     complete
     .text       start:0x020769f4 end:0x02076a54
 
-src/overlays/ov001/calls/func_ov001_02076a54.c:
+src/overlays/ov001/calls/DrawPackedFieldMenuEntry.c:
     complete
     .text       start:0x02076a54 end:0x02076a9c
 

@@ -1,7 +1,7 @@
 #define OpenSelectionPanel_020c5d44 OpenSelectionPanel
 #define func_ov027_020b90a4 FindWidgetById
 #define func_ov027_020b96e4 SetFocusedWidget
-#define func_ov027_020ba2a8 func_ov027_020ba2c8
+#define func_ov027_020ba2a8 GetPackedFileEntry
 #define func_ov039_020bc1bc func_ov039_020bc1dc
 #define func_ov087_020c43c4 MoveCursorToWidget
 #define func_ov087_020c4714 func_ov087_020c4734

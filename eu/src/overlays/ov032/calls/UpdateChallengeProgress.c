@@ -5,6 +5,6 @@
 #define data_ov032_020c0060 data_ov032_020c0080
 #define func_02023dbc _s32_div_f
 #define func_ov001_02071e44 ShowFieldPopupText
-#define func_ov027_020ba2a8 func_ov027_020ba2c8
+#define func_ov027_020ba2a8 GetPackedFileEntry
 #define func_ov032_020bbba8 UploadGroupMenuTiles
 #include "src/ov032/unclassified_helpers/UpdateChallengeProgress_020bb57c.c"

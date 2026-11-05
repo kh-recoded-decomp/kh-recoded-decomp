@@ -1,6 +1,6 @@
 #include "src/overlays/ov101/ListMenuData.h"
 
-extern u16 *func_ov027_020ba2c8(ListTextArchiveView *view, s32 index);
+extern u16 *GetPackedFileEntry(ListTextArchiveView *view, s32 index);
 extern void CallVirtualHandlerSlot1(ListTextLayer *layer, s32 argument);
 extern void DrawShadowedAnchoredText_020bfd34(ListTextLayer *layer, s32 x, s32 y,
                                              s32 color, u32 anchor, const u16 *text);
@@ -26,7 +26,7 @@ void DrawListPanelText(s32 which, ListSceneState *scene)
     /* Draw the entry list, the description, or both (-1). */
     if ((u32)(which + 1) <= 1) {
         i = 0;
-        text = func_ov027_020ba2c8(commonView, 0);
+        text = GetPackedFileEntry(commonView, 0);
         CallVirtualHandlerSlot1(&scene->textLayers[0], 0);
         DrawShadowedAnchoredText_020bfd34(&scene->textLayers[0], 4, 2, 3, 0, text);
         Text_UploadTileBuffer(&scene->textLayers[0]);
@@ -41,9 +41,9 @@ void DrawListPanelText(s32 which, ListSceneState *scene)
                 known = IsStateFlagSet(0, row);
             }
             if (known) {
-                text = func_ov027_020ba2c8(nameView, gListEntryTextIndices[row].nameIndex);
+                text = GetPackedFileEntry(nameView, gListEntryTextIndices[row].nameIndex);
             } else {
-                text = func_ov027_020ba2c8(commonView, 3);
+                text = GetPackedFileEntry(commonView, 3);
             }
             DrawShadowedAnchoredText_020bfd34(&scene->textLayers[1], 4, y + 4, 1, 0, text);
         }
@@ -52,13 +52,13 @@ void DrawListPanelText(s32 which, ListSceneState *scene)
     if (which != 1 && which != -1) {
         return;
     }
-    text = func_ov027_020ba2c8(commonView, 2);
+    text = GetPackedFileEntry(commonView, 2);
     CallVirtualHandlerSlot1(&scene->textLayers[2], 0);
     DrawShadowedAnchoredText_020bfd34(&scene->textLayers[2], 4, 4, 3, 0, text);
     Text_UploadTileBuffer(&scene->textLayers[2]);
     selected = scene->activeList;
     entry = &gListEntryTextIndices[selected];
-    func_ov027_020ba2c8(descriptionView, entry->descriptionIndex);
+    GetPackedFileEntry(descriptionView, entry->descriptionIndex);
     CallVirtualHandlerSlot1(&scene->textLayers[3], 0);
     if (selected == 7) {
         known = IsGlobalPackedBitSet(0xa0d);

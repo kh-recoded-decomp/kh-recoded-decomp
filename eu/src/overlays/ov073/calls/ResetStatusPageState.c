@@ -5,7 +5,7 @@
 #define func_0200160c func_02001620
 #define func_ov027_020b91c8 SetWidgetPosition
 #define func_ov027_020b96a0 SetWidgetAnimationFrame
-#define func_ov027_020ba2a8 func_ov027_020ba2c8
+#define func_ov027_020ba2a8 GetPackedFileEntry
 #define func_ov039_020bc1cc GetMenuWidgetContainer
 #define func_ov039_020bc9ac GetMenuFont10s
 #include "src/ov073/status_menu/ResetStatusPageState_020beaa0.c"

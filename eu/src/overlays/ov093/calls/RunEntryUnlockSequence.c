@@ -8,7 +8,7 @@
 #define data_ov093_020c4d6c data_ov093_020c4d8c
 #define data_ov093_020c4d84 data_ov093_020c4da4
 #define func_0202b788 GetLanguageIndex
-#define func_ov027_020ba2a8 func_ov027_020ba2c8
+#define func_ov027_020ba2a8 GetPackedFileEntry
 #define func_ov093_020c231c SetSceneState
 #define func_ov093_020c3c18 func_ov093_020c3c38
 #define func_ov093_020c3c24 func_ov093_020c3c44

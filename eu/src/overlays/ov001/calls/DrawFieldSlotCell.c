@@ -1,4 +1,5 @@
 #include "nitro/types.h"
+#include "src/overlays/ov027/PackedResource.h"
 #include "src/overlays/ov001/FieldCommandLabels.h"
 
 typedef struct SlotNameTable {
@@ -28,11 +29,10 @@ typedef struct SlotPanel {
     u8 *blankTiles;
 } SlotPanel;
 
-typedef struct MessageSet MessageSet;
+typedef PackedResourceView MessageSet;
 
 extern const SlotNameTable gFieldSlotMessageIds;
 
-extern const u16 *func_ov027_020ba2c8(MessageSet *messages, int index);
 extern int GetFieldSlotValue(int index);
 extern void MIi_CpuCopyFast(const void *src, void *dst, u32 size);
 extern void *GetFieldFont1(void);
@@ -46,13 +46,13 @@ void DrawFieldSlotCell(SlotPanel *panel, int *layer, SlotCell *cell, MessageSet 
     int value;
 
     if (slot == 0) {
-        text = func_ov027_020ba2c8(messages, 0);
+        text = GetPackedFileEntry(messages, 0);
         cell->slot = 0;
         panel->filledCount++;
     } else {
         value = GetFieldSlotValue(slot - 1);
         if (value != -1) {
-            text = func_ov027_020ba2c8(messages, table.messageIds[value]);
+            text = GetPackedFileEntry(messages, table.messageIds[value]);
             if (cell->slot == -1) {
                 panel->filledCount++;
             }

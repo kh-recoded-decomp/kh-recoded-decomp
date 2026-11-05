@@ -1,4 +1,4 @@
 #define ResetMatrixDescription_020c6288 ResetMatrixDescription
 #define SetUnlockableElementsVisible_020d0e64 SetUnlockableElementsVisible
-#define func_ov027_020ba2a8 func_ov027_020ba2c8
+#define func_ov027_020ba2a8 GetPackedFileEntry
 #include "src/ov075/reviewed_helpers/ResetMatrixDescription_020c6288.c"

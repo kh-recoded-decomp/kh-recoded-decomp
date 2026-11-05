@@ -2,7 +2,7 @@
 #define HideSaveSlotsShowPrompt_020c54b8 HideSaveSlotsShowPrompt
 #define SetEntrySlotsVisible_020b9580 SetEntrySlotsVisible
 #define func_0204f378 IndexedRecords_SetFlag2
-#define func_ov027_020ba2a8 func_ov027_020ba2c8
+#define func_ov027_020ba2a8 GetPackedFileEntry
 #define func_ov039_020bc14c CallStateWidget
 #define func_ov039_020be574 func_ov039_020be594
 #include "src/ov080/unclassified_helpers/HideSaveSlotsShowPrompt_020c54b8.c"

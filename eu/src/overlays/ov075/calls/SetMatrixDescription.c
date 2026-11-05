@@ -1,3 +1,3 @@
 #define SetMatrixDescription_020c48c0 SetMatrixDescription
-#define func_ov027_020ba2a8 func_ov027_020ba2c8
+#define func_ov027_020ba2a8 GetPackedFileEntry
 #include "src/ov075/reviewed_helpers/SetMatrixDescription_020c48c0.c"

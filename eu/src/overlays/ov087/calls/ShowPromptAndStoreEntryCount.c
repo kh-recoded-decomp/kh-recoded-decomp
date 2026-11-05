@@ -1,6 +1,6 @@
 #define GetPlayerEntryCount_02050050 GetPlayerEntryCount
 #define ShowPromptAndStoreEntryCount_020c49fc ShowPromptAndStoreEntryCount
 #define WriteSessionPackedBits_0206459c WriteSessionPackedBits
-#define func_ov027_020ba2a8 func_ov027_020ba2c8
+#define func_ov027_020ba2a8 GetPackedFileEntry
 #define func_ov087_020c4860 DrawCenteredPromptText_020c4860
 #include "src/ov087/panel_state/ShowPromptAndStoreEntryCount_020c49fc.c"

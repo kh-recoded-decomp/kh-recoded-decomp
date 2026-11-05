@@ -75,7 +75,7 @@ extern ItemReportRecord *GetRecordSlotPair0Entry(int);
 extern ItemReportSecondaryRecord *GetRecordSlotPair1Entry(int);
 extern ItemReportRecipe *GetRecordSlot6Entry(int);
 extern int SPrintfUnbounded(u16 *, const u16 *, ...);
-extern void *func_ov027_020ba2c8(ItemReportTextBank *, int);
+extern void *GetPackedFileEntry(ItemReportTextBank *, int);
 extern void CallVirtualHandlerSlot1(ItemReportTextLayer *, int);
 extern void Text_UploadTileBuffer(ItemReportTextLayer *);
 extern void DrawShadowedAnchoredText_020c0000(ItemReportTextLayer *, int, int, int, u32, const void *);
@@ -150,14 +150,14 @@ void RefreshItemReportText(int refresh, ItemReportMenu *menu)
         menu->itemDescription = secondary->description;
         break;
     case 2:
-        menu->itemName = func_ov027_020ba2c8(detailBank, route->id);
-        menu->itemDescription = func_ov027_020ba2c8(detailBank, route->id + 1);
+        menu->itemName = GetPackedFileEntry(detailBank, route->id);
+        menu->itemDescription = GetPackedFileEntry(detailBank, route->id + 1);
         break;
     }
 
     /* -1 refreshes both screens; 0 refreshes labels, and 1 refreshes details. */
     if ((u32)(refresh + 1) <= 1) {
-        text = func_ov027_020ba2c8(labelBank, 1);
+        text = GetPackedFileEntry(labelBank, 1);
         CallVirtualHandlerSlot1(&menu->summary, 0);
         if (showRecipeLabel) {
             DrawShadowedAnchoredText_020c0000(&menu->summary, 4, 2, 3, 0, text);
@@ -166,23 +166,23 @@ void RefreshItemReportText(int refresh, ItemReportMenu *menu)
         y = 4 - menu->grid.scrollPixels;
         CallVirtualHandlerSlot1(&menu->labels, 0);
         DrawShadowedAnchoredText_020c0000(&menu->labels, 4, y, 5, 0,
-                                         func_ov027_020ba2c8(labelBank, 2));
+                                         GetPackedFileEntry(labelBank, 2));
         DrawShadowedAnchoredText_020c0000(&menu->labels, 4, y + 0x70, 5, 0,
-                                         func_ov027_020ba2c8(labelBank, 3));
+                                         GetPackedFileEntry(labelBank, 3));
         DrawShadowedAnchoredText_020c0000(&menu->labels, 4, y + 0xc0, 5, 0,
-                                         func_ov027_020ba2c8(labelBank, 4));
+                                         GetPackedFileEntry(labelBank, 4));
         DrawShadowedAnchoredText_020c0000(&menu->labels, 4, y + 0xf0, 5, 0,
-                                         func_ov027_020ba2c8(labelBank, 5));
+                                         GetPackedFileEntry(labelBank, 5));
         DrawShadowedAnchoredText_020c0000(&menu->labels, 4, y + 0x160, 5, 0,
-                                         func_ov027_020ba2c8(labelBank, 6));
+                                         GetPackedFileEntry(labelBank, 6));
         DrawShadowedAnchoredText_020c0000(&menu->labels, 4, y + 0x1b0, 5, 0,
-                                         func_ov027_020ba2c8(labelBank, 7));
+                                         GetPackedFileEntry(labelBank, 7));
         DrawShadowedAnchoredText_020c0000(&menu->labels, 4, y + 0x1e0, 5, 0,
-                                         func_ov027_020ba2c8(labelBank, 8));
+                                         GetPackedFileEntry(labelBank, 8));
         DrawShadowedAnchoredText_020c0000(&menu->labels, 4, y + 0x210, 5, 0,
-                                         func_ov027_020ba2c8(labelBank, 9));
+                                         GetPackedFileEntry(labelBank, 9));
         DrawShadowedAnchoredText_020c0000(&menu->labels, 4, y + 0x250, 5, 0,
-                                         func_ov027_020ba2c8(labelBank, 10));
+                                         GetPackedFileEntry(labelBank, 10));
         Text_UploadTileBuffer(&menu->labels);
     }
     if (refresh != 1 && refresh != -1) return;
@@ -195,7 +195,7 @@ void RefreshItemReportText(int refresh, ItemReportMenu *menu)
     if (!menu->detailOpen) {
         CallVirtualHandlerSlot1(&menu->title, 0);
         if (IsEntryFlagSet_020c1340(0, id)) text = menu->itemName;
-        else text = func_ov027_020ba2c8(labelBank, 11);
+        else text = GetPackedFileEntry(labelBank, 11);
         DrawShadowedTextFitted(&menu->title, 4, 4, 3, 0, text, 104);
         Text_UploadTileBuffer(&menu->title);
         CallVirtualHandlerSlot1(&menu->description, 0);
@@ -206,7 +206,7 @@ void RefreshItemReportText(int refresh, ItemReportMenu *menu)
         return;
     }
 
-    text = func_ov027_020ba2c8(labelBank, 12);
+    text = GetPackedFileEntry(labelBank, 12);
     int rowY;
     int line = 0;
     CallVirtualHandlerSlot1(&menu->title, 0);
@@ -221,13 +221,13 @@ void RefreshItemReportText(int refresh, ItemReportMenu *menu)
             }
         } else {
             DrawShadowedAnchoredText_020c0000(&menu->description, 0, 4, 1, 0,
-                                             func_ov027_020ba2c8(labelBank, 11));
+                                             GetPackedFileEntry(labelBank, 11));
         }
     } else {
         if (IsEntryFlagSet_020c1340(0, id)) {
-            text = func_ov027_020ba2c8(labelBank, 13);
+            text = GetPackedFileEntry(labelBank, 13);
         } else {
-            text = func_ov027_020ba2c8(labelBank, 11);
+            text = GetPackedFileEntry(labelBank, 11);
         }
         DrawShadowedAnchoredText_020c0000(&menu->description, 0, 4, 1, 0, text);
     }

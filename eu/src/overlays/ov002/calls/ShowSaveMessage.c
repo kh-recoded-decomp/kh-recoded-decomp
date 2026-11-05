@@ -1,5 +1,5 @@
 #define ShowSaveMessage_02064584 ShowSaveMessage
 #define func_ov002_020627e8 MeasurePanelTextPrimary
 #define func_ov002_02061964 ActivatePanelSlotCD
-#define func_ov027_020ba2a8 func_ov027_020ba2c8
+#define func_ov027_020ba2a8 GetPackedFileEntry
 #include "src/ov002/panel_state/ShowSaveMessage_02064584.c"

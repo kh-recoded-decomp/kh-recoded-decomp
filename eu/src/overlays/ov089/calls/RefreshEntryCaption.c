@@ -4,5 +4,5 @@
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define RefreshEntryCaption_020beff4 RefreshEntryCaption
 #define Text_UploadTileBuffer_02001520 Text_UploadTileBuffer
-#define func_ov027_020ba2a8 func_ov027_020ba2c8
+#define func_ov027_020ba2a8 GetPackedFileEntry
 #include "src/ov089/panel_state/RefreshEntryCaption_020beff4.c"

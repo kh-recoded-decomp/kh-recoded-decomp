@@ -12,7 +12,7 @@ extern void InitListTextLayers(ListSceneState *scene);
 extern void InitListSlots(ListSceneState *scene);
 extern void LoadPortraitSprites(ListSceneState *scene);
 extern void CommitPageInteractionBounds(ListSceneState *scene);
-extern u16 *func_ov027_020ba2c8(ListTextArchiveView *view, s32 index);
+extern u16 *GetPackedFileEntry(ListTextArchiveView *view, s32 index);
 extern void InitScrollPanel(ListScrollPanelConfig *config, ListSceneState *scene);
 extern void DrawListPanelText(s32 which, ListSceneState *scene);
 extern const u8 sOv101_VblankFunc_020c1f78[];
@@ -58,7 +58,7 @@ BOOL InitializeListScene(ListSceneState *scene)
     /* Split the writable UTF-16 description in place and retain each line. */
     for (; i < 40; i++) {
         page = &scene->textPages[i];
-        text = func_ov027_020ba2c8(description,
+        text = GetPackedFileEntry(description,
                                   gListEntryTextIndices[i].descriptionIndex);
         page->lineCount = 0;
         page->lines[page->lineCount] = text;

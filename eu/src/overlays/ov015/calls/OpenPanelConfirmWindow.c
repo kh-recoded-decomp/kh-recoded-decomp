@@ -15,5 +15,5 @@
 #define func_ov002_02061948 GetPanelSlot0
 #define func_ov015_020789b8 DrawCenteredLayerText
 #define func_ov015_02079cd4 DestroyOwnedObjectList
-#define func_ov027_020ba2a8 func_ov027_020ba2c8
+#define func_ov027_020ba2a8 GetPackedFileEntry
 #include "src/ov015/panel_state/OpenPanelConfirmWindow_02079648.c"

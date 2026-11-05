@@ -12,5 +12,5 @@
 #define func_02029f48 func_02029f5c
 #define func_0204d8d0 PlaySoundChecked
 #define func_ov027_020b822c func_ov027_020b824c
-#define func_ov027_020ba2a8 func_ov027_020ba2c8
+#define func_ov027_020ba2a8 GetPackedFileEntry
 #include "src/ov001/shared_engine/UpdateHudNoticeMessage_020705a4.c"

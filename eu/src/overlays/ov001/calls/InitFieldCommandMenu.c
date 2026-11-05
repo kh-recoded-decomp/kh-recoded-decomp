@@ -1,5 +1,6 @@
 #define func_ov001_02075e10 UpdateFieldMenuSelectionTags
 #include "nitro/types.h"
+#include "src/overlays/ov027/PackedResource.h"
 #include "src/overlays/ov001/FieldCommandLabels.h"
 
 typedef struct TextFrame {
@@ -22,9 +23,7 @@ typedef struct TextLayer {
     u8 pad_00[0x34];
 } TextLayer;
 
-typedef struct PackedFileView {
-    u32 words[3];
-} PackedFileView;
+typedef PackedResourceView PackedFileView;
 
 typedef struct NNSFndList {
     void *headObject;
@@ -128,12 +127,10 @@ extern BOOL ReleaseRecordSlot(s32 slot);
 extern int func_ov001_0207123c(void);
 extern int UpdateWidgetLayerDefault_020b9e10(int layer, int mode);
 extern unsigned int MakePrimaryVramKey_02073634(unsigned int slot);
-extern void LoadPackedFileView(PackedFileView *view, u32 fileId, BOOL fromTail);
-extern void FreePointerIfSet(PackedFileView *view);
+extern void FreePointerIfSet(void **pointer);
 extern BOOL InitTextLayerAt(TextLayer *layer, int index, u16 *screenBase, void *font, TextFrame *frame);
 extern TextCell *GetWord20(TextLayer *layer);
 extern TextCell *CreateTextSurface(TextLayer *layer, int a, int b);
-extern void func_ov001_02076a54(FieldMenu *menu, PackedFileView *view, int index);
 extern CommandRecord *GetRecordSlotPair1Entry(s32 index);
 extern void DrawTextAnchored(TextLayer *layer, int x, int y, int color, u32 flags, const u16 *text);
 extern void *GetFieldFont1(void);
@@ -206,10 +203,10 @@ void InitFieldCommandMenu(FieldMenu *menu, u8 *tiles)
     LoadPackedFileView(&view, MakePrimaryVramKey_02073634(1), 1);
     InitTextLayerAt(&menu->textLayer, 3, (u16 *)layer, font, &frame);
     menu->cells[0] = GetWord20(&menu->textLayer);
-    func_ov001_02076a54(menu, &view, 0);
+    DrawPackedFieldMenuEntry(menu, &view, 0);
     for (index = 1; index < 13; index++) {
         menu->cells[index] = CreateTextSurface(&menu->textLayer, 1, 0);
-        func_ov001_02076a54(menu, &view, index);
+        DrawPackedFieldMenuEntry(menu, &view, index);
     }
     menu->cells[index] = CreateTextSurface(&menu->textLayer, 1, 0);
     MIi_CpuCopyFast(menu->frameTiles, menu->cells[13]->pixels, 0x200);
@@ -219,7 +216,7 @@ void InitFieldCommandMenu(FieldMenu *menu, u8 *tiles)
     } else {
         func_02001620(&menu->textLayer, 0, 4, 4, 0, equipped->nameId, GetFieldFont1(), 0x38);
     }
-    FreePointerIfSet(&view);
+    FreePointerIfSet(&view.file);
     SelectListNodeOrFirst(&menu->textLayer, menu->cells[0]);
     Text_UploadTileBuffer(&menu->textLayer);
 
@@ -381,7 +378,7 @@ void InitFieldCommandMenu(FieldMenu *menu, u8 *tiles)
             gauge->art = CreateTextSurface(&menu->gaugeLayer, 1, 0);
             DrawFieldSlotCell(menu, menu, gauge, &slotView, index);
         }
-        FreePointerIfSet(&slotView);
+        FreePointerIfSet(&slotView.file);
     }
     if (!IsModeSetOrFlag370aClear()) {
         for (index = 0; index < menu->primaryCount; index++) {

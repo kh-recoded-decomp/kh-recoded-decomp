@@ -46,7 +46,7 @@ extern Position2D *GetWidgetPosition(void *panel, void *element);
 extern void SetEntrySlotsVisible(void *panel, void *element, BOOL visible);
 extern void SetWidgetPosition(void *panel, void *element, Position2D *position, int mode);
 extern int GetMenuSelection(void);
-extern const u16 *func_ov027_020ba2c8(void **messages, int id);
+extern const u16 *GetPackedFileEntry(void **messages, int id);
 extern void *OS_SNPrintf_0202e094(u16 *dst, unsigned int len, const u16 *fmt, ...);
 
 void DrawSlotDetailPanel(SaveSelectScreen *screen, int slotIndex)
@@ -139,10 +139,10 @@ void DrawSlotDetailPanel(SaveSelectScreen *screen, int slotIndex)
             messageId = slot->status == 0 ? 7 : (GetMenuSelection() != 3 ? 4 : 5);
         }
         number = screen->slotIndex + 1;
-        OS_SNPrintf_0202e094(text, 0x80, func_ov027_020ba2c8(&screen->messages, messageId), number, number);
+        OS_SNPrintf_0202e094(text, 0x80, GetPackedFileEntry(&screen->messages, messageId), number, number);
         func_ov039_020be594(screen->textLayer, 0x68, confirming ? 0x30 : 0x40, color, text);
-        DrawTextAnchored(screen->textLayer, 0x34, 0x53, 2, 0x10, func_ov027_020ba2c8(&screen->messages, 0xb));
-        DrawTextAnchored(screen->textLayer, 0x9c, 0x53, 2, 0x10, func_ov027_020ba2c8(&screen->messages, 0xc));
+        DrawTextAnchored(screen->textLayer, 0x34, 0x53, 2, 0x10, GetPackedFileEntry(&screen->messages, 0xb));
+        DrawTextAnchored(screen->textLayer, 0x9c, 0x53, 2, 0x10, GetPackedFileEntry(&screen->messages, 0xc));
     }
 
     func_ov027_020b8208(screen->tagTracker, slot->frames[slot->frameIndex], 3, (s16)(row + 7));

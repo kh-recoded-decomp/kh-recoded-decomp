@@ -10,6 +10,6 @@
 #define data_ov087_020c7cdc data_ov087_020c7cfc
 #define data_ov087_020c7e7c sOv087_UiMenuStrLanguageWstSZ_020c7e9c
 #define func_02051f48 GetGridTableValue
-#define func_ov027_020ba2a8 func_ov027_020ba2c8
+#define func_ov027_020ba2a8 GetPackedFileEntry
 #define func_ov039_020bc994 GetMenuFont10
 #include "src/ov087/panel_state/InitPanelTextLayers_020c663c.c"

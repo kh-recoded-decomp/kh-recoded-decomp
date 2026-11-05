@@ -2,8 +2,8 @@
 #define MenuPanel_InitStandard_020cb380 MenuPanel_InitStandard
 #define SlotMenu_ShowResultMessage_020c61c8 SlotMenu_ShowResultMessage
 #define data_ov076_020cd2c0 data_ov076_020cd2e0
-#define func_ov027_020ba2a8 func_ov027_020ba2c8
-#define func_ov027_020ba2e0 func_ov027_020ba300
+#define func_ov027_020ba2a8 GetPackedFileEntry
+#define func_ov027_020ba2e0 FormatPackedWideText
 #define func_ov076_020c4ea8 func_ov076_020c4ec8
 #define func_ov076_020c8178 SlotMenu_DrawHintText
 #define func_ov076_020c8934 SlotMenu_OpenSlotPanel

@@ -44,5 +44,5 @@
 #define func_ov027_020b96e4 SetFocusedWidget
 #define func_ov027_020b984c SetWidgetRootTouchEnabled
 #define func_ov027_020b9874 SetWidgetRootDpadEnabled
-#define func_ov027_020ba2a8 func_ov027_020ba2c8
+#define func_ov027_020ba2a8 GetPackedFileEntry
 #include "src/ov015/panel_state/UpdatePanelMinigame_020766d0.c"

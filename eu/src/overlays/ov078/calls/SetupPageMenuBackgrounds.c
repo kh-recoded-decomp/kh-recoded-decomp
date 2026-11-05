@@ -41,7 +41,7 @@ extern void *G2_GetBG2ScrPtr(void);
 extern void MIi_CpuClearFast(u32 value, void *destination, u32 byteCount);
 extern const u16 *FormatSaveLocationLabel(RecordSaveData *save);
 extern void DrawLayoutLine(PageMenu *menu, int line, const void *text, const void *suffix);
-extern const u16 *func_ov027_020ba2c8(int *view, int index);
+extern const u16 *GetPackedFileEntry(int *view, int index);
 extern void *Archive_LoadFile(u32 fileId, int heapId);
 extern void GetBgDataFromArchive(BgGraphicsData *out, void *archive, int screenIndex, int characterIndex,
                                  int paletteIndex);
@@ -146,8 +146,8 @@ void SetupPageMenuBackgrounds(PageMenu *menu)
     MIi_CpuClearFast(0, G2_GetBG2ScrPtr(), 0x600);
 
     DrawLayoutLine(menu, 0, FormatSaveLocationLabel(data_0205fe0c), NULL);
-    DrawLayoutLine(menu, 5, func_ov027_020ba2c8(menu->messageView, 0), NULL);
-    DrawLayoutLine(menu, 6, func_ov027_020ba2c8(menu->messageView, 1), NULL);
+    DrawLayoutLine(menu, 5, GetPackedFileEntry(menu->messageView, 0), NULL);
+    DrawLayoutLine(menu, 6, GetPackedFileEntry(menu->messageView, 1), NULL);
 
     file = Archive_LoadFile(PackedFileId(menu->questText), 15);
     GetBgDataFromArchive(&bg, file, 0, 0, 0);

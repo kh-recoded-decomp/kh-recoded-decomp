@@ -4,5 +4,5 @@
 #define MeasureMessageTiles_020c82ec MeasureOv077MessageTiles
 #define MenuScreen_RefreshMarker_020c8b70 MenuScreen_RefreshMarker_020c8b90
 #define OpenItemPrompt_020c8bd4 OpenItemPrompt
-#define func_ov027_020ba2a8 func_ov027_020ba2c8
+#define func_ov027_020ba2a8 GetPackedFileEntry
 #include "src/ov077/unclassified_helpers/OpenItemPrompt_020c8bd4.c"

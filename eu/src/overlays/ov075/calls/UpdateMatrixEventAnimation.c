@@ -107,7 +107,7 @@ extern void func_01ffb2f8(void *effect, int kind, int arg);
 extern BOOL PlaySoundEffect(int seqArcNo, int index);
 extern void SetPackedBit(int *bitWords, int bitIndex);
 extern SlotEntry *GetRecordSlotPair1Entry(s32 index);
-extern void *func_ov027_020ba2c8(int *bank, int index);
+extern void *GetPackedFileEntry(int *bank, int index);
 extern void SetSecondaryElementEnabled(BOOL enabled);
 extern void HasSceneActiveMenu(int brightness);
 extern void RefreshStatusMenuData(SaveData *save, const RefreshArgs *args);
@@ -259,7 +259,7 @@ void UpdateMatrixEventAnimation(MatrixMenu *menu)
                         menu->phase = 0;
                     }
                     if (menu->state == 0) {
-                        menu->currentMessage = func_ov027_020ba2c8(menu->messageBank, 0x58);
+                        menu->currentMessage = GetPackedFileEntry(menu->messageBank, 0x58);
                         menu->needsRedraw = 1;
                         SetSecondaryElementEnabled(TRUE);
                         SetUnlockableElementsVisible(menu->layout, TRUE);
@@ -370,7 +370,7 @@ void UpdateMatrixEventAnimation(MatrixMenu *menu)
                     link++;
                 } while (--remaining > 0);
                 if (remaining == 0) {
-                    menu->currentMessage = func_ov027_020ba2c8(menu->messageBank, 0x58);
+                    menu->currentMessage = GetPackedFileEntry(menu->messageBank, 0x58);
                     menu->needsRedraw = 1;
                 }
                 index = node->index;

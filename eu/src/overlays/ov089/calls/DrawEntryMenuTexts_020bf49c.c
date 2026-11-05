@@ -60,7 +60,7 @@ extern int OS_SNPrintf_0202e094(u16 *dst, u32 len, const u16 *fmt, ...);
 extern void CallVirtualHandlerSlot1(TextLayer *layer, int arg);
 extern void func_02001620(TextLayer *layer, u32 x, u32 y, u32 color, u32 flags, u16 *text, u32 overrideValue, int maxWidth);
 extern void Text_UploadTileBuffer(TextLayer *layer);
-extern void *func_ov027_020ba2c8(void *messages, int index);
+extern void *GetPackedFileEntry(void *messages, int index);
 extern void DrawTextAnchored(TextLayer *layer, int x, int y, int color, u32 flags, const void *text);
 extern int NNSi_G2dFontGetTextHeight(const NNSG2dFont *font, int vSpace, const void *text);
 extern void DrawCenteredTextLine(TextLayer *layer, int unused, int y, int color, int altColor, int shadowColor, void *text, BOOL shadow);
@@ -106,9 +106,9 @@ void DrawEntryMenuTexts_020bf49c(Ov089Menu *menu)
     frame.charBase += 0x24;
     InitTextLayerAt(&menu->headerLayer, 2, screen, GetMenuFont10(), &frame);
     if (GetLanguageIndex() == 4) {
-        DrawTextAnchored(&menu->headerLayer, 0x41, 2, 2, 0x411, func_ov027_020ba2c8(menu->messages, 0));
+        DrawTextAnchored(&menu->headerLayer, 0x41, 2, 2, 0x411, GetPackedFileEntry(menu->messages, 0));
     } else {
-        DrawTextAnchored(&menu->headerLayer, 0x40, 2, 2, 0x411, func_ov027_020ba2c8(menu->messages, 0));
+        DrawTextAnchored(&menu->headerLayer, 0x40, 2, 2, 0x411, GetPackedFileEntry(menu->messages, 0));
     }
     Text_UploadTileBuffer(&menu->headerLayer);
 
@@ -119,13 +119,13 @@ void DrawEntryMenuTexts_020bf49c(Ov089Menu *menu)
     frame.charBase += 0x20;
     InitTextLayerAt(&menu->labelLayerA, 2, NULL, GetMenuFont10(), &frame);
     CallVirtualHandlerSlot1(&menu->labelLayerA, 0);
-    DrawTextAnchored(&menu->labelLayerA, 0x30, 2, 2, 0x411, func_ov027_020ba2c8(menu->messages, 1));
+    DrawTextAnchored(&menu->labelLayerA, 0x30, 2, 2, 0x411, GetPackedFileEntry(menu->messages, 1));
     Text_UploadTileBuffer(&menu->labelLayerA);
 
     frame.x = 0x11;
     frame.charBase += 0x18;
     InitTextLayerAt(&menu->labelLayerB, 2, NULL, GetMenuFont10(), &frame);
-    DrawTextAnchored(&menu->labelLayerB, 0x30, 2, 2, 0x411, func_ov027_020ba2c8(menu->messages, 2));
+    DrawTextAnchored(&menu->labelLayerB, 0x30, 2, 2, 0x411, GetPackedFileEntry(menu->messages, 2));
     Text_UploadTileBuffer(&menu->labelLayerB);
 
     frame.y = 0x16;
@@ -136,7 +136,7 @@ void DrawEntryMenuTexts_020bf49c(Ov089Menu *menu)
     frame.charBase += 0x18;
     InitTextLayerAt(&menu->pageLayer, 2, screen, GetMenuFont10(), &frame);
     if (menu->entryCount > 1) {
-        DrawTextAnchored(&menu->pageLayer, 2, 4, 2, 0x209, func_ov027_020ba2c8(menu->messages, 3));
+        DrawTextAnchored(&menu->pageLayer, 2, 4, 2, 0x209, GetPackedFileEntry(menu->messages, 3));
     }
     Text_UploadTileBuffer(&menu->pageLayer);
 
@@ -147,8 +147,8 @@ void DrawEntryMenuTexts_020bf49c(Ov089Menu *menu)
     frame.vSpace = 0;
     frame.charBase += 0x3c;
     InitTextLayerAt(&menu->hintLayer, 2, NULL, GetMenuFont10(), &frame);
-    height = NNSi_G2dFontGetTextHeight(menu->hintLayer.font, menu->hintLayer.vSpace, func_ov027_020ba2c8(menu->messages, 5));
-    DrawCenteredTextLine(&menu->hintLayer, 0x78, (0x50 - height) / 2, 2, 10, 6, func_ov027_020ba2c8(menu->messages, 5), FALSE);
+    height = NNSi_G2dFontGetTextHeight(menu->hintLayer.font, menu->hintLayer.vSpace, GetPackedFileEntry(menu->messages, 5));
+    DrawCenteredTextLine(&menu->hintLayer, 0x78, (0x50 - height) / 2, 2, 10, 6, GetPackedFileEntry(menu->messages, 5), FALSE);
     Text_UploadTileBuffer(&menu->hintLayer);
     SetScreenLayerDirty(10);
 }

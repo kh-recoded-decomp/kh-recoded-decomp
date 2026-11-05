@@ -8337,7 +8337,7 @@
   "src/overlays/ov103/calls/func_ov103_020bef14.c": "dsi/1.1",
   "src/overlays/ov001/calls/func_ov001_0206bf34.c": "dsi/1.1",
   "src/overlays/ov001/calls/func_ov001_0206fa2c.c": "dsi/1.1",
-  "src/overlays/ov001/calls/func_ov001_02076a54.c": "dsi/1.1",
+  "src/overlays/ov001/calls/DrawPackedFieldMenuEntry.c": "dsi/1.1",
   "src/overlays/ov001/calls/func_ov001_02077ef4.c": "dsi/1.1",
   "src/overlays/ov001/calls/func_ov001_0207df6c.c": "dsi/1.1",
   "src/overlays/ov015/calls/StartWirelessFinalizeDelay16.c": "dsi/1.1",

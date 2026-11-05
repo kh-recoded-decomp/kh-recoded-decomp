@@ -8,6 +8,6 @@
 #define data_ov093_020c4d60 data_ov093_020c4d80
 #define data_ov093_020c4d68 data_ov093_020c4d88
 #define func_020019f4 GetNestedModeByte
-#define func_ov027_020ba2a8 func_ov027_020ba2c8
+#define func_ov027_020ba2a8 GetPackedFileEntry
 #define func_ov093_020c00a4 DrawShadowedText_020c00c4
 #include "src/ov093/panel_state/RedrawEntryPanelText_020bfd60.c"

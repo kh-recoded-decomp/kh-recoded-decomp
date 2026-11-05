@@ -6,7 +6,7 @@
 #define SetEntrySlotsVisible_020b9580 SetEntrySlotsVisible
 #define SetScreenLayerDirty_020bc104 SetScreenLayerDirty
 #define UpdateScreenWidgetLayer_020bc1e4 UpdateScreenWidgetLayer
-#define func_ov027_020ba2a8 func_ov027_020ba2c8
+#define func_ov027_020ba2a8 GetPackedFileEntry
 #define func_ov039_020bbf78 StartSubScene
 #define func_ov039_020bca00 GetMenuInputState
 #include "src/ov075/unclassified_helpers/HandleMatrixBackButton_020cba18.c"

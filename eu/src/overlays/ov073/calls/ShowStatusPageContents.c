@@ -7,7 +7,7 @@
 #define SetDigitDisplay_020be2c8 SetDigitDisplay
 #define SetStatusElementVisible_020beb5c SetStatusElementVisible
 #define ShowStatusPageContents_020c1b28 ShowStatusPageContents
-#define func_ov027_020ba2a8 func_ov027_020ba2c8
+#define func_ov027_020ba2a8 GetPackedFileEntry
 #define func_ov039_020bc914 GetMenuSelection
 #define func_ov039_020be450 DrawPlayTimeDigits_020be470
 #include "src/ov073/status_menu/ShowStatusPageContents_020c1b28.c"
