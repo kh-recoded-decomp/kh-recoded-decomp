@@ -9,8 +9,8 @@
 #define PXI_Init_02014a5c NNS_G2dGetUnpackedAnimBank
 #define func_02014cec NNS_G2dGetUnpackedCharacterData
 #define func_0202c478 Archive_LoadFile
-#define func_0202c48c func_0202c4a0
-#define func_0202d314 func_0202d328
+#define func_0202c48c LoadFileAllocFromHeapTail
+#define func_0202d314 RelocateArchiveSectionsWithDefaultFlags
 #define func_0202d3e0 NestedPointer_GetFirstWord
 #define func_0204e588 DecodeStateAt4604
 #include "src/arm9/shared_engine/DispObj_LoadImage_0204e6e0.c"

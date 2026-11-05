@@ -4,7 +4,7 @@
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define RetainOrInitializeSharedRecord_0202c80c SND_RegisterSeq
 #define data_ov059_020cfe6c data_ov059_020cfe8c
-#define func_0202c48c func_0202c4a0
+#define func_0202c48c LoadFileAllocFromHeapTail
 #define func_0202ed9c func_0202edb0
 #define func_ov059_020c8b7c func_ov059_020c8b9c
 #include "src/ov059/unclassified_helpers/Actor_LoadJointBlendSets_020c8a84.c"

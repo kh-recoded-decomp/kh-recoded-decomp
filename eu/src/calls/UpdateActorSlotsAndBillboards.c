@@ -1,6 +1,6 @@
 #define UpdateActorSlotsAndBillboards_02035dd0 UpdateActorSlotsAndBillboards
 #define g_actorRegistry_0206083c gActorRegistry
-#define func_0202a9d0 func_0202a9e4
+#define func_0202a9d0 NextSharedRandom16Scaled
 #define func_ov021_020af738 func_ov021_020af758
 #define func_ov021_020af778 func_ov021_020af798
 #define ResetGraphicsTransform_0202fdf4 ResetGraphicsTransform

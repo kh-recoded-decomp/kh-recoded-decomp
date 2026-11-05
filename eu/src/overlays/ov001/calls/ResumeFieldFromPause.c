@@ -29,5 +29,5 @@
 #define func_ov001_0207b4c0 func_ov001_0207b4e8
 #define func_ov001_0207b5cc func_ov001_0207b5f4
 #define func_ov001_0207e108 TryFinishPendingTask
-#define setStopwatchHeld_02052648 setStopwatchHeld
+#define setStopwatchHeld_02052648 SetTweenPaused
 #include "src/ov001/field_manager/ResumeFieldFromPause_0207136c.c"

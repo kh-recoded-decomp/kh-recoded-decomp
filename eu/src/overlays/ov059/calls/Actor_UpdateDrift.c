@@ -42,7 +42,7 @@ extern InputRecord *GetPlayerControlState(u32 playerIndex);
 extern void Actor_UpdateJump(Actor *actor, int x, int y);
 extern BOOL func_ov021_020a7524(InputRecord *record);
 extern BOOL HasFlagsAt0xc(InputRecord *record, u16 mask);
-extern int func_0202a9e4(u32 mask);
+extern int NextSharedRandom16Scaled(u32 mask);
 extern fx32 FX_Mul(fx32 a, fx32 b);
 extern void VEC_Add(const VecFx32 *a, const VecFx32 *b, VecFx32 *ab);
 
@@ -85,7 +85,7 @@ void Actor_UpdateDrift(Actor *actor)
     if (pressed) {
         drift->count++;
         if (!(drift->flags & 8)) {
-            angle = func_0202a9e4(0xffff);
+            angle = NextSharedRandom16Scaled(0xffff);
         }
     }
     if (pressed && angle != -1) {

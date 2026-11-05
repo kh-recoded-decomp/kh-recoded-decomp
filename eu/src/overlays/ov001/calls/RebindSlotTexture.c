@@ -1,6 +1,6 @@
 #define FindTextureResourceBlock_0201ac70 NNS_G3dGetTex
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define RebindSlotTexture_0206a95c RebindSlotTexture
-#define func_0202c690 func_0202c6a4
+#define func_0202c690 SetFileLoaderTextureUploadQueueMode
 #define func_0202d098 ValidateResourceTagAndDispatch
 #include "src/ov001/shared_engine/RebindSlotTexture_0206a95c.c"

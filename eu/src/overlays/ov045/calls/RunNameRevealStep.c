@@ -13,8 +13,8 @@
 #define StartUnitTween_020bf1f8 StartUnitTween
 #define Text_UploadTileBuffer_02001520 Text_UploadTileBuffer
 #define data_ov045_020c0880 data_ov045_020c08a0
-#define func_02052514 func_02052528
-#define func_0205255c func_02052570
+#define func_02052514 ConfigureTween
+#define func_0205255c StartTween
 #define func_ov027_020b7dd4 func_ov027_020b7df4
 #define func_ov045_020bf248 ArmTagById
 #define func_ov045_020bf26c DisarmTagById

@@ -81,7 +81,7 @@ extern void *AddFieldListener(void (*callback)(void));
 extern void UpdateFieldWindowFade(void);
 extern void ApplyFieldBgScroll(void);
 extern void LoadOverlayAfterGeometryTransfer(int processor, int overlayId);
-extern void *func_0202c4a0(u32 fileId, u32 heapId);
+extern void *LoadFileAllocFromHeapTail(u32 fileId, u32 heapId);
 extern void *Archive_LoadFile(u32 fileId, u32 heapId);
 extern void InitSubScreenVramBanks(void);
 extern void LoadMenuScreenGraphics(FieldManager *manager, GraphicsView *view, void *file);
@@ -106,7 +106,7 @@ extern void setDualArrayEntry(int slot, void *callback, int arg);
 extern void TryEnterFieldPause(void);
 extern void StepPromptTask(void);
 extern void ResumeFieldAfterPause(void);
-extern void func_020524fc(void *tween);
+extern void InitTween(void *tween);
 extern BOOL IsHudFlag7Set(void);
 extern BOOL IsFieldFlag10Set(void);
 extern BOOL IsFieldFlag8Set(void);
@@ -149,7 +149,7 @@ void *InitFieldManager(FieldParams *params)
     manager->messages68 = Msg_OpenContainerAndReadHeader(sOv001_UiBtlBtluiP2_0209eda0, 0xE, FALSE);
     manager->messages6C = (u32)Msg_OpenContainerAndReadHeader(sOv001_UiBtlBtlLanguageP2_0209edb4, 0xE, FALSE);
     manager->messages70 = Msg_OpenContainerAndReadHeader(sOv001_UiBtlFaceP2_0209edc8, 0xE, FALSE);
-    file = func_0202c4a0((((manager->messages6C + 0x8000) & 0xFFFFFC) << 7) | 0x80000000, 0xE);
+    file = LoadFileAllocFromHeapTail((((manager->messages6C + 0x8000) & 0xFFFFFC) << 7) | 0x80000000, 0xE);
     InitSubScreenVramBanks();
     LoadMenuScreenGraphics(manager, &view, file);
     func_ov001_0206f1a0(manager);
@@ -207,7 +207,7 @@ void *InitFieldManager(FieldParams *params)
     setDualArrayEntry(0, TryEnterFieldPause, 1);
     setDualArrayEntry(1, StepPromptTask, 0);
     setDualArrayEntry(2, ResumeFieldAfterPause, 0);
-    func_020524fc(manager->tickerTween);
+    InitTween(manager->tickerTween);
     manager->tickerSpeed = 0x28;
     if (!IsHudFlag7Set() && !IsFieldFlag10Set() && !IsFieldFlag8Set()) {
         progressBits = ReadSessionPackedBits(0x1A00, 2);

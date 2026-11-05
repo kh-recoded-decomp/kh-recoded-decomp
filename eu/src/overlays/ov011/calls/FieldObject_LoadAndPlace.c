@@ -8,7 +8,7 @@
 #define ObjectManager_GetSecondEntryParam_0207ee48 ObjectManager_GetSecondEntryParam
 #define RebindAnimTracks_020809d0 RebindAnimTracks
 #define RetainOrInitializeSharedRecord_0202c80c SND_RegisterSeq
-#define func_0202c48c func_0202c4a0
+#define func_0202c48c LoadFileAllocFromHeapTail
 #define func_0202ed9c func_0202edb0
 #define func_0202f4e8 Flags16_ClearBit1
 #define func_02034050 IndexedBytes_SetAt10

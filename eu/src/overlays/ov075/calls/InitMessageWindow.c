@@ -2,6 +2,6 @@
 #define InitMessageWindow_020cf458 InitMessageWindow
 #define MIi_CpuCopyFast_01ff878c MIi_CpuCopyFast
 #define SetSecondaryElementEnabled_020bc084 SetSecondaryElementEnabled
-#define func_02052514 func_02052528
-#define func_0205255c func_02052570
+#define func_02052514 ConfigureTween
+#define func_0205255c StartTween
 #include "src/ov075/unclassified_helpers/InitMessageWindow_020cf458.c"

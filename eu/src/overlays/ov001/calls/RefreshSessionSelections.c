@@ -10,6 +10,6 @@
 #define data_ov001_020a0460 data_ov001_020a0480
 #define func_0204f768 GetOverlaySelectionRecord
 #define func_0204fba0 func_0204fbb4
-#define func_02050a44 func_02050a58
+#define func_02050a44 ReleaseMapLayoutReference
 #define func_ov001_02062fa4 RestoreSaveSnapshot
 #include "src/ov001/unclassified_helpers/RefreshSessionSelections_02064c44.c"

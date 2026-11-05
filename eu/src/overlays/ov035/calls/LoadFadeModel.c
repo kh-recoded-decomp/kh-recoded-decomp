@@ -7,7 +7,7 @@
 #define data_ov035_020bc4a8 data_ov035_020bc4c8
 #define data_ov035_020bc4b0 sOv035AreaName
 #define data_ov035_020bc4e4 data_ov035_020bc504
-#define func_0202c48c func_0202c4a0
+#define func_0202c48c LoadFileAllocFromHeapTail
 #define func_0202ed3c InitSharedRecordAndDispatchAlt
 #define func_0202f4e8 Flags16_ClearBit1
 #define func_ov035_020bb448 func_ov035_020bb468

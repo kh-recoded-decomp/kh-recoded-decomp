@@ -3,7 +3,7 @@
 
 extern const StageSoundChoices gStageStatusSounds;
 extern int GetCommandStatusIndex(int commandId);
-extern int func_0202a9e4(u16 range);
+extern int NextSharedRandom16Scaled(u16 range);
 extern void PlayStageSound(int seqArcNo, int index, BOOL checked);
 extern void SetSceneEntryAnimation(StageEntry *entry, int animation, int blend, int reset);
 extern void GetPositionAboveGround(VecFx32 *position, StageEntry *entry);
@@ -35,7 +35,7 @@ void EntryStateStatusCommand(u8 entryIndex)
     case 0:
         entry->stateStep++;
     case 1:
-        i = func_0202a9e4(2000) / 1000;
+        i = NextSharedRandom16Scaled(2000) / 1000;
         sounds = gStageStatusSounds;
         PlayStageSound(0x30, sounds.indices[i], TRUE);
         SetSceneEntryAnimation(entry, 10, 0, 1);

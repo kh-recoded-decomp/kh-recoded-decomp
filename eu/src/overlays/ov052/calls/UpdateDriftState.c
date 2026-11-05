@@ -36,7 +36,7 @@ extern s16 gSinFx12Table[];
 extern u16 *GetPlayerControlState(int pool);
 extern BOOL func_ov021_020a7524(u16 *self);
 extern BOOL HasFlagsAt0xc(u16 *holder, u16 mask);
-extern int func_0202a9e4(u32 range);
+extern int NextSharedRandom16Scaled(u32 range);
 extern int FX_Mul(int left, int right);
 
 static inline void AddScaledDrift(DriftActor *actor, fx32 z, fx32 x)
@@ -86,7 +86,7 @@ void UpdateDriftState(DriftActor *actor)
     if (active) {
         drift->counter++;
         if (!(drift->flags & 8)) {
-            angle = func_0202a9e4(0xffff);
+            angle = NextSharedRandom16Scaled(0xffff);
         }
     }
     if (active && angle != -1) {

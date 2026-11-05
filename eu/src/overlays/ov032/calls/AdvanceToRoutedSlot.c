@@ -41,7 +41,7 @@ typedef struct {
 extern Ov032Globals data_ov032_020c0080;
 
 extern PlayerCursor *func_ov001_0206e644(void);
-extern u32 func_0202a9e4(u32 range);
+extern u32 NextSharedRandom16Scaled(u32 range);
 extern void ApplySlotStyleToSession(void);
 extern s8 GetSignedByteAt1(PlayerCursor *cursor);
 extern s8 GetSignedByteAt3(PlayerCursor *cursor);
@@ -67,7 +67,7 @@ int AdvanceToRoutedSlot(void)
     }
     context = data_ov032_020c0080.context;
     if (context->slotLocked[context->slotIndex] == 0 && context->lockEnabled != 0 && !(context->lockedMask & (1 << context->slotIndex))) {
-        if (context->lockChance > (int)func_0202a9e4(100)) {
+        if (context->lockChance > (int)NextSharedRandom16Scaled(100)) {
             data_ov032_020c0080.context->lockedMask |= 1 << data_ov032_020c0080.context->slotIndex;
         }
     }

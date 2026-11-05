@@ -107,7 +107,7 @@ extern void GX_SetBankForOBJExtPltt(int bank);
 extern void func_ov002_020629a8(void);
 extern void InitBackgroundContainer(void *container, const BgContainerConfig *config);
 extern void func_ov027_020b7e44(void *container, u32 resourceId);
-extern void *func_0202c4a0(u32 resourceId, u32 kind);
+extern void *LoadFileAllocFromHeapTail(u32 resourceId, u32 kind);
 extern void GetBgDataFromArchive(BgGraphicsData *out, void *archive, int screenIndex, int characterIndex,
                                  int paletteIndex);
 extern void GX_LoadBGPltt(void *data, u32 offset, u32 size);
@@ -143,7 +143,7 @@ extern void SetWidgetRootTouchEnabled(void *container, BOOL enabled);
 extern void SetFocusedWidget(void *container, void *element);
 extern void func_ov027_020b90b8(void *container, void (*callback)(void *element));
 extern void ResolveEntryStoreWord(void *container, int id, void (*callback)(void *element));
-extern fx32 func_0202a9e4(u32 range);
+extern fx32 NextSharedRandom16Scaled(u32 range);
 extern void ChangeMenuState(int state);
 extern void OnPopupElementTouched(void *element);
 extern void SelectMenuEntry1(void *element);
@@ -229,12 +229,12 @@ void InitMenuContext(int entryMode)
     mainObjConfig.animResourceId = RESOURCE_KEY(data_ov002_0206c464->messageHandle, 3);
     InitBackgroundContainer(data_ov002_0206c464->mainBg, &mainBgConfig);
     func_ov027_020b7e44(data_ov002_0206c464->mainBg, RESOURCE_KEY(data_ov002_0206c464->messageHandle, 0));
-    archive = func_0202c4a0(RESOURCE_KEY(data_ov002_0206c464->messageHandle, 1), 0x10);
+    archive = LoadFileAllocFromHeapTail(RESOURCE_KEY(data_ov002_0206c464->messageHandle, 1), 0x10);
     GetBgDataFromArchive(&bgData, archive, -1, 0, 0);
     GX_LoadBGPltt(bgData.palette->data, 0, bgData.palette->size);
     GX_LoadBG0Char(bgData.character->data, 0, bgData.character->size);
     NNSi_FndFreeFromDefaultHeap(archive);
-    archive = func_0202c4a0(gPanelUiResourcePaths[0], 0x10);
+    archive = LoadFileAllocFromHeapTail(gPanelUiResourcePaths[0], 0x10);
     GetBgDataFromArchive(&bgData, archive, -1, 0, 0);
     GX_LoadBG0Char(bgData.character->data, 0x7000, bgData.character->size);
     NNSi_FndFreeFromDefaultHeap(archive);
@@ -283,7 +283,7 @@ void InitMenuContext(int entryMode)
     subObjConfig.animResourceId = RESOURCE_KEY(data_ov002_0206c464->messageHandle, 7);
     InitBackgroundContainer(data_ov002_0206c464->subBg, &subBgConfig);
     func_ov027_020b7e44(data_ov002_0206c464->subBg, RESOURCE_KEY(data_ov002_0206c464->messageHandle, 4));
-    subArchive = func_0202c4a0(RESOURCE_KEY(data_ov002_0206c464->messageHandle, 5), 0x10);
+    subArchive = LoadFileAllocFromHeapTail(RESOURCE_KEY(data_ov002_0206c464->messageHandle, 5), 0x10);
     GetBgDataFromArchive(&bgData, subArchive, -1, 0, 0);
     GXS_LoadBGPltt(bgData.palette->data, 0, bgData.palette->size);
     GXS_LoadBG0Char(bgData.character->data, 0, bgData.character->size);
@@ -387,10 +387,10 @@ void InitMenuContext(int entryMode)
     ResolveEntryStoreWord(data_ov002_0206c464->subObj, 5, SetMenuStateFlag10);
     ResolveEntryStoreWord(data_ov002_0206c464->subObj, 11, SetMenuSelection2);
     ResolveEntryStoreWord(data_ov002_0206c464->subObj, 12, SetMenuSelection1);
-    data_ov002_0206c464->cloudSpeedX = func_0202a9e4(0x1000) + 0x1000;
-    data_ov002_0206c464->cloudOffsetX = func_0202a9e4(0);
-    data_ov002_0206c464->cloudSpeedY = func_0202a9e4(0x1000) + 0x1000;
-    data_ov002_0206c464->cloudOffsetY = (func_0202a9e4(0) + 0x80) << 12;
+    data_ov002_0206c464->cloudSpeedX = NextSharedRandom16Scaled(0x1000) + 0x1000;
+    data_ov002_0206c464->cloudOffsetX = NextSharedRandom16Scaled(0);
+    data_ov002_0206c464->cloudSpeedY = NextSharedRandom16Scaled(0x1000) + 0x1000;
+    data_ov002_0206c464->cloudOffsetY = (NextSharedRandom16Scaled(0) + 0x80) << 12;
     NNSi_FndFreeFromDefaultHeap(subArchive);
     ChangeMenuState(0);
 }

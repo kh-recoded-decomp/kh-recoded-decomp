@@ -1,7 +1,7 @@
 #define PXI_Init_0204f0b4 PXI_Init_0204f0c8
 #define Slot_SetMode2Bit_0204f480 SetIndexedRecordMode
 #define SyncScreenSpriteSlots_020c5510 SyncScreenSpriteSlots
-#define func_0204f0c0 func_0204f0d4
+#define func_0204f0c0 UnlinkActiveIndexedRecord
 #define func_0204f178 SetIndexedRecordPriority
 #define func_0204f204 SetIndexedRecordAnimationFrame
 #define func_0204f2c0 IndexedRecord_SetActive

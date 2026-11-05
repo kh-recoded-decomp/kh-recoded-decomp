@@ -1,5 +1,5 @@
 #define InitPanelRecordFromProfile_02072d00 InitPanelRecordFromProfile
-#define func_0202a9d0 func_0202a9e4
+#define func_0202a9d0 NextSharedRandom16Scaled
 #define func_02052280 GetRecordTableDEntry
 #define func_ov002_020663d0 CopyWideStringBounded
 #define func_ov002_02069e8c FillCategoryRecords

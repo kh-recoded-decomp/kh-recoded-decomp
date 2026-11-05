@@ -2,6 +2,6 @@
 #define SetSecondaryElementEnabled_020bc084 SetSecondaryElementEnabled
 #define SlotMenu_RefreshView_020c5be0 SlotMenu_RefreshView
 #define SlotMenu_ToggleViewAfterTween_020c5cac SlotMenu_ToggleViewAfterTween
-#define func_02052514 func_02052528
-#define func_0205255c func_02052570
+#define func_02052514 ConfigureTween
+#define func_0205255c StartTween
 #include "src/ov076/unclassified_helpers/SlotMenu_ToggleViewAfterTween_020c5cac.c"

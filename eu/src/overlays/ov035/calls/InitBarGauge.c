@@ -13,7 +13,7 @@
 #define func_01ff8740 MIi_CpuClearFast
 #define func_01ff878c MIi_CpuCopyFast
 #define func_02014d38 NNS_G2dGetUnpackedBGCharacterData
-#define func_0202c48c func_0202c4a0
+#define func_0202c48c LoadFileAllocFromHeapTail
 #define func_ov035_020bbf70 UpdateBarGauge
 #define func_ov035_020bc0ec UpdateGaugeFrame
 #include "src/ov035/unclassified_helpers/InitBarGauge_020bc00c.c"

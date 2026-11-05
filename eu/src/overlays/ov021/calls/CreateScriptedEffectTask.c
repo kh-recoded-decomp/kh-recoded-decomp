@@ -9,7 +9,7 @@
 #define SetupEffectSlots_020ad384 SetupEffectSlots
 #define func_0204f768 GetOverlaySelectionRecord
 #define OS_SPrintf_02002428 OS_SPrintf
-#define func_0202c48c func_0202c4a0
+#define func_0202c48c LoadFileAllocFromHeapTail
 #define BuildNodeRecords_020ade6c BuildNodeRecords
 #define AcquireEntryHandles_020adf14 AcquireEntryHandles
 #define LoadResGroupHandles_020adc14 LoadResGroupHandles

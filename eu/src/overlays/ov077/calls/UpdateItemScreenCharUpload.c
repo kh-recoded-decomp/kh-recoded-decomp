@@ -19,7 +19,7 @@ typedef struct {
 } MenuWork;
 
 extern MenuWork *gItemListPanelWork;
-extern u32 func_01ff80d4(void);
+extern u32 GetVBlankCounter(void);
 extern void *G2_GetBG1CharPtr(void);
 extern void MIi_CpuCopyFast(const void *src, void *dest, u32 size);
 extern void UpdateWidgetRootAndFireAlarm(TextRenderer *renderer, int mode);
@@ -31,7 +31,7 @@ void UpdateItemScreenCharUpload(void)
     if (work->isPaused != 0) {
         return;
     }
-    if (((work->frameParity ^ func_01ff80d4()) & 1) != 0) {
+    if (((work->frameParity ^ GetVBlankCounter()) & 1) != 0) {
         return;
     }
     if (work->suppressCharUpload == 0) {

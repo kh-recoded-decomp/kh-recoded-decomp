@@ -5,7 +5,7 @@
 #define ZeroHalfThenFree_0202cd78 ZeroHalfThenFree
 #define data_ov077_020ca350 sOv077_UiMenuTipsP2_020ca370
 #define data_ov077_020ca360 sOv077_UiMenuLanguageTipsP2_020ca380
-#define func_0202c48c func_0202c4a0
-#define func_0202c690 func_0202c6a4
+#define func_0202c48c LoadFileAllocFromHeapTail
+#define func_0202c690 SetFileLoaderTextureUploadQueueMode
 #define func_0202d098 ValidateResourceTagAndDispatch
 #include "src/ov077/matrix_menu/LoadMenuImageTable_020c9dd0.c"

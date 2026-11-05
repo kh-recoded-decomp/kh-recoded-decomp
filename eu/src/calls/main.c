@@ -35,7 +35,7 @@ extern void InitSoundSystem(void);
 extern void *CreateTaskObject(void *descriptor, void *userData);
 extern void Pad_Sample(void);
 extern void OS_WaitVBlankIntr(void);
-extern u32 func_01ff80d4(void);
+extern u32 GetVBlankCounter(void);
 extern void NNS_GfdDoVramTransfer(void);
 extern void G3X_Reset(void);
 extern BOOL UpdatePanelActivation(void);
@@ -47,9 +47,9 @@ extern void GXi_FlushCommandList(void);
 extern BOOL IsBusyFlagSet(void);
 extern void GX_DispOff(void);
 extern BOOL PM_SetLCDPower(BOOL on);
-extern int func_02029f5c(void);
+extern int GetMainBrightnessSetting(void);
 extern void SetBrightnessAndSyncMain(int brightness);
-extern int func_02029f6c(void);
+extern int GetSubBrightnessSetting(void);
 extern void SetSecondaryBrightness(int brightness);
 extern void GX_DispOn(void);
 extern BOOL IsBusyCounterZero(void);
@@ -112,7 +112,7 @@ int main(void)
 
     for (;;) {
         OS_WaitVBlankIntr();
-        frameTarget = func_01ff80d4();
+        frameTarget = GetVBlankCounter();
         NNS_GfdDoVramTransfer();
         Pad_Sample();
         G3X_Reset();
@@ -125,7 +125,7 @@ int main(void)
         }
         if (wasActive != FALSE && isActive != FALSE) {
             InvokeCallbackSlot(1);
-            frameTarget = func_01ff80d4();
+            frameTarget = GetVBlankCounter();
         }
         if (wasActive == FALSE) {
             Obj_UpdateAll(0);
@@ -136,7 +136,7 @@ int main(void)
         }
         if (gTaskManager.frameSkipMode != 2) {
             frameTarget += (gTaskManager.frameSkipMode == 1) ? 2 : 1;
-            while (func_01ff80d4() < frameTarget) {
+            while (GetVBlankCounter() < frameTarget) {
                 OS_WaitVBlankIntr();
                 NNS_GfdDoVramTransfer();
             }
@@ -153,8 +153,8 @@ int main(void)
                 gMainDisplayState.displaysOff = 1;
             } else if (displaysOff != 0 && LID_CLOSED == 0 && PM_SetLCDPower(TRUE) != FALSE) {
                 gMainDisplayState.displaysOff = 0;
-                SetBrightnessAndSyncMain(func_02029f5c());
-                SetSecondaryBrightness(func_02029f6c());
+                SetBrightnessAndSyncMain(GetMainBrightnessSetting());
+                SetSecondaryBrightness(GetSubBrightnessSetting());
                 GX_DispOn();
             }
         } else if (IsBusyCounterZero() != FALSE && LID_CLOSED != 0) {
@@ -178,8 +178,8 @@ int main(void)
                 GX_DispOn();
                 gMainDisplayState.displaysOff = 0;
             }
-            SetBrightnessAndSyncMain(func_02029f5c());
-            SetSecondaryBrightness(func_02029f6c());
+            SetBrightnessAndSyncMain(GetMainBrightnessSetting());
+            SetSecondaryBrightness(GetSubBrightnessSetting());
         }
         gPreviousPanelActive = wasActive;
         wasActive = isActive;

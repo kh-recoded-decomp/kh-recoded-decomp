@@ -9,7 +9,7 @@
 #define data_ov086_020c21bc gRecordPanelCallbacks
 #define func_020033e0 DC_FlushAll
 #define func_02014d38 NNS_G2dGetUnpackedBGCharacterData
-#define func_0202c48c func_0202c4a0
+#define func_0202c48c LoadFileAllocFromHeapTail
 #define func_ov027_020b7d58 InitBackgroundContainer
 #define func_ov027_020b7e24 func_ov027_020b7e44
 #include "src/ov086/panel_state/LoadRecordSubScreenGraphics_020c0f08.c"

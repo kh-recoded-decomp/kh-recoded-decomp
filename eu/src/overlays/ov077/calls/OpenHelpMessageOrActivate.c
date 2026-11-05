@@ -1,7 +1,7 @@
 #define OpenHelpMessageOrActivate_020c4b50 OpenHelpMessageOrActivate
 #define SetFlagGatedElementsVisible_020c9d7c SetFlagGatedElementsVisible
 #define data_ov077_020ca0fc data_ov077_020ca11c
-#define func_02029f48 func_02029f5c
+#define func_02029f48 GetMainBrightnessSetting
 #define func_ov039_020bc1bc func_ov039_020bc1dc
 #define func_ov077_020c4bb0 SetModeTwoAndRefresh
 #define func_ov077_020c4be0 UpdateItemScreenDisplay

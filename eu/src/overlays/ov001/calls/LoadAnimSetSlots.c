@@ -3,7 +3,7 @@
 #define ReleaseSharedRecordSlot_0202c8a8 ReleaseSharedRecordSlot
 #define RetainOrInitializeSharedRecord_0202c80c SND_RegisterSeq
 #define SetSlotKeyAndRebind_0206a94c SetSlotKeyAndRebind
-#define func_0202c690 func_0202c6a4
+#define func_0202c690 SetFileLoaderTextureUploadQueueMode
 #define func_0202c940 AcquireOrRefreshResourceBlock
 #define func_0202d3c8 IndexedPointer_GetFirstWord
 #define func_0202d3e0 NestedPointer_GetFirstWord

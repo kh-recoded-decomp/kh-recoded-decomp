@@ -2,5 +2,5 @@
 #define FillCategoryRecords_02069e8c FillCategoryRecords
 #define GenerateRandomProfile_02072dd8 GenerateRandomProfile
 #define GetRecordTableDEntry_02052280 GetRecordTableDEntry
-#define func_0202a9d0 func_0202a9e4
+#define func_0202a9d0 NextSharedRandom16Scaled
 #include "src/ov015/wireless/GenerateRandomProfile_02072dd8.c"

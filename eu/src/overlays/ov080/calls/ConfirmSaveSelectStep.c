@@ -9,9 +9,9 @@
 #define SetPrimaryElementEnabled_020bc054 SetPrimaryElementEnabled
 #define SetSecondaryElementEnabled_020bc084 SetSecondaryElementEnabled
 #define StopSoundStreamAtIndex_0204deb0 StopSoundStreamAtIndex
-#define func_0202a9d0 func_0202a9e4
-#define func_02052514 func_02052528
-#define func_0205255c func_02052570
+#define func_0202a9d0 NextSharedRandom16Scaled
+#define func_02052514 ConfigureTween
+#define func_0205255c StartTween
 #define func_ov039_020bbf78 StartSubScene
 #define func_ov039_020bc914 GetMenuSelection
 #include "src/ov080/unclassified_helpers/ConfirmSaveSelectStep_020c5a0c.c"

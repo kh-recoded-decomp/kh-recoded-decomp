@@ -1,8 +1,8 @@
 #include "nitro/types.h"
 
-extern u32 func_0202a9e4();
+extern u32 NextSharedRandom16Scaled();
 
 void func_ov001_0207d860(void) {
-  func_0202a9e4(10);
-  func_0202a9e4(4);
+  NextSharedRandom16Scaled(10);
+  NextSharedRandom16Scaled(4);
 }

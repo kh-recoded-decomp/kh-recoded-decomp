@@ -20,7 +20,7 @@ extern StageResourceItem *SpawnStageItem(StageEntry *owner, int category, u8 ind
 extern void PlayStageSound(int seqArcNo, int index, BOOL checked);
 extern s32 GetHudLabelId(int labelIndex);
 extern void ShowFieldMessageLine_02072ad0(int kind, ...);
-extern int func_0202a9e4(u16 range);
+extern int NextSharedRandom16Scaled(u16 range);
 extern void ChooseEntryMainTarget(StageEntry *entry);
 extern void FinishEntryAction(StageEntry *entry);
 extern void SetSceneEntryAnimation(StageEntry *entry, int animation, int blend, int reset);
@@ -48,7 +48,7 @@ extern BOOL HasEntryWithClearState(BOOL enemies);
 
 static inline void PlayAttackVoice(StageEntry *entry)
 {
-    int pick = func_0202a9e4(2000) / 1000;
+    int pick = NextSharedRandom16Scaled(2000) / 1000;
 
     PlayStageSound(gAttackVoices[0xff - entry->kind][pick].seqArc, gAttackVoices[0xff - entry->kind][pick].index, TRUE);
 }
@@ -276,7 +276,7 @@ void EntryActionCombo(u8 entryIndex)
                 if (data_ov041_020cff48.comboHit == data_ov041_020cff48.comboLength) {
                     data_ov041_020cff48.comboStage = COMBO_FINISHER;
                 } else if (data_ov041_020cff48.comboHit < data_ov041_020cff48.comboLength) {
-                    data_ov041_020cff48.comboStage = func_0202a9e4(2) + 1;
+                    data_ov041_020cff48.comboStage = NextSharedRandom16Scaled(2) + 1;
                 }
             } else {
                 data_ov041_020cff48.comboStage = 0;
@@ -287,7 +287,7 @@ void EntryActionCombo(u8 entryIndex)
         }
         if ((entry->flags & STAGE_ENTRY_PRESS_PANEL) && !(entry->flags & STAGE_ENTRY_MISSED) &&
             HasEntryWithClearState(entry->flags & STAGE_ENTRY_ENEMY) &&
-            (u32)func_0202a9e4(1000) < entry->actions[COMBO_FOLLOW_UP].chance) {
+            (u32)NextSharedRandom16Scaled(1000) < entry->actions[COMBO_FOLLOW_UP].chance) {
             switch (entry->kind) {
             case 0xfd:
             case 0xfe:

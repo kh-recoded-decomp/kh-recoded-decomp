@@ -2,7 +2,7 @@
 #define ReadSessionPackedBits_02064574 ReadSessionPackedBits
 #define SampleTweenValue_0205258c SampleTweenValue
 #define UpdateCounterHudPanel_0207c288 UpdateCounterHudPanel
-#define func_02052514 func_02052528
-#define func_0205255c func_02052570
+#define func_02052514 ConfigureTween
+#define func_0205255c StartTween
 #define func_ov001_0207ca04 DrawScaledTextureQuad
 #include "src/ov001/unclassified_helpers/UpdateCounterHudPanel_0207c288.c"

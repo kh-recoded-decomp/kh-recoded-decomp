@@ -1,4 +1,4 @@
 #define StartTimerFromPackedPair_0207cb78 StartTimerFromPackedPair
-#define func_02052514 func_02052528
-#define func_0205255c func_02052570
+#define func_02052514 ConfigureTween
+#define func_0205255c StartTween
 #include "src/ov001/unclassified_helpers/StartTimerFromPackedPair_0207cb78.c"

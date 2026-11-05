@@ -4,7 +4,7 @@ typedef void (*ResetCallback)(void *self, s32 arg);
 
 extern u32 data_ov028_020bb3a0;
 extern s32 FX_Div(s32 numer, s32 denom);
-extern void func_0204d994(void);
+extern void StopSequencePlayersFrom2(void);
 extern void BeginScreenFadeOut(s32 value);
 extern void func_ov001_0206a8c8(void);
 extern void *GetBoundedEntryField(s32 value);
@@ -26,6 +26,6 @@ void func_ov028_020bb1b4(void)
         callback(self, 0);
     }
     Camera_SetFlag18IfStandard(1);
-    func_0204d994();
+    StopSequencePlayersFrom2();
     *(u16 *)(data_ov028_020bb3a0 + 6) = *(u16 *)(data_ov028_020bb3a0 + 6) | 0x40;
 }

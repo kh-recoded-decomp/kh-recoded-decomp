@@ -41,7 +41,7 @@ extern void RebuildRecordCounters(void);
 extern void *GetOverlaySelectionRecord(u32 selectionIndex);
 extern void ComputePlayerStats(SaveData *state, void *out, BOOL recompute, int scaleParam);
 extern void RefreshStatusMenuData(SaveData *saveData, void *options);
-extern void func_02050a58(void);
+extern void ReleaseMapLayoutReference(void);
 extern void LoadSlotIntoGame(SaveSlot *slot);
 
 BOOL PollSaveSlotReads(SaveSelectScreen *screen)
@@ -95,7 +95,7 @@ BOOL PollSaveSlotReads(SaveSelectScreen *screen)
             RebuildRecordCounters();
             ComputePlayerStats(data_0205fe0c, GetOverlaySelectionRecord(0), TRUE, 1);
             RefreshStatusMenuData(data_0205fe0c, NULL);
-            func_02050a58();
+            ReleaseMapLayoutReference();
         }
         if (GetMenuSelection() != 3) {
             stamp = ((SaveFields *)data_0205fe0c)->saveStamp;

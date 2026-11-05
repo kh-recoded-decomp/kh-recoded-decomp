@@ -96,7 +96,7 @@ src/auto/AutoloadCallback.c:
     complete
     .text       start:0x02000a74 end:0x02000a78
 
-src/calls/func_02000a78.c:
+src/calls/ConfigureArm9MemorySystem.c:
     complete
     .text       start:0x02000a78 end:0x02000b60
 
@@ -2589,7 +2589,7 @@ libs/nitro/snd/calls/SND_SetPlayerChannelPriority.c:
     complete
     .text       start:0x0200ea48 end:0x0200ea60
 
-src/calls/func_0200ea60.c:
+src/calls/QueueSoundCommand0A.c:
     complete
     .text       start:0x0200ea60 end:0x0200ea88
 
@@ -2689,7 +2689,7 @@ libs/nitro/snd/calls/SND_AllocCommand.c:
     complete
     .text       start:0x0200efd4 end:0x0200f05c
 
-src/calls/func_0200f05c.c:
+src/calls/AppendReservedSoundCommand.c:
     complete
     .text       start:0x0200f05c end:0x0200f094
 
@@ -2713,7 +2713,7 @@ libs/nitro/snd/calls/SND_CountReservedCommand.c:
     complete
     .text       start:0x0200f318 end:0x0200f354
 
-src/calls/func_0200f354.c:
+src/calls/CountReservedSoundCommands.c:
     complete
     .text       start:0x0200f354 end:0x0200f390
 
@@ -6233,7 +6233,7 @@ src/calls/RegisterPanelCallbacks.c:
     complete
     .text       start:0x0202855c end:0x0202858c
 
-src/calls/func_0202858c.c:
+src/calls/CacheMainBrightnessAndTestZero.c:
     complete
     .text       start:0x0202858c end:0x020285b4
 
@@ -6473,11 +6473,11 @@ src/calls/SetDisplaySetting.c:
     complete
     .text       start:0x02029f3c end:0x02029f5c
 
-src/calls/func_02029f5c.c:
+src/calls/GetMainBrightnessSetting.c:
     complete
     .text       start:0x02029f5c end:0x02029f6c
 
-src/calls/func_02029f6c.c:
+src/calls/GetSubBrightnessSetting.c:
     complete
     .text       start:0x02029f6c end:0x02029f7c
 
@@ -6641,7 +6641,7 @@ src/calls/SeedSharedRandomState.c:
     complete
     .text       start:0x0202a998 end:0x0202a9e4
 
-src/calls/func_0202a9e4.c:
+src/calls/NextSharedRandom16Scaled.c:
     complete
     .text       start:0x0202a9e4 end:0x0202aa18
 
@@ -6873,7 +6873,7 @@ src/calls/AllocLoaderRequest.c:
     complete
     .text       start:0x0202b824 end:0x0202b880
 
-src/calls/func_0202b880.c:
+src/calls/ReleaseLoaderRequest.c:
     complete
     .text       start:0x0202b880 end:0x0202b8a8
 
@@ -6937,7 +6937,7 @@ src/calls/Archive_LoadFile.c:
     complete
     .text       start:0x0202c48c end:0x0202c4a0
 
-src/calls/func_0202c4a0.c:
+src/calls/LoadFileAllocFromHeapTail.c:
     complete
     .text       start:0x0202c4a0 end:0x0202c4b4
 
@@ -6945,7 +6945,7 @@ src/calls/LoadFileIntoBuffer.c:
     complete
     .text       start:0x0202c4b4 end:0x0202c6a4
 
-src/calls/func_0202c6a4.c:
+src/calls/SetFileLoaderTextureUploadQueueMode.c:
     complete
     .text       start:0x0202c6a4 end:0x0202c6e0
 
@@ -7029,7 +7029,7 @@ src/calls/RelocateArchiveSections.c:
     complete
     .text       start:0x0202d25c end:0x0202d328
 
-src/calls/func_0202d328.c:
+src/calls/RelocateArchiveSectionsWithDefaultFlags.c:
     complete
     .text       start:0x0202d328 end:0x0202d33c
 
@@ -9441,7 +9441,7 @@ src/calls/StopSeqArcOrDefault.c:
     complete
     .text       start:0x0204d974 end:0x0204d994
 
-src/calls/func_0204d994.c:
+src/calls/StopSequencePlayersFrom2.c:
     complete
     .text       start:0x0204d994 end:0x0204d9bc
 
@@ -9501,7 +9501,7 @@ src/calls/IsSlotStateNotOne.c:
     complete
     .text       start:0x0204de3c end:0x0204de64
 
-src/calls/func_0204de64.c:
+src/calls/StartPreparedStreamIfReady.c:
     complete
     .text       start:0x0204de64 end:0x0204dea4
 
@@ -9573,7 +9573,7 @@ src/calls/FindFreeRecordSlot.c:
     complete
     .text       start:0x0204e530 end:0x0204e564
 
-src/calls/func_0204e564.c:
+src/calls/InitCellAnimationFromSequenceIndex.c:
     complete
     .text       start:0x0204e564 end:0x0204e59c
 
@@ -9677,7 +9677,7 @@ src/calls/PXI_Init_0204f0c8.c:
     complete
     .text       start:0x0204f0c8 end:0x0204f0d4
 
-src/calls/func_0204f0d4.c:
+src/calls/UnlinkActiveIndexedRecord.c:
     complete
     .text       start:0x0204f0d4 end:0x0204f118
 
@@ -9721,7 +9721,7 @@ src/calls/SetSlotAnimSequence.c:
     complete
     .text       start:0x0204f260 end:0x0204f2ac
 
-src/calls/func_0204f2ac.c:
+src/calls/SetIndexedRecordAnimationSpeed.c:
     complete
     .text       start:0x0204f2ac end:0x0204f2d4
 
@@ -10005,7 +10005,7 @@ src/calls/AcquireMapLayout.c:
     complete
     .text       start:0x020506f0 end:0x02050a58
 
-src/calls/func_02050a58.c:
+src/calls/ReleaseMapLayoutReference.c:
     complete
     .text       start:0x02050a58 end:0x02050a94
 
@@ -10305,15 +10305,15 @@ src/calls/TweenValue.c:
     complete
     .text       start:0x0205238c end:0x020524fc
 
-src/calls/func_020524fc.c:
+src/calls/InitTween.c:
     complete
     .text       start:0x020524fc end:0x02052528
 
-src/calls/func_02052528.c:
+src/calls/ConfigureTween.c:
     complete
     .text       start:0x02052528 end:0x02052570
 
-src/calls/func_02052570.c:
+src/calls/StartTween.c:
     complete
     .text       start:0x02052570 end:0x020525a0
 
@@ -10321,7 +10321,7 @@ src/calls/SampleTweenValue.c:
     complete
     .text       start:0x020525a0 end:0x0205265c
 
-src/calls/setStopwatchHeld.c:
+src/calls/SetTweenPaused.c:
     complete
     .text       start:0x0205265c end:0x020526d4
 

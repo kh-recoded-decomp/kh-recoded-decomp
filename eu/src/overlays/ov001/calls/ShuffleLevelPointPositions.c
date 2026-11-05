@@ -1,4 +1,4 @@
 #define ShuffleLevelPointPositions_020689b0 ShuffleLevelPointPositions
 #define data_ov001_020a0470 data_ov001_020a0490
-#define func_0202a9d0 func_0202a9e4
+#define func_0202a9d0 NextSharedRandom16Scaled
 #include "src/ov001/unclassified_helpers/ShuffleLevelPointPositions_020689b0.c"

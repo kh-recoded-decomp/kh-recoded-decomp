@@ -42,7 +42,7 @@ extern u8 *GetBoundedEntryField(u32 index);
 extern s32 Anim_GetFrame(void *anim, u32 track);
 extern s32 GetModelAnimationDurationFx32(void *anim, u32 track);
 extern s32 FX_Mul(s32 a, s32 b);
-extern int func_02029f5c(void);
+extern int GetMainBrightnessSetting(void);
 extern void SetFieldMenuSuspended(int a, int b);
 extern void AwardSlotLevelProgress(int amount);
 extern void AddRegionProgress(u8 amount);
@@ -97,7 +97,7 @@ int UpdateAreaSceneState(void) {
                 }
             }
         }
-        if (func_02029f5c() < 0) {
+        if (GetMainBrightnessSetting() < 0) {
             state->flags &= ~4;
             *(vu32 *)0x04000000 = (*(vu32 *)0x04000000 & ~0x1f00) | 0x100;
             SetFieldMenuSuspended(1, 0);
@@ -110,7 +110,7 @@ int UpdateAreaSceneState(void) {
     if (state->pendingChoice >= 0) {
         return 10;
     }
-    if (func_02029f5c() == 0) {
+    if (GetMainBrightnessSetting() == 0) {
         if (data_ov001_020a0480->pendingReward > 0) {
             AwardSlotLevelProgress(data_ov001_020a0480->pendingReward);
             data_ov001_020a0480->pendingReward = 0;

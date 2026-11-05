@@ -19,7 +19,7 @@ extern void ActorSlot_SetFlag8ByIndex(int actorIndex, BOOL enable);
 extern int GetStageKindSoundArc(int kind);
 extern void ActorSlot_SetFlag8(void *slot, BOOL enable);
 extern void VEC_Add(const VecFx32 *a, const VecFx32 *b, VecFx32 *ab);
-extern int func_0202a9e4(u16 range);
+extern int NextSharedRandom16Scaled(u16 range);
 extern fx32 GetDifficultyScale(void);
 extern fx32 FX_Mul(fx32 a, fx32 b);
 extern u8 CountActiveStageEntries(BOOL primary);
@@ -172,7 +172,7 @@ void StageEntryStateDefeated(u8 entryIndex)
             position = OverheadOf(entry);
             shares = gNoOrbShares;
             amounts = gNoOrbAmounts;
-            amount = func_0202a9e4(entry->orbsMax - entry->orbsMin + 1) + entry->orbsMin;
+            amount = NextSharedRandom16Scaled(entry->orbsMax - entry->orbsMin + 1) + entry->orbsMin;
             amount = FX_Mul(INT_TO_FX32(amount), GetDifficultyScale()) >> FX32_SHIFT;
             remainder = amount % CountActiveStageEntries(TRUE);
             count = work->primaryCount;

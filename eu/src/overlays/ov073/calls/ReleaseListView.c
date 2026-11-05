@@ -2,5 +2,5 @@
 #define ReleaseListView_020c3c50 ReleaseListView
 #define SetParamWord8_02050620 SetParamWord8
 #define StoreSelectionPackedValues_020505b4 StoreSelectionPackedValues
-#define func_0204f0c0 func_0204f0d4
+#define func_0204f0c0 UnlinkActiveIndexedRecord
 #include "src/ov073/status_menu/ReleaseListView_020c3c50.c"

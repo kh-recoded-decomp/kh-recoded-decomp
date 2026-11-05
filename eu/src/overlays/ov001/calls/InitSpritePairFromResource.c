@@ -1,5 +1,5 @@
 #define InitSpritePairFromResource_0206c19c InitSpritePairFromResource
 #define SetSlotKeyAndRebind_0206a94c SetSlotKeyAndRebind
 #define func_0202d3e0 NestedPointer_GetFirstWord
-#define func_020524e8 func_020524fc
+#define func_020524e8 InitTween
 #include "src/ov001/shared_engine/InitSpritePairFromResource_0206c19c.c"

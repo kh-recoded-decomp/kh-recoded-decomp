@@ -30,7 +30,7 @@ extern PanelState *data_ov014_0206f9a0;
 extern const u8 gPanelGroupCategories[][7];
 extern const char sOv014_WxcWldLanguageBarP2_0206f960[];
 extern const char sOv014_WxcWldLanguageBackP2_0206f974[];
-extern void func_0204f0d4(PanelObjects *, int);
+extern void UnlinkActiveIndexedRecord(PanelObjects *, int);
 extern void ObjManager_FreeSlot(PanelObjects *, int);
 extern MsgContainerHeader *Msg_OpenContainerAndReadHeader(const char *, u32, BOOL);
 extern int PXI_Init_0204f020(PanelObjects *, u32);
@@ -74,7 +74,7 @@ void RefreshPanelCategorySlots(void)
         slot = data_ov014_0206f9a0->slots[i];
         image = data_ov014_0206f9a0->images[i];
         if (slot != 0 || image != 0) {
-            func_0204f0d4(objects, slot);
+            UnlinkActiveIndexedRecord(objects, slot);
             ObjManager_FreeSlot(objects, image);
         }
     }

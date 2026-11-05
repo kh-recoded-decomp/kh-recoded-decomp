@@ -8,6 +8,6 @@
 #define data_02055c54 sDefaultAllocPlttVramFunc
 #define data_ov001_020a0480 data_ov001_020a04a0
 #define func_02018978 Obj_SetWord2C
-#define func_0202c690 func_0202c6a4
+#define func_0202c690 SetFileLoaderTextureUploadQueueMode
 #define func_0202d204 func_0202d218
 #include "src/ov001/shared_engine/LoadSceneTextureResource_02069f2c.c"

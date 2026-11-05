@@ -1,4 +1,4 @@
 #define LoadNextSceneSlotResources_020672a0 LoadNextSceneSlotResources
 #define RetainOrInitializeSharedRecord_0202c80c SND_RegisterSeq
-#define func_0202c48c func_0202c4a0
+#define func_0202c48c LoadFileAllocFromHeapTail
 #include "src/ov001/unclassified_helpers/LoadNextSceneSlotResources_020672a0.c"

@@ -1,7 +1,7 @@
 #define OpenFieldPanel_020717e4 OpenFieldPanel
 #define data_ov001_020a04a4 data_ov001_020a04c4
-#define func_02052514 func_02052528
-#define func_0205255c func_02052570
+#define func_02052514 ConfigureTween
+#define func_0205255c StartTween
 #define func_ov001_0206fcc8 BackupSceneVram
 #define func_ov001_020701a8 ClearChoiceHighlight
 #define func_ov001_02077b90 SetFieldMenuSuspended

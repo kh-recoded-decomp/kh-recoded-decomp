@@ -408,3 +408,11 @@ segment/cylinder queries, collision-vector adapters and guarded resource release
 [VECTOR_COLLISION_HELPERS.md](VECTOR_COLLISION_HELPERS.md) records the real
 quaternion/input order, callback sequencing, query radius and borrowed result,
 flag guards and ownership limits. No collision algorithm is rewritten.
+
+## Timing, loading, audio and random services
+
+Twenty-three helpers now name their actual tween, loader, sound-command, indexed
+animation, brightness, platform-clock and RNG operations.
+[ENGINE_SERVICE_HELPERS.md](ENGINE_SERVICE_HELPERS.md) records evidence for each
+entrypoint, the actual tween argument order, clock/flag units, queue ownership
+limits and exact three-word RNG arithmetic without merging split DATA owners.

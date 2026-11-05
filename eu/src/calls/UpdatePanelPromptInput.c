@@ -22,7 +22,7 @@ extern void UpdatePanelPromptBlink(void);
 extern void func_020281c8(void);
 extern BOOL ToggleSelectedPanelSlot(void);
 extern void func_020284e4(void);
-extern void func_0204d994(void);
+extern void StopSequencePlayersFrom2(void);
 extern void UpdatePanelSlotBlink(int slot);
 
 BOOL UpdatePanelPromptInput(void)
@@ -57,7 +57,7 @@ BOOL UpdatePanelPromptInput(void)
                 ResetPanelFieldB8AndNotify();
             } else {
                 func_020284e4();
-                func_0204d994();
+                StopSequencePlayersFrom2();
                 panel->confirmed = 1;
             }
             PlaySoundEffect(0, 1);

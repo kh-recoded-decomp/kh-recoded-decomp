@@ -4,7 +4,7 @@
 #define SpawnGroupMemberGrid_020bf468 SpawnGroupMemberGrid
 #define data_02053438 gZeroVecFx32
 #define data_02053444 gIdentityMtxFx33
-#define func_0202a9d0 func_0202a9e4
+#define func_0202a9d0 NextSharedRandom16Scaled
 #define func_ov001_0208635c func_ov001_02086384
 #define func_ov016_020a6338 SpawnFieldObjectTree
 #define func_ov016_020a6954 func_ov016_020a6974

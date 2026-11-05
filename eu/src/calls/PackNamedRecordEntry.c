@@ -4,5 +4,5 @@
 #define data_0205615c gSoundCategoryNames
 #define data_02056178 sMain_BaChFormatSWpBZ_02056178
 #define func_01ff8830 MI_CpuFill8
-#define func_0202c48c func_0202c4a0
+#define func_0202c48c LoadFileAllocFromHeapTail
 #include "src/arm9/shared_engine/PackNamedRecordEntry_0204f63c.c"

@@ -6,8 +6,8 @@
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define RefreshWindowHighlight_02079490 RefreshWindowHighlight
 #define data_ov001_020a04c4 data_ov001_020a04e4
-#define func_02052514 func_02052528
-#define func_0205255c func_02052570
+#define func_02052514 ConfigureTween
+#define func_0205255c StartTween
 #define func_ov027_020b8390 FindLoadedElementById
 #define func_ov027_020b83e8 SetTagRecordArmed
 #include "src/ov001/field_manager/CloseModeWindow_0207a260.c"

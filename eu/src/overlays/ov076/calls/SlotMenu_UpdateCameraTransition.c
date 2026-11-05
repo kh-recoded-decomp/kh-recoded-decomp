@@ -7,8 +7,8 @@
 #define SlotMenu_SetBgScrollMode_020c74e4 SlotMenu_SetBgScrollMode
 #define SlotMenu_UpdateCameraTransition_020c5d20 SlotMenu_UpdateCameraTransition
 #define UpdateWidgetRootAndFireAlarm_020b8c94 UpdateWidgetRootAndFireAlarm
-#define func_02052514 func_02052528
-#define func_0205255c func_02052570
+#define func_02052514 ConfigureTween
+#define func_0205255c StartTween
 #define func_ov039_020bc1bc func_ov039_020bc1dc
 #define func_ov076_020c7534 SlotMenu_Draw3D
 #define func_ov076_020c83e4 SlotMenu_BeginSlotTransition

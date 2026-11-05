@@ -1,4 +1,4 @@
 #define PlayWeightedRandomEntry_02069530 PlayWeightedRandomEntry
 #define data_ov001_020a047c data_ov001_020a049c
-#define func_0202a9d0 func_0202a9e4
+#define func_0202a9d0 NextSharedRandom16Scaled
 #include "src/ov001/shared_engine/PlayWeightedRandomEntry_02069530.c"

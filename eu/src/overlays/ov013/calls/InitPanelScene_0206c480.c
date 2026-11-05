@@ -11,7 +11,7 @@
 #define SetScrollListPosition_02063280 SetScrollListPosition
 #define SetSelectionIfChanged_0204d73c SetSelectionIfChanged
 #define func_01ff8830 MI_CpuFill8
-#define func_0202a9d0 func_0202a9e4
+#define func_0202a9d0 NextSharedRandom16Scaled
 #define func_ov013_0206d078 InitPanelSubScreenGraphics
 #define func_ov013_0206da20 InitRecordScreenGraphics
 #define func_ov027_020b90a4 FindWidgetById

@@ -2,7 +2,7 @@
 #define GetRecordTableBEntry_02052238 GetRecordTableBEntry
 #define PickRandomUnflaggedRecord_0206a214 PickRandomUnflaggedRecord
 #define ReleaseRecordSlot_02051dfc ReleaseRecordSlot
-#define func_0202a9d0 func_0202a9e4
+#define func_0202a9d0 NextSharedRandom16Scaled
 #define func_ov002_02066c78 DispatchContextCommand
 #define func_ov002_02069504 GetPackedFieldValue
 #define func_ov002_0206991c IsRecordFlagBitSet

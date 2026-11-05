@@ -3,7 +3,7 @@
 extern void *NNSi_FndAllocFromDefaultHeap(u32 size);
 extern void MIi_CpuClearFast(u32 value, void *destination, u32 bytes);
 extern void *SND_RegisterSeq(u32 key, int kind);
-extern void *func_0202c4a0(u32 key, int kind);
+extern void *LoadFileAllocFromHeapTail(u32 key, int kind);
 extern void func_0202edb0(void *model, void *record, void *block, int kind);
 extern void NNSi_FndFreeFromDefaultHeap(void *block);
 
@@ -67,7 +67,7 @@ void CreateStageResourceGroup(int category, StageResourceContainer *container)
         StageResourceList *list = &group->lists[i];
         for (j = 0; j < list->count; ++j) {
             void *record = SND_RegisterSeq(RESOURCE_KEY(container, ++), 0x12);
-            void *block = func_0202c4a0(RESOURCE_KEY(container, --), 0xf);
+            void *block = LoadFileAllocFromHeapTail(RESOURCE_KEY(container, --), 0xf);
             func_0202edb0(&list->items[j].model, record, block, 0x12);
             NNSi_FndFreeFromDefaultHeap(block);
         }

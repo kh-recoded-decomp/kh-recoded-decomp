@@ -102,10 +102,10 @@ extern const CellTable data_ov024_020b73d4;
 extern const LinkTable data_ov024_020b741c;
 extern const OffsetTable data_ov024_020b7384;
 
-extern void func_0204f0d4(void *manager, int slot);
+extern void UnlinkActiveIndexedRecord(void *manager, int slot);
 extern void ReleaseOverlayResourceSlots(void);
 extern void ClearTileTableRowAndMarkDirty(void *table, int id);
-extern void *func_0202c4a0(u32 fileId, u32 heap);
+extern void *LoadFileAllocFromHeapTail(u32 fileId, u32 heap);
 extern void GetBgDataFromArchive(BgGraphicsData *out, void *archive, int screenIndex, int characterIndex,
                                           int paletteIndex);
 extern void GXS_LoadBGPltt(void *data, u32 offset, u32 size);
@@ -150,7 +150,7 @@ void BuildBoardLayout(BoardCursor *cursor, int loadBackground)
     for (i = 0; i < 6; i++) {
         for (j = 0; j < 3; j++) {
             if (data_ov024_020b7540.state->cellIds[i][j] >= 0) {
-                func_0204f0d4(data_ov024_020b7540.state->objectSet, data_ov024_020b7540.state->cellIds[i][j]);
+                UnlinkActiveIndexedRecord(data_ov024_020b7540.state->objectSet, data_ov024_020b7540.state->cellIds[i][j]);
             }
             data_ov024_020b7540.state->cellIds[i][j] = -1;
         }
@@ -161,7 +161,7 @@ void BuildBoardLayout(BoardCursor *cursor, int loadBackground)
     if (loadBackground) {
         ClearTileTableRowAndMarkDirty(data_ov024_020b7540.state->widget, 0x18);
         ClearTileTableRowAndMarkDirty(data_ov024_020b7540.state->widget, 0x19);
-        archive = func_0202c4a0(BOARD_VRAM_KEY(data_ov024_020b7540.state->resourceB) | 0x80000018, 0xe);
+        archive = LoadFileAllocFromHeapTail(BOARD_VRAM_KEY(data_ov024_020b7540.state->resourceB) | 0x80000018, 0xe);
         GetBgDataFromArchive(&bgData, archive, -1, 0, 0);
         GXS_LoadBGPltt(bgData.palette->data, 0, bgData.palette->size);
         GXS_LoadBG2Char(bgData.character->data, 0, bgData.character->size);
@@ -174,7 +174,7 @@ void BuildBoardLayout(BoardCursor *cursor, int loadBackground)
 
     for (i = 0; i < 6; i++) {
         if (cursor->slotValues[i] >= 0) {
-            data_ov024_020b754c[i] = (int)func_0202c4a0(
+            data_ov024_020b754c[i] = (int)LoadFileAllocFromHeapTail(
                 ((cursor->directions[i] + 0x17 + cursor->slotValues[i] * 4) & 0x1ff) |
                     (BOARD_VRAM_KEY(data_ov024_020b7540.state->resourceA) | 0x80000000),
                 0xe);

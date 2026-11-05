@@ -2,7 +2,7 @@
 #define FixedPointMultiply12 FX_Mul
 #define SetClampedFadeLevel_0204f448 SetClampedFadeLevel
 #define ShowMapTargetDistance_020b6278 ShowMapTargetDistance
-#define func_0204f298 func_0204f2ac
+#define func_0204f298 SetIndexedRecordAnimationSpeed
 #define func_0204f378 IndexedRecords_SetFlag2
 #define func_ov023_020b61a0 BlendMapTargetPalette
 #include "src/ov023/menu_graphics/ShowMapTargetDistance_020b6278.c"

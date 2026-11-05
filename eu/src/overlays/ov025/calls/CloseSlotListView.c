@@ -2,5 +2,5 @@
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define SetParamWord8_02050620 SetParamWord8
 #define StoreSelectionPackedValues_020505b4 StoreSelectionPackedValues
-#define func_0204f0c0 func_0204f0d4
+#define func_0204f0c0 UnlinkActiveIndexedRecord
 #include "src/ov025/status_menu/CloseSlotListView_020b71d8.c"

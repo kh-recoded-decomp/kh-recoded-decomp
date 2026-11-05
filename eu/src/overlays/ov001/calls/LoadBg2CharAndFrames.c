@@ -4,7 +4,7 @@
 #define func_0200344c DC_FlushRange
 #define func_02014d38 NNS_G2dGetUnpackedBGCharacterData
 #define func_0202c478 Archive_LoadFile
-#define func_0202c48c func_0202c4a0
+#define func_0202c48c LoadFileAllocFromHeapTail
 #define func_ov001_020711ec MakePrimaryVramKey
 #define func_ov001_02071214 MakePrimaryVramKey_02071214
 #include "src/ov001/unclassified_helpers/LoadBg2CharAndFrames_0207d728.c"

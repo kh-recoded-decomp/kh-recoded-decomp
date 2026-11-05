@@ -1,5 +1,5 @@
 #define DestroyContainerElement_020b8fc0 DestroyContainerElement
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define RemoveIntrusiveListObject_020129d8 NNS_FndRemoveListObject
-#define func_0204f0c0 func_0204f0d4
+#define func_0204f0c0 UnlinkActiveIndexedRecord
 #include "src/ov027/resource_container/DestroyContainerElement_020b8fc0.c"

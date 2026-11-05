@@ -5,7 +5,7 @@
 #define TARGET_SEEN_OUT 1
 #define TARGET_SEEN_FAR 2
 
-extern int func_0202a9e4(u16 range);
+extern int NextSharedRandom16Scaled(u16 range);
 
 /*
  * Picks a random entry on the other side that is still in the fight and at most range rows (beyond three)
@@ -27,12 +27,12 @@ int PickTargetInRange(StageEntry *entry, int range)
     seen = 0;
     work = gMovieContextState->stageWork;
     if (entry->flags & STAGE_ENTRY_ENEMY) {
-        target = func_0202a9e4(work->primaryCount * 100) / 100;
+        target = NextSharedRandom16Scaled(work->primaryCount * 100) / 100;
         count = work->primaryCount;
         first = 0;
     } else {
         first = work->primaryCount;
-        target = (first * 100 + func_0202a9e4(work->secondaryCount * 100)) / 100;
+        target = (first * 100 + NextSharedRandom16Scaled(work->secondaryCount * 100)) / 100;
         count = work->entryCount;
     }
     for (i = 0; i < count; i++) {

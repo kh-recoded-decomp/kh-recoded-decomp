@@ -16,7 +16,7 @@ typedef float f32;
 
 #define ACTION_KIND_FLURRY 5
 
-extern int func_0202a9e4(u16 range);
+extern int NextSharedRandom16Scaled(u16 range);
 extern int GetEntryAbility(StageEntry *entry, int ability);
 extern void SetEntryState(StageEntry *entry, int state);
 extern void GetPositionAboveGround(VecFx32 *position, StageEntry *entry);
@@ -134,7 +134,7 @@ u32 ResolveEntryHit(StageEntry *entry, StageEntry *target, StageEntryHit *hit)
     if (entry->statuses[8] > 0) {
         critical = TRUE;
     }
-    if (!critical && (u32)func_0202a9e4(1000) < hit->critical) {
+    if (!critical && (u32)NextSharedRandom16Scaled(1000) < hit->critical) {
         critical = TRUE;
     }
     switch (target->kind) {
@@ -154,7 +154,7 @@ u32 ResolveEntryHit(StageEntry *entry, StageEntry *target, StageEntryHit *hit)
         landed = TRUE;
     } else if (target->hp <= 0) {
         landed = TRUE;
-    } else if (func_0202a9e4(1000) < hitChance * 10) {
+    } else if (NextSharedRandom16Scaled(1000) < hitChance * 10) {
         landed = TRUE;
     }
     shown = (entry->flags & STAGE_ENTRY_ENEMY) ? target : entry;

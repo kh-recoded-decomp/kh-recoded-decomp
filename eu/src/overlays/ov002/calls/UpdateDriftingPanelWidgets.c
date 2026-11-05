@@ -4,7 +4,7 @@
 #define func_020241ac _ffix
 #define func_020245e8 _fadd
 #define func_02024818 _fsub
-#define func_0202a9d0 func_0202a9e4
+#define func_0202a9d0 NextSharedRandom16Scaled
 #define func_ov027_020b90a4 FindWidgetById
 #define func_ov027_020b91c8 SetWidgetPosition
 #define func_ov027_020b9360 ResolveWidgetPositionComponents

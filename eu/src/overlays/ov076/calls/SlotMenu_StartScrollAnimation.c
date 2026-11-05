@@ -1,5 +1,5 @@
 #define SlotMenu_StartScrollAnimation_020c8490 SlotMenu_StartScrollAnimation
-#define func_02052514 func_02052528
-#define func_0205255c func_02052570
+#define func_02052514 ConfigureTween
+#define func_0205255c StartTween
 #define func_ov076_020c61c8 SlotMenu_ShowResultMessage
 #include "src/ov076/unclassified_helpers/SlotMenu_StartScrollAnimation_020c8490.c"

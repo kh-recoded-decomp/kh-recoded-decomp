@@ -61,7 +61,7 @@ typedef struct {
 
 extern const VecFx32 gZeroVecFx32;
 extern int func_ov035_020bafc4(void);
-extern unsigned int func_0202a9e4(unsigned int range);
+extern unsigned int NextSharedRandom16Scaled(unsigned int range);
 
 void ApplyWanderCommand(WanderObject *object, WanderCommand *command)
 {
@@ -79,7 +79,7 @@ void ApplyWanderCommand(WanderObject *object, WanderCommand *command)
     total = 0;
     sets = object->def->choiceSets;
     set = &sets[command->setIndex];
-    roll = func_0202a9e4(100);
+    roll = NextSharedRandom16Scaled(100);
     object->heading = -1;
     object->facing = 0;
     for (i = 0; i < set->count; i++) {

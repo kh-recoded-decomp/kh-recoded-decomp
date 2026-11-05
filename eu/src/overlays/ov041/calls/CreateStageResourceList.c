@@ -1,7 +1,7 @@
 #include "src/overlays/ov041/StageResources.h"
 
 #define RetainOrInitializeSharedRecord SND_RegisterSeq
-#define LoadResourceBlock func_0202c4a0
+#define LoadResourceBlock LoadFileAllocFromHeapTail
 #define InitStageResourceModel func_0202edb0
 
 extern void *NNSi_FndAllocFromDefaultHeap(u32 size);

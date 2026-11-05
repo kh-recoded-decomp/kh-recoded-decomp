@@ -7,6 +7,6 @@
 #define func_020154fc NNS_G2dLoadPalette
 #define func_0202c478 Archive_LoadFile
 #define func_0202cc6c Msg_OpenContainerAndReadHeader
-#define func_0202d314 func_0202d328
+#define func_0202d314 RelocateArchiveSectionsWithDefaultFlags
 #define func_0202d3e0 NestedPointer_GetFirstWord
 #include "src/ov002/unclassified_helpers/LoadAvatarObjPalette_02067b24.c"

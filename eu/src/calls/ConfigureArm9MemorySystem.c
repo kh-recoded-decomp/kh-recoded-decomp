@@ -5,7 +5,7 @@ extern u8 SDK_AUTOLOAD_DTCM_START[];
 /* Masks load into r1 from the literal pool. */
 register u32 sMask __asm("r1");
 
-void func_02000a78(void)
+void ConfigureArm9MemorySystem(void)
 {
     u32 value;
 

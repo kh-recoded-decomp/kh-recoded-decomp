@@ -19,7 +19,7 @@
 #define data_ov052_020d21a8 sOv052_BaChFormatSMovPZ_020d21c8
 #define data_ov052_020d21c0 data_ov052_020d21e0
 #define func_01ff86fc MIi_CpuClear32
-#define func_0202c48c func_0202c4a0
+#define func_0202c48c LoadFileAllocFromHeapTail
 #define func_0202f590 func_0202f5a4
 #define func_0202f5b4 Obj_SetHalfwordFC
 #define func_020358b0 ApplyRecordTableEntry2

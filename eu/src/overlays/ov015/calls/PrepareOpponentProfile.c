@@ -3,5 +3,5 @@
 #define InvokePanelCallback_02073598 InvokePanelCallback
 #define IsPlayerCardValid_020736e0 IsPlayerCardValid
 #define PrepareOpponentProfile_020735bc PrepareOpponentProfile
-#define func_0202a9d0 func_0202a9e4
+#define func_0202a9d0 NextSharedRandom16Scaled
 #include "src/ov015/wireless/PrepareOpponentProfile_020735bc.c"

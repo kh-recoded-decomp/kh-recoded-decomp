@@ -1,3 +1,3 @@
-#define Ov002_SuspendOrRestorePanel func_0204de64
+#define Ov002_SuspendOrRestorePanel StartPreparedStreamIfReady
 #define ScriptCmd_RestorePanel_02026ab0 ScriptCmd_RestorePanel
 #include "src/arm9/shared_engine/ScriptCmd_RestorePanel_02026ab0.c"

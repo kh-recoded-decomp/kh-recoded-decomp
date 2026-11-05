@@ -6,5 +6,5 @@
 #define ReleaseListRecords_020bfa2c ReleaseListRecords
 #define ReleaseTextLayers_020bf4e4 ReleaseTextLayers
 #define SetStateFlagBits_020bc688 SetStateFlagBits
-#define func_02050a44 func_02050a58
+#define func_02050a44 ReleaseMapLayoutReference
 #include "src/ov091/panel_state/DestroyMenuScene_020bed14.c"

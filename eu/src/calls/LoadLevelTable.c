@@ -1,5 +1,5 @@
 #define LoadLevelTable_0204f5f4 LoadLevelTable
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define data_0205616c sMain_BaChSpZ_0205616c
-#define func_0202c48c func_0202c4a0
+#define func_0202c48c LoadFileAllocFromHeapTail
 #include "src/arm9/shared_engine/LoadLevelTable_0204f5f4.c"

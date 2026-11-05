@@ -1,5 +1,5 @@
 #define UpdatePlayerCounter_0206f5d8 UpdatePlayerCounter
-#define func_0202a9d0 func_0202a9e4
+#define func_0202a9d0 NextSharedRandom16Scaled
 #define func_ov002_02066c78 DispatchContextCommand
 #define g_context_0207e960 data_ov015_0207e960
 #include "src/ov015/wireless/UpdatePlayerCounter_0206f5d8.c"

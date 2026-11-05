@@ -105,7 +105,7 @@ extern void SetWidgetPosition(void *root, Widget *widget, WidgetPos *pos, int mo
 extern BOOL PlaySoundEffect(int seqArcNo, int index);
 extern void StopSeqArcOrDefault(int seqArcNo, int player, int fadeFrames);
 extern void SetSecondaryBrightness(int value);
-extern unsigned int func_0202a9e4(unsigned int range);
+extern unsigned int NextSharedRandom16Scaled(unsigned int range);
 extern unsigned int random_next_scaled(unsigned int upperBound);
 extern void SetResultsMode(u32 mode);
 extern void EnterResultsTierMode(u32 mode);
@@ -309,7 +309,7 @@ void HandleResultsInput(Widget *widget, u32 pressed)
                     PARAMS->unlockedRank++;
                     SetSecondaryBrightness(-16);
                     data_0206085c.rank = PARAMS->unlockedRank;
-                    data_0206085c.seed = func_0202a9e4(0xffff) + random_next_scaled(-1);
+                    data_0206085c.seed = NextSharedRandom16Scaled(0xffff) + random_next_scaled(-1);
                     SetupStageParams(PARAMS, PARAMS->worldId, PARAMS->unlockedRank);
                     EnterResultsTierMode(0);
                     WORK->timer = 2;

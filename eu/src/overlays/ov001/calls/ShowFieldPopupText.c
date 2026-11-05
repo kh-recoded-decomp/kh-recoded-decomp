@@ -10,6 +10,6 @@
 #define data_ov001_020a04a4 data_ov001_020a04c4
 #define func_01ff869c MIi_CpuCopy16
 #define func_01ff878c MIi_CpuCopyFast
-#define func_02052514 func_02052528
+#define func_02052514 ConfigureTween
 #define func_ov027_020ba2a8 GetPackedFileEntry
 #include "src/ov001/field_manager/ShowFieldPopupText_02071e44.c"

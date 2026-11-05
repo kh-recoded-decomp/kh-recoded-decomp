@@ -2,6 +2,6 @@
 #define PlaceCornerItems_0206c124 PlaceCornerItems
 #define SampleTweenValue_0205258c SampleTweenValue
 #define UpdateCornerSpread_0206c048 UpdateCornerSpread
-#define func_02052514 func_02052528
-#define func_0205255c func_02052570
+#define func_02052514 ConfigureTween
+#define func_0205255c StartTween
 #include "src/ov001/shared_engine/UpdateCornerSpread_0206c048.c"

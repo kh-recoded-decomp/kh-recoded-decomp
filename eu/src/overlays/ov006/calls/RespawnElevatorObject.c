@@ -11,7 +11,7 @@
 #define RebindAnimTracks_020809d0 RebindAnimTracks
 #define RespawnElevatorObject_020a07b4 RespawnElevatorObject
 #define RetainOrInitializeSharedRecord_0202c80c SND_RegisterSeq
-#define func_0202c48c func_0202c4a0
+#define func_0202c48c LoadFileAllocFromHeapTail
 #define func_0202f4e8 Flags16_ClearBit1
 #define func_020358b0 ApplyRecordTableEntry2
 #define func_020359f8 ApplyRecordTableEntry5

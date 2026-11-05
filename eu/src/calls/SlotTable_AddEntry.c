@@ -3,5 +3,5 @@
 #define GetElementAddress_0204e620 GetElementAddress
 #define SlotTable_AddEntry_0204ee34 SlotTable_AddEntry
 #define func_01ff86fc MIi_CpuClear32
-#define func_0204e550 func_0204e564
+#define func_0204e550 InitCellAnimationFromSequenceIndex
 #include "src/arm9/shared_engine/SlotTable_AddEntry_0204ee34.c"

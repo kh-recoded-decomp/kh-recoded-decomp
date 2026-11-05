@@ -32,9 +32,9 @@
 #define data_ov075_020d1434 sMatrixLevelStartCells
 #define data_ov075_020d1454 sMatrixCursorFrames
 #define func_0204f204 SetIndexedRecordAnimationFrame
-#define func_020524e8 func_020524fc
-#define func_02052514 func_02052528
-#define func_0205255c func_02052570
+#define func_020524e8 InitTween
+#define func_02052514 ConfigureTween
+#define func_0205255c StartTween
 #define func_ov027_020b91c8 SetWidgetPosition
 #define func_ov027_020ba2a8 GetPackedFileEntry
 #define func_ov039_020bc0d4 GetPrimaryElementEnabled

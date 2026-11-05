@@ -25,8 +25,8 @@
 #define data_ov041_020cfa00 sOv041_Sword_020cfa20
 #define data_ov041_020cfa08 sOv041_Bip01Head_020cfa28
 #define func_01ff8740 MIi_CpuClearFast
-#define func_0202a9d0 func_0202a9e4
-#define func_0202c48c func_0202c4a0
+#define func_0202a9d0 NextSharedRandom16Scaled
+#define func_0202c48c LoadFileAllocFromHeapTail
 #define func_020358b0 ApplyRecordTableEntry2
 #define func_02035930 ActivateEntrySubobject
 #define func_02036a70 SetRecordSlotValue

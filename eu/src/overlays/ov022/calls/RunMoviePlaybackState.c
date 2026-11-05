@@ -42,8 +42,8 @@ extern void DrawMovieCaption(BOOL top);
 extern BOOL ScriptVm_RunFrame(MovieLoader *loader);
 extern void GX_DispOff(void);
 extern BOOL PM_SetLCDPower(int enable);
-extern int func_02029f5c(void);
-extern int func_02029f6c(void);
+extern int GetMainBrightnessSetting(void);
+extern int GetSubBrightnessSetting(void);
 extern void SetBrightnessAndSyncMain(int brightness);
 extern void SetSecondaryBrightness(int brightness);
 extern void GX_DispOn(void);
@@ -120,8 +120,8 @@ void *RunMoviePlaybackState(void)
             } else if (state->lidClosed != 0 && !((LID_STATUS & 0x8000) >> 15)) {
                 if (PM_SetLCDPower(1)) {
                     state->lidClosed = 0;
-                    SetBrightnessAndSyncMain(func_02029f5c());
-                    SetSecondaryBrightness(func_02029f6c());
+                    SetBrightnessAndSyncMain(GetMainBrightnessSetting());
+                    SetSecondaryBrightness(GetSubBrightnessSetting());
                     GX_DispOn();
                 }
             }

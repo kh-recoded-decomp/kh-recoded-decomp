@@ -5,7 +5,7 @@
 #define SwapActorSlotResource_020bc978 SwapActorSlotResource
 #define data_ov036_020c3920 data_ov036_020c3940
 #define func_01ff89a8 MI_CpuCopy8
-#define func_0202c690 func_0202c6a4
+#define func_0202c690 SetFileLoaderTextureUploadQueueMode
 #define func_0202c940 AcquireOrRefreshResourceBlock
 #define func_ov036_020bb8cc func_ov036_020bb8ec
 #include "src/ov036/unclassified_helpers/SwapActorSlotResource_020bc978.c"

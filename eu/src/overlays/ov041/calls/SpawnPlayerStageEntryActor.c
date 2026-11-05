@@ -2,8 +2,8 @@
 #include "nitro/fx_types.h"
 
 #define RetainOrInitializeSharedRecord SND_RegisterSeq
-#define LoadResourceBlock func_0202c4a0
-#define RandomBelow func_0202a9e4
+#define LoadResourceBlock LoadFileAllocFromHeapTail
+#define RandomBelow NextSharedRandom16Scaled
 #define SetAnimationFrame SetModelAnimationFrameWithSingleWrap
 
 /* A message container: the archive header and the index of the next record to read. */

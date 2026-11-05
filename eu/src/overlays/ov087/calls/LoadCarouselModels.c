@@ -2,7 +2,7 @@
 
 extern void LoadDefaultProjectionValues(void *projection);
 extern u32 BuildSlotImageParams(int slot, u32 low);
-extern void *func_0202c4a0(u32 fileId, u32 param2);
+extern void *LoadFileAllocFromHeapTail(u32 fileId, u32 param2);
 extern void InitSharedRecordAndDispatchAlt(void *dst, int params, void *info, int b);
 extern void selectJointAnimationBlend(void *animationState, u16 trackIndex, void *blendTable, s16 blendIndex);
 extern void NNSi_FndFreeFromDefaultHeap(void *ptr);
@@ -41,7 +41,7 @@ void LoadCarouselModels(CarouselSceneView *scene, int lockedId, int entry)
 
     LoadDefaultProjectionValues(scene->projection);
     scene->projection[10] = 0x1c000;
-    info = func_0202c4a0(BuildSlotImageParams(2, 4), 0xe);
+    info = LoadFileAllocFromHeapTail(BuildSlotImageParams(2, 4), 0xe);
     LoadCarouselModel(&scene->centerModel, info, 5, 0x2000);
 
     for (entry = 0; entry < scene->entryCount; entry++) {
@@ -51,7 +51,7 @@ void LoadCarouselModels(CarouselSceneView *scene, int lockedId, int entry)
             id = entry;
         }
         scene->entries[entry].id = id;
-        info = func_0202c4a0(BuildSlotImageParams(2, infoIds.ids[id]), 0xe);
+        info = LoadFileAllocFromHeapTail(BuildSlotImageParams(2, infoIds.ids[id]), 0xe);
         LoadCarouselModel(&scene->entries[entry].model, info, recordIds.ids[id], 0x800);
     }
 }

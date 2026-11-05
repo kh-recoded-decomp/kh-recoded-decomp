@@ -64,6 +64,30 @@ class RenameSymbolTest(unittest.TestCase):
             self.rename()
         self.assertEqual(self.snapshot(), before)
 
+    def test_cpp_caller_and_header_follow_c_definition(self):
+        self.put("src/calls/OldFunction.c", "void OldFunction(void) {}\n")
+        caller = self.put("src/calls/Caller.cpp", 'extern "C" void OldFunction(void);\nvoid Caller() { OldFunction(); }\n')
+        header = self.put("src/calls/api.hpp", 'extern "C" void OldFunction(void);\n')
+        self.rename()
+        self.assertIn("NewFunction();", caller.read_text(encoding="utf-8"))
+        self.assertIn("NewFunction(void)", header.read_text(encoding="utf-8"))
+
+    def test_cpp_definition_preserves_extension(self):
+        self.put("src/calls/OldFunction.cpp", 'extern "C" void OldFunction(void) {}\n')
+        config = self.put("config/arm9/delinks.txt", "src/calls/OldFunction.cpp:\n")
+        self.rename()
+        self.assertFalse((self.root / "src/calls/OldFunction.cpp").exists())
+        self.assertIn("NewFunction(void)", (self.root / "src/calls/NewFunction.cpp").read_text(encoding="utf-8"))
+        self.assertIn("NewFunction.cpp", config.read_text(encoding="utf-8"))
+
+    def test_duplicate_c_and_cpp_definitions_leave_all_files_unchanged(self):
+        self.put("src/calls/OldFunction.c", "void OldFunction(void) {}\n")
+        self.put("libs/runtime/OldFunction.cpp", 'extern "C" void OldFunction(void) {}\n')
+        before = self.snapshot()
+        with self.assertRaisesRegex(SystemExit, "found 2"):
+            self.rename()
+        self.assertEqual(self.snapshot(), before)
+
     def test_duplicate_definitions_leave_all_files_unchanged(self):
         self.put("src/calls/OldFunction.c", "void OldFunction(void) {}\n")
         self.put("libs/nitro/fs/calls/OldFunction.c", "void OldFunction(void) {}\n")

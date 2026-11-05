@@ -11,7 +11,7 @@
 #define Text_UploadTileBuffer_02001520 Text_UploadTileBuffer
 #define ZeroHalfThenFree_0202cd78 ZeroHalfThenFree
 #define data_ov015_0207e8ac sOv015_WxcSchP2_0207e8ac
-#define func_0202c48c func_0202c4a0
+#define func_0202c48c LoadFileAllocFromHeapTail
 #define func_ov002_02061948 GetPanelSlot0
 #define func_ov015_020789b8 DrawCenteredLayerText
 #define func_ov015_02079cd4 DestroyOwnedObjectList

@@ -4,7 +4,7 @@
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define DestroyFndObjectList_020014f0 DestroyFndObjectList
 #define DestroyItemPicker_020cffb8 DestroyItemPicker
-#define func_02050a44 func_02050a58
+#define func_02050a44 ReleaseMapLayoutReference
 #define ReleaseResourceAndDetach_0202eee8 ReleaseResourceAndDetach
 #define ReadSessionPackedBits_02064574 ReadSessionPackedBits
 #define func_0205125c GetMapFinalStats

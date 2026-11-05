@@ -1,6 +1,6 @@
 #define AttachPendingSceneModel_020bd130 AttachPendingSceneModel
 #define data_ov036_020c3920 data_ov036_020c3940
-#define func_0202c690 func_0202c6a4
+#define func_0202c690 SetFileLoaderTextureUploadQueueMode
 #define func_0202ed80 func_0202ed94
 #define func_ov036_020bc8b4 LoadTextureInChunks
 #define func_ov036_020bd36c SetSceneModelBlendIndex

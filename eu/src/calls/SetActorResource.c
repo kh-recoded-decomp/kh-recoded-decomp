@@ -1,6 +1,6 @@
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define RetainOrInitializeSharedRecord_0202c80c SND_RegisterSeq
 #define SetActorResource_02026a00 SetActorResource
-#define func_0202c48c func_0202c4a0
+#define func_0202c48c LoadFileAllocFromHeapTail
 #define func_020358b0 ApplyRecordTableEntry2
 #include "src/arm9/shared_engine/SetActorResource_02026a00.c"

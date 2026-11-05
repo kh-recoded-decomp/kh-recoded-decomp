@@ -14,7 +14,7 @@ typedef float f32;
 extern StageEntryAction *GetEntryAction(StageEntry *entry);
 extern int GetEntryAnimationFrame(StageEntry *entry);
 extern void PlayEntryActionSound(StageEntry *entry, fx32 frame);
-extern int func_0202a9e4(u16 range);
+extern int NextSharedRandom16Scaled(u16 range);
 extern void ChooseEntryMainTarget(StageEntry *entry);
 extern void FinishEntryAction(StageEntry *entry);
 extern void SetSceneEntryAnimation(StageEntry *entry, int animation, int blend, int reset);
@@ -87,7 +87,7 @@ void EntryActionBarrage(u8 entryIndex)
     case 0:
         data_ov041_020cff48.shotsFired = 0;
         data_ov041_020cff48.shotCount =
-            func_0202a9e4((action->maxRepeats - action->minRepeats) * 1000) / 1000 + action->minRepeats - 1;
+            NextSharedRandom16Scaled((action->maxRepeats - action->minRepeats) * 1000) / 1000 + action->minRepeats - 1;
         if (action->minRepeats == action->maxRepeats) {
             data_ov041_020cff48.shotCount = action->minRepeats - 1;
         }

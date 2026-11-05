@@ -1,7 +1,7 @@
 #define CloseRecordPanelMenu_020732a8 CloseRecordPanelMenu
 #define GetCachedSoundParam_0204d720 GetCachedSoundParam
 #define SetEntrySlotsVisible_020b9580 SetEntrySlotsVisible
-#define func_02029f58 func_02029f6c
+#define func_02029f58 GetSubBrightnessSetting
 #define func_0204d8b8 func_0204d8cc
 #define func_ov013_0206da20 InitRecordScreenGraphics
 #define func_ov013_0206eb18 DrawContextEntrySummary

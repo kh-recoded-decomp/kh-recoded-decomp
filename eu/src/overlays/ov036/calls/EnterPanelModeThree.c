@@ -1,8 +1,8 @@
 #define EnterPanelModeThree_020bc51c EnterPanelModeThree
 #define data_ov001_020a0460 data_ov001_020a0480
 #define data_ov036_020c3920 data_ov036_020c3940
-#define func_02029f48 func_02029f5c
-#define func_02029f58 func_02029f6c
+#define func_02029f48 GetMainBrightnessSetting
+#define func_02029f58 GetSubBrightnessSetting
 #define func_ov001_020645e8 ClearSessionPackedBit
 #define func_ov036_020ba820 OpenPanelMessageArchive
 #include "src/ov036/panel_state/EnterPanelModeThree_020bc51c.c"

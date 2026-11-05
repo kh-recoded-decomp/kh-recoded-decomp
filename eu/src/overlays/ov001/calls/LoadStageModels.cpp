@@ -58,7 +58,7 @@ extern int OS_SNPrintf(char *dst, u32 size, const char *fmt, ...);
 extern int findSharedResourceByName(u8 *table, void *name);
 extern ModelHeader *LoadCellBankFile(u32 fileId, u32 mode, BOOL allocFromEnd);
 extern ModelHeader *Msg_OpenContainerAndReadHeader(const char *name, u32 mode, BOOL allocFromEnd);
-extern void *func_0202c4a0(u32 fileId, u32 mode);
+extern void *LoadFileAllocFromHeapTail(u32 fileId, u32 mode);
 extern void InitSharedRecordAndDispatchAlt(void *dst, u32 fileId, void *buffer, u32 mode);
 extern void LoadActorAnimationSet(void *animSet, void *model, u32 fileId);
 extern u32 Archive_LoadFile(u32 fileId, u32 mode);
@@ -194,11 +194,11 @@ store:
     entry->header = header;
     if (header->kind <= 3) {
         if (header->kind > 2) {
-            buffer = func_0202c4a0(ARCHIVE_FILE_ID(header) | 2, 0xb);
+            buffer = LoadFileAllocFromHeapTail(ARCHIVE_FILE_ID(header) | 2, 0xb);
         }
         InitSharedRecordAndDispatchAlt(entry->model, ARCHIVE_FILE_ID(entry->header) | 1, buffer, 0xb);
     } else {
-        buffer = func_0202c4a0(ARCHIVE_FILE_ID(header) | ((variant * 2 + 2) & 0x1ff), 0xb);
+        buffer = LoadFileAllocFromHeapTail(ARCHIVE_FILE_ID(header) | ((variant * 2 + 2) & 0x1ff), 0xb);
         InitSharedRecordAndDispatchAlt(entry->model, ARCHIVE_FILE_ID(entry->header) | ((variant * 2 + 1) & 0x1ff), buffer, 0xb);
         LoadActorAnimationSet(entry->animSet, entry->model, ARCHIVE_FILE_ID(entry->header) | 9);
     }

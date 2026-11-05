@@ -24,7 +24,7 @@ typedef char SpecialDropRowSizeCheck[(sizeof(SpecialDropRow) == 0x18) ? 1 : -1];
 
 extern SpecialDrops *data_ov001_020a04fc;
 extern s8 GetCtxModeByte(void);
-extern u32 func_0202a9e4(u32 range);
+extern u32 NextSharedRandom16Scaled(u32 range);
 extern void SpawnRewardOrbs(RewardAmounts *amounts, void *target, int mode);
 extern u32 func_ov001_020664f0(u32 kind, u32 size, void *target, u32 mode);
 
@@ -52,7 +52,7 @@ void RollSpecialItemDrop(int itemId, void *target)
 
     if (itemId == RANDOM_SPECIAL_ITEM) {
         row = &drops->rows[GetCtxModeByte()];
-        roll = func_0202a9e4(10000);
+        roll = NextSharedRandom16Scaled(10000);
         first = row->orbWeights[0];
         second = first + row->orbWeights[1];
         cumulative = second + row->orbWeights[2];

@@ -1,3 +1,4 @@
+#define func_01ff80d4 GetVBlankCounter
 #define ClearChoiceHighlight_020701a8 ClearChoiceHighlight
 #define CountAssignedFieldSlots_0207169c CountAssignedFieldSlots
 #define FillBackgroundLayerRect_02001a60 FillBackgroundLayerRect

@@ -27,7 +27,7 @@ typedef struct BgGraphicsData {
 extern char sOv037_CntCntPbgZ_020bb704[];
 extern char sOv037_CntCntBguiZ_020bb714[];
 
-extern void *func_0202c4a0(const char *path, u32 flags);
+extern void *LoadFileAllocFromHeapTail(const char *path, u32 flags);
 extern void GetBgDataFromArchive(BgGraphicsData *out, void *archive, int screenIndex, int characterIndex,
                                  int paletteIndex);
 extern void GX_LoadBGPltt(const void *src, u32 offset, u32 size);
@@ -49,7 +49,7 @@ void LoadContinueMenuBackground(void)
     void *archive;
     u8 *list = context->list;
 
-    archive = func_0202c4a0(sOv037_CntCntPbgZ_020bb704, 0xe);
+    archive = LoadFileAllocFromHeapTail(sOv037_CntCntPbgZ_020bb704, 0xe);
     GetBgDataFromArchive(&bg, archive, -1, 0, 0);
     GX_LoadBGPltt(bg.palette->data, 0, bg.palette->size);
     GX_LoadBG3Char(bg.character->data, 0, bg.character->size);

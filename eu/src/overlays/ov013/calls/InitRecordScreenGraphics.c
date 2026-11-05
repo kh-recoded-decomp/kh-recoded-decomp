@@ -15,7 +15,7 @@
 #define data_ov013_02074c58 sOv013_WxcWlfP2_02074c58
 #define func_01ff8830 MI_CpuFill8
 #define func_02007250 GX_LoadBGPltt
-#define func_0202c48c func_0202c4a0
+#define func_0202c48c LoadFileAllocFromHeapTail
 #define func_0202cc6c Msg_OpenContainerAndReadHeader
 #define func_ov002_020626d4 OpenPanelTextWindow
 #define func_ov002_02067a84 ResetSelectionView

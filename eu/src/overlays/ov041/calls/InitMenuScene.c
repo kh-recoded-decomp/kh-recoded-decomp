@@ -17,7 +17,7 @@
 #define data_ov041_020cf91c sOv041_RpgEnpPP_020cf93c
 #define func_01ff8740 MIi_CpuClearFast
 #define func_02013b98 NNS_GfdDumpFrmPlttVramManager
-#define func_0202c48c func_0202c4a0
+#define func_0202c48c LoadFileAllocFromHeapTail
 #define func_ov001_020645e8 ClearSessionPackedBit
 #define func_ov001_0207d120 LoadContextResourceGroups
 #define func_ov041_020bd740 SetStageDrawLayer

@@ -42,8 +42,8 @@ extern SlotSceneHolder data_ov036_020c3940;
 extern void SetBrightnessAndSyncMain(int value);
 extern void SetSecondaryBrightness(int value);
 extern int NNS_SndPlayerCountPlayingSeqByPlayerNo(int playerNo);
-extern void func_0204d994(void);
-extern int func_02029f5c(void);
+extern void StopSequencePlayersFrom2(void);
+extern int GetMainBrightnessSetting(void);
 extern void ClearScreenLayerGraphics(ScreenLayer *layer, int screen);
 extern BOOL ReleaseResourceSlot(void *slot);
 extern int ReleaseSharedRecordSlot(void *slot);
@@ -63,14 +63,14 @@ int ShutdownPanelScene_020bab74(void)
         if (NNS_SndPlayerCountPlayingSeqByPlayerNo(i) > 0) {
             scene->soundWaitFrames++;
             if (scene->soundWaitFrames > 60) {
-                func_0204d994();
+                StopSequencePlayersFrom2();
             } else {
                 return -1;
             }
         }
     }
     scene->soundWaitFrames = 0;
-    if (func_02029f5c() != 0) {
+    if (GetMainBrightnessSetting() != 0) {
         for (i = 0; i < 2; i++) {
             ClearScreenLayerGraphics(&scene->layers[i], i);
         }

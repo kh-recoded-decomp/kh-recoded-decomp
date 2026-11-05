@@ -15,7 +15,7 @@ extern u8 CountActiveStageEntries(BOOL primary);
 extern int PickStageTarget(int mode);
 extern int PickNearbyTarget(StageEntry *entries);
 extern void SetStageEntryState(u8 entryIndex, int state);
-extern int func_0202a9e4(u16 range);
+extern int NextSharedRandom16Scaled(u16 range);
 extern int GetCommandEffectKind(int commandId);
 extern void InvokeFieldModeOp2c4(int commandId);
 
@@ -137,7 +137,7 @@ void StartQueuedItemCommand(StageFieldCommand *command)
         }
         break;
     case 0xec:
-        work->commandId = data_ov041_020cf594[arg][func_0202a9e4(data_ov041_020cf4e0[arg] * 1000) / 1000];
+        work->commandId = data_ov041_020cf594[arg][NextSharedRandom16Scaled(data_ov041_020cf4e0[arg] * 1000) / 1000];
         work->commandEffectKind = GetCommandEffectKind(work->commandId);
         switch (work->commandEffectKind) {
         case 7:

@@ -213,7 +213,7 @@ extern void InitTileTableFrom(void *table, const TileTableSource *source);
 extern int InitKeyRepeatState(s16 *record, s16 *limits);
 extern void QueueSoundCommandForArc(u32 archive);
 extern u32 func_ov001_02063b68(int index);
-extern u32 func_0202a9e4(u32 range);
+extern u32 NextSharedRandom16Scaled(u32 range);
 extern u32 random_next_scaled(u32 range);
 extern void SetupStageParams(ResultsParams *params, int worldId, int stage);
 extern void BuildUniqueItemPriceList(u16 *items, int count);
@@ -282,7 +282,7 @@ ResultsStateFn InitResultsScene(ResultsArgs *args)
                 data_ov034_020c0fa0->worldId = data_ov034_020c0fa4->shopSection;
                 if (data_0206085c.progress % 10 == 0) {
                     bonusStage = data_0206085c.progress / 10 * 2;
-                    data_0206085c.seed = func_0202a9e4(0xffff) + random_next_scaled(-1);
+                    data_0206085c.seed = NextSharedRandom16Scaled(0xffff) + random_next_scaled(-1);
                 } else {
                     bonusStage = data_0206085c.progress / 10 * 2 + 1;
                     if (data_0206085c.mode == 0) {
@@ -303,7 +303,7 @@ ResultsStateFn InitResultsScene(ResultsArgs *args)
                     data_ov034_020c0fa0->earnedAmount = func_ov001_02063b68(1);
                 } else {
                     data_0206085c.rank = 1;
-                    data_0206085c.seed = func_0202a9e4(0x10000 - 1) + random_next_scaled(-1);
+                    data_0206085c.seed = NextSharedRandom16Scaled(0x10000 - 1) + random_next_scaled(-1);
                 }
                 data_ov034_020c0fa0->unlockedRank = data_0206085c.rank;
                 SetupStageParams(data_ov034_020c0fa0, data_ov034_020c0fa0->worldId,
@@ -407,7 +407,7 @@ ResultsStateFn InitResultsScene(ResultsArgs *args)
             }
             data_ov034_020c0fa0->unlockedRank++;
             data_0206085c.rank = data_ov034_020c0fa0->unlockedRank;
-            data_0206085c.seed = func_0202a9e4(0xffff) + random_next_scaled(0xffff - 0x10000);
+            data_0206085c.seed = NextSharedRandom16Scaled(0xffff) + random_next_scaled(0xffff - 0x10000);
             SetupStageParams(data_ov034_020c0fa0, data_ov034_020c0fa0->worldId,
                              data_ov034_020c0fa0->unlockedRank);
         }

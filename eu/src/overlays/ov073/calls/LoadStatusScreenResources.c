@@ -7,7 +7,7 @@ extern unsigned int InvokeForChannelOrBoth();
 extern unsigned int NNS_G2dGetUnpackedBGCharacterData();
 extern unsigned int NNSi_FndFreeFromDefaultHeap();
 extern unsigned int GetBgDataFromArchive();
-extern unsigned int func_0202c4a0();
+extern unsigned int LoadFileAllocFromHeapTail();
 extern unsigned int UpdateWidgetLayerDefault_020b9e10();
 extern unsigned int ClearScreenLayerDirty();
 extern unsigned int UpdateScreenWidgetLayer();
@@ -25,7 +25,7 @@ void LoadStatusScreenResources(unsigned int event, int work)
     int secondScreen;
 
     if (*(int *)(work + 0x188) == 0) {
-        file = func_0202c4a0(
+        file = LoadFileAllocFromHeapTail(
             ((*(int *)(work + 0x140) + 0x8000U & 0xfffffc) << 7) |
                 0x8000000b,
             0xe
@@ -41,19 +41,19 @@ void LoadStatusScreenResources(unsigned int event, int work)
     }
     if (*(int *)(work + 0x184) == 0) {
         file = BuildSlotImageParams(0, 9);
-        file = func_0202c4a0(file, 0xe);
+        file = LoadFileAllocFromHeapTail(file, 0xe);
         *(unsigned int *)(work + 0x184) = file;
         NNS_G2dGetUnpackedBGCharacterData(file, work + 0x180);
     }
     file = BuildSlotImageParams(0, 10);
-    file = func_0202c4a0(file, 0xe);
+    file = LoadFileAllocFromHeapTail(file, 0xe);
     NNS_G2dGetUnpackedScreenData(file, &firstScreen);
     size = *(unsigned int *)(firstScreen + 8);
     destination = UpdateWidgetLayerDefault_020b9e10(work + 0x148, 0x1b);
     MIi_CpuCopy16(firstScreen + 0xc, destination, size);
     NNSi_FndFreeFromDefaultHeap(file);
     file = BuildSlotImageParams(0, 0xb);
-    file = func_0202c4a0(file, 0xe);
+    file = LoadFileAllocFromHeapTail(file, 0xe);
     NNS_G2dGetUnpackedScreenData(file, &secondScreen);
     size = *(unsigned int *)(secondScreen + 8);
     destination = UpdateScreenWidgetLayer(0x19);

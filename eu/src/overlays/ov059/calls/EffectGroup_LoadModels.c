@@ -29,7 +29,7 @@ typedef struct EffectGroup {
 } EffectGroup;
 
 extern SharedRecord *SND_RegisterSeq(u32 fileId, int kind);
-extern void *func_0202c4a0(u32 fileId, int kind);
+extern void *LoadFileAllocFromHeapTail(u32 fileId, int kind);
 extern void func_0202edb0(GroupModel *model, SharedRecord *resource, void *source, int extra);
 extern void NNSi_FndFreeFromDefaultHeap(void *block);
 extern void selectJointAnimationBlend(GroupModel *model, u16 trackIndex, void *blendTable, s16 blendIndex);
@@ -44,7 +44,7 @@ static inline void LoadModelSet(EffectGroup *group, u32 *ids, int count)
         if (record->data != NULL) {
             func_0202edb0(&group->models[i], record, NULL, 8);
         } else {
-            void *block = func_0202c4a0(
+            void *block = LoadFileAllocFromHeapTail(
                 (0x80000000 | (((group->owner->heapGroup + 0x8000) & 0xfffffc) << 7)) | ((ids[i] + 1) & 0x1ff), 0x11);
             func_0202edb0(&group->models[i], record, block, 8);
             NNSi_FndFreeFromDefaultHeap(block);

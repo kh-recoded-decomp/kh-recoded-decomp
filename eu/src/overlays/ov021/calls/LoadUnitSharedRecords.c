@@ -4,6 +4,6 @@
 #define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define RetainOrInitializeSharedRecord_0202c80c SND_RegisterSeq
-#define func_0202c48c func_0202c4a0
+#define func_0202c48c LoadFileAllocFromHeapTail
 #define func_0202ed9c func_0202edb0
 #include "src/ov021/unclassified_helpers/LoadUnitSharedRecords_020aee14.c"

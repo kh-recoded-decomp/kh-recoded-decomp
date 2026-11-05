@@ -202,7 +202,7 @@ extern const QuadRotation data_ov075_020d14d0;
 extern const QuadRotation data_ov075_020d14d8;
 
 extern BOOL GetPrimaryElementEnabled(void);
-extern u32 func_01ff80d4(void);
+extern u32 GetVBlankCounter(void);
 extern int GetPackedBitMask(u32 *bitWords, int bitIndex);
 extern int Anim_GetFrame(void *node, int channel);
 extern int *SetModelAnimationFrameWithSingleWrap(void *node, int channel, int frame);
@@ -263,7 +263,7 @@ void DrawMatrixMenu(MatrixMenu *menu)
     items = menu->grid->items;
     unlockLevel = menu->grid->unlockLevel;
     corner = data_ov075_020d14bc;
-    menu->frameCounter = func_01ff80d4();
+    menu->frameCounter = GetVBlankCounter();
 
     frameIndex = menu->selectedItem->type;
     if (frameIndex < 3 || frameIndex >= 14) {

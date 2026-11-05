@@ -2,5 +2,5 @@
 #define MIi_CpuCopyFast_01ff878c MIi_CpuCopyFast
 #define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
-#define func_0202c48c func_0202c4a0
+#define func_0202c48c LoadFileAllocFromHeapTail
 #include "src/ov046/shared_engine/CameraPath_Load_020c2ec0.c"

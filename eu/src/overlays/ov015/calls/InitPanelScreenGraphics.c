@@ -27,8 +27,8 @@
 #define data_ov015_0207e7f8 sOv015_WxcWleP2_0207e7f8
 #define func_01ff8684 MIi_CpuClear16
 #define func_02007250 GX_LoadBGPltt
-#define func_0202a9d0 func_0202a9e4
-#define func_0202c48c func_0202c4a0
+#define func_0202a9d0 NextSharedRandom16Scaled
+#define func_0202c48c LoadFileAllocFromHeapTail
 #define func_0202cc6c Msg_OpenContainerAndReadHeader
 #define func_0204f178 SetIndexedRecordPriority
 #define func_ov002_020626d4 OpenPanelTextWindow

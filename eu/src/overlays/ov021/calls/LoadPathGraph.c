@@ -4,7 +4,7 @@
 #define data_ov021_020b5604 data_ov021_020b5624
 #define func_01ff8830 MI_CpuFill8
 #define func_02025658 GetCurrentSceneId
-#define func_0202c48c func_0202c4a0
+#define func_0202c48c LoadFileAllocFromHeapTail
 #define func_0204f768 GetOverlaySelectionRecord
 #define func_ov001_020645c8 IsSessionFlagSet
 #define func_ov021_020a7c60 CallEntryHandler

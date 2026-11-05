@@ -13,7 +13,8 @@ import re
 from project import ROOT
 
 
-TEXT_SUFFIXES = {".c", ".h", ".txt", ".json", ".yaml", ".yml"}
+SOURCE_SUFFIXES = {".c", ".cpp", ".cc", ".cp"}
+TEXT_SUFFIXES = SOURCE_SUFFIXES | {".h", ".hpp", ".txt", ".json", ".yaml", ".yml"}
 IDENTIFIER = re.compile(r"^[A-Za-z_]\w*$")
 
 
@@ -43,13 +44,14 @@ def main() -> None:
             if not path.is_file() or path.suffix.lower() not in TEXT_SUFFIXES:
                 continue
             text = path.read_text(encoding="utf-8")
+            defining_source = path.stem == args.old and path.suffix.lower() in SOURCE_SUFFIXES
             if re.search(rf"\b{re.escape(args.new)}\b", text):
-                if path.name != f"{args.old}.c":
+                if not defining_source:
                     raise SystemExit(f"new symbol already appears in {path}")
             replaced, count = pattern.subn(args.new, text)
             if count:
                 changed.append((path, replaced, count))
-            if path.name == f"{args.old}.c":
+            if defining_source:
                 definitions.append(path)
 
     if len(definitions) != 1:
@@ -57,9 +59,9 @@ def main() -> None:
 
     source = definitions[0]
     if args.move_calls and source.parent.name == "auto":
-        destination = source.parent.parent / "calls" / f"{args.new}.c"
+        destination = source.parent.parent / "calls" / f"{args.new}{source.suffix}"
     else:
-        destination = source.with_name(f"{args.new}.c")
+        destination = source.with_name(f"{args.new}{source.suffix}")
     if destination.exists():
         raise SystemExit(f"destination already exists: {destination}")
     for path, replaced, _count in changed:

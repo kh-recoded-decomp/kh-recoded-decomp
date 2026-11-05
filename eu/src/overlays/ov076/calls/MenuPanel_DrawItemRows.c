@@ -109,7 +109,7 @@ CHECK_ROW_OFFSET(SaveData, category4Values, 0x2de0, SaveCategoryValuesOffset);
 
 extern const CellGrid data_ov076_020cd12c;
 extern SaveData *data_0205fe0c;
-extern int func_01ff80d4(void);
+extern int GetVBlankCounter(void);
 extern RecordEntry *GetActiveRecordEntryOrNull(int index);
 extern ItemStock *CommandMatrix_GetStockForRecord(MenuPanel *panel, const RecordEntry *record);
 extern int GetPackedBitMask(const u32 *words, int bit);
@@ -175,7 +175,7 @@ void MenuPanel_DrawItemRows(MenuPanel *panel)
     int group;
     u32 value;
 
-    panel->lastVBlankState = func_01ff80d4();
+    panel->lastVBlankState = GetVBlankCounter();
     if (panel->state != 0) {
         if (panel->closing == 0) {
             row = 0;

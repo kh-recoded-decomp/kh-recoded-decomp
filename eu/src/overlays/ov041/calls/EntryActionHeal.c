@@ -9,7 +9,7 @@ typedef float f32;
 
 extern StageEntryAction *GetEntryAction(StageEntry *entry);
 extern int GetEntryAnimationFrame(StageEntry *entry);
-extern int func_0202a9e4(u16 range);
+extern int NextSharedRandom16Scaled(u16 range);
 extern void SetSceneEntryAnimation(StageEntry *entry, int animation, int blend, int reset);
 extern void GetEntryOverheadPosition(VecFx32 *out, StageEntry *entry);
 extern StageResourceItem *SpawnStageItem(StageEntry *owner, int category, u8 index, u8 animation,
@@ -60,7 +60,7 @@ void EntryActionHeal(u8 entryIndex)
             entry->mainTarget = entry->index;
         } else {
             found = FALSE;
-            start = func_0202a9e4(work->secondaryCount * 1000) / 1000;
+            start = NextSharedRandom16Scaled(work->secondaryCount * 1000) / 1000;
             for (i = 0; i < work->secondaryCount; i++) {
                 other = &work->entries[start + work->primaryCount];
                 if (entry->index != start && other->state != STAGE_ENTRY_OUT && other->hp < other->maxHp) {

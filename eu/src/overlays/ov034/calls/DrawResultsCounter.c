@@ -1,6 +1,6 @@
 #define CreateObjectSlot_020bdea4 CreateObjectSlot_020bdec4
 #define DrawResultsCounter_020bcf30 DrawResultsCounter
-#define func_0204f0c0 func_0204f0d4
+#define func_0204f0c0 UnlinkActiveIndexedRecord
 #define func_ov027_020b90a4 FindWidgetById
 #define func_ov027_020b91a8 GetWidgetPosition
 #define func_ov027_020b9580 SetEntrySlotsVisible

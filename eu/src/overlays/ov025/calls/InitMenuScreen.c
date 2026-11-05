@@ -18,7 +18,7 @@
 #define data_ov025_020b7690 data_ov025_020b76b0
 #define data_ov025_020b76a0 data_ov025_020b76c0
 #define data_ov025_020b76d4 data_ov025_020b76f4
-#define func_0202c48c func_0202c4a0
+#define func_0202c48c LoadFileAllocFromHeapTail
 #define func_ov001_0207b200 func_ov001_0207b228
 #define func_ov001_0207b62c func_ov001_0207b654
 #define func_ov025_020b5c78 SetupMenuTextLayers

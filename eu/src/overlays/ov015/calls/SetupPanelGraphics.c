@@ -109,7 +109,7 @@ extern void GX_SetBankForOBJExtPltt(int bank);
 extern void func_ov002_020629a8(void);
 extern int Msg_OpenContainerAndReadHeader(const char *name, u32 mode, BOOL allocFromEnd);
 extern void ZeroHalfThenFree(int handle);
-extern void *func_0202c4a0(u32 fileId, u32 type);
+extern void *LoadFileAllocFromHeapTail(u32 fileId, u32 type);
 extern void NNSi_FndFreeFromDefaultHeap(void *block);
 extern void GetBgDataFromArchive(BgGraphicsData *out, void *archive, int screenIndex, int characterIndex,
                                           int paletteIndex);
@@ -123,7 +123,7 @@ extern void GX_LoadBG1Scr(void *src, u32 offset, u32 size);
 extern void GXS_LoadBG1Scr(void *src, u32 offset, u32 size);
 extern void GXS_BeginLoadOBJExtPltt(void);
 extern void GXS_EndLoadOBJExtPltt(void);
-extern u16 func_0202a9e4(u16 range);
+extern u16 NextSharedRandom16Scaled(u16 range);
 
 extern void InitBackgroundContainer(void *container, const BgContainerConfig *config);
 extern void func_ov027_020b7e44(void *container, u32 fileId);
@@ -210,7 +210,7 @@ void SetupPanelGraphics(void) {
     mainObjConfig.animFileId = fileId | 0x80000003;
     InitBackgroundContainer(data_ov015_0207e960->mainBg, &mainBgConfig);
     func_ov027_020b7e44(data_ov015_0207e960->mainBg, fileId | 0x80000000);
-    archive = func_0202c4a0(fileId | 0x80000001, 0x10);
+    archive = LoadFileAllocFromHeapTail(fileId | 0x80000001, 0x10);
     GetBgDataFromArchive(&bgData, archive, -1, 0, 0);
     GX_LoadBGPltt(bgData.palette->rawData, 0, bgData.palette->size);
     GX_LoadBG1Char(bgData.character->rawData, 0, bgData.character->size);
@@ -247,7 +247,7 @@ void SetupPanelGraphics(void) {
     InitBackgroundContainer(data_ov015_0207e960->subBg, &subBgConfig);
     fileId = ((handle + 0x8000) & 0xfffffc) << 7;
     func_ov027_020b7e44(data_ov015_0207e960->subBg, fileId | 0x80000000);
-    archive = func_0202c4a0(fileId | 0x80000002, 0x10);
+    archive = LoadFileAllocFromHeapTail(fileId | 0x80000002, 0x10);
     GetBgDataFromArchive(&bgData, archive, -1, 0, 0);
     GXS_LoadBGPltt(bgData.palette->rawData, 0, bgData.palette->size);
     GXS_LoadBG1Char(bgData.character->rawData, 0, bgData.character->size);
@@ -339,14 +339,14 @@ void SetupPanelGraphics(void) {
         SetElementEnabled(data_ov015_0207e960->subObj, 21, 0);
     }
 
-    data_ov015_0207e960->randomDigit = func_0202a9e4(6);
+    data_ov015_0207e960->randomDigit = NextSharedRandom16Scaled(6);
     ClearElementNumber(data_ov015_0207e960->subObj, 10);
     {
         PanelState *panel = data_ov015_0207e960;
         void *container = panel->subObj;
         SetWidgetAnimationFrame(container, (const struct WidgetPositionRecord *)(FindWidgetById(container, 10)), (u16)(panel->randomDigit));
     }
-    data_ov015_0207e960->randomPick = func_0202a9e4(gWirelessRandomChoiceLimits[DispatchContextCommand(6, 0, 0, 0)]);
+    data_ov015_0207e960->randomPick = NextSharedRandom16Scaled(gWirelessRandomChoiceLimits[DispatchContextCommand(6, 0, 0, 0)]);
     {
         void *element = FindWidgetById(data_ov015_0207e960->subObj, 10);
         SetFocusedWidget(data_ov015_0207e960->subObj, element);
@@ -369,10 +369,10 @@ void SetupPanelGraphics(void) {
     if (DispatchContextCommand(5, 0, 0, 0) != 0) {
         data_ov015_0207e960->flagE1Mode = 1;
     }
-    data_ov015_0207e960->scaleX = func_0202a9e4(0x1000) + 0x1000;
-    data_ov015_0207e960->offsetX = func_0202a9e4(0);
-    data_ov015_0207e960->scaleY = func_0202a9e4(0x1000) + 0x1000;
-    data_ov015_0207e960->offsetY = (func_0202a9e4(0) + 0x80) << 12;
+    data_ov015_0207e960->scaleX = NextSharedRandom16Scaled(0x1000) + 0x1000;
+    data_ov015_0207e960->offsetX = NextSharedRandom16Scaled(0);
+    data_ov015_0207e960->scaleY = NextSharedRandom16Scaled(0x1000) + 0x1000;
+    data_ov015_0207e960->offsetY = (NextSharedRandom16Scaled(0) + 0x80) << 12;
     GXS_BeginLoadOBJExtPltt();
     data_ov015_0207e960->extPaletteColor = *(u16 *)0x068a0002;
     data_ov015_0207e960->extPaletteColorCopy = data_ov015_0207e960->extPaletteColor;

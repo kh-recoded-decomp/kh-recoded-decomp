@@ -1,5 +1,5 @@
 OSi_VBlankInterruptHandler kind:function(arm,size=0xd4) addr:0x01ff8000
-func_01ff80d4 kind:function(arm,size=0x10) addr:0x01ff80d4
+GetVBlankCounter kind:function(arm,size=0x10) addr:0x01ff80d4
 GXi_FlushCommandList kind:function(arm,size=0x5c) addr:0x01ff80e4
 WaitForGeometryTransfer kind:function(arm,size=0x18) addr:0x01ff8140
 OS_IrqHandler kind:function(arm,size=0x58) addr:0x01ff8158

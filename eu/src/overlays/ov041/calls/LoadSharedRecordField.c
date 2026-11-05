@@ -1,7 +1,7 @@
 #define LoadSharedRecordField_020cdf90 LoadSharedRecordField
 #define RetainOrInitializeSharedRecord_0202c80c SND_RegisterSeq
 #define data_ov041_020cfaa0 sOv041_MoPzZ_020cfac0
-#define func_0202c690 func_0202c6a4
+#define func_0202c690 SetFileLoaderTextureUploadQueueMode
 #define func_0202c8a8 ReleaseSharedRecordSlot
 #define func_0202c940 AcquireOrRefreshResourceBlock
 #define func_0202d3c8 IndexedPointer_GetFirstWord

@@ -7,7 +7,7 @@
 #define Model_SetAllPolygonIds_0201a8c0 NNS_G3dMdlSetMdlPolygonIDAll
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define RetainOrInitializeSharedRecord_0202c80c SND_RegisterSeq
-#define func_0202c48c func_0202c4a0
+#define func_0202c48c LoadFileAllocFromHeapTail
 #define func_0202ed9c func_0202edb0
 #define func_0202f590 func_0202f5a4
 #define func_0202f5b4 Obj_SetHalfwordFC

@@ -2,6 +2,6 @@
 #define ScriptVm_Start_0202580c ScriptVm_Start
 #define SetLoaderCallbacks_02025914 SetLoaderCallbacks
 #define func_01ff8830 MI_CpuFill8
-#define func_0202d314 func_0202d328
+#define func_0202d314 RelocateArchiveSectionsWithDefaultFlags
 #define func_0202d3e0 NestedPointer_GetFirstWord
 #include "src/arm9/shared_engine/ScriptVm_Start_0202580c.c"

@@ -15,7 +15,7 @@ typedef struct PanelModeState {
     s32 language;
 } PanelModeState;
 
-extern int func_02029f6c(void);
+extern int GetSubBrightnessSetting(void);
 
 void Panel_InitFromModeTables(PanelModeState *state, int mode)
 {
@@ -26,7 +26,7 @@ void Panel_InitFromModeTables(PanelModeState *state, int mode)
     state->modeData = secondary.values[mode];
     state->mode = mode;
     state->active = 1;
-    state->isLanguage16 = func_02029f6c() == 0x10;
-    state->language = func_02029f6c();
+    state->isLanguage16 = GetSubBrightnessSetting() == 0x10;
+    state->language = GetSubBrightnessSetting();
     state->timer = 0;
 }

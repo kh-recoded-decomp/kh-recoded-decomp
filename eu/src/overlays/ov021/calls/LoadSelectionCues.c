@@ -4,6 +4,6 @@
 #define RelocateResourceOffsets_020acc60 RelocateResourceOffsets
 #define SpawnCueHandler_020acd14 SpawnCueHandler
 #define data_ov021_020b5284 sOv021_BaChDaZ_020b52a4
-#define func_0202c48c func_0202c4a0
+#define func_0202c48c LoadFileAllocFromHeapTail
 #define func_0204f768 GetOverlaySelectionRecord
 #include "src/ov021/shared_engine/LoadSelectionCues_020ad744.c"

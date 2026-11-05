@@ -1,4 +1,4 @@
 #define MessageWindow_BeginClosing_020c849c MessageWindow_BeginClosing_020c84bc
-#define func_02052514 func_02052528
-#define func_0205255c func_02052570
+#define func_02052514 ConfigureTween
+#define func_0205255c StartTween
 #include "src/ov077/unclassified_helpers/MessageWindow_BeginClosing_020c849c.c"

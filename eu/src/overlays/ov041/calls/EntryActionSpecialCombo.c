@@ -19,7 +19,7 @@ extern StageResourceItem *SpawnStageItem(StageEntry *owner, int category, u8 ind
 extern void PlayStageSound(int seqArcNo, int index, BOOL checked);
 extern s32 GetHudLabelId(int labelIndex);
 extern void ShowFieldMessageLine_02072ad0(int kind, ...);
-extern int func_0202a9e4(u16 range);
+extern int NextSharedRandom16Scaled(u16 range);
 extern void ChooseEntryMainTarget(StageEntry *entry);
 extern void FinishEntryAction(StageEntry *entry);
 extern void SetSceneEntryAnimation(StageEntry *entry, int animation, int blend, int reset);
@@ -41,7 +41,7 @@ extern void SetAnimationFrameIfChanged(StageEntry *entry, int frame);
 
 static inline void PlayAttackVoice(StageEntry *entry)
 {
-    int pick = func_0202a9e4(2000) / 1000;
+    int pick = NextSharedRandom16Scaled(2000) / 1000;
 
     PlayStageSound(gAttackVoices[0xff - entry->kind][pick].seqArc, gAttackVoices[0xff - entry->kind][pick].index, TRUE);
 }
@@ -74,7 +74,7 @@ void EntryActionSpecialCombo(u8 entryIndex)
         data_ov041_020cff48.comboHit = 1;
         data_ov041_020cff48.comboStage = 0;
         data_ov041_020cff48.comboLength =
-            func_0202a9e4((action->maxRepeats - action->minRepeats) * 1000) / 1000 + action->minRepeats - 1;
+            NextSharedRandom16Scaled((action->maxRepeats - action->minRepeats) * 1000) / 1000 + action->minRepeats - 1;
         entry->stateStep++;
     case 1: {
         VecFx32 position;
@@ -223,7 +223,7 @@ void EntryActionSpecialCombo(u8 entryIndex)
                 if (data_ov041_020cff48.comboHit == data_ov041_020cff48.comboLength) {
                     data_ov041_020cff48.comboStage = COMBO_FINISHER;
                 } else if (data_ov041_020cff48.comboHit < data_ov041_020cff48.comboLength) {
-                    data_ov041_020cff48.comboStage = func_0202a9e4(2) + 1;
+                    data_ov041_020cff48.comboStage = NextSharedRandom16Scaled(2) + 1;
                 }
             } else {
                 data_ov041_020cff48.comboStage = 0;

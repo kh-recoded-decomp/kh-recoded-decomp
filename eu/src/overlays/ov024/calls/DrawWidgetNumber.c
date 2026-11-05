@@ -1,5 +1,5 @@
 #define DrawWidgetNumber_020b5de4 DrawWidgetNumber
-#define func_0204f0c0 func_0204f0d4
+#define func_0204f0c0 UnlinkActiveIndexedRecord
 #define func_0204f204 SetIndexedRecordAnimationFrame
 #define func_ov024_020b6794 CreateObjectSlot
 #define func_ov027_020b90a4 FindWidgetById

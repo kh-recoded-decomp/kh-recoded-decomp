@@ -3,7 +3,7 @@
 #define RetainOrInitializeSharedRecord_0202c80c SND_RegisterSeq
 #define data_ov001_0209e9f4 sOv001_MoPzZ_0209ea14
 #define data_ov001_020a0464 data_ov001_020a0484
-#define func_0202c690 func_0202c6a4
+#define func_0202c690 SetFileLoaderTextureUploadQueueMode
 #define func_0202c940 AcquireOrRefreshResourceBlock
 #define func_0202d3c8 IndexedPointer_GetFirstWord
 #define func_0202d3e0 NestedPointer_GetFirstWord

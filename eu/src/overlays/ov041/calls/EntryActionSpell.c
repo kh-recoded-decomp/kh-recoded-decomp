@@ -14,7 +14,7 @@ extern int GetEntryAnimationFrame(StageEntry *entry);
 extern BOOL IsStageEntryFrozen(StageEntry *entry);
 extern void FillActionTargets(StageEntry *entry);
 extern void SetSceneEntryAnimation(StageEntry *entry, int animation, int blend, int reset);
-extern int func_0202a9e4(u16 range);
+extern int NextSharedRandom16Scaled(u16 range);
 extern void PlayStageSound(int seqArcNo, int index, BOOL checked);
 extern void GetEntryOverheadPosition(VecFx32 *out, StageEntry *entry);
 extern void GetStageGridPosition(VecFx32 *position, u8 row, u8 column);
@@ -61,7 +61,7 @@ void EntryActionSpell(u8 entryIndex)
         FillActionTargets(entry);
         SetSceneEntryAnimation(entry, action->animation, 0, 1);
         frame = GetEntryAnimationFrame(entry);
-        if (func_0202a9e4(2000) / 1000 == 0) {
+        if (NextSharedRandom16Scaled(2000) / 1000 == 0) {
             PlayStageSound(0x30, 0, TRUE);
         } else {
             PlayStageSound(0x30, 1, TRUE);

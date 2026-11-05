@@ -14,7 +14,7 @@
 #define func_01ff8830 MI_CpuFill8
 #define func_0202b788 GetLanguageIndex
 #define func_0202c478 Archive_LoadFile
-#define func_0202c48c func_0202c4a0
+#define func_0202c48c LoadFileAllocFromHeapTail
 #define func_0202cb7c OpenAndClassifyFile
 #define func_0202ed3c InitSharedRecordAndDispatchAlt
 #define func_ov001_020993d0 LoadCellBankFile

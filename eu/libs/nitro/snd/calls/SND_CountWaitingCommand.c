@@ -1,3 +1,3 @@
 #define SND_CountWaitingCommand_0200f37c SND_CountWaitingCommand
-#define func_0200f340 func_0200f354
+#define func_0200f340 CountReservedSoundCommands
 #include "src/arm9/library_nitro_snd/SND_CountWaitingCommand_0200f37c.c"

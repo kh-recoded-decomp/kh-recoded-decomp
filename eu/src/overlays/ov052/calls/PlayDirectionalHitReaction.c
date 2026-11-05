@@ -1,6 +1,6 @@
 #define FixedPointAtan2_020062bc FX_Atan2Idx
 #define PlayDirectionalHitReaction_020c994c PlayDirectionalHitReaction
 #define func_01ff9f88 VEC_Normalize
-#define func_0202a9d0 func_0202a9e4
+#define func_0202a9d0 NextSharedRandom16Scaled
 #define func_ov052_020ceb7c GetLinkedAngleOffset
 #include "src/ov052/actor_motion/PlayDirectionalHitReaction_020c994c.c"

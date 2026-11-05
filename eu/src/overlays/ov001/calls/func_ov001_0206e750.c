@@ -4,7 +4,7 @@ extern s32 gPanelActive;
 extern s32 data_ov001_020a04bc;
 extern s32 GXx_GetMasterBrightness_(u32 reg);
 extern void SetBrightnessAndSyncMain(s32 callerId);
-extern s32 func_02029f5c(void);
+extern s32 GetMainBrightnessSetting(void);
 extern s32 func_ov001_02064490(void);
 
 s32 func_ov001_0206e750(s32 callerId)
@@ -23,7 +23,7 @@ s32 func_ov001_0206e750(s32 callerId)
     }
     check = GXx_GetMasterBrightness_(0x400006c);
     if (*(s8 *)(ctx + 0xf0) == check) {
-        check = func_02029f5c();
+        check = GetMainBrightnessSetting();
         if (*(s8 *)(ctx + 0xf0) == check) goto stillOwned;
     }
     ok = 0;

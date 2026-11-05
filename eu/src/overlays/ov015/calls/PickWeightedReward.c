@@ -3,5 +3,5 @@
 #define PickWeightedReward_0207830c PickWeightedReward
 #define ReadGlobalPackedBits_02027348 ReadGlobalPackedBits
 #define data_ov015_0207e868 gWirelessResourceTables
-#define func_0202a9d0 func_0202a9e4
+#define func_0202a9d0 NextSharedRandom16Scaled
 #include "src/ov015/panel_state/PickWeightedReward_0207830c.c"

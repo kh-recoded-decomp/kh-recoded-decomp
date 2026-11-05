@@ -1,6 +1,6 @@
 #define SetupStageParams_020bdf10 SetupStageParams
 #define SeedSharedRandomState_0202a984 SeedSharedRandomState
-#define func_0202a9d0 func_0202a9e4
+#define func_0202a9d0 NextSharedRandom16Scaled
 #define data_ov034_020be9d8 data_ov034_020be9f8
 #define data_ov034_020bea58 data_ov034_020bea78
 #define data_ov034_020beb0c data_ov034_020beb2c

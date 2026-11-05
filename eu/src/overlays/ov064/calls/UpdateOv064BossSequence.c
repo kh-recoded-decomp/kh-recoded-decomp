@@ -20,7 +20,7 @@
 #define ZeroBytes0x28_020ac0f8 ZeroBytes0x28
 #define data_ov064_020d8824 data_ov064_020d8844
 #define data_ov064_020d8830 data_ov064_020d8850
-#define func_0202a9d0 func_0202a9e4
+#define func_0202a9d0 NextSharedRandom16Scaled
 #define func_0202f4b8 GetModelAnimationDurationFx32
 #define func_0203adcc InitAxisCylinderShape
 #define func_ov001_02087928 ForwardToActiveServiceWithResult

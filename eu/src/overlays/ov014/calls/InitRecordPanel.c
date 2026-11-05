@@ -42,7 +42,7 @@
 #define func_01ff8830 MI_CpuFill8
 #define func_01ff89a8 MI_CpuCopy8
 #define func_02007250 GX_LoadBGPltt
-#define func_0202c48c func_0202c4a0
+#define func_0202c48c LoadFileAllocFromHeapTail
 #define func_0202cc6c Msg_OpenContainerAndReadHeader
 #define func_ov002_02062768 ReleasePanelObjectList
 #define func_ov002_02066fb0 GetRecordFlagBits

@@ -2,6 +2,6 @@
 #define G2D_GetScreenFromFile_02014dd0 NNS_G2dGetUnpackedScreenData
 #define GetBgDataFromArchive_0202b554 GetBgDataFromArchive
 #define func_02014d38 NNS_G2dGetUnpackedBGCharacterData
-#define func_0202d314 func_0202d328
+#define func_0202d314 RelocateArchiveSectionsWithDefaultFlags
 #define func_0202d3e0 NestedPointer_GetFirstWord
 #include "src/arm9/graphics/GetBgDataFromArchive_0202b554.c"

@@ -16,7 +16,7 @@ typedef float f32;
 extern StageEntryAction *GetEntryAction(StageEntry *entry);
 extern int GetEntryAnimationFrame(StageEntry *entry);
 extern void ReleaseEntryStatusItem(u8 entryIndex);
-extern int func_0202a9e4(u16 range);
+extern int NextSharedRandom16Scaled(u16 range);
 extern void FillActionTargets(StageEntry *entry);
 extern void SetSceneEntryAnimation(StageEntry *entry, int animation, int blend, int reset);
 extern void GetEntryMoveEnds(StageEntry *entry, VecFx32 *start, VecFx32 *end, BOOL toTarget);
@@ -84,7 +84,7 @@ void EntryActionTeamAttack(u8 entryIndex)
                 data_ov041_020cff48.teamLeader = 2;
                 break;
             case 3:
-                data_ov041_020cff48.teamLeader = func_0202a9e4(2000) / 1000 + 1;
+                data_ov041_020cff48.teamLeader = NextSharedRandom16Scaled(2000) / 1000 + 1;
                 break;
             }
             break;

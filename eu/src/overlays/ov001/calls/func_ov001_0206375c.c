@@ -28,7 +28,7 @@ extern void QueueAreaSoundArchives(void);
 extern void UpdateEventObjects(void);
 extern void ForwardToActiveService_02088074(void);
 extern void func_ov035_020bb354(int stopSeq);
-extern int func_02029f5c(void);
+extern int GetMainBrightnessSetting(void);
 
 void func_ov001_0206375c(void) {
     int index;
@@ -63,7 +63,7 @@ void func_ov001_0206375c(void) {
             func_ov035_020bb354(0);
         }
     }
-    if (func_02029f5c() == 0) {
+    if (GetMainBrightnessSetting() == 0) {
         data_ov001_020a0480->modeFlags &= ~0x40000;
     }
 }

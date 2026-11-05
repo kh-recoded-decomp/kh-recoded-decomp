@@ -1,5 +1,5 @@
 #define func_ov001_020645c8 IsSessionFlagSet
 #define PickRandomUnsetSessionFlag_0208da98 PickRandomUnsetSessionFlag
 #define WriteSessionPackedBits_0206459c WriteSessionPackedBits
-#define func_0202a9d0 func_0202a9e4
+#define func_0202a9d0 NextSharedRandom16Scaled
 #include "src/ov001/unclassified_helpers/PickRandomUnsetSessionFlag_0208da98.c"

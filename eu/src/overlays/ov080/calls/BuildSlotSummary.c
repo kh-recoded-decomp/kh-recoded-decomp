@@ -7,7 +7,7 @@
 #define data_ov080_020c5ddc data_ov080_020c5dfc
 #define data_ov080_020c5de4 data_ov080_020c5e04
 #define func_020273d4 UpdateElapsedIntervals
-#define func_02050a44 func_02050a58
+#define func_02050a44 ReleaseMapLayoutReference
 #define func_ov039_020bcb20 FormatSaveLocationLabel
 #define func_ov039_020be64c FormatPlayTimeText
 #define func_ov073_020c1eb4 RefreshStatusMenuData

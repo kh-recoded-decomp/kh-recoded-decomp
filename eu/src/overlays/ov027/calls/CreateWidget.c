@@ -5,9 +5,9 @@
 #define func_01ff8830 MI_CpuFill8
 #define func_01ff89a8 MI_CpuCopy8
 #define func_0204f178 SetIndexedRecordPriority
-#define func_0204f298 func_0204f2ac
+#define func_0204f298 SetIndexedRecordAnimationSpeed
 #define func_0204f378 IndexedRecords_SetFlag2
 #define func_0204f3c8 IndexedRecords_SetFlag3
-#define func_020524e8 func_020524fc
+#define func_020524e8 InitTween
 #define func_ov027_020b91c8 SetWidgetPosition
 #include "src/ov027/resource_container/CreateWidget_020b8cbc.c"

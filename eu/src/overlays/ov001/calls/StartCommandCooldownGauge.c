@@ -40,7 +40,7 @@ extern CommandRecord *GetRecordSlotPair1Entry(s32 index);
 extern BOOL IsFieldFlag10Set(void);
 extern BOOL IsHudFlag7Set(void);
 extern BOOL IsFieldFlag8Set(void);
-extern u32 func_01ff80d4(void);
+extern u32 GetVBlankCounter(void);
 extern void *GetFieldFont1(void);
 extern void func_02001620(GaugeWindow *window, u32 x, u32 y, u32 color, u32 flags, int value, void *font, u32 width);
 extern void DrawTextAnchored(GaugeWindow *window, int x, int y, int color, u32 flags, const u16 *text);
@@ -83,7 +83,7 @@ void StartCommandCooldownGauge(GaugeWindow *window, CooldownGauge *gauge, u32 ow
                 gauge->duration -= (gauge->duration >> 1) * bonusPercent / 100;
             }
         }
-        gauge->startTick = func_01ff80d4();
+        gauge->startTick = GetVBlankCounter();
         gauge->kind = record->kind;
         gauge->flags |= 4;
         flags = &gauge->flags;

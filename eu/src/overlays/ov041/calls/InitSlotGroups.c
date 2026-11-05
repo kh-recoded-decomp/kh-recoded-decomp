@@ -2,7 +2,7 @@
 
 #define FormatString OS_SPrintf
 #define RetainOrInitializeSharedRecord SND_RegisterSeq
-#define SetResourceAccessMode func_0202c6a4
+#define SetResourceAccessMode SetFileLoaderTextureUploadQueueMode
 #define SelectResourceTable IndexedPointer_GetFirstWord
 #define ClearFast MIi_CpuClearFast
 #define GetResourceEntry NestedPointer_GetFirstWord

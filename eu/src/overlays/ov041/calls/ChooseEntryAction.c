@@ -4,7 +4,7 @@
 typedef float f32;
 
 extern int PickEntryActionInRange(StageEntry *entry);
-extern u32 func_0202a9e4(u32 range);
+extern u32 NextSharedRandom16Scaled(u32 range);
 extern void EntryActionHookNoop(int entryIndex, int actionKind);
 
 /*
@@ -30,7 +30,7 @@ void ChooseEntryAction(u8 entryIndex)
         break;
     case 0xfd:
         if (entry->flags & STAGE_ENTRY_ENEMY) {
-            if (func_0202a9e4(1000) < entry->actions[1].chance) {
+            if (NextSharedRandom16Scaled(1000) < entry->actions[1].chance) {
                 entry->actionIndex = 1;
             }
         }

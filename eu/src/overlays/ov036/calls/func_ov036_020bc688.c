@@ -52,7 +52,7 @@ extern int LoadGlobalS8At0(void);
 extern int func_0204d8cc(int id, int fade);
 extern u32 SetScriptBusyFlag(u32 value);
 extern BOOL IsSessionFlagSet(u32 value);
-extern int func_02029f5c(void);
+extern int GetMainBrightnessSetting(void);
 extern void G2x_SetBlendAlpha_(unsigned int *reg, unsigned int plane1, unsigned int plane2, unsigned int ev1, unsigned int ev2);
 extern void G3X_SetClearColor(unsigned color, unsigned alpha, unsigned depth, unsigned polygonID, int fog);
 extern u32 SetPanelEnabled(u32 value);
@@ -79,7 +79,7 @@ s32 func_ov036_020bc688(void)
     if (!IsSessionFlagSet(0x3308) && LoadGlobalS8At0() == -1) {
         data_ov001_020a0480->resetFlag = 0;
     }
-    if (func_02029f5c() == 0) {
+    if (GetMainBrightnessSetting() == 0) {
         for (i = 0; i < 8; i++) {
             SceneEntry *entry = &context->entries[i];
             if (entry->id != -1) {

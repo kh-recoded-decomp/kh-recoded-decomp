@@ -4,7 +4,7 @@
 #define Slot_SetCellData_0206a93c Slot_SetCellData
 #define data_ov059_020cff74 sOv059_BaEfStTamPZ_020cff94
 #define func_01ff86fc MIi_CpuClear32
-#define func_0202c690 func_0202c6a4
+#define func_0202c690 SetFileLoaderTextureUploadQueueMode
 #define func_0202c940 AcquireOrRefreshResourceBlock
 #define func_0202d3c8 IndexedPointer_GetFirstWord
 #define func_0202d3e0 NestedPointer_GetFirstWord

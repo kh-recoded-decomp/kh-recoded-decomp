@@ -5,7 +5,7 @@
 #define SetSlotKeyAndRebind_0206a94c SetSlotKeyAndRebind
 #define Slot_SetCellData_0206a93c Slot_SetCellData
 #define data_ov059_020cff88 sOv059_BaEfStTaPZ_020cffa8
-#define func_0202c690 func_0202c6a4
+#define func_0202c690 SetFileLoaderTextureUploadQueueMode
 #define func_0202c940 AcquireOrRefreshResourceBlock
 #define func_0202d3c8 IndexedPointer_GetFirstWord
 #define func_0202d3e0 NestedPointer_GetFirstWord

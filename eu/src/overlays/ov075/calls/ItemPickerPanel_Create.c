@@ -29,7 +29,7 @@
 #define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define func_ov076_020cf254 OpenMessageWindow
-#define func_0202c690 func_0202c6a4
+#define func_0202c690 SetFileLoaderTextureUploadQueueMode
 #define func_ov076_020cd450 LoadItemPickerTextureDrawParams
 #define InitPanelModel_020d0b74 InitMenuModel
 #define func_ov076_020cde04 BuildTabItemList

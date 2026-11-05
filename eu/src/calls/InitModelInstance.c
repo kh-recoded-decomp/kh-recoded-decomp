@@ -3,7 +3,7 @@
 #define InitializeRenderObject_020185ec NNS_G3dRenderObjInit
 #define NNS_G3dGetMdlSet_0201ac60 NNS_G3dGetMdlSet
 #define func_01ff90ec MTX_Identity33_
-#define func_0202c690 func_0202c6a4
+#define func_0202c690 SetFileLoaderTextureUploadQueueMode
 #define func_0202c940 AcquireOrRefreshResourceBlock
 #define func_0202d3e0 NestedPointer_GetFirstWord
 #define func_0202d3fc func_0202d410

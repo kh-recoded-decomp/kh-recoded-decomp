@@ -73,7 +73,7 @@ extern BOOL IsFieldPanelHidden(void);
 extern BOOL IsFirstEntryFlagSet(void);
 extern BOOL func_ov001_02064490(void);
 extern BOOL func_ov001_02063838(void);
-extern int func_02029f5c(void);
+extern int GetMainBrightnessSetting(void);
 extern void PlaySoundEffect(int a, int id);
 extern void StopSeqArcOrDefault(int a, int id, int fade);
 
@@ -136,7 +136,7 @@ int UpdateHudGauges(void)
             if (data_ov001_020a0480->eventLock && data_ov001_020a0480->eventMode == 5) {
                 blocked = TRUE;
             }
-            if (!blocked && !func_ov001_02063838() && func_02029f5c() != -16 && func_02029f5c() != 16) {
+            if (!blocked && !func_ov001_02063838() && GetMainBrightnessSetting() != -16 && GetMainBrightnessSetting() != 16) {
                 goto done;
             }
         }
@@ -147,7 +147,7 @@ int UpdateHudGauges(void)
         if (data_ov001_020a0480->eventLock && data_ov001_020a0480->eventMode == 5) {
             blocked = TRUE;
         }
-        if (!blocked && !func_ov001_02063838() && func_02029f5c() != -16 && func_02029f5c() != 16) {
+        if (!blocked && !func_ov001_02063838() && GetMainBrightnessSetting() != -16 && GetMainBrightnessSetting() != 16) {
             PlaySoundEffect(0, 0xe);
             set->soundPlaying = TRUE;
         }

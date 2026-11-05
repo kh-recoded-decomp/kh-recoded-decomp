@@ -3,7 +3,7 @@
 #define InvokeCallback40_020b8268 InvokeCallback40
 #define ResetResultsObjects_020bce50 ResetResultsObjects
 #define Text_UploadTileBuffer_02001520 Text_UploadTileBuffer
-#define func_0204f0c0 func_0204f0d4
+#define func_0204f0c0 UnlinkActiveIndexedRecord
 #define func_0204f378 IndexedRecords_SetFlag2
 #define func_ov027_020b90a4 FindWidgetById
 #define func_ov027_020b9580 SetEntrySlotsVisible

@@ -1,3 +1,3 @@
-#define FS_EndOverlay func_0204d994
+#define FS_EndOverlay StopSequencePlayersFrom2
 #define FS_UnloadOverlayImage_02026a7c FS_UnloadOverlayImage_02026a90
 #include "src/arm9/library_nitro_fs/FS_UnloadOverlayImage_02026a7c.c"

@@ -1,6 +1,6 @@
 #define LoadCurrentArchiveModelFlagged_0207c6b8 LoadCurrentArchiveModelFlagged
 #define LoadCurrentArchiveModel_0207c668 LoadCurrentArchiveModel
 #define LoadResourceGroups_0207c770 LoadResourceGroups
-#define func_0202c690 func_0202c6a4
+#define func_0202c690 SetFileLoaderTextureUploadQueueMode
 #define func_ov001_0207c70c LoadTextureDrawParamsFromArchive
 #include "src/ov001/unclassified_helpers/LoadResourceGroups_0207c770.c"

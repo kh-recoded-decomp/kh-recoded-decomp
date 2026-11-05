@@ -8,5 +8,5 @@
 #define func_02003fd4 OS_GetTick
 #define func_ov001_02077b90 SetFieldMenuSuspended
 #define func_ov001_0207a89c RefreshModeWindow
-#define setStopwatchHeld_02052648 setStopwatchHeld
+#define setStopwatchHeld_02052648 SetTweenPaused
 #include "src/ov001/field_manager/SuspendFieldForPause_02071270.c"

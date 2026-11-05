@@ -45,7 +45,7 @@ extern void FreeSlotPair(Ov039State *state, int slot);
 extern void NNSi_FndFreeFromDefaultHeap(void *block);
 extern void UnloadOverlayAfterGeometryTransfer(int processor, int overlayId);
 extern char OVERLAY_27_ID[];
-extern void func_02050a58(void);
+extern void ReleaseMapLayoutReference(void);
 extern void OS_ResetSystem(u32 newSlot0);
 
 void ShutdownOverlay(void)
@@ -83,7 +83,7 @@ void ShutdownOverlay(void)
         NNSi_FndFreeFromDefaultHeap(state);
     }
     UnloadOverlayAfterGeometryTransfer(0, (int)OVERLAY_27_ID);
-    func_02050a58();
+    ReleaseMapLayoutReference();
     if (resetOnExit) {
         OS_ResetSystem(-2);
     }

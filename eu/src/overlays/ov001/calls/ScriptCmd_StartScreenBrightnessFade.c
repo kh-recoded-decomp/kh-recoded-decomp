@@ -3,6 +3,6 @@
 #define SetBrightnessAndSyncMain_02029e7c SetBrightnessAndSyncMain
 #define SetSecondaryBrightness_02029ed0 SetSecondaryBrightness
 #define func_02006748 GXx_SetMasterBrightness_
-#define func_02029f48 func_02029f5c
-#define func_02029f58 func_02029f6c
+#define func_02029f48 GetMainBrightnessSetting
+#define func_02029f58 GetSubBrightnessSetting
 #include "src/ov001/shared_engine/ScriptCmd_StartScreenBrightnessFade_0208d084.c"

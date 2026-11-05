@@ -2,7 +2,7 @@
 #define UpdatePanelActivation_020288a0 UpdatePanelActivation
 #define data_0205fdc4 gPanelEnabled
 #define func_0202819c ResetPanelFieldB8AndNotify
-#define func_02028578 func_0202858c
+#define func_02028578 CacheMainBrightnessAndTestZero
 #define func_0204d924 PlaySoundEffect
 #define func_0204da20 SNDi_BroadcastChannelOp
 #define g_ptr_0205fe24 gPanelState

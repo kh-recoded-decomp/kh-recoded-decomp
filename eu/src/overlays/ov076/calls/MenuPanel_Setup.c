@@ -2,6 +2,6 @@
 #define MenuPanel_Setup_020cb3a8 MenuPanel_Setup
 #define SetSecondaryElementEnabled_020bc084 SetSecondaryElementEnabled
 #define func_01ff878c MIi_CpuCopyFast
-#define func_02052514 func_02052528
-#define func_0205255c func_02052570
+#define func_02052514 ConfigureTween
+#define func_0205255c StartTween
 #include "src/ov076/unclassified_helpers/MenuPanel_Setup_020cb3a8.c"

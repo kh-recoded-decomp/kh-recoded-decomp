@@ -5,5 +5,5 @@
 #define StepResourceSlotLoading_02086d00 StepResourceSlotLoading
 #define data_ov001_0209e3a0 gResourceSlotLoadOrder
 #define data_ov001_020a04dc data_ov001_020a04fc
-#define func_0202c48c func_0202c4a0
+#define func_0202c48c LoadFileAllocFromHeapTail
 #include "src/ov001/unclassified_helpers/StepResourceSlotLoading_02086d00.c"

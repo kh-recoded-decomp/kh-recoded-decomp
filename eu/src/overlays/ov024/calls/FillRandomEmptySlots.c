@@ -1,5 +1,5 @@
 #define DivModS32_02023dbc _s32_div_f
 #define FillRandomEmptySlots_020b6188 FillRandomEmptySlots
 #define PickRandomSetBit_020b6554 PickRandomSetBit
-#define func_0202a9d0 func_0202a9e4
+#define func_0202a9d0 NextSharedRandom16Scaled
 #include "src/ov024/unclassified_helpers/FillRandomEmptySlots_020b6188.c"

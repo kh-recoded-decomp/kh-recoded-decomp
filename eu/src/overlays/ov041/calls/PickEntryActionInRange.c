@@ -3,7 +3,7 @@
 
 extern const StageActionChoices gEmptyActionChoices;
 extern int GetEntryNeededRange(StageEntry *entry);
-extern u32 func_0202a9e4(u16 range);
+extern u32 NextSharedRandom16Scaled(u16 range);
 
 /*
  * Picks one of an entry's actions that reach far enough, at random by their chances (out of 1000, less the
@@ -38,7 +38,7 @@ int PickEntryActionInRange(StageEntry *entry)
     for (i = 0; i < choiceCount; i++) {
         index = choices.indices[i];
         chance = entry->actions[index].chance;
-        if (func_0202a9e4(total) < chance || index == entry->actionCount - 1) {
+        if (NextSharedRandom16Scaled(total) < chance || index == entry->actionCount - 1) {
             return index;
         }
         total -= chance;

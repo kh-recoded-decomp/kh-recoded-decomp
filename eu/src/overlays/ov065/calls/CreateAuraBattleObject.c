@@ -17,7 +17,7 @@
 #define data_ov065_020d85e8 sOv065_BaEfFnMrP2_020d8608
 #define data_ov065_020d85f8 sOv065_BaChFormatSCiBZ_020d8618
 #define func_01ff8830 MI_CpuFill8
-#define func_0202c48c func_0202c4a0
+#define func_0202c48c LoadFileAllocFromHeapTail
 #define func_0204f768 GetOverlaySelectionRecord
 #define func_ov021_020a89a8 func_ov021_020a89c8
 #define func_ov056_020d3b24 ForwardTargetHandle

@@ -1,4 +1,4 @@
 #define ActorSlot_StartWarmupByIndex_02035d80 ActorSlot_StartWarmupByIndex
-#define func_0202a9d0 func_0202a9e4
+#define func_0202a9d0 NextSharedRandom16Scaled
 #define g_actorRegistry_0206083c gActorRegistry
 #include "src/arm9/shared_engine/ActorSlot_StartWarmupByIndex_02035d80.c"

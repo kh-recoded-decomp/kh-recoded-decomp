@@ -5,6 +5,6 @@
 #define data_ov035_020bc4e0 gMovieContextState
 #define findSharedResourceByName_0202cd8c findSharedResourceByName
 #define func_01ff89a8 MI_CpuCopy8
-#define func_0202c48c func_0202c4a0
+#define func_0202c48c LoadFileAllocFromHeapTail
 #define func_ov035_020bb0f0 func_ov035_020bb110
 #include "src/ov035/shared_engine/LoadMovieClipHeader_020baa28.c"

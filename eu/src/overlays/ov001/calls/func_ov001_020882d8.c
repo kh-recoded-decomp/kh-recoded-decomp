@@ -13,8 +13,8 @@ typedef struct ActorManager {
 extern ActorManager *data_ov001_020a0500;
 extern BOOL IsScreenModeIdle(void);
 extern BOOL OpenFieldPanel(void);
-extern int func_02029f5c(void);
-extern int func_02029f6c(void);
+extern int GetMainBrightnessSetting(void);
+extern int GetSubBrightnessSetting(void);
 extern int abs(int x);
 extern int CmdOpenDialog_02088580(int script, int operand);
 
@@ -25,8 +25,8 @@ s32 func_ov001_020882d8(void)
 
     manager = data_ov001_020a0500;
     if (IsScreenModeIdle() && OpenFieldPanel()) {
-        manager->axes[0].value = func_02029f5c();
-        manager->axes[1].value = func_02029f6c();
+        manager->axes[0].value = GetMainBrightnessSetting();
+        manager->axes[1].value = GetSubBrightnessSetting();
         for (axisIndex = 0; axisIndex < 2; axisIndex++) {
             if (abs(manager->axes[axisIndex].value) != 16) {
                 manager->axes[axisIndex].value = 0;

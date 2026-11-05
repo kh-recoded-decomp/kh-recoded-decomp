@@ -4,7 +4,7 @@
 #define Camera_UpdateManualTurn_020c4668 Camera_UpdateManualTurn
 #define Camera_UpdateTracking_020c631c Camera_UpdateTracking
 #define IsLeaderFlag3Active_0206e198 IsLeaderFlag3Active
-#define func_02029f48 func_02029f5c
+#define func_02029f48 GetMainBrightnessSetting
 #define func_ov046_020c1a48 Camera_GetPresetHeight
 #define func_ov047_020c3b5c Camera_UpdateFollowInput
 #include "src/ov047/camera/Camera_FollowControllerUpdate_020c4768.c"

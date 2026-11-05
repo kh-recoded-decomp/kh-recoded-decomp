@@ -22,8 +22,8 @@
 #define func_0204f98c BuildSelectionEntryList
 #define func_0204fba0 func_0204fbb4
 #define func_0205053c LoadSelectionPackedValues
-#define func_02052514 func_02052528
-#define func_0205255c func_02052570
+#define func_02052514 ConfigureTween
+#define func_0205255c StartTween
 #define func_ov027_020b90a4 FindWidgetById
 #define func_ov027_020b9580 SetEntrySlotsVisible
 #define func_ov039_020bbf78 StartSubScene

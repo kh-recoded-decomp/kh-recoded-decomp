@@ -79,7 +79,7 @@ extern void ZeroBytes0x14(EntryGroupDesc *desc);
 extern s16 func_ov021_020a89c8(EntryGroupDesc *desc);
 extern u8 *GetOverlaySelectionRecord(u32 player);
 extern void OS_SPrintf(char *dst, const char *fmt, ...);
-extern void *func_0202c4a0(const char *name, u32 mode);
+extern void *LoadFileAllocFromHeapTail(const char *name, u32 mode);
 extern void BuildNodeRecords(BossObject *obj, ObjectOwner *owner, void *resDesc, void *file);
 extern void AcquireEntryHandles(BossObject *obj, ObjectOwner *owner, void *resDesc);
 extern void LoadManagerSpriteSlots(void);
@@ -123,7 +123,7 @@ BossObject *CreateOv069BossObject(ObjectOwner *owner, void *resDesc, ObjectDesc 
     obj->onAction = UpdateOv069BossMotion;
     selection = *GetOverlaySelectionRecord(owner->player);
     OS_SPrintf(path, sOv069_BaChFormatSCiBZ_020d8a50, gSoundCategoryNames[selection]);
-    file = func_0202c4a0(path, 0x11);
+    file = LoadFileAllocFromHeapTail(path, 0x11);
     BuildNodeRecords(obj, owner, resDesc, file);
     NNSi_FndFreeFromDefaultHeap(file);
     AcquireEntryHandles(obj, owner, resDesc);

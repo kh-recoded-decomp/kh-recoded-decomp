@@ -19,7 +19,7 @@
 #define data_ov059_020cff28 sOv059_BaChFormatSMdlFormatDPZ_020cff48
 #define data_ov059_020cff3c sOv059_BaChFormatSTexFormatDZ_020cff5c
 #define data_ov059_020cff50 sOv059_BaChFormatSMovPZ_020cff70
-#define func_0202c48c func_0202c4a0
+#define func_0202c48c LoadFileAllocFromHeapTail
 #define func_0202f590 func_0202f5a4
 #define func_0202f5b4 Obj_SetHalfwordFC
 #define func_020358b0 ApplyRecordTableEntry2

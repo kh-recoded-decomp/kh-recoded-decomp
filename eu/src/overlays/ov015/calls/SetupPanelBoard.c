@@ -96,7 +96,7 @@ extern void GX_SetBankForSubBGExtPltt(int bank);
 extern void GX_SetBankForSubOBJExtPltt(int bank);
 extern int Msg_OpenContainerAndReadHeader(const char *name, u32 mode, BOOL allocFromEnd);
 extern void ZeroHalfThenFree(int handle);
-extern void *func_0202c4a0(u32 fileId, u32 heapId);
+extern void *LoadFileAllocFromHeapTail(u32 fileId, u32 heapId);
 extern void NNSi_FndFreeFromDefaultHeap(void *block);
 extern void GetBgDataFromArchive(BgGraphicsData *out, void *archive, int screenIndex, int characterIndex,
                                           int paletteIndex);
@@ -232,8 +232,8 @@ void SetupPanelBoard(void) {
         SetSceneRecordValue(data_ov015_020812e0->entries[i].markSlot, &pos);
     }
 
-    archiveA = func_0202c4a0(ARCHIVE_FILE_ID(handleA, 0), 0x10);
-    archiveB = func_0202c4a0(ARCHIVE_FILE_ID(handleB, 0x0a), 0x10);
+    archiveA = LoadFileAllocFromHeapTail(ARCHIVE_FILE_ID(handleA, 0), 0x10);
+    archiveB = LoadFileAllocFromHeapTail(ARCHIVE_FILE_ID(handleB, 0x0a), 0x10);
     GetBgDataFromArchive(&bgA, archiveA, 0, -1, -1);
     GetBgDataFromArchive(&bgB, archiveB, -1, 0, 0);
     GXS_LoadBGPltt(bgB.palette->rawData, 0, 0x200);
@@ -256,12 +256,12 @@ void SetupPanelBoard(void) {
         NNSi_FndFreeFromDefaultHeap(archiveB);
     }
 
-    themeArchive = func_0202c4a0(ARCHIVE_FILE_ID(handleB, gWirelessThemes[data_ov015_020812e0->theme].charIndex & 0x1ff),
+    themeArchive = LoadFileAllocFromHeapTail(ARCHIVE_FILE_ID(handleB, gWirelessThemes[data_ov015_020812e0->theme].charIndex & 0x1ff),
                              0x10);
     GetBgDataFromArchive(&bgA, themeArchive, 0, 0, 0);
     GXS_LoadBGExtPltt(bgA.palette->rawData, 0, 0x200);
     GXS_LoadBG0Char(bgA.character->rawData, 0, bgA.character->size);
-    paletteArchive = func_0202c4a0(ARCHIVE_FILE_ID(handleA, 0x02), 0x10);
+    paletteArchive = LoadFileAllocFromHeapTail(ARCHIVE_FILE_ID(handleA, 0x02), 0x10);
     GetBgDataFromArchive(&bgB, paletteArchive, -1, 0, 0);
     GXS_LoadBGExtPltt(bgB.palette->rawData, 0x6000, 0x200);
     GXS_LoadBGExtPltt(bgA.palette->rawData, 0x6000, 0x1e0);

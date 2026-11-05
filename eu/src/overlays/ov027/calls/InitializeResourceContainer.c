@@ -3,7 +3,7 @@
 #define func_01ff8830 MI_CpuFill8
 #define func_0201288c NNS_FndInitList
 #define func_02023dbc _s32_div_f
-#define func_020524e8 func_020524fc
+#define func_020524e8 InitTween
 #define func_020b8f98 func_ov027_020b8fb8
 #define func_020b9060 InitObjManagerAndMark
 #include "src/ov027/resource_container/InitializeResourceContainer_020b8bd4.c"

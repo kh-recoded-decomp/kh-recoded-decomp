@@ -1,5 +1,5 @@
 #define RollRewardOrbDrop_020665bc RollRewardOrbDrop
 #define SpawnRewardOrbs_02066514 SpawnRewardOrbs
 #define data_ov001_020a0464 data_ov001_020a0484
-#define func_0202a9d0 func_0202a9e4
+#define func_0202a9d0 NextSharedRandom16Scaled
 #include "src/ov001/field_objects/RollRewardOrbDrop_020665bc.c"

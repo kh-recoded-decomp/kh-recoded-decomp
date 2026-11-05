@@ -8,7 +8,7 @@ extern void PlaySoundChecked(s32 channel, s32 soundId);
 extern BOOL IsEntryFlag2Active(s32 index);
 extern void func_0204d808(s32 flags);
 extern u32 func_ov001_0206e644(void);
-extern s32 func_02029f5c(void);
+extern s32 GetMainBrightnessSetting(void);
 extern void AwardSlotLevelProgress(s32 amount);
 extern void AddRegionProgress(s32 amount);
 
@@ -44,7 +44,7 @@ s32 PollFieldTransition(void)
         gOv028FieldState->flags |= 0x8000;
         return 8;
     }
-    if (!func_02029f5c()) {
+    if (!GetMainBrightnessSetting()) {
         if (data_ov001_020a0480->pendingExperience > 0) {
             AwardSlotLevelProgress(data_ov001_020a0480->pendingExperience);
             data_ov001_020a0480->pendingExperience = 0;

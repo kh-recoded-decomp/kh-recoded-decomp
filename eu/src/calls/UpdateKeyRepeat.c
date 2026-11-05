@@ -13,7 +13,7 @@ extern u32 data_02060504[];
 extern const u16 gKeyRepeatButtonMasks[];
 extern const u16 gKeyRepeatTimestampIndices[];
 
-extern u32 func_01ff80d4(void);
+extern u32 GetVBlankCounter(void);
 extern u32 _u32_div_f(u32 dividend, u32 divisor);
 
 void UpdateKeyRepeat(KeyRepeatState *state)
@@ -25,7 +25,7 @@ void UpdateKeyRepeat(KeyRepeatState *state)
 
     keyIndex = 0;
     state->repeatMask = 0;
-    now = func_01ff80d4();
+    now = GetVBlankCounter();
     do {
         mask = gKeyRepeatButtonMasks[keyIndex];
         if (data_020604fc & mask) {

@@ -10,5 +10,5 @@
 #define data_020534a4 gStartingRecordIds
 #define func_02004ac8 OS_GetMacAddress
 #define func_0202761c SetSharedFlagBits
-#define func_0202a9d0 func_0202a9e4
+#define func_0202a9d0 NextSharedRandom16Scaled
 #include "src/arm9/indexed_records/GrantStartingRecords_02027670.c"

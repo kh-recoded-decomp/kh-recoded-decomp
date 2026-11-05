@@ -76,7 +76,7 @@ extern void MarkTileTableRowDirty(void *layer, int id);
 extern int AcquireRecordSlot(int slot, int param);
 extern void InitBackgroundContainer(void *tracker, TagConfig *config);
 extern void func_ov027_020b7e44(void *tracker, u32 fileId);
-extern void *func_0202c4a0(u32 fileId, u32 mode);
+extern void *LoadFileAllocFromHeapTail(u32 fileId, u32 mode);
 extern void GetBgDataFromArchive(BgGraphicsData *out, void *archive, int screenIndex, int characterIndex,
                                           int paletteIndex);
 extern void GX_LoadBGPltt(void *src, u32 offset, u32 size);
@@ -127,7 +127,7 @@ void InitResultsScreen(void)
     InitBackgroundContainer(WORK->tagTracker, &tagConfig);
     base = CONTAINER_BASE(objContainer);
     func_ov027_020b7e44(WORK->tagTracker, base | 0x80000011);
-    archive = func_0202c4a0(base | 0x80000012, 0xe);
+    archive = LoadFileAllocFromHeapTail(base | 0x80000012, 0xe);
     GetBgDataFromArchive(&bg, archive, -1, 0, 0);
     GX_LoadBGPltt(bg.palette->data, 0, bg.palette->size);
     GX_LoadBG3Char(bg.character->data, 0, bg.character->size);

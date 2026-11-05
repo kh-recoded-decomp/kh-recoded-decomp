@@ -1,6 +1,6 @@
 #define DispatchResourceLoad_0202ea78 DispatchResourceLoad
 #define func_0202d098 ValidateResourceTagAndDispatch
-#define func_0202d314 func_0202d328
+#define func_0202d314 RelocateArchiveSectionsWithDefaultFlags
 #define func_0202e854 BindModelAnimations
 #define g_reentryGuard_02056014 gResourceTextureSetupEnabled
 #include "src/arm9/archive_startup/DispatchResourceLoad_0202ea78.c"

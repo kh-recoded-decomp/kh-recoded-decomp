@@ -2,7 +2,7 @@
 #define CountMatchingSlotIds_02069f9c CountMatchingSlotIds
 #define OS_SNPrintf_0202e080 OS_SNPrintf_0202e094
 #define ShowPlayerCardSummary_0206f048 ShowPlayerCardSummary
-#define func_0202a9d0 func_0202a9e4
+#define func_0202a9d0 NextSharedRandom16Scaled
 #define func_ov002_020619e8 ActivatePanelSlotAB
 #define func_ov002_02061af0 ActivatePanelSlotAB_02061af0
 #include "src/ov015/wireless/ShowPlayerCardSummary_0206f048.c"

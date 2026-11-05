@@ -3,6 +3,6 @@
 #define SetupAllSelectionRecords_0204f85c SetupAllSelectionRecords
 #define func_0204fbcc ApplySelectionStatScaling
 #define func_020506dc AcquireMapLayout
-#define func_02050a44 func_02050a58
+#define func_02050a44 ReleaseMapLayoutReference
 #define func_02050b30 ComputePlayerStats
 #include "src/arm9/overlay_selection/SetupAllSelectionRecords_0204f85c.c"

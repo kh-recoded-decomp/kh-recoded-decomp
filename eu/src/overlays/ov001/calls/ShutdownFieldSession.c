@@ -16,6 +16,6 @@
 #define func_02029f98 UnloadOverlayAfterGeometryTransfer
 #define func_0202a638 DestroyTaskObjectWrapper
 #define func_02035774 ShutdownActorRegistry
-#define func_02050a44 func_02050a58
+#define func_02050a44 ReleaseMapLayoutReference
 #define func_ov001_02066e18 DestroySubScene9Task
 #include "src/ov001/field_manager/ShutdownFieldSession_02061b54.c"

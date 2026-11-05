@@ -15,7 +15,7 @@
 #define UpdateMenuScreen_020b5f08 UpdateMenuScreen
 #define UpdateWidgetRootAndResetList_020b8c80 UpdateWidgetRootAndResetList
 #define func_020016f0 func_02001704
-#define func_02029f58 func_02029f6c
+#define func_02029f58 GetSubBrightnessSetting
 #define func_ov001_020645c8 IsSessionFlagSet
 #define func_ov001_0207b5f4 func_ov001_0207b61c
 #define func_ov001_0207b6d4 func_ov001_0207b6fc

@@ -14,7 +14,7 @@
 #define func_01ff8830 MI_CpuFill8
 #define func_02014d38 NNS_G2dGetUnpackedBGCharacterData
 #define func_0202a448 CreateTaskObject
-#define func_0202c48c func_0202c4a0
+#define func_0202c48c LoadFileAllocFromHeapTail
 #define func_ov001_0207de48 ResetMenuScreenLayers
 #define func_ov001_0207e094 IsArrowPromptVisible
 #define func_ov001_0207e0a0 GetArrowPromptState

@@ -4,5 +4,5 @@
 #define data_02053468 gRecordCategoryCounts
 #define data_0205351c gRecordCategoryFirstIds
 #define func_020277f4 TestRecordFlagBit
-#define func_0202a9d0 func_0202a9e4
+#define func_0202a9d0 NextSharedRandom16Scaled
 #include "src/arm9/indexed_records/PickRandomRecordInCategory_02027e18.c"

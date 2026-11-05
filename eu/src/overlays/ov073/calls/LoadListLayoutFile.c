@@ -1,7 +1,7 @@
 #define LoadListLayoutFile_020c36a4 LoadListLayoutFile
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define QueueFileLoadRequest_020ba114 QueueFileLoadRequest
-#define func_0202c48c func_0202c4a0
+#define func_0202c48c LoadFileAllocFromHeapTail
 #define func_ov073_020c3530 LoadListViewGraphics
 #define func_ov073_020c3684 OnListDataLoaded
 #include "src/ov073/status_menu/LoadListLayoutFile_020c36a4.c"

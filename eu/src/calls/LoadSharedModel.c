@@ -2,6 +2,6 @@
 #define NNS_G3dGetMdlSet_0201ac60 NNS_G3dGetMdlSet
 #define SetMaterialLightMask_0201a46c NNS_G3dMdlSetMdlLightEnableFlag
 #define func_0202c478 Archive_LoadFile
-#define func_0202c690 func_0202c6a4
+#define func_0202c690 SetFileLoaderTextureUploadQueueMode
 #define func_0202d098 ValidateResourceTagAndDispatch
 #include "src/arm9/graphics/LoadSharedModel_02036ac0.c"

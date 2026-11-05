@@ -1,4 +1,4 @@
 #define SetNodeStateRandomDir_0206604c SetNodeStateRandomDir
-#define func_0202a9d0 func_0202a9e4
+#define func_0202a9d0 NextSharedRandom16Scaled
 #define func_ov001_02066004 PlayMenuSoundEffect
 #include "src/ov001/shared_engine/SetNodeStateRandomDir_0206604c.c"

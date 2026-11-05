@@ -5,7 +5,7 @@
 #define ZeroHalfThenFree_0202cd78 ZeroHalfThenFree
 #define data_ov034_020c0f44 sOv034_UiMenuTipsP2_020c0f64
 #define data_ov034_020c0f54 sOv034_UiMenuLanguageTipsP2_020c0f74
-#define func_0202c48c func_0202c4a0
-#define func_0202c690 func_0202c6a4
+#define func_0202c48c LoadFileAllocFromHeapTail
+#define func_0202c690 SetFileLoaderTextureUploadQueueMode
 #define func_0202d098 ValidateResourceTagAndDispatch
 #include "src/ov034/reviewed_helpers/LoadResultsIconCells_020be588.c"

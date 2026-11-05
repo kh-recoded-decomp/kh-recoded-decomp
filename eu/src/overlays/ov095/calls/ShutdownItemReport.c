@@ -3,7 +3,7 @@
 extern u32 sOv095_VblankFunc_020c28a8;
 extern u32 NotifyBothOrOne();
 extern u32 ZeroHalfThenFree();
-extern u32 func_02050a58();
+extern u32 ReleaseMapLayoutReference();
 extern u32 ReleaseRecordManager();
 extern u32 ReleaseRecordSlot();
 extern u32 SetStateFlagBits();
@@ -23,7 +23,7 @@ void ShutdownItemReport(int work) {
   ReleaseSlotPool(work);
   ReleaseScreenResources_020bf9c8(work);
   FreeEntryBuffers(work);
-  func_02050a58();
+  ReleaseMapLayoutReference();
   ReleaseRecordSlot(1);
   ReleaseRecordSlot(5);
   ReleaseRecordSlot(0);

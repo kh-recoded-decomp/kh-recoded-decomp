@@ -7,6 +7,6 @@
 #define SetGlobalPackedBit_02027320 SetGlobalPackedBit
 #define data_ov001_0209da52 gRandomEnemyDropIds
 #define func_020275c8 CheckStatusAndThreshold
-#define func_0202a9d0 func_0202a9e4
+#define func_0202a9d0 NextSharedRandom16Scaled
 #define func_0204f768 GetOverlaySelectionRecord
 #include "src/ov001/unclassified_helpers/RollEnemyDrop_0206844c.c"

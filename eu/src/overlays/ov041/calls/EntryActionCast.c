@@ -38,7 +38,7 @@ extern int GetEntryAnimationFrame(StageEntry *entry);
 extern void ShowEntryPairPanel(StageEntry *entry, StageEntry *target);
 extern void CheckPairTimedPress(StageEntry *entry, StageEntry *target);
 extern void HandleTimedPressWindow(StageEntry *entry, int animation, fx32 hitFrame);
-extern int func_0202a9e4(u16 range);
+extern int NextSharedRandom16Scaled(u16 range);
 extern void ChooseEntryMainTarget(StageEntry *entry);
 extern void FinishEntryAction(StageEntry *entry);
 extern void ClearEntryActionState(StageEntry *entry);
@@ -195,7 +195,7 @@ void EntryActionCast(u8 entryIndex)
     case 0:
         data_ov041_020cff48.castsDone = 0;
         data_ov041_020cff48.castCount =
-            action->minRepeats + func_0202a9e4((action->maxRepeats - action->minRepeats + 1) * 1000) / 1000 - 1;
+            action->minRepeats + NextSharedRandom16Scaled((action->maxRepeats - action->minRepeats + 1) * 1000) / 1000 - 1;
         if (action->minRepeats == action->maxRepeats) {
             data_ov041_020cff48.castCount = action->minRepeats - 1;
         }

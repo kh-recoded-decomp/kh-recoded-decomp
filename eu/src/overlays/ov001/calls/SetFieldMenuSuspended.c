@@ -1,3 +1,4 @@
+#define func_01ff80d4 GetVBlankCounter
 #define GetSceneTagTracker_020711b0 GetSceneTagTracker
 #define IsFieldPanelHidden_0207187c IsFieldPanelHidden
 #define SetFieldMenuSuspended_02077b90 SetFieldMenuSuspended

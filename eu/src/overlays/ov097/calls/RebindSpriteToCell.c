@@ -1,6 +1,6 @@
 #define FindTextureResourceBlock_0201ac70 NNS_G3dGetTex
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define RebindSpriteToCell_020c1890 RebindSpriteToCell
-#define func_0202c690 func_0202c6a4
+#define func_0202c690 SetFileLoaderTextureUploadQueueMode
 #define func_0202d098 ValidateResourceTagAndDispatch
 #include "src/ov097/reviewed_helpers/RebindSpriteToCell_020c1890.c"

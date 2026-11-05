@@ -10,7 +10,7 @@
 #define UpdateGroupMenuCounter_020bbb4c UpdateGroupMenuCounter
 #define UploadGroupMenuTiles_020bbba8 UploadGroupMenuTiles
 #define func_02014d38 NNS_G2dGetUnpackedBGCharacterData
-#define func_0202c48c func_0202c4a0
+#define func_0202c48c LoadFileAllocFromHeapTail
 #define func_ov027_020b822c func_ov027_020b824c
 #define menuState_020c0068 data_ov032_020c0088
 #include "src/ov032/object_group/InitGroupMenuGauge_020bba70.c"

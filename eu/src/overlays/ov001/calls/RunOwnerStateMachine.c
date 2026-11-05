@@ -1,4 +1,4 @@
 #define RunOwnerStateMachine_0207036c RunOwnerStateMachine
 #define data_ov001_0209ec78 gHudSlideStateHandlers
-#define func_0205255c func_02052570
+#define func_0205255c StartTween
 #include "src/ov001/unclassified_helpers/RunOwnerStateMachine_0207036c.c"

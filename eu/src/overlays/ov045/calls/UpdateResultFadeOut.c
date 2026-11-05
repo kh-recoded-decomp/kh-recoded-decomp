@@ -7,6 +7,6 @@
 #define SetSecondaryBrightness_02029ed0 SetSecondaryBrightness
 #define UpdateResultFadeOut_020c0044 UpdateResultFadeOut
 #define data_ov045_020c0880 data_ov045_020c08a0
-#define func_02052514 func_02052528
-#define func_0205255c func_02052570
+#define func_02052514 ConfigureTween
+#define func_0205255c StartTween
 #include "src/ov045/shared_engine/UpdateResultFadeOut_020c0044.c"

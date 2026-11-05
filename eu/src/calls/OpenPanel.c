@@ -1,3 +1,4 @@
+#define func_01ff80d4 GetVBlankCounter
 #define GetNextStreamCursorOrInvalid_0204df04 GetNextStreamCursorOrInvalid
 #define InvokeForChannelOrBoth_0200110c InvokeForChannelOrBoth
 #define IsSoundStreamActive_0204ded4 IsSoundStreamActive

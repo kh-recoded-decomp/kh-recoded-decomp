@@ -2,6 +2,6 @@
 #define LoadPanelResource_020b6c2c LoadPanelResource
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define QueueFileLoadRequest_020ba114 QueueFileLoadRequest
-#define func_0202c48c func_0202c4a0
+#define func_0202c48c LoadFileAllocFromHeapTail
 #define func_ov025_020b6ab8 SetupSlotListView
 #include "src/ov025/leaf_research/LoadPanelResource_020b6c2c.c"

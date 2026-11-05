@@ -15,7 +15,7 @@
 #define data_ov015_0207e7f8 sOv015_WxcWleP2_0207e7f8
 #define func_01ff8684 MIi_CpuClear16
 #define func_02007250 GX_LoadBGPltt
-#define func_0202c48c func_0202c4a0
+#define func_0202c48c LoadFileAllocFromHeapTail
 #define func_0202cc6c Msg_OpenContainerAndReadHeader
 #define func_ov002_02067a84 ResetSelectionView
 #define func_ov002_02067c10 BuildSelectionViewRecords

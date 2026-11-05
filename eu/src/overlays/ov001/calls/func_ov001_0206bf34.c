@@ -1,7 +1,7 @@
 #include "nitro/types.h"
 
 extern int FreeBufferAndClearStatus(int obj);
-extern void func_020524fc(void *p);
+extern void InitTween(void *p);
 
 void func_ov001_0206bf34(int manager)
 {
@@ -19,5 +19,5 @@ void func_ov001_0206bf34(int manager)
     } while (i < 2);
     *(u32 *)(manager + 0x124) = 0;
     *(u32 *)(manager + 0x128) = 0;
-    func_020524fc((void *)(manager + 300));
+    InitTween((void *)(manager + 300));
 }

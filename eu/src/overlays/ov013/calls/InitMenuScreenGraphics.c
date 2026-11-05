@@ -17,7 +17,7 @@
 #define data_ov013_02074c4c sOv013_WxcWlaP2_02074c4c
 #define func_02007250 GX_LoadBGPltt
 #define func_02007d90 GX_BeginLoadOBJExtPltt
-#define func_0202c48c func_0202c4a0
+#define func_0202c48c LoadFileAllocFromHeapTail
 #define func_0202cc6c Msg_OpenContainerAndReadHeader
 #define func_ov002_020626d4 OpenPanelTextWindow
 #define func_ov027_020b7d58 InitBackgroundContainer

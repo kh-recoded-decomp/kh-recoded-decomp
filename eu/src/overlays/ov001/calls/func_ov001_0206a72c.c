@@ -22,8 +22,8 @@ extern Session *data_ov001_020a0480;
 extern u8 sOv001_RefreshWnd_0209eb2c[];
 extern void SetScreenModeFlags(int enable, int mode);
 extern void RestoreBrightnessOnce(void);
-extern int func_02029f5c(void);
-extern int func_02029f6c(void);
+extern int GetMainBrightnessSetting(void);
+extern int GetSubBrightnessSetting(void);
 extern void DrawFlatRect(int nX0, int nY0, int nX1, int nY1, int nZ);
 extern void InvokeForChannelOrBoth(u32 arg0, u32 arg1, int arg2, int channel);
 
@@ -35,8 +35,8 @@ void func_ov001_0206a72c(int mode)
     if (mode == 3) {
         return;
     }
-    screen->x = func_02029f5c() << 12;
-    screen->y = func_02029f6c() << 12;
+    screen->x = GetMainBrightnessSetting() << 12;
+    screen->y = GetSubBrightnessSetting() << 12;
     screen->unk_64 = 0;
     screen->unk_65 = 0;
     if (!(screen->flags & 0x40)) {

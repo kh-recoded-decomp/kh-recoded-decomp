@@ -1,6 +1,6 @@
 #define BeginHudSlideClose_02071f58 BeginHudSlideClose
 #define data_ov001_020a04a4 data_ov001_020a04c4
-#define func_02052514 func_02052528
-#define func_0205255c func_02052570
+#define func_02052514 ConfigureTween
+#define func_0205255c StartTween
 #define func_ov001_0206fef4 FlushAndCloseSceneMessage
 #include "src/ov001/shared_engine/BeginHudSlideClose_02071f58.c"

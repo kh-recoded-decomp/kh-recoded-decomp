@@ -3,6 +3,6 @@
 #define StartScreenBrightnessFade_020bd5dc StartScreenBrightnessFade
 #define data_ov036_020c3920 data_ov036_020c3940
 #define func_02006748 GXx_SetMasterBrightness_
-#define func_02029f48 func_02029f5c
-#define func_02029f58 func_02029f6c
+#define func_02029f48 GetMainBrightnessSetting
+#define func_02029f58 GetSubBrightnessSetting
 #include "src/ov036/panel_state/StartScreenBrightnessFade_020bd5dc.c"

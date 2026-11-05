@@ -24,7 +24,7 @@
 #define data_ov013_02074c64 sOv013_WxcWliP2_02074c64
 #define func_01ff8830 MI_CpuFill8
 #define func_02007250 GX_LoadBGPltt
-#define func_0202c48c func_0202c4a0
+#define func_0202c48c LoadFileAllocFromHeapTail
 #define func_0202cc6c Msg_OpenContainerAndReadHeader
 #define func_ov002_020629b8 ResetMainPanelGraphics
 #define func_ov002_02068248 SetGroupSlotsVisible

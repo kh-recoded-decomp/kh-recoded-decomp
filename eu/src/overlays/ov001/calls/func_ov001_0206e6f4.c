@@ -12,7 +12,7 @@ extern s32 gPanelActive;
 extern OverlayFactoryContext *data_ov001_020a04bc;
 extern s32 GXx_GetMasterBrightness_(u32 reg);
 extern void SetBrightnessAndSyncMain(s32 callerId);
-extern s32 func_02029f5c(void);
+extern s32 GetMainBrightnessSetting(void);
 extern s32 func_ov001_02064490(void);
 
 s32 func_ov001_0206e6f4(s32 callerId)
@@ -27,7 +27,7 @@ s32 func_ov001_0206e6f4(s32 callerId)
         return 0;
     }
     busy = GXx_GetMasterBrightness_(0x400006c);
-    if ((busy != 0) || (busy = func_02029f5c(), busy != 0)) {
+    if ((busy != 0) || (busy = GetMainBrightnessSetting(), busy != 0)) {
         ok = 0;
     }
     busy = func_ov001_02064490();

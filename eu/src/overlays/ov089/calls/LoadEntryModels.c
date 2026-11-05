@@ -6,7 +6,7 @@
 #define data_ov089_020c0540 data_ov089_020c0560
 #define data_ov089_020c0590 data_ov089_020c05b0
 #define data_ov089_020c05d8 data_ov089_020c05f8
-#define func_0202c48c func_0202c4a0
+#define func_0202c48c LoadFileAllocFromHeapTail
 #define func_0202ed3c InitSharedRecordAndDispatchAlt
 #define func_0202f4d8 Flags16_SetBit1
 #define selectJointAnimationBlend_0202f2cc selectJointAnimationBlend

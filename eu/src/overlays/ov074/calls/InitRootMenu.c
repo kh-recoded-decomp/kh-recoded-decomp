@@ -26,7 +26,7 @@
 #define data_ov074_020c5a08 sOv074_EvMoSoWeP2_020c5a28
 #define data_ov074_020c5a18 sOv074_BaChSoMdl0PZ_020c5a38
 #define func_02006d3c G3X_SetHOffset
-#define func_0202c48c func_0202c4a0
+#define func_0202c48c LoadFileAllocFromHeapTail
 #define func_0202e9ec InitSharedRecordThenTexture
 #define func_0202ed3c InitSharedRecordAndDispatchAlt
 #define func_0202f4e8 Flags16_ClearBit1

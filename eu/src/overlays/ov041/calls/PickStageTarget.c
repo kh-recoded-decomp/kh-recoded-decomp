@@ -3,7 +3,7 @@
 
 extern const StageTargetCandidates gEmptyTargetCandidates;
 extern const StageColumnCandidates gEmptyColumnCandidates;
-extern u32 func_0202a9e4(u16 range);
+extern u32 NextSharedRandom16Scaled(u16 range);
 extern StageEntry *FindStageEntryBySceneSlot(int sceneSlot);
 
 /*
@@ -39,7 +39,7 @@ int PickStageTarget(int mode)
             }
         }
         if (ties > 0) {
-            result = candidates.indices[(int)func_0202a9e4((ties + 1) * 1000) / 1000];
+            result = candidates.indices[(int)NextSharedRandom16Scaled((ties + 1) * 1000) / 1000];
         } else {
             result = candidates.indices[0];
         }
@@ -70,7 +70,7 @@ int PickStageTarget(int mode)
             count = 0;
         }
         if (ties > 0) {
-            column = columns.columns[(int)func_0202a9e4((ties + 1) * 1000) / 1000];
+            column = columns.columns[(int)NextSharedRandom16Scaled((ties + 1) * 1000) / 1000];
         } else {
             column = columns.columns[0];
         }

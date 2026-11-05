@@ -18,7 +18,7 @@
 #define data_ov001_020a0460 data_ov001_020a0480
 #define func_01ff86fc MIi_CpuClear32
 #define func_01ffa0f4 VEC_Distance
-#define func_0202c48c func_0202c4a0
+#define func_0202c48c LoadFileAllocFromHeapTail
 #define func_0202ed9c func_0202edb0
 #define func_0202f4e8 Flags16_ClearBit1
 #define func_02034050 IndexedBytes_SetAt10

@@ -7,7 +7,7 @@
 #define data_ov001_020a04f4 gActorChannelContext
 #define func_01ff89a8 MI_CpuCopy8
 #define func_02028940 GetPanelFieldB8
-#define func_02029f48 func_02029f5c
+#define func_02029f48 GetMainBrightnessSetting
 #define func_ov001_0208babc SetFieldCameraTarget
 #define func_ov021_020af664 ForwardSubModeEvent
 #include "src/ov001/field_manager/StartEventCameraCut_0208bec4.c"

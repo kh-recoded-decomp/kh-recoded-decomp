@@ -15,7 +15,7 @@ typedef struct MovieRunScene {
 } MovieRunScene;
 
 extern void *GetRunningTaskWork(void);
-extern u32 func_01ff80d4(void);
+extern u32 GetVBlankCounter(void);
 extern u64 OS_GetTick(void);
 extern int TickSubtitleTimer(void);
 extern int MovieScene_IsFadeDone(void);
@@ -24,8 +24,8 @@ extern int ScriptVm_RunFrame(void *script);
 extern void MovieScene_ProcessTimeline(MovieRunScene *scene, int frame);
 extern void GX_DispOff(void);
 extern int PM_SetLCDPower(int power);
-extern int func_02029f5c(void);
-extern int func_02029f6c(void);
+extern int GetMainBrightnessSetting(void);
+extern int GetSubBrightnessSetting(void);
 extern void SetBrightnessAndSyncMain(int value);
 extern void SetSecondaryBrightness(int value);
 extern void GX_DispOn(void);
@@ -47,7 +47,7 @@ void *MovieScene_Run(void)
 
     scene = GetRunningTaskWork();
     if ((scene->flags & 2) == 0 && (scene->field_8b0 == 2 || scene->streamActive == 2)) {
-        prevCount = func_01ff80d4();
+        prevCount = GetVBlankCounter();
         startTick = OS_GetTick();
         if (TickSubtitleTimer() == 0) {
             do {
@@ -71,7 +71,7 @@ void *MovieScene_Run(void)
                 if ((scene->flags & 1) != 0 && ScriptVm_RunFrame(scene->script) == 0) {
                     scene->flags &= ~1;
                 }
-                count = func_01ff80d4();
+                count = GetVBlankCounter();
                 if (prevCount != count) {
                     MovieScene_ProcessTimeline(scene, (int)((OS_GetTick() - startTick) * 64 / 0x82ea * 0xbb5 / 100000) + 90);
                     prevCount = count;
@@ -83,8 +83,8 @@ void *MovieScene_Run(void)
                 } else if (scene->lcdOff != 0 && ((int)(*(vu16 *)0x02ffffa8 & 0x8000) >> 15) == 0 &&
                            PM_SetLCDPower(1) != 0) {
                     scene->lcdOff = 0;
-                    SetBrightnessAndSyncMain(func_02029f5c());
-                    SetSecondaryBrightness(func_02029f6c());
+                    SetBrightnessAndSyncMain(GetMainBrightnessSetting());
+                    SetSecondaryBrightness(GetSubBrightnessSetting());
                     GX_DispOn();
                 }
             } while (TickSubtitleTimer() == 0);

@@ -1,3 +1,4 @@
+#define func_01ff80d4 GetVBlankCounter
 #define G2_GetBG3CharPtr_020071b0 G2_GetBG3CharPtr
 #define G2_GetBG3ScrPtr_02006f80 G2_GetBG3ScrPtr
 #define G3X_SetToonTable_02006bf0 G3X_SetToonTable

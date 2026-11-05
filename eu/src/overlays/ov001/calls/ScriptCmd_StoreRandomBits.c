@@ -1,5 +1,5 @@
 #define ScriptCmd_StoreRandomBits_02065c20 ScriptCmd_StoreRandomBits
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
 #define WriteSessionPackedBits_0206459c WriteSessionPackedBits
-#define func_0202a9d0 func_0202a9e4
+#define func_0202a9d0 NextSharedRandom16Scaled
 #include "src/ov001/shared_engine/ScriptCmd_StoreRandomBits_02065c20.c"

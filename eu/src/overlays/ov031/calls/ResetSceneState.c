@@ -2,7 +2,7 @@
 #define FX_Div_01ff9c84 FX_Div
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField
 #define ResetSceneState_020bbf34 ResetSceneState
-#define func_0204d980 func_0204d994
+#define func_0204d980 StopSequencePlayersFrom2
 #define func_ov001_0206a7c0 BeginScreenFadeOut
 #define g_activeState_020bc800 data_ov031_020bc820
 #include "src/ov031/state_machine/ResetSceneState_020bbf34.c"

@@ -1,5 +1,5 @@
 #define GetDisplaySetting func_02029f7c
-#define GetSecondaryBrightness func_02029f6c
+#define GetSecondaryBrightness GetSubBrightnessSetting
 #define defaultDisplaySessionSettings data_ov026_020b5ab0
 #define func_020072b4 GXS_LoadBGPltt
 #define func_ov027_020b8bd4 InitializeResourceContainer

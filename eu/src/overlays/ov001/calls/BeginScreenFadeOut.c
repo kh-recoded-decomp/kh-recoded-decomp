@@ -18,8 +18,8 @@ typedef struct Session {
 extern ScreenState *data_ov001_020a04a0;
 extern Session *data_ov001_020a0480;
 extern void SetScreenModeFlags(int enable, int mode);
-extern int func_02029f5c(void);
-extern int func_02029f6c(void);
+extern int GetMainBrightnessSetting(void);
+extern int GetSubBrightnessSetting(void);
 
 void BeginScreenFadeOut(int mode)
 {
@@ -30,8 +30,8 @@ void BeginScreenFadeOut(int mode)
     if (mode == 3) {
         return;
     }
-    screen->mainBrightness = func_02029f5c() << 12;
-    screen->subBrightness = func_02029f6c() << 12;
+    screen->mainBrightness = GetMainBrightnessSetting() << 12;
+    screen->subBrightness = GetSubBrightnessSetting() << 12;
     if (!(screen->flags & 0x40)) {
         screen->unk_18 = 0x1000;
         screen->unk_04 = 0x6000;

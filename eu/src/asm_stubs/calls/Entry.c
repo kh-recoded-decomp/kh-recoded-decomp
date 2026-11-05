@@ -1,3 +1,4 @@
+#define func_02000a78 ConfigureArm9MemorySystem
 #define func_01ff8158 OS_IrqHandler
 #define Entry_02000800 Entry
 #define func_020009fc INITi_DoAutoload

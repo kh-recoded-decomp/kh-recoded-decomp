@@ -1,6 +1,6 @@
 #define LoadMenuModelResources_020bafbc LoadMenuModelResources
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
-#define func_0202c48c func_0202c4a0
+#define func_0202c48c LoadFileAllocFromHeapTail
 #define func_0202e9ec InitSharedRecordThenTexture
 #define func_0202ed3c InitSharedRecordAndDispatchAlt
 #define g_menuAnimName_020bb728 sOv037_CntSoanmPZ_020bb748

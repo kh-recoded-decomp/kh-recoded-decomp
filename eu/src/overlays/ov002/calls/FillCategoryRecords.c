@@ -1,6 +1,6 @@
 #define FillCategoryRecords_02069e8c FillCategoryRecords
 #define PickRandomAvailableRecord_0206a888 PickRandomAvailableRecord
-#define func_0202a9d0 func_0202a9e4
+#define func_0202a9d0 NextSharedRandom16Scaled
 #define func_ov002_020687a4 ApplyRecordsToPackedFields
 #define func_ov002_0206aaa0 RankPreferredItems
 #include "src/ov002/unclassified_helpers/FillCategoryRecords_02069e8c.c"

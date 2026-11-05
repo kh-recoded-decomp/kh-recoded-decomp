@@ -8,6 +8,6 @@
 #define func_0200344c DC_FlushRange
 #define func_02007250 GX_LoadBGPltt
 #define func_0202b554 GetBgDataFromArchive
-#define func_0202c48c func_0202c4a0
+#define func_0202c48c LoadFileAllocFromHeapTail
 #define func_ov001_020711ec MakePrimaryVramKey
 #include "src/ov001/shared_engine/LoadSlotIconGraphics_0207001c.c"

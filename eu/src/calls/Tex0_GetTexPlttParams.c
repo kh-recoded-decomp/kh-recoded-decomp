@@ -1,5 +1,5 @@
 #define FindTextureResourceBlock_0201ac70 NNS_G3dGetTex
 #define Tex0_GetTexPlttParams_0202fd00 Tex0_GetTexPlttParams
-#define func_0202c690 func_0202c6a4
+#define func_0202c690 SetFileLoaderTextureUploadQueueMode
 #define func_0202d098 ValidateResourceTagAndDispatch
 #include "src/arm9/library_nns_g3d/Tex0_GetTexPlttParams_0202fd00.c"

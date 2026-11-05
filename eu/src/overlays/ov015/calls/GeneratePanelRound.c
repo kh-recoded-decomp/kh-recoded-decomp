@@ -4,5 +4,5 @@
 #define PickWeightedEntry_020788a8 PickWeightedEntry
 #define data_ov015_0207a310 gWirelessThemeData
 #define data_ov015_0207a40c gWirelessSlotStyles
-#define func_0202a9d0 func_0202a9e4
+#define func_0202a9d0 NextSharedRandom16Scaled
 #include "src/ov015/panel_state/GeneratePanelRound_0207533c.c"

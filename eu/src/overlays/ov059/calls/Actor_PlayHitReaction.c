@@ -2,5 +2,5 @@
 #define FixedPointAtan2_020062bc FX_Atan2Idx
 #define GetLinkedAngleOffset_020cd0e4 GetLinkedAngleOffset_020cd104
 #define VEC_Normalize_01ff9f88 VEC_Normalize
-#define func_0202a9d0 func_0202a9e4
+#define func_0202a9d0 NextSharedRandom16Scaled
 #include "src/ov059/unclassified_helpers/Actor_PlayHitReaction_020c9144.c"

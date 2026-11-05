@@ -11,10 +11,10 @@
 #define UpdatePanelMinigame_020766d0 UpdatePanelMinigame
 #define data_0205356c gSinFx12Table
 #define data_ov015_0207e884 gWirelessModeDataTables
-#define func_0202a9d0 func_0202a9e4
+#define func_0202a9d0 NextSharedRandom16Scaled
 #define func_0202e060 SPrintfUnbounded
 #define func_0204f0b4 PXI_Init_0204f0c8
-#define func_0204f0c0 func_0204f0d4
+#define func_0204f0c0 UnlinkActiveIndexedRecord
 #define func_0204f160 IndexedRecord_GetPair
 #define func_0204f178 SetIndexedRecordPriority
 #define func_0204f24c SetSlotAnimSequence
