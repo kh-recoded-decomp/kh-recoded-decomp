@@ -1,4 +1,4 @@
-#define MoviePlayer_GetFrameCount_020a8918 GetSubtitleStreamFrame
+#define MoviePlayer_GetFrameCount_020a8918 GetMoviePresentedFrameCount
 #define MovieScene_UpdateFade_02063a20 MovieScene_UpdateFade
 #define SetMasterBrightness_02006748 GXx_SetMasterBrightness_
 #include "src/ov003/video_playback/MovieScene_UpdateFade_02063a20.c"

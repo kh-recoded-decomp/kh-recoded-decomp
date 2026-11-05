@@ -1,0 +1,3 @@
+#define func_020a9314 DecodeMovieFrameIfPresent
+#define func_ov022_020a807c DecodeMovieFrameAndAdvanceCounter
+#include "src/ov022/reviewed_helpers/func_ov022_020a807c.c"

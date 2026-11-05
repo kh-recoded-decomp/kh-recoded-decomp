@@ -9,9 +9,9 @@
 #define OS_CreateAlarm_02004204 OS_CreateAlarm
 #define OS_WaitVBlankIntr_020049d0 OS_WaitVBlankIntr
 #define OpenMoviePlayback_020a8338 OpenMoviePlayback
-#define ReleaseIfSet_020a92a8 func_ov022_020a92c8
-#define ReleaseIfSet_020a92c0 func_ov022_020a92e0
-#define ReleaseIfSet_020a92d8 func_ov022_020a92f8
+#define ReleaseIfSet_020a92a8 GetMovieAudioSampleRateIfPresent
+#define ReleaseIfSet_020a92c0 GetMovieFrameTimeBaseIfPresent
+#define ReleaseIfSet_020a92d8 GetMovieAudioBlockSamplesIfPresent
 #define SetupMovieDecoderArenas_020a8264 SetupMovieDecoderArenas
 #define createMovieStream_020a91a0 createMovieStream
 #define data_ov022_020b7d10 sOv022_MobiclipIntr_020b7d30
@@ -21,8 +21,8 @@
 #define func_01ff8830 MI_CpuFill8
 #define func_020033b4 DC_StoreAll
 #define func_0200b394 FS_InitFile
-#define func_ov022_020a807c func_ov022_020a809c
+#define func_ov022_020a807c DecodeMovieFrameAndAdvanceCounter
 #define func_ov022_020a8154 SwapCaptionPagesOnVBlank
 #define func_ov022_020a82f4 FreeMovieFileBuffer
-#define func_ov022_020a92f0 func_ov022_020a9310
+#define func_ov022_020a92f0 QueueMovieFrameIfPresent
 #include "src/ov022/video_playback/OpenMoviePlayback_020a8338.c"

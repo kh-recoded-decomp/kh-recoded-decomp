@@ -1,4 +1,4 @@
-#define GetMovieCacheTableArenaCapacity_020aa8ac func_ov022_020aa8cc
+#define GetMovieCacheTableArenaCapacity_020aa8ac GetMovieLookupTableArenaCapacity
 #define GetTableAEntry_0200367c OS_GetArenaHi
 #define GetTableBEntry_02003690 OS_GetArenaLo
 #define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap

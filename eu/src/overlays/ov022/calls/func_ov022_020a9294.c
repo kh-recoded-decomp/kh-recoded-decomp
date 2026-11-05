@@ -1,3 +1,0 @@
-#define func_ov022_020a9274 func_ov022_020a9294
-#define releaseMovieDecodeContext_020aa124 func_ov022_020aa144
-#include "src/ov022/video_playback/func_ov022_020a9274.c"

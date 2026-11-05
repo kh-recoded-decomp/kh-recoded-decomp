@@ -1,0 +1,3 @@
+#define Ov024_GetWord20 GetMoviePendingAudioBlocks
+#define ReleaseIfSet_020a9380 GetMoviePendingAudioBlocksIfPresent
+#include "src/ov022/shared_engine/ReleaseIfSet_020a9380.c"

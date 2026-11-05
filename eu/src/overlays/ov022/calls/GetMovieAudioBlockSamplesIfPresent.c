@@ -1,0 +1,3 @@
+#define Ov024_GetWord20 GetMovieAudioBlockSamples
+#define ReleaseIfSet_020a92d8 GetMovieAudioBlockSamplesIfPresent
+#include "src/ov022/shared_engine/ReleaseIfSet_020a92d8.c"

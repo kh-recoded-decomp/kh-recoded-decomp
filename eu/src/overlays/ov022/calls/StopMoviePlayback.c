@@ -9,6 +9,6 @@
 #define data_ov022_020b7d94 data_ov022_020b7db4
 #define func_0200b5b0 FS_CloseFile
 #define func_ov022_020a82f4 FreeMovieFileBuffer
-#define func_ov022_020a9288 func_ov022_020a92a8
+#define func_ov022_020a9288 DeleteMovieDecoder
 #define runMovieSlotState_020a8730 runMovieSlotState
 #include "src/ov022/video_playback/StopMoviePlayback_020a8674.c"

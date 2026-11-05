@@ -1,3 +1,3 @@
-#define func_ov022_020a7a0c func_ov022_020a7a2c
+#define func_ov022_020a7a0c MovieFree
 #define releaseMovieDecodeContext_020a99dc releaseMovieDecodeContext
 #include "src/ov022/video_playback/releaseMovieDecodeContext_020a99dc.cpp"

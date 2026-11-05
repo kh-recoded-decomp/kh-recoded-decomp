@@ -1,6 +1,6 @@
 #define InitMovieOverlayState_020a722c InitMovieOverlayState
 #define NNSi_FndGetCurrentRootHeap_0202a764 GetRunningTaskWork
-#define PXI_Init_020a8a44 func_ov022_020a8a64
+#define PXI_Init_020a8a44 ReleaseMovieCaptionGlyphCache
 #define StoreGlobalArrayEntry_02025668 StoreGlobalArrayEntry
 #define data_020b7be0 data_ov022_020b7c00
 #define data_020b7d80 data_ov022_020b7da0

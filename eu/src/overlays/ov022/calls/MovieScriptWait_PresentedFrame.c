@@ -1,0 +1,4 @@
+#define func_020a73d8 IsCurrentMovieScenePlaying
+#define func_020a8918 GetMoviePresentedFrameCount
+#define func_ov022_020a7990 MovieScriptWait_PresentedFrame
+#include "src/ov022/reviewed_helpers/func_ov022_020a7990.c"

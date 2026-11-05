@@ -1,0 +1,2 @@
+#define movieFrameBufferStatus_020a9b54 GetMovieAudioBlockSamples
+#include "src/ov022/video_playback/movieFrameBufferStatus_020a9b54.c"

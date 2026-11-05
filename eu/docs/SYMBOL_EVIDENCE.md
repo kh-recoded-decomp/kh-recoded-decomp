@@ -516,3 +516,13 @@ records distinct work owners, borrowed buffers, low-bit rather than boolean
 flags, pointer versus status returns, source-to-VRAM uploads, numeric page
 transitions and signed cursor boundaries. Unsupported CARD/day/tint comments
 are replaced with the observed operations.
+
+## Movie scene, decoder, reader and captions
+
+Fifty entrypoints now distinguish movie scene state, presented/decode counters,
+caption transfer, format/audio quantities and reader/decoder allocation helpers.
+[MOVIE_CAPTION_DECODER_CONTRACTS.md](MOVIE_CAPTION_DECODER_CONTRACTS.md)
+records script control, byte-format parsing, strided render output, asynchronous
+I/O, caption copy/cache ownership and code-backup restoration. Five existing
+descriptive names are corrected; inherited native ABI limits remain explicit.
+The subtitle document now identifies the presented-page timer correctly.

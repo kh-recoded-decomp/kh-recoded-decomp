@@ -34,7 +34,7 @@ extern u16 data_02060500;
 
 extern MovieState *GetRunningTaskWork(void);
 extern BOOL TickSubtitleTimer(void);
-extern BOOL func_ov022_020a7414(void);
+extern BOOL IsMovieFadeOutComplete(void);
 extern void RequestScriptSkipIfTargetSet(MovieLoader *loader);
 extern u64 OS_GetTick(void);
 extern void Pad_Sample(void);
@@ -55,7 +55,7 @@ extern void StopSoundStreamAtIndex(int index, int fadeFrames);
 extern void ResetScriptSkipState(MovieLoader *loader);
 extern void SetPendingFieldValue(s32 arg);
 extern void UpdateMovieFadeOut(MovieState *state);
-extern void func_ov022_020a77b0(void);
+extern void MovieSceneStateNoOp(void);
 
 #define LID_STATUS (*(vu16 *)0x02ffffa8)
 
@@ -70,7 +70,7 @@ void *RunMoviePlaybackState(void)
     if (!(state->flags & 2) && state->phase == 2) {
         while (!TickSubtitleTimer()) {
             if (state->flags & 4) {
-                if (func_ov022_020a7414()) {
+                if (IsMovieFadeOutComplete()) {
                     if (state->flags & 1) {
                         RequestScriptSkipIfTargetSet(&state->loader);
                     }
@@ -128,7 +128,7 @@ void *RunMoviePlaybackState(void)
         }
 
         if (state->flags & 4) {
-            while (!func_ov022_020a7414()) {
+            while (!IsMovieFadeOutComplete()) {
                 OS_WaitVBlankIntr();
             }
             if (state->flags & 1) {
@@ -167,5 +167,5 @@ finish:
     UpdateMovieFadeOut(state);
     SetBrightnessAndSyncMain(-16);
     SetSecondaryBrightness(-16);
-    return func_ov022_020a77b0;
+    return MovieSceneStateNoOp;
 }

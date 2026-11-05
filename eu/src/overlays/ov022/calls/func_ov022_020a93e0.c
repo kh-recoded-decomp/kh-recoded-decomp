@@ -1,3 +1,0 @@
-#define func_ov022_020a93c0 func_ov022_020a93e0
-#define releaseMovieDecodeContext_020253e4 StackAlloc_FreeIfSetB_020253f8
-#include "src/ov022/video_playback/func_ov022_020a93c0.c"

@@ -1,2 +1,0 @@
-#define IsMovieStreamReady_020a90a8 IsMovieStreamReady_020a90c8
-#include "src/ov022/video_playback/IsMovieStreamReady_020a90a8.c"

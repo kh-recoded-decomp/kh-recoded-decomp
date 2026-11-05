@@ -1,5 +1,5 @@
 #define advanceMovieStreamWindow_020a8a78 advanceMovieStreamWindow_020a8a98
 #define readSubtitleStreamStep_020019f4 GetNestedModeByte
 #define requestSubtitleStreamData_02001b20 TextWindow_ScrollUp
-#define updateMovieStreamLeadTime_020a8efc updateMovieStreamLeadTime_020a8f1c
+#define updateMovieStreamLeadTime_020a8efc UpdateMovieSubtitleLineAlignment
 #include "src/ov022/video_playback/advanceMovieStreamWindow_020a8a78.c"

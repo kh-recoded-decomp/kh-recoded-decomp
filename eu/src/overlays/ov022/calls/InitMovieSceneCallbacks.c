@@ -12,19 +12,19 @@ typedef struct MovieSceneCallbacks {
     int state;
 } MovieSceneCallbacks;
 
-extern void func_ov022_020a7810(int arg);
-extern void func_ov022_020a7834(void);
-extern void func_ov022_020a7854(void);
-extern void func_ov022_020a7878(void);
-extern BOOL func_ov022_020a787c(void);
+extern void CreateMovieSceneTask(int arg);
+extern void DestroyMovieSceneTaskIfSet(void);
+extern void RequestMovieSceneStart(void);
+extern void MovieSceneUpdateNoOp(void);
+extern BOOL IsMovieSceneFinished(void);
 
 void InitMovieSceneCallbacks(MovieSceneCallbacks *callbacks)
 {
-    callbacks->open = func_ov022_020a7810;
-    callbacks->close = func_ov022_020a7834;
-    callbacks->start = func_ov022_020a7854;
-    callbacks->update = func_ov022_020a7878;
-    callbacks->isDone = func_ov022_020a787c;
+    callbacks->open = CreateMovieSceneTask;
+    callbacks->close = DestroyMovieSceneTaskIfSet;
+    callbacks->start = RequestMovieSceneStart;
+    callbacks->update = MovieSceneUpdateNoOp;
+    callbacks->isDone = IsMovieSceneFinished;
     callbacks->userData = NULL;
     callbacks->state = 0;
 }

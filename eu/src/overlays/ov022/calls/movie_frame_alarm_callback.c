@@ -1,5 +1,5 @@
 #define func_02003fd4 OS_GetTick
-#define func_020a9338 func_ov022_020a9358
-#define func_020a935c func_ov022_020a937c
+#define func_020a9338 RenderMovieFrameIfPresent
+#define func_020a935c DropMovieFrameIfPresent
 #define movie_frame_alarm_callback_020a7f3c movie_frame_alarm_callback
 #include "src/ov022/movie/movie_frame_alarm_callback_020a7f3c.c"

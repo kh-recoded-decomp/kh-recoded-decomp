@@ -19,9 +19,9 @@ The frame-wait rule is ordered:
 
 1. If neither movie state word is `2`, return `1` immediately.
 2. While either state is `2`, threshold `0` returns `0`.
-3. Otherwise return whether the current subtitle frame is at least the threshold.
+3. Otherwise return whether the current presented-frame count is at least the threshold.
 
-`MovieScene_IsAnyStateTwo` reads the current task's scene state at `+0x8b0` and `+0x8b4`; it has no logical input. `GetSubtitleStreamFrame` returns the subtitle record's frame at `+0x48`, or `-1` if that record is absent. Negative thresholds and the missing-record sentinel therefore retain their ordinary signed-comparison behavior.
+`MovieScene_IsAnyStateTwo` reads the current task's scene state at `+0x8b0` and `+0x8b4`; it has no logical input. `GetMoviePresentedFrameCount` returns the playback timer's presented-page counter at `+0x48`, or `-1` if that timer is absent. The inherited private `SubtitleStream` label does not establish a separate subtitle-timing owner; the VBlank framebuffer-swap writer establishes this counter's role. Negative thresholds and the missing-record sentinel therefore retain their ordinary signed-comparison behavior.
 
 The command's `ScriptCmd_SetElemField` call is a real side effect: it writes the threshold at script object `+ currentIndex * 0x70 + 0x20`. The original assembly performs that call before the state check. Its incidental register result is not an input required by `MovieScene_IsAnyStateTwo`.
 
@@ -168,3 +168,8 @@ resolved relocation targets/types and addends. All 108 linked module hashes
 must remain identical. The text encoding, cursor, glyph draw order, borrowed
 buffer and deferred-resource contracts above are established separately from
 the byte comparison.
+
+The fuller [movie contracts](MOVIE_CAPTION_DECODER_CONTRACTS.md) distinguish
+the timer's presented/decode/consumed counters and reader/decoder/caption owners.
+Overlay003's two state words and stop-request byte remain distinct from the
+overlay022 scene's playback phase and pending-caption-transfer byte.

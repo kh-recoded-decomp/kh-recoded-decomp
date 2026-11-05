@@ -1,0 +1,3 @@
+#define Ov012_IsGlobalByte8be1Clear IsMovieCaptionTransferFlagClear
+#define thumbStep_020a79d4 MovieScriptWait_CaptionTransferFlagClear
+#include "src/ov022/shared_engine/thumbStep_020a79d4.c"

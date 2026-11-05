@@ -1,4 +1,4 @@
-#define func_ov022_020a79fc func_ov022_020a7a1c
+#define func_ov022_020a79fc MovieAllocAligned32
 #define func_01ff8740 MIi_CpuClearFast
 #define getCachedMovieDecoderCode_020aa8fc GetCachedMovieDecoderCode
 #define GetCachedMovieDecodeTable_020aa978 GetCachedMovieDecodeTable

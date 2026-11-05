@@ -5,8 +5,8 @@
 #define func_020087c0 SND_FlushCommand
 #define func_ov024_020840a4 startStereoPcmStream
 #define func_ov024_0208421c movie_frame_alarm_callback
-#define func_ov024_0208435c func_ov022_020a809c
+#define func_ov024_0208435c DecodeMovieFrameAndAdvanceCounter
 #define func_ov024_0208437c flushPendingStereoAudioBlocks
-#define func_ov024_02085014 func_ov022_020a9310
+#define func_ov024_02085014 QueueMovieFrameIfPresent
 #define runMovieSlotState_020a8730 runMovieSlotState
 #include "src/ov022/video_playback/runMovieSlotState_020a8730.c"

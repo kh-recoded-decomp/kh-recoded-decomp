@@ -3,8 +3,8 @@
 #define StoreGlobalArrayEntry_02025668 StoreGlobalArrayEntry
 #define data_ov022_020b7d80 data_ov022_020b7da0
 #define func_0202b3b8 CallIndexedHandler
-#define func_ov022_020a6f24 func_ov022_020a6f44
+#define func_ov022_020a6f24 UpdateMovieTransfersFadeAndSound
 #define func_ov022_020a8338 OpenMoviePlayback
 #define func_ov022_020a8a04 openVideoStreamFromHeader_020a8a24
-#define func_ov022_020a8a70 func_ov022_020a8a90
+#define func_ov022_020a8a70 SetMovieSubtitleAlignment
 #include "src/ov022/video_playback/StartMovieCaptionScreen_020a7288.c"

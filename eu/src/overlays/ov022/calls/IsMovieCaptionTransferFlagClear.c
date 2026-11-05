@@ -1,0 +1,3 @@
+#define IsMoviePlaybackIdle_020a78fc IsMovieCaptionTransferFlagClear
+#define data_ov022_020b7d80 data_ov022_020b7da0
+#include "src/ov022/video_playback/IsMoviePlaybackIdle_020a78fc.c"

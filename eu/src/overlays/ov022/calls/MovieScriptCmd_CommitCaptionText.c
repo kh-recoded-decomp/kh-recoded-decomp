@@ -1,0 +1,3 @@
+#define MsgQueue_GetHeap_020a79c8 MovieScriptCmd_CommitCaptionText
+#define NNSi_FndGetCurrentRootHeap CommitMovieStateText
+#include "src/ov022/shared_engine/MsgQueue_GetHeap_020a79c8.c"

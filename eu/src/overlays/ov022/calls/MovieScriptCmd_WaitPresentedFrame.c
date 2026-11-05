@@ -1,0 +1,6 @@
+#define func_02025de4 ScriptVm_ReadOperandInt
+#define func_02025e18 ScriptCmd_SetElemField
+#define func_020a73d8 IsCurrentMovieScenePlaying
+#define func_020a8918 GetMoviePresentedFrameCount
+#define func_ov022_020a7958 MovieScriptCmd_WaitPresentedFrame
+#include "src/ov022/reviewed_helpers/func_ov022_020a7958.c"

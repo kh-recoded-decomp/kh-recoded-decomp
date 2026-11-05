@@ -1,0 +1,4 @@
+#define Ov002_EnterPhase SetMovieStateText
+#define ScriptCmd_EnterPhase_020a79b8 MovieScriptCmd_SetCaptionText
+#define ScriptVm_ReadOperandInt ByteCode_ResolveOperand
+#include "src/ov022/shared_engine/ScriptCmd_EnterPhase_020a79b8.c"

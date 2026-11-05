@@ -1,0 +1,3 @@
+#define func_ov022_020a9274 DeleteMovieFileReader
+#define releaseMovieDecodeContext_020aa124 FreeMovieFileReader
+#include "src/ov022/video_playback/func_ov022_020a9274.c"

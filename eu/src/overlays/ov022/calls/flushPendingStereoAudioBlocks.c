@@ -1,4 +1,4 @@
 #define flushPendingStereoAudioBlocks_020a809c flushPendingStereoAudioBlocks
-#define func_020a9380 func_ov022_020a93a0
+#define func_020a9380 GetMoviePendingAudioBlocksIfPresent
 #define func_020a9398 processMovieStreamChunkIfContextPresent
 #include "src/ov022/audio/flushPendingStereoAudioBlocks_020a809c.c"

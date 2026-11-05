@@ -8,7 +8,7 @@ src/overlays/ov022/calls/UpdateMovieFadeOut.c:
     complete
     .text       start:0x020a6ee0 end:0x020a6f44
 
-src/overlays/ov022/calls/func_ov022_020a6f44.c:
+src/overlays/ov022/calls/UpdateMovieTransfersFadeAndSound.c:
     complete
     .text       start:0x020a6f44 end:0x020a6f88
 
@@ -32,11 +32,11 @@ src/overlays/ov022/calls/StartSubtitlePlayback.c:
     complete
     .text       start:0x020a73d0 end:0x020a73f8
 
-src/overlays/ov022/calls/func_ov022_020a73f8.c:
+src/overlays/ov022/calls/IsCurrentMovieScenePlaying.c:
     complete
     .text       start:0x020a73f8 end:0x020a7414
 
-src/overlays/ov022/calls/func_ov022_020a7414.c:
+src/overlays/ov022/calls/IsMovieFadeOutComplete.c:
     complete
     .text       start:0x020a7414 end:0x020a7434
 
@@ -44,31 +44,31 @@ src/overlays/ov022/calls/RunMoviePlaybackState.c:
     complete
     .text       start:0x020a7434 end:0x020a77b0
 
-src/overlays/ov022/auto/func_ov022_020a77b0.c:
+src/overlays/ov022/auto/MovieSceneStateNoOp.c:
     complete
     .text       start:0x020a77b0 end:0x020a77b8
 
-src/overlays/ov022/calls/func_ov022_020a77b8.c:
+src/overlays/ov022/calls/SetupMovieDisplayAtFullFade.c:
     complete
     .text       start:0x020a77b8 end:0x020a7810
 
-src/overlays/ov022/calls/func_ov022_020a7810.c:
+src/overlays/ov022/calls/CreateMovieSceneTask.c:
     complete
     .text       start:0x020a7810 end:0x020a7834
 
-src/overlays/ov022/calls/func_ov022_020a7834.c:
+src/overlays/ov022/calls/DestroyMovieSceneTaskIfSet.c:
     complete
     .text       start:0x020a7834 end:0x020a7854
 
-src/overlays/ov022/calls/func_ov022_020a7854.c:
+src/overlays/ov022/calls/RequestMovieSceneStart.c:
     complete
     .text       start:0x020a7854 end:0x020a7878
 
-src/overlays/ov022/auto/func_ov022_020a7878.c:
+src/overlays/ov022/auto/MovieSceneUpdateNoOp.c:
     complete
     .text       start:0x020a7878 end:0x020a787c
 
-src/overlays/ov022/calls/func_ov022_020a787c.c:
+src/overlays/ov022/calls/IsMovieSceneFinished.c:
     complete
     .text       start:0x020a787c end:0x020a789c
 
@@ -80,7 +80,7 @@ src/overlays/ov022/calls/CommitMovieStateText.c:
     complete
     .text       start:0x020a78e8 end:0x020a791c
 
-src/overlays/ov022/calls/IsMoviePlaybackIdle.c:
+src/overlays/ov022/calls/IsMovieCaptionTransferFlagClear.c:
     complete
     .text       start:0x020a791c end:0x020a793c
 
@@ -88,7 +88,7 @@ src/overlays/ov022/calls/SetMovieStateText.c:
     complete
     .text       start:0x020a793c end:0x020a795c
 
-src/overlays/ov022/calls/func_ov022_020a795c.c:
+src/overlays/ov022/calls/MovieScriptCmd_OpenCaptionScreen.c:
     complete
     .text       start:0x020a795c end:0x020a796a
 
@@ -96,23 +96,23 @@ src/overlays/ov022/calls/StartSubtitlePlaybackAndReturnState6.c:
     complete
     .text       start:0x020a796c end:0x020a7976
 
-src/overlays/ov022/calls/func_ov022_020a7978.c:
+src/overlays/ov022/calls/MovieScriptCmd_WaitPresentedFrame.c:
     complete
     .text       start:0x020a7978 end:0x020a79ae
 
-src/overlays/ov022/calls/func_ov022_020a79b0.c:
+src/overlays/ov022/calls/MovieScriptWait_PresentedFrame.c:
     complete
     .text       start:0x020a79b0 end:0x020a79d8
 
-src/overlays/ov022/calls/func_ov022_020a79d8.c:
+src/overlays/ov022/calls/MovieScriptCmd_SetCaptionText.c:
     complete
     .text       start:0x020a79d8 end:0x020a79e6
 
-src/overlays/ov022/calls/func_ov022_020a79e8.c:
+src/overlays/ov022/calls/MovieScriptCmd_CommitCaptionText.c:
     complete
     .text       start:0x020a79e8 end:0x020a79f2
 
-src/overlays/ov022/calls/func_ov022_020a79f4.c:
+src/overlays/ov022/calls/MovieScriptWait_CaptionTransferFlagClear.c:
     complete
     .text       start:0x020a79f4 end:0x020a7a06
 
@@ -120,11 +120,11 @@ src/overlays/ov022/calls/CmdPrepareStream_020a7a08.c:
     complete
     .text       start:0x020a7a08 end:0x020a7a1a
 
-src/overlays/ov022/calls/func_ov022_020a7a1c.c:
+src/overlays/ov022/calls/MovieAllocAligned32.c:
     complete
     .text       start:0x020a7a1c end:0x020a7a2c
 
-src/overlays/ov022/calls/func_ov022_020a7a2c.c:
+src/overlays/ov022/calls/MovieFree.c:
     complete
     .text       start:0x020a7a2c end:0x020a7a38
 
@@ -164,7 +164,7 @@ src/overlays/ov022/calls/movie_frame_alarm_callback.c:
     complete
     .text       start:0x020a7f5c end:0x020a809c
 
-src/overlays/ov022/calls/func_ov022_020a809c.c:
+src/overlays/ov022/calls/DecodeMovieFrameAndAdvanceCounter.c:
     complete
     .text       start:0x020a809c end:0x020a80bc
 
@@ -208,7 +208,7 @@ src/overlays/ov022/calls/ActivateSubtitleStream.c:
     complete
     .text       start:0x020a8910 end:0x020a8938
 
-src/overlays/ov022/calls/GetSubtitleStreamFrame.c:
+src/overlays/ov022/calls/GetMoviePresentedFrameCount.c:
     complete
     .text       start:0x020a8938 end:0x020a8954
 
@@ -220,7 +220,7 @@ src/overlays/ov022/calls/openVideoStreamFromHeader_020a8a24.c:
     complete
     .text       start:0x020a8a24 end:0x020a8a64
 
-src/overlays/ov022/calls/func_ov022_020a8a64.c:
+src/overlays/ov022/calls/ReleaseMovieCaptionGlyphCache.c:
     complete
     .text       start:0x020a8a64 end:0x020a8a70
 
@@ -228,7 +228,7 @@ src/overlays/ov022/calls/ResetSubtitleLine.c:
     complete
     .text       start:0x020a8a70 end:0x020a8a90
 
-src/overlays/ov022/auto/func_ov022_020a8a90.c:
+src/overlays/ov022/auto/SetMovieSubtitleAlignment.c:
     complete
     .text       start:0x020a8a90 end:0x020a8a98
 
@@ -248,11 +248,11 @@ src/overlays/ov022/calls/MeasureMovieSubtitleWidth_020a8d00.c:
     complete
     .text       start:0x020a8d00 end:0x020a8ef8
 
-src/overlays/ov022/calls/func_ov022_020a8ef8.c:
+src/overlays/ov022/calls/MeasureSubtitleLinesMaxAndResetCursor.c:
     complete
     .text       start:0x020a8ef8 end:0x020a8f1c
 
-src/overlays/ov022/calls/updateMovieStreamLeadTime_020a8f1c.c:
+src/overlays/ov022/calls/UpdateMovieSubtitleLineAlignment.c:
     complete
     .text       start:0x020a8f1c end:0x020a8fb4
 
@@ -260,11 +260,11 @@ src/overlays/ov022/calls/DrawNextSubtitleGlyph.c:
     complete
     .text       start:0x020a8fb4 end:0x020a90c8
 
-src/overlays/ov022/calls/IsMovieStreamReady_020a90c8.c:
+src/overlays/ov022/calls/HasMovieSubtitleCodeUnit.c:
     complete
     .text       start:0x020a90c8 end:0x020a9118
 
-src/overlays/ov022/calls/func_ov022_020a9118.c:
+src/overlays/ov022/calls/DrawMovieSubtitleText.c:
     complete
     .text       start:0x020a9118 end:0x020a916c
 
@@ -280,43 +280,43 @@ src/overlays/ov022/calls/createMovieStream.cpp:
     complete
     .text       start:0x020a91c0 end:0x020a9294
 
-src/overlays/ov022/calls/func_ov022_020a9294.c:
+src/overlays/ov022/calls/DeleteMovieFileReader.c:
     complete
     .text       start:0x020a9294 end:0x020a92a8
 
-src/overlays/ov022/calls/func_ov022_020a92a8.c:
+src/overlays/ov022/calls/DeleteMovieDecoder.c:
     complete
     .text       start:0x020a92a8 end:0x020a92c8
 
-src/overlays/ov022/calls/func_ov022_020a92c8.c:
+src/overlays/ov022/calls/GetMovieAudioSampleRateIfPresent.c:
     complete
     .text       start:0x020a92c8 end:0x020a92e0
 
-src/overlays/ov022/calls/func_ov022_020a92e0.c:
+src/overlays/ov022/calls/GetMovieFrameTimeBaseIfPresent.c:
     complete
     .text       start:0x020a92e0 end:0x020a92f8
 
-src/overlays/ov022/calls/func_ov022_020a92f8.c:
+src/overlays/ov022/calls/GetMovieAudioBlockSamplesIfPresent.c:
     complete
     .text       start:0x020a92f8 end:0x020a9310
 
-src/overlays/ov022/calls/func_ov022_020a9310.c:
+src/overlays/ov022/calls/QueueMovieFrameIfPresent.c:
     complete
     .text       start:0x020a9310 end:0x020a9334
 
-src/overlays/ov022/calls/func_ov022_020a9334.c:
+src/overlays/ov022/calls/DecodeMovieFrameIfPresent.c:
     complete
     .text       start:0x020a9334 end:0x020a9358
 
-src/overlays/ov022/calls/func_ov022_020a9358.c:
+src/overlays/ov022/calls/RenderMovieFrameIfPresent.c:
     complete
     .text       start:0x020a9358 end:0x020a937c
 
-src/overlays/ov022/calls/func_ov022_020a937c.c:
+src/overlays/ov022/calls/DropMovieFrameIfPresent.c:
     complete
     .text       start:0x020a937c end:0x020a93a0
 
-src/overlays/ov022/calls/func_ov022_020a93a0.c:
+src/overlays/ov022/calls/GetMoviePendingAudioBlocksIfPresent.c:
     complete
     .text       start:0x020a93a0 end:0x020a93b8
 
@@ -324,19 +324,19 @@ src/overlays/ov022/calls/processMovieStreamChunkIfContextPresent.c:
     complete
     .text       start:0x020a93b8 end:0x020a93dc
 
-src/overlays/ov022/auto/func_ov022_020a93dc.c:
+src/overlays/ov022/auto/MovieBaseReaderDestructorNoOp.c:
     complete
     .text       start:0x020a93dc end:0x020a93e0
 
-src/overlays/ov022/calls/func_ov022_020a93e0.c:
+src/overlays/ov022/calls/DeleteMovieBaseReader.c:
     complete
     .text       start:0x020a93e0 end:0x020a93f4
 
-src/overlays/ov022/calls/func_ov022_020a93f4.c:
+src/overlays/ov022/calls/AllocMovieDecoderAligned32.c:
     complete
     .text       start:0x020a93f4 end:0x020a9400
 
-src/overlays/ov022/calls/func_ov022_020a9400.c:
+src/overlays/ov022/calls/FreeMovieDecoder.c:
     complete
     .text       start:0x020a9400 end:0x020a940c
 
@@ -356,15 +356,15 @@ src/overlays/ov022/calls/releaseMovieDecodeContext.cpp:
     complete
     .text       start:0x020a99fc end:0x020a9b64
 
-src/overlays/ov022/auto/func_ov022_020a9b64.c:
+src/overlays/ov022/auto/GetMovieAudioSampleRate.c:
     complete
     .text       start:0x020a9b64 end:0x020a9b6c
 
-src/overlays/ov022/auto/func_ov022_020a9b6c.c:
+src/overlays/ov022/auto/GetMovieFrameTimeBase.c:
     complete
     .text       start:0x020a9b6c end:0x020a9b74
 
-src/overlays/ov022/auto/movieFrameBufferStatus.c:
+src/overlays/ov022/auto/GetMovieAudioBlockSamples.c:
     complete
     .text       start:0x020a9b74 end:0x020a9b98
 
@@ -384,7 +384,7 @@ src/overlays/ov022/auto/DropDecodedMovieFrame.c:
     complete
     .text       start:0x020a9f38 end:0x020a9f78
 
-src/overlays/ov022/auto/func_ov022_020a9f78.c:
+src/overlays/ov022/auto/GetMoviePendingAudioBlocks.c:
     complete
     .text       start:0x020a9f78 end:0x020a9f88
 
@@ -392,11 +392,11 @@ src/overlays/ov022/calls/processMovieStreamChunk.c:
     complete
     .text       start:0x020a9f88 end:0x020aa138
 
-src/overlays/ov022/calls/func_ov022_020aa138.c:
+src/overlays/ov022/calls/AllocMovieFileReaderAligned32.c:
     complete
     .text       start:0x020aa138 end:0x020aa144
 
-src/overlays/ov022/calls/func_ov022_020aa144.c:
+src/overlays/ov022/calls/FreeMovieFileReader.c:
     complete
     .text       start:0x020aa144 end:0x020aa150
 
@@ -416,7 +416,7 @@ src/overlays/ov022/calls/beginAlignedFileReadAhead_020aa244.c:
     complete
     .text       start:0x020aa244 end:0x020aa2c0
 
-src/overlays/ov022/calls/func_ov022_020aa2c0.c:
+src/overlays/ov022/calls/WaitMovieReaderPendingIo.c:
     complete
     .text       start:0x020aa2c0 end:0x020aa2e8
 
@@ -424,7 +424,7 @@ src/overlays/ov022/auto/CallVirt14_020aa2e8.c:
     complete
     .text       start:0x020aa2e8 end:0x020aa2fc
 
-src/overlays/ov022/auto/func_ov022_020aa2fc.c:
+src/overlays/ov022/auto/MovieFileReaderDestructorNoOp.c:
     complete
     .text       start:0x020aa2fc end:0x020aa300
 
@@ -436,7 +436,7 @@ src/overlays/ov022/auto/getMovieDecoderCodeSize.c:
     complete
     .text       start:0x020aa8c0 end:0x020aa8cc
 
-src/overlays/ov022/auto/func_ov022_020aa8cc.c:
+src/overlays/ov022/auto/GetMovieLookupTableArenaCapacity.c:
     complete
     .text       start:0x020aa8cc end:0x020aa8d4
 

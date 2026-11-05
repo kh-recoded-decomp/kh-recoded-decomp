@@ -1,4 +1,4 @@
-#define GetSubtitleStreamFrame_020a8918 GetSubtitleStreamFrame
+#define GetSubtitleStreamFrame_020a8918 GetMoviePresentedFrameCount
 #define UpdateMovieFadeOut_020a6ec0 UpdateMovieFadeOut
 #define func_02006748 GXx_SetMasterBrightness_
 #include "src/ov022/video_playback/UpdateMovieFadeOut_020a6ec0.c"

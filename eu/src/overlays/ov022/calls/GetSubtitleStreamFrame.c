@@ -1,3 +1,0 @@
-#define GetSubtitleStreamFrame_020a8918 GetSubtitleStreamFrame
-#define data_ov022_020b7d88 data_ov022_020b7da8
-#include "src/ov022/video_playback/GetSubtitleStreamFrame_020a8918.c"

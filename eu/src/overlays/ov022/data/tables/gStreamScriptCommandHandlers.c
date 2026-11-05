@@ -1,25 +1,25 @@
 #include "nitro/types.h"
 
 extern void StartSubtitlePlaybackAndReturnState6(void);
-extern void func_ov022_020a79d8(void); /* ScriptCmd_EnterPhase */
-extern void func_ov022_020a795c(void); /* ScriptCmd_EnterPhase */
-extern void func_ov022_020a7978(void);
-extern void func_ov022_020a79b0(void);
-extern void func_ov022_020a79e8(void); /* MsgQueue_GetHeap */
-extern void func_ov022_020a79f4(void); /* thumbStep */
+extern void MovieScriptCmd_SetCaptionText(void); /* ScriptCmd_EnterPhase */
+extern void MovieScriptCmd_OpenCaptionScreen(void); /* ScriptCmd_EnterPhase */
+extern void MovieScriptCmd_WaitPresentedFrame(void);
+extern void MovieScriptWait_PresentedFrame(void);
+extern void MovieScriptCmd_CommitCaptionText(void); /* MsgQueue_GetHeap */
+extern void MovieScriptWait_CaptionTransferFlagClear(void); /* thumbStep */
 extern void CmdPrepareStream_020a7a08(void); /* CmdPrepareStream */
 
 void (*gStreamScriptCommandHandlers[12])(void) = {
     StartSubtitlePlaybackAndReturnState6,
     NULL,
-    func_ov022_020a79d8, /* ScriptCmd_EnterPhase */
+    MovieScriptCmd_SetCaptionText, /* ScriptCmd_EnterPhase */
     NULL,
-    func_ov022_020a795c, /* ScriptCmd_EnterPhase */
+    MovieScriptCmd_OpenCaptionScreen, /* ScriptCmd_EnterPhase */
     NULL,
-    func_ov022_020a7978,
-    func_ov022_020a79b0,
-    func_ov022_020a79e8, /* MsgQueue_GetHeap */
-    func_ov022_020a79f4, /* thumbStep */
+    MovieScriptCmd_WaitPresentedFrame,
+    MovieScriptWait_PresentedFrame,
+    MovieScriptCmd_CommitCaptionText, /* MsgQueue_GetHeap */
+    MovieScriptWait_CaptionTransferFlagClear, /* thumbStep */
     CmdPrepareStream_020a7a08, /* CmdPrepareStream */
     NULL,
 };
