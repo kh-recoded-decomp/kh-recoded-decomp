@@ -184,7 +184,7 @@ src/overlays/ov095/calls/SetPanelMode_020c1210.c:
     complete
     .text       start:0x020c1210 end:0x020c1228
 
-src/overlays/ov095/auto/func_ov095_020c1228.c:
+src/overlays/ov095/auto/GetItemGridPanelMode.c:
     complete
     .text       start:0x020c1228 end:0x020c1234
 

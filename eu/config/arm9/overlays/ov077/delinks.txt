@@ -130,7 +130,7 @@ src/overlays/ov077/calls/BeginSlotItemSelection.c:
     complete
     .text       start:0x020c5ce8 end:0x020c5db8
 
-src/overlays/ov077/calls/func_ov077_020c5db8.c:
+src/overlays/ov077/calls/ItemScreen_SwitchToScene0.c:
     complete
     .text       start:0x020c5db8 end:0x020c5df8
 
@@ -138,15 +138,15 @@ src/overlays/ov077/calls/UsePartySlotItem.c:
     complete
     .text       start:0x020c5df8 end:0x020c5f14
 
-src/overlays/ov077/calls/func_ov077_020c5f14.c:
+src/overlays/ov077/calls/ItemScreen_OpenSlotMenu.c:
     complete
     .text       start:0x020c5f14 end:0x020c5f48
 
-src/overlays/ov077/calls/func_ov077_020c5f48.c:
+src/overlays/ov077/calls/ItemScreen_OpenMatrixMenu.c:
     complete
     .text       start:0x020c5f48 end:0x020c5f7c
 
-src/overlays/ov077/calls/func_ov077_020c5f7c.c:
+src/overlays/ov077/calls/ItemScreen_DrawHintTextThunk.c:
     complete
     .text       start:0x020c5f7c end:0x020c5f84
 
@@ -242,7 +242,7 @@ src/overlays/ov077/calls/AddToSelectionCounters_020c7564.c:
     complete
     .text       start:0x020c7564 end:0x020c7594
 
-src/overlays/ov077/calls/func_ov077_020c7594.c:
+src/overlays/ov077/calls/ApplyItemScreenThresholdRankBonus.c:
     complete
     .text       start:0x020c7594 end:0x020c765c
 
@@ -298,7 +298,7 @@ src/overlays/ov077/calls/AreItemScreenSessionStatesZero.c:
     complete
     .text       start:0x020c7b34 end:0x020c7b70
 
-src/overlays/ov077/calls/func_ov077_020c7b70.c:
+src/overlays/ov077/calls/IsItemScreenSessionState10.c:
     complete
     .text       start:0x020c7b70 end:0x020c7b8c
 

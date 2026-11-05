@@ -14,6 +14,6 @@
 #define func_ov039_020bc1bc func_ov039_020bc1dc
 #define func_ov087_020c7810 HandleSelectForState
 #define func_ov087_020c7994 HandleAltSelectForState
-#define func_ov087_020c7b64 func_ov087_020c7b84
-#define func_ov087_020c7bf8 func_ov087_020c7c18
+#define func_ov087_020c7b64 SelectionPanel_CommitDestination
+#define func_ov087_020c7bf8 HandlePanelBackWidget
 #include "src/ov087/panel_state/SetupPanelWidgetHandlers_020c69a4.c"

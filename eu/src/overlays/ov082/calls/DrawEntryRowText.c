@@ -2,7 +2,7 @@
 #define G2D_InitializeLinearCanvas_02017a2c NNS_G2dCharCanvasInitForBG
 #define func_ov039_020bc994 GetMenuFont10
 #define func_ov039_020bc9ac GetMenuFont10s
-#define func_ov081_020c5bf8 func_ov081_020c5c18
+#define func_ov081_020c5bf8 GetTutorialListTextEntry
 #define G2D_MeasureTextWidth_02016bc0 NNSi_G2dFontGetTextWidth
 #define G2D_DrawAnchoredText_02017dec NNSi_G2dTextCanvasDrawText
 #define func_0200344c DC_FlushRange

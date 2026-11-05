@@ -30,7 +30,7 @@ extern EntryList *GetSlotEntry(int slot);
 extern InputRepeat *GetMenuInputState(void);
 extern void ScriptCmd_ResetScreenLayer(ScrollList *list, void *layout);
 extern void StepEntryListCursor(Ov082State *state);
-extern void func_ov076_020c5c2c(void);
+extern void SlotMenu_RefreshViewState3Thunk(void);
 extern void RefreshEntryRows(Ov082State *state);
 
 void UpdateOv082EntryList(Ov082State *state)
@@ -54,6 +54,6 @@ void UpdateOv082EntryList(Ov082State *state)
         return;
     }
     state->needsRedraw = 1;
-    func_ov076_020c5c2c();
+    SlotMenu_RefreshViewState3Thunk();
     RefreshEntryRows(state);
 }

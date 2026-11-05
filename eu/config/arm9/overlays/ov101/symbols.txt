@@ -51,7 +51,7 @@ SetStatePhase kind:function(arm,size=0x24) addr:0x020c17a4
 GetStatePhase kind:function(arm,size=0x18) addr:0x020c17c8
 Ov101List_HandleState0Noop kind:function(arm,size=0x4) addr:0x020c17e0
 RunListScreenStep kind:function(arm,size=0x19c) addr:0x020c17e4
-func_ov101_020c1980 kind:function(arm,size=0x4) addr:0x020c1980
+Ov101List_VBlankNoop kind:function(arm,size=0x4) addr:0x020c1980
 gOv101Callbacks kind:data(any) addr:0x020c1984
 sOv101_Ev2dChtexP2_020c19a0 kind:data(any) addr:0x020c19a0
 sListBattleStringsPath kind:data(any) addr:0x020c19b0

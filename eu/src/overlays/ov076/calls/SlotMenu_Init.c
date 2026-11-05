@@ -4,7 +4,7 @@
 #define AcquireRecordManager_02051c80 AcquireRecordManager
 #define AcquireRecordSlot_02051d3c AcquireRecordSlot
 #define MenuPanel_Create_020cbccc MenuPanel_Create
-#define func_ov076_020c8ef0 func_ov076_020c8f10
+#define func_ov076_020c8ef0 SlotMenu_DrawHintTextThunk
 #define func_ov039_020bc1bc func_ov039_020bc1dc
 #define func_ov034_020bde84 InitScrollListWidgets
 #define ScriptCmd_ResetScreenLayer_020be0c4 ScriptCmd_ResetScreenLayer

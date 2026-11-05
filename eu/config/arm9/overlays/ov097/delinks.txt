@@ -204,11 +204,11 @@ src/overlays/ov097/calls/SyncUnlockedEntryFlags.c:
     complete
     .text       start:0x020c14e0 end:0x020c1578
 
-src/overlays/ov097/calls/func_ov097_020c1578.c:
+src/overlays/ov097/calls/SetStoryReportState.c:
     complete
     .text       start:0x020c1578 end:0x020c1590
 
-src/overlays/ov097/auto/func_ov097_020c1590.c:
+src/overlays/ov097/auto/GetStoryReportState.c:
     complete
     .text       start:0x020c1590 end:0x020c159c
 
@@ -236,7 +236,7 @@ src/overlays/ov097/calls/ResetMenuOrthoCamera.c:
     complete
     .text       start:0x020c19cc end:0x020c1a64
 
-src/overlays/ov097/auto/func_ov097_020c1a64.c:
+src/overlays/ov097/auto/StoryReport_FinalizeScrolledPopupDrawNoop.c:
     complete
     .text       start:0x020c1a64 end:0x020c1a66
 
@@ -244,7 +244,7 @@ src/overlays/ov097/calls/DrawGaugeSprite.c:
     complete
     .text       start:0x020c1a68 end:0x020c1db8
 
-src/overlays/ov097/calls/func_ov097_020c1db8.c:
+src/overlays/ov097/calls/DrawStoryReportGaugeOpaque.c:
     complete
     .text       start:0x020c1db8 end:0x020c1dc4
 

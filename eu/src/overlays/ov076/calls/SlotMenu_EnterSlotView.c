@@ -1,5 +1,5 @@
 #define SlotMenu_EnterSlotView_020c4f34 SlotMenu_EnterSlotView
-#define SlotMenu_ResetToBrowse_020c4ea8 func_ov076_020c4ec8
+#define SlotMenu_ResetToBrowse_020c4ea8 SlotMenu_EnterSlotEditState
 #define func_ov076_020c4260 SlotMenu_BuildSlotMasks
 #define func_ov076_020c4444 SlotMenu_LoadCursorSlotRecord
 #define func_ov076_020c53c8 SlotMenu_UpdatePairedCategory

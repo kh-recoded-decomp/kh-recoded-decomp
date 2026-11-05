@@ -1,5 +1,5 @@
 #define ShutdownPageMenu_020c4354 ShutdownPageMenu
-#define OS_RescheduleThread_020c4708 func_ov078_020c4728
+#define OS_RescheduleThread_020c4708 DestroyPageMenuRootElements
 #define ReleaseRecordSlot_02051dfc ReleaseRecordSlot
 #define ReleaseRecordManager_02051cdc ReleaseRecordManager
 #define FreePointerIfSet_020ba294 FreePointerIfSet

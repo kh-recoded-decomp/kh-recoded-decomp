@@ -1,5 +1,5 @@
 #define SlotMenu_OpenConfirmPrompt_020c4f18 SlotMenu_OpenConfirmPrompt
-#define SlotMenu_ResetToBrowse_020c4ea8 func_ov076_020c4ec8
+#define SlotMenu_ResetToBrowse_020c4ea8 SlotMenu_EnterSlotEditState
 #define func_ov076_020c439c SlotMenu_SelectGuideStep
 #define func_ov076_020c8388 SlotMenu_OpenSlotMessage
 #include "src/ov076/unclassified_helpers/SlotMenu_OpenConfirmPrompt_020c4f18.c"

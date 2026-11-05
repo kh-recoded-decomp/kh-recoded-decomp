@@ -5,14 +5,14 @@
 extern void InitOv081Screen(void);
 extern void ScrollListBackward(void);
 extern void ScrollListForward(void);
-extern void func_ov081_020c5478(void);
+extern void DrawTutorialPageIndicatorThunk(void);
 extern void DestroyOv081Screen(void);
-extern void func_ov081_020c5a78(void);
+extern void CloseOverlay081Menu(void);
 
 void *data_ov081_020c5cc0[17] = {
     (void *)InitOv081Screen,
     (void *)DestroyOv081Screen,
-    (void *)func_ov081_020c5478,
+    (void *)DrawTutorialPageIndicatorThunk,
     (void *)0x0000000B,
     (void *)0x000063E8,
     NULL,
@@ -20,11 +20,11 @@ void *data_ov081_020c5cc0[17] = {
     NULL,
     NULL,
     NULL,
-    (void *)func_ov081_020c5a78,
+    (void *)CloseOverlay081Menu,
     NULL,
     NULL,
     (void *)ScrollListBackward,
     (void *)ScrollListForward,
     NULL,
-    (void *)func_ov081_020c5a78,
+    (void *)CloseOverlay081Menu,
 };

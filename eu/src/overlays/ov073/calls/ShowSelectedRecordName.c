@@ -14,5 +14,5 @@
 #define func_ov039_020bc994 GetMenuFont10
 #define func_ov039_020bc9ac GetMenuFont10s
 #define func_ov039_020be450 DrawPlayTimeDigits_020be470
-#define func_ov073_020c3fa4 func_ov073_020c3fc4
+#define func_ov073_020c3fa4 GetStatusListSelectedRecordIndex
 #include "src/ov073/status_menu/ShowSelectedRecordName_020c1a00.c"

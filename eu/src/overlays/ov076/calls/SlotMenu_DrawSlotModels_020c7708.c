@@ -2,5 +2,5 @@
 #define DrawMenuImageModulated_020ccf14 DrawMenuImageModulated_020ccf34
 #define GetActiveRecordEntryOrNull_02029548 GetActiveRecordEntryOrNull
 #define SceneNode_Draw_01ffb12c SceneNode_Draw
-#define func_ov076_020c76f4 func_ov076_020c7714
+#define func_ov076_020c76f4 SlotMenu_MapScreenPointToModelXY
 #include "src/ov076/matrix_menu/SlotMenu_DrawSlotModels_020c7708.c"

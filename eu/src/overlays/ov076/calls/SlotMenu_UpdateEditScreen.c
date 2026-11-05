@@ -3,7 +3,7 @@
 #define GetRecordSlotPair1Entry_02051ef4 GetRecordSlotPair1Entry
 #define MIi_CpuClearFast_01ff8740 MIi_CpuClearFast
 #define MessageWindow_IsFinished_020cbb90 MessageWindow_IsFinished
-#define PXI_Init_020c5c0c func_ov076_020c5c2c
+#define PXI_Init_020c5c0c SlotMenu_RefreshViewState3Thunk
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define ResolveMergedRecordEntry_020295c8 ResolveMergedRecordEntry
 #define SetGlobalPackedBit_02027320 SetGlobalPackedBit
@@ -25,7 +25,7 @@
 #define SlotMenu_OpenSlotMessage_020c8388 SlotMenu_OpenSlotMessage
 #define SlotMenu_ReloadSlot_020c6f60 SlotMenu_ReloadSlot
 #define SlotMenu_ReloadVisibleSlots_020c7144 SlotMenu_ReloadVisibleSlots
-#define SlotMenu_ResetToBrowse_020c4ea8 func_ov076_020c4ec8
+#define SlotMenu_ResetToBrowse_020c4ea8 SlotMenu_EnterSlotEditState
 #define SlotMenu_SelectGuideStep_020c439c SlotMenu_SelectGuideStep
 #define SlotMenu_SetBgScrollMode_020c74e4 SlotMenu_SetBgScrollMode
 #define SlotMenu_ShowSlotHint_020c827c SlotMenu_ShowSlotHint

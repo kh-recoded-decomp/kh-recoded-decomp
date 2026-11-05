@@ -32,7 +32,7 @@ src/overlays/ov073/calls/UpdateStatusMenu.c:
     complete
     .text       start:0x020bf64c end:0x020bfbec
 
-src/overlays/ov073/calls/func_ov073_020bfbec.c:
+src/overlays/ov073/calls/DestroyStatusMenu.c:
     complete
     .text       start:0x020bfbec end:0x020bfc78
 
@@ -168,7 +168,7 @@ src/overlays/ov073/calls/ClearSharedStateFlag.c:
     complete
     .text       start:0x020c1c70 end:0x020c1ce0
 
-src/overlays/ov073/auto/func_ov073_020c1ce0.c:
+src/overlays/ov073/auto/CompareStatusProgressEntryId.c:
     complete
     .text       start:0x020c1ce0 end:0x020c1ce8
 
@@ -352,7 +352,7 @@ src/overlays/ov073/calls/GetListBgHOffset.c:
     complete
     .text       start:0x020c3fbc end:0x020c3fc4
 
-src/overlays/ov073/calls/func_ov073_020c3fc4.c:
+src/overlays/ov073/calls/GetStatusListSelectedRecordIndex.c:
     complete
     .text       start:0x020c3fc4 end:0x020c3fe8
 

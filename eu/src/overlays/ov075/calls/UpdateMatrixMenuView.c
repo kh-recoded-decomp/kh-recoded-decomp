@@ -95,7 +95,7 @@ extern u32 SquareFixedPoint(int value);
 extern fx32 FX_Sqrt(fx32 value);
 extern fx32 FX_Div(fx32 numer, fx32 denom);
 extern fx32 FX_Mul(fx32 a, fx32 b);
-extern u32 func_ov075_020c7bf4(int value);
+extern u32 ItemPickerAbsInt32(int value);
 extern int ScaleMatrixInput(int value, int useHalfScale);
 extern void ScrollMatrixView(MatrixMenu *menu);
 extern void SetWidgetPosition(void *panel, void *element, Vec2Fx *pos, int mode);
@@ -104,8 +104,8 @@ extern void ShowEntryHeaderMessage(MatrixMenu *menu, MatrixNode *node);
 extern BOOL PlaySoundEffect(int seqArcNo, int index);
 extern void SetSecondaryElementEnabled(BOOL enabled);
 extern CursorFrame *GetMatrixModeLabel(int mode);
-extern u32 func_ov075_020c7d14(void *tabs);
-extern u32 func_ov075_020c7d1c(void *tabs);
+extern u32 GetItemPickerPanelInputBlockState(void *tabs);
+extern u32 GetItemPickerPanelState(void *tabs);
 extern void ResetMatrixCamera(void);
 extern void DrawMatrixMenu(MatrixMenu *menu);
 extern void UpdateMatrixEventAnimation(MatrixMenu *menu);
@@ -184,11 +184,11 @@ void UpdateMatrixMenuView(MatrixMenu *menu)
         }
         stepX = FX_Mul(targetX - menu->scrollX, dist);
         stepY = FX_Mul(targetY - menu->scrollY, dist);
-        if (func_ov075_020c7bf4(stepX) < 0x200) {
+        if (ItemPickerAbsInt32(stepX) < 0x200) {
             stepX = 0;
             menu->scrollX = targetX;
         }
-        if (func_ov075_020c7bf4(stepY) < 0x200) {
+        if (ItemPickerAbsInt32(stepY) < 0x200) {
             stepY = 0;
             menu->scrollY = targetY;
         }
@@ -254,12 +254,12 @@ void UpdateMatrixMenuView(MatrixMenu *menu)
             menu->velocity.x = 0;
             menu->velocity.y = 0;
         } else {
-            if (func_ov075_020c7bf4(menu->velocity.x) < 0x800) {
+            if (ItemPickerAbsInt32(menu->velocity.x) < 0x800) {
                 menu->velocity.x = 0;
             } else {
                 menu->velocity.x = menu->velocity.x - ScaleMatrixInput(menu->velocity.x, moved);
             }
-            if (func_ov075_020c7bf4(menu->velocity.y) < 0x800) {
+            if (ItemPickerAbsInt32(menu->velocity.y) < 0x800) {
                 menu->velocity.y = 0;
             } else {
                 menu->velocity.y = menu->velocity.y - ScaleMatrixInput(menu->velocity.y, moved);
@@ -310,17 +310,17 @@ void UpdateMatrixMenuView(MatrixMenu *menu)
         }
         snapStepX = FX_Mul(targetX - menu->scrollX, dist);
         stepY = FX_Mul(targetY - menu->scrollY, dist);
-        if (func_ov075_020c7bf4(snapStepX) < 0x200) {
+        if (ItemPickerAbsInt32(snapStepX) < 0x200) {
             snapStepX = 0;
             menu->scrollX = targetX;
         }
-        if (func_ov075_020c7bf4(stepY) < 0x200) {
+        if (ItemPickerAbsInt32(stepY) < 0x200) {
             stepY = 0;
             menu->scrollY = targetY;
         }
         if (snapLen < 0x200) {
             if (!IsStatePhaseActive() && menu->locked == 0 && menu->popupEntry == 0 && menu->popupBusy == 0 &&
-                menu->state == 0 && func_ov075_020c7d14(menu->tabs) == 0) {
+                menu->state == 0 && GetItemPickerPanelInputBlockState(menu->tabs) == 0) {
                 SetSecondaryElementEnabled(TRUE);
             }
         } else {
@@ -348,7 +348,7 @@ void UpdateMatrixMenuView(MatrixMenu *menu)
         if (inX && pos.x <= 0x110000) {
             visible = TRUE;
         }
-        if (visible && func_ov075_020c7d1c(menu->tabs)) {
+        if (visible && GetItemPickerPanelState(menu->tabs)) {
             visible = TRUE;
             if (pos.x > 0x68000) {
                 visible = FALSE;

@@ -1,6 +1,6 @@
 #define BindDescriptor0_020c5640 BindDescriptor0_020c5660
 #define DrawListTitle_020c56a8 DrawListTitle
-#define FX_Div_020c542c func_ov081_020c544c
+#define FX_Div_020c542c GetOverlay081EntryForSelectedSlot
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define ScrollListBackward_020c5b2c ScrollListBackward
 #define SkipToUnlockedListEntry_020c5a74 SkipToUnlockedListEntry

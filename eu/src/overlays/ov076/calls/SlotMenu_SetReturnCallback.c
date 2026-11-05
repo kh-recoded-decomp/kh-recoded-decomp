@@ -1,3 +1,3 @@
-#define SlotMenu_ResetToBrowse_020c4ea8 func_ov076_020c4ec8
+#define SlotMenu_ResetToBrowse_020c4ea8 SlotMenu_EnterSlotEditState
 #define SlotMenu_SetReturnCallback_020c89c4 SlotMenu_SetReturnCallback
 #include "src/ov076/unclassified_helpers/SlotMenu_SetReturnCallback_020c89c4.c"

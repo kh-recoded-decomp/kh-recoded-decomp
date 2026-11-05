@@ -1,5 +1,5 @@
 #define CountUnlockedListEntries_020c5460 CountUnlockedListEntries
-#define FX_Div_020c542c func_ov081_020c544c
+#define FX_Div_020c542c GetOverlay081EntryForSelectedSlot
 #define FindWidgetById_020b90a4 FindWidgetById
 #define SetEntrySlotsVisible_020b9580 SetEntrySlotsVisible
 #define UpdateScrollArrows_020c4dfc UpdateScrollArrows

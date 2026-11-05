@@ -4,7 +4,7 @@
 #define data_ov076_020cd2c0 data_ov076_020cd2e0
 #define func_ov027_020ba2a8 GetPackedFileEntry
 #define func_ov027_020ba2e0 FormatPackedWideText
-#define func_ov076_020c4ea8 func_ov076_020c4ec8
+#define func_ov076_020c4ea8 SlotMenu_EnterSlotEditState
 #define func_ov076_020c8178 SlotMenu_DrawHintText
 #define func_ov076_020c8934 SlotMenu_OpenSlotPanel
 #define func_ov076_020c8a70 SlotMenu_OnMessageConfirm

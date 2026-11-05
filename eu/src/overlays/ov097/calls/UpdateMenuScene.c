@@ -8,5 +8,5 @@
 #define data_ov097_020c1da4 gStoryReportStateHandlers
 #define func_ov097_020bfb38 RefreshListPanels
 #define func_ov097_020c0ef8 UpdateScrollBarDrag_020c0f18
-#define func_ov097_020c1570 func_ov097_020c1590
+#define func_ov097_020c1570 GetStoryReportState
 #include "src/ov097/panel_state/UpdateMenuScene_020bedfc.c"

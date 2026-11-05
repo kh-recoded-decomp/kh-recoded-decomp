@@ -2,7 +2,7 @@
 #define BindDescriptor0_020c4de8 BindDescriptor0_020c4e08
 #define BindDescriptor0_020c5640 BindDescriptor0_020c5660
 #define DrawListTitle_020c56a8 DrawListTitle
-#define FX_Div_020c542c func_ov081_020c544c
+#define FX_Div_020c542c GetOverlay081EntryForSelectedSlot
 #define SkipToUnlockedListEntry_020c5a74 SkipToUnlockedListEntry
 #define data_020c5d80 data_ov081_020c5da0
 #include "src/ov081/unclassified_helpers/AdvanceListAndRedraw_020c4db4.c"

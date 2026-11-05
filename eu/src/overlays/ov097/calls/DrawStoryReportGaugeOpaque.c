@@ -1,0 +1,3 @@
+#define NNS_FndInitList DrawGaugeSprite
+#define NNS_FndInitListWithOffset0_020c1d98 DrawStoryReportGaugeOpaque
+#include "src/ov097/library_nitro_nns/NNS_FndInitListWithOffset0_020c1d98.c"

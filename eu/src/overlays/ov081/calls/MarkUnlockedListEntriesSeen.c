@@ -1,7 +1,7 @@
-#define FX_Div_020c542c func_ov081_020c544c
+#define FX_Div_020c542c GetOverlay081EntryForSelectedSlot
 #define IsGlobalPackedBitSet_02027304 IsGlobalPackedBitSet
 #define MarkUnlockedListEntriesSeen_020c5880 MarkUnlockedListEntriesSeen
 #define SetGlobalPackedBit_02027320 SetGlobalPackedBit
 #define data_020c5d80 data_ov081_020c5da0
-#define func_ov081_020c5be4 func_ov081_020c5c04
+#define func_ov081_020c5be4 GetTutorialTextEntry
 #include "src/ov081/unclassified_helpers/MarkUnlockedListEntriesSeen_020c5880.c"

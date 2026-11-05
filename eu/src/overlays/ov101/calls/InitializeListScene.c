@@ -16,7 +16,7 @@ extern u16 *GetPackedFileEntry(ListTextArchiveView *view, s32 index);
 extern void InitScrollPanel(ListScrollPanelConfig *config, ListSceneState *scene);
 extern void DrawListPanelText(s32 which, ListSceneState *scene);
 extern const u8 sOv101_VblankFunc_020c1f78[];
-extern void func_ov101_020c1980(void);
+extern void Ov101List_VBlankNoop(void);
 extern void InvokeForChannelOrBoth(u32 mask, u32 callback, u32 parameter, s32 channel);
 extern BOOL IsStateFlagSet(s32 set, s32 bit);
 extern void *SetStateFlag(s32 set, s32 bit);
@@ -78,7 +78,7 @@ BOOL InitializeListScene(ListSceneState *scene)
     InitScrollPanel(&gSecondaryListScrollConfig, scene);
     DrawListPanelText(-1, scene);
     InvokeForChannelOrBoth(1, (u32)sOv101_VblankFunc_020c1f78,
-                          (u32)func_ov101_020c1980, 0);
+                          (u32)Ov101List_VBlankNoop, 0);
     selected = scene->activeList;
     if (IsStateFlagSet(1, selected)) {
         SetStateFlag(2, selected);

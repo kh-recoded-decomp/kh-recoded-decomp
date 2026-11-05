@@ -10,9 +10,9 @@ extern void UpdateItemScreen(void);
 extern void ShutdownItemMenu(void);
 extern void HandleEquipmentCursorUp(void);
 extern void HandleEquipmentCursorDown(void);
-extern void func_ov077_020c5db8(void);
-extern void func_ov077_020c5f14(void);
-extern void func_ov077_020c5f48(void);
+extern void ItemScreen_SwitchToScene0(void);
+extern void ItemScreen_OpenSlotMenu(void);
+extern void ItemScreen_OpenMatrixMenu(void);
 
 void *gEquipmentMatrixMenuDescriptor[17] = {
     (void *)InitItemScreen,
@@ -25,11 +25,11 @@ void *gEquipmentMatrixMenuDescriptor[17] = {
     NULL,
     NULL,
     (void *)BeginSlotItemSelection,
-    (void *)func_ov077_020c5db8,
+    (void *)ItemScreen_SwitchToScene0,
     NULL,
     (void *)UsePartySlotItem,
-    (void *)func_ov077_020c5f14,
-    (void *)func_ov077_020c5f48,
+    (void *)ItemScreen_OpenSlotMenu,
+    (void *)ItemScreen_OpenMatrixMenu,
     NULL,
-    (void *)func_ov077_020c5db8,
+    (void *)ItemScreen_SwitchToScene0,
 };

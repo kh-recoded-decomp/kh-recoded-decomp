@@ -1,0 +1,5 @@
+#define OS_DisableInterrupts func_ov039_020bc1dc
+#define OS_RescheduleThread_020c4708 DestroyPageMenuRootElements
+#define OS_RestoreInterrupts ReleaseIfMarked
+#define OSi_RescheduleThread DestroyAllContainerElements
+#include "src/ov078/library_nitro_os/OS_RescheduleThread_020c4708.c"

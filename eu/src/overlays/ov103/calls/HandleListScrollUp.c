@@ -4,5 +4,5 @@
 #define func_ov103_020bf0a4 LoadEntryBackground_020bf0c4
 #define func_ov103_020bf39c RedrawTheaterReportText
 #define func_ov103_020bfd40 ScrollListDown_020bfd60
-#define func_ov103_020c030c func_ov103_020c032c
+#define func_ov103_020c030c GetTheaterReportPhase
 #include "src/ov103/panel_state/HandleListScrollUp_020bec34.c"

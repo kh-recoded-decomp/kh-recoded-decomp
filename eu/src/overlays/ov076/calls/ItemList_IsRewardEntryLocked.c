@@ -4,5 +4,5 @@
 #define func_ov076_020caa14 IsSlotMenuPartyHpFull
 #define func_ov076_020caa44 IsRecordCapacityReached
 #define func_ov076_020caae0 AreSlotMenuSessionStatesZero
-#define func_ov076_020cab1c func_ov076_020cab3c
+#define func_ov076_020cab1c IsSlotMenuSessionState10
 #include "src/ov076/unclassified_helpers/ItemList_IsRewardEntryLocked_020cab38.c"

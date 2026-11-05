@@ -13,12 +13,12 @@
 #define func_ov076_020c4e7c SlotMenu_UpdateIdle
 #define func_ov076_020c4f7c SlotMenu_OpenEmptySlot
 #define func_ov076_020c546c SlotMenu_UpdateEditScreen
-#define func_ov076_020c5c0c func_ov076_020c5c2c
+#define func_ov076_020c5c0c SlotMenu_RefreshViewState3Thunk
 #define func_ov076_020c5c14 SlotMenu_UpdateMessageWait
-#define func_ov076_020c5c80 func_ov076_020c5ca0
+#define func_ov076_020c5c80 SlotMenu_UpdateSlotTransitionWait
 #define func_ov076_020c5cac SlotMenu_ToggleViewAfterTween
-#define func_ov076_020c5d10 func_ov076_020c5d30
-#define func_ov076_020c5d18 func_ov076_020c5d38
+#define func_ov076_020c5d10 SlotMenu_RefreshViewState8Thunk
+#define func_ov076_020c5d18 SlotMenu_RefreshViewState9Thunk
 #define func_ov076_020c5d20 SlotMenu_UpdateCameraTransition
 #define func_ov076_020c8178 SlotMenu_DrawHintText
 #define func_ov076_020c8b28 IsSlotMenuTotalWithinLimit

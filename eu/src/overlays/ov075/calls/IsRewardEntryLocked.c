@@ -4,5 +4,5 @@
 #define data_ov001_020a0460 data_ov001_020a0480
 #define func_ov075_020cec04 IsItemPickerPartyHpFull
 #define func_ov075_020cecd0 AreItemPickerSessionStatesZero
-#define func_ov075_020ced0c func_ov075_020ced2c
+#define func_ov075_020ced0c IsItemPickerSessionState10
 #include "src/ov075/unclassified_helpers/IsRewardEntryLocked_020ced28.c"

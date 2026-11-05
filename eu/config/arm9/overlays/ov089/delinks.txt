@@ -36,7 +36,7 @@ src/overlays/ov089/calls/LoadMenuBackgrounds.c:
     complete
     .text       start:0x020bf3b8 end:0x020bf4a8
 
-src/overlays/ov089/calls/func_ov089_020bf4a8.c:
+src/overlays/ov089/calls/ClearOverlay089PrimaryElementRecords.c:
     complete
     .text       start:0x020bf4a8 end:0x020bf4bc
 
@@ -52,7 +52,7 @@ src/overlays/ov089/calls/LoadEntryMenuWidgets.c:
     complete
     .text       start:0x020bf9e0 end:0x020bfaf0
 
-src/overlays/ov089/calls/func_ov089_020bfaf0.c:
+src/overlays/ov089/calls/DestroyOverlay089RootElements.c:
     complete
     .text       start:0x020bfaf0 end:0x020bfb08
 

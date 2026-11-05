@@ -11,5 +11,5 @@
 #define func_01ff8740 MIi_CpuClearFast
 #define func_02007250 GX_LoadBGPltt
 #define func_0202c48c LoadFileAllocFromHeapTail
-#define func_ov081_020c5be4 func_ov081_020c5c04
+#define func_ov081_020c5be4 GetTutorialTextEntry
 #include "src/ov081/unclassified_helpers/SetupOv081Backgrounds_020c527c.c"

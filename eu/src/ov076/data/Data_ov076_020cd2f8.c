@@ -9,9 +9,9 @@ extern void SlotMenu_UnequipCursorSlot(void);
 extern void SlotMenu_Update(void);
 extern void SlotMenu_Init(void);
 extern void SlotMenu_Shutdown(void);
-extern void func_ov076_020c8d40(void);
-extern void func_ov076_020c8e8c(void);
-extern void func_ov076_020c8ed0(void);
+extern void SlotMenu_SwitchToScene0(void);
+extern void SlotMenu_OpenMatrixMenu(void);
+extern void SlotMenu_OpenItemScreen(void);
 
 void *gCommandMatrixMenuDescriptor[17] = {
     (void *)SlotMenu_Init,
@@ -24,13 +24,13 @@ void *gCommandMatrixMenuDescriptor[17] = {
     NULL,
     NULL,
     (void *)SlotMenu_HandleSlotSelect,
-    (void *)func_ov076_020c8d40,
+    (void *)SlotMenu_SwitchToScene0,
     NULL,
     (void *)SlotMenu_UnequipCursorSlot,
-    (void *)func_ov076_020c8e8c,
-    (void *)func_ov076_020c8ed0,
+    (void *)SlotMenu_OpenMatrixMenu,
+    (void *)SlotMenu_OpenItemScreen,
     NULL,
-    (void *)func_ov076_020c8d40,
+    (void *)SlotMenu_SwitchToScene0,
 };
 
 u32 data_ov076_020cd2f8[3] = {

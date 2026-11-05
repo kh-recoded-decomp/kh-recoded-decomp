@@ -2,5 +2,5 @@
 #define UpdatePanelFrame_020bedf8 UpdatePanelFrame
 #define data_ov095_020c16fc gItemReportStateHandlers
 #define func_ov095_020c0730 DrawGridSprites
-#define func_ov095_020c1208 func_ov095_020c1228
+#define func_ov095_020c1208 GetItemGridPanelMode
 #include "src/ov095/panel_state/UpdatePanelFrame_020bedf8.c"

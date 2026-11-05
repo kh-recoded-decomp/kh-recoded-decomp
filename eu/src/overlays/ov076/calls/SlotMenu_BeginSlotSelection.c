@@ -1,6 +1,6 @@
 #define IsGlobalPackedBitSet_02027304 IsGlobalPackedBitSet
 #define SlotMenu_BeginSlotSelection_020c4edc SlotMenu_BeginSlotSelection
-#define SlotMenu_ResetToBrowse_020c4ea8 func_ov076_020c4ec8
+#define SlotMenu_ResetToBrowse_020c4ea8 SlotMenu_EnterSlotEditState
 #define func_ov076_020c4260 SlotMenu_BuildSlotMasks
 #define func_ov076_020c503c SlotMenu_HasFullyRankedSlot
 #include "src/ov076/unclassified_helpers/SlotMenu_BeginSlotSelection_020c4edc.c"

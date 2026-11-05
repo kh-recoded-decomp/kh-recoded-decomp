@@ -34,7 +34,7 @@ typedef struct Ov082State {
 extern Ov082State *gOv082State;
 
 extern void *GetMenuWidgetContainer(void);
-extern Ov081State *func_ov081_020c5bf8(void);
+extern Ov081State *GetTutorialMenuState(void);
 extern void func_ov034_020bdea4(ScrollList *list, void *layout, int elementId, int arg3, int arg4, int arg5, int arg6,
                                 int arg7, int arg8);
 extern void ScriptCmd_ResetScreenLayer(ScrollList *list, void *layout);
@@ -44,7 +44,7 @@ extern void AdvanceListAndRedraw(void);
 BOOL InitOv082EntryList(Ov082State *state)
 {
     void *layout = GetMenuWidgetContainer();
-    Ov081State *source = func_ov081_020c5bf8();
+    Ov081State *source = GetTutorialMenuState();
 
     gOv082State = state;
     state->list.count = source->visibleCount;

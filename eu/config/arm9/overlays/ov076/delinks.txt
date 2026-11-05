@@ -68,7 +68,7 @@ src/overlays/ov076/calls/SlotMenu_UpdateIdle.c:
     complete
     .text       start:0x020c4e9c end:0x020c4ec8
 
-src/overlays/ov076/calls/func_ov076_020c4ec8.c:
+src/overlays/ov076/calls/SlotMenu_EnterSlotEditState.c:
     complete
     .text       start:0x020c4ec8 end:0x020c4efc
 
@@ -108,7 +108,7 @@ src/overlays/ov076/calls/SlotMenu_IsSelectedRecordEquipped.c:
     complete
     .text       start:0x020c51ec end:0x020c5264
 
-src/overlays/ov076/auto/func_ov076_020c5264.c:
+src/overlays/ov076/auto/SlotMenu_GetSpecialFusionResult.c:
     complete
     .text       start:0x020c5264 end:0x020c5268
 
@@ -140,7 +140,7 @@ src/overlays/ov076/calls/SlotMenu_RefreshView.c:
     complete
     .text       start:0x020c5c00 end:0x020c5c2c
 
-src/overlays/ov076/calls/func_ov076_020c5c2c.c:
+src/overlays/ov076/calls/SlotMenu_RefreshViewState3Thunk.c:
     complete
     .text       start:0x020c5c2c end:0x020c5c34
 
@@ -148,7 +148,7 @@ src/overlays/ov076/calls/SlotMenu_UpdateMessageWait.c:
     complete
     .text       start:0x020c5c34 end:0x020c5ca0
 
-src/overlays/ov076/calls/func_ov076_020c5ca0.c:
+src/overlays/ov076/calls/SlotMenu_UpdateSlotTransitionWait.c:
     complete
     .text       start:0x020c5ca0 end:0x020c5ccc
 
@@ -156,11 +156,11 @@ src/overlays/ov076/calls/SlotMenu_ToggleViewAfterTween.c:
     complete
     .text       start:0x020c5ccc end:0x020c5d30
 
-src/overlays/ov076/calls/func_ov076_020c5d30.c:
+src/overlays/ov076/calls/SlotMenu_RefreshViewState8Thunk.c:
     complete
     .text       start:0x020c5d30 end:0x020c5d38
 
-src/overlays/ov076/calls/func_ov076_020c5d38.c:
+src/overlays/ov076/calls/SlotMenu_RefreshViewState9Thunk.c:
     complete
     .text       start:0x020c5d38 end:0x020c5d40
 
@@ -244,7 +244,7 @@ src/overlays/ov076/calls/SlotMenu_Draw3D.c:
     complete
     .text       start:0x020c7554 end:0x020c7714
 
-src/overlays/ov076/calls/func_ov076_020c7714.c:
+src/overlays/ov076/calls/SlotMenu_MapScreenPointToModelXY.c:
     complete
     .text       start:0x020c7714 end:0x020c7728
 
@@ -361,7 +361,7 @@ src/overlays/ov076/calls/SlotMenu_HandleSlotSelect.c:
     complete
     .text       start:0x020c8b80 end:0x020c8d40
 
-src/overlays/ov076/calls/func_ov076_020c8d40.c:
+src/overlays/ov076/calls/SlotMenu_SwitchToScene0.c:
     complete
     .text       start:0x020c8d40 end:0x020c8d90
 
@@ -369,15 +369,15 @@ src/overlays/ov076/calls/SlotMenu_UnequipCursorSlot.c:
     complete
     .text       start:0x020c8d90 end:0x020c8e8c
 
-src/overlays/ov076/calls/func_ov076_020c8e8c.c:
+src/overlays/ov076/calls/SlotMenu_OpenMatrixMenu.c:
     complete
     .text       start:0x020c8e8c end:0x020c8ece
 
-src/overlays/ov076/calls/func_ov076_020c8ed0.c:
+src/overlays/ov076/calls/SlotMenu_OpenItemScreen.c:
     complete
     .text       start:0x020c8ed0 end:0x020c8f10
 
-src/overlays/ov076/calls/func_ov076_020c8f10.c:
+src/overlays/ov076/calls/SlotMenu_DrawHintTextThunk.c:
     complete
     .text       start:0x020c8f10 end:0x020c8f18
 
@@ -385,7 +385,7 @@ src/overlays/ov076/calls/SlotMenu_ReloadAllSlots.c:
     complete
     .text       start:0x020c8f18 end:0x020c8f44
 
-src/overlays/ov076/auto/func_ov076_020c8f44.c:
+src/overlays/ov076/auto/GetSlotMenuItemPanelState.c:
     complete
     .text       start:0x020c8f44 end:0x020c8f50
 
@@ -481,7 +481,7 @@ src/overlays/ov076/calls/AddToSelectionCounters_020ca530.c:
     complete
     .text       start:0x020ca530 end:0x020ca560
 
-src/overlays/ov076/calls/func_ov076_020ca560.c:
+src/overlays/ov076/calls/ApplySlotMenuThresholdRankBonus.c:
     complete
     .text       start:0x020ca560 end:0x020ca628
 
@@ -537,7 +537,7 @@ src/overlays/ov076/calls/AreSlotMenuSessionStatesZero.c:
     complete
     .text       start:0x020cab00 end:0x020cab3c
 
-src/overlays/ov076/calls/func_ov076_020cab3c.c:
+src/overlays/ov076/calls/IsSlotMenuSessionState10.c:
     complete
     .text       start:0x020cab3c end:0x020cab58
 

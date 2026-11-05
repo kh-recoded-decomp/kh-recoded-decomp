@@ -75,7 +75,7 @@ extern const char sOv077_UiMenuEqumtxP2_020ca2f0[];
 extern const char sOv077_UiMenuLanguageEqumtxP2_020ca304[];
 extern void MI_CpuFill8(void *destination, int value, u32 size);
 extern void ItemListPanel_Create(ItemListPanel *panel, int recordIndex, void (*callback)(void));
-extern void func_ov077_020c5f7c(void);
+extern void ItemScreen_DrawHintTextThunk(void);
 extern WidgetManager *func_ov039_020bc1dc(void);
 extern Widget *FindWidgetById(WidgetManager *manager, int id);
 extern void SetEntrySlotsVisible(WidgetManager *manager, Widget *widget, BOOL visible);
@@ -94,7 +94,7 @@ BOOL InitItemScreen(ItemScreen *screen)
     MI_CpuFill8(screen, 0, sizeof(*screen));
     data_ov077_020ca3a0.screen = screen;
     *(vu16 *)0x04000304 &= ~0x8000;
-    ItemListPanel_Create((ItemListPanel *)screen->panelHeader, 2, func_ov077_020c5f7c);
+    ItemListPanel_Create((ItemListPanel *)screen->panelHeader, 2, ItemScreen_DrawHintTextThunk);
     screen->mode = 0;
     screen->panelValue11c28 = 2;
     screen->panelValue11c2a = 2;

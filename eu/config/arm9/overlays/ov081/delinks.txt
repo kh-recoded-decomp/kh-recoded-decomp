@@ -48,7 +48,7 @@ src/overlays/ov081/calls/SetupOv081Backgrounds.c:
     complete
     .text       start:0x020c529c end:0x020c544c
 
-src/overlays/ov081/calls/func_ov081_020c544c.c:
+src/overlays/ov081/calls/GetOverlay081EntryForSelectedSlot.c:
     complete
     .text       start:0x020c544c end:0x020c5458
 
@@ -56,7 +56,7 @@ src/overlays/ov081/calls/GetSlotEntry.c:
     complete
     .text       start:0x020c5458 end:0x020c5478
 
-src/overlays/ov081/calls/func_ov081_020c5478.c:
+src/overlays/ov081/calls/DrawTutorialPageIndicatorThunk.c:
     complete
     .text       start:0x020c5478 end:0x020c5480
 
@@ -100,7 +100,7 @@ src/overlays/ov081/calls/AreSlotEntriesAllSeen.c:
     complete
     .text       start:0x020c5984 end:0x020c5a78
 
-src/overlays/ov081/calls/func_ov081_020c5a78.c:
+src/overlays/ov081/calls/CloseOverlay081Menu.c:
     complete
     .text       start:0x020c5a78 end:0x020c5a94
 
@@ -116,15 +116,15 @@ src/overlays/ov081/calls/ScrollListForward.c:
     complete
     .text       start:0x020c5ba4 end:0x020c5bf8
 
-src/overlays/ov081/calls/func_ov081_020c5bf8.c:
+src/overlays/ov081/calls/GetTutorialMenuState.c:
     complete
     .text       start:0x020c5bf8 end:0x020c5c04
 
-src/overlays/ov081/calls/func_ov081_020c5c04.c:
+src/overlays/ov081/calls/GetTutorialTextEntry.c:
     complete
     .text       start:0x020c5c04 end:0x020c5c18
 
-src/overlays/ov081/calls/func_ov081_020c5c18.c:
+src/overlays/ov081/calls/GetTutorialListTextEntry.c:
     complete
     .text       start:0x020c5c18 end:0x020c5c2c
 

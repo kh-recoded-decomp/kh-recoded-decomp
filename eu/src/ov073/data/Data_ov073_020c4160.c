@@ -4,11 +4,11 @@
 
 extern void InitStatusMenu(void);
 extern void UpdateStatusMenu(void);
-extern void func_ov073_020bfbec(void);
+extern void DestroyStatusMenu(void);
 
 void *data_ov073_020c4160[16] = {
     (void *)InitStatusMenu,
-    (void *)func_ov073_020bfbec,
+    (void *)DestroyStatusMenu,
     (void *)UpdateStatusMenu,
     (void *)0x00001230,
     NULL,

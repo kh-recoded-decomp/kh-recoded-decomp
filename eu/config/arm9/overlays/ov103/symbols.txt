@@ -32,11 +32,11 @@ IsEntryFlagSet_020c01a0 kind:function(arm,size=0x2c) addr:0x020c01a0
 SetEntryFlag_020c01cc kind:function(arm,size=0x20) addr:0x020c01cc
 RefreshUnlockedEntries kind:function(arm,size=0x128) addr:0x020c01ec
 SetScenePhase kind:function(arm,size=0x18) addr:0x020c0314
-func_ov103_020c032c kind:function(arm,size=0xc) addr:0x020c032c
-func_ov103_020c0338 kind:function(arm,size=0x4) addr:0x020c0338
+GetTheaterReportPhase kind:function(arm,size=0xc) addr:0x020c032c
+TheaterReport_HandleState0Noop kind:function(arm,size=0x4) addr:0x020c0338
 InitTheaterReportScreen kind:function(arm,size=0xac) addr:0x020c033c
 RunFadeInStep kind:function(arm,size=0xa8) addr:0x020c03e8
-func_ov103_020c0490 kind:function(arm,size=0xc) addr:0x020c0490
+InitTheaterReportSlotPoolThunk kind:function(arm,size=0xc) addr:0x020c0490
 data_ov103_020c049c kind:data(any) addr:0x020c049c
 gTheaterReportResourcePaths kind:data(any) addr:0x020c04c0
 gTheaterReportTextPaths kind:data(any) addr:0x020c04c8

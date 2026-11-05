@@ -557,3 +557,14 @@ model views/factories, generic lists, scene-task actions and concrete visitors.
 owners, numeric state/preset boundaries, native callback inputs/results, model
 versus actor storage and borrowed view-plane/position lifetimes. Empty release
 hooks remain distinct from surrounding overlay/heap cleanup.
+
+## Menu state, navigation, thresholds and report helpers
+
+Forty-nine entrypoints now identify selected status records, panel/session
+queries, slot edit/fusion/transition operations, navigation/thunks, tutorials,
+root cleanup and report states.
+[MENU_STATE_NAVIGATION_HELPERS.md](MENU_STATE_NAVIGATION_HELPERS.md) records
+owner-specific guards, raw results, packed-value aliasing, rank thresholds,
+borrowed text, exact destination dispatch and empty-hook/VBlank lifetimes.
+The old arithmetic, browse-reset and generic-success labels do not establish
+these native contracts.

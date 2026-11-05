@@ -224,11 +224,11 @@ src/overlays/ov087/calls/HandleConfirmForState.c:
     complete
     .text       start:0x020c7b04 end:0x020c7b84
 
-src/overlays/ov087/calls/func_ov087_020c7b84.c:
+src/overlays/ov087/calls/SelectionPanel_CommitDestination.c:
     complete
     .text       start:0x020c7b84 end:0x020c7c18
 
-src/overlays/ov087/calls/func_ov087_020c7c18.c:
+src/overlays/ov087/calls/HandlePanelBackWidget.c:
     complete
     .text       start:0x020c7c18 end:0x020c7c38
 

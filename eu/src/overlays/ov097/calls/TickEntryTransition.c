@@ -10,7 +10,7 @@
 #define data_ov097_020c1f1c sStoryReportEntryIds
 #define data_ov097_020c2124 sStoryReportGroupDefinitions
 #define func_02013d74 NNS_GfdResetFrmPlttVramState
-#define func_ov097_020c1558 func_ov097_020c1578
+#define func_ov097_020c1558 SetStoryReportState
 #define func_ov097_020c1844 InitStoryReportSpriteFromFile
 #define g_menuScene_020c2520 data_ov097_020c2540
 #include "src/ov097/panel_state/TickEntryTransition_020c1580.c"

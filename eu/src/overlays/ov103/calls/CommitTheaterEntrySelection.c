@@ -4,13 +4,13 @@ extern u32 PlaySoundEffect();
 extern u32 StartSubScene();
 extern u32 RuntimeState_SetObjectId();
 extern u32 IsEntryFlagSet_020c01a0();
-extern u32 func_ov103_020c032c();
+extern u32 GetTheaterReportPhase();
 
 void CommitTheaterEntrySelection(u32 *work) {
   int ready;
   u32 selection;
 
-  ready = func_ov103_020c032c();
+  ready = GetTheaterReportPhase();
   if (ready != 3) {
     return;
   }

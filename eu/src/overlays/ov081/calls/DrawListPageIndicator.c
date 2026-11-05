@@ -1,6 +1,6 @@
 #define CountUnlockedListEntries_020c5460 CountUnlockedListEntries
 #define DrawListPageIndicator_020c5790 DrawListPageIndicator
-#define FX_Div_020c542c func_ov081_020c544c
+#define FX_Div_020c542c GetOverlay081EntryForSelectedSlot
 #define FindWidgetById_020b90a4 FindWidgetById
 #define GetField84Bit1_020b9198 GetField84Bit1
 #define SampleTweenValue_0205258c SampleTweenValue
@@ -11,5 +11,5 @@
 #define func_0205255c StartTween
 #define func_ov039_020bc1bc func_ov039_020bc1dc
 #define func_ov081_020c5530 DrawBgTextLabel
-#define func_ov081_020c5be4 func_ov081_020c5c04
+#define func_ov081_020c5be4 GetTutorialTextEntry
 #include "src/ov081/unclassified_helpers/DrawListPageIndicator_020c5790.c"

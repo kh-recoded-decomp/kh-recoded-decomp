@@ -216,7 +216,7 @@ src/overlays/ov101/calls/RunListScreenStep.c:
     complete
     .text       start:0x020c17e4 end:0x020c1980
 
-src/overlays/ov101/auto/func_ov101_020c1980.c:
+src/overlays/ov101/auto/Ov101List_VBlankNoop.c:
     complete
     .text       start:0x020c1980 end:0x020c1984
 

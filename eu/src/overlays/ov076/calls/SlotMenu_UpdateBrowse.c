@@ -27,7 +27,7 @@ extern char data_ov076_020cd280[];
 extern void *func_ov039_020bc1dc(void);
 extern BOOL GetMainBrightnessSetting(void);
 extern BOOL OpenHintPrompt(void *touch, SlotMenu *menu, SlotMenuCheck check, SlotMenuAction action, void *region, int arg5);
-extern void func_ov076_020c4ec8(SlotMenu *menu);
+extern void SlotMenu_EnterSlotEditState(SlotMenu *menu);
 extern BOOL SlotMenu_HasThreeFilledSlotsAndFlags(SlotMenu *menu);
 extern BOOL SlotMenu_OpenEmptySlot(SlotMenu *menu);
 extern void SlotMenu_BeginSlotSelection(SlotMenu *menu);
@@ -46,8 +46,8 @@ void SlotMenu_UpdateBrowse(SlotMenu *menu)
     void *layout = func_ov039_020bc1dc();
 
     if (!GetMainBrightnessSetting()) {
-        if (!OpenHintPrompt(menu->touchInput, menu, NULL, func_ov076_020c4ec8, sOv076_E_020cd28c, 1) &&
-            !OpenHintPrompt(menu->touchInput, menu, SlotMenu_HasThreeFilledSlotsAndFlags, func_ov076_020c4ec8, sOv076_Na_020cd298, 1) &&
+        if (!OpenHintPrompt(menu->touchInput, menu, NULL, SlotMenu_EnterSlotEditState, sOv076_E_020cd28c, 1) &&
+            !OpenHintPrompt(menu->touchInput, menu, SlotMenu_HasThreeFilledSlotsAndFlags, SlotMenu_EnterSlotEditState, sOv076_Na_020cd298, 1) &&
             !OpenHintPrompt(menu->touchInput, menu, SlotMenu_OpenEmptySlot, SlotMenu_BeginSlotSelection, data_ov076_020cd280, 1)) {
             menu->state = 1;
             menu->stateTimer = 0;

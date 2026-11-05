@@ -2,5 +2,5 @@
 #define ResetObjManagerLists_020c07fc ResetObjManagerLists_020c081c
 #define UpdateModelViewerScreen_020bee5c UpdateModelViewerScreen
 #define data_ov099_020c224c gEnemyReportStateHandlers
-#define func_ov099_020c1778 func_ov099_020c1798
+#define func_ov099_020c1778 GetEnemyViewerMode
 #include "src/ov099/unclassified_helpers/UpdateModelViewerScreen_020bee5c.c"

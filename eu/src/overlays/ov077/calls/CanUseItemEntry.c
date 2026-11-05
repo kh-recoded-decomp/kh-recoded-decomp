@@ -4,5 +4,5 @@
 #define data_ov001_020a0460 data_ov001_020a0480
 #define func_ov077_020c7a48 IsItemScreenPartyHpFull
 #define func_ov077_020c7b14 AreItemScreenSessionStatesZero
-#define func_ov077_020c7b50 func_ov077_020c7b70
+#define func_ov077_020c7b50 IsItemScreenSessionState10
 #include "src/ov077/unclassified_helpers/CanUseItemEntry_020c7b6c.c"

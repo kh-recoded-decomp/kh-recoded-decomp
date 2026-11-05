@@ -176,7 +176,7 @@ src/overlays/ov099/calls/SetViewerMode.c:
     complete
     .text       start:0x020c1780 end:0x020c1798
 
-src/overlays/ov099/auto/func_ov099_020c1798.c:
+src/overlays/ov099/auto/GetEnemyViewerMode.c:
     complete
     .text       start:0x020c1798 end:0x020c17a4
 
@@ -236,7 +236,7 @@ src/overlays/ov099/calls/DrawModelViewer.c:
     complete
     .text       start:0x020c21d8 end:0x020c2260
 
-src/overlays/ov099/calls/func_ov099_020c2260.c:
+src/overlays/ov099/calls/LoadEnemyViewerSelectionModelsThunk.c:
     complete
     .text       start:0x020c2260 end:0x020c226c
 

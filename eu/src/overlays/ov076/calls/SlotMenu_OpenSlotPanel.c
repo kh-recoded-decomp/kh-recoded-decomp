@@ -1,7 +1,7 @@
-#define Obj_GetWordC_020c5244 func_ov076_020c5264
+#define Obj_GetWordC_020c5244 SlotMenu_GetSpecialFusionResult
 #define SetNavigationElementsVisible_020ccd30 SetNavigationElementsVisible
 #define SlotMenu_OpenSlotPanel_020c8934 SlotMenu_OpenSlotPanel
-#define SlotMenu_ResetToBrowse_020c4ea8 func_ov076_020c4ec8
+#define SlotMenu_ResetToBrowse_020c4ea8 SlotMenu_EnterSlotEditState
 #define data_ov076_020cd2cc data_ov076_020cd2ec
 #define data_ov076_020cd2d8 data_ov076_020cd2f8
 #define func_ov039_020bc1bc func_ov039_020bc1dc

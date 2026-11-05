@@ -3,12 +3,12 @@
 extern u32 PlaySoundEffect();
 extern u32 StartSubScene();
 extern u32 RuntimeState_SetObjectId();
-extern u32 func_ov103_020c032c();
+extern u32 GetTheaterReportPhase();
 
 void CancelTheaterEntrySelection(void) {
   int state;
 
-  state = func_ov103_020c032c();
+  state = GetTheaterReportPhase();
   if (state != 3) {
     return;
   }

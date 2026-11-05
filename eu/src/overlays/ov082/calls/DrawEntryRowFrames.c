@@ -2,5 +2,5 @@
 #define DrawEntryRowFrames_020bf260 DrawEntryRowFrames
 #define G2S_GetBG2ScrPtr_02006f0c G2S_GetBG2ScrPtr
 #define GetSlotEntry_020c5438 GetSlotEntry
-#define func_ov081_020c5bd8 func_ov081_020c5bf8
+#define func_ov081_020c5bd8 GetTutorialMenuState
 #include "src/ov082/unclassified_helpers/DrawEntryRowFrames_020bf260.c"

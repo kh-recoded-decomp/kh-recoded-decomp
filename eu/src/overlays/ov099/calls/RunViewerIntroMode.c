@@ -1,5 +1,5 @@
 #define IsEntryFlagSet_020c168c IsEntryFlagSet_020c16ac
-#define PXI_Init_020c2240 func_ov099_020c2260
+#define PXI_Init_020c2240 LoadEnemyViewerSelectionModelsThunk
 #define RunViewerIntroMode_020c1788 RunViewerIntroMode
 #define SetViewerMode_020c1760 SetViewerMode
 #define func_ov099_020bf818 DrawEntryStatsPanels

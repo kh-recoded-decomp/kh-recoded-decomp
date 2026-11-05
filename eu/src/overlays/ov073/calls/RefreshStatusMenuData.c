@@ -198,7 +198,7 @@ extern void SetupStageParams(s16 *count, void *container, int refresh);
 extern void GetRecordProgressInfo(StatusMenu *menu, int recordId, int count, ProgressEntry *info);
 extern void WriteGlobalPackedBits(u32 bitOffset, u32 bitCount, u32 value);
 extern void qsort(void *base, int count, int size, int (*compare)(const void *, const void *));
-extern int func_ov073_020c1ce0(const void *a, const void *b);
+extern int CompareStatusProgressEntryId(const void *a, const void *b);
 extern void MI_CpuFill8(void *dst, u8 value, u32 size);
 extern void LoadStatusLabels(StatusMenu *menu);
 extern void SplitFxToTenths(int value, int *whole, int *tenths);
@@ -532,7 +532,7 @@ void RefreshStatusMenuData(SaveData *save, StatPreview *preview)
             }
             WriteGlobalPackedBits(0x1a0f, 3, bracerCount);
             progress->count = count;
-            qsort(progress->entries, count, sizeof(ProgressEntry), func_ov073_020c1ce0);
+            qsort(progress->entries, count, sizeof(ProgressEntry), CompareStatusProgressEntryId);
             if (menu->page == 2) {
                 menu->listCount = progress->count;
                 SetupStageParams(&menu->listCount, menu->container, 1);

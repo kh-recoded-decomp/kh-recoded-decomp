@@ -21,7 +21,7 @@ typedef struct SlotMenu {
 extern void *G2_GetBG1ScrPtr(void);
 extern void MIi_CpuClearFast(u32 value, void *dst, u32 size);
 extern BOOL PlaySoundEffect(int group, int id);
-extern void func_ov076_020c7714(s32 x, s32 y, fx32 *outX, fx32 *outY);
+extern void SlotMenu_MapScreenPointToModelXY(s32 x, s32 y, fx32 *outX, fx32 *outY);
 extern int *SetModelAnimationFrameWithSingleWrap(void *animations, int index, int frame);
 
 void SlotMenu_BeginSlotTransition(SlotMenu *menu)
@@ -31,7 +31,7 @@ void SlotMenu_BeginSlotTransition(SlotMenu *menu)
     MIi_CpuClearFast(0, G2_GetBG1ScrPtr(), 0x600);
     PlaySoundEffect(1, 7);
     y = (menu->slotIndex << 6) + 32 - menu->scrollY;
-    func_ov076_020c7714(72, y, &menu->originX, &menu->originY);
+    SlotMenu_MapScreenPointToModelXY(72, y, &menu->originX, &menu->originY);
 
     menu->modelPosition.z = 0x300000;
     menu->modelPosition.x = 0x00050800;

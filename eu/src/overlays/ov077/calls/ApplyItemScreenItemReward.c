@@ -2,7 +2,7 @@
 
 extern u32 AddSessionCounter();
 extern u32 AddToSelectionCounters_020c7564();
-extern u32 func_ov077_020c7594();
+extern u32 ApplyItemScreenThresholdRankBonus();
 extern u32 ClearItemScreenSessionStateWordsThunk();
 extern void QueueAndPlaySound(int soundId, int index);
 
@@ -26,11 +26,11 @@ void ApplyItemScreenItemReward(u32 reward)
     QueueAndPlaySound(0xb6,0);
     return;
   case 0xb9:
-    func_ov077_020c7594(1);
+    ApplyItemScreenThresholdRankBonus(1);
     QueueAndPlaySound(0xb4,0);
     return;
   case 0xba:
-    func_ov077_020c7594(2);
+    ApplyItemScreenThresholdRankBonus(2);
     QueueAndPlaySound(0xb5,0);
     return;
   case 0xbc:
@@ -40,7 +40,7 @@ void ApplyItemScreenItemReward(u32 reward)
     QueueAndPlaySound(0xb7,0);
     return;
   case 0xbd:
-    func_ov077_020c7594(4);
+    ApplyItemScreenThresholdRankBonus(4);
     AddToSelectionCounters_020c7564(1000);
     ClearItemScreenSessionStateWordsThunk();
     AddSessionCounter(5,1);
