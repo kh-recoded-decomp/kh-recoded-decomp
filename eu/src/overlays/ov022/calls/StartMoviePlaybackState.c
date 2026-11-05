@@ -11,7 +11,7 @@
 #define FormatSessionNumber_02063578 FormatSessionNumber
 #define findSharedResourceByName_0202cd8c findSharedResourceByName
 #define Strlen_02021e44 strlen
-#define func_0202255c func_02022570
+#define func_0202255c ParseDecimalLong
 #define RoundAndInitArchive_020258b0 RoundAndInitArchive
 #define SetLoaderCallbacks_02025914 SetLoaderCallbacks
 #define data_ov022_020b7d80 data_ov022_020b7da0

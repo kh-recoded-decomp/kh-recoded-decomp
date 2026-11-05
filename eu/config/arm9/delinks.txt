@@ -5429,11 +5429,11 @@ src/calls/strtol.c:
     complete
     .text       start:0x020224ac end:0x02022570
 
-src/calls/func_02022570.c:
+src/calls/ParseDecimalLong.c:
     complete
     .text       start:0x02022570 end:0x02022584
 
-src/calls/func_02022584.c:
+src/calls/IsLeapYearSince1900.c:
     complete
     .text       start:0x02022584 end:0x020225d4
 
@@ -5441,7 +5441,7 @@ src/calls/LeapDays.c:
     complete
     .text       start:0x020225d4 end:0x02022688
 
-src/calls/func_02022688.c:
+src/calls/NormalizeCalendarFieldWithCarry.c:
     complete
     .text       start:0x02022688 end:0x020226c8
 
@@ -5457,7 +5457,7 @@ src/calls/ComputeSignedDifferenceAsDouble.c:
     complete
     .text       start:0x020229a4 end:0x020229dc
 
-src/calls/func_020229dc.c:
+src/calls/NormalizeCalendarToTime.c:
     complete
     .text       start:0x020229dc end:0x02022a4c
 

@@ -309,6 +309,21 @@ metadata/lifetime contracts, packed coordinates, bounds, tag behavior, upload
 scheduling and paired cleanup. Shadow-text parameters keep their two-color
 meaning; local view names do not claim complete allocation layouts.
 
+## Calendar conversion helpers
+
+| Previous symbol | Current name | Established operation |
+|---|---|---|
+| `func_02022570` | `ParseDecimalLong` | Calls `strtol(text, NULL, 10)` and forwards its result. |
+| `func_02022584` | `IsLeapYearSince1900` | Tests the Gregorian leap condition on `tm_year`, not on a full civil year. |
+| `func_02022688` | `NormalizeCalendarFieldWithCarry` | Writes a floor-division remainder back to one field and checked-adds the quotient to its next larger field. |
+| `func_020229dc` | `NormalizeCalendarToTime` | Converts a local calendar copy, copies normalization back only on success and returns the 32-bit time word or -1. |
+
+
+[CALENDAR_HELPERS.md](CALENDAR_HELPERS.md) records the year-since-1900 origin,
+checked floor carry, copy-on-success behavior, 36-byte storage and reserved
+ninth word. The helpers expose their actual pointer inputs and logical argument
+counts; native time and long widths remain explicit port constraints.
+
 ## Explicitly unresolved
 
 The vector view at `data_027e0160` overlaps `data_027e0164`, used by the older

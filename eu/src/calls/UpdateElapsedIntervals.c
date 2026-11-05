@@ -29,7 +29,7 @@ typedef struct SessionRoot {
 typedef char TimedSessionDataSizeCheck[(sizeof(TimedSessionData) == 0x1ad4) ? 1 : -1];
 
 extern SessionRoot data_0205fe00;
-extern s32 func_020229dc(CalendarTime *time);
+extern s32 NormalizeCalendarToTime(CalendarTime *time);
 extern s32 RTC_GetDateTime(HardwareDate *date, HardwareTime *time);
 extern double ComputeSignedDifferenceAsDouble(s32 end, s32 start);
 
@@ -49,7 +49,7 @@ void UpdateElapsedIntervals(void)
     calendar.month = data->month - 1;
     calendar.year = data->year + 100;
     calendar.daylightSaving = -1;
-    previous = func_020229dc(&calendar);
+    previous = NormalizeCalendarToTime(&calendar);
     if (previous == -1) {
         data->remainingIntervals = 0;
         return;
@@ -62,7 +62,7 @@ void UpdateElapsedIntervals(void)
     calendar.month = date.month - 1;
     calendar.year = date.year + 100;
     calendar.daylightSaving = -1;
-    current = func_020229dc(&calendar);
+    current = NormalizeCalendarToTime(&calendar);
     if (current == -1) {
         data->remainingIntervals = 0;
         return;
