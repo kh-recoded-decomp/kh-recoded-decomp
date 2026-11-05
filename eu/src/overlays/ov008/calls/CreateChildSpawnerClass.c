@@ -29,10 +29,10 @@ extern void FieldObject_RespawnSegmented(void);
 extern void FreeFieldObjectClassAnimationBuffers(void);
 extern void ReleaseChildObjects(void);
 extern void FreeFieldObjectShapeStorage(void);
-extern void func_ov008_020a0948(void);
+extern void ChildSpawner_GetPosition(void);
 extern void SetFieldObjectPosition(void);
-extern void func_ov008_020a0974(void);
-extern void func_ov008_020a0978(void);
+extern void ChildSpawner_ApplyHitTrue(void);
+extern void ChildSpawner_QueryHitFalse(void);
 extern void DrawChildSpawner(void);
 
 SpawnerClass *CreateChildSpawnerClass(int count, int actorKind)
@@ -55,10 +55,10 @@ SpawnerClass *CreateChildSpawnerClass(int count, int actorKind)
     objectClass->hooks[4] = ReleaseChildObjects;
     objectClass->hooks[6] = FreeFieldObjectShapeStorage;
     objectClass->hooks[7] = NULL;
-    objectClass->hooks[10] = func_ov008_020a0948;
+    objectClass->hooks[10] = ChildSpawner_GetPosition;
     objectClass->hooks[9] = SetFieldObjectPosition;
-    objectClass->hooks[11] = func_ov008_020a0974;
-    objectClass->hooks[12] = func_ov008_020a0978;
+    objectClass->hooks[11] = ChildSpawner_ApplyHitTrue;
+    objectClass->hooks[12] = ChildSpawner_QueryHitFalse;
     objectClass->hooks[15] = DrawChildSpawner;
     objectClass->classType = 12;
     return objectClass;

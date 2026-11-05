@@ -1,52 +1,52 @@
 #include "nitro/types.h"
 
-extern void func_ov015_02072f98(void);
-extern void func_ov015_02072f9c(void);
-extern void func_ov015_02072fa0(void);
-extern void func_ov015_02072fa4(void);
+extern void WirelessConnection_LeaveState0Noop(void);
+extern void WirelessConnection_EnterState1Noop(void);
+extern void WirelessConnection_UpdateState1Noop(void);
+extern void WirelessConnection_LeaveState1Noop(void);
 extern void FinalizeWirelessConnectionWrapper(void); /* PXI_Init */
 extern void DispatchPanelTransition(void); /* DispatchPanelTransition */
 extern void SetWirelessReadyFlag(void);
-extern void func_ov015_02073030(void);
+extern void WirelessConnection_EnterState3Noop(void);
 extern void HandleMatchTransition(void); /* HandleMatchTransition */
-extern void func_ov015_020730a4(void);
-extern void func_ov015_020730a8(void);
+extern void WirelessConnection_LeaveState3Noop(void);
+extern void WirelessConnection_EnterState4Noop(void);
 extern void UpdateWirelessParentState(void); /* UpdateWirelessParentState */
-extern void func_ov015_02073148(void);
-extern void func_ov015_0207314c(void);
+extern void WirelessConnection_LeaveState4Noop(void);
+extern void WirelessConnection_EnterState5Noop(void);
 extern void HandleConnectTransition(void); /* HandleConnectTransition */
-extern void func_ov015_020731b8(void);
+extern void WirelessConnection_LeaveState5Noop(void);
 extern void StartWirelessFinalizeDelay16(void);
 extern void PollWirelessFinalizeDelay17(void);
-extern void func_ov015_0207321c(void);
+extern void WirelessConnection_LeaveState6Noop(void);
 extern void StartWirelessFinalizeDelay19(void);
 extern void PollWirelessFinalizeDelay20(void);
-extern void func_ov015_02073280(void);
+extern void WirelessConnection_LeaveState7Noop(void);
 extern void EnterWirelessConnectionState3UnlessHelperState3(void);
 
 void (*gWirelessStateHandlers[22])(void) = {
-    func_ov015_02072f98,
-    func_ov015_02072f9c,
-    func_ov015_02072fa0,
-    func_ov015_02072fa4,
+    WirelessConnection_LeaveState0Noop,
+    WirelessConnection_EnterState1Noop,
+    WirelessConnection_UpdateState1Noop,
+    WirelessConnection_LeaveState1Noop,
     FinalizeWirelessConnectionWrapper, /* PXI_Init */
     DispatchPanelTransition, /* DispatchPanelTransition */
     SetWirelessReadyFlag,
-    func_ov015_02073030,
+    WirelessConnection_EnterState3Noop,
     HandleMatchTransition, /* HandleMatchTransition */
-    func_ov015_020730a4,
-    func_ov015_020730a8,
+    WirelessConnection_LeaveState3Noop,
+    WirelessConnection_EnterState4Noop,
     UpdateWirelessParentState, /* UpdateWirelessParentState */
-    func_ov015_02073148,
-    func_ov015_0207314c,
+    WirelessConnection_LeaveState4Noop,
+    WirelessConnection_EnterState5Noop,
     HandleConnectTransition, /* HandleConnectTransition */
-    func_ov015_020731b8,
+    WirelessConnection_LeaveState5Noop,
     StartWirelessFinalizeDelay16,
     PollWirelessFinalizeDelay17,
-    func_ov015_0207321c,
+    WirelessConnection_LeaveState6Noop,
     StartWirelessFinalizeDelay19,
     PollWirelessFinalizeDelay20,
-    func_ov015_02073280,
+    WirelessConnection_LeaveState7Noop,
 };
 
 void (*gWirelessStateUpdateCallback[1])(void) = {

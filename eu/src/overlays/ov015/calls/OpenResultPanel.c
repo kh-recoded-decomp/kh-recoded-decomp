@@ -1,3 +1,4 @@
+#define func_ov015_0206fa98 ApplyWirelessCardProgressBonus
 #define func_ov002_020621e4 ReleaseOv002SubPanelTextLayers
 #define DispatchContextCommand_02066c78 DispatchContextCommand
 #define InitPanelMainScreen_0206e730 InitPanelMainScreen

@@ -1,0 +1,3 @@
+#define Ov002_EnterPhase ResetAreaSceneSelectionFlags
+#define ScriptCmd_EnterPhase_020a0874 ScriptCmd_ResetAreaSceneSelectionFlags
+#include "src/ov007/shared_engine/ScriptCmd_EnterPhase_020a0874.c"

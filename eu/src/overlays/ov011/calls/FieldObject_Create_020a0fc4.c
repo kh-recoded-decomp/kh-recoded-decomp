@@ -4,13 +4,13 @@
 #define FieldObject_Draw_020a0e30 FieldObject_Draw
 #define FieldObject_SetPositionAndSync_020a0954 FieldObject_SetPositionAndSync
 #define ReleaseChildResourceAndForward_020a0910 ReleaseChildResourceAndForward
-#define _fp_init_020a094c func_ov011_020a096c
+#define _fp_init_020a094c SpawnObject_OnEnabledChangedNoop
 #define func_ov001_0207f0d0 AcquireEffectRecordPair
 #define func_ov001_0207f128 FieldObject_EnsureModelsLoaded
 #define func_ov001_0207f1e8 FreeFieldObjectClassAnimationBuffers
 #define func_ov001_0207f244 FreeFieldObjectShapeStorage
 #define func_ov011_020a07bc FieldObject_LoadAndPlace
-#define func_ov011_020a0950 func_ov011_020a0970
+#define func_ov011_020a0950 SpawnObject_GetPosition
 #define func_ov011_020a0d24 FieldObject_HandleContact
-#define func_ov011_020a0fa0 func_ov011_020a0fc0
+#define func_ov011_020a0fa0 SpawnObject_GetTargetPosition
 #include "src/ov011/field_objects/FieldObject_Create_020a0fa4.c"

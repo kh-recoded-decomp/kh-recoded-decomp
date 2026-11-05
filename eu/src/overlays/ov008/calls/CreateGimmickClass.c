@@ -26,11 +26,11 @@ extern void RespawnDelayedGimmick(void);
 extern void FreeFieldObjectClassAnimationBuffers(void);
 extern void ReleaseOwnerResource(void);
 extern void FreeFieldObjectShapeStorage(void);
-extern void func_ov008_020a0d70(void);
-extern void func_ov008_020a0d74(void);
+extern void DelayedGimmick_OnEnabledChangedNoop(void);
+extern void DelayedGimmick_GetPosition(void);
 extern void SetFieldObjectPosition_020a0d78(void);
-extern void func_ov008_020a0da0(void);
-extern void func_ov008_020a0da8(void);
+extern void DelayedGimmick_GetClassHitResult(void);
+extern void DelayedGimmick_QueryHitFalse(void);
 
 GimmickClass *CreateGimmickClass(int count)
 {
@@ -51,12 +51,12 @@ GimmickClass *CreateGimmickClass(int count)
     objectClass->hooks[4] = ReleaseOwnerResource;
     objectClass->hooks[6] = FreeFieldObjectShapeStorage;
     objectClass->hooks[7] = NULL;
-    objectClass->hooks[8] = func_ov008_020a0d70;
-    objectClass->hooks[10] = func_ov008_020a0d74;
+    objectClass->hooks[8] = DelayedGimmick_OnEnabledChangedNoop;
+    objectClass->hooks[10] = DelayedGimmick_GetPosition;
     objectClass->hooks[9] = SetFieldObjectPosition_020a0d78;
-    objectClass->hooks[11] = func_ov008_020a0da0;
+    objectClass->hooks[11] = DelayedGimmick_GetClassHitResult;
     objectClass->hooks[14] = NULL;
-    objectClass->hooks[12] = func_ov008_020a0da8;
+    objectClass->hooks[12] = DelayedGimmick_QueryHitFalse;
     objectClass->hooks[13] = NULL;
     objectClass->classType = 8;
     return objectClass;

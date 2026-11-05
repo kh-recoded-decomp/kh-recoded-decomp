@@ -4,14 +4,14 @@ extern void ScriptCmd_CreateEntryObjectInSlot(void); /* ScriptCmd_CreateEntryObj
 extern void ScriptCmd_ShowActorEmote(void); /* ScriptCmd_ShowActorEmote */
 extern void ScriptCmd_SetActorWander(void); /* ScriptCmd_SetActorWander */
 extern void ScriptCmd_CommitSideResult(void); /* ScriptCmd_EnterPhase */
-extern void func_ov007_020a0680(void);
+extern void ScriptCmd_SetAreaSceneDefinitionParams(void);
 extern void ScriptCmd_ForceRequest(void); /* ScriptCmd_ForceRequest */
 extern void ScriptCmd_PlayValueSequence(void); /* ScriptCmd_PlayValueSequence */
 extern void ScriptCmd_SetActorPath(void); /* ScriptCmd_SetActorPath */
 extern void ScriptCmd_CreateFieldTask(void); /* ScriptCmd_CreateFieldTask */
 extern void ScriptCmd_SetActorTarget(void); /* ScriptCmd_SetActorTarget */
 extern void ScriptCmd_ApplyOperandPair(void); /* ScriptCmd_ApplyOperandPair */
-extern void func_ov007_020a0894(void); /* ScriptCmd_EnterPhase */
+extern void ScriptCmd_ResetAreaSceneSelectionFlags(void); /* ScriptCmd_EnterPhase */
 
 void (*gFieldActorScriptCommandHandlers[23])(void) = {
     ScriptCmd_CreateEntryObjectInSlot, /* ScriptCmd_CreateEntryObjectInSlot */
@@ -22,7 +22,7 @@ void (*gFieldActorScriptCommandHandlers[23])(void) = {
     NULL,
     ScriptCmd_CommitSideResult, /* ScriptCmd_EnterPhase */
     NULL,
-    func_ov007_020a0680,
+    ScriptCmd_SetAreaSceneDefinitionParams,
     NULL,
     ScriptCmd_ForceRequest, /* ScriptCmd_ForceRequest */
     NULL,
@@ -36,5 +36,5 @@ void (*gFieldActorScriptCommandHandlers[23])(void) = {
     NULL,
     ScriptCmd_ApplyOperandPair, /* ScriptCmd_ApplyOperandPair */
     NULL,
-    func_ov007_020a0894, /* ScriptCmd_EnterPhase */
+    ScriptCmd_ResetAreaSceneSelectionFlags, /* ScriptCmd_EnterPhase */
 };

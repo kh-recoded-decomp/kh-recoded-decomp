@@ -1,0 +1,2 @@
+#define FSi_CloseFileCommand_020a0d88 DelayedGimmick_QueryHitFalse
+#include "src/ov008/library_nitro_fs/FSi_CloseFileCommand_020a0d88.c"

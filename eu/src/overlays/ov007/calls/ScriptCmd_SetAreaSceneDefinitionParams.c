@@ -1,0 +1,4 @@
+#define func_02025de4 ScriptVm_ReadOperandInt
+#define func_020bae48 SetAreaSceneDefinitionParams
+#define func_ov007_020a0660 ScriptCmd_SetAreaSceneDefinitionParams
+#include "src/ov007/reviewed_helpers/func_ov007_020a0660.c"

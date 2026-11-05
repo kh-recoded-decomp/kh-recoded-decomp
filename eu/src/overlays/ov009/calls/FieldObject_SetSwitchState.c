@@ -21,9 +21,9 @@ typedef struct FieldObject {
 extern FieldObject *GetStridedBufferEntry(FieldObjectClass *objectClass, int index);
 extern void SetObjectAnimTrack(FieldObject *object, int track);
 extern void FieldObject_SetSavedValue(FieldObject *object, u32 value);
-extern void func_ov009_020a0ab0(void);
-extern void func_ov009_020a0ad8(void);
-extern void func_ov009_020a0ae4(void);
+extern void SwitchObject_UpdateFallAndProximityChannel(void);
+extern void SwitchObject_UpdateFallInState1(void);
+extern void SwitchObject_UpdateFallInState2(void);
 
 void FieldObject_SetSwitchState(FieldObject *object, int state)
 {
@@ -33,7 +33,7 @@ void FieldObject_SetSwitchState(FieldObject *object, int state)
 
     switch (state) {
     case 0:
-        object->stateHandler = func_ov009_020a0ab0;
+        object->stateHandler = SwitchObject_UpdateFallAndProximityChannel;
         count = object->objectClass->objectCount;
         offCount = 0;
         for (i = 0; i < count; i++) {
@@ -49,12 +49,12 @@ void FieldObject_SetSwitchState(FieldObject *object, int state)
         object->flags |= 0x10;
         break;
     case 1:
-        object->stateHandler = func_ov009_020a0ad8;
+        object->stateHandler = SwitchObject_UpdateFallInState1;
         SetObjectAnimTrack(object, 0);
         object->flags &= ~0x10;
         break;
     case 2:
-        object->stateHandler = func_ov009_020a0ae4;
+        object->stateHandler = SwitchObject_UpdateFallInState2;
         FieldObject_SetSavedValue(object, 1);
         SetObjectAnimTrack(object, 0);
         object->flags &= ~0x10;

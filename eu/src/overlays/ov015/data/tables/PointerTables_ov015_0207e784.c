@@ -1,18 +1,18 @@
 #include "nitro/types.h"
 
-extern void func_ov015_02070c54(void);
+extern void WirelessMenu_LeaveState0Noop(void);
 extern void ResetPanelSelection(void); /* ResetPanelSelection */
 extern void UpdatePanelMenuState_02070c80(void); /* UpdatePanelMenuState */
-extern void func_ov015_02070fa8(void); /* PXI_Init */
+extern void WirelessMenu_LeaveState1AndReleaseCursor(void); /* PXI_Init */
 extern void InitWirelessMenuOwnerProfileView(void);
 extern void UpdatePanelPendingAction(void); /* UpdatePanelPendingAction */
-extern void func_ov015_02071060(void);
+extern void WirelessMenu_LeaveOwnerProfileStateNoop(void);
 extern void StartPlayerCardSharing(void); /* StartPlayerCardSharing */
 extern void UpdatePanelShareState(void);
-extern void func_ov015_020716ec(void); /* PXI_Init */
+extern void WirelessMenu_LeaveState3AndReleaseCursor(void); /* PXI_Init */
 extern void ClearOv002PanelModeDirtyFromWireless(void); /* OSi_IrqDma0 */
 extern void DrawWirelessPanelHeaderAndEnterState1(void);
-extern void func_ov015_02071ab0(void);
+extern void WirelessMenu_LeaveHeaderStateNoop(void);
 extern void OpenResultPanel(void); /* OpenResultPanel */
 extern void FinishWirelessBoardViewWhenIntroEnds(void);
 extern void RequestPanelConfirm(void); /* RequestPanelConfirm */
@@ -25,19 +25,19 @@ extern void ResetPanelMenuElements(void); /* ResetPanelMenuElements */
 extern void UpdatePanelExitSequence(void); /* UpdatePanelExitSequence */
 
 void (*gLinkPanelStateHandlers[22])(void) = {
-    func_ov015_02070c54,
+    WirelessMenu_LeaveState0Noop,
     ResetPanelSelection, /* ResetPanelSelection */
     UpdatePanelMenuState_02070c80, /* UpdatePanelMenuState */
-    func_ov015_02070fa8, /* PXI_Init */
+    WirelessMenu_LeaveState1AndReleaseCursor, /* PXI_Init */
     InitWirelessMenuOwnerProfileView,
     UpdatePanelPendingAction, /* UpdatePanelPendingAction */
-    func_ov015_02071060,
+    WirelessMenu_LeaveOwnerProfileStateNoop,
     StartPlayerCardSharing, /* StartPlayerCardSharing */
     UpdatePanelShareState,
-    func_ov015_020716ec, /* PXI_Init */
+    WirelessMenu_LeaveState3AndReleaseCursor, /* PXI_Init */
     ClearOv002PanelModeDirtyFromWireless, /* OSi_IrqDma0 */
     DrawWirelessPanelHeaderAndEnterState1,
-    func_ov015_02071ab0,
+    WirelessMenu_LeaveHeaderStateNoop,
     OpenResultPanel, /* OpenResultPanel */
     FinishWirelessBoardViewWhenIntroEnds,
     RequestPanelConfirm, /* RequestPanelConfirm */

@@ -1,0 +1,3 @@
+#define PXI_InitFifo ReleaseMenuCursorState
+#define PXI_Init_020716ec WirelessMenu_LeaveState3AndReleaseCursor
+#include "src/ov015/library_nitro_pxi/PXI_Init_020716ec.c"

@@ -660,3 +660,16 @@ scripted action-handler selection and scene-group collision callbacks:
 
 The documents preserve raw native views while separating them from logical
 portable signatures and unknown gameplay enum meanings.
+
+## Field classes, panel state tables and wireless callbacks
+
+Sixty-nine entrypoints now identify object-class methods, state callbacks,
+menu touch/widget hooks and the wireless received-card callback setter:
+
+- [FIELD_CLASS_CALLBACK_CONTRACTS.md](FIELD_CLASS_CALLBACK_CONTRACTS.md): 29 entrypoints in overlays 007-011.
+- [PANEL_WIRELESS_CALLBACK_CONTRACTS.md](PANEL_WIRELESS_CALLBACK_CONTRACTS.md): 40 entrypoints in overlays 013-015.
+
+Constructors and native dispatch establish class callback slots separately
+from EntryPool slots. Full logical state tables preserve enter/update/exit
+roles across physical DATA fragments. The wireless callback setter is game
+connection work despite its inherited sound-archive type and directory.

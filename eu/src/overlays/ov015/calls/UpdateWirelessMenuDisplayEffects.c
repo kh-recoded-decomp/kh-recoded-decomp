@@ -16,7 +16,7 @@ typedef struct {
 } PanelFlagsE2;
 
 extern s8 *data_ov015_0207e960;
-extern void func_ov015_02075338(void);
+extern void WirelessMenu_State5DisplayEffectsNoop(void);
 extern void UpdateConnectTimer(void);
 extern void AnimateWirelessBackgroundScroll(void);
 extern void AnimatePanelBackground(void);
@@ -24,7 +24,7 @@ extern void AnimateWirelessHighlightPalette(void);
 
 void UpdateWirelessMenuDisplayEffects(void) {
     if (data_ov015_0207e960[0] == 5) {
-        func_ov015_02075338();
+        WirelessMenu_State5DisplayEffectsNoop();
     }
     if (((PanelFlagsE2 *)(data_ov015_0207e960 + 0xe2))->flag4 != 0) {
         UpdateConnectTimer();

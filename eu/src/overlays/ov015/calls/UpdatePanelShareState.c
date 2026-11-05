@@ -1,3 +1,4 @@
+#define func_ov015_0206fa98 ApplyWirelessCardProgressBonus
 #define func_ov015_02070af8 SetWirelessMenuState
 #define func_ov015_020716f8 InitWirelessMenuChoiceWidgets
 #define func_ov015_02072cb4 ReturnWirelessConnectionToState2IfInRange3To7

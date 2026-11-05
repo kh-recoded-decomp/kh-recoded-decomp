@@ -112,7 +112,7 @@ src/overlays/ov015/calls/HasIdleActiveEntry.c:
     complete
     .text       start:0x0206fa38 end:0x0206fa98
 
-src/overlays/ov015/calls/func_ov015_0206fa98.c:
+src/overlays/ov015/calls/ApplyWirelessCardProgressBonus.c:
     complete
     .text       start:0x0206fa98 end:0x0206fb14
 
@@ -188,7 +188,7 @@ src/overlays/ov015/calls/UpdatePanelExitSequence.c:
     complete
     .text       start:0x02070b8c end:0x02070c54
 
-src/overlays/ov015/auto/func_ov015_02070c54.c:
+src/overlays/ov015/auto/WirelessMenu_LeaveState0Noop.c:
     complete
     .text       start:0x02070c54 end:0x02070c58
 
@@ -200,7 +200,7 @@ src/overlays/ov015/calls/UpdatePanelMenuState_02070c80.c:
     complete
     .text       start:0x02070c80 end:0x02070fa8
 
-src/overlays/ov015/calls/func_ov015_02070fa8.c:
+src/overlays/ov015/calls/WirelessMenu_LeaveState1AndReleaseCursor.c:
     complete
     .text       start:0x02070fa8 end:0x02070fb4
 
@@ -212,7 +212,7 @@ src/overlays/ov015/calls/UpdatePanelPendingAction.c:
     complete
     .text       start:0x02070fe8 end:0x02071060
 
-src/overlays/ov015/auto/func_ov015_02071060.c:
+src/overlays/ov015/auto/WirelessMenu_LeaveOwnerProfileStateNoop.c:
     complete
     .text       start:0x02071060 end:0x02071064
 
@@ -224,7 +224,7 @@ src/overlays/ov015/calls/UpdatePanelShareState.c:
     complete
     .text       start:0x02071100 end:0x020716ec
 
-src/overlays/ov015/calls/func_ov015_020716ec.c:
+src/overlays/ov015/calls/WirelessMenu_LeaveState3AndReleaseCursor.c:
     complete
     .text       start:0x020716ec end:0x020716f8
 
@@ -244,7 +244,7 @@ src/overlays/ov015/calls/DrawWirelessPanelHeaderAndEnterState1.c:
     complete
     .text       start:0x02071a88 end:0x02071ab0
 
-src/overlays/ov015/auto/func_ov015_02071ab0.c:
+src/overlays/ov015/auto/WirelessMenu_LeaveHeaderStateNoop.c:
     complete
     .text       start:0x02071ab0 end:0x02071ab4
 
@@ -300,7 +300,7 @@ src/overlays/ov015/calls/UpdatePanelSelectionSound.c:
     complete
     .text       start:0x02072718 end:0x02072754
 
-src/overlays/ov015/auto/func_ov015_02072754.c:
+src/overlays/ov015/auto/WirelessSubWidget4ConfirmNoop.c:
     complete
     .text       start:0x02072754 end:0x02072758
 
@@ -328,15 +328,15 @@ src/overlays/ov015/calls/SelectNextWirelessPanelPageWrapper.c:
     complete
     .text       start:0x02072854 end:0x02072860
 
-src/overlays/ov015/calls/func_ov015_02072860.c:
+src/overlays/ov015/calls/WirelessCardSlot1_SelectAndSlideOutWithSound.c:
     complete
     .text       start:0x02072860 end:0x02072878
 
-src/overlays/ov015/calls/func_ov015_02072878.c:
+src/overlays/ov015/calls/WirelessCardSlot2_SelectAndSlideOutWithSound.c:
     complete
     .text       start:0x02072878 end:0x02072890
 
-src/overlays/ov015/calls/func_ov015_02072890.c:
+src/overlays/ov015/calls/WirelessCardSlot3_SelectAndSlideOutWithSound.c:
     complete
     .text       start:0x02072890 end:0x020728a8
 
@@ -368,7 +368,7 @@ src/overlays/ov015/calls/ReturnWirelessConnectionToState2IfInRange3To7.c:
     complete
     .text       start:0x02072cb4 end:0x02072cec
 
-libs/nns/snd/calls/func_ov015_02072cec.c:
+libs/nns/snd/calls/SetWirelessReceivedCardCallback.c:
     complete
     .text       start:0x02072cec end:0x02072d00
 
@@ -392,19 +392,19 @@ src/overlays/ov015/calls/EnterWirelessConnectionState3UnlessHelperState3.c:
     complete
     .text       start:0x02072f7c end:0x02072f98
 
-src/overlays/ov015/auto/func_ov015_02072f98.c:
+src/overlays/ov015/auto/WirelessConnection_LeaveState0Noop.c:
     complete
     .text       start:0x02072f98 end:0x02072f9c
 
-src/overlays/ov015/auto/func_ov015_02072f9c.c:
+src/overlays/ov015/auto/WirelessConnection_EnterState1Noop.c:
     complete
     .text       start:0x02072f9c end:0x02072fa0
 
-src/overlays/ov015/auto/func_ov015_02072fa0.c:
+src/overlays/ov015/auto/WirelessConnection_UpdateState1Noop.c:
     complete
     .text       start:0x02072fa0 end:0x02072fa4
 
-src/overlays/ov015/auto/func_ov015_02072fa4.c:
+src/overlays/ov015/auto/WirelessConnection_LeaveState1Noop.c:
     complete
     .text       start:0x02072fa4 end:0x02072fa8
 
@@ -420,7 +420,7 @@ src/overlays/ov015/calls/SetWirelessReadyFlag.c:
     complete
     .text       start:0x02073018 end:0x02073030
 
-src/overlays/ov015/auto/func_ov015_02073030.c:
+src/overlays/ov015/auto/WirelessConnection_EnterState3Noop.c:
     complete
     .text       start:0x02073030 end:0x02073034
 
@@ -428,11 +428,11 @@ src/overlays/ov015/calls/HandleMatchTransition.c:
     complete
     .text       start:0x02073034 end:0x020730a4
 
-src/overlays/ov015/auto/func_ov015_020730a4.c:
+src/overlays/ov015/auto/WirelessConnection_LeaveState3Noop.c:
     complete
     .text       start:0x020730a4 end:0x020730a8
 
-src/overlays/ov015/auto/func_ov015_020730a8.c:
+src/overlays/ov015/auto/WirelessConnection_EnterState4Noop.c:
     complete
     .text       start:0x020730a8 end:0x020730ac
 
@@ -440,11 +440,11 @@ src/overlays/ov015/calls/UpdateWirelessParentState.c:
     complete
     .text       start:0x020730ac end:0x02073148
 
-src/overlays/ov015/auto/func_ov015_02073148.c:
+src/overlays/ov015/auto/WirelessConnection_LeaveState4Noop.c:
     complete
     .text       start:0x02073148 end:0x0207314c
 
-src/overlays/ov015/auto/func_ov015_0207314c.c:
+src/overlays/ov015/auto/WirelessConnection_EnterState5Noop.c:
     complete
     .text       start:0x0207314c end:0x02073150
 
@@ -452,7 +452,7 @@ src/overlays/ov015/calls/HandleConnectTransition.c:
     complete
     .text       start:0x02073150 end:0x020731b8
 
-src/overlays/ov015/auto/func_ov015_020731b8.c:
+src/overlays/ov015/auto/WirelessConnection_LeaveState5Noop.c:
     complete
     .text       start:0x020731b8 end:0x020731bc
 
@@ -464,7 +464,7 @@ src/overlays/ov015/calls/PollWirelessFinalizeDelay17.c:
     complete
     .text       start:0x020731d4 end:0x0207321c
 
-src/overlays/ov015/auto/func_ov015_0207321c.c:
+src/overlays/ov015/auto/WirelessConnection_LeaveState6Noop.c:
     complete
     .text       start:0x0207321c end:0x02073220
 
@@ -476,7 +476,7 @@ src/overlays/ov015/calls/PollWirelessFinalizeDelay20.c:
     complete
     .text       start:0x02073238 end:0x02073280
 
-src/overlays/ov015/auto/func_ov015_02073280.c:
+src/overlays/ov015/auto/WirelessConnection_LeaveState7Noop.c:
     complete
     .text       start:0x02073280 end:0x02073284
 
@@ -764,7 +764,7 @@ src/overlays/ov015/calls/UpdateWirelessBoardIntro.c:
     complete
     .text       start:0x02075320 end:0x02075338
 
-src/overlays/ov015/auto/func_ov015_02075338.c:
+src/overlays/ov015/auto/WirelessMenu_State5DisplayEffectsNoop.c:
     complete
     .text       start:0x02075338 end:0x0207533c
 

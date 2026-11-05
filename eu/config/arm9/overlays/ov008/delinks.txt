@@ -24,7 +24,7 @@ src/overlays/ov008/calls/FieldObject_RespawnSegmented.c:
     complete
     .text       start:0x020a06fc end:0x020a0948
 
-src/overlays/ov008/auto/func_ov008_020a0948.c:
+src/overlays/ov008/auto/ChildSpawner_GetPosition.c:
     complete
     .text       start:0x020a0948 end:0x020a094c
 
@@ -32,11 +32,11 @@ src/overlays/ov008/calls/SetFieldObjectPosition.c:
     complete
     .text       start:0x020a094c end:0x020a0972
 
-src/overlays/ov008/auto/func_ov008_020a0974.c:
+src/overlays/ov008/auto/ChildSpawner_ApplyHitTrue.c:
     complete
     .text       start:0x020a0974 end:0x020a0978
 
-src/overlays/ov008/auto/func_ov008_020a0978.c:
+src/overlays/ov008/auto/ChildSpawner_QueryHitFalse.c:
     complete
     .text       start:0x020a0978 end:0x020a097c
 
@@ -68,11 +68,11 @@ src/overlays/ov008/calls/RespawnDelayedGimmick.c:
     complete
     .text       start:0x020a0c84 end:0x020a0d70
 
-src/overlays/ov008/auto/func_ov008_020a0d70.c:
+src/overlays/ov008/auto/DelayedGimmick_OnEnabledChangedNoop.c:
     complete
     .text       start:0x020a0d70 end:0x020a0d72
 
-src/overlays/ov008/auto/func_ov008_020a0d74.c:
+src/overlays/ov008/auto/DelayedGimmick_GetPosition.c:
     complete
     .text       start:0x020a0d74 end:0x020a0d78
 
@@ -80,11 +80,11 @@ src/overlays/ov008/calls/SetFieldObjectPosition_020a0d78.c:
     complete
     .text       start:0x020a0d78 end:0x020a0d9e
 
-src/overlays/ov008/auto/func_ov008_020a0da0.c:
+src/overlays/ov008/auto/DelayedGimmick_GetClassHitResult.c:
     complete
     .text       start:0x020a0da0 end:0x020a0da6
 
-src/overlays/ov008/auto/func_ov008_020a0da8.c:
+src/overlays/ov008/auto/DelayedGimmick_QueryHitFalse.c:
     complete
     .text       start:0x020a0da8 end:0x020a0dac
 

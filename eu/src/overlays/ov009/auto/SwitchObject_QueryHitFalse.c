@@ -1,0 +1,2 @@
+#define FSi_CloseFileCommand_020a094c SwitchObject_QueryHitFalse
+#include "src/ov009/library_nitro_fs/FSi_CloseFileCommand_020a094c.c"

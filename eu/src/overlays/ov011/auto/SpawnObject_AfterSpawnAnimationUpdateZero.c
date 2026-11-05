@@ -1,0 +1,2 @@
+#define FSi_CloseFileCommand_020a0ef8 SpawnObject_AfterSpawnAnimationUpdateZero
+#include "src/ov011/library_nitro_fs/FSi_CloseFileCommand_020a0ef8.c"

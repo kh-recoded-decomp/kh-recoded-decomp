@@ -42,11 +42,11 @@ extern void FieldObject_RespawnIdle(void);
 extern void FreeFieldObjectClassAnimationBuffers(void);
 extern void ReleaseOwnerResource(void);
 extern void FreeFieldObjectShapeStorage(void);
-extern void func_ov010_020a0a84(void);
-extern void func_ov010_020a0a88(void);
-extern void func_ov010_020a0a8c(void);
-extern void func_ov010_020a0a90(void);
-extern void func_ov010_020a0a98(void);
+extern void FrontViewObject_OnEnabledChangedNoop(void);
+extern void FrontViewObject_GetPosition(void);
+extern void FrontViewObject_SetPositionNoop(void);
+extern void FrontViewObject_GetClassHitResult(void);
+extern void FrontViewObject_QueryHitFalse(void);
 extern void FieldObject_DrawFrontView(void);
 
 ObjectClass *FieldObjectClass_CreateFrontView(int height)
@@ -68,12 +68,12 @@ ObjectClass *FieldObjectClass_CreateFrontView(int height)
     objectClass->onEnter = ReleaseOwnerResource;
     objectClass->onLeave = FreeFieldObjectShapeStorage;
     objectClass->handler1c = NULL;
-    objectClass->onTouch = func_ov010_020a0a84;
-    objectClass->getField40 = func_ov010_020a0a88;
-    objectClass->setPosition = func_ov010_020a0a8c;
-    objectClass->getField50 = func_ov010_020a0a90;
+    objectClass->onTouch = FrontViewObject_OnEnabledChangedNoop;
+    objectClass->getField40 = FrontViewObject_GetPosition;
+    objectClass->setPosition = FrontViewObject_SetPositionNoop;
+    objectClass->getField50 = FrontViewObject_GetClassHitResult;
     objectClass->handler38 = NULL;
-    objectClass->onClose = func_ov010_020a0a98;
+    objectClass->onClose = FrontViewObject_QueryHitFalse;
     objectClass->handler34 = NULL;
     objectClass->onDrawExtra = FieldObject_DrawFrontView;
     objectClass->layer = 0x11;

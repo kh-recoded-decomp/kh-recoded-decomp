@@ -17,7 +17,7 @@ extern void UpdatePanelResultPrompt(void);
 extern void ResetPanelLayout(void);
 extern void ResetPanelSaveStep(void);
 extern void PollPanelSaveStep(void);
-extern void func_ov013_020732a4(void);
+extern void Ov013Panel_LeaveSaveStateNoop(void);
 extern void CloseRecordPanelMenu(void);
 extern void UpdatePanelMenuState(void);
 extern void RefreshPanelSlotLinks(void);
@@ -26,13 +26,13 @@ extern void UpdatePanelBrowseState(void);
 extern void ClearPanelListCallback(void);
 extern void BeginOv013PlayerCardPageTransition(void);
 extern void AdvancePanelCloseStep(void);
-extern void func_ov013_020739a0(void);
+extern void Ov013Panel_LeavePlayerCardTransitionNoop(void);
 extern void ResetPanelListUpStep(void);
 extern void UpdateOv013HeldScrollTowardStart(void);
-extern void func_ov013_02073a98(void);
+extern void Ov013Panel_LeaveHeldScrollTowardStartNoop(void);
 extern void ResetPanelListDownStep(void);
 extern void UpdateOv013HeldScrollTowardEnd(void);
-extern void func_ov013_02073b90(void);
+extern void Ov013Panel_LeaveHeldScrollTowardEndNoop(void);
 extern void OpenPanelConfirmPrompt(void);
 extern void UpdatePanelDismissPrompt(void);
 extern void RestorePanelBgPriorities(void);
@@ -44,11 +44,11 @@ PanelStateCallbacks gPanelStateCallbacks[12] = {
     { OpenPanelSelectionMenu, UpdatePanelResultState, ResetPanelLayoutClearFlag },
     { RefreshSelectedSlotFlags, UpdateSlotRemovalPhase, CancelPanelConfirm },
     { OpenPanelResultMenu, UpdatePanelResultPrompt, ResetPanelLayout },
-    { ResetPanelSaveStep, PollPanelSaveStep, func_ov013_020732a4 },
+    { ResetPanelSaveStep, PollPanelSaveStep, Ov013Panel_LeaveSaveStateNoop },
     { CloseRecordPanelMenu, UpdatePanelMenuState, RefreshPanelSlotLinks },
     { ClosePanelMenu, UpdatePanelBrowseState, ClearPanelListCallback },
-    { BeginOv013PlayerCardPageTransition, AdvancePanelCloseStep, func_ov013_020739a0 },
-    { ResetPanelListUpStep, UpdateOv013HeldScrollTowardStart, func_ov013_02073a98 },
-    { ResetPanelListDownStep, UpdateOv013HeldScrollTowardEnd, func_ov013_02073b90 },
+    { BeginOv013PlayerCardPageTransition, AdvancePanelCloseStep, Ov013Panel_LeavePlayerCardTransitionNoop },
+    { ResetPanelListUpStep, UpdateOv013HeldScrollTowardStart, Ov013Panel_LeaveHeldScrollTowardStartNoop },
+    { ResetPanelListDownStep, UpdateOv013HeldScrollTowardEnd, Ov013Panel_LeaveHeldScrollTowardEndNoop },
     { OpenPanelConfirmPrompt, UpdatePanelDismissPrompt, RestorePanelBgPriorities },
 };

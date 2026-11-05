@@ -1,0 +1,2 @@
+#define func_ov015_020730a4 WirelessConnection_LeaveState3Noop
+#include "src/ov015/panel_state/func_ov015_020730a4.c"

@@ -1,3 +1,6 @@
+#define func_ov015_02072860 WirelessCardSlot1_SelectAndSlideOutWithSound
+#define func_ov015_02072878 WirelessCardSlot2_SelectAndSlideOutWithSound
+#define func_ov015_02072890 WirelessCardSlot3_SelectAndSlideOutWithSound
 #define func_ov015_0206c660 ReleaseWirelessMenuWidgetGroups
 #define func_ov015_0206e658 SetupWirelessSelectionSlotFromWidget
 #define func_ov002_020629a8 ResetOv002PanelGraphics

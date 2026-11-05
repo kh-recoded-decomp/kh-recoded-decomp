@@ -1,3 +1,6 @@
+#define func_ov013_02074718 Ov013SubWidget19ConfirmNoop
+#define func_ov013_020749ec Ov013SubWidget26ConfirmNoop
+#define func_ov013_020749f0 Ov013SubWidget27ConfirmNoop
 #define func_ov013_02070b78 DrawOv013ListPositionCounter
 #define func_ov013_02074598 EnterOv013PanelMenuState9
 #define func_ov013_020745a8 EnterOv013PanelMenuState10

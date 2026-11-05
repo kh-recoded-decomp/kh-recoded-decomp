@@ -39,11 +39,11 @@ src/overlays/ov011/calls/ReleaseChildResourceAndForward.c:
     complete
     .text       start:0x020a0930 end:0x020a096c
 
-src/overlays/ov011/auto/func_ov011_020a096c.c:
+src/overlays/ov011/auto/SpawnObject_OnEnabledChangedNoop.c:
     complete
     .text       start:0x020a096c end:0x020a096e
 
-src/overlays/ov011/auto/func_ov011_020a0970.c:
+src/overlays/ov011/auto/SpawnObject_GetPosition.c:
     complete
     .text       start:0x020a0970 end:0x020a0974
 
@@ -71,7 +71,7 @@ src/overlays/ov011/calls/FieldObject_Draw.c:
     complete
     .text       start:0x020a0e50 end:0x020a0ee8
 
-src/overlays/ov011/auto/func_ov011_020a0ee8.c:
+src/overlays/ov011/auto/SpawnObject_BeforeSpawnUpdateZero.c:
     complete
     .text       start:0x020a0ee8 end:0x020a0eec
 
@@ -79,7 +79,7 @@ src/overlays/ov011/calls/FieldObject_AdvanceToAnimEnd.c:
     complete
     .text       start:0x020a0eec end:0x020a0f18
 
-src/overlays/ov011/auto/func_ov011_020a0f18.c:
+src/overlays/ov011/auto/SpawnObject_AfterSpawnAnimationUpdateZero.c:
     complete
     .text       start:0x020a0f18 end:0x020a0f1c
 
@@ -91,7 +91,7 @@ src/overlays/ov011/calls/FieldGroup_ShufflePositions.c:
     complete
     .text       start:0x020a0f50 end:0x020a0fbe
 
-src/overlays/ov011/auto/func_ov011_020a0fc0.c:
+src/overlays/ov011/auto/SpawnObject_GetTargetPosition.c:
     complete
     .text       start:0x020a0fc0 end:0x020a0fc4
 

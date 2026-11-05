@@ -40,12 +40,12 @@ extern void FieldObject_RespawnSwitch(void);
 extern void FreeFieldObjectClassAnimationBuffers(void);
 extern void ReleaseOwnerResource(void);
 extern void FreeFieldObjectShapeStorage(void);
-extern void func_ov009_020a0908(void);
+extern void SwitchObject_OnEnabledChangedNoop(void);
 extern void GetFieldPtrAt0x40(void);
 extern void FieldObject_SetLiftedPosition(void);
 extern void GetIndirectFieldAt0x50(void);
 extern void ScriptCmd_SpawnModeTwo(void);
-extern void func_ov009_020a096c(void);
+extern void SwitchObject_QueryHitFalse(void);
 extern void GetFieldPtrAt0x40_020a0910(void);
 
 ObjectClass *FieldObjectClass_Create(int height)
@@ -67,12 +67,12 @@ ObjectClass *FieldObjectClass_Create(int height)
     objectClass->onEnter = ReleaseOwnerResource;
     objectClass->onLeave = FreeFieldObjectShapeStorage;
     objectClass->handler1c = NULL;
-    objectClass->onTouch = func_ov009_020a0908;
+    objectClass->onTouch = SwitchObject_OnEnabledChangedNoop;
     objectClass->getField40 = GetFieldPtrAt0x40;
     objectClass->getPosition = FieldObject_SetLiftedPosition;
     objectClass->getField50 = GetIndirectFieldAt0x50;
     objectClass->onSpawn = ScriptCmd_SpawnModeTwo;
-    objectClass->onClose = func_ov009_020a096c;
+    objectClass->onClose = SwitchObject_QueryHitFalse;
     objectClass->getAlias = GetFieldPtrAt0x40_020a0910;
     objectClass->layer = 0xf;
     return objectClass;

@@ -1,3 +1,4 @@
+#define func_ov015_02072cec SetWirelessReceivedCardCallback
 #define AddReceivedPlayerCard_020721ec AddReceivedPlayerCard
 #define InitPlayerCard_0206f524 InitPlayerCard
 #define InitShareBuffers_02072948 InitShareBuffers

@@ -1,3 +1,0 @@
-#define MsgQueue_GetHeap_020a0ac4 func_ov009_020a0ae4
-#define NNSi_FndGetCurrentRootHeap FieldObject_UpdateFall
-#include "src/ov009/shared_engine/MsgQueue_GetHeap_020a0ac4.c"

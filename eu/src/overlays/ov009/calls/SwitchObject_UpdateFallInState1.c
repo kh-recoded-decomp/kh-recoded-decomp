@@ -1,0 +1,3 @@
+#define MsgQueue_GetHeap_020a0ab8 SwitchObject_UpdateFallInState1
+#define NNSi_FndGetCurrentRootHeap FieldObject_UpdateFall
+#include "src/ov009/shared_engine/MsgQueue_GetHeap_020a0ab8.c"

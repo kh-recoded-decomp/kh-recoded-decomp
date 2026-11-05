@@ -236,7 +236,7 @@ src/overlays/ov013/calls/PollPanelSaveStep.c:
     complete
     .text       start:0x0207324c end:0x020732a4
 
-src/overlays/ov013/auto/func_ov013_020732a4.c:
+src/overlays/ov013/auto/Ov013Panel_LeaveSaveStateNoop.c:
     complete
     .text       start:0x020732a4 end:0x020732a8
 
@@ -272,7 +272,7 @@ src/overlays/ov013/calls/AdvancePanelCloseStep.c:
     complete
     .text       start:0x02073944 end:0x020739a0
 
-src/overlays/ov013/auto/func_ov013_020739a0.c:
+src/overlays/ov013/auto/Ov013Panel_LeavePlayerCardTransitionNoop.c:
     complete
     .text       start:0x020739a0 end:0x020739a4
 
@@ -284,7 +284,7 @@ src/overlays/ov013/calls/UpdateOv013HeldScrollTowardStart.c:
     complete
     .text       start:0x020739bc end:0x02073a98
 
-src/overlays/ov013/auto/func_ov013_02073a98.c:
+src/overlays/ov013/auto/Ov013Panel_LeaveHeldScrollTowardStartNoop.c:
     complete
     .text       start:0x02073a98 end:0x02073a9c
 
@@ -296,7 +296,7 @@ src/overlays/ov013/calls/UpdateOv013HeldScrollTowardEnd.c:
     complete
     .text       start:0x02073ab4 end:0x02073b90
 
-src/overlays/ov013/auto/func_ov013_02073b90.c:
+src/overlays/ov013/auto/Ov013Panel_LeaveHeldScrollTowardEndNoop.c:
     complete
     .text       start:0x02073b90 end:0x02073b94
 
@@ -328,11 +328,11 @@ src/overlays/ov013/calls/SetPanelScrollUpDirection.c:
     complete
     .text       start:0x02074218 end:0x02074238
 
-src/overlays/ov013/auto/func_ov013_02074238.c:
+src/overlays/ov013/auto/Ov013Scroll_Phase0UpdateNoop.c:
     complete
     .text       start:0x02074238 end:0x0207423c
 
-src/overlays/ov013/auto/func_ov013_0207423c.c:
+src/overlays/ov013/auto/Ov013Scroll_LeavePhase0Noop.c:
     complete
     .text       start:0x0207423c end:0x02074240
 
@@ -344,7 +344,7 @@ src/overlays/ov013/calls/ScrollPanelSlotsUp.c:
     complete
     .text       start:0x020742a4 end:0x02074348
 
-src/overlays/ov013/auto/func_ov013_02074348.c:
+src/overlays/ov013/auto/Ov013Scroll_LeaveUpNoop.c:
     complete
     .text       start:0x02074348 end:0x0207434c
 
@@ -356,7 +356,7 @@ src/overlays/ov013/calls/ScrollPanelSlotsDown.c:
     complete
     .text       start:0x0207436c end:0x0207441c
 
-src/overlays/ov013/auto/func_ov013_0207441c.c:
+src/overlays/ov013/auto/Ov013Scroll_LeaveDownNoop.c:
     complete
     .text       start:0x0207441c end:0x02074420
 
@@ -368,7 +368,7 @@ src/overlays/ov013/calls/SetOv013WidgetSelectionBWithSound.c:
     complete
     .text       start:0x0207445c end:0x02074498
 
-src/overlays/ov013/auto/func_ov013_02074498.c:
+src/overlays/ov013/auto/Ov013MenuTouchEventNoop.c:
     complete
     .text       start:0x02074498 end:0x0207449c
 
@@ -408,7 +408,7 @@ src/overlays/ov013/calls/SetOv013ResultMode2AndPlaySound.c:
     complete
     .text       start:0x020746f4 end:0x02074718
 
-src/overlays/ov013/auto/func_ov013_02074718.c:
+src/overlays/ov013/auto/Ov013SubWidget19ConfirmNoop.c:
     complete
     .text       start:0x02074718 end:0x0207471c
 
@@ -436,11 +436,11 @@ src/overlays/ov013/calls/SelectPanelTint5.c:
     complete
     .text       start:0x02074974 end:0x020749ec
 
-src/overlays/ov013/auto/func_ov013_020749ec.c:
+src/overlays/ov013/auto/Ov013SubWidget26ConfirmNoop.c:
     complete
     .text       start:0x020749ec end:0x020749f0
 
-src/overlays/ov013/auto/func_ov013_020749f0.c:
+src/overlays/ov013/auto/Ov013SubWidget27ConfirmNoop.c:
     complete
     .text       start:0x020749f0 end:0x020749f4
 

@@ -95,7 +95,7 @@ extern const char sOv015_WxcWlmP2_0207e7e0[];
 extern const char sOv015_WxcWlaP2_0207e7ec[];
 
 extern void HandleWirelessPanelNavigation(WidgetPositionRecord *widget, u32 keys);
-extern void func_ov015_02072754(void);
+extern void WirelessSubWidget4ConfirmNoop(void);
 extern void PositionWirelessPanelSelectionMarker(void);
 extern void SetPanelFlagE2Bit3(void);
 extern void SelectPreviousWirelessPanelSubpageWrapper(void);
@@ -352,7 +352,7 @@ void SetupPanelGraphics(void) {
         SetFocusedWidget(data_ov015_0207e960->subObj, element);
     }
     SetWidgetRootInputCallback(data_ov015_0207e960->subObj, HandleWirelessPanelNavigation);
-    ResolveEntryStoreWord(data_ov015_0207e960->subObj, 4, func_ov015_02072754);
+    ResolveEntryStoreWord(data_ov015_0207e960->subObj, 4, WirelessSubWidget4ConfirmNoop);
     ResolveEntryStoreWord(data_ov015_0207e960->subObj, 9, PositionWirelessPanelSelectionMarker);
     ResolveEntryStoreWord(data_ov015_0207e960->subObj, 17, SetPanelFlagE2Bit3);
     ResolveEntryStoreWord(data_ov015_0207e960->subObj, 30, SelectPreviousWirelessPanelSubpageWrapper);

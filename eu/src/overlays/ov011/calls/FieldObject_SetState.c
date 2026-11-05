@@ -25,9 +25,9 @@ struct FieldObject {
     s32 frame;
 };
 
-extern int func_ov011_020a0ee8(FieldObject *object);
+extern int SpawnObject_BeforeSpawnUpdateZero(FieldObject *object);
 extern int FieldObject_AdvanceToAnimEnd(FieldObject *object);
-extern int func_ov011_020a0f18(FieldObject *object);
+extern int SpawnObject_AfterSpawnAnimationUpdateZero(FieldObject *object);
 extern ActorContext *GetActorRegistry(void);
 extern void QuadTree_RemoveObject(void *tree, void *object);
 extern void SetObjectAnimTrack(FieldObject *object, s8 track);
@@ -37,7 +37,7 @@ void FieldObject_SetState(FieldObject *object, int state)
     object->state = state;
     switch (state) {
     case 0:
-        object->stateUpdate = func_ov011_020a0ee8;
+        object->stateUpdate = SpawnObject_BeforeSpawnUpdateZero;
         object->flags |= 0x30;
         break;
     case 1:
@@ -50,7 +50,7 @@ void FieldObject_SetState(FieldObject *object, int state)
         break;
     case 2:
         object->flags &= ~0x20;
-        object->stateUpdate = func_ov011_020a0f18;
+        object->stateUpdate = SpawnObject_AfterSpawnAnimationUpdateZero;
         object->flags &= ~0x10;
         break;
     }

@@ -51,11 +51,11 @@ extern void FieldObject_RespawnShaped(void);
 extern void FreeFieldObjectClassAnimationBuffers(void);
 extern void ReleaseOwnerResource(void);
 extern void FreeFieldObjectShapeStorage(void);
-extern void func_ov010_020a07b4(void);
-extern void func_ov010_020a07b8(void);
+extern void ShapedObject_OnEnabledChangedNoop(void);
+extern void ShapedObject_GetPosition(void);
 extern void FieldObject_SetPosition_020a07bc(void);
-extern void func_ov010_020a0828(void);
-extern void func_ov010_020a0830(void);
+extern void ShapedObject_GetClassHitResult(void);
+extern void ShapedObject_QueryHitFalse(void);
 
 ObjectClass *FieldObjectClass_CreateShaped(int height, const ShapedClassParams *params)
 {
@@ -77,12 +77,12 @@ ObjectClass *FieldObjectClass_CreateShaped(int height, const ShapedClassParams *
     objectClass->onEnter = ReleaseOwnerResource;
     objectClass->onLeave = FreeFieldObjectShapeStorage;
     objectClass->handler1c = NULL;
-    objectClass->onTouch = func_ov010_020a07b4;
-    objectClass->getField40 = func_ov010_020a07b8;
+    objectClass->onTouch = ShapedObject_OnEnabledChangedNoop;
+    objectClass->getField40 = ShapedObject_GetPosition;
     objectClass->setPosition = FieldObject_SetPosition_020a07bc;
-    objectClass->getField50 = func_ov010_020a0828;
+    objectClass->getField50 = ShapedObject_GetClassHitResult;
     objectClass->handler38 = NULL;
-    objectClass->onClose = func_ov010_020a0830;
+    objectClass->onClose = ShapedObject_QueryHitFalse;
     objectClass->handler34 = NULL;
     objectClass->layer = 0x10;
     return objectClass;

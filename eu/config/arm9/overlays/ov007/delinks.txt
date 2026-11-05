@@ -19,7 +19,7 @@ src/overlays/ov007/calls/ScriptCmd_CommitSideResult.c:
     complete
     .text       start:0x020a0670 end:0x020a067e
 
-src/overlays/ov007/calls/func_ov007_020a0680.c:
+src/overlays/ov007/calls/ScriptCmd_SetAreaSceneDefinitionParams.c:
     complete
     .text       start:0x020a0680 end:0x020a06b0
 
@@ -47,7 +47,7 @@ src/overlays/ov007/calls/ScriptCmd_ApplyOperandPair.c:
     complete
     .text       start:0x020a0864 end:0x020a0892
 
-src/overlays/ov007/calls/func_ov007_020a0894.c:
+src/overlays/ov007/calls/ScriptCmd_ResetAreaSceneSelectionFlags.c:
     complete
     .text       start:0x020a0894 end:0x020a08a2
 

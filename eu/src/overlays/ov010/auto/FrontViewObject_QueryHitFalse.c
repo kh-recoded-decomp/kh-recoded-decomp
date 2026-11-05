@@ -1,0 +1,2 @@
+#define FSi_CloseFileCommand_020a0a78 FrontViewObject_QueryHitFalse
+#include "src/ov010/library_nitro_fs/FSi_CloseFileCommand_020a0a78.c"

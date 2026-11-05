@@ -1,22 +1,22 @@
 #include "nitro/types.h"
 
-extern void func_ov014_0206d2e0(void);
-extern void func_ov014_0206d2e4(void);
+extern void Ov014Panel_LeaveOpenStateNoop(void);
+extern void Ov014Panel_EnterEditStateNoop(void);
 extern void UpdatePanelEditInput(void);
-extern void func_ov014_0206e84c(void);
+extern void Ov014Panel_LeaveEditStateNoop(void);
 extern void ResetPanelCloseStep(void);
 extern void UpdatePanelCloseStep(void); /* UpdatePanelCloseStep */
-extern void func_ov014_0206e8fc(void);
+extern void Ov014Panel_LeaveCloseStateNoop(void);
 extern void UpdatePanelOpenStep(void); /* UpdatePanelOpenStep */
 
 void (*gPanelLifecycleHandlers[7])(void) = {
-    func_ov014_0206d2e0,
-    func_ov014_0206d2e4,
+    Ov014Panel_LeaveOpenStateNoop,
+    Ov014Panel_EnterEditStateNoop,
     UpdatePanelEditInput,
-    func_ov014_0206e84c,
+    Ov014Panel_LeaveEditStateNoop,
     ResetPanelCloseStep,
     UpdatePanelCloseStep, /* UpdatePanelCloseStep */
-    func_ov014_0206e8fc,
+    Ov014Panel_LeaveCloseStateNoop,
 };
 
 void (*gPanelOpenStepHandler[1])(void) = {
