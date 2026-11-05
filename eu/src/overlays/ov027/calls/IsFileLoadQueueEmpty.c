@@ -1,4 +1,18 @@
-#define IsFileLoadQueueEmpty_020ba1a0 IsFileLoadQueueEmpty
-#define NNS_FndGetNextListObject_02012a38 NNS_FndGetNextListObject
-#define data_ov027_020ba3c4 data_ov027_020ba3e4
-#include "src/ov027/overlay_handling/IsFileLoadQueueEmpty_020ba1a0.c"
+#include "src/overlays/ov027/FileLoadQueue.h"
+
+extern void *NNS_FndGetNextListObject(void *list, void *obj);
+
+BOOL IsFileLoadQueueEmpty(void)
+{
+    FileLoadList *queue = (FileLoadList *)FileLoadQueues_GetWork();
+    BOOL empty;
+
+    if (queue == NULL) {
+        return FALSE;
+    }
+    empty = FALSE;
+    if (NNS_FndGetNextListObject(queue, NULL) == NULL) {
+        empty = TRUE;
+    }
+    return empty;
+}

@@ -1,4 +1,5 @@
 #include "src/overlays/ov027/CapturedTouch.h"
+#include "src/overlays/ov027/FileLoadQueue.h"
 
-static u32 data_ov027_020ba3e4[7];
+u32 gFileLoadQueueStateWords[7];
 CapturedTouchRecord *gCapturedTouchRecord;

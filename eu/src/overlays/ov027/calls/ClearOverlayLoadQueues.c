@@ -1,5 +1,42 @@
-#define ClearOverlayLoadQueues_020ba074 ClearOverlayLoadQueues
-#define func_0202c438 func_0202c44c
-#define func_020ba1e0 DestroyFileLoadRequest
-#define overlay_load_queues data_ov027_020ba3e4
-#include "src/ov027/overlay_handling/ClearOverlayLoadQueues_020ba074.c"
+#include "src/overlays/ov027/FileLoadQueue.h"
+
+extern void *NNS_FndGetNextListObject(void *list, void *object);
+extern void NNS_FndRemoveListObject(void *list, void *object);
+extern void NNSi_FndFreeFromDefaultHeap(void *block);
+extern void func_0202c44c(void);
+
+void ClearOverlayLoadQueues(void)
+{
+    FileLoadRequest *request;
+    FileLoadQueueWork *work;
+    FileLoadRequest *next;
+
+    work = FileLoadQueues_GetWork();
+    request = NNS_FndGetNextListObject(&work->pending, NULL);
+    while (request != NULL) {
+        next = NNS_FndGetNextListObject(&work->pending, request);
+        if (request->state == 1) {
+            func_0202c44c();
+            if (request->buffer != NULL) {
+                NNSi_FndFreeFromDefaultHeap(request->buffer);
+            }
+        }
+        NNS_FndRemoveListObject(&work->pending, request);
+        if (((u32)request->pathOrId & 0x80000000) != 0) {
+            request->pathOrId = NULL;
+        } else if (request->pathOrId != NULL) {
+            NNSi_FndFreeFromDefaultHeap(request->pathOrId);
+        }
+        if (request != NULL) {
+            NNSi_FndFreeFromDefaultHeap(request);
+        }
+        request = next;
+    }
+
+    request = NNS_FndGetNextListObject(&work->completed, NULL);
+    while (request != NULL) {
+        next = NNS_FndGetNextListObject(&work->completed, request);
+        DestroyFileLoadRequest(request, TRUE);
+        request = next;
+    }
+}

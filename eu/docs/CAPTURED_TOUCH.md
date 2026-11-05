@@ -72,7 +72,9 @@ pointer cannot be represented by the old DS integer declaration. The DS task
 descriptor has pointer-sized fields and is not a host-independent serialized
 20-byte format. Do not assign meaning to individual contact/invalid bits
 without the input producer's evidence. The adjacent queue-state storage at
-`0x020ba3e4` remains outside this type and retains its numeric name.
+`0x020ba3e4` remains outside this type. [FILE_LOAD_QUEUE.md](FILE_LOAD_QUEUE.md)
+records its separate seven-word storage span and the established work-address
+word, now named `gFileLoadQueueStateWords`.
 
 ## Verification
 

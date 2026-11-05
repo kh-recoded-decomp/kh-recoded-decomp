@@ -119,12 +119,12 @@ UpdateCapturedTouchTask kind:function(thumb,size=0xa) addr:0x020b9f90
 CopySourceBlock kind:function(thumb,size=0x20) addr:0x020b9f9c
 ClearCapturedTouchState kind:function(thumb,size=0x10) addr:0x020b9fbc
 ProcessFileLoadQueue kind:function(thumb,size=0x94) addr:0x020b9fcc
-func_ov027_020ba060 kind:function(thumb,size=0x34) addr:0x020ba060
+InitFileLoadQueueTask kind:function(thumb,size=0x34) addr:0x020ba060
 ClearOverlayLoadQueues kind:function(thumb,size=0x90) addr:0x020ba094
-func_ov027_020ba124 kind:function(arm,size=0x10) addr:0x020ba124
+UpdateFileLoadQueueTask kind:function(arm,size=0x10) addr:0x020ba124
 QueueFileLoadRequest kind:function(arm,size=0x8c) addr:0x020ba134
 IsFileLoadQueueEmpty kind:function(arm,size=0x38) addr:0x020ba1c0
-func_ov027_020ba1f8 kind:function(arm,size=0x8) addr:0x020ba1f8
+GetFileLoadRequestBuffer kind:function(arm,size=0x8) addr:0x020ba1f8
 DestroyFileLoadRequest kind:function(arm,size=0x7c) addr:0x020ba200
 LoadPackedFileView kind:function(thumb,size=0x36) addr:0x020ba27c
 FreePointerIfSet kind:function(thumb,size=0x14) addr:0x020ba2b4
@@ -135,6 +135,6 @@ FindPageEntryById kind:function(thumb,size=0x1c) addr:0x020ba368
 data_ov027_020ba384 kind:data(any) addr:0x020ba384
 data_ov027_020ba388 kind:data(any) addr:0x020ba388
 gCapturedTouchTaskDescriptor kind:data(any) addr:0x020ba3a0
-data_ov027_020ba3b4 kind:data(any) addr:0x020ba3b4
+gFileLoadQueueTaskDescriptor kind:data(any) addr:0x020ba3b4
 gCapturedTouchRecord kind:bss addr:0x020ba3e0
-data_ov027_020ba3e4 kind:bss addr:0x020ba3e4
+gFileLoadQueueStateWords kind:bss addr:0x020ba3e4

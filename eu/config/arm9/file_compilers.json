@@ -7686,7 +7686,7 @@
   "src/overlays/ov001/calls/func_ov001_0208a480.c": "dsi/1.1",
   "src/overlays/ov020/calls/func_ov020_020a2898.c": "dsi/1.1",
   "src/overlays/ov021/calls/func_ov021_020b0df0.c": "dsi/1.1",
-  "src/overlays/ov027/calls/func_ov027_020ba060.c": "dsi/1.1",
+  "src/overlays/ov027/calls/InitFileLoadQueueTask.c": "dsi/1.1",
   "src/overlays/ov035/calls/func_ov035_020bb2c0.c": "dsi/1.1",
   "src/overlays/ov036/calls/func_ov036_020ba914.c": "dsi/1.1",
   "src/overlays/ov036/calls/InitializePanelArchive.c": "dsi/1.1",

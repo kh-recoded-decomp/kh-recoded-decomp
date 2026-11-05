@@ -114,6 +114,20 @@ copy ABI views. The neighboring queue-state storage is not folded into this
 type. The initializer's ignored argument is evidenced by the actual
 `Obj_Construct` call, rather than introduced to alter code generation.
 
+## File-load queue task
+
+| Previous name | Current name | Evidence |
+|---|---|---|
+| `func_ov027_020ba060` | `InitFileLoadQueueTask` | Initializes two intrusive lists in the 24-byte task work and returns the queue update callback. |
+| `func_ov027_020ba124` | `UpdateFileLoadQueueTask` | Calls `ProcessFileLoadQueue` and returns zero. |
+| `func_ov027_020ba1f8` | `GetFileLoadRequestBuffer` | Reads request offset eight, written with the loader's buffer address and consumed by resource unpackers/free operations. |
+| `data_ov027_020ba3b4` | `gFileLoadQueueTaskDescriptor` | The descriptor's established prefix binds the initializer, shutdown and 24-byte work allocation; its trailing zero words are retained without interpretation. |
+| `data_ov027_020ba3e4` | `gFileLoadQueueStateWords` | Original seven-word BSS span; only word zero is evidenced as the task work address. The name does not assert a complete seven-field runtime structure. |
+
+[FILE_LOAD_QUEUE.md](FILE_LOAD_QUEUE.md) records the common request/list layout,
+buffer/activity-key evidence, callback ordering, ownership, partial empty
+predicate, explicit getter arguments and unassigned storage boundaries.
+
 ## Explicitly unresolved
 
 The vector view at `data_027e0160` overlaps `data_027e0164`, used by the older

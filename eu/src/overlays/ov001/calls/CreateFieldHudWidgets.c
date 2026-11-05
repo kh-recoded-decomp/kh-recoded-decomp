@@ -10,7 +10,7 @@
 #define data_ov001_0209ef94 gFieldHudStatusTaskDescriptor
 #define data_ov001_0209eff0 gFieldHudExtraTaskDescriptor
 #define data_ov027_020ba380 gCapturedTouchTaskDescriptor
-#define data_ov027_020ba394 data_ov027_020ba3b4
+#define data_ov027_020ba394 gFileLoadQueueTaskDescriptor
 #define func_01ff8830 MI_CpuFill8
 #define func_02014d38 NNS_G2dGetUnpackedBGCharacterData
 #define func_0202a448 func_0202a45c

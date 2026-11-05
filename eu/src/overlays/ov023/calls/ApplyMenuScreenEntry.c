@@ -5,6 +5,6 @@
 #define data_ov023_020b6f64 data_ov023_020b6f84
 #define func_ov001_0207b4d8 SetPanelSessionActive
 #define func_ov001_0207b6f4 RequestPanelFallback
-#define func_ov027_020ba1d8 func_ov027_020ba1f8
+#define func_ov027_020ba1d8 GetFileLoadRequestBuffer
 #define func_ov027_020ba1e0 DestroyFileLoadRequest
 #include "src/ov023/menu_graphics/ApplyMenuScreenEntry_020b5bcc.c"
