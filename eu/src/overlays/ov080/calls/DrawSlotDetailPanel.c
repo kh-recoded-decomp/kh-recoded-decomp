@@ -44,7 +44,7 @@ extern void func_ov027_020b8208(void *tracker, SlotFrame *frame, int x, int y);
 extern void TagTracker_InvokeCallback(void *tracker, SlotFrame *frame);
 extern Position2D *GetWidgetPosition(void *panel, void *element);
 extern void SetEntrySlotsVisible(void *panel, void *element, BOOL visible);
-extern void func_ov027_020b91e8(void *panel, void *element, Position2D *position, int mode);
+extern void SetWidgetPosition(void *panel, void *element, Position2D *position, int mode);
 extern int GetMenuSelection(void);
 extern const u16 *func_ov027_020ba2c8(void **messages, int id);
 extern void *OS_SNPrintf_0202e094(u16 *dst, unsigned int len, const u16 *fmt, ...);
@@ -150,5 +150,5 @@ void DrawSlotDetailPanel(SaveSelectScreen *screen, int slotIndex)
     positions[2] = *GetWidgetPosition(screen->panel, screen->slots[0].cursorElement);
     positions[2].x += positions[0].x;
     positions[2].y += row << 15;
-    func_ov027_020b91e8(screen->panel, slot->cursorElement, &positions[2], 0);
+    SetWidgetPosition(screen->panel, slot->cursorElement, &positions[2], 0);
 }

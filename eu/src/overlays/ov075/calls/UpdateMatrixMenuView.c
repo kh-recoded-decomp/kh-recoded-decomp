@@ -98,7 +98,7 @@ extern fx32 FX_Mul(fx32 a, fx32 b);
 extern u32 func_ov075_020c7bf4(int value);
 extern int ScaleMatrixInput(int value, int useHalfScale);
 extern void ScrollMatrixView(MatrixMenu *menu);
-extern void func_ov027_020b91e8(void *panel, void *element, Vec2Fx *pos, int mode);
+extern void SetWidgetPosition(void *panel, void *element, Vec2Fx *pos, int mode);
 extern GridPos FindNearestReachableNode(MatrixMap *grid, GridPos pos, MatrixNode **outNode, BOOL skipCurrent);
 extern void ShowEntryHeaderMessage(MatrixMenu *menu, MatrixNode *node);
 extern BOOL PlaySoundEffect(int seqArcNo, int index);
@@ -230,7 +230,7 @@ void UpdateMatrixMenuView(MatrixMenu *menu)
         ScrollMatrixView(menu);
         menu->barPos.x = (menu->scrollX >> 2) + 0x20000;
         menu->barPos.y = (menu->scrollY >> 2) + 0x18000;
-        func_ov027_020b91e8(menu->layout, menu->scrollBar, &menu->barPos, 0);
+        SetWidgetPosition(menu->layout, menu->scrollBar, &menu->barPos, 0);
         menu->velocity.y = 0;
         menu->velocity.x = 0;
     } else if ((menu->velocity.x | menu->velocity.y) != 0 || moved) {

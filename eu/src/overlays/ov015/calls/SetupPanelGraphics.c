@@ -165,7 +165,7 @@ static inline void GetElementPosition(void *container, int elementId, ElementPos
 }
 
 static inline void SetElementPosition(void *container, int elementId, ElementPosition *position) {
-    func_ov027_020b91e8(container, FindWidgetById(container, elementId), position, 0);
+    SetWidgetPosition(container, FindWidgetById(container, elementId), position, 0);
 }
 
 static inline void ClearElementNumber(void *container, int elementId) {
@@ -284,7 +284,7 @@ void SetupPanelGraphics(void) {
         ResolveWidgetPositionComponents(container, FindWidgetById(container, 14), &position, 0);
         *(volatile fx32 *)&position.x = ((position.x >> 12) - 10) << 12;
         container = (*(PanelState *volatile *)&data_ov015_0207e960)->subObj;
-        func_ov027_020b91e8(container, FindWidgetById(container, 14), &position, 0);
+        SetWidgetPosition(container, FindWidgetById(container, 14), &position, 0);
     } else if (level >= 50) {
         ElementPosition position;
         void *container;
@@ -294,7 +294,7 @@ void SetupPanelGraphics(void) {
         ResolveWidgetPositionComponents(container, FindWidgetById(container, 13), &position, 0);
         *(volatile fx32 *)&position.x = ((position.x >> 12) - 10) << 12;
         container = (*(PanelState *volatile *)&data_ov015_0207e960)->subObj;
-        func_ov027_020b91e8(container, FindWidgetById(container, 13), &position, 0);
+        SetWidgetPosition(container, FindWidgetById(container, 13), &position, 0);
     }
     {
         ElementPosition position;

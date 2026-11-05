@@ -1,7 +1,7 @@
 # Widget positioning
 
-`func_ov027_020b91e8` (`SetWidgetPosition`) is matched C in
-`src/overlays/ov027/calls/func_ov027_020b91e8.c`, included in the linked EU build.
+`SetWidgetPosition` (formerly `func_ov027_020b91e8`) is matched C in
+`src/overlays/ov027/calls/SetWidgetPosition.c`, included in the linked EU build.
 Its four arguments are the indexed-record array, a widget, a two-coordinate
 input and a mode. The superseded nonmatching draft has been removed.
 
@@ -119,7 +119,7 @@ matches 200 bytes with three relocations. The getter also uses unsigned
 arithmetic for wrapping additions.
 
 ```sh
-python tools/verify_idx.py src/overlays/ov027/calls/func_ov027_020b91e8.c func_ov027_020b91e8
+python tools/verify_idx.py src/overlays/ov027/calls/SetWidgetPosition.c SetWidgetPosition
 python tools/verify_idx.py src/overlays/ov027/calls/GetWidgetPosition.c GetWidgetPosition
 python tools/verify_idx.py src/overlays/ov027/calls/ResolveWidgetPositionComponents.c ResolveWidgetPositionComponents
 python tools/test_widget_position.py -v

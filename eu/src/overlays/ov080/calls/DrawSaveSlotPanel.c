@@ -7,7 +7,7 @@
 #define func_0204f378 IndexedRecords_SetFlag2
 #define func_ov027_020b81e8 func_ov027_020b8208
 #define func_ov027_020b91a8 GetWidgetPosition
-#define func_ov027_020b91c8 func_ov027_020b91e8
+#define func_ov027_020b91c8 SetWidgetPosition
 #define func_ov027_020b9580 SetEntrySlotsVisible
 #define func_ov039_020bc14c CallStateWidget
 #define func_ov039_020bc994 GetMenuFont10

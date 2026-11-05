@@ -32,7 +32,7 @@
 #define func_ov027_020b7e24 func_ov027_020b7e44
 #define func_ov027_020b8f98 func_ov027_020b8fb8
 #define func_ov027_020b91a8 GetWidgetPosition
-#define func_ov027_020b91c8 func_ov027_020b91e8
+#define func_ov027_020b91c8 SetWidgetPosition
 #define func_ov027_020b97b8 func_ov027_020b97d8
 #define func_ov027_020ba2a8 func_ov027_020ba2c8
 #define func_ov034_020bde84 func_ov034_020bdea4

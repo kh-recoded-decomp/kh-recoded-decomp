@@ -4,7 +4,7 @@
     .data       start:0x020be940 end:0x020c0fa0 kind:data align:32
     .bss        start:0x020c0fa0 end:0x020c1040 kind:bss align:32
 
-src/overlays/ov034/calls/func_ov034_020ba400.c:
+src/overlays/ov034/calls/InitResultsScene.c:
     complete
     .text       start:0x020ba400 end:0x020babb4
     .bss        start:0x020c0fa0 end:0x020c0fa8

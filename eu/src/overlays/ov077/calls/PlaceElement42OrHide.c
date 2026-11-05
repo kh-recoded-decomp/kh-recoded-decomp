@@ -1,5 +1,5 @@
 #define PlaceElement42OrHide_020c9d4c PlaceElement42OrHide
 #define func_ov027_020b90a4 FindWidgetById
-#define func_ov027_020b91c8 func_ov027_020b91e8
+#define func_ov027_020b91c8 SetWidgetPosition
 #define func_ov027_020b9580 SetEntrySlotsVisible
 #include "src/ov077/unclassified_helpers/PlaceElement42OrHide_020c9d4c.c"

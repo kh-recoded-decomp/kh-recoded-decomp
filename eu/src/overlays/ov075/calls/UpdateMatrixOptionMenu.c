@@ -154,7 +154,7 @@ extern const StatPreview sOv075_Empty_020d1568;
 
 extern u32 GetPrimaryElementEnabled(void);
 extern Widget *FindWidgetById(void *root, int id);
-extern void func_ov027_020b91e8(void *root, Widget *widget, WidgetPos *pos, int mode);
+extern void SetWidgetPosition(void *root, Widget *widget, WidgetPos *pos, int mode);
 extern void func_0204f218(void *root, int index, int value);
 extern void SetEntrySlotsVisible(void *root, Widget *widget, BOOL visible);
 extern MatrixNode *FindPageEntryById(MatrixMap *map, u32 id);
@@ -243,7 +243,7 @@ static inline BOOL UpdateMenuEvent(MatrixMenu *menu)
                 widget = FindWidgetById(menu->layout, 0x2a);
                 pos.x = menu->event->widgetX << 12;
                 pos.y = menu->event->widgetY << 12;
-                func_ov027_020b91e8(menu->layout, widget, &pos, 0);
+                SetWidgetPosition(menu->layout, widget, &pos, 0);
                 func_0204f218(menu->layout, widget->cellIndex, 0);
                 SetEntrySlotsVisible(menu->layout, widget, TRUE);
             }

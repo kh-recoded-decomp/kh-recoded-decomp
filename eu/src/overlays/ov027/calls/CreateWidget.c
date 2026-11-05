@@ -9,5 +9,5 @@
 #define func_0204f378 IndexedRecords_SetFlag2
 #define func_0204f3c8 IndexedRecords_SetFlag3
 #define func_020524e8 func_020524fc
-#define func_ov027_020b91c8 func_ov027_020b91e8
+#define func_ov027_020b91c8 SetWidgetPosition
 #include "src/ov027/resource_container/CreateWidget_020b8cbc.c"

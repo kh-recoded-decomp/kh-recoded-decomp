@@ -407,7 +407,7 @@ static inline void ApplySweepDelta(CollSweep *sweep)
     OffsetBoxByDelta(&sweep->shape.bounds, &sweep->sweptBounds, &sweep->delta);
 }
 
-void func_01ffb4f8(CollNode *node, CollMover *mover, CollModel *model)
+void ResolveCollisionTreeContacts(CollNode *node, CollMover *mover, CollModel *model)
 {
     ContactPlane planeBuffer[COLLISION_CONTACT_LIMIT];
     ContactEntry entries[COLLISION_CONTACT_LIMIT];

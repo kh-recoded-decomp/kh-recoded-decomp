@@ -2,6 +2,6 @@
 #define MenuScreen_RefreshMarker_020c8b70 MenuScreen_RefreshMarker_020c8b90
 #define func_0204f204 func_0204f218
 #define func_ov027_020b90a4 FindWidgetById
-#define func_ov027_020b91c8 func_ov027_020b91e8
+#define func_ov027_020b91c8 SetWidgetPosition
 #define func_ov027_020b9580 SetEntrySlotsVisible
 #include "src/ov077/unclassified_helpers/MenuScreen_RefreshMarker_020c8b70.c"

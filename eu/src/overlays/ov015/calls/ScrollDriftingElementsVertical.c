@@ -1,6 +1,6 @@
 #define ScrollDriftingElementsVertical_02070174 ScrollDriftingElementsVertical
 #define func_0202a9d0 func_0202a9e4
 #define func_ov027_020b90a4 FindWidgetById
-#define func_ov027_020b91c8 func_ov027_020b91e8
+#define func_ov027_020b91c8 SetWidgetPosition
 #define func_ov027_020b9360 ResolveWidgetPositionComponents
 #include "src/ov015/ui/ScrollDriftingElementsVertical_02070174.c"

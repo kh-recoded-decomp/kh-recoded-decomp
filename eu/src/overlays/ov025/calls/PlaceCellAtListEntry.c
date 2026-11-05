@@ -1,3 +1,3 @@
 #define PlaceCellAtListEntry_020b6c68 PlaceCellAtListEntry
-#define func_ov027_020b91c8 func_ov027_020b91e8
+#define func_ov027_020b91c8 SetWidgetPosition
 #include "src/ov025/status_menu/PlaceCellAtListEntry_020b6c68.c"

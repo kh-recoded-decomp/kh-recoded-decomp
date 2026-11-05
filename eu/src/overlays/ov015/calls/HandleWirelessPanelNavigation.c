@@ -87,7 +87,7 @@ void HandleWirelessPanelNavigation(WidgetPositionRecord *widget, u32 keys)
     }
     {
         void *cursor = FindWidgetById(data_ov015_0207e960->widgetManager, 11);
-        func_ov027_020b91e8(data_ov015_0207e960->widgetManager,
+        SetWidgetPosition(data_ov015_0207e960->widgetManager,
                            cursor, &position, 0);
     }
     if (previousFocus != data_ov015_0207e960->focusMode)

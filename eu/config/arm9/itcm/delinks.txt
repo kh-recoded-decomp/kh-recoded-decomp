@@ -429,7 +429,7 @@ src/calls/BuildPolygonEdges.c:
     complete
     .text       start:0x01ffb3a0 end:0x01ffb4f8
 
-src/calls/func_01ffb4f8.c:
+src/calls/ResolveCollisionTreeContacts.c:
     complete
     .text       start:0x01ffb4f8 end:0x01ffcd30
 

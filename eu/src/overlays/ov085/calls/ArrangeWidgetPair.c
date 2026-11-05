@@ -10,13 +10,13 @@ typedef struct PairScreen {
 } PairScreen;
 
 extern s32 *GetWidgetPosition(void *layout, void *widget);
-extern void func_ov027_020b91e8(void *layout, void *widget, s32 *position, s32 mode);
+extern void SetWidgetPosition(void *layout, void *widget, s32 *position, s32 mode);
 
 void ArrangeWidgetPair(PairScreen *screen) {
     s32 *positions[2];
 
     positions[0] = GetWidgetPosition(screen->layout, screen->widgets[0]);
     positions[1] = GetWidgetPosition(screen->layout, screen->widgets[1]);
-    func_ov027_020b91e8(screen->layout, screen->widgets[0], positions[screen->order ^ 1], 0);
-    func_ov027_020b91e8(screen->layout, screen->widgets[1], positions[screen->order], 0);
+    SetWidgetPosition(screen->layout, screen->widgets[0], positions[screen->order ^ 1], 0);
+    SetWidgetPosition(screen->layout, screen->widgets[1], positions[screen->order], 0);
 }

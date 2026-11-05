@@ -3,7 +3,7 @@
 #define FlushBufferAndRunCallback_0200153c FlushBufferAndRunCallback
 #define ResetStatusPageState_020beaa0 ResetStatusPageState
 #define func_0200160c func_02001620
-#define func_ov027_020b91c8 func_ov027_020b91e8
+#define func_ov027_020b91c8 SetWidgetPosition
 #define func_ov027_020b96a0 func_ov027_020b96c0
 #define func_ov027_020ba2a8 func_ov027_020ba2c8
 #define func_ov039_020bc1cc GetMenuWidgetContainer

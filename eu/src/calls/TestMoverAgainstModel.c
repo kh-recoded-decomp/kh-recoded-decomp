@@ -1,3 +1,4 @@
+#define func_01ffb4f8 ResolveCollisionTreeContacts
 #define TestMoverAgainstModel_0203366c TestMoverAgainstModel
 #define func_02032c18 ResetCollTraversal
 #define g_collHitRecord_027e0134 data_027e0134

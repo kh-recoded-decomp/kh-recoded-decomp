@@ -239,7 +239,7 @@ static inline void InitResultsTiles(ResultsWork *work, TileIds *tileIds, TileTab
 }
 
 /* Prepare result state and stage-specific shop entries, then select the next scene step. */
-ResultsStateFn func_ov034_020ba400(ResultsArgs *args)
+ResultsStateFn InitResultsScene(ResultsArgs *args)
 {
     TileIds tileIds;
     TileTableSource source;

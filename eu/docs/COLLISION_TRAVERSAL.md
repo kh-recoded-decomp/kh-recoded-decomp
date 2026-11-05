@@ -1,9 +1,9 @@
 # Collision tree traversal
 
-EU `func_01ffb4f8` at `0x01ffb4f8` traverses collision candidates, resolves
+EU `ResolveCollisionTreeContacts` (formerly `func_01ffb4f8`) at `0x01ffb4f8` traverses collision candidates, resolves
 contact planes and dispatches the final contact callbacks. Its C implementation
-is `src/calls/func_01ffb4f8.c`; the address-based public name is retained so the
-existing callers and symbol map keep the same interface.
+is `src/calls/ResolveCollisionTreeContacts.c`; the semantic name describes the recovered traversal and contact response.
+The address, three-argument interface and generated instructions are unchanged.
 
 ## Inputs and ownership
 
@@ -101,7 +101,7 @@ DS pointer offsets into host objects.
 From `eu/`, verify the function and then rebuild every linked module:
 
 ```sh
-python tools/verify_idx.py src/calls/func_01ffb4f8.c func_01ffb4f8
+python tools/verify_idx.py src/calls/ResolveCollisionTreeContacts.c ResolveCollisionTreeContacts
 bash tools/gate.sh
 ```
 

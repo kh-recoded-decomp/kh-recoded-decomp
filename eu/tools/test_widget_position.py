@@ -50,18 +50,18 @@ class WidgetPositionTests(unittest.TestCase):
         import verify_idx
         cls.index = verify_idx._index()
         cls.addresses = verify_idx.SYM_ADDR
-        target = 'func_ov027_020b91e8'
+        target = 'SetWidgetPosition'
         cls.entry = cls.addresses[target]
         cls.original = bytes.fromhex(cls.index[target]['hex'])
         cls.candidate = cls.compile_candidate('dsi/1.3p1')
         cls.getter_candidate = cls.compile_candidate('dsi/1.1', 'ResolveWidgetPositionComponents')
 
     @classmethod
-    def compile_candidate(cls, compiler, target='func_ov027_020b91e8'):
+    def compile_candidate(cls, compiler, target='SetWidgetPosition'):
         from arm_replay_link import compile_image
-        setter = target == 'func_ov027_020b91e8'
+        setter = target == 'SetWidgetPosition'
         name = target
-        source = ROOT / ('src/overlays/ov027/calls/func_ov027_020b91e8.c' if setter else
+        source = ROOT / ('src/overlays/ov027/calls/SetWidgetPosition.c' if setter else
                          'src/overlays/ov027/calls/ResolveWidgetPositionComponents.c')
         return compile_image(source, name, target, compiler, cls.index, cls.addresses)
 

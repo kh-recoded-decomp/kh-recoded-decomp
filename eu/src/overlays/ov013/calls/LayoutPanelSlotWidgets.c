@@ -1,6 +1,6 @@
 #define FindWidgetById_020b90a4 FindWidgetById
 #define LayoutPanelSlotWidgets_0206fc74 LayoutPanelSlotWidgets
 #define RefreshPanelSlotDigits_0206fe50 RefreshPanelSlotDigits
-#define func_ov027_020b91c8 func_ov027_020b91e8
+#define func_ov027_020b91c8 SetWidgetPosition
 #define func_ov027_020b9360 ResolveWidgetPositionComponents
 #include "src/ov013/panel_state/LayoutPanelSlotWidgets_0206fc74.c"

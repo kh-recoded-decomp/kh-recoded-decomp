@@ -1,4 +1,4 @@
-func_ov034_020ba400 kind:function(arm,size=0x7b4) addr:0x020ba400
+InitResultsScene kind:function(arm,size=0x7b4) addr:0x020ba400
 CloseResultsScreen kind:function(arm,size=0xbc) addr:0x020babb4
 UpdateResultsScreen kind:function(arm,size=0x1e4) addr:0x020bac70
 CloseResultsSession kind:function(arm,size=0x218) addr:0x020bae54

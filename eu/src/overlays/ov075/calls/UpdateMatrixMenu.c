@@ -34,7 +34,7 @@
 #define func_020524e8 func_020524fc
 #define func_02052514 func_02052528
 #define func_0205255c func_02052570
-#define func_ov027_020b91c8 func_ov027_020b91e8
+#define func_ov027_020b91c8 SetWidgetPosition
 #define func_ov027_020ba2a8 func_ov027_020ba2c8
 #define func_ov039_020bc0d4 GetPrimaryElementEnabled
 #define func_ov075_020c4370 SelectMatrixNode

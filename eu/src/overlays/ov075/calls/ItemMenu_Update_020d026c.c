@@ -12,7 +12,7 @@
 #define UpdateItemDescription_020cd384 UpdateItemDescription
 #define UpdateScrollList_020be0c4 UpdateScrollListInput
 #define func_0204f204 func_0204f218
-#define func_ov027_020b91c8 func_ov027_020b91e8
+#define func_ov027_020b91c8 SetWidgetPosition
 #define func_ov027_020b9360 ResolveWidgetPositionComponents
 #define func_ov039_020bc0d4 GetPrimaryElementEnabled
 #define func_ov039_020bc0ec GetSecondaryElementEnabled

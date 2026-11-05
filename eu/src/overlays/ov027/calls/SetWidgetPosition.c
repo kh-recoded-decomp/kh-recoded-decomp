@@ -5,7 +5,7 @@ extern void MI_CpuFill8(void *, unsigned char, unsigned int);
 extern void MI_CpuCopy8(const void *, void *, unsigned int);
 extern void IndexedRecord_SetPair(void *, int, const WidgetPoint *);
 
-void func_ov027_020b91e8(void *root, const WidgetPositionRecord *widget, const WidgetPoint *point, int mode) {
+void SetWidgetPosition(void *root, const WidgetPositionRecord *widget, const WidgetPoint *point, int mode) {
     /* The read view is const for the original aliasing pattern. The widget
      * itself must occupy mutable storage: this setter writes its offset. */
     WidgetPositionRecord *target = (WidgetPositionRecord *)widget;

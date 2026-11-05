@@ -1,8 +1,8 @@
 # EU results-scene initialization
 
-`func_ov034_020ba400` prepares the results scene and returns the
+`InitResultsScene` (formerly `func_ov034_020ba400`) prepares the results scene and returns the
 `UpdateResultsScreen` handler. Its implementation is in
-`src/overlays/ov034/calls/func_ov034_020ba400.c`.
+`src/overlays/ov034/calls/InitResultsScene.c`.
 The entry arguments supply the stage, world, area, score, shop section and
 session kind. The task already owns the work allocation; the legacy symbol
 `NNSi_FndGetCurrentRootHeap` used here retrieves that work pointer.
@@ -98,7 +98,7 @@ port's own scheduling and state ownership before simplifying it.
 Run the existing checks from the EU directory:
 
 ```sh
-python tools/verify_idx.py src/overlays/ov034/calls/func_ov034_020ba400.c func_ov034_020ba400
+python tools/verify_idx.py src/overlays/ov034/calls/InitResultsScene.c InitResultsScene
 bash tools/gate.sh
 ```
 

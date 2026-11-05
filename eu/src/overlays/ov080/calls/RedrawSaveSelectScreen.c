@@ -12,7 +12,7 @@
 #define Text_UploadTileBuffer_02001520 Text_UploadTileBuffer
 #define func_ov027_020b81e8 func_ov027_020b8208
 #define func_ov027_020b91a8 GetWidgetPosition
-#define func_ov027_020b91c8 func_ov027_020b91e8
+#define func_ov027_020b91c8 SetWidgetPosition
 #define func_ov027_020ba2a8 func_ov027_020ba2c8
 #define func_ov039_020bc914 GetMenuSelection
 #include "src/ov080/unclassified_helpers/RedrawSaveSelectScreen_020c5584.c"

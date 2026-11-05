@@ -316,7 +316,7 @@ src/overlays/ov027/calls/func_ov027_020b91d0.c:
     complete
     .text       start:0x020b91d0 end:0x020b91e8
 
-src/overlays/ov027/calls/func_ov027_020b91e8.c:
+src/overlays/ov027/calls/SetWidgetPosition.c:
     complete
     .text       start:0x020b91e8 end:0x020b9380
 

@@ -2,7 +2,7 @@
 #define ReadGlobalPackedBits_02027348 ReadGlobalPackedBits
 #define RefreshPageTabs_020c48dc RefreshPageTabs
 #define SetEntrySlotsVisible_020b9580 SetEntrySlotsVisible
-#define func_ov027_020b91c8 func_ov027_020b91e8
+#define func_ov027_020b91c8 SetWidgetPosition
 #define func_ov027_020b96a0 func_ov027_020b96c0
 #define func_ov039_020bc1bc func_ov039_020bc1dc
 #include "src/ov078/unclassified_helpers/RefreshPageTabs_020c48dc.c"

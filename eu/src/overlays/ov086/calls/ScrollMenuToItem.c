@@ -15,7 +15,7 @@ typedef struct {
 extern u8 *GetMenuWidgetContainer(void);
 extern void *FindWidgetById(u8 *panel, int elementId);
 extern void SetEntrySlotsVisible(u8 *panel, void *element, BOOL visible);
-extern void func_ov027_020b91e8(u8 *panel, void *element, ElementOffset *offset, int flags);
+extern void SetWidgetPosition(u8 *panel, void *element, ElementOffset *offset, int flags);
 
 void ScrollMenuToItem(Ov086Menu *menu, int itemId)
 {
@@ -29,7 +29,7 @@ void ScrollMenuToItem(Ov086Menu *menu, int itemId)
         clamped = 0x38;
     }
     offset.y = clamped << 12;
-    func_ov027_020b91e8(panel, FindWidgetById(panel, 0x14), &offset, 5);
+    SetWidgetPosition(panel, FindWidgetById(panel, 0x14), &offset, 5);
     if (menu->prevItemId == 0) {
         if (itemId > 0) {
             SetEntrySlotsVisible(panel, FindWidgetById(panel, 0x2d), TRUE);

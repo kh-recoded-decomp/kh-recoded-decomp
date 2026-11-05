@@ -22,7 +22,7 @@ typedef struct RootMenu {
 
 extern void SetEntrySlotsVisible(void *manager, int element, BOOL visible);
 extern int *GetWidgetPosition(void *manager, int element);
-extern void func_ov027_020b91e8(void *manager, int element, int *position, int flags);
+extern void SetWidgetPosition(void *manager, int element, int *position, int flags);
 
 void RefreshRootMenuHighlights(const RootMenu *menu)
 {
@@ -49,5 +49,5 @@ void RefreshRootMenuHighlights(const RootMenu *menu)
     } else {
         element = menu->optionElements[menu->optionCursor].text;
     }
-    func_ov027_020b91e8(manager, menu->cursorElement, GetWidgetPosition(manager, element), 0);
+    SetWidgetPosition(manager, menu->cursorElement, GetWidgetPosition(manager, element), 0);
 }

@@ -3,7 +3,7 @@
 #define func_ov002_02069504 GetPackedFieldValue
 #define func_ov014_0206f0a0 BuildPanelGroupEntries
 #define func_ov027_020b90a4 FindWidgetById
-#define func_ov027_020b91c8 func_ov027_020b91e8
+#define func_ov027_020b91c8 SetWidgetPosition
 #define func_ov027_020b96a0 func_ov027_020b96c0
 #define g_panelState_0206f9a0 data_ov014_0206f9a0
 #include "src/ov014/panel_state/SelectPanelEntry_0206f230.c"

@@ -184,7 +184,7 @@ static inline void GetElementPosition(void *container, int elementId, WidgetPoin
 
 static inline void SetElementPosition(void *container, int elementId, WidgetPoint *position)
 {
-    func_ov027_020b91e8(container, FindWidgetById(container, elementId), position, WIDGET_POSITION_COMBINED_XY);
+    SetWidgetPosition(container, FindWidgetById(container, elementId), position, WIDGET_POSITION_COMBINED_XY);
 }
 
 #define RESOURCE_KEY(handle, index) (((((handle) + 0x8000U) & 0xfffffc) << 7) | 0x80000000 | (index))

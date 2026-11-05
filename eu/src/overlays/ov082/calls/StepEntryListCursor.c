@@ -5,7 +5,7 @@
 #define FX_Div_020c542c func_ov081_020c544c
 #define GetSlotEntry_020c5438 GetSlotEntry
 #define RefreshScrollListLayout_020be138 RefreshScrollListLayout
-#define func_ov027_020b91c8 func_ov027_020b91e8
+#define func_ov027_020b91c8 SetWidgetPosition
 #define MarkUnlockedListEntriesSeen_020c5880 MarkUnlockedListEntriesSeen
 #if defined(__MWERKS__)
 #include "../src/ov082/unclassified_helpers/StepEntryListCursor_020bf448.c"

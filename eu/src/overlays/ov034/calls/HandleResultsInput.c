@@ -101,7 +101,7 @@ extern void SetFocusedWidget(void *root, Widget *widget);
 extern void ApplyWidgetFocusAnims(void *root, Widget *widget, BOOL focused);
 extern void SetEntrySlotsVisible(void *root, Widget *widget, int visible);
 extern void ResolveWidgetPositionComponents(void *root, Widget *widget, WidgetPos *pos, int mode);
-extern void func_ov027_020b91e8(void *root, Widget *widget, WidgetPos *pos, int mode);
+extern void SetWidgetPosition(void *root, Widget *widget, WidgetPos *pos, int mode);
 extern BOOL PlaySoundEffect(int seqArcNo, int index);
 extern void StopSeqArcOrDefault(int seqArcNo, int player, int fadeFrames);
 extern void SetSecondaryBrightness(int value);
@@ -224,26 +224,26 @@ void HandleResultsInput(Widget *widget, u32 pressed)
     id = widget->id;
     if (id >= 0x12 && id <= 0x14) {
         WORK->tab = id - 0x12;
-        func_ov027_020b91e8(WORK->widgets, FindWidgetById(WORK->widgets, 10), &pos, 0);
+        SetWidgetPosition(WORK->widgets, FindWidgetById(WORK->widgets, 10), &pos, 0);
     }
     if (widget->id == 0x19) {
-        func_ov027_020b91e8(WORK->widgets, FindWidgetById(WORK->widgets, 10), &pos, 0);
+        SetWidgetPosition(WORK->widgets, FindWidgetById(WORK->widgets, 10), &pos, 0);
     }
     id = widget->id;
     if (id >= 0x74 && id <= 0x75) {
         WORK->tab = id - 0x74;
-        func_ov027_020b91e8(WORK->widgets, FindWidgetById(WORK->widgets, 100), &pos, 0);
+        SetWidgetPosition(WORK->widgets, FindWidgetById(WORK->widgets, 100), &pos, 0);
     }
     id = widget->id;
     if (id >= 0xd5 && id <= 0xda) {
         WORK->cursor = id - 0xd5;
         WORK->selected = WORK->cursor + WORK->scroll;
-        func_ov027_020b91e8(WORK->widgets, FindWidgetById(WORK->widgets, 200), &pos, 0);
+        SetWidgetPosition(WORK->widgets, FindWidgetById(WORK->widgets, 200), &pos, 0);
     }
     id = widget->id;
     if (id >= 0xe0 && id <= 0xe1) {
         WORK->confirmChoice = id - 0xe0;
-        func_ov027_020b91e8(WORK->widgets, FindWidgetById(WORK->widgets, 0xe2), &pos, 0);
+        SetWidgetPosition(WORK->widgets, FindWidgetById(WORK->widgets, 0xe2), &pos, 0);
     }
     sessionKind = WORK->sessionKind;
     if (sessionKind == 1 && data_0206085c.mode == 1) {
@@ -279,7 +279,7 @@ void HandleResultsInput(Widget *widget, u32 pressed)
             SetFocusedWidget(WORK->widgets, FindWidgetById(WORK->widgets, 0x19));
             ApplyWidgetFocusAnims(WORK->widgets, widget, TRUE);
             ResolveWidgetPositionComponents(WORK->widgets, FindWidgetById(WORK->widgets, 0x19), &pos, 0);
-            func_ov027_020b91e8(WORK->widgets, FindWidgetById(WORK->widgets, 10), &pos, 0);
+            SetWidgetPosition(WORK->widgets, FindWidgetById(WORK->widgets, 10), &pos, 0);
             PARAMS->bonusAmount = PARAMS->earnedAmount * WORK->multipliers[WORK->tab] / 100;
             WORK->shownTotal = PARAMS->earnedAmount - PARAMS->bonusAmount;
             WORK->shownTicks = (WORK->shownTotal - WORK->shownBase) / 10;
@@ -431,7 +431,7 @@ void HandleResultsInput(Widget *widget, u32 pressed)
             WORK->mode = 0;
             SetFocusedWidget(WORK->widgets, FindWidgetById(WORK->widgets, WORK->tab + 0x12));
             ResolveWidgetPositionComponents(WORK->widgets, FindWidgetById(WORK->widgets, WORK->tab + 0x12), &pos, 0);
-            func_ov027_020b91e8(WORK->widgets, FindWidgetById(WORK->widgets, 10), &pos, 0);
+            SetWidgetPosition(WORK->widgets, FindWidgetById(WORK->widgets, 10), &pos, 0);
             WORK->shownTotal = PARAMS->earnedAmount;
             WORK->shownTicks = PARAMS->bonusAmount / 10;
             PARAMS->bonusAmount = 0;

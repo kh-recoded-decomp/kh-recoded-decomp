@@ -7,7 +7,7 @@
 #define Text_UploadTileBuffer_02001520 Text_UploadTileBuffer
 #define UpdateWidgetLayerDefault_020b9df0 UpdateWidgetLayerDefault_020b9e10
 #define func_ov027_020b90a4 FindWidgetById
-#define func_ov027_020b91c8 func_ov027_020b91e8
+#define func_ov027_020b91c8 SetWidgetPosition
 #define func_ov027_020b9580 SetEntrySlotsVisible
 #define func_ov027_020b9e00 MarkTileTableRowDirty
 #define func_ov039_020bc104 SetScreenLayerDirty

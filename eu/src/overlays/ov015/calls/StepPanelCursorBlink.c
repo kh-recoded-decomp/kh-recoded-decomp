@@ -4,7 +4,7 @@
 #define StepPanelCursorBlink_020709ec StepPanelCursorBlink
 #define func_ov015_0206eba4 DrawPanelInfoText
 #define func_ov027_020b90a4 FindWidgetById
-#define func_ov027_020b91c8 func_ov027_020b91e8
+#define func_ov027_020b91c8 SetWidgetPosition
 #define func_ov027_020b9360 ResolveWidgetPositionComponents
 #define func_ov027_020b96e4 SetFocusedWidget
 #include "src/ov015/ui/StepPanelCursorBlink_020709ec.c"

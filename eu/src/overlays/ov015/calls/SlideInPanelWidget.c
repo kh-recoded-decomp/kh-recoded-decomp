@@ -3,6 +3,6 @@
 #define SlideInPanelWidget_0206f310 SlideInPanelWidget
 #define StartWidgetMoveTween_020b9428 StartWidgetMoveTween
 #define func_ov027_020b90a4 FindWidgetById
-#define func_ov027_020b91c8 func_ov027_020b91e8
+#define func_ov027_020b91c8 SetWidgetPosition
 #define func_ov027_020b95e4 func_ov027_020b9604
 #include "src/ov015/panel_state/SlideInPanelWidget_0206f310.c"
