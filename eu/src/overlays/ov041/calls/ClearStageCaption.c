@@ -4,7 +4,7 @@
 extern void ClearStageCaptionRows(void);
 extern void ShowStageCaptionDefaultLine(StageCaption *caption);
 extern void SetStageCaptionState(StageCaption *caption, int state);
-extern void *func_ov001_0207123c(void);
+extern void *GetFieldSceneManager(void);
 extern void MarkTileTableRowDirty(void *table, int layer);
 
 /* Clears the caption and starts over: state 1 with its default line, or state 4 when lines are waiting. */
@@ -20,6 +20,6 @@ int ClearStageCaption(StageCaption *caption)
         SetStageCaptionState(caption, 4);
         caption->unk4c = 0;
     }
-    MarkTileTableRowDirty(func_ov001_0207123c(), 0xb);
+    MarkTileTableRowDirty(GetFieldSceneManager(), 0xb);
     return caption->queuedCount;
 }

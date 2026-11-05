@@ -28,7 +28,7 @@ typedef struct GaugeSave {
 } GaugeSave;
 
 extern GaugeMenu *data_ov001_020a04cc;
-extern void func_ov001_02073cb0(void **outBuffer, void *source, u32 size);
+extern void AllocCopyOrClearBuffer(void **outBuffer, void *source, u32 size);
 extern void *NNSi_FndAllocFromDefaultHeap(u32 size);
 extern void MIi_CpuCopyFast(const void *src, void *dst, u32 size);
 extern BOOL IsHudFlag7Set(void);
@@ -42,7 +42,7 @@ void LoadMenuGaugeData(GaugeSave *save) {
     int i;
     GaugeLayout *layout;
 
-    func_ov001_02073cb0(&menu->framePacked, data + 0x1c00, 0xe0);
+    AllocCopyOrClearBuffer(&menu->framePacked, data + 0x1c00, 0xe0);
     menu->frameBuffer = NNSi_FndAllocFromDefaultHeap(0xe0);
     menu->palette = NNSi_FndAllocFromDefaultHeap(0x40);
     MIi_CpuCopyFast(data + 0x9e0, menu->palette, 0x40);
@@ -55,10 +55,10 @@ void LoadMenuGaugeData(GaugeSave *save) {
         menu->slots[i].current = 0;
         if (i == 0 && IsHudFlag7Set()) {
             layout = &layouts[i];
-            func_ov001_02073cb0(&menu->packed[i], NULL, layout->size);
+            AllocCopyOrClearBuffer(&menu->packed[i], NULL, layout->size);
         } else {
             layout = &layouts[i];
-            func_ov001_02073cb0(&menu->packed[i], data + layouts[i].offset, layout->size);
+            AllocCopyOrClearBuffer(&menu->packed[i], data + layouts[i].offset, layout->size);
         }
         menu->buffers[i] = NNSi_FndAllocFromDefaultHeap(layout->size);
         if (i == 0 && IsHudFlag7Set()) {

@@ -1,3 +1,4 @@
+#define func_ov001_020789b8 FindFieldMenuEntryValueById
 #define ApplyCurrentFieldMode_02072dec ApplyCurrentFieldMode
 #define data_ov001_020a04a4 data_ov001_020a04c4
 #define func_020cf0b4 AddStageCaptionLine

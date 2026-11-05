@@ -1,3 +1,4 @@
+#define func_ov001_0207123c GetFieldSceneManager
 #define func_ov001_02064490 InvokeSessionCheckCallbackOrDefault
 #define func_ov001_02075e10 UpdateFieldMenuSelectionTags
 #define data_0205fde4 gPanelActive

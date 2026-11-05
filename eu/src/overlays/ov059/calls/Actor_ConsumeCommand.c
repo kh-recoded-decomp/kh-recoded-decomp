@@ -1,3 +1,4 @@
+#define func_ov001_02077ef4 TryEnterFieldMenuState3
 #define Actor_ConsumeCommand_020c9a30 Actor_ConsumeCommand
 #define func_ov001_02078000 TickFieldMenuEntry
 #include "src/ov059/unclassified_helpers/Actor_ConsumeCommand_020c9a30.c"

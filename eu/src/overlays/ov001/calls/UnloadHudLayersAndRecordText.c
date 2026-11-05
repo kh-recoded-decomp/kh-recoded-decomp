@@ -36,7 +36,7 @@ typedef struct HudGlobals {
 extern HudGlobals data_ov001_020a04c4;
 extern const LayerIdTable gFieldHudRestoreLayerIds;
 
-extern void *func_ov001_0207123c(void);
+extern void *GetFieldSceneManager(void);
 extern void func_ov001_0206fa2c(HudContext *context);
 extern void *UpdateWidgetLayerDefault_020b9e10(void *widgets, int layer);
 extern void MarkTileTableRowDirty(void *widgets, int layer);
@@ -51,7 +51,7 @@ extern void Text_UploadTileBuffer(void *window);
 void UnloadHudLayersAndRecordText(void)
 {
     HudContext *context = data_ov001_020a04c4.context;
-    void *widgets = func_ov001_0207123c();
+    void *widgets = GetFieldSceneManager();
     LayerIdTable layers = gFieldHudRestoreLayerIds;
     int i;
     int layer;

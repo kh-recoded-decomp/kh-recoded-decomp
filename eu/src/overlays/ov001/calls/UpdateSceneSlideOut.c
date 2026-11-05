@@ -1,3 +1,4 @@
+#define func_ov001_0207123c GetFieldSceneManager
 #define SampleTweenValue_0205258c SampleTweenValue
 #define UpdateSceneSlideOut_020708f4 UpdateSceneSlideOut
 #include "src/ov001/shared_engine/UpdateSceneSlideOut_020708f4.c"

@@ -10,7 +10,7 @@ typedef struct MessageWindow {
     u16 height;
 } MessageWindow;
 
-extern int func_ov001_0207123c(void);
+extern int GetFieldSceneManager(void);
 extern void RefreshWindowHighlight(MessageWindow *window, int layer, int plane);
 extern fx32 FX_Div(fx32 numer, fx32 denom);
 
@@ -19,7 +19,7 @@ void DrawScaledWindowFrame(MessageWindow *window, int target, int percent)
     int width;
     int height;
 
-    func_ov001_0207123c();
+    GetFieldSceneManager();
     RefreshWindowHighlight(window, window->layer, 9);
     RefreshWindowHighlight(window, window->layer, 11);
     width = (FX_Div(percent * window->width, 0x64000) >> 12) - 1;

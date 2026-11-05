@@ -2,7 +2,7 @@
 
 extern u32 data_ov001_020a04e4;
 
-u32 func_ov001_0207a648(void)
+u32 GetMessageWindowPhaseGroup(void)
 {
     switch (*(u32 *)(data_ov001_020a04e4 + 0xc)) {
     case 0:

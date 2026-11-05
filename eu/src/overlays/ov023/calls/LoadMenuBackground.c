@@ -1,3 +1,4 @@
+#define func_ov001_0207123c GetFieldSceneManager
 #define FindActiveRecordById_020b8184 FindActiveRecordById
 #define GXS_LoadBG2Char_02007b00 GXS_LoadBG2Char
 #define GXS_LoadBGPltt_020072b4 GXS_LoadBGPltt

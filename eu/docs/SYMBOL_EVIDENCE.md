@@ -487,3 +487,12 @@ adapters, two distinct object managers and actor camera/probe/record commands.
 MAIN interpreter, group/entry pairs, run/resume control, copied versus borrowed
 inputs, persistent record writes and remaining semantic limits. The session
 callback documentation now gives the verified absent/zero/nonzero behavior.
+
+## Field HUD, menu and message-window ownership
+
+Twenty-eight helpers now name HUD graphics/font/task operations, menu entry
+queries, message-window resource callbacks and subscene overlay loading.
+[FIELD_HUD_MESSAGE_HELPERS.md](FIELD_HUD_MESSAGE_HELPERS.md) records separate
+work owners, exact teardown and upload order, numeric ID narrowing, queue
+callbacks, asynchronous load limits and per-call fade behavior. Existing script
+and loader-queue references use the accepted EU names.

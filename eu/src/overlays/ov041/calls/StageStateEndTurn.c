@@ -8,7 +8,7 @@ extern void HideStageHudMessage(void);
 extern void FaceStageEntryAcross(u8 entryIndex);
 extern void TickEntryStatuses(u8 entryIndex);
 extern void ForceHudState6IfActive(void);
-extern void func_ov001_02078680(void);
+extern void IncrementFieldMenuEntryProgress(void);
 extern void InvokeFieldModeOp428(void);
 extern void ResetSlotHandles(void);
 extern void HideHudCaption(void);
@@ -102,11 +102,11 @@ void StageStateEndTurn(void)
         if (work->entries[0].state != STAGE_ENTRY_OUT) {
             ForceHudState6IfActive();
             for (i = 0; i < 15; i++) {
-                func_ov001_02078680();
+                IncrementFieldMenuEntryProgress();
             }
             if (work->entries[0].statuses[7] != 0) {
                 for (i = 0; i < 15; i++) {
-                    func_ov001_02078680();
+                    IncrementFieldMenuEntryProgress();
                 }
             }
         }

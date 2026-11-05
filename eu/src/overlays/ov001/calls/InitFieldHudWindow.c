@@ -1,3 +1,4 @@
+#define func_ov001_0207123c GetFieldSceneManager
 #define CallVirtualHandlerSlot1_02001574 CallVirtualHandlerSlot1
 #define FlushBufferAndRunCallback_0200153c FlushBufferAndRunCallback
 #define GetFieldFont3_020711e0 GetFieldFont3

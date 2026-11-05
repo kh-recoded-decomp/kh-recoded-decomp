@@ -1,3 +1,4 @@
+#define func_ov001_0207123c GetFieldSceneManager
 #define RefreshWindowHighlight_02079490 RefreshWindowHighlight
 #define func_ov027_020b9d18 ClearTileTableRowAndMarkDirty
 #define func_ov027_020b9d54 ClearTileTableRect

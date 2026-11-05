@@ -1,3 +1,4 @@
+#define func_ov001_0207123c GetFieldSceneManager
 #define DivModS32_02023dbc _s32_div_f
 #define FillBackgroundLayerRect_02001a60 FillBackgroundLayerRect
 #define FindActiveRecordById_020b8184 FindActiveRecordById

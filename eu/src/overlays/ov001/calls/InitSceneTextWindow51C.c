@@ -1,3 +1,4 @@
+#define func_ov001_0207123c GetFieldSceneManager
 #define InitSceneTextWindow51C_0206f6dc InitSceneTextWindow51C
 #define UpdateWidgetLayerDefault_020b9df0 UpdateWidgetLayerDefault_020b9e10
 #define data_ov001_0209dc34 gSceneTextFrame51C

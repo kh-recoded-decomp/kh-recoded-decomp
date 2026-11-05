@@ -1,3 +1,4 @@
+#define func_ov001_0207123c GetFieldSceneManager
 #define FlushBufferAndRunCallback_0200153c FlushBufferAndRunCallback
 #define G2x_SetBlendAlpha_02006850 G2x_SetBlendAlpha_
 #define GetFieldFont3_020711e0 GetFieldFont3

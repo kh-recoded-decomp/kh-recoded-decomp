@@ -21,7 +21,7 @@ typedef struct {
 
 extern FieldMenuHandle data_ov001_020a04d0;
 
-s32 func_ov001_020789b8(s32 id)
+s32 FindFieldMenuEntryValueById(s32 id)
 {
     FieldMenu *menu = data_ov001_020a04d0.menu;
     FieldEntry *entry;

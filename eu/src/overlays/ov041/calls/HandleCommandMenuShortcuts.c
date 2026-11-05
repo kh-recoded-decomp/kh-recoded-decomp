@@ -21,8 +21,8 @@ typedef struct ShortcutSettings {
 extern ShortcutSettings *data_0205fe0c;
 extern u16 data_02060500;
 extern u16 data_020604fc;
-extern BOOL func_ov001_02077ef4(void);
-extern BOOL func_ov001_02077e68(void);
+extern BOOL TryEnterFieldMenuState3(void);
+extern BOOL TryCycleFieldMenuCursor(void);
 extern int func_ov001_02078494(void);
 extern void SetFieldMenuMode_02078360(int mode, int animate);
 extern void PlayStageSound(int seqArcNo, int index, BOOL checked);
@@ -68,14 +68,14 @@ void HandleCommandMenuShortcuts(BOOL canSwitchMode)
     if (data_020604fc & modifier) {
         if (data_02060500 & next) {
             work->stateTimer = 2;
-            if (func_ov001_02077ef4()) {
+            if (TryEnterFieldMenuState3()) {
                 PlayStageSound(0, 0, FALSE);
             }
             return;
         }
         if (data_02060500 & previous) {
             work->stateTimer = 2;
-            if (func_ov001_02077e68()) {
+            if (TryCycleFieldMenuCursor()) {
                 PlayStageSound(0, 0, FALSE);
             }
             return;
@@ -97,7 +97,7 @@ void HandleCommandMenuShortcuts(BOOL canSwitchMode)
         }
     } else if (work->stateTimer == 1) {
         work->stateTimer = 0;
-        if (func_ov001_02077ef4()) {
+        if (TryEnterFieldMenuState3()) {
             PlayStageSound(0, 0, FALSE);
         }
     }

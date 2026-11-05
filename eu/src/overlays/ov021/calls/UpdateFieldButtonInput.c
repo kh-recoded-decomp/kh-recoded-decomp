@@ -1,3 +1,5 @@
+#define func_ov001_02077e68 TryCycleFieldMenuCursor
+#define func_ov001_02077ef4 TryEnterFieldMenuState3
 #define func_ov001_02063a38 GetFieldSessionState
 #define UpdateFieldButtonInput_020a70a8 UpdateFieldButtonInput
 #define g_saveData_0205fe0c data_0205fe0c

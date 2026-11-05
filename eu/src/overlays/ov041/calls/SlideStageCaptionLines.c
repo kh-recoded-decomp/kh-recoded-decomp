@@ -1,7 +1,7 @@
 #include "nitro/types.h"
 #include "src/overlays/ov041/StageCaption.h"
 
-extern void *func_ov001_0207123c(void);
+extern void *GetFieldSceneManager(void);
 extern void ClearTileTableRect(void *table, int layer, int x, int y, int width, int height);
 extern void MarkTileTableRowDirty(void *table, int layer);
 extern void MapStageCaptionLine(StageCaption *caption, StageTextLine *line, int palette);
@@ -14,7 +14,7 @@ BOOL SlideStageCaptionLines(StageCaption *caption, StageTextLine *lines, int cou
     StageTextLine *line;
 
     if (!caption->hidden && count > 0) {
-        ClearTileTableRect(func_ov001_0207123c(), 0xb, 0, 1, 0x20, 2);
+        ClearTileTableRect(GetFieldSceneManager(), 0xb, 0, 1, 0x20, 2);
     }
     for (i = 0; i < count; i++) {
         line = &lines[i];
@@ -30,7 +30,7 @@ BOOL SlideStageCaptionLines(StageCaption *caption, StageTextLine *lines, int cou
         MapStageCaptionLine(caption, line, 9);
     }
     if (!caption->hidden && count > 0) {
-        MarkTileTableRowDirty(func_ov001_0207123c(), 0xb);
+        MarkTileTableRowDirty(GetFieldSceneManager(), 0xb);
     }
     return done;
 }

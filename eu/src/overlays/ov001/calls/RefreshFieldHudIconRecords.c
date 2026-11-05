@@ -17,7 +17,7 @@ extern void *FindActiveRecordById(void *pool, u32 recordId);
 extern void TagTracker_InvokeCallback(void *pool, void *record);
 extern void BlendIconTiles(u32 value);
 
-void func_ov001_02073718(void)
+void RefreshFieldHudIconRecords(void)
 {
     FieldManager *manager = data_ov001_020a04c4.manager;
 

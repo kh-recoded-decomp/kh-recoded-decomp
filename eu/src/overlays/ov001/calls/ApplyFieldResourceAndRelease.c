@@ -1,3 +1,4 @@
+#define func_ov001_0206efac SplitFieldHudIconTilesAndUploadBg3
 #define ApplyFieldResourceAndRelease_0206f040 ApplyFieldResourceAndRelease
 #define data_ov001_020a04a4 data_ov001_020a04c4
 #define func_ov027_020ba1d8 GetFileLoadRequestBuffer

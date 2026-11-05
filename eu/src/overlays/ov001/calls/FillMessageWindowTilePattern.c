@@ -11,13 +11,13 @@ typedef struct MessageTileRow {
     u16 pattern[15];
 } MessageTileRow;
 
-extern int func_ov001_0207123c(void);
+extern int GetFieldSceneManager(void);
 extern MessageTileRow *UpdateWidgetLayerDefault_020b9e10(int widgets, int layer);
 extern void MarkTileTableRowDirty(int widgets, int layer);
 
 void FillMessageWindowTilePattern(MessageWindowTileView *window)
 {
-    int widgets = func_ov001_0207123c();
+    int widgets = GetFieldSceneManager();
     MessageTileRow *rows = UpdateWidgetLayerDefault_020b9e10(widgets, 9);
 
     if (window->fillPattern != 0) {

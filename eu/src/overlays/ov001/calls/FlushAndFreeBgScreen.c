@@ -1,3 +1,4 @@
+#define func_ov001_0207123c GetFieldSceneManager
 #define FlushAndFreeBgScreen_0206fdac FlushAndFreeBgScreen
 #define GX_LoadBG2Char_02007a90 GX_LoadBG2Char
 #define GX_LoadBG3Char_02007b70 GX_LoadBG3Char

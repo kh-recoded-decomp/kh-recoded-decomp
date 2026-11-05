@@ -25,7 +25,7 @@ extern FieldMenuHandle data_ov001_020a04d0;
 
 extern void ClearHudPopup(void);
 
-void func_ov001_020788b8(s32 id, u16 value)
+void SetFieldMenuActiveSlotById(s32 id, u16 value)
 {
     FieldSlot *slot;
     FieldMenu *menu = data_ov001_020a04d0.menu;

@@ -28,7 +28,7 @@ extern FieldSceneHandle data_ov001_020a04c4;
 extern const char sOv001_BTLUITASK_0209edd8[];
 extern char OVERLAY_27_ID[];
 
-extern void func_ov001_0206fbec(FieldScene *scene);
+extern void DestroyFieldHudTasks(FieldScene *scene);
 extern void NotifyBothOrOne(u32 a, const char *b, int index);
 extern void *NNS_FndGetNextListObject(void *list, void *object);
 extern void FreeSceneListObject(void *object);
@@ -38,8 +38,8 @@ extern void func_ov001_0206f720(FieldScene *scene);
 extern void func_ov001_0206f6cc(FieldScene *scene);
 extern void func_ov001_0206f648(FieldScene *scene);
 extern void func_ov001_0206f464(FieldScene *scene);
-extern void func_ov001_0206f1dc(FieldScene *scene);
-extern void func_ov001_0206f174(FieldScene *scene);
+extern void ReleaseFieldSceneFonts(FieldScene *scene);
+extern void ReleaseFieldHudGraphics(FieldScene *scene);
 extern int ZeroHalfThenFree(void *archive);
 extern void UnloadOverlayAfterGeometryTransfer(int processor, int overlayId);
 extern void *PXI_Init_02028964(void);
@@ -53,7 +53,7 @@ void ShutdownFieldScene(void)
     void *next;
     FieldScene *scene = data_ov001_020a04c4.scene;
 
-    func_ov001_0206fbec(scene);
+    DestroyFieldHudTasks(scene);
     NotifyBothOrOne(1, sOv001_BTLUITASK_0209edd8, 0);
     object = NNS_FndGetNextListObject(scene->objectList, NULL);
     while (object != NULL) {
@@ -69,8 +69,8 @@ void ShutdownFieldScene(void)
     func_ov001_0206f6cc(scene);
     func_ov001_0206f648(scene);
     func_ov001_0206f464(scene);
-    func_ov001_0206f1dc(scene);
-    func_ov001_0206f174(scene);
+    ReleaseFieldSceneFonts(scene);
+    ReleaseFieldHudGraphics(scene);
     ZeroHalfThenFree(scene->archives[2]);
     ZeroHalfThenFree(scene->archives[1]);
     ZeroHalfThenFree(scene->archives[0]);

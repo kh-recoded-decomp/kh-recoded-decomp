@@ -1,3 +1,4 @@
+#define func_ov001_0207123c GetFieldSceneManager
 #define CloseModeWindow_0207a260 CloseModeWindow
 #define FindActiveRecordById_020b8184 FindActiveRecordById
 #define FreeModeResources_0207942c FreeModeResources

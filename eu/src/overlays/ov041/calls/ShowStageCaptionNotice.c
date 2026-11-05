@@ -6,7 +6,7 @@ extern void SetStageCaptionLine(StageCaption *caption, StageTextLine *line, u32 
 extern void DrawStageCaptionLine(StageCaption *caption, StageTextLine *line, int arg);
 extern void UploadStageCaptionLayer(StageCaption *caption);
 extern void MapStageCaptionLine(StageCaption *caption, StageTextLine *line, int palette);
-extern void *func_ov001_0207123c(void);
+extern void *GetFieldSceneManager(void);
 extern void MarkTileTableRowDirty(void *table, int layer);
 extern void SetStageCaptionState(StageCaption *caption, int state);
 
@@ -18,7 +18,7 @@ void ShowStageCaptionNotice(StageCaption *caption, u32 messageId)
     UploadStageCaptionLayer(caption);
     MapStageCaptionLine(caption, &caption->notice, 9);
     if (!caption->hidden) {
-        MarkTileTableRowDirty(func_ov001_0207123c(), 0xb);
+        MarkTileTableRowDirty(GetFieldSceneManager(), 0xb);
     }
     SetStageCaptionState(caption, 3);
 }

@@ -38,7 +38,7 @@ extern int func_ov001_02078494(void);
 extern void func_ov001_02078000(int list, int slot);
 extern int TickSlotTimer(int slot);
 extern void FieldMenu_TryOpenByMode(void);
-extern void func_ov001_02078680(void);
+extern void IncrementFieldMenuEntryProgress(void);
 
 void ApplyPendingFlagReward(FieldMenu *menu) {
     if ((menu->flags & 0x4000) == 0 && menu->holdTimer >= 0x9000) {
@@ -76,7 +76,7 @@ void ApplyPendingFlagReward(FieldMenu *menu) {
         if (TickSlotTimer(menu->pendingSlot) > 0) {
             FieldMenu_TryOpenByMode();
         }
-        func_ov001_02078680();
+        IncrementFieldMenuEntryProgress();
         menu->pendingSlot = -1;
     }
     if (menu->closeRequested != 0) {

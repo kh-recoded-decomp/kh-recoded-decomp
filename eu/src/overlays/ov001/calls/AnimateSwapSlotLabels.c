@@ -1,3 +1,4 @@
+#define func_ov001_0207123c GetFieldSceneManager
 #define AnimateSwapSlotLabels_0207db50 AnimateSwapSlotLabels
 #define FindActiveRecordById_020b8184 FindActiveRecordById
 #define GetSceneTagTracker_020711b0 GetSceneTagTracker

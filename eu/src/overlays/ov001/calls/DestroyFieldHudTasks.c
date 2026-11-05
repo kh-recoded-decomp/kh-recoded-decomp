@@ -2,7 +2,7 @@
 
 extern void DestroyTaskObjectWrapper();
 
-void func_ov001_0206fbec(u32 context)
+void DestroyFieldHudTasks(u32 context)
 {
     DestroyTaskObjectWrapper(*(u32 *)(context + 0x418));
     DestroyTaskObjectWrapper(*(u32 *)(context + 0x414));

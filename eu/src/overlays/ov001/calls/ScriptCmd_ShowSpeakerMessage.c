@@ -1,3 +1,4 @@
+#define func_ov001_0207a648 GetMessageWindowPhaseGroup
 #define IsFieldPanelShown_02071860 IsFieldPanelShown
 #define ScriptCmd_ShowSpeakerMessage_0208dadc ScriptCmd_ShowSpeakerMessage
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt

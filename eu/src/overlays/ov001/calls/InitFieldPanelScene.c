@@ -62,7 +62,7 @@ extern int FS_UnloadOverlay(u32 target, u32 overlayId);
 extern void *Obj_CreateWithTailWork(void *data, int size);
 extern void DestroyTaskObjectWrapper(void *archive);
 extern void *LookupChannelEntry(int index);
-extern void func_ov001_0207a920(PanelScene *panel, u32 overlayId);
+extern void StartSubsceneOverlayLoad(PanelScene *panel, u32 overlayId);
 extern void *UpdatePanelScene(void);
 
 PanelStep InitFieldPanelScene(void)
@@ -98,7 +98,7 @@ PanelStep InitFieldPanelScene(void)
     panel->phase = 2;
     panel->waitFrames = 4;
     panel->waitReload = panel->waitFrames;
-    func_ov001_0207a920(panel, (u32)OVERLAY_26_ID);
+    StartSubsceneOverlayLoad(panel, (u32)OVERLAY_26_ID);
     ReleaseRecordSlot(1);
     ReleaseRecordManager();
     return (PanelStep)UpdatePanelScene;

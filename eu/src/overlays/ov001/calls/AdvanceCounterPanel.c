@@ -1,3 +1,4 @@
+#define func_ov001_0207123c GetFieldSceneManager
 #define AdvanceCounterPanel_0207da58 AdvanceCounterPanel
 #define GFXi_EnqueueCommand_02014090 NNS_GfdRegisterNewVramTransferTask
 #define RefreshCounterRecordPositions_0207d790 RefreshCounterRecordPositions

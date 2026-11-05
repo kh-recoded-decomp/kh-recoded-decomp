@@ -13,7 +13,7 @@ extern u16 data_020604fc; /* buttons held */
 extern u16 data_02060500; /* buttons newly pressed */
 extern void ForceHudState6IfActive(void);
 extern void HideStageHudMessage(void);
-extern BOOL func_ov001_02077ef4(void);
+extern BOOL TryEnterFieldMenuState3(void);
 extern void HandleCommandMenuShortcuts(BOOL canSwitchMode);
 extern void ShowStageHudMessage(u8 kind, ...);
 extern void SetMenuEntryHighlight(int listKind, int entryId, BOOL highlighted);
@@ -28,7 +28,7 @@ extern BOOL IsMenuItemAssigned(int itemId);
 extern int ApplyCurrentFieldMode(u16 entry);
 extern int ResolveEventVariant(int eventId);
 extern void MIi_CpuCopyFast(const void *src, void *dest, u32 size);
-extern s32 func_ov001_020789b8(s32 id);
+extern s32 FindFieldMenuEntryValueById(s32 id);
 extern StageHudEntry *GetHudEntry(int id);
 extern s16 *GetPlayerFlagRecord(int index);
 extern void UpdateStageEntry(u8 entryIndex);
@@ -55,7 +55,7 @@ void StageStateCommandMenu(void)
         ForceHudState6IfActive();
         HideStageHudMessage();
         if (work->flags & STAGE_WORK_TURN_STARTED) {
-            func_ov001_02077ef4();
+            TryEnterFieldMenuState3();
             work->flags &= ~STAGE_WORK_TURN_STARTED;
         }
         data_ov041_020cff40[0] = 2;
@@ -119,7 +119,7 @@ void StageStateCommandMenu(void)
                     work->menuStack[work->menuDepth - 1] = chosen;
                     PlayStageSound(0, 1, FALSE);
                     SetMenuEntryHighlight(func_ov001_02078494(), chosen, FALSE);
-                    func_ov001_02077ef4();
+                    TryEnterFieldMenuState3();
                 }
                 break;
             }
@@ -134,7 +134,7 @@ void StageStateCommandMenu(void)
             MIi_CpuCopyFast(&work->itemActionTable->actions[action], &work->itemActions[0], sizeof(StageEntryAction));
             work->itemActions[0].itemSlot = chosen;
             work->itemActions[0].effect = ResolveEventVariant(chosen);
-            work->itemActions[0].effectArg = GetHudEntry(func_ov001_020789b8(chosen))->rows;
+            work->itemActions[0].effectArg = GetHudEntry(FindFieldMenuEntryValueById(chosen))->rows;
             PlayStageSound(0, 1, FALSE);
             SetStageState(0xe, FALSE);
         } else if (chosen >= 0) {

@@ -1,3 +1,4 @@
+#define func_ov001_0207123c GetFieldSceneManager
 #define GetClampedPaletteSlot_02073598 GetClampedPaletteSlot
 #define GetSceneTagTracker_020711b0 GetSceneTagTracker
 #define InitFieldSpriteSlots_0207e130 InitFieldSpriteSlots

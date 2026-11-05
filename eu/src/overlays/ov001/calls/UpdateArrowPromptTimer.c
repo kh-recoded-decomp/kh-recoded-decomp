@@ -1,3 +1,4 @@
+#define func_ov001_0207123c GetFieldSceneManager
 #define FindActiveRecordById_020b8184 FindActiveRecordById
 #define GetSceneTagTracker_020711b0 GetSceneTagTracker
 #define InvokeCallback40_020b8268 InvokeCallback40

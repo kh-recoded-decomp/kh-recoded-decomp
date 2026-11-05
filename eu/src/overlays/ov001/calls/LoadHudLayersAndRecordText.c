@@ -50,7 +50,7 @@ extern const LayerSourceTable gMainBgScreenGetters;
 extern const LayerIdTable gMainBgLayerIds;
 
 extern void *GetSceneTagTracker(void);
-extern void *func_ov001_0207123c(void);
+extern void *GetFieldSceneManager(void);
 extern s32 func_ov001_02078494(void);
 extern void SetFieldMenuMode_02078360(int a, int b);
 extern void func_ov035_020bc3ac(void);
@@ -92,7 +92,7 @@ void LoadHudLayersAndRecordText(void)
     HudContext *context = data_ov001_020a04c4.context;
     void *tracker = GetSceneTagTracker();
     LayerSourceTable sources = gMainBgScreenGetters;
-    void *widgets = func_ov001_0207123c();
+    void *widgets = GetFieldSceneManager();
     LayerIdTable layers = gMainBgLayerIds;
     u16 savedIme;
     int i;

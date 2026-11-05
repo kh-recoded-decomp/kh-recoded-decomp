@@ -1,3 +1,4 @@
+#define func_ov001_0207a648 GetMessageWindowPhaseGroup
 #define ScriptCmd_ShowPendingDialogText_0208c6a4 ScriptCmd_ShowPendingDialogText
 #define SplitTextAtLineBreak_0208c4d8 SplitTextAtLineBreak
 #define Utf8ToUcs2_020512b4 Utf8ToUcs2

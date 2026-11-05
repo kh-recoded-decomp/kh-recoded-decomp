@@ -15,7 +15,7 @@ extern void OpenMessageWindowLayers(u32 field);
 
 extern u32 data_ov001_020a04e4;
 
-void func_ov001_02078d7c(u32 entry, u32 unused1, u32 unused2, u32 unused3)
+void UploadMessageWindowPaletteCallback(u32 entry, u32 unused1, u32 unused2, u32 unused3)
 {
     u32 context;
     u32 unused;

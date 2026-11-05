@@ -1,3 +1,4 @@
+#define func_ov001_0207123c GetFieldSceneManager
 #define GFXi_EnqueueCommand_02014090 NNS_GfdRegisterNewVramTransferTask
 #define LoadFieldBottomRowTiles_0206ed30 LoadFieldBottomRowTiles
 #define UpdateWidgetLayerDefault_020b9df0 UpdateWidgetLayerDefault_020b9e10

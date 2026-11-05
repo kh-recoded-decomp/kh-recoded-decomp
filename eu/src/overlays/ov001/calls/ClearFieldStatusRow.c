@@ -1,3 +1,4 @@
+#define func_ov001_0207123c GetFieldSceneManager
 #define ClearFieldStatusRow_020701fc ClearFieldStatusRow
 #define ClearTilemapRegion_0206ea94 ClearTilemapRegion
 #define GetPanelLayerScreen_0206ea08 GetPanelLayerScreen

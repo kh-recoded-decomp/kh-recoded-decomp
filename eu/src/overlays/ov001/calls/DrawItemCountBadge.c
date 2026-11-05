@@ -1,3 +1,5 @@
+#define func_ov001_0207123c GetFieldSceneManager
+#define func_ov001_02075d1c UploadFieldWidgetSixBySixTileBlock
 #define DrawItemCountBadge_02076ff4 DrawItemCountBadge
 #define FindActiveRecordById_020b8184 FindActiveRecordById
 #define GetSceneTagTracker_020711b0 GetSceneTagTracker

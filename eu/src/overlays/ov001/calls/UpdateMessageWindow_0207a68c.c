@@ -1,3 +1,4 @@
+#define func_ov001_02079f70 DrawGridMenuCellsAndEnterState6
 #define CloseModeWindow_0207a260 CloseModeWindow
 #define DrawMessageWindowPage_02079b4c DrawMessageWindowPage
 #define FinishMessageWindowPage_02079f2c FinishMessageWindowPage

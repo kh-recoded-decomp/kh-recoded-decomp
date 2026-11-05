@@ -17,8 +17,8 @@ extern void ReleaseCommandMarkers(void);
 extern u8 CountActiveStageEntries(BOOL primary);
 extern StageMarker *ShowStageMarker(int listIndex, const VecFx32 *position, BOOL persistent);
 extern void UpdateMarkerScreenPosition(StageMarker *marker, const VecFx32 *world);
-extern BOOL func_ov001_02077e68(void);
-extern BOOL func_ov001_02077ef4(void);
+extern BOOL TryCycleFieldMenuCursor(void);
+extern BOOL TryEnterFieldMenuState3(void);
 extern s32 func_ov001_02078494(void);
 extern void SetFieldMenuMode_02078360(int mode, int arg);
 
@@ -245,10 +245,10 @@ void MoveTargetCursor(int source)
             work->stateTimer = 1;
         } else if (data_020604fc & PAD_BUTTON_L) {
             if (data_02060500 & PAD_KEY_DOWN) {
-                func_ov001_02077ef4();
+                TryEnterFieldMenuState3();
                 work->stateTimer = 2;
             } else if (data_02060500 & PAD_KEY_UP) {
-                func_ov001_02077e68();
+                TryCycleFieldMenuCursor();
                 work->stateTimer = 2;
             } else if (func_ov001_02078494() == 0 && (data_02060500 & PAD_KEY_RIGHT)) {
                 SetFieldMenuMode_02078360(1, 1);
@@ -259,7 +259,7 @@ void MoveTargetCursor(int source)
             }
         } else if (work->stateTimer == 1) {
             work->stateTimer = 0;
-            func_ov001_02077ef4();
+            TryEnterFieldMenuState3();
         }
         break;
     }

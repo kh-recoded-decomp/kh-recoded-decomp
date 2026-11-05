@@ -138,7 +138,7 @@ extern void CallVirtualHandlerSlot1(void *context, int arg);
 extern BOOL PlaySoundEffect(int seqArcNo, int index);
 extern Record *FindActiveRecordById(void *pool, u16 recordId);
 extern void InvokeCallback40(void *pool, Record *record);
-extern void *func_ov001_0207123c(void);
+extern void *GetFieldSceneManager(void);
 extern void ClearTileTableRowAndMarkDirty(void *table, int row);
 extern void func_ov027_020b7df4(void *pool);
 extern int NNS_GfdRegisterNewVramTransferTask(int engine, int offset, void *src, int size);
@@ -416,8 +416,8 @@ int RunResultTallyStep(void)
             } else {
                 work->started = FALSE;
                 work->step = -1;
-                ClearTileTableRowAndMarkDirty(func_ov001_0207123c(), 0xb);
-                ClearTileTableRowAndMarkDirty(func_ov001_0207123c(), 0xa);
+                ClearTileTableRowAndMarkDirty(GetFieldSceneManager(), 0xb);
+                ClearTileTableRowAndMarkDirty(GetFieldSceneManager(), 0xa);
             }
         }
         break;

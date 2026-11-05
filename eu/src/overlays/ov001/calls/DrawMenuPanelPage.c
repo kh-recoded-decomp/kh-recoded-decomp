@@ -1,3 +1,4 @@
+#define func_ov001_0207123c GetFieldSceneManager
 #define DrawMenuPanelPage_020769f4 DrawMenuPanelPage
 #define GetSceneTagTracker_020711b0 GetSceneTagTracker
 #define data_ov001_0209eeb0 gFieldMenuDrawHandlers

@@ -27,7 +27,7 @@ extern BOOL IsFieldFlag10Set(void);
 extern BOOL IsLeadEntryFlag80Set(void);
 extern void *CycleMenuEntry(FieldMenu *menu, s32 group, s32 slot, s32 *outIndex);
 
-BOOL func_ov001_02077e68(void)
+BOOL TryCycleFieldMenuCursor(void)
 {
     FieldMenu *menu = data_ov001_020a04d0.menu;
 

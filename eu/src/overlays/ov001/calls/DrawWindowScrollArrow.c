@@ -1,3 +1,4 @@
+#define func_ov001_0207123c GetFieldSceneManager
 #define func_ov001_020645c8 IsSessionFlagSet
 #define DrawWindowScrollArrow_02079e2c DrawWindowScrollArrow
 #define UpdateWidgetLayerDefault_020b9df0 UpdateWidgetLayerDefault_020b9e10

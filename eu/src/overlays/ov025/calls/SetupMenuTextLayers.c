@@ -1,3 +1,4 @@
+#define func_ov001_0207123c GetFieldSceneManager
 #define ClearTileTableRowAndMarkDirty_020b9d18 ClearTileTableRowAndMarkDirty
 #define CountActiveSlots_020b74d8 CountActiveSlots
 #define DrawRemainingCountText_020b5858 DrawRemainingCountText

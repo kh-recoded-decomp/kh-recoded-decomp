@@ -64,7 +64,7 @@ extern BOOL IsFieldFlag13OrSessionFlagSet(void);
 extern void func_ov001_0207b228(void (*callback)(void));
 extern void SetupSubScreenBgLayers(void);
 extern void SetPanelSessionActive(void);
-extern void *func_ov001_0207123c(void);
+extern void *GetFieldSceneManager(void);
 extern void InitTileTableFrom(void *widget, BgLayerDesc *desc);
 extern int Msg_OpenContainerAndReadHeader(const char *path, int heap, int flags);
 extern void InitBackgroundContainer(void *animSet, Words5 *desc);
@@ -117,7 +117,7 @@ void *CreateBoardScreen(int mode)
         data_ov024_020b7540.state->widget = data_ov024_020b7540.state->widgetData;
         InitTileTableFrom(data_ov024_020b7540.state->widget, &bgDesc);
     } else {
-        data_ov024_020b7540.state->widget = func_ov001_0207123c();
+        data_ov024_020b7540.state->widget = GetFieldSceneManager();
     }
     data_ov024_020b7540.state->resourceA = Msg_OpenContainerAndReadHeader(sOv024_UiBtlBtluiP2_020b74f4, 0xe, 0);
     data_ov024_020b7540.state->resourceB = Msg_OpenContainerAndReadHeader(sOv024_UiBtlBtlLanguageP2_020b7508, 0xe, 0);

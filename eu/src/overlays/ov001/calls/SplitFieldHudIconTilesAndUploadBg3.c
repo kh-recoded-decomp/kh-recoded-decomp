@@ -8,7 +8,7 @@ extern s32 NNS_G2dGetUnpackedBGCharacterData(u32 resourceManager, s32 *outPayloa
 extern s32 GetClampedPaletteSlot(void);
 extern void BlendIconTiles(u16 flags);
 
-void func_ov001_0206efac(s32 context, u32 resourceManager, u32 unused1, u32 unused2)
+void SplitFieldHudIconTilesAndUploadBg3(s32 context, u32 resourceManager, u32 unused1, u32 unused2)
 {
     s32 slotIndex;
     s32 payload;

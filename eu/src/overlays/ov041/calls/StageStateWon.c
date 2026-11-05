@@ -9,7 +9,7 @@ extern void SetStageEntryState(u8 entryIndex, int state);
 extern void SumStageTotals(StageWork **work, int *totals);
 extern void ShowStageHudMessage(u8 kind, ...);
 extern BOOL IsStageHudMessageShowing(void);
-extern void func_ov001_02078680(void);
+extern void IncrementFieldMenuEntryProgress(void);
 extern void SetStageState(int state, BOOL runNow);
 extern void UpdateStageEntry(u8 entryIndex);
 
@@ -79,11 +79,11 @@ void StageStateWon(void)
             break;
         }
         for (i = 0; i < 15; i++) {
-            func_ov001_02078680();
+            IncrementFieldMenuEntryProgress();
         }
         if (work->entries[0].statuses[7] != 0) {
             for (i = 0; i < 15; i++) {
-                func_ov001_02078680();
+                IncrementFieldMenuEntryProgress();
             }
         }
         SetStageState(0x14, FALSE);

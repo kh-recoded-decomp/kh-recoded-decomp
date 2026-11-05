@@ -1,3 +1,4 @@
+#define func_ov001_02078cf8 UploadMessageWindowBg3CharactersCallback
 #define func_ov001_020791e0 OpenMessageWindowFrame
 #define BuildChoiceListWindows_02078e30 BuildChoiceListWindows
 #define LoadMenuEntryPanel_0207a17c LoadMenuEntryPanel

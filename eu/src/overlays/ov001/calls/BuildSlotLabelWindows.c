@@ -1,3 +1,4 @@
+#define func_ov001_0207123c GetFieldSceneManager
 #define BuildSlotLabelWindows_0206f858 BuildSlotLabelWindows
 #define CallVirtualHandlerSlot1_02001574 CallVirtualHandlerSlot1
 #define CountAssignedFieldSlots_0207169c CountAssignedFieldSlots

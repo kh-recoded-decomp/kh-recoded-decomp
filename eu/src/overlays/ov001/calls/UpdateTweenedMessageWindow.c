@@ -1,3 +1,4 @@
+#define func_ov001_0207123c GetFieldSceneManager
 #define DrawScaledWindowFrame_020796f8 DrawScaledWindowFrame
 #define MarkTileTableRowDirty_020b9e00 MarkTileTableRowDirty
 #define OS_GetTick_02003fd4 OS_GetTick

@@ -28,7 +28,7 @@ extern FieldMenuHandle data_ov001_020a04d0;
 
 extern void *FND_GetListObjectByIndex(NNSFndList *list, u16 index);
 
-u16 func_ov001_0207865c(void)
+u16 GetSelectedFieldMenuEntryId(void)
 {
     FieldMenu *menu = data_ov001_020a04d0.menu;
     FieldListEntry *entry = FND_GetListObjectByIndex(&menu->list, menu->selectedIndex);

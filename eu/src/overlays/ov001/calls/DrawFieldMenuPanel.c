@@ -1,3 +1,4 @@
+#define func_ov001_0207123c GetFieldSceneManager
 #define DrawFieldMenuPanel_02075f5c DrawFieldMenuPanel
 #define func_ov001_02075b48 DrawFieldEntryRow
 #define FillBackgroundLayerRect_02001a60 FillBackgroundLayerRect

@@ -1,3 +1,4 @@
+#define func_ov001_020788b8 SetFieldMenuActiveSlotById
 #define GetPlayerFlagRecord_0205036c GetPlayerFlagRecord
 #define SetMenuEntryHighlight_0207830c SetMenuEntryHighlight
 #define UpdateRewardMenuHighlights_020bde68 UpdateRewardMenuHighlights

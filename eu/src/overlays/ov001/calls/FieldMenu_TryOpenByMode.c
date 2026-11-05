@@ -1,3 +1,4 @@
+#define func_ov001_02077ef4 TryEnterFieldMenuState3
 #define FieldMenu_TryOpenByMode_02077d64 FieldMenu_TryOpenByMode
 #define IsFieldFlag10Set_020728c4 IsFieldFlag10Set
 #define IsHudFlag7Set_020725bc IsHudFlag7Set

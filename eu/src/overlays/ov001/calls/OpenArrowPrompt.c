@@ -1,3 +1,4 @@
+#define func_ov001_0207123c GetFieldSceneManager
 #define FindActiveRecordById_020b8184 FindActiveRecordById
 #define GetClampedPaletteSlot_02073598 GetClampedPaletteSlot
 #define GetSceneTagTracker_020711b0 GetSceneTagTracker

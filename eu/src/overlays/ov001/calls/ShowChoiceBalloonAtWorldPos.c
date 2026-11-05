@@ -1,3 +1,4 @@
+#define func_ov001_0207123c GetFieldSceneManager
 #define func_01ff80d4 GetVBlankCounter
 #define ClearChoiceHighlight_020701a8 ClearChoiceHighlight
 #define FillBackgroundLayerRect_02001a60 FillBackgroundLayerRect

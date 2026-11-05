@@ -85,7 +85,7 @@ extern void *LoadFileAllocFromHeapTail(u32 fileId, u32 heapId);
 extern void *Archive_LoadFile(u32 fileId, u32 heapId);
 extern void InitSubScreenVramBanks(void);
 extern void LoadMenuScreenGraphics(FieldManager *manager, GraphicsView *view, void *file);
-extern void func_ov001_0206f1a0(FieldManager *manager);
+extern void LoadFieldSceneFonts(FieldManager *manager);
 extern void InitFieldHudWindow(FieldManager *manager, void *charData);
 extern void BuildMessageLineWindow(FieldManager *manager, void *body);
 extern void LoadRecordNamesAndEntryList(FieldManager *manager);
@@ -97,7 +97,7 @@ extern void RefreshHudTagsAndIcons(FieldManager *manager);
 extern void *FindActiveRecordById(void *pool, u32 recordId);
 extern void TagTracker_InvokeCallback(void *pool, void *record);
 extern void func_ov001_0207b430(void);
-extern void *func_ov001_0207123c(void);
+extern void *GetFieldSceneManager(void);
 extern u16 *UpdateWidgetLayerDefault_020b9e10(void *widgets, int layer);
 extern void FillBackgroundLayerRect(void *window, u16 *dst, int x, int y, u8 palette);
 extern void InvokeForChannelOrBoth(u32 arg0, void *arg1, void *arg2, int channel);
@@ -119,7 +119,7 @@ extern SaveSlots *GetSelectionPackedValueBlock(void);
 extern u32 GetParamWord20(void);
 extern void AddGaugePoints(u16 slot, int arg1);
 extern BOOL func_ov001_02064784(void);
-extern void func_ov001_0206efac(FieldManager *manager, void *file);
+extern void SplitFieldHudIconTilesAndUploadBg3(FieldManager *manager, void *file);
 extern void StartSceneMinigameTask(void);
 
 void *InitFieldManager(FieldParams *params)
@@ -152,7 +152,7 @@ void *InitFieldManager(FieldParams *params)
     file = LoadFileAllocFromHeapTail((((manager->messages6C + 0x8000) & 0xFFFFFC) << 7) | 0x80000000, 0xE);
     InitSubScreenVramBanks();
     LoadMenuScreenGraphics(manager, &view, file);
-    func_ov001_0206f1a0(manager);
+    LoadFieldSceneFonts(manager);
     InitFieldHudWindow(manager, view.character->pRawData);
     BuildMessageLineWindow(manager, params->body);
     LoadRecordNamesAndEntryList(manager);
@@ -197,7 +197,7 @@ void *InitFieldManager(FieldParams *params)
         func_ov001_0207b430();
         break;
     }
-    FillBackgroundLayerRect(manager->textWindow, UpdateWidgetLayerDefault_020b9e10(func_ov001_0207123c(), 9), 1, 2, 9);
+    FillBackgroundLayerRect(manager->textWindow, UpdateWidgetLayerDefault_020b9e10(GetFieldSceneManager(), 9), 1, 2, 9);
     manager->panelState = 0;
     InvokeForChannelOrBoth(1, sOv001_BTLUITASK_0209edd8, RunFieldListCallbacks, 0);
     if (file != NULL) {
@@ -225,7 +225,7 @@ void *InitFieldManager(FieldParams *params)
         AddGaugePoints(slots->currentSlot, 1);
         if (!func_ov001_02064784() && IsSessionFlagSet(0x3708)) {
             file = Archive_LoadFile((((manager->messages6C + 0x8000) & 0xFFFFFC) << 7) | 0x80000005, 0xE);
-            func_ov001_0206efac(manager, file);
+            SplitFieldHudIconTilesAndUploadBg3(manager, file);
             NNSi_FndFreeFromDefaultHeap(file);
         }
     } else {

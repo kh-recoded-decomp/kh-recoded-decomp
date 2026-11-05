@@ -1,3 +1,4 @@
+#define func_ov001_0207123c GetFieldSceneManager
 #define ClearTileTableRowAndMarkDirty_020b9d18 ClearTileTableRowAndMarkDirty
 #define SampleTweenValue_0205258c SampleTweenValue
 #define SetMenuHiddenAndReloadChars_0207525c SetMenuHiddenAndReloadChars

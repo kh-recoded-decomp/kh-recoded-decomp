@@ -3,10 +3,9 @@
 typedef struct {
     u32 current;
     u32 limit;
-    s32 id;
-    s32 value;
-    s32 state;
-    u8 pad_14[0x28];
+    u8 pad_08[0x20];
+    u16 flags;
+    u8 pad_2A[0x12];
 } FieldEntry;
 
 typedef struct {
@@ -23,20 +22,23 @@ typedef struct {
 
 extern FieldMenuHandle data_ov001_020a04d0;
 
-void func_ov001_020786d0(s32 id)
+extern BOOL IsFieldFlag8Set(void);
+
+void IncrementFieldMenuEntryProgress(void)
 {
     FieldMenu *menu = data_ov001_020a04d0.menu;
     FieldEntry *entry;
     s32 index;
 
+    if (!IsFieldFlag8Set()) {
+        return;
+    }
     for (index = 0; index < menu->activeCount; index++) {
         entry = &menu->entries[index];
-        if (entry->id == id) {
-            if (entry->state == 3) {
-                return;
+        if (entry->flags & 0x10) {
+            if (++entry->current > entry->limit) {
+                entry->current = entry->limit;
             }
-            entry->current = entry->limit;
-            return;
         }
     }
 }

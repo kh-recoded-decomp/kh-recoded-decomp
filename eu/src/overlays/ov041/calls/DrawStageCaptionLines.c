@@ -2,7 +2,7 @@
 #include "src/overlays/ov041/StageCaption.h"
 
 extern void MapStageCaptionLine(StageCaption *caption, StageTextLine *line, int palette);
-extern void *func_ov001_0207123c(void);
+extern void *GetFieldSceneManager(void);
 extern void MarkTileTableRowDirty(void *table, int layer);
 
 /* Puts several text lines on the caption's tile map and marks it for upload. */
@@ -13,5 +13,5 @@ void DrawStageCaptionLines(StageCaption *caption, StageTextLine *lines, int coun
     for (i = 0; i < count; i++) {
         MapStageCaptionLine(caption, &lines[i], palette);
     }
-    MarkTileTableRowDirty(func_ov001_0207123c(), 0xb);
+    MarkTileTableRowDirty(GetFieldSceneManager(), 0xb);
 }

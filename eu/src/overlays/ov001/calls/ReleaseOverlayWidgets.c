@@ -16,7 +16,7 @@ typedef struct OverlayGlobals {
 } OverlayGlobals;
 
 extern OverlayGlobals data_ov001_020a04c4;
-extern int func_ov001_0207123c(void);
+extern int GetFieldSceneManager(void);
 extern void DestroyTaskObjectWrapper(u32 handle);
 extern void ClearTileTableRowAndMarkDirty(int widgets, int layer);
 extern void UnloadOverlayAfterGeometryTransfer(int processor, int overlayId);
@@ -24,7 +24,7 @@ extern char OVERLAY_45_ID[];
 
 void ReleaseOverlayWidgets(void) {
     OverlayState *state = data_ov001_020a04c4.state;
-    int widgets = func_ov001_0207123c();
+    int widgets = GetFieldSceneManager();
 
     if (state->handle != 0) {
         DestroyTaskObjectWrapper(state->handle);

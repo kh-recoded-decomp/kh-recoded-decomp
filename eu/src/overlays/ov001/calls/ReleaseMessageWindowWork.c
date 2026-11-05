@@ -5,7 +5,7 @@ extern void NNSi_FndFreeFromDefaultHeap(void *block);
 
 extern u32 data_ov001_020a04e4;
 
-void func_ov001_0207a4a0(void)
+void ReleaseMessageWindowWork(void)
 {
     u32 context;
 

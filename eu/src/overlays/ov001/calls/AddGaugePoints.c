@@ -35,7 +35,7 @@ extern BOOL IsFieldFlag13OrSessionFlagSet(void);
 extern u32 func_ov001_02077bcc(void);
 extern void SetFieldMenuMode(int id);
 extern void *Archive_LoadFile(u32 fileId, u32 mode);
-extern void func_ov001_0206efac(GaugeContext *context, void *file);
+extern void SplitFieldHudIconTilesAndUploadBg3(GaugeContext *context, void *file);
 extern void NNSi_FndFreeFromDefaultHeap(void *ptr);
 extern void *QueueFileLoadRequest(u32 path, int loadMode, void (*callback)(void *, void *), void *userData);
 extern void ApplyFieldResourceAndRelease(void *request, void *userData);
@@ -122,7 +122,7 @@ void AddGaugePoints(int delta, BOOL loadNow)
             if (loadNow) {
                 context->displayedLevel = slot;
                 file = Archive_LoadFile(LEVEL_FILE(context->archive, files.fileIds[3]), 0xe);
-                func_ov001_0206efac(context, file);
+                SplitFieldHudIconTilesAndUploadBg3(context, file);
                 NNSi_FndFreeFromDefaultHeap(file);
             } else {
                 QueueFileLoadRequest(LEVEL_FILE(context->archive, files.fileIds[3]), 1, ApplyFieldResourceAndRelease, NULL);
@@ -161,7 +161,7 @@ void AddGaugePoints(int delta, BOOL loadNow)
         if (loadNow) {
             context->displayedLevel = slot;
             file = Archive_LoadFile(LEVEL_FILE(context->archive, files.fileIds[slot]), 0xe);
-            func_ov001_0206efac(context, file);
+            SplitFieldHudIconTilesAndUploadBg3(context, file);
             NNSi_FndFreeFromDefaultHeap(file);
         } else {
             QueueFileLoadRequest(LEVEL_FILE(context->archive, files.fileIds[slot]), 1, ApplyFieldResourceAndRelease, NULL);

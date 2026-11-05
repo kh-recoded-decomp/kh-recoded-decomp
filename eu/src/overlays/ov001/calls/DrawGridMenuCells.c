@@ -37,7 +37,7 @@ typedef struct TagRecord {
 } TagRecord;
 
 extern void *GetSceneTagTracker(void);
-extern int func_ov001_0207123c(void);
+extern int GetFieldSceneManager(void);
 extern u16 *UpdateWidgetLayerDefault_020b9e10(int layers, int layerIndex);
 extern void ClearTileTableRect(int screen, int layer, int x, int y, int width, int height);
 extern void MarkTileTableRowDirty(int widgets, int layer);
@@ -72,7 +72,7 @@ void DrawGridMenuCells(GridMenu *menu, BOOL hideCursor)
     maxY = -1;
     grid = &menu->grid;
     tracker = GetSceneTagTracker();
-    screen = func_ov001_0207123c();
+    screen = GetFieldSceneManager();
     layerA = UpdateWidgetLayerDefault_020b9e10(screen, 10);
     layerB = UpdateWidgetLayerDefault_020b9e10(screen, 11);
     ClearTileTableRect(screen, 10, grid->x, grid->y, grid->width, grid->height - 2);

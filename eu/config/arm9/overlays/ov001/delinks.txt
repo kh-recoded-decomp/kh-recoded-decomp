@@ -2648,7 +2648,7 @@ src/overlays/ov001/calls/BlendIconTiles.c:
     complete
     .text       start:0x0206ed8c end:0x0206efac
 
-src/overlays/ov001/calls/func_ov001_0206efac.c:
+src/overlays/ov001/calls/SplitFieldHudIconTilesAndUploadBg3.c:
     complete
     .text       start:0x0206efac end:0x0206f040
 
@@ -2660,15 +2660,15 @@ src/overlays/ov001/calls/LoadMenuScreenGraphics.c:
     complete
     .text       start:0x0206f064 end:0x0206f174
 
-src/overlays/ov001/calls/func_ov001_0206f174.c:
+src/overlays/ov001/calls/ReleaseFieldHudGraphics.c:
     complete
     .text       start:0x0206f174 end:0x0206f1a0
 
-src/overlays/ov001/calls/func_ov001_0206f1a0.c:
+src/overlays/ov001/calls/LoadFieldSceneFonts.c:
     complete
     .text       start:0x0206f1a0 end:0x0206f1dc
 
-src/overlays/ov001/calls/func_ov001_0206f1dc.c:
+src/overlays/ov001/calls/ReleaseFieldSceneFonts.c:
     complete
     .text       start:0x0206f1dc end:0x0206f200
 
@@ -2732,7 +2732,7 @@ src/overlays/ov001/calls/CreateFieldHudWidgets.c:
     complete
     .text       start:0x0206fa74 end:0x0206fbec
 
-src/overlays/ov001/calls/func_ov001_0206fbec.c:
+src/overlays/ov001/calls/DestroyFieldHudTasks.c:
     complete
     .text       start:0x0206fbec end:0x0206fc54
 
@@ -2792,7 +2792,7 @@ src/overlays/ov001/calls/UpdateHudSlideTween.c:
     complete
     .text       start:0x020702c0 end:0x0207031a
 
-src/overlays/ov001/calls/func_ov001_0207031c.c:
+src/overlays/ov001/calls/AdvanceFieldMessageAndCloseWhenDone.c:
     complete
     .text       start:0x0207031c end:0x02070336
 
@@ -2876,7 +2876,7 @@ src/overlays/ov001/calls/MakePrimaryVramKey_02071214.c:
     complete
     .text       start:0x02071214 end:0x0207123c
 
-src/overlays/ov001/calls/func_ov001_0207123c.c:
+src/overlays/ov001/calls/GetFieldSceneManager.c:
     complete
     .text       start:0x0207123c end:0x02071248
 
@@ -3256,7 +3256,7 @@ src/overlays/ov001/calls/RefreshFieldLayerIfUnbound.c:
     complete
     .text       start:0x020736d0 end:0x02073718
 
-src/overlays/ov001/calls/func_ov001_02073718.c:
+src/overlays/ov001/calls/RefreshFieldHudIconRecords.c:
     complete
     .text       start:0x02073718 end:0x02073758
 
@@ -3308,7 +3308,7 @@ src/overlays/ov001/calls/DrawGaugeSpan.c:
     complete
     .text       start:0x02073bb4 end:0x02073cb0
 
-src/overlays/ov001/calls/func_ov001_02073cb0.c:
+src/overlays/ov001/calls/AllocCopyOrClearBuffer.c:
     complete
     .text       start:0x02073cb0 end:0x02073cda
 
@@ -3472,7 +3472,7 @@ src/overlays/ov001/calls/UpdateFieldPromptTag.c:
     complete
     .text       start:0x02075ccc end:0x02075d1c
 
-src/overlays/ov001/calls/func_ov001_02075d1c.c:
+src/overlays/ov001/calls/UploadFieldWidgetSixBySixTileBlock.c:
     complete
     .text       start:0x02075d1c end:0x02075d72
 
@@ -3500,7 +3500,7 @@ src/overlays/ov001/calls/DrawPartyGaugeFrames.c:
     complete
     .text       start:0x02076008 end:0x020761a2
 
-src/overlays/ov001/calls/func_ov001_020761a4.c:
+src/overlays/ov001/calls/DrawFieldMenuOrPartyGaugeFrames.c:
     complete
     .text       start:0x020761a4 end:0x020761d6
 
@@ -3608,11 +3608,11 @@ src/overlays/ov001/calls/FieldMenu_TryOpenByMode.c:
     complete
     .text       start:0x02077d64 end:0x02077e68
 
-src/overlays/ov001/calls/func_ov001_02077e68.c:
+src/overlays/ov001/calls/TryCycleFieldMenuCursor.c:
     complete
     .text       start:0x02077e68 end:0x02077ef4
 
-src/overlays/ov001/calls/func_ov001_02077ef4.c:
+src/overlays/ov001/calls/TryEnterFieldMenuState3.c:
     complete
     .text       start:0x02077ef4 end:0x02077f3c
 
@@ -3660,15 +3660,15 @@ src/overlays/ov001/calls/MoveSelectedItemToSlot.c:
     complete
     .text       start:0x020785c0 end:0x0207865c
 
-src/overlays/ov001/calls/func_ov001_0207865c.c:
+src/overlays/ov001/calls/GetSelectedFieldMenuEntryId.c:
     complete
     .text       start:0x0207865c end:0x02078680
 
-src/overlays/ov001/calls/func_ov001_02078680.c:
+src/overlays/ov001/calls/IncrementFieldMenuEntryProgress.c:
     complete
     .text       start:0x02078680 end:0x020786d0
 
-src/overlays/ov001/calls/func_ov001_020786d0.c:
+src/overlays/ov001/calls/FillFieldMenuEntryProgressById.c:
     complete
     .text       start:0x020786d0 end:0x02078710
 
@@ -3684,7 +3684,7 @@ src/overlays/ov001/calls/func_ov001_02078898.c:
     complete
     .text       start:0x02078898 end:0x020788b8
 
-src/overlays/ov001/calls/func_ov001_020788b8.c:
+src/overlays/ov001/calls/SetFieldMenuActiveSlotById.c:
     complete
     .text       start:0x020788b8 end:0x02078910
 
@@ -3700,7 +3700,7 @@ src/overlays/ov001/calls/ResolveEventVariant.c:
     complete
     .text       start:0x02078948 end:0x020789b8
 
-src/overlays/ov001/calls/func_ov001_020789b8.c:
+src/overlays/ov001/calls/FindFieldMenuEntryValueById.c:
     complete
     .text       start:0x020789b8 end:0x020789f8
 
@@ -3732,7 +3732,7 @@ src/overlays/ov001/calls/LoadModeBg3Graphics.c:
     complete
     .text       start:0x02078c7c end:0x02078cf8
 
-src/overlays/ov001/calls/func_ov001_02078cf8.c:
+src/overlays/ov001/calls/UploadMessageWindowBg3CharactersCallback.c:
     complete
     .text       start:0x02078cf8 end:0x02078d22
 
@@ -3740,7 +3740,7 @@ src/overlays/ov001/calls/LoadModeBg1Characters.c:
     complete
     .text       start:0x02078d24 end:0x02078d7c
 
-src/overlays/ov001/calls/func_ov001_02078d7c.c:
+src/overlays/ov001/calls/UploadMessageWindowPaletteCallback.c:
     complete
     .text       start:0x02078d7c end:0x02078dd8
 
@@ -3836,7 +3836,7 @@ src/overlays/ov001/calls/FinishMessageWindowPage.c:
     complete
     .text       start:0x02079f2c end:0x02079f70
 
-src/overlays/ov001/calls/func_ov001_02079f70.c:
+src/overlays/ov001/calls/DrawGridMenuCellsAndEnterState6.c:
     complete
     .text       start:0x02079f70 end:0x02079f80
 
@@ -3884,7 +3884,7 @@ src/overlays/ov001/calls/InitModeHandlerContext.c:
     complete
     .text       start:0x0207a458 end:0x0207a4a0
 
-src/overlays/ov001/calls/func_ov001_0207a4a0.c:
+src/overlays/ov001/calls/ReleaseMessageWindowWork.c:
     complete
     .text       start:0x0207a4a0 end:0x0207a4d0
 
@@ -3896,7 +3896,7 @@ src/overlays/ov001/calls/OpenMessageWindow_0207a504.c:
     complete
     .text       start:0x0207a504 end:0x0207a648
 
-src/overlays/ov001/calls/func_ov001_0207a648.c:
+src/overlays/ov001/calls/GetMessageWindowPhaseGroup.c:
     complete
     .text       start:0x0207a648 end:0x0207a68c
 
@@ -3932,11 +3932,11 @@ src/overlays/ov001/calls/func_ov001_0207a8fc.c:
     complete
     .text       start:0x0207a8fc end:0x0207a91e
 
-src/overlays/ov001/calls/func_ov001_0207a920.c:
+src/overlays/ov001/calls/StartSubsceneOverlayLoad.c:
     complete
     .text       start:0x0207a920 end:0x0207a944
 
-src/overlays/ov001/calls/func_ov001_0207a944.c:
+src/overlays/ov001/calls/UnloadSubsceneOverlayAndDestroyTask.c:
     complete
     .text       start:0x0207a944 end:0x0207a968
 
@@ -3960,7 +3960,7 @@ src/overlays/ov001/calls/LoadModeNameAndMessages.c:
     complete
     .text       start:0x0207ab10 end:0x0207ab68
 
-src/overlays/ov001/calls/func_ov001_0207ab68.c:
+src/overlays/ov001/calls/ReleaseSubscenePanelBuffers.c:
     complete
     .text       start:0x0207ab68 end:0x0207ab7c
 
@@ -3972,7 +3972,7 @@ src/overlays/ov001/auto/func_ov001_0207abd8.c:
     complete
     .text       start:0x0207abd8 end:0x0207abda
 
-src/overlays/ov001/calls/func_ov001_0207abdc.c:
+src/overlays/ov001/calls/ReloadSubsceneOverlayAfterFade.c:
     complete
     .text       start:0x0207abdc end:0x0207ac16
 
@@ -4000,7 +4000,7 @@ src/overlays/ov001/calls/InitFieldPanelScene.c:
     complete
     .text       start:0x0207ad60 end:0x0207ae58
 
-src/overlays/ov001/calls/func_ov001_0207ae58.c:
+src/overlays/ov001/calls/ReleaseSubscenePanelWork.c:
     complete
     .text       start:0x0207ae58 end:0x0207aec8
 

@@ -1,3 +1,4 @@
+#define func_ov001_0207123c GetFieldSceneManager
 #define BackupSceneVram_0206fcc8 BackupSceneVram
 #define G2_GetBG2CharPtr_02007120 G2_GetBG2CharPtr
 #define NNSi_FndAllocFromDefaultHeapEx_0202a19c NNS_FndAllocFromDefaultExpHeapEx

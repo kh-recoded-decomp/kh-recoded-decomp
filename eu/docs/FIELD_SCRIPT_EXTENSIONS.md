@@ -210,7 +210,7 @@ callees `src/overlays/ov001/calls/ActorChannel_ResetAndInvalidate.c`,
 `src/overlays/ov001/calls/InitFieldCameraFromPreset.c`,
 `src/overlays/ov001/calls/FinishEventCameraCut.c`,
 `src/overlays/ov001/calls/FrameCameraOnActor.c` and
-`src/overlays/ov001/calls/func_ov001_02073718.c`, together with
+`src/overlays/ov001/calls/RefreshFieldHudIconRecords.c`, together with
 `src/overlays/ov021/calls/SetSubModeFrozen.c`. EU instruction bytes additionally
 confirm the callback default branches and the angle conversion/narrowing.
 

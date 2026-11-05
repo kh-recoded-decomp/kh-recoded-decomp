@@ -1,3 +1,4 @@
+#define func_ov001_02078680 IncrementFieldMenuEntryProgress
 #define func_ov001_020645dc SetSessionFlag
 #define func_ov001_020645c8 IsSessionFlagSet
 #define FieldObject_CallHook24_0207f800 CallFieldObjectHook24

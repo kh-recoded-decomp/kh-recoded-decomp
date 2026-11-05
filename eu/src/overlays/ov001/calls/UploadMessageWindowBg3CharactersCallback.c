@@ -4,7 +4,7 @@
 extern void GX_LoadBG3Char(u32 arg1, u32 arg2, u32 arg3);
 extern void NNS_G2dGetUnpackedBGCharacterData(u32 tag, s32 *out);
 
-void func_ov001_02078cf8(u32 entry, u32 unused1, u32 unused2, u32 unused3)
+void UploadMessageWindowBg3CharactersCallback(u32 entry, u32 unused1, u32 unused2, u32 unused3)
 {
     u32 tag;
     s32 resource;

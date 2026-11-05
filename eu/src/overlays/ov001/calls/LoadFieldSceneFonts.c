@@ -6,7 +6,7 @@ extern u32 sOv001_TextFontEu08sNftr_0209ed5c;
 extern u32 sOv001_TextFontEu10sNftr_0209ed74;
 extern void LoadUtf16FontResource(u32 context, u32 *table);
 
-void func_ov001_0206f1a0(u32 context)
+void LoadFieldSceneFonts(u32 context)
 {
     LoadUtf16FontResource(context + 0x9c, &sOv001_TextFontEu10Nftr_0209ed2c);
     LoadUtf16FontResource(context + 0x78, &sOv001_TextFontEu08Nftr_0209ed44);

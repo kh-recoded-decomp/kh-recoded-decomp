@@ -9,7 +9,7 @@ extern void SetSceneEntryAnimation(StageEntry *entry, int animation, int blend, 
 extern void GetPositionAboveGround(VecFx32 *position, StageEntry *entry);
 extern StageResourceItem *SpawnStageItem(StageEntry *owner, int category, u8 index, u8 animation,
                                          const VecFx32 *position, BOOL persistent);
-extern void func_ov001_020786d0(int index);
+extern void FillFieldMenuEntryProgressById(int index);
 extern u32 IsEntryFlag2Set(StageEntry *entry);
 extern void SetEntryState(StageEntry *entry, int state);
 extern BOOL MatchesEitherSlotId(StageEntry *entry, int animation);
@@ -86,7 +86,7 @@ void EntryStateStatusCommand(u8 entryIndex)
         }
         if (entry->statuses[6] > 0) {
             for (i = 0; i < 16; i++) {
-                func_ov001_020786d0(i);
+                FillFieldMenuEntryProgressById(i);
             }
             entry->statuses[6] = 0;
         }

@@ -1,3 +1,4 @@
+#define func_ov001_0207123c GetFieldSceneManager
 #define DrawFieldMessageById_0206ff10 DrawFieldMessageById
 #define FillBackgroundLayerRect_02001a60 FillBackgroundLayerRect
 #define FlushBufferAndRunCallback_0200153c FlushBufferAndRunCallback

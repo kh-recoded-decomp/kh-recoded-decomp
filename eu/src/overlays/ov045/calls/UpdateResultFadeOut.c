@@ -1,3 +1,4 @@
+#define func_ov001_0207123c GetFieldSceneManager
 #define ClearTileTableRowAndMarkDirty_020b9d18 ClearTileTableRowAndMarkDirty
 #define InvokeCallbackForRecordId_020bf0c4 InvokeCallbackForRecordId
 #define PlaySoundChecked_0204d8d0 PlaySoundChecked

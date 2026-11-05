@@ -1,3 +1,4 @@
+#define func_ov001_0207123c GetFieldSceneManager
 #define func_ov001_02064490 InvokeSessionCheckCallbackOrDefault
 #define CallVirtualHandlerSlot1_02001574 CallVirtualHandlerSlot1
 #define ClearTileTableRowDirty_020b9e30 ClearTileTableRowDirty

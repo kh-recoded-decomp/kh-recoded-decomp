@@ -118,8 +118,8 @@ python tools/verify_idx.py src/overlays/ov027/calls/ProcessFileLoadQueue.c Proce
 python tools/verify_idx.py src/overlays/ov027/calls/IsFileLoadQueueEmpty.c IsFileLoadQueueEmpty
 python tools/verify_idx.py src/overlays/ov027/calls/DestroyFileLoadRequest.c DestroyFileLoadRequest
 python tools/verify_idx.py src/overlays/ov027/calls/ClearOverlayLoadQueues.c ClearOverlayLoadQueues --thumb
-python tools/verify_idx.py src/overlays/ov001/calls/func_ov001_02078cf8.c func_ov001_02078cf8 --thumb
-python tools/verify_idx.py src/overlays/ov001/calls/func_ov001_02078d7c.c func_ov001_02078d7c --thumb
+python tools/verify_idx.py src/overlays/ov001/calls/UploadMessageWindowBg3CharactersCallback.c UploadMessageWindowBg3CharactersCallback --thumb
+python tools/verify_idx.py src/overlays/ov001/calls/UploadMessageWindowPaletteCallback.c UploadMessageWindowPaletteCallback --thumb
 bash tools/gate.sh
 ```
 

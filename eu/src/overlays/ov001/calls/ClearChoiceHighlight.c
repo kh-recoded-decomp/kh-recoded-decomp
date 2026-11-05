@@ -1,3 +1,4 @@
+#define func_ov001_0207123c GetFieldSceneManager
 #define ClearChoiceHighlight_020701a8 ClearChoiceHighlight
 #define func_ov027_020b9d54 ClearTileTableRect
 #define func_ov027_020b9e00 MarkTileTableRowDirty

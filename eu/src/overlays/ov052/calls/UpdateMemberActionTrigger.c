@@ -1,3 +1,4 @@
+#define func_ov001_02078680 IncrementFieldMenuEntryProgress
 #define func_ov001_02063a38 GetFieldSessionState
 #define FindCurrentMemberIndex_020adac0 FindCurrentMemberIndex
 #define IsPlayerEntryFlagSet_02050014 IsPlayerEntryFlagSet

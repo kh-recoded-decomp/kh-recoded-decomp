@@ -1,3 +1,4 @@
+#define func_ov001_0207123c GetFieldSceneManager
 #define FreeModeResources_0207942c FreeModeResources
 #define SampleTweenValue_0205258c SampleTweenValue
 #define UpdateModeWidget_0207a11c UpdateModeWidget

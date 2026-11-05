@@ -1,3 +1,4 @@
+#define func_ov001_02078d7c UploadMessageWindowPaletteCallback
 #define LoadMenuEntryGraphic_0207a1a8 LoadMenuEntryGraphic
 #define QueueFileLoadRequest_020ba114 QueueFileLoadRequest
 #define data_ov001_020a04c4 data_ov001_020a04e4

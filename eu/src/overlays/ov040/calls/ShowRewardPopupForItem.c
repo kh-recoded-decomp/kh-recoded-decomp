@@ -1,3 +1,4 @@
+#define func_ov001_020788b8 SetFieldMenuActiveSlotById
 #define ShowRewardPopupForItem_020be0f8 ShowRewardPopupForItem
 #define data_ov040_020be264 data_ov040_020be284
 #define func_ov007_020a1b08 func_ov007_020a1b28

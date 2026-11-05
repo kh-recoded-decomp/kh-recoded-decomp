@@ -18,7 +18,7 @@ extern BOOL IsModeSetOrFlag370aClear(void);
 extern BOOL IsLeadEntryFlag80Set(void);
 extern BOOL FieldMenu_TryEnterState3(FieldMenu *menu);
 
-BOOL func_ov001_02077ef4(void)
+BOOL TryEnterFieldMenuState3(void)
 {
     FieldMenu *menu = data_ov001_020a04d0.menu;
 
