@@ -33,7 +33,7 @@ inside the handler only where indicated.
 | `func_ov001_02065c10` | `ScriptCmd_BindScriptHandlersSlot7` | 148 | `ScriptVm_ReadOperandInt` | 1 |
 | `func_ov001_02065c4c` | `ScriptCmd_AllocSessionNameTable` | 152 | `ScriptVm_ReadOperandInt` | 1 |
 | `func_ov001_02065dbc` | `ScriptCmd_CommitChapterClearRecords` | 50 | `None here` | 1 |
-| `func_ov001_02065f20` | `ScriptCmd_ClearFieldCounters` | 178 | `None here` | 1 |
+| `func_ov001_02065f20` | `ScriptCmd_ClearSessionStateWords` | 178 | `None here` | 1 |
 | `func_ov001_02065f80` | `ScriptCmd_ResetGaugeDisplay` | 186 | `None here` | 1 |
 
 ## Callee evidence
@@ -58,7 +58,7 @@ inside the handler only where indicated.
 - `ScriptCmd_BindScriptHandlersSlot7` delegates to `BindScriptHandlersSlot7`: Binds selected table entry into global handler slot 7, optionally loads its overlay and records index.
 - `ScriptCmd_AllocSessionNameTable` delegates to `AllocSessionNameTable`: Stores count byte, allocates count*4 name-pointer words and clears their storage.
 - `ScriptCmd_CommitChapterClearRecords` delegates to `CommitChapterClearRecords`: Copies/clamps current chapter clear count/time into best records and updates chapter flags under established mode conditions.
-- `ScriptCmd_ClearFieldCounters` delegates to `ClearFieldCounters`: Zeros exactly three integer field counters.
+- `ScriptCmd_ClearSessionStateWords` delegates to `ClearSessionStateWords`: Zeros exactly three 32-bit session state words at +0x27a8, +0x27ac and +0x27b0; their individual meanings remain unresolved.
 - `ScriptCmd_ResetGaugeDisplay` delegates to `ResetGaugeDisplay`: Resets displayed level/gauge/max flag, selects menu mode and either blends tiles or queues resource 5.
 
 ## Decoding, returns and native interface

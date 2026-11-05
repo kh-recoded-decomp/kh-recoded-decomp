@@ -436,7 +436,7 @@ src/overlays/ov075/calls/ApplyLevelRankParam.c:
     complete
     .text       start:0x020ce750 end:0x020ce818
 
-src/overlays/ov075/calls/func_ov075_020ce818.c:
+src/overlays/ov075/calls/ClearItemPickerSessionStateWordsThunk.c:
     complete
     .text       start:0x020ce818 end:0x020ce820
 

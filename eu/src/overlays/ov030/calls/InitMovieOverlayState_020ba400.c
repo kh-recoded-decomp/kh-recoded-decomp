@@ -1,4 +1,4 @@
-#define ClearFieldCounters_02064dc8 ClearFieldCounters
+#define ClearFieldCounters_02064dc8 ClearSessionStateWords
 #define CreateOverlayTask_0206a6f4 CreateOverlayTask
 #define CreateSessionNameMenu_02063ba4 CreateSessionNameMenu
 #define CreateSessionTask_0206c6dc CreateSessionTask

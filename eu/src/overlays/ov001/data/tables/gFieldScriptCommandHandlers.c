@@ -95,7 +95,7 @@ extern void ScriptCmd_ToggleSessionBit15(void); /* ScriptCmd_ToggleSessionBit15 
 extern void func_ov001_02065e8c(void);
 extern void ScriptCmd_DamageLeaderNonLethal(void);
 extern void func_ov001_02065f04(void);
-extern void ScriptCmd_ClearFieldCounters(void); /* return 1; no local decode */
+extern void ScriptCmd_ClearSessionStateWords(void); /* return 1; no local decode */
 extern void func_ov001_02065f2c(void); /* MsgQueue_GetHeap */
 extern void func_ov001_02065f38(void); /* thumbStep */
 extern void ScriptCmd_AwardSlotLevelProgress(void);
@@ -282,7 +282,7 @@ void (*gFieldScriptCommandHandlers[190])(void) = {
     NULL,
     func_ov001_02065f04,
     NULL,
-    ScriptCmd_ClearFieldCounters, /* return 1; no local decode */
+    ScriptCmd_ClearSessionStateWords, /* return 1; no local decode */
     NULL,
     func_ov001_02065f2c, /* MsgQueue_GetHeap */
     func_ov001_02065f38, /* thumbStep */

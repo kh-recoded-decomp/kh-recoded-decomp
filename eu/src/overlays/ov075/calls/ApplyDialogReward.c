@@ -2,6 +2,6 @@
 #define func_ov001_02063a80 AddSessionCounter
 #define func_ov075_020ce700 AddToSelectionCounters
 #define func_ov075_020ce730 ApplyLevelRankParam
-#define func_ov075_020ce7f8 func_ov075_020ce818
+#define func_ov075_020ce7f8 ClearItemPickerSessionStateWordsThunk
 #define func_ov075_020ce800 LoadOverlaySync_020ce820
 #include "src/ov075/reviewed_helpers/ApplyDialogReward_020ce814.c"

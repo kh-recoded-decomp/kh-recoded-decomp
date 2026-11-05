@@ -1,0 +1,3 @@
+#define FS_EndOverlay ClearSessionStateWords
+#define FS_UnloadOverlayImage_02065f20 ScriptCmd_ClearSessionStateWords
+#include "src/ov001/library_nitro_fs/FS_UnloadOverlayImage_02065f20.c"

@@ -548,7 +548,7 @@ src/overlays/ov001/calls/func_ov001_02064d88.c:
     complete
     .text       start:0x02064d88 end:0x02064dc8
 
-src/overlays/ov001/calls/ClearFieldCounters.c:
+src/overlays/ov001/calls/ClearSessionStateWords.c:
     complete
     .text       start:0x02064dc8 end:0x02064de8
 
@@ -944,7 +944,7 @@ src/overlays/ov001/calls/func_ov001_02065f04.c:
     complete
     .text       start:0x02065f04 end:0x02065f20
 
-src/overlays/ov001/calls/ScriptCmd_ClearFieldCounters.c:
+src/overlays/ov001/calls/ScriptCmd_ClearSessionStateWords.c:
     complete
     .text       start:0x02065f20 end:0x02065f2a
 

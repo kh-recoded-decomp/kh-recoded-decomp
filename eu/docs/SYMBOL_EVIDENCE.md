@@ -357,3 +357,12 @@ object-hit view. This block does not assign two independent typed objects to
 that storage or infer a full allocation from one call's accesses. It needs a
 separate check of lifetimes, ownership and callers before a shared union or
 more specific names can be justified.
+
+## Session state reset and menu delegates
+
+`ClearFieldCounters` is corrected to `ClearSessionStateWords`: only three zero
+stores at session +0x27a8/+0x27ac/+0x27b0 are proved. The corresponding script
+command and three UI tail-call thunks use that neutral wording.
+[SESSION_STATE_WORDS.md](SESSION_STATE_WORDS.md) records the addresses, literal
+Thumb targets, consumers, partial native view and unresolved return declarations.
+No counter, ready or idle meaning is assigned to these state values.

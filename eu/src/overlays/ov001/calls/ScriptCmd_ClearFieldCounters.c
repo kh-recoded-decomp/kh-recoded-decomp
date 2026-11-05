@@ -1,3 +1,0 @@
-#define FS_EndOverlay ClearFieldCounters
-#define FS_UnloadOverlayImage_02065f20 ScriptCmd_ClearFieldCounters
-#include "src/ov001/library_nitro_fs/FS_UnloadOverlayImage_02065f20.c"

@@ -3242,7 +3242,7 @@
   "src/overlays/ov000/calls/StopTouchPanelSampling.c": "dsi/1.1",
   "src/overlays/ov001/calls/IsBattleModeNotTwo.c": "dsi/1.1",
   "src/overlays/ov001/calls/IsBattleModeOne.c": "dsi/1.1",
-  "src/overlays/ov001/calls/ClearFieldCounters.c": "dsi/1.1",
+  "src/overlays/ov001/calls/ClearSessionStateWords.c": "dsi/1.1",
   "src/overlays/ov001/calls/SubScene9_Request.c": "dsi/1.1",
   "src/overlays/ov001/calls/IsSessionLinked.c": "dsi/1.1",
   "src/overlays/ov001/calls/InitArithmeticNode.c": "dsi/1.1",

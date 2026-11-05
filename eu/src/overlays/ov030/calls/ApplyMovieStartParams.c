@@ -1,4 +1,4 @@
 #define ApplyMovieStartParams_020bac48 ApplyMovieStartParams
-#define ClearFieldCounters_02064dc8 ClearFieldCounters
+#define ClearFieldCounters_02064dc8 ClearSessionStateWords
 #define data_ov030_020bd000 data_ov030_020bd020
 #include "src/ov030/movie/ApplyMovieStartParams_020bac48.c"

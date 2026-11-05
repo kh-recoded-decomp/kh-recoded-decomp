@@ -1,5 +1,5 @@
 #define AddSessionCounter_02063a80 AddSessionCounter
-#define ClearFieldCounters_02064dc8 ClearFieldCounters
+#define ClearFieldCounters_02064dc8 ClearSessionStateWords
 #define ClearSessionSlots_02063b80 ClearSessionSlots
 #define CommitResultsRewards_020bd0a0 CommitResultsRewards
 #define ResourceCache_FreeAll_02086df0 ResourceCache_FreeAll

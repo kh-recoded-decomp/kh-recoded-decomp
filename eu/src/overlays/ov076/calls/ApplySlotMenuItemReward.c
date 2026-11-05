@@ -3,7 +3,7 @@
 extern u32 AddSessionCounter();
 extern u32 AddToSelectionCounters_020ca530();
 extern u32 func_ov076_020ca560();
-extern u32 func_ov076_020ca628();
+extern u32 ClearSlotMenuSessionStateWordsThunk();
 extern u32 LoadOverlaySync_020ca630();
 
 void ApplySlotMenuItemReward(u32 reward)
@@ -21,7 +21,7 @@ void ApplySlotMenuItemReward(u32 reward)
     LoadOverlaySync_020ca630(0xb3,0);
     return;
   case 0xbb:
-    func_ov076_020ca628();
+    ClearSlotMenuSessionStateWordsThunk();
     AddSessionCounter(5,1);
     LoadOverlaySync_020ca630(0xb6,0);
     return;
@@ -35,14 +35,14 @@ void ApplySlotMenuItemReward(u32 reward)
     return;
   case 0xbc:
     AddToSelectionCounters_020ca530(1000);
-    func_ov076_020ca628();
+    ClearSlotMenuSessionStateWordsThunk();
     AddSessionCounter(5,1);
     LoadOverlaySync_020ca630(0xb7,0);
     return;
   case 0xbd:
     func_ov076_020ca560(4);
     AddToSelectionCounters_020ca530(1000);
-    func_ov076_020ca628();
+    ClearSlotMenuSessionStateWordsThunk();
     AddSessionCounter(5,1);
     AddSessionCounter(0x12,1);
     LoadOverlaySync_020ca630(0xb8,0);

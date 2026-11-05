@@ -2,7 +2,7 @@
 #define AcquireRecordManager_02051c80 AcquireRecordManager
 #define BuildSelectionEntryList_0204f98c BuildSelectionEntryList
 #define CacheSeqArcStatus_0204e00c CacheSeqArcStatus
-#define ClearFieldCounters_02064dc8 ClearFieldCounters
+#define ClearFieldCounters_02064dc8 ClearSessionStateWords
 #define ClearItemCountsByGroup_0202987c ClearItemCountsByGroup
 #define ComputePlayerStats_02050b30 ComputePlayerStats
 #define CreateFieldObjectManager_0207ec54 CreateFieldObjectManager

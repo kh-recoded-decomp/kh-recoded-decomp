@@ -485,7 +485,7 @@ src/overlays/ov076/calls/func_ov076_020ca560.c:
     complete
     .text       start:0x020ca560 end:0x020ca628
 
-src/overlays/ov076/calls/func_ov076_020ca628.c:
+src/overlays/ov076/calls/ClearSlotMenuSessionStateWordsThunk.c:
     complete
     .text       start:0x020ca628 end:0x020ca630
 
