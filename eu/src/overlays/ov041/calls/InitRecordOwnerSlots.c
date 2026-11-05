@@ -1,5 +1,5 @@
 #define ActorSlot_LinkAsRoot_02036710 ActorSlot_LinkAsRoot
 #define InitRecordOwnerSlots_020ce1a8 InitRecordOwnerSlots
 #define LoadSharedRecordField_020cdf90 LoadSharedRecordField
-#define func_020366f8 func_0203670c
+#define func_020366f8 InitPersistentActorSlot
 #include "src/ov041/unclassified_helpers/InitRecordOwnerSlots_020ce1a8.c"

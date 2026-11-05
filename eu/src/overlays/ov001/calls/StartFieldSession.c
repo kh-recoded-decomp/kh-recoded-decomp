@@ -48,7 +48,7 @@
 #define func_0202a754 GetCurrentTaskObject
 #define func_0202b5d4 StartTouchSamplingRing
 #define func_0203574c InitActorRegistry
-#define func_0204fba0 func_0204fbb4
+#define func_0204fba0 RefreshFirstSelectionAbilityTable
 #define func_0205125c GetMapFinalStats
 #define func_ov001_02061af4 RunFieldPhases
 #define func_ov001_020645c8 IsSessionFlagSet

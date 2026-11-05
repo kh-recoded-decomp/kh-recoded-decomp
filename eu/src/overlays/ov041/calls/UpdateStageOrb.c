@@ -9,7 +9,7 @@ extern void TurnVecTowardVecLimited(VecFx32 *vec, const VecFx32 *target, fx32 ma
 extern void SetStageOrbPhase(StageOrb *orb, int phase);
 extern int GetScaleLevel(fx32 value);
 extern fx32 GetScaleLevelFactor(int level);
-extern void func_020367d4(void *manager, void *node);
+extern void UnlinkContainerListNode(void *manager, void *node);
 extern BOOL PlaySoundChecked(int seqArcNo, int index);
 
 /*
@@ -36,7 +36,7 @@ void UpdateStageOrb(StageOrb *orb, StageOrbPool *pool, StageEntry *collector, co
     if (distance <= collector->radius + GetScaleLevelFactor(GetScaleLevel(orb->value))) {
         SetStageOrbPhase(orb, STAGE_ORB_FREE);
         orb->position = *target;
-        func_020367d4(pool->drawList, orb->link);
+        UnlinkContainerListNode(pool->drawList, orb->link);
         collector->hp += (s16)(orb->value >> FX32_SHIFT);
         if (collector->hp > collector->maxHp) {
             collector->hp = collector->maxHp;

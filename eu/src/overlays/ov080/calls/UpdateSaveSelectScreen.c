@@ -20,7 +20,7 @@
 #define func_020271e8 InvokeCallback
 #define func_0204f8dc FillSelectionRecordFromGroup
 #define func_0204f98c BuildSelectionEntryList
-#define func_0204fba0 func_0204fbb4
+#define func_0204fba0 RefreshFirstSelectionAbilityTable
 #define func_0205053c LoadSelectionPackedValues
 #define func_02052514 ConfigureTween
 #define func_0205255c StartTween

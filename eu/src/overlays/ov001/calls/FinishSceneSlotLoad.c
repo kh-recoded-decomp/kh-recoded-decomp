@@ -1,6 +1,6 @@
 #define BlendToAnimationTrack_0202f374 BlendToAnimationTrack
 #define FinishSceneSlotLoad_0206737c FinishSceneSlotLoad
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
-#define func_0202ed80 func_0202ed94
-#define func_0202ed9c func_0202edb0
+#define func_0202ed80 InitModelWithOptionalTextureTrim
+#define func_0202ed9c InitModelUsingTextureHeader
 #include "src/ov001/unclassified_helpers/FinishSceneSlotLoad_0206737c.c"

@@ -1,3 +1,0 @@
-#define NNS_SndPlayerPause_0202a280 NNS_SndPlayerPause_0202a294
-#define NNSi_SndPlayerPause FreeExpandedHeapBlock
-#include "src/arm9/library_nns_snd/NNS_SndPlayerPause_0202a280.c"

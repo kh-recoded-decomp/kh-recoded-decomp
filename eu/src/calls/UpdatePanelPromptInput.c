@@ -19,7 +19,7 @@ extern void func_0202819c(void);
 extern BOOL PlaySoundEffect(int seqArcNo, int index);
 extern void ResetPanelFieldB8AndNotify(void);
 extern void UpdatePanelPromptBlink(void);
-extern void func_020281c8(void);
+extern void QueuePanelScreenTransferAndUpdateSound(void);
 extern BOOL ToggleSelectedPanelSlot(void);
 extern void func_020284e4(void);
 extern void StopSequencePlayersFrom2(void);
@@ -49,7 +49,7 @@ BOOL UpdatePanelPromptInput(void)
         }
         if (panel->field_bc == 0) {
             UpdatePanelPromptBlink();
-            func_020281c8();
+            QueuePanelScreenTransferAndUpdateSound();
             return TRUE;
         }
         if (!ToggleSelectedPanelSlot() && (data_02060500 & 1)) {
@@ -66,6 +66,6 @@ BOOL UpdatePanelPromptInput(void)
     }
     UpdatePanelPromptBlink();
     UpdatePanelSlotBlink(panel->selectedSlot);
-    func_020281c8();
+    QueuePanelScreenTransferAndUpdateSound();
     return TRUE;
 }

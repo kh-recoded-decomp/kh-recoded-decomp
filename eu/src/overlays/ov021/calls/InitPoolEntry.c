@@ -2,5 +2,5 @@
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define RetainOrInitializeSharedRecord_0202c80c SND_RegisterSeq
 #define func_0202c48c LoadFileAllocFromHeapTail
-#define func_0202ed9c func_0202edb0
+#define func_0202ed9c InitModelUsingTextureHeader
 #include "src/ov021/shared_engine/InitPoolEntry_020aaa6c.c"

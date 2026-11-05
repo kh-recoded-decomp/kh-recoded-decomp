@@ -2,7 +2,7 @@
 
 #define RetainOrInitializeSharedRecord SND_RegisterSeq
 #define LoadResourceBlock LoadFileAllocFromHeapTail
-#define InitStageResourceModel func_0202edb0
+#define InitStageResourceModel InitModelUsingTextureHeader
 
 extern void *NNSi_FndAllocFromDefaultHeap(u32 size);
 extern void MIi_CpuClearFast(u32 value, void *destination, u32 bytes);

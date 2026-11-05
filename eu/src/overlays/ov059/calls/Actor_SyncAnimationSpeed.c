@@ -1,4 +1,4 @@
 #define Actor_SyncAnimationSpeed_020c8a0c Actor_SyncAnimationSpeed
 #define IsBit0Set_020a9d1c IsBit0Set
-#define func_0202f5b4 Obj_SetHalfwordFC
+#define func_0202f5b4 SetModelMaterialColorScale
 #include "src/ov059/unclassified_helpers/Actor_SyncAnimationSpeed_020c8a0c.c"

@@ -5,5 +5,5 @@
 #define StopSoundSeqHandle_0204dbe4 StopSoundSeqHandle
 #define func_02025658 GetCurrentSceneId
 #define func_0202a9d0 NextSharedRandom16Scaled
-#define func_0204dc3c func_0204dc50
+#define func_0204dc3c IsSoundHandleCurrentAndBound
 #include "src/ov021/shared_engine/PlayCueGroupSounds_020a7fa4.c"

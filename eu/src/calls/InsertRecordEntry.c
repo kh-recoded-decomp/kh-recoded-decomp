@@ -45,7 +45,7 @@ typedef char RecordCounterViewIs260Bytes[sizeof(RecordCounterStorage) == 0x104 ?
 extern RecordSaveData *data_0205fe0c;
 extern RecordCounterStorage data_0205fec4;
 extern void SetFlagAndBumpCounter(u8 *flag);
-extern void func_02028dd8(u16 *destination, const void *source);
+extern void InitActiveRecordEntryFromTemplate(u16 *destination, const void *source);
 
 /* Mark the category as owned and initialize the first inactive record slot. */
 s16 InsertRecordEntry(const RecordEntry *source)
@@ -67,7 +67,7 @@ s16 InsertRecordEntry(const RecordEntry *source)
     }
     do {
         if (!entry->active) {
-            func_02028dd8((u16 *)entry, source);
+            InitActiveRecordEntryFromTemplate((u16 *)entry, source);
             break;
         }
         ++index;

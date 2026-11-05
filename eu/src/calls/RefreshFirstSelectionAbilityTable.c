@@ -1,5 +1,5 @@
 #define GetOverlaySelectionRecord_0204f768 GetOverlaySelectionRecord
-#define func_0204fba0 func_0204fbb4
+#define func_0204fba0 RefreshFirstSelectionAbilityTable
 #define func_020506dc AcquireMapLayout
 #define func_02050a44 ReleaseMapLayoutReference
 #define func_02050ea4 BuildAbilityTable

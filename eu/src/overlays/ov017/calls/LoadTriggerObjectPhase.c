@@ -7,7 +7,7 @@
 #define data_02053438 gZeroVecFx32
 #define data_020559c0 gCollisionBoundsDispatch
 #define data_ov017_020a5f18 sOv017_BaEfDbhit_020a5f38
-#define func_0202ed9c func_0202edb0
+#define func_0202ed9c InitModelUsingTextureHeader
 #define func_0202f4e8 Flags16_ClearBit1
 #define func_02034050 IndexedBytes_SetAt10
 #define func_020358b0 ApplyRecordTableEntry2

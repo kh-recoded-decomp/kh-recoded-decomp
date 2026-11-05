@@ -1,6 +1,6 @@
 #define CreateFieldModelObject_020a26e8 CreateFieldModelObject
 #define NNSi_FndAllocFromDefaultHeapEx_0202a19c NNS_FndAllocFromDefaultExpHeapEx
 #define RebindAnimTracks_020809d0 RebindAnimTracks
-#define func_0202ed9c func_0202edb0
+#define func_0202ed9c InitModelUsingTextureHeader
 #define func_0202f4d8 Flags16_SetBit1
 #include "src/ov016/field_objects/CreateFieldModelObject_020a26e8.c"

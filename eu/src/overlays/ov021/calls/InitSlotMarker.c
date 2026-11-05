@@ -8,5 +8,5 @@
 #define RetainOrInitializeSharedRecord_0202c80c SND_RegisterSeq
 #define func_01ff8830 MI_CpuFill8
 #define func_0202c48c LoadFileAllocFromHeapTail
-#define func_0202ed9c func_0202edb0
+#define func_0202ed9c InitModelUsingTextureHeader
 #include "src/ov021/unclassified_helpers/InitSlotMarker_020ab6dc.c"

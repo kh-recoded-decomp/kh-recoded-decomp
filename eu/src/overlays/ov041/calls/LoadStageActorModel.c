@@ -8,5 +8,5 @@
 #define RetainOrInitializeSharedRecord_0202c80c SND_RegisterSeq
 #define data_ov041_020cfa34 sOv041_RpgEfKageP2_020cfa54
 #define func_0202c48c LoadFileAllocFromHeapTail
-#define func_0202ed9c func_0202edb0
+#define func_0202ed9c InitModelUsingTextureHeader
 #include "src/ov041/unclassified_helpers/LoadStageActorModel_020c26b8.c"

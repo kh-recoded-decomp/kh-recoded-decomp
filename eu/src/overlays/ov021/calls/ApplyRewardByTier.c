@@ -3,7 +3,7 @@
 #define ApplyRewardByTier_020a7a40 ApplyRewardByTier
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField
 #define WriteSessionPackedBits_0206459c WriteSessionPackedBits
-#define func_0204f840 func_0204f854
+#define func_0204f840 RefreshFirstSelectionPlayerStats
 #define func_ov001_02064574 ReadSessionPackedBits
 #define func_ov021_020a75ec AddClampedHealth
 #include "src/ov021/reviewed_helpers/ApplyRewardByTier_020a7a40.c"

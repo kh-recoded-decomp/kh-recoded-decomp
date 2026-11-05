@@ -3413,7 +3413,7 @@ libs/nitro/nns/calls/NNS_FndAllocFromExpHeapEx.c:
     complete
     .text       start:0x02013148 end:0x02013178
 
-src/calls/FreeExpandedHeapBlock.c:
+src/calls/ResizeExpandedHeapBlock.c:
     complete
     .text       start:0x02013178 end:0x020132d8
 
@@ -6177,7 +6177,7 @@ src/calls/ResetPanelFieldB8AndNotify.c:
     complete
     .text       start:0x020281b0 end:0x020281c8
 
-src/calls/func_020281c8.c:
+src/calls/QueuePanelScreenTransferAndUpdateSound.c:
     complete
     .text       start:0x020281c8 end:0x020281e0
 
@@ -6205,7 +6205,7 @@ src/calls/UpdatePanelPromptBlink.c:
     complete
     .text       start:0x02028410 end:0x0202845c
 
-src/calls/func_0202845c.c:
+src/calls/CopyPanelPageScreenRect.c:
     complete
     .text       start:0x0202845c end:0x020284b0
 
@@ -6213,7 +6213,7 @@ src/calls/AdjustPanelSlotSrcYAndDraw.c:
     complete
     .text       start:0x020284b0 end:0x020284d0
 
-src/calls/func_020284d0.c:
+src/calls/QueueScreenDataVramTransfer.c:
     complete
     .text       start:0x020284d0 end:0x020284e4
 
@@ -6329,7 +6329,7 @@ src/calls/RestoreSavedCameraWrapper.c:
     complete
     .text       start:0x02028dcc end:0x02028dd8
 
-src/calls/func_02028dd8.c:
+src/calls/InitActiveRecordEntryFromTemplate.c:
     complete
     .text       start:0x02028dd8 end:0x02028e00
 
@@ -6481,7 +6481,7 @@ src/calls/GetSubBrightnessSetting.c:
     complete
     .text       start:0x02029f6c end:0x02029f7c
 
-src/calls/func_02029f7c.c:
+src/calls/GetDisplaySetting.c:
     complete
     .text       start:0x02029f7c end:0x02029f8c
 
@@ -6549,7 +6549,7 @@ libs/nitro/nns/calls/NNSi_FndGetAllocatorForDefaultHeap.c:
     complete
     .text       start:0x0202a27c end:0x0202a294
 
-src/calls/NNS_SndPlayerPause_0202a294.c:
+src/calls/ResizeExpandedHeapBlockWithHeapRef.c:
     complete
     .text       start:0x0202a294 end:0x0202a2a4
 
@@ -7021,7 +7021,7 @@ src/calls/Tex_LoadVram.c:
     complete
     .text       start:0x0202d160 end:0x0202d218
 
-src/calls/func_0202d218.c:
+src/calls/SubmitResourcePaletteUpload.c:
     complete
     .text       start:0x0202d218 end:0x0202d25c
 
@@ -7049,7 +7049,7 @@ src/calls/NestedPointer_GetFirstWord.c:
     complete
     .text       start:0x0202d3f4 end:0x0202d410
 
-src/calls/func_0202d410.c:
+src/calls/TrimArchiveBeforeTexturePayload.c:
     complete
     .text       start:0x0202d410 end:0x0202d460
 
@@ -7161,15 +7161,15 @@ src/calls/InitSharedRecordAndDispatchAlt.c:
     complete
     .text       start:0x0202ed50 end:0x0202ed94
 
-src/calls/func_0202ed94.c:
+src/calls/InitModelWithOptionalTextureTrim.c:
     complete
     .text       start:0x0202ed94 end:0x0202edb0
 
-src/calls/func_0202edb0.c:
+src/calls/InitModelUsingTextureHeader.c:
     complete
     .text       start:0x0202edb0 end:0x0202edd0
 
-src/calls/func_0202edd0.c:
+src/calls/TrimModelArchiveBeforeTexturePayload.c:
     complete
     .text       start:0x0202edd0 end:0x0202edec
 
@@ -7237,11 +7237,11 @@ src/calls/attach_child_object.c:
     complete
     .text       start:0x0202f514 end:0x0202f5a4
 
-src/calls/func_0202f5a4.c:
+src/calls/SetModelMaterialColorScaleEnabled.c:
     complete
     .text       start:0x0202f5a4 end:0x0202f5c8
 
-src/calls/Obj_SetHalfwordFC.c:
+src/calls/SetModelMaterialColorScale.c:
     complete
     .text       start:0x0202f5c8 end:0x0202f5d0
 
@@ -7881,7 +7881,7 @@ src/calls/ShutdownAllActorSlots.c:
     complete
     .text       start:0x02036680 end:0x0203670c
 
-src/calls/func_0203670c.c:
+src/calls/InitPersistentActorSlot.c:
     complete
     .text       start:0x0203670c end:0x02036724
 
@@ -7893,11 +7893,11 @@ src/calls/ActorSlot_UnlinkRoot.c:
     complete
     .text       start:0x0203675c end:0x020367c4
 
-src/calls/func_020367c4.c:
+src/calls/LinkContainerListNode.c:
     complete
     .text       start:0x020367c4 end:0x020367d4
 
-src/calls/func_020367d4.c:
+src/calls/UnlinkContainerListNode.c:
     complete
     .text       start:0x020367d4 end:0x020367e4
 
@@ -8045,7 +8045,7 @@ src/calls/UpdateActorMovement.c:
     complete
     .text       start:0x02038b64 end:0x02038e80
 
-src/calls/func_02038e80.c:
+src/calls/ApplyActorMovementAndUpdateSpatialIndex.c:
     complete
     .text       start:0x02038e80 end:0x02038eba
 
@@ -9473,7 +9473,7 @@ src/calls/StopSoundSeqHandle.c:
     complete
     .text       start:0x0204dbf8 end:0x0204dc50
 
-src/calls/func_0204dc50.c:
+src/calls/IsSoundHandleCurrentAndBound.c:
     complete
     .text       start:0x0204dc50 end:0x0204dca8
 
@@ -9641,7 +9641,7 @@ src/calls/SlotTable_AddEntry.c:
     complete
     .text       start:0x0204ee48 end:0x0204eef4
 
-src/calls/func_0204eef4.c:
+src/calls/FreeObjectSlotBuffers.c:
     complete
     .text       start:0x0204eef4 end:0x0204ef1e
 
@@ -9833,7 +9833,7 @@ src/calls/LoadLevelStats.c:
     complete
     .text       start:0x0204f818 end:0x0204f854
 
-src/calls/func_0204f854.c:
+src/calls/RefreshFirstSelectionPlayerStats.c:
     complete
     .text       start:0x0204f854 end:0x0204f870
 
@@ -9857,7 +9857,7 @@ src/calls/RefreshSelectionLinkValues.c:
     complete
     .text       start:0x0204fb30 end:0x0204fbb4
 
-src/calls/func_0204fbb4.c:
+src/calls/RefreshFirstSelectionAbilityTable.c:
     complete
     .text       start:0x0204fbb4 end:0x0204fbe0
 

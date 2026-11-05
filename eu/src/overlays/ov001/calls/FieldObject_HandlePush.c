@@ -12,7 +12,7 @@
 #define func_02023d9c _ll_mul
 #define func_0204a5e4 ScaleVecFx32InPlace
 #define func_0204da8c SpawnSoundSlot
-#define func_0204dc3c func_0204dc50
+#define func_0204dc3c IsSoundHandleCurrentAndBound
 #define func_ov001_02063d4c UpdateFieldTimer
 #define func_ov001_0207d45c SetSlotLayoutHighlight
 #define func_ov046_020c0d68 Camera_GetModeValue

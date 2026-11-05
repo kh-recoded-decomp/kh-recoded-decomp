@@ -4,5 +4,5 @@
 #define RetainOrInitializeSharedRecord_0202c80c SND_RegisterSeq
 #define data_ov058_020d8a24 data_ov058_020d8a44
 #define func_0202c48c LoadFileAllocFromHeapTail
-#define func_0202ed9c func_0202edb0
+#define func_0202ed9c InitModelUsingTextureHeader
 #include "src/ov058/unclassified_helpers/LoadArchiveEffectSlot_020d7510.c"

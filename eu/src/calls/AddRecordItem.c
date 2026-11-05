@@ -38,7 +38,7 @@ typedef char RecordCounterViewIs260Bytes[sizeof(RecordCounterStorage) == 0x104 ?
 extern RecordSaveData *data_0205fe0c;
 extern RecordCounterStorage data_0205fec4;
 extern void SetFlagAndBumpCounter(u8 *flag);
-extern void func_02028dd8(u16 *destination, const void *source);
+extern void InitActiveRecordEntryFromTemplate(u16 *destination, const void *source);
 
 /* Add a primary record or increment a secondary item stack, returning its count. */
 int AddRecordItem(int category, const RecordEntry *source)
@@ -60,7 +60,7 @@ int AddRecordItem(int category, const RecordEntry *source)
         }
         do {
             if (!entry->active) {
-                func_02028dd8((u16 *)entry, source);
+                InitActiveRecordEntryFromTemplate((u16 *)entry, source);
                 entry->category = recordCategory;
                 break;
             }

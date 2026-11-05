@@ -16,7 +16,7 @@
 #define func_0202a448 CreateTaskObject
 #define func_0204f8dc FillSelectionRecordFromGroup
 #define func_0204f98c BuildSelectionEntryList
-#define func_0204fba0 func_0204fbb4
+#define func_0204fba0 RefreshFirstSelectionAbilityTable
 #define func_ov001_020633a0 QueueFieldUpdate
 #define func_ov001_020633d4 FlushPendingFieldUpdate
 #define func_ov001_020645e8 ClearSessionPackedBit

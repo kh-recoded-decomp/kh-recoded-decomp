@@ -6,6 +6,6 @@
 #define HasFlagsAt0xc_020a751c HasFlagsAt0xc
 #define HasFlagsAt0xe_020a752c HasFlagsAt0xe
 #define SpawnSoundSlot_0204da8c SpawnSoundSlot
-#define func_0204dc3c func_0204dc50
+#define func_0204dc3c IsSoundHandleCurrentAndBound
 #define func_ov059_020c9a54 func_ov059_020c9a74
 #include "src/ov059/unclassified_helpers/Actor_UpdateChargeCommand_020c9b6c.c"

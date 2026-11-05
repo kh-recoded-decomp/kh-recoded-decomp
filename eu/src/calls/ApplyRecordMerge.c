@@ -40,7 +40,7 @@ typedef char RecordCounterStateIs260Bytes[sizeof(RecordCounterState) == 0x104 ? 
 
 extern RecordSaveData *data_0205fe0c;
 extern RecordCounterState data_0205fec4;
-extern void func_02028dd8(u16 *destination, const void *source);
+extern void InitActiveRecordEntryFromTemplate(u16 *destination, const void *source);
 extern void SetFlagAndBumpCounter(u8 *flag);
 
 /* Replace the first input with the merged record and release the second input. */
@@ -52,7 +52,7 @@ int ApplyRecordMerge(const RecordMergeResult *merge)
     RecordEntry *first = (RecordEntry *)((u8 *)records + firstByteOffset);
 
     --counts[first->category];
-    func_02028dd8((u16 *)first, &merge->result);
+    InitActiveRecordEntryFromTemplate((u16 *)first, &merge->result);
     first->levelProgress = merge->result.levelProgress;
 
     ++counts[merge->result.category];

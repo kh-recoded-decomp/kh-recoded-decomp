@@ -32,8 +32,8 @@ extern VecFx32 *GetManagedActorPosition(int index);
 extern fx32 VEC_Distance(const VecFx32 *a, const VecFx32 *b);
 extern fx32 FX_Div(fx32 numer, fx32 denom);
 extern fx32 FX_Mul(fx32 left, fx32 right);
-extern void func_0202f5a4(u16 *color, int flag);
-extern void Obj_SetHalfwordFC(u16 *color, u16 value);
+extern void SetModelMaterialColorScaleEnabled(u16 *color, int flag);
+extern void SetModelMaterialColorScale(u16 *color, u16 value);
 extern void ActorSlot_SetField1C4ByIndex(int lightId, s16 alpha);
 
 int UpdateProximityGlow(GlowObject *object)
@@ -74,8 +74,8 @@ int UpdateProximityGlow(GlowObject *object)
         for (i = 0; i < 3; i++) {
             color[i] = from[i] + (((to[i] - from[i]) * ratio) >> 12);
         }
-        func_0202f5a4(&material->diffuse, 1);
-        Obj_SetHalfwordFC(&material->diffuse, (u16)(color[0] | (color[1] << 5) | (color[2] << 10)));
+        SetModelMaterialColorScaleEnabled(&material->diffuse, 1);
+        SetModelMaterialColorScale(&material->diffuse, (u16)(color[0] | (color[1] << 5) | (color[2] << 10)));
         ActorSlot_SetField1C4ByIndex(object->lightId, (s16)(alpha + FX32_ONE));
     }
     return 0;

@@ -1,4 +1,4 @@
 #define IsBit0Set_020a9d1c IsBit0Set
 #define SyncLockOnAnimSpeed_020cc1fc SyncLockOnAnimSpeed
-#define func_0202f5b4 Obj_SetHalfwordFC
+#define func_0202f5b4 SetModelMaterialColorScale
 #include "src/ov052/unclassified_helpers/SyncLockOnAnimSpeed_020cc1fc.c"

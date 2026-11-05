@@ -6,5 +6,5 @@
 #define func_0202c690 SetFileLoaderTextureUploadQueueMode
 #define func_0202c940 AcquireOrRefreshResourceBlock
 #define func_0202d3e0 NestedPointer_GetFirstWord
-#define func_0202d3fc func_0202d410
+#define func_0202d3fc TrimArchiveBeforeTexturePayload
 #include "src/arm9/model_animation/InitModelInstance_0202eb84.c"

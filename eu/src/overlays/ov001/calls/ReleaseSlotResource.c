@@ -1,5 +1,5 @@
 #define ReleaseSlotResource_0209d15c ReleaseSlotResource
 #define func_0204dbe4 StopSoundSeqHandle
-#define func_0204dc3c func_0204dc50
+#define func_0204dc3c IsSoundHandleCurrentAndBound
 #define func_ov001_0209c1fc GetStageEntrySlot
 #include "src/ov001/unclassified_helpers/ReleaseSlotResource_0209d15c.c"

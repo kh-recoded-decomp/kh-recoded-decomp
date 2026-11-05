@@ -1,6 +1,6 @@
 #define func_ov001_02063a38 GetFieldSessionState
 #define Obj_SetPosition_0203569c Obj_SetPosition
 #define RestoreActorPositionMode_020898e4 RestoreActorPositionMode
-#define func_02038e6c func_02038e80
+#define func_02038e6c ApplyActorMovementAndUpdateSpatialIndex
 #define func_ov021_020a8fc8 LookupKindTableValue
 #include "src/ov001/field_manager/RestoreActorPositionMode_020898e4.c"

@@ -4,7 +4,7 @@ extern void *NNSi_FndAllocFromDefaultHeap(u32 size);
 extern void MIi_CpuClearFast(u32 value, void *destination, u32 bytes);
 extern void *SND_RegisterSeq(u32 key, int kind);
 extern void *LoadFileAllocFromHeapTail(u32 key, int kind);
-extern void func_0202edb0(void *model, void *record, void *block, int kind);
+extern void InitModelUsingTextureHeader(void *model, void *record, void *block, int kind);
 extern void NNSi_FndFreeFromDefaultHeap(void *block);
 
 /* The cursor visits two resource keys, then returns to its start. */
@@ -68,7 +68,7 @@ void CreateStageResourceGroup(int category, StageResourceContainer *container)
         for (j = 0; j < list->count; ++j) {
             void *record = SND_RegisterSeq(RESOURCE_KEY(container, ++), 0x12);
             void *block = LoadFileAllocFromHeapTail(RESOURCE_KEY(container, --), 0xf);
-            func_0202edb0(&list->items[j].model, record, block, 0x12);
+            InitModelUsingTextureHeader(&list->items[j].model, record, block, 0x12);
             NNSi_FndFreeFromDefaultHeap(block);
         }
         container->cursor += 2;

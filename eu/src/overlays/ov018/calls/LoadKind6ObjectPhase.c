@@ -14,7 +14,7 @@
 #define data_02053438 gZeroVecFx32
 #define data_020559c0 gCollisionBoundsDispatch
 #define data_ov018_020a3850 sOv018_BaEfDbhit_020a3870
-#define func_0202ed9c func_0202edb0
+#define func_0202ed9c InitModelUsingTextureHeader
 #define func_0202f4d8 Flags16_SetBit1
 #define func_0202f4e8 Flags16_ClearBit1
 #define func_02034050 IndexedBytes_SetAt10

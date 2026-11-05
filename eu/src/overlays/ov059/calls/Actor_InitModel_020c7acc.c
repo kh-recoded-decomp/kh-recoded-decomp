@@ -20,8 +20,8 @@
 #define data_ov059_020cff3c sOv059_BaChFormatSTexFormatDZ_020cff5c
 #define data_ov059_020cff50 sOv059_BaChFormatSMovPZ_020cff70
 #define func_0202c48c LoadFileAllocFromHeapTail
-#define func_0202f590 func_0202f5a4
-#define func_0202f5b4 Obj_SetHalfwordFC
+#define func_0202f590 SetModelMaterialColorScaleEnabled
+#define func_0202f5b4 SetModelMaterialColorScale
 #define func_020358b0 ApplyRecordTableEntry2
 #define func_02036240 ActorRegistry_GetEntityByIndex
 #define func_02036a70 SetRecordSlotValue

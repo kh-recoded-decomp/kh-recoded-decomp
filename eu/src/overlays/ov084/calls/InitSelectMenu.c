@@ -25,7 +25,7 @@
 #define RetainOrInitializeSharedRecord_0202c80c SND_RegisterSeq
 #define ObjectManager_GetSecondEntryParam_0207ee48 ObjectManager_GetSecondEntryParam
 #define func_0202c48c LoadFileAllocFromHeapTail
-#define func_0202ed9c func_0202edb0
+#define func_0202ed9c InitModelUsingTextureHeader
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define selectJointAnimationBlend_0202f2cc selectJointAnimationBlend
 #define PrepareAndStartStream_0204dd4c PrepareAndStartStream

@@ -7,6 +7,6 @@
 #define func_02013d74 NNS_GfdResetFrmPlttVramState
 #define FillSelectionRecordFromGroup_0204f8dc FillSelectionRecordFromGroup
 #define SyncSelectionRecordFromSlotEntry_0204fabc SyncSelectionRecordFromSlotEntry
-#define func_0204fba0 func_0204fbb4
+#define func_0204fba0 RefreshFirstSelectionAbilityTable
 #define data_ov077_020ca380 data_ov077_020ca3a0
 #include "src/ov077/unclassified_helpers/ShutdownItemMenu_020c4d78.c"

@@ -24,7 +24,7 @@ extern void SetupAllSelectionRecords(void);
 extern void FillSelectionRecordFromGroup(void);
 extern void BuildSelectionEntryList(void);
 extern void SyncSelectionRecordFromSlotEntry(void);
-extern void func_0204fbb4(void);
+extern void RefreshFirstSelectionAbilityTable(void);
 extern void SetPendingScene(int scene, int arg);
 extern void GX_LoadBGPltt(const void *src, u32 offset, u32 size);
 extern void GXS_LoadBGPltt(const void *src, u32 offset, u32 size);
@@ -50,7 +50,7 @@ void FinishTitlePanel(Panel *panel)
     FillSelectionRecordFromGroup();
     BuildSelectionEntryList();
     SyncSelectionRecordFromSlotEntry();
-    func_0204fbb4();
+    RefreshFirstSelectionAbilityTable();
     SetPendingScene(2, 0);
     GX_LoadBGPltt(data_ov000_02063798, 0, 2);
     GXS_LoadBGPltt(data_ov000_02063798, 0, 2);

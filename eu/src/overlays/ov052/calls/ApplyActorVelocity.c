@@ -7,7 +7,7 @@
 #define ResolvePushVelocity_020c7a60 ResolvePushVelocity
 #define SyncLockOnAnimSpeed_020cc1fc SyncLockOnAnimSpeed
 #define func_ov001_02068070 GetSceneEntryGroundHeight
-#define func_02038e6c func_02038e80
+#define func_02038e6c ApplyActorMovementAndUpdateSpatialIndex
 #define func_ov001_02087224 func_ov001_0208724c
 #define func_ov052_020c7c34 SweepActorBodyCapsule
 #define func_ov052_020ceb54 func_ov052_020ceb74

@@ -13,6 +13,13 @@ extern HeapRecord *CreateHeapRecord(HeapRecord *record, void *memory, u32 size);
 extern void DestroyHeapRecord(HeapRecord *record);
 extern void ResetHeapRecord(HeapRecord *record);
 
+/* In-place resize of an existing allocation; result is byte size, not a pointer. */
+struct NnsFndHeapHead;
+extern u32 ResizeExpandedHeapBlock(struct NnsFndHeapHead *heap, void *memoryBlock,
+                                   u32 requestedBytes);
+extern u32 ResizeExpandedHeapBlockWithHeapRef(HeapRecord *record, void *memoryBlock,
+                                              u32 requestedBytes);
+
 typedef char HeapRecordSizeCheck[sizeof(HeapRecord) == 0x14 ? 1 : -1];
 
 #endif

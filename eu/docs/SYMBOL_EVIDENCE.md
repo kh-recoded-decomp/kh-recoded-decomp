@@ -441,3 +441,13 @@ inputs. [FONT_RESOURCE_FALLBACK.md](FONT_RESOURCE_FALLBACK.md) records the nativ
 12-byte resource ownership, cached-default restoration, strict width threshold,
 flags versus alternate color, UTF16 controls and actual two-input loader chain.
 The partial layer view does not define a complete host allocation.
+
+## MAIN resource lifetime and service helpers
+
+Twenty-two helpers now describe the actual heap-resize/texture-trim chain,
+panel copies/submission, record initialization, material scaling, guarded slot
+cleanup, linked-list adapters, movement/spatial update and selection refresh.
+[MODEL_RESOURCE_OWNERSHIP.md](MODEL_RESOURCE_OWNERSHIP.md) and
+[MAIN_RESOURCE_SERVICE_HELPERS.md](MAIN_RESOURCE_SERVICE_HELPERS.md) record
+logical inputs, actual-size returns, upload/CPU-buffer lifetimes and native ABI
+limits. The old free/sound labels do not describe those heap operations.
