@@ -85,6 +85,19 @@ Those function sizes remain 408, 1972 and 344 bytes. Re-run the full gate after
 the symbol changes so every caller and callback table is resolved at its
 original address. This work does not change function signatures or arithmetic.
 
+## Shared buffer operations
+
+| Previous name | Current name | Evidence |
+|---|---|---|
+| `func_ov001_0206468c` | `SessionBuffer_GetAddress` | Reads the first word of an eight-byte slot; the allocator writes its returned pointer there and `InitResultsScene`/`CreateBoardScreen` consume it as a buffer address. |
+| `func_ov001_020646a4` | `SessionBuffer_GetSize` | Reads the second slot word; the allocator writes the requested byte size there and the results initializer tests it before allocating its parameters. |
+| `func_ov001_020646b8` | `SessionBuffer_Free` | Tests the stored address, passes the block to the actual default-heap free routine and clears the two words only on that nonzero path. |
+
+[SESSION_BUFFERS.md](SESSION_BUFFERS.md) records the recovered slot type,
+consistent caller declarations, explicit free argument and the unresolved
+context/table-capacity boundary. The context itself is not renamed by inference
+from one of its subobjects.
+
 ## Explicitly unresolved
 
 The vector view at `data_027e0160` overlaps `data_027e0164`, used by the older

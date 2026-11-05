@@ -1,4 +1,5 @@
 ﻿#include "nitro/types.h"
+#include "src/overlays/ov001/SessionBuffers.h"
 
 typedef struct ResultsWork {
     u8 pad_0000[0x64d8];
@@ -43,7 +44,6 @@ extern u64 _ull_mod(u64 value, u64 divisor);
 extern unsigned int func_0202a9e4(unsigned int range);
 extern unsigned int random_next_scaled(unsigned int upperBound);
 extern void SeedSharedRandomState(u32 seed, u64 mix);
-extern void func_ov001_020646b8(int mode);
 extern void WriteSessionPackedBits(int bitOffset, u32 bitCount, u32 value);
 
 void CloseResultsSession(void)
@@ -75,7 +75,7 @@ void CloseResultsSession(void)
         mixA = random_next_scaled(0xffffffff);
         mixB = random_next_scaled(0xffffffff);
         SeedSharedRandomState(seed, (u64)mixA * mixB);
-        func_ov001_020646b8(10);
+        SessionBuffer_Free(10);
         data_ov001_020a0480->resultsDone = 1;
         WriteSessionPackedBits(0x1e19, 1, 0);
     }

@@ -1,3 +1,14 @@
+/* Keep the shared scene view's pointer result explicit at the DS address API. */
+#include "eu/nitro/types.h"
+#include "eu/src/overlays/ov001/SessionBuffers.h"
+
+struct SceneContext;
+static inline struct SceneContext *GetSceneContextBuffer(s32 index)
+{
+    return (struct SceneContext *)SessionBuffer_GetAddress(index);
+}
+
+#define func_ov001_0206468c GetSceneContextBuffer
 #define func_ov001_020645c8 IsSessionFlagSet
 #define ApplySlotStyleToSession_020ba570 ApplySlotStyleToSession
 #define CreateOverlayTask_0206a6f4 CreateOverlayTask

@@ -14,6 +14,8 @@ This is a matching decompilation; a host port is a separate project.
   calling conventions.
 - [Symbol evidence](SYMBOL_EVIDENCE.md) records justified semantic renames and
   the recovered traversal workspace, including unresolved overlapping views.
+- [Session buffers](SESSION_BUFFERS.md) describes the shared slot record,
+  allocation/release ownership and the DS address representation.
 - [Results scene](RESULTS_SCENE.md), [scene loading](SCENE_LOAD_STEP.md),
   [carousel models](CAROUSEL_MODELS.md), [widgets](WIDGET_POSITION.md) and
   [field-menu palette](FIELD_MENU_PALETTE.md) record behavior and the matching

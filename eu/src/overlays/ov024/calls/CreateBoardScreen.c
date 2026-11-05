@@ -1,4 +1,5 @@
 ﻿#include "nitro/types.h"
+#include "src/overlays/ov001/SessionBuffers.h"
 
 typedef struct Words4 {
     u32 words[4];
@@ -68,7 +69,6 @@ extern void InitTileTableFrom(void *widget, BgLayerDesc *desc);
 extern int Msg_OpenContainerAndReadHeader(const char *path, int heap, int flags);
 extern void InitBackgroundContainer(void *animSet, Words5 *desc);
 extern void func_ov027_020b7e44(void *animSet, u32 key);
-extern void *func_ov001_0206468c(int value);
 extern void InitializeResourceContainer(void *objectSet, int value);
 extern void InitObjManagerAndMark(void *objectSet, Words4 *desc);
 extern void func_ov027_020b9098(void *objectSet, u32 key);
@@ -124,7 +124,7 @@ void *CreateBoardScreen(int mode)
     animDesc = data_ov024_020b7370;
     InitBackgroundContainer(state->animSet, &animDesc);
     func_ov027_020b7e44(state->animSet, BOARD_VRAM_KEY(data_ov024_020b7540.state->resourceA) | 0x8000000f);
-    data_ov024_020b7540.cursor = func_ov001_0206468c(10);
+    data_ov024_020b7540.cursor = (void *)SessionBuffer_GetAddress(10);
     objDesc = data_ov024_020b7360;
     objDesc.words[0] = BOARD_VRAM_KEY(data_ov024_020b7540.state->resourceA) | 0x80000013;
     InitializeResourceContainer(data_ov024_020b7540.state->objectSet, 0);

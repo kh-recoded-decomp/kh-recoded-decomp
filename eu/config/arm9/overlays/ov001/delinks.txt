@@ -444,15 +444,15 @@ src/overlays/ov001/calls/AllocSessionBuffer.c:
     complete
     .text       start:0x02064660 end:0x0206468c
 
-src/overlays/ov001/calls/func_ov001_0206468c.c:
+src/overlays/ov001/calls/SessionBuffer_GetAddress.c:
     complete
     .text       start:0x0206468c end:0x020646a4
 
-src/overlays/ov001/calls/func_ov001_020646a4.c:
+src/overlays/ov001/calls/SessionBuffer_GetSize.c:
     complete
     .text       start:0x020646a4 end:0x020646b8
 
-src/overlays/ov001/calls/func_ov001_020646b8.c:
+src/overlays/ov001/calls/SessionBuffer_Free.c:
     complete
     .text       start:0x020646b8 end:0x020646e0
 

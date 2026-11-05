@@ -11,14 +11,15 @@
 #endif
 /* EU results-scene initialization; see docs/RESULTS_SCENE.md. */
 #include "nitro/types.h"
+#include "src/overlays/ov001/SessionBuffers.h"
 
 /* Legacy symbol binding: this reads the current task work pointer and allocates nothing. */
 #define GetCurrentTaskWork NNSi_FndGetCurrentRootHeap
 
 /* Session buffer records contain a pointer followed by their allocated byte size. */
-#define GetSessionBufferSize func_ov001_020646a4
+#define GetSessionBufferSize SessionBuffer_GetSize
 /* Legacy slot API returns a 32-bit ARM data address. */
-#define GetSessionBufferAddress func_ov001_0206468c
+#define GetSessionBufferAddress SessionBuffer_GetAddress
 
 /* The arguments the results scene is started with. */
 typedef struct ResultsArgs {
@@ -211,9 +212,6 @@ extern void func_02029f8c(int bank, int value);
 extern void InitTileTableFrom(void *table, const TileTableSource *source);
 extern int func_0204f5a0(s16 *record, s16 *limits);
 extern void QueueSoundCommandForArc(u32 archive);
-extern u32 GetSessionBufferSize(int id);
-extern void *AllocSessionBuffer(int id, u32 size);
-extern u32 GetSessionBufferAddress(int id);
 extern u32 func_ov001_02063b68(int index);
 extern u32 func_0202a9e4(u32 range);
 extern u32 random_next_scaled(u32 range);

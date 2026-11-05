@@ -1,3 +1,6 @@
+#include "eu/nitro/types.h"
+#include "eu/src/overlays/ov001/SessionBuffers.h"
+#define func_ov001_020646b8 SessionBuffer_Free
 #define ArmObject_0206c6f4 func_ov001_0206c6f4
 #define DestroySceneState_020ba804 DestroySceneState
 #define FreePointerIfSet_020ba294 FreePointerIfSet
