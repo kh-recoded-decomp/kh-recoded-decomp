@@ -17,7 +17,7 @@ extern u16 GetBiasAdjustedField(s32 index);
 extern void StoreSessionSpawnPoint(s32 index, VecFx32 *position, u16 angle);
 extern void ResetStageEventContext(void);
 extern void SetOverlayLayerVisible(s32 value);
-extern void func_ov001_0207efa0(void);
+extern void ResetFieldObjectManagerResources(void);
 extern void ShutdownSceneContext(void);
 extern void ReleaseCounterHudModels(void);
 extern void func_ov001_02064d88(void);
@@ -43,7 +43,7 @@ s32 ShutdownFieldAndSaveActorPoses(void)
     }
     ResetStageEventContext();
     SetOverlayLayerVisible(1);
-    func_ov001_0207efa0();
+    ResetFieldObjectManagerResources();
     ShutdownSceneContext();
     data_ov028_020bb3a0->flags &= ~0xC;
     ReleaseCounterHudModels();

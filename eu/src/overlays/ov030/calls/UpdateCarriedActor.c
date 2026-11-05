@@ -1,3 +1,4 @@
+#define func_ov001_0206db8c GetFieldEntryGroupId
 #define UpdateCarriedActor_020bc110 UpdateCarriedActor
 #define data_ov030_020bd004 gMarkerResetConfig
 #define g_carryMotion_020bd004 gMarkerReset

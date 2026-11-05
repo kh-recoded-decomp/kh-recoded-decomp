@@ -1,3 +1,4 @@
+#define func_ov001_0206db8c GetFieldEntryGroupId
 #define DispatchStageEventArg_020878d4 DispatchStageEventArg
 #define EmitSweepHitEvents_020d8350 EmitSweepHitEvents
 #define FixedPointMultiply12_02006450 FX_Mul

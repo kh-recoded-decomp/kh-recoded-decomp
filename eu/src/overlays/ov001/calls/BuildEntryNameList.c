@@ -1,3 +1,4 @@
+#define func_ov001_02073060 GetFieldSceneEntryListRecord
 #define BuildEntryNameList_0207aa6c BuildEntryNameList
 #define GetRecordSlotPair1Entry_02051ef4 GetRecordSlotPair1Entry
 #define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap

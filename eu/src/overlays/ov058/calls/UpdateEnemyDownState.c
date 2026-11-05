@@ -1,3 +1,4 @@
+#define func_ov001_0206db8c GetFieldEntryGroupId
 #define FinishEnemyRecovery_020d6c78 FinishEnemyRecovery
 #define GetLinkedAngleOffset_020ceb7c GetLinkedAngleOffset
 #define StopAndClearSoundEmitter_020a8e14 StopAndClearSoundEmitter

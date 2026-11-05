@@ -1,3 +1,4 @@
+#define func_ov001_02073060 GetFieldSceneEntryListRecord
 #define AdvanceMenuDelayCounter_020b582c AdvanceMenuDelayCounter
 #define GetClampedPaletteSlot_02073598 GetClampedPaletteSlot
 #define InitMenuScreen_020b5acc InitMenuScreen

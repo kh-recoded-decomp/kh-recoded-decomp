@@ -20,7 +20,7 @@ extern unsigned int func_ov001_0206de40();
 extern unsigned int Panel_TryBeginTransition4();
 extern unsigned int ReleaseCounterHudModels();
 extern unsigned int SetOverlayLayerVisible();
-extern unsigned int func_ov001_0207efa0();
+extern unsigned int ResetFieldObjectManagerResources();
 
 unsigned int GroupSceneState_SaveActorPosesAndExit(void) {
   int countOrGate;
@@ -49,7 +49,7 @@ unsigned int GroupSceneState_SaveActorPosesAndExit(void) {
   ResetStageEventContext();
   ShutdownSceneContext();
   SetOverlayLayerVisible(1);
-  func_ov001_0207efa0();
+  ResetFieldObjectManagerResources();
   *(u16 *)(data_ov032_020c0080.value + 6) = *(u16 *)(data_ov032_020c0080.value + 6) & 0xfff3;
   ReleaseCounterHudModels();
   func_ov001_02064d88();

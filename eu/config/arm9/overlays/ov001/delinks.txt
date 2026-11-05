@@ -704,7 +704,7 @@ src/overlays/ov001/calls/func_ov001_020655c4.c:
     complete
     .text       start:0x020655c4 end:0x020655d6
 
-src/overlays/ov001/calls/func_ov001_020655d8.c:
+src/overlays/ov001/calls/ScriptCmd_ResetStageGroupRowsAndRestoreDefault.c:
     complete
     .text       start:0x020655d8 end:0x020655e6
 
@@ -712,7 +712,7 @@ src/overlays/ov001/calls/ScriptCmd_HandleFieldPanelCommand.c:
     complete
     .text       start:0x020655e8 end:0x020655f6
 
-src/overlays/ov001/calls/ScriptCmd_SetFieldObjectManagerFlag.c:
+src/overlays/ov001/calls/ScriptCmd_SetPartyEntryUpdatesEnabled.c:
     complete
     .text       start:0x020655f8 end:0x02065610
 
@@ -752,7 +752,7 @@ src/overlays/ov001/calls/ScriptCmd_ShowHudIndicator.c:
     complete
     .text       start:0x0206572c end:0x02065758
 
-src/overlays/ov001/calls/func_ov001_02065758.c:
+src/overlays/ov001/calls/ScriptCmd_WaitForCounterHudFadeState0.c:
     complete
     .text       start:0x02065758 end:0x0206576a
 
@@ -764,7 +764,7 @@ src/overlays/ov001/calls/ScriptCmd_StartCameraShake.c:
     complete
     .text       start:0x02065778 end:0x020657a2
 
-src/overlays/ov001/calls/func_ov001_020657a4.c:
+src/overlays/ov001/calls/ScriptCmd_SetCameraHorizontalFollowBounds.c:
     complete
     .text       start:0x020657a4 end:0x020657c6
 
@@ -920,7 +920,7 @@ src/overlays/ov001/calls/ScriptCmd_SetSessionFlag35e3.c:
     complete
     .text       start:0x02065e34 end:0x02065e44
 
-src/overlays/ov001/calls/func_ov001_02065e44.c:
+src/overlays/ov001/calls/ScriptCmd_RefreshFirstSelectionPlayerStats.c:
     complete
     .text       start:0x02065e44 end:0x02065e4e
 
@@ -1412,7 +1412,7 @@ src/overlays/ov001/calls/ReleaseOrDisableStageEvent.c:
     complete
     .text       start:0x020688d4 end:0x0206890a
 
-src/overlays/ov001/calls/func_ov001_0206890c.c:
+src/overlays/ov001/calls/ResetStageGroupRowsAndRestoreDefault.c:
     complete
     .text       start:0x0206890c end:0x02068918
 
@@ -1664,7 +1664,7 @@ src/overlays/ov001/calls/LoadOffsetTableFile.c:
     complete
     .text       start:0x02069498 end:0x02069508
 
-src/overlays/ov001/calls/func_ov001_02069508.c:
+src/overlays/ov001/calls/ReleaseOffsetTableFile.c:
     complete
     .text       start:0x02069508 end:0x02069530
 
@@ -1940,7 +1940,7 @@ src/overlays/ov001/calls/LoadCenteredScreenSprite.c:
     complete
     .text       start:0x0206a860 end:0x0206a8c8
 
-src/overlays/ov001/auto/func_ov001_0206a8c8.c:
+src/overlays/ov001/auto/SetScreenFadeBrightnessStepFx12.c:
     complete
     .text       start:0x0206a8c8 end:0x0206a8d4
 
@@ -2140,7 +2140,7 @@ src/overlays/ov001/calls/InitButtonPanelSprites.c:
     complete
     .text       start:0x0206be78 end:0x0206bf34
 
-src/overlays/ov001/calls/func_ov001_0206bf34.c:
+src/overlays/ov001/calls/ReleaseTargetCursorResources.c:
     complete
     .text       start:0x0206bf34 end:0x0206bf7a
 
@@ -2148,7 +2148,7 @@ src/overlays/ov001/calls/SelectCursorTarget.c:
     complete
     .text       start:0x0206bf7c end:0x0206bfec
 
-src/overlays/ov001/calls/func_ov001_0206bfec.c:
+src/overlays/ov001/calls/SelectDefaultTargetCursorForKey.c:
     complete
     .text       start:0x0206bfec end:0x0206c036
 
@@ -2168,7 +2168,7 @@ src/overlays/ov001/calls/InitSpritePairFromResource.c:
     complete
     .text       start:0x0206c19c end:0x0206c204
 
-src/overlays/ov001/calls/func_ov001_0206c204.c:
+src/overlays/ov001/calls/ReleaseTargetSpritePairResources.c:
     complete
     .text       start:0x0206c204 end:0x0206c216
 
@@ -2340,7 +2340,7 @@ src/overlays/ov001/calls/UpdatePrimaryEventRecord.c:
     complete
     .text       start:0x0206cd9c end:0x0206cdec
 
-src/overlays/ov001/calls/func_ov001_0206cdec.c:
+src/overlays/ov001/calls/ResetWorldEntryContactState.c:
     complete
     .text       start:0x0206cdec end:0x0206ce00
 
@@ -2368,7 +2368,7 @@ src/overlays/ov001/calls/RefreshFieldMenuPage.c:
     complete
     .text       start:0x0206d248 end:0x0206d2dc
 
-src/overlays/ov001/calls/func_ov001_0206d2dc.c:
+src/overlays/ov001/calls/RefreshPrimaryActorMenuPage.c:
     complete
     .text       start:0x0206d2dc end:0x0206d308
 
@@ -2408,7 +2408,7 @@ src/overlays/ov001/calls/UpdateEventObjects.c:
     complete
     .text       start:0x0206daf8 end:0x0206db44
 
-src/overlays/ov001/calls/func_ov001_0206db44.c:
+src/overlays/ov001/calls/GetFieldActorUpdateStepFx12.c:
     complete
     .text       start:0x0206db44 end:0x0206db5c
 
@@ -2420,7 +2420,7 @@ src/overlays/ov001/calls/GetPlayerControlState.c:
     complete
     .text       start:0x0206db78 end:0x0206db8c
 
-src/overlays/ov001/calls/func_ov001_0206db8c.c:
+src/overlays/ov001/calls/GetFieldEntryGroupId.c:
     complete
     .text       start:0x0206db8c end:0x0206dba0
 
@@ -2432,7 +2432,7 @@ src/overlays/ov001/calls/LoadManagerSpriteSlots.c:
     complete
     .text       start:0x0206dbb4 end:0x0206dc20
 
-src/overlays/ov001/calls/func_ov001_0206dc20.c:
+src/overlays/ov001/calls/GetSharedFieldSpriteSlots.c:
     complete
     .text       start:0x0206dc20 end:0x0206dc38
 
@@ -2500,11 +2500,11 @@ src/overlays/ov001/calls/UpdateIdleTimeout.c:
     complete
     .text       start:0x0206e1c8 end:0x0206e224
 
-src/overlays/ov001/calls/func_ov001_0206e224.c:
+src/overlays/ov001/calls/IsPartyGaugeGainAllowed.c:
     complete
     .text       start:0x0206e224 end:0x0206e280
 
-src/overlays/ov001/calls/func_ov001_0206e280.c:
+src/overlays/ov001/calls/IsPoolAndStageSlotTargetSearchAllowed.c:
     complete
     .text       start:0x0206e280 end:0x0206e2b0
 
@@ -2512,7 +2512,7 @@ src/overlays/ov001/calls/func_ov001_0206e2b0.c:
     complete
     .text       start:0x0206e2b0 end:0x0206e2d0
 
-src/overlays/ov001/calls/func_ov001_0206e2d0.c:
+src/overlays/ov001/calls/IsSlotItemUseRecoveryAllowed.c:
     complete
     .text       start:0x0206e2d0 end:0x0206e31c
 
@@ -2552,7 +2552,7 @@ src/overlays/ov001/calls/IsFirstEntryFlagSet.c:
     complete
     .text       start:0x0206e584 end:0x0206e5a4
 
-src/overlays/ov001/calls/func_ov001_0206e5a4.c:
+src/overlays/ov001/calls/SetPartyEntryUpdatesEnabled.c:
     complete
     .text       start:0x0206e5a4 end:0x0206e5b8
 
@@ -2560,11 +2560,11 @@ src/overlays/ov001/calls/ArePartyActorsSettled.c:
     complete
     .text       start:0x0206e5b8 end:0x0206e62c
 
-src/overlays/ov001/calls/func_ov001_0206e62c.c:
+src/overlays/ov001/calls/GetManagedActorMode.c:
     complete
     .text       start:0x0206e62c end:0x0206e644
 
-src/overlays/ov001/calls/func_ov001_0206e644.c:
+src/overlays/ov001/calls/GetPendingWorldEntryData.c:
     complete
     .text       start:0x0206e644 end:0x0206e65c
 
@@ -2676,7 +2676,7 @@ src/overlays/ov001/calls/InitFieldHudWindow.c:
     complete
     .text       start:0x0206f200 end:0x0206f2f8
 
-src/overlays/ov001/calls/func_ov001_0206f2f8.c:
+src/overlays/ov001/calls/ReleaseFieldHudTextResources.c:
     complete
     .text       start:0x0206f2f8 end:0x0206f324
 
@@ -2684,7 +2684,7 @@ src/overlays/ov001/calls/BuildMessageLineWindow.c:
     complete
     .text       start:0x0206f324 end:0x0206f464
 
-src/overlays/ov001/calls/func_ov001_0206f464.c:
+src/overlays/ov001/calls/ReleaseFieldMessageLineWindow.c:
     complete
     .text       start:0x0206f464 end:0x0206f482
 
@@ -2692,7 +2692,7 @@ src/overlays/ov001/calls/LoadRecordNamesAndEntryList.c:
     complete
     .text       start:0x0206f484 end:0x0206f648
 
-src/overlays/ov001/calls/func_ov001_0206f648.c:
+src/overlays/ov001/calls/ReleaseFieldRecordNamesAndEntryList.c:
     complete
     .text       start:0x0206f648 end:0x0206f694
 
@@ -2700,7 +2700,7 @@ src/overlays/ov001/calls/InitSceneTextWindow4D8.c:
     complete
     .text       start:0x0206f694 end:0x0206f6cc
 
-src/overlays/ov001/calls/func_ov001_0206f6cc.c:
+src/overlays/ov001/calls/ReleaseSceneTextWindow4D8.c:
     complete
     .text       start:0x0206f6cc end:0x0206f6dc
 
@@ -2708,7 +2708,7 @@ src/overlays/ov001/calls/InitSceneTextWindow51C.c:
     complete
     .text       start:0x0206f6dc end:0x0206f720
 
-src/overlays/ov001/calls/func_ov001_0206f720.c:
+src/overlays/ov001/calls/ReleaseSceneTextWindow51C.c:
     complete
     .text       start:0x0206f720 end:0x0206f730
 
@@ -2716,7 +2716,7 @@ src/overlays/ov001/calls/BuildChoiceWindow.c:
     complete
     .text       start:0x0206f730 end:0x0206f848
 
-src/overlays/ov001/calls/func_ov001_0206f848.c:
+src/overlays/ov001/calls/ReleaseFieldChoiceWindow.c:
     complete
     .text       start:0x0206f848 end:0x0206f858
 
@@ -2724,7 +2724,7 @@ src/overlays/ov001/calls/BuildSlotLabelWindows.c:
     complete
     .text       start:0x0206f858 end:0x0206fa2c
 
-src/overlays/ov001/calls/func_ov001_0206fa2c.c:
+src/overlays/ov001/calls/ReleaseSlotLabelWindowsAndMessages.c:
     complete
     .text       start:0x0206fa2c end:0x0206fa72
 
@@ -2904,7 +2904,7 @@ src/overlays/ov001/calls/SetFieldSlotValue.c:
     complete
     .text       start:0x020715d4 end:0x0207162c
 
-src/overlays/ov001/calls/func_ov001_0207162c.c:
+src/overlays/ov001/calls/SetFieldHudGaugeRange.c:
     complete
     .text       start:0x0207162c end:0x0207163c
 
@@ -2992,7 +2992,7 @@ src/overlays/ov001/calls/ReopenFieldScoreScreen.c:
     complete
     .text       start:0x02071be4 end:0x02071ccc
 
-src/overlays/ov001/calls/func_ov001_02071ccc.c:
+src/overlays/ov001/calls/ReleaseFieldPanelScreen3Widgets.c:
     complete
     .text       start:0x02071ccc end:0x02071cd4
 
@@ -3000,7 +3000,7 @@ src/overlays/ov001/calls/OpenOverlayWidgets.c:
     complete
     .text       start:0x02071cd4 end:0x02071d64
 
-src/overlays/ov001/calls/func_ov001_02071d64.c:
+src/overlays/ov001/calls/ReleaseFieldPanelScreen2Widgets.c:
     complete
     .text       start:0x02071d64 end:0x02071d6c
 
@@ -3008,7 +3008,7 @@ src/overlays/ov001/calls/OpenFieldSubScreenLayer.c:
     complete
     .text       start:0x02071d6c end:0x02071de8
 
-src/overlays/ov001/calls/func_ov001_02071de8.c:
+src/overlays/ov001/calls/ReleaseFieldPanelScreen4Widgets.c:
     complete
     .text       start:0x02071de8 end:0x02071df0
 
@@ -3036,7 +3036,7 @@ src/overlays/ov001/calls/CallFieldCommandHandler.c:
     complete
     .text       start:0x02072020 end:0x02072040
 
-src/overlays/ov001/calls/func_ov001_02072040.c:
+src/overlays/ov001/calls/InvokeFieldMinigameActiveCallback.c:
     complete
     .text       start:0x02072040 end:0x02072064
 
@@ -3200,11 +3200,11 @@ src/overlays/ov001/calls/SetSceneAnimState.c:
     complete
     .text       start:0x02072fc4 end:0x02073030
 
-src/overlays/ov001/calls/func_ov001_02073030.c:
+src/overlays/ov001/calls/SetFieldHudBottomRowEnabled.c:
     complete
     .text       start:0x02073030 end:0x02073060
 
-src/overlays/ov001/calls/func_ov001_02073060.c:
+src/overlays/ov001/calls/GetFieldSceneEntryListRecord.c:
     complete
     .text       start:0x02073060 end:0x02073074
 
@@ -3240,7 +3240,7 @@ src/overlays/ov001/calls/GetFieldHandle.c:
     complete
     .text       start:0x0207365c end:0x02073684
 
-src/overlays/ov001/calls/func_ov001_02073684.c:
+src/overlays/ov001/calls/GetFieldSceneLocationName.c:
     complete
     .text       start:0x02073684 end:0x02073698
 
@@ -3284,7 +3284,7 @@ src/overlays/ov001/calls/BlitFourPixelInsetPattern.c:
     complete
     .text       start:0x02073894 end:0x020738b8
 
-src/overlays/ov001/calls/func_ov001_020738b8.c:
+src/overlays/ov001/calls/BlitGaugeFillPattern.c:
     complete
     .text       start:0x020738b8 end:0x020738d2
 
@@ -3488,7 +3488,7 @@ src/overlays/ov001/calls/UpdateFieldMenuSelectionTags.c:
     complete
     .text       start:0x02075e10 end:0x02075eec
 
-src/overlays/ov001/calls/func_ov001_02075eec.c:
+src/overlays/ov001/calls/DisarmFieldMenuSelectionTags.c:
     complete
     .text       start:0x02075eec end:0x02075f5c
 
@@ -3588,15 +3588,15 @@ src/overlays/ov001/calls/SetFieldMenuSuspended.c:
     complete
     .text       start:0x02077b90 end:0x02077bcc
 
-src/overlays/ov001/calls/func_ov001_02077bcc.c:
+src/overlays/ov001/calls/GetFieldMenuMode.c:
     complete
     .text       start:0x02077bcc end:0x02077bd8
 
-src/overlays/ov001/calls/func_ov001_02077bd8.c:
+src/overlays/ov001/calls/TryArmFieldMenuButtonDelay.c:
     complete
     .text       start:0x02077bd8 end:0x02077c24
 
-src/overlays/ov001/calls/func_ov001_02077c24.c:
+src/overlays/ov001/calls/TryCancelFieldMenuButtonDelay.c:
     complete
     .text       start:0x02077c24 end:0x02077c98
 
@@ -3628,7 +3628,7 @@ src/overlays/ov001/calls/TickFieldMenuEntry.c:
     complete
     .text       start:0x02078000 end:0x02078180
 
-src/overlays/ov001/calls/func_ov001_02078180.c:
+src/overlays/ov001/calls/RedrawFieldMenuPageAndSelectionTags.c:
     complete
     .text       start:0x02078180 end:0x020781a4
 
@@ -3644,7 +3644,7 @@ src/overlays/ov001/calls/SetFieldMenuMode_02078360.c:
     complete
     .text       start:0x02078360 end:0x02078494
 
-src/overlays/ov001/calls/func_ov001_02078494.c:
+src/overlays/ov001/calls/GetFieldMenuListMode.c:
     complete
     .text       start:0x02078494 end:0x020784a4
 
@@ -3680,7 +3680,7 @@ src/overlays/ov001/calls/FieldMenu_FocusEntryById.c:
     complete
     .text       start:0x02078800 end:0x02078898
 
-src/overlays/ov001/calls/func_ov001_02078898.c:
+src/overlays/ov001/calls/GetFieldMenuListMode2Cursor.c:
     complete
     .text       start:0x02078898 end:0x020788b8
 
@@ -3928,7 +3928,7 @@ src/overlays/ov001/calls/ApplyModeFadeBlend.c:
     complete
     .text       start:0x0207a8c8 end:0x0207a8fc
 
-src/overlays/ov001/calls/func_ov001_0207a8fc.c:
+src/overlays/ov001/calls/IsPanelMapUpdateAllowed.c:
     complete
     .text       start:0x0207a8fc end:0x0207a91e
 
@@ -4340,7 +4340,7 @@ src/overlays/ov001/calls/SetSlotLayoutHighlight.c:
     complete
     .text       start:0x0207d484 end:0x0207d4e4
 
-src/overlays/ov001/calls/func_ov001_0207d4e4.c:
+src/overlays/ov001/calls/GetCounterHudFadeState.c:
     complete
     .text       start:0x0207d4e4 end:0x0207d4f8
 
@@ -4480,7 +4480,7 @@ src/overlays/ov001/calls/BindHudNodeOffsets.c:
     complete
     .text       start:0x0207e1e8 end:0x0207e26c
 
-src/overlays/ov001/calls/func_ov001_0207e26c.c:
+src/overlays/ov001/calls/RandomizePositiveSpinPrompt.c:
     complete
     .text       start:0x0207e26c end:0x0207e298
 
@@ -4548,7 +4548,7 @@ src/overlays/ov001/calls/StartFieldMinigameRound.c:
     complete
     .text       start:0x0207ea3c end:0x0207eb04
 
-src/overlays/ov001/calls/func_ov001_0207eb04.c:
+src/overlays/ov001/calls/StopFieldMinigameRound.c:
     complete
     .text       start:0x0207eb04 end:0x0207eb34
 
@@ -4556,7 +4556,7 @@ src/overlays/ov001/calls/HandleListMenuConfirm.c:
     complete
     .text       start:0x0207eb34 end:0x0207eb98
 
-src/overlays/ov001/calls/func_ov001_0207eb98.c:
+src/overlays/ov001/calls/IsFieldMinigameRoundActive.c:
     complete
     .text       start:0x0207eb98 end:0x0207ebb4
 
@@ -4640,7 +4640,7 @@ src/overlays/ov001/auto/func_ov001_0207ef90.c:
     complete
     .text       start:0x0207ef90 end:0x0207efa0
 
-src/overlays/ov001/calls/func_ov001_0207efa0.c:
+src/overlays/ov001/calls/ResetFieldObjectManagerResources.c:
     complete
     .text       start:0x0207efa0 end:0x0207efd4
 
@@ -4664,7 +4664,7 @@ src/overlays/ov001/calls/GetFieldObjectByClassAndIndex.c:
     complete
     .text       start:0x0207f060 end:0x0207f078
 
-src/overlays/ov001/calls/func_ov001_0207f078.c:
+src/overlays/ov001/calls/ObjectManager_SetFlagBit.c:
     complete
     .text       start:0x0207f078 end:0x0207f090
 
@@ -4676,7 +4676,7 @@ src/overlays/ov001/auto/GetFieldObjectListHead.c:
     complete
     .text       start:0x0207f0b4 end:0x0207f0c0
 
-src/overlays/ov001/calls/func_ov001_0207f0c0.c:
+src/overlays/ov001/calls/GetFieldObjectShadowModel.c:
     complete
     .text       start:0x0207f0c0 end:0x0207f0d0
 
@@ -5240,7 +5240,7 @@ src/overlays/ov001/calls/FallFieldObject.c:
     complete
     .text       start:0x02082490 end:0x020825c8
 
-src/overlays/ov001/calls/func_ov001_020825c8.c:
+src/overlays/ov001/calls/FilterFieldSwitchTouchContact.c:
     complete
     .text       start:0x020825c8 end:0x020825e2
 
@@ -5320,7 +5320,7 @@ src/overlays/ov001/calls/FallCylinderObject.c:
     complete
     .text       start:0x020831d0 end:0x02083334
 
-src/overlays/ov001/calls/func_ov001_02083334.c:
+src/overlays/ov001/calls/FilterCapsuleFieldObjectContact.c:
     complete
     .text       start:0x02083334 end:0x02083346
 
@@ -5412,7 +5412,7 @@ src/overlays/ov001/calls/UpdatePatrolMove.c:
     complete
     .text       start:0x02083fc4 end:0x02084604
 
-src/overlays/ov001/calls/func_ov001_02084604.c:
+src/overlays/ov001/calls/FilterPatrolMoveSurface.c:
     complete
     .text       start:0x02084604 end:0x02084686
 
@@ -5448,7 +5448,7 @@ src/overlays/ov001/calls/CaptureJointMatrix.c:
     complete
     .text       start:0x020847c0 end:0x020847ec
 
-src/overlays/ov001/calls/func_ov001_020847ec.c:
+src/overlays/ov001/calls/FilterShadowGroundSurface.c:
     complete
     .text       start:0x020847ec end:0x0208480c
 
@@ -5660,19 +5660,19 @@ src/overlays/ov001/calls/FieldObject_ApplyActorSlotIndex.c:
     complete
     .text       start:0x020863ac end:0x020863f2
 
-src/overlays/ov001/calls/func_ov001_020863f4.c:
+src/overlays/ov001/calls/QueryEntryPoolMotionVector.c:
     complete
     .text       start:0x020863f4 end:0x02086406
 
-src/overlays/ov001/calls/func_ov001_02086408.c:
+src/overlays/ov001/calls/DispatchEntryPoolHitMessage.c:
     complete
     .text       start:0x02086408 end:0x0208641a
 
-src/overlays/ov001/calls/func_ov001_0208641c.c:
+src/overlays/ov001/calls/GetEntryPoolTargetPosition.c:
     complete
     .text       start:0x0208641c end:0x0208643a
 
-src/overlays/ov001/calls/func_ov001_0208643c.c:
+src/overlays/ov001/calls/GetEntryPoolTargetRangeFx12.c:
     complete
     .text       start:0x0208643c end:0x0208645c
 
@@ -5716,11 +5716,11 @@ src/overlays/ov001/calls/DestroyAllEffectEntries.c:
     complete
     .text       start:0x020868f8 end:0x02086950
 
-src/overlays/ov001/calls/func_ov001_02086950.c:
+src/overlays/ov001/calls/GetModeEntryUnlockRewardRecord.c:
     complete
     .text       start:0x02086950 end:0x02086974
 
-src/overlays/ov001/calls/func_ov001_02086974.c:
+src/overlays/ov001/calls/GetModeEntryUnlockRewardId.c:
     complete
     .text       start:0x02086974 end:0x02086994
 
@@ -5800,11 +5800,11 @@ src/overlays/ov001/calls/ApplyActorSlotsToFieldEntryList.c:
     complete
     .text       start:0x02087038 end:0x02087058
 
-src/overlays/ov001/calls/func_ov001_02087058.c:
+src/overlays/ov001/calls/SetEntryPoolUpdatesBlocked.c:
     complete
     .text       start:0x02087058 end:0x0208707c
 
-src/overlays/ov001/calls/func_ov001_0208707c.c:
+src/overlays/ov001/calls/SetEntryPoolConditionalUpdatePause.c:
     complete
     .text       start:0x0208707c end:0x020870a0
 
@@ -5824,7 +5824,7 @@ src/overlays/ov001/calls/ReallocTableEntry.c:
     complete
     .text       start:0x02087160 end:0x020871a0
 
-src/overlays/ov001/calls/func_ov001_020871a0.c:
+src/overlays/ov001/calls/RequestFieldEntryResourceDelivery.c:
     complete
     .text       start:0x020871a0 end:0x020871b8
 
@@ -5848,7 +5848,7 @@ src/overlays/ov001/auto/GetFieldEntryListHead.c:
     complete
     .text       start:0x02087264 end:0x02087270
 
-src/overlays/ov001/calls/func_ov001_02087270.c:
+src/overlays/ov001/calls/GetFieldEntryPoolCount_02087270.c:
     complete
     .text       start:0x02087270 end:0x02087280
 
@@ -5868,7 +5868,7 @@ src/overlays/ov001/calls/ResourceCache_LoadModeTables.c:
     complete
     .text       start:0x02087370 end:0x0208743c
 
-src/overlays/ov001/calls/func_ov001_0208743c.c:
+src/overlays/ov001/calls/ReleaseFieldEntryRewardTables.c:
     complete
     .text       start:0x0208743c end:0x02087474
 
@@ -5880,7 +5880,7 @@ src/overlays/ov001/calls/GetEntryUnlockState.c:
     complete
     .text       start:0x020874a0 end:0x020874f4
 
-src/overlays/ov001/calls/func_ov001_020874f4.c:
+src/overlays/ov001/calls/InitEntryUnlockRewardRequest.c:
     complete
     .text       start:0x020874f4 end:0x02087508
 
@@ -5896,7 +5896,7 @@ src/overlays/ov001/calls/GrantEntryUnlockReward.c:
     complete
     .text       start:0x02087540 end:0x02087642
 
-src/overlays/ov001/calls/func_ov001_02087644.c:
+src/overlays/ov001/calls/GetActiveFieldEntryListCount.c:
     complete
     .text       start:0x02087644 end:0x02087650
 

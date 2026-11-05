@@ -1,3 +1,4 @@
+#define func_ov001_0206db8c GetFieldEntryGroupId
 #define FinishEnemyRecovery_020d6c78 FinishEnemyRecovery
 #define SetClampedCursor_020a75d8 SetClampedCursor
 #define StopAndClearSoundEmitter_020a8e14 StopAndClearSoundEmitter

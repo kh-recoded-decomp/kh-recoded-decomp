@@ -1,3 +1,4 @@
+#define func_ov001_0206e644 GetPendingWorldEntryData
 #define IsEntryFlag2Active_020642d0 IsEntryFlag2Active
 #define PlaySoundChecked_0204d8d0 PlaySoundChecked
 #define SelectNextState_020ba7f8 SelectNextState

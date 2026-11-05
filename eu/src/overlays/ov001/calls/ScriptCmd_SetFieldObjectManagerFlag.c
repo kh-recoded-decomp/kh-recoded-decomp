@@ -1,3 +1,0 @@
-#define ScriptCmd_SetFieldObjectManagerFlag_020655f8 ScriptCmd_SetFieldObjectManagerFlag
-#define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
-#include "src/ov001/shared_engine/ScriptCmd_SetFieldObjectManagerFlag_020655f8.c"

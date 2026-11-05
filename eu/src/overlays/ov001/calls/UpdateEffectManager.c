@@ -4,5 +4,5 @@
 #define data_ov001_020a04dc data_ov001_020a04fc
 #define func_ov001_0206e584 IsFirstEntryFlagSet
 #define func_ov001_02086b1c ResetLinkedActorOffsets
-#define func_ov001_02087054 func_ov001_0208707c
+#define func_ov001_02087054 SetEntryPoolConditionalUpdatePause
 #include "src/ov001/field_objects/UpdateEffectManager_02086c60.c"

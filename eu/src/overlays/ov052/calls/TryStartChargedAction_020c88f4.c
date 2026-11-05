@@ -1,3 +1,4 @@
+#define func_ov001_0206db8c GetFieldEntryGroupId
 #define AddSessionCounter_02063a80 AddSessionCounter
 #define AnySubObjectBit0Set_020cfb58 AnySubObjectBit0Set
 #define ConsumeActionInterruptFlag_020cc274 ConsumeActionInterruptFlag

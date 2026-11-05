@@ -1,3 +1,4 @@
+#define func_ov001_02078494 GetFieldMenuListMode
 #define func_ov001_02077ef4 TryEnterFieldMenuState3
 #define Actor_ConsumeCommand_020c9a30 Actor_ConsumeCommand
 #define func_ov001_02078000 TickFieldMenuEntry

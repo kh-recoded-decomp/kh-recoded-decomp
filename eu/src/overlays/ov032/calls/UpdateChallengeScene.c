@@ -1,3 +1,4 @@
+#define func_ov001_0206e644 GetPendingWorldEntryData
 #define func_ov001_02067ed4 GetCurrentSceneEntryIndex
 #define IsEntryFlag2Active_020642d0 IsEntryFlag2Active
 #define IsGlobalPackedBitSet_02027304 IsGlobalPackedBitSet

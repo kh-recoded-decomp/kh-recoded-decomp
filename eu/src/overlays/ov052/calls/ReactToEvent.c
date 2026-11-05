@@ -1,3 +1,4 @@
+#define func_ov001_02072040 InvokeFieldMinigameActiveCallback
 #define func_ov001_0206db78 GetPlayerControlState
 #define ReactToEvent_020c8598 ReactToEvent
 #define func_ov021_020a7504 GetFieldDirectionActiveAndPollSubMode

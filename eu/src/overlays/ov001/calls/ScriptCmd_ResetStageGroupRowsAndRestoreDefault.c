@@ -1,0 +1,3 @@
+#define Ov002_EnterPhase ResetStageGroupRowsAndRestoreDefault
+#define ScriptCmd_EnterPhase_020655d8 ScriptCmd_ResetStageGroupRowsAndRestoreDefault
+#include "src/ov001/shared_engine/ScriptCmd_EnterPhase_020655d8.c"

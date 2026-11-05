@@ -6,7 +6,7 @@ extern u32 data_ov028_020bb3a0;
 extern s32 FX_Div(s32 numer, s32 denom);
 extern void StopSequencePlayersFrom2(void);
 extern void BeginScreenFadeOut(s32 value);
-extern void func_ov001_0206a8c8(void);
+extern void SetScreenFadeBrightnessStepFx12(void);
 extern void *GetBoundedEntryField(s32 value);
 extern void SetFieldEntriesPaused(s32 value);
 extern void Camera_SetFlag18IfStandard(s32 value);
@@ -17,7 +17,7 @@ void BeginFieldSceneSlowdownTransition(void)
     ResetCallback callback;
 
     FX_Div(0x10000, 0x40000);
-    func_ov001_0206a8c8();
+    SetScreenFadeBrightnessStepFx12();
     BeginScreenFadeOut(2);
     SetFieldEntriesPaused(1);
     self = GetBoundedEntryField(0);

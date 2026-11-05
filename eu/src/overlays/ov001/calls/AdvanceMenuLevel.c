@@ -1,3 +1,4 @@
+#define func_ov001_02077bcc GetFieldMenuMode
 #define func_ov001_0206ed8c BlendIconTiles
 #define func_ov001_020645c8 IsSessionFlagSet
 #define AdvanceMenuLevel_02073388 AdvanceMenuLevel

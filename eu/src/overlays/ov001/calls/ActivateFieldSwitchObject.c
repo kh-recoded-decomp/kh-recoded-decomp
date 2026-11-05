@@ -11,7 +11,7 @@
 #define func_020358b0 ApplyRecordTableEntry2
 #define func_02036240 ActorRegistry_GetEntityByIndex
 #define func_ov001_0207f7a4 IsObjectFlagClear
-#define func_ov001_020825a0 func_ov001_020825c8
+#define func_ov001_020825a0 FilterFieldSwitchTouchContact
 #define func_ov001_020825bc ClosePanelWithSound
 #define func_ov001_02082714 FieldObject_SetPhaseMode
 #define func_ov001_02085e48 AttachTouchHandler

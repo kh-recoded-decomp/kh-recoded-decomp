@@ -1,3 +1,4 @@
+#define func_ov001_02072040 InvokeFieldMinigameActiveCallback
 #define func_ov001_0206db78 GetPlayerControlState
 #define CameraPath_Start_020c2f44 CameraPath_Start
 #define GetFieldAt0x12_020a7560 SharedObject_GetMode

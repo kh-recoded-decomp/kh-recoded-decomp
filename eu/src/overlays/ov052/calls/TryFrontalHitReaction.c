@@ -1,3 +1,4 @@
+#define func_ov001_0206db8c GetFieldEntryGroupId
 #define DispatchStageEventArg_020878d4 DispatchStageEventArg
 #define FixedPointAtan2_020062bc FX_Atan2Idx
 #define TryFrontalHitReaction_020c9cb8 TryFrontalHitReaction

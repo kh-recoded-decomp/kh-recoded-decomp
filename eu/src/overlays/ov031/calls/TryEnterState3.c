@@ -1,5 +1,5 @@
 #define TryEnterState3_020ba678 TryEnterState3
 #define func_ov001_0207ed2c AreAllListNodesReady
-#define func_ov001_02087178 func_ov001_020871a0
+#define func_ov001_02087178 RequestFieldEntryResourceDelivery
 #define g_activeState_020bc800 data_ov031_020bc820
 #include "src/ov031/state_machine/TryEnterState3_020ba678.c"

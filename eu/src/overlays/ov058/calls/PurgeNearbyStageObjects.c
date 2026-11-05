@@ -2,7 +2,7 @@
 #define PurgeNearbyStageObjects_020d7998 PurgeNearbyStageObjects
 #define data_ov058_020d8a2c data_ov058_020d8a4c
 #define func_01ffa0f4 VEC_Distance
-#define func_ov001_020863f4 func_ov001_0208641c
+#define func_ov001_020863f4 GetEntryPoolTargetPosition
 #define func_ov001_0208723c GetFieldEntryListHead
 #define func_ov016_020a6d8c TryEnterFieldUnitPhase5
 #include "src/ov058/unclassified_helpers/PurgeNearbyStageObjects_020d7998.c"

@@ -7,7 +7,7 @@ extern void SetMenuHighlight(s32 highlight);
 extern void PlaySoundChecked(s32 channel, s32 soundId);
 extern BOOL IsEntryFlag2Active(s32 index);
 extern void QueueOrUpdateSoundKind3(s32 flags);
-extern u32 func_ov001_0206e644(void);
+extern u32 GetPendingWorldEntryData(void);
 extern s32 GetMainBrightnessSetting(void);
 extern void AwardSlotLevelProgress(s32 amount);
 extern void AddRegionProgress(s32 amount);
@@ -37,7 +37,7 @@ s32 PollFieldTransition(void)
         QueueOrUpdateSoundKind3(0x20);
         return 11;
     }
-    if (func_ov001_0206e644()) {
+    if (GetPendingWorldEntryData()) {
         data_ov001_020a0480->transitionFlags |= 0x10;
         SetFieldEntriesPaused(1);
         SetMenuHighlight(1);

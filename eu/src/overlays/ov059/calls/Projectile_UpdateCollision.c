@@ -26,7 +26,7 @@
 #define ZeroBytes0x28_020ac0f8 ZeroBytes0x28
 #define data_02053438 gZeroVecFx32
 #define func_01ff86fc MIi_CpuClear32
-#define func_ov001_020863e0 func_ov001_02086408
+#define func_ov001_020863e0 DispatchEntryPoolHitMessage
 #define func_ov001_020878b8 StartStageEventInstanceIfActive
 #define func_ov018_020a3470 func_ov018_020a3490
 #define func_ov021_020ac148 InitHitResultHeader

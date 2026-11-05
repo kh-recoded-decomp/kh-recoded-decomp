@@ -1,3 +1,4 @@
+#define func_ov001_02072040 InvokeFieldMinigameActiveCallback
 #define CanUseMemberSlot_020d0600 CanUseMemberSlot
 #define GetFieldAt0x12_020a7560 SharedObject_GetMode
 #define GetId10_020a755c SharedObject_GetId

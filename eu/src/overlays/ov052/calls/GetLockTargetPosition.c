@@ -1,6 +1,6 @@
 #define ForwardIfWorkMode12_0207fa14 ForwardIfWorkMode12
 #define GetLockTargetPosition_020cef64 GetLockTargetPosition
 #define func_ov001_0207f038 GetFieldObjectByClassAndIndex
-#define func_ov001_020863cc func_ov001_020863f4
+#define func_ov001_020863cc QueryEntryPoolMotionVector
 #define func_ov001_02087224 GetFieldEntryByPoolAndIndex
 #include "src/ov052/unclassified_helpers/GetLockTargetPosition_020cef64.c"

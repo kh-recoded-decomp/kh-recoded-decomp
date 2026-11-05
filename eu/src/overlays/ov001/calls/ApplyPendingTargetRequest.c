@@ -1,3 +1,4 @@
+#define func_ov001_0206bfec SelectDefaultTargetCursorForKey
 #define func_ov001_0206c284 ResolveSelectedTargetPosition
 #define ApplyPendingTargetRequest_0206bdbc ApplyPendingTargetRequest
 #define ClearWords124And128_0206c038 ClearWords124And128

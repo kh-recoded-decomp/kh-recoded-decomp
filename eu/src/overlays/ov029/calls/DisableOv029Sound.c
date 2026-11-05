@@ -12,6 +12,6 @@
 #define func_ov001_0206de40 ReleaseActorSlotByIndex
 #define func_ov001_0207d658 ReleaseCounterHudModels
 #define func_ov001_0207ef40 SetOverlayLayerVisible
-#define func_ov001_0207ef78 func_ov001_0207efa0
+#define func_ov001_0207ef78 ResetFieldObjectManagerResources
 #define g_ov029SoundCtx_020baba0 data_ov029_020babc0
 #include "src/ov029/reviewed_helpers/DisableOv029Sound_020ba768.c"

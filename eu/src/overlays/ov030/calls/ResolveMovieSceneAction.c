@@ -11,7 +11,7 @@ extern void SetFieldEntriesPaused(BOOL paused);
 extern void PlaySoundChecked(int group, int soundId);
 extern BOOL IsEntryFlag2Active(int entryId);
 extern void QueueOrUpdateSoundKind3(int value);
-extern u32 func_ov001_0206e644(void);
+extern u32 GetPendingWorldEntryData(void);
 extern void UpdateCameraTriggers(void);
 
 int ResolveMovieSceneAction(void)
@@ -36,7 +36,7 @@ int ResolveMovieSceneAction(void)
         QueueOrUpdateSoundKind3(32);
         return 11;
     }
-    if (func_ov001_0206e644()) {
+    if (GetPendingWorldEntryData()) {
         SetFieldEntriesPaused(TRUE);
         return 8;
     }

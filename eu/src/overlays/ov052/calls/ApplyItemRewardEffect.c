@@ -1,3 +1,6 @@
+#define func_ov001_0206e224 IsPartyGaugeGainAllowed
+#define func_ov001_0206e2d0 IsSlotItemUseRecoveryAllowed
+#define func_ov001_02078494 GetFieldMenuListMode
 #define func_ov001_0206dc38 GetManagedActorCount
 #define AddClampedHealth_020a75ec AddClampedHealth
 #define AddSessionCounter_02063a80 AddSessionCounter

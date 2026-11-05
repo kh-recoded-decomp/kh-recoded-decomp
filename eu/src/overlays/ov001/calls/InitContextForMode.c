@@ -2,7 +2,7 @@
 #define NNSi_FndGetCurrentRootHeap_0202a764 GetRunningTaskWork
 #define data_ov001_020a04d4 data_ov001_020a04f4
 #define func_ov001_0207e130 InitFieldSpriteSlots
-#define func_ov001_0207e244 func_ov001_0207e26c
+#define func_ov001_0207e244 RandomizePositiveSpinPrompt
 #define func_ov001_0207e270 RandomizeFacing
 #define func_ov001_0207e920 UpdateFallingPieces
 #define func_ov001_0207e9b8 UpdateSpinningMode

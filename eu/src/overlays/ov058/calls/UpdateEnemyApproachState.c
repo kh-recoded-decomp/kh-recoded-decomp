@@ -1,3 +1,4 @@
+#define func_ov001_0206db8c GetFieldEntryGroupId
 #define ComputeApproachTarget_020d8814 ComputeApproachTarget
 #define GetLinkedAngleOffset_020ceb7c GetLinkedAngleOffset
 #define IsGroupMemberActive_020a8d1c IsGroupMemberActive

@@ -14,6 +14,6 @@
 #define func_020359f8 ApplyRecordTableEntry5
 #define func_02036240 ActorRegistry_GetEntityByIndex
 #define func_020369c8 SetActorExtraPosition
-#define func_ov001_0208330c func_ov001_02083334
+#define func_ov001_0208330c FilterCapsuleFieldObjectContact
 #define func_01ffaff4 VEC_NormalizeLength
 #include "src/ov001/field_objects/RespawnCapsuleFieldObject_020828f0.c"

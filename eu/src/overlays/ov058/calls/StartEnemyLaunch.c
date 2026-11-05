@@ -1,3 +1,4 @@
+#define func_ov001_0206db8c GetFieldEntryGroupId
 #define FinishEnemyRecovery_020d6c78 FinishEnemyRecovery
 #define Obj_RemoveFromQuadTree_020355f4 Obj_RemoveFromQuadTree
 #define StartEnemyLaunch_020d5334 StartEnemyLaunch

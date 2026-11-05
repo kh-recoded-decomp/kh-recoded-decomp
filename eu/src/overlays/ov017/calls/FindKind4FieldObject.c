@@ -1,4 +1,4 @@
 #define FindKind4FieldObject_020a4204 FindKind4FieldObject
 #define func_ov001_02087214 GetFieldEntryPoolAtIndex
-#define func_ov001_02087248 func_ov001_02087270
+#define func_ov001_02087248 GetFieldEntryPoolCount_02087270
 #include "src/ov017/field_objects/FindKind4FieldObject_020a4204.c"

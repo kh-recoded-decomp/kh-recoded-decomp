@@ -1,0 +1,4 @@
+#define func_ov001_020657a4 ScriptCmd_SetCameraHorizontalFollowBounds
+#define func_02025df8 ScriptVm_ReadOperandFx32
+#define func_020bd7a8 SetCameraHorizontalFollowBounds
+#include "src/ov001/reviewed_helpers/func_ov001_020657a4.c"

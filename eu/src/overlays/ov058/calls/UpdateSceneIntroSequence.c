@@ -52,7 +52,7 @@ extern BOOL UpdateIdleTimeout(void);
 extern s32 TryBeginTrackedMainBrightness(s32 callerId);
 extern void RunHudEnterCallback(void);
 extern void RunHudExitCallback(void);
-extern BOOL func_ov001_02072040(void);
+extern BOOL InvokeFieldMinigameActiveCallback(void);
 extern u16 SharedObject_GetId(void *self);
 extern s32 SharedObject_GetMode(void *obj);
 extern BOOL RestartScriptSound(void *sound, int soundId);
@@ -82,7 +82,7 @@ void UpdateSceneIntroSequence(fx32 delta)
     if (scene->mode == 0) {
         return;
     }
-    if (UpdateIdleTimeout() && func_ov001_02072040()) {
+    if (UpdateIdleTimeout() && InvokeFieldMinigameActiveCallback()) {
         RunHudExitCallback();
     }
     scene->timer += delta;
@@ -242,7 +242,7 @@ void UpdateSceneIntroSequence(fx32 delta)
                 scene->speedTimer = 0;
             }
         }
-        if (skip || !func_ov001_02072040()) {
+        if (skip || !InvokeFieldMinigameActiveCallback()) {
             if (skip) {
                 scene->mode = 6;
                 scene->timer = 0;

@@ -5,7 +5,7 @@
 #define data_02053438 gZeroVecFx32
 #define func_0204d8d0 PlaySoundChecked
 #define func_ov001_0208635c GetEntryPoolObjectAtIndex
-#define func_ov001_020863e0 func_ov001_02086408
+#define func_ov001_020863e0 DispatchEntryPoolHitMessage
 #define func_ov017_020a3c78 SetFieldObjectHidden_020a3c98
 #define func_ov017_020a3d40 IsFieldFlagBit1Set
 #define func_ov017_020a3d74 SetFieldObjectFlag5

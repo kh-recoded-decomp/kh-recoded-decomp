@@ -20,7 +20,7 @@ extern void SetMenuEntryHighlight(int listKind, int entryId, BOOL highlighted);
 extern int InvokeFieldModeOp150(void);
 extern void ResetSlotHandles(void);
 extern int GetSelectedMenuEntryValue(void);
-extern s32 func_ov001_02078494(void);
+extern s32 GetFieldMenuListMode(void);
 extern void SelectFieldMenuPage(int page);
 extern void PlayStageSound(int seqArcNo, int index, BOOL checked);
 extern void SetStageState(int state, BOOL runNow);
@@ -92,7 +92,7 @@ void StageStateCommandMenu(void)
             if (data_02060500 & PAD_BUTTON_X) {
                 chosen = GetSelectedMenuEntryValue();
             } else if (data_02060500 & PAD_BUTTON_B) {
-                if (func_ov001_02078494() == 0 && work->menuDepth > 0) {
+                if (GetFieldMenuListMode() == 0 && work->menuDepth > 0) {
                     work->menuDepth = InvokeFieldModeOp150();
                     SetMenuEntryHighlight(0, work->menuStack[work->menuDepth], TRUE);
                     work->menuStack[work->menuDepth] = -1;
@@ -109,7 +109,7 @@ void StageStateCommandMenu(void)
         if (chosen < 0) {
             break;
         }
-        if (func_ov001_02078494() == 0) {
+        if (GetFieldMenuListMode() == 0) {
             if (IsMenuItemAssigned(chosen)) {
                 if (work->menuDepth == 0) {
                     SelectFieldMenuPage(0xc);
@@ -118,7 +118,7 @@ void StageStateCommandMenu(void)
                     work->menuDepth = ApplyCurrentFieldMode(chosen);
                     work->menuStack[work->menuDepth - 1] = chosen;
                     PlayStageSound(0, 1, FALSE);
-                    SetMenuEntryHighlight(func_ov001_02078494(), chosen, FALSE);
+                    SetMenuEntryHighlight(GetFieldMenuListMode(), chosen, FALSE);
                     TryEnterFieldMenuState3();
                 }
                 break;

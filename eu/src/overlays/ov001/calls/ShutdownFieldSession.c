@@ -1,3 +1,4 @@
+#define func_ov001_02069508 ReleaseOffsetTableFile
 #define func_ov001_02066454 DestroyFieldEffectPool
 #define func_ov001_0206747c DestroySceneEntryContext
 #define func_ov001_020685a4 DestroyStageEventContext

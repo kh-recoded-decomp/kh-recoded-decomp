@@ -1,7 +1,7 @@
 #define IsCounterNegative_020c0708 IsCounterNegative
-#define PXI_Init_02071ccc func_ov001_02071ccc
-#define PXI_Init_02071d64 func_ov001_02071d64
-#define PXI_Init_02071de8 func_ov001_02071de8
+#define PXI_Init_02071ccc ReleaseFieldPanelScreen3Widgets
+#define PXI_Init_02071d64 ReleaseFieldPanelScreen2Widgets
+#define PXI_Init_02071de8 ReleaseFieldPanelScreen4Widgets
 #define ScriptCmd_CloseFieldPanelScreen_0208e848 ScriptCmd_CloseFieldPanelScreen
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
 #define _fp_init_02071aa8 func_ov001_02071aa8

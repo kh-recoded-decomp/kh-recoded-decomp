@@ -1,3 +1,4 @@
+#define func_ov001_0206db8c GetFieldEntryGroupId
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField
 #define SpawnEventHitMarker_020d2c40 SpawnEventHitMarker
 #define func_ov021_020a8ab4 ResetAnimationTrackState

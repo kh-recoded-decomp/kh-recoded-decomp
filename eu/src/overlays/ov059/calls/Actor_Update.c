@@ -1,3 +1,4 @@
+#define func_ov001_0206db44 GetFieldActorUpdateStepFx12
 #define Actor_Update_020cbe98 Actor_Update
 #define FixedPointMultiply12 FX_Mul
 #define func_ov059_020c7f8c Actor_UpdateChargeAttack

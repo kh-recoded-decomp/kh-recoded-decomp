@@ -1,3 +1,4 @@
+#define func_ov001_0207a8fc IsPanelMapUpdateAllowed
 #define ApplyFormationSlots_020b6d90 ApplyFormationSlots
 #define TogglePanelFormation_0207b428 TogglePanelFormation
 #define g_panelScene_020a04c8 data_ov001_020a04e8

@@ -2,5 +2,5 @@
 #define IsStageEventReady_02087c78 IsStageEventReady
 #define StageRecord_GetSlotPosition_02087c4c StageRecord_GetSlotPosition
 #define func_ov001_0207f870 CallFieldObjectHook13IfPresent
-#define func_ov001_020863f4 func_ov001_0208641c
+#define func_ov001_020863f4 GetEntryPoolTargetPosition
 #include "src/ov001/shared_engine/GetWaitTargetPosition_0206c3f4.c"

@@ -1,3 +1,4 @@
+#define func_ov001_0206db8c GetFieldEntryGroupId
 #define func_ov001_020645c8 IsSessionFlagSet
 #define func_ov001_020645dc SetSessionFlag
 #define ChangeEnemyState_020d65c4 ChangeEnemyState

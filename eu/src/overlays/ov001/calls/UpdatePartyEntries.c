@@ -1,3 +1,4 @@
+#define func_ov001_0206e2d0 IsSlotItemUseRecoveryAllowed
 #define AddSlotItemUses_02050408 AddSlotItemUses
 #define ApplyPendingLevelUps_0206ccd8 ApplyPendingLevelUps
 #define FlushHudWidgetAndSetState_020724e0 FlushHudWidgetAndSetState

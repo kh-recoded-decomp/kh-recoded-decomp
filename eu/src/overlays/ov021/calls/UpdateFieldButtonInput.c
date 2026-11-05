@@ -1,3 +1,6 @@
+#define func_ov001_02072040 InvokeFieldMinigameActiveCallback
+#define func_ov001_02077bcc GetFieldMenuMode
+#define func_ov001_02078494 GetFieldMenuListMode
 #define func_ov001_0206c504 GetTargetSelectionFadeLevel2
 #define func_ov001_02077e68 TryCycleFieldMenuCursor
 #define func_ov001_02077ef4 TryEnterFieldMenuState3

@@ -35,5 +35,5 @@
 #define data_020558a0 gCollisionTestDispatch
 #define data_02055930 gCollisionSweepDispatch
 #define func_ov001_02083d2c FieldObject_UpdateBasisFromForward
-#define func_ov001_020845dc func_ov001_02084604
+#define func_ov001_020845dc FilterPatrolMoveSurface
 #include "src/ov001/field_objects/UpdatePatrolMove_02083f9c.c"

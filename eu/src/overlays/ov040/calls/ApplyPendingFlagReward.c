@@ -29,12 +29,12 @@ struct FieldMenu {
 
 extern s16 *GetPlayerFlagRecord(int index);
 extern void ResetAnimationTrackState(GroupRequest *request);
-extern int func_ov001_0206db8c(int kind);
+extern int GetFieldEntryGroupId(int kind);
 extern int func_ov021_020a8cc0(GroupRequest *request, int groupId);
 extern void SetSessionFlag3723(void);
 extern void SetSessionFlag3724(void);
 extern void ResetAreaGroupObjects(void);
-extern int func_ov001_02078494(void);
+extern int GetFieldMenuListMode(void);
 extern void func_ov001_02078000(int list, int slot);
 extern int TickSlotTimer(int slot);
 extern void FieldMenu_TryOpenByMode(void);
@@ -57,7 +57,7 @@ void ApplyPendingFlagReward(FieldMenu *menu) {
         request.enabled = 1;
         request.effectId = 0x1a0;
         request.effectArg = 0xe;
-        func_ov021_020a8cc0(&request, func_ov001_0206db8c(6));
+        func_ov021_020a8cc0(&request, GetFieldEntryGroupId(6));
         switch (*record) {
         case 0xd0:
             SetSessionFlag3723();
@@ -71,7 +71,7 @@ void ApplyPendingFlagReward(FieldMenu *menu) {
         }
         menu->flags |= 0x4000;
         slot = menu->pendingSlot;
-        list = func_ov001_02078494();
+        list = GetFieldMenuListMode();
         func_ov001_02078000(list, slot);
         if (TickSlotTimer(menu->pendingSlot) > 0) {
             FieldMenu_TryOpenByMode();

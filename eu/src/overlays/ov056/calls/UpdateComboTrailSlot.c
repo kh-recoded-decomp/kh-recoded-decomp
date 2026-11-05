@@ -1,3 +1,4 @@
+#define func_ov001_02072040 InvokeFieldMinigameActiveCallback
 #define ApplyAnimRootMotion_020cff8c ApplyAnimRootMotion
 #define GetLinkedAngleOffset_020ceb7c GetLinkedAngleOffset
 #define InitSlotEntryFromRecord_020d1a68 InitSlotEntryFromRecord

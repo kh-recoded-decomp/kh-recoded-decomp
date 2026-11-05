@@ -1,3 +1,5 @@
+#define func_ov001_0206db44 GetFieldActorUpdateStepFx12
+#define func_ov001_0206db8c GetFieldEntryGroupId
 #define CollisionQuery_Init_02034c74 CollisionQuery_Init
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField
 #define GetLinkedAngleOffset_020ceb7c GetLinkedAngleOffset

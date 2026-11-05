@@ -1,3 +1,4 @@
+#define func_ov001_0207162c SetFieldHudGaugeRange
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField
 #define IsHudFlag9Set_02072884 IsHudFlag9Set
 #define RefreshActiveMenuEntry_02074f7c RefreshActiveMenuEntry

@@ -60,7 +60,7 @@ extern BOOL func_ov001_0207ef90(void);
 extern void DrawLodSceneObject(LinkedFieldObject *object);
 extern void SceneNode_Draw(void *node);
 extern void ShadowVolume_Draw(ShadowVolume *shadow);
-extern ShadowSceneNode *func_ov001_0207f0c0(void);
+extern ShadowSceneNode *GetFieldObjectShadowModel(void);
 
 void DrawLinkedActorPass(LinkedActor *actor, int pass)
 {
@@ -83,7 +83,7 @@ void DrawLinkedActorPass(LinkedActor *actor, int pass)
         actor->shadow.position = actor->position;
         ShadowVolume_Draw(&actor->shadow);
     } else {
-        shadowNode = func_ov001_0207f0c0();
+        shadowNode = GetFieldObjectShadowModel();
         if (shadowNode != NULL) {
             position = actor->position;
             position.y += 0x40;

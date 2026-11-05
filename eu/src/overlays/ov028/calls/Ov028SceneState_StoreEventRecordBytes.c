@@ -1,7 +1,7 @@
 #include "nitro/types.h"
 
 extern u32 data_ov028_020bb3a0;
-extern u32 func_ov001_0206e644(void);
+extern u32 GetPendingWorldEntryData(void);
 extern u32 GetSignedByteAt1(void);
 extern u32 GetSignedByteAt3(u32 value);
 extern void func_ov001_02063848(u32 param1, u32 param2);
@@ -12,7 +12,7 @@ u32 Ov028SceneState_StoreEventRecordBytes(void)
     u32 arg1;
     u32 arg2;
 
-    arg1 = func_ov001_0206e644();
+    arg1 = GetPendingWorldEntryData();
     arg2 = GetSignedByteAt1();
     arg1 = GetSignedByteAt3(arg1);
     func_ov001_02063848(arg2, arg1);

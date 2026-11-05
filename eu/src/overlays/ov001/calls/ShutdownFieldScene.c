@@ -32,12 +32,12 @@ extern void DestroyFieldHudTasks(FieldScene *scene);
 extern void NotifyBothOrOne(u32 a, const char *b, int index);
 extern void *NNS_FndGetNextListObject(void *list, void *object);
 extern void FreeSceneListObject(void *object);
-extern void func_ov001_0206f2f8(FieldScene *scene);
-extern void func_ov001_0206f848(FieldScene *scene);
-extern void func_ov001_0206f720(FieldScene *scene);
-extern void func_ov001_0206f6cc(FieldScene *scene);
-extern void func_ov001_0206f648(FieldScene *scene);
-extern void func_ov001_0206f464(FieldScene *scene);
+extern void ReleaseFieldHudTextResources(FieldScene *scene);
+extern void ReleaseFieldChoiceWindow(FieldScene *scene);
+extern void ReleaseSceneTextWindow51C(FieldScene *scene);
+extern void ReleaseSceneTextWindow4D8(FieldScene *scene);
+extern void ReleaseFieldRecordNamesAndEntryList(FieldScene *scene);
+extern void ReleaseFieldMessageLineWindow(FieldScene *scene);
 extern void ReleaseFieldSceneFonts(FieldScene *scene);
 extern void ReleaseFieldHudGraphics(FieldScene *scene);
 extern int ZeroHalfThenFree(void *archive);
@@ -61,14 +61,14 @@ void ShutdownFieldScene(void)
         FreeSceneListObject(object);
         object = next;
     }
-    func_ov001_0206f2f8(scene);
+    ReleaseFieldHudTextResources(scene);
     if (scene->activeMenu != NULL) {
-        func_ov001_0206f848(scene);
+        ReleaseFieldChoiceWindow(scene);
     }
-    func_ov001_0206f720(scene);
-    func_ov001_0206f6cc(scene);
-    func_ov001_0206f648(scene);
-    func_ov001_0206f464(scene);
+    ReleaseSceneTextWindow51C(scene);
+    ReleaseSceneTextWindow4D8(scene);
+    ReleaseFieldRecordNamesAndEntryList(scene);
+    ReleaseFieldMessageLineWindow(scene);
     ReleaseFieldSceneFonts(scene);
     ReleaseFieldHudGraphics(scene);
     ZeroHalfThenFree(scene->archives[2]);

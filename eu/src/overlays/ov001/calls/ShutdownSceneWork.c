@@ -1,3 +1,5 @@
+#define func_ov001_0206bf34 ReleaseTargetCursorResources
+#define func_ov001_0206c204 ReleaseTargetSpritePairResources
 #define func_ov001_0206ae58 ShutdownSceneWork
 #define NNSi_FndGetCurrentRootHeap_0202a764 GetRunningTaskWork
 #define func_ov001_0206c720 RemoveTaggedListEntries

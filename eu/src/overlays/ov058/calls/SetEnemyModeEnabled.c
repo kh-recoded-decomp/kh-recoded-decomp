@@ -1,3 +1,4 @@
+#define func_ov001_0206db8c GetFieldEntryGroupId
 #define FinishEnemyRecovery_020d6c78 FinishEnemyRecovery
 #define InitRecordEntry_020d4500 InitRecordEntry
 #define SetEnemyModeEnabled_020d6958 SetEnemyModeEnabled

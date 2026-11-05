@@ -1,0 +1,17 @@
+#include "nitro/types.h"
+
+extern void ConfigureTween(void *record, int value0, int value1, int value2, int value3);
+extern void StartTween(void *o);
+
+void SelectDefaultTargetCursorForKey(int manager, int id)
+{
+    if (*(int *)(manager + 0x128) == id) {
+        *(int *)(manager + 0x120) = manager + 0xc0;
+        return;
+    }
+    *(int *)(manager + 0x128) = id;
+    *(u32 *)(manager + 0x124) = 1;
+    *(int *)(manager + 0x120) = manager + 0xc0;
+    ConfigureTween((void *)(manager + 300), 2, 0x2d000, 0, 400);
+    StartTween((void *)(manager + 300));
+}

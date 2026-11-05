@@ -1,3 +1,4 @@
+#define func_ov001_0206db44 GetFieldActorUpdateStepFx12
 #define ApplyTimeScaledSpeed_020c7d28 ApplyTimeScaledSpeed
 #define FixedPointMultiply12 FX_Mul
 #include "src/ov052/unclassified_helpers/ApplyTimeScaledSpeed_020c7d28.c"

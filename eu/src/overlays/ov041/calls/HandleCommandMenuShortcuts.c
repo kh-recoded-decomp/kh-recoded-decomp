@@ -23,7 +23,7 @@ extern u16 data_02060500;
 extern u16 data_020604fc;
 extern BOOL TryEnterFieldMenuState3(void);
 extern BOOL TryCycleFieldMenuCursor(void);
-extern int func_ov001_02078494(void);
+extern int GetFieldMenuListMode(void);
 extern void SetFieldMenuMode_02078360(int mode, int animate);
 extern void PlayStageSound(int seqArcNo, int index, BOOL checked);
 
@@ -80,17 +80,17 @@ void HandleCommandMenuShortcuts(BOOL canSwitchMode)
             }
             return;
         }
-        if (canSwitchMode && func_ov001_02078494() == 0 && (data_02060500 & openMode)) {
+        if (canSwitchMode && GetFieldMenuListMode() == 0 && (data_02060500 & openMode)) {
             SetFieldMenuMode_02078360(1, 1);
-            if (func_ov001_02078494() == 1) {
+            if (GetFieldMenuListMode() == 1) {
                 work->stateTimer = 2;
                 PlayStageSound(0x1a0, 0x27, FALSE);
             }
             return;
         }
-        if (canSwitchMode && func_ov001_02078494() == 1 && (data_02060500 & closeMode)) {
+        if (canSwitchMode && GetFieldMenuListMode() == 1 && (data_02060500 & closeMode)) {
             SetFieldMenuMode_02078360(0, 1);
-            if (func_ov001_02078494() == 0) {
+            if (GetFieldMenuListMode() == 0) {
                 work->stateTimer = 2;
                 PlayStageSound(0x1a0, 0x27, FALSE);
             }

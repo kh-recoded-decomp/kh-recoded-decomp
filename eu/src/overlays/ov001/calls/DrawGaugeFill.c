@@ -13,7 +13,7 @@ extern const u8 gGaugeEmptyRow[];
 extern const u8 gGaugeTransitionRow1[];
 extern const u8 gGaugeTransitionRow2[];
 
-extern void func_ov001_020738b8(void *tiles, s32 row, const u8 *pattern);
+extern void BlitGaugeFillPattern(void *tiles, s32 row, const u8 *pattern);
 extern void MIi_CpuCopyFast(const void *src, void *dst, u32 size);
 
 void DrawGaugeFill(s32 filledRows)
@@ -22,12 +22,12 @@ void DrawGaugeFill(s32 filledRows)
     s32 row;
 
     for (row = 0; row < filledRows; row++) {
-        func_ov001_020738b8(gauge->workTiles, row, gGaugeFilledRow);
+        BlitGaugeFillPattern(gauge->workTiles, row, gGaugeFilledRow);
     }
-    func_ov001_020738b8(gauge->workTiles, row++, gGaugeTransitionRow1);
-    func_ov001_020738b8(gauge->workTiles, row++, gGaugeTransitionRow2);
+    BlitGaugeFillPattern(gauge->workTiles, row++, gGaugeTransitionRow1);
+    BlitGaugeFillPattern(gauge->workTiles, row++, gGaugeTransitionRow2);
     for (; row <= 50; row++) {
-        func_ov001_020738b8(gauge->workTiles, row, gGaugeEmptyRow);
+        BlitGaugeFillPattern(gauge->workTiles, row, gGaugeEmptyRow);
     }
     MIi_CpuCopyFast(gauge->workTiles, gauge->vramTiles, 0xe0);
 }

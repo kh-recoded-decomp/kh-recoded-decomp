@@ -1,3 +1,4 @@
+#define func_ov001_02073030 SetFieldHudBottomRowEnabled
 #define DestroyFndListIfNonEmpty_020b5974 DestroyFndListIfNonEmpty
 #define DestroyFndObjectList_020014f0 DestroyFndObjectList
 #include "src/ov023/shared_engine/DestroyFndListIfNonEmpty_020b5974.c"

@@ -51,7 +51,7 @@ extern const LayerIdTable gMainBgLayerIds;
 
 extern void *GetSceneTagTracker(void);
 extern void *GetFieldSceneManager(void);
-extern s32 func_ov001_02078494(void);
+extern s32 GetFieldMenuListMode(void);
 extern void SetFieldMenuMode_02078360(int a, int b);
 extern void DisarmAreaSequence1AndInvokeRecord5Callback(void);
 extern void *NNS_FndAllocFromDefaultExpHeapEx(u32 size, int align);
@@ -60,7 +60,7 @@ extern void MIi_CpuCopy16(const void *src, void *dst, u32 size);
 extern void MI_CpuFill8(void *dst, int value, u32 size);
 extern void ClearTileTableRowAndMarkDirty(void *widgets, int layer);
 extern void MarkTileTableRowDirty(void *widgets, int layer);
-extern void func_ov001_02078180(void);
+extern void RedrawFieldMenuPageAndSelectionTags(void);
 extern int CountAssignedFieldSlots(void);
 extern void *FindActiveRecordById(void *pool, u16 recordId);
 extern void TagTracker_InvokeCallback(void *pool, void *record);
@@ -108,7 +108,7 @@ void LoadHudLayersAndRecordText(void)
         return;
     }
     context->layersLoaded = 1;
-    if (func_ov001_02078494() == 2) {
+    if (GetFieldMenuListMode() == 2) {
         SetFieldMenuMode_02078360(0, 1);
     }
     DisarmAreaSequence1AndInvokeRecord5Callback();
@@ -123,7 +123,7 @@ void LoadHudLayersAndRecordText(void)
     if (savedIme) {
         EnableIme();
     }
-    func_ov001_02078180();
+    RedrawFieldMenuPageAndSelectionTags();
     TagTracker_InvokeCallback(
         tracker,
         FindActiveRecordById(tracker, CountAssignedFieldSlots() + 0x50));

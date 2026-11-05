@@ -1,3 +1,4 @@
+#define func_ov001_0206db8c GetFieldEntryGroupId
 #define FixedPointMultiply12 FX_Mul
 #define SpawnHitSparkMarker_020d1494 SpawnHitSparkMarker
 #define VEC_MultAdd_01ffa09c VEC_MultAdd

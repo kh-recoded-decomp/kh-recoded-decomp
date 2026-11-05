@@ -20,5 +20,5 @@
 #define func_0205125c GetMapFinalStats
 #define func_ov001_02068984 GetStageObjectCount
 #define func_ov001_02087214 GetFieldEntryPoolAtIndex
-#define func_ov001_02087248 func_ov001_02087270
+#define func_ov001_02087248 GetFieldEntryPoolCount_02087270
 #include "src/ov040/shared_engine/InitAreaRewardScene_020bd730.c"

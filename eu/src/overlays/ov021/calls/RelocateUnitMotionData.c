@@ -1,3 +1,4 @@
+#define func_ov001_02073060 GetFieldSceneEntryListRecord
 #define func_ov001_02063a38 GetFieldSessionState
 #define RelocateUnitMotionData_020a9d68 RelocateUnitMotionData
 #define func_ov021_020a9dfc BuildNodeGraph

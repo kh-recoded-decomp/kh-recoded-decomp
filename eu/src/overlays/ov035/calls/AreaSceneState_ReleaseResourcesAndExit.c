@@ -12,7 +12,7 @@ extern unsigned int ActorRegistry_ClearCollisionResult();
 extern unsigned int ShutdownSceneContext();
 extern unsigned int ResetStageEventContext();
 extern unsigned int SetOverlayLayerVisible();
-extern unsigned int func_ov001_0207efa0();
+extern unsigned int ResetFieldObjectManagerResources();
 extern unsigned int FreeMovieCharacterBuffers();
 extern unsigned int FreeMovieSlotBuffers();
 extern unsigned int FreeAreaMaterialFadeWork();
@@ -26,7 +26,7 @@ unsigned int AreaSceneState_ReleaseResourcesAndExit(void) {
   ResetStageEventContext();
   ShutdownSceneContext();
   SetOverlayLayerVisible(1);
-  func_ov001_0207efa0();
+  ResetFieldObjectManagerResources();
   FreeAreaMaterialFadeWork();
   if (*(int *)(gMovieContextState + 0x14) != -1) {
     DestroyTaskObjectWrapper(*(int *)(gMovieContextState + 0x14));

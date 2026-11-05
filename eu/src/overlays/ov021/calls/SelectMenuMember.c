@@ -1,3 +1,4 @@
+#define func_ov001_02078494 GetFieldMenuListMode
 #define func_ov001_02063a38 GetFieldSessionState
 #define AddSessionCounter_02063a80 AddSessionCounter
 #define FieldMenu_TryOpenByMode_02077d64 FieldMenu_TryOpenByMode

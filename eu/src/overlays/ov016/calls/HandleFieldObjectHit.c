@@ -9,7 +9,7 @@
 #define func_01ff8830 MI_CpuFill8
 #define func_ov001_0207f038 GetFieldObjectByClassAndIndex
 #define func_ov001_0207f84c FieldObject_ApplyHit
-#define func_ov001_020863e0 func_ov001_02086408
+#define func_ov001_020863e0 DispatchEntryPoolHitMessage
 #define func_ov001_02087224 GetFieldEntryByPoolAndIndex
 #define func_ov001_0208764c GetFieldObjectInteractionBlockMask
 #define func_ov001_020958f4 ApplyHitToEnemyGroup

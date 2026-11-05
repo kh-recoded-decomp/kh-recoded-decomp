@@ -1,0 +1,3 @@
+#define Game_PollSceneAlive GetCounterHudFadeState
+#define IsSceneState0_02065758 ScriptCmd_WaitForCounterHudFadeState0
+#include "src/ov001/shared_engine/IsSceneState0_02065758.c"

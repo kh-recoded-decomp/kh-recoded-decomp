@@ -40,7 +40,7 @@ typedef struct {
 
 extern Ov032Globals data_ov032_020c0080;
 
-extern PlayerCursor *func_ov001_0206e644(void);
+extern PlayerCursor *GetPendingWorldEntryData(void);
 extern u32 NextSharedRandom16Scaled(u32 range);
 extern void ApplySlotStyleToSession(void);
 extern s8 GetSignedByteAt1(PlayerCursor *cursor);
@@ -50,7 +50,7 @@ extern void func_ov001_02063848(int a, int b);
 int AdvanceToRoutedSlot(void)
 {
     SceneState *scene = data_ov032_020c0080.scene;
-    PlayerCursor *cursor = func_ov001_0206e644();
+    PlayerCursor *cursor = GetPendingWorldEntryData();
     SceneContext *context;
 
     if (data_ov032_020c0080.context->overrideActive) {

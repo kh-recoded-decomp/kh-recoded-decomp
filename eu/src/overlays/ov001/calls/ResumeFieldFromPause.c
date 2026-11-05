@@ -1,3 +1,4 @@
+#define func_ov001_02072040 InvokeFieldMinigameActiveCallback
 #define ApplyModeFadeBlend_0207a8c8 ApplyModeFadeBlend
 #define ConfigureFieldBgLayers_0206e818 ConfigureFieldBgLayers
 #define FindActiveRecordById_020b8184 FindActiveRecordById

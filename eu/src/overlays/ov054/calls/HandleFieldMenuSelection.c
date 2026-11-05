@@ -1,3 +1,4 @@
+#define func_ov001_02078494 GetFieldMenuListMode
 #define FieldMenu_TryOpenByMode_02077d64 FieldMenu_TryOpenByMode
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField
 #define GetSelectedMenuEntryValue_02077f80 GetSelectedMenuEntryValue

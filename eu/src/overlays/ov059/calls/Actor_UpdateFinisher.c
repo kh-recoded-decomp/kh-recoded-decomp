@@ -21,7 +21,7 @@
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define ZeroBytes0x28_020ac0f8 ZeroBytes0x28
 #define data_02053438 gZeroVecFx32
-#define func_ov001_020863e0 func_ov001_02086408
+#define func_ov001_020863e0 DispatchEntryPoolHitMessage
 #define func_ov001_0208723c GetFieldEntryListHead
 #define func_ov001_02087928 ForwardToActiveServiceWithResult
 #define func_ov001_02087944 FindNextActiveStageEventIfActive

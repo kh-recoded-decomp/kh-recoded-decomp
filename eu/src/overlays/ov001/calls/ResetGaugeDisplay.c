@@ -1,3 +1,4 @@
+#define func_ov001_02077bcc GetFieldMenuMode
 #define BlendIconTiles_0206ed8c BlendIconTiles
 #define QueueFileLoadRequest_020ba114 QueueFileLoadRequest
 #define ResetGaugeDisplay_020734f8 ResetGaugeDisplay

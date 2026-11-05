@@ -16,7 +16,7 @@ extern s32 OS_SNPrintf_0202e094(u16 *out, u32 length, const u16 *format, ...);
 extern void NNSi_FndFreeFromDefaultHeap(void *block);
 extern u32 Utf16Length(const u16 *text);
 extern void *NNSi_FndAllocFromDefaultHeap(u32 size);
-extern BOOL func_ov001_0207a8fc(PanelHeaderState *panel);
+extern BOOL IsPanelMapUpdateAllowed(PanelHeaderState *panel);
 extern void DrawCacheHeaderText(const u16 *text);
 
 static inline BOOL HasHeaderCharacter(const u16 *text)
@@ -75,7 +75,7 @@ void SetPanelHeaderText(const u16 *prefix, const u16 *name)
         } while (character != 0);
     }
     *destination = 0;
-    if (func_ov001_0207a8fc(panel)) {
+    if (IsPanelMapUpdateAllowed(panel)) {
         DrawCacheHeaderText(panel->headerText);
     }
 }

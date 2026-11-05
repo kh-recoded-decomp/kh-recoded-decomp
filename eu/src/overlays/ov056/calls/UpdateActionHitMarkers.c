@@ -66,7 +66,7 @@ typedef char ActionMarkerHandleOffsetCheck[
 typedef char ActionMarkerStateOffsetCheck[
     (u32)&((ActionMarkerActor *)0)->action == 0x1078 ? 1 : -1];
 
-extern BOOL func_ov001_02072040(void);
+extern BOOL InvokeFieldMinigameActiveCallback(void);
 extern void SelectHitReaction(ActionMarkerActor *, ActionRecord *, int);
 extern void ApplyAnimRootMotion(ActionMarkerActor *, ActionRecord *);
 extern void InitSlotEntryFromRecord(ActionHitEntry *, void *, int, void *, int);
@@ -81,7 +81,7 @@ extern BOOL HandlePendingCommand(ActionMarkerActor *);
 
 void UpdateActionHitMarkers(ActionMarkerActor *actor)
 {
-    BOOL which = func_ov001_02072040();
+    BOOL which = InvokeFieldMinigameActiveCallback();
     ActionMarkerState *state = actor->action;
     ActionRecord *record = &state->records[actor->actionIndex];
     ActionHitEntry hitEntry;

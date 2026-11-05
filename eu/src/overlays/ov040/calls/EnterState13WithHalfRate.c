@@ -1,3 +1,4 @@
+#define func_ov001_0206a8c8 SetScreenFadeBrightnessStepFx12
 #define EnterState13WithHalfRate_020bd5a4 EnterState13WithHalfRate
 #define FX_Div_01ff9c84 FX_Div
 #define func_ov001_0206a7c0 BeginScreenFadeOut

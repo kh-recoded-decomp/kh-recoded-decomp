@@ -52,7 +52,7 @@ extern unsigned int ApplyRecordTableEntry5();
 extern unsigned int ActorSlot_GetByIndex();
 extern unsigned int SetActorExtraPosition();
 extern unsigned int ActorRegistry_GetEntityByIndex();
-extern unsigned int func_ov001_0207f078();
+extern unsigned int ObjectManager_SetFlagBit();
 extern unsigned int SpawnFieldActor();
 extern unsigned int IsNodeFlagBitClear();
 
@@ -87,7 +87,7 @@ void func_ov020_020a20b0(int work,int mode,u16 *actorCounter,int value) {
     *(u16 *)(result + 8) = *(u16 *)(result + 8) | 0x200;
     IndexedBytes_SetAt10(entity[1].unknown_006 + 0x46,1,4);
     IndexedBytes_SetAt10(entity[1].unknown_006 + 0x46,3,0xc);
-    func_ov001_0207f078(0xc);
+    ObjectManager_SetFlagBit(0xc);
     SetActorExtraPosition((u32)*(u8 *)(work + 0x32),work,7);
     *(u16 *)(work + 0x30) = *(u16 *)(work + 0x30) | 4;
   }

@@ -1,3 +1,4 @@
+#define func_ov001_02072040 InvokeFieldMinigameActiveCallback
 #define func_ov001_0206db78 GetPlayerControlState
 #define ApplyTimeScaledSpeed_020c7d28 ApplyTimeScaledSpeed
 #define CameraPath_ConsumeSkipRequest_020c2fd4 CameraPath_ConsumeSkipRequest

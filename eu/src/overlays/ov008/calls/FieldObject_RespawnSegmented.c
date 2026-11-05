@@ -18,6 +18,6 @@
 #define func_020359f8 ApplyRecordTableEntry5
 #define func_02036240 ActorRegistry_GetEntityByIndex
 #define func_020369c8 SetActorExtraPosition
-#define func_ov001_0207f050 func_ov001_0207f078
+#define func_ov001_0207f050 ObjectManager_SetFlagBit
 #define func_ov001_0207f7a4 IsObjectFlagClear
 #include "src/ov008/field_objects/FieldObject_RespawnSegmented_020a06dc.c"

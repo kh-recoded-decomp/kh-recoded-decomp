@@ -1,3 +1,4 @@
+#define func_ov001_0206db44 GetFieldActorUpdateStepFx12
 #define func_ov001_02063a38 GetFieldSessionState
 #define func_ov001_020645c8 IsSessionFlagSet
 #define CheckFallOutOfBounds_020c7d54 CheckFallOutOfBounds

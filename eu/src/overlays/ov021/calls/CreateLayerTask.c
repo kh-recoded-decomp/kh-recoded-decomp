@@ -1,3 +1,4 @@
+#define func_ov001_0206e62c GetManagedActorMode
 #define func_ov001_0206dba0 GetResourceArchiveId
 #define CreateLayerTask_020acdc0 CreateLayerTask
 #define InitScriptTask_020adc5c InitScriptTask

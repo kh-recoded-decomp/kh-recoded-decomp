@@ -32,7 +32,7 @@ extern u32 func_ov001_02064784(void);
 extern u32 IsSessionFlagSet(u32 id);
 extern int GetPartySize(void);
 extern BOOL IsFieldFlag13OrSessionFlagSet(void);
-extern u32 func_ov001_02077bcc(void);
+extern u32 GetFieldMenuMode(void);
 extern void SetFieldMenuMode(int id);
 extern void *Archive_LoadFile(u32 fileId, u32 mode);
 extern void SplitFieldHudIconTilesAndUploadBg3(GaugeContext *context, void *file);
@@ -103,14 +103,14 @@ void AddGaugePoints(int delta, BOOL loadNow)
     if (context->displayedLevel == -1) {
         if (context->gauge == thresholds.values[maxLevel]) {
             context->flags |= 0x10000;
-            menuState = func_ov001_02077bcc();
+            menuState = GetFieldMenuMode();
             if (menuState == 0 || menuState == 7) {
                 SetFieldMenuMode(0xd);
             }
         }
     } else if (level == maxLevel && context->displayedLevel != maxLevel) {
         context->flags |= 0x10000;
-        menuState = func_ov001_02077bcc();
+        menuState = GetFieldMenuMode();
         if (menuState == 0 || menuState == 7) {
             SetFieldMenuMode(0xd);
         }
@@ -129,7 +129,7 @@ void AddGaugePoints(int delta, BOOL loadNow)
             }
             if (context->gauge == 0xce4) {
                 context->flags |= 0x10000;
-                menuState = func_ov001_02077bcc();
+                menuState = GetFieldMenuMode();
                 if (menuState == 0 || menuState == 7) {
                     SetFieldMenuMode(0xd);
                 }

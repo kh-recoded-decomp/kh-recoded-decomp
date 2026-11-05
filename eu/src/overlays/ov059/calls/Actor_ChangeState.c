@@ -1,3 +1,4 @@
+#define func_ov001_0206db8c GetFieldEntryGroupId
 #define Actor_ChangeState_020cbff8 Actor_ChangeState
 #define Actor_ExtendCountdown_020c89fc Actor_ExtendCountdown
 #define Actor_GetModelPosition_020cd0d8 Actor_GetModelPosition

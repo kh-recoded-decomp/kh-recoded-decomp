@@ -1,5 +1,5 @@
 #define IsStageEventReady_02087c78 IsStageEventReady
 #define IsWaitTargetReady_0206c3a4 IsWaitTargetReady
 #define func_ov001_0207f870 CallFieldObjectHook13IfPresent
-#define func_ov001_020863f4 func_ov001_0208641c
+#define func_ov001_020863f4 GetEntryPoolTargetPosition
 #include "src/ov001/shared_engine/IsWaitTargetReady_0206c3a4.c"

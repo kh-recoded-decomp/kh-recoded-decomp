@@ -1,3 +1,3 @@
 #define FieldObject_Activate_0207f4c0 FieldObject_Activate
-#define func_ov001_0207f050 func_ov001_0207f078
+#define func_ov001_0207f050 ObjectManager_SetFlagBit
 #include "src/ov001/field_objects/FieldObject_Activate_0207f4c0.c"

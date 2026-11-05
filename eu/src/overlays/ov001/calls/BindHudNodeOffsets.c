@@ -1,3 +1,4 @@
+#define func_ov001_0206dc20 GetSharedFieldSpriteSlots
 #define BindHudNodeOffsets_0207e1c0 BindHudNodeOffsets
 #define data_ov001_0209e050 gHudNodeOrder
 #define data_ov001_0209e080 gHudNodePositions

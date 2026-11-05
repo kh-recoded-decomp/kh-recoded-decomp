@@ -11,7 +11,7 @@
 #define UpdateAnchoredMovement_020cac00 UpdateAnchoredMovement
 #define VEC_Add_01ff9e0c VEC_Add
 #define func_ov001_0207f038 GetFieldObjectByClassAndIndex
-#define func_ov001_020863cc func_ov001_020863f4
+#define func_ov001_020863cc QueryEntryPoolMotionVector
 #define func_ov001_02087224 GetFieldEntryByPoolAndIndex
 #define func_ov021_020a7544 GetSummedFieldDirectionAngle
 #define func_ov052_020c9274 IsLedgeClimbSpaceClear

@@ -1,3 +1,4 @@
+#define func_ov001_0206cdec ResetWorldEntryContactState
 #define UpdatePrimaryEventRecord_0206cd9c UpdatePrimaryEventRecord
 #define func_ov001_0206d0ac UpdateActionCommand
 #define func_ov001_0206ce00 UpdateActorTargetLink

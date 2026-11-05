@@ -1,3 +1,3 @@
 #define DropRequest_InitKind1_020874e0 DropRequest_InitKind1
-#define func_ov001_020874cc func_ov001_020874f4
+#define func_ov001_020874cc InitEntryUnlockRewardRequest
 #include "src/ov001/unclassified_helpers/DropRequest_InitKind1_020874e0.c"

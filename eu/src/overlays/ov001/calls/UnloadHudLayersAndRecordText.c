@@ -37,14 +37,14 @@ extern HudGlobals data_ov001_020a04c4;
 extern const LayerIdTable gFieldHudRestoreLayerIds;
 
 extern void *GetFieldSceneManager(void);
-extern void func_ov001_0206fa2c(HudContext *context);
+extern void ReleaseSlotLabelWindowsAndMessages(HudContext *context);
 extern void *UpdateWidgetLayerDefault_020b9e10(void *widgets, int layer);
 extern void MarkTileTableRowDirty(void *widgets, int layer);
 extern void MIi_CpuCopyFast(const void *src, void *dst, u32 size);
 extern void NNSi_FndFreeFromDefaultHeap(void *memory);
 extern void ShutDownStageCaption(void *object);
 extern void ArmAreaSequence1AtGaugeMax(void);
-extern void func_ov001_02078180(void);
+extern void RedrawFieldMenuPageAndSelectionTags(void);
 extern void CallVirtualHandlerSlot1(void *object, int arg);
 extern void Text_UploadTileBuffer(void *window);
 
@@ -60,7 +60,7 @@ void UnloadHudLayersAndRecordText(void)
     if (!context->layersRequested || !context->layersLoaded) {
         return;
     }
-    func_ov001_0206fa2c(context);
+    ReleaseSlotLabelWindowsAndMessages(context);
     context->layersLoaded = 0;
     context->unk_480_20 = 0;
     context->unk_2E4 = 0;
@@ -79,7 +79,7 @@ void UnloadHudLayersAndRecordText(void)
     NNSi_FndFreeFromDefaultHeap(context->recordText);
     context->recordText = NULL;
     ArmAreaSequence1AtGaugeMax();
-    func_ov001_02078180();
+    RedrawFieldMenuPageAndSelectionTags();
     CallVirtualHandlerSlot1(context->textWindow, 0);
     Text_UploadTileBuffer(context->textWindow);
 }

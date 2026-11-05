@@ -1,0 +1,3 @@
+#define FS_EndOverlay RefreshFirstSelectionPlayerStats
+#define FS_UnloadOverlayImage_02065e44 ScriptCmd_RefreshFirstSelectionPlayerStats
+#include "src/ov001/library_nitro_fs/FS_UnloadOverlayImage_02065e44.c"

@@ -1,3 +1,5 @@
+#define func_ov001_0206d2dc RefreshPrimaryActorMenuPage
+#define func_ov001_0207162c SetFieldHudGaugeRange
 #define Camera_IsFlag19Set_020c14e0 Camera_IsFlag19Set
 #define IsHudFlag9Set_02072884 IsHudFlag9Set
 #define NNSi_FndGetCurrentRootHeap_0202a764 GetRunningTaskWork

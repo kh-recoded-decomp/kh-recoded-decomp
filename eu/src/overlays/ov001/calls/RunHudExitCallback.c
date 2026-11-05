@@ -1,3 +1,4 @@
+#define func_ov001_02072040 InvokeFieldMinigameActiveCallback
 #define RunHudExitCallback_02071fec RunHudExitCallback
 #define data_020a04a4 data_ov001_020a04c4
 #define func_ov001_02077b90 SetFieldMenuSuspended

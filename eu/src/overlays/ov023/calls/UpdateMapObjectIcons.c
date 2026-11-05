@@ -145,7 +145,7 @@ extern BOOL GetStageEventTargetInfo(u32, EventTargetInfo *);
 extern s32 FindNextActiveStageEventIfActive(s32);
 extern VecFx32 *GetManagedActorPosition(int);
 extern MapNode *GetFieldEntryListHead(void);
-extern u16 func_ov001_02087644(void);
+extern u16 GetActiveFieldEntryListCount(void);
 extern BOOL IsNodeFlagBitClear(MapNode *);
 extern BOOL func_ov020_020a34b0(MapNode *);
 extern int Object_GetKindValue(MapNode *);
@@ -276,8 +276,8 @@ advanceObject:
     }
     menu->scratchCount = iconCount;
     WorldToMapPosition(menu, &playerPoint, playerPosition);
-    if (func_ov001_02087644() - (121 - menu->scratchCount) >= 0) {
-        overflow = func_ov001_02087644() - (121 - menu->scratchCount);
+    if (GetActiveFieldEntryListCount() - (121 - menu->scratchCount) >= 0) {
+        overflow = GetActiveFieldEntryListCount() - (121 - menu->scratchCount);
     }
     menu->poolCapacity = overflow;
     menu->poolUsed = 0;

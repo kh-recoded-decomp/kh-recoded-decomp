@@ -1,3 +1,4 @@
+#define func_ov001_0206cdec ResetWorldEntryContactState
 #define CreatePartyState_0206cb38 CreatePartyState
 #define NNSi_FndGetCurrentRootHeap_0202a764 GetRunningTaskWork
 #define OpenFieldMessageContainers_0206d6d4 OpenFieldMessageContainers

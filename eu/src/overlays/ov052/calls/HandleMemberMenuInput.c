@@ -1,3 +1,5 @@
+#define func_ov001_02078494 GetFieldMenuListMode
+#define func_ov001_02078898 GetFieldMenuListMode2Cursor
 #define func_ov001_02063a38 GetFieldSessionState
 #define func_ov001_0206db78 GetPlayerControlState
 #define CanUseMemberSlot_020d0600 CanUseMemberSlot

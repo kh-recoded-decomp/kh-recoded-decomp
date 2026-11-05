@@ -77,7 +77,7 @@ extern const VecFx32 data_ov058_020d896c;
 extern VecFx32 *GetActorModelPosition(Enemy *enemy);
 extern Enemy *GetBoundedEntryField(int index);
 extern fx32 VEC_Distance(const VecFx32 *a, const VecFx32 *b);
-extern fx32 func_ov001_0206db44(void);
+extern fx32 GetFieldActorUpdateStepFx12(void);
 extern void ProcessEnemyAiRequest(Enemy *enemy);
 extern void Enemy_SpawnEvent1EEffectAndDetachCollider(Enemy *enemy);
 extern BOOL IsFacedByPlayer(Enemy *enemy, VecFx32 *out);
@@ -137,8 +137,8 @@ u16 UpdateEnemyCombatAi(Enemy *enemy, EnemyCommand *command)
     data_ov058_020d8a40 = GetBoundedEntryField(0);
     playerPos = GetActorModelPosition(data_ov058_020d8a40);
     distance = VEC_Distance(playerPos, pos);
-    ai->alertTimer = CLAMP(ai->alertTimer - func_ov001_0206db44(), 0, 0x1e000);
-    ai->retreatTimer = CLAMP(ai->retreatTimer - func_ov001_0206db44(), 0, 0x1e000);
+    ai->alertTimer = CLAMP(ai->alertTimer - GetFieldActorUpdateStepFx12(), 0, 0x1e000);
+    ai->retreatTimer = CLAMP(ai->retreatTimer - GetFieldActorUpdateStepFx12(), 0, 0x1e000);
     ProcessEnemyAiRequest(enemy);
     if (enemy->stateFlags & 0x20820) {
         return 0;
@@ -205,7 +205,7 @@ u16 UpdateEnemyCombatAi(Enemy *enemy, EnemyCommand *command)
         break;
     }
     case 2:
-        ai->timer += func_ov001_0206db44();
+        ai->timer += GetFieldActorUpdateStepFx12();
         if (ai->timer > 0xf000) {
             ai->timer = 0;
             ai->mode = 1;

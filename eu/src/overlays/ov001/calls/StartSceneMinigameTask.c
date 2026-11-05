@@ -5,9 +5,9 @@
 #define func_0202a448 CreateTaskObject
 #define func_0204f768 GetOverlaySelectionRecord
 #define func_ov001_0207ea14 StartFieldMinigameRound
-#define func_ov001_0207eadc func_ov001_0207eb04
+#define func_ov001_0207eadc StopFieldMinigameRound
 #define func_ov001_0207eb0c HandleListMenuConfirm
-#define func_ov001_0207eb70 func_ov001_0207eb98
+#define func_ov001_0207eb70 IsFieldMinigameRoundActive
 #define func_ov001_0207eb8c GetFieldMinigameScore
 #define func_ov001_0207eb9c GetFieldMinigameLevel
 #include "src/ov001/field_manager/StartSceneMinigameTask_02070cfc.c"

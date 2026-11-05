@@ -15,7 +15,7 @@
 #define func_ov001_0207b36c Panel_TryBeginTransition4
 #define func_ov001_0207d658 ReleaseCounterHudModels
 #define func_ov001_0207ef40 SetOverlayLayerVisible
-#define func_ov001_0207ef78 func_ov001_0207efa0
+#define func_ov001_0207ef78 ResetFieldObjectManagerResources
 #define func_ov001_020828ac ReleaseFirstType11FieldObjectModels
 #define g_moviePlayerCtx_020bd000 data_ov030_020bd020
 #include "src/ov030/movie/MoviePlayer_Stop_020ba9d0.c"

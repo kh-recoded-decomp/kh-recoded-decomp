@@ -1,3 +1,4 @@
+#define func_ov001_0206db8c GetFieldEntryGroupId
 #define AdvanceAnimationTracks_0202ef24 AdvanceAnimationTracks
 #define AdvanceObjectAnimationTracks_020a9aa4 AdvanceObjectAnimationTracks
 #define Anim_GetFrame_0202f4a0 Anim_GetFrame

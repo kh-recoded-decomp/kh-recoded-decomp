@@ -38,9 +38,9 @@ extern void ScriptCmd_SetSceneSlotDrawingEnabled(void);
 extern void ScriptOp_SetVector4(void); /* ScriptOp_SetVector4 */
 extern void ScriptCmd_RequestSubScene9(void); /* ScriptCmd_RequestSubScene9 */
 extern void func_ov001_020655c4(void); /* IsSceneState0 */
-extern void func_ov001_020655d8(void); /* ScriptCmd_EnterPhase */
+extern void ScriptCmd_ResetStageGroupRowsAndRestoreDefault(void); /* ScriptCmd_EnterPhase */
 extern void ScriptCmd_HandleFieldPanelCommand(void); /* return 1; ScriptVm_ReadOperandInt */
-extern void ScriptCmd_SetFieldObjectManagerFlag(void); /* ScriptCmd_SetFieldObjectManagerFlag */
+extern void ScriptCmd_SetPartyEntryUpdatesEnabled(void); /* ScriptCmd_SetPartyEntryUpdatesEnabled */
 extern void ScriptCmd_PlayFieldBgm(void); /* ScriptCmd_PlayFieldBgm */
 extern void ScriptCmd_LoadCameraParams(void); /* return 1; ByteCode_ResolveOperand */
 extern void ScriptCmd_SetIndexedSaveFlag(void); /* ScriptCmd_SetIndexedSaveFlag */
@@ -50,10 +50,10 @@ extern void ScriptCmd_LoadSceneData(void);
 extern void ScriptCmd_ClearSceneEntry(void); /* return 1; ScriptVm_ReadOperandInt */
 extern void func_ov001_020656d4(void);
 extern void ScriptCmd_ShowHudIndicator(void); /* ScriptCmd_ShowHudIndicator */
-extern void func_ov001_02065758(void); /* IsSceneState0 */
+extern void ScriptCmd_WaitForCounterHudFadeState0(void); /* IsSceneState0 */
 extern void ScriptCmd_ResetStageOriginIfActive(void); /* return 1; no local decode */
 extern void ScriptCmd_StartCameraShake(void); /* ScriptCmd_StartCameraShake */
-extern void func_ov001_020657a4(void);
+extern void ScriptCmd_SetCameraHorizontalFollowBounds(void);
 extern void ScriptCmd_QueueFlagTaskKind6(void); /* ScriptCmd_QueueFlagTaskKind6 */
 extern void ScriptOp_SendPayloadWords(void); /* ScriptOp_SendPayloadWords */
 extern void ScriptCmd_ResetOverlaySelection(void); /* return 1; no local decode */
@@ -89,7 +89,7 @@ extern void ScriptCmd_QueueStage900AndSavePlacement(void); /* ScriptCmd_EnterPha
 extern void ScriptCmd_StorePageVariantParams(void); /* ScriptCmd_StorePageVariantParams */
 extern void ScriptCmd_StoreFifoReady(void);
 extern void ScriptCmd_QueueFieldFromSavedSceneIds(void); /* FS_UnloadOverlayImage */
-extern void func_ov001_02065e44(void); /* FS_UnloadOverlayImage */
+extern void ScriptCmd_RefreshFirstSelectionPlayerStats(void); /* FS_UnloadOverlayImage */
 extern void ScriptCmd_SetupSlotPanelMode(void);
 extern void ScriptCmd_ToggleSessionBit15(void); /* ScriptCmd_ToggleSessionBit15 */
 extern void func_ov001_02065e8c(void);
@@ -176,11 +176,11 @@ void (*gFieldScriptCommandHandlers[190])(void) = {
     NULL,
     ScriptCmd_RequestSubScene9, /* ScriptCmd_RequestSubScene9 */
     func_ov001_020655c4, /* IsSceneState0 */
-    func_ov001_020655d8, /* ScriptCmd_EnterPhase */
+    ScriptCmd_ResetStageGroupRowsAndRestoreDefault, /* ScriptCmd_EnterPhase */
     NULL,
     ScriptCmd_HandleFieldPanelCommand, /* return 1; ScriptVm_ReadOperandInt */
     NULL,
-    ScriptCmd_SetFieldObjectManagerFlag, /* ScriptCmd_SetFieldObjectManagerFlag */
+    ScriptCmd_SetPartyEntryUpdatesEnabled, /* ScriptCmd_SetPartyEntryUpdatesEnabled */
     NULL,
     ScriptCmd_PlayFieldBgm, /* ScriptCmd_PlayFieldBgm */
     NULL,
@@ -199,12 +199,12 @@ void (*gFieldScriptCommandHandlers[190])(void) = {
     func_ov001_020656d4,
     func_ov001_020656d4,
     ScriptCmd_ShowHudIndicator, /* ScriptCmd_ShowHudIndicator */
-    func_ov001_02065758, /* IsSceneState0 */
+    ScriptCmd_WaitForCounterHudFadeState0, /* IsSceneState0 */
     ScriptCmd_ResetStageOriginIfActive, /* return 1; no local decode */
     NULL,
     ScriptCmd_StartCameraShake, /* ScriptCmd_StartCameraShake */
     NULL,
-    func_ov001_020657a4,
+    ScriptCmd_SetCameraHorizontalFollowBounds,
     NULL,
     ScriptCmd_QueueFlagTaskKind6, /* ScriptCmd_QueueFlagTaskKind6 */
     NULL,
@@ -270,7 +270,7 @@ void (*gFieldScriptCommandHandlers[190])(void) = {
     NULL,
     ScriptCmd_QueueFieldFromSavedSceneIds, /* FS_UnloadOverlayImage */
     NULL,
-    func_ov001_02065e44, /* FS_UnloadOverlayImage */
+    ScriptCmd_RefreshFirstSelectionPlayerStats, /* FS_UnloadOverlayImage */
     NULL,
     ScriptCmd_SetupSlotPanelMode,
     NULL,

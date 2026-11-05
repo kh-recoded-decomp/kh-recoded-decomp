@@ -1,3 +1,4 @@
+#define func_ov001_02073684 GetFieldSceneLocationName
 #define func_ov001_0207123c GetFieldSceneManager
 #define ClearTileTableRowAndMarkDirty_020b9d18 ClearTileTableRowAndMarkDirty
 #define CountActiveSlots_020b74d8 GetListPathEntryCount

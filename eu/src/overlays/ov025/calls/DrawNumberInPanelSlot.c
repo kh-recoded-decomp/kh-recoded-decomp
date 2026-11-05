@@ -1,3 +1,4 @@
+#define func_ov001_02073684 GetFieldSceneLocationName
 #define DrawNumberInPanelSlot_020b62c4 DrawNumberInPanelSlot
 #define func_02001520 Text_UploadTileBuffer
 #define func_02001574 CallVirtualHandlerSlot1

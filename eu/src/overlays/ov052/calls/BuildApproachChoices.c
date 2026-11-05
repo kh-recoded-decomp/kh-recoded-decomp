@@ -5,7 +5,7 @@
 #define VEC_Mag_01ff9f28 VEC_Mag
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define func_01ffa0f4 VEC_Distance
-#define func_ov001_020863f4 func_ov001_0208641c
+#define func_ov001_020863f4 GetEntryPoolTargetPosition
 #define func_ov001_0208723c GetFieldEntryListHead
 #define func_ov001_02087928 ForwardToActiveServiceWithResult
 #define func_ov001_02087944 FindNextActiveStageEventIfActive

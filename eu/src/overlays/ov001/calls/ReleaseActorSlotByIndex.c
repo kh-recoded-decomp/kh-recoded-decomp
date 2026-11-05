@@ -1,3 +1,5 @@
+#define func_ov001_0206cdec ResetWorldEntryContactState
+#define func_ov001_02072040 InvokeFieldMinigameActiveCallback
 #define func_ov001_0206de40 ReleaseActorSlotByIndex
 #define func_ov001_020734f8 ResetGaugeDisplay
 #define func_ov001_02071fec RunHudExitCallback

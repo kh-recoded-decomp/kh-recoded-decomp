@@ -35,7 +35,7 @@ extern fx32 VEC_Mag(const VecFx32 *v);
 extern void VEC_Normalize(const VecFx32 *src, VecFx32 *dst);
 extern u16 FX_Atan2Idx(fx32 x, fx32 z);
 extern fx32 VEC_Distance(const VecFx32 *a, const VecFx32 *b);
-extern fx32 func_ov001_0206db44(void);
+extern fx32 GetFieldActorUpdateStepFx12(void);
 
 BOOL SteerEnemyTowardPoint(Enemy *enemy, MoveRequest *request, const VecFx32 *dest)
 {
@@ -87,7 +87,7 @@ BOOL SteerEnemyTowardPoint(Enemy *enemy, MoveRequest *request, const VecFx32 *de
             dy = -dy;
         }
         if (dy > 0x4000 || VEC_Distance(&current, &last) < 0x1000) {
-            ai->stuckTimer += func_ov001_0206db44();
+            ai->stuckTimer += GetFieldActorUpdateStepFx12();
             if (limit < ai->stuckTimer) {
                 ai->stuckTimer = 0;
                 result = TRUE;

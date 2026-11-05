@@ -19,7 +19,7 @@ extern StageMarker *ShowStageMarker(int listIndex, const VecFx32 *position, BOOL
 extern void UpdateMarkerScreenPosition(StageMarker *marker, const VecFx32 *world);
 extern BOOL TryCycleFieldMenuCursor(void);
 extern BOOL TryEnterFieldMenuState3(void);
-extern s32 func_ov001_02078494(void);
+extern s32 GetFieldMenuListMode(void);
 extern void SetFieldMenuMode_02078360(int mode, int arg);
 
 /* Whether a scene slot holds an entry still in the fight. */
@@ -250,10 +250,10 @@ void MoveTargetCursor(int source)
             } else if (data_02060500 & PAD_KEY_UP) {
                 TryCycleFieldMenuCursor();
                 work->stateTimer = 2;
-            } else if (func_ov001_02078494() == 0 && (data_02060500 & PAD_KEY_RIGHT)) {
+            } else if (GetFieldMenuListMode() == 0 && (data_02060500 & PAD_KEY_RIGHT)) {
                 SetFieldMenuMode_02078360(1, 1);
                 work->stateTimer = 2;
-            } else if (func_ov001_02078494() == 1 && (data_02060500 & PAD_KEY_LEFT)) {
+            } else if (GetFieldMenuListMode() == 1 && (data_02060500 & PAD_KEY_LEFT)) {
                 SetFieldMenuMode_02078360(0, 1);
                 work->stateTimer = 2;
             }

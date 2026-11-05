@@ -1,3 +1,4 @@
+#define func_ov001_0206a8c8 SetScreenFadeBrightnessStepFx12
 #define func_ov001_0206685c HasActiveFieldEffects
 #define func_ov001_02068e54 PauseSessionTimerUpdates
 #define func_ov001_0206dc38 GetManagedActorCount
@@ -22,7 +23,7 @@
 #define func_ov001_0206e4f0 NotifySceneActorsPaused
 #define func_ov001_0206e690 DispatchPartyEntryByMode
 #define func_ov001_0207b45c GetPanelFormationType
-#define func_ov001_02087054 func_ov001_0208707c
+#define func_ov001_02087054 SetEntryPoolConditionalUpdatePause
 #define func_ov046_020c0dd4 Camera_SaveSnapshot
 #define func_ov001_02063130 SetFieldStateValue
 #include "src/ov001/unclassified_helpers/SelectNextSessionState_02062150.c"

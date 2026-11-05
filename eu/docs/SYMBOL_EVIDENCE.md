@@ -620,3 +620,15 @@ interleaved init/update/exit tables, signed states, borrowed owner text, widget
 and touch behavior, asynchronous submission versus completion and exact error
 fallbacks. A widget initializer keeps a generic choice name where assets do not
 prove a share-specific role.
+
+## Field actor, HUD, command menu and entry-pool contracts
+
+Seventy entrypoints now identify actor/contact work, permissions, script
+adapters, HUD/menu lifetimes, minigame callbacks and entry-pool operations:
+
+- [FIELD_ACTOR_TARGET_PERMISSION_CONTRACTS.md](FIELD_ACTOR_TARGET_PERMISSION_CONTRACTS.md): 24 entrypoints, including one owner correction.
+- [FIELD_HUD_MENU_MINIGAME_POOL_CONTRACTS.md](FIELD_HUD_MENU_MINIGAME_POOL_CONTRACTS.md): 46 entrypoints.
+
+The contracts preserve the native 20-byte contact record, raw status results,
+phase-dependent window storage, borrowed resources and real callback input
+registers. Logical type labels do not silently replace the native C views.

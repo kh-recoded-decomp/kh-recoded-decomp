@@ -1,3 +1,4 @@
+#define func_ov001_02072040 InvokeFieldMinigameActiveCallback
 #define ClearFlagAndField0x144_020ab83c ClearFlagAndField0x144
 #define RunHudExitCallback_02071fec RunHudExitCallback
 #define SetEntityModeEnabled_020ce7a0 SetEntityModeEnabled

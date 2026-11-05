@@ -1,3 +1,4 @@
+#define func_ov001_0206db8c GetFieldEntryGroupId
 #define IsGroupMemberActive_020a8d1c IsGroupMemberActive
 #define SpawnSceneMarker_020bc38c SpawnSceneMarker
 #define data_ov030_020bd004 gMarkerReset

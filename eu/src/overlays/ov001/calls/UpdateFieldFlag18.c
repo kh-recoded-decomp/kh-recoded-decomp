@@ -1,3 +1,5 @@
+#define func_ov001_02077bd8 TryArmFieldMenuButtonDelay
+#define func_ov001_02077c24 TryCancelFieldMenuButtonDelay
 #define IsFieldFlag10Set_020728c4 IsFieldFlag10Set
 #define IsFieldFlag8Set_020728a4 IsFieldFlag8Set
 #define IsHudFlag7Set_020725bc IsHudFlag7Set

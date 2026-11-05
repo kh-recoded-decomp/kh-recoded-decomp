@@ -1,3 +1,4 @@
+#define func_ov001_0206db44 GetFieldActorUpdateStepFx12
 #define ApplyTimeScaledSpeed_020c7d28 ApplyTimeScaledSpeed
 #define RefreshActorState_020cce08 RefreshActorState
 #define func_ov021_020a7fa4 PlayCueGroupSounds

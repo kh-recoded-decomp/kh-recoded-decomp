@@ -1,3 +1,4 @@
+#define func_ov001_0206dc20 GetSharedFieldSpriteSlots
 #define InitFieldSpriteSlots_0207e130 InitFieldSpriteSlots
 #define data_ov001_0209e020 gFieldSpriteDefaultPosition
 #define data_ov001_0209e040 gFieldSpriteSlotOrder

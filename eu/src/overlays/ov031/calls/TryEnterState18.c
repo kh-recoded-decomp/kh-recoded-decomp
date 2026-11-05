@@ -15,7 +15,7 @@
 #define func_ov001_0207b36c Panel_TryBeginTransition4
 #define func_ov001_0207d658 ReleaseCounterHudModels
 #define func_ov001_0207ef40 SetOverlayLayerVisible
-#define func_ov001_0207ef78 func_ov001_0207efa0
+#define func_ov001_0207ef78 ResetFieldObjectManagerResources
 #define func_ov001_020828ac ReleaseFirstType11FieldObjectModels
 #define func_ov059_020cbdd0 ResetActorSlotTableIds
 #define g_activeState_020bc800 data_ov031_020bc820

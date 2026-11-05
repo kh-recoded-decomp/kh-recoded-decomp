@@ -30,7 +30,7 @@
 #define data_02053438 gZeroVecFx32
 #define func_0202f4b8 GetModelAnimationDurationFx32
 #define func_02036230 GetActorRegistry
-#define func_ov001_020863e0 func_ov001_02086408
+#define func_ov001_020863e0 DispatchEntryPoolHitMessage
 #define func_ov001_0208723c GetFieldEntryListHead
 #define func_ov001_020878b8 StartStageEventInstanceIfActive
 #define func_ov001_02087928 ForwardToActiveServiceWithResult

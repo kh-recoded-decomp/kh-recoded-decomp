@@ -1,3 +1,4 @@
+#define func_ov001_0206e280 IsPoolAndStageSlotTargetSearchAllowed
 #define func_ov001_0206b948 InitStageSlotTargetReference
 #define func_ov001_0206bb48 IsTargetSearchScoreBetter
 #define FindBestEventSlotTarget_0206b744 FindBestEventSlotTarget

@@ -92,7 +92,7 @@ struct Actor {
 extern const s16 gSinFx12Table[];
 
 extern InputEntry *GetPlayerControlState(int player);
-extern int func_ov001_02072040(void);
+extern int InvokeFieldMinigameActiveCallback(void);
 extern BOOL UpdateIdleTimeout(void);
 extern u16 SharedObject_GetId(void *self);
 extern s32 SharedObject_GetMode(void *obj);
@@ -159,7 +159,7 @@ void UpdateOv069BossMotion(Actor *actor)
     case 1:
         obj->counter.count = 2;
     case 2:
-        if (func_ov001_02072040() && !UpdateIdleTimeout()) {
+        if (InvokeFieldMinigameActiveCallback() && !UpdateIdleTimeout()) {
             if (SharedObject_GetId(input) == 5) {
                 switch (SharedObject_GetMode(input)) {
                 case 1:
