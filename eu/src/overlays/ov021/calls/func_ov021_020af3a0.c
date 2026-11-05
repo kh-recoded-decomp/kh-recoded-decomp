@@ -7,12 +7,12 @@ extern unsigned int func_ov042_020bde3c();
 extern unsigned int func_02029fac();
 extern unsigned int func_ov043_020bcce0();
 extern unsigned int func_ov044_020d069c();
-extern unsigned int func_ov046_020c0a1c();
+extern unsigned int ReleaseCameraLayerResources();
 
 void func_ov021_020af3a0(void) {
   switch(*data_ov021_020b56c0) {
   case 0:
-    func_ov046_020c0a1c();
+    ReleaseCameraLayerResources();
     break;
   case 1:
     func_ov042_020bde3c();

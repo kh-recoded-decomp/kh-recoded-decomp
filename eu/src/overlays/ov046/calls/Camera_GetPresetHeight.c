@@ -3,7 +3,7 @@
 extern unsigned int gCameraManager;
 extern unsigned char data_ov046_020c33d4;
 
-int func_ov046_020c1a68(int index) {
+int Camera_GetPresetHeight(int index) {
   int value;
 
   value = *(int *)(&data_ov046_020c33d4 + index * 0xc);

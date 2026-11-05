@@ -4,7 +4,7 @@ extern u32 data_ov042_020be5e0;
 extern u32 FX_Mul();
 extern u32 BuildCameraFrustumColliders();
 
-void func_ov042_020bd5bc(int extent) {
+void SetCameraFrustumExtent(int extent) {
   int work;
   u32 scaledExtent;
 

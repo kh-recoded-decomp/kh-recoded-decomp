@@ -11,7 +11,7 @@ src/overlays/ov046/calls/MaxOfArgs.c:
     complete
     .text       start:0x020c09cc end:0x020c0a1c
 
-src/overlays/ov046/calls/func_ov046_020c0a1c.c:
+src/overlays/ov046/calls/ReleaseCameraLayerResources.c:
     complete
     .text       start:0x020c0a1c end:0x020c0a44
 
@@ -159,7 +159,7 @@ src/overlays/ov046/calls/Camera_GetActiveController.c:
     complete
     .text       start:0x020c15c4 end:0x020c1608
 
-src/overlays/ov046/calls/func_ov046_020c1608.c:
+src/overlays/ov046/calls/GetCameraManagerWork.c:
     complete
     .text       start:0x020c1608 end:0x020c1614
 
@@ -219,7 +219,7 @@ src/overlays/ov046/calls/Camera_GetModeDistance.c:
     complete
     .text       start:0x020c1a10 end:0x020c1a68
 
-src/overlays/ov046/calls/func_ov046_020c1a68.c:
+src/overlays/ov046/calls/Camera_GetPresetHeight.c:
     complete
     .text       start:0x020c1a68 end:0x020c1a90
 
@@ -287,7 +287,7 @@ src/overlays/ov046/calls/Camera_FollowAlongViewDirection.c:
     complete
     .text       start:0x020c2c0c end:0x020c2c18
 
-src/overlays/ov046/calls/func_ov046_020c2c18.c:
+src/overlays/ov046/calls/ComputeCameraFollowPointWithDefaultHeading.c:
     complete
     .text       start:0x020c2c18 end:0x020c2c28
 

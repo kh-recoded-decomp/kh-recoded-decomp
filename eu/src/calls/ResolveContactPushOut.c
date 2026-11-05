@@ -18,5 +18,5 @@
 #define func_0204a8f4 AreVecsWithinRange16
 #define func_0204aa68 GetUnitCross
 #define func_0204ad4c GetPerpendicularVector
-#define func_ov042_020bd16c func_ov042_020bd18c
+#define func_ov042_020bd16c GetCameraColliderRegistrationMode
 #include "src/arm9/spatial_queries/ResolveContactPushOut_020382b0.c"

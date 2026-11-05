@@ -4,5 +4,5 @@
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define data_0205a970 NNS_G3dGlb_cameraMtx
 #define func_ov042_020bd290 Camera_GetGoalPosition
-#define func_ov042_020bd590 func_ov042_020bd5b0
+#define func_ov042_020bd590 GetCameraFrustumBounds
 #include "src/arm9/spatial_queries/IsPointInViewBounds_0203ec44.c"

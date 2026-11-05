@@ -7,5 +7,5 @@
 #define SetSecondaryBrightness_02029ed0 SetSecondaryBrightness
 #define data_0205356c gSinFx12Table
 #define data_ov040_020be260 data_ov040_020be280
-#define func_ov046_020c15e8 func_ov046_020c1608
+#define func_ov046_020c15e8 GetCameraManagerWork
 #include "src/ov040/unclassified_helpers/FadeInAreaScreens_020bd464.c"

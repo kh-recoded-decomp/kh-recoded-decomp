@@ -6,8 +6,8 @@ typedef struct SubModeState {
 
 extern SubModeState *data_ov021_020b56c0;
 
-extern int func_ov046_020c1608(void);
-extern int func_ov042_020bd110(void);
+extern int GetCameraManagerWork(void);
+extern int Ov042Camera_GetState(void);
 extern int Ov043Camera_GetState(void);
 extern int func_ov044_020d0130(void);
 
@@ -15,9 +15,9 @@ int func_ov021_020af614(void)
 {
     switch (data_ov021_020b56c0->mode) {
     case 0:
-        return func_ov046_020c1608();
+        return GetCameraManagerWork();
     case 1:
-        return func_ov042_020bd110();
+        return Ov042Camera_GetState();
     case 2:
         return Ov043Camera_GetState();
     case 3:

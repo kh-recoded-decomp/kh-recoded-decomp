@@ -4,6 +4,6 @@
 #define Camera_SetFrozen_020c0bec Camera_SetFrozen
 #define Camera_SetTrackingAngle_020c381c Camera_SetTrackingAngle
 #define GetBiasAdjustedField_0206dc80 GetBiasAdjustedField
-#define func_ov046_020c1a48 func_ov046_020c1a68
+#define func_ov046_020c1a48 Camera_GetPresetHeight
 #define g_cameraManager_020c34e0 gCameraManager
 #include "src/ov047/camera/Camera_ResetTrackingToLeader_020c37ac.c"

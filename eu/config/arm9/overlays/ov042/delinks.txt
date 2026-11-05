@@ -14,15 +14,15 @@ src/overlays/ov042/calls/func_ov042_020bd0f4.c:
     complete
     .text       start:0x020bd0f4 end:0x020bd110
 
-src/overlays/ov042/calls/func_ov042_020bd110.c:
+src/overlays/ov042/calls/Ov042Camera_GetState.c:
     complete
     .text       start:0x020bd110 end:0x020bd11c
 
-src/overlays/ov042/calls/func_ov042_020bd11c.c:
+src/overlays/ov042/calls/SetCameraColliderRegistrationMode.c:
     complete
     .text       start:0x020bd11c end:0x020bd18c
 
-src/overlays/ov042/auto/func_ov042_020bd18c.c:
+src/overlays/ov042/auto/GetCameraColliderRegistrationMode.c:
     complete
     .text       start:0x020bd18c end:0x020bd198
 
@@ -58,7 +58,7 @@ src/overlays/ov042/calls/MoveCameraAlongAxis.c:
     complete
     .text       start:0x020bd354 end:0x020bd39c
 
-src/overlays/ov042/calls/func_ov042_020bd39c.c:
+src/overlays/ov042/calls/GetCameraColliderOffsetMagnitude.c:
     complete
     .text       start:0x020bd39c end:0x020bd3b4
 
@@ -78,15 +78,15 @@ src/overlays/ov042/calls/InitCameraState.c:
     complete
     .text       start:0x020bd4dc end:0x020bd5a4
 
-src/overlays/ov042/calls/func_ov042_020bd5a4.c:
+src/overlays/ov042/calls/GetCameraFrustumExtent.c:
     complete
     .text       start:0x020bd5a4 end:0x020bd5b0
 
-src/overlays/ov042/auto/func_ov042_020bd5b0.c:
+src/overlays/ov042/auto/GetCameraFrustumBounds.c:
     complete
     .text       start:0x020bd5b0 end:0x020bd5bc
 
-src/overlays/ov042/calls/func_ov042_020bd5bc.c:
+src/overlays/ov042/calls/SetCameraFrustumExtent.c:
     complete
     .text       start:0x020bd5bc end:0x020bd5f4
 

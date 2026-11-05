@@ -8,5 +8,5 @@
 #define StartAreaCameraIntro_020bd298 StartAreaCameraIntro
 #define data_ov040_020be260 data_ov040_020be280
 #define func_02025438 SetPanelEnabled
-#define func_ov046_020c15e8 func_ov046_020c1608
+#define func_ov046_020c15e8 GetCameraManagerWork
 #include "src/ov040/unclassified_helpers/StartAreaCameraIntro_020bd298.c"

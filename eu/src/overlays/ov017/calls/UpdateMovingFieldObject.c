@@ -1,7 +1,7 @@
 #define UpdateMovingFieldObject_020a3610 UpdateMovingFieldObject
 #define func_ov042_020bd6ec FollowChainLeader
 #define func_ov042_020bd290 Camera_GetGoalPosition
-#define func_ov042_020bd590 func_ov042_020bd5b0
+#define func_ov042_020bd590 GetCameraFrustumBounds
 #define SetFieldObjectHidden_020a3c78 SetFieldObjectHidden_020a3c98
 #define ActorSlot_UnlinkByIndex_02035c28 ActorSlot_UnlinkByIndex
 #define CacheEntry_SetActive_02087258 CacheEntry_SetActive

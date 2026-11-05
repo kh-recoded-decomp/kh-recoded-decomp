@@ -366,3 +366,12 @@ command and three UI tail-call thunks use that neutral wording.
 [SESSION_STATE_WORDS.md](SESSION_STATE_WORDS.md) records the addresses, literal
 Thumb targets, consumers, partial native view and unresolved return declarations.
 No counter, ready or idle meaning is assigned to these state values.
+
+## Camera helper contracts
+
+Twenty helpers now describe overlay042 collision registration/frustum state,
+manager and controller views, follow-point operations, ordered updates and HUD
+delegates. [CAMERA_HELPER_CONTRACTS.md](CAMERA_HELPER_CONTRACTS.md) records the
+old/current names, native offsets, borrowed lifetimes and real return evidence.
+Getter types expose proved pointers and the consumed magnitude result; the
+remaining opaque controller layouts and legacy shared adapters are explicit.

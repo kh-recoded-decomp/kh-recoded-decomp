@@ -7,5 +7,5 @@
 #define func_01ff878c MIi_CpuCopyFast
 #define func_02006450 FX_Mul
 #define func_02019188 NNS_G3dGlbFlushP
-#define func_ov042_020bd0f0 func_ov042_020bd110
+#define func_ov042_020bd0f0 Ov042Camera_GetState
 #include "src/ov001/actor_animation/DrawObjectWithDepthScale_020860b0.c"

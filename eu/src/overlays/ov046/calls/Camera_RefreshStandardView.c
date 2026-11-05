@@ -1,4 +1,4 @@
 #define Camera_RefreshStandardView_020c16c0 Camera_RefreshStandardView
-#define func_ov047_020c6d24 func_ov047_020c6d44
+#define func_ov047_020c6d24 RestoreCameraTrackingAndUpdate
 #define g_cameraManager_020c34e0 gCameraManager
 #include "src/ov046/shared_engine/Camera_RefreshStandardView_020c16c0.c"

@@ -5,7 +5,7 @@ extern u32 QuadTree_InsertObject();
 extern u32 QuadTree_RemoveObject();
 extern u32 GetActorRegistry();
 
-void func_ov042_020bd11c(u32 newMode) {
+void SetCameraColliderRegistrationMode(u32 newMode) {
   int work;
   int actorManager;
 

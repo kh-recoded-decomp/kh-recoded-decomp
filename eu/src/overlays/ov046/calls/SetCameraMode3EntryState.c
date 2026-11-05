@@ -12,7 +12,7 @@ typedef struct CameraManager {
 } CameraManager;
 
 extern CameraManager *gCameraManager;
-extern void func_ov048_020c3530(CameraModeEntry *entry, CameraManager *manager);
+extern void UpdateOrbitCameraInputFollowAndDrift(CameraModeEntry *entry, CameraManager *manager);
 extern CameraModeEntry *Camera_GetTopDownView(void);
 extern int Camera_GetModeValue(void);
 
@@ -24,7 +24,7 @@ void SetCameraMode3EntryState(int state)
     if (Camera_GetModeValue() == 3) {
         entry = Camera_GetTopDownView();
         manager = gCameraManager;
-        func_ov048_020c3530(entry, gCameraManager);
+        UpdateOrbitCameraInputFollowAndDrift(entry, gCameraManager);
         entry->state = state;
         if (state == 1) {
             manager->mode3Value = 0x6000;

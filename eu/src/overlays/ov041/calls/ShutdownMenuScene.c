@@ -2,7 +2,7 @@
 #define GetPlayerFlagRecord_0205036c GetPlayerFlagRecord
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define PXI_Init_0202a638 PXI_Init_0202a64c
-#define PXI_Init_020be070 func_ov041_020be090
+#define PXI_Init_020be070 UnloadHudLayersAndRecordTextWrapper
 #define PopVramState_020365f0 PopVramState
 #define SetMenuEntryHighlight_0207830c SetMenuEntryHighlight
 #define ShutdownMenuScene_020bca3c ShutdownMenuScene

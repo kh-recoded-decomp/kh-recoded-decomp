@@ -5,5 +5,5 @@
 #define SolveMonicQuadratic_0204c17c SolveMonicQuadratic
 #define func_02006450 FX_Mul
 #define func_ov042_020bd290 Camera_GetGoalPosition
-#define func_ov042_020bd584 func_ov042_020bd5a4
+#define func_ov042_020bd584 GetCameraFrustumExtent
 #include "src/ov017/unclassified_helpers/AimEntryLandingPoint_020a5048.c"

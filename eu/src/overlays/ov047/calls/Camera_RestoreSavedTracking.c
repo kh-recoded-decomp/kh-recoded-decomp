@@ -3,6 +3,6 @@
 #define Camera_RestoreSavedTracking_020c6d34 Camera_RestoreSavedTracking
 #define Camera_UpdateTracking_020c631c Camera_UpdateTracking
 #define func_ov046_020c19f0 Camera_GetModeDistance
-#define func_ov046_020c1a48 func_ov046_020c1a68
+#define func_ov046_020c1a48 Camera_GetPresetHeight
 #define g_cameraManager_020c34e0 gCameraManager
 #include "src/ov047/camera/Camera_RestoreSavedTracking_020c6d34.c"

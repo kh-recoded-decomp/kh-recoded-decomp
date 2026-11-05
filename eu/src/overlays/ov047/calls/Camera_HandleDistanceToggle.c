@@ -26,7 +26,7 @@ typedef struct CameraManager {
 extern u16 data_02060500;
 extern CameraTarget *GetBoundedEntryField(int index);
 extern u32 Camera_ComputeFollowDistance(u32 index);
-extern u32 func_ov046_020c1a68(u32 index);
+extern u32 Camera_GetPresetHeight(u32 index);
 extern int func_ov046_020c2ad8(CameraManager *camera);
 
 void Camera_HandleDistanceToggle(CameraTracking *tracking, CameraManager *camera)
@@ -47,7 +47,7 @@ void Camera_HandleDistanceToggle(CameraTracking *tracking, CameraManager *camera
             camera->flags ^= 0x80000;
             value = Camera_ComputeFollowDistance(camera->modeIndex);
             tracking->modeDistance = value;
-            value = func_ov046_020c1a68(camera->modeIndex);
+            value = Camera_GetPresetHeight(camera->modeIndex);
             tracking->computedDistance = value;
         }
     }

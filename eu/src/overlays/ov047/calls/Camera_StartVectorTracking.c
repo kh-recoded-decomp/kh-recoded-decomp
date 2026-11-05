@@ -40,7 +40,7 @@ enum { CAMERA_TURN_RADIANS = 0x6488 };
 
 extern CameraUpdateFn Camera_ResetTracking(CameraTracking *, CameraManager *);
 extern BOOL func_ov046_020c2ad8(CameraManager *);
-extern fx32 func_ov046_020c1a68(s32);
+extern fx32 Camera_GetPresetHeight(s32);
 extern void *Camera_FollowControllerUpdate(CameraTracking *, CameraManager *);
 extern const VecFx32 *Camera_GetFocusPosition(void);
 extern u16 FX_Atan2Idx(fx32, fx32);
@@ -93,7 +93,7 @@ CameraUpdateFn Camera_StartVectorTracking(CameraTracking *tracking,
         tracking->savedAngle = 0;
         tracking->angle = 0;
     }
-    tracking->height = func_ov046_020c1a68(camera->mode);
+    tracking->height = Camera_GetPresetHeight(camera->mode);
     focus = MakeVector(Camera_GetFocusPosition()->x,
                        Camera_GetFocusPosition()->y + tracking->verticalOffset,
                        Camera_GetFocusPosition()->z);

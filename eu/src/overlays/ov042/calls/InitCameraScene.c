@@ -11,6 +11,6 @@
 #define data_ov042_020be5c0 data_ov042_020be5e0
 #define func_02033c3c QuadTree_InsertObject
 #define func_02036230 GetActorRegistry
-#define func_ov042_020bd59c func_ov042_020bd5bc
+#define func_ov042_020bd59c SetCameraFrustumExtent
 #define func_ov042_020bde20 UpdateCameraScene
 #include "src/ov042/camera/InitCameraScene_020bdb4c.c"

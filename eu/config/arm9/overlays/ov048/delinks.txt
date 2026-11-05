@@ -6,7 +6,7 @@ src/overlays/ov048/calls/ReturnToCommitPage_ov048_020c3520.c:
     complete
     .text       start:0x020c3520 end:0x020c3530
 
-src/overlays/ov048/calls/func_ov048_020c3530.c:
+src/overlays/ov048/calls/UpdateOrbitCameraInputFollowAndDrift.c:
     complete
     .text       start:0x020c3530 end:0x020c354e
 
@@ -14,7 +14,7 @@ src/overlays/ov048/calls/UpdateOrbitCameraInput.c:
     complete
     .text       start:0x020c3550 end:0x020c37ac
 
-src/overlays/ov048/calls/func_ov048_020c37ac.c:
+src/overlays/ov048/calls/UpdateOrbitCameraFollowPoint.c:
     complete
     .text       start:0x020c37ac end:0x020c37ba
 
@@ -26,7 +26,7 @@ src/overlays/ov048/calls/ResetCameraView.c:
     complete
     .text       start:0x020c380c end:0x020c3864
 
-src/overlays/ov048/calls/func_ov048_020c3864.c:
+src/overlays/ov048/calls/Ov048Camera_GetControllerData.c:
     complete
     .text       start:0x020c3864 end:0x020c386c
 

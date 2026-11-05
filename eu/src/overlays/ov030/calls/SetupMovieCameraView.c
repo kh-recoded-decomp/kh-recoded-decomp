@@ -8,6 +8,6 @@
 #define func_ov042_020bd1c0 PushFromCameraTarget
 #define func_ov042_020bd5e0 SetCameraParameterBc
 #define func_ov042_020bd600 func_ov042_020bd620
-#define func_ov042_020bd59c func_ov042_020bd5bc
-#define func_ov042_020bd0fc func_ov042_020bd11c
+#define func_ov042_020bd59c SetCameraFrustumExtent
+#define func_ov042_020bd0fc SetCameraColliderRegistrationMode
 #include "src/ov030/movie/SetupMovieCamera_020bb2cc.c"

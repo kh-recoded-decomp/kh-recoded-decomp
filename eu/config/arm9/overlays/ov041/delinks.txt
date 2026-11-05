@@ -180,11 +180,11 @@ src/overlays/ov041/calls/DrawStageItem.c:
     complete
     .text       start:0x020be020 end:0x020be086
 
-src/overlays/ov041/calls/func_ov041_020be088.c:
+src/overlays/ov041/calls/LoadHudLayersAndRecordTextWrapper.c:
     complete
     .text       start:0x020be088 end:0x020be090
 
-src/overlays/ov041/calls/func_ov041_020be090.c:
+src/overlays/ov041/calls/UnloadHudLayersAndRecordTextWrapper.c:
     complete
     .text       start:0x020be090 end:0x020be098
 

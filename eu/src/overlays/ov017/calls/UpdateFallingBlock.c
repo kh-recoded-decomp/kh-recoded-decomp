@@ -2,7 +2,7 @@
 #define func_ov042_020bd6ec FollowChainLeader
 #define func_ov042_020bd290 func_ov042_020bd2b0
 #define func_ov042_020bd2b0 Camera_GetGoalPosition
-#define func_ov042_020bd590 func_ov042_020bd5b0
+#define func_ov042_020bd590 GetCameraFrustumBounds
 #define func_ov017_020a5d4c func_ov017_020a5d6c
 #define func_ov017_020a5d6c SetKind7EntryHidden
 #define ActorSlot_UnlinkByIndex_02035c28 ActorSlot_UnlinkByIndex

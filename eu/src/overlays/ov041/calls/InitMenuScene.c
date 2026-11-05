@@ -5,7 +5,7 @@
 #define InitSlotGroups_020bda68 InitSlotGroups
 #define NNS_GfdDumpFrmTexVramManager_020137f8 NNS_GfdDumpFrmTexVramManager
 #define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
-#define PXI_Init_020be068 func_ov041_020be088
+#define PXI_Init_020be068 LoadHudLayersAndRecordTextWrapper
 #define PushVramState_020365a4 PushVramState
 #define QueueSoundCommandForArc_0204d670 QueueSoundCommandForArc
 #define ReleaseSeqArcHeapLevel_0204e040 ReleaseSeqArcHeapLevel

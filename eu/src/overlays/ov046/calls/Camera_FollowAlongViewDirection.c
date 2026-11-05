@@ -1,3 +1,3 @@
 #define Camera_FollowAlongViewDirection_020c2bec Camera_FollowAlongViewDirection
-#define func_ov046_020c2bf8 func_ov046_020c2c18
+#define func_ov046_020c2bf8 ComputeCameraFollowPointWithDefaultHeading
 #include "src/ov046/shared_engine/Camera_FollowAlongViewDirection_020c2bec.c"

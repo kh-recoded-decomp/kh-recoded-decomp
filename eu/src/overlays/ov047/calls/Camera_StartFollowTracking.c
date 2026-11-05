@@ -4,5 +4,5 @@
 #define Camera_UpdateTracking_020c631c Camera_UpdateTracking
 #define data_0205356c gSinFx12Table
 #define func_ov046_020c19f0 Camera_GetModeDistance
-#define func_ov046_020c1a48 func_ov046_020c1a68
+#define func_ov046_020c1a48 Camera_GetPresetHeight
 #include "src/ov047/camera/Camera_StartFollowTracking_020c5008.c"

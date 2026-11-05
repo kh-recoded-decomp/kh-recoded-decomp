@@ -12,7 +12,7 @@ extern void ActorSlot_UnlinkByIndex(u32 index);
 extern void CacheEntry_SetActive(FieldObjectWork *work, int active);
 extern u32 FollowChainLeader(void);
 extern s32 *Camera_GetGoalPosition(void);
-extern s32 *func_ov042_020bd5b0(void);
+extern s32 *GetCameraFrustumBounds(void);
 
 u32 DeactivateFieldObjectPastScrollLimit(FieldObjectWork *work)
 {
@@ -23,7 +23,7 @@ u32 DeactivateFieldObjectPastScrollLimit(FieldObjectWork *work)
     flags = FollowChainLeader();
     if ((flags & 1) == 0) {
         origin = Camera_GetGoalPosition();
-        extent = func_ov042_020bd5b0();
+        extent = GetCameraFrustumBounds();
         if (work->position - *origin < *extent * 3) {
             ActorSlot_SetFlag8ByIndex(work->actorSlot, 0);
             ActorSlot_UnlinkByIndex(work->actorSlot);

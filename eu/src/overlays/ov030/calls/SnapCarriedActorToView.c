@@ -8,5 +8,5 @@
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define func_ov021_020af5f4 func_ov021_020af614
 #define func_ov030_020bbf10 AreMeshEntriesClear
-#define func_ov042_020bd590 func_ov042_020bd5b0
+#define func_ov042_020bd590 GetCameraFrustumBounds
 #include "src/ov030/shared_engine/SnapCarriedActorToView_020bb474.c"

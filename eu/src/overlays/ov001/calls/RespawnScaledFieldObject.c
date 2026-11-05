@@ -10,5 +10,5 @@
 #define func_020359f8 ApplyRecordTableEntry5
 #define func_02036240 ActorRegistry_GetEntityByIndex
 #define func_ov001_0207f7a4 IsObjectFlagClear
-#define func_ov042_020bd0f0 func_ov042_020bd110
+#define func_ov042_020bd0f0 Ov042Camera_GetState
 #include "src/ov001/field_objects/RespawnScaledFieldObject_02085f3c.c"

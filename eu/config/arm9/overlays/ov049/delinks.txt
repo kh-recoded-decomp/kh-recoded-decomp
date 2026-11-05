@@ -67,7 +67,7 @@ src/overlays/ov049/calls/UpdateEventCameraOrbitParticle.c:
     complete
     .text       start:0x020c4124 end:0x020c4240
 
-src/overlays/ov049/calls/func_ov049_020c4240.c:
+src/overlays/ov049/calls/Ov049Camera_GetControllerData.c:
     complete
     .text       start:0x020c4240 end:0x020c4248
 

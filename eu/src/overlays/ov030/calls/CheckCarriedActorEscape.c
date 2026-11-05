@@ -10,7 +10,7 @@
 #define func_ov021_020a8ca0 func_ov021_020a8cc0
 #define func_ov021_020af5f4 func_ov021_020af614
 #define func_ov030_020bb468 func_ov030_020bb488
-#define func_ov042_020bd590 func_ov042_020bd5b0
+#define func_ov042_020bd590 GetCameraFrustumBounds
 #define func_ov052_020ceb54 func_ov052_020ceb74
 #define g_markerReset_020bd004 gMarkerReset
 #include "src/ov030/shared_engine/CheckCarriedActorEscape_020bbf78.c"
