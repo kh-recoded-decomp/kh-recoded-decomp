@@ -1,5 +1,5 @@
 #define RunSessionScriptFrame_02063638 RunSessionScriptFrame
 #define ScriptVm_RunFrame_02025b18 ScriptVm_RunFrame
 #define data_ov001_020a0460 data_ov001_020a0480
-#define func_020258f8 PcmChannel_ResetAndEnable
+#define func_020258f8 ResetScriptSkipState
 #include "src/ov001/unclassified_helpers/RunSessionScriptFrame_02063638.c"

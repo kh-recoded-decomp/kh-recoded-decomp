@@ -21,7 +21,7 @@ extern FieldSession *data_ov001_020a0480;
 extern int func_ov001_02067ed4(void);
 extern BOOL IsSessionFlagSet(u32 value);
 extern BOOL IsEntryFlag2Active(int index);
-extern int func_0204d8cc(int track, int fade);
+extern int QueueSoundKind4(int track, int fade);
 extern int IsFieldTrackFlagSet(void);
 extern BOOL IsSceneState4(void);
 extern u8 func_ov001_02068094(int index);
@@ -50,7 +50,7 @@ void UpdateFieldBgm(FieldSession *session) {
     }
     if (data_ov001_020a0480->bgm.override != -1 && bgm->track != 0x27) {
         bgm->track = 0x27;
-        func_0204d8cc(bgm->track, 30);
+        QueueSoundKind4(bgm->track, 30);
     }
     if (session->bgm.kind != 4 && session->bgm.kind != 7) {
         battle = IsFieldTrackFlagSet();
@@ -69,7 +69,7 @@ void UpdateFieldBgm(FieldSession *session) {
         }
         bgm->timer = 0;
         bgm->track = func_ov001_020680b0(func_ov001_02067ed4());
-        func_0204d8cc(bgm->track, 30);
+        QueueSoundKind4(bgm->track, 30);
         bgm->mode = 1;
         return;
     }
@@ -87,7 +87,7 @@ void UpdateFieldBgm(FieldSession *session) {
     }
     if (change) {
         bgm->track = func_ov001_02068094(func_ov001_02067ed4());
-        func_0204d8cc(bgm->track, 30);
+        QueueSoundKind4(bgm->track, 30);
         bgm->mode = 2;
     }
 }

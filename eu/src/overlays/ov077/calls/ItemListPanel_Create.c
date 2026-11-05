@@ -8,7 +8,7 @@
 #define AcquireRecordSlot_02051d3c AcquireRecordSlot
 #define func_ov076_020c9dd0 LoadItemScreenMenuTipImages
 #define QueueSoundCommandForArc_0204d670 QueueSoundCommandForArc
-#define func_0204d8b8 func_0204d8cc
+#define func_0204d8b8 QueueSoundKind4
 #define G2D_InitializeLinearCanvas_02017a2c NNS_G2dCharCanvasInitForBG
 #define func_ov039_020bc994 GetMenuFont10
 #define FillBackgroundTileRectangle_02017adc NNS_G2dMapScrToCharText

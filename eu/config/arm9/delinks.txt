@@ -5749,19 +5749,19 @@ src/calls/RoundAndInitArchive.c:
     complete
     .text       start:0x020258c4 end:0x0202590c
 
-src/calls/PcmChannel_ResetAndEnable.c:
+src/calls/ResetScriptSkipState.c:
     complete
     .text       start:0x0202590c end:0x02025928
 
-src/calls/SetLoaderCallbacks.c:
+src/calls/SetScriptVmPackedBitHandlers.c:
     complete
     .text       start:0x02025928 end:0x0202595c
 
-src/calls/SetScriptBusyFlag.c:
+src/calls/SetScriptBgmSelection.c:
     complete
     .text       start:0x0202595c end:0x02025968
 
-src/calls/LoadGlobalS8At0.c:
+src/calls/GetScriptBgmSelection.c:
     complete
     .text       start:0x02025968 end:0x02025974
 
@@ -5781,7 +5781,7 @@ src/calls/ScriptVm_RunFrame.c:
     complete
     .text       start:0x02025b2c end:0x02025d00
 
-src/calls/MarkPendingActionIfTargetSet.c:
+src/calls/RequestScriptSkipIfTargetSet.c:
     complete
     .text       start:0x02025d00 end:0x02025d1c
 
@@ -5885,27 +5885,27 @@ src/calls/ScriptCmd_ArmPair.c:
     complete
     .text       start:0x02026568 end:0x02026590
 
-src/calls/func_02026590.c:
+src/calls/ScriptCmd_SetPairAndTextResult.c:
     complete
     .text       start:0x02026590 end:0x020265ec
 
-src/calls/func_020265ec.c:
+src/calls/ScriptCmd_QueueSoundKind2.c:
     complete
     .text       start:0x020265ec end:0x02026634
 
-src/calls/func_02026634.c:
+src/calls/ScriptCmd_QueueSoundKind3.c:
     complete
     .text       start:0x02026634 end:0x02026678
 
-src/calls/func_02026678.c:
+src/calls/ScriptCmd_QueueSoundKind4.c:
     complete
     .text       start:0x02026678 end:0x020266d0
 
-src/calls/func_020266d0.c:
+src/calls/ScriptCmd_QueueSoundKind2AfterSequence.c:
     complete
     .text       start:0x020266d0 end:0x02026704
 
-src/calls/func_02026704.c:
+src/calls/ScriptWait_QueueSoundKind2AfterSequence.c:
     complete
     .text       start:0x02026704 end:0x02026728
 
@@ -5917,19 +5917,19 @@ src/calls/Script_StepAndIsIdle.c:
     complete
     .text       start:0x0202673c end:0x02026752
 
-src/calls/func_02026754.c:
+src/calls/ScriptCmd_PlaySequenceArcEntry.c:
     complete
     .text       start:0x02026754 end:0x02026788
 
-src/calls/func_02026788.c:
+src/calls/ScriptCmd_StopSequenceArc.c:
     complete
     .text       start:0x02026788 end:0x020267b8
 
-src/calls/func_020267b8.c:
+src/calls/ScriptCmd_QueueSequenceArcCommand.c:
     complete
     .text       start:0x020267b8 end:0x020267d8
 
-src/calls/func_020267d8.c:
+src/calls/ScriptCmd_StartStream0AtZeroPosition.c:
     complete
     .text       start:0x020267d8 end:0x02026810
 
@@ -5945,11 +5945,11 @@ src/calls/ScriptCmd_AcquireActorResource.c:
     complete
     .text       start:0x02026868 end:0x0202690c
 
-src/calls/ScriptCmd_TurnHandler.c:
+src/calls/ScriptWait_ActorResourceBinding.c:
     complete
     .text       start:0x0202690c end:0x02026972
 
-src/calls/func_02026974.c:
+src/calls/ReleasePendingScriptActorResource.c:
     complete
     .text       start:0x02026974 end:0x0202698e
 
@@ -5969,11 +5969,11 @@ src/calls/FS_UnloadOverlayImage_02026a90.c:
     complete
     .text       start:0x02026a90 end:0x02026a9a
 
-src/calls/ScriptCmd_PostEvent0.c:
+src/calls/ScriptCmd_RequestStreamSlot0Load.c:
     complete
     .text       start:0x02026a9c end:0x02026aae
 
-src/calls/func_02026ab0.c:
+src/calls/ScriptWait_StreamSlot0NotLoading.c:
     complete
     .text       start:0x02026ab0 end:0x02026ac4
 
@@ -6169,7 +6169,7 @@ src/calls/ToggleSelectedPanelSlot.c:
     complete
     .text       start:0x02028118 end:0x0202819c
 
-src/calls/func_0202819c.c:
+src/calls/UpdateSoundAndSceneScriptSkip.c:
     complete
     .text       start:0x0202819c end:0x020281b0
 
@@ -6217,15 +6217,15 @@ src/calls/QueueScreenDataVramTransfer.c:
     complete
     .text       start:0x020284d0 end:0x020284e4
 
-src/calls/func_020284e4.c:
+src/calls/RequestCurrentSceneScriptSkip.c:
     complete
     .text       start:0x020284e4 end:0x020284fa
 
-src/calls/func_020284fc.c:
+src/calls/HasCurrentSceneScriptSkipTarget.c:
     complete
     .text       start:0x020284fc end:0x0202852a
 
-src/calls/func_0202852c.c:
+src/calls/AdvanceCurrentSceneScriptSkip.c:
     complete
     .text       start:0x0202852c end:0x0202855a
 
@@ -9413,11 +9413,11 @@ src/calls/SetSelectionIfChanged.c:
     complete
     .text       start:0x0204d750 end:0x0204d7c4
 
-src/calls/func_0204d7c4.c:
+src/calls/QueueOrUpdateSoundKind1.c:
     complete
     .text       start:0x0204d7c4 end:0x0204d808
 
-src/calls/func_0204d808.c:
+src/calls/QueueOrUpdateSoundKind3.c:
     complete
     .text       start:0x0204d808 end:0x0204d84c
 
@@ -9425,7 +9425,7 @@ src/calls/QueueSoundRequest.c:
     complete
     .text       start:0x0204d84c end:0x0204d8cc
 
-src/calls/func_0204d8cc.c:
+src/calls/QueueSoundKind4.c:
     complete
     .text       start:0x0204d8cc end:0x0204d8e4
 
@@ -9513,7 +9513,7 @@ src/calls/StopSoundStreamAtIndex.c:
     complete
     .text       start:0x0204dec4 end:0x0204dee8
 
-src/calls/IsSoundStreamActive.c:
+src/calls/HasNonzeroStreamPlaybackPosition.c:
     complete
     .text       start:0x0204dee8 end:0x0204df18
 

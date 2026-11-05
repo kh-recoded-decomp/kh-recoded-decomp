@@ -1,6 +1,0 @@
-#define IsRecordIdFree_0202c38c IsRecordIdFree
-#define ScriptCmd_SetElemField_02025e18 ScriptCmd_SetElemField
-#define func_020268f8 ScriptCmd_TurnHandler
-#define func_02035898 ApplyRecordTableEntry
-#define func_020359d4 ApplyRecordTableEntry4
-#include "src/arm9/unclassified_helpers/func_020268f8.c"

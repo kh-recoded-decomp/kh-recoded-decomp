@@ -2,7 +2,7 @@
 #define InitPanelLayers_0206183c InitPanelLayers
 #define InitPanelScene_02061614 InitPanelScene
 #define IsPanelFlagSet_02061bb0 IsPanelFlagSet
-#define IsSoundStreamActive_0204ded4 IsSoundStreamActive
+#define IsSoundStreamActive_0204ded4 HasNonzeroStreamPlaybackPosition
 #define OS_GetTick_02003fd4 OS_GetTick
 #define ShowPanelBgScreen_02061a80 ShowPanelBgScreen
 #define func_0204dd4c PrepareAndStartStream

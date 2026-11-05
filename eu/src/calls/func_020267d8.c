@@ -1,5 +1,0 @@
-#define IsSoundStreamActive_0204ded4 IsSoundStreamActive
-#define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
-#define func_020267c4 func_020267d8
-#define func_0204dd4c PrepareAndStartStream
-#include "src/arm9/shared_engine/func_020267c4.c"

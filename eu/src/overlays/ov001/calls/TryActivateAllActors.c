@@ -1,6 +1,0 @@
-#define func_ov001_020884e0 RunEventScriptFrame
-#define func_ov001_02088858 TryActivateAllActors
-#define func_ov001_0208a8b8 Actor_RestoreAnimState
-#define func_ov001_0208be1c FinishEventCameraCut
-#define g_actorManager_020a04e0 data_ov001_020a0500
-#include "src/ov001/object_creation/func_ov001_02088858.c"

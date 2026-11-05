@@ -192,15 +192,15 @@ src/overlays/ov036/calls/IsSceneFlag10Clear.c:
     complete
     .text       start:0x020bc5e0 end:0x020bc600
 
-src/overlays/ov036/calls/SnapshotActorSlotPositions.c:
+src/overlays/ov036/calls/RequestPanelScriptSkipAndSnapshotPositions.c:
     complete
     .text       start:0x020bc600 end:0x020bc668
 
-src/overlays/ov036/calls/HasSceneActiveMenu.c:
+src/overlays/ov036/calls/HasPanelScriptSkipTarget.c:
     complete
     .text       start:0x020bc668 end:0x020bc688
 
-src/overlays/ov036/calls/func_ov036_020bc688.c:
+src/overlays/ov036/calls/AdvancePanelScriptSkipAndRestoreScene.c:
     complete
     .text       start:0x020bc688 end:0x020bc83c
 
@@ -324,7 +324,7 @@ src/overlays/ov036/calls/ToggleSceneBlendAndClearColor.c:
     complete
     .text       start:0x020bd8e8 end:0x020bd9a0
 
-src/overlays/ov036/calls/SetSceneCursor.c:
+src/overlays/ov036/calls/SetPanelScriptBgmRequest.c:
     complete
     .text       start:0x020bd9a0 end:0x020bd9c4
 

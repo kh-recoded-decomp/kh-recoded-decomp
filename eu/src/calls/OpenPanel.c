@@ -2,7 +2,7 @@
 #define func_01ff80d4 GetVBlankCounter
 #define GetNextStreamCursorOrInvalid_0204df04 GetNextStreamCursorOrInvalid
 #define InvokeForChannelOrBoth_0200110c InvokeForChannelOrBoth
-#define IsSoundStreamActive_0204ded4 IsSoundStreamActive
+#define IsSoundStreamActive_0204ded4 HasNonzeroStreamPlaybackPosition
 #define OpenPanel_020285a0 OpenPanel
 #define StopSoundStreamAtIndex_0204deb0 StopSoundStreamAtIndex
 #define data_02055f44 sMain_PauseRefresh_02055f44
@@ -10,7 +10,7 @@
 #define func_01ff8830 MI_CpuFill8
 #define func_02003fd4 OS_GetTick
 #define func_02027eec UpdatePanelScreenSetup
-#define func_020284e8 func_020284fc
+#define func_020284e8 HasCurrentSceneScriptSkipTarget
 #define func_0204d9a8 FadeBgmVolume
 #define g_ptr_0205fe24 gPanelState
 #include "src/arm9/panel_state/OpenPanel_020285a0.c"

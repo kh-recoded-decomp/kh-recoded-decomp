@@ -9,7 +9,7 @@ typedef struct Panel {
 
 extern char OVERLAY_104_ID[];
 
-extern BOOL IsSoundStreamActive(int stream);
+extern BOOL HasNonzeroStreamPlaybackPosition(int stream);
 extern void LoadOverlayAfterGeometryTransfer(int processor, int overlayId);
 extern void UnloadOverlayAfterGeometryTransfer(int processor, int overlayId);
 extern s32 __DSProt_DetectFlashcart(void *task, void *callback, int arg);
@@ -31,7 +31,7 @@ int WaitPanelWorldSession(Panel *panel)
     int result = -1;
 
     if (panel->sessionFailed) {
-        if (!IsSoundStreamActive(1)) {
+        if (!HasNonzeroStreamPlaybackPosition(1)) {
             BOOL detected;
             void *callback;
 

@@ -1,7 +1,7 @@
 #define GX_BeginLoadTex_02007ff4 GX_BeginLoadTex
 #define GX_EndLoadTex_0200819c GX_EndLoadTex
 #define GX_LoadTex_02008050 GX_LoadTex
-#define IsSoundStreamActive_0204ded4 IsSoundStreamActive
+#define IsSoundStreamActive_0204ded4 HasNonzeroStreamPlaybackPosition
 #define LoadTextureInChunks_020bc8b4 LoadTextureInChunks
 #define OS_WaitVBlankIntr_020049d0 OS_WaitVBlankIntr
 #define data_ov036_020c3920 data_ov036_020c3940

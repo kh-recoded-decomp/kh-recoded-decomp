@@ -1,6 +1,6 @@
 #define FrameTimer_Interpolate_0206142c FrameTimer_Interpolate
 #define FrameTimer_IsExpired_0206146c FrameTimer_IsExpired
-#define IsSoundStreamActive_0204ded4 IsSoundStreamActive
+#define IsSoundStreamActive_0204ded4 HasNonzeroStreamPlaybackPosition
 #define NotifyBothOrOne_02001154 NotifyBothOrOne
 #define SetBrightnessAndSyncMain_02029e7c SetBrightnessAndSyncMain
 #define SetSecondaryBrightness_02029ed0 SetSecondaryBrightness

@@ -6,7 +6,7 @@ extern void SetFieldEntriesPaused(s32 paused);
 extern void SetMenuHighlight(s32 highlight);
 extern void PlaySoundChecked(s32 channel, s32 soundId);
 extern BOOL IsEntryFlag2Active(s32 index);
-extern void func_0204d808(s32 flags);
+extern void QueueOrUpdateSoundKind3(s32 flags);
 extern u32 func_ov001_0206e644(void);
 extern s32 GetMainBrightnessSetting(void);
 extern void AwardSlotLevelProgress(s32 amount);
@@ -34,7 +34,7 @@ s32 PollFieldTransition(void)
     }
     if (IsEntryFlag2Active(0)) {
         gOv028FieldState->flags |= 0x10;
-        func_0204d808(0x20);
+        QueueOrUpdateSoundKind3(0x20);
         return 11;
     }
     if (func_ov001_0206e644()) {

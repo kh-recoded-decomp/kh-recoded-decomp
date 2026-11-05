@@ -109,7 +109,7 @@ extern void SetPackedBit(int *bitWords, int bitIndex);
 extern SlotEntry *GetRecordSlotPair1Entry(s32 index);
 extern void *GetPackedFileEntry(int *bank, int index);
 extern void SetSecondaryElementEnabled(BOOL enabled);
-extern void HasSceneActiveMenu(int brightness);
+extern void HasPanelScriptSkipTarget(int brightness);
 extern void RefreshStatusMenuData(SaveData *save, const RefreshArgs *args);
 extern void SetStatusPageAndCursor(int page, int index);
 extern u32 PropagateMatrixNodeVisit(MatrixMenu *menu, MatrixNode *node, int dir, BOOL quiet, BOOL keepSteps);
@@ -448,7 +448,7 @@ void UpdateMatrixEventAnimation(MatrixMenu *menu)
                 break;
             case 0x600:
                 if (menu->timer <= 0x10) {
-                    HasSceneActiveMenu(menu->timer);
+                    HasPanelScriptSkipTarget(menu->timer);
                     if (menu->timer == 0x10) {
                         effect = NULL;
                         switch (menu->eventParam) {
@@ -468,7 +468,7 @@ void UpdateMatrixEventAnimation(MatrixMenu *menu)
                         SetModelAnimationFrameWithSingleWrap(effect, 2, 0x1000);
                     }
                 } else if (menu->timer <= 0x20) {
-                    HasSceneActiveMenu(0x20 - menu->timer);
+                    HasPanelScriptSkipTarget(0x20 - menu->timer);
                 }
                 if (menu->timer == 0x20) {
                     menu->state &= 0xff;

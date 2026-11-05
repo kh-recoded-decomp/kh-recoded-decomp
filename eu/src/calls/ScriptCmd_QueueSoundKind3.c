@@ -1,0 +1,7 @@
+#define func_ov001_02063a38 GetFieldSessionState
+#define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
+#define data_02055e00 gScriptState
+#define func_02026620 ScriptCmd_QueueSoundKind3
+#define func_0204d7f4 QueueOrUpdateSoundKind3
+#define func_ov036_020bd980 SetPanelScriptBgmRequest
+#include "src/arm9/shared_engine/func_02026620.c"

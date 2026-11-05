@@ -1,0 +1,5 @@
+#define func_ov001_02063838 GetSessionFlagsMask20
+#define func_020284d0 RequestCurrentSceneScriptSkip
+#define func_ov001_0208881c RequestFieldScriptSkip
+#define func_ov036_020bc5e0 RequestPanelScriptSkipAndSnapshotPositions
+#include "src/arm9/reviewed_helpers/func_020284d0.c"

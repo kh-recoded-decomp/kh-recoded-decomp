@@ -2,6 +2,6 @@
 #define PlaySoundChecked_0204d8d0 PlaySoundChecked
 #define SelectNextState_020ba7f8 SelectNextState
 #define SetFieldEntriesPaused_0206e444 SetFieldEntriesPaused
-#define func_0204d7f4 func_0204d808
+#define func_0204d7f4 QueueOrUpdateSoundKind3
 #define g_activeState_020bc800 data_ov031_020bc820
 #include "src/ov031/state_machine/SelectNextState_020ba7f8.c"

@@ -1,0 +1,5 @@
+#define IsSoundStreamActive_0204ded4 HasNonzeroStreamPlaybackPosition
+#define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
+#define func_020267c4 ScriptCmd_StartStream0AtZeroPosition
+#define func_0204dd4c PrepareAndStartStream
+#include "src/arm9/shared_engine/func_020267c4.c"

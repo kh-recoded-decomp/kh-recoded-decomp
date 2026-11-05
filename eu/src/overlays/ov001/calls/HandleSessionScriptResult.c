@@ -1,7 +1,7 @@
 #define HandleSessionScriptResult_0206269c HandleSessionScriptResult
 #define data_ov001_020a0460 data_ov001_020a0480
 #define func_020257e4 ReleaseScriptVmBuffer
-#define func_0204d7f4 func_0204d808
+#define func_0204d7f4 QueueOrUpdateSoundKind3
 #define SetSessionState_02063200 SetSessionState
 #define StoreSessionDifficultyPreset_0206452c StoreSessionDifficultyPreset
 #define func_ov001_020645c8 IsSessionFlagSet

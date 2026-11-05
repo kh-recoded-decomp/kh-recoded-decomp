@@ -1,0 +1,6 @@
+#define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
+#define ScriptVm_ResolveOperand_02025d08 ScriptVm_ResolveOperand
+#define func_02025dac ByteCode_ResolveOperand
+#define func_0202657c ScriptCmd_SetPairAndTextResult
+#define strncpy_02021f28 strncpy
+#include "src/arm9/shared_engine/func_0202657c.c"

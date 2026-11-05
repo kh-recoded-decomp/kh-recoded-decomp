@@ -4,7 +4,7 @@
 #define G2_GetBG1ScrPtr_02006e34 G2_GetBG1ScrPtr
 #define InitPanelCamera_020615b8 InitPanelCamera
 #define InitPanelSceneAndClearBg1_0206243c InitPanelSceneAndClearBg1
-#define IsSoundStreamActive_0204ded4 IsSoundStreamActive
+#define IsSoundStreamActive_0204ded4 HasNonzeroStreamPlaybackPosition
 #define func_01ff8740 MIi_CpuClearFast
 #define func_0201a3c4 NNSi_G3dModifyPolygonAttrMask
 #define func_0202ecf8 InitSharedRecordAndDispatch

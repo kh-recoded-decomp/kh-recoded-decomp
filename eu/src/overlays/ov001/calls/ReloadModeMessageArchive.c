@@ -3,7 +3,7 @@
 #define OS_SPrintf_02002428 OS_SPrintf
 #define ReloadModeMessageArchive_020883fc ReloadModeMessageArchive
 #define RoundAndInitArchive_020258b0 RoundAndInitArchive
-#define SetLoaderCallbacks_02025914 SetLoaderCallbacks
+#define SetLoaderCallbacks_02025914 SetScriptVmPackedBitHandlers
 #define data_ov001_0209f2e0 sOv001_EvEVW0FormatDP2_0209f300
 #define data_ov001_020a04e0 data_ov001_020a0500
 #define findSharedResourceByName_0202cd8c findSharedResourceByName

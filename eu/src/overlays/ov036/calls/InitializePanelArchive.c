@@ -21,7 +21,7 @@ extern void FormatSessionNumber(int index, char *name);
 extern u32 GetSessionResourceArchive(void);
 extern int findSharedResourceByName(void *table, void *name);
 extern int RoundAndInitArchive(void *record, u32 flags, void *flag, void *extra);
-extern void SetLoaderCallbacks(void *context, void *writeHandler, void *readHandler);
+extern void SetScriptVmPackedBitHandlers(void *context, void *writeHandler, void *readHandler);
 extern void WriteSessionPackedBits(void);
 extern void ReadSessionPackedBits(void);
 
@@ -39,5 +39,5 @@ void InitializePanelArchive(void)
     fileId = ((table + 0x8000) & 0xfffffc) << 7 | 0x80000000 |
              (findSharedResourceByName((void *)GetSessionResourceArchive(), name) & 0x1ff);
     RoundAndInitArchive(work->archive, fileId, sOv036_E_020c3744, work->archiveBuffer);
-    SetLoaderCallbacks(work->archive, WriteSessionPackedBits, ReadSessionPackedBits);
+    SetScriptVmPackedBitHandlers(work->archive, WriteSessionPackedBits, ReadSessionPackedBits);
 }

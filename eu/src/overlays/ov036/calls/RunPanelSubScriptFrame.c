@@ -1,5 +1,5 @@
 #define RunPanelSubScriptFrame_020ba9d0 RunPanelSubScriptFrame
 #define ScriptVm_RunFrame_02025b18 ScriptVm_RunFrame
 #define data_ov036_020c3920 data_ov036_020c3940
-#define func_020258f8 PcmChannel_ResetAndEnable
+#define func_020258f8 ResetScriptSkipState
 #include "src/ov036/panel_state/RunPanelSubScriptFrame_020ba9d0.c"

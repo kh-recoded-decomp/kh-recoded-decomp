@@ -221,7 +221,7 @@ extern void SetupResultsShopList(void);
 extern void LoadResultsIconCells(IconCell *cells);
 extern void SetResultsMode(u32 mode);
 extern int SetSelectionIfChanged(int selection);
-extern int func_0204d8cc(int track, int fade);
+extern int QueueSoundKind4(int track, int fade);
 extern int CloseResultsScreen(void);
 extern int UpdateResultsScreen(void);
 
@@ -417,7 +417,7 @@ ResultsStateFn InitResultsScene(ResultsArgs *args)
         data_ov001_020a0480->resultsSeen = 1;
         SetSelectionIfChanged(0x16);
     } else if (data_ov034_020c0fa4->mode == 2) {
-        func_0204d8cc(0x16, 0x1e);
+        QueueSoundKind4(0x16, 0x1e);
     }
     return UpdateResultsScreen;
 }

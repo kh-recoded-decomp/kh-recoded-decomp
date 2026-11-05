@@ -30,8 +30,8 @@
 #define func_0202e9ec InitSharedRecordThenTexture
 #define func_0202ed3c InitSharedRecordAndDispatchAlt
 #define func_0202f4e8 Flags16_ClearBit1
-#define func_0204d7f4 func_0204d808
-#define func_0204d8b8 func_0204d8cc
+#define func_0204d7f4 QueueOrUpdateSoundKind3
+#define func_0204d8b8 QueueSoundKind4
 #define func_ov001_020645c8 IsSessionFlagSet
 #define func_ov001_02064ac0 IsBattleModeOne
 #define func_ov021_020a9524 LoadMsgContainers

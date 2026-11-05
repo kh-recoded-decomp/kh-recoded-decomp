@@ -14,7 +14,7 @@
 #define Strlen_02021e44 strlen
 #define func_0202255c ParseDecimalLong
 #define RoundAndInitArchive_020258b0 RoundAndInitArchive
-#define SetLoaderCallbacks_02025914 SetLoaderCallbacks
+#define SetLoaderCallbacks_02025914 SetScriptVmPackedBitHandlers
 #define data_ov022_020b7d80 data_ov022_020b7da0
 #define data_ov022_020b7ccc sOv022_FontEu10allNftr_020b7cec
 #define data_ov022_020b7c8c data_ov022_020b7cac

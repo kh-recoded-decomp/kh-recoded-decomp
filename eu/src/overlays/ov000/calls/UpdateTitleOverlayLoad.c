@@ -12,7 +12,7 @@ typedef struct TitlePanel {
 extern u8 UpdateMenuTouchSelect[];
 
 extern int func_ov003_02064744(void);
-extern BOOL IsSoundStreamActive(int handleIndex);
+extern BOOL HasNonzeroStreamPlaybackPosition(int handleIndex);
 extern void *CreateTaskObject(void *descriptor, void *userData);
 extern void SetPanelState(TitlePanel *panel, s32 state, u32 param1, u32 param2);
 
@@ -30,7 +30,7 @@ int UpdateTitleOverlayLoad(TitlePanel *panel)
                 result = 6;
             }
         }
-    } else if (!IsSoundStreamActive(0)) {
+    } else if (!HasNonzeroStreamPlaybackPosition(0)) {
         panel->overlayTask = CreateTaskObject(UpdateMenuTouchSelect, (void *)result);
         panel->overlayLoaded = 1;
     }

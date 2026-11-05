@@ -17,7 +17,7 @@
 #define SampleTweenValue_0205258c SampleTweenValue
 #define SetEntrySlotsVisible_020b9580 SetEntrySlotsVisible
 #define SetPrimaryElementEnabled_020bc054 SetPrimaryElementEnabled
-#define SetScreenBrightness_020bc648 HasSceneActiveMenu
+#define SetScreenBrightness_020bc648 HasPanelScriptSkipTarget
 #define SetSecondaryElementEnabled_020bc084 SetSecondaryElementEnabled
 #define SetStatusHeaderText_020c1d38 SetStatusHeaderText
 #define SetStatusPageAndCursor_020c2ca4 SetStatusPageAndCursor

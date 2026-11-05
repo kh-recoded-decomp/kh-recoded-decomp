@@ -1,6 +1,6 @@
 #define FindNameIndexInTable_02025674 FindNameIndexInTable
 #define ScriptVm_Start_0202580c ScriptVm_Start
-#define SetLoaderCallbacks_02025914 SetLoaderCallbacks
+#define SetLoaderCallbacks_02025914 SetScriptVmPackedBitHandlers
 #define func_01ff8830 MI_CpuFill8
 #define func_0202d314 RelocateArchiveSectionsWithDefaultFlags
 #define func_0202d3e0 NestedPointer_GetFirstWord

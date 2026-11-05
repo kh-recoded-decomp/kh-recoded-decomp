@@ -32,7 +32,7 @@ extern void ClearSessionPackedBit(int id);
 extern void SetFieldEntriesPaused(int paused);
 extern void SetMenuHighlight(int on);
 extern BOOL IsEntryFlag2Active(int index);
-extern void func_0204d808(int sound);
+extern void QueueOrUpdateSoundKind3(int sound);
 extern void UpdateAreaFromPosition(void);
 extern u32 func_ov035_020bae84(void);
 extern void func_ov040_020bc83c(u32 value);
@@ -70,7 +70,7 @@ int UpdateAreaSceneState(void) {
     }
     if (IsEntryFlag2Active(0)) {
         state->flags |= 0x10;
-        func_0204d808(0x20);
+        QueueOrUpdateSoundKind3(0x20);
         return 0xc;
     }
     UpdateAreaFromPosition();

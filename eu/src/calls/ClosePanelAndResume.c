@@ -2,7 +2,7 @@
 #define ClosePanelAndResume_0202874c ClosePanelAndResume
 #define FadeBgmVolume_0204d9a8 FadeBgmVolume
 #define InvokeForChannelOrBoth_0200110c InvokeForChannelOrBoth
-#define IsSoundStreamActive_0204ded4 IsSoundStreamActive
+#define IsSoundStreamActive_0204ded4 HasNonzeroStreamPlaybackPosition
 #define OS_SetTick_02004084 OS_SetTick
 #define StartSoundStreamAtOffset_0204df50 StartSoundStreamAtOffset
 #define StopSoundStreamAtIndex_0204deb0 StopSoundStreamAtIndex

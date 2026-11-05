@@ -1,4 +1,0 @@
-#define IsSoundStreamActive_0204ded4 IsSoundStreamActive
-#define func_02020320 NNS_SndArcStrmGetCurrentPlayingPos
-#define g_soundWork_0206084c gSoundWork
-#include "src/arm9/audio/IsSoundStreamActive_0204ded4.c"

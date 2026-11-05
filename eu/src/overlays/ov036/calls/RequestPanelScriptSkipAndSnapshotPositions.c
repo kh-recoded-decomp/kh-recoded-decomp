@@ -1,0 +1,4 @@
+#define SnapshotActorSlotPositions_020bc5e0 RequestPanelScriptSkipAndSnapshotPositions
+#define data_ov036_020c3920 data_ov036_020c3940
+#define func_02025cec RequestScriptSkipIfTargetSet
+#include "src/ov036/panel_state/SnapshotActorSlotPositions_020bc5e0.c"

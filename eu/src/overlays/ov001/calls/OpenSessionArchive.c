@@ -2,7 +2,7 @@
 #define OpenSessionArchive_020635b0 OpenSessionArchive
 #define ReadSessionPackedBits_02064574 ReadSessionPackedBits
 #define RoundAndInitArchive_020258b0 RoundAndInitArchive
-#define SetLoaderCallbacks_02025914 SetLoaderCallbacks
+#define SetLoaderCallbacks_02025914 SetScriptVmPackedBitHandlers
 #define WriteSessionPackedBits_0206459c WriteSessionPackedBits
 #define data_ov001_020a0460 data_ov001_020a0480
 #define findSharedResourceByName_0202cd8c findSharedResourceByName

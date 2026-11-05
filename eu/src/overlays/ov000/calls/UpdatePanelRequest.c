@@ -1,4 +1,4 @@
-#define IsSoundStreamActive_0204ded4 IsSoundStreamActive
+#define IsSoundStreamActive_0204ded4 HasNonzeroStreamPlaybackPosition
 #define SetPanelState_02061db0 SetPanelState
 #define SubmitNumberedPanelRequest_02061f54 SubmitNumberedPanelRequest
 #define UpdatePanelRequest_02062d60 UpdatePanelRequest

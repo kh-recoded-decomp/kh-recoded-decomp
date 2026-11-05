@@ -1,3 +1,3 @@
 #define ScriptCmd_QueueSoundKind1_02026714 ScriptCmd_QueueSoundKind1
-#define SoundMgr_QueueKind1 func_0204d7c4
+#define SoundMgr_QueueKind1 QueueOrUpdateSoundKind1
 #include "src/arm9/shared_engine/ScriptCmd_QueueSoundKind1_02026714.c"

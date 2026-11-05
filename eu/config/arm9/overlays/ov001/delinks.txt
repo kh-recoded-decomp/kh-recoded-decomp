@@ -6200,15 +6200,15 @@ src/overlays/ov001/calls/func_ov001_020887a4.c:
     complete
     .text       start:0x020887a4 end:0x02088844
 
-src/overlays/ov001/calls/GetManagerStateFlag.c:
+src/overlays/ov001/calls/RequestFieldScriptSkip.c:
     complete
     .text       start:0x02088844 end:0x02088864
 
-src/overlays/ov001/calls/IsActorCountNonzero.c:
+src/overlays/ov001/calls/HasFieldScriptSkipTarget.c:
     complete
     .text       start:0x02088864 end:0x02088880
 
-src/overlays/ov001/calls/TryActivateAllActors.c:
+src/overlays/ov001/calls/AdvanceFieldScriptSkipAndRestoreActors.c:
     complete
     .text       start:0x02088880 end:0x02088904
 

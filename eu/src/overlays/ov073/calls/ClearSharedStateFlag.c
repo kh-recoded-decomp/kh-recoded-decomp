@@ -9,7 +9,7 @@ typedef struct MenuSharedState {
     BOOL active;
 } MenuSharedState;
 
-#define SetScreenBrightness HasSceneActiveMenu
+#define SetScreenBrightness HasPanelScriptSkipTarget
 
 extern void ShowStatusPageContents(MenuSharedState *state);
 extern void SetStatusElementVisible(int elementId, BOOL visible);

@@ -10,7 +10,7 @@ extern SceneActionState *data_ov030_020bd020;
 extern void SetFieldEntriesPaused(BOOL paused);
 extern void PlaySoundChecked(int group, int soundId);
 extern BOOL IsEntryFlag2Active(int entryId);
-extern void func_0204d808(int value);
+extern void QueueOrUpdateSoundKind3(int value);
 extern u32 func_ov001_0206e644(void);
 extern void UpdateCameraTriggers(void);
 
@@ -33,7 +33,7 @@ int ResolveMovieSceneAction(void)
         return 9;
     if (IsEntryFlag2Active(0)) {
         data_ov030_020bd020->flags |= 0x10;
-        func_0204d808(32);
+        QueueOrUpdateSoundKind3(32);
         return 11;
     }
     if (func_ov001_0206e644()) {

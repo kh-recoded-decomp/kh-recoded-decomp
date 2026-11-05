@@ -1,8 +1,0 @@
-#define func_ov001_02063a38 GetFieldSessionState
-#define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
-#define SetSelectionIfChanged_0204d73c SetSelectionIfChanged
-#define data_02055e00 gScriptState
-#define func_020262a4 IsSoundParamStale
-#define func_020265d8 func_020265ec
-#define func_ov036_020bd980 SetSceneCursor
-#include "src/arm9/shared_engine/func_020265d8.c"

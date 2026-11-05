@@ -35,7 +35,7 @@ extern u16 data_02060500;
 extern MovieState *GetRunningTaskWork(void);
 extern BOOL TickSubtitleTimer(void);
 extern BOOL func_ov022_020a7414(void);
-extern void MarkPendingActionIfTargetSet(MovieLoader *loader);
+extern void RequestScriptSkipIfTargetSet(MovieLoader *loader);
 extern u64 OS_GetTick(void);
 extern void Pad_Sample(void);
 extern void DrawMovieCaption(BOOL top);
@@ -50,9 +50,9 @@ extern void GX_DispOn(void);
 extern void OS_WaitVBlankIntr(void);
 extern void StopMoviePlayback(void);
 extern void OS_ResetSystem(int arg);
-extern BOOL IsSoundStreamActive(int index);
+extern BOOL HasNonzeroStreamPlaybackPosition(int index);
 extern void StopSoundStreamAtIndex(int index, int fadeFrames);
-extern void PcmChannel_ResetAndEnable(MovieLoader *loader);
+extern void ResetScriptSkipState(MovieLoader *loader);
 extern void SetPendingFieldValue(s32 arg);
 extern void UpdateMovieFadeOut(MovieState *state);
 extern void func_ov022_020a77b0(void);
@@ -72,7 +72,7 @@ void *RunMoviePlaybackState(void)
             if (state->flags & 4) {
                 if (func_ov022_020a7414()) {
                     if (state->flags & 1) {
-                        MarkPendingActionIfTargetSet(&state->loader);
+                        RequestScriptSkipIfTargetSet(&state->loader);
                     }
                     break;
                 }
@@ -132,7 +132,7 @@ void *RunMoviePlaybackState(void)
                 OS_WaitVBlankIntr();
             }
             if (state->flags & 1) {
-                MarkPendingActionIfTargetSet(&state->loader);
+                RequestScriptSkipIfTargetSet(&state->loader);
             }
         }
         StopMoviePlayback();
@@ -150,10 +150,10 @@ finish:
     if (state->mode == 3) {
         OS_ResetSystem(0);
     }
-    if ((state->flags & 4) && IsSoundStreamActive(0)) {
+    if ((state->flags & 4) && HasNonzeroStreamPlaybackPosition(0)) {
         StopSoundStreamAtIndex(0, 20);
     }
-    PcmChannel_ResetAndEnable(&state->loader);
+    ResetScriptSkipState(&state->loader);
     switch (state->loader.exitAction) {
     case 1:
         SetPendingFieldValue(state->loader.exitArg);

@@ -1,4 +1,0 @@
-#define SnapshotActorSlotPositions_020bc5e0 SnapshotActorSlotPositions
-#define data_ov036_020c3920 data_ov036_020c3940
-#define func_02025cec MarkPendingActionIfTargetSet
-#include "src/ov036/panel_state/SnapshotActorSlotPositions_020bc5e0.c"

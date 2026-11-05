@@ -15,13 +15,13 @@ extern PanelState *gPanelState;
 extern u32 gPreviousPanelActive;
 extern u16 data_02060500;
 
-extern void func_0202819c(void);
+extern void UpdateSoundAndSceneScriptSkip(void);
 extern BOOL PlaySoundEffect(int seqArcNo, int index);
 extern void ResetPanelFieldB8AndNotify(void);
 extern void UpdatePanelPromptBlink(void);
 extern void QueuePanelScreenTransferAndUpdateSound(void);
 extern BOOL ToggleSelectedPanelSlot(void);
-extern void func_020284e4(void);
+extern void RequestCurrentSceneScriptSkip(void);
 extern void StopSequencePlayersFrom2(void);
 extern void UpdatePanelSlotBlink(int slot);
 
@@ -33,7 +33,7 @@ BOOL UpdatePanelPromptInput(void)
         return TRUE;
     }
     if (panel->confirmed != 0) {
-        func_0202819c();
+        UpdateSoundAndSceneScriptSkip();
         return TRUE;
     }
     if (panel->field_b8 == 0) {
@@ -56,7 +56,7 @@ BOOL UpdatePanelPromptInput(void)
             if (panel->selectedSlot == 0) {
                 ResetPanelFieldB8AndNotify();
             } else {
-                func_020284e4();
+                RequestCurrentSceneScriptSkip();
                 StopSequencePlayersFrom2();
                 panel->confirmed = 1;
             }

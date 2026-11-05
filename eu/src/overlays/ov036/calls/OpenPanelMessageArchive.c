@@ -20,7 +20,7 @@ extern void *OS_SPrintf(char *dst, const char *format, ...);
 extern u32 Msg_OpenContainerAndReadHeader(const char *path, int mode, int flags);
 extern int findSharedResourceByName(void *table, void *name);
 extern int RoundAndInitArchive(void *record, u32 flags, void *flag, void *extra);
-extern void SetLoaderCallbacks(void *context, void *writeHandler, void *readHandler);
+extern void SetScriptVmPackedBitHandlers(void *context, void *writeHandler, void *readHandler);
 extern void WriteSessionPackedBits(void);
 extern void ReadSessionPackedBits(void);
 
@@ -39,5 +39,5 @@ void OpenPanelMessageArchive(char *name)
                         ((work->resourceTable + 0x8000) & 0xfffffc) << 7 |
                             0x80000000 | (resourceIndex & 0x1ff),
                         NULL, work->archiveBuffer);
-    SetLoaderCallbacks(work->archive, WriteSessionPackedBits, ReadSessionPackedBits);
+    SetScriptVmPackedBitHandlers(work->archive, WriteSessionPackedBits, ReadSessionPackedBits);
 }

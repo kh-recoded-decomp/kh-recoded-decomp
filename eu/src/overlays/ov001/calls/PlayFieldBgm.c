@@ -3,7 +3,7 @@
 #define GetCurrentFieldAreaIndex func_ov001_02067ed4
 #define GetAreaNormalBgm func_ov001_02068094
 #define GetAreaBattleBgm func_ov001_020680b0
-#define QueueBgmTrackChange func_0204d8cc
+#define QueueBgmTrackChange QueueSoundKind4
 
 typedef struct FieldBgmState {
     s8 mode;
@@ -22,7 +22,7 @@ extern int GetCurrentFieldAreaIndex(void);
 extern u8 GetAreaNormalBgm(int areaIndex);
 extern u8 GetAreaBattleBgm(int areaIndex);
 extern int QueueBgmTrackChange(int track, int fadeFrames);
-extern u32 SetScriptBusyFlag(u32 value);
+extern u32 SetScriptBgmSelection(u32 value);
 
 void PlayFieldBgm(BOOL useBattleTrack, int fadeFrames)
 {
@@ -43,5 +43,5 @@ void PlayFieldBgm(BOOL useBattleTrack, int fadeFrames)
         QueueBgmTrackChange(bgm->track, fadeFrames);
         bgm->mode = FIELD_BGM_NORMAL;
     }
-    SetScriptBusyFlag(~0U);
+    SetScriptBgmSelection(~0U);
 }

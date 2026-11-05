@@ -451,3 +451,12 @@ cleanup, linked-list adapters, movement/spatial update and selection refresh.
 [MAIN_RESOURCE_SERVICE_HELPERS.md](MAIN_RESOURCE_SERVICE_HELPERS.md) record
 logical inputs, actual-size returns, upload/CPU-buffer lifetimes and native ABI
 limits. The old free/sound labels do not describe those heap operations.
+
+## Field/panel script skip and sound contracts
+
+Thirty-four helpers now name their real VM skip, BGM-cache, sound/stream command
+and resource-binding roles. [SCRIPT_SKIP_SOUND_CONTRACTS.md](SCRIPT_SKIP_SOUND_CONTRACTS.md)
+records exact VM owners, distinct request/advance branches, command/resume
+results, live-register boundaries and queue/load limits. FinishSkip's former
+busy guard is identified as the separate handler-table word at index 3; its
+native view preserves the DATA owners and instructions.

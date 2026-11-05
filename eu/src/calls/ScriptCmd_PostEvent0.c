@@ -1,4 +1,0 @@
-#define ScriptCmd_PostEvent0_02026a88 ScriptCmd_PostEvent0
-#define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
-#define func_0204ddc4 RequestSoundSlotLoad
-#include "src/arm9/shared_engine/ScriptCmd_PostEvent0_02026a88.c"

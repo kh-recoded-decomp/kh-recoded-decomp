@@ -1,0 +1,6 @@
+#define func_ov001_02063838 GetSessionFlagsMask20
+#define func_ov001_02063a38 GetFieldSessionState
+#define func_02028518 AdvanceCurrentSceneScriptSkip
+#define func_ov001_02088858 AdvanceFieldScriptSkipAndRestoreActors
+#define func_ov036_020bc668 AdvancePanelScriptSkipAndRestoreScene
+#include "src/arm9/unclassified_helpers/func_02028518.c"

@@ -2,7 +2,7 @@
 #define GetCachedSoundParam_0204d720 GetCachedSoundParam
 #define SetEntrySlotsVisible_020b9580 SetEntrySlotsVisible
 #define func_02029f58 GetSubBrightnessSetting
-#define func_0204d8b8 func_0204d8cc
+#define func_0204d8b8 QueueSoundKind4
 #define func_ov013_0206da20 InitRecordScreenGraphics
 #define func_ov013_0206eb18 DrawContextEntrySummary
 #define func_ov013_0206f06c RefreshProgressCaption

@@ -10,7 +10,7 @@
 #define SetSelectionIfChanged_020bc92c SetSelectionIfChanged_020bc94c
 #define UpdateEntryCountRecord_020c42a0 UpdateEntryCountRecord
 #define data_ov001_020a0460 data_ov001_020a0480
-#define func_0204d8b8 func_0204d8cc
+#define func_0204d8b8 QueueSoundKind4
 #define func_ov001_020645c8 IsSessionFlagSet
 #define func_ov039_020bc1bc func_ov039_020bc1dc
 #define func_ov039_020bc810 GetMenuStackDepth

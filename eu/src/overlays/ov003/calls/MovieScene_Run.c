@@ -19,7 +19,7 @@ extern u32 GetVBlankCounter(void);
 extern u64 OS_GetTick(void);
 extern int TickSubtitleTimer(void);
 extern int MovieScene_IsFadeDone(void);
-extern void MarkPendingActionIfTargetSet(void *script);
+extern void RequestScriptSkipIfTargetSet(void *script);
 extern int ScriptVm_RunFrame(void *script);
 extern void MovieScene_ProcessTimeline(MovieRunScene *scene, int frame);
 extern void GX_DispOff(void);
@@ -31,7 +31,7 @@ extern void SetSecondaryBrightness(int value);
 extern void GX_DispOn(void);
 extern void OS_WaitVBlankIntr(void);
 extern void StopMoviePlayback(void);
-extern BOOL PcmChannel_ResetAndEnable(void *script);
+extern BOOL ResetScriptSkipState(void *script);
 extern void MovieScene_RequestStop(void);
 
 void *MovieScene_Run(void)
@@ -54,7 +54,7 @@ void *MovieScene_Run(void)
                 if ((scene->flags & 4) != 0) {
                     if (MovieScene_IsFadeDone() != 0) {
                         if ((scene->flags & 1) != 0) {
-                            MarkPendingActionIfTargetSet(scene->script);
+                            RequestScriptSkipIfTargetSet(scene->script);
                         }
                         break;
                     }
@@ -94,7 +94,7 @@ void *MovieScene_Run(void)
                 OS_WaitVBlankIntr();
             }
             if ((scene->flags & 1) != 0) {
-                MarkPendingActionIfTargetSet(scene->script);
+                RequestScriptSkipIfTargetSet(scene->script);
             }
         }
         StopMoviePlayback();
@@ -114,7 +114,7 @@ keepRunning:
     return NULL;
 
 finish:
-    PcmChannel_ResetAndEnable(scene->script);
+    ResetScriptSkipState(scene->script);
     exitScene = scene->exitScene;
     if (exitScene == 0 || (exitScene != 1 && exitScene == 2)) {
         scene->state = 2;
