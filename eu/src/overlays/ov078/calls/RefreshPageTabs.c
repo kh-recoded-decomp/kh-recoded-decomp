@@ -4,5 +4,5 @@
 #define SetEntrySlotsVisible_020b9580 SetEntrySlotsVisible
 #define func_ov027_020b91c8 SetWidgetPosition
 #define func_ov027_020b96a0 SetWidgetAnimationFrame
-#define func_ov039_020bc1bc func_ov039_020bc1dc
+#define func_ov039_020bc1bc GetMenuWork
 #include "src/ov078/unclassified_helpers/RefreshPageTabs_020c48dc.c"

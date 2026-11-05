@@ -1,4 +1,4 @@
-#define SetTimerDuration_020c27dc SetTimerDuration
+#define SetTimerDuration_020c27dc SetTextWindowState
 #define data_ov036_020c33b0 data_ov036_020c33d0
 #define data_ov036_020c33b8 data_ov036_020c33d8
 #define data_ov036_020c33e4 data_ov036_020c3404

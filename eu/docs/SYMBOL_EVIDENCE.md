@@ -597,3 +597,16 @@ side effects, signed sentinels, fixed-point update order and resource lifetimes:
 - [RESUME_MODE_LIFECYCLE_CONTRACTS.md](RESUME_MODE_LIFECYCLE_CONTRACTS.md): 13 entrypoints.
 - [RESULTS_SCREEN_NATIVE_HELPER_CONTRACTS.md](RESULTS_SCREEN_NATIVE_HELPER_CONTRACTS.md): 5 entrypoints.
 - [AREA_SCENE_DEFINITION_FADE_GAUGE_CONTRACTS.md](AREA_SCENE_DEFINITION_FADE_GAUGE_CONTRACTS.md): 28 entrypoints.
+
+## Event2D, text windows, continue/results, menus and area events
+
+One hundred eight entrypoints now identify distinct Event2D/window tasks,
+continue/results interfaces, menu phases/suboverlay/text work and area-event
+transitions/rewards. Owner-specific contracts preserve native state protocols,
+raw callback results, timing gates, graphics side effects and resource lifetimes:
+
+- [EVENT2D_PANEL_TEXT_WINDOW_CONTRACTS.md](EVENT2D_PANEL_TEXT_WINDOW_CONTRACTS.md): 58 entrypoints.
+- [CONTINUE_SCENE_LIFECYCLE_CONTRACTS.md](CONTINUE_SCENE_LIFECYCLE_CONTRACTS.md): 4 entrypoints.
+- [RESULTS_PAGE_LIFECYCLE_CONTRACTS.md](RESULTS_PAGE_LIFECYCLE_CONTRACTS.md): 9 entrypoints.
+- [MENU_PHASE_SUBOVERLAY_TEXT_CONTRACTS.md](MENU_PHASE_SUBOVERLAY_TEXT_CONTRACTS.md): 20 entrypoints.
+- [AREA_EVENT_TRANSITION_REWARD_CONTRACTS.md](AREA_EVENT_TRANSITION_REWARD_CONTRACTS.md): 17 entrypoints.

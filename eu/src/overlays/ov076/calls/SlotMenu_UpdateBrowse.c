@@ -24,7 +24,7 @@ extern char sOv076_E_020cd28c[];
 extern char sOv076_Na_020cd298[];
 extern char data_ov076_020cd280[];
 
-extern void *func_ov039_020bc1dc(void);
+extern void *GetMenuWork(void);
 extern BOOL GetMainBrightnessSetting(void);
 extern BOOL OpenHintPrompt(void *touch, SlotMenu *menu, SlotMenuCheck check, SlotMenuAction action, void *region, int arg5);
 extern void SlotMenu_EnterSlotEditState(SlotMenu *menu);
@@ -43,7 +43,7 @@ extern void SlotMenu_Draw3D(SlotMenu *menu, int mode);
 
 void SlotMenu_UpdateBrowse(SlotMenu *menu)
 {
-    void *layout = func_ov039_020bc1dc();
+    void *layout = GetMenuWork();
 
     if (!GetMainBrightnessSetting()) {
         if (!OpenHintPrompt(menu->touchInput, menu, NULL, SlotMenu_EnterSlotEditState, sOv076_E_020cd28c, 1) &&
@@ -56,7 +56,7 @@ void SlotMenu_UpdateBrowse(SlotMenu *menu)
             return;
         }
         menu->state = 2;
-        SetNavigationElementsVisible(func_ov039_020bc1dc(), FALSE);
+        SetNavigationElementsVisible(GetMenuWork(), FALSE);
     }
     if (!menu->headerShown) {
         ToggleSharedStateFlag(1);

@@ -1,5 +1,5 @@
 #define SetNavigationElementsVisible_020ccd30 SetNavigationElementsVisible
 #define SlotMenu_OpenMessage_020c6308 SlotMenu_OpenMessagePanel
 #define SlotMenu_ShowPointLimitWarning_020c89a0 SlotMenu_ShowPointLimitWarning
-#define func_ov039_020bc1bc func_ov039_020bc1dc
+#define func_ov039_020bc1bc GetMenuWork
 #include "src/ov076/unclassified_helpers/SlotMenu_ShowPointLimitWarning_020c89a0.c"

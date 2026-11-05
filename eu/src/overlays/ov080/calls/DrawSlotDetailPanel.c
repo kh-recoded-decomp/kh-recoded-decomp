@@ -38,8 +38,8 @@ extern void IndexedRecords_SetFlag2(void *panel, int index, BOOL visible);
 extern void IndexedRecord_SetPair(void *panel, int index, Position2D *position);
 extern void DrawTextAnchored(int *layer, int x, int y, int color, u32 flags, const u16 *text);
 extern int GetTextLayerLineWidth(int *layer, const u16 *text, const u16 **nextLine);
-extern void func_ov039_020be548(int *layer, int x, int y, int color, u32 flags, const u16 *text, u32 style);
-extern void func_ov039_020be594(int *layer, int x, int y, int color, const u16 *text);
+extern void DrawMenuTextWithShadow(int *layer, int x, int y, int color, u32 flags, const u16 *text, u32 style);
+extern void DrawCenteredMenuTextLines(int *layer, int x, int y, int color, const u16 *text);
 extern void SetTrackerRecordPosition(void *tracker, SlotFrame *frame, int x, int y);
 extern void TagTracker_InvokeCallback(void *tracker, SlotFrame *frame);
 extern Position2D *GetWidgetPosition(void *panel, void *element);
@@ -117,7 +117,7 @@ void DrawSlotDetailPanel(SaveSelectScreen *screen, int slotIndex)
                 DrawTextAnchored(screen->textLayer, levelLabelWidth + 0x25, topY, 3, 8, slot->levelText);
                 levelLabelWidth += 0x24;
                 DrawTextAnchored(screen->textLayer, levelLabelWidth, bottomY, 2, 8, slot->levelText);
-                func_ov039_020be548(screen->textLayer, 0x1e, y, 2, 8, slot->titleText, 0xac);
+                DrawMenuTextWithShadow(screen->textLayer, 0x1e, y, 2, 8, slot->titleText, 0xac);
                 Obj_SetField14(screen->textLayer, font);
                 DrawTextAnchored(screen->textLayer, 0xc7, topY, 3, 0x20, slot->playTimeText);
                 DrawTextAnchored(screen->textLayer, 0xc6, bottomY, 2, 0x20, slot->playTimeText);
@@ -140,7 +140,7 @@ void DrawSlotDetailPanel(SaveSelectScreen *screen, int slotIndex)
         }
         number = screen->slotIndex + 1;
         OS_SNPrintf_0202e094(text, 0x80, GetPackedFileEntry(&screen->messages, messageId), number, number);
-        func_ov039_020be594(screen->textLayer, 0x68, confirming ? 0x30 : 0x40, color, text);
+        DrawCenteredMenuTextLines(screen->textLayer, 0x68, confirming ? 0x30 : 0x40, color, text);
         DrawTextAnchored(screen->textLayer, 0x34, 0x53, 2, 0x10, GetPackedFileEntry(&screen->messages, 0xb));
         DrawTextAnchored(screen->textLayer, 0x9c, 0x53, 2, 0x10, GetPackedFileEntry(&screen->messages, 0xc));
     }

@@ -35,7 +35,7 @@ extern BOOL IsEntryFlag2Active(int index);
 extern void QueueOrUpdateSoundKind3(int sound);
 extern void UpdateAreaFromPosition(void);
 extern u32 GetCurrentAreaIndex(void);
-extern void func_ov040_020bc83c(u32 value);
+extern void RefreshAreaEventObjectAndLayerState(u32 value);
 extern void StartIdleSceneObjects(void);
 extern void SetFieldObjectInteractionsBlocked(int arg);
 extern u8 *GetBoundedEntryField(u32 index);
@@ -74,7 +74,7 @@ int UpdateAreaSceneState(void) {
         return 0xc;
     }
     UpdateAreaFromPosition();
-    func_ov040_020bc83c(GetCurrentAreaIndex());
+    RefreshAreaEventObjectAndLayerState(GetCurrentAreaIndex());
     if (state->sceneReady) {
         StartIdleSceneObjects();
         SetFieldObjectInteractionsBlocked(1);

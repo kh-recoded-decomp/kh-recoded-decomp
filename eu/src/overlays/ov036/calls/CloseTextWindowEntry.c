@@ -3,7 +3,7 @@
 #define SetDisplayLayersVisible_020c2768 SetDisplayLayersVisible
 #define SetRecordEntryEnabled_020bf4fc SetRecordEntryEnabled
 #define data_ov036_020c3844 gTextWindowResourceTable
-#define func_ov036_020bee40 func_ov036_020bee60
-#define func_ov036_020bf61c func_ov036_020bf63c
-#define func_ov036_020c27dc SetTimerDuration
+#define func_ov036_020bee40 ReleaseTextWindowGraphics
+#define func_ov036_020bf61c ReleaseTextWindowSpriteRecords
+#define func_ov036_020c27dc SetTextWindowState
 #include "src/ov036/text_rendering/CloseTextWindowEntry_020c1234.c"

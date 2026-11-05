@@ -43,7 +43,7 @@ typedef struct ShopMenu {
 typedef char MenuObjectListSizeCheck[(sizeof(MenuObjectList) == 0x34) ? 1 : -1];
 typedef char IconCellSizeCheck[(sizeof(IconCell) == 12) ? 1 : -1];
 
-extern void *func_ov039_020bc1dc(void);
+extern void *GetMenuWork(void);
 extern void *GetPrimaryMenuElement(void);
 extern void SweepElements(void);
 extern void FreePointerIfSet(void **ptr);
@@ -62,7 +62,7 @@ void ResetShopMenuGraphics(ShopMenu *menu)
     const u32 *source;
     u32 *destination;
     u32 *end;
-    void *container = func_ov039_020bc1dc();
+    void *container = GetMenuWork();
 
     GetPrimaryMenuElement();
     SweepElements();

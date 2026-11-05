@@ -1,3 +1,3 @@
 #define IsPxiResourceReadyOrInitialize_020be110 IsPxiResourceReadyOrInitialize
-#define PXI_Init_020bc8a8 func_ov036_020bc8c8
+#define PXI_Init_020bc8a8 SlideEvent2DActorSlotsOffscreen
 #include "src/ov036/shared_engine/IsPxiResourceReadyOrInitialize_020be110.c"

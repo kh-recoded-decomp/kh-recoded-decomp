@@ -1,6 +1,6 @@
 #define FX_Div_01ff9c84 FX_Div
 #define SetDisplayLayersVisible_020c2768 SetDisplayLayersVisible
-#define SetTimerDuration_020c27dc SetTimerDuration
+#define SetTimerDuration_020c27dc SetTextWindowState
 #define StepPanelFade_020c0328 StepPanelFade
 #define func_ov036_020c1d7c DrawScaledWindowFrame_020c1d9c
 #include "src/ov036/panel_state/StepPanelFade_020c0328.c"

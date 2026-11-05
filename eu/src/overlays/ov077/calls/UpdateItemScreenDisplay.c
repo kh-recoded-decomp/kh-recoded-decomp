@@ -4,7 +4,7 @@
 #define UpdateItemScreenDisplay_020c4be0 UpdateItemScreenDisplay
 #define func_0204f378 IndexedRecords_SetFlag2
 #define func_ov039_020bc0d4 GetPrimaryElementEnabled
-#define func_ov039_020bc1bc func_ov039_020bc1dc
+#define func_ov039_020bc1bc GetMenuWork
 #define func_ov077_020c4598 AssignCursorItemToPartySlot
 #define func_ov077_020c53a0 UpdateItemScreenStatusLink
 #define func_ov077_020c5510 SyncScreenSpriteSlots

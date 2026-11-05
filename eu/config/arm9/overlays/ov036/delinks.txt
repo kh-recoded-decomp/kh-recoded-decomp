@@ -28,7 +28,7 @@ src/overlays/ov036/calls/OpenPanelMessageArchive.c:
     complete
     .text       start:0x020ba840 end:0x020ba914
 
-src/overlays/ov036/calls/func_ov036_020ba914.c:
+src/overlays/ov036/calls/PanelSceneState_WaitControllerReady.c:
     complete
     .text       start:0x020ba914 end:0x020ba948
 
@@ -80,7 +80,7 @@ src/overlays/ov036/calls/DrawPanelSceneFrame.c:
     complete
     .text       start:0x020bb150 end:0x020bb2a4
 
-src/overlays/ov036/calls/func_ov036_020bb2a4.c:
+src/overlays/ov036/calls/UpdateEvent2DSceneObjects.c:
     complete
     .text       start:0x020bb2a4 end:0x020bb448
 
@@ -88,7 +88,7 @@ src/overlays/ov036/calls/ResetSlotScene.c:
     complete
     .text       start:0x020bb448 end:0x020bb564
 
-src/overlays/ov036/calls/func_ov036_020bb564.c:
+src/overlays/ov036/calls/UpdateEvent2DActorSlot.c:
     complete
     .text       start:0x020bb564 end:0x020bb5c4
 
@@ -108,7 +108,7 @@ src/overlays/ov036/calls/FindOrAcquireOwnerSlot.c:
     complete
     .text       start:0x020bb7e0 end:0x020bb8ec
 
-src/overlays/ov036/calls/func_ov036_020bb8ec.c:
+src/overlays/ov036/calls/GetActorSlotOffscreenY.c:
     complete
     .text       start:0x020bb8ec end:0x020bb900
 
@@ -148,7 +148,7 @@ src/overlays/ov036/calls/InitPanelDisplay.c:
     complete
     .text       start:0x020bc1d0 end:0x020bc3a4
 
-src/overlays/ov036/calls/func_ov036_020bc3a4.c:
+src/overlays/ov036/calls/CreateEvent2DPanelTask.c:
     complete
     .text       start:0x020bc3a4 end:0x020bc3c8
 
@@ -176,7 +176,7 @@ src/overlays/ov036/calls/RecordPanelInputEvent.c:
     complete
     .text       start:0x020bc478 end:0x020bc4c0
 
-src/overlays/ov036/auto/func_ov036_020bc4c0.c:
+src/overlays/ov036/auto/CanEvent2DSceneAdvanceSession.c:
     complete
     .text       start:0x020bc4c0 end:0x020bc4c8
 
@@ -208,7 +208,7 @@ src/overlays/ov036/calls/SlideActorSlotsOffscreen.c:
     complete
     .text       start:0x020bc83c end:0x020bc8c8
 
-src/overlays/ov036/calls/func_ov036_020bc8c8.c:
+src/overlays/ov036/calls/SlideEvent2DActorSlotsOffscreen.c:
     complete
     .text       start:0x020bc8c8 end:0x020bc8d4
 
@@ -236,7 +236,7 @@ src/overlays/ov036/calls/ToggleActorSlotFlip.c:
     complete
     .text       start:0x020bce40 end:0x020bce7c
 
-src/overlays/ov036/calls/func_ov036_020bce7c.c:
+src/overlays/ov036/calls/StartActorSlotShake.c:
     complete
     .text       start:0x020bce7c end:0x020bcee8
 
@@ -252,7 +252,7 @@ src/overlays/ov036/calls/StartActorSlotAlphaFade.c:
     complete
     .text       start:0x020bcfec end:0x020bd090
 
-src/overlays/ov036/calls/func_ov036_020bd090.c:
+src/overlays/ov036/calls/ReleaseEvent2DActorSlot.c:
     complete
     .text       start:0x020bd090 end:0x020bd0fc
 
@@ -332,7 +332,7 @@ src/overlays/ov036/calls/SetPanelCursorOverride.c:
     complete
     .text       start:0x020bd9c4 end:0x020bda00
 
-src/overlays/ov036/calls/func_ov036_020bda00.c:
+src/overlays/ov036/calls/ClearPanelWindowWaitState.c:
     complete
     .text       start:0x020bda00 end:0x020bda28
 
@@ -372,23 +372,23 @@ src/overlays/ov036/calls/ScriptCmd_ResetAndDispatch.c:
     complete
     .text       start:0x020bdce8 end:0x020bdd06
 
-src/overlays/ov036/calls/func_ov036_020bdd08.c:
+src/overlays/ov036/calls/PanelScriptCmd_SetSlotSharedRecord.c:
     complete
     .text       start:0x020bdd08 end:0x020bdd10
 
-src/overlays/ov036/calls/func_ov036_020bdd10.c:
+src/overlays/ov036/calls/PanelScriptCmd_MoveActorSlotX.c:
     complete
     .text       start:0x020bdd10 end:0x020bdd4e
 
-src/overlays/ov036/calls/func_ov036_020bdd50.c:
+src/overlays/ov036/calls/PanelScriptCmd_StartActorSlotShake.c:
     complete
     .text       start:0x020bdd50 end:0x020bdd72
 
-src/overlays/ov036/calls/func_ov036_020bdd74.c:
+src/overlays/ov036/calls/PanelScriptCmd_ToggleActorSlotFlip.c:
     complete
     .text       start:0x020bdd74 end:0x020bdd82
 
-src/overlays/ov036/calls/func_ov036_020bdd84.c:
+src/overlays/ov036/calls/PanelScriptCmd_StartActorFocusTransition.c:
     complete
     .text       start:0x020bdd84 end:0x020bddb4
 
@@ -420,15 +420,15 @@ src/overlays/ov036/calls/ScriptCmd_WaitWindowChoice.c:
     complete
     .text       start:0x020be050 end:0x020be098
 
-src/overlays/ov036/calls/func_ov036_020be098.c:
+src/overlays/ov036/calls/PanelScriptCmd_CloseAllTextWindows.c:
     complete
     .text       start:0x020be098 end:0x020be0a2
 
-src/overlays/ov036/auto/func_ov036_020be0a4.c:
+src/overlays/ov036/auto/PanelScriptResume_CloseTextWindowsDone.c:
     complete
     .text       start:0x020be0a4 end:0x020be0a8
 
-src/overlays/ov036/calls/func_ov036_020be0a8.c:
+src/overlays/ov036/calls/PanelScriptCmd_SetScreenLayerImage.c:
     complete
     .text       start:0x020be0a8 end:0x020be0ca
 
@@ -448,19 +448,19 @@ src/overlays/ov036/calls/IsPxiResourceReadyOrInitialize.c:
     complete
     .text       start:0x020be130 end:0x020be14c
 
-src/overlays/ov036/calls/func_ov036_020be14c.c:
+src/overlays/ov036/calls/PanelScriptCmd_SetActorSlotPriority.c:
     complete
     .text       start:0x020be14c end:0x020be16e
 
-src/overlays/ov036/calls/func_ov036_020be170.c:
+src/overlays/ov036/calls/PanelScriptCmd_StartActorSlotAlphaFade.c:
     complete
     .text       start:0x020be170 end:0x020be1ae
 
-src/overlays/ov036/calls/func_ov036_020be1b0.c:
+src/overlays/ov036/calls/PanelScriptCmd_ReleaseActorSlot.c:
     complete
     .text       start:0x020be1b0 end:0x020be1be
 
-src/overlays/ov036/calls/func_ov036_020be1c0.c:
+src/overlays/ov036/calls/PanelScriptCmd_MoveActorSlotY.c:
     complete
     .text       start:0x020be1c0 end:0x020be1fe
 
@@ -476,7 +476,7 @@ src/overlays/ov036/calls/FormatWideTextV_020be2e0.c:
     complete
     .text       start:0x020be2e0 end:0x020be2f4
 
-src/overlays/ov036/calls/func_ov036_020be2f4.c:
+src/overlays/ov036/calls/FormatPanelWideText.c:
     complete
     .text       start:0x020be2f4 end:0x020be312
 
@@ -496,7 +496,7 @@ src/overlays/ov036/calls/ScriptCmd_WaitWindowAnswer.c:
     complete
     .text       start:0x020be488 end:0x020be4ec
 
-src/overlays/ov036/calls/func_ov036_020be4ec.c:
+src/overlays/ov036/calls/PanelScriptCmd_StartScreenLayerScroll.c:
     complete
     .text       start:0x020be4ec end:0x020be52a
 
@@ -508,7 +508,7 @@ src/overlays/ov036/calls/ScriptCmd_ResetAndDispatch_020be55c.c:
     complete
     .text       start:0x020be55c end:0x020be57a
 
-src/overlays/ov036/calls/func_ov036_020be57c.c:
+src/overlays/ov036/calls/PanelScriptResume_LoadEntityModel.c:
     complete
     .text       start:0x020be57c end:0x020be584
 
@@ -520,7 +520,7 @@ src/overlays/ov036/calls/ScriptCmd_SetEntityMotion.c:
     complete
     .text       start:0x020be5f4 end:0x020be628
 
-src/overlays/ov036/calls/func_ov036_020be628.c:
+src/overlays/ov036/calls/PanelScriptCmd_ReleaseModelSlot.c:
     complete
     .text       start:0x020be628 end:0x020be64a
 
@@ -528,7 +528,7 @@ src/overlays/ov036/calls/ScriptCmd_StartBrightnessFade.c:
     complete
     .text       start:0x020be64c end:0x020be67a
 
-src/overlays/ov036/calls/func_ov036_020be67c.c:
+src/overlays/ov036/calls/PanelScriptCmd_StartScreenLayerZoom.c:
     complete
     .text       start:0x020be67c end:0x020be6bc
 
@@ -536,11 +536,11 @@ src/overlays/ov036/calls/ScriptCmd_OpenFormattedTextWindow.c:
     complete
     .text       start:0x020be6bc end:0x020be78c
 
-src/overlays/ov036/auto/func_ov036_020be78c.c:
+src/overlays/ov036/auto/PanelScriptCmd_BeginWaitSoundState4Clear.c:
     complete
     .text       start:0x020be78c end:0x020be790
 
-src/overlays/ov036/calls/IsResourceReadyOrInitialize_020be790.c:
+src/overlays/ov036/calls/IsPanelScriptSoundWaitComplete.c:
     complete
     .text       start:0x020be790 end:0x020be7b4
 
@@ -556,11 +556,11 @@ src/overlays/ov036/calls/ScriptCmd_SetCursorOverride.c:
     complete
     .text       start:0x020be7f4 end:0x020be858
 
-src/overlays/ov036/calls/func_ov036_020be858.c:
+src/overlays/ov036/calls/InitTextWindowTask.c:
     complete
     .text       start:0x020be858 end:0x020be914
 
-src/overlays/ov036/calls/func_ov036_020be914.c:
+src/overlays/ov036/calls/DestroyTextWindowTask.c:
     complete
     .text       start:0x020be914 end:0x020be948
 
@@ -576,15 +576,15 @@ src/overlays/ov036/calls/LoadTextWindowBackground.c:
     complete
     .text       start:0x020beaa0 end:0x020beb3c
 
-src/overlays/ov036/calls/func_ov036_020beb3c.c:
+src/overlays/ov036/calls/ReleaseTextWindowBackground.c:
     complete
     .text       start:0x020beb3c end:0x020beb7c
 
-src/overlays/ov036/calls/func_ov036_020beb7c.c:
+src/overlays/ov036/calls/LoadTextWindowFonts.c:
     complete
     .text       start:0x020beb7c end:0x020bebbc
 
-src/overlays/ov036/calls/func_ov036_020bebbc.c:
+src/overlays/ov036/calls/ReleaseTextWindowFonts.c:
     complete
     .text       start:0x020bebbc end:0x020bebec
 
@@ -592,7 +592,7 @@ src/overlays/ov036/calls/DrawTextWindow.c:
     complete
     .text       start:0x020bebec end:0x020bee60
 
-src/overlays/ov036/calls/func_ov036_020bee60.c:
+src/overlays/ov036/calls/ReleaseTextWindowGraphics.c:
     complete
     .text       start:0x020bee60 end:0x020bef0c
 
@@ -616,7 +616,7 @@ src/overlays/ov036/calls/InitOverlayObjManager.c:
     complete
     .text       start:0x020bf498 end:0x020bf4f4
 
-src/overlays/ov036/calls/func_ov036_020bf4f4.c:
+src/overlays/ov036/calls/ReleaseTextWindowDisplayList.c:
     complete
     .text       start:0x020bf4f4 end:0x020bf51c
 
@@ -628,23 +628,23 @@ src/overlays/ov036/calls/InitRecordEntryAt.c:
     complete
     .text       start:0x020bf550 end:0x020bf620
 
-src/overlays/ov036/calls/func_ov036_020bf620.c:
+src/overlays/ov036/calls/UpdateTextWindowDisplayList.c:
     complete
     .text       start:0x020bf620 end:0x020bf63c
 
-src/overlays/ov036/calls/func_ov036_020bf63c.c:
+src/overlays/ov036/calls/ReleaseTextWindowSpriteRecords.c:
     complete
     .text       start:0x020bf63c end:0x020bf690
 
-src/overlays/ov036/calls/func_ov036_020bf690.c:
+src/overlays/ov036/calls/UploadTextWindowBgCharacters.c:
     complete
     .text       start:0x020bf690 end:0x020bf6b8
 
-src/overlays/ov036/calls/func_ov036_020bf6b8.c:
+src/overlays/ov036/calls/UploadTextWindowBgScreen.c:
     complete
     .text       start:0x020bf6b8 end:0x020bf6dc
 
-src/overlays/ov036/auto/func_ov036_020bf6dc.c:
+src/overlays/ov036/auto/TextWindowState_IdleNoOp.c:
     complete
     .text       start:0x020bf6dc end:0x020bf6e0
 
@@ -672,7 +672,7 @@ src/overlays/ov036/calls/UpdateTextWindowTyping.c:
     complete
     .text       start:0x020c0d54 end:0x020c0e30
 
-src/overlays/ov036/auto/func_ov036_020c0e30.c:
+src/overlays/ov036/auto/TextWindowState_WaitPageAdvanceNoOp.c:
     complete
     .text       start:0x020c0e30 end:0x020c0e34
 
@@ -696,7 +696,7 @@ src/overlays/ov036/calls/HandleScrollMenuInput.c:
     complete
     .text       start:0x020c182c end:0x020c1d48
 
-src/overlays/ov036/calls/func_ov036_020c1d48.c:
+src/overlays/ov036/calls/TextWindowState_WaitPrimaryFadeOut.c:
     complete
     .text       start:0x020c1d48 end:0x020c1d9c
 
@@ -716,31 +716,31 @@ src/overlays/ov036/calls/IsPackedBitSet.c:
     complete
     .text       start:0x020c27c0 end:0x020c27dc
 
-src/overlays/ov036/calls/func_ov036_020c27dc.c:
+src/overlays/ov036/calls/SetTextWindowFlag.c:
     complete
     .text       start:0x020c27dc end:0x020c27ec
 
-src/overlays/ov036/calls/func_ov036_020c27ec.c:
+src/overlays/ov036/calls/ClearTextWindowFlag.c:
     complete
     .text       start:0x020c27ec end:0x020c27fc
 
-src/overlays/ov036/calls/SetTimerDuration.c:
+src/overlays/ov036/calls/SetTextWindowState.c:
     complete
     .text       start:0x020c27fc end:0x020c280c
 
-src/overlays/ov036/auto/func_ov036_020c280c.c:
+src/overlays/ov036/auto/GetTextWindowState.c:
     complete
     .text       start:0x020c280c end:0x020c2814
 
-src/overlays/ov036/calls/func_ov036_020c2814.c:
+src/overlays/ov036/calls/PlayTextWindowSound7WithCooldown.c:
     complete
     .text       start:0x020c2814 end:0x020c2854
 
-src/overlays/ov036/calls/func_ov036_020c2854.c:
+src/overlays/ov036/calls/CreateTextWindowTask.c:
     complete
     .text       start:0x020c2854 end:0x020c2884
 
-src/overlays/ov036/calls/func_ov036_020c2884.c:
+src/overlays/ov036/calls/DestroyTextWindowTaskHandle.c:
     complete
     .text       start:0x020c2884 end:0x020c2890
 
@@ -784,7 +784,7 @@ src/overlays/ov036/calls/MeasureSegmentedTextWindowTiles.c:
     complete
     .text       start:0x020c2b9c end:0x020c2d68
 
-src/overlays/ov036/calls/func_ov036_020c2d68.c:
+src/overlays/ov036/calls/InitTextWindowControllerTask.c:
     complete
     .text       start:0x020c2d68 end:0x020c2ddc
 
@@ -792,7 +792,7 @@ src/overlays/ov036/calls/DestroyPxiChannelState.c:
     complete
     .text       start:0x020c2ddc end:0x020c2e10
 
-src/overlays/ov036/auto/func_ov036_020c2e10.c:
+src/overlays/ov036/auto/UpdateTextWindowControllerNoOp.c:
     complete
     .text       start:0x020c2e10 end:0x020c2e18
 
@@ -804,7 +804,7 @@ src/overlays/ov036/calls/ConfigureOverlay036BackgroundControls.c:
     complete
     .text       start:0x020c2ea4 end:0x020c2f24
 
-src/overlays/ov036/auto/func_ov036_020c2f24.c:
+src/overlays/ov036/auto/IsTextWindowControllerReady.c:
     complete
     .text       start:0x020c2f24 end:0x020c2f2c
 
@@ -832,7 +832,7 @@ src/overlays/ov036/calls/GetTextWindowStatus.c:
     complete
     .text       start:0x020c30a0 end:0x020c30f8
 
-src/overlays/ov036/calls/func_ov036_020c30f8.c:
+src/overlays/ov036/calls/GetPanelTextWindowChoiceResult.c:
     complete
     .text       start:0x020c30f8 end:0x020c3104
 
@@ -844,11 +844,11 @@ src/overlays/ov036/calls/UploadAndFreeBgGraphics.c:
     complete
     .text       start:0x020c31e8 end:0x020c32bc
 
-src/overlays/ov036/calls/func_ov036_020c32bc.c:
+src/overlays/ov036/calls/OpenTextPanelWithGraphicsBackup.c:
     complete
     .text       start:0x020c32bc end:0x020c32e4
 
-libs/nitro/fs/calls/func_ov036_020c32e4.c:
+libs/nitro/fs/calls/UpdateTextPanelPromptCallback.c:
     complete
     .text       start:0x020c32e4 end:0x020c32f4
 
@@ -856,11 +856,11 @@ src/overlays/ov036/calls/CloseOverlayPanel.c:
     complete
     .text       start:0x020c32f4 end:0x020c3368
 
-src/overlays/ov036/calls/func_ov036_020c3368.c:
+src/overlays/ov036/calls/ClosePanelTextWindows.c:
     complete
     .text       start:0x020c3368 end:0x020c3374
 
-src/overlays/ov036/calls/func_ov036_020c3374.c:
+src/overlays/ov036/calls/AdvancePanelFinishedTextWindows.c:
     complete
     .text       start:0x020c3374 end:0x020c3380
 

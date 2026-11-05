@@ -7,5 +7,5 @@
 #define func_01ff89a8 MI_CpuCopy8
 #define func_0202c690 SetFileLoaderTextureUploadQueueMode
 #define func_0202c940 AcquireOrRefreshResourceBlock
-#define func_ov036_020bb8cc func_ov036_020bb8ec
+#define func_ov036_020bb8cc GetActorSlotOffscreenY
 #include "src/ov036/unclassified_helpers/SwapActorSlotResource_020bc978.c"

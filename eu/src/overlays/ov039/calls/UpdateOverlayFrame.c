@@ -5,7 +5,7 @@
 #define FS_UnloadOverlayImage_0204f5dc FS_UnloadOverlayImage_0204f5f0
 #define CopySourceBlock_020b9f7c CopySourceBlock
 #define func_0204f5ec ReadHalfword
-#define func_ov039_020bb6e8 func_ov039_020bb708
+#define func_ov039_020bb6e8 DispatchMenuPhaseUpdate
 #define UpdateWidgetRootAndResetList_020b8c80 UpdateWidgetRootAndResetList
 #define func_ov027_020b7dd4 UpdateTagTrackerAndTouch
 #define func_ov027_020b9e60 FlushDirtyTileTableRows

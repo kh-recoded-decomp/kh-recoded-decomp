@@ -12,7 +12,7 @@
 #define PXI_Init_020b9078 CreateWidgetImageEntry
 #define RefreshEntryListIfUnlocked_020c1f78 RefreshEntryListIfUnlocked
 #define SetEntrySlotsVisible_020b9580 SetEntrySlotsVisible
-#define SetTextColorIfFits_020bcd04 SetTextColorIfFits
+#define SetTextColorIfFits_020bcd04 SelectMenuFontForWidth
 #define SetupStageParams_020bdf10 SetupStageParams
 #define Slot_SetMode2Bit_0204f480 SetIndexedRecordMode
 #define SumRecordTableAEntries_020521f8 SumRecordTableAEntries
@@ -38,7 +38,7 @@
 #define func_ov034_020bde84 ResultsScreenNoOpCallback
 #define func_ov036_020bc414 IsPxiFifoTagSet_020bc434
 #define func_ov039_020bc18c GetPrimaryMenuElement
-#define func_ov039_020bc1bc func_ov039_020bc1dc
+#define func_ov039_020bc1bc GetMenuWork
 #define func_ov039_020bc318 LoadMainBgAndTriggerTags
 #define func_ov039_020bc84c GetPreviousMenuStackEntry
 #define func_ov039_020bc914 GetMenuSelection

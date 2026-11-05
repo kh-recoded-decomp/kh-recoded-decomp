@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-extern unsigned int func_ov039_020bc1dc();
+extern unsigned int GetMenuWork();
 extern unsigned int SlotMenu_ShowSlotHint();
 extern unsigned int SetNavigationElementsVisible();
 
@@ -14,6 +14,6 @@ void SlotMenu_EnterSlotEditState(unsigned int *work) {
     work[0x1281d] = 0;
     return;
   }
-  scene = func_ov039_020bc1dc();
+  scene = GetMenuWork();
   SetNavigationElementsVisible(scene,1);
 }

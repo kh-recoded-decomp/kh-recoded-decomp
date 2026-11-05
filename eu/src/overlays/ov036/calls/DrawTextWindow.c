@@ -11,5 +11,5 @@
 #define G2_GetBG3ScrPtr_02006f80 G2_GetBG3ScrPtr
 #define FlushBufferAndRunCallback_0200153c FlushBufferAndRunCallback
 #define FillBackgroundLayerRect_02001a60 FillBackgroundLayerRect
-#define func_ov036_020c27bc func_ov036_020c27dc
+#define func_ov036_020c27bc SetTextWindowFlag
 #include "src/ov036/panel_state/DrawTextWindow_020bebcc.c"

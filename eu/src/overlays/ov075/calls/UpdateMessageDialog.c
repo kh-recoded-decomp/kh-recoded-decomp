@@ -13,7 +13,7 @@
 #define UpdateYesNoDialogInput_020cf02c UpdateYesNoDialogInput
 #define func_0200344c DC_FlushRange
 #define func_ov027_020b91c8 SetWidgetPosition
-#define func_ov039_020bc1bc func_ov039_020bc1dc
+#define func_ov039_020bc1bc GetMenuWork
 #define func_ov039_020bca00 GetMenuInputState
 #define func_ov075_020ceee0 BuildItemPickerFrameTilemap
 #define func_ov075_020cf918 DrawCenteredDialogText

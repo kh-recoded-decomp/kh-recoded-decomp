@@ -4,5 +4,5 @@
 #define SlotMenu_OpenMessage_020c6308 SlotMenu_OpenMessagePanel
 #define SlotMenu_OpenSlotMessage_020c8388 SlotMenu_OpenSlotMessage
 #define func_01ff8740 MIi_CpuClearFast
-#define func_ov039_020bc1bc func_ov039_020bc1dc
+#define func_ov039_020bc1bc GetMenuWork
 #include "src/ov076/unclassified_helpers/SlotMenu_OpenSlotMessage_020c8388.c"

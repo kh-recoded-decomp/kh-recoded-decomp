@@ -79,7 +79,7 @@ extern void *CreateTaskObject(void *descriptor, void *userData);
 extern void NNS_FndInitList(void *list, int offset);
 extern int LoadUtf16FontResource(void *script, char *path);
 extern void SetupOverlayDisplay(void);
-extern void func_ov039_020bcdd8(void);
+extern void ResetMenuSubOverlayIndices(void);
 extern int *AcquireMapLayout(BOOL reload, BOOL discard);
 extern void InitTileTableFrom(void *table, TileTableDesc *source);
 extern void InitTween(void *tween);
@@ -161,7 +161,7 @@ void InitOverlayState(u32 entryArg)
     LoadUtf16FontResource(data_ov039_020bea20->scripts[2], sOv039_TextFontEu08sNftr_020be878);
     LoadUtf16FontResource(data_ov039_020bea20->scripts[3], sOv039_TextFontEu10sNftr_020be890);
     SetupOverlayDisplay();
-    func_ov039_020bcdd8();
+    ResetMenuSubOverlayIndices();
     AcquireMapLayout(state->mode != 7, FALSE);
     desc.ids = ids.ids;
     desc.count = 7;

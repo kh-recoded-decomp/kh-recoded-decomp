@@ -1,43 +1,43 @@
 #include "nitro/types.h"
 
 extern void ResetAreaMeshValues(void); /* ResetAreaMeshValues */
-extern void func_ov040_020bcd28(void);
+extern void ConfigureAreaSceneSlotsAndReset(void);
 extern void FinishAreaSceneLoad(void);
 extern void SetupAreaFieldState(void);
-extern void func_ov040_020bd0f4(void);
+extern void AreaSceneState_WaitForPanelReady(void);
 extern void UpdateAreaSceneState(void); /* UpdateAreaSceneState */
 extern void StartAreaCameraIntro(void);
 extern void TickIntroRotation(void); /* TickIntroRotation */
-extern void func_ov040_020bd418(void);
+extern void AreaSceneState_SetTransitionAudioAndFlags(void);
 extern void FadeInAreaScreens(void); /* FadeInAreaScreens */
-extern void func_ov040_020bd548(void);
+extern void AreaSceneState_BeginScreenTransition(void);
 extern void FinishAreaScreenTransition(void);
 extern void EnterState13WithHalfRate(void); /* EnterState13WithHalfRate */
-extern void func_ov040_020bd5e0(void);
-extern void func_ov040_020bd604(void);
-extern void func_ov040_020bd624(void);
-extern void func_ov040_020bd648(void);
+extern void AreaSceneState_RestoreFieldWhenScreenIdle(void);
+extern void AreaSceneState_StartIdleObjects(void);
+extern void AreaSceneState_BeginFadeOut(void);
+extern void AreaSceneState_WaitForExitTransition(void);
 extern void FinishAreaTransition(void); /* FinishAreaTransition */
-extern void func_ov040_020bd748(void); /* Gfd_DefaultFreeTexVram */
+extern void AreaSceneState_Hold(void); /* Gfd_DefaultFreeTexVram */
 
 void (*gAreaSceneStateHandlers[19])(void) = {
     ResetAreaMeshValues, /* ResetAreaMeshValues */
-    func_ov040_020bcd28,
+    ConfigureAreaSceneSlotsAndReset,
     FinishAreaSceneLoad,
     SetupAreaFieldState,
-    func_ov040_020bd0f4,
+    AreaSceneState_WaitForPanelReady,
     UpdateAreaSceneState, /* UpdateAreaSceneState */
     StartAreaCameraIntro,
     TickIntroRotation, /* TickIntroRotation */
-    func_ov040_020bd418,
+    AreaSceneState_SetTransitionAudioAndFlags,
     FadeInAreaScreens, /* FadeInAreaScreens */
-    func_ov040_020bd548,
+    AreaSceneState_BeginScreenTransition,
     FinishAreaScreenTransition,
     EnterState13WithHalfRate, /* EnterState13WithHalfRate */
-    func_ov040_020bd5e0,
-    func_ov040_020bd604,
-    func_ov040_020bd624,
-    func_ov040_020bd648,
+    AreaSceneState_RestoreFieldWhenScreenIdle,
+    AreaSceneState_StartIdleObjects,
+    AreaSceneState_BeginFadeOut,
+    AreaSceneState_WaitForExitTransition,
     FinishAreaTransition, /* FinishAreaTransition */
-    func_ov040_020bd748, /* Gfd_DefaultFreeTexVram */
+    AreaSceneState_Hold, /* Gfd_DefaultFreeTexVram */
 };

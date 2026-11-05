@@ -1,7 +1,7 @@
 #define ReleaseRecordSlot_02051dfc ReleaseRecordSlot
 #define ShutdownOverlay089_020c01b4 ShutdownOverlay089
 #define func_ov027_020b9098 SetWidgetRootInputCallback
-#define func_ov039_020bc1bc func_ov039_020bc1dc
+#define func_ov039_020bc1bc GetMenuWork
 #define func_ov089_020bf35c ReleaseEntryModels
 #define func_ov089_020bf488 ClearOverlay089PrimaryElementRecords
 #define func_ov089_020bf950 ReleaseEntryMenuTextLayers

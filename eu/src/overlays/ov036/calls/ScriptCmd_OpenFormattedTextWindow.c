@@ -5,5 +5,5 @@
 #define Utf8ToUcs2_020512b4 Utf8ToUcs2
 #define func_02025dac ByteCode_ResolveOperand
 #define func_ov036_020bdc04 AccumulateTextBoxScroll
-#define func_ov036_020be2d4 func_ov036_020be2f4
+#define func_ov036_020be2d4 FormatPanelWideText
 #include "src/ov036/shared_engine/ScriptCmd_OpenFormattedTextWindow_020be69c.c"

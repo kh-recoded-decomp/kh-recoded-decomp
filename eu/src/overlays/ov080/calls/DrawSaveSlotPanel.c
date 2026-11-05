@@ -11,5 +11,5 @@
 #define func_ov027_020b9580 SetEntrySlotsVisible
 #define func_ov039_020bc14c CallStateWidget
 #define func_ov039_020bc994 GetMenuFont10
-#define func_ov039_020be528 func_ov039_020be548
+#define func_ov039_020be528 DrawMenuTextWithShadow
 #include "src/ov080/unclassified_helpers/DrawSaveSlotPanel_020c4e6c.c"

@@ -4,7 +4,7 @@
 #define UpdateExitSequence_020bb33c UpdateExitSequence
 #define data_ov039_020bea00 data_ov039_020bea20
 #define func_0204d7f4 QueueOrUpdateSoundKind3
-#define func_ov039_020baae0 RuntimeState_SetMode
-#define func_ov039_020bcf20 func_ov039_020bcf40
-#define func_ov039_020bd054 func_ov039_020bd074
+#define func_ov039_020baae0 SetMenuPhase
+#define func_ov039_020bcf20 UpdatePrimaryMenuSubOverlay
+#define func_ov039_020bd054 UpdateSecondaryMenuSubOverlay
 #include "src/ov039/event_state/UpdateExitSequence_020bb33c.c"

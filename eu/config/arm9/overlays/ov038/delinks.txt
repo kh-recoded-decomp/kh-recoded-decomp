@@ -24,7 +24,7 @@ src/overlays/ov038/calls/EnableOv038SoundCtx.c:
     complete
     .text       start:0x020ba54c end:0x020ba588
 
-src/overlays/ov038/calls/func_ov038_020ba588.c:
+src/overlays/ov038/calls/WaitResultsPageThenOpenFieldMenu.c:
     complete
     .text       start:0x020ba588 end:0x020ba5ac
 
@@ -36,11 +36,11 @@ src/overlays/ov038/calls/DisableOv038Sound.c:
     complete
     .text       start:0x020ba5d4 end:0x020ba614
 
-src/overlays/ov038/auto/func_ov038_020ba614.c:
+src/overlays/ov038/auto/ResultsTaskStateHold.c:
     complete
     .text       start:0x020ba614 end:0x020ba61c
 
-src/overlays/ov038/calls/func_ov038_020ba61c.c:
+src/overlays/ov038/calls/CreateResultsPageTask.c:
     complete
     .text       start:0x020ba61c end:0x020ba640
 
@@ -64,7 +64,7 @@ src/overlays/ov038/calls/ReleaseOv038Object.c:
     complete
     .text       start:0x020ba6d8 end:0x020ba6f8
 
-src/overlays/ov038/auto/func_ov038_020ba6f8.c:
+src/overlays/ov038/auto/ResultsPageHandlerNoOp.c:
     complete
     .text       start:0x020ba6f8 end:0x020ba700
 
@@ -76,7 +76,7 @@ src/overlays/ov038/calls/InitOv038HandlerTable.c:
     complete
     .text       start:0x020ba718 end:0x020ba780
 
-src/overlays/ov038/auto/func_ov038_020ba780.c:
+src/overlays/ov038/auto/ResultsPageStateNoOp.c:
     complete
     .text       start:0x020ba780 end:0x020ba788
 
@@ -124,7 +124,7 @@ src/overlays/ov038/calls/ReleaseOv038SlotPools.c:
     complete
     .text       start:0x020bb0e0 end:0x020bb124
 
-src/overlays/ov038/calls/InitOv038SlotPools.c:
+src/overlays/ov038/calls/UpdateResultsPageSpriteManagers.c:
     complete
     .text       start:0x020bb124 end:0x020bb15c
 
@@ -168,11 +168,11 @@ src/overlays/ov038/calls/BuildCompletionStats.c:
     complete
     .text       start:0x020bb694 end:0x020bbcb0
 
-src/overlays/ov038/calls/func_ov038_020bbcb0.c:
+src/overlays/ov038/calls/SetupResultsPageDisplay.c:
     complete
     .text       start:0x020bbcb0 end:0x020bbcbc
 
-src/overlays/ov038/calls/func_ov038_020bbcbc.c:
+src/overlays/ov038/calls/InitResultsPageResources.c:
     complete
     .text       start:0x020bbcbc end:0x020bbcd8
 
@@ -180,7 +180,7 @@ src/overlays/ov038/calls/ReleaseOv038Context.c:
     complete
     .text       start:0x020bbcd8 end:0x020bbd08
 
-src/overlays/ov038/calls/func_ov038_020bbd08.c:
+src/overlays/ov038/calls/UpdateResultsPageAndSprites.c:
     complete
     .text       start:0x020bbd08 end:0x020bbd30
 

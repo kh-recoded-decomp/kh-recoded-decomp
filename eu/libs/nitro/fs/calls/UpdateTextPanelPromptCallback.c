@@ -1,0 +1,3 @@
+#define FS_EndOverlay UpdatePanelPromptInput
+#define FS_UnloadOverlayImage_020c32c4 UpdateTextPanelPromptCallback
+#include "src/ov036/library_nitro_fs/FS_UnloadOverlayImage_020c32c4.c"

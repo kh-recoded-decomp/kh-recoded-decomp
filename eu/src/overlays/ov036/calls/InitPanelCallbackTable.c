@@ -2,10 +2,10 @@
 #define InvalidatePxiFifoTag_020bc438 InvalidatePxiFifoTag
 #define IsPxiFifoTagSet_020bc414 IsPxiFifoTagSet_020bc434
 #define RecordPanelInputEvent_020bc458 RecordPanelInputEvent
-#define func_ov036_020bb284 func_ov036_020bb2a4
-#define func_ov036_020bc384 func_ov036_020bc3a4
+#define func_ov036_020bb284 UpdateEvent2DSceneObjects
+#define func_ov036_020bc384 CreateEvent2DPanelTask
 #define func_ov036_020bc3a8 IsSceneReady
 #define func_ov036_020bc3d4 func_ov036_020bc3f4
 #define func_ov036_020bc3f8 SetSceneFlag4000
-#define func_ov036_020bc4a0 func_ov036_020bc4c0
+#define func_ov036_020bc4a0 CanEvent2DSceneAdvanceSession
 #include "src/ov036/panel_state/InitPanelCallbackTable_020bc4a8.c"

@@ -2,10 +2,10 @@
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define RedrawScrolledTextLayer_020bf3d8 RedrawScrolledTextLayer
 #define SetRecordEntryEnabled_020bf4fc SetRecordEntryEnabled
-#define SetTimerDuration_020c27dc SetTimerDuration
+#define SetTimerDuration_020c27dc SetTextWindowState
 #define data_ov036_020c3844 gTextWindowResourceTable
 #define func_020019f4 GetNestedModeByte
 #define func_0204f13c IndexedRecord_SetPair
 #define func_0204f5ec ReadHalfword
-#define func_ov036_020c27ec func_ov036_020c280c
+#define func_ov036_020c27ec GetTextWindowState
 #include "src/ov036/panel_state/HandleScrollMenuInput_020c180c.c"

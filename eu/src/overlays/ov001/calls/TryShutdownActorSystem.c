@@ -17,7 +17,7 @@ extern s32 IsFieldPanelHidden(void);
 extern void ClearAllActorSlots(void);
 extern s32 IsTransitionStateDone(void);
 extern void FinishEventCameraCut(void);
-extern void func_ov040_020bdba4(void);
+extern void StartAreaEventsAdapter(void);
 
 s32 TryShutdownActorSystem(void)
 {
@@ -39,7 +39,7 @@ s32 TryShutdownActorSystem(void)
         if (sessionMode == 6 && (sessionMode = IsSessionFlagSet(0x3628), sessionMode != 0) &&
             (sessionMode = IsSessionFlagSet(0x363c), sessionMode == 0)) {
             ClearSessionPackedBit(0x3628);
-            func_ov040_020bdba4();
+            StartAreaEventsAdapter();
         }
         return 0x20882d5;
     }

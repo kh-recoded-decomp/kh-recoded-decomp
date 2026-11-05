@@ -1,6 +1,6 @@
-#define PXI_Init_020baa64 func_ov037_020baa84
+#define PXI_Init_020baa64 UpdateContinueActorBillboards
 #define RunCommStepMachine_020ba45c RunCommStepMachine
-#define func_ov037_020baa70 func_ov037_020baa90
+#define func_ov037_020baa70 TickContinueActorCallbacks
 #define g_commState_020bb760 gContinueSceneState
 #define g_commStepTable_020bb6b8 gCommunicationStateHandlers
 #include "src/ov037/unclassified_helpers/RunCommStepMachine_020ba45c.c"

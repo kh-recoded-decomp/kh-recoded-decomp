@@ -1,4 +1,4 @@
 #define GetPlayerFlagRecord_0205036c GetPlayerFlagRecord
 #define IsRewardSlotUnclaimed_020be0c4 IsRewardSlotUnclaimed
-#define func_ov040_020bdc24 func_ov040_020bdc44
+#define func_ov040_020bdc24 RewardCodeToStackItemId
 #include "src/ov040/shared_engine/IsRewardSlotUnclaimed_020be0c4.c"

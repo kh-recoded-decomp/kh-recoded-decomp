@@ -1,5 +1,5 @@
 #define DestroyOv081Screen_020c571c DestroyOv081Screen
-#define func_ov039_020bc1bc func_ov039_020bc1dc
+#define func_ov039_020bc1bc GetMenuWork
 #define FreeEntryLists_020c523c FreeEntryLists
 #define DestroyAllContainerElements_020b900c DestroyAllContainerElements
 #define ReleaseIfMarked_020b903c ReleaseIfMarked

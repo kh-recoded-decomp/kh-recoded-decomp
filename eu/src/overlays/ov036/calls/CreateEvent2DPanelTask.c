@@ -1,0 +1,5 @@
+#define data_020c36c0 data_ov036_020c36e0
+#define data_020c36c4 data_ov036_020c36e4
+#define func_0202a448 CreateTaskObject
+#define func_ov036_020bc384 CreateEvent2DPanelTask
+#include "src/ov036/reviewed_helpers/func_ov036_020bc384.c"

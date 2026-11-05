@@ -1,0 +1,5 @@
+#define InitStreamBufferPair_020bacbc StartMenuBrightnessTweens
+#define data_ov039_020bea00 data_ov039_020bea20
+#define func_02052514 ConfigureTween
+#define func_0205255c StartTween
+#include "src/ov039/reviewed_helpers/InitStreamBufferPair_020bacbc.c"

@@ -1,6 +1,6 @@
 #define InitThenDispatchTwoHandlers_020bb308 InitThenDispatchTwoHandlers
 #define data_ov039_020bea00 data_ov039_020bea20
 #define func_ov039_020baf1c PollHandlerInput
-#define func_ov039_020bcf20 func_ov039_020bcf40
-#define func_ov039_020bd054 func_ov039_020bd074
+#define func_ov039_020bcf20 UpdatePrimaryMenuSubOverlay
+#define func_ov039_020bd054 UpdateSecondaryMenuSubOverlay
 #include "src/ov039/overlay_event_dispatch/InitThenDispatchTwoHandlers_020bb308.c"

@@ -9,7 +9,7 @@
 #define func_0202e060 SPrintfUnbounded
 #define func_02052514 ConfigureTween
 #define func_0205255c StartTween
-#define func_ov039_020bc1bc func_ov039_020bc1dc
+#define func_ov039_020bc1bc GetMenuWork
 #define func_ov081_020c5530 DrawBgTextLabel
 #define func_ov081_020c5be4 GetTutorialTextEntry
 #include "src/ov081/unclassified_helpers/DrawListPageIndicator_020c5790.c"

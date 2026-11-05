@@ -4,5 +4,5 @@
 #define func_0204f378 IndexedRecords_SetFlag2
 #define func_ov027_020ba2a8 GetPackedFileEntry
 #define func_ov039_020bc14c CallStateWidget
-#define func_ov039_020be574 func_ov039_020be594
+#define func_ov039_020be574 DrawCenteredMenuTextLines
 #include "src/ov080/unclassified_helpers/HideSaveSlotsShowPrompt_020c54b8.c"

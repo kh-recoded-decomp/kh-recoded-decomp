@@ -50,7 +50,7 @@
 #define func_ov027_020ba2a8 GetPackedFileEntry
 #define func_ov039_020bc03c RuntimeState_SetCondition
 #define func_ov039_020bc18c GetPrimaryMenuElement
-#define func_ov039_020bc1bc func_ov039_020bc1dc
+#define func_ov039_020bc1bc GetMenuWork
 #define func_ov039_020bc220 BuildSlotImageParams
 #define func_ov039_020bc318 LoadMainBgAndTriggerTags
 #define func_ov039_020bc414 LoadSlotBgCharacters
@@ -59,7 +59,7 @@
 #define func_ov039_020bc914 GetMenuSelection
 #define func_ov039_020bcb00 GetFieldCad0
 #define func_ov039_020bcb20 FormatSaveLocationLabel
-#define func_ov039_020bcd04 SetTextColorIfFits
+#define func_ov039_020bcd04 SelectMenuFontForWidth
 #define func_ov039_020be5b8 OpenTextFrame
 #define func_ov039_020be6a0 SetupMainBgLayers_020be6c0
 #define func_ov074_020c50b0 CaptureSelectedJointMtx

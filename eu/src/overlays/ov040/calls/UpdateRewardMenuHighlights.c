@@ -5,5 +5,5 @@
 #define data_ov040_020be264 data_ov040_020be284
 #define func_0204f768 GetOverlaySelectionRecord
 #define func_ov007_020a1b08 GetEventTargetLayerAndChannel
-#define func_ov040_020bdc24 func_ov040_020bdc44
+#define func_ov040_020bdc24 RewardCodeToStackItemId
 #include "src/ov040/shared_engine/UpdateRewardMenuHighlights_020bde68.c"

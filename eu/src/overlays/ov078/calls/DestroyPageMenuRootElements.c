@@ -1,4 +1,4 @@
-#define OS_DisableInterrupts func_ov039_020bc1dc
+#define OS_DisableInterrupts GetMenuWork
 #define OS_RescheduleThread_020c4708 DestroyPageMenuRootElements
 #define OS_RestoreInterrupts ReleaseIfMarked
 #define OSi_RescheduleThread DestroyAllContainerElements

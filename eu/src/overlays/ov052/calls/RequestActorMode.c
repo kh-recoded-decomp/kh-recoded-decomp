@@ -4,5 +4,5 @@
 #define FindSlotRecordById_020a9124 FindSlotRecordById
 #define InvokeMemberHandler_020ad950 InvokeMemberHandler
 #define RequestActorMode_020cde20 RequestActorMode
-#define func_ov040_020be008 func_ov040_020be028
+#define func_ov040_020be008 GetAreaRewardAnimationTable
 #include "src/ov052/unclassified_helpers/RequestActorMode_020cde20.c"

@@ -44,7 +44,7 @@
 #define func_0202c690 SetFileLoaderTextureUploadQueueMode
 #define func_ov027_020b97b8 SetWidgetRecordMode
 #define func_ov027_020ba2a8 GetPackedFileEntry
-#define func_ov039_020bc1bc func_ov039_020bc1dc
+#define func_ov039_020bc1bc GetMenuWork
 #define func_ov039_020bca00 GetMenuInputState
 #define func_ov075_020c8920 UpdateMatrixMenuBackground
 #define func_ov075_020cfbfc ItemPickerPanel_Create

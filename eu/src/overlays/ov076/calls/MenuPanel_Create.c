@@ -4,7 +4,7 @@
 #define data_ov076_020cd38c sOv076_UiMenuCmnmtxP2_020cd3ac
 #define data_ov076_020cd3a0 sOv076_UiMenuLanguageCmnmtxP2_020cd3c0
 #define data_ov076_020cd3ec gSlotMenuPanelWork
-#define func_ov039_020bc1bc func_ov039_020bc1dc
+#define func_ov039_020bc1bc GetMenuWork
 #define AcquireRecordSlot_02051d3c AcquireRecordSlot
 #define func_ov076_020ccd84 LoadSlotMenuTipImages
 #define QueueSoundCommandForArc_0204d670 QueueSoundCommandForArc

@@ -13,5 +13,5 @@
 #define DrawTextWindow_020bebcc DrawTextWindow
 #define SetRecordEntryEnabled_020bf4fc SetRecordEntryEnabled
 #define InitRecordEntryAt_020bf530 InitRecordEntryAt
-#define SetTimerDuration_020c27dc SetTimerDuration
+#define SetTimerDuration_020c27dc SetTextWindowState
 #include "src/ov036/text_rendering/LayoutTextWindow_020c03e0.c"

@@ -3,5 +3,5 @@
 #define data_ov036_020c36d8 gPanelScriptStateHandlers
 #define data_ov036_020c3920 data_ov036_020c3940
 #define func_ov036_020bb130 DrawPanelSceneFrame
-#define func_ov036_020bb284 func_ov036_020bb2a4
+#define func_ov036_020bb284 UpdateEvent2DSceneObjects
 #include "src/ov036/panel_state/RunPanelStateMachine_020ba620.c"

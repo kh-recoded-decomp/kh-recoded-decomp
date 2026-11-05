@@ -5,20 +5,20 @@ extern void InitThenDispatchTwoHandlers(void);
 extern void LoadSelectedHandlerAndStart(void);
 extern void UpdateExitSequence(void);
 extern void UpdateSubOverlayHandlers(void);
-extern void func_ov039_020bb2d0(void);
-extern void func_ov039_020bb4c8(void);
-extern void func_ov039_020bb518(void);
+extern void WaitMenuFadeInThenEnableInput(void);
+extern void WaitSubMenuFadeInThenEnableButtons(void);
+extern void WaitMenuFadeOutThenEnterShutdown(void);
 extern void ShutdownHandlersAndExit(void);
 
 void *const data_ov039_020be7bc[10] = {
     NULL,
     (void *)UpdateSubOverlayHandlers,
-    (void *)func_ov039_020bb2d0,
+    (void *)WaitMenuFadeInThenEnableInput,
     (void *)InitThenDispatchTwoHandlers,
     (void *)UpdateExitSequence,
     (void *)LoadSelectedHandlerAndStart,
-    (void *)func_ov039_020bb4c8,
-    (void *)func_ov039_020bb518,
+    (void *)WaitSubMenuFadeInThenEnableButtons,
+    (void *)WaitMenuFadeOutThenEnterShutdown,
     (void *)CleanupHandlersAndSetPhase5,
     (void *)ShutdownHandlersAndExit,
 };

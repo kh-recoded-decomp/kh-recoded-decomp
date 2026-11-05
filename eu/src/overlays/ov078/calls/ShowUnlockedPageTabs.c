@@ -2,5 +2,5 @@
 #define ReadGlobalPackedBits_02027348 ReadGlobalPackedBits
 #define SetEntrySlotsVisible_020b9580 SetEntrySlotsVisible
 #define ShowUnlockedPageTabs_020c4774 ShowUnlockedPageTabs
-#define func_ov039_020bc1bc func_ov039_020bc1dc
+#define func_ov039_020bc1bc GetMenuWork
 #include "src/ov078/unclassified_helpers/ShowUnlockedPageTabs_020c4774.c"

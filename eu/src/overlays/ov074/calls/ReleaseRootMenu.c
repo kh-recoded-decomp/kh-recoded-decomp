@@ -14,5 +14,5 @@
 #define func_02013d74 NNS_GfdResetFrmPlttVramState
 #define func_0202eaf4 ReleaseModelAnimationResources
 #define func_ov039_020bc18c GetPrimaryMenuElement
-#define func_ov039_020bc1bc func_ov039_020bc1dc
+#define func_ov039_020bc1bc GetMenuWork
 #include "src/ov074/root_menu/ReleaseRootMenu_020c4fa4.c"

@@ -2,5 +2,5 @@
 #define data_ov036_020c3844 gTextWindowResourceTable
 #define func_01ff8740 MIi_CpuClearFast
 #define func_01ff878c MIi_CpuCopyFast
-#define func_ov036_020c27dc SetTimerDuration
+#define func_ov036_020c27dc SetTextWindowState
 #include "src/ov036/text_rendering/PushTextWindowHistory_020be928.c"

@@ -39,7 +39,7 @@
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField
 #define func_ov031_020bb054 UpdateSceneScroll
 #define func_ov021_020a75d8 SetClampedCursor
-#define func_ov040_020bc81c func_ov040_020bc83c
+#define func_ov040_020bc81c RefreshAreaEventObjectAndLayerState
 #define func_ov001_02087ed0 ForwardToActiveService_02087ef8
 #define func_ov001_0207ef40 func_ov001_0207ef68
 #define func_ov001_0207ef68 SetOverlayLayerVisible

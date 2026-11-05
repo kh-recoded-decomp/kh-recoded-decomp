@@ -1,3 +1,0 @@
-#define IsResourceReadyOrInitialize_020be770 IsResourceReadyOrInitialize_020be790
-#define func_0204d6fc IsSceneState4
-#include "src/ov036/shared_engine/IsResourceReadyOrInitialize_020be770.c"

@@ -8,7 +8,7 @@
 #define SlotMenu_Update_020c4b48 SlotMenu_Update
 #define func_ov039_020bc03c RuntimeState_SetCondition
 #define func_ov039_020bc0d4 GetPrimaryElementEnabled
-#define func_ov039_020bc1bc func_ov039_020bc1dc
+#define func_ov039_020bc1bc GetMenuWork
 #define func_ov076_020c4d94 SlotMenu_UpdateBrowse
 #define func_ov076_020c4e7c SlotMenu_UpdateIdle
 #define func_ov076_020c4f7c SlotMenu_OpenEmptySlot

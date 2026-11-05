@@ -1,0 +1,2 @@
+#define FSi_CloseFileCommand_020be76c PanelScriptCmd_BeginWaitSoundState4Clear
+#include "src/ov036/library_nitro_fs/FSi_CloseFileCommand_020be76c.c"

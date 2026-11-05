@@ -1,7 +1,7 @@
 #define GetTextWindowStatus_020c3080 GetTextWindowStatus
-#define PXI_Init_020c30d8 func_ov036_020c30f8
-#define PXI_Init_020c3354 func_ov036_020c3374
+#define PXI_Init_020c30d8 GetPanelTextWindowChoiceResult
+#define PXI_Init_020c3354 AdvancePanelFinishedTextWindows
 #define ScriptCmd_WaitWindowChoice_020be030 ScriptCmd_WaitWindowChoice
 #define WriteSessionPackedBits_0206459c WriteSessionPackedBits
-#define func_ov036_020bd9e0 func_ov036_020bda00
+#define func_ov036_020bd9e0 ClearPanelWindowWaitState
 #include "src/ov036/shared_engine/ScriptCmd_WaitWindowChoice_020be030.c"

@@ -9,7 +9,7 @@
 #define func_ov001_020645c8 IsSessionFlagSet
 #define func_ov027_020b90f4 GetFocusedWidget
 #define func_ov027_020ba2a8 GetPackedFileEntry
-#define func_ov039_020bc1bc func_ov039_020bc1dc
+#define func_ov039_020bc1bc GetMenuWork
 #define func_ov039_020bc810 GetMenuStackDepth
 #define func_ov087_020c4714 DrawChoiceWindowTextAndUpload
 #define func_ov087_020c4a48 HideChoiceWidgets_020c4a48

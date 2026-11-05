@@ -16,7 +16,7 @@
 #define func_0205255c StartTween
 #define func_ov027_020b8f98 LoadWidgetDescriptorsFromFile
 #define func_ov027_020b97b8 SetWidgetRecordMode
-#define func_ov039_020bc1bc func_ov039_020bc1dc
+#define func_ov039_020bc1bc GetMenuWork
 #define func_ov039_020bc1cc GetMenuWidgetContainer
 #define func_ov081_020c4260 InitEntryTables
 #define func_ov081_020c4e98 BuildVisibleEntryIndex

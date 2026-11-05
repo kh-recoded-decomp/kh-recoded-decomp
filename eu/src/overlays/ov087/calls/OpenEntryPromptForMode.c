@@ -2,7 +2,7 @@
 #define OpenEntryPromptForMode_020c5ba0 OpenEntryPromptForMode
 #define func_ov027_020b90a4 FindWidgetById
 #define func_ov027_020b9580 SetEntrySlotsVisible
-#define func_ov039_020bc1bc func_ov039_020bc1dc
+#define func_ov039_020bc1bc GetMenuWork
 #define func_ov087_020c4758 DrawPromptMessage
 #define func_ov087_020c4c70 ShowConfirmWindows
 #include "src/ov087/panel_state/OpenEntryPromptForMode_020c5ba0.c"

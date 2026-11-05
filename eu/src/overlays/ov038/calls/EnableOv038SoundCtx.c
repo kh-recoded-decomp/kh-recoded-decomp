@@ -1,5 +1,5 @@
 #define EnableOv038SoundCtx_020ba52c EnableOv038SoundCtx
 #define StoreToGlobalPtr4Field28_0202a778 StoreToGlobalPtr4Field28
-#define func_ov038_020bbc9c func_ov038_020bbcbc
+#define func_ov038_020bbc9c InitResultsPageResources
 #define g_ov038SoundCtx_020bd140 data_ov038_020bd160
 #include "src/ov038/reviewed_helpers/EnableOv038SoundCtx_020ba52c.c"

@@ -1,4 +1,4 @@
 #define ReleaseScreenSprites_020c5270 ReleaseScreenSprites
 #define func_0204f0c0 UnlinkActiveIndexedRecord
-#define func_ov039_020bc1bc func_ov039_020bc1dc
+#define func_ov039_020bc1bc GetMenuWork
 #include "src/ov077/unclassified_helpers/ReleaseScreenSprites_020c5270.c"

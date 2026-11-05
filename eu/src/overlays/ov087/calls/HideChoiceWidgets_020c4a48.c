@@ -3,5 +3,5 @@
 #define SetEntrySlotsVisible_020b9580 SetEntrySlotsVisible
 #define data_ov087_020c7c78 data_ov087_020c7c98
 #define data_ov087_020c7ca0 data_ov087_020c7cc0
-#define func_ov039_020bc1bc func_ov039_020bc1dc
+#define func_ov039_020bc1bc GetMenuWork
 #include "src/ov087/panel_state/HideChoiceWidgets_020c4a48.c"

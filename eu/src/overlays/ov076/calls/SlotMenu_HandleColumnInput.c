@@ -1,6 +1,6 @@
 #define func_ov039_020bca00 GetMenuInputState
 #define func_ov039_020bc0d4 GetPrimaryElementEnabled
-#define func_ov039_020bc1bc func_ov039_020bc1dc
+#define func_ov039_020bc1bc GetMenuWork
 #define ScriptCmd_ResetScreenLayer_020be0c4 ScriptCmd_ResetScreenLayer
 #define RefreshScrollListLayout_020be138 RefreshScrollListLayout
 #define PlaySoundEffect_0204d924 PlaySoundEffect

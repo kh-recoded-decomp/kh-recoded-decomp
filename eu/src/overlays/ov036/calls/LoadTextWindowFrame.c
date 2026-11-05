@@ -2,11 +2,11 @@
 #define LoadTextWindowFrame_020bfb0c LoadTextWindowFrame
 #define MeasureTextWindowTiles_020bf2f4 MeasureTextWindowTiles
 #define SetDisplayLayersVisible_020c2768 SetDisplayLayersVisible
-#define SetTimerDuration_020c27dc SetTimerDuration
+#define SetTimerDuration_020c27dc SetTextWindowState
 #define data_ov036_020c33c8 data_ov036_020c33e8
 #define data_ov036_020c34fc data_ov036_020c351c
 #define data_ov036_020c3844 gTextWindowResourceTable
 #define func_02007250 GX_LoadBGPltt
-#define func_ov036_020bf670 func_ov036_020bf690
-#define func_ov036_020bf698 func_ov036_020bf6b8
+#define func_ov036_020bf670 UploadTextWindowBgCharacters
+#define func_ov036_020bf698 UploadTextWindowBgScreen
 #include "src/ov036/text_rendering/LoadTextWindowFrame_020bfb0c.c"

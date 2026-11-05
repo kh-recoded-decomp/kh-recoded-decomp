@@ -1,6 +1,6 @@
 #define SetFlagGatedElementsVisible_020c9d7c SetFlagGatedElementsVisible
 #define SetModeTwoAndRefresh_020c4bb0 SetModeTwoAndRefresh
-#define func_ov039_020bc1bc func_ov039_020bc1dc
+#define func_ov039_020bc1bc GetMenuWork
 #define func_ov077_020c58e0 ShowSlotHeaderMessage
 #define func_ov077_020c5cc8 BeginSlotItemSelection
 #include "src/ov077/unclassified_helpers/SetModeTwoAndRefresh_020c4bb0.c"

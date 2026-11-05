@@ -10,7 +10,7 @@ extern unsigned int GetManagedActorCount(void);
 extern unsigned int UpdateActiveSubModeCamera(int);
 extern unsigned int GetOverlay41PhaseActiveFlag(void);
 extern unsigned int DrawMovieSceneIfVisible(void);
-extern unsigned int func_ov040_020bdb70(void);
+extern unsigned int DrawAreaRewardModel(void);
 
 void DispatchSceneDrawCallbacks(void)
 {
@@ -45,6 +45,6 @@ void DispatchSceneDrawCallbacks(void)
         func_020bd2a4();
     }
     if ((*(u16 *)(work + 0x22) & 0x100) != 0) {
-        func_ov040_020bdb70();
+        DrawAreaRewardModel();
     }
 }

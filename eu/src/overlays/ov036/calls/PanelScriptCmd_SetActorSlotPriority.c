@@ -1,0 +1,4 @@
+#define func_02025de4 ScriptVm_ReadOperandInt
+#define func_020bcf70 SetActorSlotPriority
+#define func_ov036_020be12c PanelScriptCmd_SetActorSlotPriority
+#include "src/ov036/reviewed_helpers/func_ov036_020be12c.c"

@@ -1,0 +1,3 @@
+#define Ov002_EnterPhase ReleaseEvent2DActorSlot
+#define ScriptCmd_EnterPhase_020be190 PanelScriptCmd_ReleaseActorSlot
+#include "src/ov036/shared_engine/ScriptCmd_EnterPhase_020be190.c"

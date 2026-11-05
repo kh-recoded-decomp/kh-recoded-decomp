@@ -1,7 +1,7 @@
 #define HandleSlotListInput_020c032c HandleSlotListInput
 #define g_padTrigger_02060500 data_02060500
 #define func_ov039_020bca00 GetMenuInputState
-#define func_ov039_020bd624 func_ov039_020bd644
+#define func_ov039_020bd624 GetPrimaryMenuSubOverlayIndex
 #define func_ov039_020be0c4 UpdateScrollListInput
 #define func_ov076_020c8f24 GetSlotMenuItemPanelState
 #define PlaySoundEffect_0204d924 PlaySoundEffect

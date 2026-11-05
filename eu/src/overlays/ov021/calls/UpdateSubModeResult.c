@@ -1,6 +1,6 @@
 #define data_ov021_020b56a0 data_ov021_020b56c0
 #define func_ov046_020c1540 Camera_IsViewSettled
-#define func_ov040_020bd0d4 func_ov040_020bd0f4
+#define func_ov040_020bd0d4 AreaSceneState_WaitForPanelReady
 #define func_ov036_020bc8b4 LoadTextureInChunks
 #define func_ov044_020d00f0 IsPanelFlag2000Set
 #define UpdateSubModeResult_020af46c UpdateSubModeResult

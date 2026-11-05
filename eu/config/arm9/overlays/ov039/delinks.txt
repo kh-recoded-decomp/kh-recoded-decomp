@@ -4,11 +4,11 @@
     .data       start:0x020be800 end:0x020bea20 kind:data align:32
     .bss        start:0x020bea20 end:0x020beac0 kind:bss align:32
 
-src/overlays/ov039/calls/RuntimeState_SetMode.c:
+src/overlays/ov039/calls/SetMenuPhase.c:
     complete
     .text       start:0x020bab00 end:0x020bab18
 
-src/overlays/ov039/calls/GetStateC9C4.c:
+src/overlays/ov039/calls/GetMenuPhase.c:
     complete
     .text       start:0x020bab18 end:0x020bab30
 
@@ -24,7 +24,7 @@ src/overlays/ov039/calls/LoadBgLayerSet4.c:
     complete
     .text       start:0x020bac44 end:0x020bacdc
 
-src/overlays/ov039/calls/InitStreamBufferPair.c:
+src/overlays/ov039/calls/StartMenuBrightnessTweens.c:
     complete
     .text       start:0x020bacdc end:0x020bad54
 
@@ -44,7 +44,7 @@ src/overlays/ov039/calls/UpdateSubOverlayHandlers.c:
     complete
     .text       start:0x020bb168 end:0x020bb2d0
 
-src/overlays/ov039/calls/func_ov039_020bb2d0.c:
+src/overlays/ov039/calls/WaitMenuFadeInThenEnableInput.c:
     complete
     .text       start:0x020bb2d0 end:0x020bb328
 
@@ -60,11 +60,11 @@ src/overlays/ov039/calls/LoadSelectedHandlerAndStart.c:
     complete
     .text       start:0x020bb42c end:0x020bb4c8
 
-src/overlays/ov039/calls/func_ov039_020bb4c8.c:
+src/overlays/ov039/calls/WaitSubMenuFadeInThenEnableButtons.c:
     complete
     .text       start:0x020bb4c8 end:0x020bb518
 
-src/overlays/ov039/calls/func_ov039_020bb518.c:
+src/overlays/ov039/calls/WaitMenuFadeOutThenEnterShutdown.c:
     complete
     .text       start:0x020bb518 end:0x020bb560
 
@@ -76,7 +76,7 @@ src/overlays/ov039/calls/CleanupHandlersAndSetPhase5.c:
     complete
     .text       start:0x020bb6a0 end:0x020bb708
 
-src/overlays/ov039/calls/func_ov039_020bb708.c:
+src/overlays/ov039/calls/DispatchMenuPhaseUpdate.c:
     complete
     .text       start:0x020bb708 end:0x020bb72c
 
@@ -112,7 +112,7 @@ src/overlays/ov039/calls/StartSubScene.c:
     complete
     .text       start:0x020bbf98 end:0x020bc038
 
-src/overlays/ov039/calls/func_ov039_020bc038.c:
+src/overlays/ov039/calls/SetMenuInputEnabled.c:
     complete
     .text       start:0x020bc038 end:0x020bc05c
 
@@ -156,7 +156,7 @@ src/overlays/ov039/calls/GetSecondaryMenuElement.c:
     complete
     .text       start:0x020bc1c4 end:0x020bc1dc
 
-src/overlays/ov039/calls/func_ov039_020bc1dc.c:
+src/overlays/ov039/calls/GetMenuWork.c:
     complete
     .text       start:0x020bc1dc end:0x020bc1ec
 
@@ -324,7 +324,7 @@ src/overlays/ov039/calls/FormatStateText.c:
     complete
     .text       start:0x020bcccc end:0x020bcd24
 
-src/overlays/ov039/calls/SetTextColorIfFits.c:
+src/overlays/ov039/calls/SelectMenuFontForWidth.c:
     complete
     .text       start:0x020bcd24 end:0x020bcd88
 
@@ -340,7 +340,7 @@ src/overlays/ov039/auto/InvokeIfPresent_020bcdb8.c:
     complete
     .text       start:0x020bcdb8 end:0x020bcdd8
 
-src/overlays/ov039/calls/func_ov039_020bcdd8.c:
+src/overlays/ov039/calls/ResetMenuSubOverlayIndices.c:
     complete
     .text       start:0x020bcdd8 end:0x020bcdf0
 
@@ -360,11 +360,11 @@ src/overlays/ov039/calls/DispatchActiveOverlayCallback.c:
     complete
     .text       start:0x020bced0 end:0x020bcf10
 
-src/overlays/ov039/calls/func_ov039_020bcf10.c:
+src/overlays/ov039/calls/InvokePrimaryMenuSubOverlayDestroy.c:
     complete
     .text       start:0x020bcf10 end:0x020bcf40
 
-src/overlays/ov039/calls/func_ov039_020bcf40.c:
+src/overlays/ov039/calls/UpdatePrimaryMenuSubOverlay.c:
     complete
     .text       start:0x020bcf40 end:0x020bcf70
 
@@ -384,7 +384,7 @@ src/overlays/ov039/calls/CloseSecondarySubOverlay.c:
     complete
     .text       start:0x020bd02c end:0x020bd074
 
-src/overlays/ov039/calls/func_ov039_020bd074.c:
+src/overlays/ov039/calls/UpdateSecondaryMenuSubOverlay.c:
     complete
     .text       start:0x020bd074 end:0x020bd0a4
 
@@ -436,19 +436,19 @@ src/overlays/ov039/calls/dispatchMenuHandlerPairAt40.c:
     complete
     .text       start:0x020bd5cc end:0x020bd644
 
-src/overlays/ov039/calls/func_ov039_020bd644.c:
+src/overlays/ov039/calls/GetPrimaryMenuSubOverlayIndex.c:
     complete
     .text       start:0x020bd644 end:0x020bd654
 
-src/overlays/ov039/calls/func_ov039_020bd654.c:
+src/overlays/ov039/calls/GetPrimaryMenuSecondaryOverlayIndex.c:
     complete
     .text       start:0x020bd654 end:0x020bd674
 
-src/overlays/ov039/calls/func_ov039_020bd674.c:
+src/overlays/ov039/calls/GetPrimaryMenuSubOverlayWorkSize.c:
     complete
     .text       start:0x020bd674 end:0x020bd694
 
-src/overlays/ov039/calls/func_ov039_020bd694.c:
+src/overlays/ov039/calls/GetSecondaryMenuSubOverlayWorkSize.c:
     complete
     .text       start:0x020bd694 end:0x020bd6b4
 
@@ -508,11 +508,11 @@ src/overlays/ov039/calls/DrawPlayTimeDigits_020be470.c:
     complete
     .text       start:0x020be470 end:0x020be548
 
-src/overlays/ov039/calls/func_ov039_020be548.c:
+src/overlays/ov039/calls/DrawMenuTextWithShadow.c:
     complete
     .text       start:0x020be548 end:0x020be594
 
-src/overlays/ov039/calls/func_ov039_020be594.c:
+src/overlays/ov039/calls/DrawCenteredMenuTextLines.c:
     complete
     .text       start:0x020be594 end:0x020be5d8
 

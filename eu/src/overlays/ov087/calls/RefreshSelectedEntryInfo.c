@@ -1,6 +1,6 @@
 #define RefreshSelectedEntryInfo_020c5ef0 RefreshSelectedEntryInfo
 #define func_ov001_020645c8 IsSessionFlagSet
-#define func_ov039_020bc1bc func_ov039_020bc1dc
+#define func_ov039_020bc1bc GetMenuWork
 #define CallVirtualHandlerSlot1_02001574 CallVirtualHandlerSlot1
 #define func_02051f48 GetGridTableValue
 #define func_ov027_020ba2a8 GetPackedFileEntry

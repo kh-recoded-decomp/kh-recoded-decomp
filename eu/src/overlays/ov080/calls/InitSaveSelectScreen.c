@@ -15,10 +15,10 @@
 #define OpenTextFrame_020be5b8 OpenTextFrame
 #define LoadPackedFileView_020ba25c LoadPackedFileView
 #define func_ov039_020bcb20 FormatSaveLocationLabel
-#define SetTextColorIfFits_020bcd04 SetTextColorIfFits
+#define SetTextColorIfFits_020bcd04 SelectMenuFontForWidth
 #define DrawTextAnchored_020015a0 DrawTextAnchored
 #define func_ov027_020ba2a8 GetPackedFileEntry
-#define func_ov039_020bc1bc func_ov039_020bc1dc
+#define func_ov039_020bc1bc GetMenuWork
 #define BuildSlotImageParams_020bc220 BuildSlotImageParams
 #define InitObjManagerAndMark_020b9060 InitObjManagerAndMark
 #define PXI_Init_020b9078 CreateWidgetImageEntry

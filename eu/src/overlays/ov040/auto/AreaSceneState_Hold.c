@@ -1,0 +1,2 @@
+#define Gfd_DefaultFreeTexVram_020bd728 AreaSceneState_Hold
+#include "src/ov040/library_nns_gfd/Gfd_DefaultFreeTexVram_020bd728.c"

@@ -16,7 +16,7 @@
 #define SetStatusPageAndCursor_020c2ca4 SetStatusPageAndCursor
 #define func_ov039_020bc03c RuntimeState_SetCondition
 #define IsGlobalPackedBitSet_02027304 IsGlobalPackedBitSet
-#define func_ov039_020bc1bc func_ov039_020bc1dc
+#define func_ov039_020bc1bc GetMenuWork
 #define SetFlagGatedElementsVisible_020c9d7c SetFlagGatedElementsVisible
 #define func_ov077_020c5944 ItemScreen_DrawHintText
 #define FindWidgetById_020b90a4 FindWidgetById

@@ -9,7 +9,7 @@
 #define LoadPackedFileView_020ba25c LoadPackedFileView
 #define func_ov027_020ba2a8 GetPackedFileEntry
 #define func_ov039_020bcb20 FormatSaveLocationLabel
-#define SetTextColorIfFits_020bcd04 SetTextColorIfFits
+#define SetTextColorIfFits_020bcd04 SelectMenuFontForWidth
 #define DrawTextAnchored_020015a0 DrawTextAnchored
 #define BuildSlotImageParams_020bc220 BuildSlotImageParams
 #define func_ov027_020b7e24 LoadTagTrackerResourceFile

@@ -21,6 +21,6 @@
 #define data_ov053_020d2c08 sOv053_BaChSoWd00_020d2c28
 #define func_ov010_020a17a0 InitSpecialActionWork
 #define func_ov021_020a89a8 func_ov021_020a89c8
-#define func_ov040_020bdf7c func_ov040_020bdf9c
+#define func_ov040_020bdf7c InitAreaRewardResources
 #define func_ov053_020d23d8 RegisterOverlay053TaggedEntries
 #include "src/ov053/object_factory/LoadOverlay053EntityResources_020d2414.c"

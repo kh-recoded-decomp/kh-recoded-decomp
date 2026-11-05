@@ -11,7 +11,7 @@
 #define SetSecondaryElementEnabled_020bc084 SetSecondaryElementEnabled
 #define func_0200344c DC_FlushRange
 #define func_ov027_020b91c8 SetWidgetPosition
-#define func_ov039_020bc1bc func_ov039_020bc1dc
+#define func_ov039_020bc1bc GetMenuWork
 #define func_ov039_020bca00 GetMenuInputState
 #define func_ov077_020c7d24 BuildItemScreenFrameTilemap
 #define func_ov077_020c7e3c GetDialogPixelBounds_020c7e5c

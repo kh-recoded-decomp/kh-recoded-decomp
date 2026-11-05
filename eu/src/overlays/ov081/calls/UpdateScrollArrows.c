@@ -5,5 +5,5 @@
 #define UpdateScrollArrows_020c4dfc UpdateScrollArrows
 #define func_02052514 ConfigureTween
 #define func_0205255c StartTween
-#define func_ov039_020bc1bc func_ov039_020bc1dc
+#define func_ov039_020bc1bc GetMenuWork
 #include "src/ov081/unclassified_helpers/UpdateScrollArrows_020c4dfc.c"

@@ -17,7 +17,7 @@ extern const char *ByteCode_ResolveOperand(ScriptContext *context, ScriptOperand
 extern int ScriptVm_ReadOperandInt(ScriptContext *context, ScriptOperand *operand);
 extern int Utf8ToUcs2(const char *source, u16 *dest, int capacity);
 extern void CopyRecordTableAString(int record, u16 *dest);
-extern u16 *func_ov036_020be2f4(const u16 *format, u16 *dest, u32 capacity, ...);
+extern u16 *FormatPanelWideText(const u16 *format, u16 *dest, u32 capacity, ...);
 extern BOOL OpenMessageTextWindowAlt(const u16 *text);
 extern void PlaySoundChecked(int group, int sound);
 
@@ -45,7 +45,7 @@ int ScriptCmd_ShowFormattedMessage(ScriptContext *context, ScriptOperand *operan
         valueBuffer = value;
         Utf8ToUcs2(text, valueBuffer, 64);
     }
-    func_ov036_020be2f4(formatBuffer, output, capacity, valueBuffer);
+    FormatPanelWideText(formatBuffer, output, capacity, valueBuffer);
     OpenMessageTextWindowAlt(output);
     PlaySoundChecked(0, 9);
     return 1;

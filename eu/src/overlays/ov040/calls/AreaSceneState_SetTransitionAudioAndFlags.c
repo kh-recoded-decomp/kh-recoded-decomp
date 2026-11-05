@@ -1,0 +1,25 @@
+#define func_ov001_02064184 PlayFieldBgm
+#include "nitro/types.h"
+
+extern u32 gMovieContextState;
+extern u32 data_ov040_020be280;
+extern void PlaySoundChecked();
+extern int IsSessionFlagSet();
+extern void func_ov001_02064184();
+
+u32 AreaSceneState_SetTransitionAudioAndFlags(void)
+{
+    int ok;
+
+    *(u8 *)(gMovieContextState + 0x84) = 0xf;
+    PlaySoundChecked(0x1a0, 0);
+    ok = IsSessionFlagSet(0x3308);
+    if (ok == 0) {
+        func_ov001_02064184(1, 0xffffffff);
+    }
+    *(u16 *)(gMovieContextState + 6) = *(u16 *)(gMovieContextState + 6) | 0x20;
+    *(u16 *)(gMovieContextState + 0x22) = *(u16 *)(gMovieContextState + 0x22) | 0x100;
+    *(u16 *)(gMovieContextState + 0x24) = *(u16 *)(gMovieContextState + 0x24) | 0x100;
+    *(u16 *)(data_ov040_020be280 + 0x13c) = *(u16 *)(data_ov040_020be280 + 0x13c) | 0x8000;
+    return 9;
+}

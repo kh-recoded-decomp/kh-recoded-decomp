@@ -1,6 +1,6 @@
 #define NNSi_FndAllocFromDefaultHeapEx_0202a19c NNS_FndAllocFromDefaultExpHeapEx
 #define OpenQueuedTextWindow_020bf6c0 OpenQueuedTextWindow
-#define SetTimerDuration_020c27dc SetTimerDuration
+#define SetTimerDuration_020c27dc SetTextWindowState
 #define data_ov036_020c3390 data_ov036_020c33b0
 #define data_ov036_020c3398 data_ov036_020c33b8
 #define data_ov036_020c33a0 data_ov036_020c33c0

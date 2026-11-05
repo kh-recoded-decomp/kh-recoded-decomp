@@ -4,7 +4,7 @@
 #define data_ov076_020d188c sOv075_UiMenuCmnmtxP2_020d18ac
 #define data_ov076_020d18a0 sOv075_UiMenuLanguageCmnmtxP2_020d18c0
 #define data_ov076_020d1ae4 gItemPickerPanelWork
-#define func_ov039_020bc1bc func_ov039_020bc1dc
+#define func_ov039_020bc1bc GetMenuWork
 #define AcquireRecordSlot_02051d3c AcquireRecordSlot
 #define func_ov076_020d0f50 LoadItemPickerMenuTipImages
 #define QueueSoundCommandForArc_0204d670 QueueSoundCommandForArc

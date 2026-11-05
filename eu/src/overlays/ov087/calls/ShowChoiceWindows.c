@@ -5,6 +5,6 @@
 #define data_ov087_020c7cc4 data_ov087_020c7ce4
 #define func_ov027_020b90a4 FindWidgetById
 #define func_ov027_020b9580 SetEntrySlotsVisible
-#define func_ov039_020bc1bc func_ov039_020bc1dc
+#define func_ov039_020bc1bc GetMenuWork
 #define func_ov039_020bc1e4 UpdateScreenWidgetLayer
 #include "src/ov087/panel_state/ShowChoiceWindows_020c4b74.c"

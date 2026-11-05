@@ -1,3 +1,4 @@
+#define GetStateC9C4 GetMenuPhase
 #define NNS_FndGetNextListObject_02012a38 NNS_FndGetNextListObject
 #define SampleTweenValue_0205258c SampleTweenValue
 #define SetBrightnessAndSyncMain_02029e7c SetBrightnessAndSyncMain

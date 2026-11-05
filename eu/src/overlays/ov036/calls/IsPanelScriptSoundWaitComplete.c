@@ -1,0 +1,3 @@
+#define IsResourceReadyOrInitialize_020be770 IsPanelScriptSoundWaitComplete
+#define func_0204d6fc IsSceneState4
+#include "src/ov036/shared_engine/IsResourceReadyOrInitialize_020be770.c"

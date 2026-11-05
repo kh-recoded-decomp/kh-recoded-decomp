@@ -1,4 +1,4 @@
 #define ApplyTextWindowBgOffsets_020c29f8 ApplyTextWindowBgOffsets
 #define data_ov036_020c3844 gTextWindowResourceTable
-#define func_ov036_020c27ec func_ov036_020c280c
+#define func_ov036_020c27ec GetTextWindowState
 #include "src/ov036/text_rendering/ApplyTextWindowBgOffsets_020c29f8.c"

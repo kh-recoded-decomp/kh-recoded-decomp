@@ -1,0 +1,2 @@
+#define DefaultStepDone_020be084 PanelScriptResume_CloseTextWindowsDone
+#include "src/ov036/library_nitro_fs/DefaultStepDone_020be084.c"

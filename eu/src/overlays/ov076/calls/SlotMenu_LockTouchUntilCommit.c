@@ -1,5 +1,5 @@
 #define SetWidgetRootTouchEnabled_020b984c SetWidgetRootTouchEnabled
 #define SlotMenu_CommitSlotEdit_020c8908 SlotMenu_CommitSlotEdit
 #define SlotMenu_LockTouchUntilCommit_020c88dc SlotMenu_LockTouchUntilCommit
-#define func_ov039_020bc1bc func_ov039_020bc1dc
+#define func_ov039_020bc1bc GetMenuWork
 #include "src/ov076/unclassified_helpers/SlotMenu_LockTouchUntilCommit_020c88dc.c"

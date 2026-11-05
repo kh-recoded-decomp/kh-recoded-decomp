@@ -8,7 +8,7 @@
 #define func_0204f2c0 IndexedRecord_SetActive
 #define func_0204f2e4 IndexedRecord_ClearActive
 #define func_0204f378 IndexedRecords_SetFlag2
-#define func_ov039_020bc1bc func_ov039_020bc1dc
+#define func_ov039_020bc1bc GetMenuWork
 #define func_ov076_020c71b8 SlotMenu_PlaceItemSprite
 #define func_ov076_020c7208 SlotMenu_GetCursorMarkType
 #include "src/ov076/unclassified_helpers/SlotMenu_UpdateItemSprites_020c7254.c"

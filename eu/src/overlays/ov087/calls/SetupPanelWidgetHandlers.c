@@ -11,7 +11,7 @@
 #define data_ov087_020c7cec data_ov087_020c7d0c
 #define func_ov027_020b8f98 LoadWidgetDescriptorsFromFile
 #define func_ov027_020b9098 SetWidgetRootInputCallback
-#define func_ov039_020bc1bc func_ov039_020bc1dc
+#define func_ov039_020bc1bc GetMenuWork
 #define func_ov087_020c7810 HandleSelectForState
 #define func_ov087_020c7994 HandleAltSelectForState
 #define func_ov087_020c7b64 SelectionPanel_CommitDestination

@@ -2,9 +2,9 @@
 #define InitCommHandlerTable_020bac98 InitCommHandlerTable
 #define IsPxiChannelActive_020babec IsPxiChannelActive
 #define ReleasePxiChannel_020bac10 ReleasePxiChannel
-#define func_ov037_020baa70 func_ov037_020baa90
-#define func_ov037_020bab78 func_ov037_020bab98
-#define func_ov037_020bab9c func_ov037_020babbc
+#define func_ov037_020baa70 TickContinueActorCallbacks
+#define func_ov037_020bab78 CreateContinueSceneTask
+#define func_ov037_020bab9c IsContinueSceneReady
 #define func_ov037_020babc8 ClearCommunicationReadyFlag
 #define func_ov037_020bac84 ContinueScene_GetResult
 #include "src/ov037/unclassified_helpers/InitCommHandlerTable_020bac98.c"

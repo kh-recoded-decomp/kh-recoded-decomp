@@ -27,7 +27,7 @@ typedef struct SlotMenu {
 } SlotMenu;
 
 extern CursorMarker data_ov076_020cd280;
-extern void *func_ov039_020bc1dc(void);
+extern void *GetMenuWork(void);
 extern void RefreshScrollListLayout(ScrollList *list, void *layout);
 extern void SlotMenu_ReloadVisibleSlots(SlotMenu *menu);
 
@@ -60,7 +60,7 @@ void SlotMenu_MoveCursorToSlot(SlotMenu *menu, int slot, u32 column, int mode, C
         menu->list.scrollY = newTop * menu->list.rowHeight;
         menu->list.slotIndex = slot;
         menu->column = column;
-        RefreshScrollListLayout(&menu->list, func_ov039_020bc1dc());
+        RefreshScrollListLayout(&menu->list, GetMenuWork());
         SlotMenu_ReloadVisibleSlots(menu);
     }
     switch (mode) {

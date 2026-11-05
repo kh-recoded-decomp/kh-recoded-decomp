@@ -22,7 +22,7 @@ extern SoundCtx *data_ov038_020bd160;
 extern void *GetRunningTaskWork(void);
 extern void LoadOverlayAfterGeometryTransfer(int processor, int overlayId);
 extern void BuildCompletionStats(void);
-extern void *func_ov038_020bbcb0(void);
+extern void *SetupResultsPageDisplay(void);
 extern void SetPanelEnabled(int value);
 extern u32 RunOv038SoundCtxStates(void);
 
@@ -37,7 +37,7 @@ void *StartOv038SoundCtx(SoundCtxArgs *args)
     data_ov038_020bd160->state = 0;
     LoadOverlayAfterGeometryTransfer(0, (int)OVERLAY_27_ID);
     BuildCompletionStats();
-    func_ov038_020bbcb0();
+    SetupResultsPageDisplay();
     SetPanelEnabled(0);
     return RunOv038SoundCtxStates;
 }

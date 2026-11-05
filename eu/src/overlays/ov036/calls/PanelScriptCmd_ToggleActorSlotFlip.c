@@ -1,0 +1,3 @@
+#define Ov002_EnterPhase ToggleActorSlotFlip
+#define ScriptCmd_EnterPhase_020bdd54 PanelScriptCmd_ToggleActorSlotFlip
+#include "src/ov036/shared_engine/ScriptCmd_EnterPhase_020bdd54.c"

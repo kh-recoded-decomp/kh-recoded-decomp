@@ -4,6 +4,6 @@
 #define UpdateTextWindows_020be9a0 UpdateTextWindows
 #define data_ov036_020c3434 gTextWindowStateHandlers
 #define data_ov036_020c3844 gTextWindowResourceTable
-#define func_ov036_020bf600 func_ov036_020bf620
-#define func_ov036_020c27ec func_ov036_020c280c
+#define func_ov036_020bf600 UpdateTextWindowDisplayList
+#define func_ov036_020c27ec GetTextWindowState
 #include "src/ov036/text_rendering/UpdateTextWindows_020be9a0.c"

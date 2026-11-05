@@ -8,5 +8,5 @@
 #define func_ov001_02078360 SetFieldMenuMode_02078360
 #define func_ov001_02078500 AddItemToFieldSlot
 #define func_ov001_020785c0 MoveSelectedItemToSlot
-#define func_ov040_020bdc24 func_ov040_020bdc44
+#define func_ov040_020bdc24 RewardCodeToStackItemId
 #include "src/ov040/shared_engine/GrantRewardItem_020be02c.c"

@@ -12,7 +12,7 @@
 #define data_ov001_020a0460 data_ov001_020a0480
 #define func_0204d8b8 QueueSoundKind4
 #define func_ov001_020645c8 IsSessionFlagSet
-#define func_ov039_020bc1bc func_ov039_020bc1dc
+#define func_ov039_020bc1bc GetMenuWork
 #define func_ov039_020bc810 GetMenuStackDepth
 #define func_ov087_020c44a4 SelectChoiceWidget_020c44a4
 #define func_ov087_020c5758 FocusDefaultElementForState_020c5758

@@ -1,6 +1,6 @@
 #define AdvanceFinishedTextWindows_020c2a9c AdvanceFinishedTextWindows
 #define SetRecordEntryEnabled_020bf4fc SetRecordEntryEnabled
 #define data_ov036_020c3844 gTextWindowResourceTable
-#define func_ov036_020c27dc SetTimerDuration
-#define func_ov036_020c27ec func_ov036_020c280c
+#define func_ov036_020c27dc SetTextWindowState
+#define func_ov036_020c27ec GetTextWindowState
 #include "src/ov036/text_rendering/AdvanceFinishedTextWindows_020c2a9c.c"

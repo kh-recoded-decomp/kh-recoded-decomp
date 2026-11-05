@@ -5,6 +5,6 @@
 #define func_ov027_020b9580 SetEntrySlotsVisible
 #define func_ov039_020bc104 SetScreenLayerDirty
 #define func_ov039_020bc14c CallStateWidget
-#define func_ov039_020bc1bc func_ov039_020bc1dc
+#define func_ov039_020bc1bc GetMenuWork
 #define func_ov039_020bc1e4 UpdateScreenWidgetLayer
 #include "src/ov087/panel_state/SetInfoWindowVisible_020c431c.c"

@@ -1,0 +1,3 @@
+#define PXI_InitFifo ScriptCmd_SetSlotSharedRecord
+#define PXI_Init_020bdce8 PanelScriptCmd_SetSlotSharedRecord
+#include "src/ov036/library_nitro_pxi/PXI_Init_020bdce8.c"

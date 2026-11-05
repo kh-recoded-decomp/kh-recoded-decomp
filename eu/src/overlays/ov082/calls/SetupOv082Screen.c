@@ -11,7 +11,7 @@
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define OpenTextFrame_020be5b8 OpenTextFrame
 #define RefreshEntryRows_020bef08 RefreshEntryRows
-#define SetTextColorIfFits_020bcd04 SetTextColorIfFits
+#define SetTextColorIfFits_020bcd04 SelectMenuFontForWidth
 #define SetupOv082Screen_020beb48 SetupOv082Screen
 #define StepEntryListCursor_020bf448 StepEntryListCursor
 #define Text_UploadTileBuffer_02001520 Text_UploadTileBuffer

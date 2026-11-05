@@ -1,0 +1,3 @@
+#define FS_EndOverlay ClosePanelTextWindows
+#define FS_UnloadOverlayImage_020be078 PanelScriptCmd_CloseAllTextWindows
+#include "src/ov036/library_nitro_fs/FS_UnloadOverlayImage_020be078.c"

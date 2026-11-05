@@ -2,5 +2,5 @@
 #define ShowRewardPopupForItem_020be0f8 ShowRewardPopupForItem
 #define data_ov040_020be264 data_ov040_020be284
 #define func_ov007_020a1b08 GetEventTargetLayerAndChannel
-#define func_ov040_020bdc24 func_ov040_020bdc44
+#define func_ov040_020bdc24 RewardCodeToStackItemId
 #include "src/ov040/shared_engine/ShowRewardPopupForItem_020be0f8.c"

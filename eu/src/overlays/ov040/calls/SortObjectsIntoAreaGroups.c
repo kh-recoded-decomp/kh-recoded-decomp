@@ -6,6 +6,6 @@
 #define func_ov001_02068994 GetStageObjectEntry
 #define func_01ff869c MIi_CpuCopy16
 #define func_ov001_02087dd0 GetStageSlotLock1IfActive
-#define func_ov040_020bcc24 func_ov040_020bcc44
+#define func_ov040_020bcc24 IsStageObjectExcludedFromAreaGroups
 #define func_ov040_020bd9fc FindActorRewardValue
 #include "src/ov040/shared_engine/SortObjectsIntoAreaGroups_020bc970.c"

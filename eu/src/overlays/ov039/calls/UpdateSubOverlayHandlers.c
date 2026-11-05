@@ -21,17 +21,17 @@ extern Ov039State *data_ov039_020bea20;
 extern char sOv039_MENUMNGR_020be81c[];
 extern int LoadPrimarySubOverlay(int index);
 extern int LoadSecondarySubOverlay(int index);
-extern u32 func_ov039_020bd674(void);
-extern u32 func_ov039_020bd694(void);
-extern int func_ov039_020bd654(void);
+extern u32 GetPrimaryMenuSubOverlayWorkSize(void);
+extern u32 GetSecondaryMenuSubOverlayWorkSize(void);
+extern int GetPrimaryMenuSecondaryOverlayIndex(void);
 extern void *NNSi_FndAllocFromDefaultHeap(u32 size);
 extern void MI_CpuFill8(void *dst, int value, u32 size);
 extern int DispatchActiveOverlayCallback(int work);
 extern int dispatchSelectedMenuCallback(int work);
-extern void func_ov039_020bcf40(int work);
-extern void func_ov039_020bd074(int work);
-extern void InitStreamBufferPair(int blockCount, u32 flag);
-extern void RuntimeState_SetMode(int value);
+extern void UpdatePrimaryMenuSubOverlay(int work);
+extern void UpdateSecondaryMenuSubOverlay(int work);
+extern void StartMenuBrightnessTweens(int blockCount, u32 flag);
+extern void SetMenuPhase(int value);
 extern void InvokeForChannelOrBoth(u32 arg0, u32 arg1, int arg2, int channel);
 extern void UpdateBrightnessAndTasks(void);
 
@@ -42,27 +42,27 @@ void UpdateSubOverlayHandlers(void)
     if (state->primaryWork == NULL) {
         u32 size;
         LoadPrimarySubOverlay(state->primaryIndex);
-        size = func_ov039_020bd674();
+        size = GetPrimaryMenuSubOverlayWorkSize();
         state->primaryWork = NNSi_FndAllocFromDefaultHeap(size);
         MI_CpuFill8(state->primaryWork, 0, size);
     }
     if (state->primaryReady == 0) {
         state->primaryReady = DispatchActiveOverlayCallback((int)state->primaryWork);
     } else {
-        func_ov039_020bcf40((int)state->primaryWork);
+        UpdatePrimaryMenuSubOverlay((int)state->primaryWork);
     }
     if (state->secondaryEnabled) {
         if (state->secondaryWork == NULL) {
             u32 size;
-            LoadSecondarySubOverlay(func_ov039_020bd654());
-            size = func_ov039_020bd694();
+            LoadSecondarySubOverlay(GetPrimaryMenuSecondaryOverlayIndex());
+            size = GetSecondaryMenuSubOverlayWorkSize();
             state->secondaryWork = NNSi_FndAllocFromDefaultHeap(size);
             MI_CpuFill8(state->secondaryWork, 0, size);
         }
         if (state->secondaryReady == 0) {
             state->secondaryReady = dispatchSelectedMenuCallback((int)state->secondaryWork);
         } else {
-            func_ov039_020bd074((int)state->secondaryWork);
+            UpdateSecondaryMenuSubOverlay((int)state->secondaryWork);
         }
     }
     if (state->primaryReady && state->secondaryReady) {
@@ -72,8 +72,8 @@ void UpdateSubOverlayHandlers(void)
         if (state->startDelay != 0) {
             state->startDelay--;
         } else {
-            InitStreamBufferPair(0, 100);
-            RuntimeState_SetMode(2);
+            StartMenuBrightnessTweens(0, 100);
+            SetMenuPhase(2);
         }
     }
     if (state->vblankPending) {

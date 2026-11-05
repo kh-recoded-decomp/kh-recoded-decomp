@@ -22,10 +22,10 @@ extern void CloseSecondarySubOverlay(void *work);
 extern void NNSi_FndFreeFromDefaultHeap(void *block);
 extern BOOL LoadBgLayerSet4(void);
 extern void UnloadSecondarySubOverlay(void);
-extern void func_ov039_020bcf10(void *work);
+extern void InvokePrimaryMenuSubOverlayDestroy(void *work);
 extern void LoadBgLayerSet3(void);
 extern void UnloadPrimarySubOverlay(void);
-extern void RuntimeState_SetMode(int value);
+extern void SetMenuPhase(int value);
 extern int GetCurrentSceneId(void);
 extern void World_SetField4(int value);
 extern void HasOv029ObjectField28(int mode);
@@ -47,7 +47,7 @@ void ShutdownHandlersAndExit(void)
         LoadBgLayerSet4();
         UnloadSecondarySubOverlay();
     }
-    func_ov039_020bcf10(state->primaryWork);
+    InvokePrimaryMenuSubOverlayDestroy(state->primaryWork);
     if (state->primaryWork != NULL) {
         NNSi_FndFreeFromDefaultHeap(state->primaryWork);
         state->primaryWork = NULL;
@@ -57,7 +57,7 @@ void ShutdownHandlersAndExit(void)
     LoadBgLayerSet3();
     UnloadPrimarySubOverlay();
     if (state->nextEntry == -1) {
-        RuntimeState_SetMode(0);
+        SetMenuPhase(0);
         if (GetCurrentSceneId() == 1) {
             World_SetField4(state->altExit ? 2 : 1);
             return;
@@ -80,5 +80,5 @@ void ShutdownHandlersAndExit(void)
     if (state->menuActive) {
         SetupOverlayDisplay();
     }
-    RuntimeState_SetMode(1);
+    SetMenuPhase(1);
 }

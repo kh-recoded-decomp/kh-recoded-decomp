@@ -3,5 +3,5 @@
 #define MoveRecordSlot_020290b8 MoveEquipmentSlot
 #define MoveSummarySlot_020bebd0 MoveSummarySlot
 #define SlotMenu_ReloadAllSlots_020c8ef8 SlotMenu_ReloadAllSlots
-#define func_ov039_020bd624 func_ov039_020bd644
+#define func_ov039_020bd624 GetPrimaryMenuSubOverlayIndex
 #include "src/ov073/status_menu/MoveSummarySlot_020bebd0.c"

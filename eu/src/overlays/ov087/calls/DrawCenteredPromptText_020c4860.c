@@ -6,5 +6,5 @@
 #define Text_UploadTileBuffer_02001520 Text_UploadTileBuffer
 #define UpdateScreenWidgetLayer_020bc1e4 UpdateScreenWidgetLayer
 #define func_020019f4 GetNestedModeByte
-#define func_ov039_020bc1bc func_ov039_020bc1dc
+#define func_ov039_020bc1bc GetMenuWork
 #include "src/ov087/panel_state/DrawCenteredPromptText_020c4860.c"

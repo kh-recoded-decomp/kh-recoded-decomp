@@ -2,5 +2,5 @@
 #define MoveCursorToWidget_020c43c4 MoveCursorToWidget
 #define RefreshChoiceMenuForKind_020c548c RefreshChoiceMenuForKind
 #define SetFocusedWidget_020b96e4 SetFocusedWidget
-#define func_ov039_020bc1bc func_ov039_020bc1dc
+#define func_ov039_020bc1bc GetMenuWork
 #include "src/ov087/panel_state/FocusKindElementForState_020c5964.c"

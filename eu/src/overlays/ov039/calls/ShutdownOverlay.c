@@ -27,7 +27,7 @@ typedef struct {
 
 extern Ov039State *data_ov039_020bea20;
 extern u8 sOv039_MENUMNGR_020be81c[];
-extern int func_ov039_020bd644(void);
+extern int GetPrimaryMenuSubOverlayIndex(void);
 extern void ShutdownHandlersAndExit(void);
 extern void DestroyAllListEntries(void);
 extern void NotifyBothOrOne(u32 a, u32 b, int index);
@@ -53,7 +53,7 @@ void ShutdownOverlay(void)
     Ov039State *state = data_ov039_020bea20;
     BOOL resetOnExit = state->resetOnExit;
 
-    if (func_ov039_020bd644() != -1) {
+    if (GetPrimaryMenuSubOverlayIndex() != -1) {
         state->nextEntry = -1;
         state->menuActive = TRUE;
         ShutdownHandlersAndExit();

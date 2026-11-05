@@ -1,7 +1,7 @@
 #define DrawStatusListRows_020c10fc DrawStatusListRows
 #define DrawTextAnchored_020015a0 DrawTextAnchored
 #define SetStatusHeaderText_020c1d38 SetStatusHeaderText
-#define SetTextColorIfFits_020bcd04 SetTextColorIfFits
+#define SetTextColorIfFits_020bcd04 SelectMenuFontForWidth
 #define func_ov027_020b822c InvokeTrackerRecordAtPosition
 #define func_ov027_020b91c8 SetWidgetPosition
 #define func_ov039_020bc994 GetMenuFont10

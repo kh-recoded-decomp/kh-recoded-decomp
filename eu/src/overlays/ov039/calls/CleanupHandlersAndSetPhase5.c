@@ -1,9 +1,9 @@
 #define CleanupHandlersAndSetPhase5_020bb680 CleanupHandlersAndSetPhase5
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define data_ov039_020bea00 data_ov039_020bea20
-#define func_ov039_020baae0 RuntimeState_SetMode
+#define func_ov039_020baae0 SetMenuPhase
 #define func_ov039_020bac24 LoadBgLayerSet4
-#define func_ov039_020bcf20 func_ov039_020bcf40
+#define func_ov039_020bcf20 UpdatePrimaryMenuSubOverlay
 #define func_ov039_020bcf88 UnloadSecondarySubOverlay
 #define func_ov039_020bd00c CloseSecondarySubOverlay
 #include "src/ov039/event_state/CleanupHandlersAndSetPhase5_020bb680.c"

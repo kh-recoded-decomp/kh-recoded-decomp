@@ -7,5 +7,5 @@
 #define func_ov027_020b95e4 ClearWidgetRecordActiveBits
 #define func_ov027_020b96a0 SetWidgetAnimationFrame
 #define func_ov027_020b97b8 SetWidgetRecordMode
-#define func_ov039_020bc1bc func_ov039_020bc1dc
+#define func_ov039_020bc1bc GetMenuWork
 #include "src/ov078/unclassified_helpers/LoadPageMenuWidgets_020c4570.c"

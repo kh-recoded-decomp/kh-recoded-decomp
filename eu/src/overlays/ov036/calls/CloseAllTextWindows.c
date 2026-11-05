@@ -3,6 +3,6 @@
 #define data_ov036_020c3434 gTextWindowStateHandlers
 #define data_ov036_020c3844 gTextWindowResourceTable
 #define func_01ff8740 MIi_CpuClearFast
-#define func_ov036_020c27dc SetTimerDuration
-#define func_ov036_020c27ec func_ov036_020c280c
+#define func_ov036_020c27dc SetTextWindowState
+#define func_ov036_020c27ec GetTextWindowState
 #include "src/ov036/text_rendering/CloseAllTextWindows_020c2910.c"

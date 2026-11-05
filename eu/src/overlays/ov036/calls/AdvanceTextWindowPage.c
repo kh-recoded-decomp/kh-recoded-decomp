@@ -3,7 +3,7 @@
 #define FlushBufferAndRunCallback_0200153c FlushBufferAndRunCallback
 #define G2D_MeasureTextRectangle_02016c18 NNSi_G2dFontGetTextRect
 #define SetRecordEntryEnabled_020bf4fc SetRecordEntryEnabled
-#define SetTimerDuration_020c27dc SetTimerDuration
+#define SetTimerDuration_020c27dc SetTextWindowState
 #define data_ov036_020c3844 gTextWindowResourceTable
-#define func_ov036_020c27f4 func_ov036_020c2814
+#define func_ov036_020c27f4 PlayTextWindowSound7WithCooldown
 #include "src/ov036/text_rendering/AdvanceTextWindowPage_020c0e14.c"
