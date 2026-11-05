@@ -1,3 +1,4 @@
+#define func_ov015_0207414c WH_RequestEndScan
 #define func_ov015_02073e1c WH_StateInStartScan
 #define data_ov015_0207e980 gWhState
 #define DC_InvalidateRange_02003414 DC_InvalidateRange

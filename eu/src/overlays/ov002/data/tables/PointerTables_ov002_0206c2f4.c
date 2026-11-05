@@ -21,7 +21,7 @@ extern void func_ov002_02062edc(void);
 extern void LoadPanelOverlay15(void);
 extern void PollPanelOverlay15(void); /* PollPanelOverlay15 */
 extern void UnloadPanelOverlay15(void);
-extern void func_ov015_0206c5dc(void);
+extern void UpdateWirelessMenuDisplayEffects(void);
 extern void ReleaseOv002ContextResourcesWrapper(void); /* PXI_Init */
 
 void (*gPanelSceneStateHandlers[25])(void) = {
@@ -49,7 +49,7 @@ void (*gPanelSceneStateHandlers[25])(void) = {
     LoadPanelOverlay15,
     PollPanelOverlay15, /* PollPanelOverlay15 */
     UnloadPanelOverlay15,
-    func_ov015_0206c5dc,
+    UpdateWirelessMenuDisplayEffects,
 };
 
 void (*gPanelSceneInitialHandler[1])(void) = {

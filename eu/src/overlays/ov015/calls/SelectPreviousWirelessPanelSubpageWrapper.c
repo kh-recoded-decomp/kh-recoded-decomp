@@ -1,0 +1,3 @@
+#define PXI_InitFifo StepPanelCursorBlink
+#define PXI_Init_02072830 SelectPreviousWirelessPanelSubpageWrapper
+#include "src/ov015/library_nitro_pxi/PXI_Init_02072830.c"

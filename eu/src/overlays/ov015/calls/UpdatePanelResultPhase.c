@@ -1,3 +1,5 @@
+#define func_ov015_0206c6bc ReleaseWirelessMenuSubWidgetGroup
+#define func_ov015_02070af8 SetWirelessMenuState
 #define func_ov002_0206655c IsScreenFadeComplete
 #define SetEntrySlotsVisible_020b9580 SetEntrySlotsVisible
 #define UpdatePanelResultPhase_02071d0c UpdatePanelResultPhase

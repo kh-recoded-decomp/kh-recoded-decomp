@@ -1,7 +1,7 @@
 #include "src/overlays/ov015/Ov015WirelessState.h"
 
 extern int HasIdleActiveEntry(void);
-extern void func_ov015_02072ee4(int state);
+extern void SetWirelessConnectionState(int state);
 extern void WH_Finalize(void);
 
 void PollWirelessFinalizeDelay17(void)
@@ -17,5 +17,5 @@ void PollWirelessFinalizeDelay17(void)
         return;
     }
     WH_Finalize();
-    func_ov015_02072ee4(3);
+    SetWirelessConnectionState(3);
 }

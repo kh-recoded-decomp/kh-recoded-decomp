@@ -1,3 +1,4 @@
+#define func_ov015_02070af8 SetWirelessMenuState
 #define func_ov002_020620fc ResetOv002SubPanelText
 #define GetMenuTouchPressed_02066b84 GetMenuTouchPressed
 #define GetMenuTouchHeld_02066b2c GetMenuTouchHeld

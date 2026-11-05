@@ -4,7 +4,7 @@ extern void func_ov015_02072f98(void);
 extern void func_ov015_02072f9c(void);
 extern void func_ov015_02072fa0(void);
 extern void func_ov015_02072fa4(void);
-extern void func_ov015_02072fa8(void); /* PXI_Init */
+extern void FinalizeWirelessConnectionWrapper(void); /* PXI_Init */
 extern void DispatchPanelTransition(void); /* DispatchPanelTransition */
 extern void SetWirelessReadyFlag(void);
 extern void func_ov015_02073030(void);
@@ -22,14 +22,14 @@ extern void func_ov015_0207321c(void);
 extern void StartWirelessFinalizeDelay19(void);
 extern void PollWirelessFinalizeDelay20(void);
 extern void func_ov015_02073280(void);
-extern void func_ov015_02072f7c(void);
+extern void EnterWirelessConnectionState3UnlessHelperState3(void);
 
 void (*gWirelessStateHandlers[22])(void) = {
     func_ov015_02072f98,
     func_ov015_02072f9c,
     func_ov015_02072fa0,
     func_ov015_02072fa4,
-    func_ov015_02072fa8, /* PXI_Init */
+    FinalizeWirelessConnectionWrapper, /* PXI_Init */
     DispatchPanelTransition, /* DispatchPanelTransition */
     SetWirelessReadyFlag,
     func_ov015_02073030,
@@ -50,5 +50,5 @@ void (*gWirelessStateHandlers[22])(void) = {
 };
 
 void (*gWirelessStateUpdateCallback[1])(void) = {
-    func_ov015_02072f7c,
+    EnterWirelessConnectionState3UnlessHelperState3,
 };

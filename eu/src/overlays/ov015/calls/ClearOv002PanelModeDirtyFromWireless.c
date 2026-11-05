@@ -1,0 +1,3 @@
+#define OSi_IrqCallback SetOv002PanelModeDirtyFromLowBit
+#define OSi_IrqDma0_02071a78 ClearOv002PanelModeDirtyFromWireless
+#include "src/ov015/library_nitro_os/OSi_IrqDma0_02071a78.c"

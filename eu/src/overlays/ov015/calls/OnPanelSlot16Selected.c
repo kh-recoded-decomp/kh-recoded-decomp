@@ -1,3 +1,4 @@
+#define func_ov015_020779a4 SetWirelessPanelModeAndPendingMode
 #define OnPanelSlot16Selected_02079e5c OnPanelSlot16Selected
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define func_ov027_020b90a4 FindWidgetById

@@ -192,7 +192,7 @@ Evidence references for operations beyond the task core:
 - `InitKeyRepeatState`: `src/arm9/runtime/func_0204f58c.c` (1); `eu/src/calls/UpdateKeyRepeat.c` (3).
 - `StartTouchSamplingRing`: `src/arm9/runtime/func_0202b5d4.c` (1); `src/arm9/library_nitro_spi/TP_RequestAutoSamplingStartAsync_0200fdd8.c` (3); `eu/src/data/bss/Bss_main_02060534.c` (1).
 - `WMi_GetSystemWork`: `src/arm9/shared_engine/func_0201103c.c` (1); `src/arm9/library_nitro_wm/WMi_InitCore_02010d80.c` (3); `src/arm9/library_nitro_wm/WMi_InitCore_02010d80.c` (81); `eu/src/calls/WmDataSharingSetDataCallback.c` (1).
-- `WM_StartKeySharing`: `src/arm9/unclassified_helpers/func_02012270.c` (1); `eu/src/overlays/ov015/calls/func_ov015_02073c48.c` (3).
+- `WM_StartKeySharing`: `src/arm9/unclassified_helpers/func_02012270.c` (1); `eu/src/overlays/ov015/calls/WH_StartPort13DataSharing.c` (3).
 - `CTRDGi_Channel17Callback`: `src/arm9/library_nitro_ctrdg/func_02012778.c` (1); `src/arm9/library_nitro_ctrdg/CTRDG_Init_02012550.c` (3).
 - `AllocateScriptVmBuffer`: `src/arm9/audio/func_020257c4.c` (1); `src/arm9/archive_startup/RoundAndInitArchive_020258b0.c` (3); `src/arm9/shared_engine/ScriptVm_Start_0202580c.c` (29); `eu/src/overlays/ov003/calls/MovieScene_Init.c` (100).
 - `ReleaseScriptVmBuffer`: `src/arm9/audio/func_020257e4.c` (1); `src/arm9/shared_engine/ScriptVm_Start_0202580c.c` (29).

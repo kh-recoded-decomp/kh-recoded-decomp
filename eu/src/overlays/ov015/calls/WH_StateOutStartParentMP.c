@@ -2,7 +2,7 @@
 
 #pragma opt_propagation off
 
-extern BOOL func_ov015_02073c48(void);
+extern BOOL WH_StartPort13DataSharing(void);
 
 void WH_StateOutStartParentMP(void *argument)
 {
@@ -19,7 +19,7 @@ void WH_StateOutStartParentMP(void *argument)
     case 10:
         if (gWhState.mode == 2) {
             if (gWhState.systemState == 4) {
-                if (!func_ov015_02073c48()) {
+                if (!WH_StartPort13DataSharing()) {
                     WH_ChangeSysState(9);
                 }
                 return;

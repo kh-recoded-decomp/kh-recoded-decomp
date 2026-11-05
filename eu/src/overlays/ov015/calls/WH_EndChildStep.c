@@ -1,3 +1,4 @@
+#define func_ov015_02073cbc WH_RequestEndMP
 #define PXI_Init_02012284 PXI_Init_02012298
 #define PollPanelTransition_02074e80 WH_Reset
 #define WH_EndChildStep_02073c7c WH_EndChildStep

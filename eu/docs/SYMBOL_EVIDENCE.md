@@ -610,3 +610,13 @@ raw callback results, timing gates, graphics side effects and resource lifetimes
 - [RESULTS_PAGE_LIFECYCLE_CONTRACTS.md](RESULTS_PAGE_LIFECYCLE_CONTRACTS.md): 9 entrypoints.
 - [MENU_PHASE_SUBOVERLAY_TEXT_CONTRACTS.md](MENU_PHASE_SUBOVERLAY_TEXT_CONTRACTS.md): 20 entrypoints.
 - [AREA_EVENT_TRANSITION_REWARD_CONTRACTS.md](AREA_EVENT_TRANSITION_REWARD_CONTRACTS.md): 17 entrypoints.
+
+## Wireless menu, board and helper ownership
+
+Forty-three entrypoints now identify separate wireless menu/connection/board
+work and WM request/callback operations.
+[WIRELESS_MENU_HELPER_CONTRACTS.md](WIRELESS_MENU_HELPER_CONTRACTS.md) records
+interleaved init/update/exit tables, signed states, borrowed owner text, widget
+and touch behavior, asynchronous submission versus completion and exact error
+fallbacks. A widget initializer keeps a generic choice name where assets do not
+prove a share-specific role.

@@ -1,3 +1,4 @@
+#define func_ov015_02078f18 ConfigureWirelessPanelSubBg2Control
 #define BuildTileGridMap_02078e88 BuildTileGridMap
 #define ClearBuffer5100_02078bb4 ClearBuffer5100
 #define ConvertTileGrid_02078d14 ConvertTileGrid

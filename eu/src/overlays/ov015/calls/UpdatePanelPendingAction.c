@@ -1,3 +1,4 @@
+#define func_ov015_02070af8 SetWirelessMenuState
 #define func_ov002_02062014 SetOv002PanelModeDirtyFromLowBit
 #define func_ov002_0206655c IsScreenFadeComplete
 #define UpdatePanelPendingAction_02070fe8 UpdatePanelPendingAction

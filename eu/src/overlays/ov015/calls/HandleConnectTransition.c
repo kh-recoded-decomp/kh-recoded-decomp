@@ -1,3 +1,4 @@
+#define func_ov015_02072ee4 SetWirelessConnectionState
 #define GetPanelTransitionMode_020748e4 GetPanelTransitionMode
 #define HandleConnectTransition_02073150 HandleConnectTransition
 #define WH_SetReceiver_02074e3c WH_SetReceiver

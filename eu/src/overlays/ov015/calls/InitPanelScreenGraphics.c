@@ -1,3 +1,5 @@
+#define func_ov015_0206c660 ReleaseWirelessMenuWidgetGroups
+#define func_ov015_0206e658 SetupWirelessSelectionSlotFromWidget
 #define func_ov002_020629a8 ResetOv002PanelGraphics
 #define CountSetFlagsInRange_02066f7c CountSetFlagsInRange
 #define FindActiveRecordById_020b8184 FindActiveRecordById

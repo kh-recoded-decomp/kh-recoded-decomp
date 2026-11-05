@@ -1,0 +1,4 @@
+#define FX_DivAsync ReleaseWirelessMenuMainWidgetGroup
+#define FX_Div_0206c660 ReleaseWirelessMenuWidgetGroups
+#define FX_GetDivResult ReleaseWirelessMenuSubWidgetGroup
+#include "src/ov015/library_nitro_fx/FX_Div_0206c660.c"

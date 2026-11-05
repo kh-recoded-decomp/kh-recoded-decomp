@@ -1,3 +1,10 @@
+#define func_ov015_02077904 StartWirelessPanelSequenceIfStopped
+#define func_ov015_02077978 SetWirelessPanelModeAndStopSequence
+#define func_ov015_020779a4 SetWirelessPanelModeAndPendingMode
+#define func_ov015_02078554 FormatWirelessPanelDescriptorText
+#define func_ov015_02078918 IsWirelessPanelAOrBOrNewTouchPressed
+#define func_ov015_020790c0 IsWirelessPanelTouchJustPressed
+#define func_ov015_020790e8 HasWirelessPanelTouchSamples
 #define func_ov015_0207830c PickWeightedReward
 #define ClearSubBg2Screen_02078f34 ClearSubBg2Screen
 #define G2x_SetBlendAlpha_02006850 G2x_SetBlendAlpha_

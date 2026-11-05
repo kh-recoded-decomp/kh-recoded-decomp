@@ -1,3 +1,4 @@
+#define func_ov015_0206c4f0 UpdateWirelessMenu
 #define PollPanelOverlay15_02062efc PollPanelOverlay15
 #define func_ov002_02062cb8 SwitchPanelMode
 #include "src/ov002/panel_state/PollPanelOverlay15_02062efc.c"

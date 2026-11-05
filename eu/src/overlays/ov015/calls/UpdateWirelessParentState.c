@@ -1,3 +1,4 @@
+#define func_ov015_02072ee4 SetWirelessConnectionState
 #define BeginWirelessChannelMeasurement_020748f4 BeginWirelessChannelMeasurement
 #define FinishWirelessChannelSelection_02074b24 FinishWirelessChannelSelection
 #define GetPanelTransitionMode_020748e4 GetPanelTransitionMode

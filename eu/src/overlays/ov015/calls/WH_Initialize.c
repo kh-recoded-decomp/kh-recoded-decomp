@@ -1,3 +1,4 @@
+#define func_ov015_02074ce0 WH_TerminateOnCallbackError8
 #define data_ov015_0207e980 gWhState
 #define MIi_CpuFill8_01ff8830 MI_CpuFill8
 #define data_ov015_0207efa0 gWirelessScanBuffer

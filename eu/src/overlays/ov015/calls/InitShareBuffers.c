@@ -1,3 +1,4 @@
+#define func_ov015_02072ee4 SetWirelessConnectionState
 #define InitShareBuffers_02072948 InitShareBuffers
 #define MIi_CpuFill8_01ff8830 MI_CpuFill8
 #define NNSi_FndAllocFromDefaultHeapEx_0202a19c NNS_FndAllocFromDefaultExpHeapEx

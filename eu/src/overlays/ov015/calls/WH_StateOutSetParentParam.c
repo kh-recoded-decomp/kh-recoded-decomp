@@ -1,3 +1,4 @@
+#define func_ov015_02073894 WH_RequestParentWepKey
 #define data_ov015_0207e980 gWhState
 #define SetPanelTransitionMode_020737c4 WH_ChangeSysState
 #define WH_SetError_020737d4 WH_SetError

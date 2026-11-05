@@ -1,3 +1,4 @@
+#define func_ov015_02072ee4 SetWirelessConnectionState
 #define DispatchPanelTransition_02072fb4 DispatchPanelTransition
 #define GetPanelTransitionMode_020748e4 GetPanelTransitionMode
 #define WH_StartTransitionStep_02074fd0 WH_StartTransitionStep

@@ -96,14 +96,14 @@ extern const char sOv015_WxcWlaP2_0207e7ec[];
 
 extern void HandleWirelessPanelNavigation(WidgetPositionRecord *widget, u32 keys);
 extern void func_ov015_02072754(void);
-extern void func_ov015_02072758(void);
+extern void PositionWirelessPanelSelectionMarker(void);
 extern void SetPanelFlagE2Bit3(void);
-extern void func_ov015_02072830(void);
-extern void func_ov015_0207283c(void);
-extern void func_ov015_02072848(void);
-extern void func_ov015_02072854(void);
+extern void SelectPreviousWirelessPanelSubpageWrapper(void);
+extern void SelectNextWirelessPanelSubpageWrapper(void);
+extern void SelectPreviousWirelessPanelPageWrapper(void);
+extern void SelectNextWirelessPanelPageWrapper(void);
 
-extern void func_ov015_0206c660(void);
+extern void ReleaseWirelessMenuWidgetGroups(void);
 extern void GX_SetBankForSubOBJExtPltt(int bank);
 extern void GX_SetBankForOBJExtPltt(int bank);
 extern void ResetOv002PanelGraphics(void);
@@ -195,7 +195,7 @@ void SetupPanelGraphics(void) {
     data_ov015_0207e960->flagE1Bit4 = 0;
     data_ov015_0207e960->flagE1Bit7 = 0;
     data_ov015_0207e960->flagE1Mode = 0;
-    func_ov015_0206c660();
+    ReleaseWirelessMenuWidgetGroups();
     data_ov015_0207e960->mainLoaded = 1;
     data_ov015_0207e960->subLoaded = 1;
     GX_SetBankForSubOBJExtPltt(0x100);
@@ -353,12 +353,12 @@ void SetupPanelGraphics(void) {
     }
     SetWidgetRootInputCallback(data_ov015_0207e960->subObj, HandleWirelessPanelNavigation);
     ResolveEntryStoreWord(data_ov015_0207e960->subObj, 4, func_ov015_02072754);
-    ResolveEntryStoreWord(data_ov015_0207e960->subObj, 9, func_ov015_02072758);
+    ResolveEntryStoreWord(data_ov015_0207e960->subObj, 9, PositionWirelessPanelSelectionMarker);
     ResolveEntryStoreWord(data_ov015_0207e960->subObj, 17, SetPanelFlagE2Bit3);
-    ResolveEntryStoreWord(data_ov015_0207e960->subObj, 30, func_ov015_02072830);
-    ResolveEntryStoreWord(data_ov015_0207e960->subObj, 31, func_ov015_0207283c);
-    ResolveEntryStoreWord(data_ov015_0207e960->subObj, 32, func_ov015_02072848);
-    ResolveEntryStoreWord(data_ov015_0207e960->subObj, 33, func_ov015_02072854);
+    ResolveEntryStoreWord(data_ov015_0207e960->subObj, 30, SelectPreviousWirelessPanelSubpageWrapper);
+    ResolveEntryStoreWord(data_ov015_0207e960->subObj, 31, SelectNextWirelessPanelSubpageWrapper);
+    ResolveEntryStoreWord(data_ov015_0207e960->subObj, 32, SelectPreviousWirelessPanelPageWrapper);
+    ResolveEntryStoreWord(data_ov015_0207e960->subObj, 33, SelectNextWirelessPanelPageWrapper);
     NNSi_FndFreeFromDefaultHeap(archive);
     ZeroHalfThenFree(handle);
 

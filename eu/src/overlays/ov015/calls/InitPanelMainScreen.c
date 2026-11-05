@@ -1,3 +1,4 @@
+#define func_ov015_0206c670 ReleaseWirelessMenuMainWidgetGroup
 #define G2_GetBG0ScrPtr_02006de0 G2_GetBG0ScrPtr
 #define GX_LoadBG1Char_020079b0 GX_LoadBG1Char
 #define GX_LoadBG1Scr_02007630 GX_LoadBG1Scr

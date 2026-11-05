@@ -1,3 +1,4 @@
+#define func_ov015_020779a4 SetWirelessPanelModeAndPendingMode
 #define OnPanelSlot1Selected_02079dcc OnPanelSlot1Selected
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define SetSlotAnimSequence_0204f24c SetSlotAnimSequence

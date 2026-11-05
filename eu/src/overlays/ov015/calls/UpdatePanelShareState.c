@@ -1,3 +1,6 @@
+#define func_ov015_02070af8 SetWirelessMenuState
+#define func_ov015_020716f8 InitWirelessMenuChoiceWidgets
+#define func_ov015_02072cb4 ReturnWirelessConnectionToState2IfInRange3To7
 #define func_ov002_02062000 GetOv002PanelKeyRepeatState
 #define func_ov002_0206655c IsScreenFadeComplete
 #define AreAllWidgetMovesFinished_020b912c AreAllWidgetMovesFinished
