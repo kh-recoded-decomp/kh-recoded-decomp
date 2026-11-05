@@ -1,4 +1,5 @@
 #include "nitro/types.h"
+#include "src/overlays/ov001/StageManagerFlags.h"
 
 typedef struct {
     u8 pad_00[0x10];
@@ -48,7 +49,6 @@ extern void MI_CpuFill8(void *dest, u32 value, u32 size);
 extern StageEvent *GetStageEventRecord(u32 id);
 extern StageLink *GetStageController(u32 id);
 extern void *GetStageActor(int id);
-extern u32 func_ov001_0209c5ac(u32 mask);
 extern int ApplyActorScaleFactors(void *actor);
 extern ScriptOpcode *func_ov021_020b0370(ScriptThread *thread);
 extern u32 func_ov021_020b037c(ScriptThread *thread);
@@ -73,7 +73,7 @@ s32 RunScriptThread(ScriptThread *thread)
         actorId = thread->ownerId;
     }
     gActiveFieldContext.player = GetStageActor((s16)actorId);
-    if (func_ov001_0209c5ac(0x40) && gActiveFieldContext.player != NULL && ApplyActorScaleFactors(gActiveFieldContext.player) <= 0) {
+    if (GetMaskedStageManagerFlags(0x40) && gActiveFieldContext.player != NULL && ApplyActorScaleFactors(gActiveFieldContext.player) <= 0) {
         return 0;
     }
     do {

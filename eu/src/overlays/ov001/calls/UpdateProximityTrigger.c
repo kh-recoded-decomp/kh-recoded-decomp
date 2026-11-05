@@ -10,7 +10,7 @@
 #define func_ov001_0209c040 GetStageActor
 #define func_ov001_0209c2f0 GetLinkedStageActor
 #define func_ov001_0209c3c0 GetStageManager
-#define func_ov001_0209c584 func_ov001_0209c5ac
-#define func_ov001_0209c59c func_ov001_0209c5c4
+#define func_ov001_0209c584 GetMaskedStageManagerFlags
+#define func_ov001_0209c59c SetStageManagerFlagBits
 #define func_ov021_020b4b7c CopySourceWords
 #include "src/ov001/shared_engine/UpdateProximityTrigger_02093660.c"

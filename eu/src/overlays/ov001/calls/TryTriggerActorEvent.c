@@ -3,5 +3,5 @@
 #define IsCommandType8_02096224 IsCommandType8
 #define TryTriggerActorEvent_0209256c TryTriggerActorEvent
 #define func_ov001_02093eec UpdateStageEventTracking
-#define func_ov001_0209c584 func_ov001_0209c5ac
+#define func_ov001_0209c584 GetMaskedStageManagerFlags
 #include "src/ov001/scripted_actor_behavior/TryTriggerActorEvent_0209256c.c"

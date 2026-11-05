@@ -144,6 +144,20 @@ use, count-word overlap, worker wake ordering, unresolved wrapper ABI views and
 host pointer/thread boundaries. Shared US identifiers stay separate from EU
 semantic names even when their old numeric spellings collide.
 
+## Stage-manager flags
+
+| Previous name | Current name | Evidence |
+|---|---|---|
+| `func_ov001_0209c5ac` | `GetMaskedStageManagerFlags` | Returns the selected first-word bits, or zero for an absent manager. Callers query masks in actor movement, events and script processing. |
+| `func_ov001_0209c5c4` | `SetStageManagerFlagBits` | ORs the mask into the same first word, preserving all other bits. |
+| `func_ov001_0209c5d8` | `ClearStageManagerFlagBits` | ANDs that word with the mask complement, preserving all other bits. |
+| `AllocateActorSlotOrReportError` | `ClearStageMask30WhenBit0Clear` | Tests bit 0, conditionally clears mask `0x30` and returns 3 or 0. No allocation or error reporting occurs in this EU implementation. |
+
+[STAGE_MANAGER_FLAGS.md](STAGE_MANAGER_FLAGS.md) records the mask-valued query,
+null-manager behavior, corrected conditional-helper contract and unresolved bit
+roles. The first-word field reuses the existing `StageMotionManager` view while
+preserving every previously established motion offset.
+
 ## Explicitly unresolved
 
 The vector view at `data_027e0160` overlaps `data_027e0164`, used by the older

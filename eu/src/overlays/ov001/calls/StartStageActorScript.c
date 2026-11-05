@@ -2,6 +2,6 @@
 #define GetStageObjectHandle_0209c0c4 GetStageObjectHandle
 #define StartStageActorScript_02093970 StartStageActorScript
 #define func_ov001_02093e54 ReleaseEventResources
-#define func_ov001_0209c584 func_ov001_0209c5ac
+#define func_ov001_0209c584 GetMaskedStageManagerFlags
 #define func_ov021_020b4bdc SelectSequenceTrack
 #include "src/ov001/shared_engine/StartStageActorScript_02093970.c"

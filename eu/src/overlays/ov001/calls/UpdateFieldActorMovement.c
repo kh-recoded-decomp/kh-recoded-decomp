@@ -1,5 +1,6 @@
 #define func_ov001_0208fc90 UpdateActorHoverHeight
 #include "nitro/types.h"
+#include "src/overlays/ov001/StageManagerFlags.h"
 #include "nitro/fx_types.h"
 
 typedef struct ActorBody {
@@ -74,7 +75,6 @@ typedef struct Actor {
 extern fx32 ApplyActorScaleFactors(Actor *actor);
 extern void TickSequenceCountdown(void *sequencer, s32 step);
 extern void GetTargetActorPointPosition(Actor *actor, u16 targetId, u16 pointId, VecFx32 *out);
-extern u32 func_ov001_0209c5ac(u32 mask);
 extern fx32 FX_Mul(fx32 a, fx32 b);
 extern void ApplyActorDisplayParams(Actor *actor);
 extern void VEC_Subtract(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
@@ -203,8 +203,8 @@ void UpdateFieldActorMovement(Actor *actor)
     } else {
         actor->drawFlags &= 0xfdff;
     }
-    if (!func_ov001_0209c5ac(0x20) && actor->linkId == 0) {
-        if (!func_ov001_0209c5ac(0x10)) {
+    if (!GetMaskedStageManagerFlags(0x20) && actor->linkId == 0) {
+        if (!GetMaskedStageManagerFlags(0x10)) {
             switch (actor->moveMode) {
             case 0:
             case 2:

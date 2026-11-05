@@ -1,5 +1,6 @@
 #pragma opt_propagation off
 #include "nitro/types.h"
+#include "src/overlays/ov001/StageManagerFlags.h"
 #include "nitro/fx_types.h"
 
 typedef struct FileSection {
@@ -139,7 +140,6 @@ extern fx32 ApplyActorScaleFactors(StageActor *actor);
 extern StageEntry *GetStageEntry(int id);
 extern void UpdateStageEventTimers(StageEvent *event);
 extern StageActor *GetLinkedStageActor(StageActor *actor);
-extern u32 func_ov001_0209c5ac(u32 mask);
 extern StageActor *FindRecordById_0209c304(int id);
 extern void func_ov001_02091ae8(StageActor *actor, u32 firstId, u32 secondId, u32 flags);
 extern void CopySourceWords(void *cache);
@@ -297,7 +297,7 @@ void UpdateStageEvent(StageEvent *event)
             if (link == actor) {
                 fadeIn = FALSE;
                 speed = 0;
-                if (func_ov001_0209c5ac(1)) {
+                if (GetMaskedStageManagerFlags(1)) {
                     actor->fade = 0x1f;
                     actor->fadeFrom = actor->fade;
                     actor->fadeTo = 0x1f;

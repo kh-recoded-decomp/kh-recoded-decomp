@@ -7644,7 +7644,7 @@ src/overlays/ov001/calls/NotifyActorGroupAndTarget.c:
     complete
     .text       start:0x02093af0 end:0x02093b06
 
-src/overlays/ov001/calls/AllocateActorSlotOrReportError.c:
+src/overlays/ov001/calls/ClearStageMask30WhenBit0Clear.c:
     complete
     .text       start:0x02093b08 end:0x02093b22
 
@@ -8220,15 +8220,15 @@ src/overlays/ov001/calls/func_ov001_0209c56c.c:
     complete
     .text       start:0x0209c56c end:0x0209c5ac
 
-src/overlays/ov001/calls/func_ov001_0209c5ac.c:
+src/overlays/ov001/calls/GetMaskedStageManagerFlags.c:
     complete
     .text       start:0x0209c5ac end:0x0209c5c4
 
-src/overlays/ov001/calls/func_ov001_0209c5c4.c:
+src/overlays/ov001/calls/SetStageManagerFlagBits.c:
     complete
     .text       start:0x0209c5c4 end:0x0209c5d8
 
-src/overlays/ov001/calls/func_ov001_0209c5d8.c:
+src/overlays/ov001/calls/ClearStageManagerFlagBits.c:
     complete
     .text       start:0x0209c5d8 end:0x0209c5f0
 

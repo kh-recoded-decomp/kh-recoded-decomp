@@ -2,5 +2,5 @@
 #define func_ov001_020980fc UpdateActorController_02098124
 #define func_ov001_0209c040 GetStageActor
 #define func_ov001_0209c120 GetStageController
-#define func_ov001_0209c584 func_ov001_0209c5ac
+#define func_ov001_0209c584 GetMaskedStageManagerFlags
 #include "src/ov001/shared_engine/UpdateActorController_02097fa0.c"

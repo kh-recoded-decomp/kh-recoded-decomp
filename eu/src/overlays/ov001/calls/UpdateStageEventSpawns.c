@@ -12,6 +12,6 @@
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define data_ov001_020a0508 gStageManager
 #define func_ov001_0209c3c0 GetStageManager
-#define func_ov001_0209c584 func_ov001_0209c5ac
+#define func_ov001_0209c584 GetMaskedStageManagerFlags
 #define random_next_scaled_0202aa04 random_next_scaled
 #include "src/ov001/shared_engine/UpdateStageEventSpawns_02099c28.c"

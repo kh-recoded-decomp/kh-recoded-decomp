@@ -22,10 +22,12 @@ typedef struct StageObjectMotionRange {
     s16 lastGroup;
 } StageObjectMotionRange;
 
-/* Motion-related fields of the stage manager; other subsystems use their
- * own views of the intervening storage. */
+/* Established flag and motion fields of a partial DS stage-manager view.
+ * Other subsystems use their own views of the intervening storage; this
+ * padded view does not establish a complete allocation size. */
 typedef struct StageMotionManager {
-    u8 pad00000[0x210];
+    u32 flags;
+    u8 pad00004[0x210 - 4];
     StageMotionGroup *groups;
     u8 pad00214[0x18f5c - 0x214];
     void (*setMotionMode)(StageMotionRecord *motion, int mode, int argument);

@@ -22,6 +22,8 @@ This is a matching decompilation; a host port is a separate project.
   lists, resource encoding, callback timing and buffer/path ownership.
 - [Main file loader](FILE_LOADER.md) records heap direction, shared file/audio
   messages, buffer-key queries, waiting and the DS queue/thread storage.
+- [Stage-manager flags](STAGE_MANAGER_FLAGS.md) records nullable mask access,
+  conditional clearing and the boundary between proven fields and unknown bits.
 - [Results scene](RESULTS_SCENE.md), [scene loading](SCENE_LOAD_STEP.md),
   [carousel models](CAROUSEL_MODELS.md), [widgets](WIDGET_POSITION.md) and
   [field-menu palette](FIELD_MENU_PALETTE.md) record behavior and the matching
