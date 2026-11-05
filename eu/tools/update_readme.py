@@ -30,15 +30,21 @@ def table():
 
     c, asm, named = count("c_decompiled_matched"), count("asm_stub_matched"), count("named")
     c_b, asm_b = size("c_decompiled_matched"), size("asm_stub_matched")
+    lib, lib_b = count("library_verified"), size("library_verified")
     data = data_progress.summarize(data_progress.load_data_units())
     pct = lambda a, b: 100.0 * a / b if b else 0.0  # noqa: E731
     rows = [
         ("Real C matched functions", "**{:,}** / {:,} ({:.1f}%)".format(c, total, pct(c, total)),
          "Functions implemented in C and verified byte-exact"),
         ("Real C matched **bytes**", "**{:,}** / {:,} ({:.2f}%)".format(c_b, total_bytes, pct(c_b, total_bytes)),
-         "Code bytes covered by real C; the honest progress figure"),
+         "Original code bytes reproduced by compiled C"),
         ("Assembly matched functions", "**{:,}** ({:,} bytes)".format(asm, asm_b),
          "Original SDK, BIOS and DS Protect assembly, verified byte-exact; never counted as C"),
+        ("Verified library functions (not C)", "**{:,}** ({:,} bytes)".format(lib, lib_b),
+         "MobiClip, NitroSDK, MSL and DS Protect; verified separately from C"),
+        ("C + verified library **bytes**", "**{:,}** / {:,} (**{:.2f}%**)".format(
+            c_b + lib_b, total_bytes, pct(c_b + lib_b, total_bytes)),
+         "Combined byte-exact code coverage; library bytes do not increase the C percentage"),
         ("Reconstructed DATA bytes", "**{:,}** / {:,} ({:.2f}%)".format(
             data["matched_data_bytes"], data["total_data_bytes"],
             pct(data["matched_data_bytes"], data["total_data_bytes"])),

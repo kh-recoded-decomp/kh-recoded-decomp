@@ -1,18 +1,20 @@
 # khrecoded-decomp
 
-> [!IMPORTANT]
-> **Development has moved to the shared
-> [kh-recoded-decomp/kh-recoded-decomp](https://github.com/kh-recoded-decomp/kh-recoded-decomp)
-> repository.** This EU (`BK9P`) project has been merged with
-> [ricky074game/kh-recoded-decomp](https://github.com/ricky074game/kh-recoded-decomp)
-> (US `BK9E`) so both regions can be developed in one codebase. The complete EU
-> history and attribution are preserved under [`eu/`](https://github.com/kh-recoded-decomp/kh-recoded-decomp/tree/main/eu).
-> This repository is retained for historical reference; please send new issues,
-> pull requests and decompilation work to the shared repository.
+EU (`BK9P`) is actively maintained in the shared
+[kh-recoded-decomp/kh-recoded-decomp](https://github.com/kh-recoded-decomp/kh-recoded-decomp)
+repository alongside US (`BK9E`). This directory preserves the EU history and
+attribution; send issues and contributions to the shared repository.
 
-A work-in-progress **matching decompilation** of *Kingdom Hearts Re:coded*
-(Nintendo DS). The goal is C source that recompiles to a binary **byte-for-byte
-identical** to the original game code.
+**EU ARM9 matching is complete: 100.00% C + verified library code, with all
+108 linked modules byte-identical to the ROM.** Real C accounts for 95.98% of
+the code bytes; the separately verified libraries account for 4.02%.
+Reconstructed DATA is 100.00%. These figures exclude ARM7 and do not imply
+that all semantic names, structures or documentation are complete.
+
+Work now focuses on evidence-based names and interfaces for a future port.
+See [the naming evidence](docs/SYMBOL_EVIDENCE.md) and
+[the porting guide](docs/PORTING_GUIDE.md). The original DS behavior remains
+byte-exact while names and recovered types are improved.
 
 > ### Disclaimer
 > This repository does **NOT** contain the game ROM, any game assets, or any of
@@ -28,11 +30,13 @@ identical** to the original game code.
 <!-- progress:start -->
 | Category | Count | Meaning |
 |---|---:|---|
-| Real C matched functions | **10,486** / 10,625 (98.7%) | Functions implemented in C and verified byte-exact |
-| Real C matched **bytes** | **1,690,130** / 1,771,024 (95.43%) | Code bytes covered by real C; the honest progress figure |
+| Real C matched functions | **10,489** / 10,625 (98.7%) | Functions implemented in C and verified byte-exact |
+| Real C matched **bytes** | **1,699,782** / 1,771,024 (95.98%) | Original code bytes reproduced by compiled C |
 | Assembly matched functions | **0** (0 bytes) | Original SDK, BIOS and DS Protect assembly, verified byte-exact; never counted as C |
+| Verified library functions (not C) | **136** (71,242 bytes) | MobiClip, NitroSDK, MSL and DS Protect; verified separately from C |
+| C + verified library **bytes** | **1,771,024** / 1,771,024 (**100.00%**) | Combined byte-exact code coverage; library bytes do not increase the C percentage |
 | Reconstructed DATA bytes | **223,456** / 223,456 (100.00%) | Verified byte-exact .rodata, .data, .ctor and .bss reconstructed from source |
-| Named DATA symbols | **1,362** / 2,330 (58.45%) | Identified DATA names; naming alone does not count as reconstructed DATA |
+| Named DATA symbols | **1,371** / 2,331 (58.82%) | Identified DATA names; naming alone does not count as reconstructed DATA |
 | Named, not decompiled | **0** | Functions with a known name (SDK, NitroSystem, ...) but no source yet |
 | Total known functions | **10,625** | Functions in the dsd symbol tables |
 | Region | EU (`BK9P`) |  |
@@ -40,8 +44,8 @@ identical** to the original game code.
 <!-- progress:end -->
 
 The counts come from `python tools/audit_progress.py`; per-module
-progress is in [PROGRESS.md](PROGRESS.md). Only real C counts as decompiled
-progress, see [docs/PROGRESS_POLICY.md](docs/PROGRESS_POLICY.md).
+progress is in [PROGRESS.md](PROGRESS.md). C and verified library coverage are
+reported separately; see [docs/PROGRESS_POLICY.md](docs/PROGRESS_POLICY.md).
 
 The full build links every module and checks it against the ROM: **all 108
 modules** (main, ITCM, DTCM and 105 overlays) are byte-identical, and the ROM

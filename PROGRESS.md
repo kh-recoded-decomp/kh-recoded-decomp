@@ -4,13 +4,13 @@
 | Region | C code bytes | % | Functions |
 |---|---:|---:|---:|
 | **US** `BK9E` | 1,548,820 / 1,768,220 | **87.6%** | 10,021 / 10,359 |
-| **EU** `BK9P` | 1,690,130 / 1,771,024 | **95.4%** | 10,486 / 10,625 |
+| **EU** `BK9P` | 1,699,782 / 1,771,024 | **96.0%** | 10,489 / 10,625 |
 | US verified original assembly (not C) | 22,966 | 1.3% | 171 |
 | EU verified library code (hand-written ARM: MobiClip, NitroSDK, MSL, DS Protect; not C) | 71,242 | 4.0% | 136 |
-| EU C + verified library code | 1,761,372 / 1,771,024 | **99.5%** | |
-| **Shared** (same function, matched in both) | 1,481,296 | 83.6% of EU | 9,363 |
+| EU C + verified library code | 1,771,024 / 1,771,024 | **100.0%** | |
+| **Shared** (same function, matched in both) | 1,467,356 | 82.9% of EU | 9,311 |
 
-8,188 shared functions are stored once in `src/` and built for both regions; 1,175 still have separate EU copies. 658 matched functions are US-only so far and 1,123 are EU-only. EU numbers come from `eu/tools/audit_progress.py`; per-module EU detail is in [eu/PROGRESS.md](eu/PROGRESS.md).
+8,160 shared functions are stored once in `src/` and built for both regions; 1,151 still have separate EU copies. 710 matched functions are US-only so far and 1,178 are EU-only. EU numbers come from `eu/tools/audit_progress.py`; per-module EU detail is in [eu/PROGRESS.md](eu/PROGRESS.md).
 <!-- regions:end -->
 
 ## US (BK9E revision 0)
