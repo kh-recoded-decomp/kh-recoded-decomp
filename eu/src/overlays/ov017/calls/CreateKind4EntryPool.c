@@ -10,6 +10,6 @@
 #define func_ov017_020a3240 GetOwnerRaisedPosition
 #define func_ov017_020a3284 GetActorVelocity
 #define func_ov017_020a32bc DrawFieldObjectEffects
-#define func_ov017_020a3944 func_ov017_020a3964
+#define func_ov017_020a3944 Kind4Object_OnActorSlotRefreshNoop
 #define func_ov017_020a3948 LinkObjectChainTail
 #include "src/ov017/unclassified_helpers/CreateKind4EntryPool_020a3a28.c"

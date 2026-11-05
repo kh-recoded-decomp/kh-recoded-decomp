@@ -52,7 +52,7 @@ src/overlays/ov019/calls/SettleLinkHeightAtZeroOffset.c:
     complete
     .text       start:0x020a23c0 end:0x020a23cc
 
-src/overlays/ov019/auto/func_ov019_020a23cc.c:
+src/overlays/ov019/auto/LinkedObject_NextLinkHitHookNoop.c:
     complete
     .text       start:0x020a23cc end:0x020a23ce
 

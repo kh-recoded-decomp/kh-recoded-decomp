@@ -1,4 +1,4 @@
 #define IsFieldFlagBit1Set_020a3d40 IsFieldFlagBit1Set
 #define IsFieldObjectActive_020a3d50 IsFieldObjectActive
-#define func_ov017_020a5dd0 func_ov017_020a5df0
+#define func_ov017_020a5dd0 GetKind7HiddenMask
 #include "src/ov017/field_objects/IsFieldObjectActive_020a3d50.c"

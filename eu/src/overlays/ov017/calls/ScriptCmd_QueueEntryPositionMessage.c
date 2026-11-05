@@ -5,5 +5,5 @@
 #define func_ov001_0208635c GetEntryPoolObjectAtIndex
 #define func_ov017_020a3eec AppendPool1Entry
 #define func_ov017_020a4204 FindKind4FieldObject
-#define func_ov017_020a4234 func_ov017_020a4254
+#define func_ov017_020a4234 GetKind4PathDurationMode
 #include "src/ov017/script_commands/ScriptCmd_QueueEntryPositionMessage_020a1f68.c"

@@ -8,7 +8,7 @@ typedef struct Block {
     u16 flags;
 } Block;
 
-extern BOOL func_ov020_020a34a4(Block *block);
+extern BOOL GetPanelBlockHiddenMask(Block *block);
 extern void ActorSlot_SetFlag8ByIndex(int index, BOOL enable);
 
 void SetBlockHidden(Block *block, BOOL hidden)
@@ -24,6 +24,6 @@ void SetBlockHidden(Block *block, BOOL hidden)
     }
     if (block->renderFlags & 4) {
         ActorSlot_SetFlag8ByIndex(block->entityId,
-                                           !func_ov020_020a34a4(block) && !(block->flags & 0x8000) ? TRUE : FALSE);
+                                           !GetPanelBlockHiddenMask(block) && !(block->flags & 0x8000) ? TRUE : FALSE);
     }
 }

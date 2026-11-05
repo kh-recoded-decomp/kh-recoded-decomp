@@ -5,5 +5,5 @@
 #define data_02053438 gZeroVecFx32
 #define data_ov043_020bd2c0 gOv043CameraState
 #define func_ov043_020bccc4 UpdateFollowCamera
-#define func_ov043_020bd088 func_ov043_020bd0a8
+#define func_ov043_020bd088 Ov043Camera_InitializationHookNoop
 #include "src/ov043/camera/InitCameraState_020bcbcc.c"

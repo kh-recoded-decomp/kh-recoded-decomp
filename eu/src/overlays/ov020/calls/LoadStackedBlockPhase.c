@@ -15,5 +15,5 @@
 #define func_ov001_020809d0 RebindAnimTracks
 #define func_ov001_020872b8 IsNodeFlagBitClear
 #define func_ov020_020a2878 FindLastLiveBlockInPreviousChain
-#define func_ov020_020a3484 func_ov020_020a34a4
+#define func_ov020_020a3484 GetPanelBlockHiddenMask
 #include "src/ov020/unclassified_helpers/LoadStackedBlockPhase_020a2904.c"

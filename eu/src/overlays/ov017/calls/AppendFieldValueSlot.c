@@ -1,3 +1,3 @@
 #define AppendFieldValueSlot_020a3f84 AppendFieldValueSlot
-#define func_ov017_020a500c func_ov017_020a502c
+#define func_ov017_020a500c InitFieldFallRequestListHead
 #include "src/ov017/field_objects/AppendFieldValueSlot_020a3f84.c"

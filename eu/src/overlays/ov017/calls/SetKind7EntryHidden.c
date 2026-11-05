@@ -10,7 +10,7 @@ typedef struct Kind7Entry {
     u16 flags;
 } Kind7Entry;
 
-extern BOOL func_ov017_020a5df0(Kind7Entry *entry);
+extern BOOL GetKind7HiddenMask(Kind7Entry *entry);
 extern void ActorSlot_SetFlag8ByIndex(int index, BOOL enable);
 
 void SetKind7EntryHidden(Kind7Entry *entry, BOOL hidden)
@@ -29,7 +29,7 @@ void SetKind7EntryHidden(Kind7Entry *entry, BOOL hidden)
     }
     if (entry->statusFlags & 4) {
         visible = FALSE;
-        if (!func_ov017_020a5df0(entry)) {
+        if (!GetKind7HiddenMask(entry)) {
             busy = TRUE;
             if (entry->state != 2 && entry->state != 1) {
                 busy = FALSE;

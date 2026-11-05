@@ -1,3 +1,3 @@
 #define Object_GetKindValue_0208744c Object_GetKindValue
-#define func_ov016_020a6af4 func_ov016_020a6b14
+#define func_ov016_020a6af4 GetFieldObjectKind
 #include "src/ov001/unclassified_helpers/Object_GetKindValue_0208744c.c"

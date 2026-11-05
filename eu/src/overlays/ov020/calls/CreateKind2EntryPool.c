@@ -1,10 +1,10 @@
 #define CreateEntryPool_02086258 CreateEntryPool
 #define CreateKind2EntryPool_020a26b4 CreateKind2EntryPool
-#define func_ov020_020a2090 func_ov020_020a20b0
-#define func_ov020_020a21b4 func_ov020_020a21d4
-#define func_ov020_020a21b8 func_ov020_020a21d8
+#define func_ov020_020a2090 LoadKind2PanelBlockPhase
+#define func_ov020_020a21b4 Kind2Panel_OnSetActiveNoop
+#define func_ov020_020a21b8 Kind2Panel_EntryEventTrue
 #define func_ov020_020a21c0 TryCollideIdlePanel
-#define func_ov020_020a2344 func_ov020_020a2364
+#define func_ov020_020a2344 Kind2Panel_OnActorSlotRefreshNoop
 #define func_ov020_020a2348 DrawPanelBlockCells
 #define func_ov020_020a252c ProbeBlockGroundOffset
 #define func_ov020_020a25a0 CollectPanelCellPositions

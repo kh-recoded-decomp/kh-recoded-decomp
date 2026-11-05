@@ -6,7 +6,7 @@
 #define FindLivePrevLink_020a2098 FindLivePrevLink
 #define FindLiveNextLink_020a20e0 FindLiveNextLink
 #define NNS_FndInitListWithOffset0_020a23a0 SettleLinkHeightAtZeroOffset
-#define _fp_init_020a23ac func_ov019_020a23cc
+#define _fp_init_020a23ac LinkedObject_NextLinkHitHookNoop
 #define DropRequest_InitKind0_020874fc DropRequest_InitKind0
 #define DropRequest_InitKind1_020874e0 DropRequest_InitKind1
 #define GrantEntryUnlockReward_02087518 GrantEntryUnlockReward

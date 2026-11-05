@@ -1,4 +1,4 @@
 #define IsActiveAncestorChain_020a50e4 IsActiveAncestorChain
 #define func_ov001_0208635c GetEntryPoolObjectAtIndex
-#define func_ov017_020a5ddc func_ov017_020a5dfc
+#define func_ov017_020a5ddc GetKind7Flag4
 #include "src/ov017/field_objects/IsActiveAncestorChain_020a50e4.c"

@@ -45,7 +45,7 @@ extern LinkedPanel *GetEntryPoolObjectAtIndex(void *owner, int index);
 extern int FindLivePrevBlock(Panel *panel);
 extern void SettleBlockGroundWrapper(int value, Panel *panel);
 extern int FindLiveNextBlock(Panel *panel);
-extern void func_ov020_020a2920(int value, Panel *panel);
+extern void PanelBlock_NextLinkActivationHookNoop(int value, Panel *panel);
 extern void PlayWeightedRandomEntry(int itemId, VecFx32 *position);
 extern void RollRewardOrbDrop(int eventId, VecFx32 *position);
 extern void SpawnSoundSlot(int a, int b, VecFx32 *position, int c);
@@ -77,7 +77,7 @@ int ActivatePanel(Panel *panel, PanelEvent *event)
     }
     result = FindLiveNextBlock(panel);
     if (result != 0) {
-        func_ov020_020a2920(result, panel);
+        PanelBlock_NextLinkActivationHookNoop(result, panel);
     }
     panel->flags |= 0x8000;
     panel->stateFlags &= ~0x10;

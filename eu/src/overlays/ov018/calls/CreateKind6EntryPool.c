@@ -3,12 +3,12 @@
 #define GetActorVelocity_020a2640 GetActorVelocity_020a2660
 #define GetRaisedTargetPosition_020a2600 GetRaisedTargetPosition
 #define func_ov018_020a1ef8 LoadKind6ObjectPhase
-#define func_ov018_020a2200 func_ov018_020a2220
+#define func_ov018_020a2200 IsKind6ObjectStateNonzero
 #define func_ov018_020a2214 ReleaseKind6ObjectAttachment
 #define func_ov018_020a2240 ReleaseKind6ObjectChannelAndResources
 #define func_ov018_020a229c FieldObject_TakeDamage
 #define func_ov018_020a2400 FieldObject_TryCollideWithVolume
 #define func_ov018_020a267c FieldObject_Draw_020a269c
-#define func_ov018_020a3190 func_ov018_020a31b0
-#define func_ov018_020a3194 func_ov018_020a31b4
+#define func_ov018_020a3190 Kind6Object_OnActorSlotRefreshNoop
+#define func_ov018_020a3194 Kind6Object_OnResourceCacheShutdownNoop
 #include "src/ov018/unclassified_helpers/CreateKind6EntryPool_020a3198.c"

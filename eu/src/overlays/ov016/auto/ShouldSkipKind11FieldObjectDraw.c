@@ -1,0 +1,2 @@
+#define FSi_CloseFileCommand_020a41ac ShouldSkipKind11FieldObjectDraw
+#include "src/ov016/library_nitro_fs/FSi_CloseFileCommand_020a41ac.c"

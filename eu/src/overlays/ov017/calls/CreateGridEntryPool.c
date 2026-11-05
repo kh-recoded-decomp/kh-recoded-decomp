@@ -1,10 +1,10 @@
 #define CreateEntryPool_02086258 CreateEntryPool
 #define CreateGridEntryPool_020a2a40 CreateGridEntryPool
 #define func_ov017_020a2640 RestoreGridObjectRecord
-#define func_ov017_020a274c func_ov017_020a276c
-#define func_ov017_020a2750 func_ov017_020a2770
+#define func_ov017_020a274c GridObject_OnSetActiveNoop
+#define func_ov017_020a2750 GridObject_EntryEventTrue
 #define func_ov017_020a2754 CollideGridObjectActor
-#define func_ov017_020a2868 func_ov017_020a2888
+#define func_ov017_020a2868 GridObject_OnActorSlotRefreshNoop
 #define func_ov017_020a286c DrawGridObjectActorQuads
 #define func_ov017_020a28ac UpdateGridObjectDropOffsetFromRay
 #define func_ov017_020a2920 BuildFieldObjectCellGrid

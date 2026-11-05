@@ -50,12 +50,12 @@ extern const VecFx32 gZeroVecFx32;
 extern int GetSceneFrameCount(void);
 extern void SyncActorShapePosition(FieldObject *obj, const VecFx32 *position);
 extern void SetScaledPosition(FieldObject *obj, const VecFx32 *position);
-extern void func_ov018_020a34a4(FieldObject *obj);
+extern void ReactivateKind6FieldObject(FieldObject *obj);
 extern void FieldObject_SetDisabled(FieldObject *obj, BOOL disable);
 extern void CacheEntry_SetActive(FieldObject *obj, BOOL active);
 extern void ResetObjectRotation(FieldObject *obj);
 extern int GetEntryUnlockState(BOOL skipModeCheck, int flagOffset, u32 entryId, u32 slot);
-extern BOOL func_ov018_020a1f04(FieldObject *obj);
+extern BOOL IsKind6ObjectType1Or10(FieldObject *obj);
 extern void SetSessionFlag(int id);
 extern void ClearSessionPackedBit(int id);
 extern void ResetKindDirection(FieldObject *obj);
@@ -93,7 +93,7 @@ void RespawnKind6FieldObject(FieldObject *obj, const VecFx32 *position, int spaw
     obj->level = level;
     obj->hitCount = 0;
     obj->state = 2;
-    func_ov018_020a34a4(obj);
+    ReactivateKind6FieldObject(obj);
     FieldObject_SetDisabled(obj, FALSE);
     CacheEntry_SetActive(obj, TRUE);
     obj->linkIndex = linkIndex;
@@ -112,7 +112,7 @@ void RespawnKind6FieldObject(FieldObject *obj, const VecFx32 *position, int spaw
     } else {
         obj->kind = kind;
     }
-    if (func_ov018_020a1f04(obj)) {
+    if (IsKind6ObjectType1Or10(obj)) {
         if (obj->linkGroup == -1) {
             SetSessionFlag(obj->entryId);
         } else {

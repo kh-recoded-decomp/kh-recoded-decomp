@@ -73,7 +73,7 @@ Actor_ResetMovementState kind:function(thumb,size=0xd4) addr:0x020cb6a0
 Actor_UpdateDrift kind:function(thumb,size=0x144) addr:0x020cb774
 Actor_ProbeLinkIfFlagClear kind:function(thumb,size=0x34) addr:0x020cb8b8
 ProbeLinkedMeshEntries kind:function(thumb,size=0x40) addr:0x020cb8ec
-func_ov059_020cb92c kind:function(thumb,size=0x4) addr:0x020cb92c
+Actor_PostLinkedMeshProbeNoop kind:function(thumb,size=0x4) addr:0x020cb92c
 Actor_TryAcquireTargetAngle kind:function(thumb,size=0x58) addr:0x020cb930
 Actor_ExitCommandMode kind:function(thumb,size=0x84) addr:0x020cb988
 EffectGroup_RewindEntry kind:function(thumb,size=0x26) addr:0x020cba0c
@@ -162,7 +162,7 @@ GaugePanel_Init kind:function(thumb,size=0xf8) addr:0x020cf8f8
 BufferSlotSet_FreeAll kind:function(thumb,size=0x28) addr:0x020cf9f0
 RewardQueue_GatherTargets kind:function(thumb,size=0x324) addr:0x020cfa18
 GaugePanel_Update kind:function(thumb,size=0xd0) addr:0x020cfd3c
-func_ov059_020cfe0c kind:function(thumb,size=0x2) addr:0x020cfe0c
+GaugePanel_EnterChargeMode2Noop kind:function(thumb,size=0x2) addr:0x020cfe0c
 data_ov059_020cfe10 kind:data(any) addr:0x020cfe10
 sOv059_Bip01_020cfe40 kind:data(any) addr:0x020cfe40
 sOv059_Root_020cfe50 kind:data(any) addr:0x020cfe50

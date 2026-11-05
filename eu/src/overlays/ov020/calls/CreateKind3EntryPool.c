@@ -3,7 +3,7 @@
 #define DrawStackedPanels_020a3724 DrawStackedPanels
 #define TryGetFieldHandle_020a3700 TryGetFieldHandle_020a3720
 #define func_ov020_020a349c LoadPanelStackPhase
-#define func_ov020_020a3578 func_ov020_020a3598
-#define func_ov020_020a357c func_ov020_020a359c
+#define func_ov020_020a3578 Kind3Panel_OnSetActiveNoop
+#define func_ov020_020a357c Kind3Panel_EntryEventTrue
 #define func_ov020_020a3584 TryCollidePanelShape
 #include "src/ov020/unclassified_helpers/CreateKind3EntryPool_020a3940.c"

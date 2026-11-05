@@ -1,5 +1,5 @@
 #define ScriptCmd_SetManagerValue_020a2628 ScriptCmd_SetManagerValue
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
 #define func_ov017_020a4204 FindKind4FieldObject
-#define func_ov017_020a422c func_ov017_020a424c
+#define func_ov017_020a422c SetKind4PathDurationMode
 #include "src/ov017/script_commands/ScriptCmd_SetManagerValue_020a2628.c"

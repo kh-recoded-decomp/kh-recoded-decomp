@@ -3,5 +3,5 @@
 #define data_ov001_020a0508 gStageManager
 #define func_ov001_020863e0 DispatchEntryPoolHitMessage
 #define func_ov001_02087224 GetFieldEntryByPoolAndIndex
-#define func_ov016_020a6a78 func_ov016_020a6a98
+#define func_ov016_020a6a78 HasFieldUnitPhaseThunk
 #include "src/ov001/field_manager/FlushMarkerPosition_0209cd18.c"

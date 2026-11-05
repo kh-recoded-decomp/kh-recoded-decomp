@@ -28,15 +28,15 @@ src/overlays/ov020/calls/ScriptCmd_SpawnPanelCollider.c:
     complete
     .text       start:0x020a204c end:0x020a20ae
 
-src/overlays/ov020/calls/func_ov020_020a20b0.c:
+src/overlays/ov020/calls/LoadKind2PanelBlockPhase.c:
     complete
     .text       start:0x020a20b0 end:0x020a21d2
 
-src/overlays/ov020/auto/func_ov020_020a21d4.c:
+src/overlays/ov020/auto/Kind2Panel_OnSetActiveNoop.c:
     complete
     .text       start:0x020a21d4 end:0x020a21d8
 
-src/overlays/ov020/auto/func_ov020_020a21d8.c:
+src/overlays/ov020/auto/Kind2Panel_EntryEventTrue.c:
     complete
     .text       start:0x020a21d8 end:0x020a21e0
 
@@ -44,7 +44,7 @@ src/overlays/ov020/calls/TryCollideIdlePanel.c:
     complete
     .text       start:0x020a21e0 end:0x020a2364
 
-src/overlays/ov020/auto/func_ov020_020a2364.c:
+src/overlays/ov020/auto/Kind2Panel_OnActorSlotRefreshNoop.c:
     complete
     .text       start:0x020a2364 end:0x020a2368
 
@@ -72,7 +72,7 @@ src/overlays/ov020/calls/FindLivePrevBlock.c:
     complete
     .text       start:0x020a2814 end:0x020a2850
 
-src/overlays/ov020/auto/func_ov020_020a2850.c:
+src/overlays/ov020/auto/GetPanelBlockFlag8000.c:
     complete
     .text       start:0x020a2850 end:0x020a285c
 
@@ -92,7 +92,7 @@ src/overlays/ov020/calls/SettleBlockGroundWrapper.c:
     complete
     .text       start:0x020a2914 end:0x020a2920
 
-src/overlays/ov020/auto/func_ov020_020a2920.c:
+src/overlays/ov020/auto/PanelBlock_NextLinkActivationHookNoop.c:
     complete
     .text       start:0x020a2920 end:0x020a2924
 
@@ -156,11 +156,11 @@ src/overlays/ov020/calls/SetBlockHidden.c:
     complete
     .text       start:0x020a3428 end:0x020a34a4
 
-src/overlays/ov020/auto/func_ov020_020a34a4.c:
+src/overlays/ov020/auto/GetPanelBlockHiddenMask.c:
     complete
     .text       start:0x020a34a4 end:0x020a34b0
 
-src/overlays/ov020/auto/func_ov020_020a34b0.c:
+src/overlays/ov020/auto/GetPanelBlockFlag200.c:
     complete
     .text       start:0x020a34b0 end:0x020a34bc
 
@@ -168,11 +168,11 @@ src/overlays/ov020/calls/LoadPanelStackPhase.c:
     complete
     .text       start:0x020a34bc end:0x020a3598
 
-src/overlays/ov020/auto/func_ov020_020a3598.c:
+src/overlays/ov020/auto/Kind3Panel_OnSetActiveNoop.c:
     complete
     .text       start:0x020a3598 end:0x020a359c
 
-src/overlays/ov020/auto/func_ov020_020a359c.c:
+src/overlays/ov020/auto/Kind3Panel_EntryEventTrue.c:
     complete
     .text       start:0x020a359c end:0x020a35a4
 

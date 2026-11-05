@@ -104,7 +104,7 @@ src/overlays/ov052/calls/ApplyLinkedObjectMotion.c:
     complete
     .text       start:0x020c9894 end:0x020c9968
 
-src/overlays/ov052/auto/func_ov052_020c9968.c:
+src/overlays/ov052/auto/Entity_PostLinkedMotionNoop.c:
     complete
     .text       start:0x020c9968 end:0x020c996c
 

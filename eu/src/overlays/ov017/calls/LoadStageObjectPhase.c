@@ -16,5 +16,5 @@
 #define func_ov001_020872b8 IsNodeFlagBitClear
 #define func_ov017_020a51c8 FindLastInactiveObjectInParentChain
 #define func_ov017_020a5248 GetStageObjectLoadPhase
-#define func_ov017_020a5dd0 func_ov017_020a5df0
+#define func_ov017_020a5dd0 GetKind7HiddenMask
 #include "src/ov017/unclassified_helpers/LoadStageObjectPhase_020a5288.c"

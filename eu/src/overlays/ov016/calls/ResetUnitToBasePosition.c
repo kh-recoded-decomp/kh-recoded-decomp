@@ -8,6 +8,6 @@
 #define func_ov016_020a2270 SaveFieldUnitMode
 #define func_ov016_020a25c4 InstallFieldObjectHitCallbacks
 #define func_ov016_020a6968 SetFieldObjectHidden
-#define func_ov016_020a69fc func_ov016_020a6a1c
+#define func_ov016_020a69fc ResetFieldObjectPoseAndPhase
 #define func_ov016_020a6afc ResetUnitToBasePosition
 #include "src/ov016/unclassified_helpers/func_ov016_020a6afc.c"

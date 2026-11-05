@@ -1,4 +1,4 @@
 #define Actor_ProbeLinkIfFlagClear_020cb898 Actor_ProbeLinkIfFlagClear
-#define FSi_CloseFileCommand_020cb90c func_ov059_020cb92c
+#define FSi_CloseFileCommand_020cb90c Actor_PostLinkedMeshProbeNoop
 #define ProbeLinkedMeshEntries_020cb8cc ProbeLinkedMeshEntries
 #include "src/ov059/unclassified_helpers/Actor_ProbeLinkIfFlagClear_020cb898.c"

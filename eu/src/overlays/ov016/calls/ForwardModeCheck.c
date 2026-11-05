@@ -1,3 +1,3 @@
 #define ForwardModeCheck_020a565c ForwardModeCheck
-#define func_ov016_020a41b0 func_ov016_020a41d0
+#define func_ov016_020a41b0 IsFieldObjectPoseNot1
 #include "src/ov016/unclassified_helpers/ForwardModeCheck_020a565c.c"

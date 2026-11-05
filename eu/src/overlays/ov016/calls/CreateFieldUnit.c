@@ -14,7 +14,7 @@
 #define func_ov016_020a5084 HandleFieldObjectHit_020a50a4
 #define func_ov016_020a52f4 GetFieldUnitTopPosition
 #define func_ov016_020a5340 GetFieldUnitVelocity
-#define func_ov016_020a5b20 func_ov016_020a5b40
+#define func_ov016_020a5b20 FieldObject_OnActorSlotRefreshNoop
 #define func_ov016_020a5b94 SetFieldObjectVisible
 #define func_ov016_020a5c3c ReleaseFieldSceneResources
 #define func_ov016_020a5f18 ApplyFieldObjectSpawnEntry

@@ -133,7 +133,7 @@ extern int SpawnStageObjectActor(EventRecord *record, SpawnParams *params, VecFx
 extern void ApplyHitToEnemyGroup(EventRecord *record, EventMessage *message);
 extern FieldUnit *GetFieldEntryByPoolAndIndex(u32 id, u32 index);
 extern void CacheEntry_SetActive(FieldUnit *unit, int active);
-extern void func_ov016_020a6a1c(FieldUnit *unit);
+extern void ResetFieldObjectPoseAndPhase(FieldUnit *unit);
 extern void ResetUnitToBasePosition(FieldUnit *unit);
 extern void SetFieldUnitPosition(FieldUnit *unit, const VecFx32 *position);
 extern void Obj_SetPosition(void *object, const VecFx32 *position);
@@ -264,7 +264,7 @@ void UpdateStageManager(u32 value)
             unit = GetFieldEntryByPoolAndIndex(slot->unitId, slot->unitIndex - 1);
             slot->position = slot->home;
             CacheEntry_SetActive(unit, 1);
-            func_ov016_020a6a1c(unit);
+            ResetFieldObjectPoseAndPhase(unit);
             ResetUnitToBasePosition(unit);
             SetFieldUnitPosition(unit, &slot->position);
             PlaceUnit(unit, &slot->position);

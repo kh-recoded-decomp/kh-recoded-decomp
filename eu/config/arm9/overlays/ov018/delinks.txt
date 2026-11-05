@@ -15,7 +15,7 @@ src/overlays/ov018/calls/ResetKindDirection.c:
     complete
     .text       start:0x020a1edc end:0x020a1f04
 
-src/overlays/ov018/calls/func_ov018_020a1f04.c:
+src/overlays/ov018/calls/IsKind6ObjectType1Or10.c:
     complete
     .text       start:0x020a1f04 end:0x020a1f18
 
@@ -23,7 +23,7 @@ src/overlays/ov018/calls/LoadKind6ObjectPhase.c:
     complete
     .text       start:0x020a1f18 end:0x020a2220
 
-src/overlays/ov018/calls/func_ov018_020a2220.c:
+src/overlays/ov018/calls/IsKind6ObjectStateNonzero.c:
     complete
     .text       start:0x020a2220 end:0x020a2234
 
@@ -83,11 +83,11 @@ src/overlays/ov018/calls/BounceVelocityOffNormal.c:
     complete
     .text       start:0x020a3154 end:0x020a31b0
 
-src/overlays/ov018/auto/func_ov018_020a31b0.c:
+src/overlays/ov018/auto/Kind6Object_OnActorSlotRefreshNoop.c:
     complete
     .text       start:0x020a31b0 end:0x020a31b2
 
-src/overlays/ov018/auto/func_ov018_020a31b4.c:
+src/overlays/ov018/auto/Kind6Object_OnResourceCacheShutdownNoop.c:
     complete
     .text       start:0x020a31b4 end:0x020a31b6
 
@@ -103,15 +103,15 @@ src/overlays/ov018/calls/FieldObject_SetDisabled.c:
     complete
     .text       start:0x020a335c end:0x020a3424
 
-src/overlays/ov018/calls/func_ov018_020a3424.c:
+src/overlays/ov018/calls/ResetKind6ObjectStateAndPose.c:
     complete
     .text       start:0x020a3424 end:0x020a3490
 
-src/overlays/ov018/calls/func_ov018_020a3490.c:
+src/overlays/ov018/calls/IsKind6ObjectState1Or2.c:
     complete
     .text       start:0x020a3490 end:0x020a34a4
 
-src/overlays/ov018/calls/func_ov018_020a34a4.c:
+src/overlays/ov018/calls/ReactivateKind6FieldObject.c:
     complete
     .text       start:0x020a34a4 end:0x020a3514
 

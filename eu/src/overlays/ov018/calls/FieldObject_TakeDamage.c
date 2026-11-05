@@ -51,7 +51,7 @@ extern void Flags16_ClearBit1(void *anim);
 extern u8 *ActorRegistry_GetEntityByIndex(u32 id);
 extern void RebindAnimTracks(void *anim, int blendIndex, int frame);
 extern int GetFieldSessionState(void);
-extern BOOL func_ov018_020a1f04(FieldObject *obj);
+extern BOOL IsKind6ObjectType1Or10(FieldObject *obj);
 extern void DropRequest_InitKind0(DropRequest *request, int dropIndex, int variant, u16 saveGroup, u8 saveIndex);
 extern void DropRequest_InitKind1(DropRequest *request, int dropIndex, int variant, u16 saveGroup, u8 saveIndex);
 extern void GrantEntryUnlockReward(FieldObject *obj, DropRequest *request);
@@ -91,7 +91,7 @@ int FieldObject_TakeDamage(FieldObject *obj, HitInfo *hit)
     obj->slotFlags &= ~8;
     if (obj->flags & 0x40) {
         obj->link.onDefeat(obj);
-    } else if (func_ov018_020a1f04(obj)) {
+    } else if (IsKind6ObjectType1Or10(obj)) {
         if (obj->kind == 10) {
             DropRequest_InitKind0(&request, obj->link.drop.dropIndex, obj->link.drop.variant, obj->saveGroup, obj->saveIndex);
         } else {

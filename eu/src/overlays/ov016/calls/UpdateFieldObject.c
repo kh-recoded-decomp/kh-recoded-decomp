@@ -4,7 +4,7 @@
 #define func_0203afa0 SetShapePosition
 #define func_ov016_020a27ac SnapFieldObjectToGround
 #define func_ov016_020a2b78 UpdateFieldObjectAuxAnimTrack
-#define func_ov016_020a31f0 func_ov016_020a3210
+#define func_ov016_020a31f0 UpdateFieldObjectPoolHeightHighlights
 #define func_ov016_020a34fc MoveFieldObjectWithCollision
 #define func_ov016_020a393c UpdateSlidingFieldObject
 #define func_ov016_020a3c50 AnimateLaunchedFieldObject

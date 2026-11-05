@@ -7,7 +7,7 @@ extern void ScriptCmd_QueueEntryPositionMessage(void); /* ScriptCmd_QueueEntryPo
 extern void ScriptCmd_QueueEntryRotationMessage(void); /* ScriptCmd_QueueEntryRotationMessage */
 extern void ScriptCmd_QueueEntryDirectionMessage(void); /* ScriptCmd_QueueEntryDirectionMessage */
 extern void ScriptCmd_QueueEntryPathMessages(void); /* ScriptCmd_QueueEntryPathMessages */
-extern void func_ov017_020a2234(void); /* DefaultStepDone */
+extern void ScriptCmd_FieldPoolNoop(void); /* DefaultStepDone */
 extern void ScriptCmd_SetEntryFlag(void); /* ScriptCmd_SetEntryFlag */
 extern void ScriptCmd_ResetEntry(void); /* ScriptCmd_ResetEntry */
 extern void ScriptCmd_QueueEntryMessage(void); /* ScriptCmd_QueueEntryMessage */
@@ -39,7 +39,7 @@ void (*gPoolScriptCommandHandlers[46])(void) = {
     NULL,
     ScriptCmd_QueueEntryPathMessages, /* ScriptCmd_QueueEntryPathMessages */
     NULL,
-    func_ov017_020a2234, /* DefaultStepDone */
+    ScriptCmd_FieldPoolNoop, /* DefaultStepDone */
     NULL,
     ScriptCmd_SetEntryFlag, /* ScriptCmd_SetEntryFlag */
     NULL,

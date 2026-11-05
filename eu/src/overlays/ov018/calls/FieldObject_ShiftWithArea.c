@@ -8,7 +8,7 @@
 #define VEC_Add_01ff9e0c VEC_Add
 #define func_02036240 ActorRegistry_GetEntityByIndex
 #define func_ov001_0208723c GetFieldEntryListHead
-#define func_ov018_020a3470 func_ov018_020a3490
+#define func_ov018_020a3470 IsKind6ObjectState1Or2
 #define func_ov018_020a35b8 RespawnKind6FieldObject
 #define func_ov031_020bc738 GetSceneFrameCount
 #include "src/ov018/field_objects/FieldObject_ShiftWithArea_020a29e0.c"

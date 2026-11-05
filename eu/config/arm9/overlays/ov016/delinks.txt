@@ -184,7 +184,7 @@ src/overlays/ov016/calls/UpdatePathMovement.c:
     complete
     .text       start:0x020a2cc4 end:0x020a3210
 
-src/overlays/ov016/calls/func_ov016_020a3210.c:
+src/overlays/ov016/calls/UpdateFieldObjectPoolHeightHighlights.c:
     complete
     .text       start:0x020a3210 end:0x020a3278
 
@@ -244,11 +244,11 @@ src/overlays/ov016/calls/SweepFieldObjectBounce.c:
     complete
     .text       start:0x020a4100 end:0x020a41cc
 
-src/overlays/ov016/auto/func_ov016_020a41cc.c:
+src/overlays/ov016/auto/ShouldSkipKind11FieldObjectDraw.c:
     complete
     .text       start:0x020a41cc end:0x020a41d0
 
-src/overlays/ov016/calls/func_ov016_020a41d0.c:
+src/overlays/ov016/calls/IsFieldObjectPoseNot1.c:
     complete
     .text       start:0x020a41d0 end:0x020a41e0
 
@@ -260,7 +260,7 @@ src/overlays/ov016/calls/UpdateFloorSwitch.c:
     complete
     .text       start:0x020a4230 end:0x020a4458
 
-src/overlays/ov016/calls/func_ov016_020a4458.c:
+src/overlays/ov016/calls/AdjustKind5FieldObjectDrawY.c:
     complete
     .text       start:0x020a4458 end:0x020a4468
 
@@ -372,7 +372,7 @@ src/overlays/ov016/calls/UpdateFieldObject.c:
     complete
     .text       start:0x020a598c end:0x020a5b40
 
-src/overlays/ov016/auto/func_ov016_020a5b40.c:
+src/overlays/ov016/auto/FieldObject_OnActorSlotRefreshNoop.c:
     complete
     .text       start:0x020a5b40 end:0x020a5b42
 
@@ -452,7 +452,7 @@ src/overlays/ov016/auto/GetFieldObjectHiddenMask.c:
     complete
     .text       start:0x020a6a10 end:0x020a6a1a
 
-src/overlays/ov016/calls/func_ov016_020a6a1c.c:
+src/overlays/ov016/calls/ResetFieldObjectPoseAndPhase.c:
     complete
     .text       start:0x020a6a1c end:0x020a6a84
 
@@ -460,7 +460,7 @@ src/overlays/ov016/calls/IsFieldUnitPhase6.c:
     complete
     .text       start:0x020a6a84 end:0x020a6a98
 
-src/overlays/ov016/calls/func_ov016_020a6a98.c:
+src/overlays/ov016/calls/HasFieldUnitPhaseThunk.c:
     complete
     .text       start:0x020a6a98 end:0x020a6aa0
 
@@ -476,7 +476,7 @@ src/overlays/ov016/calls/IsFieldUnitAction5Mode1.c:
     complete
     .text       start:0x020a6af4 end:0x020a6b12
 
-src/overlays/ov016/auto/func_ov016_020a6b14.c:
+src/overlays/ov016/auto/GetFieldObjectKind.c:
     complete
     .text       start:0x020a6b14 end:0x020a6b1a
 

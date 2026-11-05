@@ -28,7 +28,7 @@
 #define func_01ff86fc MIi_CpuClear32
 #define func_ov001_020863e0 DispatchEntryPoolHitMessage
 #define func_ov001_020878b8 StartStageEventInstanceIfActive
-#define func_ov018_020a3470 func_ov018_020a3490
+#define func_ov018_020a3470 IsKind6ObjectState1Or2
 #define func_ov021_020ac148 InitHitResultHeader
 #define func_ov021_020ac33c ApplyHitToTarget_020ac33c
 #define func_ov031_020bc700 GetSceneDepthCullDistance

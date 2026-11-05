@@ -22,7 +22,7 @@ src/overlays/ov043/calls/SetCameraModeValue.c:
     complete
     .text       start:0x020bc8ec end:0x020bc900
 
-src/overlays/ov043/auto/func_ov043_020bc900.c:
+src/overlays/ov043/auto/Ov043Camera_RequestModeNoop.c:
     complete
     .text       start:0x020bc900 end:0x020bc902
 
@@ -98,7 +98,7 @@ src/overlays/ov043/auto/func_ov043_020bd0a4.c:
     complete
     .text       start:0x020bd0a4 end:0x020bd0a8
 
-src/overlays/ov043/auto/func_ov043_020bd0a8.c:
+src/overlays/ov043/auto/Ov043Camera_InitializationHookNoop.c:
     complete
     .text       start:0x020bd0a8 end:0x020bd0ac
 

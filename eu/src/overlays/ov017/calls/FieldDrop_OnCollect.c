@@ -55,7 +55,7 @@ extern LinkedObject *GetEntryPoolObjectAtIndex(void *manager, int index);
 extern void *FindInactiveAncestor(DropObject *self);
 extern void *FindInactiveOwnerAncestor(DropObject *self);
 extern void PropagateStackHeightWrapper(void *target, DropObject *self);
-extern void func_ov017_020a5264(void *target, DropObject *self);
+extern void FieldDrop_OnCollectOwnerAncestorNoop(void *target, DropObject *self);
 extern void DropRequest_InitKind0(void *request, int dropIndex, int variant, int saveGroup, int saveIndex);
 extern void DropRequest_InitKind1(void *request, int dropIndex, int variant, int saveGroup, int saveIndex);
 extern void GrantEntryUnlockReward(DropObject *self, void *request);
@@ -93,7 +93,7 @@ int FieldDrop_OnCollect(DropObject *self, DropEvent *event)
     }
     target = FindInactiveOwnerAncestor(self);
     if (target) {
-        func_ov017_020a5264(target, self);
+        FieldDrop_OnCollectOwnerAncestorNoop(target, self);
     }
     self->stateFlags &= ~0x10;
     self->stateFlags &= ~0x8;

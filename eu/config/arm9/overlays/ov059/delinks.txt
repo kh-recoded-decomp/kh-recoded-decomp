@@ -304,7 +304,7 @@ src/overlays/ov059/calls/ProbeLinkedMeshEntries.c:
     complete
     .text       start:0x020cb8ec end:0x020cb92c
 
-src/overlays/ov059/auto/func_ov059_020cb92c.c:
+src/overlays/ov059/auto/Actor_PostLinkedMeshProbeNoop.c:
     complete
     .text       start:0x020cb92c end:0x020cb930
 
@@ -660,7 +660,7 @@ src/overlays/ov059/calls/GaugePanel_Update.c:
     complete
     .text       start:0x020cfd3c end:0x020cfe0c
 
-src/overlays/ov059/auto/func_ov059_020cfe0c.c:
+src/overlays/ov059/auto/GaugePanel_EnterChargeMode2Noop.c:
     complete
     .text       start:0x020cfe0c end:0x020cfe0e
 

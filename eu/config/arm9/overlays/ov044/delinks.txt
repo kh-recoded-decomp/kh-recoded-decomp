@@ -67,7 +67,7 @@ src/overlays/ov044/calls/StepPanelTransition.c:
     complete
     .text       start:0x020d034c end:0x020d0580
 
-src/overlays/ov044/auto/func_ov044_020d0580.c:
+src/overlays/ov044/auto/PanelCamera_SetTrackingModeNoop.c:
     complete
     .text       start:0x020d0580 end:0x020d0582
 
@@ -123,7 +123,7 @@ src/overlays/ov044/calls/GetPanelViewEx.c:
     complete
     .text       start:0x020d0b44 end:0x020d0ba4
 
-src/overlays/ov044/auto/func_ov044_020d0ba4.c:
+src/overlays/ov044/auto/PanelCamera_ApplyViewStateNoop.c:
     complete
     .text       start:0x020d0ba4 end:0x020d0ba8
 

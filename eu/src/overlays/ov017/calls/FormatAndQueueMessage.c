@@ -1,5 +1,5 @@
 #define FormatAndQueueMessage_020a4008 FormatAndQueueMessage
-#define Text_VSNPrintf_020a4f78 func_ov017_020a4f98
+#define Text_VSNPrintf_020a4f78 InitLinkedEntryForwarder
 #define func_0202a178 NNSi_FndAllocFromDefaultHeap
 #define func_ov017_020a3fec ProcessListHeadIfEmpty
 #include "src/ov017/unclassified_helpers/FormatAndQueueMessage_020a4008.c"

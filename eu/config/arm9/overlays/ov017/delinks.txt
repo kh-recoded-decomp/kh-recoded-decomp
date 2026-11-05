@@ -36,7 +36,7 @@ src/overlays/ov017/calls/ScriptCmd_QueueEntryPathMessages.c:
     complete
     .text       start:0x020a215c end:0x020a2234
 
-src/overlays/ov017/auto/func_ov017_020a2234.c:
+src/overlays/ov017/auto/ScriptCmd_FieldPoolNoop.c:
     complete
     .text       start:0x020a2234 end:0x020a2238
 
@@ -100,11 +100,11 @@ src/overlays/ov017/calls/RestoreGridObjectRecord.c:
     complete
     .text       start:0x020a2660 end:0x020a276a
 
-src/overlays/ov017/auto/func_ov017_020a276c.c:
+src/overlays/ov017/auto/GridObject_OnSetActiveNoop.c:
     complete
     .text       start:0x020a276c end:0x020a276e
 
-src/overlays/ov017/auto/func_ov017_020a2770.c:
+src/overlays/ov017/auto/GridObject_EntryEventTrue.c:
     complete
     .text       start:0x020a2770 end:0x020a2774
 
@@ -112,7 +112,7 @@ src/overlays/ov017/calls/CollideGridObjectActor.c:
     complete
     .text       start:0x020a2774 end:0x020a2888
 
-src/overlays/ov017/auto/func_ov017_020a2888.c:
+src/overlays/ov017/auto/GridObject_OnActorSlotRefreshNoop.c:
     complete
     .text       start:0x020a2888 end:0x020a288a
 
@@ -204,7 +204,7 @@ src/overlays/ov017/calls/IsObjectInChain.c:
     complete
     .text       start:0x020a3934 end:0x020a3962
 
-src/overlays/ov017/auto/func_ov017_020a3964.c:
+src/overlays/ov017/auto/Kind4Object_OnActorSlotRefreshNoop.c:
     complete
     .text       start:0x020a3964 end:0x020a3966
 
@@ -348,11 +348,11 @@ src/overlays/ov017/calls/FindKind4FieldObject.c:
     complete
     .text       start:0x020a4224 end:0x020a424c
 
-src/overlays/ov017/auto/func_ov017_020a424c.c:
+src/overlays/ov017/auto/SetKind4PathDurationMode.c:
     complete
     .text       start:0x020a424c end:0x020a4254
 
-src/overlays/ov017/auto/func_ov017_020a4254.c:
+src/overlays/ov017/auto/GetKind4PathDurationMode.c:
     complete
     .text       start:0x020a4254 end:0x020a425c
 
@@ -364,7 +364,7 @@ src/overlays/ov017/calls/InitLinkedEntry.c:
     complete
     .text       start:0x020a4274 end:0x020a428e
 
-src/overlays/ov017/auto/func_ov017_020a4290.c:
+src/overlays/ov017/auto/ResetFieldEntryWaitTimer.c:
     complete
     .text       start:0x020a4290 end:0x020a4296
 
@@ -432,7 +432,7 @@ src/overlays/ov017/calls/FindSlotLinkedObject.c:
     complete
     .text       start:0x020a4bd4 end:0x020a4c00
 
-src/overlays/ov017/calls/func_ov017_020a4c00.c:
+src/overlays/ov017/calls/ProcessFieldFallResetRequest.c:
     complete
     .text       start:0x020a4c00 end:0x020a4c52
 
@@ -456,11 +456,11 @@ src/overlays/ov017/calls/AppendFieldLinkedEntry.c:
     complete
     .text       start:0x020a4f40 end:0x020a4f98
 
-src/overlays/ov017/calls/func_ov017_020a4f98.c:
+src/overlays/ov017/calls/InitLinkedEntryForwarder.c:
     complete
     .text       start:0x020a4f98 end:0x020a4fa0
 
-src/overlays/ov017/auto/func_ov017_020a4fa0.c:
+src/overlays/ov017/auto/SetFieldWaitDuration.c:
     complete
     .text       start:0x020a4fa0 end:0x020a4fa4
 
@@ -476,7 +476,7 @@ src/overlays/ov017/calls/CopyTriple.c:
     complete
     .text       start:0x020a501c end:0x020a502a
 
-src/overlays/ov017/auto/func_ov017_020a502c.c:
+src/overlays/ov017/auto/InitFieldFallRequestListHead.c:
     complete
     .text       start:0x020a502c end:0x020a5032
 
@@ -520,7 +520,7 @@ src/overlays/ov017/calls/PropagateStackHeightWrapper.c:
     complete
     .text       start:0x020a525c end:0x020a5264
 
-src/overlays/ov017/auto/func_ov017_020a5264.c:
+src/overlays/ov017/auto/FieldDrop_OnCollectOwnerAncestorNoop.c:
     complete
     .text       start:0x020a5264 end:0x020a5266
 
@@ -584,11 +584,11 @@ src/overlays/ov017/calls/SetKind7EntryHidden.c:
     complete
     .text       start:0x020a5d6c end:0x020a5df0
 
-src/overlays/ov017/auto/func_ov017_020a5df0.c:
+src/overlays/ov017/auto/GetKind7HiddenMask.c:
     complete
     .text       start:0x020a5df0 end:0x020a5dfa
 
-src/overlays/ov017/auto/func_ov017_020a5dfc.c:
+src/overlays/ov017/auto/GetKind7Flag4.c:
     complete
     .text       start:0x020a5dfc end:0x020a5e06
 

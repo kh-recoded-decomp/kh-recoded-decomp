@@ -14,7 +14,7 @@
 #define func_ov001_02087224 GetFieldEntryByPoolAndIndex
 #define func_ov017_020a3e10 ResetFieldObjectToIdle
 #define func_ov017_020a4b0c CanUseSwitchTarget
-#define func_ov017_020a5ddc func_ov017_020a5dfc
+#define func_ov017_020a5ddc GetKind7Flag4
 #define func_ov017_020a5de8 FindLastInactiveObjectInParentChainWrapper
 #define func_ov017_020a5df0 FindRootObjectWrapper
 #define func_ov042_020bd78c IsCameraShakeActive

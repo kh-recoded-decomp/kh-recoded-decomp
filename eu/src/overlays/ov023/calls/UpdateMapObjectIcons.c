@@ -147,7 +147,7 @@ extern VecFx32 *GetManagedActorPosition(int);
 extern MapNode *GetFieldEntryListHead(void);
 extern u16 GetActiveFieldEntryListCount(void);
 extern BOOL IsNodeFlagBitClear(MapNode *);
-extern BOOL func_ov020_020a34b0(MapNode *);
+extern BOOL GetPanelBlockFlag200(MapNode *);
 extern int Object_GetKindValue(MapNode *);
 extern int GetObjectPosition(MapNode *, VecFx32 *);
 extern void StartDistanceSqrt(const MapPoint *, const MapPoint *);
@@ -288,7 +288,7 @@ advanceObject:
         }
         switch (node->descriptor->kind) {
         case 1:
-            if (func_ov020_020a34b0(node)) {
+            if (GetPanelBlockFlag200(node)) {
                 nodeSequence = 22;
                 priority = 7;
             } else {

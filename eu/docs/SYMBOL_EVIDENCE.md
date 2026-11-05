@@ -632,3 +632,19 @@ adapters, HUD/menu lifetimes, minigame callbacks and entry-pool operations:
 The contracts preserve the native 20-byte contact record, raw status results,
 phase-dependent window storage, borrowed resources and real callback input
 registers. Logical type labels do not silently replace the native C views.
+
+## Field-pool requests and camera/gauge callbacks
+
+Forty-eight entrypoints now identify owner-specific field callbacks and
+request operations. Constructor slots and native register use distinguish
+empty hooks, literal event results, raw mask predicates and resource cleanup:
+
+- [CAMERA_REQUEST_GAUGE_HOOK_CONTRACTS.md](CAMERA_REQUEST_GAUGE_HOOK_CONTRACTS.md): 5 entrypoints.
+- [POST_MOTION_PROBE_HOOK_CONTRACTS.md](POST_MOTION_PROBE_HOOK_CONTRACTS.md): 2 entrypoints.
+- [FIELD_OBJECT_KIND_POSE_CONTRACTS.md](FIELD_OBJECT_KIND_POSE_CONTRACTS.md): 8 entrypoints.
+- [FIELD_POOL_REQUEST_CONTRACTS.md](FIELD_POOL_REQUEST_CONTRACTS.md): 15 entrypoints.
+- [FIELD_STATE_PANEL_CALLBACK_CONTRACTS.md](FIELD_STATE_PANEL_CALLBACK_CONTRACTS.md): 18 entrypoints.
+
+Request completion, binding, pose, phase and per-entry kind remain separate
+domains. Raw callback results and residual native registers retain their
+actual consumer contracts.

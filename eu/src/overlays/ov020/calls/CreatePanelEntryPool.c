@@ -5,7 +5,7 @@
 #define ReleaseAndFreeResource_020a2abc ReleaseAndFreeResource
 #define TryCollideWithCollider_020a2c98 TryCollideWithCollider_020a2cb8
 #define TryGetFieldHandle_020a2e98 TryGetFieldHandle
-#define func_ov020_020a2830 func_ov020_020a2850
+#define func_ov020_020a2830 GetPanelBlockFlag8000
 #define func_ov020_020a2904 LoadStackedBlockPhase
 #define func_ov020_020a2e58 GetRaisedBlockFocus
 #define func_ov020_020a2ebc DrawPanelBlockVisibleParts
