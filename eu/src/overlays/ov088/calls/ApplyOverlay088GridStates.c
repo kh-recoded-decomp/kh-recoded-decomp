@@ -3,8 +3,8 @@
 #define func_ov027_020b8f98 func_ov027_020b8fb8
 #define func_ov027_020b9060 InitObjManagerAndMark
 #define func_ov027_020b90a4 FindWidgetById
-#define func_ov027_020b95e4 func_ov027_020b9604
-#define func_ov027_020b96a0 func_ov027_020b96c0
+#define func_ov027_020b95e4 ClearWidgetRecordActiveBits
+#define func_ov027_020b96a0 SetWidgetAnimationFrame
 #define func_ov027_020b97fc SetAllElementObjectModes
 #define func_ov039_020bc1cc GetMenuWidgetContainer
 #define func_ov039_020bc220 BuildSlotImageParams

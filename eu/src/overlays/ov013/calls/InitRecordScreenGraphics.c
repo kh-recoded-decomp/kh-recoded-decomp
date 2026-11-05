@@ -29,8 +29,8 @@
 #define func_ov027_020b9078 func_ov027_020b9098
 #define func_ov027_020b90a4 FindWidgetById
 #define func_ov027_020b9580 SetEntrySlotsVisible
-#define func_ov027_020b95e4 func_ov027_020b9604
-#define func_ov027_020b96a0 func_ov027_020b96c0
-#define func_ov027_020b97b8 func_ov027_020b97d8
+#define func_ov027_020b95e4 ClearWidgetRecordActiveBits
+#define func_ov027_020b96a0 SetWidgetAnimationFrame
+#define func_ov027_020b97b8 SetWidgetRecordMode
 #define func_ov002_020629b8 ResetMainPanelGraphics
 #include "src/ov013/panel_state/InitRecordScreenGraphics_0206da20.c"

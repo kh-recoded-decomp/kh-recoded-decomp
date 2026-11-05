@@ -1,5 +1,5 @@
 #define SetPopupSlotVisible_020c1d48 SetPopupSlotVisible
-#define func_0204f204 func_0204f218
+#define func_0204f204 SetIndexedRecordAnimationFrame
 #define func_0204f2c0 IndexedRecord_SetActive
 #define func_0204f2e4 IndexedRecord_ClearActive
 #define func_0204f378 IndexedRecords_SetFlag2

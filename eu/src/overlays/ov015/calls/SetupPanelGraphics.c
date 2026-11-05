@@ -1,3 +1,4 @@
+#include "src/overlays/ov027/WidgetRecordOps.h"
 #include "nitro/types.h"
 #include "src/overlays/ov015/WirelessBoardData.h"
 #include "nitro/fx_types.h"
@@ -135,9 +136,6 @@ extern void func_ov027_020b8fb8(void *container, u32 fileId, int count);
 extern void SetAllElementObjectModes(void *container, int mode);
 extern void *FindWidgetById(void *container, int elementId);
 extern void SetEntrySlotsVisible(void *container, void *element, BOOL enabled);
-extern void func_ov027_020b97d8(void *container, void *element, int mode);
-extern void func_ov027_020b9604(void *container, void *element);
-extern void func_ov027_020b96c0(void *container, void *element, u16 value);
 extern void SetFocusedWidget(void *container, void *element);
 extern void SetWidgetRootDpadEnabled(void *container, int value);
 extern void SetWidgetRootTouchEnabled(void *container, int value);
@@ -157,7 +155,7 @@ static inline void SetElementEnabled(void *container, int elementId, BOOL enable
 }
 
 static inline void SetElementMode(void *container, int elementId, int mode) {
-    func_ov027_020b97d8(container, FindWidgetById(container, elementId), mode);
+    SetWidgetRecordMode(container, (const struct WidgetPositionRecord *)(FindWidgetById(container, elementId)), mode);
 }
 
 static inline void GetElementPosition(void *container, int elementId, ElementPosition *position) {
@@ -169,11 +167,11 @@ static inline void SetElementPosition(void *container, int elementId, ElementPos
 }
 
 static inline void ClearElementNumber(void *container, int elementId) {
-    func_ov027_020b9604(container, FindWidgetById(container, elementId));
+    ClearWidgetRecordActiveBits(container, (const struct WidgetPositionRecord *)(FindWidgetById(container, elementId)));
 }
 
 static inline void SetElementNumber(void *container, int elementId, u16 value) {
-    func_ov027_020b96c0(container, FindWidgetById(container, elementId), value);
+    SetWidgetAnimationFrame(container, (const struct WidgetPositionRecord *)(FindWidgetById(container, elementId)), (u16)(value));
 }
 
 void SetupPanelGraphics(void) {
@@ -346,7 +344,7 @@ void SetupPanelGraphics(void) {
     {
         PanelState *panel = data_ov015_0207e960;
         void *container = panel->subObj;
-        func_ov027_020b96c0(container, FindWidgetById(container, 10), panel->randomDigit);
+        SetWidgetAnimationFrame(container, (const struct WidgetPositionRecord *)(FindWidgetById(container, 10)), (u16)(panel->randomDigit));
     }
     data_ov015_0207e960->randomPick = func_0202a9e4(gWirelessRandomChoiceLimits[DispatchContextCommand(6, 0, 0, 0)]);
     {

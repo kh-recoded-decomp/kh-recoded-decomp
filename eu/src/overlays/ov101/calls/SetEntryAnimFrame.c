@@ -13,7 +13,7 @@ typedef struct {
 } Ov101State;
 
 extern void IndexedRecord_ClearActive(void *recordBase, int recordIndex);
-extern void func_0204f218(void *recordBase, int recordIndex, u16 frame);
+extern void SetIndexedRecordAnimationFrame(void *recordBase, int recordIndex, u16 frame);
 
 void SetEntryAnimFrame(int listIndex, int entryIndex, int frame, Ov101State *state)
 {
@@ -27,5 +27,5 @@ void SetEntryAnimFrame(int listIndex, int entryIndex, int frame, Ov101State *sta
     }
 
     IndexedRecord_ClearActive(slotList, entry->recordIndex);
-    func_0204f218(slotList, entry->recordIndex, frame);
+    SetIndexedRecordAnimationFrame(slotList, entry->recordIndex, frame);
 }

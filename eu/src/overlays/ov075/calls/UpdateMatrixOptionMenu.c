@@ -155,7 +155,7 @@ extern const StatPreview sOv075_Empty_020d1568;
 extern u32 GetPrimaryElementEnabled(void);
 extern Widget *FindWidgetById(void *root, int id);
 extern void SetWidgetPosition(void *root, Widget *widget, WidgetPos *pos, int mode);
-extern void func_0204f218(void *root, int index, int value);
+extern void SetIndexedRecordAnimationFrame(void *root, int index, int value);
 extern void SetEntrySlotsVisible(void *root, Widget *widget, BOOL visible);
 extern MatrixNode *FindPageEntryById(MatrixMap *map, u32 id);
 extern void *func_ov027_020ba2c8(int *bank, int index);
@@ -244,7 +244,7 @@ static inline BOOL UpdateMenuEvent(MatrixMenu *menu)
                 pos.x = menu->event->widgetX << 12;
                 pos.y = menu->event->widgetY << 12;
                 SetWidgetPosition(menu->layout, widget, &pos, 0);
-                func_0204f218(menu->layout, widget->cellIndex, 0);
+                SetIndexedRecordAnimationFrame(menu->layout, widget->cellIndex, 0);
                 SetEntrySlotsVisible(menu->layout, widget, TRUE);
             }
             ShowDialogMessageAt(menu, menu->event->messageId, 0, menu->event->messageArg, 1);

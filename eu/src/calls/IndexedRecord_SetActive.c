@@ -1,2 +1,9 @@
-#define func_0204f2c0 IndexedRecord_SetActive
-#include "src/arm9/indexed_records/func_0204f2c0.c"
+#include "src/indexed_records/IndexedRecordState.h"
+
+int IndexedRecord_SetActive(IndexedRecordStateView *records, int index)
+{
+    if (index < 0) {
+        return (int)(u32)records;
+    }
+    return (int)(records[index].flags |= 2);
+}

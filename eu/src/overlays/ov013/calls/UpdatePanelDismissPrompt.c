@@ -9,5 +9,5 @@
 #define SpawnDropsPerTenUnits_0206671c UpdateMenuTouch
 #define UpdatePanelDismissPrompt_02073d14 UpdatePanelDismissPrompt
 #define func_ov027_020b90a4 FindWidgetById
-#define func_ov027_020b9620 func_ov027_020b9640
+#define func_ov027_020b9620 SetWidgetRecordActiveBits
 #include "src/ov013/panel_state/UpdatePanelDismissPrompt_02073d14.c"

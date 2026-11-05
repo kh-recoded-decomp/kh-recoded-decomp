@@ -9709,11 +9709,11 @@ src/calls/SetSlotEntryFlags.c:
     complete
     .text       start:0x0204f1c0 end:0x0204f218
 
-src/calls/func_0204f218.c:
+src/calls/SetIndexedRecordAnimationFrame.c:
     complete
     .text       start:0x0204f218 end:0x0204f23c
 
-src/calls/func_0204f23c.c:
+src/calls/GetIndexedRecordAnimationFrame.c:
     complete
     .text       start:0x0204f23c end:0x0204f260
 
@@ -9765,7 +9765,7 @@ src/calls/SlotTable_SetEntryPriority.c:
     complete
     .text       start:0x0204f47c end:0x0204f494
 
-src/calls/Slot_SetMode2Bit.c:
+src/calls/SetIndexedRecordMode.c:
     complete
     .text       start:0x0204f494 end:0x0204f4ac
 

@@ -158,6 +158,26 @@ null-manager behavior, corrected conditional-helper contract and unresolved bit
 roles. The first-word field reuses the existing `StageMotionManager` view while
 preserving every previously established motion offset.
 
+## Widget indexed-record operations
+
+| Previous name | Current name | Evidence |
+|---|---|---|
+| `func_ov027_020b9604` | `ClearWidgetRecordActiveBits` | Visits two IDs at widget `+0x14`, skips `-1` and calls the indexed helper that clears mask `0x02` in record flags. |
+| `func_ov027_020b9640` | `SetWidgetRecordActiveBits` | Same traversal, setting mask `0x02`. |
+| `func_ov027_020b967c` | `GetWidgetAnimationFrame` | Queries the first ID other than `-1`, through the SDK current-frame index getter. |
+| `func_ov027_020b96c0` | `SetWidgetAnimationFrame` | Delegates frame selection to each configured record's SDK cell animation. |
+| `func_ov027_020b97d8` | `SetWidgetRecordMode` | Applies the indexed mode-word setter to both configured IDs. |
+| `func_0204f23c` | `GetIndexedRecordAnimationFrame` | Uses `0x8c` stride and controller offset `0x18`; the SDK computes the current frame array index. |
+| `func_0204f218` | `SetIndexedRecordAnimationFrame` | Uses the same stride/offset and reaches SDK frame-index selection rather than an elapsed-time tick. |
+| `Slot_SetMode2Bit` | `SetIndexedRecordMode` | Replaces the mode word at record `+0x74` with `mode & 3`. |
+
+[WIDGET_RECORD_OPS.md](WIDGET_RECORD_OPS.md) records sentinel/negative-index
+differences, first-selected query behavior, duplicate calls, shared DS views,
+explicit caller narrowing, native return words and host layout boundaries.
+The existing widget position prefix and position-control implementations are
+preserved. Relocation-name refresh uses ROM proof without changing indexed
+bytes or the official verifier.
+
 ## Explicitly unresolved
 
 The vector view at `data_027e0160` overlaps `data_027e0164`, used by the older

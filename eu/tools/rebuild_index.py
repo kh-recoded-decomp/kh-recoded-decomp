@@ -267,6 +267,30 @@ def same_relocations(old, new):
     return True
 
 
+def entries_agree(previous, current):
+    """The existing ROM cross-check, including relocation target proof."""
+    return (masked(current) == masked(previous)
+            and current["size"] == previous["size"]
+            and current["mode"] == previous["mode"]
+            and current["module"] == previous.get("module", current["module"])
+            and same_relocations(previous, current))
+
+
+def relocation_name_updates(index, rebuilt):
+    """Return proven spelling updates only; never replace indexed bytes.
+
+    rebuilt comes from rebuild(), which independently decodes every configured
+    relocation target from the ROM. Historical entries with compiler-derived
+    words or other disagreements retain the existing conservative behavior.
+    """
+    return {name: [list(item) for item in current["relocs"]]
+            for name, current in rebuilt.items()
+            if name in index and index[name]["relocs"] != current["relocs"]
+            and [off for off, _ in index[name]["relocs"]]
+                == [off for off, _ in current["relocs"]]
+            and entries_agree(index[name], current)}
+
+
 def main(argv=None):
     argv = sys.argv[1:] if argv is None else argv
     load_symbols()
@@ -283,10 +307,7 @@ def main(argv=None):
         if n not in rebuilt:
             continue
         got = rebuilt[n]
-        ok = (masked(got) == masked(e) and got["size"] == e["size"]
-              and got["mode"] == e["mode"]
-              and got["module"] == e.get("module", got["module"])
-              and same_relocations(e, got))
+        ok = entries_agree(e, got)
         if ok:
             same += 1
         else:
@@ -308,7 +329,7 @@ def main(argv=None):
 
     # Keep the existing guard against widespread disagreement. Old compiler-derived entries
     # can include relocations absent from relocs.txt (including linker-defined symbols).
-    # Preserve them: this command only adds missing entries.
+    # Preserve them. By default this command only adds missing entries.
     if bad > 5:
         print("\nrefusing to merge: %d disagreements exceed the existing-entry tolerance --"
               " inspect the existing index and configuration." % bad)
@@ -316,12 +337,18 @@ def main(argv=None):
     if bad:
         print("  (those %d entries are NOT overwritten; the existing index may contain"
               " compiler-derived relocations absent from relocs.txt)" % bad)
+    updates = relocation_name_updates(index, rebuilt) if "--refresh-reloc-names" in argv else {}
+    if "--refresh-reloc-names" in argv:
+        print("ROM-proven relocation-name updates: %d" % len(updates))
     if "--write" not in argv:
         print("\ndry run; pass --write to merge the missing entries in.")
         return 0
 
     for n in missing:
         index[n] = rebuilt[n]
+    for n, relocs in updates.items():
+        # Keep every byte and all other historical entry metadata unchanged.
+        index[n] = dict(index[n], relocs=relocs)
     with open(INDEX_PATH, "w") as stream:
         json.dump(index, stream)
     print("merged. index now: %d functions" % len(index))

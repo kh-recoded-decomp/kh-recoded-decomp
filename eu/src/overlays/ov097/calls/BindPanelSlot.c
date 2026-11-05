@@ -1,11 +1,11 @@
 #define BindPanelSlot_020bffd0 BindPanelSlot
 #define GetPanelSlotRecordData_020c0264 GetPanelSlotRecordData
 #define SetPanelSlotPosition_020c00fc SetPanelSlotPosition
-#define Slot_SetMode2Bit_0204f480 Slot_SetMode2Bit
+#define Slot_SetMode2Bit_0204f480 SetIndexedRecordMode
 #define func_01ff89a8 MI_CpuCopy8
 #define func_0204f0b4 PXI_Init_0204f0c8
 #define func_0204f178 SetIndexedRecordPriority
-#define func_0204f204 func_0204f218
+#define func_0204f204 SetIndexedRecordAnimationFrame
 #define func_0204f2c0 IndexedRecord_SetActive
 #define func_0204f2e4 IndexedRecord_ClearActive
 #define func_0204f378 IndexedRecords_SetFlag2

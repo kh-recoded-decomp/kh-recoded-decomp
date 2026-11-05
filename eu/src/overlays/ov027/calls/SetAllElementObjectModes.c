@@ -1,4 +1,4 @@
 #define NNS_FndGetNextListObject_02012a38 NNS_FndGetNextListObject
 #define SetAllElementObjectModes_020b97fc SetAllElementObjectModes
-#define func_ov027_020b97b8 func_ov027_020b97d8
+#define func_ov027_020b97b8 SetWidgetRecordMode
 #include "src/ov027/resource_container/SetAllElementObjectModes_020b97fc.c"

@@ -1,7 +1,7 @@
 #define SlotMenu_InitTouchLayout_020c63b4 SlotMenu_InitTouchLayout
 #define func_ov027_020b90a4 FindWidgetById
 #define func_ov027_020b9580 SetEntrySlotsVisible
-#define func_ov027_020b97b8 func_ov027_020b97d8
+#define func_ov027_020b97b8 SetWidgetRecordMode
 #define func_ov039_020bc1bc func_ov039_020bc1dc
 #define g_saveData_0205fe0c data_0205fe0c
 #include "src/ov076/unclassified_helpers/SlotMenu_InitTouchLayout_020c63b4.c"

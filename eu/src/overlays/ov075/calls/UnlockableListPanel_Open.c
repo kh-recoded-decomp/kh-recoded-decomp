@@ -9,7 +9,7 @@
 #define SetNavigationElementsVisible_020d0e64 SetUnlockableElementsVisible
 #define SetContainerElementVisible_020d0e4c SetLayoutElementVisible
 #define MenuPanel_ApplyCategoryFilter_020cde04 BuildTabItemList
-#define func_ov027_020b96a0 func_ov027_020b96c0
+#define func_ov027_020b96a0 SetWidgetAnimationFrame
 #define SetupScrollList_020bdf10 SetupStageParams
 #define RefreshScrollListLayout_020be138 RefreshScrollListLayout
 #define InvokeForChannelOrBoth_0200110c InvokeForChannelOrBoth

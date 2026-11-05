@@ -1,4 +1,4 @@
 #define RefreshElementCellAnimation_020c9d34 RefreshElementCellAnimation
-#define func_0204f204 func_0204f218
+#define func_0204f204 SetIndexedRecordAnimationFrame
 #define func_ov027_020b90a4 FindWidgetById
 #include "src/ov077/unclassified_helpers/RefreshElementCellAnimation_020c9d34.c"

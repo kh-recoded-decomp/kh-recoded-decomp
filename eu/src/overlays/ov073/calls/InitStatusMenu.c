@@ -1,3 +1,4 @@
+#include "src/overlays/ov027/WidgetRecordOps.h"
 #include "nitro/types.h"
 
 typedef struct CellPos {
@@ -126,8 +127,6 @@ extern void func_ov027_020b7e44(void *pool, u32 params);
 extern void *FindActiveRecordById(void *pool, u32 recordId);
 extern void StampTileRegionPalette(void *pool, void *record, int mode);
 extern void *FindWidgetById(void *root, int id);
-extern void func_ov027_020b97d8(void *widgets, void *widget, int mode);
-extern void func_ov027_020b9604(void *widgets, void *widget);
 extern void CreateContainerCells(void *container, s16 *cells, int cellId, int count);
 extern CellPos *GetWidgetPosition(void *widgets, void *widget);
 extern void IndexedRecord_SetPair(void *widgets, int index, CellPos *pos);
@@ -241,9 +240,9 @@ int InitStatusMenu(StatusMenu *menu)
     StampTileRegionPalette(pool, menu->recordE, 7);
     menu->recordF = FindActiveRecordById(pool, 6);
     menu->recordG = FindActiveRecordById(pool, 7);
-    func_ov027_020b97d8(widgets, FindWidgetById(widgets, 0xc), 2);
-    func_ov027_020b97d8(widgets, FindWidgetById(widgets, 0xa), 2);
-    func_ov027_020b9604(widgets, FindWidgetById(widgets, 0xb));
+    SetWidgetRecordMode(widgets, (const struct WidgetPositionRecord *)(FindWidgetById(widgets, 0xc)), 2);
+    SetWidgetRecordMode(widgets, (const struct WidgetPositionRecord *)(FindWidgetById(widgets, 0xa)), 2);
+    ClearWidgetRecordActiveBits(widgets, (const struct WidgetPositionRecord *)(FindWidgetById(widgets, 0xb)));
     menu->rowWidget = FindWidgetById(widgets, 0x38);
     menu->progressWidget = FindWidgetById(widgets, 0x39);
     menu->columnWidget = FindWidgetById(widgets, 0x3a);
@@ -267,27 +266,27 @@ int InitStatusMenu(StatusMenu *menu)
 
     widget = FindWidgetById(widgets, 0x37);
     CreateContainerCells(widgets, menu->rowCellsA, 0x15, 7);
-    func_ov027_020b9604(widgets, widget);
+    ClearWidgetRecordActiveBits(widgets, (const struct WidgetPositionRecord *)(widget));
     menu->rowPos[0] = *GetWidgetPosition(widgets, widget);
 
     widget = FindWidgetById(widgets, 0x32);
     CreateContainerCells(widgets, menu->rowCellsB, 0x10, 7);
-    func_ov027_020b9604(widgets, widget);
+    ClearWidgetRecordActiveBits(widgets, (const struct WidgetPositionRecord *)(widget));
     menu->rowPos[1] = *GetWidgetPosition(widgets, widget);
 
     widget = FindWidgetById(widgets, 0x33);
     CreateContainerCells(widgets, menu->rowCellsC, 0x11, 7);
-    func_ov027_020b9604(widgets, widget);
+    ClearWidgetRecordActiveBits(widgets, (const struct WidgetPositionRecord *)(widget));
     menu->rowPos[2] = *GetWidgetPosition(widgets, widget);
 
     widget = FindWidgetById(widgets, 0x35);
     CreateContainerCells(widgets, menu->rowCellsD, 0x12, 7);
-    func_ov027_020b9604(widgets, widget);
+    ClearWidgetRecordActiveBits(widgets, (const struct WidgetPositionRecord *)(widget));
     menu->rowPos[3] = *GetWidgetPosition(widgets, widget);
 
     widget = FindWidgetById(widgets, 0x36);
     CreateContainerCells(widgets, menu->slotCells[0], 0x13, 0x1c);
-    func_ov027_020b9604(widgets, widget);
+    ClearWidgetRecordActiveBits(widgets, (const struct WidgetPositionRecord *)(widget));
     menu->rowPos[4] = *GetWidgetPosition(widgets, widget);
     menu->rowPos[4].x += 0x2000;
 

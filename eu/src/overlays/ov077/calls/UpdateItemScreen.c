@@ -20,7 +20,7 @@
 #define SetFlagGatedElementsVisible_020c9d7c SetFlagGatedElementsVisible
 #define func_ov077_020c5944 ItemScreen_DrawHintText
 #define FindWidgetById_020b90a4 FindWidgetById
-#define func_ov027_020b965c func_ov027_020b967c
+#define func_ov027_020b965c GetWidgetAnimationFrame
 #define ShowStatusRecordList_020c2b10 ShowStatusRecordList
 #define func_ov039_020bc0ec GetSecondaryElementEnabled
 #define func_0204f768 GetOverlaySelectionRecord

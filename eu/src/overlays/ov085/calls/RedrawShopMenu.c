@@ -1,3 +1,4 @@
+#include "src/overlays/ov027/WidgetRecordOps.h"
 #pragma opt_dead_assignments off
 #include "nitro/types.h"
 #include "nitro/fx_types.h"
@@ -122,8 +123,7 @@ extern int GetMenuFont10(void);
 extern void CallVirtualHandlerSlot1(void *context, int arg);
 extern void MI_CpuFill8(void *dest, u8 data, u32 size);
 extern Widget *FindWidgetById(void *root, int id);
-extern void func_ov027_020b97d8(void *context, Widget *record, int mode);
-extern void func_0204f218(void *layout, int index, u16 value);
+extern void SetIndexedRecordAnimationFrame(void *layout, int index, u16 value);
 extern void IndexedRecord_ClearActive(void *layout, int index);
 extern void IndexedRecords_SetFlag2(void *layout, int index, int value);
 extern ItemInfo *GetItemMenuEntryInfo();
@@ -176,8 +176,8 @@ void RedrawShopMenu(ItemMenu *menu)
         MI_CpuFill8(menu->rowIcons, 0xff, sizeof(menu->rowIcons));
         menu->detailIcon = -1;
         widget = FindWidgetById(menu->layout, 0xd);
-        func_ov027_020b97d8(menu->layout, widget, 2);
-        func_0204f218(menu->layout, widget->index, 1);
+        SetWidgetRecordMode(menu->layout, (const struct WidgetPositionRecord *)(widget), 2);
+        SetIndexedRecordAnimationFrame(menu->layout, widget->index, 1);
         IndexedRecord_ClearActive(menu->layout, widget->index);
 
         switch (menu->mode) {
@@ -249,7 +249,7 @@ void RedrawShopMenu(ItemMenu *menu)
                     IndexedRecords_SetFlag2(menu->layout, menu->rows[row].maxed, maxed);
                     IndexedRecords_SetFlag2(menu->layout, menu->rows[row].locked, locked);
                     if (status < 2) {
-                        func_0204f218(menu->layout, menu->rows[row].status, status);
+                        SetIndexedRecordAnimationFrame(menu->layout, menu->rows[row].status, status);
                     }
                     index++;
                     row++;

@@ -1,3 +1,4 @@
+#include "src/overlays/ov027/WidgetRecordOps.h"
 #include "nitro/types.h"
 
 typedef struct ResultsWork {
@@ -87,7 +88,6 @@ extern void func_ov027_020b9098(void *objects, u32 fileId);
 extern void func_ov027_020b8fb8(void *objects, u32 fileId, int count);
 extern void SetAllElementObjectModes(void *objects, int mode);
 extern void *FindWidgetById(void *objects, int id);
-extern void func_ov027_020b97d8(void *objects, void *widget, int mode);
 extern void SetWidgetRootDpadEnabled(void *objects, BOOL enabled);
 extern int func_ov034_020bdea8(void *manager, int animation, int resource, int x, int y);
 extern void func_ov027_020b90b8(void *objects, void (*callback)(void));
@@ -141,7 +141,7 @@ void InitResultsScreen(void)
     func_ov027_020b9098(WORK->objects, CONTAINER_BASE(iconContainer) | 0x8000001a);
     func_ov027_020b8fb8(WORK->objects, base | 0x80000016, 0x4a);
     SetAllElementObjectModes(WORK->objects, 1);
-    func_ov027_020b97d8(WORK->objects, FindWidgetById(WORK->objects, 200), 0);
+    SetWidgetRecordMode(WORK->objects, (const struct WidgetPositionRecord *)(FindWidgetById(WORK->objects, 200)), 0);
     SetWidgetRootDpadEnabled(WORK->objects, TRUE);
     ZeroHalfThenFree(objContainer);
     ZeroHalfThenFree(iconContainer);

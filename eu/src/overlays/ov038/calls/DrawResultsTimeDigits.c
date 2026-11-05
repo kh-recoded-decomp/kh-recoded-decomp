@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-#define SetSpriteFrame func_0204f218
+#define SetSpriteFrame SetIndexedRecordAnimationFrame
 
 typedef struct ResultsSpritePool { u8 data[0x6434]; } ResultsSpritePool;
 typedef struct ResultsContext {

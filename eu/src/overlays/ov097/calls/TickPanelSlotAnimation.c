@@ -1,4 +1,4 @@
 #define TickPanelSlotAnimation_020c020c TickPanelSlotAnimation
-#define func_0204f204 func_0204f218
+#define func_0204f204 SetIndexedRecordAnimationFrame
 #define func_0204f2e4 IndexedRecord_ClearActive
 #include "src/ov097/panel_state/TickPanelSlotAnimation_020c020c.c"

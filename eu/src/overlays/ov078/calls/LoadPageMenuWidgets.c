@@ -4,8 +4,8 @@
 #define ReadGlobalPackedBits_02027348 ReadGlobalPackedBits
 #define data_ov078_020c4f90 data_ov078_020c4fb0
 #define func_ov027_020b8f98 func_ov027_020b8fb8
-#define func_ov027_020b95e4 func_ov027_020b9604
-#define func_ov027_020b96a0 func_ov027_020b96c0
-#define func_ov027_020b97b8 func_ov027_020b97d8
+#define func_ov027_020b95e4 ClearWidgetRecordActiveBits
+#define func_ov027_020b96a0 SetWidgetAnimationFrame
+#define func_ov027_020b97b8 SetWidgetRecordMode
 #define func_ov039_020bc1bc func_ov039_020bc1dc
 #include "src/ov078/unclassified_helpers/LoadPageMenuWidgets_020c4570.c"

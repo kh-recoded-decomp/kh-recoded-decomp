@@ -5,6 +5,6 @@
 #define func_ov002_02064c9c ApplyMenuEntryValues
 #define func_ov027_020b8ca8 UpdateWidgetRootOnly
 #define func_ov027_020b90a4 FindWidgetById
-#define func_ov027_020b9620 func_ov027_020b9640
+#define func_ov027_020b9620 SetWidgetRecordActiveBits
 #define func_ov027_020b96e4 SetFocusedWidget
 #include "src/ov002/panel_state/UpdateQuitMenuState.c"

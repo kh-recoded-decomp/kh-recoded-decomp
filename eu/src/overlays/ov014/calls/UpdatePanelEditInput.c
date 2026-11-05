@@ -35,7 +35,7 @@
 #define func_ov027_020b8ca8 UpdateWidgetRootOnly
 #define func_ov027_020b90a4 FindWidgetById
 #define func_ov027_020b91c8 SetWidgetPosition
-#define func_ov027_020b9620 func_ov027_020b9640
-#define func_ov027_020b96a0 func_ov027_020b96c0
+#define func_ov027_020b9620 SetWidgetRecordActiveBits
+#define func_ov027_020b96a0 SetWidgetAnimationFrame
 #define g_panelState_0206f9a0 data_ov014_0206f9a0
 #include "src/ov014/panel_state/UpdatePanelEditInput_0206d2e8.c"

@@ -3,7 +3,7 @@
 #define QueueFileLoadRequest_020ba114 QueueFileLoadRequest
 #define ResetMapMenuScreen_020b6cf4 ResetMapMenuScreen
 #define SetSlotAnimSequence_0204f24c SetSlotAnimSequence
-#define Slot_SetMode2Bit_0204f480 Slot_SetMode2Bit
+#define Slot_SetMode2Bit_0204f480 SetIndexedRecordMode
 #define data_ov023_020b6f64 data_ov023_020b6f84
 #define func_0204f0c0 func_0204f0d4
 #define func_0204f378 IndexedRecords_SetFlag2

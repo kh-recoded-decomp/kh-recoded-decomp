@@ -998,7 +998,7 @@
   "src/calls/SlotTable_SetEntryPair.c": "dsi/1.1",
   "src/calls/SetClampedFadeLevel.c": "dsi/1.1",
   "src/calls/SlotTable_SetEntryPriority.c": "dsi/1.1",
-  "src/calls/Slot_SetMode2Bit.c": "dsi/1.1",
+  "src/calls/SetIndexedRecordMode.c": "dsi/1.1",
   "src/calls/HideAllOamEntries.c": "dsi/1.1",
   "src/calls/FindEntryById.c": "dsi/1.1",
   "src/calls/FillGridRegion.c": "dsi/1.1",

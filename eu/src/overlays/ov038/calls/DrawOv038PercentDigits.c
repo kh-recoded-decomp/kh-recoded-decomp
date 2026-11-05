@@ -1,5 +1,5 @@
 #define DrawOv038PercentDigits_020bb35c DrawOv038PercentDigits
-#define func_0204f204 func_0204f218
+#define func_0204f204 SetIndexedRecordAnimationFrame
 #define func_0204f378 IndexedRecords_SetFlag2
 #define g_ov038Context_020bd144 data_ov038_020bd164
 #include "src/ov038/unclassified_helpers/DrawOv038PercentDigits_020bb35c.c"

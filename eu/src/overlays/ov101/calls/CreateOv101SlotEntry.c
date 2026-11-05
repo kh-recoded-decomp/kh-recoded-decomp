@@ -27,10 +27,10 @@ typedef struct {
 } Ov101State;
 
 extern int PXI_Init_0204f0c8(void *slotList, int resourceId, int resourceParam);
-extern void func_0204f218(void *slotList, int recordIndex, int value);
+extern void SetIndexedRecordAnimationFrame(void *slotList, int recordIndex, int value);
 extern void IndexedRecord_ClearActive(void *slotList, int recordIndex);
 extern void SetIndexedRecordPriority(void *slotList, int recordIndex, int scale);
-extern void Slot_SetMode2Bit(void *slotList, int recordIndex, int value);
+extern void SetIndexedRecordMode(void *slotList, int recordIndex, int value);
 extern void IndexedRecords_SetFlag2(void *slotList, int recordIndex, int visible);
 extern int IndexedRecord_SetActive(void *slotList, int recordIndex);
 extern void func_ov101_020c00b8(int listIndex, int entryIndex, int x, int y, Ov101State *state);
@@ -50,10 +50,10 @@ void CreateOv101SlotEntry(int listIndex, int entryIndex, SlotEntryConfig *config
         entry = &state->secondaryEntries[entryIndex];
     }
     recordIndex = PXI_Init_0204f0c8(slotList, config->resourceId, config->resourceParam);
-    func_0204f218(slotList, recordIndex, 0);
+    SetIndexedRecordAnimationFrame(slotList, recordIndex, 0);
     IndexedRecord_ClearActive(slotList, recordIndex);
     SetIndexedRecordPriority(slotList, recordIndex, 0);
-    Slot_SetMode2Bit(slotList, recordIndex, 0);
+    SetIndexedRecordMode(slotList, recordIndex, 0);
     IndexedRecords_SetFlag2(slotList, recordIndex, config->visible);
     if (config->raised != 0) {
         IndexedRecord_SetActive(slotList, recordIndex);

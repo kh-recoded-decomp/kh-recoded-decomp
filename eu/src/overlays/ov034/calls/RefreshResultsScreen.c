@@ -25,8 +25,8 @@
 #define func_ov027_020b91c8 SetWidgetPosition
 #define func_ov027_020b9360 ResolveWidgetPositionComponents
 #define func_ov027_020b9580 SetEntrySlotsVisible
-#define func_ov027_020b95e4 func_ov027_020b9604
-#define func_ov027_020b96a0 func_ov027_020b96c0
+#define func_ov027_020b95e4 ClearWidgetRecordActiveBits
+#define func_ov027_020b96a0 SetWidgetAnimationFrame
 #define func_ov027_020b96e4 SetFocusedWidget
 #define func_ov027_020ba2a8 func_ov027_020ba2c8
 #define func_ov027_020ba2e0 func_ov027_020ba300

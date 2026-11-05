@@ -1,3 +1,4 @@
+#include "src/overlays/ov027/WidgetRecordOps.h"
 #include "nitro/types.h"
 #include "nitro/hw.h"
 
@@ -9,8 +10,6 @@ typedef struct {
 } PanelState;
 
 extern void *FindWidgetById(void *container, int itemId);
-extern void func_ov027_020b9604(void *container, void *item);
-extern void func_ov027_020b96c0(void *container, void *item, int mode);
 extern int func_ov002_020621c4(int textIndex, int unused);
 extern void DrawPanelTextLine(int screen, int x, int y, int size, int arg4, int arg5, int textId, int arg7);
 extern void InitMenuCursorState(int mode);
@@ -25,20 +24,20 @@ void func_ov015_02071e48(void) {
     data_ov015_0207e960->unk_E4 = 0;
     InitMenuCursorState(0);
     container = data_ov015_0207e960->container;
-    func_ov027_020b9604(container, FindWidgetById(container, 0xb));
+    ClearWidgetRecordActiveBits(container, (const struct WidgetPositionRecord *)(FindWidgetById(container, 0xb)));
     container = data_ov015_0207e960->container;
-    func_ov027_020b9604(container, FindWidgetById(container, 0x1e));
+    ClearWidgetRecordActiveBits(container, (const struct WidgetPositionRecord *)(FindWidgetById(container, 0x1e)));
     container = data_ov015_0207e960->container;
-    func_ov027_020b9604(container, FindWidgetById(container, 0x1f));
+    ClearWidgetRecordActiveBits(container, (const struct WidgetPositionRecord *)(FindWidgetById(container, 0x1f)));
     container = data_ov015_0207e960->container;
-    func_ov027_020b9604(container, FindWidgetById(container, 0x20));
+    ClearWidgetRecordActiveBits(container, (const struct WidgetPositionRecord *)(FindWidgetById(container, 0x20)));
     container = data_ov015_0207e960->container;
-    func_ov027_020b9604(container, FindWidgetById(container, 0x21));
+    ClearWidgetRecordActiveBits(container, (const struct WidgetPositionRecord *)(FindWidgetById(container, 0x21)));
     container = data_ov015_0207e960->container;
-    func_ov027_020b9604(container, FindWidgetById(container, 9));
+    ClearWidgetRecordActiveBits(container, (const struct WidgetPositionRecord *)(FindWidgetById(container, 9)));
     container = data_ov015_0207e960->container;
-    func_ov027_020b9604(container, FindWidgetById(container, 0x11));
+    ClearWidgetRecordActiveBits(container, (const struct WidgetPositionRecord *)(FindWidgetById(container, 0x11)));
     container = data_ov015_0207e960->container;
-    func_ov027_020b96c0(container, FindWidgetById(container, 0x11), 0);
+    SetWidgetAnimationFrame(container, (const struct WidgetPositionRecord *)(FindWidgetById(container, 0x11)), 0);
     PlaySoundEffect(2, 3);
 }

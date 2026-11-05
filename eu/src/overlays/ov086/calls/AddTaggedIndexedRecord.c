@@ -1,6 +1,6 @@
 #define AddTaggedIndexedRecord_020c1470 AddTaggedIndexedRecord
 #define PXI_Init_0204f0b4 PXI_Init_0204f0c8
 #define func_0204f13c IndexedRecord_SetPair
-#define func_0204f204 func_0204f218
+#define func_0204f204 SetIndexedRecordAnimationFrame
 #define func_0204f2e4 IndexedRecord_ClearActive
 #include "src/ov086/panel_state/AddTaggedIndexedRecord_020c1470.c"

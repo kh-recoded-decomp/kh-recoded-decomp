@@ -1,3 +1,4 @@
+#include "src/overlays/ov027/WidgetRecordOps.h"
 #include "nitro/types.h"
 #include "nitro/fx_types.h"
 #include "src/overlays/ov002/RecordSelectionView.h"
@@ -126,11 +127,8 @@ extern void func_ov027_020b9098(void *container, u32 value);
 extern void func_ov027_020b8fb8(void *container, u32 resourceId, int count);
 extern void SetAllElementObjectModes(void *container, int mode);
 extern void *FindWidgetById(void *container, int id);
-extern void func_ov027_020b97d8(void *container, void *element, int mode);
-extern void func_ov027_020b96c0(void *container, void *element, int layer);
 extern void SetIndexedRecordPriority(void *container, int animIndex, int value);
 extern void SetEntrySlotsVisible(void *container, void *element, BOOL visible);
-extern void func_ov027_020b9604(void *container, void *element);
 extern BOOL HasAnyMenuEntryUnlocked(void);
 extern int GetRecordFlagBits(void);
 extern BOOL GetCategoryFlagState(int category, int flag);
@@ -163,12 +161,12 @@ static inline void SetElementEnabled(void *container, int elementId, BOOL enable
 
 static inline void SetElementMode(void *container, int elementId, int mode)
 {
-    func_ov027_020b97d8(container, FindWidgetById(container, elementId), mode);
+    SetWidgetRecordMode(container, (const struct WidgetPositionRecord *)(FindWidgetById(container, elementId)), mode);
 }
 
 static inline void SetElementNumber(void *container, int elementId, int value)
 {
-    func_ov027_020b96c0(container, FindWidgetById(container, elementId), value);
+    SetWidgetAnimationFrame(container, (const struct WidgetPositionRecord *)(FindWidgetById(container, elementId)), value);
 }
 
 static inline void SetElementPriority(void *container, int elementId, int priority)
@@ -300,13 +298,13 @@ void InitMenuContext(int entryMode)
     func_ov027_020b9098(data_ov002_0206c464->subObj, gPanelUiResourcePaths[3]);
     func_ov027_020b8fb8(data_ov002_0206c464->subObj, subObjConfig.animResourceId, 0xd);
     SetAllElementObjectModes(data_ov002_0206c464->subObj, 3);
-    func_ov027_020b97d8(data_ov002_0206c464->subObj, FindWidgetById(data_ov002_0206c464->subObj, 11), 1);
-    func_ov027_020b97d8(data_ov002_0206c464->subObj, FindWidgetById(data_ov002_0206c464->subObj, 12), 1);
-    func_ov027_020b97d8(data_ov002_0206c464->subObj, FindWidgetById(data_ov002_0206c464->subObj, 0), 1);
+    SetWidgetRecordMode(data_ov002_0206c464->subObj, (const struct WidgetPositionRecord *)(FindWidgetById(data_ov002_0206c464->subObj, 11)), 1);
+    SetWidgetRecordMode(data_ov002_0206c464->subObj, (const struct WidgetPositionRecord *)(FindWidgetById(data_ov002_0206c464->subObj, 12)), 1);
+    SetWidgetRecordMode(data_ov002_0206c464->subObj, (const struct WidgetPositionRecord *)(FindWidgetById(data_ov002_0206c464->subObj, 0)), 1);
     SetElementEnabled(data_ov002_0206c464->subObj, 5, TRUE);
     SetElementMode(data_ov002_0206c464->subObj, 5, 0);
-    func_ov027_020b9604(data_ov002_0206c464->subObj, FindWidgetById(data_ov002_0206c464->subObj, 0x15));
-    func_ov027_020b9604(data_ov002_0206c464->subObj, FindWidgetById(data_ov002_0206c464->subObj, 0x16));
+    ClearWidgetRecordActiveBits(data_ov002_0206c464->subObj, (const struct WidgetPositionRecord *)(FindWidgetById(data_ov002_0206c464->subObj, 0x15)));
+    ClearWidgetRecordActiveBits(data_ov002_0206c464->subObj, (const struct WidgetPositionRecord *)(FindWidgetById(data_ov002_0206c464->subObj, 0x16)));
     if (HasAnyMenuEntryUnlocked()) {
         data_ov002_0206c464->flags.hasUnlockedEntry = TRUE;
     } else {
@@ -360,7 +358,7 @@ void InitMenuContext(int entryMode)
     case 0:
     case 2:
         if (data_ov002_0206c464->flags.hasCategory) {
-            func_ov027_020b96c0(data_ov002_0206c464->subObj, FindWidgetById(data_ov002_0206c464->subObj, 0x15), 1);
+            SetWidgetAnimationFrame(data_ov002_0206c464->subObj, (const struct WidgetPositionRecord *)(FindWidgetById(data_ov002_0206c464->subObj, 0x15)), 1);
         }
         break;
     case 3:
@@ -368,11 +366,11 @@ void InitMenuContext(int entryMode)
             data_ov002_0206c464->selectedIndex = 1;
             focus = 2;
             if (data_ov002_0206c464->flags.hasUnlockedEntry) {
-                func_ov027_020b96c0(data_ov002_0206c464->subObj, FindWidgetById(data_ov002_0206c464->subObj, 0x16),
+                SetWidgetAnimationFrame(data_ov002_0206c464->subObj, (const struct WidgetPositionRecord *)(FindWidgetById(data_ov002_0206c464->subObj, 0x16)),
                                     1);
             }
         } else if (data_ov002_0206c464->flags.hasCategory) {
-            func_ov027_020b96c0(data_ov002_0206c464->subObj, FindWidgetById(data_ov002_0206c464->subObj, 0x15), 1);
+            SetWidgetAnimationFrame(data_ov002_0206c464->subObj, (const struct WidgetPositionRecord *)(FindWidgetById(data_ov002_0206c464->subObj, 0x15)), 1);
         }
         break;
     case 6:

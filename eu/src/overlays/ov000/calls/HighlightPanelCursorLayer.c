@@ -1,5 +1,5 @@
 #define HighlightPanelCursorLayer_02061d04 HighlightPanelCursorLayer
 #define func_0204f13c IndexedRecord_SetPair
-#define func_0204f204 func_0204f218
+#define func_0204f204 SetIndexedRecordAnimationFrame
 #define func_0204f378 IndexedRecords_SetFlag2
 #include "src/ov000/panel_state/HighlightPanelCursorLayer_02061d04.c"

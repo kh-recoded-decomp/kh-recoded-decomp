@@ -1,9 +1,9 @@
 #define CreateOv038Sprite_020bb13c CreateOv038Sprite
 #define SetOv038SpritePosition_020bb230 SetOv038SpritePosition
-#define Slot_SetMode2Bit_0204f480 Slot_SetMode2Bit
+#define Slot_SetMode2Bit_0204f480 SetIndexedRecordMode
 #define func_0204f0b4 PXI_Init_0204f0c8
 #define func_0204f178 SetIndexedRecordPriority
-#define func_0204f204 func_0204f218
+#define func_0204f204 SetIndexedRecordAnimationFrame
 #define func_0204f2c0 IndexedRecord_SetActive
 #define func_0204f2e4 IndexedRecord_ClearActive
 #define func_0204f378 IndexedRecords_SetFlag2

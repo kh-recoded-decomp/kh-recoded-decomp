@@ -1,3 +1,4 @@
+#include "src/overlays/ov027/WidgetRecordOps.h"
 #include "src/overlays/ov015/WirelessMenuContext.h"
 #include "src/overlays/ov015/WirelessPanelInitData.h"
 
@@ -5,7 +6,6 @@ extern WirelessMenuContext *data_ov015_0207e960;
 extern const PanelWidgetIds data_ov015_02079f58;
 extern void *FindWidgetById(void *target, int id);
 extern void SetEntrySlotsVisible(void *target, void *obj, int flag);
-extern void func_ov027_020b9604(void *target, void *obj);
 extern void ApplySelectedSubitemValues(void *target, void *obj, int useAlt);
 
 void func_ov015_0206e658(int slotIndex) {
@@ -28,7 +28,7 @@ void func_ov015_0206e658(int slotIndex) {
 
     target = data_ov015_0207e960->widgetManager;
     obj = FindWidgetById(target, id);
-    func_ov027_020b9604(target, obj);
+    ClearWidgetRecordActiveBits(target, (const struct WidgetPositionRecord *)(obj));
 
     target = data_ov015_0207e960->widgetManager;
     obj = FindWidgetById(target, id);

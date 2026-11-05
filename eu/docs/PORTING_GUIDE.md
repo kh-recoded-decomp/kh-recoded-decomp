@@ -24,6 +24,8 @@ This is a matching decompilation; a host port is a separate project.
   messages, buffer-key queries, waiting and the DS queue/thread storage.
 - [Stage-manager flags](STAGE_MANAGER_FLAGS.md) records nullable mask access,
   conditional clearing and the boundary between proven fields and unknown bits.
+- [Widget record operations](WIDGET_RECORD_OPS.md) records two-ID iteration,
+  animation frame selection, active bits, mode replacement and legacy ABI views.
 - [Results scene](RESULTS_SCENE.md), [scene loading](SCENE_LOAD_STEP.md),
   [carousel models](CAROUSEL_MODELS.md), [widgets](WIDGET_POSITION.md) and
   [field-menu palette](FIELD_MENU_PALETTE.md) record behavior and the matching

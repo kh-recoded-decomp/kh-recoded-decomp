@@ -44,7 +44,7 @@
 #define func_ov027_020b8f98 func_ov027_020b8fb8
 #define func_ov027_020b90a4 FindWidgetById
 #define func_ov027_020b9580 SetEntrySlotsVisible
-#define func_ov027_020b97b8 func_ov027_020b97d8
+#define func_ov027_020b97b8 SetWidgetRecordMode
 #define func_ov027_020ba25c LoadPackedFileView
 #define func_ov027_020ba2a8 func_ov027_020ba2c8
 #define func_ov039_020bc03c RuntimeState_SetCondition

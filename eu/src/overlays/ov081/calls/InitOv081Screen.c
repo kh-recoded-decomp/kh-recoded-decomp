@@ -15,7 +15,7 @@
 #define func_02052514 func_02052528
 #define func_0205255c func_02052570
 #define func_ov027_020b8f98 func_ov027_020b8fb8
-#define func_ov027_020b97b8 func_ov027_020b97d8
+#define func_ov027_020b97b8 SetWidgetRecordMode
 #define func_ov039_020bc1bc func_ov039_020bc1dc
 #define func_ov039_020bc1cc GetMenuWidgetContainer
 #define func_ov081_020c4260 InitEntryTables

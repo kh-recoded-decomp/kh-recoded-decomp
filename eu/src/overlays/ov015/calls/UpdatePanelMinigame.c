@@ -7,7 +7,7 @@
 #define SetSceneRecordValue_020785f8 SetSceneRecordValue
 #define SlotTable_SetEntryPair_0204f35c SlotTable_SetEntryPair
 #define SlotTable_SetEntryPriority_0204f468 SlotTable_SetEntryPriority
-#define Slot_SetMode2Bit_0204f480 Slot_SetMode2Bit
+#define Slot_SetMode2Bit_0204f480 SetIndexedRecordMode
 #define UpdatePanelMinigame_020766d0 UpdatePanelMinigame
 #define data_0205356c gSinFx12Table
 #define data_ov015_0207e884 gWirelessModeDataTables
@@ -40,7 +40,7 @@
 #define func_ov027_020b94b4 TweenWidgetBaseToAway
 #define func_ov027_020b94d8 TweenWidgetToHome
 #define func_ov027_020b9580 SetEntrySlotsVisible
-#define func_ov027_020b96a0 func_ov027_020b96c0
+#define func_ov027_020b96a0 SetWidgetAnimationFrame
 #define func_ov027_020b96e4 SetFocusedWidget
 #define func_ov027_020b984c SetWidgetRootTouchEnabled
 #define func_ov027_020b9874 SetWidgetRootDpadEnabled

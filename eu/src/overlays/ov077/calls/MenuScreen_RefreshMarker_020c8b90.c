@@ -1,6 +1,6 @@
 #define DrawDialogText_020c89d4 DrawOv077DialogText
 #define MenuScreen_RefreshMarker_020c8b70 MenuScreen_RefreshMarker_020c8b90
-#define func_0204f204 func_0204f218
+#define func_0204f204 SetIndexedRecordAnimationFrame
 #define func_ov027_020b90a4 FindWidgetById
 #define func_ov027_020b91c8 SetWidgetPosition
 #define func_ov027_020b9580 SetEntrySlotsVisible

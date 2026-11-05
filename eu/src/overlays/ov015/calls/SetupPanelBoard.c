@@ -1,3 +1,4 @@
+#include "src/overlays/ov027/WidgetRecordOps.h"
 #include "nitro/types.h"
 #include "src/overlays/ov015/WirelessBoardData.h"
 
@@ -116,7 +117,7 @@ extern void NNS_G2dBGLoadScreenRect(void *dst, ScreenData *screen, int srcX, int
 extern void PXI_Init_0204f020(u8 *records, u32 fileId);
 extern int PXI_Init_0204f0c8(u8 *records, int x, int y);
 extern void SetIndexedRecordPriority(u8 *records, int slot, int scale);
-extern void Slot_SetMode2Bit(u8 *records, int slot, int value);
+extern void SetIndexedRecordMode(u8 *records, int slot, int value);
 extern int *SlotTable_SetEntryPriority(u8 *records, int slot, int priority);
 
 extern int InitializeResourceContainer(void *container, void *config);
@@ -126,9 +127,6 @@ extern void func_ov027_020b8fb8(void *container, u32 fileId, int count);
 extern void SetAllElementObjectModes(void *container, int mode);
 extern void *FindWidgetById(void *container, int elementId);
 extern void SetEntrySlotsVisible(void *container, void *element, int visible);
-extern void func_ov027_020b97d8(void *container, void *element, int mode);
-extern void func_ov027_020b9604(void *container, void *element);
-extern void func_ov027_020b96c0(void *container, void *element, int value);
 extern void SetWidgetRootDpadEnabled(void *container, int enabled);
 extern void SetWidgetRootTouchEnabled(void *container, int enabled);
 extern void LoadPackedFileView(void *view, const char *name, BOOL fromTail);
@@ -194,15 +192,15 @@ void SetupPanelBoard(void) {
     func_ov027_020b8fb8(data_ov015_020812e0->container, config.animFileId, config.count);
     data_ov015_020812e0->records = data_ov015_020812e0->container;
     SetAllElementObjectModes(data_ov015_020812e0->container, 1);
-    func_ov027_020b97d8(data_ov015_020812e0->container, FindWidgetById(data_ov015_020812e0->container, 0x10), 0);
-    func_ov027_020b97d8(data_ov015_020812e0->container, FindWidgetById(data_ov015_020812e0->container, 0x11), 0);
+    SetWidgetRecordMode(data_ov015_020812e0->container, (const struct WidgetPositionRecord *)(FindWidgetById(data_ov015_020812e0->container, 0x10)), 0);
+    SetWidgetRecordMode(data_ov015_020812e0->container, (const struct WidgetPositionRecord *)(FindWidgetById(data_ov015_020812e0->container, 0x11)), 0);
     SetEntrySlotsVisible(data_ov015_020812e0->container, FindWidgetById(data_ov015_020812e0->container, 0), 0);
-    func_ov027_020b9604(data_ov015_020812e0->container, FindWidgetById(data_ov015_020812e0->container, 2));
+    ClearWidgetRecordActiveBits(data_ov015_020812e0->container, (const struct WidgetPositionRecord *)(FindWidgetById(data_ov015_020812e0->container, 2)));
     work = data_ov015_020812e0;
-    func_ov027_020b96c0(data_ov015_020812e0->container, FindWidgetById(work->container, 2), work->total);
-    func_ov027_020b9604(data_ov015_020812e0->container, FindWidgetById(data_ov015_020812e0->container, 4));
+    SetWidgetAnimationFrame(data_ov015_020812e0->container, (const struct WidgetPositionRecord *)(FindWidgetById(work->container, 2)), work->total);
+    ClearWidgetRecordActiveBits(data_ov015_020812e0->container, (const struct WidgetPositionRecord *)(FindWidgetById(data_ov015_020812e0->container, 4)));
     work = data_ov015_020812e0;
-    func_ov027_020b96c0(data_ov015_020812e0->container, FindWidgetById(work->container, 4),
+    SetWidgetAnimationFrame(data_ov015_020812e0->container, (const struct WidgetPositionRecord *)(FindWidgetById(work->container, 4)),
                         (u16)(work->total - work->cleared));
     SetWidgetRootDpadEnabled(data_ov015_020812e0->container, 1);
     SetWidgetRootTouchEnabled(data_ov015_020812e0->container, 1);
@@ -220,7 +218,7 @@ void SetupPanelBoard(void) {
         data_ov015_020812e0->entries[i].animSlot = PXI_Init_0204f0c8(data_ov015_020812e0->records, 0, 0);
         SetPanelEntrySequence(i, 8);
         SetIndexedRecordPriority(data_ov015_020812e0->records, data_ov015_020812e0->entries[i].animSlot, 0x66);
-        Slot_SetMode2Bit(data_ov015_020812e0->records, data_ov015_020812e0->entries[i].animSlot, 1);
+        SetIndexedRecordMode(data_ov015_020812e0->records, data_ov015_020812e0->entries[i].animSlot, 1);
         SlotTable_SetEntryPriority(data_ov015_020812e0->records, data_ov015_020812e0->entries[i].animSlot, 0);
         SetSceneRecordValue(data_ov015_020812e0->entries[i].animSlot, &pos);
         priority = gWirelessSlotStyles[data_ov015_020812e0->entries[i].styleId].priority;
@@ -228,7 +226,7 @@ void SetupPanelBoard(void) {
             PXI_Init_0204f0c8(data_ov015_020812e0->records, gWirelessSlotStyles[data_ov015_020812e0->entries[i].styleId].slotX,
                           priority);
         SetIndexedRecordPriority(data_ov015_020812e0->records, data_ov015_020812e0->entries[i].markSlot, 0x67);
-        Slot_SetMode2Bit(data_ov015_020812e0->records, data_ov015_020812e0->entries[i].markSlot, 2);
+        SetIndexedRecordMode(data_ov015_020812e0->records, data_ov015_020812e0->entries[i].markSlot, 2);
         SlotTable_SetEntryPriority(data_ov015_020812e0->records, data_ov015_020812e0->entries[i].markSlot,
                                             priority);
         SetSceneRecordValue(data_ov015_020812e0->entries[i].markSlot, &pos);

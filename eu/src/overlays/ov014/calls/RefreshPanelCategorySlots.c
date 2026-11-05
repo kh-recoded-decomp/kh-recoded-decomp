@@ -1,3 +1,4 @@
+#include "src/overlays/ov027/WidgetRecordOps.h"
 #include "nitro/types.h"
 #include "nitro/fx_types.h"
 
@@ -34,7 +35,7 @@ extern void ObjManager_FreeSlot(PanelObjects *, int);
 extern MsgContainerHeader *Msg_OpenContainerAndReadHeader(const char *, u32, BOOL);
 extern int PXI_Init_0204f020(PanelObjects *, u32);
 extern int PXI_Init_0204f0c8(PanelObjects *, int, int);
-extern void Slot_SetMode2Bit(PanelObjects *, int, int);
+extern void SetIndexedRecordMode(PanelObjects *, int, int);
 extern void SetIndexedRecordPriority(PanelObjects *, int, int);
 extern void IndexedRecord_SetPair(PanelObjects *, int, const SlotPosition *);
 extern void ZeroHalfThenFree(void *);
@@ -42,7 +43,6 @@ extern void *FindWidgetById(PanelObjects *, int);
 extern void SetEntrySlotsVisible(PanelObjects *, void *, BOOL);
 extern s32 func_ov002_02069b8c(RecordFlagSets *, int, int, BOOL);
 extern s32 SetRecordFlagFromTable(RecordFlagSets *, int, int, BOOL, BOOL);
-extern void func_ov027_020b96c0(PanelObjects *, void *, u16);
 extern int DispatchContextCommand(u32, int, int, void *);
 extern s32 GetCategoryFlagState(RecordFlagSets *, int);
 
@@ -83,7 +83,7 @@ void RefreshPanelCategorySlots(void)
     image = PXI_Init_0204f020(objects, PackImageEntry(archive,
         gPanelGroupCategories[data_ov014_0206f9a0->group][index]));
     slot = PXI_Init_0204f0c8(objects, 0, image);
-    Slot_SetMode2Bit(objects, slot, 1);
+    SetIndexedRecordMode(objects, slot, 1);
     SetIndexedRecordPriority(objects, slot, 200);
     position.x = 0x8000;
     position.y = 0x78000;
@@ -99,7 +99,7 @@ void RefreshPanelCategorySlots(void)
     image = PXI_Init_0204f020(objects, archiveKey |
         (gPanelGroupCategories[data_ov014_0206f9a0->group][index] & 0x1ff));
     slot = PXI_Init_0204f0c8(objects, 0, image);
-    Slot_SetMode2Bit(objects, slot, 1);
+    SetIndexedRecordMode(objects, slot, 1);
     SetIndexedRecordPriority(objects, slot, 210);
     position.x = 0x16000;
     position.y = 0x7d000;
@@ -112,7 +112,7 @@ void RefreshPanelCategorySlots(void)
     image = PXI_Init_0204f020(objects, archiveKey |
         (gPanelGroupCategories[data_ov014_0206f9a0->group][index] & 0x1ff));
     slot = PXI_Init_0204f0c8(objects, 0, image);
-    Slot_SetMode2Bit(objects, slot, 1);
+    SetIndexedRecordMode(objects, slot, 1);
     SetIndexedRecordPriority(objects, slot, 210);
     position.x = 0x4000;
     position.y = 0x95000;
@@ -133,12 +133,12 @@ void RefreshPanelCategorySlots(void)
     SetEntrySlotsVisible(objects, widget, flagState != 0);
     if (flagState != 0) {
         SetRecordFlagFromTable(&data_ov014_0206f9a0->flags, category, entry, FALSE, TRUE);
-        func_ov027_020b96c0(objects, widget, 1);
+        SetWidgetAnimationFrame(objects, (const struct WidgetPositionRecord *)(widget), (u16)(1));
         if (flagState > 0) DispatchContextCommand(0x80000018, category, entry, 0);
     }
     flagState = GetCategoryFlagState(&data_ov014_0206f9a0->flags, category);
     widget = FindWidgetById(objects, 7);
     SetEntrySlotsVisible(objects, widget, flagState != 0);
-    if (flagState != 0) func_ov027_020b96c0(objects, widget, (u16)(flagState <= 0));
+    if (flagState != 0) SetWidgetAnimationFrame(objects, (const struct WidgetPositionRecord *)(widget), (u16)(flagState <= 0));
     ZeroHalfThenFree(archive);
 }

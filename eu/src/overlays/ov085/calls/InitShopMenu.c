@@ -14,7 +14,7 @@
 #define SetEntrySlotsVisible_020b9580 SetEntrySlotsVisible
 #define SetTextColorIfFits_020bcd04 SetTextColorIfFits
 #define SetupStageParams_020bdf10 SetupStageParams
-#define Slot_SetMode2Bit_0204f480 Slot_SetMode2Bit
+#define Slot_SetMode2Bit_0204f480 SetIndexedRecordMode
 #define SumRecordTableAEntries_020521f8 SumRecordTableAEntries
 #define data_ov085_020c22d4 data_ov085_020c22f4
 #define data_ov085_020c22dc data_ov085_020c22fc
@@ -33,7 +33,7 @@
 #define func_ov027_020b8f98 func_ov027_020b8fb8
 #define func_ov027_020b91a8 GetWidgetPosition
 #define func_ov027_020b91c8 SetWidgetPosition
-#define func_ov027_020b97b8 func_ov027_020b97d8
+#define func_ov027_020b97b8 SetWidgetRecordMode
 #define func_ov027_020ba2a8 func_ov027_020ba2c8
 #define func_ov034_020bde84 func_ov034_020bdea4
 #define func_ov036_020bc414 IsPxiFifoTagSet_020bc434

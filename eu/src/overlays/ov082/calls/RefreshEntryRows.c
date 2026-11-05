@@ -3,7 +3,7 @@
 #define GetSlotEntry_020c5438 GetSlotEntry
 #define RefreshEntryRows_020bef08 RefreshEntryRows
 #define func_0204f13c IndexedRecord_SetPair
-#define func_0204f204 func_0204f218
+#define func_0204f204 SetIndexedRecordAnimationFrame
 #define func_0204f2e4 IndexedRecord_ClearActive
 #define func_0204f378 IndexedRecords_SetFlag2
 #define func_ov027_020b91a8 GetWidgetPosition

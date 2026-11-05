@@ -30,7 +30,7 @@
 #define WriteGlobalPackedBits_02027360 WriteGlobalPackedBits
 #define data_ov075_020d1434 sMatrixLevelStartCells
 #define data_ov075_020d1454 sMatrixCursorFrames
-#define func_0204f204 func_0204f218
+#define func_0204f204 SetIndexedRecordAnimationFrame
 #define func_020524e8 func_020524fc
 #define func_02052514 func_02052528
 #define func_0205255c func_02052570

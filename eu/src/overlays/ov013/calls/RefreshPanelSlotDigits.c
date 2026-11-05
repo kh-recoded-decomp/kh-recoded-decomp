@@ -4,5 +4,5 @@
 #define func_ov013_02070ce8 RefreshPanelSlotMarkers
 #define SetEntrySlotsVisible_020b9580 SetEntrySlotsVisible
 #define SlotTable_SetEntryPriority_0204f468 SlotTable_SetEntryPriority
-#define func_ov027_020b96a0 func_ov027_020b96c0
+#define func_ov027_020b96a0 SetWidgetAnimationFrame
 #include "src/ov013/panel_state/RefreshPanelSlotDigits_0206fe50.c"

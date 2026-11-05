@@ -4,8 +4,8 @@
 #define func_ov002_02061d58 DrawPanelTextLine
 #define func_ov013_0206f06c RefreshProgressCaption
 #define func_ov027_020b90a4 FindWidgetById
-#define func_ov027_020b95e4 func_ov027_020b9604
-#define func_ov027_020b96a0 func_ov027_020b96c0
-#define func_ov027_020b97b8 func_ov027_020b97d8
+#define func_ov027_020b95e4 ClearWidgetRecordActiveBits
+#define func_ov027_020b96a0 SetWidgetAnimationFrame
+#define func_ov027_020b97b8 SetWidgetRecordMode
 #define g_panelState_02074ce0 data_ov013_02074ce0
 #include "src/ov013/panel_state/OpenPanelConfirmPrompt_02073b94.c"

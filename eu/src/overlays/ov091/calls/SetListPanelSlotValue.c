@@ -1,4 +1,4 @@
 #define SetListPanelSlotValue_020bfbac SetListPanelSlotValue
-#define func_0204f204 func_0204f218
+#define func_0204f204 SetIndexedRecordAnimationFrame
 #define func_0204f2e4 IndexedRecord_ClearActive
 #include "src/ov091/panel_state/SetListPanelSlotValue_020bfbac.c"

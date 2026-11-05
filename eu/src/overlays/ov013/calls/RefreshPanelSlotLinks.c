@@ -1,4 +1,4 @@
 #define RefreshPanelSlotLinks_02073548 RefreshPanelSlotLinks
 #define func_ov027_020b90a4 FindWidgetById
-#define func_ov027_020b9620 func_ov027_020b9640
+#define func_ov027_020b9620 SetWidgetRecordActiveBits
 #include "src/ov013/panel_state/RefreshPanelSlotLinks_02073548.c"

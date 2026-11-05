@@ -1,9 +1,9 @@
 #define CreateSlotAnim_020c0348 CreateSlotAnim
 #define GetSlotAnimResource_020c0680 GetSlotAnimResource
-#define Slot_SetMode2Bit_0204f480 Slot_SetMode2Bit
+#define Slot_SetMode2Bit_0204f480 SetIndexedRecordMode
 #define func_01ff89a8 MI_CpuCopy8
 #define func_0204f0b4 PXI_Init_0204f0c8
-#define func_0204f204 func_0204f218
+#define func_0204f204 SetIndexedRecordAnimationFrame
 #define func_0204f2c0 IndexedRecord_SetActive
 #define func_0204f2e4 IndexedRecord_ClearActive
 #define func_0204f378 IndexedRecords_SetFlag2

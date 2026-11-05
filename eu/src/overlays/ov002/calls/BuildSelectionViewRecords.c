@@ -26,7 +26,7 @@ extern AvatarArchiveHeader *Msg_OpenContainerAndReadHeader(
     const char *path, u32 mode, BOOL allocFromEnd);
 extern int PXI_Init_0204f020(void *manager, u32 imageKey);
 extern int PXI_Init_0204f0c8(void *manager, int animation, int image);
-extern void Slot_SetMode2Bit(void *manager, int record, int mode);
+extern void SetIndexedRecordMode(void *manager, int record, int mode);
 extern void SetIndexedRecordPriority(void *manager, int record, int priority);
 extern void IndexedRecord_SetPair(void *manager, int record, WidgetPoint *position);
 extern void SlotTable_SetEntryPair(void *manager, int record, int xScale, int yScale);
@@ -143,7 +143,7 @@ void BuildSelectionViewRecords(void *manager, RecordSelectionView *view)
                                 imageKey | ((firstEntry + i) & 0x1ff));
                     record = PXI_Init_0204f0c8(manager, 0, image);
                     recordPriority = view->basePriority - priority;
-                    Slot_SetMode2Bit(manager, record, mode);
+                    SetIndexedRecordMode(manager, record, mode);
                     SetIndexedRecordPriority(manager, record, recordPriority);
                     IndexedRecord_SetPair(manager, record, &position);
                     SlotTable_SetEntryPair(manager, record, scale, scale);

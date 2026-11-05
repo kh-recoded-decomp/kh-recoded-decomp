@@ -12,7 +12,7 @@
 #define func_0204f378 IndexedRecords_SetFlag2
 #define func_0204f3c8 IndexedRecords_SetFlag3
 #define func_0204f400 set_engine_alpha_blend
-#define func_0204f480 Slot_SetMode2Bit
+#define func_0204f480 SetIndexedRecordMode
 #define func_0204f498 SetBank6Word1C
 #define func_0204f4a4 SetupSlotEntry
 #define func_ov001_02064574 ReadSessionPackedBits

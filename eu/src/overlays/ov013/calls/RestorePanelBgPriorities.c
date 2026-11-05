@@ -2,5 +2,5 @@
 #define RestorePanelBgPriorities_02073e38 RestorePanelBgPriorities
 #define func_ov013_0206f06c RefreshProgressCaption
 #define func_ov027_020b90a4 FindWidgetById
-#define func_ov027_020b9620 func_ov027_020b9640
+#define func_ov027_020b9620 SetWidgetRecordActiveBits
 #include "src/ov013/panel_state/RestorePanelBgPriorities_02073e38.c"

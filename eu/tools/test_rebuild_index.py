@@ -120,12 +120,61 @@ class ReconstructionTests(unittest.TestCase):
         self.assertEqual(self.run_tool("--write"), 0)
         self.assertEqual(json.loads(self.index.read_text()), index)
 
+    def test_explicit_refresh_changes_proven_names_without_replacing_bytes(self):
+        self.assertEqual(self.run_tool("--write"), 0)
+        original = json.loads(self.index.read_text())
+        original["example"]["relocs"][0][1] = "old_target_name"
+        original["example"]["annotation"] = "keep historical metadata"
+        self.index.write_text(json.dumps(original))
+        text = self.index.read_text()
+        self.assertEqual(self.run_tool("--refresh-reloc-names"), 0)
+        self.assertEqual(self.index.read_text(), text)
+        self.assertEqual(self.run_tool("--write", "--refresh-reloc-names"), 0)
+        result = json.loads(self.index.read_text())
+        expected = dict(original["example"], relocs=[[0, "target"], [4, "0x02002006"]])
+        self.assertEqual(result["example"], expected)
+        self.assertEqual(result["example"]["hex"], original["example"]["hex"])
+
+    def test_refresh_does_not_accept_unproven_zeroed_old_relocations(self):
+        self.assertEqual(self.run_tool("--write"), 0)
+        original = json.loads(self.index.read_text())
+        original["example"]["relocs"][0][1] = "unknown_removed_name"
+        original["example"]["hex"] = "00000000" + original["example"]["hex"][8:]
+        self.index.write_text(json.dumps(original))
+        self.assertEqual(self.run_tool("--write", "--refresh-reloc-names"), 0)
+        self.assertEqual(json.loads(self.index.read_text()), original)
+
+    def test_refresh_preserves_offset_count_and_order(self):
+        self.assertEqual(self.run_tool("--write"), 0)
+        original = json.loads(self.index.read_text())["example"]
+        for relocs in [
+            [[0, "old_target_name"], [0, "old_target_name"], [4, "0x02002006"]],
+            [[4, "0x02002006"], [0, "old_target_name"]],
+        ]:
+            with self.subTest(relocs=relocs):
+                entry = dict(original, relocs=relocs)
+                self.index.write_text(json.dumps({"example": entry}))
+                self.assertEqual(self.run_tool("--write", "--refresh-reloc-names"), 0)
+                self.assertEqual(json.loads(self.index.read_text()), {"example": entry})
+
+    def test_refresh_preserves_mode_module_and_size_disagreements(self):
+        self.assertEqual(self.run_tool("--write"), 0)
+        original = json.loads(self.index.read_text())
+        for key, value in [("mode", "thumb"), ("module", "overlay(1)"), ("size", 12)]:
+            with self.subTest(key=key):
+                entry = dict(original["example"], **{key: value})
+                entry["relocs"] = [[0, "old_target_name"], [4, "0x02002006"]]
+                self.index.write_text(json.dumps({"example": entry}))
+                self.assertEqual(self.run_tool("--write", "--refresh-reloc-names"), 0)
+                self.assertEqual(json.loads(self.index.read_text()), {"example": entry})
+
     def test_wrong_addend_cannot_write_index(self):
         self.index.write_text("{}")
         (self.config / "relocs.txt").write_text(self.relocations.replace("add:0x6", "add:0x8"))
-        with self.assertRaises(SystemExit):
-            self.run_tool("--write")
-        self.assertEqual(self.index.read_text(), "{}")
+        for args in [("--write",), ("--write", "--refresh-reloc-names")]:
+            with self.subTest(args=args), self.assertRaises(SystemExit):
+                self.run_tool(*args)
+            self.assertEqual(self.index.read_text(), "{}")
 
     def test_unknown_relocation_syntax_is_not_silently_dropped(self):
         (self.config / "relocs.txt").write_text(self.relocations.replace("add:0x6", "offset:0x6"))
@@ -142,8 +191,10 @@ class ReconstructionTests(unittest.TestCase):
                  for number in range(6)}
         text = json.dumps(index)
         self.index.write_text(text)
-        self.assertEqual(self.run_tool("--write"), 1)
-        self.assertEqual(self.index.read_text(), text)
+        for args in [("--write",), ("--write", "--refresh-reloc-names")]:
+            with self.subTest(args=args):
+                self.assertEqual(self.run_tool(*args), 1)
+                self.assertEqual(self.index.read_text(), text)
 
 
 if __name__ == "__main__":

@@ -344,19 +344,19 @@ src/overlays/ov027/calls/SetEntrySlotsVisible.c:
     complete
     .text       start:0x020b95a0 end:0x020b9604
 
-src/overlays/ov027/calls/func_ov027_020b9604.c:
+src/overlays/ov027/calls/ClearWidgetRecordActiveBits.c:
     complete
     .text       start:0x020b9604 end:0x020b9640
 
-src/overlays/ov027/calls/func_ov027_020b9640.c:
+src/overlays/ov027/calls/SetWidgetRecordActiveBits.c:
     complete
     .text       start:0x020b9640 end:0x020b967c
 
-src/overlays/ov027/calls/func_ov027_020b967c.c:
+src/overlays/ov027/calls/GetWidgetAnimationFrame.c:
     complete
     .text       start:0x020b967c end:0x020b96c0
 
-src/overlays/ov027/calls/func_ov027_020b96c0.c:
+src/overlays/ov027/calls/SetWidgetAnimationFrame.c:
     complete
     .text       start:0x020b96c0 end:0x020b9704
 
@@ -368,7 +368,7 @@ src/overlays/ov027/calls/ApplyWidgetFocusAnims.c:
     complete
     .text       start:0x020b9784 end:0x020b97d8
 
-src/overlays/ov027/calls/func_ov027_020b97d8.c:
+src/overlays/ov027/calls/SetWidgetRecordMode.c:
     complete
     .text       start:0x020b97d8 end:0x020b981c
 

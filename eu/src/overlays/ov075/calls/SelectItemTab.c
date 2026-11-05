@@ -2,6 +2,6 @@
 #define FindWidgetById_020b90a4 FindWidgetById
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define SelectItemTab_020ce3cc SelectItemTab
-#define func_ov027_020b96a0 func_ov027_020b96c0
+#define func_ov027_020b96a0 SetWidgetAnimationFrame
 #define func_ov075_020cdf88 ItemPicker_DrawRows
 #include "src/ov075/unclassified_helpers/SelectItemTab_020ce3cc.c"

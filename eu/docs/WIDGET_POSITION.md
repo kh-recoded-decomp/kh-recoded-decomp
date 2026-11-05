@@ -5,6 +5,9 @@
 Its four arguments are the indexed-record array, a widget, a two-coordinate
 input and a mode. The superseded nonmatching draft has been removed.
 
+[WIDGET_RECORD_OPS.md](WIDGET_RECORD_OPS.md) documents the companion active-flag,
+animation-frame and mode operations using the same two record IDs.
+
 ## Data and behavior
 
 The recovered widget prefix in `src/overlays/ov027/WidgetPosition.h` contains:

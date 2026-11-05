@@ -1,3 +1,4 @@
+#include "src/overlays/ov027/WidgetRecordOps.h"
 #pragma opt_propagation on
 #pragma opt_common_subs on
 #include "nitro/types.h"
@@ -9,7 +10,6 @@ extern int DispatchContextCommand(int query, int a, int b, int c);
 extern void DrawPanelInfoText(void);
 extern BOOL PlaySoundEffect(int group, int sound);
 extern void *FindWidgetById(void *manager, int id);
-extern void func_ov027_020b96c0(void *manager, void *widget, int mode);
 
 void HandleWirelessPanelNavigation(WidgetPositionRecord *widget, u32 keys)
 {
@@ -78,7 +78,7 @@ void HandleWirelessPanelNavigation(WidgetPositionRecord *widget, u32 keys)
             WirelessMenuContext *context = data_ov015_0207e960;
             void *manager = context->widgetManager;
             void *choiceWidget = FindWidgetById(manager, 10);
-            func_ov027_020b96c0(manager, choiceWidget, context->choiceType);
+            SetWidgetAnimationFrame(manager, (const struct WidgetPositionRecord *)(choiceWidget), context->choiceType);
             PlaySoundEffect(2, 1);
         }
         data_ov015_0207e960->focusMode = 0;

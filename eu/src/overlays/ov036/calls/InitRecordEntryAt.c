@@ -2,8 +2,8 @@
 #define data_ov036_020c3844 gTextWindowResourceTable
 #define func_0204f0b4 PXI_Init_0204f0c8
 #define func_0204f13c IndexedRecord_SetPair
-#define func_0204f204 func_0204f218
+#define func_0204f204 SetIndexedRecordAnimationFrame
 #define func_0204f2c0 IndexedRecord_SetActive
 #define func_0204f378 IndexedRecords_SetFlag2
-#define func_0204f480 Slot_SetMode2Bit
+#define func_0204f480 SetIndexedRecordMode
 #include "src/ov036/unclassified_helpers/InitRecordEntryAt_020bf530.c"

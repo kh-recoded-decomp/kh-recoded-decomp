@@ -1,3 +1,4 @@
+#include "src/overlays/ov027/WidgetRecordOps.h"
 #include "nitro/types.h"
 
 typedef struct TextLayer {
@@ -112,7 +113,6 @@ extern void func_ov027_020b9098(void *container, u32 imageParams);
 extern void func_ov027_020b8fb8(void *container, u32 imageParams, int count);
 extern void func_ov027_020b7e44(void *elements, u32 imageParams);
 extern void *FindWidgetById(void *container, int id);
-extern void func_ov027_020b97d8(void *container, void *widget, int mode);
 extern int *GetWidgetPosition(void *container, void *widget);
 extern s16 SetWidgetDigitDisplay(void *cells, int widgetId, int key, u32 value);
 extern s16 DrawWidgetPlayTime(void *cells, int widgetId, int key, u32 value);
@@ -201,14 +201,14 @@ BOOL InitScoreScreen(ScoreScreen *screen)
     screen->widgets[8] = FindWidgetById(container, 0x13);
 
     rowWidget = FindWidgetById(container, 5);
-    func_ov027_020b97d8(container, rowWidget, 2);
-    func_ov027_020b97d8(container, FindWidgetById(container, 6), 2);
+    SetWidgetRecordMode(container, (const struct WidgetPositionRecord *)(rowWidget), 2);
+    SetWidgetRecordMode(container, (const struct WidgetPositionRecord *)(FindWidgetById(container, 6)), 2);
     columnWidget = FindWidgetById(container, 8);
-    func_ov027_020b97d8(container, columnWidget, 2);
-    func_ov027_020b97d8(container, FindWidgetById(container, 9), 2);
-    func_ov027_020b97d8(container, FindWidgetById(container, 10), 2);
-    func_ov027_020b97d8(container, FindWidgetById(container, 11), 2);
-    func_ov027_020b97d8(container, FindWidgetById(container, 12), 2);
+    SetWidgetRecordMode(container, (const struct WidgetPositionRecord *)(columnWidget), 2);
+    SetWidgetRecordMode(container, (const struct WidgetPositionRecord *)(FindWidgetById(container, 9)), 2);
+    SetWidgetRecordMode(container, (const struct WidgetPositionRecord *)(FindWidgetById(container, 10)), 2);
+    SetWidgetRecordMode(container, (const struct WidgetPositionRecord *)(FindWidgetById(container, 11)), 2);
+    SetWidgetRecordMode(container, (const struct WidgetPositionRecord *)(FindWidgetById(container, 12)), 2);
     screen->row = (GetWidgetPosition(container, rowWidget)[1] >> 12) - 13;
     screen->labelColumn = 0;
     screen->valueColumn = (GetWidgetPosition(container, columnWidget)[0] >> 12) - 16;

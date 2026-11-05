@@ -36,7 +36,7 @@
 #define data_ov080_020c5d48 data_ov080_020c5d68
 #define AddRecordFromTemplate_020b7ecc AddRecordFromTemplate
 #define func_ov027_020b81e0 func_ov027_020b8200
-#define func_ov027_020b97b8 func_ov027_020b97d8
+#define func_ov027_020b97b8 SetWidgetRecordMode
 #define func_ov039_020bc7e0 RuntimeState_SetFlags
 #define func_0204f498 SetBank6Word1C
 #define OS_GetTick_02003fd4 OS_GetTick

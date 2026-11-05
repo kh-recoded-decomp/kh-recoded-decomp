@@ -4,7 +4,7 @@
 #define func_020505a8 GetSelectionPackedValueBlock
 #define ShowStatusRecordList_020c2b10 ShowStatusRecordList
 #define FindWidgetById_020b90a4 FindWidgetById
-#define func_ov027_020b965c func_ov027_020b967c
+#define func_ov027_020b965c GetWidgetAnimationFrame
 #define GetOverlaySelectionRecord_0204f768 GetOverlaySelectionRecord
 #define TrackMaxParamValue_020c4260 TrackMaxParamValue
 #define SetParamWord20_02050640 SetParamWord20

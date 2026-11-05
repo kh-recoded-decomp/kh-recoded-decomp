@@ -1,7 +1,7 @@
 #define ApplySelectedSubitemValues_020b94fc ApplySelectedSubitemValues
 #define CloseMenuElement5_020651c0 CloseMenuElement5
 #define func_ov027_020b90a4 FindWidgetById
-#define func_ov027_020b95e4 func_ov027_020b9604
-#define func_ov027_020b96a0 func_ov027_020b96c0
+#define func_ov027_020b95e4 ClearWidgetRecordActiveBits
+#define func_ov027_020b96a0 SetWidgetAnimationFrame
 #define g_context_0206c464 data_ov002_0206c464
 #include "src/ov002/panel_state/CloseMenuElement5_020651c0.c"

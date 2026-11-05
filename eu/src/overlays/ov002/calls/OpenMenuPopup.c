@@ -4,7 +4,7 @@
 #define func_ov027_020b9098 func_ov027_020b90b8
 #define func_ov027_020b90a4 FindWidgetById
 #define func_ov027_020b9580 SetEntrySlotsVisible
-#define func_ov027_020b95e4 func_ov027_020b9604
+#define func_ov027_020b95e4 ClearWidgetRecordActiveBits
 #define func_ov027_020b96e4 SetFocusedWidget
 #define func_ov027_020b9764 ApplyWidgetFocusAnims
 #define g_context_0206c464 data_ov002_0206c464

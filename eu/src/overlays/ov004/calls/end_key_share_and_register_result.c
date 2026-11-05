@@ -1,5 +1,5 @@
 #define WM_EndKeySharing_0x02032444 PXI_Init_0204f0c8
 #define end_key_share_and_register_result_02063558 end_key_share_and_register_result
 #define func_0204f378 IndexedRecords_SetFlag2
-#define func_0204f480 Slot_SetMode2Bit
+#define func_0204f480 SetIndexedRecordMode
 #include "src/ov004/wireless/end_key_share_and_register_result_02063558.c"

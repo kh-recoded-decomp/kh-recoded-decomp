@@ -41,7 +41,7 @@
 #define func_02007250 GX_LoadBGPltt
 #define func_0202c478 Archive_LoadFile
 #define func_0202c690 func_0202c6a4
-#define func_ov027_020b97b8 func_ov027_020b97d8
+#define func_ov027_020b97b8 SetWidgetRecordMode
 #define func_ov027_020ba2a8 func_ov027_020ba2c8
 #define func_ov039_020bc1bc func_ov039_020bc1dc
 #define func_ov039_020bca00 GetMenuInputState
