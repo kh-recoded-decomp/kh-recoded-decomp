@@ -156,7 +156,7 @@ src/overlays/ov030/calls/SetupMovieCameraView.c:
     complete
     .text       start:0x020bb2ec end:0x020bb372
 
-src/overlays/ov030/calls/func_ov030_020bb374.c:
+src/overlays/ov030/calls/GetOv030SceneReferenceAxis.c:
     complete
     .text       start:0x020bb374 end:0x020bb388
 

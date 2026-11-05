@@ -956,7 +956,7 @@ src/overlays/ov021/calls/FindMemberIndexById.c:
     complete
     .text       start:0x020ad8b4 end:0x020ad8e2
 
-src/overlays/ov021/calls/func_ov021_020ad8e4.c:
+src/overlays/ov021/calls/GetExtraMemberIndex.c:
     complete
     .text       start:0x020ad8e4 end:0x020ad8f6
 
@@ -1012,7 +1012,7 @@ src/overlays/ov021/calls/StartEntryMotion.c:
     complete
     .text       start:0x020adcb8 end:0x020add98
 
-src/overlays/ov021/calls/func_ov021_020add98.c:
+src/overlays/ov021/calls/SelectScriptedEffectActionHandler.c:
     complete
     .text       start:0x020add98 end:0x020addec
 
@@ -1156,7 +1156,7 @@ src/overlays/ov021/calls/SpawnEffectParticle.c:
     complete
     .text       start:0x020af124 end:0x020af21a
 
-src/overlays/ov021/calls/func_ov021_020af21c.c:
+src/overlays/ov021/calls/FreeSlotTrackerUnitSlots.c:
     complete
     .text       start:0x020af21c end:0x020af22c
 
@@ -1376,7 +1376,7 @@ src/overlays/ov021/calls/func_ov021_020b0af0.c:
     complete
     .text       start:0x020b0af0 end:0x020b0b0c
 
-src/overlays/ov021/calls/func_ov021_020b0b0c.c:
+src/overlays/ov021/calls/StageScriptExpr_GetHudGauge0BlinkActive.c:
     complete
     .text       start:0x020b0b0c end:0x020b0b20
 

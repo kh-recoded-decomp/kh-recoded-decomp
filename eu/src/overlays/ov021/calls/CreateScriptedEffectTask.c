@@ -14,7 +14,7 @@
 #define AcquireEntryHandles_020adf14 AcquireEntryHandles
 #define LoadResGroupHandles_020adc14 LoadResGroupHandles
 #define InitObjWithCallback_020aaf8c InitObjWithCallback
-#define func_ov021_020add78 func_ov021_020add98
+#define func_ov021_020add78 SelectScriptedEffectActionHandler
 #define func_ov021_020ade38 FreeResourceSlots
 #define func_ov021_020addcc StopEntrySounds
 #define func_ov021_020ad470 ResetObjectSlots

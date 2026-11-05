@@ -11,6 +11,6 @@
 #define data_02053438 gZeroVecFx32
 #define func_01ff8710 MIi_CpuCopy32
 #define func_02036230 GetActorRegistry
-#define func_ov031_020bb598 func_ov031_020bb5b8
+#define func_ov031_020bb598 MarkMixedKind2SceneGroupContactAndStop
 #define g_activeState_020bc800 data_ov031_020bc820
 #include "src/ov031/overlay_state/BuildSceneGroups_020bb6f0.c"

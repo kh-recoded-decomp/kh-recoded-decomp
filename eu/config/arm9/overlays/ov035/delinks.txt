@@ -72,15 +72,15 @@ src/overlays/ov035/calls/CreateAreaSceneTask.c:
     complete
     .text       start:0x020ba960 end:0x020ba978
 
-src/overlays/ov035/calls/func_ov035_020ba978.c:
+src/overlays/ov035/calls/IsAreaSceneStartupComplete.c:
     complete
     .text       start:0x020ba978 end:0x020ba994
 
-src/overlays/ov035/calls/ClearMovieContextReadyFlag.c:
+src/overlays/ov035/calls/AreaSceneOnLeaveClearFlag2.c:
     complete
     .text       start:0x020ba994 end:0x020ba9ac
 
-src/overlays/ov035/calls/func_ov035_020ba9ac.c:
+src/overlays/ov035/calls/RequestAreaSceneExit.c:
     complete
     .text       start:0x020ba9ac end:0x020ba9c4
 

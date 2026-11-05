@@ -156,7 +156,7 @@ src/overlays/ov036/calls/IsSceneReady.c:
     complete
     .text       start:0x020bc3c8 end:0x020bc3f4
 
-src/overlays/ov036/calls/func_ov036_020bc3f4.c:
+src/overlays/ov036/calls/Event2DSceneOnLeaveClearFlag2.c:
     complete
     .text       start:0x020bc3f4 end:0x020bc418
 

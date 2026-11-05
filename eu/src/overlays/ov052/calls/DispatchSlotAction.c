@@ -9,7 +9,7 @@
 #define func_ov001_0207e07c SetArrowPromptFlag1
 #define func_ov001_0207f884 CallFieldObjectHook14IfSavedFlagClear
 #define func_ov021_020aa498 SetActiveFlags
-#define func_ov021_020ad8c4 func_ov021_020ad8e4
+#define func_ov021_020ad8c4 GetExtraMemberIndex
 #define func_ov052_020cc274 ConsumeActionInterruptFlag
 #define func_ov052_020ceb54 GetActorModelPosition
 #define func_ov052_020cfd84 MarkStateThreeFlag

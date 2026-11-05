@@ -5,7 +5,7 @@ extern u32 RefreshLockTarget();
 extern u32 ActivateSlotModelGroup();
 extern u32 SelectFallStateHandler();
 
-s32 func_ov021_020add98(int self, s32 *event, u32 *errorCode)
+s32 SelectScriptedEffectActionHandler(int self, s32 *event, u32 *errorCode)
 {
     s32 handle;
     s32 result;

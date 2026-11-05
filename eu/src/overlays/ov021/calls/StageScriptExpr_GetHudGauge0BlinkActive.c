@@ -2,7 +2,7 @@
 
 extern u32 GetHudGaugeBlinkActive();
 
-u32 func_ov021_020b0b0c(int self)
+u32 StageScriptExpr_GetHudGauge0BlinkActive(int self)
 {
     u32 value;
 

@@ -10,5 +10,5 @@
 #define StartMoviePlayback_020bb4e0 StartMoviePlayback
 #define func_ov032_020bb368 UpdateOv032FieldScene
 #define func_ov032_020bb460 IsOv032SceneStartupComplete
-#define func_ov032_020bb47c func_ov032_020bb49c
+#define func_ov032_020bb47c GroupSceneOnLeaveClearFlag2
 #include "src/ov032/shared_engine/InstallMovieCallbacks_020bb79c.c"

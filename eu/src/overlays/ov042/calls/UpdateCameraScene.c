@@ -79,7 +79,7 @@ extern VecFx32 gZeroVecFx32;
 extern int func_ov001_02063a4c(void);
 extern VecFx32 *GetManagedActorPosition(int index);
 extern InputEntry *GetBoundedEntryField(int index);
-extern VecFx32 *func_ov030_020bb374(void);
+extern VecFx32 *GetOv030SceneReferenceAxis(void);
 extern void VEC_Add(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
 extern void VEC_Subtract(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
 extern fx32 VEC_DotProduct(const VecFx32 *a, const VecFx32 *b);
@@ -192,7 +192,7 @@ BOOL UpdateCameraScene(void) {
             TranslateCameraTarget(&move);
             break;
         case 1: {
-            VecFx32 *dir = func_ov030_020bb374();
+            VecFx32 *dir = GetOv030SceneReferenceAxis();
             CollisionWorld *world;
             if (cam->slideTimer != -1) {
                 fx32 base = cam->baseEye.x;

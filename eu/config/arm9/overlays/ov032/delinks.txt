@@ -116,7 +116,7 @@ src/overlays/ov032/calls/IsOv032SceneStartupComplete.c:
     complete
     .text       start:0x020bb480 end:0x020bb49c
 
-src/overlays/ov032/calls/func_ov032_020bb49c.c:
+src/overlays/ov032/calls/GroupSceneOnLeaveClearFlag2.c:
     complete
     .text       start:0x020bb49c end:0x020bb4b4
 

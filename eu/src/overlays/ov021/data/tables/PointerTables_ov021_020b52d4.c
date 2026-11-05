@@ -44,7 +44,7 @@ extern void ScriptOp_GetEventActorValue(void); /* ScriptOp_GetEventActorValue */
 extern void StageScriptExpr_TestSessionFlag3713(void);
 extern void ScriptOp_GetEventFlagPairBits(void); /* ScriptOp_GetEventFlagPairBits */
 extern void ReadContextFlagBit13(void); /* ReadContextFlagBit13 */
-extern void func_ov021_020b0b0c(void);
+extern void StageScriptExpr_GetHudGauge0BlinkActive(void);
 extern void func_ov021_020b0af0(void);
 extern void func_ov021_020b0ad4(void);
 extern void ScriptOp_GetPlayerHiddenFlag(void); /* ScriptOp_GetPlayerHiddenFlag */
@@ -239,7 +239,7 @@ void (*gScriptQueryHandlers[173])(void) = {
     NULL,
     NULL,
     ReadContextFlagBit13, /* ReadContextFlagBit13 */
-    func_ov021_020b0b0c,
+    StageScriptExpr_GetHudGauge0BlinkActive,
     NULL,
     NULL,
     func_ov021_020b0af0,

@@ -7,6 +7,6 @@
 #define func_ov001_0208635c GetEntryPoolObjectAtIndex
 #define func_ov017_020a3f1c AppendPool2Record
 #define func_ov017_020a4204 FindKind4FieldObject
-#define func_ov030_020bb354 func_ov030_020bb374
+#define func_ov030_020bb354 GetOv030SceneReferenceAxis
 #define func_ov042_020bd474 GetOrbitOffsetDegrees
 #include "src/ov017/script_commands/ScriptCmd_QueueEntryRotationMessage_020a1ff8.c"

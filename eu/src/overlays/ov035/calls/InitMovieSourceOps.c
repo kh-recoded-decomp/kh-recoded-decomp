@@ -4,9 +4,9 @@
 #define MobiClip_SrcOpen_020ba940 CreateAreaSceneTask
 #define func_ov001_02064734 BindScriptHandlersSlot8
 #define func_ov035_020ba7dc UpdateSceneSystems
-#define func_ov035_020ba958 func_ov035_020ba978
-#define func_ov035_020ba974 ClearMovieContextReadyFlag
-#define func_ov035_020ba98c func_ov035_020ba9ac
+#define func_ov035_020ba958 IsAreaSceneStartupComplete
+#define func_ov035_020ba974 AreaSceneOnLeaveClearFlag2
+#define func_ov035_020ba98c RequestAreaSceneExit
 #define func_ov035_020ba9d8 BeginMovieCaption
 #define func_ov035_020baa18 GetAreaSceneTransitionFlag
 #define func_ov035_020bad44 IsMovieWaitingForInput

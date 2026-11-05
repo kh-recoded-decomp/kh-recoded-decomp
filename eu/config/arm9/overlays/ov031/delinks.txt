@@ -171,7 +171,7 @@ src/overlays/ov031/calls/IsSupportedOwnerState.c:
     complete
     .text       start:0x020bb594 end:0x020bb5b8
 
-src/overlays/ov031/calls/func_ov031_020bb5b8.c:
+src/overlays/ov031/calls/MarkMixedKind2SceneGroupContactAndStop.c:
     complete
     .text       start:0x020bb5b8 end:0x020bb5d6
 

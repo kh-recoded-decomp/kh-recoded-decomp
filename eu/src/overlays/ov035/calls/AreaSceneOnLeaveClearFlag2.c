@@ -7,7 +7,7 @@ typedef struct MovieContextState {
 
 extern MovieContextState *gMovieContextState;
 
-u32 ClearMovieContextReadyFlag(void)
+u32 AreaSceneOnLeaveClearFlag2(void)
 {
     MovieContextState *state = gMovieContextState;
     u32 flags = state->flags & 0xfffd;

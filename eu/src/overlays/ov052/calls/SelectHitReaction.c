@@ -10,5 +10,5 @@
 #define SelectHitReaction_020cfdb4 SelectHitReaction
 #define func_ov001_0206db78 GetPlayerControlState
 #define func_ov001_0207e07c SetArrowPromptFlag1
-#define func_ov021_020ad8c4 func_ov021_020ad8e4
+#define func_ov021_020ad8c4 GetExtraMemberIndex
 #include "src/ov052/unclassified_helpers/SelectHitReaction_020cfdb4.c"

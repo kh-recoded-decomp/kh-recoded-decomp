@@ -2,7 +2,7 @@
 
 extern unsigned int gMovieContextState;
 
-BOOL func_ov035_020ba978(void) {
+BOOL IsAreaSceneStartupComplete(void) {
   if (gMovieContextState == 0) {
     return FALSE;
   }

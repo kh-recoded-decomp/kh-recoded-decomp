@@ -648,3 +648,15 @@ empty hooks, literal event results, raw mask predicates and resource cleanup:
 Request completion, binding, pose, phase and per-entry kind remain separate
 domains. Raw callback results and residual native registers retain their
 actual consumer contracts.
+
+## Scene, script selector and collision contact consumers
+
+Eleven entrypoints now identify proven scene/member/tracker ownership,
+scripted action-handler selection and scene-group collision callbacks:
+
+- [SCENE_MEMBER_TRACKER_SCRIPT_CONTRACTS.md](SCENE_MEMBER_TRACKER_SCRIPT_CONTRACTS.md): 9 entrypoints, including one area onLeave correction.
+- [SCRIPTED_EFFECT_ACTION_SELECTOR_CONTRACT.md](SCRIPTED_EFFECT_ACTION_SELECTOR_CONTRACT.md): the native code-pointer result and output actor state.
+- [SCENE_GROUP_CONTACT_CONTRACT.md](SCENE_GROUP_CONTACT_CONTRACT.md): the full native callback input and traversal-stop meaning of result 2.
+
+The documents preserve raw native views while separating them from logical
+portable signatures and unknown gameplay enum meanings.

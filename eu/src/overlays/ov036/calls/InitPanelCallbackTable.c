@@ -5,7 +5,7 @@
 #define func_ov036_020bb284 UpdateEvent2DSceneObjects
 #define func_ov036_020bc384 CreateEvent2DPanelTask
 #define func_ov036_020bc3a8 IsSceneReady
-#define func_ov036_020bc3d4 func_ov036_020bc3f4
+#define func_ov036_020bc3d4 Event2DSceneOnLeaveClearFlag2
 #define func_ov036_020bc3f8 SetSceneFlag4000
 #define func_ov036_020bc4a0 CanEvent2DSceneAdvanceSession
 #include "src/ov036/panel_state/InitPanelCallbackTable_020bc4a8.c"
