@@ -1,3 +1,5 @@
+#define func_ov001_0206b930 InitNoTargetReference
+#define func_ov001_0206ba18 InitTargetSearchScore
 #define FindNearestTarget_0206c348 FindNearestTarget
 #define func_ov001_0206b598 ScanObjectsForNearestTarget
 #define func_ov001_0206b744 FindBestEventSlotTarget

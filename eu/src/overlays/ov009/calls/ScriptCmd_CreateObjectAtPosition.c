@@ -2,5 +2,5 @@
 #define ScriptCmd_CreateObjectAtPosition_020a054c ScriptCmd_CreateObjectAtPosition
 #define ScriptVm_ReadOperandFx32_02025df8 ScriptVm_ReadOperandFx32
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
-#define func_ov001_0207f028 func_ov001_0207f050
+#define func_ov001_0207f028 GetFieldObjectClassAtIndex
 #include "src/ov009/shared_engine/ScriptCmd_CreateObjectAtPosition_020a054c.c"

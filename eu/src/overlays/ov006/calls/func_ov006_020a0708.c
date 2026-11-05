@@ -15,7 +15,7 @@ typedef struct {
 extern u8 *ActorRegistry_GetEntityByIndex(u32 actorId);
 extern void RebindAnimTracks(void *anim, int blendIndex, int frame);
 extern void Flags16_ClearBit1(void *anim);
-extern VecFx32 *func_ov001_0207f898(FieldObject *object);
+extern VecFx32 *CallFieldObjectHook13IfPresent(FieldObject *object);
 extern u32 SpawnSoundSlot(s32 seqArcId, s32 soundId, VecFx32 *position, u32 flags);
 extern u16 FieldObject_GetSavedValue(FieldObject *object);
 extern void FieldObject_SetSavedValue(FieldObject *object, u16 value);
@@ -26,7 +26,7 @@ void func_ov006_020a0708(FieldObject *object)
     RebindAnimTracks(ActorRegistry_GetEntityByIndex(object->actorId) + 4, object->animBlend, 0);
     Flags16_ClearBit1(ActorRegistry_GetEntityByIndex(object->actorId) + 4);
     if (object->animBlend == 1) {
-        SpawnSoundSlot(0x19e, 0, func_ov001_0207f898(object), 0);
+        SpawnSoundSlot(0x19e, 0, CallFieldObjectHook13IfPresent(object), 0);
         if (!(object->flags & 0x10)) {
             FieldObject_SetSavedValue(object, FieldObject_GetSavedValue(object) | 4);
         }

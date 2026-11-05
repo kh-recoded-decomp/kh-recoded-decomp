@@ -7,7 +7,7 @@
 #define SwitchAreaObjects_020bc650 CanStartIdleRecord
 #define VEC_Add_01ff9e0c VEC_Add
 #define func_02036240 ActorRegistry_GetEntityByIndex
-#define func_ov001_0208723c func_ov001_02087264
+#define func_ov001_0208723c GetFieldEntryListHead
 #define func_ov018_020a3470 func_ov018_020a3490
 #define func_ov018_020a35b8 RespawnKind6FieldObject
 #define func_ov031_020bc738 GetMovieFrameCount

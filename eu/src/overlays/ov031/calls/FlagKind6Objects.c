@@ -1,4 +1,4 @@
 #define FlagKind6Objects_020bbe48 FlagKind6Objects
 #define SetFlagBit8_020a37b0 SetFlagBit8
-#define func_ov001_0208723c func_ov001_02087264
+#define func_ov001_0208723c GetFieldEntryListHead
 #include "src/ov031/unclassified_helpers/FlagKind6Objects_020bbe48.c"

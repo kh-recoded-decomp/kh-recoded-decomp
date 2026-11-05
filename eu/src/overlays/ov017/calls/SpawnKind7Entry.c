@@ -2,6 +2,6 @@
 #define AppendNodeToActiveList_02086fac AppendNodeToActiveList
 #define BuildCollisionShape_02080834 BuildCollisionShape
 #define SpawnKind7Entry_020a5bcc SpawnKind7Entry
-#define func_ov001_02086308 func_ov001_02086330
+#define func_ov001_02086308 ActivateEntryPoolSlot
 #define func_ov017_020a58e0 UpdateFallingBlock
 #include "src/ov017/field_objects/SpawnKind7Entry_020a5bcc.c"

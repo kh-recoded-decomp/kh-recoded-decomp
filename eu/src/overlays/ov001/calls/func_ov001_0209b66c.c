@@ -1,3 +1,0 @@
-#define CARD_UnlockBackup_0209b644 func_ov001_0209b66c
-#define CARDi_LockResource AddStageSlotLocks
-#include "src/ov001/library_nitro_card/CARD_UnlockBackup_0209b644.c"

@@ -1,5 +1,5 @@
 #define FieldObject_CreateAtOrigin_020a0c78 FieldObject_CreateAtOrigin
 #define ScriptCmd_CreateObjectAtOrigin_020a0660 ScriptCmd_CreateObjectAtOrigin
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
-#define func_ov001_0207f028 func_ov001_0207f050
+#define func_ov001_0207f028 GetFieldObjectClassAtIndex
 #include "src/ov010/shared_engine/ScriptCmd_CreateObjectAtOrigin_020a0660.c"

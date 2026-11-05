@@ -2,5 +2,5 @@
 #define ScriptVm_ReadOperandFx32_02025df8 ScriptVm_ReadOperandFx32
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
 #define SpawnPanelCollider_020a3998 SpawnPanelCollider
-#define func_ov001_02087214 func_ov001_0208723c
+#define func_ov001_02087214 GetFieldEntryPoolAtIndex
 #include "src/ov020/script_commands/ScriptCmd_SpawnPanelCollider_020a202c.c"

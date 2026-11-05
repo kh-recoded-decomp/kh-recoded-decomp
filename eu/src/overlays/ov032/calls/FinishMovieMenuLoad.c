@@ -1,10 +1,11 @@
+#define func_ov001_020687b8 TriggerQueuedStageEventPairs
 #define FinishMovieMenuLoad_020ba984 FinishMovieMenuLoad
 #define GetMenuItemValue_0206802c GetMenuItemValue
 #define GetSlotEntryValue_02068000 GetSlotEntryValue
 #define HighlightSelectedMenuPanels_0206781c HighlightSelectedMenuPanels
 #define InvokeListNodeCallbacks_0207eff0 InvokeListNodeCallbacks
 #define InvokeSceneCallback_020677fc InvokeSceneCallback
-#define PXI_Init_02088248 func_ov001_02088270
+#define PXI_Init_02088248 SetStageBusyValueWrapper
 #define SetCachedSoundParams_0204dcec SetCachedSoundParams
 #define UpdateMenuItemLoading_02067750 UpdateMenuItemLoading
 #define func_ov001_020681c4 GetSceneResourceHandle

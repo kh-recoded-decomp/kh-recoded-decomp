@@ -40,7 +40,7 @@ typedef struct FieldObject {
 } FieldObject;
 
 extern void RollRewardOrbDrop(int effectId, VecFx32 *position);
-extern void func_ov001_02087e24(u16 eventId);
+extern void ResetStageGroupRowsAndRestoreDefaultIfActive(u16 eventId);
 extern void func_ov001_020688d4(u32 value, s32 hasValue, s32 flag);
 extern void SetStageObjectPosition(u16 eventId, VecFx32 *position);
 extern u16 func_ov001_02087784(int objectIndex, u32 entryIndex);
@@ -48,17 +48,17 @@ extern StageEventRecord *GetStageEventRecord(u32 id);
 extern void *GetStageActor(int id);
 extern void WarpWalkerTo(void *actor, VecFx32 *position);
 extern void SpawnSoundSlot(int soundId, int flag, VecFx32 *position, int extra);
-extern FieldObject *func_ov001_0207f060(u32 group, u32 index);
+extern FieldObject *GetFieldObjectByClassAndIndex(u32 group, u32 index);
 extern void FieldObject_SetEnabled(FieldObject *object, BOOL enabled);
 extern void CallFieldObjectHook24(FieldObject *object, VecFx32 *position);
-extern int func_ov001_0207f040(void);
-extern FieldObject *func_ov001_0207f050(int index);
+extern int GetFieldObjectClassCount(void);
+extern FieldObject *GetFieldObjectClassAtIndex(int index);
 extern FieldObject *GetStridedBufferEntry(FieldObject *object, u32 index);
 extern VecFx32 *GetManagedActorPosition(int index);
 extern void VEC_NormalizeLength(VecFx32 *src, VecFx32 *dst);
 extern u16 FieldObject_FindEscapeHeading(const SpawnOwner *owner);
 extern void SetPanelActorState(FieldObject *object, int value);
-extern void *func_ov001_0208724c(u32 group, u32 index);
+extern void *GetFieldEntryByPoolAndIndex(u32 group, u32 index);
 extern void CacheEntry_SetActive(void *entry, BOOL active);
 extern void SetFieldUnitPosition(void *entry, VecFx32 *position);
 
@@ -82,7 +82,7 @@ void RunSpawnCommand(SpawnCommand *command, SpawnOwner *owner)
         void *actor;
         VecFx32 position;
 
-        func_ov001_02087e24(command->target.eventId);
+        ResetStageGroupRowsAndRestoreDefaultIfActive(command->target.eventId);
         func_ov001_020688d4(command->target.eventId, 1, 0);
         position = owner->position;
         SetStageObjectPosition(command->target.eventId, &position);
@@ -98,18 +98,18 @@ void RunSpawnCommand(SpawnCommand *command, SpawnOwner *owner)
         return;
     }
     case 2:
-        object = func_ov001_0207f060(command->target.object.group, command->target.object.index);
+        object = GetFieldObjectByClassAndIndex(command->target.object.group, command->target.object.index);
         FieldObject_SetEnabled(object, TRUE);
         CallFieldObjectHook24(object, &owner->position);
         return;
     case 3:
-        object = func_ov001_0207f060(command->target.object.group, command->target.object.index);
+        object = GetFieldObjectByClassAndIndex(command->target.object.group, command->target.object.index);
         if (object->objectClass->kind == 0x7b) {
-            int count = func_ov001_0207f040();
+            int count = GetFieldObjectClassCount();
             int i;
 
             for (i = 0; i < count; i++) {
-                FieldObject *entry = func_ov001_0207f050(i);
+                FieldObject *entry = GetFieldObjectClassAtIndex(i);
 
                 if (entry->category == 9) {
                     FieldObject *target = GetStridedBufferEntry(entry, 0);
@@ -143,14 +143,14 @@ void RunSpawnCommand(SpawnCommand *command, SpawnOwner *owner)
         SpawnSoundSlot(0x1a7, 0, &owner->position, 0);
         return;
     case 4:
-        object = func_ov001_0207f060(command->target.object.group, command->target.object.index);
+        object = GetFieldObjectByClassAndIndex(command->target.object.group, command->target.object.index);
         FieldObject_SetEnabled(object, TRUE);
         CallFieldObjectHook24(object, &owner->position);
         SetPanelActorState(object, FieldObject_FindEscapeHeading(owner));
         SpawnSoundSlot(0x1a7, 0, &owner->position, 0);
         return;
     case 5: {
-        void *entry = func_ov001_0208724c(command->target.object.group, command->target.object.index);
+        void *entry = GetFieldEntryByPoolAndIndex(command->target.object.group, command->target.object.index);
 
         CacheEntry_SetActive(entry, TRUE);
         SetFieldUnitPosition(entry, &owner->position);

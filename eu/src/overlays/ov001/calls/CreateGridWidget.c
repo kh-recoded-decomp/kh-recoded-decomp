@@ -2,7 +2,7 @@
 #define CreateGridWidget_02085bb0 CreateGridWidget
 #define func_ov001_0207f0d0 AcquireEffectRecordPair
 #define func_ov001_0207f128 FieldObject_EnsureModelsLoaded
-#define func_ov001_0207f1e8 func_ov001_0207f210
+#define func_ov001_0207f1e8 FreeFieldObjectClassAnimationBuffers
 #define func_ov001_02084bcc RespawnContactFieldObject
 #define func_ov001_02084d5c func_ov001_02084d84
 #define func_ov001_02084d7c FieldObject_ReleaseGroupAndClose

@@ -6,7 +6,7 @@
 #define MarkStateThreeFlag_020cfd84 MarkStateThreeFlag
 #define OpenFieldMenuMode_020641d4 OpenFieldMenuMode
 #define data_ov054_020d3700 gOv054WorkData
-#define func_ov001_0207f884 func_ov001_0207f8ac
+#define func_ov001_0207f884 CallFieldObjectHook14IfSavedFlagClear
 #define func_ov054_020d34b0 HandleFieldMenuSelection
 #define func_ov058_020d702c IsEnemyStunnedOrDowned
 #include "src/ov054/unclassified_helpers/HandleOverlay054MenuCommand_020d2dac.c"

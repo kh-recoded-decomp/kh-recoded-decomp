@@ -41,9 +41,9 @@ typedef struct OrbReceiver {
 extern OrbHost *data_ov001_020a0484;
 extern const s16 gSinFx12Table[];
 extern BOOL IsEntryFlag2Active(int mode);
-extern BOOL func_ov001_02088100(VecFx32 *out);
-extern void func_ov001_020880f8(int payload);
-extern VecFx32 *func_ov001_0206dc60(int slot);
+extern BOOL GetFocusEventActorPositionWrapper(VecFx32 *out);
+extern void AddStageScoreWrapper(int payload);
+extern VecFx32 *GetManagedActorPositionWithCallback(int slot);
 extern OrbReceiver *GetBoundedEntryField(int slot);
 extern void ShowChoiceDetails_02072254(int *payload, int count);
 extern void func_ov001_0206674c(PrizeOrb *orb);
@@ -74,13 +74,13 @@ void UpdatePrizeOrbs(void)
                 continue;
             }
             if (orb->targetIsCursor) {
-                if (!func_ov001_02088100(&target)) {
+                if (!GetFocusEventActorPositionWrapper(&target)) {
                     orb->targetSlot = -1;
                     orb->despawnOnFall = 1;
                     continue;
                 }
             } else {
-                target = *func_ov001_0206dc60(orb->targetSlot);
+                target = *GetManagedActorPositionWithCallback(orb->targetSlot);
             }
             VEC_Subtract(&target, &orb->pos, &direction);
             distance = VEC_NormalizeLength(&direction, &direction);
@@ -92,7 +92,7 @@ void UpdatePrizeOrbs(void)
                 int kind = orb->kind;
                 if (kind != 6) {
                     if (orb->targetIsCursor) {
-                        func_ov001_020880f8(orb->payload);
+                        AddStageScoreWrapper(orb->payload);
                     } else {
                         int payload = orb->payload;
                         OrbReceiver *receiver = GetBoundedEntryField(orb->targetSlot);

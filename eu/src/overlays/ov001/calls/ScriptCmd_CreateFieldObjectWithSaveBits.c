@@ -14,7 +14,7 @@ typedef struct CreateFieldObjectWithSaveBitsArgs {
 } CreateFieldObjectWithSaveBitsArgs;
 
 extern int ScriptVm_ReadOperandInt(void *vm, ScriptOperand *operand);
-extern void *func_ov001_0207f050(int index);
+extern void *GetFieldObjectClassAtIndex(int index);
 extern void *FieldObject_CreateWithSaveBits(void *objectClass, u16 slotIndex,
                                             u16 saveBitOffset, u8 saveBitCount);
 
@@ -26,7 +26,7 @@ int ScriptCmd_CreateFieldObjectWithSaveBits(void *vm, CreateFieldObjectWithSaveB
     int saveBitOffset = (u16)saveBits;
     int saveBitCount = (u8)(u16)(saveBits >> 16);
 
-    FieldObject_CreateWithSaveBits(func_ov001_0207f050(objectClassIndex),
+    FieldObject_CreateWithSaveBits(GetFieldObjectClassAtIndex(objectClassIndex),
                                    (u16)slotIndex,
                                    (u16)saveBitOffset,
                                    (u8)saveBitCount);

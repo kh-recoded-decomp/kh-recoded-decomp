@@ -7,10 +7,10 @@
 #define VEC_Normalize_01ff9f88 VEC_Normalize
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define func_01ff8830 MI_CpuFill8
-#define func_ov001_0207f038 func_ov001_0207f060
+#define func_ov001_0207f038 GetFieldObjectByClassAndIndex
 #define func_ov001_0207f84c FieldObject_ApplyHit
 #define func_ov001_020863e0 func_ov001_02086408
-#define func_ov001_02087224 func_ov001_0208724c
+#define func_ov001_02087224 GetFieldEntryByPoolAndIndex
 #define func_ov001_0208764c func_ov001_02087674
 #define func_ov001_020958f4 ApplyHitToEnemyGroup
 #define func_ov032_020bbc60 func_ov032_020bbc80

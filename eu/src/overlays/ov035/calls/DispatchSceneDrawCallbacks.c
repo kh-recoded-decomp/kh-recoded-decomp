@@ -6,7 +6,7 @@ extern unsigned int RunFlaggedEventCallbacks(void);
 extern unsigned int func_ov001_020876d4(void);
 extern unsigned int UpdateActorSlotsAndBillboards(void);
 extern unsigned int func_020bd2a4(void);
-extern unsigned int func_ov001_0206dc38(void);
+extern unsigned int GetManagedActorCount(void);
 extern unsigned int func_ov021_020af528(int);
 extern unsigned int func_ov035_020bae94(void);
 extern unsigned int DrawMovieSceneIfVisible(void);
@@ -28,7 +28,7 @@ void DispatchSceneDrawCallbacks(void)
     if ((*(u16 *)(work + 0x22) & 4) != 0) {
         DrawMovieSceneIfVisible();
     }
-    active = func_ov001_0206dc38();
+    active = GetManagedActorCount();
     if (((0 < (int)active) &&
          (blocked = func_ov035_020bae94(), blocked == 0)) &&
         ((*(u16 *)(work + 0x22) & 8) != 0)) {

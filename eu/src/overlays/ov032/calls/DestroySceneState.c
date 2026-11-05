@@ -1,7 +1,8 @@
+#define func_ov001_0206a714 DestroyScreenFadeTaskAndClearHandle
 #include "eu/nitro/types.h"
 #include "eu/src/overlays/ov001/SessionBuffers.h"
 #define func_ov001_020646b8 SessionBuffer_Free
-#define ArmObject_0206c6f4 func_ov001_0206c6f4
+#define ArmObject_0206c6f4 DestroySessionCallbackTask
 #define DestroySceneState_020ba804 DestroySceneState
 #define FreePointerIfSet_020ba294 FreePointerIfSet
 #define PXI_Init_0202a638 DestroyTaskObjectWrapper

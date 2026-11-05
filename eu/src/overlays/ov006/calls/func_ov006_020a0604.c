@@ -9,7 +9,7 @@ typedef struct ScriptOperand {
 
 extern int ScriptVm_ReadOperandInt(void *vm, ScriptOperand *operand);
 extern fx32 ScriptVm_ReadOperandFx32(void *vm, ScriptOperand *operand);
-extern void *func_ov001_0207f050(int groupIndex);
+extern void *GetFieldObjectClassAtIndex(int groupIndex);
 extern void CreateElevatorObject(void *group, u16 kind, u16 saveBitOffset, u8 saveBitCount,
                                 VecFx32 *position, VecFx32 *rotation);
 
@@ -27,7 +27,7 @@ int func_ov006_020a0604(void *vm, ScriptOperand *operands)
     rotation.x = ScriptVm_ReadOperandFx32(vm, &operands[6]);
     rotation.y = ScriptVm_ReadOperandFx32(vm, &operands[7]);
     rotation.z = ScriptVm_ReadOperandFx32(vm, &operands[8]);
-    CreateElevatorObject(func_ov001_0207f050(groupIndex), kind, saveBits, (u16)(saveBits >> 16),
+    CreateElevatorObject(GetFieldObjectClassAtIndex(groupIndex), kind, saveBits, (u16)(saveBits >> 16),
                         &position, &rotation);
     return 1;
 }

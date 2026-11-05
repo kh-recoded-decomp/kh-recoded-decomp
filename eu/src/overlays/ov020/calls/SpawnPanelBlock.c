@@ -1,5 +1,5 @@
 #define AppendNodeToActiveList_02086fac AppendNodeToActiveList
 #define BuildCollisionShape_02080834 BuildCollisionShape
 #define SpawnPanelBlock_020a271c SpawnPanelBlock
-#define func_ov001_02086308 func_ov001_02086330
+#define func_ov001_02086308 ActivateEntryPoolSlot
 #include "src/ov020/unclassified_helpers/SpawnPanelBlock_020a271c.c"

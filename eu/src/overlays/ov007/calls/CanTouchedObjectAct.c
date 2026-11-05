@@ -1,3 +1,3 @@
 #define CanTouchedObjectAct_020a08a8 CanTouchedObjectAct
-#define func_ov001_02087224 func_ov001_0208724c
+#define func_ov001_02087224 GetFieldEntryByPoolAndIndex
 #include "src/ov007/shared_engine/CanTouchedObjectAct_020a08a8.c"

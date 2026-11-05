@@ -2,5 +2,5 @@
 #define RunFieldPhases_02061af4 RunFieldPhases
 #define UpdateFieldBgm_02062d1c UpdateFieldBgm
 #define data_ov001_0209e680 gSessionScriptStateHandlers
-#define func_ov001_02087868 func_ov001_02087890
+#define func_ov001_02087868 QueryAllStageEventStateIfActive
 #include "src/ov001/field_manager/RunFieldPhases_02061af4.c"

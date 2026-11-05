@@ -1,3 +1,4 @@
+#define func_ov001_0206dc60 GetManagedActorPositionWithCallback
 #define func_ov001_0206dc4c GetManagedActorPosition
 #define GetBiasAdjustedField_0206dc80 GetBiasAdjustedField
 #define MTX_MultVec33_01ff9404 MTX_MultVec33

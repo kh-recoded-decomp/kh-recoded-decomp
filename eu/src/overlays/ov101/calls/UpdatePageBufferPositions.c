@@ -18,7 +18,7 @@ typedef struct {
 
 extern void SetScreenOrthoCamera(void);
 extern BOOL IsStateFlagSet(int setIndex, int bitIndex);
-extern void func_ov001_0206ad28(void *list);
+extern void DrawSpriteFrameQuadWithoutDepthUpdate(void *list);
 
 void UpdatePageBufferPositions(Ov101State *state)
 {
@@ -38,7 +38,7 @@ void UpdatePageBufferPositions(Ov101State *state)
         position = &layout->entries[state->pages[item]];
         buffer->x = position->x << 12;
         buffer->y = position->y << 12;
-        func_ov001_0206ad28(buffer);
+        DrawSpriteFrameQuadWithoutDepthUpdate(buffer);
     }
 }
 

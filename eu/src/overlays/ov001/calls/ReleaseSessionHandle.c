@@ -1,3 +1,4 @@
+#define func_ov001_02068e44 ResumeSessionTimerUpdates
 #define ReleaseSessionHandle_02062c98 ReleaseSessionHandle
 #define func_ov001_02069160 TryReleaseTaskById
 #define func_ov001_0206922c DeactivateTaskById

@@ -1,6 +1,6 @@
 #define ScriptCmd_CreateEntryObjectInSlot_020a0520 ScriptCmd_CreateEntryObjectInSlot
 #define ScriptVm_ReadOperandFx32_02025df8 ScriptVm_ReadOperandFx32
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
-#define func_ov001_0207ee04 func_ov001_0207ee2c
+#define func_ov001_0207ee04 SetFieldObjectClassAtIndex
 #define func_ov007_020a1778 CreateWanderActorClass
 #include "src/ov007/shared_engine/ScriptCmd_CreateEntryObjectInSlot_020a0520.c"

@@ -14,7 +14,7 @@ struct ManagedActorTrigger {
 };
 
 extern unsigned int func_ov001_02067ed4(void);
-extern unsigned int func_ov001_0206dc38(void);
+extern unsigned int GetManagedActorCount(void);
 extern VecFx32 *GetManagedActorPosition(int index);
 extern unsigned int UpdateEventTriggerDelay(ManagedActorTrigger *trigger);
 
@@ -26,7 +26,7 @@ int EvaluateManagedActorTrigger(ManagedActorTrigger *trigger)
     trigger->conditionMatched = 0;
     result = func_ov001_02067ed4();
     if (trigger->areaId != result) return 0;
-    result = func_ov001_0206dc38();
+    result = GetManagedActorCount();
     if (result <= 0) return 0;
     position = GetManagedActorPosition(0);
     result = trigger->condition(trigger, position);

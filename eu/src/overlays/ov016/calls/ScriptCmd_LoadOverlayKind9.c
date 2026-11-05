@@ -1,5 +1,5 @@
 #define DispatchOverlayLoadByKind_02086e90 DispatchOverlayLoadByKind
 #define ScriptCmd_LoadOverlayKind9_020a1e08 ScriptCmd_LoadOverlayKind9
 #define ScriptVm_ConsumeOperandInt_020a1de0 ScriptVm_ConsumeOperandInt
-#define func_ov001_02086f90 func_ov001_02086fb8
+#define func_ov001_02086f90 RegisterFieldEntryPool
 #include "src/ov016/script_commands/ScriptCmd_LoadOverlayKind9_020a1e08.c"

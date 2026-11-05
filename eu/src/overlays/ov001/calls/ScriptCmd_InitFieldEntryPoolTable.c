@@ -1,3 +1,3 @@
-#define Ov002_EnterPhase func_ov001_02086e58
+#define Ov002_EnterPhase InitFieldEntryPoolTable
 #define ScriptCmd_EnterPhase_0207ffac ScriptCmd_InitFieldEntryPoolTable
 #include "src/ov001/shared_engine/ScriptCmd_EnterPhase_0207ffac.c"

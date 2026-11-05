@@ -1,5 +1,5 @@
 #define ScriptCmd_RegisterFieldObject_0208061c ScriptCmd_RegisterFieldObject
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
-#define func_ov001_0207ee04 func_ov001_0207ee2c
+#define func_ov001_0207ee04 SetFieldObjectClassAtIndex
 #define func_ov001_0208614c CreateFieldObjectClassType16
 #include "src/ov001/scripted_actor_behavior/ScriptCmd_RegisterFieldObject_0208061c.c"

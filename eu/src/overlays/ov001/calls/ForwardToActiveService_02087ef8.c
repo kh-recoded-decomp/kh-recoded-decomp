@@ -1,4 +1,4 @@
 #define func_ov001_02087ed0 ForwardToActiveService_02087ef8
-#define func_ov001_0209c510 func_ov001_0209c538
+#define func_ov001_0209c510 ClearStageManagerFlag40000000
 #define g_activeService_0209f2c8 g_stageEventsState
 #include "src/ov001/shared_engine/func_ov001_02087ed0.c"

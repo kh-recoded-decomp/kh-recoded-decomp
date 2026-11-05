@@ -1,3 +1,5 @@
+#define func_ov001_020685d4 ResetStageEventContext
+#define func_ov001_0206dc38 GetManagedActorCount
 #define func_ov001_0206dc4c GetManagedActorPosition
 #define DisableOv029Sound_020ba768 DisableOv029Sound
 #define ReleaseSeqArcHeapLevel_0204e040 ReleaseSeqArcHeapLevel

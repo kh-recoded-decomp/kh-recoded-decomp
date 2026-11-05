@@ -1,9 +1,11 @@
+#define func_ov001_0206b948 InitStageSlotTargetReference
+#define func_ov001_0206bb48 IsTargetSearchScoreBetter
 #define FindBestEventSlotTarget_0206b744 FindBestEventSlotTarget
 #define IsEventSlotInRange_0206b800 IsEventSlotInRange
 #define StageRecord_GetSlotPosition_02087c4c StageRecord_GetSlotPosition
 #define data_ov001_020a0484 data_ov001_020a04a4
 #define func_ov001_0206ba2c ClassifyTargetRange
 #define func_ov001_02087928 ForwardToActiveServiceWithResult
-#define func_ov001_02087944 func_ov001_0208796c
+#define func_ov001_02087944 FindNextActiveStageEventIfActive
 #define func_ov001_02087960 GetStageEventTargetInfo
 #include "src/ov001/shared_engine/FindBestEventSlotTarget_0206b744.c"

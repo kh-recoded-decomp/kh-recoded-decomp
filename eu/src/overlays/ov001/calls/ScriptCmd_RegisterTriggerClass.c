@@ -2,5 +2,5 @@
 #define ScriptCmd_RegisterTriggerClass_0207fd04 ScriptCmd_RegisterTriggerClass
 #define ScriptVm_ReadOperandFx32_02025df8 ScriptVm_ReadOperandFx32
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
-#define func_ov001_0207ee04 func_ov001_0207ee2c
+#define func_ov001_0207ee04 SetFieldObjectClassAtIndex
 #include "src/ov001/field_objects/ScriptCmd_RegisterTriggerClass_0207fd04.c"

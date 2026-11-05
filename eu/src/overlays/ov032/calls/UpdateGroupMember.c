@@ -48,7 +48,7 @@ extern const VecFx32 gZeroVecFx32;
 
 extern GroupMemberWork *func_ov032_020bbc98(GroupObject *object);
 extern ObjectGroup *func_ov032_020bbc80(GroupObject *object);
-extern GroupObject *func_ov001_02086384(void *world, int index);
+extern GroupObject *GetEntryPoolObjectAtIndex(void *world, int index);
 extern void InitGroupFormation(GroupObject *object);
 extern void SpawnSoundSlot(int bank, int soundId, VecFx32 *position, int flags);
 extern void AdvanceGroupSettleCounter(GroupObject *object);
@@ -72,7 +72,7 @@ int UpdateGroupMember(GroupObject *object)
     GroupMemberWork *work = func_ov032_020bbc98(object);
     ObjectGroup *group = func_ov032_020bbc80(object);
     VecFx32 position = group->center;
-    GroupObject *leader = func_ov001_02086384(object->world, group->leaderIndex);
+    GroupObject *leader = GetEntryPoolObjectAtIndex(object->world, group->leaderIndex);
 
     if (object->work->leaderLink == -1) {
         position.y -= 0x1b33;

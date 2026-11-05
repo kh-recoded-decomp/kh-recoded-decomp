@@ -1,6 +1,6 @@
 #define ScriptCmd_CreatePanelObject_020a1f00 ScriptCmd_CreatePanelObject
 #define ScriptVm_ReadOperandFx32_02025df8 ScriptVm_ReadOperandFx32
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
-#define func_ov001_02087214 func_ov001_0208723c
+#define func_ov001_02087214 GetFieldEntryPoolAtIndex
 #define func_ov020_020a3278 SpawnStackedBlock
 #include "src/ov020/script_commands/ScriptCmd_CreatePanelObject_020a1f00.c"

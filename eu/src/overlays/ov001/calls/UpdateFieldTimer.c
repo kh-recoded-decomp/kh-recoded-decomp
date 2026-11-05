@@ -1,3 +1,7 @@
+#define func_ov001_02068d8c AllocateFieldTimerCounter
+#define func_ov001_02068ea4 GetFieldTimerCounterMilliseconds
+#define func_ov001_02068ed0 SetFieldTimerCounterMilliseconds
+#define func_ov001_02068ef0 SetFieldTimerRateFx12
 #define GetClampedTimerValue_02063f90 GetClampedTimerValue
 #define StartCountdownTimer_0207d134 StartCountdownTimer
 #define StartPanelScrollOut_0207d28c StartPanelScrollOut

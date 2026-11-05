@@ -27,7 +27,7 @@ typedef struct Registry
 extern s32 ContainsMatchingEntry(Record *self, u32 kind);
 extern s32 Record_GetKindPayloadAddress(Record *rec);
 extern u8 *GetWorldMeshNamedEntry(u8 id);
-extern BOOL func_ov001_020681e8(u8 *entry, u32 kind);
+extern BOOL WorldNamedEntryHasKind(u8 *entry, u32 kind);
 extern int func_ov001_02067ed4(void);
 extern int func_ov001_02068344(int group, s8 slot);
 extern Registry *GetActorRegistry(void);
@@ -46,7 +46,7 @@ BOOL func_ov001_02084604(Record *record, Unit *unit)
 
         for (i = 0; i < 4; i++)
         {
-            if (func_ov001_020681e8(GetWorldMeshNamedEntry(ids[i]), 1))
+            if (WorldNamedEntryHasKind(GetWorldMeshNamedEntry(ids[i]), 1))
                 break;
         }
         expected = func_ov001_02068344(func_ov001_02067ed4(), -1 - unit->slotIndex);

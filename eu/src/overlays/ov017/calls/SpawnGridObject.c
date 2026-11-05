@@ -1,6 +1,6 @@
 #define AppendNodeToActiveList_02086fac AppendNodeToActiveList
 #define BuildCollisionShape_02080834 BuildCollisionShape
 #define SpawnGridObject_020a2aa8 SpawnGridObject
-#define func_ov001_02086308 func_ov001_02086330
+#define func_ov001_02086308 ActivateEntryPoolSlot
 #define func_ov017_020a29f4 DeactivateFieldObjectPastScrollLimit
 #include "src/ov017/field_objects/SpawnGridObject_020a2aa8.c"

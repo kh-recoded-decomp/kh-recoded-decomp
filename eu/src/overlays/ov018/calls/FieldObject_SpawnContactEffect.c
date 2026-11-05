@@ -1,3 +1,4 @@
+#define func_ov001_0206dc60 GetManagedActorPositionWithCallback
 #define FieldObject_SpawnContactEffect_020a286c FieldObject_SpawnContactEffect
 #define func_ov001_02086534 SendPushMessage
 #define func_ov021_020a8ab4 ResetAnimationTrackState

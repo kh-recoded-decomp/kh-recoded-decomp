@@ -1,3 +1,4 @@
+#define func_ov001_0206cab4 SetFieldMessageLoaderUpdatesPaused
 #define ActivateFieldPlayerEntry_0206dd90 ActivateFieldPlayerEntry
 #define ActorSlot_SetFlag8ByIndex_02036120 ActorSlot_SetFlag8ByIndex
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField

@@ -1,3 +1,4 @@
+#define func_ov001_0206dc60 GetManagedActorPositionWithCallback
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField
 #define MIi_CpuClear32_01ff8740 MIi_CpuClearFast
 #define ScaleVecFx32InPlace_0204a5e4 ScaleVecFx32InPlace

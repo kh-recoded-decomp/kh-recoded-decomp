@@ -53,7 +53,7 @@ extern const VecFx32 gZeroVecFx32;
 
 extern ObjectGroup *func_ov032_020bbc80(GroupObject *object);
 extern GroupMemberWork *func_ov032_020bbc98(GroupObject *object);
-extern GroupObject *func_ov001_02086384(void *world, int index);
+extern GroupObject *GetEntryPoolObjectAtIndex(void *world, int index);
 extern VecFx32 *GetManagedActorPosition(int index);
 extern void VEC_Add(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
 extern BOOL ComputePushTowardTarget(const VecFx32 *target, const VecFx32 *center, s32 *phase, VecFx32 *push);
@@ -89,7 +89,7 @@ int UpdateChainGroupMember(void *context, GroupObject *object)
     if (work->leaderLink == -1) {
         leader = NULL;
     } else {
-        leader = func_ov001_02086384(object->world, work->leaderLink);
+        leader = GetEntryPoolObjectAtIndex(object->world, work->leaderLink);
     }
     switch (work->state) {
     case 0:

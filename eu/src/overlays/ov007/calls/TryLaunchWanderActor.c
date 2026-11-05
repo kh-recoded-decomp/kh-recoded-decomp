@@ -36,7 +36,7 @@ extern BOOL InvokeSessionCheckCallbackOrDefault(void);
 extern VecFx32 *func_ov007_020a100c(WanderActor *actor);
 extern int GetBoundedEntryField(int index);
 extern BOOL GrantRewardItem(int entry, int *heading, u32 *facing);
-extern VecFx32 *func_ov001_0206dc60(int index);
+extern VecFx32 *GetManagedActorPositionWithCallback(int index);
 extern void StartLaunchMotion(WanderActor *actor, VecFx32 *velocity);
 extern void PlaySoundChecked(int channel, int soundId);
 
@@ -59,7 +59,7 @@ BOOL TryLaunchWanderActor(WanderActor *actor) {
     if (GrantRewardItem(GetBoundedEntryField(0), &heading, &facing)) {
         actor->heading = heading;
         actor->facing = facing;
-        StartLaunchMotion(actor, func_ov001_0206dc60(player));
+        StartLaunchMotion(actor, GetManagedActorPositionWithCallback(player));
     } else {
         actor->state = 2;
     }

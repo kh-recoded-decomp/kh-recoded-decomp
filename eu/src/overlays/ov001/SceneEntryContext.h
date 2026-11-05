@@ -12,8 +12,8 @@ typedef struct SceneEntry {
     fx32 cameraHeightLimit;
     fx32 groundHeight;
     u8 pad_10[8];
-    u8 primaryDisplayId;
-    u8 secondaryDisplayId;
+    u8 primaryBgmId;
+    u8 secondaryBgmId;
     u8 pad_1a[2];
     u32 resourceId;
 } SceneEntry;

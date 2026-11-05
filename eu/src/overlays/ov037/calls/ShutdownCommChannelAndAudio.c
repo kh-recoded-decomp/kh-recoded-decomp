@@ -1,3 +1,4 @@
+#define func_ov001_0206a714 DestroyScreenFadeTaskAndClearHandle
 #define SetParamHalf18_02050630 SetParamHalf18
 #define SetParamWord20_02050640 SetParamWord20
 #define SetSoundListenersEnabled_0204df9c SetSoundListenersEnabled

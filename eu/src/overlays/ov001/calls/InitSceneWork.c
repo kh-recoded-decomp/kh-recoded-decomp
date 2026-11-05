@@ -1,3 +1,4 @@
+#define func_ov001_0206b930 InitNoTargetReference
 #define InitSceneWork_0206adc8 InitSceneWork
 #define NNSi_FndGetCurrentRootHeap_0202a764 GetRunningTaskWork
 #define ReleaseSharedRecordSlot_0202c8a8 ReleaseSharedRecordSlot

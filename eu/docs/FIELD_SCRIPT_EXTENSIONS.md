@@ -154,8 +154,8 @@ not resizing an object pool. Activation retains all three inputs; a legacy
 incomplete declaration of the lookup helper must not remove the object index.
 
 Evidence: the group-4 table, the five wrappers, and
-`src/overlays/ov001/calls/func_ov001_0207ee00.c`,
-`src/overlays/ov001/calls/func_ov001_02086e58.c`,
+`src/overlays/ov001/calls/InitFieldObjectClassTable.c`,
+`src/overlays/ov001/calls/InitFieldEntryPoolTable.c`,
 `src/overlays/ov001/calls/PrependListNode.c`,
 `src/overlays/ov001/calls/FieldObject_Activate.c`,
 `src/overlays/ov001/calls/ReallocTableEntry.c` and

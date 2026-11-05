@@ -1,3 +1,4 @@
+#define func_ov001_0206dc38 GetManagedActorCount
 #define UpdateActionCommand_0206d0ac UpdateActionCommand
 #define func_ov052_020cfb58 AnySubObjectBit0Set
 #define func_ov001_020645c8 IsSessionFlagSet

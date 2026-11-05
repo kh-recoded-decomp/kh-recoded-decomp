@@ -1,6 +1,6 @@
 #define ScriptCmd_CreateGridObject_020a2350 ScriptCmd_CreateGridObject
 #define ScriptVm_ReadOperandFx32_02025df8 ScriptVm_ReadOperandFx32
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
-#define func_ov001_02087214 func_ov001_0208723c
+#define func_ov001_02087214 GetFieldEntryPoolAtIndex
 #define func_ov017_020a2aa8 SpawnGridObject
 #include "src/ov017/script_commands/ScriptCmd_CreateGridObject_020a2350.c"

@@ -1,3 +1,4 @@
+#define func_ov001_020681e8 WorldNamedEntryHasKind
 #define CollisionQuery_Init_02034c74 CollisionQuery_Init
 #define GetLinkedAngleOffset_020ceb7c GetLinkedAngleOffset
 #define GetWorldMeshNamedEntry_0203625c GetWorldMeshNamedEntry

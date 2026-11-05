@@ -14,7 +14,7 @@ extern u32 GetSlotEntryValue(void);
 extern u32 GetMenuItemValue(void);
 extern u32 func_ov001_020681c4(void);
 extern u32 func_ov001_020681d4(void);
-extern void func_ov001_020687b8(s32 value);
+extern void TriggerQueuedStageEventPairs(s32 value);
 extern void SetPanelHeaderText(const u16 *prefix, const u16 *name);
 extern void InvokeListNodeCallbacks(void);
 
@@ -25,7 +25,7 @@ u32 func_ov028_020ba778(void)
     u32 arg2;
 
     if (value != 0) {
-        func_ov001_020687b8(value);
+        TriggerQueuedStageEventPairs(value);
         HighlightSelectedMenuPanels();
         InvokeSceneCallback();
         func_ov001_02067ed4();

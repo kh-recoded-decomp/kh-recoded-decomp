@@ -1,3 +1,4 @@
+#define func_ov001_0206cab4 SetFieldMessageLoaderUpdatesPaused
 #define SetManagerEnabled_0206e160 SetManagerEnabled
 #define g_manager_020a049c data_ov001_020a04bc
 #define func_ov001_020642a0 IsFieldTrackFlagSet

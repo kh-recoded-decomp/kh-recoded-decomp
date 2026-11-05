@@ -1,7 +1,7 @@
 #define CreateFieldObjectClassType9_02084958 CreateFieldObjectClassType9
 #define func_ov001_0207f0d0 AcquireEffectRecordPair
 #define func_ov001_0207f128 FieldObject_EnsureModelsLoaded
-#define func_ov001_0207f1e8 func_ov001_0207f210
+#define func_ov001_0207f1e8 FreeFieldObjectClassAnimationBuffers
 #define func_ov001_0207f380 CreateByteGrid
 #define func_ov001_02083730 PatrolObject_Init
 #define func_ov001_02083a4c FreeLoaderBuffers

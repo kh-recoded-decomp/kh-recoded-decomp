@@ -4,7 +4,7 @@
 #define VEC_DotProduct_01ff9e6c VEC_DotProduct
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define func_02036240 ActorRegistry_GetEntityByIndex
-#define func_ov001_0208723c func_ov001_02087264
+#define func_ov001_0208723c GetFieldEntryListHead
 #define func_ov001_02087928 ForwardToActiveServiceWithResult
-#define func_ov001_02087944 func_ov001_0208796c
+#define func_ov001_02087944 FindNextActiveStageEventIfActive
 #include "src/ov059/unclassified_helpers/Seeker_SelectNearestTarget_020cec8c.c"

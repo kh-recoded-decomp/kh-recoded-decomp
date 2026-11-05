@@ -1,3 +1,4 @@
+#define func_ov001_0206dc38 GetManagedActorCount
 #define func_ov001_02063a38 GetFieldSessionState
 #define func_ov001_020645c8 IsSessionFlagSet
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField

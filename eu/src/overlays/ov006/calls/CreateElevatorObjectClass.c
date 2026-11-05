@@ -46,8 +46,8 @@ extern ElevatorClass *CreateByteGrid(u32 classSize, u32 objectSize, int count);
 extern void AcquireEffectRecordPair(void);
 extern void FieldObject_EnsureModelsLoaded(void);
 extern void RespawnElevatorObject(void);
-extern void func_ov001_0207f210(void);
-extern void func_ov001_0207f26c(void);
+extern void FreeFieldObjectClassAnimationBuffers(void);
+extern void FreeFieldObjectShapeStorage(void);
 extern void func_ov006_020a0a58(void);
 extern void TryActivateElevatorSlot(void);
 extern BOOL CollideElevatorWithShape(ElevatorCollisionBody *body, CollisionShape *other,
@@ -75,8 +75,8 @@ ElevatorClass *CreateElevatorObjectClass(int count, const ElevatorDesc *desc)
     objectClass->hooks[0] = AcquireEffectRecordPair;
     objectClass->hooks[1] = FieldObject_EnsureModelsLoaded;
     objectClass->hooks[2] = RespawnElevatorObject;
-    objectClass->hooks[3] = func_ov001_0207f210;
-    objectClass->hooks[6] = func_ov001_0207f26c;
+    objectClass->hooks[3] = FreeFieldObjectClassAnimationBuffers;
+    objectClass->hooks[6] = FreeFieldObjectShapeStorage;
     objectClass->hooks[7] = NULL;
     objectClass->hooks[10] = func_ov006_020a0a58;
     objectClass->hooks[11] = TryActivateElevatorSlot;

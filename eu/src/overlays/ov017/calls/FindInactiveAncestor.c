@@ -1,3 +1,3 @@
 #define FindInactiveAncestor_020a5148 FindInactiveAncestor
-#define func_ov001_0208635c func_ov001_02086384
+#define func_ov001_0208635c GetEntryPoolObjectAtIndex
 #include "src/ov017/field_objects/FindInactiveAncestor_020a5148.c"

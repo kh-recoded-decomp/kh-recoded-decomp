@@ -1,5 +1,5 @@
 #define PrependListNode_0207eeb4 PrependListNode
 #define data_ov001_020a04d8 data_ov001_020a04f8
-#define func_ov001_0207f038 func_ov001_0207f060
+#define func_ov001_0207f038 GetFieldObjectByClassAndIndex
 #define func_ov001_0207f4c0 FieldObject_Activate
 #include "src/ov001/unclassified_helpers/PrependListNode_0207eeb4.c"

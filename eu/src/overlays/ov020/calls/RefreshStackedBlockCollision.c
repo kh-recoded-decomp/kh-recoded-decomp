@@ -39,7 +39,7 @@ typedef struct StackedBlock {
     s16 baseIndex;
 } StackedBlock;
 
-extern StackedBlock *func_ov001_02086384(BlockPool *pool, int index);
+extern StackedBlock *GetEntryPoolObjectAtIndex(BlockPool *pool, int index);
 extern StackedBlock *FindLiveNextBlock(StackedBlock *block);
 extern BlockActor *ActorRegistry_GetEntityByIndex(u32 index);
 extern void ResizeBoxCollisionObject(CollisionObject *object, fx32 sizeX,
@@ -62,7 +62,7 @@ void RefreshStackedBlockCollision(StackedBlock *block)
             if (current->upperIndex < 0) {
                 break;
             }
-            current = func_ov001_02086384(current->pool, current->upperIndex);
+            current = GetEntryPoolObjectAtIndex(current->pool, current->upperIndex);
         }
         if (height != 0) {
             actor = ActorRegistry_GetEntityByIndex(block->entityId);
@@ -75,7 +75,7 @@ void RefreshStackedBlockCollision(StackedBlock *block)
         if (current != NULL) {
             height = current->position.y + 0x1800;
         } else {
-            height = func_ov001_02086384(block->pool, block->baseIndex)->position.y;
+            height = GetEntryPoolObjectAtIndex(block->pool, block->baseIndex)->position.y;
         }
         block->position.y = height;
         Obj_SetPosition(ActorRegistry_GetEntityByIndex(block->entityId), &block->position);

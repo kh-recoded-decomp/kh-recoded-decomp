@@ -1,6 +1,8 @@
+#define func_ov001_0206b938 InitFieldObjectTargetReference
+#define func_ov001_0206bb48 IsTargetSearchScoreBetter
 #define ScanActorsForNearestTarget_0206b434 ScanActorsForNearestTarget
 #define func_ov001_0206b4a4 IsActorTargetable
 #define func_ov001_0206ba2c ClassifyTargetRange
-#define func_ov001_0207f08c func_ov001_0207f0b4
-#define func_ov001_0207f870 func_ov001_0207f898
+#define func_ov001_0207f08c GetFieldObjectListHead
+#define func_ov001_0207f870 CallFieldObjectHook13IfPresent
 #include "src/ov001/shared_engine/ScanActorsForNearestTarget_0206b434.c"

@@ -2,8 +2,8 @@
 #define ReleaseOwnerResource_0207f20c ReleaseOwnerResource
 #define func_ov001_0207f0d0 AcquireEffectRecordPair
 #define func_ov001_0207f128 FieldObject_EnsureModelsLoaded
-#define func_ov001_0207f1e8 func_ov001_0207f210
-#define func_ov001_0207f244 func_ov001_0207f26c
+#define func_ov001_0207f1e8 FreeFieldObjectClassAnimationBuffers
+#define func_ov001_0207f244 FreeFieldObjectShapeStorage
 #define func_ov001_0207f380 CreateByteGrid
 #define func_ov001_02085f3c RespawnScaledFieldObject
 #define func_ov001_02086060 func_ov001_02086088

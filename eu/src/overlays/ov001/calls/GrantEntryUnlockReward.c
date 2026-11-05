@@ -5,6 +5,6 @@
 #define RollRewardOrbDrop_020665bc RollRewardOrbDrop
 #define func_ov001_02086928 func_ov001_02086950
 #define func_ov001_0208694c func_ov001_02086974
-#define func_ov001_02086978 func_ov001_020869a0
+#define func_ov001_02086978 SetSessionFlagEnabled
 #define func_ov001_02086a28 RollSpecialItemDrop
 #include "src/ov001/field_objects/GrantEntryUnlockReward_02087518.c"

@@ -167,8 +167,8 @@ extern SweepHit *SweepWorldCollision(CollisionQuery *query);
 extern BOOL Obj_IsWord40Zero(ContactObject *object);
 extern void CopyShortTripleToIntTriple(void *unused, EdgeEntry *src, VecFx32 *dst);
 extern void *GetWorldMeshNamedEntry(int index);
-extern BOOL func_ov001_020681e8(void *entry, u32 kind);
-extern StageUnit *func_ov001_0208724c(u32 group, u32 index);
+extern BOOL WorldNamedEntryHasKind(void *entry, u32 kind);
+extern StageUnit *GetFieldEntryByPoolAndIndex(u32 group, u32 index);
 extern int Object_GetKindValue(StageUnit *unit);
 extern BOOL IsFieldUnitAction5Mode1(StageUnit *unit);
 extern void GetTableValuePair(s32 *outFirst, s32 *outSecond, int index);
@@ -367,7 +367,7 @@ BOOL TryGrabLedge(Actor *actor)
         k = 1;
         do {
             void *mesh = GetWorldMeshNamedEntry(hit->surface->meshIndices[k]);
-            if (mesh != NULL && (func_ov001_020681e8(mesh, 3) || func_ov001_020681e8(mesh, 5))) {
+            if (mesh != NULL && (WorldNamedEntryHasKind(mesh, 3) || WorldNamedEntryHasKind(mesh, 5))) {
                 return FALSE;
             }
         } while (++k < 3);
@@ -395,7 +395,7 @@ BOOL TryGrabLedge(Actor *actor)
                 }
                 break;
             case 4: {
-                StageUnit *unit = func_ov001_0208724c(kind->group, kind->index);
+                StageUnit *unit = GetFieldEntryByPoolAndIndex(kind->group, kind->index);
                 ok = TRUE;
                 if (unit->def->kind == 4 || unit->def->kind == 9) {
                     switch (Object_GetKindValue(unit)) {

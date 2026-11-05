@@ -1,6 +1,6 @@
 #define ScriptOp_CallObjectVectorHook_02080368 ScriptOp_CallObjectVectorHook
 #define ScriptVm_ReadOperandFx32_02025df8 ScriptVm_ReadOperandFx32
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
-#define func_ov001_0207f038 func_ov001_0207f060
+#define func_ov001_0207f038 GetFieldObjectByClassAndIndex
 #define func_ov001_0207f800 CallFieldObjectHook24
 #include "src/ov001/scripted_actor_behavior/ScriptOp_CallObjectVectorHook_02080368.c"

@@ -10,9 +10,9 @@
 #define Object_GetKindValue_0208744c Object_GetKindValue
 #define UpdateAnchoredMovement_020cac00 UpdateAnchoredMovement
 #define VEC_Add_01ff9e0c VEC_Add
-#define func_ov001_0207f038 func_ov001_0207f060
+#define func_ov001_0207f038 GetFieldObjectByClassAndIndex
 #define func_ov001_020863cc func_ov001_020863f4
-#define func_ov001_02087224 func_ov001_0208724c
+#define func_ov001_02087224 GetFieldEntryByPoolAndIndex
 #define func_ov021_020a7544 func_ov021_020a7564
 #define func_ov052_020c9274 IsLedgeClimbSpaceClear
 #define func_ov052_020ceb60 func_ov052_020ceb80

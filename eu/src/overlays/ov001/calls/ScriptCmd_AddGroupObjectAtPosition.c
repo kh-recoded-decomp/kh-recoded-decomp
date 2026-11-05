@@ -1,6 +1,6 @@
 #define ScriptCmd_AddGroupObjectAtPosition_02080300 ScriptCmd_AddGroupObjectAtPosition
 #define ScriptVm_ReadOperandFx32_02025df8 ScriptVm_ReadOperandFx32
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
-#define func_ov001_0207f028 func_ov001_0207f050
+#define func_ov001_0207f028 GetFieldObjectClassAtIndex
 #define func_ov001_02083648 FieldObject_CreateWithTimer
 #include "src/ov001/scripted_actor_behavior/ScriptCmd_AddGroupObjectAtPosition_02080300.c"

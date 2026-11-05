@@ -1,3 +1,3 @@
 #define StackLinkedFieldObjects_020a4c54 StackLinkedFieldObjects
-#define func_ov001_0208635c func_ov001_02086384
+#define func_ov001_0208635c GetEntryPoolObjectAtIndex
 #include "src/ov016/field_objects/StackLinkedFieldObjects_020a4c54.c"

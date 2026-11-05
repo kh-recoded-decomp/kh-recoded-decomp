@@ -5,7 +5,7 @@
 #define SetGroupFormation_020bbfc4 SetGroupFormation
 #define data_02053438 gZeroVecFx32
 #define data_02053444 gIdentityMtxFx33
-#define func_ov001_0208635c func_ov001_02086384
+#define func_ov001_0208635c GetEntryPoolObjectAtIndex
 #define func_ov032_020bbc78 func_ov032_020bbc98
 #define func_ov032_020bbd60 OrientGroupActorCollisionFromDirection
 #define func_ov032_020bd954 ScatterGroupAroundLeader

@@ -1,3 +1,4 @@
+#define func_ov001_0206943c SetSavedTaskFlag
 #define ScriptCmd_SetIndexedSaveFlag_02065648 ScriptCmd_SetIndexedSaveFlag
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
 #include "src/ov001/shared_engine/ScriptCmd_SetIndexedSaveFlag_02065648.c"

@@ -38,7 +38,7 @@ struct FieldObjectPool {
 };
 
 extern BOOL IsNodeFlagBitClear(FieldObject *object);
-extern FieldObject *func_ov001_02086384(FieldObjectPool *pool, int index);
+extern FieldObject *GetEntryPoolObjectAtIndex(FieldObjectPool *pool, int index);
 extern void func_ov016_020a232c(FieldObject *object);
 
 void LinkStackedFieldObjects(FieldObject *object)
@@ -53,20 +53,20 @@ void LinkStackedFieldObjects(FieldObject *object)
     if (IsNodeFlagBitClear(object) && !(object->flags & 0x10) && object->mode != 6) {
         if (object->category != 1) {
             if (object->linkLocked == 0 && object->linkPrev == -1 && object->linkNext != -1) {
-                other = func_ov001_02086384(pool, object->linkNext);
+                other = GetEntryPoolObjectAtIndex(pool, object->linkNext);
                 while (other != NULL) {
                     func_ov016_020a232c(other);
                     other->linkActive = 0;
                     if (object->linkNext != -1) {
                         other = NULL;
                     } else {
-                        other = func_ov001_02086384(pool, object->linkNext);
+                        other = GetEntryPoolObjectAtIndex(pool, object->linkNext);
                     }
                 }
             }
         } else {
             for (index = 0; index < pool->count; index++) {
-                other = func_ov001_02086384(pool, index);
+                other = GetEntryPoolObjectAtIndex(pool, index);
                 if (!(other->flags & 0x2000000)) {
                     continue;
                 }
@@ -99,10 +99,10 @@ void LinkStackedFieldObjects(FieldObject *object)
             head = object;
             usedBits = 0;
             if (object->linkPrev != -1) {
-                other = func_ov001_02086384(pool, object->linkPrev);
+                other = GetEntryPoolObjectAtIndex(pool, object->linkPrev);
                 while (other != NULL) {
                     if (other->linkPrev != -1) {
-                        other = func_ov001_02086384(pool, other->linkPrev);
+                        other = GetEntryPoolObjectAtIndex(pool, other->linkPrev);
                     } else {
                         head = other;
                         other = NULL;
@@ -119,7 +119,7 @@ void LinkStackedFieldObjects(FieldObject *object)
                     } else {
                         head->drawFlags &= ~0x10;
                     }
-                    head = func_ov001_02086384(pool, head->linkNext);
+                    head = GetEntryPoolObjectAtIndex(pool, head->linkNext);
                 }
             } else {
                 object->drawFlags |= 0x10;

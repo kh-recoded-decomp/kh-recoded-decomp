@@ -1,3 +1,4 @@
+#define func_ov001_020681e8 WorldNamedEntryHasKind
 #define GetWorldMeshNamedEntry_0203625c GetWorldMeshNamedEntry
 #define ProbeLinkedMeshEntries_020cb8cc ProbeLinkedMeshEntries
 #include "src/ov059/unclassified_helpers/ProbeLinkedMeshEntries_020cb8cc.c"

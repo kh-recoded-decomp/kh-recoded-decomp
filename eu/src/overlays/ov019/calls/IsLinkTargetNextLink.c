@@ -1,4 +1,4 @@
 #define FindLiveNextLink_020a20e0 FindLiveNextLink
 #define IsLinkTargetNextLink_020a1ff8 IsLinkTargetNextLink
-#define func_ov001_02087224 func_ov001_0208724c
+#define func_ov001_02087224 GetFieldEntryByPoolAndIndex
 #include "src/ov019/unclassified_helpers/IsLinkTargetNextLink_020a1ff8.c"

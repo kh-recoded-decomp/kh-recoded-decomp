@@ -1,0 +1,23 @@
+#include "nitro/types.h"
+
+extern unsigned int gStageManager;
+
+u32 FindNextActiveStageEvent(int startHandle) {
+  u32 index;
+  int event;
+
+  index = (startHandle - 1U & 0xffff) + 1 & 0xffff;
+  if (index < *(u16 *)(gStageManager + 0x18dee)) {
+    do {
+      event = *(int *)(gStageManager + 0x210) + index * 0x1c8;
+      if (*(unsigned short *)(event + 0x10) != 0) {
+        return index + 1 & 0xffff;
+      }
+      if (*(unsigned short *)(event + 0xe) == 99) {
+        return index + 1 & 0xffff;
+      }
+      index = index + 1 & 0xffff;
+    } while (index < *(u16 *)(gStageManager + 0x18dee));
+  }
+  return 0;
+}

@@ -1,4 +1,5 @@
-#define ArmObject_0206c6f4 func_ov001_0206c6f4
+#define func_ov001_0206a714 DestroyScreenFadeTaskAndClearHandle
+#define ArmObject_0206c6f4 DestroySessionCallbackTask
 #define MoviePlayer_Close_020ba518 MoviePlayer_Close
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define PXI_Init_0202a638 DestroyTaskObjectWrapper

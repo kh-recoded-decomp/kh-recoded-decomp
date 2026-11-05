@@ -1,7 +1,7 @@
 #define FormatAndQueueMessage_020a4008 FormatAndQueueMessage
 #define ScriptCmd_QueueEntryMessage_020a2244 ScriptCmd_QueueEntryMessage
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
-#define func_ov001_0208635c func_ov001_02086384
+#define func_ov001_0208635c GetEntryPoolObjectAtIndex
 #define func_ov017_020a3f84 AppendFieldValueSlot
 #define func_ov017_020a4204 FindKind4FieldObject
 #include "src/ov017/script_commands/ScriptCmd_QueueEntryMessage_020a2244.c"

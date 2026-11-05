@@ -2,5 +2,5 @@
 #define BuildCollisionShape_02080834 BuildCollisionShape
 #define SpawnStackedBlock_020a3278 SpawnStackedBlock
 #define UpdateStackedBlock_020a2f98 UpdateStackedBlock
-#define func_ov001_02086308 func_ov001_02086330
+#define func_ov001_02086308 ActivateEntryPoolSlot
 #include "src/ov020/unclassified_helpers/SpawnStackedBlock_020a3278.c"

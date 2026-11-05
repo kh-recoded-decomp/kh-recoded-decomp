@@ -4,7 +4,7 @@
 #define NNSi_FndAllocFromDefaultHeapEx_0202a19c NNS_FndAllocFromDefaultExpHeapEx
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define SaveSessionCheckpoint_02064364 SaveSessionCheckpoint
-#define Session_Exists_02068378 func_ov001_02068378
+#define Session_Exists_02068378 HasSceneEntryContext
 #define StoreSessionDifficultyPreset_0206452c StoreSessionDifficultyPreset
 #define data_ov001_020a0460 data_ov001_020a0480
 #define func_01ff89a8 MI_CpuCopy8

@@ -1,4 +1,4 @@
 #define AllocEffectBufferSlot_020872f0 AllocEffectBufferSlot
 #define SnapshotLinkStates_020a3234 SnapshotLinkStates
-#define func_ov001_0208635c func_ov001_02086384
+#define func_ov001_0208635c GetEntryPoolObjectAtIndex
 #include "src/ov019/unclassified_helpers/SnapshotLinkStates_020a3234.c"

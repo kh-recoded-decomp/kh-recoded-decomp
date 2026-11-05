@@ -9,9 +9,9 @@
 #define data_ov017_020a5e04 gPoolInitHandlers
 #define func_02036240 ActorRegistry_GetEntityByIndex
 #define func_0204a174 EaseProgress
-#define func_ov001_0208635c func_ov001_02086384
-#define func_ov001_02086fa4 func_ov001_02086fcc
-#define func_ov001_02087224 func_ov001_0208724c
+#define func_ov001_0208635c GetEntryPoolObjectAtIndex
+#define func_ov001_02086fa4 GetFieldEntryPoolIndex
+#define func_ov001_02087224 GetFieldEntryByPoolAndIndex
 #define func_ov017_020a3e10 ResetFieldObjectToIdle
 #define func_ov017_020a4b0c CanUseSwitchTarget
 #define func_ov017_020a5ddc func_ov017_020a5dfc

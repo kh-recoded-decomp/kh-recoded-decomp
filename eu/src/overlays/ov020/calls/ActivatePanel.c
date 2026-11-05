@@ -41,7 +41,7 @@ typedef struct {
 extern void Flags16_ClearBit1(void *model);
 extern u8 *ActorRegistry_GetEntityByIndex(int actorId);
 extern void RebindAnimTracks(void *model, int track, int flags);
-extern LinkedPanel *func_ov001_02086384(void *owner, int index);
+extern LinkedPanel *GetEntryPoolObjectAtIndex(void *owner, int index);
 extern int FindLivePrevBlock(Panel *panel);
 extern void func_ov020_020a2914(int value, Panel *panel);
 extern int FindLiveNextBlock(Panel *panel);
@@ -70,7 +70,7 @@ int ActivatePanel(Panel *panel, PanelEvent *event)
     RebindAnimTracks(ActorRegistry_GetEntityByIndex(panel->actorId) + 4, 1, 0);
     Flags16_ClearBit1(ActorRegistry_GetEntityByIndex(panel->actorId) + 4);
     panel->flags |= 0x10;
-    func_ov001_02086384(panel->owner, panel->linkIndex)->flags |= 4;
+    GetEntryPoolObjectAtIndex(panel->owner, panel->linkIndex)->flags |= 4;
     result = FindLivePrevBlock(panel);
     if (result != 0) {
         func_ov020_020a2914(result, panel);

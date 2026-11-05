@@ -1,3 +1,3 @@
 #define SetGroupMembersFlag21_020a6cfc SetGroupMembersFlag21
-#define func_ov001_0208635c func_ov001_02086384
+#define func_ov001_0208635c GetEntryPoolObjectAtIndex
 #include "src/ov016/field_objects/SetGroupMembersFlag21_020a6cfc.c"

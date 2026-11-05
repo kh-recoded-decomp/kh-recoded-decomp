@@ -8,7 +8,7 @@
 #define ScaleVecFx32_01ffafb4 ScaleVecFx32
 #define VEC_Add_01ff9e0c VEC_Add
 #define func_0202a9d0 NextSharedRandom16Scaled
-#define func_ov001_0208789c func_ov001_020878c4
+#define func_ov001_0208789c TriggerNextStageEventFromSource1IfActive
 #define func_ov021_020abebc ComputeKnockbackVector
 #define func_ov021_020abfb0 IsHitWithinFacingCone
 #define func_ov021_020ac33c ApplyHitToTarget_020ac33c

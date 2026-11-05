@@ -1,4 +1,4 @@
 #define AcquireEffectRecordPair_0207f0d0 AcquireEffectRecordPair
-#define func_ov001_0207f0a8 func_ov001_0207f0d0
-#define func_ov001_0207f0b8 func_ov001_0207f0e0
+#define func_ov001_0207f0a8 RequestFieldObjectAnimationBuffer
+#define func_ov001_0207f0b8 RequestFieldObjectModelResource
 #include "src/ov001/unclassified_helpers/AcquireEffectRecordPair_0207f0d0.c"

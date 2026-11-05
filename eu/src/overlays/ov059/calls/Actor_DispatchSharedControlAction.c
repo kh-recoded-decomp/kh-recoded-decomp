@@ -39,7 +39,7 @@ extern void *func_ov001_0206db78(u32 playerIndex);
 extern u16 SharedObject_GetId(void *record);
 extern BOOL HasFlagsAt0xe(void *record, u16 mask);
 extern BOOL IsWaitTargetReady(LinkSlot *link);
-extern void func_ov001_0207f8ac(void *target, LinkRequest *request);
+extern void CallFieldObjectHook14IfSavedFlagClear(void *target, LinkRequest *request);
 extern void Actor_MarkGuardBreakInState3(Actor *actor);
 extern void OpenFieldMenuMode(s32 mode);
 
@@ -70,7 +70,7 @@ s32 Actor_DispatchSharedControlAction(Actor *actor)
         if (state != 3 && IsWaitTargetReady(link) && link->kind == 2) {
             request.playerIndex = actor->playerIndex;
             request.flags = 0;
-            func_ov001_0207f8ac(link->target, &request);
+            CallFieldObjectHook14IfSavedFlagClear(link->target, &request);
         }
         Actor_MarkGuardBreakInState3(actor);
         break;

@@ -2,7 +2,7 @@
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define ScatterGroupMembers_020befbc ScatterGroupMembers_020befdc
 #define SetFieldUnitPosition_020a6cc4 SetFieldUnitPosition
-#define func_ov001_0208635c func_ov001_02086384
+#define func_ov001_0208635c GetEntryPoolObjectAtIndex
 #define func_ov032_020bbc60 func_ov032_020bbc80
 #define func_ov032_020bbc78 func_ov032_020bbc98
 #define func_ov032_020beeb8 FindLevelCellCenter

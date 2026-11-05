@@ -1,3 +1,4 @@
+#define func_ov001_0206c504 GetTargetSelectionFadeLevel2
 #define func_ov001_02077e68 TryCycleFieldMenuCursor
 #define func_ov001_02077ef4 TryEnterFieldMenuState3
 #define func_ov001_02063a38 GetFieldSessionState

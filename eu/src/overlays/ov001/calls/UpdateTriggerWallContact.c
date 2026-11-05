@@ -1,3 +1,4 @@
+#define func_ov001_020681e8 WorldNamedEntryHasKind
 #define func_ov001_0206db78 GetPlayerControlState
 #define OS_GetTick_02003fd4 OS_GetTick
 #define UpdateTriggerWallContact_0206ce78 UpdateTriggerWallContact

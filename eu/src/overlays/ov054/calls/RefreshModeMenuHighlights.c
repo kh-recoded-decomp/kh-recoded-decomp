@@ -1,3 +1,4 @@
+#define func_ov001_0206c634 SetEventSlotAndEntryTargetSearchEnabled
 #define func_ov001_02064490 InvokeSessionCheckCallbackOrDefault
 #define func_ov001_0206db78 GetPlayerControlState
 #define func_ov001_020645c8 IsSessionFlagSet

@@ -1,3 +1,4 @@
+#define func_ov001_0206cab4 SetFieldMessageLoaderUpdatesPaused
 #define func_ov001_02063a38 GetFieldSessionState
 #define RefreshMenuEntries_0206e378 RefreshMenuEntries
 #define SetMenuHighlight_0206c2f8 SetMenuHighlight

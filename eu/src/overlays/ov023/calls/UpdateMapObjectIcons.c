@@ -131,7 +131,7 @@ MAP_CHECK_OFFSET(EventTargetInfo, position, 8, EventTargetPositionOffset);
 
 extern void NNS_FndInitList(MapDrawList *, u16);
 extern MapDrawEntry *NNS_FndGetNextListObject(MapDrawList *, MapDrawEntry *);
-extern MapObject *func_ov001_0207f0b4(void);
+extern MapObject *GetFieldObjectListHead(void);
 extern BOOL UpdateMapTargetDistance(MapMenu *, MapObject *);
 extern BOOL IsObjectFlagClear(MapObject *);
 extern VecFx32 *FieldObject_GetPosition(MapObject *);
@@ -142,9 +142,9 @@ extern void IndexedRecords_SetFlag2(void *, int, int);
 extern void IndexedRecord_SetPair(void *, int, const MapPoint *);
 extern s32 ForwardToActiveServiceWithResult(void);
 extern BOOL GetStageEventTargetInfo(u32, EventTargetInfo *);
-extern s32 func_ov001_0208796c(s32);
+extern s32 FindNextActiveStageEventIfActive(s32);
 extern VecFx32 *GetManagedActorPosition(int);
-extern MapNode *func_ov001_02087264(void);
+extern MapNode *GetFieldEntryListHead(void);
 extern u16 func_ov001_02087644(void);
 extern BOOL IsNodeFlagBitClear(MapNode *);
 extern BOOL func_ov020_020a34b0(MapNode *);
@@ -182,7 +182,7 @@ void UpdateMapObjectIcons(MapMenu *menu)
     iconCount = 0;
     variant = menu->tileScale == 1 ? 0 : 1;
     menu->distanceShown = FALSE;
-    for (object = func_ov001_0207f0b4(); object;) {
+    for (object = GetFieldObjectListHead(); object;) {
         if (object->descriptor->kind == 3) {
             if (!UpdateMapTargetDistance(menu, object)) {
                 goto finish;
@@ -245,11 +245,11 @@ advanceObject:
     eventId = ForwardToActiveServiceWithResult();
     while (eventId) {
         if (!GetStageEventTargetInfo(eventId, &info)) {
-            eventId = func_ov001_0208796c(eventId);
+            eventId = FindNextActiveStageEventIfActive(eventId);
             continue;
         }
         if (info.isVisible) {
-            eventId = func_ov001_0208796c(eventId);
+            eventId = FindNextActiveStageEventIfActive(eventId);
             continue;
         }
         if (info.isPartner == 1) {
@@ -266,11 +266,11 @@ advanceObject:
             IndexedRecord_SetPair(renderer, menu->icons[iconCount].slot, &iconPoint);
             iconCount++;
         }
-        eventId = func_ov001_0208796c(eventId);
+        eventId = FindNextActiveStageEventIfActive(eventId);
     }
     overflow = 0;
     playerPosition = GetManagedActorPosition(0);
-    node = func_ov001_02087264();
+    node = GetFieldEntryListHead();
     if (!playerPosition) {
         goto finish;
     }

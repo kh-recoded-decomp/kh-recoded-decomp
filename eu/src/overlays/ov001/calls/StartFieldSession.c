@@ -1,3 +1,4 @@
+#define func_ov001_02068e54 PauseSessionTimerUpdates
 #define func_ov001_020613e0 InvokeOptionalCallbackAndComplementAddress
 #define func_ov001_02064628 LoadPackedSessionPlacement
 #define AcquireMapLayout_020506dc AcquireMapLayout

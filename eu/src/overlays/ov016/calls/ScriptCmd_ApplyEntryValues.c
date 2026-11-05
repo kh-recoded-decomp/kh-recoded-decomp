@@ -1,6 +1,6 @@
 #define ScriptCmd_ApplyEntryValues_020a2178 ScriptCmd_ApplyEntryValues
 #define ScriptVm_ConsumeOperandFx32_020a1df4 ScriptVm_ConsumeOperandFx32
 #define ScriptVm_ConsumeOperandInt_020a1de0 ScriptVm_ConsumeOperandInt
-#define func_ov001_02087214 func_ov001_0208723c
+#define func_ov001_02087214 GetFieldEntryPoolAtIndex
 #define func_ov016_020a6910 SetFieldUnitPathPoint
 #include "src/ov016/script_commands/ScriptCmd_ApplyEntryValues_020a2178.c"

@@ -3,10 +3,10 @@
 #define PlaceRecordPanels_020bbce8 PlaceRecordPanels
 #define ScaleVecFx32InPlace_0204a5e4 ScaleVecFx32InPlace
 #define VEC_Subtract_01ff9e3c VEC_Subtract
-#define func_ov001_0207f018 func_ov001_0207f040
-#define func_ov001_0207f028 func_ov001_0207f050
-#define func_ov001_0207f038 func_ov001_0207f060
+#define func_ov001_0207f018 GetFieldObjectClassCount
+#define func_ov001_0207f028 GetFieldObjectClassAtIndex
+#define func_ov001_0207f038 GetFieldObjectByClassAndIndex
 #define func_ov001_02082708 func_ov001_02082730
-#define func_ov001_0208723c func_ov001_02087264
+#define func_ov001_0208723c GetFieldEntryListHead
 #define g_activeState_020bc800 data_ov031_020bc820
 #include "src/ov031/overlay_state/PlaceRecordPanels_020bbce8.c"

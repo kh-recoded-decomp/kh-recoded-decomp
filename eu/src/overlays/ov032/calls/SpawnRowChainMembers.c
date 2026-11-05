@@ -3,7 +3,7 @@
 #define SpawnRowChainMembers_020bd288 SpawnRowChainMembers
 #define data_02053438 gZeroVecFx32
 #define data_02053444 gIdentityMtxFx33
-#define func_ov001_0208635c func_ov001_02086384
+#define func_ov001_0208635c GetEntryPoolObjectAtIndex
 #define func_ov016_020a6954 func_ov016_020a6974
 #define func_ov016_020a6afc ResetUnitToBasePosition
 #define func_ov032_020bbc18 GetRowRespawnLimit

@@ -1,6 +1,6 @@
 #define AdvanceRowCounter_020bd440 AdvanceRowCounter
 #define TickFieldObjectCounters_020bf790 TickFieldObjectCounters
-#define func_ov001_0208635c func_ov001_02086384
+#define func_ov001_0208635c GetEntryPoolObjectAtIndex
 #define func_ov032_020bbc3c func_ov032_020bbc5c
 #define func_ov032_020bbc78 func_ov032_020bbc98
 #define func_ov032_020bbf84 TickRowNibbleTimer

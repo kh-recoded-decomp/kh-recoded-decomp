@@ -1,3 +1,3 @@
 #define FindSlotLinkedObject_020a4bb4 FindSlotLinkedObject
-#define func_ov001_0208635c func_ov001_02086384
+#define func_ov001_0208635c GetEntryPoolObjectAtIndex
 #include "src/ov017/field_objects/FindSlotLinkedObject_020a4bb4.c"

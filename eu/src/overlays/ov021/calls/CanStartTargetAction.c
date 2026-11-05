@@ -1,3 +1,3 @@
 #define CanStartTargetAction_020a94b0 CanStartTargetAction
-#define func_ov001_02087224 func_ov001_0208724c
+#define func_ov001_02087224 GetFieldEntryByPoolAndIndex
 #include "src/ov021/shared_engine/CanStartTargetAction_020a94b0.c"

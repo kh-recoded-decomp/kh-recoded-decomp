@@ -1,7 +1,8 @@
+#define func_ov001_0206b938 InitFieldObjectTargetReference
 #define CheckSideOffsetInRange_0206b3d4 CheckSideOffsetInRange
 #define ScanActorsForSideTarget_0206b25c ScanActorsForSideTarget
 #define func_ov001_0206b4a4 IsActorTargetable
-#define func_ov001_0207f08c func_ov001_0207f0b4
-#define func_ov001_0207f870 func_ov001_0207f898
+#define func_ov001_0207f08c GetFieldObjectListHead
+#define func_ov001_0207f870 CallFieldObjectHook13IfPresent
 #define g_manager_020a0484 data_ov001_020a04a4
 #include "src/ov001/shared_engine/ScanActorsForSideTarget_0206b25c.c"

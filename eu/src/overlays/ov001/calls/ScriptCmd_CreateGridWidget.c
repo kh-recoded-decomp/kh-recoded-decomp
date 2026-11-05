@@ -1,6 +1,6 @@
 #define func_02025de4 ScriptVm_ReadOperandInt
 #define func_02025df8 ScriptVm_ReadOperandFx32
-#define func_0207ee04 func_ov001_0207ee2c
+#define func_0207ee04 SetFieldObjectClassAtIndex
 #define func_02085bb0 CreateGridWidget
 #define func_ov001_02080534 ScriptCmd_CreateGridWidget
 #include "src/ov001/reviewed_helpers/func_ov001_02080534.c"

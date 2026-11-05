@@ -1,6 +1,6 @@
 #define ScriptCmd_SpawnFieldObjectInSlot_0207fb54 ScriptCmd_SpawnFieldObjectInSlot
 #define ScriptVm_ReadOperandFx32_02025df8 ScriptVm_ReadOperandFx32
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
-#define func_ov001_0207ee04 func_ov001_0207ee2c
+#define func_ov001_0207ee04 SetFieldObjectClassAtIndex
 #define func_ov001_02080ce4 CreateFieldObjectClassFromDesc
 #include "src/ov001/field_objects/ScriptCmd_SpawnFieldObjectInSlot_0207fb54.c"

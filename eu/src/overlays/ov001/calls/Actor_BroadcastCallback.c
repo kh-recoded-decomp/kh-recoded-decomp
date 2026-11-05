@@ -1,3 +1,4 @@
+#define func_ov001_0206dc38 GetManagedActorCount
 #define Actor_BroadcastCallback_0208ef2c Actor_BroadcastCallback
 #define func_ov001_0206db5c GetBoundedEntryField
 #define func_ov058_020d6c78 FinishEnemyRecovery

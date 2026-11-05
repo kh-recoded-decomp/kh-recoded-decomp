@@ -5,7 +5,7 @@
 
 extern u32 data_ov030_020bd020;
 extern s32 UpdateMenuItemLoading(void);
-extern void func_ov001_020687b8(void);
+extern void TriggerQueuedStageEventPairs(void);
 extern void HighlightSelectedMenuPanels(void);
 extern void InvokeSceneCallback(void);
 extern void func_ov001_02067ed4(void);
@@ -28,7 +28,7 @@ u32 func_ov030_020ba62c(void)
     if (ready == 0) {
         return 0xffffffff;
     }
-    func_ov001_020687b8();
+    TriggerQueuedStageEventPairs();
     HighlightSelectedMenuPanels();
     InvokeSceneCallback();
     func_ov001_02067ed4();

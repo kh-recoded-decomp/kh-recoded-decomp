@@ -1,5 +1,5 @@
 #define ScriptCmd_SpawnActorInSlot_020a0560 ScriptCmd_SpawnActorInSlot
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
-#define func_ov001_0207ee04 func_ov001_0207ee2c
+#define func_ov001_0207ee04 SetFieldObjectClassAtIndex
 #define func_ov011_020a0fa4 FieldObject_Create_020a0fc4
 #include "src/ov011/shared_engine/ScriptCmd_SpawnActorInSlot_020a0560.c"

@@ -1,3 +1,5 @@
+#define func_ov001_020685a4 DestroyStageEventContext
+#define func_ov001_02069214 ReleaseAllTaskNodes
 #define DeferredDraw_Release_02036b20 DeferredDraw_Release
 #define DestroyFieldObjectManager_0207ed6c DestroyFieldObjectManager
 #define LoadSeqArcIfChanged_0204d5f0 LoadSeqArcIfChanged

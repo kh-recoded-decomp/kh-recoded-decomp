@@ -6,8 +6,8 @@
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define func_01ffa0f4 VEC_Distance
 #define func_ov001_020863f4 func_ov001_0208641c
-#define func_ov001_0208723c func_ov001_02087264
+#define func_ov001_0208723c GetFieldEntryListHead
 #define func_ov001_02087928 ForwardToActiveServiceWithResult
-#define func_ov001_02087944 func_ov001_0208796c
+#define func_ov001_02087944 FindNextActiveStageEventIfActive
 #define func_ov052_020ceb54 func_ov052_020ceb74
 #include "src/ov052/unclassified_helpers/BuildApproachChoices_020cc66c.c"

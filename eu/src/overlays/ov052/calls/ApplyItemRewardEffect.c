@@ -1,3 +1,4 @@
+#define func_ov001_0206dc38 GetManagedActorCount
 #define AddClampedHealth_020a75ec AddClampedHealth
 #define AddSessionCounter_02063a80 AddSessionCounter
 #define AddSlotItemUses_02050408 AddSlotItemUses

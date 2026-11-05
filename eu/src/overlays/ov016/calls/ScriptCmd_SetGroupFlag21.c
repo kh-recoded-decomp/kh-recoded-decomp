@@ -1,6 +1,6 @@
 #define ScriptCmd_SetGroupFlag21_020a21e8 ScriptCmd_SetGroupFlag21
 #define ScriptVm_ConsumeOperandInt_020a1de0 ScriptVm_ConsumeOperandInt
 #define SetGroupMembersFlag21_020a6cfc SetGroupMembersFlag21
-#define func_ov001_02087204 func_ov001_0208722c
-#define func_ov001_02087214 func_ov001_0208723c
+#define func_ov001_02087204 GetFieldEntryPoolCount
+#define func_ov001_02087214 GetFieldEntryPoolAtIndex
 #include "src/ov016/script_commands/ScriptCmd_SetGroupFlag21_020a21e8.c"

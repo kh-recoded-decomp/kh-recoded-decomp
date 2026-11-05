@@ -1,7 +1,8 @@
+#define func_ov001_0206b940 InitFieldEntryTargetReference
 #define CheckSideOffsetInRange_0206b3d4 CheckSideOffsetInRange
 #define ScanObjectsForSideTarget_0206b2c0 ScanObjectsForSideTarget
 #define func_ov001_0206b614 IsEntryWithinFacingRange
 #define func_ov001_020863f4 func_ov001_0208641c
-#define func_ov001_0208723c func_ov001_02087264
+#define func_ov001_0208723c GetFieldEntryListHead
 #define g_manager_020a0484 data_ov001_020a04a4
 #include "src/ov001/shared_engine/ScanObjectsForSideTarget_0206b2c0.c"

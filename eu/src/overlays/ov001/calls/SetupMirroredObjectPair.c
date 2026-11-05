@@ -1,4 +1,4 @@
-#define NNS_FndInitListWithOffset0_0206ad28 func_ov001_0206ad28
+#define NNS_FndInitListWithOffset0_0206ad28 DrawSpriteFrameQuadWithoutDepthUpdate
 #define SetupMirroredObjectPair_0206c218 SetupMirroredObjectPair
 #define data_ov001_020a0484 data_ov001_020a04a4
 #include "src/ov001/shared_engine/SetupMirroredObjectPair_0206c218.c"

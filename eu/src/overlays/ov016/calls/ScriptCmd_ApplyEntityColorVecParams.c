@@ -1,7 +1,7 @@
 #define ScriptCmd_ApplyEntityColorVecParams_020a20c0 ScriptCmd_ApplyEntityColorVecParams
 #define ScriptCmd_ReadEntityParams_020a1e64 ScriptCmd_ReadEntityParams
 #define ScriptVm_ConsumeOperandInt_020a1de0 ScriptVm_ConsumeOperandInt
-#define func_ov001_02087214 func_ov001_0208723c
+#define func_ov001_02087214 GetFieldEntryPoolAtIndex
 #define func_ov016_020a2064 func_ov016_020a2084
 #define func_ov016_020a6338 SpawnFieldObjectTree
 #include "src/ov016/script_commands/ScriptCmd_ApplyEntityColorVecParams_020a20c0.c"

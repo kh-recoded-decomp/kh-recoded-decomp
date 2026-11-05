@@ -1,4 +1,4 @@
 #define QueryLinkTarget_02080a78 QueryLinkTarget
-#define func_ov001_0207f038 func_ov001_0207f060
-#define func_ov001_02087224 func_ov001_0208724c
+#define func_ov001_0207f038 GetFieldObjectByClassAndIndex
+#define func_ov001_02087224 GetFieldEntryByPoolAndIndex
 #include "src/ov001/unclassified_helpers/QueryLinkTarget_02080a78.c"

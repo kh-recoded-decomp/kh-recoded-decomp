@@ -1,5 +1,5 @@
 #define FixedPointMultiply12 FX_Mul
-#define NNS_FndInitListWithOffset0_0206ad28 func_ov001_0206ad28
+#define NNS_FndInitListWithOffset0_0206ad28 DrawSpriteFrameQuadWithoutDepthUpdate
 #define PopupSprites_Draw_020cf6cc PopupSprites_Draw
 #define func_0204a174 EaseProgress
 #include "src/ov059/unclassified_helpers/PopupSprites_Draw_020cf6cc.c"

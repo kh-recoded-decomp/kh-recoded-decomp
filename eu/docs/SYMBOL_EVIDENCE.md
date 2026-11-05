@@ -526,3 +526,14 @@ records script control, byte-format parsing, strided render output, asynchronous
 I/O, caption copy/cache ownership and code-backup restoration. Five existing
 descriptive names are corrected; inherited native ABI limits remain explicit.
 The subtitle document now identifies the presented-page timer correctly.
+
+## Field objects, timer/task work and stage services
+
+One hundred fourteen entrypoints now name separate field-object/entry pools,
+scene-entry BGM access, queued events, timers, target references, screen/message
+work and stage-service adapters.
+[FIELD_OBJECT_TASK_TARGET_CONTRACTS.md](FIELD_OBJECT_TASK_TARGET_CONTRACTS.md)
+records list strides, real callback/veneer inputs and returns, per-channel time
+units, task versus heap ownership, stage guards and unresolved flag meanings.
+SceneEntry byte members and setters at +0x18/+0x19 now use their demonstrated
+BGM role, preserving all layout and native code.

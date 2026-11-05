@@ -7,5 +7,5 @@
 #define data_0205356c gSinFx12Table
 #define func_01ff9f88 VEC_Normalize
 #define func_01ffa0f4 VEC_Distance
-#define func_ov001_0207f870 func_ov001_0207f898
+#define func_ov001_0207f870 CallFieldObjectHook13IfPresent
 #include "src/ov001/shared_engine/IsActorTargetable_0206b4a4.c"

@@ -1,4 +1,7 @@
+#define func_ov001_02068e80 GetSessionElapsedMilliseconds
+#define func_ov001_02068e8c GetSessionTimerChannel1Milliseconds
+#define func_ov001_02068ea4 GetFieldTimerCounterMilliseconds
 #define EventTrigger_CheckCounterGoal_02069830 EventTrigger_CheckCounterGoal
 #define GetClampedTimerValue_02063f90 GetClampedTimerValue
-#define NodeGetResult_02069434 func_ov001_02069434
+#define NodeGetResult_02069434 GetFieldTaskResult
 #include "src/ov001/shared_engine/EventTrigger_CheckCounterGoal_02069830.c"

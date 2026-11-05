@@ -1,8 +1,9 @@
+#define func_ov001_0206b948 InitStageSlotTargetReference
 #define CheckSideOffsetInRange_0206b3d4 CheckSideOffsetInRange
 #define ScanRecordSlotsForSideTarget_0206b334 ScanRecordSlotsForSideTarget
 #define StageRecord_GetSlotPosition_02087c4c StageRecord_GetSlotPosition
 #define func_ov001_0206b800 IsEventSlotInRange
 #define func_ov001_02087928 ForwardToActiveServiceWithResult
-#define func_ov001_02087944 func_ov001_0208796c
+#define func_ov001_02087944 FindNextActiveStageEventIfActive
 #define g_manager_020a0484 data_ov001_020a04a4
 #include "src/ov001/shared_engine/ScanRecordSlotsForSideTarget_0206b334.c"

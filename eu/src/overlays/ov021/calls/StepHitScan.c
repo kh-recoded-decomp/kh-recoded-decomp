@@ -2,8 +2,8 @@
 #define ResolveHitContacts_020abc40 ResolveHitContacts
 #define ResolveNearestHitNode_020aba18 ResolveNearestHitNode
 #define StepHitScan_020ac164 StepHitScan
-#define func_ov001_0207f08c func_ov001_0207f0b4
-#define func_ov001_0208723c func_ov001_02087264
+#define func_ov001_0207f08c GetFieldObjectListHead
+#define func_ov001_0208723c GetFieldEntryListHead
 #define func_ov001_02087884 ForwardToActiveService
 #define func_ov021_020ab930 ResolveFieldObjectHits
 #define func_ov021_020abe54 ProbeIdleActorContact

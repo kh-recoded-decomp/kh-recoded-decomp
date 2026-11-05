@@ -1,6 +1,6 @@
 #define ApplyModeToGroupFollowers_020bc3b0 ApplyModeToGroupFollowers
 #define SpawnSoundSlot_0204da8c SpawnSoundSlot
 #define UpdateFieldObjectModeTransition_020bc4f8 UpdateFieldObjectModeTransition
-#define func_ov001_0208635c func_ov001_02086384
+#define func_ov001_0208635c GetEntryPoolObjectAtIndex
 #define func_ov032_020bbf48 BeginRowNibbleChange
 #include "src/ov032/unclassified_helpers/UpdateFieldObjectModeTransition_020bc4f8.c"

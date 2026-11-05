@@ -1,7 +1,7 @@
 #define data_ov035_020bc4e0 gMovieContextState
 #define ResetAreaGroupObjects_020bdaa8 ResetAreaGroupObjects
 #define SendStateEvent10_020a35bc SendStateEvent10
-#define func_ov001_0208635c func_ov001_02086384
-#define func_ov001_02087214 func_ov001_0208723c
+#define func_ov001_0208635c GetEntryPoolObjectAtIndex
+#define func_ov001_02087214 GetFieldEntryPoolAtIndex
 #define func_ov035_020bae64 func_ov035_020bae84
 #include "src/ov040/shared_engine/ResetAreaGroupObjects_020bdaa8.c"

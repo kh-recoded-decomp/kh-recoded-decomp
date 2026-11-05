@@ -57,7 +57,7 @@ extern const VecFx32 gZeroVecFx32;
 
 extern ObjectGroup *func_ov032_020bbc80(GroupObject *object);
 extern GroupMemberWork *func_ov032_020bbc98(GroupObject *object);
-extern GroupObject *func_ov001_02086384(void *world, int index);
+extern GroupObject *GetEntryPoolObjectAtIndex(void *world, int index);
 extern VecFx32 *GetManagedActorPosition(int index);
 extern void ComputeGroupOrbitPosition(GroupObject *object, VecFx32 *target);
 extern void ComputeGroupAimDelta(GroupObject *object, GroupObject *leader, VecFx32 *delta);
@@ -96,7 +96,7 @@ void UpdateBouncingGroupMember(GroupObject *object)
     zero = gZeroVecFx32;
     delta = gZeroVecFx32;
     if (work->followLink != -1) {
-        leader = func_ov001_02086384(world, work->followLink);
+        leader = GetEntryPoolObjectAtIndex(world, work->followLink);
         leaderWork = func_ov032_020bbc98(leader);
     }
     switch (work->state) {

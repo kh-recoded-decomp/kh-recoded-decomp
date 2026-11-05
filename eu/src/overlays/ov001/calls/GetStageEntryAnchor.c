@@ -1,3 +1,5 @@
+#define func_ov001_0206dc38 GetManagedActorCount
+#define func_ov001_0206dc60 GetManagedActorPositionWithCallback
 #define GetStageEntryAnchor_02099058 GetStageEntryAnchor
 #define data_02053438 gZeroVecFx32
 #define g_stageManager_020a0508 gStageManager

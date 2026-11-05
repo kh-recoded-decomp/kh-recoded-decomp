@@ -4,5 +4,5 @@
 #define IsStageEventReady_02087c78 IsStageEventReady
 #define StageRecord_ClearStateIfMatches_02087d4c StageRecord_ClearStateIfMatches
 #define func_ov001_02087928 ForwardToActiveServiceWithResult
-#define func_ov001_02087944 func_ov001_0208796c
+#define func_ov001_02087944 FindNextActiveStageEventIfActive
 #include "src/ov058/unclassified_helpers/ClearStageEventsAndPlayerFlags_020d7404.c"

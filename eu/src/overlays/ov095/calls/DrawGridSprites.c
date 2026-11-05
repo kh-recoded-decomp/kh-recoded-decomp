@@ -1,3 +1,4 @@
+#define func_ov001_0206ad28 DrawSpriteFrameQuadWithoutDepthUpdate
 #define DrawGridSprites_020c0730 DrawGridSprites
 #define IsEntryFlagSet_020c1320 IsEntryFlagSet_020c1340
 #define MI_CpuCopy8_01ff89a8 MI_CpuCopy8

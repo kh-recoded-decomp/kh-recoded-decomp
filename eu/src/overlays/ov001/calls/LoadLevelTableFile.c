@@ -5,5 +5,5 @@
 #define findSharedResourceByName_0202cd8c findSharedResourceByName
 #define func_0202c478 Archive_LoadFile
 #define func_ov001_02068604 BuildUniqueItemPriceList
-#define func_ov001_020876b0 func_ov001_020876d8
+#define func_ov001_020876b0 BeginStageEntriesIfActive
 #include "src/ov001/unclassified_helpers/LoadLevelTableFile_020686d4.c"

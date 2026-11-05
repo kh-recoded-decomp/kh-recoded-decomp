@@ -51,7 +51,7 @@ extern void AddSessionCounter(int index, int amount);
 extern void Flags16_ClearBit1(void *target);
 extern u8 *ActorRegistry_GetEntityByIndex(int actorId);
 extern void RebindAnimTracks(void *anim, int blendIndex, int frame);
-extern LinkedObject *func_ov001_02086384(void *manager, int index);
+extern LinkedObject *GetEntryPoolObjectAtIndex(void *manager, int index);
 extern void *FindInactiveAncestor(DropObject *self);
 extern void *FindInactiveOwnerAncestor(DropObject *self);
 extern void func_ov017_020a525c(void *target, DropObject *self);
@@ -86,7 +86,7 @@ int FieldDrop_OnCollect(DropObject *self, DropEvent *event)
     RebindAnimTracks(ActorRegistry_GetEntityByIndex(self->actorId) + 4, 1, 0);
     Flags16_ClearBit1(ActorRegistry_GetEntityByIndex(self->actorId) + 4);
     self->flags |= 0x10;
-    func_ov001_02086384(self->manager, self->linkIndex)->flags |= 4;
+    GetEntryPoolObjectAtIndex(self->manager, self->linkIndex)->flags |= 4;
     target = FindInactiveAncestor(self);
     if (target) {
         func_ov017_020a525c(target, self);

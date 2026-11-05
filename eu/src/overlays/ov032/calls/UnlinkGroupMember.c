@@ -1,5 +1,5 @@
 #define UnlinkGroupMember_020bd518 UnlinkGroupMember
-#define func_ov001_0208635c func_ov001_02086384
+#define func_ov001_0208635c GetEntryPoolObjectAtIndex
 #define func_ov032_020bbc60 func_ov032_020bbc80
 #define func_ov032_020bc148 AdvanceRowSequenceStep
 #include "src/ov032/object_group/UnlinkGroupMember_020bd518.c"

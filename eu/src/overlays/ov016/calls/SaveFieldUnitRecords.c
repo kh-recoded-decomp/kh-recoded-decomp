@@ -79,7 +79,7 @@ typedef struct FieldUnit {
 
 extern UnitRecord *AllocEffectBufferSlot(FieldUnit *unit, u32 size);
 extern void *GetFieldUnitSlotRecord(FieldUnit *unit, UnitRecord *records);
-extern UnitObject *func_ov001_02086384(FieldUnit *unit, int index);
+extern UnitObject *GetEntryPoolObjectAtIndex(FieldUnit *unit, int index);
 extern void MIi_CpuCopyFast(const void *src, void *dst, u32 size);
 
 void SaveFieldUnitRecords(FieldUnit *unit)
@@ -90,7 +90,7 @@ void SaveFieldUnitRecords(FieldUnit *unit)
 
     for (i = 0; i < unit->count; i++) {
         UnitRecord *record = &records[i];
-        UnitObject *object = func_ov001_02086384(unit, i);
+        UnitObject *object = GetEntryPoolObjectAtIndex(unit, i);
 
         if ((object->flags & 0x2000000) || object->visible) {
             record->active = 1;

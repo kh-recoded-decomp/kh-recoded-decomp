@@ -22,11 +22,11 @@
 #define func_ov040_020bc858 BuildAreaObjectLists
 #define func_ov040_020bc970 func_ov040_020bc990
 #define func_ov040_020bc990 SortObjectsIntoAreaGroups
-#define func_ov001_0207f018 func_ov001_0207f040
-#define func_ov001_0207f028 func_ov001_0207f050
+#define func_ov001_0207f018 GetFieldObjectClassCount
+#define func_ov001_0207f028 GetFieldObjectClassAtIndex
 #define func_ov007_020a1b18 ResetSlotFlags
 #define func_ov035_020bafb4 func_ov035_020bafd4
-#define func_ov001_02087214 func_ov001_0208723c
+#define func_ov001_02087214 GetFieldEntryPoolAtIndex
 #define func_ov019_020a3608 EnsureOwnedEntryGroup
 #define StoreToGlobalPtr4Field28_0202a778 StoreToGlobalPtr4Field28
 #define func_ov001_02087fd4 ResetReadyStageEvents

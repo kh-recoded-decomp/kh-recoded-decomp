@@ -1,3 +1,4 @@
+#define func_ov001_0206dc38 GetManagedActorCount
 #define func_ov001_0206dc4c GetManagedActorPosition
 #define CanOpenFieldMenu_020735d8 CanOpenFieldMenu
 #define CopySourceBlock_020b9f7c CopySourceBlock

@@ -1,3 +1,3 @@
-#define AlarmCallback_0206ad1c func_ov001_0206ad1c
+#define AlarmCallback_0206ad1c DrawSpriteFrameQuadWithDepthUpdate
 #define FlushScrolledEntryPosition_0206c8ec FlushScrolledEntryPosition
 #include "src/ov001/unclassified_helpers/FlushScrolledEntryPosition_0206c8ec.c"

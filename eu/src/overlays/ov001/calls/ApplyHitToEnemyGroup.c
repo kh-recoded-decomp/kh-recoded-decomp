@@ -32,7 +32,7 @@
 #define func_ov001_02093188 ResetStageActorFlags
 #define func_ov001_02097a84 ComputeAttackDamage_02097aac
 #define func_ov001_0209c3c0 GetStageManager
-#define func_ov001_0209c544 func_ov001_0209c56c
+#define func_ov001_0209c544 RequestSceneEventWhenSessionState6
 #define func_ov001_0209d064 func_ov001_0209d08c
 #define nextRandom12_0202aa58 nextRandom12
 #define random_next_scaled_0202aa04 random_next_scaled

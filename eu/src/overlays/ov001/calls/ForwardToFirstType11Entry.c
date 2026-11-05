@@ -1,5 +1,5 @@
 #define ForwardToFirstType11Entry_0208279c ForwardToFirstType11Entry
-#define func_ov001_0207f018 func_ov001_0207f040
-#define func_ov001_0207f028 func_ov001_0207f050
+#define func_ov001_0207f018 GetFieldObjectClassCount
+#define func_ov001_0207f028 GetFieldObjectClassAtIndex
 #define func_ov001_020827d4 LaunchMatchingFieldObject
 #include "src/ov001/unclassified_helpers/ForwardToFirstType11Entry_0208279c.c"

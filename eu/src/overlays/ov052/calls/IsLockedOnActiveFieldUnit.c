@@ -1,4 +1,4 @@
 #define IsFieldUnitAction7_020a6a80 IsFieldUnitAction7
 #define IsLockedOnActiveFieldUnit_020d10f0 IsLockedOnActiveFieldUnit
-#define func_ov001_02087224 func_ov001_0208724c
+#define func_ov001_02087224 GetFieldEntryByPoolAndIndex
 #include "src/ov052/unclassified_helpers/IsLockedOnActiveFieldUnit_020d10f0.c"

@@ -11,8 +11,8 @@ extern Session *data_ov001_020a0480;
 extern void DeactivateManagerEntries(void);
 extern void SetFieldEntriesPaused(s32 enable);
 extern void SetSubModeFrozen(s32 value);
-extern void func_ov001_0207ef44(void);
-extern int func_ov001_0206dc38(void);
+extern void RefreshFieldObjectsAndEntryActorSlots(void);
+extern int GetManagedActorCount(void);
 extern int GetManagedActorPosition(int index);
 extern u16 GetBiasAdjustedField(int index);
 extern void StoreSessionSpawnPoint(int index, int value, u16 field);
@@ -37,8 +37,8 @@ void func_ov001_0206375c(void) {
     DeactivateManagerEntries();
     SetFieldEntriesPaused(1);
     SetSubModeFrozen(0);
-    func_ov001_0207ef44();
-    for (index = 0; index < func_ov001_0206dc38(); index++) {
+    RefreshFieldObjectsAndEntryActorSlots();
+    for (index = 0; index < GetManagedActorCount(); index++) {
         StoreSessionSpawnPoint(index, GetManagedActorPosition(index), GetBiasAdjustedField(index));
     }
     ResumeTaskAndClearFlags();

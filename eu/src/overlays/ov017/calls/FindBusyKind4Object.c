@@ -1,3 +1,3 @@
 #define FindBusyKind4Object_020a4b68 FindBusyKind4Object
-#define func_ov001_0208635c func_ov001_02086384
+#define func_ov001_0208635c GetEntryPoolObjectAtIndex
 #include "src/ov017/field_objects/FindBusyKind4Object_020a4b68.c"

@@ -1,5 +1,5 @@
 #define ScriptOp_SetObjectFlag6_020806f0 ScriptOp_SetObjectFlag6
 #define ScriptVm_ReadOperandFx32_02025df8 ScriptVm_ReadOperandFx32
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
-#define func_ov001_0207f038 func_ov001_0207f060
+#define func_ov001_0207f038 GetFieldObjectByClassAndIndex
 #include "src/ov001/scripted_actor_behavior/ScriptOp_SetObjectFlag6_020806f0.c"

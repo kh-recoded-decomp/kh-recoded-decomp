@@ -24,8 +24,8 @@ extern BOOL IsEntryFlag2Active(int index);
 extern int QueueSoundKind4(int track, int fade);
 extern int IsFieldTrackFlagSet(void);
 extern BOOL IsSceneState4(void);
-extern u8 func_ov001_02068094(int index);
-extern u8 func_ov001_020680b0(int index);
+extern u8 GetSceneEntryPrimaryBgmId(int index);
+extern u8 GetSceneEntrySecondaryBgmId(int index);
 
 void UpdateFieldBgm(FieldSession *session) {
     BgmState *bgm = &session->bgm;
@@ -68,7 +68,7 @@ void UpdateFieldBgm(FieldSession *session) {
             return;
         }
         bgm->timer = 0;
-        bgm->track = func_ov001_020680b0(func_ov001_02067ed4());
+        bgm->track = GetSceneEntrySecondaryBgmId(func_ov001_02067ed4());
         QueueSoundKind4(bgm->track, 30);
         bgm->mode = 1;
         return;
@@ -82,11 +82,11 @@ void UpdateFieldBgm(FieldSession *session) {
         } else {
             bgm->timer++;
         }
-    } else if (bgm->track != func_ov001_02068094(func_ov001_02067ed4())) {
+    } else if (bgm->track != GetSceneEntryPrimaryBgmId(func_ov001_02067ed4())) {
         change = TRUE;
     }
     if (change) {
-        bgm->track = func_ov001_02068094(func_ov001_02067ed4());
+        bgm->track = GetSceneEntryPrimaryBgmId(func_ov001_02067ed4());
         QueueSoundKind4(bgm->track, 30);
         bgm->mode = 2;
     }

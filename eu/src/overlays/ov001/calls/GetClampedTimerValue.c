@@ -1,3 +1,4 @@
+#define func_ov001_02068ea4 GetFieldTimerCounterMilliseconds
 #define func_ov001_020645c8 IsSessionFlagSet
 #define GetClampedTimerValue_02063f90 GetClampedTimerValue
 #define data_ov001_020a0460 data_ov001_020a0480

@@ -9,6 +9,6 @@
 #define data_ov035_020bc4e0 gMovieContextState
 #define func_020351b8 QueryModelSegmentCollision
 #define func_02036230 GetActorRegistry
-#define func_ov001_0207f038 func_ov001_0207f060
-#define func_ov001_02087224 func_ov001_0208724c
+#define func_ov001_0207f038 GetFieldObjectByClassAndIndex
+#define func_ov001_02087224 GetFieldEntryByPoolAndIndex
 #include "src/ov035/shared_engine/OnGroupEventFinished_020bb1ac.c"

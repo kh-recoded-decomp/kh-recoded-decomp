@@ -1,3 +1,4 @@
+#define func_ov001_020681e8 WorldNamedEntryHasKind
 #define AnyLinkedObjectHasStateSeven_020a9474 AnyLinkedObjectHasStateSeven
 #define func_0203625c GetWorldMeshNamedEntry
 #include "src/ov021/object_state/AnyLinkedObjectHasStateSeven_020a9474.c"

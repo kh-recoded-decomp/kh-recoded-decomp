@@ -1,4 +1,4 @@
 #define FindLivePrevLink_020a2098 FindLivePrevLink
 #define IsDestroyed_020a31f8 IsDestroyed
-#define func_ov001_0208635c func_ov001_02086384
+#define func_ov001_0208635c GetEntryPoolObjectAtIndex
 #include "src/ov019/unclassified_helpers/FindLivePrevLink_020a2098.c"

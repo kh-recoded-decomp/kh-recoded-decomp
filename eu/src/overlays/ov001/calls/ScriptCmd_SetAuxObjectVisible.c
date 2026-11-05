@@ -1,5 +1,5 @@
 #define ScriptCmd_SetAuxObjectVisible_0207ffbc ScriptCmd_SetAuxObjectVisible
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
-#define func_ov001_02087224 func_ov001_0208724c
+#define func_ov001_02087224 GetFieldEntryByPoolAndIndex
 #define func_ov001_02087258 CacheEntry_SetActive
 #include "src/ov001/scripted_actor_behavior/ScriptCmd_SetAuxObjectVisible_0207ffbc.c"

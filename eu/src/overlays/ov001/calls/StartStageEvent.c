@@ -5,7 +5,7 @@
 #define LoadStageResource_0209a784 LoadStageResource
 #define RegisterSessionCallback_0206c704 RegisterSessionCallback
 #define RemapGroupMemberId_0209cfcc RemapGroupMemberId
-#define Session_Exists_0206c768 func_ov001_0206c768
+#define Session_Exists_0206c768 HasSessionCallbackTaskHandle
 #define StartStageEvent_0209a174 StartStageEvent
 #define func_ov001_02099a84 DrawVisibleStageQuads
 #define func_ov001_0209a4bc SpawnStageResourceTree

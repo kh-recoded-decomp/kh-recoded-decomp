@@ -2,5 +2,5 @@
 #define ScriptVm_ReadOperandFx32_02025df8 ScriptVm_ReadOperandFx32
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
 #define SetTargetPosition_020a1b64 SetTargetPosition_020a1b84
-#define func_ov001_0207f038 func_ov001_0207f060
+#define func_ov001_0207f038 GetFieldObjectByClassAndIndex
 #include "src/ov007/shared_engine/ScriptCmd_SetActorTarget_020a07f0.c"

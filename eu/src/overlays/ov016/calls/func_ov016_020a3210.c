@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-extern unsigned int func_ov001_02086384();
+extern unsigned int GetEntryPoolObjectAtIndex();
 extern unsigned int IsNodeFlagBitClear();
 extern unsigned int UpdateFieldObjectHighlight();
 
@@ -14,7 +14,7 @@ void func_ov016_020a3210(int owner) {
   index = 0;
   if (index < (int)(u32)*(u16 *)(entry + 0x3e)) {
     do {
-      entry = func_ov001_02086384(entry,index);
+      entry = GetEntryPoolObjectAtIndex(entry,index);
       active = IsNodeFlagBitClear();
       if (active != 0) {
         if (*(int *)(entry + 0x3c) + 0x1800 < 0x80) {

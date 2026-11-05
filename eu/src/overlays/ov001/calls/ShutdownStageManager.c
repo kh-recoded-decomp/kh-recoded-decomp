@@ -5,7 +5,7 @@
 #define ReleaseResourceAndDetach_0202eee8 ReleaseResourceAndDetach
 #define ReleaseSlotActor_02098360 ReleaseSlotActor
 #define RemoveTaggedListEntries_0206c720 RemoveTaggedListEntries
-#define Session_Exists_0206c768 func_ov001_0206c768
+#define Session_Exists_0206c768 HasSessionCallbackTaskHandle
 #define SetDefaultHeap_0202a134 SetDefaultHeap
 #define ShutdownStageManager_0209b650 ShutdownStageManager
 #define ZeroHalfThenFree_0202cd78 ZeroHalfThenFree

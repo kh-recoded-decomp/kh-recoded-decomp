@@ -9,7 +9,7 @@ typedef struct ScriptOperand {
 
 extern int ScriptVm_ReadOperandInt(void *vm, ScriptOperand *operand);
 extern fx32 ScriptVm_ReadOperandFx32(void *vm, ScriptOperand *operand);
-extern void *func_ov001_0208723c(int tableIndex);
+extern void *GetFieldEntryPoolAtIndex(int tableIndex);
 extern void SpawnPanelBlock(void *table, u16 objectId, int slot, u16 packedLow, u8 packedHigh, VecFx32 *position,
                                 s8 sizeX, s8 sizeY, s8 sizeZ, fx32 param);
 
@@ -33,7 +33,7 @@ int func_ov020_020a1e30(void *vm, ScriptOperand *operands)
     sizeY = ScriptVm_ReadOperandInt(vm, operands + 9);
     sizeZ = ScriptVm_ReadOperandInt(vm, operands + 10);
 
-    SpawnPanelBlock(func_ov001_0208723c(tableIndex), objectId, slot, packed, (u16)(packed >> 16), &position,
+    SpawnPanelBlock(GetFieldEntryPoolAtIndex(tableIndex), objectId, slot, packed, (u16)(packed >> 16), &position,
                         sizeX, sizeY, sizeZ, param);
     return 1;
 }

@@ -1,6 +1,6 @@
 #define ApplyLinkedObjectMotion_020c9874 ApplyLinkedObjectMotion
 #define ForwardIfWorkMode12_0207fa14 ForwardIfWorkMode12
-#define func_ov001_0207f038 func_ov001_0207f060
+#define func_ov001_0207f038 GetFieldObjectByClassAndIndex
 #define func_ov001_020863cc func_ov001_020863f4
-#define func_ov001_02087224 func_ov001_0208724c
+#define func_ov001_02087224 GetFieldEntryByPoolAndIndex
 #include "src/ov052/actor_motion/ApplyLinkedObjectMotion_020c9874.c"

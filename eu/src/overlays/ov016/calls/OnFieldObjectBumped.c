@@ -1,4 +1,4 @@
 #define OnFieldObjectBumped_020a3354 OnFieldObjectBumped
 #define PairFieldObjects_020a37f0 PairFieldObjects
-#define func_ov001_02087224 func_ov001_0208724c
+#define func_ov001_02087224 GetFieldEntryByPoolAndIndex
 #include "src/ov016/field_objects/OnFieldObjectBumped_020a3354.c"

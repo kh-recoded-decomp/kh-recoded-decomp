@@ -1,5 +1,5 @@
 #define DestroyEntryPool_02086298 DestroyEntryPool
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define Obj_ConditionalShutdown_020368c8 Obj_ConditionalShutdown
-#define func_ov001_0208635c func_ov001_02086384
+#define func_ov001_0208635c GetEntryPoolObjectAtIndex
 #include "src/ov001/unclassified_helpers/DestroyEntryPool_02086298.c"

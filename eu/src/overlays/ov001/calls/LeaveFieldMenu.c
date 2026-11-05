@@ -1,3 +1,4 @@
+#define func_ov001_02068e44 ResumeSessionTimerUpdates
 #define LeaveFieldMenu_02061fc0 LeaveFieldMenu
 #define func_ov046_020c0e38 Camera_RestoreSnapshot
 #define Panel_SetFormationType_0207b478 Panel_SetFormationType

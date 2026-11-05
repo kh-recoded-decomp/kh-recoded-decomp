@@ -3,5 +3,5 @@
 #define ResizeBoxCollisionObject_02033e6c ResizeBoxCollisionObject
 #define SyncKind7EntryStackHeight_020a5a90 SyncKind7EntryStackHeight
 #define func_02036240 ActorRegistry_GetEntityByIndex
-#define func_ov001_0208635c func_ov001_02086384
+#define func_ov001_0208635c GetEntryPoolObjectAtIndex
 #include "src/ov017/field_objects/SyncKind7EntryStackHeight_020a5a90.c"

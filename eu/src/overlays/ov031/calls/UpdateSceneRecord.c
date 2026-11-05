@@ -15,9 +15,9 @@
 #define UpdateSceneRecord_020babf8 UpdateSceneRecord
 #define func_02036230 GetActorRegistry
 #define func_ov001_0207b49c func_ov001_0207b4c4
-#define func_ov001_0208723c func_ov001_02087264
+#define func_ov001_0208723c GetFieldEntryListHead
 #define func_ov001_02087928 ForwardToActiveServiceWithResult
-#define func_ov001_02087944 func_ov001_0208796c
+#define func_ov001_02087944 FindNextActiveStageEventIfActive
 #define func_ov031_020bb5d8 func_ov031_020bb5f8
 #define func_ov031_020bc700 func_ov031_020bc720
 #define g_activeState_020bc800 data_ov031_020bc820

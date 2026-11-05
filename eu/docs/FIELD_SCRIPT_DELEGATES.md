@@ -51,7 +51,7 @@ inside the handler only where indicated.
 - `ScriptCmd_ResetOverlaySelection` delegates to `ResetOverlaySelection`: Stores stepIndex=-1 in ov031 state, advances step and updates menu presentation through existing helper.
 - `ScriptCmd_LoadCenteredScreenSprite` delegates to `LoadCenteredScreenSprite`: Selects fixed variant mapping, loads corresponding texture, marks visible and copies centered sprite position.
 - `ScriptCmd_AdvanceRecordStep` delegates to `AdvanceRecordStep`: Increments ov031 stepIndex, dispatches stepCodes[index] when in range, otherwise advances record/end or backs index down.
-- `ScriptCmd_AddStageSlotLock1` delegates to `StageEvent_SetHoldBit1`: When stage events active, calls func_ov001_0209b660 -> AddStageSlotLocks(index,1). AddStageSlotLocks ORs lockMask and marks active/pending when state==2.
+- `ScriptCmd_AddStageSlotLock1` delegates to `StageEvent_SetHoldBit1`: When stage events active, calls AddStageSlotLock1 -> AddStageSlotLocks(index,1). AddStageSlotLocks ORs lockMask and marks active/pending when state==2.
 - `ScriptCmd_TryActivateStageSlot` delegates to `TryActivateStageSlot`: When stage events active, calls ActivateStageSlot; valid index sets slot.active=1 and slot.pending=0.
 - `ScriptCmd_SaveCurrentSpawnPoint` delegates to `SaveCurrentSpawnPoint`: Copies indexed current position/angle to saved position/angle in session.
 - `ScriptCmd_SetMenuHighlight` delegates to `SetMenuHighlight`: If menu context exists, replaces flag mask 4 based on enable and calls menu-open/reset-request helpers.

@@ -1,4 +1,4 @@
-#define NNS_FndInitListWithOffset0_0206ad28 func_ov001_0206ad28
+#define NNS_FndInitListWithOffset0_0206ad28 DrawSpriteFrameQuadWithoutDepthUpdate
 #define PlaceCornerItems_0206c124 PlaceCornerItems
 #define SampleTweenValue_0205258c SampleTweenValue
 #define UpdateCornerSpread_0206c048 UpdateCornerSpread

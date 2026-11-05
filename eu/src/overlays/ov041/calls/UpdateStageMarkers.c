@@ -1,7 +1,7 @@
 #include "nitro/types.h"
 #include "src/overlays/ov041/StageResources.h"
 
-extern void func_ov001_0206ad1c(StageMarker *marker);
+extern void DrawSpriteFrameQuadWithDepthUpdate(StageMarker *marker);
 
 /* Each frame: draws every shown marker and counts its timer down (persistent ones keep theirs); frees it at zero. */
 void UpdateStageMarkers(void)
@@ -16,7 +16,7 @@ void UpdateStageMarkers(void)
 
             if (markers[i].flags & STAGE_MARKER_VISIBLE) {
                 if (markers[i].timer != 0) {
-                    func_ov001_0206ad1c(&markers[i]);
+                    DrawSpriteFrameQuadWithDepthUpdate(&markers[i]);
                     if (!(markers[i].flags & STAGE_MARKER_PERSISTENT)) {
                         markers[i].timer--;
                     }

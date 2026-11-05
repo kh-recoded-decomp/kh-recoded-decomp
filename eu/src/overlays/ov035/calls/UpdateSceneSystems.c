@@ -8,7 +8,7 @@ extern unsigned int UpdatePrizeOrbs(void);
 extern unsigned int func_020bd17c(unsigned int);
 extern unsigned int UpdateSceneAnimsAndCaption(unsigned int);
 extern unsigned int UpdatePartyEntries(unsigned int);
-extern unsigned int func_ov001_0206dc38(void);
+extern unsigned int GetManagedActorCount(void);
 extern unsigned int UpdateFieldObjectStates(unsigned int);
 extern unsigned int func_ov035_020bae84(void);
 extern unsigned int func_ov035_020bae94(void);
@@ -36,7 +36,7 @@ void UpdateSceneSystems(int paused)
             UpdateMaterialFades(result, 0x1000);
         }
     }
-    step = func_ov001_0206dc38();
+    step = GetManagedActorCount();
     if (0 < (int)step) {
         if ((*(u16 *)(work + 0x24) & 8) != 0) {
             UpdatePartyEntries(0x1000);

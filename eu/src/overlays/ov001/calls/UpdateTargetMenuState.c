@@ -1,3 +1,4 @@
+#define func_ov001_0206bc0c IsManagedActorSlot0Empty
 #define func_ov001_02064490 InvokeSessionCheckCallbackOrDefault
 #define ApplyPendingTargetRequest_0206bdbc ApplyPendingTargetRequest
 #define CloseMenuIfTargetLost_0206bc20 CloseMenuIfTargetLost

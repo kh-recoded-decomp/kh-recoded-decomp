@@ -1,3 +1,4 @@
+#define func_ov001_0206a72c BeginFieldScreenModeTransition
 #define NotifyCommSlotIfReady_020ba874 NotifyCommSlotIfReady
 #define g_commState_020bb760 gContinueSceneState
 #define func_ov001_0206a8d4 SetScreenFlag1

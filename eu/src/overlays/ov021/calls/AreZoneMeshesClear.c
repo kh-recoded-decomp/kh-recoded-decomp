@@ -1,3 +1,4 @@
+#define func_ov001_020681e8 WorldNamedEntryHasKind
 #define AreZoneMeshesClear_020a9230 AreZoneMeshesClear
 #define GetWorldMeshNamedEntry_0203625c GetWorldMeshNamedEntry
 #include "src/ov021/unclassified_helpers/AreZoneMeshesClear_020a9230.c"

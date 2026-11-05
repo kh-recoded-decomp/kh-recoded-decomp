@@ -76,7 +76,7 @@ extern BOOL StageEvents_CheckEvent(u16 eventIndex);
 extern int func_ov001_02087784(int objectIndex, u32 entryIndex);
 extern BOOL GetStageEventTargetInfo(u16 id, EventTargetInfo *out);
 extern int func_ov035_020bafd4(void);
-extern StageObject *func_ov001_0208724c(u32 group, u32 index);
+extern StageObject *GetFieldEntryByPoolAndIndex(u32 group, u32 index);
 extern void StartLaunchMotion(WanderObject *object, const VecFx32 *velocity);
 extern void ActorSlot_SetFlag8ByIndex(int index, BOOL enable);
 extern BOOL SweepTouchSphere(WanderObject *owner, const VecFx32 *from, const VecFx32 *delta, VecFx32 *out);
@@ -138,7 +138,7 @@ BOOL UpdateWanderActor(WanderObject *object)
                 object->motion[0].origin.y += 0x800;
             }
         } else if (object->mode == 1) {
-            StageObject *target = func_ov001_0208724c(func_ov035_020bafd4(), object->waitId);
+            StageObject *target = GetFieldEntryByPoolAndIndex(func_ov035_020bafd4(), object->waitId);
             BOOL busy;
 
             if (target->vtable->isBusy == NULL) {

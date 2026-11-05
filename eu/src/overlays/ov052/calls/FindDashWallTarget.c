@@ -1,3 +1,4 @@
+#define func_ov001_020681e8 WorldNamedEntryHasKind
 #define func_ov001_0206db78 GetPlayerControlState
 #define CollisionQuery_Init_02034c74 CollisionQuery_Init
 #define FindDashWallTarget_020c8040 FindDashWallTarget

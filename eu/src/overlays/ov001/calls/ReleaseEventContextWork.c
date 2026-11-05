@@ -1,0 +1,5 @@
+#define NNSi_FndGetCurrentRootHeap GetRunningTaskWork
+#define DestroyEventContext_0206cbb8 ReleaseEventContextWork
+#define Ov002_ResetLinkState ReleaseEventContextResources
+#define data_020a049c data_ov001_020a04bc
+#include "src/ov001/shared_engine/DestroyEventContext_0206cbb8.c"

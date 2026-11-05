@@ -1,3 +1,3 @@
 #define FindLivePrevBlock_020a27f4 FindLivePrevBlock
-#define func_ov001_0208635c func_ov001_02086384
+#define func_ov001_0208635c GetEntryPoolObjectAtIndex
 #include "src/ov020/unclassified_helpers/FindLivePrevBlock_020a27f4.c"

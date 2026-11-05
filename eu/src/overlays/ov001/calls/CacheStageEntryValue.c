@@ -1,3 +1,4 @@
+#define func_ov001_0206dc38 GetManagedActorCount
 #define CacheStageEntryValue_02099248 CacheStageEntryValue
 #define func_ov001_0206db5c GetBoundedEntryField
 #define g_stageManager_020a0508 gStageManager

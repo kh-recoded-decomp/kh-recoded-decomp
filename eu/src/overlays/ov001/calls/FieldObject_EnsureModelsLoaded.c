@@ -1,5 +1,5 @@
 #define FieldObject_EnsureModelsLoaded_0207f128 FieldObject_EnsureModelsLoaded
 #define IsRecordIdFree_0202c38c IsRecordIdFree
-#define func_ov001_0207f0a8 func_ov001_0207f0d0
-#define func_ov001_0207f0b8 func_ov001_0207f0e0
+#define func_ov001_0207f0a8 RequestFieldObjectAnimationBuffer
+#define func_ov001_0207f0b8 RequestFieldObjectModelResource
 #include "src/ov001/unclassified_helpers/FieldObject_EnsureModelsLoaded_0207f128.c"

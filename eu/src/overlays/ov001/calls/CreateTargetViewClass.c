@@ -6,8 +6,8 @@
 #define SetSessionMarkerActive_02081d6c SetSessionMarkerActive
 #define func_ov001_0207f0d0 AcquireEffectRecordPair
 #define func_ov001_0207f128 FieldObject_EnsureModelsLoaded
-#define func_ov001_0207f1e8 func_ov001_0207f210
-#define func_ov001_0207f244 func_ov001_0207f26c
+#define func_ov001_0207f1e8 FreeFieldObjectClassAnimationBuffers
+#define func_ov001_0207f244 FreeFieldObjectShapeStorage
 #define func_ov001_0207f380 CreateByteGrid
 #define func_ov001_02081aa8 SpawnFieldObjectActor
 #define func_ov001_02081d44 func_ov001_02081d6c

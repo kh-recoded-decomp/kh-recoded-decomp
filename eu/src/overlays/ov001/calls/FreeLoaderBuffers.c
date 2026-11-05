@@ -1,5 +1,5 @@
 #define DefaultStepDone_02036b7c FSi_DefaultStepDoneA
 #define FreeLoaderBuffers_02083a4c FreeLoaderBuffers
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
-#define func_ov001_0207f244 func_ov001_0207f26c
+#define func_ov001_0207f244 FreeFieldObjectShapeStorage
 #include "src/ov001/unclassified_helpers/FreeLoaderBuffers_02083a4c.c"

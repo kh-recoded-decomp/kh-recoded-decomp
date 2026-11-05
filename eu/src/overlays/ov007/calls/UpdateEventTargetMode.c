@@ -16,7 +16,7 @@ typedef struct EventTargetWork {
 extern int VEC_Distance(const void *a, const void *b);
 extern int ScriptCmd_ResetScreenLayer(unsigned int value, int layerId, int channel);
 extern void ConfigureChannelSlot(int channel, int mode, int value);
-extern int func_ov001_0206dc38(void);
+extern int GetManagedActorCount(void);
 extern unsigned int GetBoundedEntryField(int index);
 extern void *GetManagedActorPosition(int index);
 extern void *GetRaisedOwnerPosition(EventTargetWork *work);
@@ -27,7 +27,7 @@ void UpdateEventTargetMode(EventTargetWork *work)
     void *targetPosition;
     void *playerPosition;
 
-    result = func_ov001_0206dc38();
+    result = GetManagedActorCount();
     if (result <= 0) {
         return;
     }

@@ -1,8 +1,8 @@
 #include "nitro/types.h"
 
 #define GetCurrentFieldAreaIndex func_ov001_02067ed4
-#define GetAreaNormalBgm func_ov001_02068094
-#define GetAreaBattleBgm func_ov001_020680b0
+#define GetAreaNormalBgm GetSceneEntryPrimaryBgmId
+#define GetAreaBattleBgm GetSceneEntrySecondaryBgmId
 #define QueueBgmTrackChange QueueSoundKind4
 
 typedef struct FieldBgmState {

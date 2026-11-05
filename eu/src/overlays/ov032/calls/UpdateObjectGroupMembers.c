@@ -1,8 +1,8 @@
 #define IsRowSettledInMode5_020bf088 IsRowSettledInMode5
 #define UpdateGroupMember_020be6b8 UpdateGroupMember
 #define UpdateObjectGroupMembers_020bf830 UpdateObjectGroupMembers
-#define func_ov001_0208635c func_ov001_02086384
-#define func_ov001_020881dc func_ov001_02088204
+#define func_ov001_0208635c GetEntryPoolObjectAtIndex
+#define func_ov001_020881dc ConfigureStagePartySlot
 #define func_ov032_020bbc60 func_ov032_020bbc80
 #define func_ov032_020bbc78 func_ov032_020bbc98
 #define func_ov032_020bc108 ReleaseCurrentRowHold

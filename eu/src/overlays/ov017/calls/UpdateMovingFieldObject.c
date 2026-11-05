@@ -11,7 +11,7 @@
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define DispatchListHeadCallback_020a4100 DispatchListHeadCallback
 #define VEC_Subtract_01ff9e3c VEC_Subtract
-#define func_ov001_0208635c func_ov001_02086384
+#define func_ov001_0208635c GetEntryPoolObjectAtIndex
 #define VEC_Add_01ff9e0c VEC_Add
 #define UpdateFieldObjectBreakAnim_020a3554 UpdateFieldObjectBreakAnim
 #define data_02053438 gZeroVecFx32

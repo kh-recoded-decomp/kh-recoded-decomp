@@ -1,7 +1,7 @@
 #include "nitro/types.h"
 
-extern u32 func_ov001_02087e24();
+extern u32 ResetStageGroupRowsAndRestoreDefaultIfActive();
 
 void func_ov001_0206890c(u32 value) {
-  func_ov001_02087e24(value & 0xffff);
+  ResetStageGroupRowsAndRestoreDefaultIfActive(value & 0xffff);
 }

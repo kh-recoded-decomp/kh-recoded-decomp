@@ -1,3 +1,4 @@
+#define func_ov001_020681e8 WorldNamedEntryHasKind
 #define ContainsMatchingEntry_02034900 ContainsMatchingEntry
 #define func_02034bc8 Record_GetKindPayloadAddress
 #define func_0203625c GetWorldMeshNamedEntry

@@ -1,5 +1,5 @@
 #define ForEachRecordPosition_020d50b8 ForEachRecordPosition
 #define func_ov001_02087928 ForwardToActiveServiceWithResult
-#define func_ov001_02087944 func_ov001_0208796c
+#define func_ov001_02087944 FindNextActiveStageEventIfActive
 #define func_ov001_02087bec QueryStageEventPlacement
 #include "src/ov056/unclassified_helpers/ForEachRecordPosition_020d50b8.c"

@@ -1,6 +1,6 @@
 #define BindDescriptor0_0208f268 BindDescriptor0
 #define DrawVisibleStageQuads_02099a84 DrawVisibleStageQuads
-#define NNS_FndInitListWithOffset0_0206ad28 func_ov001_0206ad28
+#define NNS_FndInitListWithOffset0_0206ad28 DrawSpriteFrameQuadWithoutDepthUpdate
 #define func_ov001_0208f27c func_ov001_0208f2a4
 #define func_ov001_0208f28c func_ov001_0208f2b4
 #define g_stageManager_020a0508 gStageManager

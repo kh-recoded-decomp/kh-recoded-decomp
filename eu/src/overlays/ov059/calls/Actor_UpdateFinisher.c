@@ -1,3 +1,5 @@
+#define func_ov001_0206e750 UpdateTrackedMainBrightness
+#define func_ov001_0206e7c0 ResetTrackedMainBrightness
 #define Actor_ConsumeCommand_020c9a30 Actor_ConsumeCommand
 #define Actor_GetModelPosition_020cd0d8 Actor_GetModelPosition
 #define Actor_GetRootMotionDelta_020cce10 Actor_GetRootMotionDelta
@@ -20,9 +22,9 @@
 #define ZeroBytes0x28_020ac0f8 ZeroBytes0x28
 #define data_02053438 gZeroVecFx32
 #define func_ov001_020863e0 func_ov001_02086408
-#define func_ov001_0208723c func_ov001_02087264
+#define func_ov001_0208723c GetFieldEntryListHead
 #define func_ov001_02087928 ForwardToActiveServiceWithResult
-#define func_ov001_02087944 func_ov001_0208796c
+#define func_ov001_02087944 FindNextActiveStageEventIfActive
 #define func_ov021_020a8ab4 ResetAnimationTrackState
 #define func_ov021_020a8ca0 func_ov021_020a8cc0
 #define func_ov021_020ac33c ApplyHitToTarget_020ac33c

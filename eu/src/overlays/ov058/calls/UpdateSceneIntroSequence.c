@@ -49,7 +49,7 @@ extern void StopSeqArcOrDefault(int seqArcNo, int seqIndex, int fadeFrames);
 extern PartyEntry *GetBoundedEntryField(int index);
 extern void *GetPlayerControlState(int player);
 extern BOOL UpdateIdleTimeout(void);
-extern s32 func_ov001_0206e6f4(s32 callerId);
+extern s32 TryBeginTrackedMainBrightness(s32 callerId);
 extern void RunHudEnterCallback(void);
 extern void RunHudExitCallback(void);
 extern BOOL func_ov001_02072040(void);
@@ -271,7 +271,7 @@ void UpdateSceneIntroSequence(fx32 delta)
     case 6:
         UpdateSceneCameraTransform(FALSE);
         if (scene->finished == 0 && scene->timer >= 0x29000) {
-            func_ov001_0206e6f4(0);
+            TryBeginTrackedMainBrightness(0);
             scene->finished = 1;
             scene->finishArg = 0;
         }

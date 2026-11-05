@@ -1,7 +1,7 @@
 #include "nitro/types.h"
 #include "nitro/fx_types.h"
 
-#define CreateLinkObject func_ov001_02086330
+#define CreateLinkObject ActivateEntryPoolSlot
 
 typedef struct LinkSnapshot {
     s32 height;

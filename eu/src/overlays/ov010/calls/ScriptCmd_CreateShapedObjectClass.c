@@ -2,5 +2,5 @@
 #define ScriptCmd_CreateShapedObjectClass_020a0520 ScriptCmd_CreateShapedObjectClass
 #define ScriptVm_ReadOperandFx32_02025df8 ScriptVm_ReadOperandFx32
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
-#define func_ov001_0207ee04 func_ov001_0207ee2c
+#define func_ov001_0207ee04 SetFieldObjectClassAtIndex
 #include "src/ov010/shared_engine/ScriptCmd_CreateShapedObjectClass_020a0520.c"

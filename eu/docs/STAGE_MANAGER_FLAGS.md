@@ -60,10 +60,10 @@ their address names pending stronger evidence about their roles:
 
 | Function | Exact flag operation |
 |---|---|
-| `func_ov001_0209c440` | Clears `0x31`, retaining the rest. |
-| `func_ov001_0209c520` | Clears `0x42`, retaining the rest. |
-| `func_ov001_0209c538` | Clears `0x40000000`, retaining the rest. |
-| `func_ov001_0209c554` | Sets `0x40000000`, retaining the rest. |
+| `ClearStageManagerFlags31` | Clears `0x31`, retaining the rest. |
+| `ClearStageManagerFlags42` | Clears `0x42`, retaining the rest. |
+| `ClearStageManagerFlag40000000` | Clears `0x40000000`, retaining the rest. |
+| `SetStageManagerFlag40000000` | Sets `0x40000000`, retaining the rest. |
 
 All four skip the operation for a null manager. This block introduces no guessed
 pause, ownership, collision or script-state enums for these masks. The generic
@@ -106,10 +106,10 @@ python tools/verify_idx.py src/overlays/ov001/calls/GetMaskedStageManagerFlags.c
 python tools/verify_idx.py src/overlays/ov001/calls/SetStageManagerFlagBits.c SetStageManagerFlagBits --thumb
 python tools/verify_idx.py src/overlays/ov001/calls/ClearStageManagerFlagBits.c ClearStageManagerFlagBits --thumb
 python tools/verify_idx.py src/overlays/ov001/calls/ClearStageMask30WhenBit0Clear.c ClearStageMask30WhenBit0Clear --thumb
-python tools/verify_idx.py src/overlays/ov001/calls/func_ov001_0209c440.c func_ov001_0209c440 --thumb
-python tools/verify_idx.py src/overlays/ov001/calls/func_ov001_0209c520.c func_ov001_0209c520 --thumb
-python tools/verify_idx.py src/overlays/ov001/calls/func_ov001_0209c538.c func_ov001_0209c538 --thumb
-python tools/verify_idx.py src/overlays/ov001/calls/func_ov001_0209c554.c func_ov001_0209c554 --thumb
+python tools/verify_idx.py src/overlays/ov001/calls/ClearStageManagerFlags31.c ClearStageManagerFlags31 --thumb
+python tools/verify_idx.py src/overlays/ov001/calls/ClearStageManagerFlags42.c ClearStageManagerFlags42 --thumb
+python tools/verify_idx.py src/overlays/ov001/calls/ClearStageManagerFlag40000000.c ClearStageManagerFlag40000000 --thumb
+python tools/verify_idx.py src/overlays/ov001/calls/SetStageManagerFlag40000000.c SetStageManagerFlag40000000 --thumb
 python tools/verify_idx.py src/overlays/ov001/calls/DispatchStageObjectMotions.c DispatchStageObjectMotions --thumb
 python tools/verify_idx.py src/overlays/ov001/calls/GetStageManager.c GetStageManager --thumb
 python tools/verify_idx.py src/overlays/ov001/calls/StartStageObjectMotions.c StartStageObjectMotions --thumb

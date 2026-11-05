@@ -38,7 +38,7 @@ typedef struct FieldObject {
     s16 pendingEvent;
 } FieldObject;
 
-extern FieldObject *func_ov001_02086330(void *pool, int kind);
+extern FieldObject *ActivateEntryPoolSlot(void *pool, int kind);
 extern int GetEntryUnlockState(BOOL skipModeCheck, u32 flagOffset, u32 entryId, u32 slot);
 extern void SetSessionFlag(int objectId);
 extern void UpdateMovingFieldObject(void);
@@ -47,7 +47,7 @@ extern void AppendNodeToActiveList(u32 listId, u32 kind, u8 tag);
 u8 SpawnFieldObject(void *pool, int kind, int slot, u16 objectId, u8 dropIndex, VecFx32 *position,
                              s8 dropVariant, s8 dropItem, s16 eventId, int mode, fx32 speed, int modeParam)
 {
-    FieldObject *object = func_ov001_02086330(pool, kind);
+    FieldObject *object = ActivateEntryPoolSlot(pool, kind);
     FieldManager *manager = object->manager;
     BOOL active;
 

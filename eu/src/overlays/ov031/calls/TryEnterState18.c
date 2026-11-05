@@ -1,3 +1,5 @@
+#define func_ov001_020685d4 ResetStageEventContext
+#define func_ov001_0206dc38 GetManagedActorCount
 #define func_ov001_0206dc4c GetManagedActorPosition
 #define ReleaseSeqArcHeapLevel_0204e040 ReleaseSeqArcHeapLevel
 #define StoreToGlobalPtr4Field28_0202a778 StoreToGlobalPtr4Field28

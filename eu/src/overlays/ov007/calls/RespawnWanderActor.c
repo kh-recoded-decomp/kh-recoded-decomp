@@ -8,5 +8,5 @@
 #define func_020358b0 ApplyRecordTableEntry2
 #define func_020359f8 ApplyRecordTableEntry5
 #define func_02036240 ActorRegistry_GetEntityByIndex
-#define thumbStep_0206888c func_ov001_0206888c
+#define thumbStep_0206888c HasQueuedStageEventValue
 #include "src/ov007/unclassified_helpers/RespawnWanderActor_020a0ecc.c"

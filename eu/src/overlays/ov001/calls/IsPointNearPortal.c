@@ -1,4 +1,4 @@
 #define IsPointNearPortal_02064e2c IsPointNearPortal
 #define SceneObject_IsPointWithinOneUnit_02081a88 SceneObject_IsPointWithinOneUnit
-#define func_ov001_0207f08c func_ov001_0207f0b4
+#define func_ov001_0207f08c GetFieldObjectListHead
 #include "src/ov001/field_objects/IsPointNearPortal_02064e2c.c"

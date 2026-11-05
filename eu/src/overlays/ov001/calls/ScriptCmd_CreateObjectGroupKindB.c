@@ -1,5 +1,5 @@
 #define ScriptCmd_CreateObjectGroupKindB_02080188 ScriptCmd_CreateObjectGroupKindB
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
-#define func_ov001_0207ee04 func_ov001_0207ee2c
+#define func_ov001_0207ee04 SetFieldObjectClassAtIndex
 #define func_ov001_020825e0 CreateFieldObjectClassType11
 #include "src/ov001/scripted_actor_behavior/ScriptCmd_CreateObjectGroupKindB_02080188.c"

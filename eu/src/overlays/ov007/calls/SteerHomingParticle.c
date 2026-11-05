@@ -11,7 +11,7 @@ typedef struct HomingParticle {
 } HomingParticle;
 
 extern u32 func_ov035_020bae94(void);
-extern VecFx32 *func_ov001_0206dc60(int index);
+extern VecFx32 *GetManagedActorPositionWithCallback(int index);
 extern void VEC_Subtract(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
 extern fx32 VEC_NormalizeLength(VecFx32 *in, VecFx32 *out);
 extern void VEC_MultAdd(int scale, const VecFx32 *v, const VecFx32 *add, VecFx32 *dst);
@@ -32,7 +32,7 @@ BOOL SteerHomingParticle(void *owner, HomingParticle *particle)
         particle->remaining = 0;
         return TRUE;
     }
-    target = *func_ov001_0206dc60(0);
+    target = *GetManagedActorPositionWithCallback(0);
     VEC_Subtract(&target, &particle->position, &direction);
     distance = VEC_NormalizeLength(&direction, &direction);
     particle->progress += 0xaa;

@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-extern unsigned int func_ov001_02086384();
+extern unsigned int GetEntryPoolObjectAtIndex();
 
 int func_ov017_020a51e8(int entry) {
   BOOL excluded;
@@ -16,7 +16,7 @@ int func_ov017_020a51e8(int entry) {
       selected = entry;
     }
     if (*(short *)(entry + 0x56) < 0) break;
-    entry = func_ov001_02086384(*(unsigned int *)(entry + 4));
+    entry = GetEntryPoolObjectAtIndex(*(unsigned int *)(entry + 4));
   }
   return selected;
 }

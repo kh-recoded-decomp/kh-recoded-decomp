@@ -10,12 +10,12 @@ extern FieldContext *data_ov028_020bb3a0;
 extern BOOL Panel_TryBeginTransition4(void);
 extern void SuspendTaskAndSetFlag(void);
 extern void SetMenuHighlight(s32 enable);
-extern s32 func_ov001_0206dc38(void);
+extern s32 GetManagedActorCount(void);
 extern void ReleaseActorSlotByIndex(s32 index);
 extern VecFx32 *GetManagedActorPosition(s32 index);
 extern u16 GetBiasAdjustedField(s32 index);
 extern void StoreSessionSpawnPoint(s32 index, VecFx32 *position, u16 angle);
-extern void func_ov001_020685d4(void);
+extern void ResetStageEventContext(void);
 extern void SetOverlayLayerVisible(s32 value);
 extern void func_ov001_0207efa0(void);
 extern void ShutdownSceneContext(void);
@@ -36,12 +36,12 @@ s32 ShutdownFieldAndSaveActorPoses(void)
     }
     SuspendTaskAndSetFlag();
     SetMenuHighlight(1);
-    for (index = 0; index < func_ov001_0206dc38(); index++) {
+    for (index = 0; index < GetManagedActorCount(); index++) {
         ReleaseActorSlotByIndex(index);
         position = GetManagedActorPosition(index);
         StoreSessionSpawnPoint(index, position, GetBiasAdjustedField(index));
     }
-    func_ov001_020685d4();
+    ResetStageEventContext();
     SetOverlayLayerVisible(1);
     func_ov001_0207efa0();
     ShutdownSceneContext();

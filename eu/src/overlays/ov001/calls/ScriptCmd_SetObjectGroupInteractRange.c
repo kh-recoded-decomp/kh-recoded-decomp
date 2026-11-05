@@ -2,5 +2,5 @@
 #define ScriptVm_ReadOperandFx32_02025df8 ScriptVm_ReadOperandFx32
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
 #define SetFieldOffset4c_0207f8cc SetFieldOffset4c
-#define func_ov001_0207f028 func_ov001_0207f050
+#define func_ov001_0207f028 GetFieldObjectClassAtIndex
 #include "src/ov001/scripted_actor_behavior/ScriptCmd_SetObjectGroupInteractRange_0207fca4.c"

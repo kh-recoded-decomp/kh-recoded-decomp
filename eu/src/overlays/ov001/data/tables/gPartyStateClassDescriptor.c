@@ -3,9 +3,9 @@
 #pragma explicit_zero_data on
 
 extern void CreatePartyState(void);
-extern void func_ov001_0206cbb8(void);
+extern void ReleaseEventContextWork(void);
 
-#define DestroyEventContext func_ov001_0206cbb8
+#define DestroyEventContext ReleaseEventContextWork
 
 void *gPartyStateClassDescriptor[5] = {
     (void *)0x00070009,

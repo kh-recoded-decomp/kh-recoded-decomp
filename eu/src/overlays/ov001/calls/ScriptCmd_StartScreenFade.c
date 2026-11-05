@@ -1,3 +1,4 @@
+#define func_ov001_0206a72c BeginFieldScreenModeTransition
 #define ScriptCmd_StartScreenFade_0208e76c ScriptCmd_StartScreenFade
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
 #define func_ov001_0206a7c0 BeginScreenFadeOut

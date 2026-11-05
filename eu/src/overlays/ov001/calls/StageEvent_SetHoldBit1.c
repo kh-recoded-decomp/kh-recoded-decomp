@@ -1,4 +1,4 @@
 #define StageEvent_SetHoldBit1_02087da0 StageEvent_SetHoldBit1
-#define func_ov001_0209b638 func_ov001_0209b660
+#define func_ov001_0209b638 AddStageSlotLock1
 #define g_stageEventsState_0209f2c8 g_stageEventsState
 #include "src/ov001/shared_engine/StageEvent_SetHoldBit1_02087da0.c"

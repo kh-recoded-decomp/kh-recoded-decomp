@@ -1,3 +1,4 @@
+#define func_ov001_0206dc60 GetManagedActorPositionWithCallback
 #define func_ov001_0206dc4c GetManagedActorPosition
 #define UpdateTrackedTargetMarker_0206c880 UpdateTrackedTargetMarker
 #define func_ov001_0206ad34 ProjectWorldToScreenFx

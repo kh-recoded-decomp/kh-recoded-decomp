@@ -6,8 +6,8 @@
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define data_02053438 gZeroVecFx32
 #define func_02036240 ActorRegistry_GetEntityByIndex
-#define func_ov001_02086434 func_ov001_0208645c
-#define func_ov001_02087224 func_ov001_0208724c
+#define func_ov001_02086434 SetFieldEntryActorAnimationGroup
+#define func_ov001_02087224 GetFieldEntryByPoolAndIndex
 #define func_ov016_020a29a4 EnterFieldUnitPhase6
 #define func_ov016_020a2b38 StartFieldUnitMotion
 #define func_ov016_020a34fc MoveFieldObjectWithCollision

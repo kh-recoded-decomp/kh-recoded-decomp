@@ -1,4 +1,4 @@
-#define AlarmCallback_0206ad1c func_ov001_0206ad1c
+#define AlarmCallback_0206ad1c DrawSpriteFrameQuadWithDepthUpdate
 #define DrawFlatRect_0206a424 DrawFlatRect
 #define FlushGeometryState_02019230 NNS_G3dGlbFlushWVP
 #define MTX_OrthoW_02005f10 MTX_OrthoW

@@ -14,8 +14,8 @@
 #define func_0202b788 GetLanguageIndex
 #define func_0204d7f4 QueueOrUpdateSoundKind3
 #define func_ov001_020645c8 IsSessionFlagSet
-#define func_ov001_020680cc SetSceneEntryPrimaryDisplayId
-#define func_ov001_020680e4 SetSceneEntrySecondaryDisplayId
+#define func_ov001_020680cc SetSceneEntryPrimaryBgmId
+#define func_ov001_020680e4 SetSceneEntrySecondaryBgmId
 #define func_ov001_0207d384 func_ov001_0207d3ac
 #define func_ov027_020ba2a8 GetPackedFileEntry
 #define func_ov027_020ba2e0 FormatPackedWideText

@@ -1,3 +1,4 @@
+#define func_ov001_020681e8 WorldNamedEntryHasKind
 #define FixedPointAtan2_020062bc FX_Atan2Idx
 #define GetLinkedAngleOffset_020ceb7c GetLinkedAngleOffset
 #define GetWorldMeshNamedEntry_0203625c GetWorldMeshNamedEntry

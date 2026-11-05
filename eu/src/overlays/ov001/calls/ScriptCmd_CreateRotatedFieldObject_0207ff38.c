@@ -1,6 +1,6 @@
 #define ScriptCmd_CreateRotatedFieldObject_0207ff10 ScriptCmd_CreateRotatedFieldObject_0207ff38
 #define ScriptVm_ReadOperandFx32_02025df8 ScriptVm_ReadOperandFx32
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
-#define func_ov001_0207f028 func_ov001_0207f050
+#define func_ov001_0207f028 GetFieldObjectClassAtIndex
 #define func_ov001_020819b4 FieldObject_CreateLinked
 #include "src/ov001/field_objects/ScriptCmd_CreateRotatedFieldObject_0207ff10.c"

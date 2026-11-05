@@ -1,5 +1,5 @@
 #define CreateWorkSlotObjectClass_0208190c CreateWorkSlotObjectClass
 #define ScriptCmd_CreateWorkSlotObject_0207feb8 ScriptCmd_CreateWorkSlotObject
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
-#define func_ov001_0207ee04 func_ov001_0207ee2c
+#define func_ov001_0207ee04 SetFieldObjectClassAtIndex
 #include "src/ov001/scripted_actor_behavior/ScriptCmd_CreateWorkSlotObject_0207feb8.c"

@@ -23,7 +23,7 @@ typedef struct {
 } Session;
 
 extern Session *data_ov001_020a0480;
-extern void func_ov001_02068dfc(void);
+extern void StopPostIntroElapsedTimer(void);
 
 void func_ov001_02064d44(void)
 {
@@ -31,7 +31,7 @@ void func_ov001_02064d44(void)
 
     if (scene->flags.bit15)
     {
-        func_ov001_02068dfc();
+        StopPostIntroElapsedTimer();
         scene->flags.bit15 = FALSE;
     }
 }

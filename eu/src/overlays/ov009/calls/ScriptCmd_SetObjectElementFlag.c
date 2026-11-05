@@ -1,5 +1,5 @@
 #define ScriptCmd_SetObjectElementFlag_020a05c0 ScriptCmd_SetObjectElementFlag
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
 #define SetFlagBit0x10At0x4e_020a0bf4 SetFlagBit0x10At0x4e
-#define func_ov001_0207f038 func_ov001_0207f060
+#define func_ov001_0207f038 GetFieldObjectByClassAndIndex
 #include "src/ov009/shared_engine/ScriptCmd_SetObjectElementFlag_020a05c0.c"

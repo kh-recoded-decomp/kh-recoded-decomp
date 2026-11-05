@@ -1,5 +1,5 @@
 #define PXI_Init_020a0c1c func_ov009_020a0c3c
 #define ScriptCmd_SetObjectElementState_020a05f8 ScriptCmd_SetObjectElementState
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
-#define func_ov001_0207f038 func_ov001_0207f060
+#define func_ov001_0207f038 GetFieldObjectByClassAndIndex
 #include "src/ov009/shared_engine/ScriptCmd_SetObjectElementState_020a05f8.c"

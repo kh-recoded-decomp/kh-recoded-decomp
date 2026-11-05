@@ -120,7 +120,7 @@ extern VecFx32 *func_ov052_020ceb74(Actor *actor);
 extern u16 GetLinkedAngleOffset(Actor *actor);
 extern BOOL IsStageAllowedForMode(void);
 extern void *GetWorldMeshNamedEntry(int index);
-extern BOOL func_ov001_020681e8(void *entry, u32 kind);
+extern BOOL WorldNamedEntryHasKind(void *entry, u32 kind);
 extern fx32 VEC_DotProduct(const VecFx32 *a, const VecFx32 *b);
 extern BOOL func_ov021_020a7524(void *unit);
 extern u16 func_ov021_020a7564(void *unit);
@@ -260,7 +260,7 @@ BOOL TryLedgeClimb(Actor *actor, ClimbState *state)
                     ok = TRUE;
                     for (j = 0; j < 4; j++) {
                         void *mesh = GetWorldMeshNamedEntry(contact->surface->meshIndices[j]);
-                        if (mesh != NULL && func_ov001_020681e8(mesh, 2)) {
+                        if (mesh != NULL && WorldNamedEntryHasKind(mesh, 2)) {
                             ok = FALSE;
                             break;
                         }
@@ -336,7 +336,7 @@ BOOL TryLedgeClimb(Actor *actor, ClimbState *state)
             int k;
             for (k = 1; k < 3; k++) {
                 void *mesh = GetWorldMeshNamedEntry(hit->surface->meshIndices[k]);
-                if (mesh != NULL && (func_ov001_020681e8(mesh, 3) || func_ov001_020681e8(mesh, 5))) {
+                if (mesh != NULL && (WorldNamedEntryHasKind(mesh, 3) || WorldNamedEntryHasKind(mesh, 5))) {
                     special = TRUE;
                     break;
                 }

@@ -3,6 +3,6 @@
 #define GetCtxModeByte_02068084 GetCtxModeByte
 #define SceneNode_Draw_01ffb12c SceneNode_Draw
 #define func_02036240 ActorRegistry_GetEntityByIndex
-#define func_ov001_0208635c func_ov001_02086384
+#define func_ov001_0208635c GetEntryPoolObjectAtIndex
 #define func_ov017_020a5248 GetStageObjectLoadPhase
 #include "src/ov017/field_objects/DrawKind7EntryStack_020a574c.c"

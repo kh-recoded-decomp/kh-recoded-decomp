@@ -1,3 +1,4 @@
+#define func_ov001_020681e8 WorldNamedEntryHasKind
 #define GetActorRecord_020364f4 GetActorRecord
 #define UpdateActorTargetLink_0206ce00 UpdateActorTargetLink
 #define func_ov001_02063a80 AddSessionCounter

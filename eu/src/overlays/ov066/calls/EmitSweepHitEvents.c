@@ -11,7 +11,7 @@
 #define func_01ff8830 MI_CpuFill8
 #define func_0203ad14 MakeSphereShape
 #define func_ov001_02087884 ForwardToActiveService
-#define func_ov001_0208789c func_ov001_020878c4
+#define func_ov001_0208789c TriggerNextStageEventFromSource1IfActive
 #define func_ov021_020a8ab4 ResetAnimationTrackState
 #define func_ov021_020a8ca0 func_ov021_020a8cc0
 #define func_ov052_020ceb54 func_ov052_020ceb74

@@ -7,8 +7,8 @@
 #define _fp_init_020a094c func_ov011_020a096c
 #define func_ov001_0207f0d0 AcquireEffectRecordPair
 #define func_ov001_0207f128 FieldObject_EnsureModelsLoaded
-#define func_ov001_0207f1e8 func_ov001_0207f210
-#define func_ov001_0207f244 func_ov001_0207f26c
+#define func_ov001_0207f1e8 FreeFieldObjectClassAnimationBuffers
+#define func_ov001_0207f244 FreeFieldObjectShapeStorage
 #define func_ov011_020a07bc FieldObject_LoadAndPlace
 #define func_ov011_020a0950 func_ov011_020a0970
 #define func_ov011_020a0d24 FieldObject_HandleContact

@@ -1,3 +1,4 @@
+#define func_ov001_020681e8 WorldNamedEntryHasKind
 #define AreMeshEntriesClear_020bbf10 AreMeshEntriesClear
 #define GetWorldMeshNamedEntry_0203625c GetWorldMeshNamedEntry
 #include "src/ov030/shared_engine/AreMeshEntriesClear_020bbf10.c"

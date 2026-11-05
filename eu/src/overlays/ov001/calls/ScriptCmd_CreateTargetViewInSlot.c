@@ -14,7 +14,7 @@ typedef struct TargetViewDesc {
 
 extern int ScriptVm_ReadOperandInt(ScriptContext *context, ScriptOperand *operand);
 extern void *CreateTargetViewClass(u16 count, const TargetViewDesc *desc);
-extern void func_ov001_0207ee2c(int index, void *entry);
+extern void SetFieldObjectClassAtIndex(int index, void *entry);
 
 BOOL ScriptCmd_CreateTargetViewInSlot(ScriptContext *context, ScriptOperand *operands)
 {
@@ -25,6 +25,6 @@ BOOL ScriptCmd_CreateTargetViewInSlot(ScriptContext *context, ScriptOperand *ope
     slot = ScriptVm_ReadOperandInt(context, &operands[0]);
     count = ScriptVm_ReadOperandInt(context, &operands[1]);
     desc.actorKind = ScriptVm_ReadOperandInt(context, &operands[2]);
-    func_ov001_0207ee2c(slot, CreateTargetViewClass((u16)count, &desc));
+    SetFieldObjectClassAtIndex(slot, CreateTargetViewClass((u16)count, &desc));
     return TRUE;
 }

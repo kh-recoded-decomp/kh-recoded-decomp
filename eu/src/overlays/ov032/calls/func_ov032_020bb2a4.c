@@ -11,9 +11,9 @@ extern unsigned int StoreSessionSpawnPoint();
 extern unsigned int func_ov001_02064d88();
 extern unsigned int SuspendTaskAndSetFlag();
 extern unsigned int ShutdownSceneContext();
-extern unsigned int func_ov001_020685d4();
+extern unsigned int ResetStageEventContext();
 extern unsigned int SetMenuHighlight();
-extern unsigned int func_ov001_0206dc38();
+extern unsigned int GetManagedActorCount();
 extern unsigned int GetManagedActorPosition();
 extern unsigned int GetBiasAdjustedField();
 extern unsigned int func_ov001_0206de40();
@@ -35,7 +35,7 @@ unsigned int func_ov032_020bb2a4(void) {
   SuspendTaskAndSetFlag();
   SetMenuHighlight(1);
   index = 0;
-  countOrGate = func_ov001_0206dc38();
+  countOrGate = GetManagedActorCount();
   if (0 < countOrGate) {
     do {
       func_ov001_0206de40(index);
@@ -43,10 +43,10 @@ unsigned int func_ov032_020bb2a4(void) {
       secondValue = GetBiasAdjustedField(index);
       StoreSessionSpawnPoint(index,firstValue,secondValue);
       index = index + 1;
-      countOrGate = func_ov001_0206dc38();
+      countOrGate = GetManagedActorCount();
     } while (index < countOrGate);
   }
-  func_ov001_020685d4();
+  ResetStageEventContext();
   ShutdownSceneContext();
   SetOverlayLayerVisible(1);
   func_ov001_0207efa0();

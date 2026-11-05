@@ -1,5 +1,5 @@
 #define ScriptCmd_ShowActorEmote_020a057c ScriptCmd_ShowActorEmote
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
-#define func_ov001_0207f028 func_ov001_0207f050
+#define func_ov001_0207f028 GetFieldObjectClassAtIndex
 #define func_ov007_020a183c CreateEmoteFieldObject
 #include "src/ov007/shared_engine/ScriptCmd_ShowActorEmote_020a057c.c"

@@ -11,7 +11,7 @@
 #define func_0204f4c4 HideAllOamEntries
 #define func_ov001_02063c78 InvokeSessionCallback
 #define func_ov001_0207a820 CloseActiveMode
-#define func_ov001_0207f08c func_ov001_0207f0b4
+#define func_ov001_0207f08c GetFieldObjectListHead
 #define func_ov001_020814d0 FieldObject_StopActorAnimation
 #define func_ov001_02088a7c func_ov001_02088aa4
 #define func_ov036_020c3348 func_ov036_020c3368

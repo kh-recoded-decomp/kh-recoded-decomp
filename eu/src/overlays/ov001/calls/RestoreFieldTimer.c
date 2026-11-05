@@ -16,7 +16,7 @@ typedef struct FieldContext {
 extern FieldContext *data_ov001_020a0480;
 extern BOOL IsSessionFlagSet(int bit);
 extern u32 ReadSessionPackedBits(int bit, int count);
-extern void func_ov001_02068ed0(u32 value, s32 index);
+extern void SetFieldTimerCounterMilliseconds(u32 value, s32 index);
 extern BOOL StartCountdownTimer(int seconds, s32 userData);
 extern void StartPanelScrollOut(int seconds);
 extern void func_ov001_0207d3ac(BOOL enable);
@@ -53,9 +53,9 @@ void RestoreFieldTimer(void)
     timer->countUp = (u8)countUp;
     if (context->timer.countUp) {
         timer->timeLimit = timeLimit;
-        func_ov001_02068ed0(0, 0);
+        SetFieldTimerCounterMilliseconds(0, 0);
     } else {
-        func_ov001_02068ed0(timeLimit, 0);
+        SetFieldTimerCounterMilliseconds(timeLimit, 0);
     }
     if (!(mode & 2)) {
         StartCountdownTimer((u16)timeLimit, TimerDirectionUserData(context->timer.countUp));

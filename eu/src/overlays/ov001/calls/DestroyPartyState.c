@@ -1,3 +1,4 @@
+#define func_ov001_0206c9dc DestroyFieldMessageLoaderManager
 #define DestroyPartyState_0206d84c DestroyPartyState
 #define FreeBufferAndClearStatus_0206a918 FreeBufferAndClearStatus
 #define FreeCueTable_020a7cac FreeCueTable_020a7ccc

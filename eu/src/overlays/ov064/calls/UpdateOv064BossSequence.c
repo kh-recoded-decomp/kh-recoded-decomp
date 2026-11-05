@@ -1,3 +1,6 @@
+#define func_ov001_0206e6f4 TryBeginTrackedMainBrightness
+#define func_ov001_0206e750 UpdateTrackedMainBrightness
+#define func_ov001_0206e7c0 ResetTrackedMainBrightness
 #define Anim_GetFrame_0202f4a0 Anim_GetFrame
 #define CollisionQuery_Init_02034c74 CollisionQuery_Init
 #define FX_Div_01ff9c84 FX_Div
@@ -24,7 +27,7 @@
 #define func_0202f4b8 GetModelAnimationDurationFx32
 #define func_0203adcc InitAxisCylinderShape
 #define func_ov001_02087928 ForwardToActiveServiceWithResult
-#define func_ov001_02087944 func_ov001_0208796c
+#define func_ov001_02087944 FindNextActiveStageEventIfActive
 #define func_ov021_020a8ab4 ResetAnimationTrackState
 #define func_ov021_020a8ca0 func_ov021_020a8cc0
 #define func_ov021_020ac33c ApplyHitToTarget_020ac33c

@@ -1,3 +1,4 @@
+#define func_ov001_0206dc38 GetManagedActorCount
 #define func_ov001_020788b8 SetFieldMenuActiveSlotById
 #define func_ov001_0206dc4c GetManagedActorPosition
 #define data_ov035_020bc4e0 gMovieContextState

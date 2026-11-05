@@ -1,3 +1,4 @@
+#define func_ov001_020687b8 TriggerQueuedStageEventPairs
 #define SetCachedSoundParams_0204dcec SetCachedSoundParams
 #define TryEnterState5_020ba6bc TryEnterState5
 #define func_ov001_02067750 UpdateMenuItemLoading

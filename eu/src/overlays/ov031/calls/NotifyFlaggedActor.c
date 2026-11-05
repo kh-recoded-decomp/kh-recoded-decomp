@@ -1,4 +1,4 @@
 #define CallWithZeroFlag_020a3594 CallWithZeroFlag
 #define NotifyFlaggedActor_020bc6b0 NotifyFlaggedActor
-#define func_ov001_0208723c func_ov001_02087264
+#define func_ov001_0208723c GetFieldEntryListHead
 #include "src/ov031/overlay_state/NotifyFlaggedActor_020bc6b0.c"

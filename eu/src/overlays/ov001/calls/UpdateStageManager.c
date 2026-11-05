@@ -131,7 +131,7 @@ extern void func_01ff88c4(void *dst, int value, u32 size);
 extern void MI_CpuFill8(void *dst, int value, u32 size);
 extern int SpawnStageObjectActor(EventRecord *record, SpawnParams *params, VecFx32 *position);
 extern void ApplyHitToEnemyGroup(EventRecord *record, EventMessage *message);
-extern FieldUnit *func_ov001_0208724c(u32 id, u32 index);
+extern FieldUnit *GetFieldEntryByPoolAndIndex(u32 id, u32 index);
 extern void CacheEntry_SetActive(FieldUnit *unit, int active);
 extern void func_ov016_020a6a1c(FieldUnit *unit);
 extern void ResetUnitToBasePosition(FieldUnit *unit);
@@ -164,7 +164,7 @@ static inline void PlaceUnit(FieldUnit *unit, const VecFx32 *position)
 static inline void DropSlotUnit(StageSlot *slot)
 {
     if (slot != NULL && slot->unitIndex != 0) {
-        FieldUnit *unit = func_ov001_0208724c(slot->unitId, slot->unitIndex - 1);
+        FieldUnit *unit = GetFieldEntryByPoolAndIndex(slot->unitId, slot->unitIndex - 1);
 
         slot->position.y = 0x14000;
         PlaceUnit(unit, &slot->position);
@@ -261,7 +261,7 @@ void UpdateStageManager(u32 value)
         }
         if (total == waiting && slot->active != 0 && slot->state == 0) {
             slot->active = 0;
-            unit = func_ov001_0208724c(slot->unitId, slot->unitIndex - 1);
+            unit = GetFieldEntryByPoolAndIndex(slot->unitId, slot->unitIndex - 1);
             slot->position = slot->home;
             CacheEntry_SetActive(unit, 1);
             func_ov016_020a6a1c(unit);
@@ -273,7 +273,7 @@ void UpdateStageManager(u32 value)
         if (slot->unitIndex == 0) {
             continue;
         }
-        walker = func_ov001_0208724c(0, slot->unitIndex - 1);
+        walker = GetFieldEntryByPoolAndIndex(0, slot->unitIndex - 1);
         switch (slot->state) {
         case 0:
             break;

@@ -2,7 +2,7 @@
 #define ScaleVecFx32InPlace_0204a5e4 ScaleVecFx32InPlace
 #define VEC_Mag_01ff9f28 VEC_Mag
 #define VEC_Subtract_01ff9e3c VEC_Subtract
-#define func_ov001_0208635c func_ov001_02086384
+#define func_ov001_0208635c GetEntryPoolObjectAtIndex
 #define func_ov032_020bbc60 func_ov032_020bbc80
 #define func_ov032_020bbc78 func_ov032_020bbc98
 #define random_next_scaled_0202aa04 random_next_scaled

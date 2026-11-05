@@ -2,7 +2,7 @@
 #define AppendNodeToActiveList_02086fac AppendNodeToActiveList
 #define CreateKind6FieldObject_020a3234 CreateKind6FieldObject
 #define ResetKindDirection_020a1ebc ResetKindDirection
-#define func_ov001_02086308 func_ov001_02086330
+#define func_ov001_02086308 ActivateEntryPoolSlot
 #define func_ov018_020a29e0 FieldObject_ShiftWithArea
 #define func_ov018_020a2c84 FieldObject_UpdatePushedMotion
 #define func_ov031_020bc5b0 MakeCommandRecord

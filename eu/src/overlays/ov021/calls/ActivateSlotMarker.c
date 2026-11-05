@@ -1,3 +1,4 @@
+#define func_ov001_0206dc60 GetManagedActorPositionWithCallback
 #define ActivateSlotMarker_020ab7cc ActivateSlotMarker
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField
 #define selectJointAnimationBlend_0202f2cc selectJointAnimationBlend

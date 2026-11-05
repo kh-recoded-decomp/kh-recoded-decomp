@@ -1,3 +1,5 @@
+#define func_ov001_02068e54 PauseSessionTimerUpdates
+#define func_ov001_0206dc38 GetManagedActorCount
 #define func_ov001_020645f4 StorePackedSessionPlacement
 #define func_ov001_0206dc4c GetManagedActorPosition
 #define func_ov001_0206e444 SetFieldEntriesPaused

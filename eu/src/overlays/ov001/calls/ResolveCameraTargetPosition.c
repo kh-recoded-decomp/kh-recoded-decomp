@@ -1,6 +1,7 @@
+#define func_ov001_0206b948 InitStageSlotTargetReference
 #define ResolveCameraTargetPosition_0206b0fc ResolveCameraTargetPosition
 #define StageRecord_GetSlotPosition_02087c4c StageRecord_GetSlotPosition
 #define data_ov001_020a0484 data_ov001_020a04a4
-#define func_ov001_0207f870 func_ov001_0207f898
+#define func_ov001_0207f870 CallFieldObjectHook13IfPresent
 #define func_ov001_020863f4 func_ov001_0208641c
 #include "src/ov001/field_manager/ResolveCameraTargetPosition_0206b0fc.c"

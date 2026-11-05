@@ -159,7 +159,7 @@ extern fx32 VEC_Mag(const VecFx32 *v);
 extern fx32 FX_Div(fx32 numer, fx32 denom);
 extern fx32 VEC_NormalizeLength(const VecFx32 *source, VecFx32 *dest);
 extern void VEC_MultAdd(fx32 scale, const VecFx32 *v, const VecFx32 *add, VecFx32 *dst);
-extern u32 func_ov001_0209c9c4(u32 handle);
+extern u32 FindNextActiveStageEvent(u32 handle);
 extern void ResolveStageEntryPushOut(StageEvent *event);
 extern StageController *GetStageController(u32 id);
 extern void PlayActorSound(StageActor *actor, u16 bank, u16 soundId, u32 flags, u16 volume);
@@ -381,7 +381,7 @@ void UpdateStageEvent(StageEvent *event)
     actor->pushed = 0;
     if (actor->pushMode == 1 && GetSessionMode() != 7) {
         func_ov001_0208f2a4(*(void **)(GetStageManager() + 0x18d7c));
-        for (handle = FindFirstActiveStageEvent(); handle != 0; handle = func_ov001_0209c9c4(handle)) {
+        for (handle = FindFirstActiveStageEvent(); handle != 0; handle = FindNextActiveStageEvent(handle)) {
             other = GetStageEventRecord(handle);
             if (other == NULL) {
                 break;

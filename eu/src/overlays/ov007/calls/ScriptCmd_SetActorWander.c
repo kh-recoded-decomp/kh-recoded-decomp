@@ -1,6 +1,6 @@
 #define ScriptCmd_SetActorWander_020a05b8 ScriptCmd_SetActorWander
 #define ScriptVm_ReadOperandFx32_02025df8 ScriptVm_ReadOperandFx32
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
-#define func_ov001_0207f038 func_ov001_0207f060
+#define func_ov001_0207f038 GetFieldObjectByClassAndIndex
 #define func_ov007_020a18c0 ApplyWanderCommand
 #include "src/ov007/shared_engine/ScriptCmd_SetActorWander_020a05b8.c"

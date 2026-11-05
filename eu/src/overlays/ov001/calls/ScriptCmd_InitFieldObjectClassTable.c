@@ -1,3 +1,3 @@
-#define Ov002_EnterPhase func_ov001_0207ee00
+#define Ov002_EnterPhase InitFieldObjectClassTable
 #define ScriptCmd_EnterPhase_0207faa8 ScriptCmd_InitFieldObjectClassTable
 #include "src/ov001/shared_engine/ScriptCmd_EnterPhase_0207faa8.c"

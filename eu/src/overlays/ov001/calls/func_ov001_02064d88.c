@@ -16,7 +16,7 @@ typedef struct {
 } Session;
 
 extern Session *data_ov001_020a0480;
-extern u32 func_ov001_0206dc38(void);
+extern u32 GetManagedActorCount(void);
 extern u32 GetBoundedEntryField(int index);
 extern u32 CopyActiveBlockIfPresent(u32 entry, EntryBuffer *buffer);
 
@@ -25,12 +25,12 @@ void func_ov001_02064d88(void)
     EntryCache *cache = &data_ov001_020a0480->cache;
     int index = 0;
 
-    if ((int)func_ov001_0206dc38() > 0)
+    if ((int)GetManagedActorCount() > 0)
     {
         do
         {
             cache->results[index] = CopyActiveBlockIfPresent(GetBoundedEntryField(index), &cache->buffers[index]);
             index++;
-        } while (index < (int)func_ov001_0206dc38());
+        } while (index < (int)GetManagedActorCount());
     }
 }

@@ -10,7 +10,7 @@ extern unsigned int func_ov035_020bac90();
 extern unsigned int StoreToGlobalPtr4Field28();
 extern unsigned int ActorRegistry_ClearCollisionResult();
 extern unsigned int ShutdownSceneContext();
-extern unsigned int func_ov001_020685d4();
+extern unsigned int ResetStageEventContext();
 extern unsigned int SetOverlayLayerVisible();
 extern unsigned int func_ov001_0207efa0();
 extern unsigned int FreeMovieCharacterBuffers();
@@ -23,7 +23,7 @@ unsigned int func_ov035_020ba6e4(void) {
   FreeMovieCharacterBuffers();
   ReleaseMovieResources();
   *(u16 *)(gMovieContextState + 6) = *(u16 *)(gMovieContextState + 6) & 0xfff3;
-  func_ov001_020685d4();
+  ResetStageEventContext();
   ShutdownSceneContext();
   SetOverlayLayerVisible(1);
   func_ov001_0207efa0();

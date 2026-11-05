@@ -7,7 +7,7 @@
 #define data_0205356c gSinFx12Table
 #define data_02055838 gIdentityMotionQuaternion
 #define func_02036240 ActorRegistry_GetEntityByIndex
-#define func_ov001_0208635c func_ov001_02086384
+#define func_ov001_0208635c GetEntryPoolObjectAtIndex
 #define func_ov016_020a6a64 IsFieldUnitPhase6
 #define func_ov032_020bbc60 func_ov032_020bbc80
 #define func_ov032_020bc6d8 GetRemainingRowSpan

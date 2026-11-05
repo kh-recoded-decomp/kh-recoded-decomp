@@ -1,4 +1,4 @@
-#define AlarmCallback_0206ad1c func_ov001_0206ad1c
+#define AlarmCallback_0206ad1c DrawSpriteFrameQuadWithDepthUpdate
 #define DrawPanelSceneFrame_020bb130 DrawPanelSceneFrame
 #define G3X_SetClearColor_02006c08 G3X_SetClearColor
 #define SceneNode_Draw_01ffb12c SceneNode_Draw

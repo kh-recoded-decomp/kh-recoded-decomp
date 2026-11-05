@@ -28,7 +28,7 @@ extern void *CreateTaskObject(void *descriptor, void *userData);
 extern u32 func_ov001_02063b68(s32 index);
 extern s32 func_ov001_020644c0(void);
 extern int ReadSessionPackedBits(int bitOffset, u32 bitCount);
-extern u32 func_ov001_02068e98(void);
+extern u32 GetPostIntroElapsedMilliseconds(void);
 extern int func_ov035_020bb2c0(void);
 
 void OpenResultScreen(int rank, int arg)
@@ -40,7 +40,7 @@ void OpenResultScreen(int rank, int arg)
     params.flags = 0;
     params.mode = rank - 1;
     params.score = func_ov001_02063b68(0);
-    params.extra = func_ov001_02068e98();
+    params.extra = GetPostIntroElapsedMilliseconds();
     params.arg = arg;
     if (scene->resultScreen != NULL) {
         return;

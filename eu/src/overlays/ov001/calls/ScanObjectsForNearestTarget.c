@@ -1,7 +1,9 @@
+#define func_ov001_0206b940 InitFieldEntryTargetReference
+#define func_ov001_0206bb48 IsTargetSearchScoreBetter
 #define ScanObjectsForNearestTarget_0206b598 ScanObjectsForNearestTarget
 #define func_ov001_0206b614 IsEntryWithinFacingRange
 #define func_ov001_0206ba2c ClassifyTargetRange
 #define func_ov001_020863f4 func_ov001_0208641c
-#define func_ov001_0208723c func_ov001_02087264
+#define func_ov001_0208723c GetFieldEntryListHead
 #define g_manager_020a0484 data_ov001_020a04a4
 #include "src/ov001/shared_engine/ScanObjectsForNearestTarget_0206b598.c"

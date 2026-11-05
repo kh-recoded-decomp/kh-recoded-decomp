@@ -276,7 +276,7 @@ extern void ResetGroupCommandState(PropertyEvent *event);
 extern void StartStageEventEffect(PropertyEvent *event);
 extern void ReleaseEventLinkedEntries(PropertyEvent *event);
 extern void ApplyHitToEnemyGroup(PropertyEvent *event, EventPacket *packet);
-extern void func_ov001_02095904(PropertyEvent *event, u16 kind);
+extern void SetStageEventKindWrapper(PropertyEvent *event, u16 kind);
 extern void *GetSmallTableEntry(u16 id);
 extern void func_ov001_020664f0(int kind, int unknown, const VecFx32 *position, int option);
 extern u32 random_next_scaled(u32 limit);
@@ -652,7 +652,7 @@ s32 ScriptCmd_SetProperty(void *thread, PropertyCommand *command)
                 handled = TRUE;
                 break;
             case 0x80:
-                func_ov001_02095904(event, TaggedValueToInt(argument));
+                SetStageEventKindWrapper(event, TaggedValueToInt(argument));
                 handled = TRUE;
                 break;
             case 0x84: {

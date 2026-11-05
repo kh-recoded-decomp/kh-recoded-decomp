@@ -31,10 +31,10 @@
 #define func_0202f4b8 GetModelAnimationDurationFx32
 #define func_02036230 GetActorRegistry
 #define func_ov001_020863e0 func_ov001_02086408
-#define func_ov001_0208723c func_ov001_02087264
-#define func_ov001_020878b8 func_ov001_020878e0
+#define func_ov001_0208723c GetFieldEntryListHead
+#define func_ov001_020878b8 StartStageEventInstanceIfActive
 #define func_ov001_02087928 ForwardToActiveServiceWithResult
-#define func_ov001_02087944 func_ov001_0208796c
+#define func_ov001_02087944 FindNextActiveStageEventIfActive
 #define func_ov021_020a8ab4 ResetAnimationTrackState
 #define func_ov021_020a8ca0 func_ov021_020a8cc0
 #define func_ov021_020ac33c ApplyHitToTarget_020ac33c

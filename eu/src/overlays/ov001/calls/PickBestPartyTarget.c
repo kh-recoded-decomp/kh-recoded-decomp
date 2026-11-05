@@ -1,3 +1,6 @@
+#define func_ov001_0206b954 InitManagedActorTargetReference
+#define func_ov001_0206bb48 IsTargetSearchScoreBetter
+#define func_ov001_0206dc38 GetManagedActorCount
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField
 #define PickBestPartyTarget_0206b854 PickBestPartyTarget
 #define func_ov001_0206b8d4 IsActorNearLeader

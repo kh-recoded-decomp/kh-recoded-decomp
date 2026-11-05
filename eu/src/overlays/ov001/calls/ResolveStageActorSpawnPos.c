@@ -1,3 +1,4 @@
+#define func_ov001_0206dc38 GetManagedActorCount
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField
 #define GetStageEventRecord_0209c0ec GetStageEventRecord
 #define RandomHorizontalVector_02092634 RandomHorizontalVector

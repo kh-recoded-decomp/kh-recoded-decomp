@@ -10,7 +10,7 @@
 #define NNSi_FndAllocFromDefaultHeapEx_0202a19c NNS_FndAllocFromDefaultExpHeapEx
 #define RefreshFieldObjectPhase_020a5b24 RefreshFieldObjectPhase
 #define SaveFieldUnitRecords_020a5d18 SaveFieldUnitRecords
-#define func_ov001_0208635c func_ov001_02086384
+#define func_ov001_0208635c GetEntryPoolObjectAtIndex
 #define func_ov016_020a5084 HandleFieldObjectHit_020a50a4
 #define func_ov016_020a52f4 GetFieldUnitTopPosition
 #define func_ov016_020a5340 GetFieldUnitVelocity

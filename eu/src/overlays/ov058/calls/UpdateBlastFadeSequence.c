@@ -1,3 +1,5 @@
+#define func_ov001_0206e750 UpdateTrackedMainBrightness
+#define func_ov001_0206e7c0 ResetTrackedMainBrightness
 #define FX_Div_01ff9c84 FX_Div
 #define RunAreaBlastHitScan_020d7d20 RunAreaBlastHitScan
 #define UpdateBlastFadeSequence_020d72c4 UpdateBlastFadeSequence

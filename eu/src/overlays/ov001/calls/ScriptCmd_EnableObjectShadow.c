@@ -1,6 +1,6 @@
 #define ScriptCmd_EnableObjectShadow_0207fae8 ScriptCmd_EnableObjectShadow
 #define ScriptVm_ReadOperandFx32_02025df8 ScriptVm_ReadOperandFx32
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
-#define func_ov001_0207f038 func_ov001_0207f060
+#define func_ov001_0207f038 GetFieldObjectByClassAndIndex
 #define func_ov001_0207f8fc FieldObject_SetProbeSphere
 #include "src/ov001/scripted_actor_behavior/ScriptCmd_EnableObjectShadow_0207fae8.c"

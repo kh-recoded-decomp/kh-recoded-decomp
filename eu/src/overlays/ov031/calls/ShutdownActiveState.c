@@ -1,4 +1,5 @@
-#define ArmObject_0206c6f4 func_ov001_0206c6f4
+#define func_ov001_0206a714 DestroyScreenFadeTaskAndClearHandle
+#define ArmObject_0206c6f4 DestroySessionCallbackTask
 #define PXI_Init_0202a638 DestroyTaskObjectWrapper
 #define ShutdownActiveState_020ba5d0 ShutdownActiveState
 #define func_0204df9c SetSoundListenersEnabled

@@ -4,7 +4,7 @@
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define SetLinkedCallbackId_020a3580 SetLinkedCallbackId
 #define func_01ff869c MIi_CpuCopy16
-#define func_ov001_02087214 func_ov001_0208723c
-#define func_ov001_02087224 func_ov001_0208724c
+#define func_ov001_02087214 GetFieldEntryPoolAtIndex
+#define func_ov001_02087224 GetFieldEntryByPoolAndIndex
 #define func_ov040_020bd9fc FindActorRewardValue
 #include "src/ov040/unclassified_helpers/BuildAreaObjectLists_020bc838.c"

@@ -30,7 +30,7 @@ extern char OVERLAY_52_ID[];
 extern char OVERLAY_56_ID[];
 extern char OVERLAY_58_ID[];
 extern void InitializeEntryGroupRegistry(void);
-extern void func_ov001_0206c9c0(void);
+extern void EnsureFieldMessageLoaderManager(void);
 extern void func_ov021_020a7cb0(void);
 extern void LoadMsgContainers(void);
 extern int *AcquireMapLayout(BOOL reload, BOOL discard);
@@ -53,7 +53,7 @@ void InitPartyState(int mode) {
     }
     party->selected = mode;
     InitializeEntryGroupRegistry();
-    func_ov001_0206c9c0();
+    EnsureFieldMessageLoaderManager();
     func_ov021_020a7cb0();
     LoadMsgContainers();
     AcquireMapLayout(FALSE, FALSE);

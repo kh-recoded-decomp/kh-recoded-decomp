@@ -1,3 +1,4 @@
+#define func_ov001_02068e80 GetSessionElapsedMilliseconds
 #define SaveElapsedSeconds_020630bc SaveElapsedSeconds
 #define UnsignedDivide_02023fc8 _u32_div_f
 #define WriteSessionPackedBits_0206459c WriteSessionPackedBits

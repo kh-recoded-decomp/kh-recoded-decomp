@@ -1,3 +1,5 @@
+#define func_ov001_0206b930 InitNoTargetReference
+#define func_ov001_0206ba18 InitTargetSearchScore
 #define FindNearestTargetInRange_0206af7c FindNearestTargetInRange
 #define func_ov001_0206b434 ScanActorsForNearestTarget
 #define func_ov001_0206b598 ScanObjectsForNearestTarget

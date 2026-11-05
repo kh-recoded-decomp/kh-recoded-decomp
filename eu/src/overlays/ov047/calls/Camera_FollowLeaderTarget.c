@@ -1,3 +1,5 @@
+#define func_ov001_0206c284 ResolveSelectedTargetPosition
+#define func_ov001_0206c2c8 GetTargetSelectionFlag2
 #define ApproachAngle_020c4824 ApproachAngle
 #define BuildPickingRay_0201a10c NNS_G3dScrPosToWorldLine
 #define Camera_FollowLeaderTarget_020c491c Camera_FollowLeaderTarget

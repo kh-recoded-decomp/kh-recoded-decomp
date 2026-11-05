@@ -1,5 +1,5 @@
 #define ScriptCmd_SetActorPath_020a0714 ScriptCmd_SetActorPath
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
 #define SetPathTable_020a1ad4 SetPathTable
-#define func_ov001_0207f028 func_ov001_0207f050
+#define func_ov001_0207f028 GetFieldObjectClassAtIndex
 #include "src/ov007/shared_engine/ScriptCmd_SetActorPath_020a0714.c"

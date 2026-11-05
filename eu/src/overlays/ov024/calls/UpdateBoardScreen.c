@@ -1,3 +1,4 @@
+#define func_ov001_0206dc38 GetManagedActorCount
 #define func_ov001_0206dc4c GetManagedActorPosition
 #define UpdateBoardScreen_020b6df4 UpdateBoardScreen
 #define func_0204f378 IndexedRecords_SetFlag2
@@ -7,8 +8,8 @@
 #define SetEntryRotation_0204f308 SetEntryRotation
 #define func_ov001_02087928 ForwardToActiveServiceWithResult
 #define GetStageEventTargetInfo_02087960 GetStageEventTargetInfo
-#define func_ov001_02087944 func_ov001_0208796c
-#define func_ov001_0207f038 func_ov001_0207f060
+#define func_ov001_02087944 FindNextActiveStageEventIfActive
+#define func_ov001_0207f038 GetFieldObjectByClassAndIndex
 #define ApplyDirectionOffset_020b7228 ApplyDirectionOffset
 #define DrawWidgetNumber_020b5de4 DrawWidgetNumber
 #define CanOpenFieldMenu_020735d8 CanOpenFieldMenu

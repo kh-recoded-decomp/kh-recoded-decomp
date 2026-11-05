@@ -1,3 +1,4 @@
+#define func_ov001_0206ba18 InitTargetSearchScore
 #define func_ov001_0206dc4c GetManagedActorPosition
 #define ClassifyTargetRange_0206ba2c ClassifyTargetRange
 #define GetBiasAdjustedField_0206dc80 GetBiasAdjustedField

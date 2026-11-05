@@ -12,7 +12,7 @@
 #define RewardQueue_InsertScored_020cf860 RewardQueue_InsertScored
 #define RewardQueue_PruneOutOfRange_020cf5b4 RewardQueue_PruneOutOfRange
 #define func_02036240 ActorRegistry_GetEntityByIndex
-#define func_ov001_0208723c func_ov001_02087264
+#define func_ov001_0208723c GetFieldEntryListHead
 #define func_ov001_02087928 ForwardToActiveServiceWithResult
-#define func_ov001_02087944 func_ov001_0208796c
+#define func_ov001_02087944 FindNextActiveStageEventIfActive
 #include "src/ov059/unclassified_helpers/RewardQueue_GatherTargets_020cf9f8.c"

@@ -4,6 +4,6 @@
 #define ZeroHalfThenFree_0202cd78 ZeroHalfThenFree
 #define data_ov001_020a04d8 data_ov001_020a04f8
 #define func_ov001_0207f3d0 FieldObjectClass_Destroy
-#define func_ov001_02086db8 func_ov001_02086de0
+#define func_ov001_02086db8 DestroyFieldEntryPoolManager
 #define func_ov001_02087414 func_ov001_0208743c
 #include "src/ov001/field_objects/DestroyFieldObjectManager_0207ed6c.c"

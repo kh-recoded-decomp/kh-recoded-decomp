@@ -1,5 +1,5 @@
 #define ScriptCmd_SpawnObjectIntoSlot_020a0634 ScriptCmd_SpawnObjectIntoSlot
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
-#define func_ov001_0207ee04 func_ov001_0207ee2c
+#define func_ov001_0207ee04 SetFieldObjectClassAtIndex
 #define func_ov010_020a0bd4 FieldObjectClass_CreateFrontView
 #include "src/ov010/shared_engine/ScriptCmd_SpawnObjectIntoSlot_020a0634.c"

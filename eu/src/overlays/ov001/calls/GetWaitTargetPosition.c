@@ -1,6 +1,6 @@
 #define GetWaitTargetPosition_0206c3f4 GetWaitTargetPosition
 #define IsStageEventReady_02087c78 IsStageEventReady
 #define StageRecord_GetSlotPosition_02087c4c StageRecord_GetSlotPosition
-#define func_ov001_0207f870 func_ov001_0207f898
+#define func_ov001_0207f870 CallFieldObjectHook13IfPresent
 #define func_ov001_020863f4 func_ov001_0208641c
 #include "src/ov001/shared_engine/GetWaitTargetPosition_0206c3f4.c"

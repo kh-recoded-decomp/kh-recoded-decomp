@@ -1,3 +1,4 @@
+#define func_ov001_02068d78 StartPostIntroElapsedTimer
 #define MarkSessionIntroDone_02064d1c MarkSessionIntroDone
 #define data_ov001_020a0460 data_ov001_020a0480
 #include "src/ov001/shared_engine/MarkSessionIntroDone_02064d1c.c"

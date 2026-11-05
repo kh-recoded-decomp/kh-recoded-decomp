@@ -108,7 +108,7 @@ extern int GetFieldSessionState(void);
 extern fx32 FX_Mul(fx32 a, fx32 b);
 extern u16 GetStageRowIndex(StageRecord *record);
 extern int GetStageEntrySide(u32 id, StageObjectHit *hit);
-extern BOOL func_ov001_0209c56c(u16 id, u16 value);
+extern BOOL RequestSceneEventWhenSessionState6(u16 id, u16 value);
 extern void VEC_Subtract(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
 extern void VEC_MultAdd(fx32 scale, const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
 
@@ -216,7 +216,7 @@ void ProbeStageObjectHit(StageRecord *self, StageActor *player, int unused, u16 
             continue;
         }
         if (!(message.reaction & 5) && GetSessionMode() == 6
-            && func_ov001_0209c56c(self->eventId, side > 0 ? 1 : 3)) {
+            && RequestSceneEventWhenSessionState6(self->eventId, side > 0 ? 1 : 3)) {
             hitFlags = PROBE_HIT;
             break;
         }

@@ -1,3 +1,4 @@
+#define func_ov001_0206e6f4 TryBeginTrackedMainBrightness
 #define Actor_ConsumeCommand_020c9a30 Actor_ConsumeCommand
 #define Actor_GetModelPosition_020cd0d8 Actor_GetModelPosition
 #define Actor_TrySpawnIdleEffect_020c7a70 Actor_TrySpawnIdleEffect

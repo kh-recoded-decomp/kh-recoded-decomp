@@ -25,7 +25,7 @@ extern FieldManager *data_ov001_020a04bc;
 extern s32 GetFieldSessionState(void);
 extern void SetMenuHighlight(int value);
 extern void ConfigureChannelSlot(int kind, int value, int index);
-extern void func_ov001_0206cab4(u32 enabled);
+extern void SetFieldMessageLoaderUpdatesPaused(u32 enabled);
 
 void DeactivateManagerEntries(void)
 {
@@ -40,7 +40,7 @@ void DeactivateManagerEntries(void)
     }
     entryIndex = 0;
     ConfigureChannelSlot(0, 0, 0);
-    func_ov001_0206cab4(0);
+    SetFieldMessageLoaderUpdatesPaused(0);
     for (; entryIndex < manager->entryCount; entryIndex++) {
         ManagerEntry *entry = &manager->entries[entryIndex];
         if (entry->object != NULL) {

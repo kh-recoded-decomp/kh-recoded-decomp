@@ -3,6 +3,6 @@
 #define ScriptCmd_QueueEntryPathMessages_020a213c ScriptCmd_QueueEntryPathMessages
 #define ScriptVm_ReadOperandFx32_02025df8 ScriptVm_ReadOperandFx32
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
-#define func_ov001_0208635c func_ov001_02086384
+#define func_ov001_0208635c GetEntryPoolObjectAtIndex
 #define func_ov017_020a4204 FindKind4FieldObject
 #include "src/ov017/script_commands/ScriptCmd_QueueEntryPathMessages_020a213c.c"
