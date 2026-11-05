@@ -384,3 +384,11 @@ including the misleading previous names `FSi_WaitForCardThread` and
 the busy word, callback, full buffer extent, fast-mode selector, overlay barriers
 and legacy DS adapters. The eight-word BSS allocation is preserved; its first
 word is a DMA selector rather than an RNG seed.
+
+## Joint, SBC and texture identity helpers
+
+Five helpers use the established joint-result and SBC-state types and names
+from their GX operations. [JOINT_TEXTURE_HELPERS.md](JOINT_TEXTURE_HELPERS.md)
+records identity flags, exact command payloads, unconditional cursor advance,
+untouched fields and the two-argument texture hook contract. Separate texture
+entrypoints remain separate; neither helper initializes an entire matrix.

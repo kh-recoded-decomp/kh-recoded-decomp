@@ -341,11 +341,11 @@ src/calls/SampleAnimationScalarITCM.c:
     complete
     .text       start:0x01ffa450 end:0x01ffa5b0
 
-src/calls/func_01ffa5b0.c:
+src/calls/EmitBasicJointTransform.c:
     complete
     .text       start:0x01ffa5b0 end:0x01ffa624
 
-src/calls/func_01ffa624.c:
+src/calls/DecodeBasicJointScale.c:
     complete
     .text       start:0x01ffa624 end:0x01ffa660
 
@@ -385,7 +385,7 @@ src/calls/BuildTextureVerticalScaleMatrix.c:
     complete
     .text       start:0x01ffac9c end:0x01ffacdc
 
-src/calls/func_01ffacdc.c:
+src/calls/SetMode2TextureIdentityTerms.c:
     complete
     .text       start:0x01ffacdc end:0x01ffad00
 
@@ -393,7 +393,7 @@ src/calls/NNSi_G3dSendTexMtxMode2.c:
     complete
     .text       start:0x01ffad00 end:0x01ffae38
 
-src/calls/func_01ffae58.c:
+src/calls/SetAlternateTextureIdentityTerms.c:
     complete
     .text       start:0x01ffae58 end:0x01ffae7c
 
@@ -493,7 +493,7 @@ libs/nns/g3d/calls/NNSi_G3dFuncSbc_NODE.c:
     complete
     .text       start:0x01ffe280 end:0x01ffe394
 
-src/calls/func_01ffe394.c:
+src/calls/HandleSbcMatrixRestore.c:
     complete
     .text       start:0x01ffe394 end:0x01ffe3d8
 

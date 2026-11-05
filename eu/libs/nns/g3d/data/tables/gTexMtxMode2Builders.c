@@ -10,7 +10,7 @@ extern void BuildTextureTranslationMatrixITCM(u32 *matrix, const struct TexMtxSt
 extern void BuildTextureTransformVariantD(u32 *matrix, const struct TexMtxState *state);
 extern void NNSi_G3dCalcTexMtxRotTransZero(u32 *matrix, const struct TexMtxState *state);
 extern void BuildTextureVerticalScaleMatrix(u32 *matrix, const struct TexMtxState *state);
-extern void func_01ffacdc(int *matrix);
+extern void SetMode2TextureIdentityTerms(u32 *matrix, const struct TexMtxState *state);
 
 /* Indexed by the scale-one, rotation-zero and translation-zero flags. */
 #pragma define_section textureBuilders ".text" ".text" ".text" RX
@@ -22,5 +22,5 @@ __declspec(textureBuilders) const TexMtxBuilder gTexMtxMode2Builders[8] = {
     BuildTextureTransformVariantD,
     NNSi_G3dCalcTexMtxRotTransZero,
     BuildTextureVerticalScaleMatrix,
-    (TexMtxBuilder)func_01ffacdc,
+    SetMode2TextureIdentityTerms,
 };

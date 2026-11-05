@@ -1,3 +1,4 @@
+#define func_01ffe394 HandleSbcMatrixRestore
 #define func_01ffe8a0 EmitJointAnimationFramePayload
 #define InitializeArchiveBackend_0203a858 InitSbcHandlersAndFastDma
 #define archive_backend_callbacks data_027e01f8

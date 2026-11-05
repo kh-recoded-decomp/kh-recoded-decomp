@@ -48,8 +48,10 @@ inputs or a completion result. The wait definition now takes no argument. The
 two shared-source overlay wrappers still pass their existing processor/overlay
 register words through an old erased declaration; the wait reads neither word.
 These are legacy DS call adapters, not additional synchronization inputs. It does not sleep, yield or time out. The overlay wrappers
-wait before the SDK operation and discard its return value; a name must not
-invent a successful-load result.
+wait before the SDK operation. Their current C declarations are void, but the
+machine code preserves the SDK return register through the epilogue. That is
+not evidence of a discarded machine result or of a successful-load contract;
+callers must be checked before normalizing this legacy return ABI.
 
 For a host port, replace this geometry barrier deliberately with the renderer's
 synchronization contract. Do not turn it into a card/filesystem wait solely
