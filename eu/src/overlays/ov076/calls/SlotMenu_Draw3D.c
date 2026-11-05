@@ -1,3 +1,4 @@
+#define func_01ff9b70 BuildCameraLookAtMatrix
 #define MTX_OrthoW_02005f10 MTX_OrthoW
 #define OverlayId0_00000000 OVERLAY_0_ID
 #define SceneNode_Draw_01ffb12c SceneNode_Draw

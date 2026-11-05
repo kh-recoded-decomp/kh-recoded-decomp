@@ -147,7 +147,7 @@ extern void SetSharedStateValue(void *value);
 extern void Text_UploadTileBuffer(TextLayer *surface);
 extern void MTX_OrthoW(fx32 top, fx32 bottom, fx32 left, fx32 right, fx32 near, fx32 far, fx32 scaleW,
                                 void *projOut);
-extern void func_01ff9b70(const VecFx32 *camPos, const VecFx32 *camUp, const VecFx32 *target, void *viewOut);
+extern void BuildCameraLookAtMatrix(const VecFx32 *camPos, const VecFx32 *camUp, const VecFx32 *target, void *viewOut);
 extern void DrawIndexedImageQuad(void *images, u32 indexColor, u32 pos, fx32 depth);
 
 static inline PriceRange *GetPriceRange(ItemMenu *menu, int id)
@@ -371,7 +371,7 @@ void RedrawShopMenu(ItemMenu *menu)
     NNS_G3dGlb.camPos = pos;
     NNS_G3dGlb.camUp = up;
     NNS_G3dGlb.camTarget = target;
-    func_01ff9b70(&pos, &up, &target, NNS_G3dGlb_cameraMtx);
+    BuildCameraLookAtMatrix(&pos, &up, &target, NNS_G3dGlb_cameraMtx);
     NNS_G3dGlb.dirtyFlags &= ~0xe8;
 
     if (menu->detailIcon >= 0) {

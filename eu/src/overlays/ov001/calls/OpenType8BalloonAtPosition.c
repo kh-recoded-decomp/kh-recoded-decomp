@@ -1,4 +1,4 @@
 #define OpenType8BalloonAtPosition_02071980 OpenType8BalloonAtPosition
-#define ProjectWorldPositionToScreen_02028c24 func_02028c38
+#define ProjectWorldPositionToScreen_02028c24 ProjectWorldPositionWithSavedCamera
 #define func_ov001_0207a504 OpenMessageWindow_0207a504
 #include "src/ov001/dialog_balloon/OpenType8BalloonAtPosition_02071980.c"

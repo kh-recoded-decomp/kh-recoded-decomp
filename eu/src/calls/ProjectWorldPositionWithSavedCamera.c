@@ -20,7 +20,7 @@ static inline const MtxFx43 *GetCameraMatrix(void)
     return &gSavedCameraState.camera;
 }
 
-int func_02028c38(const VecFx32 *worldPosition, int *screenX, int *screenY)
+int ProjectWorldPositionWithSavedCamera(const VecFx32 *worldPosition, int *screenX, int *screenY)
 {
     const MtxFx44 *projection;
     const MtxFx43 *camera;

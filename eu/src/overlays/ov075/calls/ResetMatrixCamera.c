@@ -1,3 +1,4 @@
+#define func_01ff9b70 BuildCameraLookAtMatrix
 #define ResetMatrixCamera_020c7d04 ResetMatrixCamera
 #define MTX_OrthoW_02005f10 MTX_OrthoW
 #define data_0205a924 NNS_G3dGlb

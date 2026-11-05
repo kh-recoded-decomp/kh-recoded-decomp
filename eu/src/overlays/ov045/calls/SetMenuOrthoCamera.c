@@ -21,6 +21,6 @@ void SetMenuOrthoCamera(fx32 left, fx32 right, fx32 top, fx32 bottom)
     NNS_G3dGlb_prmMatColor0.position = position;
     NNS_G3dGlb_prmMatColor0.up = up;
     NNS_G3dGlb_prmMatColor0.target = target;
-    func_01ff9b70(&position, &up, &target, &NNS_G3dGlb_cameraMtx);
+    BuildCameraLookAtMatrix(&position, &up, &target, &NNS_G3dGlb_cameraMtx);
     NNS_G3dGlb_prmMatColor0.dirtyFlags &= ~0xe8;
 }

@@ -1,23 +1,10 @@
-typedef signed long fx32;
-
-typedef struct VecFx32 {
-    fx32 x;
-    fx32 y;
-    fx32 z;
-} VecFx32;
-
-typedef struct MtxFx43 {
-    fx32 _00, _01, _02;
-    fx32 _10, _11, _12;
-    fx32 _20, _21, _22;
-    fx32 _30, _31, _32;
-} MtxFx43;
+#include "src/graphics/CameraState.h"
 
 extern void VEC_Normalize(const VecFx32 *src, VecFx32 *dst);
 extern void VEC_CrossProduct(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
 extern fx32 VEC_DotProduct(const VecFx32 *a, const VecFx32 *b);
 
-void func_01ff9b70(const VecFx32 *camPos, const VecFx32 *camUp, const VecFx32 *target, MtxFx43 *mtx)
+void BuildCameraLookAtMatrix(const VecFx32 *camPos, const VecFx32 *camUp, const VecFx32 *target, MtxFx43 *mtx)
 {
     VecFx32 vLook, vRight, vUp;
 

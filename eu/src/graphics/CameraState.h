@@ -38,8 +38,26 @@ typedef char CameraPositionMustStartAt536Bytes[
 extern CameraGlobalState NNS_G3dGlb;
 extern CameraBackup gSavedCameraState;
 
-extern void func_01ff9b70(const VecFx32 *position, const VecFx32 *up,
+extern void BuildCameraLookAtMatrix(const VecFx32 *position, const VecFx32 *up,
                         const VecFx32 *target, MtxFx43 *matrix);
+/* Borrowed saved vectors; overwritten by the next BeginOrthographicCamera. */
+const VecFx32 *GetSavedCameraPosition(void);
+const VecFx32 *GetSavedCameraTarget(void);
+
+typedef int (*CameraStateCallback)(void);
+CameraStateCallback GetOrthographicCameraBeginCallback(void);
+CameraStateCallback GetSavedCameraRestoreCallback(void);
+
 int BeginOrthographicCamera(void);
+int RestoreSavedCamera(void);
+int BeginOrthographicCameraWrapper(void);
+int RestoreSavedCameraWrapper(void);
+/* Uses the saved matrices but the current SDK viewport. Always writes outputs;
+ * returns 0 for normalized XY in [0, 1], otherwise -1. No depth/behind test.
+ */
+int ProjectWorldPositionWithSavedCamera(const VecFx32 *worldPosition,
+                                        int *screenX, int *screenY);
+int ProjectWorldPositionWithSavedCameraWrapper(const VecFx32 *worldPosition,
+                                               int *screenX, int *screenY);
 
 #endif

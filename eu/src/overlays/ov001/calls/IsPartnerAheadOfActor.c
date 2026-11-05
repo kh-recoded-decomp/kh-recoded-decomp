@@ -1,6 +1,6 @@
 #define func_ov001_020645c8 IsSessionFlagSet
 #define IsPartnerAheadOfActor_02088a90 IsPartnerAheadOfActor
-#define PXI_Init_02088a88 func_ov001_02088ab0
+#define PXI_Init_02088a88 ProjectWorldPositionWithSavedCameraWrapper
 #define ReadSessionPackedBits_02064574 ReadSessionPackedBits
 #define func_02036240 ActorRegistry_GetEntityByIndex
 #define func_02036810 ActorSlot_GetByIndex

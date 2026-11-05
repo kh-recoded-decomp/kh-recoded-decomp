@@ -1,3 +1,4 @@
+#define func_01ff9b70 BuildCameraLookAtMatrix
 #define DrawNodeWithExplicitProjection_0202f1b0 DrawNodeWithExplicitProjection
 #define MIi_CpuCopyFast_01ff878c MIi_CpuCopyFast
 #define Scene_DrawNode_01ffb12c SceneNode_Draw

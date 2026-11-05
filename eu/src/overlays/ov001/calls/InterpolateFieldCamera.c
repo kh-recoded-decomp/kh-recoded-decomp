@@ -1,3 +1,4 @@
+#define func_01ff9b70 BuildCameraLookAtMatrix
 #define Anim_InterpEased_0208adac Anim_InterpEased
 #define EvaluateInterpolationCurve_02025718 EvaluateInterpolationCurve
 #define FixedPointMultiply12 FX_Mul

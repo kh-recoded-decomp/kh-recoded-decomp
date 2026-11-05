@@ -6240,7 +6240,7 @@ src/overlays/ov001/calls/func_ov001_02088aa4.c:
     complete
     .text       start:0x02088aa4 end:0x02088ab0
 
-src/overlays/ov001/calls/func_ov001_02088ab0.c:
+src/overlays/ov001/calls/ProjectWorldPositionWithSavedCameraWrapper.c:
     complete
     .text       start:0x02088ab0 end:0x02088ab8
 

@@ -1,4 +1,4 @@
-#include "nitro/types.h"
+#include "src/graphics/CameraState.h"
 
 typedef struct Context {
     u8 pad_000[0x104];
@@ -6,10 +6,9 @@ typedef struct Context {
 } Context;
 
 extern Context *data_ov001_020a04ec;
-extern void func_02028c38(void *position, int *screenX, int *screenY);
 extern int *func_01ffb2f8(int arg0, int arg1, int arg2);
 
-BOOL PlaceSlotPanelAtWorldPosition(int slot, void *position, int animate)
+BOOL PlaceSlotPanelAtWorldPosition(int slot, const VecFx32 *position, int animate)
 {
     Context *context;
     u8 *panel;
@@ -31,7 +30,7 @@ BOOL PlaceSlotPanelAtWorldPosition(int slot, void *position, int animate)
         panel = (u8 *)context + 0x808;
         break;
     }
-    func_02028c38(position, &screenX, &screenY);
+    ProjectWorldPositionWithSavedCamera(position, &screenX, &screenY);
     frame = 0;
     *(int *)(panel + 0xa4) = (s64)(screenX - 0x80) * 0xcccd / 0x80;
     *(int *)(panel + 0xa8) = -(int)((s64)(screenY - 0x60) * 0x999a / 0x60);

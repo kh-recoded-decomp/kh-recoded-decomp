@@ -229,7 +229,7 @@ libs/nitro/mtx/auto/MTX_MultVec43.c:
     complete
     .text       start:0x01ff9ad8 end:0x01ff9b70
 
-src/calls/func_01ff9b70.c:
+src/calls/BuildCameraLookAtMatrix.c:
     complete
     .text       start:0x01ff9b70 end:0x01ff9c84
 

@@ -31,7 +31,7 @@ int BeginOrthographicCamera(void)
     NNS_G3dGlb.position = position;
     NNS_G3dGlb.up = up;
     NNS_G3dGlb.target = target;
-    func_01ff9b70(&position, &up, &target, &NNS_G3dGlb.camera);
+    BuildCameraLookAtMatrix(&position, &up, &target, &NNS_G3dGlb.camera);
     NNS_G3dGlb.flags &= ~0xe8;
     return 0;
 }

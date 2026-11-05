@@ -1,3 +1,4 @@
+#define func_01ff9b70 BuildCameraLookAtMatrix
 #define DrawScreenFadeQuad_020885a4 DrawScreenFadeQuad
 #define FlushGeometryState_02019230 NNS_G3dGlbFlushWVP
 #define MTX_OrthoW_02005f10 MTX_OrthoW

@@ -1,5 +1,5 @@
 #define DrawLevelBarQuads_020bbc4c DrawLevelBarQuads
-#define ProjectWorldPositionToScreen_02028c24 func_02028c38
+#define ProjectWorldPositionToScreen_02028c24 ProjectWorldPositionWithSavedCamera
 #define QueueOrSendGeometryCommand_01ffa37c NNS_G3dGeBufferOP_N
 #define SetupMovieCamera_020bb8f0 SetupMovieCamera
 #include "src/ov035/unclassified_helpers/DrawLevelBarQuads_020bbc4c.c"

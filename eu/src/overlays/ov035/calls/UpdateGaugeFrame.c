@@ -1,8 +1,8 @@
 #define data_0205fde4 gPanelActive
 #define GFXi_EnqueueCommand_02014090 NNS_GfdRegisterNewVramTransferTask
 #define IsFieldPanelHidden_0207187c IsFieldPanelHidden
-#define PXI_Init_02028dac PXI_Init_02028dc0
-#define PXI_Init_02028db8 PXI_Init_02028dcc
+#define PXI_Init_02028dac BeginOrthographicCameraWrapper
+#define PXI_Init_02028db8 RestoreSavedCameraWrapper
 #define UpdateGaugeFrame_020bc0ec UpdateGaugeFrame
 #define data_ov035_020bc4e8 data_ov035_020bc508
 #define func_ov035_020bae1c GetMovieEntryValue

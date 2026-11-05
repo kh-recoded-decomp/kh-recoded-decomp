@@ -3,8 +3,8 @@
 #define FillBackgroundLayerRect_02001a60 FillBackgroundLayerRect
 #define GetSceneTagTracker_020711b0 GetSceneTagTracker
 #define NNSi_FndGetCurrentRootHeap_0202a764 NNSi_FndGetCurrentRootHeap
-#define PXI_Init_02028dac PXI_Init_02028dc0
-#define PXI_Init_02028db8 PXI_Init_02028dcc
+#define PXI_Init_02028dac BeginOrthographicCameraWrapper
+#define PXI_Init_02028db8 RestoreSavedCameraWrapper
 #define UpdateFieldMenu_020779f0 UpdateFieldMenu
 #define func_ov001_020758c4 DrawPartyGauges
 #define UpdateWidgetLayerDefault_020b9df0 UpdateWidgetLayerDefault_020b9e10

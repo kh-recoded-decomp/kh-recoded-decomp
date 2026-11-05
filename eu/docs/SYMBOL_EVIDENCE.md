@@ -193,6 +193,30 @@ release, code-unit capacity, custom formatter semantics and host variadic ABI
 boundary. The common owner pointer stays `void *` for the actual `void **`
 release contract; a typed header is used when interpreting its data.
 
+## Saved camera and projection
+
+| Previous symbol | Current name | Evidence |
+|---|---|---|
+| `func_01ff9b70` | `BuildCameraLookAtMatrix` | Normalizes position minus target, constructs right/up with cross products, and stores the basis and negative position dot products in a 4x3 matrix. |
+| `func_020289c0` | `GetOrthographicCameraBeginCallback` | Returns the address of `BeginOrthographicCamera`; it does not call it. |
+| `func_02028b30` | `GetSavedCameraRestoreCallback` | Returns the address of the saved-camera restore function. |
+| `func_02028c20` | `GetSavedCameraPosition` | Returns the saved position vector at backup `+0x0c`. |
+| `func_02028c2c` | `GetSavedCameraTarget` | Returns the saved target vector at backup `+0x00`. |
+| `func_02028c38` | `ProjectWorldPositionWithSavedCamera` | Transforms through the saved view/projection matrices, divides by W and converts to current viewport coordinates. |
+| `func_ov001_02088ab0` | `ProjectWorldPositionWithSavedCameraWrapper` | Forwards the world position and both output pointers to that projector. Speech-balloon and actor-order callers supply all three arguments. |
+| `ResetCameraToDefaults` | `RestoreSavedCamera` | Restores saved projection and camera vectors, then rebuilds the view matrix. It does not load fixed defaults. |
+| `PXI_Init_02028dc0` | `BeginOrthographicCameraWrapper` | Calls `BeginOrthographicCamera` and forwards its result. |
+| `PXI_Init_02028dcc` | `RestoreSavedCameraWrapper` | Calls the restore function and forwards its result. |
+
+
+[SAVED_CAMERA.md](SAVED_CAMERA.md) records the existing 148-byte backup,
+borrowed vectors, callback types, one-snapshot lifetime, view-matrix rebuild,
+current viewport, fixed-point rounding and XY-only projection status.
+Two native consumers and three wrappers use the common camera interface;
+legacy shared caller views and descriptor erasure remain explicit port work.
+The game's saved-camera projector is classified under `src/calls`, retaining
+its original address and byte-exact code.
+
 ## Explicitly unresolved
 
 The vector view at `data_027e0160` overlaps `data_027e0164`, used by the older

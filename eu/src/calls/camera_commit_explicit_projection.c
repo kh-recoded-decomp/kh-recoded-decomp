@@ -1,3 +1,4 @@
+#define func_01ff9b70 BuildCameraLookAtMatrix
 #define camera_commit_explicit_projection_0202a8c4 camera_commit_explicit_projection
 #define data_0205a924 NNS_G3dGlb
 #define data_0205a92c NNS_G3dGlb_projMtx
