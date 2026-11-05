@@ -1,3 +1,4 @@
+#define func_ov002_020621e4 ReleaseOv002SubPanelTextLayers
 #define DispatchContextCommand_02066c78 DispatchContextCommand
 #define InitPanelMainScreen_0206e730 InitPanelMainScreen
 #define OpenResultPanel_02071ab4 OpenResultPanel

@@ -41,7 +41,7 @@ extern void IndexedRecord_SetPair(PanelObjects *, int, const SlotPosition *);
 extern void ZeroHalfThenFree(void *);
 extern void *FindWidgetById(PanelObjects *, int);
 extern void SetEntrySlotsVisible(PanelObjects *, void *, BOOL);
-extern s32 func_ov002_02069b8c(RecordFlagSets *, int, int, BOOL);
+extern s32 GetMenuCategoryRecordFlagState(RecordFlagSets *, int, int, BOOL);
 extern s32 SetRecordFlagFromTable(RecordFlagSets *, int, int, BOOL, BOOL);
 extern int DispatchContextCommand(u32, int, int, void *);
 extern s32 GetCategoryFlagState(RecordFlagSets *, int);
@@ -128,7 +128,7 @@ void RefreshPanelCategorySlots(void)
     SetEntrySlotsVisible(objects, widget, multipleEntries);
     category = gPanelGroupCategories[data_ov014_0206f9a0->group][data_ov014_0206f9a0->index];
     entry = data_ov014_0206f9a0->groupEntries[category][data_ov014_0206f9a0->selection];
-    flagState = func_ov002_02069b8c(&data_ov014_0206f9a0->flags, category, entry, TRUE);
+    flagState = GetMenuCategoryRecordFlagState(&data_ov014_0206f9a0->flags, category, entry, TRUE);
     widget = FindWidgetById(objects, 8);
     SetEntrySlotsVisible(objects, widget, flagState != 0);
     if (flagState != 0) {

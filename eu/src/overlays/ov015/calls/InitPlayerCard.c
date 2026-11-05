@@ -1,3 +1,5 @@
+#define func_ov002_02061930 GetCachedOwnerNickname
+#define func_ov002_0206193c GetCachedOwnerMessage
 #define InitPlayerCard_0206f524 InitPlayerCard
 #define ReadMacAddress_02004ac8 OS_GetMacAddress
 #define func_01ff8830 MI_CpuFill8

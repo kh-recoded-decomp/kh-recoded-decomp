@@ -1,3 +1,6 @@
+#define func_ov013_02070b78 DrawOv013ListPositionCounter
+#define func_ov013_02074598 EnterOv013PanelMenuState9
+#define func_ov013_020745a8 EnterOv013PanelMenuState10
 #define ApplySelectedSubitemValues_020b94fc ApplySelectedSubitemValues
 #define CheckClearCountMilestone_02074674 CheckClearCountMilestone
 #define GXS_LoadBG0Char_02007940 GXS_LoadBG0Char

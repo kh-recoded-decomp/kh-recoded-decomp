@@ -9,7 +9,7 @@ typedef struct {
 
 extern u64 OS_GetTick(void);
 extern void SetPanelState(Panel *panel, s32 state, u32 param1, u32 param2);
-extern void func_ov000_02061b88(int value, int waitVBlank);
+extern void SetTitleBrightnessAndMaybeWaitVBlank(int value, int waitVBlank);
 
 int WaitTitleSaveFormat(Panel *panel)
 {
@@ -22,7 +22,7 @@ int WaitTitleSaveFormat(Panel *panel)
     } else if (OS_GetTick() >= panel->formatStartTick + 0xffb10) {
         result = 0;
         SetPanelState(panel, 0, 0, 30);
-        func_ov000_02061b88(0x10, 1);
+        SetTitleBrightnessAndMaybeWaitVBlank(0x10, 1);
     }
     return result;
 }

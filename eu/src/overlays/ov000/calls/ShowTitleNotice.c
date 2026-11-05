@@ -40,7 +40,7 @@ extern char OVERLAY_27_ID[];
 
 extern void LoadOverlayAfterGeometryTransfer(int processor, int overlayId);
 extern void UnloadOverlayAfterGeometryTransfer(int processor, int overlayId);
-extern void func_ov000_02061b88(int value, int waitVBlank);
+extern void SetTitleBrightnessAndMaybeWaitVBlank(int value, int waitVBlank);
 extern void GX_SetBankForBG(int bank);
 extern void GX_SetBankForBGExtPltt(int bank);
 extern void GX_SetGraphicsMode(int dispMode, int bgMode, int bg0as3d);
@@ -72,7 +72,7 @@ void ShowTitleNotice(void *owner, int noticeType)
     MessageSet messages;
 
     LoadOverlayAfterGeometryTransfer(0, FS_OVERLAY_ID_ov027);
-    func_ov000_02061b88(-0x10, 1);
+    SetTitleBrightnessAndMaybeWaitVBlank(-0x10, 1);
     GX_SetBankForBG(0x10);
     GX_SetBankForBGExtPltt(0);
     GX_SetGraphicsMode(1, 0, 1);

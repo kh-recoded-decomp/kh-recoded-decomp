@@ -1,3 +1,4 @@
+#define func_ov002_02062014 SetOv002PanelModeDirtyFromLowBit
 #define func_ov002_0206655c IsScreenFadeComplete
 #define ChangePanelState_0206d1c0 ChangePanelState
 #define UpdatePanelOpenStep_0206d25c UpdatePanelOpenStep

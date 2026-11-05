@@ -1,3 +1,6 @@
+#define func_ov002_02061930 GetCachedOwnerNickname
+#define func_ov002_020620fc ResetOv002SubPanelText
+#define func_ov002_020621c4 GetOv002PanelMessage
 #define DrawMenuLabels_020643a0 DrawMenuLabels
 #define func_ov002_02061964 ActivatePanelSlotCD
 #define func_ov002_02066c78 DispatchContextCommand

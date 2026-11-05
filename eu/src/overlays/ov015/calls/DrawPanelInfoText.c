@@ -1,3 +1,7 @@
+#define func_ov002_02061930 GetCachedOwnerNickname
+#define func_ov002_0206193c GetCachedOwnerMessage
+#define func_ov002_020620fc ResetOv002SubPanelText
+#define func_ov002_020621c4 GetOv002PanelMessage
 #define OS_SNPrintf_0202e080 OS_SNPrintf_0202e094
 #define data_ov015_0207a19c gWirelessRandomChoiceLimits
 #define func_ov002_02061964 ActivatePanelSlotCD

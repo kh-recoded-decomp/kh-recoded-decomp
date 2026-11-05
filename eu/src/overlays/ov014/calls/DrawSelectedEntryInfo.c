@@ -1,3 +1,6 @@
+#define func_ov002_0206203c ResetOv002MainPanelText
+#define func_ov002_020620fc ResetOv002SubPanelText
+#define func_ov002_020621c4 GetOv002PanelMessage
 #define func_ov002_02061e34 DrawPanelTextOutlined
 #define data_ov014_0206f81c gPanelGroupCategories
 #define CopyRecordName_02069d5c CopyRecordName

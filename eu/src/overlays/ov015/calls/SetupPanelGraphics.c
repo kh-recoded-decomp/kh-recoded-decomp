@@ -106,7 +106,7 @@ extern void func_ov015_02072854(void);
 extern void func_ov015_0206c660(void);
 extern void GX_SetBankForSubOBJExtPltt(int bank);
 extern void GX_SetBankForOBJExtPltt(int bank);
-extern void func_ov002_020629a8(void);
+extern void ResetOv002PanelGraphics(void);
 extern int Msg_OpenContainerAndReadHeader(const char *name, u32 mode, BOOL allocFromEnd);
 extern void ZeroHalfThenFree(int handle);
 extern void *LoadFileAllocFromHeapTail(u32 fileId, u32 type);
@@ -202,7 +202,7 @@ void SetupPanelGraphics(void) {
     GX_SetBankForOBJExtPltt(0);
     *(vu32 *)0x4000000 = (*(vu32 *)0x4000000 & ~0x1f00) | 0x1f00;
     *(vu32 *)0x4001000 = (*(vu32 *)0x4001000 & ~0x1f00) | 0x1e00;
-    func_ov002_020629a8();
+    ResetOv002PanelGraphics();
 
     handle = Msg_OpenContainerAndReadHeader(sOv015_WxcWlmP2_0207e7e0, 0x10, 0);
     fileId = ((handle + 0x8000) & 0xfffffc) << 7;

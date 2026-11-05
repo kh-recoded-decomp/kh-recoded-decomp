@@ -1,3 +1,4 @@
+#define func_ov000_02063770 GetTitleSessionStatus
 #define PXI_Init_0202a638 DestroyTaskObjectWrapper
 #define ReleaseHandleAndResetDisplay_02062cf4 ReleaseHandleAndResetDisplay
 #define SetupDisplayBanksAndLayers_0206141c SetupDisplayBanksAndLayers

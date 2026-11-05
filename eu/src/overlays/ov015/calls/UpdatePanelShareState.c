@@ -1,3 +1,4 @@
+#define func_ov002_02062000 GetOv002PanelKeyRepeatState
 #define func_ov002_0206655c IsScreenFadeComplete
 #define AreAllWidgetMovesFinished_020b912c AreAllWidgetMovesFinished
 #define DispatchContextCommand_02066c78 DispatchContextCommand

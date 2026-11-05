@@ -1,3 +1,5 @@
+#define func_ov002_02062000 GetOv002PanelKeyRepeatState
+#define func_ov002_020620fc ResetOv002SubPanelText
 #define func_ov002_02066c44 ResetContextCommandFlag
 #define DecrementBusyCounterIfPositive_02025494 DecrementBusyCounterIfPositive
 #define GetMenuTouchPressed_02066b84 GetMenuTouchPressed

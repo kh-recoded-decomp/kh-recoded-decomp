@@ -4,7 +4,7 @@
 #include "nitro/fx.h"
 
 extern void SetScrollListPixels(PanelScrollList *list, int pixels, BOOL keepCursor);
-extern void func_ov013_0206fbbc(void);
+extern void PositionOv013CursorWidget(void);
 extern void SetEntrySlotsVisible(int root, int *widget, int visible);
 extern WidgetPositionRecord *FindWidgetById(void *root, int id);
 extern void RefreshPanelSlotDigits(void);
@@ -31,7 +31,7 @@ void ScrollPanelSlotWidgets(void)
         keepCursor = FALSE;
     }
     SetScrollListPixels(&state->list, -offset, keepCursor);
-    func_ov013_0206fbbc();
+    PositionOv013CursorWidget();
 
     slot = 0;
     span = data_ov013_02074ce0->list.itemCount - data_ov013_02074ce0->list.scrollOffset;

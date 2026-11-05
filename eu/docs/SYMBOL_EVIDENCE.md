@@ -506,3 +506,13 @@ records descriptor layout differences, callback-presence input consumption,
 consumed versus residual returns, task/work/window ownership, text-copy lifetime,
 HP predicates and unresolved state/category meanings. The native empty handlers
 and their distinct descriptor registrations remain intact.
+
+## Title-session, profile-panel and player-card helpers
+
+Fifty-eight entrypoints now name title-session/display adapters, profile-panel
+text/graphics ownership, native save-record operations and player-card list
+behavior. [TITLE_PROFILE_CARD_CONTRACTS.md](TITLE_PROFILE_CARD_CONTRACTS.md)
+records distinct work owners, borrowed buffers, low-bit rather than boolean
+flags, pointer versus status returns, source-to-VRAM uploads, numeric page
+transitions and signed cursor boundaries. Unsupported CARD/day/tint comments
+are replaced with the observed operations.

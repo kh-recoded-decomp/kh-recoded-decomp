@@ -1,3 +1,8 @@
+#define func_ov002_020678cc MarkGlobalMenuRecordFlagBits
+#define func_ov002_020678fc ApplySingleGlobalMenuRecord
+#define func_ov002_0206793c ApplyGlobalMenuCategoryRecord
+#define func_ov002_02067974 ClearGlobalMenuRecordField
+#define func_ov002_020679ac ClearGlobalMenuSecondaryRecordFlag
 #define DispatchContextCommand_02066c78 DispatchContextCommand
 #define ExportSlotConfigFlags_02067334 ExportSlotConfigFlags
 #define GetContextConfigByte1ac8_0206740c GetContextConfigByte1ac8

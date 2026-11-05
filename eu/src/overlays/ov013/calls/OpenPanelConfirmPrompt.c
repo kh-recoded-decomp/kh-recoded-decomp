@@ -1,3 +1,5 @@
+#define func_ov002_020621c4 GetOv002PanelMessage
+#define func_ov013_02070a50 UploadOv013SubBg0ScreenEntry1
 #define OpenPanelConfirmPrompt_02073b94 OpenPanelConfirmPrompt
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define SetEntrySlotsVisible_020b9580 SetEntrySlotsVisible

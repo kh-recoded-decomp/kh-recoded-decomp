@@ -1,3 +1,5 @@
+#define func_ov002_02062000 GetOv002PanelKeyRepeatState
+#define func_ov013_02070aa0 QueueOv013SubBg0ClearAndHideWidgets
 #define func_ov013_020716e4 ChangePanelMenuState
 #define func_ov002_0206655c IsScreenFadeComplete
 #define IsButtonBPressed_020632c8 IsButtonBPressed

@@ -1,3 +1,5 @@
+#define func_ov002_02062000 GetOv002PanelKeyRepeatState
+#define func_ov002_02062014 SetOv002PanelModeDirtyFromLowBit
 #define func_ov015_020766d0 UpdatePanelMinigame
 #define func_ov002_0206655c IsScreenFadeComplete
 #define func_ov015_02078f58 UpdateWirelessPanelTouch

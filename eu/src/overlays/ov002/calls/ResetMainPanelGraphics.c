@@ -11,8 +11,8 @@ extern void *G2_GetBG1CharPtr(void);
 extern void *G2_GetBG2CharPtr(void);
 extern void *G2_GetBG3CharPtr(void);
 extern void MIi_CpuClearFast(u32 value, void *destination, u32 byteCount);
-extern void func_ov002_02062504(NNSG2dFont *font);
-extern void func_ov002_02062470(NNSG2dFont *font);
+extern void InitOv002MainBg2TextLayer(NNSG2dFont *font);
+extern void InitOv002MainBg3TextLayer(NNSG2dFont *font);
 
 static inline void SetBg0Priority(u32 priority)
 {
@@ -69,7 +69,7 @@ void ResetMainPanelGraphics(void)
     SetBg1Priority(3);
     SetBg2Priority(2);
     SetBg3Priority(0);
-    func_ov002_02062504(&gOv002PanelState->fonts[0].font);
-    func_ov002_02062470(&gOv002PanelState->fonts[0].font);
+    InitOv002MainBg2TextLayer(&gOv002PanelState->fonts[0].font);
+    InitOv002MainBg3TextLayer(&gOv002PanelState->fonts[0].font);
     *(volatile u32 *)0x04000000 &= ~0xe000;
 }

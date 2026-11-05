@@ -1,3 +1,7 @@
+#define func_ov013_0206fbbc PositionOv013CursorWidget
+#define func_ov013_02070a18 ComputeOv013ScrollLimits
+#define func_ov013_02070cb4 GetOv013PlayerCardIndexFromCursor
+#define func_ov013_02071444 RefreshOv013PlayerCardPage
 #define func_ov013_020704a0 ScrollPanelSlotWidgets
 #define func_ov013_020716e4 ChangePanelMenuState
 #define DispatchContextCommand_02066c78 DispatchContextCommand

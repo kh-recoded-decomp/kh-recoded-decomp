@@ -1,3 +1,5 @@
+#define func_ov002_02062254 InitOv002MainPanelGraphics
+#define func_ov002_02062368 InitOv002SubPanelGraphics
 #define ReloadPanelResources_02062938 ReloadPanelResources
 #define ResetDisplayHardware_02029bfc ResetDisplayHardware
 #define data_ov002_0206c280 gPanelResourcePaths

@@ -56,7 +56,7 @@ src/overlays/ov000/calls/DSProt_OnDetection.c:
     complete
     .text       start:0x02061b6c end:0x02061b88
 
-src/overlays/ov000/calls/func_ov000_02061b88.c:
+src/overlays/ov000/calls/SetTitleBrightnessAndMaybeWaitVBlank.c:
     complete
     .text       start:0x02061b88 end:0x02061bb0
 
@@ -104,7 +104,7 @@ src/overlays/ov000/calls/ApplyPanelSelection.c:
     complete
     .text       start:0x020622b8 end:0x02062318
 
-src/overlays/ov000/calls/func_ov000_02062318.c:
+src/overlays/ov000/calls/UpdateTitleTimedPanelPhase.c:
     complete
     .text       start:0x02062318 end:0x0206241c
 
@@ -132,7 +132,7 @@ src/overlays/ov000/calls/ScanSaveSlots.c:
     complete
     .text       start:0x020625d4 end:0x0206276c
 
-src/overlays/ov000/calls/func_ov000_0206276c.c:
+src/overlays/ov000/calls/ApplyTitleMenuFlagsAndStoreLanguage.c:
     complete
     .text       start:0x0206276c end:0x02062794
 
@@ -144,7 +144,7 @@ src/overlays/ov000/calls/UpdatePanelInputWithTimeout.c:
     complete
     .text       start:0x02062838 end:0x02062908
 
-src/overlays/ov000/calls/func_ov000_02062908.c:
+src/overlays/ov000/calls/ReleaseTitlePanelResources.c:
     complete
     .text       start:0x02062908 end:0x02062920
 
@@ -156,7 +156,7 @@ src/overlays/ov000/calls/TryEnterPanelState.c:
     complete
     .text       start:0x02062a10 end:0x02062a58
 
-src/overlays/ov000/calls/func_ov000_02062a58.c:
+src/overlays/ov000/calls/RecordTitleStartTickWrapper.c:
     complete
     .text       start:0x02062a58 end:0x02062a64
 
@@ -216,7 +216,7 @@ src/overlays/ov000/calls/WaitTitleSaveFormat.c:
     complete
     .text       start:0x02062f74 end:0x0206300c
 
-src/overlays/ov000/calls/func_ov000_0206300c.c:
+src/overlays/ov000/calls/SetupTitleDisplayBanksAndLayersWrapper.c:
     complete
     .text       start:0x0206300c end:0x02063018
 
@@ -308,11 +308,11 @@ src/overlays/ov000/calls/UpdateOv039Selection.c:
     complete
     .text       start:0x020636ec end:0x02063770
 
-src/overlays/ov000/calls/func_ov000_02063770.c:
+src/overlays/ov000/calls/GetTitleSessionStatus.c:
     complete
     .text       start:0x02063770 end:0x02063784
 
-libs/nitro/card/calls/func_ov000_02063784.c:
+libs/nitro/card/calls/GetTitleSessionValue.c:
     complete
     .text       start:0x02063784 end:0x02063798
 

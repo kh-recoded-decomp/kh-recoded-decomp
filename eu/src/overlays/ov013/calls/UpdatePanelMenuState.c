@@ -1,3 +1,5 @@
+#define func_ov002_0206203c ResetOv002MainPanelText
+#define func_ov013_0206caa4 ConfigureOv013PlayerCardPageMode
 #define func_ov013_020716e4 ChangePanelMenuState
 #define func_ov002_0206655c IsScreenFadeComplete
 #define IsButtonXPressed_020632e4 IsButtonXPressed

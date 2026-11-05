@@ -1,3 +1,5 @@
+#define func_ov002_020620fc ResetOv002SubPanelText
+#define func_ov002_020621c4 GetOv002PanelMessage
 #define ShowSaveMessage_02064584 ShowSaveMessage
 #define func_ov002_020627e8 MeasurePanelTextPrimary
 #define func_ov002_02061964 ActivatePanelSlotCD

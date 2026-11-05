@@ -1,3 +1,5 @@
+#define func_ov002_02062000 GetOv002PanelKeyRepeatState
+#define func_ov002_020621c4 GetOv002PanelMessage
 #define BuildPanelGroupEntries_0206f0a0 BuildPanelGroupEntries
 #define ChangePanelState_0206d1c0 ChangePanelState
 #define CopyRecentTouchPoints_0202b618 CopyRecentTouchPoints

@@ -1,3 +1,4 @@
+#define func_ov013_02070cb4 GetOv013PlayerCardIndexFromCursor
 #define DispatchContextCommand_02066c78 DispatchContextCommand
 #define RebuildPanelSelection_020712e8 RebuildPanelSelection
 #define ReleaseGroupSlots_0206842c ReleaseGroupSlots

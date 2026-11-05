@@ -1,3 +1,4 @@
+#define func_ov002_02062000 GetOv002PanelKeyRepeatState
 #define func_ov002_02066c58 GetContextCommandFlag
 #define GetMenuTouchHeld_02066b2c GetMenuTouchHeld
 #define IsButtonBPressed_020632c8 IsButtonBPressed

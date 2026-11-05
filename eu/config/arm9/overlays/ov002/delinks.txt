@@ -20,11 +20,11 @@ src/overlays/ov002/calls/ShutdownPanelScene.c:
     complete
     .text       start:0x02061854 end:0x02061930
 
-src/overlays/ov002/calls/func_ov002_02061930.c:
+src/overlays/ov002/calls/GetCachedOwnerNickname.c:
     complete
     .text       start:0x02061930 end:0x0206193c
 
-src/overlays/ov002/calls/func_ov002_0206193c.c:
+src/overlays/ov002/calls/GetCachedOwnerMessage.c:
     complete
     .text       start:0x0206193c end:0x02061948
 
@@ -60,7 +60,7 @@ src/overlays/ov002/calls/DrawPanelTextLine.c:
     complete
     .text       start:0x02061d58 end:0x02061dc8
 
-src/overlays/ov002/calls/func_ov002_02061dc8.c:
+src/overlays/ov002/calls/DrawOv002MainPanelCenteredText.c:
     complete
     .text       start:0x02061dc8 end:0x02061e34
 
@@ -68,43 +68,43 @@ src/overlays/ov002/calls/DrawPanelTextOutlined.c:
     complete
     .text       start:0x02061e34 end:0x02062000
 
-src/overlays/ov002/calls/func_ov002_02062000.c:
+src/overlays/ov002/calls/GetOv002PanelKeyRepeatState.c:
     complete
     .text       start:0x02062000 end:0x02062014
 
-src/overlays/ov002/calls/func_ov002_02062014.c:
+src/overlays/ov002/calls/SetOv002PanelModeDirtyFromLowBit.c:
     complete
     .text       start:0x02062014 end:0x0206203c
 
-src/overlays/ov002/calls/func_ov002_0206203c.c:
+src/overlays/ov002/calls/ResetOv002MainPanelText.c:
     complete
     .text       start:0x0206203c end:0x020620fc
 
-src/overlays/ov002/calls/func_ov002_020620fc.c:
+src/overlays/ov002/calls/ResetOv002SubPanelText.c:
     complete
     .text       start:0x020620fc end:0x020621c4
 
-src/overlays/ov002/calls/func_ov002_020621c4.c:
+src/overlays/ov002/calls/GetOv002PanelMessage.c:
     complete
     .text       start:0x020621c4 end:0x020621e4
 
-src/overlays/ov002/calls/func_ov002_020621e4.c:
+src/overlays/ov002/calls/ReleaseOv002SubPanelTextLayers.c:
     complete
     .text       start:0x020621e4 end:0x02062254
 
-src/overlays/ov002/calls/func_ov002_02062254.c:
+src/overlays/ov002/calls/InitOv002MainPanelGraphics.c:
     complete
     .text       start:0x02062254 end:0x02062368
 
-src/overlays/ov002/calls/func_ov002_02062368.c:
+src/overlays/ov002/calls/InitOv002SubPanelGraphics.c:
     complete
     .text       start:0x02062368 end:0x02062470
 
-src/overlays/ov002/calls/func_ov002_02062470.c:
+src/overlays/ov002/calls/InitOv002MainBg3TextLayer.c:
     complete
     .text       start:0x02062470 end:0x02062504
 
-src/overlays/ov002/calls/func_ov002_02062504.c:
+src/overlays/ov002/calls/InitOv002MainBg2TextLayer.c:
     complete
     .text       start:0x02062504 end:0x020625a0
 
@@ -136,7 +136,7 @@ src/overlays/ov002/calls/ReloadPanelResources.c:
     complete
     .text       start:0x02062938 end:0x020629a8
 
-src/overlays/ov002/calls/func_ov002_020629a8.c:
+src/overlays/ov002/calls/ResetOv002PanelGraphics.c:
     complete
     .text       start:0x020629a8 end:0x020629b8
 
@@ -172,7 +172,7 @@ src/overlays/ov002/calls/DispatchMenuResult.c:
     complete
     .text       start:0x02062d28 end:0x02062d94
 
-src/overlays/ov002/calls/func_ov002_02062d94.c:
+src/overlays/ov002/calls/ReleaseOv002ContextResourcesWrapper.c:
     complete
     .text       start:0x02062d94 end:0x02062da0
 
@@ -192,7 +192,7 @@ src/overlays/ov002/calls/LoadPanelOverlay14.c:
     complete
     .text       start:0x02062de0 end:0x02062dfc
 
-src/overlays/ov002/calls/func_ov002_02062dfc.c:
+src/overlays/ov002/calls/UpdateOv002ChildPanel.c:
     complete
     .text       start:0x02062dfc end:0x02062e18
 
@@ -216,7 +216,7 @@ src/overlays/ov002/auto/func_ov002_02062ec8.c:
     complete
     .text       start:0x02062ec8 end:0x02062ecc
 
-src/overlays/ov002/calls/func_ov002_02062ecc.c:
+src/overlays/ov002/calls/SwitchOv002PanelToMode0.c:
     complete
     .text       start:0x02062ecc end:0x02062edc
 
@@ -308,7 +308,7 @@ src/overlays/ov002/calls/UpdateMenuContext.c:
     complete
     .text       start:0x02064328 end:0x02064394
 
-src/overlays/ov002/calls/func_ov002_02064394.c:
+src/overlays/ov002/calls/AnimateOv002MenuBackgroundWrapper.c:
     complete
     .text       start:0x02064394 end:0x020643a0
 
@@ -716,23 +716,23 @@ src/overlays/ov002/calls/IsContextSlotFlag19Set.c:
     complete
     .text       start:0x020678a0 end:0x020678cc
 
-src/overlays/ov002/calls/func_ov002_020678cc.c:
+src/overlays/ov002/calls/MarkGlobalMenuRecordFlagBits.c:
     complete
     .text       start:0x020678cc end:0x020678fc
 
-src/overlays/ov002/calls/func_ov002_020678fc.c:
+src/overlays/ov002/calls/ApplySingleGlobalMenuRecord.c:
     complete
     .text       start:0x020678fc end:0x0206793c
 
-src/overlays/ov002/calls/func_ov002_0206793c.c:
+src/overlays/ov002/calls/ApplyGlobalMenuCategoryRecord.c:
     complete
     .text       start:0x0206793c end:0x02067974
 
-src/overlays/ov002/calls/func_ov002_02067974.c:
+src/overlays/ov002/calls/ClearGlobalMenuRecordField.c:
     complete
     .text       start:0x02067974 end:0x020679ac
 
-src/overlays/ov002/calls/func_ov002_020679ac.c:
+src/overlays/ov002/calls/ClearGlobalMenuSecondaryRecordFlag.c:
     complete
     .text       start:0x020679ac end:0x020679dc
 
@@ -856,7 +856,7 @@ src/overlays/ov002/calls/GetRecordFlagState.c:
     complete
     .text       start:0x02069aac end:0x02069b8c
 
-src/overlays/ov002/calls/func_ov002_02069b8c.c:
+src/overlays/ov002/calls/GetMenuCategoryRecordFlagState.c:
     complete
     .text       start:0x02069b8c end:0x02069bc8
 
@@ -916,7 +916,7 @@ src/overlays/ov002/calls/PickRandomAvailableRecord.c:
     complete
     .text       start:0x0206a888 end:0x0206a9f8
 
-src/overlays/ov002/calls/func_ov002_0206a9f8.c:
+src/overlays/ov002/calls/IsMenuRecordAllowedByRandomFilter.c:
     complete
     .text       start:0x0206a9f8 end:0x0206aa28
 

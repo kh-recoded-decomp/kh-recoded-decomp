@@ -1,3 +1,5 @@
+#define func_ov002_020620fc ResetOv002SubPanelText
+#define func_ov013_02070aa0 QueueOv013SubBg0ClearAndHideWidgets
 #define func_ov013_020716e4 ChangePanelMenuState
 #define GetMenuTouchPressed_02066b84 GetMenuTouchPressed
 #define GetMenuTouchHeld_02066b2c GetMenuTouchHeld

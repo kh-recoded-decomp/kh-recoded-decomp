@@ -1,3 +1,5 @@
+#define func_ov013_0206ca70 DispatchOv013ScrollEnterCallback
+#define func_ov013_02071444 RefreshOv013PlayerCardPage
 #define DrawPlayerCardDetails_0206e574 DrawPlayerCardDetails
 #define NNS_FndInitListWithOffset0_0204f11c NNS_FndInitListWithOffset0_0204f130
 #define SetGroupSlotsVisible_02068248 SetGroupSlotsVisible

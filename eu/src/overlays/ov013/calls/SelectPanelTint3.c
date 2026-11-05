@@ -1,3 +1,4 @@
+#define func_ov013_0206fbbc PositionOv013CursorWidget
 #define func_ov013_020716e4 ChangePanelMenuState
 #define SelectPanelTint3_02074884 SelectPanelTint3
 #define func_ov013_0206f06c RefreshProgressCaption

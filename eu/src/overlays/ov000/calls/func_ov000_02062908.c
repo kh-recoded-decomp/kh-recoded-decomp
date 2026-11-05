@@ -1,4 +1,0 @@
-#define NNS_G2dBindAnimCtrl ReleaseObjectIfActive
-#define NNS_G2dSetCellAnimationSequence_02062908 func_ov000_02062908
-#define func_020616b4 ReleaseEmbeddedIfActive
-#include "src/ov000/library_nns_g2d/NNS_G2dSetCellAnimationSequence_02062908.c"

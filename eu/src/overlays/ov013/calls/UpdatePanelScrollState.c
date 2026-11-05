@@ -1,3 +1,6 @@
+#define func_ov002_02062000 GetOv002PanelKeyRepeatState
+#define func_ov013_0206fbbc PositionOv013CursorWidget
+#define func_ov013_02070e40 ApplyOv013SubitemValuesToWidgets
 #define func_ov013_020704a0 ScrollPanelSlotWidgets
 #define func_ov013_020716e4 ChangePanelMenuState
 #define DispatchTouchToWidget_020b8874 DispatchTouchToWidget

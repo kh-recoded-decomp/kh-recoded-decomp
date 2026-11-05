@@ -1,3 +1,6 @@
+#define func_ov002_020620fc ResetOv002SubPanelText
+#define func_ov002_020621c4 GetOv002PanelMessage
+#define func_ov013_02070cb4 GetOv013PlayerCardIndexFromCursor
 #define DispatchContextCommand_02066c78 DispatchContextCommand
 #define DrawPanelResultCaption_0206f3d8 DrawPanelResultCaption
 #define MeasurePanelTextSecondary_02062890 MeasurePanelTextSecondary

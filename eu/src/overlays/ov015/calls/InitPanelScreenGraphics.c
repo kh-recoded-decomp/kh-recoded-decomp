@@ -1,3 +1,4 @@
+#define func_ov002_020629a8 ResetOv002PanelGraphics
 #define CountSetFlagsInRange_02066f7c CountSetFlagsInRange
 #define FindActiveRecordById_020b8184 FindActiveRecordById
 #define G2S_GetBG0ScrPtr_02006e14 G2S_GetBG0ScrPtr

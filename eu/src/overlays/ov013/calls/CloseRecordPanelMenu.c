@@ -1,3 +1,4 @@
+#define func_ov002_0206203c ResetOv002MainPanelText
 #define CloseRecordPanelMenu_020732a8 CloseRecordPanelMenu
 #define GetCachedSoundParam_0204d720 GetCachedSoundParam
 #define SetEntrySlotsVisible_020b9580 SetEntrySlotsVisible

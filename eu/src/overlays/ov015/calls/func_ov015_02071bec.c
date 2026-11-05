@@ -14,8 +14,8 @@ typedef struct {
 
 extern u32 func_ov015_02075320(void);
 extern void ReleaseWorkBuffer(void);
-extern void func_ov002_02062368(void);
-extern void func_ov002_020620fc(int selector);
+extern void InitOv002SubPanelGraphics(void);
+extern void ResetOv002SubPanelText(int selector);
 extern void func_ov015_02070af8(int mode);
 extern PanelState *data_ov015_0207e960;
 
@@ -28,7 +28,7 @@ void func_ov015_02071bec(void) {
     data_ov015_0207e960->flagE2_1 = 0;
     data_ov015_0207e960->flagE1_4 = 0;
     data_ov015_0207e960->flagE1_7 = 0;
-    func_ov002_02062368();
-    func_ov002_020620fc(0);
+    InitOv002SubPanelGraphics();
+    ResetOv002SubPanelText(0);
     func_ov015_02070af8(2);
 }

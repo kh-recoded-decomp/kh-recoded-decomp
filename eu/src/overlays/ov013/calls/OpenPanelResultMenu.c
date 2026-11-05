@@ -1,3 +1,6 @@
+#define func_ov013_02070a50 UploadOv013SubBg0ScreenEntry1
+#define func_ov013_02070e40 ApplyOv013SubitemValuesToWidgets
+#define func_ov013_02074420 SetOv013WidgetSelectionAWithSound
 #define ApplySelectedSubitemValues_020b94fc ApplySelectedSubitemValues
 #define DrawPanelResultCaption_0206f3d8 DrawPanelResultCaption
 #define FindWidgetById_020b90a4 FindWidgetById

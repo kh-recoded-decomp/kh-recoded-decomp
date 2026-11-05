@@ -97,14 +97,14 @@ extern const ObjManagerConfig data_ov002_0206ad04;
 extern u32 gPanelUiResourcePaths[4];
 extern const char sOv002_WxcWlmP2_0206c410[];
 
-extern void func_ov002_02062368(void);
+extern void InitOv002SubPanelGraphics(void);
 extern void *NNSi_FndAllocFromDefaultHeap(u32 size);
 extern void MI_CpuFill8(void *dst, u8 value, u32 size);
 extern void LoadPackedFileView(void *view, u32 path, BOOL fromTop);
 extern int Msg_OpenContainerAndReadHeader(const char *path, u32 kind, u32 fromTop);
 extern void GX_SetBankForSubOBJExtPltt(int bank);
 extern void GX_SetBankForOBJExtPltt(int bank);
-extern void func_ov002_020629a8(void);
+extern void ResetOv002PanelGraphics(void);
 extern void InitBackgroundContainer(void *container, const BgContainerConfig *config);
 extern void func_ov027_020b7e44(void *container, u32 resourceId);
 extern void *LoadFileAllocFromHeapTail(u32 resourceId, u32 kind);
@@ -212,7 +212,7 @@ void InitMenuContext(int entryMode)
     BgRecord *record;
     int focus;
 
-    func_ov002_02062368();
+    InitOv002SubPanelGraphics();
     data_ov002_0206c464 = NNSi_FndAllocFromDefaultHeap(sizeof(MenuContext));
     MI_CpuFill8(data_ov002_0206c464, 0, sizeof(MenuContext));
     data_ov002_0206c464->state = -1;
@@ -223,7 +223,7 @@ void InitMenuContext(int entryMode)
     GX_SetBankForOBJExtPltt(0);
     *(vu32 *)0x04000000 = (*(vu32 *)0x04000000 & ~0x1f00) | 0x1f00;
     *(vu32 *)0x04001000 = (*(vu32 *)0x04001000 & ~0x1f00) | 0x1e00;
-    func_ov002_020629a8();
+    ResetOv002PanelGraphics();
 
     mainObjConfig.cellResourceId = RESOURCE_KEY(data_ov002_0206c464->messageHandle, 2);
     mainObjConfig.animResourceId = RESOURCE_KEY(data_ov002_0206c464->messageHandle, 3);

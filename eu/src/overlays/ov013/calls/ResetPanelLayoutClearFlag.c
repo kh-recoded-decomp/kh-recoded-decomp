@@ -1,3 +1,7 @@
+#define func_ov002_020620fc ResetOv002SubPanelText
+#define func_ov013_0206fbbc PositionOv013CursorWidget
+#define func_ov013_02070aa0 QueueOv013SubBg0ClearAndHideWidgets
+#define func_ov013_02070e40 ApplyOv013SubitemValuesToWidgets
 #define ApplySelectedSubitemValues_020b94fc ApplySelectedSubitemValues
 #define ResetPanelLayoutClearFlag_02072674 ResetPanelLayoutClearFlag
 #define func_ov013_0206f06c RefreshProgressCaption

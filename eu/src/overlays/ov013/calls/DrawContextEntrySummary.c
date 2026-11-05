@@ -1,3 +1,6 @@
+#define func_ov002_02061dc8 DrawOv002MainPanelCenteredText
+#define func_ov002_020621c4 GetOv002PanelMessage
+#define func_ov013_02070cb4 GetOv013PlayerCardIndexFromCursor
 #define DrawContextEntrySummary_0206eb18 DrawContextEntrySummary
 #define func_ov002_02061b74 DrawPanelSlotABText
 #define func_01ff8684 MIi_CpuClear16

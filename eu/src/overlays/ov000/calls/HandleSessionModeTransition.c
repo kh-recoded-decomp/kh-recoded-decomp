@@ -1,3 +1,5 @@
+#define func_ov000_02063770 GetTitleSessionStatus
+#define func_ov000_02063784 GetTitleSessionValue
 #define HandleSessionModeTransition_02062c64 HandleSessionModeTransition
 #define SetPanelState_02061db0 SetPanelState
 #define StopSoundStreamAtIndex_0204deb0 StopSoundStreamAtIndex

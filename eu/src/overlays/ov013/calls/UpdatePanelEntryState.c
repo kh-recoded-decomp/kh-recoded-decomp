@@ -1,3 +1,6 @@
+#define func_ov002_02062014 SetOv002PanelModeDirtyFromLowBit
+#define func_ov013_0206cfd8 SetOv013MainLayerMask1e
+#define func_ov013_0206fbbc PositionOv013CursorWidget
 #define func_ov013_020704a0 ScrollPanelSlotWidgets
 #define func_ov013_020716e4 ChangePanelMenuState
 #define func_ov002_0206655c IsScreenFadeComplete

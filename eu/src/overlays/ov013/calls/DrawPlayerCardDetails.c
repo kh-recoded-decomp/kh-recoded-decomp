@@ -1,3 +1,7 @@
+#define func_ov002_02061dc8 DrawOv002MainPanelCenteredText
+#define func_ov002_0206203c ResetOv002MainPanelText
+#define func_ov002_020621c4 GetOv002PanelMessage
+#define func_ov013_02070cb4 GetOv013PlayerCardIndexFromCursor
 #define CopyWideStringCapitalized_02066430 CopyWideStringCapitalized
 #define CopyWideStringWithNewline_02066484 CopyWideStringWithNewline
 #define CountFilledCategorySelections_0206a678 CountFilledCategorySelections

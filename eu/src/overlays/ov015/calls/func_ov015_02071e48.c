@@ -10,7 +10,7 @@ typedef struct {
 } PanelState;
 
 extern void *FindWidgetById(void *container, int itemId);
-extern int func_ov002_020621c4(int textIndex, int unused);
+extern int GetOv002PanelMessage(int textIndex, int unused);
 extern void DrawPanelTextLine(int screen, int x, int y, int size, int arg4, int arg5, int textId, int arg7);
 extern void InitMenuCursorState(int mode);
 extern BOOL PlaySoundEffect(int seqArcNo, int index);
@@ -20,7 +20,7 @@ void func_ov015_02071e48(void) {
     void *container;
 
     *(vu32 *)REG_DB_DISPCNT_ADDR = (*(vu32 *)REG_DB_DISPCNT_ADDR & ~0x1f00) | 0x1f00;
-    DrawPanelTextLine(0, 0x80, 0x32, 2, 6, 10, func_ov002_020621c4(0x70, 0), 0);
+    DrawPanelTextLine(0, 0x80, 0x32, 2, 6, 10, GetOv002PanelMessage(0x70, 0), 0);
     data_ov015_0207e960->unk_E4 = 0;
     InitMenuCursorState(0);
     container = data_ov015_0207e960->container;

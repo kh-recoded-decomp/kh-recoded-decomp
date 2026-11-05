@@ -1,3 +1,4 @@
+#define func_ov002_0206a9f8 IsMenuRecordAllowedByRandomFilter
 #define AcquireRecordSlot_02051d3c AcquireRecordSlot
 #define GetRecordTableBEntry_02052238 GetRecordTableBEntry
 #define PickRandomAvailableRecord_0206a888 PickRandomAvailableRecord

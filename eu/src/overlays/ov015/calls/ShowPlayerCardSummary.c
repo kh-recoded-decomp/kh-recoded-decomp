@@ -1,3 +1,5 @@
+#define func_ov002_0206203c ResetOv002MainPanelText
+#define func_ov002_020621c4 GetOv002PanelMessage
 #define CopyWideStringWithNewline_02066484 CopyWideStringWithNewline
 #define CountMatchingSlotIds_02069f9c CountMatchingSlotIds
 #define OS_SNPrintf_0202e080 OS_SNPrintf_0202e094

@@ -1,3 +1,5 @@
+#define func_ov013_0207445c SetOv013WidgetSelectionBWithSound
+#define func_ov013_020746f4 SetOv013ResultMode2AndPlaySound
 // redefine-sym eu_func_ov027_020b9098=func_ov027_020b9098
 #define CopyRecordTableBField_02069d04 CopyRecordTableBField
 #define DestroyObjectsAndRelease_020b8c58 DestroyObjectsAndRelease

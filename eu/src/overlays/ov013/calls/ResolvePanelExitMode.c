@@ -1,3 +1,6 @@
+#define func_ov002_0206203c ResetOv002MainPanelText
+#define func_ov002_020620fc ResetOv002SubPanelText
+#define func_ov013_0206fbbc PositionOv013CursorWidget
 #define DrawContextEntrySummary_0206eb18 DrawContextEntrySummary
 #define IsPanelBusy_02062c6c IsPanelBusy
 #define RecordPanelClear_02070f50 RecordPanelClear

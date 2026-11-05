@@ -1,3 +1,4 @@
+#define func_ov002_020620fc ResetOv002SubPanelText
 #define GetMenuTouchPressed_02066b84 GetMenuTouchPressed
 #define GetMenuTouchHeld_02066b2c GetMenuTouchHeld
 #define IsButtonBPressed_020632c8 IsButtonBPressed

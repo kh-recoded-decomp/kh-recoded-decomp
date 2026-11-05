@@ -1,3 +1,5 @@
+#define func_ov002_0206203c ResetOv002MainPanelText
+#define func_ov002_020621c4 GetOv002PanelMessage
 #define DrawCenteredLabel_0206eb2c DrawCenteredLabel
 #define func_ov002_020627e8 MeasurePanelTextPrimary
 #define func_ov002_020619e8 ActivatePanelSlotAB

@@ -16,7 +16,7 @@ typedef struct FadeLevelTable {
 } FadeLevelTable;
 
 extern FadeLevelTable gTitleScreenTransitionHandlers;
-extern void func_ov000_02061b88(int value, int waitVBlank);
+extern void SetTitleBrightnessAndMaybeWaitVBlank(int value, int waitVBlank);
 
 int StepPanelFadeOut_020631d8(PanelFade *fade)
 {
@@ -24,7 +24,7 @@ int StepPanelFadeOut_020631d8(PanelFade *fade)
     int phase = 2;
 
     fade->frame++;
-    func_ov000_02061b88(table.funcs[fade->direction](fade), 0);
+    SetTitleBrightnessAndMaybeWaitVBlank(table.funcs[fade->direction](fade), 0);
     if (fade->frame >= fade->fadeOutFrames) {
         phase = 3;
     }

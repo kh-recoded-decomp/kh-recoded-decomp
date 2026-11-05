@@ -1,3 +1,4 @@
+#define func_ov002_020629a8 ResetOv002PanelGraphics
 // redefine-sym eu_data_ov014_0206f8e0=gRecordPanelTileIds
 // redefine-sym eu_func_ov027_020b9098=func_ov027_020b9098
 #define AcquireRecordSlot_02051d3c AcquireRecordSlot

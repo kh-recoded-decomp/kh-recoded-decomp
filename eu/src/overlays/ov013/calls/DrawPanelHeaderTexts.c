@@ -1,3 +1,5 @@
+#define func_ov002_02061dc8 DrawOv002MainPanelCenteredText
+#define func_ov002_020621c4 GetOv002PanelMessage
 #define DrawPanelHeaderTexts_0206eef4 DrawPanelHeaderTexts
 #define OS_SNPrintf_0202e080 OS_SNPrintf_0202e094
 #define func_ov002_02061b74 DrawPanelSlotABText

@@ -1,0 +1,3 @@
+#define PXI_InitFifo SetupDisplayBanksAndLayers
+#define PXI_Init_0206300c SetupTitleDisplayBanksAndLayersWrapper
+#include "src/ov000/library_nitro_pxi/PXI_Init_0206300c.c"

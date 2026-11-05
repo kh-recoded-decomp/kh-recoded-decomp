@@ -1,3 +1,6 @@
+#define func_ov002_020629a8 ResetOv002PanelGraphics
+#define func_ov013_0206caa4 ConfigureOv013PlayerCardPageMode
+#define func_ov013_02070a18 ComputeOv013ScrollLimits
 #define func_ov013_0206df40 InitRecordResultScreen
 #define func_ov013_020716e4 ChangePanelMenuState
 #define AcquireRecordSlot_02051d3c AcquireRecordSlot
