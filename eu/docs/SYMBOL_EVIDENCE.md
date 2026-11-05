@@ -548,3 +548,12 @@ native identity, owner, logical inputs/results and limits, including callback
 registration, borrowed pointers, map/list mode guards and copied palette data.
 Earlier held records are reconciled with subsequent evidence rather than
 counted as permanently unresolved.
+
+## Stage, camera, model and scene-task helpers
+
+Fifty-two entrypoints now identify stage hooks, camera follow/view/preset work,
+model views/factories, generic lists, scene-task actions and concrete visitors.
+[SCENE_CAMERA_TASK_HELPERS.md](SCENE_CAMERA_TASK_HELPERS.md) records separate
+owners, numeric state/preset boundaries, native callback inputs/results, model
+versus actor storage and borrowed view-plane/position lifetimes. Empty release
+hooks remain distinct from surrounding overlay/heap cleanup.

@@ -1,5 +1,5 @@
 #define ResetGaugeDisplay_020734f8 ResetGaugeDisplay
 #define SetSlotDisplayMode_020ca7d0 SetSlotDisplayMode
-#define func_ov052_020ca310 func_ov052_020ca330
+#define func_ov052_020ca310 ResetSlotModelState
 #define selectJointAnimationBlend_0202f2cc selectJointAnimationBlend
 #include "src/ov052/model_display/SetSlotDisplayMode_020ca7d0.c"

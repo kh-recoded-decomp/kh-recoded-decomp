@@ -8,5 +8,5 @@
 #define TryCounterHit_020c9a1c TryCounterHit
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define func_01ff9f88 VEC_Normalize
-#define func_ov052_020ceb54 func_ov052_020ceb74
+#define func_ov052_020ceb54 GetActorModelPosition
 #include "src/ov052/unclassified_helpers/TryCounterHit_020c9a1c.c"

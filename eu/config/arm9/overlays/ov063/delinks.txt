@@ -11,15 +11,15 @@ src/overlays/ov063/calls/ReleaseUnitEffectResources.c:
     complete
     .text       start:0x020d817c end:0x020d81a0
 
-src/overlays/ov063/calls/func_ov063_020d81a0.c:
+src/overlays/ov063/calls/StepSceneTaskEffectEntries.c:
     complete
     .text       start:0x020d81a0 end:0x020d81ac
 
-src/overlays/ov063/calls/func_ov063_020d81ac.c:
+src/overlays/ov063/calls/DrawSceneTaskEffectEntries.c:
     complete
     .text       start:0x020d81ac end:0x020d81b8
 
-src/overlays/ov063/calls/func_ov063_020d81b8.c:
+src/overlays/ov063/calls/ResetSceneTaskEffectEntries.c:
     complete
     .text       start:0x020d81b8 end:0x020d81c4
 

@@ -1,5 +1,5 @@
 #define GetClampedPaletteSlot_02073598 GetClampedPaletteSlot
 #define GetOv070PaletteEntry_020d8114 GetOv070PaletteEntry
 #define data_ov070_020d8a1c data_ov070_020d8a3c
-#define func_ov070_020d8100 func_ov070_020d8120
+#define func_ov070_020d8100 IsOv070BossTaskId10F
 #include "src/ov070/unclassified_helpers/GetOv070PaletteEntry_020d8114.c"

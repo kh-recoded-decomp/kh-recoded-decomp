@@ -2,6 +2,6 @@
 #define VEC_Add_01ff9e0c VEC_Add
 #define func_ov052_020c7dc4 TryStartSpecialAction
 #define func_ov052_020ce9d4 ComputeRootMotionDelta
-#define func_ov052_020ceb54 func_ov052_020ceb74
-#define func_ov052_020ceb60 func_ov052_020ceb80
+#define func_ov052_020ceb54 GetActorModelPosition
+#define func_ov052_020ceb60 SetActorModelPosition
 #include "src/ov052/actor_motion/ApplyRootMotion_020cae20.c"

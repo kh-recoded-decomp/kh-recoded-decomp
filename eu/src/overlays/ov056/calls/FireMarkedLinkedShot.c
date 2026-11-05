@@ -8,5 +8,5 @@
 #define data_ov056_020d7f4c data_ov056_020d7f6c
 #define func_ov021_020a8ab4 ResetAnimationTrackState
 #define func_ov021_020a8ca0 func_ov021_020a8cc0
-#define func_ov052_020ceb54 func_ov052_020ceb74
+#define func_ov052_020ceb54 GetActorModelPosition
 #include "src/ov056/shared_engine/FireMarkedLinkedShot_020d2d1c.c"

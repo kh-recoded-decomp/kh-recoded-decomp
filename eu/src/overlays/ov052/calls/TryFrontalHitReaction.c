@@ -6,6 +6,6 @@
 #define func_01ff9f88 VEC_Normalize
 #define func_ov021_020a8ab4 ResetAnimationTrackState
 #define func_ov021_020a8ca0 func_ov021_020a8cc0
-#define func_ov052_020ceb54 func_ov052_020ceb74
+#define func_ov052_020ceb54 GetActorModelPosition
 #define func_ov052_020ceb7c GetLinkedAngleOffset
 #include "src/ov052/unclassified_helpers/TryFrontalHitReaction_020c9cb8.c"

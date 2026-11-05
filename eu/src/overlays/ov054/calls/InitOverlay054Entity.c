@@ -1,4 +1,4 @@
-#define FX_Div_020d24dc func_ov054_020d24fc
+#define FX_Div_020d24dc DrawOverlay054ActorAndSceneModels
 #define InitOverlay054Entity_020d21f4 InitOverlay054Entity
 #define LoadMenuSoundArcs_020d2688 LoadMenuSoundArcs
 #define RefreshModeMenuHighlights_020d2aa0 RefreshModeMenuHighlights

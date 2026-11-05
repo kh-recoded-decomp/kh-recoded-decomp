@@ -9,7 +9,7 @@
 #define func_02036230 GetActorRegistry
 #define func_ov021_020a8ab4 ResetAnimationTrackState
 #define func_ov021_020a8ca0 func_ov021_020a8cc0
-#define func_ov052_020ceb60 func_ov052_020ceb80
+#define func_ov052_020ceb60 SetActorModelPosition
 #define func_ov058_020d88e4 GetSceneSlotAngle
 #define func_ov058_020d893c GetSceneIntroSequenceMode
 #define g_sinTable_0205356c gSinFx12Table

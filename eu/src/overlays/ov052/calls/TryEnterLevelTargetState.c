@@ -1,4 +1,4 @@
 #define TryEnterLevelTargetState_020c8690 TryEnterLevelTargetState
 #define func_ov001_0206c3f4 GetWaitTargetPosition
-#define func_ov052_020ceb54 func_ov052_020ceb74
+#define func_ov052_020ceb54 GetActorModelPosition
 #include "src/ov052/unclassified_helpers/TryEnterLevelTargetState_020c8690.c"

@@ -3,7 +3,7 @@
 extern unsigned int *data_ov021_020b56c0;
 extern unsigned int UpdateCameraBasisAndCommit();
 extern unsigned int CommitCameraFrame();
-extern unsigned int func_ov044_020d00b0();
+extern unsigned int CommitPanelCameraFrame();
 extern unsigned int Camera_Update();
 
 void func_ov021_020af528(int value) {
@@ -18,6 +18,6 @@ void func_ov021_020af528(int value) {
     UpdateCameraBasisAndCommit(value);
     return;
   case 3:
-    func_ov044_020d00b0(value);
+    CommitPanelCameraFrame(value);
   }
 }

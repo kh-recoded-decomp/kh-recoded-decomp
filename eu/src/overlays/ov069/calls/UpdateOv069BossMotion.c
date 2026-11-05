@@ -100,7 +100,7 @@ extern void CameraPath_Start(void *path);
 extern void RestartScriptSound(void *sound, int arg);
 extern void SetSlotEntryValue(int groupId, int slot, int value);
 extern void ActivateSlotModelGroup(Actor *actor, int index);
-extern VecFx32 *func_ov052_020ceb74(Actor *actor);
+extern VecFx32 *GetActorModelPosition(Actor *actor);
 extern void Handle_WritePayloadIfLive(u32 handle, VecFx32 *src);
 extern void StopSoundSeqHandle(u32 handle);
 extern void ResetAnimationTrackState(MarkerRequest *request);
@@ -212,7 +212,7 @@ void UpdateOv069BossMotion(Actor *actor)
         obj->counter.step = 0;
     case 0:
         if (obj->seqHandle != -1) {
-            Handle_WritePayloadIfLive(obj->seqHandle, func_ov052_020ceb74(actor));
+            Handle_WritePayloadIfLive(obj->seqHandle, GetActorModelPosition(actor));
         }
         break;
     case 1:

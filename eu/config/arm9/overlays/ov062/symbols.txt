@@ -1,4 +1,4 @@
-func_ov062_020d8120 kind:function(thumb,size=0x34) addr:0x020d8120
+StartOv062SlotGroupCameraAction kind:function(thumb,size=0x34) addr:0x020d8120
 ReleaseBossBattleResources kind:function(thumb,size=0x2a) addr:0x020d8154
 SetupBossBattleGroup kind:function(thumb,size=0x84) addr:0x020d8180
 AdvanceGroupUnitPhase kind:function(thumb,size=0x6e) addr:0x020d8204

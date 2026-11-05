@@ -16,7 +16,7 @@
 #define func_ov021_020ac104 InitPathSegment
 #define func_ov021_020ac33c ApplyHitToTarget_020ac33c
 #define func_ov052_020ce9d4 ComputeRootMotionDelta
-#define func_ov052_020ceb54 func_ov052_020ceb74
-#define func_ov052_020ceb60 func_ov052_020ceb80
+#define func_ov052_020ceb54 GetActorModelPosition
+#define func_ov052_020ceb60 SetActorModelPosition
 #define nextRandom12_0202aa58 nextRandom12
 #include "src/ov010/actor_state/Entity_UpdateSpecialStrike_020a13cc.c"

@@ -144,7 +144,7 @@ src/overlays/ov052/calls/ReleaseResourceSlotArray.c:
     complete
     .text       start:0x020ca304 end:0x020ca330
 
-src/overlays/ov052/auto/func_ov052_020ca330.c:
+src/overlays/ov052/auto/ResetSlotModelState.c:
     complete
     .text       start:0x020ca330 end:0x020ca33c
 
@@ -380,11 +380,11 @@ src/overlays/ov052/calls/SetSubModelsEnabled.c:
     complete
     .text       start:0x020ceb14 end:0x020ceb74
 
-src/overlays/ov052/auto/func_ov052_020ceb74.c:
+src/overlays/ov052/auto/GetActorModelPosition.c:
     complete
     .text       start:0x020ceb74 end:0x020ceb7e
 
-src/overlays/ov052/calls/func_ov052_020ceb80.c:
+src/overlays/ov052/calls/SetActorModelPosition.c:
     complete
     .text       start:0x020ceb80 end:0x020ceb90
 

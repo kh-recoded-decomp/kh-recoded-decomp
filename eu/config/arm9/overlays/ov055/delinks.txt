@@ -3,7 +3,7 @@
     .data       start:0x020d3ee0 end:0x020d3f20 kind:data align:32
     .bss        start:0x020d3f20 end:0x020d3f40 kind:bss align:32
 
-src/overlays/ov055/calls/func_ov055_020d3740.c:
+src/overlays/ov055/calls/RegisterOverlay055EntityFactory.c:
     complete
     .text       start:0x020d3740 end:0x020d3754
 

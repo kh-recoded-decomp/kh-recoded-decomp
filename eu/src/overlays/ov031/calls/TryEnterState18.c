@@ -17,6 +17,6 @@
 #define func_ov001_0207ef40 SetOverlayLayerVisible
 #define func_ov001_0207ef78 func_ov001_0207efa0
 #define func_ov001_020828ac ReleaseFirstType11FieldObjectModels
-#define func_ov059_020cbdd0 func_ov059_020cbdf0
+#define func_ov059_020cbdd0 ResetActorSlotTableIds
 #define g_activeState_020bc800 data_ov031_020bc820
 #include "src/ov031/state_machine/TryEnterState18_020baa34.c"

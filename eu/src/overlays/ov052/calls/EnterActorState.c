@@ -50,8 +50,8 @@
 #define func_ov052_020cb8b0 CachePositionAndFlushScale
 #define func_ov052_020cb908 UpdateDriftState
 #define func_ov052_020cba24 UpdateWallSlide
-#define func_ov052_020ceb54 func_ov052_020ceb74
-#define func_ov052_020ceb60 func_ov052_020ceb80
+#define func_ov052_020ceb54 GetActorModelPosition
+#define func_ov052_020ceb60 SetActorModelPosition
 #define func_ov052_020d083c UpdateGlideState
 #define func_ov052_020d0c98 ChooseHandleFollowupMode
 #include "src/ov052/actor_motion/EnterActorState_020cd338.c"

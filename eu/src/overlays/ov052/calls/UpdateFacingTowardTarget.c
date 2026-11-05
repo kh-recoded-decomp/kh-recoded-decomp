@@ -4,6 +4,6 @@
 #define UpdateFacingTowardTarget_020cec9c UpdateFacingTowardTarget
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define func_ov021_020a7544 func_ov021_020a7564
-#define func_ov052_020ceb54 func_ov052_020ceb74
+#define func_ov052_020ceb54 GetActorModelPosition
 #define func_ov052_020ceb7c GetLinkedAngleOffset
 #include "src/ov052/unclassified_helpers/UpdateFacingTowardTarget_020cec9c.c"

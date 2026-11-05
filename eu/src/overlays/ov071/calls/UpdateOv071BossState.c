@@ -10,7 +10,7 @@
 #define RestartScriptSound_020a818c RestartScriptSound
 #define SetActorPaused_020d12f0 SetActorPaused
 #define GetLinkedAngleOffset_020ceb7c GetLinkedAngleOffset
-#define func_ov052_020ceb54 func_ov052_020ceb74
+#define func_ov052_020ceb54 GetActorModelPosition
 #define VEC_NormalizeUnchecked_01ff9f88 VEC_Normalize
 #define Camera_ReturnFromPathView_020c2fac Camera_ReturnFromPathView
 #define SpawnEffectAboveEntity_020d8138 SpawnEffectAboveEntity
@@ -40,7 +40,7 @@
 #define ZeroBytes0x28_020ac0f8 ZeroBytes0x28
 #define ZeroAndSetField0xd4_020ac150 ZeroAndSetField0xd4
 #define StepHitScan_020ac164 StepHitScan
-#define func_ov071_020d8100 func_ov071_020d8120
+#define func_ov071_020d8100 IsOv071BossTaskId110
 #define HasFlagsAt0xe_020a752c HasFlagsAt0xe
 #define GetFieldAt0xe_020a7558 GetFieldAt0xe
 #define GetFieldAt0xe SharedObject_GetFlagsB

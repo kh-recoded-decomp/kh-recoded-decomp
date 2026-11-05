@@ -13,9 +13,9 @@
 #define data_ov063_020d8708 sOv063_BaEfFnHlP2_020d8728
 #define func_ov021_020a89a8 func_ov021_020a89c8
 #define func_ov063_020d815c ReleaseUnitEffectResources
-#define func_ov063_020d8180 func_ov063_020d81a0
-#define func_ov063_020d818c func_ov063_020d81ac
-#define func_ov063_020d8198 func_ov063_020d81b8
+#define func_ov063_020d8180 StepSceneTaskEffectEntries
+#define func_ov063_020d818c DrawSceneTaskEffectEntries
+#define func_ov063_020d8198 ResetSceneTaskEffectEntries
 #define func_ov063_020d81a4 SetupUnitEffectModel
 #define func_ov063_020d8298 UpdateGroundSlamAction
 #include "src/ov063/object_factory/CreateSceneTask_020d859c.c"

@@ -1,3 +1,3 @@
 #define CopyActiveBlockIfPresent_020d1388 CopyActiveBlockIfPresent
-#define func_ov052_020ca310 func_ov052_020ca330
+#define func_ov052_020ca310 ResetSlotModelState
 #include "src/ov052/unclassified_helpers/CopyActiveBlockIfPresent_020d1388.c"

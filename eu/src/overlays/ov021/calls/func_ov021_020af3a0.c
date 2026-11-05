@@ -3,10 +3,10 @@
 extern unsigned int *data_ov021_020b56c0;
 extern unsigned char gSubModeOverlayIds;
 extern unsigned int NNSi_FndFreeToExpHeap();
-extern unsigned int func_ov042_020bde3c();
+extern unsigned int ReleaseOv042CameraNoop();
 extern unsigned int UnloadOverlayAfterGeometryTransfer();
-extern unsigned int func_ov043_020bcce0();
-extern unsigned int func_ov044_020d069c();
+extern unsigned int ReleaseOv043CameraNoop();
+extern unsigned int ReleaseOv044PanelCameraNoop();
 extern unsigned int ReleaseCameraLayerResources();
 
 void func_ov021_020af3a0(void) {
@@ -15,13 +15,13 @@ void func_ov021_020af3a0(void) {
     ReleaseCameraLayerResources();
     break;
   case 1:
-    func_ov042_020bde3c();
+    ReleaseOv042CameraNoop();
     break;
   case 2:
-    func_ov043_020bcce0();
+    ReleaseOv043CameraNoop();
     break;
   case 3:
-    func_ov044_020d069c();
+    ReleaseOv044PanelCameraNoop();
   }
   UnloadOverlayAfterGeometryTransfer(0,*(int *)(&gSubModeOverlayIds + *data_ov021_020b56c0 * 4));
   *data_ov021_020b56c0 = -1;

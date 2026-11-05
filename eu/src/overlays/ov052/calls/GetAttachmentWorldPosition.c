@@ -5,6 +5,6 @@
 #define MTX_RotZ33_01ff9258 MTX_RotZ33_
 #define VEC_Add_01ff9e0c VEC_Add
 #define data_0205356c gSinFx12Table
-#define func_ov052_020ceb54 func_ov052_020ceb74
+#define func_ov052_020ceb54 GetActorModelPosition
 #define func_ov052_020ceb7c GetLinkedAngleOffset
 #include "src/ov052/unclassified_helpers/GetAttachmentWorldPosition_020d067c.c"

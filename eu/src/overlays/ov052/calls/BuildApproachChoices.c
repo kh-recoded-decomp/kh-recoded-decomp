@@ -9,5 +9,5 @@
 #define func_ov001_0208723c GetFieldEntryListHead
 #define func_ov001_02087928 ForwardToActiveServiceWithResult
 #define func_ov001_02087944 FindNextActiveStageEventIfActive
-#define func_ov052_020ceb54 func_ov052_020ceb74
+#define func_ov052_020ceb54 GetActorModelPosition
 #include "src/ov052/unclassified_helpers/BuildApproachChoices_020cc66c.c"

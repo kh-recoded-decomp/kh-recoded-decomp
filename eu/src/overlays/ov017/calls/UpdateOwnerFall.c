@@ -17,5 +17,5 @@
 #define func_ov017_020a5ddc func_ov017_020a5dfc
 #define func_ov017_020a5de8 FindLastInactiveObjectInParentChainWrapper
 #define func_ov017_020a5df0 FindRootObjectWrapper
-#define func_ov042_020bd78c func_ov042_020bd7ac
+#define func_ov042_020bd78c IsCameraShakeActive
 #include "src/ov017/unclassified_helpers/UpdateOwnerFall_020a48cc.c"

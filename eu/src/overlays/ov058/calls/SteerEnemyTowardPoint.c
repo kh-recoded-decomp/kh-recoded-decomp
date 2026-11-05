@@ -29,7 +29,7 @@ struct Enemy {
     AiState ai;
 };
 
-extern VecFx32 *func_ov052_020ceb74(Enemy *enemy);
+extern VecFx32 *GetActorModelPosition(Enemy *enemy);
 extern void VEC_Subtract(const VecFx32 *a, const VecFx32 *b, VecFx32 *dst);
 extern fx32 VEC_Mag(const VecFx32 *v);
 extern void VEC_Normalize(const VecFx32 *src, VecFx32 *dst);
@@ -40,7 +40,7 @@ extern fx32 func_ov001_0206db44(void);
 BOOL SteerEnemyTowardPoint(Enemy *enemy, MoveRequest *request, const VecFx32 *dest)
 {
     AiState *ai = &enemy->ai;
-    VecFx32 *pos = func_ov052_020ceb74(enemy);
+    VecFx32 *pos = GetActorModelPosition(enemy);
     fx32 limit = 0x3c000;
     BOOL result = FALSE;
     BOOL checkStuck = TRUE;
@@ -95,7 +95,7 @@ BOOL SteerEnemyTowardPoint(Enemy *enemy, MoveRequest *request, const VecFx32 *de
             goto done;
         }
     }
-    ai->lastPos = *func_ov052_020ceb74(enemy);
+    ai->lastPos = *GetActorModelPosition(enemy);
     ai->stuckTimer = 0;
 done:
     return result;

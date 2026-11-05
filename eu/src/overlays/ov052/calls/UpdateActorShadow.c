@@ -4,5 +4,5 @@
 #define ShadowVolume_Draw_02036b80 ShadowVolume_Draw
 #define UpdateActorShadow_020cbe7c UpdateActorShadow
 #define VEC_Add_01ff9e0c VEC_Add
-#define func_ov052_020ceb54 func_ov052_020ceb74
+#define func_ov052_020ceb54 GetActorModelPosition
 #include "src/ov052/model_display/UpdateActorShadow_020cbe7c.c"

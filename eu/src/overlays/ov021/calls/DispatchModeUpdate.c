@@ -3,6 +3,6 @@
 #define func_ov042_020bd020 CommitCameraProjection
 #define func_ov042_020bd590 GetCameraFrustumBounds
 #define func_ov043_020bc820 CommitCameraWithCache
-#define func_ov044_020d0080 func_ov044_020d00a0
+#define func_ov044_020d0080 CommitPanelProjectionAndViewAxes
 #define func_ov046_020c0b34 Camera_CommitView
 #include "src/ov021/sub_mode/DispatchModeUpdate_020af4ac.c"

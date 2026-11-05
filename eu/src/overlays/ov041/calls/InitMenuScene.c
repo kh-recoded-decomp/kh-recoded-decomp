@@ -25,6 +25,6 @@
 #define func_ov041_020c0940 PlaceStageEntryObject
 #define func_ov041_020c09cc SpawnStageEntry
 #define func_ov041_020c0bf4 ApplyStageEntryMove
-#define func_ov041_020c3658 func_ov041_020c3678
+#define func_ov041_020c3658 InitializeStageEntryOutState
 #define func_ov041_020ce1a8 InitRecordOwnerSlots
 #include "src/ov041/unclassified_helpers/InitMenuScene_020bc5c0.c"

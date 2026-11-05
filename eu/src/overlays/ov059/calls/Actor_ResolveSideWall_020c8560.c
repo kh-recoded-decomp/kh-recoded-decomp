@@ -8,5 +8,5 @@
 #define VEC_Normalize_01ffaff4 VEC_NormalizeLength
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define func_ov059_020c8548 Collider_IsOwnerKind11
-#define func_ov059_020c8558 func_ov059_020c8578
+#define func_ov059_020c8558 MarkSideWallProbeHit
 #include "src/ov059/unclassified_helpers/Actor_ResolveSideWall_020c8560.c"

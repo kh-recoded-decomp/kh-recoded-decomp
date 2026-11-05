@@ -27,7 +27,7 @@ extern u16 data_02060500;
 extern CameraTarget *GetBoundedEntryField(int index);
 extern u32 Camera_ComputeFollowDistance(u32 index);
 extern u32 Camera_GetPresetHeight(u32 index);
-extern int func_ov046_020c2ad8(CameraManager *camera);
+extern int Camera_UsesDefaultFocusInPreset19Or21(CameraManager *camera);
 
 void Camera_HandleDistanceToggle(CameraTracking *tracking, CameraManager *camera)
 {
@@ -43,7 +43,7 @@ void Camera_HandleDistanceToggle(CameraTracking *tracking, CameraManager *camera
         if (target->callback != NULL) {
             flags = target->callback((u32)target);
         }
-        if (((flags & 8) == 0) && (blocked = func_ov046_020c2ad8(camera), blocked == 0)) {
+        if (((flags & 8) == 0) && (blocked = Camera_UsesDefaultFocusInPreset19Or21(camera), blocked == 0)) {
             camera->flags ^= 0x80000;
             value = Camera_ComputeFollowDistance(camera->modeIndex);
             tracking->modeDistance = value;

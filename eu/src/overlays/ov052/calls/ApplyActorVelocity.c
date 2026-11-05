@@ -11,5 +11,5 @@
 #define func_02038e6c ApplyActorMovementAndUpdateSpatialIndex
 #define func_ov001_02087224 GetFieldEntryByPoolAndIndex
 #define func_ov052_020c7c34 SweepActorBodyCapsule
-#define func_ov052_020ceb54 func_ov052_020ceb74
+#define func_ov052_020ceb54 GetActorModelPosition
 #include "src/ov052/actor_motion/ApplyActorVelocity_020c76cc.c"

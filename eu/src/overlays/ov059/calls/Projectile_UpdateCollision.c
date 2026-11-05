@@ -34,5 +34,5 @@
 #define func_ov031_020bc700 func_ov031_020bc720
 #define func_ov043_020bca1c Ov043Camera_GetActiveController
 #define func_ov059_020cdd10 Collider_IsOwnerKind11_020cdd30
-#define func_ov059_020cf394 func_ov059_020cf3b4
+#define func_ov059_020cf394 EntryList_RemoveByKey
 #include "src/ov059/actor_effects/Projectile_UpdateCollision_020ce3bc.c"

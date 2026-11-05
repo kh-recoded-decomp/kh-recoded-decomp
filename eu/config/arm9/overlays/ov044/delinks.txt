@@ -27,11 +27,11 @@ src/overlays/ov044/calls/InitPanelMotionB.c:
     complete
     .text       start:0x020d0070 end:0x020d00a0
 
-src/overlays/ov044/calls/func_ov044_020d00a0.c:
+src/overlays/ov044/calls/CommitPanelProjectionAndViewAxes.c:
     complete
     .text       start:0x020d00a0 end:0x020d00b0
 
-src/overlays/ov044/calls/func_ov044_020d00b0.c:
+src/overlays/ov044/calls/CommitPanelCameraFrame.c:
     complete
     .text       start:0x020d00b0 end:0x020d0110
 
@@ -39,7 +39,7 @@ src/overlays/ov044/calls/IsPanelFlag2000Set.c:
     complete
     .text       start:0x020d0110 end:0x020d0130
 
-src/overlays/ov044/calls/func_ov044_020d0130.c:
+src/overlays/ov044/calls/GetPanelCameraState.c:
     complete
     .text       start:0x020d0130 end:0x020d0140
 
@@ -91,7 +91,7 @@ src/overlays/ov044/calls/InitPanel.c:
     complete
     .text       start:0x020d0608 end:0x020d069c
 
-src/overlays/ov044/auto/func_ov044_020d069c.c:
+src/overlays/ov044/auto/ReleaseOv044PanelCameraNoop.c:
     complete
     .text       start:0x020d069c end:0x020d06a0
 

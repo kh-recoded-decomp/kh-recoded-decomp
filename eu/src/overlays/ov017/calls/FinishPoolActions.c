@@ -15,5 +15,5 @@
 #define func_ov017_020a4bb4 FindSlotLinkedObject
 #define func_ov042_020bd5e0 SetCameraParameterBc
 #define func_ov042_020bd6fc StartCameraParticle
-#define func_ov042_020bd78c func_ov042_020bd7ac
+#define func_ov042_020bd78c IsCameraShakeActive
 #include "src/ov017/unclassified_helpers/FinishPoolActions_020a4c34.c"

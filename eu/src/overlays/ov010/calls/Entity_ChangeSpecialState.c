@@ -7,5 +7,5 @@
 #define func_ov001_0206db78 GetPlayerControlState
 #define func_ov052_020ccfa4 ExitActorState
 #define func_ov052_020cd338 EnterActorState
-#define func_ov052_020ceb54 func_ov052_020ceb74
+#define func_ov052_020ceb54 GetActorModelPosition
 #include "src/ov010/actor_state/Entity_ChangeSpecialState_020a1978.c"

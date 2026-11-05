@@ -46,7 +46,7 @@ typedef struct EffectGroup {
 } EffectGroup;
 
 extern void func_0200dc4c(void *base, u32 count, u32 width, void *compare, void *work);
-extern int func_ov059_020cdc6c(const void *a, const void *b);
+extern int CompareEffectSlotZDescending(const void *a, const void *b);
 extern int MapStateToEvenIndex(EffectParams *params);
 extern void VEC_Normalize(const VecFx32 *src, VecFx32 *dst);
 extern void NegateVecFx32(VecFx32 *vec);
@@ -85,7 +85,7 @@ void EffectGroup_Draw(EffectGroup *group)
         }
     }
     if (visibleCount != 0) {
-        func_0200dc4c(visible, visibleCount, 4, func_ov059_020cdc6c, sortWork);
+        func_0200dc4c(visible, visibleCount, 4, CompareEffectSlotZDescending, sortWork);
         for (i = 0; i < visibleCount; i++) {
             EffectSlot *slot = visible[i];
             GroupModel *model;

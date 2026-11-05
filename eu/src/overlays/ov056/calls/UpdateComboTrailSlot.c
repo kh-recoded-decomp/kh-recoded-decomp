@@ -7,7 +7,7 @@
 #define UpdateComboTrailSlot_020d40e0 UpdateComboTrailSlot
 #define func_ov021_020a8ab4 ResetAnimationTrackState
 #define func_ov021_020a8ca0 func_ov021_020a8cc0
-#define func_ov052_020ceb54 func_ov052_020ceb74
+#define func_ov052_020ceb54 GetActorModelPosition
 #define func_ov052_020cfdb4 SelectHitReaction
 #define func_ov052_020d03b8 HandlePendingCommand
 #include "src/ov056/unclassified_helpers/UpdateComboTrailSlot_020d40e0.c"

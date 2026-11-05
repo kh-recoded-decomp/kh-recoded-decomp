@@ -39,7 +39,7 @@ typedef void *(*CameraUpdateFn)(CameraTracking *, CameraManager *);
 enum { CAMERA_TURN_RADIANS = 0x6488 };
 
 extern CameraUpdateFn Camera_ResetTracking(CameraTracking *, CameraManager *);
-extern BOOL func_ov046_020c2ad8(CameraManager *);
+extern BOOL Camera_UsesDefaultFocusInPreset19Or21(CameraManager *);
 extern fx32 Camera_GetPresetHeight(s32);
 extern void *Camera_FollowControllerUpdate(CameraTracking *, CameraManager *);
 extern const VecFx32 *Camera_GetFocusPosition(void);
@@ -86,7 +86,7 @@ CameraUpdateFn Camera_StartVectorTracking(CameraTracking *tracking,
     VecFx32 displacement;
 
     Camera_ResetTracking(tracking, camera);
-    if (!func_ov046_020c2ad8(camera)) {
+    if (!Camera_UsesDefaultFocusInPreset19Or21(camera)) {
         tracking->savedAngle = FX_Atan2Idx(-params->direction.x, -params->direction.z);
         tracking->angle = tracking->savedAngle;
     } else {

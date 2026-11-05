@@ -1,4 +1,4 @@
 #define RewardQueue_InsertScored_020cf860 RewardQueue_InsertScored
 #define RewardQueue_Push_020cf304 RewardQueue_Push
-#define func_ov059_020cf394 func_ov059_020cf3b4
+#define func_ov059_020cf394 EntryList_RemoveByKey
 #include "src/ov059/unclassified_helpers/RewardQueue_InsertScored_020cf860.c"

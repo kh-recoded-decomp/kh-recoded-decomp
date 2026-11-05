@@ -6,5 +6,5 @@
 #define LookupKindTableValue_020a8fc8 LookupKindTableValue
 #define PlayActorContextSound_020ce188 PlayActorContextSound
 #define SpawnSoundSlot_0204da8c SpawnSoundSlot
-#define func_ov052_020ceb54 func_ov052_020ceb74
+#define func_ov052_020ceb54 GetActorModelPosition
 #include "src/ov052/unclassified_helpers/PlayActorContextSound_020ce188.c"

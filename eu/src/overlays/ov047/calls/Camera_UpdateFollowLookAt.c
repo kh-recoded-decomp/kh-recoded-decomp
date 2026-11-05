@@ -25,5 +25,5 @@
 #define data_02053aac data_02053ac0
 #define data_ov047_020c7284 data_ov047_020c72a4
 #define func_01ffa0f4 VEC_Distance
-#define func_ov046_020c2ab8 func_ov046_020c2ad8
+#define func_ov046_020c2ab8 Camera_UsesDefaultFocusInPreset19Or21
 #include "src/ov047/camera/Camera_UpdateFollowLookAt_020c5548.c"

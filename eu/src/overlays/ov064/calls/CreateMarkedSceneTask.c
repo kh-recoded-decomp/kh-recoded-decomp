@@ -14,7 +14,7 @@
 #define data_ov064_020d8868 sOv064_BaEfFnMfP2_020d8888
 #define func_ov021_020a89a8 func_ov021_020a89c8
 #define func_ov064_020d8234 UpdateOv064BossSequence
-#define func_ov064_020d86a4 func_ov064_020d86c4
-#define func_ov064_020d86b4 func_ov064_020d86d4
+#define func_ov064_020d86a4 ClearMarkedScenePhaseAndLoopHandle
+#define func_ov064_020d86b4 StopOverlay064ActorSound
 #define func_ov064_020d86d0 ReleaseMarkedSceneResources
 #include "src/ov064/object_factory/CreateMarkedSceneTask_020d86e8.c"

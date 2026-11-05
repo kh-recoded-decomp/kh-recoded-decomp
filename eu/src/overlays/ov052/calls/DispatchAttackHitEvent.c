@@ -9,5 +9,5 @@
 #define data_0205356c gSinFx12Table
 #define func_01ff8830 MI_CpuFill8
 #define func_01ff9f88 VEC_Normalize
-#define func_ov052_020ceb54 func_ov052_020ceb74
+#define func_ov052_020ceb54 GetActorModelPosition
 #include "src/ov052/unclassified_helpers/DispatchAttackHitEvent_020c9e18.c"

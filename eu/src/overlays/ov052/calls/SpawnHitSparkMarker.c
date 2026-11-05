@@ -4,7 +4,7 @@
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define func_ov021_020a8ab4 ResetAnimationTrackState
 #define func_ov021_020a8ca0 func_ov021_020a8cc0
-#define func_ov052_020ceb54 func_ov052_020ceb74
+#define func_ov052_020ceb54 GetActorModelPosition
 #define nextRandom12_0202aa58 nextRandom12
 #define func_01ffaff4 VEC_NormalizeLength
 #include "src/ov052/unclassified_helpers/SpawnHitSparkMarker_020d1494.c"

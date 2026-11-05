@@ -5,7 +5,7 @@
 #define func_0204a5e4 ScaleVecFx32InPlace
 #define func_ov021_020af544 ForwardSubModePairA
 #define func_ov021_020af8d4 GetCameraOrbitOffset
-#define func_ov042_020bd74c func_ov042_020bd76c
+#define func_ov042_020bd74c StartCameraDriftShake
 #define func_ov043_020bca50 ResetCameraUp
 #define func_ov043_020bcb38 StartCameraParticle_020bcb58
 #define random_next_scaled_0202aa04 random_next_scaled

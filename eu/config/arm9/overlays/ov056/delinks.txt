@@ -48,7 +48,7 @@ src/overlays/ov056/calls/UpdateGrabSweepHits.c:
     complete
     .text       start:0x020d3924 end:0x020d3b3c
 
-src/overlays/ov056/auto/func_ov056_020d3b3c.c:
+src/overlays/ov056/auto/SetGrabSweepStepScale.c:
     complete
     .text       start:0x020d3b3c end:0x020d3b44
 
@@ -108,7 +108,7 @@ src/overlays/ov056/calls/SpawnEffectUnitFromSpawner.c:
     complete
     .text       start:0x020d4380 end:0x020d4478
 
-src/overlays/ov056/calls/func_ov056_020d4478.c:
+src/overlays/ov056/calls/UpdateSceneGroupAndModelSlotAnimations.c:
     complete
     .text       start:0x020d4478 end:0x020d4490
 
@@ -144,7 +144,7 @@ src/overlays/ov056/calls/UpdateActiveEntries.c:
     complete
     .text       start:0x020d4a60 end:0x020d4aa0
 
-src/overlays/ov056/calls/func_ov056_020d4aa0.c:
+src/overlays/ov056/calls/FreeSceneModelSlotArray.c:
     complete
     .text       start:0x020d4aa0 end:0x020d4ab0
 
@@ -332,7 +332,7 @@ src/overlays/ov056/calls/IsRecordAliveAndUnflagged_020d6ea0.c:
     complete
     .text       start:0x020d6ea0 end:0x020d6ed6
 
-src/overlays/ov056/auto/func_ov056_020d6ed8.c:
+src/overlays/ov056/auto/CountBurstTargetAndStopSearch.c:
     complete
     .text       start:0x020d6ed8 end:0x020d6ee2
 

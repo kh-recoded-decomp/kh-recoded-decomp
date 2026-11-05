@@ -1,5 +1,5 @@
 #define ScriptCmd_StartCameraShake_02065778 ScriptCmd_StartCameraShake
 #define ScriptVm_ReadOperandFx32_02025df8 ScriptVm_ReadOperandFx32
 #define func_0204d8d0 PlaySoundChecked
-#define func_ov042_020bd74c func_ov042_020bd76c
+#define func_ov042_020bd74c StartCameraDriftShake
 #include "src/ov001/shared_engine/ScriptCmd_StartCameraShake_02065778.c"

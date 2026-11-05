@@ -74,7 +74,7 @@ struct Enemy {
 extern Enemy *data_ov058_020d8a40;
 extern const VecFx32 data_ov058_020d896c;
 
-extern VecFx32 *func_ov052_020ceb74(Enemy *enemy);
+extern VecFx32 *GetActorModelPosition(Enemy *enemy);
 extern Enemy *GetBoundedEntryField(int index);
 extern fx32 VEC_Distance(const VecFx32 *a, const VecFx32 *b);
 extern fx32 func_ov001_0206db44(void);
@@ -125,7 +125,7 @@ static inline BOOL Enemy_CanShareTarget(Enemy *enemy)
 u16 UpdateEnemyCombatAi(Enemy *enemy, EnemyCommand *command)
 {
     AiState *ai = &enemy->ai;
-    VecFx32 *pos = func_ov052_020ceb74(enemy);
+    VecFx32 *pos = GetActorModelPosition(enemy);
     VecFx32 *playerPos;
     fx32 range;
     fx32 distance;
@@ -135,7 +135,7 @@ u16 UpdateEnemyCombatAi(Enemy *enemy, EnemyCommand *command)
         range = 0xa000;
     }
     data_ov058_020d8a40 = GetBoundedEntryField(0);
-    playerPos = func_ov052_020ceb74(data_ov058_020d8a40);
+    playerPos = GetActorModelPosition(data_ov058_020d8a40);
     distance = VEC_Distance(playerPos, pos);
     ai->alertTimer = CLAMP(ai->alertTimer - func_ov001_0206db44(), 0, 0x1e000);
     ai->retreatTimer = CLAMP(ai->retreatTimer - func_ov001_0206db44(), 0, 0x1e000);
@@ -170,7 +170,7 @@ u16 UpdateEnemyCombatAi(Enemy *enemy, EnemyCommand *command)
         VecFx32 dir;
         BOOL checkStuck = TRUE;
 
-        VEC_Subtract(playerPos, func_ov052_020ceb74(enemy), &toPlayer);
+        VEC_Subtract(playerPos, GetActorModelPosition(enemy), &toPlayer);
         VEC_Normalize(&toPlayer, &dir);
         VEC_CrossProduct(&dir, &up, &side);
         if (enemy->mode >= 2) {
@@ -188,7 +188,7 @@ u16 UpdateEnemyCombatAi(Enemy *enemy, EnemyCommand *command)
             VEC_Normalize(&side, &side);
         }
         VEC_MultAdd(0x1800, &side, &toPlayer, &side);
-        VEC_Add(func_ov052_020ceb74(enemy), &side, &side);
+        VEC_Add(GetActorModelPosition(enemy), &side, &side);
         if (data_ov058_020d8a40->behaviorFlags & 4) {
             checkStuck = FALSE;
         }

@@ -14,5 +14,5 @@
 #define ZeroHalfThenFree_0202cd78 ZeroHalfThenFree
 #define func_020368a4 ShutdownRecordSlotByIndex
 #define func_02036b7c FSi_DefaultStepDoneA
-#define func_ov059_020cbe80 func_ov059_020cbea0
+#define func_ov059_020cbe80 UpdateGlobalActorGaugePanel
 #include "src/ov059/unclassified_helpers/Actor_ReleaseResources_020cbce8.c"

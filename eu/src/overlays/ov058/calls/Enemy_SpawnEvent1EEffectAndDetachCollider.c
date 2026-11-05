@@ -37,7 +37,7 @@ struct Enemy {
 extern void Enemy_ClearTargetKindAndArrivalFlag(Enemy *enemy);
 extern void ResetAnimationTrackState(HitParams *params);
 extern s16 func_ov021_020a8cc0(HitParams *params, s32 effectId);
-extern VecFx32 *func_ov052_020ceb74(Enemy *enemy);
+extern VecFx32 *GetActorModelPosition(Enemy *enemy);
 extern s32 func_ov001_0206db8c(s32 index);
 extern void Obj_RemoveFromQuadTree(void *object);
 
@@ -54,7 +54,7 @@ void Enemy_SpawnEvent1EEffectAndDetachCollider(Enemy *enemy)
     params.team = enemy->team;
     params.unk_25 = 0;
     params.unk_24 = 0;
-    params.position = *func_ov052_020ceb74(enemy);
+    params.position = *GetActorModelPosition(enemy);
     ai->hitStatus = func_ov021_020a8cc0(&params, func_ov001_0206db8c(7));
     ai->timer = 0;
     Obj_RemoveFromQuadTree(enemy->object);

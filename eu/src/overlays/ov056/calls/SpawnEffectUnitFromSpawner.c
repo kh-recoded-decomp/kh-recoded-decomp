@@ -8,6 +8,6 @@
 #define SpawnEffectOnEvent_020d44fc SpawnEffectOnEvent
 #define SpawnEffectUnitFromSpawner_020d4360 SpawnEffectUnitFromSpawner
 #define func_ov021_020aec08 PlayHitReactionSound
-#define func_ov056_020d4458 func_ov056_020d4478
+#define func_ov056_020d4458 UpdateSceneGroupAndModelSlotAnimations
 #define func_ov056_020d7de8 AllocModelSlots
 #include "src/ov056/unclassified_helpers/SpawnEffectUnitFromSpawner_020d4360.c"

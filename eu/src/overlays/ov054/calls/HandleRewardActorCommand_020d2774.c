@@ -17,7 +17,7 @@
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define data_ov054_020d3700 gOv054WorkData
 #define func_ov021_020a81b8 func_ov021_020a81d8
-#define func_ov052_020ceb54 func_ov052_020ceb74
+#define func_ov052_020ceb54 GetActorModelPosition
 #define func_ov052_020d083c UpdateGlideState
 #define func_ov054_020d3230 UpdateRewardActorPhase
 #include "src/ov054/unclassified_helpers/HandleRewardActorCommand_020d2774.c"

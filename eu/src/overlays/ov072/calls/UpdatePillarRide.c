@@ -155,7 +155,7 @@ extern void ComputeRootMotionDelta(Actor *actor, VecFx32 *out);
 extern int GetObjectPaletteValue(RideTask *task);
 extern BOOL SetPendingSlotFlagWithValue(int slot, u32 value);
 extern void RestartScriptSound(void *sound, int arg);
-extern VecFx32 *func_ov052_020ceb74(Actor *actor);
+extern VecFx32 *GetActorModelPosition(Actor *actor);
 extern void VEC_Subtract(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
 extern void VEC_Add(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
 extern fx32 VEC_DotProduct(const VecFx32 *a, const VecFx32 *b);
@@ -284,7 +284,7 @@ void UpdatePillarRide(Actor *actor)
             actor->onEvent(actor, 0x29, -1);
         }
         if ((actor->getFootPosition != NULL ? actor->getFootPosition(actor, &footPos) : FALSE) != FALSE) {
-            VEC_Subtract(&footPos, func_ov052_020ceb74(actor), &heading);
+            VEC_Subtract(&footPos, GetActorModelPosition(actor), &heading);
             heading.y = 0;
             if (VEC_DotProduct(&heading, &heading) > 0) {
                 VEC_Normalize(&heading, &heading);
@@ -292,7 +292,7 @@ void UpdatePillarRide(Actor *actor)
             }
         }
         CameraPath_Start(task->cameraPath);
-        task->origin = *func_ov052_020ceb74(actor);
+        task->origin = *GetActorModelPosition(actor);
         task->position = task->origin;
         task->slots.grounded = 0;
         task->states.auraState = 1;
@@ -570,7 +570,7 @@ void UpdatePillarRide(Actor *actor)
             index = angle >> 4;
             MTX_RotY33_(&rot, gSinFx12Table[index], gSinFx12Table[(0x400 - index) & 0xfff]);
             MTX_MultVec33(&offset, &rot, &offset);
-            VEC_Add(&offset, func_ov052_020ceb74(actor), &offset);
+            VEC_Add(&offset, GetActorModelPosition(actor), &offset);
             ResetAnimationTrackState(&request10);
             request10.id = actor->player;
             request10.layer = 0;

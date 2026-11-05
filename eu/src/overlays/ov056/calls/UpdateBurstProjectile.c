@@ -5,5 +5,5 @@
 #define SpawnSoundSlot_0204da8c SpawnSoundSlot
 #define UpdateBurstProjectile_020d6ec4 UpdateBurstProjectile
 #define func_ov056_020d6e80 IsRecordAliveAndUnflagged_020d6ea0
-#define func_ov056_020d6eb8 func_ov056_020d6ed8
+#define func_ov056_020d6eb8 CountBurstTargetAndStopSearch
 #include "src/ov056/shared_engine/UpdateBurstProjectile_020d6ec4.c"

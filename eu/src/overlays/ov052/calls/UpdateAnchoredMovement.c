@@ -15,5 +15,5 @@
 #define func_ov001_02087224 GetFieldEntryByPoolAndIndex
 #define func_ov021_020a7544 func_ov021_020a7564
 #define func_ov052_020c9274 IsLedgeClimbSpaceClear
-#define func_ov052_020ceb60 func_ov052_020ceb80
+#define func_ov052_020ceb60 SetActorModelPosition
 #include "src/ov052/actor_motion/UpdateAnchoredMovement_020cac00.c"

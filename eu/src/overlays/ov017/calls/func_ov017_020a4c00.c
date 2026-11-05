@@ -6,7 +6,7 @@ extern void SetFieldObjectFlag5(void *node, BOOL flag);
 extern void SetFieldObjectPosition_020a40fc(void *node, void *data);
 extern void RefreshListHeadAndDispatch(void *node);
 extern BOOL FindBusyKind4Object(void *record);
-extern BOOL func_ov042_020bd7ac();
+extern BOOL IsCameraShakeActive();
 
 BOOL func_ov017_020a4c00(void *context, u32 unused, void *record, void *node)
 {
@@ -19,7 +19,7 @@ BOOL func_ov017_020a4c00(void *context, u32 unused, void *record, void *node)
         SetFieldObjectPosition_020a40fc(node, (u8 *)context + 8);
         RefreshListHeadAndDispatch(node);
     }
-    if (func_ov042_020bd7ac() == 0) {
+    if (IsCameraShakeActive() == 0) {
         SetFieldObjectFlag5(node, 0);
         return 1;
     }

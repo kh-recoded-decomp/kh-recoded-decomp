@@ -5,5 +5,5 @@
 #define func_ov021_020a8ab4 ResetAnimationTrackState
 #define func_ov021_020a8ca0 func_ov021_020a8cc0
 #define func_ov030_020bbacc UpdateDraggedActorMotion
-#define func_ov052_020ceb54 func_ov052_020ceb74
+#define func_ov052_020ceb54 GetActorModelPosition
 #include "src/ov030/shared_engine/EnterCarryState_020bc4a8.c"

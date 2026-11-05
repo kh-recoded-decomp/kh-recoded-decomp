@@ -3,5 +3,5 @@
 #define CheckCarriedActorEscape_020bbf78 CheckCarriedActorEscape
 #define CheckFallOutOfBounds_020c7d54 CheckFallOutOfBounds
 #define Obj_SetPosition_0203569c Obj_SetPosition
-#define func_ov052_020ceb54 func_ov052_020ceb74
+#define func_ov052_020ceb54 GetActorModelPosition
 #include "src/ov052/unclassified_helpers/CheckFallOutOfBounds_020c7d54.c"

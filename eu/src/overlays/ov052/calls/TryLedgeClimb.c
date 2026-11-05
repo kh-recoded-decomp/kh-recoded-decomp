@@ -116,7 +116,7 @@ typedef struct {
 extern GameFlags *data_0205fe0c;
 extern s16 gSinFx12Table[];
 extern void *GetPlayerControlState(int player);
-extern VecFx32 *func_ov052_020ceb74(Actor *actor);
+extern VecFx32 *GetActorModelPosition(Actor *actor);
 extern u16 GetLinkedAngleOffset(Actor *actor);
 extern BOOL IsStageAllowedForMode(void);
 extern void *GetWorldMeshNamedEntry(int index);
@@ -214,7 +214,7 @@ BOOL TryLedgeClimb(Actor *actor, ClimbState *state)
     if (actor->player == 0 && data_0205fe0c->noClimb) {
         return climb;
     }
-    pos = *func_ov052_020ceb74(actor);
+    pos = *GetActorModelPosition(actor);
     found = FALSE;
     facing.z = 0;
     facing.y = 0;

@@ -21,7 +21,7 @@
 #define func_ov056_020d3b24 ForwardTargetHandle
 #define func_ov056_020d3b30 ForwardTargetHandleValue
 #define func_ov056_020d3b40 ForwardTargetHandle_020d3b60
-#define func_ov062_020d8100 func_ov062_020d8120
+#define func_ov062_020d8100 StartOv062SlotGroupCameraAction
 #define func_ov062_020d8134 ReleaseBossBattleResources
 #define func_ov062_020d8160 SetupBossBattleGroup
 #include "src/ov062/object_factory/CreateBossBattleObject_020d83dc.c"

@@ -11,5 +11,5 @@
 #define func_ov041_020bdc08 FreeSceneGroupObjects
 #define func_ov041_020bdf00 FreeResourceLists
 #define func_ov041_020c0aac DestroySceneEntry
-#define func_ov041_020ce1e0 func_ov041_020ce200
+#define func_ov041_020ce1e0 UnlinkRecordOwnerRootSlot
 #include "src/ov041/unclassified_helpers/ShutdownMenuScene_020bca3c.c"

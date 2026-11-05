@@ -9,7 +9,7 @@ extern SubModeState *data_ov021_020b56c0;
 extern int GetCameraManagerWork(void);
 extern int Ov042Camera_GetState(void);
 extern int Ov043Camera_GetState(void);
-extern int func_ov044_020d0130(void);
+extern int GetPanelCameraState(void);
 
 int func_ov021_020af614(void)
 {
@@ -21,7 +21,7 @@ int func_ov021_020af614(void)
     case 2:
         return Ov043Camera_GetState();
     case 3:
-        return func_ov044_020d0130();
+        return GetPanelCameraState();
     }
     return 0;
 }

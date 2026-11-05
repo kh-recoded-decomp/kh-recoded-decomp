@@ -6,12 +6,12 @@ typedef struct {
     u8 targetType;
 } Enemy;
 
-extern VecFx32 *func_ov052_020ceb74(Enemy *enemy);
+extern VecFx32 *GetActorModelPosition(Enemy *enemy);
 
 BOOL IsEnemyTargetOutsideRaisedBand(Enemy *enemy, VecFx32 *point)
 {
     BOOL outside = TRUE;
-    VecFx32 position = *func_ov052_020ceb74(enemy);
+    VecFx32 position = *GetActorModelPosition(enemy);
     VecFx32 target = *point;
 
     switch (enemy->targetType) {

@@ -1,4 +1,4 @@
 #define Camera_CanTrackTarget_020c1ba8 Camera_CanTrackTarget
 #define ContainsMatchingEntry_02034900 ContainsMatchingEntry
-#define func_ov046_020c2ab8 func_ov046_020c2ad8
+#define func_ov046_020c2ab8 Camera_UsesDefaultFocusInPreset19Or21
 #include "src/ov046/shared_engine/Camera_CanTrackTarget_020c1ba8.c"

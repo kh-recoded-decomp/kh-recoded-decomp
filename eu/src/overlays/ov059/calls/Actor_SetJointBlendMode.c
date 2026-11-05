@@ -1,4 +1,4 @@
 #define Actor_SetJointBlendMode_020c8f9c Actor_SetJointBlendMode
-#define func_ov059_020c8b7c func_ov059_020c8b9c
+#define func_ov059_020c8b7c ResetActorJointBlendState
 #define selectJointAnimationBlend_0202f2cc selectJointAnimationBlend
 #include "src/ov059/unclassified_helpers/Actor_SetJointBlendMode_020c8f9c.c"

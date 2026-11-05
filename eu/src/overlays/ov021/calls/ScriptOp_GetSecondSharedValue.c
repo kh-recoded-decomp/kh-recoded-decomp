@@ -1,3 +1,3 @@
 #define ScriptOp_GetSecondSharedValue_020b0c60 ScriptOp_GetSecondSharedValue
-#define func_ov042_020bd810 func_ov042_020bd830
+#define func_ov042_020bd810 GetCameraAdjustedHorizontalBounds
 #include "src/ov021/script_ops/ScriptOp_GetSecondSharedValue_020b0c60.c"

@@ -2,5 +2,5 @@
 #define HasReachedMoveTarget_020d483c HasReachedMoveTarget
 #define StageRecord_GetSlotPosition_02087c4c StageRecord_GetSlotPosition
 #define func_01ffa0f4 VEC_Distance
-#define func_ov052_020ceb54 func_ov052_020ceb74
+#define func_ov052_020ceb54 GetActorModelPosition
 #include "src/ov058/unclassified_helpers/HasReachedMoveTarget_020d483c.c"

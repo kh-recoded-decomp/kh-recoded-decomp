@@ -26,6 +26,6 @@
 #define func_0202f4b8 GetModelAnimationDurationFx32
 #define func_ov059_020ce3bc Projectile_UpdateCollision
 #define func_ov059_020cec30 DoubleSeekerContactDistance
-#define func_ov059_020cf394 func_ov059_020cf3b4
+#define func_ov059_020cf394 EntryList_RemoveByKey
 #define random_next_scaled_0202aa04 random_next_scaled
 #include "src/ov059/unclassified_helpers/Seeker_Update_020cde6c.c"

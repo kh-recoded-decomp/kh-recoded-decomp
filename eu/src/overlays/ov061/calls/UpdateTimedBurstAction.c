@@ -12,5 +12,5 @@
 #define data_ov061_020d8500 data_ov061_020d8520
 #define func_ov021_020a8ab4 ResetAnimationTrackState
 #define func_ov021_020a8ca0 func_ov021_020a8cc0
-#define func_ov052_020ceb54 func_ov052_020ceb74
+#define func_ov052_020ceb54 GetActorModelPosition
 #include "src/ov061/actor_motion/UpdateTimedBurstAction_020d81c0.c"

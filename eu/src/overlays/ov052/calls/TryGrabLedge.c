@@ -149,7 +149,7 @@ struct Actor {
 };
 
 extern s16 gSinFx12Table[];
-extern VecFx32 *func_ov052_020ceb74(Actor *actor);
+extern VecFx32 *GetActorModelPosition(Actor *actor);
 extern u16 GetLinkedAngleOffset(Actor *actor);
 extern void VEC_Subtract(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
 extern void VEC_Add(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
@@ -236,7 +236,7 @@ BOOL TryGrabLedge(Actor *actor)
     fx32 y;
     BOOL blocked;
 
-    pos = func_ov052_020ceb74(actor);
+    pos = GetActorModelPosition(actor);
     climb = &actor->climb;
     if (actor->stateFlags & 0x8000000) {
         return FALSE;
@@ -257,7 +257,7 @@ BOOL TryGrabLedge(Actor *actor)
     filterInit.flags = 0x20;
     filter = filterInit;
     motion = &actor->motion;
-    if (motion->grounded && func_ov052_020ceb74(actor)->y - motion->groundY < 0xe00) {
+    if (motion->grounded && GetActorModelPosition(actor)->y - motion->groundY < 0xe00) {
         return FALSE;
     }
 

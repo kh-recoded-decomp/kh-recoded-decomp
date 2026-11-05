@@ -21,5 +21,5 @@
 #define func_ov042_020bd59c SetCameraFrustumExtent
 #define func_ov042_020bd5e0 SetCameraParameterBc
 #define func_ov042_020bd6ec FollowChainLeader
-#define func_ov042_020bd7a8 func_ov042_020bd7c8
+#define func_ov042_020bd7a8 SetCameraHorizontalFollowBounds
 #include "src/ov030/movie/UpdateCameraTriggers_020baccc.c"

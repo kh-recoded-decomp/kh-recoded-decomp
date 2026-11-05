@@ -3,6 +3,6 @@
 #define ResumeEffectOwnerActor_020d3afc ResumeEffectOwnerActor
 #define SelectFallStateHandler_020d1238 SelectFallStateHandler
 #define VEC_Subtract_01ff9e3c VEC_Subtract
-#define func_ov052_020ceb54 func_ov052_020ceb74
+#define func_ov052_020ceb54 GetActorModelPosition
 #define func_ov055_020d3c00 UpdateEffectOwnerMotion
 #include "src/ov055/object_factory/ResumeEffectOwnerActor_020d3afc.c"

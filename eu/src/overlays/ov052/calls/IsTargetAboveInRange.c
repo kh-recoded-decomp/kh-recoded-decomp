@@ -2,5 +2,5 @@
 #define VEC_Mag_01ff9f28 VEC_Mag
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define func_ov001_0206c3f4 GetWaitTargetPosition
-#define func_ov052_020ceb54 func_ov052_020ceb74
+#define func_ov052_020ceb54 GetActorModelPosition
 #include "src/ov052/unclassified_helpers/IsTargetAboveInRange_020c94e4.c"

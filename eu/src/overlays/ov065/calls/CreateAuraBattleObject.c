@@ -23,7 +23,7 @@
 #define func_ov056_020d3b24 ForwardTargetHandle
 #define func_ov056_020d3b30 ForwardTargetHandleValue
 #define func_ov056_020d3b40 ForwardTargetHandle_020d3b60
-#define func_ov065_020d8100 func_ov065_020d8120
+#define func_ov065_020d8100 StartOv065SlotGroupCameraAction
 #define func_ov065_020d8134 ReleaseAuraBattleResources
 #define func_ov065_020d82b0 SetupAuraBattleGroup
 #include "src/ov065/object_factory/CreateAuraBattleObject_020d8400.c"

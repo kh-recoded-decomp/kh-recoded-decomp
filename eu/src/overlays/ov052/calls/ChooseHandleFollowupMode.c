@@ -7,5 +7,5 @@
 #define func_ov021_020aa2e8 AdvanceObjHandleConfig
 #define func_ov021_020aa39c TriggerMatchingHandle
 #define func_ov052_020cc66c BuildApproachChoices
-#define func_ov052_020ceb54 func_ov052_020ceb74
+#define func_ov052_020ceb54 GetActorModelPosition
 #include "src/ov052/unclassified_helpers/ChooseHandleFollowupMode_020d0c98.c"

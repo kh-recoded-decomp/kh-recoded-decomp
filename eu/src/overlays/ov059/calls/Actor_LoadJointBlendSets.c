@@ -6,5 +6,5 @@
 #define data_ov059_020cfe6c data_ov059_020cfe8c
 #define func_0202c48c LoadFileAllocFromHeapTail
 #define func_0202ed9c InitModelUsingTextureHeader
-#define func_ov059_020c8b7c func_ov059_020c8b9c
+#define func_ov059_020c8b7c ResetActorJointBlendState
 #include "src/ov059/unclassified_helpers/Actor_LoadJointBlendSets_020c8a84.c"

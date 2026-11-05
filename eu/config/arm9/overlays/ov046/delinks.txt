@@ -179,7 +179,7 @@ src/overlays/ov046/calls/Camera_RefreshStandardView.c:
     complete
     .text       start:0x020c16e0 end:0x020c170c
 
-src/overlays/ov046/auto/func_ov046_020c170c.c:
+src/overlays/ov046/auto/Camera_GetViewPlaneNormals.c:
     complete
     .text       start:0x020c170c end:0x020c1718
 
@@ -271,7 +271,7 @@ src/overlays/ov046/calls/Camera_SetStateFlag18.c:
     complete
     .text       start:0x020c2aa4 end:0x020c2ad8
 
-src/overlays/ov046/calls/func_ov046_020c2ad8.c:
+src/overlays/ov046/calls/Camera_UsesDefaultFocusInPreset19Or21.c:
     complete
     .text       start:0x020c2ad8 end:0x020c2afe
 

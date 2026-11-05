@@ -15,5 +15,5 @@
 #define func_ov071_020d8270 DeactivateOv071TaskEntriesAndManager
 #define func_ov071_020d8340 HandleOv071OwnerEvent
 #define func_ov071_020d8350 ReleaseOv071CameraResources
-#define func_ov071_020d8368 func_ov071_020d8388
+#define func_ov071_020d8368 SetOv071BossTimeStep
 #include "src/ov071/object_factory/CreateOv071SceneTask_020d954c.c"

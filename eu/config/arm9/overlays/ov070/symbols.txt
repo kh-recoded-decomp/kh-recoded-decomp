@@ -1,4 +1,4 @@
-func_ov070_020d8120 kind:function(thumb,size=0x14) addr:0x020d8120
+IsOv070BossTaskId10F kind:function(thumb,size=0x14) addr:0x020d8120
 GetOv070PaletteEntry kind:function(thumb,size=0x24) addr:0x020d8134
 StartOv070BossTurn kind:function(thumb,size=0xd8) addr:0x020d8158
 StopOv070BossEffects kind:function(thumb,size=0x6a) addr:0x020d8230

@@ -5,6 +5,6 @@
 #define VEC_DotProduct_01ff9e6c VEC_DotProduct
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define func_01ff9f88 VEC_Normalize
-#define func_ov052_020ceb54 func_ov052_020ceb74
+#define func_ov052_020ceb54 GetActorModelPosition
 #define func_ov070_020d85c8 UpdateOv070BossTurnState
 #include "src/ov070/object_state/StartOv070BossTurn_020d8138.c"

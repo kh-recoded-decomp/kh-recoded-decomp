@@ -5,5 +5,5 @@
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define data_0205356c gSinFx12Table
 #define func_01ff9f88 VEC_Normalize
-#define func_ov052_020ceb54 func_ov052_020ceb74
+#define func_ov052_020ceb54 GetActorModelPosition
 #include "src/ov052/unclassified_helpers/TryFlagTargetBehind_020c9bdc.c"

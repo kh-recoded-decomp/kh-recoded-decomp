@@ -3,7 +3,7 @@
 #define UpdatePanelCamera_020d0944 UpdatePanelCamera
 #define VEC_Add_01ff9e0c VEC_Add
 #define data_0205356c gSinFx12Table
-#define func_ov044_020d0090 func_ov044_020d00b0
+#define func_ov044_020d0090 CommitPanelCameraFrame
 #define func_ov044_020d08d8 GetPanelBasis
 #define g_panel_020d0ea0 data_ov044_020d0ec0
 #include "src/ov044/panel_state/UpdatePanelCamera_020d0944.c"

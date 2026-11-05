@@ -176,7 +176,7 @@ src/overlays/ov058/calls/UpdateEffectSlotPhase.c:
     complete
     .text       start:0x020d7660 end:0x020d7740
 
-src/overlays/ov058/calls/func_ov058_020d7740.c:
+src/overlays/ov058/calls/DrawSceneIntroEffectSlot.c:
     complete
     .text       start:0x020d7740 end:0x020d7758
 
@@ -208,7 +208,7 @@ src/overlays/ov058/calls/UpdateRaisedModelAnimation.c:
     complete
     .text       start:0x020d7924 end:0x020d79a0
 
-src/overlays/ov058/calls/func_ov058_020d79a0.c:
+src/overlays/ov058/calls/DrawSceneIntroRaisedModel.c:
     complete
     .text       start:0x020d79a0 end:0x020d79b8
 

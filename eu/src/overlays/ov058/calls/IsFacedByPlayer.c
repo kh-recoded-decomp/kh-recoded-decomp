@@ -4,7 +4,7 @@
 #define data_0205356c gSinFx12Table
 #define func_01ff9f88 VEC_Normalize
 #define func_01ffa0f4 VEC_Distance
-#define func_ov052_020ceb54 func_ov052_020ceb74
+#define func_ov052_020ceb54 GetActorModelPosition
 #define func_ov052_020ceb7c GetLinkedAngleOffset
 #define g_player_020d8a20 data_ov058_020d8a40
 #define func_01ffaff4 VEC_NormalizeLength

@@ -19,6 +19,6 @@
 #define func_ov059_020c7acc Actor_InitModel_020c7acc
 #define func_ov059_020c932c InitMotionTargetState
 #define func_ov059_020ca1e8 Actor_SpawnSweepContactEffect
-#define func_ov059_020cbe80 func_ov059_020cbea0
+#define func_ov059_020cbe80 UpdateGlobalActorGaugePanel
 #define func_ov059_020cf8d8 GaugePanel_Init
 #include "src/ov059/unclassified_helpers/Actor_Init_020cba3c.c"

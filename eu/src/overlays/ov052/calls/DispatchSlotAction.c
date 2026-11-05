@@ -11,7 +11,7 @@
 #define func_ov021_020aa498 SetActiveFlags
 #define func_ov021_020ad8c4 func_ov021_020ad8e4
 #define func_ov052_020cc274 ConsumeActionInterruptFlag
-#define func_ov052_020ceb54 func_ov052_020ceb74
+#define func_ov052_020ceb54 GetActorModelPosition
 #define func_ov052_020cfd84 MarkStateThreeFlag
 #define func_ov052_020d0524 HandleMemberMenuInput
 #define func_ov052_020d0600 CanUseMemberSlot

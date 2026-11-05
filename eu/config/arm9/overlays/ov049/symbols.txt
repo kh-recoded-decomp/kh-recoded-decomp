@@ -1,7 +1,7 @@
 InitSpinCameraOrbit kind:function(thumb,size=0x3c) addr:0x020c3520
 InitFastSpinCameraOrbit kind:function(thumb,size=0x40) addr:0x020c355c
-func_ov049_020c359c kind:function(thumb,size=0x1c) addr:0x020c359c
-func_ov049_020c35b8 kind:function(thumb,size=0x1c) addr:0x020c35b8
+InitEventCameraMotionPreset2 kind:function(thumb,size=0x1c) addr:0x020c359c
+InitEventCameraMotionPreset3 kind:function(thumb,size=0x1c) addr:0x020c35b8
 InitRandomCameraSwing kind:function(thumb,size=0x2e) addr:0x020c35d4
 InitRandomCameraSway kind:function(thumb,size=0x30) addr:0x020c3604
 StartEventCamera kind:function(thumb,size=0x28) addr:0x020c3634

@@ -9,5 +9,5 @@
 #define func_ov001_0206d050 SpawnTrailEffect
 #define func_ov021_020a7504 func_ov021_020a7524
 #define func_ov021_020a7544 func_ov021_020a7564
-#define func_ov052_020ceb54 func_ov052_020ceb74
+#define func_ov052_020ceb54 GetActorModelPosition
 #include "src/ov001/unclassified_helpers/UpdateTriggerWallContact_0206ce78.c"

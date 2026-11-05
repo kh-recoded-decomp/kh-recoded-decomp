@@ -51,7 +51,7 @@ extern const s16 gSinFx12Table[];
 extern void ComputeApproachTarget(VecFx32 *out, int mode);
 extern int GetSceneIntroSequenceMode(void);
 extern int GetSceneSlotAngle(int mode);
-extern void func_ov052_020ceb80(Enemy *enemy, VecFx32 *target);
+extern void SetActorModelPosition(Enemy *enemy, VecFx32 *target);
 extern void Obj_SetPosition(void *entity, const VecFx32 *position);
 extern void SetActorPaused(Enemy *enemy, int paused);
 extern u16 GetLinkedAngleOffset(Enemy *enemy);
@@ -85,7 +85,7 @@ void UpdateRewardActorPhase(Enemy *enemy)
     case 1:
     case 2:
     case 3:
-        func_ov052_020ceb80(enemy, &target);
+        SetActorModelPosition(enemy, &target);
         angle = GetSceneSlotAngle(enemy->mode);
         if (enemy->onTurn != NULL) {
             enemy->onTurn(enemy, angle);
@@ -96,7 +96,7 @@ void UpdateRewardActorPhase(Enemy *enemy)
         break;
     case 4:
     case 5:
-        func_ov052_020ceb80(enemy, &target);
+        SetActorModelPosition(enemy, &target);
         angle = GetSceneSlotAngle(enemy->mode);
         if (enemy->onTurn != NULL) {
             enemy->onTurn(enemy, angle);
@@ -121,7 +121,7 @@ void UpdateRewardActorPhase(Enemy *enemy)
         enemy->stateFlags &= ~0x200000000ULL;
         break;
     case 6:
-        func_ov052_020ceb80(enemy, &target);
+        SetActorModelPosition(enemy, &target);
         angle = GetSceneSlotAngle(enemy->mode);
         if (enemy->onTurn != NULL) {
             enemy->onTurn(enemy, angle);

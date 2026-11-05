@@ -6,5 +6,5 @@
 #define data_ov052_020d20dc data_ov052_020d20fc
 #define func_0202c48c LoadFileAllocFromHeapTail
 #define func_0202ed9c InitModelUsingTextureHeader
-#define func_ov052_020ca310 func_ov052_020ca330
+#define func_ov052_020ca310 ResetSlotModelState
 #include "src/ov052/model_display/LoadSlotModels_020ca20c.c"

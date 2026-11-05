@@ -17,6 +17,6 @@
 #define func_ov021_020a8ab4 ResetAnimationTrackState
 #define func_ov021_020a8ca0 func_ov021_020a8cc0
 #define func_ov048_020c384c GetCameraViewUpVector
-#define func_ov052_020ceb54 func_ov052_020ceb74
-#define func_ov070_020d8100 func_ov070_020d8120
+#define func_ov052_020ceb54 GetActorModelPosition
+#define func_ov070_020d8100 IsOv070BossTaskId10F
 #include "src/ov070/object_state/UpdateOv070BossProjectiles_020d829c.c"

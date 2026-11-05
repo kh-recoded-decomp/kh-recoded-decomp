@@ -3,6 +3,6 @@
 #define SweepActorBodyCapsule_020c7c34 SweepActorBodyCapsule
 #define SweepWorldCollision_020364a0 SweepWorldCollision
 #define VEC_Subtract_01ff9e3c VEC_Subtract
-#define func_ov052_020ceb54 func_ov052_020ceb74
+#define func_ov052_020ceb54 GetActorModelPosition
 #define func_01ffaff4 VEC_NormalizeLength
 #include "src/ov052/actor_motion/SweepActorBodyCapsule_020c7c34.c"

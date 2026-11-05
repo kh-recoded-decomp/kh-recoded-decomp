@@ -2,5 +2,5 @@
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
 #define ScriptVm_ReadOperandFx32_02025df8 ScriptVm_ReadOperandFx32
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField
-#define func_ov052_020ceb60 func_ov052_020ceb80
+#define func_ov052_020ceb60 SetActorModelPosition
 #include "src/ov001/shared_engine/ScriptCmd_PlacePartyMember_02065bb0.c"
