@@ -3,6 +3,6 @@
 #define func_ov039_020bc994 GetMenuFont10
 #define NNSi_G2dFontGetTextHeight_02016b4c NNSi_G2dFontGetTextHeight
 #define func_ov076_020cb0cc TextCanvas_GetLineWidth
-#define func_ov076_020cb134 func_ov076_020cb154
+#define func_ov076_020cb134 HandleSlotMenuTextTag
 #define DrawNnsG2dText_02017ff0 NNSi_G2dTextCanvasDrawTaggedText
 #include "src/ov076/unclassified_helpers/MessageWindow_DrawText_020cb868.c"

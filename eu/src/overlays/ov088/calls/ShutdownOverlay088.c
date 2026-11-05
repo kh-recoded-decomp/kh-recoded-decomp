@@ -1,3 +1,3 @@
 #define ReleaseOverlay088Graphics ReleaseOverlay088Graphics_020bebe8
-#define func_ov088_020bedd0 func_ov088_020bedf0
+#define func_ov088_020bedd0 DestroyOverlay088CaptionLayer
 #include "src/ov088/panel_state/ShutdownOverlay088.c"

@@ -6,7 +6,7 @@
 #define data_ov076_020d1ae4 gItemPickerPanelWork
 #define func_ov039_020bc1bc func_ov039_020bc1dc
 #define AcquireRecordSlot_02051d3c AcquireRecordSlot
-#define func_ov076_020d0f50 func_ov075_020d0f70
+#define func_ov076_020d0f50 LoadItemPickerMenuTipImages
 #define QueueSoundCommandForArc_0204d670 QueueSoundCommandForArc
 #define func_0204d8b8 func_0204d8cc
 #define G2D_InitializeLinearCanvas_02017a2c NNS_G2dCharCanvasInitForBG
@@ -30,7 +30,7 @@
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define func_ov076_020cf254 OpenMessageWindow
 #define func_0202c690 func_0202c6a4
-#define func_ov076_020cd450 func_ov075_020cd470
+#define func_ov076_020cd450 LoadItemPickerTextureDrawParams
 #define InitPanelModel_020d0b74 InitMenuModel
 #define func_ov076_020cde04 BuildTabItemList
 #include "src/ov075/unclassified_helpers/func_ov075_020cfbfc.c"

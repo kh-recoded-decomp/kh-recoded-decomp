@@ -49,7 +49,7 @@ extern void SweepElements(void);
 extern void FreePointerIfSet(void **ptr);
 extern void DestroyAllContainerElements(void *container);
 extern void ReleaseIfMarked(void *container);
-extern void func_ov085_020c1fd4(IconCell *icons);
+extern void LoadShopMenuTipImages(IconCell *icons);
 extern void ReleaseRecordSlot(int slot);
 extern BOOL DestroyFndObjectList(MenuObjectList *list);
 extern void GX_LoadBGPltt(const void *source, u32 offset, u32 size);
@@ -69,7 +69,7 @@ void ResetShopMenuGraphics(ShopMenu *menu)
     FreePointerIfSet(&menu->ownedPointer);
     DestroyAllContainerElements(container);
     ReleaseIfMarked(container);
-    func_ov085_020c1fd4(menu->icons);
+    LoadShopMenuTipImages(menu->icons);
     ReleaseRecordSlot(8);
     ReleaseRecordSlot(0);
     DestroyFndObjectList(&menu->objectLists[0]);

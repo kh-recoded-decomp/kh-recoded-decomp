@@ -20,7 +20,7 @@
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define data_ov076_020cd190 data_ov076_020cd1b0
 #define data_ov076_020cd35c sOv076_ScrollCmx_020cd37c
-#define func_ov076_020cac94 func_ov076_020cacb4
+#define func_ov076_020cac94 UpdateSlotMenuCharUpload
 #if defined(__MWERKS__)
 #include "../src/ov076/unclassified_helpers/MenuPanel_Open_020cc0e4.c"
 #else

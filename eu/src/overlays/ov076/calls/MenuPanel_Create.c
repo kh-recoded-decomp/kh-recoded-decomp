@@ -6,7 +6,7 @@
 #define data_ov076_020cd3ec gSlotMenuPanelWork
 #define func_ov039_020bc1bc func_ov039_020bc1dc
 #define AcquireRecordSlot_02051d3c AcquireRecordSlot
-#define func_ov076_020ccd84 func_ov076_020ccda4
+#define func_ov076_020ccd84 LoadSlotMenuTipImages
 #define QueueSoundCommandForArc_0204d670 QueueSoundCommandForArc
 #define func_0204d8b8 func_0204d8cc
 #define G2D_InitializeLinearCanvas_02017a2c NNS_G2dCharCanvasInitForBG
@@ -30,7 +30,7 @@
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define func_ov076_020cb1a4 MessageWindow_Open
 #define func_0202c690 func_0202c6a4
-#define func_ov076_020c9698 func_ov076_020c96b8
+#define func_ov076_020c9698 LoadSlotMenuTextureDrawParams
 #define InitPanelModel_020ccc44 InitPanelModel
 #define func_ov076_020c9c14 MenuPanel_ApplyCategoryFilter
 #include "src/ov076/unclassified_helpers/MenuPanel_Create_020cbccc.c"

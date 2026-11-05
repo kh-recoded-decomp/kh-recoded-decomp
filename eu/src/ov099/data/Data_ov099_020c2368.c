@@ -4,12 +4,12 @@
 
 extern void HandleListCursorUp(void);
 extern void UpdateModelViewerScreen(void);
-extern void func_ov099_020becb4(void);
-extern void func_ov099_020bedd0(void);
+extern void InitEnemyViewerScreen(void);
+extern void DestroyEnemyViewerScreen(void);
 
 void *data_ov099_020c2368[6] = {
-    (void *)func_ov099_020becb4,
-    (void *)func_ov099_020bedd0,
+    (void *)InitEnemyViewerScreen,
+    (void *)DestroyEnemyViewerScreen,
     (void *)UpdateModelViewerScreen,
     (void *)0x00000008,
     (void *)0x0000D6F8,

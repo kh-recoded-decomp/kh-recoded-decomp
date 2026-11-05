@@ -40,7 +40,7 @@ src/overlays/ov103/calls/SetupMenuDisplay.c:
     complete
     .text       start:0x020bed5c end:0x020bef14
 
-src/overlays/ov103/calls/func_ov103_020bef14.c:
+src/overlays/ov103/calls/LoadTheaterReportMessageContainers.c:
     complete
     .text       start:0x020bef14 end:0x020bef58
 
@@ -76,7 +76,7 @@ src/overlays/ov103/calls/DrawShadowedAnchoredText_020bf584.c:
     complete
     .text       start:0x020bf584 end:0x020bf5e8
 
-src/overlays/ov103/calls/func_ov103_020bf5e8.c:
+src/overlays/ov103/calls/CreateTheaterReportSlotEntries.c:
     complete
     .text       start:0x020bf5e8 end:0x020bf66c
 
@@ -148,7 +148,7 @@ src/overlays/ov103/auto/func_ov103_020c0338.c:
     complete
     .text       start:0x020c0338 end:0x020c033c
 
-src/overlays/ov103/calls/func_ov103_020c033c.c:
+src/overlays/ov103/calls/InitTheaterReportScreen.c:
     complete
     .text       start:0x020c033c end:0x020c03e8
 

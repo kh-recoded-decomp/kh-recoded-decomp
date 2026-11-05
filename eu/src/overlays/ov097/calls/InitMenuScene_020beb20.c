@@ -17,7 +17,7 @@
 #define data_ov097_020c1ec4 sStoryReportModeMap
 #define data_ov097_020c1ef0 sStoryReportRootIndices
 #define func_ov027_020ba2a8 GetPackedFileEntry
-#define func_ov097_020bf6a8 func_ov097_020bf6c8
+#define func_ov097_020bf6a8 LoadStoryReportMessageContainers
 #define func_ov097_020c1558 func_ov097_020c1578
 #define g_menuScene_020c2520 data_ov097_020c2540
 #include "src/ov097/panel_state/InitMenuScene_020beb00.c"

@@ -40,7 +40,7 @@ src/overlays/ov087/calls/InvokeSlotHandlers.c:
     complete
     .text       start:0x020c4700 end:0x020c4734
 
-src/overlays/ov087/calls/func_ov087_020c4734.c:
+src/overlays/ov087/calls/DrawChoiceWindowTextAndUpload.c:
     complete
     .text       start:0x020c4734 end:0x020c4778
 

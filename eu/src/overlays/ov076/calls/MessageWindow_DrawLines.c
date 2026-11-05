@@ -5,5 +5,5 @@
 #define G2D_FindGlyphIndex_02016a10 NNS_G2dFontFindGlyphIndex
 #define G2D_GetGlyphWidths_02016a58 NNS_G2dFontGetCharWidthsFromIndex
 #define DrawNnsG2dText_02017ff0 NNSi_G2dTextCanvasDrawTaggedText
-#define func_ov076_020cb134 func_ov076_020cb154
+#define func_ov076_020cb134 HandleSlotMenuTextTag
 #include "src/ov076/unclassified_helpers/MessageWindow_DrawLines_020cb9a0.c"

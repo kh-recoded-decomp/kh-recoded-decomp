@@ -41,7 +41,7 @@ ItemList_ApplyCategoryFilter_020c644c kind:function(thumb,size=0x1ac) addr:0x020
 BuildItemListForCategory kind:function(thumb,size=0x14) addr:0x020c65f8
 BuildItemListForCategories kind:function(thumb,size=0x14) addr:0x020c660c
 ItemList_UpdateHeaderText_020c6620 kind:function(thumb,size=0xcc) addr:0x020c6620
-func_ov077_020c66ec kind:function(thumb,size=0xd8) addr:0x020c66ec
+LoadItemScreenTextureDrawParams kind:function(thumb,size=0xd8) addr:0x020c66ec
 InitImageQuad_020c67c4 kind:function(thumb,size=0x22) addr:0x020c67c4
 InitGridImageQuad_020c67e8 kind:function(thumb,size=0x52) addr:0x020c67e8
 DrawSpriteQuad_020c683c kind:function(thumb,size=0x158) addr:0x020c683c
@@ -104,9 +104,9 @@ RefreshElementCellAnimation kind:function(thumb,size=0x16) addr:0x020c9d54
 PlaceElement42OrHide kind:function(thumb,size=0x30) addr:0x020c9d6c
 SetFlagGatedElementsVisible kind:function(thumb,size=0x38) addr:0x020c9d9c
 EquipmentMatrix_GetStockForRecord kind:function(thumb,size=0x1c) addr:0x020c9dd4
-func_ov077_020c9df0 kind:function(thumb,size=0x18c) addr:0x020c9df0
+LoadItemScreenMenuTipImages kind:function(thumb,size=0x18c) addr:0x020c9df0
 func_ov077_020c9f7c kind:function(thumb,size=0x2) addr:0x020c9f7c
-func_ov077_020c9f80 kind:function(thumb,size=0x184) addr:0x020c9f80
+DrawItemScreenImageFromPackedArgs kind:function(thumb,size=0x184) addr:0x020c9f80
 gEquipmentSlot0HelpPrompt kind:data(any) addr:0x020ca104
 gEquipmentSlot1HelpPrompt kind:data(any) addr:0x020ca110
 data_ov077_020ca11c kind:data(any) addr:0x020ca11c

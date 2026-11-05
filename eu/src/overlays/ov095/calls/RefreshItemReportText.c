@@ -80,7 +80,7 @@ extern void CallVirtualHandlerSlot1(ItemReportTextLayer *, int);
 extern void Text_UploadTileBuffer(ItemReportTextLayer *);
 extern void DrawShadowedAnchoredText_020c0000(ItemReportTextLayer *, int, int, int, u32, const void *);
 extern void DrawShadowedTextFitted(ItemReportTextLayer *, u32, u32, u32, u32, const void *, int);
-extern void func_ov095_020c0064(ItemReportTextLayer *, int, int, int, int, const void *);
+extern void DrawItemGridTextWithShadow(ItemReportTextLayer *, int, int, int, int, const void *);
 extern u32 GetGridCell(int, int, ItemReportMenu *);
 extern BOOL IsEntryFlagSet_020c1340(int, int);
 
@@ -200,7 +200,7 @@ void RefreshItemReportText(int refresh, ItemReportMenu *menu)
         Text_UploadTileBuffer(&menu->title);
         CallVirtualHandlerSlot1(&menu->description, 0);
         if (IsEntryFlagSet_020c1340(0, id)) {
-            func_ov095_020c0064(&menu->description, 0, 4, 1, 8, menu->itemDescription);
+            DrawItemGridTextWithShadow(&menu->description, 0, 4, 1, 8, menu->itemDescription);
         }
         Text_UploadTileBuffer(&menu->description);
         return;

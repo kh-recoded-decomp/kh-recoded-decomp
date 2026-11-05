@@ -14,7 +14,7 @@
 #define data_ov091_020c3720 data_ov091_020c3740
 #define func_ov039_020bc828 GetCurrentMenuStackEntry
 #define func_ov091_020bef9c SetupRecordMenuDisplay
-#define func_ov091_020bf194 func_ov091_020bf1b4
+#define func_ov091_020bf194 LoadReportTopMessageContainers
 #define func_ov091_020bf410 InitMenuTextLayers
 #define func_ov091_020bf788 func_ov091_020bf7a8
 #define func_ov091_020bfbac SetListPanelSlotValue

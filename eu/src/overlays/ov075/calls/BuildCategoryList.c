@@ -1,3 +1,3 @@
 #define BuildCategoryList_020cd35c BuildCategoryList
-#define func_ov075_020cd0a0 func_ov075_020cd0c0
+#define func_ov075_020cd0a0 BuildItemPickerListForType
 #include "src/ov075/unclassified_helpers/BuildCategoryList_020cd35c.c"

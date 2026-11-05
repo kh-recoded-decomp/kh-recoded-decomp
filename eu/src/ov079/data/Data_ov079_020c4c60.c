@@ -11,7 +11,7 @@ extern void ConfigMenu_Release(void);
 extern void ConfigMenu_UpdateHelp(void);
 extern void ConfigMenu_PrevPage(void);
 extern void ConfigMenu_NextPage(void);
-extern void func_ov079_020c4c0c(void);
+extern void SaveOptionsAndCloseConfigMenu(void);
 
 void *data_ov079_020c4c60[17] = {
     (void *)ConfigMenu_Init,
@@ -24,11 +24,11 @@ void *data_ov079_020c4c60[17] = {
     (void *)ConfigMenu_PrevValue,
     (void *)ConfigMenu_NextValue,
     (void *)ConfigMenu_NextValue,
-    (void *)func_ov079_020c4c0c,
+    (void *)SaveOptionsAndCloseConfigMenu,
     NULL,
     NULL,
     (void *)ConfigMenu_PrevPage,
     (void *)ConfigMenu_NextPage,
     NULL,
-    (void *)func_ov079_020c4c0c,
+    (void *)SaveOptionsAndCloseConfigMenu,
 };

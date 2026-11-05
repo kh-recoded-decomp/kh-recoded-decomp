@@ -2,7 +2,7 @@
 #define CommandMatrix_GetStockForRecord MatrixMenu_GetStockForRecord
 #define InitGridImageQuad_020c97b4 InitGridImageQuad
 #define InitImageQuad_020c9790 InitImageQuad
-#define DrawImageQuad_020c9a78 func_ov075_020cd874
+#define DrawImageQuad_020c9a78 DrawItemPickerTexturedQuad
 #define DrawMenuImageModulated_020ccf34 DrawMenuImageModulated
 #define DrawSlotMenuGaugeAndDigits DrawGaugeWithNumber
 #define data_ov076_020cd12c data_ov075_020d1680

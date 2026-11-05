@@ -88,7 +88,7 @@ src/overlays/ov095/calls/DrawShadowedAnchoredText_020c0000.c:
     complete
     .text       start:0x020c0000 end:0x020c0064
 
-src/overlays/ov095/calls/func_ov095_020c0064.c:
+src/overlays/ov095/calls/DrawItemGridTextWithShadow.c:
     complete
     .text       start:0x020c0064 end:0x020c00c0
 

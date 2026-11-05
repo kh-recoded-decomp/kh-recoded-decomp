@@ -1,3 +1,3 @@
 #define FilterEntriesByCategory_020c1f8c FilterEntriesByCategory
-#define func_ov085_020c1cbc func_ov085_020c1cdc
+#define func_ov085_020c1cbc BuildShopItemListForType
 #include "src/ov085/unclassified_helpers/FilterEntriesByCategory_020c1f8c.c"

@@ -6,7 +6,7 @@
 #define data_ov076_020ca38c gItemListPanelWork
 #define func_ov039_020bc1bc func_ov039_020bc1dc
 #define AcquireRecordSlot_02051d3c AcquireRecordSlot
-#define func_ov076_020c9dd0 func_ov077_020c9df0
+#define func_ov076_020c9dd0 LoadItemScreenMenuTipImages
 #define QueueSoundCommandForArc_0204d670 QueueSoundCommandForArc
 #define func_0204d8b8 func_0204d8cc
 #define G2D_InitializeLinearCanvas_02017a2c NNS_G2dCharCanvasInitForBG
@@ -30,7 +30,7 @@
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define func_ov076_020c81d8 OpenMessageWindow_020c81f8
 #define func_0202c690 func_0202c6a4
-#define func_ov076_020c66cc func_ov077_020c66ec
+#define func_ov076_020c66cc LoadItemScreenTextureDrawParams
 #define InitPanelModel_020c9c78 InitSceneModel
 #define func_ov076_020c6c48 MenuPanel_ApplyCategoryFilter_020c6c68
 #include "src/ov077/unclassified_helpers/func_ov077_020c8d00.c"

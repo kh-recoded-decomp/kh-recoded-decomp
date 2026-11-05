@@ -1,0 +1,60 @@
+#include "nitro/types.h"
+
+typedef struct EnemyViewer EnemyViewer;
+
+extern u32 data_ov099_020c2900;
+extern u32 data_ov099_020c22b4;
+extern u32 sOv099_UiBtlStrLanguageP2_020c2774;
+extern u32 AcquireRecordSlot();
+extern u32 LoadMessageFiles();
+extern u32 Msg_OpenContainerAndReadHeader();
+extern u32 SetStateFlagBits();
+extern u32 MIi_CpuClearFast();
+extern u32 AcquireRecordManager();
+extern u32 GetCurrentMenuStackEntry();
+extern u32 SetupStatsPanelDisplay_020bf190();
+extern u32 LoadViewerBackgrounds();
+extern u32 InitViewerTextLayers();
+extern u32 DrawEntryStatsPanels();
+extern u32 CreateViewerSlotObjs();
+extern u32 InitScrollList_020c0b5c();
+extern void LoadEnemyCollectionProgress(EnemyViewer *viewer);
+extern void RefreshEnemyViewerIndicators(EnemyViewer *viewer);
+extern u32 SyncEnemyEntryFlags();
+extern u32 SetViewerMode();
+extern u32 ResetModelViewer();
+
+u32 InitEnemyViewerScreen(void *work) {
+  u32 menuMode;
+  void *messages;
+
+  data_ov099_020c2900 = work;
+  SetStateFlagBits('\x05','\0');
+  MIi_CpuClearFast(0,work,0xd6f8);
+  menuMode = GetCurrentMenuStackEntry();
+  *(u32 *)((int)work + 0xcf04) = menuMode;
+  *(u32 *)((int)work + 0xd050) = 0;
+  *(u32 *)((int)work + 0xd6e4) = 0;
+  *(u32 *)((int)work + 0xd6e8) = 0;
+  *(u32 *)((int)work + 0xd6ec) = 0;
+  *(u32 *)((int)work + 0xd6f4) = 0;
+  *(u32 *)((int)work + 0xd6f0) = 0;
+  SyncEnemyEntryFlags(work);
+  messages = Msg_OpenContainerAndReadHeader(&sOv099_UiBtlStrLanguageP2_020c2774,0xe,0);
+  *(void **)((int)work + 0x30c) = messages;
+  AcquireRecordManager();
+  AcquireRecordSlot(0,1);
+  AcquireRecordSlot(4,1);
+  SetupStatsPanelDisplay_020bf190(work);
+  LoadMessageFiles(work);
+  LoadViewerBackgrounds(work);
+  InitScrollList_020c0b5c(&data_ov099_020c22b4,work);
+  LoadEnemyCollectionProgress(work);
+  InitViewerTextLayers(work);
+  DrawEntryStatsPanels(0xffffffff,work);
+  CreateViewerSlotObjs(work);
+  RefreshEnemyViewerIndicators(work);
+  ResetModelViewer((int)work + 0xd0ec,0);
+  SetViewerMode(1,work);
+  return 1;
+}

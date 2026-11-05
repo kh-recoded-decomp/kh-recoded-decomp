@@ -15,6 +15,6 @@
 #define func_ov027_020b91c8 SetWidgetPosition
 #define func_ov039_020bc1bc func_ov039_020bc1dc
 #define func_ov039_020bca00 GetMenuInputState
-#define func_ov076_020cacf0 func_ov076_020cad10
+#define func_ov076_020cacf0 BuildSlotMenuFrameTilemap
 #define func_ov076_020cae08 GetDialogPixelBounds_020cae28
 #include "src/ov076/unclassified_helpers/MessageWindow_Update_020cb4a8.c"

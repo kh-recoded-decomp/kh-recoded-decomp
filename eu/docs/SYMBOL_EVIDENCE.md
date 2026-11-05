@@ -264,6 +264,51 @@ behavior, pointer/integer decoding, u16 narrowing, constant returns and native
 dispatcher typing limits. The StartSessionScene command keeps its distinct
 zero return; names do not imply a shared success/advance protocol.
 
+## Late-menu rendering and resources
+
+| Previous name | Current name | Evidence |
+|---|---|---|
+| `func_ov075_020cd0c0` | `BuildItemPickerListForType` | Builds cached item/record pointer list according to enabled type bit, type11=all, nonzero count and sortKey<9999; excludes item indices0..127; qsort uses item-picker comparator. |
+| `func_ov085_020c1cdc` | `BuildShopItemListForType` | Same list filter as ov075; uses shop count builder and comparator. No type/index validation. |
+| `func_ov075_020cd470` | `LoadItemPickerTextureDrawParams` | Loads encoded archive/index file; dispatches resource; selects texture/palette entry0; extracts width/height/imageParam/paletteBase and frees source. Assumes valid entries; handles compressed4x4 key/palette units. |
+| `func_ov076_020c96b8` | `LoadSlotMenuTextureDrawParams` | Same entry0 extraction as ov075 with slot-menu overlay binding. Keep independent function. |
+| `func_ov077_020c66ec` | `LoadItemScreenTextureDrawParams` | Same entry0 extraction as ov075 with item-screen overlay binding. Keep independent function. |
+| `func_ov075_020cd874` | `DrawItemPickerTexturedQuad` | Builds ImageQuad scale/translation, rotation/texture/palette/color and four UV/vertex pairs. BOOL controls decal polygon mode; y<=0 adds1fx32 height; no clipping/state restoration. |
+| `func_ov077_020c9f80` | `DrawItemScreenImageFromPackedArgs` | select high16=image index/low16=color; pos high/low signed16=XY; depth passed separately. Emits full textured quad, unlike ov075 subrectangle/decal interface. |
+| `func_ov075_020ceea4` | `UpdateItemPickerCharUpload` | Skips paused work/mismatched VBlank parity; if upload enabled copies2400h bytes to BG1 char+140h; updates renderer only if renderer busy==0. Busy does not guard upload. |
+| `func_ov076_020cacb4` | `UpdateSlotMenuCharUpload` | Same parity/upload/idle-renderer behavior with gSlotMenuPanelWork, distinct from item-picker work. |
+| `func_ov075_020cef00` | `BuildItemPickerFrameTilemap` | Builds 3x3-style frame in32x24 screen, fills middle strips and clears outside. Upper-clamps only, narrows origins/sizes unsigned, preserves width-2 behavior. |
+| `func_ov076_020cad10` | `BuildSlotMenuFrameTilemap` | Same32x24 frame builder using distinct slot-menu tile table. No lower rectangle validation. |
+| `func_ov075_020cf204` | `HandleItemPickerTextTag` | Tags1/2/4 assignF2/highlight/FA;1F centers next line using measured width and linefeed+vSpace. Other tags untouched; retain(width+1)/2 arithmetic. |
+| `func_ov076_020cb154` | `HandleSlotMenuTextTag` | Same tag contract; distinct work and helper binding TextCanvas_GetLineWidth rather than MeasureTextLine. |
+| `func_ov075_020d0f70` | `LoadItemPickerMenuTipImages` | Opens literal ui/menu/tips.p2 and language tips archive; loads85h entries with sequential localized fallback only for empty primary entry, extracts texture/palette metadata, frees buffers/containers, toggles dispatch0 then1. |
+| `func_ov076_020ccda4` | `LoadSlotMenuTipImages` | Same85h tip metadata/fallback algorithm with slot menu path globals. Fallback counter advances only for empty primary; VRAM metadata survives source free. |
+| `func_ov077_020c9df0` | `LoadItemScreenMenuTipImages` | Same85h tip metadata/fallback algorithm with item-screen path globals; preserve independent overlay binding. |
+| `func_ov085_020c1fd4` | `LoadShopMenuTipImages` | Same85h tip metadata/fallback algorithm with shop path globals; preserve independent overlay binding. |
+| `func_ov091_020bf1b4` | `LoadReportTopMessageContainers` | Opens all3 gReportTopResourcePaths with modeE/head allocation into owner table work+4; no prior-owner cleanup/failure check. |
+| `func_ov097_020bf6c8` | `LoadStoryReportMessageContainers` | Opens all3 gStoryReportResourcePaths with modeE/head allocation into work+18h. Existing private type Ov101State is misleading; no prior-owner cleanup. |
+| `func_ov103_020bef14` | `LoadTheaterReportMessageContainers` | Opens both gTheaterReportResourcePaths modeE/head into work+10h;2entries rather than3; no prior-owner cleanup. |
+| `func_ov095_020c0064` | `DrawItemGridTextWithShadow` | DrawTextColored at XY+1 with color+1 for both colors then foreground suppliedXY/colors. Legacy flags parameter is second color here, not proven flags. |
+| `func_ov099_020c060c` | `DrawEnemyViewerTextWithShadow` | Same two-pass shadow operation as ov095; preserve integer color+1 and custom tagged-text semantics. |
+| `func_ov099_020becb4` | `InitEnemyViewerScreen` | Sets global work, clearsD6F8h bytes, initializes progress/resources/scroll/text/slots/model viewer and enters mode1. Returns1; not complete allocation-schema proof. |
+| `func_ov099_020bedd0` | `DestroyEnemyViewerScreen` | Destroys viewer/models/object managers, frees resources, resets base rotation/dirty state, releases slots4/0 and manager, frees message container and clears global. Preserve cleanup order; not full renderer restore. |
+| `func_ov099_020c2078` | `LoadEnemyViewerSelectionModels` | Releases old selection models; clears/builds each104h model from selection list; selects all5tracks, attaches models and applies pose. No selection/capacity guard. |
+| `func_ov103_020c033c` | `InitTheaterReportScreen` | ClearsCBC4h work; clamps negative restored selection to0; loads messages/graphics/background/text/slots, setups list/unlocks, redraws and sets phase2. No upper selection guard. |
+| `func_ov103_020bf5e8` | `CreateTheaterReportSlotEntries` | Initializes manager at work+174h from container entryDh, creates12 slots with14h descriptor stride. No complete descriptor schema inferred. |
+| `func_ov086_020bfba0` | `RefreshRecordStatisticsRows` | Clears text via virtualslot1; dirties layer18h/trackerrow19h; draws statistic rows0..3 using established RecordPageMenu. |
+| `func_ov086_020bf3b4` | `CountUnlockedRecordGroupEntries` | Sums earlier group counts for base, scans group and counts IsSessionFlagSet(base+i+581h). No group bounds validation or further flag-role claim. |
+| `func_ov088_020bed2c` | `InitOverlay088CaptionLayer` | Loads literal ui/menu/str/&/cd.s.z into packed view+34h; inits text layer, draws entry0 at(4,0), uploads and dirties1Ah. Does not expand unknown cd abbreviation. |
+| `func_ov088_020bedf0` | `DestroyOverlay088CaptionLayer` | FreePointerIfSet at owner slot context+34h, then DestroyFndObjectList. Normalize actual void** release if changing types; cached view fields become stale. |
+| `func_ov097_020c1864` | `InitStoryReportSpriteFromFile` | Clears2Ch prefix; loads resource at+28h with flags11h; RebindSpriteToCell(slot,1,1,0); true return. No load failure guard. |
+| `func_ov097_020c188c` | `ReleaseStoryReportSpriteResource` | Frees/clears+28h owner if nonzero; clears upper3bits at byte+26h; returns1. Does not clear whole sprite or other flags. |
+| `func_ov079_020c4c0c` | `SaveOptionsAndCloseConfigMenu` | Plays close sound; ConfigMenu_SaveOptions(work); PopStackEntry; StartSubScene(0,-1,0). Preserve persistence/navigation order. |
+| `func_ov087_020c4734` | `DrawChoiceWindowTextAndUpload` | Uses indexed34h layer at work+9F8h; draws text at(40h,2) with411h flags and uploads. No window bounds guard; flags remain numeric. |
+
+[UI_RENDER_HELPERS.md](UI_RENDER_HELPERS.md) records per-overlay bindings,
+metadata/lifetime contracts, packed coordinates, bounds, tag behavior, upload
+scheduling and paired cleanup. Shadow-text parameters keep their two-color
+meaning; local view names do not claim complete allocation layouts.
+
 ## Explicitly unresolved
 
 The vector view at `data_027e0160` overlaps `data_027e0164`, used by the older

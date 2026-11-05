@@ -1,3 +1,3 @@
 #define ReleasePopupEntries_020c0d20 ReleasePopupEntries
-#define func_ov097_020c186c func_ov097_020c188c
+#define func_ov097_020c186c ReleaseStoryReportSpriteResource
 #include "src/ov097/panel_state/ReleasePopupEntries_020c0d20.c"

@@ -3,5 +3,5 @@
 #define func_01ff8830 MI_CpuFill8
 #define func_02006d3c G3X_SetHOffset
 #define func_ov099_020c1a98 LoadViewerModelTable
-#define func_ov099_020c2058 func_ov099_020c2078
+#define func_ov099_020c2058 LoadEnemyViewerSelectionModels
 #include "src/ov099/unclassified_helpers/ResetModelViewer_020c214c.c"

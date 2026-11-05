@@ -18,5 +18,5 @@
 #define func_ov027_020ba2a8 GetPackedFileEntry
 #define func_ov099_020beb20 RemapModelId
 #define func_ov099_020c0588 DrawShadowedAnchoredText_020c05a8
-#define func_ov099_020c05ec func_ov099_020c060c
+#define func_ov099_020c05ec DrawEnemyViewerTextWithShadow
 #include "src/ov099/panel_state/DrawEntryStatsPanels_020bf818.c"

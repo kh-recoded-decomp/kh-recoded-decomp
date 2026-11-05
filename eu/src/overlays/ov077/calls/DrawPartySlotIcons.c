@@ -1,3 +1,3 @@
 #define DrawPartySlotIcons_020c56f4 DrawPartySlotIcons
-#define func_ov077_020c9f60 func_ov077_020c9f80
+#define func_ov077_020c9f60 DrawItemScreenImageFromPackedArgs
 #include "src/ov077/unclassified_helpers/DrawPartySlotIcons_020c56f4.c"

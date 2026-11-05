@@ -9,6 +9,6 @@
 #define func_ov027_020b90f4 func_ov027_020b9114
 #define func_ov027_020ba2a8 GetPackedFileEntry
 #define func_ov039_020bc1bc func_ov039_020bc1dc
-#define func_ov087_020c4714 func_ov087_020c4734
+#define func_ov087_020c4714 DrawChoiceWindowTextAndUpload
 #define func_ov087_020c4a48 HideChoiceWidgets_020c4a48
 #include "src/ov087/panel_state/RefreshKindChoiceWindows_020c5200.c"

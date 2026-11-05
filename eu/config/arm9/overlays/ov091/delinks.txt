@@ -40,7 +40,7 @@ src/overlays/ov091/calls/SetupRecordMenuDisplay.c:
     complete
     .text       start:0x020befbc end:0x020bf1b4
 
-src/overlays/ov091/calls/func_ov091_020bf1b4.c:
+src/overlays/ov091/calls/LoadReportTopMessageContainers.c:
     complete
     .text       start:0x020bf1b4 end:0x020bf1f8
 

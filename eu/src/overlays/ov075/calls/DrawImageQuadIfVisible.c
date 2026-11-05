@@ -1,4 +1,4 @@
 #define DrawImageQuadIfVisible_020d0cd8 DrawImageQuadIfVisible
 #define func_ov075_020cd528 InitImageQuad
-#define func_ov075_020cd854 func_ov075_020cd874
+#define func_ov075_020cd854 DrawItemPickerTexturedQuad
 #include "src/ov075/unclassified_helpers/DrawImageQuadIfVisible_020d0cd8.c"

@@ -12,11 +12,11 @@ src/overlays/ov099/calls/RemapModelId.c:
     complete
     .text       start:0x020beb40 end:0x020becb4
 
-src/overlays/ov099/calls/func_ov099_020becb4.c:
+src/overlays/ov099/calls/InitEnemyViewerScreen.c:
     complete
     .text       start:0x020becb4 end:0x020bedd0
 
-src/overlays/ov099/calls/func_ov099_020bedd0.c:
+src/overlays/ov099/calls/DestroyEnemyViewerScreen.c:
     complete
     .text       start:0x020bedd0 end:0x020bee7c
 
@@ -92,7 +92,7 @@ src/overlays/ov099/calls/DrawShadowedAnchoredText_020c05a8.c:
     complete
     .text       start:0x020c05a8 end:0x020c060c
 
-src/overlays/ov099/calls/func_ov099_020c060c.c:
+src/overlays/ov099/calls/DrawEnemyViewerTextWithShadow.c:
     complete
     .text       start:0x020c060c end:0x020c0668
 
@@ -220,7 +220,7 @@ src/overlays/ov099/calls/ApplyViewerModelPose.c:
     complete
     .text       start:0x020c1d7c end:0x020c2078
 
-src/overlays/ov099/calls/func_ov099_020c2078.c:
+src/overlays/ov099/calls/LoadEnemyViewerSelectionModels.c:
     complete
     .text       start:0x020c2078 end:0x020c216c
 
