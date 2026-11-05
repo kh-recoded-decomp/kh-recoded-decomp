@@ -1,4 +1,4 @@
-"""Regression checks for library scope and preflight safety of symbol renames."""
+"""Regression checks for C/C++ library scope and safe rename preflight."""
 import contextlib
 import io
 from pathlib import Path
@@ -79,6 +79,21 @@ class RenameSymbolTest(unittest.TestCase):
         self.assertFalse((self.root / "src/calls/OldFunction.cpp").exists())
         self.assertIn("NewFunction(void)", (self.root / "src/calls/NewFunction.cpp").read_text(encoding="utf-8"))
         self.assertIn("NewFunction.cpp", config.read_text(encoding="utf-8"))
+
+    def test_existing_direct_alias_to_same_symbol_is_preserved(self):
+        self.put("src/calls/OldFunction.c", "int OldFunction(void) { return 1; }\n")
+        caller = self.put("src/calls/Caller.c", "#define NewFunction OldFunction\n#include \"shared.c\"\n")
+        self.rename()
+        self.assertEqual(caller.read_text(encoding="utf-8"), "#define NewFunction NewFunction\n#include \"shared.c\"\n")
+        self.assertTrue((self.root / "src/calls/NewFunction.c").exists())
+
+    def test_alias_does_not_hide_another_use_of_new_name(self):
+        self.put("src/calls/OldFunction.c", "int OldFunction(void) { return 1; }\n")
+        self.put("src/calls/Caller.c", "extern int NewFunction(void);\n#define NewFunction OldFunction\n")
+        before = self.snapshot()
+        with self.assertRaisesRegex(SystemExit, "new symbol already appears"):
+            self.rename()
+        self.assertEqual(self.snapshot(), before)
 
     def test_duplicate_c_and_cpp_definitions_leave_all_files_unchanged(self):
         self.put("src/calls/OldFunction.c", "void OldFunction(void) {}\n")

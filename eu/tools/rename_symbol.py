@@ -18,6 +18,14 @@ TEXT_SUFFIXES = SOURCE_SUFFIXES | {".h", ".hpp", ".txt", ".json", ".yaml", ".yml
 IDENTIFIER = re.compile(r"^[A-Za-z_]\w*$")
 
 
+def is_existing_alias(text: str, old: str, new: str) -> bool:
+    """Accept a lone direct alias for this same symbol, not an occupied name."""
+    if len(re.findall(rf"\b{re.escape(new)}\b", text)) != 1:
+        return False
+    alias = re.compile(rf"[ \t]*#[ \t]*define[ \t]+{re.escape(new)}[ \t]+{re.escape(old)}[ \t]*")
+    return any(alias.fullmatch(line) for line in text.lstrip("\ufeff").splitlines())
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("old")
@@ -46,7 +54,7 @@ def main() -> None:
             text = path.read_text(encoding="utf-8")
             defining_source = path.stem == args.old and path.suffix.lower() in SOURCE_SUFFIXES
             if re.search(rf"\b{re.escape(args.new)}\b", text):
-                if not defining_source:
+                if not defining_source and not is_existing_alias(text, args.old, args.new):
                     raise SystemExit(f"new symbol already appears in {path}")
             replaced, count = pattern.subn(args.new, text)
             if count:
