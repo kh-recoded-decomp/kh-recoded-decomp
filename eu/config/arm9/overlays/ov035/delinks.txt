@@ -16,7 +16,7 @@ src/overlays/ov035/calls/TeardownMovieContext.c:
     complete
     .text       start:0x020ba560 end:0x020ba594
 
-src/overlays/ov035/calls/func_ov035_020ba594.c:
+src/overlays/ov035/calls/AreaSceneState_LoadInitialResources.c:
     complete
     .text       start:0x020ba594 end:0x020ba5d8
 
@@ -24,11 +24,11 @@ src/overlays/ov035/calls/LoadShadowModelAndReturnState2.c:
     complete
     .text       start:0x020ba5d8 end:0x020ba5e2
 
-src/overlays/ov035/calls/func_ov035_020ba5e4.c:
+src/overlays/ov035/calls/AreaSceneState_WaitForListNodes.c:
     complete
     .text       start:0x020ba5e4 end:0x020ba610
 
-src/overlays/ov035/calls/func_ov035_020ba610.c:
+src/overlays/ov035/calls/AreaSceneState_StartOverlay40AfterLoad.c:
     complete
     .text       start:0x020ba610 end:0x020ba648
 
@@ -40,15 +40,15 @@ src/overlays/ov035/calls/FinishMovieSkip.c:
     complete
     .text       start:0x020ba688 end:0x020ba6c0
 
-src/overlays/ov035/calls/func_ov035_020ba6c0.c:
+src/overlays/ov035/calls/AreaSceneState_EndOverlay41WhenReady.c:
     complete
     .text       start:0x020ba6c0 end:0x020ba6d8
 
-src/overlays/ov035/auto/func_ov035_020ba6d8.c:
+src/overlays/ov035/auto/AreaSceneState_StartOverlay40Mode0.c:
     complete
     .text       start:0x020ba6d8 end:0x020ba6e4
 
-src/overlays/ov035/calls/func_ov035_020ba6e4.c:
+src/overlays/ov035/calls/AreaSceneState_ReleaseResourcesAndExit.c:
     complete
     .text       start:0x020ba6e4 end:0x020ba760
 
@@ -68,7 +68,7 @@ src/overlays/ov035/calls/SetupMovieDisplay.c:
     complete
     .text       start:0x020ba8b8 end:0x020ba960
 
-src/overlays/ov035/calls/func_ov035_020ba960.c:
+src/overlays/ov035/calls/CreateAreaSceneTask.c:
     complete
     .text       start:0x020ba960 end:0x020ba978
 
@@ -96,11 +96,11 @@ src/overlays/ov035/calls/BeginMovieCaption.c:
     complete
     .text       start:0x020ba9f8 end:0x020baa38
 
-src/overlays/ov035/auto/func_ov035_020baa38.c:
+src/overlays/ov035/auto/GetAreaSceneTransitionFlag.c:
     complete
     .text       start:0x020baa38 end:0x020baa48
 
-src/overlays/ov035/calls/LoadMovieClipHeader.c:
+src/overlays/ov035/calls/LoadAreaSceneDefinition.c:
     complete
     .text       start:0x020baa48 end:0x020baae4
 
@@ -116,7 +116,7 @@ src/overlays/ov035/calls/FreeMovieCharacterBuffers.c:
     complete
     .text       start:0x020bac48 end:0x020bac90
 
-src/overlays/ov035/auto/func_ov035_020bac90.c:
+src/overlays/ov035/auto/AreaSceneCleanupNoOp.c:
     complete
     .text       start:0x020bac90 end:0x020bac92
 
@@ -156,15 +156,15 @@ src/overlays/ov035/calls/GetMovieEntryValue.c:
     complete
     .text       start:0x020bae3c end:0x020bae68
 
-src/overlays/ov035/calls/func_ov035_020bae68.c:
+src/overlays/ov035/calls/SetAreaSceneDefinitionParams.c:
     complete
     .text       start:0x020bae68 end:0x020bae84
 
-src/overlays/ov035/calls/func_ov035_020bae84.c:
+src/overlays/ov035/calls/GetCurrentAreaIndex.c:
     complete
     .text       start:0x020bae84 end:0x020bae94
 
-src/overlays/ov035/auto/func_ov035_020bae94.c:
+src/overlays/ov035/auto/GetOverlay41PhaseActiveFlag.c:
     complete
     .text       start:0x020bae94 end:0x020baea4
 
@@ -172,11 +172,11 @@ src/overlays/ov035/calls/RequestSceneEvent.c:
     complete
     .text       start:0x020baea4 end:0x020baf30
 
-src/overlays/ov035/calls/func_ov035_020baf30.c:
+src/overlays/ov035/calls/SelectPersistentAreaSceneTableValue.c:
     complete
     .text       start:0x020baf30 end:0x020bafa8
 
-src/overlays/ov035/calls/ShowMovieMessage3700.c:
+src/overlays/ov035/calls/IsSessionFlag3700Set.c:
     complete
     .text       start:0x020bafa8 end:0x020bafb4
 
@@ -184,11 +184,11 @@ src/overlays/ov035/calls/IsSessionFlag3701Set.c:
     complete
     .text       start:0x020bafb4 end:0x020bafc4
 
-src/overlays/ov035/calls/func_ov035_020bafc4.c:
+src/overlays/ov035/calls/GetAreaSceneDefinitionIndex.c:
     complete
     .text       start:0x020bafc4 end:0x020bafd4
 
-src/overlays/ov035/calls/func_ov035_020bafd4.c:
+src/overlays/ov035/calls/GetAreaObjectListId.c:
     complete
     .text       start:0x020bafd4 end:0x020bafe4
 
@@ -208,7 +208,7 @@ src/overlays/ov035/calls/GetScaledMenuLevel.c:
     complete
     .text       start:0x020bb0c0 end:0x020bb110
 
-src/overlays/ov035/calls/func_ov035_020bb110.c:
+src/overlays/ov035/calls/GetAreaSceneSessionFlagPair.c:
     complete
     .text       start:0x020bb110 end:0x020bb134
 
@@ -220,15 +220,15 @@ src/overlays/ov035/calls/OnGroupEventFinished.c:
     complete
     .text       start:0x020bb1cc end:0x020bb28c
 
-src/overlays/ov035/calls/func_ov035_020bb28c.c:
+src/overlays/ov035/calls/ResetAreaSceneSelectionFlags.c:
     complete
     .text       start:0x020bb28c end:0x020bb2c0
 
-src/overlays/ov035/calls/func_ov035_020bb2c0.c:
+src/overlays/ov035/calls/CountAreaEntriesOfKind0.c:
     complete
     .text       start:0x020bb2c0 end:0x020bb2f4
 
-src/overlays/ov035/calls/func_ov035_020bb2f4.c:
+src/overlays/ov035/calls/SetAreaSceneDrawEnabled.c:
     complete
     .text       start:0x020bb2f4 end:0x020bb31c
 
@@ -236,7 +236,7 @@ src/overlays/ov035/calls/LookupMovieCharacterValue.c:
     complete
     .text       start:0x020bb31c end:0x020bb354
 
-src/overlays/ov035/calls/func_ov035_020bb354.c:
+src/overlays/ov035/calls/QueueAreaSceneSoundState.c:
     complete
     .text       start:0x020bb354 end:0x020bb398
 
@@ -248,7 +248,7 @@ src/overlays/ov035/calls/SetMovieSlotFlags.c:
     complete
     .text       start:0x020bb42c end:0x020bb468
 
-src/overlays/ov035/calls/func_ov035_020bb468.c:
+src/overlays/ov035/calls/ApplyAreaMaterialFadeEntry.c:
     complete
     .text       start:0x020bb468 end:0x020bb4c4
 
@@ -260,7 +260,7 @@ src/overlays/ov035/calls/LoadFadeModel.c:
     complete
     .text       start:0x020bb52c end:0x020bb66c
 
-src/overlays/ov035/calls/func_ov035_020bb66c.c:
+src/overlays/ov035/calls/ReleaseAreaFadeModelIfLoaded.c:
     complete
     .text       start:0x020bb66c end:0x020bb690
 
@@ -276,7 +276,7 @@ src/overlays/ov035/calls/SetMovieModelAlpha.c:
     complete
     .text       start:0x020bb778 end:0x020bb7a8
 
-src/overlays/ov035/calls/func_ov035_020bb7a8.c:
+src/overlays/ov035/calls/FreeAreaMaterialFadeWork.c:
     complete
     .text       start:0x020bb7a8 end:0x020bb7c8
 
@@ -324,7 +324,7 @@ src/overlays/ov035/calls/InitBarGauge.c:
     complete
     .text       start:0x020bc02c end:0x020bc0e4
 
-src/overlays/ov035/calls/func_ov035_020bc0e4.c:
+src/overlays/ov035/calls/ReleaseAreaGaugeBuffers.c:
     complete
     .text       start:0x020bc0e4 end:0x020bc10c
 
@@ -348,11 +348,11 @@ src/overlays/ov035/calls/QueueGaugeLevelEntry.c:
     complete
     .text       start:0x020bc310 end:0x020bc3ac
 
-src/overlays/ov035/calls/func_ov035_020bc3ac.c:
+src/overlays/ov035/calls/DisarmAreaSequence1AndInvokeRecord5Callback.c:
     complete
     .text       start:0x020bc3ac end:0x020bc3d6
 
-src/overlays/ov035/calls/func_ov035_020bc3d8.c:
+src/overlays/ov035/calls/ArmAreaSequence1AtGaugeMax.c:
     complete
     .text       start:0x020bc3d8 end:0x020bc400
 

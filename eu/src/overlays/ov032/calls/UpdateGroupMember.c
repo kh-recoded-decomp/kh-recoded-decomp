@@ -46,8 +46,8 @@ typedef struct ObjectGroup {
 
 extern const VecFx32 gZeroVecFx32;
 
-extern GroupMemberWork *func_ov032_020bbc98(GroupObject *object);
-extern ObjectGroup *func_ov032_020bbc80(GroupObject *object);
+extern GroupMemberWork *GetGroupMemberWork(GroupObject *object);
+extern ObjectGroup *GetObjectGroup(GroupObject *object);
 extern GroupObject *GetEntryPoolObjectAtIndex(void *world, int index);
 extern void InitGroupFormation(GroupObject *object);
 extern void SpawnSoundSlot(int bank, int soundId, VecFx32 *position, int flags);
@@ -59,7 +59,7 @@ extern BOOL SnapPositionToGround(VecFx32 *position, VecFx32 *velocity, VecFx32 *
 extern void VEC_Add(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
 extern void SteerMemberToFormationSlot(GroupObject *object, s32 *mask);
 extern BOOL TurnTowardOpenDirection(GroupObject *object, VecFx32 *position, fx32 radius);
-extern void func_ov032_020bbca0(void *world, int groupIndex, int slotIndex, VecFx32 *out);
+extern void ComputeGroupHopVelocity(void *world, int groupIndex, int slotIndex, VecFx32 *out);
 extern BOOL UpdateHopWithSpeedRamp(void *world, int groupIndex, GroupMemberWork *work, VecFx32 *position, VecFx32 *velocity, fx32 radius, VecFx32 *delta, BOOL *landed);
 extern BOOL HasPendingNibbleChange(ObjectGroup *group);
 extern void *GetManagedActorPosition(int index);
@@ -69,8 +69,8 @@ extern void MoveGroupObjectAndSyncActor(GroupObject *object, VecFx32 *delta);
 
 int UpdateGroupMember(GroupObject *object)
 {
-    GroupMemberWork *work = func_ov032_020bbc98(object);
-    ObjectGroup *group = func_ov032_020bbc80(object);
+    GroupMemberWork *work = GetGroupMemberWork(object);
+    ObjectGroup *group = GetObjectGroup(object);
     VecFx32 position = group->center;
     GroupObject *leader = GetEntryPoolObjectAtIndex(object->world, group->leaderIndex);
 
@@ -134,7 +134,7 @@ int UpdateGroupMember(GroupObject *object)
             group->isFalling = 1;
             group->isAnchored = 0;
             if (TurnTowardOpenDirection(object, &position, 0x1b33)) {
-                func_ov032_020bbca0(object->world, work->groupIndex, work->slotIndex, &group->velocity);
+                ComputeGroupHopVelocity(object->world, work->groupIndex, work->slotIndex, &group->velocity);
                 object->work->state = 11;
             }
         } else {

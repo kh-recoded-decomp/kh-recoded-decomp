@@ -5,11 +5,11 @@
 #define ReleaseHandle_020bb084 ReleaseHandle_020bb0a4
 #define SetFieldModeFlag_020bb03c SetFieldModeFlag
 #define SetupSceneFromParams_020bb0a4 SetupSceneFromParams
-#define func_ov028_020bae68 func_ov028_020bae88
-#define func_ov028_020bafc8 func_ov028_020bafe8
-#define func_ov028_020bafec func_ov028_020bb00c
+#define func_ov028_020bae68 UpdateOv028FieldScene
+#define func_ov028_020bafc8 CreateOv028FieldSceneTask
+#define func_ov028_020bafec IsFieldSceneStartupComplete
 #define func_ov028_020bb018 ClearFieldSceneReadyFlag
-#define func_ov028_020bb060 func_ov028_020bb080
+#define func_ov028_020bb060 HasFieldSceneTaskSignal
 #define func_ov028_020bb17c GetFieldTransitionFlags
-#define func_ov028_020bb194 func_ov028_020bb1b4
+#define func_ov028_020bb194 BeginFieldSceneSlowdownTransition
 #include "src/ov028/overlay_state/InstallSceneHandlers_020bb200.c"

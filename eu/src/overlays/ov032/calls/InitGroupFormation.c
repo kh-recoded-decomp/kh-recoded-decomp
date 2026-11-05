@@ -9,7 +9,7 @@
 #define func_02036240 ActorRegistry_GetEntityByIndex
 #define func_ov001_0208635c GetEntryPoolObjectAtIndex
 #define func_ov016_020a6a64 IsFieldUnitPhase6
-#define func_ov032_020bbc60 func_ov032_020bbc80
+#define func_ov032_020bbc60 GetObjectGroup
 #define func_ov032_020bc6d8 GetRemainingRowSpan
 #define random_next_scaled_0202aa04 random_next_scaled
 #include "src/ov032/object_group/InitGroupFormation_020be0c8.c"

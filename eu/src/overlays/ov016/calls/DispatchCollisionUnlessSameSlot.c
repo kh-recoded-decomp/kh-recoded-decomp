@@ -1,4 +1,4 @@
 #define DispatchActorCollision_020a5130 DispatchActorCollision
 #define DispatchCollisionUnlessSameSlot_020a52b8 DispatchCollisionUnlessSameSlot
-#define func_ov032_020bbc60 func_ov032_020bbc80
+#define func_ov032_020bbc60 GetObjectGroup
 #include "src/ov016/unclassified_helpers/DispatchCollisionUnlessSameSlot_020a52b8.c"

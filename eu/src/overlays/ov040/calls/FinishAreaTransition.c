@@ -15,5 +15,5 @@
 #define data_ov040_020be260 data_ov040_020be280
 #define func_ov001_0207d658 ReleaseCounterHudModels
 #define func_ov001_0206de40 ReleaseActorSlotByIndex
-#define func_ov035_020bb64c func_ov035_020bb66c
+#define func_ov035_020bb64c ReleaseAreaFadeModelIfLoaded
 #include "src/ov040/unclassified_helpers/FinishAreaTransition_020bd66c.c"

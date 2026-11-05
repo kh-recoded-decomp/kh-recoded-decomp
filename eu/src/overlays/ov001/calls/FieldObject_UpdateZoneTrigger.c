@@ -11,7 +11,7 @@
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField
 #define func_ov021_020a75d8 SetClampedCursor
 #define func_ov058_020d6c0c RestoreEnemyHealthAndReset
-#define func_ov035_020baf88 ShowMovieMessage3700
+#define func_ov035_020baf88 IsSessionFlag3700Set
 #define func_ov035_020bafc4 GetMovieCounterLimit
 #define func_ov032_020bb014 func_ov032_020bb034
 #define func_ov032_020bb034 AdvanceToRoutedSlot

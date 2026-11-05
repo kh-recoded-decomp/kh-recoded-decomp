@@ -1,6 +1,6 @@
 #define ApplyGroupScale_020bd248 ApplyGroupScale
 #define ArmObject_0205116c ArmObject_02051180
 #define FixedPointMultiply12_02006450 FX_Mul
-#define func_ov032_020bbc60 func_ov032_020bbc80
+#define func_ov032_020bbc60 GetObjectGroup
 #define func_ov032_020bd23c Fx32ToIntTruncate
 #include "src/ov032/object_group/ApplyGroupScale_020bd248.c"

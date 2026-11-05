@@ -13,6 +13,6 @@
 #define StopSoundSeqHandle_0204dbe4 StopSoundSeqHandle
 #define UpdateAllPoolEntries_020a8ae8 UpdateAllPoolEntries
 #define func_ov021_020aafc4 UpdateEntrySource
-#define func_ov031_020bc018 GetSeekStep
-#define func_ov031_020bc040 func_ov031_020bc060
+#define func_ov031_020bc018 GetSceneScrollAccelerationStep
+#define func_ov031_020bc040 GetSceneScrollTargetSpeed
 #include "src/ov059/unclassified_helpers/Actor_AdvanceFrame_020cce7c.c"

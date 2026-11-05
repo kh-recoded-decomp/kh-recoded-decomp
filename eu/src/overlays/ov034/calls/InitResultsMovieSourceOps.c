@@ -1,9 +1,9 @@
 #define ClearResultsFlagTwo_020bde24 ClearResultsFlagTwo
-#define FSi_CloseFileCommand_020bde84 func_ov034_020bdea4
+#define FSi_CloseFileCommand_020bde84 ResultsScreenNoOpCallback
 #define InitResultsMovieSourceOps_020be548 InitResultsMovieSourceOps
 #define IsResultsInputEnabled_020bde08 IsResultsInputEnabled
 #define MarkResultsComplete_020bde3c MarkResultsComplete
 #define MobiClip_SrcClose_020bde6c MobiClip_SrcClose_020bde8c
 #define MobiClip_SrcIsOpen_020bde50 MobiClip_SrcIsOpen_020bde70
-#define MobiClip_SrcOpen_020bddf0 func_ov034_020bde10
+#define MobiClip_SrcOpen_020bddf0 CreateResultsScreenTask
 #include "src/ov034/shared_engine/InitResultsMovieSourceOps_020be548.c"

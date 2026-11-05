@@ -1,4 +1,4 @@
 #define ScriptCmd_PlayValueSequence_020a06b4 ScriptCmd_PlayValueSequence
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
-#define func_ov035_020baf10 func_ov035_020baf30
+#define func_ov035_020baf10 SelectPersistentAreaSceneTableValue
 #include "src/ov007/shared_engine/ScriptCmd_PlayValueSequence_020a06b4.c"

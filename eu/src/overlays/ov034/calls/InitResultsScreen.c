@@ -89,7 +89,7 @@ extern void LoadWidgetDescriptorsFromFile(void *objects, u32 fileId, int count);
 extern void SetAllElementObjectModes(void *objects, int mode);
 extern void *FindWidgetById(void *objects, int id);
 extern void SetWidgetRootDpadEnabled(void *objects, BOOL enabled);
-extern int func_ov034_020bdea8(void *manager, int animation, int resource, int x, int y);
+extern int CreateResultsObjectSlotDefault(void *manager, int animation, int resource, int x, int y);
 extern void SetWidgetRootInputCallback(void *objects, void (*callback)(void));
 extern void HandleResultsInput(void);
 extern void InvokeForChannelOrBoth(u32 arg0, void *arg1, void (*callback)(void), int channel);
@@ -145,9 +145,9 @@ void InitResultsScreen(void)
     SetWidgetRootDpadEnabled(WORK->objects, TRUE);
     ZeroHalfThenFree(objContainer);
     ZeroHalfThenFree(iconContainer);
-    WORK->badgeEntry = func_ov034_020bdea8(WORK->objects, 1, 9, 0x80, 100);
+    WORK->badgeEntry = CreateResultsObjectSlotDefault(WORK->objects, 1, 9, 0x80, 100);
     for (i = 0; i < 6; i++) {
-        WORK->rowEntries[i] = func_ov034_020bdea8(WORK->objects, 1, 0xc, 0xb8, i * 16 + 0x51);
+        WORK->rowEntries[i] = CreateResultsObjectSlotDefault(WORK->objects, 1, 0xc, 0xb8, i * 16 + 0x51);
     }
     SetWidgetRootInputCallback(WORK->objects, HandleResultsInput);
     InvokeForChannelOrBoth(1, sOv034_SYSAREAMENU_020c0f10, UpdateResultsFade, 0);

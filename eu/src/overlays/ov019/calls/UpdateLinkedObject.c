@@ -9,5 +9,5 @@
 #define UpdateLinkObject_020a2ecc UpdateLinkedObject
 #define func_0202f4e8 Flags16_ClearBit1
 #define func_02036240 ActorRegistry_GetEntityByIndex
-#define func_ov035_020bae64 func_ov035_020bae84
+#define func_ov035_020bae64 GetCurrentAreaIndex
 #include "src/ov019/unclassified_helpers/UpdateLinkObject_020a2ecc.c"

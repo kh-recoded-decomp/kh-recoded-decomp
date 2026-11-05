@@ -1,7 +1,7 @@
 #define SelectGroupMemberPose_020bd02c SelectGroupMemberPose
 #define data_ov032_020bff6c data_ov032_020bff8c
-#define func_ov032_020bbc60 func_ov032_020bbc80
-#define func_ov032_020bbc78 func_ov032_020bbc98
+#define func_ov032_020bbc60 GetObjectGroup
+#define func_ov032_020bbc78 GetGroupMemberWork
 #define func_ov032_020bf088 IsRowSettledInMode5
 #define random_next_scaled_0202aa04 random_next_scaled
 #include "src/ov032/object_group/SelectGroupMemberPose_020bd02c.c"

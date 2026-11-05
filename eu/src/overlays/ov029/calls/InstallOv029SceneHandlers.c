@@ -1,12 +1,12 @@
 #define HasOv029ObjectField28_020baa40 HasOv029ObjectField28
 #define InstallOv029SceneHandlers_020baadc InstallOv029SceneHandlers
 #define ReleaseOv029Object_020baa64 ReleaseOv029Object
-#define func_ov029_020ba86c func_ov029_020ba88c
-#define func_ov029_020ba9b0 func_ov029_020ba9d0
-#define func_ov029_020ba9d4 func_ov029_020ba9f4
+#define func_ov029_020ba86c UpdateOv029FieldScene
+#define func_ov029_020ba9b0 CreateOv029FieldSceneTask
+#define func_ov029_020ba9d4 IsOv029SceneStartupComplete
 #define func_ov029_020baa00 Ov029_ClearSceneFlag1
 #define func_ov029_020baa24 Ov029_SetSceneFlag4000
 #define func_ov029_020baa84 ApplyOv029SceneParams
-#define func_ov029_020baacc func_ov029_020baaec
-#define func_ov029_020baad4 func_ov029_020baaf4
+#define func_ov029_020baacc CanOv029SceneAdvanceSession
+#define func_ov029_020baad4 GetOv029FieldTransitionFlags
 #include "src/ov029/overlay_state/InstallOv029SceneHandlers_020baadc.c"

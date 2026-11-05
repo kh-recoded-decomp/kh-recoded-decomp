@@ -2,13 +2,13 @@
 #define InstallSceneHandlers_020bb268 InstallSceneHandlers_020bb288
 #define IsSceneUnpaused_020bacb4 IsSceneUnpaused_020bacd4
 #define func_ov001_02064734 BindScriptHandlersSlot8
-#define func_ov030_020baba8 func_ov030_020babc8
-#define func_ov030_020babc0 func_ov030_020babe0
+#define func_ov030_020baba8 CreateOv030FieldSceneTask
+#define func_ov030_020babc0 IsOv030SceneStartupComplete
 #define func_ov030_020babdc ClearMovieSceneFlag1
-#define func_ov030_020babf4 func_ov030_020bac14
+#define func_ov030_020babf4 RequestOv030SceneExit
 #define func_ov030_020bac0c MobiClip_IsDecoderReady
 #define func_ov030_020bac28 MobiClip_CloseDecoder
 #define func_ov030_020bac48 ApplyMovieStartParams
-#define func_ov030_020bb210 func_ov030_020bb230
+#define func_ov030_020bb210 GetOv030FieldTransitionFlags
 #define func_ov030_020bb220 SuspendSceneAtQuarterRate
 #include "src/ov030/shared_engine/InstallSceneHandlers_020bb268.c"

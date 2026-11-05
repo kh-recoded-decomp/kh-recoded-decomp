@@ -5,5 +5,5 @@
 #define VEC_Add_01ff9e0c VEC_Add
 #define func_02036230 GetActorRegistry
 #define func_02036240 ActorRegistry_GetEntityByIndex
-#define func_ov032_020bbc78 func_ov032_020bbc98
+#define func_ov032_020bbc78 GetGroupMemberWork
 #include "src/ov032/object_group/MoveGroupObjectAndSyncActor_020bbcc4.c"

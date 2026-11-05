@@ -1,4 +1,4 @@
-#define GetSubStruct1C_020bbfe0 GetSubStruct1C
+#define GetSubStruct1C_020bbfe0 GetSceneScrollDirection
 #define InitCameraState_020bcbcc InitCameraState_020bcbec
 #define LoadDefaultProjectionValues_0202a7b4 LoadDefaultProjectionValues
 #define VEC_MultAdd_01ffa09c VEC_MultAdd

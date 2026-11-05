@@ -2,6 +2,6 @@
 #define PickJitteredPlayerOffset_020bdd74 PickJitteredPlayerOffset
 #define ScatterGroupMembers_020bddf8 ScatterGroupMembers
 #define func_ov001_0208635c GetEntryPoolObjectAtIndex
-#define func_ov032_020bbc60 func_ov032_020bbc80
-#define func_ov032_020bbc78 func_ov032_020bbc98
+#define func_ov032_020bbc60 GetObjectGroup
+#define func_ov032_020bbc78 GetGroupMemberWork
 #include "src/ov032/object_group/ScatterGroupMembers_020bddf8.c"

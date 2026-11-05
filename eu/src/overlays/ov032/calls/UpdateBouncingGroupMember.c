@@ -55,8 +55,8 @@ typedef struct HitResult {
 
 extern const VecFx32 gZeroVecFx32;
 
-extern ObjectGroup *func_ov032_020bbc80(GroupObject *object);
-extern GroupMemberWork *func_ov032_020bbc98(GroupObject *object);
+extern ObjectGroup *GetObjectGroup(GroupObject *object);
+extern GroupMemberWork *GetGroupMemberWork(GroupObject *object);
 extern GroupObject *GetEntryPoolObjectAtIndex(void *world, int index);
 extern VecFx32 *GetManagedActorPosition(int index);
 extern void ComputeGroupOrbitPosition(GroupObject *object, VecFx32 *target);
@@ -68,7 +68,7 @@ extern void SpawnSoundSlot(int bank, int id, VecFx32 *position, int flags);
 extern HitResult *SweepSphereAgainstWorld(VecFx32 *position, int mask, fx32 radius, VecFx32 *velocity, VecFx32 *delta);
 extern void ResetGroupOrbitPhase(GroupObject *object);
 extern BOOL TurnTowardOpenDirection(GroupObject *object, VecFx32 *position, fx32 radius);
-extern void func_ov032_020bbca0(void *world, int groupIndex, int slotIndex, VecFx32 *out);
+extern void ComputeGroupHopVelocity(void *world, int groupIndex, int slotIndex, VecFx32 *out);
 extern BOOL UpdateHopWithSpeedRamp(void *world, int groupIndex, GroupMemberWork *work, VecFx32 *position, VecFx32 *velocity, fx32 radius, VecFx32 *delta, BOOL *landed);
 extern BOOL HasPendingNibbleChange(ObjectGroup *group);
 extern void PickJitteredPlayerOffset(GroupObject *object, VecFx32 *offset);
@@ -85,8 +85,8 @@ void UpdateBouncingGroupMember(GroupObject *object)
     VecFx32 zero;
     BOOL landed;
     void *world = object->world;
-    ObjectGroup *group = func_ov032_020bbc80(object);
-    GroupMemberWork *work = func_ov032_020bbc98(object);
+    ObjectGroup *group = GetObjectGroup(object);
+    GroupMemberWork *work = GetGroupMemberWork(object);
     GroupObject *leader = NULL;
     GroupMemberWork *leaderWork = NULL;
     BOOL still;
@@ -97,7 +97,7 @@ void UpdateBouncingGroupMember(GroupObject *object)
     delta = gZeroVecFx32;
     if (work->followLink != -1) {
         leader = GetEntryPoolObjectAtIndex(world, work->followLink);
-        leaderWork = func_ov032_020bbc98(leader);
+        leaderWork = GetGroupMemberWork(leader);
     }
     switch (work->state) {
     case 0:
@@ -157,7 +157,7 @@ void UpdateBouncingGroupMember(GroupObject *object)
     case 0x15:
         if (leader == NULL) {
             if (TurnTowardOpenDirection(object, &object->position, 0xc00)) {
-                func_ov032_020bbca0(object->world, work->groupIndex, work->slotIndex, &work->moveDelta);
+                ComputeGroupHopVelocity(object->world, work->groupIndex, work->slotIndex, &work->moveDelta);
                 object->work->state = 0x16;
                 group->isFalling = 1;
             }

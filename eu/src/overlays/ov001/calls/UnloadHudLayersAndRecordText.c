@@ -43,7 +43,7 @@ extern void MarkTileTableRowDirty(void *widgets, int layer);
 extern void MIi_CpuCopyFast(const void *src, void *dst, u32 size);
 extern void NNSi_FndFreeFromDefaultHeap(void *memory);
 extern void ShutDownStageCaption(void *object);
-extern void func_ov035_020bc3d8(void);
+extern void ArmAreaSequence1AtGaugeMax(void);
 extern void func_ov001_02078180(void);
 extern void CallVirtualHandlerSlot1(void *object, int arg);
 extern void Text_UploadTileBuffer(void *window);
@@ -78,7 +78,7 @@ void UnloadHudLayersAndRecordText(void)
     context->entrySummaries = NULL;
     NNSi_FndFreeFromDefaultHeap(context->recordText);
     context->recordText = NULL;
-    func_ov035_020bc3d8();
+    ArmAreaSequence1AtGaugeMax();
     func_ov001_02078180();
     CallVirtualHandlerSlot1(context->textWindow, 0);
     Text_UploadTileBuffer(context->textWindow);

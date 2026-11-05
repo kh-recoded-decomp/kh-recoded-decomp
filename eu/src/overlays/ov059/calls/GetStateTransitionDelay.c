@@ -2,6 +2,6 @@
 #define GetField28_020bbff4 GetField28
 #define GetStateTransitionDelay_020cc8bc GetStateTransitionDelay
 #define data_ov059_020cffa4 data_ov059_020cffc4
-#define func_ov031_020bc018 GetSeekStep
-#define func_ov031_020bc040 func_ov031_020bc060
+#define func_ov031_020bc018 GetSceneScrollAccelerationStep
+#define func_ov031_020bc040 GetSceneScrollTargetSpeed
 #include "src/ov059/unclassified_helpers/GetStateTransitionDelay_020cc8bc.c"

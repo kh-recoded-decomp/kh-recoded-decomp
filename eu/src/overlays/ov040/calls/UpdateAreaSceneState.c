@@ -34,7 +34,7 @@ extern void SetMenuHighlight(int on);
 extern BOOL IsEntryFlag2Active(int index);
 extern void QueueOrUpdateSoundKind3(int sound);
 extern void UpdateAreaFromPosition(void);
-extern u32 func_ov035_020bae84(void);
+extern u32 GetCurrentAreaIndex(void);
 extern void func_ov040_020bc83c(u32 value);
 extern void StartIdleSceneObjects(void);
 extern void SetFieldObjectInteractionsBlocked(int arg);
@@ -74,7 +74,7 @@ int UpdateAreaSceneState(void) {
         return 0xc;
     }
     UpdateAreaFromPosition();
-    func_ov040_020bc83c(func_ov035_020bae84());
+    func_ov040_020bc83c(GetCurrentAreaIndex());
     if (state->sceneReady) {
         StartIdleSceneObjects();
         SetFieldObjectInteractionsBlocked(1);

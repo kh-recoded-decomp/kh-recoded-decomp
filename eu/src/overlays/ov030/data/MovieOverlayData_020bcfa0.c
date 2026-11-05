@@ -12,23 +12,23 @@ typedef struct {
 
 extern void InitMovieOverlayState_020ba400(void);
 extern void MoviePlayer_Close(void);
-extern int func_ov030_020ba588(void);
+extern int Ov030SceneState_PushVramWhenIdle(void);
 extern int FinishSceneSetup(void);
-extern int func_ov030_020ba5e8(void);
+extern int Ov030SceneState_WaitForListNodes(void);
 extern int TryEnterState4_020ba614(void);
-extern int func_ov030_020ba62c(void);
+extern int Ov030SceneState_FinishMenuResourceLoad(void);
 extern int MoviePlayer_EnterPlayback(void);
-extern int func_ov030_020ba774(void);
+extern int Ov030SceneState_FinishStartupWhenPanelReady(void);
 extern int ResolveMovieSceneAction(void);
-extern int func_ov030_020ba844(void);
-extern int func_ov030_020ba874(void);
+extern int Ov030SceneState_StoreEventRecordBytes(void);
+extern int Ov030SceneState_BeginScreenModeTransition(void);
 extern int SceneState_WaitScreenIdle_020ba894(void);
 extern int EnterState12WithHalfRate_020ba8f0(void);
 extern int TryReenterState7_020ba90c(void);
-extern int func_ov030_020ba930(void);
-extern int func_ov030_020ba964(void);
-extern int func_ov030_020ba98c(void);
-extern int func_ov030_020ba9c8(void);
+extern int Ov030SceneState_FinishSlowdownTransition(void);
+extern int Ov030SceneState_StartIdleObjects(void);
+extern int Ov030SceneState_BeginFadeOutWhenIdle(void);
+extern int Ov030SceneState_WaitFadeOut(void);
 extern int MoviePlayer_Stop(void);
 extern int FinishMoviePlaybackState(void);
 
@@ -39,23 +39,23 @@ OverlayDesc gMovieOverlayDescriptor = {
 };
 
 SceneStateFunc gMovieSceneStateHandlers[] = {
-    func_ov030_020ba588,
+    Ov030SceneState_PushVramWhenIdle,
     FinishSceneSetup,
-    func_ov030_020ba5e8,
+    Ov030SceneState_WaitForListNodes,
     TryEnterState4_020ba614,
-    func_ov030_020ba62c,
+    Ov030SceneState_FinishMenuResourceLoad,
     MoviePlayer_EnterPlayback,
-    func_ov030_020ba774,
+    Ov030SceneState_FinishStartupWhenPanelReady,
     ResolveMovieSceneAction,
-    func_ov030_020ba844,
-    func_ov030_020ba874,
+    Ov030SceneState_StoreEventRecordBytes,
+    Ov030SceneState_BeginScreenModeTransition,
     SceneState_WaitScreenIdle_020ba894,
     EnterState12WithHalfRate_020ba8f0,
     TryReenterState7_020ba90c,
-    func_ov030_020ba930,
-    func_ov030_020ba964,
-    func_ov030_020ba98c,
-    func_ov030_020ba9c8,
+    Ov030SceneState_FinishSlowdownTransition,
+    Ov030SceneState_StartIdleObjects,
+    Ov030SceneState_BeginFadeOutWhenIdle,
+    Ov030SceneState_WaitFadeOut,
     MoviePlayer_Stop,
     FinishMoviePlaybackState,
 };

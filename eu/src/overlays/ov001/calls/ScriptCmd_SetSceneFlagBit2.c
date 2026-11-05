@@ -8,7 +8,7 @@ typedef struct ScriptOperand {
 
 extern int ScriptVm_ReadOperandInt(void *context, ScriptOperand *operand);
 extern s32 GetFieldSessionState(void);
-extern void func_ov030_020bb460(BOOL enable);
+extern void SetOv030SceneDrawEnabled(BOOL enable);
 extern void SetFlagBit4(BOOL enable);
 extern void DrawSceneGroups(BOOL enable);
 extern void SetOrClearStatusBit2(BOOL enable);
@@ -19,7 +19,7 @@ int ScriptCmd_SetSceneFlagBit2(void *context, ScriptOperand *operands)
 
     switch (GetFieldSessionState()) {
     case 4:
-        func_ov030_020bb460(enable);
+        SetOv030SceneDrawEnabled(enable);
         break;
     case 7:
         SetFlagBit4(enable);

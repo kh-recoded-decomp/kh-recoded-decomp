@@ -17,7 +17,7 @@ extern void SetMovieMenuRow(int row);
 extern int GetGaugeSlotMaximum(int slot);
 extern int GetGaugeSlotCurrent(int slot);
 extern void SetChannelRatioLevels(int channel, int maximum, int current);
-extern void func_ov035_020bae84(void);
+extern void GetCurrentAreaIndex(void);
 extern int GetMovieEntryKind(void);
 extern void SetMovieModelAlpha(int kind);
 extern void EnterPanelState(int state);
@@ -46,7 +46,7 @@ void StageStateStartSubMode(void)
     for (slot = 0; slot < 3; slot++) {
         SetChannelRatioLevels(slot, GetGaugeSlotMaximum(slot), GetGaugeSlotCurrent(slot));
     }
-    func_ov035_020bae84();
+    GetCurrentAreaIndex();
     SetMovieModelAlpha(GetMovieEntryKind());
     gMovieContextState->flags |= 0xc;
     EnterPanelState(work->panelState);

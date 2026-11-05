@@ -3,7 +3,7 @@
 #define SNDi_LockMutex_020baf94 IsSessionFlag3701Set
 #define SetFieldSlotValue_020715d4 SetFieldSlotValue
 #define WriteSessionPackedBits_0206459c WriteSessionPackedBits
-#define func_ov035_020baf88 ShowMovieMessage3700
+#define func_ov035_020baf88 IsSessionFlag3700Set
 #define func_ov035_020bafc4 GetMovieCounterLimit
 #define func_ov035_020bb054 LoadMovieCounter
 #include "src/ov035/unclassified_helpers/CommitSideResult_020bb114.c"

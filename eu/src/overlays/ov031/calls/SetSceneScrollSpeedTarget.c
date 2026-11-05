@@ -1,0 +1,3 @@
+#define SetFields30And34_020bc008 SetSceneScrollSpeedTarget
+#define g_activeState_020bc800 data_ov031_020bc820
+#include "src/ov031/unclassified_helpers/SetFields30And34_020bc008.c"

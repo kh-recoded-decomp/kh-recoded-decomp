@@ -3,5 +3,5 @@
 #define GrantFieldObjectReward_020a28d0 GrantFieldObjectReward
 #define func_ov001_020645e8 ClearSessionPackedBit
 #define func_ov001_020874cc func_ov001_020874f4
-#define func_ov032_020bf45c func_ov032_020bf47c
+#define func_ov032_020bf45c HasGroupChainSpawnMarker
 #include "src/ov016/field_objects/GrantFieldObjectReward_020a28d0.c"

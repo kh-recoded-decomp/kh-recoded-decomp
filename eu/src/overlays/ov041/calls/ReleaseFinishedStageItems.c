@@ -1,7 +1,7 @@
 #include "nitro/types.h"
 #include "src/overlays/ov041/StageResources.h"
 
-extern BOOL func_ov035_020bae94(void);
+extern BOOL GetOverlay41PhaseActiveFlag(void);
 extern BOOL AdvanceStageItemAnimation(StageResourceItem *item, int delta);
 
 static inline void ReleaseFinishedItem(StageResourceItem *item, int frame)
@@ -27,7 +27,7 @@ void ReleaseFinishedStageItems(int frame)
     StageResourceItem *item;
     int listItemIndex;
 
-    if (!func_ov035_020bae94()) {
+    if (!GetOverlay41PhaseActiveFlag()) {
         return;
     }
     for (listIndex = 0; listIndex < 0x3e; listIndex++) {

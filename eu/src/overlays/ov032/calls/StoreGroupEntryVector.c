@@ -1,3 +1,3 @@
 #define StoreGroupEntryVector_020bd5d8 StoreGroupEntryVector
-#define func_ov032_020bbc60 func_ov032_020bbc80
+#define func_ov032_020bbc60 GetObjectGroup
 #include "src/ov032/object_group/StoreGroupEntryVector_020bd5d8.c"

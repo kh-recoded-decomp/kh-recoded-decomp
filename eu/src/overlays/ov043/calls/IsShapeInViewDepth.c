@@ -2,5 +2,5 @@
 #define IsShapeInViewDepth_020bd1ec IsShapeInViewDepth
 #define func_0203b2cc GetShapeProjectedRadius
 #define func_0203e958 IsWithinPlaneSet
-#define func_ov031_020bc700 func_ov031_020bc720
+#define func_ov031_020bc700 GetSceneDepthCullDistance
 #include "src/ov043/camera/IsShapeInViewDepth_020bd1ec.c"

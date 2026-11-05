@@ -47,7 +47,7 @@ typedef struct FieldObject {
 
 extern const VecFx32 gZeroVecFx32;
 
-extern int GetMovieFrameCount(void);
+extern int GetSceneFrameCount(void);
 extern void SyncActorShapePosition(FieldObject *obj, const VecFx32 *position);
 extern void SetScaledPosition(FieldObject *obj, const VecFx32 *position);
 extern void func_ov018_020a34a4(FieldObject *obj);
@@ -82,7 +82,7 @@ void RespawnKind6FieldObject(FieldObject *obj, const VecFx32 *position, int spaw
         obj->flags &= 0xeeff;
         return;
     }
-    obj->areaId = GetMovieFrameCount();
+    obj->areaId = GetSceneFrameCount();
     if (sync) {
         SyncActorShapePosition(obj, position);
     } else {

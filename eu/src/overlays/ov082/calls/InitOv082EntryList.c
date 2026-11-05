@@ -35,7 +35,7 @@ extern Ov082State *gOv082State;
 
 extern void *GetMenuWidgetContainer(void);
 extern Ov081State *GetTutorialMenuState(void);
-extern void func_ov034_020bdea4(ScrollList *list, void *layout, int elementId, int arg3, int arg4, int arg5, int arg6,
+extern void ResultsScreenNoOpCallback(ScrollList *list, void *layout, int elementId, int arg3, int arg4, int arg5, int arg6,
                                 int arg7, int arg8);
 extern void ScriptCmd_ResetScreenLayer(ScrollList *list, void *layout);
 extern void SetupOv082Screen(Ov082State *state);
@@ -53,7 +53,7 @@ BOOL InitOv082EntryList(Ov082State *state)
     state->list.cursorX = 0;
     state->list.cursorWidth = 0;
     state->list.wrapDown = 0;
-    func_ov034_020bdea4(&state->list, layout, 1, 10, 0x10, 1, 0x10, 0, 0);
+    ResultsScreenNoOpCallback(&state->list, layout, 1, 10, 0x10, 1, 0x10, 0, 0);
     ScriptCmd_ResetScreenLayer(&state->list, layout);
     state->pendingAction = 0;
     SetupOv082Screen(state);

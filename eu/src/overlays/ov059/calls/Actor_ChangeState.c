@@ -22,7 +22,7 @@
 #define func_ov001_0206db78 GetPlayerControlState
 #define func_ov021_020a8ab4 ResetAnimationTrackState
 #define func_ov021_020a8ca0 InitializeEntryGroupSlot
-#define func_ov031_020bc040 func_ov031_020bc060
+#define func_ov031_020bc040 GetSceneScrollTargetSpeed
 #define func_ov059_020c9374 HandleMotionTargetEvent
 #define func_ov059_020c9728 Actor_UpdateState5RootMotion
 #define func_ov059_020ca754 Actor_UpdateState14

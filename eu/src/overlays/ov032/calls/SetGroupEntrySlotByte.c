@@ -1,3 +1,3 @@
 #define SetGroupEntrySlotByte_020bd604 SetGroupEntrySlotByte
-#define func_ov032_020bbc60 func_ov032_020bbc80
+#define func_ov032_020bbc60 GetObjectGroup
 #include "src/ov032/object_group/SetGroupEntrySlotByte_020bd604.c"

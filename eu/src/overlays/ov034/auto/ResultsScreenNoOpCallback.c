@@ -1,0 +1,2 @@
+#define FSi_CloseFileCommand_020bde84 ResultsScreenNoOpCallback
+#include "src/ov034/library_nitro_fs/FSi_CloseFileCommand_020bde84.c"

@@ -1,13 +1,13 @@
 #define InitMovieSourceOps_020bad94 InitMovieSourceOps
 #define MobiClip_SrcClose_020ba9c0 MobiClip_SrcClose_020ba9e0
 #define MobiClip_SrcIsOpen_020ba9a4 MobiClip_SrcIsOpen_020ba9c4
-#define MobiClip_SrcOpen_020ba940 func_ov035_020ba960
+#define MobiClip_SrcOpen_020ba940 CreateAreaSceneTask
 #define func_ov001_02064734 BindScriptHandlersSlot8
 #define func_ov035_020ba7dc UpdateSceneSystems
 #define func_ov035_020ba958 func_ov035_020ba978
 #define func_ov035_020ba974 ClearMovieContextReadyFlag
 #define func_ov035_020ba98c func_ov035_020ba9ac
 #define func_ov035_020ba9d8 BeginMovieCaption
-#define func_ov035_020baa18 func_ov035_020baa38
+#define func_ov035_020baa18 GetAreaSceneTransitionFlag
 #define func_ov035_020bad44 IsMovieWaitingForInput
 #include "src/ov035/shared_engine/InitMovieSourceOps_020bad94.c"

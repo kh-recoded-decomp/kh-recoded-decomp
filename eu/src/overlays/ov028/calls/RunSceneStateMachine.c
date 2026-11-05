@@ -10,8 +10,8 @@ typedef struct {
 extern SceneState *data_ov028_020bb3a0;
 extern int (*const gSceneStateHandlers[])(void);
 
-extern void func_ov028_020bae88(s32 mode);
-extern void func_ov028_020bae68(void);
+extern void UpdateOv028FieldScene(s32 mode);
+extern void DrawOv028FieldScene(void);
 
 int RunSceneStateMachine(void) {
     int next;
@@ -24,10 +24,10 @@ int RunSceneStateMachine(void) {
         }
     } while (data_ov028_020bb3a0->flags & 0x8000);
     if (data_ov028_020bb3a0->flags & 8) {
-        func_ov028_020bae88(0);
+        UpdateOv028FieldScene(0);
     }
     if (data_ov028_020bb3a0->flags & 4) {
-        func_ov028_020bae68();
+        DrawOv028FieldScene();
     }
     return 0;
 }

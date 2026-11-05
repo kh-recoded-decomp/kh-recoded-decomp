@@ -6,7 +6,7 @@
 #define GetField28_020bbff4 GetField28
 #define GetGroupMemberData_020a8eec GetGroupMemberData
 #define GetStageEventTargetInfo_02087960 GetStageEventTargetInfo
-#define GetSubStruct1C_020bbfe0 GetSubStruct1C
+#define GetSubStruct1C_020bbfe0 GetSceneScrollDirection
 #define InitCylinderShape_0203aeac InitCylinderShape
 #define InitPathSegment_020ac104 InitPathSegment
 #define InvokeHandlerOnIndexedRecord_020a8e88 InvokeHandlerOnIndexedRecord

@@ -25,5 +25,5 @@
 #define func_02036974 ClearRecordSlotFlag
 #define func_ov001_0206dc4c GetManagedActorPosition
 #define func_ov018_020a3134 BounceVelocityOffNormal
-#define func_ov031_020bc738 GetMovieFrameCount
+#define func_ov031_020bc738 GetSceneFrameCount
 #include "src/ov018/field_objects/FieldObject_UpdatePushedMotion_020a2c84.c"

@@ -1,0 +1,46 @@
+#include "nitro/types.h"
+
+#define func_ov001_020681c4 GetSceneResourceHandle
+#define func_ov001_020681d4 GetSceneEntryResourceId
+
+extern u32 data_ov028_020bb3a0;
+extern void SetCachedSoundParams(u32 param1, u32 param2, u16 param3);
+extern s32 UpdateMenuItemLoading(void);
+extern void InvokeSceneCallback(void);
+extern void HighlightSelectedMenuPanels(void);
+extern void QueueAreaSoundArchives(void);
+extern u32 GetCurrentSceneEntryIndex(void);
+extern u32 GetSlotEntryValue(void);
+extern u32 GetMenuItemValue(void);
+extern u32 func_ov001_020681c4(void);
+extern u32 func_ov001_020681d4(void);
+extern void TriggerQueuedStageEventPairs(s32 value);
+extern void SetPanelHeaderText(const u16 *prefix, const u16 *name);
+extern void InvokeListNodeCallbacks(void);
+
+u32 Ov028SceneState_FinishMenuResourceLoad(void)
+{
+    s32 value = UpdateMenuItemLoading();
+    u32 arg1;
+    u32 arg2;
+
+    if (value != 0) {
+        TriggerQueuedStageEventPairs(value);
+        HighlightSelectedMenuPanels();
+        InvokeSceneCallback();
+        GetCurrentSceneEntryIndex();
+        arg1 = GetSlotEntryValue();
+        GetCurrentSceneEntryIndex();
+        arg2 = GetMenuItemValue();
+        SetCachedSoundParams(arg1, arg2, 0x7f);
+        InvokeListNodeCallbacks();
+        QueueAreaSoundArchives();
+        GetCurrentSceneEntryIndex();
+        arg1 = func_ov001_020681d4();
+        arg2 = func_ov001_020681c4();
+        SetPanelHeaderText((const u16 *)arg2, (const u16 *)arg1);
+        *(u16 *)(data_ov028_020bb3a0 + 6) = *(u16 *)(data_ov028_020bb3a0 + 6) | 0x8000;
+        return 5;
+    }
+    return 0xffffffff;
+}

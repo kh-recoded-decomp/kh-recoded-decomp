@@ -1,5 +1,5 @@
 #define FindFarthestOpenDirection_020bcb74 FindFarthestOpenDirection
 #define TurnTowardOpenDirection_020bcfc4 TurnTowardOpenDirection
 #define func_0202a9d0 NextSharedRandom16Scaled
-#define func_ov032_020bbc78 func_ov032_020bbc98
+#define func_ov032_020bbc78 GetGroupMemberWork
 #include "src/ov032/object_group/TurnTowardOpenDirection_020bcfc4.c"

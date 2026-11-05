@@ -10,7 +10,7 @@
 #define func_0202c48c LoadFileAllocFromHeapTail
 #define func_0202ed3c InitSharedRecordAndDispatchAlt
 #define func_0202f4e8 Flags16_ClearBit1
-#define func_ov035_020bb448 func_ov035_020bb468
+#define func_ov035_020bb448 ApplyAreaMaterialFadeEntry
 #define selectJointAnimationBlend_0202f2cc selectJointAnimationBlend
 #define strcmp_02021fa8 strcmp
 #include "src/ov035/unclassified_helpers/LoadFadeModel_020bb50c.c"

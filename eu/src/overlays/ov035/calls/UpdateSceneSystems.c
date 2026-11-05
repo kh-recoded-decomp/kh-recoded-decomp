@@ -10,8 +10,8 @@ extern unsigned int UpdateSceneAnimsAndCaption(unsigned int);
 extern unsigned int UpdatePartyEntries(unsigned int);
 extern unsigned int GetManagedActorCount(void);
 extern unsigned int UpdateFieldObjectStates(unsigned int);
-extern unsigned int func_ov035_020bae84(void);
-extern unsigned int func_ov035_020bae94(void);
+extern unsigned int GetCurrentAreaIndex(void);
+extern unsigned int GetOverlay41PhaseActiveFlag(void);
 extern unsigned int UpdateMaterialFades(unsigned int, unsigned int);
 
 void UpdateSceneSystems(int paused)
@@ -32,7 +32,7 @@ void UpdateSceneSystems(int paused)
             UpdateFieldObjectStates(0x1000);
         }
         if ((*(u16 *)(work + 0x24) & 4) != 0) {
-            result = func_ov035_020bae84();
+            result = GetCurrentAreaIndex();
             UpdateMaterialFades(result, 0x1000);
         }
     }
@@ -44,7 +44,7 @@ void UpdateSceneSystems(int paused)
     }
     if (paused == 0) {
         step = 0x1000;
-        result = func_ov035_020bae94();
+        result = GetOverlay41PhaseActiveFlag();
         if ((result != 0) || ((*(u16 *)(work + 0x24) & 0x10) == 0)) {
             step = 0;
         }
@@ -56,7 +56,7 @@ void UpdateSceneSystems(int paused)
     if ((*(u16 *)(work + 0x24) & 0x40) != 0) {
         ActorRegistry_ForEachCallback((void *)0x1000);
     }
-    work = func_ov035_020bae94();
+    work = GetOverlay41PhaseActiveFlag();
     if (work != 0) {
         func_020bd17c(*(unsigned int *)(*(int *)(gMovieContextState + 0xb8) + 9000));
     }

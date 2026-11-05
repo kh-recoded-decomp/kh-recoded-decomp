@@ -8,5 +8,5 @@
 #define data_ov001_020a0460 data_ov001_020a0480
 #define func_01ff86fc MIi_CpuClear32
 #define func_0202a448 CreateTaskObject
-#define func_ov035_020baf88 ShowMovieMessage3700
+#define func_ov035_020baf88 IsSessionFlag3700Set
 #include "src/ov001/unclassified_helpers/CreateSessionNameMenu_02063ba4.c"

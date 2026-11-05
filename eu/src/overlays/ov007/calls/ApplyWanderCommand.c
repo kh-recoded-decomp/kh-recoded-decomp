@@ -60,12 +60,12 @@ typedef struct {
 } WanderCommand;
 
 extern const VecFx32 gZeroVecFx32;
-extern int func_ov035_020bafc4(void);
+extern int GetAreaSceneDefinitionIndex(void);
 extern unsigned int NextSharedRandom16Scaled(unsigned int range);
 
 void ApplyWanderCommand(WanderObject *object, WanderCommand *command)
 {
-    int phase = func_ov035_020bafc4();
+    int phase = GetAreaSceneDefinitionIndex();
     WanderChoiceSet *sets;
     WanderChoiceSet *set;
     int total;

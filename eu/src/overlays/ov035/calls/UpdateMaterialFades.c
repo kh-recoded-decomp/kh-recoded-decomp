@@ -3,7 +3,7 @@
 #define data_ov035_020bc3ec sOv035MaterialAlphaByKind
 #define data_ov035_020bc4e4 data_ov035_020bc504
 #define func_ov035_020badf0 GetMovieEntryKind
-#define func_ov035_020bae74 func_ov035_020bae94
+#define func_ov035_020bae74 GetOverlay41PhaseActiveFlag
 #define func_ov035_020bb40c SetMovieSlotFlags
-#define func_ov035_020bb448 func_ov035_020bb468
+#define func_ov035_020bb448 ApplyAreaMaterialFadeEntry
 #include "src/ov035/unclassified_helpers/UpdateMaterialFades_020bb670.c"

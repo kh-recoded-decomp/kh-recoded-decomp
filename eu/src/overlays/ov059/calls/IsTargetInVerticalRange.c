@@ -2,5 +2,5 @@
 #define IsTargetInVerticalRange_020cf100 IsTargetInVerticalRange
 #define QueryStageEventPlacement_02087bec QueryStageEventPlacement
 #define func_02036240 ActorRegistry_GetEntityByIndex
-#define func_ov031_020bc700 func_ov031_020bc720
+#define func_ov031_020bc700 GetSceneDepthCullDistance
 #include "src/ov059/unclassified_helpers/IsTargetInVerticalRange_020cf100.c"

@@ -39,7 +39,7 @@ extern void *CreateTaskObject(void *descriptor, void *userData);
 extern u32 func_ov001_02063b68(s32 index);
 extern u32 ReadSessionPackedBits(int bitOffset, u32 bitCount);
 extern void WriteSessionPackedBits(int bitOffset, u32 bitCount, u32 value);
-extern int func_ov035_020bb2c0(void);
+extern int CountAreaEntriesOfKind0(void);
 extern void SetupFieldBgLayers(void);
 extern void SetFieldVisiblePlanes(void);
 extern void GX_LoadBG3Char(const void *src, u32 offset, u32 size);
@@ -55,7 +55,7 @@ void ReopenFieldScoreScreen(void)
     LoadOverlayAfterGeometryTransfer(0, (int)OVERLAY_45_ID);
     params.flags = 2;
     params.bonus = func_ov001_02063b68(0);
-    params.timeScore = func_ov035_020bb2c0() * 1000;
+    params.timeScore = CountAreaEntriesOfKind0() * 1000;
     params.total = params.timeScore + (saved + params.bonus);
     WriteSessionPackedBits(0x35a7, 0x20, params.total);
     data_ov001_020a0480->pendingScore = 0;

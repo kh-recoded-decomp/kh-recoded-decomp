@@ -1,6 +1,6 @@
 #define func_ov001_0206dc4c GetManagedActorPosition
 #define ComputeGroupOrbitPosition_020bc7f4 ComputeGroupOrbitPosition
-#define func_ov032_020bbc60 func_ov032_020bbc80
-#define func_ov032_020bbc78 func_ov032_020bbc98
+#define func_ov032_020bbc60 GetObjectGroup
+#define func_ov032_020bbc78 GetGroupMemberWork
 #define g_sinTable_0205356c gSinFx12Table
 #include "src/ov032/object_group/ComputeGroupOrbitPosition_020bc7f4.c"

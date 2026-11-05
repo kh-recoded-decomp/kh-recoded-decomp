@@ -1,6 +1,6 @@
 #define ForceGroupRespawn_020bd414 ForceGroupRespawn
 #define func_ov032_020bbc18 GetRowRespawnLimit
-#define func_ov032_020bbc60 func_ov032_020bbc80
-#define func_ov032_020bbc78 func_ov032_020bbc98
+#define func_ov032_020bbc60 GetObjectGroup
+#define func_ov032_020bbc78 GetGroupMemberWork
 #define func_ov032_020bd288 SpawnRowChainMembers
 #include "src/ov032/object_group/ForceGroupRespawn_020bd414.c"

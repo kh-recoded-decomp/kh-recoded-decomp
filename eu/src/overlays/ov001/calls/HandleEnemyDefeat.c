@@ -10,5 +10,5 @@
 #define data_ov001_020a0470 data_ov001_020a0490
 #define func_0202737c AddClampedGlobalPackedBits
 #define func_ov001_0206e074 AddRegionProgress
-#define func_ov035_020bae74 func_ov035_020bae94
+#define func_ov035_020bae74 GetOverlay41PhaseActiveFlag
 #include "src/ov001/unclassified_helpers/HandleEnemyDefeat_02068abc.c"

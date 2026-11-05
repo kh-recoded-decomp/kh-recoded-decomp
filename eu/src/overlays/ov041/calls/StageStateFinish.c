@@ -12,7 +12,7 @@ extern void StoreMovieCounter(int index, int value);
 extern void AddSessionCounter(int index, int amount);
 extern void TallyStageCharacter(int character, BOOL counted);
 extern void ReleaseAllSceneSlotResources(void);
-extern void func_ov035_020bb66c(void);
+extern void ReleaseAreaFadeModelIfLoaded(void);
 extern void SetSessionFlag(u32 id);
 extern void ClearSessionPackedBit(int id);
 extern BOOL IsSessionFlagSet(int id);
@@ -63,7 +63,7 @@ void StageStateFinish(void)
     context->flags &= 0xfff3;
     ReleaseAllSceneSlotResources();
     data_ov001_020a048c->unk10b8 = 0;
-    func_ov035_020bb66c();
+    ReleaseAreaFadeModelIfLoaded();
     context->pendingChoice = 2;
     if (work->flags & 0x8000) {
         context->cooldown = 60;

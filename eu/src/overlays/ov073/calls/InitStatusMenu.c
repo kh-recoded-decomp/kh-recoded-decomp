@@ -135,7 +135,7 @@ extern u64 OS_GetTick(void);
 extern s64 GetCardThreadStartTick(void);
 extern s16 SetWidgetDigitDisplay(void *cells, int widgetId, int key, u32 value);
 extern s16 DrawWidgetPlayTime(void *cells, int widgetId, int key, u32 value);
-extern void func_ov034_020bdea4(void *list, void *widgets, int x, int y, int rows, int a, int b, int c, int d);
+extern void ResultsScreenNoOpCallback(void *list, void *widgets, int x, int y, int rows, int a, int b, int c, int d);
 extern u16 *UpdateScreenWidgetLayer(int widget);
 extern void *GetMenuFont10(void);
 extern void *GetMenuFont08(void);
@@ -307,7 +307,7 @@ int InitStatusMenu(StatusMenu *menu)
     menu->listRows = 7;
     menu->listX = 0x30;
     menu->listWidth = 0xe8;
-    func_ov034_020bdea4(menu->list, widgets, 8, 0x14, 0xc, 0, 0x10, 0, 0);
+    ResultsScreenNoOpCallback(menu->list, widgets, 8, 0x14, 0xc, 0, 0x10, 0, 0);
     menu->widgets = widgets;
     menu->recordPool = pool;
     frameA = data_ov073_020c4120;

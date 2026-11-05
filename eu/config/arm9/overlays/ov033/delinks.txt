@@ -3,7 +3,7 @@
     .data       start:0x020baaa0 end:0x020baae0 kind:data align:32
     .bss        start:0x020baae0 end:0x020bab00 kind:bss align:32
 
-src/overlays/ov033/calls/func_ov033_020ba400.c:
+src/overlays/ov033/calls/InvokeProtectionCallbackAndInvertAddress.c:
     complete
     .text       start:0x020ba400 end:0x020ba418
 
@@ -15,7 +15,7 @@ src/overlays/ov033/calls/InitResumeModeContext.c:
     complete
     .text       start:0x020ba430 end:0x020ba574
 
-src/overlays/ov033/calls/func_ov033_020ba574.c:
+src/overlays/ov033/calls/RunResumeModeStateMachine.c:
     complete
     .text       start:0x020ba574 end:0x020ba5d4
 
@@ -27,15 +27,15 @@ src/overlays/ov033/calls/BeginResumeMode.c:
     complete
     .text       start:0x020ba604 end:0x020ba71c
 
-src/overlays/ov033/calls/func_ov033_020ba71c.c:
+src/overlays/ov033/calls/UpdateResumeMenuUntilResult.c:
     complete
     .text       start:0x020ba71c end:0x020ba74c
 
-src/overlays/ov033/calls/func_ov033_020ba74c.c:
+src/overlays/ov033/calls/FinishResumeMenuAndRestoreField.c:
     complete
     .text       start:0x020ba74c end:0x020ba7f0
 
-src/overlays/ov033/auto/func_ov033_020ba7f0.c:
+src/overlays/ov033/auto/ResumeModeStateHold.c:
     complete
     .text       start:0x020ba7f0 end:0x020ba7f8
 
@@ -43,11 +43,11 @@ src/overlays/ov033/calls/SetupResumeDisplay.c:
     complete
     .text       start:0x020ba7f8 end:0x020ba8f4
 
-src/overlays/ov033/calls/func_ov033_020ba8f4.c:
+src/overlays/ov033/calls/CreateResumeModeTask.c:
     complete
     .text       start:0x020ba8f4 end:0x020ba918
 
-src/overlays/ov033/calls/func_ov033_020ba918.c:
+src/overlays/ov033/calls/IsResumeModeReady.c:
     complete
     .text       start:0x020ba918 end:0x020ba944
 
@@ -55,23 +55,23 @@ src/overlays/ov033/calls/ClearResumeModeReadyFlag.c:
     complete
     .text       start:0x020ba944 end:0x020ba968
 
-src/overlays/ov033/calls/func_ov033_020ba968.c:
+src/overlays/ov033/calls/CompleteResumeModeWithResult.c:
     complete
     .text       start:0x020ba968 end:0x020ba98c
 
-src/overlays/ov033/calls/func_ov033_020ba98c.c:
+src/overlays/ov033/calls/HasResumeModeTaskExitSignal.c:
     complete
     .text       start:0x020ba98c end:0x020ba9b0
 
-src/overlays/ov033/calls/func_ov033_020ba9b0.c:
+src/overlays/ov033/calls/DestroyResumeModeTask.c:
     complete
     .text       start:0x020ba9b0 end:0x020ba9d0
 
-src/overlays/ov033/auto/func_ov033_020ba9d0.c:
+src/overlays/ov033/auto/ResumeModeNoOpCallback.c:
     complete
     .text       start:0x020ba9d0 end:0x020ba9d8
 
-src/overlays/ov033/calls/func_ov033_020ba9d8.c:
+src/overlays/ov033/calls/GetResumeModeResult.c:
     complete
     .text       start:0x020ba9d8 end:0x020ba9ec
 
@@ -79,7 +79,7 @@ src/overlays/ov033/calls/InstallResumeModeHandlers.c:
     complete
     .text       start:0x020ba9ec end:0x020baa60
 
-src/overlays/ov033/calls/func_ov033_020baa60.c:
+src/overlays/ov033/calls/CompleteResumeModeWithResultAdapter.c:
     complete
     .text       start:0x020baa60 end:0x020baa6c
 

@@ -27,7 +27,7 @@ extern s32 GetFieldSessionState(void);
 extern void QueueAreaSoundArchives(void);
 extern void UpdateEventObjects(void);
 extern void ForwardToActiveService_02088074(void);
-extern void func_ov035_020bb354(int stopSeq);
+extern void QueueAreaSceneSoundState(int stopSeq);
 extern int GetMainBrightnessSetting(void);
 
 void func_ov001_0206375c(void) {
@@ -50,7 +50,7 @@ void func_ov001_0206375c(void) {
         ReleaseSeqArcHeapLevel(1);
         ClearSessionPackedBit(0x360c);
         if (GetFieldSessionState() == 6) {
-            func_ov035_020bb354(1);
+            QueueAreaSceneSoundState(1);
         } else {
             QueueAreaSoundArchives();
             UpdateEventObjects();
@@ -60,7 +60,7 @@ void func_ov001_0206375c(void) {
     } else {
         ReleaseSeqArcHeapLevel(2);
         if (GetFieldSessionState() == 6) {
-            func_ov035_020bb354(0);
+            QueueAreaSceneSoundState(0);
         }
     }
     if (GetMainBrightnessSetting() == 0) {

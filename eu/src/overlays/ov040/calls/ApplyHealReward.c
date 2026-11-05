@@ -1,7 +1,7 @@
 #define AddClampedHealth_020a75ec AddClampedHealth
 #define ApplyHealReward_020be138 ApplyHealReward
 #define ApplyRewardByTier_020a7a40 ApplyRewardByTier
-#define func_ov035_020baf88 ShowMovieMessage3700
+#define func_ov035_020baf88 IsSessionFlag3700Set
 #define func_ov035_020baf94 IsSessionFlag3701Set
 #define func_ov040_020bda6c ApplyRewardEntryOffset
 #include "src/ov040/shared_engine/ApplyHealReward_020be138.c"

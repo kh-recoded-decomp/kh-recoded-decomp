@@ -28,11 +28,11 @@ extern void UnloadOverlayAfterGeometryTransfer(int processor, int overlayId);
 extern s32 __DSProt_DetectNotEmulator(void *task, void *callback, int arg);
 extern s32 __DSProt_DetectDummy(void *task, void *callback, int arg);
 extern s32 __DSProt_DetectNotFlashcart(void *task, void *callback, int arg);
-extern u32 func_ov033_020ba400(void (*callback)(void));
+extern u32 InvokeProtectionCallbackAndInvertAddress(void (*callback)(void));
 extern void LoadActorOverlay(void);
 extern void MI_CpuFill8(void *dst, u8 value, u32 size);
 extern void SetupResumeDisplay(void);
-extern u32 func_ov033_020ba574(void);
+extern u32 RunResumeModeStateMachine(void);
 
 void *InitResumeModeContext(ResumeModeParams *params)
 {
@@ -42,14 +42,14 @@ void *InitResumeModeContext(ResumeModeParams *params)
     data_ov033_020baae0 = GetRunningTaskWork();
     LoadOverlayAfterGeometryTransfer(0, (int)OVERLAY_104_ID);
     setter = NULL;
-    failed = __DSProt_DetectNotEmulator(func_ov033_020ba400, setter, 0) == ~(u32)setter;
+    failed = __DSProt_DetectNotEmulator(InvokeProtectionCallbackAndInvertAddress, setter, 0) == ~(u32)setter;
     if (failed) {
-        failed = __DSProt_DetectDummy(func_ov033_020ba400, setter, 0) == ~(u32)setter;
+        failed = __DSProt_DetectDummy(InvokeProtectionCallbackAndInvertAddress, setter, 0) == ~(u32)setter;
         if (failed) {
             MI_CpuFill8(&data_ov033_020baae0->state, 0xff, 4);
         } else {
             setter = LoadActorOverlay;
-            failed = __DSProt_DetectNotFlashcart(func_ov033_020ba400, setter, 0) == ~(u32)setter;
+            failed = __DSProt_DetectNotFlashcart(InvokeProtectionCallbackAndInvertAddress, setter, 0) == ~(u32)setter;
             if (failed) {
                 data_ov033_020baae0->active = 1;
             }
@@ -64,5 +64,5 @@ void *InitResumeModeContext(ResumeModeParams *params)
     data_ov033_020baae0->flags = 3;
     SetupResumeDisplay();
     data_ov033_020baae0->state = 0;
-    return func_ov033_020ba574;
+    return RunResumeModeStateMachine;
 }

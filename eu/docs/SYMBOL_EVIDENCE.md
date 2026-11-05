@@ -581,3 +581,19 @@ tracker/widget/tile resource operations. The contracts are grouped by owner:
 - [MENU_LIST_PATH_CONTRACTS.md](MENU_LIST_PATH_CONTRACTS.md): 10 entrypoints.
 - [OVERLAY_DISPLAY_SESSION_CALLBACK_CONTRACT.md](OVERLAY_DISPLAY_SESSION_CALLBACK_CONTRACT.md): 1 entrypoints.
 - [TRACKER_WIDGET_TILE_RESOURCE_CONTRACTS.md](TRACKER_WIDGET_TILE_RESOURCE_CONTRACTS.md): 32 entrypoints.
+
+## Field scene, scroll, resume, results and area lifecycles
+
+One hundred twelve entrypoints now identify task/state transitions, raw session
+callbacks, record-driven scroll, group helpers, resume/results interfaces and
+area definition/fade/gauge resources. Owner-specific contracts preserve wait
+side effects, signed sentinels, fixed-point update order and resource lifetimes:
+
+- [FIELD_SCENE_OV028_LIFECYCLE_CONTRACTS.md](FIELD_SCENE_OV028_LIFECYCLE_CONTRACTS.md): 17 entrypoints.
+- [FIELD_SCENE_OV029_LIFECYCLE_CONTRACTS.md](FIELD_SCENE_OV029_LIFECYCLE_CONTRACTS.md): 8 entrypoints.
+- [FIELD_SCENE_OV030_LIFECYCLE_CONTRACTS.md](FIELD_SCENE_OV030_LIFECYCLE_CONTRACTS.md): 19 entrypoints.
+- [SCENE_SCROLL_AND_RECORD_CONTRACTS.md](SCENE_SCROLL_AND_RECORD_CONTRACTS.md): 11 entrypoints.
+- [GROUP_FIELD_SCENE_CONTRACTS.md](GROUP_FIELD_SCENE_CONTRACTS.md): 11 entrypoints.
+- [RESUME_MODE_LIFECYCLE_CONTRACTS.md](RESUME_MODE_LIFECYCLE_CONTRACTS.md): 13 entrypoints.
+- [RESULTS_SCREEN_NATIVE_HELPER_CONTRACTS.md](RESULTS_SCREEN_NATIVE_HELPER_CONTRACTS.md): 5 entrypoints.
+- [AREA_SCENE_DEFINITION_FADE_GAUGE_CONTRACTS.md](AREA_SCENE_DEFINITION_FADE_GAUGE_CONTRACTS.md): 28 entrypoints.

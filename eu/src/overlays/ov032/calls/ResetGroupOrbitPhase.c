@@ -1,4 +1,4 @@
 #define ResetGroupOrbitPhase_020bc7d4 ResetGroupOrbitPhase
-#define func_ov032_020bbc60 func_ov032_020bbc80
-#define func_ov032_020bbc78 func_ov032_020bbc98
+#define func_ov032_020bbc60 GetObjectGroup
+#define func_ov032_020bbc78 GetGroupMemberWork
 #include "src/ov032/object_group/ResetGroupOrbitPhase_020bc7d4.c"

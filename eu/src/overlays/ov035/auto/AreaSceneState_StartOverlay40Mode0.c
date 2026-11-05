@@ -1,0 +1,3 @@
+#define func_ov035_020ba6b8 AreaSceneState_StartOverlay40Mode0
+#define func_ov035_020bacc4 StartOverlay40Phase
+#include "src/ov035/unclassified_helpers/func_ov035_020ba6b8.c"

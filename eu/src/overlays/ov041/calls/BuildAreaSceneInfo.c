@@ -1,6 +1,6 @@
 #define data_ov035_020bc4e0 gMovieContextState
 #define BuildAreaSceneInfo_020bc504 BuildAreaSceneInfo
-#define func_ov035_020bae64 func_ov035_020bae84
-#define func_ov035_020bb0f0 func_ov035_020bb110
+#define func_ov035_020bae64 GetCurrentAreaIndex
+#define func_ov035_020bb0f0 GetAreaSceneSessionFlagPair
 #define func_ov041_020bc500 FinalizeAreaSceneInfoNoop
 #include "src/ov041/unclassified_helpers/BuildAreaSceneInfo_020bc504.c"

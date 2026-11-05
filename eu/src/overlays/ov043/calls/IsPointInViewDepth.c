@@ -1,4 +1,4 @@
 #define IsPointInViewDepth_020bd284 IsPointInViewDepth
 #define IsWithinPlaneSet_0203ebc8 IsWithinPlaneSet_0203ebdc
-#define func_ov031_020bc700 func_ov031_020bc720
+#define func_ov031_020bc700 GetSceneDepthCullDistance
 #include "src/ov043/camera/IsPointInViewDepth_020bd284.c"

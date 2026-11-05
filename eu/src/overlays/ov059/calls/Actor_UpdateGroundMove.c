@@ -62,7 +62,7 @@ extern s32 Actor_SelectInputState(Actor *actor, JumpState *jump);
 extern s32 Actor_DispatchSharedControlAction(Actor *actor);
 extern u16 QuantizeSummedAngle(void *input);
 extern u16 QuantizeFieldAngle(void *input);
-extern VecFx32 *GetSubStruct1C(void);
+extern VecFx32 *GetSceneScrollDirection(void);
 extern fx32 FX_Mul(fx32 a, fx32 b);
 extern void ScaleVecFx32InPlace(VecFx32 *vec, fx32 scale);
 extern fx32 FX_Sqrt(fx32 value);
@@ -155,7 +155,7 @@ void Actor_UpdateGroundMove(Actor *actor)
     if (tilted) {
         angle = QuantizeSummedAngle(input);
         fieldAngle = QuantizeFieldAngle(input);
-        dir = *GetSubStruct1C();
+        dir = *GetSceneScrollDirection();
         {
             fx32 x = dir.x;
             dir.x = dir.z;

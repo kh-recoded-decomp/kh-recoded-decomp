@@ -16,7 +16,7 @@ extern void CommitGroupActionState(void); /* CommitGroupActionState */
 extern void EnterGroupActionState(void); /* EnterGroupActionState */
 extern void TryOpenGroupAction(void); /* TryOpenGroupAction */
 extern void FinishGroupActionState(void); /* FinishGroupActionState */
-extern void func_ov032_020bb2a4(void);
+extern void GroupSceneState_SaveActorPosesAndExit(void);
 extern void ClearGroupTransitionFlags(void); /* ClearGroupTransitionFlags */
 
 void (*gGroupActionStateHandlers[18])(void) = {
@@ -36,6 +36,6 @@ void (*gGroupActionStateHandlers[18])(void) = {
     EnterGroupActionState, /* EnterGroupActionState */
     TryOpenGroupAction, /* TryOpenGroupAction */
     FinishGroupActionState, /* FinishGroupActionState */
-    func_ov032_020bb2a4,
+    GroupSceneState_SaveActorPosesAndExit,
     ClearGroupTransitionFlags, /* ClearGroupTransitionFlags */
 };

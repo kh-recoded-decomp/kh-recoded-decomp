@@ -7,7 +7,7 @@
 #define SpawnSpiralProjectile_020bcd8c SpawnSpiralProjectile
 #define UpdateSpiralProjectile_020bcc78 UpdateSpiralProjectile
 #define func_ov030_020bc900 UpdateCarriedLauncher
-#define func_ov030_020bcb1c func_ov030_020bcb3c
+#define func_ov030_020bcb1c UpdateSceneGroupsAndDrawModelSlots
 #define func_ov030_020bcb30 OnUnitHitEvent
 #define func_ov056_020d7de8 AllocModelSlots
 #include "src/ov030/shared_engine/SpawnSpiralProjectile_020bcd8c.c"

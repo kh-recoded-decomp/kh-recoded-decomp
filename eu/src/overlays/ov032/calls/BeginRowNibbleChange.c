@@ -1,4 +1,4 @@
 #define BeginRowNibbleChange_020bbf48 BeginRowNibbleChange
 #define HasPendingNibbleChange_020bbf30 HasPendingNibbleChange
-#define func_ov032_020bbf20 func_ov032_020bbf40
+#define func_ov032_020bbf20 PickRowFourWayWeightedIndex
 #include "src/ov032/object_group/BeginRowNibbleChange_020bbf48.c"

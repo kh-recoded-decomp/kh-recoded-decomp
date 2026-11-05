@@ -1,7 +1,7 @@
 #include "nitro/types.h"
 
 extern int GetCurrentSceneEntryIndex(void);
-extern int func_ov035_020bae94(void);
+extern int GetOverlay41PhaseActiveFlag(void);
 extern int UpdateEventTriggerDelay(void *obj);
 
 typedef struct {
@@ -23,7 +23,7 @@ int EvaluateSceneEntryFlag40Trigger(UnkState_020a1b80 *obj)
     if (obj->expectedValue != value) {
         return 0;
     }
-    if (obj->alreadyRun == 0 && (value = func_ov035_020bae94(), value != 0)) {
+    if (obj->alreadyRun == 0 && (value = GetOverlay41PhaseActiveFlag(), value != 0)) {
         obj->result = 1;
     }
     value = UpdateEventTriggerDelay(obj);

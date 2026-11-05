@@ -1,5 +1,5 @@
 #define FindFarthestOpenDirection_020bcb74 FindFarthestOpenDirection
 #define VEC_DotProduct_01ff9e6c VEC_DotProduct
-#define func_ov032_020bbc80 func_ov032_020bbca0
+#define func_ov032_020bbc80 ComputeGroupHopVelocity
 #define func_ov032_020bcaa4 SweepSphereAgainstWorld
 #include "src/ov032/unclassified_helpers/FindFarthestOpenDirection_020bcb74.c"

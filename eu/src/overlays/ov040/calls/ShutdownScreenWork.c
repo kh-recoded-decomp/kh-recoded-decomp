@@ -8,5 +8,5 @@
 #define func_ov001_020633d4 FlushPendingFieldUpdate
 #define func_ov001_02087214 GetFieldEntryPoolAtIndex
 #define func_ov019_020a3640 ReleaseOwnedEntryGroup
-#define func_ov035_020bafb4 func_ov035_020bafd4
+#define func_ov035_020bafb4 GetAreaObjectListId
 #include "src/ov040/unclassified_helpers/ShutdownScreenWork_020bd990.c"

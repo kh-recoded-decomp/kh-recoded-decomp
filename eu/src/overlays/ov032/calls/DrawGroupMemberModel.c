@@ -58,8 +58,8 @@ typedef struct GeometryCommandCache {
     u32 flags;
 } GeometryCommandCache;
 
-extern void func_ov032_020bbc80(DisplayObject *object);
-extern ObjectRecord *func_ov032_020bbc98(DisplayObject *object);
+extern void GetObjectGroup(DisplayObject *object);
+extern ObjectRecord *GetGroupMemberWork(DisplayObject *object);
 extern void RebindAnimTracks(SceneNode *node, int blendIndex, int frame);
 extern LinkedActor *ActorRegistry_GetEntityByIndex(u32 actorId);
 extern void MTX_RotY33_(MtxFx33 *mtx, fx32 sinVal, fx32 cosVal);
@@ -91,8 +91,8 @@ void DrawGroupMemberModel(DisplayObject *object, const VecFx32 *position)
     VecFx32 scale;
     int index;
 
-    func_ov032_020bbc80(object);
-    record = func_ov032_020bbc98(object);
+    GetObjectGroup(object);
+    record = GetGroupMemberWork(object);
     node = object->nodeTable->nodes[record->nodeIndex];
     rotation = record->rotation;
     RebindAnimTracks(node, object->animBlend, 0);

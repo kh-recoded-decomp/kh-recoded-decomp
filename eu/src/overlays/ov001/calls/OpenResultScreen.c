@@ -29,7 +29,7 @@ extern u32 func_ov001_02063b68(s32 index);
 extern s32 func_ov001_020644c0(void);
 extern int ReadSessionPackedBits(int bitOffset, u32 bitCount);
 extern u32 GetPostIntroElapsedMilliseconds(void);
-extern int func_ov035_020bb2c0(void);
+extern int CountAreaEntriesOfKind0(void);
 
 void OpenResultScreen(int rank, int arg)
 {
@@ -59,7 +59,7 @@ void OpenResultScreen(int rank, int arg)
             params.mode = 5;
             break;
         }
-        params.score = ReadSessionPackedBits(0x35a7, 0x20) + func_ov001_02063b68(0) + func_ov035_020bb2c0() * 1000;
+        params.score = ReadSessionPackedBits(0x35a7, 0x20) + func_ov001_02063b68(0) + CountAreaEntriesOfKind0() * 1000;
     }
     scene->sceneFlags = (scene->sceneFlags & ~1) | 0x40;
     scene->resultScreen = CreateTaskObject(data_ov045_020c0820, &params);

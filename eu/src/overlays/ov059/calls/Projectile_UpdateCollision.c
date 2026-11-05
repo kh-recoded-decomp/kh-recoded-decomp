@@ -31,7 +31,7 @@
 #define func_ov018_020a3470 func_ov018_020a3490
 #define func_ov021_020ac148 InitHitResultHeader
 #define func_ov021_020ac33c ApplyHitToTarget_020ac33c
-#define func_ov031_020bc700 func_ov031_020bc720
+#define func_ov031_020bc700 GetSceneDepthCullDistance
 #define func_ov043_020bca1c Ov043Camera_GetActiveController
 #define func_ov059_020cdd10 Collider_IsOwnerKind11_020cdd30
 #define func_ov059_020cf394 EntryList_RemoveByKey

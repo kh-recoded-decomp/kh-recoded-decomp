@@ -16,7 +16,7 @@ src/overlays/ov030/calls/MoviePlayer_Close.c:
     complete
     .text       start:0x020ba538 end:0x020ba588
 
-src/overlays/ov030/calls/func_ov030_020ba588.c:
+src/overlays/ov030/calls/Ov030SceneState_PushVramWhenIdle.c:
     complete
     .text       start:0x020ba588 end:0x020ba5b4
 
@@ -24,7 +24,7 @@ src/overlays/ov030/calls/FinishSceneSetup.c:
     complete
     .text       start:0x020ba5b4 end:0x020ba5e8
 
-src/overlays/ov030/calls/func_ov030_020ba5e8.c:
+src/overlays/ov030/calls/Ov030SceneState_WaitForListNodes.c:
     complete
     .text       start:0x020ba5e8 end:0x020ba614
 
@@ -32,7 +32,7 @@ src/overlays/ov030/calls/TryEnterState4_020ba614.c:
     complete
     .text       start:0x020ba614 end:0x020ba62c
 
-src/overlays/ov030/calls/func_ov030_020ba62c.c:
+src/overlays/ov030/calls/Ov030SceneState_FinishMenuResourceLoad.c:
     complete
     .text       start:0x020ba62c end:0x020ba698
 
@@ -40,7 +40,7 @@ src/overlays/ov030/calls/MoviePlayer_EnterPlayback.c:
     complete
     .text       start:0x020ba698 end:0x020ba774
 
-src/overlays/ov030/calls/func_ov030_020ba774.c:
+src/overlays/ov030/calls/Ov030SceneState_FinishStartupWhenPanelReady.c:
     complete
     .text       start:0x020ba774 end:0x020ba7a8
 
@@ -48,11 +48,11 @@ src/overlays/ov030/calls/ResolveMovieSceneAction.c:
     complete
     .text       start:0x020ba7a8 end:0x020ba844
 
-src/overlays/ov030/calls/func_ov030_020ba844.c:
+src/overlays/ov030/calls/Ov030SceneState_StoreEventRecordBytes.c:
     complete
     .text       start:0x020ba844 end:0x020ba874
 
-src/overlays/ov030/calls/func_ov030_020ba874.c:
+src/overlays/ov030/calls/Ov030SceneState_BeginScreenModeTransition.c:
     complete
     .text       start:0x020ba874 end:0x020ba894
 
@@ -68,19 +68,19 @@ src/overlays/ov030/calls/TryReenterState7_020ba90c.c:
     complete
     .text       start:0x020ba90c end:0x020ba92e
 
-src/overlays/ov030/calls/func_ov030_020ba930.c:
+src/overlays/ov030/calls/Ov030SceneState_FinishSlowdownTransition.c:
     complete
     .text       start:0x020ba930 end:0x020ba964
 
-src/overlays/ov030/calls/func_ov030_020ba964.c:
+src/overlays/ov030/calls/Ov030SceneState_StartIdleObjects.c:
     complete
     .text       start:0x020ba964 end:0x020ba98c
 
-src/overlays/ov030/calls/func_ov030_020ba98c.c:
+src/overlays/ov030/calls/Ov030SceneState_BeginFadeOutWhenIdle.c:
     complete
     .text       start:0x020ba98c end:0x020ba9c8
 
-src/overlays/ov030/calls/func_ov030_020ba9c8.c:
+src/overlays/ov030/calls/Ov030SceneState_WaitFadeOut.c:
     complete
     .text       start:0x020ba9c8 end:0x020ba9f0
 
@@ -92,7 +92,7 @@ src/overlays/ov030/calls/FinishMoviePlaybackState.c:
     complete
     .text       start:0x020baa9c end:0x020baab8
 
-src/overlays/ov030/calls/func_ov030_020baab8.c:
+src/overlays/ov030/calls/DrawOv030FieldScene.c:
     complete
     .text       start:0x020baab8 end:0x020baad2
 
@@ -104,11 +104,11 @@ src/overlays/ov030/calls/SetupMovieDisplay_020bab20.c:
     complete
     .text       start:0x020bab20 end:0x020babc8
 
-src/overlays/ov030/calls/func_ov030_020babc8.c:
+src/overlays/ov030/calls/CreateOv030FieldSceneTask.c:
     complete
     .text       start:0x020babc8 end:0x020babe0
 
-src/overlays/ov030/calls/func_ov030_020babe0.c:
+src/overlays/ov030/calls/IsOv030SceneStartupComplete.c:
     complete
     .text       start:0x020babe0 end:0x020babfc
 
@@ -116,7 +116,7 @@ src/overlays/ov030/calls/ClearMovieSceneFlag1.c:
     complete
     .text       start:0x020babfc end:0x020bac14
 
-src/overlays/ov030/calls/func_ov030_020bac14.c:
+src/overlays/ov030/calls/RequestOv030SceneExit.c:
     complete
     .text       start:0x020bac14 end:0x020bac2c
 
@@ -140,7 +140,7 @@ src/overlays/ov030/calls/UpdateCameraTriggers.c:
     complete
     .text       start:0x020bacec end:0x020bb230
 
-src/overlays/ov030/auto/func_ov030_020bb230.c:
+src/overlays/ov030/auto/GetOv030FieldTransitionFlags.c:
     complete
     .text       start:0x020bb230 end:0x020bb240
 
@@ -160,7 +160,7 @@ src/overlays/ov030/calls/func_ov030_020bb374.c:
     complete
     .text       start:0x020bb374 end:0x020bb388
 
-src/overlays/ov030/auto/func_ov030_020bb388.c:
+src/overlays/ov030/auto/GetOv030SceneLock.c:
     complete
     .text       start:0x020bb388 end:0x020bb394
 
@@ -176,11 +176,11 @@ src/overlays/ov030/calls/ClearSceneEntry.c:
     complete
     .text       start:0x020bb444 end:0x020bb460
 
-src/overlays/ov030/calls/func_ov030_020bb460.c:
+src/overlays/ov030/calls/SetOv030SceneDrawEnabled.c:
     complete
     .text       start:0x020bb460 end:0x020bb488
 
-src/overlays/ov030/auto/func_ov030_020bb488.c:
+src/overlays/ov030/auto/ClearCarriedActorEscapeConfig.c:
     complete
     .text       start:0x020bb488 end:0x020bb494
 
@@ -252,7 +252,7 @@ src/overlays/ov030/calls/UpdateCarriedLauncher.c:
     complete
     .text       start:0x020bc920 end:0x020bcb3c
 
-src/overlays/ov030/calls/func_ov030_020bcb3c.c:
+src/overlays/ov030/calls/UpdateSceneGroupsAndDrawModelSlots.c:
     complete
     .text       start:0x020bcb3c end:0x020bcb50
 

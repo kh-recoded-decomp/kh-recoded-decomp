@@ -39,7 +39,7 @@
 #define func_ov034_020be258 ApplyResultsPartyBonus
 #define func_ov034_020be418 GetResultsShopItemInfo
 #define func_ov034_020be4f8 ClassifyResultsShopEntry
-#define func_ov034_020be718 func_ov034_020be738
+#define func_ov034_020be718 DrawResultsTexturedQuad
 #define g_g3dGlobal_0205a924 NNS_G3dGlb
 #define g_resultsScreen_020c0f80 data_ov034_020c0fa0
 #include "src/ov034/unclassified_helpers/RefreshResultsScreen_020bb578.c"

@@ -8,7 +8,7 @@
 #define SpawnSoundSlot_0204da8c SpawnSoundSlot
 #define func_ov001_020880b4 ForwardToActiveServiceInstance
 #define func_ov001_020881dc ConfigureStagePartySlot
-#define func_ov032_020bbc60 func_ov032_020bbc80
-#define func_ov032_020bbc78 func_ov032_020bbc98
+#define func_ov032_020bbc60 GetObjectGroup
+#define func_ov032_020bbc78 GetGroupMemberWork
 #define func_ov032_020bd470 HitAllGroupMembersExcept
 #include "src/ov032/object_group/ApplyGroupLeaderHit_020bfba4.c"

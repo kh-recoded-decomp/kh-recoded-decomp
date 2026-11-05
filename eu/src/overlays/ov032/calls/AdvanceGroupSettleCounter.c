@@ -1,5 +1,5 @@
 #define AdvanceGroupSettleCounter_020bca54 AdvanceGroupSettleCounter
 #define func_ov032_020bbc0c GetRowCycleLimit
-#define func_ov032_020bbc60 func_ov032_020bbc80
-#define func_ov032_020bbc78 func_ov032_020bbc98
+#define func_ov032_020bbc60 GetObjectGroup
+#define func_ov032_020bbc78 GetGroupMemberWork
 #include "src/ov032/object_group/AdvanceGroupSettleCounter_020bca54.c"

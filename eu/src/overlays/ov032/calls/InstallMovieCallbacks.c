@@ -5,10 +5,10 @@
 #define IsContextFlag20Set_020bb56c IsContextFlag20Set
 #define MobiClip_SrcClose_020bb4c8 MobiClip_SrcClose
 #define MobiClip_SrcIsOpen_020bb4ac MobiClip_SrcIsOpen
-#define MobiClip_SrcOpen_020bb448 func_ov032_020bb468
+#define MobiClip_SrcOpen_020bb448 CreateOv032FieldSceneTask
 #define SetContextModeAndFlag_020bb494 SetContextModeAndFlag
 #define StartMoviePlayback_020bb4e0 StartMoviePlayback
-#define func_ov032_020bb368 func_ov032_020bb388
-#define func_ov032_020bb460 func_ov032_020bb480
+#define func_ov032_020bb368 UpdateOv032FieldScene
+#define func_ov032_020bb460 IsOv032SceneStartupComplete
 #define func_ov032_020bb47c func_ov032_020bb49c
 #include "src/ov032/shared_engine/InstallMovieCallbacks_020bb79c.c"

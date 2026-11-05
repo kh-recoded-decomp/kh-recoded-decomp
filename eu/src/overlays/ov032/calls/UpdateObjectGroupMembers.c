@@ -3,8 +3,8 @@
 #define UpdateObjectGroupMembers_020bf830 UpdateObjectGroupMembers
 #define func_ov001_0208635c GetEntryPoolObjectAtIndex
 #define func_ov001_020881dc ConfigureStagePartySlot
-#define func_ov032_020bbc60 func_ov032_020bbc80
-#define func_ov032_020bbc78 func_ov032_020bbc98
+#define func_ov032_020bbc60 GetObjectGroup
+#define func_ov032_020bbc78 GetGroupMemberWork
 #define func_ov032_020bc108 ReleaseCurrentRowHold
 #define func_ov032_020bc4f8 UpdateFieldObjectModeTransition
 #define func_ov032_020bd02c SelectGroupMemberPose

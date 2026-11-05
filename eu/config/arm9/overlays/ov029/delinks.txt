@@ -15,7 +15,7 @@ src/overlays/ov029/calls/ShutdownOv029SoundCtx.c:
     complete
     .text       start:0x020ba54c end:0x020ba588
 
-src/overlays/ov029/calls/func_ov029_020ba588.c:
+src/overlays/ov029/calls/Ov029SceneState_PushVramWhenIdle.c:
     complete
     .text       start:0x020ba588 end:0x020ba5c0
 
@@ -23,7 +23,7 @@ src/overlays/ov029/calls/MarkSoundCtxActive.c:
     complete
     .text       start:0x020ba5c0 end:0x020ba5e8
 
-src/overlays/ov029/calls/func_ov029_020ba5e8.c:
+src/overlays/ov029/calls/Ov029SceneState_ResetSlotsAndLoadShadow.c:
     complete
     .text       start:0x020ba5e8 end:0x020ba5fc
 
@@ -47,11 +47,11 @@ src/overlays/ov029/calls/Ov029_ClearSceneModeBits.c:
     complete
     .text       start:0x020ba844 end:0x020ba86c
 
-src/overlays/ov029/calls/func_ov029_020ba86c.c:
+src/overlays/ov029/calls/DrawOv029FieldScene.c:
     complete
     .text       start:0x020ba86c end:0x020ba88c
 
-src/overlays/ov029/calls/func_ov029_020ba88c.c:
+src/overlays/ov029/calls/UpdateOv029FieldScene.c:
     complete
     .text       start:0x020ba88c end:0x020ba8d8
 
@@ -59,11 +59,11 @@ src/overlays/ov029/calls/SetupOv029Display.c:
     complete
     .text       start:0x020ba8d8 end:0x020ba9d0
 
-src/overlays/ov029/calls/func_ov029_020ba9d0.c:
+src/overlays/ov029/calls/CreateOv029FieldSceneTask.c:
     complete
     .text       start:0x020ba9d0 end:0x020ba9f4
 
-src/overlays/ov029/calls/func_ov029_020ba9f4.c:
+src/overlays/ov029/calls/IsOv029SceneStartupComplete.c:
     complete
     .text       start:0x020ba9f4 end:0x020baa20
 
@@ -87,11 +87,11 @@ src/overlays/ov029/calls/ApplyOv029SceneParams.c:
     complete
     .text       start:0x020baaa4 end:0x020baaec
 
-src/overlays/ov029/auto/func_ov029_020baaec.c:
+src/overlays/ov029/auto/CanOv029SceneAdvanceSession.c:
     complete
     .text       start:0x020baaec end:0x020baaf4
 
-src/overlays/ov029/auto/func_ov029_020baaf4.c:
+src/overlays/ov029/auto/GetOv029FieldTransitionFlags.c:
     complete
     .text       start:0x020baaf4 end:0x020baafc
 

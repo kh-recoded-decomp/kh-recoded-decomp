@@ -1,43 +1,43 @@
 #include "nitro/types.h"
 
-extern void func_ov028_020ba69c(void);
-extern void func_ov028_020ba6d4(void);
-extern void func_ov028_020ba720(void);
-extern void func_ov028_020ba758(void);
-extern void func_ov028_020ba778(void);
+extern void Ov028SceneState_PushVramWhenIdle(void);
+extern void FieldSceneState_RestoreActorsAndLoadShadow(void);
+extern void Ov028SceneState_WaitForListNodes(void);
+extern void FieldSceneState_WaitResourceSlotsAndReset(void);
+extern void Ov028SceneState_FinishMenuResourceLoad(void);
 extern void ResumeFieldFromMenu(void);
 extern void SceneState_WaitPanelReady(void); /* SceneState_WaitPanelReady */
 extern s32 PollFieldTransition(void);
-extern void func_ov028_020bab20(void);
-extern void func_ov028_020bab68(void);
+extern void Ov028SceneState_StoreEventRecordBytes(void);
+extern void Ov028SceneState_BeginScreenModeTransition(void);
 extern void SceneState_WaitScreenIdle(void); /* SceneState_WaitScreenIdle */
 extern void EnterState12WithHalfRate(void); /* EnterState12WithHalfRate */
-extern void func_ov028_020bac30(void);
-extern void func_ov028_020bac5c(void);
+extern void FieldSceneState_ResetFieldValueWhenScreenIdle(void);
+extern void FieldSceneState_EndSlowdownWhenScreenIdle(void);
 extern void EnterOverlayTransition(void); /* EnterOverlayTransition */
-extern void func_ov028_020bacd0(void);
-extern void func_ov028_020bad1c(void);
+extern void Ov028SceneState_BeginFadeOutWhenIdle(void);
+extern void Ov028SceneState_WaitFadeOut(void);
 extern void ShutdownFieldAndSaveActorPoses(void); /* ShutdownFieldAndSaveActorPoses */
 extern void FinishFieldSceneState(void);
 
 void (*gSceneStateHandlers[19])(void) = {
-    func_ov028_020ba69c,
-    func_ov028_020ba6d4,
-    func_ov028_020ba720,
-    func_ov028_020ba758,
-    func_ov028_020ba778,
+    Ov028SceneState_PushVramWhenIdle,
+    FieldSceneState_RestoreActorsAndLoadShadow,
+    Ov028SceneState_WaitForListNodes,
+    FieldSceneState_WaitResourceSlotsAndReset,
+    Ov028SceneState_FinishMenuResourceLoad,
     ResumeFieldFromMenu,
     SceneState_WaitPanelReady, /* SceneState_WaitPanelReady */
     (void (*)(void))PollFieldTransition,
-    func_ov028_020bab20,
-    func_ov028_020bab68,
+    Ov028SceneState_StoreEventRecordBytes,
+    Ov028SceneState_BeginScreenModeTransition,
     SceneState_WaitScreenIdle, /* SceneState_WaitScreenIdle */
     EnterState12WithHalfRate, /* EnterState12WithHalfRate */
-    func_ov028_020bac30,
-    func_ov028_020bac5c,
+    FieldSceneState_ResetFieldValueWhenScreenIdle,
+    FieldSceneState_EndSlowdownWhenScreenIdle,
     EnterOverlayTransition, /* EnterOverlayTransition */
-    func_ov028_020bacd0,
-    func_ov028_020bad1c,
+    Ov028SceneState_BeginFadeOutWhenIdle,
+    Ov028SceneState_WaitFadeOut,
     ShutdownFieldAndSaveActorPoses, /* ShutdownFieldAndSaveActorPoses */
     FinishFieldSceneState,
 };

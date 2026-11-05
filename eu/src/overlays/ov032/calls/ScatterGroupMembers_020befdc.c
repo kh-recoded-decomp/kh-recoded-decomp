@@ -3,8 +3,8 @@
 #define ScatterGroupMembers_020befbc ScatterGroupMembers_020befdc
 #define SetFieldUnitPosition_020a6cc4 SetFieldUnitPosition
 #define func_ov001_0208635c GetEntryPoolObjectAtIndex
-#define func_ov032_020bbc60 func_ov032_020bbc80
-#define func_ov032_020bbc78 func_ov032_020bbc98
+#define func_ov032_020bbc60 GetObjectGroup
+#define func_ov032_020bbc78 GetGroupMemberWork
 #define func_ov032_020beeb8 FindLevelCellCenter
 #define random_next_scaled_0202aa04 random_next_scaled
 #include "src/ov032/object_group/ScatterGroupMembers_020befbc.c"

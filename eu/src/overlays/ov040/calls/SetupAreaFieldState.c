@@ -17,7 +17,7 @@
 #define func_ov001_020645c8 IsSessionFlagSet
 #define func_ov001_0206e444 SetFieldEntriesPaused
 #define func_ov001_0206c2f8 SetMenuHighlight
-#define func_ov035_020bb334 func_ov035_020bb354
+#define func_ov035_020bb334 QueueAreaSceneSoundState
 #define func_ov040_020bc838 func_ov040_020bc858
 #define func_ov040_020bc858 BuildAreaObjectLists
 #define func_ov040_020bc970 func_ov040_020bc990
@@ -25,7 +25,7 @@
 #define func_ov001_0207f018 GetFieldObjectClassCount
 #define func_ov001_0207f028 GetFieldObjectClassAtIndex
 #define func_ov007_020a1b18 ResetSlotFlags
-#define func_ov035_020bafb4 func_ov035_020bafd4
+#define func_ov035_020bafb4 GetAreaObjectListId
 #define func_ov001_02087214 GetFieldEntryPoolAtIndex
 #define func_ov019_020a3608 EnsureOwnedEntryGroup
 #define StoreToGlobalPtr4Field28_0202a778 StoreToGlobalPtr4Field28

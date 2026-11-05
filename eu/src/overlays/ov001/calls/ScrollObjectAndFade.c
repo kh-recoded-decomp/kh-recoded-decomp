@@ -6,5 +6,5 @@
 #define VEC_Add_01ff9e0c VEC_Add
 #define func_02036240 ActorRegistry_GetEntityByIndex
 #define func_ov031_020bc618 UnlinkPendingNode
-#define func_ov031_020bc700 func_ov031_020bc720
+#define func_ov031_020bc700 GetSceneDepthCullDistance
 #include "src/ov001/field_objects/ScrollObjectAndFade_02085d74.c"

@@ -1,4 +1,4 @@
-#define GetSubStruct1C_020bbfe0 GetSubStruct1C
+#define GetSubStruct1C_020bbfe0 GetSceneScrollDirection
 #define RotateCameraUp_020bca9c RotateCameraUp
 #define RotateVectorAroundAxis_0204b34c RotateVectorAroundAxis
 #define data_ov043_020bd2c0 gOv043CameraState

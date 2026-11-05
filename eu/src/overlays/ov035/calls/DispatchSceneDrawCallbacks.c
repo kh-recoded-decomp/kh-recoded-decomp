@@ -8,7 +8,7 @@ extern unsigned int UpdateActorSlotsAndBillboards(void);
 extern unsigned int func_020bd2a4(void);
 extern unsigned int GetManagedActorCount(void);
 extern unsigned int UpdateActiveSubModeCamera(int);
-extern unsigned int func_ov035_020bae94(void);
+extern unsigned int GetOverlay41PhaseActiveFlag(void);
 extern unsigned int DrawMovieSceneIfVisible(void);
 extern unsigned int func_ov040_020bdb70(void);
 
@@ -30,7 +30,7 @@ void DispatchSceneDrawCallbacks(void)
     }
     active = GetManagedActorCount();
     if (((0 < (int)active) &&
-         (blocked = func_ov035_020bae94(), blocked == 0)) &&
+         (blocked = GetOverlay41PhaseActiveFlag(), blocked == 0)) &&
         ((*(u16 *)(work + 0x22) & 8) != 0)) {
         RunFlaggedEventCallbacks();
     }
@@ -40,7 +40,7 @@ void DispatchSceneDrawCallbacks(void)
     if ((*(u16 *)(work + 0x22) & 0x10) != 0) {
         func_ov001_020876d4();
     }
-    blocked = func_ov035_020bae94();
+    blocked = GetOverlay41PhaseActiveFlag();
     if (blocked != 0) {
         func_020bd2a4();
     }

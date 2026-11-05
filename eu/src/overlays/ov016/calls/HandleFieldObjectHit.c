@@ -13,6 +13,6 @@
 #define func_ov001_02087224 GetFieldEntryByPoolAndIndex
 #define func_ov001_0208764c GetFieldObjectInteractionBlockMask
 #define func_ov001_020958f4 ApplyHitToEnemyGroup
-#define func_ov032_020bbc60 func_ov032_020bbc80
+#define func_ov032_020bbc60 GetObjectGroup
 #define func_ov032_020bfba4 ApplyGroupLeaderHit
 #include "src/ov016/field_objects/HandleFieldObjectHit_020a3d90.c"

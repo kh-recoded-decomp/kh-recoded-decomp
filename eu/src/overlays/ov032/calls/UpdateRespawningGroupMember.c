@@ -48,24 +48,24 @@ typedef struct ObjectGroup {
 
 extern const VecFx32 gZeroVecFx32;
 
-extern ObjectGroup *func_ov032_020bbc80(GroupObject *object);
-extern GroupMemberWork *func_ov032_020bbc98(GroupObject *object);
+extern ObjectGroup *GetObjectGroup(GroupObject *object);
+extern GroupMemberWork *GetGroupMemberWork(GroupObject *object);
 extern VecFx32 *GetManagedActorPosition(int index);
 extern void ComputeGroupOrbitPosition(GroupObject *object, VecFx32 *target);
 extern BOOL ComputePushTowardTarget(const VecFx32 *target, const VecFx32 *center, fx32 *speed, VecFx32 *push);
 extern BOOL ProbeFlatGroundSquare(const VecFx32 *center, fx32 length, VecFx32 *out);
 extern BOOL TurnTowardOpenDirection(GroupObject *object, VecFx32 *position, fx32 height);
-extern void func_ov032_020bbca0(void *world, int groupIndex, int slotIndex, VecFx32 *out);
+extern void ComputeGroupHopVelocity(void *world, int groupIndex, int slotIndex, VecFx32 *out);
 extern BOOL UpdateHopWithSpeedRamp(void *world, int groupIndex, GroupMemberWork *work, VecFx32 *position, VecFx32 *velocity, fx32 radius, VecFx32 *delta, BOOL *landed);
 extern u32 random_next_scaled(u32 range);
 extern void ForceGroupRespawn(GroupObject *object);
 extern void QueueFieldObjectModeChange(void *world, int index, BOOL immediate);
-extern void func_ov032_020bbc5c(ObjectGroup *group, GroupMemberWork *work);
+extern void ResumeGroupMovementWithLockCounter(ObjectGroup *group, GroupMemberWork *work);
 extern void MoveGroupObjectAndSyncActor(GroupObject *object, const VecFx32 *delta);
 
 void UpdateRespawningGroupMember(GroupObject *object)
 {
-    GroupMemberWork *work = func_ov032_020bbc98(object);
+    GroupMemberWork *work = GetGroupMemberWork(object);
     ObjectGroup *group;
     VecFx32 zero;
     VecFx32 delta;
@@ -77,7 +77,7 @@ void UpdateRespawningGroupMember(GroupObject *object)
     if (work->leaderLink != -1) {
         return;
     }
-    group = func_ov032_020bbc80(object);
+    group = GetObjectGroup(object);
     zero = gZeroVecFx32;
     delta = gZeroVecFx32;
     switch (work->state) {
@@ -97,7 +97,7 @@ void UpdateRespawningGroupMember(GroupObject *object)
         break;
     case 0x18:
         if (TurnTowardOpenDirection(object, &object->position, 0xc00)) {
-            func_ov032_020bbca0(object->world, work->groupIndex, work->slotIndex, &work->moveDelta);
+            ComputeGroupHopVelocity(object->world, work->groupIndex, work->slotIndex, &work->moveDelta);
             object->work->state = 0x1a;
         }
         break;
@@ -121,7 +121,7 @@ void UpdateRespawningGroupMember(GroupObject *object)
                 group->isAnchored = 0;
                 group->isRespawning = 1;
                 work->moveDelta = zero;
-                func_ov032_020bbc5c(group, work);
+                ResumeGroupMovementWithLockCounter(group, work);
             }
         }
         work->isMoving = 0;

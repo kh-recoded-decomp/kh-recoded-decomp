@@ -135,11 +135,11 @@ src/overlays/ov031/calls/InitMovieGraphics.c:
     complete
     .text       start:0x020bb3ec end:0x020bb494
 
-src/overlays/ov031/calls/func_ov031_020bb494.c:
+src/overlays/ov031/calls/CreateOv031FieldSceneTask.c:
     complete
     .text       start:0x020bb494 end:0x020bb4ac
 
-src/overlays/ov031/calls/func_ov031_020bb4ac.c:
+src/overlays/ov031/calls/IsOv031SceneStartupComplete.c:
     complete
     .text       start:0x020bb4ac end:0x020bb4c8
 
@@ -179,7 +179,7 @@ src/overlays/ov031/calls/MarkLinkedTargetFlag.c:
     complete
     .text       start:0x020bb5d8 end:0x020bb5f8
 
-src/overlays/ov031/calls/func_ov031_020bb5f8.c:
+src/overlays/ov031/calls/ReleaseCurrentSceneRecord.c:
     complete
     .text       start:0x020bb5f8 end:0x020bb64c
 
@@ -223,7 +223,7 @@ src/overlays/ov031/calls/DisableCategory6Objects.c:
     complete
     .text       start:0x020bbedc end:0x020bbf42
 
-src/overlays/ov031/auto/func_ov031_020bbf44.c:
+src/overlays/ov031/auto/GetOv031FieldTransitionFlag.c:
     complete
     .text       start:0x020bbf44 end:0x020bbf54
 
@@ -235,7 +235,7 @@ src/overlays/ov031/calls/InstallMovieSceneHandlers.c:
     complete
     .text       start:0x020bbf9c end:0x020bc000
 
-src/overlays/ov031/calls/GetSubStruct1C.c:
+src/overlays/ov031/calls/GetSceneScrollDirection.c:
     complete
     .text       start:0x020bc000 end:0x020bc014
 
@@ -243,15 +243,15 @@ src/overlays/ov031/calls/GetField28.c:
     complete
     .text       start:0x020bc014 end:0x020bc028
 
-src/overlays/ov031/calls/SetFields30And34.c:
+src/overlays/ov031/calls/SetSceneScrollSpeedTarget.c:
     complete
     .text       start:0x020bc028 end:0x020bc038
 
-src/overlays/ov031/calls/GetSeekStep.c:
+src/overlays/ov031/calls/GetSceneScrollAccelerationStep.c:
     complete
     .text       start:0x020bc038 end:0x020bc060
 
-src/overlays/ov031/auto/func_ov031_020bc060.c:
+src/overlays/ov031/auto/GetSceneScrollTargetSpeed.c:
     complete
     .text       start:0x020bc060 end:0x020bc06c
 
@@ -299,7 +299,7 @@ src/overlays/ov031/calls/NotifyFlaggedActor.c:
     complete
     .text       start:0x020bc6d0 end:0x020bc720
 
-src/overlays/ov031/calls/func_ov031_020bc720.c:
+src/overlays/ov031/calls/GetSceneDepthCullDistance.c:
     complete
     .text       start:0x020bc720 end:0x020bc730
 
@@ -307,11 +307,11 @@ src/overlays/ov031/calls/SetNearestStageEvent.c:
     complete
     .text       start:0x020bc730 end:0x020bc740
 
-src/overlays/ov031/calls/GetCurrentRecordPosition.c:
+src/overlays/ov031/calls/GetCurrentRecordTargetScrollSpeed.c:
     complete
     .text       start:0x020bc740 end:0x020bc758
 
-src/overlays/ov031/calls/GetMovieFrameCount.c:
+src/overlays/ov031/calls/GetSceneFrameCount.c:
     complete
     .text       start:0x020bc758 end:0x020bc768
 

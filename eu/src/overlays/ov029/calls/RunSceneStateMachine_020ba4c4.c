@@ -10,8 +10,8 @@ typedef struct {
 extern SceneState *data_ov029_020babc0;
 extern int (*const gOv029SoundControlHandlers[])(void);
 
-extern void func_ov029_020ba88c(int mode);
-extern void func_ov029_020ba86c(void);
+extern void UpdateOv029FieldScene(int mode);
+extern void DrawOv029FieldScene(void);
 
 int RunSceneStateMachine_020ba4c4(void) {
     int next;
@@ -24,10 +24,10 @@ int RunSceneStateMachine_020ba4c4(void) {
         }
     } while (data_ov029_020babc0->flags & 0x8000);
     if (data_ov029_020babc0->flags & 8) {
-        func_ov029_020ba88c(0);
+        UpdateOv029FieldScene(0);
     }
     if (data_ov029_020babc0->flags & 4) {
-        func_ov029_020ba86c();
+        DrawOv029FieldScene();
     }
     return 0;
 }

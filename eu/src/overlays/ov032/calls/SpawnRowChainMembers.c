@@ -7,7 +7,7 @@
 #define func_ov016_020a6954 SetFieldObjectCompletionCallback
 #define func_ov016_020a6afc ResetUnitToBasePosition
 #define func_ov032_020bbc18 GetRowRespawnLimit
-#define func_ov032_020bbc78 func_ov032_020bbc98
+#define func_ov032_020bbc78 GetGroupMemberWork
 #define func_ov032_020bbd60 OrientGroupActorCollisionFromDirection
 #define func_ov032_020bc1e8 ApplyGroupMemberKind
 #define func_ov032_020bd518 UnlinkGroupMember

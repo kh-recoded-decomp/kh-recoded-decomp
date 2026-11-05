@@ -45,7 +45,7 @@ typedef struct ActorBody {
 
 typedef void (*BoundsBuilder)(CollisionState *collision, BoxBounds *bounds);
 
-extern GroupMemberWork *func_ov032_020bbc98(GroupObject *object);
+extern GroupMemberWork *GetGroupMemberWork(GroupObject *object);
 extern ActorBody *ActorRegistry_GetEntityByIndex(int index);
 extern fx32 FX_Sqrt(fx32 value);
 extern u16 FX_Atan2Idx(fx32 y, fx32 x);
@@ -79,7 +79,7 @@ static inline BOOL IsDirectionZero(const VecFx32 *direction)
 
 void OrientGroupActorCollisionFromDirection(GroupObject *object, const VecFx32 *direction)
 {
-    GroupMemberWork *work = func_ov032_020bbc98(object);
+    GroupMemberWork *work = GetGroupMemberWork(object);
     ActorBody *actor = ActorRegistry_GetEntityByIndex(object->actorId);
 
     if (!IsDirectionZero(direction)) {

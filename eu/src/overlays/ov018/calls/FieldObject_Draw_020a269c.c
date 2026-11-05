@@ -69,7 +69,7 @@ extern void UpdateBoxAxisAlignedFlag(void *data);
 extern void VEC_MultAdd(fx32 scale, const VecFx32 *v, const VecFx32 *add, VecFx32 *dst);
 extern void NNS_G3dMdlSetMdlAlphaAll(void *model, int alpha);
 extern void SceneNode_Draw(SceneNode *node);
-extern fx32 func_ov031_020bc720(void);
+extern fx32 GetSceneDepthCullDistance(void);
 extern void DrawTexturedBox(SceneNode *node, fx32 scale, MtxFx33 *rotation, int alpha, int flags);
 
 static inline void ComputeBounds(CollisionShape *shape)
@@ -136,7 +136,7 @@ void FieldObject_Draw_020a269c(FieldObject *obj)
         SceneNode_Draw(obj->anim);
     }
     if (obj->state == 0) {
-        height = obj->position.z + 0x800 + func_ov031_020bc720();
+        height = obj->position.z + 0x800 + GetSceneDepthCullDistance();
         if (height >= 0x10) {
             if (height < 0x1800) {
                 alpha = height * 31 / 0x1800;

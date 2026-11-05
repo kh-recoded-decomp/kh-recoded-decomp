@@ -3,12 +3,12 @@
 #define ApplyStartParams_020bb518 ApplyStartParams
 #define InstallMovieSceneHandlers_020bbf7c InstallMovieSceneHandlers
 #define IsPxiFifoTagSet_020bb4dc IsPxiFifoTagSet
-#define MobiClip_SrcOpen_020bb474 func_ov031_020bb494
+#define MobiClip_SrcOpen_020bb474 CreateOv031FieldSceneTask
 #define ReleasePxiFifoTag_020bb4f8 ReleasePxiFifoTag
 #define ResetSceneState_020bbf34 ResetSceneState
 #define SetModeByte_020bb4c0 SetModeByte
-#define func_ov031_020bb48c func_ov031_020bb4ac
+#define func_ov031_020bb48c IsOv031SceneStartupComplete
 #define func_ov031_020bb4a8 ClearMovieSourceReadyFlag
 #define func_ov031_020bb55c IsStopFlagClear
-#define func_ov031_020bbf24 func_ov031_020bbf44
+#define func_ov031_020bbf24 GetOv031FieldTransitionFlag
 #include "src/ov031/shared_engine/InstallMovieSceneHandlers_020bbf7c.c"

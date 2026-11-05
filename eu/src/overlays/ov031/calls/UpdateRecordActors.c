@@ -5,6 +5,6 @@
 #define UpdateRecordActors_020bbb88 UpdateRecordActors
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define func_ov001_0208723c GetFieldEntryListHead
-#define func_ov031_020bc700 func_ov031_020bc720
+#define func_ov031_020bc700 GetSceneDepthCullDistance
 #define g_activeState_020bc800 data_ov031_020bc820
 #include "src/ov031/overlay_state/UpdateRecordActors_020bbb88.c"

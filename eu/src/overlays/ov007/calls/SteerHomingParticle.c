@@ -10,7 +10,7 @@ typedef struct HomingParticle {
     u32 angle;
 } HomingParticle;
 
-extern u32 func_ov035_020bae94(void);
+extern u32 GetOverlay41PhaseActiveFlag(void);
 extern VecFx32 *GetManagedActorPositionWithCallback(int index);
 extern void VEC_Subtract(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
 extern fx32 VEC_NormalizeLength(VecFx32 *in, VecFx32 *out);
@@ -28,7 +28,7 @@ BOOL SteerHomingParticle(void *owner, HomingParticle *particle)
     s32 remaining;
     BOOL done;
 
-    if (func_ov035_020bae94()) {
+    if (GetOverlay41PhaseActiveFlag()) {
         particle->remaining = 0;
         return TRUE;
     }

@@ -53,7 +53,7 @@ extern void *GetSceneTagTracker(void);
 extern void *GetFieldSceneManager(void);
 extern s32 func_ov001_02078494(void);
 extern void SetFieldMenuMode_02078360(int a, int b);
-extern void func_ov035_020bc3ac(void);
+extern void DisarmAreaSequence1AndInvokeRecord5Callback(void);
 extern void *NNS_FndAllocFromDefaultExpHeapEx(u32 size, int align);
 extern void MIi_CpuCopyFast(const void *src, void *dst, u32 size);
 extern void MIi_CpuCopy16(const void *src, void *dst, u32 size);
@@ -111,7 +111,7 @@ void LoadHudLayersAndRecordText(void)
     if (func_ov001_02078494() == 2) {
         SetFieldMenuMode_02078360(0, 1);
     }
-    func_ov035_020bc3ac();
+    DisarmAreaSequence1AndInvokeRecord5Callback();
     savedIme = DisableIme();
     for (i = 0; i < 3; i++) {
         context->layerBuffers[i] = NNS_FndAllocFromDefaultExpHeapEx(0x800, -0x20);

@@ -51,8 +51,8 @@ typedef struct ObjectGroup {
 
 extern const VecFx32 gZeroVecFx32;
 
-extern ObjectGroup *func_ov032_020bbc80(GroupObject *object);
-extern GroupMemberWork *func_ov032_020bbc98(GroupObject *object);
+extern ObjectGroup *GetObjectGroup(GroupObject *object);
+extern GroupMemberWork *GetGroupMemberWork(GroupObject *object);
 extern GroupObject *GetEntryPoolObjectAtIndex(void *world, int index);
 extern VecFx32 *GetManagedActorPosition(int index);
 extern void VEC_Add(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
@@ -61,7 +61,7 @@ extern void SpawnSoundSlot(int bank, int id, VecFx32 *position, int flags);
 extern void AdvanceGroupSettleCounter(GroupObject *object);
 extern void StepTowardGroundTarget(VecFx32 *out, GroupObject *object, ObjectGroup *group, GroupMemberWork *work, VecFx32 *offset, VecFx32 *position);
 extern BOOL TurnTowardOpenDirection(GroupObject *object, VecFx32 *position, fx32 radius);
-extern void func_ov032_020bbca0(void *world, int groupIndex, int slotIndex, VecFx32 *out);
+extern void ComputeGroupHopVelocity(void *world, int groupIndex, int slotIndex, VecFx32 *out);
 extern BOOL UpdateHopWithSpeedRamp(void *world, int groupIndex, GroupMemberWork *work, VecFx32 *position, VecFx32 *velocity, fx32 radius, VecFx32 *delta, BOOL *landed);
 extern BOOL HasPendingNibbleChange(ObjectGroup *group);
 extern void SetGroupEntrySlotByte(GroupObject *object, u8 value, int slot);
@@ -74,8 +74,8 @@ extern void func_ov032_020bbd80(GroupObject *object, const VecFx32 *delta);
 
 int UpdateChainGroupMember(void *context, GroupObject *object)
 {
-    GroupMemberWork *work = func_ov032_020bbc98(object);
-    ObjectGroup *group = func_ov032_020bbc80(object);
+    GroupMemberWork *work = GetGroupMemberWork(object);
+    ObjectGroup *group = GetObjectGroup(object);
     GroupObject *leader;
     VecFx32 zero;
     VecFx32 delta;
@@ -132,7 +132,7 @@ int UpdateChainGroupMember(void *context, GroupObject *object)
         if (object->work->leaderLink == -1) {
             group->isFalling = 1;
             if (TurnTowardOpenDirection(object, &object->position, 0xc00)) {
-                func_ov032_020bbca0(object->world, work->groupIndex, work->slotIndex, &work->moveDelta);
+                ComputeGroupHopVelocity(object->world, work->groupIndex, work->slotIndex, &work->moveDelta);
                 SetGroupEntrySlotByte(object, work->side, group->trailSlot);
                 group->trailSlot = StoreGroupEntryVector(object, &object->position, group->trailSlot);
                 object->work->state = 4;

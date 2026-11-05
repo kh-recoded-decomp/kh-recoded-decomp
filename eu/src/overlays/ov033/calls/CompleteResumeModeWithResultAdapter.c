@@ -1,0 +1,3 @@
+#define PXI_InitFifo CompleteResumeModeWithResult
+#define PXI_Init_020baa40 CompleteResumeModeWithResultAdapter
+#include "src/ov033/library_nitro_pxi/PXI_Init_020baa40.c"

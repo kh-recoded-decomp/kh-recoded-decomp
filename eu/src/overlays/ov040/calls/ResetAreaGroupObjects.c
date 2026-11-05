@@ -3,5 +3,5 @@
 #define SendStateEvent10_020a35bc SendStateEvent10
 #define func_ov001_0208635c GetEntryPoolObjectAtIndex
 #define func_ov001_02087214 GetFieldEntryPoolAtIndex
-#define func_ov035_020bae64 func_ov035_020bae84
+#define func_ov035_020bae64 GetCurrentAreaIndex
 #include "src/ov040/shared_engine/ResetAreaGroupObjects_020bdaa8.c"

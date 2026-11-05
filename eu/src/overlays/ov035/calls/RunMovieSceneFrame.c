@@ -7,8 +7,8 @@
 #define data_ov035_020bc4e0 gMovieContextState
 #define func_ov035_020ba75c DispatchSceneDrawCallbacks
 #define func_ov035_020ba7dc UpdateSceneSystems
-#define func_ov035_020bae74 func_ov035_020bae94
-#define func_ov035_020baf88 ShowMovieMessage3700
+#define func_ov035_020bae74 GetOverlay41PhaseActiveFlag
+#define func_ov035_020baf88 IsSessionFlag3700Set
 #define func_ov035_020baf94 IsSessionFlag3701Set
 #define func_ov035_020bafc4 GetMovieCounterLimit
 #define func_ov035_020bb054 LoadMovieCounter

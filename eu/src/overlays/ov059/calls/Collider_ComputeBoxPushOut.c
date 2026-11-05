@@ -1,7 +1,7 @@
 #define CollWorld_FindHit_020351cc CollWorld_FindHit
 #define Collider_ComputeBoxPushOut_020cd44c Collider_ComputeBoxPushOut
 #define CollisionQuery_Init_02034c74 CollisionQuery_Init
-#define GetSubStruct1C_020bbfe0 GetSubStruct1C
+#define GetSubStruct1C_020bbfe0 GetSceneScrollDirection
 #define InitBoxShape_0203ad54 InitBoxShape
 #define MTX_Identity33_01ff90ec MTX_Identity33_
 #define NegateVecFx32_0204aa40 NegateVecFx32

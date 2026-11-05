@@ -34,7 +34,7 @@ extern char OVERLAY_24_ID[];
 extern void SetSoundListenersEnabled(int enabled);
 extern void FSi_DefaultStepDoneB(void *image);
 extern void FreeAllocatedBuffers(void *buffers);
-extern void func_ov034_020be734(void *menu);
+extern void ResultsSessionCleanupNoOp(void *menu);
 extern void DestroyTaskObjectWrapper(void *task);
 extern void UnloadOverlayAfterGeometryTransfer(int processor, int overlayId);
 extern u64 OS_GetTick(void);
@@ -56,7 +56,7 @@ void CloseResultsSession(void)
     SetSoundListenersEnabled(0);
     FSi_DefaultStepDoneB(data_ov034_020c0fa0.work->overlayImage);
     FreeAllocatedBuffers(data_ov034_020c0fa0.work->tileTable);
-    func_ov034_020be734(data_ov034_020c0fa0.work->menuState);
+    ResultsSessionCleanupNoOp(data_ov034_020c0fa0.work->menuState);
     if (data_ov034_020c0fa0.work->task != NULL) {
         DestroyTaskObjectWrapper(data_ov034_020c0fa0.work->task);
     }
