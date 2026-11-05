@@ -1,3 +1,3 @@
 #define Ov002_NotifyNodesOfKind StageEvent_SetHoldBit1
-#define ScriptCmd_NotifyNodesOfKind_020659b4 func_ov001_020659b4
+#define ScriptCmd_NotifyNodesOfKind_020659b4 ScriptCmd_AddStageSlotLock1
 #include "src/ov001/shared_engine/ScriptCmd_NotifyNodesOfKind_020659b4.c"

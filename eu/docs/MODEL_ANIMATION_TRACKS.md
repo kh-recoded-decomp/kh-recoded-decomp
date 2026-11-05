@@ -8,7 +8,7 @@ allocation types. Matching arithmetic and caller conversions are preserved.
 
 | Previous symbol | Current name | Direct behavior and consumers |
 |---|---|---|
-| `func_01ffb2d4` | `GetModelAnimationTrackState` | Reads an indexed track pointer; bit 4 selects a separate pointer for index zero. `Anim_GetFrame`, the duration getter and frame setter consume its track state. |
+| `func_01ffb2d4` | `GetModelAnimationTrackState` | Reads an indexed track pointer; mask `0x04` selects a separate pointer for index zero. `Anim_GetFrame`, the duration getter and frame setter consume its track state. |
 | `func_01ffb2f8` | `SetModelAnimationFrameWithSingleWrap` | Stores a frame and subtracts one duration when it is at least that duration. Title, panel, stage-item and path-model callers use it to set animation frames. |
 | `func_0202f4cc` | `GetModelAnimationDurationFx32` | Reads the bound resource's unsigned halfword frame count and shifts it left by 12. Turning animation, title animation and path-model callers use it as a duration/last-frame bound. |
 | `func_ov001_02080a38` | `SetActiveModelAnimationFrames` | Visits five signed halfword track selectors at state `+0xd8`; applies the same frame only where a selector is positive. |

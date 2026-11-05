@@ -1,3 +1,3 @@
 #define Ov002_EnterPhase OpenFieldMenuMode
-#define ScriptCmd_EnterPhase_02065680 func_ov001_02065680
+#define ScriptCmd_EnterPhase_02065680 ScriptCmd_OpenFieldMenuMode
 #include "src/ov001/shared_engine/ScriptCmd_EnterPhase_02065680.c"

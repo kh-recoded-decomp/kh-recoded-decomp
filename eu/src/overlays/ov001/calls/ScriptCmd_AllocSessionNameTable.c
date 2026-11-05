@@ -1,3 +1,3 @@
 #define Ov002_EnterPhase AllocSessionNameTable
-#define ScriptCmd_EnterPhase_02065c4c func_ov001_02065c4c
+#define ScriptCmd_EnterPhase_02065c4c ScriptCmd_AllocSessionNameTable
 #include "src/ov001/shared_engine/ScriptCmd_EnterPhase_02065c4c.c"

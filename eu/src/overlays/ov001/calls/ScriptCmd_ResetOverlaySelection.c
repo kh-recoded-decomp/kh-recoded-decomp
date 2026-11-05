@@ -1,3 +1,3 @@
 #define FS_EndOverlay ResetOverlaySelection
-#define FS_UnloadOverlayImage_020658b8 func_ov001_020658b8
+#define FS_UnloadOverlayImage_020658b8 ScriptCmd_ResetOverlaySelection
 #include "src/ov001/library_nitro_fs/FS_UnloadOverlayImage_020658b8.c"

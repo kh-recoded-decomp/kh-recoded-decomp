@@ -1,3 +1,3 @@
 #define Ov002_EnterPhase SaveCurrentSpawnPoint
-#define ScriptCmd_EnterPhase_02065a28 func_ov001_02065a28
+#define ScriptCmd_EnterPhase_02065a28 ScriptCmd_SaveCurrentSpawnPoint
 #include "src/ov001/shared_engine/ScriptCmd_EnterPhase_02065a28.c"

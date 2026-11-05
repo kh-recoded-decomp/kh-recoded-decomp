@@ -1,3 +1,3 @@
 #define FS_EndOverlay CommitChapterClearRecords
-#define FS_UnloadOverlayImage_02065dbc func_ov001_02065dbc
+#define FS_UnloadOverlayImage_02065dbc ScriptCmd_CommitChapterClearRecords
 #include "src/ov001/library_nitro_fs/FS_UnloadOverlayImage_02065dbc.c"

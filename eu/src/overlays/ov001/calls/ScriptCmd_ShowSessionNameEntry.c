@@ -1,3 +1,3 @@
 #define Ov002_EnterPhase ShowSessionNameEntry
-#define ScriptCmd_EnterPhase_02065438 func_ov001_02065438
+#define ScriptCmd_EnterPhase_02065438 ScriptCmd_ShowSessionNameEntry
 #include "src/ov001/shared_engine/ScriptCmd_EnterPhase_02065438.c"

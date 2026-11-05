@@ -1,4 +1,4 @@
 #define Ov002_EnterPhase LoadCameraParams
-#define ScriptCmd_EnterPhase_02065638 func_ov001_02065638
+#define ScriptCmd_EnterPhase_02065638 ScriptCmd_LoadCameraParams
 #define ScriptVm_ReadOperandInt ByteCode_ResolveOperand
 #include "src/ov001/shared_engine/ScriptCmd_EnterPhase_02065638.c"

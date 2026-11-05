@@ -1,3 +1,3 @@
 #define Ov002_EnterPhase LoadCenteredScreenSprite
-#define ScriptCmd_EnterPhase_02065910 func_ov001_02065910
+#define ScriptCmd_EnterPhase_02065910 ScriptCmd_LoadCenteredScreenSprite
 #include "src/ov001/shared_engine/ScriptCmd_EnterPhase_02065910.c"

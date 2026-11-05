@@ -1,3 +1,3 @@
 #define FS_EndOverlay ResetGaugeDisplay
-#define FS_UnloadOverlayImage_02065f80 func_ov001_02065f80
+#define FS_UnloadOverlayImage_02065f80 ScriptCmd_ResetGaugeDisplay
 #include "src/ov001/library_nitro_fs/FS_UnloadOverlayImage_02065f80.c"

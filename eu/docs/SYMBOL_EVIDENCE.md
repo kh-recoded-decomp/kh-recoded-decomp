@@ -232,6 +232,38 @@ lookup origin, pointer/resource prefixes, index-zero override, null result,
 fx32 duration, single-subtraction behavior and explicit caller narrowing.
 Six native consumers share the recovered interface.
 
+## Field-script delegation
+
+| Previous name | Current name | Evidence |
+|---|---|---|
+| `func_ov001_02064ecc` | `ScriptCmd_LoadSceneTable` | Handler-table word 34; delegates to `LoadSceneTable` after ScriptVm_ReadOperandInt; returns 1. |
+| `func_ov001_02064edc` | `ScriptCmd_EnterMenuItem` | Handler-table word 8; delegates to `EnterMenuItem` after ScriptVm_ReadOperandInt; returns 1. |
+| `func_ov001_020651f0` | `ScriptCmd_StartSessionScene` | Handler-table word 22; delegates to `StartSessionScene` after ByteCode_ResolveOperand; returns 0. |
+| `func_ov001_02065438` | `ScriptCmd_ShowSessionNameEntry` | Handler-table word 44; delegates to `ShowSessionNameEntry` after ScriptVm_ReadOperandInt; returns 1. |
+| `func_ov001_020655e8` | `ScriptCmd_HandleFieldPanelCommand` | Handler-table word 74; delegates to `HandleFieldPanelCommand` after ScriptVm_ReadOperandInt; returns 1. |
+| `func_ov001_02065638` | `ScriptCmd_LoadCameraParams` | Handler-table word 80; delegates to `LoadCameraParams` after ByteCode_ResolveOperand; returns 1. |
+| `func_ov001_02065680` | `ScriptCmd_OpenFieldMenuMode` | Handler-table word 84; delegates to `OpenFieldMenuMode` after ScriptVm_ReadOperandInt; returns 1. |
+| `func_ov001_02065690` | `ScriptCmd_SetSceneLock` | Handler-table word 86; delegates to `SetSceneLock` after ScriptVm_ReadOperandInt; returns 1. |
+| `func_ov001_020656c4` | `ScriptCmd_ClearSceneEntry` | Handler-table word 90; delegates to `ClearSceneEntry` after ScriptVm_ReadOperandInt; returns 1. |
+| `func_ov001_0206576c` | `ScriptCmd_ResetStageOriginIfActive` | Handler-table word 96; delegates to `ResetStageOriginIfActive` after no local decoding; returns 1. |
+| `func_ov001_020658b8` | `ScriptCmd_ResetOverlaySelection` | Handler-table word 106; delegates to `ResetOverlaySelection` after no local decoding; returns 1. |
+| `func_ov001_02065910` | `ScriptCmd_LoadCenteredScreenSprite` | Handler-table word 110; delegates to `LoadCenteredScreenSprite` after ScriptVm_ReadOperandInt; returns 1. |
+| `func_ov001_02065950` | `ScriptCmd_AdvanceRecordStep` | Handler-table word 114; delegates to `AdvanceRecordStep` after no local decoding; returns 1. |
+| `func_ov001_020659b4` | `ScriptCmd_AddStageSlotLock1` | Handler-table word 120; delegates to `StageEvent_SetHoldBit1` after ScriptVm_ReadOperandInt; returns 1. |
+| `func_ov001_020659c8` | `ScriptCmd_TryActivateStageSlot` | Handler-table word 122; delegates to `TryActivateStageSlot` after ScriptVm_ReadOperandInt; returns 1. |
+| `func_ov001_02065a28` | `ScriptCmd_SaveCurrentSpawnPoint` | Handler-table word 132; delegates to `SaveCurrentSpawnPoint` after ScriptVm_ReadOperandInt; returns 1. |
+| `func_ov001_02065a54` | `ScriptCmd_SetMenuHighlight` | Handler-table word 136; delegates to `SetMenuHighlight` after ScriptVm_ReadOperandInt; returns 1. |
+| `func_ov001_02065c10` | `ScriptCmd_BindScriptHandlersSlot7` | Handler-table word 148; delegates to `BindScriptHandlersSlot7` after ScriptVm_ReadOperandInt; returns 1. |
+| `func_ov001_02065c4c` | `ScriptCmd_AllocSessionNameTable` | Handler-table word 152; delegates to `AllocSessionNameTable` after ScriptVm_ReadOperandInt; returns 1. |
+| `func_ov001_02065dbc` | `ScriptCmd_CommitChapterClearRecords` | Handler-table word 50; delegates to `CommitChapterClearRecords` after no local decoding; returns 1. |
+| `func_ov001_02065f20` | `ScriptCmd_ClearFieldCounters` | Handler-table word 178; delegates to `ClearFieldCounters` after no local decoding; returns 1. |
+| `func_ov001_02065f80` | `ScriptCmd_ResetGaugeDisplay` | Handler-table word 186; delegates to `ResetGaugeDisplay` after no local decoding; returns 1. |
+
+[FIELD_SCRIPT_DELEGATES.md](FIELD_SCRIPT_DELEGATES.md) records the real callee
+behavior, pointer/integer decoding, u16 narrowing, constant returns and native
+dispatcher typing limits. The StartSessionScene command keeps its distinct
+zero return; names do not imply a shared success/advance protocol.
+
 ## Explicitly unresolved
 
 The vector view at `data_027e0160` overlaps `data_027e0164`, used by the older

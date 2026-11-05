@@ -1,3 +1,3 @@
 #define FS_EndOverlay AdvanceRecordStep
-#define FS_UnloadOverlayImage_02065950 func_ov001_02065950
+#define FS_UnloadOverlayImage_02065950 ScriptCmd_AdvanceRecordStep
 #include "src/ov001/library_nitro_fs/FS_UnloadOverlayImage_02065950.c"

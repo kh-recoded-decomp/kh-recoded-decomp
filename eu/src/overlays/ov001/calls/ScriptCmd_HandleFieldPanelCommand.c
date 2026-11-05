@@ -1,3 +1,3 @@
 #define Ov002_EnterPhase HandleFieldPanelCommand
-#define ScriptCmd_EnterPhase_020655e8 func_ov001_020655e8
+#define ScriptCmd_EnterPhase_020655e8 ScriptCmd_HandleFieldPanelCommand
 #include "src/ov001/shared_engine/ScriptCmd_EnterPhase_020655e8.c"
