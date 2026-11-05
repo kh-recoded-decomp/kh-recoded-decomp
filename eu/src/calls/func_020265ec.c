@@ -1,3 +1,4 @@
+#define func_ov001_02063a38 GetFieldSessionState
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
 #define SetSelectionIfChanged_0204d73c SetSelectionIfChanged
 #define data_02055e00 gScriptState

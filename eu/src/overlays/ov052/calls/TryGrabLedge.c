@@ -175,7 +175,7 @@ extern void GetTableValuePair(s32 *outFirst, s32 *outSecond, int index);
 extern u16 FX_Atan2Idx(fx32 y, fx32 x);
 extern void MTX_RotY33_(MtxFx33 *mtx, fx32 sinVal, fx32 cosVal);
 extern void MTX_MultVec33(const VecFx32 *vec, const MtxFx33 *m, VecFx32 *dst);
-extern int func_ov001_02063a38(void);
+extern int GetFieldSessionState(void);
 extern BOOL IsLedgeClimbSpaceClear(Actor *actor, VecFx32 *position);
 
 static inline int GetActorState(Actor *actor)
@@ -445,7 +445,7 @@ BOOL TryGrabLedge(Actor *actor)
     offset.z = 0;
     MTX_MultVec33(&offset, &rot, &offset);
     VEC_Add(&point, &offset, &climb->target);
-    if (func_ov001_02063a38() == 4) {
+    if (GetFieldSessionState() == 4) {
         climb->target.z = 0;
     }
     if (!IsLedgeClimbSpaceClear(actor, &climb->target)) {

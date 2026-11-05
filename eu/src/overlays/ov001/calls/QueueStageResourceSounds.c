@@ -33,7 +33,7 @@ typedef struct StageSoundManager {
 } StageSoundManager;
 
 extern StageSoundManager *gStageManager;
-extern BOOL func_ov001_02063a24(void);
+extern BOOL HasSessionContext(void);
 extern BOOL IsSessionFlagSet(u32 flag);
 extern void QueueSoundCommandForArc(u32 archive);
 
@@ -80,7 +80,7 @@ void QueueStageResourceSounds(void)
     int i;
     StageSoundRecord *record;
     int count;
-    if (func_ov001_02063a24() && IsSessionFlagSet(0x360c)) {
+    if (HasSessionContext() && IsSessionFlagSet(0x360c)) {
         return;
     }
     i = 0;

@@ -1,3 +1,4 @@
+#define func_ov001_020636e4 GetSessionResourceArchive
 #define LoadOffsetTableFile_02069498 LoadOffsetTableFile
 #define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
 #define data_ov001_0209eae0 sOv001_Im_0209eb00

@@ -1,3 +1,4 @@
+#define func_ov001_02063a38 GetFieldSessionState
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField
 #define HideFieldMessageLine_0207166c HideFieldMessageLine
 #define IsPlayerEntryFlagSet_02050014 IsPlayerEntryFlagSet

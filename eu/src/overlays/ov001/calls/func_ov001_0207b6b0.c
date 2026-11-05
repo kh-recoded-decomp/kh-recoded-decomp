@@ -1,7 +1,7 @@
 #include "nitro/types.h"
 
 extern u32 data_ov001_020a04e8;
-extern s32 func_ov001_02063a38(void);
+extern s32 GetFieldSessionState(void);
 extern u32 RequestPanelModeWithStyle2(BOOL flag);
 
 u32 func_ov001_0207b6b0(void)
@@ -11,6 +11,6 @@ u32 func_ov001_0207b6b0(void)
     if (*(s32 *)(data_ov001_020a04e8 + 0xd8) != 4) {
         return 1;
     }
-    mode = func_ov001_02063a38();
+    mode = GetFieldSessionState();
     return RequestPanelModeWithStyle2(mode == 10);
 }

@@ -1,3 +1,4 @@
+#define func_ov001_02063a38 GetFieldSessionState
 #define func_01ff80d4 GetVBlankCounter
 #define GetNextStreamCursorOrInvalid_0204df04 GetNextStreamCursorOrInvalid
 #define InvokeForChannelOrBoth_0200110c InvokeForChannelOrBoth

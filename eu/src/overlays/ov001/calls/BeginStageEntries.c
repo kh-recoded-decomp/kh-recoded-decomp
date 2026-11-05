@@ -1,7 +1,7 @@
 #define BeginStageEntries_02099aec BeginStageEntries
 #define CacheStageEntrySlot_02098f64 CacheStageEntrySlot
 #define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
-#define Session_Exists_02063a24 func_ov001_02063a24
+#define Session_Exists_02063a24 HasSessionContext
 #define data_ov001_020a0508 gStageManager
 #define func_0202a5ac Obj_SetWord14
 #define func_ov001_02099c28 UpdateStageEventSpawns

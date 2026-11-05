@@ -1,8 +1,9 @@
+#define func_ov001_02063a38 GetFieldSessionState
 #define func_ov001_020645c8 IsSessionFlagSet
 #define BindDescriptor0_0208f268 BindDescriptor0
 #define ResetLinkedActorMotion_02097a64 ResetLinkedActorMotion
 #define ResetStageLinksForSession_0209c430 ResetStageLinksForSession
-#define Session_Exists_02063a24 func_ov001_02063a24
+#define Session_Exists_02063a24 HasSessionContext
 #define data_ov001_020a0508 gStageManager
 #define func_ov001_0208f27c func_ov001_0208f2a4
 #define func_ov001_0208f28c func_ov001_0208f2b4

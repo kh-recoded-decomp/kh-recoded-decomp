@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-u32 func_ov001_020613e0(void (*callback)(void)) {
+u32 InvokeOptionalCallbackAndComplementAddress(void (*callback)(void)) {
     if (callback != NULL) {
         callback();
     }

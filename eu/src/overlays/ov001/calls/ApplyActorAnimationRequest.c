@@ -1,3 +1,4 @@
+#define func_ov001_02063a38 GetFieldSessionState
 #define Actor_ReleaseHeldResource_02088bc4 Actor_ReleaseHeldResource
 #define ApplyActorAnimationRequest_02088d14 ApplyActorAnimationRequest
 #define BlendToAnimationTrack_0202f374 BlendToAnimationTrack

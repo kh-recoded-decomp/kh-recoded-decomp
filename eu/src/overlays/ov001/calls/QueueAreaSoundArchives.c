@@ -1,3 +1,4 @@
+#define func_ov001_02063a38 GetFieldSessionState
 #define func_ov001_020645c8 IsSessionFlagSet
 #define ObjectManager_IsFlagBitSet_0207f068 ObjectManager_IsFlagBitSet
 #define QueueAreaSoundArchives_02067870 QueueAreaSoundArchives

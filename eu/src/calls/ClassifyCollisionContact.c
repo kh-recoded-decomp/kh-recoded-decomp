@@ -1,3 +1,4 @@
+#define func_ov001_02063a38 GetFieldSessionState
 #define AbsDotProduct_0204a96c AbsDotProduct
 #define ClassifyCollisionContact_02036d20 ClassifyCollisionContact
 #define ContainsMatchingEntry_02034900 ContainsMatchingEntry

@@ -55,8 +55,8 @@ typedef char MoveActorCorrectionOffsetCheck[
 typedef char CollisionSortKeyOffsetCheck[
     (u32)&((CollisionHit *)0)->sortKey == 0x24 ? 1 : -1];
 
-extern BOOL func_ov001_02063a24(void);
-extern s32 func_ov001_02063a38(void);
+extern BOOL HasSessionContext(void);
+extern s32 GetFieldSessionState(void);
 extern void VEC_MultAdd(fx32, const VecFx32 *, const VecFx32 *, VecFx32 *);
 extern void VEC_Subtract(const VecFx32 *, const VecFx32 *, VecFx32 *);
 extern fx32 VEC_DotProduct(const VecFx32 *, const VecFx32 *);
@@ -70,7 +70,7 @@ extern const VecFx32 gZeroVecFx32;
 
 static inline int GetSessionMode(void)
 {
-    if (func_ov001_02063a24()) return func_ov001_02063a38();
+    if (HasSessionContext()) return GetFieldSessionState();
     return 0;
 }
 

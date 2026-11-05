@@ -1,3 +1,4 @@
+#define func_ov001_02063a38 GetFieldSessionState
 #define AppendNodeToActiveList_02086fac AppendNodeToActiveList
 #define CreateKind6FieldObject_020a3234 CreateKind6FieldObject
 #define ResetKindDirection_020a1ebc ResetKindDirection

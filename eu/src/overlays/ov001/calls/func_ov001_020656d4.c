@@ -22,7 +22,7 @@ typedef struct {
 } Session;
 
 extern Session *data_ov001_020a0480;
-extern s32 func_ov001_02063a38(void);
+extern s32 GetFieldSessionState(void);
 extern int GetCameraColliderOffsetMagnitude(void);
 extern ManagerEntry *GetBoundedEntryField(int index);
 extern void ClearSessionPackedBit(int bitOffset);
@@ -30,7 +30,7 @@ extern void SetSessionFlag(int bitOffset);
 
 BOOL func_ov001_020656d4(void)
 {
-    if (func_ov001_02063a38() == 4 && GetCameraColliderOffsetMagnitude() > 0)
+    if (GetFieldSessionState() == 4 && GetCameraColliderOffsetMagnitude() > 0)
     {
         if (GetBoundedEntryField(0)->info->count == 0)
         {

@@ -1,3 +1,4 @@
+#define func_ov001_02063a38 GetFieldSessionState
 #define func_ov001_020645c8 IsSessionFlagSet
 #define GetCtxModeByte_02068084 GetCtxModeByte
 #define IsFieldFlag10Set_020728c4 IsFieldFlag10Set

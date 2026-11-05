@@ -1,7 +1,7 @@
 #include "nitro/types.h"
 
-extern BOOL func_ov001_02063a24(void);
-extern s32 func_ov001_02063a38(void);
+extern BOOL HasSessionContext(void);
+extern s32 GetFieldSessionState(void);
 extern void RequestSceneEvent(u32 index, u32 value, u32 flags);
 extern void *gStageManager;
 
@@ -9,8 +9,8 @@ BOOL func_ov001_0209c56c(u32 id, u32 value)
 {
     s32 sessionMode;
 
-    if (func_ov001_02063a24()) {
-        sessionMode = func_ov001_02063a38();
+    if (HasSessionContext()) {
+        sessionMode = GetFieldSessionState();
     } else {
         sessionMode = 0;
     }

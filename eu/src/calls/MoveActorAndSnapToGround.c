@@ -1,3 +1,4 @@
+#define func_ov001_02063a38 GetFieldSessionState
 #define FX_Div_01ff9c84 FX_Div
 #define MoveActorAndSnapToGround_02037870 MoveActorAndSnapToGround
 #define NegateVecFx32_0204aa40 NegateVecFx32

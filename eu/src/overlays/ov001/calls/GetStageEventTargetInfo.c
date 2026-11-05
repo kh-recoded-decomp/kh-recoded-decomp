@@ -87,8 +87,8 @@ extern StageEventRecord *GetStageEventRecord(u32 id);
 extern PartySlot *FindPartySlotById(u32 id);
 extern StageActor *GetStageActor(s16 id);
 extern u16 RemapExtendedSlotId(u16 id);
-extern BOOL func_ov001_02063a24(void);
-extern int func_ov001_02063a38(void);
+extern BOOL HasSessionContext(void);
+extern int GetFieldSessionState(void);
 extern StageEntry *GetStageEntry(s16 id);
 extern u16 *GetStageObjectHandle(u16 id);
 extern LargeTableEntry *GetLargeTableEntry(u16 id);
@@ -96,10 +96,10 @@ extern fx32 FX_Div(fx32 numer, fx32 denom);
 
 static inline int GetSessionMode(void)
 {
-    if (!func_ov001_02063a24()) {
+    if (!HasSessionContext()) {
         return 0;
     }
-    return func_ov001_02063a38();
+    return GetFieldSessionState();
 }
 
 static inline u32 GetTargetCount(StageEntry *entry)

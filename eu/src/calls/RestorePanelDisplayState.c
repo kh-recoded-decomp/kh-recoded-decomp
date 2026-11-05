@@ -26,7 +26,7 @@ extern void G2x_SetBlendBrightness_(u32 registerAddress, int planes, int brightn
 extern void G2x_SetBlendAlpha_(u32 *registerAddress, u32 firstPlanes,
                              u32 secondPlanes, u32 firstWeight, u32 secondWeight);
 extern void GXx_SetMasterBrightness_(u16 *registerAddress, int brightness);
-extern int func_ov001_02063a38(void);
+extern int GetFieldSessionState(void);
 extern void NotifyBothOrOne(u32 mask, const char *name, int index);
 
 #define REG_DISPCNT (*(vu32 *)0x04000000)
@@ -67,10 +67,10 @@ void RestorePanelDisplayState(void)
     }
 
     panel->fadeEngine = 3;
-    if (func_ov001_02063a38() == 8) {
+    if (GetFieldSessionState() == 8) {
         G2x_SetBlendAlpha_((u32 *)0x04000050, 1, 0x22, 0, 16);
     }
-    if (func_ov001_02063a38() == 8) {
+    if (GetFieldSessionState() == 8) {
         SetBg3Priority(panel->savedBg3Priority);
     }
     REG_DISPCNT = (REG_DISPCNT & ~0x1f00) | (panel->savedVisiblePlanes << 8);

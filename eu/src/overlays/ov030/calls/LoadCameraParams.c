@@ -1,3 +1,4 @@
+#define func_ov001_020636e4 GetSessionResourceArchive
 #define LoadCameraParams_020bb390 LoadCameraParams
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define findSharedResourceByName_0202cd8c findSharedResourceByName

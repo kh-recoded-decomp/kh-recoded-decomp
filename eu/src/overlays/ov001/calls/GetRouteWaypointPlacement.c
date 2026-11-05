@@ -1,3 +1,4 @@
+#define func_ov001_02063a38 GetFieldSessionState
 #define FindActorResourceIndexByName_02091248 FindActorResourceIndexByName
 #define FindPartySlotById_0209d19c FindPartySlotById
 #define GetLinkedStageActor_0209c2f0 GetLinkedStageActor
@@ -6,7 +7,7 @@
 #define GetStageActor_0209c040 GetStageActor
 #define GetStageEntry_0209c074 GetStageEntry
 #define GetStageRowIndex_0209c228 GetStageRowIndex
-#define Session_Exists_02063a24 func_ov001_02063a24
+#define Session_Exists_02063a24 HasSessionContext
 #define Surface_GetKindValue_02034c24 Surface_GetKindValue
 #define VEC_Add_01ff9e0c VEC_Add
 #define func_ov001_0208f018 func_ov001_0208f040

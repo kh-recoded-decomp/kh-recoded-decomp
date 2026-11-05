@@ -1,3 +1,4 @@
+#define func_ov001_02063a38 GetFieldSessionState
 #define data_0205fde4 gPanelActive
 #define G2_GetBG1ScrPtr_02006e34 G2_GetBG1ScrPtr
 #define G2_GetBG2ScrPtr_02006e88 G2_GetBG2ScrPtr

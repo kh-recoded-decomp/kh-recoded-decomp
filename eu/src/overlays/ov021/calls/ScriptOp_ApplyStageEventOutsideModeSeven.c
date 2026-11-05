@@ -1,3 +1,5 @@
+#define func_ov001_02063a24 HasSessionContext
+#define func_ov001_02063a38 GetFieldSessionState
 #define ScriptOp_ApplyStageEventOutsideModeSeven_020b2550 ScriptOp_ApplyStageEventOutsideModeSeven
 #define func_ov001_0209cd18 FlushMarkerPosition
 #define func_ov021_020b0374 ResolveTaggedValueRef

@@ -1,3 +1,4 @@
+#define func_ov001_020636e4 GetSessionResourceArchive
 #define StartMoviePlaybackState_020a7000 StartMoviePlaybackState
 #define NNSi_FndGetCurrentRootHeap_0202a764 GetRunningTaskWork
 #define func_02028bf4 InitPxiChannelsPair

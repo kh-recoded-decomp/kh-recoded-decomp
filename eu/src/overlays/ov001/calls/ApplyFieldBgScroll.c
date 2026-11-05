@@ -1,3 +1,4 @@
+#define func_ov001_02063a38 GetFieldSessionState
 #define ApplyFieldBgScroll_0206e9a8 ApplyFieldBgScroll
 #define data_ov001_020a04a4 data_ov001_020a04c4
 #define func_ov001_0207b3cc func_ov001_0207b3f4

@@ -1,3 +1,4 @@
+#define func_ov001_02063a38 GetFieldSessionState
 #define ClosePanelAndResume_0202874c ClosePanelAndResume
 #define FadeBgmVolume_0204d9a8 FadeBgmVolume
 #define InvokeForChannelOrBoth_0200110c InvokeForChannelOrBoth

@@ -1,3 +1,4 @@
+#define func_ov001_02063a38 GetFieldSessionState
 #define QueueGroupSounds_020ad84c QueueGroupSounds
 #define QueueSoundCommandForArc_0204d670 QueueSoundCommandForArc
 #define SetSoundIdAndQueue_020a7f90 SetSoundIdAndQueue

@@ -1,3 +1,4 @@
+#define func_ov001_02063a38 GetFieldSessionState
 #define DrawProximityMarker_0208f760 DrawProximityMarker
 #define FX_Div_01ff9c84 FX_Div
 #define FindStageObjectByOwner_020995c4 FindStageObjectByOwner
@@ -6,5 +7,5 @@
 #define Model_SetAllMaterialAlpha_0201a900 NNS_G3dMdlSetMdlAlphaAll
 #define Model_SetAllPolygonIds_0201a8c0 NNS_G3dMdlSetMdlPolygonIDAll
 #define SceneNode_Draw_01ffb12c SceneNode_Draw
-#define Session_Exists_02063a24 func_ov001_02063a24
+#define Session_Exists_02063a24 HasSessionContext
 #include "src/ov001/actor_animation/DrawProximityMarker_0208f760.c"

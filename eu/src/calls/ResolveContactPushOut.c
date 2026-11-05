@@ -1,3 +1,4 @@
+#define func_ov001_02063a38 GetFieldSessionState
 #define NegateVecFx32_0204aa40 NegateVecFx32
 #define OffsetBoxByDelta_0203ac70 OffsetBoxByDelta
 #define ResolveContactPushOut_020382b0 ResolveContactPushOut

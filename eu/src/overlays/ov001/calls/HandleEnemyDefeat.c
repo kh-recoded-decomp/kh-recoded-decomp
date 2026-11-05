@@ -1,3 +1,4 @@
+#define func_ov001_02063a38 GetFieldSessionState
 #define func_ov001_020645c8 IsSessionFlagSet
 #define AddSessionCounter_02063a80 AddSessionCounter
 #define GetGroupIndexedValue_020bb86c GetGroupIndexedValue

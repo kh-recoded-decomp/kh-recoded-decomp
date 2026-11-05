@@ -147,7 +147,7 @@ extern SceneState *data_ov031_020bc820;
 extern void FreeSceneRecords(void);
 extern void ResetCameraDefault(void);
 extern int GetCtxModeByte(void);
-extern u8 *func_ov001_020636e4(void);
+extern u8 *GetSessionResourceArchive(void);
 extern int findSharedResourceByName(void *table, const char *name);
 extern void *LoadFileAllocFromHeapTail(u32 fileId, u32 flags);
 extern void *NNSi_FndAllocFromDefaultHeap(u32 size);
@@ -223,15 +223,15 @@ void LoadSceneData(const char *areaFile, const char *recordFile)
         data_ov031_020bc820->field_b8 = 15 << 12;
     }
 
-    archive = func_ov001_020636e4();
-    areaData = LoadFileAllocFromHeapTail(ARCHIVE_FILE_KEY(archive, findSharedResourceByName(func_ov001_020636e4(), areaFile)), 2);
+    archive = GetSessionResourceArchive();
+    areaData = LoadFileAllocFromHeapTail(ARCHIVE_FILE_KEY(archive, findSharedResourceByName(GetSessionResourceArchive(), areaFile)), 2);
     data_ov031_020bc820->areaCount = areaData[0];
     data_ov031_020bc820->areas = NNSi_FndAllocFromDefaultHeap(data_ov031_020bc820->areaCount * sizeof(SceneArea));
     MIi_CpuCopy32(areaData + 1, data_ov031_020bc820->areas, data_ov031_020bc820->areaCount * sizeof(SceneArea));
     NNSi_FndFreeFromDefaultHeap(areaData);
 
-    archive = func_ov001_020636e4();
-    file = LoadFileAllocFromHeapTail(ARCHIVE_FILE_KEY(archive, findSharedResourceByName(func_ov001_020636e4(), recordFile)), 2);
+    archive = GetSessionResourceArchive();
+    file = LoadFileAllocFromHeapTail(ARCHIVE_FILE_KEY(archive, findSharedResourceByName(GetSessionResourceArchive(), recordFile)), 2);
     steps = file + 1;
     recordTable = steps + file[0];
     data = recordTable + 1;

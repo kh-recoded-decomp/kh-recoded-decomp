@@ -1,10 +1,11 @@
+#define func_ov001_02063a38 GetFieldSessionState
 #define func_ov001_020645c8 IsSessionFlagSet
 #define GetGlobalScaleValue_0209c3cc GetGlobalScaleValue
 #define GetLargeTableEntry_0209c30c GetLargeTableEntry
 #define ProjectWorldPositionToScreen_02019f84 NNS_G3dWorldPosToScrPos
 #define ResetGroupCommandState_02095880 ResetGroupCommandState
 #define ResetGroupRows_0209ca00 ResetGroupRows
-#define Session_Exists_02063a24 func_ov001_02063a24
+#define Session_Exists_02063a24 HasSessionContext
 #define SpawnStageEventGroups_0209895c SpawnStageEventGroups
 #define SyncStageEntryPosition_02098fbc SyncStageEntryPosition
 #define UpdateStageEventSpawns_02099c28 UpdateStageEventSpawns

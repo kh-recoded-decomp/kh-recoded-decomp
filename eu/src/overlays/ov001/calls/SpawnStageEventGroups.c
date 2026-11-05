@@ -1,3 +1,4 @@
+#define func_ov001_02063a38 GetFieldSessionState
 #define ComputeFormationPosition_02098730 ComputeFormationPosition
 #define FindStageLink_02099584 FindStageLink
 #define FixedPointAtan2_020062bc FX_Atan2Idx
@@ -6,7 +7,7 @@
 #define GetStageEventRecord_0209c0ec GetStageEventRecord
 #define GetStageMotionRecord_0209c18c GetStageMotionRecord
 #define PickStageEventSide_02098400 PickStageEventSide
-#define Session_Exists_02063a24 func_ov001_02063a24
+#define Session_Exists_02063a24 HasSessionContext
 #define SetActorFacingDegrees_02090f3c SetActorFacingDegrees
 #define SnapToStageGround_02098570 SnapToStageGround
 #define SpawnStageEventGroups_0209895c SpawnStageEventGroups

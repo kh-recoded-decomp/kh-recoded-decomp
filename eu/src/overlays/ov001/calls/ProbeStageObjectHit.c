@@ -103,8 +103,8 @@ extern void GetStageEntryAnchor(u32 id, VecFx32 *outPosition);
 extern void ComputeFlatDirectionVector(VecFx32 *from, VecFx32 *to, VecFx32 *direction);
 extern fx32 GetEntryScaledValue(StageRecord *owner, int index);
 extern void func_01ff88c4(void *dst, int value, u32 size);
-extern BOOL func_ov001_02063a24(void);
-extern int func_ov001_02063a38(void);
+extern BOOL HasSessionContext(void);
+extern int GetFieldSessionState(void);
 extern fx32 FX_Mul(fx32 a, fx32 b);
 extern u16 GetStageRowIndex(StageRecord *record);
 extern int GetStageEntrySide(u32 id, StageObjectHit *hit);
@@ -114,7 +114,7 @@ extern void VEC_MultAdd(fx32 scale, const VecFx32 *a, const VecFx32 *b, VecFx32 
 
 static inline int GetSessionMode(void)
 {
-    return func_ov001_02063a24() ? func_ov001_02063a38() : 0;
+    return HasSessionContext() ? GetFieldSessionState() : 0;
 }
 
 /* Send the attack's hit to the first stage object its shape touches that the player has not hit

@@ -1,3 +1,4 @@
+#define func_ov001_02063a38 GetFieldSessionState
 #define FindSlotRecordById_020a9124 FindSlotRecordById
 #define SelectSlotAnimation_020cfb88 SelectSlotAnimation
 #define func_ov021_020a9b74 BlendModelSetAnimations

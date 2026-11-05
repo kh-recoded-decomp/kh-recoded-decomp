@@ -1,3 +1,4 @@
+#define func_ov001_02063a38 GetFieldSessionState
 #define ActorObject_ReleaseResources_02089f1c ActorObject_ReleaseResources
 #define ActorSlot_UnlinkByIndex_02035c28 ActorSlot_UnlinkByIndex
 #define Actor_InitNodeCaptureCallback_020cd254 Actor_InitNodeCaptureCallback

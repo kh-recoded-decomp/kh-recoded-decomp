@@ -1,3 +1,4 @@
+#define func_ov001_02063a38 GetFieldSessionState
 #define func_01ff89a8 MI_CpuCopy8
 #define func_01fffe28 CaptureSelectedJointMtx_01fffe28
 #define func_ov001_0206db5c GetBoundedEntryField

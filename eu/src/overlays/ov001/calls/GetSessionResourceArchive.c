@@ -2,6 +2,6 @@
 
 extern u32 data_ov001_020a0480;
 
-u32 func_ov001_020636e4(void) {
+u32 GetSessionResourceArchive(void) {
     return *(u32 *)(data_ov001_020a0480 + 0x272c);
 }

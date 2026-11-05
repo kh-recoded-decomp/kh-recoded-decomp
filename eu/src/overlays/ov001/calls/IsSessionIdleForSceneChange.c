@@ -1,3 +1,4 @@
+#define func_ov001_02063838 GetSessionFlagsMask20
 #define IsFirstEntryFlagSet_0206e584 IsFirstEntryFlagSet
 #define IsSessionIdleForSceneChange_020638ec IsSessionIdleForSceneChange
 #define data_ov001_020a0460 data_ov001_020a0480

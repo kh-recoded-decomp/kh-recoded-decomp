@@ -1,3 +1,4 @@
+#define func_ov001_02063a38 GetFieldSessionState
 #define ActivateFieldSwitchObject_02082070 ActivateFieldSwitchObject
 #define ApplyRecordOrSetState_020822f8 ApplyRecordOrSetState
 #define FieldObject_SetEnabled_0207f6f4 FieldObject_SetEnabled

@@ -1,3 +1,4 @@
+#define func_ov001_02063a38 GetFieldSessionState
 #define AlignPartyLeaderToActor_020891b4 AlignPartyLeaderToActor
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField
 #define VEC_Subtract_01ff9e3c VEC_Subtract

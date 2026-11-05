@@ -18,7 +18,7 @@ extern char sOv036_E_020c3744[];
 
 extern void StoreGlobalArrayEntry(int index, void *value);
 extern void FormatSessionNumber(int index, char *name);
-extern u32 func_ov001_020636e4(void);
+extern u32 GetSessionResourceArchive(void);
 extern int findSharedResourceByName(void *table, void *name);
 extern int RoundAndInitArchive(void *record, u32 flags, void *flag, void *extra);
 extern void SetLoaderCallbacks(void *context, void *writeHandler, void *readHandler);
@@ -34,10 +34,10 @@ void InitializePanelArchive(void)
 
     StoreGlobalArrayEntry(5, gTextScriptCommandHandlers);
     FormatSessionNumber(0, name);
-    work->resourceTable = func_ov001_020636e4();
-    table = func_ov001_020636e4();
+    work->resourceTable = GetSessionResourceArchive();
+    table = GetSessionResourceArchive();
     fileId = ((table + 0x8000) & 0xfffffc) << 7 | 0x80000000 |
-             (findSharedResourceByName((void *)func_ov001_020636e4(), name) & 0x1ff);
+             (findSharedResourceByName((void *)GetSessionResourceArchive(), name) & 0x1ff);
     RoundAndInitArchive(work->archive, fileId, sOv036_E_020c3744, work->archiveBuffer);
     SetLoaderCallbacks(work->archive, WriteSessionPackedBits, ReadSessionPackedBits);
 }

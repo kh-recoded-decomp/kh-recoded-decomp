@@ -1,3 +1,4 @@
+#define func_ov001_02063a38 GetFieldSessionState
 #define FixedPointAtan2_020062bc FX_Atan2Idx
 #define FixedPointMultiply12 FX_Mul
 #define GetLargeTableEntry_0209c30c GetLargeTableEntry

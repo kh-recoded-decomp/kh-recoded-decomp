@@ -1,7 +1,8 @@
+#define func_ov001_02063a38 GetFieldSessionState
 #define PlayActorSound_02091b24 PlayActorSound
 #define ResolveTaggedValueRef_020b0374 ResolveTaggedValueRef
 #define ScriptCmd_PlayTargetSound_020b37e4 ScriptCmd_PlayTargetSound
-#define Session_Exists_02063a24 func_ov001_02063a24
+#define Session_Exists_02063a24 HasSessionContext
 #define TaggedValueToInt_020b0398 TaggedValueToInt
 #define data_ov021_020b56a4 data_ov021_020b56c4
 #include "src/ov021/script_ops/ScriptCmd_PlayTargetSound_020b37e4.c"

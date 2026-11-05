@@ -1,3 +1,4 @@
+#define func_ov001_02063a38 GetFieldSessionState
 #define ScriptCmd_LoadFieldObjectSet_02064eec ScriptCmd_LoadFieldObjectSet
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
 #define func_ov001_020633a0 QueueFieldUpdate

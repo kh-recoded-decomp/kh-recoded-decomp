@@ -61,18 +61,18 @@ extern void LoadOverlayAfterGeometryTransfer(int processor, int overlayId);
 extern void UnloadOverlayAfterGeometryTransfer(int processor, int overlayId);
 extern void InitScriptHandlerTable(void);
 extern void ClearStageTablesIfActive(void);
-extern void func_ov001_02062ac0(void);
+extern void InstallSessionOv028Handlers(void);
 extern void ResetSessionPanel(void);
-extern void func_ov001_02062bf4(void);
-extern void func_ov001_02062ad8(void);
+extern void InstallSessionOv029Handlers(void);
+extern void InstallSessionOv030Handlers(void);
 extern void ActivateResumeModeHandlers(void);
-extern void func_ov001_02062b84(void);
-extern void func_ov001_02062af0(void);
+extern void InstallSessionOv035Handlers(void);
+extern void InstallSessionOv031Handlers(void);
 extern void InstallSessionOv036Handlers(void);
 extern void ResumeSessionPanel(void);
-extern void func_ov001_02062bdc(void);
+extern void InstallSessionOv032Handlers(void);
 extern void ActivateSubModeHandlers(void);
-extern void func_ov001_02062c4c(void);
+extern void InstallSessionOv038Handlers(void);
 
 s32 SetSessionState(s32 newState, s32 mode) {
     Session *session = data_ov001_020a0480;
@@ -126,25 +126,25 @@ s32 SetSessionState(s32 newState, s32 mode) {
 
         switch (newState) {
         case 0:
-            func_ov001_02062ac0();
+            InstallSessionOv028Handlers();
             break;
         case 1:
             ResetSessionPanel();
             break;
         case 3:
-            func_ov001_02062bf4();
+            InstallSessionOv029Handlers();
             break;
         case 4:
-            func_ov001_02062ad8();
+            InstallSessionOv030Handlers();
             break;
         case 5:
             ActivateResumeModeHandlers();
             break;
         case 6:
-            func_ov001_02062b84();
+            InstallSessionOv035Handlers();
             break;
         case 7:
-            func_ov001_02062af0();
+            InstallSessionOv031Handlers();
             break;
         case 8:
             InstallSessionOv036Handlers();
@@ -153,13 +153,13 @@ s32 SetSessionState(s32 newState, s32 mode) {
             ResumeSessionPanel();
             break;
         case 10:
-            func_ov001_02062bdc();
+            InstallSessionOv032Handlers();
             break;
         case 11:
             ActivateSubModeHandlers();
             break;
         case 12:
-            func_ov001_02062c4c();
+            InstallSessionOv038Handlers();
             break;
         }
 

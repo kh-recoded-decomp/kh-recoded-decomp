@@ -1,3 +1,4 @@
+#define func_ov001_02063a38 GetFieldSessionState
 #define func_ov001_020645c8 IsSessionFlagSet
 #define func_ov001_02068918 CopyNameMenuSlotValues
 #define CreateSessionNameMenu_02063ba4 CreateSessionNameMenu

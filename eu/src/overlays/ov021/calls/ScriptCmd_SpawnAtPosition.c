@@ -1,7 +1,8 @@
+#define func_ov001_02063a38 GetFieldSessionState
 #define AllocateListEntry_020bc6b0 NotifyFlaggedActor
 #define ResolveTaggedValueRef_020b0374 ResolveTaggedValueRef
 #define ScriptCmd_SpawnAtPosition_020b24ac ScriptCmd_SpawnAtPosition
-#define Session_Exists_02063a24 func_ov001_02063a24
+#define Session_Exists_02063a24 HasSessionContext
 #define TaggedValueToFixed_020b03b0 TaggedValueToFixed
 #define func_ov001_0209cc6c RegisterMarkerPosition
 #include "src/ov021/script_ops/ScriptCmd_SpawnAtPosition_020b24ac.c"

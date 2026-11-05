@@ -1,3 +1,4 @@
+#define func_ov001_02063a38 GetFieldSessionState
 #define CollisionQuery_Init_02034c74 CollisionQuery_Init
 #define OffsetBoxByDelta_0203ac70 OffsetBoxByDelta
 #define SweepDropToGround_020ae3f0 SweepDropToGround

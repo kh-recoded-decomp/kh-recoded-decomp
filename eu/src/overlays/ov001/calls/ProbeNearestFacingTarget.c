@@ -1,5 +1,6 @@
+#define func_ov001_02063a38 GetFieldSessionState
 #define ProbeNearestFacingTarget_02097130 ProbeNearestFacingTarget
-#define Session_Exists_02063a24 func_ov001_02063a24
+#define Session_Exists_02063a24 HasSessionContext
 #define VEC_DotProduct_01ff9e6c VEC_DotProduct
 #define VEC_Mag_01ff9f28 VEC_Mag
 #define VEC_Normalize_01ffaff4 VEC_NormalizeLength

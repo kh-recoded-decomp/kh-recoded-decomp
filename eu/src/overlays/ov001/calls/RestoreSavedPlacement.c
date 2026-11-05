@@ -1,3 +1,4 @@
+#define func_ov001_02064628 LoadPackedSessionPlacement
 #define func_ov001_020645c8 IsSessionFlagSet
 #define MTX_Identity33_01ff90ec MTX_Identity33_
 #define MTX_MultVec33_01ff9404 MTX_MultVec33

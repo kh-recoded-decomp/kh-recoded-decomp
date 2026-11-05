@@ -1,3 +1,4 @@
+#define func_ov001_02063838 GetSessionFlagsMask20
 #define ApplyBlockLift_020a3398 ApplyBlockLift
 #define BuildCollisionShape_02080834 BuildCollisionShape
 #define Obj_SetPosition_0203569c Obj_SetPosition

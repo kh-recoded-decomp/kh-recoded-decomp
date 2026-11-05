@@ -70,7 +70,7 @@ struct StageObject {
 };
 
 extern const VecFx32 gZeroVecFx32;
-extern BOOL func_ov001_02063838(void);
+extern BOOL GetSessionFlagsMask20(void);
 extern void UpdateEventTargetMode(WanderObject *object);
 extern BOOL StageEvents_CheckEvent(u16 eventIndex);
 extern int func_ov001_02087784(int objectIndex, u32 entryIndex);
@@ -119,7 +119,7 @@ BOOL UpdateWanderActor(WanderObject *object)
     if (object->state == 6) {
         return FALSE;
     }
-    if (!func_ov001_02063838() && object->state == 0) {
+    if (!GetSessionFlagsMask20() && object->state == 0) {
         UpdateEventTargetMode(object);
     }
     switch (object->state) {

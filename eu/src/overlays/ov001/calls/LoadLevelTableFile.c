@@ -1,3 +1,4 @@
+#define func_ov001_020636e4 GetSessionResourceArchive
 #define LoadLevelTableFile_020686d4 LoadLevelTableFile
 #define data_ov001_0209eaac sOv001_Em_0209eacc
 #define data_ov001_020a0470 data_ov001_020a0490

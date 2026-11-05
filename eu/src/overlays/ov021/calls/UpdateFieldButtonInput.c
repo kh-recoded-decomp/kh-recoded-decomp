@@ -1,3 +1,4 @@
+#define func_ov001_02063a38 GetFieldSessionState
 #define UpdateFieldButtonInput_020a70a8 UpdateFieldButtonInput
 #define g_saveData_0205fe0c data_0205fe0c
 #define func_ov001_02072020 CallFieldCommandHandler

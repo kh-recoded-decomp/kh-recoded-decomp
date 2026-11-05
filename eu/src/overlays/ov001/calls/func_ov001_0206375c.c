@@ -23,7 +23,7 @@ extern void ClearStageManagerFlags31IfActive(void);
 extern void ClearStageManagerFlags42IfActive(void);
 extern void ReleaseSeqArcHeapLevel(int index);
 extern int CacheSeqArcStatus(int index);
-extern s32 func_ov001_02063a38(void);
+extern s32 GetFieldSessionState(void);
 extern void QueueAreaSoundArchives(void);
 extern void UpdateEventObjects(void);
 extern void ForwardToActiveService_02088074(void);
@@ -49,7 +49,7 @@ void func_ov001_0206375c(void) {
     if (IsSessionFlagSet(0x360c)) {
         ReleaseSeqArcHeapLevel(1);
         ClearSessionPackedBit(0x360c);
-        if (func_ov001_02063a38() == 6) {
+        if (GetFieldSessionState() == 6) {
             func_ov035_020bb354(1);
         } else {
             QueueAreaSoundArchives();
@@ -59,7 +59,7 @@ void func_ov001_0206375c(void) {
         }
     } else {
         ReleaseSeqArcHeapLevel(2);
-        if (func_ov001_02063a38() == 6) {
+        if (GetFieldSessionState() == 6) {
             func_ov035_020bb354(0);
         }
     }

@@ -1,3 +1,4 @@
+#define func_ov001_02063838 GetSessionFlagsMask20
 #define BuildSlotMask_0202f034 BuildSlotMask
 #define ConfigureChannelSlot_0206ca68 ConfigureChannelSlot
 #define FX_Div_01ff9c84 FX_Div

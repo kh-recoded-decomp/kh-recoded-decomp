@@ -1,3 +1,4 @@
+#define func_ov001_02063a38 GetFieldSessionState
 #define CreateFieldObjectClassType11_020825e0 CreateFieldObjectClassType11
 #define func_ov001_0207f0d0 AcquireEffectRecordPair
 #define func_ov001_0207f128 FieldObject_EnsureModelsLoaded

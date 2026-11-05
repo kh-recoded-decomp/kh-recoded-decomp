@@ -1,6 +1,7 @@
+#define func_ov001_02063a38 GetFieldSessionState
 #define FindStageLink_02099584 FindStageLink
 #define ResetAndQueryWorldCollision_0203644c ResetAndQueryWorldCollision
-#define Session_Exists_02063a24 func_ov001_02063a24
+#define Session_Exists_02063a24 HasSessionContext
 #define SnapToStageGround_02098570 SnapToStageGround
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define addScaledVector_020301ac AddScaledVector

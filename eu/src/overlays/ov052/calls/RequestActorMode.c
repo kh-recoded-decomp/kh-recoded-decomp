@@ -1,3 +1,4 @@
+#define func_ov001_02063a38 GetFieldSessionState
 #define func_ov001_020645c8 IsSessionFlagSet
 #define ChangeActorState_020ce0c0 ChangeActorState
 #define FindSlotRecordById_020a9124 FindSlotRecordById

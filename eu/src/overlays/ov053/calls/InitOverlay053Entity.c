@@ -34,7 +34,7 @@ typedef struct Entity {
 } Entity;
 
 extern void InstallActorCallbacks(Entity *entity);
-extern int func_ov001_02063a38(void);
+extern int GetFieldSessionState(void);
 extern BOOL func_ov001_0206e31c(void);
 extern void ShutdownOverlay053(void);
 extern void RequestOverlay053ActorState(void);
@@ -65,11 +65,11 @@ void InitOverlay053Entity(Entity *entity, u8 kind)
     entity->updateCallback = RequestOverlay053ActorState;
     entity->modeCallback = SetEntityModeHideSubModels;
     entity->stepCallback = StartAreaMusic;
-    if (func_ov001_02063a38() == 4) {
+    if (GetFieldSessionState() == 4) {
         entity->drawCallback = DrawCarriedActor;
         entity->angleCallback = SetPanelModelAngle;
         entity->specialCallback = ChangeCarriedActorState;
-    } else if (func_ov001_02063a38() == 6) {
+    } else if (GetFieldSessionState() == 6) {
         entity->rewardCallback = RefreshScrollListLayout;
     }
     entity->actionCallback = LoadOverlay053EntityResources;

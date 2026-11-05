@@ -1,5 +1,6 @@
+#define func_ov001_02063a38 GetFieldSessionState
 #define func_ov001_020645c8 IsSessionFlagSet
 #define PlayStageSoundAt_0209d080 PlayStageSoundAt
-#define Session_Exists_02063a24 func_ov001_02063a24
+#define Session_Exists_02063a24 HasSessionContext
 #define func_0204da8c SpawnSoundSlot
 #include "src/ov001/unclassified_helpers/PlayStageSoundAt_0209d080.c"

@@ -1,3 +1,4 @@
+#define func_ov001_020636e4 GetSessionResourceArchive
 #define LoadMovieClipHeader_020baa28 LoadMovieClipHeader
 #define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap

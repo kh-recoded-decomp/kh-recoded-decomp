@@ -69,7 +69,7 @@ extern void ClearPackedBit(int *bitWords, int bitIndex);
 extern unsigned int func_0202a9d0(unsigned int range);
 extern int func_020367b0(EffectTask *task, Effect *effect);
 extern void func_02036710(EffectTask *task);
-extern s32 func_ov001_02063a38(void);
+extern s32 GetFieldSessionState(void);
 extern int func_ov001_02064a38(int *command, int flag);
 extern void func_ov001_02072254(int *command, int flag);
 extern void func_ov001_0206604c(Effect *effect, int palette);
@@ -156,7 +156,7 @@ Effect *SpawnEffect_020660a0(int slot, int type, int variant, VecFx32 *pos, int 
     }
     effect->lifetime /= 2;
 
-    if (func_ov001_02063a38() == 4) {
+    if (GetFieldSessionState() == 4) {
         effect->velocity.z = 0;
     }
     if (effect->task != NULL && effect->task->activeList == NULL) {

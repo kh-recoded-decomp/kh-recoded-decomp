@@ -1,3 +1,4 @@
+#define func_ov001_02063a38 GetFieldSessionState
 #define InitEntryFromDesc_020a84bc InitEntryFromDesc
 #define ResolveEntryAnchorPosition_020a8844 ResolveEntryAnchorPosition
 #define SelectModelTrackBlends_020a867c SelectModelTrackBlends

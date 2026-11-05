@@ -146,8 +146,8 @@ extern void CopySourceWords(void *cache);
 extern void func_ov001_020925e4(StageEvent *event, u32 state);
 extern void VEC_Add(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
 extern fx32 FX_Mul(fx32 a, fx32 b);
-extern int func_ov001_02063a24(void);
-extern s32 func_ov001_02063a38(void);
+extern int HasSessionContext(void);
+extern s32 GetFieldSessionState(void);
 extern u8 *GetStageManager(void);
 extern s32 func_ov001_0208f2a4(void *pool);
 extern u32 FindFirstActiveStageEvent(void);
@@ -217,8 +217,8 @@ static inline u8 *GetEntrySectionItem(StageEntry *entry, int type, u32 index)
 
 static inline int GetSessionMode(void)
 {
-    if (func_ov001_02063a24()) {
-        return func_ov001_02063a38();
+    if (HasSessionContext()) {
+        return GetFieldSessionState();
     }
     return 0;
 }

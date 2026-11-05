@@ -1,3 +1,4 @@
+#define func_ov001_02063a38 GetFieldSessionState
 #define QuerySubModeStatus_020af3f4 QuerySubModeStatus
 #define UpdateDirectionInput_020a6f34 UpdateDirectionInput
 #include "src/ov021/unclassified_helpers/UpdateDirectionInput_020a6f34.c"

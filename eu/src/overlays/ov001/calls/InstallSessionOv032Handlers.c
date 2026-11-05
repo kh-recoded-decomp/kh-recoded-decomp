@@ -10,6 +10,6 @@ typedef void (*OverlayWorkFunc)(void *work);
 extern Session *data_ov001_020a0480;
 extern u8 InstallMovieCallbacks[];
 
-void func_ov001_02062bdc(void) {
+void InstallSessionOv032Handlers(void) {
     ((OverlayWorkFunc)InstallMovieCallbacks)(data_ov001_020a0480->overlayWork);
 }

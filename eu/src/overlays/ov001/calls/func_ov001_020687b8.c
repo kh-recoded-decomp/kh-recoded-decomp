@@ -23,7 +23,7 @@ typedef struct Session {
 
 extern EntryList *data_ov001_020a0490;
 extern Session *data_ov001_020a0480;
-extern s32 func_ov001_02063a38(void);
+extern s32 GetFieldSessionState(void);
 extern void ClearStageTablesIfActive(void);
 extern void StageEvents_Trigger(u16 first, u16 second);
 
@@ -32,7 +32,7 @@ void func_ov001_020687b8(void)
     EntryList *list = data_ov001_020a0490;
     int index;
 
-    if (func_ov001_02063a38() != 10) {
+    if (GetFieldSessionState() != 10) {
         Session *session = data_ov001_020a0480;
         if (!session->suppressRefresh) {
             if (session->forceRefresh || session->unk_20A != session->unk_212) {

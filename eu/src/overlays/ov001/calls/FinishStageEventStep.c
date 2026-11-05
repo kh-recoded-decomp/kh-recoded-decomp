@@ -5,7 +5,7 @@
 #define GetStageActor_0209c040 GetStageActor
 #define GetStageObjectHandle_0209c0c4 GetStageObjectHandle
 #define ReleaseStageSlotEntry_0209c024 ReleaseStageSlotEntry
-#define Session_Exists_02063a24 func_ov001_02063a24
+#define Session_Exists_02063a24 HasSessionContext
 #define StartStageEventEffect_02097b88 StartStageEventEffect
 #define func_ov021_020b4bdc SelectSequenceTrack
 #include "src/ov001/shared_engine/FinishStageEventStep_02093a04.c"

@@ -1,3 +1,4 @@
+#define func_ov001_02063a38 GetFieldSessionState
 #define LoadAnimSetSlots_0206c77c LoadAnimSetSlots
 #define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
 #define ReleaseSharedRecordSlot_0202c8a8 ReleaseSharedRecordSlot

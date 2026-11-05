@@ -10,6 +10,6 @@ typedef void (*OverlayWorkFunc)(void *work);
 extern Session *data_ov001_020a0480;
 extern u8 InstallSceneHandlers[];
 
-void func_ov001_02062ac0(void) {
+void InstallSessionOv028Handlers(void) {
     ((OverlayWorkFunc)InstallSceneHandlers)(data_ov001_020a0480->overlayWork);
 }

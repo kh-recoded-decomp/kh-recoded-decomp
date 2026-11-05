@@ -424,3 +424,12 @@ their proved ov036/ov043 targets rather than unrelated ov035 DATA and ov039
 input code at equal RAM addresses. [OVERLAY_IDENTITY_BINDINGS.md](OVERLAY_IDENTITY_BINDINGS.md)
 records state/mode loading evidence, exact relocation-owner narrowing, preserved
 entry bytes and the remaining native callback/visibility boundaries.
+
+## Session handlers and packed placement
+
+Fourteen additional helpers now name overlay-specific session installers,
+state/archive queries, a raw flag-mask query, saved placement and the native
+callback/address adapter. [SESSION_HANDLERS_PLACEMENT.md](SESSION_HANDLERS_PLACEMENT.md)
+records the twelve heterogeneous callback slots and null rules, bank lifetimes,
+packed-bit widths/order and unresolved host address protocol. The placement
+definitions use actual vector/angle storage without pointer truncation.

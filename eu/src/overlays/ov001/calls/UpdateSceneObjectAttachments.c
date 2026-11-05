@@ -153,8 +153,8 @@ extern void Obj_SetPosition(ScenePart *part, const VecFx32 *position);
 extern fx32 FX_Div(fx32 first, fx32 second);
 extern fx32 FX_Mul(fx32 first, fx32 second);
 extern void MTX_ScaleApply43(const SceneMatrix *source, SceneMatrix *out, fx32 x, fx32 y, fx32 z);
-extern BOOL func_ov001_02063a24(void);
-extern int func_ov001_02063a38(void);
+extern BOOL HasSessionContext(void);
+extern int GetFieldSessionState(void);
 extern void DrawProximityMarker(FieldSceneActor *actor);
 extern void NNS_G3dGlbPolygonAttr(int lights, int polygonMode, int cull, int polygonId, int alpha, int misc);
 extern void NNS_G3dMdlSetMdlAlphaAll(void *model, int alpha);
@@ -256,7 +256,7 @@ void UpdateSceneObjectAttachments(FieldSceneActor *actor, int mode)
                          scale, FX32_ONE, scale);
     }
     if (mode == 0 && actor->showMarker) {
-        fieldMode = func_ov001_02063a24() ? func_ov001_02063a38() : 0;
+        fieldMode = HasSessionContext() ? GetFieldSessionState() : 0;
         if (fieldMode != 4 && actor->marker != NULL &&
             actor->attachmentMode == 0 && mode == 0) {
             DrawProximityMarker(actor);

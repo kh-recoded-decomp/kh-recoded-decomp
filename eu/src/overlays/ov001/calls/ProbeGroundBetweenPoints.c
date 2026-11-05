@@ -1,4 +1,5 @@
+#define func_ov001_02063a38 GetFieldSessionState
 #define ProbeGroundBetweenPoints_0209206c ProbeGroundBetweenPoints
-#define Session_Exists_02063a24 func_ov001_02063a24
+#define Session_Exists_02063a24 HasSessionContext
 #define func_ov001_02091670 ProbeGroundBelowActor
 #include "src/ov001/shared_engine/ProbeGroundBetweenPoints_0209206c.c"

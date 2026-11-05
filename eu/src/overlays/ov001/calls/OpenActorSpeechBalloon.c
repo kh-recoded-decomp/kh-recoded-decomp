@@ -1,3 +1,4 @@
+#define func_ov001_02063a38 GetFieldSessionState
 #define ActorChannel_SelectBuffer_0208bd04 ActorChannel_SelectBuffer
 #define GetActorModeThreeTarget_02088b28 GetActorModeThreeTarget
 #define OpenActorSpeechBalloon_0208c534 OpenActorSpeechBalloon

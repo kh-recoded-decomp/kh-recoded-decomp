@@ -1,3 +1,4 @@
+#define func_ov001_02063a38 GetFieldSessionState
 #define ComputeOneMinusSquareFraction_02049d6c ComputeOneMinusSquareFraction
 #define FixedPointMultiply12 FX_Mul
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField

@@ -1,9 +1,10 @@
+#define func_ov001_02063a38 GetFieldSessionState
 #define ApplyActorMovementCollision_0208fda4 ApplyActorMovementCollision
 #define ClearActorMotionState_02091194 ClearActorMotionState
 #define FixedPointMultiply12 FX_Mul
 #define GetGlobalScaleValue_0209c3cc GetGlobalScaleValue
 #define RunOverrideTrack_020b4b9c RunOverrideTrack
-#define Session_Exists_02063a24 func_ov001_02063a24
+#define Session_Exists_02063a24 HasSessionContext
 #define VEC_Add_01ff9e0c VEC_Add
 #define VEC_Mag_01ff9f28 VEC_Mag
 #define VEC_Subtract_01ff9e3c VEC_Subtract

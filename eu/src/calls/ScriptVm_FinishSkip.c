@@ -1,3 +1,4 @@
+#define func_ov001_02063838 GetSessionFlagsMask20
 #define ScriptVm_FinishSkip_0202599c ScriptVm_FinishSkip
 #define ScriptVm_RunFrame_02025b18 ScriptVm_RunFrame
 #define SetBrightnessAndSyncMain_02029e7c SetBrightnessAndSyncMain

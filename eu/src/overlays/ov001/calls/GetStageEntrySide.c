@@ -1,7 +1,8 @@
+#define func_ov001_02063a38 GetFieldSessionState
 #define CacheStageEntryValue_02099248 CacheStageEntryValue
 #define FixedPointAtan2_020062bc FX_Atan2Idx
 #define GetStageEntrySide_020990ec GetStageEntrySide
-#define Session_Exists_02063a24 func_ov001_02063a24
+#define Session_Exists_02063a24 HasSessionContext
 #define func_01ff9f88 VEC_Normalize
 #define func_ov052_020ceb7c GetLinkedAngleOffset
 #define g_stageManager_020a0508 gStageManager

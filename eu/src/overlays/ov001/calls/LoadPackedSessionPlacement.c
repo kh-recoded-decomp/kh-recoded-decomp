@@ -1,8 +1,8 @@
-#include "nitro/types.h"
+#include "src/overlays/ov001/SessionPlacement.h"
 
 extern u32 ReadSessionPackedBits();
 
-void func_ov001_02064628(u32 values, u16 *extra) {
+void LoadPackedSessionPlacement(VecFx32 *position, u16 *angle) {
     u16 word;
     u32 value;
     s32 offset;
@@ -13,8 +13,8 @@ void func_ov001_02064628(u32 values, u16 *extra) {
         value = ReadSessionPackedBits(index * 0x20 + 0x3537, 0x20);
         offset = index * 4;
         index = index + 1;
-        *(u32 *)(values + offset) = value;
+        *(u32 *)((u8 *)position + offset) = value;
     } while (index < 3);
     word = ReadSessionPackedBits(0x3597, 0x10);
-    *extra = word;
+    *angle = word;
 }

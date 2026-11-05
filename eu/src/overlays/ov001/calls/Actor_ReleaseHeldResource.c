@@ -1,3 +1,4 @@
+#define func_ov001_02063a38 GetFieldSessionState
 #define Actor_ReleaseHeldResource_02088bc4 Actor_ReleaseHeldResource
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField
 #define ReleaseResourceAndDetach_0202eee8 ReleaseResourceAndDetach

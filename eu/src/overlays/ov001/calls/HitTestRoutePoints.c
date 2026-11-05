@@ -116,8 +116,8 @@ extern ShapeSweepFn gCollisionSweepDispatch[][6];
 extern StageActor *GetStageActor(int id);
 extern StageEntry *GetStageEntry(int id);
 extern StageActor *GetLinkedStageActor(StageActor *owner);
-extern int func_ov001_02063a24(void);
-extern s32 func_ov001_02063a38(void);
+extern int HasSessionContext(void);
+extern s32 GetFieldSessionState(void);
 extern s32 func_ov001_0208f040(RouteContext *ctx, int index);
 extern int FindActorResourceIndexByName(StageActor *actor, const char *name);
 extern void GetNodePosition(StageActor *owner, u32 nodeId, VecFx32 *out);
@@ -134,7 +134,7 @@ enum {
 
 static inline s32 GetSessionMode(void)
 {
-    return func_ov001_02063a24() ? func_ov001_02063a38() : 0;
+    return HasSessionContext() ? GetFieldSessionState() : 0;
 }
 
 static inline u32 Entry_GetPointCount(StageEntry *entry)

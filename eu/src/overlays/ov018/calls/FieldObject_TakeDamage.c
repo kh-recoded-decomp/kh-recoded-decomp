@@ -50,7 +50,7 @@ extern void ClearRecordSlotFlag(int index);
 extern void Flags16_ClearBit1(void *anim);
 extern u8 *ActorRegistry_GetEntityByIndex(u32 id);
 extern void RebindAnimTracks(void *anim, int blendIndex, int frame);
-extern int func_ov001_02063a38(void);
+extern int GetFieldSessionState(void);
 extern BOOL func_ov018_020a1f04(FieldObject *obj);
 extern void DropRequest_InitKind0(DropRequest *request, int dropIndex, int variant, u16 saveGroup, u8 saveIndex);
 extern void DropRequest_InitKind1(DropRequest *request, int dropIndex, int variant, u16 saveGroup, u8 saveIndex);
@@ -86,7 +86,7 @@ int FieldObject_TakeDamage(FieldObject *obj, HitInfo *hit)
     RebindAnimTracks(ActorRegistry_GetEntityByIndex(obj->actorId) + 4, 1, 0);
     Flags16_ClearBit1(ActorRegistry_GetEntityByIndex(obj->actorId) + 4);
     obj->flags |= 0x10;
-    func_ov001_02063a38();
+    GetFieldSessionState();
     obj->slotFlags &= ~0x10;
     obj->slotFlags &= ~8;
     if (obj->flags & 0x40) {

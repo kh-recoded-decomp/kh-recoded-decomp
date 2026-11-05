@@ -1,5 +1,6 @@
+#define func_ov001_02063a38 GetFieldSessionState
 #define HandleSessionEffectEvent_0209cb64 HandleSessionEffectEvent
-#define Session_Exists_02063a24 func_ov001_02063a24
+#define Session_Exists_02063a24 HasSessionContext
 #define data_ov001_020a0508 gStageManager
 #define func_0204a5e4 ScaleVecFx32InPlace
 #define func_ov021_020af544 ForwardSubModePairA

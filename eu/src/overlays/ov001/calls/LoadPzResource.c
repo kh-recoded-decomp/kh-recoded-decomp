@@ -1,3 +1,4 @@
+#define func_ov001_020636e4 GetSessionResourceArchive
 #define LoadPzResource_020663a4 LoadPzResource
 #define data_ov001_0209e9f0 sOv001_Pz_0209ea10
 #define findSharedResourceByName_0202cd8c findSharedResourceByName

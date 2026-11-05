@@ -7,7 +7,7 @@ typedef struct ScriptOperand {
 } ScriptOperand;
 
 extern int ScriptVm_ReadOperandInt(void *context, ScriptOperand *operand);
-extern s32 func_ov001_02063a38(void);
+extern s32 GetFieldSessionState(void);
 extern void func_ov030_020bb460(BOOL enable);
 extern void SetFlagBit4(BOOL enable);
 extern void DrawSceneGroups(BOOL enable);
@@ -17,7 +17,7 @@ int ScriptCmd_SetSceneFlagBit2(void *context, ScriptOperand *operands)
 {
     BOOL enable = ScriptVm_ReadOperandInt(context, operands) ? TRUE : FALSE;
 
-    switch (func_ov001_02063a38()) {
+    switch (GetFieldSessionState()) {
     case 4:
         func_ov030_020bb460(enable);
         break;

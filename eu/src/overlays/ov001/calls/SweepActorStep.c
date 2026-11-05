@@ -1,7 +1,8 @@
+#define func_ov001_02063a38 GetFieldSessionState
 #define CollisionQuery_Init_02034c74 CollisionQuery_Init
 #define FixedPointMultiply12 FX_Mul
 #define OffsetBoxByDelta_0203ac70 OffsetBoxByDelta
-#define Session_Exists_02063a24 func_ov001_02063a24
+#define Session_Exists_02063a24 HasSessionContext
 #define Surface_GetKindValue_02034c24 Surface_GetKindValue
 #define SweepActorStep_02091e68 SweepActorStep
 #define SweepWorldCollision_020364a0 SweepWorldCollision

@@ -1,3 +1,4 @@
+#define func_ov001_02063a38 GetFieldSessionState
 #define AddSessionCounter_02063a80 AddSessionCounter
 #define ApplyHitToEnemyGroup_020958f4 ApplyHitToEnemyGroup
 #define ApplyPartyStatGain_02066684 ApplyPartyStatGain
@@ -17,7 +18,7 @@
 #define PlayStageSoundAt_0209d080 PlayStageSoundAt
 #define ResetGroupLeaderAndSetState_02097a1c ResetGroupLeaderAndSetState
 #define ScheduleSpawnerNextTime_02096928 ScheduleSpawnerNextTime
-#define Session_Exists_02063a24 func_ov001_02063a24
+#define Session_Exists_02063a24 HasSessionContext
 #define SetStageEventKind_02092afc SetStageEventKind
 #define SpawnStageObjectActor_02096ae0 SpawnStageObjectActor
 #define VEC_DotProduct_01ff9e6c VEC_DotProduct

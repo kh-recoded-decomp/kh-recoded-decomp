@@ -1,3 +1,5 @@
+#define func_ov001_02063838 GetSessionFlagsMask20
+#define func_ov001_02063a38 GetFieldSessionState
 #define func_ov001_0206dc4c GetManagedActorPosition
 #define FieldObject_UpdateZoneTrigger_02081728 FieldObject_UpdateZoneTrigger
 #define data_ov001_020a0460 data_ov001_020a0480

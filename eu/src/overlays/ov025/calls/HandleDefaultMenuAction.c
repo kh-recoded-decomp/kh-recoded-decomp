@@ -1,3 +1,4 @@
+#define func_ov001_02063a38 GetFieldSessionState
 #define HandleDefaultMenuAction_020b5a94 HandleDefaultMenuAction
 #define _data_ov025_020b7760 data_ov025_020b7780
 #define func_0204d924 PlaySoundEffect

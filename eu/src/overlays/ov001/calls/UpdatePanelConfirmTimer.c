@@ -7,7 +7,7 @@ typedef struct {
     u16 confirmTimer;
 } PanelScene;
 
-extern s32 func_ov001_02063a38(void);
+extern s32 GetFieldSessionState(void);
 extern BOOL IsSessionFlagSet(u32 value);
 extern int func_ov001_02064784(void);
 extern BOOL func_ov001_0207b360(int choice);
@@ -28,7 +28,7 @@ void UpdatePanelConfirmTimer(PanelScene *panel)
         } else {
             panel->confirmTimer++;
             if (panel->confirmTimer >= 0x71) {
-                int choice = (func_ov001_02063a38() == 10) ? 1 : 0;
+                int choice = (GetFieldSessionState() == 10) ? 1 : 0;
                 if (choice != -1 && func_ov001_0207b360(choice)) {
                     panel->waitingForConfirm = FALSE;
                     panel->confirmTimer = 0;

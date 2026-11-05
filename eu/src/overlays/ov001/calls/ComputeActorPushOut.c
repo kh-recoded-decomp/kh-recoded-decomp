@@ -1,7 +1,8 @@
+#define func_ov001_02063a38 GetFieldSessionState
 #define ComputeActorPushOut_02094160 ComputeActorPushOut
 #define FX_Div_01ff9c84 FX_Div
 #define RandomHorizontalVector_02092634 RandomHorizontalVector
-#define Session_Exists_02063a24 func_ov001_02063a24
+#define Session_Exists_02063a24 HasSessionContext
 #define Surface_GetKindValue_02034c24 Surface_GetKindValue
 #define VEC_Mag_01ff9f28 VEC_Mag
 #define VEC_MultAdd_01ffa09c VEC_MultAdd

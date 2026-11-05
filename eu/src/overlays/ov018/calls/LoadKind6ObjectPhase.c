@@ -1,3 +1,4 @@
+#define func_ov001_02063a38 GetFieldSessionState
 #define ActorSlot_SetFlag8ByIndex_02036120 ActorSlot_SetFlag8ByIndex
 #define FX_Div_01ff9c84 FX_Div
 #define FieldObject_HandleStrongHit_020a28d4 FieldObject_HandleStrongHit

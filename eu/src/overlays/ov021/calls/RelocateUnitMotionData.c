@@ -1,3 +1,4 @@
+#define func_ov001_02063a38 GetFieldSessionState
 #define RelocateUnitMotionData_020a9d68 RelocateUnitMotionData
 #define func_ov021_020a9dfc BuildNodeGraph
 #include "src/ov021/object_state/RelocateUnitMotionData_020a9d68.c"

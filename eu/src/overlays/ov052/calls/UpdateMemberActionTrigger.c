@@ -1,3 +1,4 @@
+#define func_ov001_02063a38 GetFieldSessionState
 #define FindCurrentMemberIndex_020adac0 FindCurrentMemberIndex
 #define IsPlayerEntryFlagSet_02050014 IsPlayerEntryFlagSet
 #define UpdateMemberActionTrigger_020d0748 UpdateMemberActionTrigger

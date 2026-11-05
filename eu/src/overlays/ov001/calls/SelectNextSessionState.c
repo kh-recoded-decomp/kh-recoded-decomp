@@ -1,3 +1,4 @@
+#define func_ov001_020645f4 StorePackedSessionPlacement
 #define func_ov001_0206dc4c GetManagedActorPosition
 #define func_ov001_0206e444 SetFieldEntriesPaused
 #define func_ov001_020645c8 IsSessionFlagSet

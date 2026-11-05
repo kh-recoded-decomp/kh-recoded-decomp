@@ -1,3 +1,4 @@
+#define func_ov001_02063a38 GetFieldSessionState
 #define SpawnCueHandler_020acd14 SpawnCueHandler
 #define data_ov021_020b5258 gEffectCreationHandlers
 #define func_ov021_020acc94 FindWideEntryById

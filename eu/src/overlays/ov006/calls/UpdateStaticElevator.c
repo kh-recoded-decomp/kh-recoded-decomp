@@ -1,3 +1,4 @@
+#define func_ov001_02063838 GetSessionFlagsMask20
 #define func_ov001_020645c8 IsSessionFlagSet
 #define ActorSlot_IsFlag8SetByIndex_02036164 ActorSlot_IsFlag8SetByIndex
 #define ActorSlot_SetFlag8ByIndex_02036120 ActorSlot_SetFlag8ByIndex

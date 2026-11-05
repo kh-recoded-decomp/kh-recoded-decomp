@@ -8,8 +8,8 @@ typedef struct Session {
 typedef void (*OverlayWorkFunc)(void *work);
 
 extern Session *data_ov001_020a0480;
-extern u8 InitMovieSourceOps[];
+extern u8 InstallSceneHandlers_020bb288[];
 
-void func_ov001_02062b84(void) {
-    ((OverlayWorkFunc)InitMovieSourceOps)(data_ov001_020a0480->overlayWork);
+void InstallSessionOv030Handlers(void) {
+    ((OverlayWorkFunc)InstallSceneHandlers_020bb288)(data_ov001_020a0480->overlayWork);
 }

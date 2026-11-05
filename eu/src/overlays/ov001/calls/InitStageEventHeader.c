@@ -1,4 +1,4 @@
 #define InitStageEventHeader_020988d4 InitStageEventHeader
-#define Session_Exists_02063a24 func_ov001_02063a24
+#define Session_Exists_02063a24 HasSessionContext
 #define func_01ff8830 MI_CpuFill8
 #include "src/ov001/shared_engine/InitStageEventHeader_020988d4.c"

@@ -22,7 +22,7 @@ typedef struct FieldManager {
 } FieldManager;
 
 extern FieldManager *data_ov001_020a04bc;
-extern s32 func_ov001_02063a38(void);
+extern s32 GetFieldSessionState(void);
 extern void SetMenuHighlight(int value);
 extern void ConfigureChannelSlot(int kind, int value, int index);
 extern void func_ov001_0206cab4(u32 enabled);
@@ -35,7 +35,7 @@ void DeactivateManagerEntries(void)
     if (manager == NULL) {
         return;
     }
-    if (func_ov001_02063a38() != 7) {
+    if (GetFieldSessionState() != 7) {
         SetMenuHighlight(0);
     }
     entryIndex = 0;

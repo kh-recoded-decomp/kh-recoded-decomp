@@ -86,8 +86,8 @@ extern void ApplyActorMoveSpeed(Actor *actor, const VecFx32 *direction, fx32 sto
 extern void AddActorSideOffset(Actor *actor, VecFx32 *position, const VecFx32 *direction);
 extern void func_ov001_0208fc90(Actor *actor, VecFx32 *position);
 extern void ApplyActorMovementCollision(Actor *actor, VecFx32 *position);
-extern int func_ov001_02063a24(void);
-extern s32 func_ov001_02063a38(void);
+extern int HasSessionContext(void);
+extern s32 GetFieldSessionState(void);
 extern void UpdateActorAttachedEffects(Actor *actor);
 extern void UpdateStageActorBody(Actor *actor);
 extern Actor *GetStageActor(int id);
@@ -160,8 +160,8 @@ static inline void TurnActor(Actor *actor)
 
 static inline int GetSessionMode(void)
 {
-    if (func_ov001_02063a24()) {
-        return func_ov001_02063a38();
+    if (HasSessionContext()) {
+        return GetFieldSessionState();
     }
     return 0;
 }

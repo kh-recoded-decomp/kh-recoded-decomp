@@ -1,3 +1,4 @@
+#define func_ov001_02063a38 GetFieldSessionState
 #define ComputeRootMotionDelta_020ce9d4 ComputeRootMotionDelta
 #define DispatchSourceKindEvent_020d7db4 DispatchSourceKindEvent
 #define GetLockTargetPosition_020cef64 GetLockTargetPosition

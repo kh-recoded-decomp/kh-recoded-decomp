@@ -147,8 +147,8 @@ extern void ReleaseEventResources(StageCommand *command);
 extern u16 GetStageRowIndex(StageCommand *command);
 extern StageActor *GetStageActor(int id);
 extern BOOL IsCommandType4(StageCommand *command);
-extern BOOL func_ov001_02063a24(void);
-extern int func_ov001_02063a38(void);
+extern BOOL HasSessionContext(void);
+extern int GetFieldSessionState(void);
 extern u32 GetSmallRecordIndex(StageCommand *command);
 extern void ReleaseStageSlotEntry(int kind, u32 index);
 extern u16 IsSlotEntryUsed(void *list, int slot);
@@ -332,8 +332,8 @@ void UpdateStageManager(u32 value)
                         release = command->keepArmed ? 0 : 1;
                     }
                 }
-                if (func_ov001_02063a24()) {
-                    phase = func_ov001_02063a38();
+                if (HasSessionContext()) {
+                    phase = GetFieldSessionState();
                 } else {
                     phase = 0;
                 }

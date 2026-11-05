@@ -10,7 +10,7 @@ typedef struct FieldPoint {
 extern BOOL DetachFromLeaderQuadTree(FieldPoint *point);
 extern BOOL ActorSlot_IsFlag8SetByIndex(int actorIndex);
 extern void ActorSlot_SetFlag8ByIndex(int actorIndex, BOOL enable);
-extern u32 func_ov001_02063838(void);
+extern u32 GetSessionFlagsMask20(void);
 extern BOOL IsLeadActorNearPoint(FieldPoint *point);
 extern void ConfigureChannelSlot(int kind, int value, int index);
 
@@ -29,7 +29,7 @@ void UpdateFieldPointActivation(FieldPoint *point)
             point->flags &= ~0x20;
         }
     }
-    if (ActorSlot_IsFlag8SetByIndex(point->actorIndex) && func_ov001_02063838() == 0 &&
+    if (ActorSlot_IsFlag8SetByIndex(point->actorIndex) && GetSessionFlagsMask20() == 0 &&
         IsLeadActorNearPoint(point)) {
         ConfigureChannelSlot(0, 1, 0);
     }

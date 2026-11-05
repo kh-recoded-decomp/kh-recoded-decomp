@@ -1,3 +1,4 @@
+#define func_ov001_02063a38 GetFieldSessionState
 #define UpdateActorMovement_02038b50 UpdateActorMovement
 #define VEC_Add_01ff9e0c VEC_Add
 #define VEC_Subtract_01ff9e3c VEC_Subtract

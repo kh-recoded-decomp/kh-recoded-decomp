@@ -49,7 +49,7 @@ extern void func_ov020_020a2920(int value, Panel *panel);
 extern void PlayWeightedRandomEntry(int itemId, VecFx32 *position);
 extern void RollRewardOrbDrop(int eventId, VecFx32 *position);
 extern void SpawnSoundSlot(int a, int b, VecFx32 *position, int c);
-extern int func_ov001_02063a38(void);
+extern int GetFieldSessionState(void);
 extern u32 ReadSessionPackedBits(int bitOffset, u32 bitCount);
 extern void WriteSessionPackedBits(int bitOffset, u32 bitCount, u32 value);
 
@@ -92,7 +92,7 @@ int ActivatePanel(Panel *panel, PanelEvent *event)
         }
     }
     SpawnSoundSlot(0, 0x2d, &panel->position, 0);
-    if (func_ov001_02063a38() == 0) {
+    if (GetFieldSessionState() == 0) {
         count = ReadSessionPackedBits(0x3ee6, 10);
         if (count < 0xff) {
             WriteSessionPackedBits(0x3ee6, 10, count + 1);

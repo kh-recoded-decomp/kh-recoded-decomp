@@ -1,3 +1,4 @@
+#define func_ov001_02063a38 GetFieldSessionState
 #define Obj_SetPosition_0203569c Obj_SetPosition
 #define RestoreActorPositionMode_020898e4 RestoreActorPositionMode
 #define func_02038e6c func_02038e80
