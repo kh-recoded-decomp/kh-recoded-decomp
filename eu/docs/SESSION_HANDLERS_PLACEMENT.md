@@ -61,7 +61,7 @@ The null cases have different meanings:
 - `WaitSessionPollCallback` advances to state `11` when slot 4 is absent, and waits when a present callback returns FALSE.
 - `WaitSessionPollAndClearFlags` waits when slot 4 is absent. On a nonzero result, it clears session flag bits 6 and 7 and advances to state `6`.
 - `02062c64` permits an absent slot 7, but additionally requires `!IsEntryFlag2Active(0)`. The callback alone does not establish overall readiness.
-- `02064490` returns slot 10's word unchanged, or `1` when absent. `RunSessionCheckCallback` returns TRUE only when a present callback returns zero; it returns FALSE when absent. These are distinct operations.
+- `InvokeSessionCheckCallbackOrDefault` (`02064490`) returns slot 10's word unchanged, or `1` when absent. `RunSessionCheckCallback` returns TRUE when the callback is absent, or when a present callback returns zero; it returns FALSE for any nonzero callback result. These are distinct operations.
 
 When the machine handle is not `-1`, `ShutdownSessionOverlays` invokes slot 5, unloads the target overlay when needed, clears the complete 48-byte callback block and sets the handle to `-1`. The clear is conditional on the handle; do not assume an installer individually zeros every unwritten slot. Some initializers install only a subset, and slots 10/11 are not written by every initializer.
 

@@ -41,7 +41,7 @@ extern void RunMenuEntryCallbacks(void *context, int menu, int count, void (*cal
 extern void UploadScreenSlotBlock(int index, int mode);
 extern BOOL IsFieldPanelHidden(void);
 extern BOOL IsFirstEntryFlagSet(void);
-extern u32 func_ov001_02064490(void);
+extern u32 InvokeSessionCheckCallbackOrDefault(void);
 extern BOOL PlaySoundEffect(int seqArcNo, int index);
 extern void StopSeqArcOrDefault(int seqArcNo, int index, int fade);
 
@@ -81,7 +81,7 @@ void SetMenuGaugeActive(int index, BOOL enable) {
     }
     if (index == 0) {
         if (enable) {
-            if (menu->soundPlaying == 0 && IsFieldPanelHidden() && !IsFirstEntryFlagSet() && !func_ov001_02064490()) {
+            if (menu->soundPlaying == 0 && IsFieldPanelHidden() && !IsFirstEntryFlagSet() && !InvokeSessionCheckCallbackOrDefault()) {
                 PlaySoundEffect(0, 0xe);
                 menu->soundPlaying = 1;
             }

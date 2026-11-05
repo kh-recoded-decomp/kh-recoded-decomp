@@ -1,3 +1,4 @@
+#define func_ov001_02064490 InvokeSessionCheckCallbackOrDefault
 #define CallVirtualHandlerSlot1_02001574 CallVirtualHandlerSlot1
 #define FillBackgroundLayerRect_02001a60 FillBackgroundLayerRect
 #define FindActiveRecordById_020b8184 FindActiveRecordById

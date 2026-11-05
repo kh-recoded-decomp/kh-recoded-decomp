@@ -1,7 +1,7 @@
 #include "nitro/types.h"
 
-extern void func_ov001_0207fad0(void); /* ScriptCmd_EnterPhase */
-extern void func_ov001_0207fae0(void);
+extern void ScriptCmd_InitFieldObjectClassTable(void); /* ScriptCmd_EnterPhase */
+extern void ScriptCmd_ActivateFieldObject(void);
 extern void ScriptCmd_EnableObjectShadow(void); /* ScriptCmd_EnableObjectShadow */
 extern void func_ov001_0207fb58(void);
 extern void ScriptCmd_SpawnFieldObjectInSlot(void); /* ScriptCmd_SpawnFieldObjectInSlot */
@@ -13,9 +13,9 @@ extern void ScriptCmd_RegisterTriggerClass(void); /* ScriptCmd_RegisterTriggerCl
 extern void ScriptCmd_SpawnFieldObject(void); /* ScriptCmd_SpawnFieldObject */
 extern void ScriptCmd_CreateWorkSlotObject(void); /* ScriptCmd_CreateWorkSlotObject */
 extern void ScriptCmd_CreateRotatedFieldObject_0207ff38(void); /* ScriptCmd_CreateRotatedFieldObject */
-extern void func_ov001_0207ffd4(void); /* ScriptCmd_EnterPhase */
+extern void ScriptCmd_InitFieldEntryPoolTable(void); /* ScriptCmd_EnterPhase */
 extern void ScriptCmd_SetAuxObjectVisible(void); /* ScriptCmd_SetAuxObjectVisible */
-extern void func_ov001_02080020(void);
+extern void ScriptCmd_ReallocFieldEntryCacheRecord(void);
 extern void ScriptOp_SetObjectVector(void); /* ScriptOp_SetObjectVector */
 extern void ScriptCmd_CreateTargetViewInSlot(void); /* ScriptCmd_CreateTargetViewInSlot */
 extern void ScriptCmd_CreateRunningFieldObject(void); /* ScriptCmd_CreateRunningFieldObject */
@@ -38,12 +38,12 @@ extern void ScriptCmd_RegisterFieldObject(void); /* ScriptCmd_RegisterFieldObjec
 extern void ScriptCmd_CreateUpdatingFieldObject(void); /* ScriptCmd_CreateUpdatingFieldObject */
 extern void ScriptOp_SetObjectFlag6(void); /* ScriptOp_SetObjectFlag6 */
 extern void ScriptCmd_SetObjectCullRadius(void); /* ScriptCmd_SetObjectCullRadius */
-extern void func_ov001_020807a4(void); /* ScriptCmd_EnterPhase */
+extern void ScriptCmd_SetFieldEntryCachePaused(void); /* ScriptCmd_EnterPhase */
 
 void (*gFieldObjectScriptCommandHandlers[78])(void) = {
-    func_ov001_0207fad0, /* ScriptCmd_EnterPhase */
+    ScriptCmd_InitFieldObjectClassTable, /* ScriptCmd_EnterPhase */
     NULL,
-    func_ov001_0207fae0,
+    ScriptCmd_ActivateFieldObject,
     NULL,
     ScriptCmd_EnableObjectShadow, /* ScriptCmd_EnableObjectShadow */
     NULL,
@@ -67,11 +67,11 @@ void (*gFieldObjectScriptCommandHandlers[78])(void) = {
     NULL,
     ScriptCmd_CreateRotatedFieldObject_0207ff38, /* ScriptCmd_CreateRotatedFieldObject */
     NULL,
-    func_ov001_0207ffd4, /* ScriptCmd_EnterPhase */
+    ScriptCmd_InitFieldEntryPoolTable, /* ScriptCmd_EnterPhase */
     NULL,
     ScriptCmd_SetAuxObjectVisible, /* ScriptCmd_SetAuxObjectVisible */
     NULL,
-    func_ov001_02080020,
+    ScriptCmd_ReallocFieldEntryCacheRecord,
     NULL,
     ScriptOp_SetObjectVector, /* ScriptOp_SetObjectVector */
     NULL,
@@ -117,6 +117,6 @@ void (*gFieldObjectScriptCommandHandlers[78])(void) = {
     NULL,
     ScriptCmd_SetObjectCullRadius, /* ScriptCmd_SetObjectCullRadius */
     NULL,
-    func_ov001_020807a4, /* ScriptCmd_EnterPhase */
+    ScriptCmd_SetFieldEntryCachePaused, /* ScriptCmd_EnterPhase */
     NULL,
 };

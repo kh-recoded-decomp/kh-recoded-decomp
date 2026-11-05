@@ -1,3 +1,4 @@
+#define func_ov001_02064490 InvokeSessionCheckCallbackOrDefault
 #define func_ov001_02063a38 GetFieldSessionState
 #define AddGaugePoints_02073074 AddGaugePoints
 #define AdvanceStepTimer_020ccac8 AdvanceStepTimer

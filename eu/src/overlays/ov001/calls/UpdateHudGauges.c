@@ -71,7 +71,7 @@ extern void UploadScreenSlotBlock(int index, int mode);
 extern BOOL IsSessionFlagSet(int bitOffset);
 extern BOOL IsFieldPanelHidden(void);
 extern BOOL IsFirstEntryFlagSet(void);
-extern BOOL func_ov001_02064490(void);
+extern BOOL InvokeSessionCheckCallbackOrDefault(void);
 extern BOOL GetSessionFlagsMask20(void);
 extern int GetMainBrightnessSetting(void);
 extern void PlaySoundEffect(int a, int id);
@@ -131,7 +131,7 @@ int UpdateHudGauges(void)
         set->dirty = 0;
     }
     if (set->soundPlaying) {
-        if (IsFieldPanelHidden() && !IsFirstEntryFlagSet() && !func_ov001_02064490()) {
+        if (IsFieldPanelHidden() && !IsFirstEntryFlagSet() && !InvokeSessionCheckCallbackOrDefault()) {
             blocked = FALSE;
             if (data_ov001_020a0480->eventLock && data_ov001_020a0480->eventMode == 5) {
                 blocked = TRUE;
@@ -142,7 +142,7 @@ int UpdateHudGauges(void)
         }
         StopSeqArcOrDefault(0, 0xe, 5);
         set->soundPlaying = FALSE;
-    } else if (set->slots[0].active && IsFieldPanelHidden() && !IsFirstEntryFlagSet() && !func_ov001_02064490()) {
+    } else if (set->slots[0].active && IsFieldPanelHidden() && !IsFirstEntryFlagSet() && !InvokeSessionCheckCallbackOrDefault()) {
         blocked = FALSE;
         if (data_ov001_020a0480->eventLock && data_ov001_020a0480->eventMode == 5) {
             blocked = TRUE;

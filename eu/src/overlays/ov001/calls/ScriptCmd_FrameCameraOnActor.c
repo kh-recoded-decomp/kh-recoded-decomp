@@ -1,3 +1,3 @@
 #define Ov002_EnterPhase FrameCameraOnActor
-#define ScriptCmd_EnterPhase_0208ee30 func_ov001_0208ee58
+#define ScriptCmd_EnterPhase_0208ee30 ScriptCmd_FrameCameraOnActor
 #include "src/ov001/shared_engine/ScriptCmd_EnterPhase_0208ee30.c"

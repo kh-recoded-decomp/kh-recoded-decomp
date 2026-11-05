@@ -1,3 +1,3 @@
 #define FS_EndOverlay ActorChannel_ResetAndInvalidate
-#define FS_UnloadOverlayImage_0208d534 func_ov001_0208d55c
+#define FS_UnloadOverlayImage_0208d534 ScriptCmd_ResetFieldCameraChannel
 #include "src/ov001/library_nitro_fs/FS_UnloadOverlayImage_0208d534.c"

@@ -1,3 +1,3 @@
 #define FS_EndOverlay RestoreSavedCameraState
-#define FS_UnloadOverlayImage_0208d540 func_ov001_0208d568
+#define FS_UnloadOverlayImage_0208d540 ScriptCmd_RestoreSavedFieldCamera
 #include "src/ov001/library_nitro_fs/FS_UnloadOverlayImage_0208d540.c"

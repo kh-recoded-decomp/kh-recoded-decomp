@@ -13,7 +13,7 @@ extern void ScriptOp_StartFieldTimerAt(void); /* ScriptOp_StartFieldTimerAt */
 extern void ScriptOp_StartFieldTimer(void); /* ScriptOp_StartFieldTimer */
 extern void ScriptCmd_StartSessionScene(void); /* return 0; ByteCode_ResolveOperand */
 extern void func_ov001_02065200(void);
-extern void func_ov001_02065218(void); /* FS_UnloadOverlayImage */
+extern void ScriptCmd_LoadLevelTableFile(void); /* FS_UnloadOverlayImage */
 extern void ScriptCmd_QueueEventPair(void); /* ScriptCmd_QueueEventPair */
 extern void ScriptCmd_SetMapGimmickState(void); /* ScriptCmd_SetMapGimmickState */
 extern void ScriptCmd_PlayMapLayerAnimation(void); /* ScriptCmd_PlayMapLayerAnimation */
@@ -25,15 +25,15 @@ extern void func_ov001_02065388(void);
 extern void ScriptCmd_QueueFlagTaskKind3(void); /* ScriptCmd_QueueFlagTaskKind3 */
 extern void ScriptCmd_ShowSessionNameEntry(void); /* return 1; ScriptVm_ReadOperandInt */
 extern void func_ov001_02065448(void); /* FS_UnloadOverlayImage */
-extern void func_ov001_02065454(void); /* FS_UnloadOverlayImage */
+extern void ScriptCmd_LoadOffsetTableFile(void); /* FS_UnloadOverlayImage */
 extern void ScriptCmd_CommitChapterClearRecords(void); /* return 1; no local decode */
 extern void func_ov001_02065460(void); /* ScriptCmd_SetWorldByte8D68 */
 extern void ScriptCmd_QueueFlagTaskKind4(void); /* ScriptCmd_QueueFlagTaskKind4 */
 extern void ScriptCmd_AdjustItemCount(void); /* ScriptCmd_AdjustItemCount */
-extern void func_ov001_02065e34(void);
+extern void ScriptCmd_SetSessionFlag35e3(void);
 extern void ScriptCmd_SetFieldParameter(void); /* ScriptCmd_SetFieldParameter */
 extern void func_ov001_0206550c(void); /* FS_UnloadOverlayImage */
-extern void func_ov001_02065518(void);
+extern void ScriptCmd_SetMenuItemKind(void);
 extern void func_ov001_02065550(void);
 extern void ScriptOp_SetVector4(void); /* ScriptOp_SetVector4 */
 extern void ScriptCmd_RequestSubScene9(void); /* ScriptCmd_RequestSubScene9 */
@@ -46,7 +46,7 @@ extern void ScriptCmd_LoadCameraParams(void); /* return 1; ByteCode_ResolveOpera
 extern void ScriptCmd_SetIndexedSaveFlag(void); /* ScriptCmd_SetIndexedSaveFlag */
 extern void ScriptCmd_OpenFieldMenuMode(void); /* return 1; ScriptVm_ReadOperandInt */
 extern void ScriptCmd_SetSceneLock(void); /* return 1; ScriptVm_ReadOperandInt */
-extern void func_ov001_020656a0(void);
+extern void ScriptCmd_LoadSceneData(void);
 extern void ScriptCmd_ClearSceneEntry(void); /* return 1; ScriptVm_ReadOperandInt */
 extern void func_ov001_020656d4(void);
 extern void ScriptCmd_ShowHudIndicator(void); /* ScriptCmd_ShowHudIndicator */
@@ -66,14 +66,14 @@ extern void ScriptCmd_SetAngleDegrees(void); /* ScriptCmd_SetAngleDegrees */
 extern void ScriptCmd_AddStageSlotLock1(void); /* return 1; ScriptVm_ReadOperandInt */
 extern void ScriptCmd_TryActivateStageSlot(void); /* return 1; ScriptVm_ReadOperandInt */
 extern void ScriptCmd_SetFieldObjectsFlag(void); /* ScriptCmd_SetFieldObjectsFlag */
-extern void func_ov001_020659f4(void);
-extern void func_ov001_02065a00(void); /* CmdOpenDialog */
-extern void func_ov001_02065a10(void); /* thumbStep */
+extern void ScriptCmd_SetOv043CameraFlags8(void);
+extern void ScriptCmd_EnterPanelModeThree(void); /* CmdOpenDialog */
+extern void ScriptCmd_TestSceneFlag10Clear(void); /* thumbStep */
 extern void func_ov001_02065a24(void); /* FSi_CloseFileCommand */
 extern void ScriptCmd_SaveCurrentSpawnPoint(void); /* return 1; ScriptVm_ReadOperandInt */
 extern void ScriptCmd_SaveCheckpoint(void);
 extern void ScriptCmd_SetMenuHighlight(void); /* return 1; ScriptVm_ReadOperandInt */
-extern void func_ov001_02065a64(void); /* FS_UnloadOverlayImage */
+extern void ScriptCmd_ForwardSubModeStart(void); /* FS_UnloadOverlayImage */
 extern void func_ov001_02065a70(void);
 extern void func_ov001_02065a94(void);
 extern void ScriptCmd_ConfigureEventSlot(void); /* ScriptCmd_ConfigureEventSlot */
@@ -83,21 +83,21 @@ extern void ScriptCmd_PlacePartyMember(void);
 extern void ScriptCmd_BindScriptHandlersSlot7(void); /* return 1; ScriptVm_ReadOperandInt */
 extern void ScriptCmd_StoreRandomBits(void); /* ScriptCmd_StoreRandomBits */
 extern void ScriptCmd_AllocSessionNameTable(void); /* return 1; ScriptVm_ReadOperandInt */
-extern void func_ov001_02065c5c(void); /* ScriptCmd_SetLinkMode */
+extern void ScriptCmd_SetSessionTableName(void); /* ScriptCmd_SetLinkMode */
 extern void ScriptCmd_QueueFlagTaskKind8(void); /* ScriptCmd_QueueFlagTaskKind8 */
 extern void func_ov001_02065ce4(void); /* ScriptCmd_EnterPhase */
 extern void ScriptCmd_StorePageVariantParams(void); /* ScriptCmd_StorePageVariantParams */
 extern void ScriptCmd_StoreFifoReady(void);
 extern void func_ov001_02065db0(void); /* FS_UnloadOverlayImage */
 extern void func_ov001_02065e44(void); /* FS_UnloadOverlayImage */
-extern void func_ov001_02065e50(void);
+extern void ScriptCmd_SetupSlotPanelMode(void);
 extern void ScriptCmd_ToggleSessionBit15(void); /* ScriptCmd_ToggleSessionBit15 */
 extern void func_ov001_02065e8c(void);
 extern void ScriptCmd_DamageLeaderNonLethal(void);
 extern void func_ov001_02065f04(void);
 extern void ScriptCmd_ClearSessionStateWords(void); /* return 1; no local decode */
-extern void func_ov001_02065f2c(void); /* MsgQueue_GetHeap */
-extern void func_ov001_02065f38(void); /* thumbStep */
+extern void ScriptCmd_InvokeSessionCallback(void); /* MsgQueue_GetHeap */
+extern void ScriptCmd_TestSessionCheckCallback(void); /* thumbStep */
 extern void ScriptCmd_AwardSlotLevelProgress(void);
 extern void func_ov001_02065f5c(void); /* ScriptCmd_SetLinkMode */
 extern void ScriptCmd_ResetGaugeDisplay(void); /* return 1; no local decode */
@@ -128,7 +128,7 @@ void (*gFieldScriptCommandHandlers[190])(void) = {
     NULL,
     ScriptCmd_StartSessionScene, /* return 0; ByteCode_ResolveOperand */
     func_ov001_02065200,
-    func_ov001_02065218, /* FS_UnloadOverlayImage */
+    ScriptCmd_LoadLevelTableFile, /* FS_UnloadOverlayImage */
     NULL,
     ScriptCmd_QueueEventPair, /* ScriptCmd_QueueEventPair */
     NULL,
@@ -152,7 +152,7 @@ void (*gFieldScriptCommandHandlers[190])(void) = {
     NULL,
     func_ov001_02065448, /* FS_UnloadOverlayImage */
     NULL,
-    func_ov001_02065454, /* FS_UnloadOverlayImage */
+    ScriptCmd_LoadOffsetTableFile, /* FS_UnloadOverlayImage */
     NULL,
     ScriptCmd_CommitChapterClearRecords, /* return 1; no local decode */
     NULL,
@@ -162,13 +162,13 @@ void (*gFieldScriptCommandHandlers[190])(void) = {
     NULL,
     ScriptCmd_AdjustItemCount, /* ScriptCmd_AdjustItemCount */
     NULL,
-    func_ov001_02065e34,
+    ScriptCmd_SetSessionFlag35e3,
     NULL,
     ScriptCmd_SetFieldParameter, /* ScriptCmd_SetFieldParameter */
     NULL,
     func_ov001_0206550c, /* FS_UnloadOverlayImage */
     NULL,
-    func_ov001_02065518,
+    ScriptCmd_SetMenuItemKind,
     NULL,
     func_ov001_02065550,
     NULL,
@@ -192,7 +192,7 @@ void (*gFieldScriptCommandHandlers[190])(void) = {
     NULL,
     ScriptCmd_SetSceneLock, /* return 1; ScriptVm_ReadOperandInt */
     NULL,
-    func_ov001_020656a0,
+    ScriptCmd_LoadSceneData,
     NULL,
     ScriptCmd_ClearSceneEntry, /* return 1; ScriptVm_ReadOperandInt */
     NULL,
@@ -230,10 +230,10 @@ void (*gFieldScriptCommandHandlers[190])(void) = {
     NULL,
     ScriptCmd_SetFieldObjectsFlag, /* ScriptCmd_SetFieldObjectsFlag */
     NULL,
-    func_ov001_020659f4,
+    ScriptCmd_SetOv043CameraFlags8,
     NULL,
-    func_ov001_02065a00, /* CmdOpenDialog */
-    func_ov001_02065a10, /* thumbStep */
+    ScriptCmd_EnterPanelModeThree, /* CmdOpenDialog */
+    ScriptCmd_TestSceneFlag10Clear, /* thumbStep */
     func_ov001_02065a24, /* FSi_CloseFileCommand */
     NULL,
     ScriptCmd_SaveCurrentSpawnPoint, /* return 1; ScriptVm_ReadOperandInt */
@@ -242,7 +242,7 @@ void (*gFieldScriptCommandHandlers[190])(void) = {
     NULL,
     ScriptCmd_SetMenuHighlight, /* return 1; ScriptVm_ReadOperandInt */
     NULL,
-    func_ov001_02065a64, /* FS_UnloadOverlayImage */
+    ScriptCmd_ForwardSubModeStart, /* FS_UnloadOverlayImage */
     NULL,
     func_ov001_02065a70,
     func_ov001_02065a94,
@@ -258,7 +258,7 @@ void (*gFieldScriptCommandHandlers[190])(void) = {
     NULL,
     ScriptCmd_AllocSessionNameTable, /* return 1; ScriptVm_ReadOperandInt */
     NULL,
-    func_ov001_02065c5c, /* ScriptCmd_SetLinkMode */
+    ScriptCmd_SetSessionTableName, /* ScriptCmd_SetLinkMode */
     NULL,
     ScriptCmd_QueueFlagTaskKind8, /* ScriptCmd_QueueFlagTaskKind8 */
     NULL,
@@ -272,7 +272,7 @@ void (*gFieldScriptCommandHandlers[190])(void) = {
     NULL,
     func_ov001_02065e44, /* FS_UnloadOverlayImage */
     NULL,
-    func_ov001_02065e50,
+    ScriptCmd_SetupSlotPanelMode,
     NULL,
     ScriptCmd_ToggleSessionBit15, /* ScriptCmd_ToggleSessionBit15 */
     NULL,
@@ -284,8 +284,8 @@ void (*gFieldScriptCommandHandlers[190])(void) = {
     NULL,
     ScriptCmd_ClearSessionStateWords, /* return 1; no local decode */
     NULL,
-    func_ov001_02065f2c, /* MsgQueue_GetHeap */
-    func_ov001_02065f38, /* thumbStep */
+    ScriptCmd_InvokeSessionCallback, /* MsgQueue_GetHeap */
+    ScriptCmd_TestSessionCheckCallback, /* thumbStep */
     ScriptCmd_AwardSlotLevelProgress,
     NULL,
     func_ov001_02065f5c, /* ScriptCmd_SetLinkMode */

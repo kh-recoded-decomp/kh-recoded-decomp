@@ -478,3 +478,12 @@ board-widget blit/clear/deferred cleanup.
 [SUBTITLE_SCROLL_WIDGET_CONTRACTS.md](SUBTITLE_SCROLL_WIDGET_CONTRACTS.md)
 records byte-string decoding, cursor/alignment distinctions, captured draw
 coordinates, MMIO effects, borrowed buffers and native return boundaries.
+
+## Field-script resource, object and actor commands
+
+Thirty-one entrypoints now name the demonstrated field resource/menu/session
+adapters, two distinct object managers and actor camera/probe/record commands.
+[FIELD_SCRIPT_EXTENSIONS.md](FIELD_SCRIPT_EXTENSIONS.md) records the shared
+MAIN interpreter, group/entry pairs, run/resume control, copied versus borrowed
+inputs, persistent record writes and remaining semantic limits. The session
+callback documentation now gives the verified absent/zero/nonzero behavior.

@@ -2,7 +2,7 @@
 
 extern void ScriptCmd_SetScreenSwap(void); /* ScriptCmd_SetScreenSwap */
 extern void func_ov001_0208c764(void); /* DefaultStepDone */
-extern void func_ov001_0208d5c8(void); /* FS_UnloadOverlayImage */
+extern void ScriptCmd_PushActorVramState(void); /* FS_UnloadOverlayImage */
 extern void ScriptCmd_ReleaseSceneActors(void); /* ScriptCmd_ReleaseSceneActors */
 extern void ScriptOp_RunActorPass(void); /* ScriptOp_RunActorPass */
 extern void ScriptCmd_BeginBrightnessFade(void); /* ScriptCmd_BeginBrightnessFade */
@@ -20,7 +20,7 @@ extern void ScriptCmd_ShowActor(void); /* ScriptCmd_ShowActor */
 extern void ScriptCmd_HideActor(void); /* ScriptCmd_HideActor */
 extern void ScriptCmd_SetActorProbeSphere(void); /* ScriptCmd_SetActorProbeSphere */
 extern void updateActorTransitionParameterRampCommand_0208cb3c(void); /* updateActorTransitionParameterRampCommand */
-extern void func_ov001_0208cbbc(void);
+extern void ScriptCmd_DisableResolvedActorProbeSphere(void);
 extern void Script_MakeActorTranslucentAndClearVerticalOffset_0208ded8(void); /* Script_MakeActorTranslucentAndClearVerticalOffset */
 extern void PlaceActorRelativeToActor(void); /* PlaceActorRelativeToActor */
 extern void Script_SetActorParameterFromInteger(void); /* Script_SetActorParameterFromInteger */
@@ -47,9 +47,9 @@ extern void ScriptCmd_SetActorHeadingDegrees(void); /* ScriptCmd_SetActorHeading
 extern void ScriptCmd_StartChannelTransform(void); /* ScriptCmd_StartChannelTransform */
 extern void ScriptCmd_SetActorChannelState(void); /* ScriptCmd_SetActorChannelState */
 extern void ScriptCmd_PlayActorChannel(void); /* ScriptCmd_PlayActorChannel */
-extern void func_ov001_0208d574(void); /* thumbStep */
-extern void func_ov001_0208d55c(void); /* FS_UnloadOverlayImage */
-extern void func_ov001_0208d568(void); /* FS_UnloadOverlayImage */
+extern void ScriptCmd_WaitForFieldCameraTransition(void); /* thumbStep */
+extern void ScriptCmd_ResetFieldCameraChannel(void); /* FS_UnloadOverlayImage */
+extern void ScriptCmd_RestoreSavedFieldCamera(void); /* FS_UnloadOverlayImage */
 extern void ScriptCmd_SetCameraTarget(void); /* ScriptCmd_SetCameraTarget */
 extern void ScriptCmd_ActorTimerOrAnim(void); /* ScriptCmd_ActorTimerOrAnim */
 extern void ScriptCmd_ClearActorTimers(void); /* ScriptCmd_ClearActorTimers */
@@ -86,22 +86,22 @@ extern void FreeScriptWorkBuffers(void); /* FreeScriptWorkBuffers */
 extern void func_ov001_0208dab8(void); /* DefaultStepDone */
 extern void func_ov001_0208dabc(void); /* DefaultStepDone */
 extern void PickRandomUnsetSessionFlag(void); /* PickRandomUnsetSessionFlag */
-extern void func_ov001_0208eba8(void);
-extern void func_ov001_0208ebb8(void);
+extern void ScriptCmd_BeginEventCameraAndFreezeSubMode(void);
+extern void ScriptCmd_FinishEventCameraAndUnfreezeSubMode(void);
 extern void ScriptCmd_ShowItemMessage(void); /* ScriptCmd_ShowItemMessage */
 extern void ScriptCmd_PlayStageEventAnimation(void); /* ScriptCmd_PlayStageEventAnimation */
-extern void func_ov001_0208ecec(void);
+extern void ScriptCmd_GrantRecordPair(void);
 extern void ScriptCmd_SetSceneFlagBit2(void);
 extern void ScriptCmd_FaceTargetWithAnims(void); /* ScriptCmd_FaceTargetWithAnims */
 extern void ScriptOp_InitSubsystemIfFlagClear(void); /* ScriptOp_InitSubsystemIfFlagClear */
 extern void ScriptCmd_QueueCameraAngleTransition(void); /* ScriptCmd_QueueCameraAngleTransition */
-extern void func_ov001_0208ee58(void); /* ScriptCmd_EnterPhase */
-extern void func_ov001_0208ee68(void);
+extern void ScriptCmd_FrameCameraOnActor(void); /* ScriptCmd_EnterPhase */
+extern void ScriptCmd_SetActorAngleDegrees(void);
 extern void RefreshPartyMemberStates(void); /* RefreshPartyMemberStates */
 extern void RecordPlayerStateFlags(void); /* RecordPlayerStateFlags */
 extern void Actor_BroadcastCallback(void); /* Actor_BroadcastCallback */
 extern void ScriptCmd_WaitMenuState(void); /* ScriptCmd_WaitMenuState */
-extern void func_ov001_0208efd4(void); /* FS_UnloadOverlayImage */
+extern void ScriptCmd_RefreshFieldHudIconRecords(void); /* FS_UnloadOverlayImage */
 extern void func_ov001_0208efe0(void); /* thumbStep */
 
 void (*gActorScriptCommandHandlers[186])(void) = {
@@ -109,7 +109,7 @@ void (*gActorScriptCommandHandlers[186])(void) = {
     NULL,
     func_ov001_0208c764, /* DefaultStepDone */
     NULL,
-    func_ov001_0208d5c8, /* FS_UnloadOverlayImage */
+    ScriptCmd_PushActorVramState, /* FS_UnloadOverlayImage */
     NULL,
     ScriptCmd_ReleaseSceneActors, /* ScriptCmd_ReleaseSceneActors */
     NULL,
@@ -139,7 +139,7 @@ void (*gActorScriptCommandHandlers[186])(void) = {
     NULL,
     ScriptCmd_SetActorProbeSphere, /* ScriptCmd_SetActorProbeSphere */
     updateActorTransitionParameterRampCommand_0208cb3c, /* updateActorTransitionParameterRampCommand */
-    func_ov001_0208cbbc,
+    ScriptCmd_DisableResolvedActorProbeSphere,
     NULL,
     Script_MakeActorTranslucentAndClearVerticalOffset_0208ded8, /* Script_MakeActorTranslucentAndClearVerticalOffset */
     NULL,
@@ -187,11 +187,11 @@ void (*gActorScriptCommandHandlers[186])(void) = {
     NULL,
     ScriptCmd_PlayActorChannel, /* ScriptCmd_PlayActorChannel */
     NULL,
-    func_ov001_0208d574, /* thumbStep */
+    ScriptCmd_WaitForFieldCameraTransition, /* thumbStep */
     NULL,
-    func_ov001_0208d55c, /* FS_UnloadOverlayImage */
+    ScriptCmd_ResetFieldCameraChannel, /* FS_UnloadOverlayImage */
     NULL,
-    func_ov001_0208d568, /* FS_UnloadOverlayImage */
+    ScriptCmd_RestoreSavedFieldCamera, /* FS_UnloadOverlayImage */
     NULL,
     ScriptCmd_SetCameraTarget, /* ScriptCmd_SetCameraTarget */
     NULL,
@@ -257,15 +257,15 @@ void (*gActorScriptCommandHandlers[186])(void) = {
     func_ov001_0208dabc, /* DefaultStepDone */
     PickRandomUnsetSessionFlag, /* PickRandomUnsetSessionFlag */
     NULL,
-    func_ov001_0208eba8,
+    ScriptCmd_BeginEventCameraAndFreezeSubMode,
     NULL,
-    func_ov001_0208ebb8,
+    ScriptCmd_FinishEventCameraAndUnfreezeSubMode,
     NULL,
     ScriptCmd_ShowItemMessage, /* ScriptCmd_ShowItemMessage */
     NULL,
     ScriptCmd_PlayStageEventAnimation, /* ScriptCmd_PlayStageEventAnimation */
     NULL,
-    func_ov001_0208ecec,
+    ScriptCmd_GrantRecordPair,
     NULL,
     ScriptCmd_SetSceneFlagBit2,
     NULL,
@@ -275,9 +275,9 @@ void (*gActorScriptCommandHandlers[186])(void) = {
     NULL,
     ScriptCmd_QueueCameraAngleTransition, /* ScriptCmd_QueueCameraAngleTransition */
     NULL,
-    func_ov001_0208ee58, /* ScriptCmd_EnterPhase */
+    ScriptCmd_FrameCameraOnActor, /* ScriptCmd_EnterPhase */
     NULL,
-    func_ov001_0208ee68,
+    ScriptCmd_SetActorAngleDegrees,
     NULL,
     RefreshPartyMemberStates, /* RefreshPartyMemberStates */
     NULL,
@@ -287,7 +287,7 @@ void (*gActorScriptCommandHandlers[186])(void) = {
     NULL,
     ScriptCmd_WaitMenuState, /* ScriptCmd_WaitMenuState */
     NULL,
-    func_ov001_0208efd4, /* FS_UnloadOverlayImage */
+    ScriptCmd_RefreshFieldHudIconRecords, /* FS_UnloadOverlayImage */
     NULL,
     func_ov001_0208efe0, /* thumbStep */
     NULL,

@@ -1,4 +1,4 @@
-#define CmdOpenDialog_02065a00 func_ov001_02065a00
+#define CmdOpenDialog_02065a00 ScriptCmd_EnterPanelModeThree
 #define Ov023_OpenDialog EnterPanelModeThree
 #define ScriptVm_ReadOperandInt ByteCode_ResolveOperand
 #include "src/ov001/shared_engine/CmdOpenDialog_02065a00.c"

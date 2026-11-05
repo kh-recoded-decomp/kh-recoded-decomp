@@ -32,7 +32,7 @@ typedef struct {
 extern FieldState *data_ov001_020a0480;
 extern VecFx32 gZeroVecFx32;
 extern BOOL func_ov001_02063620(void);
-extern BOOL func_ov001_02064490(void);
+extern BOOL InvokeSessionCheckCallbackOrDefault(void);
 extern VecFx32 *func_ov007_020a100c(WanderActor *actor);
 extern int GetBoundedEntryField(int index);
 extern BOOL GrantRewardItem(int entry, int *heading, u32 *facing);
@@ -49,7 +49,7 @@ BOOL TryLaunchWanderActor(WanderActor *actor) {
     if (actor->state != 0) {
         return FALSE;
     }
-    if (func_ov001_02063620() || (data_ov001_020a0480->flags & 0x10) || func_ov001_02064490()) {
+    if (func_ov001_02063620() || (data_ov001_020a0480->flags & 0x10) || InvokeSessionCheckCallbackOrDefault()) {
         return FALSE;
     }
     heading = actor->heading;

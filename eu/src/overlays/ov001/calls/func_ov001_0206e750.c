@@ -5,7 +5,7 @@ extern s32 data_ov001_020a04bc;
 extern s32 GXx_GetMasterBrightness_(u32 reg);
 extern void SetBrightnessAndSyncMain(s32 callerId);
 extern s32 GetMainBrightnessSetting(void);
-extern s32 func_ov001_02064490(void);
+extern s32 InvokeSessionCheckCallbackOrDefault(void);
 
 s32 func_ov001_0206e750(s32 callerId)
 {
@@ -28,7 +28,7 @@ s32 func_ov001_0206e750(s32 callerId)
     }
     ok = 0;
 stillOwned:
-    check = func_ov001_02064490();
+    check = InvokeSessionCheckCallbackOrDefault();
     if ((check != 0) || (gPanelActive != 0)) {
         ok = 0;
     }

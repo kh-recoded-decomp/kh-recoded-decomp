@@ -1,3 +1,4 @@
+#define func_ov001_02064490 InvokeSessionCheckCallbackOrDefault
 #define func_ov001_02063a38 GetFieldSessionState
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField
 #define HasFlagsAt0xe_020a752c HasFlagsAt0xe

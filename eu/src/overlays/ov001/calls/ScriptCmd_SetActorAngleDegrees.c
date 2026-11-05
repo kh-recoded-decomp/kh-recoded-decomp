@@ -46,7 +46,7 @@ extern unsigned int ScriptVm_ReadOperandInt();
 extern unsigned int _s32_div_f();
 extern unsigned int ActorRegistry_GetEntityByIndex();
 
-unsigned int func_ov001_0208ee68(void *vm,void *operands) {
+unsigned int ScriptCmd_SetActorAngleDegrees(void *vm,void *operands) {
   u32 actorId;
   int angle;
   ActorNode *actor;

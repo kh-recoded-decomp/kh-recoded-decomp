@@ -1,3 +1,3 @@
 #define Ov002_EnterPhase SetCachePaused
-#define ScriptCmd_EnterPhase_0208077c func_ov001_020807a4
+#define ScriptCmd_EnterPhase_0208077c ScriptCmd_SetFieldEntryCachePaused
 #include "src/ov001/shared_engine/ScriptCmd_EnterPhase_0208077c.c"

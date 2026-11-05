@@ -1,4 +1,4 @@
 #define Ov002_SetLinkModeAndValue SetSessionTableName
-#define ScriptCmd_SetLinkMode_02065c5c func_ov001_02065c5c
+#define ScriptCmd_SetLinkMode_02065c5c ScriptCmd_SetSessionTableName
 #define ScriptVm_ReadOperandFx32 ByteCode_ResolveOperand
 #include "src/ov001/shared_engine/ScriptCmd_SetLinkMode_02065c5c.c"

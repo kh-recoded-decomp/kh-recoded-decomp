@@ -1,3 +1,4 @@
+#define func_ov001_02064490 InvokeSessionCheckCallbackOrDefault
 #define RunOwnerStateMachine_0207036c RunOwnerStateMachine
 #define data_ov001_0209ec78 gHudSlideStateHandlers
 #define func_0205255c StartTween

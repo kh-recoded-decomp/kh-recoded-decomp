@@ -1,3 +1,3 @@
 #define FS_EndOverlay ForwardSubModeStart
-#define FS_UnloadOverlayImage_02065a64 func_ov001_02065a64
+#define FS_UnloadOverlayImage_02065a64 ScriptCmd_ForwardSubModeStart
 #include "src/ov001/library_nitro_fs/FS_UnloadOverlayImage_02065a64.c"

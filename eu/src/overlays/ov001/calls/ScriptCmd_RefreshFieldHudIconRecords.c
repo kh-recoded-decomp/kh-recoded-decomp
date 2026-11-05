@@ -1,3 +1,3 @@
 #define FS_EndOverlay func_ov001_02073718
-#define FS_UnloadOverlayImage_0208efac func_ov001_0208efd4
+#define FS_UnloadOverlayImage_0208efac ScriptCmd_RefreshFieldHudIconRecords
 #include "src/ov001/library_nitro_fs/FS_UnloadOverlayImage_0208efac.c"

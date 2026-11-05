@@ -1,3 +1,3 @@
 #define FS_EndOverlay LoadLevelTableFile
-#define FS_UnloadOverlayImage_02065218 func_ov001_02065218
+#define FS_UnloadOverlayImage_02065218 ScriptCmd_LoadLevelTableFile
 #include "src/ov001/library_nitro_fs/FS_UnloadOverlayImage_02065218.c"

@@ -1,3 +1,3 @@
-#define MsgQueue_GetHeap_02065f2c func_ov001_02065f2c
+#define MsgQueue_GetHeap_02065f2c ScriptCmd_InvokeSessionCallback
 #define NNSi_FndGetCurrentRootHeap func_ov001_02064de8
 #include "src/ov001/shared_engine/MsgQueue_GetHeap_02065f2c.c"

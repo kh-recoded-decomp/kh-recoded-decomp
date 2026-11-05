@@ -392,7 +392,7 @@ src/overlays/ov001/calls/SaveSessionCheckpoint.c:
     complete
     .text       start:0x02064364 end:0x02064490
 
-src/overlays/ov001/calls/func_ov001_02064490.c:
+src/overlays/ov001/calls/InvokeSessionCheckCallbackOrDefault.c:
     complete
     .text       start:0x02064490 end:0x020644b0
 
@@ -620,7 +620,7 @@ src/overlays/ov001/calls/func_ov001_02065200.c:
     complete
     .text       start:0x02065200 end:0x02065218
 
-src/overlays/ov001/calls/func_ov001_02065218.c:
+src/overlays/ov001/calls/ScriptCmd_LoadLevelTableFile.c:
     complete
     .text       start:0x02065218 end:0x02065222
 
@@ -664,7 +664,7 @@ src/overlays/ov001/calls/func_ov001_02065448.c:
     complete
     .text       start:0x02065448 end:0x02065452
 
-src/overlays/ov001/calls/func_ov001_02065454.c:
+src/overlays/ov001/calls/ScriptCmd_LoadOffsetTableFile.c:
     complete
     .text       start:0x02065454 end:0x0206545e
 
@@ -684,7 +684,7 @@ src/overlays/ov001/calls/func_ov001_0206550c.c:
     complete
     .text       start:0x0206550c end:0x02065516
 
-src/overlays/ov001/calls/func_ov001_02065518.c:
+src/overlays/ov001/calls/ScriptCmd_SetMenuItemKind.c:
     complete
     .text       start:0x02065518 end:0x0206554e
 
@@ -736,7 +736,7 @@ src/overlays/ov001/calls/ScriptCmd_SetSceneLock.c:
     complete
     .text       start:0x02065690 end:0x0206569e
 
-src/overlays/ov001/calls/func_ov001_020656a0.c:
+src/overlays/ov001/calls/ScriptCmd_LoadSceneData.c:
     complete
     .text       start:0x020656a0 end:0x020656c2
 
@@ -816,15 +816,15 @@ src/overlays/ov001/calls/ScriptCmd_SetFieldObjectsFlag.c:
     complete
     .text       start:0x020659dc end:0x020659f4
 
-src/overlays/ov001/auto/func_ov001_020659f4.c:
+src/overlays/ov001/auto/ScriptCmd_SetOv043CameraFlags8.c:
     complete
     .text       start:0x020659f4 end:0x02065a00
 
-src/overlays/ov001/calls/func_ov001_02065a00.c:
+src/overlays/ov001/calls/ScriptCmd_EnterPanelModeThree.c:
     complete
     .text       start:0x02065a00 end:0x02065a0e
 
-src/overlays/ov001/calls/func_ov001_02065a10.c:
+src/overlays/ov001/calls/ScriptCmd_TestSceneFlag10Clear.c:
     complete
     .text       start:0x02065a10 end:0x02065a22
 
@@ -844,7 +844,7 @@ src/overlays/ov001/calls/ScriptCmd_SetMenuHighlight.c:
     complete
     .text       start:0x02065a54 end:0x02065a62
 
-src/overlays/ov001/calls/func_ov001_02065a64.c:
+src/overlays/ov001/calls/ScriptCmd_ForwardSubModeStart.c:
     complete
     .text       start:0x02065a64 end:0x02065a6e
 
@@ -884,7 +884,7 @@ src/overlays/ov001/calls/ScriptCmd_AllocSessionNameTable.c:
     complete
     .text       start:0x02065c4c end:0x02065c5a
 
-src/overlays/ov001/calls/func_ov001_02065c5c.c:
+src/overlays/ov001/calls/ScriptCmd_SetSessionTableName.c:
     complete
     .text       start:0x02065c5c end:0x02065c7e
 
@@ -916,7 +916,7 @@ src/overlays/ov001/calls/ScriptCmd_AdjustItemCount.c:
     complete
     .text       start:0x02065dc8 end:0x02065e34
 
-src/overlays/ov001/calls/func_ov001_02065e34.c:
+src/overlays/ov001/calls/ScriptCmd_SetSessionFlag35e3.c:
     complete
     .text       start:0x02065e34 end:0x02065e44
 
@@ -924,7 +924,7 @@ src/overlays/ov001/calls/func_ov001_02065e44.c:
     complete
     .text       start:0x02065e44 end:0x02065e4e
 
-src/overlays/ov001/calls/func_ov001_02065e50.c:
+src/overlays/ov001/calls/ScriptCmd_SetupSlotPanelMode.c:
     complete
     .text       start:0x02065e50 end:0x02065e72
 
@@ -948,11 +948,11 @@ src/overlays/ov001/calls/ScriptCmd_ClearSessionStateWords.c:
     complete
     .text       start:0x02065f20 end:0x02065f2a
 
-src/overlays/ov001/calls/func_ov001_02065f2c.c:
+src/overlays/ov001/calls/ScriptCmd_InvokeSessionCallback.c:
     complete
     .text       start:0x02065f2c end:0x02065f36
 
-src/overlays/ov001/calls/func_ov001_02065f38.c:
+src/overlays/ov001/calls/ScriptCmd_TestSessionCheckCallback.c:
     complete
     .text       start:0x02065f38 end:0x02065f4a
 
@@ -1236,7 +1236,7 @@ src/overlays/ov001/calls/func_ov001_02067ed4.c:
     complete
     .text       start:0x02067ed4 end:0x02067ee4
 
-src/overlays/ov001/calls/func_ov001_02067ee4.c:
+src/overlays/ov001/calls/SetMenuItemKind.c:
     complete
     .text       start:0x02067ee4 end:0x02067f08
 
@@ -4832,11 +4832,11 @@ src/overlays/ov001/calls/SetOwnerAndTargetValue.c:
     complete
     .text       start:0x0207fac0 end:0x0207fad0
 
-src/overlays/ov001/calls/func_ov001_0207fad0.c:
+src/overlays/ov001/calls/ScriptCmd_InitFieldObjectClassTable.c:
     complete
     .text       start:0x0207fad0 end:0x0207fade
 
-src/overlays/ov001/calls/func_ov001_0207fae0.c:
+src/overlays/ov001/calls/ScriptCmd_ActivateFieldObject.c:
     complete
     .text       start:0x0207fae0 end:0x0207fb10
 
@@ -4884,7 +4884,7 @@ src/overlays/ov001/calls/ScriptCmd_CreateRotatedFieldObject_0207ff38.c:
     complete
     .text       start:0x0207ff38 end:0x0207ffd2
 
-src/overlays/ov001/calls/func_ov001_0207ffd4.c:
+src/overlays/ov001/calls/ScriptCmd_InitFieldEntryPoolTable.c:
     complete
     .text       start:0x0207ffd4 end:0x0207ffe2
 
@@ -4892,7 +4892,7 @@ src/overlays/ov001/calls/ScriptCmd_SetAuxObjectVisible.c:
     complete
     .text       start:0x0207ffe4 end:0x02080020
 
-src/overlays/ov001/calls/func_ov001_02080020.c:
+src/overlays/ov001/calls/ScriptCmd_ReallocFieldEntryCacheRecord.c:
     complete
     .text       start:0x02080020 end:0x02080042
 
@@ -4984,7 +4984,7 @@ src/overlays/ov001/calls/ScriptCmd_SetObjectCullRadius.c:
     complete
     .text       start:0x0208076c end:0x020807a2
 
-src/overlays/ov001/calls/func_ov001_020807a4.c:
+src/overlays/ov001/calls/ScriptCmd_SetFieldEntryCachePaused.c:
     complete
     .text       start:0x020807a4 end:0x020807b2
 
@@ -6716,7 +6716,7 @@ src/overlays/ov001/calls/updateActorTransitionParameterRampCommand_0208cb3c.c:
     complete
     .text       start:0x0208cb3c end:0x0208cbba
 
-src/overlays/ov001/calls/func_ov001_0208cbbc.c:
+src/overlays/ov001/calls/ScriptCmd_DisableResolvedActorProbeSphere.c:
     complete
     .text       start:0x0208cbbc end:0x0208cbdc
 
@@ -6796,15 +6796,15 @@ src/overlays/ov001/calls/ScriptCmd_SetActorChannelState.c:
     complete
     .text       start:0x0208d534 end:0x0208d55c
 
-src/overlays/ov001/calls/func_ov001_0208d55c.c:
+src/overlays/ov001/calls/ScriptCmd_ResetFieldCameraChannel.c:
     complete
     .text       start:0x0208d55c end:0x0208d566
 
-src/overlays/ov001/calls/func_ov001_0208d568.c:
+src/overlays/ov001/calls/ScriptCmd_RestoreSavedFieldCamera.c:
     complete
     .text       start:0x0208d568 end:0x0208d572
 
-src/overlays/ov001/calls/func_ov001_0208d574.c:
+src/overlays/ov001/calls/ScriptCmd_WaitForFieldCameraTransition.c:
     complete
     .text       start:0x0208d574 end:0x0208d586
 
@@ -6820,7 +6820,7 @@ src/overlays/ov001/auto/func_ov001_0208d5c4.c:
     complete
     .text       start:0x0208d5c4 end:0x0208d5c8
 
-src/overlays/ov001/calls/func_ov001_0208d5c8.c:
+src/overlays/ov001/calls/ScriptCmd_PushActorVramState.c:
     complete
     .text       start:0x0208d5c8 end:0x0208d5d2
 
@@ -7060,11 +7060,11 @@ src/overlays/ov001/calls/ScriptCmd_TurnActorTowardTarget.c:
     complete
     .text       start:0x0208eb44 end:0x0208eba6
 
-src/overlays/ov001/calls/func_ov001_0208eba8.c:
+src/overlays/ov001/calls/ScriptCmd_BeginEventCameraAndFreezeSubMode.c:
     complete
     .text       start:0x0208eba8 end:0x0208ebb8
 
-src/overlays/ov001/calls/func_ov001_0208ebb8.c:
+src/overlays/ov001/calls/ScriptCmd_FinishEventCameraAndUnfreezeSubMode.c:
     complete
     .text       start:0x0208ebb8 end:0x0208ebc8
 
@@ -7076,7 +7076,7 @@ src/overlays/ov001/calls/ScriptCmd_PlayStageEventAnimation.c:
     complete
     .text       start:0x0208ec98 end:0x0208ecea
 
-src/overlays/ov001/calls/func_ov001_0208ecec.c:
+src/overlays/ov001/calls/ScriptCmd_GrantRecordPair.c:
     complete
     .text       start:0x0208ecec end:0x0208ed0e
 
@@ -7096,11 +7096,11 @@ src/overlays/ov001/calls/ScriptCmd_QueueCameraAngleTransition.c:
     complete
     .text       start:0x0208ee34 end:0x0208ee56
 
-src/overlays/ov001/calls/func_ov001_0208ee58.c:
+src/overlays/ov001/calls/ScriptCmd_FrameCameraOnActor.c:
     complete
     .text       start:0x0208ee58 end:0x0208ee66
 
-src/overlays/ov001/calls/func_ov001_0208ee68.c:
+src/overlays/ov001/calls/ScriptCmd_SetActorAngleDegrees.c:
     complete
     .text       start:0x0208ee68 end:0x0208eea6
 
@@ -7120,7 +7120,7 @@ src/overlays/ov001/calls/ScriptCmd_WaitMenuState.c:
     complete
     .text       start:0x0208ef8c end:0x0208efd4
 
-src/overlays/ov001/calls/func_ov001_0208efd4.c:
+src/overlays/ov001/calls/ScriptCmd_RefreshFieldHudIconRecords.c:
     complete
     .text       start:0x0208efd4 end:0x0208efde
 
