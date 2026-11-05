@@ -20,7 +20,7 @@ src/overlays/ov071/calls/InitActorSoundState.c:
     complete
     .text       start:0x020d81c8 end:0x020d8290
 
-src/overlays/ov071/calls/func_ov071_020d8290.c:
+src/overlays/ov071/calls/DeactivateOv071TaskEntriesAndManager.c:
     complete
     .text       start:0x020d8290 end:0x020d8360
 

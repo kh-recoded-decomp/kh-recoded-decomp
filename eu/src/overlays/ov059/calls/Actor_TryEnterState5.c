@@ -3,6 +3,6 @@
 #define AlarmCallback_020a7504 func_ov021_020a7524
 #define GetId10_020a755c SharedObject_GetId
 #define func_ov021_020a751c HasFlagsAt0xc
-#define func_ov059_020c997c func_ov059_020c999c
+#define func_ov059_020c997c Actor_LatchSharedControlId1Trigger
 #define func_ov059_020cb910 Actor_TryAcquireTargetAngle
 #include "src/ov059/unclassified_helpers/Actor_TryEnterState5_020ca700.c"

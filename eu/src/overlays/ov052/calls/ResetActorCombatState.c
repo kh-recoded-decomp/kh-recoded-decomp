@@ -10,5 +10,5 @@
 #define func_ov052_020c7460 InitPlayerActorModel_020c7460
 #define func_ov052_020c9f88 ResetMotionState_020c9fa8
 #define func_ov052_020ca20c LoadSlotModels
-#define func_ov052_020cca90 func_ov052_020ccab0
+#define func_ov052_020cca90 InitStepTimer
 #include "src/ov052/unclassified_helpers/ResetActorCombatState_020ccae8.c"

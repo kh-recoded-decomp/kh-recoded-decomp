@@ -31,7 +31,7 @@ src/overlays/ov055/calls/DispatchPageHandler.c:
     complete
     .text       start:0x020d3ab4 end:0x020d3aec
 
-src/overlays/ov055/calls/func_ov055_020d3aec.c:
+src/overlays/ov055/calls/ReleaseSceneObjectAndFreeWork.c:
     complete
     .text       start:0x020d3aec end:0x020d3b1c
 

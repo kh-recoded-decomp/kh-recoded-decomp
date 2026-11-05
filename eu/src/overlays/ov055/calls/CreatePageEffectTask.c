@@ -6,7 +6,7 @@
 #define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
 #define func_ov021_020adc80 func_ov021_020adca0
 #define func_ov021_020adc8c func_ov021_020adcac
-#define func_ov055_020d3acc func_ov055_020d3aec
+#define func_ov055_020d3acc ReleaseSceneObjectAndFreeWork
 #define func_ov055_020d3afc ResumeEffectOwnerActor
 #define func_ov055_020d3c00 UpdateEffectOwnerMotion
 #include "src/ov055/object_factory/CreatePageEffectTask_020d3ddc.c"

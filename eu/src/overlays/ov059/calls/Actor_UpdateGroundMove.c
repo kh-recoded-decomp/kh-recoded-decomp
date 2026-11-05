@@ -59,7 +59,7 @@ extern const VecFx32 gZeroVecFx32;
 extern void *GetPlayerControlState(u32 playerIndex);
 extern BOOL func_ov021_020a7524(void *input);
 extern s32 Actor_SelectInputState(Actor *actor, JumpState *jump);
-extern s32 func_ov059_020c98a0(Actor *actor);
+extern s32 Actor_DispatchSharedControlAction(Actor *actor);
 extern u16 QuantizeSummedAngle(void *input);
 extern u16 QuantizeFieldAngle(void *input);
 extern VecFx32 *GetSubStruct1C(void);
@@ -142,7 +142,7 @@ void Actor_UpdateGroundMove(Actor *actor)
             }
         }
     } else {
-        if (func_ov059_020c98a0(actor) && actor->mode != 0xc) {
+        if (Actor_DispatchSharedControlAction(actor) && actor->mode != 0xc) {
             actor->jump.drift = gZeroVecFx32;
             actor->onReset(actor);
             return;

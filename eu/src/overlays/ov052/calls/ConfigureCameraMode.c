@@ -3,5 +3,5 @@
 #define GetPlayerEntryCount_02050050 GetPlayerEntryCount
 #define IsPlayerEntryFlagSet_02050014 IsPlayerEntryFlagSet
 #define data_ov052_020d20fc data_ov052_020d211c
-#define func_ov052_020ceb70 func_ov052_020ceb90
+#define func_ov052_020ceb70 GetOv052ActorVelocity
 #include "src/ov052/actor_motion/ConfigureCameraMode_020c9fb4.c"

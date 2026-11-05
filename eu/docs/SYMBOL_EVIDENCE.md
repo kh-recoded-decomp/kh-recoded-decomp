@@ -460,3 +460,12 @@ records exact VM owners, distinct request/advance branches, command/resume
 results, live-register boundaries and queue/load limits. FinishSkip's former
 busy guard is identified as the separate handler-table word at index 3; its
 native view preserves the DATA owners and instructions.
+
+## Actor movement, effect and callback owners
+
+Thirty-four operations now describe actor/enemy movement, event/AI dispatch,
+animation bookkeeping, entry requests, generic lists, contact callbacks and
+scene-task deactivation. [ACTOR_OPERATION_CONTRACTS.md](ACTOR_OPERATION_CONTRACTS.md)
+records separate owners and concrete fields, callback arguments/results,
+borrowed velocity, radial effect geometry and unresolved gameplay labels.
+The overlay052 velocity getter is distinct from overlay017's existing API.

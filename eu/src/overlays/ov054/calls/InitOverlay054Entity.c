@@ -7,7 +7,7 @@
 #define func_0204f768 GetOverlaySelectionRecord
 #define func_ov052_020cce6c InstallActorCallbacks
 #define func_ov054_020d2320 LoadOverlay054EntityResources
-#define func_ov054_020d24ec func_ov054_020d250c
+#define func_ov054_020d24ec SetEntityModeWithSceneReset
 #define func_ov054_020d2554 RequestOverlay054ActorState
 #define func_ov054_020d2774 HandleRewardActorCommand_020d2774
 #define func_ov054_020d2dac HandleOverlay054MenuCommand

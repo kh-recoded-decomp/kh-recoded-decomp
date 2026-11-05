@@ -164,11 +164,11 @@ src/overlays/ov059/calls/TryGuardFrontalHit.c:
     complete
     .text       start:0x020c921c end:0x020c934c
 
-src/overlays/ov059/calls/func_ov059_020c934c.c:
+src/overlays/ov059/calls/InitMotionTargetState.c:
     complete
     .text       start:0x020c934c end:0x020c9394
 
-src/overlays/ov059/calls/func_ov059_020c9394.c:
+src/overlays/ov059/calls/HandleMotionTargetEvent.c:
     complete
     .text       start:0x020c9394 end:0x020c93f8
 
@@ -176,15 +176,15 @@ src/overlays/ov059/calls/Actor_UpdateGroundMove.c:
     complete
     .text       start:0x020c93f8 end:0x020c9748
 
-src/overlays/ov059/calls/func_ov059_020c9748.c:
+src/overlays/ov059/calls/Actor_UpdateState5RootMotion.c:
     complete
     .text       start:0x020c9748 end:0x020c98a0
 
-src/overlays/ov059/calls/func_ov059_020c98a0.c:
+src/overlays/ov059/calls/Actor_DispatchSharedControlAction.c:
     complete
     .text       start:0x020c98a0 end:0x020c999c
 
-src/overlays/ov059/calls/func_ov059_020c999c.c:
+src/overlays/ov059/calls/Actor_LatchSharedControlId1Trigger.c:
     complete
     .text       start:0x020c999c end:0x020c99ec
 
@@ -200,7 +200,7 @@ src/overlays/ov059/calls/Actor_ConsumeCommand.c:
     complete
     .text       start:0x020c9a50 end:0x020c9a74
 
-src/overlays/ov059/calls/func_ov059_020c9a74.c:
+src/overlays/ov059/calls/Actor_UpdateSweepEffectLifecycle.c:
     complete
     .text       start:0x020c9a74 end:0x020c9b8c
 
@@ -216,7 +216,7 @@ src/overlays/ov059/calls/QueryFilter_IsKind24.c:
     complete
     .text       start:0x020ca1f4 end:0x020ca206
 
-src/overlays/ov059/calls/func_ov059_020ca208.c:
+src/overlays/ov059/calls/Actor_SpawnSweepContactEffect.c:
     complete
     .text       start:0x020ca208 end:0x020ca24c
 
@@ -224,7 +224,7 @@ src/overlays/ov059/calls/Actor_SelectInputState.c:
     complete
     .text       start:0x020ca24c end:0x020ca31c
 
-src/overlays/ov059/calls/func_ov059_020ca31c.c:
+src/overlays/ov059/calls/Actor_UpdateJumpCommandInput.c:
     complete
     .text       start:0x020ca31c end:0x020ca35c
 
@@ -260,7 +260,7 @@ src/overlays/ov059/calls/Actor_UpdateOrbitEffects.c:
     complete
     .text       start:0x020cabe0 end:0x020cac3c
 
-src/overlays/ov059/calls/func_ov059_020cac3c.c:
+src/overlays/ov059/calls/InitRadialEffectMotion.c:
     complete
     .text       start:0x020cac3c end:0x020cac58
 
@@ -380,7 +380,7 @@ src/overlays/ov059/calls/Actor_ChangeAnimation.c:
     complete
     .text       start:0x020cc970 end:0x020cca14
 
-src/overlays/ov059/calls/func_ov059_020cca14.c:
+src/overlays/ov059/calls/PlayActorTrackAsExtraAction.c:
     complete
     .text       start:0x020cca14 end:0x020cca34
 
@@ -460,7 +460,7 @@ src/overlays/ov059/calls/QuantizeFieldAngle.c:
     complete
     .text       start:0x020cd36c end:0x020cd384
 
-src/overlays/ov059/calls/func_ov059_020cd384.c:
+src/overlays/ov059/calls/SetActorCommandTypeFromCommandId.c:
     complete
     .text       start:0x020cd384 end:0x020cd3d8
 
@@ -544,7 +544,7 @@ src/overlays/ov059/calls/SlotEntry_AdvanceAnim.c:
     complete
     .text       start:0x020cebf4 end:0x020cec4e
 
-src/overlays/ov059/auto/func_ov059_020cec50.c:
+src/overlays/ov059/auto/DoubleSeekerContactDistance.c:
     complete
     .text       start:0x020cec50 end:0x020cec5a
 
@@ -616,7 +616,7 @@ src/overlays/ov059/calls/EntryList_FindByValue.c:
     complete
     .text       start:0x020cf43c end:0x020cf46c
 
-src/overlays/ov059/calls/func_ov059_020cf46c.c:
+src/overlays/ov059/calls/EntryList_FindByPair.c:
     complete
     .text       start:0x020cf46c end:0x020cf4ae
 

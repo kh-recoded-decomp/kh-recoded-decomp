@@ -7,5 +7,5 @@
 #define HasFlagsAt0xe_020a752c HasFlagsAt0xe
 #define SpawnSoundSlot_0204da8c SpawnSoundSlot
 #define func_0204dc3c IsSoundHandleCurrentAndBound
-#define func_ov059_020c9a54 func_ov059_020c9a74
+#define func_ov059_020c9a54 Actor_UpdateSweepEffectLifecycle
 #include "src/ov059/unclassified_helpers/Actor_UpdateChargeCommand_020c9b6c.c"

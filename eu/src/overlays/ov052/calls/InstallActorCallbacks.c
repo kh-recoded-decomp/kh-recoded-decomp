@@ -17,7 +17,7 @@
 #define SetSlotDisplayMode_020ca7d0 SetSlotDisplayMode
 #define UpdateActorAnimation_020cea48 UpdateActorAnimation
 #define func_ov021_020a75a4 InitializeSharedOverlayObject
-#define func_ov052_020ccf80 func_ov052_020ccfa0
-#define func_ov052_020ccf9c func_ov052_020ccfbc
+#define func_ov052_020ccf80 AddActorVelocity
+#define func_ov052_020ccf9c GetCachedSlot3WorldPosition
 #define func_ov052_020cd338 EnterActorState
 #include "src/ov052/unclassified_helpers/InstallActorCallbacks_020cce6c.c"

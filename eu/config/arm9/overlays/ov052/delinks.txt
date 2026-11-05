@@ -84,7 +84,7 @@ src/overlays/ov052/calls/EnterRecoilState.c:
     complete
     .text       start:0x020c959c end:0x020c9648
 
-src/overlays/ov052/calls/func_ov052_020c9648.c:
+src/overlays/ov052/calls/FilterEntityEventAndClearInhibitFlag.c:
     complete
     .text       start:0x020c9648 end:0x020c969c
 
@@ -92,11 +92,11 @@ src/overlays/ov052/calls/UpdateActorFrame.c:
     complete
     .text       start:0x020c969c end:0x020c97c4
 
-src/overlays/ov052/calls/func_ov052_020c97c4.c:
+src/overlays/ov052/calls/UpdateEntityFadeAndPostUpdate.c:
     complete
     .text       start:0x020c97c4 end:0x020c9854
 
-src/overlays/ov052/calls/func_ov052_020c9854.c:
+src/overlays/ov052/calls/ApplyPendingEntityMotion.c:
     complete
     .text       start:0x020c9854 end:0x020c9894
 
@@ -284,7 +284,7 @@ src/overlays/ov052/calls/UpdateDriveGaugeCharge.c:
     complete
     .text       start:0x020cc930 end:0x020ccab0
 
-src/overlays/ov052/auto/func_ov052_020ccab0.c:
+src/overlays/ov052/auto/InitStepTimer.c:
     complete
     .text       start:0x020ccab0 end:0x020ccaba
 
@@ -316,11 +316,11 @@ src/overlays/ov052/calls/InstallActorCallbacks.c:
     complete
     .text       start:0x020cce8c end:0x020ccfa0
 
-src/overlays/ov052/calls/func_ov052_020ccfa0.c:
+src/overlays/ov052/calls/AddActorVelocity.c:
     complete
     .text       start:0x020ccfa0 end:0x020ccfbc
 
-src/overlays/ov052/auto/func_ov052_020ccfbc.c:
+src/overlays/ov052/auto/GetCachedSlot3WorldPosition.c:
     complete
     .text       start:0x020ccfbc end:0x020ccfc4
 
@@ -348,7 +348,7 @@ src/overlays/ov052/calls/ChangeActorState.c:
     complete
     .text       start:0x020ce0e0 end:0x020ce188
 
-src/overlays/ov052/calls/func_ov052_020ce188.c:
+src/overlays/ov052/calls/BlendActorTrackAndClearActionId.c:
     complete
     .text       start:0x020ce188 end:0x020ce1a8
 
@@ -388,7 +388,7 @@ src/overlays/ov052/calls/func_ov052_020ceb80.c:
     complete
     .text       start:0x020ceb80 end:0x020ceb90
 
-src/overlays/ov052/calls/func_ov052_020ceb90.c:
+src/overlays/ov052/calls/GetOv052ActorVelocity.c:
     complete
     .text       start:0x020ceb90 end:0x020ceb9c
 
@@ -480,7 +480,7 @@ src/overlays/ov052/calls/GetAttachmentWorldPosition.c:
     complete
     .text       start:0x020d069c end:0x020d073c
 
-src/overlays/ov052/calls/func_ov052_020d073c.c:
+src/overlays/ov052/calls/InstallActorJointMatrixCaptureCallback.c:
     complete
     .text       start:0x020d073c end:0x020d0768
 

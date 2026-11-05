@@ -1,4 +1,4 @@
 #define EntryList_FindByKey_020cf3e8 EntryList_FindByKey
 #define func_ov059_020cf41c EntryList_FindByValue
-#define func_ov059_020cf44c func_ov059_020cf46c
+#define func_ov059_020cf44c EntryList_FindByPair
 #include "src/ov059/unclassified_helpers/EntryList_FindByKey_020cf3e8.c"

@@ -27,5 +27,5 @@
 #define func_ov021_020a8ca0 func_ov021_020a8cc0
 #define func_ov021_020ac33c ApplyHitToTarget_020ac33c
 #define func_ov021_020af5b4 func_ov021_020af5d4
-#define func_ov059_020c997c func_ov059_020c999c
+#define func_ov059_020c997c Actor_LatchSharedControlId1Trigger
 #include "src/ov059/unclassified_helpers/Actor_UpdateFinisher_020ca794.c"

@@ -7,8 +7,8 @@
 #define func_ov052_020ccfa4 ExitActorState
 #define func_ov052_020cd338 EnterActorState
 #define func_ov052_020ceb7c GetLinkedAngleOffset
-#define func_ov058_020d50ac func_ov058_020d50cc
-#define func_ov058_020d544c func_ov058_020d546c
+#define func_ov058_020d50ac Enemy_SpawnEvent1EEffectAndDetachCollider
+#define func_ov058_020d544c Enemy_ClearTargetKindAndArrivalFlag
 #define func_ov058_020d5468 SnapEnemyBesidePlayer_020d5468
 #define func_ov058_020d59b4 UpdateEnemyDownState
 #define func_ov058_020d5af4 UpdateEnemyApproachState

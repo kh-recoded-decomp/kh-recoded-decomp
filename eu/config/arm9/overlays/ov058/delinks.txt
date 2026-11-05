@@ -20,15 +20,15 @@ src/overlays/ov058/calls/HasReachedMoveTarget.c:
     complete
     .text       start:0x020d485c end:0x020d4968
 
-src/overlays/ov058/calls/func_ov058_020d4968.c:
+src/overlays/ov058/calls/IsEnemyTargetOutsideRaisedBand.c:
     complete
     .text       start:0x020d4968 end:0x020d49dc
 
-src/overlays/ov058/calls/func_ov058_020d49dc.c:
+src/overlays/ov058/calls/AcquireEnemyTargetWithFallback.c:
     complete
     .text       start:0x020d49dc end:0x020d4a54
 
-src/overlays/ov058/calls/func_ov058_020d4a54.c:
+src/overlays/ov058/calls/UpdateEnemyDistanceGatedAiMode.c:
     complete
     .text       start:0x020d4a54 end:0x020d4b84
 
@@ -40,15 +40,15 @@ src/overlays/ov058/calls/RefreshAiModeFromFlags.c:
     complete
     .text       start:0x020d4fcc end:0x020d4ffc
 
-src/overlays/ov058/calls/func_ov058_020d4ffc.c:
+src/overlays/ov058/calls/UpdateEnemyPlayerFacingMode.c:
     complete
     .text       start:0x020d4ffc end:0x020d503c
 
-src/overlays/ov058/calls/func_ov058_020d503c.c:
+src/overlays/ov058/calls/ProcessEnemyAiRequest.c:
     complete
     .text       start:0x020d503c end:0x020d50cc
 
-src/overlays/ov058/calls/func_ov058_020d50cc.c:
+src/overlays/ov058/calls/Enemy_SpawnEvent1EEffectAndDetachCollider.c:
     complete
     .text       start:0x020d50cc end:0x020d5180
 
@@ -60,7 +60,7 @@ src/overlays/ov058/calls/StartEnemyLaunch.c:
     complete
     .text       start:0x020d5354 end:0x020d546c
 
-src/overlays/ov058/calls/func_ov058_020d546c.c:
+src/overlays/ov058/calls/Enemy_ClearTargetKindAndArrivalFlag.c:
     complete
     .text       start:0x020d546c end:0x020d5488
 
@@ -260,7 +260,7 @@ src/overlays/ov058/calls/GetSceneSlotAngle.c:
     complete
     .text       start:0x020d8904 end:0x020d895c
 
-src/overlays/ov058/calls/func_ov058_020d895c.c:
+src/overlays/ov058/calls/GetSceneIntroSequenceMode.c:
     complete
     .text       start:0x020d895c end:0x020d896c
 

@@ -2,5 +2,5 @@
 #define Actor_InitOrbitSlots_020cab6c Actor_InitOrbitSlots
 #define func_0204d8d0 PlaySoundChecked
 #define func_ov021_020a8ca0 func_ov021_020a8cc0
-#define func_ov059_020cac1c func_ov059_020cac3c
+#define func_ov059_020cac1c InitRadialEffectMotion
 #include "src/ov059/unclassified_helpers/Actor_InitOrbitSlots_020cab6c.c"

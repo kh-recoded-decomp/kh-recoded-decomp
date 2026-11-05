@@ -14,5 +14,5 @@
 #define func_020367d0 ActorSlot_SetField1C4ByIndex
 #define func_02036810 ActorSlot_GetByIndex
 #define func_ov001_02088b58 func_ov001_02088b80
-#define func_ov052_020d071c func_ov052_020d073c
+#define func_ov052_020d071c InstallActorJointMatrixCaptureCallback
 #include "src/ov001/scripted_actor_behavior/ActorObject_ReleaseResources_02089f1c.c"

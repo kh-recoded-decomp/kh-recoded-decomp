@@ -1,7 +1,7 @@
 ReturnToCommitPage_ov050_020c3520 kind:function(thumb,size=0x10) addr:0x020c3520
 UpdatePathCameraTrackingAndDrift kind:function(thumb,size=0x26) addr:0x020c3530
 CameraCollision_ShouldBlockFacing kind:function(thumb,size=0x74) addr:0x020c3558
-func_ov050_020c35cc kind:function(thumb,size=0x32) addr:0x020c35cc
+FilterPathCameraContactByMotionAndFacing kind:function(thumb,size=0x32) addr:0x020c35cc
 UpdatePathCameraCollision kind:function(thumb,size=0x2a8) addr:0x020c3600
 TrackPlayerCameraDirection kind:function(thumb,size=0x154) addr:0x020c38a8
 ClampCameraUpVector kind:function(thumb,size=0x134) addr:0x020c39fc

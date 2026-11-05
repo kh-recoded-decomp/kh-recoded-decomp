@@ -1,6 +1,6 @@
 #define GetCtxModeByte_02068084 GetCtxModeByte
 #define UpdateEnemyFallCheck_020d6f58 UpdateEnemyFallCheck
 #define func_ov052_020ceb54 func_ov052_020ceb74
-#define func_ov058_020d50ac func_ov058_020d50cc
+#define func_ov058_020d50ac Enemy_SpawnEvent1EEffectAndDetachCollider
 #define func_ov058_020d5160 CheckEnemyContactAbove
 #include "src/ov058/unclassified_helpers/UpdateEnemyFallCheck_020d6f58.c"

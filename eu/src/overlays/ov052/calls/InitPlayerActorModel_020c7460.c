@@ -26,6 +26,6 @@
 #define func_02036240 ActorRegistry_GetEntityByIndex
 #define func_02036a70 SetRecordSlotValue
 #define func_02038a90 InitTrackingState
-#define func_ov052_020d071c func_ov052_020d073c
+#define func_ov052_020d071c InstallActorJointMatrixCaptureCallback
 #define selectJointAnimationBlend_0202f2cc selectJointAnimationBlend
 #include "src/ov052/model_display/InitPlayerActorModel_020c7460.c"

@@ -78,8 +78,8 @@ extern VecFx32 *func_ov052_020ceb74(Enemy *enemy);
 extern Enemy *GetBoundedEntryField(int index);
 extern fx32 VEC_Distance(const VecFx32 *a, const VecFx32 *b);
 extern fx32 func_ov001_0206db44(void);
-extern void func_ov058_020d503c(Enemy *enemy);
-extern void func_ov058_020d50cc(Enemy *enemy);
+extern void ProcessEnemyAiRequest(Enemy *enemy);
+extern void Enemy_SpawnEvent1EEffectAndDetachCollider(Enemy *enemy);
 extern BOOL IsFacedByPlayer(Enemy *enemy, VecFx32 *out);
 extern void VEC_MultAdd(fx32 scale, const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
 extern void VEC_Add(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
@@ -87,14 +87,14 @@ extern void VEC_Subtract(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
 extern void VEC_Normalize(const VecFx32 *src, VecFx32 *dst);
 extern void VEC_CrossProduct(const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
 extern BOOL SteerEnemyTowardPoint(Enemy *enemy, EnemyCommand *command, const VecFx32 *dest, BOOL checkStuck);
-extern void func_ov058_020d4ffc(Enemy *enemy, EnemyCommand *command);
-extern void func_ov058_020d4a54(Enemy *enemy, EnemyCommand *command);
+extern void UpdateEnemyPlayerFacingMode(Enemy *enemy, EnemyCommand *command);
+extern void UpdateEnemyDistanceGatedAiMode(Enemy *enemy, EnemyCommand *command);
 extern void UpdateEnemyTargetTracking(Enemy *enemy, EnemyCommand *command);
 extern void RefreshAiModeFromFlags(Enemy *enemy, EnemyCommand *command);
 extern BOOL IsWaitTargetReady(WaitTarget *target);
 extern VecFx32 *GetWaitTargetPosition(WaitTarget *target);
 extern BOOL HasReachedMoveTarget(Enemy *enemy, VecFx32 *point);
-extern BOOL func_ov058_020d4968(Enemy *enemy, VecFx32 *point);
+extern BOOL IsEnemyTargetOutsideRaisedBand(Enemy *enemy, VecFx32 *point);
 extern BOOL IsObjHandleOverLimit(ObjHandle *handle);
 extern BOOL GetStageEventTargetInfo(u16 eventId, StageEventTargetInfo *info);
 
@@ -139,7 +139,7 @@ u16 UpdateEnemyCombatAi(Enemy *enemy, EnemyCommand *command)
     distance = VEC_Distance(playerPos, pos);
     ai->alertTimer = CLAMP(ai->alertTimer - func_ov001_0206db44(), 0, 0x1e000);
     ai->retreatTimer = CLAMP(ai->retreatTimer - func_ov001_0206db44(), 0, 0x1e000);
-    func_ov058_020d503c(enemy);
+    ProcessEnemyAiRequest(enemy);
     if (enemy->stateFlags & 0x20820) {
         return 0;
     }
@@ -155,11 +155,11 @@ u16 UpdateEnemyCombatAi(Enemy *enemy, EnemyCommand *command)
             enemy->turnSpeed = 0x19a;
             if (SteerEnemyTowardPoint(enemy, command, &target, TRUE) || range < distance) {
                 if (!(Enemy_GetMoveFlags(data_ov058_020d8a40) & 8)) {
-                    func_ov058_020d50cc(enemy);
+                    Enemy_SpawnEvent1EEffectAndDetachCollider(enemy);
                 }
             }
         }
-        func_ov058_020d4ffc(enemy, command);
+        UpdateEnemyPlayerFacingMode(enemy, command);
         RefreshAiModeFromFlags(enemy, command);
         break;
     }
@@ -194,13 +194,13 @@ u16 UpdateEnemyCombatAi(Enemy *enemy, EnemyCommand *command)
         }
         if (SteerEnemyTowardPoint(enemy, command, &side, checkStuck) || range < distance) {
             if (!(Enemy_GetMoveFlags(data_ov058_020d8a40) & 8)) {
-                func_ov058_020d50cc(enemy);
+                Enemy_SpawnEvent1EEffectAndDetachCollider(enemy);
             }
             ai->timer = 0;
         }
-        func_ov058_020d4a54(enemy, command);
+        UpdateEnemyDistanceGatedAiMode(enemy, command);
         UpdateEnemyTargetTracking(enemy, command);
-        func_ov058_020d4ffc(enemy, command);
+        UpdateEnemyPlayerFacingMode(enemy, command);
         RefreshAiModeFromFlags(enemy, command);
         break;
     }
@@ -242,7 +242,7 @@ u16 UpdateEnemyCombatAi(Enemy *enemy, EnemyCommand *command)
             VecFx32 goal = *waitPos;
 
             if (HasReachedMoveTarget(enemy, &goal)) {
-                if (func_ov058_020d4968(enemy, &goal)) {
+                if (IsEnemyTargetOutsideRaisedBand(enemy, &goal)) {
                     arrived = TRUE;
                 } else {
                     command->actions |= 2;
@@ -254,7 +254,7 @@ u16 UpdateEnemyCombatAi(Enemy *enemy, EnemyCommand *command)
                     VEC_MultAdd(0x900, &facing, &goal, &goal);
                 }
                 if (SteerEnemyTowardPoint(enemy, command, &goal, FALSE)) {
-                    func_ov058_020d50cc(enemy);
+                    Enemy_SpawnEvent1EEffectAndDetachCollider(enemy);
                 }
             }
             if (arrived) {
@@ -285,9 +285,9 @@ u16 UpdateEnemyCombatAi(Enemy *enemy, EnemyCommand *command)
         break;
     }
     default:
-        func_ov058_020d4a54(enemy, command);
+        UpdateEnemyDistanceGatedAiMode(enemy, command);
         UpdateEnemyTargetTracking(enemy, command);
-        func_ov058_020d4ffc(enemy, command);
+        UpdateEnemyPlayerFacingMode(enemy, command);
         RefreshAiModeFromFlags(enemy, command);
         break;
     }

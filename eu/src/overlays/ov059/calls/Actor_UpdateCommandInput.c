@@ -3,6 +3,6 @@
 #define Actor_GetRotatedJointPosition_020c895c Actor_GetRotatedJointPosition
 #define Actor_UpdateCommandInput_020c8470 Actor_UpdateCommandInput
 #define HasFlagsAt0xe_020a752c HasFlagsAt0xe
-#define func_ov059_020c9a54 func_ov059_020c9a74
+#define func_ov059_020c9a54 Actor_UpdateSweepEffectLifecycle
 #define func_ov059_020c9d14 Actor_UpdateSweepHits
 #include "src/ov059/unclassified_helpers/Actor_UpdateCommandInput_020c8470.c"

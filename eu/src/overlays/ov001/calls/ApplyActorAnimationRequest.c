@@ -12,9 +12,9 @@
 #define func_0202eaf4 ReleaseModelAnimationResources
 #define func_ov001_02088c1c GetActorFieldBySessionMode
 #define func_ov021_020a9cb4 BlendModelAnimation
-#define func_ov052_020ce168 func_ov052_020ce188
+#define func_ov052_020ce168 BlendActorTrackAndClearActionId
 #define func_ov052_020cfb88 SelectSlotAnimation
-#define func_ov059_020cc9f4 func_ov059_020cca14
+#define func_ov059_020cc9f4 PlayActorTrackAsExtraAction
 #define func_ov059_020cd184 EffectSlot_StartByKind
 #define selectJointAnimationBlend_0202f2cc selectJointAnimationBlend
 #define strcmp_02021fa8 strcmp

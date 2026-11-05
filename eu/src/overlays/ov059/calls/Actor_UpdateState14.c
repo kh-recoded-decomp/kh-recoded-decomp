@@ -1,4 +1,4 @@
 #define Actor_ExtendCountdown_020c89fc Actor_ExtendCountdown
 #define Actor_UpdateState14_020ca754 Actor_UpdateState14
-#define func_ov059_020c997c func_ov059_020c999c
+#define func_ov059_020c997c Actor_LatchSharedControlId1Trigger
 #include "src/ov059/unclassified_helpers/Actor_UpdateState14_020ca754.c"

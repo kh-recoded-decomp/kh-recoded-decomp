@@ -49,7 +49,7 @@ struct Enemy {
 extern const s16 gSinFx12Table[];
 
 extern void ComputeApproachTarget(VecFx32 *out, int mode);
-extern int func_ov058_020d895c(void);
+extern int GetSceneIntroSequenceMode(void);
 extern int GetSceneSlotAngle(int mode);
 extern void func_ov052_020ceb80(Enemy *enemy, VecFx32 *target);
 extern void Obj_SetPosition(void *entity, const VecFx32 *position);
@@ -81,7 +81,7 @@ void UpdateRewardActorPhase(Enemy *enemy)
     ComputeApproachTarget(&approach, enemy->mode);
     target = approach;
     enemy->stateFlags |= 1;
-    switch (func_ov058_020d895c()) {
+    switch (GetSceneIntroSequenceMode()) {
     case 1:
     case 2:
     case 3:

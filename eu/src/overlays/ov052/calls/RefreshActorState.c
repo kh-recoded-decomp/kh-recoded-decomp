@@ -3,6 +3,6 @@
 #define func_ov021_020a7fa4 PlayCueGroupSounds
 #define func_ov052_020c76cc ApplyActorVelocity
 #define func_ov052_020c967c UpdateActorFrame
-#define func_ov052_020c97a4 func_ov052_020c97c4
-#define func_ov052_020c9834 func_ov052_020c9854
+#define func_ov052_020c97a4 UpdateEntityFadeAndPostUpdate
+#define func_ov052_020c9834 ApplyPendingEntityMotion
 #include "src/ov052/unclassified_helpers/RefreshActorState_020cce08.c"

@@ -23,8 +23,8 @@
 #define func_ov021_020a8ab4 ResetAnimationTrackState
 #define func_ov021_020a8ca0 InitializeEntryGroupSlot
 #define func_ov031_020bc040 func_ov031_020bc060
-#define func_ov059_020c9374 func_ov059_020c9394
-#define func_ov059_020c9728 func_ov059_020c9748
+#define func_ov059_020c9374 HandleMotionTargetEvent
+#define func_ov059_020c9728 Actor_UpdateState5RootMotion
 #define func_ov059_020ca754 Actor_UpdateState14
 #define func_ov059_020cad40 Actor_UpdateRootMotionJump
 #define func_ov059_020cb3f8 Actor_UpdateHaltFlags

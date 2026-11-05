@@ -1,6 +1,6 @@
 #define Actor_UpdateJump_020ca33c Actor_UpdateJump
 #define func_ov001_0206db78 GetPlayerControlState
-#define func_ov059_020ca2fc func_ov059_020ca31c
+#define func_ov059_020ca2fc Actor_UpdateJumpCommandInput
 #define HasFlagsAt0xe_020a752c HasFlagsAt0xe
 #define FixedPointMultiply12 FX_Mul
 #define ScaleVecFx32InPlace_0204a5e4 ScaleVecFx32InPlace
