@@ -94,7 +94,7 @@ from:0x020bce3a kind:thumb_call to:0x0206802c module:overlay(1)
 from:0x020bce46 kind:thumb_call_arm to:0x0204dd00 module:main
 from:0x020bce60 kind:load to:0x020be280 module:overlay(40)
 from:0x020bce64 kind:load to:0x020bc500 module:overlays(35,38)
-from:0x020bce68 kind:load to:0x020bc4e8 module:overlays(35,38)
+from:0x020bce68 kind:load to:0x020bc4e8 module:overlay(35)
 from:0x020bce6c kind:load to:0x020be248 module:overlay(40)
 from:0x020bce7a kind:thumb_call to:0x0207d148 module:overlay(1)
 from:0x020bce7e kind:thumb_call_arm to:0x0202a16c module:main

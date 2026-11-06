@@ -197,5 +197,307 @@ class ReconstructionTests(unittest.TestCase):
                 self.assertEqual(self.index.read_text(), text)
 
 
+class NativeRefreshTests(unittest.TestCase):
+    """Fixtures exercise only native ROM/config; no candidates or compilers."""
+
+    def setUp(self):
+        self.temp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.temp.cleanup)
+        self.root = Path(self.temp.name)
+        self.config = self.root / "config/arm9"
+        self.config.mkdir(parents=True)
+        self.binary = self.root / "dsd_extract/arm9/arm9.bin"
+        self.binary.parent.mkdir(parents=True)
+        # +0 internal BL to +0x14; +4 BLX to external ARM +0x20;
+        # +8 Thumb callback pointer; +0xc existing DATA field pointer.
+        self.native = bytes.fromhex(
+            "00f008f8 00f00ce8 01200002 06300002 c046c046 00bdc046")
+        self.binary.write_bytes(self.native + b"\0" * 12)
+        self.symbols = (
+            "example kind:function(thumb,size=0x18) addr:0x02001000\n"
+            "local_return kind:label(thumb) addr:0x02001014 local\n"
+            "external_arm kind:function(arm,size=0x4) addr:0x02001020\n"
+            "callback kind:function(thumb,size=0x4) addr:0x02002000\n"
+            "table kind:data(size=0x10) addr:0x02003000\n")
+        (self.config / "symbols.txt").write_text(self.symbols)
+        (self.config / "delinks.txt").write_text(
+            ".text start:0x02001000 end:0x02001024\n")
+        # The native config has already had the intraprocedural BL removed.
+        # Its two additions must be decoded by the existing builder first.
+        self.relocations = (
+            "from:0x02001004 kind:thumb_call_arm to:0x02001020 module:main\n"
+            "from:0x02001008 kind:load to:0x02002000 module:main\n"
+            "from:0x0200100c kind:load to:0x02003000 add:0x6 module:main\n")
+        (self.config / "relocs.txt").write_text(self.relocations)
+        self.index = self.root / "build/func_index.json"
+        self.index.parent.mkdir()
+        self.original = {
+            "example": {"hex": self.native.hex(), "size": 24, "mode": "thumb",
+                        "module": "main", "relocs": [[0, "local_return"],
+                                                        [12, "historic_data_name"]],
+                        "annotation": {"keep": ["all", "historical", "fields"]}},
+            "not_configured": {"hex": "00", "relocs": [], "private": [1, 2]},
+        }
+        self.store(self.original)
+        self.enterContext(patch.object(rebuild, "ROOT", str(self.root)))
+        self.enterContext(patch.object(rebuild, "INDEX_PATH", str(self.index)))
+
+    def store(self, index):
+        self.index.write_text(json.dumps(index, indent=2))
+
+    def read(self):
+        return json.loads(self.index.read_text())
+
+    def run_tool(self, *args):
+        output = io.StringIO()
+        with contextlib.redirect_stdout(output), contextlib.redirect_stderr(output):
+            code = rebuild.main(list(args))
+        self.last_output = output.getvalue()
+        return code
+
+    def refresh(self, *args):
+        return self.run_tool("--write", "--refresh-native-relocs", "example", *args)
+
+    def assert_refusal_preserves_file(self, *args):
+        before = self.index.read_bytes()
+        self.assertNotEqual(self.run_tool(*args), 0)
+        self.assertEqual(self.index.read_bytes(), before)
+
+    def test_additions_and_internal_drop_preserve_every_other_field(self):
+        self.assertEqual(self.refresh(), 0)
+        result = self.read()
+        expected = dict(self.original["example"], relocs=[
+            [4, "external_arm"], [8, "callback"], [12, "historic_data_name"]])
+        self.assertEqual(result["example"], expected)
+        self.assertEqual(result["not_configured"], self.original["not_configured"])
+        # Native refresh does not opportunistically add missing unselected code.
+        self.assertEqual(set(result), set(self.original))
+        self.assertEqual(self.refresh(), 0)
+        self.assertEqual(self.read(), result)
+
+    def test_dry_run_does_not_write_contents_or_mtime(self):
+        before, mtime = self.index.read_bytes(), self.index.stat().st_mtime_ns
+        self.assertEqual(self.run_tool("--refresh-native-relocs", "example"), 0)
+        self.assertEqual(self.index.read_bytes(), before)
+        self.assertEqual(self.index.stat().st_mtime_ns, mtime)
+        self.assertIn("+2 configured, -1 internal Thumb BL", self.last_output)
+
+    def test_default_and_name_refresh_remain_conservative(self):
+        for args in [(), ("--refresh-reloc-names",)]:
+            self.store(self.original)
+            before = self.index.read_bytes()
+            self.assertEqual(self.run_tool(*args), 0)
+            self.assertEqual(self.index.read_bytes(), before)
+        for args in [("--write",), ("--write", "--refresh-reloc-names")]:
+            self.store(self.original)
+            self.assertEqual(self.run_tool(*args), 0)
+            self.assertEqual(self.read()["example"], self.original["example"])
+
+    def test_cli_requires_names_and_rejects_mixed_refresh_modes(self):
+        for args in [("--refresh-native-relocs",),
+                     ("--refresh-reloc-names", "--refresh-native-relocs", "example")]:
+            with self.subTest(args=args):
+                before = self.index.read_bytes()
+                with self.assertRaises(SystemExit):
+                    self.run_tool(*args)
+                self.assertEqual(self.index.read_bytes(), before)
+
+    def test_unknown_or_duplicate_selection_fails_without_write(self):
+        for names in [("unknown",), ("external_arm",),
+                      ("example", "unknown"), ("example", "example")]:
+            with self.subTest(names=names):
+                self.assert_refusal_preserves_file(
+                    "--write", "--refresh-native-relocs", *names)
+
+    def test_exact_unmasked_byte_identity_is_mandatory(self):
+        for offset in (0, 8, 16):  # old relocation, new relocation, ordinary code
+            with self.subTest(offset=offset):
+                old = json.loads(json.dumps(self.original))
+                changed = bytearray(self.native)
+                changed[offset] ^= 1
+                old["example"]["hex"] = changed.hex()
+                self.store(old)
+                self.assert_refusal_preserves_file(
+                    "--write", "--refresh-native-relocs", "example")
+
+    def test_exact_size_mode_and_module_are_mandatory(self):
+        for key, value in [("size", 28), ("mode", "arm"), ("module", "ov001")]:
+            with self.subTest(key=key):
+                old = json.loads(json.dumps(self.original))
+                old["example"][key] = value
+                self.store(old)
+                self.assert_refusal_preserves_file(
+                    "--write", "--refresh-native-relocs", "example")
+
+    def test_zeroed_old_relocation_bytes_are_rejected(self):
+        old = json.loads(json.dumps(self.original))
+        old["example"]["hex"] = "00000000" + self.native[4:].hex()
+        self.store(old)
+        self.assert_refusal_preserves_file(
+            "--write", "--refresh-native-relocs", "example")
+
+    def test_changed_opcode_is_rejected_even_when_both_hex_strings_agree(self):
+        changed = bytearray(self.native)
+        # BL -> BLX: still a branch, but not an allowed intraprocedural Thumb BL.
+        changed[3] = 0xe8
+        self.binary.write_bytes(changed + b"\0" * 12)
+        old = json.loads(json.dumps(self.original))
+        old["example"]["hex"] = changed.hex()
+        self.store(old)
+        self.assert_refusal_preserves_file(
+            "--write", "--refresh-native-relocs", "example")
+
+    def test_external_thumb_bl_drop_is_rejected(self):
+        changed = bytearray(self.native)
+        changed[:4] = bytes.fromhex("00f012f8")  # target02001028, outside function
+        self.binary.write_bytes(changed + b"\0" * 12)
+        with (self.config / "symbols.txt").open("a") as stream:
+            stream.write("outside kind:label(thumb) addr:0x02001028\n")
+        old = json.loads(json.dumps(self.original))
+        old["example"]["hex"] = changed.hex()
+        old["example"]["relocs"][0][1] = "outside"
+        self.store(old)
+        self.assert_refusal_preserves_file(
+            "--write", "--refresh-native-relocs", "example")
+
+    def test_wrong_old_target_is_rejected(self):
+        with (self.config / "symbols.txt").open("a") as stream:
+            stream.write("other_label kind:label(thumb) addr:0x02001010\n")
+        old = json.loads(json.dumps(self.original))
+        old["example"]["relocs"][0][1] = "other_label"
+        self.store(old)
+        self.assert_refusal_preserves_file(
+            "--write", "--refresh-native-relocs", "example")
+
+    def test_unknown_old_target_is_not_accepted_from_byte_similarity(self):
+        old = json.loads(json.dumps(self.original))
+        old["example"]["relocs"][0][1] = "unknown_old_target"
+        self.store(old)
+        self.assert_refusal_preserves_file(
+            "--write", "--refresh-native-relocs", "example")
+
+    def test_same_address_old_target_in_wrong_bank_is_rejected(self):
+        (self.config / "symbols.txt").write_text(
+            self.symbols.replace("local_return kind:label", "actual_local kind:label"))
+        foreign = self.config / "overlays/ov001"
+        foreign.mkdir(parents=True)
+        (foreign / "symbols.txt").write_text(
+            "local_return kind:label(thumb) addr:0x02001014\n")
+        self.assert_refusal_preserves_file(
+            "--write", "--refresh-native-relocs", "example")
+
+    def test_old_target_ambiguous_inside_its_bank_is_rejected(self):
+        with (self.config / "symbols.txt").open("a") as stream:
+            stream.write("local_return kind:label(thumb) addr:0x02001010\n")
+        self.assert_refusal_preserves_file(
+            "--write", "--refresh-native-relocs", "example")
+
+    def test_historical_dropped_label_address_must_match_exactly(self):
+        old = json.loads(json.dumps(self.original))
+        old["example"]["relocs"][0][1] = "historical_02001014"
+        self.store(old)
+        self.assertEqual(self.refresh(), 0)
+        old["example"]["relocs"][0][1] = "historical_02001010"
+        self.store(old)
+        self.assert_refusal_preserves_file(
+            "--write", "--refresh-native-relocs", "example")
+
+    def test_recursive_function_entry_cannot_be_relabelled_as_internal(self):
+        changed = bytearray(self.native)
+        changed[:4] = bytes.fromhex("fff7feff")  # BL to the current function start
+        self.binary.write_bytes(changed + b"\0" * 12)
+        with (self.config / "symbols.txt").open("a") as stream:
+            stream.write("local_start kind:label(thumb) addr:0x02001000\n")
+        old = json.loads(json.dumps(self.original))
+        old["example"]["hex"] = changed.hex()
+        old["example"]["relocs"][0][1] = "local_start"
+        self.store(old)
+        self.assert_refusal_preserves_file(
+            "--write", "--refresh-native-relocs", "example")
+
+    def test_local_target_must_have_current_thumb_label_metadata(self):
+        for replacement in ["", "local_return kind:label(arm) addr:0x02001014\n"]:
+            with self.subTest(replacement=replacement):
+                (self.config / "symbols.txt").write_text(self.symbols.replace(
+                    "local_return kind:label(thumb) addr:0x02001014 local\n", replacement))
+                self.assert_refusal_preserves_file(
+                    "--write", "--refresh-native-relocs", "example")
+
+    def test_real_function_entry_is_never_dropped_even_with_label_alias(self):
+        for mode in ("arm", "thumb"):
+            with self.subTest(mode=mode):
+                (self.config / "symbols.txt").write_text(self.symbols +
+                    "real_function kind:function(%s,size=0x4) addr:0x02001014\n" % mode)
+                self.assert_refusal_preserves_file(
+                    "--write", "--refresh-native-relocs", "example")
+
+    def test_unsized_real_function_entry_also_prevents_internal_drop(self):
+        with (self.config / "symbols.txt").open("a") as stream:
+            stream.write("unsized_function kind:function(thumb) addr:0x02001014\n")
+        self.assert_refusal_preserves_file(
+            "--write", "--refresh-native-relocs", "example")
+
+    def test_unexplained_data_or_external_blx_drop_is_rejected(self):
+        for offset, name, line in [
+            (4, "external_arm", self.relocations.splitlines(keepends=True)[0]),
+            (8, "callback", self.relocations.splitlines(keepends=True)[1]),
+        ]:
+            with self.subTest(offset=offset):
+                old = json.loads(json.dumps(self.original))
+                old["example"]["relocs"].insert(1, [offset, name])
+                self.store(old)
+                (self.config / "relocs.txt").write_text(self.relocations.replace(line, ""))
+                self.assert_refusal_preserves_file(
+                    "--write", "--refresh-native-relocs", "example")
+
+    def test_added_target_and_wrong_bank_thumb_pointer_must_pass_native_builder(self):
+        mutations = [
+            self.relocations.replace("to:0x02001020", "to:0x02001024"),
+            self.relocations.replace("to:0x02002000 module:main",
+                                     "to:0x02002000 module:overlay(1)"),
+        ]
+        for config in mutations:
+            with self.subTest(config=config):
+                (self.config / "relocs.txt").write_text(config)
+                before = self.index.read_bytes()
+                with self.assertRaises(SystemExit):
+                    self.refresh()
+                self.assertEqual(self.index.read_bytes(), before)
+
+    def test_duplicate_or_reordered_old_offsets_are_not_normalized(self):
+        for rows in [[[0, "local_return"], [0, "local_return"], [12, "historic_data_name"]],
+                     [[12, "historic_data_name"], [0, "local_return"]]]:
+            with self.subTest(rows=rows):
+                old = json.loads(json.dumps(self.original))
+                old["example"]["relocs"] = rows
+                self.store(old)
+                self.assert_refusal_preserves_file(
+                    "--write", "--refresh-native-relocs", "example")
+
+    def test_selected_proposal_precedes_original_five_disagreement_guard(self):
+        for count in (5, 6):
+            with self.subTest(unselected_disagreements=count):
+                symbols = self.symbols
+                old = json.loads(json.dumps(self.original))
+                for number in range(count):
+                    name = "unselected%d" % number
+                    symbols += "%s kind:function(thumb,size=0x18) addr:0x02001000\n" % name
+                    old[name] = {"hex": "00" * 24, "size": 24, "mode": "thumb",
+                                 "module": "main", "relocs": []}
+                (self.config / "symbols.txt").write_text(symbols)
+                self.store(old)
+                before = self.index.read_bytes()
+                result = self.refresh()
+                self.assertEqual(result, 0 if count == 5 else 1)
+                self.assertIn("%d DISAGREE" % count, self.last_output)
+                if count == 6:
+                    self.assertEqual(self.index.read_bytes(), before)
+                else:
+                    after = self.read()
+                    self.assertNotEqual(after["example"]["relocs"], old["example"]["relocs"])
+                    for name in old.keys() - {"example"}:
+                        self.assertEqual(after[name], old[name])
+
+
 if __name__ == "__main__":
     unittest.main()

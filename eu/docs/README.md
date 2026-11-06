@@ -119,7 +119,9 @@ contract, a specific semantic blocker and a next useful proof:
 These are limits on recovered meaning. Full-module matching and reconstructed
 DATA coverage are separate measurements. The
 [standalone relocation discrepancies](DATA_NATIVE_RELOCATION_BASELINE.md)
-also have their original-versus-renamed controls and exact offsets documented.
+also have their original-versus-renamed controls and exact offsets documented. The
+[native metadata refresh](NATIVE_RELOCATION_METADATA.md) resolves eight cases
+while preserving the remaining historical source-cleanup records.
 
 ## Reading native types for a port
 

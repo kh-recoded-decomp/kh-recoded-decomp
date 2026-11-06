@@ -595,8 +595,6 @@ from:0x020c1e42 kind:thumb_call_arm to:0x020ba300 module:overlay(27)
 from:0x020c1ea8 kind:thumb_call_arm to:0x02023dd0 module:main
 from:0x020c1eb2 kind:thumb_call_arm to:0x02023dd0 module:main
 from:0x020c1ede kind:thumb_call_arm to:0x020bc650 module:overlay(39)
-from:0x020c1ee8 kind:thumb_call to:0x020c29ee module:overlay(73)
-from:0x020c1f1c kind:thumb_call to:0x020c29b0 module:overlay(73)
 from:0x020c1f26 kind:thumb_call to:0x02051d50 module:main
 from:0x020c1f54 kind:thumb_call_arm to:0x020500a8 module:main
 from:0x020c1f58 kind:thumb_call to:0x020275dc module:main

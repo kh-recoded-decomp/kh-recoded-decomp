@@ -855,3 +855,13 @@ assignments and 106 retained labels. [EU_PENDING_DATA_LABELS.md](EU_PENDING_DATA
 records every remaining identity, physical/logical owner, reason and next proof.
 The 106-record set equals the current configuration's complete generic DATA set;
 interior aliases and unknown fields do not become invented C allocations.
+
+## Native relocation metadata corrections
+
+Eight functions now pass their strict fresh compilation checks after five
+native references were added and seventeen internal BL records were removed
+from external relocation expectations. Their 68 instruction bytes now receive
+direct comparison. [NATIVE_RELOCATION_METADATA.md](NATIVE_RELOCATION_METADATA.md)
+records ROM-derived scope, the selected refresh mode and 37 regression tests.
+All native instruction bytes, production objects and 108 module hashes remain
+unchanged; no comparator tolerance is modified.

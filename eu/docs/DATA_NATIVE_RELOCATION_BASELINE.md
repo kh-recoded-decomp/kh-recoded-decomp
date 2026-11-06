@@ -1,5 +1,20 @@
 # Standalone relocation checks at the DATA naming baseline
 
+## Current validation state
+
+Eight metadata cases below are now resolved through native ROM/config evidence
+and pass fresh official checks: SpawnStageEntryActor, ModelRenderCallbackKindC,
+RefreshStatusMenuData, HandleResultsInput, RefreshResultsScreen,
+DrawMatrixCellGlyph, DrawMatrixMenu and UpdateMatrixEventAnimation.
+[NATIVE_RELOCATION_METADATA.md](NATIVE_RELOCATION_METADATA.md) records the exact
+scope and explicit refresh procedure. All original instruction bytes remain
+unchanged; seventeen internal BL words are now compared directly.
+
+The thirteen raw callback/descriptor/key C references documented below remain
+a separate source cleanup. Historical block counts and original-source control
+verdicts are preserved here rather than retroactively reported as passes.
+
+
 The 64-symbol scene/menu DATA block checked all 443 affected production
 functions individually. 440 standalone checks pass. The other three produce
 the same relocation-map verdict with both the preserved original source and

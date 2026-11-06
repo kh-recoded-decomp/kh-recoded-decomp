@@ -20,8 +20,17 @@ At a relocated word an entry holds the ROM's linked value. Every consumer of thi
 Default is a dry run that VERIFIES itself against the entries already in the index; pass --write
 to merge the missing ones in.
 
-Usage:  python tools/rebuild_index.py [--write]
+Usage:  python tools/rebuild_index.py [--write] [--refresh-reloc-names]
+        python tools/rebuild_index.py [--write] --refresh-native-relocs NAME [NAME ...]
+
+Explicit native refresh is reconstructed only from ROM/config. It requires exact
+unmasked historical bytes/size/mode/module, preserves common-offset spellings and
+all other historical fields, and permits a dropped relocation only for a proved
+same-function Thumb BL to a current Thumb label that is not a function entry.
+Selected replacements are cross-checked in memory before the unchanged global
+five-disagreement guard. No other entries are added or changed in this mode.
 """
+import argparse
 import glob, json, os, re, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -70,12 +79,21 @@ def mod_key(d):
 by_mod = {}
 symbol_addresses = {}
 thumb_targets = set()
+# Metadata for the explicit native refresh only. Normal lookup stays unchanged.
+thumb_labels = set()
+function_entries = set()
+function_definitions = {}
+symbol_locations = {}
 
 
 def load_symbols():
     by_mod.clear()
     symbol_addresses.clear()
     thumb_targets.clear()
+    thumb_labels.clear()
+    function_entries.clear()
+    function_definitions.clear()
+    symbol_locations.clear()
     for d, _bin in module_dirs():
         p = os.path.join(d, "symbols.txt")
         if not os.path.exists(p):
@@ -87,7 +105,20 @@ def load_symbols():
                 if m:
                     m2.setdefault(int(m.group(4), 16), m.group(1))
                     symbol_addresses.setdefault(m.group(1), set()).add(int(m.group(4), 16))
+                    location = (mod_key(d), int(m.group(4), 16))
+                    symbol_locations.setdefault(m.group(1), set()).add(location)
+                    if m.group(2) == "label" and m.group(3) == "thumb":
+                        thumb_labels.add(location)
+                    if m.group(2) == "function":
+                        function_entries.add(location)
                 m = FUNC_RE.match(ln)
+                if m:
+                    module = os.path.basename(d) if d != os.path.join(ROOT, "config", "arm9") else "main"
+                    definition = {"bank": mod_key(d), "module": module,
+                                  "address": int(m.group(4), 16),
+                                  "size": int(m.group(3), 16), "mode": m.group(2)}
+                    function_definitions.setdefault(m.group(1), []).append(definition)
+                    function_entries.add((mod_key(d), int(m.group(4), 16)))
                 if m and m.group(2) == "thumb":
                     thumb_targets.add((mod_key(d), int(m.group(4), 16)))
 
@@ -291,8 +322,84 @@ def relocation_name_updates(index, rebuilt):
             and entries_agree(index[name], current)}
 
 
+def native_relocation_updates(index, rebuilt, names):
+    """Explicit membership refresh; rebuilt must come from the ROM/config builder.
+
+    No object/candidate input is accepted by the CLI. All additions are existing
+    builder records already checked with check_linked_target. Dropped words become
+    ordinary exact bytes; only native same-function Thumb BL labels qualify.
+    """
+    if not names or len(names) != len(set(names)):
+        raise ValueError("native refresh requires explicit, unique function names")
+    updates = {}
+    for name in names:
+        if name not in index or name not in rebuilt:
+            raise ValueError("unknown native refresh selection: " + name)
+        definitions = function_definitions.get(name, [])
+        if len(definitions) != 1:
+            raise ValueError("native refresh requires one configured function: " + name)
+        definition = definitions[0]
+        previous, current = index[name], rebuilt[name]
+        for field in ("hex", "size", "mode", "module"):
+            if field not in previous or previous[field] != current[field]:
+                raise ValueError("%s: exact unmasked %s disagrees with ROM/config" % (name, field))
+        if any(current[field] != definition[field] for field in ("size", "mode", "module")):
+            raise ValueError(name + ": configured function identity disagrees")
+        native = bytes.fromhex(current["hex"])
+        if len(native) != current["size"]:
+            raise ValueError(name + ": native byte length disagrees with size")
+
+        def offsets(entry):
+            rows = entry["relocs"]
+            if any(len(row) != 2 or type(row[0]) is not int
+                   or not isinstance(row[1], str) or not row[1]
+                   or not 0 <= row[0] <= len(native) - 4 for row in rows):
+                raise ValueError(name + ": invalid relocation records")
+            positions = [off for off, _ in rows]
+            if positions != sorted(set(positions)):
+                raise ValueError(name + ": relocation offsets must be unique and ordered")
+            return dict(rows)
+
+        old_relocs, new_relocs = offsets(previous), offsets(current)
+        bank, start = definition["bank"], definition["address"]
+        for offset in sorted(old_relocs.keys() - new_relocs.keys()):
+            if current["mode"] != "thumb" or offset % 2:
+                raise ValueError("%s +0x%x: drop is not a Thumb instruction" % (name, offset))
+            word = int.from_bytes(native[offset:offset + 4], "little")
+            target = linked_target(word, start + offset, "thumb_call")
+            check_linked_target(native, offset, start + offset, target, "thumb_call", bank)
+            location = (bank, target)
+            if not start <= target < start + current["size"]:
+                raise ValueError("%s +0x%x: dropped BL leaves the function" % (name, offset))
+            if location not in thumb_labels or location in function_entries:
+                raise ValueError("%s +0x%x: dropped BL target is not a local Thumb label" % (name, offset))
+            old_target = old_relocs[offset]
+            locations = symbol_locations.get(old_target, set())
+            if locations:
+                agrees = {address for module, address in locations if module == bank} == {target}
+            else:
+                agrees = symbol_address(old_target) == target
+            if not agrees:
+                raise ValueError("%s +0x%x: old target disagrees with native BL/bank" % (name, offset))
+        # Existing names stay intact at shared offsets. Only newly configured
+        # native offsets use the builder spelling; preserve every other field.
+        relocs = [[off, old_relocs.get(off, new_relocs[off])]
+                  for off in sorted(new_relocs)]
+        proposed = dict(previous, relocs=relocs)
+        if not entries_agree(proposed, current):
+            raise ValueError(name + ": proposed relocation map lacks native target proof")
+        updates[name] = proposed
+    return updates
+
+
 def main(argv=None):
     argv = sys.argv[1:] if argv is None else argv
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--write", action="store_true")
+    refresh = parser.add_mutually_exclusive_group()
+    refresh.add_argument("--refresh-reloc-names", action="store_true")
+    refresh.add_argument("--refresh-native-relocs", nargs="+", metavar="NAME")
+    options = parser.parse_args(argv)
     load_symbols()
     rebuilt = rebuild()
     index = {}
@@ -300,10 +407,24 @@ def main(argv=None):
         with open(INDEX_PATH) as stream:
             index = json.load(stream)
     print("current index: %d functions" % len(index))
+    native_updates = {}
+    if options.refresh_native_relocs is not None:
+        try:
+            native_updates = native_relocation_updates(index, rebuilt, options.refresh_native_relocs)
+        except (ValueError, KeyError, TypeError) as error:
+            print("refusing native relocation refresh: " + str(error))
+            return 1
+        print("ROM/config native relocation refresh: %d selected functions" % len(native_updates))
+        for name, proposed in native_updates.items():
+            old = set(off for off, _ in index[name]["relocs"])
+            new = set(off for off, _ in proposed["relocs"])
+            print("  %s: +%d configured, -%d internal Thumb BL" %
+                  (name, len(new - old), len(old - new)))
+    comparison_index = dict(index, **native_updates)
     # Self-check: for every function BOTH have, the reconstruction must agree once the relocated
     # words are masked. If it does not, the reconstruction is wrong and must not be merged.
     same = bad = 0
-    for n, e in index.items():
+    for n, e in comparison_index.items():
         if n not in rebuilt:
             continue
         got = rebuilt[n]
@@ -337,18 +458,23 @@ def main(argv=None):
     if bad:
         print("  (those %d entries are NOT overwritten; the existing index may contain"
               " compiler-derived relocations absent from relocs.txt)" % bad)
-    updates = relocation_name_updates(index, rebuilt) if "--refresh-reloc-names" in argv else {}
-    if "--refresh-reloc-names" in argv:
+    updates = relocation_name_updates(index, rebuilt) if options.refresh_reloc_names else {}
+    if options.refresh_reloc_names:
         print("ROM-proven relocation-name updates: %d" % len(updates))
-    if "--write" not in argv:
+    if not options.write:
         print("\ndry run; pass --write to merge the missing entries in.")
         return 0
 
-    for n in missing:
-        index[n] = rebuilt[n]
-    for n, relocs in updates.items():
-        # Keep every byte and all other historical entry metadata unchanged.
-        index[n] = dict(index[n], relocs=relocs)
+    if options.refresh_native_relocs is not None:
+        # Explicit native refresh writes selected entries only, never missing or
+        # nonselected entries. The original whole-index guard already passed.
+        index.update(native_updates)
+    else:
+        for n in missing:
+            index[n] = rebuilt[n]
+        for n, relocs in updates.items():
+            # Keep every byte and all other historical entry metadata unchanged.
+            index[n] = dict(index[n], relocs=relocs)
     with open(INDEX_PATH, "w") as stream:
         json.dump(index, stream)
     print("merged. index now: %d functions" % len(index))
