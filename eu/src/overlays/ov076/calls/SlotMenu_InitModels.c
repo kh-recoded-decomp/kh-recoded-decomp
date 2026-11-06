@@ -1,6 +1,6 @@
 #define SlotMenu_InitModels_020c6954 SlotMenu_InitModels
-#define data_ov076_020cd0a0 data_ov076_020cd0c0
-#define data_ov076_020cd0b8 data_ov076_020cd0d8
+#define data_ov076_020cd0a0 gSlotMenuModelResourceIds
+#define data_ov076_020cd0b8 gSlotMenuExtraModelResourceIds
 #define func_0202ecf8 InitSharedRecordAndDispatch
 #define selectJointAnimationBlend_0202f2cc selectJointAnimationBlend
 #include "src/ov076/unclassified_helpers/SlotMenu_InitModels_020c6954.c"

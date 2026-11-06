@@ -1,4 +1,4 @@
 #define SlotMenu_ReloadAllSlots_020c8ef8 SlotMenu_ReloadAllSlots
 #define SlotMenu_ReloadSlot_020c6f60 SlotMenu_ReloadSlot
-#define g_slotMenu_020cd3e0 data_ov076_020cd400
+#define g_slotMenu_020cd3e0 gSlotMenuSharedState
 #include "src/ov076/unclassified_helpers/SlotMenu_ReloadAllSlots_020c8ef8.c"

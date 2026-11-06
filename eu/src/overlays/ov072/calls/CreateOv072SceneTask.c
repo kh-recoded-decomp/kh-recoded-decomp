@@ -8,7 +8,7 @@
 #define Msg_OpenContainerAndReadHeader_0202cc6c Msg_OpenContainerAndReadHeader
 #define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
 #define ZeroBytes0x14_020a8adc ZeroBytes0x14
-#define data_ov072_020d9bc8 data_ov072_020d9be8
+#define data_ov072_020d9bc8 gOverlay072EntryGroupParameters
 #define data_ov072_020d9c00 sOv072_BaEfFnDtP2_020d9c20
 #define data_ov072_020d9c10 sOv072_CmDT_020d9c30
 #define func_ov021_020a89a8 func_ov021_020a89c8

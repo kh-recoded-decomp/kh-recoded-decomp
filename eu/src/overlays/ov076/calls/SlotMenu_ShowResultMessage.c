@@ -1,7 +1,7 @@
 #define IsGlobalPackedBitSet_02027304 IsGlobalPackedBitSet
 #define MenuPanel_InitStandard_020cb380 MenuPanel_InitStandard
 #define SlotMenu_ShowResultMessage_020c61c8 SlotMenu_ShowResultMessage
-#define data_ov076_020cd2c0 data_ov076_020cd2e0
+#define data_ov076_020cd2c0 gSlotMenuThirdColumnPromptTail
 #define func_ov027_020ba2a8 GetPackedFileEntry
 #define func_ov027_020ba2e0 FormatPackedWideText
 #define func_ov076_020c4ea8 SlotMenu_EnterSlotEditState

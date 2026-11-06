@@ -17,7 +17,7 @@ typedef struct GeometryGlobalState {
     u32 flag;
 } GeometryGlobalState;
 
-extern const MtxFx33 data_ov077_020ca26c;
+extern const MtxFx33 gItemScreenPackedQuadRotation;
 extern GeometryGlobalState NNS_G3dGlb;
 extern void NNS_G3dGlbSetBaseScale(const VecFx32 *scale);
 extern void NNS_G3dGlbSetBaseTrans(const VecFx32 *trans);
@@ -48,7 +48,7 @@ void DrawItemScreenImageFromPackedArgs(const MenuImage *images, u32 select, u32 
 {
     VecFx32 trans;
     VecFx32 scale;
-    MtxFx33 rot = data_ov077_020ca26c;
+    MtxFx33 rot = gItemScreenPackedQuadRotation;
     const MenuImage *image = &images[select >> 16];
 
     scale.x = image->width << 12;

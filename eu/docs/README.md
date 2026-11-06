@@ -40,6 +40,10 @@ links the complete sequence of documented naming blocks.
 - [Stage Camera Native Storage](STAGE_CAMERA_NATIVE_STORAGE.md).
 - [Overlay058 Scene Native Storage](OVERLAY058_SCENE_NATIVE_STORAGE.md).
 
+- [Actor Scene Parameter Data](ACTOR_SCENE_PARAMETER_DATA.md).
+- [Matrix Draw Refresh Data](MATRIX_DRAW_REFRESH_DATA.md).
+- [Slot Item Native Template Data](SLOT_ITEM_NATIVE_TEMPLATE_DATA.md).
+
 ## Unresolved function contracts
 
 At the `ad0a8778153f72218e4bdad3a5cec1bd8e2a7470` naming checkpoint,

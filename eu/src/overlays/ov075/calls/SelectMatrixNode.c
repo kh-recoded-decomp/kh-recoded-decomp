@@ -10,7 +10,7 @@
 #define ShowDialogMessage_020c8ce4 ShowDialogMessage
 #define data_ov075_020d13f4 gOv075StateHandlers
 #define data_ov075_020d1408 gOv075CursorHandlers
-#define data_ov075_020d1518 data_ov075_020d1538
+#define data_ov075_020d1518 gMatrixSelectionRefreshRequestTemplate
 #define func_ov027_020ba2a8 GetPackedFileEntry
 #define func_ov073_020c1eb4 RefreshStatusMenuData
 #define func_ov073_020c2ca4 SetStatusPageAndCursor

@@ -28,8 +28,8 @@
 #define SetSecondaryElementEnabled_020bc084 SetSecondaryElementEnabled
 #define SetupAllSelectionRecords_0204f85c SetupAllSelectionRecords
 #define data_ov075_020d1454 sMatrixCursorFrames
-#define data_ov075_020d14a0 data_ov075_020d14c0
-#define data_ov075_020d14f0 data_ov075_020d1510
+#define data_ov075_020d14a0 gMatrixCellModelFrames
+#define data_ov075_020d14f0 gMatrixMenuWindowStyle
 #define data_ov075_020d1824 sOv075_UiMenuStamtxP2_020d1844
 #define data_ov075_020d1838 sOv075_UiMenuLanguageStamtxP2_020d1858
 #define data_ov075_020d184c sOv075_ScrollBg_020d186c

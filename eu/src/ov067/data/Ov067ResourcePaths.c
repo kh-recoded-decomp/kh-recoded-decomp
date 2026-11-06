@@ -2,7 +2,7 @@
 
 #pragma explicit_zero_data on
 
-Ov067ResourcePaths data_ov067_020d8560 = {
+Ov067ResourcePaths gOverlay067ResourcePaths = {
     { 'b', 'a', '/', 'e', 'f', '/', 'f', 'n', '/' },
     "ss.p2",
     "ba/ch/%s/ci.b.z",

@@ -9,7 +9,7 @@
 #define UpdateActionPhase_020d0294 UpdateActionPhase
 #define UpdateTimedBurstAction_020d81c0 UpdateTimedBurstAction
 #define VEC_Subtract_01ff9e3c VEC_Subtract
-#define data_ov061_020d8500 data_ov061_020d8520
+#define data_ov061_020d8500 gOverlay061BurstSpawnFrames
 #define func_ov021_020a8ab4 ResetAnimationTrackState
 #define func_ov021_020a8ca0 func_ov021_020a8cc0
 #define func_ov052_020ceb54 GetActorModelPosition

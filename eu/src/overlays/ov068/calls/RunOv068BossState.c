@@ -7,7 +7,7 @@
 #define RestartScriptSound_020a818c RestartScriptSound
 #define RunOv068BossState_020d81a0 RunOv068BossState
 #define UpdateIdleTimeout_0206e1c8 UpdateIdleTimeout
-#define data_ov068_020d8654 data_ov068_020d8674
+#define data_ov068_020d8654 gOverlay068EmitterStartFrames
 #define func_ov021_020a8ab4 ResetAnimationTrackState
 #define func_ov021_020a8ca0 func_ov021_020a8cc0
 #define func_ov052_020d1170 ActivateSlotModelGroup

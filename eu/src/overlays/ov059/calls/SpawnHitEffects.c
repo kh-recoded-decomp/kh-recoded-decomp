@@ -10,7 +10,7 @@
 #define VEC_Add_01ff9e0c VEC_Add
 #define VEC_MultAdd_01ffa09c VEC_MultAdd
 #define data_0205356c gSinFx12Table
-#define data_ov059_020cfe60 data_ov059_020cfe80
+#define data_ov059_020cfe60 gOverlay059HitEffectOffset
 #define func_ov059_020ceefc Seeker_Start
 #define random_next_scaled_0202aa04 random_next_scaled
 #include "src/ov059/actor_effects/SpawnHitEffects_020caea0.c"

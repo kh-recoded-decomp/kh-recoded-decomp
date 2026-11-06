@@ -121,3 +121,26 @@ python tools/verify_idx.py src/overlays/ov041/calls/ModelRenderCallbackKindC.c M
 The missing call classification needs a separate metadata repair based on the
 native instruction. This naming block preserves all 163 complete affected
 objects and all 108 freshly linked module hashes.
+
+## Actor, matrix and slot-template block
+
+The 73-symbol actor/matrix/template block checks 69 affected functions. 67
+standalone checks pass; two reproduce their original same-path verdicts.
+
+| Function | Native identity/extent | Reference map discrepancy |
+|---|---|---|
+| `DrawMatrixMenu` | ov075:020c910c, Thumb, 3872 bytes | Internal BLs at +0x322, +0x5d4 and +0xe04 target 020c9f14, 020c9efa and 020c9686 within the same function; the index records external relocations to local labels. |
+| `UpdateMatrixEventAnimation` | ov075:020ca078, Thumb, 2520 bytes | Internal BLs at +0x0e and +0x10a both target local 020caa0e; DATA word +0x9bc is 020d143d, emitted as `sMatrixNavigationGraph` with its native addend but represented by an address string in the index. |
+
+The internal call bytes remain directly comparable and must stay unmasked in
+an eventual metadata repair. The odd navigation DATA address does not establish
+a Thumb callback; check its actual table definition and interior offset.
+
+```sh
+python tools/verify_idx.py src/overlays/ov075/calls/DrawMatrixMenu.c DrawMatrixMenu --thumb
+python tools/verify_idx.py src/overlays/ov075/calls/UpdateMatrixEventAnimation.c UpdateMatrixEventAnimation --thumb
+```
+
+The naming block preserves all 120 complete affected objects and all 108
+freshly linked module hashes. Original-source controls retain nonzero verifier
+verdicts; these are not reported as individual MATCH results.

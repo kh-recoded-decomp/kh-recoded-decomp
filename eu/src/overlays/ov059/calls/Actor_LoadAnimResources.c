@@ -6,7 +6,7 @@
 #define STD_ConcatString_02010cc8 STD_ConcatenateString
 #define ZeroBytes0x14_020a8adc ZeroBytes0x14
 #define data_0205615c gSoundCategoryNames
-#define data_ov059_020cfdf0 data_ov059_020cfe10
+#define data_ov059_020cfdf0 gOverlay059AnimationSlotStorage
 #define data_ov059_020cfef0 gBattleEffectPathParts
 #define data_ov059_020cff0c sOv059_BaChFormatS_020cff2c
 #define data_ov059_020cff18 sOv059_BaChSoWd00_020cff38

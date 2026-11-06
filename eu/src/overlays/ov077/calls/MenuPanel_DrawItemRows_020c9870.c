@@ -5,7 +5,7 @@
 #define DrawImageQuad_020c9a78 DrawSpriteRegionQuad
 #define DrawMenuImageModulated_020ccf34 DrawItemScreenImageFromPackedArgs
 #define DrawSlotMenuGaugeAndDigits DrawItemGaugeAndDigits
-#define data_ov076_020cd12c data_ov077_020ca15c
+#define gSlotPickerIconGrid gItemPickerIconGrid
 #define MessageWindow_IsFinished IsMessageWindowActive
 #define MessageWindow_Update MessageWindow_Update_020c84fc
 #include "src/overlays/ov076/calls/MenuPanel_DrawItemRows.c"

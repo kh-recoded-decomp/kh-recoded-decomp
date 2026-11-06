@@ -69,7 +69,7 @@ typedef char ItemEquippedOffsetCheck[ITEM_OFFSET(ItemScreen, equipped) == 0x14d0
 typedef char SavePartySlotsOffsetCheck[ITEM_OFFSET(SaveState, partySlots) == 0x2db4 ? 1 : -1];
 #undef ITEM_OFFSET
 
-extern ItemScreenGlobals data_ov077_020ca3a0;
+extern ItemScreenGlobals gItemScreenSharedState;
 extern SaveState *data_0205fe0c;
 extern const char sOv077_UiMenuEqumtxP2_020ca2f0[];
 extern const char sOv077_UiMenuLanguageEqumtxP2_020ca304[];
@@ -92,7 +92,7 @@ BOOL InitItemScreen(ItemScreen *screen)
     u16 equippedItem;
 
     MI_CpuFill8(screen, 0, sizeof(*screen));
-    data_ov077_020ca3a0.screen = screen;
+    gItemScreenSharedState.screen = screen;
     *(vu16 *)0x04000304 &= ~0x8000;
     ItemListPanel_Create((ItemListPanel *)screen->panelHeader, 2, ItemScreen_DrawHintTextThunk);
     screen->mode = 0;

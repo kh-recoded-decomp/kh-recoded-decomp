@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-const u32 data_ov076_020cd0c0[6] = {
+const u32 gSlotMenuModelResourceIds[6] = {
     0xFFFFFFFF, 0x00000008, 0x00000004, 0x00000005,
     0x00000007, 0x00000006,
 };

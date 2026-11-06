@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-const u32 data_ov076_020cd0e0[17] = {
+const u32 gSlotFusionRateStorage[17] = {
     0x00003000, 0x00003000, 0x00005000, 0x00005000,
     0x0000F000, 0x00023000, 0x00006000, 0x00006000,
     0x00007000, 0x00008000, 0x00014000, 0x0001E000,
@@ -8,6 +8,6 @@ const u32 data_ov076_020cd0e0[17] = {
     0x00000007,
 };
 
-const u32 data_ov076_020cd0d8[2] = {
+const u32 gSlotMenuExtraModelResourceIds[2] = {
     0x00000009, 0x0000000A,
 };

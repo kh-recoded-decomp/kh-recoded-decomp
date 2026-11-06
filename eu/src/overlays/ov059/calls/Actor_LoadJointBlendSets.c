@@ -3,7 +3,7 @@
 #define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define RetainOrInitializeSharedRecord_0202c80c SND_RegisterSeq
-#define data_ov059_020cfe6c data_ov059_020cfe8c
+#define data_ov059_020cfe6c gOverlay059JointBlendResourceIds
 #define func_0202c48c LoadFileAllocFromHeapTail
 #define func_0202ed9c InitModelUsingTextureHeader
 #define func_ov059_020c8b7c ResetActorJointBlendState

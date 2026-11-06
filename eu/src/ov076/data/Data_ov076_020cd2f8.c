@@ -33,6 +33,6 @@ void *gCommandMatrixMenuDescriptor[17] = {
     (void *)SlotMenu_SwitchToScene0,
 };
 
-u32 data_ov076_020cd2f8[3] = {
+u32 gSlotMenuFusionResultPromptTail[3] = {
     0x01FF522F, 0x00000000, 0x00000000,
 };

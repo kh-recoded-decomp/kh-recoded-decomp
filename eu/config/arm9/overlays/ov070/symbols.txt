@@ -7,7 +7,7 @@ FreeOv070ContextBuffer kind:function(thumb,size=0x10) addr:0x020d82ac
 UpdateOv070BossProjectiles kind:function(thumb,size=0x32c) addr:0x020d82bc
 UpdateOv070BossTurnState kind:function(thumb,size=0x2cc) addr:0x020d85e8
 CreateOv070BossObject kind:function(thumb,size=0x170) addr:0x020d88b4
-data_ov070_020d8a24 kind:data(any) addr:0x020d8a24
-data_ov070_020d8a30 kind:data(any) addr:0x020d8a30
-data_ov070_020d8a3c kind:data(any) addr:0x020d8a3c
+gOverlay070EntryGroupParameters kind:data(any) addr:0x020d8a24
+gOverlay070EntryGroupResourceIndices kind:data(any) addr:0x020d8a30
+gOverlay070TaskCounterThresholds kind:data(any) addr:0x020d8a3c
 sOv070_BaEfFnDfP2_020d8a60 kind:data(any) addr:0x020d8a60

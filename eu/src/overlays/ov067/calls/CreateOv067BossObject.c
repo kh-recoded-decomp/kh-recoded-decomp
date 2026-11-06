@@ -101,7 +101,7 @@ BossObject *CreateOv067BossObject(ObjectOwner *owner, void *resDesc, ObjectDesc 
     targets->range = 0x7fffffff;
     targets->field24 = 0;
     targets->field28 = 0;
-    obj->messages = Msg_OpenContainerAndReadHeader(data_ov067_020d8560.effectDirectory,
+    obj->messages = Msg_OpenContainerAndReadHeader(gOverlay067ResourcePaths.effectDirectory,
                                                    owner->player + 8, FALSE);
     key = (u32)obj->messages;
     ZeroBytes0x14(&group);
@@ -123,7 +123,7 @@ BossObject *CreateOv067BossObject(ObjectOwner *owner, void *resDesc, ObjectDesc 
     obj->finish = EndOv067BossIntro;
     obj->onAction = RunOv067BossIntroState;
     selection = *GetOverlaySelectionRecord(owner->player);
-    OS_SPrintf(path, data_ov067_020d8560.characterPathFormat,
+    OS_SPrintf(path, gOverlay067ResourcePaths.characterPathFormat,
                gSoundCategoryNames[selection]);
     file = LoadFileAllocFromHeapTail(path, 0x11);
     BuildNodeRecords(obj, owner, resDesc, file);
@@ -131,6 +131,6 @@ BossObject *CreateOv067BossObject(ObjectOwner *owner, void *resDesc, ObjectDesc 
     AcquireEntryHandles(obj, owner, resDesc);
     LoadResGroupHandles(obj, owner, resDesc);
     obj->introActive = 0;
-    CameraPath_Load(obj->cameraPath, data_ov067_020d8560.commonArchive);
+    CameraPath_Load(obj->cameraPath, gOverlay067ResourcePaths.commonArchive);
     return obj;
 }

@@ -21,8 +21,8 @@
 #define VEC_Normalize_01ffaff4 VEC_NormalizeLength
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define ZeroBytes0x28_020ac0f8 ZeroBytes0x28
-#define data_ov064_020d8824 data_ov064_020d8844
-#define data_ov064_020d8830 data_ov064_020d8850
+#define data_ov064_020d8824 gOverlay064TimedMarkerOffset
+#define data_ov064_020d8830 gOverlay064InitialMarkerOffset
 #define func_0202a9d0 NextSharedRandom16Scaled
 #define func_0202f4b8 GetModelAnimationDurationFx32
 #define func_0203adcc InitAxisCylinderShape

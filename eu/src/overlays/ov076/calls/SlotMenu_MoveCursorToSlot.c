@@ -26,7 +26,7 @@ typedef struct SlotMenu {
     ScrollList list;
 } SlotMenu;
 
-extern CursorMarker data_ov076_020cd280;
+extern CursorMarker gSlotMenuBrowsePrompt;
 extern void *GetMenuWork(void);
 extern void RefreshScrollListLayout(ScrollList *list, void *layout);
 extern void SlotMenu_ReloadVisibleSlots(SlotMenu *menu);
@@ -38,7 +38,7 @@ void SlotMenu_MoveCursorToSlot(SlotMenu *menu, int slot, u32 column, int mode, C
     s16 xOffset;
     s16 base;
 
-    if (cursor == &data_ov076_020cd280) {
+    if (cursor == &gSlotMenuBrowsePrompt) {
         newTop = slot;
     }
     if (offset <= 0) {
@@ -48,7 +48,7 @@ void SlotMenu_MoveCursorToSlot(SlotMenu *menu, int slot, u32 column, int mode, C
         }
     } else {
         cursor->direction = -1;
-        if (offset > 1 || cursor == &data_ov076_020cd280) {
+        if (offset > 1 || cursor == &gSlotMenuBrowsePrompt) {
             newTop = slot - 1;
         }
     }

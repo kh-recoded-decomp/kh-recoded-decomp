@@ -1,6 +1,6 @@
 #define BuildItemListForCategories_020c65ec BuildItemListForCategories
 #define BuildItemListForCategory_020c65d8 BuildItemListForCategory
 #define MenuPanel_ApplyCategoryFilter_020c6c48 MenuPanel_ApplyCategoryFilter_020c6c68
-#define data_ov077_020ca134 data_ov077_020ca154
-#define data_ov077_020ca23c data_ov077_020ca25c
+#define data_ov077_020ca134 gItemPickerCategoryFilterCodes
+#define data_ov077_020ca23c gItemPickerDefaultCategorySet
 #include "src/ov077/unclassified_helpers/MenuPanel_ApplyCategoryFilter_020c6c48.c"

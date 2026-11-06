@@ -146,7 +146,7 @@ struct MatrixMenu {
 
 extern SaveData *data_0205fe0c;
 extern u16 data_02060500;
-extern const PageTab data_ov075_020d140a[];
+extern const PageTab gMatrixCategoryCycleEntries[];
 extern const OptionApplyFunc gOv075StateHandlers[];
 extern const OptionUpdateFunc gOv075CursorHandlers[];
 extern const FocusOffset sMatrixCursorFrames[];
@@ -378,7 +378,7 @@ int UpdateMatrixOptionMenu(MatrixMenu *menu)
         u8 mask;
         u8 id;
 
-        tabs = data_ov075_020d140a;
+        tabs = gMatrixCategoryCycleEntries;
         type = menu->current->type;
         index = 0;
         if (type != 9) {
@@ -407,7 +407,7 @@ int UpdateMatrixOptionMenu(MatrixMenu *menu)
         u8 mask;
         u8 id;
 
-        tabs = data_ov075_020d140a;
+        tabs = gMatrixCategoryCycleEntries;
         type = menu->current->type;
         index = 0;
         if (type != 9) {

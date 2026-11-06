@@ -1,6 +1,6 @@
 #define ItemList_FilterByCategorySet_020c95b8 ItemList_FilterByCategorySet
 #define ItemList_FilterByCategory_020c95a4 ItemList_FilterByCategory
 #define MenuPanel_ApplyCategoryFilter_020c9c14 MenuPanel_ApplyCategoryFilter
-#define data_ov076_020cd104 data_ov076_020cd124
-#define data_ov076_020cd20c data_ov076_020cd22c
+#define data_ov076_020cd104 gSlotPickerCategoryFilterCodes
+#define data_ov076_020cd20c gSlotPickerDefaultCategorySet
 #include "src/ov076/unclassified_helpers/MenuPanel_ApplyCategoryFilter_020c9c14.c"

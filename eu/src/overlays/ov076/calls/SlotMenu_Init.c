@@ -17,7 +17,7 @@
 #define SlotMenu_BuildPairMatrix_020c6c40 SlotMenu_BuildPairMatrix
 #define SlotMenu_SelectGuideStep_020c439c SlotMenu_SelectGuideStep
 #define SlotMenu_ReloadSlot_020c6f60 SlotMenu_ReloadSlot
-#define data_ov076_020cd3e0 data_ov076_020cd400
+#define data_ov076_020cd3e0 gSlotMenuSharedState
 #define data_ov076_020cd328 sOv076_UiMenuCmdmtxP2_020cd348
 #define data_ov076_020cd33c sOv076_UiMenuLanguageCmdmtxP2_020cd35c
 #include "src/ov076/unclassified_helpers/SlotMenu_Init_020c45a8.c"

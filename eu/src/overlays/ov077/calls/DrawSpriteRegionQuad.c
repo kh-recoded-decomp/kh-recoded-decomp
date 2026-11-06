@@ -5,7 +5,7 @@
 #define QueueOrSendGeometryCommand_01ffa37c NNS_G3dGeBufferOP_N
 #define G3D_BASE_ROT NNS_G3dGlb.prmBaseRot
 #define G3D_FLAGS NNS_G3dGlb.flag
-#define data_ov077_020ca174 data_ov077_020ca194
+#define data_ov077_020ca174 gItemScreenSpriteQuadRotation
 #define func_020192ec NNS_G3dGlbSetBaseTrans
 #define func_0201931c NNS_G3dGlbSetBaseScale
 #include "src/ov077/unclassified_helpers/DrawSpriteRegionQuad_020c6a8c.c"

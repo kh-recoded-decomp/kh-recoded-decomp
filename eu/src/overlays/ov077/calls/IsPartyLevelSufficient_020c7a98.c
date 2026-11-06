@@ -2,6 +2,6 @@
 #define GetCtxModeByte_02068084 GetCtxModeByte
 #define IsPartyLevelSufficient_020c7a78 IsPartyLevelSufficient_020c7a98
 #define ReadSessionPackedBits_02064574 ReadSessionPackedBits
-#define data_ov077_020ca140 data_ov077_020ca160
+#define data_ov077_020ca140 gItemScreenTierThresholds
 #define func_020505a8 GetSelectionPackedValueBlock
 #include "src/ov077/unclassified_helpers/IsPartyLevelSufficient_020c7a78.c"

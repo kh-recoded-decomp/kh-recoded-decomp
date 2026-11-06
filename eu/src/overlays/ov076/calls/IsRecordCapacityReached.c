@@ -2,6 +2,6 @@
 #define GetCtxModeByte_02068084 GetCtxModeByte
 #define IsRecordCapacityReached_020caa44 IsRecordCapacityReached
 #define ReadSessionPackedBits_02064574 ReadSessionPackedBits
-#define data_ov076_020cd110 data_ov076_020cd130
+#define data_ov076_020cd110 gSlotMenuTierThresholds
 #define func_020505a8 GetSelectionPackedValueBlock
 #include "src/ov076/unclassified_helpers/IsRecordCapacityReached_020caa44.c"

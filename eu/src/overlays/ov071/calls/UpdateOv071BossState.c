@@ -1,7 +1,7 @@
 #define UpdateOv071BossState_020d836c UpdateOv071BossState
 #define data_0205356c gSinFx12Table
 #define data_02053438 gZeroVecFx32
-#define data_ov071_020d9660 data_ov071_020d9680
+#define data_ov071_020d9660 gOverlay071ContactReferenceUp
 #define func_ov001_0206db78 GetPlayerControlState
 #define ComputeRootMotionDelta_020ce9d4 ComputeRootMotionDelta
 #define GetOv071PaletteEntry_020d8114 GetOv071PaletteEntry

@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-const u32 data_ov075_020d1728[31] = {
+const u32 gMatrixPickerOwnerCategorySets[31] = {
     0x00000001, 0x00000001, 0x00000000, 0x00000000,
     0x00000000, 0x00000003, 0x00000003, 0x00000002,
     0x00000000, 0x00000000, 0x00000002, 0x00000003,

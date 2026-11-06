@@ -18,7 +18,7 @@
 #define func_ov027_020b91c8 SetWidgetPosition
 #define func_ov027_020b9360 ResolveWidgetPositionComponents
 #define PlaySoundEffect_0204d924 PlaySoundEffect
-#define data_ov076_020cd190 data_ov076_020cd1b0
+#define data_ov076_020cd190 gSlotPickerOwnerCategorySets
 #define data_ov076_020cd35c sOv076_ScrollCmx_020cd37c
 #define func_ov076_020cac94 UpdateSlotMenuCharUpload
 #if defined(__MWERKS__)

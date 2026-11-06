@@ -107,7 +107,7 @@ CHECK_ROW_OFFSET(SaveData, equippedProgress, 0x2dc0, SaveEquippedProgressOffset)
 CHECK_ROW_OFFSET(SaveData, category4Values, 0x2de0, SaveCategoryValuesOffset);
 #undef CHECK_ROW_OFFSET
 
-extern const CellGrid data_ov076_020cd12c;
+extern const CellGrid gSlotPickerIconGrid;
 extern SaveData *data_0205fe0c;
 extern int GetVBlankCounter(void);
 extern RecordEntry *GetActiveRecordEntryOrNull(int index);
@@ -163,7 +163,7 @@ static inline int GetFirstDrawnRow(MenuPanel *panel)
 void MenuPanel_DrawItemRows(MenuPanel *panel)
 {
     ImageQuad quad;
-    CellGrid grid = data_ov076_020cd12c;
+    CellGrid grid = gSlotPickerIconGrid;
     int y = 24 - (s16)(panel->scrollPixels & 15);
     fx32 depth = 0x3fe000;
     int top = GetFirstDrawnRow(panel);

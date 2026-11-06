@@ -6,6 +6,6 @@
 #define SlotMenu_ReturnToBrowse_020c8500 SlotMenu_ReturnToBrowse
 #define SlotMenu_SetReturnCallback_020c89c4 SlotMenu_SetReturnCallback
 #define SlotMenu_ShowSlotHint_020c827c SlotMenu_ShowSlotHint
-#define data_ov076_020cd3e0 data_ov076_020cd400
+#define data_ov076_020cd3e0 gSlotMenuSharedState
 #define func_ov039_020bc1bc GetMenuWork
 #include "src/ov076/unclassified_helpers/SlotMenu_OnMessageConfirm_020c8a70.c"

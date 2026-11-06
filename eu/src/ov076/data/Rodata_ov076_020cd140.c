@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-const u32 data_ov076_020cd1b0[31] = {
+const u32 gSlotPickerOwnerCategorySets[31] = {
     0x00000001, 0x00000001, 0x00000000, 0x00000000,
     0x00000000, 0x00000003, 0x00000003, 0x00000002,
     0x00000000, 0x00000000, 0x00000002, 0x00000003,
@@ -11,19 +11,19 @@ const u32 data_ov076_020cd1b0[31] = {
     0x00000000, 0x00000000, 0x00000003,
 };
 
-const u32 data_ov076_020cd188[10] = {
+const u32 gSlotMenuThresholdRankMap[10] = {
     0x000003E8, 0x00000000, 0x00000F3C, 0x00000992,
     0x00001B58, 0x0000154A, 0x0000283C, 0x000021CA,
     0x0000283C, 0x0000283C,
 };
 
-const u32 data_ov076_020cd164[9] = {
+const u32 gSlotMenuImageQuadRotation[9] = {
     0x00001000, 0x00000000, 0x00000000, 0x00000000,
     0x00001000, 0x00000000, 0x00000000, 0x00000000,
     0x00001000,
 };
 
-const u32 data_ov076_020cd150[5] = {
+const u32 gSlotMenuFrameTiles[5] = {
     0x00020001, 0x00030401, 0x04030004, 0x08020801,
     0x00000C01,
 };

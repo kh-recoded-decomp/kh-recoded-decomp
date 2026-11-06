@@ -23,7 +23,7 @@ typedef char ItemHintTilesOffset[(u32)&((ItemScreen *)0)->hintTiles == 0x13d04 ?
 typedef char ItemHintCanvasSize[sizeof(NNSG2dCharCanvas) == 0x18 ? 1 : -1];
 typedef char ItemHintTextCanvasSize[sizeof(NNSG2dTextCanvas) == 0x10 ? 1 : -1];
 
-ItemHintState data_ov077_020ca3a0;
+ItemHintState gItemScreenSharedState;
 
 extern void MIi_CpuCopyFast(const void *source, void *destination, u32 size);
 extern void NNS_G2dCharCanvasInitForBG(NNSG2dCharCanvas *canvas, void *tiles, int width, int height, NNSG2dCharaColorMode mode);
@@ -103,10 +103,10 @@ void ItemScreen_DrawHintText(ItemScreen *menu, const void *text)
     InitTextCanvas(&textCanvas, &canvas, GetMenuFont10(), 0, 1);
     if (text != NULL) {
         const int textHeight = MeasureCanvasTextHeight(&textCanvas, text);
-        data_ov077_020ca3a0.colors[0] = 0xf2;
-        data_ov077_020ca3a0.colors[1] = 0xfa;
-        DrawHintText(&textCanvas, 3, 15 - textHeight, data_ov077_020ca3a0.colors[0], text,
-            SelectChooserValueByIndex, data_ov077_020ca3a0.colors);
+        gItemScreenSharedState.colors[0] = 0xf2;
+        gItemScreenSharedState.colors[1] = 0xfa;
+        DrawHintText(&textCanvas, 3, 15 - textHeight, gItemScreenSharedState.colors[0], text,
+            SelectChooserValueByIndex, gItemScreenSharedState.colors);
     }
     DC_FlushRange(menu->hintTiles, sizeof(menu->hintTiles));
     GX_LoadBG3Char(menu->hintTiles, 0xc000, sizeof(menu->hintTiles));

@@ -8,8 +8,8 @@ ReleaseOv071CameraResources kind:function(thumb,size=0x18) addr:0x020d8370
 SetOv071BossTimeStep kind:function(thumb,size=0x4) addr:0x020d8388
 UpdateOv071BossState kind:function(thumb,size=0x11e0) addr:0x020d838c
 CreateOv071SceneTask kind:function(thumb,size=0x110) addr:0x020d956c
-data_ov071_020d9680 kind:data(any) addr:0x020d9680
-data_ov071_020d968c kind:data(any) addr:0x020d968c
-data_ov071_020d969c kind:data(any) addr:0x020d969c
+gOverlay071ContactReferenceUp kind:data(any) addr:0x020d9680
+gOverlay071EntryGroupParameters kind:data(any) addr:0x020d968c
+gOverlay071TaskCounterThresholds kind:data(any) addr:0x020d969c
 sOv071_BaEfFnDbP2_020d96c0 kind:data(any) addr:0x020d96c0
 sOv071_CmDB_020d96d0 kind:data(any) addr:0x020d96d0

@@ -1,5 +1,5 @@
 #define GetClampedPaletteSlot_02073598 GetClampedPaletteSlot
 #define GetObjectPaletteValue_020d8114 GetObjectPaletteValue
-#define data_ov072_020d9bdc data_ov072_020d9bfc
+#define data_ov072_020d9bdc gOverlay072TaskCounterThresholds
 #define func_ov072_020d8100 IsObjectType111
 #include "src/ov072/unclassified_helpers/GetObjectPaletteValue_020d8114.c"

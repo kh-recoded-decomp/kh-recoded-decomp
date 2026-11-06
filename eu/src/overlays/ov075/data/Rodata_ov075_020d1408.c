@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-const u16 data_ov075_020d140a[5] = {
+const u16 gMatrixCategoryCycleEntries[5] = {
     0x0009, 0x020C, 0x030D, 0x050B, 0x080A,
 };
 

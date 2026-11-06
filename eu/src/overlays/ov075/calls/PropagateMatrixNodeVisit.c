@@ -53,7 +53,7 @@ typedef struct {
 } MatrixMenu;
 
 extern SaveData *data_0205fe0c;
-extern NeighborIds data_ov075_020d14f0;
+extern NeighborIds gMatrixEmptyNeighborIds;
 
 extern int GetPackedBitMask(u32 *bitWords, int bitIndex);
 extern void SetModelAnimationFrameWithSingleWrap(void *effect, int kind, int arg);
@@ -147,7 +147,7 @@ u32 PropagateMatrixNodeVisit(MatrixMenu *menu, MatrixNode *node, int dir, BOOL q
         if (type >= 14) {
             columns = *menu->map->columns;
             result = 0;
-            neighbors = data_ov075_020d14f0;
+            neighbors = gMatrixEmptyNeighborIds;
             node->pendingSteps = 0;
             if (menu->map->levels[node->index] <= data_0205fe0c->currentLevel) {
                 DrawMatrixCellGlyph(menu->revealState, menu->map, node, node->index);

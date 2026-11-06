@@ -192,14 +192,14 @@ typedef struct {
 
 extern SaveBlock *data_0205fe0c;
 extern const CursorFrame sMatrixCursorFrames[];
-extern const CellSize data_ov075_020d14a8;
-extern const CellSize data_ov075_020d14ac;
-extern const CellSize data_ov075_020d14b0;
-extern const CellSize data_ov075_020d14b4;
-extern const CellSize data_ov075_020d14b8;
-extern const CellSize data_ov075_020d14bc;
-extern const QuadRotation data_ov075_020d14d0;
-extern const QuadRotation data_ov075_020d14d8;
+extern const CellSize gMatrixRightLinkCellParams;
+extern const CellSize gMatrixUpLinkCellParams;
+extern const CellSize gMatrixDownLinkCellParams;
+extern const CellSize gMatrixMedalLightCellParams;
+extern const CellSize gMatrixLeftLinkCellParams;
+extern const CellSize gMatrixCornerCellParams;
+extern const QuadRotation gMatrixMenuObjectRotationTemplate;
+extern const QuadRotation gMatrixClockHandRotationTemplate;
 
 extern BOOL GetPrimaryElementEnabled(void);
 extern u32 GetVBlankCounter(void);
@@ -262,7 +262,7 @@ void DrawMatrixMenu(MatrixMenu *menu)
     }
     items = menu->grid->items;
     unlockLevel = menu->grid->unlockLevel;
-    corner = data_ov075_020d14bc;
+    corner = gMatrixCornerCellParams;
     menu->frameCounter = GetVBlankCounter();
 
     frameIndex = menu->selectedItem->type;
@@ -445,7 +445,7 @@ void DrawMatrixMenu(MatrixMenu *menu)
             s16 centerX;
             s16 centerY;
             image = &menu->objectImages[4];
-            rotation = data_ov075_020d14d0;
+            rotation = gMatrixMenuObjectRotationTemplate;
             active = menu->currentMode == 1;
             labelColor = GetModeLabelColor(menu, 1);
             rotation.angle = (*menu->menuRotation & 3) << 14;
@@ -479,7 +479,7 @@ void DrawMatrixMenu(MatrixMenu *menu)
             node = &menu->medalNode;
             x += 0x30;
             y += 0x30;
-            bits = data_ov075_020d14b4;
+            bits = gMatrixMedalLightCellParams;
             active = IsModeSelected(menu, 4);
             labelColor = GetModeLabelColor(menu, 4);
             bits.height = *menu->medalBits & 1;
@@ -497,7 +497,7 @@ void DrawMatrixMenu(MatrixMenu *menu)
             int clockColor;
             x += 0x28;
             y += 0x28;
-            rotation = data_ov075_020d14d8;
+            rotation = gMatrixClockHandRotationTemplate;
             active = IsModeSelected(menu, 2);
             labelColor = GetModeLabelColor(menu, 2);
             rotation.angle = (u16)((*menu->clockHour << 16) / 90);
@@ -584,7 +584,7 @@ void DrawMatrixMenu(MatrixMenu *menu)
                 GridItem *other;
                 if (item->id % grid->dims->cols != 0 && (other = grid->cells[item->id - 1]) != NULL && other->type < 14) {
                     DrawCellQuadIfVisible(&menu->linkImages[linkFrame], x, y, 400, 0x7fff,
-                                                   data_ov075_020d14b8, 0);
+                                                   gMatrixLeftLinkCellParams, 0);
                 }
             }
             if (links & 2) {
@@ -593,7 +593,7 @@ void DrawMatrixMenu(MatrixMenu *menu)
                 if (item->id / grid->dims->cols != 0 && (other = grid->cells[item->id - grid->dims->cols]) != NULL
                     && other->type < 14) {
                     DrawCellQuadIfVisible(&menu->linkImages[linkFrame], x, y, 400, 0x7fff,
-                                                   data_ov075_020d14ac, 0);
+                                                   gMatrixUpLinkCellParams, 0);
                 }
             }
             if (links & 4) {
@@ -602,7 +602,7 @@ void DrawMatrixMenu(MatrixMenu *menu)
                 if (item->id % grid->dims->cols < grid->dims->cols - 1 && (other = grid->cells[item->id + 1]) != NULL
                     && other->type < 14) {
                     DrawCellQuadIfVisible(&menu->linkImages[linkFrame], x, y, 400, 0x7fff,
-                                                   data_ov075_020d14a8, 0);
+                                                   gMatrixRightLinkCellParams, 0);
                 }
             }
             if (links & 8) {
@@ -611,7 +611,7 @@ void DrawMatrixMenu(MatrixMenu *menu)
                 if (item->id / grid->dims->cols < grid->dims->rows - 1
                     && (other = grid->cells[item->id + grid->dims->cols]) != NULL && other->type < 14) {
                     DrawCellQuadIfVisible(&menu->linkImages[linkFrame], x, y, 400, 0x7fff,
-                                                   data_ov075_020d14b0, 0);
+                                                   gMatrixDownLinkCellParams, 0);
                 }
             }
         }

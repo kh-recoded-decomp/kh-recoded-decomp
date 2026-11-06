@@ -2,8 +2,8 @@
 #define SetNavigationElementsVisible_020ccd30 SetNavigationElementsVisible
 #define SlotMenu_OpenSlotPanel_020c8934 SlotMenu_OpenSlotPanel
 #define SlotMenu_ResetToBrowse_020c4ea8 SlotMenu_EnterSlotEditState
-#define data_ov076_020cd2cc data_ov076_020cd2ec
-#define data_ov076_020cd2d8 data_ov076_020cd2f8
+#define data_ov076_020cd2cc gSlotMenuFusionResultPromptHead
+#define data_ov076_020cd2d8 gSlotMenuFusionResultPromptTail
 #define func_ov039_020bc1bc GetMenuWork
 #define func_ov076_020c52f8 SlotMenu_MoveCursorToSlot
 #define func_ov076_020cbba0 OpenHintPrompt

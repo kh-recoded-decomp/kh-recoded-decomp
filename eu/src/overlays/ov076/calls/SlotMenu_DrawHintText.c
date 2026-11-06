@@ -35,7 +35,7 @@ typedef char SlotHintTilesOffset[(u32)&((SlotMenu *)0)->hintTiles == 0x1d5f8 ? 1
 typedef char SlotHintCanvasSize[sizeof(NNSG2dCharCanvas) == 0x18 ? 1 : -1];
 typedef char SlotHintTextCanvasSize[sizeof(NNSG2dTextCanvas) == 0x10 ? 1 : -1];
 
-SlotHintState data_ov076_020cd400;
+SlotHintState gSlotMenuSharedState;
 
 extern void NNS_G2dCharCanvasInitForBG(NNSG2dCharCanvas *canvas, void *tiles, int width, int height, NNSG2dCharaColorMode mode);
 extern NNSG2dFont *GetMenuFont10(void);
@@ -114,10 +114,10 @@ void SlotMenu_DrawHintText(SlotMenu *menu, const void *text)
     InitTextCanvas(&textCanvas, &canvas, GetMenuFont10(), 0, 1);
     if (text != NULL) {
         const int textHeight = MeasureCanvasTextHeight(&textCanvas, text);
-        data_ov076_020cd400.colors[0] = 0xf2;
-        data_ov076_020cd400.colors[1] = 0xfa;
-        DrawHintText(&textCanvas, 0, 22 - textHeight, data_ov076_020cd400.colors[0], text,
-            PanelState_SelectChoice, data_ov076_020cd400.colors);
+        gSlotMenuSharedState.colors[0] = 0xf2;
+        gSlotMenuSharedState.colors[1] = 0xfa;
+        DrawHintText(&textCanvas, 0, 22 - textHeight, gSlotMenuSharedState.colors[0], text,
+            PanelState_SelectChoice, gSlotMenuSharedState.colors);
     }
     DC_FlushRange(menu->hintTiles, sizeof(menu->hintTiles));
     GX_LoadBG3Char(menu->hintTiles, 0xc000, sizeof(menu->hintTiles));

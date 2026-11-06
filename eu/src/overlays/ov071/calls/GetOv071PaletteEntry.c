@@ -1,5 +1,5 @@
 #define GetClampedPaletteSlot_02073598 GetClampedPaletteSlot
 #define GetOv071PaletteEntry_020d8114 GetOv071PaletteEntry
-#define data_ov071_020d967c data_ov071_020d969c
+#define data_ov071_020d967c gOverlay071TaskCounterThresholds
 #define func_ov071_020d8100 IsOv071BossTaskId110
 #include "src/ov071/unclassified_helpers/GetOv071PaletteEntry_020d8114.c"

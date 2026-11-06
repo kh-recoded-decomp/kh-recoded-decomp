@@ -275,5 +275,28 @@ class RenameSymbolTest(unittest.TestCase):
         self.assertEqual(shared.read_text(),'const int referenceData[2] = {1,2};\n')
         self.assertEqual(wrapper.read_text(),'#define referenceData gData\n#include "src/data/Shared.c"\n')
 
+    def test_data_aligned_definition_preserves_native_declarator(self):
+        body = 'const CellGrid oldGrid __attribute__((aligned(4))) = {1,2,0,0};\n'
+        source = self.put('src/data/Tables.c', body)
+        self.put('src/calls/Caller.c', 'extern const CellGrid oldGrid __attribute__((aligned(4)));\n')
+        with contextlib.redirect_stdout(io.StringIO()):
+            rename_symbol.rename_symbols([('oldGrid','gGrid')],
+                                         definition_sources={'oldGrid':'src/data/Tables.c'})
+        self.assertEqual(source.read_text(),body.replace('oldGrid','gGrid'))
+
+    def test_aligned_local_and_extern_declarations_are_not_definitions(self):
+        for body in ('extern int oldGrid[4] __attribute__((aligned(0x20)));\n',
+                     'void Work(void) {\n int oldGrid[4] __attribute__((aligned(4))) = {0};\n}\n'):
+            self.assertFalse(rename_symbol.has_data_definition(body,'oldGrid'))
+
+    def test_aligned_duplicate_rejects_without_writes(self):
+        self.put('src/data/Actual.c','int oldGrid[4] __attribute__((aligned(4))) = {0};\n')
+        self.put('libs/data/Duplicate.c','int oldGrid[4];\n')
+        before = self.snapshot()
+        with self.assertRaisesRegex(SystemExit,'found 2'):
+            rename_symbol.rename_symbols([('oldGrid','gGrid')],
+                                         definition_sources={'oldGrid':'src/data/Actual.c'})
+        self.assertEqual(self.snapshot(),before)
+
 if __name__ == "__main__":
     unittest.main()

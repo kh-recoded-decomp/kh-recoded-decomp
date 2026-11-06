@@ -1,8 +1,8 @@
 #include "nitro/types.h"
 
-extern u8 *data_ov076_020cd400;
+extern u8 *gSlotMenuSharedState;
 
 u32 GetSlotMenuItemPanelState(void)
 {
-    return *(const u32 *)(data_ov076_020cd400 + 0x28);
+    return *(const u32 *)(gSlotMenuSharedState + 0x28);
 }

@@ -1,6 +1,6 @@
 #define OpenHelpMessageOrActivate_020c4b50 OpenHelpMessageOrActivate
 #define SetFlagGatedElementsVisible_020c9d7c SetFlagGatedElementsVisible
-#define data_ov077_020ca0fc data_ov077_020ca11c
+#define data_ov077_020ca0fc gItemScreenHelpPrompt
 #define func_02029f48 GetMainBrightnessSetting
 #define func_ov039_020bc1bc GetMenuWork
 #define func_ov077_020c4bb0 SetModeTwoAndRefresh

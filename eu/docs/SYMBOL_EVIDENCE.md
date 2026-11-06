@@ -776,3 +776,11 @@ Name 86 native layout/template and scene/camera storage identities from construc
 [Menu Layout Template Data](MENU_LAYOUT_TEMPLATE_DATA.md),
 [Stage Camera Native Storage](STAGE_CAMERA_NATIVE_STORAGE.md),
 [Overlay058 Scene Native Storage](OVERLAY058_SCENE_NATIVE_STORAGE.md).
+
+## Name actor matrix and slot menu data
+
+Name 73 actor/scene parameters, matrix/draw tables and slot/item menu templates. Preserve counter threshold semantics, native state flags and partial storage views.
+
+[Actor Scene Parameter Data](ACTOR_SCENE_PARAMETER_DATA.md),
+[Matrix Draw Refresh Data](MATRIX_DRAW_REFRESH_DATA.md),
+[Slot Item Native Template Data](SLOT_ITEM_NATIVE_TEMPLATE_DATA.md).

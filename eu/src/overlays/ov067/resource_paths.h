@@ -10,6 +10,6 @@ typedef struct Ov067ResourcePaths {
     char commonArchive[32];
 } Ov067ResourcePaths;
 
-extern Ov067ResourcePaths data_ov067_020d8560;
+extern Ov067ResourcePaths gOverlay067ResourcePaths;
 
 #endif

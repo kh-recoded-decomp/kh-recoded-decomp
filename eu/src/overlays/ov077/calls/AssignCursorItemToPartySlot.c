@@ -11,7 +11,7 @@
 #define UpdateItemCountDigits_020c52a0 UpdateItemCountDigits
 #define SetStatusPageAndCursor_020c2ca4 SetStatusPageAndCursor
 #define DrawPartySlotLabel_020c5a4c DrawPartySlotLabel
-#define data_ov077_020ca108 data_ov077_020ca128
+#define data_ov077_020ca108 gItemScreenRefreshRequestStorage
 #if defined(__MWERKS__)
 #include "../src/ov077/unclassified_helpers/AssignCursorItemToPartySlot_020c4598.c"
 #else

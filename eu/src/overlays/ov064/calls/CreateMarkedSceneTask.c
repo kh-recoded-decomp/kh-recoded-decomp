@@ -9,7 +9,7 @@
 #define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
 #define UpdateRisingFinisherAction_020d819c UpdateRisingFinisherAction
 #define ZeroBytes0x14_020a8adc ZeroBytes0x14
-#define data_ov064_020d883c data_ov064_020d885c
+#define data_ov064_020d883c gOverlay064EntryGroupParameters
 #define data_ov064_020d8860 sOv064_CmMF_020d8880
 #define data_ov064_020d8868 sOv064_BaEfFnMfP2_020d8888
 #define func_ov021_020a89a8 func_ov021_020a89c8

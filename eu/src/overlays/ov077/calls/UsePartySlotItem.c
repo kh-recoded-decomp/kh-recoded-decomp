@@ -3,6 +3,6 @@
 #define SetStatusPageAndCursor_020c2ca4 SetStatusPageAndCursor
 #define ShowSlotHeaderMessage_020c58e0 ShowSlotHeaderMessage
 #define UsePartySlotItem_020c5dd8 UsePartySlotItem
-#define data_ov077_020ca108 data_ov077_020ca128
+#define data_ov077_020ca108 gItemScreenRefreshRequestStorage
 #define func_ov073_020c1eb4 RefreshStatusMenuData
 #include "src/ov077/unclassified_helpers/UsePartySlotItem_020c5dd8.c"

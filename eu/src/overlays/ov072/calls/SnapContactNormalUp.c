@@ -1,5 +1,5 @@
 #define ContactPlane_SetNormal_0203f040 SetPlaneNormalRescaled
 #define Contact_IsFacingNormal_020349d8 IsFacingContactNormal
 #define SnapContactNormalUp_020d84b0 SnapContactNormalUp
-#define data_ov072_020d9bbc data_ov072_020d9bdc
+#define data_ov072_020d9bbc gOverlay072ContactUpNormal
 #include "src/ov072/unclassified_helpers/SnapContactNormalUp_020d84b0.c"

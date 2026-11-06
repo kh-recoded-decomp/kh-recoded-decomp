@@ -5,8 +5,8 @@ ClearMarkedScenePhaseAndLoopHandle kind:function(thumb,size=0xe) addr:0x020d86c4
 StopOverlay064ActorSound kind:function(thumb,size=0x1a) addr:0x020d86d4
 ReleaseMarkedSceneResources kind:function(thumb,size=0x18) addr:0x020d86f0
 CreateMarkedSceneTask kind:function(thumb,size=0x13c) addr:0x020d8708
-data_ov064_020d8844 kind:data(any) addr:0x020d8844
-data_ov064_020d8850 kind:data(any) addr:0x020d8850
-data_ov064_020d885c kind:data(any) addr:0x020d885c
+gOverlay064TimedMarkerOffset kind:data(any) addr:0x020d8844
+gOverlay064InitialMarkerOffset kind:data(any) addr:0x020d8850
+gOverlay064EntryGroupParameters kind:data(any) addr:0x020d885c
 sOv064_CmMF_020d8880 kind:data(any) addr:0x020d8880
 sOv064_BaEfFnMfP2_020d8888 kind:data(any) addr:0x020d8888

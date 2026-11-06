@@ -4,5 +4,5 @@
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define ShowEntryHeaderMessage_020cad14 ShowEntryHeaderMessage
 #define ShowNextUnlockNotice_020cc9fc ShowNextUnlockNotice
-#define data_ov075_020d13ea data_ov075_020d140a
+#define data_ov075_020d13ea gMatrixCategoryCycleEntries
 #include "src/ov075/unclassified_helpers/CycleNodeCategory_020cbb34.c"

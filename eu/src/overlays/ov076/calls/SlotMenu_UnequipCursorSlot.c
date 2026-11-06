@@ -9,7 +9,7 @@
 #define SlotMenu_ShowSlotHint_020c827c SlotMenu_ShowSlotHint
 #define SlotMenu_UnequipCursorSlot_020c8d70 SlotMenu_UnequipCursorSlot
 #define SlotMenu_UnequipSlotEntry_020c89e0 SlotMenu_UnequipSlotEntry
-#define data_ov076_020cd260 data_ov076_020cd280
+#define data_ov076_020cd260 gSlotMenuBrowsePrompt
 #define func_ov039_020bc1bc GetMenuWork
 #define func_ov076_020cbba0 OpenHintPrompt
 #include "src/ov076/unclassified_helpers/SlotMenu_UnequipCursorSlot_020c8d70.c"

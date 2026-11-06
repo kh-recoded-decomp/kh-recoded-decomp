@@ -9,8 +9,8 @@
 #define StopOv070BossEffects_020d8210 StopOv070BossEffects
 #define ZeroBytes0x14_020a8adc ZeroBytes0x14
 #define data_02053438 gZeroVecFx32
-#define data_ov070_020d8a04 data_ov070_020d8a24
-#define data_ov070_020d8a10 data_ov070_020d8a30
+#define data_ov070_020d8a04 gOverlay070EntryGroupParameters
+#define data_ov070_020d8a10 gOverlay070EntryGroupResourceIndices
 #define data_ov070_020d8a40 sOv070_BaEfFnDfP2_020d8a60
 #define func_ov021_020a89a8 func_ov021_020a89c8
 #define func_ov070_020d827c StopOv070BossEffectsForOwner

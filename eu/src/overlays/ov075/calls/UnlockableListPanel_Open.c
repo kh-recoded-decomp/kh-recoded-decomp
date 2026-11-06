@@ -18,7 +18,7 @@
 #define func_ov027_020b91c8 SetWidgetPosition
 #define func_ov027_020b9360 ResolveWidgetPositionComponents
 #define PlaySoundEffect_0204d924 PlaySoundEffect
-#define data_ov076_020d1708 data_ov075_020d1728
+#define data_ov076_020d1708 gMatrixPickerOwnerCategorySets
 #define data_ov076_020d185c sOv075_ScrollCmx_020d187c
 #define func_ov076_020cee84 UpdateItemPickerCharUpload
 #if defined(__MWERKS__)

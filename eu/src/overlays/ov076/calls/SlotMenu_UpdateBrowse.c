@@ -22,7 +22,7 @@ struct SlotMenu {
 
 extern char sOv076_E_020cd28c[];
 extern char sOv076_Na_020cd298[];
-extern char data_ov076_020cd280[];
+extern char gSlotMenuBrowsePrompt[];
 
 extern void *GetMenuWork(void);
 extern BOOL GetMainBrightnessSetting(void);
@@ -48,7 +48,7 @@ void SlotMenu_UpdateBrowse(SlotMenu *menu)
     if (!GetMainBrightnessSetting()) {
         if (!OpenHintPrompt(menu->touchInput, menu, NULL, SlotMenu_EnterSlotEditState, sOv076_E_020cd28c, 1) &&
             !OpenHintPrompt(menu->touchInput, menu, SlotMenu_HasThreeFilledSlotsAndFlags, SlotMenu_EnterSlotEditState, sOv076_Na_020cd298, 1) &&
-            !OpenHintPrompt(menu->touchInput, menu, SlotMenu_OpenEmptySlot, SlotMenu_BeginSlotSelection, data_ov076_020cd280, 1)) {
+            !OpenHintPrompt(menu->touchInput, menu, SlotMenu_OpenEmptySlot, SlotMenu_BeginSlotSelection, gSlotMenuBrowsePrompt, 1)) {
             menu->state = 1;
             menu->stateTimer = 0;
             SlotMenu_ShowSlotHint(menu);

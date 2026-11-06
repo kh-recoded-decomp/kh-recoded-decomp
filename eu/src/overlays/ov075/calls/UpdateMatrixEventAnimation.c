@@ -98,7 +98,7 @@ typedef struct {
 } MatrixMenu;
 
 extern SaveData *data_0205fe0c;
-extern const RefreshArgs data_ov075_020d1520;
+extern const RefreshArgs gMatrixEventRefreshRequestTemplate;
 extern const GroupPair sMatrixNavigationGraph[];
 
 extern BOOL AdvanceAnimationTracks(SceneNode *node, fx32 delta);
@@ -135,7 +135,7 @@ static inline void RefreshRevealedCell(MatrixMenu *menu, MatrixNode *cell)
 
 static inline void MarkPortalCleared(int bit)
 {
-    RefreshArgs args = data_ov075_020d1520;
+    RefreshArgs args = gMatrixEventRefreshRequestTemplate;
     data_0205fe0c->portalMask |= 1 << bit;
     RefreshStatusMenuData(data_0205fe0c, &args);
 }

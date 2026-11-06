@@ -3,7 +3,7 @@
 #define ResetMotionState_020ab04c ResetMotionState
 #define SetupOwnerAndEntries_020ab010 SetupOwnerAndEntries
 #define data_02053438 gZeroVecFx32
-#define data_ov059_020cfeb8 data_ov059_020cfed8
+#define data_ov059_020cfeb8 gOverlay059EffectGroupResourceParameters
 #define func_01ff86fc MIi_CpuClear32
 #define func_ov059_020cd780 EffectGroup_LoadModels
 #define func_ov059_020cda14 EffectGroup_Draw

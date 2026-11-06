@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-const u32 data_ov059_020cfe10[12] = {
+const u32 gOverlay059AnimationSlotStorage[12] = {
     0x00000000, 0x00000001, 0x00000002, 0x00000000,
     0x00010000, 0x000010C1, 0x00000012, 0x00001922,
     0x00096000, 0x000B4000, 0x00000733, 0x00000C91,

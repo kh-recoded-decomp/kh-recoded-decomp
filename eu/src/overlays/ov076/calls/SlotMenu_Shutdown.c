@@ -11,5 +11,5 @@
 #define BuildSelectionEntryList_0204f98c BuildSelectionEntryList
 #define ReleaseRecordSlot_02051dfc ReleaseRecordSlot
 #define ReleaseRecordManager_02051cdc ReleaseRecordManager
-#define data_ov076_020cd3e0 data_ov076_020cd400
+#define data_ov076_020cd3e0 gSlotMenuSharedState
 #include "src/ov076/unclassified_helpers/SlotMenu_Shutdown_020c5ee0.c"

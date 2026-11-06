@@ -34,7 +34,7 @@ def is_existing_alias(text: str, old: str, new: str) -> bool:
 
 
 def has_data_definition(text: str, name: str) -> bool:
-    """Recognize plain, aggregate and callback-pointer C data declarations.
+    """Recognize plain/aligned, aggregate and callback-pointer data declarations.
 
     Deliberately reject assembly aliases, macros and other declarators: those
     need their own reviewed definition handling instead of a guessed source.
@@ -44,7 +44,9 @@ def has_data_definition(text: str, name: str) -> bool:
                   lambda match: re.sub(r"[^\n]", " ", match[0]), text)
     declaration = re.compile(
         r"(?m)^(?![ \t]*(?:extern|typedef)\b)[ \t]*[A-Za-z_]\w*[\w \t*]*[ \t*]" + re.escape(name)
-        + r"[ \t]*(?:\[[^\]\n]*\][ \t]*)*(?:=|;)"
+        + r"[ \t]*(?:\[[^\]\n]*\][ \t]*)*"
+        + r"(?:__attribute__[ \t]*\(\([ \t]*aligned[ \t]*\([ \t]*(?:0[xX][0-9a-fA-F]+|[0-9]+)[ \t]*\)[ \t]*\)\)[ \t]*)?"
+        + r"(?:=|;)"
     )
     aggregate = re.compile(
         r"(?m)^}[ \t]*(?:__attribute__[ \t]*\(\([ \t]*packed[ \t]*\)\)[ \t]*)?"

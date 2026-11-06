@@ -19,7 +19,7 @@ typedef struct {
     s8 worldId;
 } GameState;
 
-extern const ThresholdTable data_ov077_020ca1b8;
+extern const ThresholdTable gItemScreenThresholdRankMap;
 extern GameState *data_0205fe0c;
 
 extern int ReadSessionPackedBits(int id, int mode);
@@ -30,7 +30,7 @@ extern void SetParamHalf18(u16 value);
 extern void SyncSharedListScroll(void);
 
 void ApplyItemScreenThresholdRankBonus(int bonus) {
-    ThresholdTable table = data_ov077_020ca1b8;
+    ThresholdTable table = gItemScreenThresholdRankMap;
     int state = ReadSessionPackedBits(0x1a00, 2);
     if (GetCtxModeByte() == 5 && state != 2) {
         if (IsSessionFlagSet(0x3609) && IsSessionFlagSet(0x360a) && bonus > 0) {

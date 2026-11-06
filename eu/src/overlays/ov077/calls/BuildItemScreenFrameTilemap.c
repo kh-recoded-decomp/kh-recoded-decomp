@@ -11,13 +11,13 @@ typedef struct {
     FrameRowTiles rows[3];
 } FrameTiles;
 
-extern FrameTiles data_ov077_020ca180;
+extern FrameTiles gItemScreenFrameTiles;
 extern void func_01ff88c4(void *dest, int value, u32 size);
 extern void MIi_CpuClear16(u16 value, void *dest, u32 size);
 
 void BuildItemScreenFrameTilemap(int x, int y, int width, int height, u16 (*screen)[32])
 {
-    FrameTiles tiles = data_ov077_020ca180;
+    FrameTiles tiles = gItemScreenFrameTiles;
     u16 left = x;
     u16 top = y;
     u16 frameWidth;
