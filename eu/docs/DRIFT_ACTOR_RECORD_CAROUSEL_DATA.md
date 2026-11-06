@@ -42,6 +42,13 @@ For overlay 052, `EnterActorState` supplies the embedded actor-local view at act
 
 The overlay-044 data split has three scalar pairs in its first twenty-four logical bytes and six following function pointers. `SpawnPanelDriftPreset` proves scalar-pair access. Merely listing pointer targets does not prove their invocation, parameter list, return contract or the semantics of the two still-numeric targets. Preserve them as unresolved callback entries.
 
+The spawner's ARM BX IP at ov044:020d05f8 has the fixed target
+SpawnPanelDriftParticle (020d05ac); it does not index the six-pointer table.
+Native stage-action calls select scalar pairs 0..2, independently of callback
+slots 2/3. The [callback follow-up](EU_PENDING_CALLBACK_FUNCTIONS.md#follow-up-scalar-presets-and-the-separate-six-pointer-table)
+records the bounded instruction review and the precise missing invoker/owner
+evidence. Do not export the five-word writers as drift presets from adjacency.
+
 ## Reproducing the evidence
 
 Apply EU wrapper aliases before reading included shared bodies. The corresponding per-overlay `eu/config/arm9/overlays/ovNNN/delinks.txt` files select the listed active sources. Each existing ELF symbol has the listed size and, after resolving ABS32 function relocations with mode bits from the matching-bank symbol metadata, matches its native module range in `eu/dsd_extract/arm9_overlays/ovNNN.bin`. The separately validated bank binding and the native integration checks below retain the original references.

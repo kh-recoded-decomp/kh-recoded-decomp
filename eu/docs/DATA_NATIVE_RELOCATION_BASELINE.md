@@ -55,8 +55,10 @@ python tools/verify_idx.py src/overlays/ov041/calls/SpawnStageEntryActor.c Spawn
 bash tools/gate.sh
 ```
 
-The first three commands report the reference discrepancies above. The final
-command checks complete linked binaries against the original EU modules.
+The first three commands now report MATCH. The table preserves the original
+discrepancies for audit; their repairs are linked under Current validation
+state above. The final command checks complete linked binaries against the
+original EU modules.
 
 ## Title/panel and text-format block
 

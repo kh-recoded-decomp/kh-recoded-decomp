@@ -95,19 +95,20 @@ Source/consumer evidence:
 
 ### `func_ov044_020d0000`
 
-The callback-table consumer and semantic output layout are not established. Nearby drift-pair/path readers do not dispatch this table.
+The table invoker and destination owner are not established. SpawnPanelDriftPreset reads scalar pairs and jumps directly to SpawnPanelDriftParticle; it does not dispatch this table. Callback slot 2 is distinct from scalar preset index 2.
 
-Next proof: Find table 020d0df8 dispatch or an output-layout consumer. Prove field units/role before naming a camera preset by analogy.
+Next proof: Find a bank-qualified table load/copy/invocation establishing the selected slot and incoming R0 destination, or a proven output consumer. A narrow writer name would not require every field's units, but still requires this owner/role evidence.
 
 Source/consumer evidence:
 - `eu/src/overlays/ov044/calls/func_ov044_020d0000.c`
 - `eu/src/ov044/data/Data_ov044_020d0de0.c`
+- `eu/src/overlays/ov044/calls/SpawnPanelDriftPreset.c`
 
 ### `func_ov044_020d0020`
 
-Same missing consumer/layout proof as slot 2. A cross-bank pointer020d0e11 belongs to ov052 ChooseNextAction, not the ov044 table.
+Same missing invoker/destination proof as slot 2. A cross-bank pointer020d0e11 belongs to ov052 ChooseNextAction, not the ov044 table. This callback slot 3 is outside the three scalar preset selectors observed in the actual spawner calls.
 
-Next proof: Find the same owning-bank dispatch/output contract and demonstrate what differs between slots2 and3 without inferring motion units.
+Next proof: Find the owning-bank invocation or output consumer and identify the destination owner. Preserve the five raw values and incoming R0 behavior without inferring motion units.
 
 Source/consumer evidence:
 - `eu/src/overlays/ov044/calls/func_ov044_020d0020.c`
@@ -133,3 +134,25 @@ This search found a genuine ov030 caller of the ov042 setter that the earlier Gh
 The background configuration functions have same-bank pointer values in their two configuration objects and a proven copy into the runtime container. No callback invoker has been identified. Until one is found, assigning init/draw/update/cleanup or a return contract to those words would go beyond the evidence.
 
 These are concrete, separate research questions. They should not be resolved by assigning names solely from an offset, neighboring function or equal bytes in another overlay.
+
+## Follow-up: scalar presets and the separate six-pointer table
+
+SpawnPanelDriftPreset at ov044:020d05e0 is ARM. Its loads at 020d05ec and
+020d05f0 read the head/tail scalar bases with an eight-byte stride. The BX IP
+at 020d05f8 targets the fixed SpawnPanelDriftParticle address 020d05ac, loaded
+from literal 020d0604. Eight native stage-action calls use selectors 0, 1 or 2
+for pairs {0x19a,0xa000}, {0x333,0xa000} and {0x4cd,0x14000}. None of this
+invokes the six-pointer table beginning at 020d0df8.
+
+A bounded mode-aware review of all 36 configured ov044 functions found three
+register-indirect transfers, each with a fixed literal target. None reads the
+six-pointer table; matching-bank Ghidra xrefs add no invoker. These checks do
+not exclude computed or runtime-decoded references. Original ROM overlays
+044, 041 and 021 decompress exactly to the extracted modules used for this
+review. No source, prototype or binary changed.
+
+The review receipt has SHA-256
+`7dfd29e02971828eb2cca414686d470b98843031d69d8422b4214553570d0fa4`.
+It records instructions, literal targets, scalar callers and reference limits.
+The remaining gap is the invoker and destination owner; a complete five-word
+semantic layout is not a prerequisite for a future narrowly justified name.
