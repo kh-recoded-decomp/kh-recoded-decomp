@@ -405,3 +405,11 @@ python tools/test_rename_symbol.py
 python tools/audit_progress.py --check-receipts
 bash tools/gate.sh
 ```
+
+## Reward result and declaration boundary
+
+[WIRELESS_REWARD_INTERFACE.md](WIRELESS_REWARD_INTERFACE.md) proves the native
+0/1 result and records the intentionally transmitted but unread peer-descriptor
+word. The existing record and caller/callee declaration views still need a
+coherent interface cleanup; these DATA identities do not supply a portable C
+prototype or justify an invented parameter.

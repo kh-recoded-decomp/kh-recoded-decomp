@@ -883,3 +883,12 @@ its complete descriptor/task-runner/manager transition chain is proved.
 writers, row selection and removal. [ACTOR_TASK_RECORD_PROGRESS_CONTRACTS.md](ACTOR_TASK_RECORD_PROGRESS_CONTRACTS.md)
 records the evidence and unchanged ABI. All five affected fresh checks and all 108
 linked modules pass; 99 numeric C functions remain with explicit pending contracts.
+
+## Wireless reward return evidence
+
+The original GrantRewardEntry instructions assign R0 from a 0/1-only result
+register on every normal path; PickWeightedReward forwards that value. Actual
+callers intentionally prepare a peer-descriptor word in R2 which the selector
+overwrites unread. [WIRELESS_REWARD_INTERFACE.md](WIRELESS_REWARD_INTERFACE.md)
+separates this proved result and input behavior from unresolved C formal arity
+and record-type compatibility. No native source or ABI is changed here.
