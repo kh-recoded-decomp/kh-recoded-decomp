@@ -9,7 +9,7 @@
 #define data_ov078_020c515c sOv078_UiMenuLanguageQuestP2_020c517c
 #define data_ov078_020c5170 sOv078_UiBtlStrLanguageP2_020c5190
 #define data_ov078_020c5180 sOv078_UiMenuStrLanguageQstSZ_020c51a0
-#define data_ov078_020c51c0 data_ov078_020c51e0
+#define data_ov078_020c51c0 gPageMenuGlobalStorage
 #define func_01ff8830 MI_CpuFill8
 #define func_ov078_020c43c0 SetupPageMenuBackgrounds
 #define func_ov078_020c4570 LoadPageMenuWidgets

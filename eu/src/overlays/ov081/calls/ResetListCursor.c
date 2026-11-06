@@ -4,5 +4,5 @@
 #define FX_Div_020c542c GetOverlay081EntryForSelectedSlot
 #define ResetListCursor_020c5c0c ResetListCursor
 #define SkipToUnlockedListEntry_020c5a74 SkipToUnlockedListEntry
-#define data_020c5d80 data_ov081_020c5da0
+#define data_020c5d80 gTutorialMenuGlobalStorage
 #include "src/ov081/unclassified_helpers/ResetListCursor_020c5c0c.c"

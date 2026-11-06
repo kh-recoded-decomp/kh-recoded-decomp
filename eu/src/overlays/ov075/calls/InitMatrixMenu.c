@@ -33,7 +33,7 @@
 #define data_ov075_020d1824 sOv075_UiMenuStamtxP2_020d1844
 #define data_ov075_020d1838 sOv075_UiMenuLanguageStamtxP2_020d1858
 #define data_ov075_020d184c sOv075_ScrollBg_020d186c
-#define data_ov075_020d18e0 data_ov075_020d1900
+#define data_ov075_020d18e0 gMatrixMenuWork
 #define func_01ff869c MIi_CpuCopy16
 #define func_01ff86fc MIi_CpuClear32
 #define func_01ff8740 MIi_CpuClearFast

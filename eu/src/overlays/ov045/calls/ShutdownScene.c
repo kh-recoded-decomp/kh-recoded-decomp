@@ -7,6 +7,6 @@
 #define ShutdownScene_020bef74 ShutdownScene
 #define SweepElements_020b831c SweepElements
 #define ZeroHalfThenFree_0202cd78 ZeroHalfThenFree
-#define data_ov045_020c0880 data_ov045_020c08a0
+#define data_ov045_020c0880 gBattleGaugeGlobalStorage
 #define func_ov027_020b7dfc FreeTagTrackerPools
 #include "src/ov045/scene/ShutdownScene_020bef74.c"

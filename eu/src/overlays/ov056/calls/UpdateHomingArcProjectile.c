@@ -18,7 +18,7 @@
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define ZeroAndSetField0xd4_020ac150 ZeroAndSetField0xd4
 #define data_0205356c gSinFx12Table
-#define data_ov056_020d7f64 data_ov056_020d7f84
+#define data_ov056_020d7f64 gHomingArcGravityAxis
 #define func_01ffa0f4 VEC_Distance
 #define func_0202fba8 RotateVectorByQuaternion
 #define func_02036240 ActorRegistry_GetEntityByIndex

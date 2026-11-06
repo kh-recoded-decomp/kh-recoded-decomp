@@ -13,6 +13,6 @@ typedef struct PanelState {
     u8 viewState;
 } PanelState;
 
-extern PanelState *data_ov044_020d0ec0;
+extern PanelState *gPanelCameraGlobalStorage;
 
 #endif

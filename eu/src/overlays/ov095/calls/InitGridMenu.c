@@ -21,7 +21,7 @@
 #define data_ov095_020c1788 gItemReportCompletionThresholds
 #define data_ov095_020c17ac gItemReportLayoutValues
 #define data_ov095_020c2888 sOv095_VblankFunc_020c28a8
-#define data_ov095_020c28c0 data_ov095_020c28e0
+#define data_ov095_020c28c0 gItemReportGlobalStorage
 #define func_ov039_020bc828 GetCurrentMenuStackEntry
 #define func_ov095_020bf824 InitTextLayers
 #define func_ov095_020bfa18 RefreshItemReportText

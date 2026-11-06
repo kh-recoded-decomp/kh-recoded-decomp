@@ -4,7 +4,7 @@ extern void RegisterOverlay053ActorFactory(void);
 extern void RegisterOverlay055EntityFactory(void);
 extern void RegisterOverlay057EntityFactory(void);
 
-void *const data_ov051_020c73f0[12] = {
+void *const gSelectionOverlayInitializers[12] = {
     (void *)RegisterOverlay053ActorFactory,
     NULL,
     NULL,

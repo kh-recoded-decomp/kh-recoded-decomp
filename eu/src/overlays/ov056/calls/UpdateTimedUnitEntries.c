@@ -3,5 +3,5 @@
 #define SpawnOffsetProjectile_020d79e8 SpawnOffsetProjectile
 #define StepEffectAnimation_020aebd4 StepEffectAnimation
 #define UpdateTimedUnitEntries_020d7ad0 UpdateTimedUnitEntries
-#define data_ov056_020d7fa0 data_ov056_020d7fc0
+#define data_ov056_020d7fa0 gTimedUnitEntryLocalOffset
 #include "src/ov056/unclassified_helpers/UpdateTimedUnitEntries_020d7ad0.c"

@@ -1,4 +1,4 @@
 #define ReleaseSceneObject_020ae6c8 ReleaseSceneObject
 #define ReleaseSourceByKind_020d7d20 ReleaseSourceByKind
-#define data_ov056_020d8010 data_ov056_020d8030
+#define data_ov056_020d8010 gEffectSourceKindReleaseHandlers
 #include "src/ov056/unclassified_helpers/ReleaseSourceByKind_020d7d20.c"

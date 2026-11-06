@@ -5,5 +5,5 @@
 #define data_0205356c gSinFx12Table
 #define func_ov044_020d0090 CommitPanelCameraFrame
 #define func_ov044_020d08d8 GetPanelBasis
-#define g_panel_020d0ea0 data_ov044_020d0ec0
+#define g_panel_020d0ea0 gPanelCameraGlobalStorage
 #include "src/ov044/panel_state/UpdatePanelCamera_020d0944.c"

@@ -1,4 +1,4 @@
 #define OffsetBoxByDelta_0203ac70 OffsetBoxByDelta
 #define OffsetCameraColliders_020bd2a0 OffsetCameraColliders
-#define data_ov042_020be5c0 data_ov042_020be5e0
+#define data_ov042_020be5c0 gCameraSceneGlobalStorage
 #include "src/ov042/camera/OffsetCameraColliders_020bd2a0.c"

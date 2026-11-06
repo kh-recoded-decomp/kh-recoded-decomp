@@ -7,8 +7,8 @@
 #define data_0205356c gSinFx12Table
 #define data_0205a9a4 NNS_G3dGlb_prmMatColor0
 #define data_0205a9b8 NNS_G3dGlb_prmBaseRot
-#define data_ov045_020c075c data_ov045_020c077c
-#define data_ov045_020c0768 data_ov045_020c0788
+#define data_ov045_020c075c gBattleGaugeRotatedSpriteScale
+#define data_ov045_020c0768 gBattleGaugeRotatedSpriteTranslation
 #define func_020192ec NNS_G3dGlbSetBaseTrans
 #define func_0201931c NNS_G3dGlbSetBaseScale
 #include "src/ov045/graphics/DrawRotatedSprite_020c04c4.c"

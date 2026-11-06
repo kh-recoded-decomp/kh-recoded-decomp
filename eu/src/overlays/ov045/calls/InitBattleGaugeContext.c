@@ -2,7 +2,7 @@
 
 #define REG_BLDCNT (*(volatile u16 *)0x04000050)
 
-extern unsigned int data_ov045_020c08a0;
+extern unsigned int gBattleGaugeGlobalStorage;
 extern unsigned int sOv045_UiBtlGwP2_020c0834;
 extern unsigned int sOv045_UiBtlBtluiP2_020c0844;
 extern unsigned int MI_CpuFill8();
@@ -24,7 +24,7 @@ unsigned int InitBattleGaugeContext(unsigned int arguments)
     mode = 0;
     MI_CpuFill8(work, 0, 0x1a4c);
     MI_CpuCopy8(arguments, work, 0x10);
-    data_ov045_020c08a0 = (u32)work;
+    gBattleGaugeGlobalStorage = (u32)work;
     scene = GetHudGaugeBlinkActive(0);
     *(unsigned int *)(work + 0x10) = scene;
     SetMenuGaugeActive(0, 0);

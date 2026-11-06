@@ -5,5 +5,5 @@
 #define RotateVecTowardVec_0204b0ac RotateVecTowardVec
 #define StepPanelTransition_020d032c StepPanelTransition
 #define data_ov044_020d0df0 data_ov044_020d0e10
-#define g_panel_020d0ea0 data_ov044_020d0ec0
+#define g_panel_020d0ea0 gPanelCameraGlobalStorage
 #include "src/ov044/panel_state/StepPanelTransition_020d032c.c"

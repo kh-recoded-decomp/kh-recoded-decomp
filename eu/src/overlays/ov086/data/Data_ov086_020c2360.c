@@ -9,6 +9,6 @@ extern void StepCursorBackward(void);
 extern void StepCursorForward_020c0e10(void);
 extern void UpdateRecordPanelInput(void);
 
-u32 data_ov086_020c2360[2] = {
+u32 gRecordGroupEntryCountsHead[2] = {
     0x00000003, 0x00000006,
 };

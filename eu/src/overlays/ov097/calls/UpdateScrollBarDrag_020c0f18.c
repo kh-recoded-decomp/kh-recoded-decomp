@@ -9,5 +9,5 @@
 #define UpdateScrollBarDrag_020c0ef8 UpdateScrollBarDrag_020c0f18
 #define func_ov039_020bca00 GetMenuInputState
 #define func_ov097_020c08b4 RefreshScrollList
-#define g_menuScene_020c2520 data_ov097_020c2540
+#define g_menuScene_020c2520 gStoryReportGlobalStorage
 #include "src/ov097/panel_state/UpdateScrollBarDrag_020c0ef8.c"

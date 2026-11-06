@@ -2,7 +2,7 @@
 
 BOOL IsPageScrollSettled(int index)
 {
-    PageScrollValue *scrolls = data_ov101_020c5920->pageScroll;
+    PageScrollValue *scrolls = gListMenuGlobalStorage->pageScroll;
     PageScrollValue *scroll = &scrolls[index];
     fx32 distance = scroll->target - scroll->current;
 

@@ -1,5 +1,5 @@
 #define InitLaunchedParticle_020afa70 InitLaunchedParticle
 #define StartCameraParticle_020bd6fc StartCameraParticle
-#define data_ov042_020be5c0 data_ov042_020be5e0
+#define data_ov042_020be5c0 gCameraSceneGlobalStorage
 #define func_ov030_020bb354 GetOv030SceneReferenceAxis
 #include "src/ov042/camera/StartCameraParticle_020bd6fc.c"

@@ -1,5 +1,5 @@
 #define LoadOverlay LoadOverlayAfterGeometryTransfer
-#define availableOverlayIds data_ov051_020c7420
-#define loadedOverlayIds data_ov051_020c7460
-#define overlayInitializers data_ov051_020c73f0
+#define availableOverlayIds gSelectionOverlayIds
+#define loadedOverlayIds gTrackedSelectionOverlayStorage
+#define overlayInitializers gSelectionOverlayInitializers
 #include "src/ov051/overlay_loading/LoadNextOverlayForSelection.c"

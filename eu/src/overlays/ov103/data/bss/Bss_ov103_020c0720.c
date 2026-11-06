@@ -1,3 +1,3 @@
 #include "nitro/types.h"
 
-static u32 data_ov103_020c0720[8];
+static u32 gTheaterMenuGlobalStorage[8];

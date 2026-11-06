@@ -18,7 +18,7 @@ extern void SpawnSpiralProjectile(void);
 extern void SpawnTimedUnitFromSpawner(void);
 extern void SpawnUnitFromSpawner(void);
 
-void *data_ov056_020d8080[20] = {
+void *gEffectSourceModeSpawnHandlers[20] = {
     (void *)SpawnPairedEntryUnit,
     (void *)SpawnEffectUnitFromSpawner,
     (void *)SpawnPairedEntryUnit,

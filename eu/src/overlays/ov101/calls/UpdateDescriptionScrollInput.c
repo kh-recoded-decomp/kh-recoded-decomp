@@ -8,7 +8,7 @@ typedef struct {
     u16 state;
 } ListTouchInput;
 
-extern ListSceneState *data_ov101_020c5920;
+extern ListSceneState *gListMenuGlobalStorage;
 
 extern ListTouchInput *GetMenuInputState(void);
 extern void StepPageScrollPosition(int trackIndex);
@@ -28,7 +28,7 @@ static inline fx32 FxMul(fx32 a, fx32 b)
 
 void UpdateDescriptionScrollInput(ListSceneState *scene)
 {
-    PageScrollDrag *drag = &data_ov101_020c5920->pageDrag;
+    PageScrollDrag *drag = &gListMenuGlobalStorage->pageDrag;
     Ov101ScrollPanel *bar = &scene->panels[1];
     ListTouchInput *touch = GetMenuInputState();
     PageInteractionBounds *lowerItem;

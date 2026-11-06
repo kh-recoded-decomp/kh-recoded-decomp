@@ -185,4 +185,4 @@ sOv059_BaEfStefP2_020cff84 kind:data(any) addr:0x020cff84
 sOv059_BaEfStTamPZ_020cff94 kind:data(any) addr:0x020cff94
 sOv059_BaEfStTaPZ_020cffa8 kind:data(any) addr:0x020cffa8
 gActorWork kind:bss addr:0x020cffc0
-data_ov059_020cffc4 kind:bss addr:0x020cffc4
+gOverlay059ActorGlobalStorage kind:bss addr:0x020cffc4

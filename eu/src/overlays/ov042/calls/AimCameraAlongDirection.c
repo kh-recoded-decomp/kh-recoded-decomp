@@ -1,5 +1,5 @@
 #define AimCameraAlongDirection_020be548 AimCameraAlongDirection
 #define VEC_MultAdd_01ffa09c VEC_MultAdd
-#define data_ov042_020be5c0 data_ov042_020be5e0
+#define data_ov042_020be5c0 gCameraSceneGlobalStorage
 #define func_01ffa0f4 VEC_Distance
 #include "src/ov042/camera/AimCameraAlongDirection_020be548.c"

@@ -1,3 +1,3 @@
 #include "nitro/types.h"
 
-static u32 data_ov044_020d0ec0[8];
+static u32 gPanelCameraGlobalStorage[8];

@@ -7,11 +7,11 @@ typedef struct {
     s32 phaseTimer;
 } Ov101State;
 
-extern Ov101State *data_ov101_020c5920;
+extern Ov101State *gListMenuGlobalStorage;
 
 void SetStatePhase(s32 phase)
 {
-    Ov101State *state = data_ov101_020c5920;
+    Ov101State *state = gListMenuGlobalStorage;
 
     state->phase = phase;
     state->step = 0;

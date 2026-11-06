@@ -7,5 +7,5 @@
 #define UpdateFallingProjectile_020d6b94 UpdateFallingProjectile
 #define VEC_Add_01ff9e0c VEC_Add
 #define VEC_MultAdd_01ffa09c VEC_MultAdd
-#define data_ov056_020d7f88 data_ov056_020d7fa8
+#define data_ov056_020d7f88 gFallingProjectileGravityAxis
 #include "src/ov056/shared_engine/UpdateFallingProjectile_020d6b94.c"

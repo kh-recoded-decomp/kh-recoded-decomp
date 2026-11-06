@@ -80,4 +80,4 @@ sStoryDetailLayoutHeader kind:data(any) addr:0x020c2360
 sStoryDetailLayoutTemplate kind:data(any) addr:0x020c2368
 sStoryDetailLayoutRows kind:data(any) addr:0x020c2380
 sOv097_TextFontEu10Nftr_020c2514 kind:data(any) addr:0x020c2514
-data_ov097_020c2540 kind:bss addr:0x020c2540
+gStoryReportGlobalStorage kind:bss addr:0x020c2540

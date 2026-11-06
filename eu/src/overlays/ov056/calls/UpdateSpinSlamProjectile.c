@@ -3,6 +3,6 @@
 #define FixedPointMultiply12 FX_Mul
 #define QuatFromAxisAngle_0202faf8 QuatFromAxisAngle
 #define UpdateSpinSlamProjectile_020d7538 UpdateSpinSlamProjectile
-#define data_ov056_020d7f7c data_ov056_020d7f9c
+#define data_ov056_020d7f7c gSpinSlamRotationAxis
 #define func_ov056_020d7814 QueueMotionOnStageEvent
 #include "src/ov056/shared_engine/UpdateSpinSlamProjectile_020d7538.c"

@@ -2,7 +2,7 @@
 
 void ResetPageScrollValue(int index)
 {
-    Ov101PageScrollState *state = data_ov101_020c5920;
+    Ov101PageScrollState *state = gListMenuGlobalStorage;
     PageScrollValue *scroll = &state->pageScroll[index];
 
     scroll->target = 0;

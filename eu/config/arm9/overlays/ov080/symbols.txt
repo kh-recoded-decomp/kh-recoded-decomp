@@ -27,4 +27,4 @@ gSaveSelectMenuDescriptor kind:data(any) addr:0x020c5da0 ambiguous
 sOv080_UiMenuStrLanguageSaveSZ_020c5de4 kind:data(any) addr:0x020c5de4
 gSaveSlotNumberFormat kind:data(any) addr:0x020c5dfc
 gSaveSlotTitleFormat kind:data(any) addr:0x020c5e04
-data_ov080_020c5e20 kind:bss addr:0x020c5e20
+gSaveSelectGlobalStorage kind:bss addr:0x020c5e20

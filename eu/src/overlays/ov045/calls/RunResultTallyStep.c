@@ -96,10 +96,10 @@ typedef struct ResultWork {
     Tween tween;
 } ResultWork;
 
-extern ResultWork *data_ov045_020c08a0;
+extern ResultWork *gBattleGaugeGlobalStorage;
 extern GameState *data_0205fe0c;
 extern u16 data_02060500;
-extern const u16 data_ov045_020c088c[];
+extern const u16 gResultNoRewardPlaceholderText[];
 
 extern void ScrollTileRowPairLeft(u16 *tilemap, int row, int shift);
 extern void CopyTileRowPair(u16 *tilemap, const u16 *src, int row, int column);
@@ -145,7 +145,7 @@ extern int NNS_GfdRegisterNewVramTransferTask(int engine, int offset, void *src,
 
 int RunResultTallyStep(void)
 {
-    ResultWork *work = data_ov045_020c08a0;
+    ResultWork *work = gBattleGaugeGlobalStorage;
     s32 fade;
 
     if (work->step < 0) {
@@ -373,7 +373,7 @@ int RunResultTallyStep(void)
 
         FillBackgroundLayerRect(work->textLayer, work->mainRows[0], 0x12, 0, 0);
         if (work->rewardCount == 0) {
-            name = data_ov045_020c088c;
+            name = gResultNoRewardPlaceholderText;
             color = 0xf4;
         } else {
             work->rewardCount--;

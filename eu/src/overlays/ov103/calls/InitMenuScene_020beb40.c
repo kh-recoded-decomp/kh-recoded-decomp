@@ -2,5 +2,5 @@
 #define SetSceneState_020c02f4 SetScenePhase
 #define SetStateFlagBits_020bc688 SetStateFlagBits
 #define SetupMenuDisplay_020bed3c SetupMenuDisplay
-#define g_menuScene_020c0700 data_ov103_020c0720
+#define g_menuScene_020c0700 gTheaterMenuGlobalStorage
 #include "src/ov103/panel_state/InitMenuScene_020beb20.c"

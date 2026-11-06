@@ -42,4 +42,4 @@ StepCameraGoalTowardTarget kind:function(thumb,size=0xb4) addr:0x020be408
 func_ov042_020be4bc kind:function(thumb,size=0x10) addr:0x020be4bc
 ApplyCameraConfig kind:function(thumb,size=0x9c) addr:0x020be4cc
 AimCameraAlongDirection kind:function(thumb,size=0x5c) addr:0x020be568
-data_ov042_020be5e0 kind:bss addr:0x020be5e0
+gCameraSceneGlobalStorage kind:bss addr:0x020be5e0

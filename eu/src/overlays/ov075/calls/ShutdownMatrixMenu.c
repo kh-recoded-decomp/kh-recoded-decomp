@@ -17,5 +17,5 @@
 #define NNS_GfdResetFrmTexVramState_0201391c NNS_GfdResetFrmTexVramState
 #define func_02013d74 NNS_GfdResetFrmPlttVramState
 #define data_ov075_020d184c sOv075_ScrollBg_020d186c
-#define data_ov075_020d18e0 data_ov075_020d1900
+#define data_ov075_020d18e0 gMatrixMenuWork
 #include "src/ov075/unclassified_helpers/ShutdownMatrixMenu_020c7de8.c"

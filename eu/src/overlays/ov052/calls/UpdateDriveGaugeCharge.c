@@ -13,7 +13,7 @@
 #define MarkTaggedEntry_0204ff7c MarkTaggedEntry
 #define PlaySoundChecked_0204d8d0 PlaySoundChecked
 #define UpdateDriveGaugeCharge_020cc910 UpdateDriveGaugeCharge
-#define data_ov052_020d20ec data_ov052_020d210c
+#define data_ov052_020d20ec gActorGaugePointRateParameters
 #define func_02023dbc _s32_div_f
 #define func_ov001_0207b560 GetSubsceneSlotValue
 #define func_ov021_020a8ab4 ResetAnimationTrackState

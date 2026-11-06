@@ -1,6 +1,6 @@
 #include "src/overlays/ov101/ListSceneState.h"
 
-extern ListSceneState *data_ov101_020c5920;
+extern ListSceneState *gListMenuGlobalStorage;
 extern void RuntimeState_SetCondition(BOOL condition);
 
 void CommitPageInteractionBounds(ListSceneState *scene)
@@ -10,7 +10,7 @@ void CommitPageInteractionBounds(ListSceneState *scene)
     ListSceneState *global;
     scene->interactionActive = FALSE;
     RuntimeState_SetCondition(TRUE);
-    global = data_ov101_020c5920;
+    global = gListMenuGlobalStorage;
     clip = &global->pageDrag.clip;
     bounds = &scene->interactionBounds;
     clip->minX = bounds->originX + bounds->x1;

@@ -7,7 +7,7 @@
 #define ReleaseRecordManager_02051cdc ReleaseRecordManager
 #define ReleaseRecordSlot_02051dfc ReleaseRecordSlot
 #define RemoveListEntry_020bc70c RemoveListEntry
-#define data_ov086_020c3000 data_ov086_020c3020
+#define data_ov086_020c3000 gRecordMenuGlobalStorage
 #define func_ov027_020b7dfc FreeTagTrackerPools
 #define func_ov039_020bc1cc GetMenuWidgetContainer
 #include "src/ov086/panel_state/DestroyRecordMenu_020c1e50.c"

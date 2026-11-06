@@ -10,7 +10,7 @@
 #define ReleaseIfMarked_020b903c ReleaseIfMarked
 #define SweepElements_020b831c SweepElements
 #define SyncSelectionRecordFromSlotEntry_0204fabc SyncSelectionRecordFromSlotEntry
-#define data_ov080_020c5e00 data_ov080_020c5e20
+#define data_ov080_020c5e00 gSaveSelectGlobalStorage
 #define func_0204fba0 RefreshFirstSelectionAbilityTable
 #define func_ov039_020be6a0 SetupMainBgLayers_020be6c0
 #include "src/ov080/unclassified_helpers/DestroySaveSelectScreen_020c4ad0.c"

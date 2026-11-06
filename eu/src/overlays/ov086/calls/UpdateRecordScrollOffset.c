@@ -1,3 +1,3 @@
 #define UpdateRecordScrollOffset_020beaa0 UpdateRecordScrollOffset
-#define data_ov086_020c3000 data_ov086_020c3020
+#define data_ov086_020c3000 gRecordMenuGlobalStorage
 #include "src/ov086/panel_state/UpdateRecordScrollOffset_020beaa0.c"

@@ -1,5 +1,5 @@
 #define SetCameraGoalTarget_020bd234 SetCameraGoalTarget
 #define TranslateCameraGoal_020bd1ec TranslateCameraGoal
 #define VEC_Subtract_01ff9e3c VEC_Subtract
-#define data_ov042_020be5c0 data_ov042_020be5e0
+#define data_ov042_020be5c0 gCameraSceneGlobalStorage
 #include "src/ov042/camera/SetCameraGoalTarget_020bd234.c"

@@ -1,6 +1,6 @@
 #include "src/overlays/ov101/ListSceneState.h"
 
-extern ListSceneState *data_ov101_020c5920;
+extern ListSceneState *gListMenuGlobalStorage;
 extern u16 data_02060500;
 extern BOOL IsStateFlagSet(s32 set, s32 bit);
 extern u32 GetStatePhase(void);
@@ -44,7 +44,7 @@ void HandleListLeftInput(ListSceneState *scene)
         }
         previousList = scene->activeList;
         ResetPageScrollValue(0);
-        data_ov101_020c5920->pageDrag.inertiaActive = 0;
+        gListMenuGlobalStorage->pageDrag.inertiaActive = 0;
         DrawListPanelText(1, scene);
         if (!IsStateFlagSet(0, previousList)) {
             return;

@@ -759,3 +759,12 @@ field vectors, scan parameters and a pool callback table. Contracts are in
 [WIRELESS_SCAN_BOARD_STORAGE.md](WIRELESS_SCAN_BOARD_STORAGE.md) and
 [POOL_KIND4_TRIGGER_CALLBACKS.md](POOL_KIND4_TRIGGER_CALLBACKS.md). Physical
 fragments remain distinct; incomplete fields and numeric selectors stay explicit.
+
+## Menu descriptors, scene owners and actor/effect data
+
+Seventy-four DATA identities now distinguish menu descriptors, record-stat
+fields and tables, global scene work, and gauge/actor/effect configuration.
+[MENU_DESCRIPTOR_RECORD_TABLES.md](MENU_DESCRIPTOR_RECORD_TABLES.md),
+[LATE_SCENE_GLOBAL_STORAGE.md](LATE_SCENE_GLOBAL_STORAGE.md) and
+[GAUGE_ACTOR_EFFECT_DATA.md](GAUGE_ACTOR_EFFECT_DATA.md) document owners,
+physical spans, real consumers and uncharacterized tails.

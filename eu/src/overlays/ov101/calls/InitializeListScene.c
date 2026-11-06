@@ -1,6 +1,6 @@
 #include "src/overlays/ov101/ListMenuData.h"
 
-extern ListSceneState *data_ov101_020c5920;
+extern ListSceneState *gListMenuGlobalStorage;
 extern void SetStateFlagBits(u8 clearMask, u8 setBits);
 extern void MIi_CpuClearFast(u32 value, void *destination, u32 size);
 extern u32 GetCurrentMenuStackEntry(void);
@@ -32,7 +32,7 @@ BOOL InitializeListScene(ListSceneState *scene)
     ListTextArchiveView *description;
     u16 *text;
 
-    data_ov101_020c5920 = scene;
+    gListMenuGlobalStorage = scene;
     SetStateFlagBits(5, 0);
     MIi_CpuClearFast(0, scene, sizeof(ListSceneState));
     /* Reuse the list selection saved by the parent menu. */

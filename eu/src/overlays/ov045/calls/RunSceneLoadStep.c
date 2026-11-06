@@ -81,14 +81,14 @@ typedef struct SceneWork {
 
 typedef int (*SceneStep)(void);
 
-extern SceneWork *data_ov045_020c08a0;
+extern SceneWork *gBattleGaugeGlobalStorage;
 extern char sOv045_UiBtlGwLanguageP2_020c0858[];
 extern char sOv045_UiBtlBtlLanguageP2_020c0868[];
 extern char sOv045_UiBtlWresP2_020c087c[];
-extern PoolConfig data_ov045_020c07b4;
-extern PoolConfig data_ov045_020c07c8;
-extern TextFrame data_ov045_020c07a4;
-extern TextFrame data_ov045_020c0794;
+extern PoolConfig gBattleGaugeBackgroundConfig;
+extern PoolConfig gBattleGaugeMode3BackgroundConfig;
+extern TextFrame gBattleGaugeTextFrame;
+extern TextFrame gBattleGaugeMode3TextFrame;
 extern u32 (*sDefaultAllocTexVramFunc)(u32 size, BOOL is4x4comp, u32 opt);
 extern u32 (*sDefaultAllocPlttVramFunc)(u32 size, BOOL is4pltt, u32 opt);
 
@@ -173,7 +173,7 @@ static inline BOOL DictHasIndex(const NNSG3dResDict *dict, u32 idx)
  */
 SceneStep RunSceneLoadStep(u32 plttSize)
 {
-    SceneWork *work = data_ov045_020c08a0;
+    SceneWork *work = gBattleGaugeGlobalStorage;
     u32 texKey;
     NNSG3dResTex *tex;
     u32 texSize;
@@ -274,7 +274,7 @@ SceneStep RunSceneLoadStep(u32 plttSize)
         if (!IsRecordIdFree(work->texLoad.file)) {
             break;
         }
-        config = data_ov045_020c07b4;
+        config = gBattleGaugeBackgroundConfig;
         work->step = 0;
         REG_BG3CNT = (u16)((REG_BG3CNT & 0x43) | 0x1d80);
         REG_BG2CNT = (u16)((REG_BG2CNT & 0x43) | 0x1e80);
@@ -290,7 +290,7 @@ SceneStep RunSceneLoadStep(u32 plttSize)
         break;
     }
     case 3: {
-        TextFrame frame = data_ov045_020c07a4;
+        TextFrame frame = gBattleGaugeTextFrame;
         int i;
 
         InitTextLayerAt(work->textLayer, 2, NULL, GetFieldFont3(), &frame);
@@ -467,7 +467,7 @@ SceneStep RunSceneLoadStep(u32 plttSize)
         if (!IsRecordIdFree(work->resultFile)) {
             break;
         }
-        config = data_ov045_020c07c8;
+        config = gBattleGaugeMode3BackgroundConfig;
         work->step = 0;
         REG_BG3CNT = (u16)((REG_BG3CNT & 0x43) | 0x1d80);
         REG_BG2CNT = (u16)((REG_BG2CNT & 0x43) | 0x1e00);
@@ -482,7 +482,7 @@ SceneStep RunSceneLoadStep(u32 plttSize)
         break;
     }
     case 9: {
-        TextFrame frame = data_ov045_020c0794;
+        TextFrame frame = gBattleGaugeMode3TextFrame;
         BOOL unlock = FALSE;
         int id;
 

@@ -4,5 +4,5 @@
 #define QuatFromAxisAngle_0202faf8 QuatFromAxisAngle
 #define RebindModelAnimTracks_020ab2f0 RebindModelAnimTracks
 #define UpdateSpinAttackUnit_020d54dc UpdateSpinAttackUnit
-#define data_ov056_020d7f70 data_ov056_020d7f90
+#define data_ov056_020d7f70 gSpinAttackRotationAxis
 #include "src/ov056/shared_engine/UpdateSpinAttackUnit_020d54dc.c"

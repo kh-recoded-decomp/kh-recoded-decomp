@@ -1,3 +1,3 @@
 #include "nitro/types.h"
 
-static u8 data_ov055_020d3f20[29];
+static u8 gOverlay055EntityGlobalStorage[29];

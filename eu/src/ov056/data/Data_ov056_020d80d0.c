@@ -17,7 +17,7 @@ extern void SpawnUnitProjectile(void);
 extern void StartGaugeRewardEffect(void);
 extern void func_ov030_020bcec0(void);
 
-void *data_ov056_020d80d0[20] = {
+void *gEffectSourceKindEventHandlers[20] = {
     (void *)SpawnUnitProjectile,
     (void *)SpawnUnitProjectile,
     (void *)SpawnUnitProjectile,

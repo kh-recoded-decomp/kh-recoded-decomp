@@ -1,6 +1,6 @@
 #define LoadMenuSoundArcs_020d2688 LoadMenuSoundArcs
 #define QueueSoundCommandForArc_0204d670 QueueSoundCommandForArc
-#define data_ov054_020d3670 data_ov054_020d3690
+#define data_ov054_020d3670 gOverlay054SlotSoundArcIds
 #define func_ov021_020a7f74 SetSoundPairAndQueue
 #define func_ov021_020a7f90 SetSoundIdAndQueue
 #include "src/ov054/unclassified_helpers/LoadMenuSoundArcs_020d2688.c"

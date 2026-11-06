@@ -1,7 +1,7 @@
 #include "src/overlays/ov101/ListSceneState.h"
 
 extern const u8 sOv101_VblankFunc_020c1f78[];
-extern ListSceneState *data_ov101_020c5920;
+extern ListSceneState *gListMenuGlobalStorage;
 extern void NotifyBothOrOne(u32 channel, u32 registration, int index);
 extern void ShutdownPageInteractionState(ListSceneState *scene);
 extern void ReleaseStateBuffers(ListSceneState *scene);
@@ -21,5 +21,5 @@ void ShutdownListScene(ListSceneState *scene)
     FreeMenuResourceSlots(scene);
     FreeStateBuffers(scene);
     SetStateFlagBits(0, 5);
-    data_ov101_020c5920 = NULL;
+    gListMenuGlobalStorage = NULL;
 }

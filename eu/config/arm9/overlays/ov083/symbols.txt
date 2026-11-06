@@ -13,7 +13,7 @@ SetSharedStateValue kind:function(thumb,size=0x14) addr:0x020bf658
 data_ov083_020bf66c kind:data(any) addr:0x020bf66c
 data_ov083_020bf67c kind:data(any) addr:0x020bf67c
 data_ov083_020bf68c kind:data(any) addr:0x020bf68c
-data_ov083_020bf6a0 kind:data(any) addr:0x020bf6a0 ambiguous
+gScoreScreenDescriptor kind:data(any) addr:0x020bf6a0 ambiguous
 sOv083_UiMenuStrLanguageShopSZ_020bf6e0 kind:data(any) addr:0x020bf6e0
 gScoreScreenNumberFormat kind:data(any) addr:0x020bf6f8
 gScoreScreenWidth3RatioFormat kind:data(any) addr:0x020bf700

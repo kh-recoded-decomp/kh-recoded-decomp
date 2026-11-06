@@ -1,4 +1,4 @@
 #define CommitCameraProjection_020bd020 CommitCameraProjection
 #define camera_commit_explicit_projection_0202a8c4 camera_commit_explicit_projection
-#define data_ov042_020be5c0 data_ov042_020be5e0
+#define data_ov042_020be5c0 gCameraSceneGlobalStorage
 #include "src/ov042/camera/CommitCameraProjection_020bd020.c"

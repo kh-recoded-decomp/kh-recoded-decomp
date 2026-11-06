@@ -7,7 +7,7 @@
 #define SetBrightnessAndSyncMain_02029e7c SetBrightnessAndSyncMain
 #define SetSecondaryBrightness_02029ed0 SetSecondaryBrightness
 #define UpdateResultFadeOut_020c0044 UpdateResultFadeOut
-#define data_ov045_020c0880 data_ov045_020c08a0
+#define data_ov045_020c0880 gBattleGaugeGlobalStorage
 #define func_02052514 ConfigureTween
 #define func_0205255c StartTween
 #include "src/ov045/shared_engine/UpdateResultFadeOut_020c0044.c"

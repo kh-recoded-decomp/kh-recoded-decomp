@@ -4,5 +4,5 @@
 #define ResetScrollTrack_020c1228 ResetScrollTrack
 #define ScrollEntryListUp_020bf240 ScrollEntryListUp
 #define ScrollListBack_020c07f8 PageListUp
-#define g_menuScene_020c2520 data_ov097_020c2540
+#define g_menuScene_020c2520 gStoryReportGlobalStorage
 #include "src/ov097/panel_state/ScrollEntryListUp_020bf240.c"

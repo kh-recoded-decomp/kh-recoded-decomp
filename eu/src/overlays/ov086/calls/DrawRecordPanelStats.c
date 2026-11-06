@@ -12,10 +12,10 @@ typedef struct {
     u8 tileTable[4];
 } RecordPanel;
 
-extern const InitialValueTable data_ov086_020c220c;
-extern int data_ov086_020c2168[];
-extern int data_ov086_020c217c[];
-extern u32 data_ov086_020c219c[];
+extern const InitialValueTable gRecordGroupFlagCountTargets;
+extern int gRecordGroupTwoBitStatOffsets[];
+extern int gRecordGroupSevenBitStatOffsets[];
+extern u32 gRecordGroupStatFlagIds[];
 extern void CallVirtualHandlerSlot1(void *context, int arg);
 extern void SetScreenLayerDirty(int layerId);
 extern void MarkTileTableRowDirty(void *table, int id);
@@ -31,7 +31,7 @@ extern void DrawRecordStatRow();
 
 void DrawRecordPanelStats(RecordPanel *panel)
 {
-    InitialValueTable table = data_ov086_020c220c;
+    InitialValueTable table = gRecordGroupFlagCountTargets;
     int group;
     int first;
     int second;
@@ -43,7 +43,7 @@ void DrawRecordPanelStats(RecordPanel *panel)
     DrawRecordStatRow(panel, 0, CountSessionGroupFlags(group), table.values[group]);
     group = panel->group;
     if (group < 5) {
-        DrawRecordStatRow(panel, 1, ReadSessionPackedBits(data_ov086_020c2168[group], 2), 3);
+        DrawRecordStatRow(panel, 1, ReadSessionPackedBits(gRecordGroupTwoBitStatOffsets[group], 2), 3);
     } else {
         DrawRecordStatRow(panel, 6, group);
     }
@@ -52,7 +52,7 @@ void DrawRecordPanelStats(RecordPanel *panel)
     first = CountGroupFlaggedEntries_020bf4a4(panel->group);
     DrawRecordStatRow(panel, 3, first, SumUnlockedGroupEntryCounts(panel->group));
     DrawRecordStatRow(panel, 4, GetHighestSetFlagTier(panel->group));
-    first = ReadSessionPackedBits(data_ov086_020c217c[panel->group], 7);
-    second = IsSessionFlagSet(data_ov086_020c219c[panel->group]);
+    first = ReadSessionPackedBits(gRecordGroupSevenBitStatOffsets[panel->group], 7);
+    second = IsSessionFlagSet(gRecordGroupStatFlagIds[panel->group]);
     DrawRecordStatRow(panel, 5, first + 1, second);
 }

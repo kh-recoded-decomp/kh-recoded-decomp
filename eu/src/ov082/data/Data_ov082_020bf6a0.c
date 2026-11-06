@@ -6,7 +6,7 @@ extern void ShutdownOv082Screen(void);
 extern void InitOv082EntryList(void);
 extern void UpdateOv082EntryList(void);
 
-void *data_ov082_020bf6a0[16] = {
+void *gOverlay082EntryListDescriptor[16] = {
     (void *)InitOv082EntryList,
     (void *)ShutdownOv082Screen,
     (void *)UpdateOv082EntryList,

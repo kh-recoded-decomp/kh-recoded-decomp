@@ -9,7 +9,7 @@ extern void StepCursorBackward(void);
 extern void StepCursorForward_020c0e10(void);
 extern void UpdateRecordPanelInput(void);
 
-u32 data_ov086_020c2368[6] = {
+u32 gRecordGroupEntryCountsTail[6] = {
     0x00000004, 0x00000001, 0x00000005, 0x00000002,
     0x00000004, 0x00000000,
 };

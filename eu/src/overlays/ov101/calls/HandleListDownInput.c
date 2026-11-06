@@ -1,6 +1,6 @@
 #include "src/overlays/ov101/ListMenuData.h"
 
-extern ListSceneState *data_ov101_020c5920;
+extern ListSceneState *gListMenuGlobalStorage;
 extern BOOL ScrollPanelCursorDown(s32 panel, ListSceneState *scene);
 extern void PlaySoundEffect(s32 bank, s32 sound);
 extern BOOL IsStateFlagSet(s32 set, s32 bit);
@@ -35,7 +35,7 @@ void HandleListDownInput(ListSceneState *scene)
         config.totalRows = scene->textPages[list].lineCount;
         InitScrollPanel(&config, scene);
         ResetPageScrollValue(0);
-        data_ov101_020c5920->pageDrag.inertiaActive = 0;
+        gListMenuGlobalStorage->pageDrag.inertiaActive = 0;
         SetStatePhase(1);
     } else {
         s32 previousList;
@@ -44,7 +44,7 @@ void HandleListDownInput(ListSceneState *scene)
         }
         previousList = scene->activeList;
         ResetPageScrollValue(0);
-        data_ov101_020c5920->pageDrag.inertiaActive = 0;
+        gListMenuGlobalStorage->pageDrag.inertiaActive = 0;
         DrawListPanelText(1, scene);
         if (!IsStateFlagSet(0, previousList)) {
             return;

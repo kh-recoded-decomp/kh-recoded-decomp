@@ -7,5 +7,5 @@
 #define VEC_Normalize_01ff9f88 VEC_Normalize
 #define data_0205a970 NNS_G3dGlb_cameraMtx
 #define func_0204b0ac RotateVecTowardVec
-#define g_panel_020d0ea0 data_ov044_020d0ec0
+#define g_panel_020d0ea0 gPanelCameraGlobalStorage
 #include "src/ov044/panel_state/UpdatePanelViewAxes_020d0bb8.c"

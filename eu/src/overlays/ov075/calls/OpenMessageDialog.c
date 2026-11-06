@@ -3,7 +3,7 @@
 #define OpenMessageDialog_020c8ba0 OpenMessageDialog
 #define SetMatrixInputDisabled_020c8de8 SetMatrixInputDisabled
 #define SetUnlockableElementsVisible_020d0e64 SetUnlockableElementsVisible
-#define data_ov075_020d18e4 data_ov075_020d1904
+#define data_ov075_020d18e4 gMatrixDialogTextBuffer
 #define func_ov027_020ba31c VFormatPackedWideText
 #define func_ov075_020cf368 MeasureOv075MessageTiles
 #define func_ov075_020cf430 OpenDefaultDialog

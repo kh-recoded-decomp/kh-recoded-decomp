@@ -114,4 +114,4 @@ gStatusDecimalPercentFormat kind:data(any) addr:0x020c4218
 gStatusWholeMultiplierWithDecimalZeroFormat kind:data(any) addr:0x020c4228
 gStatusIntegerMultiplierFormat kind:data(any) addr:0x020c4238
 gStatusReciprocalMultiplierFormat kind:data(any) addr:0x020c4244
-data_ov073_020c4260 kind:bss addr:0x020c4260
+gStatusPanelGlobalStorage kind:bss addr:0x020c4260

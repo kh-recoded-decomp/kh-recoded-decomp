@@ -10,7 +10,7 @@ extern void UpdateSelectMenuScene(void);
 extern void SelectNextOption(void);
 extern void SelectMenu_ConfirmSelection(void);
 
-void *data_ov084_020bfca0[17] = {
+void *gTwoChoiceMenuDescriptor[17] = {
     (void *)InitSelectMenu,
     (void *)TeardownSceneResources,
     (void *)UpdateSelectMenuScene,

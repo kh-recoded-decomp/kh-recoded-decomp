@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-extern u32 data_ov042_020be5e0;
+extern u32 gCameraSceneGlobalStorage;
 extern u32 QuadTree_InsertObject();
 extern u32 QuadTree_RemoveObject();
 extern u32 GetActorRegistry();
@@ -9,8 +9,8 @@ void SetCameraColliderRegistrationMode(u32 newMode) {
   int work;
   int actorManager;
 
-  work = data_ov042_020be5e0;
-  *(u32 *)(data_ov042_020be5e0 + 0x44) = *(u32 *)(data_ov042_020be5e0 + 0x40);
+  work = gCameraSceneGlobalStorage;
+  *(u32 *)(gCameraSceneGlobalStorage + 0x44) = *(u32 *)(gCameraSceneGlobalStorage + 0x40);
   *(u32 *)(work + 0x40) = newMode;
   actorManager = GetActorRegistry();
   QuadTree_RemoveObject(**(u32 **)(actorManager + 4),work + 0x40c);

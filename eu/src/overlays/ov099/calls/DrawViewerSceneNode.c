@@ -39,7 +39,7 @@ extern void ApplyQuaternionCorrectionToMatrix_020c185c(MtxFx33 *mtx);
 
 extern const s16 gSinFx12Table[];
 extern GeometryGlobalState NNS_G3dGlb;
-extern SceneNode *data_ov099_020c2904;
+extern SceneNode *gEnemyViewerDrawNodeStorage;
 
 void DrawViewerSceneNode(SceneNode *node)
 {
@@ -77,7 +77,7 @@ void DrawViewerSceneNode(SceneNode *node)
     }
 
     if (node->child != NULL) {
-        data_ov099_020c2904 = node;
+        gEnemyViewerDrawNodeStorage = node;
     }
 
     if (node->flags & 0x40) {

@@ -12,7 +12,7 @@ extern u8 data_ov036_020c5cc0[];
 extern u8 data_ov036_020c5da0[];
 extern u8 data_ov036_020c7da0[];
 extern u8 gMatrixMenuHandlers[];
-extern u8 data_ov085_020c2368[];
+extern u8 gShopMenuDescriptorMiddle[];
 extern u8 data_ov086_020c2b18[];
 extern u8 gItemReportMenuCallbacks[];
 extern u8 gItemReportIdentifiers[];
@@ -52,7 +52,7 @@ void *gPrimaryMenuRegistryTail[37] = {
     (void *)0x00000061,
     (void *)(gItemReportRecordTables + 0x2D8),
     (void *)0x00000063,
-    (void *)data_ov085_020c2368,
+    (void *)gShopMenuDescriptorMiddle,
     (void *)0x00000065,
     (void *)(gItemReportIdentifiers + 0xE4),
     (void *)0x00000067,

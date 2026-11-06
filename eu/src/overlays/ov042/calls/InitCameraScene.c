@@ -8,7 +8,7 @@
 #define SetCameraGoalTarget_020bd234 SetCameraGoalTarget
 #define VEC_Add_01ff9e0c VEC_Add
 #define data_02053438 gZeroVecFx32
-#define data_ov042_020be5c0 data_ov042_020be5e0
+#define data_ov042_020be5c0 gCameraSceneGlobalStorage
 #define func_02033c3c QuadTree_InsertObject
 #define func_02036230 GetActorRegistry
 #define func_ov042_020bd59c SetCameraFrustumExtent

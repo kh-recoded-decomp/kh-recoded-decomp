@@ -1,5 +1,5 @@
-extern int data_ov081_020c5da0;
+extern int gTutorialMenuGlobalStorage;
 
 int GetTutorialMenuState(void) {
-    return data_ov081_020c5da0;
+    return gTutorialMenuGlobalStorage;
 }

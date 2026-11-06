@@ -1,5 +1,5 @@
 #define FX_Div_01ff9c84 FX_Div
 #define StartScaledPanelTransition_020d0cfc StartScaledPanelTransition
 #define func_ov044_020d02c0 StartPanelTransition
-#define g_panel_020d0ea0 data_ov044_020d0ec0
+#define g_panel_020d0ea0 gPanelCameraGlobalStorage
 #include "src/ov044/panel_state/StartScaledPanelTransition_020d0cfc.c"

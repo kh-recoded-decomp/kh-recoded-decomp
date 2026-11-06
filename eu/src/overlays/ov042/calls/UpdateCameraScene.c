@@ -74,7 +74,7 @@ typedef struct {
     int **tree;
 } CollisionWorld;
 
-extern CameraState *data_ov042_020be5e0;
+extern CameraState *gCameraSceneGlobalStorage;
 extern VecFx32 gZeroVecFx32;
 extern int func_ov001_02063a4c(void);
 extern VecFx32 *GetManagedActorPosition(int index);
@@ -156,24 +156,24 @@ static inline BOOL VecEquals(const VecFx32 *a, const VecFx32 *b) {
 static inline void MoveShape(CollisionShape *shape) {
     VecFx32 position;
     VecFx32 sum;
-    VEC_Add(shape->position, &data_ov042_020be5e0->colliderOffset, &sum);
+    VEC_Add(shape->position, &gCameraSceneGlobalStorage->colliderOffset, &sum);
     position = sum;
     SetShapePosition(shape, &position);
     OffsetBoxByDelta(&shape->bounds, &shape->sweptBounds, &shape->delta);
 }
 
 static inline void ApplyCameraShake(void) {
-    CameraState *cam = data_ov042_020be5e0;
+    CameraState *cam = gCameraSceneGlobalStorage;
     VecFx32 targetSum;
     VecFx32 eyeSum;
     VEC_Add(&cam->baseTarget, &cam->shake, &targetSum);
     cam->target = targetSum;
-    VEC_Add(&data_ov042_020be5e0->baseEye, &data_ov042_020be5e0->shake, &eyeSum);
+    VEC_Add(&gCameraSceneGlobalStorage->baseEye, &gCameraSceneGlobalStorage->shake, &eyeSum);
     cam->eye = eyeSum;
 }
 
 BOOL UpdateCameraScene(void) {
-    CameraState *cam = data_ov042_020be5e0;
+    CameraState *cam = gCameraSceneGlobalStorage;
     VecFx32 move;
     VecFx32 delta;
     VecFx32 goal;
@@ -224,7 +224,7 @@ BOOL UpdateCameraScene(void) {
                 }
                 if (!(input & 0x10)) {
                     player = GetManagedActorPosition(0);
-                    if (!VecEquals(&data_ov042_020be5e0->lastPlayerPos, player) && (cam->followFlags & 3)) {
+                    if (!VecEquals(&gCameraSceneGlobalStorage->lastPlayerPos, player) && (cam->followFlags & 3)) {
                         u32 follow;
                         fx32 maxY;
                         fx32 minY;
@@ -307,12 +307,12 @@ BOOL UpdateCameraScene(void) {
                     }
                 }
             }
-            MoveShape(&data_ov042_020be5e0->colliders[0].shape);
-            MoveShape(&data_ov042_020be5e0->colliders[1].shape);
-            MoveShape(&data_ov042_020be5e0->colliders[2].shape);
-            data_ov042_020be5e0->colliderOffset = delta;
+            MoveShape(&gCameraSceneGlobalStorage->colliders[0].shape);
+            MoveShape(&gCameraSceneGlobalStorage->colliders[1].shape);
+            MoveShape(&gCameraSceneGlobalStorage->colliders[2].shape);
+            gCameraSceneGlobalStorage->colliderOffset = delta;
             world = GetActorRegistry();
-            if (!(cam->followFlags & 1) || data_ov042_020be5e0->maxX != 0x7fffffff) {
+            if (!(cam->followFlags & 1) || gCameraSceneGlobalStorage->maxX != 0x7fffffff) {
                 cam->colliders[0].flags |= 1;
                 cam->colliders[1].flags |= 1;
                 QuadTree_ReinsertNodeIfFlagSet(*world->tree, (int)&cam->colliders[0]);
@@ -332,13 +332,13 @@ BOOL UpdateCameraScene(void) {
         StepCameraGoalTowardTarget();
     }
 finish:
-    if (data_ov042_020be5e0->particle != 0) {
-        if (UpdateDriftParticle(&data_ov042_020be5e0->particle)) {
-            data_ov042_020be5e0->flags &= ~0x18000;
+    if (gCameraSceneGlobalStorage->particle != 0) {
+        if (UpdateDriftParticle(&gCameraSceneGlobalStorage->particle)) {
+            gCameraSceneGlobalStorage->flags &= ~0x18000;
         }
-        data_ov042_020be5e0->shake = data_ov042_020be5e0->particleShake;
+        gCameraSceneGlobalStorage->shake = gCameraSceneGlobalStorage->particleShake;
     }
     ApplyCameraShake();
-    data_ov042_020be5e0->lastPlayerPos = *GetManagedActorPosition(0);
+    gCameraSceneGlobalStorage->lastPlayerPos = *GetManagedActorPosition(0);
     return FALSE;
 }

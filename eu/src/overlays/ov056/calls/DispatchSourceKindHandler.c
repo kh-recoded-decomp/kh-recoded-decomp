@@ -1,3 +1,3 @@
 #define DispatchSourceKindHandler_020d7d54 DispatchSourceKindHandler
-#define data_ov056_020d7fc0 data_ov056_020d7fe0
+#define data_ov056_020d7fc0 gEffectSourceKindResetHandlers
 #include "src/ov056/unclassified_helpers/DispatchSourceKindHandler_020d7d54.c"

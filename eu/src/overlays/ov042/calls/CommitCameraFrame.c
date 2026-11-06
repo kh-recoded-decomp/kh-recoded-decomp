@@ -16,7 +16,7 @@ typedef struct CameraFrame {
     VecFx32 shake;
 } CameraFrame;
 
-extern CameraFrame *data_ov042_020be5e0;
+extern CameraFrame *gCameraSceneGlobalStorage;
 extern void VEC_Add(const VecFx32 *a, const VecFx32 *b, VecFx32 *result);
 extern void VEC_Subtract(const VecFx32 *a, const VecFx32 *b, VecFx32 *result);
 extern void SetSoundListenerFrame(const VecFx32 *position, const VecFx32 *direction, const VecFx32 *up);
@@ -24,19 +24,19 @@ extern void CommitCameraProjection(CameraFrame *camera, fx32 top, fx32 bottom, f
 
 static inline void ApplyCameraShake(void)
 {
-    CameraFrame *camera = data_ov042_020be5e0;
+    CameraFrame *camera = gCameraSceneGlobalStorage;
     VecFx32 targetSum;
     VecFx32 eyeSum;
 
     VEC_Add(&camera->baseTarget, &camera->shake, &targetSum);
     camera->target = targetSum;
-    VEC_Add(&data_ov042_020be5e0->baseEye, &data_ov042_020be5e0->shake, &eyeSum);
+    VEC_Add(&gCameraSceneGlobalStorage->baseEye, &gCameraSceneGlobalStorage->shake, &eyeSum);
     camera->eye = eyeSum;
 }
 
 void CommitCameraFrame(BOOL updateSoundListener)
 {
-    CameraFrame *camera = data_ov042_020be5e0;
+    CameraFrame *camera = gCameraSceneGlobalStorage;
 
     if (!(camera->flags & 4)) {
         ApplyCameraShake();

@@ -5,12 +5,12 @@ typedef struct {
     u32 flagSets[3][2];
 } Ov101State;
 
-extern Ov101State *data_ov101_020c5920;
+extern Ov101State *gListMenuGlobalStorage;
 extern int GetPackedBitMask(u32 *bitWords, int bitIndex);
 
 BOOL IsStateFlagSet(int setIndex, int bitIndex)
 {
     return GetPackedBitMask(
-        data_ov101_020c5920->flagSets[setIndex], bitIndex
+        gListMenuGlobalStorage->flagSets[setIndex], bitIndex
     ) != 0;
 }

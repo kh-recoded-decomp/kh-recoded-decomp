@@ -11,13 +11,13 @@
 #define ShadowVolume_Init_02036b44 ShadowVolume_Init
 #define data_02053438 gZeroVecFx32
 #define data_0205615c gSoundCategoryNames
-#define data_ov052_020d20d0 data_ov052_020d20f0
+#define data_ov052_020d20d0 gPlayerActorSpawnShapeOffset
 #define data_ov052_020d216c gWeaponAttachmentBoneNames
 #define data_ov052_020d217c sOv052_BaChFormatSMdlFormatDPZ_020d219c
 #define data_ov052_020d2190 sOv052_BaChFormatSTexFormatDZ_020d21b0
 #define data_ov052_020d21a4 sOv052_FormatS_020d21c4
 #define data_ov052_020d21a8 sOv052_BaChFormatSMovPZ_020d21c8
-#define data_ov052_020d21c0 data_ov052_020d21e0
+#define data_ov052_020d21c0 gPlayerActorJointNameScratch
 #define func_01ff86fc MIi_CpuClear32
 #define func_0202c48c LoadFileAllocFromHeapTail
 #define func_0202f590 SetModelMaterialColorScaleEnabled

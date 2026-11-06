@@ -1,5 +1,5 @@
 #define UpdatePanelState_020d0680 UpdatePanelState_020d06a0
 #define func_ov044_020d032c StepPanelTransition
 #define func_ov044_020d0944 UpdatePanelCamera
-#define g_panel_020d0ea0 data_ov044_020d0ec0
+#define g_panel_020d0ea0 gPanelCameraGlobalStorage
 #include "src/ov044/panel_state/UpdatePanelState_020d0680.c"

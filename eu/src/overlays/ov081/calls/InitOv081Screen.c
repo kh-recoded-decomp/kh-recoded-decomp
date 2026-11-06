@@ -11,7 +11,7 @@
 #define data_020c5cf8 sOv081_UiMenuLanguageTutorialP2_020c5d18
 #define data_020c5d10 sOv081_UiMenuStrLanguageTutoSZ_020c5d30
 #define data_020c5d28 sOv081_UiMenuStrLanguageListSZ_020c5d48
-#define data_020c5d80 data_ov081_020c5da0
+#define data_020c5d80 gTutorialMenuGlobalStorage
 #define func_02052514 ConfigureTween
 #define func_0205255c StartTween
 #define func_ov027_020b8f98 LoadWidgetDescriptorsFromFile

@@ -6,6 +6,6 @@
 #define MarkTileTableRowDirty_020b9e00 MarkTileTableRowDirty
 #define RestoreStatusSubScreen_020c1248 RestoreStatusSubScreen
 #define UpdateScreenWidgetLayer_020bc1e4 UpdateScreenWidgetLayer
-#define data_ov073_020c4240 data_ov073_020c4260
+#define data_ov073_020c4240 gStatusPanelGlobalStorage
 #define func_ov027_020b9e60 FlushDirtyTileTableRows
 #include "src/ov073/status_menu/RestoreStatusSubScreen_020c1248.c"

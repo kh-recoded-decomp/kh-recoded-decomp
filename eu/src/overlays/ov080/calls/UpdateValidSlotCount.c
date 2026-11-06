@@ -1,3 +1,3 @@
 #define UpdateValidSlotCount_020c5d10 UpdateValidSlotCount
-#define data_ov080_020c5e00 data_ov080_020c5e20
+#define data_ov080_020c5e00 gSaveSelectGlobalStorage
 #include "src/ov080/unclassified_helpers/UpdateValidSlotCount_020c5d10.c"

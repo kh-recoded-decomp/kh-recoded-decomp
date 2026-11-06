@@ -2,5 +2,5 @@
 
 void *Panel_GetActiveController(void)
 {
-    return &data_ov044_020d0ec0->activeController;
+    return &gPanelCameraGlobalStorage->activeController;
 }

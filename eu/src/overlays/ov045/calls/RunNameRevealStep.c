@@ -13,7 +13,7 @@
 #define SetBrightnessAndSyncMain_02029e7c SetBrightnessAndSyncMain
 #define StartUnitTween_020bf1f8 StartUnitTween
 #define Text_UploadTileBuffer_02001520 Text_UploadTileBuffer
-#define data_ov045_020c0880 data_ov045_020c08a0
+#define data_ov045_020c0880 gBattleGaugeGlobalStorage
 #define func_02052514 ConfigureTween
 #define func_0205255c StartTween
 #define func_ov027_020b7dd4 UpdateTagTrackerAndTouch

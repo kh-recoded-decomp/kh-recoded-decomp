@@ -1,5 +1,5 @@
 #define PushFromCameraTarget_020bd1c0 PushFromCameraTarget
 #define VEC_Subtract_01ff9e3c VEC_Subtract
-#define data_ov042_020be5c0 data_ov042_020be5e0
+#define data_ov042_020be5c0 gCameraSceneGlobalStorage
 #define func_ov042_020bd178 TranslateCameraTarget
 #include "src/ov042/camera/PushFromCameraTarget_020bd1c0.c"

@@ -6,7 +6,7 @@
 #define IsPlayerEntryFlagSet_02050014 IsPlayerEntryFlagSet
 #define ResetIfIdMatches_020a8178 ResetIfIdMatches
 #define UpdateGroundMovement_020ca918 UpdateGroundMovement
-#define data_ov052_020d20c8 data_ov052_020d20e8
+#define data_ov052_020d20c8 gActorGroundMovementFlag16Bonuses
 #define func_ov001_0206db78 GetPlayerControlState
 #define func_ov021_020a7504 GetFieldDirectionActiveAndPollSubMode
 #define func_ov052_020c7edc SelectGroundAction

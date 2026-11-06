@@ -1,6 +1,6 @@
 #define FindMemberIndexById_020ad894 FindMemberIndexById
 #define GetConsumableSlotUses_020504b4 GetConsumableSlotUses
 #define UseFirstAvailableMember_020cc8bc UseFirstAvailableMember
-#define data_ov052_020d20c0 data_ov052_020d20e0
+#define data_ov052_020d20c0 gActorConsumableMemberPriorityIds
 #define func_ov052_020d0ec0 ApplyItemRewardEffect
 #include "src/ov052/unclassified_helpers/UseFirstAvailableMember_020cc8bc.c"

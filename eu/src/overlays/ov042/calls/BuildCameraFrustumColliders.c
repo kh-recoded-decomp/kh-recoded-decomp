@@ -8,5 +8,5 @@
 #define camera_commit_explicit_projection_0202a8c4 camera_commit_explicit_projection
 #define data_020559c0 gCollisionBoundsDispatch
 #define data_0205a970 NNS_G3dGlb_cameraMtx
-#define data_ov042_020be5c0 data_ov042_020be5e0
+#define data_ov042_020be5c0 gCameraSceneGlobalStorage
 #include "src/ov042/camera/BuildCameraFrustumColliders_020bd858.c"

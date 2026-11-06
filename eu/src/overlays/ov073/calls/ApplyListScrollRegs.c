@@ -1,6 +1,6 @@
 #define ApplyListScrollRegs_020c1368 ApplyListScrollRegs
 #define GetListBgHOffset_020c3f9c GetListBgHOffset
 #define UpdateWidgetRootAndFireAlarm_020b8c94 UpdateWidgetRootAndFireAlarm
-#define data_ov073_020c4240 data_ov073_020c4260
+#define data_ov073_020c4240 gStatusPanelGlobalStorage
 #define func_ov039_020bc1cc GetMenuWidgetContainer
 #include "src/ov073/status_menu/ApplyListScrollRegs_020c1368.c"

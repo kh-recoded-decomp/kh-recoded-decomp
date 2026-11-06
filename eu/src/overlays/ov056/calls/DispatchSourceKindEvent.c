@@ -1,3 +1,3 @@
 #define DispatchSourceKindEvent_020d7db4 DispatchSourceKindEvent
-#define data_ov056_020d80b0 data_ov056_020d80d0
+#define data_ov056_020d80b0 gEffectSourceKindEventHandlers
 #include "src/ov056/unclassified_helpers/DispatchSourceKindEvent_020d7db4.c"

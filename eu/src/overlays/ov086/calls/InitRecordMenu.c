@@ -4,7 +4,7 @@
 #define InitRecordMenu_020c1da8 InitRecordMenu
 #define ReadGlobalPackedBits_02027348 ReadGlobalPackedBits
 #define SetSecondaryElementEnabled_020bc084 SetSecondaryElementEnabled
-#define data_ov086_020c3000 data_ov086_020c3020
+#define data_ov086_020c3000 gRecordMenuGlobalStorage
 #define func_ov086_020beaa0 UpdateRecordScrollOffset
 #define func_ov086_020c080c RefreshRecordPageLayout
 #define func_ov086_020c0e4c SetupRecordSubScreenLayers

@@ -1,5 +1,5 @@
 #define func_ov001_020645c8 IsSessionFlagSet
 #define CountGroupFlaggedEntries_020bf484 CountGroupFlaggedEntries_020bf4a4
-#define data_ov086_020c2340 data_ov086_020c2360
+#define data_ov086_020c2340 gRecordGroupEntryCountsHead
 #define func_ov086_020bf408 IsGroupEntryStateOne
 #include "src/ov086/panel_state/CountGroupFlaggedEntries_020bf484.c"

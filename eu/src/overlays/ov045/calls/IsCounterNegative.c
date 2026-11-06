@@ -1,3 +1,3 @@
 #define IsCounterNegative_020c0708 IsCounterNegative
-#define g_ov045Context_020c0880 data_ov045_020c08a0
+#define g_ov045Context_020c0880 gBattleGaugeGlobalStorage
 #include "src/ov045/unclassified_helpers/IsCounterNegative_020c0708.c"

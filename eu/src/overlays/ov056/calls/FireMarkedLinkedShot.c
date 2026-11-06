@@ -5,7 +5,7 @@
 #define VEC_Normalize_01ff9f88 VEC_Normalize
 #define ZeroBytes0x40_020ab08c ZeroBytes0x40
 #define data_02053438 gZeroVecFx32
-#define data_ov056_020d7f4c data_ov056_020d7f6c
+#define data_ov056_020d7f4c gLinkedShotLocalOffset
 #define func_ov021_020a8ab4 ResetAnimationTrackState
 #define func_ov021_020a8ca0 func_ov021_020a8cc0
 #define func_ov052_020ceb54 GetActorModelPosition

@@ -27,4 +27,4 @@ sOv078_UiMenuStrLanguageQstSZ_020c51a0 kind:data(any) addr:0x020c51a0
 gPageEmptyText kind:data(any) addr:0x020c51b8
 gPageNameRankFormat kind:data(any) addr:0x020c51bc
 gPageLevelFormat kind:data(any) addr:0x020c51c8
-data_ov078_020c51e0 kind:bss addr:0x020c51e0
+gPageMenuGlobalStorage kind:bss addr:0x020c51e0

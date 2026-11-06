@@ -1,4 +1,4 @@
 #define RegisterEmbeddedObjectIfPending_020c0720 RegisterEmbeddedObjectIfPending
 #define func_0200153c FlushBufferAndRunCallback
-#define g_ov045Context_020c0880 data_ov045_020c08a0
+#define g_ov045Context_020c0880 gBattleGaugeGlobalStorage
 #include "src/ov045/unclassified_helpers/RegisterEmbeddedObjectIfPending_020c0720.c"

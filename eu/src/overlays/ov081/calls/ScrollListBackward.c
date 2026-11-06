@@ -4,5 +4,5 @@
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define ScrollListBackward_020c5b2c ScrollListBackward
 #define SkipToUnlockedListEntry_020c5a74 SkipToUnlockedListEntry
-#define data_020c5d80 data_ov081_020c5da0
+#define data_020c5d80 gTutorialMenuGlobalStorage
 #include "src/ov081/unclassified_helpers/ScrollListBackward_020c5b2c.c"

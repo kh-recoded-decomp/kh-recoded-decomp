@@ -1,5 +1,5 @@
 #include "nitro/types.h"
 
-const u32 data_ov056_020d7f9c[3] = {
+const u32 gSpinSlamRotationAxis[3] = {
     0x00000000, 0x00001000, 0x00000000,
 };

@@ -1,4 +1,4 @@
 #define BuildBasisFromForward_0204bf70 BuildBasisFromForward
 #define GetPanelBasis_020d08d8 GetPanelBasis
-#define g_panel_020d0ea0 data_ov044_020d0ec0
+#define g_panel_020d0ea0 gPanelCameraGlobalStorage
 #include "src/ov044/panel_state/GetPanelBasis_020d08d8.c"

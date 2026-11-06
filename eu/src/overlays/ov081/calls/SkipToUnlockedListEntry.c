@@ -1,6 +1,6 @@
 #define FX_Div_020c542c GetOverlay081EntryForSelectedSlot
 #define IsGlobalPackedBitSet_02027304 IsGlobalPackedBitSet
 #define SkipToUnlockedListEntry_020c5a74 SkipToUnlockedListEntry
-#define data_020c5d80 data_ov081_020c5da0
+#define data_020c5d80 gTutorialMenuGlobalStorage
 #define func_ov081_020c5be4 GetTutorialTextEntry
 #include "src/ov081/unclassified_helpers/SkipToUnlockedListEntry_020c5a74.c"

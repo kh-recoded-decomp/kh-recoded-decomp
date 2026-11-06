@@ -9,7 +9,7 @@ extern void DrawTutorialPageIndicatorThunk(void);
 extern void DestroyOv081Screen(void);
 extern void CloseOverlay081Menu(void);
 
-void *data_ov081_020c5cc0[17] = {
+void *gTutorialMenuDescriptor[17] = {
     (void *)InitOv081Screen,
     (void *)DestroyOv081Screen,
     (void *)DrawTutorialPageIndicatorThunk,

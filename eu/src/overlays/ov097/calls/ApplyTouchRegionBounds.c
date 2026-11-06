@@ -1,4 +1,4 @@
 #define ApplyTouchRegionBounds_020c0e5c ApplyTouchRegionBounds
 #define func_ov039_020bc03c RuntimeState_SetCondition
-#define g_menuScene_020c2520 data_ov097_020c2540
+#define g_menuScene_020c2520 gStoryReportGlobalStorage
 #include "src/ov097/panel_state/ApplyTouchRegionBounds_020c0e5c.c"

@@ -6,14 +6,14 @@ typedef struct {
     int values[8];
 } IntTable8;
 
-extern const IntTable8 data_ov086_020c222c;
-extern const IntTable8 data_ov086_020c226c;
+extern const IntTable8 gRecordGroupFlagFieldWidths;
+extern const IntTable8 gRecordGroupFlagFieldOffsets;
 extern u32 ReadSessionPackedBits(int bitOffset, u32 bitCount);
 
 int CountSessionGroupFlags(int index)
 {
-    IntTable8 widths = data_ov086_020c222c;
-    IntTable8 offsets = data_ov086_020c226c;
+    IntTable8 widths = gRecordGroupFlagFieldWidths;
+    IntTable8 offsets = gRecordGroupFlagFieldOffsets;
     int setCount = 0;
     u32 bits = ReadSessionPackedBits(offsets.values[index], widths.values[index]);
     int i;

@@ -12,7 +12,7 @@
 #define ZeroBytes0x14_020a8adc ZeroBytes0x14
 #define data_ov059_020cfe7c data_ov059_020cfe9c
 #define data_ov059_020cff64 sOv059_BaEfStefP2_020cff84
-#define data_ov059_020cffa4 data_ov059_020cffc4
+#define data_ov059_020cffa4 gOverlay059ActorGlobalStorage
 #define func_01ff86fc MIi_CpuClear32
 #define func_ov021_020a7cc8 LoadCharacterSoundCueTable
 #define func_ov021_020a89a8 func_ov021_020a89c8

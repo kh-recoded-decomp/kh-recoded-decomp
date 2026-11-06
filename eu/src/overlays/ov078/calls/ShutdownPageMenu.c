@@ -7,5 +7,5 @@
 #define func_ov045_020be6a0 InitBattleGaugeContext
 #define NNS_GfdResetFrmTexVramState_0201391c NNS_GfdResetFrmTexVramState
 #define func_02013d74 NNS_GfdResetFrmPlttVramState
-#define data_ov078_020c51c0 data_ov078_020c51e0
+#define data_ov078_020c51c0 gPageMenuGlobalStorage
 #include "src/ov078/unclassified_helpers/ShutdownPageMenu_020c4354.c"

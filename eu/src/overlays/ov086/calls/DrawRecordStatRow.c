@@ -1,8 +1,8 @@
 #define DrawRecordStatRow_020bee0c DrawRecordStatRow
 #define DrawTextAnchored_020015a0 DrawTextAnchored
 #define OS_SNPrintf_0202e080 OS_SNPrintf_0202e094
-#define data_ov086_020c20e8 data_ov086_020c2108
-#define data_ov086_020c21d0 data_ov086_020c21f0
+#define data_ov086_020c20e8 gRecordStatTierLabelIds
+#define data_ov086_020c21d0 gRecordStatRowLabelIds
 #define data_ov086_020c2fc4 sOv086_Empty_020c2fe4
 #define data_ov086_020c2fc8 gRecordStatisticNumberFormat
 #define data_ov086_020c2fd0 gRecordStatTextFormat

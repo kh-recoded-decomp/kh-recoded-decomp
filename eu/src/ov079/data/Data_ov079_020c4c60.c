@@ -13,7 +13,7 @@ extern void ConfigMenu_PrevPage(void);
 extern void ConfigMenu_NextPage(void);
 extern void SaveOptionsAndCloseConfigMenu(void);
 
-void *data_ov079_020c4c60[17] = {
+void *gConfigMenuDescriptor[17] = {
     (void *)ConfigMenu_Init,
     (void *)ConfigMenu_Release,
     (void *)ConfigMenu_UpdateHelp,

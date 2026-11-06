@@ -22,7 +22,7 @@ typedef struct {
     u32 offsets[8];
 } PageNodeTable;
 
-extern const PageNodeTable data_ov086_020c224c;
+extern const PageNodeTable gRecordPageNodeBaseIndices;
 
 extern u8 *GetMenuWidgetContainer(void);
 extern void *FindWidgetById(u8 *panel, int elementId);
@@ -46,7 +46,7 @@ void RefreshRecordPageLayout(Ov086Menu *menu)
 {
     int titleId = 9;
     u8 *panel = GetMenuWidgetContainer();
-    PageNodeTable table = data_ov086_020c224c;
+    PageNodeTable table = gRecordPageNodeBaseIndices;
 
     ClearTileTableRowAndMarkDirty(menu->screenLayers, 0x1a);
     if (IsRecordPageUnavailable(menu->pageIndex)) {

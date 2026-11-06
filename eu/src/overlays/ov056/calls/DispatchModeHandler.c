@@ -1,3 +1,3 @@
 #define DispatchModeHandler_020d7d84 DispatchModeHandler
-#define data_ov056_020d8060 data_ov056_020d8080
+#define data_ov056_020d8060 gEffectSourceModeSpawnHandlers
 #include "src/ov056/unclassified_helpers/DispatchModeHandler_020d7d84.c"

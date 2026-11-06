@@ -49,7 +49,7 @@ extern const TileIdPair data_ov073_020c40a8;
 extern const TileTableSource data_ov073_020c40f0;
 extern const TextFrame data_ov073_020c40d0;
 extern const TextFrame data_ov073_020c4110;
-extern StatusPanel *data_ov073_020c4260;
+extern StatusPanel *gStatusPanelGlobalStorage;
 extern const char sOv073_UiBtlBtlLanguageP2_020c41dc[];
 
 extern void InitTileTableFrom(void *table, const TileTableSource *source);
@@ -73,7 +73,7 @@ void InitStatusPanel(StatusMenu *menu, StatusPanel *panel)
 
     source.ids = ids.ids;
     InitTileTableFrom(panel->uploads, &source);
-    data_ov073_020c4260 = panel;
+    gStatusPanelGlobalStorage = panel;
     panel->uploadsReady = TRUE;
     panel->selectedRecord = -1;
     panel->restoreLayers = FALSE;

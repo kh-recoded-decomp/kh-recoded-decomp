@@ -7,7 +7,7 @@ extern void IncreasePickerValue(void);
 extern void StepPickerBack(void);
 extern void UpdateItemListScroll(void);
 
-void *data_ov085_020c2368[6] = {
+void *gShopMenuDescriptorMiddle[6] = {
     (void *)UpdateItemListScroll,
     (void *)0x00000001,
     (void *)0x00005EA8,

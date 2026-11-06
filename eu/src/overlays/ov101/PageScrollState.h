@@ -14,6 +14,6 @@ typedef struct {
     PageScrollValue pageScroll[1];
 } Ov101PageScrollState;
 
-extern Ov101PageScrollState *data_ov101_020c5920;
+extern Ov101PageScrollState *gListMenuGlobalStorage;
 
 #endif

@@ -11,6 +11,6 @@ const u32 data_ov052_020d211c[6] = {
     0x0000079A, 0x00000018,
 };
 
-const u32 data_ov052_020d210c[4] = {
+const u32 gActorGaugePointRateParameters[4] = {
     0x003E8000, 0x005AA000, 0x0060E000, 0x00672000,
 };

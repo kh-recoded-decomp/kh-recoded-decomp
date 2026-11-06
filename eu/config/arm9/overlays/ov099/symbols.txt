@@ -89,5 +89,5 @@ sOv099_WeaponTg00_020c28d8 kind:data(any) addr:0x020c28d8
 sOv099_RoHL_020c28e4 kind:data(any) addr:0x020c28e4
 sOv099_RoHR_020c28ec kind:data(any) addr:0x020c28ec
 sOv099_Root_020c28f4 kind:data(any) addr:0x020c28f4
-data_ov099_020c2900 kind:bss addr:0x020c2900
-data_ov099_020c2904 kind:bss addr:0x020c2904
+gEnemyViewerWork kind:bss addr:0x020c2900
+gEnemyViewerDrawNodeStorage kind:bss addr:0x020c2904

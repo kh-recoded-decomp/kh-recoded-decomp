@@ -12,7 +12,7 @@ extern void ReleaseEffectPool_020d450c(void);
 extern void FreeSlotTrackerUnitSlots(void);
 extern void FreeSceneModelSlotArray(void);
 
-void *data_ov056_020d8030[20] = {
+void *gEffectSourceKindReleaseHandlers[20] = {
     NULL,
     (void *)ReleaseEffectPool_020d450c,
     NULL,

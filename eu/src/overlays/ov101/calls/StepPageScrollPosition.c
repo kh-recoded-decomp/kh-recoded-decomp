@@ -9,7 +9,7 @@ static inline fx32 FxMulRounded(fx32 left, fx32 right)
 
 void StepPageScrollPosition(int index)
 {
-    Ov101PageScrollState *state = data_ov101_020c5920;
+    Ov101PageScrollState *state = gListMenuGlobalStorage;
     PageScrollValue *scroll = &state->pageScroll[index];
     fx32 scale = FX_Div(123, 614);
 

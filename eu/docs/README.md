@@ -32,6 +32,10 @@ links the complete sequence of documented naming blocks.
 - [Wireless scan and board storage](WIRELESS_SCAN_BOARD_STORAGE.md).
 - [Pool kind-4 trigger callbacks](POOL_KIND4_TRIGGER_CALLBACKS.md).
 
+- [Menu Descriptor Record Tables](MENU_DESCRIPTOR_RECORD_TABLES.md).
+- [Late Scene Global Storage](LATE_SCENE_GLOBAL_STORAGE.md).
+- [Gauge Actor Effect Data](GAUGE_ACTOR_EFFECT_DATA.md).
+
 ## Unresolved function contracts
 
 At the `ad0a8778153f72218e4bdad3a5cec1bd8e2a7470` naming checkpoint,

@@ -1,4 +1,4 @@
 #define GetPackedBitMask_0202d4a0 GetPackedBitMask
 #define IsEntryFlagSet_020c1320 IsEntryFlagSet_020c1340
-#define data_ov095_020c28c0 data_ov095_020c28e0
+#define data_ov095_020c28c0 gItemReportGlobalStorage
 #include "src/ov095/bit_flags/IsEntryFlagSet_020c1320.c"

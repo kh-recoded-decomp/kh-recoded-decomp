@@ -4,5 +4,5 @@
 #define G3X_SetToonTable_02006bf0 G3X_SetToonTable
 #define MIi_CpuCopyFast_01ff878c MIi_CpuCopyFast
 #define UpdateMatrixMenuBackground_020c8920 UpdateMatrixMenuBackground
-#define data_ov075_020d18e0 data_ov075_020d1900
+#define data_ov075_020d18e0 gMatrixMenuWork
 #include "src/ov075/matrix_menu/UpdateMatrixMenuBackground_020c8920.c"

@@ -1,10 +1,10 @@
 #include "nitro/types.h"
 
-extern u32 data_ov042_020be5e0;
+extern u32 gCameraSceneGlobalStorage;
 
 u32 GetCameraFlag800(void) {
-  if (data_ov042_020be5e0 != 0) {
-    return *(u32 *)(data_ov042_020be5e0 + 0x38) & 0x800;
+  if (gCameraSceneGlobalStorage != 0) {
+    return *(u32 *)(gCameraSceneGlobalStorage + 0x38) & 0x800;
   }
   return 0;
 }

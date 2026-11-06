@@ -1,5 +1,5 @@
 #define CountUnlockedListEntries_020c5460 CountUnlockedListEntries
 #define IsGlobalPackedBitSet_02027304 IsGlobalPackedBitSet
-#define data_020c5d80 data_ov081_020c5da0
+#define data_020c5d80 gTutorialMenuGlobalStorage
 #define func_ov081_020c5be4 GetTutorialTextEntry
 #include "src/ov081/unclassified_helpers/CountUnlockedListEntries_020c5460.c"

@@ -216,6 +216,6 @@ sOv075_UiMenuCmnmtxP2_020d18ac kind:data(any) addr:0x020d18ac
 sOv075_UiMenuLanguageCmnmtxP2_020d18c0 kind:data(any) addr:0x020d18c0
 sOv075_UiMenuTipsP2_020d18d4 kind:data(any) addr:0x020d18d4
 sOv075_UiMenuLanguageTipsP2_020d18e4 kind:data(any) addr:0x020d18e4
-data_ov075_020d1900 kind:bss addr:0x020d1900
-data_ov075_020d1904 kind:bss addr:0x020d1904
+gMatrixMenuWork kind:bss addr:0x020d1900
+gMatrixDialogTextBuffer kind:bss addr:0x020d1904
 gItemPickerPanelWork kind:bss addr:0x020d1b04

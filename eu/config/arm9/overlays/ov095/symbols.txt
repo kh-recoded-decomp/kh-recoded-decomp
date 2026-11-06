@@ -75,4 +75,4 @@ gItemCategoryRecords kind:data(any) addr:0x020c2360 ambiguous
 sOv095_VblankFunc_020c28a8 kind:data(any) addr:0x020c28a8
 sOv095_TextFontEu10Nftr_020c28b4 kind:data(any) addr:0x020c28b4
 gItemReportRecipePairFormat kind:data(any) addr:0x020c28cc
-data_ov095_020c28e0 kind:bss addr:0x020c28e0
+gItemReportGlobalStorage kind:bss addr:0x020c28e0

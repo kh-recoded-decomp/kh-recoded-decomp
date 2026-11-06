@@ -1,17 +1,17 @@
 #include "nitro/types.h"
 
-extern u32 data_ov042_020be5e0;
+extern u32 gCameraSceneGlobalStorage;
 
 void SetCameraHorizontalFollowBounds(u32 firstValue,int secondValue) {
-  if ((*(int *)(data_ov042_020be5e0 + 200) != 0x7fffffff) && (secondValue == 0x7fffffff)) {
-    *(u32 *)(data_ov042_020be5e0 + 0xd4) = 0;
-    *(u32 *)(data_ov042_020be5e0 + 0xd0) = *(u32 *)(data_ov042_020be5e0 + 0x70);
+  if ((*(int *)(gCameraSceneGlobalStorage + 200) != 0x7fffffff) && (secondValue == 0x7fffffff)) {
+    *(u32 *)(gCameraSceneGlobalStorage + 0xd4) = 0;
+    *(u32 *)(gCameraSceneGlobalStorage + 0xd0) = *(u32 *)(gCameraSceneGlobalStorage + 0x70);
   }
-  *(u32 *)(data_ov042_020be5e0 + 0xc4) = firstValue;
-  *(int *)(data_ov042_020be5e0 + 200) = secondValue;
+  *(u32 *)(gCameraSceneGlobalStorage + 0xc4) = firstValue;
+  *(int *)(gCameraSceneGlobalStorage + 200) = secondValue;
   if (secondValue != 0x7fffffff) {
-    *(u32 *)(data_ov042_020be5e0 + 0x140) = *(u32 *)(data_ov042_020be5e0 + 0x140) | 1;
-    *(u32 *)(data_ov042_020be5e0 + 0xcc) = *(u32 *)(data_ov042_020be5e0 + 0x70);
+    *(u32 *)(gCameraSceneGlobalStorage + 0x140) = *(u32 *)(gCameraSceneGlobalStorage + 0x140) | 1;
+    *(u32 *)(gCameraSceneGlobalStorage + 0xcc) = *(u32 *)(gCameraSceneGlobalStorage + 0x70);
   }
-  *(u32 *)(data_ov042_020be5e0 + 0x13c) = 0x7fffffff;
+  *(u32 *)(gCameraSceneGlobalStorage + 0x13c) = 0x7fffffff;
 }

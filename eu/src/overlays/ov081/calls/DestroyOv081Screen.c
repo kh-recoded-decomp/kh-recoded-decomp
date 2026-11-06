@@ -9,5 +9,5 @@
 #define NNS_GfdResetFrmTexVramState_0201391c NNS_GfdResetFrmTexVramState
 #define func_02013d74 NNS_GfdResetFrmPlttVramState
 #define SetStateFlagBits_020bc688 SetStateFlagBits
-#define data_020c5d80 data_ov081_020c5da0
+#define data_020c5d80 gTutorialMenuGlobalStorage
 #include "src/ov081/unclassified_helpers/DestroyOv081Screen_020c571c.c"

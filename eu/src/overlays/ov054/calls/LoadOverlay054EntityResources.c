@@ -6,11 +6,11 @@
 #define OS_SPrintf_02002428 OS_SPrintf
 #define ZeroBytes0x14_020a8adc ZeroBytes0x14
 #define data_0205615c gSoundCategoryNames
-#define data_ov054_020d3654 data_ov054_020d3674
+#define data_ov054_020d3654 gOverlay054EntryGroupResourceIds
 #define data_ov054_020d36a0 sOv054_BaChFormatSEtc2PZ_020d36c0
 #define data_ov054_020d36b4 sOv054_BaChFormatSAb2PZ_020d36d4
 #define data_ov054_020d36c8 sOv054_BaChFormatSJpPZ_020d36e8
-#define data_ov054_020d36d8 data_ov054_020d36f8
+#define data_ov054_020d36d8 gOverlay054Flag12CharacterPathFormat
 #define func_0204f768 GetOverlaySelectionRecord
 #define func_ov021_020a89a8 func_ov021_020a89c8
 #include "src/ov054/object_factory/LoadOverlay054EntityResources_020d2320.c"

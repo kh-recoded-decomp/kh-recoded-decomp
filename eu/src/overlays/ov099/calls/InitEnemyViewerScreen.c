@@ -2,7 +2,7 @@
 
 typedef struct EnemyViewer EnemyViewer;
 
-extern u32 data_ov099_020c2900;
+extern u32 gEnemyViewerWork;
 extern u32 data_ov099_020c22b4;
 extern u32 sOv099_UiBtlStrLanguageP2_020c2774;
 extern u32 AcquireRecordSlot();
@@ -28,7 +28,7 @@ u32 InitEnemyViewerScreen(void *work) {
   u32 menuMode;
   void *messages;
 
-  data_ov099_020c2900 = work;
+  gEnemyViewerWork = work;
   SetStateFlagBits('\x05','\0');
   MIi_CpuClearFast(0,work,0xd6f8);
   menuMode = GetCurrentMenuStackEntry();

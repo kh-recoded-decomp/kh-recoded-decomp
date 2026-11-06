@@ -7,5 +7,5 @@
 #define data_ov097_020c1ef0 sStoryReportRootIndices
 #define func_ov097_020c02f4 SetupScrollList_020c0314
 #define func_ov097_020c1558 SetStoryReportState
-#define g_menuScene_020c2520 data_ov097_020c2540
+#define g_menuScene_020c2520 gStoryReportGlobalStorage
 #include "src/ov097/panel_state/ScrollEntryCursorUp_020bef14.c"

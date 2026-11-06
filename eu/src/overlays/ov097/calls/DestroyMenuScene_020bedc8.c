@@ -6,5 +6,5 @@
 #define SetStateFlagBits_020bc688 SetStateFlagBits
 #define func_ov097_020c0d20 ReleasePopupEntries
 #define func_ov097_020c0edc StopTouchScrolling
-#define g_menuScene_020c2520 data_ov097_020c2540
+#define g_menuScene_020c2520 gStoryReportGlobalStorage
 #include "src/ov097/panel_state/DestroyMenuScene_020beda8.c"

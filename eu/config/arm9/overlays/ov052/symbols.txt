@@ -142,11 +142,11 @@ InitSlotEntryFromRecord kind:function(thumb,size=0xd0) addr:0x020d1a88
 ScanAttackHits kind:function(thumb,size=0x328) addr:0x020d1b58
 RunVolumeHitScan kind:function(thumb,size=0x1c4) addr:0x020d1e80
 DispatchHitEvent kind:function(thumb,size=0x68) addr:0x020d2044
-data_ov052_020d20e0 kind:data(any) addr:0x020d20e0
-data_ov052_020d20e8 kind:data(any) addr:0x020d20e8
-data_ov052_020d20f0 kind:data(any) addr:0x020d20f0
-data_ov052_020d20fc kind:data(any) addr:0x020d20fc
-data_ov052_020d210c kind:data(any) addr:0x020d210c
+gActorConsumableMemberPriorityIds kind:data(any) addr:0x020d20e0
+gActorGroundMovementFlag16Bonuses kind:data(any) addr:0x020d20e8
+gPlayerActorSpawnShapeOffset kind:data(any) addr:0x020d20f0
+gActorSlotModelResourceIds kind:data(any) addr:0x020d20fc
+gActorGaugePointRateParameters kind:data(any) addr:0x020d210c
 data_ov052_020d211c kind:data(any) addr:0x020d211c
 data_ov052_020d2134 kind:data(any) addr:0x020d2134
 sOv052_Root_020d2160 kind:data(any) addr:0x020d2160
@@ -158,4 +158,4 @@ sOv052_BaChFormatSMdlFormatDPZ_020d219c kind:data(any) addr:0x020d219c
 sOv052_BaChFormatSTexFormatDZ_020d21b0 kind:data(any) addr:0x020d21b0
 sOv052_FormatS_020d21c4 kind:data(any) addr:0x020d21c4
 sOv052_BaChFormatSMovPZ_020d21c8 kind:data(any) addr:0x020d21c8
-data_ov052_020d21e0 kind:bss addr:0x020d21e0
+gPlayerActorJointNameScratch kind:bss addr:0x020d21e0

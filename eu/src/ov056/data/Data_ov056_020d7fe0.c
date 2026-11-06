@@ -8,7 +8,7 @@ extern void ResetSlotStateAndNotify(void);
 extern void ResetUnitCounts(void);
 extern void StopSlotsAndClearActive(void);
 
-void *data_ov056_020d7fe0[20] = {
+void *gEffectSourceKindResetHandlers[20] = {
     (void *)ResetCountsAndSlots,
     (void *)ResetCountsAndSlots,
     (void *)ResetCountsAndSlots,

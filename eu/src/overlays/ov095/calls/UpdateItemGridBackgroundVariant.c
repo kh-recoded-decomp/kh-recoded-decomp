@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-extern unsigned int data_ov095_020c28e0;
+extern unsigned int gItemReportGlobalStorage;
 extern unsigned int NNS_G2dBGLoadScreenRect();
 extern unsigned int G2_GetBG3ScrPtr();
 
@@ -9,7 +9,7 @@ void UpdateItemGridBackgroundVariant(void) {
   void *pScreenDst;
   u16 *screen;
 
-  work = data_ov095_020c28e0;
+  work = gItemReportGlobalStorage;
   pScreenDst = G2_GetBG3ScrPtr();
   if (*(int *)(work + 0x11100) == 1) {
     if (*(int *)(work + 0x11104) == 1) {

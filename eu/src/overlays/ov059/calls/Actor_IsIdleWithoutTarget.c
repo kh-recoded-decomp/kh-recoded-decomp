@@ -1,3 +1,3 @@
 #define Actor_IsIdleWithoutTarget_020cd734 Actor_IsIdleWithoutTarget
-#define data_ov059_020cffa4 data_ov059_020cffc4
+#define data_ov059_020cffa4 gOverlay059ActorGlobalStorage
 #include "src/ov059/unclassified_helpers/Actor_IsIdleWithoutTarget_020cd734.c"

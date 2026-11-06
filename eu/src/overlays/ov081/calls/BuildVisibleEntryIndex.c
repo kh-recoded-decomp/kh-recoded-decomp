@@ -1,7 +1,7 @@
 #define BuildVisibleEntryIndex_020c4e98 BuildVisibleEntryIndex
 #define IsGlobalPackedBitSet_02027304 IsGlobalPackedBitSet
 #define PXI_Init_0204f0b4 PXI_Init_0204f0c8
-#define data_020c5d80 data_ov081_020c5da0
+#define data_020c5d80 gTutorialMenuGlobalStorage
 #define func_01ff8830 MI_CpuFill8
 #define func_ov039_020bc1cc GetMenuWidgetContainer
 #define func_ov081_020c5be4 GetTutorialTextEntry

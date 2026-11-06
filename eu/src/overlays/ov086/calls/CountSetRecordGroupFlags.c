@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-extern unsigned char data_ov086_020c2360;
+extern unsigned char gRecordGroupEntryCountsHead;
 extern unsigned int IsSessionFlagSet();
 
 int CountSetRecordGroupFlags(int group) {
@@ -17,11 +17,11 @@ int CountSetRecordGroupFlags(int group) {
     do {
       offsetOrIndex = countOrIndex * 4;
       countOrIndex = countOrIndex + 1;
-      baseIndex = baseIndex + *(int *)(&data_ov086_020c2360 + offsetOrIndex);
+      baseIndex = baseIndex + *(int *)(&gRecordGroupEntryCountsHead + offsetOrIndex);
     } while (countOrIndex < group);
   }
   offsetOrIndex = 0;
-  countOrIndex = *(int *)(&data_ov086_020c2360 + group * 4);
+  countOrIndex = *(int *)(&gRecordGroupEntryCountsHead + group * 4);
   if (0 < countOrIndex) {
     do {
       flag = IsSessionFlagSet(baseIndex + offsetOrIndex + 0x581);

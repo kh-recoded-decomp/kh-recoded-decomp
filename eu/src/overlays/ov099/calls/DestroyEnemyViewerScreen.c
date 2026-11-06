@@ -2,7 +2,7 @@
 
 typedef struct { unsigned char padding[0xd4]; unsigned int value; } SharedState;
 extern SharedState NNS_G3dGlb;
-extern unsigned int data_ov099_020c2900;
+extern unsigned int gEnemyViewerWork;
 extern unsigned int NNS_G3dGlb_prmBaseRot;
 extern unsigned int MI_Copy36B();
 extern unsigned int MTX_Identity33_();
@@ -34,5 +34,5 @@ void DestroyEnemyViewerScreen(int work) {
   ReleaseRecordManager();
   ZeroHalfThenFree(*(unsigned int *)(work + 0x30c));
   SetStateFlagBits(0,5);
-  data_ov099_020c2900 = 0;
+  gEnemyViewerWork = 0;
 }
