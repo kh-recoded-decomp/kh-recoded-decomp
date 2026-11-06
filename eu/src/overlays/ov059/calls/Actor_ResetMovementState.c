@@ -1,7 +1,7 @@
 #define Actor_GetRootMotionDelta_020cce10 Actor_GetRootMotionDelta
 #define Actor_ResetMovementState_020cb680 Actor_ResetMovementState
 #define Actor_SetTimeScale_020c7d88 Actor_SetTimeScale
-#define SetClampedCursor_020a75d8 SetClampedCursor
+#define SetClampedCursor_020a75d8 SetActorHealthClamped
 #define data_02053438 gZeroVecFx32
 #define func_0202f4b8 GetModelAnimationDurationFx32
 #include "src/ov059/unclassified_helpers/Actor_ResetMovementState_020cb680.c"

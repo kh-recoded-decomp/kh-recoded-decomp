@@ -1,3 +1,0 @@
-#define FS_EndOverlay func_ov001_02063c94
-#define FS_UnloadOverlayImage_0206550c func_ov001_0206550c
-#include "src/ov001/library_nitro_fs/FS_UnloadOverlayImage_0206550c.c"

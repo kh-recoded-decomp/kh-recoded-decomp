@@ -1,0 +1,3 @@
+#define FS_EndOverlay RestorePrimaryActorHealth
+#define FS_UnloadOverlayImage_0206550c ScriptCmd_RestorePrimaryActorHealth
+#include "src/ov001/library_nitro_fs/FS_UnloadOverlayImage_0206550c.c"

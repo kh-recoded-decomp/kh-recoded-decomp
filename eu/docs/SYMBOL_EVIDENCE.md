@@ -896,3 +896,7 @@ and record-type compatibility. No native source or ABI is changed here.
 ## Board-node code owner and writer closure
 
 `func_ov032_020bb828` is now `GetCurrentBoardNodeCode`. SessionBuffer10 is shared by board creation and the route/challenge context; actual ov024 writers and the ov032 completion clear identify its six signed node codes. [The contract](CURRENT_BOARD_NODE_CODE.md) preserves the observed mask-generated range separately from any public enum, and distinguishes raw code from mapped rank, actor variant and lock mask. Four official checks and four complete-object comparisons pass; a fresh gate retains all 108 module hashes.
+
+## Primary actor health and script restoration
+
+The former ov001:02063c94 / 0206550c helpers are RestorePrimaryActorHealth and ScriptCmd_RestorePrimaryActorHealth. The dependency ov021:020a75f8 is SetActorHealthClamped, correcting the historical cursor label. [The native contract](ACTOR_HEALTH_RESTORATION.md) proves the actor+0x1d4 record owner, unsigned current/max halfwords +2/+4, HP writes, damage/respawn behavior, HUD use and script group2/0x1f. It preserves legacy declarations and distinguishes the u16 C argument contract from the callee's direct R1 comparison. Eleven official function checks, 12 complete objects and a fresh 108-module gate pass with unchanged bytes and hashes.

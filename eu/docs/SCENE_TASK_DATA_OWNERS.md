@@ -611,7 +611,7 @@ Pinned references (EU wrapper → shared source where applicable):
 - `eu/src/overlays/ov032/calls/UpdateChallengeScene.c` → `src/ov032/state_machine/UpdateChallengeScene_020bab04.c`, symbol reference line(s) 46, 72, 73.
 - `eu/src/overlays/ov032/calls/UpdateStageLinkPanels.c` → `src/ov032/panel_state/UpdateStageLinkPanels_020ba604.c`, symbol reference line(s) 23, 40, 42, 45, 50, 52, 57, 58, 61, 63, 65, 70, 75, 79, 80, 83, 86, 91, 93, 96, 97.
 - `eu/src/overlays/ov032/calls/GroupSceneOnLeaveClearFlag2.c`, symbol reference line(s) 3, 4.
-- `eu/src/overlays/ov032/calls/func_ov032_020bb828.c`, symbol reference line(s) 3, 6, 7.
+- `eu/src/overlays/ov032/calls/GetCurrentBoardNodeCode.c`, symbol reference line(s) 3, 6, 7.
 - `eu/src/overlays/ov032/data/bss/Bss_ov032_020c0080.c`, symbol reference line(s) 4.
 
 Relocations inside this symbol: 0. Native target expressions and addends are retained.

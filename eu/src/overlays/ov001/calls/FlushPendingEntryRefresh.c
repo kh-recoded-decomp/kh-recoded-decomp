@@ -1,5 +1,5 @@
 #define FlushPendingEntryRefresh_020630e4 FlushPendingEntryRefresh
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField
 #define data_ov001_020a0460 gFieldSessionWork
-#define func_ov021_020a75d8 SetClampedCursor
+#define func_ov021_020a75d8 SetActorHealthClamped
 #include "src/ov001/field_manager/FlushPendingEntryRefresh_020630e4.c"

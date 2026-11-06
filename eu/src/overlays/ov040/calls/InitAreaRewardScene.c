@@ -5,7 +5,7 @@
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define PushVramState_020365a4 PushVramState
 #define QueueFieldUpdate_020633a0 QueueFieldUpdate
-#define SetClampedCursor_020a75d8 SetClampedCursor
+#define SetClampedCursor_020a75d8 SetActorHealthClamped
 #define UpdateRewardMenuHighlights_020bde68 UpdateRewardMenuHighlights
 #define data_ov001_0209eb18 gSceneWorkClassDescriptor
 #define data_ov035_020bc4e0 gMovieContextState

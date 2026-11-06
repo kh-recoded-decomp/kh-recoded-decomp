@@ -1,6 +1,6 @@
 #define func_ov001_0206db8c GetFieldEntryGroupId
 #define FinishEnemyRecovery_020d6c78 FinishEnemyRecovery
-#define SetClampedCursor_020a75d8 SetClampedCursor
+#define SetClampedCursor_020a75d8 SetActorHealthClamped
 #define StopAndClearSoundEmitter_020a8e14 StopAndClearSoundEmitter
 #define selectJointAnimationBlend_0202f2cc selectJointAnimationBlend
 #include "src/ov058/unclassified_helpers/FinishEnemyRecovery_020d6c78.c"

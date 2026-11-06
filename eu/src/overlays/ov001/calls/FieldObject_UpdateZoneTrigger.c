@@ -10,7 +10,7 @@
 #define func_ov001_0207f810 FieldObject_GetPosition
 #define SpawnSoundSlot_0204da8c SpawnSoundSlot
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField
-#define func_ov021_020a75d8 SetClampedCursor
+#define func_ov021_020a75d8 SetActorHealthClamped
 #define func_ov058_020d6c0c RestoreEnemyHealthAndReset
 #define func_ov035_020baf88 IsSessionFlag3700Set
 #define func_ov035_020bafc4 GetMovieCounterLimit

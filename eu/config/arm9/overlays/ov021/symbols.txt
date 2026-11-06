@@ -20,7 +20,7 @@ SharedObject_GetMode kind:function(thumb,size=0x6) addr:0x020a7580
 SpawnHealEffect kind:function(thumb,size=0x3a) addr:0x020a7588
 InitializeSharedOverlayObject kind:function(thumb,size=0x34) addr:0x020a75c4
 func_ov021_020a75c4 kind:label(thumb) addr:0x020a75c4
-SetClampedCursor kind:function(thumb,size=0x12) addr:0x020a75f8
+SetActorHealthClamped kind:function(thumb,size=0x12) addr:0x020a75f8
 AddClampedHealth kind:function(thumb,size=0x32) addr:0x020a760c
 ApplyScaledHealthDelta kind:function(thumb,size=0x30) addr:0x020a7640
 ScaleValueByPercentField kind:function(thumb,size=0x1c) addr:0x020a7670

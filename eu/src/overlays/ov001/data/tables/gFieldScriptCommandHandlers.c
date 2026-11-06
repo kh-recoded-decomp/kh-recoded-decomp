@@ -32,7 +32,7 @@ extern void ScriptCmd_QueueFlagTaskKind4(void); /* ScriptCmd_QueueFlagTaskKind4 
 extern void ScriptCmd_AdjustItemCount(void); /* ScriptCmd_AdjustItemCount */
 extern void ScriptCmd_SetSessionFlag35e3(void);
 extern void ScriptCmd_SetFieldParameter(void); /* ScriptCmd_SetFieldParameter */
-extern void func_ov001_0206550c(void); /* FS_UnloadOverlayImage */
+extern void ScriptCmd_RestorePrimaryActorHealth(void); /* FS_UnloadOverlayImage */
 extern void ScriptCmd_SetMenuItemKind(void);
 extern void ScriptCmd_SetSceneSlotDrawingEnabled(void);
 extern void ScriptOp_SetVector4(void); /* ScriptOp_SetVector4 */
@@ -166,7 +166,7 @@ void (*gFieldScriptCommandHandlers[190])(void) = {
     NULL,
     ScriptCmd_SetFieldParameter, /* ScriptCmd_SetFieldParameter */
     NULL,
-    func_ov001_0206550c, /* FS_UnloadOverlayImage */
+    ScriptCmd_RestorePrimaryActorHealth, /* FS_UnloadOverlayImage */
     NULL,
     ScriptCmd_SetMenuItemKind,
     NULL,

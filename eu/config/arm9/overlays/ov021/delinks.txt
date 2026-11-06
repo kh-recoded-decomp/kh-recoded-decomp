@@ -88,7 +88,7 @@ src/overlays/ov021/calls/InitializeSharedOverlayObject.c:
     complete
     .text       start:0x020a75c4 end:0x020a75f8
 
-src/overlays/ov021/calls/SetClampedCursor.c:
+src/overlays/ov021/calls/SetActorHealthClamped.c:
     complete
     .text       start:0x020a75f8 end:0x020a760a
 

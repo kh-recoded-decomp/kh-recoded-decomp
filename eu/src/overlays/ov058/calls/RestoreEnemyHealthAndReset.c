@@ -1,3 +1,3 @@
 #define RestoreEnemyHealthAndReset_020d6c0c RestoreEnemyHealthAndReset
-#define SetClampedCursor_020a75d8 SetClampedCursor
+#define SetClampedCursor_020a75d8 SetActorHealthClamped
 #include "src/ov058/unclassified_helpers/RestoreEnemyHealthAndReset_020d6c0c.c"

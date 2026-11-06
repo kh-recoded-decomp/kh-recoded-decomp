@@ -39,6 +39,9 @@ This is a matching decompilation; a host port is a separate project.
   callees, decoding, native return words and the erased dispatcher boundary.
 - [Model animation tracks](MODEL_ANIMATION_TRACKS.md) records borrowed track
   lookup, fx32 duration, single-wrap frame writes and native index conversions.
+- [Actor health restoration](ACTOR_HEALTH_RESTORATION.md) connects the native
+  current/max HP fields to their record owner, damage/respawn and HUD consumers,
+  including the script command and preserved caller-declaration limits.
 - [Saved camera](SAVED_CAMERA.md) records snapshot lifetime, typed callbacks,
   restore behavior, fixed-point projection and viewport/clipping limits.
 - [Packed resources](PACKED_RESOURCES.md) records variable-length entry lookup,
