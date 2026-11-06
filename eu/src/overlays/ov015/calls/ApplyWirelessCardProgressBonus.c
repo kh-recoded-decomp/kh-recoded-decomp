@@ -13,14 +13,14 @@ typedef struct {
 
 extern int DispatchContextCommand(int a, int b, int c, int d);
 extern int CountMatchingSlotIds(PlayerCard *card);
-extern WirelessContext *data_ov015_0207e960;
+extern WirelessContext *gWirelessMenuWork;
 
 void ApplyWirelessCardProgressBonus(void) {
     int total;
     int bonus;
 
     total = DispatchContextCommand(8, 0, 0, 0) + 1;
-    bonus = CountMatchingSlotIds(&data_ov015_0207e960->cards[data_ov015_0207e960->selectedCard]);
+    bonus = CountMatchingSlotIds(&gWirelessMenuWork->cards[gWirelessMenuWork->selectedCard]);
     if (DispatchContextCommand(5, 0, 0, 0) != 0) {
         return;
     }

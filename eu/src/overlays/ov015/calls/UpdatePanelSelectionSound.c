@@ -1,4 +1,4 @@
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define UpdatePanelSelectionSound_02072718 UpdatePanelSelectionSound
-#define _data_ov015_0207e960 data_ov015_0207e960
+#define _data_ov015_0207e960 gWirelessMenuWork
 #include "src/ov015/reviewed_helpers/UpdatePanelSelectionSound_02072718.c"

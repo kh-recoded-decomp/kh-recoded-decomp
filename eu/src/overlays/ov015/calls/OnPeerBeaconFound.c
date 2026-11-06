@@ -1,3 +1,4 @@
+#define data_ov015_0207e964 gWirelessCardExchangeGlobals
 #define IsKnownMacAddress_02072490 IsKnownMacAddress
 #define MIi_CpuFill8_01ff8830 MI_CpuFill8
 #define OnPeerBeaconFound_02073408 OnPeerBeaconFound

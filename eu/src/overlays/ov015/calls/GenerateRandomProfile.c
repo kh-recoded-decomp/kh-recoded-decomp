@@ -1,3 +1,4 @@
+#define data_ov015_0207a1c8 gWirelessRandomProfileRankLimits
 #define CopyWideStringBounded_020663d0 CopyWideStringBounded
 #define FillCategoryRecords_02069e8c FillCategoryRecords
 #define GenerateRandomProfile_02072dd8 GenerateRandomProfile

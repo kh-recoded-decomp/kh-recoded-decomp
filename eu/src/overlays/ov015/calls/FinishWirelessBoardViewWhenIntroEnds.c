@@ -17,17 +17,17 @@ extern void ReleaseWorkBuffer(void);
 extern void InitOv002SubPanelGraphics(void);
 extern void ResetOv002SubPanelText(int selector);
 extern void SetWirelessMenuState(int mode);
-extern PanelState *data_ov015_0207e960;
+extern PanelState *gWirelessMenuWork;
 
 void FinishWirelessBoardViewWhenIntroEnds(void) {
     if (UpdateWirelessBoardIntro() != 0) {
         return;
     }
     ReleaseWorkBuffer();
-    data_ov015_0207e960->flagE1_3 = 0;
-    data_ov015_0207e960->flagE2_1 = 0;
-    data_ov015_0207e960->flagE1_4 = 0;
-    data_ov015_0207e960->flagE1_7 = 0;
+    gWirelessMenuWork->flagE1_3 = 0;
+    gWirelessMenuWork->flagE2_1 = 0;
+    gWirelessMenuWork->flagE1_4 = 0;
+    gWirelessMenuWork->flagE1_7 = 0;
     InitOv002SubPanelGraphics();
     ResetOv002SubPanelText(0);
     SetWirelessMenuState(2);

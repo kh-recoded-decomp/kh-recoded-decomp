@@ -1,3 +1,4 @@
+#define data_ov015_0207e960 gWirelessMenuWork
 #define DispatchContextCommand_02066c78 DispatchContextCommand
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define RequestPanelConfirm_02071c60 RequestPanelConfirm

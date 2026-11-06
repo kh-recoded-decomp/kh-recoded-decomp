@@ -1,3 +1,4 @@
+#define data_ov015_0207e964 gWirelessCardExchangeGlobals
 #define MIi_CpuFill8_01ff8830 MI_CpuFill8
 #define TickConnectState_02072a9c TickConnectState
 #define data_ov015_0207e808 gWirelessStateUpdateCallback

@@ -1,3 +1,4 @@
+#define data_ov015_0207f3a0 gWirelessKeySharingStorage
 #define func_ov015_02073cbc WH_RequestEndMP
 #define PXI_Init_02012284 PXI_Init_02012298
 #define PollPanelTransition_02074e80 WH_Reset

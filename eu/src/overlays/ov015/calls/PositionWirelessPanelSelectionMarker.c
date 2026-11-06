@@ -5,18 +5,18 @@ extern void ResolveWidgetPositionComponents(void *state, u32 param, int *outBuf,
 extern u32 FindWidgetById(void *state, int id);
 extern void SetWidgetPosition(void *state, u32 value, int *outBuf, int flags);
 extern void SetFocusedWidget(void *state, u32 value);
-extern u8 *data_ov015_0207e960;
+extern u8 *gWirelessMenuWork;
 
 void PositionWirelessPanelSelectionMarker(u32 param) {
     int outBuf[2];
     u32 value;
 
-    data_ov015_0207e960[0xe0] |= 2;
-    ResolveWidgetPositionComponents(data_ov015_0207e960 + 0x6ac0, param, outBuf, 0);
+    gWirelessMenuWork[0xe0] |= 2;
+    ResolveWidgetPositionComponents(gWirelessMenuWork + 0x6ac0, param, outBuf, 0);
     outBuf[0] = outBuf[0] - 0x2c000;
-    value = FindWidgetById(data_ov015_0207e960 + 0x6ac0, 0xb);
-    SetWidgetPosition(data_ov015_0207e960 + 0x6ac0, value, outBuf, 0);
-    value = FindWidgetById(data_ov015_0207e960 + 0x6ac0, 9);
-    SetFocusedWidget(data_ov015_0207e960 + 0x6ac0, value);
+    value = FindWidgetById(gWirelessMenuWork + 0x6ac0, 0xb);
+    SetWidgetPosition(gWirelessMenuWork + 0x6ac0, value, outBuf, 0);
+    value = FindWidgetById(gWirelessMenuWork + 0x6ac0, 9);
+    SetFocusedWidget(gWirelessMenuWork + 0x6ac0, value);
     PlaySoundEffect(2, 1);
 }

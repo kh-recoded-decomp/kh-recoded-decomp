@@ -8,8 +8,8 @@ typedef struct SelectionWidget {
     s32 recordIndex;
 } SelectionWidget;
 
-extern WirelessMenuContext *data_ov015_0207e960;
-extern const PanelWidgetIds data_ov015_02079f64;
+extern WirelessMenuContext *gWirelessMenuWork;
+extern const PanelWidgetIds gWirelessSelectionPriorityWidgetIds;
 extern void ResetSelectionView(WirelessSelectionView *view);
 extern void SetGroupSlotsVisible(void *manager, WirelessSelectionView *view, BOOL visible);
 extern SelectionWidget *FindWidgetById(void *manager, s32 id);
@@ -23,24 +23,24 @@ static inline WirelessSelectionView *GetSelectionView(WirelessMenuContext *conte
 
 void SetupWirelessSelectionSlot(s32 slot, WidgetPoint *position)
 {
-    PanelWidgetIds widgetIds = data_ov015_02079f64;
+    PanelWidgetIds widgetIds = gWirelessSelectionPriorityWidgetIds;
     void *manager;
     SelectionWidget *widget;
 
-    data_ov015_0207e960->views[slot].selection =
-        &data_ov015_0207e960->selections[slot];
-    ResetSelectionView(&data_ov015_0207e960->views[slot]);
-    data_ov015_0207e960->views[slot].basePriority = 200;
-    data_ov015_0207e960->views[slot].flags.mode = 1;
-    data_ov015_0207e960->views[slot].flags.flag2 = 1;
+    gWirelessMenuWork->views[slot].selection =
+        &gWirelessMenuWork->selections[slot];
+    ResetSelectionView(&gWirelessMenuWork->views[slot]);
+    gWirelessMenuWork->views[slot].basePriority = 200;
+    gWirelessMenuWork->views[slot].flags.mode = 1;
+    gWirelessMenuWork->views[slot].flags.flag2 = 1;
     if (position != NULL) {
-        GetSelectionView(data_ov015_0207e960, slot)->position = *position;
+        GetSelectionView(gWirelessMenuWork, slot)->position = *position;
     }
-    BuildSelectionViewRecords(data_ov015_0207e960->widgetManager,
-                       &data_ov015_0207e960->views[slot]);
-    SetGroupSlotsVisible(data_ov015_0207e960->widgetManager,
-                         &data_ov015_0207e960->views[slot], TRUE);
-    manager = data_ov015_0207e960->widgetManager;
+    BuildSelectionViewRecords(gWirelessMenuWork->widgetManager,
+                       &gWirelessMenuWork->views[slot]);
+    SetGroupSlotsVisible(gWirelessMenuWork->widgetManager,
+                         &gWirelessMenuWork->views[slot], TRUE);
+    manager = gWirelessMenuWork->widgetManager;
     widget = FindWidgetById(manager, widgetIds.ids[slot]);
     SetIndexedRecordPriority(manager, widget->recordIndex, 252);
 }

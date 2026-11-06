@@ -1,3 +1,8 @@
+#define data_ov015_02079fc8 gWirelessSharingMainBgConfig
+#define data_ov015_02079fdc gWirelessSharingSubBgConfig
+#define data_ov015_0207a034 gWirelessSharingMainObjConfig
+#define data_ov015_0207a04c gWirelessSharingSubObjConfig
+#define data_ov015_0207e960 gWirelessMenuWork
 #define func_ov015_02072860 WirelessCardSlot1_SelectAndSlideOutWithSound
 #define func_ov015_02072878 WirelessCardSlot2_SelectAndSlideOutWithSound
 #define func_ov015_02072890 WirelessCardSlot3_SelectAndSlideOutWithSound

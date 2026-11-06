@@ -1,3 +1,4 @@
+#define data_ov015_0207e960 gWirelessMenuWork
 #define DispatchContextCommand_02066c78 DispatchContextCommand
 #define ResetPanelMenuElements_020720e4 ResetPanelMenuElements
 #define func_ov027_020b90a4 FindWidgetById

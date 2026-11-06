@@ -11,11 +11,11 @@ typedef struct {
 
 extern void InitPanelScreenGraphics(void);
 extern void DrawWirelessOwnerProfileText(void);
-extern PanelState *data_ov015_0207e960;
+extern PanelState *gWirelessMenuWork;
 
 void InitWirelessMenuOwnerProfileView(void) {
     InitPanelScreenGraphics();
     DrawWirelessOwnerProfileText();
-    data_ov015_0207e960->panelActive = 0;
-    data_ov015_0207e960->exitRequest = 0;
+    gWirelessMenuWork->panelActive = 0;
+    gWirelessMenuWork->exitRequest = 0;
 }

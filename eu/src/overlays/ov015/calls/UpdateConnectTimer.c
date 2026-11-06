@@ -1,3 +1,4 @@
+#define data_ov015_0207e964 gWirelessCardExchangeGlobals
 #define GetPanelTransitionMode_020748e4 GetPanelTransitionMode
 #define PXI_Init_02074e74 WH_SendData
 #define UpdateConnectTimer_02072c48 UpdateConnectTimer

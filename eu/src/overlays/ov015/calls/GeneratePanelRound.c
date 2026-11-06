@@ -1,3 +1,7 @@
+#define data_ov015_0207a1e0 gWirelessFixedRoundRangeWeights
+#define data_ov015_0207a218 gWirelessPartnerRoundRangeWeights
+#define data_ov015_0207a548 gWirelessSpecialSlotChanceByProgress
+#define data_ov015_0207a54c gWirelessSpecialGroupWeights
 #define CopyWideStringBounded_020663d0 CopyWideStringBounded
 #define DispatchContextCommand_02066c78 DispatchContextCommand
 #define GeneratePanelRound_0207533c GeneratePanelRound

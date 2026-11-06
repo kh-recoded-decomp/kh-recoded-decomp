@@ -1,3 +1,5 @@
+#define data_ov015_0207eac0 gWirelessMpSendBuffer
+#define data_ov015_0207ec20 gWirelessMpReceiveBuffer
 #define data_ov015_0207e980 gWhState
 #define WH_SetError_020737d4 WH_SetError
 #define WH_StateInStartChildMP_020743fc WH_StateInStartChildMP

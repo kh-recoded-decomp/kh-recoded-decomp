@@ -1,3 +1,4 @@
+#define data_ov015_0207e960 gWirelessMenuWork
 #define DrawCenteredLabel_0206eb2c DrawCenteredLabel
 #define ResetPanelExitFlags_02070b60 ResetPanelExitFlags
 #define func_ov015_0206eba4 DrawPanelInfoText

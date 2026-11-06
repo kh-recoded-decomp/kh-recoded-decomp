@@ -35,7 +35,7 @@ void WH_StateOutStartChildMP(void *argument)
             u16 sharingAidBitmap = 15;
             u16 sharingPort = 13;
 
-            result = WM_StartDataSharing(&data_ov015_0207fbc0, sharingPort,
+            result = WM_StartDataSharing(&gWirelessDataSharingStorage, sharingPort,
                                         sharingAidBitmap, 0,
                                         sWirelessDataSharingDoubleMode);
             if (result != 0) {

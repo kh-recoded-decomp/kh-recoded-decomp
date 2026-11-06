@@ -1,8 +1,8 @@
 #define StartWirelessChild_02074288 StartWirelessChild
 #define WM_StartConnectEx_02011964 WM_StartConnectEx
 #define data_0207e980 gWhState
-#define data_0207e9f4 data_ov015_0207e9f4
-#define data_0207eb60 data_ov015_0207eb60
+#define data_0207e9f4 gWirelessConnectSsidStorage
+#define data_0207eb60 gWirelessParentBssDescriptorStorage
 #define func_020737c4 WH_ChangeSysState
 #define func_020737d4 WH_SetError
 #define func_0207431c WH_StateOutStartChild

@@ -1,3 +1,4 @@
+#define data_ov015_0207e960 gWirelessMenuWork
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define SelectNextPanelPage_020706f8 SelectNextPanelPage
 #define func_ov027_020b90a4 FindWidgetById

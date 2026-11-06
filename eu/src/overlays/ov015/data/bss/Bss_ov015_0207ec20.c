@@ -1,3 +1,3 @@
 #include "nitro/types.h"
 
-static u32 data_ov015_0207ec20[224];
+static u32 gWirelessMpReceiveBuffer[224];

@@ -1,3 +1,4 @@
+#define data_ov015_0207e960 gWirelessMenuWork
 #define BlinkPanelCursor_02070438 BlinkPanelCursor
 #define SetEntrySlotsVisible_020b9580 SetEntrySlotsVisible
 #define func_ov027_020b90a4 FindWidgetById

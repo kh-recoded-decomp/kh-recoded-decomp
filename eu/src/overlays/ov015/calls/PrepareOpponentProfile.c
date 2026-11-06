@@ -1,3 +1,4 @@
+#define data_ov015_0207e964 gWirelessCardExchangeGlobals
 #define GenerateRandomProfile_02072dd8 GenerateRandomProfile
 #define InitPanelRecordFromProfile_02072d00 InitPanelRecordFromProfile
 #define InvokePanelCallback_02073598 InvokePanelCallback

@@ -1,3 +1,4 @@
+#define data_ov015_0207e960 gWirelessMenuWork
 #define AnimateBg1CenterTiles_0206fcd8 AnimateBg1CenterTiles
 #define AnimateBg1EdgeBandTiles_0206fe44 AnimateBg1EdgeBandTiles
 #define AnimatePanelBackground_0206fb14 AnimatePanelBackground

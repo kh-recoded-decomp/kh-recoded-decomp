@@ -1,3 +1,4 @@
+#define data_ov015_0207e960 gWirelessMenuWork
 #define HasIdleActiveEntry_0206fa38 HasIdleActiveEntry
 #define func_ov027_020b90a4 FindWidgetById
 #define func_ov027_020b9100 IsWidgetMoveFinished

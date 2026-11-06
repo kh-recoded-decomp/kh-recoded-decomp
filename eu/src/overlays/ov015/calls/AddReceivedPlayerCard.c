@@ -45,7 +45,7 @@ extern int CompareByteStrings(u8 *leftBytes, u8 *rightBytes, int length);
 extern BOOL TestContextFlagBit(int index);
 extern void SetContextFlagBit(int index);
 extern BOOL MacAddressesEqual(u8 *macA, u8 *macB);
-extern WirelessContext *data_ov015_0207e960;
+extern WirelessContext *gWirelessMenuWork;
 
 BOOL AddReceivedPlayerCard(PlayerCard *incoming) {
     CardInfo info;
@@ -55,15 +55,15 @@ BOOL AddReceivedPlayerCard(PlayerCard *incoming) {
     int slot;
     int count;
 
-    if (data_ov015_0207e960->busy) {
+    if (gWirelessMenuWork->busy) {
         return FALSE;
     }
-    if (data_ov015_0207e960->cardCount >= 3) {
+    if (gWirelessMenuWork->cardCount >= 3) {
         return FALSE;
     }
     MI_CpuCopy8(incoming, &card, sizeof(PlayerCard));
     for (i = 0; i < 30; i++) {
-        if (MacAddressesEqual(card.macAddress, data_ov015_0207e960->knownMacs[i]) == TRUE) {
+        if (MacAddressesEqual(card.macAddress, gWirelessMenuWork->knownMacs[i]) == TRUE) {
             return FALSE;
         }
     }
@@ -83,18 +83,18 @@ BOOL AddReceivedPlayerCard(PlayerCard *incoming) {
         slot = 2;
     }
     SetContextFlagBit(slot);
-    MIi_CpuCopy16(incoming, &data_ov015_0207e960->cards[slot], sizeof(PlayerCard));
-    info.fieldF0 = data_ov015_0207e960->unk_F0;
-    info.fieldF4 = data_ov015_0207e960->unk_F4;
-    info.fieldF8 = data_ov015_0207e960->unk_F8;
-    data_ov015_0207e960->cards[slot].info = info;
-    MI_CpuCopy8(data_ov015_0207e960->cards[slot].macAddress, data_ov015_0207e960->knownMacs[data_ov015_0207e960->macWriteIndex], 6);
-    data_ov015_0207e960->slotCounters[slot] = 0;
-    data_ov015_0207e960->newCardFlag = 1;
-    data_ov015_0207e960->slotMask |= 1 << slot;
-    data_ov015_0207e960->cardCount++;
-    data_ov015_0207e960->macWriteIndex++;
-    if (data_ov015_0207e960->macWriteIndex >= 30) {
-        data_ov015_0207e960->macWriteIndex = 0;
+    MIi_CpuCopy16(incoming, &gWirelessMenuWork->cards[slot], sizeof(PlayerCard));
+    info.fieldF0 = gWirelessMenuWork->unk_F0;
+    info.fieldF4 = gWirelessMenuWork->unk_F4;
+    info.fieldF8 = gWirelessMenuWork->unk_F8;
+    gWirelessMenuWork->cards[slot].info = info;
+    MI_CpuCopy8(gWirelessMenuWork->cards[slot].macAddress, gWirelessMenuWork->knownMacs[gWirelessMenuWork->macWriteIndex], 6);
+    gWirelessMenuWork->slotCounters[slot] = 0;
+    gWirelessMenuWork->newCardFlag = 1;
+    gWirelessMenuWork->slotMask |= 1 << slot;
+    gWirelessMenuWork->cardCount++;
+    gWirelessMenuWork->macWriteIndex++;
+    if (gWirelessMenuWork->macWriteIndex >= 30) {
+        gWirelessMenuWork->macWriteIndex = 0;
     }
 }

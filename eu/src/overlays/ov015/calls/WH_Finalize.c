@@ -1,3 +1,4 @@
+#define data_ov015_0207fbc0 gWirelessDataSharingStorage
 #define func_ov015_02073cbc WH_RequestEndMP
 #define data_ov015_0207e980 gWhState
 #define ClearSlotEventHandler_02011ea4 ClearSlotEventHandler

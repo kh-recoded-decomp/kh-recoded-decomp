@@ -1,3 +1,4 @@
+#define data_ov015_0207e960 gWirelessMenuWork
 #define func_ov002_02061930 GetCachedOwnerNickname
 #define func_ov002_0206193c GetCachedOwnerMessage
 #define func_ov002_020620fc ResetOv002SubPanelText

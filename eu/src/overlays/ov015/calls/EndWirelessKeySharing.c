@@ -6,7 +6,7 @@ typedef struct WirelessHelperState {
 } WirelessHelperState;
 
 extern WirelessHelperState gWhState;
-extern u8 data_ov015_0207f3a0[];
+extern u8 gWirelessKeySharingStorage[];
 extern void WH_ChangeSysState(int state);
 extern void WH_SetError(int errorCode);
 extern int PXI_Init_02012298(void *keySetBuffer);
@@ -21,7 +21,7 @@ BOOL EndWirelessKeySharing(void)
     }
 
     WH_ChangeSysState(3);
-    result = PXI_Init_02012298(data_ov015_0207f3a0);
+    result = PXI_Init_02012298(gWirelessKeySharingStorage);
     if (result != 0) {
         WH_SetError(result);
         return FALSE;

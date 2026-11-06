@@ -1,3 +1,5 @@
+#define data_ov015_02079f7c gWirelessShareSelectionWidgetIds
+#define data_ov015_0207e960 gWirelessMenuWork
 #define func_ov015_0206fa98 ApplyWirelessCardProgressBonus
 #define func_ov015_02070af8 SetWirelessMenuState
 #define func_ov015_020716f8 InitWirelessMenuChoiceWidgets

@@ -1,3 +1,4 @@
+#define data_ov015_0207e960 gWirelessMenuWork
 #define func_ov015_0206c6bc ReleaseWirelessMenuSubWidgetGroup
 #define func_ov015_02070af8 SetWirelessMenuState
 #define func_ov002_0206655c IsScreenFadeComplete

@@ -1,3 +1,4 @@
+#define data_ov015_0207fbc0 gWirelessDataSharingStorage
 #define PollPanelTransition_02074e80 WH_Reset
 #define func_02011ea4 ClearSlotEventHandler
 #define func_ov015_020737c4 WH_ChangeSysState

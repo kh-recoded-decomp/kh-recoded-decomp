@@ -742,3 +742,11 @@ remaining prefix words stay opaque. See
 and [SOURCE_LAYOUT.md](SOURCE_LAYOUT.md). Both the original and moved sources
 pass the official 20-byte check at their actual paths; all 108 freshly linked
 modules retain identical hashes, including the one literal relocation.
+
+## Wireless tables and native state storage
+
+Forty names distinguish UI templates, widget selections, reward inputs and
+native connection/SDK storage. [WIRELESS_TABLES_STATE_STORAGE.md](WIRELESS_TABLES_STATE_STORAGE.md)
+records consumers and physical extents, including the 2080-byte logical
+data-sharing state spanning several native labels. Cache-maintenance spans
+and opaque prefix words do not imply independent allocations.

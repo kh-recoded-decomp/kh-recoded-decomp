@@ -1,3 +1,5 @@
+#define data_ov015_02079f70 gWirelessSlideInWidgetIds
+#define data_ov015_0207e960 gWirelessMenuWork
 #define ApplySelectedSubitemValues_020b94fc ApplySelectedSubitemValues
 #define SetEntrySlotsVisible_020b9580 SetEntrySlotsVisible
 #define SlideInPanelWidget_0206f310 SlideInPanelWidget

@@ -1,3 +1,4 @@
+#define data_ov015_0207e960 gWirelessMenuWork
 #define ResetPanelEntry9_02071ca8 ResetPanelEntry9
 #define func_ov027_020b90a4 FindWidgetById
 #define func_ov027_020b95e4 ClearWidgetRecordActiveBits

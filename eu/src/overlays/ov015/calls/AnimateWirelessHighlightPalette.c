@@ -2,7 +2,7 @@
 #pragma opt_common_subs off
 #include "src/overlays/ov015/WirelessMenuContext.h"
 
-extern WirelessMenuContext *data_ov015_0207e960;
+extern WirelessMenuContext *gWirelessMenuWork;
 extern void GXS_BeginLoadOBJExtPltt(void);
 extern void GXS_EndLoadOBJExtPltt(void);
 extern void GX_BeginLoadOBJExtPltt(void);
@@ -12,17 +12,17 @@ void AnimateWirelessHighlightPalette(void)
 {
     WirelessMenuContext *context;
     WirelessPaletteColor color, base;
-    base = data_ov015_0207e960->baseColor;
-    color = data_ov015_0207e960->highlightColor;
+    base = gWirelessMenuWork->baseColor;
+    color = gWirelessMenuWork->highlightColor;
     u16 red = color.rgb.red;
 
     if (red == 0) {
-        data_ov015_0207e960->paletteFlags.increasing = 1;
+        gWirelessMenuWork->paletteFlags.increasing = 1;
     } else if (red == base.rgb.red) {
-        data_ov015_0207e960->paletteFlags.increasing = 0;
+        gWirelessMenuWork->paletteFlags.increasing = 0;
     }
 
-    context = data_ov015_0207e960;
+    context = gWirelessMenuWork;
     if (context->paletteFlags.increasing) {
         color.rgb.red = red + 1;
         color.rgb.blue = red;
@@ -34,13 +34,13 @@ void AnimateWirelessHighlightPalette(void)
     }
     context->highlightColor = color;
 
-    if (data_ov015_0207e960->paletteFlags.subEngine) {
+    if (gWirelessMenuWork->paletteFlags.subEngine) {
         GXS_BeginLoadOBJExtPltt();
-        *(volatile u16 *)0x068a0002 = data_ov015_0207e960->highlightColor.value;
+        *(volatile u16 *)0x068a0002 = gWirelessMenuWork->highlightColor.value;
         GXS_EndLoadOBJExtPltt();
     } else {
         GX_BeginLoadOBJExtPltt();
-        *(volatile u16 *)0x06890002 = data_ov015_0207e960->highlightColor.value;
+        *(volatile u16 *)0x06890002 = gWirelessMenuWork->highlightColor.value;
         GX_EndLoadOBJExtPltt();
     }
 }

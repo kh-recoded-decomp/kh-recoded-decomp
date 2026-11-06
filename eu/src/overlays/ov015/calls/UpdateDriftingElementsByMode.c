@@ -1,3 +1,4 @@
+#define data_ov015_0207e960 gWirelessMenuWork
 #define ScrollDriftingElementsHorizontal_0206fff0 ScrollDriftingElementsHorizontal
 #define ScrollDriftingElementsVertical_02070174 ScrollDriftingElementsVertical
 #define UpdateDriftingElementsByMode_0206ffa0 UpdateDriftingElementsByMode

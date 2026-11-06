@@ -1,3 +1,3 @@
 #define InvokePanelCallback_02073598 InvokePanelCallback
-#define _data_ov015_0207e964 data_ov015_0207e964
+#define _data_ov015_0207e964 gWirelessCardExchangeGlobals
 #include "src/ov015/reviewed_helpers/InvokePanelCallback_02073598.c"

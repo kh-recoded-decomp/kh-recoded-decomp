@@ -1,3 +1,5 @@
+#define data_ov015_0207a2b8 gWirelessResultTitleMessageIds
+#define data_ov015_0207a2cc gWirelessPartnerResultTitleMessageIds
 #define func_ov015_0207533c GeneratePanelRound
 #define MIi_CpuFill8_01ff8830 MI_CpuFill8
 #define func_ov015_02079d6c InstallResultPanelCallbacks

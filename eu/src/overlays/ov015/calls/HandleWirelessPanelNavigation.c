@@ -5,7 +5,7 @@
 #include "src/overlays/ov015/WirelessMenuContext.h"
 #include "src/overlays/ov015/WirelessBoardData.h"
 
-extern WirelessMenuContext *data_ov015_0207e960;
+extern WirelessMenuContext *gWirelessMenuWork;
 extern int DispatchContextCommand(int query, int a, int b, int c);
 extern void DrawPanelInfoText(void);
 extern BOOL PlaySoundEffect(int group, int sound);
@@ -19,8 +19,8 @@ void HandleWirelessPanelNavigation(WidgetPositionRecord *widget, u32 keys)
     u8 previousFocus;
     int delta;
     delta = 0;
-    previousFocus = data_ov015_0207e960->focusMode;
-    ResolveWidgetPositionComponents(data_ov015_0207e960->widgetManager,
+    previousFocus = gWirelessMenuWork->focusMode;
+    ResolveWidgetPositionComponents(gWirelessMenuWork->widgetManager,
                                    widget, &position, WIDGET_POSITION_COMBINED_XY);
     switch (widget->id) {
     case 4: {
@@ -30,17 +30,17 @@ void HandleWirelessPanelNavigation(WidgetPositionRecord *widget, u32 keys)
             delta--;
         if (keys & 0x80)
             delta++;
-        data_ov015_0207e960->choiceIndex += (s8)delta;
-        context = data_ov015_0207e960;
+        gWirelessMenuWork->choiceIndex += (s8)delta;
+        context = gWirelessMenuWork;
         choiceIndex = context->choiceIndex;
         if (choiceIndex >=
             (s32)gWirelessRandomChoiceLimits[DispatchContextCommand(6, 0, 0, 0)]) {
             context->choiceIndex = 0;
         } else if (choiceIndex < 0) {
-            data_ov015_0207e960->choiceIndex =
+            gWirelessMenuWork->choiceIndex =
                 gWirelessRandomChoiceLimits[DispatchContextCommand(6, 0, 0, 0)] - 1;
         }
-        contextSlot = (WirelessMenuContext *volatile *)&data_ov015_0207e960;
+        contextSlot = (WirelessMenuContext *volatile *)&gWirelessMenuWork;
         if (delta != 0) {
             DrawPanelInfoText();
             PlaySoundEffect(2, 1);
@@ -60,7 +60,7 @@ void HandleWirelessPanelNavigation(WidgetPositionRecord *widget, u32 keys)
         break;
     }
     case 9:
-        data_ov015_0207e960->focusMode = 1;
+        gWirelessMenuWork->focusMode = 1;
         position.x -= 0x2c000;
         break;
     case 10:
@@ -68,28 +68,28 @@ void HandleWirelessPanelNavigation(WidgetPositionRecord *widget, u32 keys)
             delta--;
         if (keys & 0x80)
             delta++;
-        data_ov015_0207e960->choiceType += (s8)delta;
-        selectedType = data_ov015_0207e960->choiceType;
-        if (data_ov015_0207e960->choiceType >= 6)
-            data_ov015_0207e960->choiceType = 0;
+        gWirelessMenuWork->choiceType += (s8)delta;
+        selectedType = gWirelessMenuWork->choiceType;
+        if (gWirelessMenuWork->choiceType >= 6)
+            gWirelessMenuWork->choiceType = 0;
         else if (selectedType < 0)
-            data_ov015_0207e960->choiceType = 5;
+            gWirelessMenuWork->choiceType = 5;
         if (delta != 0) {
-            WirelessMenuContext *context = data_ov015_0207e960;
+            WirelessMenuContext *context = gWirelessMenuWork;
             void *manager = context->widgetManager;
             void *choiceWidget = FindWidgetById(manager, 10);
             SetWidgetAnimationFrame(manager, (const struct WidgetPositionRecord *)(choiceWidget), context->choiceType);
             PlaySoundEffect(2, 1);
         }
-        data_ov015_0207e960->focusMode = 0;
+        gWirelessMenuWork->focusMode = 0;
         position.x -= 0x19000;
         break;
     }
     {
-        void *cursor = FindWidgetById(data_ov015_0207e960->widgetManager, 11);
-        SetWidgetPosition(data_ov015_0207e960->widgetManager,
+        void *cursor = FindWidgetById(gWirelessMenuWork->widgetManager, 11);
+        SetWidgetPosition(gWirelessMenuWork->widgetManager,
                            cursor, &position, 0);
     }
-    if (previousFocus != data_ov015_0207e960->focusMode)
+    if (previousFocus != gWirelessMenuWork->focusMode)
         PlaySoundEffect(2, 0);
 }

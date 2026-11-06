@@ -1,3 +1,4 @@
+#define data_ov015_0207e960 gWirelessMenuWork
 #define ScrollDriftingElementsVertical_02070174 ScrollDriftingElementsVertical
 #define func_0202a9d0 NextSharedRandom16Scaled
 #define func_ov027_020b90a4 FindWidgetById

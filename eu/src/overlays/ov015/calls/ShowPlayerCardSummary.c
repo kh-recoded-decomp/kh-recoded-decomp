@@ -1,3 +1,4 @@
+#define data_ov015_0207e960 gWirelessMenuWork
 #define func_ov002_0206203c ResetOv002MainPanelText
 #define func_ov002_020621c4 GetOv002PanelMessage
 #define CopyWideStringWithNewline_02066484 CopyWideStringWithNewline

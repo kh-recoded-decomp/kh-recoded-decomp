@@ -25,7 +25,7 @@ typedef struct {
     u8 pad5_7 : 3;
 } PanelFlagsE2d;
 
-extern s8 *data_ov015_0207e960;
+extern s8 *gWirelessMenuWork;
 extern PanelStateCallbacks gLinkPanelExitHandler[];
 extern void RTC_GetDate(void *ptr);
 extern void PrepareOpponentProfile(void);
@@ -38,29 +38,29 @@ extern void BobPanelWidgets(void);
 int UpdateWirelessMenu(void) {
     s8 state;
 
-    RTC_GetDate(data_ov015_0207e960 + 0xf0);
-    if (((PanelFlagsE2d *)(data_ov015_0207e960 + 0xe2))->flag4 != 0) {
+    RTC_GetDate(gWirelessMenuWork + 0xf0);
+    if (((PanelFlagsE2d *)(gWirelessMenuWork + 0xe2))->flag4 != 0) {
         u8 result;
         PrepareOpponentProfile();
         result = TickConnectState();
-        data_ov015_0207e960[0xbf] = result;
+        gWirelessMenuWork[0xbf] = result;
     }
-    gLinkPanelExitHandler[(s16)data_ov015_0207e960[0]].onUpdate();
-    if (((PanelFlagsE1b *)(data_ov015_0207e960 + 0xe1))->flag4 != 0) {
+    gLinkPanelExitHandler[(s16)gWirelessMenuWork[0]].onUpdate();
+    if (((PanelFlagsE1b *)(gWirelessMenuWork + 0xe1))->flag4 != 0) {
         UpdateDriftingElementsByMode();
     }
-    if (((PanelFlagsE1b *)(data_ov015_0207e960 + 0xe1))->twobit5_6 != 0) {
+    if (((PanelFlagsE1b *)(gWirelessMenuWork + 0xe1))->twobit5_6 != 0) {
         BlinkPanelCursor();
     }
-    if (((PanelFlagsE0c *)(data_ov015_0207e960 + 0xe0))->flag3 == 0) {
-        UpdateDisplayObjectListQueued(data_ov015_0207e960 + 0x644);
-        state = data_ov015_0207e960[0];
+    if (((PanelFlagsE0c *)(gWirelessMenuWork + 0xe0))->flag3 == 0) {
+        UpdateDisplayObjectListQueued(gWirelessMenuWork + 0x644);
+        state = gWirelessMenuWork[0];
         if (state != 5) {
             if (!(state == 1 || state == 0 || state == 7)) {
                 BobPanelWidgets();
             }
-            UpdateDisplayObjectListQueued(data_ov015_0207e960 + 0x6ac0);
+            UpdateDisplayObjectListQueued(gWirelessMenuWork + 0x6ac0);
         }
     }
-    return data_ov015_0207e960[1];
+    return gWirelessMenuWork[1];
 }

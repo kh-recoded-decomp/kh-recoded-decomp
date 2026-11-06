@@ -9,7 +9,7 @@ typedef struct WirelessHelperState {
 } WirelessHelperState;
 
 extern WirelessHelperState gWhState;
-extern u16 data_ov015_0207eac0[];
+extern u16 gWirelessMpSendBuffer[];
 
 extern void DC_FlushRange(void *address, u32 size);
 extern int WM_SetMPDataToPortEx(WMCallback callback, void *arg, const u16 *data, u16 dataSize,
@@ -21,7 +21,7 @@ BOOL WH_StateInSetMPData(void *data, u16 dataSize, WhSendCallback callback)
     int result;
     BOOL succeeded;
 
-    DC_FlushRange(data_ov015_0207eac0, gWhState.sendBufferSize);
+    DC_FlushRange(gWirelessMpSendBuffer, gWhState.sendBufferSize);
     result = WM_SetMPDataToPortEx(WH_OnPortSendDone, callback, data, dataSize, 0xffff, 14, 2);
     switch (result) {
     default:

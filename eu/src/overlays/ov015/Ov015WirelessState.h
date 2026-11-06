@@ -10,7 +10,7 @@ typedef struct Ov015WirelessState {
     s16 finalizeDelay;
 } Ov015WirelessState;
 
-extern Ov015WirelessState *data_ov015_0207e964;
-#define gOv015WirelessState data_ov015_0207e964
+extern Ov015WirelessState *gWirelessCardExchangeGlobals;
+#define gOv015WirelessState gWirelessCardExchangeGlobals
 
 #endif

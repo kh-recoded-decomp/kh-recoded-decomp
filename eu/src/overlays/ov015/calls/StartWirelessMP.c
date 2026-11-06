@@ -1,3 +1,5 @@
+#define data_ov015_0207eac0 gWirelessMpSendBuffer
+#define data_ov015_0207ec20 gWirelessMpReceiveBuffer
 #define data_ov015_0207e980 gWhState
 #define SetPanelTransitionMode_020737c4 WH_ChangeSysState
 #define StartWirelessMP_02073aa0 StartWirelessMP

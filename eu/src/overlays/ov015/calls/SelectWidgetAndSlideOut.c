@@ -1,3 +1,4 @@
+#define data_ov015_0207e960 gWirelessMenuWork
 #define ClearContextFlagBit_0206f4a8 ClearContextFlagBit
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define SelectWidgetAndSlideOut_0206f22c SelectWidgetAndSlideOut

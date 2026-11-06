@@ -1,3 +1,4 @@
+#define data_ov015_0207e960 gWirelessMenuWork
 #define func_ov015_02070af8 SetWirelessMenuState
 #define func_ov002_02062000 GetOv002PanelKeyRepeatState
 #define func_ov002_020620fc ResetOv002SubPanelText

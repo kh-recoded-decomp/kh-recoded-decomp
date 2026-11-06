@@ -1,3 +1,4 @@
+#define data_ov015_0207e964 gWirelessCardExchangeGlobals
 #define func_ov015_02072ee4 SetWirelessConnectionState
 #define GetPanelTransitionMode_020748e4 GetPanelTransitionMode
 #define HandleMatchTransition_02073034 HandleMatchTransition

@@ -1,3 +1,7 @@
+#define data_ov015_0207a09c gWirelessSubBodyScreenIds
+#define data_ov015_0207a0bc gWirelessSubHeaderScreenIds
+#define data_ov015_0207a0fc gWirelessSubNextBgFrame
+#define data_ov015_0207e960 gWirelessMenuWork
 #define AnimateSubBg1Screen_0206fb6c AnimateSubBg1Screen
 #define GXS_LoadBG1Scr_020076a0 GXS_LoadBG1Scr
 #define func_ov027_020b8558 FindActiveBackgroundScreenResourceById

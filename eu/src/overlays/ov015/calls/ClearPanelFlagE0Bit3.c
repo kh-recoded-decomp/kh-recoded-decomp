@@ -5,9 +5,9 @@ typedef struct LinkPanelState {
     u8 resultFlags;
 } LinkPanelState;
 
-extern LinkPanelState *data_ov015_0207e960;
+extern LinkPanelState *gWirelessMenuWork;
 
 void ClearPanelFlagE0Bit3(void)
 {
-    data_ov015_0207e960->resultFlags &= ~8;
+    gWirelessMenuWork->resultFlags &= ~8;
 }

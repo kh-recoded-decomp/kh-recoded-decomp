@@ -8,7 +8,7 @@ extern int GetCachedOwnerNickname(void);
 extern int GetCachedOwnerMessage(void);
 extern int CopyWideStringWithNewline(void *buf, int bufLen, int value, int digits);
 extern void MeasurePanelTextPrimary(int size[2], int mode, int textId);
-extern s8 *data_ov015_0207e960;
+extern s8 *gWirelessMenuWork;
 
 void DrawWirelessOwnerProfileText(void) {
     u16 buf[64] = {0};
@@ -27,9 +27,9 @@ void DrawWirelessOwnerProfileText(void) {
     textId = CopyWideStringWithNewline(buf, 0x80, textId, 0xd);
     ActivatePanelSlotAB(1, 0x16, 0x51, 0xc, textId);
 
-    textId = GetOv002PanelMessage(data_ov015_0207e960[3] + 0x40, 0);
+    textId = GetOv002PanelMessage(gWirelessMenuWork[3] + 0x40, 0);
     MeasurePanelTextPrimary(size, 1, textId);
 
-    textId = GetOv002PanelMessage(data_ov015_0207e960[3] + 0x40, 0);
+    textId = GetOv002PanelMessage(gWirelessMenuWork[3] + 0x40, 0);
     ActivatePanelSlotAB(1, 0x52, 0x9c - size[1] / 2, 2, textId);
 }

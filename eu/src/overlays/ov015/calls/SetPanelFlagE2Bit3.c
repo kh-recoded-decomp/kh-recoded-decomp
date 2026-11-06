@@ -5,9 +5,9 @@ typedef struct LinkPanelState {
     u8 subPanelFlags;
 } LinkPanelState;
 
-extern LinkPanelState *data_ov015_0207e960;
+extern LinkPanelState *gWirelessMenuWork;
 
 void SetPanelFlagE2Bit3(void)
 {
-    data_ov015_0207e960->subPanelFlags |= 8;
+    gWirelessMenuWork->subPanelFlags |= 8;
 }

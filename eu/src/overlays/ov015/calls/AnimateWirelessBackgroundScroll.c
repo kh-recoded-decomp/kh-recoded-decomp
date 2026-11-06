@@ -13,7 +13,7 @@ typedef struct SubBackgroundScrollRegisters {
     volatile u32 bg2;
 } SubBackgroundScrollRegisters;
 
-extern WirelessMenuContext *data_ov015_0207e960;
+extern WirelessMenuContext *gWirelessMenuWork;
 extern const s16 gSinFx12Table[4096];
 
 static inline fx32 DegreesToFixed(s32 degrees)
@@ -38,9 +38,9 @@ void AnimateWirelessBackgroundScroll(void)
     SubBackgroundScrollRegisters *registers =
         (SubBackgroundScrollRegisters *)0x04001010;
 
-    data_ov015_0207e960->phaseDegrees += 4;
-    data_ov015_0207e960->phaseDegrees %= 360;
-    degrees = data_ov015_0207e960->phaseDegrees;
+    gWirelessMenuWork->phaseDegrees += 4;
+    gWirelessMenuWork->phaseDegrees %= 360;
+    degrees = gWirelessMenuWork->phaseDegrees;
     fixedDegrees = DegreesToFixed(degrees);
     radians = (s64)fixedDegrees * FX32_PI / (180 * FX32_ONE);
     angleIndex = (radians * 0x10000 / (2 * FX32_PI)) & 0xffff;

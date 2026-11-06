@@ -1,3 +1,4 @@
+#define data_ov015_0207e964 gWirelessCardExchangeGlobals
 #define func_ov015_02072ee4 SetWirelessConnectionState
 #define InitShareBuffers_02072948 InitShareBuffers
 #define MIi_CpuFill8_01ff8830 MI_CpuFill8

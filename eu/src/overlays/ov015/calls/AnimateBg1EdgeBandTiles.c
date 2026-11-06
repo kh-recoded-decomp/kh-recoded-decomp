@@ -1,3 +1,5 @@
+#define data_ov015_0207a07c gWirelessEdgeBottomScreenIds
+#define data_ov015_0207e960 gWirelessMenuWork
 #define func_ov027_020b8558 FindActiveBackgroundScreenResourceById
 #define GX_LoadBG1Scr_02007630 GX_LoadBG1Scr
 #define AnimateBg1EdgeBandTiles_0206fe44 AnimateBg1EdgeBandTiles

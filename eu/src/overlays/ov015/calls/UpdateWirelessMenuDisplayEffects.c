@@ -15,7 +15,7 @@ typedef struct {
     u8 pad5_7 : 3;
 } PanelFlagsE2;
 
-extern s8 *data_ov015_0207e960;
+extern s8 *gWirelessMenuWork;
 extern void WirelessMenu_State5DisplayEffectsNoop(void);
 extern void UpdateConnectTimer(void);
 extern void AnimateWirelessBackgroundScroll(void);
@@ -23,19 +23,19 @@ extern void AnimatePanelBackground(void);
 extern void AnimateWirelessHighlightPalette(void);
 
 void UpdateWirelessMenuDisplayEffects(void) {
-    if (data_ov015_0207e960[0] == 5) {
+    if (gWirelessMenuWork[0] == 5) {
         WirelessMenu_State5DisplayEffectsNoop();
     }
-    if (((PanelFlagsE2 *)(data_ov015_0207e960 + 0xe2))->flag4 != 0) {
+    if (((PanelFlagsE2 *)(gWirelessMenuWork + 0xe2))->flag4 != 0) {
         UpdateConnectTimer();
     }
-    if (((PanelFlagsE1 *)(data_ov015_0207e960 + 0xe1))->flag7 != 0) {
+    if (((PanelFlagsE1 *)(gWirelessMenuWork + 0xe1))->flag7 != 0) {
         AnimateWirelessBackgroundScroll();
     }
-    if (((PanelFlagsE1 *)(data_ov015_0207e960 + 0xe1))->flag3 != 0) {
+    if (((PanelFlagsE1 *)(gWirelessMenuWork + 0xe1))->flag3 != 0) {
         AnimatePanelBackground();
     }
-    if (((PanelFlagsE2 *)(data_ov015_0207e960 + 0xe2))->flag1 == 0) {
+    if (((PanelFlagsE2 *)(gWirelessMenuWork + 0xe2))->flag1 == 0) {
         return;
     }
     AnimateWirelessHighlightPalette();

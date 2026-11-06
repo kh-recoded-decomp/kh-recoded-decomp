@@ -1,3 +1,4 @@
+#define data_ov015_0207ea20 gWirelessParentParamStorage
 #define data_ov015_0207e980 gWhState
 #define GetDispersionBeaconPeriod_020115c8 GetDispersionBeaconPeriod
 #define SetPanelTransitionMode_020737c4 WH_ChangeSysState

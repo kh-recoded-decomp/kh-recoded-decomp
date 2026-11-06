@@ -89,7 +89,7 @@ typedef struct {
     ProfileBlock profileCopy;
 } PanelState;
 
-extern PanelState *data_ov015_0207e960;
+extern PanelState *gWirelessMenuWork;
 extern u32 gLinkPanelAssetPaths[];
 extern const char sOv015_WxcWlmP2_0207e7e0[];
 extern const char sOv015_WxcWlaP2_0207e7ec[];
@@ -190,14 +190,14 @@ void SetupPanelGraphics(void) {
     int tens;
     PanelState *state;
 
-    data_ov015_0207e960->flagE1Bit3 = 0;
-    data_ov015_0207e960->flagE2Bit1 = 0;
-    data_ov015_0207e960->flagE1Bit4 = 0;
-    data_ov015_0207e960->flagE1Bit7 = 0;
-    data_ov015_0207e960->flagE1Mode = 0;
+    gWirelessMenuWork->flagE1Bit3 = 0;
+    gWirelessMenuWork->flagE2Bit1 = 0;
+    gWirelessMenuWork->flagE1Bit4 = 0;
+    gWirelessMenuWork->flagE1Bit7 = 0;
+    gWirelessMenuWork->flagE1Mode = 0;
     ReleaseWirelessMenuWidgetGroups();
-    data_ov015_0207e960->mainLoaded = 1;
-    data_ov015_0207e960->subLoaded = 1;
+    gWirelessMenuWork->mainLoaded = 1;
+    gWirelessMenuWork->subLoaded = 1;
     GX_SetBankForSubOBJExtPltt(0x100);
     GX_SetBankForOBJExtPltt(0);
     *(vu32 *)0x4000000 = (*(vu32 *)0x4000000 & ~0x1f00) | 0x1f00;
@@ -208,65 +208,65 @@ void SetupPanelGraphics(void) {
     fileId = ((handle + 0x8000) & 0xfffffc) << 7;
     mainObjConfig.cellFileId = fileId | 0x80000002;
     mainObjConfig.animFileId = fileId | 0x80000003;
-    InitBackgroundContainer(data_ov015_0207e960->mainBg, &mainBgConfig);
-    LoadTagTrackerResourceFile(data_ov015_0207e960->mainBg, fileId | 0x80000000);
+    InitBackgroundContainer(gWirelessMenuWork->mainBg, &mainBgConfig);
+    LoadTagTrackerResourceFile(gWirelessMenuWork->mainBg, fileId | 0x80000000);
     archive = LoadFileAllocFromHeapTail(fileId | 0x80000001, 0x10);
     GetBgDataFromArchive(&bgData, archive, -1, 0, 0);
     GX_LoadBGPltt(bgData.palette->rawData, 0, bgData.palette->size);
     GX_LoadBG1Char(bgData.character->rawData, 0, bgData.character->size);
-    entry = FindActiveBackgroundScreenResourceById(data_ov015_0207e960->mainBg, 0);
+    entry = FindActiveBackgroundScreenResourceById(gWirelessMenuWork->mainBg, 0);
     GX_LoadBG1Scr(entry->screen->rawData, 0, entry->screen->size);
-    entry = FindActiveBackgroundScreenResourceById(data_ov015_0207e960->mainBg, 1);
+    entry = FindActiveBackgroundScreenResourceById(gWirelessMenuWork->mainBg, 1);
     GX_LoadBG0Scr(entry->screen->rawData,
-                           FindActiveRecordById(data_ov015_0207e960->mainBg, 1)->charOffset << 6,
+                           FindActiveRecordById(gWirelessMenuWork->mainBg, 1)->charOffset << 6,
                            entry->screen->size);
-    InitializeResourceContainer(data_ov015_0207e960->mainObj, NULL);
-    InitObjManagerAndMark(data_ov015_0207e960->mainObj, &mainObjConfig);
-    CreateWidgetImageEntry(data_ov015_0207e960->mainObj, gLinkPanelAssetPaths[1]);
-    LoadWidgetDescriptorsFromFile(data_ov015_0207e960->mainObj, mainObjConfig.animFileId, 0x14);
-    SetAllElementObjectModes(data_ov015_0207e960->mainObj, 3);
-    SetElementEnabled(data_ov015_0207e960->mainObj, 4, 0);
-    SetElementEnabled(data_ov015_0207e960->mainObj, 5, 0);
-    SetElementEnabled(data_ov015_0207e960->mainObj, 6, 0);
-    SetElementEnabled(data_ov015_0207e960->mainObj, 7, 0);
-    SetElementEnabled(data_ov015_0207e960->mainObj, 8, 0);
-    SetElementEnabled(data_ov015_0207e960->mainObj, 9, 0);
-    SetElementEnabled(data_ov015_0207e960->mainObj, 10, 0);
-    SetElementEnabled(data_ov015_0207e960->mainObj, 11, 0);
-    SetElementEnabled(data_ov015_0207e960->mainObj, 12, 0);
-    SetElementEnabled(data_ov015_0207e960->mainObj, 13, 0);
-    SetElementEnabled(data_ov015_0207e960->mainObj, 14, 0);
-    SetElementEnabled(data_ov015_0207e960->mainObj, 15, 0);
-    SetElementEnabled(data_ov015_0207e960->mainObj, 16, 0);
-    SetElementEnabled(data_ov015_0207e960->mainObj, 17, 0);
-    SetElementEnabled(data_ov015_0207e960->mainObj, 18, 0);
+    InitializeResourceContainer(gWirelessMenuWork->mainObj, NULL);
+    InitObjManagerAndMark(gWirelessMenuWork->mainObj, &mainObjConfig);
+    CreateWidgetImageEntry(gWirelessMenuWork->mainObj, gLinkPanelAssetPaths[1]);
+    LoadWidgetDescriptorsFromFile(gWirelessMenuWork->mainObj, mainObjConfig.animFileId, 0x14);
+    SetAllElementObjectModes(gWirelessMenuWork->mainObj, 3);
+    SetElementEnabled(gWirelessMenuWork->mainObj, 4, 0);
+    SetElementEnabled(gWirelessMenuWork->mainObj, 5, 0);
+    SetElementEnabled(gWirelessMenuWork->mainObj, 6, 0);
+    SetElementEnabled(gWirelessMenuWork->mainObj, 7, 0);
+    SetElementEnabled(gWirelessMenuWork->mainObj, 8, 0);
+    SetElementEnabled(gWirelessMenuWork->mainObj, 9, 0);
+    SetElementEnabled(gWirelessMenuWork->mainObj, 10, 0);
+    SetElementEnabled(gWirelessMenuWork->mainObj, 11, 0);
+    SetElementEnabled(gWirelessMenuWork->mainObj, 12, 0);
+    SetElementEnabled(gWirelessMenuWork->mainObj, 13, 0);
+    SetElementEnabled(gWirelessMenuWork->mainObj, 14, 0);
+    SetElementEnabled(gWirelessMenuWork->mainObj, 15, 0);
+    SetElementEnabled(gWirelessMenuWork->mainObj, 16, 0);
+    SetElementEnabled(gWirelessMenuWork->mainObj, 17, 0);
+    SetElementEnabled(gWirelessMenuWork->mainObj, 18, 0);
     NNSi_FndFreeFromDefaultHeap(archive);
     ZeroHalfThenFree(handle);
 
     handle = Msg_OpenContainerAndReadHeader(sOv015_WxcWlaP2_0207e7ec, 0x10, 0);
-    InitBackgroundContainer(data_ov015_0207e960->subBg, &subBgConfig);
+    InitBackgroundContainer(gWirelessMenuWork->subBg, &subBgConfig);
     fileId = ((handle + 0x8000) & 0xfffffc) << 7;
-    LoadTagTrackerResourceFile(data_ov015_0207e960->subBg, fileId | 0x80000000);
+    LoadTagTrackerResourceFile(gWirelessMenuWork->subBg, fileId | 0x80000000);
     archive = LoadFileAllocFromHeapTail(fileId | 0x80000002, 0x10);
     GetBgDataFromArchive(&bgData, archive, -1, 0, 0);
     GXS_LoadBGPltt(bgData.palette->rawData, 0, bgData.palette->size);
     GXS_LoadBG1Char(bgData.character->rawData, 0, bgData.character->size);
-    entry = FindActiveBackgroundScreenResourceById(data_ov015_0207e960->subBg, 0);
+    entry = FindActiveBackgroundScreenResourceById(gWirelessMenuWork->subBg, 0);
     GXS_LoadBG1Scr(entry->screen->rawData, 0, entry->screen->size);
-    entry = FindActiveBackgroundScreenResourceById(data_ov015_0207e960->subBg, 2);
+    entry = FindActiveBackgroundScreenResourceById(gWirelessMenuWork->subBg, 2);
     GXS_LoadBG0Scr(entry->screen->rawData,
-                            FindActiveRecordById(data_ov015_0207e960->subBg, 2)->charOffset << 6,
+                            FindActiveRecordById(gWirelessMenuWork->subBg, 2)->charOffset << 6,
                             entry->screen->size);
     subObjConfig.cellFileId = fileId | 0x80000004;
     subObjConfig.animFileId = fileId | 0x80000007;
-    InitializeResourceContainer(data_ov015_0207e960->subObj, NULL);
-    InitObjManagerAndMark(data_ov015_0207e960->subObj, &subObjConfig);
-    CreateWidgetImageEntry(data_ov015_0207e960->subObj, gLinkPanelAssetPaths[3]);
-    LoadWidgetDescriptorsFromFile(data_ov015_0207e960->subObj, subObjConfig.animFileId, 0x19);
-    SetAllElementObjectModes(data_ov015_0207e960->subObj, 3);
+    InitializeResourceContainer(gWirelessMenuWork->subObj, NULL);
+    InitObjManagerAndMark(gWirelessMenuWork->subObj, &subObjConfig);
+    CreateWidgetImageEntry(gWirelessMenuWork->subObj, gLinkPanelAssetPaths[3]);
+    LoadWidgetDescriptorsFromFile(gWirelessMenuWork->subObj, subObjConfig.animFileId, 0x19);
+    SetAllElementObjectModes(gWirelessMenuWork->subObj, 3);
     if (DispatchContextCommand(5, 0, 0, 0) != 0) {
-        SetElementEnabled(data_ov015_0207e960->subObj, 8, 1);
-        SetElementMode(data_ov015_0207e960->subObj, 8, 0);
+        SetElementEnabled(gWirelessMenuWork->subObj, 8, 1);
+        SetElementMode(gWirelessMenuWork->subObj, 8, 0);
     }
 
     level = DispatchContextCommand(8, 0, 0, 0);
@@ -276,105 +276,105 @@ void SetupPanelGraphics(void) {
     if (level >= 80) {
         ElementPosition position;
         void *container;
-        container = data_ov015_0207e960->subObj;
+        container = gWirelessMenuWork->subObj;
         SetEntrySlotsVisible(container, FindWidgetById(container, 14), 1);
-        container = data_ov015_0207e960->subObj;
+        container = gWirelessMenuWork->subObj;
         ResolveWidgetPositionComponents(container, FindWidgetById(container, 14), &position, 0);
         *(volatile fx32 *)&position.x = ((position.x >> 12) - 10) << 12;
-        container = (*(PanelState *volatile *)&data_ov015_0207e960)->subObj;
+        container = (*(PanelState *volatile *)&gWirelessMenuWork)->subObj;
         SetWidgetPosition(container, FindWidgetById(container, 14), &position, 0);
     } else if (level >= 50) {
         ElementPosition position;
         void *container;
-        container = data_ov015_0207e960->subObj;
+        container = gWirelessMenuWork->subObj;
         SetEntrySlotsVisible(container, FindWidgetById(container, 13), 1);
-        container = data_ov015_0207e960->subObj;
+        container = gWirelessMenuWork->subObj;
         ResolveWidgetPositionComponents(container, FindWidgetById(container, 13), &position, 0);
         *(volatile fx32 *)&position.x = ((position.x >> 12) - 10) << 12;
-        container = (*(PanelState *volatile *)&data_ov015_0207e960)->subObj;
+        container = (*(PanelState *volatile *)&gWirelessMenuWork)->subObj;
         SetWidgetPosition(container, FindWidgetById(container, 13), &position, 0);
     }
     {
         ElementPosition position;
-        GetElementPosition(data_ov015_0207e960->subObj, 10, &position);
+        GetElementPosition(gWirelessMenuWork->subObj, 10, &position);
         position.x -= 0x19000;
-        SetElementPosition(data_ov015_0207e960->subObj, 11, &position);
+        SetElementPosition(gWirelessMenuWork->subObj, 11, &position);
     }
 
     LoadAvatarObjPalette(TRUE);
-    state = data_ov015_0207e960;
+    state = gWirelessMenuWork;
     state->profileCopy = *GetPackedFields();
     state->avatarView.selection = &state->profileCopy;
-    ResetSelectionView(&data_ov015_0207e960->avatarView);
-    data_ov015_0207e960->avatarView.basePriority = 200;
-    data_ov015_0207e960->avatarView.flags.mode = 3;
-    data_ov015_0207e960->avatarView.position.x = 0xc6000;
-    data_ov015_0207e960->avatarView.position.y = 0x29000;
-    BuildSelectionViewRecords(data_ov015_0207e960->subObj,
-                               &data_ov015_0207e960->avatarView);
-    SetGroupSlotsVisible(data_ov015_0207e960->subObj,
-                         &data_ov015_0207e960->avatarView, 1);
-    SetWidgetRootDpadEnabled(data_ov015_0207e960->subObj, 1);
-    SetWidgetRootTouchEnabled(data_ov015_0207e960->subObj, 1);
-    SetElementEnabled(data_ov015_0207e960->subObj, 2, 0);
-    SetElementEnabled(data_ov015_0207e960->subObj, 3, 0);
-    SetElementEnabled(data_ov015_0207e960->subObj, 9, 1);
-    SetElementEnabled(data_ov015_0207e960->subObj, 4, 1);
-    SetElementEnabled(data_ov015_0207e960->subObj, 17, 1);
-    SetElementMode(data_ov015_0207e960->subObj, 4, 3);
-    SetElementEnabled(data_ov015_0207e960->subObj, 30, 1);
-    SetElementEnabled(data_ov015_0207e960->subObj, 31, 1);
-    SetElementEnabled(data_ov015_0207e960->subObj, 32, 1);
-    SetElementEnabled(data_ov015_0207e960->subObj, 33, 1);
-    SetElementEnabled(data_ov015_0207e960->subObj, 18, 1);
+    ResetSelectionView(&gWirelessMenuWork->avatarView);
+    gWirelessMenuWork->avatarView.basePriority = 200;
+    gWirelessMenuWork->avatarView.flags.mode = 3;
+    gWirelessMenuWork->avatarView.position.x = 0xc6000;
+    gWirelessMenuWork->avatarView.position.y = 0x29000;
+    BuildSelectionViewRecords(gWirelessMenuWork->subObj,
+                               &gWirelessMenuWork->avatarView);
+    SetGroupSlotsVisible(gWirelessMenuWork->subObj,
+                         &gWirelessMenuWork->avatarView, 1);
+    SetWidgetRootDpadEnabled(gWirelessMenuWork->subObj, 1);
+    SetWidgetRootTouchEnabled(gWirelessMenuWork->subObj, 1);
+    SetElementEnabled(gWirelessMenuWork->subObj, 2, 0);
+    SetElementEnabled(gWirelessMenuWork->subObj, 3, 0);
+    SetElementEnabled(gWirelessMenuWork->subObj, 9, 1);
+    SetElementEnabled(gWirelessMenuWork->subObj, 4, 1);
+    SetElementEnabled(gWirelessMenuWork->subObj, 17, 1);
+    SetElementMode(gWirelessMenuWork->subObj, 4, 3);
+    SetElementEnabled(gWirelessMenuWork->subObj, 30, 1);
+    SetElementEnabled(gWirelessMenuWork->subObj, 31, 1);
+    SetElementEnabled(gWirelessMenuWork->subObj, 32, 1);
+    SetElementEnabled(gWirelessMenuWork->subObj, 33, 1);
+    SetElementEnabled(gWirelessMenuWork->subObj, 18, 1);
 
     count = CountSetFlagsInRange();
-    ClearElementNumber(data_ov015_0207e960->subObj, 20);
-    ClearElementNumber(data_ov015_0207e960->subObj, 21);
-    SetElementNumber(data_ov015_0207e960->subObj, 20, count % 10);
+    ClearElementNumber(gWirelessMenuWork->subObj, 20);
+    ClearElementNumber(gWirelessMenuWork->subObj, 21);
+    SetElementNumber(gWirelessMenuWork->subObj, 20, count % 10);
     tens = (count / 10) % 10;
     if (tens != 0) {
-        SetElementNumber(data_ov015_0207e960->subObj, 21, tens);
+        SetElementNumber(gWirelessMenuWork->subObj, 21, tens);
     } else {
-        SetElementEnabled(data_ov015_0207e960->subObj, 21, 0);
+        SetElementEnabled(gWirelessMenuWork->subObj, 21, 0);
     }
 
-    data_ov015_0207e960->randomDigit = NextSharedRandom16Scaled(6);
-    ClearElementNumber(data_ov015_0207e960->subObj, 10);
+    gWirelessMenuWork->randomDigit = NextSharedRandom16Scaled(6);
+    ClearElementNumber(gWirelessMenuWork->subObj, 10);
     {
-        PanelState *panel = data_ov015_0207e960;
+        PanelState *panel = gWirelessMenuWork;
         void *container = panel->subObj;
         SetWidgetAnimationFrame(container, (const struct WidgetPositionRecord *)(FindWidgetById(container, 10)), (u16)(panel->randomDigit));
     }
-    data_ov015_0207e960->randomPick = NextSharedRandom16Scaled(gWirelessRandomChoiceLimits[DispatchContextCommand(6, 0, 0, 0)]);
+    gWirelessMenuWork->randomPick = NextSharedRandom16Scaled(gWirelessRandomChoiceLimits[DispatchContextCommand(6, 0, 0, 0)]);
     {
-        void *element = FindWidgetById(data_ov015_0207e960->subObj, 10);
-        SetFocusedWidget(data_ov015_0207e960->subObj, element);
+        void *element = FindWidgetById(gWirelessMenuWork->subObj, 10);
+        SetFocusedWidget(gWirelessMenuWork->subObj, element);
     }
-    SetWidgetRootInputCallback(data_ov015_0207e960->subObj, HandleWirelessPanelNavigation);
-    ResolveEntryStoreWord(data_ov015_0207e960->subObj, 4, WirelessSubWidget4ConfirmNoop);
-    ResolveEntryStoreWord(data_ov015_0207e960->subObj, 9, PositionWirelessPanelSelectionMarker);
-    ResolveEntryStoreWord(data_ov015_0207e960->subObj, 17, SetPanelFlagE2Bit3);
-    ResolveEntryStoreWord(data_ov015_0207e960->subObj, 30, SelectPreviousWirelessPanelSubpageWrapper);
-    ResolveEntryStoreWord(data_ov015_0207e960->subObj, 31, SelectNextWirelessPanelSubpageWrapper);
-    ResolveEntryStoreWord(data_ov015_0207e960->subObj, 32, SelectPreviousWirelessPanelPageWrapper);
-    ResolveEntryStoreWord(data_ov015_0207e960->subObj, 33, SelectNextWirelessPanelPageWrapper);
+    SetWidgetRootInputCallback(gWirelessMenuWork->subObj, HandleWirelessPanelNavigation);
+    ResolveEntryStoreWord(gWirelessMenuWork->subObj, 4, WirelessSubWidget4ConfirmNoop);
+    ResolveEntryStoreWord(gWirelessMenuWork->subObj, 9, PositionWirelessPanelSelectionMarker);
+    ResolveEntryStoreWord(gWirelessMenuWork->subObj, 17, SetPanelFlagE2Bit3);
+    ResolveEntryStoreWord(gWirelessMenuWork->subObj, 30, SelectPreviousWirelessPanelSubpageWrapper);
+    ResolveEntryStoreWord(gWirelessMenuWork->subObj, 31, SelectNextWirelessPanelSubpageWrapper);
+    ResolveEntryStoreWord(gWirelessMenuWork->subObj, 32, SelectPreviousWirelessPanelPageWrapper);
+    ResolveEntryStoreWord(gWirelessMenuWork->subObj, 33, SelectNextWirelessPanelPageWrapper);
     NNSi_FndFreeFromDefaultHeap(archive);
     ZeroHalfThenFree(handle);
 
-    data_ov015_0207e960->flagE1Bit3 = 1;
-    data_ov015_0207e960->flagE2Bit1 = 1;
-    data_ov015_0207e960->flagE2Bit2 = 1;
-    data_ov015_0207e960->flagE1Bit4 = 1;
+    gWirelessMenuWork->flagE1Bit3 = 1;
+    gWirelessMenuWork->flagE2Bit1 = 1;
+    gWirelessMenuWork->flagE2Bit2 = 1;
+    gWirelessMenuWork->flagE1Bit4 = 1;
     if (DispatchContextCommand(5, 0, 0, 0) != 0) {
-        data_ov015_0207e960->flagE1Mode = 1;
+        gWirelessMenuWork->flagE1Mode = 1;
     }
-    data_ov015_0207e960->scaleX = NextSharedRandom16Scaled(0x1000) + 0x1000;
-    data_ov015_0207e960->offsetX = NextSharedRandom16Scaled(0);
-    data_ov015_0207e960->scaleY = NextSharedRandom16Scaled(0x1000) + 0x1000;
-    data_ov015_0207e960->offsetY = (NextSharedRandom16Scaled(0) + 0x80) << 12;
+    gWirelessMenuWork->scaleX = NextSharedRandom16Scaled(0x1000) + 0x1000;
+    gWirelessMenuWork->offsetX = NextSharedRandom16Scaled(0);
+    gWirelessMenuWork->scaleY = NextSharedRandom16Scaled(0x1000) + 0x1000;
+    gWirelessMenuWork->offsetY = (NextSharedRandom16Scaled(0) + 0x80) << 12;
     GXS_BeginLoadOBJExtPltt();
-    data_ov015_0207e960->extPaletteColor = *(u16 *)0x068a0002;
-    data_ov015_0207e960->extPaletteColorCopy = data_ov015_0207e960->extPaletteColor;
+    gWirelessMenuWork->extPaletteColor = *(u16 *)0x068a0002;
+    gWirelessMenuWork->extPaletteColorCopy = gWirelessMenuWork->extPaletteColor;
     GXS_EndLoadOBJExtPltt();
 }

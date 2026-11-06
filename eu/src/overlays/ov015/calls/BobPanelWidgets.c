@@ -1,3 +1,4 @@
+#define data_ov015_0207e960 gWirelessMenuWork
 #define BobPanelWidgets_0206f7d8 BobPanelWidgets
 #define FindWidgetById_020b90a4 FindWidgetById
 #define IsWidgetMoveFinished_020b9100 IsWidgetMoveFinished

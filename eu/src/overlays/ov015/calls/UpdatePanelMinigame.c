@@ -1,3 +1,4 @@
+#define data_ov015_0207a554 gWirelessPanelFixedRewardDescriptor
 #define func_ov015_02077904 StartWirelessPanelSequenceIfStopped
 #define func_ov015_02077978 SetWirelessPanelModeAndStopSequence
 #define func_ov015_020779a4 SetWirelessPanelModeAndPendingMode

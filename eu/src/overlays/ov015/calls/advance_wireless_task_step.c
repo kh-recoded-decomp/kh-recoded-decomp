@@ -1,5 +1,5 @@
 #define advance_wireless_task_step_020737f0 advance_wireless_task_step
-#define data_0207ea20 data_ov015_0207ea20
+#define data_0207ea20 gWirelessParentParamStorage
 #define func_02011738 WM_SetParentParameter
 #define func_020737c4 WH_ChangeSysState
 #define func_020737d4 WH_SetError

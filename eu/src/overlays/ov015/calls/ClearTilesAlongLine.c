@@ -1,3 +1,5 @@
+#define data_ov015_0207a1e8 gWirelessTraceZeroOffsets
+#define data_ov015_0207a1f2 gWirelessTraceLateralOffsets
 #define ClearTilesAlongLine_0207943c ClearTilesAlongLine
 #define abs_0202198c abs
 #define func_ov015_0207913c IsPointInRect
