@@ -2,6 +2,6 @@
 #define ScriptCmd_ReturnValue_02025960 ScriptCmd_ReturnValue
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
 #define func_02025dac ByteCode_ResolveOperand
-#define func_ov001_0208a36c InitActorDialogTimer
+#define func_ov001_0208a36c ConfigureActorPeriodicBodySound
 #define func_ov001_0208a3bc StartActorAnimState
 #include "src/ov001/scripted_actor_behavior/ScriptCmd_ActorTimerOrAnim_0208e048.c"

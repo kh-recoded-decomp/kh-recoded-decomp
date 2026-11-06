@@ -22,7 +22,7 @@ typedef struct ResultsScreen {
 extern ResultsScreen gResultsScreenPointersPrefix;
 extern u8 gBoardScreenTaskDescriptor[];
 
-extern u32 func_ov001_02063620(void);
+extern u32 GetSessionScriptRunMask(void);
 extern void func_ov001_020648c8(u32 value);
 extern void *CreateTaskObject(void *descriptor, void *userData);
 extern void RerollBoardSlotsWrapper(ResultsParams *params);
@@ -33,7 +33,7 @@ extern void StoreToGlobalPtr4Field28(int value);
 int CloseResultsScreen(void)
 {
     if (gResultsScreenPointersPrefix.work->flags & 1) {
-        if (func_ov001_02063620() != 0) {
+        if (GetSessionScriptRunMask() != 0) {
             return 0;
         }
         gResultsScreenPointersPrefix.work->flags &= ~1;

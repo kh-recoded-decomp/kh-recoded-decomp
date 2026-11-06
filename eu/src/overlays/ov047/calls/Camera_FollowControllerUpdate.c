@@ -1,3 +1,4 @@
+#define func_ov001_02063a4c GetFieldSessionPhase
 #define Camera_FollowControllerUpdate_020c4768 Camera_FollowControllerUpdate
 #define Camera_IsFrozen_020c0c1c Camera_IsFrozen
 #define Camera_ResetFollowHeading_020c464c Camera_ResetFollowHeading

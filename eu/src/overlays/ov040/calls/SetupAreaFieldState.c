@@ -1,3 +1,4 @@
+#define func_ov001_02063a6c GetFieldCameraModeRequest
 #define func_ov001_02064184 PlayFieldBgm
 #define func_ov001_02072ec8 UnloadHudLayersAndRecordText
 #define func_ov040_020bce50 SetupAreaFieldState

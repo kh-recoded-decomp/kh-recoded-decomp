@@ -112,10 +112,10 @@ the exact representation and the retained ov004 bank ambiguity.
 
 ## Unresolved function contracts
 
-48 matched C functions retain numeric names. Every one has a mechanical
+37 matched C functions retain numeric names. Every one has a mechanical
 contract, a specific semantic blocker and a next useful proof:
 
-- [38 common field functions](EU_PENDING_FIELD_FUNCTIONS.md).
+- [27 common field functions](EU_PENDING_FIELD_FUNCTIONS.md).
 - [2 engine, script and scene functions](EU_PENDING_ENGINE_SCENE_FUNCTIONS.md).
 - [8 background/camera/other callbacks](EU_PENDING_CALLBACK_FUNCTIONS.md).
 
@@ -157,3 +157,5 @@ The [field HP/camera script gate](FIELD_HP_CAMERA_SCRIPT_GATE.md) documents opco
 [Launcher emission](CARRIED_LAUNCHER_EMISSION.md), [model drawing](MODEL_SET_DRAW_GATE.md), [shared stage workspace](STAGE_SHARED_WORKSPACE.md), [operand and marker operations](STAGE_OPERAND_MARKER_COMMANDS.md), [script binding indices](FIELD_SCRIPT_BINDING_INDICES.md) and [current field entry storage](FIELD_CURRENT_ENTRY_STORAGE.md) connect the newly named functions to their actual writers and consumers.
 
 [Field menu/message operations](FIELD_MENU_MESSAGE_OPERATIONS.md), [controller release states](ACTOR_CONTROLLER_RELEASE_STATES.md) and [entry-pool drawing and actor-owner links](ENTRY_POOL_DRAW_OWNER_CONTRACTS.md) document actual callers, return consumers and lifecycle boundaries.
+
+[Default actor hooks and body sound](DEFAULT_STAGE_ACTOR_BODY_SOUND.md), [session phase and run mask](FIELD_SESSION_PHASE_RUN_MASK.md), [stored camera requests](FIELD_CAMERA_MODE_REQUEST.md) and [the actor-scene handoff](ACTOR_SCENE_FIELD_HANDOFF.md) distinguish native scheduling, deferred application and the still-paused field entries.

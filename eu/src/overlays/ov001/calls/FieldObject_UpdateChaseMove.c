@@ -1,3 +1,4 @@
+#define func_ov001_02063a4c GetFieldSessionPhase
 #define AngleBetweenXy_0204a508 AngleBetweenXy
 #define CanTriggerOnContact_02083320 CanTriggerOnContact
 #define CheckFacingAway_0208350c CheckFacingAway

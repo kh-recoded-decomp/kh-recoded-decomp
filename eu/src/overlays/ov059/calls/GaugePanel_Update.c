@@ -1,3 +1,4 @@
+#define func_ov001_02063a4c GetFieldSessionPhase
 #define GaugePanel_Update_020cfd1c GaugePanel_Update
 #define NNS_FndInitListWithOffset0_0206ad28 DrawSpriteFrameQuadWithoutDepthUpdate
 #define SetPendingSlotFlag_0207d4d0 SetPendingSlotFlag

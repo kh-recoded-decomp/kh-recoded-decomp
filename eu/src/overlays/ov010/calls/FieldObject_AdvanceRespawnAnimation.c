@@ -40,7 +40,7 @@ typedef struct ActorRegistry {
 
 extern unsigned int RebindAnimTracks();
 extern unsigned int ActorRegistry_GetEntityByIndex();
-extern unsigned int func_ov001_02063a4c();
+extern unsigned int GetFieldSessionPhase();
 extern unsigned int GetClampedTimerValue();
 extern void FieldObject_RespawnAnimationComplete(void);
 
@@ -50,7 +50,7 @@ unsigned int FieldObject_AdvanceRespawnAnimation(int work)
     u32 timer;
     ActorNode *actor;
 
-    mode = func_ov001_02063a4c();
+    mode = GetFieldSessionPhase();
     if ((mode == 4) && (timer = GetClampedTimerValue(), timer <= 10000)) {
         actor = ActorRegistry_GetEntityByIndex((u32)*(u8 *)(work + 0x38));
         RebindAnimTracks(&actor->flags_004, 1, 0);

@@ -1,3 +1,4 @@
+#define func_ov001_02063a58 SetFieldCameraModeRequest
 #define data_02060848 gContactProjectionFallbackEnabled
 #define HandleSessionScriptResult_0206269c HandleSessionScriptResult
 #define data_ov001_020a0460 gFieldSessionWork

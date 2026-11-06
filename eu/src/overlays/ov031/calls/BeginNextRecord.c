@@ -1,3 +1,4 @@
+#define func_ov001_02063a4c GetFieldSessionPhase
 #define BeginNextRecord_020bb62c BeginNextRecord
 #define ResetCameraUp_020bca50 ResetCameraUp
 #define RestoreActiveRecordItems_020bbc84 RestoreActiveRecordItems

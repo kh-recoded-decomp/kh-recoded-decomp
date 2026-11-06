@@ -11,7 +11,7 @@ typedef struct ActorManager {
 extern ActorManager *gActorSceneManager;
 extern void ZeroHalfThenFree(void *block);
 extern void PopVramState(void);
-extern void func_ov001_0206375c(void);
+extern void PrepareFieldAfterActorScene(void);
 extern s32 GetFieldSessionState(void);
 extern s32 IsSessionFlagSet(s32 id);
 extern void ClearSessionPackedBit(s32 id);
@@ -34,7 +34,7 @@ s32 TryShutdownActorSystem(void)
         FinishEventCameraCut();
         PopVramState();
         ClearAllActorSlots();
-        func_ov001_0206375c();
+        PrepareFieldAfterActorScene();
         SetFieldEntriesPaused(1);
         ZeroHalfThenFree(manager->releasableHandle);
         manager->releasableHandle = 0;

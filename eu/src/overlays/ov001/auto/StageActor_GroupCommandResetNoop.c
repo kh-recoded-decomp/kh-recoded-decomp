@@ -1,0 +1,2 @@
+#define DefaultStepDone_02090f00 StageActor_GroupCommandResetNoop
+#include "src/ov001/library_nitro_fs/DefaultStepDone_02090f00.c"

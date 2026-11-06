@@ -1,3 +1,4 @@
+#define func_ov001_02063a4c GetFieldSessionPhase
 #define FixedPointMultiply12 FX_Mul
 #define ScaleVecFx32InPlace_0204a5e4 ScaleVecFx32InPlace
 #define SetCameraGoalTarget_020bd234 SetCameraGoalTarget

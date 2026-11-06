@@ -1,0 +1,3 @@
+#define Ov002_World_SetByte8D68 SetFieldCameraModeRequest
+#define ScriptCmd_SetWorldByte8D68_02065460 ScriptCmd_SetFieldCameraModeRequest
+#include "src/ov001/shared_engine/ScriptCmd_SetWorldByte8D68_02065460.c"

@@ -946,3 +946,7 @@ Twelve numeric functions follow their native owners and actual writers or consum
 ## Field presentation, controller release and actor links
 
 Eleven numeric functions follow native presentation guards, tracker channels, manager-driven controller release, EntryPool dispatch and actor-owner reference counting. [The system index](README.md) links their contracts. Native callback arguments, return-value consumption, conditional resets and borrowed ownership are explicit; no shared ROOT body or ABI is changed. All 25 affected official function checks and 26 complete-object comparisons pass; a fresh 108-module gate retains every hash.
+
+## Default actor methods, body sound and field camera requests
+
+Eleven numeric identities and one unsupported dialog-timer name now follow actual descriptor invokers, periodic body-sound consumers, session phase dispatch, VM run flags and bank-qualified camera backends. [The system index](README.md) links the contracts. Empty defaults retain their native erased arguments; request bytes remain signed on read and apply later through backend-specific behavior. The actor-scene handoff explicitly keeps field entries paused. All 49 affected official checks and 51 complete-object comparisons pass, with all 108 freshly linked module hashes unchanged.

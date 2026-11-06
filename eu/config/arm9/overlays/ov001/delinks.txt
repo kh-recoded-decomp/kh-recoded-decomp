@@ -228,7 +228,7 @@ src/overlays/ov001/calls/OpenSessionArchive.c:
     complete
     .text       start:0x020635b0 end:0x02063620
 
-src/overlays/ov001/calls/func_ov001_02063620.c:
+src/overlays/ov001/calls/GetSessionScriptRunMask.c:
     complete
     .text       start:0x02063620 end:0x02063638
 
@@ -252,7 +252,7 @@ src/overlays/ov001/calls/StartSessionScene.c:
     complete
     .text       start:0x020636f8 end:0x0206375c
 
-src/overlays/ov001/calls/func_ov001_0206375c.c:
+src/overlays/ov001/calls/PrepareFieldAfterActorScene.c:
     complete
     .text       start:0x0206375c end:0x02063838
 
@@ -292,15 +292,15 @@ src/overlays/ov001/calls/GetFieldSessionState.c:
     complete
     .text       start:0x02063a38 end:0x02063a4c
 
-src/overlays/ov001/calls/func_ov001_02063a4c.c:
+src/overlays/ov001/calls/GetFieldSessionPhase.c:
     complete
     .text       start:0x02063a4c end:0x02063a58
 
-src/overlays/ov001/calls/func_ov001_02063a58.c:
+src/overlays/ov001/calls/SetFieldCameraModeRequest.c:
     complete
     .text       start:0x02063a58 end:0x02063a6c
 
-src/overlays/ov001/calls/func_ov001_02063a6c.c:
+src/overlays/ov001/calls/GetFieldCameraModeRequest.c:
     complete
     .text       start:0x02063a6c end:0x02063a80
 
@@ -668,7 +668,7 @@ src/overlays/ov001/calls/ScriptCmd_LoadOffsetTableFile.c:
     complete
     .text       start:0x02065454 end:0x0206545e
 
-src/overlays/ov001/calls/func_ov001_02065460.c:
+src/overlays/ov001/calls/ScriptCmd_SetFieldCameraModeRequest.c:
     complete
     .text       start:0x02065460 end:0x02065472
 
@@ -6364,7 +6364,7 @@ src/overlays/ov001/calls/Actor_StepPeriodicAnimEvent.c:
     complete
     .text       start:0x020899d4 end:0x02089a1c
 
-src/overlays/ov001/calls/func_ov001_02089a1c.c:
+src/overlays/ov001/calls/EncodeActorBodySoundKind.c:
     complete
     .text       start:0x02089a1c end:0x02089a3a
 
@@ -6432,7 +6432,7 @@ src/overlays/ov001/calls/SetActorFlagBit4.c:
     complete
     .text       start:0x0208a374 end:0x0208a394
 
-src/overlays/ov001/calls/InitActorDialogTimer.c:
+src/overlays/ov001/calls/ConfigureActorPeriodicBodySound.c:
     complete
     .text       start:0x0208a394 end:0x0208a3e4
 
@@ -7224,7 +7224,7 @@ src/overlays/ov001/calls/CanActorReactToSource.c:
     complete
     .text       start:0x0208f680 end:0x0208f6e0
 
-src/overlays/ov001/auto/func_ov001_0208f6e0.c:
+src/overlays/ov001/auto/StageActor_DefaultInitNoop.c:
     complete
     .text       start:0x0208f6e0 end:0x0208f6e2
 
@@ -7232,11 +7232,11 @@ src/overlays/ov001/calls/SyncNearestEntryPosition.c:
     complete
     .text       start:0x0208f6e4 end:0x0208f708
 
-src/overlays/ov001/auto/func_ov001_0208f708.c:
+src/overlays/ov001/auto/StageActor_DefaultUpdateNoop.c:
     complete
     .text       start:0x0208f708 end:0x0208f70a
 
-src/overlays/ov001/auto/func_ov001_0208f70c.c:
+src/overlays/ov001/auto/StageActor_DefaultDrawNoop.c:
     complete
     .text       start:0x0208f70c end:0x0208f70e
 
@@ -7332,7 +7332,7 @@ src/overlays/ov001/calls/InitStageObjectActor.c:
     complete
     .text       start:0x02090dc0 end:0x02090f28
 
-src/overlays/ov001/auto/func_ov001_02090f28.c:
+src/overlays/ov001/auto/StageActor_GroupCommandResetNoop.c:
     complete
     .text       start:0x02090f28 end:0x02090f2c
 

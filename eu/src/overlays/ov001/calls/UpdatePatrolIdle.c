@@ -1,3 +1,4 @@
+#define func_ov001_02063a4c GetFieldSessionPhase
 #define ActorSlot_IsFlag8SetByIndex_02036164 ActorSlot_IsFlag8SetByIndex
 #define Anim_GetFrame_0202f4a0 Anim_GetFrame
 #define ChooseNextPatrolPoint_02083c68 ChooseNextPatrolPoint

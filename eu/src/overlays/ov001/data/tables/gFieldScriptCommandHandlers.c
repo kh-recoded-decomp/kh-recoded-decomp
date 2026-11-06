@@ -27,7 +27,7 @@ extern void ScriptCmd_ShowSessionNameEntry(void); /* return 1; ScriptVm_ReadOper
 extern void ScriptCmd_EnsureFieldEffectPool(void); /* FS_UnloadOverlayImage */
 extern void ScriptCmd_LoadOffsetTableFile(void); /* FS_UnloadOverlayImage */
 extern void ScriptCmd_CommitChapterClearRecords(void); /* return 1; no local decode */
-extern void func_ov001_02065460(void); /* ScriptCmd_SetWorldByte8D68 */
+extern void ScriptCmd_SetFieldCameraModeRequest(void); /* ScriptCmd_SetWorldByte8D68 */
 extern void ScriptCmd_QueueFlagTaskKind4(void); /* ScriptCmd_QueueFlagTaskKind4 */
 extern void ScriptCmd_AdjustItemCount(void); /* ScriptCmd_AdjustItemCount */
 extern void ScriptCmd_SetSessionFlag35e3(void);
@@ -156,7 +156,7 @@ void (*gFieldScriptCommandHandlers[190])(void) = {
     NULL,
     ScriptCmd_CommitChapterClearRecords, /* return 1; no local decode */
     NULL,
-    func_ov001_02065460, /* ScriptCmd_SetWorldByte8D68 */
+    ScriptCmd_SetFieldCameraModeRequest, /* ScriptCmd_SetWorldByte8D68 */
     NULL,
     ScriptCmd_QueueFlagTaskKind4, /* ScriptCmd_QueueFlagTaskKind4 */
     NULL,

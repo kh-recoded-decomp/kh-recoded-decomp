@@ -1,3 +1,4 @@
+#define func_ov001_02063620 GetSessionScriptRunMask
 #define func_ov001_02064490 InvokeSessionCheckCallbackOrDefault
 #define FieldObject_GetSavedValue_0207f9a8 FieldObject_GetSavedValue
 #define FieldObject_TryStartEvent_02081014 FieldObject_TryStartEvent

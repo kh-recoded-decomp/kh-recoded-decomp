@@ -1,3 +1,4 @@
+#define func_ov001_02063a4c GetFieldSessionPhase
 #define func_ov001_0206db8c GetFieldEntryGroupId
 #define Actor_AdvanceFrame_020cce7c Actor_AdvanceFrame
 #define AdvanceAnimationTracks_0202ef24 AdvanceAnimationTracks

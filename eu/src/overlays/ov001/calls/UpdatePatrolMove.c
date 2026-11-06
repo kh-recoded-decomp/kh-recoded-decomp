@@ -1,3 +1,4 @@
+#define func_ov001_02063a4c GetFieldSessionPhase
 #define func_ov001_02067ed4 GetCurrentSceneEntryIndex
 #define ActorSlot_IsFlag8SetByIndex_02036164 ActorSlot_IsFlag8SetByIndex
 #define AngleBetweenVecs_0204b070 AngleBetweenVecs

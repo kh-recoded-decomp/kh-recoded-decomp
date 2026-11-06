@@ -43,7 +43,7 @@ extern unsigned int Anim_GetFrame();
 extern unsigned int Flags16_ClearBit1();
 extern unsigned int ActorSlot_SetFlag8ByIndex();
 extern unsigned int ActorRegistry_GetEntityByIndex();
-extern unsigned int func_ov001_02063a4c();
+extern unsigned int GetFieldSessionPhase();
 extern unsigned int GetClampedTimerValue();
 extern unsigned int GetActiveSceneSlot();
 extern unsigned int RebindAnimTracks();
@@ -58,7 +58,7 @@ unsigned int FieldObject_BeginRespawnAnimation(int work)
     int node;
     unsigned int animation;
 
-    indexOrMode = func_ov001_02063a4c();
+    indexOrMode = GetFieldSessionPhase();
     if ((indexOrMode == 4) &&
         (timer = GetClampedTimerValue(), timer <= 30000)) {
         indexOrMode = 1;

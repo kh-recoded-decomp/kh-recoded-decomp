@@ -1,14 +1,14 @@
 #include "nitro/types.h"
 
 extern u32 gMovieContextState;
-extern int func_ov001_02063620(void);
+extern int GetSessionScriptRunMask(void);
 extern void PushVramState(void);
 extern void LoadAreaSceneDefinition(void);
 extern void InitEventGroupTable(void);
 extern void CreateMaterialFadeWork(int width, int height, u8 mode);
 
 u32 AreaSceneState_LoadInitialResources(void) {
-    if (func_ov001_02063620() != 0) {
+    if (GetSessionScriptRunMask() != 0) {
         return 0xffffffff;
     }
     PushVramState();

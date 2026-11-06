@@ -1,3 +1,4 @@
+#define func_ov001_02063620 GetSessionScriptRunMask
 #define func_ov001_02078680 IncrementFieldMenuEntryProgress
 #define func_ov001_020645c8 IsSessionFlagSet
 #define RequestSceneEvent_020bae84 RequestSceneEvent

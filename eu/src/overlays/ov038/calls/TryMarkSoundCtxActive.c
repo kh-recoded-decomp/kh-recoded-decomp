@@ -1,3 +1,4 @@
+#define func_ov001_02063620 GetSessionScriptRunMask
 #define TryMarkSoundCtxActive_020ba4f8 TryMarkSoundCtxActive
 #define g_ov038SoundCtx_020bd140 gResultsPageOuterTaskWork
 #include "src/ov038/reviewed_helpers/TryMarkSoundCtxActive_020ba4f8.c"

@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-int func_ov001_02089a1c(int value)
+int EncodeActorBodySoundKind(int value)
 {
     switch (value) {
     case 0:

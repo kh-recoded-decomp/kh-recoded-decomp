@@ -1,3 +1,4 @@
+#define func_ov001_02063620 GetSessionScriptRunMask
 #define StartResultsScreen_020bdbd0 StartResultsScreen
 #define func_02025438 SetPanelEnabled
 #define func_ov034_020bb304 InitResultsScreen

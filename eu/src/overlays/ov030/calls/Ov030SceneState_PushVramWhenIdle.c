@@ -1,14 +1,14 @@
 #include "nitro/types.h"
 
 extern u32 gOv030SceneWork;
-extern s32 func_ov001_02063620(void);
+extern s32 GetSessionScriptRunMask(void);
 extern void PushVramState(void);
 
 u32 Ov030SceneState_PushVramWhenIdle(void)
 {
     s32 ready;
 
-    ready = func_ov001_02063620();
+    ready = GetSessionScriptRunMask();
     if (ready != 0) {
         return 0xffffffff;
     }

@@ -1,6 +1,6 @@
 #define ResetGroupCommandState_02095880 ResetGroupCommandState
 #define data_ov001_0209e464 gGroupCommandResetStates
-#define func_ov001_02090f00 func_ov001_02090f28
+#define func_ov001_02090f00 StageActor_GroupCommandResetNoop
 #define func_ov001_020925bc SetStageEventHandlerState
 #define func_ov001_020958dc SetStageEventKindWrapper
 #define func_ov001_0209c040 GetStageActor

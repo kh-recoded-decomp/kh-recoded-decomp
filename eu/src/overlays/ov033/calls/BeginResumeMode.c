@@ -13,7 +13,7 @@ typedef struct {
 
 extern SoundCtx *gResumeModeWorkStorage;
 extern SaveWork *gSaveIoStateDataTail;
-extern u32 func_ov001_02063620(void);
+extern u32 GetSessionScriptRunMask(void);
 extern void SetPanelEnabled(int mode);
 extern void FadeBgmVolume(int targetVolume, int frames);
 extern void WriteGlobalPackedBits(u32 bitOffset, u32 bitCount, u32 value);
@@ -24,7 +24,7 @@ s32 BeginResumeMode(void)
 {
     SoundCtx *ctx = gResumeModeWorkStorage;
 
-    if (func_ov001_02063620() != 0) {
+    if (GetSessionScriptRunMask() != 0) {
         return -1;
     }
     SetPanelEnabled(0);

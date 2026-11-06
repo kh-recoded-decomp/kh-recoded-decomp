@@ -1,3 +1,0 @@
-#define Ov002_World_SetByte8D68 func_ov001_02063a58
-#define ScriptCmd_SetWorldByte8D68_02065460 func_ov001_02065460
-#include "src/ov001/shared_engine/ScriptCmd_SetWorldByte8D68_02065460.c"

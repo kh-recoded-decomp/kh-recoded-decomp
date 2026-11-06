@@ -30,7 +30,7 @@ extern void ForwardToActiveService_02088074(void);
 extern void QueueAreaSceneSoundState(int stopSeq);
 extern int GetMainBrightnessSetting(void);
 
-void func_ov001_0206375c(void) {
+void PrepareFieldAfterActorScene(void) {
     int index;
 
     gFieldSessionWork->flags &= ~0x20;

@@ -14,7 +14,7 @@ extern s8 GetCtxModeByte(void);
 extern void LoadContextResourceGroups(int sound);
 extern BOOL IsSessionFlagSet(u32 flag);
 extern void SetupSlotPanelMode(int mode, int enable);
-extern int func_ov001_02063a6c(void);
+extern int GetFieldCameraModeRequest(void);
 extern void ForwardSubModePairB(int value, int arg);
 extern void SetOverlayLayerVisible(int visible);
 extern void ResumeTaskAndClearFlags(void);
@@ -46,7 +46,7 @@ int ResumeFieldFromMenu(void) {
         LoadContextResourceGroups(1);
         break;
     }
-    ForwardSubModePairB(func_ov001_02063a6c(), 0);
+    ForwardSubModePairB(GetFieldCameraModeRequest(), 0);
     SetOverlayLayerVisible(0);
     ResumeTaskAndClearFlags();
     SetMenuHighlight(0);

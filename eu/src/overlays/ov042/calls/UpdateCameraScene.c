@@ -76,7 +76,7 @@ typedef struct {
 
 extern CameraState *gCameraSceneGlobalStorage;
 extern VecFx32 gZeroVecFx32;
-extern int func_ov001_02063a4c(void);
+extern int GetFieldSessionPhase(void);
 extern VecFx32 *GetManagedActorPosition(int index);
 extern InputEntry *GetBoundedEntryField(int index);
 extern VecFx32 *GetOv030SceneReferenceAxis(void);
@@ -181,7 +181,7 @@ BOOL UpdateCameraScene(void) {
     VecFx32 start;
     VecFx32 end;
 
-    if (func_ov001_02063a4c() != 4 && func_ov001_02063a4c() != 7 && func_ov001_02063a4c() != 8) {
+    if (GetFieldSessionPhase() != 4 && GetFieldSessionPhase() != 7 && GetFieldSessionPhase() != 8) {
         return FALSE;
     }
     if (cam->locked == 0) {
