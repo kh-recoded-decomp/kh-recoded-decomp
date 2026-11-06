@@ -1,3 +1,3 @@
 #define CountGroupEntriesInStateOne_020bf540 CountGroupEntriesInStateOne
-#define data_ov086_020c23a0 data_ov086_020c23c0
+#define data_ov086_020c23a0 gRecordGroupEntryDefinitionsHead
 #include "src/ov086/panel_state/CountGroupEntriesInStateOne_020bf540.c"

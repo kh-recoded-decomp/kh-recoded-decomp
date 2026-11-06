@@ -9,7 +9,7 @@ extern void StepCursorBackward_020c0db0(void);
 extern void StepCursorForward_020c0e10(void);
 extern void UpdateRecordPanelInput_020c1ef4(void);
 
-u32 data_ov086_020c23c0[470] = {
+u32 gRecordGroupEntryDefinitionsHead[470] = {
     0x00000125, 0x000000C8, 0x00000001, 0x00000096,
     0x000000C8, 0x00000001, 0x0000009A, 0x000000C8,
     0x00000001, 0x00000091, 0x00000032, 0x00000001,

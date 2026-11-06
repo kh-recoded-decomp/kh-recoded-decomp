@@ -27,6 +27,6 @@ void *gEntryCarouselMenuDescriptor[17] = {
     NULL,
 };
 
-u32 data_ov089_020c0560[3] = {
+u32 gEntryCarouselSingleModelDefinition[3] = {
     0x00000007, 0x00000006, 0x00000000,
 };

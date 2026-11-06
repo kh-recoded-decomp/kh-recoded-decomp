@@ -147,8 +147,8 @@ gActorGroundMovementFlag16Bonuses kind:data(any) addr:0x020d20e8
 gPlayerActorSpawnShapeOffset kind:data(any) addr:0x020d20f0
 gActorSlotModelResourceIds kind:data(any) addr:0x020d20fc
 gActorGaugePointRateParameters kind:data(any) addr:0x020d210c
-data_ov052_020d211c kind:data(any) addr:0x020d211c
-data_ov052_020d2134 kind:data(any) addr:0x020d2134
+gOv052ActorState17Parameters kind:data(any) addr:0x020d211c
+gForcedHitElementOverrides kind:data(any) addr:0x020d2134
 sOv052_Root_020d2160 kind:data(any) addr:0x020d2160
 sOv052_Bip01_020d2168 kind:data(any) addr:0x020d2168
 sOv052_WeaponTg00_020d2170 kind:data(any) addr:0x020d2170

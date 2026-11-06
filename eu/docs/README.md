@@ -78,6 +78,15 @@ links the complete sequence of documented naming blocks.
 - [Results Ui17](NATIVE_RESULTS_UI17.md).
 - [Stage Tracker Views15](NATIVE_STAGE_TRACKER_VIEWS15.md).
 
+- [Drift, actor, record and carousel data](DRIFT_ACTOR_RECORD_CAROUSEL_DATA.md).
+
+## Retained DATA identities
+
+[All 106 retained numeric DATA labels](EU_PENDING_DATA_LABELS.md) have an explicit
+owner or missing-proof record. All 941 identities in the DATA review are covered;
+835 supported assignments are integrated. Interior aliases remain separate from
+independent C allocations.
+
 ## Unresolved function contracts
 
 At the `ad0a8778153f72218e4bdad3a5cec1bd8e2a7470` naming checkpoint,

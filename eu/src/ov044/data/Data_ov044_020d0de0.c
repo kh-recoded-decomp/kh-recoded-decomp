@@ -21,7 +21,7 @@ u32 gPanelCameraPathPresets[36] = {
     0xFFFDFCD6, 0x0005A000, 0x00022512, 0x00000000,
 };
 
-void *data_ov044_020d0de4[11] = {
+void *gPanelDriftPresetAndCallbackTail[11] = {
     (void *)0x0000A000,
     (void *)0x00000333,
     (void *)0x0000A000,
@@ -35,6 +35,6 @@ void *data_ov044_020d0de4[11] = {
     (void *)InitPanelMotionB,
 };
 
-u32 data_ov044_020d0de0[1] = {
+u32 gPanelDriftPresetHead[1] = {
     0x0000019A,
 };

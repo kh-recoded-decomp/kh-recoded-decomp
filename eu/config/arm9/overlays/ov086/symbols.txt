@@ -70,8 +70,8 @@ gRecordPageCounterBitOffsets kind:data(any) addr:0x020c22d0
 gRecordGroupEntryCountsHead kind:data(any) addr:0x020c2360
 gRecordGroupEntryCountsTail kind:data(any) addr:0x020c2368 ambiguous
 gRecordMenuCommandTable kind:data(any) addr:0x020c2380
-data_ov086_020c23c0 kind:data(any) addr:0x020c23c0
-data_ov086_020c2b18 kind:data(any) addr:0x020c2b18 ambiguous
+gRecordGroupEntryDefinitionsHead kind:data(any) addr:0x020c23c0
+gRecordGroupEntryDefinitionsTail kind:data(any) addr:0x020c2b18 ambiguous
 sOv086_Empty_020c2fe4 kind:data(any) addr:0x020c2fe4
 gRecordStatisticNumberFormat kind:data(any) addr:0x020c2fe8
 gRecordStatTextFormat kind:data(any) addr:0x020c2ff0

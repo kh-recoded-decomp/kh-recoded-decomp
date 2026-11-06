@@ -1,4 +1,4 @@
 #define SpawnPanelDriftPreset_020d05c0 SpawnPanelDriftPreset
-#define data_ov044_020d0dc0 data_ov044_020d0de0
+#define data_ov044_020d0dc0 gPanelDriftPresetHead
 #define func_ov044_020d058c SpawnPanelDriftParticle
 #include "src/ov044/panel_state/SpawnPanelDriftPreset_020d05c0.c"

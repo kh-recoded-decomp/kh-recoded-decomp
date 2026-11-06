@@ -3,5 +3,5 @@
 #define InitEntryUnlocks_020bfc4c InitEntryUnlocks
 #define ReadSessionPackedBits_02064574 ReadSessionPackedBits
 #define RefreshEntryCaption_020beff4 RefreshEntryCaption
-#define data_ov089_020c0520 data_ov089_020c0540
+#define data_ov089_020c0520 gEntryCarouselSessionFlagIds
 #include "src/ov089/panel_state/InitEntryUnlocks_020bfc4c.c"

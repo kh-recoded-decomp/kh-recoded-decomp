@@ -1,12 +1,12 @@
 #include "nitro/types.h"
 
-const u32 data_ov052_020d2134[10] = {
+const u32 gForcedHitElementOverrides[10] = {
     0x00000034, 0x00000001, 0x00000035, 0x00000002,
     0x00000036, 0x00000003, 0x00000037, 0x00000004,
     0x00000038, 0x00000006,
 };
 
-const u32 data_ov052_020d211c[6] = {
+const u32 gOv052ActorState17Parameters[6] = {
     0x00000355, 0x00000533, 0x00000013, 0x00000515,
     0x0000079A, 0x00000018,
 };

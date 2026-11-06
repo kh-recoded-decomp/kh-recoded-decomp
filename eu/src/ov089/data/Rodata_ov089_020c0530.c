@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-const u32 data_ov089_020c0540[6] = {
+const u32 gEntryCarouselSessionFlagIds[6] = {
     0x0000370E, 0x0000370F, 0x00003710, 0x00003711,
     0x00003712, 0x00003713,
 };

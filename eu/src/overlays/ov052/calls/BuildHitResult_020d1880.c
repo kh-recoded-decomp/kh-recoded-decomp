@@ -66,7 +66,7 @@ typedef struct {
     u8 player;
 } Actor;
 
-extern const AbilityElementTable data_ov052_020d2134;
+extern const AbilityElementTable gForcedHitElementOverrides;
 extern int FX_Mul(int left, int right);
 extern int _s32_div_f(int value, int scale);
 extern BOOL IsPlayerEntryFlagSet(int player, u32 id);
@@ -88,7 +88,7 @@ void BuildHitResult_020d1880(HitResult *out, Actor *actor, AttackData *attack, S
     out->element = attack->element;
     out->duration = attack->duration;
     if (entry->forced && out->element == 0) {
-        table = data_ov052_020d2134;
+        table = gForcedHitElementOverrides;
         for (i = 0; i < 5; i++) {
             if (IsPlayerEntryFlagSet(actor->player, table.entries[i].ability)) {
                 out->element = table.entries[i].element;

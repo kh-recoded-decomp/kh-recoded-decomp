@@ -840,3 +840,18 @@ Name 75 board/group, results/tracker and event/text data identities, including r
 [Event Text Window25](NATIVE_EVENT_TEXT_WINDOW25.md),
 [Results Ui17](NATIVE_RESULTS_UI17.md),
 [Stage Tracker Views15](NATIVE_STAGE_TRACKER_VIEWS15.md).
+
+## Drift, actor, record and carousel data
+
+Eleven identities now describe native presets, actor-local state, record-group
+fragments and carousel model information. [DRIFT_ACTOR_RECORD_CAROUSEL_DATA.md](DRIFT_ACTOR_RECORD_CAROUSEL_DATA.md)
+records actual operations, table cuts and limits. The ov039 report registry
+reference uses its separately proved ov091 descriptor rather than this ov086 tail.
+
+## Complete retained DATA ledger
+
+All 941 reviewed numeric DATA identities have a disposition: 835 supported
+assignments and 106 retained labels. [EU_PENDING_DATA_LABELS.md](EU_PENDING_DATA_LABELS.md)
+records every remaining identity, physical/logical owner, reason and next proof.
+The 106-record set equals the current configuration's complete generic DATA set;
+interior aliases and unknown fields do not become invented C allocations.

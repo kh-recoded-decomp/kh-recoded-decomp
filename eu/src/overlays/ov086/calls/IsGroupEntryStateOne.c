@@ -1,3 +1,3 @@
 #define IsGroupEntryStateOne_020bf408 IsGroupEntryStateOne
-#define data_ov086_020c23a0 data_ov086_020c23c0
+#define data_ov086_020c23a0 gRecordGroupEntryDefinitionsHead
 #include "src/ov086/panel_state/IsGroupEntryStateOne_020bf408.c"
