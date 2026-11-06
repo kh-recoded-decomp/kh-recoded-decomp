@@ -1,3 +1,3 @@
-#define SetClampedPercentValue_020674fc SetClampedPercentValue
+#define SetClampedPercentValue_020674fc SetRecordPanelProgress
 #define func_02027360 WriteGlobalPackedBits
 #include "src/ov002/unclassified_helpers/SetClampedPercentValue_020674fc.c"

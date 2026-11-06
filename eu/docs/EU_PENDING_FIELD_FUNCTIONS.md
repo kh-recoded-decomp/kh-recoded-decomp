@@ -1,6 +1,6 @@
 # Overlay 001 functions retained for further evidence
 
-These 73 native EU functions retain address-based names. The available evidence
+These 72 native EU functions retain address-based names. The available evidence
 establishes the mechanics listed here but does not yet justify a stable semantic
 name or a complete public type contract. Each entry identifies the actual EU
 source, the precise unresolved point and the next useful proof. This ledger is
@@ -111,7 +111,6 @@ keeps those distinctions concrete.
 
 | EU identity and native size | Current EU source | Observed mechanical contract | Semantic blocker | Next proof |
 |---|---|---|---|---|
-| ov001:0x020882d4 (Thumb, 0x4 bytes) | `eu/src/overlays/ov001/auto/func_ov001_020882d4.c` | Constantzero function; no symbolic Cxref, but TryShutdownActorSystem returns literal020882d5. | Literal Thumb-codepointer lifecycle needs native/dispatcher binding captured before naming. | Verify original TryShutdownActorSystem literal and Obj_UpdateAll continuation semantics; likely actor-scene idle task after shutdown, not a failed function. |
 | ov001:0x02088b80 (Thumb, 0x6c bytes) | `eu/src/overlays/ov001/calls/func_ov001_02088b80.c` | Clears timers/velocity/extras, decrements pointed-owner+f04, conditionally clears animflags18 on referenced actor when count zero, then nulls firstowner word. | No binder/incrementer proves pointer domain/refcount and ownership pairing. | Find native writes/increments of owner word/f04 and role of f00 actorID; do not infer heap release from decrement alone. |
 | ov001:0x02089a1c (Thumb, 0x1e bytes) | `eu/src/overlays/ov001/calls/func_ov001_02089a1c.c` | Maps0->1,1->2,2->5, otherwise value+4; InitActorDialogTimer stores result at actor+8. | Meaning of actor+8 code/value is unproved. | Trace all consumers of timing record words4/8/c and originating script parameter enum; preserve arithmetic mapping. |
 | ov001:0x0208f6e0 (Thumb, 0x2 bytes) | `eu/src/overlays/ov001/auto/func_ov001_0208f6e0.c` | Empty gNearestEntrySyncHandlers slot 4. | Meaning of dispatch index 4 and ABI not closed. | Trace table consumer and nearest-entry kind construction; bind a real target family before a no-op sync name. |
@@ -146,3 +145,11 @@ keeps those distinctions concrete.
 The next-proof entries are bounded investigations, not instructions to rewrite
 working code. Resolve one owner, field or protocol at a time and retain the
 native identity so that any later name can be traced to its evidence.
+
+## Resolved actor-scene continuation
+
+The former ov001:020882d4 entry is now ActorScene_IdleTaskUpdate. The complete
+descriptor/initializer/task-runner chain proves zero means retain the current
+callback. [ACTOR_TASK_RECORD_PROGRESS_CONTRACTS.md](ACTOR_TASK_RECORD_PROGRESS_CONTRACTS.md)
+records the native registration, manager task handle and explicit transition
+out of the idle state. Its four bytes and original argument list are unchanged.

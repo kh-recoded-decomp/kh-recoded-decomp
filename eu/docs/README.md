@@ -108,11 +108,10 @@ independent C allocations.
 
 ## Unresolved function contracts
 
-At the `ad0a8778153f72218e4bdad3a5cec1bd8e2a7470` naming checkpoint,
-100 matched C functions retain numeric names. Every one has a mechanical
+99 matched C functions retain numeric names. Every one has a mechanical
 contract, a specific semantic blocker and a next useful proof:
 
-- [73 common field functions](EU_PENDING_FIELD_FUNCTIONS.md).
+- [72 common field functions](EU_PENDING_FIELD_FUNCTIONS.md).
 - [18 engine, script and scene functions](EU_PENDING_ENGINE_SCENE_FUNCTIONS.md).
 - [9 background/camera/other callbacks](EU_PENDING_CALLBACK_FUNCTIONS.md).
 
@@ -123,6 +122,10 @@ also have their original-versus-renamed controls and exact offsets documented. T
 [native metadata refresh](NATIVE_RELOCATION_METADATA.md) and
 [named callback/key references](NATIVE_CALLBACK_REFERENCE_CONTRACTS.md) resolve
 all 21 recorded standalone cases while preserving their historical controls.
+
+The [actor-scene continuation and record progress contracts](ACTOR_TASK_RECORD_PROGRESS_CONTRACTS.md)
+show the owner/consumer evidence that closes one former numeric identity and
+corrects an unsupported unit assumption.
 
 ## Reading native types for a port
 

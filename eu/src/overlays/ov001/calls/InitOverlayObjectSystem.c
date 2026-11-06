@@ -1,7 +1,7 @@
 #include "nitro/types.h"
 
 /* The task runner consumes native 32-bit callback words; zero retains its current state. */
-extern int func_ov001_020882d4(void);
+extern int ActorScene_IdleTaskUpdate(void);
 
 typedef struct ActorManager {
     u8 pad_000[0x140];
@@ -31,5 +31,5 @@ u32 InitOverlayObjectSystem(void)
     manager->heapHandle = GetCurrentTaskObject();
     manager->rootObject = CreateTaskObject(&gActorChannelClassDescriptor, 0);
     AllocateScriptVmBuffer((u8 *)manager + 0x140, 0x8000, 0xd);
-    return (u32)func_ov001_020882d4;
+    return (u32)ActorScene_IdleTaskUpdate;
 }

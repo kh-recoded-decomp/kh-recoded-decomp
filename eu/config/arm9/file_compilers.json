@@ -3576,7 +3576,7 @@
   "src/overlays/ov001/calls/RemapExtendedSlotId.c": "dsi/1.1",
   "src/overlays/ov001/calls/ReleaseSlotResource.c": "dsi/1.1",
   "src/overlays/ov002/calls/ReleaseMenuPanelCallback.c": "dsi/1.1",
-  "src/overlays/ov002/calls/SetClampedPercentValue.c": "dsi/1.1",
+  "src/overlays/ov002/calls/SetRecordPanelProgress.c": "dsi/1.1",
   "src/overlays/ov007/calls/SetSlotSide.c": "dsi/1.1",
   "src/overlays/ov007/calls/InitTaskCallbacks.c": "dsi/1.1",
   "src/overlays/ov009/calls/SetFlagBit0x10At0x4e.c": "dsi/1.1",

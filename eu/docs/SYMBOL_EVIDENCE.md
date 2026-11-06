@@ -874,3 +874,12 @@ records task continuation, channel and key semantics and preservation of the
 original ROOT type context. All 13 fresh checks pass; all 21 previously recorded
 baseline cases now pass. Every other instruction/common relocation, native DATA
 allocation and all 108 linked module hashes are unchanged.
+
+## Actor-scene idle task and panel progress
+
+`ActorScene_IdleTaskUpdate` replaces the numeric ov001:020882d4 identity after
+its complete descriptor/task-runner/manager transition chain is proved.
+`SetRecordPanelProgress` corrects the former percent label using packed-field
+writers, row selection and removal. [ACTOR_TASK_RECORD_PROGRESS_CONTRACTS.md](ACTOR_TASK_RECORD_PROGRESS_CONTRACTS.md)
+records the evidence and unchanged ABI. All five affected fresh checks and all 108
+linked modules pass; 99 numeric C functions remain with explicit pending contracts.

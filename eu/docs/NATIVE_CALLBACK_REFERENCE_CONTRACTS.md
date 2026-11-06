@@ -11,13 +11,13 @@ flag or callback identity is added to influence code generation.
 |---|---|---|
 | `InitEventTriggerScene` | `WaitForEventTriggerActivation` | Callback/state word |
 | `InitModeHandlerContext` | `RunActiveModeHandler` | Callback/state word |
-| `InitOverlayObjectSystem` | `func_ov001_020882d4` | Callback/state word |
+| `InitOverlayObjectSystem` | `ActorScene_IdleTaskUpdate` | Callback/state word |
 | `InitScreenFadeContext` | `SelectScreenFadeHandler` | Callback/state word |
 | `SelectScreenFadeHandler` | `ScreenFadeInStep`, `ScreenFadeOutStep`, `StepBrightnessFadeIn`, `StepBrightnessFade` | Callback/state word |
 | `ShutdownSceneWork` | `RefreshActiveMenuObjects` | Registered callback identity key |
 | `SubScene9_Create_02066c80` | `FinishFadeTween` | Callback/state word |
 | `SubScene9_Create_02068c0c` | `StartTimerState` | Callback/state word |
-| `TryShutdownActorSystem` | `func_ov001_020882d4` | Callback/state word |
+| `TryShutdownActorSystem` | `ActorScene_IdleTaskUpdate` | Callback/state word |
 | `RefreshTagCallbacksAndSchedule` | `ApplySubBgScroll`, `UpdateMenuScreen` | Callback/state word |
 | `FinishAreaSceneLoad` | `gBarGaugeClassDescriptor` | Resident overlay 035 descriptor |
 | `InstallResultPanelCallbacks` | `PlaySoundOnPanelEntryMatch` | Widget input callback |

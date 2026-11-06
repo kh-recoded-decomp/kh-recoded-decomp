@@ -1,7 +1,7 @@
 #include "nitro/types.h"
 
 /* The task runner consumes native 32-bit callback words; zero retains its current state. */
-extern int func_ov001_020882d4(void);
+extern int ActorScene_IdleTaskUpdate(void);
 
 typedef struct ActorManager {
     u8 pad_000[0x3EE0];
@@ -44,7 +44,7 @@ s32 TryShutdownActorSystem(void)
             ClearSessionPackedBit(0x3628);
             StartAreaEventsAdapter();
         }
-        return (s32)func_ov001_020882d4;
+        return (s32)ActorScene_IdleTaskUpdate;
     }
     return 0;
 }

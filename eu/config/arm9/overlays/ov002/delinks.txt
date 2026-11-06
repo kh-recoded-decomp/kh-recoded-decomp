@@ -660,7 +660,7 @@ src/overlays/ov002/calls/GetContextConfigNibble1ac8.c:
     complete
     .text       start:0x020674e0 end:0x020674fc
 
-src/overlays/ov002/calls/SetClampedPercentValue.c:
+src/overlays/ov002/calls/SetRecordPanelProgress.c:
     complete
     .text       start:0x020674fc end:0x02067524
 

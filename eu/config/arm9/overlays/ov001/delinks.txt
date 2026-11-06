@@ -6152,7 +6152,7 @@ src/overlays/ov001/calls/InitOverlayObjectSystem.c:
     complete
     .text       start:0x02088278 end:0x020882d4
 
-src/overlays/ov001/auto/func_ov001_020882d4.c:
+src/overlays/ov001/auto/ActorScene_IdleTaskUpdate.c:
     complete
     .text       start:0x020882d4 end:0x020882d8
 
