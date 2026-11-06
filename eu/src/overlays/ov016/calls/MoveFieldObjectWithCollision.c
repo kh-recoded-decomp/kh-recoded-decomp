@@ -11,7 +11,7 @@
 #define VEC_DotProduct_01ff9e6c VEC_DotProduct
 #define data_02053438 gZeroVecFx32
 #define data_02053444 gIdentityMtxFx33
-#define data_ov016_020a6e1c data_ov016_020a6e3c
+#define data_ov016_020a6e1c gMovingFieldObjectCollisionHalfExtents
 #define func_02036240 ActorRegistry_GetEntityByIndex
 #define func_ov016_020a2558 ReinsertFieldObjectActorInQuadTree
 #define func_ov016_020a3354 OnFieldObjectBumped

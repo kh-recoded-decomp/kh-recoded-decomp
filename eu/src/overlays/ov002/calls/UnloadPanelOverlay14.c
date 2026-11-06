@@ -1,4 +1,4 @@
-#define g_panelState_0206c460 data_ov002_0206c460
+#define g_panelState_0206c460 gOv002ProfilePanelWork
 #define ShutdownPanelObjects_0206cea0 ShutdownPanelObjects
 #define func_02029f98 UnloadOverlayAfterGeometryTransfer
 #define UnloadPanelOverlay14_02062e18 UnloadPanelOverlay14

@@ -18,26 +18,26 @@ extern void AnimatePanelPageScreens(void);
 extern void PulsePanelPaletteColor(void);
 extern void ClearOv013SubBg0PanelArea(void);
 extern void DrawOv013ListPositionCounter(int a, int b);
-extern int data_ov013_02074ce0;
+extern int gOv013PanelGlobals;
 
 /* Dispatches three pending panel actions from flag bits. */
 void DispatchOv013PendingPanelActions(void) {
-    if (((PanelFlags98 *)(data_ov013_02074ce0 + 0x98))->doFirst) {
+    if (((PanelFlags98 *)(gOv013PanelGlobals + 0x98))->doFirst) {
         AnimatePanelPageScreens();
     }
-    if (((PanelFlags99 *)(data_ov013_02074ce0 + 0x99))->doSecond) {
+    if (((PanelFlags99 *)(gOv013PanelGlobals + 0x99))->doSecond) {
         PulsePanelPaletteColor();
     }
-    if (((PanelFlags98 *)(data_ov013_02074ce0 + 0x98))->doThird) {
+    if (((PanelFlags98 *)(gOv013PanelGlobals + 0x98))->doThird) {
         ClearOv013SubBg0PanelArea();
     }
-    if (!((PanelFlags98 *)(data_ov013_02074ce0 + 0x98))->doAction) {
+    if (!((PanelFlags98 *)(gOv013PanelGlobals + 0x98))->doAction) {
         return;
     }
-    DrawOv013ListPositionCounter(*(s8 *)(data_ov013_02074ce0 + 0x2f0) + 1, *(s8 *)(data_ov013_02074ce0 + 0x2ec));
+    DrawOv013ListPositionCounter(*(s8 *)(gOv013PanelGlobals + 0x2f0) + 1, *(s8 *)(gOv013PanelGlobals + 0x2ec));
     {
-        int flags = *(u8 *)(data_ov013_02074ce0 + 0x98);
+        int flags = *(u8 *)(gOv013PanelGlobals + 0x98);
         flags = flags & ~2;
-        *(u8 *)(data_ov013_02074ce0 + 0x98) = (u8)flags;
+        *(u8 *)(gOv013PanelGlobals + 0x98) = (u8)flags;
     }
 }

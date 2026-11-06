@@ -13,16 +13,16 @@ typedef struct PanelState {
     u8 pad_11[0xb0 - 0x11];
 } PanelState;
 
-extern PanelState *data_ov002_0206c460;
+extern PanelState *gOv002ProfilePanelWork;
 extern void DestroyFndObjectList(void *entry);
 
 void ReleaseOv002SubPanelTextLayers(void) {
-    if (data_ov002_0206c460->flags10.pending0) {
-        DestroyFndObjectList((u8 *)data_ov002_0206c460 + 0xb0);
+    if (gOv002ProfilePanelWork->flags10.pending0) {
+        DestroyFndObjectList((u8 *)gOv002ProfilePanelWork + 0xb0);
     }
-    if (data_ov002_0206c460->flags10.pending1) {
-        DestroyFndObjectList((u8 *)data_ov002_0206c460 + 0xe4);
+    if (gOv002ProfilePanelWork->flags10.pending1) {
+        DestroyFndObjectList((u8 *)gOv002ProfilePanelWork + 0xe4);
     }
-    data_ov002_0206c460->flags10.pending0 = 0;
-    data_ov002_0206c460->flags10.pending1 = 0;
+    gOv002ProfilePanelWork->flags10.pending0 = 0;
+    gOv002ProfilePanelWork->flags10.pending1 = 0;
 }

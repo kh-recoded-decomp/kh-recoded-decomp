@@ -26,6 +26,12 @@ entire overlay implements only one system. Follow the source map for actual
 build ownership and regional aliases. [SYMBOL_EVIDENCE.md](SYMBOL_EVIDENCE.md)
 links the complete sequence of documented naming blocks.
 
+## Native data maps
+
+- [Early contexts, task classes and constants](EARLY_CONTEXT_CONSTANT_DATA.md).
+- [Wireless scan and board storage](WIRELESS_SCAN_BOARD_STORAGE.md).
+- [Pool kind-4 trigger callbacks](POOL_KIND4_TRIGGER_CALLBACKS.md).
+
 ## Unresolved function contracts
 
 At the `ad0a8778153f72218e4bdad3a5cec1bd8e2a7470` naming checkpoint,

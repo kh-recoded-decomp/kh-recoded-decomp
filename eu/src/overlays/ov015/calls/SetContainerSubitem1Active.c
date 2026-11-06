@@ -1,3 +1,4 @@
+#define data_ov015_020812e0 gWirelessBoardGlobals
 #define ApplySelectedSubitemValues_020b94fc ApplySelectedSubitemValues
 #define SetContainerSubitem1Active_02078228 SetContainerSubitem1Active
 #define func_ov027_020b90a4 FindWidgetById

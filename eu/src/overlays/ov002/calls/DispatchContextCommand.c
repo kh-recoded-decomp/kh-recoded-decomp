@@ -1,3 +1,4 @@
+#define data_ov002_0206c470 gMenuContextCommandFlagStorage
 #define func_ov002_02067524 GetRecordPanelProgress
 #define func_ov002_02067538 SetContextIndexedGlobalFlag
 #define func_ov002_020679fc ReadGlobalPackedFlag

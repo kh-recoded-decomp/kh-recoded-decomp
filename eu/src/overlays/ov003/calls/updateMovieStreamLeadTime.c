@@ -1,3 +1,4 @@
+#define data_ov003_020658c4 gMovieSubtitleLayoutGlobals
 #define func_ov003_02064c10 MeasureMovieSubtitleWidth
 #define updateMovieStreamLeadTime_02064e2c updateMovieStreamLeadTime
 #include "src/ov003/video_playback/updateMovieStreamLeadTime_02064e2c.c"

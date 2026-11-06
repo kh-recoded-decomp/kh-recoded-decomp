@@ -1,4 +1,4 @@
 #define LoadObjectSprites_020a0d24 LoadObjectSprites
-#define data_ov010_020a1d2c data_ov010_020a1d4c
+#define data_ov010_020a1d2c gSpecialObjectSpriteLoadParameters
 #define func_ov021_020a89a8 func_ov021_020a89c8
 #include "src/ov010/shared_engine/LoadObjectSprites_020a0d24.c"

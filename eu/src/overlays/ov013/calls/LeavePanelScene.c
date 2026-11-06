@@ -5,5 +5,5 @@
 #define ReadGlobalPackedBits_02027348 ReadGlobalPackedBits
 #define SetPendingScene_02025644 SetPendingScene
 #define func_01ff8830 MI_CpuFill8
-#define g_panelState_02074ce0 data_ov013_02074ce0
+#define g_panelState_02074ce0 gOv013PanelGlobals
 #include "src/ov013/panel_state/LeavePanelScene_0206f978.c"

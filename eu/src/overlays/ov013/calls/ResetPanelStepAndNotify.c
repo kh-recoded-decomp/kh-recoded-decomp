@@ -1,3 +1,4 @@
+#define data_ov013_02074ce0 gOv013PanelGlobals
 #define ApplySelectedSubitemValues_020b94fc ApplySelectedSubitemValues
 #define DispatchContextCommand_02066c78 DispatchContextCommand
 #define PlaySoundEffect_0204d924 PlaySoundEffect

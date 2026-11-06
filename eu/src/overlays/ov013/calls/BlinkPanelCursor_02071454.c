@@ -1,3 +1,4 @@
+#define data_ov013_02074ce0 gOv013PanelGlobals
 #define FindWidgetById_020b90a4 FindWidgetById
 #define SetEntrySlotsVisible_020b9580 SetEntrySlotsVisible
 #define func_ov027_020b91c8 SetWidgetPosition

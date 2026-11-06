@@ -39,5 +39,5 @@
 #define func_ov027_020b91c8 SetWidgetPosition
 #define func_ov027_020b9620 SetWidgetRecordActiveBits
 #define func_ov027_020b96a0 SetWidgetAnimationFrame
-#define g_panelState_0206f9a0 data_ov014_0206f9a0
+#define g_panelState_0206f9a0 gOv014PanelGlobals
 #include "src/ov014/panel_state/UpdatePanelEditInput_0206d2e8.c"

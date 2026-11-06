@@ -1,3 +1,4 @@
+#define data_ov015_020812e0 gWirelessBoardGlobals
 #define func_ov015_020779a4 SetWirelessPanelModeAndPendingMode
 #define OnPanelSlot17Selected_02079ed4 OnPanelSlot17Selected
 #define PlaySoundEffect_0204d924 PlaySoundEffect

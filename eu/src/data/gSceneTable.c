@@ -7,16 +7,16 @@ typedef struct SceneEntry {
 
 extern u8 gTitleScreenTaskClass[];
 extern void *gFieldSessionClassDescriptor[5];
-extern u8 data_ov002_0206c2c4[];
-extern u8 data_ov004_02064530[];
+extern u8 gProfilePanelTaskClass[];
+extern u8 gScrollTextTaskClass[];
 
 /* AdvancePendingScene loads the overlay before creating its scene object. */
 SceneEntry gSceneTable[12] = {
     {-1, NULL},
     { 0, gTitleScreenTaskClass},
     { 1, gFieldSessionClassDescriptor},
-    { 2, data_ov002_0206c2c4},
-    { 4, data_ov004_02064530},
+    { 2, gProfilePanelTaskClass},
+    { 4, gScrollTextTaskClass},
     {-1, NULL},
     {-1, NULL},
     {-1, NULL},

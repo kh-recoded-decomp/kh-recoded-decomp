@@ -1,3 +1,4 @@
+#define data_ov013_02074ce0 gOv013PanelGlobals
 #define data_ov013_02074a1c gOv013PanelSubBgConfig
 #define data_ov013_02074a8c gOv013PanelSubObjConfig
 #define func_ov013_02074718 Ov013SubWidget19ConfirmNoop

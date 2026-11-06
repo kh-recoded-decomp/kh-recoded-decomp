@@ -1,4 +1,4 @@
 #define func_02017f10 NNSi_G2dTextCanvasDrawTextRect
 #define func_ov002_02061c64 DrawPanelSlotCDText
-#define g_panelState_0206c460 data_ov002_0206c460
+#define g_panelState_0206c460 gOv002ProfilePanelWork
 #include "src/ov002/panel_state/func_ov002_02061c64.c"

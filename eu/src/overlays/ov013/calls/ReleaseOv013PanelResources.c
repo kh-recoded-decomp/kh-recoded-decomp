@@ -6,7 +6,7 @@ extern void ReleaseMenuCursorState(void);
 extern void FreeTagTrackerPools(int panel);
 extern void DestroyObjectsAndRelease(int panel);
 extern void NNSi_FndFreeFromDefaultHeap(void *ptr);
-extern int data_ov013_02074ce0;
+extern int gOv013PanelGlobals;
 
 void ReleaseOv013PanelResources(void) {
     ReleaseRecordSlot(9);
@@ -15,9 +15,9 @@ void ReleaseOv013PanelResources(void) {
         StopSeqArcOrDefault(2, 0xd, 4);
     }
     ReleaseMenuCursorState();
-    FreeTagTrackerPools(data_ov013_02074ce0 + 0x304);
-    FreeTagTrackerPools(data_ov013_02074ce0 + 0x350);
-    DestroyObjectsAndRelease(data_ov013_02074ce0 + 0x39c);
-    DestroyObjectsAndRelease(data_ov013_02074ce0 + 0x6818);
-    NNSi_FndFreeFromDefaultHeap((void *)data_ov013_02074ce0);
+    FreeTagTrackerPools(gOv013PanelGlobals + 0x304);
+    FreeTagTrackerPools(gOv013PanelGlobals + 0x350);
+    DestroyObjectsAndRelease(gOv013PanelGlobals + 0x39c);
+    DestroyObjectsAndRelease(gOv013PanelGlobals + 0x6818);
+    NNSi_FndFreeFromDefaultHeap((void *)gOv013PanelGlobals);
 }

@@ -10,5 +10,5 @@
 #define UpdatePanelBrowseState_0207370c UpdatePanelBrowseState
 #define func_ov013_0206f978 LeavePanelScene
 #define func_ov027_020b8ca8 UpdateWidgetRootOnly
-#define g_panelState_02074ce0 data_ov013_02074ce0
+#define g_panelState_02074ce0 gOv013PanelGlobals
 #include "src/ov013/panel_state/UpdatePanelBrowseState_0207370c.c"

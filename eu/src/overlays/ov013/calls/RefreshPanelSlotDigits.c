@@ -1,3 +1,4 @@
+#define data_ov013_02074ce0 gOv013PanelGlobals
 #define DispatchContextCommand_02066c78 DispatchContextCommand
 #define FindWidgetById_020b90a4 FindWidgetById
 #define RefreshPanelSlotDigits_0206fe50 RefreshPanelSlotDigits

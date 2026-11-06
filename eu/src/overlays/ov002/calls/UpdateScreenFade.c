@@ -1,3 +1,4 @@
+#define data_ov002_0206c468 gOv002ScreenFadeWork
 #define SetBrightnessAndSyncMain_02029e7c SetBrightnessAndSyncMain
 #define SetSecondaryBrightness_02029ed0 SetSecondaryBrightness
 #define UpdateScreenFade_020665e8 UpdateScreenFade

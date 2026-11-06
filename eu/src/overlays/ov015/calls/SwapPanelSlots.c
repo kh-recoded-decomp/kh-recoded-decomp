@@ -1,3 +1,4 @@
+#define data_ov015_020812e0 gWirelessBoardGlobals
 #define SwapPanelSlots_020786e8 SwapPanelSlots
 #define data_ov015_0207e884 gWirelessModeDataTables
 #define func_0202a9d0 NextSharedRandom16Scaled

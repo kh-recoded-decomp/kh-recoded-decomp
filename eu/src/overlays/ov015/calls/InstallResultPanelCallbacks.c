@@ -1,3 +1,4 @@
+#define data_ov015_020812e0 gWirelessBoardGlobals
 #define func_ov015_02079d6c InstallResultPanelCallbacks
 #define func_ov015_02079dcc OnPanelSlot1Selected
 #define func_ov015_02079e5c OnPanelSlot16Selected

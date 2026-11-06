@@ -1,5 +1,5 @@
 #define AnimateLaunchedFieldObject_020a3c50 AnimateLaunchedFieldObject
 #define InitializeFieldEffect_020a3be4 InitializeFieldEffect
-#define data_ov016_020a6df8 data_ov016_020a6e18
+#define data_ov016_020a6df8 gFieldObjectLaunchUnitScale
 #define func_02036240 ActorRegistry_GetEntityByIndex
 #include "src/ov016/field_objects/AnimateLaunchedFieldObject_020a3c50.c"

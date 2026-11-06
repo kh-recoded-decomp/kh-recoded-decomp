@@ -2,7 +2,7 @@
 
 extern void FinishPoolActions(void);
 
-void *const data_ov017_020a5e5c[5] = {
+void *const gKind4PoolTriggerHitHandlers[5] = {
     NULL,
     NULL,
     NULL,

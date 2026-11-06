@@ -1,3 +1,4 @@
+#define data_ov013_02074ce0 gOv013PanelGlobals
 #define DispatchContextCommand_02066c78 DispatchContextCommand
 #define QueryPanelSlotStates_02071590 QueryPanelSlotStates
 #include "src/ov013/panel_state/QueryPanelSlotStates_02071590.c"

@@ -1,6 +1,6 @@
 #define SnapFieldObjectToGround_020a27ac SnapFieldObjectToGround
 #define addScaledVector_020301ac AddScaledVector
-#define data_ov016_020a6e10 data_ov016_020a6e30
+#define data_ov016_020a6e10 gFieldObjectGroundProbeVector
 #define func_020351b8 QueryModelSegmentCollision
 #define func_02036230 GetActorRegistry
 #define func_02036240 ActorRegistry_GetEntityByIndex

@@ -1,2 +1,3 @@
+#define data_ov003_020658c0 gMovieSceneWork
 #define MovieScene_IsFlag8b9Clear_02064724 MovieScene_IsFlag8b9Clear
 #include "src/ov003/video_playback/MovieScene_IsFlag8b9Clear_02064724.c"

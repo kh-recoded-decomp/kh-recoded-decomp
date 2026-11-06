@@ -4,5 +4,5 @@
 #define func_ov027_020b7dfc FreeTagTrackerPools
 #define func_ov027_020b8c58 DestroyObjectsAndRelease
 #define func_ov027_020ba294 FreePointerIfSet
-#define g_context_0206c464 data_ov002_0206c464
+#define g_context_0206c464 gOv002MenuWork
 #include "src/ov002/unclassified_helpers/ReleaseContextResources_020642b8.c"

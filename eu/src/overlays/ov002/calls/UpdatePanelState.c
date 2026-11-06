@@ -5,5 +5,5 @@
 #define func_0204f5dc FS_UnloadOverlayImage_0204f5f0
 #define func_ov002_0206162c UpdatePanelState
 #define g_dispatchTable_0206c2f0 gPanelModeExitCallback
-#define g_panelState_0206c460 data_ov002_0206c460
+#define g_panelState_0206c460 gOv002ProfilePanelWork
 #include "src/ov002/panel_state/func_ov002_0206162c.c"

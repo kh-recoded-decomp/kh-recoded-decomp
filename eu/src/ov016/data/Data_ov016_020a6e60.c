@@ -14,7 +14,7 @@ extern void ScriptCmd_SpawnFieldObjectTreeWithExtraVector(void);
 extern void ScriptCmd_SetFieldObjectFlag22(void);
 extern void ScriptCmd_FreeFieldResourceCache(void);
 
-void *data_ov016_020a6e60[26] = {
+void *gOverlay016ScriptCommandHandlers[26] = {
     (void *)ScriptCmd_LoadOverlayKind9,
     NULL,
     (void *)ScriptCmd_SpawnFieldObjectTree,

@@ -1,3 +1,4 @@
+#define data_ov002_0206c460 gOv002ProfilePanelWork
 #define func_ov002_02062470 InitOv002MainBg3TextLayer
 #define func_ov002_02062504 InitOv002MainBg2TextLayer
 #define OpenPanelTextWindow_020626d4 OpenPanelTextWindow

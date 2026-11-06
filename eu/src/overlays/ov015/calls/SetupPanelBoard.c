@@ -84,7 +84,7 @@ typedef struct {
 
 #define ARCHIVE_FILE_ID(handle, index) (((((handle) + 0x8000) & 0xfffffc) << 7) | 0x80000000 | (index))
 
-extern PanelWork *data_ov015_020812e0;
+extern PanelWork *gWirelessBoardGlobals;
 extern const char sOv015_WxcSchP2_0207e8ac[];
 extern const char sOv015_WxcSchLanguageP2_0207e8b8[];
 extern const char sOv015_WxcScrLanguageSZ_0207e8c8[];
@@ -186,50 +186,50 @@ void SetupPanelBoard(void) {
     config = gWirelessBoardObjConfig;
     config.cellFileId = ARCHIVE_FILE_ID(handleA, 0x0d);
     config.animFileId = ARCHIVE_FILE_ID(handleA, 0x10);
-    InitializeResourceContainer(data_ov015_020812e0->container, NULL);
-    InitObjManagerAndMark(data_ov015_020812e0->container, &config);
-    CreateWidgetImageEntry(data_ov015_020812e0->container, ARCHIVE_FILE_ID(handleB, 0x0b));
-    LoadWidgetDescriptorsFromFile(data_ov015_020812e0->container, config.animFileId, config.count);
-    data_ov015_020812e0->records = data_ov015_020812e0->container;
-    SetAllElementObjectModes(data_ov015_020812e0->container, 1);
-    SetWidgetRecordMode(data_ov015_020812e0->container, (const struct WidgetPositionRecord *)(FindWidgetById(data_ov015_020812e0->container, 0x10)), 0);
-    SetWidgetRecordMode(data_ov015_020812e0->container, (const struct WidgetPositionRecord *)(FindWidgetById(data_ov015_020812e0->container, 0x11)), 0);
-    SetEntrySlotsVisible(data_ov015_020812e0->container, FindWidgetById(data_ov015_020812e0->container, 0), 0);
-    ClearWidgetRecordActiveBits(data_ov015_020812e0->container, (const struct WidgetPositionRecord *)(FindWidgetById(data_ov015_020812e0->container, 2)));
-    work = data_ov015_020812e0;
-    SetWidgetAnimationFrame(data_ov015_020812e0->container, (const struct WidgetPositionRecord *)(FindWidgetById(work->container, 2)), work->total);
-    ClearWidgetRecordActiveBits(data_ov015_020812e0->container, (const struct WidgetPositionRecord *)(FindWidgetById(data_ov015_020812e0->container, 4)));
-    work = data_ov015_020812e0;
-    SetWidgetAnimationFrame(data_ov015_020812e0->container, (const struct WidgetPositionRecord *)(FindWidgetById(work->container, 4)),
+    InitializeResourceContainer(gWirelessBoardGlobals->container, NULL);
+    InitObjManagerAndMark(gWirelessBoardGlobals->container, &config);
+    CreateWidgetImageEntry(gWirelessBoardGlobals->container, ARCHIVE_FILE_ID(handleB, 0x0b));
+    LoadWidgetDescriptorsFromFile(gWirelessBoardGlobals->container, config.animFileId, config.count);
+    gWirelessBoardGlobals->records = gWirelessBoardGlobals->container;
+    SetAllElementObjectModes(gWirelessBoardGlobals->container, 1);
+    SetWidgetRecordMode(gWirelessBoardGlobals->container, (const struct WidgetPositionRecord *)(FindWidgetById(gWirelessBoardGlobals->container, 0x10)), 0);
+    SetWidgetRecordMode(gWirelessBoardGlobals->container, (const struct WidgetPositionRecord *)(FindWidgetById(gWirelessBoardGlobals->container, 0x11)), 0);
+    SetEntrySlotsVisible(gWirelessBoardGlobals->container, FindWidgetById(gWirelessBoardGlobals->container, 0), 0);
+    ClearWidgetRecordActiveBits(gWirelessBoardGlobals->container, (const struct WidgetPositionRecord *)(FindWidgetById(gWirelessBoardGlobals->container, 2)));
+    work = gWirelessBoardGlobals;
+    SetWidgetAnimationFrame(gWirelessBoardGlobals->container, (const struct WidgetPositionRecord *)(FindWidgetById(work->container, 2)), work->total);
+    ClearWidgetRecordActiveBits(gWirelessBoardGlobals->container, (const struct WidgetPositionRecord *)(FindWidgetById(gWirelessBoardGlobals->container, 4)));
+    work = gWirelessBoardGlobals;
+    SetWidgetAnimationFrame(gWirelessBoardGlobals->container, (const struct WidgetPositionRecord *)(FindWidgetById(work->container, 4)),
                         (u16)(work->total - work->cleared));
-    SetWidgetRootDpadEnabled(data_ov015_020812e0->container, 1);
-    SetWidgetRootTouchEnabled(data_ov015_020812e0->container, 1);
+    SetWidgetRootDpadEnabled(gWirelessBoardGlobals->container, 1);
+    SetWidgetRootTouchEnabled(gWirelessBoardGlobals->container, 1);
     SetContainerSubitem1Active(0);
-    *(int *)(data_ov015_020812e0->records + 0x601c) = 0;
-    PXI_Init_0204f020(data_ov015_020812e0->records, ARCHIVE_FILE_ID(handleA, 0x0e));
-    PXI_Init_0204f020(data_ov015_020812e0->records, ARCHIVE_FILE_ID(handleA, 0x0f));
-    PXI_Init_0204f020(data_ov015_020812e0->records, ARCHIVE_FILE_ID(handleA, gWirelessThemes[data_ov015_020812e0->theme].bgIndex & 0x1ff));
+    *(int *)(gWirelessBoardGlobals->records + 0x601c) = 0;
+    PXI_Init_0204f020(gWirelessBoardGlobals->records, ARCHIVE_FILE_ID(handleA, 0x0e));
+    PXI_Init_0204f020(gWirelessBoardGlobals->records, ARCHIVE_FILE_ID(handleA, 0x0f));
+    PXI_Init_0204f020(gWirelessBoardGlobals->records, ARCHIVE_FILE_ID(handleA, gWirelessThemes[gWirelessBoardGlobals->theme].bgIndex & 0x1ff));
 
-    count = data_ov015_020812e0->entryCount;
+    count = gWirelessBoardGlobals->entryCount;
     points = gWirelessModeDataTables[count];
     for (; i < count; i++) {
         pos.x = points[i].x << 12;
         pos.y = points[i].y << 12;
-        data_ov015_020812e0->entries[i].animSlot = PXI_Init_0204f0c8(data_ov015_020812e0->records, 0, 0);
+        gWirelessBoardGlobals->entries[i].animSlot = PXI_Init_0204f0c8(gWirelessBoardGlobals->records, 0, 0);
         SetPanelEntrySequence(i, 8);
-        SetIndexedRecordPriority(data_ov015_020812e0->records, data_ov015_020812e0->entries[i].animSlot, 0x66);
-        SetIndexedRecordMode(data_ov015_020812e0->records, data_ov015_020812e0->entries[i].animSlot, 1);
-        SlotTable_SetEntryPriority(data_ov015_020812e0->records, data_ov015_020812e0->entries[i].animSlot, 0);
-        SetSceneRecordValue(data_ov015_020812e0->entries[i].animSlot, &pos);
-        priority = gWirelessSlotStyles[data_ov015_020812e0->entries[i].styleId].priority;
-        data_ov015_020812e0->entries[i].markSlot =
-            PXI_Init_0204f0c8(data_ov015_020812e0->records, gWirelessSlotStyles[data_ov015_020812e0->entries[i].styleId].slotX,
+        SetIndexedRecordPriority(gWirelessBoardGlobals->records, gWirelessBoardGlobals->entries[i].animSlot, 0x66);
+        SetIndexedRecordMode(gWirelessBoardGlobals->records, gWirelessBoardGlobals->entries[i].animSlot, 1);
+        SlotTable_SetEntryPriority(gWirelessBoardGlobals->records, gWirelessBoardGlobals->entries[i].animSlot, 0);
+        SetSceneRecordValue(gWirelessBoardGlobals->entries[i].animSlot, &pos);
+        priority = gWirelessSlotStyles[gWirelessBoardGlobals->entries[i].styleId].priority;
+        gWirelessBoardGlobals->entries[i].markSlot =
+            PXI_Init_0204f0c8(gWirelessBoardGlobals->records, gWirelessSlotStyles[gWirelessBoardGlobals->entries[i].styleId].slotX,
                           priority);
-        SetIndexedRecordPriority(data_ov015_020812e0->records, data_ov015_020812e0->entries[i].markSlot, 0x67);
-        SetIndexedRecordMode(data_ov015_020812e0->records, data_ov015_020812e0->entries[i].markSlot, 2);
-        SlotTable_SetEntryPriority(data_ov015_020812e0->records, data_ov015_020812e0->entries[i].markSlot,
+        SetIndexedRecordPriority(gWirelessBoardGlobals->records, gWirelessBoardGlobals->entries[i].markSlot, 0x67);
+        SetIndexedRecordMode(gWirelessBoardGlobals->records, gWirelessBoardGlobals->entries[i].markSlot, 2);
+        SlotTable_SetEntryPriority(gWirelessBoardGlobals->records, gWirelessBoardGlobals->entries[i].markSlot,
                                             priority);
-        SetSceneRecordValue(data_ov015_020812e0->entries[i].markSlot, &pos);
+        SetSceneRecordValue(gWirelessBoardGlobals->entries[i].markSlot, &pos);
     }
 
     archiveA = LoadFileAllocFromHeapTail(ARCHIVE_FILE_ID(handleA, 0), 0x10);
@@ -239,7 +239,7 @@ void SetupPanelBoard(void) {
     GXS_LoadBGPltt(bgB.palette->rawData, 0, 0x200);
     GXS_LoadBG1Char(bgB.character->rawData, 0x2000, bgB.character->size);
     GXS_LoadBG1Scr(bgA.screen->rawData, 0, bgA.screen->size);
-    kind = data_ov015_020812e0->resultKind;
+    kind = gWirelessBoardGlobals->resultKind;
     if (kind == 5) {
         GetBgDataFromArchive(&bgA, archiveA, 1, -1, -1);
         NNS_G2dBGLoadScreenRect(G2S_GetBG1ScrPtr(), bgA.screen, 0, 0, 0x12, 0x12, 0x20, 0x20, 0xe, 6);
@@ -256,7 +256,7 @@ void SetupPanelBoard(void) {
         NNSi_FndFreeFromDefaultHeap(archiveB);
     }
 
-    themeArchive = LoadFileAllocFromHeapTail(ARCHIVE_FILE_ID(handleB, gWirelessThemes[data_ov015_020812e0->theme].charIndex & 0x1ff),
+    themeArchive = LoadFileAllocFromHeapTail(ARCHIVE_FILE_ID(handleB, gWirelessThemes[gWirelessBoardGlobals->theme].charIndex & 0x1ff),
                              0x10);
     GetBgDataFromArchive(&bgA, themeArchive, 0, 0, 0);
     GXS_LoadBGExtPltt(bgA.palette->rawData, 0, 0x200);
@@ -268,7 +268,7 @@ void SetupPanelBoard(void) {
     GXS_LoadBGExtPltt(bgB.palette->rawData, 0x4000, 0x200);
     GXS_LoadBGExtPltt(bgA.palette->rawData, 0x4000, 0x1e0);
     BuildTileGridMap(G2S_GetBG3ScrPtr(), 1);
-    MI_CpuCopy8(bgB.character->rawData, data_ov015_020812e0->tileGrid, 0x640);
+    MI_CpuCopy8(bgB.character->rawData, gWirelessBoardGlobals->tileGrid, 0x640);
     CopyTileGridToScreen(G2S_GetBG0CharPtr());
     if (themeArchive != NULL) {
         NNSi_FndFreeFromDefaultHeap(themeArchive);
@@ -280,10 +280,10 @@ void SetupPanelBoard(void) {
     ZeroHalfThenFree(handleA);
     ZeroHalfThenFree(handleB);
 
-    ClearBuffer5100(data_ov015_020812e0->mask);
-    DrawSlotTileBlocks(data_ov015_020812e0->mask, data_ov015_020812e0->entryCount, -1, -1, 1);
+    ClearBuffer5100(gWirelessBoardGlobals->mask);
+    DrawSlotTileBlocks(gWirelessBoardGlobals->mask, gWirelessBoardGlobals->entryCount, -1, -1, 1);
     *(vu32 *)0x04001000 = (*(vu32 *)0x04001000 & ~0x1f00) | 0x1f00;
-    LoadPackedFileView(data_ov015_020812e0->textView, sOv015_WxcScrLanguageSZ_0207e8c8, 1);
+    LoadPackedFileView(gWirelessBoardGlobals->textView, sOv015_WxcScrLanguageSZ_0207e8c8, 1);
 
     layout.x = 0x13;
     layout.y = 0xe;
@@ -293,7 +293,7 @@ void SetupPanelBoard(void) {
     layout.unk_0c = 0;
     layout.tileBase = 0x3d8;
     layout.palette = 2;
-    data_ov015_020812e0->headerText = CreateTileObject(5, (u32)GetPanelSlot0(), &layout,
+    gWirelessBoardGlobals->headerText = CreateTileObject(5, (u32)GetPanelSlot0(), &layout,
                                                                 G2S_GetBG1CharPtr(), G2S_GetBG1ScrPtr());
     layout.x = 0x13;
     layout.unk_0a = 0;
@@ -303,6 +303,6 @@ void SetupPanelBoard(void) {
     layout.width = 0xd;
     layout.height = 3;
     layout.palette = 2;
-    data_ov015_020812e0->bodyText = CreateTileObject(5, (u32)GetPanelSlot0(), &layout,
+    gWirelessBoardGlobals->bodyText = CreateTileObject(5, (u32)GetPanelSlot0(), &layout,
                                                               G2S_GetBG1CharPtr(), G2S_GetBG1ScrPtr());
 }

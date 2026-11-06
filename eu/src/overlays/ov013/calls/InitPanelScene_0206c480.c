@@ -21,5 +21,5 @@
 #define func_ov027_020b90a4 FindWidgetById
 #define func_ov027_020b984c SetWidgetRootTouchEnabled
 #define func_ov027_020b9874 SetWidgetRootDpadEnabled
-#define g_panelState_02074ce0 data_ov013_02074ce0
+#define g_panelState_02074ce0 gOv013PanelGlobals
 #include "src/ov013/panel_state/InitPanelScene_0206c480.c"

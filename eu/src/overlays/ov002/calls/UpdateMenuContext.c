@@ -14,7 +14,7 @@ typedef struct MenuContext {
     u8 listB[4];
 } MenuContext;
 
-extern MenuContext *data_ov002_0206c464;
+extern MenuContext *gOv002MenuWork;
 extern MenuStateCallbacks gMenuStateTable[];
 extern void ScrollMenuClouds(void);
 extern void UpdateDriftingPanelWidgets(void);
@@ -23,13 +23,13 @@ extern u32 IsScreenFadeComplete(void);
 
 int UpdateMenuContext(void)
 {
-    gMenuStateTable[data_ov002_0206c464->state].update();
+    gMenuStateTable[gOv002MenuWork->state].update();
     ScrollMenuClouds();
     UpdateDriftingPanelWidgets();
-    UpdateDisplayObjectListQueued(data_ov002_0206c464->listA);
-    UpdateDisplayObjectListQueued(data_ov002_0206c464->listB);
+    UpdateDisplayObjectListQueued(gOv002MenuWork->listA);
+    UpdateDisplayObjectListQueued(gOv002MenuWork->listB);
     if (IsScreenFadeComplete()) {
-        return data_ov002_0206c464->result;
+        return gOv002MenuWork->result;
     }
     return 0;
 }

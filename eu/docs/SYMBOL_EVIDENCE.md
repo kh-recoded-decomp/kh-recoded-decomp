@@ -750,3 +750,12 @@ native connection/SDK storage. [WIRELESS_TABLES_STATE_STORAGE.md](WIRELESS_TABLE
 records consumers and physical extents, including the 2080-byte logical
 data-sharing state spanning several native labels. Cache-maintenance spans
 and opaque prefix words do not imply independent allocations.
+
+## Early overlay context and constant data
+
+Forty-four identities now describe demonstrated task work, movie/text data,
+field vectors, scan parameters and a pool callback table. Contracts are in
+[EARLY_CONTEXT_CONSTANT_DATA.md](EARLY_CONTEXT_CONSTANT_DATA.md),
+[WIRELESS_SCAN_BOARD_STORAGE.md](WIRELESS_SCAN_BOARD_STORAGE.md) and
+[POOL_KIND4_TRIGGER_CALLBACKS.md](POOL_KIND4_TRIGGER_CALLBACKS.md). Physical
+fragments remain distinct; incomplete fields and numeric selectors stay explicit.

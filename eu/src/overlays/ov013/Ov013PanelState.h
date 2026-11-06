@@ -111,7 +111,7 @@ void ChangePanelMenuState(char nextState);
 void ScrollPanelSlotWidgets(void);
 void PulsePanelPaletteColor(void);
 
-extern Ov013PanelState *data_ov013_02074ce0;
-#define gOv013PanelState data_ov013_02074ce0
+extern Ov013PanelState *gOv013PanelGlobals;
+#define gOv013PanelState gOv013PanelGlobals
 
 #endif

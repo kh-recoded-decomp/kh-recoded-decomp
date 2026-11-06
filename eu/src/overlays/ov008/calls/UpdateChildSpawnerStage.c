@@ -3,6 +3,6 @@
 #define FieldObject_SetSavedValue_0207f9c8 FieldObject_SetSavedValue
 #define RebindAnimTracks_020809d0 RebindAnimTracks
 #define UpdateChildSpawnerStage_020a095c UpdateChildSpawnerStage
-#define data_ov008_020a13e0 data_ov008_020a1400
+#define data_ov008_020a13e0 gChildSpawnerStageFrameCounts
 #define func_0202f4d8 Flags16_SetBit1
 #include "src/ov008/field_objects/UpdateChildSpawnerStage_020a095c.c"

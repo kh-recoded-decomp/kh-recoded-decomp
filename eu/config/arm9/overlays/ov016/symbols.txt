@@ -124,10 +124,10 @@ EnterFieldUnitPhase5 kind:function(thumb,size=0x4c) addr:0x020a6d60
 TryEnterFieldUnitPhase5 kind:function(thumb,size=0x38) addr:0x020a6dac
 DispatchIndexedFieldObjectCollision kind:function(thumb,size=0x14) addr:0x020a6de4
 ApplyIndexedFieldGroupLeaderHit kind:function(thumb,size=0x12) addr:0x020a6df8
-data_ov016_020a6e0c kind:data(any) addr:0x020a6e0c
-data_ov016_020a6e18 kind:data(any) addr:0x020a6e18
-data_ov016_020a6e24 kind:data(any) addr:0x020a6e24
-data_ov016_020a6e30 kind:data(any) addr:0x020a6e30
-data_ov016_020a6e3c kind:data(any) addr:0x020a6e3c
-data_ov016_020a6e60 kind:data(any) addr:0x020a6e60
+gFloorSwitchCollisionHalfExtents kind:data(any) addr:0x020a6e0c
+gFieldObjectLaunchUnitScale kind:data(any) addr:0x020a6e18
+gFieldObjectLoweringStep kind:data(any) addr:0x020a6e24
+gFieldObjectGroundProbeVector kind:data(any) addr:0x020a6e30
+gMovingFieldObjectCollisionHalfExtents kind:data(any) addr:0x020a6e3c
+gOverlay016ScriptCommandHandlers kind:data(any) addr:0x020a6e60
 sOv016_BaEfDbhit_020a6ec8 kind:data(any) addr:0x020a6ec8

@@ -10,7 +10,7 @@ typedef struct Ov002MenuState {
     u8 stateFlags;
 } Ov002MenuState;
 
-extern Ov002MenuState *data_ov002_0206c464;
-#define gOv002MenuState data_ov002_0206c464
+extern Ov002MenuState *gOv002MenuWork;
+#define gOv002MenuState gOv002MenuWork
 
 #endif

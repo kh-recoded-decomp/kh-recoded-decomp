@@ -1,5 +1,5 @@
-extern int data_ov000_02063a08;
+extern int gTitleSelectionGlobals;
 
 int GetTitleSessionStatus(void) {
-    return *(int *)(*(int *)&data_ov000_02063a08 + 4);
+    return *(int *)(*(int *)&gTitleSelectionGlobals + 4);
 }

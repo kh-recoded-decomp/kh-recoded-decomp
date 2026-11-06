@@ -5,9 +5,9 @@ typedef struct MovieSceneState {
     u8 stopRequested;
 } MovieSceneState;
 
-extern MovieSceneState *data_ov003_020658c0;
+extern MovieSceneState *gMovieSceneWork;
 
 void MovieScene_SetStopRequested(void)
 {
-    data_ov003_020658c0->stopRequested = TRUE;
+    gMovieSceneWork->stopRequested = TRUE;
 }

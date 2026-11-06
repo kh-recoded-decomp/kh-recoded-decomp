@@ -34,7 +34,7 @@ ReleaseSlot kind:function(thumb,size=0x10) addr:0x020a133c
 BindLinkSlotTable kind:function(thumb,size=0x66) addr:0x020a134c
 sOv008_BlockElevator_020a13b4 kind:data(any) addr:0x020a13b4
 gOv008ScriptObjectCreationHandlers kind:data(any) addr:0x020a13e0
-data_ov008_020a1400 kind:data(any) addr:0x020a1400
-data_ov008_020a140e kind:data(any) addr:0x020a140e
+gChildSpawnerStageFrameCounts kind:data(any) addr:0x020a1400
+gSegmentedObjectJointSuffixes kind:data(any) addr:0x020a140e
 sOv008_FormatSFormat02d_020a1428 kind:data(any) addr:0x020a1428
 sOv008_Metal_020a1430 kind:data(any) addr:0x020a1430

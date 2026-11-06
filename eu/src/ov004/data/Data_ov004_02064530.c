@@ -5,7 +5,7 @@
 extern void InitScrollTextWork(void);
 extern void ReleaseScrollTextWork(void);
 
-void *data_ov004_02064530[5] = {
+void *gScrollTextTaskClass[5] = {
     (void *)0x00110008,
     (void *)InitScrollTextWork,
     (void *)ReleaseScrollTextWork,

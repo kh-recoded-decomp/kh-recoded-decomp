@@ -1,3 +1,4 @@
+#define data_ov013_02074ce0 gOv013PanelGlobals
 #define FindWidgetById_020b90a4 FindWidgetById
 #define LayoutPanelSlotWidgets_0206fc74 LayoutPanelSlotWidgets
 #define RefreshPanelSlotDigits_0206fe50 RefreshPanelSlotDigits

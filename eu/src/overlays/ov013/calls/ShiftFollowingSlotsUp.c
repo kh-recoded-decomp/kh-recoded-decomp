@@ -3,5 +3,5 @@
 #define func_ov027_020b9360 ResolveWidgetPositionComponents
 #define func_ov027_020b9428 StartWidgetMoveTween
 #define func_ov027_020b984c SetWidgetRootTouchEnabled
-#define g_panelState_02074ce0 data_ov013_02074ce0
+#define g_panelState_02074ce0 gOv013PanelGlobals
 #include "src/ov013/panel_state/ShiftFollowingSlotsUp_02073ed4.c"

@@ -1,3 +1,4 @@
+#define data_ov004_02063c30 gScrollTextInitialScript
 #define ResetScrollTextScript_02062034 ResetScrollTextScript
 #define g_scrollText_020645a0 gScrollTextGlobals
 #include "src/ov004/scroll_text/ResetScrollTextScript_02062034.c"

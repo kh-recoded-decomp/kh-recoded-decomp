@@ -5,5 +5,5 @@
 #define func_ov027_020b7dfc FreeTagTrackerPools
 #define func_ov027_020b8c58 DestroyObjectsAndRelease
 #define func_ov027_020b9a60 FreeAllocatedBuffers
-#define g_panelState_0206f9a0 data_ov014_0206f9a0
+#define g_panelState_0206f9a0 gOv014PanelGlobals
 #include "src/ov014/panel_state/ShutdownPanelObjects_0206cea0.c"

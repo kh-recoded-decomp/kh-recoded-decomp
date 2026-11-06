@@ -8,5 +8,5 @@
 #define func_ov027_020b9098 SetWidgetRootInputCallback
 #define func_ov027_020b90a4 FindWidgetById
 #define func_ov027_020b9620 SetWidgetRecordActiveBits
-#define g_panelState_02074ce0 data_ov013_02074ce0
+#define g_panelState_02074ce0 gOv013PanelGlobals
 #include "src/ov013/panel_state/ResetPanelLayout_02072ae8.c"

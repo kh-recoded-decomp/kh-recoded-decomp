@@ -5,5 +5,5 @@
 #define func_ov002_020681b8 SetGroupSlotsScale
 #define func_ov002_02069190 ApplyCategoryRecord
 #define func_ov002_02069308 ClearPackedField
-#define g_panelState_0206f9a0 data_ov014_0206f9a0
+#define g_panelState_0206f9a0 gOv014PanelGlobals
 #include "src/ov014/panel_state/UpdatePanelFade_0206e6a0.c"

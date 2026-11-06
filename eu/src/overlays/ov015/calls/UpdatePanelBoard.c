@@ -1,3 +1,4 @@
+#define data_ov015_020812e0 gWirelessBoardGlobals
 #define data_ov015_0207a2f8 gWirelessBoardOverlayWidgetIds
 #define ClearCircleMask_02079228 ClearCircleMask
 #define ConvertTileGrid_02078d14 ConvertTileGrid

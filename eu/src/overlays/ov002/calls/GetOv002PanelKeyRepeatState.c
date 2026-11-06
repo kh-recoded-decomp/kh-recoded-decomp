@@ -1,5 +1,5 @@
-extern int data_ov002_0206c460;
+extern int gOv002ProfilePanelWork;
 
 int GetOv002PanelKeyRepeatState(void) {
-    return *(int *)&data_ov002_0206c460 + 0x12;
+    return *(int *)&gOv002ProfilePanelWork + 0x12;
 }

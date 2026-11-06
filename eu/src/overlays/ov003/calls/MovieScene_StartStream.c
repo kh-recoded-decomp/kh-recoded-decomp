@@ -1,3 +1,4 @@
+#define data_ov003_020658c0 gMovieSceneWork
 #define func_ov003_020649a0 SetMovieSubtitleAlignmentMode
 #define CallIndexedHandler_0202b3b8 CallIndexedHandler
 #define FillBackgroundTileRectangle_02017adc NNS_G2dMapScrToCharText

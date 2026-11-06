@@ -84,3 +84,21 @@ These constructors/transitions need a separate source cleanup using their
 real callback symbols and demonstrated ABI. `func_ov001_020882d4` retains its
 numeric identity while its precise callback contract is under review. No
 parameter or callback role is added merely to force relocation emission.
+
+## Early overlay context/constant block
+
+The 44-symbol early-overlay block checks 248 affected functions. 247 standalone
+checks pass. The preserved full-source-graph control at the actual compilation
+path reproduces the same relocation-map verdict for `InstallResultPanelCallbacks`
+(ov015:02079d6c, ARM, 96 bytes): its callback word at +0x50 is the literal
+`0x02079d08`, while the original index expects `PlaySoundOnPanelEntryMatch`.
+Both identify the existing ARM callback at ov015:02079d08. The rename changes
+neither the word nor the callback registration behavior; a separate cleanup
+must use the demonstrated callback signature before replacing the literal.
+
+```sh
+python tools/verify_idx.py src/overlays/ov015/calls/InstallResultPanelCallbacks.c InstallResultPanelCallbacks
+```
+
+All affected production object layouts and instructions remain unchanged, and
+the fresh full-module gate passes all 108 modules with identical hashes.

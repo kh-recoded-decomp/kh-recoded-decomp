@@ -9,5 +9,5 @@
 #define func_ov027_020b95e4 ClearWidgetRecordActiveBits
 #define func_ov027_020b96a0 SetWidgetAnimationFrame
 #define func_ov027_020b97b8 SetWidgetRecordMode
-#define g_panelState_02074ce0 data_ov013_02074ce0
+#define g_panelState_02074ce0 gOv013PanelGlobals
 #include "src/ov013/panel_state/OpenPanelConfirmPrompt_02073b94.c"

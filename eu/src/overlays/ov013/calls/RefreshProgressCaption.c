@@ -1,3 +1,9 @@
+#define data_ov013_02074c70 gOv013SummaryFormatSpaceConcat
+#define data_ov013_02074c80 gOv013SummaryFormatSpaced
+#define data_ov013_02074c94 gOv013SummaryFormatDe
+#define data_ov013_02074cac gOv013SummaryFormatDi
+#define data_ov013_02074cc4 gOv013SummaryFormatConcat
+#define data_ov013_02074ce0 gOv013PanelGlobals
 #define func_ov002_020620fc ResetOv002SubPanelText
 #define func_ov002_020621c4 GetOv002PanelMessage
 #define func_ov013_02070cb4 GetOv013PlayerCardIndexFromCursor

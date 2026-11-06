@@ -1,3 +1,4 @@
+#define data_ov002_0206c464 gOv002MenuWork
 #define func_ov002_02062000 GetOv002PanelKeyRepeatState
 #define IsButtonBPressed_020632c8 IsButtonBPressed
 #define PlaySoundEffect_0204d924 PlaySoundEffect

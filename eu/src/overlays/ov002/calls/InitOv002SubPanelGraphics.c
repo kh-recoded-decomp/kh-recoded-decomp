@@ -4,7 +4,7 @@ typedef struct PanelState {
     u8 pad_00[0x30];
 } PanelState;
 
-extern PanelState *data_ov002_0206c460;
+extern PanelState *gOv002ProfilePanelWork;
 extern void GX_SetBankForSubBG(int bank);
 extern void GX_SetBankForSubOBJ(int bank);
 extern void GXS_SetGraphicsMode(int enabled);
@@ -35,6 +35,6 @@ void InitOv002SubPanelGraphics(void) {
     *(vu16 *)0x0400100c = (*(vu16 *)0x0400100c & ~3) | 2;
     *(vu16 *)0x0400100e = (*(vu16 *)0x0400100e & ~3);
 
-    CreatePanelTextLayer6((u8 *)data_ov002_0206c460 + 0x30);
-    CreatePanelTextLayer((u8 *)data_ov002_0206c460 + 0x30);
+    CreatePanelTextLayer6((u8 *)gOv002ProfilePanelWork + 0x30);
+    CreatePanelTextLayer((u8 *)gOv002ProfilePanelWork + 0x30);
 }

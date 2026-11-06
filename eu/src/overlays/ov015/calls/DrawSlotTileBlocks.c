@@ -1,3 +1,4 @@
+#define data_ov015_020812e0 gWirelessBoardGlobals
 #define BlitTileToSheet_02078d90 BlitTileToSheet
 #define DrawSlotTileBlocks_02078bd0 DrawSlotTileBlocks
 #define FillTileInSheet_02078e38 FillTileInSheet

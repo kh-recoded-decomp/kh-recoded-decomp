@@ -1,4 +1,4 @@
 #define DispatchContextCommand_02066c78 DispatchContextCommand
 #define RecordPanelClear_02070f50 RecordPanelClear
-#define g_panelState_02074ce0 data_ov013_02074ce0
+#define g_panelState_02074ce0 gOv013PanelGlobals
 #include "src/ov013/panel_state/RecordPanelClear_02070f50.c"

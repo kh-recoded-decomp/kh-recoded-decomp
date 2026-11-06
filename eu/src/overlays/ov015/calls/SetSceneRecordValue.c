@@ -1,3 +1,4 @@
+#define data_ov015_020812e0 gWirelessBoardGlobals
 #define SetSceneRecordValue_020785f8 SetSceneRecordValue
 #define func_0204f13c IndexedRecord_SetPair
 #define func_0204f2c0 IndexedRecord_SetActive

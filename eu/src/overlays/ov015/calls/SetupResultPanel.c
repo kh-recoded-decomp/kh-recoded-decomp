@@ -1,3 +1,4 @@
+#define data_ov015_020812e0 gWirelessBoardGlobals
 #define data_ov015_0207a2b8 gWirelessResultTitleMessageIds
 #define data_ov015_0207a2cc gWirelessPartnerResultTitleMessageIds
 #define func_ov015_0207533c GeneratePanelRound

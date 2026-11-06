@@ -23,7 +23,7 @@ typedef struct Block {
     fx32 dropOffset;
 } Block;
 
-extern const VecFx32 data_ov017_020a5e18;
+extern const VecFx32 gGridObjectGroundProbeVector;
 extern int GetActorRegistry(void);
 extern RayHit *QueryModelSegmentCollision(int handle, RayQuery *query);
 extern void AddScaledVector(fx32 scale, const VecFx32 *scaledVector, const VecFx32 *baseVector,
@@ -38,7 +38,7 @@ void UpdateGridObjectDropOffsetFromRay(Block *block)
     fx32 diff;
 
     block->dropOffset = 0;
-    down = data_ov017_020a5e18;
+    down = gGridObjectGroundProbeVector;
     query.direction = &down;
     query.origin = &block->position;
     query.length = 0x1800;

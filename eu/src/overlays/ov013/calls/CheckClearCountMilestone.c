@@ -1,3 +1,4 @@
+#define data_ov013_02074ce0 gOv013PanelGlobals
 #define func_ov013_020716e4 ChangePanelMenuState
 #define CheckClearCountMilestone_02074674 CheckClearCountMilestone
 #define PlaySoundEffect_0204d924 PlaySoundEffect

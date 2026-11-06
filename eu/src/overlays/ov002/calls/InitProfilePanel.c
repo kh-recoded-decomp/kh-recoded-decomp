@@ -27,7 +27,7 @@ typedef struct {
     short record[13];
 } PanelState;
 
-extern PanelState *data_ov002_0206c460;
+extern PanelState *gOv002ProfilePanelWork;
 extern u8 sOv002_WXCVB_0206c35c[];
 extern SharedSettings data_0206085c;
 extern u16 data_02060878[];
@@ -63,7 +63,7 @@ void *InitProfilePanel(BOOL resumed)
     PanelState *state;
 
     state = GetRunningTaskWork();
-    data_ov002_0206c460 = state;
+    gOv002ProfilePanelWork = state;
     MIi_CpuClearFast(0, state, 0x130);
     state->heapId = GetCurrentTaskObject();
     state->selection = -1;

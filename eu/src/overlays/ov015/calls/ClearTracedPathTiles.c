@@ -1,3 +1,4 @@
+#define data_ov015_020812e0 gWirelessBoardGlobals
 #define ClearTilesAlongLine_0207943c ClearTilesAlongLine
 #define ClearTracedPathTiles_02079318 ClearTracedPathTiles
 #define data_ov015_0207e884 gWirelessModeDataTables

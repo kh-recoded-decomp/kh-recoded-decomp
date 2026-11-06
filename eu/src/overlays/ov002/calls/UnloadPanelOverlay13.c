@@ -1,5 +1,5 @@
 #define func_ov013_0206c760 ReleaseOv013PanelResources
-#define g_panelState_0206c460 data_ov002_0206c460
+#define g_panelState_0206c460 gOv002ProfilePanelWork
 #define func_02029f98 UnloadOverlayAfterGeometryTransfer
 #define UnloadPanelOverlay13_02062e98 UnloadPanelOverlay13
 #include "src/ov002/panel_state/UnloadPanelOverlay13_02062e98.c"

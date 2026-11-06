@@ -29,9 +29,9 @@ typedef struct MovieInitScene {
     MovieBgView views[27];
 } MovieInitScene;
 
-extern MovieInitScene *data_ov003_020658c0;
+extern MovieInitScene *gMovieSceneWork;
 extern char sOv003_FontEu10allNftr_02065854[];
-extern u8 data_ov003_020650f4[];
+extern u8 gMovieSceneTextPaletteStorage[];
 extern char sOv003_OpOpP2_02065868[];
 extern u8 gMovieScriptCommandHandlers[];
 extern u8 sOv003_OpScrZ_02065874[];
@@ -70,7 +70,7 @@ void *MovieScene_Init(int fromTitle)
     InitPxiChannelsPair();
     LoadOverlayAfterGeometryTransfer(0, (int)OVERLAY_22_ID);
     MoviePlayer_SetupDisplay();
-    data_ov003_020658c0 = scene;
+    gMovieSceneWork = scene;
     scene->state = 0;
     scene->flags = 0;
     if (fromTitle == 0) {
@@ -84,8 +84,8 @@ void *MovieScene_Init(int fromTitle)
     scene->visiblePlanes = 0;
     MI_CpuFill8(&scene->streamOwner, 0, 0x1d4);
     LoadUtf16FontResource(scene->font, sOv003_FontEu10allNftr_02065854);
-    GX_LoadBGPltt(data_ov003_020650f4, 0x1a0, 0x20);
-    GXS_LoadBGPltt(data_ov003_020650f4, 0x1a0, 0x20);
+    GX_LoadBGPltt(gMovieSceneTextPaletteStorage, 0x1a0, 0x20);
+    GXS_LoadBGPltt(gMovieSceneTextPaletteStorage, 0x1a0, 0x20);
     scene->streamOwner = scene->stream;
     if (GetLanguageIndex() != 0) {
         localized = 1;

@@ -1,3 +1,4 @@
+#define data_ov015_020812e0 gWirelessBoardGlobals
 #define SetPanelEntrySequence_02078638 SetPanelEntrySequence
 #define SetSlotAnimSequence_0204f24c SetSlotAnimSequence
 #define func_0204f204 SetIndexedRecordAnimationFrame

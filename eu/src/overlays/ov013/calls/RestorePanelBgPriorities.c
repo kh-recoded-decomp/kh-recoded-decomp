@@ -1,3 +1,4 @@
+#define data_ov013_02074ce0 gOv013PanelGlobals
 #define DispatchContextCommand_02066c78 DispatchContextCommand
 #define RestorePanelBgPriorities_02073e38 RestorePanelBgPriorities
 #define func_ov013_0206f06c RefreshProgressCaption

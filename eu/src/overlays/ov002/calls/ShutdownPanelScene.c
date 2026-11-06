@@ -24,7 +24,7 @@ typedef struct PanelState {
     MessageFile messages[2];
 } PanelState;
 
-extern PanelState *data_ov002_0206c460;
+extern PanelState *gOv002ProfilePanelWork;
 extern u8 sOv002_WXCVB_0206c35c[];
 extern char OVERLAY_27_ID[];
 
@@ -48,17 +48,17 @@ void ShutdownPanelScene(void)
     TP_CheckError(4);
     ReleaseRecordSlot(9);
     ReleaseRecordSlot(0xb);
-    DestroyTaskObjectWrapper(data_ov002_0206c460->unk_04);
-    FreePointerIfSet(&data_ov002_0206c460->messages[0].file);
-    FreePointerIfSet(&data_ov002_0206c460->messages[1].file);
-    DestroyFndObjectList(&data_ov002_0206c460->layers[0]);
-    DestroyFndObjectList(&data_ov002_0206c460->layers[1]);
-    DestroyFndObjectList(&data_ov002_0206c460->layers[2]);
-    DestroyFndObjectList(&data_ov002_0206c460->layers[3]);
-    FreeResourceBufferAndProbeHeap(&data_ov002_0206c460->fonts[0]);
-    FreeResourceBufferAndProbeHeap(&data_ov002_0206c460->fonts[1]);
+    DestroyTaskObjectWrapper(gOv002ProfilePanelWork->unk_04);
+    FreePointerIfSet(&gOv002ProfilePanelWork->messages[0].file);
+    FreePointerIfSet(&gOv002ProfilePanelWork->messages[1].file);
+    DestroyFndObjectList(&gOv002ProfilePanelWork->layers[0]);
+    DestroyFndObjectList(&gOv002ProfilePanelWork->layers[1]);
+    DestroyFndObjectList(&gOv002ProfilePanelWork->layers[2]);
+    DestroyFndObjectList(&gOv002ProfilePanelWork->layers[3]);
+    FreeResourceBufferAndProbeHeap(&gOv002ProfilePanelWork->fonts[0]);
+    FreeResourceBufferAndProbeHeap(&gOv002ProfilePanelWork->fonts[1]);
     NotifyBothOrOne(1, sOv002_WXCVB_0206c35c, 0);
     UnloadOverlayAfterGeometryTransfer(0, (int)OVERLAY_27_ID);
-    FSi_DefaultStepDoneB(data_ov002_0206c460->keyRepeat);
+    FSi_DefaultStepDoneB(gOv002ProfilePanelWork->keyRepeat);
     ReleaseRecordManager();
 }

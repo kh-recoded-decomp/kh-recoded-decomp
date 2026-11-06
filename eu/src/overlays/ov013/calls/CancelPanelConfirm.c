@@ -1,3 +1,4 @@
+#define data_ov013_02074ce0 gOv013PanelGlobals
 #define CancelPanelConfirm_020731a4 CancelPanelConfirm
 #define DispatchContextCommand_02066c78 DispatchContextCommand
 #define func_ov013_0206f06c RefreshProgressCaption

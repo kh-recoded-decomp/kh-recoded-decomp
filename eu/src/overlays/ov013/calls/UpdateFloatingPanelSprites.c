@@ -1,3 +1,4 @@
+#define data_ov013_02074ce0 gOv013PanelGlobals
 #define UpdateFloatingPanelSprites_0207449c UpdateFloatingPanelSprites
 #define func_0202a9d0 NextSharedRandom16Scaled
 #define func_ov027_020b91c8 SetWidgetPosition

@@ -1,3 +1,4 @@
+#define data_ov015_020812e0 gWirelessBoardGlobals
 #define PlaySoundOnPanelEntryMatch_02079d08 PlaySoundOnPanelEntryMatch
 #define func_0204d924 PlaySoundEffect
 #define func_ov027_020b90a4 FindWidgetById

@@ -1,3 +1,4 @@
+#define data_ov013_02074ce0 gOv013PanelGlobals
 #define func_ov002_02062000 GetOv002PanelKeyRepeatState
 #define func_ov013_020716e4 ChangePanelMenuState
 #define IsButtonBPressed_020632c8 IsButtonBPressed

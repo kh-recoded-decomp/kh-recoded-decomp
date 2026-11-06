@@ -1,3 +1,4 @@
+#define data_ov014_0206f9a0 gOv014PanelGlobals
 #define data_ov014_0206f800 gRecordPanelProgressGroupTotals
 #define data_ov014_0206f86c gRecordPanelMainBgConfig
 #define data_ov014_0206f880 gRecordPanelSubBgConfig

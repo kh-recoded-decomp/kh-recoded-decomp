@@ -1,3 +1,4 @@
+#define data_ov015_020812e0 gWirelessBoardGlobals
 #define func_ov015_0207634c ReleaseWirelessPanelResources
 #define ReleaseWorkBuffer_020752f4 ReleaseWorkBuffer
 #define func_0202a1c4 NNSi_FndFreeFromDefaultHeap

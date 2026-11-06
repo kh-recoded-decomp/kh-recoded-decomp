@@ -1,4 +1,4 @@
-extern unsigned int data_ov013_02074ce0;
+extern unsigned int gOv013PanelGlobals;
 extern unsigned int PlaySoundEffect();
 
 void SetOv013WidgetSelectionAWithSound(int context)
@@ -6,9 +6,9 @@ void SetOv013WidgetSelectionAWithSound(int context)
 {
   int previousSelection;
 
-  previousSelection = *(int *)(data_ov013_02074ce0 + 16);
-  *(unsigned int *)(data_ov013_02074ce0 + 16) = *(unsigned int *)(context + 0xc);
-  if (*(int *)(data_ov013_02074ce0 + 16) == previousSelection) {
+  previousSelection = *(int *)(gOv013PanelGlobals + 16);
+  *(unsigned int *)(gOv013PanelGlobals + 16) = *(unsigned int *)(context + 0xc);
+  if (*(int *)(gOv013PanelGlobals + 16) == previousSelection) {
     return;
   }
   PlaySoundEffect(2,0);

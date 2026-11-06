@@ -1,3 +1,4 @@
+#define data_ov013_02074ce0 gOv013PanelGlobals
 #define func_ov002_02062000 GetOv002PanelKeyRepeatState
 #define func_ov013_0206fbbc PositionOv013CursorWidget
 #define func_ov013_02070e40 ApplyOv013SubitemValuesToWidgets

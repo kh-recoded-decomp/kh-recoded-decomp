@@ -102,4 +102,4 @@ gOv039SelectionDescriptor kind:data(any) addr:0x020639b8
 gOv039SelectionResultMap kind:data(any) addr:0x020639cc
 gTitleNoticeBackgroundColor kind:bss addr:0x02063a00
 gWorldSession kind:bss addr:0x02063a04
-data_ov000_02063a08 kind:bss addr:0x02063a08
+gTitleSelectionGlobals kind:bss addr:0x02063a08

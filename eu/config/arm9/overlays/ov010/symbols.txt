@@ -47,9 +47,9 @@ AnimSequence_Reset kind:function(thumb,size=0x3c) addr:0x020a1b10
 AnimSequence_AddClip kind:function(thumb,size=0x22) addr:0x020a1b4c
 AnimSequence_Update_020a1b70 kind:function(thumb,size=0x124) addr:0x020a1b70
 AnimSequence_GetCurrentPosition kind:function(thumb,size=0xac) addr:0x020a1c94
-data_ov010_020a1d40 kind:data(any) addr:0x020a1d40
-data_ov010_020a1d4c kind:data(any) addr:0x020a1d4c
-data_ov010_020a1d7c kind:data(any) addr:0x020a1d7c
+gSpecialReleaseBurstPosition kind:data(any) addr:0x020a1d40
+gSpecialObjectSpriteLoadParameters kind:data(any) addr:0x020a1d4c
+gAnimSequenceRotationAdjustment kind:data(any) addr:0x020a1d7c
 gOv010ScriptObjectCreationHandlers kind:data(any) addr:0x020a1da0
 sOv010_BaEfFnW7P2_020a1dc0 kind:data(any) addr:0x020a1dc0
 sOv010_CmDD_020a1dd0 kind:data(any) addr:0x020a1dd0

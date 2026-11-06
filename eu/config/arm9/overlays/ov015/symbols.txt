@@ -362,8 +362,8 @@ gWirelessWepKeyStorage kind:bss addr:0x0207e9e0
 gWirelessConnectSsidStorage kind:bss addr:0x0207e9f4
 gWirelessParentParamStorage kind:bss addr:0x0207ea20
 gWhScanExParam kind:bss addr:0x0207ea60
-data_ov015_0207ea6a kind:bss addr:0x0207ea6a
-data_ov015_0207ea74 kind:bss addr:0x0207ea74
+gWirelessScanAddressAndModeStorage kind:bss addr:0x0207ea6a
+gWirelessScanSsidStorage kind:bss addr:0x0207ea74
 gWirelessMpSendBuffer kind:bss addr:0x0207eac0
 gWirelessParentBssDescriptorStorage kind:bss addr:0x0207eb60
 gWirelessMpReceiveBuffer kind:bss addr:0x0207ec20
@@ -384,4 +384,4 @@ data_ov015_02080404 kind:bss addr:0x02080404
 data_ov015_02080504 kind:bss addr:0x02080504
 data_ov015_02080605 kind:bss addr:0x02080605
 data_ov015_02080606 kind:bss addr:0x02080606
-data_ov015_020812e0 kind:bss addr:0x020812e0
+gWirelessBoardGlobals kind:bss addr:0x020812e0

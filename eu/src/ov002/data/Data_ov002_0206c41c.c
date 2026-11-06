@@ -5,7 +5,7 @@
 extern void StartScreenFade(void);
 extern void MarkScreenFadeComplete(void);
 
-void *data_ov002_0206c420[5] = {
+void *gOv002ScreenFadeTaskClass[5] = {
     (void *)0x00100008,
     (void *)StartScreenFade,
     (void *)MarkScreenFadeComplete,
@@ -13,6 +13,6 @@ void *data_ov002_0206c420[5] = {
     NULL,
 };
 
-u32 data_ov002_0206c41c[1] = {
+u32 gOv002ScreenFadeCompleteStorage[1] = {
     0x00000001,
 };

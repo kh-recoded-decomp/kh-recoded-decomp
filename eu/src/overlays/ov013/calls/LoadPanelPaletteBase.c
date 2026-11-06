@@ -1,3 +1,4 @@
+#define data_ov013_02074ce0 gOv013PanelGlobals
 #define LoadPanelPaletteBase_02074240 LoadPanelPaletteBase
 #define func_ov002_020680a4 ResetGroupSlotsPosition
 #define func_ov002_02068248 SetGroupSlotsVisible

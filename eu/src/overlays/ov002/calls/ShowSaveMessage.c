@@ -1,3 +1,4 @@
+#define data_ov002_0206c464 gOv002MenuWork
 #define func_ov002_020620fc ResetOv002SubPanelText
 #define func_ov002_020621c4 GetOv002PanelMessage
 #define ShowSaveMessage_02064584 ShowSaveMessage

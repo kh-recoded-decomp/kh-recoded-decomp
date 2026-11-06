@@ -1,3 +1,4 @@
+#define data_ov003_020658c0 gMovieSceneWork
 #define ActivateSubtitleStream_020a88f0 ActivateSubtitleStream
 #define MovieScene_BeginFade_02063fa8 MovieScene_BeginFade
 #include "src/ov003/video_playback/MovieScene_BeginFade_02063fa8.c"

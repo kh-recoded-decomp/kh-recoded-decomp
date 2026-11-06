@@ -1,2 +1,3 @@
+#define data_ov003_020658c0 gMovieSceneWork
 #define MovieScene_IsFadeDone_02064008 MovieScene_IsFadeDone
 #include "src/ov003/video_playback/MovieScene_IsFadeDone_02064008.c"

@@ -147,10 +147,10 @@ GetKind7HiddenMask kind:function(thumb,size=0xa) addr:0x020a5df0
 GetKind7Flag4 kind:function(thumb,size=0xa) addr:0x020a5dfc
 FindLastInactiveObjectInParentChainWrapper kind:function(thumb,size=0x8) addr:0x020a5e08
 FindRootObjectWrapper kind:function(thumb,size=0x8) addr:0x020a5e10
-data_ov017_020a5e18 kind:data(any) addr:0x020a5e18
+gGridObjectGroundProbeVector kind:data(any) addr:0x020a5e18
 gPoolInitHandlers kind:data(any) addr:0x020a5e24
 gPoolValueHandlers kind:data(any) addr:0x020a5e34
 gPoolMotionHandlers kind:data(any) addr:0x020a5e48
-data_ov017_020a5e5c kind:data(any) addr:0x020a5e5c
+gKind4PoolTriggerHitHandlers kind:data(any) addr:0x020a5e5c
 gPoolScriptCommandHandlers kind:data(any) addr:0x020a5e80
 sOv017_BaEfDbhit_020a5f38 kind:data(any) addr:0x020a5f38

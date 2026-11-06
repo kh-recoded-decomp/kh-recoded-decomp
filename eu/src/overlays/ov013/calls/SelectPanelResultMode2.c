@@ -1,3 +1,4 @@
+#define data_ov013_02074ce0 gOv013PanelGlobals
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define SelectPanelResultMode2_02074608 SelectPanelResultMode2
 #define func_ov027_020b90a4 FindWidgetById

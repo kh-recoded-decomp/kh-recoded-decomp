@@ -12,11 +12,11 @@ typedef struct PanelState {
     s32 delta;
 } PanelState;
 
-extern PanelState *data_ov013_02074ce0;
+extern PanelState *gOv013PanelGlobals;
 
 void ComputeOv013ScrollLimits(void) {
-    PanelState *state = data_ov013_02074ce0;
+    PanelState *state = gOv013PanelGlobals;
     s32 delta = state->factor * (state->endValue - state->startValue);
     state->velocity = -delta;
-    data_ov013_02074ce0->delta = delta;
+    gOv013PanelGlobals->delta = delta;
 }

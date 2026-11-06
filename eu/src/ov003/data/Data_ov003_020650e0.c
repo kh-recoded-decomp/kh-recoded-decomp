@@ -5,7 +5,7 @@
 extern void MovieScene_Init(void);
 extern void MovieScene_Shutdown(void);
 
-u32 data_ov003_02065134[456] = {
+u32 gMovieSceneTimelineEvents[456] = {
     0x00000000, 0x001F0004, 0x00000001, 0x0000044C,
     0x001A0000, 0x00000001, 0x0000044D, 0x001A0002,
     0x00000001, 0x0000044E, 0x001A0001, 0x00000001,
@@ -122,14 +122,14 @@ u32 data_ov003_02065134[456] = {
     0x00000021, 0x00001230, 0x00000005, 0x00000000,
 };
 
-u32 data_ov003_020650f4[16] = {
+u32 gMovieSceneTextPaletteStorage[16] = {
     0x637C0000, 0x001F0000, 0x7C0003E0, 0x7C1F7FE0,
     0x000003FF, 0x00000000, 0x00000000, 0x21080000,
     0x00000000, 0x00000000, 0x00000000, 0x00000000,
     0x00000000, 0x00000000, 0x00000000, 0x00000000,
 };
 
-void *data_ov003_020650e0[5] = {
+void *gMovieSceneTaskClass[5] = {
     (void *)0x000D0008,
     (void *)MovieScene_Init,
     (void *)MovieScene_Shutdown,

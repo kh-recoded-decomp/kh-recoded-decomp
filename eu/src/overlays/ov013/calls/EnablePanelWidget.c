@@ -1,3 +1,4 @@
+#define data_ov013_02074ce0 gOv013PanelGlobals
 #define EnablePanelWidget_020741f4 EnablePanelWidget
 #define func_ov027_020b984c SetWidgetRootTouchEnabled
 #include "src/ov013/panel_state/EnablePanelWidget_020741f4.c"

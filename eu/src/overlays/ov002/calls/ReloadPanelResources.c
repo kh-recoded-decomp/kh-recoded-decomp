@@ -1,3 +1,4 @@
+#define data_ov002_0206c460 gOv002ProfilePanelWork
 #define func_ov002_02062254 InitOv002MainPanelGraphics
 #define func_ov002_02062368 InitOv002SubPanelGraphics
 #define ReloadPanelResources_02062938 ReloadPanelResources

@@ -1,7 +1,7 @@
 #include "nitro/types.h"
 
-extern u8 *data_ov015_020812e0;
+extern u8 *gWirelessBoardGlobals;
 
 BOOL HasWirelessPanelTouchSamples(void) {
-    return *(s16 *)(data_ov015_020812e0 + 0x38) > 0;
+    return *(s16 *)(gWirelessBoardGlobals + 0x38) > 0;
 }

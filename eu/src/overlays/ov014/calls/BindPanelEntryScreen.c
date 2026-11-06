@@ -1,5 +1,5 @@
 #define BindPanelEntryScreen_0206e900 BindPanelEntryScreen
 #define G2S_GetBG0ScrPtr_02006e14 G2S_GetBG0ScrPtr
 #define func_ov027_020b9b18 CopyWidgetScreenRegion
-#define g_panelState_0206f9a0 data_ov014_0206f9a0
+#define g_panelState_0206f9a0 gOv014PanelGlobals
 #include "src/ov014/panel_state/BindPanelEntryScreen_0206e900.c"

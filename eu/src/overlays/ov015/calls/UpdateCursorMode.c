@@ -1,3 +1,4 @@
+#define data_ov015_020812e0 gWirelessBoardGlobals
 #define UpdateCursorMode_02077a28 UpdateCursorMode
 #define func_ov015_02077a8c MarkGroupPanelSlots
 #define func_ov015_02077c60 MarkLowPanelSlots

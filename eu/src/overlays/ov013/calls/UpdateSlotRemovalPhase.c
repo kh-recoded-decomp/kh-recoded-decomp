@@ -1,3 +1,4 @@
+#define data_ov013_02074ce0 gOv013PanelGlobals
 #define func_ov013_0206fbbc PositionOv013CursorWidget
 #define func_ov013_02070a18 ComputeOv013ScrollLimits
 #define func_ov013_02070cb4 GetOv013PlayerCardIndexFromCursor

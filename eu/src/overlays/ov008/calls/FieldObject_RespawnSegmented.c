@@ -8,7 +8,7 @@
 #define RebindAnimTracks_020809d0 RebindAnimTracks
 #define SpawnFieldActor_0208078c SpawnFieldActor
 #define data_ov008_020a1394 sOv008_BlockElevator_020a13b4
-#define data_ov008_020a13ee data_ov008_020a140e
+#define data_ov008_020a13ee gSegmentedObjectJointSuffixes
 #define data_ov008_020a1408 sOv008_FormatSFormat02d_020a1428
 #define data_ov008_020a1410 sOv008_Metal_020a1430
 #define func_01ff86fc MIi_CpuClear32

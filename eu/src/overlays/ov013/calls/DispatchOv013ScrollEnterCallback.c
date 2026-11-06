@@ -2,9 +2,9 @@ typedef struct {
     void (*handler)(void);
     unsigned char pad_04[8];
 } PanelStateEntry;
-extern int data_ov013_02074ce0;
+extern int gOv013PanelGlobals;
 extern PanelStateEntry gPanelScrollInitCallback[];
 
 void DispatchOv013ScrollEnterCallback(void) {
-    gPanelScrollInitCallback[*(signed char *)(data_ov013_02074ce0 + 0xd258)].handler();
+    gPanelScrollInitCallback[*(signed char *)(gOv013PanelGlobals + 0xd258)].handler();
 }

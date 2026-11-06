@@ -7,8 +7,8 @@ extern BOOL InitTextLayerDefault(void *entry, int mode,
 void InitOv002MainBg3TextLayer(NNSG2dFont *font) {
     u16 data[8];
 
-    if (data_ov002_0206c460->mainBg3TextInitialized) {
-        DestroyFndObjectList(&data_ov002_0206c460->textLayers[0]);
+    if (gOv002ProfilePanelWork->mainBg3TextInitialized) {
+        DestroyFndObjectList(&gOv002ProfilePanelWork->textLayers[0]);
     }
 
     data[0] = 1;
@@ -20,6 +20,6 @@ void InitOv002MainBg3TextLayer(NNSG2dFont *font) {
     data[6] = 0;
     data[7] = 3;
 
-    InitTextLayerDefault(&data_ov002_0206c460->textLayers[0], 3, font, data);
-    data_ov002_0206c460->mainBg3TextInitialized = 1;
+    InitTextLayerDefault(&gOv002ProfilePanelWork->textLayers[0], 3, font, data);
+    gOv002ProfilePanelWork->mainBg3TextInitialized = 1;
 }

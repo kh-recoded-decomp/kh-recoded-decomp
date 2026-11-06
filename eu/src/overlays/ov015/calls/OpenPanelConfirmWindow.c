@@ -1,3 +1,4 @@
+#define data_ov015_020812e0 gWirelessBoardGlobals
 #define CopyClippedScreenRegion_020167d0 NNS_G2dBGLoadScreenRect
 #define CountTextLines_02078af4 CountTextLines
 #define CreateTileObject_02079c54 CreateTileObject

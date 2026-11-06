@@ -1,10 +1,10 @@
 #include "nitro/types.h"
 
 extern void StopPanelSequence(void);
-extern u8 *data_ov015_020812e0;
+extern u8 *gWirelessBoardGlobals;
 
 void SetWirelessPanelModeAndStopSequence(u32 value) {
-    *(u32 *)(data_ov015_020812e0 + 8) = value;
+    *(u32 *)(gWirelessBoardGlobals + 8) = value;
     StopPanelSequence();
-    *(u32 *)(data_ov015_020812e0 + 0x18) &= 0xfffeffff;
+    *(u32 *)(gWirelessBoardGlobals + 0x18) &= 0xfffeffff;
 }

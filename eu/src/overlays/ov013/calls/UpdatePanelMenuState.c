@@ -8,5 +8,5 @@
 #define UpdatePanelMenuState_020733f0 UpdatePanelMenuState
 #define func_ov013_0206e574 DrawPlayerCardDetails
 #define func_ov013_0206f978 LeavePanelScene
-#define g_panelState_02074ce0 data_ov013_02074ce0
+#define g_panelState_02074ce0 gOv013PanelGlobals
 #include "src/ov013/panel_state/UpdatePanelMenuState_020733f0.c"

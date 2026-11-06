@@ -14,7 +14,7 @@ extern int GetWideStringLength(int param);
 extern void CopyWideStringBounded(int param1, u32 value, int mode);
 extern void CopyRecordTableBField(int id, int param);
 extern u32 GetPackedFileEntry(void *ptr, int mode);
-extern u8 *data_ov015_020812e0;
+extern u8 *gWirelessBoardGlobals;
 
 int FormatWirelessPanelDescriptorText(int param1, PanelDescriptor *desc) {
     int offset;
@@ -28,7 +28,7 @@ int FormatWirelessPanelDescriptorText(int param1, PanelDescriptor *desc) {
         ReleaseRecordSlot(0);
         if (desc->count > 0) {
             offset = GetWideStringLength(param1);
-            value = GetPackedFileEntry(data_ov015_020812e0 + 0x65e0, 0x37);
+            value = GetPackedFileEntry(gWirelessBoardGlobals + 0x65e0, 0x37);
             SPrintfUnbounded(param1 + offset * 2, value, desc->count);
         }
     } else {

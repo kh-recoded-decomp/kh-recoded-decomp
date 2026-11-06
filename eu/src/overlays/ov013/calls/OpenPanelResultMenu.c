@@ -1,3 +1,4 @@
+#define data_ov013_02074ce0 gOv013PanelGlobals
 #define func_ov013_02070a50 UploadOv013SubBg0ScreenEntry1
 #define func_ov013_02070e40 ApplyOv013SubitemValuesToWidgets
 #define func_ov013_02074420 SetOv013WidgetSelectionAWithSound

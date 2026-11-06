@@ -40,7 +40,7 @@ typedef char Ov002PanelStateSizeCheck[
 void ResetMainPanelGraphics(void);
 void ResetSubPanelGraphics(void);
 
-extern Ov002PanelState *data_ov002_0206c460;
-#define gOv002PanelState data_ov002_0206c460
+extern Ov002PanelState *gOv002ProfilePanelWork;
+#define gOv002PanelState gOv002ProfilePanelWork
 
 #endif

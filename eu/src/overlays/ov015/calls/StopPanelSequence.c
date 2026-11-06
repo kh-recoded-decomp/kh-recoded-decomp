@@ -1,3 +1,4 @@
+#define data_ov015_020812e0 gWirelessBoardGlobals
 #define StopPanelSequence_0207793c StopPanelSequence
 #define StopSeqArcOrDefault_0204d960 StopSeqArcOrDefault
 #include "src/ov015/ui/StopPanelSequence_0207793c.c"

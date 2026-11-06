@@ -11,5 +11,5 @@
 #define ScrollListKeys_020631b4 ScrollListKeys
 #define UpdatePanelEntryState_020718e0 UpdatePanelEntryState
 #define func_ov013_0206e574 DrawPlayerCardDetails
-#define g_panelState_02074ce0 data_ov013_02074ce0
+#define g_panelState_02074ce0 gOv013PanelGlobals
 #include "src/ov013/panel_state/UpdatePanelEntryState_020718e0.c"

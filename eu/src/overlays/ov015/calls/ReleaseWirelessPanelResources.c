@@ -3,12 +3,12 @@
 extern void DestroyOwnedObjectList(void *ptr);
 extern void DestroyObjectsAndRelease(void *ptr);
 extern void FreePointerIfSet(void *ptr);
-extern u8 *data_ov015_020812e0;
+extern u8 *gWirelessBoardGlobals;
 
 void ReleaseWirelessPanelResources(void) {
-    DestroyObjectsAndRelease(data_ov015_020812e0 + 0x160);
-    FreePointerIfSet(data_ov015_020812e0 + 0x65e0);
-    DestroyOwnedObjectList(data_ov015_020812e0 + 0x65ec);
-    DestroyOwnedObjectList(data_ov015_020812e0 + 0x65f0);
-    DestroyOwnedObjectList(data_ov015_020812e0 + 0x65f4);
+    DestroyObjectsAndRelease(gWirelessBoardGlobals + 0x160);
+    FreePointerIfSet(gWirelessBoardGlobals + 0x65e0);
+    DestroyOwnedObjectList(gWirelessBoardGlobals + 0x65ec);
+    DestroyOwnedObjectList(gWirelessBoardGlobals + 0x65f0);
+    DestroyOwnedObjectList(gWirelessBoardGlobals + 0x65f4);
 }

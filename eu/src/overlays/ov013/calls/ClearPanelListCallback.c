@@ -1,3 +1,4 @@
+#define data_ov013_02074ce0 gOv013PanelGlobals
 #define ClearPanelListCallback_020738ec ClearPanelListCallback
 #define func_ov027_020b9098 SetWidgetRootInputCallback
 #include "src/ov013/panel_state/ClearPanelListCallback_020738ec.c"

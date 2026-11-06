@@ -1,3 +1,4 @@
+#define data_ov013_02074ce0 gOv013PanelGlobals
 #define DispatchContextCommand_02066c78 DispatchContextCommand
 #define RefreshInactivePanelSlots_02071638 RefreshInactivePanelSlots
 #include "src/ov013/panel_state/RefreshInactivePanelSlots_02071638.c"

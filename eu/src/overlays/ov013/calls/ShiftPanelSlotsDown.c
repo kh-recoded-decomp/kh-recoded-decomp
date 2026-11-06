@@ -1,3 +1,3 @@
 #define ShiftPanelSlotsDown_02070dd0 ShiftPanelSlotsDown
-#define g_panelState_02074ce0 data_ov013_02074ce0
+#define g_panelState_02074ce0 gOv013PanelGlobals
 #include "src/ov013/panel_state/ShiftPanelSlotsDown_02070dd0.c"

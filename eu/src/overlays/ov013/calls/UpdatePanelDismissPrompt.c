@@ -1,3 +1,4 @@
+#define data_ov013_02074ce0 gOv013PanelGlobals
 #define func_ov002_020620fc ResetOv002SubPanelText
 #define func_ov013_02070aa0 QueueOv013SubBg0ClearAndHideWidgets
 #define func_ov013_020716e4 ChangePanelMenuState

@@ -1,3 +1,4 @@
+#define data_ov015_020812e0 gWirelessBoardGlobals
 #define CopyClippedScreenRegion_020167d0 NNS_G2dBGLoadScreenRect
 #define CreateTileObject_02079c54 CreateTileObject
 #define G2S_GetBG2CharPtr_02007170 G2S_GetBG2CharPtr

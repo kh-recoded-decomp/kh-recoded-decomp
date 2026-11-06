@@ -1,3 +1,4 @@
+#define data_ov000_02063a08 gTitleSelectionGlobals
 #define ExitOv039Selection_020636c4 ExitOv039Selection
 #define func_02029f98 UnloadOverlayAfterGeometryTransfer
 #define OverlayId39_00000027 OVERLAY_39_ID

@@ -1,3 +1,4 @@
+#define data_ov003_02065134 gMovieSceneTimelineEvents
 #define MovieScene_ProcessTimeline_0206436c MovieScene_ProcessTimeline
 #define SetBrightnessAndSyncMain_02029e7c SetBrightnessAndSyncMain
 #define data_ov003_020650c4 gMovieEventHandlers

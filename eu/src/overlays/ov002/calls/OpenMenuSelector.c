@@ -6,5 +6,5 @@
 #define func_ov027_020b95e4 ClearWidgetRecordActiveBits
 #define func_ov027_020b96e4 SetFocusedWidget
 #define func_ov027_020b9764 ApplyWidgetFocusAnims
-#define g_context_0206c464 data_ov002_0206c464
+#define g_context_0206c464 gOv002MenuWork
 #include "src/ov002/panel_state/OpenMenuSelector.c"

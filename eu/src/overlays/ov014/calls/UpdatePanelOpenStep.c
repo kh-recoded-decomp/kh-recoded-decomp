@@ -2,5 +2,5 @@
 #define func_ov002_0206655c IsScreenFadeComplete
 #define ChangePanelState_0206d1c0 ChangePanelState
 #define UpdatePanelOpenStep_0206d25c UpdatePanelOpenStep
-#define g_panelState_0206f9a0 data_ov014_0206f9a0
+#define g_panelState_0206f9a0 gOv014PanelGlobals
 #include "src/ov014/panel_state/UpdatePanelOpenStep_0206d25c.c"

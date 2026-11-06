@@ -8,5 +8,5 @@
 #define SettleLinkHeight_020a2250 SettleLinkHeight
 #define SweepWorldCollision_020364a0 SweepWorldCollision
 #define UpdateLinkLimit_020a2034 UpdateLinkLimit
-#define data_ov019_020a365c data_ov019_020a367c
+#define data_ov019_020a365c gLinkSettlingSweepDelta
 #include "src/ov019/unclassified_helpers/SettleLinkHeight_020a2250.c"

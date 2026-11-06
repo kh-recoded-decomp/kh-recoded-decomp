@@ -4,7 +4,7 @@
 #define SweepWorldCollision_020364a0 SweepWorldCollision
 #define UpdateFloorSwitch_020a4210 UpdateFloorSwitch
 #define data_02053444 gIdentityMtxFx33
-#define data_ov016_020a6dec data_ov016_020a6e0c
+#define data_ov016_020a6dec gFloorSwitchCollisionHalfExtents
 #define func_02033c3c QuadTree_InsertObject
 #define func_02036230 GetActorRegistry
 #define func_02036240 ActorRegistry_GetEntityByIndex

@@ -1,3 +1,4 @@
+#define data_ov013_02074ce0 gOv013PanelGlobals
 #define func_ov013_0206ca70 DispatchOv013ScrollEnterCallback
 #define func_ov013_02071444 RefreshOv013PlayerCardPage
 #define DrawPlayerCardDetails_0206e574 DrawPlayerCardDetails

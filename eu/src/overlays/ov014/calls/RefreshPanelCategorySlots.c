@@ -26,7 +26,7 @@ typedef struct {
 } PanelState;
 typedef struct { fx32 x, y; } SlotPosition;
 
-extern PanelState *data_ov014_0206f9a0;
+extern PanelState *gOv014PanelGlobals;
 extern const u8 gPanelGroupCategories[][7];
 extern const char sOv014_WxcWldLanguageBarP2_0206f960[];
 extern const char sOv014_WxcWldLanguageBackP2_0206f974[];
@@ -55,7 +55,7 @@ static inline u32 PackImageEntry(MsgContainerHeader *archive, int fileId)
 
 void RefreshPanelCategorySlots(void)
 {
-    PanelObjects *objects = &data_ov014_0206f9a0->subObjects;
+    PanelObjects *objects = &gOv014PanelGlobals->subObjects;
     SlotPosition position;
     int i;
     int index;
@@ -71,72 +71,72 @@ void RefreshPanelCategorySlots(void)
 
     /* Replace the selected category and its two wrapping neighbours. */
     for (i = 0; i < 3; i++) {
-        slot = data_ov014_0206f9a0->slots[i];
-        image = data_ov014_0206f9a0->images[i];
+        slot = gOv014PanelGlobals->slots[i];
+        image = gOv014PanelGlobals->images[i];
         if (slot != 0 || image != 0) {
             UnlinkActiveIndexedRecord(objects, slot);
             ObjManager_FreeSlot(objects, image);
         }
     }
     archive = Msg_OpenContainerAndReadHeader(sOv014_WxcWldLanguageBarP2_0206f960, 16, 0);
-    index = data_ov014_0206f9a0->index;
+    index = gOv014PanelGlobals->index;
     image = PXI_Init_0204f020(objects, PackImageEntry(archive,
-        gPanelGroupCategories[data_ov014_0206f9a0->group][index]));
+        gPanelGroupCategories[gOv014PanelGlobals->group][index]));
     slot = PXI_Init_0204f0c8(objects, 0, image);
     SetIndexedRecordMode(objects, slot, 1);
     SetIndexedRecordPriority(objects, slot, 200);
     position.x = 0x8000;
     position.y = 0x78000;
     IndexedRecord_SetPair(objects, slot, &position);
-    data_ov014_0206f9a0->images[0] = image;
-    data_ov014_0206f9a0->slots[0] = slot;
+    gOv014PanelGlobals->images[0] = image;
+    gOv014PanelGlobals->slots[0] = slot;
     ZeroHalfThenFree(archive);
 
     archive = Msg_OpenContainerAndReadHeader(sOv014_WxcWldLanguageBackP2_0206f974, 16, 0);
     index--;
-    if (index < 0) index = data_ov014_0206f9a0->groupWidth - 1;
+    if (index < 0) index = gOv014PanelGlobals->groupWidth - 1;
     archiveKey = PackImageEntry(archive, 0);
     image = PXI_Init_0204f020(objects, archiveKey |
-        (gPanelGroupCategories[data_ov014_0206f9a0->group][index] & 0x1ff));
+        (gPanelGroupCategories[gOv014PanelGlobals->group][index] & 0x1ff));
     slot = PXI_Init_0204f0c8(objects, 0, image);
     SetIndexedRecordMode(objects, slot, 1);
     SetIndexedRecordPriority(objects, slot, 210);
     position.x = 0x16000;
     position.y = 0x7d000;
     IndexedRecord_SetPair(objects, slot, &position);
-    data_ov014_0206f9a0->images[1] = image;
-    data_ov014_0206f9a0->slots[1] = slot;
+    gOv014PanelGlobals->images[1] = image;
+    gOv014PanelGlobals->slots[1] = slot;
 
-    index = data_ov014_0206f9a0->index + 1;
-    if (index >= data_ov014_0206f9a0->groupWidth) index = 0;
+    index = gOv014PanelGlobals->index + 1;
+    if (index >= gOv014PanelGlobals->groupWidth) index = 0;
     image = PXI_Init_0204f020(objects, archiveKey |
-        (gPanelGroupCategories[data_ov014_0206f9a0->group][index] & 0x1ff));
+        (gPanelGroupCategories[gOv014PanelGlobals->group][index] & 0x1ff));
     slot = PXI_Init_0204f0c8(objects, 0, image);
     SetIndexedRecordMode(objects, slot, 1);
     SetIndexedRecordPriority(objects, slot, 210);
     position.x = 0x4000;
     position.y = 0x95000;
     IndexedRecord_SetPair(objects, slot, &position);
-    data_ov014_0206f9a0->images[2] = image;
-    data_ov014_0206f9a0->slots[2] = slot;
+    gOv014PanelGlobals->images[2] = image;
+    gOv014PanelGlobals->slots[2] = slot;
 
     /* Navigation arrows and unread-state badges use the current selection. */
-    multipleEntries = data_ov014_0206f9a0->count >= 2;
+    multipleEntries = gOv014PanelGlobals->count >= 2;
     widget = FindWidgetById(objects, 3);
     SetEntrySlotsVisible(objects, widget, multipleEntries);
     widget = FindWidgetById(objects, 4);
     SetEntrySlotsVisible(objects, widget, multipleEntries);
-    category = gPanelGroupCategories[data_ov014_0206f9a0->group][data_ov014_0206f9a0->index];
-    entry = data_ov014_0206f9a0->groupEntries[category][data_ov014_0206f9a0->selection];
-    flagState = GetMenuCategoryRecordFlagState(&data_ov014_0206f9a0->flags, category, entry, TRUE);
+    category = gPanelGroupCategories[gOv014PanelGlobals->group][gOv014PanelGlobals->index];
+    entry = gOv014PanelGlobals->groupEntries[category][gOv014PanelGlobals->selection];
+    flagState = GetMenuCategoryRecordFlagState(&gOv014PanelGlobals->flags, category, entry, TRUE);
     widget = FindWidgetById(objects, 8);
     SetEntrySlotsVisible(objects, widget, flagState != 0);
     if (flagState != 0) {
-        SetRecordFlagFromTable(&data_ov014_0206f9a0->flags, category, entry, FALSE, TRUE);
+        SetRecordFlagFromTable(&gOv014PanelGlobals->flags, category, entry, FALSE, TRUE);
         SetWidgetAnimationFrame(objects, (const struct WidgetPositionRecord *)(widget), (u16)(1));
         if (flagState > 0) DispatchContextCommand(0x80000018, category, entry, 0);
     }
-    flagState = GetCategoryFlagState(&data_ov014_0206f9a0->flags, category);
+    flagState = GetCategoryFlagState(&gOv014PanelGlobals->flags, category);
     widget = FindWidgetById(objects, 7);
     SetEntrySlotsVisible(objects, widget, flagState != 0);
     if (flagState != 0) SetWidgetAnimationFrame(objects, (const struct WidgetPositionRecord *)(widget), (u16)(flagState <= 0));

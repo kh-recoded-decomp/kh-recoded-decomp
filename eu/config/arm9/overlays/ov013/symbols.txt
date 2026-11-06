@@ -137,9 +137,9 @@ gPanelMenuStateHandlers kind:data(any) addr:0x02074bc4
 sOv013_WxcWlaP2_02074c4c kind:data(any) addr:0x02074c4c
 sOv013_WxcWlfP2_02074c58 kind:data(any) addr:0x02074c58
 sOv013_WxcWliP2_02074c64 kind:data(any) addr:0x02074c64
-data_ov013_02074c70 kind:data(any) addr:0x02074c70
-data_ov013_02074c80 kind:data(any) addr:0x02074c80
-data_ov013_02074c94 kind:data(any) addr:0x02074c94
-data_ov013_02074cac kind:data(any) addr:0x02074cac
-data_ov013_02074cc4 kind:data(any) addr:0x02074cc4
-data_ov013_02074ce0 kind:bss addr:0x02074ce0
+gOv013SummaryFormatSpaceConcat kind:data(any) addr:0x02074c70
+gOv013SummaryFormatSpaced kind:data(any) addr:0x02074c80
+gOv013SummaryFormatDe kind:data(any) addr:0x02074c94
+gOv013SummaryFormatDi kind:data(any) addr:0x02074cac
+gOv013SummaryFormatConcat kind:data(any) addr:0x02074cc4
+gOv013PanelGlobals kind:bss addr:0x02074ce0

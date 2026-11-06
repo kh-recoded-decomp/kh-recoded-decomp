@@ -5,9 +5,9 @@ typedef struct PanelState {
     u8 actionFlags;
 } PanelState;
 
-extern PanelState *data_ov013_02074ce0;
+extern PanelState *gOv013PanelGlobals;
 
 void SetPanelFlag99Bit5(void)
 {
-    data_ov013_02074ce0->actionFlags |= 0x20;
+    gOv013PanelGlobals->actionFlags |= 0x20;
 }

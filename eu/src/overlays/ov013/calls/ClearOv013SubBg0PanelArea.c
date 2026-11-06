@@ -13,15 +13,15 @@ typedef struct PanelState {
     u8 flags;
 } PanelState;
 
-extern PanelState *data_ov013_02074ce0;
+extern PanelState *gOv013PanelGlobals;
 extern Overlay27Timing *FindActiveRecordById(u8 *context, int entryId);
 extern void *G2S_GetBG0ScrPtr(void);
 extern void MIi_CpuClearFast(u32 value, void *dest, u32 size);
 
 void ClearOv013SubBg0PanelArea(void) {
-    Overlay27Timing *timing = FindActiveRecordById((u8 *)data_ov013_02074ce0 + 0x350, 1);
+    Overlay27Timing *timing = FindActiveRecordById((u8 *)gOv013PanelGlobals + 0x350, 1);
     s32 size = timing->width * timing->height * 2;
     void *dest = (u8 *)G2S_GetBG0ScrPtr() + (timing->angle << 6);
     MIi_CpuClearFast(0, dest, size);
-    data_ov013_02074ce0->flags = data_ov013_02074ce0->flags & ~4;
+    gOv013PanelGlobals->flags = gOv013PanelGlobals->flags & ~4;
 }

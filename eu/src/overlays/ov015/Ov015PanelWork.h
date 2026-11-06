@@ -19,7 +19,7 @@ typedef struct Ov015PanelWork {
     s16 touchSampleCount;
 } Ov015PanelWork;
 
-extern Ov015PanelWork *data_ov015_020812e0;
-#define gOv015PanelWork data_ov015_020812e0
+extern Ov015PanelWork *gWirelessBoardGlobals;
+#define gOv015PanelWork gWirelessBoardGlobals
 
 #endif

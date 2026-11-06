@@ -2,5 +2,5 @@
 #define ResetPoolDefaultParams_020a4e50 ResetPoolDefaultParams
 #define data_ov017_020a5e14 gPoolValueHandlers
 #define data_ov017_020a5e28 gPoolMotionHandlers
-#define data_ov017_020a5e3c data_ov017_020a5e5c
+#define data_ov017_020a5e3c gKind4PoolTriggerHitHandlers
 #include "src/ov017/unclassified_helpers/ResetPoolDefaultParams_020a4e50.c"

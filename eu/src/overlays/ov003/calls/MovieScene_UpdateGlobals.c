@@ -1,3 +1,4 @@
+#define data_ov003_020658c0 gMovieSceneWork
 #define MovieScene_UpdateFade_02063a20 MovieScene_UpdateFade
 #define MovieScene_UpdateGlobals_02063a9c MovieScene_UpdateGlobals
 #define SoundMgr_Update_0204d150 SoundMgr_Update

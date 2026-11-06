@@ -6,5 +6,5 @@
 #define UpdateMenuTouchSelect_020650e0 UpdateMenuTouchSelect
 #define func_ov002_0206671c UpdateMenuTouch
 #define func_ov027_020b8ca8 UpdateWidgetRootOnly
-#define g_context_0206c464 data_ov002_0206c464
+#define g_context_0206c464 gOv002MenuWork
 #include "src/ov002/panel_state/UpdateMenuTouchSelect_020650e0.c"

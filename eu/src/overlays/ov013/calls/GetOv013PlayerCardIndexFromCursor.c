@@ -5,9 +5,9 @@ typedef struct PanelState {
     s8 progress;
 } PanelState;
 
-extern PanelState *data_ov013_02074ce0;
+extern PanelState *gOv013PanelGlobals;
 
 s32 GetOv013PlayerCardIndexFromCursor(void) {
-    s32 progress = data_ov013_02074ce0->progress;
+    s32 progress = gOv013PanelGlobals->progress;
     return progress - (progress + 1) / 10;
 }

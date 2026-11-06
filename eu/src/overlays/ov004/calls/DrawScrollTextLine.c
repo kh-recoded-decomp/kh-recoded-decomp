@@ -1,3 +1,5 @@
+#define data_ov004_02063ba8 gScrollTextAlignmentXOffsets
+#define data_ov004_02063bb0 gScrollTextObjectMarkers
 #define CallVirtualHandlerSlot1_02001574 CallVirtualHandlerSlot1
 #define DrawScrollTextLine_02062b70 DrawScrollTextLine
 #define DrawTextAnchored_020015a0 DrawTextAnchored

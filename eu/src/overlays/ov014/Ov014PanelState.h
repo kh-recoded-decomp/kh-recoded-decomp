@@ -12,7 +12,7 @@ typedef struct Ov014PanelState {
     s8 step;
 } Ov014PanelState;
 
-extern Ov014PanelState *data_ov014_0206f9a0;
-#define gOv014PanelState data_ov014_0206f9a0
+extern Ov014PanelState *gOv014PanelGlobals;
+#define gOv014PanelState gOv014PanelGlobals
 
 #endif

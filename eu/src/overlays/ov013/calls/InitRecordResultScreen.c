@@ -1,3 +1,4 @@
+#define data_ov013_02074ce0 gOv013PanelGlobals
 #define func_ov013_0207445c SetOv013WidgetSelectionBWithSound
 #define func_ov013_020746f4 SetOv013ResultMode2AndPlaySound
 // redefine-sym eu_func_ov027_020b9098=CreateWidgetImageEntry

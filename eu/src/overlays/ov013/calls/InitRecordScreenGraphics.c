@@ -1,3 +1,4 @@
+#define data_ov013_02074ce0 gOv013PanelGlobals
 #define data_ov013_02074a30 gOv013RecordMainBgConfig
 #define data_ov013_02074a44 gOv013RecordMainObjConfig
 #define func_ov013_02070cb4 GetOv013PlayerCardIndexFromCursor

@@ -1,3 +1,4 @@
+#define data_ov013_02074ce0 gOv013PanelGlobals
 #define ResetGroupSlotsPosition_020680a4 ResetGroupSlotsPosition
 #define ScrollPanelSlotsUp_020742a4 ScrollPanelSlotsUp
 #define SetPanelPhase_0207174c SetPanelPhase

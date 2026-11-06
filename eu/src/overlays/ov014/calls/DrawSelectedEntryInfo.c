@@ -1,3 +1,4 @@
+#define data_ov014_0206f954 gRecordPanelFractionFormat
 #define func_ov002_0206203c ResetOv002MainPanelText
 #define func_ov002_020620fc ResetOv002SubPanelText
 #define func_ov002_020621c4 GetOv002PanelMessage
@@ -8,5 +9,5 @@
 #define DrawSelectedEntryInfo_0206ea4c DrawSelectedEntryInfo
 #define GetPackedField_02069690 GetPackedField
 #define func_0202e060 SPrintfUnbounded
-#define g_panelState_0206f9a0 data_ov014_0206f9a0
+#define g_panelState_0206f9a0 gOv014PanelGlobals
 #include "src/ov014/panel_state/DrawSelectedEntryInfo_0206ea4c.c"

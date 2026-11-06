@@ -1,3 +1,4 @@
+#define data_ov000_02063a08 gTitleSelectionGlobals
 #define EnterOv039Selection_02063680 EnterOv039Selection
 #define NNSi_FndGetCurrentRootHeap_0202a764 GetRunningTaskWork
 #define func_02029f78 LoadOverlayAfterGeometryTransfer

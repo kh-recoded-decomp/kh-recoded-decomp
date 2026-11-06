@@ -1,3 +1,4 @@
+#define data_ov013_02074ce0 gOv013PanelGlobals
 #define DispatchContextCommand_02066c78 DispatchContextCommand
 #define LoadPanelSlotCount_02074148 LoadPanelSlotCount
 #define func_ov013_0206fc74 LayoutPanelSlotWidgets

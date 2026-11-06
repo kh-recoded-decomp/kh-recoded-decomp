@@ -1,3 +1,4 @@
+#define data_ov002_0206c464 gOv002MenuWork
 #define func_ov002_02064d54 UpdateDriftingPanelWidgets
 #define data_0205356c gSinFx12Table
 #define func_02023a98 _fflt

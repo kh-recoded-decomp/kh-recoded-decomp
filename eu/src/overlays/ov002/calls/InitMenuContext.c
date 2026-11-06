@@ -89,7 +89,7 @@ typedef struct MenuContext {
     ProfileBlock profileCopy;
 } MenuContext;
 
-extern MenuContext *data_ov002_0206c464;
+extern MenuContext *gOv002MenuWork;
 extern const BgContainerConfig gOv002MenuMainBgConfig;
 extern const BgContainerConfig gOv002MenuSubBgConfig;
 extern const ObjManagerConfig gOv002MenuMainObjConfig;
@@ -213,23 +213,23 @@ void InitMenuContext(int entryMode)
     int focus;
 
     InitOv002SubPanelGraphics();
-    data_ov002_0206c464 = NNSi_FndAllocFromDefaultHeap(sizeof(MenuContext));
-    MI_CpuFill8(data_ov002_0206c464, 0, sizeof(MenuContext));
-    data_ov002_0206c464->state = -1;
-    data_ov002_0206c464->mode = 0;
-    LoadPackedFileView(data_ov002_0206c464->fileView, gPanelUiResourcePaths[2], TRUE);
-    data_ov002_0206c464->messageHandle = Msg_OpenContainerAndReadHeader(sOv002_WxcWlmP2_0206c410, 0x10, 0);
+    gOv002MenuWork = NNSi_FndAllocFromDefaultHeap(sizeof(MenuContext));
+    MI_CpuFill8(gOv002MenuWork, 0, sizeof(MenuContext));
+    gOv002MenuWork->state = -1;
+    gOv002MenuWork->mode = 0;
+    LoadPackedFileView(gOv002MenuWork->fileView, gPanelUiResourcePaths[2], TRUE);
+    gOv002MenuWork->messageHandle = Msg_OpenContainerAndReadHeader(sOv002_WxcWlmP2_0206c410, 0x10, 0);
     GX_SetBankForSubOBJExtPltt(0x100);
     GX_SetBankForOBJExtPltt(0);
     *(vu32 *)0x04000000 = (*(vu32 *)0x04000000 & ~0x1f00) | 0x1f00;
     *(vu32 *)0x04001000 = (*(vu32 *)0x04001000 & ~0x1f00) | 0x1e00;
     ResetOv002PanelGraphics();
 
-    mainObjConfig.cellResourceId = RESOURCE_KEY(data_ov002_0206c464->messageHandle, 2);
-    mainObjConfig.animResourceId = RESOURCE_KEY(data_ov002_0206c464->messageHandle, 3);
-    InitBackgroundContainer(data_ov002_0206c464->mainBg, &mainBgConfig);
-    LoadTagTrackerResourceFile(data_ov002_0206c464->mainBg, RESOURCE_KEY(data_ov002_0206c464->messageHandle, 0));
-    archive = LoadFileAllocFromHeapTail(RESOURCE_KEY(data_ov002_0206c464->messageHandle, 1), 0x10);
+    mainObjConfig.cellResourceId = RESOURCE_KEY(gOv002MenuWork->messageHandle, 2);
+    mainObjConfig.animResourceId = RESOURCE_KEY(gOv002MenuWork->messageHandle, 3);
+    InitBackgroundContainer(gOv002MenuWork->mainBg, &mainBgConfig);
+    LoadTagTrackerResourceFile(gOv002MenuWork->mainBg, RESOURCE_KEY(gOv002MenuWork->messageHandle, 0));
+    archive = LoadFileAllocFromHeapTail(RESOURCE_KEY(gOv002MenuWork->messageHandle, 1), 0x10);
     GetBgDataFromArchive(&bgData, archive, -1, 0, 0);
     GX_LoadBGPltt(bgData.palette->data, 0, bgData.palette->size);
     GX_LoadBG0Char(bgData.character->data, 0, bgData.character->size);
@@ -238,86 +238,86 @@ void InitMenuContext(int entryMode)
     GetBgDataFromArchive(&bgData, archive, -1, 0, 0);
     GX_LoadBG0Char(bgData.character->data, 0x7000, bgData.character->size);
     NNSi_FndFreeFromDefaultHeap(archive);
-    entry = FindActiveBackgroundScreenResourceById(data_ov002_0206c464->mainBg, 0);
+    entry = FindActiveBackgroundScreenResourceById(gOv002MenuWork->mainBg, 0);
     GX_LoadBG1Scr(entry->screen->data, 0, entry->screen->size);
-    entry = FindActiveBackgroundScreenResourceById(data_ov002_0206c464->mainBg, 2);
-    GX_LoadBG0Scr(entry->screen->data, FindActiveRecordById(data_ov002_0206c464->mainBg, 2)->scrollY << 6,
+    entry = FindActiveBackgroundScreenResourceById(gOv002MenuWork->mainBg, 2);
+    GX_LoadBG0Scr(entry->screen->data, FindActiveRecordById(gOv002MenuWork->mainBg, 2)->scrollY << 6,
                   entry->screen->size);
 
-    InitializeResourceContainer(data_ov002_0206c464->mainObj, NULL);
-    InitObjManagerAndMark(data_ov002_0206c464->mainObj, &mainObjConfig);
-    CreateWidgetImageEntry(data_ov002_0206c464->mainObj, gPanelUiResourcePaths[1]);
-    LoadWidgetDescriptorsFromFile(data_ov002_0206c464->mainObj, mainObjConfig.animResourceId, 0x14);
-    SetAllElementObjectModes(data_ov002_0206c464->mainObj, 3);
-    SetElementMode(data_ov002_0206c464->mainObj, 4, 0);
-    SetElementMode(data_ov002_0206c464->mainObj, 5, 0);
-    SetElementMode(data_ov002_0206c464->mainObj, 6, 0);
-    SetElementMode(data_ov002_0206c464->mainObj, 7, 0);
-    SetElementMode(data_ov002_0206c464->mainObj, 8, 0);
-    SetElementMode(data_ov002_0206c464->mainObj, 9, 0);
-    SetElementMode(data_ov002_0206c464->mainObj, 10, 0);
-    SetElementMode(data_ov002_0206c464->mainObj, 11, 0);
-    SetElementMode(data_ov002_0206c464->mainObj, 12, 0);
-    SetElementMode(data_ov002_0206c464->mainObj, 13, 0);
-    SetElementMode(data_ov002_0206c464->mainObj, 14, 0);
-    SetElementMode(data_ov002_0206c464->mainObj, 15, 0);
-    SetElementMode(data_ov002_0206c464->mainObj, 16, 0);
-    SetElementMode(data_ov002_0206c464->mainObj, 17, 0);
-    SetElementMode(data_ov002_0206c464->mainObj, 18, 0);
-    SetElementNumber(data_ov002_0206c464->mainObj, 15, 0);
-    SetElementNumber(data_ov002_0206c464->mainObj, 16, 2);
-    SetElementNumber(data_ov002_0206c464->mainObj, 17, 4);
-    SetElementNumber(data_ov002_0206c464->mainObj, 18, 5);
-    SetElementPriority(data_ov002_0206c464->mainObj, 6, 0xff);
-    SetElementPriority(data_ov002_0206c464->mainObj, 7, 0xff);
-    SetElementPriority(data_ov002_0206c464->mainObj, 8, 0xff);
-    SetElementPriority(data_ov002_0206c464->mainObj, 9, 0xff);
-    SetElementPriority(data_ov002_0206c464->mainObj, 10, 0xff);
-    SetElementPriority(data_ov002_0206c464->mainObj, 11, 0xff);
-    SetElementPriority(data_ov002_0206c464->mainObj, 12, 0xff);
-    SetElementPriority(data_ov002_0206c464->mainObj, 13, 0xff);
-    SetElementPriority(data_ov002_0206c464->mainObj, 4, 0);
-    SetElementPriority(data_ov002_0206c464->mainObj, 5, 0);
+    InitializeResourceContainer(gOv002MenuWork->mainObj, NULL);
+    InitObjManagerAndMark(gOv002MenuWork->mainObj, &mainObjConfig);
+    CreateWidgetImageEntry(gOv002MenuWork->mainObj, gPanelUiResourcePaths[1]);
+    LoadWidgetDescriptorsFromFile(gOv002MenuWork->mainObj, mainObjConfig.animResourceId, 0x14);
+    SetAllElementObjectModes(gOv002MenuWork->mainObj, 3);
+    SetElementMode(gOv002MenuWork->mainObj, 4, 0);
+    SetElementMode(gOv002MenuWork->mainObj, 5, 0);
+    SetElementMode(gOv002MenuWork->mainObj, 6, 0);
+    SetElementMode(gOv002MenuWork->mainObj, 7, 0);
+    SetElementMode(gOv002MenuWork->mainObj, 8, 0);
+    SetElementMode(gOv002MenuWork->mainObj, 9, 0);
+    SetElementMode(gOv002MenuWork->mainObj, 10, 0);
+    SetElementMode(gOv002MenuWork->mainObj, 11, 0);
+    SetElementMode(gOv002MenuWork->mainObj, 12, 0);
+    SetElementMode(gOv002MenuWork->mainObj, 13, 0);
+    SetElementMode(gOv002MenuWork->mainObj, 14, 0);
+    SetElementMode(gOv002MenuWork->mainObj, 15, 0);
+    SetElementMode(gOv002MenuWork->mainObj, 16, 0);
+    SetElementMode(gOv002MenuWork->mainObj, 17, 0);
+    SetElementMode(gOv002MenuWork->mainObj, 18, 0);
+    SetElementNumber(gOv002MenuWork->mainObj, 15, 0);
+    SetElementNumber(gOv002MenuWork->mainObj, 16, 2);
+    SetElementNumber(gOv002MenuWork->mainObj, 17, 4);
+    SetElementNumber(gOv002MenuWork->mainObj, 18, 5);
+    SetElementPriority(gOv002MenuWork->mainObj, 6, 0xff);
+    SetElementPriority(gOv002MenuWork->mainObj, 7, 0xff);
+    SetElementPriority(gOv002MenuWork->mainObj, 8, 0xff);
+    SetElementPriority(gOv002MenuWork->mainObj, 9, 0xff);
+    SetElementPriority(gOv002MenuWork->mainObj, 10, 0xff);
+    SetElementPriority(gOv002MenuWork->mainObj, 11, 0xff);
+    SetElementPriority(gOv002MenuWork->mainObj, 12, 0xff);
+    SetElementPriority(gOv002MenuWork->mainObj, 13, 0xff);
+    SetElementPriority(gOv002MenuWork->mainObj, 4, 0);
+    SetElementPriority(gOv002MenuWork->mainObj, 5, 0);
 
-    subObjConfig.cellResourceId = RESOURCE_KEY(data_ov002_0206c464->messageHandle, 6);
-    subObjConfig.animResourceId = RESOURCE_KEY(data_ov002_0206c464->messageHandle, 7);
-    InitBackgroundContainer(data_ov002_0206c464->subBg, &subBgConfig);
-    LoadTagTrackerResourceFile(data_ov002_0206c464->subBg, RESOURCE_KEY(data_ov002_0206c464->messageHandle, 4));
-    subArchive = LoadFileAllocFromHeapTail(RESOURCE_KEY(data_ov002_0206c464->messageHandle, 5), 0x10);
+    subObjConfig.cellResourceId = RESOURCE_KEY(gOv002MenuWork->messageHandle, 6);
+    subObjConfig.animResourceId = RESOURCE_KEY(gOv002MenuWork->messageHandle, 7);
+    InitBackgroundContainer(gOv002MenuWork->subBg, &subBgConfig);
+    LoadTagTrackerResourceFile(gOv002MenuWork->subBg, RESOURCE_KEY(gOv002MenuWork->messageHandle, 4));
+    subArchive = LoadFileAllocFromHeapTail(RESOURCE_KEY(gOv002MenuWork->messageHandle, 5), 0x10);
     GetBgDataFromArchive(&bgData, subArchive, -1, 0, 0);
     GXS_LoadBGPltt(bgData.palette->data, 0, bgData.palette->size);
     GXS_LoadBG0Char(bgData.character->data, 0, bgData.character->size);
-    entry = FindActiveBackgroundScreenResourceById(data_ov002_0206c464->subBg, 0);
+    entry = FindActiveBackgroundScreenResourceById(gOv002MenuWork->subBg, 0);
     GXS_LoadBG1Scr(entry->screen->data, 0, entry->screen->size);
-    entry = FindActiveBackgroundScreenResourceById(data_ov002_0206c464->subBg, 2);
-    record = FindActiveRecordById(data_ov002_0206c464->subBg, 2);
+    entry = FindActiveBackgroundScreenResourceById(gOv002MenuWork->subBg, 2);
+    record = FindActiveRecordById(gOv002MenuWork->subBg, 2);
     GXS_LoadBG0Scr(entry->screen->data, record->scrollY << 6, entry->screen->size);
 
-    InitializeResourceContainer(data_ov002_0206c464->subObj, NULL);
-    InitObjManagerAndMark(data_ov002_0206c464->subObj, &subObjConfig);
-    CreateWidgetImageEntry(data_ov002_0206c464->subObj, gPanelUiResourcePaths[3]);
-    LoadWidgetDescriptorsFromFile(data_ov002_0206c464->subObj, subObjConfig.animResourceId, 0xd);
-    SetAllElementObjectModes(data_ov002_0206c464->subObj, 3);
-    SetWidgetRecordMode(data_ov002_0206c464->subObj, (const struct WidgetPositionRecord *)(FindWidgetById(data_ov002_0206c464->subObj, 11)), 1);
-    SetWidgetRecordMode(data_ov002_0206c464->subObj, (const struct WidgetPositionRecord *)(FindWidgetById(data_ov002_0206c464->subObj, 12)), 1);
-    SetWidgetRecordMode(data_ov002_0206c464->subObj, (const struct WidgetPositionRecord *)(FindWidgetById(data_ov002_0206c464->subObj, 0)), 1);
-    SetElementEnabled(data_ov002_0206c464->subObj, 5, TRUE);
-    SetElementMode(data_ov002_0206c464->subObj, 5, 0);
-    ClearWidgetRecordActiveBits(data_ov002_0206c464->subObj, (const struct WidgetPositionRecord *)(FindWidgetById(data_ov002_0206c464->subObj, 0x15)));
-    ClearWidgetRecordActiveBits(data_ov002_0206c464->subObj, (const struct WidgetPositionRecord *)(FindWidgetById(data_ov002_0206c464->subObj, 0x16)));
+    InitializeResourceContainer(gOv002MenuWork->subObj, NULL);
+    InitObjManagerAndMark(gOv002MenuWork->subObj, &subObjConfig);
+    CreateWidgetImageEntry(gOv002MenuWork->subObj, gPanelUiResourcePaths[3]);
+    LoadWidgetDescriptorsFromFile(gOv002MenuWork->subObj, subObjConfig.animResourceId, 0xd);
+    SetAllElementObjectModes(gOv002MenuWork->subObj, 3);
+    SetWidgetRecordMode(gOv002MenuWork->subObj, (const struct WidgetPositionRecord *)(FindWidgetById(gOv002MenuWork->subObj, 11)), 1);
+    SetWidgetRecordMode(gOv002MenuWork->subObj, (const struct WidgetPositionRecord *)(FindWidgetById(gOv002MenuWork->subObj, 12)), 1);
+    SetWidgetRecordMode(gOv002MenuWork->subObj, (const struct WidgetPositionRecord *)(FindWidgetById(gOv002MenuWork->subObj, 0)), 1);
+    SetElementEnabled(gOv002MenuWork->subObj, 5, TRUE);
+    SetElementMode(gOv002MenuWork->subObj, 5, 0);
+    ClearWidgetRecordActiveBits(gOv002MenuWork->subObj, (const struct WidgetPositionRecord *)(FindWidgetById(gOv002MenuWork->subObj, 0x15)));
+    ClearWidgetRecordActiveBits(gOv002MenuWork->subObj, (const struct WidgetPositionRecord *)(FindWidgetById(gOv002MenuWork->subObj, 0x16)));
     if (HasAnyMenuEntryUnlocked()) {
-        data_ov002_0206c464->flags.hasUnlockedEntry = TRUE;
+        gOv002MenuWork->flags.hasUnlockedEntry = TRUE;
     } else {
-        SetEntrySlotsVisible(data_ov002_0206c464->subObj, FindWidgetById(data_ov002_0206c464->subObj, 0x16), FALSE);
+        SetEntrySlotsVisible(gOv002MenuWork->subObj, FindWidgetById(gOv002MenuWork->subObj, 0x16), FALSE);
     }
     if (GetCategoryFlagState(GetRecordFlagBits(), -1)) {
-        data_ov002_0206c464->flags.hasCategory = TRUE;
+        gOv002MenuWork->flags.hasCategory = TRUE;
     } else {
-        SetEntrySlotsVisible(data_ov002_0206c464->subObj, FindWidgetById(data_ov002_0206c464->subObj, 0x15), FALSE);
+        SetEntrySlotsVisible(gOv002MenuWork->subObj, FindWidgetById(gOv002MenuWork->subObj, 0x15), FALSE);
     }
     if (!DispatchContextCommand(1, 0, 0, 0)) {
-        data_ov002_0206c464->flags.hasProgress = TRUE;
-        ApplySelectedSubitemValues(data_ov002_0206c464->subObj, FindWidgetById(data_ov002_0206c464->subObj, 2), 0);
+        gOv002MenuWork->flags.hasProgress = TRUE;
+        ApplySelectedSubitemValues(gOv002MenuWork->subObj, FindWidgetById(gOv002MenuWork->subObj, 2), 0);
     }
 
     level = DispatchContextCommand(8, 0, 0, 0);
@@ -325,72 +325,72 @@ void InitMenuContext(int entryMode)
         level = 0;
     }
     if (level >= 80) {
-        SetEntrySlotsVisible(data_ov002_0206c464->subObj, FindWidgetById(data_ov002_0206c464->subObj, 0x18), TRUE);
-        GetElementPosition(data_ov002_0206c464->subObj, 0x18, &highPosition);
+        SetEntrySlotsVisible(gOv002MenuWork->subObj, FindWidgetById(gOv002MenuWork->subObj, 0x18), TRUE);
+        GetElementPosition(gOv002MenuWork->subObj, 0x18, &highPosition);
         *(volatile fx32 *)&highPosition.y = ((highPosition.y >> 12) + 20) << 12;
-        SetElementPosition((*(MenuContext *volatile *)&data_ov002_0206c464)->subObj, 0x18, &highPosition);
+        SetElementPosition((*(MenuContext *volatile *)&gOv002MenuWork)->subObj, 0x18, &highPosition);
     } else if (level >= 50) {
-        SetEntrySlotsVisible(data_ov002_0206c464->subObj, FindWidgetById(data_ov002_0206c464->subObj, 0x17), TRUE);
-        GetElementPosition(data_ov002_0206c464->subObj, 0x17, &midPosition);
+        SetEntrySlotsVisible(gOv002MenuWork->subObj, FindWidgetById(gOv002MenuWork->subObj, 0x17), TRUE);
+        GetElementPosition(gOv002MenuWork->subObj, 0x17, &midPosition);
         *(volatile fx32 *)&midPosition.y = ((midPosition.y >> 12) + 20) << 12;
-        SetElementPosition((*(MenuContext *volatile *)&data_ov002_0206c464)->subObj, 0x17, &midPosition);
+        SetElementPosition((*(MenuContext *volatile *)&gOv002MenuWork)->subObj, 0x17, &midPosition);
     }
 
     LoadAvatarObjPalette(TRUE);
     {
-        MenuContext *context = data_ov002_0206c464;
+        MenuContext *context = gOv002MenuWork;
 
         context->profileCopy = *GetPackedFields();
         context->selection.selection = &context->profileCopy;
     }
-    ResetSelectionView(&data_ov002_0206c464->selection);
-    data_ov002_0206c464->selection.basePriority = 200;
-    data_ov002_0206c464->selection.flags.mode = 3;
-    data_ov002_0206c464->selection.position.x = 200 << 12;
-    data_ov002_0206c464->selection.position.y = 67 << 12;
-    BuildSelectionViewRecords(data_ov002_0206c464->subObj, &data_ov002_0206c464->selection);
-    SetGroupSlotsVisible(data_ov002_0206c464->subObj, &data_ov002_0206c464->selection, TRUE);
-    SetWidgetRootDpadEnabled(data_ov002_0206c464->subObj, TRUE);
-    SetWidgetRootTouchEnabled(data_ov002_0206c464->subObj, TRUE);
-    data_ov002_0206c464->selectedIndex = 0;
+    ResetSelectionView(&gOv002MenuWork->selection);
+    gOv002MenuWork->selection.basePriority = 200;
+    gOv002MenuWork->selection.flags.mode = 3;
+    gOv002MenuWork->selection.position.x = 200 << 12;
+    gOv002MenuWork->selection.position.y = 67 << 12;
+    BuildSelectionViewRecords(gOv002MenuWork->subObj, &gOv002MenuWork->selection);
+    SetGroupSlotsVisible(gOv002MenuWork->subObj, &gOv002MenuWork->selection, TRUE);
+    SetWidgetRootDpadEnabled(gOv002MenuWork->subObj, TRUE);
+    SetWidgetRootTouchEnabled(gOv002MenuWork->subObj, TRUE);
+    gOv002MenuWork->selectedIndex = 0;
     focus = 1;
     switch (entryMode) {
     case 0:
     case 2:
-        if (data_ov002_0206c464->flags.hasCategory) {
-            SetWidgetAnimationFrame(data_ov002_0206c464->subObj, (const struct WidgetPositionRecord *)(FindWidgetById(data_ov002_0206c464->subObj, 0x15)), 1);
+        if (gOv002MenuWork->flags.hasCategory) {
+            SetWidgetAnimationFrame(gOv002MenuWork->subObj, (const struct WidgetPositionRecord *)(FindWidgetById(gOv002MenuWork->subObj, 0x15)), 1);
         }
         break;
     case 3:
         if (DispatchContextCommand(1, 0, 0, 0)) {
-            data_ov002_0206c464->selectedIndex = 1;
+            gOv002MenuWork->selectedIndex = 1;
             focus = 2;
-            if (data_ov002_0206c464->flags.hasUnlockedEntry) {
-                SetWidgetAnimationFrame(data_ov002_0206c464->subObj, (const struct WidgetPositionRecord *)(FindWidgetById(data_ov002_0206c464->subObj, 0x16)),
+            if (gOv002MenuWork->flags.hasUnlockedEntry) {
+                SetWidgetAnimationFrame(gOv002MenuWork->subObj, (const struct WidgetPositionRecord *)(FindWidgetById(gOv002MenuWork->subObj, 0x16)),
                                     1);
             }
-        } else if (data_ov002_0206c464->flags.hasCategory) {
-            SetWidgetAnimationFrame(data_ov002_0206c464->subObj, (const struct WidgetPositionRecord *)(FindWidgetById(data_ov002_0206c464->subObj, 0x15)), 1);
+        } else if (gOv002MenuWork->flags.hasCategory) {
+            SetWidgetAnimationFrame(gOv002MenuWork->subObj, (const struct WidgetPositionRecord *)(FindWidgetById(gOv002MenuWork->subObj, 0x15)), 1);
         }
         break;
     case 6:
-        data_ov002_0206c464->selectedIndex = 3;
+        gOv002MenuWork->selectedIndex = 3;
         focus = 4;
         break;
     }
-    SetFocusedWidget(data_ov002_0206c464->subObj, FindWidgetById(data_ov002_0206c464->subObj, focus));
-    SetWidgetRootInputCallback(data_ov002_0206c464->subObj, OnPopupElementTouched);
-    ResolveEntryStoreWord(data_ov002_0206c464->subObj, 1, SelectMenuEntry1);
-    ResolveEntryStoreWord(data_ov002_0206c464->subObj, 2, SelectMenuEntry2);
-    ResolveEntryStoreWord(data_ov002_0206c464->subObj, 3, SelectMenuEntry3);
-    ResolveEntryStoreWord(data_ov002_0206c464->subObj, 4, SelectMenuEntry4);
-    ResolveEntryStoreWord(data_ov002_0206c464->subObj, 5, SetMenuStateFlag10);
-    ResolveEntryStoreWord(data_ov002_0206c464->subObj, 11, SetMenuSelection2);
-    ResolveEntryStoreWord(data_ov002_0206c464->subObj, 12, SetMenuSelection1);
-    data_ov002_0206c464->cloudSpeedX = NextSharedRandom16Scaled(0x1000) + 0x1000;
-    data_ov002_0206c464->cloudOffsetX = NextSharedRandom16Scaled(0);
-    data_ov002_0206c464->cloudSpeedY = NextSharedRandom16Scaled(0x1000) + 0x1000;
-    data_ov002_0206c464->cloudOffsetY = (NextSharedRandom16Scaled(0) + 0x80) << 12;
+    SetFocusedWidget(gOv002MenuWork->subObj, FindWidgetById(gOv002MenuWork->subObj, focus));
+    SetWidgetRootInputCallback(gOv002MenuWork->subObj, OnPopupElementTouched);
+    ResolveEntryStoreWord(gOv002MenuWork->subObj, 1, SelectMenuEntry1);
+    ResolveEntryStoreWord(gOv002MenuWork->subObj, 2, SelectMenuEntry2);
+    ResolveEntryStoreWord(gOv002MenuWork->subObj, 3, SelectMenuEntry3);
+    ResolveEntryStoreWord(gOv002MenuWork->subObj, 4, SelectMenuEntry4);
+    ResolveEntryStoreWord(gOv002MenuWork->subObj, 5, SetMenuStateFlag10);
+    ResolveEntryStoreWord(gOv002MenuWork->subObj, 11, SetMenuSelection2);
+    ResolveEntryStoreWord(gOv002MenuWork->subObj, 12, SetMenuSelection1);
+    gOv002MenuWork->cloudSpeedX = NextSharedRandom16Scaled(0x1000) + 0x1000;
+    gOv002MenuWork->cloudOffsetX = NextSharedRandom16Scaled(0);
+    gOv002MenuWork->cloudSpeedY = NextSharedRandom16Scaled(0x1000) + 0x1000;
+    gOv002MenuWork->cloudOffsetY = (NextSharedRandom16Scaled(0) + 0x80) << 12;
     NNSi_FndFreeFromDefaultHeap(subArchive);
     ChangeMenuState(0);
 }

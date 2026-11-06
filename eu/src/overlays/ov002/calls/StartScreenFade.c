@@ -1,3 +1,5 @@
+#define data_ov002_0206c41c gOv002ScreenFadeCompleteStorage
+#define data_ov002_0206c468 gOv002ScreenFadeWork
 #define NNSi_FndGetCurrentRootHeap_0202a764 GetRunningTaskWork
 #define StartScreenFade_0206656c StartScreenFade
 #define func_01ff8740 MIi_CpuClearFast

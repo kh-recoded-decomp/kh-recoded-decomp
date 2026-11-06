@@ -1,3 +1,4 @@
+#define data_ov015_020812e0 gWirelessBoardGlobals
 #define data_ov015_0207a1e0 gWirelessFixedRoundRangeWeights
 #define data_ov015_0207a218 gWirelessPartnerRoundRangeWeights
 #define data_ov015_0207a548 gWirelessSpecialSlotChanceByProgress

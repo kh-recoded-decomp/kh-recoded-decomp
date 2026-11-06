@@ -2,5 +2,5 @@
 #define ResetMenuElement5_02065074 ResetMenuElement5
 #define func_ov027_020b90a4 FindWidgetById
 #define func_ov027_020b9620 SetWidgetRecordActiveBits
-#define g_context_0206c464 data_ov002_0206c464
+#define g_context_0206c464 gOv002MenuWork
 #include "src/ov002/panel_state/ResetMenuElement5_02065074.c"

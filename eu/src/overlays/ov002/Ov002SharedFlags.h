@@ -3,10 +3,10 @@
 
 #include "nitro/types.h"
 
-extern u32 data_ov002_0206c41c[];
-#define gScreenFadeComplete (*(u8 *)data_ov002_0206c41c)
+extern u32 gOv002ScreenFadeCompleteStorage[];
+#define gScreenFadeComplete (*(u8 *)gOv002ScreenFadeCompleteStorage)
 
-extern u32 data_ov002_0206c470[];
-#define gContextCommandFlag (*(u8 *)data_ov002_0206c470)
+extern u32 gMenuContextCommandFlagStorage[];
+#define gContextCommandFlag (*(u8 *)gMenuContextCommandFlagStorage)
 
 #endif

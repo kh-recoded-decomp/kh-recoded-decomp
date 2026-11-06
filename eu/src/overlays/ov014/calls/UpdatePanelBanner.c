@@ -3,5 +3,5 @@
 #define G2S_GetBG3ScrPtr_02007004 G2S_GetBG3ScrPtr
 #define UpdatePanelBanner_0206cfa0 UpdatePanelBanner
 #define func_01ff8740 MIi_CpuClearFast
-#define g_panelState_0206f9a0 data_ov014_0206f9a0
+#define g_panelState_0206f9a0 gOv014PanelGlobals
 #include "src/ov014/panel_state/UpdatePanelBanner_0206cfa0.c"

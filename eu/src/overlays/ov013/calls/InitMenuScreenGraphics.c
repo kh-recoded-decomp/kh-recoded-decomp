@@ -1,3 +1,4 @@
+#define data_ov013_02074ce0 gOv013PanelGlobals
 #define data_ov013_02074a08 gOv013MenuMainBgConfig
 #define data_ov013_02074a5c gOv013MenuMainObjConfig
 #define DestroyObjectsAndRelease_020b8c58 DestroyObjectsAndRelease

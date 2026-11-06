@@ -1,3 +1,4 @@
+#define data_ov013_02074ce0 gOv013PanelGlobals
 #define ApplyPanelSubitem5_02072228 ApplyPanelSubitem5
 #define ApplySelectedSubitemValues_020b94fc ApplySelectedSubitemValues
 #define func_ov027_020b90a4 FindWidgetById

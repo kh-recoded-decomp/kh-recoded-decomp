@@ -1,5 +1,5 @@
 #define ApplyMenuEntryValues_02064c9c ApplyMenuEntryValues
 #define ApplySelectedSubitemValues_020b94fc ApplySelectedSubitemValues
 #define func_ov027_020b90a4 FindWidgetById
-#define g_context_0206c464 data_ov002_0206c464
+#define g_context_0206c464 gOv002MenuWork
 #include "src/ov002/panel_state/ApplyMenuEntryValues_02064c9c.c"

@@ -1,3 +1,4 @@
+#define data_ov015_020812e0 gWirelessBoardGlobals
 #define GetPanelPageCount_020779dc GetPanelPageCount
 #define GrantRewardEntry_02078438 GrantRewardEntry
 #define PickWeightedReward_0207830c PickWeightedReward

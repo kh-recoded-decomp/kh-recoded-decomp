@@ -1,3 +1,4 @@
+#define data_ov004_02063ec0 gScrollTextRollingScript
 #define G2x_SetBlendBrightness_0200686c G2x_SetBlendBrightness_
 #define GFXi_EnqueueCommand_02014090 NNS_GfdRegisterNewVramTransferTask
 #define InvokeForChannelOrBoth_0200110c InvokeForChannelOrBoth

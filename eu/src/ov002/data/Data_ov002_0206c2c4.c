@@ -5,7 +5,7 @@
 extern void InitProfilePanel(void);
 extern void ShutdownPanelScene(void);
 
-void *data_ov002_0206c2c4[5] = {
+void *gProfilePanelTaskClass[5] = {
     (void *)0x00110008,
     (void *)InitProfilePanel,
     (void *)ShutdownPanelScene,

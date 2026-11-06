@@ -2,5 +2,5 @@
 #define func_ov027_020b90a4 FindWidgetById
 #define func_ov027_020b91c8 SetWidgetPosition
 #define func_ov027_020b9360 ResolveWidgetPositionComponents
-#define g_panelState_0206f9a0 data_ov014_0206f9a0
+#define g_panelState_0206f9a0 gOv014PanelGlobals
 #include "src/ov014/panel_state/CopyPanelEntry_0206e954.c"

@@ -1,3 +1,4 @@
+#define data_ov013_02074ce0 gOv013PanelGlobals
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define SetPanelModeWithSound_020746d0 SetPanelModeWithSound
 #include "src/ov013/panel_state/SetPanelModeWithSound_020746d0.c"
