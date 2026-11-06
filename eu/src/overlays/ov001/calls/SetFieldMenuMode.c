@@ -1,3 +1,4 @@
+#define func_ov001_02078ac4 DisarmFieldMenuTag15AndInvokeRecord36
 #define func_ov001_0207123c GetFieldSceneManager
 #define func_ov001_02075e10 UpdateFieldMenuSelectionTags
 #define FillBackgroundLayerRect_02001a60 FillBackgroundLayerRect

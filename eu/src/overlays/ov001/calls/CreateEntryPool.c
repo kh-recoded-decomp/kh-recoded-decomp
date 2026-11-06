@@ -1,5 +1,5 @@
 #define CreateEntryPool_02086258 CreateEntryPool
 #define MI_CpuFill32_01ff8740 MIi_CpuClearFast
 #define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
-#define func_ov001_02086254 func_ov001_0208627c
+#define func_ov001_02086254 EntryPool_DefaultHitQueryFalse
 #include "src/ov001/unclassified_helpers/CreateEntryPool_02086258.c"

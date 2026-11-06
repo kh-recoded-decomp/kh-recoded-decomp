@@ -10,14 +10,14 @@ typedef struct {
 extern s32 GetFieldSessionState(void);
 extern BOOL IsSessionFlagSet(u32 value);
 extern int GetScriptHandlerSlot7Index(void);
-extern BOOL func_ov001_0207b360(int choice);
+extern BOOL RequestPanelModeWithConditionalTimerMode2(int choice);
 extern s32 GetLoadedSubsceneMode(void);
 
 void UpdatePanelConfirmTimer(PanelScene *panel)
 {
     if (panel->confirmTimer != 0) {
         if (panel->confirmTimer == 1) {
-            if (GetLoadedSubsceneMode() != 2 && func_ov001_0207b360(2)) {
+            if (GetLoadedSubsceneMode() != 2 && RequestPanelModeWithConditionalTimerMode2(2)) {
                 panel->waitingForConfirm = TRUE;
                 if (GetScriptHandlerSlot7Index() == 0 && IsSessionFlagSet(0x370b)) {
                     panel->confirmTimer = 0;
@@ -29,7 +29,7 @@ void UpdatePanelConfirmTimer(PanelScene *panel)
             panel->confirmTimer++;
             if (panel->confirmTimer >= 0x71) {
                 int choice = (GetFieldSessionState() == 10) ? 1 : 0;
-                if (choice != -1 && func_ov001_0207b360(choice)) {
+                if (choice != -1 && RequestPanelModeWithConditionalTimerMode2(choice)) {
                     panel->waitingForConfirm = FALSE;
                     panel->confirmTimer = 0;
                 }

@@ -1,3 +1,4 @@
+#define func_ov001_0207a880 SetMessageWindowDispatchSuspended
 #define data_0205fde4 gPanelActive
 #define FlushAndFreeBgScreen_0206fdac FlushAndFreeBgScreen
 #define ResumeFieldAfterPause_020704fc ResumeFieldAfterPause

@@ -6,7 +6,7 @@ extern int GetFieldEntryDrawBlockMask(void);
 
 typedef void (*Callback)(int);
 
-void func_ov001_02086b14(int param1, int useCallback) {
+void DrawLinkedFieldEntryActorPass(int param1, int useCallback) {
     int obj = QueryLinkTarget();
     if (useCallback == 0 && GetFieldEntryDrawBlockMask() == 0) {
         Callback cb = *(Callback *)(*(int *)(obj + 4) + 0x38);

@@ -1,14 +1,14 @@
 #include "src/overlays/ov001/StageActorTables.h"
 
-extern int func_ov001_02097d84(void *controller);
+extern int ActorController_ReleasedActorKeepState(void *controller);
 extern int ControllerStateActive(void *controller);
 extern int ControllerRunnerDone(void *controller);
-extern int func_ov001_02097d7c(void *controller);
+extern int ActorController_AwaitReleaseKeepState(void *controller);
 
 ActorControllerStateHandler gActorControllerStateHandlers[5] = {
     NULL,
-    func_ov001_02097d84,
+    ActorController_ReleasedActorKeepState,
     ControllerStateActive,
     ControllerRunnerDone,
-    func_ov001_02097d7c
+    ActorController_AwaitReleaseKeepState
 };

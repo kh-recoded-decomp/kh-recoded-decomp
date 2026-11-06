@@ -3672,7 +3672,7 @@ src/overlays/ov001/calls/FillFieldMenuEntryProgressById.c:
     complete
     .text       start:0x020786d0 end:0x02078710
 
-src/overlays/ov001/calls/func_ov001_02078710.c:
+src/overlays/ov001/calls/RefreshFieldSlotCellOrLinkedEntries.c:
     complete
     .text       start:0x02078710 end:0x02078800
 
@@ -3692,7 +3692,7 @@ src/overlays/ov001/calls/IsMenuSlotBusy.c:
     complete
     .text       start:0x02078910 end:0x02078938
 
-src/overlays/ov001/calls/func_ov001_02078938.c:
+src/overlays/ov001/calls/SetFieldMenuGaugeDrawingEnabled.c:
     complete
     .text       start:0x02078938 end:0x02078948
 
@@ -3716,7 +3716,7 @@ src/overlays/ov001/calls/IsMenuItemLinked.c:
     complete
     .text       start:0x02078a80 end:0x02078ac4
 
-src/overlays/ov001/calls/func_ov001_02078ac4.c:
+src/overlays/ov001/calls/DisarmFieldMenuTag15AndInvokeRecord36.c:
     complete
     .text       start:0x02078ac4 end:0x02078b04
 
@@ -3792,7 +3792,7 @@ src/overlays/ov001/calls/PlaceWindowCornerTag.c:
     complete
     .text       start:0x02079578 end:0x020795c4
 
-src/overlays/ov001/calls/func_ov001_020795c4.c:
+src/overlays/ov001/calls/DisarmMessageWindowTag5AndInvokeRecord60.c:
     complete
     .text       start:0x020795c4 end:0x020795ee
 
@@ -3916,7 +3916,7 @@ src/overlays/ov001/calls/CloseActiveMode.c:
     complete
     .text       start:0x0207a820 end:0x0207a880
 
-src/overlays/ov001/calls/func_ov001_0207a880.c:
+src/overlays/ov001/calls/SetMessageWindowDispatchSuspended.c:
     complete
     .text       start:0x0207a880 end:0x0207a89c
 
@@ -4048,7 +4048,7 @@ src/overlays/ov001/calls/RequestPanelModeWithStyle2.c:
     complete
     .text       start:0x0207b348 end:0x0207b360
 
-src/overlays/ov001/calls/func_ov001_0207b360.c:
+src/overlays/ov001/calls/RequestPanelModeWithConditionalTimerMode2.c:
     complete
     .text       start:0x0207b360 end:0x0207b394
 
@@ -5632,7 +5632,7 @@ src/overlays/ov001/calls/FieldObject_CreateWithUpdater.c:
     complete
     .text       start:0x02086224 end:0x0208627c
 
-src/overlays/ov001/auto/func_ov001_0208627c.c:
+src/overlays/ov001/auto/EntryPool_DefaultHitQueryFalse.c:
     complete
     .text       start:0x0208627c end:0x02086280
 
@@ -5740,7 +5740,7 @@ src/overlays/ov001/calls/RollSpecialItemDrop.c:
     complete
     .text       start:0x02086a50 end:0x02086b14
 
-src/overlays/ov001/calls/func_ov001_02086b14.c:
+src/overlays/ov001/calls/DrawLinkedFieldEntryActorPass.c:
     complete
     .text       start:0x02086b14 end:0x02086b44
 
@@ -6260,7 +6260,7 @@ src/overlays/ov001/calls/ClearActorFlagBit40.c:
     complete
     .text       start:0x02088b70 end:0x02088b80
 
-src/overlays/ov001/calls/func_ov001_02088b80.c:
+src/overlays/ov001/calls/ResetActorMotionAndDetachOwner.c:
     complete
     .text       start:0x02088b80 end:0x02088bec
 
@@ -7804,11 +7804,11 @@ src/overlays/ov001/calls/ChooseWanderDestination.c:
     complete
     .text       start:0x02097ca0 end:0x02097d7c
 
-src/overlays/ov001/auto/func_ov001_02097d7c.c:
+src/overlays/ov001/auto/ActorController_AwaitReleaseKeepState.c:
     complete
     .text       start:0x02097d7c end:0x02097d84
 
-src/overlays/ov001/auto/func_ov001_02097d84.c:
+src/overlays/ov001/auto/ActorController_ReleasedActorKeepState.c:
     complete
     .text       start:0x02097d84 end:0x02097d8c
 

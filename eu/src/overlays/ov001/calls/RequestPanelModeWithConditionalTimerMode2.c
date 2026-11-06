@@ -6,7 +6,7 @@ extern void RequestPanelModeChange(u32 arg);
 
 extern u32 gSubscenePanelWork;
 
-void func_ov001_0207b360(u32 arg)
+void RequestPanelModeWithConditionalTimerMode2(u32 arg)
 {
     u32 fault;
 

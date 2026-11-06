@@ -2,7 +2,7 @@
 
 extern unsigned int *gMessageWindowWork;
 
-void func_ov001_0207a880(int value) {
+void SetMessageWindowDispatchSuspended(int value) {
   unsigned int *work;
 
   work = gMessageWindowWork;

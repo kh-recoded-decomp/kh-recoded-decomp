@@ -7,7 +7,7 @@
 #define func_0202f4b8 GetModelAnimationDurationFx32
 #define func_020367f0 ActorSlot_GetField1C4ByIndex
 #define func_ov001_02088b48 ClearActorFlagBit40
-#define func_ov001_02088b58 func_ov001_02088b80
+#define func_ov001_02088b58 ResetActorMotionAndDetachOwner
 #define func_ov001_02088fe4 AdvanceAnimationRequestQueue
 #define func_ov001_0208a3e0 ClearActorTimerFields
 #define func_ov001_0208a458 ResetActorVelocityAndExtraSlots

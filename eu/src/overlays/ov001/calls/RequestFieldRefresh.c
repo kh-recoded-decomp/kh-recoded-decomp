@@ -1,3 +1,4 @@
+#define func_ov001_02078938 SetFieldMenuGaugeDrawingEnabled
 #define RequestFieldRefresh_020720b0 RequestFieldRefresh
 #define data_ov001_020a04a4 gFieldSceneGlobals
 #include "src/ov001/field_manager/RequestFieldRefresh_020720b0.c"

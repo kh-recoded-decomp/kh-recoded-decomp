@@ -6,7 +6,7 @@ extern void InvokeCallback40(void *table, void *entry);
 extern void *FindLoadedElementById(void *table, u32 id);
 extern void SetTagRecordArmed(void *table, void *entry, u32 flag);
 
-void func_ov001_020795c4(void)
+void DisarmMessageWindowTag5AndInvokeRecord60(void)
 {
     void *table;
     void *entry;

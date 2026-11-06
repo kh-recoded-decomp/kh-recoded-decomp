@@ -1,2 +1,2 @@
-#define FSi_CloseFileCommand_02086254 func_ov001_0208627c
+#define FSi_CloseFileCommand_02086254 EntryPool_DefaultHitQueryFalse
 #include "src/ov001/library_nitro_fs/FSi_CloseFileCommand_02086254.c"

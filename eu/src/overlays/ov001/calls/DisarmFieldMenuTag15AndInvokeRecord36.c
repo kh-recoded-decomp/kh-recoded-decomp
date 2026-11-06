@@ -18,7 +18,7 @@ extern void SetTagRecordArmed(void *tracker, void *entry, u32 flag);
 extern void *FindActiveRecordById(void *tracker, u32 recordId);
 extern void TagTracker_InvokeCallback(void *tracker, void *record);
 
-void func_ov001_02078ac4(void)
+void DisarmFieldMenuTag15AndInvokeRecord36(void)
 {
     void *tracker = GetSceneTagTracker();
     FieldMenu *menu = gFieldCommandMenuGlobals.menu;

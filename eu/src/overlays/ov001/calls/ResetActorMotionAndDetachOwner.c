@@ -48,7 +48,7 @@ extern unsigned int ActorRegistry_GetEntityByIndex();
 extern unsigned int ClearActorTimerFields();
 extern unsigned int ResetActorVelocityAndExtraSlots();
 
-void func_ov001_02088b80(int *owner) {
+void ResetActorMotionAndDetachOwner(int *owner) {
   u32 flags;
   ActorNode *actor;
   int work;

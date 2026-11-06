@@ -1,3 +1,4 @@
+#define func_ov001_02078710 RefreshFieldSlotCellOrLinkedEntries
 #define func_ov001_0207162c SetFieldHudGaugeRange
 #define IsFieldFlag8Set_020728a4 IsFieldFlag8Set
 #define LoadSlotIconGraphics_0207001c LoadSlotIconGraphics

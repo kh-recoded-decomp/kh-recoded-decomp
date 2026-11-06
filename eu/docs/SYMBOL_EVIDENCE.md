@@ -942,3 +942,7 @@ The C backlog remains 71; metadata cleanup is not a new decompilation claim.
 ## Stage workspace, binding indices and field entry storage
 
 Twelve numeric functions follow their native owners and actual writers or consumers. [The system index](README.md) links the launcher, model draw, stage workspace, operand/marker, binding-index and field-entry contracts. Signed sentinels, conditional slot-8 recording, overlapping workspace views and opaque payload fields remain explicit. All 81 affected official function checks and 83 complete-object comparisons pass, with every hash unchanged in a fresh 108-module gate.
+
+## Field presentation, controller release and actor links
+
+Eleven numeric functions follow native presentation guards, tracker channels, manager-driven controller release, EntryPool dispatch and actor-owner reference counting. [The system index](README.md) links their contracts. Native callback arguments, return-value consumption, conditional resets and borrowed ownership are explicit; no shared ROOT body or ABI is changed. All 25 affected official function checks and 26 complete-object comparisons pass; a fresh 108-module gate retains every hash.

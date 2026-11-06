@@ -48,7 +48,7 @@ extern void FreePointerIfSet(void **pointer);
 extern void DrawMenuPanelPage(FieldMenu *menu);
 extern FieldEntry *CycleMenuEntry(FieldMenu *menu, s32 index, s32 arg2, s32 arg3);
 
-void func_ov001_02078710(s32 index, s32 kind)
+void RefreshFieldSlotCellOrLinkedEntries(s32 index, s32 kind)
 {
     FieldMenu *menu = gFieldCommandMenuGlobals.menu;
     FieldEntry *entry;

@@ -12,7 +12,7 @@ typedef struct {
 
 extern FieldMenuHandle gFieldCommandMenuGlobals;
 
-void func_ov001_02078938(s32 value)
+void SetFieldMenuGaugeDrawingEnabled(s32 value)
 {
     gFieldCommandMenuGlobals.menu->unk_118 = value;
 }

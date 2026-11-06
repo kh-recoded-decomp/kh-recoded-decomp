@@ -112,10 +112,10 @@ the exact representation and the retained ov004 bank ambiguity.
 
 ## Unresolved function contracts
 
-59 matched C functions retain numeric names. Every one has a mechanical
+48 matched C functions retain numeric names. Every one has a mechanical
 contract, a specific semantic blocker and a next useful proof:
 
-- [49 common field functions](EU_PENDING_FIELD_FUNCTIONS.md).
+- [38 common field functions](EU_PENDING_FIELD_FUNCTIONS.md).
 - [2 engine, script and scene functions](EU_PENDING_ENGINE_SCENE_FUNCTIONS.md).
 - [8 background/camera/other callbacks](EU_PENDING_CALLBACK_FUNCTIONS.md).
 
@@ -155,3 +155,5 @@ The [field HP/camera script gate](FIELD_HP_CAMERA_SCRIPT_GATE.md) documents opco
 [Class activation/LOD/command selection](FIELD_OBJECT_CLASS_ACTIVATION_LOD_COMMANDS.md), [event combat values](STAGE_EVENT_COMBAT_VALUES.md), [reaction/countdown values](STAGE_EVENT_REACTION_COUNTDOWN.md), [motion callbacks](STAGE_MOTION_POSITION_CALLBACKS.md) and [current override ID](STAGE_CURRENT_OVERRIDE_ID.md) supply the native owner and ABI evidence for the latest closures.
 
 [Launcher emission](CARRIED_LAUNCHER_EMISSION.md), [model drawing](MODEL_SET_DRAW_GATE.md), [shared stage workspace](STAGE_SHARED_WORKSPACE.md), [operand and marker operations](STAGE_OPERAND_MARKER_COMMANDS.md), [script binding indices](FIELD_SCRIPT_BINDING_INDICES.md) and [current field entry storage](FIELD_CURRENT_ENTRY_STORAGE.md) connect the newly named functions to their actual writers and consumers.
+
+[Field menu/message operations](FIELD_MENU_MESSAGE_OPERATIONS.md), [controller release states](ACTOR_CONTROLLER_RELEASE_STATES.md) and [entry-pool drawing and actor-owner links](ENTRY_POOL_DRAW_OWNER_CONTRACTS.md) document actual callers, return consumers and lifecycle boundaries.
