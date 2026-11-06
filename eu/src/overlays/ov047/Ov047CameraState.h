@@ -8,7 +8,7 @@ typedef struct Ov047CameraState {
     u8 trackingController[1];
 } Ov047CameraState;
 
-extern Ov047CameraState *data_ov036_020c3500;
-#define gOv047CameraState data_ov036_020c3500
+extern Ov047CameraState *gCameraManager;
+#define gOv047CameraState gCameraManager
 
 #endif

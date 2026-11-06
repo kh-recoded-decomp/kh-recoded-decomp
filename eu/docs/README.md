@@ -71,6 +71,8 @@ links the complete sequence of documented naming blocks.
 - [Selection Slots Tags8](NATIVE_SELECTION_SLOTS_TAGS8.md).
 - [Static Owner Tables12](NATIVE_STATIC_OWNER_TABLES12.md).
 
+- [References across overlay banks](BANK_QUALIFIED_OWNER_BINDINGS.md).
+
 ## Unresolved function contracts
 
 At the `ad0a8778153f72218e4bdad3a5cec1bd8e2a7470` naming checkpoint,

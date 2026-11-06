@@ -823,3 +823,11 @@ Name 103 movie, menu, save/render, selection, growth and field/combat storage id
 [Save Render State10](NATIVE_SAVE_RENDER_STATE10.md),
 [Selection Slots Tags8](NATIVE_SELECTION_SLOTS_TAGS8.md),
 [Static Owner Tables12](NATIVE_STATIC_OWNER_TABLES12.md).
+
+## Cross-bank camera and report ownership
+
+Overlay047 camera references now bind the resident overlay046 manager; the
+ov039 registry's overlay-ID 91 entry now binds the actual ov091 report descriptor.
+[BANK_QUALIFIED_OWNER_BINDINGS.md](BANK_QUALIFIED_OWNER_BINDINGS.md) records the
+loader evidence, physical owners and native word values. The21 official checks,
+22 production objects and all 108 linked module hashes preserve the native bytes.

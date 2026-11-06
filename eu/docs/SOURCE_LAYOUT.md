@@ -92,3 +92,11 @@ and every complete linked module with the existing tools. Keep library source
 and documentation receipts current through their official verifiers. The
 known [standalone relocation baseline](DATA_NATIVE_RELOCATION_BASELINE.md)
 remains explicit alongside the full 108-module gate.
+
+## References into a resident overlay
+
+A child overlay can refer to a parent's globals at an address also reused by
+unrelated banks. The actual loaded owner, relocation module and C alias must
+agree. [Camera and report examples](BANK_QUALIFIED_OWNER_BINDINGS.md) show why
+bank-qualified evidence is required even when a complete module already
+matches the ROM byte for byte.
