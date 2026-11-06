@@ -29,7 +29,7 @@ typedef struct {
 
 extern PanelState *gOv002ProfilePanelWork;
 extern u8 sOv002_WXCVB_0206c35c[];
-extern SharedSettings data_0206085c;
+extern SharedSettings gSceneHandoffSharedHeader;
 extern u16 gCachedOwnerNickname[];
 extern u16 gCachedOwnerMessageStorage[];
 extern char OVERLAY_27_ID[];
@@ -72,7 +72,7 @@ void *InitProfilePanel(BOOL resumed)
     ReloadPanelResources();
     InvokeForChannelOrBoth(1, (u32)sOv002_WXCVB_0206c35c, (int)RunPanelDispatchAction, 0);
     AcquireRecordManager();
-    if (!data_0206085c.censored) {
+    if (!gSceneHandoffSharedHeader.censored) {
         u16 nickname[11] = {0};
         u16 message[27] = {0};
         OwnerProfile profile;
@@ -84,7 +84,7 @@ void *InitProfilePanel(BOOL resumed)
         CopyWideString(gCachedOwnerMessageStorage, profile.message);
         CensorBannedWords(gCachedOwnerNickname, (void *)0x16, nickname);
         CensorBannedWords(gCachedOwnerMessageStorage, (void *)0x36, message);
-        data_0206085c.censored = TRUE;
+        gSceneHandoffSharedHeader.censored = TRUE;
     }
     QueueSoundCommandForArc(2);
     if (DispatchContextCommand(0x12, 0, 0, 0) == 0) {
@@ -98,7 +98,7 @@ void *InitProfilePanel(BOOL resumed)
         state->isNewGame = TRUE;
         SwitchPanelMode(0);
     } else {
-        SetContextCommandFlag(data_0206085c.language);
+        SetContextCommandFlag(gSceneHandoffSharedHeader.language);
         state->isNewGame = FALSE;
         SwitchPanelMode(3);
     }

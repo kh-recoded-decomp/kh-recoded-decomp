@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define GetOverlaySelectionRecord_0204f768 GetOverlaySelectionRecord
 #define PackSelectionRecordEntry_0204fda4 PackSelectionRecordEntry
 #define SetupAllSelectionRecords_0204f85c SetupAllSelectionRecords

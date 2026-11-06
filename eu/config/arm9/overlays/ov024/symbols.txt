@@ -25,10 +25,10 @@ ApplyDirectionOffset kind:function(thumb,size=0x60) addr:0x020b7248
 GetCursorScreenPos kind:function(thumb,size=0x54) addr:0x020b72a8
 RerollBoardSlotsWrapper kind:function(thumb,size=0x8) addr:0x020b72fc
 ResetBoardCursor kind:function(thumb,size=0x3c) addr:0x020b7304
-data_ov024_020b7340 kind:data(any) addr:0x020b7340
-data_ov024_020b7350 kind:data(any) addr:0x020b7350
-data_ov024_020b7360 kind:data(any) addr:0x020b7360
-data_ov024_020b7370 kind:data(any) addr:0x020b7370
+gBoardTextLayerConfig kind:data(any) addr:0x020b7340
+gBoardBgLayerIds kind:data(any) addr:0x020b7350
+gBoardObjectManagerConfig kind:data(any) addr:0x020b7360
+gBoardBackgroundContainerConfig kind:data(any) addr:0x020b7370
 data_ov024_020b7384 kind:data(any) addr:0x020b7384
 data_ov024_020b73a4 kind:data(any) addr:0x020b73a4
 data_ov024_020b73a8 kind:data(any) addr:0x020b73a8

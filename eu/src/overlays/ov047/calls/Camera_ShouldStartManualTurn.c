@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define data_020604fc gPadHeldAndPrevious
 #define data_02060500 gPadPressedStorage
 #define func_ov001_0206dc4c GetManagedActorPosition

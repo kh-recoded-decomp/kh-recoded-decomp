@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define ApplyScoreEvents_020bf388 ApplyScoreEvents
 #define SetDigitDisplay_020be2c8 SetDigitDisplay
 #define SetEntrySlotsVisible_020b9580 SetEntrySlotsVisible

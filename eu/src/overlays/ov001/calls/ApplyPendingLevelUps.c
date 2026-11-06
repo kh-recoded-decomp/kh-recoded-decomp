@@ -4,5 +4,5 @@
 #define IsGlobalPackedBitSet_02027304 IsGlobalPackedBitSet
 #define SetGlobalPackedBit_02027320 SetGlobalPackedBit
 #define g_eventContext_020a049c gManagedActorGlobals
-#define g_saveData_0205fe0c data_0205fe0c
+#define g_saveData_0205fe0c gSaveIoStateDataTail
 #include "src/ov001/shared_engine/ApplyPendingLevelUps_0206ccd8.c"

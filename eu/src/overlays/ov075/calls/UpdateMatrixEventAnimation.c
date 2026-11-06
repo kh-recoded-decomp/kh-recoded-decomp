@@ -97,7 +97,7 @@ typedef struct {
     u32 groupMask;
 } MatrixMenu;
 
-extern SaveData *data_0205fe0c;
+extern SaveData *gSaveIoStateDataTail;
 extern const RefreshArgs gMatrixEventRefreshRequestTemplate;
 extern const GroupPair sMatrixNavigationGraph[];
 
@@ -136,8 +136,8 @@ static inline void RefreshRevealedCell(MatrixMenu *menu, MatrixNode *cell)
 static inline void MarkPortalCleared(int bit)
 {
     RefreshArgs args = gMatrixEventRefreshRequestTemplate;
-    data_0205fe0c->portalMask |= 1 << bit;
-    RefreshStatusMenuData(data_0205fe0c, &args);
+    gSaveIoStateDataTail->portalMask |= 1 << bit;
+    RefreshStatusMenuData(gSaveIoStateDataTail, &args);
 }
 
 static inline MatrixNode *GetGroupNode(MatrixMap *map, int group)
@@ -288,7 +288,7 @@ void UpdateMatrixEventAnimation(MatrixMenu *menu)
                     }
                     if (menu->timer == 7) {
                         node = menu->current;
-                        SetPackedBit(data_0205fe0c->clearedBits, node >= menu->map->firstNode ? node - menu->map->firstNode : -1);
+                        SetPackedBit(gSaveIoStateDataTail->clearedBits, node >= menu->map->firstNode ? node - menu->map->firstNode : -1);
                     }
                     break;
                 }
@@ -419,7 +419,7 @@ void UpdateMatrixEventAnimation(MatrixMenu *menu)
                 }
                 menu->state &= 0xff;
                 menu->timer = 0;
-                ShowDialogMessage(menu, 0x22, 0, 0, data_0205fe0c->crownCount + 1);
+                ShowDialogMessage(menu, 0x22, 0, 0, gSaveIoStateDataTail->crownCount + 1);
                 break;
             case 0x400:
                 if (AdvanceAnimationTracks(&menu->effects[3], 0x1000) == 0) {
@@ -433,9 +433,9 @@ void UpdateMatrixEventAnimation(MatrixMenu *menu)
                 }
                 menu->state &= 0xff;
                 menu->timer = 0;
-                RefreshStatusMenuData(data_0205fe0c, NULL);
-                SetStatusPageAndCursor(1, data_0205fe0c->keyCount + 2);
-                ShowDialogMessage(menu, 0x21, 0, 0, data_0205fe0c->keyCount + 3);
+                RefreshStatusMenuData(gSaveIoStateDataTail, NULL);
+                SetStatusPageAndCursor(1, gSaveIoStateDataTail->keyCount + 2);
+                ShowDialogMessage(menu, 0x21, 0, 0, gSaveIoStateDataTail->keyCount + 3);
                 break;
             case 0x500:
                 if (!UpdateGroupReveal(menu)) {

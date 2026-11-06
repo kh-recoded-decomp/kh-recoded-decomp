@@ -1,3 +1,4 @@
+#define data_02060848 gContactProjectionFallbackEnabled
 #define CacheEntry_SetActive_02087258 CacheEntry_SetActive
 #define CopyFieldUnitSlotFrame_020a5ef4 CopyFieldUnitSlotFrame
 #define IsNodeFlagBitClear_020872b8 IsNodeFlagBitClear

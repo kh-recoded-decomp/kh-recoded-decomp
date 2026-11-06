@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define GetByteCounterOrDefault_020291cc GetByteCounterOrDefault
 #define GetRecordSlotPair1Entry_02051ef4 GetRecordSlotPair1Entry
 #define SetStatusHeaderMessage_020c1dbc SetStatusHeaderMessage

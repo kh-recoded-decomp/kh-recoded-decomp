@@ -1,4 +1,4 @@
 #define GetSelectionSlotPosition_020a91b8 GetSelectionSlotPosition
-#define data_ov021_020b4ea8 data_ov021_020b4ec8
+#define data_ov021_020b4ea8 gSelectionSlotPositions
 #define func_0204f768 GetOverlaySelectionRecord
 #include "src/ov021/unclassified_helpers/GetSelectionSlotPosition_020a91b8.c"

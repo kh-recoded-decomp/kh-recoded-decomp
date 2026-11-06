@@ -1,5 +1,5 @@
 #define ChangeMenuAnimSequence_020b5b28 ChangeMenuAnimSequence
 #define ResetMapMenuCursor_020b69bc ResetMapMenuCursor
-#define data_ov023_020b6e8c data_ov023_020b6eac
+#define data_ov023_020b6e8c gMapMenuCursorResetPosition
 #define func_0204f13c IndexedRecord_SetPair
 #include "src/ov023/menu_graphics/ResetMapMenuCursor_020b69bc.c"

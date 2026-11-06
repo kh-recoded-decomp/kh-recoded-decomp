@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define SlotMenu_ShowSlotHint_020c827c SlotMenu_ShowSlotHint
 #define func_ov027_020ba2a8 GetPackedFileEntry
 #define func_ov076_020c44c0 SlotMenu_CanCombineSlotPair

@@ -1,7 +1,7 @@
 #define FillBackgroundTileRectangle_02017adc NNS_G2dMapScrToCharText
 #define StartMovieCaptionScreen_020a7288 StartMovieCaptionScreen
 #define StoreGlobalArrayEntry_02025668 StoreGlobalArrayEntry
-#define data_ov022_020b7d80 data_ov022_020b7da0
+#define data_ov022_020b7d80 gMovieSceneGlobals
 #define func_0202b3b8 CallIndexedHandler
 #define func_ov022_020a6f24 UpdateMovieTransfersFadeAndSound
 #define func_ov022_020a8338 OpenMoviePlayback

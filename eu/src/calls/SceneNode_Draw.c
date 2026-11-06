@@ -38,7 +38,7 @@ extern BOOL NNS_G3dGetResultMtx(void *renderObj, MtxFx43 *pos, MtxFx33 *nrm, u32
 
 extern const s16 gSinFx12Table[];
 extern GeometryGlobalState NNS_G3dGlb;
-extern SceneNode *data_0206076c;
+extern SceneNode *gMatrixCaptureSceneNode;
 
 void SceneNode_Draw(SceneNode *node)
 {
@@ -76,7 +76,7 @@ void SceneNode_Draw(SceneNode *node)
     }
 
     if (node->child != NULL) {
-        data_0206076c = node;
+        gMatrixCaptureSceneNode = node;
     }
 
     if (node->flags & 0x40) {

@@ -1,3 +1,3 @@
 #define GetCardThreadStartTick_0202726c GetCardThreadStartTick
-#define g_cardThreadState_0205fe00 data_0205fe00
+#define g_cardThreadState_0205fe00 gSaveIoStatePrefix
 #include "src/arm9/shared_engine/GetCardThreadStartTick_0202726c.c"

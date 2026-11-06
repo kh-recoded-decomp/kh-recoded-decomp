@@ -1,4 +1,4 @@
 #define ReadGlobalPackedBits_02027348 ReadGlobalPackedBits
 #define ReadPackedBitField_0202d4c4 ReadPackedBitField
-#define g_cardThreadState_0205fe00 data_0205fe00
+#define g_cardThreadState_0205fe00 gSaveIoStatePrefix
 #include "src/arm9/packed_bits/ReadGlobalPackedBits_02027348.c"

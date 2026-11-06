@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define AdvanceAnimationTracks_0202ef24 AdvanceAnimationTracks
 #define DrawMenuImageModulated_020ccf14 DrawMenuImageModulated_020ccf34
 #define GetActiveRecordEntryOrNull_02029548 GetActiveRecordEntryOrNull

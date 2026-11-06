@@ -5,7 +5,7 @@
 extern void InitResultsScene(void);
 extern void CloseResultsSession(void);
 
-void *data_ov034_020be954[5] = {
+void *gResultsScreenTaskClass[5] = {
     (void *)0x0002000E,
     (void *)InitResultsScene,
     (void *)CloseResultsSession,

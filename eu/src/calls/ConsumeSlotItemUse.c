@@ -25,19 +25,19 @@ typedef char ItemCountsOffset[(u32)&((SlotUseSaveData *)0)->itemCounts == 0x28d8
 typedef char SlotHandlesOffset[(u32)&((SlotUseSaveData *)0)->slotHandles == 0x2d84 ? 1 : -1];
 typedef char SlotUsesOffset[(u32)&((SlotUseSaveData *)0)->slotUses == 0x2dc0 ? 1 : -1];
 
-extern SlotUseSaveData *data_0205fe0c;
+extern SlotUseSaveData *gSaveIoStateDataTail;
 
 /* Consume one equipped stack item and return its remaining slot uses. */
 int ConsumeSlotItemUse(int slotIndex)
 {
     int byteOffset = slotIndex * 4;
-    u32 *uses = (u32 *)((u8 *)data_0205fe0c->slotUses + byteOffset);
+    u32 *uses = (u32 *)((u8 *)gSaveIoStateDataTail->slotUses + byteOffset);
     EquipmentSlotWorkPair *slotPairs = (EquipmentSlotWorkPair *)gEquipmentSlotWork;
     EquipmentSlotWork *slot = &slotPairs[slotIndex].first;
 
     if (slot->state == 3 && *uses != 0) {
-        u32 itemId = *(u16 *)((u8 *)data_0205fe0c->slotHandles + byteOffset);
-        u8 *itemCount = &data_0205fe0c->itemCounts[itemId];
+        u32 itemId = *(u16 *)((u8 *)gSaveIoStateDataTail->slotHandles + byteOffset);
+        u8 *itemCount = &gSaveIoStateDataTail->itemCounts[itemId];
         int remaining;
 
         --*itemCount;

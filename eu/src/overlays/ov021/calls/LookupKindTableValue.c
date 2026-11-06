@@ -1,5 +1,5 @@
 #define LookupKindTableValue_020a8fc8 LookupKindTableValue
-#define data_ov021_020b4e3c data_ov021_020b4e5c
-#define data_ov021_020b4e60 data_ov021_020b4e80
-#define data_ov021_020b4e84 data_ov021_020b4ea4
+#define data_ov021_020b4e3c gSurfaceSoundArchiveIdsKind0Or3
+#define data_ov021_020b4e60 gSurfaceSoundArchiveIdsKind2
+#define data_ov021_020b4e84 gSurfaceSoundArchiveIdsKind1
 #include "src/ov021/unclassified_helpers/LookupKindTableValue_020a8fc8.c"

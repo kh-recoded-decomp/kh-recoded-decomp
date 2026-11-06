@@ -1,4 +1,4 @@
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define PollCardTransferThread_02026c3c PollCardTransferThread
-#define g_cardThreadState_0205fe00 data_0205fe00
+#define g_cardThreadState_0205fe00 gSaveIoStatePrefix
 #include "src/arm9/shared_engine/PollCardTransferThread_02026c3c.c"

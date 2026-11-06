@@ -1,3 +1,3 @@
 #define IsGlobalPackedBitSet_02027304 IsGlobalPackedBitSet
-#define g_cardThreadState_0205fe00 data_0205fe00
+#define g_cardThreadState_0205fe00 gSaveIoStatePrefix
 #include "src/arm9/packed_bits/IsGlobalPackedBitSet_02027304.c"

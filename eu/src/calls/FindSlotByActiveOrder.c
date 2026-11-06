@@ -1,2 +1,3 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define FindSlotByActiveOrder_0204f6dc FindSlotByActiveOrder
 #include "src/arm9/record_management/FindSlotByActiveOrder_0204f6dc.c"

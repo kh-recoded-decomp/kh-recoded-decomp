@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-const u32 data_ov021_020b4ec8[54] = {
+const u32 gSelectionSlotPositions[54] = {
     0x00000000, 0x00000A66, 0x00001400, 0x00000000,
     0x00000F33, 0x00001266, 0x00000000, 0x0000275C,
     0x00000000, 0x00000000, 0x00000E66, 0x00001266,
@@ -17,7 +17,7 @@ const u32 data_ov021_020b4ec8[54] = {
     0x00000000, 0x00000000,
 };
 
-const s16 data_ov021_020b4ea4[18] = {
+const s16 gSurfaceSoundArchiveIdsKind1[18] = {
     34, 35, 40, 43, 36, 41, 42, 38,
     39, 37, 44, 46, 47, 45, -1, -1,
     -1, 0,

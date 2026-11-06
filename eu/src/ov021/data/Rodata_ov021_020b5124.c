@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-const u32 data_ov021_020b5124[24] = {
+const u32 gNearPlayerGroundSearchDirections[24] = {
     0xFFFFF000, 0x00000000, 0x00000000, 0x00001000,
     0x00000000, 0x00000000, 0x00000000, 0x00000000,
     0xFFFFF000, 0x00000000, 0x00000000, 0x00001000,

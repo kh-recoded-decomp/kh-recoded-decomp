@@ -70,7 +70,7 @@ typedef char SavePartySlotsOffsetCheck[ITEM_OFFSET(SaveState, partySlots) == 0x2
 #undef ITEM_OFFSET
 
 extern ItemScreenGlobals gItemScreenSharedState;
-extern SaveState *data_0205fe0c;
+extern SaveState *gSaveIoStateDataTail;
 extern const char sOv077_UiMenuEqumtxP2_020ca2f0[];
 extern const char sOv077_UiMenuLanguageEqumtxP2_020ca304[];
 extern void MI_CpuFill8(void *destination, int value, u32 size);
@@ -113,7 +113,7 @@ BOOL InitItemScreen(ItemScreen *screen)
     }
 
     screen->state = 0;
-    equippedItem = data_0205fe0c->partySlots[0];
+    equippedItem = gSaveIoStateDataTail->partySlots[0];
     screen->equipped = &screen->stocks[equippedItem];
     return TRUE;
 }

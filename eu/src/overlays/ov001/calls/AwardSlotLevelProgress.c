@@ -14,7 +14,7 @@ typedef struct ProgressRecord {
     u16 category : 8;
 } ProgressRecord;
 
-extern ProgressSave *data_0205fe0c;
+extern ProgressSave *gSaveIoStateDataTail;
 extern void *GetOverlaySelectionRecord(u32 index);
 extern fx32 HalveForEachFlag(void);
 extern fx32 CountUnlockedSlotsFx(void);
@@ -44,10 +44,10 @@ void AwardSlotLevelProgress(int amount)
     GetOverlaySelectionRecord(0);
     if (amount != 0) {
         int weighted = amount * HalveForEachFlag();
-        ProgressSave *save = data_0205fe0c;
+        ProgressSave *save = gSaveIoStateDataTail;
         save->experience += weighted >> 12;
-        if (data_0205fe0c->experience > 99999999) {
-            data_0205fe0c->experience = 99999999;
+        if (gSaveIoStateDataTail->experience > 99999999) {
+            gSaveIoStateDataTail->experience = 99999999;
         }
         factor = FX_Mul(0x800, FX_Sqrt(amount << 12)) + 0x2000;
         factor = CountUnlockedSlotsFx() * (factor >> 12);

@@ -15,9 +15,9 @@
 #define func_0202255c ParseDecimalLong
 #define RoundAndInitArchive_020258b0 RoundAndInitArchive
 #define SetLoaderCallbacks_02025914 SetScriptVmPackedBitHandlers
-#define data_ov022_020b7d80 data_ov022_020b7da0
+#define data_ov022_020b7d80 gMovieSceneGlobals
 #define data_ov022_020b7ccc sOv022_FontEu10allNftr_020b7cec
-#define data_ov022_020b7c8c data_ov022_020b7cac
+#define data_ov022_020b7c8c gMovieCaptionPalette
 #define data_ov022_020b7ce0 gStreamScriptCommandHandlers
 #define func_ov001_0206459c WriteSessionPackedBits
 #define func_ov001_02064574 ReadSessionPackedBits

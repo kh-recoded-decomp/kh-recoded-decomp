@@ -23,7 +23,7 @@ typedef struct SelectionRecord {
     s32 slotAmounts[8];
 } SelectionRecord;
 
-extern SaveData *data_0205fe0c;
+extern SaveData *gSaveIoStateDataTail;
 
 extern void SlotMenu_UnequipSlotEntry(SlotMenu *menu, int slot, int column);
 extern SelectionRecord *GetOverlaySelectionRecord(u32 selectionIndex);
@@ -38,7 +38,7 @@ static inline void AddItemUse(SlotMenu *menu, u16 handle)
 void SlotMenu_EquipRecordEntry(SlotMenu *menu, int slot, int column, s16 recordIndex)
 {
     SlotMenu_UnequipSlotEntry(menu, slot, column);
-    data_0205fe0c->slotHandles[slot * 2 + column] = recordIndex + 0x200;
+    gSaveIoStateDataTail->slotHandles[slot * 2 + column] = recordIndex + 0x200;
     GetOverlaySelectionRecord(0)->slotAmounts[slot] = 0;
     AddItemUse(menu, recordIndex + 0x200);
 }

@@ -32,7 +32,7 @@ typedef struct SaveData {
     s32 slotStock[16];
 } SaveData;
 
-extern SaveData *data_0205fe0c;
+extern SaveData *gSaveIoStateDataTail;
 
 extern void ApplyDialogReward(u32 reward);
 extern void DecrementByteCounter(u32 index);
@@ -57,7 +57,7 @@ void ConsumeItemPickerSelectionAndApplyReward(ItemListMenu *menu)
 
             handle = stock->def->handle;
             DecrementByteCounter(handle);
-            save = data_0205fe0c;
+            save = gSaveIoStateDataTail;
             for (slot = save->extraSlotCount + 3; slot >= 0; slot--) {
                 u16 slotHandle = save->slotHandles[slot * 2];
                 if (slotHandle < 0x200 && slotHandle == handle && save->slotStock[slot] != 0) {
@@ -68,7 +68,7 @@ void ConsumeItemPickerSelectionAndApplyReward(ItemListMenu *menu)
             stock->total--;
             stock->used--;
         }
-        RefreshStatusMenuData(data_0205fe0c, 0);
+        RefreshStatusMenuData(gSaveIoStateDataTail, 0);
     }
     menu->state = 4;
     ClearBg1AndRedraw(menu);

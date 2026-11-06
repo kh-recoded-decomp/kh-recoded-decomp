@@ -22,7 +22,7 @@ typedef struct SaveData {
     u16 slotHandles[16];
 } SaveData;
 
-extern SaveData *data_0205fe0c;
+extern SaveData *gSaveIoStateDataTail;
 
 static inline BOOL IsMatchingRecord(s16 recordIndex, u32 handle)
 {
@@ -43,7 +43,7 @@ BOOL SlotMenu_IsSelectedRecordEquipped(SlotMenu *menu)
     int column = menu->column;
     BOOL result;
     if (column < 2) {
-        u16 handle = data_0205fe0c->slotHandles[menu->slotIndex * 2 + column];
+        u16 handle = gSaveIoStateDataTail->slotHandles[menu->slotIndex * 2 + column];
         result = IsMatchingRecord(row->recordIndex, handle);
     } else {
         result = FALSE;

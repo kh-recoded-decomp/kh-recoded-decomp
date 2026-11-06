@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define BeginSlotItemSelection_020c5cc8 BeginSlotItemSelection
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define func_ov077_020c5c1c OpenSlotHelpPrompt

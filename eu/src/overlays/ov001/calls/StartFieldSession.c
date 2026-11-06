@@ -1,3 +1,7 @@
+#define data_0205fe0c gSaveIoStateDataTail
+#define data_02060848 gContactProjectionFallbackEnabled
+#define data_02060850 gPendingFieldSessionArgs
+#define data_020608c8 gSelectionRuntimeHeader
 #define func_ov001_02068e54 PauseSessionTimerUpdates
 #define func_ov001_020613e0 InvokeOptionalCallbackAndComplementAddress
 #define func_ov001_02064628 LoadPackedSessionPlacement

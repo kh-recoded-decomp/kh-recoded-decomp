@@ -38,16 +38,16 @@ typedef char TotalRecordCountOffset[(u32)&((RecordCounterState *)0)->totalCount 
 typedef char RecordCapacityOffset[(u32)&((RecordCounterState *)0)->capacity == 0x102 ? 1 : -1];
 typedef char RecordCounterStateIs260Bytes[sizeof(RecordCounterState) == 0x104 ? 1 : -1];
 
-extern RecordSaveData *data_0205fe0c;
-extern RecordCounterState data_0205fec4;
+extern RecordSaveData *gSaveIoStateDataTail;
+extern RecordCounterState gRuntimeRecordCategoryCounters;
 extern void InitActiveRecordEntryFromTemplate(u16 *destination, const void *source);
 extern void SetFlagAndBumpCounter(u8 *flag);
 
 /* Replace the first input with the merged record and release the second input. */
 int ApplyRecordMerge(const RecordMergeResult *merge)
 {
-    RecordEntry *records = data_0205fe0c->records;
-    u16 *counts = data_0205fec4.categoryCounts;
+    RecordEntry *records = gSaveIoStateDataTail->records;
+    u16 *counts = gRuntimeRecordCategoryCounters.categoryCounts;
     u32 firstByteOffset = merge->firstIndex * sizeof(RecordEntry);
     RecordEntry *first = (RecordEntry *)((u8 *)records + firstByteOffset);
 
@@ -58,11 +58,11 @@ int ApplyRecordMerge(const RecordMergeResult *merge)
     ++counts[merge->result.category];
     u16 newCategory = merge->result.category;
     newCategory = (u8)newCategory;
-    SetFlagAndBumpCounter(&data_0205fe0c->itemCounts[newCategory]);
+    SetFlagAndBumpCounter(&gSaveIoStateDataTail->itemCounts[newCategory]);
 
-    RecordEntry *second = &data_0205fe0c->records[merge->secondIndex];
+    RecordEntry *second = &gSaveIoStateDataTail->records[merge->secondIndex];
     --counts[second->category];
-    --data_0205fec4.totalCount;
+    --gRuntimeRecordCategoryCounters.totalCount;
     second->active = 0;
     return merge->firstIndex;
 }

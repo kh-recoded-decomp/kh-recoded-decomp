@@ -3,5 +3,5 @@
 #define TagTracker_InvokeCallback_020b8210 TagTracker_InvokeCallback
 #define TriggerFieldMenuButtonRecords_020771a8 TriggerFieldMenuButtonRecords
 #define data_ov001_0209dee4 gFieldMenuButtonRecords
-#define g_saveData_0205fe0c data_0205fe0c
+#define g_saveData_0205fe0c gSaveIoStateDataTail
 #include "src/ov001/field_manager/TriggerFieldMenuButtonRecords_020771a8.c"

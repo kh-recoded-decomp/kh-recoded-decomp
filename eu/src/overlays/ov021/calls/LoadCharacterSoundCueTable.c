@@ -1,3 +1,4 @@
+#define data_020608c8 gSelectionRuntimeHeader
 #define LoadPathGraph_020a7cc8 LoadCharacterSoundCueTable
 #define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap

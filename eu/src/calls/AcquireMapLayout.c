@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define AcquireMapLayout_020506dc AcquireMapLayout
 #define FillGridRegion_02050660 FillGridRegion
 #define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap

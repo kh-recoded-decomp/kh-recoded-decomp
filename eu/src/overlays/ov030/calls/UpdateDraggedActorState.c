@@ -7,7 +7,7 @@
 #define ResetIfIdMatches_020a8178 ResetIfIdMatches
 #define UpdateActorReactionState_020bbe00 UpdateActorReactionState
 #define UpdateDraggedActorState_020bb5a0 UpdateDraggedActorState
-#define data_ov030_020bcf44 data_ov030_020bcf64
+#define data_ov030_020bcf44 gDraggedActorSpeedBonusRatios
 #define func_ov042_020bd324 Camera_GetColliderOffset
 #define func_ov052_020cebbc ComputeFacingAndDirection
 #define func_ov052_020d0e80 ApproachTargetValue

@@ -1,3 +1,4 @@
+#define data_0206085c gSceneHandoffSharedHeader
 #define func_ov002_02062014 SetOv002PanelModeDirtyFromLowBit
 #define func_ov013_0206cfd8 SetOv013MainLayerMask1e
 #define func_ov013_0206fbbc PositionOv013CursorWidget

@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define AssignCursorItemToPartySlot_020c4598 AssignCursorItemToPartySlot
 #define func_ov073_020c1eb4 RefreshStatusMenuData
 #define func_0204f768 GetOverlaySelectionRecord

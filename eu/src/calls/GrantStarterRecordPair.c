@@ -29,7 +29,7 @@ typedef struct SaveSlots {
     SlotRef slots[2];
 } SaveSlots;
 
-extern u8 *data_0205fe0c;
+extern u8 *gSaveIoStateDataTail;
 extern s16 InsertRecordEntry(const RecordEntry *source);
 extern void SetGlobalPackedBit(int bitIndex);
 extern void SetFlagAndBumpCounter(u8 *flag);
@@ -52,12 +52,12 @@ void GrantStarterRecordPair(int firstCategory, int secondCategory)
         entry->levelProgress = 0;
         category = starters.categories[i];
         entry->category = (u8)category;
-        ((SaveSlots *)data_0205fe0c)->slots[i].recordId =
+        ((SaveSlots *)gSaveIoStateDataTail)->slots[i].recordId =
             (u16)InsertRecordEntry(entry) + 0x200;
         category = starters.categories[i];
         SetGlobalPackedBit(category);
-        SetFlagAndBumpCounter(data_0205fe0c + 0x28d8 + category);
+        SetFlagAndBumpCounter(gSaveIoStateDataTail + 0x28d8 + category);
     }
-    ((SaveFlags *)(data_0205fe0c + 0x28d7))->low = 0;
-    ((SaveFlags *)(data_0205fe0c + 0x28d7))->high = 0;
+    ((SaveFlags *)(gSaveIoStateDataTail + 0x28d7))->low = 0;
+    ((SaveFlags *)(gSaveIoStateDataTail + 0x28d7))->high = 0;
 }

@@ -33,7 +33,7 @@ typedef struct {
 } SaveHeader;
 
 extern CompletionStats *gResultsPageContextStorage;
-extern SaveHeader *data_0205fe0c;
+extern SaveHeader *gSaveIoStateDataTail;
 extern const int gResultsTopMessageIds[9][4];
 extern const FieldIdTable gResultsMessageIds;
 extern const RangeTable gResultsLayoutOffsets;
@@ -212,7 +212,7 @@ void BuildCompletionStats(void)
     gResultsPageContextStorage = stats;
     MI_CpuFill8(stats, 0, sizeof(CompletionStats));
     stats->bestCategory = 3;
-    stats->playSeconds = data_0205fe0c->playSeconds +
+    stats->playSeconds = gSaveIoStateDataTail->playSeconds +
         (((OS_GetTick() - GetCardThreadStartTick()) * 64) / 33514000);
 
     for (row = 0; row < 9; row++) {

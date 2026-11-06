@@ -1,3 +1,4 @@
+#define data_02060780 gMeshCacheGenerationStorage
 #define ComputeFacePlanes_0203023c ComputeFacePlanes
 #define ComputeFacePlanes_020302f4 ComputeFacePlanes_02030308
 #define InitMeshData_020303c4 InitMeshData

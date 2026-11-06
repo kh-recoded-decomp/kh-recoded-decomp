@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define AcquireMapLayout_020506dc AcquireMapLayout
 #define BuildSlotSummary_020c4b84 BuildSlotSummary
 #define ComputePlayerStats_02050b30 ComputePlayerStats

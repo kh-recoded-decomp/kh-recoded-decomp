@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define ClearGlobalPackedBit_02027334 ClearGlobalPackedBit
 #define ComputePlayerStats_02050b30 ComputePlayerStats
 #define DecrementBusyCounterIfPositive_02025494 DecrementBusyCounterIfPositive

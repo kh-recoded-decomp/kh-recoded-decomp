@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define GetCtxModeByte_02068084 GetCtxModeByte
 #define ItemList_IsRewardEntryLocked_020cab38 ItemList_IsRewardEntryLocked
 #define data_ov001_020a0460 gFieldSessionWork

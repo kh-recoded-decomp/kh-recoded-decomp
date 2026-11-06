@@ -1,5 +1,5 @@
 #define CreateTimedEntryPair_020acc00 CreateTimedEntryPair
 #define EnsureEffectGroup_020acb6c EnsureEffectGroup
 #define SetupEffectSlots_020ad384 SetupEffectSlots
-#define data_ov021_020b4ff4 data_ov021_020b5014
+#define data_ov021_020b4ff4 gEffectSlotDefaults
 #include "src/ov021/shared_engine/SetupEffectSlots_020ad384.c"

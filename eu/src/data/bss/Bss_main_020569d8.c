@@ -1,4 +1,4 @@
 #include "nitro/types.h"
 
-static u32 data_020569e0[64];
-static u32 data_020569d8[2];
+static u32 gVBlankCallbackNodeStorage[64];
+static u32 gVBlankCallbackListHeads[2];

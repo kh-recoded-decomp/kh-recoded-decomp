@@ -1,4 +1,4 @@
-#define data_020b7808 data_ov022_020b7828
-#define data_020b7df4 data_ov022_020b7e14
+#define data_020b7808 gMoviePixelSaturationTable
+#define data_020b7df4 gMovieDecoderCacheArenaStorage
 #define get_cached_movie_saturation_table_020aa9e8 get_cached_movie_saturation_table
 #include "src/ov022/movie/get_cached_movie_saturation_table_020aa9e8.c"

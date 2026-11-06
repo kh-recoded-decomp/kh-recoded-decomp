@@ -1,3 +1,4 @@
+#define data_020608d4 gSelectionPackedValueTail
 #define MI_CpuCopy8_01ff89a8 MI_CpuCopy8
 #define StoreSelectionPackedValues_020505b4 StoreSelectionPackedValues
 #define WriteGlobalPackedBits_02027360 WriteGlobalPackedBits

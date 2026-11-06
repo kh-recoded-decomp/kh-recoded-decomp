@@ -1,2 +1,3 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define GetActiveRecordEntryOrNull_02029548 GetActiveRecordEntryOrNull
 #include "src/arm9/record_management/GetActiveRecordEntryOrNull_02029548.c"

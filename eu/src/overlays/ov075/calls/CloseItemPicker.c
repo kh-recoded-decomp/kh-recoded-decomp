@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define CloseItemPicker_020cde4c CloseItemPicker
 #define NotifyBothOrOne_02001154 NotifyBothOrOne
 #define SetStateFlagBits_020bc688 SetStateFlagBits

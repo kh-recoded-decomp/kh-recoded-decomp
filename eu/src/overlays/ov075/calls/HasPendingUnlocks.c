@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define HasPendingUnlocks_020c49a8 HasPendingUnlocks
 #define func_ov075_020c4988 CountUnlockedTiers
 #include "src/ov075/unclassified_helpers/HasPendingUnlocks_020c49a8.c"

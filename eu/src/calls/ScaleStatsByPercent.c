@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define ReadGlobalPackedBits_02027348 ReadGlobalPackedBits
 #define ScaleStatsByPercent_02050a80 ScaleStatsByPercent
 #define func_02023dbc _s32_div_f

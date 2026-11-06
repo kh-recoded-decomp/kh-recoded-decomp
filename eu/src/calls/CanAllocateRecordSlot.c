@@ -1,2 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
+#define data_0205fec4 gRuntimeRecordCategoryCounters
 #define CanAllocateRecordSlot_020291f8 CanAllocateRecordSlot
 #include "src/arm9/record_management/CanAllocateRecordSlot_020291f8.c"

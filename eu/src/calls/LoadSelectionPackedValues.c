@@ -1,3 +1,4 @@
+#define data_020608c8 gSelectionRuntimeHeader
 #define GetOverlaySelectionRecord_0204f768 GetOverlaySelectionRecord
 #define LoadSelectionPackedValues_0205053c LoadSelectionPackedValues
 #define ReadGlobalPackedBits_02027348 ReadGlobalPackedBits

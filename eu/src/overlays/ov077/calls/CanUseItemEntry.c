@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define CanUseItemEntry_020c7b6c CanUseItemEntry
 #define GetCtxModeByte_02068084 GetCtxModeByte
 #define IsPartyLevelSufficient_020c7a78 IsPartyLevelSufficient_020c7a98

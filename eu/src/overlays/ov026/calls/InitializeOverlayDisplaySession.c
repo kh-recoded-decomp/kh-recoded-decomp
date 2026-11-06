@@ -1,7 +1,7 @@
 #define GetDisplaySetting GetDisplaySetting
 #define GetSecondaryBrightness GetSubBrightnessSetting
-#define defaultDisplaySessionSettings data_ov026_020b5ab0
+#define defaultDisplaySessionSettings gOverlayDisplayResourceContainerConfig
 #define func_020072b4 GXS_LoadBGPltt
 #define func_ov027_020b8bd4 InitializeResourceContainer
-#define positiveBrightnessPalette data_ov026_020b5af4
+#define positiveBrightnessPalette gOverlayDisplayWhiteColorStorage
 #include "src/ov026/display_session/InitializeOverlayDisplaySession.c"

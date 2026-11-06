@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define HandleSlotListInput_020c032c HandleSlotListInput
 #define g_padTrigger_02060500 gPadPressedStorage
 #define func_ov039_020bca00 GetMenuInputState

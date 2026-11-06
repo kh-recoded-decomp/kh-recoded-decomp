@@ -1,3 +1,4 @@
+#define data_02060780 gMeshCacheGenerationStorage
 #define ClearStateBlock_02038a7c ClearStateBlock
 #define InitTrackingState_02038a90 InitTrackingState
 #define func_01ff86fc MIi_CpuClear32

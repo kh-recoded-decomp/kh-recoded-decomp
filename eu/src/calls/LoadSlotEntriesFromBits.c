@@ -1,3 +1,4 @@
+#define data_020608e0 gSessionSlotEntriesPrefix
 #define LoadSlotEntriesFromBits_02050120 LoadSlotEntriesFromBits
 #define func_ov001_02064574 ReadSessionPackedBits
 #include "src/arm9/shared_engine/LoadSlotEntriesFromBits_02050120.c"

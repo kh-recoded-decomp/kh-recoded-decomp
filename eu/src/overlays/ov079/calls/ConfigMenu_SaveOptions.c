@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define ConfigMenu_SaveOptions_020c4800 ConfigMenu_SaveOptions
 #define WritePackedBits_0202d560 WritePackedBits
 #include "src/ov079/unclassified_helpers/ConfigMenu_SaveOptions_020c4800.c"

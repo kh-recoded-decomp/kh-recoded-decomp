@@ -53,7 +53,7 @@ struct Actor {
 extern const s16 gSinFx12Table[];
 extern const s16 data_02053780[];
 extern const TiltConfig data_02053740;
-extern GameSettings *data_0205fe0c;
+extern GameSettings *gSaveIoStateDataTail;
 extern const VecFx32 gZeroVecFx32;
 
 extern void *GetPlayerControlState(u32 playerIndex);
@@ -183,7 +183,7 @@ void Actor_UpdateGroundMove(Actor *actor)
             actor->jump.velZ = move.z;
         }
         if (!airborne) {
-            if (!data_0205fe0c->invertTilt && gSinFx12Table[index] > data_02053740.threshold
+            if (!gSaveIoStateDataTail->invertTilt && gSinFx12Table[index] > data_02053740.threshold
                 && (!actor->prevTilt || gSinFx12Table[fieldAngle >> 4] <= data_02053740.threshold)) {
                 landed = TRUE;
             }

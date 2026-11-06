@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define GetActiveRecordEntryOrNull_02029548 GetActiveRecordEntryOrNull
 #define SlotMenu_LoadCursorSlotRecord_020c4444 SlotMenu_LoadCursorSlotRecord
 #include "src/ov076/unclassified_helpers/SlotMenu_LoadCursorSlotRecord_020c4444.c"

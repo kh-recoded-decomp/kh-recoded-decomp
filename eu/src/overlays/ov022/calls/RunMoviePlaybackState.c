@@ -29,7 +29,7 @@ typedef struct MovieStateGlobals {
     s32 skipRequested;
 } MovieStateGlobals;
 
-extern MovieStateGlobals data_ov022_020b7da0;
+extern MovieStateGlobals gMovieSceneGlobals;
 extern u16 gPadPressedStorage;
 
 extern MovieState *GetRunningTaskWork(void);
@@ -87,7 +87,7 @@ void *RunMoviePlaybackState(void)
                     if (gPadPressedStorage & 9) {
                         state->fadeLevel = 0;
                         state->flags |= 4;
-                        data_ov022_020b7da0.skipRequested = 1;
+                        gMovieSceneGlobals.skipRequested = 1;
                     }
                 } else if (state->captionVisible == 0) {
                     if (gPadPressedStorage & 8) {
@@ -100,7 +100,7 @@ void *RunMoviePlaybackState(void)
                     if (gPadPressedStorage & 8) {
                         state->fadeLevel = 0;
                         state->flags |= 4;
-                        data_ov022_020b7da0.skipRequested = 1;
+                        gMovieSceneGlobals.skipRequested = 1;
                     } else if ((OS_GetTick() - state->captionTick) * 64 / 0x82ea > 3000) {
                         state->captionVisible = 0;
                         DrawMovieCaption(FALSE);

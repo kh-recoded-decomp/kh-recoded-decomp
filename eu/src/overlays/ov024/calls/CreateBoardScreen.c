@@ -48,9 +48,9 @@ typedef struct BoardGlobals {
 
 #define BOARD_VRAM_KEY(base) ((((base) + 0x8000) & 0xfffffc) << 7)
 
-extern Words4 data_ov024_020b7350;
-extern Words4 data_ov024_020b7360;
-extern Words5 data_ov024_020b7370;
+extern Words4 gBoardBgLayerIds;
+extern Words4 gBoardObjectManagerConfig;
+extern Words5 gBoardBackgroundContainerConfig;
 extern BoardGlobals data_ov024_020b7540;
 extern int data_ov024_020b754c[6];
 extern char sOv024_UiBtlBtluiP2_020b74f4[];
@@ -80,7 +80,7 @@ extern void *StartBoardScreen(void);
 
 void *CreateBoardScreen(int mode)
 {
-    Words4 layout = data_ov024_020b7350;
+    Words4 layout = gBoardBgLayerIds;
     BgLayerDesc bgDesc;
     Words5 animDesc;
     Words4 objDesc;
@@ -121,11 +121,11 @@ void *CreateBoardScreen(int mode)
     }
     data_ov024_020b7540.state->resourceA = Msg_OpenContainerAndReadHeader(sOv024_UiBtlBtluiP2_020b74f4, 0xe, 0);
     data_ov024_020b7540.state->resourceB = Msg_OpenContainerAndReadHeader(sOv024_UiBtlBtlLanguageP2_020b7508, 0xe, 0);
-    animDesc = data_ov024_020b7370;
+    animDesc = gBoardBackgroundContainerConfig;
     InitBackgroundContainer(state->animSet, &animDesc);
     LoadTagTrackerResourceFile(state->animSet, BOARD_VRAM_KEY(data_ov024_020b7540.state->resourceA) | 0x8000000f);
     data_ov024_020b7540.cursor = (void *)SessionBuffer_GetAddress(10);
-    objDesc = data_ov024_020b7360;
+    objDesc = gBoardObjectManagerConfig;
     objDesc.words[0] = BOARD_VRAM_KEY(data_ov024_020b7540.state->resourceA) | 0x80000013;
     InitializeResourceContainer(data_ov024_020b7540.state->objectSet, 0);
     InitObjManagerAndMark(data_ov024_020b7540.state->objectSet, &objDesc);

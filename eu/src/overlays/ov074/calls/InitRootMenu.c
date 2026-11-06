@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define func_ov001_02068094 GetSceneEntryPrimaryBgmId
 #define ClearSbcCallback_020188b8 NNS_G3dRenderObjResetCallBack
 #define DrawTextAnchored_020015a0 DrawTextAnchored

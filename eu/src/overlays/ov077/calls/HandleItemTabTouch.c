@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define HandleItemTabTouch_020c43f8 HandleItemTabTouch
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define RefreshElementCellAnimation_020c9d34 RefreshElementCellAnimation

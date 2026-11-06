@@ -1,4 +1,4 @@
 #define WriteGlobalPackedBits_02027360 WriteGlobalPackedBits
 #define WritePackedBits_0202d560 WritePackedBits
-#define g_cardThreadState_0205fe00 data_0205fe00
+#define g_cardThreadState_0205fe00 gSaveIoStatePrefix
 #include "src/arm9/packed_bits/WriteGlobalPackedBits_02027360.c"

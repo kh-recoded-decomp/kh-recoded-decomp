@@ -1,3 +1,4 @@
+#define data_02060570 gTextureUploadCallback
 #define LoadTextureInChunks_020bc8b4 LoadTextureInChunks
 #define ReleaseResourceSlot_0202ca18 ReleaseResourceSlot
 #define ReleaseSharedRecordSlot_0202c8a8 ReleaseSharedRecordSlot

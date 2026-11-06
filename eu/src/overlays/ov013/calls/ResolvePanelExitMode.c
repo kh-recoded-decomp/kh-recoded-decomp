@@ -1,3 +1,4 @@
+#define data_0206085c gSceneHandoffSharedHeader
 #define data_ov013_02074ce0 gOv013PanelGlobals
 #define func_ov002_0206203c ResetOv002MainPanelText
 #define func_ov002_020620fc ResetOv002SubPanelText

@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define GetNodeGroupIfUnlocked_020c6080 GetNodeGroupIfUnlocked
 #define GetPackedBitMask_0202d4a0 GetPackedBitMask
 #include "src/ov075/unclassified_helpers/GetNodeGroupIfUnlocked_020c6080.c"

@@ -93,7 +93,7 @@ typedef struct GameState {
     u8 difficulty;
 } GameState;
 
-extern GameState *data_0205fe0c;
+extern GameState *gSaveIoStateDataTail;
 extern const VecFx32 gZeroVecFx32;
 
 extern void RefreshStageEntriesIfLoaded(void);
@@ -206,7 +206,7 @@ void ProbeStageObjectHit(StageRecord *self, StageActor *player, int unused, u16 
         message.damage = scaled;
         message.sound = info->sound;
         message.effect = info->effect;
-        message.value = info->values[data_0205fe0c->difficulty];
+        message.value = info->values[gSaveIoStateDataTail->difficulty];
         message.row = GetStageRowIndex(self);
         if (owner->sticky == 0) {
             self->flags |= 0x80;

@@ -1,3 +1,4 @@
+#define data_020608c8 gSelectionRuntimeHeader
 /* Keep the shared scene view's pointer result explicit at the DS address API. */
 #include "eu/nitro/types.h"
 #include "eu/src/overlays/ov001/SessionBuffers.h"

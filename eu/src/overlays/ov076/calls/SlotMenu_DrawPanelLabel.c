@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define SlotMenu_DrawPanelLabel_020c7edc SlotMenu_DrawPanelLabel
 #define func_01ff878c MIi_CpuCopyFast
 #define G2D_InitializeLinearCanvas_02017a2c NNS_G2dCharCanvasInitForBG

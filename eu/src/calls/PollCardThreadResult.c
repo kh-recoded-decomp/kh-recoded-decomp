@@ -3,5 +3,5 @@
 #define StartCardTransferThread_02026be0 StartCardTransferThread
 #define VerifySha1Signature_02026c9c VerifySha1Signature
 #define func_02026c3c PollCardTransferThread
-#define g_cardThreadState_0205fe00 data_0205fe00
+#define g_cardThreadState_0205fe00 gSaveIoStatePrefix
 #include "src/arm9/shared_engine/PollCardThreadResult_02027060.c"

@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define CallVirtualHandlerSlot1_02001574 CallVirtualHandlerSlot1
 #define DrawTextAnchored_020015a0 DrawTextAnchored
 #define FindActiveRecordById_020b8184 FindActiveRecordById

@@ -10,7 +10,7 @@ extern void WaitSubMenuFadeInThenEnableButtons(void);
 extern void WaitMenuFadeOutThenEnterShutdown(void);
 extern void ShutdownHandlersAndExit(void);
 
-void *const data_ov039_020be7bc[10] = {
+void *const gMenuRuntimeStateHandlers[10] = {
     NULL,
     (void *)UpdateSubOverlayHandlers,
     (void *)WaitMenuFadeInThenEnableInput,
@@ -23,7 +23,7 @@ void *const data_ov039_020be7bc[10] = {
     (void *)ShutdownHandlersAndExit,
 };
 
-const u32 data_ov039_020be7a0[7] = {
+const u32 gMenuTileTableLayerIds[7] = {
     0x00000009, 0x0000000A, 0x0000000B, 0x00000018,
     0x00000019, 0x0000001A, 0x0000001B,
 };

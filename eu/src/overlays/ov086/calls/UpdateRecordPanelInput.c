@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define ClearScreenLayerDirty_020bc128 ClearScreenLayerDirty
 #define CopySourceBlock_020b9f7c CopySourceBlock
 #define GetCardThreadStartTick_0202726c GetCardThreadStartTick

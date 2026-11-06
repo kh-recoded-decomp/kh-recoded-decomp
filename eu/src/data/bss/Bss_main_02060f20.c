@@ -1,3 +1,3 @@
 #include "nitro/types.h"
 
-static u16 data_02060f20;
+static u16 gLevelGrowthTableFirstHpBase;

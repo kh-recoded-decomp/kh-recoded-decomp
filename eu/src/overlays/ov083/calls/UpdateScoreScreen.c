@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define UpdateScoreScreen_020bef1c UpdateScoreScreen
 #define func_02003fd4 OS_GetTick
 #define GetCardThreadStartTick_0202726c GetCardThreadStartTick

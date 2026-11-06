@@ -1,2 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
+#define data_0205fec4 gRuntimeRecordCategoryCounters
 #define GetByteCounterOrDefault_020291cc GetByteCounterOrDefault
 #include "src/arm9/record_management/GetByteCounterOrDefault_020291cc.c"

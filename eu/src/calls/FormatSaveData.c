@@ -4,5 +4,5 @@
 #define FormatSaveData_02026ea0 FormatSaveData
 #define InitSaveData_02026ee0 InitSaveData
 #define ReadCardBackupSync_02026b00 ReadCardBackupSync
-#define g_cardThreadState_0205fe00 data_0205fe00
+#define g_cardThreadState_0205fe00 gSaveIoStatePrefix
 #include "src/arm9/shared_engine/FormatSaveData_02026ea0.c"

@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define Actor_UpdateJump_020ca33c Actor_UpdateJump
 #define func_ov001_0206db78 GetPlayerControlState
 #define func_ov059_020ca2fc Actor_UpdateJumpCommandInput

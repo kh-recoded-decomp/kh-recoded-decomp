@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define ComputeScaledPercentPlusOne_02051134 ComputeScaledPercentPlusOne
 #define func_02023dbc _s32_div_f
 #include "src/arm9/fixed_point/ComputeScaledPercentPlusOne_02051134.c"

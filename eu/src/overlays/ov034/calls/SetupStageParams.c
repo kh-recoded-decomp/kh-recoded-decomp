@@ -1,3 +1,4 @@
+#define data_0206085c gSceneHandoffSharedHeader
 #define SetupStageParams_020bdf10 SetupStageParams
 #define SeedSharedRandomState_0202a984 SeedSharedRandomState
 #define func_0202a9d0 NextSharedRandom16Scaled

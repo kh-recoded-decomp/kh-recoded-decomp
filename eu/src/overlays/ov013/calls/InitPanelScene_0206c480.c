@@ -1,3 +1,4 @@
+#define data_0206085c gSceneHandoffSharedHeader
 #define func_ov013_02074498 Ov013MenuTouchEventNoop
 #define func_ov002_020629a8 ResetOv002PanelGraphics
 #define func_ov013_0206caa4 ConfigureOv013PlayerCardPageMode

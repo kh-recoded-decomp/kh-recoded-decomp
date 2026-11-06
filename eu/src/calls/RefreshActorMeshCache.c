@@ -1,3 +1,4 @@
+#define data_02060780 gMeshCacheGenerationStorage
 #define RefreshActorMeshCache_02038130 RefreshActorMeshCache
 #define TestQueryAgainstMeshList_02035270 TestQueryAgainstMeshList
 #define VEC_Add_01ff9e0c VEC_Add

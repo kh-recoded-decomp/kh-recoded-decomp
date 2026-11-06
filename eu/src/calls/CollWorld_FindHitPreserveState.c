@@ -1,3 +1,4 @@
+#define data_02060784 gPreservedCollisionHitStorage
 #define data_027e00b0 gCollisionTraversalTop
 #define data_027e00b4 gCollisionTraversalFrames
 #define CollWorld_FindHitPreserveState_02034ab4 CollWorld_FindHitPreserveState

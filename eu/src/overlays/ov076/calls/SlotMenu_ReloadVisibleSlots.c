@@ -1,4 +1,4 @@
 #define SlotMenu_ReloadSlot_020c6f60 SlotMenu_ReloadSlot
 #define SlotMenu_ReloadVisibleSlots_020c7144 SlotMenu_ReloadVisibleSlots
-#define g_saveData_0205fe0c data_0205fe0c
+#define g_saveData_0205fe0c gSaveIoStateDataTail
 #include "src/ov076/unclassified_helpers/SlotMenu_ReloadVisibleSlots_020c7144.c"

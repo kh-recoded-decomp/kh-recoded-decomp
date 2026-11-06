@@ -1,3 +1,4 @@
+#define data_0206085c gSceneHandoffSharedHeader
 #define data_ov013_02074ce0 gOv013PanelGlobals
 #define data_ov013_02074a30 gOv013RecordMainBgConfig
 #define data_ov013_02074a44 gOv013RecordMainObjConfig

@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define GetActiveRecordEntryOrNull_02029548 GetActiveRecordEntryOrNull
 #define SlotMenu_BuildSlotMasks_020c4260 SlotMenu_BuildSlotMasks
 #include "src/ov076/unclassified_helpers/SlotMenu_BuildSlotMasks_020c4260.c"

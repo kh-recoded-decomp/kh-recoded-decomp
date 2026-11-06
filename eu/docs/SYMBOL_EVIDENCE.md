@@ -808,3 +808,18 @@ Name 98 native engine/platform storage identities from writers, SDK operations a
 [Sdk Script Views9](NATIVE_SDK_SCRIPT_VIEWS9.md),
 [Sound Pool Shared4](NATIVE_SOUND_POOL_SHARED4.md),
 [Vram Thread7](NATIVE_VRAM_THREAD7.md).
+
+## Name movie and game service data
+
+Name 103 movie, menu, save/render, selection, growth and field/combat storage identities from native consumers. Correct the misleading movie prompt table name and document logical capacities separately from physical fragments.
+
+[Field Combat Tables13](NATIVE_FIELD_COMBAT_TABLES13.md),
+[Level Growth Spans3](NATIVE_LEVEL_GROWTH_SPANS3.md),
+[List Display Configs9](NATIVE_LIST_DISPLAY_CONFIGS9.md),
+[Map Board Configs9](NATIVE_MAP_BOARD_CONFIGS9.md),
+[Menu Stage Configs12](NATIVE_MENU_STAGE_CONFIGS12.md),
+[Movie20](NATIVE_MOVIE20.md),
+[Native Runtime Views7](NATIVE_NATIVE_RUNTIME_VIEWS7.md),
+[Save Render State10](NATIVE_SAVE_RENDER_STATE10.md),
+[Selection Slots Tags8](NATIVE_SELECTION_SLOTS_TAGS8.md),
+[Static Owner Tables12](NATIVE_STATIC_OWNER_TABLES12.md).

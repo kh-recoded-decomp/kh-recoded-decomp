@@ -1,3 +1,4 @@
+#define data_02060848 gContactProjectionFallbackEnabled
 #define func_ov001_02063a38 GetFieldSessionState
 #define NegateVecFx32_0204aa40 NegateVecFx32
 #define OffsetBoxByDelta_0203ac70 OffsetBoxByDelta

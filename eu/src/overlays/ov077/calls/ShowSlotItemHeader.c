@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define SetStatusHeaderText_020c1d38 SetStatusHeaderText
 #define ShowSlotItemHeader_020c437c ShowSlotItemHeader
 #include "src/ov077/unclassified_helpers/ShowSlotItemHeader_020c437c.c"

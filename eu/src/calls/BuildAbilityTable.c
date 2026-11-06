@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define AcquireRecordSlot_02051d3c AcquireRecordSlot
 #define AddTaggedEntry_0204fe2c AddTaggedEntry
 #define BuildAbilityTable_02050ea4 BuildAbilityTable

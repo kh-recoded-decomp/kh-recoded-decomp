@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define GetActiveRecordEntryOrNull_02029548 GetActiveRecordEntryOrNull
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define SetNavigationElementsVisible_020ccd30 SetNavigationElementsVisible

@@ -1,5 +1,5 @@
 #define CARDi_RequestStreamCommand_02009a0c CARDi_RequestStreamCommand
 #define WriteCardBackupSync_02026b28 WriteCardBackupSync
 #define func_02009128 CARD_GetResultCode
-#define g_cardThreadState_0205fe00 data_0205fe00
+#define g_cardThreadState_0205fe00 gSaveIoStatePrefix
 #include "src/arm9/shared_engine/WriteCardBackupSync_02026b28.c"

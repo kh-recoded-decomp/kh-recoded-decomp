@@ -5,7 +5,7 @@
 #define ResetMovieDecoderCodeArena_020aa8b4 ResetMovieDecoderCodeArena
 #define ResetMovieLookupTableArena_020aa8d4 ResetMovieLookupTableArena
 #define SetupMovieDecoderArenas_020a8264 SetupMovieDecoderArenas
-#define data_ov022_020b7d94 data_ov022_020b7db4
+#define data_ov022_020b7d94 gMovieFileAndDecoderBackupState
 #define func_01ff89a8 MI_CpuCopy8
 #define func_02003b3c OS_GetDTCMAddress
 #define getMovieDecoderCodeSize_020aa8a0 getMovieDecoderCodeSize

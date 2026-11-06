@@ -1,2 +1,3 @@
+#define data_020608c8 gSelectionRuntimeHeader
 #define AddToSelectionCounters_020ce700 AddToSelectionCounters
 #include "src/ov075/unclassified_helpers/AddToSelectionCounters_020ce700.c"

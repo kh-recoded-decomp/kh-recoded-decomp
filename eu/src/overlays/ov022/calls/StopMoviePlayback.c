@@ -5,8 +5,8 @@
 #define StopMovieAudio_020a7ed8 StopMovieAudio
 #define StopMoviePlayback_020a8674 StopMoviePlayback
 #define data_ov022_020b7d10 sOv022_MobiclipIntr_020b7d30
-#define data_ov022_020b7d88 data_ov022_020b7da8
-#define data_ov022_020b7d94 data_ov022_020b7db4
+#define data_ov022_020b7d88 gMoviePlaybackGlobals
+#define data_ov022_020b7d94 gMovieFileAndDecoderBackupState
 #define func_0200b5b0 FS_CloseFile
 #define func_ov022_020a82f4 FreeMovieFileBuffer
 #define func_ov022_020a9288 DeleteMovieDecoder

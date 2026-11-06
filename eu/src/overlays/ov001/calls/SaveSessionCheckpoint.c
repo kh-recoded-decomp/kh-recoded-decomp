@@ -9,5 +9,5 @@
 #define StoreSessionDifficultyPreset_0206452c StoreSessionDifficultyPreset
 #define data_ov001_020a0460 gFieldSessionWork
 #define func_01ff89a8 MI_CpuCopy8
-#define g_saveBits_0205fe0c data_0205fe0c
+#define g_saveBits_0205fe0c gSaveIoStateDataTail
 #include "src/ov001/unclassified_helpers/SaveSessionCheckpoint_02064364.c"

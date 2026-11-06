@@ -1,7 +1,7 @@
 #include "nitro/types.h"
 
 extern u32 *gMapMenuWork;
-extern u8 data_ov023_020b6efc;
+extern u8 gMapMenuEntryFileIndices;
 extern u32 SetSlotAnimSequence();
 extern u32 IndexedRecords_SetFlag2();
 extern u32 SetPanelSessionActive();
@@ -42,7 +42,7 @@ void PrepareMenuScreenEntry(u32 index, u32 value)
     QueueFileLoadRequest(
         ((work[2] + 0x8000 & 0xfffffc) << 7) |
             0x80000000 |
-            (*(u16 *)(&data_ov023_020b6efc + index * 2) & 0x1ff),
+            (*(u16 *)(&gMapMenuEntryFileIndices + index * 2) & 0x1ff),
         1,
         (u32)ApplyMenuScreenEntry,
         0

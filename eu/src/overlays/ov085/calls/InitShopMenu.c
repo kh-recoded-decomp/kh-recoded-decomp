@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define AcquireRecordSlot_02051d3c AcquireRecordSlot
 #define BuildSlotImageParams_020bc220 BuildSlotImageParams
 #define DrawTextAnchored_020015a0 DrawTextAnchored

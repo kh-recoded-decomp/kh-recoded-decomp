@@ -1,8 +1,8 @@
 #define func_ov001_020645c8 IsSessionFlagSet
 #define InitMapScreen_020b5de0 InitMapScreen
 #define data_ov023_020b5b51 PlayEnabledMenuSound
-#define data_ov023_020b6e84 data_ov023_020b6ea4
-#define data_ov023_020b6e94 data_ov023_020b6eb4
+#define data_ov023_020b6e84 gMapScreenInitialSlotPosition
+#define data_ov023_020b6e94 gMapScreenObjectManagerConfig
 #define func_01ff86fc MIi_CpuClear32
 #define func_0204efd0 InitObjManagerVariant
 #define func_0204f00c PXI_Init_0204f020

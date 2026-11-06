@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define func_01ffb2f8 SetModelAnimationFrameWithSingleWrap
 #define AcquireMapLayout_020506dc AcquireMapLayout
 #define CountUnlockedTiers_020c4988 CountUnlockedTiers

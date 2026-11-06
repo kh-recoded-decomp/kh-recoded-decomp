@@ -113,7 +113,7 @@ typedef struct {
     u32 noClimb : 1;
 } GameFlags;
 
-extern GameFlags *data_0205fe0c;
+extern GameFlags *gSaveIoStateDataTail;
 extern s16 gSinFx12Table[];
 extern void *GetPlayerControlState(int player);
 extern VecFx32 *GetActorModelPosition(Actor *actor);
@@ -211,7 +211,7 @@ BOOL TryLedgeClimb(Actor *actor, ClimbState *state)
     boosted = FALSE;
     special = FALSE;
     unit = GetPlayerControlState(actor->player);
-    if (actor->player == 0 && data_0205fe0c->noClimb) {
+    if (actor->player == 0 && gSaveIoStateDataTail->noClimb) {
         return climb;
     }
     pos = *GetActorModelPosition(actor);

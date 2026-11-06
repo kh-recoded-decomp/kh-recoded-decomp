@@ -1,7 +1,7 @@
 #include "nitro/types.h"
 
-extern u16 *data_ov022_020b7da0;
+extern u16 *gMovieSceneGlobals;
 
 BOOL IsMovieSceneFinished(void) {
-  return *data_ov022_020b7da0 == 2;
+  return *gMovieSceneGlobals == 2;
 }

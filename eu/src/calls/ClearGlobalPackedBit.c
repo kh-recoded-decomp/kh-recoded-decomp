@@ -1,3 +1,3 @@
 #define ClearGlobalPackedBit_02027334 ClearGlobalPackedBit
-#define g_cardThreadState_0205fe00 data_0205fe00
+#define g_cardThreadState_0205fe00 gSaveIoStatePrefix
 #include "src/arm9/packed_bits/ClearGlobalPackedBit_02027334.c"

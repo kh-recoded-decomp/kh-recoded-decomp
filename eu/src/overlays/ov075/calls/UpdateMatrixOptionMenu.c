@@ -144,7 +144,7 @@ struct MatrixMenu {
     u8 lastInputFlag;
 };
 
-extern SaveData *data_0205fe0c;
+extern SaveData *gSaveIoStateDataTail;
 extern u16 gPadPressedStorage;
 extern const PageTab gMatrixCategoryCycleEntries[];
 extern const OptionApplyFunc gOv075StateHandlers[];
@@ -341,14 +341,14 @@ int UpdateMatrixOptionMenu(MatrixMenu *menu)
             if (previous != *target) {
                 PlayerStats stats;
 
-                ComputePlayerStats(data_0205fe0c, &stats, FALSE, 0);
+                ComputePlayerStats(gSaveIoStateDataTail, &stats, FALSE, 0);
                 preview.level = stats.level;
                 preview.maxHp = stats.hp;
                 preview.attack = stats.strength;
                 preview.defense = stats.magic;
                 preview.magic = stats.defense;
                 preview.capacity = stats.unk_c;
-                RefreshStatusMenuData(data_0205fe0c, &preview);
+                RefreshStatusMenuData(gSaveIoStateDataTail, &preview);
             }
         }
     }
@@ -387,7 +387,7 @@ int UpdateMatrixOptionMenu(MatrixMenu *menu)
             } while (type != tabs[index].id);
         }
         count = 5;
-        mask = data_0205fe0c->unlockedPages;
+        mask = gSaveIoStateDataTail->unlockedPages;
         do {
             if (index == 0) {
                 index = 5;
@@ -416,7 +416,7 @@ int UpdateMatrixOptionMenu(MatrixMenu *menu)
             } while (type != tabs[index].id);
         }
         count = 5;
-        mask = data_0205fe0c->unlockedPages;
+        mask = gSaveIoStateDataTail->unlockedPages;
         do {
             index++;
             if (index == 5) {

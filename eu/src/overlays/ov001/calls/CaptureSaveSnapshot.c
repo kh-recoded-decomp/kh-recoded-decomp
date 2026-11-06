@@ -3,5 +3,5 @@
 #define data_ov001_020a0460 gFieldSessionWork
 #define func_01ff869c MIi_CpuCopy16
 #define func_01ff878c MIi_CpuCopyFast
-#define g_saveBits_0205fe0c data_0205fe0c
+#define g_saveBits_0205fe0c gSaveIoStateDataTail
 #include "src/ov001/unclassified_helpers/CaptureSaveSnapshot_02062eb4.c"

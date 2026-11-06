@@ -2,8 +2,8 @@
 #define NNSi_FndGetCurrentRootHeap_0202a764 GetRunningTaskWork
 #define PXI_Init_020a8a44 ReleaseMovieCaptionGlyphCache
 #define StoreGlobalArrayEntry_02025668 StoreGlobalArrayEntry
-#define data_020b7be0 data_ov022_020b7c00
-#define data_020b7d80 data_ov022_020b7da0
+#define data_020b7be0 gMovieSceneTaskHandle
+#define data_020b7d80 gMovieSceneGlobals
 #define func_02001474 FreeResourceBufferAndProbeHeap
 #define func_020257e4 ReleaseScriptVmBuffer
 #define func_02028bcc CreateManagerObjects

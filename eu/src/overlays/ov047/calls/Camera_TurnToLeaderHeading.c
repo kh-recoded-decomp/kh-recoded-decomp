@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define func_ov001_0206c2c8 GetTargetSelectionFlag2
 #define Camera_GetFocusPosition_020c1780 Camera_GetFocusPosition
 #define Camera_IsFrozen_020c0c1c Camera_IsFrozen

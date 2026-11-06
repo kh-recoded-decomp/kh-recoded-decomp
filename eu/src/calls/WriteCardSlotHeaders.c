@@ -7,5 +7,5 @@
 #define func_01ff8830 MI_CpuFill8
 #define func_02026b00 ReadCardBackupSync
 #define func_02026b28 WriteCardBackupSync
-#define g_cardThreadState_0205fe00 data_0205fe00
+#define g_cardThreadState_0205fe00 gSaveIoStatePrefix
 #include "src/arm9/shared_engine/WriteCardSlotHeaders_02027278.c"

@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define func_ov001_020645c8 IsSessionFlagSet
 #define CountGroupFlaggedEntries_020bf484 CountGroupFlaggedEntries_020bf4a4
 #define data_ov086_020c2340 gRecordGroupEntryCountsHead

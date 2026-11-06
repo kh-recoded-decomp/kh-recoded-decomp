@@ -15,8 +15,8 @@
 #define SetupMovieDecoderArenas_020a8264 SetupMovieDecoderArenas
 #define createMovieStream_020a91a0 createMovieStream
 #define data_ov022_020b7d10 sOv022_MobiclipIntr_020b7d30
-#define data_ov022_020b7d88 data_ov022_020b7da8
-#define data_ov022_020b7d94 data_ov022_020b7db4
+#define data_ov022_020b7d88 gMoviePlaybackGlobals
+#define data_ov022_020b7d94 gMovieFileAndDecoderBackupState
 #define flushPendingStereoAudioBlocks_020a809c flushPendingStereoAudioBlocks
 #define func_01ff8830 MI_CpuFill8
 #define func_020033b4 DC_StoreAll

@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define G2x_SetBlendAlpha_02006850 G2x_SetBlendAlpha_
 #define GX_LoadBG2Char_02007a90 GX_LoadBG2Char
 #define GX_LoadBG2Scr_02007710 GX_LoadBG2Scr

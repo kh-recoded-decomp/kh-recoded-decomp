@@ -10,7 +10,7 @@
 #define GetStageEventTargetInfo_02087960 GetStageEventTargetInfo
 #define IsPlayerEntryFlagSet_02050014 IsPlayerEntryFlagSet
 #define ScaleValueByPercentField_020a7650 ScaleValueByPercentField
-#define data_ov021_020b4fd8 data_ov021_020b4ff8
+#define data_ov021_020b4fd8 gScaledHitDamageRates
 #define func_01ff8830 MI_CpuFill8
 #define random_next_scaled_0202aa04 random_next_scaled
 #define func_ov001_0206dfbc AwardSlotLevelProgress

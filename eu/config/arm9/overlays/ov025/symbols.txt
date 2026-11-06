@@ -61,13 +61,13 @@ GetListPathNodeId kind:function(thumb,size=0xa) addr:0x020b7650
 GetAvailableMenuEntryIndex kind:function(thumb,size=0x1a) addr:0x020b765c
 ClearEntityCounters kind:function(thumb,size=0x14) addr:0x020b7678
 ResetFieldsToDefault kind:function(thumb,size=0x12) addr:0x020b768c
-data_ov025_020b76a0 kind:data(any) addr:0x020b76a0
-data_ov025_020b76a8 kind:data(any) addr:0x020b76a8
-data_ov025_020b76b0 kind:data(any) addr:0x020b76b0
-data_ov025_020b76c0 kind:data(any) addr:0x020b76c0
-data_ov025_020b76d0 kind:data(any) addr:0x020b76d0
-data_ov025_020b76e0 kind:data(any) addr:0x020b76e0
-data_ov025_020b76f4 kind:data(any) addr:0x020b76f4
+gPanelListBgLayerIds kind:data(any) addr:0x020b76a0
+gPanelListTileTableLayerIds kind:data(any) addr:0x020b76a8
+gPanelListTileTableConfig kind:data(any) addr:0x020b76b0
+gPanelListObjectManagerConfig kind:data(any) addr:0x020b76c0
+gPanelListTextLayerConfig kind:data(any) addr:0x020b76d0
+gPanelListBackgroundContainerConfig kind:data(any) addr:0x020b76e0
+gPanelListViewConfig kind:data(any) addr:0x020b76f4
 gSubBgScreenLoaders kind:data(any) addr:0x020b7740
 gMenuListTaskClass kind:data(any) addr:0x020b7748 ambiguous
 sOv025_Ocuitask_020b775c kind:data(any) addr:0x020b775c

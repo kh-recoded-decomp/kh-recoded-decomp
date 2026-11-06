@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define GetByteCounterOrDefault_020291cc GetByteCounterOrDefault
 #define ReadGlobalPackedBits_02027348 ReadGlobalPackedBits
 #define SetSecondaryElementEnabled_020bc084 SetSecondaryElementEnabled

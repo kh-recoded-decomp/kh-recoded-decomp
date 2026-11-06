@@ -46,7 +46,7 @@ typedef char SaveDigestOffset[(u32)&((SaveSlotBuffer *)0)->digest == 4 ? 1 : -1]
 typedef char SavePayloadOffset[(u32)&((SaveSlotBuffer *)0)->data == 0x18 ? 1 : -1];
 typedef char SaveSlotBufferSize[sizeof(SaveSlotBuffer) == 0x3c18 ? 1 : -1];
 
-extern SaveIoState data_0205fe00;
+extern SaveIoState gSaveIoStatePrefix;
 int BeginSaveSlotWrite(int slot);
 
 #endif

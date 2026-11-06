@@ -1,4 +1,4 @@
-#define data_ov022_020b7b08 data_ov022_020b7b28
-#define data_ov022_020b7b18 data_ov022_020b7b38
+#define data_ov022_020b7b08 gMovieAdpcmIndexAdjustments
+#define data_ov022_020b7b18 gMovieAdpcmStepSizeStorage
 #define decodeMovieAdpcmSamples_020aaadc decodeMovieAdpcmSamples
 #include "src/ov022/video_playback/decodeMovieAdpcmSamples_020aaadc.cpp"

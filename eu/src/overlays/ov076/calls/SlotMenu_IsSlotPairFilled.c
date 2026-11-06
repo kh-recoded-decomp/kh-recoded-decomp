@@ -1,2 +1,3 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define SlotMenu_IsSlotPairFilled_020c4560 SlotMenu_IsSlotPairFilled
 #include "src/ov076/unclassified_helpers/SlotMenu_IsSlotPairFilled_020c4560.c"

@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define IsGlobalPackedBitSet_02027304 IsGlobalPackedBitSet
 #define SlotMenu_HasThreeFilledSlotsAndFlags_020c5248 SlotMenu_HasThreeFilledSlotsAndFlags
 #include "src/ov076/unclassified_helpers/SlotMenu_HasThreeFilledSlotsAndFlags_020c5248.c"

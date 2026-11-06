@@ -23,27 +23,27 @@ int BeginSaveSlotWrite(int slot)
 {
     u8 probe;
 
-    CARD_LockBackup(data_0205fe00.lockId);
+    CARD_LockBackup(gSaveIoStatePrefix.lockId);
     IncrementBusyCounter();
     if (ReadCardBackupSync(0, &probe, 1) != 0) {
-        CARD_UnlockBackup(data_0205fe00.lockId);
+        CARD_UnlockBackup(gSaveIoStatePrefix.lockId);
         DecrementBusyCounterIfPositive();
         return 0;
     }
 
-    u64 elapsed = OS_GetTick() - data_0205fe00.startTick;
-    data_0205fe00.save->playTimeSeconds += (elapsed * 64) / SAVE_CLOCK_HZ;
-    if (data_0205fe00.save->playTimeSeconds > SAVE_MAX_PLAY_TIME_SECONDS) {
-        data_0205fe00.save->playTimeSeconds = SAVE_MAX_PLAY_TIME_SECONDS;
+    u64 elapsed = OS_GetTick() - gSaveIoStatePrefix.startTick;
+    gSaveIoStatePrefix.save->playTimeSeconds += (elapsed * 64) / SAVE_CLOCK_HZ;
+    if (gSaveIoStatePrefix.save->playTimeSeconds > SAVE_MAX_PLAY_TIME_SECONDS) {
+        gSaveIoStatePrefix.save->playTimeSeconds = SAVE_MAX_PLAY_TIME_SECONDS;
     }
-    data_0205fe00.startTick += elapsed - elapsed % SAVE_TICKS_PER_SECOND;
+    gSaveIoStatePrefix.startTick += elapsed - elapsed % SAVE_TICKS_PER_SECOND;
 
-    ComputeHash(data_0205fe00.buffer->digest, &data_0205fe00.buffer->data,
-                sizeof(data_0205fe00.buffer->data));
-    data_0205fe00.buffer->signature = SAVE_SLOT_SIGNATURE;
-    data_0205fe00.blockCounter = 0;
-    data_0205fe00.slot = slot;
-    EmitCommandVariantA((data_0205fe00.slot * 2) * sizeof(SaveSlotBuffer) + SAVE_AREA_OFFSET,
-                        data_0205fe00.buffer, sizeof(SaveSlotBuffer));
+    ComputeHash(gSaveIoStatePrefix.buffer->digest, &gSaveIoStatePrefix.buffer->data,
+                sizeof(gSaveIoStatePrefix.buffer->data));
+    gSaveIoStatePrefix.buffer->signature = SAVE_SLOT_SIGNATURE;
+    gSaveIoStatePrefix.blockCounter = 0;
+    gSaveIoStatePrefix.slot = slot;
+    EmitCommandVariantA((gSaveIoStatePrefix.slot * 2) * sizeof(SaveSlotBuffer) + SAVE_AREA_OFFSET,
+                        gSaveIoStatePrefix.buffer, sizeof(SaveSlotBuffer));
     return 1;
 }

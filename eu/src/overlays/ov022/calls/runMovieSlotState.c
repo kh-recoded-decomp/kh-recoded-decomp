@@ -1,5 +1,5 @@
-#define data_ov024_02093a2c data_ov022_020b7da8
-#define data_ov024_0209ba48 data_ov022_020b7db4
+#define data_ov024_02093a2c gMoviePlaybackGlobals
+#define data_ov024_0209ba48 gMovieFileAndDecoderBackupState
 #define func_020031d4 OS_GetTick
 #define func_02003618 OS_CancelAlarm
 #define func_020087c0 SND_FlushCommand

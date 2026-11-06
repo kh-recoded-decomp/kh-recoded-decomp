@@ -1,4 +1,4 @@
 #define SwapCaptionPagesOnVBlank_020a8154 SwapCaptionPagesOnVBlank
-#define data_ov022_020b7d88 data_ov022_020b7da8
-#define data_ov022_020b7d94 data_ov022_020b7db4
+#define data_ov022_020b7d88 gMoviePlaybackGlobals
+#define data_ov022_020b7d94 gMovieFileAndDecoderBackupState
 #include "src/ov022/video_playback/SwapCaptionPagesOnVBlank_020a8154.c"

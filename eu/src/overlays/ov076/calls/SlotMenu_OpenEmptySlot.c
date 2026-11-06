@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define SlotMenu_OpenEmptySlot_020c4f7c SlotMenu_OpenEmptySlot
 #define data_ov076_020cd260 gSlotMenuBrowsePrompt
 #define func_020291b4 GetPrimaryRecordCount

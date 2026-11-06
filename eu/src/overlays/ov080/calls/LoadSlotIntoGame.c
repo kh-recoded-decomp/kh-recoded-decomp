@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define LoadSlotIntoGame_020c58c4 LoadSlotIntoGame
 #define func_02028e6c RebuildRecordCounters
 #define func_020506dc AcquireMapLayout

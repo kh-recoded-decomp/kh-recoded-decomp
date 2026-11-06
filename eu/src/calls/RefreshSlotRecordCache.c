@@ -1,3 +1,5 @@
+#define data_0205fe0c gSaveIoStateDataTail
+#define data_0205fec4 gRuntimeRecordCategoryCounters
 #define AcquireRecordSlot_02051d3c AcquireRecordSlot
 #define CloseRecordManager_02051cdc ReleaseRecordManager
 #define GetActiveRecordEntryOrNull_02029548 GetActiveRecordEntryOrNull

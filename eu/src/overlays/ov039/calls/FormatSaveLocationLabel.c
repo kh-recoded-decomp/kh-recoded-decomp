@@ -7,7 +7,7 @@ typedef struct RecordSaveData {
 } RecordSaveData;
 
 extern u16 gGridLabelBuffer[64];
-extern RecordSaveData *data_0205fe0c;
+extern RecordSaveData *gSaveIoStateDataTail;
 extern const u16 sGridLabelSpacedSeparator[];
 extern const u16 sGridLabelSeparator[];
 extern const u16 sGridLabelJoinedFormat[];
@@ -37,7 +37,7 @@ u16 *FormatSaveLocationLabel(RecordSaveData *save)
                                 GetGridTableValue(8, -1));
             goto done;
         }
-        if (GetRuntimeStateFlags() == 0x4000 && save == data_0205fe0c) {
+        if (GetRuntimeStateFlags() == 0x4000 && save == gSaveIoStateDataTail) {
             gGridLabelBuffer[0] = 0;
             goto done;
         }

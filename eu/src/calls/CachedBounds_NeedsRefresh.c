@@ -1,2 +1,3 @@
+#define data_02060780 gMeshCacheGenerationStorage
 #define CachedBounds_NeedsRefresh_02035044 CachedBounds_NeedsRefresh
 #include "src/arm9/spatial_queries/CachedBounds_NeedsRefresh_02035044.c"

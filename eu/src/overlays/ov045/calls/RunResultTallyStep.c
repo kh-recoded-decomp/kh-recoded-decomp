@@ -97,7 +97,7 @@ typedef struct ResultWork {
 } ResultWork;
 
 extern ResultWork *gBattleGaugeGlobalStorage;
-extern GameState *data_0205fe0c;
+extern GameState *gSaveIoStateDataTail;
 extern u16 gPadPressedStorage;
 extern const u16 gResultNoRewardPlaceholderText[];
 
@@ -232,7 +232,7 @@ int RunResultTallyStep(void)
         if (!work->started) {
             u32 score;
             int offset;
-            u8 difficulty = data_0205fe0c->difficulty;
+            u8 difficulty = gSaveIoStateDataTail->difficulty;
 
             offset = (u16)(work->isNewRecord ? 4 : 2);
 
@@ -307,10 +307,10 @@ int RunResultTallyStep(void)
             if (rank < 3) {
                 int column;
 
-                if (data_0205fe0c->eventMode == 3 && func_ov001_020644b0() == 400) {
+                if (gSaveIoStateDataTail->eventMode == 3 && func_ov001_020644b0() == 400) {
                     column = 3 - ReadSessionPackedBits(0x3633, 2);
                 } else {
-                    column = 3 - data_0205fe0c->difficulty;
+                    column = 3 - gSaveIoStateDataTail->difficulty;
                 }
                 OffsetRecordYById(work->records, 0x16b, isNew);
                 OffsetRecordYById(work->records, rank + 0x16c, isNew);

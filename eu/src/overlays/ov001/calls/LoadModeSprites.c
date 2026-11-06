@@ -1,3 +1,4 @@
+#define data_020608c8 gSelectionRuntimeHeader
 #define func_ov001_02063a38 GetFieldSessionState
 #define LoadModeSprites_0206d308 LoadModeSprites
 #define func_ov001_0206dba0 GetResourceArchiveId

@@ -1,3 +1,4 @@
+#define data_02060850 gPendingFieldSessionArgs
 #define DestroyFndObjectList_020014f0 DestroyFndObjectList
 #define FreeResourceBufferAndProbeHeap_02001474 FreeResourceBufferAndProbeHeap
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap

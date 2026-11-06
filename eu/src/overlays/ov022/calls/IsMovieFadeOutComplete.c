@@ -5,9 +5,9 @@ typedef struct MovieScene {
     s32 fadeStep;
 } MovieScene;
 
-extern MovieScene *data_ov022_020b7da0;
+extern MovieScene *gMovieSceneGlobals;
 
 BOOL IsMovieFadeOutComplete(void)
 {
-    return data_ov022_020b7da0->fadeStep >= 16;
+    return gMovieSceneGlobals->fadeStep >= 16;
 }

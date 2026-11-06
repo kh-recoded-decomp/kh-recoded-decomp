@@ -20,7 +20,7 @@ typedef struct ItemListMenu {
 } ItemListMenu;
 
 extern char sOv076_ScrollCmx_020cd37c[];
-extern SaveData *data_0205fe0c;
+extern SaveData *gSaveIoStateDataTail;
 extern void NotifyBothOrOne(u32 a, u32 b, int index);
 extern void SetStateFlagBits(int clearMask, int setBits);
 extern void SetNavigationElementsVisible(void *container, BOOL visible);
@@ -50,7 +50,7 @@ void SlotMenu_CloseItemList(ItemListMenu *menu, BOOL closing)
         CallStateWidget(9, 0, 0, 0x20, 0x18);
     }
     src = menu->pendingUnlocks;
-    dst = data_0205fe0c->unlockFlags;
+    dst = gSaveIoStateDataTail->unlockFlags;
     end = dst + 0x10;
     for (; dst < end; src++, dst++) {
         *dst |= *src;

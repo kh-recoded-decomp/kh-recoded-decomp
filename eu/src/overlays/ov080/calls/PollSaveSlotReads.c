@@ -28,7 +28,7 @@ typedef struct {
     SaveData savedGame;
 } SaveSelectScreen;
 
-extern SaveData *data_0205fe0c;
+extern SaveData *gSaveIoStateDataTail;
 extern int PollCardThreadResult(void);
 extern void StartCardWriteFromSlot(u8 slot);
 extern void BuildSlotSummary(SaveSelectScreen *screen, SaveSlot *slot);
@@ -89,16 +89,16 @@ BOOL PollSaveSlotReads(SaveSelectScreen *screen)
             break;
         }
         CountValidSlots(screen);
-        func_01ff8ad8(&screen->savedGame, data_0205fe0c, sizeof(SaveData));
+        func_01ff8ad8(&screen->savedGame, gSaveIoStateDataTail, sizeof(SaveData));
         if (GetMenuSelection() != 3) {
             AcquireMapLayout(TRUE, FALSE);
             RebuildRecordCounters();
-            ComputePlayerStats(data_0205fe0c, GetOverlaySelectionRecord(0), TRUE, 1);
-            RefreshStatusMenuData(data_0205fe0c, NULL);
+            ComputePlayerStats(gSaveIoStateDataTail, GetOverlaySelectionRecord(0), TRUE, 1);
+            RefreshStatusMenuData(gSaveIoStateDataTail, NULL);
             ReleaseMapLayoutReference();
         }
         if (GetMenuSelection() != 3) {
-            stamp = ((SaveFields *)data_0205fe0c)->saveStamp;
+            stamp = ((SaveFields *)gSaveIoStateDataTail)->saveStamp;
         } else {
             stamp = screen->latestStamp;
         }

@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 // redefine-sym eu2_DrawTextAnchored=DrawTextAnchored
 #define DrawRecordSlotRows_020c06f0 DrawRecordSlotRows
 #define DrawTextAnchored_020015a0 DrawTextAnchored

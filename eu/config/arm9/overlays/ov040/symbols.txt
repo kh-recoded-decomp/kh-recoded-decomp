@@ -53,8 +53,8 @@ GrantRewardItem kind:function(thumb,size=0x98) addr:0x020be04c
 IsRewardSlotUnclaimed kind:function(thumb,size=0x34) addr:0x020be0e4
 ShowRewardPopupForItem kind:function(thumb,size=0x40) addr:0x020be118
 ApplyHealReward kind:function(thumb,size=0x68) addr:0x020be158
-data_ov040_020be1c0 kind:data(any) addr:0x020be1c0
-data_ov040_020be1c4 kind:data(any) addr:0x020be1c4
+gAreaMeshResetValueTemplate kind:data(any) addr:0x020be1c0
+gAreaRewardQueryDelta kind:data(any) addr:0x020be1c4
 gAreaSceneStateHandlers kind:data(any) addr:0x020be1e0
 sOv040_BugcolFormat02d_020be22c kind:data(any) addr:0x020be22c
 sOv040_FormatSFormat02d_020be238 kind:data(any) addr:0x020be238

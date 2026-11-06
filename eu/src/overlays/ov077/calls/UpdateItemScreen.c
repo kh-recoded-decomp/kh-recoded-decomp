@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define UpdateItemScreen_020c477c UpdateItemScreen
 #define ToggleSharedStateFlag_020c1d1c ToggleSharedStateFlag
 #define func_ov039_020bc0d4 GetPrimaryElementEnabled

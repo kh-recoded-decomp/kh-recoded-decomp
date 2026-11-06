@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define data_020604fc gPadHeldAndPrevious
 #define func_ov001_0206c2c8 GetTargetSelectionFlag2
 #define Camera_ComputeFollowDistance_020c1a70 Camera_ComputeFollowDistance

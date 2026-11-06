@@ -1,2 +1,3 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define DecrementByteCounter_02029370 DecrementByteCounter
 #include "src/arm9/record_management/DecrementByteCounter_02029370.c"

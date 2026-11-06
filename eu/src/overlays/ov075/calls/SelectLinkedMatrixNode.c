@@ -45,7 +45,7 @@ CHECK_MATRIX_OFFSET(MatrixMenu, map, 0x12dd0, MatrixMapOffset);
 CHECK_MATRIX_OFFSET(MatrixMenu, current, 0x12dd4, MatrixCurrentNodeOffset);
 #undef CHECK_MATRIX_OFFSET
 
-extern SaveData *data_0205fe0c;
+extern SaveData *gSaveIoStateDataTail;
 extern int GetPackedBitMask(const void *bits, int index);
 
 static inline int GetLinkedNodeIndex(MatrixNode *node, MatrixNode *base)
@@ -79,11 +79,11 @@ MatrixNode *SelectLinkedMatrixNode(MatrixMenu *menu, int direction)
         }
         selected = result;
         linkIndex = GetLinkedNodeIndex(result, map->linked[0]);
-        withinLevel = map->cellLevels[result->cell] <= data_0205fe0c->level;
+        withinLevel = map->cellLevels[result->cell] <= gSaveIoStateDataTail->level;
         if (linkIndex < 0) {
             linkIndex = result->linkId;
         }
-        if (linkIndex >= 0 && !IsMatrixLinkUnlocked(data_0205fe0c, linkIndex) && withinLevel) {
+        if (linkIndex >= 0 && !IsMatrixLinkUnlocked(gSaveIoStateDataTail, linkIndex) && withinLevel) {
             result = NULL;
             selected = menu->map->linked[linkIndex];
         }

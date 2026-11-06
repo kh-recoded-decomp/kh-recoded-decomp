@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define func_ov001_02066ef8 SyncMenuPanelDefinition
 #define func_ov001_0206703c OpenStageModelGroup
 #define func_ov001_020645dc SetSessionFlag

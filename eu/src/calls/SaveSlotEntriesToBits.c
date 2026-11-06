@@ -1,3 +1,4 @@
+#define data_020608e0 gSessionSlotEntriesPrefix
 #define SaveSlotEntriesToBits_02050194 SaveSlotEntriesToBits
 #define WriteSessionPackedBits_0206459c WriteSessionPackedBits
 #include "src/arm9/shared_engine/SaveSlotEntriesToBits_02050194.c"

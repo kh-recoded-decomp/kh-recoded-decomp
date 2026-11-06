@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define InitSaveSelectScreen_020c42b0 InitSaveSelectScreen
 #define func_ov039_020bc914 GetMenuSelection
 #define func_ov039_020bc18c GetPrimaryMenuElement

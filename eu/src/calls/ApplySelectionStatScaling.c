@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define ApplySelectionStatScaling_0204fbcc ApplySelectionStatScaling
 #define ArmObject_0205115c ArmObject
 #define data_02055a64 gSelectionStatScales

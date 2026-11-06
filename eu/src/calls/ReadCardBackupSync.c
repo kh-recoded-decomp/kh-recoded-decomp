@@ -1,5 +1,5 @@
 #define CARDi_RequestStreamCommand_02009a0c CARDi_RequestStreamCommand
 #define ReadCardBackupSync_02026b00 ReadCardBackupSync
 #define func_02009128 CARD_GetResultCode
-#define g_cardThreadState_0205fe00 data_0205fe00
+#define g_cardThreadState_0205fe00 gSaveIoStatePrefix
 #include "src/arm9/shared_engine/ReadCardBackupSync_02026b00.c"

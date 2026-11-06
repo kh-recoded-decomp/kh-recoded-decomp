@@ -1,3 +1,3 @@
 #include "nitro/types.h"
 
-static u32 data_02060848;
+static u32 gContactProjectionFallbackEnabled;

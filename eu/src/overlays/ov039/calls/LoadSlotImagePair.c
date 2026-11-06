@@ -1,7 +1,7 @@
 #define LoadSlotImagePair_020bb754 LoadSlotImagePair
 #define Msg_OpenContainerAndReadHeader_0202cc6c Msg_OpenContainerAndReadHeader
 #define OS_SNPrintf_02002468 OS_SNPrintf
-#define data_ov039_020be764 data_ov039_020be784
+#define data_ov039_020be764 gMenuImageFileTags
 #define data_ov039_020be808 sOv039_UiMenuFormatSP2_020be828
 #define data_ov039_020be818 sOv039_UiMenuLanguageFormatSP2_020be838
 #include "src/ov039/widget_layers/LoadSlotImagePair_020bb754.c"

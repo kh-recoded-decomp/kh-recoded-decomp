@@ -1,3 +1,4 @@
+#define data_0205fe00 gSaveIoStatePrefix
 #define InitSaveData_02026ee0 InitSaveData
 #define func_01ff8830 MI_CpuFill8
 #define func_01ff8740 MIi_CpuClearFast

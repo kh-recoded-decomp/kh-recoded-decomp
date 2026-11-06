@@ -171,7 +171,7 @@ typedef struct SlotPair1Entry {
     u32 nameId;
 } SlotPair1Entry;
 
-extern SaveData *data_0205fe0c;
+extern SaveData *gSaveIoStateDataTail;
 extern const char gStatusNumberFormat[];
 extern const char gStatusHpValueFormat[];
 extern const char gStatusHpRatioFormat[];
@@ -226,7 +226,7 @@ void RefreshStatusMenuData(SaveData *save, StatPreview *preview)
     text = &menu->text;
     progress = &menu->progress;
     columns = &menu->columns;
-    menu->isCurrent = save == data_0205fe0c;
+    menu->isCurrent = save == gSaveIoStateDataTail;
     if (save != NULL) {
         AcquireRecordSlot(0, 1);
         text->levelBonus = save->levelBonus;
@@ -351,7 +351,7 @@ void RefreshStatusMenuData(SaveData *save, StatPreview *preview)
                 menu->listCount = records->count;
                 SetupStageParams(&menu->listCount, menu->container, 1);
             }
-            if (records->entries[data_0205fe0c->selectedRecord].iconId == 0) {
+            if (records->entries[gSaveIoStateDataTail->selectedRecord].iconId == 0) {
                 for (i = 0; i < menu->listCount; i++) {
                     if (records->entries[i].iconId != 0) {
                         break;
@@ -360,8 +360,8 @@ void RefreshStatusMenuData(SaveData *save, StatPreview *preview)
                 if (i == menu->listCount) {
                     i = 15;
                 }
-                data_0205fe0c->selectedRecord = (u8)i;
-                data_0205fe0c->selectedPage = 0;
+                gSaveIoStateDataTail->selectedRecord = (u8)i;
+                gSaveIoStateDataTail->selectedPage = 0;
             }
         }
         if (preview == NULL || (preview->flags & 4)) {
@@ -382,7 +382,7 @@ void RefreshStatusMenuData(SaveData *save, StatPreview *preview)
             int gemCount;
 
             for (equipSlot = 0; equipSlot < 4; equipSlot++) {
-                u16 itemId = data_0205fe0c->equippedIds[equipSlot];
+                u16 itemId = gSaveIoStateDataTail->equippedIds[equipSlot];
 
                 if (itemId != 0xffff) {
                     int j;
@@ -408,7 +408,7 @@ void RefreshStatusMenuData(SaveData *save, StatPreview *preview)
                     }
                 }
             }
-            mask = data_0205fe0c->equipMask;
+            mask = gSaveIoStateDataTail->equipMask;
             equipped = menu->inventory->equipped;
             bracerCount = 0;
             ringCount = 0;

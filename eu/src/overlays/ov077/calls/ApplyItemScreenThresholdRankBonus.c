@@ -20,7 +20,7 @@ typedef struct {
 } GameState;
 
 extern const ThresholdTable gItemScreenThresholdRankMap;
-extern GameState *data_0205fe0c;
+extern GameState *gSaveIoStateDataTail;
 
 extern int ReadSessionPackedBits(int id, int mode);
 extern BOOL IsSessionFlagSet(u32 value);
@@ -40,7 +40,7 @@ void ApplyItemScreenThresholdRankBonus(int bonus) {
         BOOL skip = FALSE;
         if (GetCtxModeByte() == 3) {
             BOOL outside = FALSE;
-            if (data_0205fe0c->worldId != 0x1d && data_0205fe0c->worldId != 0x1e) {
+            if (gSaveIoStateDataTail->worldId != 0x1d && gSaveIoStateDataTail->worldId != 0x1e) {
                 outside = TRUE;
             }
             if (outside) {

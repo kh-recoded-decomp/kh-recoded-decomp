@@ -1,3 +1,3 @@
 #define ResetMovieDecoderCodeArena_020aa8b4 ResetMovieDecoderCodeArena
-#define movieCacheArena data_ov022_020b7e14
+#define movieCacheArena gMovieDecoderCacheArenaStorage
 #include "src/ov022/reviewed_helpers/func_ov022_020aa8b4.c"

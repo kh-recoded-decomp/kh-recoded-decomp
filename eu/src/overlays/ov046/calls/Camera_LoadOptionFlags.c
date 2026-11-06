@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define Camera_LoadOptionFlags_020c2ae0 Camera_LoadOptionFlags
 #define g_cameraManager_020c34e0 gCameraManager
 #include "src/ov046/shared_engine/Camera_LoadOptionFlags_020c2ae0.c"

@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define func_ov001_02064490 InvokeSessionCheckCallbackOrDefault
 #define RequestPanelModeChange_0207b27c RequestPanelModeChange
 #define SetDisplaySetting_02029f28 SetDisplaySetting

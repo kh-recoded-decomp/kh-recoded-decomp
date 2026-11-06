@@ -1,3 +1,5 @@
+#define data_020608c8 gSelectionRuntimeHeader
+#define data_02060b50 gOverlaySelectionRecords
 #define InitPlayerData_0204f718 InitPlayerData
 #define LoadLevelTable_0204f5f4 LoadLevelTable
 #define ResetParamWord8_02050528 ResetParamWord8

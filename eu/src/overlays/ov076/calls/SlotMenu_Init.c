@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define SlotMenu_Init_020c45a8 SlotMenu_Init
 #define func_01ff8830 MI_CpuFill8
 #define func_0202cc6c Msg_OpenContainerAndReadHeader

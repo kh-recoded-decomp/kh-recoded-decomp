@@ -1,3 +1,4 @@
+#define data_02060840 gSharedModelResourceState
 #define LoadSharedModel_02036ac0 LoadSharedModel
 #define NNS_G3dGetMdlSet_0201ac60 NNS_G3dGetMdlSet
 #define SetMaterialLightMask_0201a46c NNS_G3dMdlSetMdlLightEnableFlag

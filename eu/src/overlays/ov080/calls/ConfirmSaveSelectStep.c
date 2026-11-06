@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define ConfirmSaveSelectStep_020c5a0c ConfirmSaveSelectStep
 #define DecrementBusyCounterIfPositive_02025494 DecrementBusyCounterIfPositive
 #define FindWidgetById_020b90a4 FindWidgetById

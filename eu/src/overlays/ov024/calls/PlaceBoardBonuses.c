@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define PlaceBoardBonuses_020b61ec PlaceBoardBonuses
 #define func_02003fd4 OS_GetTick
 #define func_0202726c GetCardThreadStartTick

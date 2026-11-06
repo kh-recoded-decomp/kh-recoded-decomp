@@ -1,8 +1,8 @@
 extern void DestroyTaskObjectWrapper();
-extern int data_ov022_020b7c00;
+extern int gMovieSceneTaskHandle;
 
 void DestroyMovieSceneTaskIfSet(void) {
-    int v = data_ov022_020b7c00;
+    int v = gMovieSceneTaskHandle;
     if (v == -1) {
         return;
     }

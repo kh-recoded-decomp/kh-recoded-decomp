@@ -1,2 +1,3 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define GetSessionStateFlags2Bit_020649b8 GetSessionStateFlags2Bit
 #include "src/ov001/unclassified_helpers/GetSessionStateFlags2Bit_020649b8.c"

@@ -12,14 +12,14 @@ typedef struct SlotEntry {
     u8 pad_08[8];
 } SlotEntry;
 
-extern SaveData *data_0205fe0c;
+extern SaveData *gSaveIoStateDataTail;
 
 void UpdateSlotFillCounts(SlotEntry *slots, int count)
 {
     int filled;
     int i;
 
-    data_0205fe0c->slotTotal = count;
+    gSaveIoStateDataTail->slotTotal = count;
     i = count - 1;
     filled = 0;
     for (; i >= 0; i--) {
@@ -27,5 +27,5 @@ void UpdateSlotFillCounts(SlotEntry *slots, int count)
             filled++;
         }
     }
-    data_0205fe0c->slotFilled = filled;
+    gSaveIoStateDataTail->slotFilled = filled;
 }

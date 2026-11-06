@@ -1,4 +1,4 @@
 #define PXI_Init_0202a638 DestroyTaskObjectWrapper
 #define ReleasePxiChannel_020bac10 ReleasePxiChannel
-#define g_pxiChannel_020bb6a0 data_ov037_020bb6c0
+#define g_pxiChannel_020bb6a0 gOv037SceneTaskHandle
 #include "src/ov037/unclassified_helpers/ReleasePxiChannel_020bac10.c"

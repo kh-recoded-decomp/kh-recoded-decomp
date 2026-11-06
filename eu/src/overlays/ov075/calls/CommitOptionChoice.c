@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define CommitOptionChoice_020c6358 CommitOptionChoice
 #define ResetMatrixDescription_020c6288 ResetMatrixDescription
 #define SetGlobalPackedBit_02027320 SetGlobalPackedBit

@@ -1,3 +1,4 @@
+#define data_0205fe20 gSaveSlotMenuEntryEnabled
 #define BuildMenuEntryList_020bb314 BuildMenuEntryList
 #define ReadSessionPackedBits_02064574 ReadSessionPackedBits
 #define data_ov001_020a0460 gFieldSessionWork

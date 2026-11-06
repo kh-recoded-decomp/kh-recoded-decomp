@@ -1,7 +1,7 @@
 #include "nitro/types.h"
 
 typedef struct { u8 low : 4; u8 high : 4; } NibbleFlags;
-extern unsigned int data_0205fe0c;
+extern unsigned int gSaveIoStateDataTail;
 extern unsigned int DestroyAllContainerElements();
 extern unsigned int DestroyFndObjectList();
 extern unsigned int FreePointerIfSet();
@@ -30,7 +30,7 @@ void DestroyStatusMenu(char *work) {
   ReleaseMapLayoutReference();
   ReleaseRecordSlot(3);
   ReleaseRecordManager();
-  UpdateSlotFillCounts(work + 0x16c,((NibbleFlags *)(data_0205fe0c + 0x28d7))->low);
+  UpdateSlotFillCounts(work + 0x16c,((NibbleFlags *)(gSaveIoStateDataTail + 0x28d7))->low);
   records = GetSecondaryMenuElement();
   SweepElements(records);
   DestroyAllContainerElements(container);

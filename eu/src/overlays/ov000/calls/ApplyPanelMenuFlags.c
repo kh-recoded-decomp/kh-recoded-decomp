@@ -1,5 +1,5 @@
 #define ApplyPanelMenuFlags_02061bf4 ApplyPanelMenuFlags
 #define SetGlobalPackedBit_02027320 SetGlobalPackedBit
 #define SetPanelFlag_02061bc4 SetPanelFlag
-#define g_hasSaveData_0205fe20 data_0205fe20
+#define g_hasSaveData_0205fe20 gSaveSlotMenuEntryEnabled
 #include "src/ov000/panel_state/ApplyPanelMenuFlags_02061bf4.c"

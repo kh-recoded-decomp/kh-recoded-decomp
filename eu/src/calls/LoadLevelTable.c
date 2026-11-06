@@ -1,3 +1,4 @@
+#define data_02060f1c gLevelGrowthTableThresholdPrefix
 #define LoadLevelTable_0204f5f4 LoadLevelTable
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define data_0205616c sMain_BaChSpZ_0205616c

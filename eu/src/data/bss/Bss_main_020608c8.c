@@ -1,3 +1,3 @@
 #include "nitro/types.h"
 
-static u32 data_020608c8[2];
+static u32 gSelectionRuntimeHeader[2];

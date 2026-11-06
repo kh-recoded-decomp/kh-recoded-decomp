@@ -35,15 +35,15 @@ typedef char TotalRecordCountOffset[(u32)&((RecordCounterState *)0)->totalCount 
 typedef char RecordCapacityOffset[(u32)&((RecordCounterState *)0)->capacity == 0x102 ? 1 : -1];
 typedef char RecordCounterViewIs260Bytes[sizeof(RecordCounterStorage) == 0x104 ? 1 : -1];
 
-extern RecordSaveData *data_0205fe0c;
-extern RecordCounterStorage data_0205fec4;
+extern RecordSaveData *gSaveIoStateDataTail;
+extern RecordCounterStorage gRuntimeRecordCategoryCounters;
 extern void SetFlagAndBumpCounter(u8 *flag);
 extern void InitActiveRecordEntryFromTemplate(u16 *destination, const void *source);
 
 /* Add a primary record or increment a secondary item stack, returning its count. */
 int AddRecordItem(int category, const RecordEntry *source)
 {
-    RecordSaveData *save = data_0205fe0c;
+    RecordSaveData *save = gSaveIoStateDataTail;
     u8 *itemCounts = save->itemCounts;
     u8 *counter = &itemCounts[category];
 
@@ -51,11 +51,11 @@ int AddRecordItem(int category, const RecordEntry *source)
         u8 recordCategory = (u8)category;
         u32 categoryByteOffset = recordCategory * sizeof(u16);
         RecordEntry *entry = save->records;
-        u16 *counts = data_0205fec4.words;
+        u16 *counts = gRuntimeRecordCategoryCounters.words;
         RecordEntry *end = entry + 600;
 
         SetFlagAndBumpCounter(counter);
-        if (data_0205fec4.fields.totalCount >= data_0205fec4.fields.capacity) {
+        if (gRuntimeRecordCategoryCounters.fields.totalCount >= gRuntimeRecordCategoryCounters.fields.capacity) {
             return 0;
         }
         do {

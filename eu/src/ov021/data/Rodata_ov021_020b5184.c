@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-const u32 data_ov021_020b5184[24] = {
+const u32 gNearbyOpenCellSearchDirections[24] = {
     0xFFFFF000, 0x00000000, 0x00000000, 0x00001000,
     0x00000000, 0x00000000, 0x00000000, 0x00000000,
     0xFFFFF000, 0x00000000, 0x00000000, 0x00001000,

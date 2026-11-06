@@ -1,2 +1,3 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define TryCompleteGridGroup_020c5fac TryCompleteGridGroup
 #include "src/ov075/unclassified_helpers/TryCompleteGridGroup_020c5fac.c"

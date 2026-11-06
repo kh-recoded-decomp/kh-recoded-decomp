@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define GetDialogInputMode_020c42b4 GetDialogInputMode
 #define IsMatrixInputReady_020caa6c IsMatrixInputReady
 #define JumpCursorToEntry_020cae58 JumpCursorToEntry

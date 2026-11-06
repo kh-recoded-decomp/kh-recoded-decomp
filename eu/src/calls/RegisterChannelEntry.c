@@ -1,3 +1,5 @@
+#define data_020569d8 gVBlankCallbackListHeads
+#define data_020569e0 gVBlankCallbackNodeStorage
 #define AppendNodeToListTail_02000f00 AppendNodeToListTail
 #define RegisterChannelEntry_02000f84 RegisterChannelEntry
 #define g_activeEntry_020569cc gVBlankCallbackState

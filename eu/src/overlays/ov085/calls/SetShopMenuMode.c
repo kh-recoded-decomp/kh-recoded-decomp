@@ -14,7 +14,7 @@
 #define SetShopMenuMode_020c0b90 SetShopMenuMode
 #define TagTracker_InvokeCallback_020b8210 TagTracker_InvokeCallback
 #define _u32_div_f _u32_div_f
-#define data_0205fe0c data_0205fe0c
+#define data_0205fe0c gSaveIoStateDataTail
 #define data_ov085_020c22c4 gShopTabFilterCodes
 #define func_020291b4 GetPrimaryRecordCount
 #define func_02029240 AddRecordItem

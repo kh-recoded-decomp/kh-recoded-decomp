@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define BuildSelectionEntryList_0204f98c BuildSelectionEntryList
 #define ComputePlayerStats_02050b30 ComputePlayerStats
 #define DestroyAllContainerElements_020b900c DestroyAllContainerElements

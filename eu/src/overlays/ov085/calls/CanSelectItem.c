@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define CanAllocateRecordSlot_020291f8 CanAllocateRecordSlot
 #define CanSelectItem_020c138c CanSelectItem
 #include "src/ov085/unclassified_helpers/CanSelectItem_020c138c.c"

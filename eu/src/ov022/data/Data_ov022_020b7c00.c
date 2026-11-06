@@ -5,7 +5,7 @@
 extern void InitMovieOverlayState(void);
 extern void StartMoviePlaybackState(void);
 
-void *data_ov022_020b7c04[5] = {
+void *gMoviePlaybackTaskClass[5] = {
     (void *)0x000D0008,
     (void *)StartMoviePlaybackState,
     (void *)InitMovieOverlayState,
@@ -13,6 +13,6 @@ void *data_ov022_020b7c04[5] = {
     NULL,
 };
 
-u32 data_ov022_020b7c00[1] = {
+u32 gMovieSceneTaskHandle[1] = {
     0xFFFFFFFF,
 };

@@ -1,3 +1,4 @@
+#define data_02060570 gTextureUploadCallback
 #define AttachPendingSceneModel_020bd130 AttachPendingSceneModel
 #define data_ov036_020c3920 data_ov036_020c3940
 #define func_0202c690 SetFileLoaderTextureUploadQueueMode

@@ -60,9 +60,9 @@ typedef struct TileIdList {
 } TileIdList;
 
 extern Ov039State *gMenuOverlayWork;
-extern TrackerConfig data_ov039_020be770;
-extern InputLimits data_ov039_020be750;
-extern TileIdList data_ov039_020be7a0;
+extern TrackerConfig gMenuBackgroundContainerConfig;
+extern InputLimits gMenuKeyRepeatConfig;
+extern TileIdList gMenuTileTableLayerIds;
 extern char sOv039_TextFontEu08Nftr_020be848[];
 extern char sOv039_TextFontEu10Nftr_020be860[];
 extern char sOv039_TextFontEu08sNftr_020be878[];
@@ -97,9 +97,9 @@ extern void StartSubScene(int scene, int arg1, int arg2);
 
 void InitOverlayState(u32 entryArg)
 {
-    TrackerConfig config = data_ov039_020be770;
-    InputLimits limits = data_ov039_020be750;
-    TileIdList ids = data_ov039_020be7a0;
+    TrackerConfig config = gMenuBackgroundContainerConfig;
+    InputLimits limits = gMenuKeyRepeatConfig;
+    TileIdList ids = gMenuTileTableLayerIds;
     TileTableDesc desc;
     int scene;
     Ov039State *state;

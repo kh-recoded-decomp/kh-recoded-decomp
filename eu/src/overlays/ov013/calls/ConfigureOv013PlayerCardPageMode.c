@@ -6,7 +6,7 @@ typedef struct {
     u8 pad_2to7 : 6;
 } StatusFlagsD259;
 
-extern s8 data_0206085c[];
+extern s8 gSceneHandoffSharedHeader[];
 extern int IsPanelBusy(void);
 extern void InitMenuScreenGraphics(void);
 extern void ResetOv013PlayerCardPageDisplay(void);
@@ -18,7 +18,7 @@ extern int gOv013PanelGlobals;
 void ConfigureOv013PlayerCardPageMode(void) {
     int position = *(s8 *)(gOv013PanelGlobals + 0x2f0);
     if (IsPanelBusy() == 0) {
-        position = data_0206085c[0x11] + data_0206085c[0x10];
+        position = gSceneHandoffSharedHeader[0x11] + gSceneHandoffSharedHeader[0x10];
     }
     if ((position + 1) % 10 != 0) {
         u8 status99 = *(u8 *)(gOv013PanelGlobals + 0x99);

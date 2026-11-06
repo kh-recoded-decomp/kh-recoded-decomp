@@ -25,8 +25,8 @@ typedef struct SessionFlags {
 } SessionFlags;
 
 extern ResultsScreen data_ov034_020c0fa0;
-extern u32 data_0206085c;
-extern u8 *data_0205fe0c;
+extern u32 gSceneHandoffSharedHeader;
+extern u8 *gSaveIoStateDataTail;
 extern SessionFlags *gFieldSessionWork;
 extern char OVERLAY_27_ID[];
 extern char OVERLAY_24_ID[];
@@ -64,9 +64,9 @@ void CloseResultsSession(void)
     UnloadOverlayAfterGeometryTransfer(0, (int)OVERLAY_24_ID);
     if (data_ov034_020c0fa0.work->savedSlot != -1) {
         if (data_ov034_020c0fa0.work->syncPlayTime == 1) {
-            data_0206085c = *data_ov034_020c0fa0.params;
+            gSceneHandoffSharedHeader = *data_ov034_020c0fa0.params;
         }
-        for (i = 0; i < _ull_mod(*(u32 *)(data_0205fe0c + 0x28c8)
+        for (i = 0; i < _ull_mod(*(u32 *)(gSaveIoStateDataTail + 0x28c8)
                 + _ll_udiv((OS_GetTick() - GetCardThreadStartTick()) * 64, 0x1ff6210), 100); i++) {
             NextSharedRandom16Scaled(1000);
             random_next_scaled(1000);

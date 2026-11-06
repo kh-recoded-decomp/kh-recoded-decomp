@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define ComputeFlatDirectionVector_02092674 ComputeFlatDirectionVector
 #define FixedPointMultiply12 FX_Mul
 #define GetEntryScaledValue_02096ba4 GetEntryScaledValue

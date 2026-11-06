@@ -101,6 +101,14 @@ def rename_symbols(pairs, move_calls=False, definition_sources=None):
                     or not path.is_file() or path.suffix.lower() not in SOURCE_SUFFIXES):
                 raise SystemExit(f"expected a C/C++ defining source inside src or libs for {old}")
             expected[old] = path
+    kept_paths = {}
+    if definition_sources is not None:
+        path_pattern = re.compile(r"\b(?:" + "|".join(map(re.escape, mapping)) + r")\b")
+        for source in expected.values():
+            relative = source.relative_to(ROOT.resolve()).as_posix()
+            renamed_path = path_pattern.sub(lambda m: mapping[m[0]], relative)
+            if renamed_path != relative:
+                kept_paths[renamed_path] = relative
     reverse = {new: old for old, new in pairs}
     pattern = re.compile(r"\b(?:" + "|".join(map(re.escape, mapping)) + r")\b")
     new_pattern = re.compile(r"\b(?:" + "|".join(map(re.escape, reverse)) + r")\b")
@@ -146,6 +154,11 @@ def rename_symbols(pairs, move_calls=False, definition_sources=None):
                 prefix = ''.join('#define ' + old + ' ' + mapping[old] + '\n' for old in hidden)
                 replaced = ('\ufeff' if text.startswith('\ufeff') else '') + prefix + '\n'.join(lines) + '\n'
                 count += len(hidden)
+            if definition_sources is not None:
+                # A DATA identity can also be its source's basename. Keeping
+                # that source in place also keeps its compiler/delink paths.
+                for renamed_path, relative in kept_paths.items():
+                    replaced = replaced.replace(renamed_path, relative)
             if count:
                 changed.append((path, replaced, count))
             if definition_sources is not None and path.suffix.lower() in SOURCE_SUFFIXES:

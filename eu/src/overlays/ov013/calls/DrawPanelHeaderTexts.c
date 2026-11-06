@@ -1,3 +1,4 @@
+#define data_0206085c gSceneHandoffSharedHeader
 #define data_ov013_02074ce0 gOv013PanelGlobals
 #define func_ov002_02061dc8 DrawOv002MainPanelCenteredText
 #define func_ov002_020621c4 GetOv002PanelMessage

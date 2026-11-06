@@ -5,9 +5,9 @@
 #define OffsetBoxByDelta_0203ac70 OffsetBoxByDelta
 #define VEC_MultAdd_01ffa09c VEC_MultAdd
 #define VEC_Subtract_01ff9e3c VEC_Subtract
-#define data_ov021_020b5638 data_ov021_020b5658
-#define data_ov021_020b5648 data_ov021_020b5668
-#define data_ov021_020b5674 data_ov021_020b5694
+#define data_ov021_020b5638 gFieldHitSphereStorage
+#define data_ov021_020b5648 gFieldHitCylinderStorage
+#define data_ov021_020b5674 gFieldHitCapsuleStorage
 #define func_0203ad14 MakeSphereShape
 #define func_01ffaff4 VEC_NormalizeLength
 #include "src/ov021/object_state/BuildEntryHitShape_020aaad4.c"

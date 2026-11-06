@@ -100,7 +100,7 @@ struct StatusMenu {
     s64 openTick;
 };
 
-extern SaveData *data_0205fe0c;
+extern SaveData *gSaveIoStateDataTail;
 extern const ObjConfig gStatusMenuWidgetConfig;
 extern const TextFrame gStatusMenuTextLayer0Frame;
 extern const TextFrame gStatusMenuTextLayer1Frame;
@@ -301,8 +301,8 @@ int InitStatusMenu(StatusMenu *menu)
         IndexedRecords_SetFlag2(widgets, menu->slotCells[i][3], 0);
     }
 
-    menu->playSeconds = data_0205fe0c->heartCount + (int)(((OS_GetTick() - GetCardThreadStartTick()) * 64) / 0x1ff6210);
-    menu->munnyDigits = SetWidgetDigitDisplay(widgets, 4, 5, data_0205fe0c->munny);
+    menu->playSeconds = gSaveIoStateDataTail->heartCount + (int)(((OS_GetTick() - GetCardThreadStartTick()) * 64) / 0x1ff6210);
+    menu->munnyDigits = SetWidgetDigitDisplay(widgets, 4, 5, gSaveIoStateDataTail->munny);
     menu->timeDigits = DrawWidgetPlayTime(widgets, 5, 6, menu->playSeconds);
     menu->listRows = 7;
     menu->listX = 0x30;
@@ -357,19 +357,19 @@ int InitStatusMenu(StatusMenu *menu)
     menu->mapLayout = AcquireMapLayout(FALSE, FALSE);
     menu->isCurrent = inSpecialMode;
     if (inSpecialMode || fromSpecialEntry
-        || (data_0205fe0c->levelBonus == 0 && !IsGlobalPackedBitSet(0xa0b) && IsGlobalPackedBitSet(0x3520))) {
+        || (gSaveIoStateDataTail->levelBonus == 0 && !IsGlobalPackedBitSet(0xa0b) && IsGlobalPackedBitSet(0x3520))) {
         value = TRUE;
     } else {
         value = FALSE;
     }
     menu->showExtra = value;
-    ComputePlayerStats(data_0205fe0c, &stats, TRUE, 0);
+    ComputePlayerStats(gSaveIoStateDataTail, &stats, TRUE, 0);
     if (menu->isCurrent == 0) {
-        RefreshStatusMenuData(data_0205fe0c, NULL);
+        RefreshStatusMenuData(gSaveIoStateDataTail, NULL);
     }
     menu->openTick = GetCardThreadStartTick();
     menu->isCurrent |= ((REG_POWCNT & 0x8000) >> 15) != 1;
-    menu->heartCount = data_0205fe0c->heartCount;
+    menu->heartCount = gSaveIoStateDataTail->heartCount;
     if (inSpecialMode || fromSpecialEntry || (GetFieldCad0() != 0 && GetMenuStackDepth() == 0)) {
         value = TRUE;
     } else {

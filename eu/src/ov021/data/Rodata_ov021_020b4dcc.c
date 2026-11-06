@@ -7,7 +7,7 @@ const u32 gDamageScaleTable[16] = {
     0x00000500, 0x00000300, 0x00000280, 0x00001200,
 };
 
-const u32 data_ov021_020b4dcc[14] = {
+const u32 gStatusGuardEntryFlagIds[14] = {
     0xFFFFFFFF, 0x00000024, 0x00000025, 0x00000026,
     0x00000027, 0x00000028, 0x0000002A, 0x0000002B,
     0x0000002D, 0x0000002C, 0x0000002E, 0x00000029,

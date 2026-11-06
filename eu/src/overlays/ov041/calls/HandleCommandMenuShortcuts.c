@@ -18,7 +18,7 @@ typedef struct ShortcutSettings {
     u32 useDirectionPad : 1;
 } ShortcutSettings;
 
-extern ShortcutSettings *data_0205fe0c;
+extern ShortcutSettings *gSaveIoStateDataTail;
 extern u16 gPadPressedStorage;
 extern u16 gPadHeldAndPrevious;
 extern BOOL TryEnterFieldMenuState3(void);
@@ -41,7 +41,7 @@ void HandleCommandMenuShortcuts(BOOL canSwitchMode)
     u16 openMode;
     u16 closeMode;
     StageWork *work = gMovieContextState->stageWork;
-    ShortcutSettings *settings = data_0205fe0c;
+    ShortcutSettings *settings = gSaveIoStateDataTail;
 
     if (!settings->useDirectionPad) {
         modifier = PAD_BUTTON_L;

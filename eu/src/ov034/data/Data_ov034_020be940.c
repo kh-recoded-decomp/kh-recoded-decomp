@@ -2,6 +2,6 @@
 
 #pragma explicit_zero_data on
 
-u32 data_ov034_020be940[1] = {
+u32 gResultsScreenTaskHandle[1] = {
     0xFFFFFFFF,
 };

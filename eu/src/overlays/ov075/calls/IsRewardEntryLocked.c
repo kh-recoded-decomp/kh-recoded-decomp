@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define GetCtxModeByte_02068084 GetCtxModeByte
 #define IsPartyLevelSufficient_020cec34 IsPartyLevelSufficient
 #define IsRewardEntryLocked_020ced28 IsRewardEntryLocked

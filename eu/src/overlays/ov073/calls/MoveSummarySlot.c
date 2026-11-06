@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define BuildSelectionEntryList_0204f98c BuildSelectionEntryList
 #define GetOverlaySelectionRecord_0204f768 GetOverlaySelectionRecord
 #define MoveRecordSlot_020290b8 MoveEquipmentSlot

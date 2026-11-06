@@ -13,7 +13,7 @@ typedef struct {
     s32 flagB;
 } Panel;
 
-extern SceneArgs data_02060850;
+extern SceneArgs gPendingFieldSessionArgs;
 extern u8 gTitleBlankPaletteColor[];
 
 extern void InitSaveData(u32 mode);
@@ -35,9 +35,9 @@ extern void GXS_LoadBGPltt(const void *src, u32 offset, u32 size);
 void FinishTitlePanel(Panel *panel)
 {
     InitSaveData(1);
-    data_02060850.sceneId = 100;
-    data_02060850.entryId = -1;
-    data_02060850.kind = 1;
+    gPendingFieldSessionArgs.sceneId = 100;
+    gPendingFieldSessionArgs.entryId = -1;
+    gPendingFieldSessionArgs.kind = 1;
     WriteGlobalPackedBits(0x3300, 8, 0);
     if (panel->flagA != 0) {
         SetGlobalPackedBit(0x1150);

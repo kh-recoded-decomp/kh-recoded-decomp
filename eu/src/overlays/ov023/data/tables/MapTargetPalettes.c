@@ -10,7 +10,7 @@ u16 gMapTargetBasePalettes[4][4] = {
     {0x13bf, 0x0696, 0x09d0, 0x1109},
 };
 
-u16 data_ov023_020b6efc[8] = {
+u16 gMapMenuEntryFileIndices[8] = {
     0, 1, 2, 3, 4, 5, 5, 6,
 };
 

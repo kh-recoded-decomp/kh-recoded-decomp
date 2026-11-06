@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define InitSelectMenu_020bf700 InitSelectMenu
 #define func_ov039_020bc828 GetCurrentMenuStackEntry
 #define func_ov039_020bc914 GetMenuSelection

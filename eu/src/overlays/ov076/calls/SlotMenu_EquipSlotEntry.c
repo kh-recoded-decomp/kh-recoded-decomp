@@ -20,7 +20,7 @@ typedef struct ItemStock {
     ItemDef *def;
 } ItemStock;
 
-extern SaveData *data_0205fe0c;
+extern SaveData *gSaveIoStateDataTail;
 
 extern void SlotMenu_UnequipSlotEntry(void *menu, int slot, int column);
 
@@ -30,12 +30,12 @@ void SlotMenu_EquipSlotEntry(void *menu, int slot, int column, ItemStock *stock)
     int limit;
 
     SlotMenu_UnequipSlotEntry(menu, slot, column);
-    data_0205fe0c->slotHandles[slot * 2 + column] = stock->def->handle;
+    gSaveIoStateDataTail->slotHandles[slot * 2 + column] = stock->def->handle;
     limit = stock->def->maxPerSlot;
     amount = stock->total - stock->used;
     if (amount > limit) {
         amount = limit;
     }
     stock->used += amount;
-    data_0205fe0c->slotAmounts[slot] = amount;
+    gSaveIoStateDataTail->slotAmounts[slot] = amount;
 }

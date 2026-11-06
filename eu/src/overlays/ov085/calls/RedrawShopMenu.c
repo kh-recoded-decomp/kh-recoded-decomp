@@ -102,7 +102,7 @@ typedef struct ItemMenu {
     int *ownedBits;
 } ItemMenu;
 
-extern u8 *data_0205fe0c;
+extern u8 *gSaveIoStateDataTail;
 extern const u16 gShopNumberFormat[];
 extern const u16 sOv085_X_020c23c4[];
 extern u8 NNS_G3dGlb_projMtx[];
@@ -155,7 +155,7 @@ static inline PriceRange *GetPriceRange(ItemMenu *menu, int id)
     return &menu->ranges[id];
 }
 
-#define MUNNY (*(int *)(data_0205fe0c + 0x28d0))
+#define MUNNY (*(int *)(gSaveIoStateDataTail + 0x28d0))
 
 void RedrawShopMenu(ItemMenu *menu)
 {
@@ -323,7 +323,7 @@ void RedrawShopMenu(ItemMenu *menu)
             }
             DrawTextAnchored(&menu->layers[2], 0xa0, 0x38, color, 0x20, buffer);
             PushPendingPair(1, after);
-            PushPendingPair(3, (data_0205fe0c + menu->itemId)[0x28d8] +
+            PushPendingPair(3, (gSaveIoStateDataTail + menu->itemId)[0x28d8] +
                                             (menu->useCatalog ? -menu->quantity : menu->quantity));
             if (menu->mode == 1) {
                 tip = GetPackedFileEntry(menu->strings, 0x14);

@@ -1,6 +1,6 @@
 #define func_ov001_0206dba0 GetResourceArchiveId
 #define EnsureEffectGroup_020acb6c EnsureEffectGroup
 #define ZeroBytes0x14_020a8adc ZeroBytes0x14
-#define data_ov021_020b506c data_ov021_020b508c
+#define data_ov021_020b506c gEffectGroupResourceConfigs
 #define func_ov021_020a89a8 func_ov021_020a89c8
 #include "src/ov021/shared_engine/EnsureEffectGroup_020acb6c.c"

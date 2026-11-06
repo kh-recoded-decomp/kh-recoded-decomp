@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define CountFlaggedGroupEntries_0208c3d0 CountFlaggedGroupEntries
 #define IsGroupEntryFlagged_0208c36c IsGroupEntryFlagged
 #include "src/ov001/unclassified_helpers/CountFlaggedGroupEntries_0208c3d0.c"

@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define data_020604fc gPadHeldAndPrevious
 #define func_01ffb2f8 SetModelAnimationFrameWithSingleWrap
 #define UpdateMatrixMenu_020c707c UpdateMatrixMenu

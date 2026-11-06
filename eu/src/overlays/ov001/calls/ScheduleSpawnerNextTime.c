@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define FindNearestStageEntry_02099328 FindNearestStageEntry
 #define FixedPointMultiply12 FX_Mul
 #define GetLinkedStageActor_0209c2f0 GetLinkedStageActor

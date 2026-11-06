@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define FindNearestReachableNode_020c8eac FindNearestReachableNode
 #define JumpCursorToEntry_020cae58 JumpCursorToEntry
 #define ShowEntryHeaderMessage_020cad14 ShowEntryHeaderMessage

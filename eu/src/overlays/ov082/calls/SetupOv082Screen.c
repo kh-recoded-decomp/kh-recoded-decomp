@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define DrawEntryRowFrames_020bf260 DrawEntryRowFrames
 #define DrawTextAnchored_020015a0 DrawTextAnchored
 #define G2S_GetBG1ScrPtr_02006e68 G2S_GetBG1ScrPtr

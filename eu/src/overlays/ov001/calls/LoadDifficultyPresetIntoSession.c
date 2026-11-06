@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define LoadDifficultyPresetIntoSession_020644d4 LoadDifficultyPresetIntoSession
 #define data_ov001_020a0460 gFieldSessionWork
 #define func_01ff8740 MIi_CpuClearFast

@@ -13,7 +13,7 @@ extern void CreateOv071SceneTask(void);
 extern void CreateOv072SceneTask(void);
 extern void CreateSceneTask(void);
 
-const u32 data_ov021_020b508c[38] = {
+const u32 gEffectGroupResourceConfigs[38] = {
     0x00000020, 0x00000001, 0x00000022, 0x00000001,
     0x00000024, 0x00000001, 0x00000026, 0x00000001,
     0x00000016, 0x00000003, 0x00000018, 0x00000003,
@@ -26,7 +26,7 @@ const u32 data_ov021_020b508c[38] = {
     0x00000068, 0x00000001,
 };
 
-void *const data_ov021_020b502c[24] = {
+void *const gStageCommandOverlayFactories[24] = {
     (void *)CreateBurstBattleObject,
     (void *)0x0000003D,
     (void *)CreateBossBattleObject,
@@ -53,7 +53,7 @@ void *const data_ov021_020b502c[24] = {
     (void *)0x00000048,
 };
 
-const u32 data_ov021_020b5014[6] = {
+const u32 gEffectSlotDefaults[6] = {
     0x00000003, 0x00000004, 0x00000001, 0x00000000,
     0x00000001, 0x00000009,
 };

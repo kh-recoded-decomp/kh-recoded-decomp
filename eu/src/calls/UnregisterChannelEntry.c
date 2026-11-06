@@ -1,3 +1,5 @@
+#define data_020569d8 gVBlankCallbackListHeads
+#define data_020569e0 gVBlankCallbackNodeStorage
 #define String_CompareBounded_020220bc strncmp
 #define UnlinkNodeIrqSafe_02000f34 UnlinkNodeIrqSafe
 #define UnregisterChannelEntry_02001030 UnregisterChannelEntry

@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define CycleNodeCategory_020cbb34 CycleNodeCategory
 #define FindPageEntryById_020ba348 FindPageEntryById
 #define GetDialogInputMode_020c42b4 GetDialogInputMode

@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define ShowSlotHeaderMessage_020c58e0 ShowSlotHeaderMessage
 #define func_ov027_020ba2a8 GetPackedFileEntry
 #define func_ov077_020c5944 ItemScreen_DrawHintText

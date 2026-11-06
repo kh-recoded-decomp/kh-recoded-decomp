@@ -1,6 +1,6 @@
 #define ResetMenuLayerTransforms_020b6194 ResetMenuLayerTransforms
 #define UpdateWidgetLayerDefault_020b9df0 UpdateWidgetLayerDefault_020b9e10
 #define _data_ov025_020b7760 gMenuListWorkStorage
-#define data_ov025_020b7680 data_ov025_020b76a0
+#define data_ov025_020b7680 gPanelListBgLayerIds
 #define data_ov025_020b7720 gSubBgScreenLoaders
 #include "src/ov025/menu_widgets/ResetMenuLayerTransforms_020b6194.c"

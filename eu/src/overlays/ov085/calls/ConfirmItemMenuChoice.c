@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define ConfirmItemMenuChoice_020c168c ConfirmItemMenuChoice
 #define GetByteCounterOrDefault_020291cc GetByteCounterOrDefault
 #define GetSecondaryRecordCount_020291c0 GetSecondaryRecordCount

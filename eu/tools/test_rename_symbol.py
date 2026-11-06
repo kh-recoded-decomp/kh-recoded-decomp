@@ -275,6 +275,20 @@ class RenameSymbolTest(unittest.TestCase):
         self.assertEqual(shared.read_text(),'const int referenceData[2] = {1,2};\n')
         self.assertEqual(wrapper.read_text(),'#define referenceData gData\n#include "src/data/Shared.c"\n')
 
+    def test_keep_source_paths_preserves_symbol_basename_in_build_bindings(self):
+        source = self.put('src/data/oldTable.c','const int oldTable[2] = {1,2};\n')
+        compilers = self.put('config/file_compilers.json','{"src/data/oldTable.c":"dsi/1.1"}\n')
+        delinks = self.put('config/delinks.txt','src/data/oldTable.c:\n    complete\n')
+        caller = self.put('src/data/Imported.c','#include "src/data/oldTable.c"\n')
+        with contextlib.redirect_stdout(io.StringIO()):
+            rename_symbol.rename_symbols([('oldTable','gTable')],
+                                         definition_sources={'oldTable':'src/data/oldTable.c'})
+        self.assertTrue(source.is_file())
+        self.assertEqual(source.read_text(),'const int gTable[2] = {1,2};\n')
+        self.assertEqual(compilers.read_text(),'{"src/data/oldTable.c":"dsi/1.1"}\n')
+        self.assertEqual(delinks.read_text(),'src/data/oldTable.c:\n    complete\n')
+        self.assertEqual(caller.read_text(),'#include "src/data/oldTable.c"\n')
+
     def test_anonymous_aggregate_extern_and_typedef_are_not_storage(self):
         for storage in ('extern', 'typedef'):
             with self.subTest(storage=storage):

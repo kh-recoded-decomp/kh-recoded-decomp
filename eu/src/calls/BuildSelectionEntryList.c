@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define AcquireRecordManager_02051c80 AcquireRecordManager
 #define AcquireRecordSlot_02051d3c AcquireRecordSlot
 #define BuildSelectionEntryList_0204f98c BuildSelectionEntryList

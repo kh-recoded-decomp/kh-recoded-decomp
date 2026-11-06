@@ -52,7 +52,7 @@ typedef struct {
     u8 revealState[1];
 } MatrixMenu;
 
-extern SaveData *data_0205fe0c;
+extern SaveData *gSaveIoStateDataTail;
 extern NeighborIds gMatrixEmptyNeighborIds;
 
 extern int GetPackedBitMask(u32 *bitWords, int bitIndex);
@@ -62,7 +62,7 @@ extern void DrawMatrixCellGlyph(void *state, MatrixMap *map, MatrixNode *node, i
 
 static inline BOOL IsNodeFlagSet(MatrixNode *node)
 {
-    if (GetPackedBitMask(data_0205fe0c->unlockBits, node->requiredFlag)) {
+    if (GetPackedBitMask(gSaveIoStateDataTail->unlockBits, node->requiredFlag)) {
         return TRUE;
     }
     return FALSE;
@@ -94,11 +94,11 @@ u32 PropagateMatrixNodeVisit(MatrixMenu *menu, MatrixNode *node, int dir, BOOL q
         if (node->pendingSteps != 0) {
             break;
         }
-        if (bit & data_0205fe0c->collectedBits) {
+        if (bit & gSaveIoStateDataTail->collectedBits) {
             break;
         }
-        data_0205fe0c->collectedBits |= bit;
-        data_0205fe0c->crownCount++;
+        gSaveIoStateDataTail->collectedBits |= bit;
+        gSaveIoStateDataTail->crownCount++;
         if (quiet) {
             break;
         }
@@ -113,11 +113,11 @@ u32 PropagateMatrixNodeVisit(MatrixMenu *menu, MatrixNode *node, int dir, BOOL q
         if (node->pendingSteps != 0) {
             break;
         }
-        if (bit & data_0205fe0c->collectedBits) {
+        if (bit & gSaveIoStateDataTail->collectedBits) {
             break;
         }
-        data_0205fe0c->collectedBits |= bit;
-        data_0205fe0c->keyCount++;
+        gSaveIoStateDataTail->collectedBits |= bit;
+        gSaveIoStateDataTail->keyCount++;
         if (quiet) {
             break;
         }
@@ -141,7 +141,7 @@ u32 PropagateMatrixNodeVisit(MatrixMenu *menu, MatrixNode *node, int dir, BOOL q
             SetModelAnimationFrameWithSingleWrap(menu->effects[2], 0, 0);
             PlaySoundEffect(1, 0xb);
         }
-        data_0205fe0c->portalBits |= (u8)(1 << (node->type - 9));
+        gSaveIoStateDataTail->portalBits |= (u8)(1 << (node->type - 9));
         break;
     default:
         if (type >= 14) {
@@ -149,7 +149,7 @@ u32 PropagateMatrixNodeVisit(MatrixMenu *menu, MatrixNode *node, int dir, BOOL q
             result = 0;
             neighbors = gMatrixEmptyNeighborIds;
             node->pendingSteps = 0;
-            if (menu->map->levels[node->index] <= data_0205fe0c->currentLevel) {
+            if (menu->map->levels[node->index] <= gSaveIoStateDataTail->currentLevel) {
                 DrawMatrixCellGlyph(menu->revealState, menu->map, node, node->index);
             }
             if (dir != 0) {
@@ -243,7 +243,7 @@ u32 PropagateMatrixNodeVisit(MatrixMenu *menu, MatrixNode *node, int dir, BOOL q
                             SetModelAnimationFrameWithSingleWrap(menu->effects[0], 4, 0);
                             SetModelAnimationFrameWithSingleWrap(menu->effects[0], 0, 0);
                         }
-                        data_0205fe0c->clearedMask |= 1 << child->bitIndex;
+                        gSaveIoStateDataTail->clearedMask |= 1 << child->bitIndex;
                     }
                 }
                 if (child->type == 0x19) {

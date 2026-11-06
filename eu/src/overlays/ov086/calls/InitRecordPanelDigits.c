@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define BuildSlotImageParams_020bc220 BuildSlotImageParams
 #define InitObjManagerAndMark_020b9060 InitObjManagerAndMark
 #define InitRecordPanelDigits_020c1ba8 InitRecordPanelDigits

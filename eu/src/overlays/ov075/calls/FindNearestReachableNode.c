@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define FindNearestReachableNode_020c8eac FindNearestReachableNode
 #define func_ov075_020c8dfc ResolveGridEntry
 #include "src/ov075/unclassified_helpers/FindNearestReachableNode_020c8eac.c"

@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define Camera_SetFollowSuspended_020c29c0 Camera_SetFollowSuspended
 #define Camera_SetStateFlag18_020c2a84 Camera_SetStateFlag18
 #define func_ov046_020c0d68 Camera_GetModeValue

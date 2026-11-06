@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define DrawPartySlotLabel_020c5a4c DrawPartySlotLabel
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define SetStatusPageAndCursor_020c2ca4 SetStatusPageAndCursor

@@ -1,3 +1,5 @@
+#define data_02060850 gPendingFieldSessionArgs
+#define data_0206085c gSceneHandoffSharedHeader
 #define func_ov013_02070cb4 GetOv013PlayerCardIndexFromCursor
 #define func_ov002_02066c58 GetContextCommandFlag
 #define DispatchContextCommand_02066c78 DispatchContextCommand

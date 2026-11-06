@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define DecrementByteCounter_02029370 DecrementByteCounter
 #define GetByteCounterOrDefault_020291cc GetByteCounterOrDefault
 #define ItemList_ReturnCursorItem_020ca6f8 ItemList_ReturnCursorItem

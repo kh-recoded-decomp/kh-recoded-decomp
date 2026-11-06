@@ -4,5 +4,5 @@
 #define PXI_Init_02026c94 PXI_Init_02026ca8
 #define PollCardThreadState_020271f8 PollCardThreadState
 #define func_02009128 CARD_GetResultCode
-#define g_cardThreadState_0205fe00 data_0205fe00
+#define g_cardThreadState_0205fe00 gSaveIoStatePrefix
 #include "src/arm9/shared_engine/PollCardThreadState_020271f8.c"

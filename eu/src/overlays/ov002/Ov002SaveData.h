@@ -10,7 +10,7 @@ typedef struct Ov002SaveData {
     u8 recordFlagBits[1];
 } Ov002SaveData;
 
-extern Ov002SaveData *data_0205fe0c;
-#define gSaveData data_0205fe0c
+extern Ov002SaveData *gSaveIoStateDataTail;
+#define gSaveData gSaveIoStateDataTail
 
 #endif

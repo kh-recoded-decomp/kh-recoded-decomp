@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define data_ov002_0206c464 gOv002MenuWork
 #define func_ov002_02062000 GetOv002PanelKeyRepeatState
 #define func_ov002_020620fc ResetOv002SubPanelText

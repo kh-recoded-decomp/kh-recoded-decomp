@@ -40,7 +40,7 @@ typedef char SlotHandlesAreFourBytes[sizeof(SlotHandlePair) == 4 ? 1 : -1];
 typedef char InventoryOffset[(u32)&((SlotSaveData *)0)->inventory == 0x28d8 ? 1 : -1];
 typedef char SlotHandleOffset[(u32)&((InventorySlotData *)0)->slotHandles == 0x4ac ? 1 : -1];
 
-extern SlotSaveData *data_0205fe0c;
+extern SlotSaveData *gSaveIoStateDataTail;
 extern EquipmentSlotWork gEquipmentSlotWork[];
 extern void func_01ff8dc8(const void *source, void *destination, u32 size);
 
@@ -51,7 +51,7 @@ void MoveEquipmentSlot(int sourceSlot, int destinationSlot)
         return;
     }
 
-    InventorySlotData *inventory = &data_0205fe0c->inventory;
+    InventorySlotData *inventory = &gSaveIoStateDataTail->inventory;
     int distance = sourceSlot < destinationSlot
         ? destinationSlot - sourceSlot : sourceSlot - destinationSlot;
     int sourceWorkIndex = sourceSlot * 2;

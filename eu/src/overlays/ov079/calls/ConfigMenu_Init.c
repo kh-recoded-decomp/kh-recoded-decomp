@@ -70,7 +70,7 @@ typedef struct FrameStyle {
 
 extern const FrameStyle data_ov079_020c4c10;
 extern char data_ov079_020c4c84[];
-extern void *data_0205fe0c;
+extern void *gSaveIoStateDataTail;
 
 extern void func_01ff8830(void *dest, int value, u32 size);
 extern void OpenTextFrame_020be5b8(u32 position, u32 size, int layer, void *frame, FrameStyle *style);
@@ -112,7 +112,7 @@ BOOL ConfigMenu_Init_020c4260(ConfigMenu *menu)
     OpenTextFrame_020be5b8(0x00060011, 0x000c000b, 1, menu->objectLists[3], &style);
     OpenTextFrame_020be5b8(0x00150000, 0x00030020, 1, menu->objectLists[4], &style);
     LoadPackedFileView_020ba25c(&menu->image, data_ov079_020c4c84, 0);
-    title = func_ov039_020bcb20(data_0205fe0c);
+    title = func_ov039_020bcb20(gSaveIoStateDataTail);
     SetTextColorIfFits_020bcd04(menu->objectLists[0], 0xac, title);
     DrawTextAnchored_020015a0(menu->objectLists[0], 0xbe, 2, 2, 0x20, title);
     menu->dirty = TRUE;

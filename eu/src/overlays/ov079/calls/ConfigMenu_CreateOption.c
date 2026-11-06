@@ -3,7 +3,7 @@
 extern void *NNSi_FndAllocFromDefaultHeap(u32 size);
 extern u32 ReadPackedBitField(u32 *words, u32 bitOffset, u32 bitCount);
 extern const void *GetPackedFileEntry(void *messages, int index);
-extern u8 *data_0205fe0c;
+extern u8 *gSaveIoStateDataTail;
 
 ConfigOption *ConfigMenu_CreateOption(void *messages, u16 labelIndex, s8 count, u16 spec)
 {
@@ -16,7 +16,7 @@ ConfigOption *ConfigMenu_CreateOption(void *messages, u16 labelIndex, s8 count, 
     option->count = count;
     bitIndex = spec & 0x1fff;
     bitWidth = spec >> 14;
-    option->value = ReadPackedBitField((u32 *)(data_0205fe0c + 0x2878),
+    option->value = ReadPackedBitField((u32 *)(gSaveIoStateDataTail + 0x2878),
         (bitIndex / 32) * 32 + 32 - (bitIndex + bitWidth), bitWidth);
     option->bitWidth = bitWidth;
     option->locked = (spec >> 13) & 1;

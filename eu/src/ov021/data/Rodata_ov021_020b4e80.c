@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-const s16 data_ov021_020b4e80[18] = {
+const s16 gSurfaceSoundArchiveIdsKind2[18] = {
     20, 21, 26, 29, 22, 27, 28, 24,
     25, 23, 30, 32, 33, 31, -1, -1,
     -1, 0,

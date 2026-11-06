@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define data_020604fc gPadHeldAndPrevious
 #define Camera_UpdateManualTurn_020c4668 Camera_UpdateManualTurn
 #define func_ov046_020c19b4 Camera_GetSpeedScaledStep

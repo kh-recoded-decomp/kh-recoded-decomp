@@ -1,2 +1,4 @@
+#define data_020608c8 gSelectionRuntimeHeader
+#define data_02060940 gRegisteredTaggedEntryPointers
 #define ClearHandleActiveFlags_0204ffd0 ClearHandleActiveFlags
 #include "src/arm9/resource_management/ClearHandleActiveFlags_0204ffd0.c"

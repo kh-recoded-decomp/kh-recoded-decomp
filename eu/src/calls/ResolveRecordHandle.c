@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define GetActiveRecordEntryOrNull_02029548 GetActiveRecordEntryOrNull
 #define ResolveRecordHandle_02029574 ResolveRecordHandle
 #include "src/arm9/record_management/ResolveRecordHandle_02029574.c"

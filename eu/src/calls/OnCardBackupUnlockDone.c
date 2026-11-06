@@ -4,5 +4,5 @@
 #define IncrementBusyCounter_020254a8 IncrementBusyCounter
 #define OnCardBackupUnlockDone_020270e0 OnCardBackupUnlockDone
 #define func_02026b00 ReadCardBackupSync
-#define g_cardThreadState_0205fe00 data_0205fe00
+#define g_cardThreadState_0205fe00 gSaveIoStatePrefix
 #include "src/arm9/shared_engine/OnCardBackupUnlockDone_020270e0.c"

@@ -1,4 +1,4 @@
 #define IsPxiChannelActive_020babec IsPxiChannelActive
 #define func_0202a78c Obj_GetWord28
-#define g_pxiChannel_020bb6a0 data_ov037_020bb6c0
+#define g_pxiChannel_020bb6a0 gOv037SceneTaskHandle
 #include "src/ov037/unclassified_helpers/IsPxiChannelActive_020babec.c"

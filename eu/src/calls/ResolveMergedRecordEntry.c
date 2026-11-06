@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define AcquireRecordSlot_02051d3c AcquireRecordSlot
 #define GetActiveRecordEntryOrNull_02029548 GetActiveRecordEntryOrNull
 #define GetRecordSlotPair0Entry_02051ec8 GetRecordSlotPair0Entry

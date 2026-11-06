@@ -108,7 +108,7 @@ CHECK_ROW_OFFSET(SaveData, category4Values, 0x2de0, SaveCategoryValuesOffset);
 #undef CHECK_ROW_OFFSET
 
 extern const CellGrid gSlotPickerIconGrid;
-extern SaveData *data_0205fe0c;
+extern SaveData *gSaveIoStateDataTail;
 extern int GetVBlankCounter(void);
 extern RecordEntry *GetActiveRecordEntryOrNull(int index);
 extern ItemStock *CommandMatrix_GetStockForRecord(MenuPanel *panel, const RecordEntry *record);
@@ -129,7 +129,7 @@ extern u32 MSL_FpInitC(u32 progress);
 #pragma opt_common_subs off
 static inline u16 ReadRecordGaugeValue(u16 recordIndex, u32 rawHeader)
 {
-    SaveData *save = data_0205fe0c;
+    SaveData *save = gSaveIoStateDataTail;
     const SlotPair *slots = save->slots;
     const u32 *values = save->equippedProgress;
     u16 result;
@@ -147,7 +147,7 @@ static inline u16 ReadRecordGaugeValue(u16 recordIndex, u32 rawHeader)
 
 static inline int GetItemOwnershipRow(MenuPanel *panel, int itemHandle)
 {
-    BOOL owned = GetPackedBitMask(data_0205fe0c->ownedFlags, itemHandle) ? TRUE : FALSE;
+    BOOL owned = GetPackedBitMask(gSaveIoStateDataTail->ownedFlags, itemHandle) ? TRUE : FALSE;
     BOOL marked = GetPackedBitMask(panel->ownedFlags, itemHandle) ? TRUE : FALSE;
     return owned ? 2 : (marked ? 1 : 0);
 }
@@ -213,7 +213,7 @@ void MenuPanel_DrawItemRows(MenuPanel *panel)
                                 0xd4, (s16)(y + 1), depth, 0x7fff), FALSE);
                         } else {
                             DrawSlotMenuGaugeAndDigits(panel, row,
-                                data_0205fe0c->category4Values[(u16)(group / 5)], def->maxValue, 0xd3);
+                                gSaveIoStateDataTail->category4Values[(u16)(group / 5)], def->maxValue, 0xd3);
                         }
                     } else if (record != NULL) {
                         if (record->level == 100) {

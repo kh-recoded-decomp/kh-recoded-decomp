@@ -1,3 +1,3 @@
 #include "nitro/types.h"
 
-static u32 data_02060f24[298];
+static u32 gLevelGrowthTableTail[298];

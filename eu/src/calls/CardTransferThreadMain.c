@@ -4,5 +4,5 @@
 #define CardUnlockAfterKeyShare_020091b8 CARD_UnlockBackup
 #define OS_RescheduleThread_02002bb4 OS_RescheduleThread
 #define func_02009128 CARD_GetResultCode
-#define g_cardThreadState_0205fe00 data_0205fe00
+#define g_cardThreadState_0205fe00 gSaveIoStatePrefix
 #include "src/arm9/shared_engine/CardTransferThreadMain_02026b58.c"

@@ -1,3 +1,5 @@
+#define data_020608c8 gSelectionRuntimeHeader
+#define data_02060940 gRegisteredTaggedEntryPointers
 #define AddTaggedEntry_0204fe2c AddTaggedEntry
 #define FindTaggedEntry_0204f6a4 FindEntryById
 #define GetOverlaySelectionRecord_0204f768 GetOverlaySelectionRecord

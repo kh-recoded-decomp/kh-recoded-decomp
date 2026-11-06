@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define GetActiveRecordEntryOrNull_02029548 GetActiveRecordEntryOrNull
 #define SetGlobalPackedBit_02027320 SetGlobalPackedBit
 #define SlotMenu_FuseSlotRecords_020c851c SlotMenu_FuseSlotRecords

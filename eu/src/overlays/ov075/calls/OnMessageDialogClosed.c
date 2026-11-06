@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define OnMessageDialogClosed_020c8d30 OnMessageDialogClosed
 #define SetLayoutElementVisible_020d0e4c SetLayoutElementVisible
 #define SetUnlockableElementsVisible_020d0e64 SetUnlockableElementsVisible

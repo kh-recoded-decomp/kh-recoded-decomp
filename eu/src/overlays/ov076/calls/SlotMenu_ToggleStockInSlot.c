@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define GetActiveRecordEntryOrNull_02029548 GetActiveRecordEntryOrNull
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define SlotMenu_AssignStockToSlot_020c4a38 SlotMenu_AssignStockToSlot

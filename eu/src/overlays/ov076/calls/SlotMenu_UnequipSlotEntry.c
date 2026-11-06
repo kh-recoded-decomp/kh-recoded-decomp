@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define GetOverlaySelectionRecord_0204f768 GetOverlaySelectionRecord
 #define SlotMenu_UnequipSlotEntry_020c89e0 SlotMenu_UnequipSlotEntry
 #include "src/ov076/unclassified_helpers/SlotMenu_UnequipSlotEntry_020c89e0.c"

@@ -171,3 +171,25 @@ All 348 complete affected objects and all 108 freshly linked module hashes are
 unchanged. The official SDK verifiers separately reproduce 160 IRQ-thread-switch
 cases and 120 exception-display cases against the ROM instructions; only the
 source hashes in those two receipts are regenerated after their alias changes.
+
+## Movie and game-service block
+
+The 103-identity game-service block checks 410 affected functions. 405
+standalone checks pass; five reproduce their original-source-graph verdicts.
+Four are documented above: `HandleResultsInput`, `RefreshStatusMenuData`,
+`DrawMatrixMenu` and `UpdateMatrixEventAnimation`.
+
+The additional case is `DrawMatrixCellGlyph` (ov075:020c7fc8, Thumb, 2248
+bytes). Its +0x6c instruction is `00 f0 2a fc`, a BL to local 020c888c inside
+the same function. The reference map records it as an external relocation;
+the compiler resolves it directly. An eventual metadata repair must compare
+all four instruction bytes without masking them.
+
+```sh
+python tools/verify_idx.py src/overlays/ov075/calls/DrawMatrixCellGlyph.c DrawMatrixCellGlyph --thumb
+```
+
+The fresh gate passes all 108 modules with identical hashes. All 474 complete
+affected production objects preserve allocated bytes, alignment, symbol
+layouts and relocation records, including the actual compiled 24-byte movie
+prompt-pointer table and its six native relocations.

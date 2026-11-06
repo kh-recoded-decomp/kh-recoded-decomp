@@ -32,7 +32,7 @@ typedef struct BgGraphicsData {
 
 typedef struct RecordSaveData RecordSaveData;
 
-extern RecordSaveData *data_0205fe0c;
+extern RecordSaveData *gSaveIoStateDataTail;
 
 extern void G2x_SetBlendAlpha_(vu16 *registerAddress, int firstPlanes, int secondPlanes, int firstWeight,
                                int secondWeight);
@@ -145,7 +145,7 @@ void SetupPageMenuBackgrounds(PageMenu *menu)
     MIi_CpuClearFast(0, G2_GetBG2CharPtr(), 0x20);
     MIi_CpuClearFast(0, G2_GetBG2ScrPtr(), 0x600);
 
-    DrawLayoutLine(menu, 0, FormatSaveLocationLabel(data_0205fe0c), NULL);
+    DrawLayoutLine(menu, 0, FormatSaveLocationLabel(gSaveIoStateDataTail), NULL);
     DrawLayoutLine(menu, 5, GetPackedFileEntry(menu->messageView, 0), NULL);
     DrawLayoutLine(menu, 6, GetPackedFileEntry(menu->messageView, 1), NULL);
 

@@ -3,5 +3,5 @@
 #define StartCardTransferThread_02026be0 StartCardTransferThread
 #define func_02002898 OS_CreateThread
 #define func_02026b58 CardTransferThreadMain
-#define g_cardThreadState_0205fe00 data_0205fe00
+#define g_cardThreadState_0205fe00 gSaveIoStatePrefix
 #include "src/arm9/shared_engine/StartCardTransferThread_02026be0.c"

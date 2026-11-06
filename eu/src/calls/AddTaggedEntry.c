@@ -1,3 +1,4 @@
+#define data_02060a50 gTaggedEntryPool
 #define AddTaggedEntry_0204fe2c AddTaggedEntry
 #define FindTaggedEntry_0204f6a4 FindEntryById
 #define func_01ff8830 MI_CpuFill8

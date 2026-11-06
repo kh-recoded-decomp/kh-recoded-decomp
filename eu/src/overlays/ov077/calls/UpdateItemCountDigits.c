@@ -1,2 +1,3 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define UpdateItemCountDigits_020c52a0 UpdateItemCountDigits
 #include "src/ov077/unclassified_helpers/UpdateItemCountDigits_020c52a0.c"

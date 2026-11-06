@@ -15,7 +15,7 @@
 #define func_ov104_020d1edc __DSProt_DetectNotFlashcart
 #define func_ov104_020d1f18 __DSProt_DetectEmulator
 #define func_ov104_020d1fcc __DSProt_DetectNotDummy
-#define g_cardThreadState_0205fe00 data_0205fe00
+#define g_cardThreadState_0205fe00 gSaveIoStatePrefix
 #define g_mainHeap_02060394 gEngineHeapReferences
 #define g_saveCheckOverlayId_00000068 gSaveCheckOverlayId
 #include "src/arm9/shared_engine/InitSaveSystem_02026dc0.c"

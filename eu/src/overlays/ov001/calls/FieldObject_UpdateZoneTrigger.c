@@ -1,3 +1,4 @@
+#define data_020608c8 gSelectionRuntimeHeader
 #define func_ov001_02063838 GetSessionFlagsMask20
 #define func_ov001_02063a38 GetFieldSessionState
 #define func_ov001_0206dc4c GetManagedActorPosition

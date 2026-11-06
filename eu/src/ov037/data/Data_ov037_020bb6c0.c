@@ -5,7 +5,7 @@
 extern void BeginCommSession(void);
 extern void ShutdownCommChannelAndAudio(void);
 
-void *data_ov037_020bb6c4[5] = {
+void *gOv037SceneTaskClass[5] = {
     (void *)0x0002000E,
     (void *)BeginCommSession,
     (void *)ShutdownCommChannelAndAudio,
@@ -13,6 +13,6 @@ void *data_ov037_020bb6c4[5] = {
     NULL,
 };
 
-u32 data_ov037_020bb6c0[1] = {
+u32 gOv037SceneTaskHandle[1] = {
     0xFFFFFFFF,
 };

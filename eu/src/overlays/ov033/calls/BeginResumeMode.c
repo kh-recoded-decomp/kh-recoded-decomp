@@ -12,7 +12,7 @@ typedef struct {
 } SaveWork;
 
 extern SoundCtx *gResumeModeWorkStorage;
-extern SaveWork *data_0205fe0c;
+extern SaveWork *gSaveIoStateDataTail;
 extern u32 func_ov001_02063620(void);
 extern void SetPanelEnabled(int mode);
 extern void FadeBgmVolume(int targetVolume, int frames);
@@ -30,7 +30,7 @@ s32 BeginResumeMode(void)
     SetPanelEnabled(0);
     FadeBgmVolume(0x40, 10);
     if (ctx->modeId == 0x40000002) {
-        data_0205fe0c->progressStage = 7;
+        gSaveIoStateDataTail->progressStage = 7;
         WriteGlobalPackedBits(0x3537, 0x20, 0x4800);
         WriteGlobalPackedBits(0x3557, 0x20, 0);
         WriteGlobalPackedBits(0x3577, 0x20, -0x5000);

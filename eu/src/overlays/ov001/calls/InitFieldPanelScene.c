@@ -40,7 +40,7 @@ typedef struct {
 typedef void *(*PanelStep)(void);
 
 extern PanelScene *gSubscenePanelWork;
-extern u8 *data_0205fe0c;
+extern u8 *gSaveIoStateDataTail;
 extern u8 gMenuListTaskClass[];
 extern u8 gOverlayDisplaySessionTaskClass[];
 extern u32 OVERLAY_25_ID[1];
@@ -81,7 +81,7 @@ PanelStep InitFieldPanelScene(void)
     panel->selection = -1;
     panel->language = GetPrimarySelectionByte1E();
     panel->fadeSpeed = 6;
-    panel->sessionFlags = ((SessionStateFlags *)(data_0205fe0c + 0x2878))->panelStyle;
+    panel->sessionFlags = ((SessionStateFlags *)(gSaveIoStateDataTail + 0x2878))->panelStyle;
     BuildEntryNameList(panel);
     LoadModeNameAndMessages(panel);
     FS_InitFile(panel->file);

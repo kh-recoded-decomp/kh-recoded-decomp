@@ -1,3 +1,4 @@
+#define data_020608c8 gSelectionRuntimeHeader
 #define FX_Div_020d24dc DrawOverlay054ActorAndSceneModels
 #define InitOverlay054Entity_020d21f4 InitOverlay054Entity
 #define LoadMenuSoundArcs_020d2688 LoadMenuSoundArcs

@@ -47,7 +47,7 @@ typedef struct SlotHeaderCommandRecord {
     s16 level;
 } SlotHeaderCommandRecord;
 
-extern SlotHeaderSave *data_0205fe0c;
+extern SlotHeaderSave *gSaveIoStateDataTail;
 extern void *GetActiveRecordEntryOrNull(int index);
 extern SlotHeaderStock *CommandMatrix_GetStockForRecord(void *menu, const void *record);
 extern SlotHeaderCommandRecord *GetRecordSlotPair1Entry(s32 index);
@@ -61,7 +61,7 @@ void SlotMenu_UpdateStatusHeader(SlotHeaderMenu *menu)
     int slot = menu->slotIndex;
 
     if (menu->column == 2) {
-        u16 id = data_0205fe0c->equippedSlots[slot * 2];
+        u16 id = gSaveIoStateDataTail->equippedSlots[slot * 2];
         if (id >= 0x200 && id < 0x458) {
             u8 stockIndex = menu->selections[slot].stockIndex;
             stock = &menu->stocks[stockIndex];
@@ -69,7 +69,7 @@ void SlotMenu_UpdateStatusHeader(SlotHeaderMenu *menu)
             stock = &menu->stocks[id];
         }
     } else {
-        u16 id = data_0205fe0c->equippedSlots[slot * 2 + menu->column];
+        u16 id = gSaveIoStateDataTail->equippedSlots[slot * 2 + menu->column];
         if (id >= 0x200 && id < 0x458) {
             stock = &menu->stocks[id];
             if (stock->recordIndex >= 0) {

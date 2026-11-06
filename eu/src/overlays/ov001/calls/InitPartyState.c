@@ -24,7 +24,7 @@ typedef struct PartyGlobals {
 } PartyGlobals;
 
 extern PartyGlobals gManagedActorGlobals;
-extern u8 data_020608c8;
+extern u8 gSelectionRuntimeHeader;
 extern char OVERLAY_51_ID[];
 extern char OVERLAY_52_ID[];
 extern char OVERLAY_56_ID[];
@@ -48,7 +48,7 @@ void InitPartyState(int mode) {
     if (party->count > 0) {
         return;
     }
-    if (data_020608c8 > 1) {
+    if (gSelectionRuntimeHeader > 1) {
         mode = 2;
     }
     party->selected = mode;
@@ -62,16 +62,16 @@ void InitPartyState(int mode) {
     if (party->selected != 1) {
         LoadOverlayAfterGeometryTransfer(0, (int)OVERLAY_52_ID);
         party->handles[1] = (int)OVERLAY_52_ID;
-        if (data_020608c8 == 1) {
+        if (gSelectionRuntimeHeader == 1) {
             party->handles[2] = (int)OVERLAY_56_ID;
-        } else if (data_020608c8 > 1) {
+        } else if (gSelectionRuntimeHeader > 1) {
             party->handles[2] = (int)OVERLAY_58_ID;
         }
         if (party->handles[2] != -1) {
             LoadOverlayAfterGeometryTransfer(0, party->handles[2]);
         }
     }
-    for (i = 0; i < data_020608c8; i++) {
+    for (i = 0; i < gSelectionRuntimeHeader; i++) {
         PartyEntry *entry = &party->entries[i];
         party->count++;
         gManagedActorGlobals.factory = NULL;

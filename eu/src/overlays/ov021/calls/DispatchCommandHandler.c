@@ -1,4 +1,4 @@
 #define DispatchCommandHandler_020ad508 DispatchCommandHandler
-#define data_ov021_020b500c data_ov021_020b502c
+#define data_ov021_020b500c gStageCommandOverlayFactories
 #define func_02029f78 LoadOverlayAfterGeometryTransfer
 #include "src/ov021/shared_engine/DispatchCommandHandler_020ad508.c"

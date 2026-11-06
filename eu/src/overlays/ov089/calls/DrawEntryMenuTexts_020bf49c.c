@@ -40,7 +40,7 @@ typedef struct Ov089Menu {
     u8 messages[4];
 } Ov089Menu;
 
-extern GameState *data_0205fe0c;
+extern GameState *gSaveIoStateDataTail;
 extern const TextFrame gEntryCarouselTextFrame;
 extern u16 gEntryCarouselTitleLanguage2Separator[];
 extern u16 gEntryCarouselTitleDefaultSeparator[];
@@ -77,7 +77,7 @@ void DrawEntryMenuTexts_020bf49c(Ov089Menu *menu)
     void *text;
 
     screen = UpdateScreenWidgetLayer(10);
-    world = data_0205fe0c->world;
+    world = gSaveIoStateDataTail->world;
     if (GetLanguageIndex() == 2) {
         separator = gEntryCarouselTitleLanguage2Separator;
     } else {
@@ -87,7 +87,7 @@ void DrawEntryMenuTexts_020bf49c(Ov089Menu *menu)
     InitTextLayerAt(&menu->captionLayer, 2, screen, GetMenuFont10(), &frame);
     RefreshEntryCaption(menu, FALSE);
     name = GetGridTableValue(world, -1);
-    OS_SNPrintf_0202e094(title, 0x40, gEntryCarouselTitleFormat, name, separator, GetGridTableValue(world, data_0205fe0c->column));
+    OS_SNPrintf_0202e094(title, 0x40, gEntryCarouselTitleFormat, name, separator, GetGridTableValue(world, gSaveIoStateDataTail->column));
 
     frame.x = 0xe;
     frame.y = 0;

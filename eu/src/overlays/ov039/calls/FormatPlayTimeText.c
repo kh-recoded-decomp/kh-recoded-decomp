@@ -1,4 +1,4 @@
 #define FormatPlayTimeText_020be64c FormatPlayTimeText
 #define OS_SNPrintf_0202e080 OS_SNPrintf_0202e094
-#define data_ov039_020be9c4 data_ov039_020be9e4
+#define data_ov039_020be9c4 gMenuPlayTimeFormatStorage
 #include "src/ov039/unclassified_helpers/FormatPlayTimeText_020be64c.c"

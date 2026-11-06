@@ -5,7 +5,7 @@ typedef struct {
     int playerStates[4];
 } Session;
 
-extern u8 data_020608c8;
+extern u8 gSelectionRuntimeHeader;
 extern Session *gFieldSessionWork;
 
 BOOL AreItemScreenSessionStatesZero(void)
@@ -13,7 +13,7 @@ BOOL AreItemScreenSessionStatesZero(void)
     BOOL allIdle = TRUE;
     int index;
 
-    for (index = 0; index < data_020608c8; index++) {
+    for (index = 0; index < gSelectionRuntimeHeader; index++) {
         if (gFieldSessionWork->playerStates[index] != 0) {
             allIdle = FALSE;
             break;

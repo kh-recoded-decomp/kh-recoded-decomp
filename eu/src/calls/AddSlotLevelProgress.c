@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define AddSlotLevelProgress_0202900c AddSlotLevelProgress
 #define GetActiveRecordEntryOrNull_02029548 GetActiveRecordEntryOrNull
 #define TruncateToU16_02029568 TruncateToU16

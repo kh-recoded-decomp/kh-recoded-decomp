@@ -16,7 +16,7 @@ typedef struct {
     u8 *dims;
 } Grid;
 
-extern u8 *data_0205fe0c;
+extern u8 *gSaveIoStateDataTail;
 extern int GetPackedBitMask(int *bitWords, int bitIndex);
 
 static inline void SetPixel(u8 *pixels, u16 x, u16 y, u8 color)
@@ -53,7 +53,7 @@ void DrawMatrixCellGlyph(u8 *pixels, Grid *grid, GridItem *item, u32 cellIndex)
         index = item - grid->links[0];
     }
     if (index >= 0) {
-        unlocked = GetPackedBitMask((int *)(data_0205fe0c + 0x2c5c), index) ? TRUE : FALSE;
+        unlocked = GetPackedBitMask((int *)(gSaveIoStateDataTail + 0x2c5c), index) ? TRUE : FALSE;
         if (!unlocked) {
             item = grid->links[index];
             type = item->type;

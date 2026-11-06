@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define func_ov001_020645c8 IsSessionFlagSet
 #define GetCtxModeByte_02068084 GetCtxModeByte
 #define GetPlayerLevelTier_020c1418 GetPlayerLevelTier

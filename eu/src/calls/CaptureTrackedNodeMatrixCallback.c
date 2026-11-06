@@ -1,3 +1,4 @@
+#define data_0206076c gMatrixCaptureSceneNode
 #define ApplyQuaternionCorrectionToMatrix_0202f090 ApplyQuaternionCorrectionToMatrix
 #define CaptureGeometryMatrices_02019d00 NNS_G3dGetCurrentMtx
 #define CaptureTrackedNodeMatrixCallback_0202f13c CaptureTrackedNodeMatrixCallback

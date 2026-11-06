@@ -1,6 +1,6 @@
 #define AddClampedHealth_020a75ec AddClampedHealth
 #define IsPlayerEntryFlagSet_02050014 IsPlayerEntryFlagSet
 #define TryApplyStatusEffect_020a78fc TryApplyStatusEffect
-#define data_ov021_020b4dac data_ov021_020b4dcc
+#define data_ov021_020b4dac gStatusGuardEntryFlagIds
 #define nextRandom12_0202aa58 nextRandom12
 #include "src/ov021/object_state/TryApplyStatusEffect_020a78fc.c"

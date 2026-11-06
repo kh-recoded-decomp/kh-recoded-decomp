@@ -1,7 +1,7 @@
 #pragma optimization_level 2
 #include "nitro/types.h"
 
-extern unsigned int data_ov023_020b6e94;
+extern unsigned int gMapMenuHeaderTextLayerConfig;
 extern unsigned int GetFieldFont3();
 extern unsigned int InitTextLayerAtFromEnd();
 extern unsigned int UpdateWidgetLayerDefault_020b9e10();
@@ -19,7 +19,7 @@ void InitOv023TextLayer26
   u16 frame [8];
   unsigned int savedFrameExtra;
 
-  source = (u16 *)&data_ov023_020b6e94;
+  source = (u16 *)&gMapMenuHeaderTextLayerConfig;
   destination = frame;
   layerManager = 8;
   savedFrameExtra = frameExtra;

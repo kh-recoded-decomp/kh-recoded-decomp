@@ -1,4 +1,4 @@
 #define SetCardThreadDoneCallback_02026af0 SetCardThreadDoneCallback_02026b04
 #define func_020270e0 OnCardBackupUnlockDone
-#define g_cardThreadState_0205fe00 data_0205fe00
+#define g_cardThreadState_0205fe00 gSaveIoStatePrefix
 #include "src/arm9/shared_engine/SetCardThreadDoneCallback_02026af0.c"

@@ -3,7 +3,7 @@
 #define OS_SPrintf_02002428 OS_SPrintf
 #define data_0205615c gSoundCategoryNames
 #define data_ov021_020b5238 sOv021_BaChFormatSCpBZ_020b5258
-#define data_ov021_020b5248 data_ov021_020b5268
+#define data_ov021_020b5248 gUnitNodeDataPathFormat
 #define func_0202c48c LoadFileAllocFromHeapTail
 #define func_ov021_020a9d68 RelocateUnitMotionData
 #define func_ov021_020a9ecc BuildUnitNodes

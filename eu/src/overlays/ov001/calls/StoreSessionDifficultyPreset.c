@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define StoreSessionDifficultyPreset_0206452c StoreSessionDifficultyPreset
 #define data_ov001_020a0460 gFieldSessionWork
 #define func_01ff878c MIi_CpuCopyFast

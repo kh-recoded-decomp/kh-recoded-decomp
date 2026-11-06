@@ -42,8 +42,8 @@ typedef char TotalRecordCountOffset[(u32)&((RecordCounterState *)0)->totalCount 
 typedef char RecordCapacityOffset[(u32)&((RecordCounterState *)0)->capacity == 0x102 ? 1 : -1];
 typedef char RecordCounterViewIs260Bytes[sizeof(RecordCounterStorage) == 0x104 ? 1 : -1];
 
-extern RecordSaveData *data_0205fe0c;
-extern RecordCounterStorage data_0205fec4;
+extern RecordSaveData *gSaveIoStateDataTail;
+extern RecordCounterStorage gRuntimeRecordCategoryCounters;
 extern void SetFlagAndBumpCounter(u8 *flag);
 extern void InitActiveRecordEntryFromTemplate(u16 *destination, const void *source);
 
@@ -51,18 +51,18 @@ extern void InitActiveRecordEntryFromTemplate(u16 *destination, const void *sour
 s16 InsertRecordEntry(const RecordEntry *source)
 {
     u16 category = source->category;
-    RecordSaveData *save = data_0205fe0c;
-    u16 *totalCounter = data_0205fec4.words;
+    RecordSaveData *save = gSaveIoStateDataTail;
+    u16 *totalCounter = gRuntimeRecordCategoryCounters.words;
     totalCounter += 0x80;
     RecordEntry *entry = save->records;
-    u16 *categoryCounter = (u16 *)((u8 *)&data_0205fec4 + category * sizeof(u16));
+    u16 *categoryCounter = (u16 *)((u8 *)&gRuntimeRecordCategoryCounters + category * sizeof(u16));
     RecordEntry *end = entry + 600;
 
     u8 *ownedFlag = &save->itemCounts[(u8)category];
     u16 index = 0;
 
     SetFlagAndBumpCounter(ownedFlag);
-    if (data_0205fec4.fields.totalCount >= data_0205fec4.fields.capacity) {
+    if (gRuntimeRecordCategoryCounters.fields.totalCount >= gRuntimeRecordCategoryCounters.fields.capacity) {
         return 0;
     }
     do {

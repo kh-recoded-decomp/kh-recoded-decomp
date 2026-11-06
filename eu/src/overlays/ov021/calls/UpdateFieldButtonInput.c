@@ -6,7 +6,7 @@
 #define func_ov001_02077ef4 TryEnterFieldMenuState3
 #define func_ov001_02063a38 GetFieldSessionState
 #define UpdateFieldButtonInput_020a70a8 UpdateFieldButtonInput
-#define g_saveData_0205fe0c data_0205fe0c
+#define g_saveData_0205fe0c gSaveIoStateDataTail
 #define func_ov001_02072020 CallFieldCommandHandler
 #define func_ov001_020720cc UpdateFieldFlag18
 #define func_ov001_02078360 SetFieldMenuMode_02078360

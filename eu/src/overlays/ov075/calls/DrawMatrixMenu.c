@@ -190,7 +190,7 @@ typedef struct {
     u8 unlockCount;
 } SaveBlock;
 
-extern SaveBlock *data_0205fe0c;
+extern SaveBlock *gSaveIoStateDataTail;
 extern const CursorFrame sMatrixCursorFrames[];
 extern const CellSize gMatrixRightLinkCellParams;
 extern const CellSize gMatrixUpLinkCellParams;
@@ -224,12 +224,12 @@ static inline BOOL IsInputLocked(void)
 
 static inline BOOL IsLinkUnlocked(int index)
 {
-    return GetPackedBitMask(data_0205fe0c->unlockBits, index) != 0;
+    return GetPackedBitMask(gSaveIoStateDataTail->unlockBits, index) != 0;
 }
 
 static inline BOOL IsItemUnlocked(GridItem *item)
 {
-    return item->type == 1 && (data_0205fe0c->unlockMask & (1 << item->groupBit));
+    return item->type == 1 && (gSaveIoStateDataTail->unlockMask & (1 << item->groupBit));
 }
 
 static inline void DrawSlotIcon(MatrixMenu *menu, int icon, int color, int x, int y)
@@ -248,7 +248,7 @@ void DrawMatrixMenu(MatrixMenu *menu)
     GridDims *dims = menu->grid->dims;
     GridItem **link = menu->grid->links;
     u8 cols = dims->cols;
-    u16 level = data_0205fe0c->unlockCount;
+    u16 level = gSaveIoStateDataTail->unlockCount;
     GridItem **items;
     u8 *unlockLevel;
     CellSize corner;
@@ -420,7 +420,7 @@ void DrawMatrixMenu(MatrixMenu *menu)
             }
             image = &menu->objectImages[variant];
             cell.width = 2;
-            cell.height = (data_0205fe0c->groupFlags & (1 << item->groupBit)) ? 1 : 0;
+            cell.height = (gSaveIoStateDataTail->groupFlags & (1 << item->groupBit)) ? 1 : 0;
             if (item->placed) {
                 color = 0x3def;
             }
@@ -630,7 +630,7 @@ void DrawMatrixMenu(MatrixMenu *menu)
     }
 
     {
-        u16 unlocked = data_0205fe0c->unlockMask;
+        u16 unlocked = gSaveIoStateDataTail->unlockMask;
         for (i = 0; i < 12; i++) {
             if (unlocked & (1 << i) & menu->trailMask) {
                 PipeTrail *trail = &menu->trails[i];

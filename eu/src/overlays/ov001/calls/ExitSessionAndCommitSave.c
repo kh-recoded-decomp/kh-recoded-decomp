@@ -60,9 +60,9 @@ typedef struct SceneArgs {
 } SceneArgs;
 
 extern Session *gFieldSessionWork;
-extern SceneArgs data_02060850;
-extern u8 data_0206085c[];
-extern u8 *data_0205fe0c;
+extern SceneArgs gPendingFieldSessionArgs;
+extern u8 gSceneHandoffSharedHeader[];
+extern u8 *gSaveIoStateDataTail;
 
 extern void SetPendingScene(s32 pendId, s32 pendArg);
 extern BOOL IsSessionFlagSet(u32 value);
@@ -82,18 +82,18 @@ s32 ExitSessionAndCommitSave(void) {
         SetPendingScene(1, 0);
         break;
     case 1:
-        data_02060850.unk_00 = request->unk_04;
-        data_02060850.unk_02 = request->unk_06;
-        data_02060850.kind = 2;
-        data_02060850.mode = request->flags.mode;
-        data_02060850.bit2 = request->flags.bit2;
-        data_02060850.bit3 = request->flags.bit5;
-        data_02060850.bit5 = request->flags.bit14;
-        data_02060850.unk_08 = request->unk_10;
+        gPendingFieldSessionArgs.unk_00 = request->unk_04;
+        gPendingFieldSessionArgs.unk_02 = request->unk_06;
+        gPendingFieldSessionArgs.kind = 2;
+        gPendingFieldSessionArgs.mode = request->flags.mode;
+        gPendingFieldSessionArgs.bit2 = request->flags.bit2;
+        gPendingFieldSessionArgs.bit3 = request->flags.bit5;
+        gPendingFieldSessionArgs.bit5 = request->flags.bit14;
+        gPendingFieldSessionArgs.unk_08 = request->unk_10;
         SetPendingScene(2, 0);
         break;
     case 2:
-        SetPendingScene(3, (s32)data_0206085c);
+        SetPendingScene(3, (s32)gSceneHandoffSharedHeader);
         break;
     case 3:
         SetPendingScene(4, 0);
@@ -104,17 +104,17 @@ s32 ExitSessionAndCommitSave(void) {
         StoreSessionDifficultyPreset();
         if (request->resultId == 900) {
             slotBase = ReadGlobalPackedBits(0x1a00, 2) * 0xf00;
-            MI_CpuCopy8(session->staging, data_0205fe0c + ((slotBase + 0x3880) / 32) * 4, 0xcc);
+            MI_CpuCopy8(session->staging, gSaveIoStateDataTail + ((slotBase + 0x3880) / 32) * 4, 0xcc);
             WriteGlobalPackedBits(slotBase + 0x3537, 0x20, session->staging->unk_CC);
             WriteGlobalPackedBits(slotBase + 0x3557, 0x20, session->staging->unk_D0);
             WriteGlobalPackedBits(slotBase + 0x3577, 0x20, session->staging->unk_D4);
             WriteGlobalPackedBits(slotBase + 0x3597, 0x10, session->staging->unk_D8);
             if (gFieldSessionWork->request.flags.saveExtra) {
-                data_0205fe0c[0x28d4] = session->staging->unk_DE;
-                data_0205fe0c[0x28d5] = session->staging->unk_E0;
+                gSaveIoStateDataTail[0x28d4] = session->staging->unk_DE;
+                gSaveIoStateDataTail[0x28d5] = session->staging->unk_E0;
                 WriteGlobalPackedBits(slotBase + 0x330b, 10, session->staging->unk_DA);
                 WriteGlobalPackedBits(slotBase + 0x3315, 10, session->staging->unk_DC);
-                MI_CpuCopy8(session->staging->extraBlock, data_0205fe0c + ((slotBase + 0x3300) / 32) * 4, 0x1e0);
+                MI_CpuCopy8(session->staging->extraBlock, gSaveIoStateDataTail + ((slotBase + 0x3300) / 32) * 4, 0x1e0);
                 NNSi_FndFreeFromDefaultHeap(session->staging->extraBlock);
                 session->staging->extraBlock = NULL;
             }

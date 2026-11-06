@@ -1,4 +1,4 @@
 #define InitMovieSelectionItems_020bc424 InitMovieSelectionItems
-#define data_ov030_020bcf4c data_ov030_020bcf6c
+#define data_ov030_020bcf4c gDragSceneDefaultSelectionItems
 #define data_ov030_020bd004 gMarkerReset
 #include "src/ov030/movie/InitMovieSelectionItems_020bc424.c"

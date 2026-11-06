@@ -2,24 +2,24 @@
 
 #pragma explicit_zero_data on
 
-u32 data_ov022_020b7cac[16] = {
+u32 gMovieCaptionPalette[16] = {
     0x637C0000, 0x001F0000, 0x7C0003E0, 0x7C1F7FE0,
     0x000003FF, 0x00000000, 0x00000000, 0x21080000,
     0x00000000, 0x00000000, 0x00000000, 0x00000000,
     0x00000000, 0x00000000, 0x00000000, 0x00000000,
 };
 
-u32 data_ov022_020b7c90[7] = {
+u32 gMovieSkipPromptJapanese[7] = {
     0xE3B68CE3, 0x8DE3918D, 0xA781E397, 0xE3B982E3,
     0x83E3AD82, 0x9783E383, 0x00000000,
 };
 
-u32 data_ov022_020b7c78[6] = {
+u32 gMovieSkipPromptGerman[6] = {
     0xE3B68CE3, 0x8DE3918D, 0x9CC32097, 0x73726562,
     0x6E697270, 0x006E6567,
 };
 
-u32 data_ov022_020b7c64[5] = {
+u32 gMovieSkipPromptSpanish[5] = {
     0xE3B68CE3, 0x8DE3918D, 0x53203A97, 0x61746C61,
     0x00000072,
 };

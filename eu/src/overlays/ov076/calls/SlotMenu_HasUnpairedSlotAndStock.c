@@ -18,7 +18,7 @@ typedef char ExtraSlotCountOffset[
 typedef char SlotPairsOffset[
     (u32)&((SaveData *)0)->slotPairs == 0x2d84 ? 1 : -1];
 
-extern SaveData *data_0205fe0c;
+extern SaveData *gSaveIoStateDataTail;
 extern u16 GetPrimaryRecordCount(void);
 
 static inline BOOL IsPrimaryHandle(u32 handle)
@@ -51,7 +51,7 @@ static inline void AccumulateSlotPair(u32 first, u32 second,
 /* An unpaired slot needs another primary record that is not already equipped. */
 BOOL SlotMenu_HasUnpairedSlotAndStock(void *unusedMenu)
 {
-    SaveData *save = data_0205fe0c;
+    SaveData *save = gSaveIoStateDataTail;
     int occupiedCount;
     int slotCount;
     int slot;

@@ -1,5 +1,5 @@
 #define SetupBoardTextLayer_020b664c SetupBoardTextLayer
-#define data_ov024_020b7320 data_ov024_020b7340
+#define data_ov024_020b7320 gBoardTextLayerConfig
 #define data_ov024_020b7494 sOv024_TextFontEu10Nftr_020b74b4
 #define data_ov024_020b74ac sOv024_TextFontEu10sNftr_020b74cc
 #define data_ov024_020b74c4 sOv024_UiBtlStrLanguageP2_020b74e4

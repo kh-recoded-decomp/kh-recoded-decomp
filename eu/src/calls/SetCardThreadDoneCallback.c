@@ -2,5 +2,5 @@
 
 void SetCardThreadDoneCallback(void)
 {
-    data_0205fe00.doneCallback = BeginSaveSlotWrite;
+    gSaveIoStatePrefix.doneCallback = BeginSaveSlotWrite;
 }

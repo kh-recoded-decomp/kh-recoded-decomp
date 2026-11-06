@@ -12,7 +12,7 @@ typedef struct FieldSelectionState {
     u32 highFlags : 22;
 } FieldSelectionState;
 
-extern FieldSelectionState *data_0205fe0c;
+extern FieldSelectionState *gSaveIoStateDataTail;
 extern void *FindLoadedElementById(void *tracker, u32 id);
 extern void SetTagRecordArmed(void *tracker, void *record, BOOL armed);
 extern void *FindActiveRecordById(void *tracker, u16 id);
@@ -40,7 +40,7 @@ void UpdateFieldMenuSelectionTags(FieldMenu *menu, void *tracker, int mode)
     if (mode == 2) {
         selected = 18;
     } else if (menu->listedCount > 0) {
-        if (data_0205fe0c->alternateSet == 1) {
+        if (gSaveIoStateDataTail->alternateSet == 1) {
             if (mode != 1) {
                 firstId = 11;
             }

@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define func_ov001_020645dc SetSessionFlag
 #define EnterSceneSlot_020647a4 EnterSceneSlot
 #define data_ov001_020a0460 gFieldSessionWork

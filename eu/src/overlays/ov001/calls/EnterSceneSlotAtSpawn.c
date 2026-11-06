@@ -1,3 +1,4 @@
+#define data_02060850 gPendingFieldSessionArgs
 #define EnterSceneSlotAtSpawn_02064828 EnterSceneSlotAtSpawn
 #define data_ov001_0209d8a0 gSceneSlotSpawns
 #define func_ov001_0206317c ConfigureFieldTracks

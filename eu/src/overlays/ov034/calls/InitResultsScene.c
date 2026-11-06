@@ -196,11 +196,11 @@ typedef int (*ResultsStateFn)(void);
 ResultsWork *data_ov034_020c0fa4;
 ResultsParams *data_ov034_020c0fa0;
 extern const TileIds data_ov034_020be8cc;
-extern SessionState data_0206085c;
+extern SessionState gSceneHandoffSharedHeader;
 extern SessionFlags *gFieldSessionWork;
 extern StageInfo data_ov034_020bf990[];
 extern u8 data_ov034_020bea78[][3];
-extern SaveData *data_0205fe0c;
+extern SaveData *gSaveIoStateDataTail;
 extern u8 OVERLAY_27_ID[];
 extern u8 OVERLAY_24_ID[];
 
@@ -280,32 +280,32 @@ ResultsStateFn InitResultsScene(ResultsArgs *args)
                 int bonusStage;
                 data_ov034_020c0fa4->shopSection = 0x1a;
                 data_ov034_020c0fa0->worldId = data_ov034_020c0fa4->shopSection;
-                if (data_0206085c.progress % 10 == 0) {
-                    bonusStage = data_0206085c.progress / 10 * 2;
-                    data_0206085c.seed = NextSharedRandom16Scaled(0xffff) + random_next_scaled(-1);
+                if (gSceneHandoffSharedHeader.progress % 10 == 0) {
+                    bonusStage = gSceneHandoffSharedHeader.progress / 10 * 2;
+                    gSceneHandoffSharedHeader.seed = NextSharedRandom16Scaled(0xffff) + random_next_scaled(-1);
                 } else {
-                    bonusStage = data_0206085c.progress / 10 * 2 + 1;
-                    if (data_0206085c.mode == 0) {
-                        data_0206085c.seed = data_0206085c.defaultSeed;
+                    bonusStage = gSceneHandoffSharedHeader.progress / 10 * 2 + 1;
+                    if (gSceneHandoffSharedHeader.mode == 0) {
+                        gSceneHandoffSharedHeader.seed = gSceneHandoffSharedHeader.defaultSeed;
                     }
                 }
                 SetupStageParams(data_ov034_020c0fa0, data_ov034_020c0fa0->worldId, bonusStage);
-                if (data_0206085c.mode == 0) {
+                if (gSceneHandoffSharedHeader.mode == 0) {
                     /* The ROM stores bit 3, reloads the halfword, then clears bit 4.
                      * Preserve that two-step memory update when rebuilding EU.
                      */
-                    data_0206085c.cleared = 0;
-                    ((volatile SessionState *)&data_0206085c)->bonus = 0;
+                    gSceneHandoffSharedHeader.cleared = 0;
+                    ((volatile SessionState *)&gSceneHandoffSharedHeader)->bonus = 0;
                 }
             } else {
                 data_ov034_020c0fa0->worldId = data_ov034_020c0fa4->shopSection;
                 if (gFieldSessionWork->replay) {
                     data_ov034_020c0fa0->earnedAmount = GetSessionCounter(1);
                 } else {
-                    data_0206085c.rank = 1;
-                    data_0206085c.seed = NextSharedRandom16Scaled(0x10000 - 1) + random_next_scaled(-1);
+                    gSceneHandoffSharedHeader.rank = 1;
+                    gSceneHandoffSharedHeader.seed = NextSharedRandom16Scaled(0x10000 - 1) + random_next_scaled(-1);
                 }
-                data_ov034_020c0fa0->unlockedRank = data_0206085c.rank;
+                data_ov034_020c0fa0->unlockedRank = gSceneHandoffSharedHeader.rank;
                 SetupStageParams(data_ov034_020c0fa0, data_ov034_020c0fa0->worldId,
                                  data_ov034_020c0fa0->unlockedRank);
             }
@@ -370,7 +370,7 @@ ResultsStateFn InitResultsScene(ResultsArgs *args)
     data_ov034_020c0fa4->scrollTarget = 0;
     data_ov034_020c0fa4->outcome = -1;
     data_ov034_020c0fa4->fadeActive = 0;
-    data_ov034_020c0fa4->ownedFlags = &data_0205fe0c->ownedFlags[data_ov034_020c0fa0->worldId];
+    data_ov034_020c0fa4->ownedFlags = &gSaveIoStateDataTail->ownedFlags[data_ov034_020c0fa0->worldId];
     data_ov034_020c0fa4->shopOpen = 0;
     data_ov034_020c0fa4->syncSecondary = 1;
     data_ov034_020c0fa4->promptEnabled = 1;
@@ -379,21 +379,21 @@ ResultsStateFn InitResultsScene(ResultsArgs *args)
     SetupResultsShopList();
     LoadResultsIconCells(data_ov034_020c0fa4->iconCells);
     if (args->kind == 1 && data_ov034_020c0fa4->mode == 2) {
-        data_0206085c.bonus = 1;
+        gSceneHandoffSharedHeader.bonus = 1;
     }
-    if (args->kind == 1 && data_0206085c.progress % 10 != 0) {
+    if (args->kind == 1 && gSceneHandoffSharedHeader.progress % 10 != 0) {
         data_ov034_020c0fa4->syncSecondary = 0;
-        if (data_0206085c.mode == 0) {
+        if (gSceneHandoffSharedHeader.mode == 0) {
             if (data_ov034_020c0fa4->mode == 2) {
                 if (data_ov034_020c0fa0->isBonusStage) {
-                    data_0206085c.cleared = 1;
+                    gSceneHandoffSharedHeader.cleared = 1;
                 }
                 data_ov034_020c0fa4->outcome = 1;
             }
             return CloseResultsScreen;
         }
         SetResultsMode(3);
-        if (data_0206085c.mode == 2) {
+        if (gSceneHandoffSharedHeader.mode == 2) {
             data_ov034_020c0fa4->shopOpen = 1;
         }
         return UpdateResultsScreen;
@@ -406,8 +406,8 @@ ResultsStateFn InitResultsScene(ResultsArgs *args)
                 return UpdateResultsScreen;
             }
             data_ov034_020c0fa0->unlockedRank++;
-            data_0206085c.rank = data_ov034_020c0fa0->unlockedRank;
-            data_0206085c.seed = NextSharedRandom16Scaled(0xffff) + random_next_scaled(0xffff - 0x10000);
+            gSceneHandoffSharedHeader.rank = data_ov034_020c0fa0->unlockedRank;
+            gSceneHandoffSharedHeader.seed = NextSharedRandom16Scaled(0xffff) + random_next_scaled(0xffff - 0x10000);
             SetupStageParams(data_ov034_020c0fa0, data_ov034_020c0fa0->worldId,
                              data_ov034_020c0fa0->unlockedRank);
         }

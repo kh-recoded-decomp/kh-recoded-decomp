@@ -1,2 +1,3 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define SlotMenu_GetSlotFillState_020c4764 SlotMenu_GetSlotFillState
 #include "src/ov076/unclassified_helpers/SlotMenu_GetSlotFillState_020c4764.c"

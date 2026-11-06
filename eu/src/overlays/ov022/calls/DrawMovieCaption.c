@@ -3,8 +3,8 @@
 #define ResetSubtitleLine_020a8a50 ResetSubtitleLine
 #define UploadDirtySubtitleTiles_020a914c UploadDirtySubtitleTiles
 #define Utf8ToUcs2_020512b4 Utf8ToUcs2
-#define data_ov022_020b7bf8 gStreamBufferTables
-#define data_ov022_020b7d80 data_ov022_020b7da0
+#define data_ov022_020b7bf8 gMovieSkipPromptByLanguage
+#define data_ov022_020b7d80 gMovieSceneGlobals
 #define func_0202b788 GetLanguageIndex
 #define func_ov022_020a90f8 DrawMovieSubtitleText
 #include "src/ov022/video_playback/DrawMovieCaption_020a6f68.c"

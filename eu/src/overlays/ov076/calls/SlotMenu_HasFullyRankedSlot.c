@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define GetActiveRecordEntryOrNull_02029548 GetActiveRecordEntryOrNull
 #define SlotMenu_HasFullyRankedSlot_020c503c SlotMenu_HasFullyRankedSlot
 #include "src/ov076/unclassified_helpers/SlotMenu_HasFullyRankedSlot_020c503c.c"

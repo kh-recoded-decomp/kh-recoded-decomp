@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define data_02060500 gPadPressedStorage
 #define MenuPanel_Open_020cc0e4 ItemSelectionPanel_Open
 #define func_ov027_020b90a4 FindWidgetById

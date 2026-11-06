@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define GetActiveRecordEntryOrNull_02029548 GetActiveRecordEntryOrNull
 #define SlotMenu_CanCombineSlotPair_020c44c0 SlotMenu_CanCombineSlotPair
 #include "src/ov076/unclassified_helpers/SlotMenu_CanCombineSlotPair_020c44c0.c"

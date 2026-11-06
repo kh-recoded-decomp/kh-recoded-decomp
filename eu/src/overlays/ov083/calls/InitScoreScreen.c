@@ -83,7 +83,7 @@ typedef struct ScoreScreen {
 #define REG_DB_BG3CNT  (*(vu16 *)0x0400100e)
 #define REG_DB_BG3OFS  (*(vu32 *)0x0400101c)
 
-extern u8 *data_0205fe0c;
+extern u8 *gSaveIoStateDataTail;
 extern SlotPoolConfig gScoreScreenWidgetConfig;
 extern TextFrame gScoreScreenTextLayer0Frame;
 extern TextFrame gScoreScreenTextLayer1Frame;
@@ -168,8 +168,8 @@ BOOL InitScoreScreen(ScoreScreen *screen)
     screen->eventCount = 1;
     screen->events[0].type = 0;
     screen->events[1].type = 0;
-    ComputePlayerStats(data_0205fe0c, &stats, TRUE, 0);
-    screen->elapsedSeconds = *(int *)(data_0205fe0c + 0x28c8)
+    ComputePlayerStats(gSaveIoStateDataTail, &stats, TRUE, 0);
+    screen->elapsedSeconds = *(int *)(gSaveIoStateDataTail + 0x28c8)
         + _ll_udiv((OS_GetTick() - GetCardThreadStartTick()) * 64, 0x1ff6210);
 
     frameA = gScoreScreenTextLayer0Frame;
@@ -213,7 +213,7 @@ BOOL InitScoreScreen(ScoreScreen *screen)
     screen->labelColumn = 0;
     screen->valueColumn = (GetWidgetPosition(container, columnWidget)[0] >> 12) - 16;
 
-    screen->bestDigits = SetWidgetDigitDisplay(container, 0x14, 8, *(u32 *)(data_0205fe0c + 0x28d0));
+    screen->bestDigits = SetWidgetDigitDisplay(container, 0x14, 8, *(u32 *)(gSaveIoStateDataTail + 0x28d0));
     screen->timerDigits = DrawWidgetPlayTime(container, 1, 1, screen->elapsedSeconds);
     screen->digitsB = SetWidgetDigitDisplay(container, 0x15, 9, 0);
     screen->digitsC = SetWidgetDigitDisplay(container, 0, 0, 0);

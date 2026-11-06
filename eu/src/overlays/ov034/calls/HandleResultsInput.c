@@ -93,8 +93,8 @@ typedef struct SaveData {
 extern ResultsScreen data_ov034_020c0fa0;
 extern ShopEntry gResultsShopEntries[];
 extern u16 gPadPressedStorage;
-extern SessionState data_0206085c;
-extern SaveData *data_0205fe0c;
+extern SessionState gSceneHandoffSharedHeader;
+extern SaveData *gSaveIoStateDataTail;
 
 extern Widget *FindWidgetById(void *root, int id);
 extern void SetFocusedWidget(void *root, Widget *widget);
@@ -246,7 +246,7 @@ void HandleResultsInput(Widget *widget, u32 pressed)
         SetWidgetPosition(WORK->widgets, FindWidgetById(WORK->widgets, 0xe2), &pos, 0);
     }
     sessionKind = WORK->sessionKind;
-    if (sessionKind == 1 && data_0206085c.mode == 1) {
+    if (sessionKind == 1 && gSceneHandoffSharedHeader.mode == 1) {
         if (!(gPadPressedStorage & 0x402)) {
             return;
         }
@@ -303,13 +303,13 @@ void HandleResultsInput(Widget *widget, u32 pressed)
             if (WORK->tab == 0) {
                 if (sessionKind == 1) {
                     WORK->outcome = 0;
-                    data_0206085c.mode = 3;
+                    gSceneHandoffSharedHeader.mode = 3;
                     WORK->timer = 0;
                 } else {
                     PARAMS->unlockedRank++;
                     SetSecondaryBrightness(-16);
-                    data_0206085c.rank = PARAMS->unlockedRank;
-                    data_0206085c.seed = NextSharedRandom16Scaled(0xffff) + random_next_scaled(-1);
+                    gSceneHandoffSharedHeader.rank = PARAMS->unlockedRank;
+                    gSceneHandoffSharedHeader.seed = NextSharedRandom16Scaled(0xffff) + random_next_scaled(-1);
                     SetupStageParams(PARAMS, PARAMS->worldId, PARAMS->unlockedRank);
                     EnterResultsTierMode(0);
                     WORK->timer = 2;
@@ -372,21 +372,21 @@ void HandleResultsInput(Widget *widget, u32 pressed)
                         if (reward > 99999) {
                             reward = 99999;
                         }
-                        total = data_0205fe0c->points + reward;
+                        total = gSaveIoStateDataTail->points + reward;
                         if (total < 0) {
                             total = 0;
                         } else if (total > 999999) {
                             total = 999999;
                         }
-                        data_0205fe0c->points = total;
+                        gSaveIoStateDataTail->points = total;
                     } else {
                         int reward = (PARAMS->earnedAmount * WORK->rateA + 99) / 100;
                         if (reward > 99999) {
                             reward = 99999;
                         }
-                        data_0205fe0c->munny = data_0205fe0c->munny + reward;
-                        if (data_0205fe0c->munny > 99999999) {
-                            data_0205fe0c->munny = 99999999;
+                        gSaveIoStateDataTail->munny = gSaveIoStateDataTail->munny + reward;
+                        if (gSaveIoStateDataTail->munny > 99999999) {
+                            gSaveIoStateDataTail->munny = 99999999;
                         }
                     }
                     PARAMS->earnedAmount = 0;
@@ -395,8 +395,8 @@ void HandleResultsInput(Widget *widget, u32 pressed)
                     } else {
                         WORK->outcome = 2;
                     }
-                    if (WORK->sessionKind == 1 && data_0206085c.mode != 2) {
-                        data_0206085c.mode = 4;
+                    if (WORK->sessionKind == 1 && gSceneHandoffSharedHeader.mode != 2) {
+                        gSceneHandoffSharedHeader.mode = 4;
                     }
                     PlaySoundEffect(0, 1);
                     SetEntrySlotsVisible(WORK->widgets, FindWidgetById(WORK->widgets, 0xe2), 0);

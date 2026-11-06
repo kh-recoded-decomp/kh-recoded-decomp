@@ -1,5 +1,5 @@
 #define FreeMovieFileBuffer_020a82f4 FreeMovieFileBuffer
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
-#define data_ov022_020b7d94 data_ov022_020b7db4
+#define data_ov022_020b7d94 gMovieFileAndDecoderBackupState
 #define func_01ff89a8 MI_CpuCopy8
 #include "src/ov022/video_playback/FreeMovieFileBuffer_020a82f4.c"

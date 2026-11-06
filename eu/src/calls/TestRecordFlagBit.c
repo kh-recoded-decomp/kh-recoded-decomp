@@ -12,7 +12,7 @@ typedef struct {
 } MainDataHolder;
 
 extern RecordB *GetRecordTableBEntry(s32 index);
-extern MainDataHolder data_0205fe00;
+extern MainDataHolder gSaveIoStatePrefix;
 
 int TestRecordFlagBit(s32 recordId, s32 *outByteIndex, u8 *outMask)
 {
@@ -30,5 +30,5 @@ int TestRecordFlagBit(s32 recordId, s32 *outByteIndex, u8 *outMask)
         *outMask = mask;
     }
 
-    return (data_0205fe00.data + byteIndex)[0x2788] & mask ? 1 : 0;
+    return (gSaveIoStatePrefix.data + byteIndex)[0x2788] & mask ? 1 : 0;
 }

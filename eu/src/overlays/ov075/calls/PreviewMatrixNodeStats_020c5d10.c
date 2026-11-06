@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define ApplyLevelBonus_020c5bb0 ApplyLevelBonus
 #define ApplyLinkedGroupBonuses_020c5ca8 ApplyLinkedGroupBonuses
 #define ArmObject_0205115c ArmObject

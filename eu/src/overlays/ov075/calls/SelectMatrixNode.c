@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define data_02060500 gPadPressedStorage
 #define func_01ffb2f8 SetModelAnimationFrameWithSingleWrap
 #define DecrementByteCounter_02029370 DecrementByteCounter

@@ -60,6 +60,17 @@ links the complete sequence of documented naming blocks.
 - [Native Sound Pool Shared4](NATIVE_SOUND_POOL_SHARED4.md).
 - [Native Vram Thread7](NATIVE_VRAM_THREAD7.md).
 
+- [Field Combat Tables13](NATIVE_FIELD_COMBAT_TABLES13.md).
+- [Level Growth Spans3](NATIVE_LEVEL_GROWTH_SPANS3.md).
+- [List Display Configs9](NATIVE_LIST_DISPLAY_CONFIGS9.md).
+- [Map Board Configs9](NATIVE_MAP_BOARD_CONFIGS9.md).
+- [Menu Stage Configs12](NATIVE_MENU_STAGE_CONFIGS12.md).
+- [Movie20](NATIVE_MOVIE20.md).
+- [Native Runtime Views7](NATIVE_NATIVE_RUNTIME_VIEWS7.md).
+- [Save Render State10](NATIVE_SAVE_RENDER_STATE10.md).
+- [Selection Slots Tags8](NATIVE_SELECTION_SLOTS_TAGS8.md).
+- [Static Owner Tables12](NATIVE_STATIC_OWNER_TABLES12.md).
+
 ## Unresolved function contracts
 
 At the `ad0a8778153f72218e4bdad3a5cec1bd8e2a7470` naming checkpoint,

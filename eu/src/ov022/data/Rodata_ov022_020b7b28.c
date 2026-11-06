@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-const u32 data_ov022_020b7b38[45] = {
+const u32 gMovieAdpcmStepSizeStorage[45] = {
     0x00080007, 0x000A0009, 0x000C000B, 0x000E000D,
     0x00110010, 0x00150013, 0x00190017, 0x001F001C,
     0x00250022, 0x002D0029, 0x00370032, 0x0042003C,
@@ -15,6 +15,6 @@ const u32 data_ov022_020b7b38[45] = {
     0x00007FFF,
 };
 
-const u32 data_ov022_020b7b28[4] = {
+const u32 gMovieAdpcmIndexAdjustments[4] = {
     0xFFFFFFFF, 0x08060402, 0xFFFFFFFF, 0x08060402,
 };

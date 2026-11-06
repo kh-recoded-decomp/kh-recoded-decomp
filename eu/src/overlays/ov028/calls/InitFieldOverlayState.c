@@ -1,3 +1,4 @@
+#define data_020608c8 gSelectionRuntimeHeader
 #define func_ov001_020645c8 IsSessionFlagSet
 #define CreateOverlayTask_0206a6f4 CreateOverlayTask
 #define CreateSessionNameMenu_02063ba4 CreateSessionNameMenu

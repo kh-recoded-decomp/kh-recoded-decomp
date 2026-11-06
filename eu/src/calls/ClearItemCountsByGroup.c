@@ -1,2 +1,3 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define ClearItemCountsByGroup_0202987c ClearItemCountsByGroup
 #include "src/arm9/record_management/ClearItemCountsByGroup_0202987c.c"

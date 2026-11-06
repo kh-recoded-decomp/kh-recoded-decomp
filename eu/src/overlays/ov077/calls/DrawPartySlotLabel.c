@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define DrawPartySlotLabel_020c5a4c DrawPartySlotLabel
 #define func_01ff878c MIi_CpuCopyFast
 #define func_0200344c DC_FlushRange

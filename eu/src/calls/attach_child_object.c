@@ -1,3 +1,4 @@
+#define data_02060770 gChildNodeNameScratch
 #define INITi_CpuClear32_0x01ff86fc MIi_CpuClear32
 #define attach_child_object_0202f500 attach_child_object
 #define func_0201aafc NNS_G3dGetResDictIdxByName

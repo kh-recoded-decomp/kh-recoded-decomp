@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define AcquireRecordSlot_02051d3c AcquireRecordSlot
 #define CloseRecordManager_02051cdc ReleaseRecordManager
 #define FillSelectionRecordFromGroup_0204f8dc FillSelectionRecordFromGroup

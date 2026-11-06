@@ -6,7 +6,7 @@ typedef struct {
     u16 required;
 } OverlaySelectionRecord;
 
-extern u8 data_020608c8;
+extern u8 gSelectionRuntimeHeader;
 extern OverlaySelectionRecord *GetOverlaySelectionRecord(u32 selectionIndex);
 
 BOOL IsItemScreenPartyHpFull(void)
@@ -14,7 +14,7 @@ BOOL IsItemScreenPartyHpFull(void)
     BOOL allComplete = TRUE;
     int index;
 
-    for (index = 0; index < data_020608c8; index++) {
+    for (index = 0; index < gSelectionRuntimeHeader; index++) {
         OverlaySelectionRecord *record = GetOverlaySelectionRecord(index);
         if (record->current < record->required) {
             allComplete = FALSE;

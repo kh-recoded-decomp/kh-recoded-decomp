@@ -1,3 +1,3 @@
 #define ActivateSubtitleStream_020a88f0 ActivateSubtitleStream
-#define subtitleContexts_020b7d88 data_ov022_020b7da8
+#define subtitleContexts_020b7d88 gMoviePlaybackGlobals
 #include "src/ov022/video_playback/ActivateSubtitleStream_020a88f0.c"

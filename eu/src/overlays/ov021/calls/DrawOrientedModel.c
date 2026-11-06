@@ -4,7 +4,7 @@
 #define VEC_CrossProduct_01ff9ea8 VEC_CrossProduct
 #define data_0205a9a4 NNS_G3dGlb_prmMatColor0
 #define data_0205a9b8 NNS_G3dGlb_prmBaseRot
-#define data_ov021_020b4fbc data_ov021_020b4fdc
+#define data_ov021_020b4fbc gOrientedModelUpAxis
 #define func_01ff87c4 MI_Copy36B
 #define func_01ff90ec MTX_Identity33_
 #define func_020192ec NNS_G3dGlbSetBaseTrans

@@ -1,4 +1,4 @@
 #define GetTableValuePair_020a91e8 GetTableValuePair
-#define data_ov021_020b4e24 data_ov021_020b4e44
-#define data_ov021_020b4e30 data_ov021_020b4e50
+#define data_ov021_020b4e24 gLedgeGrabLateralOffsets
+#define data_ov021_020b4e30 gLedgeGrabVerticalOffsets
 #include "src/ov021/unclassified_helpers/GetTableValuePair_020a91e8.c"

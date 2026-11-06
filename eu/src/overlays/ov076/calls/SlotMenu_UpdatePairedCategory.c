@@ -1,3 +1,4 @@
+#define data_0205fe0c gSaveIoStateDataTail
 #define GetActiveRecordEntryOrNull_02029548 GetActiveRecordEntryOrNull
 #define SlotMenu_UpdatePairedCategory_020c53c8 SlotMenu_UpdatePairedCategory
 #define func_ov076_020cc0e4 ItemSelectionPanel_Open

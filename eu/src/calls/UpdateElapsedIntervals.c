@@ -28,14 +28,14 @@ typedef struct SessionRoot {
 } SessionRoot;
 typedef char TimedSessionDataSizeCheck[(sizeof(TimedSessionData) == 0x1ad4) ? 1 : -1];
 
-extern SessionRoot data_0205fe00;
+extern SessionRoot gSaveIoStatePrefix;
 extern s32 NormalizeCalendarToTime(CalendarTime *time);
 extern s32 RTC_GetDateTime(HardwareDate *date, HardwareTime *time);
 extern double ComputeSignedDifferenceAsDouble(s32 end, s32 start);
 
 void UpdateElapsedIntervals(void)
 {
-    TimedSessionData *data = &data_0205fe00.session->data;
+    TimedSessionData *data = &gSaveIoStatePrefix.session->data;
     CalendarTime calendar;
     HardwareDate date;
     HardwareTime time;
