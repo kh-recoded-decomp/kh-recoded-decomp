@@ -28,57 +28,76 @@ links the complete sequence of documented naming blocks.
 
 ## Native data maps
 
-- [Early contexts, task classes and constants](EARLY_CONTEXT_CONSTANT_DATA.md).
-- [Wireless scan and board storage](WIRELESS_SCAN_BOARD_STORAGE.md).
-- [Pool kind-4 trigger callbacks](POOL_KIND4_TRIGGER_CALLBACKS.md).
+These maps connect each native object to its actual writers and consumers.
+Physical definitions, interior aliases and logical multi-fragment owners
+remain distinct. Use the system group to browse; native overlay IDs and
+configured source paths still establish build ownership.
 
-- [Menu Descriptor Record Tables](MENU_DESCRIPTOR_RECORD_TABLES.md).
-- [Late Scene Global Storage](LATE_SCENE_GLOBAL_STORAGE.md).
-- [Gauge Actor Effect Data](GAUGE_ACTOR_EFFECT_DATA.md).
+### Core contexts and platform
 
-- [Menu Layout Template Data](MENU_LAYOUT_TEMPLATE_DATA.md).
-- [Stage Camera Native Storage](STAGE_CAMERA_NATIVE_STORAGE.md).
-- [Overlay058 Scene Native Storage](OVERLAY058_SCENE_NATIVE_STORAGE.md).
+- [Callback lists, scene task descriptors and static selection tables](NATIVE_STATIC_OWNER_TABLES12.md).
+- [Card, sound-player and stage-script native DATA views](NATIVE_SDK_SCRIPT_VIEWS9.md).
+- [Cartridge, heap registry and G3D cache DATA](NATIVE_CARTRIDGE_G3D17.md).
+- [early overlay data contracts](EARLY_CONTEXT_CONSTANT_DATA.md).
+- [Engine service DATA owners](NATIVE_ENGINE_SERVICES16.md).
+- [GX VRAM assignment fields and thread-info continuation](NATIVE_VRAM_THREAD7.md).
+- [IRQ callback and wireless notification DATA](NATIVE_IRQ_WIRELESS11.md).
+- [Native exception-handler DATA views](NATIVE_EXCEPTION_HANDLER_VIEWS2.md).
+- [Native runtime views and handoff DATA](NATIVE_NATIVE_RUNTIME_VIEWS7.md).
+- [OS launcher thread, arena heap records and WM command buffers](NATIVE_OS_WIRELESS6.md).
+- [Render, IRQ, sound and stage resource DATA](NATIVE_RENDER_STAGE13.md).
+- [Runtime task, heap, input and profile DATA](NATIVE_RUNTIME13.md).
+- [Save, model and collision DATA owners](NATIVE_SAVE_RENDER_STATE10.md).
+- [Scene task descriptors, handles and work globals](SCENE_TASK_DATA_OWNERS.md).
+- [Selection header, saved slots and tagged-entry DATA](NATIVE_SELECTION_SLOTS_TAGS8.md).
+- [Sound command pool partitions and shared work](NATIVE_SOUND_POOL_SHARED4.md).
 
-- [Actor Scene Parameter Data](ACTOR_SCENE_PARAMETER_DATA.md).
-- [Matrix Draw Refresh Data](MATRIX_DRAW_REFRESH_DATA.md).
-- [Slot Item Native Template Data](SLOT_ITEM_NATIVE_TEMPLATE_DATA.md).
+### Field, actors and cameras
 
-- [Report Page Scene Data](REPORT_PAGE_SCENE_DATA.md).
-- [Overlay087 Carousel Choice Data](OVERLAY087_CAROUSEL_CHOICE_DATA.md).
-- [Report Progress Record Data](REPORT_PROGRESS_RECORD_DATA.md).
-- [Report Ui Popup Native Storage](REPORT_UI_POPUP_NATIVE_STORAGE.md).
+- [Actor resources and scene parameters](ACTOR_SCENE_PARAMETER_DATA.md).
+- [Battle-gauge, actor resource and effect DATA](GAUGE_ACTOR_EFFECT_DATA.md).
+- [Field combat tables and hit geometry DATA](NATIVE_FIELD_COMBAT_TABLES13.md).
+- [kind-4 pool trigger-hit callback table](POOL_KIND4_TRIGGER_CALLBACKS.md).
+- [Level-growth table native spans and unresolved attribute columns](NATIVE_LEVEL_GROWTH_SPANS3.md).
+- [ov001 service and UI state owners](FIELD_SESSION_GLOBAL_DATA_CONTRACTS.md).
+- [Overlay058 scene resources and inline storage](OVERLAY058_SCENE_NATIVE_STORAGE.md).
+- [Stage-command and camera storage views](STAGE_CAMERA_NATIVE_STORAGE.md).
 
-- [Native Cartridge G3D17](NATIVE_CARTRIDGE_G3D17.md).
-- [Native Engine Services16](NATIVE_ENGINE_SERVICES16.md).
-- [Native Exception Handler Views2](NATIVE_EXCEPTION_HANDLER_VIEWS2.md).
-- [Native Irq Wireless11](NATIVE_IRQ_WIRELESS11.md).
-- [Native Os Wireless6](NATIVE_OS_WIRELESS6.md).
-- [Native Render Stage13](NATIVE_RENDER_STAGE13.md).
-- [Native Runtime13](NATIVE_RUNTIME13.md).
-- [Native Sdk Script Views9](NATIVE_SDK_SCRIPT_VIEWS9.md).
-- [Native Sound Pool Shared4](NATIVE_SOUND_POOL_SHARED4.md).
-- [Native Vram Thread7](NATIVE_VRAM_THREAD7.md).
+### Menus, results and records
 
-- [Field Combat Tables13](NATIVE_FIELD_COMBAT_TABLES13.md).
-- [Level Growth Spans3](NATIVE_LEVEL_GROWTH_SPANS3.md).
-- [List Display Configs9](NATIVE_LIST_DISPLAY_CONFIGS9.md).
-- [Map Board Configs9](NATIVE_MAP_BOARD_CONFIGS9.md).
-- [Menu Stage Configs12](NATIVE_MENU_STAGE_CONFIGS12.md).
-- [Movie20](NATIVE_MOVIE20.md).
-- [Native Runtime Views7](NATIVE_NATIVE_RUNTIME_VIEWS7.md).
-- [Save Render State10](NATIVE_SAVE_RENDER_STATE10.md).
-- [Selection Slots Tags8](NATIVE_SELECTION_SLOTS_TAGS8.md).
-- [Static Owner Tables12](NATIVE_STATIC_OWNER_TABLES12.md).
+- [Additional menu descriptor and record-statistic DATA](MENU_DESCRIPTOR_RECORD_TABLES.md).
+- [Board, group and continue-menu DATA](NATIVE_BOARD_GROUP_CONTINUE18.md).
+- [Drift, actor, record-group and carousel data](DRIFT_ACTOR_RECORD_CAROUSEL_DATA.md).
+- [Map and board screen configuration DATA](NATIVE_MAP_BOARD_CONFIGS9.md).
+- [Matrix drawing and refresh DATA](MATRIX_DRAW_REFRESH_DATA.md).
+- [Menu and field configuration DATA](NATIVE_MENU_STAGE_CONFIGS12.md).
+- [Menu DATA registries, descriptors and state tables](MENU_DATA_REGISTRIES_DESCRIPTORS.md).
+- [Menu layout, widget and text templates](MENU_LAYOUT_TEMPLATE_DATA.md).
+- [Menu numeric and text format DATA](MENU_TEXT_FORMAT_DATA_CONTRACTS.md).
+- [Menu, actor and camera global storage](LATE_SCENE_GLOBAL_STORAGE.md).
+- [Menu-list and overlay display configuration DATA](NATIVE_LIST_DISPLAY_CONFIGS9.md).
+- [Overlay 087 carousel and choice data](OVERLAY087_CAROUSEL_CHOICE_DATA.md).
+- [Report progress data contracts](REPORT_PROGRESS_RECORD_DATA.md).
+- [Report UI and popup data contracts](REPORT_UI_POPUP_NATIVE_STORAGE.md).
+- [Report, page-menu and gauge DATA](REPORT_PAGE_SCENE_DATA.md).
+- [Results UI and shared shop DATA](NATIVE_RESULTS_UI17.md).
+- [Slot and item menu DATA contracts](SLOT_ITEM_NATIVE_TEMPLATE_DATA.md).
+- [title and panel data contracts](TITLE_PANEL_DATA_CONTRACTS.md).
+- [Tracker tiles, results-stage data and text/model storage](NATIVE_STAGE_TRACKER_VIEWS15.md).
 
-- [References across overlay banks](BANK_QUALIFIED_OWNER_BINDINGS.md).
+### Movie and text
 
-- [Board Group Continue18](NATIVE_BOARD_GROUP_CONTINUE18.md).
-- [Event Text Window25](NATIVE_EVENT_TEXT_WINDOW25.md).
-- [Results Ui17](NATIVE_RESULTS_UI17.md).
-- [Stage Tracker Views15](NATIVE_STAGE_TRACKER_VIEWS15.md).
+- [Event panel and text-window DATA contracts](NATIVE_EVENT_TEXT_WINDOW25.md).
+- [Movie DATA and skip prompts](NATIVE_MOVIE20.md).
 
-- [Drift, actor, record and carousel data](DRIFT_ACTOR_RECORD_CAROUSEL_DATA.md).
+### Wireless
+
+- [wireless menu tables and state storage](WIRELESS_TABLES_STATE_STORAGE.md).
+- [wireless scan and board storage](WIRELESS_SCAN_BOARD_STORAGE.md).
+
+### References across banks
+
+- [Native references across overlay banks](BANK_QUALIFIED_OWNER_BINDINGS.md).
 
 ## Retained DATA identities
 
