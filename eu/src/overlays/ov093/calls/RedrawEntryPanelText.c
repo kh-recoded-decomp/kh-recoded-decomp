@@ -6,7 +6,7 @@
 #define Text_UploadTileBuffer_02001520 Text_UploadTileBuffer
 #define data_ov093_020c4d58 gTrophyValueWidth5Format
 #define data_ov093_020c4d60 gTrophyPercentValueFormat
-#define data_ov093_020c4d68 data_ov093_020c4d88
+#define data_ov093_020c4d68 gTrophyBooleanProgressBlankText
 #define func_020019f4 GetNestedModeByte
 #define func_ov027_020ba2a8 GetPackedFileEntry
 #define func_ov093_020c00a4 DrawShadowedText_020c00c4

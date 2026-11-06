@@ -4,8 +4,8 @@
 #define PXI_Init_0204f00c PXI_Init_0204f020
 #define SetGlobalPackedBit_02027320 SetGlobalPackedBit
 #define SetSlotAnimFlag_020c0310 SetSlotAnimFlag
-#define data_ov093_020c4108 data_ov093_020c4128
-#define data_ov093_020c4274 data_ov093_020c4294
+#define data_ov093_020c4108 gTrophyLeftSlotTemplatesHead
+#define data_ov093_020c4274 gTrophyRightSlotTemplates
 #define func_0204f2e4 IndexedRecord_ClearActive
 #define func_ov093_020c0348 CreateSlotAnim
 #define func_ov093_020c0564 RestartSlotAnim

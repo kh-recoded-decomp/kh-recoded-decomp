@@ -11,14 +11,14 @@ typedef struct EntryGridScene {
     s32 loadingTiles;
     s32 tileLoadStep;
 } EntryGridScene;
-extern EntryGridScene *data_ov093_020c5100;
+extern EntryGridScene *gTrophySceneWork;
 extern BOOL IsEntryFlagSet_020c22c4(s32 type, s32 entry);
 extern void GX_LoadBG0Char(const void *source, u32 destination, u32 size);
 
 /* Upload unlocked entries in five-entry batches, six tile rows per entry. */
 void LoadEntryGridTilesIncrementally(void)
 {
-    EntryGridScene *work = data_ov093_020c5100;
+    EntryGridScene *work = gTrophySceneWork;
     s32 first, limit, entry;
     s32 step;
     if (work->loadingTiles == 0) {

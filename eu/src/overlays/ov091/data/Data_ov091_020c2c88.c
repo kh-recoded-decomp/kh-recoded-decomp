@@ -14,7 +14,7 @@ typedef struct {
     u8 recordFlagTail[39];
 } ReportPopupTables;
 
-ReportPopupTables data_ov091_020c2c88 = {
+ReportPopupTables gReportTopSummaryPopupFlagTables = {
 {
     37, 50, 100, 37, 0, 0,
 },

@@ -37,7 +37,7 @@ typedef struct {
     void *partTable;
 } PopupManager;
 
-extern PopupManager *data_ov091_020c375c;
+extern PopupManager *gReportTopPopupWork;
 extern void SetSubBg2Visible(PopupWindow *window, BOOL enable);
 extern void DispatchByPartType(int type, void *data, int count, void *table, int tile, int offset);
 extern TextSize MeasurePopupTextTiles(PopupWindow *window, u16 *text, TextFrame *frame, int padX, int padY);
@@ -49,8 +49,8 @@ void OpenPopupWindow_020c1e38(PopupWindow *window)
     TextSize size;
 
     SetSubBg2Visible(window, FALSE);
-    DispatchByPartType(6, data_ov091_020c375c->partData, data_ov091_020c375c->partCount,
-                                data_ov091_020c375c->partTable, 0x1d, 0);
+    DispatchByPartType(6, gReportTopPopupWork->partData, gReportTopPopupWork->partCount,
+                                gReportTopPopupWork->partTable, 0x1d, 0);
     REG_DB_BG2OFS = (-window->x & 0x1ff) | ((-window->y << 16) & 0x1ff0000);
     window->frame.x = 10;
     window->frame.y = 9;

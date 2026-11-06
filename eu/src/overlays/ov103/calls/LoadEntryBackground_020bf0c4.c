@@ -3,7 +3,7 @@
 #define IsEntryFlagSet_020c0180 IsEntryFlagSet_020c01a0
 #define LoadEntryBackground_020bf0a4 LoadEntryBackground_020bf0c4
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
-#define data_ov103_020c04b4 data_ov103_020c04d4
+#define data_ov103_020c04b4 gTheaterReportBackgroundFileIndices
 #define func_01ff8740 MIi_CpuClearFast
 #define func_0202b554 GetBgDataFromArchive
 #define func_0202c478 Archive_LoadFile

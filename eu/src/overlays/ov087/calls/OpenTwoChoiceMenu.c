@@ -1,6 +1,6 @@
 #define OpenTwoChoiceMenu_020c5a74 OpenTwoChoiceMenu
 #define SetFocusedWidget_020b96e4 SetFocusedWidget
-#define data_ov087_020c7c70 data_ov087_020c7c90
+#define data_ov087_020c7c70 gOv087TwoChoiceMessageIds
 #define func_ov027_020b90a4 FindWidgetById
 #define func_ov027_020ba2a8 GetPackedFileEntry
 #define func_ov039_020bc1bc GetMenuWork

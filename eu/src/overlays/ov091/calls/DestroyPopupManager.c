@@ -1,4 +1,4 @@
 #define DestroyPopupManager_020c1910 DestroyPopupManager
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
-#define g_popupManager_020c373c data_ov091_020c375c
+#define g_popupManager_020c373c gReportTopPopupWork
 #include "src/ov091/panel_state/DestroyPopupManager_020c1910.c"

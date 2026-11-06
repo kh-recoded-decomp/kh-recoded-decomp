@@ -1,3 +1,3 @@
 #define GetSmoothValueInt_020c21d8 GetSmoothValueInt
-#define g_sceneWork_020c50e0 data_ov093_020c5100
+#define g_sceneWork_020c50e0 gTrophySceneWork
 #include "src/ov093/unclassified_helpers/GetSmoothValueInt_020c21d8.c"

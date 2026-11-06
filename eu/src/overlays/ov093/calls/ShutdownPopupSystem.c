@@ -1,4 +1,4 @@
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define ShutdownPopupSystem_020c2d44 ShutdownPopupSystem
-#define g_popupWork_020c50e4 data_ov093_020c5104
+#define g_popupWork_020c50e4 gTrophyPopupWorkStorage
 #include "src/ov093/unclassified_helpers/ShutdownPopupSystem_020c2d44.c"

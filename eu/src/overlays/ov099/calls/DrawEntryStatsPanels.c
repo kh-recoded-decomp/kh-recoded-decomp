@@ -9,8 +9,8 @@
 #define ReadGlobalPackedBits_02027348 ReadGlobalPackedBits
 #define data_ov099_020c241c gEnemyViewerEntryInfo
 #define data_ov099_020c277c gEnemyViewerWidth2NumberFormat
-#define data_ov099_020c2784 data_ov099_020c27a4
-#define data_ov099_020c27a8 data_ov099_020c27c8
+#define data_ov099_020c2784 gEnemyReportRatePairFormatStyle2
+#define data_ov099_020c27a8 gEnemyReportRatePairFormatDefault
 #define func_02001908 GetTextLayerLineWidth
 #define func_020019f4 GetNestedModeByte
 #define func_020275c8 CheckStatusAndThreshold

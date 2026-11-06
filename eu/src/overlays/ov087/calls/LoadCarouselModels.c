@@ -34,8 +34,8 @@ static inline void LoadCarouselModel(CarouselModelView *model, void *info, int r
  */
 void LoadCarouselModels(CarouselSceneView *scene, int lockedId, int entry)
 {
-    CarouselResourceIds recordIds = data_ov087_020c7d1c;
-    CarouselResourceIds infoIds = data_ov087_020c7d3c;
+    CarouselResourceIds recordIds = gOv087CarouselRecordIds;
+    CarouselResourceIds infoIds = gOv087CarouselInfoFileIds;
     int id;
     void *info;
 

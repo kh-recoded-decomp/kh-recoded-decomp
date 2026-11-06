@@ -1,7 +1,7 @@
 #define func_ov001_020645dc SetSessionFlag
 #define ShowVariantMessageAndSetFlag_020c4990 ShowVariantMessageAndSetFlag
-#define data_ov087_020c7c88 data_ov087_020c7ca8
-#define data_ov087_020c7cac data_ov087_020c7ccc
+#define data_ov087_020c7c88 gOv087VariantMessageIds
+#define data_ov087_020c7cac gOv087VariantSessionFlagOffsets
 #define func_ov027_020ba2a8 GetPackedFileEntry
 #define func_ov087_020c4860 DrawCenteredPromptText_020c4860
 #include "src/ov087/panel_state/ShowVariantMessageAndSetFlag_020c4990.c"

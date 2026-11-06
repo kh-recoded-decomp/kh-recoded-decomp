@@ -5,6 +5,6 @@
 #define PXI_Init_0204f00c PXI_Init_0204f020
 #define RefreshSlotObj_020c0a74 RefreshSlotObj
 #define SetSlotObjVisible_020c0820 SetSlotObjVisible
-#define data_ov099_020c238c data_ov099_020c23ac
-#define data_ov099_020c255c data_ov099_020c257c
+#define data_ov099_020c238c gEnemyViewerSlotBank1Layouts
+#define data_ov099_020c255c gEnemyViewerSlotBank0Layouts
 #include "src/ov099/unclassified_helpers/CreateViewerSlotObjs_020c0648.c"

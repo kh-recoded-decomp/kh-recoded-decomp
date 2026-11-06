@@ -3,7 +3,7 @@
 
 #pragma explicit_zero_data on
 
-u32 data_ov099_020c257c[126] = {
+u32 gEnemyViewerSlotBank0Layouts[126] = {
     0x00000000, 0x00000000, 0x0000000A, 0x00000028,
     0x00000001, 0x00000001, 0x00000001, 0x00000000,
     0x00000050, 0x00000022, 0x00000000, 0x00000001,
@@ -81,7 +81,7 @@ EnemyViewerEntryInfo gEnemyViewerEntryInfo[40] = {
     { 63, 0x917 },
 };
 
-u32 data_ov099_020c23ac[36] = {
+u32 gEnemyViewerSlotBank1Layouts[36] = {
     0x00000000, 0x00000000, 0x0000007C, 0x00000023,
     0x00000000, 0x00000001, 0x00000001, 0x00000000,
     0x0000007C, 0x000000B1, 0x00000000, 0x00000001,

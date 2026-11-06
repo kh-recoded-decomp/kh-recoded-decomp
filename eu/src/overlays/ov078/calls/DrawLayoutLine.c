@@ -1,5 +1,5 @@
 #define DrawLayoutLine_020c4c2c DrawLayoutLine
-#define data_ov078_020c5004 data_ov078_020c5024
+#define data_ov078_020c5004 gPageMenuLineLayoutPrefix
 #define G2D_InitializeLinearCanvas_02017a2c NNS_G2dCharCanvasInitForBG
 #define func_ov039_020bc994 GetMenuFont10
 #define func_ov039_020bc9ac GetMenuFont10s

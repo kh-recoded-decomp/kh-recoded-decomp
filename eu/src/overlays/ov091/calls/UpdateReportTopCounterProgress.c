@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-extern unsigned char data_ov091_020c2d68;
+extern unsigned char gReportTopCounterProgressFieldOffsets;
 extern unsigned int IsGlobalPackedBitSet();
 extern unsigned int ReadGlobalPackedBits();
 extern unsigned int SetEntryFlag();
@@ -15,7 +15,7 @@ void UpdateReportTopCounterProgress(int work) {
   completed = 0;
   index = 0;
   do {
-    progress = ReadGlobalPackedBits(*(u32 *)(&data_ov091_020c2d68 + index * 4),0x11);
+    progress = ReadGlobalPackedBits(*(u32 *)(&gReportTopCounterProgressFieldOffsets + index * 4),0x11);
     if (progress != 0) {
       completed = completed + 1;
       SetGlobalPackedBit(index + 0x1172);

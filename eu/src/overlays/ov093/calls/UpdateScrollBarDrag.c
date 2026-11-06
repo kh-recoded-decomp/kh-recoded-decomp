@@ -10,5 +10,5 @@
 #define func_ov093_020c2158 SetSmoothValueTarget
 #define func_ov093_020c21f8 StepSmoothValue
 #define func_ov093_020c2254 IsSmoothValueSettled
-#define g_sceneWork_020c50e0 data_ov093_020c5100
+#define g_sceneWork_020c50e0 gTrophySceneWork
 #include "src/ov093/unclassified_helpers/UpdateScrollBarDrag_020c1d48.c"

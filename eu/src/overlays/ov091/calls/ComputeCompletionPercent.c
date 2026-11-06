@@ -10,7 +10,7 @@ typedef struct {
     int completionPercent;
 } EntryScene;
 
-extern const Requirement data_ov091_020c2e08[];
+extern const Requirement gReportTopCompletionChecksHead[];
 extern BOOL IsGlobalPackedBitSet(int bitIndex);
 extern int GetUnlockedSlotValue(int slot);
 
@@ -29,7 +29,7 @@ void ComputeCompletionPercent(EntryScene *scene)
         }
     }
     for (n = 0; n < 239; n++) {
-        const Requirement *req = &data_ov091_020c2e08[n];
+        const Requirement *req = &gReportTopCompletionChecksHead[n];
         int bit;
         switch (req->kind) {
         case 0:

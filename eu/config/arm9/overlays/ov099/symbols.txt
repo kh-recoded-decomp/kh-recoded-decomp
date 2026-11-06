@@ -58,27 +58,27 @@ DestroyModelViewer kind:function(arm,size=0x20) addr:0x020c21b8
 DrawModelViewer kind:function(arm,size=0x88) addr:0x020c21d8
 LoadEnemyViewerSelectionModelsThunk kind:function(arm,size=0xc) addr:0x020c2260
 gEnemyReportStateHandlers kind:data(any) addr:0x020c226c
-data_ov099_020c2274 kind:data(any) addr:0x020c2274
+gEnemyViewerOrientationCorrectionQuat kind:data(any) addr:0x020c2274
 gEnemyReportTextPaths kind:data(any) addr:0x020c22a0
 gEnemyReportResourcePaths kind:data(any) addr:0x020c22a8
-data_ov099_020c22b4 kind:data(any) addr:0x020c22b4
+gEnemyViewerScrollListConfig kind:data(any) addr:0x020c22b4
 sOv099_UiReportEnemyP2f_020c22e0 kind:data(any) addr:0x020c22e0
 sOv099_UiReportLanguageEnemyP2f_020c22f4 kind:data(any) addr:0x020c22f4
 sOv099_UiReportLanguageEnemyObjP2f_020c230c kind:data(any) addr:0x020c230c
 sOv099_UiReportTextLanguageEnemySZ_020c2328 kind:data(any) addr:0x020c2328
-data_ov099_020c2344 kind:data(any) addr:0x020c2344
+gEnemyReportDetailTextPathHead kind:data(any) addr:0x020c2344
 sOv099_LSZ_020c2360 kind:data(any) addr:0x020c2360 ambiguous
 gEnemyViewerMenuDescriptorHead kind:data(any) addr:0x020c2368 ambiguous
 gEnemyReportListHandlers kind:data(any) addr:0x020c2380 ambiguous
-data_ov099_020c23ac kind:data(any) addr:0x020c23ac
+gEnemyViewerSlotBank1Layouts kind:data(any) addr:0x020c23ac
 gEnemyViewerEntryInfo kind:data(any) addr:0x020c243c
-data_ov099_020c257c kind:data(any) addr:0x020c257c
+gEnemyViewerSlotBank0Layouts kind:data(any) addr:0x020c257c
 sOv099_UiBtlStrLanguageP2_020c2774 kind:data(any) addr:0x020c2774
 sOv099_TextFontEu10Nftr_020c2784 kind:data(any) addr:0x020c2784
 gEnemyViewerWidth2NumberFormat kind:data(any) addr:0x020c279c
-data_ov099_020c27a4 kind:data(any) addr:0x020c27a4
-data_ov099_020c27c8 kind:data(any) addr:0x020c27c8
-data_ov099_020c27ec kind:data(any) addr:0x020c27ec
+gEnemyReportRatePairFormatStyle2 kind:data(any) addr:0x020c27a4
+gEnemyReportRatePairFormatDefault kind:data(any) addr:0x020c27c8
+gEnemyViewerModeScales kind:data(any) addr:0x020c27ec
 sOv099_UiReportEnmmdlP2_020c288c kind:data(any) addr:0x020c288c
 sOv099_Bip01Head_020c28a4 kind:data(any) addr:0x020c28a4
 sOv099_Bip01Spine1_020c28b0 kind:data(any) addr:0x020c28b0

@@ -1,3 +1,3 @@
 #define IsEntryFlagSet_020c22a4 IsEntryFlagSet_020c22c4
-#define g_sceneWork_020c50e0 data_ov093_020c5100
+#define g_sceneWork_020c50e0 gTrophySceneWork
 #include "src/ov093/unclassified_helpers/IsEntryFlagSet_020c22a4.c"

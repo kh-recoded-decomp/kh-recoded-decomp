@@ -4,7 +4,7 @@
 #define InitSequence_020c471c InitSequence
 #define LoadPackedFileView_020ba25c LoadPackedFileView
 #define Msg_OpenContainerAndReadHeader_0202cc6c Msg_OpenContainerAndReadHeader
-#define data_ov078_020c5004 data_ov078_020c5024
+#define data_ov078_020c5004 gPageMenuLineLayoutPrefix
 #define data_ov078_020c5148 sOv078_UiMenuQuestP2_020c5168
 #define data_ov078_020c515c sOv078_UiMenuLanguageQuestP2_020c517c
 #define data_ov078_020c5170 sOv078_UiBtlStrLanguageP2_020c5190

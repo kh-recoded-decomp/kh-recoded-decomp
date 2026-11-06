@@ -5,9 +5,9 @@ typedef struct {
     int recordPercent;
 } EntryScene;
 
-extern const u8 data_ov091_020c2c88;
+extern const u8 gReportTopSummaryPopupFlagTables;
 
-#define gRecordFlagIndices ((const int *)(&data_ov091_020c2c88 + 0x40))
+#define gRecordFlagIndices ((const int *)(&gReportTopSummaryPopupFlagTables + 0x40))
 extern BOOL IsGlobalPackedBitSet(int bitIndex);
 extern void SetGlobalPackedBit(int bitIndex);
 extern void ClearGlobalPackedBit(int bitIndex);

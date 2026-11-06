@@ -2,5 +2,5 @@
 #define G2D_MeasureTextRectangle_02016c18 NNSi_G2dFontGetTextRect
 #define InitTextLayerDefault_02001494 InitTextLayerDefault
 #define MeasurePopupTextTiles_020c1b54 MeasurePopupTextTiles
-#define g_popupManager_020c373c data_ov091_020c375c
+#define g_popupManager_020c373c gReportTopPopupWork
 #include "src/ov091/panel_state/MeasurePopupTextTiles_020c1b54.c"

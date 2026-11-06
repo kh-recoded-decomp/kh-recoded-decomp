@@ -2,10 +2,10 @@
 #define OS_SNPrintf_0202e080 OS_SNPrintf_0202e094
 #define RunPrizeMessageSequence_020c2950 RunPrizeMessageSequence
 #define SetSceneState_020c231c SetSceneState
-#define data_ov093_020c4e0c data_ov093_020c4e2c
-#define data_ov093_020c4e28 data_ov093_020c4e48
-#define data_ov093_020c4e44 data_ov093_020c4e64
-#define data_ov093_020c4e60 data_ov093_020c4e80
+#define data_ov093_020c4e0c gTrophyPrizeLanguage3Format
+#define data_ov093_020c4e28 gTrophyPrizeLanguage4Format
+#define data_ov093_020c4e44 gTrophyPrizeLanguage1Format
+#define data_ov093_020c4e60 gTrophyPrizeDefaultFormat
 #define func_0202b788 GetLanguageIndex
 #define func_ov027_020ba2a8 GetPackedFileEntry
 #define func_ov093_020c3c18 TrophyPopup_QueueMessage

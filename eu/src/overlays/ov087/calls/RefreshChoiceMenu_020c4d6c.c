@@ -5,7 +5,7 @@
 #define SetFocusedWidget_020b96e4 SetFocusedWidget
 #define SetInfoWindowVisible_020c431c SetInfoWindowVisible
 #define ShowChoiceWindows_020c4b74 ShowChoiceWindows
-#define data_ov087_020c7cb8 data_ov087_020c7cd8
+#define data_ov087_020c7cb8 gOv087ChoiceMessageIds
 #define func_ov001_020645c8 IsSessionFlagSet
 #define func_ov027_020b90f4 GetFocusedWidget
 #define func_ov027_020ba2a8 GetPackedFileEntry

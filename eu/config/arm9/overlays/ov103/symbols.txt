@@ -37,18 +37,18 @@ TheaterReport_HandleState0Noop kind:function(arm,size=0x4) addr:0x020c0338
 InitTheaterReportScreen kind:function(arm,size=0xac) addr:0x020c033c
 RunFadeInStep kind:function(arm,size=0xa8) addr:0x020c03e8
 InitTheaterReportSlotPoolThunk kind:function(arm,size=0xc) addr:0x020c0490
-data_ov103_020c049c kind:data(any) addr:0x020c049c
+gTheaterReportStateHandlers kind:data(any) addr:0x020c049c
 gTheaterReportResourcePaths kind:data(any) addr:0x020c04c0
 gTheaterReportTextPaths kind:data(any) addr:0x020c04c8
-data_ov103_020c04d4 kind:data(any) addr:0x020c04d4
-data_ov103_020c0500 kind:data(any) addr:0x020c0500
+gTheaterReportBackgroundFileIndices kind:data(any) addr:0x020c04d4
+gTheaterReportListConfig kind:data(any) addr:0x020c0500
 sOv103_UiReportTheaterP2f_020c052c kind:data(any) addr:0x020c052c
 sOv103_UiReportLanguageTheaterP2f_020c0544 kind:data(any) addr:0x020c0544
-data_ov103_020c055c kind:data(any) addr:0x020c055c
+gTheaterReportTextPathHead kind:data(any) addr:0x020c055c
 sOv103_TheaterSZ_020c056c kind:data(any) addr:0x020c056c ambiguous
 sOv103_UiReportTextLanguageTheaterTimeSZ_020c057c kind:data(any) addr:0x020c057c
 sOv103_UiReportTextLanguageTheaterMovieSZ_020c05a0 kind:data(any) addr:0x020c05a0
 gTheaterMenuDescriptor kind:data(any) addr:0x020c05c4 ambiguous
-data_ov103_020c0608 kind:data(any) addr:0x020c0608
+gTheaterReportSlotLayouts kind:data(any) addr:0x020c0608
 sOv103_TextFontEu10Nftr_020c06f8 kind:data(any) addr:0x020c06f8
 gTheaterMenuGlobalStorage kind:bss addr:0x020c0720

@@ -3,5 +3,5 @@
 #define StateMachine_SetState_020c3bc4 StateMachine_SetState
 #define func_ov093_020c2f1c ReleasePopupGraphics
 #define func_ov093_020c317c SetPopupSlotVisible_020c319c
-#define g_popupManager_020c50e4 data_ov093_020c5104
+#define g_popupManager_020c50e4 gTrophyPopupWorkStorage
 #include "src/ov093/unclassified_helpers/ClosePopupPanel_020c35cc.c"

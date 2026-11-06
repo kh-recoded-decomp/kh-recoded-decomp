@@ -2,7 +2,7 @@
 
 #pragma explicit_zero_data on
 
-u32 data_ov093_020c4c60[61] = {
+u32 gTrophyReportCompletionChecksTail[61] = {
     0x00000119, 0x00000007, 0x0000011C, 0x00000007,
     0x0000011A, 0x00000007, 0x0000011D, 0x00000007,
     0x0000011B, 0x00000007, 0x0000011E, 0x00000008,

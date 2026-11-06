@@ -37,7 +37,7 @@ typedef struct {
     int *partParams;
 } PopupManager;
 
-extern PopupManager *data_ov093_020c5104;
+extern PopupManager *gTrophyPopupWorkStorage;
 extern void SetBgSubLayerVisible(PopupState *popup, BOOL visible);
 extern void DispatchByPartType(int layer, u16 *data, int type, int *params, int value, int flags);
 extern Size2D MeasurePopupTiles(PopupState *popup, const void *text, TextFrame *frame, int padX, int padY);
@@ -46,8 +46,8 @@ extern void StateMachine_SetState(PopupState *machine, int state);
 void OpenPopupMessage(PopupState *popup)
 {
     SetBgSubLayerVisible(popup, FALSE);
-    DispatchByPartType(6, data_ov093_020c5104->partData, data_ov093_020c5104->partType,
-                                data_ov093_020c5104->partParams, 0x1d, 0);
+    DispatchByPartType(6, gTrophyPopupWorkStorage->partData, gTrophyPopupWorkStorage->partType,
+                                gTrophyPopupWorkStorage->partParams, 0x1d, 0);
     REG_DB_BG2OFS = (-popup->scrollX & 0x1ff) | ((-popup->scrollY << 16) & 0x1ff0000);
     popup->frame.x = 10;
     popup->frame.y = 9;

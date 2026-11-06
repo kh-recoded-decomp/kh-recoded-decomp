@@ -5,7 +5,7 @@
 extern void ShutdownPopupSystem(void);
 extern void InitPopupManager(void);
 
-void *data_ov093_020c50d8[10] = {
+void *gTrophyPopupTaskDescriptorStorage[10] = {
     (void *)0x000E001B,
     (void *)InitPopupManager,
     (void *)ShutdownPopupSystem,

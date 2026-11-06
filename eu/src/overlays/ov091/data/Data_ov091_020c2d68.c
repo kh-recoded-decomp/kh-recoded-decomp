@@ -2,7 +2,7 @@
 
 #pragma explicit_zero_data on
 
-u32 data_ov091_020c2d68[40] = {
+u32 gReportTopCounterProgressFieldOffsets[40] = {
     0x00000680, 0x00000691, 0x000006A2, 0x000006B3,
     0x000006C4, 0x000006D5, 0x000006E6, 0x000006F7,
     0x00000708, 0x00000719, 0x0000072A, 0x0000073B,

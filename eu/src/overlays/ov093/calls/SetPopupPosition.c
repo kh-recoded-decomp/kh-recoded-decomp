@@ -1,4 +1,4 @@
 #define SetPopupPosition_020c308c SetPopupPosition
 #define func_0204f13c IndexedRecord_SetPair
-#define g_popupManager_020c50e4 data_ov093_020c5104
+#define g_popupManager_020c50e4 gTrophyPopupWorkStorage
 #include "src/ov093/unclassified_helpers/SetPopupPosition_020c308c.c"

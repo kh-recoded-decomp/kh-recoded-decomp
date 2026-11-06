@@ -2,7 +2,7 @@
 
 #pragma explicit_zero_data on
 
-u32 data_ov103_020c04d4[11] = {
+u32 gTheaterReportBackgroundFileIndices[11] = {
     0x00000000, 0x00000001, 0x00000002, 0x00000003,
     0x00000004, 0x00000005, 0x00000006, 0x00000007,
     0x00000008, 0x00000009, 0x0000000A,

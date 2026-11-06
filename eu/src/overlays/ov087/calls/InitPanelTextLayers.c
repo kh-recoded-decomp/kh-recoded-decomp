@@ -7,7 +7,7 @@
 #define SetScreenLayerDirty_020bc104 SetScreenLayerDirty
 #define Text_UploadTileBuffer_02001520 Text_UploadTileBuffer
 #define UpdateScreenWidgetLayer_020bc1e4 UpdateScreenWidgetLayer
-#define data_ov087_020c7cdc data_ov087_020c7cfc
+#define data_ov087_020c7cdc gOv087InfoTextFrameTemplate
 #define data_ov087_020c7e7c sOv087_UiMenuStrLanguageWstSZ_020c7e9c
 #define func_02051f48 GetGridTableValue
 #define func_ov027_020ba2a8 GetPackedFileEntry

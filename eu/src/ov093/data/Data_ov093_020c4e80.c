@@ -2,7 +2,7 @@
 
 #pragma explicit_zero_data on
 
-u32 data_ov093_020c4e98[82] = {
+u32 gTrophyEntryDefinitionsHead[82] = {
     0xFFFFFFFF, 0x00000000, 0x00000001, 0x00000000,
     0xFFFFFFFF, 0x00000000, 0x00000001, 0x00000000,
     0xFFFFFFFF, 0x00000000, 0x00000001, 0x00000000,
@@ -26,7 +26,7 @@ u32 data_ov093_020c4e98[82] = {
     0x0000000E, 0x00000002,
 };
 
-u16 data_ov093_020c4e80[12] = {
+u16 gTrophyPrizeDefaultFormat[12] = {
     2, 37, 115, 1, 37, 115, 37, 100,
     37, 115, 0, 0,
 };

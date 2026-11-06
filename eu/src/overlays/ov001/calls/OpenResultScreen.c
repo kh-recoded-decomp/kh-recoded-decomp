@@ -21,7 +21,7 @@ typedef struct FieldSceneHandle {
 } FieldSceneHandle;
 
 extern FieldSceneHandle gFieldSceneGlobals;
-extern char data_ov045_020c0820[];
+extern char gBattleGaugeTaskDescriptor[];
 extern char OVERLAY_45_ID[];
 extern void LoadOverlayAfterGeometryTransfer(int processor, int overlay_id);
 extern void *CreateTaskObject(void *descriptor, void *userData);
@@ -62,6 +62,6 @@ void OpenResultScreen(int rank, int arg)
         params.score = ReadSessionPackedBits(0x35a7, 0x20) + GetSessionCounter(0) + CountAreaEntriesOfKind0() * 1000;
     }
     scene->sceneFlags = (scene->sceneFlags & ~1) | 0x40;
-    scene->resultScreen = CreateTaskObject(data_ov045_020c0820, &params);
+    scene->resultScreen = CreateTaskObject(gBattleGaugeTaskDescriptor, &params);
     *(vu32 *)0x04000000 = (*(vu32 *)0x04000000 & ~0x1f00) | 0xf00;
 }

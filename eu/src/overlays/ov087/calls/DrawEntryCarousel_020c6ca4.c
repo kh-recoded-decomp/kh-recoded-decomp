@@ -4,5 +4,5 @@
 #define SceneNode_Draw_01ffb12c SceneNode_Draw
 #define _s32_div_f _s32_div_f
 #define camera_commit_projection_0202a814 camera_commit_projection
-#define data_ov087_020c7c94 data_ov087_020c7cb4
+#define data_ov087_020c7c94 gOv087CarouselPositionTemplate
 #include "src/ov087/panel_state/DrawEntryCarousel_020c6c84.c"

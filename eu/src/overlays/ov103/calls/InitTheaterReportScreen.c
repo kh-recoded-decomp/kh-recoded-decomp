@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-extern u32 data_ov103_020c0500;
+extern u32 gTheaterReportListConfig;
 extern u32 MIi_CpuClearFast();
 extern u32 RuntimeState_GetObjectId();
 extern u32 LoadTheaterReportMessageContainers();
@@ -33,7 +33,7 @@ void InitTheaterReportScreen(int *work) {
   LoadEntryBackground_020bf0c4(work);
   InitTextLayers_020bf1bc(work);
   CreateTheaterReportSlotEntries(work);
-  SetupListPanel(&data_ov103_020c0500,work);
+  SetupListPanel(&gTheaterReportListConfig,work);
   RedrawTheaterReportText(0xffffffff,(TheaterState *)work);
   SetScenePhase(2,work);
 }

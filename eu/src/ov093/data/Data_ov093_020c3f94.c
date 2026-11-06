@@ -2,7 +2,7 @@
 
 #pragma explicit_zero_data on
 
-u32 data_ov093_020c3f94[16] = {
+u32 gTrophyRewardThresholdEntries[16] = {
     0x00000002, 0x0000006E, 0x00000005, 0x00000348,
     0x00000008, 0x000001C7, 0x0000000C, 0x000004C2,
     0x00000010, 0x00000488, 0x00000014, 0x0000037A,

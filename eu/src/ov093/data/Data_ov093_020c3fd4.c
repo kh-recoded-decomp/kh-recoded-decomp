@@ -33,7 +33,7 @@ void *gTrophyReportMenuDescriptor[17] = {
     (void *)TrophyReport_ReturnToRootMenu,
 };
 
-u32 data_ov093_020c3fd4[16] = {
+u32 gTrophyReportBooleanProgressFieldLimits[16] = {
     0x00000A6B, 0x0000012C, 0x00000A7C, 0x00000384,
     0x00000A8D, 0x00000384, 0x00000A9E, 0x00000258,
     0x00000AAF, 0x00000384, 0x00000AC0, 0x00000384,

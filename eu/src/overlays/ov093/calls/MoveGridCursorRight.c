@@ -19,7 +19,7 @@ typedef struct SceneWork {
     int scrollPending;
 } SceneWork;
 
-extern SceneWork *data_ov093_020c5100;
+extern SceneWork *gTrophySceneWork;
 extern u16 data_02060500;
 
 extern int TrophyReport_GetState(void);
@@ -41,7 +41,7 @@ static inline void ScrollGridPage(SceneWork *work)
         return;
     }
     ResetSmoothValue(0);
-    data_ov093_020c5100->scrollPending = 0;
+    gTrophySceneWork->scrollPending = 0;
     if (work->isLocked == 0) {
         PlaySoundEffect(0, 0);
     }

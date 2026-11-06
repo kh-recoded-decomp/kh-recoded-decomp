@@ -36,11 +36,11 @@ typedef struct {
     int rewardState;
 } SceneWork;
 
-extern RewardEntry data_ov093_020c3f94[8];
-extern char data_ov093_020c4dd4[];
-extern char data_ov093_020c4df4[];
-extern char data_ov093_020c4db4[];
-extern char data_ov093_020c4e10[];
+extern RewardEntry gTrophyRewardThresholdEntries[8];
+extern char gTrophyRewardLanguage1Format[];
+extern char gTrophyRewardLanguage5Format[];
+extern char gTrophyRewardLanguages234Format[];
+extern char gTrophyRewardDefaultFormat[];
 
 extern BOOL IsEntryFlagSet_020c22c4(int flagSet, int entryIndex);
 extern void SetEntryFlag_020c22f4(int flagSet, int entryIndex);
@@ -95,7 +95,7 @@ void RunRewardUnlockSequence(SceneWork *work)
                 break;
             }
         }
-        entry = &data_ov093_020c3f94[found];
+        entry = &gTrophyRewardThresholdEntries[found];
         frame = &work->frames[5];
         charBase = frame->charBase + frame->width * frame->height * 2;
         handle = entry->handle;
@@ -107,22 +107,22 @@ void RunRewardUnlockSequence(SceneWork *work)
         suffix = GetPackedFileEntry(views, 6);
         switch (GetLanguageIndex()) {
         case 3:
-            OS_SNPrintf_0202e094(text, 0x100, data_ov093_020c4db4, label, entry->itemId, prefix, nameId, suffix);
+            OS_SNPrintf_0202e094(text, 0x100, gTrophyRewardLanguages234Format, label, entry->itemId, prefix, nameId, suffix);
             break;
         case 1:
-            OS_SNPrintf_0202e094(text, 0x100, data_ov093_020c4dd4, label, entry->itemId, prefix, nameId, suffix);
+            OS_SNPrintf_0202e094(text, 0x100, gTrophyRewardLanguage1Format, label, entry->itemId, prefix, nameId, suffix);
             break;
         case 5:
-            OS_SNPrintf_0202e094(text, 0x100, data_ov093_020c4df4, label, entry->itemId, prefix, nameId, suffix);
+            OS_SNPrintf_0202e094(text, 0x100, gTrophyRewardLanguage5Format, label, entry->itemId, prefix, nameId, suffix);
             break;
         case 4:
-            OS_SNPrintf_0202e094(text, 0x100, data_ov093_020c4db4, label, entry->itemId, prefix, nameId, suffix);
+            OS_SNPrintf_0202e094(text, 0x100, gTrophyRewardLanguages234Format, label, entry->itemId, prefix, nameId, suffix);
             break;
         case 2:
-            OS_SNPrintf_0202e094(text, 0x100, data_ov093_020c4db4, label, entry->itemId, prefix, nameId, suffix);
+            OS_SNPrintf_0202e094(text, 0x100, gTrophyRewardLanguages234Format, label, entry->itemId, prefix, nameId, suffix);
             break;
         default:
-            OS_SNPrintf_0202e094(text, 0x100, data_ov093_020c4e10, label, entry->itemId, prefix, nameId, suffix);
+            OS_SNPrintf_0202e094(text, 0x100, gTrophyRewardDefaultFormat, label, entry->itemId, prefix, nameId, suffix);
             break;
         }
         SetSharedFlagBits(handle);

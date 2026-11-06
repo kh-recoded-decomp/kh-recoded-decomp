@@ -2,7 +2,7 @@
 
 #pragma explicit_zero_data on
 
-u32 data_ov093_020c4fe0[62] = {
+u32 gTrophyEntryDefinitionsTail[62] = {
     0x00000000, 0x00000000, 0x0000000F, 0x00000001,
     0x00000001, 0x00000000, 0x00000010, 0x00000002,
     0x00000000, 0x00000000, 0x00000011, 0x00000001,

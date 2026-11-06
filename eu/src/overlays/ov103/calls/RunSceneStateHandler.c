@@ -1,4 +1,4 @@
 #define RunSceneStateHandler_020beb98 RunSceneStateHandler
-#define data_ov103_020c047c data_ov103_020c049c
+#define data_ov103_020c047c gTheaterReportStateHandlers
 #define func_ov103_020c030c GetTheaterReportPhase
 #include "src/ov103/panel_state/RunSceneStateHandler_020beb98.c"

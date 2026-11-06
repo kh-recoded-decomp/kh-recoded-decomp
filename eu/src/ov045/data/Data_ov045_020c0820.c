@@ -5,7 +5,7 @@
 extern void ShutdownScene(void);
 extern void InitBattleGaugeContext(void);
 
-void *data_ov045_020c0820[5] = {
+void *gBattleGaugeTaskDescriptor[5] = {
     (void *)0x000E0017,
     (void *)InitBattleGaugeContext,
     (void *)ShutdownScene,

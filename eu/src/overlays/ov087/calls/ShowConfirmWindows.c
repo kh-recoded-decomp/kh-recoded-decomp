@@ -3,7 +3,7 @@
 #define SetFocusedWidget_020b96e4 SetFocusedWidget
 #define SetScreenLayerDirty_020bc104 SetScreenLayerDirty
 #define ShowConfirmWindows_020c4c70 ShowConfirmWindows
-#define data_ov087_020c7c80 data_ov087_020c7ca0
+#define data_ov087_020c7c80 gOv087ConfirmWidgetIds
 #define func_ov027_020b90a4 FindWidgetById
 #define func_ov027_020b9580 SetEntrySlotsVisible
 #define func_ov039_020bc1bc GetMenuWork

@@ -41,7 +41,7 @@ gBattleGaugeTextFrame kind:data(any) addr:0x020c07a4
 gBattleGaugeBackgroundConfig kind:data(any) addr:0x020c07b4
 gBattleGaugeMode3BackgroundConfig kind:data(any) addr:0x020c07c8
 gBattleGaugeLayeredPanelRotation kind:data(any) addr:0x020c07dc
-data_ov045_020c0820 kind:data(any) addr:0x020c0820 ambiguous
+gBattleGaugeTaskDescriptor kind:data(any) addr:0x020c0820 ambiguous
 sOv045_UiBtlGwP2_020c0834 kind:data(any) addr:0x020c0834
 sOv045_UiBtlBtluiP2_020c0844 kind:data(any) addr:0x020c0844
 sOv045_UiBtlGwLanguageP2_020c0858 kind:data(any) addr:0x020c0858

@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-const u32 data_ov091_020c28d0[8] = {
+const u32 gReportTopProgress0FlagRangeStarts[8] = {
     0x00000500, 0x00000508, 0x00000518, 0x00000528,
     0x00000540, 0x00000550, 0x00000560, 0x00000570,
 };

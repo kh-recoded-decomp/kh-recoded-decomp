@@ -1,4 +1,4 @@
 #define UpdateDragAreaBounds_020c1ca8 UpdateDragAreaBounds
 #define func_ov039_020bc03c RuntimeState_SetCondition
-#define g_sceneWork_020c50e0 data_ov093_020c5100
+#define g_sceneWork_020c50e0 gTrophySceneWork
 #include "src/ov093/unclassified_helpers/UpdateDragAreaBounds_020c1ca8.c"

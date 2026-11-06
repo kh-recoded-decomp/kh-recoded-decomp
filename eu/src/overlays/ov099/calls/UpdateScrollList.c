@@ -8,6 +8,6 @@
 #define _fgr _fgr
 #define _fmul _fmul
 #define _fsub _fsub
-#define data_ov099_020c238c data_ov099_020c23ac
-#define data_ov099_020c255c data_ov099_020c257c
+#define data_ov099_020c238c gEnemyViewerSlotBank1Layouts
+#define data_ov099_020c255c gEnemyViewerSlotBank0Layouts
 #include "src/ov099/panel_state/UpdateScrollList_020c11b4.c"

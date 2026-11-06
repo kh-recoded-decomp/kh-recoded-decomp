@@ -3,5 +3,5 @@
 #define UpdatePopupManager_020c194c UpdatePopupManager
 #define data_ov091_020c29f0 gReportTopPopupStateHandlers
 #define func_ov091_020c2794 ReportTopPopup_GetState
-#define g_popupManager_020c373c data_ov091_020c375c
+#define g_popupManager_020c373c gReportTopPopupWork
 #include "src/ov091/panel_state/UpdatePopupManager_020c194c.c"

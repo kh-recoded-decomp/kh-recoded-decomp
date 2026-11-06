@@ -3,5 +3,5 @@
 #define func_0204f2c0 IndexedRecord_SetActive
 #define func_0204f2e4 IndexedRecord_ClearActive
 #define func_0204f378 IndexedRecords_SetFlag2
-#define g_popupManager_020c373c data_ov091_020c375c
+#define g_popupManager_020c373c gReportTopPopupWork
 #include "src/ov091/panel_state/SetPopupSlotVisible_020c1d48.c"

@@ -8,8 +8,8 @@
 #define MIi_CpuCopyFast_01ff878c MIi_CpuCopyFast
 #define SetEntryFlag_020c22d4 SetEntryFlag_020c22f4
 #define SetStateFlagBits_020bc688 SetStateFlagBits
-#define data_ov093_020c4038 data_ov093_020c4058
-#define data_ov093_020c4064 data_ov093_020c4084
+#define data_ov093_020c4038 gTrophyLeftScrollBarTemplate
+#define data_ov093_020c4064 gTrophyRightScrollBarTemplate
 #define data_ov093_020c4d34 sOv093_VblankFunc_020c4d54
 #define func_ov093_020bf67c SetupEntryDisplay
 #define func_ov093_020bf880 LoadTrophyReportMessages
@@ -24,5 +24,5 @@
 #define func_ov093_020c231c SetSceneState
 #define func_ov093_020c2b04 LoadEntryGridTilesIncrementally
 #define func_ov093_020c3bdc CreatePopupManager
-#define g_sceneWork_020c50e0 data_ov093_020c5100
+#define g_sceneWork_020c50e0 gTrophySceneWork
 #include "src/ov093/panel_state/InitEntryGridScene_020beb20.c"

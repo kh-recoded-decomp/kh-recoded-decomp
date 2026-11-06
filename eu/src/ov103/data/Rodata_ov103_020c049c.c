@@ -5,7 +5,7 @@ extern void TheaterReport_HandleState0Noop(void);
 extern void InitTheaterReportScreen(void);
 extern void InitTheaterReportSlotPoolThunk(void);
 
-void *const data_ov103_020c049c[4] = {
+void *const gTheaterReportStateHandlers[4] = {
     (void *)TheaterReport_HandleState0Noop,
     (void *)InitTheaterReportScreen,
     (void *)RunFadeInStep,

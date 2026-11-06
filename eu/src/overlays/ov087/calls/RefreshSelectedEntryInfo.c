@@ -14,8 +14,8 @@
 #define func_ov027_020b9580 SetEntrySlotsVisible
 #define func_ov086_020c2060 SelectRecordPage
 #define PlaySoundEffect_0204d924 PlaySoundEffect
-#define data_ov087_020c7d3c data_ov087_020c7d5c
-#define data_ov087_020c7e0c data_ov087_020c7e2c
+#define data_ov087_020c7d3c gOv087ItemRangesHead
+#define data_ov087_020c7e0c gOv087ItemAvailabilityThresholds
 #if defined(__MWERKS__)
 #include "../src/ov087/panel_state/RefreshSelectedEntryInfo_020c5ef0.c"
 #else

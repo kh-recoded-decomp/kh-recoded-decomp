@@ -3,5 +3,5 @@
 #define data_ov093_020c3e54 gTrophyPopupStateHandlers
 #define func_01ff8740 MIi_CpuClearFast
 #define func_ov093_020c3bd4 TrophyPopup_GetState
-#define g_popupManager_020c50e4 data_ov093_020c5104
+#define g_popupManager_020c50e4 gTrophyPopupWorkStorage
 #include "src/ov093/unclassified_helpers/UpdatePopupManager_020c2d80.c"

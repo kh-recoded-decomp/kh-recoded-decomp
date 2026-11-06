@@ -784,3 +784,12 @@ Name 73 actor/scene parameters, matrix/draw tables and slot/item menu templates.
 [Actor Scene Parameter Data](ACTOR_SCENE_PARAMETER_DATA.md),
 [Matrix Draw Refresh Data](MATRIX_DRAW_REFRESH_DATA.md),
 [Slot Item Native Template Data](SLOT_ITEM_NATIVE_TEMPLATE_DATA.md).
+
+## Name report pages and progress data
+
+Name 98 report-page, carousel, progress and popup storage identities using native consumers. Document logical record tables crossing physical fragments and preserve bank-specific selector values. Keep popup ABI repairs separate.
+
+[Report Page Scene Data](REPORT_PAGE_SCENE_DATA.md),
+[Overlay087 Carousel Choice Data](OVERLAY087_CAROUSEL_CHOICE_DATA.md),
+[Report Progress Record Data](REPORT_PROGRESS_RECORD_DATA.md),
+[Report Ui Popup Native Storage](REPORT_UI_POPUP_NATIVE_STORAGE.md).

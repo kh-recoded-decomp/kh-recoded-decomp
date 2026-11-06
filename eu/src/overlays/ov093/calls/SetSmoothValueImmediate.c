@@ -1,3 +1,3 @@
 #define SetSmoothValueImmediate_020c2080 SetSmoothValueImmediate
-#define g_sceneWork_020c50e0 data_ov093_020c5100
+#define g_sceneWork_020c50e0 gTrophySceneWork
 #include "src/ov093/unclassified_helpers/SetSmoothValueImmediate_020c2080.c"

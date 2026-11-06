@@ -3,5 +3,5 @@
 #define SetPopupSlotVisible_020c1d48 SetPopupSlotVisible
 #define SetPopupState_020c2784 SetPopupState
 #define SetSubBg2Visible_020c271c SetSubBg2Visible
-#define g_popupManager_020c373c data_ov091_020c375c
+#define g_popupManager_020c373c gReportTopPopupWork
 #include "src/ov091/panel_state/HidePopupWindow_020c218c.c"

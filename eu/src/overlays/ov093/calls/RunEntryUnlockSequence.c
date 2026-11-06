@@ -4,9 +4,9 @@
 #define RunEntryUnlockSequence_020c23a8 RunEntryUnlockSequence
 #define SetEntryFlag_020c22d4 SetEntryFlag_020c22f4
 #define SetGlobalPackedBit_02027320 SetGlobalPackedBit
-#define data_ov093_020c3f74 data_ov093_020c3f94
-#define data_ov093_020c4d6c data_ov093_020c4d8c
-#define data_ov093_020c4d84 data_ov093_020c4da4
+#define data_ov093_020c3f74 gTrophyRewardThresholdEntries
+#define data_ov093_020c4d6c gTrophyEntryUnlockLanguage1Format
+#define data_ov093_020c4d84 gTrophyEntryUnlockDefaultFormat
 #define func_0202b788 GetLanguageIndex
 #define func_ov027_020ba2a8 GetPackedFileEntry
 #define func_ov093_020c231c SetSceneState

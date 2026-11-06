@@ -10,7 +10,7 @@ extern void RunSceneStateHandler(void);
 extern void CommitTheaterEntrySelection(void);
 extern void CancelTheaterEntrySelection(void);
 
-u32 data_ov103_020c0608[60] = {
+u32 gTheaterReportSlotLayouts[60] = {
     0x00000000, 0x0000000A, 0x00000028, 0x00000001,
     0x00000001, 0x00000001, 0x00000088, 0x00000022,
     0x00000000, 0x00000001, 0x00000002, 0x00000088,

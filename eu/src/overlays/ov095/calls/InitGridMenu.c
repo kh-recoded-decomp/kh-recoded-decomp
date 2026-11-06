@@ -15,7 +15,7 @@
 #define SetPanelMode_020c11f0 SetPanelMode_020c1210
 #define SetStateFlagBits_020bc688 SetStateFlagBits
 #define SetupGridMenuDisplay_020bf084 SetupGridMenuDisplay
-#define data_ov095_020c1724 data_ov095_020c1744
+#define data_ov095_020c1724 gItemReportGroupGridRowStarts
 #define data_ov095_020c1768 gItemReportResourcePaths
 #define data_ov095_020c1774 gItemReportDefaults
 #define data_ov095_020c1788 gItemReportCompletionThresholds

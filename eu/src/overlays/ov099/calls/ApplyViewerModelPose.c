@@ -1,4 +1,4 @@
 #define ApplyViewerModelPose_020c1d5c ApplyViewerModelPose
 #define MI_CpuCopy8_01ff89a8 MI_CpuCopy8
-#define data_ov099_020c27cc data_ov099_020c27ec
+#define data_ov099_020c27cc gEnemyViewerModeScales
 #include "src/ov099/unclassified_helpers/ApplyViewerModelPose_020c1d5c.c"

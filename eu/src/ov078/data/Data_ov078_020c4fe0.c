@@ -11,7 +11,7 @@ extern void ShutdownPageMenu(void);
 extern void SelectPreviousMenuPage(void);
 extern void CloseOverlay078Menu(void);
 
-u32 data_ov078_020c5024[64] = {
+u32 gPageMenuLineLayoutPrefix[64] = {
     0xFFFFFFFF, 0x0000000A, 0x00000000, 0x00000016,
     0x00000002, 0x000000AE, 0x00000002, 0x00000002,
     0x00000021, 0xFFFFFFFF, 0x00000007, 0x00000003,

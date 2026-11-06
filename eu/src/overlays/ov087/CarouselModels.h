@@ -36,7 +36,7 @@ typedef char CarouselEntryStrideCheck[sizeof(CarouselEntryView) == 0x108 ? 1 : -
 typedef char CarouselScenePrefixCheck[sizeof(CarouselSceneView) == 0x990 ? 1 : -1];
 typedef char CarouselResourceIdsSizeCheck[sizeof(CarouselResourceIds) == 0x20 ? 1 : -1];
 
-extern const CarouselResourceIds data_ov087_020c7d1c;
-extern const CarouselResourceIds data_ov087_020c7d3c;
+extern const CarouselResourceIds gOv087CarouselRecordIds;
+extern const CarouselResourceIds gOv087CarouselInfoFileIds;
 
 #endif

@@ -24,7 +24,7 @@ typedef struct TaskParams {
 } TaskParams;
 
 extern OverlayGlobals gFieldSceneGlobals;
-extern char data_ov045_020c0820[];
+extern char gBattleGaugeTaskDescriptor[];
 extern char OVERLAY_45_ID[];
 extern void LoadOverlayAfterGeometryTransfer(int processor, int overlayId);
 extern void SetupFieldBgLayers(void);
@@ -52,6 +52,6 @@ void OpenOverlayWidgets(void)
         if (state->palette != NULL) {
             GX_LoadBGPltt(state->palette, 0, 0x200);
         }
-        state->handle = CreateTaskObject(data_ov045_020c0820, &params);
+        state->handle = CreateTaskObject(gBattleGaugeTaskDescriptor, &params);
     }
 }

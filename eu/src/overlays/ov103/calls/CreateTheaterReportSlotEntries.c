@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-extern unsigned char data_ov103_020c0608;
+extern unsigned char gTheaterReportSlotLayouts;
 extern unsigned int InitObjManager();
 extern unsigned int CreateSlotEntry();
 
@@ -15,7 +15,7 @@ void CreateTheaterReportSlotEntries(int work) {
   configuration[3] = 0;
   InitObjManager(work + 0x174,configuration);
   do {
-    CreateSlotEntry(0,index,&data_ov103_020c0608 + index * 0x14,work);
+    CreateSlotEntry(0,index,&gTheaterReportSlotLayouts + index * 0x14,work);
     index = index + 1;
   } while (index < 0xc);
 }

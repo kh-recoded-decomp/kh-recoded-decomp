@@ -13,7 +13,7 @@ typedef struct {
     s32 queueCount;
 } PopupManager;
 
-extern PopupManager *data_ov091_020c375c;
+extern PopupManager *gReportTopPopupWork;
 extern int Utf16Length(const u16 *text);
 extern void *NNS_FndAllocFromDefaultExpHeapEx(u32 size, int align);
 extern u16 *Utf16CopyPadded(u16 *destination, const u16 *source, int unitCount);
@@ -24,7 +24,7 @@ void QueuePopupMessage(s32 x, s32 y, const u16 *text, s32 param)
     int length;
     u16 *buffer;
 
-    entry = &data_ov091_020c375c->queue[data_ov091_020c375c->queueCount];
+    entry = &gReportTopPopupWork->queue[gReportTopPopupWork->queueCount];
     entry->x = x;
     entry->y = y;
     entry->param = param;
@@ -35,5 +35,5 @@ void QueuePopupMessage(s32 x, s32 y, const u16 *text, s32 param)
         Utf16CopyPadded(buffer, text, length);
         entry->text[length] = 0;
     }
-    data_ov091_020c375c->queueCount++;
+    gReportTopPopupWork->queueCount++;
 }

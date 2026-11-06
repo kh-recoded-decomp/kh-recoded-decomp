@@ -2,7 +2,7 @@
 #define FillBackgroundLayerRect_02001a60 FillBackgroundLayerRect
 #define SetScreenLayerDirty_020bc104 SetScreenLayerDirty
 #define ShowChoiceWindows_020c4b74 ShowChoiceWindows
-#define data_ov087_020c7cc4 data_ov087_020c7ce4
+#define data_ov087_020c7cc4 gOv087ShownChoiceWidgetIds
 #define func_ov027_020b90a4 FindWidgetById
 #define func_ov027_020b9580 SetEntrySlotsVisible
 #define func_ov039_020bc1bc GetMenuWork

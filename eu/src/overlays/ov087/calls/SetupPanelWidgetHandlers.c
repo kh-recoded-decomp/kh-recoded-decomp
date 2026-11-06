@@ -8,7 +8,7 @@
 #define SetFocusedWidget_020b96e4 SetFocusedWidget
 #define SetWidgetRootDpadEnabled_020b9874 SetWidgetRootDpadEnabled
 #define SetupPanelWidgetHandlers_020c69a4 SetupPanelWidgetHandlers
-#define data_ov087_020c7cec data_ov087_020c7d0c
+#define data_ov087_020c7cec gOv087WidgetManagerConfigTemplate
 #define func_ov027_020b8f98 LoadWidgetDescriptorsFromFile
 #define func_ov027_020b9098 SetWidgetRootInputCallback
 #define func_ov039_020bc1bc GetMenuWork

@@ -1,5 +1,5 @@
 #define MIi_CpuCopyFast_01ff878c MIi_CpuCopyFast
 #define SetPopupState_020c2784 SetPopupState
 #define ShowNextQueuedPopup_020c1da4 ShowNextQueuedPopup
-#define g_popupManager_020c373c data_ov091_020c375c
+#define g_popupManager_020c373c gReportTopPopupWork
 #include "src/ov091/panel_state/ShowNextQueuedPopup_020c1da4.c"

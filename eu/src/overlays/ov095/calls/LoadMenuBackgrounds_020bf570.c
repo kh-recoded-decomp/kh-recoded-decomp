@@ -2,8 +2,8 @@
 #define GetBgDataFromArchive_0202b554 GetBgDataFromArchive
 #define Gfx_EnqueueTableCmdAt14_0202b448 Gfx_EnqueueTableCmdAt14
 #define LoadMenuBackgrounds_020bf550 LoadMenuBackgrounds_020bf570
-#define data_ov095_020c16f4 data_ov095_020c1714
-#define data_ov095_020c1708 data_ov095_020c1728
+#define data_ov095_020c16f4 gItemReportTabTileRows
+#define data_ov095_020c1708 gItemReportPanelTileRows
 #define func_0202c478 Archive_LoadFile
 #define func_ov095_020bf444 LoadScreenRegion
 #include "src/ov095/panel_state/LoadMenuBackgrounds_020bf550.c"

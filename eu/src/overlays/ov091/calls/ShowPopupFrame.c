@@ -4,5 +4,5 @@
 #define SetPopupState_020c2784 SetPopupState
 #define ShowPopupFrame_020c1fe4 ShowPopupFrame
 #define func_020019f4 GetNestedModeByte
-#define g_popupManager_020c373c data_ov091_020c375c
+#define g_popupManager_020c373c gReportTopPopupWork
 #include "src/ov091/panel_state/ShowPopupFrame_020c1fe4.c"

@@ -55,20 +55,20 @@ typedef struct {
     int bits[36];
 } BitList36;
 
-extern const CounterFields data_ov091_020c2950;
-extern const BitList8 data_ov091_020c28d0;
-extern const CountList8 data_ov091_020c28f0;
-extern const BitList5 data_ov091_020c285c;
-extern const BitList5 data_ov091_020c2848;
-extern const BitList8 data_ov091_020c2930;
-extern const BitList8 data_ov091_020c2870;
-extern const BitList36 data_ov091_020c2980;
-extern const BitList8 data_ov091_020c28b0;
-extern const BitList8 data_ov091_020c2910;
-extern const BitList8 data_ov091_020c2890;
-extern const FieldLimit data_ov091_020c2ad8[];
-extern const int data_ov091_020c2b5c[];
-extern const Requirement data_ov091_020c2e08[];
+extern const CounterFields gReportTopTotalCounterFieldSpecs;
+extern const BitList8 gReportTopProgress0FlagRangeStarts;
+extern const CountList8 gReportTopProgress0FlagRangeLengths;
+extern const BitList5 gReportTopProgress4FlagIds;
+extern const BitList5 gReportTopProgress17TwoBitFieldOffsets;
+extern const BitList8 gReportTopProgress21SevenBitFieldOffsets;
+extern const BitList8 gReportTopProgress18FlagIds;
+extern const BitList36 gReportTopBooleanProgressFlagIds;
+extern const BitList8 gReportTopProgress19FlagIds;
+extern const BitList8 gReportTopProgress20FlagIds;
+extern const BitList8 gReportTopProgress21FlagIds;
+extern const FieldLimit gReportTopBooleanProgressFieldLimits[];
+extern const int gReportTopProgressTargets[];
+extern const Requirement gReportTopCompletionChecksHead[];
 
 extern BOOL IsGlobalPackedBitSet(int bitIndex);
 extern void SetGlobalPackedBit(int bitIndex);
@@ -132,7 +132,7 @@ void UpdateEntryProgress(EntryScene *scene)
             case 3:
             case 4:
             case 5: {
-                CounterFields counters = data_ov091_020c2950;
+                CounterFields counters = gReportTopTotalCounterFieldSpecs;
                 int limit = 99999;
                 if (index == 5) {
                     limit = 9999;
@@ -155,8 +155,8 @@ void UpdateEntryProgress(EntryScene *scene)
             count = 0;
             switch (id) {
             case 0: {
-                BitList8 starts = data_ov091_020c28d0;
-                CountList8 lengths = data_ov091_020c28f0;
+                BitList8 starts = gReportTopProgress0FlagRangeStarts;
+                CountList8 lengths = gReportTopProgress0FlagRangeLengths;
                 for (k = 0; k < 8; k++) {
                     length = lengths.counts[k];
                     scanBit = starts.bits[k];
@@ -196,7 +196,7 @@ void UpdateEntryProgress(EntryScene *scene)
                 entry->progress = ReadGlobalPackedBits(0xbf0, 8) * 100 / 200;
                 break;
             case 4: {
-                BitList5 bits = data_ov091_020c285c;
+                BitList5 bits = gReportTopProgress4FlagIds;
                 for (j = 0; j < 5; j++) {
                     if (IsGlobalPackedBitSet(bits.bits[j])) {
                         count++;
@@ -217,7 +217,7 @@ void UpdateEntryProgress(EntryScene *scene)
                     }
                 }
                 for (n = 0; n < 239; n++) {
-                    const Requirement *req = &data_ov091_020c2e08[n];
+                    const Requirement *req = &gReportTopCompletionChecksHead[n];
                     int reqBit;
                     switch (req->kind) {
                     case 0:
@@ -306,7 +306,7 @@ void UpdateEntryProgress(EntryScene *scene)
                 break;
             }
             case 17: {
-                BitList5 fields = data_ov091_020c2848;
+                BitList5 fields = gReportTopProgress17TwoBitFieldOffsets;
                 for (j = 0; j < 5; j++) {
                     count += ReadGlobalPackedBits(fields.bits[j], 2);
                 }
@@ -314,7 +314,7 @@ void UpdateEntryProgress(EntryScene *scene)
                 break;
             }
             case 18: {
-                BitList8 bits = data_ov091_020c2870;
+                BitList8 bits = gReportTopProgress18FlagIds;
                 for (j = 0; j < 8; j++) {
                     if (IsGlobalPackedBitSet(bits.bits[j])) {
                         count++;
@@ -324,7 +324,7 @@ void UpdateEntryProgress(EntryScene *scene)
                 break;
             }
             case 19: {
-                BitList8 bits = data_ov091_020c28b0;
+                BitList8 bits = gReportTopProgress19FlagIds;
                 for (j = 0; j < 8; j++) {
                     if (IsGlobalPackedBitSet(bits.bits[j])) {
                         count++;
@@ -334,7 +334,7 @@ void UpdateEntryProgress(EntryScene *scene)
                 break;
             }
             case 20: {
-                BitList8 bits = data_ov091_020c2910;
+                BitList8 bits = gReportTopProgress20FlagIds;
                 for (j = 0; j < 8; j++) {
                     if (IsGlobalPackedBitSet(bits.bits[j])) {
                         count++;
@@ -344,8 +344,8 @@ void UpdateEntryProgress(EntryScene *scene)
                 break;
             }
             case 21: {
-                BitList8 flags = data_ov091_020c2890;
-                BitList8 levels = data_ov091_020c2930;
+                BitList8 flags = gReportTopProgress21FlagIds;
+                BitList8 levels = gReportTopProgress21SevenBitFieldOffsets;
                 for (j = 0; j < 8; j++) {
                     if (IsGlobalPackedBitSet(flags.bits[j])) {
                         int level = ReadGlobalPackedBits(levels.bits[j], 7);
@@ -361,7 +361,7 @@ void UpdateEntryProgress(EntryScene *scene)
                 entry->progress = 100;
                 break;
             }
-            if (entry->progress >= data_ov091_020c2b5c[id]) {
+            if (entry->progress >= gReportTopProgressTargets[id]) {
                 if (!IsEntryFlagSet(0, id)) {
                     SetEntryFlag(1, id);
                     SetGlobalPackedBit(id + 0x1152);
@@ -382,7 +382,7 @@ void UpdateEntryProgress(EntryScene *scene)
             break;
         }
         case 2: {
-            BitList36 bits = data_ov091_020c2980;
+            BitList36 bits = gReportTopBooleanProgressFlagIds;
             int flagBit = bits.bits[id];
             BOOL unlocked = FALSE;
             if (index == 13) {
@@ -403,7 +403,7 @@ void UpdateEntryProgress(EntryScene *scene)
                 case 5:
                 case 6:
                 case 7: {
-                    const FieldLimit *limit = &data_ov091_020c2ad8[slot];
+                    const FieldLimit *limit = &gReportTopBooleanProgressFieldLimits[slot];
                     if (ReadGlobalPackedBits(limit->offset, 17) > limit->max) {
                         unlocked = FALSE;
                     }
@@ -412,7 +412,7 @@ void UpdateEntryProgress(EntryScene *scene)
                 }
             }
             entry->progress = unlocked;
-            if (unlocked == data_ov091_020c2b5c[id]) {
+            if (unlocked == gReportTopProgressTargets[id]) {
                 if (!IsEntryFlagSet(0, id)) {
                     SetEntryFlag(1, id);
                     SetGlobalPackedBit(id + 0x1152);

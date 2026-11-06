@@ -1,6 +1,6 @@
 #include "src/overlays/ov087/CarouselModels.h"
 
-const CarouselResourceIds data_ov087_020c7d3c = {{
+const CarouselResourceIds gOv087CarouselInfoFileIds = {{
     0x00000008, 0x0000000E, 0x00000002, 0x0000000A,
     0x00000000, 0x0000000C, 0x0000000C, 0x00000006,
 }};

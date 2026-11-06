@@ -44,6 +44,11 @@ links the complete sequence of documented naming blocks.
 - [Matrix Draw Refresh Data](MATRIX_DRAW_REFRESH_DATA.md).
 - [Slot Item Native Template Data](SLOT_ITEM_NATIVE_TEMPLATE_DATA.md).
 
+- [Report Page Scene Data](REPORT_PAGE_SCENE_DATA.md).
+- [Overlay087 Carousel Choice Data](OVERLAY087_CAROUSEL_CHOICE_DATA.md).
+- [Report Progress Record Data](REPORT_PROGRESS_RECORD_DATA.md).
+- [Report Ui Popup Native Storage](REPORT_UI_POPUP_NATIVE_STORAGE.md).
+
 ## Unresolved function contracts
 
 At the `ad0a8778153f72218e4bdad3a5cec1bd8e2a7470` naming checkpoint,

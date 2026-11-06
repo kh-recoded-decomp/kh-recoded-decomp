@@ -1,5 +1,5 @@
 #define StartNextPopup_020c31d8 StartNextPopup
 #define StateMachine_SetState_020c3bc4 StateMachine_SetState
 #define func_01ff878c MIi_CpuCopyFast
-#define g_popupWork_020c50e4 data_ov093_020c5104
+#define g_popupWork_020c50e4 gTrophyPopupWorkStorage
 #include "src/ov093/unclassified_helpers/StartNextPopup_020c31d8.c"

@@ -1,10 +1,10 @@
-// redefine-sym eu_data_ov093_020c3cd4=data_ov093_020c3cd4
-// redefine-sym eu_data_ov093_020c3cf4=data_ov093_020c3cf4
-// redefine-sym eu_data_ov093_020c3d14=data_ov093_020c3d14
-// redefine-sym eu_data_ov093_020c3d34=data_ov093_020c3d34
-// redefine-sym eu_data_ov093_020c3d54=data_ov093_020c3d54
-// redefine-sym eu_data_ov093_020c3d74=data_ov093_020c3d74
-// redefine-sym eu_data_ov093_020c3d94=data_ov093_020c3d94
+// redefine-sym eu_data_ov093_020c3cd4=gTrophyReportProgress19FlagIds
+// redefine-sym eu_data_ov093_020c3cf4=gTrophyReportProgress20FlagIds
+// redefine-sym eu_data_ov093_020c3d14=gTrophyReportProgress0FlagRangeStarts
+// redefine-sym eu_data_ov093_020c3d34=gTrophyReportProgress0FlagRangeLengths
+// redefine-sym eu_data_ov093_020c3d54=gTrophyReportProgress21FlagIds
+// redefine-sym eu_data_ov093_020c3d74=gTrophyReportProgress18FlagIds
+// redefine-sym eu_data_ov093_020c3d94=gTrophyReportProgress21SevenBitFieldOffsets
 #define AddRecordItem_02029240 AddRecordItem
 #define BuildAchievementList_020c0fb0 BuildAchievementList
 #define GetUnlockedSlotValue_02051270 GetUnlockedSlotValue
@@ -13,8 +13,8 @@
 #define ReadGlobalPackedBits_02027348 ReadGlobalPackedBits
 #define SetEntryFlag_020c22d4 SetEntryFlag_020c22f4
 #define SetGlobalPackedBit_02027320 SetGlobalPackedBit
-#define data_ov093_020c3c40 data_ov093_020c3c60
-#define data_ov093_020c3c68 data_ov093_020c3c88
+#define data_ov093_020c3c40 gTrophyReportProgress4FlagIds
+#define data_ov093_020c3c68 gTrophyReportProgress17TwoBitFieldOffsets
 #define data_ov093_020c3cb4 eu_data_ov093_020c3cd4
 #define data_ov093_020c3cd4 eu_data_ov093_020c3cf4
 #define data_ov093_020c3cf4 eu_data_ov093_020c3d14
@@ -22,11 +22,11 @@
 #define data_ov093_020c3d34 eu_data_ov093_020c3d54
 #define data_ov093_020c3d54 eu_data_ov093_020c3d74
 #define data_ov093_020c3d74 eu_data_ov093_020c3d94
-#define data_ov093_020c3d94 data_ov093_020c3db4
-#define data_ov093_020c3dc4 data_ov093_020c3de4
-#define data_ov093_020c3fb4 data_ov093_020c3fd4
-#define data_ov093_020c4090 data_ov093_020c40b0
-#define data_ov093_020c45bc data_ov093_020c45dc
+#define data_ov093_020c3d94 gTrophyReportTotalCounterFieldSpecs
+#define data_ov093_020c3dc4 gTrophyReportBooleanProgressFlagIds
+#define data_ov093_020c3fb4 gTrophyReportBooleanProgressFieldLimits
+#define data_ov093_020c4090 gTrophyReportProgressTargets
+#define data_ov093_020c45bc gTrophyReportCompletionChecksHead
 #define func_020275e4 CountSetBitsInMainFlagArray
 #define func_ov093_020c2c7c GetPopupDefinition
 #include "src/ov093/panel_state/BuildAchievementList_020c0fb0.c"

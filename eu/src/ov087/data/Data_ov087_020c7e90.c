@@ -2,6 +2,6 @@
 
 #pragma explicit_zero_data on
 
-u16 data_ov087_020c7e90[6] = {
+u16 gOv087EntryNameSuffixFormat[6] = {
     37, 115, 32, 37, 115, 0,
 };

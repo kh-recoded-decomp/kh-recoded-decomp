@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-const u32 data_ov091_020c2980[36] = {
+const u32 gReportTopBooleanProgressFlagIds[36] = {
     0x00000000, 0x00000000, 0x00000000, 0x00000000,
     0x00000000, 0x00000000, 0x00000000, 0x000009F0,
     0x00000BE5, 0x00000BE7, 0x00000BE6, 0x00000000,
@@ -12,13 +12,13 @@ const u32 data_ov091_020c2980[36] = {
     0x00000000, 0x00000000, 0x00000000, 0x00000000,
 };
 
-const u32 data_ov091_020c2950[12] = {
+const u32 gReportTopTotalCounterFieldSpecs[12] = {
     0x00000000, 0x00000000, 0x00000AF3, 0x00000011,
     0x00000B15, 0x00000011, 0x00000B26, 0x00000011,
     0x00000B04, 0x00000011, 0x00000B48, 0x00000011,
 };
 
-const u32 data_ov091_020c2930[8] = {
+const u32 gReportTopProgress21SevenBitFieldOffsets[8] = {
     0x00000A2B, 0x00000A32, 0x00000A39, 0x00000A40,
     0x00000A47, 0x00000A4E, 0x00000A55, 0x00000A5C,
 };

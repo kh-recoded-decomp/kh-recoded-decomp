@@ -5,7 +5,7 @@
 #define IsGlobalPackedBitSet_02027304 IsGlobalPackedBitSet
 #define OS_SNPrintf_0202e080 OS_SNPrintf_0202e094
 #define ReadGlobalPackedBits_02027348 ReadGlobalPackedBits
-#define data_ov078_020c5104 data_ov078_020c5124
+#define data_ov078_020c5104 gPageMenuLineLayoutTail
 #define data_ov078_020c519c gPageNameRankFormat
 #define data_ov078_020c51a8 gPageLevelFormat
 #define func_ov027_020ba2a8 GetPackedFileEntry

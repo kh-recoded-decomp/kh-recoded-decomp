@@ -52,10 +52,10 @@ SetEntryFlag_020c1374 kind:function(arm,size=0x28) addr:0x020c1374
 ClearEntryFlag_020c139c kind:function(arm,size=0x28) addr:0x020c139c
 GrantUnlockedEntries kind:function(arm,size=0x264) addr:0x020c13c4
 UpdateItemGridBackgroundVariant kind:function(arm,size=0xec) addr:0x020c1628
-data_ov095_020c1714 kind:data(any) addr:0x020c1714
+gItemReportTabTileRows kind:data(any) addr:0x020c1714
 gItemReportStateHandlers kind:data(any) addr:0x020c171c
-data_ov095_020c1728 kind:data(any) addr:0x020c1728
-data_ov095_020c1744 kind:data(any) addr:0x020c1744
+gItemReportPanelTileRows kind:data(any) addr:0x020c1728
+gItemReportGroupGridRowStarts kind:data(any) addr:0x020c1744
 gItemReportTextPaths kind:data(any) addr:0x020c1780
 gItemReportResourcePaths kind:data(any) addr:0x020c1788
 gItemReportDefaults kind:data(any) addr:0x020c1794

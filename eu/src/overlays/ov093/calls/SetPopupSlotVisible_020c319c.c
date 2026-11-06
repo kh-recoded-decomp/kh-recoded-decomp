@@ -5,7 +5,7 @@ typedef struct {
     void *objManager;
 } PopupManager;
 
-extern PopupManager *data_ov093_020c5104;
+extern PopupManager *gTrophyPopupWorkStorage;
 extern void SetIndexedRecordAnimationFrame(void *objManager, int slotIndex, int value);
 extern int IndexedRecord_SetActive(void *objManager, int slotIndex);
 extern void IndexedRecord_ClearActive(void *objManager, int slotIndex);
@@ -13,7 +13,7 @@ extern void IndexedRecords_SetFlag2(void *objManager, int slotIndex, int value);
 
 void SetPopupSlotVisible_020c319c(int slotIndex, BOOL visible)
 {
-    void *objManager = data_ov093_020c5104->objManager;
+    void *objManager = gTrophyPopupWorkStorage->objManager;
 
     if (visible) {
         SetIndexedRecordAnimationFrame(objManager, slotIndex, 0);

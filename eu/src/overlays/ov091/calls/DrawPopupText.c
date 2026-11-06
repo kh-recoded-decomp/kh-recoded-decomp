@@ -7,7 +7,7 @@
 #define G2S_GetBG2ScrPtr_02006f0c G2S_GetBG2ScrPtr
 #define InitTextLayerAt_020014b0 InitTextLayerAt
 #define NNSi_G2dFontGetTextHeight_02016b4c NNSi_G2dFontGetTextHeight
-#define data_ov091_020c373c data_ov091_020c375c
+#define data_ov091_020c373c gReportTopPopupWork
 #define func_ov091_020c2754 ReportTopPopup_SetFlags
 #define func_ov091_020c2778 ReportTopPopup_GetMaskedFlags
 #include "src/ov091/panel_state/DrawPopupText_020c19d0.c"

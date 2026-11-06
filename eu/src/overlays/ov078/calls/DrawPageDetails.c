@@ -7,7 +7,7 @@ typedef struct RecordSlotPair0Entry {
 } RecordSlotPair0Entry;
 
 /* Each layout has nine words; word seven is its text color. */
-extern u32 data_ov078_020c5024[];
+extern u32 gPageMenuLineLayoutPrefix[];
 extern u32 gPageEmptyText[];
 extern u16 gPageNameRankFormat[];
 extern u16 gPageLevelFormat[];
@@ -41,9 +41,9 @@ void DrawPageDetails(PageMenu *menu)
         limit = 5;
     }
     if ((s32)cursor >= limit) {
-        data_ov078_020c5024[1 * 9 + 7] = 4;
+        gPageMenuLineLayoutPrefix[1 * 9 + 7] = 4;
         DrawLayoutLine(menu, 1, GetPackedFileEntry(menu->messageView, 2), NULL);
-        data_ov078_020c5024[1 * 9 + 7] = 2;
+        gPageMenuLineLayoutPrefix[1 * 9 + 7] = 2;
     } else {
         DrawLayoutLine(menu, 1, (void *)GetGridTableValue(cursor, -1), NULL);
     }
@@ -58,9 +58,9 @@ void DrawPageDetails(PageMenu *menu)
     }
     if ((s32)cursor >= limit) {
 locked:
-        data_ov078_020c5024[2 * 9 + 7] = 4;
+        gPageMenuLineLayoutPrefix[2 * 9 + 7] = 4;
         DrawLayoutLine(menu, 2, GetPackedFileEntry(menu->messageView, 2), NULL);
-        data_ov078_020c5024[2 * 9 + 7] = 2;
+        gPageMenuLineLayoutPrefix[2 * 9 + 7] = 2;
         DrawLayoutLine(menu, 3, gPageEmptyText, NULL);
         DrawLayoutLine(menu, 4, gPageEmptyText, NULL);
         return;

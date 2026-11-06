@@ -3,7 +3,7 @@
 typedef struct EnemyViewer EnemyViewer;
 
 extern u32 gEnemyViewerWork;
-extern u32 data_ov099_020c22b4;
+extern u32 gEnemyViewerScrollListConfig;
 extern u32 sOv099_UiBtlStrLanguageP2_020c2774;
 extern u32 AcquireRecordSlot();
 extern u32 LoadMessageFiles();
@@ -48,7 +48,7 @@ u32 InitEnemyViewerScreen(void *work) {
   SetupStatsPanelDisplay_020bf190(work);
   LoadMessageFiles(work);
   LoadViewerBackgrounds(work);
-  InitScrollList_020c0b5c(&data_ov099_020c22b4,work);
+  InitScrollList_020c0b5c(&gEnemyViewerScrollListConfig,work);
   LoadEnemyCollectionProgress(work);
   InitViewerTextLayers(work);
   DrawEntryStatsPanels(0xffffffff,work);
