@@ -1,5 +1,5 @@
 #define LoadPrimarySubOverlay_020bce34 LoadPrimarySubOverlay
-#define data_ov039_020be92c sOv039_J_020be94c
-#define data_ov039_020bea84 data_ov039_020beaa4
+#define data_ov039_020be92c gPrimaryMenuFirstOverlayId
+#define data_ov039_020bea84 gMenuSubOverlayIndexStorage
 #define func_02029f78 LoadOverlayAfterGeometryTransfer
 #include "src/ov039/overlay_handling/LoadPrimarySubOverlay_020bce34.c"

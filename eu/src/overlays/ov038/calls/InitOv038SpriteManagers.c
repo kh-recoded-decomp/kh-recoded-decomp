@@ -3,6 +3,6 @@
 #define InitOv038SpriteManagers_020bafb4 InitOv038SpriteManagers
 #define PXI_Init_0204f00c PXI_Init_0204f020
 #define g_ov038BottomSprites_020bc654 gResultsBottomSpriteLayout
-#define g_ov038Context_020bd144 data_ov038_020bd164
+#define g_ov038Context_020bd144 gResultsPageContextStorage
 #define g_ov038TopSprites_020bbdf8 gResultsTables
 #include "src/ov038/unclassified_helpers/InitOv038SpriteManagers_020bafb4.c"

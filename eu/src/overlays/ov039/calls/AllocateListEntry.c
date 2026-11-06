@@ -1,6 +1,6 @@
 #define AllocateListEntry_020bc6b0 AllocateListEntry
 #define AppendIntrusiveListObject_020128d0 NNS_FndAppendListObject
 #define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
-#define data_ov039_020bea00 data_ov039_020bea20
+#define data_ov039_020bea00 gMenuOverlayWork
 #define func_01ff8830 MI_CpuFill8
 #include "src/ov039/reviewed_helpers/AllocateListEntry_020bc6b0.c"

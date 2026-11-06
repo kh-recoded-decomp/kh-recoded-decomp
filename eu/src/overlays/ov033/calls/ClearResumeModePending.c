@@ -5,9 +5,9 @@ typedef struct ResumeModeState {
     u32 pending;
 } ResumeModeState;
 
-extern ResumeModeState *data_ov033_020baae0;
+extern ResumeModeState *gResumeModeWorkStorage;
 
 void ClearResumeModePending(void)
 {
-    data_ov033_020baae0->pending = FALSE;
+    gResumeModeWorkStorage->pending = FALSE;
 }

@@ -19,8 +19,8 @@ GetResumeModeResult kind:function(arm,size=0x14) addr:0x020ba9d8
 InstallResumeModeHandlers kind:function(arm,size=0x74) addr:0x020ba9ec
 CompleteResumeModeWithResultAdapter kind:function(arm,size=0xc) addr:0x020baa60
 ClearResumeModePending kind:function(arm,size=0x18) addr:0x020baa6c
-data_ov033_020baaa0 kind:data(any) addr:0x020baaa0
+gResumeModeTaskHandle kind:data(any) addr:0x020baaa0
 gResumeModeHandlers kind:data(any) addr:0x020baaa4
-data_ov033_020baab4 kind:data(any) addr:0x020baab4
-data_ov033_020baae0 kind:bss addr:0x020baae0
+gResumeModeTaskClassStorage kind:data(any) addr:0x020baab4
+gResumeModeWorkStorage kind:bss addr:0x020baae0
 data_ov033_020baafc kind:bss addr:0x020baafc ambiguous

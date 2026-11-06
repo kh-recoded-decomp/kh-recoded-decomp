@@ -1,4 +1,4 @@
 #define ActivatePanelEntity_020b6328 ActivatePanelEntity
-#define data_ov025_020b7760 data_ov025_020b7780
+#define data_ov025_020b7760 gMenuListWorkStorage
 #define func_ov025_020b766c ResetFieldsToDefault
 #include "src/ov025/panel_state/ActivatePanelEntity_020b6328.c"

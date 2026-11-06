@@ -48,7 +48,7 @@ data_ov103_020c055c kind:data(any) addr:0x020c055c
 sOv103_TheaterSZ_020c056c kind:data(any) addr:0x020c056c ambiguous
 sOv103_UiReportTextLanguageTheaterTimeSZ_020c057c kind:data(any) addr:0x020c057c
 sOv103_UiReportTextLanguageTheaterMovieSZ_020c05a0 kind:data(any) addr:0x020c05a0
-data_ov103_020c05c4 kind:data(any) addr:0x020c05c4 ambiguous
+gTheaterMenuDescriptor kind:data(any) addr:0x020c05c4 ambiguous
 data_ov103_020c0608 kind:data(any) addr:0x020c0608
 sOv103_TextFontEu10Nftr_020c06f8 kind:data(any) addr:0x020c06f8
 data_ov103_020c0720 kind:bss addr:0x020c0720

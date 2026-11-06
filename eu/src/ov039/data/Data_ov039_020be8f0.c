@@ -8,7 +8,7 @@ extern u8 data_ov034_020bf6a0[];
 extern u8 data_ov036_020c4160[];
 extern u8 gOv085StateHandlers[];
 
-void *data_ov039_020be8f0[23] = {
+void *gSecondaryMenuRegistryTail[23] = {
     (void *)data_ov036_020c4160,
     (void *)0x00000053,
     (void *)data_ov034_020bf6a0,

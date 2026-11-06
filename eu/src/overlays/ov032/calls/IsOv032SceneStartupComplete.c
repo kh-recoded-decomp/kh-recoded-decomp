@@ -2,8 +2,8 @@
 
 #define false 0
 #define true 1
-extern int data_ov032_020c0080[2];
-#define resultsWork data_ov032_020c0080[1]
+extern int gGroupSceneGlobals[2];
+#define resultsWork gGroupSceneGlobals[1]
 
 BOOL IsOv032SceneStartupComplete(void)
 

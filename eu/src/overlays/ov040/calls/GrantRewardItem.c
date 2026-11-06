@@ -3,7 +3,7 @@
 #define AddToStackSlot_02050250 AddToStackSlot
 #define GrantRewardItem_020be02c GrantRewardItem
 #define RewardFlagToItemCode_020bdb8c RewardFlagToItemCode
-#define data_ov040_020be264 data_ov040_020be284
+#define data_ov040_020be264 gAreaRewardResourceGlobalsStorage
 #define func_02050380 ReplaceSlotEntry
 #define func_ov001_02078360 SetFieldMenuMode_02078360
 #define func_ov001_02078500 AddItemToFieldSlot

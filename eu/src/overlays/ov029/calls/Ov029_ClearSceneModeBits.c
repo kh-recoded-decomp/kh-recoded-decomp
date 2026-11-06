@@ -2,7 +2,7 @@
 
 s32 Ov029_ClearSceneModeBits(void)
 {
-    Ov029SceneState *state = data_ov029_020babc0;
+    Ov029SceneState *state = gOv029SceneWorkStorage;
 
     state->flags &= 0xfff3;
     return -1;

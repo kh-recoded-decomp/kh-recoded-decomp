@@ -1,6 +1,6 @@
 #define CleanupHandlersAndSetPhase5_020bb680 CleanupHandlersAndSetPhase5
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
-#define data_ov039_020bea00 data_ov039_020bea20
+#define data_ov039_020bea00 gMenuOverlayWork
 #define func_ov039_020baae0 SetMenuPhase
 #define func_ov039_020bac24 LoadBgLayerSet4
 #define func_ov039_020bcf20 UpdatePrimaryMenuSubOverlay

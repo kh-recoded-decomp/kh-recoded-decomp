@@ -1,5 +1,5 @@
 #define EnterState2_020ba640 EnterState2
 #define ObjectManager_LoadShadowModel_0207efac ObjectManager_LoadShadowModel
 #define func_ov001_02063404 RestoreSessionActors
-#define g_activeState_020bc800 data_ov031_020bc820
+#define g_activeState_020bc800 gOv031SceneWorkStorage
 #include "src/ov031/state_machine/EnterState2_020ba640.c"

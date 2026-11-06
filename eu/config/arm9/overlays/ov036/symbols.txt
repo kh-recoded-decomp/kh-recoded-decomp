@@ -237,8 +237,8 @@ data_ov036_020c351c kind:data(any) addr:0x020c351c
 data_ov036_020c35a8 kind:data(any) addr:0x020c35a8
 data_ov036_020c36b8 kind:data(any) addr:0x020c36b8
 data_ov036_020c36c0 kind:data(any) addr:0x020c36c0
-data_ov036_020c36e0 kind:data(any) addr:0x020c36e0
-data_ov036_020c36e4 kind:data(any) addr:0x020c36e4
+gEvent2DPanelTaskHandle kind:data(any) addr:0x020c36e0
+gEvent2DPanelTaskClass kind:data(any) addr:0x020c36e4
 gPanelScriptStateHandlers kind:data(any) addr:0x020c36f8
 sOv036_Ev2DBgP2_020c3718 kind:data(any) addr:0x020c3718
 sOv036_Ev2DChtexP2_020c3724 kind:data(any) addr:0x020c3724
@@ -249,14 +249,14 @@ gTextScriptCommandHandlers kind:data(any) addr:0x020c375c
 data_ov036_020c385c kind:data(any) addr:0x020c385c
 sOv036_QuestionQuestionQuestion_020c3860 kind:data(any) addr:0x020c3860
 gTextWindowResourceTable kind:data(any) addr:0x020c3864
-data_ov036_020c3868 kind:data(any) addr:0x020c3868
+gTextWindowTaskClass kind:data(any) addr:0x020c3868
 gTextSceneBgCharacterLoaders kind:data(any) addr:0x020c387c
 gTextSceneBgScreenLoaders kind:data(any) addr:0x020c389c
 data_ov036_020c38bc kind:data(any) addr:0x020c38bc
 sOv036_UiEventuiEventuiP2f_020c38e4 kind:data(any) addr:0x020c38e4
 sOv036_TextFontEu10Nftr_020c38fc kind:data(any) addr:0x020c38fc
 sOv036_TextFontJp10Nftr_020c3914 kind:data(any) addr:0x020c3914
-data_ov036_020c392c kind:data(any) addr:0x020c392c
+gTextWindowControllerTaskClass kind:data(any) addr:0x020c392c
 data_ov036_020c3940 kind:bss addr:0x020c3940
 data_ov036_020c394c kind:bss addr:0x020c394c
 data_ov036_020c3950 kind:bss addr:0x020c3950

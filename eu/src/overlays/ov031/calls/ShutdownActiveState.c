@@ -6,5 +6,5 @@
 #define func_0204df9c SetSoundListenersEnabled
 #define func_ov001_020667b4 SuspendTaskAndSetFlag
 #define func_ov031_020ba51c FreeSceneRecords
-#define g_activeState_020bc800 data_ov031_020bc820
+#define g_activeState_020bc800 gOv031SceneWorkStorage
 #include "src/ov031/state_machine/ShutdownActiveState_020ba5d0.c"

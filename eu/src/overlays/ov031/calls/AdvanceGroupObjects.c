@@ -3,5 +3,5 @@
 #define OffsetBoxByDelta_0203ac70 OffsetBoxByDelta
 #define SetShapePosition_0203afa0 SetShapePosition
 #define VEC_Add_01ff9e0c VEC_Add
-#define g_activeState_020bc800 data_ov031_020bc820
+#define g_activeState_020bc800 gOv031SceneWorkStorage
 #include "src/ov031/overlay_state/AdvanceGroupObjects_020baf38.c"

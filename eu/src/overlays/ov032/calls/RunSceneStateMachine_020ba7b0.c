@@ -1,6 +1,6 @@
 #define RunSceneStateMachine_020ba790 RunSceneStateMachine_020ba7b0
 #define data_ov032_020bffd8 gGroupActionStateHandlers
-#define data_ov032_020c0060 data_ov032_020c0080
+#define data_ov032_020c0060 gGroupSceneGlobals
 #define func_ov032_020bb34c DrawOv032FieldScene
 #define func_ov032_020bb368 UpdateOv032FieldScene
 #include "src/ov032/unclassified_helpers/RunSceneStateMachine_020ba790.c"

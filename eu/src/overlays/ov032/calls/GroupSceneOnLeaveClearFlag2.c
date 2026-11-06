@@ -1,7 +1,7 @@
 #include "nitro/types.h"
 
-extern u32 data_ov032_020c0080[2];
-#define resultsWork ((int)data_ov032_020c0080[1])
+extern u32 gGroupSceneGlobals[2];
+#define resultsWork ((int)gGroupSceneGlobals[1])
 
 void GroupSceneOnLeaveClearFlag2(void)
 

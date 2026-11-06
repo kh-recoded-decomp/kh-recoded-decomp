@@ -1,4 +1,4 @@
 #define LookupChannelEntry_020b62a8 LookupChannelEntry_020b62c8
 #define ParseSlotQuantityId GetListPathNodeId
-#define data_020b7760 data_ov025_020b7780
+#define data_020b7760 gMenuListWorkStorage
 #include "src/ov025/shared_variants/LookupChannelEntry_020b62a8.c"

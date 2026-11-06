@@ -20,7 +20,7 @@ typedef struct ResumeModeParams {
     s32 modeId;
 } ResumeModeParams;
 
-extern ResumeModeContext *data_ov033_020baae0;
+extern ResumeModeContext *gResumeModeWorkStorage;
 extern char OVERLAY_104_ID[];
 extern ResumeModeContext *GetRunningTaskWork(void);
 extern void LoadOverlayAfterGeometryTransfer(int processor, int overlayId);
@@ -39,30 +39,30 @@ void *InitResumeModeContext(ResumeModeParams *params)
     void *setter;
     BOOL failed;
 
-    data_ov033_020baae0 = GetRunningTaskWork();
+    gResumeModeWorkStorage = GetRunningTaskWork();
     LoadOverlayAfterGeometryTransfer(0, (int)OVERLAY_104_ID);
     setter = NULL;
     failed = __DSProt_DetectNotEmulator(InvokeProtectionCallbackAndInvertAddress, setter, 0) == ~(u32)setter;
     if (failed) {
         failed = __DSProt_DetectDummy(InvokeProtectionCallbackAndInvertAddress, setter, 0) == ~(u32)setter;
         if (failed) {
-            MI_CpuFill8(&data_ov033_020baae0->state, 0xff, 4);
+            MI_CpuFill8(&gResumeModeWorkStorage->state, 0xff, 4);
         } else {
             setter = LoadActorOverlay;
             failed = __DSProt_DetectNotFlashcart(InvokeProtectionCallbackAndInvertAddress, setter, 0) == ~(u32)setter;
             if (failed) {
-                data_ov033_020baae0->active = 1;
+                gResumeModeWorkStorage->active = 1;
             }
         }
     }
     UnloadOverlayAfterGeometryTransfer(0, (int)OVERLAY_104_ID);
-    data_ov033_020baae0->areaId = params->areaId;
-    data_ov033_020baae0->posX = params->posX;
-    data_ov033_020baae0->posY = params->posY;
-    data_ov033_020baae0->modeId = params->modeId;
-    data_ov033_020baae0->active = 1;
-    data_ov033_020baae0->flags = 3;
+    gResumeModeWorkStorage->areaId = params->areaId;
+    gResumeModeWorkStorage->posX = params->posX;
+    gResumeModeWorkStorage->posY = params->posY;
+    gResumeModeWorkStorage->modeId = params->modeId;
+    gResumeModeWorkStorage->active = 1;
+    gResumeModeWorkStorage->flags = 3;
     SetupResumeDisplay();
-    data_ov033_020baae0->state = 0;
+    gResumeModeWorkStorage->state = 0;
     return RunResumeModeStateMachine;
 }

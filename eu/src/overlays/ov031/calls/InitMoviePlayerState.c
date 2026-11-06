@@ -12,5 +12,5 @@
 #define func_0202a158 Heap_GetCurrent
 #define func_0202a448 CreateTaskObject
 #define func_ov001_020633a0 QueueFieldUpdate
-#define g_activeState_020bc800 data_ov031_020bc820
+#define g_activeState_020bc800 gOv031SceneWorkStorage
 #include "src/ov031/shared_engine/InitMoviePlayerState_020ba3e0.c"

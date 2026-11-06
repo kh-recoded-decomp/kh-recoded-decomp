@@ -47,7 +47,7 @@ typedef struct Ov039MenuState {
     int objectId;
 } Ov039MenuState;
 
-extern Ov039MenuState *data_ov039_020bea20;
-#define gOv039MenuState data_ov039_020bea20
+extern Ov039MenuState *gMenuOverlayWork;
+#define gOv039MenuState gMenuOverlayWork
 
 #endif

@@ -73,5 +73,5 @@ gResultsSummaryTableA kind:label(arm) addr:0x020bcdad
 gResultsSummaryTableB kind:label(arm) addr:0x020bcec1
 gResultsSummaryState kind:label(arm) addr:0x020bcf45
 gResultsSummaryRecordTable kind:label(arm) addr:0x020bcf55
-data_ov038_020bd160 kind:bss addr:0x020bd160
-data_ov038_020bd164 kind:bss addr:0x020bd164
+gResultsPageOuterTaskWork kind:bss addr:0x020bd160
+gResultsPageContextStorage kind:bss addr:0x020bd164

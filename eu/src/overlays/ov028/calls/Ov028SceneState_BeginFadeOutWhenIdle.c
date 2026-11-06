@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-extern u32 data_ov028_020bb3a0;
+extern u32 gOv028FieldSceneWorkStorage;
 extern u32 BeginScreenFadeOut();
 extern u32 IsScreenModeIdle();
 extern u32 HasActiveFieldEffects();
@@ -10,8 +10,8 @@ u32 Ov028SceneState_BeginFadeOutWhenIdle(void) {
   u32 busy;
   int idle;
 
-  work = data_ov028_020bb3a0;
-  if (((*(u16 *)(data_ov028_020bb3a0 + 6) & 0x10) == 0) &&
+  work = gOv028FieldSceneWorkStorage;
+  if (((*(u16 *)(gOv028FieldSceneWorkStorage + 6) & 0x10) == 0) &&
      (busy = HasActiveFieldEffects(), busy != 0)) {
     return 0xffffffff;
   }

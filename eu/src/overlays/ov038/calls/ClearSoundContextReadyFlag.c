@@ -5,11 +5,11 @@ typedef struct SoundContextState {
     u16 flags;
 } SoundContextState;
 
-extern SoundContextState *data_ov038_020bd160;
+extern SoundContextState *gResultsPageOuterTaskWork;
 
 u32 ClearSoundContextReadyFlag(void)
 {
-    SoundContextState *state = data_ov038_020bd160;
+    SoundContextState *state = gResultsPageOuterTaskWork;
     u32 flags = state->flags & 0xfffd;
     state->flags = flags;
     return flags;

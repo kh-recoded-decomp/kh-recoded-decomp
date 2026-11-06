@@ -6,7 +6,7 @@ typedef struct SceneActionState {
     s8 selectedEntry;
 } SceneActionState;
 
-extern SceneActionState *data_ov030_020bd020;
+extern SceneActionState *gOv030SceneWork;
 extern void SetFieldEntriesPaused(BOOL paused);
 extern void PlaySoundChecked(int group, int soundId);
 extern BOOL IsEntryFlag2Active(int entryId);
@@ -16,23 +16,23 @@ extern void UpdateCameraTriggers(void);
 
 int ResolveMovieSceneAction(void)
 {
-    SceneActionState *state = data_ov030_020bd020;
+    SceneActionState *state = gOv030SceneWork;
     if (state->flags & 0x4000) {
         SetFieldEntriesPaused(TRUE);
-        data_ov030_020bd020->flags |= 0x8000;
+        gOv030SceneWork->flags |= 0x8000;
         return 14;
     }
     if (state->flags & 0x12)
         return -1;
     if (state->flags & 0x40) {
         PlaySoundChecked(0, 78);
-        data_ov030_020bd020->flags |= 0x8000;
+        gOv030SceneWork->flags |= 0x8000;
         return 13;
     }
     if (state->selectedEntry >= 0)
         return 9;
     if (IsEntryFlag2Active(0)) {
-        data_ov030_020bd020->flags |= 0x10;
+        gOv030SceneWork->flags |= 0x10;
         QueueOrUpdateSoundKind3(32);
         return 11;
     }

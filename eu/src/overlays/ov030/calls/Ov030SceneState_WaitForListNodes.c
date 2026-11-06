@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-extern u32 data_ov030_020bd020;
+extern u32 gOv030SceneWork;
 extern s32 AreAllListNodesReady(void);
 extern void RequestFieldEntryResourceDelivery(void);
 
@@ -13,6 +13,6 @@ u32 Ov030SceneState_WaitForListNodes(void)
         return 0xffffffff;
     }
     RequestFieldEntryResourceDelivery();
-    *(u16 *)(data_ov030_020bd020 + 6) = *(u16 *)(data_ov030_020bd020 + 6) | 0x8000;
+    *(u16 *)(gOv030SceneWork + 6) = *(u16 *)(gOv030SceneWork + 6) | 0x8000;
     return 3;
 }

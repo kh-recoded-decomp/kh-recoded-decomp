@@ -1,5 +1,5 @@
 #define FinishSceneSetup_020ba594 FinishSceneSetup
 #define ObjectManager_LoadShadowModel_0207efac ObjectManager_LoadShadowModel
-#define data_ov030_020bd000 data_ov030_020bd020
+#define data_ov030_020bd000 gOv030SceneWork
 #define func_ov001_02063404 RestoreSessionActors
 #include "src/ov030/shared_engine/FinishSceneSetup_020ba594.c"

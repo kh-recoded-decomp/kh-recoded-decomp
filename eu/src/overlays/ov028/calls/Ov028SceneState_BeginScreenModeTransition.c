@@ -1,13 +1,13 @@
 #include "nitro/types.h"
 
-extern u32 data_ov028_020bb3a0;
+extern u32 gOv028FieldSceneWorkStorage;
 extern void BeginFieldScreenModeTransition(s32 value);
 
 u32 Ov028SceneState_BeginScreenModeTransition(void)
 {
-    u32 context = data_ov028_020bb3a0;
+    u32 context = gOv028FieldSceneWorkStorage;
 
-    BeginFieldScreenModeTransition((s32)*(s8 *)(data_ov028_020bb3a0 + 8));
+    BeginFieldScreenModeTransition((s32)*(s8 *)(gOv028FieldSceneWorkStorage + 8));
     *(u16 *)(context + 6) = *(u16 *)(context + 6) | 0x20;
     return 10;
 }

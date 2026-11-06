@@ -1,4 +1,4 @@
 #define ApplySlotStyleToSession_020ba570 ApplySlotStyleToSession
 #define WriteSessionPackedBits_0206459c WriteSessionPackedBits
-#define data_ov032_020c0060 data_ov032_020c0080
+#define data_ov032_020c0060 gGroupSceneGlobals
 #include "src/ov032/unclassified_helpers/ApplySlotStyleToSession_020ba570.c"

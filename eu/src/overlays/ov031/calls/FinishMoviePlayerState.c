@@ -5,10 +5,10 @@ typedef struct MoviePlayerState {
     u16 flags;
 } MoviePlayerState;
 
-extern MoviePlayerState *data_ov031_020bc820;
+extern MoviePlayerState *gOv031SceneWorkStorage;
 
 int FinishMoviePlayerState(void)
 {
-    data_ov031_020bc820->flags = data_ov031_020bc820->flags & 0xfff3;
+    gOv031SceneWorkStorage->flags = gOv031SceneWorkStorage->flags & 0xfff3;
     return -1;
 }

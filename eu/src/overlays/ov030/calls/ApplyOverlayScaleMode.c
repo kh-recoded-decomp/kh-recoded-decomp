@@ -1,6 +1,6 @@
 #define ApplyOverlayScaleMode_020baab4 ApplyOverlayScaleMode
 #define func_ov001_020668e4 UpdatePrizeOrbs
-#define _data_ov030_020bd000 data_ov030_020bd020
+#define _data_ov030_020bd000 gOv030SceneWork
 #define func_020360a0 ActorRegistry_ForEachCallback
 #define func_ov001_02067d80 UpdateSceneAnimsAndCaption
 #define func_ov001_0206d95c UpdatePartyEntries

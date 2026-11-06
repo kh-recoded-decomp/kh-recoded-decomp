@@ -2,7 +2,7 @@
 #include "nitro/types.h"
 
 typedef struct { unsigned char padding[4]; int value; } SharedState;
-extern SharedState data_ov032_020c0080;
+extern SharedState gGroupSceneGlobals;
 extern unsigned int StoreToGlobalPtr4Field28();
 extern unsigned int ActorRegistry_ClearCollisionResult();
 extern unsigned int PopVramState();
@@ -28,7 +28,7 @@ unsigned int GroupSceneState_SaveActorPosesAndExit(void) {
   unsigned int secondValue;
   int index;
 
-  if (((*(u16 *)(data_ov032_020c0080.value + 6) & 0x10) == 0) &&
+  if (((*(u16 *)(gGroupSceneGlobals.value + 6) & 0x10) == 0) &&
      (countOrGate = Panel_TryBeginTransition4(), countOrGate == 0)) {
     return 0xffffffff;
   }
@@ -50,13 +50,13 @@ unsigned int GroupSceneState_SaveActorPosesAndExit(void) {
   ShutdownSceneContext();
   SetOverlayLayerVisible(1);
   ResetFieldObjectManagerResources();
-  *(u16 *)(data_ov032_020c0080.value + 6) = *(u16 *)(data_ov032_020c0080.value + 6) & 0xfff3;
+  *(u16 *)(gGroupSceneGlobals.value + 6) = *(u16 *)(gGroupSceneGlobals.value + 6) & 0xfff3;
   ReleaseCounterHudModels();
   SnapshotManagedActorStateBlocks();
   PopVramState();
   ActorRegistry_ClearCollisionResult();
   ReleaseSeqArcHeapLevel(1);
   StoreToGlobalPtr4Field28(1);
-  *(u16 *)(data_ov032_020c0080.value + 6) = *(u16 *)(data_ov032_020c0080.value + 6) | 0x8000;
+  *(u16 *)(gGroupSceneGlobals.value + 6) = *(u16 *)(gGroupSceneGlobals.value + 6) | 0x8000;
   return 0x11;
 }

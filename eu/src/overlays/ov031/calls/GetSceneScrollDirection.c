@@ -1,3 +1,3 @@
 #define GetSubStruct1C_020bbfe0 GetSceneScrollDirection
-#define g_activeState_020bc800 data_ov031_020bc820
+#define g_activeState_020bc800 gOv031SceneWorkStorage
 #include "src/ov031/unclassified_helpers/GetSubStruct1C_020bbfe0.c"

@@ -9,7 +9,7 @@ typedef struct {
     s32 state;
 } SoundCtx;
 
-extern SoundCtx *data_ov033_020baae0;
+extern SoundCtx *gResumeModeWorkStorage;
 extern SoundCtxStateFunc gResumeModeHandlers[];
 
 u32 RunResumeModeStateMachine(void)
@@ -17,11 +17,11 @@ u32 RunResumeModeStateMachine(void)
     s32 nextState;
 
     do {
-        data_ov033_020baae0->flags &= 0x7fff;
-        nextState = gResumeModeHandlers[data_ov033_020baae0->state]();
+        gResumeModeWorkStorage->flags &= 0x7fff;
+        nextState = gResumeModeHandlers[gResumeModeWorkStorage->state]();
         if (nextState >= 0) {
-            data_ov033_020baae0->state = nextState;
+            gResumeModeWorkStorage->state = nextState;
         }
-    } while (data_ov033_020baae0->flags & 0x8000);
+    } while (gResumeModeWorkStorage->flags & 0x8000);
     return 0;
 }

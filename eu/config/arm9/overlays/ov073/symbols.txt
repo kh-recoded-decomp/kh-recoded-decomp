@@ -101,7 +101,7 @@ data_ov073_020c4100 kind:data(any) addr:0x020c4100
 data_ov073_020c4110 kind:data(any) addr:0x020c4110
 data_ov073_020c4120 kind:data(any) addr:0x020c4120
 data_ov073_020c4130 kind:data(any) addr:0x020c4130
-data_ov073_020c4160 kind:data(any) addr:0x020c4160 ambiguous
+gStatusMenuDescriptor kind:data(any) addr:0x020c4160 ambiguous
 data_ov073_020c41a0 kind:data(any) addr:0x020c41a0
 sOv073_OCBGOFSFUNC_020c41a8 kind:data(any) addr:0x020c41a8
 sOv073_UiMenuStrLanguageStatusSZ_020c41b8 kind:data(any) addr:0x020c41b8

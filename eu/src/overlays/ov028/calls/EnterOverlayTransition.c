@@ -1,5 +1,5 @@
 #define EnterOverlayTransition_020bac78 EnterOverlayTransition
-#define _data_ov028_020bb380 data_ov028_020bb3a0
+#define _data_ov028_020bb380 gOv028FieldSceneWorkStorage
 #define func_ov001_02066810 StartIdleSceneObjects
 #define func_ov001_02087628 SetFieldObjectInteractionsBlocked
 #include "src/ov028/overlay_state/EnterOverlayTransition_020bac78.c"

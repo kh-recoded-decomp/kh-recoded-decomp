@@ -1,6 +1,6 @@
 #define func_ov001_0206e644 GetPendingWorldEntryData
 #define EnterState7Alt_020ba890 EnterState7Alt
-#define g_activeState_020bc800 data_ov031_020bc820
+#define g_activeState_020bc800 gOv031SceneWorkStorage
 #define func_ov001_02067f8c GetSignedByteAt3
 #define func_ov001_02067f9c GetSignedByteAt1
 #include "src/ov031/state_machine/EnterState7Alt_020ba890.c"

@@ -1,5 +1,5 @@
 #define EnterMenuScreenState_020b59e0 EnterMenuScreenState
-#define _data_ov023_020b6f60 data_ov023_020b6f80
+#define _data_ov023_020b6f60 gMenuResourceCacheWork
 #define func_ov001_0207b180 GetSubsceneTextOrEmpty
 #define func_ov023_020b5924 InitOv023TextLayer26
 #define func_ov023_020b5a2c MenuResourceCacheIdleUpdate

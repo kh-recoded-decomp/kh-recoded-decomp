@@ -30,7 +30,7 @@ u32 data_ov078_020c5024[64] = {
     0x00000003, 0x00000002, 0x00000011, 0xFFFFFFFF,
 };
 
-void *data_ov078_020c4fe0[17] = {
+void *gPageMenuDescriptor[17] = {
     (void *)InitPageMenu,
     (void *)ShutdownPageMenu,
     (void *)UpdatePageMenuNoop,

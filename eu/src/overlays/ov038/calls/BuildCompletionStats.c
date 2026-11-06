@@ -32,7 +32,7 @@ typedef struct {
     u32 playSeconds;
 } SaveHeader;
 
-extern CompletionStats *data_ov038_020bd164;
+extern CompletionStats *gResultsPageContextStorage;
 extern SaveHeader *data_0205fe0c;
 extern const int gResultsTopMessageIds[9][4];
 extern const FieldIdTable gResultsMessageIds;
@@ -209,7 +209,7 @@ void BuildCompletionStats(void)
     int i;
 
     stats = NNSi_FndAllocFromDefaultHeap(sizeof(CompletionStats));
-    data_ov038_020bd164 = stats;
+    gResultsPageContextStorage = stats;
     MI_CpuFill8(stats, 0, sizeof(CompletionStats));
     stats->bestCategory = 3;
     stats->playSeconds = data_0205fe0c->playSeconds +

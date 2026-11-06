@@ -9,7 +9,7 @@ typedef struct Ov038SoundContext {
     u8 mode;
 } Ov038SoundContext;
 
-extern Ov038SoundContext *data_ov038_020bd160;
-#define gOv038SoundContext data_ov038_020bd160
+extern Ov038SoundContext *gResultsPageOuterTaskWork;
+#define gOv038SoundContext gResultsPageOuterTaskWork
 
 #endif

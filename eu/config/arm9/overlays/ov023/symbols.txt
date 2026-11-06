@@ -42,13 +42,13 @@ data_ov023_020b6e94 kind:data(any) addr:0x020b6e94
 data_ov023_020b6ea4 kind:data(any) addr:0x020b6ea4
 data_ov023_020b6eac kind:data(any) addr:0x020b6eac
 data_ov023_020b6eb4 kind:data(any) addr:0x020b6eb4
-data_ov023_020b6ee0 kind:data(any) addr:0x020b6ee0
+gMenuResourceCacheTaskClass kind:data(any) addr:0x020b6ee0
 gMapTargetHighlightPalette kind:data(any) addr:0x020b6ef4
 data_ov023_020b6efc kind:data(any) addr:0x020b6efc
 gMapTargetBasePalettes kind:data(any) addr:0x020b6f0c
-data_ov023_020b6f2c kind:data(any) addr:0x020b6f2c
+gMapMenuTaskClass kind:data(any) addr:0x020b6f2c
 sOv023_UiBtlMapLanguageP2_020b6f40 kind:data(any) addr:0x020b6f40
 sOv023_UiBtlMapchrP2_020b6f50 kind:data(any) addr:0x020b6f50
-data_ov023_020b6f80 kind:bss addr:0x020b6f80
-data_ov023_020b6f84 kind:bss addr:0x020b6f84
+gMenuResourceCacheWork kind:bss addr:0x020b6f80
+gMapMenuWork kind:bss addr:0x020b6f84
 gMapTargetPaletteWork kind:bss addr:0x020b6f88

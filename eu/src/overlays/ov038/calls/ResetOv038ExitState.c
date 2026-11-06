@@ -1,3 +1,3 @@
 #define ResetOv038ExitState_020bb638 ResetOv038ExitState
-#define g_ov038Context_020bd144 data_ov038_020bd164
+#define g_ov038Context_020bd144 gResultsPageContextStorage
 #include "src/ov038/unclassified_helpers/ResetOv038ExitState_020bb638.c"

@@ -2,5 +2,5 @@
 #define TryOpenGroupAction_020bb220 TryOpenGroupAction
 #define func_ov001_0206a7c0 BeginScreenFadeOut
 #define func_ov001_0206a814 IsScreenModeIdle
-#define groupState_020c0060 data_ov032_020c0080
+#define groupState_020c0060 gGroupSceneGlobals
 #include "src/ov032/object_group/TryOpenGroupAction_020bb220.c"

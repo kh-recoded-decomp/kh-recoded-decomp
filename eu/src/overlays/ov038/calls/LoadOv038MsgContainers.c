@@ -1,5 +1,5 @@
 #define LoadOv038MsgContainers_020bade0 LoadOv038MsgContainers
 #define Msg_OpenContainerAndReadHeader_0202cc6c Msg_OpenContainerAndReadHeader
 #define g_ov038ContainerNames_020bbdb0 gResultsResourcePaths
-#define g_ov038Context_020bd144 data_ov038_020bd164
+#define g_ov038Context_020bd144 gResultsPageContextStorage
 #include "src/ov038/unclassified_helpers/LoadOv038MsgContainers_020bade0.c"

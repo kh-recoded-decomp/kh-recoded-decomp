@@ -82,7 +82,7 @@ data_ov091_020c2910 kind:data(any) addr:0x020c2910
 data_ov091_020c2930 kind:data(any) addr:0x020c2930
 data_ov091_020c2950 kind:data(any) addr:0x020c2950
 data_ov091_020c2980 kind:data(any) addr:0x020c2980
-data_ov091_020c2a10 kind:data(any) addr:0x020c2a10
+gReportTopPopupStateHandlers kind:data(any) addr:0x020c2a10
 data_ov091_020c2a30 kind:data(any) addr:0x020c2a30
 gReportTopTextPath kind:data(any) addr:0x020c2a40
 gReportTopResourcePaths kind:data(any) addr:0x020c2a44
@@ -92,7 +92,7 @@ sOv091_UiReportLanguageTopP2f_020c2a90 kind:data(any) addr:0x020c2a90
 sOv091_UiReportLanguageTopObjP2f_020c2aa4 kind:data(any) addr:0x020c2aa4
 sOv091_UiReportTextLanguageTopSZ_020c2abc kind:data(any) addr:0x020c2abc
 data_ov091_020c2ad8 kind:data(any) addr:0x020c2ad8
-data_ov091_020c2b18 kind:data(any) addr:0x020c2b18 ambiguous
+gReportTopMenuDescriptor kind:data(any) addr:0x020c2b18 ambiguous
 data_ov091_020c2b5c kind:data(any) addr:0x020c2b5c
 data_ov091_020c2bd4 kind:data(any) addr:0x020c2bd4
 sOv091_TextFontEu10Nftr_020c2c64 kind:data(any) addr:0x020c2c64

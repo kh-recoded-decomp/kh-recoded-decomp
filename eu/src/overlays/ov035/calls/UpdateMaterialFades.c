@@ -1,7 +1,7 @@
 #define AdvanceAnimationTracks_0202ef24 AdvanceAnimationTracks
 #define UpdateMaterialFades_020bb670 UpdateMaterialFades
 #define data_ov035_020bc3ec sOv035MaterialAlphaByKind
-#define data_ov035_020bc4e4 data_ov035_020bc504
+#define data_ov035_020bc4e4 gAreaSceneMaterialFadeWork
 #define func_ov035_020badf0 GetMovieEntryKind
 #define func_ov035_020bae74 GetOverlay41PhaseActiveFlag
 #define func_ov035_020bb40c SetMovieSlotFlags

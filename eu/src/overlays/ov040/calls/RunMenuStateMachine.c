@@ -1,4 +1,4 @@
 #define RunMenuStateMachine_020bd918 RunMenuStateMachine
 #define data_ov040_020be1c0 gAreaSceneStateHandlers
-#define data_ov040_020be260 data_ov040_020be280
+#define data_ov040_020be260 gAreaRewardSceneWork
 #include "src/ov040/unclassified_helpers/RunMenuStateMachine_020bd918.c"

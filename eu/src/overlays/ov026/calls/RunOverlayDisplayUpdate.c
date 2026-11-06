@@ -1,2 +1,2 @@
-#define currentDisplaySession data_ov026_020b5b20
+#define currentDisplaySession gOverlayDisplaySessionWorkStorage
 #include "src/ov026/display_session/RunOverlayDisplayUpdate.c"

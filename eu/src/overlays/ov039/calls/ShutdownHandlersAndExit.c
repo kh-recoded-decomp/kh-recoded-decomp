@@ -16,7 +16,7 @@ typedef struct {
     BOOL altExit;
 } Ov039State;
 
-extern Ov039State *data_ov039_020bea20;
+extern Ov039State *gMenuOverlayWork;
 extern void DestroyAllListEntries(void);
 extern void CloseSecondarySubOverlay(void *work);
 extern void NNSi_FndFreeFromDefaultHeap(void *block);
@@ -33,7 +33,7 @@ extern void SetupOverlayDisplay(void);
 
 void ShutdownHandlersAndExit(void)
 {
-    Ov039State *state = data_ov039_020bea20;
+    Ov039State *state = gMenuOverlayWork;
     int mode;
 
     DestroyAllListEntries();

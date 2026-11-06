@@ -1,3 +1,3 @@
 #include "nitro/types.h"
 
-char sOv039_I_020be8ec[4] = "I";
+char gSecondaryMenuFirstOverlayId[4] = "I";

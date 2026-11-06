@@ -12,6 +12,6 @@
 #define UpdateMenuItemLoading_02067750 UpdateMenuItemLoading
 #define func_ov001_020681c4 GetSceneResourceHandle
 #define func_ov001_020681d4 GetSceneEntryResourceId
-#define data_ov029_020baba0 data_ov029_020babc0
+#define data_ov029_020baba0 gOv029SceneWorkStorage
 #define func_ov001_0207b0c0 SetPanelHeaderText
 #include "src/ov029/overlay_state/FinishOv029MenuLoad_020ba5dc.c"

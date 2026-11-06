@@ -11,14 +11,14 @@ typedef struct {
     u32 flags;
 } FieldGlobal;
 
-extern SceneState *data_ov030_020bd020;
+extern SceneState *gOv030SceneWork;
 extern FieldGlobal *data_ov001_020a0480;
 
 extern BOOL IsScreenModeIdle(void);
 extern void Panel_CaptureBrightness(void);
 
 int SceneState_WaitScreenIdle_020ba894(void) {
-    SceneState *scene = data_ov030_020bd020;
+    SceneState *scene = gOv030SceneWork;
 
     if (!IsScreenModeIdle()) {
         return -1;

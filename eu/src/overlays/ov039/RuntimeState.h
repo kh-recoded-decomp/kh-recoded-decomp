@@ -12,9 +12,9 @@ typedef struct RuntimeStateTail {
     int objectId;
 } RuntimeStateTail;
 
-extern void *data_ov039_020bea20;
+extern void *gMenuOverlayWork;
 
 #define RUNTIME_STATE_TAIL \
-    ((RuntimeStateTail *)((unsigned char *)data_ov039_020bea20 + 0xc000))
+    ((RuntimeStateTail *)((unsigned char *)gMenuOverlayWork + 0xc000))
 
 #endif

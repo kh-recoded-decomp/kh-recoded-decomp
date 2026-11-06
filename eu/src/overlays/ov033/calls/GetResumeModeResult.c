@@ -1,5 +1,5 @@
-extern int data_ov033_020baae0;
+extern int gResumeModeWorkStorage;
 
 int GetResumeModeResult(void) {
-    return *(int *)(*(int *)&data_ov033_020baae0 + 0x10);
+    return *(int *)(*(int *)&gResumeModeWorkStorage + 0x10);
 }

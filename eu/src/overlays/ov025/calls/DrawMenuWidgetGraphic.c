@@ -1,6 +1,6 @@
 #define CopyClippedScreenRegion_020167d0 NNS_G2dBGLoadScreenRect
 #define DrawMenuWidgetGraphic_020b597c DrawMenuWidgetGraphic
 #define G2S_GetBG1ScrPtr_02006e68 G2S_GetBG1ScrPtr
-#define _data_ov025_020b7760 data_ov025_020b7780
+#define _data_ov025_020b7760 gMenuListWorkStorage
 #define func_ov027_020b9a74 BlitWidgetToTileTable
 #include "src/ov025/menu_widgets/DrawMenuWidgetGraphic_020b597c.c"

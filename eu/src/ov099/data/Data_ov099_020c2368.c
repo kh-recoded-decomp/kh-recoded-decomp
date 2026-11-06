@@ -7,7 +7,7 @@ extern void UpdateModelViewerScreen(void);
 extern void InitEnemyViewerScreen(void);
 extern void DestroyEnemyViewerScreen(void);
 
-void *data_ov099_020c2368[6] = {
+void *gEnemyViewerMenuDescriptorHead[6] = {
     (void *)InitEnemyViewerScreen,
     (void *)DestroyEnemyViewerScreen,
     (void *)UpdateModelViewerScreen,

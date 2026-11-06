@@ -77,8 +77,8 @@ SetNearestStageEvent kind:function(thumb,size=0x10) addr:0x020bc730
 GetCurrentRecordTargetScrollSpeed kind:function(thumb,size=0x18) addr:0x020bc740
 GetSceneFrameCount kind:function(thumb,size=0x10) addr:0x020bc758
 SetFlagBit4 kind:function(thumb,size=0x28) addr:0x020bc768
-data_ov031_020bc7a0 kind:data(any) addr:0x020bc7a0
-data_ov031_020bc7a4 kind:data(any) addr:0x020bc7a4
-data_ov031_020bc7b8 kind:data(any) addr:0x020bc7b8
+gOv031SceneTaskHandle kind:data(any) addr:0x020bc7a0
+gOv031SceneTaskClass kind:data(any) addr:0x020bc7a4
+gOv031SceneStateHandlerStorage kind:data(any) addr:0x020bc7b8
 data_ov031_020bc815 kind:data(any) addr:0x020bc815 ambiguous
-data_ov031_020bc820 kind:bss addr:0x020bc820
+gOv031SceneWorkStorage kind:bss addr:0x020bc820

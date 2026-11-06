@@ -1,4 +1,4 @@
 #define SetFlagBit0_020b85a8 SetFlagBit0
 #define SetPrimaryElementEnabled_020bc054 SetPrimaryElementEnabled
-#define data_ov039_020bea00 data_ov039_020bea20
+#define data_ov039_020bea00 gMenuOverlayWork
 #include "src/ov039/event_state/SetPrimaryElementEnabled_020bc054.c"

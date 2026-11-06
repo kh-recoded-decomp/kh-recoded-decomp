@@ -5,7 +5,7 @@
 extern void InitGroupMenuGauge(void);
 extern void ReleaseGroupResourceBuffers(void);
 
-void *data_ov032_020c0050[5] = {
+void *gGroupMenuGaugeTaskClass[5] = {
     (void *)0x000E0015,
     (void *)InitGroupMenuGauge,
     (void *)ReleaseGroupResourceBuffers,

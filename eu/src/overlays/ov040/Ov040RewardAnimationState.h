@@ -13,7 +13,7 @@ typedef struct Ov040RewardAnimationState {
     RewardAnimationGroup *group;
 } Ov040RewardAnimationState;
 
-extern Ov040RewardAnimationState *data_ov040_020be284;
-#define gOv040RewardAnimationState data_ov040_020be284
+extern Ov040RewardAnimationState *gAreaRewardResourceGlobalsStorage;
+#define gOv040RewardAnimationState gAreaRewardResourceGlobalsStorage
 
 #endif

@@ -1,14 +1,14 @@
 #include "nitro/types.h"
 
-extern unsigned int data_ov035_020bc504;
+extern unsigned int gAreaSceneMaterialFadeWork;
 extern unsigned int ReleaseResourceAndDetach();
 
 void ReleaseAreaFadeModelIfLoaded(void) {
   int actor;
 
-  actor = data_ov035_020bc504;
-  if (*(u8 *)(data_ov035_020bc504 + 0x10b) != '\0') {
-    ReleaseResourceAndDetach(data_ov035_020bc504);
+  actor = gAreaSceneMaterialFadeWork;
+  if (*(u8 *)(gAreaSceneMaterialFadeWork + 0x10b) != '\0') {
+    ReleaseResourceAndDetach(gAreaSceneMaterialFadeWork);
     *(u8 *)(actor + 0x10b) = 0;
   }
 }

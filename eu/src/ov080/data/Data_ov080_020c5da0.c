@@ -15,7 +15,7 @@ extern void UpdateSaveSelectScreen(void);
 extern void SaveSelect_ConsumeLButtonNoop(void);
 extern void SaveSelect_ConsumeRButtonNoop(void);
 
-void *data_ov080_020c5da0[17] = {
+void *gSaveSelectMenuDescriptor[17] = {
     (void *)InitSaveSelectScreen,
     (void *)DestroySaveSelectScreen,
     (void *)UpdateSaveSelectScreen,

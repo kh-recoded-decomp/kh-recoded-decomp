@@ -5,14 +5,14 @@ typedef struct {
     u16 flags;
 } SoundCtx;
 
-extern SoundCtx *data_ov033_020baae0;
+extern SoundCtx *gResumeModeWorkStorage;
 
 BOOL IsResumeModeReady(void)
 {
-    if (data_ov033_020baae0 == NULL) {
+    if (gResumeModeWorkStorage == NULL) {
         return FALSE;
     }
-    if ((data_ov033_020baae0->flags & 1) == 0) {
+    if ((gResumeModeWorkStorage->flags & 1) == 0) {
         return TRUE;
     }
     return FALSE;

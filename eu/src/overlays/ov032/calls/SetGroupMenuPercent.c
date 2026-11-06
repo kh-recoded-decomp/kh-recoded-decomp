@@ -1,4 +1,4 @@
 #define SetGroupMenuPercent_020bbb7c SetGroupMenuPercent
 #define SetGroupMenuProgress_020bb9b8 SetGroupMenuProgress
-#define contextData_020c0068 data_ov032_020c0088
+#define contextData_020c0068 gGroupMenuGaugeGlobalsStorage
 #include "src/ov032/object_group/SetGroupMenuPercent_020bbb7c.c"

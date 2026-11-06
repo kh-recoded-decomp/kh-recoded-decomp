@@ -2,5 +2,5 @@
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define RemoveIntrusiveListObject_020129d8 NNS_FndRemoveListObject
 #define RemoveListEntry_020bc70c RemoveListEntry
-#define data_ov039_020bea00 data_ov039_020bea20
+#define data_ov039_020bea00 gMenuOverlayWork
 #include "src/ov039/reviewed_helpers/RemoveListEntry_020bc70c.c"

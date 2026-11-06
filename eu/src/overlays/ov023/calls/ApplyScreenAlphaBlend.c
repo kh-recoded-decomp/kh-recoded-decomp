@@ -1,4 +1,4 @@
 #define ApplyScreenAlphaBlend_020b6e60 ApplyScreenAlphaBlend
-#define g_screenState_020b6f64 data_ov023_020b6f84
+#define g_screenState_020b6f64 gMapMenuWork
 #define set_engine_alpha_blend_0204f400 set_engine_alpha_blend
 #include "src/ov023/shared_engine/ApplyScreenAlphaBlend_020b6e60.c"

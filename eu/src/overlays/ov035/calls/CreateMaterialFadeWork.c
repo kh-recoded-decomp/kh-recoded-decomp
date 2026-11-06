@@ -1,6 +1,6 @@
 #define CreateMaterialFadeWork_020bb4a4 CreateMaterialFadeWork
 #define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
-#define data_ov035_020bc4e4 data_ov035_020bc504
+#define data_ov035_020bc4e4 gAreaSceneMaterialFadeWork
 #define func_01ff8740 MIi_CpuClearFast
 #define func_01ff8830 MI_CpuFill8
 #include "src/ov035/unclassified_helpers/CreateMaterialFadeWork_020bb4a4.c"

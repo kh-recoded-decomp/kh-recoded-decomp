@@ -25,7 +25,7 @@ typedef struct {
     void *extraBuffer;
 } Ov039State;
 
-extern Ov039State *data_ov039_020bea20;
+extern Ov039State *gMenuOverlayWork;
 extern u8 sOv039_MENUMNGR_020be81c[];
 extern int GetPrimaryMenuSubOverlayIndex(void);
 extern void ShutdownHandlersAndExit(void);
@@ -50,7 +50,7 @@ extern void OS_ResetSystem(u32 newSlot0);
 
 void ShutdownOverlay(void)
 {
-    Ov039State *state = data_ov039_020bea20;
+    Ov039State *state = gMenuOverlayWork;
     BOOL resetOnExit = state->resetOnExit;
 
     if (GetPrimaryMenuSubOverlayIndex() != -1) {
@@ -68,10 +68,10 @@ void ShutdownOverlay(void)
     FreeAllocatedBuffers(state->screenLayers);
     UnloadAllSubOverlays();
     FSi_DefaultStepDoneB(state->stepState);
-    FreeResourceBufferAndProbeHeap(&data_ov039_020bea20->resources[0]);
-    FreeResourceBufferAndProbeHeap(&data_ov039_020bea20->resources[1]);
-    FreeResourceBufferAndProbeHeap(&data_ov039_020bea20->resources[2]);
-    FreeResourceBufferAndProbeHeap(&data_ov039_020bea20->resources[3]);
+    FreeResourceBufferAndProbeHeap(&gMenuOverlayWork->resources[0]);
+    FreeResourceBufferAndProbeHeap(&gMenuOverlayWork->resources[1]);
+    FreeResourceBufferAndProbeHeap(&gMenuOverlayWork->resources[2]);
+    FreeResourceBufferAndProbeHeap(&gMenuOverlayWork->resources[3]);
     ReleaseRecordSlot(2);
     ReleaseRecordSlot(0);
     ReleaseRecordSlot(1);

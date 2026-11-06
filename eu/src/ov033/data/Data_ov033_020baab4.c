@@ -5,7 +5,7 @@
 extern void InitResumeModeContext(void);
 extern void ShutdownResumeModeContext(void);
 
-void *data_ov033_020baab4[11] = {
+void *gResumeModeTaskClassStorage[11] = {
     (void *)0x0002000E,
     (void *)InitResumeModeContext,
     (void *)ShutdownResumeModeContext,

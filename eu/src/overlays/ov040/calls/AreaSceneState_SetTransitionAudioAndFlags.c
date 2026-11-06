@@ -2,7 +2,7 @@
 #include "nitro/types.h"
 
 extern u32 gMovieContextState;
-extern u32 data_ov040_020be280;
+extern u32 gAreaRewardSceneWork;
 extern void PlaySoundChecked();
 extern int IsSessionFlagSet();
 extern void func_ov001_02064184();
@@ -20,6 +20,6 @@ u32 AreaSceneState_SetTransitionAudioAndFlags(void)
     *(u16 *)(gMovieContextState + 6) = *(u16 *)(gMovieContextState + 6) | 0x20;
     *(u16 *)(gMovieContextState + 0x22) = *(u16 *)(gMovieContextState + 0x22) | 0x100;
     *(u16 *)(gMovieContextState + 0x24) = *(u16 *)(gMovieContextState + 0x24) | 0x100;
-    *(u16 *)(data_ov040_020be280 + 0x13c) = *(u16 *)(data_ov040_020be280 + 0x13c) | 0x8000;
+    *(u16 *)(gAreaRewardSceneWork + 0x13c) = *(u16 *)(gAreaRewardSceneWork + 0x13c) | 0x8000;
     return 9;
 }

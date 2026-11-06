@@ -1,6 +1,6 @@
 #define ApplyOverlayScaleMode_020baab4 ApplyOverlayScaleMode
 #define RunSceneStateMachine_020ba4c0 RunSceneStateMachine_020ba4e0
 #define data_ov030_020bcf98 gMovieSceneStateHandlers
-#define data_ov030_020bd000 data_ov030_020bd020
+#define data_ov030_020bd000 gOv030SceneWork
 #define func_ov030_020baa98 DrawOv030FieldScene
 #include "src/ov030/shared_engine/RunSceneStateMachine_020ba4c0.c"

@@ -1,7 +1,7 @@
 #define MIi_CpuClearFast_01ff8740 MIi_CpuClearFast
 #define SetPopupState_020c2784 SetPopupState
 #define UpdatePopupManager_020c194c UpdatePopupManager
-#define data_ov091_020c29f0 data_ov091_020c2a10
+#define data_ov091_020c29f0 gReportTopPopupStateHandlers
 #define func_ov091_020c2794 ReportTopPopup_GetState
 #define g_popupManager_020c373c data_ov091_020c375c
 #include "src/ov091/panel_state/UpdatePopupManager_020c194c.c"

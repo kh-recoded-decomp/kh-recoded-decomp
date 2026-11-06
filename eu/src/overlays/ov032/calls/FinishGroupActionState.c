@@ -1,4 +1,4 @@
 #define FinishGroupActionState_020bb25c FinishGroupActionState
-#define contextData_020c0060 data_ov032_020c0080
+#define contextData_020c0060 gGroupSceneGlobals
 #define func_ov001_0206a814 IsScreenModeIdle
 #include "src/ov032/object_group/FinishGroupActionState_020bb25c.c"

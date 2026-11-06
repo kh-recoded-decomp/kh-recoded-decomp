@@ -1,5 +1,5 @@
 #define QuadTree_RemoveObject_02033c60 QuadTree_RemoveObject
 #define RemoveGroupObjectsFromTree_020bbde4 RemoveGroupObjectsFromTree
 #define func_02036230 GetActorRegistry
-#define g_activeState_020bc800 data_ov031_020bc820
+#define g_activeState_020bc800 gOv031SceneWorkStorage
 #include "src/ov031/overlay_state/RemoveGroupObjectsFromTree_020bbde4.c"

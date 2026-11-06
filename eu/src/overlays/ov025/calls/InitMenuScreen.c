@@ -26,5 +26,5 @@
 #define func_ov027_020b8f98 LoadWidgetDescriptorsFromFile
 #define func_ov027_020b90a4 FindWidgetById
 #define func_ov027_020b9a0c InitTileTableFrom
-#define g_uiContext_020b7760 data_ov025_020b7780
+#define g_uiContext_020b7760 gMenuListWorkStorage
 #include "src/ov025/shared_engine/InitMenuScreen_020b5acc.c"

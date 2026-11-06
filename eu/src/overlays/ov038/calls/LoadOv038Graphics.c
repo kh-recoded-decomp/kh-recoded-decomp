@@ -3,5 +3,5 @@
 #define LoadOv038Graphics_020bae5c LoadOv038Graphics
 #define func_0202b554 GetBgDataFromArchive
 #define func_0202c478 Archive_LoadFile
-#define g_ov038Context_020bd144 data_ov038_020bd164
+#define g_ov038Context_020bd144 gResultsPageContextStorage
 #include "src/ov038/unclassified_helpers/LoadOv038Graphics_020bae5c.c"

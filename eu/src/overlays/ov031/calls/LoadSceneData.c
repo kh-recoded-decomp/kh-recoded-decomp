@@ -142,7 +142,7 @@ typedef struct SceneState {
     LinkState links[2];
 } SceneState;
 
-extern SceneState *data_ov031_020bc820;
+extern SceneState *gOv031SceneWorkStorage;
 
 extern void FreeSceneRecords(void);
 extern void ResetCameraDefault(void);
@@ -218,16 +218,16 @@ void LoadSceneData(const char *areaFile, const char *recordFile)
     FreeSceneRecords();
     ResetCameraDefault();
     if (GetCtxModeByte() == 6) {
-        data_ov031_020bc820->field_b8 = 30 << 12;
+        gOv031SceneWorkStorage->field_b8 = 30 << 12;
     } else {
-        data_ov031_020bc820->field_b8 = 15 << 12;
+        gOv031SceneWorkStorage->field_b8 = 15 << 12;
     }
 
     archive = GetSessionResourceArchive();
     areaData = LoadFileAllocFromHeapTail(ARCHIVE_FILE_KEY(archive, findSharedResourceByName(GetSessionResourceArchive(), areaFile)), 2);
-    data_ov031_020bc820->areaCount = areaData[0];
-    data_ov031_020bc820->areas = NNSi_FndAllocFromDefaultHeap(data_ov031_020bc820->areaCount * sizeof(SceneArea));
-    MIi_CpuCopy32(areaData + 1, data_ov031_020bc820->areas, data_ov031_020bc820->areaCount * sizeof(SceneArea));
+    gOv031SceneWorkStorage->areaCount = areaData[0];
+    gOv031SceneWorkStorage->areas = NNSi_FndAllocFromDefaultHeap(gOv031SceneWorkStorage->areaCount * sizeof(SceneArea));
+    MIi_CpuCopy32(areaData + 1, gOv031SceneWorkStorage->areas, gOv031SceneWorkStorage->areaCount * sizeof(SceneArea));
     NNSi_FndFreeFromDefaultHeap(areaData);
 
     archive = GetSessionResourceArchive();
@@ -236,90 +236,90 @@ void LoadSceneData(const char *areaFile, const char *recordFile)
     recordTable = steps + file[0];
     data = recordTable + 1;
     maxGroups = 0;
-    data_ov031_020bc820->stepCount = file[0];
-    data_ov031_020bc820->stepCodes = NNSi_FndAllocFromDefaultHeap(data_ov031_020bc820->stepCount * sizeof(u32));
-    MIi_CpuCopy32(steps, data_ov031_020bc820->stepCodes, data_ov031_020bc820->stepCount * sizeof(u32));
-    data_ov031_020bc820->recordCount = recordTable[0];
-    data_ov031_020bc820->records = NNSi_FndAllocFromDefaultHeap(data_ov031_020bc820->recordCount * sizeof(SceneRecord));
-    for (i = 0; i < data_ov031_020bc820->recordCount; i++) {
-        data_ov031_020bc820->records[i].header = *(SceneRecordHeader *)(data + 1);
-        data_ov031_020bc820->records[i].groupDescCount = data[11];
-        data_ov031_020bc820->records[i].groupDescs =
-            NNSi_FndAllocFromDefaultHeap(data_ov031_020bc820->records[i].groupDescCount * sizeof(GroupDesc));
+    gOv031SceneWorkStorage->stepCount = file[0];
+    gOv031SceneWorkStorage->stepCodes = NNSi_FndAllocFromDefaultHeap(gOv031SceneWorkStorage->stepCount * sizeof(u32));
+    MIi_CpuCopy32(steps, gOv031SceneWorkStorage->stepCodes, gOv031SceneWorkStorage->stepCount * sizeof(u32));
+    gOv031SceneWorkStorage->recordCount = recordTable[0];
+    gOv031SceneWorkStorage->records = NNSi_FndAllocFromDefaultHeap(gOv031SceneWorkStorage->recordCount * sizeof(SceneRecord));
+    for (i = 0; i < gOv031SceneWorkStorage->recordCount; i++) {
+        gOv031SceneWorkStorage->records[i].header = *(SceneRecordHeader *)(data + 1);
+        gOv031SceneWorkStorage->records[i].groupDescCount = data[11];
+        gOv031SceneWorkStorage->records[i].groupDescs =
+            NNSi_FndAllocFromDefaultHeap(gOv031SceneWorkStorage->records[i].groupDescCount * sizeof(GroupDesc));
         data += 12;
-        MIi_CpuCopy32(data, data_ov031_020bc820->records[i].groupDescs,
-                      data_ov031_020bc820->records[i].groupDescCount * sizeof(GroupDesc));
-        data += data_ov031_020bc820->records[i].groupDescCount * (sizeof(GroupDesc) / 4);
-        data_ov031_020bc820->records[i].spawnCount = data[0];
-        data_ov031_020bc820->records[i].spawns =
-            NNSi_FndAllocFromDefaultHeap(data_ov031_020bc820->records[i].spawnCount * sizeof(ActorSpawn));
+        MIi_CpuCopy32(data, gOv031SceneWorkStorage->records[i].groupDescs,
+                      gOv031SceneWorkStorage->records[i].groupDescCount * sizeof(GroupDesc));
+        data += gOv031SceneWorkStorage->records[i].groupDescCount * (sizeof(GroupDesc) / 4);
+        gOv031SceneWorkStorage->records[i].spawnCount = data[0];
+        gOv031SceneWorkStorage->records[i].spawns =
+            NNSi_FndAllocFromDefaultHeap(gOv031SceneWorkStorage->records[i].spawnCount * sizeof(ActorSpawn));
         data++;
-        MIi_CpuCopy32(data, data_ov031_020bc820->records[i].spawns,
-                      data_ov031_020bc820->records[i].spawnCount * sizeof(ActorSpawn));
-        data += data_ov031_020bc820->records[i].spawnCount * (sizeof(ActorSpawn) / 4);
-        data_ov031_020bc820->records[i].itemCount = data[0];
-        data_ov031_020bc820->records[i].items =
-            NNSi_FndAllocFromDefaultHeap(data_ov031_020bc820->records[i].itemCount * sizeof(RecordItem));
+        MIi_CpuCopy32(data, gOv031SceneWorkStorage->records[i].spawns,
+                      gOv031SceneWorkStorage->records[i].spawnCount * sizeof(ActorSpawn));
+        data += gOv031SceneWorkStorage->records[i].spawnCount * (sizeof(ActorSpawn) / 4);
+        gOv031SceneWorkStorage->records[i].itemCount = data[0];
+        gOv031SceneWorkStorage->records[i].items =
+            NNSi_FndAllocFromDefaultHeap(gOv031SceneWorkStorage->records[i].itemCount * sizeof(RecordItem));
         data++;
-        MIi_CpuCopy32(data, data_ov031_020bc820->records[i].items,
-                      data_ov031_020bc820->records[i].itemCount * sizeof(RecordItem));
-        data += data_ov031_020bc820->records[i].itemCount * (sizeof(RecordItem) / 4);
-        data_ov031_020bc820->records[i].panelCount = data[0];
-        data_ov031_020bc820->records[i].panelSpawns =
-            NNSi_FndAllocFromDefaultHeap(data_ov031_020bc820->records[i].panelCount * sizeof(PanelSpawn));
+        MIi_CpuCopy32(data, gOv031SceneWorkStorage->records[i].items,
+                      gOv031SceneWorkStorage->records[i].itemCount * sizeof(RecordItem));
+        data += gOv031SceneWorkStorage->records[i].itemCount * (sizeof(RecordItem) / 4);
+        gOv031SceneWorkStorage->records[i].panelCount = data[0];
+        gOv031SceneWorkStorage->records[i].panelSpawns =
+            NNSi_FndAllocFromDefaultHeap(gOv031SceneWorkStorage->records[i].panelCount * sizeof(PanelSpawn));
         data++;
-        MIi_CpuCopy32(data, data_ov031_020bc820->records[i].panelSpawns,
-                      data_ov031_020bc820->records[i].panelCount * sizeof(PanelSpawn));
-        data += data_ov031_020bc820->records[i].panelCount * (sizeof(PanelSpawn) / 4);
-        if (maxGroups < data_ov031_020bc820->records[i].groupDescCount) {
-            maxGroups = data_ov031_020bc820->records[i].groupDescCount;
+        MIi_CpuCopy32(data, gOv031SceneWorkStorage->records[i].panelSpawns,
+                      gOv031SceneWorkStorage->records[i].panelCount * sizeof(PanelSpawn));
+        data += gOv031SceneWorkStorage->records[i].panelCount * (sizeof(PanelSpawn) / 4);
+        if (maxGroups < gOv031SceneWorkStorage->records[i].groupDescCount) {
+            maxGroups = gOv031SceneWorkStorage->records[i].groupDescCount;
         }
     }
-    data_ov031_020bc820->groupCount = maxGroups * 3 + 1;
-    data_ov031_020bc820->groups = NNSi_FndAllocFromDefaultHeap(data_ov031_020bc820->groupCount * sizeof(ObjectGroup));
+    gOv031SceneWorkStorage->groupCount = maxGroups * 3 + 1;
+    gOv031SceneWorkStorage->groups = NNSi_FndAllocFromDefaultHeap(gOv031SceneWorkStorage->groupCount * sizeof(ObjectGroup));
     NNSi_FndFreeFromDefaultHeap(file);
 
-    Obj_InitLinkState(&data_ov031_020bc820->links[0]);
-    Obj_InitLinkState(&data_ov031_020bc820->links[1]);
-    data_ov031_020bc820->links[0].kind = 2;
-    data_ov031_020bc820->links[1].kind = 6;
-    data_ov031_020bc820->activeGroupCount = 1;
-    data_ov031_020bc820->groups[0].hidden = 0;
-    data_ov031_020bc820->groups[0].slot = 1;
-    data_ov031_020bc820->groups[0].position = MakeVec(0, 0, 0x5000);
-    data_ov031_020bc820->groups[0].mode = 0;
-    data_ov031_020bc820->groups[0].objectCount = 1;
-    data_ov031_020bc820->groups[0].polygons = NNSi_FndAllocFromDefaultHeap(sizeof(CollisionPolygon));
-    data_ov031_020bc820->groups[0].objects = NNSi_FndAllocFromDefaultHeap(sizeof(GroupObject));
-    object = Group_GetObjects(&data_ov031_020bc820->groups[0]);
-    InitCollisionObject(object, 0, &data_ov031_020bc820->links[0]);
+    Obj_InitLinkState(&gOv031SceneWorkStorage->links[0]);
+    Obj_InitLinkState(&gOv031SceneWorkStorage->links[1]);
+    gOv031SceneWorkStorage->links[0].kind = 2;
+    gOv031SceneWorkStorage->links[1].kind = 6;
+    gOv031SceneWorkStorage->activeGroupCount = 1;
+    gOv031SceneWorkStorage->groups[0].hidden = 0;
+    gOv031SceneWorkStorage->groups[0].slot = 1;
+    gOv031SceneWorkStorage->groups[0].position = MakeVec(0, 0, 0x5000);
+    gOv031SceneWorkStorage->groups[0].mode = 0;
+    gOv031SceneWorkStorage->groups[0].objectCount = 1;
+    gOv031SceneWorkStorage->groups[0].polygons = NNSi_FndAllocFromDefaultHeap(sizeof(CollisionPolygon));
+    gOv031SceneWorkStorage->groups[0].objects = NNSi_FndAllocFromDefaultHeap(sizeof(GroupObject));
+    object = Group_GetObjects(&gOv031SceneWorkStorage->groups[0]);
+    InitCollisionObject(object, 0, &gOv031SceneWorkStorage->links[0]);
     corners[0] = MakeVec(-0xa000, 0, -0x64000);
     corners[1] = MakeVec(0xa000, 0, -0x64000);
     corners[2] = MakeVec(0xa000, 0, 0x64000);
     corners[3] = MakeVec(-0xa000, 0, 0x64000);
-    object->shape = MakePolygonShape(data_ov031_020bc820->groups[0].polygons, 4, corners);
+    object->shape = MakePolygonShape(gOv031SceneWorkStorage->groups[0].polygons, 4, corners);
     object->enabled = 0;
     object->info = MakeCollisionInfo(0, 10);
-    data_ov031_020bc820->field_5b = 0;
-    for (i = 1; i < data_ov031_020bc820->groupCount; i++) {
-        data_ov031_020bc820->groups[i].polygons = NNSi_FndAllocFromDefaultHeap(0x410);
-        data_ov031_020bc820->groups[i].objects = NNSi_FndAllocFromDefaultHeap(0x2a8);
+    gOv031SceneWorkStorage->field_5b = 0;
+    for (i = 1; i < gOv031SceneWorkStorage->groupCount; i++) {
+        gOv031SceneWorkStorage->groups[i].polygons = NNSi_FndAllocFromDefaultHeap(0x410);
+        gOv031SceneWorkStorage->groups[i].objects = NNSi_FndAllocFromDefaultHeap(0x2a8);
     }
 
-    data_ov031_020bc820->field_40 = -1;
-    data_ov031_020bc820->recordIndex = -1;
-    data_ov031_020bc820->field_b0 = 0;
-    data_ov031_020bc820->field_c0 = -1;
-    data_ov031_020bc820->field_cc = 0;
-    data_ov031_020bc820->field_58 = 0;
-    data_ov031_020bc820->field_b4 = 0;
-    data_ov031_020bc820->nearestEvent = 0xffff;
-    data_ov031_020bc820->filledStepCount = 0;
-    for (i = 0; i < data_ov031_020bc820->stepCount - 1; i++) {
-        SceneRecord *record = &data_ov031_020bc820->records[data_ov031_020bc820->stepCodes[i]];
+    gOv031SceneWorkStorage->field_40 = -1;
+    gOv031SceneWorkStorage->recordIndex = -1;
+    gOv031SceneWorkStorage->field_b0 = 0;
+    gOv031SceneWorkStorage->field_c0 = -1;
+    gOv031SceneWorkStorage->field_cc = 0;
+    gOv031SceneWorkStorage->field_58 = 0;
+    gOv031SceneWorkStorage->field_b4 = 0;
+    gOv031SceneWorkStorage->nearestEvent = 0xffff;
+    gOv031SceneWorkStorage->filledStepCount = 0;
+    for (i = 0; i < gOv031SceneWorkStorage->stepCount - 1; i++) {
+        SceneRecord *record = &gOv031SceneWorkStorage->records[gOv031SceneWorkStorage->stepCodes[i]];
 
         if (record->groupDescCount != 0 || record->spawnCount != 0 || record->itemCount != 0) {
-            data_ov031_020bc820->filledStepCount++;
+            gOv031SceneWorkStorage->filledStepCount++;
         }
     }
 }

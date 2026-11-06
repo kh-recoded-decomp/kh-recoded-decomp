@@ -10,7 +10,7 @@
 #define UpdateCameraTriggers_020baccc UpdateCameraTriggers
 #define VEC_Mag_01ff9f28 VEC_Mag
 #define VEC_NormalizeUnchecked_01ff9f88 VEC_Normalize
-#define data_ov030_020bd000 data_ov030_020bd020
+#define data_ov030_020bd000 gOv030SceneWork
 #define func_ov001_0207b49c UpdatePanelMapRangePosition
 #define func_ov021_020af5f4 GetActiveSubModeCameraWork
 #define func_ov030_020bb368 GetOv030SceneLock

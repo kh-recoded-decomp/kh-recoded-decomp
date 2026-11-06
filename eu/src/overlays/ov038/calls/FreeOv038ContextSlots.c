@@ -1,4 +1,4 @@
 #define FreeOv038ContextSlots_020baf7c FreeOv038ContextSlots
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
-#define g_ov038Context_020bd144 data_ov038_020bd164
+#define g_ov038Context_020bd144 gResultsPageContextStorage
 #include "src/ov038/unclassified_helpers/FreeOv038ContextSlots_020baf7c.c"

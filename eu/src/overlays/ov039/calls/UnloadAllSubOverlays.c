@@ -1,6 +1,6 @@
 #define UnloadAllSubOverlays_020bcdd0 UnloadAllSubOverlays
-#define data_ov039_020be8cc sOv039_I_020be8ec
-#define data_ov039_020be92c sOv039_J_020be94c
-#define data_ov039_020bea84 data_ov039_020beaa4
+#define data_ov039_020be8cc gSecondaryMenuFirstOverlayId
+#define data_ov039_020be92c gPrimaryMenuFirstOverlayId
+#define data_ov039_020bea84 gMenuSubOverlayIndexStorage
 #define func_02029f98 UnloadOverlayAfterGeometryTransfer
 #include "src/ov039/overlay_handling/UnloadAllSubOverlays_020bcdd0.c"

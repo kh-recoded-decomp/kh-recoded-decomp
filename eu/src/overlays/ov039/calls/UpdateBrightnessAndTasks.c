@@ -4,7 +4,7 @@
 #define SetBrightnessAndSyncMain_02029e7c SetBrightnessAndSyncMain
 #define SetSecondaryBrightness_02029ed0 SetSecondaryBrightness
 #define UpdateBrightnessAndTasks_020bad34 UpdateBrightnessAndTasks
-#define data_ov039_020bea00 data_ov039_020bea20
+#define data_ov039_020bea00 gMenuOverlayWork
 #define func_0200a15c CP_SaveContext
 #define func_0200a19c CPi_RestoreContext
 #include "src/ov039/event_state/UpdateBrightnessAndTasks_020bad34.c"

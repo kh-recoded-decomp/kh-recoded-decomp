@@ -28,8 +28,8 @@ static inline struct SceneContext *GetSceneContextBuffer(s32 index)
 #define data_0209eb18 gSceneWorkClassDescriptor
 #define data_020b52a0 gSubModeTaskDefinition
 #define data_ov032_020c0020 sOv032_UiBtlStrLanguageP2_020c0040
-#define data_ov032_020c0030 data_ov032_020c0050
-#define data_ov032_020c0060 data_ov032_020c0080
+#define data_ov032_020c0030 gGroupMenuGaugeTaskClass
+#define data_ov032_020c0060 gGroupSceneGlobals
 #define func_0202a158 Heap_GetCurrent
 #define func_0202a448 CreateTaskObject
 #define func_ov001_020633a0 QueueFieldUpdate

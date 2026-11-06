@@ -1,8 +1,8 @@
 #include "nitro/types.h"
 
-extern u8 *data_ov031_020bc820;
+extern u8 *gOv031SceneWorkStorage;
 
 u32 GetSceneScrollTargetSpeed(void)
 {
-    return *(const u32 *)(data_ov031_020bc820 + 0x30);
+    return *(const u32 *)(gOv031SceneWorkStorage + 0x30);
 }

@@ -16,13 +16,13 @@ typedef struct Ov029SceneState {
     int timer;
 } Ov029SceneState;
 
-extern Ov029SceneState *data_ov029_020babc0;
+extern Ov029SceneState *gOv029SceneWorkStorage;
 
 void ApplyOv029SceneParams(const Ov029SceneParams *params)
 {
-    data_ov029_020babc0->valueA = params->valueA;
-    data_ov029_020babc0->valueB = params->valueB;
-    data_ov029_020babc0->kind = params->kind;
-    data_ov029_020babc0->phase = 3;
-    data_ov029_020babc0->timer = 0;
+    gOv029SceneWorkStorage->valueA = params->valueA;
+    gOv029SceneWorkStorage->valueB = params->valueB;
+    gOv029SceneWorkStorage->kind = params->kind;
+    gOv029SceneWorkStorage->phase = 3;
+    gOv029SceneWorkStorage->timer = 0;
 }

@@ -1,4 +1,4 @@
 #define ClearWidgetOnScreenLayer_020bb730 ClearWidgetOnScreenLayer
-#define data_ov039_020bea00 data_ov039_020bea20
+#define data_ov039_020bea00 gMenuOverlayWork
 #define func_ov027_020b9b94 ClearWidgetTileArea
 #include "src/ov039/widget_layers/ClearWidgetOnScreenLayer_020bb730.c"

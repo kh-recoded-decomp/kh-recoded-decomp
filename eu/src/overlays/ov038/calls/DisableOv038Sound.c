@@ -3,5 +3,5 @@
 #define ReleaseSeqArcHeapLevel_0204e040 ReleaseSeqArcHeapLevel
 #define StoreToGlobalPtr4Field28_0202a778 StoreToGlobalPtr4Field28
 #define func_02036434 ActorRegistry_ClearCollisionResult
-#define g_ov038SoundCtx_020bd140 data_ov038_020bd160
+#define g_ov038SoundCtx_020bd140 gResultsPageOuterTaskWork
 #include "src/ov038/reviewed_helpers/DisableOv038Sound_020ba5b4.c"

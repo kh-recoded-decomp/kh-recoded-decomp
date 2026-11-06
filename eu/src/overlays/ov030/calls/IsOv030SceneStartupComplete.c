@@ -1,10 +1,10 @@
 #include "nitro/types.h"
 
-extern unsigned int data_ov030_020bd020;
+extern unsigned int gOv030SceneWork;
 
 BOOL IsOv030SceneStartupComplete(void) {
-  if (data_ov030_020bd020 == 0) {
+  if (gOv030SceneWork == 0) {
     return FALSE;
   }
-  return (*(u16 *)(data_ov030_020bd020 + 6) & 1) == 0;
+  return (*(u16 *)(gOv030SceneWork + 6) & 1) == 0;
 }

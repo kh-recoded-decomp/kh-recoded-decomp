@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-extern u32 data_ov030_020bd020;
+extern u32 gOv030SceneWork;
 extern s32 IsScreenModeIdle(void);
 
 u32 Ov030SceneState_WaitFadeOut(void)
@@ -9,7 +9,7 @@ u32 Ov030SceneState_WaitFadeOut(void)
 
     ready = IsScreenModeIdle();
     if (ready != 0) {
-        *(u16 *)(data_ov030_020bd020 + 6) = *(u16 *)(data_ov030_020bd020 + 6) | 0x8000;
+        *(u16 *)(gOv030SceneWork + 6) = *(u16 *)(gOv030SceneWork + 6) | 0x8000;
         return 0x11;
     }
     return 0xffffffff;

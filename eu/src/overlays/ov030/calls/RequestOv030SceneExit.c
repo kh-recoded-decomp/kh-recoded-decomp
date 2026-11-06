@@ -1,9 +1,9 @@
 #include "nitro/types.h"
 
-extern u32 data_ov030_020bd020;
+extern u32 gOv030SceneWork;
 
 void RequestOv030SceneExit(u8 value)
 {
-    *(u8 *)(data_ov030_020bd020 + 8) = value;
-    *(u16 *)(data_ov030_020bd020 + 6) = *(u16 *)(data_ov030_020bd020 + 6) | 0x4000;
+    *(u8 *)(gOv030SceneWork + 8) = value;
+    *(u16 *)(gOv030SceneWork + 6) = *(u16 *)(gOv030SceneWork + 6) | 0x4000;
 }

@@ -31,7 +31,7 @@ typedef struct UnalignedPtr {
 struct {
     UnalignedPtr pointers0[19];
     u8 bytes1[17];
-} __attribute__((packed)) data_ov031_020bc7b8 = {
+} __attribute__((packed)) gOv031SceneStateHandlerStorage = {
     {
         {(void *)TryEnterState1},
         {(void *)EnterState2},
@@ -59,7 +59,7 @@ struct {
     },
 };
 
-void *data_ov031_020bc7a4[5] = {
+void *gOv031SceneTaskClass[5] = {
     (void *)0x0002000E,
     (void *)InitMoviePlayerState,
     (void *)ShutdownActiveState,
@@ -67,6 +67,6 @@ void *data_ov031_020bc7a4[5] = {
     NULL,
 };
 
-u32 data_ov031_020bc7a0[1] = {
+u32 gOv031SceneTaskHandle[1] = {
     0xFFFFFFFF,
 };

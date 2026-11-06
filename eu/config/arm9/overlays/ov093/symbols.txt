@@ -100,7 +100,7 @@ data_ov093_020c3d74 kind:data(any) addr:0x020c3d74
 data_ov093_020c3d94 kind:data(any) addr:0x020c3d94
 data_ov093_020c3db4 kind:data(any) addr:0x020c3db4
 data_ov093_020c3de4 kind:data(any) addr:0x020c3de4
-data_ov093_020c3e74 kind:data(any) addr:0x020c3e74
+gTrophyPopupStateHandlers kind:data(any) addr:0x020c3e74
 gTrophyReportResourcePaths kind:data(any) addr:0x020c3ea0
 gTrophyReportTextPaths kind:data(any) addr:0x020c3eac
 sOv093_UiReportTrophyP2f_020c3ebc kind:data(any) addr:0x020c3ebc
@@ -112,7 +112,7 @@ sOv093_UiReportTextLanguageTrophyDetailSZ_020c3f48 kind:data(any) addr:0x020c3f4
 sOv093_UiReportTextLanguageTrophyAchievementSZ_020c3f6c kind:data(any) addr:0x020c3f6c
 data_ov093_020c3f94 kind:data(any) addr:0x020c3f94
 data_ov093_020c3fd4 kind:data(any) addr:0x020c3fd4
-data_ov093_020c4014 kind:data(any) addr:0x020c4014 ambiguous
+gTrophyReportMenuDescriptor kind:data(any) addr:0x020c4014 ambiguous
 data_ov093_020c4058 kind:data(any) addr:0x020c4058
 data_ov093_020c4084 kind:data(any) addr:0x020c4084
 data_ov093_020c40b0 kind:data(any) addr:0x020c40b0

@@ -5,9 +5,9 @@ typedef struct MapMenuState {
     BOOL dirty;
 } MapMenuState;
 
-extern MapMenuState *data_ov023_020b6f84;
+extern MapMenuState *gMapMenuWork;
 
 void MarkMapMenuDirty(void)
 {
-    data_ov023_020b6f84->dirty = TRUE;
+    gMapMenuWork->dirty = TRUE;
 }

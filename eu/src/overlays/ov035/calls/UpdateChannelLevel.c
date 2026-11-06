@@ -1,5 +1,5 @@
 #define UpdateChannelLevel_020bc250 UpdateChannelLevel
-#define data_ov035_020bc4e8 data_ov035_020bc508
+#define data_ov035_020bc4e8 gAreaSceneGaugeGlobalsStorage
 #define func_ov035_020bb7a8 RemapMovieMenuValue
 #define func_ov035_020bb7fc DrawDigitRow
 #include "src/ov035/unclassified_helpers/UpdateChannelLevel_020bc250.c"

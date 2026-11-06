@@ -7,7 +7,7 @@ typedef struct {
     int state;
 } SceneState;
 
-extern SceneState *data_ov029_020babc0;
+extern SceneState *gOv029SceneWorkStorage;
 extern int (*const gOv029SoundControlHandlers[])(void);
 
 extern void UpdateOv029FieldScene(int mode);
@@ -17,16 +17,16 @@ int RunSceneStateMachine_020ba4c4(void) {
     int next;
 
     do {
-        data_ov029_020babc0->flags &= 0x7fff;
-        next = gOv029SoundControlHandlers[data_ov029_020babc0->state]();
+        gOv029SceneWorkStorage->flags &= 0x7fff;
+        next = gOv029SoundControlHandlers[gOv029SceneWorkStorage->state]();
         if (next >= 0) {
-            data_ov029_020babc0->state = next;
+            gOv029SceneWorkStorage->state = next;
         }
-    } while (data_ov029_020babc0->flags & 0x8000);
-    if (data_ov029_020babc0->flags & 8) {
+    } while (gOv029SceneWorkStorage->flags & 0x8000);
+    if (gOv029SceneWorkStorage->flags & 8) {
         UpdateOv029FieldScene(0);
     }
-    if (data_ov029_020babc0->flags & 4) {
+    if (gOv029SceneWorkStorage->flags & 4) {
         DrawOv029FieldScene();
     }
     return 0;

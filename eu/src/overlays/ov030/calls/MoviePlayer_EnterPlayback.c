@@ -15,7 +15,7 @@ typedef struct {
     VecFx32 target;
 } SubModeView;
 
-extern MoviePlayerCtx *data_ov030_020bd020;
+extern MoviePlayerCtx *gOv030SceneWork;
 extern s8 GetCtxModeByte(void);
 extern void LoadContextResourceGroups(int mode);
 extern void ForwardSubModePairB(int a, int b);
@@ -35,7 +35,7 @@ extern void SetStreamVolumePercent(int percent);
 
 int MoviePlayer_EnterPlayback(void)
 {
-    MoviePlayerCtx *ctx = data_ov030_020bd020;
+    MoviePlayerCtx *ctx = gOv030SceneWork;
     int mode;
 
     if (GetCtxModeByte() == 1) {
@@ -52,19 +52,19 @@ int MoviePlayer_EnterPlayback(void)
     if (!IsSessionFlagSet(0x3309) && ctx->pendingEntry != 3) {
         SetFieldEntriesPaused(0);
     }
-    data_ov030_020bd020->flags |= 0xc;
+    gOv030SceneWork->flags |= 0xc;
     if (ctx->pendingEntry == 0) {
         ctx->flags &= ~0x20;
     }
     ReloadFirstType11FieldObjectModels();
-    data_ov030_020bd020->cameraPos = *GetManagedActorPosition(0);
-    data_ov030_020bd020->cameraTarget = GetActiveSubModeCameraWork()->target;
+    gOv030SceneWork->cameraPos = *GetManagedActorPosition(0);
+    gOv030SceneWork->cameraTarget = GetActiveSubModeCameraWork()->target;
     if (!IsSessionFlagSet(0x360c)) {
         UpdateEventObjects();
         ForwardToActiveService_02088074();
     }
     CacheSeqArcStatus(2);
     SetStreamVolumePercent(0x46);
-    data_ov030_020bd020->flags |= 0x8000;
+    gOv030SceneWork->flags |= 0x8000;
     return 6;
 }

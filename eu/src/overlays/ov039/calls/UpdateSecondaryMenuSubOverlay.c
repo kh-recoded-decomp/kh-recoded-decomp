@@ -1,11 +1,11 @@
-extern int data_ov039_020beaa4[];
-extern char data_ov039_020be8f0[];
+extern int gMenuSubOverlayIndexStorage[];
+extern char gSecondaryMenuRegistryTail[];
 
 void UpdateSecondaryMenuSubOverlay(int arg0)
 {
-    int index = data_ov039_020beaa4[1];
+    int index = gMenuSubOverlayIndexStorage[1];
 
     if (index != -1) {
-        ((void (*)(int))*(int *)(*(char **)(data_ov039_020be8f0 + index * 8) + 8))(arg0);
+        ((void (*)(int))*(int *)(*(char **)(gSecondaryMenuRegistryTail + index * 8) + 8))(arg0);
     }
 }

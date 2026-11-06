@@ -6,5 +6,5 @@
 #define PXI_Init_0202a638 DestroyTaskObjectWrapper
 #define func_0204df9c SetSoundListenersEnabled
 #define func_ov001_020667b4 SuspendTaskAndSetFlag
-#define g_moviePlayerCtx_020bd000 data_ov030_020bd020
+#define g_moviePlayerCtx_020bd000 gOv030SceneWork
 #include "src/ov030/movie/MoviePlayer_Close_020ba518.c"

@@ -11,7 +11,7 @@
 #define data_ov035_020bc4e0 gMovieContextState
 #define data_ov040_020be234 sOv040_RpgEnpEP_020be254
 #define data_ov040_020be240 sOv040_RpgEnpBL_020be260
-#define data_ov040_020be260 data_ov040_020be280
+#define data_ov040_020be260 gAreaRewardSceneWork
 #define func_01ff86fc MIi_CpuClear32
 #define func_01ff8740 MIi_CpuClearFast
 #define func_01ff89a8 MI_CpuCopy8

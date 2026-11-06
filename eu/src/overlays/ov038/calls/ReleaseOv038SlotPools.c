@@ -1,5 +1,5 @@
 #define Obj_Release_0204eff8 Obj_Release
 #define ReleaseOv038SlotPools_020bb0c0 ReleaseOv038SlotPools
 #define Slot_UnlinkAll_0204f104 Slot_UnlinkAll
-#define g_ov038Context_020bd144 data_ov038_020bd164
+#define g_ov038Context_020bd144 gResultsPageContextStorage
 #include "src/ov038/unclassified_helpers/ReleaseOv038SlotPools_020bb0c0.c"

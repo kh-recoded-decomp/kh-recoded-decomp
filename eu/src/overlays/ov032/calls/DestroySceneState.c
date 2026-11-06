@@ -10,5 +10,5 @@
 #define SetSoundListenersEnabled_0204df9c SetSoundListenersEnabled
 #define SuspendTaskAndSetFlag_020667b4 SuspendTaskAndSetFlag
 #define data_ov001_020a0460 data_ov001_020a0480
-#define data_ov032_020c0060 data_ov032_020c0080
+#define data_ov032_020c0060 gGroupSceneGlobals
 #include "src/ov032/unclassified_helpers/DestroySceneState_020ba804.c"

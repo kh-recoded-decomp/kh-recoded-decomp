@@ -5,5 +5,5 @@
 #define SetGaugeLevel_020bbef0 SetGaugeLevel
 #define SetTagRecordArmed_020b83e8 SetTagRecordArmed
 #define TagTracker_InvokeCallback_020b8210 TagTracker_InvokeCallback
-#define data_ov035_020bc4e8 data_ov035_020bc508
+#define data_ov035_020bc4e8 gAreaSceneGaugeGlobalsStorage
 #include "src/ov035/unclassified_helpers/SetGaugeLevel_020bbef0.c"

@@ -22,7 +22,7 @@ ApplyOv029SceneParams kind:function(arm,size=0x48) addr:0x020baaa4
 CanOv029SceneAdvanceSession kind:function(arm,size=0x8) addr:0x020baaec
 GetOv029FieldTransitionFlags kind:function(arm,size=0x8) addr:0x020baaf4
 InstallOv029SceneHandlers kind:function(arm,size=0x80) addr:0x020baafc
-data_ov029_020bab80 kind:data(any) addr:0x020bab80
-data_ov029_020bab84 kind:data(any) addr:0x020bab84
+gOv029SceneTaskHandle kind:data(any) addr:0x020bab80
+gOv029SceneTaskClass kind:data(any) addr:0x020bab84
 gOv029SoundControlHandlers kind:data(any) addr:0x020bab98
-data_ov029_020babc0 kind:bss addr:0x020babc0
+gOv029SceneWorkStorage kind:bss addr:0x020babc0

@@ -1,6 +1,6 @@
 #define StateMachine_SetState_020c3bc4 StateMachine_SetState
 #define UpdatePopupManager_020c2d80 UpdatePopupManager_020c2da0
-#define data_ov093_020c3e54 data_ov093_020c3e74
+#define data_ov093_020c3e54 gTrophyPopupStateHandlers
 #define func_01ff8740 MIi_CpuClearFast
 #define func_ov093_020c3bd4 TrophyPopup_GetState
 #define g_popupManager_020c50e4 data_ov093_020c5104

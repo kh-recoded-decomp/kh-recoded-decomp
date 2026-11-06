@@ -1,4 +1,4 @@
 #define SetOv038SpriteOffset_020bb2ac SetOv038SpriteOffset
 #define func_0204f13c IndexedRecord_SetPair
-#define g_ov038Context_020bd144 data_ov038_020bd164
+#define g_ov038Context_020bd144 gResultsPageContextStorage
 #include "src/ov038/unclassified_helpers/SetOv038SpriteOffset_020bb2ac.c"

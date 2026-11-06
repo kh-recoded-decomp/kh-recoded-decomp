@@ -3,5 +3,5 @@
 #define UpdateWidgetLayerDefault_020b9df0 UpdateWidgetLayerDefault_020b9e10
 #define data_ov039_020be734 data_ov039_020be754
 #define data_ov039_020be7e0 gMainBgScreenLoaders
-#define data_ov039_020bea00 data_ov039_020bea20
+#define data_ov039_020bea00 gMenuOverlayWork
 #include "src/ov039/widget_layers/LoadBgLayerSet3_020bab8c.c"

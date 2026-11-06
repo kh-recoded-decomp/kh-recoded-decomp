@@ -1,5 +1,5 @@
 #define RefreshRemainingCount_020b58d8 RefreshRemainingCount
-#define data_ov025_020b7760 data_ov025_020b7780
+#define data_ov025_020b7760 gMenuListWorkStorage
 #define func_ov025_020b582c AdvanceMenuDelayCounter
 #define func_ov025_020b5858 DrawRemainingCountText
 #define func_ov025_020b74d8 GetListPathEntryCount

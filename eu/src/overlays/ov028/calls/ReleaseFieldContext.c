@@ -5,5 +5,5 @@
 #define ReleaseFieldContext_020ba60c ReleaseFieldContext
 #define func_0204df9c SetSoundListenersEnabled
 #define func_ov001_020667b4 SuspendTaskAndSetFlag
-#define g_fieldContext_020bb380 data_ov028_020bb3a0
+#define g_fieldContext_020bb380 gOv028FieldSceneWorkStorage
 #include "src/ov028/unclassified_helpers/ReleaseFieldContext_020ba60c.c"

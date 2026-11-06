@@ -9,7 +9,7 @@ typedef struct OverlayDisplaySession {
     int updateInProgress;
     void *updateRegistration;
 } OverlayDisplaySession;
-extern OverlayDisplaySession *data_ov026_020b5b20;
+extern OverlayDisplaySession *gOverlayDisplaySessionWorkStorage;
 extern OverlayDisplaySession *GetRunningTaskWork(void);
 extern void GXS_LoadBGPltt(const void *source, unsigned offset, unsigned size);
 extern void InitializeOverlayDisplaySession(OverlayDisplaySession *session, int *alternateUpdate);
@@ -23,7 +23,7 @@ int (*BeginOverlayDisplaySession(void))(void) {
     OverlayDisplaySession *session = GetRunningTaskWork();
     unsigned short paletteValue = 0;
     int alternateUpdate;
-    data_ov026_020b5b20 = session;
+    gOverlayDisplaySessionWorkStorage = session;
     alternateUpdate = 1;
     GXS_LoadBGPltt(&paletteValue, 0, 2);
     InitializeOverlayDisplaySession(session, &alternateUpdate);

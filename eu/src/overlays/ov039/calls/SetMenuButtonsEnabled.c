@@ -2,6 +2,6 @@
 #define SetMenuButtonsEnabled_020bae84 SetMenuButtonsEnabled
 #define SetWidgetRootDpadEnabled_020b9874 SetWidgetRootDpadEnabled
 #define SetWidgetRootTouchEnabled_020b984c SetWidgetRootTouchEnabled
-#define data_ov039_020bea00 data_ov039_020bea20
+#define data_ov039_020bea00 gMenuOverlayWork
 #define func_ov027_020b85c4 MarkTrackerPreviousTouchDown
 #include "src/ov039/event_state/SetMenuButtonsEnabled_020bae84.c"

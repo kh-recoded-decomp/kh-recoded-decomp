@@ -1,7 +1,7 @@
 #define InitStreamBufferPair_020bacbc StartMenuBrightnessTweens
 #define SetMenuButtonsEnabled_020bae84 SetMenuButtonsEnabled
 #define StartSubScene_020bbf78 StartSubScene
-#define data_ov039_020bea00 data_ov039_020bea20
+#define data_ov039_020bea00 gMenuOverlayWork
 #define func_ov039_020baae0 SetMenuPhase
 #define func_ov039_020bd624 GetPrimaryMenuSubOverlayIndex
 #include "src/ov039/event_state/StartSubScene_020bbf78.c"

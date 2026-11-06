@@ -1,5 +1,5 @@
 #define StoreToGlobalPtr4Field28_0202a778 StoreToGlobalPtr4Field28
 #define TryEnterState7_020ba7c4 TryEnterState7
 #define func_ov001_0207b688 RequestSubsceneMode0Or1FromMode4
-#define g_activeState_020bc800 data_ov031_020bc820
+#define g_activeState_020bc800 gOv031SceneWorkStorage
 #include "src/ov031/state_machine/TryEnterState7_020ba7c4.c"

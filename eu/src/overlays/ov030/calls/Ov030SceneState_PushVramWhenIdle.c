@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-extern u32 data_ov030_020bd020;
+extern u32 gOv030SceneWork;
 extern s32 func_ov001_02063620(void);
 extern void PushVramState(void);
 
@@ -13,6 +13,6 @@ u32 Ov030SceneState_PushVramWhenIdle(void)
         return 0xffffffff;
     }
     PushVramState();
-    *(u16 *)(data_ov030_020bd020 + 6) = *(u16 *)(data_ov030_020bd020 + 6) | 0x8000;
+    *(u16 *)(gOv030SceneWork + 6) = *(u16 *)(gOv030SceneWork + 6) | 0x8000;
     return 1;
 }

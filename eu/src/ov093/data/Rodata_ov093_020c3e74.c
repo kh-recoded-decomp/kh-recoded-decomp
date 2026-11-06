@@ -9,7 +9,7 @@ extern void TrophyPopup_HandleState0Noop(void);
 extern void OpenPopupMessage(void);
 extern void WaitForPopupDismiss(void);
 
-void *const data_ov093_020c3e74[9] = {
+void *const gTrophyPopupStateHandlers[9] = {
     (void *)TrophyPopup_HandleState0Noop,
     (void *)StartNextPopup,
     (void *)OpenPopupMessage,

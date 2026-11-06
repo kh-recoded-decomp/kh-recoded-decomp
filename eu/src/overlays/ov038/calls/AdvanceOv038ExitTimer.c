@@ -3,5 +3,5 @@
 #define StopSoundStreamAtIndex_0204deb0 StopSoundStreamAtIndex
 #define func_02029e7c SetBrightnessAndSyncMain
 #define func_02029ed0 SetSecondaryBrightness
-#define g_ov038Context_020bd144 data_ov038_020bd164
+#define g_ov038Context_020bd144 gResultsPageContextStorage
 #include "src/ov038/unclassified_helpers/AdvanceOv038ExitTimer_020babb4.c"

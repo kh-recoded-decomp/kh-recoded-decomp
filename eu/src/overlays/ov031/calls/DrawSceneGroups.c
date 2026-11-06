@@ -1,5 +1,5 @@
 #define DrawSceneGroups_020bb2d4 DrawSceneGroups
 #define GetActiveSceneSlot_02068214 GetActiveSceneSlot
 #define SceneNode_Draw_01ffb12c SceneNode_Draw
-#define g_activeState_020bc800 data_ov031_020bc820
+#define g_activeState_020bc800 gOv031SceneWorkStorage
 #include "src/ov031/overlay_state/DrawSceneGroups_020bb2d4.c"

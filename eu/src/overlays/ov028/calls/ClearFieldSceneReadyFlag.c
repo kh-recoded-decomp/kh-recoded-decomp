@@ -5,11 +5,11 @@ typedef struct FieldSceneState {
     u16 flags;
 } FieldSceneState;
 
-extern FieldSceneState *data_ov028_020bb3a0;
+extern FieldSceneState *gOv028FieldSceneWorkStorage;
 
 u32 ClearFieldSceneReadyFlag(void)
 {
-    FieldSceneState *state = data_ov028_020bb3a0;
+    FieldSceneState *state = gOv028FieldSceneWorkStorage;
     u32 flags = state->flags & 0xfffd;
     state->flags = flags;
     return flags;

@@ -4,7 +4,7 @@
 #define ResetMapMenuScreen_020b6cf4 ResetMapMenuScreen
 #define SetSlotAnimSequence_0204f24c SetSlotAnimSequence
 #define Slot_SetMode2Bit_0204f480 SetIndexedRecordMode
-#define data_ov023_020b6f64 data_ov023_020b6f84
+#define data_ov023_020b6f64 gMapMenuWork
 #define func_0204f0c0 UnlinkActiveIndexedRecord
 #define func_0204f378 IndexedRecords_SetFlag2
 #include "src/ov023/menu_graphics/ResetMapMenuScreen_020b6cf4.c"

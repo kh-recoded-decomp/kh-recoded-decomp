@@ -2,5 +2,5 @@
 #define DestroyResourceCache_020b5a08 DestroyResourceCache
 #define func_0202a638 DestroyTaskObjectWrapper
 #define func_ov001_0207b200 SetSubsceneBgSetupCallback
-#define g_resourceCache_020b6f60 data_ov023_020b6f80
+#define g_resourceCache_020b6f60 gMenuResourceCacheWork
 #include "src/ov023/shared_engine/DestroyResourceCache_020b5a08.c"

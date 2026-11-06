@@ -1,5 +1,5 @@
 #define func_ov001_0206a72c BeginFieldScreenModeTransition
 #define InitializeGroupAction_020bb12c InitializeGroupAction
-#define contextData_020c0060 data_ov032_020c0080
+#define contextData_020c0060 gGroupSceneGlobals
 #define func_ov032_020ba604 UpdateStageLinkPanels
 #include "src/ov032/object_group/InitializeGroupAction_020bb12c.c"

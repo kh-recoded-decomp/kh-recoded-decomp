@@ -1,4 +1,4 @@
-#define data_020be930 data_ov039_020be950
-#define data_020bea84 data_ov039_020beaa4
+#define data_020be930 gPrimaryMenuRegistryTail
+#define data_020bea84 gMenuSubOverlayIndexStorage
 #define func_ov039_020bd634 GetPrimaryMenuSecondaryOverlayIndex
 #include "src/ov039/reviewed_helpers/func_ov039_020bd634.c"

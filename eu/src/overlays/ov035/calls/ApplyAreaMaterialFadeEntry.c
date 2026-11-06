@@ -42,7 +42,7 @@ typedef struct ScriptOperand {
     short type;
     LayoutU8 undecodedPayload[6];
 } ScriptOperand;
-extern int data_ov035_020bc504;
+extern int gAreaSceneMaterialFadeWork;
 extern int NNS_G3dMdlGetMdlAlpha();
 extern int NNS_G3dMdlSetMdlAlpha();
 extern int NNS_G3dMdlSetMdlPolygonID();
@@ -54,12 +54,12 @@ void ApplyAreaMaterialFadeEntry(int index) {
   char *entry;
   int entries;
 
-  work = data_ov035_020bc504;
+  work = gAreaSceneMaterialFadeWork;
   index = index * 4;
-  entries = *(int *)(data_ov035_020bc504 + 0x10c);
+  entries = *(int *)(gAreaSceneMaterialFadeWork + 0x10c);
   entry = (char *)(entries + index);
   previousAlpha = NNS_G3dMdlGetMdlAlpha
-                    (*(void **)(data_ov035_020bc504 + 0x78),(int)*(char *)(entries + index));
+                    (*(void **)(gAreaSceneMaterialFadeWork + 0x78),(int)*(char *)(entries + index));
   NNS_G3dMdlSetMdlAlpha
             (*(void **)(work + 0x78),(int)*(char *)(entries + index),(int)entry[2]);
   NNS_G3dMdlSetMdlPolygonID(*(void **)(work + 0x78),(int)*(char *)(entries + index),0x28)

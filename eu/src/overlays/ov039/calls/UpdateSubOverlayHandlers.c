@@ -17,7 +17,7 @@ typedef struct Ov039State {
     u8 startDelay;
 } Ov039State;
 
-extern Ov039State *data_ov039_020bea20;
+extern Ov039State *gMenuOverlayWork;
 extern char sOv039_MENUMNGR_020be81c[];
 extern int LoadPrimarySubOverlay(int index);
 extern int LoadSecondarySubOverlay(int index);
@@ -37,7 +37,7 @@ extern void UpdateBrightnessAndTasks(void);
 
 void UpdateSubOverlayHandlers(void)
 {
-    Ov039State *state = data_ov039_020bea20;
+    Ov039State *state = gMenuOverlayWork;
 
     if (state->primaryWork == NULL) {
         u32 size;

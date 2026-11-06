@@ -1,4 +1,4 @@
 #define DispatchActiveOverlayCallback_020bceb0 DispatchActiveOverlayCallback
-#define active_handler_indices data_ov039_020beaa4
-#define handler_table data_ov039_020be950
+#define active_handler_indices gMenuSubOverlayIndexStorage
+#define handler_table gPrimaryMenuRegistryTail
 #include "src/ov039/overlay_handling/DispatchActiveOverlayCallback_020bceb0.c"

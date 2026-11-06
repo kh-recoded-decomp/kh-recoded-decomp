@@ -4,9 +4,9 @@
 #define OS_SPrintf_02002428 OS_SPrintf
 #define ObjectManager_GetFirstEntryParam_0207ee14 ObjectManager_GetFirstEntryParam
 #define ObjectManager_GetSecondEntryParam_0207ee48 ObjectManager_GetSecondEntryParam
-#define data_ov035_020bc4a8 data_ov035_020bc4c8
+#define data_ov035_020bc4a8 gAreaSceneModelNameFormat
 #define data_ov035_020bc4b0 sOv035AreaName
-#define data_ov035_020bc4e4 data_ov035_020bc504
+#define data_ov035_020bc4e4 gAreaSceneMaterialFadeWork
 #define func_0202c48c LoadFileAllocFromHeapTail
 #define func_0202ed3c InitSharedRecordAndDispatchAlt
 #define func_0202f4e8 Flags16_ClearBit1

@@ -1,5 +1,5 @@
 #define CompleteGroupTransition_020baad0 CompleteGroupTransition
 #define func_0202a778 StoreToGlobalPtr4Field28
 #define func_ov001_0207b688 RequestSubsceneMode0Or1FromMode4
-#define groupState_020c0060 data_ov032_020c0080
+#define groupState_020c0060 gGroupSceneGlobals
 #include "src/ov032/object_group/CompleteGroupTransition_020baad0.c"

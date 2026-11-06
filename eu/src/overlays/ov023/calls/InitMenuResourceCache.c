@@ -6,8 +6,8 @@ typedef struct {
     u8 fndList[0x34];
 } ResourceCacheState;
 
-extern ResourceCacheState *data_ov023_020b6f80;
-extern u32 data_ov023_020b6f2c;
+extern ResourceCacheState *gMenuResourceCacheWork;
+extern u32 gMapMenuTaskClass;
 extern void *GetRunningTaskWork(void);
 extern void MI_CpuFill8(void *dst, u32 val, u32 size);
 extern void SetupMenuSubBgLayers(void);
@@ -25,10 +25,10 @@ u32 InitMenuResourceCache(void)
 
     SetSubsceneBgSetupCallback((u32)SetupMenuSubBgLayers);
     state = (ResourceCacheState *)GetRunningTaskWork();
-    data_ov023_020b6f80 = state;
+    gMenuResourceCacheWork = state;
     MI_CpuFill8(state, 0, 0x40);
     SetupMenuSubBgLayers();
-    value = Obj_CreateWithTailWork(&data_ov023_020b6f2c, 0);
+    value = Obj_CreateWithTailWork(&gMapMenuTaskClass, 0);
     state->handle = value;
     value = MakePrimaryVramKey_02071214(9);
     QueueFileLoadRequest(value, 1, (u32)LoadMenuBackground, 0);

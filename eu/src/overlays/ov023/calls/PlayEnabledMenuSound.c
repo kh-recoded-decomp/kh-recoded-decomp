@@ -1,4 +1,4 @@
 #define PlayEnabledMenuSound_020b5b50 PlayEnabledMenuSound
 #define PlaySoundEffect_0204d924 PlaySoundEffect
-#define _data_ov023_020b6f64 data_ov023_020b6f84
+#define _data_ov023_020b6f64 gMapMenuWork
 #include "src/ov023/menu_sound/PlayEnabledMenuSound_020b5b50.c"

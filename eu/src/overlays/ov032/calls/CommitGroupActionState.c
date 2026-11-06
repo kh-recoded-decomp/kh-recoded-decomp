@@ -1,6 +1,6 @@
 #define CommitGroupActionState_020bb1c8 CommitGroupActionState
 #define func_ov001_0206430c MarkFieldValueNegative
 #define func_ov001_0206a814 IsScreenModeIdle
-#define groupState_020c0060 data_ov032_020c0080
+#define groupState_020c0060 gGroupSceneGlobals
 #define func_ov001_02063130 SetFieldStateValue
 #include "src/ov032/object_group/CommitGroupActionState_020bb1c8.c"

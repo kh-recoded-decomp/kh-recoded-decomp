@@ -41,8 +41,8 @@ typedef void *(*PanelStep)(void);
 
 extern PanelScene *data_ov001_020a04e8;
 extern u8 *data_0205fe0c;
-extern u8 data_ov025_020b7748[];
-extern u8 data_ov026_020b5ae0[];
+extern u8 gMenuListTaskClass[];
+extern u8 gOverlayDisplaySessionTaskClass[];
 extern u32 OVERLAY_25_ID[1];
 extern u32 OVERLAY_26_ID[1];
 
@@ -86,7 +86,7 @@ PanelStep InitFieldPanelScene(void)
     LoadModeNameAndMessages(panel);
     FS_InitFile(panel->file);
     FS_LoadOverlay(0, (u32)OVERLAY_25_ID);
-    panel->archive = Obj_CreateWithTailWork(data_ov025_020b7748, -1);
+    panel->archive = Obj_CreateWithTailWork(gMenuListTaskClass, -1);
     do {
         panel->graphics[i] = LookupChannelEntry(i);
         i++;
@@ -94,7 +94,7 @@ PanelStep InitFieldPanelScene(void)
     DestroyTaskObjectWrapper(panel->archive);
     panel->archive = NULL;
     FS_UnloadOverlay(0, (u32)OVERLAY_25_ID);
-    panel->overlayData = data_ov026_020b5ae0;
+    panel->overlayData = gOverlayDisplaySessionTaskClass;
     panel->phase = 2;
     panel->waitFrames = 4;
     panel->waitReload = panel->waitFrames;

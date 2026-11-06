@@ -1,4 +1,4 @@
 #define MobiClip_SrcClose_020bb4c8 MobiClip_SrcClose
 #define PXI_Init_0202a638 DestroyTaskObjectWrapper
-#define data_ov032_020bffc0 data_ov032_020bffe0
+#define data_ov032_020bffc0 gGroupSceneTaskHandle
 #include "src/ov032/shared_engine/MobiClip_SrcClose_020bb4c8.c"

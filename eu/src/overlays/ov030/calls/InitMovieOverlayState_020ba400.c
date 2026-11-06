@@ -14,5 +14,5 @@
 #define func_0202a448 CreateTaskObject
 #define func_ov001_020633a0 QueueFieldUpdate
 #define func_ov030_020bc424 InitMovieSelectionItems
-#define g_moviePlayerCtx_020bd000 data_ov030_020bd020
+#define g_moviePlayerCtx_020bd000 gOv030SceneWork
 #include "src/ov030/movie/InitMovieOverlayState_020ba3e0.c"

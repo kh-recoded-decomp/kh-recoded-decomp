@@ -12,6 +12,6 @@
 #define func_ov001_020681d4 GetSceneEntryResourceId
 #define func_ov001_0207eff0 InvokeListNodeCallbacks
 #define func_ov001_020876cc ClearStageTablesIfActive
-#define g_activeState_020bc800 data_ov031_020bc820
+#define g_activeState_020bc800 gOv031SceneWorkStorage
 #define func_ov001_0207b0c0 SetPanelHeaderText
 #include "src/ov031/state_machine/TryEnterState5_020ba6bc.c"

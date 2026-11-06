@@ -21,7 +21,7 @@ extern u8 gCommandMatrixMenuDescriptor[];
 extern u8 gEquipmentMatrixMenuDescriptor[];
 extern u8 gOv085InitHandlers[];
 
-void *data_ov039_020be950[37] = {
+void *gPrimaryMenuRegistryTail[37] = {
     (void *)data_ov036_020c59a0,
     (void *)0x0000004B,
     (void *)gMatrixMenuHandlers,

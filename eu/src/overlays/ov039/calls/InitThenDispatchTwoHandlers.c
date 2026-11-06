@@ -1,5 +1,5 @@
 #define InitThenDispatchTwoHandlers_020bb308 InitThenDispatchTwoHandlers
-#define data_ov039_020bea00 data_ov039_020bea20
+#define data_ov039_020bea00 gMenuOverlayWork
 #define func_ov039_020baf1c PollHandlerInput
 #define func_ov039_020bcf20 UpdatePrimaryMenuSubOverlay
 #define func_ov039_020bd054 UpdateSecondaryMenuSubOverlay

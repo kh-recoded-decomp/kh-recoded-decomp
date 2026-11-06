@@ -1,5 +1,5 @@
-extern int data_ov039_020beaa4;
+extern int gMenuSubOverlayIndexStorage;
 
 int GetPrimaryMenuSubOverlayIndex(void) {
-    return data_ov039_020beaa4;
+    return gMenuSubOverlayIndexStorage;
 }

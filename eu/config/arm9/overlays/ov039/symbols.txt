@@ -150,11 +150,11 @@ sGridLabelSingleFormat kind:data(any) addr:0x020be8c4
 sGridLabelSpacedSeparator kind:data(any) addr:0x020be8cc
 sGridLabelSeparator kind:data(any) addr:0x020be8d4
 sGridLabelJoinedFormat kind:data(any) addr:0x020be8dc
-sOv039_I_020be8ec kind:data(any) addr:0x020be8ec
-data_ov039_020be8f0 kind:data(any) addr:0x020be8f0
-sOv039_J_020be94c kind:data(any) addr:0x020be94c
-data_ov039_020be950 kind:data(any) addr:0x020be950
+gSecondaryMenuFirstOverlayId kind:data(any) addr:0x020be8ec
+gSecondaryMenuRegistryTail kind:data(any) addr:0x020be8f0
+gPrimaryMenuFirstOverlayId kind:data(any) addr:0x020be94c
+gPrimaryMenuRegistryTail kind:data(any) addr:0x020be950
 data_ov039_020be9e4 kind:data(any) addr:0x020be9e4
-data_ov039_020bea20 kind:bss addr:0x020bea20
+gMenuOverlayWork kind:bss addr:0x020bea20
 gGridLabelBuffer kind:bss addr:0x020bea24
-data_ov039_020beaa4 kind:bss addr:0x020beaa4
+gMenuSubOverlayIndexStorage kind:bss addr:0x020beaa4

@@ -5,11 +5,11 @@ typedef struct ResumeModeState {
     u16 flags;
 } ResumeModeState;
 
-extern ResumeModeState *data_ov033_020baae0;
+extern ResumeModeState *gResumeModeWorkStorage;
 
 u32 ClearResumeModeReadyFlag(void)
 {
-    ResumeModeState *state = data_ov033_020baae0;
+    ResumeModeState *state = gResumeModeWorkStorage;
     u32 flags = state->flags & 0xfffd;
     state->flags = flags;
     return flags;

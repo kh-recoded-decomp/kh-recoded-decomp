@@ -8,5 +8,5 @@
 #define func_ov027_020b7dfc FreeTagTrackerPools
 #define func_ov027_020b984c SetWidgetRootTouchEnabled
 #define g_pendingTagData_020b773c sOv025_Ocuitask_020b775c
-#define g_uiContext_020b7760 data_ov025_020b7780
+#define g_uiContext_020b7760 gMenuListWorkStorage
 #include "src/ov025/shared_engine/ShutdownMenuScreen_020b5e8c.c"

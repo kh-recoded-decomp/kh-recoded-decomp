@@ -2,5 +2,5 @@
 #define PXI_Init_0202a638 DestroyTaskObjectWrapper
 #define ShutdownOv029SoundCtx_020ba52c ShutdownOv029SoundCtx
 #define func_0204df9c SetSoundListenersEnabled
-#define g_ov029SoundCtx_020baba0 data_ov029_020babc0
+#define g_ov029SoundCtx_020baba0 gOv029SceneWorkStorage
 #include "src/ov029/reviewed_helpers/ShutdownOv029SoundCtx_020ba52c.c"

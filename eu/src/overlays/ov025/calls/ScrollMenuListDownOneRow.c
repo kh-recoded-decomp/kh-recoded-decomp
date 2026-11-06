@@ -1,8 +1,8 @@
 #include "nitro/types.h"
 
-extern u32 data_ov025_020b7780;
+extern u32 gMenuListWorkStorage;
 extern u32 ScrollListDownOneRow;
 
 void ScrollMenuListDownOneRow(void) {
-    ((void (*)(u32))&ScrollListDownOneRow)(data_ov025_020b7780 + 25844);
+    ((void (*)(u32))&ScrollListDownOneRow)(gMenuListWorkStorage + 25844);
 }

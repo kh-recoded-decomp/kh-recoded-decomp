@@ -1,5 +1,5 @@
 #define AcknowledgeGroupTransition_020ba940 AcknowledgeGroupTransition
-#define contextData_020c0060 data_ov032_020c0080
+#define contextData_020c0060 gGroupSceneGlobals
 #define func_ov001_0207ed2c AreAllListNodesReady
 #define func_ov001_02087178 RequestFieldEntryResourceDelivery
 #include "src/ov032/object_group/AcknowledgeGroupTransition_020ba940.c"

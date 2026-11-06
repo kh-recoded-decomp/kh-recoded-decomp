@@ -33,7 +33,7 @@ u32 data_ov091_020c2b5c[30] = {
     0x00000001, 0x00000001,
 };
 
-void *data_ov091_020c2b18[17] = {
+void *gReportTopMenuDescriptor[17] = {
     (void *)InitRecordMenuScene,
     (void *)DestroyMenuScene,
     (void *)UpdateRecordMenuScene,

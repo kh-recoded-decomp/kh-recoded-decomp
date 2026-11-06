@@ -1,3 +1,3 @@
 #define CanLeaveActiveRecord_020bb010 CanLeaveActiveRecord
-#define g_activeState_020bc800 data_ov031_020bc820
+#define g_activeState_020bc800 gOv031SceneWorkStorage
 #include "src/ov031/overlay_state/CanLeaveActiveRecord_020bb010.c"

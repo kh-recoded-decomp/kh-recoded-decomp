@@ -5,7 +5,7 @@
 extern void DestroyPxiChannelState(void);
 extern void InitTextWindowControllerTask(void);
 
-void *data_ov036_020c392c[5] = {
+void *gTextWindowControllerTaskClass[5] = {
     (void *)0x000E001B,
     (void *)InitTextWindowControllerTask,
     (void *)DestroyPxiChannelState,

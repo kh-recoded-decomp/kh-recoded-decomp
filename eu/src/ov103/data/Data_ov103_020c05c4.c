@@ -28,7 +28,7 @@ u32 data_ov103_020c0608[60] = {
     0x0000009E, 0x000000A9, 0x00000000, 0x00000000,
 };
 
-void *data_ov103_020c05c4[17] = {
+void *gTheaterMenuDescriptor[17] = {
     (void *)InitMenuScene_020beb40,
     (void *)DestroyMenuScene_020beb84,
     (void *)RunSceneStateHandler,

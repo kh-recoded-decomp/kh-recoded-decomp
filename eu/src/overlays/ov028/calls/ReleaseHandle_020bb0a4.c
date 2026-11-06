@@ -1,4 +1,4 @@
 #define PXI_Init_0202a638 DestroyTaskObjectWrapper
 #define ReleaseHandle_020bb084 ReleaseHandle_020bb0a4
-#define g_handle_020bb300 data_ov028_020bb320
+#define g_handle_020bb300 gOv028FieldSceneTaskHandle
 #include "src/ov028/unclassified_helpers/ReleaseHandle_020bb084.c"

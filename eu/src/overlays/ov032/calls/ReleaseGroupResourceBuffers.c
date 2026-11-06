@@ -1,4 +1,4 @@
 #define ReleaseGroupResourceBuffers_020bbb24 ReleaseGroupResourceBuffers
 #define func_0202a1c4 NNSi_FndFreeFromDefaultHeap
-#define resourceContexts_020c0068 data_ov032_020c0088
+#define resourceContexts_020c0068 gGroupMenuGaugeGlobalsStorage
 #include "src/ov032/object_group/ReleaseGroupResourceBuffers_020bbb24.c"

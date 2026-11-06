@@ -11,7 +11,7 @@
 #define UpdateMenuItemLoading_02067750 UpdateMenuItemLoading
 #define func_ov001_020681c4 GetSceneResourceHandle
 #define func_ov001_020681d4 GetSceneEntryResourceId
-#define contextData_020c0060 data_ov032_020c0080
+#define contextData_020c0060 gGroupSceneGlobals
 #define func_ov001_02067870 QueueAreaSoundArchives
 #define func_ov032_020ba604 UpdateStageLinkPanels
 #define func_ov001_0207b0c0 SetPanelHeaderText

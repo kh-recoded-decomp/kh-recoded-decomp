@@ -5,7 +5,7 @@
 extern void DestroySceneState(void);
 extern void InitSceneOverlayState(void);
 
-void *data_ov032_020bffe4[5] = {
+void *gGroupSceneTaskClass[5] = {
     (void *)0x0002000E,
     (void *)InitSceneOverlayState,
     (void *)DestroySceneState,
@@ -13,6 +13,6 @@ void *data_ov032_020bffe4[5] = {
     NULL,
 };
 
-u32 data_ov032_020bffe0[1] = {
+u32 gGroupSceneTaskHandle[1] = {
     0xFFFFFFFF,
 };

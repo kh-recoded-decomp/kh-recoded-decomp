@@ -11,7 +11,7 @@
 #define SyncSelectionRecordFromSlotEntry_0204fabc SyncSelectionRecordFromSlotEntry
 #define data_0209eb18 gSceneWorkClassDescriptor
 #define data_020b52a0 gSubModeTaskDefinition
-#define data_ov028_020bb380 data_ov028_020bb3a0
+#define data_ov028_020bb380 gOv028FieldSceneWorkStorage
 #define func_0202a158 Heap_GetCurrent
 #define func_0202a448 CreateTaskObject
 #define func_0204f8dc FillSelectionRecordFromGroup

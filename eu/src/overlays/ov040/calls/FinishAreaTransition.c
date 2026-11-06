@@ -12,7 +12,7 @@
 #define StoreSessionSpawnPoint_02063524 StoreSessionSpawnPoint
 #define SuspendTaskAndSetFlag_020667b4 SuspendTaskAndSetFlag
 #define data_ov001_020a046c data_ov001_020a048c
-#define data_ov040_020be260 data_ov040_020be280
+#define data_ov040_020be260 gAreaRewardSceneWork
 #define func_ov001_0207d658 ReleaseCounterHudModels
 #define func_ov001_0206de40 ReleaseActorSlotByIndex
 #define func_ov035_020bb64c ReleaseAreaFadeModelIfLoaded

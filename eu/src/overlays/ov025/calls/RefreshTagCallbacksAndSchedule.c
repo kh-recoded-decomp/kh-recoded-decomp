@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-extern u32 data_ov025_020b7780;
+extern u32 gMenuListWorkStorage;
 extern char sOv025_Ocuitask_020b775c[];
 
 extern u32 MakePrimaryVramKey(u32 id);
@@ -13,7 +13,7 @@ extern void SetWidgetRootTouchEnabled(u32 ctx, u32 enable);
 
 u32 RefreshTagCallbacksAndSchedule(void)
 {
-    u32 ctx = data_ov025_020b7780;
+    u32 ctx = gMenuListWorkStorage;
     u32 sound = MakePrimaryVramKey(0x6a);
     u32 tag;
 

@@ -5,11 +5,11 @@ typedef struct MoviePlayerState {
     u16 flags;
 } MoviePlayerState;
 
-extern MoviePlayerState *data_ov031_020bc820;
+extern MoviePlayerState *gOv031SceneWorkStorage;
 
 u32 ClearMovieSourceReadyFlag(void)
 {
-    MoviePlayerState *state = data_ov031_020bc820;
+    MoviePlayerState *state = gOv031SceneWorkStorage;
     u32 flags = state->flags & 0xfffd;
     state->flags = flags;
     return flags;

@@ -2,5 +2,5 @@
 #define func_0204f24c SetSlotAnimSequence
 #define func_ov001_020725bc IsHudFlag7Set
 #define func_ov001_020728c4 IsFieldFlag10Set
-#define g_screenState_020b6f64 data_ov023_020b6f84
+#define g_screenState_020b6f64 gMapMenuWork
 #include "src/ov023/shared_engine/ApplyFormationSlots_020b6d90.c"

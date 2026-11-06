@@ -68,7 +68,7 @@ sOv099_UiReportLanguageEnemyObjP2f_020c230c kind:data(any) addr:0x020c230c
 sOv099_UiReportTextLanguageEnemySZ_020c2328 kind:data(any) addr:0x020c2328
 data_ov099_020c2344 kind:data(any) addr:0x020c2344
 sOv099_LSZ_020c2360 kind:data(any) addr:0x020c2360 ambiguous
-data_ov099_020c2368 kind:data(any) addr:0x020c2368 ambiguous
+gEnemyViewerMenuDescriptorHead kind:data(any) addr:0x020c2368 ambiguous
 gEnemyReportListHandlers kind:data(any) addr:0x020c2380 ambiguous
 data_ov099_020c23ac kind:data(any) addr:0x020c23ac
 gEnemyViewerEntryInfo kind:data(any) addr:0x020c243c

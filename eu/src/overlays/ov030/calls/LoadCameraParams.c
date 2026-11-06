@@ -7,5 +7,5 @@
 #define func_ov030_020bb374 SetSceneLock
 #define func_ov042_020bd5e0 SetCameraParameterBc
 #define func_ov042_020bd660 SetCameraMode
-#define g_moviePlayerCtx_020bd000 data_ov030_020bd020
+#define g_moviePlayerCtx_020bd000 gOv030SceneWork
 #include "src/ov030/movie/LoadCameraParams_020bb390.c"

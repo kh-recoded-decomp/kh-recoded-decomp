@@ -1,4 +1,4 @@
 #define InvalidatePxiFifoTag_020bc438 InvalidatePxiFifoTag
 #define func_0202a638 DestroyTaskObjectWrapper
-#define g_pxiFifoTag_020c36c0 data_ov036_020c36e0
+#define g_pxiFifoTag_020c36c0 gEvent2DPanelTaskHandle
 #include "src/ov036/library_nitro_pxi/InvalidatePxiFifoTag_020bc438.c"

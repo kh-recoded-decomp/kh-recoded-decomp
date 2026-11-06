@@ -13,7 +13,7 @@
 #define UpdateChallengeScene_020bab04 UpdateChallengeScene
 #define WriteSessionPackedBits_0206459c WriteSessionPackedBits
 #define data_ov001_020a0460 data_ov001_020a0480
-#define data_ov032_020c0060 data_ov032_020c0080
+#define data_ov032_020c0060 gGroupSceneGlobals
 #define func_0202b788 GetLanguageIndex
 #define func_0204d7f4 QueueOrUpdateSoundKind3
 #define func_ov001_020645c8 IsSessionFlagSet

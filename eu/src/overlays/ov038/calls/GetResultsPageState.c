@@ -5,9 +5,9 @@ typedef struct {
     u32 pageState;
 } ResultsContext;
 
-extern ResultsContext *data_ov038_020bd164;
+extern ResultsContext *gResultsPageContextStorage;
 
 u32 GetResultsPageState(void)
 {
-    return data_ov038_020bd164->pageState;
+    return gResultsPageContextStorage->pageState;
 }

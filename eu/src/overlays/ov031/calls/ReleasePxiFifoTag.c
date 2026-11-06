@@ -2,5 +2,5 @@
 #define ReleasePxiFifoTag_020bb4f8 ReleasePxiFifoTag
 #define func_0204f98c BuildSelectionEntryList
 #define func_0204fabc SyncSelectionRecordFromSlotEntry
-#define g_pxiFifoTag_020bc780 data_ov031_020bc7a0
+#define g_pxiFifoTag_020bc780 gOv031SceneTaskHandle
 #include "src/ov031/unclassified_helpers/ReleasePxiFifoTag_020bb4f8.c"

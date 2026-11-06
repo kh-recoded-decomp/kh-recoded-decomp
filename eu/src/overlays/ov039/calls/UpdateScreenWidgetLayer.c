@@ -1,4 +1,4 @@
 #define UpdateScreenWidgetLayer_020bc1e4 UpdateScreenWidgetLayer
 #define UpdateWidgetLayerDefault_020b9df0 UpdateWidgetLayerDefault_020b9e10
-#define data_ov039_020bea00 data_ov039_020bea20
+#define data_ov039_020bea00 gMenuOverlayWork
 #include "src/ov039/widget_layers/UpdateScreenWidgetLayer_020bc1e4.c"

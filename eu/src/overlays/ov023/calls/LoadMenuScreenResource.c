@@ -1,5 +1,5 @@
 #define LoadMenuScreenResource_020b5b94 LoadMenuScreenResource
-#define _data_ov023_020b6f64 data_ov023_020b6f84
+#define _data_ov023_020b6f64 gMapMenuWork
 #define func_0202b554 GetBgDataFromArchive
 #define func_ov001_0207b4d8 SetPanelSessionActive
 #define func_ov027_020ba1d8 GetFileLoadRequestBuffer

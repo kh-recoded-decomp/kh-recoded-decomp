@@ -1,5 +1,5 @@
 #define DestroyAllListEntries_020bc788 DestroyAllListEntries
 #define NNS_FndGetNextListObject_02012a38 NNS_FndGetNextListObject
-#define data_ov039_020bea00 data_ov039_020bea20
+#define data_ov039_020bea00 gMenuOverlayWork
 #define func_ov039_020bc70c RemoveListEntry
 #include "src/ov039/reviewed_helpers/DestroyAllListEntries_020bc788.c"

@@ -1,4 +1,4 @@
 #define SetBrightnessAndSyncMain_02029e7c SetBrightnessAndSyncMain
 #define SetScreenBrightness_020bc648 SetScreenBrightness
-#define data_ov039_020bea00 data_ov039_020bea20
+#define data_ov039_020bea00 gMenuOverlayWork
 #include "src/ov039/event_state/SetScreenBrightness_020bc648.c"

@@ -18,7 +18,7 @@ typedef struct {
 } SoundCtx;
 
 extern char OVERLAY_27_ID[];
-extern SoundCtx *data_ov038_020bd160;
+extern SoundCtx *gResultsPageOuterTaskWork;
 extern void *GetRunningTaskWork(void);
 extern void LoadOverlayAfterGeometryTransfer(int processor, int overlayId);
 extern void BuildCompletionStats(void);
@@ -28,13 +28,13 @@ extern u32 RunOv038SoundCtxStates(void);
 
 void *StartOv038SoundCtx(SoundCtxArgs *args)
 {
-    data_ov038_020bd160 = GetRunningTaskWork();
-    data_ov038_020bd160->channel = args->channel;
-    data_ov038_020bd160->paramA = args->paramA;
-    data_ov038_020bd160->paramB = args->paramB;
-    data_ov038_020bd160->flags = 0x23;
-    data_ov038_020bd160->mode = args->mode;
-    data_ov038_020bd160->state = 0;
+    gResultsPageOuterTaskWork = GetRunningTaskWork();
+    gResultsPageOuterTaskWork->channel = args->channel;
+    gResultsPageOuterTaskWork->paramA = args->paramA;
+    gResultsPageOuterTaskWork->paramB = args->paramB;
+    gResultsPageOuterTaskWork->flags = 0x23;
+    gResultsPageOuterTaskWork->mode = args->mode;
+    gResultsPageOuterTaskWork->state = 0;
     LoadOverlayAfterGeometryTransfer(0, (int)OVERLAY_27_ID);
     BuildCompletionStats();
     SetupResultsPageDisplay();

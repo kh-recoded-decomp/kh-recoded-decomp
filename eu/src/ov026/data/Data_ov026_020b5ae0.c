@@ -5,7 +5,7 @@
 extern void BeginOverlayDisplaySession(void);
 extern void EndOverlayDisplaySession(void);
 
-void *data_ov026_020b5ae0[5] = {
+void *gOverlayDisplaySessionTaskClass[5] = {
     (void *)0x000E0019,
     (void *)BeginOverlayDisplaySession,
     (void *)EndOverlayDisplaySession,

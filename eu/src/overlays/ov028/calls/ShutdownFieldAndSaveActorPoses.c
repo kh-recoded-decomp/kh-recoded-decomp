@@ -6,7 +6,7 @@ typedef struct {
     u16 flags;
 } FieldContext;
 
-extern FieldContext *data_ov028_020bb3a0;
+extern FieldContext *gOv028FieldSceneWorkStorage;
 extern BOOL Panel_TryBeginTransition4(void);
 extern void SuspendTaskAndSetFlag(void);
 extern void SetMenuHighlight(s32 enable);
@@ -31,7 +31,7 @@ s32 ShutdownFieldAndSaveActorPoses(void)
     s32 index;
     VecFx32 *position;
 
-    if ((data_ov028_020bb3a0->flags & 0x10) == 0 && !Panel_TryBeginTransition4()) {
+    if ((gOv028FieldSceneWorkStorage->flags & 0x10) == 0 && !Panel_TryBeginTransition4()) {
         return -1;
     }
     SuspendTaskAndSetFlag();
@@ -45,13 +45,13 @@ s32 ShutdownFieldAndSaveActorPoses(void)
     SetOverlayLayerVisible(1);
     ResetFieldObjectManagerResources();
     ShutdownSceneContext();
-    data_ov028_020bb3a0->flags &= ~0xC;
+    gOv028FieldSceneWorkStorage->flags &= ~0xC;
     ReleaseCounterHudModels();
     SnapshotManagedActorStateBlocks();
     PopVramState();
     ActorRegistry_ClearCollisionResult();
     ReleaseSeqArcHeapLevel(1);
     StoreToGlobalPtr4Field28(1);
-    data_ov028_020bb3a0->flags |= 0x8000;
+    gOv028FieldSceneWorkStorage->flags |= 0x8000;
     return 0x12;
 }

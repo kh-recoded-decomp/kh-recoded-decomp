@@ -1,5 +1,5 @@
 #define InstantiateClass CreateTaskObject
 #define MobiClip_SrcOpen_020bb448 CreateOv032FieldSceneTask
-#define data_020bffc0 data_ov032_020bffe0
-#define data_020bffc4 data_ov032_020bffe4
+#define data_020bffc0 gGroupSceneTaskHandle
+#define data_020bffc4 gGroupSceneTaskClass
 #include "src/ov032/shared_engine/MobiClip_SrcOpen_020bb448.c"

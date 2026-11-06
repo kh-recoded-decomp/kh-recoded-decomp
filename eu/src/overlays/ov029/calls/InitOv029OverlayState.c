@@ -5,7 +5,7 @@
 #define RunSceneStateMachine_020ba4a4 RunSceneStateMachine_020ba4c4
 #define data_0209eb18 gSceneWorkClassDescriptor
 #define data_020b52a0 gSubModeTaskDefinition
-#define data_ov029_020baba0 data_ov029_020babc0
+#define data_ov029_020baba0 gOv029SceneWorkStorage
 #define func_0202a158 Heap_GetCurrent
 #define func_0202a448 CreateTaskObject
 #define func_ov029_020ba8b8 SetupOv029Display

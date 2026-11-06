@@ -150,12 +150,12 @@ data_ov032_020bffac kind:data(any) addr:0x020bffac
 gGroupCollisionPivotOffset kind:data(any) addr:0x020bffb8
 gGroupCollisionPivotBase kind:data(any) addr:0x020bffc4
 data_ov032_020bffd0 kind:data(any) addr:0x020bffd0
-data_ov032_020bffe0 kind:data(any) addr:0x020bffe0
-data_ov032_020bffe4 kind:data(any) addr:0x020bffe4
+gGroupSceneTaskHandle kind:data(any) addr:0x020bffe0
+gGroupSceneTaskClass kind:data(any) addr:0x020bffe4
 gGroupActionStateHandlers kind:data(any) addr:0x020bfff8
 sOv032_UiBtlStrLanguageP2_020c0040 kind:data(any) addr:0x020c0040
-data_ov032_020c0050 kind:data(any) addr:0x020c0050
+gGroupMenuGaugeTaskClass kind:data(any) addr:0x020c0050
 data_ov032_020c0064 kind:data(any) addr:0x020c0064
 data_ov032_020c006e kind:data(any) addr:0x020c006e
-data_ov032_020c0080 kind:bss addr:0x020c0080
-data_ov032_020c0088 kind:bss addr:0x020c0088
+gGroupSceneGlobals kind:bss addr:0x020c0080
+gGroupMenuGaugeGlobalsStorage kind:bss addr:0x020c0088

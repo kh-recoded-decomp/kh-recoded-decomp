@@ -10,5 +10,5 @@
 #define func_ov001_02087628 SetFieldObjectInteractionsBlocked
 #define func_ov001_0208804c ForwardToActiveService_02088074
 #define func_ov021_020af57c ForwardSubModePairB
-#define g_activeState_020bc800 data_ov031_020bc820
+#define g_activeState_020bc800 gOv031SceneWorkStorage
 #include "src/ov031/state_machine/TryEnterState6_020ba72c.c"

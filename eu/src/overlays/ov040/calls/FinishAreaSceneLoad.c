@@ -21,7 +21,7 @@ typedef struct {
 
 #define AREA_SCENE_DESCRIPTOR ((void *)0x020bc4e8)
 
-extern SceneState *data_ov040_020be280;
+extern SceneState *gAreaRewardSceneWork;
 extern SharedScene *gMovieContextState;
 extern u8 sOv040_RpgEfEcZ_020be248[];
 extern BOOL UpdateMenuItemLoading(void);
@@ -49,7 +49,7 @@ int FinishAreaSceneLoad(void)
         return -1;
     }
     LoadFadeModel(0);
-    if (data_ov040_020be280->flags & 1) {
+    if (gAreaRewardSceneWork->flags & 1) {
         u32 entryValue;
         HighlightSelectedMenuPanels();
         if ((int)gMovieContextState->handle == -1) {
@@ -58,19 +58,19 @@ int FinishAreaSceneLoad(void)
         entryValue = GetSceneEntryResourceId(GetCurrentSceneEntryIndex());
         SetPanelHeaderText((const u16 *)GetSceneResourceHandle(), (const u16 *)entryValue);
     }
-    InitSharedRecordAndDispatch(data_ov040_020be280, sOv040_RpgEfEcZ_020be248, 1, 2);
-    LoadDefaultProjectionValues(data_ov040_020be280->projection);
+    InitSharedRecordAndDispatch(gAreaRewardSceneWork, sOv040_RpgEfEcZ_020be248, 1, 2);
+    LoadDefaultProjectionValues(gAreaRewardSceneWork->projection);
     {
         VecFx32 offset = {0, 0, 0};
-        state = data_ov040_020be280;
+        state = gAreaRewardSceneWork;
         offset.z = state->topHeight - state->baseHeight - 0x1000;
         state->cameraOffset = offset;
     }
     selectJointAnimationBlend(state, 0, state->blendTarget, 0);
-    selectJointAnimationBlend(data_ov040_020be280, 2, data_ov040_020be280->blendTarget, 0);
+    selectJointAnimationBlend(gAreaRewardSceneWork, 2, gAreaRewardSceneWork->blendTarget, 0);
     InvokeSceneCallback();
     slotValue = GetSlotEntryValue(GetCurrentSceneEntryIndex());
     SetCachedSoundParams(slotValue, GetMenuItemValue(GetCurrentSceneEntryIndex()), 0x7f);
-    data_ov040_020be280->flags |= 0x8000;
+    gAreaRewardSceneWork->flags |= 0x8000;
     return 3;
 }

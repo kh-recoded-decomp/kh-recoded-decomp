@@ -3,5 +3,5 @@
 #define SetSlotDisplayStyle_020ba8a0 SetSlotDisplayStyle
 #define func_ov001_020680cc SetSceneEntryPrimaryBgmId
 #define func_ov001_020680e4 SetSceneEntrySecondaryBgmId
-#define data_ov032_020c0060 data_ov032_020c0080
+#define data_ov032_020c0060 gGroupSceneGlobals
 #include "src/ov032/unclassified_helpers/SetSlotDisplayStyle_020ba8a0.c"

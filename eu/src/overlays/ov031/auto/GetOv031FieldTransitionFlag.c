@@ -1,8 +1,8 @@
 #include "nitro/types.h"
 
-extern u8 *data_ov031_020bc820;
+extern u8 *gOv031SceneWorkStorage;
 
 u32 GetOv031FieldTransitionFlag(void)
 {
-    return *(const u16 *)(data_ov031_020bc820 + 0x6) & 0x20;
+    return *(const u16 *)(gOv031SceneWorkStorage + 0x6) & 0x20;
 }

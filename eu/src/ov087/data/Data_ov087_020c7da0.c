@@ -8,7 +8,7 @@ extern void PanelScene_HandleCancel(void);
 extern void InitPanelScene_020c713c(void);
 extern void UpdateEntryScroll(void);
 
-void *data_ov087_020c7da0[17] = {
+void *gSelectionPanelMenuDescriptor[17] = {
     (void *)InitPanelScene_020c713c,
     (void *)DestroyPanelScene,
     (void *)UpdateEntryScroll,

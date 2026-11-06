@@ -5,5 +5,5 @@
 #define ResetSceneState_020bbf34 ResetSceneState
 #define func_0204d980 StopSequencePlayersFrom2
 #define func_ov001_0206a7c0 BeginScreenFadeOut
-#define g_activeState_020bc800 data_ov031_020bc820
+#define g_activeState_020bc800 gOv031SceneWorkStorage
 #include "src/ov031/state_machine/ResetSceneState_020bbf34.c"

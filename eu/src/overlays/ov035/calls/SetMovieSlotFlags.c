@@ -1,3 +1,3 @@
 #define SetMovieSlotFlags_020bb40c SetMovieSlotFlags
-#define data_ov035_020bc4e4 data_ov035_020bc504
+#define data_ov035_020bc4e4 gAreaSceneMaterialFadeWork
 #include "src/ov035/unclassified_helpers/SetMovieSlotFlags_020bb40c.c"

@@ -3,5 +3,5 @@
 #define QueueFieldUpdate_020633a0 QueueFieldUpdate
 #define SetupFlaggedSelectionRecords_0204f778 SetupFlaggedSelectionRecords
 #define StartMoviePlayback_020bb4e0 StartMoviePlayback
-#define contextData_020c0060 data_ov032_020c0080
+#define contextData_020c0060 gGroupSceneGlobals
 #include "src/ov032/shared_engine/StartMoviePlayback_020bb4e0.c"

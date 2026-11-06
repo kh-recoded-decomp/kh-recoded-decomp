@@ -1,4 +1,4 @@
 #define func_ov001_0206890c ResetStageGroupRowsAndRestoreDefault
 #define ReleaseActiveRecordItems_020bbe6c ReleaseActiveRecordItems
-#define g_activeState_020bc800 data_ov031_020bc820
+#define g_activeState_020bc800 gOv031SceneWorkStorage
 #include "src/ov031/overlay_state/ReleaseActiveRecordItems_020bbe6c.c"

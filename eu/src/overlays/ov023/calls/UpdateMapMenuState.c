@@ -10,7 +10,7 @@
 #define ResetMapMenuCursor_020b69bc ResetMapMenuCursor
 #define SetEntryRotation_0204f308 SetEntryRotation
 #define UpdateMapMenuState_020b6afc UpdateMapMenuState
-#define data_ov023_020b6f64 data_ov023_020b6f84
+#define data_ov023_020b6f64 gMapMenuWork
 #define func_01ff89a8 MI_CpuCopy8
 #define func_0204f378 IndexedRecords_SetFlag2
 #define func_ov001_0207b320 RequestPanelModeWithStyle2

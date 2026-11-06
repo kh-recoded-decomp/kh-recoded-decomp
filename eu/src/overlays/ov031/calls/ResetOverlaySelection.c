@@ -1,5 +1,5 @@
 #define ResetOverlaySelection_020bc4f0 ResetOverlaySelection
-#define _data_ov031_020bc800 data_ov031_020bc820
+#define _data_ov031_020bc800 gOv031SceneWorkStorage
 #define func_ov001_0207b49c UpdatePanelMapRangePosition
 #define func_ov031_020bc554 AdvanceRecordStep
 #include "src/ov031/overlay_state/ResetOverlaySelection_020bc4f0.c"

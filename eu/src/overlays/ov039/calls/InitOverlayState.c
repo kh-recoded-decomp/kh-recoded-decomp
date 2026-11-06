@@ -59,7 +59,7 @@ typedef struct TileIdList {
     int ids[7];
 } TileIdList;
 
-extern Ov039State *data_ov039_020bea20;
+extern Ov039State *gMenuOverlayWork;
 extern TrackerConfig data_ov039_020be770;
 extern InputLimits data_ov039_020be750;
 extern TileIdList data_ov039_020be7a0;
@@ -106,7 +106,7 @@ void InitOverlayState(u32 entryArg)
 
     LoadOverlayAfterGeometryTransfer(0, (int)OVERLAY_27_ID);
     state = NNSi_FndAllocFromDefaultHeap(sizeof(Ov039State));
-    data_ov039_020bea20 = state;
+    gMenuOverlayWork = state;
     MI_CpuFill8(state, 0, sizeof(Ov039State));
     state->primaryActive = TRUE;
     state->secondaryActive = TRUE;
@@ -156,10 +156,10 @@ void InitOverlayState(u32 entryArg)
     state->subBrightness = -16 * 0x1000;
     state->busyFlag = TRUE;
     state->startDelay = 1;
-    LoadUtf16FontResource(data_ov039_020bea20->scripts[0], sOv039_TextFontEu08Nftr_020be848);
-    LoadUtf16FontResource(data_ov039_020bea20->scripts[1], sOv039_TextFontEu10Nftr_020be860);
-    LoadUtf16FontResource(data_ov039_020bea20->scripts[2], sOv039_TextFontEu08sNftr_020be878);
-    LoadUtf16FontResource(data_ov039_020bea20->scripts[3], sOv039_TextFontEu10sNftr_020be890);
+    LoadUtf16FontResource(gMenuOverlayWork->scripts[0], sOv039_TextFontEu08Nftr_020be848);
+    LoadUtf16FontResource(gMenuOverlayWork->scripts[1], sOv039_TextFontEu10Nftr_020be860);
+    LoadUtf16FontResource(gMenuOverlayWork->scripts[2], sOv039_TextFontEu08sNftr_020be878);
+    LoadUtf16FontResource(gMenuOverlayWork->scripts[3], sOv039_TextFontEu10sNftr_020be890);
     SetupOverlayDisplay();
     ResetMenuSubOverlayIndices();
     AcquireMapLayout(state->mode != 7, FALSE);

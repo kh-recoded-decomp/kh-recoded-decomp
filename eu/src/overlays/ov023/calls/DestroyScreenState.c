@@ -3,5 +3,5 @@
 #define ZeroHalfThenFree_0202cd78 ZeroHalfThenFree
 #define func_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define func_ov001_020715ac FreeSceneListObject
-#define g_screenState_020b6f64 data_ov023_020b6f84
+#define g_screenState_020b6f64 gMapMenuWork
 #include "src/ov023/shared_engine/DestroyScreenState_020b6ac4.c"

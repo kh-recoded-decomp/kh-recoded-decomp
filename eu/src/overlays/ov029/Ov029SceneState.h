@@ -19,6 +19,6 @@ typedef struct Ov029SceneParams {
     s16 value4;
 } Ov029SceneParams;
 
-extern Ov029SceneState *data_ov029_020babc0;
+extern Ov029SceneState *gOv029SceneWorkStorage;
 
 #endif

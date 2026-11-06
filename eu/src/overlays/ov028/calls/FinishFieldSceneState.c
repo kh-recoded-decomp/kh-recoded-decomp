@@ -5,10 +5,10 @@ typedef struct FieldSceneState {
     u16 flags;
 } FieldSceneState;
 
-extern FieldSceneState *data_ov028_020bb3a0;
+extern FieldSceneState *gOv028FieldSceneWorkStorage;
 
 int FinishFieldSceneState(void)
 {
-    data_ov028_020bb3a0->flags = data_ov028_020bb3a0->flags & 0xfff3;
+    gOv028FieldSceneWorkStorage->flags = gOv028FieldSceneWorkStorage->flags & 0xfff3;
     return -1;
 }

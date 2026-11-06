@@ -5,5 +5,5 @@
 #define func_01ffa0f4 VEC_Distance
 #define func_ov001_02087928 ForwardToActiveServiceWithResult
 #define func_ov001_02087944 FindNextActiveStageEventIfActive
-#define g_activeState_020bc800 data_ov031_020bc820
+#define g_activeState_020bc800 gOv031SceneWorkStorage
 #include "src/ov031/overlay_state/FindNearestStageEvent_020bab74.c"

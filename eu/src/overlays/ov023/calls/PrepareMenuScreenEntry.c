@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-extern u32 *data_ov023_020b6f84;
+extern u32 *gMapMenuWork;
 extern u8 data_ov023_020b6efc;
 extern u32 SetSlotAnimSequence();
 extern u32 IndexedRecords_SetFlag2();
@@ -17,8 +17,8 @@ void PrepareMenuScreenEntry(u32 index, u32 value)
     int resourceIndex;
     u32 *base;
 
-    work = data_ov023_020b6f84;
-    *data_ov023_020b6f84 = index;
+    work = gMapMenuWork;
+    *gMapMenuWork = index;
     work[1] = value;
     base = work + 0x16;
     SetSlotAnimSequence(base, work[0x1923], work[8] != 1);

@@ -8,7 +8,7 @@ typedef struct {
     s8 mode;
 } SceneState;
 
-extern SceneState *data_ov028_020bb3a0;
+extern SceneState *gOv028FieldSceneWorkStorage;
 
 extern s8 GetCtxModeByte(void);
 extern void LoadContextResourceGroups(int sound);
@@ -27,7 +27,7 @@ extern void ForwardToActiveService_02088074(void);
 extern void CacheSeqArcStatus(int index);
 
 int ResumeFieldFromMenu(void) {
-    SceneState *scene = data_ov028_020bb3a0;
+    SceneState *scene = gOv028FieldSceneWorkStorage;
 
     switch (GetCtxModeByte()) {
     case 2:
@@ -54,7 +54,7 @@ int ResumeFieldFromMenu(void) {
     if (!IsSessionFlagSet(0x3309) && scene->mode != 3) {
         SetFieldEntriesPaused(0);
     }
-    data_ov028_020bb3a0->flags |= 0xc;
+    gOv028FieldSceneWorkStorage->flags |= 0xc;
     if (scene->mode < 0 || scene->mode == 3) {
         scene->flags &= ~0x20;
     }
@@ -64,6 +64,6 @@ int ResumeFieldFromMenu(void) {
         ForwardToActiveService_02088074();
     }
     CacheSeqArcStatus(2);
-    data_ov028_020bb3a0->flags |= 0x8000;
+    gOv028FieldSceneWorkStorage->flags |= 0x8000;
     return 6;
 }

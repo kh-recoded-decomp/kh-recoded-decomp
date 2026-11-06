@@ -6,7 +6,7 @@
 #define MarkTileTableRowDirty_020b9e00 MarkTileTableRowDirty
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define UpdateWidgetLayerDefault_020b9df0 UpdateWidgetLayerDefault_020b9e10
-#define data_ov039_020bea00 data_ov039_020bea20
+#define data_ov039_020bea00 gMenuOverlayWork
 #define func_01ff869c MIi_CpuCopy16
 #define func_0202c478 Archive_LoadFile
 #include "src/ov039/widget_layers/LoadSlotSubBgImage_020bc55c.c"

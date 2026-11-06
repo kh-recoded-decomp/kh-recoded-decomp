@@ -5,14 +5,14 @@ typedef struct {
     u16 flags;
 } SoundCtx;
 
-extern SoundCtx *data_ov029_020babc0;
+extern SoundCtx *gOv029SceneWorkStorage;
 
 BOOL IsOv029SceneStartupComplete(void)
 {
-    if (data_ov029_020babc0 == NULL) {
+    if (gOv029SceneWorkStorage == NULL) {
         return FALSE;
     }
-    if ((data_ov029_020babc0->flags & 1) == 0) {
+    if ((gOv029SceneWorkStorage->flags & 1) == 0) {
         return TRUE;
     }
     return FALSE;

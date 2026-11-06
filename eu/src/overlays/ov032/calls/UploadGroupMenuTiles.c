@@ -1,5 +1,5 @@
 #define GFXi_EnqueueCommand_02014090 NNS_GfdRegisterNewVramTransferTask
 #define UploadGroupMenuTiles_020bbba8 UploadGroupMenuTiles
 #define UploadGroupPaletteSegment_020bb8d4 UploadGroupPaletteSegment
-#define contextData_020c0068 data_ov032_020c0088
+#define contextData_020c0068 gGroupMenuGaugeGlobalsStorage
 #include "src/ov032/object_group/UploadGroupMenuTiles_020bbba8.c"

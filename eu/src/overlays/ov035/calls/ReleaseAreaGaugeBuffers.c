@@ -1,5 +1,5 @@
-extern unsigned int *data_ov035_020bc508[];
-#define puRam020c006c data_ov035_020bc508[1]
+extern unsigned int *gAreaSceneGaugeGlobalsStorage[];
+#define puRam020c006c gAreaSceneGaugeGlobalsStorage[1]
 extern unsigned int NNSi_FndFreeFromDefaultHeap();
 
 void ReleaseAreaGaugeBuffers(void)

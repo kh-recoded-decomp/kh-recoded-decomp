@@ -1,5 +1,5 @@
-extern int data_ov039_020bea20;
+extern int gMenuOverlayWork;
 
 int GetMenuWork(void) {
-    return data_ov039_020bea20;
+    return gMenuOverlayWork;
 }

@@ -7,7 +7,7 @@ extern void InitEntryMenu(void);
 extern void ShutdownOverlay089(void);
 extern void UpdateEntryCarousel(void);
 
-void *data_ov089_020c056c[17] = {
+void *gEntryCarouselMenuDescriptor[17] = {
     (void *)InitEntryMenu,
     (void *)ShutdownOverlay089,
     (void *)UpdateEntryCarousel,

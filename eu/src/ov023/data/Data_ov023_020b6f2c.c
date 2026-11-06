@@ -5,7 +5,7 @@
 extern void DestroyScreenState(void);
 extern void InitMapMenuState(void);
 
-void *data_ov023_020b6f2c[5] = {
+void *gMapMenuTaskClass[5] = {
     (void *)0x000E0019,
     (void *)InitMapMenuState,
     (void *)DestroyScreenState,

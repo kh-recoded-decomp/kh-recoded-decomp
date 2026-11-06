@@ -1,3 +1,3 @@
 #define SetOrClearStatusBit2_020bb2a8 SetOrClearStatusBit2
-#define g_fieldContext_020bb380 data_ov028_020bb3a0
+#define g_fieldContext_020bb380 gOv028FieldSceneWorkStorage
 #include "src/ov028/unclassified_helpers/SetOrClearStatusBit2_020bb2a8.c"

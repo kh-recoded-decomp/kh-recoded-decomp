@@ -8,7 +8,7 @@ typedef struct ResultsContext {
     ResultsSpritePool pools[2];
 } ResultsContext;
 
-extern ResultsContext *data_ov038_020bd164;
+extern ResultsContext *gResultsPageContextStorage;
 extern void SetSpriteFrame(ResultsSpritePool *pool, int index, u16 frame);
 extern void IndexedRecords_SetFlag2(ResultsSpritePool *pool, int index, BOOL enabled);
 
@@ -17,7 +17,7 @@ extern void IndexedRecords_SetFlag2(ResultsSpritePool *pool, int index, BOOL ena
 void DrawResultsTimeDigits(int poolIndex, int firstRecord, u32 totalSeconds)
 {
     struct { u32 seconds, minutes, hours; } time;
-    ResultsContext *context = data_ov038_020bd164;
+    ResultsContext *context = gResultsPageContextStorage;
     int remaining;
     int divisor;
     BOOL showDigits = FALSE;

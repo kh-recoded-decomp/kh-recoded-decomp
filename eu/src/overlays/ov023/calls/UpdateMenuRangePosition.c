@@ -1,4 +1,4 @@
 #define UpdateMenuRangePosition_020b6e40 UpdateMenuRangePosition
-#define _data_ov023_020b6f64 data_ov023_020b6f84
+#define _data_ov023_020b6f64 gMapMenuWork
 #define func_ov023_020b699c RemapIntoDisplayRange
 #include "src/ov023/menu_graphics/UpdateMenuRangePosition_020b6e40.c"

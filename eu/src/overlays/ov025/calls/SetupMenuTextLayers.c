@@ -19,5 +19,5 @@
 #define data_ov025_020b76c0 data_ov025_020b76e0
 #define func_0200160c DrawTextAnchoredWithFontFallback
 #define func_ov027_020b7d58 InitBackgroundContainer
-#define g_uiContext_020b7760 data_ov025_020b7780
+#define g_uiContext_020b7760 gMenuListWorkStorage
 #include "src/ov025/shared_engine/SetupMenuTextLayers_020b5c78.c"

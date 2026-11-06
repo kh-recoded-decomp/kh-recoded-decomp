@@ -5,7 +5,7 @@
 #define ResumeSceneAndAdvance_020baa08 ResumeSceneAndAdvance
 #define ResumeTaskAndClearFlags_02066780 ResumeTaskAndClearFlags
 #define UpdateEventObjects_0206daf8 UpdateEventObjects
-#define data_ov032_020c0060 data_ov032_020c0080
+#define data_ov032_020c0060 gGroupSceneGlobals
 #define func_ov001_0206c2f8 SetMenuHighlight
 #define func_ov001_0207d120 LoadContextResourceGroups
 #define func_ov001_0207d210 StartPanelLayoutTransition

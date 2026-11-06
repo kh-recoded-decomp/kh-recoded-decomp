@@ -7,10 +7,10 @@ typedef struct {
     u32 result;
 } State_020baac0;
 
-extern State_020baac0 *data_ov033_020baae0;
+extern State_020baac0 *gResumeModeWorkStorage;
 
 void CompleteResumeModeWithResult(u32 value)
 {
-    data_ov033_020baae0->result = value;
-    data_ov033_020baae0->flags |= 0x4000;
+    gResumeModeWorkStorage->result = value;
+    gResumeModeWorkStorage->flags |= 0x4000;
 }

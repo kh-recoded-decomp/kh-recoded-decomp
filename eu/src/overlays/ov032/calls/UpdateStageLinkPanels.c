@@ -1,5 +1,5 @@
 #define UpdateStageLinkPanels_020ba604 UpdateStageLinkPanels
-#define gStageLinkMenu data_ov032_020c0080
+#define gStageLinkMenu gGroupSceneGlobals
 #define SetScenePanelEnabled SetSceneSlotDrawingEnabled
 #define GetIndexedFieldObject GetFieldObjectByClassAndIndex
 #include "src/ov032/panel_state/UpdateStageLinkPanels_020ba604.c"

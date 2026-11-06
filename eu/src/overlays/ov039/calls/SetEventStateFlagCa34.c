@@ -5,9 +5,9 @@ typedef struct EventState {
     u32 flagCa34;
 } EventState;
 
-extern EventState *data_ov039_020bea20;
+extern EventState *gMenuOverlayWork;
 
 void SetEventStateFlagCa34(void)
 {
-    data_ov039_020bea20->flagCa34 = TRUE;
+    gMenuOverlayWork->flagCa34 = TRUE;
 }

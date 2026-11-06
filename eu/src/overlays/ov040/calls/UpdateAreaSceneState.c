@@ -25,7 +25,7 @@ typedef struct {
 } FieldGlobals;
 
 extern AreaState *gMovieContextState;
-extern SceneState *data_ov040_020be280;
+extern SceneState *gAreaRewardSceneWork;
 extern FieldGlobals *data_ov001_020a0480;
 extern BOOL IsSessionFlagSet(int id);
 extern void ClearSessionPackedBit(int id);
@@ -82,7 +82,7 @@ int UpdateAreaSceneState(void) {
         {
             s32 frame;
             u8 *anim;
-            SceneState **scene = &data_ov040_020be280;
+            SceneState **scene = &gAreaRewardSceneWork;
             s32 stars;
 
             (*scene)->starCount = 0;

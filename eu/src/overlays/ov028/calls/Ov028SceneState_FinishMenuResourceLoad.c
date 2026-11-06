@@ -3,7 +3,7 @@
 #define func_ov001_020681c4 GetSceneResourceHandle
 #define func_ov001_020681d4 GetSceneEntryResourceId
 
-extern u32 data_ov028_020bb3a0;
+extern u32 gOv028FieldSceneWorkStorage;
 extern void SetCachedSoundParams(u32 param1, u32 param2, u16 param3);
 extern s32 UpdateMenuItemLoading(void);
 extern void InvokeSceneCallback(void);
@@ -39,7 +39,7 @@ u32 Ov028SceneState_FinishMenuResourceLoad(void)
         arg1 = func_ov001_020681d4();
         arg2 = func_ov001_020681c4();
         SetPanelHeaderText((const u16 *)arg2, (const u16 *)arg1);
-        *(u16 *)(data_ov028_020bb3a0 + 6) = *(u16 *)(data_ov028_020bb3a0 + 6) | 0x8000;
+        *(u16 *)(gOv028FieldSceneWorkStorage + 6) = *(u16 *)(gOv028FieldSceneWorkStorage + 6) | 0x8000;
         return 5;
     }
     return 0xffffffff;

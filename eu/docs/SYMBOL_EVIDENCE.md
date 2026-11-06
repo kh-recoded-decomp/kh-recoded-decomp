@@ -686,3 +686,17 @@ Native callback continuations, signed keep-state sentinels, true descriptor
 slots and current operand consumption remain explicit. Actor snapshot storage
 and packed progress are documented without expanding unproved array bounds
 or treating progress rows as percentages.
+
+## Scene task and menu DATA ownership
+
+Sixty-four DATA identities now describe task classes, handles/work storage,
+menu registries, physical descriptors and popup-state tables:
+
+- [SCENE_TASK_DATA_OWNERS.md](SCENE_TASK_DATA_OWNERS.md): 41 identities.
+- [MENU_DATA_REGISTRIES_DESCRIPTORS.md](MENU_DATA_REGISTRIES_DESCRIPTORS.md): 23 identities, including two previously descriptive registry fragments.
+
+Source paths and physical extents stay fixed. Descriptor prefixes do not
+claim whole mixed files, and opaque tails retain their original storage.
+`tools/rename_symbol.py --map-file PLAN.json --keep-source-paths` requires
+reviewed old/new/source candidates and completes all definition/collision
+checks before writing; it rejects unsupported assembly references.

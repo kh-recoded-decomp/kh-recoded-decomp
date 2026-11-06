@@ -10,7 +10,7 @@ typedef void (*ProtectionCallback)(void);
 typedef u32 (*ProtectionCallbackRunner)(ProtectionCallback callback);
 typedef int (*ProtectionDetector)(ProtectionCallbackRunner runner, ProtectionCallback callback, void *userData);
 
-extern void *data_ov036_020c392c[5];
+extern void *gTextWindowControllerTaskClass[5];
 extern const char sOv036_Ev2DBgP2_020c3718[];
 extern const char sOv036_Ev2DChtexP2_020c3724[];
 extern const char sOv036_Ev2DObjP2_020c3734[];
@@ -47,7 +47,7 @@ Event2DPanelStateFn InitEvent2DPanel(Event2DPanelArgs *args)
     data_ov036_020c3940.work->value02 = args->value02;
     data_ov036_020c3940.work->value04 = args->value04;
     data_ov036_020c3940.work->flags = 3;
-    data_ov036_020c3940.work->pxiHandle = CreateTask(data_ov036_020c392c, NULL);
+    data_ov036_020c3940.work->pxiHandle = CreateTask(gTextWindowControllerTaskClass, NULL);
     InitPanelDisplay();
     ClearStageManagerFlags31IfActive();
     data_ov036_020c3940.work->backgroundArchive = Msg_OpenContainerAndReadHeader(

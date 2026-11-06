@@ -1,3 +1,3 @@
 #define BuildSlotImageParams_020bc220 BuildSlotImageParams
-#define data_ov039_020bea00 data_ov039_020bea20
+#define data_ov039_020bea00 gMenuOverlayWork
 #include "src/ov039/widget_layers/BuildSlotImageParams_020bc220.c"

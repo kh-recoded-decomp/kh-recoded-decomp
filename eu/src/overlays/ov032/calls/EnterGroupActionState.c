@@ -1,5 +1,5 @@
 #define EnterGroupActionState_020bb1f8 EnterGroupActionState
-#define contextData_020c0060 data_ov032_020c0080
+#define contextData_020c0060 gGroupSceneGlobals
 #define func_ov001_02066810 StartIdleSceneObjects
 #define func_ov001_02087628 SetFieldObjectInteractionsBlocked
 #include "src/ov032/object_group/EnterGroupActionState_020bb1f8.c"

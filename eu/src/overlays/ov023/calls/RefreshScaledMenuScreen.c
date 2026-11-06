@@ -1,7 +1,7 @@
 #define func_ov001_0207123c GetFieldSceneManager
 #define CopyClippedScreenRegion_020167d0 NNS_G2dBGLoadScreenRect
 #define RefreshScaledMenuScreen_020b5a80 RefreshScaledMenuScreen
-#define data_ov023_020b6f64 data_ov023_020b6f84
+#define data_ov023_020b6f64 gMapMenuWork
 #define func_020067b0 G2x_SetBGyAffine_
 #define func_02007860 GXS_LoadBG3Scr
 #define func_02007be0 GXS_LoadBG3Char

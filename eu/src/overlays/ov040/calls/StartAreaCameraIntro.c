@@ -7,7 +7,7 @@
 #define SetFieldEntriesPaused_0206e444 SetFieldEntriesPaused
 #define SetMenuHighlight_0206c2f8 SetMenuHighlight
 #define StartAreaCameraIntro_020bd298 StartAreaCameraIntro
-#define data_ov040_020be260 data_ov040_020be280
+#define data_ov040_020be260 gAreaRewardSceneWork
 #define func_02025438 SetPanelEnabled
 #define func_ov046_020c15e8 GetCameraManagerWork
 #include "src/ov040/unclassified_helpers/StartAreaCameraIntro_020bd298.c"

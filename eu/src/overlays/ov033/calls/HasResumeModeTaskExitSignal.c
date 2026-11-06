@@ -1,9 +1,9 @@
 #include "nitro/types.h"
 
-extern int data_ov033_020baaa0;
+extern int gResumeModeTaskHandle;
 extern u32 Obj_GetWord28(u32 argument0);
 
 BOOL HasResumeModeTaskExitSignal(void)
 {
-    return Obj_GetWord28(data_ov033_020baaa0) != 0;
+    return Obj_GetWord28(gResumeModeTaskHandle) != 0;
 }

@@ -5,8 +5,8 @@ typedef struct {
     int pulseFrame;
 } PulseMenu;
 
-extern u16 data_ov032_020c0088;
-extern int data_ov032_020c0080[];
+extern u16 gGroupMenuGaugeGlobalsStorage;
+extern int gGroupSceneGlobals[];
 extern int NNS_GfdRegisterNewVramTransferTask(void *a, int b, int c, int d);
 
 void PulseMenuHighlightColor(PulseMenu *menu)
@@ -20,7 +20,7 @@ void PulseMenuHighlightColor(PulseMenu *menu)
     }
     level = frame * 31 / 30;
     blue = frame * 16 / 30;
-    data_ov032_020c0088 = (blue << 10) | ((level << 5) | level);
+    gGroupMenuGaugeGlobalsStorage = (blue << 10) | ((level << 5) | level);
     menu->pulseFrame = (menu->pulseFrame + 1) % 60;
-    NNS_GfdRegisterNewVramTransferTask((void *)0xf, 0x18e, (int)&data_ov032_020c0080[2], 2);
+    NNS_GfdRegisterNewVramTransferTask((void *)0xf, 0x18e, (int)&gGroupSceneGlobals[2], 2);
 }

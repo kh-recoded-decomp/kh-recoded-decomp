@@ -5,9 +5,9 @@ typedef struct EventState {
     u16 wordCa48;
 } EventState;
 
-extern EventState *data_ov039_020bea20;
+extern EventState *gMenuOverlayWork;
 
 u16 GetEventStateWordCa48(void)
 {
-    return data_ov039_020bea20->wordCa48;
+    return gMenuOverlayWork->wordCa48;
 }

@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-extern u32 data_ov028_020bb3a0;
+extern u32 gOv028FieldSceneWorkStorage;
 extern u32 GetPendingWorldEntryData(void);
 extern u32 GetSignedByteAt1(void);
 extern u32 GetSignedByteAt3(u32 value);
@@ -8,7 +8,7 @@ extern void func_ov001_02063848(u32 param1, u32 param2);
 
 u32 Ov028SceneState_StoreEventRecordBytes(void)
 {
-    u32 context = data_ov028_020bb3a0;
+    u32 context = gOv028FieldSceneWorkStorage;
     u32 arg1;
     u32 arg2;
 

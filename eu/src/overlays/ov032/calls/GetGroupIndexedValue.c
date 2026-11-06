@@ -1,3 +1,3 @@
 #define GetGroupIndexedValue_020bb86c GetGroupIndexedValue
-#define contextData_020c0060 data_ov032_020c0080
+#define contextData_020c0060 gGroupSceneGlobals
 #include "src/ov032/object_group/GetGroupIndexedValue_020bb86c.c"

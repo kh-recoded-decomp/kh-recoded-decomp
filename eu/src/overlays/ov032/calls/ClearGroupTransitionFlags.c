@@ -1,3 +1,3 @@
 #define ClearGroupTransitionFlags_020bb330 ClearGroupTransitionFlags
-#define contextData_020c0060 data_ov032_020c0080
+#define contextData_020c0060 gGroupSceneGlobals
 #include "src/ov032/object_group/ClearGroupTransitionFlags_020bb330.c"

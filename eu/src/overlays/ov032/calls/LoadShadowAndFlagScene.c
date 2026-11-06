@@ -1,5 +1,5 @@
 #define LoadShadowAndFlagScene_020ba90c LoadShadowAndFlagScene
 #define ObjectManager_LoadShadowModel_0207efac ObjectManager_LoadShadowModel
-#define data_ov032_020c0060 data_ov032_020c0080
+#define data_ov032_020c0060 gGroupSceneGlobals
 #define func_ov001_02063404 RestoreSessionActors
 #include "src/ov032/unclassified_helpers/LoadShadowAndFlagScene_020ba90c.c"

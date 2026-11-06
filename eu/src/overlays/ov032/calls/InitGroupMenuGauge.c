@@ -12,5 +12,5 @@
 #define func_02014d38 NNS_G2dGetUnpackedBGCharacterData
 #define func_0202c48c LoadFileAllocFromHeapTail
 #define func_ov027_020b822c InvokeTrackerRecordAtPosition
-#define menuState_020c0068 data_ov032_020c0088
+#define menuState_020c0068 gGroupMenuGaugeGlobalsStorage
 #include "src/ov032/object_group/InitGroupMenuGauge_020bba70.c"

@@ -12,14 +12,14 @@ typedef struct {
     u32 displayFlags;
 } PanelState;
 
-extern OverlayState *data_ov031_020bc820;
+extern OverlayState *gOv031SceneWorkStorage;
 extern PanelState *data_ov001_020a0480;
 extern BOOL IsScreenModeIdle(void);
 extern void Panel_CaptureBrightness(void);
 
 u32 TryLeaveToState7(void)
 {
-    OverlayState *state = data_ov031_020bc820;
+    OverlayState *state = gOv031SceneWorkStorage;
 
     if (!IsScreenModeIdle()) {
         return 0xffffffff;

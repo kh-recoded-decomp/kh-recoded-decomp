@@ -4,7 +4,7 @@
 
 extern void ShutdownSceneWork_020ba6c4(void);
 
-void *data_ov036_020c36e4[5] = {
+void *gEvent2DPanelTaskClass[5] = {
     (void *)0x0002000E,
     (void *)InitEvent2DPanel,
     (void *)ShutdownSceneWork_020ba6c4,
@@ -12,6 +12,6 @@ void *data_ov036_020c36e4[5] = {
     NULL,
 };
 
-u32 data_ov036_020c36e0[1] = {
+u32 gEvent2DPanelTaskHandle[1] = {
     0xFFFFFFFF,
 };

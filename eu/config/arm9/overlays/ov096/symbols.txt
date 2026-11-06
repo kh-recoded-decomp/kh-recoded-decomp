@@ -1,4 +1,4 @@
 InitOv096SecondaryMenu kind:function(arm,size=0x8) addr:0x020beac0
 DestroyOv096SecondaryMenu kind:function(arm,size=0x4) addr:0x020beac8
 UpdateOv096SecondaryMenu kind:function(arm,size=0x4) addr:0x020beacc
-data_ov096_020beae0 kind:data(any) addr:0x020beae0 ambiguous
+gOv096SecondaryMenuDescriptor kind:data(any) addr:0x020beae0 ambiguous

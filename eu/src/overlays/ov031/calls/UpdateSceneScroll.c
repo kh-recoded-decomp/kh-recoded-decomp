@@ -13,5 +13,5 @@
 #define func_ov031_020bc650 CanStartIdleRecord
 #define func_ov043_020bc8f8 Ov043Camera_GetFlags
 #define func_ov043_020bca1c Ov043Camera_GetActiveController
-#define g_activeState_020bc800 data_ov031_020bc820
+#define g_activeState_020bc800 gOv031SceneWorkStorage
 #include "src/ov031/overlay_state/UpdateSceneScroll_020bb054.c"

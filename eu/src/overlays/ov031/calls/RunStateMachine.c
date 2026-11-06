@@ -1,6 +1,6 @@
 #define ApplyOverlayScaleMode_020bab20 ApplyOverlayScaleMode_020bab40
 #define LeaveState_020bab00 LeaveState
 #define RunStateMachine_020ba4b4 RunStateMachine
-#define data_ov031_020bc798 data_ov031_020bc7b8
-#define g_activeState_020bc800 data_ov031_020bc820
+#define data_ov031_020bc798 gOv031SceneStateHandlerStorage
+#define g_activeState_020bc800 gOv031SceneWorkStorage
 #include "src/ov031/state_machine/RunStateMachine_020ba4b4.c"

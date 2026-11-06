@@ -2,7 +2,7 @@
 #define IsSoundStreamActive_0204ded4 HasNonzeroStreamPlaybackPosition
 #define SetCardThreadStartTick_02027258 SetCardThreadStartTick
 #define UpdateExitSequence_020bb33c UpdateExitSequence
-#define data_ov039_020bea00 data_ov039_020bea20
+#define data_ov039_020bea00 gMenuOverlayWork
 #define func_0204d7f4 QueueOrUpdateSoundKind3
 #define func_ov039_020baae0 SetMenuPhase
 #define func_ov039_020bcf20 UpdatePrimaryMenuSubOverlay

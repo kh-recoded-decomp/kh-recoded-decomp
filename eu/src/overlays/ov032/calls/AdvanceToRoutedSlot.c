@@ -38,7 +38,7 @@ typedef struct {
     s8 direction;
 } PlayerCursor;
 
-extern Ov032Globals data_ov032_020c0080;
+extern Ov032Globals gGroupSceneGlobals;
 
 extern PlayerCursor *GetPendingWorldEntryData(void);
 extern u32 NextSharedRandom16Scaled(u32 range);
@@ -49,30 +49,30 @@ extern void func_ov001_02063848(int a, int b);
 
 int AdvanceToRoutedSlot(void)
 {
-    SceneState *scene = data_ov032_020c0080.scene;
+    SceneState *scene = gGroupSceneGlobals.scene;
     PlayerCursor *cursor = GetPendingWorldEntryData();
     SceneContext *context;
 
-    if (data_ov032_020c0080.context->overrideActive) {
-        data_ov032_020c0080.context->visitedMask &= ~(1 << data_ov032_020c0080.context->slotIndex);
-        data_ov032_020c0080.context->overrideActive = 0;
+    if (gGroupSceneGlobals.context->overrideActive) {
+        gGroupSceneGlobals.context->visitedMask &= ~(1 << gGroupSceneGlobals.context->slotIndex);
+        gGroupSceneGlobals.context->overrideActive = 0;
     }
-    context = data_ov032_020c0080.context;
+    context = gGroupSceneGlobals.context;
     context->slotIndex = context->routes[context->slotIndex][(cursor->direction + context->routeBase[context->slotIndex] - 1) & 3];
-    data_ov032_020c0080.context->unk_80 = 0;
-    data_ov032_020c0080.context->unk_84 = 1;
-    context = data_ov032_020c0080.context;
+    gGroupSceneGlobals.context->unk_80 = 0;
+    gGroupSceneGlobals.context->unk_84 = 1;
+    context = gGroupSceneGlobals.context;
     if (context->slotLocked[context->slotIndex] == 0 && (context->visitedMask & (1 << context->slotIndex))) {
         context->overrideActive = 1;
     }
-    context = data_ov032_020c0080.context;
+    context = gGroupSceneGlobals.context;
     if (context->slotLocked[context->slotIndex] == 0 && context->lockEnabled != 0 && !(context->lockedMask & (1 << context->slotIndex))) {
         if (context->lockChance > (int)NextSharedRandom16Scaled(100)) {
-            data_ov032_020c0080.context->lockedMask |= 1 << data_ov032_020c0080.context->slotIndex;
+            gGroupSceneGlobals.context->lockedMask |= 1 << gGroupSceneGlobals.context->slotIndex;
         }
     }
     ApplySlotStyleToSession();
-    data_ov032_020c0080.context->displayMode = 2;
+    gGroupSceneGlobals.context->displayMode = 2;
     func_ov001_02063848(GetSignedByteAt1(cursor), GetSignedByteAt3(cursor));
     scene->flags |= 2;
     return 7;

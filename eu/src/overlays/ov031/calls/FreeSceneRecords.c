@@ -1,4 +1,4 @@
 #define FreeSceneRecords_020ba51c FreeSceneRecords
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
-#define g_activeState_020bc800 data_ov031_020bc820
+#define g_activeState_020bc800 gOv031SceneWorkStorage
 #include "src/ov031/overlay_state/FreeSceneRecords_020ba51c.c"

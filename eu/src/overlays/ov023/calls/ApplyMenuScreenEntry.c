@@ -2,7 +2,7 @@
 #define FindChainEntryById_020b5b6c FindChainEntryById
 #define LoadMenuScreenResource_020b5b94 LoadMenuScreenResource
 #define QueueFileLoadRequest_020ba114 QueueFileLoadRequest
-#define data_ov023_020b6f64 data_ov023_020b6f84
+#define data_ov023_020b6f64 gMapMenuWork
 #define func_ov001_0207b4d8 SetPanelSessionActive
 #define func_ov001_0207b6f4 RequestPanelFallback
 #define func_ov027_020ba1d8 GetFileLoadRequestBuffer

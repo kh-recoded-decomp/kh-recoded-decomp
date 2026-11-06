@@ -1,5 +1,5 @@
 #define SetAlternateMenuWidgets_020b61f4 SetAlternateMenuWidgets
-#define _data_ov025_020b7760 data_ov025_020b7780
+#define _data_ov025_020b7760 gMenuListWorkStorage
 #define func_ov027_020b90a4 FindWidgetById
 #define func_ov027_020b9580 SetEntrySlotsVisible
 #include "src/ov025/menu_widgets/SetAlternateMenuWidgets_020b61f4.c"

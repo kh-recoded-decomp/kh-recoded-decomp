@@ -1,5 +1,5 @@
 #define UpdateOverlayFrame_020bbb6c UpdateOverlayFrame
-#define data_ov039_020bea00 data_ov039_020bea20
+#define data_ov039_020bea00 gMenuOverlayWork
 #define NNS_FndGetNextListObject_02012a38 NNS_FndGetNextListObject
 #define RemoveListEntry_020bc70c RemoveListEntry
 #define FS_UnloadOverlayImage_0204f5dc FS_UnloadOverlayImage_0204f5f0

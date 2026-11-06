@@ -5,7 +5,7 @@
 extern void InitFieldOverlayState(void);
 extern void ReleaseFieldContext(void);
 
-void *data_ov028_020bb324[5] = {
+void *gOv028FieldSceneTaskClass[5] = {
     (void *)0x0002000E,
     (void *)InitFieldOverlayState,
     (void *)ReleaseFieldContext,
@@ -13,6 +13,6 @@ void *data_ov028_020bb324[5] = {
     NULL,
 };
 
-u32 data_ov028_020bb320[1] = {
+u32 gOv028FieldSceneTaskHandle[1] = {
     0xFFFFFFFF,
 };

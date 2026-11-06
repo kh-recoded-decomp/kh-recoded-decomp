@@ -35,7 +35,7 @@ GetFieldTransitionFlags kind:function(arm,size=0x18) addr:0x020bb19c
 BeginFieldSceneSlowdownTransition kind:function(arm,size=0x6c) addr:0x020bb1b4
 InstallSceneHandlers kind:function(arm,size=0xa8) addr:0x020bb220
 SetOrClearStatusBit2 kind:function(arm,size=0x44) addr:0x020bb2c8
-data_ov028_020bb320 kind:data(any) addr:0x020bb320
-data_ov028_020bb324 kind:data(any) addr:0x020bb324
+gOv028FieldSceneTaskHandle kind:data(any) addr:0x020bb320
+gOv028FieldSceneTaskClass kind:data(any) addr:0x020bb324
 gSceneStateHandlers kind:data(any) addr:0x020bb338
-data_ov028_020bb3a0 kind:bss addr:0x020bb3a0
+gOv028FieldSceneWorkStorage kind:bss addr:0x020bb3a0

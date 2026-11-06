@@ -1,6 +1,6 @@
 #define DispatchOverlayEventPairB_020bd264 DispatchOverlayEventPairB
-#define active_handler_indices data_ov039_020beaa4
+#define active_handler_indices gMenuSubOverlayIndexStorage
 #define func_020bcd98 InvokeIfPresent_020bcdb8
-#define primary_handler_table data_ov039_020be950
-#define secondary_handler_table data_ov039_020be8f0
+#define primary_handler_table gPrimaryMenuRegistryTail
+#define secondary_handler_table gSecondaryMenuRegistryTail
 #include "src/ov039/overlay_event_dispatch/DispatchOverlayEventPairB_020bd264.c"

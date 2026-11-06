@@ -5,12 +5,12 @@ typedef struct {
     u16 flags;
 } State_020baac0;
 
-extern State_020baac0 *data_ov033_020baae0;
+extern State_020baac0 *gResumeModeWorkStorage;
 extern void UpdateOverlayFrame(u32 argument0);
 
 u32 UpdateResumeMenuUntilResult(void)
 {
-    State_020baac0 *state = data_ov033_020baae0;
+    State_020baac0 *state = gResumeModeWorkStorage;
     u32 result = 0xffffffff;
 
     UpdateOverlayFrame(0);

@@ -1,4 +1,4 @@
 #define ClearScreenLayerDirty_020bc128 ClearScreenLayerDirty
-#define data_ov039_020bea00 data_ov039_020bea20
+#define data_ov039_020bea00 gMenuOverlayWork
 #define func_ov027_020b9e30 ClearTileTableRowDirty
 #include "src/ov039/widget_layers/ClearScreenLayerDirty_020bc128.c"

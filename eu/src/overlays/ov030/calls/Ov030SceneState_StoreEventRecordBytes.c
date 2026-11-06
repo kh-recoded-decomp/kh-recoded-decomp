@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-extern u32 data_ov030_020bd020;
+extern u32 gOv030SceneWork;
 extern u32 GetPendingWorldEntryData(void);
 extern s8 GetSignedByteAt1(void);
 extern s8 GetSignedByteAt3(u32 arg);
@@ -12,7 +12,7 @@ u32 Ov030SceneState_StoreEventRecordBytes(void)
     u32 valueA;
     u32 valueB;
 
-    ctx = data_ov030_020bd020;
+    ctx = gOv030SceneWork;
     valueA = GetPendingWorldEntryData();
     valueB = GetSignedByteAt1();
     valueA = GetSignedByteAt3(valueA);

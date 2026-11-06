@@ -5,7 +5,7 @@
 #define PXI_Init_02028dac BeginOrthographicCameraWrapper
 #define PXI_Init_02028db8 RestoreSavedCameraWrapper
 #define UpdateGaugeFrame_020bc0ec UpdateGaugeFrame
-#define data_ov035_020bc4e8 data_ov035_020bc508
+#define data_ov035_020bc4e8 gAreaSceneGaugeGlobalsStorage
 #define func_ov035_020bae1c GetMovieEntryValue
 #define func_ov035_020bae64 GetCurrentAreaIndex
 #define func_ov035_020bb96c DrawChannelMeter

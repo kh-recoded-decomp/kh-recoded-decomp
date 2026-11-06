@@ -1,5 +1,5 @@
 #define SetSelectionIfChanged_020bc92c SetSelectionIfChanged_020bc94c
-#define data_ov039_020bea00 data_ov039_020bea20
+#define data_ov039_020bea00 gMenuOverlayWork
 #define func_ov039_020bb754 LoadSlotImagePair
 #define func_ov039_020bb824 FreeSlotPair
 #include "src/ov039/event_state/SetSelectionIfChanged_020bc92c.c"

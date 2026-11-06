@@ -12,7 +12,7 @@
 #define UpdateMapMenuState_020b6afc UpdateMapMenuState
 #define data_ov023_020b6f20 sOv023_UiBtlMapLanguageP2_020b6f40
 #define data_ov023_020b6f30 sOv023_UiBtlMapchrP2_020b6f50
-#define data_ov023_020b6f64 data_ov023_020b6f84
+#define data_ov023_020b6f64 gMapMenuWork
 #define func_01ff8830 MI_CpuFill8
 #define func_ov001_0207b45c GetPanelFormationType
 #include "src/ov023/menu_graphics/InitMapMenuState_020b6a18.c"

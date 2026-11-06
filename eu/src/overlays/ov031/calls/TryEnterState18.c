@@ -18,5 +18,5 @@
 #define func_ov001_0207ef78 ResetFieldObjectManagerResources
 #define func_ov001_020828ac ReleaseFirstType11FieldObjectModels
 #define func_ov059_020cbdd0 ResetActorSlotTableIds
-#define g_activeState_020bc800 data_ov031_020bc820
+#define g_activeState_020bc800 gOv031SceneWorkStorage
 #include "src/ov031/state_machine/TryEnterState18_020baa34.c"

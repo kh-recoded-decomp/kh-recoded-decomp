@@ -1,4 +1,4 @@
 #define MarkSoundCtxActive_020ba5a0 MarkSoundCtxActive
 #define func_ov001_02063404 RestoreSessionActors
-#define g_ov029SoundCtx_020baba0 data_ov029_020babc0
+#define g_ov029SoundCtx_020baba0 gOv029SceneWorkStorage
 #include "src/ov029/reviewed_helpers/MarkSoundCtxActive_020ba5a0.c"

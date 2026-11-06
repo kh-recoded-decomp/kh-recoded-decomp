@@ -1,3 +1,3 @@
 #define IsOv038SoundCtxFlag0Clear_020ba620 IsOv038SoundCtxFlag0Clear
-#define g_ov038SoundCtx_020bd140 data_ov038_020bd160
+#define g_ov038SoundCtx_020bd140 gResultsPageOuterTaskWork
 #include "src/ov038/reviewed_helpers/IsOv038SoundCtxFlag0Clear_020ba620.c"

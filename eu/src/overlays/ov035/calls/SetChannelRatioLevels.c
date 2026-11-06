@@ -1,4 +1,4 @@
 #define SetChannelRatioLevels_020bc1f0 SetChannelRatioLevels
-#define data_ov035_020bc4e8 data_ov035_020bc508
+#define data_ov035_020bc4e8 gAreaSceneGaugeGlobalsStorage
 #define func_ov035_020bb7a8 RemapMovieMenuValue
 #include "src/ov035/unclassified_helpers/SetChannelRatioLevels_020bc1f0.c"

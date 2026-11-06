@@ -1,5 +1,5 @@
 #define func_ov001_0207123c GetFieldSceneManager
 #define DrawMenuEntryWidget_020b59d8 DrawMenuEntryWidget
-#define data_ov025_020b7760 data_ov025_020b7780
+#define data_ov025_020b7760 gMenuListWorkStorage
 #define func_ov027_020b9a74 BlitWidgetToTileTable
 #include "src/ov025/menu_widgets/DrawMenuEntryWidget_020b59d8.c"

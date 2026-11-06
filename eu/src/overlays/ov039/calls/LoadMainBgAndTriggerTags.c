@@ -5,7 +5,7 @@
 #define LoadMainBgAndTriggerTags_020bc318 LoadMainBgAndTriggerTags
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define TagTracker_InvokeCallback_020b8210 TagTracker_InvokeCallback
-#define data_ov039_020bea00 data_ov039_020bea20
+#define data_ov039_020bea00 gMenuOverlayWork
 #define func_02007250 GX_LoadBGPltt
 #define func_0202c478 Archive_LoadFile
 #include "src/ov039/widget_layers/LoadMainBgAndTriggerTags_020bc318.c"

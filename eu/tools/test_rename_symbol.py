@@ -175,5 +175,87 @@ class RenameSymbolTest(unittest.TestCase):
             rename_symbol.rename_symbols([('OldFunction', 'NewFunction'), ('NewFunction', 'OtherNew')])
         self.assertEqual(self.snapshot(), before)
 
+    def test_data_batch_keeps_aggregate_path_layout_and_other_regions(self):
+        source = self.put('src/data/Tables.c', '\ufeffconst unsigned char oldTable[4] = {1,2,3,4};\nunsigned int oldHandle;\n')
+        caller = self.put('src/calls/Caller.c', 'extern const unsigned char oldTable[];\nextern unsigned int oldHandle;\nint Caller(void) { return oldTable[oldHandle]; }\n')
+        config = self.put('config/symbols.txt', 'oldTable kind:data addr:0x02000000\noldHandle kind:bss addr:0x02000004\n')
+        other = self.put('shared_region/Tables.c', 'unsigned int oldHandle;\n')
+        with contextlib.redirect_stdout(io.StringIO()):
+            rename_symbol.rename_symbols([('oldTable','gTable'),('oldHandle','gHandle')],
+                                         definition_sources={'oldTable':'src/data/Tables.c','oldHandle':'src/data/Tables.c'})
+        self.assertEqual(source.read_text(encoding='utf-8'), '\ufeffconst unsigned char gTable[4] = {1,2,3,4};\nunsigned int gHandle;\n')
+        self.assertTrue(source.read_bytes().startswith(b'\xef\xbb\xbf'))
+        self.assertEqual(list(source.parent.glob('*.c')), [source])
+        self.assertIn('gTable[gHandle]', caller.read_text())
+        self.assertIn('gHandle kind:bss addr:0x02000004', config.read_text())
+        self.assertEqual(other.read_text(), 'unsigned int oldHandle;\n')
+
+    def test_data_source_containing_only_extern_is_rejected_without_writes(self):
+        self.put('src/data/Tables.c', '  extern unsigned int oldHandle;\n/* unsigned int oldHandle; */\nint Work(void) {\n    oldHandle = 1;\n    return oldHandle;\n}\n')
+        before = self.snapshot()
+        with self.assertRaisesRegex(SystemExit, 'expected one defining source'):
+            rename_symbol.rename_symbols([('oldHandle','gHandle')], definition_sources={'oldHandle':'src/data/Tables.c'})
+        self.assertEqual(self.snapshot(), before)
+
+    def test_data_definition_must_match_the_reviewed_path(self):
+        self.put('src/data/Actual.c', 'unsigned int oldHandle;\n')
+        self.put('src/data/Wrong.c', 'extern unsigned int oldHandle;\n')
+        before = self.snapshot()
+        with self.assertRaisesRegex(SystemExit, 'does not match the reviewed source'):
+            rename_symbol.rename_symbols([('oldHandle','gHandle')], definition_sources={'oldHandle':'src/data/Wrong.c'})
+        self.assertEqual(self.snapshot(), before)
+
+    def test_data_duplicate_definition_rejects_the_entire_batch(self):
+        self.put('src/data/Actual.c', 'unsigned int oldHandle;\nconst int oldTable[2] = {1,2};\n')
+        self.put('libs/data/Duplicate.c', 'unsigned int oldHandle;\n')
+        before = self.snapshot()
+        with self.assertRaisesRegex(SystemExit, 'found 2'):
+            rename_symbol.rename_symbols([('oldTable','gTable'),('oldHandle','gHandle')],
+                                         definition_sources={'oldTable':'src/data/Actual.c','oldHandle':'src/data/Actual.c'})
+        self.assertEqual(self.snapshot(), before)
+
+    def test_data_sources_cannot_escape_region_or_request_moves(self):
+        self.put('shared_region/Tables.c', 'unsigned int oldHandle;\n')
+        before = self.snapshot()
+        for source, move in [('shared_region/Tables.c',False),('src/data/Tables.c',True)]:
+            with self.assertRaises(SystemExit):
+                rename_symbol.rename_symbols([('oldHandle','gHandle')], move_calls=move,
+                                             definition_sources={'oldHandle':source})
+        self.assertEqual(self.snapshot(), before)
+
+    def test_data_cli_requires_explicit_sources(self):
+        plan = self.put('plan.json', json.dumps({'candidates':[{'old':'oldHandle','new':'gHandle'}]}))
+        before = self.snapshot()
+        with mock.patch.object(sys,'argv',['rename_symbol.py','--map-file',str(plan),'--keep-source-paths']):
+            with contextlib.redirect_stderr(io.StringIO()), self.assertRaises(SystemExit):
+                rename_symbol.main()
+        self.assertEqual(self.snapshot(), before)
+
+    def test_data_assembly_reference_requires_review_before_any_write(self):
+        self.put('src/data/Tables.c', 'unsigned int oldHandle;\n')
+        self.put('libs/runtime/reference.s', '.word oldHandle\n')
+        before = self.snapshot()
+        with self.assertRaisesRegex(SystemExit, 'assembly symbols need explicit'):
+            rename_symbol.rename_symbols([('oldHandle','gHandle')], definition_sources={'oldHandle':'src/data/Tables.c'})
+        self.assertEqual(self.snapshot(), before)
+
+    def test_data_anonymous_packed_aggregate_keeps_opaque_tail(self):
+        body = 'struct {\n    void *pointers[19];\n    unsigned char tail[17];\n} __attribute__((packed)) oldTable = {{0}, {0}};\n'
+        source = self.put('src/data/Tables.c', body)
+        with contextlib.redirect_stdout(io.StringIO()):
+            rename_symbol.rename_symbols([('oldTable','gHandlerStorage')],
+                                         definition_sources={'oldTable':'src/data/Tables.c'})
+        self.assertEqual(source.read_text(),body.replace('oldTable','gHandlerStorage'))
+
+    def test_data_callback_array_preserves_signature_and_count(self):
+        body = 'void (*const oldTable[8])(void) = {0};\n'
+        source = self.put('src/data/Tables.c', body)
+        with contextlib.redirect_stdout(io.StringIO()):
+            rename_symbol.rename_symbols([('oldTable','gPopupStateHandlers')],
+                                         definition_sources={'oldTable':'src/data/Tables.c'})
+        self.assertEqual(source.read_text(),body.replace('oldTable','gPopupStateHandlers'))
+        self.assertFalse(rename_symbol.has_data_definition('typedef void (*oldTable[8])(void);','oldTable'))
+        self.assertFalse(rename_symbol.has_data_definition('extern void (*oldTable[8])(void);','oldTable'))
+
 if __name__ == "__main__":
     unittest.main()

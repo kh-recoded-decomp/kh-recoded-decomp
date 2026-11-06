@@ -6,7 +6,7 @@ extern void InitOv100SecondaryMenu(void);
 extern void DestroyOv100SecondaryMenu(void);
 extern void UpdateOv100SecondaryMenu(void);
 
-void *data_ov100_020beae0[16] = {
+void *gOv100SecondaryMenuDescriptor[16] = {
     (void *)InitOv100SecondaryMenu,
     (void *)DestroyOv100SecondaryMenu,
     (void *)UpdateOv100SecondaryMenu,

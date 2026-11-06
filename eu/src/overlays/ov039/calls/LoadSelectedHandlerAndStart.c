@@ -1,7 +1,7 @@
 #define InitStreamBufferPair_020bacbc StartMenuBrightnessTweens
 #define LoadSelectedHandlerAndStart_020bb40c LoadSelectedHandlerAndStart
 #define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
-#define data_ov039_020bea00 data_ov039_020bea20
+#define data_ov039_020bea00 gMenuOverlayWork
 #define dispatchSelectedMenuCallback_020bcfcc dispatchSelectedMenuCallback
 #define func_01ff8830 MI_CpuFill8
 #define func_ov039_020baae0 SetMenuPhase

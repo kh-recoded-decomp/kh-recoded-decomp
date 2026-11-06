@@ -1,6 +1,6 @@
-extern int data_ov039_020beaa4[];
+extern int gMenuSubOverlayIndexStorage[];
 void ResetMenuSubOverlayIndices(void)
 {
-    data_ov039_020beaa4[0] = -1;
-    data_ov039_020beaa4[1] = -1;
+    gMenuSubOverlayIndexStorage[0] = -1;
+    gMenuSubOverlayIndexStorage[1] = -1;
 }

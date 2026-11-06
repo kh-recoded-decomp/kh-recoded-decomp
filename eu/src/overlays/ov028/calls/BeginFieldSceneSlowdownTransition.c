@@ -2,7 +2,7 @@
 
 typedef void (*ResetCallback)(void *self, s32 arg);
 
-extern u32 data_ov028_020bb3a0;
+extern u32 gOv028FieldSceneWorkStorage;
 extern s32 FX_Div(s32 numer, s32 denom);
 extern void StopSequencePlayersFrom2(void);
 extern void BeginScreenFadeOut(s32 value);
@@ -27,5 +27,5 @@ void BeginFieldSceneSlowdownTransition(void)
     }
     Camera_SetFlag18IfStandard(1);
     StopSequencePlayersFrom2();
-    *(u16 *)(data_ov028_020bb3a0 + 6) = *(u16 *)(data_ov028_020bb3a0 + 6) | 0x40;
+    *(u16 *)(gOv028FieldSceneWorkStorage + 6) = *(u16 *)(gOv028FieldSceneWorkStorage + 6) | 0x40;
 }

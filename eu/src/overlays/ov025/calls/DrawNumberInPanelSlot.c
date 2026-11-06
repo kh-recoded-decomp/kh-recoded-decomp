@@ -4,5 +4,5 @@
 #define func_02001574 CallVirtualHandlerSlot1
 #define func_0200160c DrawTextAnchoredWithFontFallback
 #define func_ov001_020711d4 GetFieldFont2
-#define g_uiContext_020b7760 data_ov025_020b7780
+#define g_uiContext_020b7760 gMenuListWorkStorage
 #include "src/ov025/panel_state/DrawNumberInPanelSlot_020b62c4.c"

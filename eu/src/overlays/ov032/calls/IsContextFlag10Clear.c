@@ -1,3 +1,3 @@
 #define IsContextFlag10Clear_020bb554 IsContextFlag10Clear
-#define contextData_020c0060 data_ov032_020c0080
+#define contextData_020c0060 gGroupSceneGlobals
 #include "src/ov032/object_group/IsContextFlag10Clear_020bb554.c"

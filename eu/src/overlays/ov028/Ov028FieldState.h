@@ -11,7 +11,7 @@ typedef struct Ov028FieldState {
     s8 mode;
 } Ov028FieldState;
 
-extern Ov028FieldState *data_ov028_020bb3a0;
-#define gOv028FieldState data_ov028_020bb3a0
+extern Ov028FieldState *gOv028FieldSceneWorkStorage;
+#define gOv028FieldState gOv028FieldSceneWorkStorage
 
 #endif

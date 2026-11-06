@@ -14,7 +14,7 @@ u32 data_ov088_020beec0[18] = {
     0x00000016, 0x00000017,
 };
 
-void *data_ov088_020bee80[16] = {
+void *gOverlay088CaptionMenuDescriptor[16] = {
     (void *)InitializeOverlay088,
     (void *)ShutdownOverlay088,
     (void *)UpdateOverlay088CaptionLayerNoop,

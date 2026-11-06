@@ -11,7 +11,7 @@ typedef struct {
     u8 progressStage;
 } SaveWork;
 
-extern SoundCtx *data_ov033_020baae0;
+extern SoundCtx *gResumeModeWorkStorage;
 extern SaveWork *data_0205fe0c;
 extern u32 func_ov001_02063620(void);
 extern void SetPanelEnabled(int mode);
@@ -22,7 +22,7 @@ extern void InitOverlayState(s32 modeId);
 
 s32 BeginResumeMode(void)
 {
-    SoundCtx *ctx = data_ov033_020baae0;
+    SoundCtx *ctx = gResumeModeWorkStorage;
 
     if (func_ov001_02063620() != 0) {
         return -1;
@@ -43,6 +43,6 @@ s32 BeginResumeMode(void)
     if (ctx->flags & 1) {
         ctx->flags &= ~1;
     }
-    data_ov033_020baae0->flags |= 0x8000;
+    gResumeModeWorkStorage->flags |= 0x8000;
     return 1;
 }

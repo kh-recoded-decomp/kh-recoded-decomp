@@ -97,13 +97,13 @@ gMovieSourceHandle kind:data(any) addr:0x020bc480
 gMovieSourceClassDescriptor kind:data(any) addr:0x020bc484
 gMovieSkipHandlers kind:data(any) addr:0x020bc498
 sOv035_RpgZ_020bc4c0 kind:data(any) addr:0x020bc4c0
-data_ov035_020bc4c8 kind:data(any) addr:0x020bc4c8
+gAreaSceneModelNameFormat kind:data(any) addr:0x020bc4c8
 sOv035AreaName kind:data(any) addr:0x020bc4d0
 sOv035InactiveColors kind:data(any) addr:0x020bc4d8
-data_ov035_020bc4e0 kind:data(any) addr:0x020bc4e0
+gAreaSceneActiveColorUploadData kind:data(any) addr:0x020bc4e0
 gBarGaugeClassDescriptor kind:data(any) addr:0x020bc4e8
 gMovieContextState kind:bss addr:0x020bc500
-data_ov035_020bc504 kind:bss addr:0x020bc504
-data_ov035_020bc508 kind:bss addr:0x020bc508
+gAreaSceneMaterialFadeWork kind:bss addr:0x020bc504
+gAreaSceneGaugeGlobalsStorage kind:bss addr:0x020bc508
 func_020bd17c kind:label(thumb) addr:0x020bd17c
 func_020bd2a4 kind:label(thumb) addr:0x020bd2a4

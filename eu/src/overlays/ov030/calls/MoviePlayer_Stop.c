@@ -17,5 +17,5 @@
 #define func_ov001_0207ef40 SetOverlayLayerVisible
 #define func_ov001_0207ef78 ResetFieldObjectManagerResources
 #define func_ov001_020828ac ReleaseFirstType11FieldObjectModels
-#define g_moviePlayerCtx_020bd000 data_ov030_020bd020
+#define g_moviePlayerCtx_020bd000 gOv030SceneWork
 #include "src/ov030/movie/MoviePlayer_Stop_020ba9d0.c"

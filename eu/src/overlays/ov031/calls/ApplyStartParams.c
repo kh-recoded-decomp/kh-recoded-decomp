@@ -1,4 +1,4 @@
 #define ApplyStartParams_020bb518 ApplyStartParams
 #define ClearFieldCounters_02064dc8 ClearSessionStateWords
-#define g_activeState_020bc800 data_ov031_020bc820
+#define g_activeState_020bc800 gOv031SceneWorkStorage
 #include "src/ov031/overlay_state/ApplyStartParams_020bb518.c"

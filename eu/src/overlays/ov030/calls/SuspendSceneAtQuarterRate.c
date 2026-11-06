@@ -5,5 +5,5 @@
 #define SuspendSceneAtQuarterRate_020bb220 SuspendSceneAtQuarterRate
 #define func_0204d980 StopSequencePlayersFrom2
 #define func_ov001_0206a7c0 BeginScreenFadeOut
-#define g_moviePlayerCtx_020bd000 data_ov030_020bd020
+#define g_moviePlayerCtx_020bd000 gOv030SceneWork
 #include "src/ov030/movie/SuspendSceneAtQuarterRate_020bb220.c"

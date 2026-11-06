@@ -13,7 +13,7 @@ extern void MoveGridCursorRight(void);
 extern void TrophyReport_ReturnToParentMenu(void);
 extern void TrophyReport_ReturnToRootMenu(void);
 
-void *data_ov093_020c4014[17] = {
+void *gTrophyReportMenuDescriptor[17] = {
     (void *)InitEntryGridScene,
     (void *)ShutdownTrophyReport,
     (void *)UpdateSceneFrame,

@@ -4,7 +4,7 @@
 #define PXI_Init_0202a638 DestroyTaskObjectWrapper
 #define PopVramState_020365f0 PopVramState
 #define ShutdownScreenWork_020bd990 ShutdownScreenWork
-#define data_ov040_020be260 data_ov040_020be280
+#define data_ov040_020be260 gAreaRewardSceneWork
 #define func_ov001_020633d4 FlushPendingFieldUpdate
 #define func_ov001_02087214 GetFieldEntryPoolAtIndex
 #define func_ov019_020a3640 ReleaseOwnedEntryGroup

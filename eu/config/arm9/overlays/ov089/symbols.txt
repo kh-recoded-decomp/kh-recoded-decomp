@@ -28,7 +28,7 @@ data_ov089_020c0520 kind:data(any) addr:0x020c0520
 data_ov089_020c0530 kind:data(any) addr:0x020c0530
 data_ov089_020c0540 kind:data(any) addr:0x020c0540
 data_ov089_020c0560 kind:data(any) addr:0x020c0560
-data_ov089_020c056c kind:data(any) addr:0x020c056c ambiguous
+gEntryCarouselMenuDescriptor kind:data(any) addr:0x020c056c ambiguous
 data_ov089_020c05b0 kind:data(any) addr:0x020c05b0
 data_ov089_020c05c4 kind:data(any) addr:0x020c05c4 ambiguous
 data_ov089_020c05f8 kind:data(any) addr:0x020c05f8

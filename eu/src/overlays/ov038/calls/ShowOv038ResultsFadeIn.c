@@ -7,5 +7,5 @@
 #define ShowOv038ResultsFadeIn_020ba768 ShowOv038ResultsFadeIn
 #define func_ov038_020bb41c DrawScoreDigits
 #define func_ov038_020bb4e0 DrawResultsTimeDigits
-#define g_ov038Context_020bd144 data_ov038_020bd164
+#define g_ov038Context_020bd144 gResultsPageContextStorage
 #include "src/ov038/unclassified_helpers/ShowOv038ResultsFadeIn_020ba768.c"

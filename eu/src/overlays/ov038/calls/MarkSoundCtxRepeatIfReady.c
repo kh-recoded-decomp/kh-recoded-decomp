@@ -1,3 +1,3 @@
 #define MarkSoundCtxRepeatIfReady_020ba58c MarkSoundCtxRepeatIfReady
-#define g_ov038SoundCtx_020bd140 data_ov038_020bd160
+#define g_ov038SoundCtx_020bd140 gResultsPageOuterTaskWork
 #include "src/ov038/reviewed_helpers/MarkSoundCtxRepeatIfReady_020ba58c.c"

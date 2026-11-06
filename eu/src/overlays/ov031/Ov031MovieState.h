@@ -20,7 +20,7 @@ typedef struct Ov031MovieState {
     u32 frameCount;
 } Ov031MovieState;
 
-extern Ov031MovieState *data_ov031_020bc820;
-#define gOv031MovieState data_ov031_020bc820
+extern Ov031MovieState *gOv031SceneWorkStorage;
+#define gOv031MovieState gOv031SceneWorkStorage
 
 #endif

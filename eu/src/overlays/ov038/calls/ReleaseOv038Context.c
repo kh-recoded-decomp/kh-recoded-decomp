@@ -3,5 +3,5 @@
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define ReleaseOv038Context_020bbcb8 ReleaseOv038Context
 #define ReleaseOv038SlotPools_020bb0c0 ReleaseOv038SlotPools
-#define g_ov038Context_020bd144 data_ov038_020bd164
+#define g_ov038Context_020bd144 gResultsPageContextStorage
 #include "src/ov038/unclassified_helpers/ReleaseOv038Context_020bbcb8.c"

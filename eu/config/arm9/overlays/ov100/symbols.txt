@@ -1,4 +1,4 @@
 InitOv100SecondaryMenu kind:function(arm,size=0x8) addr:0x020beac0
 DestroyOv100SecondaryMenu kind:function(arm,size=0x4) addr:0x020beac8
 UpdateOv100SecondaryMenu kind:function(arm,size=0x4) addr:0x020beacc
-data_ov100_020beae0 kind:data(any) addr:0x020beae0 ambiguous
+gOv100SecondaryMenuDescriptor kind:data(any) addr:0x020beae0 ambiguous
