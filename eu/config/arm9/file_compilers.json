@@ -7528,7 +7528,7 @@
   "src/overlays/ov001/calls/SetStageManagerFlagBits.c": "dsi/1.1",
   "src/overlays/ov006/calls/GetElevatorCenterIfEnabled.c": "dsi/1.1",
   "src/overlays/ov021/calls/StageScriptExpr_GetHudGauge0BlinkActive.c": "dsi/1.1",
-  "src/overlays/ov032/calls/func_ov032_020bb828.c": "dsi/1.1",
+  "src/overlays/ov032/calls/GetCurrentBoardNodeCode.c": "dsi/1.1",
   "src/overlays/ov040/calls/GetAreaRewardAnimationTable.c": "dsi/1.1",
   "src/overlays/ov001/calls/PlayFieldTrackSet.c": "dsi/1.1",
   "src/overlays/ov001/calls/FieldObject_ActivateAtPosition.c": "dsi/1.1",

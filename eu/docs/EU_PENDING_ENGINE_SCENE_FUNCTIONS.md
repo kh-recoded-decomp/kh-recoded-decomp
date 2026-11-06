@@ -1,6 +1,6 @@
 # EU functions awaiting semantic evidence
 
-These 18 byte-exact functions retain their address names because a stronger role or field meaning remains unproven. Current source paths, function names and native declarations were revalidated at Git `c55c73c68510bfb1168844edc4e9a0deea2e61b5`. The raw-ROM scan receipt remains pinned to the earlier `28dc258674c86cde06bc8456c4c7cb9087e28905` research checkpoint. This document changes no source, prototype, structure or behavior, and makes no new official compilation or byte-exact validation claim.
+These 17 byte-exact functions retain their address names because a stronger role or field meaning remains unproven. Current source paths, function names and native declarations were revalidated at Git `c55c73c68510bfb1168844edc4e9a0deea2e61b5`. The raw-ROM scan receipt remains pinned to the earlier `28dc258674c86cde06bc8456c4c7cb9087e28905` research checkpoint. This document changes no source, prototype, structure or behavior, and makes no new official compilation or byte-exact validation claim.
 
 ## How to use this inventory
 
@@ -35,7 +35,6 @@ The research receipt for this pass has SHA-256 `f0116bceabb1f33cf0afe91e100fc161
 | `ov021:020b2fec` | THUMB | [eu/src/overlays/ov021/calls/func_ov021_020b2fec.c](../src/overlays/ov021/calls/func_ov021_020b2fec.c) | Opcode status 0. There is no index check, conversion, allocation or result-vector write. |
 | `ov021:020b37c0` | THUMB | [eu/src/overlays/ov021/calls/func_ov021_020b37c0.c](../src/overlays/ov021/calls/func_ov021_020b37c0.c) | Opcode status 0. No resolved-event NULL check is added. |
 | `ov030:020bcec0` | THUMB | [eu/src/overlays/ov030/calls/func_ov030_020bcec0.c](../src/overlays/ov030/calls/func_ov030_020bcec0.c) | void. ActivateSpawnUnit uses a native hidden composite-return destination; the C VecFx32 return view preserves that operation. |
-| `ov032:020bb828` | THUMB | [eu/src/overlays/ov032/calls/func_ov032_020bb828.c](../src/overlays/ov032/calls/func_ov032_020bb828.c) | Raw s32 value, not a normalized predicate. No NULL, negative-index or range check exists. |
 
 ## func_0202d620
 
@@ -564,34 +563,6 @@ Located indirect registration at data_ov056_020d80d0[19]; DispatchSourceKindEven
 
 Next proof: Prove source kind19 factory/updater identity and each descriptor field. Then determine whether this begins a burst/launcher action; do not name it from similar actor callbacks.
 
-## func_ov032_020bb828
+## Closed board-node getter
 
-Identity: `ov032:020bb828`, THUMB, configured native extent 20 bytes (including any pool). Source: [eu/src/overlays/ov032/calls/func_ov032_020bb828.c](../src/overlays/ov032/calls/func_ov032_020bb828.c).
-
-```c
-s32 func_ov032_020bb828(void);
-```
-
-- Inputs: Route-context pointer stored in the first global word at data_ov032_020c0080. Read signed selected slot index at context +0x55.
-- Mechanical effects: Read signed byte context +0x56 + selectedIndex and sign-extend it to s32.
-- Result/lifetime: Raw s32 value, not a normalized predicate. No NULL, negative-index or range check exists.
-
-### Callers, registration and ROM references
-
-- `ov001:02093d32` in `InitializeActorStats`: `bl #0x20bb828`; configured relocation names the target bank and this instruction is reachable in the bounded estimate. Source: [eu/src/overlays/ov001/calls/InitializeActorStats.c](../src/overlays/ov001/calls/InitializeActorStats.c).
-- `ov001:02097a2a` in `GetSessionRankValue`: `bl #0x20bb828`; configured relocation names the target bank and this instruction is reachable in the bounded estimate. Source: [eu/src/overlays/ov001/calls/GetSessionRankValue.c](../src/overlays/ov001/calls/GetSessionRankValue.c).
-- `ov001:0209d01c` in `RemapGroupMemberId`: `bl #0x20bb828`; configured relocation names the target bank and this instruction is reachable in the bounded estimate. Source: [eu/src/overlays/ov001/calls/RemapGroupMemberId.c](../src/overlays/ov001/calls/RemapGroupMemberId.c).
-
-### Writers and related source evidence
-
-[eu/src/overlays/ov032/calls/AdvanceToRoutedSlot.c](../src/overlays/ov032/calls/AdvanceToRoutedSlot.c), [src/ov001/shared_engine/GetSessionRankValue_020979dc.c](../../src/ov001/shared_engine/GetSessionRankValue_020979dc.c), [src/ov001/shared_engine/InitializeActorStats_02093c70.c](../../src/ov001/shared_engine/InitializeActorStats_02093c70.c), [src/ov001/shared_engine/RemapGroupMemberId_0209cfcc.c](../../src/ov001/shared_engine/RemapGroupMemberId_0209cfcc.c).
-
-### Established limit
-
-One caller uses it as a rank-table index, others as actor variant/remap input. AdvanceToRoutedSlot's slotLocked label only proves a zero test. The six-byte array schema and valid values must be identified before exporting a universal lock/rank/variant name.
-
-### Searches already performed and next proof
-
-Found consumers GetSessionRankValue, InitializeActorStats and RemapGroupMemberId. The raw signed slot byte is converted to a rank-table index in one path and an actor variant/remap selector in others. AdvanceToRoutedSlot labels it slotLocked but only tests zero before visited/lock handling. That label is not a Boolean contract.
-
-Next proof: Find the route-context loader/record schema for the six signed bytes at+56 and all valid values. A predicate/lock name would be wrong while a universal rank/variant meaning remains unproven.
+The former ov032:020bb828 entry is now [GetCurrentBoardNodeCode](CURRENT_BOARD_NODE_CODE.md). The SessionBuffer10 owner, six code writers and native signed-byte loads close its former lock/rank/variant ambiguity.

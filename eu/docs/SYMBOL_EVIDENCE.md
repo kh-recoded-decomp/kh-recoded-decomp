@@ -892,3 +892,7 @@ callers intentionally prepare a peer-descriptor word in R2 which the selector
 overwrites unread. [WIRELESS_REWARD_INTERFACE.md](WIRELESS_REWARD_INTERFACE.md)
 separates this proved result and input behavior from unresolved C formal arity
 and record-type compatibility. No native source or ABI is changed here.
+
+## Board-node code owner and writer closure
+
+`func_ov032_020bb828` is now `GetCurrentBoardNodeCode`. SessionBuffer10 is shared by board creation and the route/challenge context; actual ov024 writers and the ov032 completion clear identify its six signed node codes. [The contract](CURRENT_BOARD_NODE_CODE.md) preserves the observed mask-generated range separately from any public enum, and distinguishes raw code from mapped rank, actor variant and lock mask. Four official checks and four complete-object comparisons pass; a fresh gate retains all 108 module hashes.

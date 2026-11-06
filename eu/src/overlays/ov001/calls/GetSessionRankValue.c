@@ -2,5 +2,5 @@
 #define GetSessionRankValue_020979dc GetSessionRankValue
 #define Session_Exists_02063a24 HasSessionContext
 #define data_ov001_0209e448 gSessionRankValues
-#define func_ov032_020bb808 func_ov032_020bb828
+#define func_ov032_020bb808 GetCurrentBoardNodeCode
 #include "src/ov001/shared_engine/GetSessionRankValue_020979dc.c"

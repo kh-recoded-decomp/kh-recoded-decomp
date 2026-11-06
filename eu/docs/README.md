@@ -108,11 +108,11 @@ independent C allocations.
 
 ## Unresolved function contracts
 
-99 matched C functions retain numeric names. Every one has a mechanical
+98 matched C functions retain numeric names. Every one has a mechanical
 contract, a specific semantic blocker and a next useful proof:
 
 - [72 common field functions](EU_PENDING_FIELD_FUNCTIONS.md).
-- [18 engine, script and scene functions](EU_PENDING_ENGINE_SCENE_FUNCTIONS.md).
+- [17 engine, script and scene functions](EU_PENDING_ENGINE_SCENE_FUNCTIONS.md).
 - [9 background/camera/other callbacks](EU_PENDING_CALLBACK_FUNCTIONS.md).
 
 These are limits on recovered meaning. Full-module matching and reconstructed
@@ -139,3 +139,5 @@ Shared headers should collect layouts proved for this game. Per-function
 partial views and the Days reference remain evidence to reconcile, rather
 than automatic host declarations. The [porting guide](PORTING_GUIDE.md)
 describes the platform adapters and validation expected at handoff.
+
+The [current board-node code](CURRENT_BOARD_NODE_CODE.md) connects the shared session buffer to its constructors, per-node writers and signed getter.
