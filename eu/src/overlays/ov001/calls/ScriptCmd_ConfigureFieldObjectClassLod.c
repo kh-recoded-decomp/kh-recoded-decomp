@@ -1,0 +1,4 @@
+#define ByteCode_ResolveOperand ScriptVm_ReadOperandFx32
+#define Ov002_SpawnStateSpots ConfigureFieldObjectClassLod
+#define ScriptCmd_SpawnStateSpot_02080140 ScriptCmd_ConfigureFieldObjectClassLod
+#include "src/ov001/shared_engine/ScriptCmd_SpawnStateSpot_02080140.c"

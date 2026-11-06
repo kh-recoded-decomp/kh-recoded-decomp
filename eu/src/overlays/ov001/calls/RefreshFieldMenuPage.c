@@ -3,7 +3,7 @@
 #define ReadActiveMenuState_0206c328 ReadActiveMenuState
 #define RefreshFieldMenuPage_0206d248 RefreshFieldMenuPage
 #define SelectFieldMenuPage_02072064 SelectFieldMenuPage
-#define func_ov001_0207f8f4 func_ov001_0207f91c
+#define func_ov001_0207f8f4 GetFieldObjectActionCommandKind
 #define func_ov059_020cd154 Actor_AnyAnimSlotBit0Set
 #define func_ov001_020642a0 IsFieldTrackFlagSet
 #include "src/ov001/field_manager/RefreshFieldMenuPage_0206d248.c"

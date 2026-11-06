@@ -912,3 +912,7 @@ Seven retained numeric helpers are named from their actual native owners, writer
 ## Interface callback, jump-step and stage-script closures
 
 Seven numeric functions now follow their actual callback phases, pre-release invocation, jump-step override consumer, timed-cue group or event-effect byte. The contracts are linked from [the system index](README.md). The four empty callbacks keep their nonnull identities and ignored residual returns; the jump helper preserves its control-record lookup and FALSE. Three [canonical DATA aliases](CANONICAL_DATA_ALIAS_NORMALIZATION.md) lose duplicate config labels while their single existing allocations remain. Fourteen official checks, 21 complete-object comparisons and a fresh 108-module gate pass without changed bytes or module hashes.
+
+## Field-object class and stage-value contracts
+
+Twelve names close eleven numeric functions and correct the misleading SpawnStateSpot script label. [Class contracts](FIELD_OBJECT_CLASS_ACTIVATION_LOD_COMMANDS.md) prove activation-bit indexing, a signed secondary resource, LOD hysteresis and raw command selection. Stage contracts prove current/max HP, attack power, a raw hit-reaction argument, scaled countdown, installed sequence update/position callbacks and override ID lifetime. The [system index](README.md) links each contract. Fourteen official checks, 16 complete objects and a fresh 108-module gate preserve all bytes, relocation values and module hashes. No shared ROOT code, parameter list or private structure is changed.

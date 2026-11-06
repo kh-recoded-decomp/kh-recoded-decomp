@@ -7,7 +7,7 @@ extern u32 GetStageMotionRecord();
 extern u32 GetStageManager();
 extern u32 GetGlobalScaleValue();
 
-u32 func_ov021_020b1a9c(int self)
+u32 StageScriptVec_AdvanceMotionAndGetPosition(int self)
 {
     s32 member;
     u32 arg;

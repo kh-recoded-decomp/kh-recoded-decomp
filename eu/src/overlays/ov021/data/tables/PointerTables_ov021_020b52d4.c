@@ -2,7 +2,7 @@
 
 extern void ScriptOp_GetPlayerHorizontalOffset(void); /* ScriptOp_GetPlayerHorizontalOffset */
 extern void ScriptOp_GetPlayerHorizontalDrift(void); /* ScriptOp_GetPlayerHorizontalDrift */
-extern void func_ov021_020b12b8(void);
+extern void StageScriptExpr_GetEventCountdown(void);
 extern void ScriptOp_GetObjectVectorMagnitude(void); /* ScriptOp_GetObjectVectorMagnitude */
 extern void ScriptOp_IsStageEntryKind24(void); /* ScriptOp_IsStageEntryKind24 */
 extern void StageScriptExpr_GetSequenceId(void);
@@ -15,8 +15,8 @@ extern void StageScriptExpr_GetVectorY(void);
 extern void StageScriptExpr_GetVectorZ(void);
 extern void ReadContextFlagBit8(void); /* ReadContextFlagBit8 */
 extern void ScriptOp_GetObjectFixedField(void); /* ScriptOp_GetObjectFixedField */
-extern void func_ov021_020b10c0(void);
-extern void func_ov021_020b10b0(void);
+extern void StageScriptExpr_GetEventHealth(void);
+extern void StageScriptExpr_GetCurrentOverrideId(void);
 extern void ReadContextFlagBit9(void); /* ReadContextFlagBit9 */
 extern void ScriptOp_GetPlayerStateBit0(void); /* ScriptOp_GetPlayerStateBit0 */
 extern void ScriptOp_GetAttachPointScale(void); /* ScriptOp_GetAttachPointScale */
@@ -27,9 +27,9 @@ extern void ScriptCmd_CheckTargetLineOfSight(void); /* ScriptCmd_CheckTargetLine
 extern void func_ov021_020b0edc(void);
 extern void SampleGridCellValue(void); /* SampleGridCellValue */
 extern void ScriptOp_GetObjectTypeId(void); /* ScriptOp_GetObjectTypeId */
-extern void func_ov021_020b0e24(void);
-extern void func_ov021_020b0df0(void);
-extern void func_ov021_020b0dd4(void);
+extern void StageScriptExpr_GetHitReactionArgument(void);
+extern void StageScriptExpr_GetEventAttackPower(void);
+extern void StageScriptExpr_GetEventMaxHealth(void);
 extern void StageExpr_FindFarthestFreeSlotAtOrAboveHeight(void);
 extern void ScriptOp_FindNearestFreeSlot(void); /* ScriptOp_FindNearestFreeSlot */
 extern void StageExpr_FindNearestFreeSlot(void);
@@ -67,7 +67,7 @@ extern void ScriptOp_GetStageAnchorA(void); /* ScriptOp_GetStageAnchorA */
 extern void LoadSavedPosition(void); /* LoadSavedPosition */
 extern void ScriptOp_GetGridCellPosition(void); /* ScriptOp_GetGridCellPosition */
 extern void StageCmd_StoreCurrentMotionGridCellCenter(void);
-extern void func_ov021_020b1a9c(void);
+extern void StageScriptVec_AdvanceMotionAndGetPosition(void);
 extern void ScriptOp_GetSlotPosition(void); /* ScriptOp_GetSlotPosition */
 extern void ScriptOp_ProjectObjectMovement(void); /* ScriptOp_ProjectObjectMovement */
 extern void LoadStageEntryPosition(void); /* LoadStageEntryPosition */
@@ -83,7 +83,7 @@ void (*gScriptQueryHandlers[173])(void) = {
     NULL,
     ScriptOp_GetPlayerHorizontalOffset, /* ScriptOp_GetPlayerHorizontalOffset */
     ScriptOp_GetPlayerHorizontalDrift, /* ScriptOp_GetPlayerHorizontalDrift */
-    func_ov021_020b12b8,
+    StageScriptExpr_GetEventCountdown,
     ScriptOp_GetObjectVectorMagnitude, /* ScriptOp_GetObjectVectorMagnitude */
     ScriptOp_IsStageEntryKind24, /* ScriptOp_IsStageEntryKind24 */
     StageScriptExpr_GetSequenceId,
@@ -102,8 +102,8 @@ void (*gScriptQueryHandlers[173])(void) = {
     ScriptOp_GetObjectFixedField, /* ScriptOp_GetObjectFixedField */
     NULL,
     NULL,
-    func_ov021_020b10c0,
-    func_ov021_020b10b0,
+    StageScriptExpr_GetEventHealth,
+    StageScriptExpr_GetCurrentOverrideId,
     ReadContextFlagBit9, /* ReadContextFlagBit9 */
     ScriptOp_GetPlayerStateBit0, /* ScriptOp_GetPlayerStateBit0 */
     NULL,
@@ -192,10 +192,10 @@ void (*gScriptQueryHandlers[173])(void) = {
     NULL,
     NULL,
     NULL,
-    func_ov021_020b0e24,
-    func_ov021_020b0df0,
+    StageScriptExpr_GetHitReactionArgument,
+    StageScriptExpr_GetEventAttackPower,
     NULL,
-    func_ov021_020b0dd4,
+    StageScriptExpr_GetEventMaxHealth,
     NULL,
     StageExpr_FindFarthestFreeSlotAtOrAboveHeight,
     ScriptOp_FindNearestFreeSlot, /* ScriptOp_FindNearestFreeSlot */
@@ -278,7 +278,7 @@ void (*gScriptVectorHandlers[33])(void) = {
     NULL,
     ScriptOp_GetGridCellPosition, /* ScriptOp_GetGridCellPosition */
     StageCmd_StoreCurrentMotionGridCellCenter,
-    func_ov021_020b1a9c,
+    StageScriptVec_AdvanceMotionAndGetPosition,
     ScriptOp_GetSlotPosition, /* ScriptOp_GetSlotPosition */
     ScriptOp_ProjectObjectMovement, /* ScriptOp_ProjectObjectMovement */
     LoadStageEntryPosition, /* LoadStageEntryPosition */

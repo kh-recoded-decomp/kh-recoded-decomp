@@ -4796,7 +4796,7 @@ src/overlays/ov001/calls/SetObjectAnimTrack.c:
     complete
     .text       start:0x0207f8f8 end:0x0207f91c
 
-src/overlays/ov001/auto/func_ov001_0207f91c.c:
+src/overlays/ov001/auto/GetFieldObjectActionCommandKind.c:
     complete
     .text       start:0x0207f91c end:0x0207f924
 
@@ -4804,7 +4804,7 @@ src/overlays/ov001/calls/FieldObject_SetProbeSphere.c:
     complete
     .text       start:0x0207f924 end:0x0207f9c0
 
-src/overlays/ov001/calls/func_ov001_0207f9c0.c:
+src/overlays/ov001/calls/SetFieldObjectClassActivationFlagBit.c:
     complete
     .text       start:0x0207f9c0 end:0x0207f9ce
 
@@ -4816,7 +4816,7 @@ src/overlays/ov001/calls/FieldObject_SetSavedValue.c:
     complete
     .text       start:0x0207f9f0 end:0x0207fa24
 
-src/overlays/ov001/calls/func_ov001_0207fa24.c:
+src/overlays/ov001/calls/ConfigureFieldObjectClassLod.c:
     complete
     .text       start:0x0207fa24 end:0x0207fa3c
 
@@ -4844,7 +4844,7 @@ src/overlays/ov001/calls/ScriptCmd_EnableObjectShadow.c:
     complete
     .text       start:0x0207fb10 end:0x0207fb58
 
-src/overlays/ov001/calls/func_ov001_0207fb58.c:
+src/overlays/ov001/calls/ScriptCmd_SetFieldObjectClassActivationFlagBit.c:
     complete
     .text       start:0x0207fb58 end:0x0207fb7a
 
@@ -4908,7 +4908,7 @@ src/overlays/ov001/calls/ScriptCmd_CreateRunningFieldObject.c:
     complete
     .text       start:0x020800d4 end:0x02080168
 
-src/overlays/ov001/calls/ScriptCmd_SpawnStateSpot_02080168.c:
+src/overlays/ov001/calls/ScriptCmd_ConfigureFieldObjectClassLod.c:
     complete
     .text       start:0x02080168 end:0x020801a6
 

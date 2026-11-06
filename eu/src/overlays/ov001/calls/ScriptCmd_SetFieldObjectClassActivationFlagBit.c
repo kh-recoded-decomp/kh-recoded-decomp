@@ -1,0 +1,4 @@
+#define func_02025de4 ScriptVm_ReadOperandInt
+#define func_0207f998 SetFieldObjectClassActivationFlagBit
+#define func_ov001_0207fb30 ScriptCmd_SetFieldObjectClassActivationFlagBit
+#include "src/ov001/reviewed_helpers/func_ov001_0207fb30.c"

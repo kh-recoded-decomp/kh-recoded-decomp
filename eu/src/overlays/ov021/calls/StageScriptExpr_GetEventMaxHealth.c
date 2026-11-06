@@ -2,7 +2,7 @@
 
 extern u32 data_ov021_020b56c4;
 
-u32 func_ov021_020b0dd4(int self)
+u32 StageScriptExpr_GetEventMaxHealth(int self)
 {
     s32 entry;
 

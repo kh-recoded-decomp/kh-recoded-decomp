@@ -3,7 +3,7 @@
 extern void ScriptCmd_InitFieldObjectClassTable(void); /* ScriptCmd_EnterPhase */
 extern void ScriptCmd_ActivateFieldObject(void);
 extern void ScriptCmd_EnableObjectShadow(void); /* ScriptCmd_EnableObjectShadow */
-extern void func_ov001_0207fb58(void);
+extern void ScriptCmd_SetFieldObjectClassActivationFlagBit(void);
 extern void ScriptCmd_SpawnFieldObjectInSlot(void); /* ScriptCmd_SpawnFieldObjectInSlot */
 extern void ScriptCmd_CreateRotatedFieldObject(void); /* ScriptCmd_CreateRotatedFieldObject */
 extern void ScriptCmd_SetObjectVisible(void); /* ScriptCmd_SetObjectVisible */
@@ -19,7 +19,7 @@ extern void ScriptCmd_ReallocFieldEntryCacheRecord(void);
 extern void ScriptOp_SetObjectVector(void); /* ScriptOp_SetObjectVector */
 extern void ScriptCmd_CreateTargetViewInSlot(void); /* ScriptCmd_CreateTargetViewInSlot */
 extern void ScriptCmd_CreateRunningFieldObject(void); /* ScriptCmd_CreateRunningFieldObject */
-extern void ScriptCmd_SpawnStateSpot_02080168(void); /* ScriptCmd_SpawnStateSpot */
+extern void ScriptCmd_ConfigureFieldObjectClassLod(void); /* ScriptCmd_SpawnStateSpot */
 extern void ScriptCmd_FieldObjectNop14(void); /* DefaultStepDone */
 extern void ScriptCmd_FieldObjectNop15(void); /* DefaultStepDone */
 extern void ScriptCmd_CreateObjectGroupKindB(void); /* ScriptCmd_CreateObjectGroupKindB */
@@ -47,7 +47,7 @@ void (*gFieldObjectScriptCommandHandlers[78])(void) = {
     NULL,
     ScriptCmd_EnableObjectShadow, /* ScriptCmd_EnableObjectShadow */
     NULL,
-    func_ov001_0207fb58,
+    ScriptCmd_SetFieldObjectClassActivationFlagBit,
     NULL,
     ScriptCmd_SpawnFieldObjectInSlot, /* ScriptCmd_SpawnFieldObjectInSlot */
     NULL,
@@ -79,7 +79,7 @@ void (*gFieldObjectScriptCommandHandlers[78])(void) = {
     NULL,
     ScriptCmd_CreateRunningFieldObject, /* ScriptCmd_CreateRunningFieldObject */
     NULL,
-    ScriptCmd_SpawnStateSpot_02080168, /* ScriptCmd_SpawnStateSpot */
+    ScriptCmd_ConfigureFieldObjectClassLod, /* ScriptCmd_SpawnStateSpot */
     NULL,
     ScriptCmd_FieldObjectNop14, /* DefaultStepDone */
     NULL,

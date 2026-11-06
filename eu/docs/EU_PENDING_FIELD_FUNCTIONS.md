@@ -1,6 +1,6 @@
 # Overlay 001 functions retained for further evidence
 
-These 59 native EU functions retain address-based names. The available evidence
+These 55 native EU functions retain address-based names. The available evidence
 establishes the mechanics listed here but does not yet justify a stable semantic
 name or a complete public type contract. Each entry identifies the actual EU
 source, the precise unresolved point and the next useful proof. This ledger is
@@ -86,10 +86,6 @@ keeps those distinctions concrete.
 
 | EU identity and native size | Current EU source | Observed mechanical contract | Semantic blocker | Next proof |
 |---|---|---|---|---|
-| ov001:0x0207f91c (Thumb, 0x8 bytes) | `eu/src/overlays/ov001/auto/func_ov001_0207f91c.c` | Returns class byte 82, used by RefreshFieldMenuPage and UpdateActionCommand switches. | Constructors set82 various values but a stable semantic enum is unproved. | Pair class82 writers with each switch branch and object families before naming command/menu category. |
-| ov001:0x0207f9c0 (Thumb, 0xe bytes) | `eu/src/overlays/ov001/calls/func_ov001_0207f9c0.c` | Calls GetFieldObjectClassAtIndex then writes byte +0x81; source marks index unused but native may forward incoming R0. | Class byte +0x81 meaning and precise ABI forwarding remain unproved. | Disassemble index forwarding and trace class +0x81 readers/setters; close helper and script wrapper0207fb58 together. |
-| ov001:0x0207fa24 (Thumb, 0x18 bytes) | `eu/src/overlays/ov001/calls/func_ov001_0207fa24.c` | Calls class lookup then writes halfword +0x66 and words +0x68/+0x6c. | Draw path treats +0x66 as animation selector, but adjacent words/actual reader contract remain unproved; C erases lookup index. | Trace animation/control fields in class constructors/readers and native R0; do not invent animation IDs/timing fields merely to name wrapper. |
-| ov001:0x0207fb58 (Thumb, 0x22 bytes) | `eu/src/overlays/ov001/calls/func_ov001_0207fb58.c` | Group 4 script wrapper reads two integer operands and forwards to 0207f9c0, returns 1. | Second operand field byte +0x81 role is unresolved; first operand ABI class lookup input also needs native confirmation. | Resolve helper class-field/ABI first and then register opcode using gFieldObjectScriptCommandHandlers consumer, not a template spawn name. |
 | ov001:0x020846b8 (Thumb, 0x14 bytes) | `eu/src/overlays/ov001/calls/func_ov001_020846b8.c` | Type9 class hook14 calls SetPackedStateLowBit(actor,1), writes actor +0x82=1, returns 0. | Hook14 callback purpose and actor byte 0x82 have no consumer proof. | Trace actual hook14 dispatcher and byte 0x82 reader in PatrolObject update before labeling activation/state transition. |
 | ov001:0x0208627c (Thumb, 0x4 bytes) | `eu/src/overlays/ov001/auto/func_ov001_0208627c.c` | Constantzero default EntryPool callback+24 (operation9). | Generic dispatcher for this exact table slot not located; class-family QueryHit is a different owner/layout. | Trace main collision consumer of EntryPool+24 and its inputs/result before declaring default collision rejection. |
 | ov001:0x02086b14 (Thumb, 0x30 bytes) | `eu/src/overlays/ov001/calls/func_ov001_02086b14.c` | Actor draw callback gets linked pool object; if pass0 and manager draw-block mask clear, uses pool op +0x38 or SceneNode_Draw(actor +0x14). | QueryLinkTarget is shared with a different object family; incoming actor parameter is erased for that call in C, so ABI/identity must be checked. | Disassemble callback and QueryLinkTarget and compare node link encoding to pool constructor before a draw-name/type claim; no guessing from ResourceCache_Shutdown name. |
@@ -152,3 +148,7 @@ Seven entries now have proved owners and result protocols: [stage idle callbacks
 ## Closed interface and field-object callbacks
 
 Four entries now have proved phases or pre-release roles in [the callback contracts](FIELD_CALLBACK_PHASE_CONTRACTS.md). Their empty bodies remain distinct registered callbacks. The class11 object+0x68 hook runs before release; the old private update/draw names are not used as behavioral evidence.
+
+## Closed class activation, LOD and command accessors
+
+Four numeric helpers now follow [the field-object class owner and its consumers](FIELD_OBJECT_CLASS_ACTIVATION_LOD_COMMANDS.md). The related script label is corrected to ScriptCmd_ConfigureFieldObjectClassLod: it configures a secondary resource and hysteresis thresholds; it does not spawn an object. Native index forwarding and signed/unsigned field reads remain explicit.

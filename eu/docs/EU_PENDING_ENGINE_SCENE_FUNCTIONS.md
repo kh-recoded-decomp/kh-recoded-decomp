@@ -1,6 +1,6 @@
 # EU functions awaiting semantic evidence
 
-These 15 byte-exact functions retain their address names because a stronger role or field meaning remains unproven. Current source paths, function names and native declarations were revalidated at Git `c55c73c68510bfb1168844edc4e9a0deea2e61b5`. The raw-ROM scan receipt remains pinned to the earlier `28dc258674c86cde06bc8456c4c7cb9087e28905` research checkpoint. This document changes no source, prototype, structure or behavior, and makes no new official compilation or byte-exact validation claim.
+These 8 byte-exact functions retain their address names because a stronger role or field meaning remains unproven. Current source paths, function names and native declarations were revalidated at Git `c55c73c68510bfb1168844edc4e9a0deea2e61b5`. The raw-ROM scan receipt remains pinned to the earlier `28dc258674c86cde06bc8456c4c7cb9087e28905` research checkpoint. This document changes no source, prototype, structure or behavior, and makes no new official compilation or byte-exact validation claim.
 
 ## How to use this inventory
 
@@ -22,14 +22,7 @@ The research receipt for this pass has SHA-256 `f0116bceabb1f33cf0afe91e100fc161
 | `ov021:020a9d24` | THUMB | [eu/src/overlays/ov021/calls/func_ov021_020a9d24.c](../src/overlays/ov021/calls/func_ov021_020a9d24.c) | Normalized BOOL equivalent to ((*flags & 3) == 3). |
 | `ov021:020b0ad4` | THUMB | [eu/src/overlays/ov021/calls/func_ov021_020b0ad4.c](../src/overlays/ov021/calls/func_ov021_020b0ad4.c) | Return opcode status 0. The copied integer word is not normalized or converted. |
 | `ov021:020b0af0` | THUMB | [eu/src/overlays/ov021/calls/func_ov021_020b0af0.c](../src/overlays/ov021/calls/func_ov021_020b0af0.c) | Return opcode status 0; no allocation or pointer lifetime change. |
-| `ov021:020b0dd4` | THUMB | [eu/src/overlays/ov021/calls/func_ov021_020b0dd4.c](../src/overlays/ov021/calls/func_ov021_020b0dd4.c) | Opcode status 0; the raw stored fixed-point value retains 12 fractional bits. |
-| `ov021:020b0df0` | THUMB | [eu/src/overlays/ov021/calls/func_ov021_020b0df0.c](../src/overlays/ov021/calls/func_ov021_020b0df0.c) | Opcode status 0; the tagged operand evaluation still occurs on the missing-event path. |
-| `ov021:020b0e24` | THUMB | [eu/src/overlays/ov021/calls/func_ov021_020b0e24.c](../src/overlays/ov021/calls/func_ov021_020b0e24.c) | Opcode status 0; no sign extension of the source halfword. |
 | `ov021:020b0edc` | THUMB | [eu/src/overlays/ov021/calls/func_ov021_020b0edc.c](../src/overlays/ov021/calls/func_ov021_020b0edc.c) | Opcode status 0; missing event or record leaves the helper's result fields unchanged. |
-| `ov021:020b10b0` | THUMB | [eu/src/overlays/ov021/calls/func_ov021_020b10b0.c](../src/overlays/ov021/calls/func_ov021_020b10b0.c) | Opcode status 0; no ownership transfer. |
-| `ov021:020b10c0` | THUMB | [eu/src/overlays/ov021/calls/func_ov021_020b10c0.c](../src/overlays/ov021/calls/func_ov021_020b10c0.c) | Opcode status 0; copy raw fixed-point bits. |
-| `ov021:020b12b8` | THUMB | [eu/src/overlays/ov021/calls/func_ov021_020b12b8.c](../src/overlays/ov021/calls/func_ov021_020b12b8.c) | Opcode status 0; no conversion beyond assigning the tag. |
-| `ov021:020b1a9c` | THUMB | [eu/src/overlays/ov021/calls/func_ov021_020b1a9c.c](../src/overlays/ov021/calls/func_ov021_020b1a9c.c) | Opcode status 0; second callback can write the context vector. Callback and record pointers are borrowed. |
 | `ov021:020b2044` | THUMB | [eu/src/overlays/ov021/calls/func_ov021_020b2044.c](../src/overlays/ov021/calls/func_ov021_020b2044.c) | Opcode status 0. Resolver/expression side effects are retained; this is not safely replaceable by an empty function. |
 | `ov021:020b2fec` | THUMB | [eu/src/overlays/ov021/calls/func_ov021_020b2fec.c](../src/overlays/ov021/calls/func_ov021_020b2fec.c) | Opcode status 0. There is no index check, conversion, allocation or result-vector write. |
 | `ov030:020bcec0` | THUMB | [eu/src/overlays/ov030/calls/func_ov030_020bcec0.c](../src/overlays/ov030/calls/func_ov030_020bcec0.c) | void. ActivateSpawnUnit uses a native hidden composite-return destination; the C VecFx32 return view preserves that operation. |
@@ -168,95 +161,6 @@ Same workspace audit as0ad4:18e78 is flags in the marker/spawn layout, but the c
 
 Next proof: Recover last-writer/consumer order in the owning script command stream and document the workspace lifetime before naming the value.
 
-## func_ov021_020b0dd4
-
-Identity: `ov021:020b0dd4`, THUMB, configured native extent 28 bytes (including any pool). Source: [eu/src/overlays/ov021/calls/func_ov021_020b0dd4.c](../src/overlays/ov021/calls/func_ov021_020b0dd4.c).
-
-```c
-u32 func_ov021_020b0dd4(int self);
-```
-
-- Inputs: Stage-script context and the active event pointer.
-- Mechanical effects: With an active event, write fixed-point tag 0x10 and copy its word +0x74 to context +0x30. With no event, leave the result untouched.
-- Result/lifetime: Opcode status 0; the raw stored fixed-point value retains 12 fractional bits.
-
-### Callers, registration and ROM references
-
-- `ov021:020b5524` contains `020b0dd5`, `gScriptQueryHandlers[115]` (173 entries). The configured relocation records this target bank. Storage: [eu/src/overlays/ov021/data/tables/PointerTables_ov021_020b52d4.c](../src/overlays/ov021/data/tables/PointerTables_ov021_020b52d4.c).
-- `ScriptOp_DispatchIndexedCommand` resolves the selector, initializes the tagged result to integer zero, indexes this array and invokes the nonnull handler. The helper's return is discarded and the dispatcher returns 0. Source: [eu/src/overlays/ov021/calls/ScriptOp_DispatchIndexedCommand.c](../src/overlays/ov021/calls/ScriptOp_DispatchIndexedCommand.c).
-
-### Writers and related source evidence
-
-[eu/src/overlays/ov021/calls/ScriptCmd_SetProperty.c](../src/overlays/ov021/calls/ScriptCmd_SetProperty.c).
-
-### Established limit
-
-Property 0x90 copies event +0x70/+0x74 together and has a kind-0x3d zero-crossing response. That relation is not sufficient to assign maxHP to +0x74 for every event kind.
-
-### Searches already performed and next proof
-
-Property command0x90 copies70/74 as a pair; for kind3d, a positive-to-nonpositive70 transition triggers ApplyHitToEnemyGroup with74 and resets70 to1. This proves a relation, not a universal maxHP meaning for74 across event kinds.
-
-Next proof: Collect initialization/damage/reset paths per event kind and identify the quantity/units for both words; keep the current fixed-point tag0x10.
-
-## func_ov021_020b0df0
-
-Identity: `ov021:020b0df0`, THUMB, configured native extent 52 bytes (including any pool). Source: [eu/src/overlays/ov021/calls/func_ov021_020b0df0.c](../src/overlays/ov021/calls/func_ov021_020b0df0.c).
-
-```c
-u32 func_ov021_020b0df0(int self, int args);
-```
-
-- Inputs: Stage-script context and operand block. Resolve the tagged operand at +8 before testing whether an event exists.
-- Mechanical effects: If the event exists, write tag 0x10; call GetEntryScaledValue(event, (resolved.value + 1U) & 0xffff) and store its result at context +0x30. Missing event leaves the result unchanged after the operand evaluation.
-- Result/lifetime: Opcode status 0; the tagged operand evaluation still occurs on the missing-event path.
-
-### Callers, registration and ROM references
-
-- `ov021:020b551c` contains `020b0df1`, `gScriptQueryHandlers[113]` (173 entries). The configured relocation records this target bank. Storage: [eu/src/overlays/ov021/data/tables/PointerTables_ov021_020b52d4.c](../src/overlays/ov021/data/tables/PointerTables_ov021_020b52d4.c).
-- `ScriptOp_DispatchIndexedCommand` resolves the selector, initializes the tagged result to integer zero, indexes this array and invokes the nonnull handler. The helper's return is discarded and the dispatcher returns 0. Source: [eu/src/overlays/ov021/calls/ScriptOp_DispatchIndexedCommand.c](../src/overlays/ov021/calls/ScriptOp_DispatchIndexedCommand.c).
-
-### Established limit
-
-The event's 32-byte entry schema and type-3 behavior remain unproven. The narrowed index and fixed-point result are known; a category name for the entries is not.
-
-### Searches already performed and next proof
-
-Re-read that the argument is evaluated before the active-event guard, its value is increased by1 then narrowed16bits, and GetEntryScaledValue is tagged fixed point. No event+A8 entry schema or category was recovered.
-
-Next proof: Trace GetEntryScaledValue records and all type3 branches to prove index domain, entry category and scaling meaning.
-
-## func_ov021_020b0e24
-
-Identity: `ov021:020b0e24`, THUMB, configured native extent 28 bytes (including any pool). Source: [eu/src/overlays/ov021/calls/func_ov021_020b0e24.c](../src/overlays/ov021/calls/func_ov021_020b0e24.c).
-
-```c
-u32 func_ov021_020b0e24(int self);
-```
-
-- Inputs: Stage-script context and active event.
-- Mechanical effects: With an event, write integer tag 1 and zero-extend its halfword +0x1e into context +0x30. Otherwise preserve the result.
-- Result/lifetime: Opcode status 0; no sign extension of the source halfword.
-
-### Callers, registration and ROM references
-
-- `ov021:020b5518` contains `020b0e25`, `gScriptQueryHandlers[112]` (173 entries). The configured relocation records this target bank. Storage: [eu/src/overlays/ov021/data/tables/PointerTables_ov021_020b52d4.c](../src/overlays/ov021/data/tables/PointerTables_ov021_020b52d4.c).
-- `ScriptOp_DispatchIndexedCommand` resolves the selector, initializes the tagged result to integer zero, indexes this array and invokes the nonnull handler. The helper's return is discarded and the dispatcher returns 0. Source: [eu/src/overlays/ov021/calls/ScriptOp_DispatchIndexedCommand.c](../src/overlays/ov021/calls/ScriptOp_DispatchIndexedCommand.c).
-
-### Writers and related source evidence
-
-[eu/src/overlays/ov021/calls/ScriptCmd_SetProperty.c](../src/overlays/ov021/calls/ScriptCmd_SetProperty.c).
-
-### Established limit
-
-The event's +0x1e schema/writer is still unknown; it lies within an explicitly opaque range of the reviewed native view.
-
-### Searches already performed and next proof
-
-Exact getter returns event+1e as unsigned halfword tagged integer. Native PropertyEvent reserves1c..6f rather than identifying that field.
-
-Next proof: Find the loading/copying schema and writers for event+1e, with a concrete event-kind caller.
-
 ## func_ov021_020b0edc
 
 Identity: `ov021:020b0edc`, THUMB, configured native extent 48 bytes (including any pool). Source: [eu/src/overlays/ov021/calls/func_ov021_020b0edc.c](../src/overlays/ov021/calls/func_ov021_020b0edc.c).
@@ -283,126 +187,6 @@ GetStageMotionRecord resolves records used through several motion/grid/slot view
 Getter uses active event.motionId+16 to obtain a polymorphic stage record and copies record+18 as tagged integer; both missing-event and missing-record paths retain prior result. The record schema remains unresolved.
 
 Next proof: Correlate record kind/loader at GetStageMotionRecord with this expression entry, rather than exporting a generic motion/grid/slot field.
-
-## func_ov021_020b10b0
-
-Identity: `ov021:020b10b0`, THUMB, configured native extent 16 bytes (including any pool). Source: [eu/src/overlays/ov021/calls/func_ov021_020b10b0.c](../src/overlays/ov021/calls/func_ov021_020b10b0.c).
-
-```c
-u32 func_ov021_020b10b0(u32 argument0, u32 argument1, u32 argument2, u32 argument3);
-```
-
-- Inputs: Stage-script context in the first native register word. The three remaining generated arguments are unused.
-- Mechanical effects: Write integer tag 1 and zero-extend context halfword +0xa2 into context +0x30.
-- Result/lifetime: Opcode status 0; no ownership transfer.
-
-### Callers, registration and ROM references
-
-- `ov021:020b53b4` contains `020b10b1`, `gScriptQueryHandlers[23]` (173 entries). The configured relocation records this target bank. Storage: [eu/src/overlays/ov021/data/tables/PointerTables_ov021_020b52d4.c](../src/overlays/ov021/data/tables/PointerTables_ov021_020b52d4.c).
-- `ScriptOp_DispatchIndexedCommand` resolves the selector, initializes the tagged result to integer zero, indexes this array and invokes the nonnull handler. The helper's return is discarded and the dispatcher returns 0. Source: [eu/src/overlays/ov021/calls/ScriptOp_DispatchIndexedCommand.c](../src/overlays/ov021/calls/ScriptOp_DispatchIndexedCommand.c).
-
-### Writers and related source evidence
-
-[src/ov021/unclassified_helpers/InitSequencer_020b4aac.c](../../src/ov021/unclassified_helpers/InitSequencer_020b4aac.c), [src/ov021/unclassified_helpers/SelectSequenceTrack_020b4bdc.c](../../src/ov021/unclassified_helpers/SelectSequenceTrack_020b4bdc.c).
-
-### Established limit
-
-InitSequencer clears this area but identifies only the neighboring ID at +0xa0. The +0xa2 field remains padding in that view. A four-register native declaration is not a four-parameter portable contract.
-
-### Searches already performed and next proof
-
-InitSequencer zeroes its full0xa8 view, sets id at+a0 and retains+a2 in pad_a2[6]. SelectSequenceTrack only changes track/cursor/timer/frame. The+a2 expression is real, but initialization supplies only zero and no semantic writer was found.
-
-Next proof: Find later+a2 writes in all sequencer owners and sequence-file/expression use. Zero initialization alone does not establish an ID/category.
-
-## func_ov021_020b10c0
-
-Identity: `ov021:020b10c0`, THUMB, configured native extent 28 bytes (including any pool). Source: [eu/src/overlays/ov021/calls/func_ov021_020b10c0.c](../src/overlays/ov021/calls/func_ov021_020b10c0.c).
-
-```c
-u32 func_ov021_020b10c0(int self);
-```
-
-- Inputs: Stage-script context and active event.
-- Mechanical effects: With an event, write fixed-point tag 0x10 and copy event word +0x70 to context +0x30; otherwise preserve the helper's result fields.
-- Result/lifetime: Opcode status 0; copy raw fixed-point bits.
-
-### Callers, registration and ROM references
-
-- `ov021:020b53b0` contains `020b10c1`, `gScriptQueryHandlers[22]` (173 entries). The configured relocation records this target bank. Storage: [eu/src/overlays/ov021/data/tables/PointerTables_ov021_020b52d4.c](../src/overlays/ov021/data/tables/PointerTables_ov021_020b52d4.c).
-- `ScriptOp_DispatchIndexedCommand` resolves the selector, initializes the tagged result to integer zero, indexes this array and invokes the nonnull handler. The helper's return is discarded and the dispatcher returns 0. Source: [eu/src/overlays/ov021/calls/ScriptOp_DispatchIndexedCommand.c](../src/overlays/ov021/calls/ScriptOp_DispatchIndexedCommand.c).
-
-### Writers and related source evidence
-
-[eu/src/overlays/ov021/calls/ScriptCmd_SetProperty.c](../src/overlays/ov021/calls/ScriptCmd_SetProperty.c).
-
-### Established limit
-
-Property 0x16 writes this quantity from TaggedValueToFixed; property 0x90 copies it with +0x74. A kind-0x3d damage-like response does not prove a universal HP quantity for all event kinds.
-
-### Searches already performed and next proof
-
-Property0x16 writes event+70 from TaggedValueToFixed. Property0x90 copies70/74 and has a kind3d zero-crossing response. The field can be script-assigned and no universal HP contract is proven.
-
-Next proof: Trace initial values and event-kind consumers, including ApplyHitToEnemyGroup, before choosing a universal quantity name.
-
-## func_ov021_020b12b8
-
-Identity: `ov021:020b12b8`, THUMB, configured native extent 32 bytes (including any pool). Source: [eu/src/overlays/ov021/calls/func_ov021_020b12b8.c](../src/overlays/ov021/calls/func_ov021_020b12b8.c).
-
-```c
-u32 func_ov021_020b12b8(int self);
-```
-
-- Inputs: Stage-script context and active event.
-- Mechanical effects: With an event, write fixed-point tag 0x10 and copy event word +0x1a0 to context +0x30. Otherwise return without writing the result.
-- Result/lifetime: Opcode status 0; no conversion beyond assigning the tag.
-
-### Callers, registration and ROM references
-
-- `ov021:020b5364` contains `020b12b9`, `gScriptQueryHandlers[3]` (173 entries). The configured relocation records this target bank. Storage: [eu/src/overlays/ov021/data/tables/PointerTables_ov021_020b52d4.c](../src/overlays/ov021/data/tables/PointerTables_ov021_020b52d4.c).
-- `ScriptOp_DispatchIndexedCommand` resolves the selector, initializes the tagged result to integer zero, indexes this array and invokes the nonnull handler. The helper's return is discarded and the dispatcher returns 0. Source: [eu/src/overlays/ov021/calls/ScriptOp_DispatchIndexedCommand.c](../src/overlays/ov021/calls/ScriptOp_DispatchIndexedCommand.c).
-
-### Writers and related source evidence
-
-[eu/src/overlays/ov021/calls/ScriptCmd_SetProperty.c](../src/overlays/ov021/calls/ScriptCmd_SetProperty.c).
-
-### Established limit
-
-The producer and event-kind schema for +0x1a0 remain unknown. Similarly located fields in other actor owners are not evidence for this event field.
-
-### Searches already performed and next proof
-
-Exact getter copies event+1a0 as fixed point; reviewed native PropertyEvent keeps that range opaque. No producer/schema was identified by this pass.
-
-Next proof: Find event-kind initialization and property writes to+1a0, preserving the distinction from similarly offset fields in unrelated actors.
-
-## func_ov021_020b1a9c
-
-Identity: `ov021:020b1a9c`, THUMB, configured native extent 88 bytes (including any pool). Source: [eu/src/overlays/ov021/calls/func_ov021_020b1a9c.c](../src/overlays/ov021/calls/func_ov021_020b1a9c.c).
-
-```c
-u32 func_ov021_020b1a9c(int self);
-```
-
-- Inputs: Stage-script context. The body dereferences the active event to obtain its halfword +0x16 without an event-NULL guard, then resolves a stage record.
-- Mechanical effects: If that record exists, obtain GetGlobalScaleValue and the stage manager. Invoke optional manager +0x18f54 as (record, value), then independently reacquire the manager and invoke optional +0x18f58 as (record, context +0x34).
-- Result/lifetime: Opcode status 0; second callback can write the context vector. Callback and record pointers are borrowed.
-
-### Callers, registration and ROM references
-
-- `ov021:020b532c` contains `020b1a9d`, `gScriptVectorHandlers[22]` (33 entries). The configured relocation records this target bank. Storage: [eu/src/overlays/ov021/data/tables/PointerTables_ov021_020b52d4.c](../src/overlays/ov021/data/tables/PointerTables_ov021_020b52d4.c).
-- `DispatchScriptHandler` resolves the selector and invokes the nonnull vector-table entry with (context, operands), discarding its return. Source: [eu/src/overlays/ov021/calls/DispatchScriptHandler.c](../src/overlays/ov021/calls/DispatchScriptHandler.c).
-
-### Established limit
-
-The two callback installations, their actual handler semantics and the supplied scalar's role are not proven. Same-offset callback fields in other owners do not complete this contract.
-
-### Searches already performed and next proof
-
-Source search for18f54/18f58 found only this callback invocation pair in the reviewed021 source views. The first receives(member,GetGlobalScaleValue()), the second(member,contextVector). Ghidra finds no direct function reference; expression-table dispatch is indirect.
-
-Next proof: Recover stage-manager callback installation, signature and GetGlobalScaleValue producer; then name the resulting vector action from real handlers.
 
 ## func_ov021_020b2044
 
@@ -505,3 +289,7 @@ The former ov032:020bb828 entry is now [GetCurrentBoardNodeCode](CURRENT_BOARD_N
 ## Closed timed-cue and effect-kind helpers
 
 The [timed-cue group selector](STAGE_EVENT_TIMED_CUE_GROUP.md) now has its actual section16/10 consumer, distinct from collision cues. The [effect-kind expression](STAGE_EVENT_EFFECT_KIND.md) has actual writers, duration/expiration and hit-effect consumers; individual effect codes remain opaque.
+
+## Closed combat, reaction and motion expressions
+
+Native damage, defeat, gauge, override and installed sequence callbacks establish [combat values](STAGE_EVENT_COMBAT_VALUES.md), [reaction/countdown values](STAGE_EVENT_REACTION_COUNTDOWN.md), [motion/position callbacks](STAGE_MOTION_POSITION_CALLBACKS.md) and [current override ID](STAGE_CURRENT_OVERRIDE_ID.md). Raw widths, missing-event behavior and compiler ABI views are preserved; contradictory private HP/speed labels are documented rather than exported as a host layout.

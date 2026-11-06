@@ -4,7 +4,7 @@ extern u32 data_ov021_020b56c4;
 extern s32 ResolveTaggedValueRef();
 extern u32 GetEntryScaledValue();
 
-u32 func_ov021_020b0df0(int self, int args)
+u32 StageScriptExpr_GetEventAttackPower(int self, int args)
 {
     s32 entry;
     s32 resolved;

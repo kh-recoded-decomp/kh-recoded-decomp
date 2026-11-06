@@ -1436,15 +1436,15 @@ src/overlays/ov021/calls/StageExpr_FindFarthestFreeSlotAtOrAboveHeight.c:
     complete
     .text       start:0x020b0d8c end:0x020b0dd4
 
-src/overlays/ov021/calls/func_ov021_020b0dd4.c:
+src/overlays/ov021/calls/StageScriptExpr_GetEventMaxHealth.c:
     complete
     .text       start:0x020b0dd4 end:0x020b0df0
 
-src/overlays/ov021/calls/func_ov021_020b0df0.c:
+src/overlays/ov021/calls/StageScriptExpr_GetEventAttackPower.c:
     complete
     .text       start:0x020b0df0 end:0x020b0e24
 
-src/overlays/ov021/calls/func_ov021_020b0e24.c:
+src/overlays/ov021/calls/StageScriptExpr_GetHitReactionArgument.c:
     complete
     .text       start:0x020b0e24 end:0x020b0e40
 
@@ -1488,11 +1488,11 @@ src/overlays/ov021/calls/ReadContextFlagBit9.c:
     complete
     .text       start:0x020b1090 end:0x020b10b0
 
-src/overlays/ov021/calls/func_ov021_020b10b0.c:
+src/overlays/ov021/calls/StageScriptExpr_GetCurrentOverrideId.c:
     complete
     .text       start:0x020b10b0 end:0x020b10c0
 
-src/overlays/ov021/calls/func_ov021_020b10c0.c:
+src/overlays/ov021/calls/StageScriptExpr_GetEventHealth.c:
     complete
     .text       start:0x020b10c0 end:0x020b10dc
 
@@ -1544,7 +1544,7 @@ src/overlays/ov021/calls/ScriptOp_GetObjectVectorMagnitude.c:
     complete
     .text       start:0x020b1290 end:0x020b12b8
 
-src/overlays/ov021/calls/func_ov021_020b12b8.c:
+src/overlays/ov021/calls/StageScriptExpr_GetEventCountdown.c:
     complete
     .text       start:0x020b12b8 end:0x020b12d8
 
@@ -1596,7 +1596,7 @@ src/overlays/ov021/calls/ScriptOp_GetSlotPosition.c:
     complete
     .text       start:0x020b1a50 end:0x020b1a9c
 
-src/overlays/ov021/calls/func_ov021_020b1a9c.c:
+src/overlays/ov021/calls/StageScriptVec_AdvanceMotionAndGetPosition.c:
     complete
     .text       start:0x020b1a9c end:0x020b1af4
 
