@@ -900,3 +900,7 @@ and record-type compatibility. No native source or ABI is changed here.
 ## Primary actor health and script restoration
 
 The former ov001:02063c94 / 0206550c helpers are RestorePrimaryActorHealth and ScriptCmd_RestorePrimaryActorHealth. The dependency ov021:020a75f8 is SetActorHealthClamped, correcting the historical cursor label. [The native contract](ACTOR_HEALTH_RESTORATION.md) proves the actor+0x1d4 record owner, unsigned current/max halfwords +2/+4, HP writes, damage/respawn behavior, HUD use and script group2/0x1f. It preserves legacy declarations and distinguishes the u16 C argument contract from the callee's direct R1 comparison. Eleven official function checks, 12 complete objects and a fresh 108-module gate pass with unchanged bytes and hashes.
+
+## Field HP/camera script-gate follow-up
+
+The still-numeric ov001:020656d4 is both run and resume for group2/0x2e. [Its exact contract](FIELD_HP_CAMERA_SCRIPT_GATE.md) resolves the getter as fx32 VEC_Mag(camera+0x11c), separates the HP-zero side effects from its return condition and traces the flag consumers. The role of the complete state-4 wait remains open; no new function name or code change is made. Five original bodies and both table words agree with the ROM; all 108 last-validated module hashes remain unchanged.

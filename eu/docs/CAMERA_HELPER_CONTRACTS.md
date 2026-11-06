@@ -61,6 +61,8 @@ Its old void declaration hid a real result: the field-script handler at
 ov001:020656d4 calls it and compares returned r0 against zero in mode 4. That
 caller/ROM evidence supports the recovered fx32 return; the Ghidra pseudocode
 alone inherited the old void declaration. No offset normalization is added.
+The [field-script gate](FIELD_HP_CAMERA_SCRIPT_GATE.md) records the paired
+run/resume slot, HP-dependent flag updates and remaining command-purpose gap.
 
 ## Frustum extent and bounds
 

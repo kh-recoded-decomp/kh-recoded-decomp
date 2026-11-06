@@ -141,3 +141,5 @@ than automatic host declarations. The [porting guide](PORTING_GUIDE.md)
 describes the platform adapters and validation expected at handoff.
 
 The [current board-node code](CURRENT_BOARD_NODE_CODE.md) connects the shared session buffer to its constructors, per-node writers and signed getter.
+
+The [field HP/camera script gate](FIELD_HP_CAMERA_SCRIPT_GATE.md) documents opcode 2/0x2e, its exact wait condition and HP-dependent flag effects without assigning an unproved command purpose.

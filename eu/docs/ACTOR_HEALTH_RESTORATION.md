@@ -101,9 +101,9 @@ BICS at 02065704/02065708 agree with the source's bit4 assignment.
 
 This helper returns 0 under the outer condition for both zero and nonzero HP;
 it returns 1 outside that condition. It is therefore not simply an actor-dead
-predicate. Its [pending contract](EU_PENDING_FIELD_FUNCTIONS.md) retains the
-unknown camera/status and script-transition meaning separately from the
-now-proven HP field.
+predicate. The [exact script gate](FIELD_HP_CAMERA_SCRIPT_GATE.md) identifies
+run/resume group 2/0x2e and VEC_Mag(camera+0x11c). Its intended state-4
+wait/completion role remains open in the [pending inventory](EU_PENDING_FIELD_FUNCTIONS.md).
 
 ## Source and ROM evidence
 
