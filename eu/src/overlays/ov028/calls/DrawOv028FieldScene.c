@@ -3,7 +3,7 @@
 extern void UpdateActorSlotsAndBillboards(void);
 extern void DrawVisibleSceneSlots(void);
 extern void RunFlaggedEventCallbacks(void);
-extern void func_ov001_020876d4(void);
+extern void FieldScene_DrawHookNoop(void);
 extern void UpdateActiveSubModeCamera(s32 value);
 
 void DrawOv028FieldScene(void)
@@ -12,5 +12,5 @@ void DrawOv028FieldScene(void)
     DrawVisibleSceneSlots();
     RunFlaggedEventCallbacks();
     UpdateActorSlotsAndBillboards();
-    func_ov001_020876d4();
+    FieldScene_DrawHookNoop();
 }

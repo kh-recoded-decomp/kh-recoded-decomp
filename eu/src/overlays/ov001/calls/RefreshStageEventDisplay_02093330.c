@@ -12,5 +12,5 @@
 #define PlayActorAnimationSlot_02091a00 PlayActorAnimationSlot
 #define SpawnStageObjectActor_02096ae0 SpawnStageObjectActor
 #define data_ov001_0209e4b4 gStageEventDisplayStyles
-#define func_ov001_0209d064 func_ov001_0209d08c
+#define func_ov001_0209d064 IsStageResourceId70To97Or99
 #include "src/ov001/shared_engine/RefreshStageEventDisplay_02093330.c"

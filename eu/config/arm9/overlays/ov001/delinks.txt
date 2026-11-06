@@ -176,7 +176,7 @@ src/overlays/ov001/calls/FlushPendingEntryRefresh.c:
     complete
     .text       start:0x020630e4 end:0x0206312c
 
-src/overlays/ov001/auto/func_ov001_0206312c.c:
+src/overlays/ov001/auto/FieldScriptCommand0_Noop.c:
     complete
     .text       start:0x0206312c end:0x0206312e
 
@@ -196,7 +196,7 @@ src/overlays/ov001/calls/SetSessionState.c:
     complete
     .text       start:0x02063200 end:0x0206339c
 
-src/overlays/ov001/auto/func_ov001_0206339c.c:
+src/overlays/ov001/auto/FieldScriptCommand3_Noop.c:
     complete
     .text       start:0x0206339c end:0x0206339e
 
@@ -564,7 +564,7 @@ src/overlays/ov001/calls/IsPointNearPortal.c:
     complete
     .text       start:0x02064e2c end:0x02064e5c
 
-src/overlays/ov001/calls/func_ov001_02064e5c.c:
+src/overlays/ov001/calls/ScriptCmd_FieldNoop0.c:
     complete
     .text       start:0x02064e5c end:0x02064e66
 
@@ -576,7 +576,7 @@ src/overlays/ov001/calls/ScriptCmd_SwitchFieldMode.c:
     complete
     .text       start:0x02064e94 end:0x02064ebe
 
-src/overlays/ov001/calls/func_ov001_02064ec0.c:
+src/overlays/ov001/calls/ScriptCmd_FieldNoop3.c:
     complete
     .text       start:0x02064ec0 end:0x02064eca
 
@@ -828,7 +828,7 @@ src/overlays/ov001/calls/ScriptCmd_TestSceneFlag10Clear.c:
     complete
     .text       start:0x02065a10 end:0x02065a22
 
-src/overlays/ov001/auto/func_ov001_02065a24.c:
+src/overlays/ov001/auto/ScriptCmd_FieldOp41RunZero.c:
     complete
     .text       start:0x02065a24 end:0x02065a28
 
@@ -940,7 +940,7 @@ src/overlays/ov001/calls/ScriptCmd_DamageLeaderNonLethal.c:
     complete
     .text       start:0x02065ea4 end:0x02065f04
 
-src/overlays/ov001/calls/func_ov001_02065f04.c:
+src/overlays/ov001/calls/ScriptCmd_SetSessionByte27B6Bit5.c:
     complete
     .text       start:0x02065f04 end:0x02065f20
 
@@ -1432,7 +1432,7 @@ src/overlays/ov001/calls/QueueStageEventRequestIfEmpty.c:
     complete
     .text       start:0x02068968 end:0x02068980
 
-src/overlays/ov001/auto/func_ov001_02068980.c:
+src/overlays/ov001/auto/FieldScript_WordPayloadHookNoop.c:
     complete
     .text       start:0x02068980 end:0x02068982
 
@@ -3968,7 +3968,7 @@ src/overlays/ov001/calls/StepSubScreenFade.c:
     complete
     .text       start:0x0207ab7c end:0x0207abd8
 
-src/overlays/ov001/auto/func_ov001_0207abd8.c:
+src/overlays/ov001/auto/MenuOverlay_Phase0Noop.c:
     complete
     .text       start:0x0207abd8 end:0x0207abda
 
@@ -5920,7 +5920,7 @@ src/overlays/ov001/calls/StageManager_Update.c:
     complete
     .text       start:0x020876bc end:0x020876d4
 
-src/overlays/ov001/auto/func_ov001_020876d4.c:
+src/overlays/ov001/auto/FieldScene_DrawHookNoop.c:
     complete
     .text       start:0x020876d4 end:0x020876d6
 
@@ -8332,7 +8332,7 @@ src/overlays/ov001/calls/RemapExtendedSlotId.c:
     complete
     .text       start:0x0209d064 end:0x0209d08c
 
-src/overlays/ov001/calls/func_ov001_0209d08c.c:
+src/overlays/ov001/calls/IsStageResourceId70To97Or99.c:
     complete
     .text       start:0x0209d08c end:0x0209d0a8
 

@@ -1,9 +1,14 @@
 # EU source and porting documentation
 
-EU ARM9 reconstruction covers all 108 native modules byte-exact. Semantic
-names, layouts and host interfaces have their own evidence boundaries.
+EU ARM9 reconstruction covers all 108 native modules byte-exact. Matching,
+descriptive names, recovered layouts and portable interfaces are separate
+claims. This index groups contracts by system; it does not move source files
+or replace native overlay ownership.
+
 Begin with the [source-tree map](SOURCE_LAYOUT.md), then the
 [porting guide](PORTING_GUIDE.md) and [progress policy](PROGRESS_POLICY.md).
+Read the EU wrapper, its shared regional body and the relevant owner/consumer
+contract together.
 
 ## Systems
 
@@ -25,6 +30,96 @@ Source locations in the table describe entrypoints, not a promise that each
 entire overlay implements only one system. Follow the source map for actual
 build ownership and regional aliases. [SYMBOL_EVIDENCE.md](SYMBOL_EVIDENCE.md)
 links the complete sequence of documented naming blocks.
+
+## Contracts by subsystem
+
+### Field session and scene lifecycle
+
+- [Session phase and script run mask](FIELD_SESSION_PHASE_RUN_MASK.md): the
+  lifecycle dispatcher word and the distinct script flag bits.
+- [Current field entry storage](FIELD_CURRENT_ENTRY_STORAGE.md) and
+  [script binding indices](FIELD_SCRIPT_BINDING_INDICES.md): actual writers,
+  signed getters and the limits of the native container slots.
+- [Scene-entry and menu policy](FIELD_SCENE_MENU_POLICY.md),
+  [results-session handoff](RESULTS_SESSION_HANDOFF.md) and
+  [scene-4 exit request](FIELD_SCRIPT_SCENE4_EXIT.md): preserve request ordering,
+  outcome words and numeric dispatcher identities without inventing an enum.
+- [Scene-transition hooks](FIELD_SCENE_TRANSITION_HOOK.md) and
+  [the actor-scene handoff](ACTOR_SCENE_FIELD_HANDOFF.md): loaded callback
+  ownership, native continuations and the field entries that remain paused.
+
+### Actors, field objects and combat
+
+- [Class activation, LOD and command selection](FIELD_OBJECT_CLASS_ACTIVATION_LOD_COMMANDS.md)
+  and [the default stage-actor descriptor](DEFAULT_STAGE_ACTOR_DESCRIPTOR.md):
+  proved class layout and init/update/draw channels.
+- [Default actor hooks and body sound](DEFAULT_STAGE_ACTOR_BODY_SOUND.md),
+  [managed-actor and patrol policies](FIELD_ACTOR_EVENT_POLICY.md) and
+  [controller release states](ACTOR_CONTROLLER_RELEASE_STATES.md): exact owners,
+  masks, signed header fields and lifecycle transitions.
+- [The jump-step override hook](ACTOR_JUMP_STEP_OVERRIDE.md) and
+  [entry-pool drawing and actor-owner links](ENTRY_POOL_DRAW_OWNER_CONTRACTS.md):
+  actual registrations, callers and callback return handling.
+- [Event combat values](STAGE_EVENT_COMBAT_VALUES.md) and
+  [reaction/countdown values](STAGE_EVENT_REACTION_COUNTDOWN.md): constructors,
+  damage consumers, rounding and fields whose units remain bounded by evidence.
+
+### Stage scripts and effect services
+
+- [Stage idle callbacks](STAGE_IDLE_CALLBACK_CONTRACTS.md),
+  [timed event cues](STAGE_EVENT_TIMED_CUE_GROUP.md),
+  [event effect kind](STAGE_EVENT_EFFECT_KIND.md) and
+  [current override ID](STAGE_CURRENT_OVERRIDE_ID.md): distinct service owners,
+  callback protocols and numeric selector domains.
+- [Launcher emission](CARRIED_LAUNCHER_EMISSION.md),
+  [shared stage workspace](STAGE_SHARED_WORKSPACE.md) and
+  [operand and marker operations](STAGE_OPERAND_MARKER_COMMANDS.md): actual
+  producers and consumers, including reused workspace lifetimes.
+- [Resource-ID predicate](STAGE_RESOURCE_ID_PREDICATE.md): the complete native
+  membership test, without assigning an unproved gameplay resource family.
+
+### VM commands and callback phases
+
+- [Interface callback phases](FIELD_CALLBACK_PHASE_CONTRACTS.md) and
+  [operational field callbacks and commands](FIELD_OPERATIONAL_CALLBACKS_COMMANDS.md):
+  the observed draw phase, panel table slot and VM run-result protocol.
+- [Field command 3 and the word-payload hook](FIELD_NOOP3_PAYLOAD.md): distinct
+  nonnull no-ops, immediate buffer borrowing and erased native declarations.
+- [Session byte +0x27b6 bit 5](SESSION_BYTE27B6_BIT5_SCRIPT.md): the exact byte
+  store and opcode binding; the meaning of the bit remains unknown.
+
+Opcode numbers, literal run results, bit positions and table slots are
+operational contracts. They do not establish original source names, a reserved
+feature or a gameplay purpose. In particular, MAIN and auxiliary run-zero
+behavior must remain distinct; an empty registered callback is not automatically
+equivalent to a null pointer.
+
+### Cameras, motion and models
+
+- [Stored field camera requests](FIELD_CAMERA_MODE_REQUEST.md): deferred byte
+  application and the different native camera backends.
+- [Conditional camera-offset wait](FIELD_CAMERA_OFFSET_WAIT.md) and
+  [the exact HP/camera gate](FIELD_HP_CAMERA_SCRIPT_GATE.md): state 4, the shared
+  collider-offset vector, wait completion and HP-dependent flag effects.
+- [Motion-position callbacks](STAGE_MOTION_POSITION_CALLBACKS.md) and
+  [current motion-record word 6](STAGE_MOTION_RECORD_WORD6.md): the proved native
+  record extent and raw zero-based word at +0x18, without a property or unit claim.
+- [Scene scroll speed](FIELD_SCRIPT_SCROLL_SPEED.md),
+  [camera-goal snapping](CAMERA_GOAL_SNAP.md),
+  [stage-local brightness](STAGE_BRIGHTNESS_FADE.md) and
+  [model drawing gate](MODEL_SET_DRAW_GATE.md): exact state and update consumers.
+
+### Menus, records and messages
+
+- [Current board-node code](CURRENT_BOARD_NODE_CODE.md): the shared session
+  buffer, constructors, per-node writers and signed getter.
+- [Field menu/message operations](FIELD_MENU_MESSAGE_OPERATIONS.md),
+  [SubScene9 request availability](SUBSCENE9_REQUEST_CONTRACT.md) and
+  [common field message sprites](COMMON_FIELD_MESSAGE_SPRITE_WAIT.md): separate
+  owners, message state and scheduling results.
+- [Actor-scene continuation and record-panel progress](ACTOR_TASK_RECORD_PROGRESS_CONTRACTS.md):
+  the native task continuation and the progress/index threshold whose clamp
+  does not establish percentage units.
 
 ## Native data maps
 
@@ -102,34 +197,54 @@ configured source paths still establish build ownership.
 ## Retained DATA identities
 
 [All 81 retained numeric DATA labels](EU_PENDING_DATA_LABELS.md) have an explicit
-owner or missing-proof record. All 941 identities in the DATA review are covered;
-835 original supported assignments are integrated; one existing backing allocation
-now has its descriptive storage name. Three canonical duplicates and ten interior
-metadata aliases are closed. Interior addresses remain distinct from independent
-C allocations. [Storage/view naming](CANONICAL_DATA_ALIAS_NORMALIZATION.md) and
-[canonical base/addend references](INTERIOR_DATA_ALIAS_NORMALIZATION.md) record
-the exact representation and the retained ov004 bank ambiguity.
+owner or missing-proof record. The reviewed domain accounts for all 941
+identities: 835 original supported naming assignments, 25 closed normalizations
+and 81 retained labels. The normalizations comprise three canonical duplicates,
+one existing backing-storage naming and twenty-one retired interior aliases.
+These counts describe reviewed identities, not new C allocations or a claim
+that unknown interior fields have acquired semantic names.
+
+[Storage/view naming](CANONICAL_DATA_ALIAS_NORMALIZATION.md),
+[canonical base/addend references](INTERIOR_DATA_ALIAS_NORMALIZATION.md) and
+[unused absolute interior aliases](UNUSED_ABSOLUTE_INTERIOR_ALIASES.md) record
+the precise representations, preserved allocations and remaining ambiguous
+banks. The rejected active-field-context coalescence and the retained ov004
+interpretation remain evidence limits.
 
 ## Unresolved function contracts
 
-18 matched C functions retain numeric names. Every one has a mechanical
-contract, a specific semantic blocker and a next useful proof:
+Seven byte-exact C functions retain numeric identities: one MAIN engine helper
+and six callbacks. The [field review](EU_PENDING_FIELD_FUNCTIONS.md) has no
+remaining numeric field function; its operational closures still document
+unknown meanings and native interface limits.
 
-- [10 common field functions](EU_PENDING_FIELD_FUNCTIONS.md).
-- [2 engine, script and scene functions](EU_PENDING_ENGINE_SCENE_FUNCTIONS.md).
-- [6 background/camera/other callbacks](EU_PENDING_CALLBACK_FUNCTIONS.md).
+- [One engine/helper contract](EU_PENDING_ENGINE_SCENE_FUNCTIONS.md) and
+  [the optional-target evidence limit](MAIN_OPTIONAL_TARGET_EVIDENCE_LIMITS.md):
+  preserve the conditional target write without inventing an owner or writer.
+- [Six background/camera/other callbacks](EU_PENDING_CALLBACK_FUNCTIONS.md),
+  [background callback reader limits](BACKGROUND_CALLBACK_EVIDENCE_LIMITS.md) and
+  [overlay 044 reference limits](OV044_REFERENCE_EVIDENCE_LIMITS.md): distinguish
+  mechanical output, registration, invocation and unresolved field roles.
 
-These are limits on recovered meaning. Full-module matching and reconstructed
-DATA coverage are separate measurements. The
-[standalone relocation discrepancies](DATA_NATIVE_RELOCATION_BASELINE.md)
-also have their original-versus-renamed controls and exact offsets documented. The
+These are limits on recovered meaning, not additional unmatched code. An
+operationally named function can still expose an opaque word, ID range, bit or
+callback ABI. Absence of a direct reference does not establish that an object
+or function is unused; bank-qualified ownership and the documented search
+limits remain part of the handoff.
+
+## Validation and native reference binding
+
+Use the [standalone relocation history](DATA_NATIVE_RELOCATION_BASELINE.md),
 [native metadata refresh](NATIVE_RELOCATION_METADATA.md) and
-[named callback/key references](NATIVE_CALLBACK_REFERENCE_CONTRACTS.md) resolve
-all 21 recorded standalone cases while preserving their historical controls.
+[named callback/key references](NATIVE_CALLBACK_REFERENCE_CONTRACTS.md) for
+their exact original controls and offsets. Their historical cases are distinct
+from later source naming and metadata-classification work.
 
-The [actor-scene continuation and record progress contracts](ACTOR_TASK_RECORD_PROGRESS_CONTRACTS.md)
-show the owner/consumer evidence that closes one former numeric identity and
-corrects an unsupported unit assumption.
+[Callback bank binding](NATIVE_CALLBACK_BANK_BINDING.md) follows the actual
+overlay loader. [Local Thumb branch metadata](LOCAL_THUMB_BRANCH_METADATA.md)
+records the separate native branch/label classification evidence. Keep these
+bank and instruction facts separate from a semantic name or a looser matching
+rule. The [evidence log](SYMBOL_EVIDENCE.md) retains the published naming history.
 
 ## Reading native types for a port
 
@@ -140,30 +255,8 @@ residual return register. Preserve documented rounding, overflow, raw masks,
 borrowed lifetimes and partial clears before selecting host types.
 
 Shared headers should collect layouts proved for this game. Per-function
-partial views and the Days reference remain evidence to reconcile, rather
-than automatic host declarations. The [porting guide](PORTING_GUIDE.md)
-describes the platform adapters and validation expected at handoff.
-
-The [current board-node code](CURRENT_BOARD_NODE_CODE.md) connects the shared session buffer to its constructors, per-node writers and signed getter.
-
-The [field HP/camera script gate](FIELD_HP_CAMERA_SCRIPT_GATE.md) documents opcode 2/0x2e, its exact wait condition and HP-dependent flag effects without assigning an unproved command purpose.
-
-[Stage idle callbacks](STAGE_IDLE_CALLBACK_CONTRACTS.md), [SubScene9 request availability](SUBSCENE9_REQUEST_CONTRACT.md) and [common field message sprites](COMMON_FIELD_MESSAGE_SPRITE_WAIT.md) document their distinct owners and scheduling results.
-
-[Interface callback phases](FIELD_CALLBACK_PHASE_CONTRACTS.md), [the jump-step override hook](ACTOR_JUMP_STEP_OVERRIDE.md), [timed event cues](STAGE_EVENT_TIMED_CUE_GROUP.md), [event effect kind](STAGE_EVENT_EFFECT_KIND.md) and [canonical DATA aliases](CANONICAL_DATA_ALIAS_NORMALIZATION.md) document the latest owner and consumer closures.
-
-[Class activation/LOD/command selection](FIELD_OBJECT_CLASS_ACTIVATION_LOD_COMMANDS.md), [event combat values](STAGE_EVENT_COMBAT_VALUES.md), [reaction/countdown values](STAGE_EVENT_REACTION_COUNTDOWN.md), [motion callbacks](STAGE_MOTION_POSITION_CALLBACKS.md) and [current override ID](STAGE_CURRENT_OVERRIDE_ID.md) supply the native owner and ABI evidence for the latest closures.
-
-[Launcher emission](CARRIED_LAUNCHER_EMISSION.md), [model drawing](MODEL_SET_DRAW_GATE.md), [shared stage workspace](STAGE_SHARED_WORKSPACE.md), [operand and marker operations](STAGE_OPERAND_MARKER_COMMANDS.md), [script binding indices](FIELD_SCRIPT_BINDING_INDICES.md) and [current field entry storage](FIELD_CURRENT_ENTRY_STORAGE.md) connect the newly named functions to their actual writers and consumers.
-
-[Field menu/message operations](FIELD_MENU_MESSAGE_OPERATIONS.md), [controller release states](ACTOR_CONTROLLER_RELEASE_STATES.md) and [entry-pool drawing and actor-owner links](ENTRY_POOL_DRAW_OWNER_CONTRACTS.md) document actual callers, return consumers and lifecycle boundaries.
-
-[Default actor hooks and body sound](DEFAULT_STAGE_ACTOR_BODY_SOUND.md), [session phase and run mask](FIELD_SESSION_PHASE_RUN_MASK.md), [stored camera requests](FIELD_CAMERA_MODE_REQUEST.md) and [the actor-scene handoff](ACTOR_SCENE_FIELD_HANDOFF.md) distinguish native scheduling, deferred application and the still-paused field entries.
-
-[The default stage-actor descriptor](DEFAULT_STAGE_ACTOR_DESCRIPTOR.md) now uses its proved 52-byte native structure and init/update/draw channels, correcting the former handler-array name without new storage.
-
-[Scene-entry/menu policy](FIELD_SCENE_MENU_POLICY.md), [results handoff](RESULTS_SESSION_HANDOFF.md), [scene-transition hooks](FIELD_SCENE_TRANSITION_HOOK.md), [camera-offset waiting](FIELD_CAMERA_OFFSET_WAIT.md), [scroll speed](FIELD_SCRIPT_SCROLL_SPEED.md), [scene-4 exit](FIELD_SCRIPT_SCENE4_EXIT.md), [stage-local brightness](STAGE_BRIGHTNESS_FADE.md) and [camera snapping](CAMERA_GOAL_SNAP.md) explain the next owner and consumer closures.
-
-[Managed-actor and patrol policies](FIELD_ACTOR_EVENT_POLICY.md) document exact masks, signed header access and logical versus packed bits. [The callback bank correction](NATIVE_CALLBACK_BANK_BINDING.md) ties the existing special-action pointer to its actual overlay loader.
-
-[Unused absolute interior aliases](UNUSED_ABSOLUTE_INTERIOR_ALIASES.md) records the eleven exact metadata retirements, the preserved canonical allocations and the nineteen ambiguous aliases left intact.
+partial views, erased callback declarations and the Days reference remain
+evidence to reconcile, rather than automatic host declarations. The
+[porting guide](PORTING_GUIDE.md) describes platform adapters and validation.
+The [source-tree map](SOURCE_LAYOUT.md) preserves native bank ownership,
+regional wrappers and the active semantic index without a wholesale folder move.

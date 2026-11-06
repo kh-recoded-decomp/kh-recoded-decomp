@@ -499,5 +499,96 @@ class NativeRefreshTests(unittest.TestCase):
                         self.assertEqual(after[name], old[name])
 
 
+class InternalThumbLabelCallTests(unittest.TestCase):
+    """Native CFG edges are retained; only the external-relocation map differs."""
+
+    def setUp(self):
+        self.temp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.temp.cleanup)
+        self.root = Path(self.temp.name)
+        self.config = self.root / "config/arm9"
+        self.config.mkdir(parents=True)
+        self.binary = self.root / "dsd_extract/arm9/arm9.bin"
+        self.binary.parent.mkdir(parents=True)
+        self.enterContext(patch.object(rebuild, "ROOT", str(self.root)))
+        self.native = bytes.fromhex("00f008f8") + b"\0" * 16 + bytes.fromhex("00bdc046")
+
+    def make(self, target=0x02001014, target_module="main", kind="thumb_call",
+             mode="thumb", label=True, function_entry=False, data=None):
+        native = self.native if data is None else data
+        self.binary.write_bytes(native + b"\0" * 16)
+        symbols = "example kind:function(%s,size=0x18) addr:0x02001000\n" % mode
+        if label:
+            symbols += "local_return kind:label(thumb) addr:0x%08x local\n" % target
+        if function_entry:
+            symbols += "other kind:function(thumb,size=0x4) addr:0x%08x\n" % target
+        (self.config / "symbols.txt").write_text(symbols)
+        (self.config / "delinks.txt").write_text(".text start:0x02001000 end:0x02001028\n")
+        self.cfg_line = "from:0x02001000 kind:%s to:0x%08x module:%s\n" % (kind, target, target_module)
+        (self.config / "relocs.txt").write_text(self.cfg_line)
+        rebuild.load_symbols()
+        with contextlib.redirect_stdout(io.StringIO()):
+            return rebuild.rebuild()["example"]
+
+    @staticmethod
+    def bl(target):
+        displacement = (target - 0x02001004) & 0x7fffff
+        return ((0xf000 | (displacement >> 12)) .to_bytes(2, "little")
+                + (0xf800 | ((displacement >> 1) & 0x7ff)).to_bytes(2, "little"))
+
+    def test_internal_bl_is_raw_and_cfg_is_retained(self):
+        entry = self.make()
+        self.assertEqual(entry["relocs"], [])
+        self.assertEqual(bytes.fromhex(entry["hex"]), self.native)
+        self.assertEqual(rebuild.masked(entry)[:4], self.native[:4])
+        self.assertEqual((self.config / "relocs.txt").read_text(), self.cfg_line)
+
+    def test_recursion_is_still_a_relocation(self):
+        target = 0x02001000
+        entry = self.make(target=target, data=self.bl(target) + self.native[4:])
+        self.assertEqual([off for off, _ in entry["relocs"]], [0])
+
+    def test_another_function_entry_is_still_a_relocation(self):
+        entry = self.make(function_entry=True)
+        self.assertEqual([off for off, _ in entry["relocs"]], [0])
+
+    def test_different_and_ambiguous_banks_are_not_skipped(self):
+        for bank in ("overlay(1)", "overlays(1,2)"):
+            with self.subTest(bank=bank):
+                self.assertEqual([off for off, _ in self.make(target_module=bank)["relocs"]], [0])
+
+    def test_outside_or_end_boundary_is_not_skipped(self):
+        for target in (0x02000ffc, 0x02001018, 0x0200101c):
+            with self.subTest(target=hex(target)):
+                entry = self.make(target=target, data=self.bl(target) + self.native[4:])
+                self.assertEqual([off for off, _ in entry["relocs"]], [0])
+
+    def test_unclassified_target_is_not_skipped(self):
+        self.assertEqual([off for off, _ in self.make(label=False)["relocs"]], [0])
+
+    def test_address_load_is_not_skipped(self):
+        data = (0x02001014).to_bytes(4, "little") + self.native[4:]
+        self.assertEqual([off for off, _ in self.make(kind="load", data=data)["relocs"]], [0])
+
+    def test_blx_is_not_skipped(self):
+        data = bytes.fromhex("00f008e8") + self.native[4:]
+        self.assertEqual([off for off, _ in self.make(kind="thumb_call_arm", data=data)["relocs"]], [0])
+
+    def test_non_thumb_source_is_not_skipped(self):
+        self.assertEqual([off for off, _ in self.make(mode="arm")["relocs"]], [0])
+
+    def test_bad_opcode_or_target_is_rejected_before_classification(self):
+        for data in (b"\0" * 4 + self.native[4:], self.bl(0x02001010) + self.native[4:]):
+            with self.subTest(data=data.hex()), self.assertRaises(SystemExit):
+                self.make(data=data)
+
+    def test_explicit_refresh_reuses_exact_native_drop_proof(self):
+        current = self.make()
+        previous = dict(current, relocs=[[0, "local_return"]], note="preserve")
+        update = rebuild.native_relocation_updates({"example": previous}, {"example": current}, ["example"])["example"]
+        self.assertEqual(update, dict(previous, relocs=[]))
+        self.assertEqual(rebuild.masked(update)[:4], self.native[:4])
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -1,9 +1,9 @@
 #include "nitro/types.h"
 
-extern void func_ov001_02064e5c(void); /* FS_UnloadOverlayImage */
+extern void ScriptCmd_FieldNoop0(void); /* FS_UnloadOverlayImage */
 extern void ScriptCmd_RequestRoomChange(void); /* ScriptCmd_RequestRoomChange */
 extern void ScriptCmd_SwitchFieldMode(void); /* ScriptCmd_SwitchFieldMode */
-extern void func_ov001_02064ec0(void); /* FS_UnloadOverlayImage */
+extern void ScriptCmd_FieldNoop3(void); /* FS_UnloadOverlayImage */
 extern void ScriptCmd_EnterMenuItem(void); /* return 1; ScriptVm_ReadOperandInt */
 extern void ScriptCmd_LoadFieldObjectSet(void); /* ScriptCmd_LoadFieldObjectSet */
 extern void ScriptOp_StartFieldMotion(void); /* ScriptOp_StartFieldMotion */
@@ -69,7 +69,7 @@ extern void ScriptCmd_SetFieldObjectsFlag(void); /* ScriptCmd_SetFieldObjectsFla
 extern void ScriptCmd_SetOv043CameraFlags8(void);
 extern void ScriptCmd_EnterPanelModeThree(void); /* CmdOpenDialog */
 extern void ScriptCmd_TestSceneFlag10Clear(void); /* thumbStep */
-extern void func_ov001_02065a24(void); /* FSi_CloseFileCommand */
+extern void ScriptCmd_FieldOp41RunZero(void); /* FSi_CloseFileCommand */
 extern void ScriptCmd_SaveCurrentSpawnPoint(void); /* return 1; ScriptVm_ReadOperandInt */
 extern void ScriptCmd_SaveCheckpoint(void);
 extern void ScriptCmd_SetMenuHighlight(void); /* return 1; ScriptVm_ReadOperandInt */
@@ -94,7 +94,7 @@ extern void ScriptCmd_SetupSlotPanelMode(void);
 extern void ScriptCmd_ToggleSessionBit15(void); /* ScriptCmd_ToggleSessionBit15 */
 extern void ScriptCmd_RequestFieldExitToScene4(void);
 extern void ScriptCmd_DamageLeaderNonLethal(void);
-extern void func_ov001_02065f04(void);
+extern void ScriptCmd_SetSessionByte27B6Bit5(void);
 extern void ScriptCmd_ClearSessionStateWords(void); /* return 1; no local decode */
 extern void ScriptCmd_InvokeSessionCallback(void); /* MsgQueue_GetHeap */
 extern void ScriptCmd_TestSessionCheckCallback(void); /* thumbStep */
@@ -104,13 +104,13 @@ extern void ScriptCmd_ResetGaugeDisplay(void); /* return 1; no local decode */
 extern void ScriptCmd_RestoreSelectionRecordValue(void); /* ScriptCmd_RestoreSelectionRecordValue */
 
 void (*gFieldScriptCommandHandlers[190])(void) = {
-    func_ov001_02064e5c, /* FS_UnloadOverlayImage */
+    ScriptCmd_FieldNoop0, /* FS_UnloadOverlayImage */
     NULL,
     ScriptCmd_RequestRoomChange, /* ScriptCmd_RequestRoomChange */
     NULL,
     ScriptCmd_SwitchFieldMode, /* ScriptCmd_SwitchFieldMode */
     NULL,
-    func_ov001_02064ec0, /* FS_UnloadOverlayImage */
+    ScriptCmd_FieldNoop3, /* FS_UnloadOverlayImage */
     NULL,
     ScriptCmd_EnterMenuItem, /* return 1; ScriptVm_ReadOperandInt */
     NULL,
@@ -234,7 +234,7 @@ void (*gFieldScriptCommandHandlers[190])(void) = {
     NULL,
     ScriptCmd_EnterPanelModeThree, /* CmdOpenDialog */
     ScriptCmd_TestSceneFlag10Clear, /* thumbStep */
-    func_ov001_02065a24, /* FSi_CloseFileCommand */
+    ScriptCmd_FieldOp41RunZero, /* FSi_CloseFileCommand */
     NULL,
     ScriptCmd_SaveCurrentSpawnPoint, /* return 1; ScriptVm_ReadOperandInt */
     NULL,
@@ -280,7 +280,7 @@ void (*gFieldScriptCommandHandlers[190])(void) = {
     NULL,
     ScriptCmd_DamageLeaderNonLethal,
     NULL,
-    func_ov001_02065f04,
+    ScriptCmd_SetSessionByte27B6Bit5,
     NULL,
     ScriptCmd_ClearSessionStateWords, /* return 1; no local decode */
     NULL,

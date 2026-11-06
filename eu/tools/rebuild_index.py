@@ -79,7 +79,7 @@ def mod_key(d):
 by_mod = {}
 symbol_addresses = {}
 thumb_targets = set()
-# Metadata for the explicit native refresh only. Normal lookup stays unchanged.
+# Function/label identities for native CFG classification and explicit refresh.
 thumb_labels = set()
 function_entries = set()
 function_definitions = {}
@@ -194,6 +194,21 @@ def check_linked_target(blob, offset, address, target, kind, target_module):
     raise ValueError("ROM target 0x%08x != configured target 0x%08x" % (actual, target))
 
 
+def is_internal_thumb_bl_label(mode, start, size, source_module, target, target_module, kind):
+    """Classify already ROM-validated local control flow, not a linker relocation.
+
+    Keep the CFG record. The index must compare this complete BL instruction as
+    ordinary bytes. Recursion/function entries, ambiguous or different banks,
+    interworking calls and address loads stay on the relocation path.
+    """
+    location = (source_module, target)
+    return (mode == "thumb" and kind == "thumb_call"
+            and target_module == source_module
+            and start < target < start + size
+            and location in thumb_labels
+            and location not in function_entries)
+
+
 def rebuild():
     # Pass 2: rebuild each module's functions.
     rebuilt = {}
@@ -237,6 +252,9 @@ def rebuild():
                         check_linked_target(blob[off:off + size], a - addr, a, t, kind, tm)
                     except ValueError as exc:
                         invalid.append("%s +0x%x: %s" % (name, a - addr, exc))
+                    else:
+                        if is_internal_thumb_bl_label(mode, addr, size, mod_key(d), t, tm, kind):
+                            continue
                     r.append((a - addr, sym_at(t, tm)))
                 r.sort()
                 rebuilt[name] = {"hex": blob[off:off + size].hex(), "size": size,

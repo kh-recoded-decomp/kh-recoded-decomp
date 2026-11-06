@@ -81,9 +81,9 @@ The private `SetupPanelHandlers` field labels `update` and `draw` are misleading
 
 ## Retained menu-overlay phase 0
 
-`func_ov001_0207abd8` at `ov001:0207abd8` remains numeric in `eu/src/overlays/ov001/auto/func_ov001_0207abd8.c`. It occupies nonnull table slot 0 and receives `gSubscenePanelWork` through `UpdatePanelScene`, with an ignored return. `RequestPanelModeChange` accepts phase 0 or 6 but checks +0x38 separately. `InitFieldPanelScene` zero-fills 0x114 bytes, then synchronously sets phase 2 before returning the dispatcher.
+`MenuOverlay_Phase0Noop` (formerly `func_ov001_0207abd8`) at `ov001:0207abd8` has its operational slot name in `eu/src/overlays/ov001/auto/MenuOverlay_Phase0Noop.c`. It occupies nonnull table slot 0 and receives `gSubscenePanelWork` through `UpdatePanelScene`, with an ignored return. `RequestPanelModeChange` accepts phase 0 or 6 but checks +0x38 separately. `InitFieldPanelScene` zero-fills 0x114 bytes, then synchronously sets phase 2 before returning.
 
-No persistent same-owner transition into phase 0 after initialization is established. A descriptive lifecycle name needs a writer of panel +0x30 = 0 whose result reaches the dispatcher, or a same-owner descriptor contract identifying that phase. The zero fill and acceptance comparison alone do not establish an inactive or disabled state.
+No persistent same-owner transition into phase 0 after initialization is established. A descriptive lifecycle name needs a writer of panel +0x30 = 0 whose result reaches the dispatcher, or a same-owner descriptor contract identifying that phase. The zero fill and acceptance comparison alone do not establish an inactive or disabled state. [The operational contract](FIELD_OPERATIONAL_CALLBACKS_COMMANDS.md) names the registered slot without claiming that missing transition.
 
 ## Native provenance
 

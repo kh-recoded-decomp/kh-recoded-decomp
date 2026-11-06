@@ -1,0 +1,3 @@
+#define FS_EndOverlay FieldScriptCommand3_Noop
+#define FS_UnloadOverlayImage_02064ec0 ScriptCmd_FieldNoop3
+#include "src/ov001/library_nitro_fs/FS_UnloadOverlayImage_02064ec0.c"

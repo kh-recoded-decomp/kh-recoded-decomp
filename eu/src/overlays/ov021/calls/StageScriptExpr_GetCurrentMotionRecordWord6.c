@@ -3,7 +3,7 @@
 extern u32 gActiveFieldContextStorage;
 extern u32 GetStageMotionRecord();
 
-u32 func_ov021_020b0edc(int self)
+u32 StageScriptExpr_GetCurrentMotionRecordWord6(int self)
 {
     s32 member;
 

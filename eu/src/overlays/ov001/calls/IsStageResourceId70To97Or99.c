@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-BOOL func_ov001_0209d08c(u32 id)
+BOOL IsStageResourceId70To97Or99(u32 id)
 {
     if (id == 99) {
         return TRUE;

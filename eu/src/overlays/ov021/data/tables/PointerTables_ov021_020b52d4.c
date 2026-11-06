@@ -24,7 +24,7 @@ extern void ScriptOp_GetOwnerIntegerField(void); /* ScriptOp_GetOwnerIntegerFiel
 extern void StageExpr_GetSelectedCommandEntryId(void);
 extern void ScriptOp_GetPlayerAngleDegrees(void); /* ScriptOp_GetPlayerAngleDegrees */
 extern void ScriptCmd_CheckTargetLineOfSight(void); /* ScriptCmd_CheckTargetLineOfSight */
-extern void func_ov021_020b0edc(void);
+extern void StageScriptExpr_GetCurrentMotionRecordWord6(void);
 extern void SampleGridCellValue(void); /* SampleGridCellValue */
 extern void ScriptOp_GetObjectTypeId(void); /* ScriptOp_GetObjectTypeId */
 extern void StageScriptExpr_GetHitReactionArgument(void);
@@ -180,7 +180,7 @@ void (*gScriptQueryHandlers[173])(void) = {
     NULL,
     NULL,
     NULL,
-    func_ov021_020b0edc,
+    StageScriptExpr_GetCurrentMotionRecordWord6,
     SampleGridCellValue, /* SampleGridCellValue */
     NULL,
     NULL,

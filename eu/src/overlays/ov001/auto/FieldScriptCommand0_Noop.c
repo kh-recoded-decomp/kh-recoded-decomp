@@ -1,2 +1,2 @@
-#define _fp_init_0206312c func_ov001_0206312c
+#define _fp_init_0206312c FieldScriptCommand0_Noop
 #include "src/ov001/library_msl_c/_fp_init_0206312c.c"

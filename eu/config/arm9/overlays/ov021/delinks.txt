@@ -1456,7 +1456,7 @@ src/overlays/ov021/calls/SampleGridCellValue.c:
     complete
     .text       start:0x020b0e80 end:0x020b0edc
 
-src/overlays/ov021/calls/func_ov021_020b0edc.c:
+src/overlays/ov021/calls/StageScriptExpr_GetCurrentMotionRecordWord6.c:
     complete
     .text       start:0x020b0edc end:0x020b0f0c
 

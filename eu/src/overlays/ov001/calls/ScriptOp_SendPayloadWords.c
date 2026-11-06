@@ -1,3 +1,4 @@
+#define func_ov001_02068980 FieldScript_WordPayloadHookNoop
 #define ScriptOp_SendPayloadWords_02065820 ScriptOp_SendPayloadWords
 #define ScriptVm_ReadOperandFx32_02025df8 ScriptVm_ReadOperandFx32
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt

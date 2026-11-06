@@ -3,7 +3,7 @@
 extern unsigned int gMovieContextState;
 extern unsigned int DrawVisibleSceneSlots(void);
 extern unsigned int RunFlaggedEventCallbacks(void);
-extern unsigned int func_ov001_020876d4(void);
+extern unsigned int FieldScene_DrawHookNoop(void);
 extern unsigned int UpdateActorSlotsAndBillboards(void);
 extern unsigned int func_020bd2a4(void);
 extern unsigned int GetManagedActorCount(void);
@@ -38,7 +38,7 @@ void DispatchSceneDrawCallbacks(void)
         UpdateActorSlotsAndBillboards();
     }
     if ((*(u16 *)(work + 0x22) & 0x10) != 0) {
-        func_ov001_020876d4();
+        FieldScene_DrawHookNoop();
     }
     blocked = GetOverlay41PhaseActiveFlag();
     if (blocked != 0) {

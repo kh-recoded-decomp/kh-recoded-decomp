@@ -10,6 +10,6 @@
 #define func_ov001_02099a84 DrawVisibleStageQuads
 #define func_ov001_0209a4bc SpawnStageResourceTree
 #define func_ov001_0209ab64 LoadStageModels
-#define func_ov001_0209d064 func_ov001_0209d08c
+#define func_ov001_0209d064 IsStageResourceId70To97Or99
 #define g_stageManager_020a0508 gStageManager
 #include "src/ov001/shared_engine/StartStageEvent_0209a174.c"

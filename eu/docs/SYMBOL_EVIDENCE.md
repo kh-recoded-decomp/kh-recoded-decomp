@@ -966,3 +966,11 @@ Six numeric identities now describe cursor reset, command bookkeeping, exact bin
 ## Unused absolute interior exports
 
 Eleven numeric aliases with no active ELF consumers are retired from configuration and the existing SDK alias facade; eleven loads preserve their complete ROM words as canonical base plus addend. [The contract](UNUSED_ABSOLUTE_INTERIOR_ALIASES.md) distinguishes zero-size ABS exports from allocations and keeps nineteen ambiguous aliases and sixteen aliases with consumers intact. Eight official checks pass before and after; fifteen complete C objects are identical, and the SDK object changes only by the eleven approved ABS exports. A fresh gate retains all 108 module hashes. The function index remains byte-identical. DATA pending: 81; code coverage and physical DATA bytes are unchanged.
+
+## Operational field-script and callback names
+
+Eleven numeric functions now identify their proved draw phase, menu phase-0 table slot, VM no-op/run-zero protocol, word-payload hook, exact resource-ID predicate or session-byte bit store. [The system index](README.md) links the native contracts. These are operational names; they do not claim original source spelling, a reserved feature, a gameplay resource family or the unknown bit meaning. Native signatures, distinct nonnull callbacks and MAIN/auxiliary differences remain intact. The current motion record has a proved 64-byte owner; word 6 names its raw offset 0x18 without a property or unit claim.
+
+## Local Thumb transfer metadata and final validation
+
+[The local-branch classification](LOCAL_THUMB_BRANCH_METADATA.md) keeps the original CFG edges and compares eight same-function Thumb BL instructions as complete ordinary bytes. Existing explicit native refresh updates only ApplyHitToEnemyGroup and EnterActorState, preserving all other fields and their remaining 71/66 relocation pairs. All 48 generator tests, all 30 affected/regression function checks and all 33 complete-object comparisons pass; every hash remains unchanged in a fresh 108-module gate. The official verifier, compiler flags, C bodies and native instructions are unchanged. Seven C identifiers and 81 DATA identities remain with explicit evidence limits. The system index is organized by subsystem; source folders retain their native-bank build ownership.

@@ -1,6 +1,6 @@
 # EU functions awaiting semantic evidence
 
-These 2 byte-exact functions retain their address names because a stronger role or field meaning remains unproven. Current source paths, function names and native declarations were revalidated at Git `c55c73c68510bfb1168844edc4e9a0deea2e61b5`. The raw-ROM scan receipt remains pinned to the earlier `28dc258674c86cde06bc8456c4c7cb9087e28905` research checkpoint. This document changes no source, prototype, structure or behavior, and makes no new official compilation or byte-exact validation claim.
+This one byte-exact function retains its address name because a stronger role or field meaning remains unproven. Current source paths, function names and native declarations were revalidated at Git `c55c73c68510bfb1168844edc4e9a0deea2e61b5`. The raw-ROM scan receipt remains pinned to the earlier `28dc258674c86cde06bc8456c4c7cb9087e28905` research checkpoint. This document changes no source, prototype, structure or behavior, and makes no new official compilation or byte-exact validation claim.
 
 ## How to use this inventory
 
@@ -22,7 +22,7 @@ The research receipt for this pass has SHA-256 `f0116bceabb1f33cf0afe91e100fc161
 | `ov021:020a9d24` | THUMB | [eu/src/overlays/ov021/calls/IsModelSetDrawEnabled.c](../src/overlays/ov021/calls/IsModelSetDrawEnabled.c) | Normalized BOOL equivalent to ((*flags & 3) == 3). |
 | `ov021:020b0ad4` | THUMB | [eu/src/overlays/ov021/calls/StageScriptExpr_GetStageWorkspaceWord1.c](../src/overlays/ov021/calls/StageScriptExpr_GetStageWorkspaceWord1.c) | Return opcode status 0. The copied integer word is not normalized or converted. |
 | `ov021:020b0af0` | THUMB | [eu/src/overlays/ov021/calls/StageScriptExpr_GetStageWorkspaceWord0.c](../src/overlays/ov021/calls/StageScriptExpr_GetStageWorkspaceWord0.c) | Return opcode status 0; no allocation or pointer lifetime change. |
-| `ov021:020b0edc` | THUMB | [eu/src/overlays/ov021/calls/func_ov021_020b0edc.c](../src/overlays/ov021/calls/func_ov021_020b0edc.c) | Opcode status 0; missing event or record leaves the helper's result fields unchanged. |
+| `ov021:020b0edc` | THUMB | [eu/src/overlays/ov021/calls/StageScriptExpr_GetCurrentMotionRecordWord6.c](../src/overlays/ov021/calls/StageScriptExpr_GetCurrentMotionRecordWord6.c) | Opcode status 0; missing event or record leaves the helper's result fields unchanged. |
 | `ov021:020b2044` | THUMB | [eu/src/overlays/ov021/calls/StageScriptOp_ResolveDataOperands.c](../src/overlays/ov021/calls/StageScriptOp_ResolveDataOperands.c) | Opcode status 0. Resolver/expression side effects are retained; this is not safely replaceable by an empty function. |
 | `ov021:020b2fec` | THUMB | [eu/src/overlays/ov021/calls/StageScriptCmd_SetStageMarkerAuxiliaryWords.c](../src/overlays/ov021/calls/StageScriptCmd_SetStageMarkerAuxiliaryWords.c) | Opcode status 0. There is no index check, conversion, allocation or result-vector write. |
 | `ov030:020bcec0` | THUMB | [eu/src/overlays/ov030/calls/StartCarriedLauncherEmission.c](../src/overlays/ov030/calls/StartCarriedLauncherEmission.c) | void. ActivateSpawnUnit uses a native hidden composite-return destination; the C VecFx32 return view preserves that operation. |
@@ -59,33 +59,6 @@ Next proof: Trace bulk/prefix BSS initialization and indirect constructors that 
 
 Additional raw scan: the only complete anchor word 02060764 is the setter's own pool at MAIN0202d630, loaded at0202d620. No complete 02060768/02060769 word was found in the extracted domains. This leaves prefix-based initialization, computed references and larger shared initialization routines unresolved.
 
-## func_ov021_020b0edc
-
-Identity: `ov021:020b0edc`, THUMB, configured native extent 48 bytes (including any pool). Source: [eu/src/overlays/ov021/calls/func_ov021_020b0edc.c](../src/overlays/ov021/calls/func_ov021_020b0edc.c).
-
-```c
-u32 func_ov021_020b0edc(int self);
-```
-
-- Inputs: Stage-script context and active event. Read its halfword at +0x16 and pass it to GetStageMotionRecord.
-- Mechanical effects: Only when both the event and resolved record exist, write integer tag 1 and copy record word +0x18 into the result.
-- Result/lifetime: Opcode status 0; missing event or record leaves the helper's result fields unchanged.
-
-### Callers, registration and ROM references
-
-- `ov021:020b54e8` contains `020b0edd`, `gScriptQueryHandlers[100]` (173 entries). The configured relocation records this target bank. Storage: [eu/src/overlays/ov021/data/tables/PointerTables_ov021_020b52d4.c](../src/overlays/ov021/data/tables/PointerTables_ov021_020b52d4.c).
-- `ScriptOp_DispatchIndexedCommand` resolves the selector, initializes the tagged result to integer zero, indexes this array and invokes the nonnull handler. The helper's return is discarded and the dispatcher returns 0. Source: [eu/src/overlays/ov021/calls/ScriptOp_DispatchIndexedCommand.c](../src/overlays/ov021/calls/ScriptOp_DispatchIndexedCommand.c).
-
-### Established limit
-
-GetStageMotionRecord resolves records used through several motion/grid/slot views. This getter's concrete record kind and the role of +0x18 must be recovered before assigning a property name.
-
-### Searches already performed and next proof
-
-Getter uses active event.motionId+16 to obtain a polymorphic stage record and copies record+18 as tagged integer; both missing-event and missing-record paths retain prior result. The record schema remains unresolved.
-
-Next proof: Correlate record kind/loader at GetStageMotionRecord with this expression entry, rather than exporting a generic motion/grid/slot field.
-
 ## Closed board-node getter
 
 The former ov032:020bb828 entry is now [GetCurrentBoardNodeCode](CURRENT_BOARD_NODE_CODE.md). The SessionBuffer10 owner, six code writers and native signed-byte loads close its former lock/rank/variant ambiguity.
@@ -97,3 +70,7 @@ The [timed-cue group selector](STAGE_EVENT_TIMED_CUE_GROUP.md) now has its actua
 ## Closed combat, reaction and motion expressions
 
 Native damage, defeat, gauge, override and installed sequence callbacks establish [combat values](STAGE_EVENT_COMBAT_VALUES.md), [reaction/countdown values](STAGE_EVENT_REACTION_COUNTDOWN.md), [motion/position callbacks](STAGE_MOTION_POSITION_CALLBACKS.md) and [current override ID](STAGE_CURRENT_OVERRIDE_ID.md). Raw widths, missing-event behavior and compiler ABI views are preserved; contradictory private HP/speed labels are documented rather than exported as a host layout.
+
+## Closed current motion-record word
+
+[StageScriptExpr_GetCurrentMotionRecordWord6](STAGE_MOTION_RECORD_WORD6.md) exposes raw word index 6 at byte offset 0x18 of the proved 64-byte record. It assigns no property or unit. [The remaining optional target](MAIN_OPTIONAL_TARGET_EVIDENCE_LIMITS.md) still lacks a pointer writer and target owner.
