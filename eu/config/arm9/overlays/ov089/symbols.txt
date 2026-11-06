@@ -35,4 +35,4 @@ data_ov089_020c05f8 kind:data(any) addr:0x020c05f8
 data_ov089_020c064c kind:data(any) addr:0x020c064c
 data_ov089_020c0654 kind:data(any) addr:0x020c0654
 sOv089_UiMenuStrLanguageCsSZ_020c065c kind:data(any) addr:0x020c065c
-data_ov089_020c0674 kind:data(any) addr:0x020c0674
+gEntryCarouselTitleFormat kind:data(any) addr:0x020c0674

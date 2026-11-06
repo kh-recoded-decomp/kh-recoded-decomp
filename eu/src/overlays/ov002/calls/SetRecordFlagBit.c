@@ -14,7 +14,7 @@ typedef struct RecordFlagSets {
 } RecordFlagSets;
 
 extern const u16 gMenuRecordCategoryFlagBitOffsets[21];
-extern s32 data_ov002_0206aebc[];
+extern s32 gMenuRecordCategoryBaseOffsets[];
 extern BOOL IsRecordSlotAcquired(s32 slot);
 extern int AcquireRecordSlot(int slot, int param);
 extern void ReleaseRecordSlot(s32 slot);
@@ -37,7 +37,7 @@ s32 SetRecordFlagBit(RecordFlagSets *flagSets, s32 recordId, BOOL value, BOOL us
         return -1;
     }
     categoryIndex = record->category - 1;
-    bitIndex = gMenuRecordCategoryFlagBitOffsets[categoryIndex] + (recordId - data_ov002_0206aebc[categoryIndex]);
+    bitIndex = gMenuRecordCategoryFlagBitOffsets[categoryIndex] + (recordId - gMenuRecordCategoryBaseOffsets[categoryIndex]);
     byteIndex = bitIndex >> 3;
     mask = 1 << (u8)(bitIndex - (byteIndex << 3));
     if (!wasAcquired) {

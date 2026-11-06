@@ -700,3 +700,17 @@ claim whole mixed files, and opaque tails retain their original storage.
 `tools/rename_symbol.py --map-file PLAN.json --keep-source-paths` requires
 reviewed old/new/source candidates and completes all definition/collision
 checks before writing; it rejects unsupported assembly references.
+
+## Title/panel DATA, text formats and source navigation
+
+Sixty-five DATA identities now distinguish screen/frame resources, message
+and widget IDs, category domains, packed offsets and native UTF-16 formats:
+
+- [TITLE_PANEL_DATA_CONTRACTS.md](TITLE_PANEL_DATA_CONTRACTS.md): 40 identities.
+- [MENU_TEXT_FORMAT_DATA_CONTRACTS.md](MENU_TEXT_FORMAT_DATA_CONTRACTS.md): 25 identities.
+
+All active source owners were checked against native delink ranges. The
+shared definition is bound through its EU alias; a proven superseded DATA
+copy is preserved outside the compiled source tree. See the
+[source-tree map](SOURCE_LAYOUT.md) and [system index](README.md) for the
+Days-informed navigation and the complete 100-function uncertainty inventory.

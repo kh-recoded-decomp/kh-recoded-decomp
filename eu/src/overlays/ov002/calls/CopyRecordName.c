@@ -1,3 +1,4 @@
+#define data_ov002_0206aebc gMenuRecordCategoryBaseOffsets
 #define AcquireRecordSlot_02051d3c AcquireRecordSlot
 #define CopyRecordName_02069d5c CopyRecordName
 #define CopyRecordTableBField_02069d04 CopyRecordTableBField

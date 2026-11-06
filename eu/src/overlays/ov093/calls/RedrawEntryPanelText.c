@@ -4,8 +4,8 @@
 #define OS_SNPrintf_0202e080 OS_SNPrintf_0202e094
 #define RedrawEntryPanelText_020bfd60 RedrawEntryPanelText
 #define Text_UploadTileBuffer_02001520 Text_UploadTileBuffer
-#define data_ov093_020c4d58 data_ov093_020c4d78
-#define data_ov093_020c4d60 data_ov093_020c4d80
+#define data_ov093_020c4d58 gTrophyValueWidth5Format
+#define data_ov093_020c4d60 gTrophyPercentValueFormat
 #define data_ov093_020c4d68 data_ov093_020c4d88
 #define func_020019f4 GetNestedModeByte
 #define func_ov027_020ba2a8 GetPackedFileEntry

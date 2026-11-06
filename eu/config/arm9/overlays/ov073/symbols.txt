@@ -102,16 +102,16 @@ data_ov073_020c4110 kind:data(any) addr:0x020c4110
 data_ov073_020c4120 kind:data(any) addr:0x020c4120
 data_ov073_020c4130 kind:data(any) addr:0x020c4130
 gStatusMenuDescriptor kind:data(any) addr:0x020c4160 ambiguous
-data_ov073_020c41a0 kind:data(any) addr:0x020c41a0
+gStatusHeaderTextFormat kind:data(any) addr:0x020c41a0
 sOv073_OCBGOFSFUNC_020c41a8 kind:data(any) addr:0x020c41a8
 sOv073_UiMenuStrLanguageStatusSZ_020c41b8 kind:data(any) addr:0x020c41b8
-data_ov073_020c41d4 kind:data(any) addr:0x020c41d4
+gStatusNumberFormat kind:data(any) addr:0x020c41d4
 sOv073_UiBtlBtlLanguageP2_020c41dc kind:data(any) addr:0x020c41dc
-data_ov073_020c41ec kind:data(any) addr:0x020c41ec
-data_ov073_020c41f4 kind:data(any) addr:0x020c41f4
-data_ov073_020c4208 kind:data(any) addr:0x020c4208
-data_ov073_020c4218 kind:data(any) addr:0x020c4218
-data_ov073_020c4228 kind:data(any) addr:0x020c4228
-data_ov073_020c4238 kind:data(any) addr:0x020c4238
-data_ov073_020c4244 kind:data(any) addr:0x020c4244
+gStatusHpValueFormat kind:data(any) addr:0x020c41ec
+gStatusHpRatioFormat kind:data(any) addr:0x020c41f4
+gStatusDecimalMultiplierFormat kind:data(any) addr:0x020c4208
+gStatusDecimalPercentFormat kind:data(any) addr:0x020c4218
+gStatusWholeMultiplierWithDecimalZeroFormat kind:data(any) addr:0x020c4228
+gStatusIntegerMultiplierFormat kind:data(any) addr:0x020c4238
+gStatusReciprocalMultiplierFormat kind:data(any) addr:0x020c4244
 data_ov073_020c4260 kind:bss addr:0x020c4260

@@ -839,7 +839,7 @@ const RecordCategoryIconEntry gMenuRecordIconLayouts[816] = {
     {0, 0, 0, 0, 0},
 };
 
-const u32 data_ov002_0206af0c[20] = {
+const u32 gMenuDefaultCategoryRecordIds[20] = {
     0x00002710, 0x00004E20, 0x00007530, 0x00009C40,
     0x0000C350, 0x0000EA61, 0x00000000, 0x00000000,
     0x00015F90, 0x000186A0, 0x0001ADB0, 0x0001D4C0,

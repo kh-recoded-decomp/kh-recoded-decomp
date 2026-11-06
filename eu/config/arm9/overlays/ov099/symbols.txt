@@ -75,7 +75,7 @@ gEnemyViewerEntryInfo kind:data(any) addr:0x020c243c
 data_ov099_020c257c kind:data(any) addr:0x020c257c
 sOv099_UiBtlStrLanguageP2_020c2774 kind:data(any) addr:0x020c2774
 sOv099_TextFontEu10Nftr_020c2784 kind:data(any) addr:0x020c2784
-data_ov099_020c279c kind:data(any) addr:0x020c279c
+gEnemyViewerWidth2NumberFormat kind:data(any) addr:0x020c279c
 data_ov099_020c27a4 kind:data(any) addr:0x020c27a4
 data_ov099_020c27c8 kind:data(any) addr:0x020c27c8
 data_ov099_020c27ec kind:data(any) addr:0x020c27ec

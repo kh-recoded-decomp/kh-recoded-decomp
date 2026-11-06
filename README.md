@@ -17,10 +17,13 @@ maintained by [@ricky074game](https://github.com/ricky074game) and [@Yokimitsuro
 **EU (`BK9P`) ARM9 matching is complete: 100.00% C + verified library code,
 and 100.00% reconstructed DATA.** The C-only figure is 95.98%; the remaining
 4.02% is verified library code and is never added to the C percentage.
-The latest EU gate (2026-11-05) passes all 108 linked modules byte-exact.
+The latest EU gate (2026-11-06) passes all 108 linked modules byte-exact.
 Semantic names, recovered structures and documentation remain in progress;
 see the [EU evidence log](eu/docs/SYMBOL_EVIDENCE.md) and
-[porting guide](eu/docs/PORTING_GUIDE.md). ARM7 is outside these figures.
+[porting guide](eu/docs/PORTING_GUIDE.md). The
+[system index](eu/docs/README.md) and [source-tree map](eu/docs/SOURCE_LAYOUT.md)
+explain active files, shared regional wrappers and native overlay IDs.
+ARM7 is outside these figures.
 
 <!-- regions:start -->
 | Region | C code bytes | % | Functions |

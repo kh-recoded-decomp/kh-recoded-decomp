@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-const u32 data_ov000_020637d4[20] = {
+const u32 gTitlePanelBgArchiveIndices[20] = {
     0x00000007, 0xFFFFFFFF, 0x00000002, 0x00000000,
     0x00000004, 0x00000000, 0xFFFFFFFF, 0xFFFFFFFF,
     0x00000005, 0x00000001, 0xFFFFFFFF, 0xFFFFFFFF,
@@ -8,6 +8,6 @@ const u32 data_ov000_020637d4[20] = {
     0x00000008, 0x00000003, 0x00000003, 0x00000001,
 };
 
-const u32 data_ov000_020637c4[4] = {
+const u32 gTitlePanelLayerManagerConfig[4] = {
     0x00000000, 0x00000002, 0x00000000, 0x00000000,
 };

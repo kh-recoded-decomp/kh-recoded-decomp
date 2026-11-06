@@ -8,6 +8,9 @@ This is a matching decompilation; a host port is a separate project.
 
 ## Start here
 
+- [System index](README.md) and [source-tree map](SOURCE_LAYOUT.md) explain
+  active build ownership, EU/shared wrappers, native overlay identities and
+  the organization reference taken from khdays-decomp.
 - [Collision geometry](COLLISION_GEOMETRY.md), [tree traversal](COLLISION_TRAVERSAL.md),
   [contact motion](CONTACT_MOTION.md) and [sphere/rim sweep](SPHERE_RIM.md)
   describe recovered layouts, fixed-point math, ownership and the relevant
@@ -51,6 +54,9 @@ This is a matching decompilation; a host port is a separate project.
 These pages cover specific recovered systems. Their existence is not a claim
 that every function, data object or subsystem has a complete semantic contract.
 An address-based name is retained where a more descriptive name lacks evidence.
+The current [unresolved-function inventory](README.md#unresolved-function-contracts)
+records the mechanical contract, precise blocker and next proof for every
+remaining numeric C function.
 
 ## Library boundaries
 

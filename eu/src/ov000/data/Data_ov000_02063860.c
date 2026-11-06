@@ -5,7 +5,7 @@
 extern void TeardownCurrentHeap(void);
 extern void InitTitleScreen(void);
 
-void *data_ov000_02063870[5] = {
+void *gTitleScreenTaskClass[5] = {
     (void *)0x00110008,
     (void *)InitTitleScreen,
     (void *)TeardownCurrentHeap,

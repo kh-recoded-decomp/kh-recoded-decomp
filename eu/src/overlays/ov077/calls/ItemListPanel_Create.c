@@ -1,6 +1,6 @@
 #define func_ov077_020c8d00 ItemListPanel_Create
 #define data_ov076_020ca150 gItemListObjManagerConfig
-#define data_ov076_020ca304 data_ov077_020ca324
+#define data_ov076_020ca304 gEquipmentItemCountFormat
 #define data_ov076_020ca328 sOv077_UiMenuCmnmtxP2_020ca348
 #define data_ov076_020ca33c sOv077_UiMenuLanguageCmnmtxP2_020ca35c
 #define data_ov076_020ca38c gItemListPanelWork

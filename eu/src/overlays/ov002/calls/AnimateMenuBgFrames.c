@@ -1,3 +1,6 @@
+#define data_ov002_0206ad1c gOv002MenuTopRowsFrameScreenIds
+#define data_ov002_0206ad3c gOv002MenuBodyFrameScreenIds
+#define data_ov002_0206ad5c gOv002MenuNextBgFrame
 #define AnimateMenuBgFrames_02064b34 AnimateMenuBgFrames
 #define GXS_LoadBG1Scr_020076a0 GXS_LoadBG1Scr
 #define func_ov027_020b8558 FindActiveBackgroundScreenResourceById

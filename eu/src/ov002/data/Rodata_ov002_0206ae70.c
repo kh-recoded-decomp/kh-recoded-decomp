@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-const u32 data_ov002_0206aebc[20] = {
+const u32 gMenuRecordCategoryBaseOffsets[20] = {
     0x00000000, 0x00000010, 0x00000020, 0x00000060,
     0x00000160, 0x00000180, 0x000001A0, 0x000001C0,
     0x00000240, 0x000002C0, 0x00000340, 0x000003C1,
@@ -8,7 +8,7 @@ const u32 data_ov002_0206aebc[20] = {
     0x000004E1, 0x00000561, 0xFFFFFFFF, 0x00000581,
 };
 
-const u32 data_ov002_0206ae70[19] = {
+const u32 gMenuRandomFillCategoryOrder[19] = {
     0x00000001, 0x00000002, 0x00000003, 0x00000004,
     0x00000005, 0x00000006, 0x00000007, 0x00000009,
     0x0000000A, 0x0000000B, 0x0000000C, 0x0000000D,

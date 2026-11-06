@@ -74,6 +74,6 @@ data_ov086_020c23c0 kind:data(any) addr:0x020c23c0
 data_ov086_020c2b18 kind:data(any) addr:0x020c2b18 ambiguous
 sOv086_Empty_020c2fe4 kind:data(any) addr:0x020c2fe4
 gRecordStatisticNumberFormat kind:data(any) addr:0x020c2fe8
-data_ov086_020c2ff0 kind:data(any) addr:0x020c2ff0
+gRecordStatTextFormat kind:data(any) addr:0x020c2ff0
 sOv086_UiMenuStrLanguageWsbSZ_020c2ff8 kind:data(any) addr:0x020c2ff8
 data_ov086_020c3020 kind:bss addr:0x020c3020

@@ -126,7 +126,7 @@ gEquipmentMatrixMenuDescriptor kind:data(any) addr:0x020ca2ac
 sOv077_UiMenuEqumtxP2_020ca2f0 kind:data(any) addr:0x020ca2f0
 sOv077_UiMenuLanguageEqumtxP2_020ca304 kind:data(any) addr:0x020ca304
 sOv077_ScrollCmx_020ca318 kind:data(any) addr:0x020ca318
-data_ov077_020ca324 kind:data(any) addr:0x020ca324
+gEquipmentItemCountFormat kind:data(any) addr:0x020ca324
 sOv077_UiMenuStrLanguageMatrixSZ_020ca32c kind:data(any) addr:0x020ca32c
 sOv077_UiMenuCmnmtxP2_020ca348 kind:data(any) addr:0x020ca348
 sOv077_UiMenuLanguageCmnmtxP2_020ca35c kind:data(any) addr:0x020ca35c

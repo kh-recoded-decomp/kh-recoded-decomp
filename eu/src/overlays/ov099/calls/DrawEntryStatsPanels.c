@@ -8,7 +8,7 @@
 #define IsGlobalPackedBitSet_02027304 IsGlobalPackedBitSet
 #define ReadGlobalPackedBits_02027348 ReadGlobalPackedBits
 #define data_ov099_020c241c gEnemyViewerEntryInfo
-#define data_ov099_020c277c data_ov099_020c279c
+#define data_ov099_020c277c gEnemyViewerWidth2NumberFormat
 #define data_ov099_020c2784 data_ov099_020c27a4
 #define data_ov099_020c27a8 data_ov099_020c27c8
 #define func_02001908 GetTextLayerLineWidth

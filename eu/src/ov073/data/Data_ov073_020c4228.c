@@ -2,6 +2,6 @@
 
 #pragma explicit_zero_data on
 
-u16 data_ov073_020c4228[8] = {
+u16 gStatusWholeMultiplierWithDecimalZeroFormat[8] = {
     120, 32, 37, 100, 46, 48, 0, 0,
 };

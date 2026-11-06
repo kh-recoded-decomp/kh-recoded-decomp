@@ -90,10 +90,10 @@ typedef struct MenuContext {
 } MenuContext;
 
 extern MenuContext *data_ov002_0206c464;
-extern const BgContainerConfig data_ov002_0206acc4;
-extern const BgContainerConfig data_ov002_0206acd8;
-extern const ObjManagerConfig data_ov002_0206acec;
-extern const ObjManagerConfig data_ov002_0206ad04;
+extern const BgContainerConfig gOv002MenuMainBgConfig;
+extern const BgContainerConfig gOv002MenuSubBgConfig;
+extern const ObjManagerConfig gOv002MenuMainObjConfig;
+extern const ObjManagerConfig gOv002MenuSubObjConfig;
 extern u32 gPanelUiResourcePaths[4];
 extern const char sOv002_WxcWlmP2_0206c410[];
 
@@ -198,10 +198,10 @@ static inline void SetElementPosition(void *container, int elementId, WidgetPoin
  */
 void InitMenuContext(int entryMode)
 {
-    BgContainerConfig mainBgConfig = data_ov002_0206acc4;
-    BgContainerConfig subBgConfig = data_ov002_0206acd8;
-    ObjManagerConfig mainObjConfig = data_ov002_0206acec;
-    ObjManagerConfig subObjConfig = data_ov002_0206ad04;
+    BgContainerConfig mainBgConfig = gOv002MenuMainBgConfig;
+    BgContainerConfig subBgConfig = gOv002MenuSubBgConfig;
+    ObjManagerConfig mainObjConfig = gOv002MenuMainObjConfig;
+    ObjManagerConfig subObjConfig = gOv002MenuSubObjConfig;
     BgGraphicsData bgData;
     WidgetPoint highPosition;
     WidgetPoint midPosition;

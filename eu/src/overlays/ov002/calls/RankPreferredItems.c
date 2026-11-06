@@ -1,3 +1,4 @@
+#define data_ov002_0206ae0c gMenuPreferredItemOrder
 #define RankPreferredItems_0206aaa0 RankPreferredItems
 #define AcquireRecordSlot_02051d3c AcquireRecordSlot
 #define func_01ff8830 MI_CpuFill8

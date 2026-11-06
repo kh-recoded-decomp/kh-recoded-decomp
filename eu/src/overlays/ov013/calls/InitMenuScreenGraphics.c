@@ -1,3 +1,5 @@
+#define data_ov013_02074a08 gOv013MenuMainBgConfig
+#define data_ov013_02074a5c gOv013MenuMainObjConfig
 #define DestroyObjectsAndRelease_020b8c58 DestroyObjectsAndRelease
 #define GX_EndLoadOBJExtPltt_02007e48 GX_EndLoadOBJExtPltt
 #define GX_LoadBG0Scr_02007550 GX_LoadBG0Scr

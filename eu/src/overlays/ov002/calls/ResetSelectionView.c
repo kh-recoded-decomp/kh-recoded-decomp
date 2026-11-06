@@ -1,3 +1,4 @@
+#define data_ov002_0206af0c gMenuDefaultCategoryRecordIds
 #define ResetSelectionView_02067a84 ResetSelectionView
 #define ResolveCategorySelectionIds_02068548 ResolveCategorySelectionIds
 #define func_01ff8830 MI_CpuFill8

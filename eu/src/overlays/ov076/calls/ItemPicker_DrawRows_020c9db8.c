@@ -11,7 +11,7 @@
 #define OS_SNPrintf_0202e080 OS_SNPrintf_0202e094
 #define _s32_div_f _s32_div_f
 #define data_02055fd4 gRankGlyphCodepoints
-#define data_ov076_020cd368 data_ov076_020cd388
+#define data_ov076_020cd368 gSlotPickerCountFormat
 #define func_ov039_020bc994 GetMenuFont10
 #define func_ov039_020bc9ac GetMenuFont10s
 #include "src/ov076/unclassified_helpers/ItemPicker_DrawRows_020c9d98.c"

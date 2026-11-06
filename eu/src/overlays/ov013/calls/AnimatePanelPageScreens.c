@@ -1,3 +1,6 @@
+#define data_ov013_02074aa4 gOv013PageHeaderScreenIds
+#define data_ov013_02074ac4 gOv013PageBodyScreenIds
+#define data_ov013_02074ae4 gOv013NextPageBgFrame
 #define AnimatePanelPageScreens_02071094 AnimatePanelPageScreens
 #define GX_LoadBG1Scr_02007630 GX_LoadBG1Scr
 #define func_ov027_020b8558 FindActiveBackgroundScreenResourceById

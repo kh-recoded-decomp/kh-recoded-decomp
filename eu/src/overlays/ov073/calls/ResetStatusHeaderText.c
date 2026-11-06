@@ -1,5 +1,5 @@
 #define OS_SNPrintf_0202e080 OS_SNPrintf_0202e094
 #define ResetStatusHeaderText_020beb7c ResetStatusHeaderText
-#define data_ov073_020c4180 data_ov073_020c41a0
+#define data_ov073_020c4180 gStatusHeaderTextFormat
 #define func_ov027_020ba2a8 GetPackedFileEntry
 #include "src/ov073/status_menu/ResetStatusHeaderText_020beb7c.c"

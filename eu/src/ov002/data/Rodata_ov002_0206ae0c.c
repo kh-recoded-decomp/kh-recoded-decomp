@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-const u32 data_ov002_0206ae24[19] = {
+const u32 gMenuRandomRecordExclusions[19] = {
     0x00000060, 0x0000006B, 0x00000074, 0x00000075,
     0x00000076, 0x00000077, 0x00000078, 0x00000079,
     0x00000240, 0x000002C0, 0x00000340, 0x0000006E,
@@ -8,7 +8,7 @@ const u32 data_ov002_0206ae24[19] = {
     0x000003C4, 0x00000488, 0x000004C2,
 };
 
-const u32 data_ov002_0206ae0c[6] = {
+const u32 gMenuPreferredItemOrder[6] = {
     0x00000001, 0x00000000, 0x00000002, 0x00000003,
     0x00000005, 0x00000004,
 };

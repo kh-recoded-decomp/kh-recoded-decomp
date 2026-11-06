@@ -123,8 +123,8 @@ data_ov093_020c45dc kind:data(any) addr:0x020c45dc
 data_ov093_020c4c60 kind:data(any) addr:0x020c4c60 ambiguous
 sOv093_VblankFunc_020c4d54 kind:data(any) addr:0x020c4d54
 sOv093_TextFontEu10Nftr_020c4d60 kind:data(any) addr:0x020c4d60
-data_ov093_020c4d78 kind:data(any) addr:0x020c4d78
-data_ov093_020c4d80 kind:data(any) addr:0x020c4d80
+gTrophyValueWidth5Format kind:data(any) addr:0x020c4d78
+gTrophyPercentValueFormat kind:data(any) addr:0x020c4d80
 data_ov093_020c4d88 kind:data(any) addr:0x020c4d88
 data_ov093_020c4d8c kind:data(any) addr:0x020c4d8c
 data_ov093_020c4da4 kind:data(any) addr:0x020c4da4

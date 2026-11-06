@@ -1,3 +1,4 @@
+#define data_ov002_0206aebc gMenuRecordCategoryBaseOffsets
 #define AcquireRecordSlot_02051d3c AcquireRecordSlot
 #define ApplyCategoryRecord_02069190 ApplyCategoryRecord
 #define GetRecordTableBEntry_02052238 GetRecordTableBEntry

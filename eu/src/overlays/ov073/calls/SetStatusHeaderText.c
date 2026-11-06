@@ -1,5 +1,5 @@
 #define OS_SNPrintf_0202e080 OS_SNPrintf_0202e094
 #define SetStatusHeaderText_020c1d38 SetStatusHeaderText
-#define data_ov073_020c4180 data_ov073_020c41a0
+#define data_ov073_020c4180 gStatusHeaderTextFormat
 #define func_ov039_020bc630 GetMenuSharedState
 #include "src/ov073/status_menu/SetStatusHeaderText_020c1d38.c"

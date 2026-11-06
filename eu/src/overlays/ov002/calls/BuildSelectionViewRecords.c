@@ -19,7 +19,7 @@ typedef struct AvatarEntryName {
 typedef char AvatarArchiveHeaderSizeCheck[
     sizeof(AvatarArchiveHeader) == 0x10 ? 1 : -1];
 
-extern const u16 data_ov002_0206adde[23];
+extern const u16 gMenuCategory12VariantFilter[23];
 extern char sOv002_WxcAvtFormat02dP2_0206c448[];
 extern int OS_SPrintf(char *buffer, const char *format, ...);
 extern AvatarArchiveHeader *Msg_OpenContainerAndReadHeader(
@@ -81,7 +81,7 @@ void BuildSelectionViewRecords(void *manager, RecordSelectionView *view)
         if (view->flags.flag2) {
             if (category == 12) {
                 /* This category's variant filter is a packed byte table. */
-                if (((const u8 *)data_ov002_0206adde)[recordId % 10000] != 0)
+                if (((const u8 *)gMenuCategory12VariantFilter)[recordId % 10000] != 0)
                     continue;
             } else if (category != 11 && category != 17 && category >= 6) {
                 continue;

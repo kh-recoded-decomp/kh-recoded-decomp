@@ -20,6 +20,6 @@ const u8 gPanelCategoryEntryCounts[20] = {
     89, 58, 46, 52, 8, 5, 96, 17, 93, 18,
 };
 
-const u16 data_ov014_0206f800[4] = { 207, 308, 283, 110 };
+const u16 gRecordPanelProgressGroupTotals[4] = { 207, 308, 283, 110 };
 
 const u8 gPanelGroupWidths[4] = { 6, 5, 7, 2 };

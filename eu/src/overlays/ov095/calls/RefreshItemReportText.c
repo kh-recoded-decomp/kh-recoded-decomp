@@ -70,7 +70,7 @@ typedef struct ItemReportGridEntry {
 } ItemReportGridEntry;
 
 extern u32 gItemReportIdentifiers[];
-extern u16 data_ov095_020c28cc[];
+extern u16 gItemReportRecipePairFormat[];
 extern ItemReportRecord *GetRecordSlotPair0Entry(int);
 extern ItemReportSecondaryRecord *GetRecordSlotPair1Entry(int);
 extern ItemReportRecipe *GetRecordSlot6Entry(int);
@@ -131,7 +131,7 @@ void RefreshItemReportText(int refresh, ItemReportMenu *menu)
                 recipe = GetRecordSlot6Entry(i);
                 if (recipe->resultItem == resultId) {
                     firstName = GetRecordSlotPair0Entry(recipe->firstItem)->name;
-                    SPrintfUnbounded(recipes[recipeCount], data_ov095_020c28cc,
+                    SPrintfUnbounded(recipes[recipeCount], gItemReportRecipePairFormat,
                                      firstName, GetRecordSlotPair0Entry(recipe->secondItem)->name);
                     recipeCount++;
                     menu->detailKind = 1;

@@ -1,6 +1,6 @@
 #define MenuPanel_Create_020cbccc MenuPanel_Create
 #define data_ov076_020cd120 gSlotMenuObjManagerConfig
-#define data_ov076_020cd368 data_ov076_020cd388
+#define data_ov076_020cd368 gSlotPickerCountFormat
 #define data_ov076_020cd38c sOv076_UiMenuCmnmtxP2_020cd3ac
 #define data_ov076_020cd3a0 sOv076_UiMenuLanguageCmnmtxP2_020cd3c0
 #define data_ov076_020cd3ec gSlotMenuPanelWork

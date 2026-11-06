@@ -45,7 +45,7 @@ extern const TextFrame data_ov089_020c0530;
 extern u16 data_ov089_020c064c[];
 extern u16 data_ov089_020c0654[];
 extern char sOv089_UiMenuStrLanguageCsSZ_020c065c[];
-extern u16 data_ov089_020c0674[];
+extern u16 gEntryCarouselTitleFormat[];
 
 extern u16 *UpdateScreenWidgetLayer(int widget);
 extern void SetScreenLayerDirty(int layerId);
@@ -87,7 +87,7 @@ void DrawEntryMenuTexts_020bf49c(Ov089Menu *menu)
     InitTextLayerAt(&menu->captionLayer, 2, screen, GetMenuFont10(), &frame);
     RefreshEntryCaption(menu, FALSE);
     name = GetGridTableValue(world, -1);
-    OS_SNPrintf_0202e094(title, 0x40, data_ov089_020c0674, name, separator, GetGridTableValue(world, data_0205fe0c->column));
+    OS_SNPrintf_0202e094(title, 0x40, gEntryCarouselTitleFormat, name, separator, GetGridTableValue(world, data_0205fe0c->column));
 
     frame.x = 0xe;
     frame.y = 0;

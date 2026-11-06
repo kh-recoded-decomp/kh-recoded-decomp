@@ -1,3 +1,4 @@
+#define data_ov000_0206379c gTitleCursorLayerPairTemplate
 #define HighlightPanelCursorLayer_02061d04 HighlightPanelCursorLayer
 #define func_0204f13c IndexedRecord_SetPair
 #define func_0204f204 SetIndexedRecordAnimationFrame

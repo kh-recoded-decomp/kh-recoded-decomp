@@ -2,7 +2,7 @@
 #define DrawRecordSummaryText_020bf540 DrawRecordSummaryText
 #define DrawShadowedAnchoredText_020bf724 DrawShadowedAnchoredText
 #define Text_UploadTileBuffer_02001520 Text_UploadTileBuffer
-#define data_ov091_020c2c5c data_ov091_020c2c7c
+#define data_ov091_020c2c5c gReportEntryCountOutOf30Format
 #define data_ov091_020c2c68 data_ov091_020c2c88
 #define func_020019f4 GetNestedModeByte
 #define func_0202e060 SPrintfUnbounded

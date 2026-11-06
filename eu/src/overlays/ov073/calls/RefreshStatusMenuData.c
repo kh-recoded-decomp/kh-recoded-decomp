@@ -172,14 +172,14 @@ typedef struct SlotPair1Entry {
 } SlotPair1Entry;
 
 extern SaveData *data_0205fe0c;
-extern const char data_ov073_020c41d4[];
-extern const char data_ov073_020c41ec[];
-extern const char data_ov073_020c41f4[];
-extern const char data_ov073_020c4208[];
-extern const char data_ov073_020c4218[];
-extern const char data_ov073_020c4228[];
-extern const char data_ov073_020c4238[];
-extern const char data_ov073_020c4244[];
+extern const char gStatusNumberFormat[];
+extern const char gStatusHpValueFormat[];
+extern const char gStatusHpRatioFormat[];
+extern const char gStatusDecimalMultiplierFormat[];
+extern const char gStatusDecimalPercentFormat[];
+extern const char gStatusWholeMultiplierWithDecimalZeroFormat[];
+extern const char gStatusIntegerMultiplierFormat[];
+extern const char gStatusReciprocalMultiplierFormat[];
 
 extern StatusMenu *GetMenuSharedState(void);
 extern int GetMenuSelection(void);
@@ -239,11 +239,11 @@ void RefreshStatusMenuData(SaveData *save, StatPreview *preview)
             FindLevelForValue(save->experience, &remaining);
             scale = CheckStatusAndThreshold();
             stats = *GetOverlaySelectionRecord(0);
-            OS_SNPrintf_0202e094(text->level[0], 4, data_ov073_020c41d4, stats.level + 1);
-            OS_SNPrintf_0202e094(text->attack[0], 4, data_ov073_020c41d4, stats.attack);
-            OS_SNPrintf_0202e094(text->magic[0], 4, data_ov073_020c41d4, stats.magic);
-            OS_SNPrintf_0202e094(text->defense[0], 4, data_ov073_020c41d4, stats.defense);
-            OS_SNPrintf_0202e094(text->capacity[0], 4, data_ov073_020c41d4, stats.capacity * scale);
+            OS_SNPrintf_0202e094(text->level[0], 4, gStatusNumberFormat, stats.level + 1);
+            OS_SNPrintf_0202e094(text->attack[0], 4, gStatusNumberFormat, stats.attack);
+            OS_SNPrintf_0202e094(text->magic[0], 4, gStatusNumberFormat, stats.magic);
+            OS_SNPrintf_0202e094(text->defense[0], 4, gStatusNumberFormat, stats.defense);
+            OS_SNPrintf_0202e094(text->capacity[0], 4, gStatusNumberFormat, stats.capacity * scale);
             if (preview != NULL) {
                 int levelDelta = preview->level - stats.level;
                 int attackDelta = preview->attack - stats.attack;
@@ -252,11 +252,11 @@ void RefreshStatusMenuData(SaveData *save, StatPreview *preview)
                 int capacityDelta = (preview->capacity - stats.capacity) * scale;
                 int row = preview->keepCurrent == 0;
 
-                OS_SNPrintf_0202e094(text->level[row], 4, data_ov073_020c41d4, preview->level + 1);
-                OS_SNPrintf_0202e094(text->attack[row], 4, data_ov073_020c41d4, preview->attack);
-                OS_SNPrintf_0202e094(text->magic[row], 4, data_ov073_020c41d4, preview->magic);
-                OS_SNPrintf_0202e094(text->defense[row], 4, data_ov073_020c41d4, preview->defense);
-                OS_SNPrintf_0202e094(text->capacity[row], 4, data_ov073_020c41d4, preview->capacity * scale);
+                OS_SNPrintf_0202e094(text->level[row], 4, gStatusNumberFormat, preview->level + 1);
+                OS_SNPrintf_0202e094(text->attack[row], 4, gStatusNumberFormat, preview->attack);
+                OS_SNPrintf_0202e094(text->magic[row], 4, gStatusNumberFormat, preview->magic);
+                OS_SNPrintf_0202e094(text->defense[row], 4, gStatusNumberFormat, preview->defense);
+                OS_SNPrintf_0202e094(text->capacity[row], 4, gStatusNumberFormat, preview->capacity * scale);
                 if (preview->keepCurrent == 0) {
                     changed |= levelDelta != 0;
                     decreased |= levelDelta < 0;
@@ -294,8 +294,8 @@ void RefreshStatusMenuData(SaveData *save, StatPreview *preview)
 
                 changed |= (hpDelta != 0) << 1;
                 decreased |= (hpDelta < 0) << 1;
-                OS_SNPrintf_0202e094(text->hp[0], 4, data_ov073_020c41ec, stats.maxHp);
-                OS_SNPrintf_0202e094(text->hp[1], 4, data_ov073_020c41ec, preview->maxHp);
+                OS_SNPrintf_0202e094(text->hp[0], 4, gStatusHpValueFormat, stats.maxHp);
+                OS_SNPrintf_0202e094(text->hp[1], 4, gStatusHpValueFormat, preview->maxHp);
             } else {
                 u16 hp;
 
@@ -306,10 +306,10 @@ void RefreshStatusMenuData(SaveData *save, StatPreview *preview)
                 if (hp == 0) {
                     hp = stats.maxHp;
                 }
-                OS_SNPrintf_0202e094(text->hp[0], 10, data_ov073_020c41f4, hp, stats.maxHp);
+                OS_SNPrintf_0202e094(text->hp[0], 10, gStatusHpRatioFormat, hp, stats.maxHp);
             }
-            OS_SNPrintf_0202e094(text->experience, 9, data_ov073_020c41d4, save->experience);
-            OS_SNPrintf_0202e094(text->nextLevel, 9, data_ov073_020c41d4, remaining);
+            OS_SNPrintf_0202e094(text->experience, 9, gStatusNumberFormat, save->experience);
+            OS_SNPrintf_0202e094(text->nextLevel, 9, gStatusNumberFormat, remaining);
             if (!menu->isCurrent || (menu->busy == 0 && (menu->flags & 2))) {
                 SetDigitDisplay(menu->container, menu->digitBase, save->munny, NULL);
                 DrawPlayTimeDigits_020be470(menu->container, menu->numberBase, save->heartCount, NULL);
@@ -546,19 +546,19 @@ void RefreshStatusMenuData(SaveData *save, StatPreview *preview)
 
             columns->lines[0] = columns->headers[save->columnIndex];
             SplitFxToTenths(ComputeScaledPercentPlusOne(), &whole, &tenths);
-            OS_SNPrintf_0202e094(columns->text[0], 8, data_ov073_020c4208, whole, tenths);
+            OS_SNPrintf_0202e094(columns->text[0], 8, gStatusDecimalMultiplierFormat, whole, tenths);
             SplitFxToTenths(ArmObject() * 100, &whole, &tenths);
-            OS_SNPrintf_0202e094(columns->text[1], 8, data_ov073_020c4218, whole, tenths);
+            OS_SNPrintf_0202e094(columns->text[1], 8, gStatusDecimalPercentFormat, whole, tenths);
             SplitFxToTenths(GetDifficultyScale(), &whole, &tenths);
-            OS_SNPrintf_0202e094(columns->text[2], 8, data_ov073_020c4208, whole, tenths);
+            OS_SNPrintf_0202e094(columns->text[2], 8, gStatusDecimalMultiplierFormat, whole, tenths);
             SplitFxToTenths(GetFlagTableValue(), &whole, &tenths);
-            OS_SNPrintf_0202e094(columns->text[3], 8, data_ov073_020c4208, whole, tenths);
+            OS_SNPrintf_0202e094(columns->text[3], 8, gStatusDecimalMultiplierFormat, whole, tenths);
             unlocked = CountUnlockedSlotsFx();
-            OS_SNPrintf_0202e094(columns->text[4], 8, data_ov073_020c4228, unlocked / 4096);
+            OS_SNPrintf_0202e094(columns->text[4], 8, gStatusWholeMultiplierWithDecimalZeroFormat, unlocked / 4096);
             scaleBonus = HalveForEachFlag();
-            OS_SNPrintf_0202e094(columns->text[5], 8, scaleBonus == 0x1000 ? data_ov073_020c4238 : data_ov073_020c4244, _s32_div_f(0x1000, scaleBonus));
+            OS_SNPrintf_0202e094(columns->text[5], 8, scaleBonus == 0x1000 ? gStatusIntegerMultiplierFormat : gStatusReciprocalMultiplierFormat, _s32_div_f(0x1000, scaleBonus));
             SplitFxToTenths(ArmObject_02051180() * 100, &whole, &tenths);
-            OS_SNPrintf_0202e094(columns->text[6], 8, data_ov073_020c4218, whole, tenths);
+            OS_SNPrintf_0202e094(columns->text[6], 8, gStatusDecimalPercentFormat, whole, tenths);
         }
         ReleaseRecordSlot(0);
     } else {

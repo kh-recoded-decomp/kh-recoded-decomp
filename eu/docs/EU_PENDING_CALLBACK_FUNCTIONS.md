@@ -1,0 +1,135 @@
+# Nine functions retained pending semantic evidence
+
+These functions remain in C with their existing numeric identities. Their mechanical behavior is documented below. A byte match establishes the generated instructions; it does not establish a missing callback role, field meaning or output layout. Names are retained until the specific evidence gap is closed.
+
+No source-body, prototype or runtime behavior change is part of this ledger.
+
+## Identity and mechanical contract
+
+| EU bank/address | Symbol | Native mode / bytes | Stable source path | Proven mechanical behavior |
+|---|---|---|---|---|
+| ov002:02065c4c | `func_ov002_02065c4c` | arm / 4 | `eu/src/overlays/ov002/auto/func_ov002_02065c4c.c` | Empty function address is present in both main/sub background configs at config+0xc. InitMenuContext copies the descriptors; InitBackgroundContainer copies this word to container+0x3c. |
+| ov002:02065c50 | `func_ov002_02065c50` | arm / 4 | `eu/src/overlays/ov002/auto/func_ov002_02065c50.c` | Empty function address is present in both main/sub background configs at config+0x10. InitMenuContext copies the descriptors; InitBackgroundContainer copies this word to container+0x40. |
+| ov041:020bcd78 | `func_ov041_020bcd78` | thumb / 24 | `eu/src/overlays/ov041/calls/func_ov041_020bcd78.c` | Loads stage-work pointer through global context+0xb8 and clears its 32-bit word+0x52c. StartStageFadeOut invokes it between beginning fade-out and SetStageState(0x15,0). |
+| ov042:020be4bc | `func_ov042_020be4bc` | thumb / 16 | `eu/src/overlays/ov042/calls/func_ov042_020be4bc.c` | Stores input u32 at camera singleton+0x144. InitCameraScene initializes that word 0. The exact ov030 ClearSceneEntry caller clears entries[index].id then calls this setter with 1. |
+| ov043:020bc8d4 | `func_ov043_020bc8d4` | arm / 8 | `eu/src/overlays/ov043/auto/func_ov043_020bc8d4.c` | ARM leaf returns literal0 and reads no input. No owning-bank registration or direct caller has been established. |
+| ov043:020bd0a4 | `func_ov043_020bd0a4` | arm / 4 | `eu/src/overlays/ov043/auto/func_ov043_020bd0a4.c` | Empty ARM BX LR preserves incoming R0 and makes no memory changes. No owning-bank registration or direct caller has been established. |
+| ov044:020d0000 | `func_ov044_020d0000` | thumb / 32 | `eu/src/overlays/ov044/calls/func_ov044_020d0000.c` | Writes five u32 output words {0x1922,0x2b8,0x333,0,0xa000}, leaves R0 unchanged. Thumb pointer appears in own-bank table 020d0df8 slot 2 at 020d0e00. |
+| ov044:020d0020 | `func_ov044_020d0020` | thumb / 32 | `eu/src/overlays/ov044/calls/func_ov044_020d0020.c` | Writes five u32 output words {0x1922,0x666,0x666,0,0x14000}, leaves R0 unchanged. Thumb pointer appears in the same table slot 3 at 020d0e04. |
+| ov059:020c99ec | `func_ov059_020c99ec` | thumb / 16 | `eu/src/overlays/ov059/calls/func_ov059_020c99ec.c` | Reads u8 actor.playerIndex at+0x930, calls GetPlayerControlState(index), discards the record and returns FALSE. Actor_UpdateJumpCommandInput forwards that result for event kinds 1/2 except actor state 8, then performs its separate charge-command update. |
+
+## Specific blockers and next proof
+
+### `func_ov002_02065c4c`
+
+No actual reader/invoker of the copied word has been proven. Header parameter0c/parameter10 intentionally remain opaque. Pointer presence and empty body do not establish init/update/draw/cleanup.
+
+Next proof: Find a bank-qualified indirect call or another layout consumer of BackgroundContainer+0x3c; distinguish main/sub descriptors and container lifetime.
+
+Source/consumer evidence:
+- `eu/src/overlays/ov002/auto/func_ov002_02065c4c.c`
+- `eu/src/overlays/ov002/calls/InitMenuContext.c`
+- `eu/src/ov002/data/Rodata_ov002_0206acb4.c`
+- `eu/src/ov002/data/Rodata_ov002_0206acd8.c`
+- `eu/src/overlays/ov027/BackgroundContainer.h`
+- `eu/src/overlays/ov027/calls/InitBackgroundContainer.c`
+
+### `func_ov002_02065c50`
+
+No actual reader/invoker of the copied word has been proven. Header parameter0c/parameter10 intentionally remain opaque. Pointer presence and empty body do not establish init/update/draw/cleanup.
+
+Next proof: Find a bank-qualified indirect call or another layout consumer of BackgroundContainer+0x40; distinguish main/sub descriptors and container lifetime.
+
+Source/consumer evidence:
+- `eu/src/overlays/ov002/auto/func_ov002_02065c50.c`
+- `eu/src/overlays/ov002/calls/InitMenuContext.c`
+- `eu/src/ov002/data/Rodata_ov002_0206acb4.c`
+- `eu/src/ov002/data/Rodata_ov002_0206acd8.c`
+- `eu/src/overlays/ov027/BackgroundContainer.h`
+- `eu/src/overlays/ov027/calls/InitBackgroundContainer.c`
+
+### `func_ov041_020bcd78`
+
+StageWork leaves [0x4bc,0x53c) opaque. No semantic reader or nonzero writer of+0x52c has been demonstrated.
+
+Next proof: Find a reader or nonzero writer of this exact StageWork word and connect it to the fade/state sequence; distinguish it from the orb pool at+0x53c.
+
+Source/consumer evidence:
+- `eu/src/overlays/ov041/calls/func_ov041_020bcd78.c`
+- `eu/src/overlays/ov041/calls/StartStageFadeOut.c`
+- `eu/src/overlays/ov041/StageWork.h`
+
+### `func_ov042_020be4bc`
+
+Entry-clear trigger is proven, but no consumer identifies the meaning of camera+0x144. Reset/dirty/lock semantics would be guesses.
+
+Next proof: Find the semantic read of camera+0x144, or another writer/transition that demonstrates what values 0 and 1 control.
+
+Source/consumer evidence:
+- `eu/src/overlays/ov042/calls/func_ov042_020be4bc.c`
+- `eu/src/overlays/ov030/calls/ClearSceneEntry.c`
+- `src/ov030/shared_engine/ClearSceneEntry_020bb424.c`
+- `src/ov042/camera/InitCameraScene_020bdb4c.c`
+
+### `func_ov043_020bc8d4`
+
+Two raw references from ov036 point to that bank's ARM LoadTextureInChunks at the same RAM address, not this ov043 leaf. No ov043 role follows from them.
+
+Next proof: Find an ov043 registration/caller/exported-interface consumer, qualified by the loader and owner. Do not transfer the ov036 texture callback role.
+
+Source/consumer evidence:
+- `eu/src/overlays/ov043/auto/func_ov043_020bc8d4.c`
+- `eu/src/overlays/ov036/calls/SwapActorSlotResource.c`
+- `eu/src/overlays/ov036/calls/AttachPendingSceneModel.c`
+- `src/ov043/leaf_research/func_ov043_020bc8b4.c`
+
+### `func_ov043_020bd0a4`
+
+The neighboring bd0a8 initialization hook is separately proven; adjacency does not identify this function. No raw addr/addr|1 references were found.
+
+Next proof: Find its own callback slot or caller and inspect the actual incoming arguments/result use before choosing a lifecycle name.
+
+Source/consumer evidence:
+- `eu/src/overlays/ov043/auto/func_ov043_020bd0a4.c`
+- `src/ov043/panel_state/func_ov043_020bd084.c`
+
+### `func_ov044_020d0000`
+
+The callback-table consumer and semantic output layout are not established. Nearby drift-pair/path readers do not dispatch this table.
+
+Next proof: Find table 020d0df8 dispatch or an output-layout consumer. Prove field units/role before naming a camera preset by analogy.
+
+Source/consumer evidence:
+- `eu/src/overlays/ov044/calls/func_ov044_020d0000.c`
+- `eu/src/ov044/data/Data_ov044_020d0de0.c`
+
+### `func_ov044_020d0020`
+
+Same missing consumer/layout proof as slot 2. A cross-bank pointer020d0e11 belongs to ov052 ChooseNextAction, not the ov044 table.
+
+Next proof: Find the same owning-bank dispatch/output contract and demonstrate what differs between slots2 and3 without inferring motion units.
+
+Source/consumer evidence:
+- `eu/src/overlays/ov044/calls/func_ov044_020d0020.c`
+- `eu/src/ov044/data/Data_ov044_020d0de0.c`
+- `eu/src/overlays/ov052/calls/SelectFallStateHandler.c`
+
+### `func_ov059_020c99ec`
+
+Event-role/result meaning beyond this forwarding chain is not established. The getter call does not demonstrate an ability, movement state or successful input action.
+
+Next proof: Recover the registered command/event consumer and what this FALSE means there; tie the same actor owner to its control-record contract.
+
+Source/consumer evidence:
+- `eu/src/overlays/ov059/calls/func_ov059_020c99ec.c`
+- `eu/src/overlays/ov059/calls/Actor_UpdateJumpCommandInput.c`
+
+## Reference-search boundary
+
+Raw-reference searches covered all 108 available extracted modules: 105 overlay files plus MAIN, ITCM and DTCM. Both little-endian addr and addr|1 were searched at byte alignment. Raw hits were classified by owning bank and real source/loader chain; a shared RAM address alone was not treated as a call edge. A zero raw count does not exclude direct BL/BLX branches, computed pointers or unavailable representations.
+
+This search found a genuine ov030 caller of the ov042 setter that the earlier Ghidra xref result omitted. It also excluded the two ov036 texture-loader pointers from the ov043 literal-zero function. A separate bounded scan of u32 values in [020d0d80,020d0e40) across the same modules found no new consumer of ov044 callback table 020d0df8: owning-bank hits reference drift-pair values 020d0de0/e4 or later path data 020d0e10. The ov052:020d0e11 hit belongs to ChooseNextAction in ov052. None of those observations establishes a preset layout for the two table entries.
+
+The background configuration functions have same-bank pointer values in their two configuration objects and a proven copy into the runtime container. No callback invoker has been identified. Until one is found, assigning init/draw/update/cleanup or a return contract to those words would go beyond the evidence.
+
+These are concrete, separate research questions. They should not be resolved by assigning names solely from an offset, neighboring function or equal bytes in another overlay.

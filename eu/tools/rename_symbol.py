@@ -3,11 +3,13 @@
 
 Accept one old/new pair or --map-file JSON containing pairs or candidate objects.
 Batch mode reads each source/library/config file once and validates every name
-and destination before writing. Shared-region alias interpretation remains the
-caller's responsibility, as for a single rename.
+and destination before writing. In function mode, shared-region alias
+interpretation remains the caller's responsibility, as for a single rename.
 
 For reviewed DATA definitions in aggregate files, --keep-source-paths requires
 an explicit source for every candidate and preserves filenames and declarations.
+It preserves shared-region include paths and macro left sides, and supplies
+EU aliases when the actual DATA definition comes from a shared source.
 """
 
 import argparse
@@ -88,6 +90,7 @@ def rename_symbols(pairs, move_calls=False, definition_sources=None):
     new_pattern = re.compile(r"\b(?:" + "|".join(map(re.escape, reverse)) + r")\b")
     changed = []
     definitions = {old: [] for old in mapping}
+    shared_cache = {}
     for root_name in ("src", "libs", "config"):
         for path in (ROOT / root_name).rglob("*"):
             if definition_sources is not None and path.is_file() and path.suffix.lower() == ".s":
@@ -97,17 +100,46 @@ def rename_symbols(pairs, move_calls=False, definition_sources=None):
             if not path.is_file() or path.suffix.lower() not in TEXT_SUFFIXES:
                 continue
             text = path.read_text(encoding="utf-8")
+            body, aliases = None, {}
+            if definition_sources is not None and path.suffix.lower() in SOURCE_SUFFIXES:
+                include = re.search(r'^\s*#include "(src/[^\"]+\.(?:c|cpp|cc|cp))"', text.lstrip("\ufeff"), re.M)
+                if include:
+                    shared = (ROOT.parent / include[1]).resolve()
+                    if shared.is_relative_to((ROOT.parent / "src").resolve()) and shared.is_file():
+                        if shared not in shared_cache:
+                            shared_cache[shared] = shared.read_text(encoding="utf-8-sig")
+                        body = shared_cache[shared]
+                        aliases = dict(re.findall(r'^#define (\w+) (\w+)$', text.lstrip("\ufeff"), re.M))
             defining = path.stem if path.stem in mapping and path.suffix.lower() in SOURCE_SUFFIXES else None
             for new in set(new_pattern.findall(text)):
                 old = reverse[new]
                 if defining != old and not is_existing_alias(text, old, new):
                     raise SystemExit(f"new symbol already appears in {path}")
             replaced, count = pattern.subn(lambda match: mapping[match[0]], text)
+            if body is not None:
+                hidden = sorted(old for old in set(pattern.findall(body)) if old not in aliases)
+                lines = []
+                for line in text.lstrip("\ufeff").splitlines():
+                    macro = re.match(r'(\s*#define\s+\w+)(\s+)(.*)', line)
+                    if re.match(r'\s*#include "src/[^\"]+\.(?:c|cpp|cc|cp)"', line):
+                        lines.append(line)
+                    elif macro:
+                        lines.append(macro[1] + macro[2] + pattern.sub(lambda m: mapping[m[0]], macro[3]))
+                    else:
+                        lines.append(pattern.sub(lambda m: mapping[m[0]], line))
+                prefix = ''.join('#define ' + old + ' ' + mapping[old] + '\n' for old in hidden)
+                replaced = ('\ufeff' if text.startswith('\ufeff') else '') + prefix + '\n'.join(lines) + '\n'
+                count += len(hidden)
             if count:
                 changed.append((path, replaced, count))
             if definition_sources is not None and path.suffix.lower() in SOURCE_SUFFIXES:
-                for old in set(pattern.findall(text)):
-                    if has_data_definition(text, old):
+                expanded = body
+                if body is not None and aliases:
+                    alias_pattern = re.compile(r'\b(?:'+'|'.join(map(re.escape,aliases))+r')\b')
+                    expanded = alias_pattern.sub(lambda m:aliases[m[0]],body)
+                names = set(pattern.findall(text)) | (set(pattern.findall(expanded)) if expanded is not None else set())
+                for old in names:
+                    if has_data_definition(text, old) or (expanded is not None and has_data_definition(expanded,old)):
                         definitions[old].append(path)
             elif defining is not None:
                 definitions[defining].append(path)

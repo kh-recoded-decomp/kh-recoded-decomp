@@ -1,3 +1,8 @@
+#define data_ov014_0206f800 gRecordPanelProgressGroupTotals
+#define data_ov014_0206f86c gRecordPanelMainBgConfig
+#define data_ov014_0206f880 gRecordPanelSubBgConfig
+#define data_ov014_0206f894 gRecordPanelMainObjConfig
+#define data_ov014_0206f8ac gRecordPanelSubObjConfig
 #define func_ov002_020629a8 ResetOv002PanelGraphics
 // redefine-sym eu_data_ov014_0206f8e0=gRecordPanelTileIds
 // redefine-sym eu_func_ov027_020b9098=CreateWidgetImageEntry

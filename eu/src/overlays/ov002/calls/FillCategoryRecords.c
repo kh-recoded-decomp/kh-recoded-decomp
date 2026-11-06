@@ -1,3 +1,4 @@
+#define data_ov002_0206ae70 gMenuRandomFillCategoryOrder
 #define FillCategoryRecords_02069e8c FillCategoryRecords
 #define PickRandomAvailableRecord_0206a888 PickRandomAvailableRecord
 #define func_0202a9d0 NextSharedRandom16Scaled

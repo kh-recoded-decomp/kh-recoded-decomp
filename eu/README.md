@@ -15,6 +15,9 @@ Work now focuses on evidence-based names and interfaces for a future port.
 See [the naming evidence](docs/SYMBOL_EVIDENCE.md) and
 [the porting guide](docs/PORTING_GUIDE.md). The original DS behavior remains
 byte-exact while names and recovered types are improved.
+Use the [system index](docs/README.md) and
+[source-tree map](docs/SOURCE_LAYOUT.md) to find active implementations and
+follow their shared regional bodies.
 
 > ### Disclaimer
 > This repository does **NOT** contain the game ROM, any game assets, or any of
@@ -36,7 +39,7 @@ byte-exact while names and recovered types are improved.
 | Verified library functions (not C) | **136** (71,242 bytes) | MobiClip, NitroSDK, MSL and DS Protect; verified separately from C |
 | C + verified library **bytes** | **1,771,024** / 1,771,024 (**100.00%**) | Combined byte-exact code coverage; library bytes do not increase the C percentage |
 | Reconstructed DATA bytes | **223,456** / 223,456 (100.00%) | Verified byte-exact .rodata, .data, .ctor and .bss reconstructed from source |
-| Named DATA symbols | **1,371** / 2,331 (58.82%) | Identified DATA names; naming alone does not count as reconstructed DATA |
+| Named DATA symbols | **1,498** / 2,331 (64.26%) | Identified DATA names; naming alone does not count as reconstructed DATA |
 | Named, not decompiled | **0** | Functions with a known name (SDK, NitroSystem, ...) but no source yet |
 | Total known functions | **10,625** | Functions in the dsd symbol tables |
 | Region | EU (`BK9P`) |  |
@@ -69,6 +72,12 @@ cross-checked against the [1.28 branch of taxicat1/dsprot](https://github.com/ta
 which identifies BK9E, BK9J and BK9P as using that version in overlay 104.
 
 ## Repository layout
+
+The native build keeps overlay IDs and stable compilation paths. The
+[source-tree map](docs/SOURCE_LAYOUT.md) explains the two active DATA layouts,
+shared US/EU wrappers, per-file settings and preserved historical sources.
+The [system index](docs/README.md) groups the contracts by function, following
+the evidence-based organization used as a reference in khdays-decomp.
 
 ```text
 src/auto/, src/calls/        real C for main/ITCM/DTCM (leaf functions / functions with calls)

@@ -30,9 +30,9 @@ typedef struct TitlePaths {
     char fontJp[0x18];
 } TitlePaths;
 
-extern const TextFrame data_ov000_020637a4;
+extern const TextFrame gTitleNoticeTextFrame;
 extern TitlePaths sOv000_TtlTitleLanguageSZ_0206393c;
-extern u16 data_ov000_02063a00[];
+extern u16 gTitleNoticeBackgroundColor[];
 extern u16 gTitleNoticePalette[];
 extern char OVERLAY_27_ID[];
 
@@ -68,7 +68,7 @@ void ShowTitleNotice(void *owner, int noticeType)
 {
     FontResource font;
     TextLayer layer;
-    TextFrame frame = data_ov000_020637a4;
+    TextFrame frame = gTitleNoticeTextFrame;
     MessageSet messages;
 
     LoadOverlayAfterGeometryTransfer(0, FS_OVERLAY_ID_ov027);
@@ -80,7 +80,7 @@ void ShowTitleNotice(void *owner, int noticeType)
     MIi_CpuClearFast(0, G2_GetBG3ScrPtr(), 0x600);
     LoadPackedFileView(&messages, (u32)sOv000_TtlTitleLanguageSZ_0206393c.messageArchive, 0);
     LoadUtf16FontResource(&font, GetLanguageIndex() != 0 ? sOv000_TtlTitleLanguageSZ_0206393c.fontEu : sOv000_TtlTitleLanguageSZ_0206393c.fontJp);
-    GX_LoadBGPltt(data_ov000_02063a00, 0, 2);
+    GX_LoadBGPltt(gTitleNoticeBackgroundColor, 0, 2);
     GX_LoadBGPltt(gTitleNoticePalette, 0x1a0, 0x20);
     REG_POWCNT |= 0x8000;
     REG_DISPCNT = (REG_DISPCNT & ~0x1f00) | 0x800;

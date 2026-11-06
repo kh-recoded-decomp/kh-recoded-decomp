@@ -17,8 +17,8 @@
 #define func_ov083_020bf5ac GetRowColorWithLimit
 #define func_ov083_020bf5cc GetRowColorWithStatus
 #define func_020275c8 CheckStatusAndThreshold
-#define data_ov083_020bf6d8 data_ov083_020bf6f8
-#define data_ov083_020bf6e0 data_ov083_020bf700
+#define data_ov083_020bf6d8 gScoreScreenNumberFormat
+#define data_ov083_020bf6e0 gScoreScreenWidth3RatioFormat
 #define Text_UploadTileBuffer_02001520 Text_UploadTileBuffer
 #define DrawTextAnchored_020015a0 DrawTextAnchored
 #define FindActiveRecordById_020b8184 FindActiveRecordById

@@ -39,3 +39,22 @@ bash tools/gate.sh
 
 The first three commands report the reference discrepancies above. The final
 command checks complete linked binaries against the original EU modules.
+
+## Title/panel and text-format block
+
+The subsequent 65-symbol title/panel/format block has 52 affected function
+checks. 51 pass; the same-path original-source control reproduces the remaining
+verdict for `RefreshStatusMenuData` (ov073:020c1ed4, Thumb, 2852 bytes).
+Its original index records two internal `BL` instructions as relocations to
+local labels: +0x14 calls 0x020c29ee and +0x48 calls 0x020c29b0. Both targets
+are inside this function's native extent. The compiler encodes these local
+calls directly, without corresponding external ELF relocations.
+
+The original instruction words are `00 f0 81 fd` and `00 f0 48 fd` in both
+versions. Preserve the function and verify the original local-call metadata
+before repairing the index. An eventual index correction must compare these
+instruction bytes directly; it must not mask or ignore their contents.
+
+```sh
+python tools/verify_idx.py src/overlays/ov073/calls/RefreshStatusMenuData.c RefreshStatusMenuData --thumb
+```

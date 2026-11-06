@@ -1,13 +1,13 @@
 #include "nitro/types.h"
 
-extern unsigned char data_ov002_0206ae24;
+extern unsigned char gMenuRandomRecordExclusions;
 
 unsigned int IsMenuRecordAllowedByRandomFilter(int value) {
   int index;
 
   index = 0;
   do {
-    if (value == *(int *)(&data_ov002_0206ae24 + index * 4)) {
+    if (value == *(int *)(&gMenuRandomRecordExclusions + index * 4)) {
       return 0;
     }
     index = index + 1;

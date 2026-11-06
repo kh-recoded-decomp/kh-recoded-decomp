@@ -257,5 +257,23 @@ class RenameSymbolTest(unittest.TestCase):
         self.assertFalse(rename_symbol.has_data_definition('typedef void (*oldTable[8])(void);','oldTable'))
         self.assertFalse(rename_symbol.has_data_definition('extern void (*oldTable[8])(void);','oldTable'))
 
+    def test_data_shared_definition_gets_eu_alias_and_preserves_reference_region(self):
+        shared = self.put('src/data/Shared.c', 'const int oldData[2] = {1,2};\n')
+        wrapper = self.put('eu/src/data/Shared.c', '\ufeff#include "src/data/Shared.c"\n')
+        caller = self.put('eu/src/calls/Caller.c', 'extern const int oldData[];\nint Caller(void) { return oldData[1]; }\n')
+        with mock.patch.object(rename_symbol,'ROOT',self.root/'eu'), contextlib.redirect_stdout(io.StringIO()):
+            rename_symbol.rename_symbols([('oldData','gData')], definition_sources={'oldData':'src/data/Shared.c'})
+        self.assertEqual(shared.read_text(), 'const int oldData[2] = {1,2};\n')
+        self.assertEqual(wrapper.read_text(encoding='utf-8'), '\ufeff#define oldData gData\n#include "src/data/Shared.c"\n')
+        self.assertIn('gData[1]',caller.read_text())
+
+    def test_data_shared_alias_preserves_macro_left_side_and_include_path(self):
+        shared = self.put('src/data/Shared.c','const int referenceData[2] = {1,2};\n')
+        wrapper = self.put('eu/src/data/Shared.c','#define referenceData oldData\n#include "src/data/Shared.c"\n')
+        with mock.patch.object(rename_symbol,'ROOT',self.root/'eu'), contextlib.redirect_stdout(io.StringIO()):
+            rename_symbol.rename_symbols([('oldData','gData')], definition_sources={'oldData':'src/data/Shared.c'})
+        self.assertEqual(shared.read_text(),'const int referenceData[2] = {1,2};\n')
+        self.assertEqual(wrapper.read_text(),'#define referenceData gData\n#include "src/data/Shared.c"\n')
+
 if __name__ == "__main__":
     unittest.main()

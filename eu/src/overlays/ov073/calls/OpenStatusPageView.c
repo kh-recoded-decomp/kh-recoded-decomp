@@ -4,5 +4,5 @@
 #define func_ov027_020ba2a8 GetPackedFileEntry
 #define OS_SNPrintf_0202e080 OS_SNPrintf_0202e094
 #define ShowStatusPageContents_020c1b28 ShowStatusPageContents
-#define data_ov073_020c4180 data_ov073_020c41a0
+#define data_ov073_020c4180 gStatusHeaderTextFormat
 #include "src/ov073/status_menu/OpenStatusPageView_020bfefc.c"

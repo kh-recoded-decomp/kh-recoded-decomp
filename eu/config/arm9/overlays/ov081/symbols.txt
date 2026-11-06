@@ -39,7 +39,7 @@ sOv081_UiMenuTutorialP2_020c5d04 kind:data(any) addr:0x020c5d04
 sOv081_UiMenuLanguageTutorialP2_020c5d18 kind:data(any) addr:0x020c5d18
 sOv081_UiMenuStrLanguageTutoSZ_020c5d30 kind:data(any) addr:0x020c5d30
 sOv081_UiMenuStrLanguageListSZ_020c5d48 kind:data(any) addr:0x020c5d48
-data_ov081_020c5d60 kind:data(any) addr:0x020c5d60
+gTutorialPageCounterFormat kind:data(any) addr:0x020c5d60
 data_ov081_020c5d70 kind:data(any) addr:0x020c5d70
 data_ov081_020c5d7c kind:data(any) addr:0x020c5d7c
 data_ov081_020c5da0 kind:bss addr:0x020c5da0

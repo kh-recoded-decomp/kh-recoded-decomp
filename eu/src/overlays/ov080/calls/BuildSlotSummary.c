@@ -4,8 +4,8 @@
 #define IsGlobalPackedBitSet_02027304 IsGlobalPackedBitSet
 #define OS_SNPrintf_0202e080 OS_SNPrintf_0202e094
 #define RebuildRecordCounters_02028e6c RebuildRecordCounters
-#define data_ov080_020c5ddc data_ov080_020c5dfc
-#define data_ov080_020c5de4 data_ov080_020c5e04
+#define data_ov080_020c5ddc gSaveSlotNumberFormat
+#define data_ov080_020c5de4 gSaveSlotTitleFormat
 #define func_020273d4 UpdateElapsedIntervals
 #define func_02050a44 ReleaseMapLayoutReference
 #define func_ov039_020bcb20 FormatSaveLocationLabel

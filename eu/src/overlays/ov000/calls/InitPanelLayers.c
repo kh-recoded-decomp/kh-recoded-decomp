@@ -1,3 +1,5 @@
+#define data_ov000_020637b4 gTitlePanelLayerSourceIds
+#define data_ov000_020637c4 gTitlePanelLayerManagerConfig
 #define InitObjManager_0204efa8 InitObjManager
 #define InitPanelLayers_0206183c InitPanelLayers
 #define func_0204f00c PXI_Init_0204f020

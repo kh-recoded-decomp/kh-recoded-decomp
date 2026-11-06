@@ -1,6 +1,6 @@
 #define FormatItemValue_020c1354 FormatItemValue
 #define GetItemMenuEntry_020bf72c GetItemMenuEntry
 #define OS_SNPrintf_0202e080 OS_SNPrintf_0202e094
-#define data_ov085_020c239c data_ov085_020c23bc
+#define data_ov085_020c239c gShopNumberFormat
 #define func_ov085_020c1304 GetItemSellPrice
 #include "src/ov085/unclassified_helpers/FormatItemValue_020c1354.c"

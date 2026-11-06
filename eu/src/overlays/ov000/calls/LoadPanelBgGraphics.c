@@ -1,3 +1,4 @@
+#define data_ov000_020637d4 gTitlePanelBgArchiveIndices
 #define LoadPanelBgGraphics_020616dc LoadPanelBgGraphics
 #define func_0202c478 Archive_LoadFile
 #define GetBgDataFromArchive_0202b554 GetBgDataFromArchive

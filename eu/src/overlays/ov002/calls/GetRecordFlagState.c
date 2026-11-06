@@ -1,3 +1,4 @@
+#define data_ov002_0206aebc gMenuRecordCategoryBaseOffsets
 #define AcquireRecordSlot_02051d3c AcquireRecordSlot
 #define GetRecordFlagState_02069aac GetRecordFlagState
 #define data_ov002_0206adb4 gMenuRecordCategoryFlagBitOffsets

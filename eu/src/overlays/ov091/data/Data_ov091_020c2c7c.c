@@ -2,6 +2,6 @@
 
 #pragma explicit_zero_data on
 
-u16 data_ov091_020c2c7c[6] = {
+u16 gReportEntryCountOutOf30Format[6] = {
     37, 100, 47, 51, 48, 0,
 };

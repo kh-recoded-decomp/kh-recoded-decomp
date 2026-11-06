@@ -103,7 +103,7 @@ typedef struct ItemMenu {
 } ItemMenu;
 
 extern u8 *data_0205fe0c;
-extern const u16 data_ov085_020c23bc[];
+extern const u16 gShopNumberFormat[];
 extern const u16 sOv085_X_020c23c4[];
 extern u8 NNS_G3dGlb_projMtx[];
 extern u8 NNS_G3dGlb_cameraMtx[];
@@ -301,7 +301,7 @@ void RedrawShopMenu(ItemMenu *menu)
             DrawTextAnchored(&menu->layers[2], 0xa0, 0x3a, 10, 8, menu->currencyText);
             Obj_SetField14(&menu->layers[2], dimColor);
             menu->detailIcon = info->iconId;
-            OS_SNPrintf_0202e094(buffer, 8, data_ov085_020c23bc, menu->quantity);
+            OS_SNPrintf_0202e094(buffer, 8, gShopNumberFormat, menu->quantity);
             DrawTextAnchored(&menu->layers[2], 0x60, 0x23, 2, 8, sOv085_X_020c23c4);
             DrawTextAnchored(&menu->layers[2], 0x74, 0x23, 2, 0x20, buffer);
             total = menu->unitPrice * menu->quantity;
@@ -311,13 +311,13 @@ void RedrawShopMenu(ItemMenu *menu)
                 after = 999999;
             }
             color = 8;
-            OS_SNPrintf_0202e094(buffer, 8, data_ov085_020c23bc, menu->unitPrice);
+            OS_SNPrintf_0202e094(buffer, 8, gShopNumberFormat, menu->unitPrice);
             DrawTextAnchored(&menu->layers[2], 0xa0, 0x13, 2, 0x20, buffer);
-            OS_SNPrintf_0202e094(buffer, 8, data_ov085_020c23bc, total);
+            OS_SNPrintf_0202e094(buffer, 8, gShopNumberFormat, total);
             DrawTextAnchored(&menu->layers[2], 0xa0, 0x23, 2, 0x20, buffer);
-            OS_SNPrintf_0202e094(buffer, 8, data_ov085_020c23bc, MUNNY);
+            OS_SNPrintf_0202e094(buffer, 8, gShopNumberFormat, MUNNY);
             DrawTextAnchored(&menu->layers[2], 0x58, 0x38, 2, 0x20, buffer);
-            OS_SNPrintf_0202e094(buffer, 8, data_ov085_020c23bc, after);
+            OS_SNPrintf_0202e094(buffer, 8, gShopNumberFormat, after);
             if (menu->useCatalog) {
                 color = 0xc;
             }

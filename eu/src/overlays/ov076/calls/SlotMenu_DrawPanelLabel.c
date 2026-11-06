@@ -7,5 +7,5 @@
 #define G2D_DrawAnchoredText_02017dec NNSi_G2dTextCanvasDrawText
 #define OS_SNPrintf_0202e080 OS_SNPrintf_0202e094
 #define func_ov076_020c7b44 SlotMenu_UploadLabel
-#define data_ov076_020cd350 data_ov076_020cd370
+#define data_ov076_020cd350 gSlotMenuWidth2CountFormat
 #include "src/ov076/unclassified_helpers/SlotMenu_DrawPanelLabel_020c7edc.c"

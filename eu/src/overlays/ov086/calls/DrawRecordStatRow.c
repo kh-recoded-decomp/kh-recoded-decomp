@@ -5,7 +5,7 @@
 #define data_ov086_020c21d0 data_ov086_020c21f0
 #define data_ov086_020c2fc4 sOv086_Empty_020c2fe4
 #define data_ov086_020c2fc8 gRecordStatisticNumberFormat
-#define data_ov086_020c2fd0 data_ov086_020c2ff0
+#define data_ov086_020c2fd0 gRecordStatTextFormat
 #define func_ov027_020ba2a8 GetPackedFileEntry
 #define func_ov027_020ba2e0 FormatPackedWideText
 #include "src/ov086/panel_state/DrawRecordStatRow_020bee0c.c"

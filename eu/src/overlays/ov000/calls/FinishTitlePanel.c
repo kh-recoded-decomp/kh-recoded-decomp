@@ -14,7 +14,7 @@ typedef struct {
 } Panel;
 
 extern SceneArgs data_02060850;
-extern u8 data_ov000_02063798[];
+extern u8 gTitleBlankPaletteColor[];
 
 extern void InitSaveData(u32 mode);
 extern void WriteGlobalPackedBits(u32 id, u32 bits, u32 value);
@@ -52,8 +52,8 @@ void FinishTitlePanel(Panel *panel)
     SyncSelectionRecordFromSlotEntry();
     RefreshFirstSelectionAbilityTable();
     SetPendingScene(2, 0);
-    GX_LoadBGPltt(data_ov000_02063798, 0, 2);
-    GXS_LoadBGPltt(data_ov000_02063798, 0, 2);
+    GX_LoadBGPltt(gTitleBlankPaletteColor, 0, 2);
+    GXS_LoadBGPltt(gTitleBlankPaletteColor, 0, 2);
     REG_DISPCNT &= ~0x1f00;
     REG_DB_DISPCNT &= ~0x1f00;
 }

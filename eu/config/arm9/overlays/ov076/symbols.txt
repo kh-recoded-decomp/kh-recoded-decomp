@@ -193,9 +193,9 @@ data_ov076_020cd2f8 kind:data(any) addr:0x020cd2f8
 gCommandMatrixMenuDescriptor kind:data(any) addr:0x020cd304
 sOv076_UiMenuCmdmtxP2_020cd348 kind:data(any) addr:0x020cd348
 sOv076_UiMenuLanguageCmdmtxP2_020cd35c kind:data(any) addr:0x020cd35c
-data_ov076_020cd370 kind:data(any) addr:0x020cd370
+gSlotMenuWidth2CountFormat kind:data(any) addr:0x020cd370
 sOv076_ScrollCmx_020cd37c kind:data(any) addr:0x020cd37c
-data_ov076_020cd388 kind:data(any) addr:0x020cd388
+gSlotPickerCountFormat kind:data(any) addr:0x020cd388
 sOv076_UiMenuStrLanguageMatrixSZ_020cd390 kind:data(any) addr:0x020cd390
 sOv076_UiMenuCmnmtxP2_020cd3ac kind:data(any) addr:0x020cd3ac
 sOv076_UiMenuLanguageCmnmtxP2_020cd3c0 kind:data(any) addr:0x020cd3c0

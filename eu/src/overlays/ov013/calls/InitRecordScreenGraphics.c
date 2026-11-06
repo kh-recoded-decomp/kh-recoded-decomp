@@ -1,3 +1,5 @@
+#define data_ov013_02074a30 gOv013RecordMainBgConfig
+#define data_ov013_02074a44 gOv013RecordMainObjConfig
 #define func_ov013_02070cb4 GetOv013PlayerCardIndexFromCursor
 #define DestroyObjectsAndRelease_020b8c58 DestroyObjectsAndRelease
 #define DispatchContextCommand_02066c78 DispatchContextCommand

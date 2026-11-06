@@ -8,7 +8,7 @@
 #define OS_SNPrintf_0202e080 OS_SNPrintf_0202e094
 #define SetStatusHeaderMessage_020c1dbc SetStatusHeaderMessage
 #define data_02055fd4 gRankGlyphCodepoints
-#define data_ov073_020c41b4 data_ov073_020c41d4
+#define data_ov073_020c41b4 gStatusNumberFormat
 #define func_020015a0 eu2_DrawTextAnchored
 #define func_0204f13c IndexedRecord_SetPair
 #define func_0204f204 SetIndexedRecordAnimationFrame

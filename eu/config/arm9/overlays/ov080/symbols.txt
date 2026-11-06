@@ -25,6 +25,6 @@ data_ov080_020c5d58 kind:data(any) addr:0x020c5d58
 data_ov080_020c5d68 kind:data(any) addr:0x020c5d68
 gSaveSelectMenuDescriptor kind:data(any) addr:0x020c5da0 ambiguous
 sOv080_UiMenuStrLanguageSaveSZ_020c5de4 kind:data(any) addr:0x020c5de4
-data_ov080_020c5dfc kind:data(any) addr:0x020c5dfc
-data_ov080_020c5e04 kind:data(any) addr:0x020c5e04
+gSaveSlotNumberFormat kind:data(any) addr:0x020c5dfc
+gSaveSlotTitleFormat kind:data(any) addr:0x020c5e04
 data_ov080_020c5e20 kind:bss addr:0x020c5e20
