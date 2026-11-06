@@ -39,7 +39,7 @@ extern void ScriptOp_GetFirstSharedValue(void); /* ScriptOp_GetFirstSharedValue 
 extern void ScriptOp_GetSecondSharedValue(void); /* ScriptOp_GetSecondSharedValue */
 extern void ReadContextFlagBit11(void); /* ReadContextFlagBit11 */
 extern void ScriptOp_IsPlayerAnimDone(void); /* ScriptOp_IsPlayerAnimDone */
-extern void func_ov021_020b0bec(void);
+extern void StageScriptExpr_GetEventEffectKind(void);
 extern void ScriptOp_GetEventActorValue(void); /* ScriptOp_GetEventActorValue */
 extern void StageScriptExpr_TestSessionFlag3713(void);
 extern void ScriptOp_GetEventFlagPairBits(void); /* ScriptOp_GetEventFlagPairBits */
@@ -219,7 +219,7 @@ void (*gScriptQueryHandlers[173])(void) = {
     NULL,
     NULL,
     NULL,
-    func_ov021_020b0bec,
+    StageScriptExpr_GetEventEffectKind,
     NULL,
     NULL,
     NULL,

@@ -1,4 +1,4 @@
-# Nine functions retained pending semantic evidence
+# Eight functions retained pending semantic evidence
 
 These functions remain in C with their existing numeric identities. Their mechanical behavior is documented below. A byte match establishes the generated instructions; it does not establish a missing callback role, field meaning or output layout. Names are retained until the specific evidence gap is closed.
 
@@ -16,7 +16,6 @@ No source-body, prototype or runtime behavior change is part of this ledger.
 | ov043:020bd0a4 | `func_ov043_020bd0a4` | arm / 4 | `eu/src/overlays/ov043/auto/func_ov043_020bd0a4.c` | Empty ARM BX LR preserves incoming R0 and makes no memory changes. No owning-bank registration or direct caller has been established. |
 | ov044:020d0000 | `func_ov044_020d0000` | thumb / 32 | `eu/src/overlays/ov044/calls/func_ov044_020d0000.c` | Writes five u32 output words {0x1922,0x2b8,0x333,0,0xa000}, leaves R0 unchanged. Thumb pointer appears in own-bank table 020d0df8 slot 2 at 020d0e00. |
 | ov044:020d0020 | `func_ov044_020d0020` | thumb / 32 | `eu/src/overlays/ov044/calls/func_ov044_020d0020.c` | Writes five u32 output words {0x1922,0x666,0x666,0,0x14000}, leaves R0 unchanged. Thumb pointer appears in the same table slot 3 at 020d0e04. |
-| ov059:020c99ec | `func_ov059_020c99ec` | thumb / 16 | `eu/src/overlays/ov059/calls/func_ov059_020c99ec.c` | Reads u8 actor.playerIndex at+0x930, calls GetPlayerControlState(index), discards the record and returns FALSE. Actor_UpdateJumpCommandInput forwards that result for event kinds 1/2 except actor state 8, then performs its separate charge-command update. |
 
 ## Specific blockers and next proof
 
@@ -115,16 +114,6 @@ Source/consumer evidence:
 - `eu/src/ov044/data/Data_ov044_020d0de0.c`
 - `eu/src/overlays/ov052/calls/SelectFallStateHandler.c`
 
-### `func_ov059_020c99ec`
-
-Event-role/result meaning beyond this forwarding chain is not established. The getter call does not demonstrate an ability, movement state or successful input action.
-
-Next proof: Recover the registered command/event consumer and what this FALSE means there; tie the same actor owner to its control-record contract.
-
-Source/consumer evidence:
-- `eu/src/overlays/ov059/calls/func_ov059_020c99ec.c`
-- `eu/src/overlays/ov059/calls/Actor_UpdateJumpCommandInput.c`
-
 ## Reference-search boundary
 
 Raw-reference searches covered all 108 available extracted modules: 105 overlay files plus MAIN, ITCM and DTCM. Both little-endian addr and addr|1 were searched at byte alignment. Raw hits were classified by owning bank and real source/loader chain; a shared RAM address alone was not treated as a call edge. A zero raw count does not exclude direct BL/BLX branches, computed pointers or unavailable representations.
@@ -156,3 +145,7 @@ The review receipt has SHA-256
 It records instructions, literal targets, scalar callers and reference limits.
 The remaining gap is the invoker and destination owner; a complete five-word
 semantic layout is not a prerequisite for a future narrowly justified name.
+
+## Closed jump-step hook
+
+The former ov059:020c99ec helper is [Actor_TryOverrideJumpStepNoop](ACTOR_JUMP_STEP_OVERRIDE.md). The embedded jump-state argument and BOOL consumer prove its narrow step-override role. The control-record lookup and canonical FALSE remain; no ability or phase transition is invented.

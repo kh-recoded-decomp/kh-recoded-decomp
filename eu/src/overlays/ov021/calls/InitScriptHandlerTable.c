@@ -14,7 +14,7 @@
 #define func_ov021_020b3918 ScriptOp_MovePlayerTo
 #define func_ov021_020b3988 ScriptOp_SetActiveObjectValue
 #define func_ov021_020b3730 StageScriptCmd_PlayActorAnimationSlot
-#define func_ov021_020b37a0 func_ov021_020b37c0
+#define func_ov021_020b37a0 ScriptCmd_SelectStageEventCueGroup
 #define func_ov021_020b37e4 ScriptCmd_PlayTargetSound
 #define func_ov021_020b3888 ScriptCmd_RemovePlayerAttachment
 #define func_ov021_020b4794 CheckWaitCondition

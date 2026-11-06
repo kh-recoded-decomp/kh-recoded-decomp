@@ -1,4 +1,4 @@
 #define SetupPanelHandlers_02085f18 SetupPanelHandlers
-#define func_ov001_02085edc func_ov001_02085f04
+#define func_ov001_02085edc FieldSwitchObject_BeforeReleaseNoop
 #define func_ov001_02085ee0 SelectPanelItemEntry
 #include "src/ov001/reviewed_helpers/SetupPanelHandlers_02085f18.c"

@@ -908,3 +908,7 @@ The still-numeric ov001:020656d4 is both run and resume for group2/0x2e. [Its ex
 ## Stage idle, subscene requests and common field message sprites
 
 Seven retained numeric helpers are named from their actual native owners, writers and result consumers. [Stage idle callbacks](STAGE_IDLE_CALLBACK_CONTRACTS.md) distinguish task-callback retention from event-state retention. [SubScene9 request availability](SUBSCENE9_REQUEST_CONTRACT.md) proves request rejection/readiness without assigning state3 a guessed lifecycle. [The common message-sprite pair](COMMON_FIELD_MESSAGE_SPRITE_WAIT.md) uses a projected/drawn sprite and counts 15 resume invocations; its scratch counter is caller-supplied extra context, not a nested VM. Ten individual checks, 12 complete objects and all 108 freshly linked modules retain their bytes and hashes.
+
+## Interface callback, jump-step and stage-script closures
+
+Seven numeric functions now follow their actual callback phases, pre-release invocation, jump-step override consumer, timed-cue group or event-effect byte. The contracts are linked from [the system index](README.md). The four empty callbacks keep their nonnull identities and ignored residual returns; the jump helper preserves its control-record lookup and FALSE. Three [canonical DATA aliases](CANONICAL_DATA_ALIAS_NORMALIZATION.md) lose duplicate config labels while their single existing allocations remain. Fourteen official checks, 21 complete-object comparisons and a fresh 108-module gate pass without changed bytes or module hashes.

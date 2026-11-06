@@ -1,2 +1,2 @@
-#define _fp_init_0207ad5c func_ov001_0207ad5c
+#define _fp_init_0207ad5c MenuOverlay_ReadyStateNoop
 #include "src/ov001/library_msl_c/_fp_init_0207ad5c.c"

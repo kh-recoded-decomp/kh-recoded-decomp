@@ -2805,7 +2805,6 @@ gVBlankCallbackState kind:bss addr:0x020569cc
 gVBlankCallbackListHeads kind:bss addr:0x020569d8
 gVBlankCallbackNodeStorage kind:bss addr:0x020569e0
 gTextTagColors kind:bss addr:0x02056ae0
-data_02056ae0 kind:bss addr:0x02056ae0
 gDmaIrqCallback0Function kind:bss addr:0x02056ae8
 gDmaIrqCallback0KeepEnabled kind:bss addr:0x02056aec
 gDmaIrqCallbackTableTail kind:bss addr:0x02056af0

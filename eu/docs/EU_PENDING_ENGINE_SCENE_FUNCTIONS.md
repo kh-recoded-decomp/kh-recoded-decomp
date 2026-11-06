@@ -1,6 +1,6 @@
 # EU functions awaiting semantic evidence
 
-These 17 byte-exact functions retain their address names because a stronger role or field meaning remains unproven. Current source paths, function names and native declarations were revalidated at Git `c55c73c68510bfb1168844edc4e9a0deea2e61b5`. The raw-ROM scan receipt remains pinned to the earlier `28dc258674c86cde06bc8456c4c7cb9087e28905` research checkpoint. This document changes no source, prototype, structure or behavior, and makes no new official compilation or byte-exact validation claim.
+These 15 byte-exact functions retain their address names because a stronger role or field meaning remains unproven. Current source paths, function names and native declarations were revalidated at Git `c55c73c68510bfb1168844edc4e9a0deea2e61b5`. The raw-ROM scan receipt remains pinned to the earlier `28dc258674c86cde06bc8456c4c7cb9087e28905` research checkpoint. This document changes no source, prototype, structure or behavior, and makes no new official compilation or byte-exact validation claim.
 
 ## How to use this inventory
 
@@ -22,7 +22,6 @@ The research receipt for this pass has SHA-256 `f0116bceabb1f33cf0afe91e100fc161
 | `ov021:020a9d24` | THUMB | [eu/src/overlays/ov021/calls/func_ov021_020a9d24.c](../src/overlays/ov021/calls/func_ov021_020a9d24.c) | Normalized BOOL equivalent to ((*flags & 3) == 3). |
 | `ov021:020b0ad4` | THUMB | [eu/src/overlays/ov021/calls/func_ov021_020b0ad4.c](../src/overlays/ov021/calls/func_ov021_020b0ad4.c) | Return opcode status 0. The copied integer word is not normalized or converted. |
 | `ov021:020b0af0` | THUMB | [eu/src/overlays/ov021/calls/func_ov021_020b0af0.c](../src/overlays/ov021/calls/func_ov021_020b0af0.c) | Return opcode status 0; no allocation or pointer lifetime change. |
-| `ov021:020b0bec` | THUMB | [eu/src/overlays/ov021/calls/func_ov021_020b0bec.c](../src/overlays/ov021/calls/func_ov021_020b0bec.c) | Opcode status 0 on both paths. |
 | `ov021:020b0dd4` | THUMB | [eu/src/overlays/ov021/calls/func_ov021_020b0dd4.c](../src/overlays/ov021/calls/func_ov021_020b0dd4.c) | Opcode status 0; the raw stored fixed-point value retains 12 fractional bits. |
 | `ov021:020b0df0` | THUMB | [eu/src/overlays/ov021/calls/func_ov021_020b0df0.c](../src/overlays/ov021/calls/func_ov021_020b0df0.c) | Opcode status 0; the tagged operand evaluation still occurs on the missing-event path. |
 | `ov021:020b0e24` | THUMB | [eu/src/overlays/ov021/calls/func_ov021_020b0e24.c](../src/overlays/ov021/calls/func_ov021_020b0e24.c) | Opcode status 0; no sign extension of the source halfword. |
@@ -33,7 +32,6 @@ The research receipt for this pass has SHA-256 `f0116bceabb1f33cf0afe91e100fc161
 | `ov021:020b1a9c` | THUMB | [eu/src/overlays/ov021/calls/func_ov021_020b1a9c.c](../src/overlays/ov021/calls/func_ov021_020b1a9c.c) | Opcode status 0; second callback can write the context vector. Callback and record pointers are borrowed. |
 | `ov021:020b2044` | THUMB | [eu/src/overlays/ov021/calls/func_ov021_020b2044.c](../src/overlays/ov021/calls/func_ov021_020b2044.c) | Opcode status 0. Resolver/expression side effects are retained; this is not safely replaceable by an empty function. |
 | `ov021:020b2fec` | THUMB | [eu/src/overlays/ov021/calls/func_ov021_020b2fec.c](../src/overlays/ov021/calls/func_ov021_020b2fec.c) | Opcode status 0. There is no index check, conversion, allocation or result-vector write. |
-| `ov021:020b37c0` | THUMB | [eu/src/overlays/ov021/calls/func_ov021_020b37c0.c](../src/overlays/ov021/calls/func_ov021_020b37c0.c) | Opcode status 0. No resolved-event NULL check is added. |
 | `ov030:020bcec0` | THUMB | [eu/src/overlays/ov030/calls/func_ov030_020bcec0.c](../src/overlays/ov030/calls/func_ov030_020bcec0.c) | void. ActivateSpawnUnit uses a native hidden composite-return destination; the C VecFx32 return view preserves that operation. |
 
 ## func_0202d620
@@ -169,37 +167,6 @@ The marker/spawn view calls this word flags, but an earlier cue path writes a hi
 Same workspace audit as0ad4:18e78 is flags in the marker/spawn layout, but the cue path uses it as vector storage. Raw integer tagging is proven, a universal field meaning is not.
 
 Next proof: Recover last-writer/consumer order in the owning script command stream and document the workspace lifetime before naming the value.
-
-## func_ov021_020b0bec
-
-Identity: `ov021:020b0bec`, THUMB, configured native extent 28 bytes (including any pool). Source: [eu/src/overlays/ov021/calls/func_ov021_020b0bec.c](../src/overlays/ov021/calls/func_ov021_020b0bec.c).
-
-```c
-u32 func_ov021_020b0bec(int self);
-```
-
-- Inputs: Stage-script context and the active event pointer in data_ov021_020b56c4.
-- Mechanical effects: If no event is active, return without writing the result. Otherwise write integer tag 1 and zero-extend event byte +0x0c into context +0x30.
-- Result/lifetime: Opcode status 0 on both paths.
-
-### Callers, registration and ROM references
-
-- `ov021:020b5584` contains `020b0bed`, `gScriptQueryHandlers[139]` (173 entries). The configured relocation records this target bank. Storage: [eu/src/overlays/ov021/data/tables/PointerTables_ov021_020b52d4.c](../src/overlays/ov021/data/tables/PointerTables_ov021_020b52d4.c).
-- `ScriptOp_DispatchIndexedCommand` resolves the selector, initializes the tagged result to integer zero, indexes this array and invokes the nonnull handler. The helper's return is discarded and the dispatcher returns 0. Source: [eu/src/overlays/ov021/calls/ScriptOp_DispatchIndexedCommand.c](../src/overlays/ov021/calls/ScriptOp_DispatchIndexedCommand.c).
-
-### Writers and related source evidence
-
-[eu/src/overlays/ov021/calls/ScriptCmd_SetProperty.c](../src/overlays/ov021/calls/ScriptCmd_SetProperty.c).
-
-### Established limit
-
-The native PropertyEvent view deliberately leaves byte +0x0c unknown. The identified adjacent byte +0x0d and property 0x10 do not establish the meaning of +0x0c.
-
-### Searches already performed and next proof
-
-Re-read exact getter and native PropertyEvent prefix. It copies event byte+C as tagged integer and leaves result unchanged when no active event exists. PropertyEvent names the adjacent+D byte but keeps+C in unknown08[5]; no matching writer was recovered.
-
-Next proof: Trace event allocation/record deserialization for byte+C and concrete consumers; do not infer from adjacent+D property0x10.
 
 ## func_ov021_020b0dd4
 
@@ -501,38 +468,6 @@ SetStageMarker and SpawnLinkedWalkers place32-byte records at18e78; this helper 
 
 Next proof: Find exact readers of those three trailing words per indexed record; do not name them a position or vector.
 
-## func_ov021_020b37c0
-
-Identity: `ov021:020b37c0`, THUMB, configured native extent 66 bytes (including any pool). Source: [eu/src/overlays/ov021/calls/func_ov021_020b37c0.c](../src/overlays/ov021/calls/func_ov021_020b37c0.c).
-
-```c
-u32 func_ov021_020b37c0(u32 context, s32 operands);
-```
-
-- Inputs: Stage-script context; tagged event reference and value operands. Resolve the reference using ResolveEventRecordRef.
-- Mechanical effects: Compute (value + 1U) & 0xffff. Compare that full narrowed value against the old byte at event +0x1b4; if different, clear byte +0x1b5. Store the low byte of the computed value at +0x1b4.
-- Result/lifetime: Opcode status 0. No resolved-event NULL check is added.
-
-### Callers, registration and ROM references
-
-- `ov021:020b4a00` contains `020b37c1`. The configured relocation records this target bank. Storage: [eu/src/overlays/ov021/calls/InitScriptHandlerTable.c](../src/overlays/ov021/calls/InitScriptHandlerTable.c).
-- Reachable literal load `ov021:020b48e4` in `InitScriptHandlerTable` reads pointer pool `020b4a00`: `ldr r0, [pc, #0x118]`.
-- The initializer installs this pointer in runtime stage command handler slot 46; its shared source and EU aliases establish the registration.
-
-### Writers and related source evidence
-
-[eu/src/overlays/ov021/calls/InitScriptHandlerTable.c](../src/overlays/ov021/calls/InitScriptHandlerTable.c), [src/ov021/script_ops/InitScriptHandlerTable_020b4884.c](../../src/ov021/script_ops/InitScriptHandlerTable_020b4884.c).
-
-### Established limit
-
-The comparison is 16-bit-value versus byte before final truncation: nonzero upper bits can trigger reset even if the eventual low byte equals the old byte. A sequence/step/hold meaning for the two bytes is still not established.
-
-### Searches already performed and next proof
-
-Re-read truncation/order: comparison uses (value+1)&ffff against the old byte; on change it clears1b5, then stores the low byte at1b4. A value with nonzero upper narrowed bits can trigger reset despite the eventual byte being unchanged. Sequence/hold meanings remain unresolved.
-
-Next proof: Trace ProcessStageCues1b4/1b5 readers and transition effects, preserving the full16-bit comparison before byte truncation.
-
 ## func_ov030_020bcec0
 
 Identity: `ov030:020bcec0`, THUMB, configured native extent 130 bytes (including any pool). Source: [eu/src/overlays/ov030/calls/func_ov030_020bcec0.c](../src/overlays/ov030/calls/func_ov030_020bcec0.c).
@@ -566,3 +501,7 @@ Next proof: Prove source kind19 factory/updater identity and each descriptor fie
 ## Closed board-node getter
 
 The former ov032:020bb828 entry is now [GetCurrentBoardNodeCode](CURRENT_BOARD_NODE_CODE.md). The SessionBuffer10 owner, six code writers and native signed-byte loads close its former lock/rank/variant ambiguity.
+
+## Closed timed-cue and effect-kind helpers
+
+The [timed-cue group selector](STAGE_EVENT_TIMED_CUE_GROUP.md) now has its actual section16/10 consumer, distinct from collision cues. The [effect-kind expression](STAGE_EVENT_EFFECT_KIND.md) has actual writers, duration/expiration and hit-effect consumers; individual effect codes remain opaque.

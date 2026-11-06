@@ -14,7 +14,7 @@ typedef struct HitEvent {
 } HitEvent;
 
 extern void *func_ov001_0206db78(u32 playerIndex);
-extern BOOL func_ov059_020c99ec(Actor *actor);
+extern BOOL Actor_TryOverrideJumpStepNoop(Actor *actor);
 extern void Actor_UpdateChargeCommand(Actor *actor, void *record);
 
 BOOL Actor_UpdateJumpCommandInput(Actor *actor, HitEvent *event)
@@ -26,7 +26,7 @@ BOOL Actor_UpdateJumpCommandInput(Actor *actor, HitEvent *event)
         switch (event->kind) {
         case 1:
         case 2:
-            result = func_ov059_020c99ec(actor);
+            result = Actor_TryOverrideJumpStepNoop(actor);
             break;
         case 3:
             break;

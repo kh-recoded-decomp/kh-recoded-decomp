@@ -355,7 +355,7 @@ ReadContextFlagBit13 kind:function(thumb,size=0x20) addr:0x020b0b20
 ScriptOp_GetEventFlagPairBits kind:function(thumb,size=0x34) addr:0x020b0b40
 StageScriptExpr_TestSessionFlag3713 kind:function(thumb,size=0x18) addr:0x020b0b74
 ScriptOp_GetEventActorValue kind:function(thumb,size=0x60) addr:0x020b0b8c
-func_ov021_020b0bec kind:function(thumb,size=0x1c) addr:0x020b0bec
+StageScriptExpr_GetEventEffectKind kind:function(thumb,size=0x1c) addr:0x020b0bec
 ScriptOp_IsPlayerAnimDone kind:function(thumb,size=0x58) addr:0x020b0c08
 ReadContextFlagBit11 kind:function(thumb,size=0x20) addr:0x020b0c60
 ScriptOp_GetSecondSharedValue kind:function(thumb,size=0x1c) addr:0x020b0c80
@@ -474,7 +474,7 @@ ScriptOp_SetCurrentObjectVector kind:function(thumb,size=0x54) addr:0x020b3618
 StageScriptCmd_BeginActorWalkerMove kind:function(thumb,size=0x60) addr:0x020b366c
 ScriptOp_ApplyScaledObjectVector kind:function(thumb,size=0x82) addr:0x020b36cc
 StageScriptCmd_PlayActorAnimationSlot kind:function(thumb,size=0x70) addr:0x020b3750
-func_ov021_020b37c0 kind:function(thumb,size=0x42) addr:0x020b37c0
+ScriptCmd_SelectStageEventCueGroup kind:function(thumb,size=0x42) addr:0x020b37c0
 ScriptCmd_PlayTargetSound kind:function(thumb,size=0xa4) addr:0x020b3804
 ScriptCmd_RemovePlayerAttachment kind:function(thumb,size=0x4c) addr:0x020b38a8
 StageScriptCmd_TriggerSessionEffectKind1 kind:function(thumb,size=0x22) addr:0x020b38f4
@@ -535,7 +535,6 @@ gScriptVectorHandlers kind:data(any) addr:0x020b52d4
 gScriptQueryHandlers kind:data(any) addr:0x020b5358
 data_ov021_020b560c kind:data(any) addr:0x020b560c
 gActiveFieldButtonEntryIndex kind:bss addr:0x020b5620
-data_ov021_020b5620 kind:bss addr:0x020b5620
 gCharacterSoundCueArchive kind:bss addr:0x020b5624
 gEntryGroupRegistry kind:bss addr:0x020b5628
 gEntryGroupsInitialized kind:bss addr:0x020b5628
@@ -550,6 +549,5 @@ data_ov021_020b56c4 kind:bss addr:0x020b56c4
 gActiveFieldContext kind:bss addr:0x020b56c4
 gStageScriptContextBackup kind:bss addr:0x020b56d0
 gScriptHandlerTable kind:bss addr:0x020b56dc
-data_ov021_020b56dc kind:bss addr:0x020b56dc
 gStageScriptHandlerEntries32To63 kind:bss addr:0x020b575c
 gStageScriptHandlerFinalEntriesStorage kind:bss addr:0x020b57dc

@@ -2,24 +2,24 @@
 
 The DATA naming review covers 941 distinct module/address identities: 179 in
 overlays 000-020, 370 in main/ITCM/DTCM and overlays 021-040, and 392 in overlays
-041-104. It has 835 supported numeric-label assignments and the 106
-retained identities recorded below. All 106 have been reviewed; retention is
-an explicit evidence or alias/configuration boundary.
+041-104. All 835 supported numeric-label assignments are integrated. Three
+already-canonical identities have since had duplicate numeric configuration
+aliases removed, leaving exactly 103 retained numeric labels. All retained
+identities have been reviewed; retention is an evidence or alias/configuration
+boundary. Their current configuration set is checked against the records below.
 
-All 835 supported numeric-label assignments in this review are now integrated,
-leaving exactly 106 retained numeric DATA labels. The current configuration's
-complete retained-label set was checked against all 106 records below.
 Evidence was originally collected at commit
-`1ebd8885dfa0ba01df24ba0540a980339abbfa6b`; source paths and the named logical
-owners have been rechecked at publication. No semantic name is invented for
-any retained label in this ledger.
+`1ebd8885dfa0ba01df24ba0540a980339abbfa6b`; source paths and named logical
+owners are rechecked at publication. The three resolved aliases are recorded
+separately below and in [the normalization contract](CANONICAL_DATA_ALIAS_NORMALIZATION.md).
+No semantic name is invented for a retained label.
 
-| Review cohort | Reviewed identities | Supported naming | Retained |
-|---|---:|---:|---:|
-| Overlays 000-020 | 179 | 151 | 28 |
-| Main/ITCM/DTCM and overlays 021-040 | 370 | 317 | 53 |
-| Overlays 041-104 | 392 | 367 | 25 |
-| Total | 941 | 835 | 106 |
+| Review cohort | Reviewed identities | Numeric naming | Canonical aliases closed | Retained |
+|---|---:|---:|---:|---:|
+| Overlays 000-020 | 179 | 151 | 0 | 28 |
+| Main/ITCM/DTCM and overlays 021-040 | 370 | 317 | 3 | 50 |
+| Overlays 041-104 | 392 | 367 | 0 | 25 |
+| Total | 941 | 835 | 3 | 103 |
 
 ## Reading the records
 
@@ -47,7 +47,7 @@ not rename functions or replace those function-review ledgers.
 | Retention class | Identities |
 |---|---:|
 | Interior/member metadata alias; no separate allocation | 57 |
-| Existing canonical identity; alias merge remains | 4 |
+| Existing canonical identity; alias merge remains | 1 |
 | Storage exists; operational role unproved | 18 |
 | Stat-field meaning unproved | 2 |
 | Physical objects have overlapping execution views | 5 |
@@ -56,8 +56,8 @@ not rename functions or replace those function-review ledgers.
 | Foreign-bank binding remains unresolved | 12 |
 | Own storage opaque; observed reference selects foreign code | 3 |
 
-The first two classes contain 61 metadata aliases or already canonical
-identities; these are not 61 unexplained extra allocations. Four additional
+The first two classes contain 58 metadata aliases or already canonical
+identities; these are not 58 unexplained extra allocations. Four additional
 labels are physical fragments of the proved wireless data-sharing state.
 Foreign-bank rows retain their own physical storage and the unresolved binding
 instead of borrowing the other bank's meaning. Every row below states the
@@ -84,7 +84,6 @@ remaining proof needed; there is no count-driven requirement to rename it.
 | [main:02053b40](#main02053b40) | `data_02053b40` | Interior/member metadata alias; no separate allocation |
 | [main:02053b80](#main02053b80) | `data_02053b80` | Interior/member metadata alias; no separate allocation |
 | [main:02053d80](#main02053d80) | `data_02053d80` | Interior/member metadata alias; no separate allocation |
-| [main:02056ae0](#main02056ae0) | `data_02056ae0` | Existing canonical identity; alias merge remains |
 | [main:0205fe34](#main0205fe34) | `data_0205fe34` | Interior/member metadata alias; no separate allocation |
 | [main:0205fe8c](#main0205fe8c) | `data_0205fe8c` | Interior/member metadata alias; no separate allocation |
 | [main:0205fea8](#main0205fea8) | `data_0205fea8` | Interior/member metadata alias; no separate allocation |
@@ -127,9 +126,7 @@ remaining proof needed; there is no count-driven requirement to rename it.
 | [ov015:02080605](#ov01502080605) | `data_ov015_02080605` | Storage exists; operational role unproved |
 | [ov015:02080606](#ov01502080606) | `data_ov015_02080606` | Storage exists; operational role unproved |
 | [ov021:020b560c](#ov021020b560c) | `data_ov021_020b560c` | Address passed in an argument the callee does not read |
-| [ov021:020b5620](#ov021020b5620) | `data_ov021_020b5620` | Existing canonical identity; alias merge remains |
 | [ov021:020b56c4](#ov021020b56c4) | `data_ov021_020b56c4` | Existing canonical identity; alias merge remains |
-| [ov021:020b56dc](#ov021020b56dc) | `data_ov021_020b56dc` | Existing canonical identity; alias merge remains |
 | [ov030:020bd004](#ov030020bd004) | `data_ov030_020bd004` | Storage exists; operational role unproved |
 | [ov031:020bc815](#ov031020bc815) | `data_ov031_020bc815` | Storage exists; operational role unproved |
 | [ov033:020baafc](#ov033020baafc) | `data_ov033_020baafc` | Storage exists; operational role unproved |
@@ -774,18 +771,6 @@ No additional C/ELF allocation is proved for this numeric label. `gSinFx12Table`
 
 **Sources:** [eu/src/data/math/gSinFx12Table.c](../src/data/math/gSinFx12Table.c).
 
-### main:02056ae0
-
-`data_02056ae0`: Existing canonical identity; alias merge remains.
-
-No additional C/ELF allocation is proved for this numeric label. `gTextTagColors`; containing object [0x02056ae0, 0x02056ae8), 8 B; label offset +0x0.
-
-**Evidence and retained boundary:** Pinned C already defines this descriptive name; pinned symbols.txt also contains both names at the same bank/address. The numeric name has no separate ELF allocation.
-
-**Next proof:** Audit every source/object relocation and absolute alias reference; canonicalize or document the duplicate config label without introducing another symbol, collision or allocation.
-
-**Sources:** [eu/src/data/bss/Bss_main_02056ae0.c](../src/data/bss/Bss_main_02056ae0.c).
-
 ### main:0205fe34
 
 `data_0205fe34`: Interior/member metadata alias; no separate allocation.
@@ -954,18 +939,6 @@ Physical definition [0x020b560c, 0x020b5620), 20 B (data). No canonical owner is
 
 **Sources:** [eu/src/ov021/data/Data_ov021_020b560c.c](../src/ov021/data/Data_ov021_020b560c.c).
 
-### ov021:020b5620
-
-`data_ov021_020b5620`: Existing canonical identity; alias merge remains.
-
-No additional C/ELF allocation is proved for this numeric label. `gActiveFieldButtonEntryIndex`; containing object [0x020b5620, 0x020b5624), 4 B; label offset +0x0.
-
-**Evidence and retained boundary:** Pinned C already defines this descriptive name; pinned symbols.txt also contains both names at the same bank/address. The numeric name has no separate ELF allocation.
-
-**Next proof:** Audit every source/object relocation and absolute alias reference; canonicalize or document the duplicate config label without introducing another symbol, collision or allocation.
-
-**Sources:** [eu/src/overlays/ov021/data/bss/Bss_ov021_020b5620.c](../src/overlays/ov021/data/bss/Bss_ov021_020b5620.c).
-
 ### ov021:020b56c4
 
 `data_ov021_020b56c4`: Existing canonical identity; alias merge remains.
@@ -977,18 +950,6 @@ No additional C/ELF allocation is proved for this numeric label. `gActiveFieldCo
 **Next proof:** Audit EU macros, all object references and alias definitions before merging the numeric token into the existing descriptive name. Do not introduce a second descriptive name or bypass the occupied-name preflight.
 
 **Sources:** [eu/src/overlays/ov021/data/bss/Bss_ov021_020b56c0.c](../src/overlays/ov021/data/bss/Bss_ov021_020b56c0.c).
-
-### ov021:020b56dc
-
-`data_ov021_020b56dc`: Existing canonical identity; alias merge remains.
-
-No additional C/ELF allocation is proved for this numeric label. `gScriptHandlerTable`; containing object [0x020b56dc, 0x020b575c), 128 B; label offset +0x0.
-
-**Evidence and retained boundary:** Pinned C already defines this descriptive name; pinned symbols.txt also contains both names at the same bank/address. The numeric name has no separate ELF allocation.
-
-**Next proof:** Audit every source/object relocation and absolute alias reference; canonicalize or document the duplicate config label without introducing another symbol, collision or allocation.
-
-**Sources:** [eu/src/overlays/ov021/data/bss/Bss_ov021_020b56d0.c](../src/overlays/ov021/data/bss/Bss_ov021_020b56d0.c).
 
 ### ov030:020bd004
 
@@ -1566,3 +1527,19 @@ later source/configuration cleanup must preserve the native layout and offsets
 and pass the repository's actual-path verification and official linked gate.
 Existing canonical aliases should be resolved through their demonstrated owner
 and relocation requirements, rather than adding another competing declaration.
+
+## Closed canonical configuration aliases
+
+These identities already had one canonical C/ELF allocation. Their duplicate numeric configuration lines have been removed without changing storage, references or the three native addresses.
+
+<a id="main02056ae0"></a>
+
+**Resolved main:02056ae0** now uses the existing `gTextTagColors` identity. See [the alias audit](CANONICAL_DATA_ALIAS_NORMALIZATION.md).
+
+<a id="ov021020b5620"></a>
+
+**Resolved ov021:020b5620** now uses the existing `gActiveFieldButtonEntryIndex` identity. See [the alias audit](CANONICAL_DATA_ALIAS_NORMALIZATION.md).
+
+<a id="ov021020b56dc"></a>
+
+**Resolved ov021:020b56dc** now uses the existing `gScriptHandlerTable` identity. See [the alias audit](CANONICAL_DATA_ALIAS_NORMALIZATION.md).

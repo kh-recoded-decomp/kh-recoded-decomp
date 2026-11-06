@@ -2824,7 +2824,7 @@ src/overlays/ov001/calls/UpdateMenuSlideIn.c:
     complete
     .text       start:0x02070870 end:0x020708f0
 
-src/overlays/ov001/auto/func_ov001_020708f0.c:
+src/overlays/ov001/auto/FieldPanel_ShownStateNoop.c:
     complete
     .text       start:0x020708f0 end:0x020708f2
 
@@ -3852,7 +3852,7 @@ src/overlays/ov001/calls/CheckTimerExpired.c:
     complete
     .text       start:0x0207a0e8 end:0x0207a118
 
-src/overlays/ov001/auto/func_ov001_0207a118.c:
+src/overlays/ov001/auto/MessageWindow_WaitForInputNoop.c:
     complete
     .text       start:0x0207a118 end:0x0207a11a
 
@@ -3992,7 +3992,7 @@ src/overlays/ov001/calls/StepSubScreenFadeIn_0207ad30.c:
     complete
     .text       start:0x0207ad30 end:0x0207ad5c
 
-src/overlays/ov001/auto/func_ov001_0207ad5c.c:
+src/overlays/ov001/auto/MenuOverlay_ReadyStateNoop.c:
     complete
     .text       start:0x0207ad5c end:0x0207ad5e
 
@@ -5584,7 +5584,7 @@ src/overlays/ov001/calls/InitItemPanel.c:
     complete
     .text       start:0x02085ecc end:0x02085f04
 
-src/overlays/ov001/auto/func_ov001_02085f04.c:
+src/overlays/ov001/auto/FieldSwitchObject_BeforeReleaseNoop.c:
     complete
     .text       start:0x02085f04 end:0x02085f06
 

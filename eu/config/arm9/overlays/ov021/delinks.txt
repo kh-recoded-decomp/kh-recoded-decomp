@@ -1396,7 +1396,7 @@ src/overlays/ov021/calls/ScriptOp_GetEventActorValue.c:
     complete
     .text       start:0x020b0b8c end:0x020b0bec
 
-src/overlays/ov021/calls/func_ov021_020b0bec.c:
+src/overlays/ov021/calls/StageScriptExpr_GetEventEffectKind.c:
     complete
     .text       start:0x020b0bec end:0x020b0c08
 
@@ -1872,7 +1872,7 @@ src/overlays/ov021/calls/StageScriptCmd_PlayActorAnimationSlot.c:
     complete
     .text       start:0x020b3750 end:0x020b37c0
 
-src/overlays/ov021/calls/func_ov021_020b37c0.c:
+src/overlays/ov021/calls/ScriptCmd_SelectStageEventCueGroup.c:
     complete
     .text       start:0x020b37c0 end:0x020b3802
 

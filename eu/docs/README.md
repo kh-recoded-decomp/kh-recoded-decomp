@@ -101,19 +101,19 @@ configured source paths still establish build ownership.
 
 ## Retained DATA identities
 
-[All 106 retained numeric DATA labels](EU_PENDING_DATA_LABELS.md) have an explicit
+[All 103 retained numeric DATA labels](EU_PENDING_DATA_LABELS.md) have an explicit
 owner or missing-proof record. All 941 identities in the DATA review are covered;
 835 supported assignments are integrated. Interior aliases remain separate from
 independent C allocations.
 
 ## Unresolved function contracts
 
-89 matched C functions retain numeric names. Every one has a mechanical
+82 matched C functions retain numeric names. Every one has a mechanical
 contract, a specific semantic blocker and a next useful proof:
 
-- [63 common field functions](EU_PENDING_FIELD_FUNCTIONS.md).
-- [17 engine, script and scene functions](EU_PENDING_ENGINE_SCENE_FUNCTIONS.md).
-- [9 background/camera/other callbacks](EU_PENDING_CALLBACK_FUNCTIONS.md).
+- [59 common field functions](EU_PENDING_FIELD_FUNCTIONS.md).
+- [15 engine, script and scene functions](EU_PENDING_ENGINE_SCENE_FUNCTIONS.md).
+- [8 background/camera/other callbacks](EU_PENDING_CALLBACK_FUNCTIONS.md).
 
 These are limits on recovered meaning. Full-module matching and reconstructed
 DATA coverage are separate measurements. The
@@ -145,3 +145,5 @@ The [current board-node code](CURRENT_BOARD_NODE_CODE.md) connects the shared se
 The [field HP/camera script gate](FIELD_HP_CAMERA_SCRIPT_GATE.md) documents opcode 2/0x2e, its exact wait condition and HP-dependent flag effects without assigning an unproved command purpose.
 
 [Stage idle callbacks](STAGE_IDLE_CALLBACK_CONTRACTS.md), [SubScene9 request availability](SUBSCENE9_REQUEST_CONTRACT.md) and [common field message sprites](COMMON_FIELD_MESSAGE_SPRITE_WAIT.md) document their distinct owners and scheduling results.
+
+[Interface callback phases](FIELD_CALLBACK_PHASE_CONTRACTS.md), [the jump-step override hook](ACTOR_JUMP_STEP_OVERRIDE.md), [timed event cues](STAGE_EVENT_TIMED_CUE_GROUP.md), [event effect kind](STAGE_EVENT_EFFECT_KIND.md) and [canonical DATA aliases](CANONICAL_DATA_ALIAS_NORMALIZATION.md) document the latest owner and consumer closures.

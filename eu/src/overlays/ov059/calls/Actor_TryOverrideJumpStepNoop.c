@@ -8,7 +8,7 @@ typedef struct Actor {
 
 extern void *func_ov001_0206db78(u32 playerIndex);
 
-BOOL func_ov059_020c99ec(Actor *actor)
+BOOL Actor_TryOverrideJumpStepNoop(Actor *actor)
 {
     func_ov001_0206db78(actor->playerIndex);
     return FALSE;

@@ -2,7 +2,7 @@
 
 extern u32 data_ov021_020b56c4;
 
-u32 func_ov021_020b0bec(int self)
+u32 StageScriptExpr_GetEventEffectKind(int self)
 {
     s32 entry;
 

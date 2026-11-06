@@ -4,7 +4,7 @@ extern u32 ResolveEventRecordRef();
 extern u32 ResolveTaggedValueRef();
 
 /* Leaf script command updates a step counter. */
-u32 func_ov021_020b37c0(u32 context, s32 operands)
+u32 ScriptCmd_SelectStageEventCueGroup(u32 context, s32 operands)
 {
     s32 actor;
     s32 stepOperand;
