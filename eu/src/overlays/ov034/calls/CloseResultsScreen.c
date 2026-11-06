@@ -23,7 +23,7 @@ extern ResultsScreen gResultsScreenPointersPrefix;
 extern u8 gBoardScreenTaskDescriptor[];
 
 extern u32 GetSessionScriptRunMask(void);
-extern void func_ov001_020648c8(u32 value);
+extern void PrepareResultsSessionHandoff(u32 value);
 extern void *CreateTaskObject(void *descriptor, void *userData);
 extern void RerollBoardSlotsWrapper(ResultsParams *params);
 extern void ApplyResultsPartyBonus(ResultsParams *params);
@@ -38,7 +38,7 @@ int CloseResultsScreen(void)
         }
         gResultsScreenPointersPrefix.work->flags &= ~1;
         if (gResultsScreenPointersPrefix.work->nextScene != -1) {
-            func_ov001_020648c8(gResultsScreenPointersPrefix.work->nextScene);
+            PrepareResultsSessionHandoff(gResultsScreenPointersPrefix.work->nextScene);
         } else {
             if (gResultsScreenPointersPrefix.params->needsSave != 0) {
                 gResultsScreenPointersPrefix.work->saveTask = CreateTaskObject(gBoardScreenTaskDescriptor, (void *)0x7b);

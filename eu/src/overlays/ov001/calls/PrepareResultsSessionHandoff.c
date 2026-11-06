@@ -31,7 +31,7 @@ extern void LoadDifficultyPresetIntoSession(void);
 extern void ConfigureFieldTracks(int sceneId, int subSceneId, int mode, int param);
 extern void SetPendingFieldValue(int request);
 
-void func_ov001_020648c8(u32 value)
+void PrepareResultsSessionHandoff(u32 value)
 {
     Session *session = gFieldSessionWork;
 

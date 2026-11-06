@@ -28,7 +28,7 @@ extern ManagerEntry *GetBoundedEntryField(int index);
 extern void ClearSessionPackedBit(int bitOffset);
 extern void SetSessionFlag(int bitOffset);
 
-BOOL func_ov001_020656d4(void)
+BOOL ScriptCmd_WaitForState4CameraOffsetToClear(void)
 {
     if (GetFieldSessionState() == 4 && GetCameraColliderOffsetMagnitude() > 0)
     {

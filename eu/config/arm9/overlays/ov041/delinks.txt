@@ -44,7 +44,7 @@ src/overlays/ov041/calls/UpdateSceneFade.c:
     complete
     .text       start:0x020bcd08 end:0x020bcd78
 
-src/overlays/ov041/calls/func_ov041_020bcd78.c:
+src/overlays/ov041/calls/StopStageBrightnessFade.c:
     complete
     .text       start:0x020bcd78 end:0x020bcd90
 

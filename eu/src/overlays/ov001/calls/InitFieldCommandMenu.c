@@ -137,7 +137,7 @@ extern void *GetFieldFont1(void);
 extern void DrawTextAnchoredWithFontFallback(TextLayer *layer, u32 x, u32 y, u32 color, u32 flags, int value, void *font, u32 width);
 extern void SelectListNodeOrFirst(TextLayer *layer, TextCell *target);
 extern void Text_UploadTileBuffer(TextLayer *layer);
-extern BOOL func_ov001_02077148(FieldMenu *menu, CommandRecord *record);
+extern BOOL IsFieldMenuAutoAdvanceCandidate(FieldMenu *menu, CommandRecord *record);
 extern BOOL IsFieldFlag10Set(void);
 extern BOOL IsHudFlag7Set(void);
 extern BOOL IsFieldFlag8Set(void);
@@ -226,7 +226,7 @@ void InitFieldCommandMenu(FieldMenu *menu, u8 *tiles)
         counted = GetRecordSlotPair1Entry(slots->slots[index].recordId);
         if (counted->kind != 5) {
             total++;
-            if (!func_ov001_02077148(menu, counted)) {
+            if (!IsFieldMenuAutoAdvanceCandidate(menu, counted)) {
                 ready++;
             }
         }
@@ -269,7 +269,7 @@ void InitFieldCommandMenu(FieldMenu *menu, u8 *tiles)
         }
         if (!IsFieldFlag10Set() && !IsHudFlag7Set()) {
             StartCommandCooldownGauge(menu, gauge, slotIndex, slot->recordId, slot->repeat, slot->bonusKind, slot->repeat);
-            if (func_ov001_02077148(menu, record)) {
+            if (IsFieldMenuAutoAdvanceCandidate(menu, record)) {
                 gauge->ready = TRUE;
             } else {
                 gauge->ready = FALSE;

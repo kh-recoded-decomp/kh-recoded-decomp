@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-BOOL func_ov001_02077118(s32 *actor)
+BOOL MatchesFieldMenuAutoAdvanceClass(s32 *actor)
 {
     s32 kind;
 

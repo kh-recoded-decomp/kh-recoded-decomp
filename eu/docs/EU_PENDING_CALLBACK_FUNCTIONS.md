@@ -1,4 +1,4 @@
-# Eight functions retained pending semantic evidence
+# Six functions retained pending semantic evidence
 
 These functions remain in C with their existing numeric identities. Their mechanical behavior is documented below. A byte match establishes the generated instructions; it does not establish a missing callback role, field meaning or output layout. Names are retained until the specific evidence gap is closed.
 
@@ -10,8 +10,6 @@ No source-body, prototype or runtime behavior change is part of this ledger.
 |---|---|---|---|---|
 | ov002:02065c4c | `func_ov002_02065c4c` | arm / 4 | `eu/src/overlays/ov002/auto/func_ov002_02065c4c.c` | Empty function address is present in both main/sub background configs at config+0xc. InitMenuContext copies the descriptors; InitBackgroundContainer copies this word to container+0x3c. |
 | ov002:02065c50 | `func_ov002_02065c50` | arm / 4 | `eu/src/overlays/ov002/auto/func_ov002_02065c50.c` | Empty function address is present in both main/sub background configs at config+0x10. InitMenuContext copies the descriptors; InitBackgroundContainer copies this word to container+0x40. |
-| ov041:020bcd78 | `func_ov041_020bcd78` | thumb / 24 | `eu/src/overlays/ov041/calls/func_ov041_020bcd78.c` | Loads stage-work pointer through global context+0xb8 and clears its 32-bit word+0x52c. StartStageFadeOut invokes it between beginning fade-out and SetStageState(0x15,0). |
-| ov042:020be4bc | `func_ov042_020be4bc` | thumb / 16 | `eu/src/overlays/ov042/calls/func_ov042_020be4bc.c` | Stores input u32 at camera singleton+0x144. InitCameraScene initializes that word 0. The exact ov030 ClearSceneEntry caller clears entries[index].id then calls this setter with 1. |
 | ov043:020bc8d4 | `func_ov043_020bc8d4` | arm / 8 | `eu/src/overlays/ov043/auto/func_ov043_020bc8d4.c` | ARM leaf returns literal0 and reads no input. No owning-bank registration or direct caller has been established. |
 | ov043:020bd0a4 | `func_ov043_020bd0a4` | arm / 4 | `eu/src/overlays/ov043/auto/func_ov043_020bd0a4.c` | Empty ARM BX LR preserves incoming R0 and makes no memory changes. No owning-bank registration or direct caller has been established. |
 | ov044:020d0000 | `func_ov044_020d0000` | thumb / 32 | `eu/src/overlays/ov044/calls/func_ov044_020d0000.c` | Writes five u32 output words {0x1922,0x2b8,0x333,0,0xa000}, leaves R0 unchanged. Thumb pointer appears in own-bank table 020d0df8 slot 2 at 020d0e00. |
@@ -46,29 +44,6 @@ Source/consumer evidence:
 - `eu/src/ov002/data/Rodata_ov002_0206acd8.c`
 - `eu/src/overlays/ov027/BackgroundContainer.h`
 - `eu/src/overlays/ov027/calls/InitBackgroundContainer.c`
-
-### `func_ov041_020bcd78`
-
-StageWork leaves [0x4bc,0x53c) opaque. No semantic reader or nonzero writer of+0x52c has been demonstrated.
-
-Next proof: Find a reader or nonzero writer of this exact StageWork word and connect it to the fade/state sequence; distinguish it from the orb pool at+0x53c.
-
-Source/consumer evidence:
-- `eu/src/overlays/ov041/calls/func_ov041_020bcd78.c`
-- `eu/src/overlays/ov041/calls/StartStageFadeOut.c`
-- `eu/src/overlays/ov041/StageWork.h`
-
-### `func_ov042_020be4bc`
-
-Entry-clear trigger is proven, but no consumer identifies the meaning of camera+0x144. Reset/dirty/lock semantics would be guesses.
-
-Next proof: Find the semantic read of camera+0x144, or another writer/transition that demonstrates what values 0 and 1 control.
-
-Source/consumer evidence:
-- `eu/src/overlays/ov042/calls/func_ov042_020be4bc.c`
-- `eu/src/overlays/ov030/calls/ClearSceneEntry.c`
-- `src/ov030/shared_engine/ClearSceneEntry_020bb424.c`
-- `src/ov042/camera/InitCameraScene_020bdb4c.c`
 
 ### `func_ov043_020bc8d4`
 
@@ -149,3 +124,7 @@ semantic layout is not a prerequisite for a future narrowly justified name.
 ## Closed jump-step hook
 
 The former ov059:020c99ec helper is [Actor_TryOverrideJumpStepNoop](ACTOR_JUMP_STEP_OVERRIDE.md). The embedded jump-state argument and BOOL consumer prove its narrow step-override role. The control-record lookup and canonical FALSE remain; no ability or phase transition is invented.
+
+## Closed stage-local fade and camera snap
+
+[StopStageBrightnessFade](STAGE_BRIGHTNESS_FADE.md) stops only the stage-local brightness loop. [SetCameraGoalSnapEnabled](CAMERA_GOAL_SNAP.md) controls direct versus proportional goal placement. Their actual reader/writer chains resolve the former +0x52c and +0x144 gaps. [The retained callback follow-up](BACKGROUND_CALLBACK_EVIDENCE_LIMITS.md) records the six remaining gaps and the exact background-owner paths.

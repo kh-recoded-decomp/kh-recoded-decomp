@@ -4,7 +4,7 @@
 
 extern unsigned int ResetSceneSlots();
 extern unsigned int SetSceneSlotDrawingEnabled();
-extern unsigned int func_ov001_02067d0c();
+extern unsigned int SetSceneSlotResourceLoadingEnabled();
 extern unsigned int func_ov001_0206823c();
 
 unsigned int ConfigureAreaSceneSlotsAndReset(void) {
@@ -16,13 +16,13 @@ unsigned int ConfigureAreaSceneSlotsAndReset(void) {
   index = 0;
   if (0 < lastSlot) {
     do {
-      func_ov001_02067d0c(index,1);
+      SetSceneSlotResourceLoadingEnabled(index,1);
       SetSceneSlotDrawingEnabled(index,1);
       index = index + 1;
     } while (index < lastSlot);
   }
   if (0 < lastSlot) {
-    func_ov001_02067d0c(lastSlot,0);
+    SetSceneSlotResourceLoadingEnabled(lastSlot,0);
     SetSceneSlotDrawingEnabled(lastSlot,0);
   }
   ResetSceneSlots();

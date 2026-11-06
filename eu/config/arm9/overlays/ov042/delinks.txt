@@ -166,7 +166,7 @@ src/overlays/ov042/calls/StepCameraGoalTowardTarget.c:
     complete
     .text       start:0x020be408 end:0x020be4bc
 
-src/overlays/ov042/calls/func_ov042_020be4bc.c:
+src/overlays/ov042/calls/SetCameraGoalSnapEnabled.c:
     complete
     .text       start:0x020be4bc end:0x020be4cc
 

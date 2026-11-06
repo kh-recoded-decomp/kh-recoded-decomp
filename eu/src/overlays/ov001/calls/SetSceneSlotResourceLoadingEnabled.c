@@ -2,7 +2,7 @@
 
 extern u32 gFieldSceneEntryContext;
 
-void func_ov001_02067d0c(s32 index, s32 enable)
+void SetSceneSlotResourceLoadingEnabled(s32 index, s32 enable)
 {
     u8 *entry;
 

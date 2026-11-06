@@ -1,3 +1,3 @@
 #define MsgQueue_GetHeap_02065f2c ScriptCmd_InvokeSessionCallback
-#define NNSi_FndGetCurrentRootHeap func_ov001_02064de8
+#define NNSi_FndGetCurrentRootHeap InvokeFieldSceneTransitionHook
 #include "src/ov001/shared_engine/MsgQueue_GetHeap_02065f2c.c"

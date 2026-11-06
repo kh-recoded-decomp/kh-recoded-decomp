@@ -48,7 +48,7 @@ extern void ScriptCmd_OpenFieldMenuMode(void); /* return 1; ScriptVm_ReadOperand
 extern void ScriptCmd_SetSceneLock(void); /* return 1; ScriptVm_ReadOperandInt */
 extern void ScriptCmd_LoadSceneData(void);
 extern void ScriptCmd_ClearSceneEntry(void); /* return 1; ScriptVm_ReadOperandInt */
-extern void func_ov001_020656d4(void);
+extern void ScriptCmd_WaitForState4CameraOffsetToClear(void);
 extern void ScriptCmd_ShowHudIndicator(void); /* ScriptCmd_ShowHudIndicator */
 extern void ScriptCmd_WaitForCounterHudFadeState0(void); /* IsSceneState0 */
 extern void ScriptCmd_ResetStageOriginIfActive(void); /* return 1; no local decode */
@@ -61,7 +61,7 @@ extern void ScriptOp_AddSessionBits(void); /* ScriptOp_AddSessionBits */
 extern void ScriptCmd_LoadCenteredScreenSprite(void); /* return 1; ScriptVm_ReadOperandInt */
 extern void ScriptCmd_RequestAreaChange(void); /* ScriptCmd_RequestAreaChange */
 extern void ScriptCmd_AdvanceRecordStep(void); /* return 1; no local decode */
-extern void func_ov001_0206595c(void);
+extern void ScriptCmd_SetSceneScrollSpeedTarget(void);
 extern void ScriptCmd_SetAngleDegrees(void); /* ScriptCmd_SetAngleDegrees */
 extern void ScriptCmd_AddStageSlotLock1(void); /* return 1; ScriptVm_ReadOperandInt */
 extern void ScriptCmd_TryActivateStageSlot(void); /* return 1; ScriptVm_ReadOperandInt */
@@ -92,14 +92,14 @@ extern void ScriptCmd_QueueFieldFromSavedSceneIds(void); /* FS_UnloadOverlayImag
 extern void ScriptCmd_RefreshFirstSelectionPlayerStats(void); /* FS_UnloadOverlayImage */
 extern void ScriptCmd_SetupSlotPanelMode(void);
 extern void ScriptCmd_ToggleSessionBit15(void); /* ScriptCmd_ToggleSessionBit15 */
-extern void func_ov001_02065e8c(void);
+extern void ScriptCmd_RequestFieldExitToScene4(void);
 extern void ScriptCmd_DamageLeaderNonLethal(void);
 extern void func_ov001_02065f04(void);
 extern void ScriptCmd_ClearSessionStateWords(void); /* return 1; no local decode */
 extern void ScriptCmd_InvokeSessionCallback(void); /* MsgQueue_GetHeap */
 extern void ScriptCmd_TestSessionCheckCallback(void); /* thumbStep */
 extern void ScriptCmd_AwardSlotLevelProgress(void);
-extern void func_ov001_02065f5c(void); /* ScriptCmd_SetLinkMode */
+extern void ScriptCmd_SetSceneEntryValueOverride(void); /* scene-entry value override */
 extern void ScriptCmd_ResetGaugeDisplay(void); /* return 1; no local decode */
 extern void ScriptCmd_RestoreSelectionRecordValue(void); /* ScriptCmd_RestoreSelectionRecordValue */
 
@@ -196,8 +196,8 @@ void (*gFieldScriptCommandHandlers[190])(void) = {
     NULL,
     ScriptCmd_ClearSceneEntry, /* return 1; ScriptVm_ReadOperandInt */
     NULL,
-    func_ov001_020656d4,
-    func_ov001_020656d4,
+    ScriptCmd_WaitForState4CameraOffsetToClear,
+    ScriptCmd_WaitForState4CameraOffsetToClear,
     ScriptCmd_ShowHudIndicator, /* ScriptCmd_ShowHudIndicator */
     ScriptCmd_WaitForCounterHudFadeState0, /* IsSceneState0 */
     ScriptCmd_ResetStageOriginIfActive, /* return 1; no local decode */
@@ -220,7 +220,7 @@ void (*gFieldScriptCommandHandlers[190])(void) = {
     NULL,
     ScriptCmd_AdvanceRecordStep, /* return 1; no local decode */
     NULL,
-    func_ov001_0206595c,
+    ScriptCmd_SetSceneScrollSpeedTarget,
     NULL,
     ScriptCmd_SetAngleDegrees, /* ScriptCmd_SetAngleDegrees */
     NULL,
@@ -276,7 +276,7 @@ void (*gFieldScriptCommandHandlers[190])(void) = {
     NULL,
     ScriptCmd_ToggleSessionBit15, /* ScriptCmd_ToggleSessionBit15 */
     NULL,
-    func_ov001_02065e8c,
+    ScriptCmd_RequestFieldExitToScene4,
     NULL,
     ScriptCmd_DamageLeaderNonLethal,
     NULL,
@@ -288,7 +288,7 @@ void (*gFieldScriptCommandHandlers[190])(void) = {
     ScriptCmd_TestSessionCheckCallback, /* thumbStep */
     ScriptCmd_AwardSlotLevelProgress,
     NULL,
-    func_ov001_02065f5c, /* ScriptCmd_SetLinkMode */
+    ScriptCmd_SetSceneEntryValueOverride, /* scene-entry value override */
     NULL,
     ScriptCmd_ResetGaugeDisplay, /* return 1; no local decode */
     NULL,

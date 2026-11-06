@@ -2,7 +2,7 @@
 
 extern u32 gFieldSceneEntryContext;
 
-void func_ov001_020681b0(u8 byteValue, u32 wordValue)
+void SetSceneEntryValueOverride(u8 byteValue, u32 wordValue)
 {
     u8 *ctx;
 

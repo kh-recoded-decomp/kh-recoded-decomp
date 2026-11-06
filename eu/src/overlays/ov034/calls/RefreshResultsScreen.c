@@ -1,3 +1,4 @@
+#define func_ov001_020648c8 PrepareResultsSessionHandoff
 #define data_02060500 gPadPressedStorage
 #define func_01ff9b70 BuildCameraLookAtMatrix
 #define CallVirtualHandlerSlot1_02001574 CallVirtualHandlerSlot1

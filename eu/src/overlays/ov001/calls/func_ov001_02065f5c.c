@@ -1,3 +1,0 @@
-#define Ov002_SetLinkModeAndValue func_ov001_020681b0
-#define ScriptCmd_SetLinkMode_02065f5c func_ov001_02065f5c
-#include "src/ov001/shared_engine/ScriptCmd_SetLinkMode_02065f5c.c"

@@ -1,0 +1,3 @@
+#define Ov002_SetLinkModeAndValue SetSceneEntryValueOverride
+#define ScriptCmd_SetLinkMode_02065f5c ScriptCmd_SetSceneEntryValueOverride
+#include "src/ov001/shared_engine/ScriptCmd_SetLinkMode_02065f5c.c"

@@ -16,7 +16,7 @@ extern fx32 ScriptVm_ReadOperandFx32(void *context, ScriptOperand *operand);
 extern u32 GetCurrentRecordTargetScrollSpeed(void);
 extern void SetSceneScrollSpeedTarget(u32 a, u32 b);
 
-int func_ov001_0206595c(void *context, ScriptCommand *command)
+int ScriptCmd_SetSceneScrollSpeedTarget(void *context, ScriptCommand *command)
 {
     int useCurrent = ScriptVm_ReadOperandInt(context, &command->operands[0]);
     fx32 amount = ScriptVm_ReadOperandFx32(context, &command->operands[1]);

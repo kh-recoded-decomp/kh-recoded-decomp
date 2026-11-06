@@ -1,7 +1,7 @@
 #include "nitro/types.h"
 
 extern int GetCurrentSceneEntrySlotId(void);
-extern void func_ov001_02067d0c(int slot, BOOL arg);
+extern void SetSceneSlotResourceLoadingEnabled(int slot, BOOL arg);
 extern void SetSceneSlotDrawingEnabled(int slot, BOOL arg);
 extern void ResetSceneSlots(void);
 extern void SetStageState(int state, BOOL runNow);
@@ -13,10 +13,10 @@ void StageStateSetupSlots(void)
     int slot;
 
     for (slot = 0; slot < last; slot++) {
-        func_ov001_02067d0c(slot, FALSE);
+        SetSceneSlotResourceLoadingEnabled(slot, FALSE);
         SetSceneSlotDrawingEnabled(slot, FALSE);
     }
-    func_ov001_02067d0c(last, TRUE);
+    SetSceneSlotResourceLoadingEnabled(last, TRUE);
     SetSceneSlotDrawingEnabled(last, TRUE);
     ResetSceneSlots();
     SetStageState(1, FALSE);

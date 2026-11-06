@@ -1,11 +1,8 @@
 # Field-script HP and camera-displacement gate
 
-The numeric name is retained. The HP contract closes the record-field question, and
-the ov042 getter is now resolved exactly; the intended command-level meaning
-of state 4 plus camera displacement is not yet established. The documented contract corrects
-the pending ledger without inventing a camera-completion or mission-failure role.
+The function is now ScriptCmd_WaitForState4CameraOffsetToClear. New native writers prove the vector is the camera collider offset; [the operational wait contract](FIELD_CAMERA_OFFSET_WAIT.md) records the conditional completion and unchanged HP effects. The original bytecode purpose and gameplay meaning of state 4 remain unknown. The earlier HP evidence below is retained with its original receipt.
 
-`func_ov001_020656d4` is Thumb, 88 bytes. The same pointer 020656d5 occupies run
+`ScriptCmd_WaitForState4CameraOffsetToClear` is Thumb, 88 bytes. The same pointer 020656d5 occupies run
 and resume slots 92/93, group 2 entry 0x2e, in gFieldScriptCommandHandlers. It reads
 no operand descriptors. The return/side-effect cases are:
 
@@ -52,7 +49,7 @@ search does not address this specific gap.
 
 ## Active sources and validation
 
-- [func_ov001_020656d4](../src/overlays/ov001/calls/func_ov001_020656d4.c).
+- [ScriptCmd_WaitForState4CameraOffsetToClear](../src/overlays/ov001/calls/ScriptCmd_WaitForState4CameraOffsetToClear.c).
 - [StepSessionScriptOrAbort](../src/overlays/ov001/calls/StepSessionScriptOrAbort.c).
 - [RunMenuEntryCallbacks](../src/overlays/ov001/calls/RunMenuEntryCallbacks.c).
 - [UpdateHudGauges](../src/overlays/ov001/calls/UpdateHudGauges.c).
@@ -66,3 +63,5 @@ The review receipt has SHA-256
 `7b47ee70d82fced090dc6fadcde6cf2fa967a4753fd313a531352e3763ef835b`.
 This follow-up changes documentation only. Sources, prototypes, layouts,
 compiler choices and all 108 last-validated module hashes are unchanged.
+
+The earlier documentation-only receipt predates this name. The current integration preserves the body and native protocol; the newer linked contract records fresh official function and module checks.

@@ -112,12 +112,12 @@ the exact representation and the retained ov004 bank ambiguity.
 
 ## Unresolved function contracts
 
-37 matched C functions retain numeric names. Every one has a mechanical
+24 matched C functions retain numeric names. Every one has a mechanical
 contract, a specific semantic blocker and a next useful proof:
 
-- [27 common field functions](EU_PENDING_FIELD_FUNCTIONS.md).
+- [16 common field functions](EU_PENDING_FIELD_FUNCTIONS.md).
 - [2 engine, script and scene functions](EU_PENDING_ENGINE_SCENE_FUNCTIONS.md).
-- [8 background/camera/other callbacks](EU_PENDING_CALLBACK_FUNCTIONS.md).
+- [6 background/camera/other callbacks](EU_PENDING_CALLBACK_FUNCTIONS.md).
 
 These are limits on recovered meaning. Full-module matching and reconstructed
 DATA coverage are separate measurements. The
@@ -161,3 +161,5 @@ The [field HP/camera script gate](FIELD_HP_CAMERA_SCRIPT_GATE.md) documents opco
 [Default actor hooks and body sound](DEFAULT_STAGE_ACTOR_BODY_SOUND.md), [session phase and run mask](FIELD_SESSION_PHASE_RUN_MASK.md), [stored camera requests](FIELD_CAMERA_MODE_REQUEST.md) and [the actor-scene handoff](ACTOR_SCENE_FIELD_HANDOFF.md) distinguish native scheduling, deferred application and the still-paused field entries.
 
 [The default stage-actor descriptor](DEFAULT_STAGE_ACTOR_DESCRIPTOR.md) now uses its proved 52-byte native structure and init/update/draw channels, correcting the former handler-array name without new storage.
+
+[Scene-entry/menu policy](FIELD_SCENE_MENU_POLICY.md), [results handoff](RESULTS_SESSION_HANDOFF.md), [scene-transition hooks](FIELD_SCENE_TRANSITION_HOOK.md), [camera-offset waiting](FIELD_CAMERA_OFFSET_WAIT.md), [scroll speed](FIELD_SCRIPT_SCROLL_SPEED.md), [scene-4 exit](FIELD_SCRIPT_SCENE4_EXIT.md), [stage-local brightness](STAGE_BRIGHTNESS_FADE.md) and [camera snapping](CAMERA_GOAL_SNAP.md) explain the next owner and consumer closures.

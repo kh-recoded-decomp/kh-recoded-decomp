@@ -488,7 +488,7 @@ src/overlays/ov001/calls/QueueStage900AndSaveLeaderPlacement.c:
     complete
     .text       start:0x02064884 end:0x020648c8
 
-src/overlays/ov001/calls/func_ov001_020648c8.c:
+src/overlays/ov001/calls/PrepareResultsSessionHandoff.c:
     complete
     .text       start:0x020648c8 end:0x0206493c
 
@@ -552,7 +552,7 @@ src/overlays/ov001/calls/ClearSessionStateWords.c:
     complete
     .text       start:0x02064dc8 end:0x02064de8
 
-src/overlays/ov001/calls/func_ov001_02064de8.c:
+src/overlays/ov001/calls/InvokeFieldSceneTransitionHook.c:
     complete
     .text       start:0x02064de8 end:0x02064e04
 
@@ -744,7 +744,7 @@ src/overlays/ov001/calls/ScriptCmd_ClearSceneEntry.c:
     complete
     .text       start:0x020656c4 end:0x020656d2
 
-src/overlays/ov001/calls/func_ov001_020656d4.c:
+src/overlays/ov001/calls/ScriptCmd_WaitForState4CameraOffsetToClear.c:
     complete
     .text       start:0x020656d4 end:0x0206572c
 
@@ -796,7 +796,7 @@ src/overlays/ov001/calls/ScriptCmd_AdvanceRecordStep.c:
     complete
     .text       start:0x02065950 end:0x0206595a
 
-src/overlays/ov001/calls/func_ov001_0206595c.c:
+src/overlays/ov001/calls/ScriptCmd_SetSceneScrollSpeedTarget.c:
     complete
     .text       start:0x0206595c end:0x0206598a
 
@@ -932,7 +932,7 @@ src/overlays/ov001/calls/ScriptCmd_ToggleSessionBit15.c:
     complete
     .text       start:0x02065e74 end:0x02065e8c
 
-src/overlays/ov001/calls/func_ov001_02065e8c.c:
+src/overlays/ov001/calls/ScriptCmd_RequestFieldExitToScene4.c:
     complete
     .text       start:0x02065e8c end:0x02065ea2
 
@@ -960,7 +960,7 @@ src/overlays/ov001/calls/ScriptCmd_AwardSlotLevelProgress.c:
     complete
     .text       start:0x02065f4c end:0x02065f5a
 
-src/overlays/ov001/calls/func_ov001_02065f5c.c:
+src/overlays/ov001/calls/ScriptCmd_SetSceneEntryValueOverride.c:
     complete
     .text       start:0x02065f5c end:0x02065f7e
 
@@ -1220,7 +1220,7 @@ src/overlays/ov001/calls/SetSceneSlotDrawingEnabled.c:
     complete
     .text       start:0x02067cd0 end:0x02067d0c
 
-src/overlays/ov001/calls/func_ov001_02067d0c.c:
+src/overlays/ov001/calls/SetSceneSlotResourceLoadingEnabled.c:
     complete
     .text       start:0x02067d0c end:0x02067d48
 
@@ -1304,7 +1304,7 @@ src/overlays/ov001/calls/SetMeshEnabled.c:
     complete
     .text       start:0x02068180 end:0x020681b0
 
-src/overlays/ov001/calls/func_ov001_020681b0.c:
+src/overlays/ov001/calls/SetSceneEntryValueOverride.c:
     complete
     .text       start:0x020681b0 end:0x020681c4
 
@@ -1336,7 +1336,7 @@ src/overlays/ov001/calls/ComputeNamedPointBounds.c:
     complete
     .text       start:0x02068268 end:0x02068344
 
-src/overlays/ov001/calls/func_ov001_02068344.c:
+src/overlays/ov001/calls/GetSceneEntryPatrolSurfaceFilterByte.c:
     complete
     .text       start:0x02068344 end:0x0206835c
 
@@ -3556,11 +3556,11 @@ src/overlays/ov001/calls/DrawItemCountBadge.c:
     complete
     .text       start:0x02076ff4 end:0x02077118
 
-src/overlays/ov001/calls/func_ov001_02077118.c:
+src/overlays/ov001/calls/MatchesFieldMenuAutoAdvanceClass.c:
     complete
     .text       start:0x02077118 end:0x02077148
 
-src/overlays/ov001/calls/func_ov001_02077148.c:
+src/overlays/ov001/calls/IsFieldMenuAutoAdvanceCandidate.c:
     complete
     .text       start:0x02077148 end:0x020771a8
 

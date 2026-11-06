@@ -954,3 +954,7 @@ Eleven numeric identities and one unsupported dialog-timer name now follow actua
 ## Default stage-actor descriptor type
 
 The former gNearestEntrySyncHandlers is gDefaultStageActorDescriptor: one 52-byte fallback descriptor, with four scalar words and nine method words. [The contract](DEFAULT_STAGE_ACTOR_DESCRIPTOR.md) links its actual constructor and MAIN update/draw invokers, corrects the +0x1c member to draw and records native size/offset assertions. Both affected official function checks, all 18 complete-object comparisons and a fresh 108-module gate pass with unchanged native bytes and relocation values. The numeric C/DATA inventories remain 37/92; this corrects an already named object rather than claiming new recovered bytes.
+
+## Scene policy, results handoff and camera behavior
+
+Thirteen numeric functions now follow exact scene-entry readers, menu auto-advance consumers, results/session transitions, collider-offset writers and stage-local brightness state. [The system index](README.md) links the complete contracts. Camera waiting ends when state 4 no longer applies even if displacement remains, and its HP-zero effects stay inside the wait path. Camera snapping and stage-local brightness are separate native owners. All 22 affected official function checks and 23 complete-object comparisons pass, with every hash unchanged in a fresh 108-module gate.
