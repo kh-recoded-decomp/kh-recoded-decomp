@@ -4,7 +4,7 @@
 #define ScriptCmd_ShowNameList_020be3ac ScriptCmd_ShowNameList
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
 #define Utf8ToUcs2_020512b4 Utf8ToUcs2
-#define data_ov036_020c383c data_ov036_020c385c
+#define data_ov036_020c383c gTextWindowJoinLineBreak
 #define data_ov036_020c3840 sOv036_QuestionQuestionQuestion_020c3860
 #define strcat_02021f78 strcat
 #include "src/ov036/shared_engine/ScriptCmd_ShowNameList_020be3ac.c"

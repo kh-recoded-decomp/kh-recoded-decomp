@@ -1,4 +1,4 @@
 #define EnterResultsTierMode_020bb290 EnterResultsTierMode
 #define SetResultsMode_020bb274 SetResultsMode
-#define g_resultsScreen_020c0f80 data_ov034_020c0fa0
+#define g_resultsScreen_020c0f80 gResultsScreenPointersPrefix
 #include "src/ov034/reviewed_helpers/EnterResultsTierMode_020bb290.c"

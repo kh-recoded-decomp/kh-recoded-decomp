@@ -6,6 +6,6 @@
 #define Gfx_EnqueueTableCmdAtC_0202b460 Gfx_EnqueueTableCmdAtC
 #define LoadScreenLayerImage_020bb99c LoadScreenLayerImage
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
-#define data_ov036_020c3920 data_ov036_020c3940
+#define data_ov036_020c3920 gEvent2DPanelManager
 #define func_0202c478 Archive_LoadFile
 #include "src/ov036/panel_state/LoadScreenLayerImage_020bb99c.c"

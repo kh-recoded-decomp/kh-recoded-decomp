@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-const u32 data_ov036_020c348c[16] = {
+const u32 gTextWindowTailResourceIdsByStyle[16] = {
     0x00000006, 0x00000004, 0x00000005, 0x00000008,
     0x00000008, 0x00000008, 0x00000008, 0x00000007,
     0x00000007, 0x00000007, 0x00000004, 0x00000004,

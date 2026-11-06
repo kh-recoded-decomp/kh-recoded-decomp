@@ -13,7 +13,7 @@ typedef struct MenuImage {
     u32 texParams[2];
 } MenuImage;
 
-extern const MtxFx33 data_ov034_020be900;
+extern const MtxFx33 gResultsQuadIdentityRotation;
 extern MtxFx33 NNS_G3dGlb_prmBaseRot;
 extern GeometryState NNS_G3dGlb_prmMatColor0;
 extern void NNS_G3dGlbSetBaseScale(const VecFx32 *scale);
@@ -45,7 +45,7 @@ void DrawResultsTexturedQuad(const MenuImage *images, u32 select, u32 pos, fx32 
 {
     VecFx32 trans;
     VecFx32 scale;
-    MtxFx33 rot = data_ov034_020be900;
+    MtxFx33 rot = gResultsQuadIdentityRotation;
     const MenuImage *image = &images[select >> 16];
 
     scale.x = image->width << 12;

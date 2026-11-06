@@ -11,11 +11,11 @@
 #define data_0205ab3c NNS_G3dGlb_camPos
 #define data_0205ab48 NNS_G3dGlb_camUp
 #define data_0205ab54 NNS_G3dGlb_camTarget
-#define data_ov036_020c3360 data_ov036_020c3380
-#define data_ov036_020c336c data_ov036_020c338c
-#define data_ov036_020c3378 data_ov036_020c3398
-#define data_ov036_020c3384 data_ov036_020c33a4
-#define data_ov036_020c3920 data_ov036_020c3940
+#define data_ov036_020c3360 gEventFadeQuadBaseTranslation
+#define data_ov036_020c336c gEventFadeQuadBaseScale
+#define data_ov036_020c3378 gEventFadeQuadCameraPosition
+#define data_ov036_020c3384 gEventFadeQuadCameraUp
+#define data_ov036_020c3920 gEvent2DPanelManager
 #define func_01ff87c4 MI_Copy36B
 #define func_01ff90ec MTX_Identity33_
 #define func_020192ec NNS_G3dGlbSetBaseTrans

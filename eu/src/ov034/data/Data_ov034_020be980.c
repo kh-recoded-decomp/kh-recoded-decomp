@@ -4,7 +4,7 @@
 
 extern u8 data_ov001_020a0101[];
 
-void *data_ov034_020be980[30] = {
+void *gResultsMemberBonusValues[30] = {
     (void *)0x09010608,
     (void *)data_ov001_020a0101,
     (void *)0x01010B01,

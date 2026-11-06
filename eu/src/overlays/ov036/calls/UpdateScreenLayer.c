@@ -28,7 +28,7 @@ typedef struct PanelContext {
     PanelWork *work;
 } PanelContext;
 
-extern PanelContext data_ov036_020c3940;
+extern PanelContext gEvent2DPanelManager;
 extern void LoadScreenLayerImage(ScreenLayer *layer, int screen);
 extern void ClearScreenLayerGraphics(ScreenLayer *layer, int screen);
 extern void StepScreenBrightnessFade(int screen);
@@ -39,7 +39,7 @@ extern int ScaleAroundPivot(int t, int from, int to);
 
 void UpdateScreenLayer(int screen)
 {
-    ScreenLayer *layer = &data_ov036_020c3940.work->layers[screen];
+    ScreenLayer *layer = &gEvent2DPanelManager.work->layers[screen];
     s32 x;
     s32 y;
 
@@ -55,7 +55,7 @@ void UpdateScreenLayer(int screen)
         if (layer->scrollFrame > 0) {
             layer->scrollFrame--;
         }
-        if (data_ov036_020c3940.work->isBusy != 0 || layer->scrollFrame == 0) {
+        if (gEvent2DPanelManager.work->isBusy != 0 || layer->scrollFrame == 0) {
             layer->flags &= ~4;
             x = layer->scrollX;
             y = layer->scrollY;

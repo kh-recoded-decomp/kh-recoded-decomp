@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-const u32 data_ov024_020b741c[32] = {
+const u32 gBoardGapConnectorConfigs[32] = {
     0x00000000, 0x00000002, 0x00000003, 0x00000001,
     0x00000001, 0x00000003, 0x00000003, 0x00000000,
     0x00000002, 0x00000000, 0x00000001, 0x00000002,
@@ -11,7 +11,7 @@ const u32 data_ov024_020b741c[32] = {
     0x00000005, 0x00000003, 0x00000001, 0x00000003,
 };
 
-const u32 data_ov024_020b73d4[18] = {
+const u32 gBoardNodeLinkDirections[18] = {
     0x00000001, 0x00000002, 0xFFFFFFFF, 0x00000000,
     0x00000001, 0xFFFFFFFF, 0x00000003, 0x00000001,
     0x00000002, 0x00000003, 0x00000000, 0x00000001,
@@ -19,12 +19,12 @@ const u32 data_ov024_020b73d4[18] = {
     0x00000000, 0xFFFFFFFF,
 };
 
-const u32 data_ov024_020b73a8[11] = {
+const u32 gBoardNodeScreenPositionTail[11] = {
     0x00000038, 0x00000040, 0x00000078, 0x00000080,
     0x00000038, 0x00000080, 0x00000078, 0x000000C0,
     0x00000038, 0x000000C0, 0x00000078,
 };
 
-const u32 data_ov024_020b73a4[1] = {
+const u32 gBoardNodeScreenX0[1] = {
     0x00000040,
 };

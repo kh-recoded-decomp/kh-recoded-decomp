@@ -45,7 +45,7 @@ typedef struct {
     u8 resetFlag;
 } GameState;
 
-extern SceneHolder data_ov036_020c3940;
+extern SceneHolder gEvent2DPanelManager;
 extern GameState *gFieldSessionWork;
 extern s32 RunPanelSubScriptFrame(void);
 extern int GetScriptBgmSelection(void);
@@ -59,7 +59,7 @@ extern u32 SetPanelEnabled(u32 value);
 
 s32 AdvancePanelScriptSkipAndRestoreScene(void)
 {
-    SceneContext *context = data_ov036_020c3940.context;
+    SceneContext *context = gEvent2DPanelManager.context;
     s32 bgmId;
     int i;
 

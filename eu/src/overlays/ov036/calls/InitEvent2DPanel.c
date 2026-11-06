@@ -40,29 +40,29 @@ static inline BOOL ProtectionCheckFailed(ProtectionDetector detector)
 
 Event2DPanelStateFn InitEvent2DPanel(Event2DPanelArgs *args)
 {
-    data_ov036_020c3940.work = GetCurrentTaskWork();
-    InitPcmChannel(data_ov036_020c3940.work->channels[0], 0x8000, 13);
-    InitPcmChannel(data_ov036_020c3940.work->channels[1], 0x10000, 13);
-    data_ov036_020c3940.work->value00 = args->value01;
-    data_ov036_020c3940.work->value02 = args->value02;
-    data_ov036_020c3940.work->value04 = args->value04;
-    data_ov036_020c3940.work->flags = 3;
-    data_ov036_020c3940.work->pxiHandle = CreateTask(gTextWindowControllerTaskClass, NULL);
+    gEvent2DPanelManager.work = GetCurrentTaskWork();
+    InitPcmChannel(gEvent2DPanelManager.work->channels[0], 0x8000, 13);
+    InitPcmChannel(gEvent2DPanelManager.work->channels[1], 0x10000, 13);
+    gEvent2DPanelManager.work->value00 = args->value01;
+    gEvent2DPanelManager.work->value02 = args->value02;
+    gEvent2DPanelManager.work->value04 = args->value04;
+    gEvent2DPanelManager.work->flags = 3;
+    gEvent2DPanelManager.work->pxiHandle = CreateTask(gTextWindowControllerTaskClass, NULL);
     InitPanelDisplay();
     ClearStageManagerFlags31IfActive();
-    data_ov036_020c3940.work->backgroundArchive = Msg_OpenContainerAndReadHeader(
+    gEvent2DPanelManager.work->backgroundArchive = Msg_OpenContainerAndReadHeader(
         sOv036_Ev2DBgP2_020c3718, 13, FALSE);
-    data_ov036_020c3940.work->characterArchive = Msg_OpenContainerAndReadHeader(
+    gEvent2DPanelManager.work->characterArchive = Msg_OpenContainerAndReadHeader(
         sOv036_Ev2DChtexP2_020c3724, 13, FALSE);
-    data_ov036_020c3940.work->objectArchive = Msg_OpenContainerAndReadHeader(
+    gEvent2DPanelManager.work->objectArchive = Msg_OpenContainerAndReadHeader(
         sOv036_Ev2DObjP2_020c3734, 13, FALSE);
-    data_ov036_020c3940.work->layers = NNSi_FndAllocFromDefaultHeap(2 * sizeof(Event2DScreenLayer));
-    data_ov036_020c3940.work->slots = NNSi_FndAllocFromDefaultHeap(8 * sizeof(Event2DPanelSlot));
-    data_ov036_020c3940.work->actors = NNSi_FndAllocFromDefaultHeap(5 * sizeof(Event2DPanelActor));
+    gEvent2DPanelManager.work->layers = NNSi_FndAllocFromDefaultHeap(2 * sizeof(Event2DScreenLayer));
+    gEvent2DPanelManager.work->slots = NNSi_FndAllocFromDefaultHeap(8 * sizeof(Event2DPanelSlot));
+    gEvent2DPanelManager.work->actors = NNSi_FndAllocFromDefaultHeap(5 * sizeof(Event2DPanelActor));
     ResetSlotScene();
-    LoadDefaultProjectionValues(data_ov036_020c3940.work->projection);
-    data_ov036_020c3940.work->projection[3] = 0;
-    data_ov036_020c3940.work->projection[4] = 300 << 12;
+    LoadDefaultProjectionValues(gEvent2DPanelManager.work->projection);
+    gEvent2DPanelManager.work->projection[3] = 0;
+    gEvent2DPanelManager.work->projection[4] = 300 << 12;
     LoadOverlaySync(0, (int)OVERLAY_104_ID);
     BOOL failed = ProtectionCheckFailed(__DSProt_DetectDummy);
     if (failed) {
@@ -73,6 +73,6 @@ Event2DPanelStateFn InitEvent2DPanel(Event2DPanelArgs *args)
         NNSi_FndAllocFromDefaultHeap(0x100fc);
     }
     UnloadOverlaySync(0, (int)OVERLAY_104_ID);
-    data_ov036_020c3940.work->state = 0;
+    gEvent2DPanelManager.work->state = 0;
     return RunPanelStateMachine;
 }

@@ -45,46 +45,46 @@ InitResultsMovieSourceOps kind:function(thumb,size=0x40) addr:0x020be568
 LoadResultsIconCells kind:function(thumb,size=0x18c) addr:0x020be5a8
 ResultsSessionCleanupNoOp kind:function(thumb,size=0x2) addr:0x020be734
 DrawResultsTexturedQuad kind:function(thumb,size=0x184) addr:0x020be738
-data_ov034_020be8bc kind:data(any) addr:0x020be8bc
-data_ov034_020be8cc kind:data(any) addr:0x020be8cc
-data_ov034_020be8dc kind:data(any) addr:0x020be8dc
-data_ov034_020be8ec kind:data(any) addr:0x020be8ec
-data_ov034_020be900 kind:data(any) addr:0x020be900
+gResultsObjectManagerConfig kind:data(any) addr:0x020be8bc
+gResultsTileTableLayerIds kind:data(any) addr:0x020be8cc
+gResultsTextFrameConfig kind:data(any) addr:0x020be8dc
+gResultsBackgroundContainerConfig kind:data(any) addr:0x020be8ec
+gResultsQuadIdentityRotation kind:data(any) addr:0x020be900
 gResultsScreenTaskHandle kind:data(any) addr:0x020be940
 gResultsScreenHandlers kind:data(any) addr:0x020be944
 gResultsScreenTaskClass kind:data(any) addr:0x020be954
-data_ov034_020be968 kind:data(any) addr:0x020be968
-data_ov034_020be96c kind:data(any) addr:0x020be96c
-data_ov034_020be970 kind:data(any) addr:0x020be970
-gResultsScreenResourceSet kind:data(any) addr:0x020be974
-data_ov034_020be980 kind:data(any) addr:0x020be980
-data_ov034_020be9f8 kind:data(any) addr:0x020be9f8
-data_ov034_020be9fa kind:data(any) addr:0x020be9fa
-data_ov034_020bea78 kind:data(any) addr:0x020bea78
+gResultsRankMarkBetaText kind:data(any) addr:0x020be968
+gResultsRankMarkAlphaText kind:data(any) addr:0x020be96c
+gResultsRankMarkGammaText kind:data(any) addr:0x020be970
+gResultsRankMarkTexts kind:data(any) addr:0x020be974
+gResultsMemberBonusValues kind:data(any) addr:0x020be980
+gResultsStageLayoutPairsPrefix kind:data(any) addr:0x020be9f8
+gResultsStageLayoutPairsTail kind:data(any) addr:0x020be9fa
+gResultsStageItemTriplesPrefix kind:data(any) addr:0x020bea78
 data_ov034_020beae0 kind:data(any) addr:0x020beae0 ambiguous
-data_ov034_020beb2c kind:data(any) addr:0x020beb2c
+gResultsStageRewardPairs kind:data(any) addr:0x020beb2c
 gResultsShopEntries kind:data(any) addr:0x020bed6c
 data_ov034_020bee80 kind:data(any) addr:0x020bee80 ambiguous
 data_ov034_020bf6a0 kind:data(any) addr:0x020bf6a0 ambiguous
-data_ov034_020bf990 kind:data(any) addr:0x020bf990
-data_ov034_020bf992 kind:data(any) addr:0x020bf992
+gResultsStageEntriesPrefix kind:data(any) addr:0x020bf990
+gResultsStageEntriesInitialTail kind:data(any) addr:0x020bf992
 data_ov034_020bfca0 kind:data(any) addr:0x020bfca0 ambiguous
-data_ov034_020bfda5 kind:data(any) addr:0x020bfda5 ambiguous
+gResultsStageEntriesMiddleTail kind:data(any) addr:0x020bfda5 ambiguous
 gResultsShopConfiguration kind:data(any) addr:0x020c056c ambiguous
 sOv034_UiBtlStrLanguageP2_020c0ea8 kind:data(any) addr:0x020c0ea8
-data_ov034_020c0eb8 kind:data(any) addr:0x020c0eb8
-data_ov034_020c0ed0 kind:data(any) addr:0x020c0ed0
+gResultsFont10Path kind:data(any) addr:0x020c0eb8
+gResultsFont10sPath kind:data(any) addr:0x020c0ed0
 sOv034_UiBtlBtluiP2_020c0ee8 kind:data(any) addr:0x020c0ee8
 sOv034_UiBtlBtlLanguageP2_020c0efc kind:data(any) addr:0x020c0efc
 sOv034_SYSAREAMENU_020c0f10 kind:data(any) addr:0x020c0f10
-data_ov034_020c0f20 kind:data(any) addr:0x020c0f20
-data_ov034_020c0f3c kind:data(any) addr:0x020c0f3c
-data_ov034_020c0f44 kind:data(any) addr:0x020c0f44
-data_ov034_020c0f4c kind:data(any) addr:0x020c0f4c
-data_ov034_020c0f58 kind:data(any) addr:0x020c0f58
+gResultsLockedLabelText kind:data(any) addr:0x020c0f20
+gResultsLockedPriceText kind:data(any) addr:0x020c0f3c
+gResultsPriceWideFormat kind:data(any) addr:0x020c0f44
+gResultsRankLabelWideFormat kind:data(any) addr:0x020c0f4c
+gResultsCountLabelWideFormat kind:data(any) addr:0x020c0f58
 sOv034_UiMenuTipsP2_020c0f64 kind:data(any) addr:0x020c0f64
 sOv034_UiMenuLanguageTipsP2_020c0f74 kind:data(any) addr:0x020c0f74
-data_ov034_020c0fa0 kind:bss addr:0x020c0fa0
-data_ov034_020c0fa4 kind:bss addr:0x020c0fa4
-data_ov034_020c0fa8 kind:bss addr:0x020c0fa8
-data_ov034_020c0fe8 kind:bss addr:0x020c0fe8
+gResultsScreenPointersPrefix kind:bss addr:0x020c0fa0
+gResultsScreenWorkPointer kind:bss addr:0x020c0fa4
+gResultsShopNameTextBuffer kind:bss addr:0x020c0fa8
+gResultsExtraShopItemInfoStorage kind:bss addr:0x020c0fe8

@@ -24,7 +24,7 @@ typedef struct SessionFlags {
     u8 rest : 7;
 } SessionFlags;
 
-extern ResultsScreen data_ov034_020c0fa0;
+extern ResultsScreen gResultsScreenPointersPrefix;
 extern u32 gSceneHandoffSharedHeader;
 extern u8 *gSaveIoStateDataTail;
 extern SessionFlags *gFieldSessionWork;
@@ -54,17 +54,17 @@ void CloseResultsSession(void)
     u32 mixB;
 
     SetSoundListenersEnabled(0);
-    FSi_DefaultStepDoneB(data_ov034_020c0fa0.work->overlayImage);
-    FreeAllocatedBuffers(data_ov034_020c0fa0.work->tileTable);
-    ResultsSessionCleanupNoOp(data_ov034_020c0fa0.work->menuState);
-    if (data_ov034_020c0fa0.work->task != NULL) {
-        DestroyTaskObjectWrapper(data_ov034_020c0fa0.work->task);
+    FSi_DefaultStepDoneB(gResultsScreenPointersPrefix.work->overlayImage);
+    FreeAllocatedBuffers(gResultsScreenPointersPrefix.work->tileTable);
+    ResultsSessionCleanupNoOp(gResultsScreenPointersPrefix.work->menuState);
+    if (gResultsScreenPointersPrefix.work->task != NULL) {
+        DestroyTaskObjectWrapper(gResultsScreenPointersPrefix.work->task);
     }
     UnloadOverlayAfterGeometryTransfer(0, (int)OVERLAY_27_ID);
     UnloadOverlayAfterGeometryTransfer(0, (int)OVERLAY_24_ID);
-    if (data_ov034_020c0fa0.work->savedSlot != -1) {
-        if (data_ov034_020c0fa0.work->syncPlayTime == 1) {
-            gSceneHandoffSharedHeader = *data_ov034_020c0fa0.params;
+    if (gResultsScreenPointersPrefix.work->savedSlot != -1) {
+        if (gResultsScreenPointersPrefix.work->syncPlayTime == 1) {
+            gSceneHandoffSharedHeader = *gResultsScreenPointersPrefix.params;
         }
         for (i = 0; i < _ull_mod(*(u32 *)(gSaveIoStateDataTail + 0x28c8)
                 + _ll_udiv((OS_GetTick() - GetCardThreadStartTick()) * 64, 0x1ff6210), 100); i++) {
@@ -79,5 +79,5 @@ void CloseResultsSession(void)
         gFieldSessionWork->resultsDone = 1;
         WriteSessionPackedBits(0x1e19, 1, 0);
     }
-    data_ov034_020c0fa0.work = NULL;
+    gResultsScreenPointersPrefix.work = NULL;
 }

@@ -1,5 +1,5 @@
 #define DestroyPxiChannelState_020c2dbc DestroyPxiChannelState
 #define PXI_Init_02028950 PXI_Init_02028964
 #define PXI_Init_020c2864 DestroyTextWindowTaskHandle
-#define g_pxiChannelState_020ca1e4 data_ov036_020ca204
+#define g_pxiChannelState_020ca1e4 gTextWindowBgTaskWorkPointerStorage
 #include "src/ov036/library_nitro_pxi/DestroyPxiChannelState_020c2dbc.c"

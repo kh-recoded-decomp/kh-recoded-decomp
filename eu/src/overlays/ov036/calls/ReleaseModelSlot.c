@@ -1,6 +1,6 @@
 #define FindOrAcquireModelSlot_020bc138 FindOrAcquireModelSlot
 #define ReleaseModelSlot_020bd414 ReleaseModelSlot
 #define ReleaseResourceAndDetach_0202eee8 ReleaseResourceAndDetach
-#define data_ov036_020c3920 data_ov036_020c3940
+#define data_ov036_020c3920 gEvent2DPanelManager
 #define func_01ff8830 MI_CpuFill8
 #include "src/ov036/panel_state/ReleaseModelSlot_020bd414.c"

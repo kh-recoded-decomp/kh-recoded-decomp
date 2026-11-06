@@ -4,7 +4,7 @@
 #define OS_SNPrintf_0202e080 OS_SNPrintf_0202e094
 #define data_ov034_020bed4c gResultsShopEntries
 #define func_ov027_020ba2a8 GetPackedFileEntry
-#define g_resultsExtraInfo_020c0fc8 data_ov034_020c0fe8
-#define g_resultsExtraName_020c0f88 data_ov034_020c0fa8
-#define g_resultsScreen_020c0f80 data_ov034_020c0fa0
+#define g_resultsExtraInfo_020c0fc8 gResultsExtraShopItemInfoStorage
+#define g_resultsExtraName_020c0f88 gResultsShopNameTextBuffer
+#define g_resultsScreen_020c0f80 gResultsScreenPointersPrefix
 #include "src/ov034/reviewed_helpers/GetResultsShopItemInfo_020be418.c"

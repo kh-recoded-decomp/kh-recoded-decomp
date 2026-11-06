@@ -1,7 +1,7 @@
 #define SetBrightnessAndSyncMain_02029e7c SetBrightnessAndSyncMain
 #define SetSecondaryBrightness_02029ed0 SetSecondaryBrightness
 #define StartScreenBrightnessFade_020bd5dc StartScreenBrightnessFade
-#define data_ov036_020c3920 data_ov036_020c3940
+#define data_ov036_020c3920 gEvent2DPanelManager
 #define func_02006748 GXx_SetMasterBrightness_
 #define func_02029f48 GetMainBrightnessSetting
 #define func_02029f58 GetSubBrightnessSetting

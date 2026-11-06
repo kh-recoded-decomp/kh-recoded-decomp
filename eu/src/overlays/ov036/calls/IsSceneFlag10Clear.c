@@ -1,3 +1,3 @@
 #define IsSceneFlag10Clear_020bc5c0 IsSceneFlag10Clear
-#define data_ov036_020c3920 data_ov036_020c3940
+#define data_ov036_020c3920 gEvent2DPanelManager
 #include "src/ov036/unclassified_helpers/IsSceneFlag10Clear_020bc5c0.c"

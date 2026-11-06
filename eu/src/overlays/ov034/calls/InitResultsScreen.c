@@ -54,15 +54,15 @@ typedef struct BgGraphicsData {
     PaletteData *palette;
 } BgGraphicsData;
 
-extern ResultsScreen data_ov034_020c0fa0;
+extern ResultsScreen gResultsScreenPointersPrefix;
 extern char sOv034_UiBtlStrLanguageP2_020c0ea8[];
-extern char data_ov034_020c0eb8[];
-extern char data_ov034_020c0ed0[];
+extern char gResultsFont10Path[];
+extern char gResultsFont10sPath[];
 extern char sOv034_UiBtlBtluiP2_020c0ee8[];
 extern char sOv034_UiBtlBtlLanguageP2_020c0efc[];
-extern TextFrame data_ov034_020be8dc;
-extern TagConfig data_ov034_020be8ec;
-extern ObjConfig data_ov034_020be8bc;
+extern TextFrame gResultsTextFrameConfig;
+extern TagConfig gResultsBackgroundContainerConfig;
+extern ObjConfig gResultsObjectManagerConfig;
 extern u8 sOv034_SYSAREAMENU_020c0f10[];
 
 extern void EnterResultsTierMode(u32 mode);
@@ -95,7 +95,7 @@ extern void HandleResultsInput(void);
 extern void InvokeForChannelOrBoth(u32 arg0, void *arg1, void (*callback)(void), int channel);
 extern void UpdateResultsFade(void);
 
-#define WORK (data_ov034_020c0fa0.work)
+#define WORK (gResultsScreenPointersPrefix.work)
 #define CONTAINER_BASE(container) ((((container) + 0x8000) & 0xfffffc) << 7)
 
 void InitResultsScreen(void)
@@ -115,15 +115,15 @@ void InitResultsScreen(void)
     container = Msg_OpenContainerAndReadHeader(sOv034_UiBtlStrLanguageP2_020c0ea8, 0xe, 0);
     LoadPackedFileView(WORK->messages, CONTAINER_BASE(container) | 0x80000007, 1);
     ZeroHalfThenFree(container);
-    LoadUtf16FontResource(WORK->font, data_ov034_020c0eb8);
-    LoadUtf16FontResource(WORK->fontAlt, data_ov034_020c0ed0);
-    frame = data_ov034_020be8dc;
+    LoadUtf16FontResource(WORK->font, gResultsFont10Path);
+    LoadUtf16FontResource(WORK->fontAlt, gResultsFont10sPath);
+    frame = gResultsTextFrameConfig;
     InitTextLayerAt(WORK->text, 2, UpdateWidgetLayerDefault_020b9e10(WORK->iconLayer, 10), WORK->font, &frame);
     MarkTileTableRowDirty(WORK->iconLayer, 10);
     AcquireRecordSlot(0, 0);
     objContainer = Msg_OpenContainerAndReadHeader(sOv034_UiBtlBtluiP2_020c0ee8, 0xe, 0);
     iconContainer = Msg_OpenContainerAndReadHeader(sOv034_UiBtlBtlLanguageP2_020c0efc, 0xe, 0);
-    tagConfig = data_ov034_020be8ec;
+    tagConfig = gResultsBackgroundContainerConfig;
     InitBackgroundContainer(WORK->tagTracker, &tagConfig);
     base = CONTAINER_BASE(objContainer);
     LoadTagTrackerResourceFile(WORK->tagTracker, base | 0x80000011);
@@ -134,7 +134,7 @@ void InitResultsScreen(void)
     if (archive != NULL) {
         NNSi_FndFreeFromDefaultHeap(archive);
     }
-    objConfig = data_ov034_020be8bc;
+    objConfig = gResultsObjectManagerConfig;
     objConfig.fileId = base | 0x80000015;
     InitializeResourceContainer(WORK->objects, NULL);
     InitObjManagerAndMark(WORK->objects, &objConfig);

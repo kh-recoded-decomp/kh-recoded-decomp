@@ -4,6 +4,6 @@
 #define ReleaseSharedRecordSlot_0202c8a8 ReleaseSharedRecordSlot
 #define RetainOrInitializeSharedRecord_0202c80c SND_RegisterSeq
 #define SetSlotSharedRecord_020bca70 SetSlotSharedRecord
-#define data_ov036_020c3920 data_ov036_020c3940
+#define data_ov036_020c3920 gEvent2DPanelManager
 #define func_ov036_020bc978 SwapActorSlotResource
 #include "src/ov036/panel_state/SetSlotSharedRecord_020bca70.c"

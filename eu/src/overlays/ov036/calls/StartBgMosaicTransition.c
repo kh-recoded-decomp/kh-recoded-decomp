@@ -23,11 +23,11 @@ typedef struct SceneContext {
 #define REG_MOSAIC_BG (*(vu8 *)0x0400004c)
 #define REG_BG1CNT (*(vu16 *)0x0400000a)
 
-extern SceneContext data_ov036_020c3940;
+extern SceneContext gEvent2DPanelManager;
 
 void StartBgMosaicTransition(int reveal, int duration)
 {
-    MosaicLayer *layer = data_ov036_020c3940.work->layer;
+    MosaicLayer *layer = gEvent2DPanelManager.work->layer;
 
     if (reveal == 0) {
         if (duration == 0) {

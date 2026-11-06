@@ -4,7 +4,7 @@
 #define ReleaseSharedRecordSlot_0202c8a8 ReleaseSharedRecordSlot
 #define SetSlotKeyAndRebind_0206a94c SetSlotKeyAndRebind
 #define SwapActorSlotResource_020bc978 SwapActorSlotResource
-#define data_ov036_020c3920 data_ov036_020c3940
+#define data_ov036_020c3920 gEvent2DPanelManager
 #define func_01ff89a8 MI_CpuCopy8
 #define func_0202c690 SetFileLoaderTextureUploadQueueMode
 #define func_0202c940 AcquireOrRefreshResourceBlock

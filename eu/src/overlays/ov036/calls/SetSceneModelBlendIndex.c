@@ -1,5 +1,5 @@
 #define SetSceneModelBlendIndex_020bd36c SetSceneModelBlendIndex
-#define data_ov036_020c3920 data_ov036_020c3940
+#define data_ov036_020c3920 gEvent2DPanelManager
 #define func_ov036_020bc138 FindOrAcquireModelSlot
 #define selectJointAnimationBlend_0202f2cc selectJointAnimationBlend
 #include "src/ov036/unclassified_helpers/SetSceneModelBlendIndex_020bd36c.c"

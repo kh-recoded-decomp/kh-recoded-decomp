@@ -1,14 +1,14 @@
 #include "nitro/types.h"
 
 typedef struct { unsigned char padding[4]; int value; } SharedState;
-extern SharedState data_ov036_020c3940;
+extern SharedState gEvent2DPanelManager;
 extern unsigned int FindOrAcquireOwnerSlot();
 
 void StartActorSlotShake(unsigned int ownerId,unsigned int target) {
   int index;
   int record;
 
-  record = data_ov036_020c3940.value;
+  record = gEvent2DPanelManager.value;
   index = FindOrAcquireOwnerSlot(ownerId);
   record = index * 0x9c + *(int *)(record + 0x1090);
   if (*(u16 *)(record + 0x88) != 0) {

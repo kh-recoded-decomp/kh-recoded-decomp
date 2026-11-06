@@ -27,12 +27,12 @@ typedef struct PanelContext {
     PanelWork *work;
 } PanelContext;
 
-extern PanelContext data_ov036_020c3940;
+extern PanelContext gEvent2DPanelManager;
 extern void UpdateScreenLayer(int screen);
 
 void StartScreenLayerZoom(int screen, int zoom, s32 duration)
 {
-    ScreenLayer *layer = &data_ov036_020c3940.work->layers[screen];
+    ScreenLayer *layer = &gEvent2DPanelManager.work->layers[screen];
 
     layer->zoomDuration = duration;
     if (layer->flags & 0x20) {

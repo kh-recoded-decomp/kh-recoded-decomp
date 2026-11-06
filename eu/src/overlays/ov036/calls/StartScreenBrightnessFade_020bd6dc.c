@@ -1,4 +1,4 @@
 #define StartScreenBrightnessFade_020bd6bc StartScreenBrightnessFade_020bd6dc
-#define data_ov036_020c3920 data_ov036_020c3940
+#define data_ov036_020c3920 gEvent2DPanelManager
 #define func_ov036_020bd5dc StartScreenBrightnessFade
 #include "src/ov036/panel_state/StartScreenBrightnessFade_020bd6bc.c"

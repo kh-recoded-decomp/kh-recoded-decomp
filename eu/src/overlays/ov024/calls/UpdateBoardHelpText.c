@@ -36,7 +36,7 @@ typedef struct BoardHelpGlobals {
     BoardHelpCursor *cursor;
 } BoardHelpGlobals;
 
-extern BoardHelpGlobals data_ov024_020b7540;
+extern BoardHelpGlobals gBoardScreenGlobals;
 extern int GetLanguageIndex(void);
 extern const u16 *GetPackedFileEntry(const PackedTextView *view, int index);
 extern u16 *FormatPackedWideText(const PackedTextView *view, unsigned index,
@@ -54,73 +54,73 @@ void UpdateBoardHelpText(void)
     const u16 *text;
     int value;
 
-    if (data_ov024_020b7540.cursor->selectedType >= 0 &&
-        data_ov024_020b7540.cursor->selectedSlot >= 0) {
-        if (data_ov024_020b7540.state->helpMode == 0) {
+    if (gBoardScreenGlobals.cursor->selectedType >= 0 &&
+        gBoardScreenGlobals.cursor->selectedSlot >= 0) {
+        if (gBoardScreenGlobals.state->helpMode == 0) {
             return;
         }
-        data_ov024_020b7540.state->helpMode = 0;
-        if (data_ov024_020b7540.cursor->selectedType == 0x16 &&
-            data_ov024_020b7540.cursor->value == 1) {
-            text = GetPackedFileEntry(&data_ov024_020b7540.state->messages, 0x3e);
-        } else if (data_ov024_020b7540.cursor->selectedType == 0x18 &&
-                   data_ov024_020b7540.cursor->value == 1) {
-            text = GetPackedFileEntry(&data_ov024_020b7540.state->messages, 0x3f);
-        } else if (data_ov024_020b7540.cursor->selectedType == 0x19 &&
-                   data_ov024_020b7540.cursor->value == 1) {
-            text = GetPackedFileEntry(&data_ov024_020b7540.state->messages, 0x40);
-        } else if (data_ov024_020b7540.cursor->selectedType == 0x1d &&
-                   data_ov024_020b7540.cursor->value == 1) {
-            text = GetPackedFileEntry(&data_ov024_020b7540.state->messages, 0x41);
-        } else if (data_ov024_020b7540.cursor->selectedType == 0x1e &&
-                   data_ov024_020b7540.cursor->value == 1) {
-            text = GetPackedFileEntry(&data_ov024_020b7540.state->messages, 0x42);
+        gBoardScreenGlobals.state->helpMode = 0;
+        if (gBoardScreenGlobals.cursor->selectedType == 0x16 &&
+            gBoardScreenGlobals.cursor->value == 1) {
+            text = GetPackedFileEntry(&gBoardScreenGlobals.state->messages, 0x3e);
+        } else if (gBoardScreenGlobals.cursor->selectedType == 0x18 &&
+                   gBoardScreenGlobals.cursor->value == 1) {
+            text = GetPackedFileEntry(&gBoardScreenGlobals.state->messages, 0x3f);
+        } else if (gBoardScreenGlobals.cursor->selectedType == 0x19 &&
+                   gBoardScreenGlobals.cursor->value == 1) {
+            text = GetPackedFileEntry(&gBoardScreenGlobals.state->messages, 0x40);
+        } else if (gBoardScreenGlobals.cursor->selectedType == 0x1d &&
+                   gBoardScreenGlobals.cursor->value == 1) {
+            text = GetPackedFileEntry(&gBoardScreenGlobals.state->messages, 0x41);
+        } else if (gBoardScreenGlobals.cursor->selectedType == 0x1e &&
+                   gBoardScreenGlobals.cursor->value == 1) {
+            text = GetPackedFileEntry(&gBoardScreenGlobals.state->messages, 0x42);
         } else {
-            value = data_ov024_020b7540.cursor->value;
+            value = gBoardScreenGlobals.cursor->value;
             if (value != 0) {
                 /* Types 3..7 use a zero-based value in nonzero language indexes. */
-                if ((u8)(s8)(data_ov024_020b7540.cursor->selectedType - 3) <= 4 &&
+                if ((u8)(s8)(gBoardScreenGlobals.cursor->selectedType - 3) <= 4 &&
                     GetLanguageIndex() != 0) {
                     value--;
                 }
-                text = FormatPackedWideText(&data_ov024_020b7540.state->messages,
-                       data_ov024_020b7540.cursor->selectedType + 3,
+                text = FormatPackedWideText(&gBoardScreenGlobals.state->messages,
+                       gBoardScreenGlobals.cursor->selectedType + 3,
                        valueText, 0x40, value);
             } else {
-                text = GetPackedFileEntry(&data_ov024_020b7540.state->messages,
-                       data_ov024_020b7540.cursor->selectedType + 3);
+                text = GetPackedFileEntry(&gBoardScreenGlobals.state->messages,
+                       gBoardScreenGlobals.cursor->selectedType + 3);
             }
         }
-        text = FormatPackedWideText(&data_ov024_020b7540.state->messages,
+        text = FormatPackedWideText(&gBoardScreenGlobals.state->messages,
                                  0x2a, helpText, 0x40, text);
-    } else if (!data_ov024_020b7540.cursor->finished) {
-        if (data_ov024_020b7540.state->helpMode == 1) {
+    } else if (!gBoardScreenGlobals.cursor->finished) {
+        if (gBoardScreenGlobals.state->helpMode == 1) {
             return;
         }
-        data_ov024_020b7540.state->helpMode = 1;
-        text = GetPackedFileEntry(&data_ov024_020b7540.state->messages, 0x2b);
-    } else if (data_ov024_020b7540.cursor->progress == data_ov024_020b7540.cursor->goal) {
-        if (data_ov024_020b7540.state->helpMode == 2) {
+        gBoardScreenGlobals.state->helpMode = 1;
+        text = GetPackedFileEntry(&gBoardScreenGlobals.state->messages, 0x2b);
+    } else if (gBoardScreenGlobals.cursor->progress == gBoardScreenGlobals.cursor->goal) {
+        if (gBoardScreenGlobals.state->helpMode == 2) {
             return;
         }
-        data_ov024_020b7540.state->helpMode = 2;
-        text = GetPackedFileEntry(&data_ov024_020b7540.state->messages, 0x30);
+        gBoardScreenGlobals.state->helpMode = 2;
+        text = GetPackedFileEntry(&gBoardScreenGlobals.state->messages, 0x30);
     } else {
-        if (data_ov024_020b7540.state->helpMode == 3) {
+        if (gBoardScreenGlobals.state->helpMode == 3) {
             return;
         }
-        data_ov024_020b7540.state->helpMode = 3;
-        text = GetPackedFileEntry(&data_ov024_020b7540.state->messages, 0x2f);
+        gBoardScreenGlobals.state->helpMode = 3;
+        text = GetPackedFileEntry(&gBoardScreenGlobals.state->messages, 0x2f);
     }
     if (text != NULL) {
-        CallVirtualHandlerSlot1(data_ov024_020b7540.state->textLayer, 0);
-        if (data_ov024_020b7540.state->useCustomFont) {
-            DrawTextAnchoredWithFontFallback(data_ov024_020b7540.state->textLayer, 0, 4, 2, 0,
-                         text, data_ov024_020b7540.state->smallFont, 0xe0);
+        CallVirtualHandlerSlot1(gBoardScreenGlobals.state->textLayer, 0);
+        if (gBoardScreenGlobals.state->useCustomFont) {
+            DrawTextAnchoredWithFontFallback(gBoardScreenGlobals.state->textLayer, 0, 4, 2, 0,
+                         text, gBoardScreenGlobals.state->smallFont, 0xe0);
         } else {
-            DrawTextAnchoredWithFontFallback(data_ov024_020b7540.state->textLayer, 0, 4, 2, 0,
+            DrawTextAnchoredWithFontFallback(gBoardScreenGlobals.state->textLayer, 0, 4, 2, 0,
                          text, GetFieldFont2(), 0xe0);
         }
-        FlushBufferAndRunCallback(data_ov024_020b7540.state->textLayer);
+        FlushBufferAndRunCallback(gBoardScreenGlobals.state->textLayer);
     }
 }

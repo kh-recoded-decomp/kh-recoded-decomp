@@ -1,4 +1,4 @@
 #define ReleaseSubObjectIfActive_020b5800 ReleaseSubObjectIfActive
 #define func_ov027_020b8c94 UpdateWidgetRootAndFireAlarm
-#define g_context_020b7520 data_ov024_020b7540
+#define g_context_020b7520 gBoardScreenGlobals
 #include "src/ov024/unclassified_helpers/ReleaseSubObjectIfActive_020b5800.c"

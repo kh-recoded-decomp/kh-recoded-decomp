@@ -1,5 +1,5 @@
 #define SelectGroupMemberPose_020bd02c SelectGroupMemberPose
-#define data_ov032_020bff6c data_ov032_020bff8c
+#define data_ov032_020bff6c gGroupPoseChoiceCodes
 #define func_ov032_020bbc60 GetObjectGroup
 #define func_ov032_020bbc78 GetGroupMemberWork
 #define func_ov032_020bf088 IsRowSettledInMode5

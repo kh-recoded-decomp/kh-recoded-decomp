@@ -2,4 +2,4 @@
 
 #pragma explicit_zero_data on
 
-char data_ov034_020c0ed0[24] = "text/font_eu_10s.nftr";
+char gResultsFont10sPath[24] = "text/font_eu_10s.nftr";

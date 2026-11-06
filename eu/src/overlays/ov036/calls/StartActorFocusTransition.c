@@ -1,4 +1,4 @@
 #define StartActorFocusTransition_020bcec8 StartActorFocusTransition
-#define data_ov036_020c3920 data_ov036_020c3940
+#define data_ov036_020c3920 gEvent2DPanelManager
 #define func_02023dbc _s32_div_f
 #include "src/ov036/unclassified_helpers/StartActorFocusTransition_020bcec8.c"

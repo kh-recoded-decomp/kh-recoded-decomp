@@ -5,6 +5,6 @@
 #define SetScreenLayerImage_020bd4b4 SetScreenLayerImage
 #define SetSlotSharedRecord_020bca70 SetSlotSharedRecord
 #define StartScreenLayerScroll_020bd570 StartScreenLayerScroll
-#define data_ov036_020c3920 data_ov036_020c3940
+#define data_ov036_020c3920 gEvent2DPanelManager
 #define func_02025438 SetPanelEnabled
 #include "src/ov036/panel_state/FinishPanelSceneSetup_020baa38.c"

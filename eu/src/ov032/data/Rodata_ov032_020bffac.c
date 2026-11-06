@@ -1,5 +1,5 @@
 #include "nitro/types.h"
 
-const u32 data_ov032_020bffac[3] = {
+const u32 gGroupGroundProbeDelta[3] = {
     0x00000000, 0xFFF9C000, 0x00000000,
 };

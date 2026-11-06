@@ -1,4 +1,4 @@
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define ReleaseOverlayResourceSlots_020b5dc0 ReleaseOverlayResourceSlots
-#define data_ov024_020b752c data_ov024_020b754c
+#define data_ov024_020b752c gBoardNodeGraphicsBufferStorage
 #include "src/ov024/resource_loading/ReleaseOverlayResourceSlots_020b5dc0.c"

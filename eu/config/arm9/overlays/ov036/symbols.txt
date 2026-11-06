@@ -213,28 +213,28 @@ UpdateTextPanelPromptCallback kind:function(arm,size=0x10) addr:0x020c32e4
 CloseOverlayPanel kind:function(arm,size=0x74) addr:0x020c32f4
 ClosePanelTextWindows kind:function(arm,size=0xc) addr:0x020c3368
 AdvancePanelFinishedTextWindows kind:function(arm,size=0xc) addr:0x020c3374
-data_ov036_020c3380 kind:data(any) addr:0x020c3380
-data_ov036_020c338c kind:data(any) addr:0x020c338c
-data_ov036_020c3398 kind:data(any) addr:0x020c3398
-data_ov036_020c33a4 kind:data(any) addr:0x020c33a4
+gEventFadeQuadBaseTranslation kind:data(any) addr:0x020c3380
+gEventFadeQuadBaseScale kind:data(any) addr:0x020c338c
+gEventFadeQuadCameraPosition kind:data(any) addr:0x020c3398
+gEventFadeQuadCameraUp kind:data(any) addr:0x020c33a4
 data_ov036_020c33b0 kind:data(any) addr:0x020c33b0
-data_ov036_020c33b8 kind:data(any) addr:0x020c33b8
-data_ov036_020c33c0 kind:data(any) addr:0x020c33c0
-data_ov036_020c33c8 kind:data(any) addr:0x020c33c8
-data_ov036_020c33d0 kind:data(any) addr:0x020c33d0
-data_ov036_020c33d8 kind:data(any) addr:0x020c33d8
-data_ov036_020c33e8 kind:data(any) addr:0x020c33e8
-data_ov036_020c3404 kind:data(any) addr:0x020c3404
-data_ov036_020c342c kind:data(any) addr:0x020c342c
-data_ov036_020c342e kind:data(any) addr:0x020c342e
-data_ov036_020c3430 kind:data(any) addr:0x020c3430
-data_ov036_020c3432 kind:data(any) addr:0x020c3432
+gTextWindowTextBgIds kind:data(any) addr:0x020c33b8
+gTextWindowFrameBgIds kind:data(any) addr:0x020c33c0
+gTextWindowDisplayPlaneMasks kind:data(any) addr:0x020c33c8
+gDialogTailDefaultYPositions kind:data(any) addr:0x020c33d0
+gDialogTailDefaultXPositions kind:data(any) addr:0x020c33d8
+gDialogSpecialStyleFrameIds kind:data(any) addr:0x020c33e8
+gDialogTailYBySizeClass kind:data(any) addr:0x020c3404
+gDialogFrameRect0X kind:data(any) addr:0x020c342c
+gDialogFrameRect0Y kind:data(any) addr:0x020c342e
+gDialogFrameRect0Width kind:data(any) addr:0x020c3430
+gDialogFrameRectTableTail kind:data(any) addr:0x020c3432
 gTextWindowStateHandlers kind:data(any) addr:0x020c3454
-data_ov036_020c348c kind:data(any) addr:0x020c348c
-data_ov036_020c34cc kind:data(any) addr:0x020c34cc
-data_ov036_020c3500 kind:data(any) addr:0x020c3500 ambiguous
-data_ov036_020c351c kind:data(any) addr:0x020c351c
-data_ov036_020c35a8 kind:data(any) addr:0x020c35a8
+gTextWindowTailResourceIdsByStyle kind:data(any) addr:0x020c348c
+gDialogTailXBySizeClassPrefix kind:data(any) addr:0x020c34cc
+gDialogTailXBySizeClassTail kind:data(any) addr:0x020c3500 ambiguous
+gDialogFrameIdsByStyleAndSize kind:data(any) addr:0x020c351c
+gTextWindowTailAnchorConfigs kind:data(any) addr:0x020c35a8
 data_ov036_020c36b8 kind:data(any) addr:0x020c36b8
 data_ov036_020c36c0 kind:data(any) addr:0x020c36c0
 gEvent2DPanelTaskHandle kind:data(any) addr:0x020c36e0
@@ -246,20 +246,20 @@ sOv036_Ev2DObjP2_020c3734 kind:data(any) addr:0x020c3734
 sOv036_E_020c3744 kind:data(any) addr:0x020c3744
 sOv036_Ev2DEVW0FormatDP2_020c3748 kind:data(any) addr:0x020c3748
 gTextScriptCommandHandlers kind:data(any) addr:0x020c375c
-data_ov036_020c385c kind:data(any) addr:0x020c385c
+gTextWindowJoinLineBreak kind:data(any) addr:0x020c385c
 sOv036_QuestionQuestionQuestion_020c3860 kind:data(any) addr:0x020c3860
 gTextWindowResourceTable kind:data(any) addr:0x020c3864
 gTextWindowTaskClass kind:data(any) addr:0x020c3868
 gTextSceneBgCharacterLoaders kind:data(any) addr:0x020c387c
 gTextSceneBgScreenLoaders kind:data(any) addr:0x020c389c
-data_ov036_020c38bc kind:data(any) addr:0x020c38bc
+gDialogPrimaryRecordPositions kind:data(any) addr:0x020c38bc
 sOv036_UiEventuiEventuiP2f_020c38e4 kind:data(any) addr:0x020c38e4
 sOv036_TextFontEu10Nftr_020c38fc kind:data(any) addr:0x020c38fc
 sOv036_TextFontJp10Nftr_020c3914 kind:data(any) addr:0x020c3914
 gTextWindowControllerTaskClass kind:data(any) addr:0x020c392c
-data_ov036_020c3940 kind:bss addr:0x020c3940
-data_ov036_020c394c kind:bss addr:0x020c394c
-data_ov036_020c3950 kind:bss addr:0x020c3950
+gEvent2DPanelManager kind:bss addr:0x020c3940
+gTextWindowTaskWork kind:bss addr:0x020c394c
+gTextWindowStaticWorkPrefix kind:bss addr:0x020c3950
 data_ov036_020c4014 kind:bss addr:0x020c4014 ambiguous
 data_ov036_020c4160 kind:bss addr:0x020c4160 ambiguous
 data_ov036_020c4c60 kind:bss addr:0x020c4c60 ambiguous
@@ -268,4 +268,4 @@ data_ov036_020c59a0 kind:bss addr:0x020c59a0 ambiguous
 data_ov036_020c5cc0 kind:bss addr:0x020c5cc0 ambiguous
 data_ov036_020c5da0 kind:bss addr:0x020c5da0 ambiguous
 data_ov036_020c7da0 kind:bss addr:0x020c7da0 ambiguous
-data_ov036_020ca204 kind:bss addr:0x020ca204
+gTextWindowBgTaskWorkPointerStorage kind:bss addr:0x020ca204

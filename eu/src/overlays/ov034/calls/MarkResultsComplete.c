@@ -1,3 +1,3 @@
 #define MarkResultsComplete_020bde3c MarkResultsComplete
-#define resultsState_020c0f80 data_ov034_020c0fa0
+#define resultsState_020c0f80 gResultsScreenPointersPrefix
 #include "src/ov034/reviewed_helpers/MarkResultsComplete_020bde3c.c"

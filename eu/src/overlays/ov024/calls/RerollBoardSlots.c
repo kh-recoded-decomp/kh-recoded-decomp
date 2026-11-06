@@ -3,5 +3,5 @@
 #define func_0202a9d0 NextSharedRandom16Scaled
 #define func_ov024_020b60e0 GenerateRandomLinks
 #define func_ov024_020b61ec PlaceBoardBonuses
-#define g_state_020b7520 data_ov024_020b7540
+#define g_state_020b7520 gBoardScreenGlobals
 #include "src/ov024/board_setup/RerollBoardSlots_020b5f0c.c"

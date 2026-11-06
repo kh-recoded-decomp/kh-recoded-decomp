@@ -25,7 +25,7 @@ typedef struct SlotSceneHolder {
     SlotScene *scene;
 } SlotSceneHolder;
 
-extern SlotSceneHolder data_ov036_020c3940;
+extern SlotSceneHolder gEvent2DPanelManager;
 extern int _s32_div_f(int numerator, int denominator);
 
 #define REG_BG1OFS (*(vu32 *)0x04000014)
@@ -61,7 +61,7 @@ void UpdateLayerShake(ShakeLayer *layer, BOOL subScreen)
     baseY = layer->baseY;
     x = (baseX + offset) >> 12;
     y = (baseY + offset) >> 12;
-    if (data_ov036_020c3940.scene->skipAnimation != 0 || layer->amplitude < 0x29) {
+    if (gEvent2DPanelManager.scene->skipAnimation != 0 || layer->amplitude < 0x29) {
         layer->flags &= ~0x30;
         x = baseX >> 12;
         y = baseY >> 12;

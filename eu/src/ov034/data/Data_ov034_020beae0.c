@@ -2,7 +2,7 @@
 
 #pragma explicit_zero_data on
 
-u32 data_ov034_020beb2c[144] = {
+u32 gResultsStageRewardPairs[144] = {
     0x00640002, 0x000A0003, 0x00010004, 0x03E80005,
     0x003C0001, 0x00140002, 0x00020003, 0x00C80001,
     0x003C0004, 0x00140005, 0x00020003, 0x00C80006,

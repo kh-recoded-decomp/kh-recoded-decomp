@@ -7,5 +7,5 @@
 #define func_0204f378 IndexedRecords_SetFlag2
 #define func_ov027_020b90a4 FindWidgetById
 #define func_ov027_020b9580 SetEntrySlotsVisible
-#define g_resultsScreen_020c0f80 data_ov034_020c0fa0
+#define g_resultsScreen_020c0f80 gResultsScreenPointersPrefix
 #include "src/ov034/unclassified_helpers/ResetResultsObjects_020bce50.c"

@@ -1,5 +1,5 @@
 #define GFXi_EnqueueCommand_02014090 NNS_GfdRegisterNewVramTransferTask
 #define UploadGroupPaletteSegment_020bb8d4 UploadGroupPaletteSegment
-#define data_ov032_020c0044 data_ov032_020c0064
-#define data_ov032_020c004e data_ov032_020c006e
+#define data_ov032_020c0044 gGroupPrimaryPaletteSegment
+#define data_ov032_020c004e gGroupAlternatePaletteStorage
 #include "src/ov032/object_group/UploadGroupPaletteSegment_020bb8d4.c"

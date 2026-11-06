@@ -193,13 +193,13 @@ typedef int (*ResultsStateFn)(void);
  * Deferred MWCC emission gives them one address base while retaining separate
  * object identities. MWCC emits them in reverse declaration order.
  */
-ResultsWork *data_ov034_020c0fa4;
-ResultsParams *data_ov034_020c0fa0;
-extern const TileIds data_ov034_020be8cc;
+ResultsWork *gResultsScreenWorkPointer;
+ResultsParams *gResultsScreenPointersPrefix;
+extern const TileIds gResultsTileTableLayerIds;
 extern SessionState gSceneHandoffSharedHeader;
 extern SessionFlags *gFieldSessionWork;
-extern StageInfo data_ov034_020bf990[];
-extern u8 data_ov034_020bea78[][3];
+extern StageInfo gResultsStageEntriesPrefix[];
+extern u8 gResultsStageItemTriplesPrefix[][3];
 extern SaveData *gSaveIoStateDataTail;
 extern u8 OVERLAY_27_ID[];
 extern u8 OVERLAY_24_ID[];
@@ -227,7 +227,7 @@ extern int UpdateResultsScreen(void);
 
 static inline void InitResultsTiles(ResultsWork *work, TileIds *tileIds, TileTableSource *source)
 {
-    *tileIds = data_ov034_020be8cc;
+    *tileIds = gResultsTileTableLayerIds;
     source->count = 4;
     source->width = 0x20;
     source->height = 0x20;
@@ -251,35 +251,35 @@ ResultsStateFn InitResultsScene(ResultsArgs *args)
     int itemIndex;
 
     /* Legacy symbol name: this returns the current task's work pointer. */
-    data_ov034_020c0fa4 = GetCurrentTaskWork();
-    MI_CpuFill8(data_ov034_020c0fa4, 0, sizeof(ResultsWork));
-    MIi_CpuClear32(-1, data_ov034_020c0fa4->slotFlags, sizeof(data_ov034_020c0fa4->slotFlags));
-    data_ov034_020c0fa4->stage = args->stage;
-    data_ov034_020c0fa4->world = args->world;
-    data_ov034_020c0fa4->area = args->area;
-    data_ov034_020c0fa4->score = args->score;
-    data_ov034_020c0fa4->shopSection = args->section;
-    data_ov034_020c0fa4->sessionKind = args->kind;
-    data_ov034_020c0fa4->prevMode = -1;
-    data_ov034_020c0fa4->flags = 3;
+    gResultsScreenWorkPointer = GetCurrentTaskWork();
+    MI_CpuFill8(gResultsScreenWorkPointer, 0, sizeof(ResultsWork));
+    MIi_CpuClear32(-1, gResultsScreenWorkPointer->slotFlags, sizeof(gResultsScreenWorkPointer->slotFlags));
+    gResultsScreenWorkPointer->stage = args->stage;
+    gResultsScreenWorkPointer->world = args->world;
+    gResultsScreenWorkPointer->area = args->area;
+    gResultsScreenWorkPointer->score = args->score;
+    gResultsScreenWorkPointer->shopSection = args->section;
+    gResultsScreenWorkPointer->sessionKind = args->kind;
+    gResultsScreenWorkPointer->prevMode = -1;
+    gResultsScreenWorkPointer->flags = 3;
     SetupResultsDisplay();
     LoadOverlayAfterGeometryTransfer(0, (int)OVERLAY_27_ID);
     LoadOverlayAfterGeometryTransfer(0, (int)OVERLAY_24_ID);
-    InitResultsTiles(data_ov034_020c0fa4, &tileIds, &source);
-    InitKeyRepeatState((s16 *)&data_ov034_020c0fa4->keyRepeat, NULL);
+    InitResultsTiles(gResultsScreenWorkPointer, &tileIds, &source);
+    InitKeyRepeatState((s16 *)&gResultsScreenWorkPointer->keyRepeat, NULL);
     QueueSoundCommandForArc(3 + 0x198);
-    data_ov034_020c0fa4->state = 0;
+    gResultsScreenWorkPointer->state = 0;
 
-    if (data_ov034_020c0fa0 == NULL) {
+    if (gResultsScreenPointersPrefix == NULL) {
         if (GetSessionBufferSize(10) == 0) {
-            data_ov034_020c0fa0 = AllocSessionBuffer(10, sizeof(ResultsParams));
-            MI_CpuFill8(data_ov034_020c0fa0, 0, sizeof(ResultsParams));
-            data_ov034_020c0fa4->mode = 0;
+            gResultsScreenPointersPrefix = AllocSessionBuffer(10, sizeof(ResultsParams));
+            MI_CpuFill8(gResultsScreenPointersPrefix, 0, sizeof(ResultsParams));
+            gResultsScreenWorkPointer->mode = 0;
             if (args->kind == 1) {
                 /* This encounter number is independent of the later shop-table cursor. */
                 int bonusStage;
-                data_ov034_020c0fa4->shopSection = 0x1a;
-                data_ov034_020c0fa0->worldId = data_ov034_020c0fa4->shopSection;
+                gResultsScreenWorkPointer->shopSection = 0x1a;
+                gResultsScreenPointersPrefix->worldId = gResultsScreenWorkPointer->shopSection;
                 if (gSceneHandoffSharedHeader.progress % 10 == 0) {
                     bonusStage = gSceneHandoffSharedHeader.progress / 10 * 2;
                     gSceneHandoffSharedHeader.seed = NextSharedRandom16Scaled(0xffff) + random_next_scaled(-1);
@@ -289,7 +289,7 @@ ResultsStateFn InitResultsScene(ResultsArgs *args)
                         gSceneHandoffSharedHeader.seed = gSceneHandoffSharedHeader.defaultSeed;
                     }
                 }
-                SetupStageParams(data_ov034_020c0fa0, data_ov034_020c0fa0->worldId, bonusStage);
+                SetupStageParams(gResultsScreenPointersPrefix, gResultsScreenPointersPrefix->worldId, bonusStage);
                 if (gSceneHandoffSharedHeader.mode == 0) {
                     /* The ROM stores bit 3, reloads the halfword, then clears bit 4.
                      * Preserve that two-step memory update when rebuilding EU.
@@ -298,29 +298,29 @@ ResultsStateFn InitResultsScene(ResultsArgs *args)
                     ((volatile SessionState *)&gSceneHandoffSharedHeader)->bonus = 0;
                 }
             } else {
-                data_ov034_020c0fa0->worldId = data_ov034_020c0fa4->shopSection;
+                gResultsScreenPointersPrefix->worldId = gResultsScreenWorkPointer->shopSection;
                 if (gFieldSessionWork->replay) {
-                    data_ov034_020c0fa0->earnedAmount = GetSessionCounter(1);
+                    gResultsScreenPointersPrefix->earnedAmount = GetSessionCounter(1);
                 } else {
                     gSceneHandoffSharedHeader.rank = 1;
                     gSceneHandoffSharedHeader.seed = NextSharedRandom16Scaled(0x10000 - 1) + random_next_scaled(-1);
                 }
-                data_ov034_020c0fa0->unlockedRank = gSceneHandoffSharedHeader.rank;
-                SetupStageParams(data_ov034_020c0fa0, data_ov034_020c0fa0->worldId,
-                                 data_ov034_020c0fa0->unlockedRank);
+                gResultsScreenPointersPrefix->unlockedRank = gSceneHandoffSharedHeader.rank;
+                SetupStageParams(gResultsScreenPointersPrefix, gResultsScreenPointersPrefix->worldId,
+                                 gResultsScreenPointersPrefix->unlockedRank);
             }
-            data_ov034_020c0fa4->shownBase = data_ov034_020c0fa0->earnedAmount;
-            data_ov034_020c0fa4->shownTotal = data_ov034_020c0fa4->shownBase;
+            gResultsScreenWorkPointer->shownBase = gResultsScreenPointersPrefix->earnedAmount;
+            gResultsScreenWorkPointer->shownTotal = gResultsScreenWorkPointer->shownBase;
 
             worldCount = 0;
             stageIndex = 0;
-            while (worldCount != data_ov034_020c0fa0->worldId) {
-                if (data_ov034_020bf990[stageIndex].group == -1) {
+            while (worldCount != gResultsScreenPointersPrefix->worldId) {
+                if (gResultsStageEntriesPrefix[stageIndex].group == -1) {
                     worldCount++;
                 }
                 stageIndex++;
             }
-            stageCount = data_ov034_020c0fa0->maxRank;
+            stageCount = gResultsScreenPointersPrefix->maxRank;
             if (args->kind == 1) {
                 stageCount = 0x14;
             }
@@ -332,91 +332,91 @@ ResultsStateFn InitResultsScene(ResultsArgs *args)
             for (; stageIndex < firstStage + stageCount; stageIndex++) {
                 for (itemSlot = 0; itemSlot < 3; itemSlot++) {
                     for (itemIndex = 0; itemIndex < itemCount; itemIndex++) {
-                        if (items[itemIndex] == data_ov034_020bea78[data_ov034_020bf990[stageIndex].group][itemSlot]) {
+                        if (items[itemIndex] == gResultsStageItemTriplesPrefix[gResultsStageEntriesPrefix[stageIndex].group][itemSlot]) {
                             break;
                         }
                     }
                     if (itemIndex == itemCount) {
-                        items[itemCount++] = data_ov034_020bea78[data_ov034_020bf990[stageIndex].group][itemSlot];
+                        items[itemCount++] = gResultsStageItemTriplesPrefix[gResultsStageEntriesPrefix[stageIndex].group][itemSlot];
                     }
                 }
             }
             BuildUniqueItemPriceList(items, itemCount);
         } else {
-            data_ov034_020c0fa0 = (ResultsParams *)GetSessionBufferAddress(10);
-            data_ov034_020c0fa4->mode = 2;
-            data_ov034_020c0fa0->earnedAmount = GetSessionCounter(1);
-            data_ov034_020c0fa4->shownBase = data_ov034_020c0fa0->earnedAmount;
-            data_ov034_020c0fa4->shownTotal = data_ov034_020c0fa4->shownBase;
-            data_ov034_020c0fa4->shopSection = data_ov034_020c0fa0->worldId;
-            params = data_ov034_020c0fa0;
+            gResultsScreenPointersPrefix = (ResultsParams *)GetSessionBufferAddress(10);
+            gResultsScreenWorkPointer->mode = 2;
+            gResultsScreenPointersPrefix->earnedAmount = GetSessionCounter(1);
+            gResultsScreenWorkPointer->shownBase = gResultsScreenPointersPrefix->earnedAmount;
+            gResultsScreenWorkPointer->shownTotal = gResultsScreenWorkPointer->shownBase;
+            gResultsScreenWorkPointer->shopSection = gResultsScreenPointersPrefix->worldId;
+            params = gResultsScreenPointersPrefix;
             if (params->missionGrade >= 0) {
                 if (params->clearRank >= 0 && params->missionGrade < 0xf && params->missionGrade != 0xb) {
                     params->isBonusStage = 1;
                 }
-                params = data_ov034_020c0fa0;
+                params = gResultsScreenPointersPrefix;
                 if (params->isBonusStage) {
                     params->earnedAmount += params->bonusAmount * params->bonusRate / 10;
-                    if (data_ov034_020c0fa0->earnedAmount > 9999999) {
-                        data_ov034_020c0fa0->earnedAmount = 9999999;
+                    if (gResultsScreenPointersPrefix->earnedAmount > 9999999) {
+                        gResultsScreenPointersPrefix->earnedAmount = 9999999;
                     }
                 }
             }
         }
     }
-    data_ov034_020c0fa4->selected = 0;
-    data_ov034_020c0fa4->cursor = 0;
-    data_ov034_020c0fa4->scroll = 0;
-    data_ov034_020c0fa4->scrollTarget = 0;
-    data_ov034_020c0fa4->outcome = -1;
-    data_ov034_020c0fa4->fadeActive = 0;
-    data_ov034_020c0fa4->ownedFlags = &gSaveIoStateDataTail->ownedFlags[data_ov034_020c0fa0->worldId];
-    data_ov034_020c0fa4->shopOpen = 0;
-    data_ov034_020c0fa4->syncSecondary = 1;
-    data_ov034_020c0fa4->promptEnabled = 1;
-    data_ov034_020c0fa4->popupTimer = 0;
-    data_ov034_020c0fa0->shopVisited = 0;
+    gResultsScreenWorkPointer->selected = 0;
+    gResultsScreenWorkPointer->cursor = 0;
+    gResultsScreenWorkPointer->scroll = 0;
+    gResultsScreenWorkPointer->scrollTarget = 0;
+    gResultsScreenWorkPointer->outcome = -1;
+    gResultsScreenWorkPointer->fadeActive = 0;
+    gResultsScreenWorkPointer->ownedFlags = &gSaveIoStateDataTail->ownedFlags[gResultsScreenPointersPrefix->worldId];
+    gResultsScreenWorkPointer->shopOpen = 0;
+    gResultsScreenWorkPointer->syncSecondary = 1;
+    gResultsScreenWorkPointer->promptEnabled = 1;
+    gResultsScreenWorkPointer->popupTimer = 0;
+    gResultsScreenPointersPrefix->shopVisited = 0;
     SetupResultsShopList();
-    LoadResultsIconCells(data_ov034_020c0fa4->iconCells);
-    if (args->kind == 1 && data_ov034_020c0fa4->mode == 2) {
+    LoadResultsIconCells(gResultsScreenWorkPointer->iconCells);
+    if (args->kind == 1 && gResultsScreenWorkPointer->mode == 2) {
         gSceneHandoffSharedHeader.bonus = 1;
     }
     if (args->kind == 1 && gSceneHandoffSharedHeader.progress % 10 != 0) {
-        data_ov034_020c0fa4->syncSecondary = 0;
+        gResultsScreenWorkPointer->syncSecondary = 0;
         if (gSceneHandoffSharedHeader.mode == 0) {
-            if (data_ov034_020c0fa4->mode == 2) {
-                if (data_ov034_020c0fa0->isBonusStage) {
+            if (gResultsScreenWorkPointer->mode == 2) {
+                if (gResultsScreenPointersPrefix->isBonusStage) {
                     gSceneHandoffSharedHeader.cleared = 1;
                 }
-                data_ov034_020c0fa4->outcome = 1;
+                gResultsScreenWorkPointer->outcome = 1;
             }
             return CloseResultsScreen;
         }
         SetResultsMode(3);
         if (gSceneHandoffSharedHeader.mode == 2) {
-            data_ov034_020c0fa4->shopOpen = 1;
+            gResultsScreenWorkPointer->shopOpen = 1;
         }
         return UpdateResultsScreen;
     }
-    if (data_ov034_020c0fa0->missionGrade < 0) {
-        if (data_ov034_020c0fa4->mode == 2) {
-            if (data_ov034_020c0fa0->unlockedRank == data_ov034_020c0fa0->maxRank) {
+    if (gResultsScreenPointersPrefix->missionGrade < 0) {
+        if (gResultsScreenWorkPointer->mode == 2) {
+            if (gResultsScreenPointersPrefix->unlockedRank == gResultsScreenPointersPrefix->maxRank) {
                 SetResultsMode(3);
-                data_ov034_020c0fa4->shopOpen = 1;
+                gResultsScreenWorkPointer->shopOpen = 1;
                 return UpdateResultsScreen;
             }
-            data_ov034_020c0fa0->unlockedRank++;
-            gSceneHandoffSharedHeader.rank = data_ov034_020c0fa0->unlockedRank;
+            gResultsScreenPointersPrefix->unlockedRank++;
+            gSceneHandoffSharedHeader.rank = gResultsScreenPointersPrefix->unlockedRank;
             gSceneHandoffSharedHeader.seed = NextSharedRandom16Scaled(0xffff) + random_next_scaled(0xffff - 0x10000);
-            SetupStageParams(data_ov034_020c0fa0, data_ov034_020c0fa0->worldId,
-                             data_ov034_020c0fa0->unlockedRank);
+            SetupStageParams(gResultsScreenPointersPrefix, gResultsScreenPointersPrefix->worldId,
+                             gResultsScreenPointersPrefix->unlockedRank);
         }
         return CloseResultsScreen;
     }
-    if (data_ov034_020c0fa4->mode == 0) {
+    if (gResultsScreenWorkPointer->mode == 0) {
         gFieldSessionWork->resultsSeen = 1;
         SetSelectionIfChanged(0x16);
-    } else if (data_ov034_020c0fa4->mode == 2) {
+    } else if (gResultsScreenWorkPointer->mode == 2) {
         QueueSoundKind4(0x16, 0x1e);
     }
     return UpdateResultsScreen;

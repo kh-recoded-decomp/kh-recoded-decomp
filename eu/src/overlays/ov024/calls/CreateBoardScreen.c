@@ -51,8 +51,8 @@ typedef struct BoardGlobals {
 extern Words4 gBoardBgLayerIds;
 extern Words4 gBoardObjectManagerConfig;
 extern Words5 gBoardBackgroundContainerConfig;
-extern BoardGlobals data_ov024_020b7540;
-extern int data_ov024_020b754c[6];
+extern BoardGlobals gBoardScreenGlobals;
+extern int gBoardNodeGraphicsBufferStorage[6];
 extern char sOv024_UiBtlBtluiP2_020b74f4[];
 extern char sOv024_UiBtlBtlLanguageP2_020b7508[];
 
@@ -88,68 +88,68 @@ void *CreateBoardScreen(int mode)
     int i;
 
     state = GetRunningTaskWork();
-    data_ov024_020b7540.state = state;
+    gBoardScreenGlobals.state = state;
     MI_CpuFill8(state, 0, 0x6700);
-    MIi_CpuClear32(-1, data_ov024_020b7540.state->cellIds, 0x48);
-    MIi_CpuClear32(-1, data_ov024_020b7540.state->nodeIds, 0xa0);
+    MIi_CpuClear32(-1, gBoardScreenGlobals.state->cellIds, 0x48);
+    MIi_CpuClear32(-1, gBoardScreenGlobals.state->nodeIds, 0xa0);
     for (i = 0; i < 6; i++) {
-        data_ov024_020b754c[i] = 0;
+        gBoardNodeGraphicsBufferStorage[i] = 0;
     }
-    data_ov024_020b7540.state->useChannel = (mode == 0x7b);
-    if (data_ov024_020b7540.state->useChannel || IsSessionFlagSet(0x3520) || IsFieldFlag13OrSessionFlagSet()) {
+    gBoardScreenGlobals.state->useChannel = (mode == 0x7b);
+    if (gBoardScreenGlobals.state->useChannel || IsSessionFlagSet(0x3520) || IsFieldFlag13OrSessionFlagSet()) {
         state->showTutorial = 0;
     } else {
         state->showTutorial = 1;
     }
-    if (!data_ov024_020b7540.state->useChannel) {
+    if (!gBoardScreenGlobals.state->useChannel) {
         SetSubsceneBgSetupCallback(SetupSubScreenBgLayers);
     }
     SetupSubScreenBgLayers();
-    if (!data_ov024_020b7540.state->useChannel) {
+    if (!gBoardScreenGlobals.state->useChannel) {
         SetPanelSessionActive();
     }
-    if (data_ov024_020b7540.state->useChannel) {
+    if (gBoardScreenGlobals.state->useChannel) {
         bgDesc.layout = &layout;
         bgDesc.count = 4;
         bgDesc.width = 0x20;
         bgDesc.height = 0x20;
         bgDesc.flags = 0;
-        data_ov024_020b7540.state->widget = data_ov024_020b7540.state->widgetData;
-        InitTileTableFrom(data_ov024_020b7540.state->widget, &bgDesc);
+        gBoardScreenGlobals.state->widget = gBoardScreenGlobals.state->widgetData;
+        InitTileTableFrom(gBoardScreenGlobals.state->widget, &bgDesc);
     } else {
-        data_ov024_020b7540.state->widget = GetFieldSceneManager();
+        gBoardScreenGlobals.state->widget = GetFieldSceneManager();
     }
-    data_ov024_020b7540.state->resourceA = Msg_OpenContainerAndReadHeader(sOv024_UiBtlBtluiP2_020b74f4, 0xe, 0);
-    data_ov024_020b7540.state->resourceB = Msg_OpenContainerAndReadHeader(sOv024_UiBtlBtlLanguageP2_020b7508, 0xe, 0);
+    gBoardScreenGlobals.state->resourceA = Msg_OpenContainerAndReadHeader(sOv024_UiBtlBtluiP2_020b74f4, 0xe, 0);
+    gBoardScreenGlobals.state->resourceB = Msg_OpenContainerAndReadHeader(sOv024_UiBtlBtlLanguageP2_020b7508, 0xe, 0);
     animDesc = gBoardBackgroundContainerConfig;
     InitBackgroundContainer(state->animSet, &animDesc);
-    LoadTagTrackerResourceFile(state->animSet, BOARD_VRAM_KEY(data_ov024_020b7540.state->resourceA) | 0x8000000f);
-    data_ov024_020b7540.cursor = (void *)SessionBuffer_GetAddress(10);
+    LoadTagTrackerResourceFile(state->animSet, BOARD_VRAM_KEY(gBoardScreenGlobals.state->resourceA) | 0x8000000f);
+    gBoardScreenGlobals.cursor = (void *)SessionBuffer_GetAddress(10);
     objDesc = gBoardObjectManagerConfig;
-    objDesc.words[0] = BOARD_VRAM_KEY(data_ov024_020b7540.state->resourceA) | 0x80000013;
-    InitializeResourceContainer(data_ov024_020b7540.state->objectSet, 0);
-    InitObjManagerAndMark(data_ov024_020b7540.state->objectSet, &objDesc);
-    CreateWidgetImageEntry(data_ov024_020b7540.state->objectSet, BOARD_VRAM_KEY(data_ov024_020b7540.state->resourceB) | 0x80000019);
-    LoadWidgetDescriptorsFromFile(data_ov024_020b7540.state->objectSet, BOARD_VRAM_KEY(data_ov024_020b7540.state->resourceA) | 0x80000014, 7);
-    SetAllElementObjectModes(data_ov024_020b7540.state->objectSet, 1);
-    data_ov024_020b7540.state->markerSlots[0] = CreateDefaultObjectSlot(data_ov024_020b7540.state->objectSet, 0, 0, 0, 0);
-    data_ov024_020b7540.state->markerSlots[1] = CreateDefaultObjectSlot(data_ov024_020b7540.state->objectSet, 0, 1, 0, 0);
-    if (!data_ov024_020b7540.state->useChannel && IsFieldFlag13OrSessionFlagSet()) {
+    objDesc.words[0] = BOARD_VRAM_KEY(gBoardScreenGlobals.state->resourceA) | 0x80000013;
+    InitializeResourceContainer(gBoardScreenGlobals.state->objectSet, 0);
+    InitObjManagerAndMark(gBoardScreenGlobals.state->objectSet, &objDesc);
+    CreateWidgetImageEntry(gBoardScreenGlobals.state->objectSet, BOARD_VRAM_KEY(gBoardScreenGlobals.state->resourceB) | 0x80000019);
+    LoadWidgetDescriptorsFromFile(gBoardScreenGlobals.state->objectSet, BOARD_VRAM_KEY(gBoardScreenGlobals.state->resourceA) | 0x80000014, 7);
+    SetAllElementObjectModes(gBoardScreenGlobals.state->objectSet, 1);
+    gBoardScreenGlobals.state->markerSlots[0] = CreateDefaultObjectSlot(gBoardScreenGlobals.state->objectSet, 0, 0, 0, 0);
+    gBoardScreenGlobals.state->markerSlots[1] = CreateDefaultObjectSlot(gBoardScreenGlobals.state->objectSet, 0, 1, 0, 0);
+    if (!gBoardScreenGlobals.state->useChannel && IsFieldFlag13OrSessionFlagSet()) {
         if (IsSessionFlagSet(0x3609)) {
-            data_ov024_020b7540.state->markerSlots[2] = CreateDefaultObjectSlot(data_ov024_020b7540.state->objectSet, 0, 2, 0, 0);
+            gBoardScreenGlobals.state->markerSlots[2] = CreateDefaultObjectSlot(gBoardScreenGlobals.state->objectSet, 0, 2, 0, 0);
         }
         if (IsSessionFlagSet(0x360a)) {
-            data_ov024_020b7540.state->markerSlots[3] = CreateDefaultObjectSlot(data_ov024_020b7540.state->objectSet, 0, 2, 0, 0);
+            gBoardScreenGlobals.state->markerSlots[3] = CreateDefaultObjectSlot(gBoardScreenGlobals.state->objectSet, 0, 2, 0, 0);
         }
     }
     for (i = 0; i < 30; i++) {
-        data_ov024_020b7540.state->itemSlots[i] = CreateDefaultObjectSlot(data_ov024_020b7540.state->objectSet, 0, 3, 0, 0);
+        gBoardScreenGlobals.state->itemSlots[i] = CreateDefaultObjectSlot(gBoardScreenGlobals.state->objectSet, 0, 3, 0, 0);
     }
-    data_ov024_020b7540.state->cursorSlot = CreateDefaultObjectSlot(data_ov024_020b7540.state->objectSet, 0, 4, 0, 0);
-    data_ov024_020b7540.state->targetSlot = CreateDefaultObjectSlot(data_ov024_020b7540.state->objectSet, 0, 5, 0, 0);
-    data_ov024_020b7540.state->hintSlot = CreateDefaultObjectSlot(data_ov024_020b7540.state->objectSet, 0, 6, 0, 0);
-    data_ov024_020b7540.state->goalSlot = CreateDefaultObjectSlot(data_ov024_020b7540.state->objectSet, 0, 7, 0, 0);
-    BuildBoardLayout(data_ov024_020b7540.cursor, 1);
-    data_ov024_020b7540.state->active = 1;
+    gBoardScreenGlobals.state->cursorSlot = CreateDefaultObjectSlot(gBoardScreenGlobals.state->objectSet, 0, 4, 0, 0);
+    gBoardScreenGlobals.state->targetSlot = CreateDefaultObjectSlot(gBoardScreenGlobals.state->objectSet, 0, 5, 0, 0);
+    gBoardScreenGlobals.state->hintSlot = CreateDefaultObjectSlot(gBoardScreenGlobals.state->objectSet, 0, 6, 0, 0);
+    gBoardScreenGlobals.state->goalSlot = CreateDefaultObjectSlot(gBoardScreenGlobals.state->objectSet, 0, 7, 0, 0);
+    BuildBoardLayout(gBoardScreenGlobals.cursor, 1);
+    gBoardScreenGlobals.state->active = 1;
     return StartBoardScreen;
 }

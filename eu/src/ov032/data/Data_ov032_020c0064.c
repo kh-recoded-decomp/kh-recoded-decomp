@@ -2,11 +2,11 @@
 
 #pragma explicit_zero_data on
 
-u16 data_ov032_020c006e[9] = {
+u16 gGroupAlternatePaletteStorage[9] = {
     0x0CFE, 0x006F, 0x04B7, 0x04DA, 0x0CFE, 0x0000, 0x0000, 0x0000,
     0x0000,
 };
 
-u16 data_ov032_020c0064[5] = {
+u16 gGroupPrimaryPaletteSegment[5] = {
     0x7FE1, 0x65E0, 0x7680, 0x7F22, 0x7FE2,
 };

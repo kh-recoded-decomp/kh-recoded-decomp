@@ -3,7 +3,7 @@
 extern void BlitBoardWidgetAndFinishPendingTeardown(void);
 extern void ClearBoardWidgetTileArea(void);
 
-const u32 data_ov024_020b7384[8] = {
+const u32 gBoardDirectionScreenOffsets[8] = {
     0x00000000, 0x00000000, 0xFFFFFFFF, 0x00000000,
     0xFFFFFFFF, 0xFFFFFFFF, 0x00000000, 0xFFFFFFFF,
 };

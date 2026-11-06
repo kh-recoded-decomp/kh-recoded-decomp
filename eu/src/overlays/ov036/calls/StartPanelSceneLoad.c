@@ -10,13 +10,13 @@ typedef struct PanelManager {
     PanelWork *work;
 } PanelManager;
 
-extern PanelManager data_ov036_020c3940;
+extern PanelManager gEvent2DPanelManager;
 extern void InitializePanelArchive(void);
 extern void StoreToGlobalPtr4Field28(int value);
 
 int StartPanelSceneLoad(void)
 {
-    PanelWork *work = data_ov036_020c3940.work;
+    PanelWork *work = gEvent2DPanelManager.work;
 
     work->flags |= 8;
     if (work->flags & 1) {

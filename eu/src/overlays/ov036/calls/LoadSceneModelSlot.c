@@ -3,6 +3,6 @@
 #define IsRecordIdFree_0202c38c IsRecordIdFree
 #define LoadSceneModelSlot_020bd1a0 LoadSceneModelSlot
 #define RetainOrInitializeSharedRecord_0202c80c SND_RegisterSeq
-#define data_ov036_020c3920 data_ov036_020c3940
+#define data_ov036_020c3920 gEvent2DPanelManager
 #define func_ov036_020bc138 FindOrAcquireModelSlot
 #include "src/ov036/unclassified_helpers/LoadSceneModelSlot_020bd1a0.c"

@@ -73,6 +73,11 @@ links the complete sequence of documented naming blocks.
 
 - [References across overlay banks](BANK_QUALIFIED_OWNER_BINDINGS.md).
 
+- [Board Group Continue18](NATIVE_BOARD_GROUP_CONTINUE18.md).
+- [Event Text Window25](NATIVE_EVENT_TEXT_WINDOW25.md).
+- [Results Ui17](NATIVE_RESULTS_UI17.md).
+- [Stage Tracker Views15](NATIVE_STAGE_TRACKER_VIEWS15.md).
+
 ## Unresolved function contracts
 
 At the `ad0a8778153f72218e4bdad3a5cec1bd8e2a7470` naming checkpoint,

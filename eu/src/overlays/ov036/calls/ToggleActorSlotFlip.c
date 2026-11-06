@@ -1,4 +1,4 @@
 #define FindOrAcquireOwnerSlot_020bb7c0 FindOrAcquireOwnerSlot
 #define ToggleActorSlotFlip_020bce20 ToggleActorSlotFlip
-#define data_ov036_020c3920 data_ov036_020c3940
+#define data_ov036_020c3920 gEvent2DPanelManager
 #include "src/ov036/unclassified_helpers/ToggleActorSlotFlip_020bce20.c"

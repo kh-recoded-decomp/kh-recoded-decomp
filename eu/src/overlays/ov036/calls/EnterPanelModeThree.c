@@ -1,6 +1,6 @@
 #define EnterPanelModeThree_020bc51c EnterPanelModeThree
 #define data_ov001_020a0460 gFieldSessionWork
-#define data_ov036_020c3920 data_ov036_020c3940
+#define data_ov036_020c3920 gEvent2DPanelManager
 #define func_02029f48 GetMainBrightnessSetting
 #define func_02029f58 GetSubBrightnessSetting
 #define func_ov001_020645e8 ClearSessionPackedBit

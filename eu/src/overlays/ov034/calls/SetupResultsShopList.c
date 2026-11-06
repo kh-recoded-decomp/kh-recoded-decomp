@@ -23,7 +23,7 @@ typedef struct ShopEntry {
     u8 pad_04[8];
 } ShopEntry;
 
-extern ResultsScreen data_ov034_020c0fa0;
+extern ResultsScreen gResultsScreenPointersPrefix;
 extern ShopEntry gResultsShopEntries[];
 
 /* Find the shop section's first entry (sections end at an itemId of -1), count its items and
@@ -32,7 +32,7 @@ void SetupResultsShopList(void)
 {
     int index = 0;
     int sections = 0;
-    ResultsWork *work = data_ov034_020c0fa0.work;
+    ResultsWork *work = gResultsScreenPointersPrefix.work;
     int count;
 
     while (sections != work->shopSection) {
@@ -43,17 +43,17 @@ void SetupResultsShopList(void)
     }
     count = 0;
     work->itemBase = index;
-    data_ov034_020c0fa0.work->itemCount = 0;
-    while (gResultsShopEntries[data_ov034_020c0fa0.work->itemBase + count].itemId != -1) {
+    gResultsScreenPointersPrefix.work->itemCount = 0;
+    while (gResultsShopEntries[gResultsScreenPointersPrefix.work->itemBase + count].itemId != -1) {
         count++;
-        data_ov034_020c0fa0.work->itemCount++;
+        gResultsScreenPointersPrefix.work->itemCount++;
     }
-    data_ov034_020c0fa0.work->extraPriceA = gResultsShopEntries[data_ov034_020c0fa0.work->itemBase + count].extraPriceA;
-    if (data_ov034_020c0fa0.work->extraPriceA > 0) {
-        data_ov034_020c0fa0.work->itemCount++;
+    gResultsScreenPointersPrefix.work->extraPriceA = gResultsShopEntries[gResultsScreenPointersPrefix.work->itemBase + count].extraPriceA;
+    if (gResultsScreenPointersPrefix.work->extraPriceA > 0) {
+        gResultsScreenPointersPrefix.work->itemCount++;
     }
-    data_ov034_020c0fa0.work->extraPriceB = gResultsShopEntries[data_ov034_020c0fa0.work->itemBase + count].extraPriceB;
-    if (data_ov034_020c0fa0.work->extraPriceB > 0) {
-        data_ov034_020c0fa0.work->itemCount++;
+    gResultsScreenPointersPrefix.work->extraPriceB = gResultsShopEntries[gResultsScreenPointersPrefix.work->itemBase + count].extraPriceB;
+    if (gResultsScreenPointersPrefix.work->extraPriceB > 0) {
+        gResultsScreenPointersPrefix.work->itemCount++;
     }
 }

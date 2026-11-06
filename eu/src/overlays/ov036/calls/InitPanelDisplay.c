@@ -8,7 +8,7 @@
 #define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
 #define data_02055c4c sDefaultAllocTexVramFunc
 #define data_02055c50 sDefaultFreeTexVramFunc
-#define data_ov036_020c3920 data_ov036_020c3940
+#define data_ov036_020c3920 gEvent2DPanelManager
 #define func_02007250 GX_LoadBGPltt
 #define func_020144e8 NNS_GfdGetLnkTexVramManagerWorkSize
 #define func_02014850 NNS_GfdGetLnkPlttVramManagerWorkSize

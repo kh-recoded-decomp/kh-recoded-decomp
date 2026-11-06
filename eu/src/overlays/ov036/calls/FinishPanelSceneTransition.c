@@ -10,13 +10,13 @@ typedef struct PanelManager {
     PanelWork *work;
 } PanelManager;
 
-extern PanelManager data_ov036_020c3940;
+extern PanelManager gEvent2DPanelManager;
 extern void StoreToGlobalPtr4Field28(int value);
 
 int FinishPanelSceneTransition(void)
 {
-    data_ov036_020c3940.work->flags &= ~8;
+    gEvent2DPanelManager.work->flags &= ~8;
     StoreToGlobalPtr4Field28(1);
-    data_ov036_020c3940.work->flags |= 0x8000;
+    gEvent2DPanelManager.work->flags |= 0x8000;
     return 7;
 }

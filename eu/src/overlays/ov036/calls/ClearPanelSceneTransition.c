@@ -10,10 +10,10 @@ typedef struct PanelManager {
     PanelWork *work;
 } PanelManager;
 
-extern PanelManager data_ov036_020c3940;
+extern PanelManager gEvent2DPanelManager;
 
 int ClearPanelSceneTransition(void)
 {
-    data_ov036_020c3940.work->flags &= ~8;
+    gEvent2DPanelManager.work->flags &= ~8;
     return -1;
 }

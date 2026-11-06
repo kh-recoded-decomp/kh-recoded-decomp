@@ -4,7 +4,7 @@ typedef unsigned int code();
 
 extern unsigned int UpdateTextWindows();
 extern unsigned int gTextWindowResourceTable;
-extern unsigned int data_ov036_020c394c;
+extern unsigned int gTextWindowTaskWork;
 extern unsigned int InitOverlayObjManager();
 extern unsigned int GetRunningTaskWork();
 extern unsigned int MIi_CpuClearFast();
@@ -16,7 +16,7 @@ extern unsigned int SetTextWindowState();
 code * InitTextWindowTask(void) {
   int index;
 
-  data_ov036_020c394c = GetRunningTaskWork();
+  gTextWindowTaskWork = GetRunningTaskWork();
   index = 0;
   MIi_CpuClearFast(0,gTextWindowResourceTable,0x68b4);
   *(unsigned int *)(gTextWindowResourceTable + 0x6458) = 1;

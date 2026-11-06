@@ -12,7 +12,7 @@ typedef struct PanelManager {
     PanelMessageArchiveWork *work;
 } PanelManager;
 
-extern PanelManager data_ov036_020c3940;
+extern PanelManager gEvent2DPanelManager;
 extern const char sOv036_Ev2DEVW0FormatDP2_020c3748[];
 
 extern s8 GetCtxModeByte(void);
@@ -26,7 +26,7 @@ extern void ReadSessionPackedBits(void);
 
 void OpenPanelMessageArchive(char *name)
 {
-    PanelMessageArchiveWork *work = data_ov036_020c3940.work;
+    PanelMessageArchiveWork *work = gEvent2DPanelManager.work;
     int resourceIndex;
     char path[16];
 

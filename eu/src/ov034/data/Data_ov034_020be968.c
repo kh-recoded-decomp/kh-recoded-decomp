@@ -2,6 +2,6 @@
 
 #pragma explicit_zero_data on
 
-u32 data_ov034_020be968[1] = {
+u32 gResultsRankMarkBetaText[1] = {
     0x000003B2,
 };

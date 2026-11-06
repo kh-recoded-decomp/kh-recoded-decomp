@@ -132,8 +132,8 @@ GetPackedFileEntry kind:function(arm,size=0x38) addr:0x020ba2c8
 FormatPackedWideText kind:function(arm,size=0x3c) addr:0x020ba300
 VFormatPackedWideText kind:function(arm,size=0x2c) addr:0x020ba33c
 FindPageEntryById kind:function(thumb,size=0x1c) addr:0x020ba368
-data_ov027_020ba384 kind:data(any) addr:0x020ba384
-data_ov027_020ba388 kind:data(any) addr:0x020ba388
+gTrackerMainTileTableIds kind:data(any) addr:0x020ba384
+gTrackerSubTileTableIds kind:data(any) addr:0x020ba388
 gCapturedTouchTaskDescriptor kind:data(any) addr:0x020ba3a0
 gFileLoadQueueTaskDescriptor kind:data(any) addr:0x020ba3b4
 gCapturedTouchRecord kind:bss addr:0x020ba3e0

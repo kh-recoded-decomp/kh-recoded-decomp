@@ -5,7 +5,7 @@
 #define GX_LoadBG3Scr_020077f0 GX_LoadBG3Scr
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define UploadAndFreeBgGraphics_020c31c8 UploadAndFreeBgGraphics
-#define data_ov036_020ca1e4 data_ov036_020ca204
+#define data_ov036_020ca1e4 gTextWindowBgTaskWorkPointerStorage
 #define func_020033e0 DC_FlushAll
 #define func_02007250 GX_LoadBGPltt
 #define func_ov036_020c2e84 ConfigureOverlay036BackgroundControls

@@ -1,4 +1,4 @@
 #define DrawTileColumnPattern_020bb98c DrawTileColumnPattern
 #define SetTilePixel4bpp_020bb94c SetTilePixel4bpp
-#define data_ov032_020bff58 data_ov032_020bff78
+#define data_ov032_020bff58 gGroupTileColumnPatterns
 #include "src/ov032/object_group/DrawTileColumnPattern_020bb98c.c"

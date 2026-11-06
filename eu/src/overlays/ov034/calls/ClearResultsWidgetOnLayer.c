@@ -1,4 +1,4 @@
 #define ClearResultsWidgetOnLayer_020bb070 ClearResultsWidgetOnLayer
 #define func_ov027_020b9b94 ClearWidgetTileArea
-#define g_resultsScreen_020c0f80 data_ov034_020c0fa0
+#define g_resultsScreen_020c0f80 gResultsScreenPointersPrefix
 #include "src/ov034/reviewed_helpers/ClearResultsWidgetOnLayer_020bb070.c"

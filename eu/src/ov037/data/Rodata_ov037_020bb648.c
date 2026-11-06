@@ -4,7 +4,7 @@ const ContinueMenuTileConfig gContinueMenuTileConfig = {
     NULL, 2, 32, 24, {0, 0},
 };
 
-const u32 data_ov037_020bb650[3] = {
+const u32 gContinueModelInitialTranslation[3] = {
     0x00000000, 0xFFFFFD00, 0x00000000,
 };
 

@@ -1,4 +1,4 @@
 #define ClearScreenLayerGraphics_020bbb64 ClearScreenLayerGraphics
 #define ResetScreenLayer_020bd500 ResetScreenLayer
-#define data_ov036_020c3920 data_ov036_020c3940
+#define data_ov036_020c3920 gEvent2DPanelManager
 #include "src/ov036/panel_state/ResetScreenLayer_020bd500.c"

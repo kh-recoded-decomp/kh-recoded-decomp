@@ -1,4 +1,4 @@
 #define StartScreenLayerScroll_020bd570 StartScreenLayerScroll
 #define UpdateScreenLayer_020bbf90 UpdateScreenLayer
-#define data_ov036_020c3920 data_ov036_020c3940
+#define data_ov036_020c3920 gEvent2DPanelManager
 #include "src/ov036/panel_state/StartScreenLayerScroll_020bd570.c"

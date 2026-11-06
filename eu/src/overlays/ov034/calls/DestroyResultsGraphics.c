@@ -1,7 +1,7 @@
 #include "nitro/types.h"
 
-extern u32 data_ov034_020c0fa0[2];
-#define resultsWork ((int)data_ov034_020c0fa0[1])
+extern u32 gResultsScreenPointersPrefix[2];
+#define resultsWork ((int)gResultsScreenPointersPrefix[1])
 extern u32 DestroyFndObjectList();
 extern u32 FreePointerIfSet();
 extern u32 NotifyBothOrOne();

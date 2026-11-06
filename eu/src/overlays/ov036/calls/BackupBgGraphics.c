@@ -10,7 +10,7 @@ typedef struct BgGraphics {
     void *palette;
 } BgGraphics;
 
-extern BgGraphics *data_ov036_020ca204;
+extern BgGraphics *gTextWindowBgTaskWorkPointerStorage;
 extern void *NNS_FndAllocFromDefaultExpHeapEx(u32 size, s32 alignment);
 extern void *G2_GetBG2ScrPtr(void);
 extern void *G2_GetBG3ScrPtr(void);
@@ -39,7 +39,7 @@ static inline void RestoreMasterInterrupts(u16 enabled)
 /* Save the main-engine BG2/BG3 maps, shared character data and BG palette. */
 void BackupBgGraphics(void)
 {
-    BgGraphics *graphics = data_ov036_020ca204;
+    BgGraphics *graphics = gTextWindowBgTaskWorkPointerStorage;
     u16 enabled;
     void *buffer;
 

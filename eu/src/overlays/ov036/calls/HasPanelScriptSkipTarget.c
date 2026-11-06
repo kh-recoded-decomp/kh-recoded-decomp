@@ -1,3 +1,3 @@
 #define HasSceneActiveMenu_020bc648 HasPanelScriptSkipTarget
-#define data_ov036_020c3920 data_ov036_020c3940
+#define data_ov036_020c3920 gEvent2DPanelManager
 #include "src/ov036/unclassified_helpers/HasSceneActiveMenu_020bc648.c"

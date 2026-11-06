@@ -1,5 +1,5 @@
 #define RunPanelScriptFrame_020ba970 RunPanelScriptFrame
 #define ScriptVm_RunFrame_02025b18 ScriptVm_RunFrame
-#define data_ov036_020c3920 data_ov036_020c3940
+#define data_ov036_020c3920 gEvent2DPanelManager
 #define func_020258f8 ResetScriptSkipState
 #include "src/ov036/panel_state/RunPanelScriptFrame_020ba970.c"

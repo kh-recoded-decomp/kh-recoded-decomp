@@ -1,5 +1,5 @@
 #define AdvanceResultsTransition_020bb234 AdvanceResultsTransition
 #define func_02027304 IsGlobalPackedBitSet
 #define func_02027320 SetGlobalPackedBit
-#define resultsState_020c0f80 data_ov034_020c0fa0
+#define resultsState_020c0f80 gResultsScreenPointersPrefix
 #include "src/ov034/reviewed_helpers/AdvanceResultsTransition_020bb234.c"

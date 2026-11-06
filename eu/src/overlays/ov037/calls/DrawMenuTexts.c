@@ -9,8 +9,8 @@
 #define LoadPackedFileView_020ba25c LoadPackedFileView
 #define MarkTileTableRowDirty_020b9e00 MarkTileTableRowDirty
 #define UpdateWidgetLayerDefault_020b9df0 UpdateWidgetLayerDefault_020b9e10
-#define data_ov037_020bb64c data_ov037_020bb66c
-#define data_ov037_020bb670 data_ov037_020bb690
+#define data_ov037_020bb64c gContinueMenuTextFrameConfig
+#define data_ov037_020bb670 gContinueTitleMessageBases
 #define func_02001458 LoadUtf16FontResource
 #define func_ov027_020ba2a8 GetPackedFileEntry
 #define func_ov037_020bad0c GetContinueTitleIndex

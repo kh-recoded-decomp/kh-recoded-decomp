@@ -17,8 +17,8 @@
 #define FindWidgetById_020b90a4 FindWidgetById
 #define SetEntrySlotsVisible_020b9580 SetEntrySlotsVisible
 #define CopySourceBlock_020b9f7c CopySourceBlock
-#define data_ov024_020b7520 data_ov024_020b7540
-#define data_ov024_020b7384 data_ov024_020b73a4
+#define data_ov024_020b7520 gBoardScreenGlobals
+#define data_ov024_020b7384 gBoardNodeScreenX0
 #define func_ov001_0207b6b4 SetPanelInputActive
 #define RequestPanelModeWithStyle2_0207b320 RequestPanelModeWithStyle2
 #define PlaySoundEffect_0204d924 PlaySoundEffect

@@ -2,6 +2,6 @@
 
 #pragma explicit_zero_data on
 
-u16 data_ov034_020c0f58[6] = {
+u16 gResultsCountLabelWideFormat[6] = {
     37, 115, 43, 37, 100, 0,
 };

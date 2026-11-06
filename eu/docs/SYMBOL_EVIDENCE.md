@@ -831,3 +831,12 @@ ov039 registry's overlay-ID 91 entry now binds the actual ov091 report descripto
 [BANK_QUALIFIED_OWNER_BINDINGS.md](BANK_QUALIFIED_OWNER_BINDINGS.md) records the
 loader evidence, physical owners and native word values. The21 official checks,
 22 production objects and all 108 linked module hashes preserve the native bytes.
+
+## Name board results and text window data
+
+Name 75 board/group, results/tracker and event/text data identities, including rank-mark name correction. Preserve the 135 native stage records, physical table cuts, work prefixes and bank-qualified camera ownership.
+
+[Board Group Continue18](NATIVE_BOARD_GROUP_CONTINUE18.md),
+[Event Text Window25](NATIVE_EVENT_TEXT_WINDOW25.md),
+[Results Ui17](NATIVE_RESULTS_UI17.md),
+[Stage Tracker Views15](NATIVE_STAGE_TRACKER_VIEWS15.md).

@@ -2,7 +2,7 @@
 #define ScriptCmd_ShowJoinedMessage_020be1e0 ScriptCmd_ShowJoinedMessage
 #define ScriptVm_ReadOperandInt_02025de4 ScriptVm_ReadOperandInt
 #define Utf8ToUcs2_020512b4 Utf8ToUcs2
-#define data_ov036_020c383c data_ov036_020c385c
+#define data_ov036_020c383c gTextWindowJoinLineBreak
 #define func_02025dac ByteCode_ResolveOperand
 #define strcat_02021f78 strcat
 #include "src/ov036/shared_engine/ScriptCmd_ShowJoinedMessage_020be1e0.c"

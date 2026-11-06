@@ -11,7 +11,7 @@ extern void StoreGlobalArrayEntry(int index, int value);
 
 void ShutdownSceneWork_020ba6c4(void)
 {
-    Event2DPanelWork *work = data_ov036_020c3940.work;
+    Event2DPanelWork *work = gEvent2DPanelManager.work;
 
     SetSoundListenersEnabled(0);
     DestroyTaskObjectWrapper(work->pxiHandle);
@@ -27,8 +27,8 @@ void ShutdownSceneWork_020ba6c4(void)
     ReleaseScriptVmBuffer(work->channels[0]);
     ReleaseScriptVmBuffer(work->channels[1]);
     StoreGlobalArrayEntry(5, 0);
-    NNSi_FndFreeFromDefaultHeap(data_ov036_020c3940.buffer);
-    NNSi_FndFreeFromDefaultHeap(data_ov036_020c3940.extra);
+    NNSi_FndFreeFromDefaultHeap(gEvent2DPanelManager.buffer);
+    NNSi_FndFreeFromDefaultHeap(gEvent2DPanelManager.extra);
     REG_BG1CNT &= ~0x40;
-    data_ov036_020c3940.work = NULL;
+    gEvent2DPanelManager.work = NULL;
 }

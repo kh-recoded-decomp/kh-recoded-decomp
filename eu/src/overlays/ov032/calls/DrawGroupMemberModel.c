@@ -75,7 +75,7 @@ extern void NNS_G3dGlbSetBaseScale(const VecFx32 *scale);
 extern void NNS_G3dGlbFlushP(void);
 
 extern const s16 gSinFx12Table[];
-extern const VecFx32 data_ov032_020bffd0;
+extern const VecFx32 gGroupModelForwardAxis;
 extern MtxFx43 NNS_G3dGlb_prmBaseRot;
 extern GeometryCommandCache NNS_G3dGlb_prmMatColor0;
 
@@ -117,7 +117,7 @@ void DrawGroupMemberModel(DisplayObject *object, const VecFx32 *position)
     VEC_Subtract(position, &record->origin, &offset);
     node->translation = offset;
     SceneNode_Draw(node);
-    forward = data_ov032_020bffd0;
+    forward = gGroupModelForwardAxis;
     MTX_MultVec33(&forward, &record->rotation, &forward);
     index = FX_Atan2Idx(forward.x, forward.z) >> 4;
     MTX_RotY33_(&rotation, gSinFx12Table[index], gSinFx12Table[(0x400 - index) & 0xfff]);

@@ -1,3 +1,3 @@
 #define SetSceneFlag4000_020bc3f8 SetSceneFlag4000
-#define data_ov036_020c3920 data_ov036_020c3940
+#define data_ov036_020c3920 gEvent2DPanelManager
 #include "src/ov036/unclassified_helpers/SetSceneFlag4000_020bc3f8.c"

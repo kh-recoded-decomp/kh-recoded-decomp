@@ -27,7 +27,7 @@ typedef struct SlotSceneHolder {
     SlotScene *scene;
 } SlotSceneHolder;
 
-extern SlotSceneHolder data_ov036_020c3940;
+extern SlotSceneHolder gEvent2DPanelManager;
 extern int _s32_div_f(int numerator, int denominator);
 
 void UpdateSpriteShake(ShakeSprite *sprite)
@@ -44,7 +44,7 @@ void UpdateSpriteShake(ShakeSprite *sprite)
     sprite->amplitude -= _s32_div_f(0x8000, sprite->decayDivisor);
     sprite->x = sprite->baseX + sprite->offset;
     sprite->y = sprite->baseY + (sprite->offset >> 1);
-    if (data_ov036_020c3940.scene->skipAnimation == 0 && sprite->amplitude >= 0x29) {
+    if (gEvent2DPanelManager.scene->skipAnimation == 0 && sprite->amplitude >= 0x29) {
         return;
     }
     sprite->x = sprite->baseX;

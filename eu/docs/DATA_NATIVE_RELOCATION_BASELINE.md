@@ -193,3 +193,19 @@ The fresh gate passes all 108 modules with identical hashes. All 474 complete
 affected production objects preserve allocated bytes, alignment, symbol
 layouts and relocation records, including the actual compiled 24-byte movie
 prompt-pointer table and its six native relocations.
+
+## Board, results and text-window block
+
+The 75-identity board/results/text block checks 144 affected functions. 141
+standalone checks pass; the original-source-graph controls reproduce the
+known `HandleResultsInput` and `RefreshResultsScreen` verdicts and one further
+raw-literal case: `DestroyResultsGraphics` (ov034:020bce10, Thumb, 96 bytes).
+Its +0x54 word is `0x020c0f10`, where the original map expects the existing
+`sOv034_SYSAREAMENU_020c0f10` storage. That 16-byte name storage identifies
+`SYS_AREA_MENU`; initialization registers the same name and destruction
+unregisters it. A separate source cleanup must use this real storage without
+changing the existing registration/channel behavior.
+
+```sh
+python tools/verify_idx.py src/overlays/ov034/calls/DestroyResultsGraphics.c DestroyResultsGraphics --thumb
+```

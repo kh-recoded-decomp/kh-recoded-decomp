@@ -1,6 +1,6 @@
 #define DestroyBoardScreen_020b6d78 DestroyBoardScreen
 #define data_ov024_020b74fc sOv024_SYSMAPTASK_020b751c
-#define data_ov024_020b7520 data_ov024_020b7540
+#define data_ov024_020b7520 gBoardScreenGlobals
 #define func_02001154 NotifyBothOrOne
 #define func_0202cd78 ZeroHalfThenFree
 #define func_ov001_020715ac FreeSceneListObject

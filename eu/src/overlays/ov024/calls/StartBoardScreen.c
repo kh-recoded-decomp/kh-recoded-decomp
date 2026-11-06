@@ -1,6 +1,6 @@
 #define StartBoardScreen_020b6b40 StartBoardScreen
 #define data_ov024_020b74fc sOv024_SYSMAPTASK_020b751c
-#define data_ov024_020b7520 data_ov024_020b7540
+#define data_ov024_020b7520 gBoardScreenGlobals
 #define func_0200110c InvokeForChannelOrBoth
 #define func_ov001_0207157c AddFieldListener
 #define func_ov024_020b5800 ReleaseSubObjectIfActive

@@ -90,7 +90,7 @@ typedef struct SaveData {
     s32 points;
 } SaveData;
 
-extern ResultsScreen data_ov034_020c0fa0;
+extern ResultsScreen gResultsScreenPointersPrefix;
 extern ShopEntry gResultsShopEntries[];
 extern u16 gPadPressedStorage;
 extern SessionState gSceneHandoffSharedHeader;
@@ -115,8 +115,8 @@ extern void MarkResultsComplete(int unused);
 extern void SetupStageParams(ResultsParams *params, int stage, int level);
 extern u32 ClassifyResultsShopEntry(int index);
 
-#define WORK (data_ov034_020c0fa0.work)
-#define PARAMS (data_ov034_020c0fa0.params)
+#define WORK (gResultsScreenPointersPrefix.work)
+#define PARAMS (gResultsScreenPointersPrefix.params)
 
 void HandleResultsInput(Widget *widget, u32 pressed)
 {

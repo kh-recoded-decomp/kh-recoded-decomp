@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-const u32 data_ov032_020bfef8[32] = {
+const u32 gChallengeConditionCounterIndices[32] = {
     0xFFFFFFFF, 0xFFFFFFFF, 0x00000005, 0x0000001C,
     0x0000000C, 0x0000000D, 0x00000009, 0x0000000B,
     0xFFFFFFFF, 0x0000000E, 0x0000000F, 0xFFFFFFFF,

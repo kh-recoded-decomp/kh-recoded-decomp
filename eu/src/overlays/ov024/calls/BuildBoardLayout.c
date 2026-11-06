@@ -95,12 +95,12 @@ typedef struct OffsetTable {
 
 #define BOARD_VRAM_KEY(base) ((((base) + 0x8000) & 0xfffffc) << 7)
 
-extern BoardGlobals data_ov024_020b7540;
-extern int data_ov024_020b754c[6];
-extern const CellOffset data_ov024_020b73a4[];
-extern const CellTable data_ov024_020b73d4;
-extern const LinkTable data_ov024_020b741c;
-extern const OffsetTable data_ov024_020b7384;
+extern BoardGlobals gBoardScreenGlobals;
+extern int gBoardNodeGraphicsBufferStorage[6];
+extern const CellOffset gBoardNodeScreenX0[];
+extern const CellTable gBoardNodeLinkDirections;
+extern const LinkTable gBoardGapConnectorConfigs;
+extern const OffsetTable gBoardDirectionScreenOffsets;
 
 extern void UnlinkActiveIndexedRecord(void *manager, int slot);
 extern void ReleaseOverlayResourceSlots(void);
@@ -134,94 +134,94 @@ void BuildBoardLayout(BoardCursor *cursor, int loadBackground)
     int j;
     int sequence;
 
-    data_ov024_020b7540.ready = 0;
-    data_ov024_020b7540.state->originX = 0;
+    gBoardScreenGlobals.ready = 0;
+    gBoardScreenGlobals.state->originX = 0;
     if (cursor->slotValues[2] < 0 && cursor->slotValues[3] < 0) {
-        data_ov024_020b7540.state->originX += 0x20;
+        gBoardScreenGlobals.state->originX += 0x20;
     }
     if (cursor->slotValues[4] < 0 && cursor->slotValues[5] < 0) {
-        data_ov024_020b7540.state->originX += 0x20;
+        gBoardScreenGlobals.state->originX += 0x20;
     }
-    data_ov024_020b7540.state->originY =
+    gBoardScreenGlobals.state->originY =
         (cursor->slotValues[1] < 0 && cursor->slotValues[3] < 0 && cursor->slotValues[5] < 0) ? 0x20 : 0;
-    *(vu32 *)0x04001018 = ((-data_ov024_020b7540.state->originX) & 0x1ff) |
-                          (((-data_ov024_020b7540.state->originY) << 16) & (0x1ff << 16));
+    *(vu32 *)0x04001018 = ((-gBoardScreenGlobals.state->originX) & 0x1ff) |
+                          (((-gBoardScreenGlobals.state->originY) << 16) & (0x1ff << 16));
 
     for (i = 0; i < 6; i++) {
         for (j = 0; j < 3; j++) {
-            if (data_ov024_020b7540.state->cellIds[i][j] >= 0) {
-                UnlinkActiveIndexedRecord(data_ov024_020b7540.state->objectSet, data_ov024_020b7540.state->cellIds[i][j]);
+            if (gBoardScreenGlobals.state->cellIds[i][j] >= 0) {
+                UnlinkActiveIndexedRecord(gBoardScreenGlobals.state->objectSet, gBoardScreenGlobals.state->cellIds[i][j]);
             }
-            data_ov024_020b7540.state->cellIds[i][j] = -1;
+            gBoardScreenGlobals.state->cellIds[i][j] = -1;
         }
     }
     ReleaseOverlayResourceSlots();
-    ClearTileTableRowAndMarkDirty(data_ov024_020b7540.state->widget, 0x1a);
-    ClearTileTableRowAndMarkDirty(data_ov024_020b7540.state->widget, 0x1b);
+    ClearTileTableRowAndMarkDirty(gBoardScreenGlobals.state->widget, 0x1a);
+    ClearTileTableRowAndMarkDirty(gBoardScreenGlobals.state->widget, 0x1b);
     if (loadBackground) {
-        ClearTileTableRowAndMarkDirty(data_ov024_020b7540.state->widget, 0x18);
-        ClearTileTableRowAndMarkDirty(data_ov024_020b7540.state->widget, 0x19);
-        archive = LoadFileAllocFromHeapTail(BOARD_VRAM_KEY(data_ov024_020b7540.state->resourceB) | 0x80000018, 0xe);
+        ClearTileTableRowAndMarkDirty(gBoardScreenGlobals.state->widget, 0x18);
+        ClearTileTableRowAndMarkDirty(gBoardScreenGlobals.state->widget, 0x19);
+        archive = LoadFileAllocFromHeapTail(BOARD_VRAM_KEY(gBoardScreenGlobals.state->resourceB) | 0x80000018, 0xe);
         GetBgDataFromArchive(&bgData, archive, -1, 0, 0);
         GXS_LoadBGPltt(bgData.palette->data, 0, bgData.palette->size);
         GXS_LoadBG2Char(bgData.character->data, 0, bgData.character->size);
         NNSi_FndFreeFromDefaultHeap(archive);
     }
-    TagTracker_InvokeCallback(data_ov024_020b7540.state->animSet,
-                                       FindActiveRecordById(data_ov024_020b7540.state->animSet, 1000));
-    TagTracker_InvokeCallback(data_ov024_020b7540.state->animSet,
-                                       FindActiveRecordById(data_ov024_020b7540.state->animSet, 1010));
+    TagTracker_InvokeCallback(gBoardScreenGlobals.state->animSet,
+                                       FindActiveRecordById(gBoardScreenGlobals.state->animSet, 1000));
+    TagTracker_InvokeCallback(gBoardScreenGlobals.state->animSet,
+                                       FindActiveRecordById(gBoardScreenGlobals.state->animSet, 1010));
 
     for (i = 0; i < 6; i++) {
         if (cursor->slotValues[i] >= 0) {
-            data_ov024_020b754c[i] = (int)LoadFileAllocFromHeapTail(
+            gBoardNodeGraphicsBufferStorage[i] = (int)LoadFileAllocFromHeapTail(
                 ((cursor->directions[i] + 0x17 + cursor->slotValues[i] * 4) & 0x1ff) |
-                    (BOARD_VRAM_KEY(data_ov024_020b7540.state->resourceA) | 0x80000000),
+                    (BOARD_VRAM_KEY(gBoardScreenGlobals.state->resourceA) | 0x80000000),
                 0xe);
-            GetBgDataFromArchive(&bgData, (void *)data_ov024_020b754c[i], -1, 0, 0);
+            GetBgDataFromArchive(&bgData, (void *)gBoardNodeGraphicsBufferStorage[i], -1, 0, 0);
             NNS_GfdRegisterNewVramTransferTask(0x17, i * 0x800 + 0xc00, bgData.character->data, bgData.character->size);
             sequence = 0xe;
             if (cursor->items[i]) {
                 sequence = 0xd;
             }
-            StampTileRegionPalette(data_ov024_020b7540.state->animSet,
-                                FindActiveRecordById(data_ov024_020b7540.state->animSet, i + 1001), sequence);
-            TagTracker_InvokeCallback(data_ov024_020b7540.state->animSet,
-                                               FindActiveRecordById(data_ov024_020b7540.state->animSet, i + 1001));
+            StampTileRegionPalette(gBoardScreenGlobals.state->animSet,
+                                FindActiveRecordById(gBoardScreenGlobals.state->animSet, i + 1001), sequence);
+            TagTracker_InvokeCallback(gBoardScreenGlobals.state->animSet,
+                                               FindActiveRecordById(gBoardScreenGlobals.state->animSet, i + 1001));
         } else {
-            data_ov024_020b754c[i] = 0;
+            gBoardNodeGraphicsBufferStorage[i] = 0;
         }
-        data_ov024_020b7540.state->shownItems[i] = cursor->items[i];
+        gBoardScreenGlobals.state->shownItems[i] = cursor->items[i];
     }
 
-    DrawWidgetNumber(data_ov024_020b7540.state->objectSet, 2, 8, cursor->progress, 0xd,
-                              data_ov024_020b7540.state->progressDigits, 1);
-    DrawWidgetNumber(data_ov024_020b7540.state->objectSet, 4, 9, cursor->goal, 8,
-                              data_ov024_020b7540.state->goalDigits, 1);
-    DrawWidgetNumber(data_ov024_020b7540.state->objectSet, 5, 8, cursor->score, 0xd,
-                              data_ov024_020b7540.state->scoreDigits, 1);
-    DrawWidgetNumber(data_ov024_020b7540.state->objectSet, 7, 9, cursor->moves, 8,
-                              data_ov024_020b7540.state->moveDigits, 1);
-    IndexedRecords_SetFlag2(data_ov024_020b7540.state->objectSet, data_ov024_020b7540.state->hintSlot, 0);
-    IndexedRecords_SetFlag2(data_ov024_020b7540.state->objectSet, data_ov024_020b7540.state->goalSlot, 0);
-    SetEntrySlotsVisible(data_ov024_020b7540.state->objectSet,
-                                  FindWidgetById(data_ov024_020b7540.state->objectSet, 8), 0);
-    data_ov024_020b7540.state->menuShown = 0;
+    DrawWidgetNumber(gBoardScreenGlobals.state->objectSet, 2, 8, cursor->progress, 0xd,
+                              gBoardScreenGlobals.state->progressDigits, 1);
+    DrawWidgetNumber(gBoardScreenGlobals.state->objectSet, 4, 9, cursor->goal, 8,
+                              gBoardScreenGlobals.state->goalDigits, 1);
+    DrawWidgetNumber(gBoardScreenGlobals.state->objectSet, 5, 8, cursor->score, 0xd,
+                              gBoardScreenGlobals.state->scoreDigits, 1);
+    DrawWidgetNumber(gBoardScreenGlobals.state->objectSet, 7, 9, cursor->moves, 8,
+                              gBoardScreenGlobals.state->moveDigits, 1);
+    IndexedRecords_SetFlag2(gBoardScreenGlobals.state->objectSet, gBoardScreenGlobals.state->hintSlot, 0);
+    IndexedRecords_SetFlag2(gBoardScreenGlobals.state->objectSet, gBoardScreenGlobals.state->goalSlot, 0);
+    SetEntrySlotsVisible(gBoardScreenGlobals.state->objectSet,
+                                  FindWidgetById(gBoardScreenGlobals.state->objectSet, 8), 0);
+    gBoardScreenGlobals.state->menuShown = 0;
 
-    cells = data_ov024_020b73d4;
-    links = data_ov024_020b741c;
-    offsets = data_ov024_020b7384;
+    cells = gBoardNodeLinkDirections;
+    links = gBoardGapConnectorConfigs;
+    offsets = gBoardDirectionScreenOffsets;
     for (i = 0; i < 6; i++) {
         if (cursor->slotValues[i] >= 0) {
             for (j = 0; j < 3; j++) {
                 if (cells.cells[i][j] >= 0 && cursor->links[i][cells.cells[i][j]] >= 0) {
-                    data_ov024_020b7540.state->cellIds[i][j] = CreateDefaultObjectSlot(
-                        data_ov024_020b7540.state->objectSet, 0, cursor->slotValues[i] * 4 + (((cells.cells[i][j] + 4 - cursor->directions[i]) & 3) + 0xb),
-                        data_ov024_020b7540.state->originX + (data_ov024_020b73a4[i].x + offsets.offsets[cursor->directions[i]].x),
-                        data_ov024_020b7540.state->originY + (data_ov024_020b73a4[i].y + offsets.offsets[cursor->directions[i]].y));
-                    SetEntryRotation(data_ov024_020b7540.state->objectSet,
-                                              data_ov024_020b7540.state->cellIds[i][j], -(cursor->directions[i] * 0x4000));
-                    IndexedRecords_SetFlag2(data_ov024_020b7540.state->objectSet, data_ov024_020b7540.state->cellIds[i][j], 1);
+                    gBoardScreenGlobals.state->cellIds[i][j] = CreateDefaultObjectSlot(
+                        gBoardScreenGlobals.state->objectSet, 0, cursor->slotValues[i] * 4 + (((cells.cells[i][j] + 4 - cursor->directions[i]) & 3) + 0xb),
+                        gBoardScreenGlobals.state->originX + (gBoardNodeScreenX0[i].x + offsets.offsets[cursor->directions[i]].x),
+                        gBoardScreenGlobals.state->originY + (gBoardNodeScreenX0[i].y + offsets.offsets[cursor->directions[i]].y));
+                    SetEntryRotation(gBoardScreenGlobals.state->objectSet,
+                                              gBoardScreenGlobals.state->cellIds[i][j], -(cursor->directions[i] * 0x4000));
+                    IndexedRecords_SetFlag2(gBoardScreenGlobals.state->objectSet, gBoardScreenGlobals.state->cellIds[i][j], 1);
                 }
             }
         }
@@ -229,13 +229,13 @@ void BuildBoardLayout(BoardCursor *cursor, int loadBackground)
     for (i = 0; i < 8; i++) {
         node = links.entries[i].node;
         if (cursor->slotValues[node] < 0 && cursor->links[links.entries[i].linkNode][links.entries[i].linkDir] >= 0) {
-            data_ov024_020b7540.state->cellIds[node][0] = CreateDefaultObjectSlot(
-                data_ov024_020b7540.state->objectSet, 0, links.entries[i].sprite + 0x5b,
-                data_ov024_020b7540.state->originX + data_ov024_020b73a4[node].x,
-                data_ov024_020b7540.state->originY + data_ov024_020b73a4[node].y);
-            IndexedRecords_SetFlag2(data_ov024_020b7540.state->objectSet, data_ov024_020b7540.state->cellIds[node][0], 1);
+            gBoardScreenGlobals.state->cellIds[node][0] = CreateDefaultObjectSlot(
+                gBoardScreenGlobals.state->objectSet, 0, links.entries[i].sprite + 0x5b,
+                gBoardScreenGlobals.state->originX + gBoardNodeScreenX0[node].x,
+                gBoardScreenGlobals.state->originY + gBoardNodeScreenX0[node].y);
+            IndexedRecords_SetFlag2(gBoardScreenGlobals.state->objectSet, gBoardScreenGlobals.state->cellIds[node][0], 1);
         }
     }
-    data_ov024_020b7540.state->goalShown = 0;
-    data_ov024_020b7540.ready = 1;
+    gBoardScreenGlobals.state->goalShown = 0;
+    gBoardScreenGlobals.ready = 1;
 }

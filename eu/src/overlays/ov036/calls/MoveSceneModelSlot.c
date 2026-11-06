@@ -1,5 +1,5 @@
 #define MoveSceneModelSlot_020bd2c8 MoveSceneModelSlot
-#define data_ov036_020c3920 data_ov036_020c3940
+#define data_ov036_020c3920 gEvent2DPanelManager
 #define func_ov036_020bafe4 ScreenToTouchVector
 #define func_ov036_020bc138 FindOrAcquireModelSlot
 #include "src/ov036/unclassified_helpers/MoveSceneModelSlot_020bd2c8.c"

@@ -1,6 +1,6 @@
 #define build_and_place_record_sprites_020b77c0 build_and_place_record_sprites
-#define data_020ba364 data_ov027_020ba384
-#define data_020ba368 data_ov027_020ba388
+#define data_020ba364 gTrackerMainTileTableIds
+#define data_020ba368 gTrackerSubTileTableIds
 #define func_020b7e5c CreateTrackerRecord
 #define func_020b81e8 SetTrackerRecordPosition
 #include "src/ov027/runtime/build_and_place_record_sprites_020b77c0.c"

@@ -1,6 +1,6 @@
 #define ProbeGroundBelow_020bc6fc ProbeGroundBelow
 #define addScaledVector_020301ac AddScaledVector
-#define data_ov032_020bff8c data_ov032_020bffac
+#define data_ov032_020bff8c gGroupGroundProbeDelta
 #define func_020351b8 QueryModelSegmentCollision
 #define func_02036230 GetActorRegistry
 #include "src/ov032/object_group/ProbeGroundBelow_020bc6fc.c"

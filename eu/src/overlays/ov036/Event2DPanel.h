@@ -50,7 +50,7 @@ typedef char Event2DPanelActorSize[sizeof(Event2DPanelActor) == 0x138 ? 1 : -1];
 typedef char Event2DPanelSlotSize[sizeof(Event2DPanelSlot) == 0x9c ? 1 : -1];
 typedef char Event2DScreenLayerSize[sizeof(Event2DScreenLayer) == 0x54 ? 1 : -1];
 
-extern Event2DPanelManager data_ov036_020c3940;
+extern Event2DPanelManager gEvent2DPanelManager;
 Event2DPanelStateFn InitEvent2DPanel(Event2DPanelArgs *args);
 
 #endif

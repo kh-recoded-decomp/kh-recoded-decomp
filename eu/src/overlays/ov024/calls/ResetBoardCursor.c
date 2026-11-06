@@ -1,5 +1,5 @@
 #define ResetBoardCursor_020b72e4 ResetBoardCursor
-#define data_ov024_020b7520 data_ov024_020b7540
+#define data_ov024_020b7520 gBoardScreenGlobals
 #define func_ov024_020b5828 BuildBoardLayout
 #define func_ov024_020b60e0 GenerateRandomLinks
 #define func_ov024_020b6bb0 UpdateBoardHelpText

@@ -1,3 +1,3 @@
 #define SetPanelCursorOverride_020bd9a4 SetPanelCursorOverride
-#define data_ov036_020c3920 data_ov036_020c3940
+#define data_ov036_020c3920 gEvent2DPanelManager
 #include "src/ov036/panel_state/SetPanelCursorOverride_020bd9a4.c"

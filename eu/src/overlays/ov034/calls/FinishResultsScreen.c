@@ -4,5 +4,5 @@
 #define func_0204e040 ReleaseSeqArcHeapLevel
 #define func_ov034_020bcdf0 DestroyResultsGraphics
 #define globalState_0206085c gSceneHandoffSharedHeader
-#define resultsState_020c0f80 data_ov034_020c0fa0
+#define resultsState_020c0f80 gResultsScreenPointersPrefix
 #include "src/ov034/reviewed_helpers/FinishResultsScreen_020bdc3c.c"

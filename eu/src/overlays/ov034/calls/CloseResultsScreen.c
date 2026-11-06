@@ -19,8 +19,8 @@ typedef struct ResultsScreen {
     ResultsWork *work;
 } ResultsScreen;
 
-extern ResultsScreen data_ov034_020c0fa0;
-extern u8 data_ov024_020b74a0[];
+extern ResultsScreen gResultsScreenPointersPrefix;
+extern u8 gBoardScreenTaskDescriptor[];
 
 extern u32 func_ov001_02063620(void);
 extern void func_ov001_020648c8(u32 value);
@@ -32,19 +32,19 @@ extern void StoreToGlobalPtr4Field28(int value);
 
 int CloseResultsScreen(void)
 {
-    if (data_ov034_020c0fa0.work->flags & 1) {
+    if (gResultsScreenPointersPrefix.work->flags & 1) {
         if (func_ov001_02063620() != 0) {
             return 0;
         }
-        data_ov034_020c0fa0.work->flags &= ~1;
-        if (data_ov034_020c0fa0.work->nextScene != -1) {
-            func_ov001_020648c8(data_ov034_020c0fa0.work->nextScene);
+        gResultsScreenPointersPrefix.work->flags &= ~1;
+        if (gResultsScreenPointersPrefix.work->nextScene != -1) {
+            func_ov001_020648c8(gResultsScreenPointersPrefix.work->nextScene);
         } else {
-            if (data_ov034_020c0fa0.params->needsSave != 0) {
-                data_ov034_020c0fa0.work->saveTask = CreateTaskObject(data_ov024_020b74a0, (void *)0x7b);
-                RerollBoardSlotsWrapper(data_ov034_020c0fa0.params);
-                ApplyResultsPartyBonus(data_ov034_020c0fa0.params);
-                data_ov034_020c0fa0.params->needsSave = 0;
+            if (gResultsScreenPointersPrefix.params->needsSave != 0) {
+                gResultsScreenPointersPrefix.work->saveTask = CreateTaskObject(gBoardScreenTaskDescriptor, (void *)0x7b);
+                RerollBoardSlotsWrapper(gResultsScreenPointersPrefix.params);
+                ApplyResultsPartyBonus(gResultsScreenPointersPrefix.params);
+                gResultsScreenPointersPrefix.params->needsSave = 0;
             }
             CommitResultsRewards();
         }

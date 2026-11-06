@@ -38,7 +38,7 @@ typedef struct SlotSceneHolder {
     SlotScene *scene;
 } SlotSceneHolder;
 
-extern SlotSceneHolder data_ov036_020c3940;
+extern SlotSceneHolder gEvent2DPanelManager;
 extern void SetBrightnessAndSyncMain(int value);
 extern void SetSecondaryBrightness(int value);
 extern int NNS_SndPlayerCountPlayingSeqByPlayerNo(int playerNo);
@@ -55,7 +55,7 @@ extern void ReleaseSeqArcHeapLevel(int index);
 int ShutdownPanelScene_020bab74(void)
 {
     int i;
-    SlotScene *scene = data_ov036_020c3940.scene;
+    SlotScene *scene = gEvent2DPanelManager.scene;
 
     SetBrightnessAndSyncMain(scene->brightness);
     SetSecondaryBrightness(-16);
@@ -92,6 +92,6 @@ int ShutdownPanelScene_020bab74(void)
     scene->deferred = 0;
     scene->flags &= ~0x10;
     ReleaseSeqArcHeapLevel(1);
-    data_ov036_020c3940.scene->flags |= 0x8000;
+    gEvent2DPanelManager.scene->flags |= 0x8000;
     return 2;
 }

@@ -1,5 +1,5 @@
 #define RollRowStepChance_020bc190 RollRowStepChance
-#define data_ov032_020bff74 data_ov032_020bff94
+#define data_ov032_020bff74 gRowStepChanceWeights
 #define func_ov032_020bbbd4 GetRowDefinition
 #define random_next_scaled_0202aa04 random_next_scaled
 #include "src/ov032/object_group/RollRowStepChance_020bc190.c"

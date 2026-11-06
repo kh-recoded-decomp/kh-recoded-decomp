@@ -2,7 +2,7 @@
 #define RTC_GetTime_0200e520 RTC_GetTime
 #define RTCi_RunAsyncCommandAndWait_0200e4b0 RTC_GetDate
 #define UpdateChallengeProgress_020bb57c UpdateChallengeProgress
-#define data_ov032_020bfed8 data_ov032_020bfef8
+#define data_ov032_020bfed8 gChallengeConditionCounterIndices
 #define data_ov032_020c0060 gGroupSceneGlobals
 #define func_02023dbc _s32_div_f
 #define func_ov001_02071e44 ShowFieldPopupText

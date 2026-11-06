@@ -2,7 +2,7 @@
 
 #pragma explicit_zero_data on
 
-u32 data_ov034_020bea78[26] = {
+u32 gResultsStageItemTriplesPrefix[26] = {
     0x00000000, 0x02040200, 0x03060403, 0x2D020202,
     0x02002D2D, 0x03020000, 0x00020200, 0x0A060C0B,
     0x102D0413, 0x05122D00, 0x03030302, 0x03020603,

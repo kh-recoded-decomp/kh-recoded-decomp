@@ -1,5 +1,5 @@
 #include "nitro/types.h"
 
-const u32 data_ov027_020ba384[1] = {
+const u32 gTrackerMainTileTableIds[1] = {
     0x0B0A0908,
 };

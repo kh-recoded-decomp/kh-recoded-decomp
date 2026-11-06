@@ -54,7 +54,7 @@ typedef struct PanelContext {
     PanelWork *work;
 } PanelContext;
 
-extern PanelContext data_ov036_020c3940;
+extern PanelContext gEvent2DPanelManager;
 extern void AdvanceSlotTransition(void);
 extern void UpdateScreenLayer(int layerIndex);
 extern void UpdateEvent2DActorSlot(int slotIndex);
@@ -69,7 +69,7 @@ void UpdateEvent2DSceneObjects(void)
     BOOL advance;
     PanelModel *model;
     int i;
-    PanelWork *work = data_ov036_020c3940.work;
+    PanelWork *work = gEvent2DPanelManager.work;
 
     if (work->exitRequested != 0) {
         AdvanceSlotTransition();

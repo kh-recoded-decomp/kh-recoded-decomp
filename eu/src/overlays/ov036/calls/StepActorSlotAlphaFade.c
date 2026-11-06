@@ -25,7 +25,7 @@ typedef struct SlotSceneHolder {
     SlotScene *scene;
 } SlotSceneHolder;
 
-extern SlotSceneHolder data_ov036_020c3940;
+extern SlotSceneHolder gEvent2DPanelManager;
 extern int EvaluateInterpolationCurve(int curve, u32 total, int remaining);
 extern int ScaleAroundPivot(int t, int to, int from);
 
@@ -34,7 +34,7 @@ void StepActorSlotAlphaFade(ActorSlot *slot)
     int remaining = --slot->framesLeft;
     int t;
 
-    if (data_ov036_020c3940.scene->skipAnimation != 0 || remaining == 0) {
+    if (gEvent2DPanelManager.scene->skipAnimation != 0 || remaining == 0) {
         slot->alpha = (u8)(slot->endAlpha >> 12);
         slot->flags &= ~4;
         return;

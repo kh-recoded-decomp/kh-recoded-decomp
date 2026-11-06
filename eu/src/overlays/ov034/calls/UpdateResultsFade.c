@@ -2,5 +2,5 @@
 #define SetSecondaryBrightness_02029ed0 SetSecondaryBrightness
 #define UpdateResultsFade_020bb094 UpdateResultsFade
 #define func_ov027_020b8c94 UpdateWidgetRootAndFireAlarm
-#define resultsState_020c0f80 data_ov034_020c0fa0
+#define resultsState_020c0f80 gResultsScreenPointersPrefix
 #include "src/ov034/reviewed_helpers/UpdateResultsFade_020bb094.c"

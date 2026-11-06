@@ -5,9 +5,9 @@ typedef struct Ov024Context {
     void *handle;
 } Ov024Context;
 
-extern Ov024Context *data_ov024_020b7540;
+extern Ov024Context *gBoardScreenGlobals;
 extern void ClearWidgetTileArea(void *handle, int value);
 
 void ClearBoardWidgetTileArea(int value) {
-    ClearWidgetTileArea(data_ov024_020b7540->handle, value);
+    ClearWidgetTileArea(gBoardScreenGlobals->handle, value);
 }

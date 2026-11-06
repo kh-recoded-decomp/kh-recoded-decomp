@@ -5,7 +5,7 @@
 #define func_0202ed3c InitSharedRecordAndDispatchAlt
 #define g_menuAnimName_020bb728 sOv037_CntSoanmPZ_020bb748
 #define g_menuArchivePath_020bb704 sOv037_BaChSoTex0Z_020bb724
-#define g_menuCameraOffset_020bb630 data_ov037_020bb650
+#define g_menuCameraOffset_020bb630 gContinueModelInitialTranslation
 #define g_menuModelName_020bb714 sOv037_BaChSoMdl0PZ_020bb734
 #define g_ov037Context_020bb764 gContinueScreenContext
 #define selectJointAnimationBlend_0202f2cc selectJointAnimationBlend

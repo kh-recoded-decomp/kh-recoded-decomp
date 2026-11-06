@@ -1,3 +1,3 @@
 #define GetSceneWorkValue10d8_020bd49c GetSceneWorkValue10d8
-#define data_ov036_020c3920 data_ov036_020c3940
+#define data_ov036_020c3920 gEvent2DPanelManager
 #include "src/ov036/unclassified_helpers/GetSceneWorkValue10d8_020bd49c.c"

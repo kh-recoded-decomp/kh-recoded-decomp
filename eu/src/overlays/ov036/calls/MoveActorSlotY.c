@@ -1,5 +1,5 @@
 #define MoveActorSlotY_020bcd08 MoveActorSlotY
-#define data_ov036_020c3920 data_ov036_020c3940
+#define data_ov036_020c3920 gEvent2DPanelManager
 #define func_ov036_020bb7c0 FindOrAcquireOwnerSlot
 #define func_ov036_020bb8cc GetActorSlotOffscreenY
 #include "src/ov036/unclassified_helpers/MoveActorSlotY_020bcd08.c"

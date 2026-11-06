@@ -1,5 +1,5 @@
 #define PickWeightedIndex_020bbe84 PickWeightedIndex
 #define RollRowDropItem_020bbecc RollRowDropItem
-#define data_ov032_020bff6c data_ov032_020bff8c
+#define data_ov032_020bff6c gGroupPoseChoiceCodes
 #define func_ov032_020bbbd4 GetRowDefinition
 #include "src/ov032/object_group/RollRowDropItem_020bbecc.c"

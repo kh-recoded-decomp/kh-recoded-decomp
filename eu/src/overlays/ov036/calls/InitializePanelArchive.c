@@ -12,7 +12,7 @@ typedef struct PanelManager {
     PanelWork *work;
 } PanelManager;
 
-extern PanelManager data_ov036_020c3940;
+extern PanelManager gEvent2DPanelManager;
 extern void (*gTextScriptCommandHandlers[])(void);
 extern char sOv036_E_020c3744[];
 
@@ -27,7 +27,7 @@ extern void ReadSessionPackedBits(void);
 
 void InitializePanelArchive(void)
 {
-    PanelWork *work = data_ov036_020c3940.work;
+    PanelWork *work = gEvent2DPanelManager.work;
     u32 table;
     u32 fileId;
     char name[128];

@@ -2,5 +2,5 @@
 #define TeardownContextState_020b6730 TeardownContextState
 #define func_02001474 FreeResourceBufferAndProbeHeap
 #define func_ov027_020ba294 FreePointerIfSet
-#define g_context_020b7520 data_ov024_020b7540
+#define g_context_020b7520 gBoardScreenGlobals
 #include "src/ov024/unclassified_helpers/TeardownContextState_020b6730.c"

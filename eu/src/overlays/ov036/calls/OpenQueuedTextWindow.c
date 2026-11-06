@@ -2,9 +2,9 @@
 #define OpenQueuedTextWindow_020bf6c0 OpenQueuedTextWindow
 #define SetTimerDuration_020c27dc SetTextWindowState
 #define data_ov036_020c3390 data_ov036_020c33b0
-#define data_ov036_020c3398 data_ov036_020c33b8
-#define data_ov036_020c33a0 data_ov036_020c33c0
-#define data_ov036_020c33a8 data_ov036_020c33c8
+#define data_ov036_020c3398 gTextWindowTextBgIds
+#define data_ov036_020c33a0 gTextWindowFrameBgIds
+#define data_ov036_020c33a8 gTextWindowDisplayPlaneMasks
 #define data_ov036_020c3844 gTextWindowResourceTable
 #define func_01ff878c MIi_CpuCopyFast
 #include "src/ov036/text_rendering/OpenQueuedTextWindow_020bf6c0.c"

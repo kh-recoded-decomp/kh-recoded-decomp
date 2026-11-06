@@ -1,3 +1,3 @@
 #define ApplyResultsPartyBonus_020be258 ApplyResultsPartyBonus
-#define data_ov034_020be960 data_ov034_020be980
+#define data_ov034_020be960 gResultsMemberBonusValues
 #include "src/ov034/unclassified_helpers/ApplyResultsPartyBonus_020be258.c"

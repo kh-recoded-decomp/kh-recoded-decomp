@@ -10,7 +10,7 @@ typedef struct PanelManager {
     PanelWork *work;
 } PanelManager;
 
-extern PanelManager data_ov036_020c3940;
+extern PanelManager gEvent2DPanelManager;
 extern int IsTextWindowControllerReady(void);
 
 int PanelSceneState_WaitControllerReady(void)
@@ -18,6 +18,6 @@ int PanelSceneState_WaitControllerReady(void)
     if (IsTextWindowControllerReady() == 0) {
         return -1;
     }
-    data_ov036_020c3940.work->flags |= 0x8000;
+    gEvent2DPanelManager.work->flags |= 0x8000;
     return 1;
 }

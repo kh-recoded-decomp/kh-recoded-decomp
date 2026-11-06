@@ -1,5 +1,5 @@
 #include "nitro/types.h"
 
-const u16 data_ov036_020c342c[1] = {
+const u16 gDialogFrameRect0X[1] = {
     0x000A,
 };

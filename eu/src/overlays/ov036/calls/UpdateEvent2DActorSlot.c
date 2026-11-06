@@ -1,7 +1,7 @@
 #include "nitro/types.h"
 
 typedef struct { unsigned char padding[4]; int value; } SharedState;
-extern SharedState data_ov036_020c3940;
+extern SharedState gEvent2DPanelManager;
 extern unsigned int StepActorSlotMove();
 extern unsigned int UpdateSpriteShake();
 extern unsigned int StepActorSlotAlphaFade();
@@ -9,7 +9,7 @@ extern unsigned int StepActorSlotAlphaFade();
 void UpdateEvent2DActorSlot(int index) {
   int record;
 
-  record = index * 0x9c + *(int *)(data_ov036_020c3940.value + 0x1090);
+  record = index * 0x9c + *(int *)(gEvent2DPanelManager.value + 0x1090);
   if ((*(u16 *)(record + 0x88) & 1) != 0) {
     StepActorSlotMove(record);
   }

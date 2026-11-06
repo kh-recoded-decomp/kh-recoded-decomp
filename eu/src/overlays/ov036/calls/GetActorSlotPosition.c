@@ -1,4 +1,4 @@
 #define GetActorSlotPosition_020bd0dc GetActorSlotPosition
-#define data_ov036_020c3920 data_ov036_020c3940
+#define data_ov036_020c3920 gEvent2DPanelManager
 #define func_ov036_020bb7c0 FindOrAcquireOwnerSlot
 #include "src/ov036/unclassified_helpers/GetActorSlotPosition_020bd0dc.c"

@@ -27,7 +27,7 @@ typedef struct SceneContext {
 #define REG_BG1OFS (*(vu32 *)0x04000014)
 #define SET_BG1_OFFSET(x, y) (REG_BG1OFS = ((x) & 0x1ff) | (((y) << 16) & 0x1ff0000))
 
-extern SceneContext data_ov036_020c3940;
+extern SceneContext gEvent2DPanelManager;
 extern int EvaluateInterpolationCurve(int mode, unsigned int duration, int remaining);
 extern int ScaleAroundPivot(int ratio, int target, int origin);
 
@@ -37,7 +37,7 @@ void StepBgMosaicTransition(MosaicLayer *layer)
     int level;
     int ratio;
 
-    if (data_ov036_020c3940.work->skipAnimations != 0 || remaining == 0) {
+    if (gEvent2DPanelManager.work->skipAnimations != 0 || remaining == 0) {
         layer->flags &= ~0x40;
         REG_MOSAIC_BG = layer->mosaicLevel | (layer->mosaicLevel << 4);
         if (layer->mosaicLevel == 0) {
