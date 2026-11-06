@@ -368,7 +368,7 @@ src/overlays/ov015/calls/ReturnWirelessConnectionToState2IfInRange3To7.c:
     complete
     .text       start:0x02072cb4 end:0x02072cec
 
-libs/nns/snd/calls/SetWirelessReceivedCardCallback.c:
+src/overlays/ov015/calls/SetWirelessReceivedCardCallback.c:
     complete
     .text       start:0x02072cec end:0x02072d00
 

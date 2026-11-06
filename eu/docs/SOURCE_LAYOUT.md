@@ -50,10 +50,11 @@ filename often identifies an aggregate file containing several objects.
 
 For example, [ApplySubBgScroll.c](../src/overlays/ov025/calls/ApplySubBgScroll.c)
 includes the shared implementation after binding the EU globals and symbol.
-[SetWirelessReceivedCardCallback.c](../libs/nns/snd/calls/SetWirelessReceivedCardCallback.c)
-is game connection work despite its inherited sound-library directory and
-private type spelling; its [wireless contract](PANEL_WIRELESS_CALLBACK_CONTRACTS.md)
-establishes the owner. Directory placement alone does not certify library
+[SetWirelessReceivedCardCallback.c](../src/overlays/ov015/calls/SetWirelessReceivedCardCallback.c)
+now resides in its proven game overlay. Its former sound-library path and
+private sound-archive types obscured the connection-work owner; the
+[wireless contract](PANEL_WIRELESS_CALLBACK_CONTRACTS.md) establishes the field
+and callback relationship. Directory placement alone does not certify library
 semantics.
 
 ## Organization decision and the Days reference
@@ -64,8 +65,10 @@ a useful model for browsing systems and collecting proven shared types.
 The reference was reviewed at commit
 `93535afd7ca082f3d856bbf1cadae65be16d44ba`.
 
-For this shared Re:coded repository, the compiled EU paths currently stay
-stable. The system index supplies the functional grouping, while native
+For this shared Re:coded repository, native overlay groups and most compiled
+EU paths stay stable. The proven wireless callback setter has moved from its
+misleading sound-library directory into ov015/calls, with its delink binding
+updated and its actual-path compiler output checked. The system index supplies the functional grouping, while native
 overlay IDs, shared-body includes and per-file compiler selections keep their
 existing bindings. A wholesale directory move would need to update those
 bindings and both regions' callers; it would not establish additional type or

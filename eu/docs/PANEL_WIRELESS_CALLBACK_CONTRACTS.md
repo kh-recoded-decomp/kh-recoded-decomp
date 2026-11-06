@@ -36,7 +36,7 @@ Sources are relative to `eu/`; evidence paths use repository root. Shared-source
 | ov015:02072860 arm | `WirelessCardSlot1_SelectAndSlideOutWithSound` | `src/overlays/ov015/calls/WirelessCardSlot1_SelectAndSlideOutWithSound.c` | `src/ov015/panel_state/InitPanelScreenGraphics_0206d59c.c` |
 | ov015:02072878 arm | `WirelessCardSlot2_SelectAndSlideOutWithSound` | `src/overlays/ov015/calls/WirelessCardSlot2_SelectAndSlideOutWithSound.c` | `src/ov015/panel_state/InitPanelScreenGraphics_0206d59c.c` |
 | ov015:02072890 arm | `WirelessCardSlot3_SelectAndSlideOutWithSound` | `src/overlays/ov015/calls/WirelessCardSlot3_SelectAndSlideOutWithSound.c` | `src/ov015/panel_state/InitPanelScreenGraphics_0206d59c.c` |
-| ov015:02072cec arm | `SetWirelessReceivedCardCallback` | `libs/nns/snd/calls/SetWirelessReceivedCardCallback.c` | `src/ov015/reviewed_helpers/InvokePanelCallback_02073598.c` |
+| ov015:02072cec arm | `SetWirelessReceivedCardCallback` | `src/overlays/ov015/calls/SetWirelessReceivedCardCallback.c` | `src/ov015/reviewed_helpers/InvokePanelCallback_02073598.c` |
 | ov015:02072f98 arm | `WirelessConnection_LeaveState0Noop` | `src/overlays/ov015/auto/WirelessConnection_LeaveState0Noop.c` | `eu/src/overlays/ov015/calls/SetWirelessConnectionState.c` |
 | ov015:02072f9c arm | `WirelessConnection_EnterState1Noop` | `src/overlays/ov015/auto/WirelessConnection_EnterState1Noop.c` | `eu/src/overlays/ov015/calls/SetWirelessConnectionState.c` |
 | ov015:02072fa0 arm | `WirelessConnection_UpdateState1Noop` | `src/overlays/ov015/auto/WirelessConnection_UpdateState1Noop.c` | `eu/src/overlays/ov015/calls/SetWirelessConnectionState.c` |
@@ -284,7 +284,7 @@ Three identical bodies remain distinct registered identities. Legacy zero-argume
 
 Stores raw callback word at wireless-connection singleton 0207e964+90h. StartPlayerCardSharing passes AddReceivedPlayerCard; InvokePanelCallback reads/calls this exact slot with the prepared 0x70-byte profile from PrepareOpponentProfile. Native code is STR R0,[R1,#90h].
 
-Not NNS_SndArcSetLoadBlockSize: SDK comment/type overlay is misleading despite matching offset. Keep body and bytes; type/layout repair is deferred. Callback dispatcher discards its result; no BOOL or owned profile transfer is added.
+The setter now uses the canonical external 28-byte BSS prefix and the native connection-work offset directly. The former sound-archive private types and redundant shared-BSS definition have been removed; the active source is under ov015/calls. Its 20 native bytes and one relocation are unchanged. The remaining 24 bytes in the global prefix stay opaque. Callback dispatch discards its result; no BOOL or owned profile transfer is added.
 
 ### `WirelessConnection_LeaveState0Noop`
 
@@ -413,7 +413,7 @@ python tools/verify_idx.py src/overlays/ov015/auto/WirelessSubWidget4ConfirmNoop
 python tools/verify_idx.py src/overlays/ov015/calls/WirelessCardSlot1_SelectAndSlideOutWithSound.c WirelessCardSlot1_SelectAndSlideOutWithSound
 python tools/verify_idx.py src/overlays/ov015/calls/WirelessCardSlot2_SelectAndSlideOutWithSound.c WirelessCardSlot2_SelectAndSlideOutWithSound
 python tools/verify_idx.py src/overlays/ov015/calls/WirelessCardSlot3_SelectAndSlideOutWithSound.c WirelessCardSlot3_SelectAndSlideOutWithSound
-python tools/verify_idx.py libs/nns/snd/calls/SetWirelessReceivedCardCallback.c SetWirelessReceivedCardCallback
+python tools/verify_idx.py src/overlays/ov015/calls/SetWirelessReceivedCardCallback.c SetWirelessReceivedCardCallback
 python tools/verify_idx.py src/overlays/ov015/auto/WirelessConnection_LeaveState0Noop.c WirelessConnection_LeaveState0Noop
 python tools/verify_idx.py src/overlays/ov015/auto/WirelessConnection_EnterState1Noop.c WirelessConnection_EnterState1Noop
 python tools/verify_idx.py src/overlays/ov015/auto/WirelessConnection_UpdateState1Noop.c WirelessConnection_UpdateState1Noop

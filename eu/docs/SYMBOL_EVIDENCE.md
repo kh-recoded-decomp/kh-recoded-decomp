@@ -725,3 +725,20 @@ records physical extents and the constructor/accessor/cleanup evidence.
 The managed-actor and scene globals retain their two-word layouts; the
 menu prefix stays three words with separate fade storage. Pointer/handle
 views do not shrink native allocations or turn opaque tails into host fields.
+
+## Wireless callback setter ownership and source placement
+
+`SetWirelessReceivedCardCallback` (ov015:02072cec, ARM, 20 bytes) now lives in
+`src/overlays/ov015/calls/SetWirelessReceivedCardCallback.c`. The native code
+loads the connection pointer from the first word of the canonical 28-byte
+BSS prefix at 0207e964 and stores the supplied callback word at work+0x90.
+StartPlayerCardSharing registers AddReceivedPlayerCard; InvokePanelCallback
+calls that same slot with the borrowed received profile.
+
+The former sound-archive private layout and duplicate shared-BSS definition
+have been replaced by an external declaration of the actual prefix. The
+remaining prefix words stay opaque. See
+[PANEL_WIRELESS_CALLBACK_CONTRACTS.md](PANEL_WIRELESS_CALLBACK_CONTRACTS.md)
+and [SOURCE_LAYOUT.md](SOURCE_LAYOUT.md). Both the original and moved sources
+pass the official 20-byte check at their actual paths; all 108 freshly linked
+modules retain identical hashes, including the one literal relocation.
