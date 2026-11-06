@@ -127,7 +127,7 @@ Demonstrated behavior and evidence:
 
 - For slots before the last selected slot, applies both existing entry flag setters with1; applies0 to the last slot when positive, resets scene slots and returns state2. Source: [eu/src/overlays/ov040/calls/ConfigureAreaSceneSlotsAndReset.c:1-30](../src/overlays/ov040/calls/ConfigureAreaSceneSlotsAndReset.c).
 - The first setter controls entry+0x104 bit0. Source: [eu/src/overlays/ov001/calls/SetSceneSlotDrawingEnabled.c:1-15](../src/overlays/ov001/calls/SetSceneSlotDrawingEnabled.c).
-- The second setter uses inverse polarity for entry+0x104 bit3. Source: [eu/src/overlays/ov001/calls/func_ov001_02067d0c.c:1-15](../src/overlays/ov001/calls/func_ov001_02067d0c.c).
+- The second setter uses inverse polarity for entry+0x104 bit3. Source: [eu/src/overlays/ov001/calls/SetSceneSlotResourceLoadingEnabled.c:1-15](../src/overlays/ov001/calls/SetSceneSlotResourceLoadingEnabled.c).
 
 Contract limits:
 
