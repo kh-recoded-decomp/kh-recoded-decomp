@@ -4,5 +4,5 @@
 #define VEC_MultAdd_01ffa09c VEC_MultAdd
 #define VEC_Normalize_01ff9f88 VEC_Normalize
 #define data_0205356c gSinFx12Table
-#define data_ov021_020b56a4 data_ov021_020b56c4
+#define data_ov021_020b56a4 gActiveFieldContextStorage
 #include "src/ov021/script_ops/ScriptOp_MoveAgainstPlayerFacing_020b1cac.c"

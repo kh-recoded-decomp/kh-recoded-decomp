@@ -3,5 +3,5 @@
 #define GetStageActor_0209c040 GetStageActor
 #define GetStageEventRecord_0209c0ec GetStageEventRecord
 #define ResolveStageActorRef_020b02b8 ResolveStageActorRef
-#define data_ov021_020b56a4 data_ov021_020b56c4
+#define data_ov021_020b56a4 gActiveFieldContextStorage
 #include "src/ov021/script_ops/ResolveStageActorRef_020b02b8.c"

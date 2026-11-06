@@ -541,7 +541,7 @@ from:0x020c8268 kind:thumb_call_arm to:0x02006f94 module:main
 from:0x020c8282 kind:thumb_call_arm to:0x02017af0 module:main
 from:0x020c8290 kind:load to:0x020cd400 module:overlay(76)
 from:0x020c8294 kind:load to:0x020c8185 module:overlay(76)
-from:0x020c8298 kind:load to:0x020cd404 module:overlay(76)
+from:0x020c8298 kind:load to:0x020cd400 add:0x4 module:overlay(76)
 from:0x020c82aa kind:thumb_call to:0x020c44e0 module:overlay(76)
 from:0x020c82d6 kind:thumb_call_arm to:0x020ba2c8 module:overlay(27)
 from:0x020c82de kind:thumb_call to:0x020c8198 module:overlay(76)

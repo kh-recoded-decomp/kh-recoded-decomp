@@ -9,7 +9,7 @@
 #define addScaledVector_020301ac AddScaledVector
 #define data_02053438 gZeroVecFx32
 #define data_ov021_020b5104 gNearPlayerGroundSearchDirections
-#define data_ov021_020b56a4 data_ov021_020b56c4
+#define data_ov021_020b56a4 gActiveFieldContextStorage
 #define func_01ff8830 MI_CpuFill8
 #define func_ov001_02091c34 NotifySceneObjectHandler
 #include "src/ov021/script_ops/ScriptOp_PlaceNearPlayerOnGround_020b1714.c"

@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-extern u32 data_ov021_020b56c4;
+extern u32 gActiveFieldContextStorage;
 extern u32 GetStageMotionRecord();
 extern u32 SlotTable_FindNearestFree();
 extern u32 ResolveTaggedValueRef();
@@ -13,10 +13,10 @@ u32 StageExpr_FindNearestFreeSlot(int self, int args)
     u32 value;
 
     resolved = ResolveTaggedValueRef(self, args + 8);
-    if (data_ov021_020b56c4 == 0) {
+    if (gActiveFieldContextStorage == 0) {
         return 0;
     }
-    member = GetStageMotionRecord(*(u16 *)(data_ov021_020b56c4 + 0x16));
+    member = GetStageMotionRecord(*(u16 *)(gActiveFieldContextStorage + 0x16));
     if (member == 0) {
         return 0;
     }

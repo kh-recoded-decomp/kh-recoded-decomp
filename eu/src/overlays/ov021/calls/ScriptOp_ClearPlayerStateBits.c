@@ -1,3 +1,3 @@
 #define ScriptOp_ClearPlayerStateBits_020b23e0 ScriptOp_ClearPlayerStateBits
-#define data_ov021_020b56a4 data_ov021_020b56c4
+#define data_ov021_020b56a4 gActiveFieldContextStorage
 #include "src/ov021/script_ops/ScriptOp_ClearPlayerStateBits_020b23e0.c"

@@ -1,5 +1,5 @@
 #define FindStageObjectById_0209c290 FindStageObjectById
 #define ResolveTaggedValueRef_020b0374 ResolveTaggedValueRef
 #define ScriptOp_GetObjectTypeId_020b0e20 ScriptOp_GetObjectTypeId
-#define data_ov021_020b56a4 data_ov021_020b56c4
+#define data_ov021_020b56a4 gActiveFieldContextStorage
 #include "src/ov021/script_ops/ScriptOp_GetObjectTypeId_020b0e20.c"

@@ -1,4 +1,4 @@
 #define GetStageEntryPosition_020992ac GetStageEntryPosition
 #define LoadStageEntryPosition_020b19b0 LoadStageEntryPosition
-#define data_ov021_020b56a4 data_ov021_020b56c4
+#define data_ov021_020b56a4 gActiveFieldContextStorage
 #include "src/ov021/unclassified_helpers/LoadStageEntryPosition_020b19b0.c"

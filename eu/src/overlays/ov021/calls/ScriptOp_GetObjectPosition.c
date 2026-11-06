@@ -1,3 +1,3 @@
 #define ScriptOp_GetObjectPosition_020b1de4 ScriptOp_GetObjectPosition
-#define contextData_020b56a4 data_ov021_020b56c4
+#define contextData_020b56a4 gActiveFieldContextStorage
 #include "src/ov021/script_ops/ScriptOp_GetObjectPosition_020b1de4.c"

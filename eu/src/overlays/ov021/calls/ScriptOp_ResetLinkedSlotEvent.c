@@ -3,5 +3,5 @@
 #define ResetGroupCommandState_02095880 ResetGroupCommandState
 #define ResolveTaggedValueRef_020b0374 ResolveTaggedValueRef
 #define ScriptOp_ResetLinkedSlotEvent_020b2760 ScriptOp_ResetLinkedSlotEvent
-#define data_ov021_020b56a4 data_ov021_020b56c4
+#define data_ov021_020b56a4 gActiveFieldContextStorage
 #include "src/ov021/script_ops/ScriptOp_ResetLinkedSlotEvent_020b2760.c"

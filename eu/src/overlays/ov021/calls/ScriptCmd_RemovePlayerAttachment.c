@@ -1,6 +1,6 @@
 #define ResolveTaggedValueRef_020b0374 ResolveTaggedValueRef
 #define ScriptCmd_RemovePlayerAttachment_020b3888 ScriptCmd_RemovePlayerAttachment
 #define TaggedValueToInt_020b0398 TaggedValueToInt
-#define data_ov021_020b56a4 data_ov021_020b56c4
+#define data_ov021_020b56a4 gActiveFieldContextStorage
 #define func_ov001_02091ac0 ReleaseActorSoundSlotsByKey
 #include "src/ov021/script_ops/ScriptCmd_RemovePlayerAttachment_020b3888.c"

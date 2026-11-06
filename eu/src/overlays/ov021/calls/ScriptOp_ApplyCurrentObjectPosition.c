@@ -2,5 +2,5 @@
 #define func_ov001_02090fd8 SetLookAtTarget
 #define func_ov021_020b0374 ResolveTaggedValueRef
 #define func_ov021_020b03c8 ResolveVectorOperand
-#define scriptState_020b56a4 data_ov021_020b56c4
+#define scriptState_020b56a4 gActiveFieldContextStorage
 #include "src/ov021/script_ops/ScriptOp_ApplyCurrentObjectPosition_020b3570.c"

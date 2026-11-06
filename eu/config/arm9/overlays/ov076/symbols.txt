@@ -202,5 +202,4 @@ sOv076_UiMenuLanguageCmnmtxP2_020cd3c0 kind:data(any) addr:0x020cd3c0
 sOv076_UiMenuTipsP2_020cd3d4 kind:data(any) addr:0x020cd3d4
 sOv076_UiMenuLanguageTipsP2_020cd3e4 kind:data(any) addr:0x020cd3e4
 gSlotMenuSharedState kind:bss addr:0x020cd400
-data_ov076_020cd404 kind:bss addr:0x020cd404
 gSlotMenuPanelWork kind:bss addr:0x020cd40c

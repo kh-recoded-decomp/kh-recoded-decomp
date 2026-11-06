@@ -3,5 +3,5 @@
 #define ScriptOp_FindNearestFreeSlot_020b0d24 ScriptOp_FindNearestFreeSlot
 #define SlotTable_FindNearestFree_020a1280 SlotTable_FindNearestFree
 #define TaggedValueToFixed_020b03b0 TaggedValueToFixed
-#define data_ov021_020b56a4 data_ov021_020b56c4
+#define data_ov021_020b56a4 gActiveFieldContextStorage
 #include "src/ov021/script_ops/ScriptOp_FindNearestFreeSlot_020b0d24.c"

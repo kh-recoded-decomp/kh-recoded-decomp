@@ -1,7 +1,7 @@
 #define ResolveTaggedValueRef_020b0374 ResolveTaggedValueRef
 #define ResolveVectorOperand_020b03c8 ResolveVectorOperand
 #define TaggedValueToFixed_020b03b0 TaggedValueToFixed
-#define data_ov021_020b56a4 data_ov021_020b56c4
+#define data_ov021_020b56a4 gActiveFieldContextStorage
 #define func_ov001_02090f04 GetStageActorPosition
 #define func_ov001_02091c34 NotifySceneObjectHandler
 #include "src/ov021/script_ops/ResolveVectorOperand_020b03c8.c"

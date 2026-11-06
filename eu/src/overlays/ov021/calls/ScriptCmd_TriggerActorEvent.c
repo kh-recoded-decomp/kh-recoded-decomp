@@ -1,5 +1,5 @@
 #define ClearWalkerStepState_02091964 ClearWalkerStepState
 #define ResolveTaggedValueRef_020b0374 ResolveTaggedValueRef
 #define ScriptCmd_TriggerActorEvent_020b2a4c ScriptCmd_TriggerActorEvent
-#define data_ov021_020b56a4 data_ov021_020b56c4
+#define data_ov021_020b56a4 gActiveFieldContextStorage
 #include "src/ov021/script_ops/ScriptCmd_TriggerActorEvent_020b2a4c.c"

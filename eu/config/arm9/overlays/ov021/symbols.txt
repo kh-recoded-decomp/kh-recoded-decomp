@@ -545,7 +545,7 @@ gFieldHitSphereStorage kind:bss addr:0x020b5658
 gFieldHitCylinderStorage kind:bss addr:0x020b5668
 gFieldHitCapsuleStorage kind:bss addr:0x020b5694
 gActiveSubModeState kind:bss addr:0x020b56c0
-data_ov021_020b56c4 kind:bss addr:0x020b56c4
+gActiveFieldContextStorage kind:bss addr:0x020b56c4
 gActiveFieldContext kind:bss addr:0x020b56c4
 gStageScriptContextBackup kind:bss addr:0x020b56d0
 gScriptHandlerTable kind:bss addr:0x020b56dc

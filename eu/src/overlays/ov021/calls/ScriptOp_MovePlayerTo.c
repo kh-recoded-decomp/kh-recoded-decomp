@@ -2,5 +2,5 @@
 #define ScriptOp_MovePlayerTo_020b3918 ScriptOp_MovePlayerTo
 #define StartWalkerMove_0209113c StartWalkerMove
 #define TaggedValueToFixed_020b03b0 TaggedValueToFixed
-#define data_ov021_020b56a4 data_ov021_020b56c4
+#define data_ov021_020b56a4 gActiveFieldContextStorage
 #include "src/ov021/script_ops/ScriptOp_MovePlayerTo_020b3918.c"

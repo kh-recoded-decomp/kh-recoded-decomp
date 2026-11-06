@@ -1,3 +1,3 @@
 #define ReadContextFlagBit10_020b0c98 ReadContextFlagBit10
-#define data_ov021_020b56a4 data_ov021_020b56c4
+#define data_ov021_020b56a4 gActiveFieldContextStorage
 #include "src/ov021/unclassified_helpers/ReadContextFlagBit10_020b0c98.c"

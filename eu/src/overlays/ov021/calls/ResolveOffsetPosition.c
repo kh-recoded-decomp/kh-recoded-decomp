@@ -6,7 +6,7 @@
 #define TaggedValueToFixed_020b03b0 TaggedValueToFixed
 #define VEC_Add_01ff9e0c VEC_Add
 #define data_02053438 gZeroVecFx32
-#define data_ov021_020b56a4 data_ov021_020b56c4
+#define data_ov021_020b56a4 gActiveFieldContextStorage
 #define func_02023dbc _s32_div_f
 #define func_ov021_020b0450 SetXZVectorFromAngle
 #define func_ov021_020b4aa4 ResolveStageScriptCommandDataOffset

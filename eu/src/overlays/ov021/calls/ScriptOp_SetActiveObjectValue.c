@@ -1,5 +1,5 @@
 #define ScriptOp_SetActiveObjectValue_020b3988 ScriptOp_SetActiveObjectValue
-#define contextData_020b56a4 data_ov021_020b56c4
+#define contextData_020b56a4 gActiveFieldContextStorage
 #define func_ov001_0209118c SetActorMotionFlag
 #define func_ov021_020b0374 ResolveTaggedValueRef
 #define func_ov021_020b03b0 TaggedValueToFixed

@@ -2627,9 +2627,6 @@ VTABLE_OBJ1D kind:data(word[3]) addr:0x020530bc
 sMaxObjectSizeTable kind:data(byte[32]) addr:0x020530c8
 NNSiG2dBGCNTTable kind:data(word[8]) addr:0x020530e8
 pivotUtil_ kind:data(byte[36]) addr:0x02053108
-data_02053109 kind:data(any) addr:0x02053109
-data_0205310a kind:data(any) addr:0x0205310a
-data_0205310b kind:data(any) addr:0x0205310b
 sNullSoundArchiveSymbol kind:data(byte[4]) addr:0x0205312c
 cAdpcmIndexTable kind:data(byte[16]) addr:0x02053130
 cAdpcmStepSizeTable kind:data(short[89]) addr:0x02053140

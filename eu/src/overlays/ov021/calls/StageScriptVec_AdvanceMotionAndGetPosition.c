@@ -2,7 +2,7 @@
 
 typedef void code();
 
-extern u32 data_ov021_020b56c4;
+extern u32 gActiveFieldContextStorage;
 extern u32 GetStageMotionRecord();
 extern u32 GetStageManager();
 extern u32 GetGlobalScaleValue();
@@ -13,7 +13,7 @@ u32 StageScriptVec_AdvanceMotionAndGetPosition(int self)
     u32 arg;
     s32 state;
 
-    member = GetStageMotionRecord(*(u16 *)(data_ov021_020b56c4 + 0x16));
+    member = GetStageMotionRecord(*(u16 *)(gActiveFieldContextStorage + 0x16));
     if (member != 0) {
         arg = GetGlobalScaleValue();
         state = GetStageManager();

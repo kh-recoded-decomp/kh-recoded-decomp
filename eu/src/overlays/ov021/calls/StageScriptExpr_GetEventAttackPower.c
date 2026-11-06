@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-extern u32 data_ov021_020b56c4;
+extern u32 gActiveFieldContextStorage;
 extern s32 ResolveTaggedValueRef();
 extern u32 GetEntryScaledValue();
 
@@ -11,8 +11,8 @@ u32 StageScriptExpr_GetEventAttackPower(int self, int args)
     u32 value;
 
     resolved = ResolveTaggedValueRef(self, args + 8);
-    entry = data_ov021_020b56c4;
-    if (data_ov021_020b56c4 == 0) {
+    entry = gActiveFieldContextStorage;
+    if (gActiveFieldContextStorage == 0) {
         return 0;
     }
     *(u16 *)(self + 0x2c) = 0x10;

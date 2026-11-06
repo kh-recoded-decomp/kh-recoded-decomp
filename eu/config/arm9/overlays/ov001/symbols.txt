@@ -2313,8 +2313,6 @@ sOv001_BTLUITASK_0209edd8 kind:data(any) addr:0x0209edd8
 gFieldChoiceStringFormat kind:data(any) addr:0x0209ede4
 gHudGaugeTable kind:data(any) addr:0x0209edec
 gHudGaugeLayouts kind:data(any) addr:0x0209edf0
-data_ov001_0209edf4 kind:data(any) addr:0x0209edf4
-data_ov001_0209edf8 kind:data(any) addr:0x0209edf8
 gFieldGaugeLayouts kind:data(word[14]) addr:0x0209ee14
 gFieldHudGaugeTaskDescriptor kind:data(word[5]) addr:0x0209ee4c
 gFieldMenuStateRamps kind:data(short[9]) addr:0x0209ee60
@@ -2369,7 +2367,6 @@ sOv001_Bip_020a0294 kind:data(any) addr:0x020a0294
 gStageScriptStateHandlers kind:data(any) addr:0x020a0298
 gStageObjectActorDescriptor kind:data(any) addr:0x020a02c8
 sOv001_TraTg_020a02fc kind:data(any) addr:0x020a02fc
-data_ov001_020a0303 kind:data(any) addr:0x020a0303
 sOv001_EnAmFormat04dAp2_020a0304 kind:data(any) addr:0x020a0304
 gDefaultAttachPointName kind:data(any) addr:0x020a0314
 gActorControllerStateHandlers kind:data(any) addr:0x020a0318
@@ -2419,7 +2416,6 @@ gFieldObjectClassManager kind:bss addr:0x020a04f8
 gFieldEntryPoolManager kind:bss addr:0x020a04fc
 gActorSceneManager kind:bss addr:0x020a0500
 gModelDictionaryNameScratch kind:bss addr:0x020a0504
-data_ov001_020a0505 kind:bss addr:0x020a0505
 gActorChannelContext kind:bss addr:0x020a0514
 gActorResourceNameBuffer kind:bss addr:0x020a0518
 gStageManager kind:bss addr:0x020a0528

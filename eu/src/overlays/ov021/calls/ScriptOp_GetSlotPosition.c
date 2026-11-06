@@ -3,5 +3,5 @@
 #define ScriptOp_GetSlotPosition_020b1a30 ScriptOp_GetSlotPosition
 #define SlotTable_GetEntry_020a125c SlotTable_GetEntry
 #define TaggedValueToInt_020b0398 TaggedValueToInt
-#define data_ov021_020b56a4 data_ov021_020b56c4
+#define data_ov021_020b56a4 gActiveFieldContextStorage
 #include "src/ov021/script_ops/ScriptOp_GetSlotPosition_020b1a30.c"

@@ -1,6 +1,6 @@
 #define Anim_GetFrame_0202f4a0 Anim_GetFrame
 #define ApplyActorScaleFactors_02091818 ApplyActorScaleFactors
 #define ScriptOp_IsPlayerAnimDone_020b0be8 ScriptOp_IsPlayerAnimDone
-#define data_ov021_020b56a4 data_ov021_020b56c4
+#define data_ov021_020b56a4 gActiveFieldContextStorage
 #define func_0202f4b8 GetModelAnimationDurationFx32
 #include "src/ov021/script_ops/ScriptOp_IsPlayerAnimDone_020b0be8.c"

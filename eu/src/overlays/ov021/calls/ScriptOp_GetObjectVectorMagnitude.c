@@ -1,4 +1,4 @@
 #define ScriptOp_GetObjectVectorMagnitude_020b1270 ScriptOp_GetObjectVectorMagnitude
 #define VEC_Mag_01ff9f28 VEC_Mag
-#define contextData_020b56a4 data_ov021_020b56c4
+#define contextData_020b56a4 gActiveFieldContextStorage
 #include "src/ov021/script_ops/ScriptOp_GetObjectVectorMagnitude_020b1270.c"

@@ -1,4 +1,4 @@
 #define GetStageMotionRecord_0209c18c GetStageMotionRecord
 #define ScriptOp_GetMotionAnchor_020b15c0 ScriptOp_GetMotionAnchor
-#define data_ov021_020b56a4 data_ov021_020b56c4
+#define data_ov021_020b56a4 gActiveFieldContextStorage
 #include "src/ov021/script_ops/ScriptOp_GetMotionAnchor_020b15c0.c"

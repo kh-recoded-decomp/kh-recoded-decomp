@@ -4,6 +4,6 @@
 #define VEC_MultAdd_01ffa09c VEC_MultAdd
 #define VEC_Normalize_01ff9f88 VEC_Normalize
 #define VEC_Subtract_01ff9e3c VEC_Subtract
-#define data_ov021_020b56a4 data_ov021_020b56c4
+#define data_ov021_020b56a4 gActiveFieldContextStorage
 #define func_ov001_02091c34 NotifySceneObjectHandler
 #include "src/ov021/script_ops/ScriptOp_StepTowardPlayer_020b1c50.c"

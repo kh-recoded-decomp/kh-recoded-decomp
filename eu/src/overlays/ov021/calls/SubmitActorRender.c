@@ -1,4 +1,4 @@
 #define SubmitActorRender_020b1f78 SubmitActorRender
-#define data_ov021_020b56a4 data_ov021_020b56c4
+#define data_ov021_020b56a4 gActiveFieldContextStorage
 #define func_ov001_02091c34 NotifySceneObjectHandler
 #include "src/ov021/unclassified_helpers/SubmitActorRender_020b1f78.c"

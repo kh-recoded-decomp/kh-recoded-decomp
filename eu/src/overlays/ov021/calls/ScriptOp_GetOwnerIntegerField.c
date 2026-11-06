@@ -1,3 +1,3 @@
 #define ScriptOp_GetOwnerIntegerField_020b0fd0 ScriptOp_GetOwnerIntegerField
-#define contextData_020b56a4 data_ov021_020b56c4
+#define contextData_020b56a4 gActiveFieldContextStorage
 #include "src/ov021/script_ops/ScriptOp_GetOwnerIntegerField_020b0fd0.c"

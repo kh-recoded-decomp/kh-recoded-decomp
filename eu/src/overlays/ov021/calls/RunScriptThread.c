@@ -39,7 +39,7 @@ typedef struct {
 
 typedef s32 (*ScriptHandler)(ScriptThread *thread, u32 operand);
 
-extern FieldContext data_ov021_020b56c4;
+extern FieldContext gActiveFieldContextStorage;
 extern FieldContext gActiveFieldContext;
 extern FieldContext gStageScriptContextBackup;
 extern ScriptHandler gScriptHandlerTable[];
@@ -61,8 +61,8 @@ s32 RunScriptThread(ScriptThread *thread)
 
     GetStageManager();
     running = TRUE;
-    gStageScriptContextBackup = data_ov021_020b56c4;
-    MI_CpuFill8(&data_ov021_020b56c4, 0, sizeof(FieldContext));
+    gStageScriptContextBackup = gActiveFieldContextStorage;
+    MI_CpuFill8(&gActiveFieldContextStorage, 0, sizeof(FieldContext));
     if (thread->ownerKind == 1) {
         gActiveFieldContext.eventRecord = GetStageEventRecord(thread->ownerId);
         actorId = gActiveFieldContext.eventRecord->actorId;
@@ -131,6 +131,6 @@ s32 RunScriptThread(ScriptThread *thread)
             break;
         }
     } while (running);
-    data_ov021_020b56c4 = gStageScriptContextBackup;
+    gActiveFieldContextStorage = gStageScriptContextBackup;
     return result;
 }

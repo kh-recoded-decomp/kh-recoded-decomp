@@ -10,7 +10,7 @@
 #define VEC_MultAdd_01ffa09c VEC_MultAdd
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define data_0205356c gSinFx12Table
-#define data_ov021_020b56a4 data_ov021_020b56c4
+#define data_ov021_020b56a4 gActiveFieldContextStorage
 #define func_01ff90ec MTX_Identity33_
 #define func_ov001_02091c34 NotifySceneObjectHandler
 #define func_ov021_020afd28 ProbeGroundContact

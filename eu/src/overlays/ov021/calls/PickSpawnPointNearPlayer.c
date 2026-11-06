@@ -8,7 +8,7 @@
 #define VEC_MultAdd_01ffa09c VEC_MultAdd
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define data_0205356c gSinFx12Table
-#define data_ov021_020b56a4 data_ov021_020b56c4
+#define data_ov021_020b56a4 gActiveFieldContextStorage
 #define func_01ff9f88 VEC_Normalize
 #define nextRandom12_0202aa58 nextRandom12
 #define random_next_scaled_0202aa04 random_next_scaled

@@ -1,3 +1,3 @@
 #define ScriptOp_GetPlayerAngleDegrees_020b0f74 ScriptOp_GetPlayerAngleDegrees
-#define data_ov021_020b56a4 data_ov021_020b56c4
+#define data_ov021_020b56a4 gActiveFieldContextStorage
 #include "src/ov021/script_ops/ScriptOp_GetPlayerAngleDegrees_020b0f74.c"

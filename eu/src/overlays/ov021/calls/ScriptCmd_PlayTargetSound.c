@@ -4,5 +4,5 @@
 #define ScriptCmd_PlayTargetSound_020b37e4 ScriptCmd_PlayTargetSound
 #define Session_Exists_02063a24 HasSessionContext
 #define TaggedValueToInt_020b0398 TaggedValueToInt
-#define data_ov021_020b56a4 data_ov021_020b56c4
+#define data_ov021_020b56a4 gActiveFieldContextStorage
 #include "src/ov021/script_ops/ScriptCmd_PlayTargetSound_020b37e4.c"

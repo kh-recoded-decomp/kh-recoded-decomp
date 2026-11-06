@@ -2,6 +2,6 @@
 #define ApplyActorScaleFactors_02091818 ApplyActorScaleFactors
 #define CheckWaitCondition_020b4794 CheckWaitCondition
 #define VEC_Mag_01ff9f28 VEC_Mag
-#define data_ov021_020b56a4 data_ov021_020b56c4
+#define data_ov021_020b56a4 gActiveFieldContextStorage
 #define func_0202f4b8 GetModelAnimationDurationFx32
 #include "src/ov021/script_ops/CheckWaitCondition_020b4794.c"

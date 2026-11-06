@@ -2,5 +2,5 @@
 #define GetStageEventRecord_0209c0ec GetStageEventRecord
 #define ResolveTaggedValueRef_020b0374 ResolveTaggedValueRef
 #define ScriptOp_GetEventActorValue_020b0b6c ScriptOp_GetEventActorValue
-#define data_ov021_020b56a4 data_ov021_020b56c4
+#define data_ov021_020b56a4 gActiveFieldContextStorage
 #include "src/ov021/script_ops/ScriptOp_GetEventActorValue_020b0b6c.c"

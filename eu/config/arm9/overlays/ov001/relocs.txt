@@ -3809,7 +3809,7 @@ from:0x020741d0 kind:thumb_call_arm to:0x02023dd0 module:main
 from:0x020741f6 kind:thumb_call to:0x020740d0 module:overlay(1)
 from:0x0207420c kind:load to:0x020a04cc module:overlay(1)
 from:0x02074210 kind:load to:0x020737fd module:overlay(1)
-from:0x02074214 kind:load to:0x0209edf8 module:overlay(1)
+from:0x02074214 kind:load to:0x0209edec add:0xc module:overlay(1)
 from:0x02074218 kind:load to:0x02073871 module:overlay(1)
 from:0x02074224 kind:thumb_call to:0x020711b0 module:overlay(1)
 from:0x02074240 kind:thumb_call_arm to:0x02023dd0 module:main
@@ -3880,7 +3880,7 @@ from:0x02074918 kind:thumb_call_arm to:0x02023dd0 module:main
 from:0x02074974 kind:thumb_call to:0x020744e0 module:overlay(1)
 from:0x02074980 kind:thumb_call to:0x02073a3c module:overlay(1)
 from:0x020749ac kind:load to:0x020a04cc module:overlay(1)
-from:0x020749b0 kind:load to:0x0209edf8 module:overlay(1)
+from:0x020749b0 kind:load to:0x0209edec add:0xc module:overlay(1)
 from:0x020749b4 kind:load to:0x020737fd module:overlay(1)
 from:0x020749b8 kind:load to:0x02073825 module:overlay(1)
 from:0x020749bc kind:load to:0x02073871 module:overlay(1)
@@ -3899,8 +3899,8 @@ from:0x02074b56 kind:thumb_call to:0x020747fc module:overlay(1)
 from:0x02074b64 kind:thumb_call to:0x02073a3c module:overlay(1)
 from:0x02074b6c kind:load to:0x020a04cc module:overlay(1)
 from:0x02074b70 kind:load to:0x0209edec module:overlay(1)
-from:0x02074b74 kind:load to:0x0209edf4 module:overlay(1)
-from:0x02074b78 kind:load to:0x0209edf8 module:overlay(1)
+from:0x02074b74 kind:load to:0x0209edec add:0x8 module:overlay(1)
+from:0x02074b78 kind:load to:0x0209edec add:0xc module:overlay(1)
 from:0x02074b8e kind:thumb_call_arm to:0x02023dd0 module:main
 from:0x02074bbc kind:thumb_call_arm to:0x02023dd0 module:main
 from:0x02074bea kind:thumb_call to:0x02073d00 module:overlay(1)
@@ -3982,7 +3982,7 @@ from:0x0207522a kind:thumb_call_arm to:0x0204d974 module:main
 from:0x02075234 kind:load to:0x020a04cc module:overlay(1)
 from:0x02075238 kind:load to:0x020737fd module:overlay(1)
 from:0x0207523c kind:load to:0x02073871 module:overlay(1)
-from:0x02075240 kind:load to:0x0209edf8 module:overlay(1)
+from:0x02075240 kind:load to:0x0209edec add:0xc module:overlay(1)
 from:0x02075258 kind:load to:0x020a04cc module:overlay(1)
 from:0x02075280 kind:thumb_call_arm to:0x02007b84 module:main
 from:0x02075292 kind:thumb_call_arm to:0x02007b84 module:main

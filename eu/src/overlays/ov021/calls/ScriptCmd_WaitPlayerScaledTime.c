@@ -2,5 +2,5 @@
 #define ResolveTaggedValueRef_020b0374 ResolveTaggedValueRef
 #define ScriptCmd_WaitPlayerScaledTime_020b474c ScriptCmd_WaitPlayerScaledTime
 #define TaggedValueToFixed_020b03b0 TaggedValueToFixed
-#define data_ov021_020b56a4 data_ov021_020b56c4
+#define data_ov021_020b56a4 gActiveFieldContextStorage
 #include "src/ov021/script_ops/ScriptCmd_WaitPlayerScaledTime_020b474c.c"

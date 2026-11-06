@@ -101,10 +101,14 @@ configured source paths still establish build ownership.
 
 ## Retained DATA identities
 
-[All 103 retained numeric DATA labels](EU_PENDING_DATA_LABELS.md) have an explicit
+[All 92 retained numeric DATA labels](EU_PENDING_DATA_LABELS.md) have an explicit
 owner or missing-proof record. All 941 identities in the DATA review are covered;
-835 supported assignments are integrated. Interior aliases remain separate from
-independent C allocations.
+835 original supported assignments are integrated; one existing backing allocation
+now has its descriptive storage name. Three canonical duplicates and ten interior
+metadata aliases are closed. Interior addresses remain distinct from independent
+C allocations. [Storage/view naming](CANONICAL_DATA_ALIAS_NORMALIZATION.md) and
+[canonical base/addend references](INTERIOR_DATA_ALIAS_NORMALIZATION.md) record
+the exact representation and the retained ov004 bank ambiguity.
 
 ## Unresolved function contracts
 

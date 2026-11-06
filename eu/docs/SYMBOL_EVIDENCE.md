@@ -916,3 +916,25 @@ Seven numeric functions now follow their actual callback phases, pre-release inv
 ## Field-object class and stage-value contracts
 
 Twelve names close eleven numeric functions and correct the misleading SpawnStateSpot script label. [Class contracts](FIELD_OBJECT_CLASS_ACTIVATION_LOD_COMMANDS.md) prove activation-bit indexing, a signed secondary resource, LOD hysteresis and raw command selection. Stage contracts prove current/max HP, attack power, a raw hit-reaction argument, scaled countdown, installed sequence update/position callbacks and override ID lifetime. The [system index](README.md) links each contract. Fourteen official checks, 16 complete objects and a fresh 108-module gate preserve all bytes, relocation values and module hashes. No shared ROOT code, parameter list or private structure is changed.
+
+## Active-context storage and interior metadata normalization
+
+The existing 12-byte backing object at ov021:020b56c4 is now
+`gActiveFieldContextStorage`; its pre-existing `gActiveFieldContext` typed-view
+alias remains at the same native address. [The storage/view contract](CANONICAL_DATA_ALIAS_NORMALIZATION.md)
+records why coalescing was rejected: RunScriptThread became 340 bytes with 12
+relocations instead of the original 348 bytes/13. The accepted distinct names
+retain 348/13 without adding an allocation or an alias.
+
+[Ten interior metadata aliases](INTERIOR_DATA_ALIAS_NORMALIZATION.md) are retired
+through their existing owners. Eighteen load references in five configuration
+files use canonical base plus addend with the exact original pointer words.
+The ov004:02064575 label was restored because configure requires it and three
+references still select `overlays(1,4)`; no string/Thumb interpretation is forced.
+
+All 87 affected official checks pass. All 94 complete production objects retain
+allocated sections, symbol layout and relocation target values/types/addends;
+a fresh 108-module linked gate preserves every native hash. The current
+[retained DATA ledger](EU_PENDING_DATA_LABELS.md) contains exactly 92 numeric
+identities from its 941-identity review domain, with all old closed anchors kept.
+The C backlog remains 71; metadata cleanup is not a new decompilation claim.

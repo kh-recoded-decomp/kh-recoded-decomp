@@ -9,6 +9,6 @@
 #define ScriptOp_SpawnLinkedSlotEvent_020b25b4 ScriptOp_SpawnLinkedSlotEvent
 #define SpawnStageGroup_02094f60 SpawnStageGroup
 #define WarpWalkerTo_02090f0c WarpWalkerTo
-#define data_ov021_020b56a4 data_ov021_020b56c4
+#define data_ov021_020b56a4 gActiveFieldContextStorage
 #define func_ov001_02094714 UpdateStageEvent
 #include "src/ov021/script_ops/ScriptOp_SpawnLinkedSlotEvent_020b25b4.c"

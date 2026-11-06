@@ -1,13 +1,13 @@
 #include "nitro/types.h"
 
-extern u32 data_ov021_020b56c4;
+extern u32 gActiveFieldContextStorage;
 
 u32 StageScriptExpr_GetEventHealth(int self)
 {
     s32 entry;
 
-    entry = data_ov021_020b56c4;
-    if (data_ov021_020b56c4 == 0) {
+    entry = gActiveFieldContextStorage;
+    if (gActiveFieldContextStorage == 0) {
         return 0;
     }
     *(u16 *)(self + 0x2c) = 0x10;

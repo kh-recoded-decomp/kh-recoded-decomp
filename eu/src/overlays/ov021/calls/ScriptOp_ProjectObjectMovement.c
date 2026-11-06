@@ -1,6 +1,6 @@
 #define ScriptOp_ProjectObjectMovement_020b19d0 ScriptOp_ProjectObjectMovement
 #define VEC_MultAdd_01ffa09c VEC_MultAdd
-#define contextData_020b56a4 data_ov021_020b56c4
+#define contextData_020b56a4 gActiveFieldContextStorage
 #define func_ov021_020afd28 ProbeGroundContact
 #define func_ov021_020b0374 ResolveTaggedValueRef
 #define func_ov021_020b03b0 TaggedValueToFixed

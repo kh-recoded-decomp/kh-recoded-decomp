@@ -1,6 +1,6 @@
 #define ScriptOp_MoveObjectWithSpeed_020b34d4 ScriptOp_MoveObjectWithSpeed
 #define VEC_Mag_01ff9f28 VEC_Mag
-#define contextData_020b56a4 data_ov021_020b56c4
+#define contextData_020b56a4 gActiveFieldContextStorage
 #define func_01ff9c84 FX_Div
 #define func_01ff9e3c VEC_Subtract
 #define func_ov001_020910c4 BeginWalkerMove

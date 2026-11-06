@@ -3,7 +3,7 @@
 #define VEC_Normalize_01ff9f88 VEC_Normalize
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define data_0205356c gSinFx12Table
-#define data_ov021_020b56a4 data_ov021_020b56c4
+#define data_ov021_020b56a4 gActiveFieldContextStorage
 #define func_ov001_02090f04 GetStageActorPosition
 #define func_ov001_02091c34 NotifySceneObjectHandler
 #include "src/ov021/script_ops/ScriptCmd_GetTargetFacingDot_020b1174.c"

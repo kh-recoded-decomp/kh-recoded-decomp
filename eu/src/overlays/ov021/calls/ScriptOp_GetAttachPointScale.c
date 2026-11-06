@@ -3,5 +3,5 @@
 #define ResolveTaggedValueRef_020b0374 ResolveTaggedValueRef
 #define ScriptOp_GetAttachPointScale_020b0ff4 ScriptOp_GetAttachPointScale
 #define TaggedValueToInt_020b0398 TaggedValueToInt
-#define data_ov021_020b56a4 data_ov021_020b56c4
+#define data_ov021_020b56a4 gActiveFieldContextStorage
 #include "src/ov021/script_ops/ScriptOp_GetAttachPointScale_020b0ff4.c"

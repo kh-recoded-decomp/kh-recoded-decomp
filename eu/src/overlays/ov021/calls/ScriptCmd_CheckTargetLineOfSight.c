@@ -2,6 +2,6 @@
 #define GetStageMotionRecord_0209c18c GetStageMotionRecord
 #define IsGridLineClear_020a139c IsGridLineClear
 #define ScriptCmd_CheckTargetLineOfSight_020b0eec ScriptCmd_CheckTargetLineOfSight
-#define data_ov021_020b56a4 data_ov021_020b56c4
+#define data_ov021_020b56a4 gActiveFieldContextStorage
 #define func_ov001_02091c34 NotifySceneObjectHandler
 #include "src/ov021/script_ops/ScriptCmd_CheckTargetLineOfSight_020b0eec.c"

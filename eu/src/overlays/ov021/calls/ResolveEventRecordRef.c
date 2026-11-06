@@ -1,5 +1,5 @@
 #define FindStageObjectById_0209c290 FindStageObjectById
 #define GetStageEventRecord_0209c0ec GetStageEventRecord
 #define ResolveEventRecordRef_020b0250 ResolveEventRecordRef
-#define data_ov021_020b56a4 data_ov021_020b56c4
+#define data_ov021_020b56a4 gActiveFieldContextStorage
 #include "src/ov021/shared_engine/ResolveEventRecordRef_020b0250.c"
