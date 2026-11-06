@@ -1,3 +1,4 @@
+#define func_ov001_020644c0 GetCurrentFieldEntryKey
 #define func_ov001_020645c8 IsSessionFlagSet
 #define DestroyAllEffectEntries_020868d0 DestroyAllEffectEntries
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap

@@ -45,7 +45,7 @@ extern u32 NextSharedRandom16Scaled(u32 range);
 extern void ApplySlotStyleToSession(void);
 extern s8 GetSignedByteAt1(PlayerCursor *cursor);
 extern s8 GetSignedByteAt3(PlayerCursor *cursor);
-extern void func_ov001_02063848(int a, int b);
+extern void StoreFieldSessionEntryPayloadPair(int a, int b);
 
 int AdvanceToRoutedSlot(void)
 {
@@ -73,7 +73,7 @@ int AdvanceToRoutedSlot(void)
     }
     ApplySlotStyleToSession();
     gGroupSceneGlobals.context->displayMode = 2;
-    func_ov001_02063848(GetSignedByteAt1(cursor), GetSignedByteAt3(cursor));
+    StoreFieldSessionEntryPayloadPair(GetSignedByteAt1(cursor), GetSignedByteAt3(cursor));
     scene->flags |= 2;
     return 7;
 }

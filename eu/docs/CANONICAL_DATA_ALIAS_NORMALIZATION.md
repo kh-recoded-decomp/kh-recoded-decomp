@@ -1,4 +1,4 @@
-# Canonical DATA aliases and active-context storage
+# Canonical DATA aliases without new storage
 
 Three duplicate numeric configuration labels already had canonical C/ELF
 owners at the same module/address. Their configuration aliases are removed;

@@ -1,3 +1,4 @@
+#define func_ov001_020644b0 GetCurrentFieldStageCode
 #define func_ov001_0206dc38 GetManagedActorCount
 #define func_01ffb2f8 SetModelAnimationFrameWithSingleWrap
 #define func_ov001_0206dc4c GetManagedActorPosition

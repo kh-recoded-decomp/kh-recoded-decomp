@@ -3,7 +3,7 @@
 extern u32 ResolveTaggedValueRef();
 extern u32 ResolveStageScriptCommandDataOffset();
 
-u32 func_ov021_020b2044(u32 self, int args)
+u32 StageScriptOp_ResolveDataOperands(u32 self, int args)
 {
     s32 resolved;
 

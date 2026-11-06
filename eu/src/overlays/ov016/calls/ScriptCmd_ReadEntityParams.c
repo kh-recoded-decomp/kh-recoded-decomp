@@ -1,3 +1,4 @@
+#define func_ov001_020644b0 GetCurrentFieldStageCode
 #define func_ov016_020a62dc InitScriptEntityParams
 #define ScriptVm_ConsumeOperandInt_020a1de0 ScriptVm_ConsumeOperandInt
 #define ScriptVm_ConsumeOperandFx32_020a1df4 ScriptVm_ConsumeOperandFx32

@@ -1,3 +1,4 @@
+#define func_ov001_020644b0 GetCurrentFieldStageCode
 #define func_ov001_020645dc SetSessionFlag
 #define HandleMenuPromptResult_020623e8 HandleMenuPromptResult
 #define ReadGlobalPackedBits_02027348 ReadGlobalPackedBits

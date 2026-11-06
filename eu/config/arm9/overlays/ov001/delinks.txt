@@ -216,7 +216,7 @@ src/overlays/ov001/calls/StoreSessionSpawnPoint.c:
     complete
     .text       start:0x02063524 end:0x02063560
 
-src/overlays/ov001/calls/func_ov001_02063560.c:
+src/overlays/ov001/calls/StoreFieldSessionContainerSlot.c:
     complete
     .text       start:0x02063560 end:0x02063578
 
@@ -260,7 +260,7 @@ src/overlays/ov001/auto/GetSessionFlagsMask20.c:
     complete
     .text       start:0x02063838 end:0x02063848
 
-src/overlays/ov001/calls/func_ov001_02063848.c:
+src/overlays/ov001/calls/StoreFieldSessionEntryPayloadPair.c:
     complete
     .text       start:0x02063848 end:0x02063860
 
@@ -396,11 +396,11 @@ src/overlays/ov001/calls/InvokeSessionCheckCallbackOrDefault.c:
     complete
     .text       start:0x02064490 end:0x020644b0
 
-src/overlays/ov001/calls/func_ov001_020644b0.c:
+src/overlays/ov001/calls/GetCurrentFieldStageCode.c:
     complete
     .text       start:0x020644b0 end:0x020644c0
 
-src/overlays/ov001/calls/func_ov001_020644c0.c:
+src/overlays/ov001/calls/GetCurrentFieldEntryKey.c:
     complete
     .text       start:0x020644c0 end:0x020644d4
 
@@ -464,11 +464,11 @@ src/overlays/ov001/calls/BindScriptHandlersSlot8.c:
     complete
     .text       start:0x02064734 end:0x02064784
 
-src/overlays/ov001/calls/func_ov001_02064784.c:
+src/overlays/ov001/calls/GetScriptHandlerSlot7Index.c:
     complete
     .text       start:0x02064784 end:0x02064794
 
-src/overlays/ov001/calls/func_ov001_02064794.c:
+src/overlays/ov001/calls/GetScriptHandlerSlot8Index.c:
     complete
     .text       start:0x02064794 end:0x020647a4
 

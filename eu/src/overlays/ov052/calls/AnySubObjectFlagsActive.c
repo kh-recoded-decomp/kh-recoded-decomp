@@ -1,3 +1,3 @@
 #define AnySubObjectFlagsActive_020cfb28 AnySubObjectFlagsActive
-#define func_ov021_020a9d04 func_ov021_020a9d24
+#define func_ov021_020a9d04 IsModelSetDrawEnabled
 #include "src/ov052/unclassified_helpers/AnySubObjectFlagsActive_020cfb28.c"

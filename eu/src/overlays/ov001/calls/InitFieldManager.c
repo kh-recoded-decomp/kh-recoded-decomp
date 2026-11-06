@@ -118,7 +118,7 @@ extern void SetParamWord20(int value);
 extern SaveSlots *GetSelectionPackedValueBlock(void);
 extern u32 GetParamWord20(void);
 extern void AddGaugePoints(u16 slot, int arg1);
-extern BOOL func_ov001_02064784(void);
+extern BOOL GetScriptHandlerSlot7Index(void);
 extern void SplitFieldHudIconTilesAndUploadBg3(FieldManager *manager, void *file);
 extern void StartSceneMinigameTask(void);
 
@@ -223,7 +223,7 @@ void *InitFieldManager(FieldParams *params)
         manager->unk_474 = -1;
         manager->paramActive = GetParamWord20() != 0;
         AddGaugePoints(slots->currentSlot, 1);
-        if (!func_ov001_02064784() && IsSessionFlagSet(0x3708)) {
+        if (!GetScriptHandlerSlot7Index() && IsSessionFlagSet(0x3708)) {
             file = Archive_LoadFile((((manager->messages6C + 0x8000) & 0xFFFFFC) << 7) | 0x80000005, 0xE);
             SplitFieldHudIconTilesAndUploadBg3(manager, file);
             NNSi_FndFreeFromDefaultHeap(file);

@@ -126,7 +126,7 @@ extern u32 ReadGlobalPackedBits(u32 bitOffset, u32 bitCount);
 extern void WriteGlobalPackedBits(u32 bitOffset, u32 bitCount, u32 value);
 extern BOOL IsGlobalPackedBitSet(int bitIndex);
 extern void SetGlobalPackedBit(int bitIndex);
-extern int func_ov001_020644b0(void);
+extern int GetCurrentFieldStageCode(void);
 extern u32 ReadSessionPackedBits(int bitOffset, u32 bitCount);
 extern ItemEntry *GetRecordSlotPair0Entry(s32 index);
 extern int AddRecordItem(int id, const ItemInfo *info);
@@ -307,7 +307,7 @@ int RunResultTallyStep(void)
             if (rank < 3) {
                 int column;
 
-                if (gSaveIoStateDataTail->eventMode == 3 && func_ov001_020644b0() == 400) {
+                if (gSaveIoStateDataTail->eventMode == 3 && GetCurrentFieldStageCode() == 400) {
                     column = 3 - ReadSessionPackedBits(0x3633, 2);
                 } else {
                     column = 3 - gSaveIoStateDataTail->difficulty;

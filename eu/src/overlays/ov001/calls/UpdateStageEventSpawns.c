@@ -1,3 +1,4 @@
+#define func_ov001_020644b0 GetCurrentFieldStageCode
 #define func_ov001_02063a38 GetFieldSessionState
 #define func_ov001_020645c8 IsSessionFlagSet
 #define GetGlobalScaleValue_0209c3cc GetGlobalScaleValue

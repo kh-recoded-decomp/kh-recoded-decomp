@@ -1,3 +1,4 @@
+#define func_ov001_02063560 StoreFieldSessionContainerSlot
 #define CreateFieldObjectManager_0207ec54 CreateFieldObjectManager
 #define Msg_OpenContainerAndReadHeader_0202cc6c Msg_OpenContainerAndReadHeader
 #define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap

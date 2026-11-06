@@ -1,3 +1,4 @@
+#define func_ov001_020644b0 GetCurrentFieldStageCode
 #define data_0205fe0c gSaveIoStateDataTail
 #define data_02060500 gPadPressedStorage
 #define func_01ffb2f8 SetModelAnimationFrameWithSingleWrap

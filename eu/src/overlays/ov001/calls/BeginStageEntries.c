@@ -1,3 +1,4 @@
+#define func_ov001_02064784 GetScriptHandlerSlot7Index
 #define BeginStageEntries_02099aec BeginStageEntries
 #define CacheStageEntrySlot_02098f64 CacheStageEntrySlot
 #define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap

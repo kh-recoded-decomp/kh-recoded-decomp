@@ -1,3 +1,4 @@
+#define func_ov001_02064794 GetScriptHandlerSlot8Index
 #define func_ov001_02063a38 GetFieldSessionState
 #define ProbeNearestFacingTarget_02097130 ProbeNearestFacingTarget
 #define Session_Exists_02063a24 HasSessionContext

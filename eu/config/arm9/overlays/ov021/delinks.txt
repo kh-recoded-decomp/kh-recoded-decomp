@@ -468,7 +468,7 @@ src/overlays/ov021/calls/SetBit1WhenBit0Set.c:
     complete
     .text       start:0x020a9d08 end:0x020a9d24
 
-src/overlays/ov021/calls/func_ov021_020a9d24.c:
+src/overlays/ov021/calls/IsModelSetDrawEnabled.c:
     complete
     .text       start:0x020a9d24 end:0x020a9d3c
 
@@ -1368,11 +1368,11 @@ src/overlays/ov021/calls/ScriptOp_GetPlayerHiddenFlag.c:
     complete
     .text       start:0x020b0ab0 end:0x020b0ad4
 
-src/overlays/ov021/calls/func_ov021_020b0ad4.c:
+src/overlays/ov021/calls/StageScriptExpr_GetStageWorkspaceWord1.c:
     complete
     .text       start:0x020b0ad4 end:0x020b0af0
 
-src/overlays/ov021/calls/func_ov021_020b0af0.c:
+src/overlays/ov021/calls/StageScriptExpr_GetStageWorkspaceWord0.c:
     complete
     .text       start:0x020b0af0 end:0x020b0b0c
 
@@ -1672,7 +1672,7 @@ src/overlays/ov021/calls/SetScriptContextVector.c:
     complete
     .text       start:0x020b2000 end:0x020b2042
 
-src/overlays/ov021/calls/func_ov021_020b2044.c:
+src/overlays/ov021/calls/StageScriptOp_ResolveDataOperands.c:
     complete
     .text       start:0x020b2044 end:0x020b2070
 
@@ -1788,7 +1788,7 @@ src/overlays/ov021/calls/ScriptOp_SetStageMarker.c:
     complete
     .text       start:0x020b2f78 end:0x020b2fec
 
-src/overlays/ov021/calls/func_ov021_020b2fec.c:
+src/overlays/ov021/calls/StageScriptCmd_SetStageMarkerAuxiliaryWords.c:
     complete
     .text       start:0x020b2fec end:0x020b3050
 

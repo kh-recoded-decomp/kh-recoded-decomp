@@ -2,7 +2,7 @@
 
 #pragma opt_common_subs off
 
-extern int func_ov001_02064784(void);
+extern int GetScriptHandlerSlot7Index(void);
 extern BOOL IsSessionFlagSet(u32 flag);
 extern BOOL TrySelectListEntry_020c37a8(ListView *list, int index);
 extern BOOL PlaySoundEffect(int group, int index);
@@ -14,7 +14,7 @@ void HandleListTouchInput(ListView *list, const ListTouchSample *touch)
 {
     ListTable *table = list->data->table;
 
-    if (func_ov001_02064784() == 0 && IsSessionFlagSet(0x370b)) {
+    if (GetScriptHandlerSlot7Index() == 0 && IsSessionFlagSet(0x370b)) {
         return;
     }
     if (!list->scrolling && touch->touched == 1 && touch->validity == 0) {

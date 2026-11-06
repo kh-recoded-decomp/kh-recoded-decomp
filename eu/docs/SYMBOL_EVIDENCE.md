@@ -938,3 +938,7 @@ a fresh 108-module linked gate preserves every native hash. The current
 [retained DATA ledger](EU_PENDING_DATA_LABELS.md) contains exactly 92 numeric
 identities from its 941-identity review domain, with all old closed anchors kept.
 The C backlog remains 71; metadata cleanup is not a new decompilation claim.
+
+## Stage workspace, binding indices and field entry storage
+
+Twelve numeric functions follow their native owners and actual writers or consumers. [The system index](README.md) links the launcher, model draw, stage workspace, operand/marker, binding-index and field-entry contracts. Signed sentinels, conditional slot-8 recording, overlapping workspace views and opaque payload fields remain explicit. All 81 affected official function checks and 83 complete-object comparisons pass, with every hash unchanged in a fresh 108-module gate.

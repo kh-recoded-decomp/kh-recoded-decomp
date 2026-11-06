@@ -9,7 +9,7 @@ The callback writer is [BeginStageEntries](../../src/ov001/shared_engine/BeginSt
 | 2 | [ov006 AnimSequence_Update](../../src/ov006/animation_sequence/AnimSequence_Update_020a1570.c), EU020a1590 | [ov006 GetStageJointPosition](../../src/ov006/reviewed_helpers/GetStageJointPosition_020a1694.c), EU020a16b4 |
 | 6 | [ov010 AnimSequence_Update_020a1b70](../../src/ov010/animation_sequence/AnimSequence_Update_020a1b50.c), EU020a1b70 | [ov010 AnimSequence_GetCurrentPosition](../../src/ov010/animation_sequence/AnimSequence_GetCurrentPosition_020a1c74.c), EU020a1c94 |
 
-The selector remains [func_ov001_02064784](../src/overlays/ov001/calls/func_ov001_02064784.c), a signed read of session byte `+0x18`. These branch values and exact bank-qualified pointer bindings are proven; a broader meaning or enum for that byte is not asserted.
+The selector remains [func_ov001_02064784](../src/overlays/ov001/calls/GetScriptHandlerSlot7Index.c), a signed read of session byte `+0x18`. These branch values and exact bank-qualified pointer bindings are proven; a broader meaning or enum for that byte is not asserted.
 
 Both update implementations add the supplied step to the sequence frame and handle animation clip/loop progression and accumulated root translation. Both extractors evaluate the current animation/root matrix and write sequence offset plus matrix translation. The result is that computed motion position, not a promise of StageActor world position, collision position or arbitrary joint selection.
 

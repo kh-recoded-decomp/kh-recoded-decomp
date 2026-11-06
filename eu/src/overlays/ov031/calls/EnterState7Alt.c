@@ -1,3 +1,4 @@
+#define func_ov001_02063848 StoreFieldSessionEntryPayloadPair
 #define func_ov001_0206e644 GetPendingWorldEntryData
 #define EnterState7Alt_020ba890 EnterState7Alt
 #define g_activeState_020bc800 gOv031SceneWorkStorage

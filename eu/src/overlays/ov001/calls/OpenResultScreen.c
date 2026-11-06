@@ -26,7 +26,7 @@ extern char OVERLAY_45_ID[];
 extern void LoadOverlayAfterGeometryTransfer(int processor, int overlay_id);
 extern void *CreateTaskObject(void *descriptor, void *userData);
 extern u32 GetSessionCounter(s32 index);
-extern s32 func_ov001_020644c0(void);
+extern s32 GetCurrentFieldEntryKey(void);
 extern int ReadSessionPackedBits(int bitOffset, u32 bitCount);
 extern u32 GetPostIntroElapsedMilliseconds(void);
 extern int CountAreaEntriesOfKind0(void);
@@ -48,7 +48,7 @@ void OpenResultScreen(int rank, int arg)
     if (params.mode > 3) {
         params.mode += 2;
     } else if (params.mode == 3) {
-        switch (func_ov001_020644c0()) {
+        switch (GetCurrentFieldEntryKey()) {
         case 5:
             params.mode = 3;
             break;

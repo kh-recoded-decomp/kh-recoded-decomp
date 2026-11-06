@@ -37,7 +37,7 @@ typedef struct Actor {
 
 extern EffectManager *gActorWork;
 extern const VecFx32 gZeroVecFx32;
-extern BOOL func_ov021_020a9d24(u32 *flags);
+extern BOOL IsModelSetDrawEnabled(u32 *flags);
 extern BOOL IsBit0Set(u32 *flags);
 extern void SetBit1WhenBit0Set(u32 *flags, s32 enable);
 extern BOOL IsSessionFlagSet(u32 value);
@@ -50,9 +50,9 @@ void UpdateToggleEffectTimer(Actor *actor)
     BOOL ready = FALSE;
     TrackState state;
 
-    if (!func_ov021_020a9d24(&actor->toggleFlags) && (actor->flags & 0x40)) {
+    if (!IsModelSetDrawEnabled(&actor->toggleFlags) && (actor->flags & 0x40)) {
         ready = TRUE;
-    } else if (func_ov021_020a9d24(&actor->toggleFlags) && !(actor->flags & 0x40)) {
+    } else if (IsModelSetDrawEnabled(&actor->toggleFlags) && !(actor->flags & 0x40)) {
         ready = TRUE;
     }
     if (!IsBit0Set(&actor->toggleFlags)) {
@@ -82,6 +82,6 @@ void UpdateToggleEffectTimer(Actor *actor)
     if (manager->timer < 0x3800) {
         return;
     }
-    SetBit1WhenBit0Set(&actor->toggleFlags, !func_ov021_020a9d24(&actor->toggleFlags));
+    SetBit1WhenBit0Set(&actor->toggleFlags, !IsModelSetDrawEnabled(&actor->toggleFlags));
     manager->timer = 0;
 }

@@ -1,3 +1,4 @@
+#define func_ov001_020644b0 GetCurrentFieldStageCode
 #define data_0205fe0c gSaveIoStateDataTail
 #define ShutdownMatrixMenu_020c7de8 ShutdownMatrixMenu
 #define NotifyBothOrOne_02001154 NotifyBothOrOne

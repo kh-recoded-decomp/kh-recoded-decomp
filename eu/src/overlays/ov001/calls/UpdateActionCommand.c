@@ -1,3 +1,5 @@
+#define func_ov001_020644b0 GetCurrentFieldStageCode
+#define func_ov001_02064784 GetScriptHandlerSlot7Index
 #define func_ov001_02077bcc GetFieldMenuMode
 #define func_ov001_0206dc38 GetManagedActorCount
 #define UpdateActionCommand_0206d0ac UpdateActionCommand

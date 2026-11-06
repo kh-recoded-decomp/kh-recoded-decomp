@@ -1,13 +1,13 @@
 #include "nitro/types.h"
 
 extern int IsSessionFlagSet(u32 flag);
-extern int func_ov001_02064784(void);
+extern int GetScriptHandlerSlot7Index(void);
 
 BOOL func_ov001_0206e31c(void)
 {
     int value;
 
-    value = func_ov001_02064784();
+    value = GetScriptHandlerSlot7Index();
     if ((value == 6) && (value = IsSessionFlagSet(0x3715), value != 0)) {
         return 1;
     }

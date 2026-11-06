@@ -2,6 +2,6 @@
 
 extern u32 gFieldSessionWork;
 
-s32 func_ov001_020644c0(void) {
+s32 GetCurrentFieldEntryKey(void) {
     return (s32)*(s16 *)(gFieldSessionWork + 0x20a);
 }

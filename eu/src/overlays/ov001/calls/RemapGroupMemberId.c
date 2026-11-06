@@ -1,3 +1,4 @@
+#define func_ov001_020644b0 GetCurrentFieldStageCode
 #define GetGroupIndexedValue_020bb86c GetGroupIndexedValue
 #define RemapGroupMemberId_0209cfcc RemapGroupMemberId
 #define data_ov001_020a038c gGroupMemberRemap

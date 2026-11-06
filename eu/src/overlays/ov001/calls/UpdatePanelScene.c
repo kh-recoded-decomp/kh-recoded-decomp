@@ -29,7 +29,7 @@ extern PanelScene *gSubscenePanelWork;
 extern PanelStateTable gMenuOverlayStateHandlers;
 extern u8 GetPrimarySelectionByte1E(void);
 extern BOOL IsSessionFlagSet(u32 value);
-extern int func_ov001_02064784(void);
+extern int GetScriptHandlerSlot7Index(void);
 extern void PulsePaletteFlash(PanelScene *panel);
 extern void UpdateIdleTimerToggle(PanelScene *panel);
 extern void UpdatePanelConfirmTimer(PanelScene *panel);
@@ -54,7 +54,7 @@ int UpdatePanelScene(void)
         LookupChannelEntry_020b62ac(channel);
         panel->channel = channel;
     }
-    if (!func_ov001_02064784() && IsSessionFlagSet(0x370b)) {
+    if (!GetScriptHandlerSlot7Index() && IsSessionFlagSet(0x370b)) {
         UpdatePanelConfirmTimer(panel);
     } else {
         switch (panel->timerMode) {

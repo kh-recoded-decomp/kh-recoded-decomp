@@ -18,7 +18,7 @@ extern CommState *gContinueSceneState;
 extern FieldState *gFieldSessionWork;
 extern void DestroyOv037Context(void);
 extern void PopVramState(void);
-extern int func_ov001_020644b0(void);
+extern int GetCurrentFieldStageCode(void);
 extern void SetFieldStateValue(int roomId, int mode);
 extern void Set_SessionFlagBit0(void);
 extern void ReleaseSeqArcHeapLevel(int index);
@@ -36,7 +36,7 @@ s32 CloseCommAndRestoreRoom(void)
     gContinueSceneState->flags &= ~0xc;
     PopVramState();
     if (state->result == 0) {
-        if (func_ov001_020644b0() == 900) {
+        if (GetCurrentFieldStageCode() == 900) {
             SetFieldStateValue(-4, 1);
         } else {
             SetFieldStateValue(gFieldSessionWork->roomId, 1);

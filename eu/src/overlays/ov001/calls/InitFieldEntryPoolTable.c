@@ -5,7 +5,7 @@ extern unsigned int gFieldEntryPoolManager;
 extern unsigned int NNSi_FndAllocFromDefaultHeap();
 extern unsigned int ResourceCache_FreeAll();
 extern unsigned int MIi_CpuClear32();
-extern unsigned int func_ov001_020644c0();
+extern unsigned int GetCurrentFieldEntryKey();
 extern unsigned int IsSessionFlagSet();
 
 void InitFieldEntryPoolTable(int count) {
@@ -20,7 +20,7 @@ void InitFieldEntryPoolTable(int count) {
   *(char *)(cache + 1) = (char)count;
   currentState = IsSessionFlagSet(0x3614);
   if ((currentState == 0) &&
-     (((currentState = func_ov001_020644c0(), *(short *)((int)cache + 0x132) != currentState ||
+     (((currentState = GetCurrentFieldEntryKey(), *(short *)((int)cache + 0x132) != currentState ||
        (*(char *)(cache + 0x4d) != count)) ||
       ((*(u32 *)(gFieldSessionWork + 0x214) << 0x1b >> 0x1f) != 0)))) {
     ResourceCache_FreeAll();

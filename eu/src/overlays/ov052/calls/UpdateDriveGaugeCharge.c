@@ -1,3 +1,4 @@
+#define func_ov001_02064784 GetScriptHandlerSlot7Index
 #define func_ov001_0206db8c GetFieldEntryGroupId
 #define func_ov001_02064490 InvokeSessionCheckCallbackOrDefault
 #define func_ov001_02063a38 GetFieldSessionState

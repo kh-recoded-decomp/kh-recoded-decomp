@@ -1,3 +1,4 @@
+#define func_ov001_020644c0 GetCurrentFieldEntryKey
 #define InitStageEventHeader_020988d4 InitStageEventHeader
 #define Session_Exists_02063a24 HasSessionContext
 #define func_01ff8830 MI_CpuFill8

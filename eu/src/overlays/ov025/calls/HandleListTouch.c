@@ -3,7 +3,7 @@
 
 #include "src/overlays/ov025/SlotListTouch.h"
 
-extern int func_ov001_02064784(void);
+extern int GetScriptHandlerSlot7Index(void);
 extern BOOL IsSessionFlagSet(u32 flag);
 extern BOOL TrySelectListEntry(ListTouchView *list, int index);
 extern BOOL PlaySoundEffect(int archive, int sound);
@@ -15,7 +15,7 @@ void HandleListTouch(ListTouchView *list, const ListTouchInput *touch)
 {
     ListTouchRowTable *table = list->data->table;
 
-    if (func_ov001_02064784() == 0 && IsSessionFlagSet(0x370b)) {
+    if (GetScriptHandlerSlot7Index() == 0 && IsSessionFlagSet(0x370b)) {
         return;
     }
     if (!list->scrolling && touch->down == 1 && touch->status == 0) {

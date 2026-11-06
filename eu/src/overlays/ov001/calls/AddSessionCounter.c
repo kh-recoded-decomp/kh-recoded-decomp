@@ -1,3 +1,4 @@
+#define func_ov001_020644b0 GetCurrentFieldStageCode
 #define func_ov001_0206dc4c GetManagedActorPosition
 #define AddSessionCounter_02063a80 AddSessionCounter
 #define PXI_Init_020880d8 GetFocusEventActorPositionWrapper

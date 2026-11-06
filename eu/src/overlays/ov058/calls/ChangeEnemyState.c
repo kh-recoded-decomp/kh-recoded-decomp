@@ -1,3 +1,4 @@
+#define func_ov001_02064784 GetScriptHandlerSlot7Index
 #define func_ov001_0206db8c GetFieldEntryGroupId
 #define func_ov001_020645c8 IsSessionFlagSet
 #define func_ov001_020645dc SetSessionFlag

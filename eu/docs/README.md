@@ -112,11 +112,11 @@ the exact representation and the retained ov004 bank ambiguity.
 
 ## Unresolved function contracts
 
-71 matched C functions retain numeric names. Every one has a mechanical
+59 matched C functions retain numeric names. Every one has a mechanical
 contract, a specific semantic blocker and a next useful proof:
 
-- [55 common field functions](EU_PENDING_FIELD_FUNCTIONS.md).
-- [8 engine, script and scene functions](EU_PENDING_ENGINE_SCENE_FUNCTIONS.md).
+- [49 common field functions](EU_PENDING_FIELD_FUNCTIONS.md).
+- [2 engine, script and scene functions](EU_PENDING_ENGINE_SCENE_FUNCTIONS.md).
 - [8 background/camera/other callbacks](EU_PENDING_CALLBACK_FUNCTIONS.md).
 
 These are limits on recovered meaning. Full-module matching and reconstructed
@@ -153,3 +153,5 @@ The [field HP/camera script gate](FIELD_HP_CAMERA_SCRIPT_GATE.md) documents opco
 [Interface callback phases](FIELD_CALLBACK_PHASE_CONTRACTS.md), [the jump-step override hook](ACTOR_JUMP_STEP_OVERRIDE.md), [timed event cues](STAGE_EVENT_TIMED_CUE_GROUP.md), [event effect kind](STAGE_EVENT_EFFECT_KIND.md) and [canonical DATA aliases](CANONICAL_DATA_ALIAS_NORMALIZATION.md) document the latest owner and consumer closures.
 
 [Class activation/LOD/command selection](FIELD_OBJECT_CLASS_ACTIVATION_LOD_COMMANDS.md), [event combat values](STAGE_EVENT_COMBAT_VALUES.md), [reaction/countdown values](STAGE_EVENT_REACTION_COUNTDOWN.md), [motion callbacks](STAGE_MOTION_POSITION_CALLBACKS.md) and [current override ID](STAGE_CURRENT_OVERRIDE_ID.md) supply the native owner and ABI evidence for the latest closures.
+
+[Launcher emission](CARRIED_LAUNCHER_EMISSION.md), [model drawing](MODEL_SET_DRAW_GATE.md), [shared stage workspace](STAGE_SHARED_WORKSPACE.md), [operand and marker operations](STAGE_OPERAND_MARKER_COMMANDS.md), [script binding indices](FIELD_SCRIPT_BINDING_INDICES.md) and [current field entry storage](FIELD_CURRENT_ENTRY_STORAGE.md) connect the newly named functions to their actual writers and consumers.

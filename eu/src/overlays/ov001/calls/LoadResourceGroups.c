@@ -1,3 +1,4 @@
+#define func_ov001_02064784 GetScriptHandlerSlot7Index
 #define LoadCurrentArchiveModelFlagged_0207c6b8 LoadCurrentArchiveModelFlagged
 #define LoadCurrentArchiveModel_0207c668 LoadCurrentArchiveModel
 #define LoadResourceGroups_0207c770 LoadResourceGroups

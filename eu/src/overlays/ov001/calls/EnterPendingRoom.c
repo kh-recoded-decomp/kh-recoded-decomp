@@ -1,3 +1,4 @@
+#define func_ov001_02063560 StoreFieldSessionContainerSlot
 #define EnterPendingRoom_02061e54 EnterPendingRoom
 #define LoadSessionArchiveResource_02062e30 LoadSessionArchiveResource
 #define LookupSessionKeyValue_02062e7c LookupSessionKeyValue

@@ -160,7 +160,7 @@ extern void SetEntrySlotsVisible(void *root, Widget *widget, BOOL visible);
 extern MatrixNode *FindPageEntryById(MatrixMap *map, u32 id);
 extern void *GetPackedFileEntry(int *bank, int index);
 extern BOOL PlaySoundEffect(int seqArcNo, int index);
-extern int func_ov001_020644b0(void);
+extern int GetCurrentFieldStageCode(void);
 extern void ComputePlayerStats(SaveData *save, PlayerStats *out, BOOL recompute, int scaleParam);
 extern void RefreshStatusMenuData(SaveData *save, StatPreview *preview);
 extern void SetStatusPageAndCursor(int page, int index);
@@ -284,7 +284,7 @@ static inline BOOL OpenPage(MatrixMenu *menu, u8 index, u8 id)
     menu->repeatCount = 0;
     ResetDirectionRepeat(menu);
     ShowEntryHeaderMessage(menu, menu->current);
-    menu->noticePending = menu->page == 1 && menu->noticeArmed != 0 && func_ov001_020644b0() == 400;
+    menu->noticePending = menu->page == 1 && menu->noticeArmed != 0 && GetCurrentFieldStageCode() == 400;
     return TRUE;
 }
 

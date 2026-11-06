@@ -28,7 +28,7 @@ extern GaugeGlobals gFieldSceneGlobals;
 extern LevelFileTable gMenuGaugePointLevelFileIds;
 extern const LevelThresholdTable gMenuGaugePointThresholds;
 
-extern u32 func_ov001_02064784(void);
+extern u32 GetScriptHandlerSlot7Index(void);
 extern u32 IsSessionFlagSet(u32 id);
 extern int GetPartySize(void);
 extern BOOL IsFieldFlag13OrSessionFlagSet(void);
@@ -60,7 +60,7 @@ void AddGaugePoints(int delta, BOOL loadNow)
     void *file;
     u32 menuState;
 
-    if (func_ov001_02064784() == 0 && IsSessionFlagSet(0x3708) != 0) {
+    if (GetScriptHandlerSlot7Index() == 0 && IsSessionFlagSet(0x3708) != 0) {
         return;
     }
     maxLevel = GetPartySize();

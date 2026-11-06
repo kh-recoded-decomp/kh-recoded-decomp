@@ -45,8 +45,8 @@ extern void StageScriptExpr_TestSessionFlag3713(void);
 extern void ScriptOp_GetEventFlagPairBits(void); /* ScriptOp_GetEventFlagPairBits */
 extern void ReadContextFlagBit13(void); /* ReadContextFlagBit13 */
 extern void StageScriptExpr_GetHudGauge0BlinkActive(void);
-extern void func_ov021_020b0af0(void);
-extern void func_ov021_020b0ad4(void);
+extern void StageScriptExpr_GetStageWorkspaceWord0(void);
+extern void StageScriptExpr_GetStageWorkspaceWord1(void);
 extern void ScriptOp_GetPlayerHiddenFlag(void); /* ScriptOp_GetPlayerHiddenFlag */
 extern void StageExpr_FindFarthestFreeSlot(void);
 extern void SetScriptContextVector(void); /* SetScriptContextVector */
@@ -242,8 +242,8 @@ void (*gScriptQueryHandlers[173])(void) = {
     StageScriptExpr_GetHudGauge0BlinkActive,
     NULL,
     NULL,
-    func_ov021_020b0af0,
-    func_ov021_020b0ad4,
+    StageScriptExpr_GetStageWorkspaceWord0,
+    StageScriptExpr_GetStageWorkspaceWord1,
     NULL,
     NULL,
     NULL,

@@ -1,3 +1,4 @@
+#define func_ov001_02064784 GetScriptHandlerSlot7Index
 #define func_ov001_0206e224 IsPartyGaugeGainAllowed
 #define func_ov001_0206dc38 GetManagedActorCount
 #define func_ov001_02063a38 GetFieldSessionState

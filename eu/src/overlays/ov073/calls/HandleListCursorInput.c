@@ -1,3 +1,4 @@
+#define func_ov001_02064784 GetScriptHandlerSlot7Index
 #define func_ov001_020645c8 IsSessionFlagSet
 #define FindHorizontalNeighbor_020c386c FindHorizontalNeighbor_020c388c
 #define FindVerticalNeighbor_020c37f0 FindVerticalNeighbor_020c3810

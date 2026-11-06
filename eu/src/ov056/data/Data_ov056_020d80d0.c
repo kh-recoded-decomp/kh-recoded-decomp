@@ -15,7 +15,7 @@ extern void SpawnSlotRequestProjectile(void);
 extern void SpawnTrailProjectile(void);
 extern void SpawnUnitProjectile(void);
 extern void StartGaugeRewardEffect(void);
-extern void func_ov030_020bcec0(void);
+extern void StartCarriedLauncherEmission(void);
 
 void *gEffectSourceKindEventHandlers[20] = {
     (void *)SpawnUnitProjectile,
@@ -37,5 +37,5 @@ void *gEffectSourceKindEventHandlers[20] = {
     (void *)SpawnEntryProjectile,
     (void *)SpawnEmitterSound,
     (void *)AttachEffectToEntry,
-    (void *)func_ov030_020bcec0,
+    (void *)StartCarriedLauncherEmission,
 };

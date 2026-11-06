@@ -1,3 +1,4 @@
+#define func_ov001_020644b0 GetCurrentFieldStageCode
 #define func_ov001_020664f0 TrySpawnFieldEffect
 #define func_ov001_020645dc SetSessionFlag
 #define GetEntryUnlockState_02087478 GetEntryUnlockState

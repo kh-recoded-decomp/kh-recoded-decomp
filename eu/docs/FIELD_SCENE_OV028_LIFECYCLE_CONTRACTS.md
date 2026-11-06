@@ -159,7 +159,7 @@ Demonstrated behavior and evidence:
 - EU wrapper identifies signed byte1 getter. Source: [eu/src/overlays/ov001/auto/GetSignedByteAt1.c:1-2](../src/overlays/ov001/auto/GetSignedByteAt1.c).
 - Reads signed byte at input+1. Source: [src/ov001/shared_engine/GetSignedByteAt1_02067f9c.c:1-4](../../src/ov001/shared_engine/GetSignedByteAt1_02067f9c.c).
 - Reads signed byte at input+3. Source: [src/ov001/shared_engine/GetSignedByteAt3_02067f8c.c:1-4](../../src/ov001/shared_engine/GetSignedByteAt3_02067f8c.c).
-- Destination helper only stores u8 values at SessionState+0x2744/+0x2745. Source: [eu/src/overlays/ov001/calls/func_ov001_02063848.c:1-9](../src/overlays/ov001/calls/func_ov001_02063848.c).
+- Destination helper only stores u8 values at SessionState+0x2744/+0x2745. Source: [eu/src/overlays/ov001/calls/StoreFieldSessionEntryPayloadPair.c:1-9](../src/overlays/ov001/calls/StoreFieldSessionEntryPayloadPair.c).
 
 Contract limits:
 

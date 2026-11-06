@@ -1,3 +1,4 @@
+#define func_ov001_02064784 GetScriptHandlerSlot7Index
 #define data_02060500 gPadPressedStorage
 #define func_ov001_0207123c GetFieldSceneManager
 #define func_ov001_02064490 InvokeSessionCheckCallbackOrDefault

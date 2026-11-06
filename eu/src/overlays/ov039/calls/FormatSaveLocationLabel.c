@@ -15,14 +15,14 @@ extern const u16 sGridLabelSingleFormat[];
 
 extern int GetMenuSelection(void);
 extern u32 GetRuntimeStateFlags(void);
-extern int func_ov001_020644b0(void);
+extern int GetCurrentFieldStageCode(void);
 extern int GetLanguageIndex(void);
 extern const u16 *GetGridTableValue(int worldId, int areaId);
 extern int OS_SNPrintf_0202e094(u16 *dst, u32 len, const u16 *fmt, ...);
 
 static inline BOOL IsInRoom900(void)
 {
-    return func_ov001_020644b0() == 900;
+    return GetCurrentFieldStageCode() == 900;
 }
 
 u16 *FormatSaveLocationLabel(RecordSaveData *save)

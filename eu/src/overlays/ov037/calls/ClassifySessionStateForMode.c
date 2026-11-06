@@ -1,3 +1,4 @@
+#define func_ov001_020644c0 GetCurrentFieldEntryKey
 #define func_ov001_020645c8 IsSessionFlagSet
 #define ClassifySessionStateForMode_020ba544 ClassifySessionStateForMode
 #define GetCtxModeByte_02068084 GetCtxModeByte

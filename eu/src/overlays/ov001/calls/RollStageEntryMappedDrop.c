@@ -1,7 +1,7 @@
 #include "nitro/types.h"
 
 extern unsigned int *gStageEventContext;
-extern unsigned int func_ov001_020644b0();
+extern unsigned int GetCurrentFieldStageCode();
 extern unsigned int RollEnemyDrop();
 extern unsigned int LookupMappedByteValue();
 extern unsigned int GetGroupIndexedValue();
@@ -13,7 +13,7 @@ void RollStageEntryMappedDrop(int index,unsigned int secondValue,unsigned int fi
 
   records = *(int *)(*gStageEventContext + 4);
   kind = (u32)*(u8 *)(records + index * 0xc);
-  resolvedKind = func_ov001_020644b0();
+  resolvedKind = GetCurrentFieldStageCode();
   if (resolvedKind == 900) {
     kind = GetGroupIndexedValue(*(u8 *)(records + index * 0xc));
   }

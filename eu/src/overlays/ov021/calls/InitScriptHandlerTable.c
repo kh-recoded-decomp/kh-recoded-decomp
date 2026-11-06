@@ -37,7 +37,7 @@
 #define func_ov021_020b2c38 ScriptOp_MultiplyValues
 #define func_ov021_020b2c94 ScriptOp_DivideValues
 #define func_ov021_020b2f58 ScriptOp_SetStageMarker
-#define func_ov021_020b2fcc func_ov021_020b2fec
+#define func_ov021_020b2fcc StageScriptCmd_SetStageMarkerAuxiliaryWords
 #define func_ov021_020b3114 ScriptOp_SpawnLinkedWalkers
 #define func_ov021_020b3030 ScriptCmd_SetActorGroupFlag
 #define func_ov021_020b3050 ScriptCmd_SetActorGroupFlag_020b3070
@@ -51,7 +51,7 @@
 #define func_ov021_020b3570 ScriptOp_ApplyCurrentObjectPosition
 #define func_ov021_020b364c StageScriptCmd_BeginActorWalkerMove
 #define func_ov021_020b36ac ScriptOp_ApplyScaledObjectVector
-#define func_ov021_020b2024 func_ov021_020b2044
+#define func_ov021_020b2024 StageScriptOp_ResolveDataOperands
 #define func_ov021_020b2050 ScriptCmd_SetStagePoint
 #define func_ov021_020b20dc ScriptCmd_AddStagePoint
 #define func_ov021_020b2178 ScriptOp_SubtractStageVector

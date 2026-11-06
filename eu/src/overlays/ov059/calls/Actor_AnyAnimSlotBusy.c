@@ -1,3 +1,3 @@
 #define Actor_AnyAnimSlotBusy_020cd124 Actor_AnyAnimSlotBusy
-#define func_ov021_020a9d04 func_ov021_020a9d24
+#define func_ov021_020a9d04 IsModelSetDrawEnabled
 #include "src/ov059/unclassified_helpers/Actor_AnyAnimSlotBusy_020cd124.c"

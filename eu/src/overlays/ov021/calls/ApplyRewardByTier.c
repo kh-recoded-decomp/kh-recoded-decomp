@@ -1,3 +1,4 @@
+#define func_ov001_02064784 GetScriptHandlerSlot7Index
 #define data_0205fe0c gSaveIoStateDataTail
 #define func_ov001_0206dc38 GetManagedActorCount
 #define func_ov001_02063d4c UpdateFieldTimer

@@ -1,3 +1,4 @@
+#define func_ov001_02064784 GetScriptHandlerSlot7Index
 #define func_ov001_020645c8 IsSessionFlagSet
 #define FindVerticalNeighbor_020b6d78 FindVerticalNeighbor
 #define HandleListInput_020b6f78 HandleListInput

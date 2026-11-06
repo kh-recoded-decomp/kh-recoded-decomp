@@ -5,7 +5,7 @@ extern s32 GetBoundedEntryField(s32 arg);
 extern VecFx32 ActivateSpawnUnit(void *unit, int slot);
 extern void VEC_Subtract(void *buf, u32 size, u32 dest);
 
-void func_ov030_020bcec0(u32 base, u32 source, u32 record)
+void StartCarriedLauncherEmission(u32 base, u32 source, u32 record)
 {
     s32 decodedSize;
     VecFx32 tempBuf;

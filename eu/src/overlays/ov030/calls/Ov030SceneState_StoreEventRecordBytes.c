@@ -4,7 +4,7 @@ extern u32 gOv030SceneWork;
 extern u32 GetPendingWorldEntryData(void);
 extern s8 GetSignedByteAt1(void);
 extern s8 GetSignedByteAt3(u32 arg);
-extern void func_ov001_02063848(u32 a, u32 b);
+extern void StoreFieldSessionEntryPayloadPair(u32 a, u32 b);
 
 u32 Ov030SceneState_StoreEventRecordBytes(void)
 {
@@ -16,7 +16,7 @@ u32 Ov030SceneState_StoreEventRecordBytes(void)
     valueA = GetPendingWorldEntryData();
     valueB = GetSignedByteAt1();
     valueA = GetSignedByteAt3(valueA);
-    func_ov001_02063848(valueB, valueA);
+    StoreFieldSessionEntryPayloadPair(valueB, valueA);
     *(u16 *)(ctx + 6) = *(u16 *)(ctx + 6) | 2;
     return 7;
 }

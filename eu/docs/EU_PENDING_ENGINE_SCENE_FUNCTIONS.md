@@ -1,6 +1,6 @@
 # EU functions awaiting semantic evidence
 
-These 8 byte-exact functions retain their address names because a stronger role or field meaning remains unproven. Current source paths, function names and native declarations were revalidated at Git `c55c73c68510bfb1168844edc4e9a0deea2e61b5`. The raw-ROM scan receipt remains pinned to the earlier `28dc258674c86cde06bc8456c4c7cb9087e28905` research checkpoint. This document changes no source, prototype, structure or behavior, and makes no new official compilation or byte-exact validation claim.
+These 2 byte-exact functions retain their address names because a stronger role or field meaning remains unproven. Current source paths, function names and native declarations were revalidated at Git `c55c73c68510bfb1168844edc4e9a0deea2e61b5`. The raw-ROM scan receipt remains pinned to the earlier `28dc258674c86cde06bc8456c4c7cb9087e28905` research checkpoint. This document changes no source, prototype, structure or behavior, and makes no new official compilation or byte-exact validation claim.
 
 ## How to use this inventory
 
@@ -19,13 +19,13 @@ The research receipt for this pass has SHA-256 `f0116bceabb1f33cf0afe91e100fc161
 | Bank:address | Mode | Source | Result category |
 | --- | --- | --- | --- |
 | `main:0202d620` | THUMB | [eu/src/calls/func_0202d620.c](../src/calls/func_0202d620.c) | void; no ownership transfer. |
-| `ov021:020a9d24` | THUMB | [eu/src/overlays/ov021/calls/func_ov021_020a9d24.c](../src/overlays/ov021/calls/func_ov021_020a9d24.c) | Normalized BOOL equivalent to ((*flags & 3) == 3). |
-| `ov021:020b0ad4` | THUMB | [eu/src/overlays/ov021/calls/func_ov021_020b0ad4.c](../src/overlays/ov021/calls/func_ov021_020b0ad4.c) | Return opcode status 0. The copied integer word is not normalized or converted. |
-| `ov021:020b0af0` | THUMB | [eu/src/overlays/ov021/calls/func_ov021_020b0af0.c](../src/overlays/ov021/calls/func_ov021_020b0af0.c) | Return opcode status 0; no allocation or pointer lifetime change. |
+| `ov021:020a9d24` | THUMB | [eu/src/overlays/ov021/calls/IsModelSetDrawEnabled.c](../src/overlays/ov021/calls/IsModelSetDrawEnabled.c) | Normalized BOOL equivalent to ((*flags & 3) == 3). |
+| `ov021:020b0ad4` | THUMB | [eu/src/overlays/ov021/calls/StageScriptExpr_GetStageWorkspaceWord1.c](../src/overlays/ov021/calls/StageScriptExpr_GetStageWorkspaceWord1.c) | Return opcode status 0. The copied integer word is not normalized or converted. |
+| `ov021:020b0af0` | THUMB | [eu/src/overlays/ov021/calls/StageScriptExpr_GetStageWorkspaceWord0.c](../src/overlays/ov021/calls/StageScriptExpr_GetStageWorkspaceWord0.c) | Return opcode status 0; no allocation or pointer lifetime change. |
 | `ov021:020b0edc` | THUMB | [eu/src/overlays/ov021/calls/func_ov021_020b0edc.c](../src/overlays/ov021/calls/func_ov021_020b0edc.c) | Opcode status 0; missing event or record leaves the helper's result fields unchanged. |
-| `ov021:020b2044` | THUMB | [eu/src/overlays/ov021/calls/func_ov021_020b2044.c](../src/overlays/ov021/calls/func_ov021_020b2044.c) | Opcode status 0. Resolver/expression side effects are retained; this is not safely replaceable by an empty function. |
-| `ov021:020b2fec` | THUMB | [eu/src/overlays/ov021/calls/func_ov021_020b2fec.c](../src/overlays/ov021/calls/func_ov021_020b2fec.c) | Opcode status 0. There is no index check, conversion, allocation or result-vector write. |
-| `ov030:020bcec0` | THUMB | [eu/src/overlays/ov030/calls/func_ov030_020bcec0.c](../src/overlays/ov030/calls/func_ov030_020bcec0.c) | void. ActivateSpawnUnit uses a native hidden composite-return destination; the C VecFx32 return view preserves that operation. |
+| `ov021:020b2044` | THUMB | [eu/src/overlays/ov021/calls/StageScriptOp_ResolveDataOperands.c](../src/overlays/ov021/calls/StageScriptOp_ResolveDataOperands.c) | Opcode status 0. Resolver/expression side effects are retained; this is not safely replaceable by an empty function. |
+| `ov021:020b2fec` | THUMB | [eu/src/overlays/ov021/calls/StageScriptCmd_SetStageMarkerAuxiliaryWords.c](../src/overlays/ov021/calls/StageScriptCmd_SetStageMarkerAuxiliaryWords.c) | Opcode status 0. There is no index check, conversion, allocation or result-vector write. |
+| `ov030:020bcec0` | THUMB | [eu/src/overlays/ov030/calls/StartCarriedLauncherEmission.c](../src/overlays/ov030/calls/StartCarriedLauncherEmission.c) | void. ActivateSpawnUnit uses a native hidden composite-return destination; the C VecFx32 return view preserves that operation. |
 
 ## func_0202d620
 
@@ -59,108 +59,6 @@ Next proof: Trace bulk/prefix BSS initialization and indirect constructors that 
 
 Additional raw scan: the only complete anchor word 02060764 is the setter's own pool at MAIN0202d630, loaded at0202d620. No complete 02060768/02060769 word was found in the extracted domains. This leaves prefix-based initialization, computed references and larger shared initialization routines unresolved.
 
-## func_ov021_020a9d24
-
-Identity: `ov021:020a9d24`, THUMB, configured native extent 24 bytes (including any pool). Source: [eu/src/overlays/ov021/calls/func_ov021_020a9d24.c](../src/overlays/ov021/calls/func_ov021_020a9d24.c).
-
-```c
-BOOL func_ov021_020a9d24(u32 *flags);
-```
-
-- Inputs: Pointer to a u32 flag word. There is no NULL check.
-- Mechanical effects: Read bit 0 first. If clear, return FALSE. Otherwise return whether bit 1 is set. It changes no flags.
-- Result/lifetime: Normalized BOOL equivalent to ((*flags & 3) == 3).
-
-### Callers, registration and ROM references
-
-- `ov052:020ce680` in `BuildActorStatusFlags`: `bl #0x20a9d24`; configured relocation names the target bank and this instruction is reachable in the bounded estimate. Source: [eu/src/overlays/ov052/calls/BuildActorStatusFlags.c](../src/overlays/ov052/calls/BuildActorStatusFlags.c).
-- `ov052:020ce698` in `BuildActorStatusFlags`: `bl #0x20a9d24`; configured relocation names the target bank and this instruction is reachable in the bounded estimate. Source: [eu/src/overlays/ov052/calls/BuildActorStatusFlags.c](../src/overlays/ov052/calls/BuildActorStatusFlags.c).
-- `ov052:020cfb5c` in `AnySubObjectFlagsActive`: `bl #0x20a9d24`; configured relocation names the target bank and this instruction is reachable in the bounded estimate. Source: [eu/src/overlays/ov052/calls/AnySubObjectFlagsActive.c](../src/overlays/ov052/calls/AnySubObjectFlagsActive.c).
-- `ov052:020d1ec2` in `RunVolumeHitScan`: `bl #0x20a9d24`; configured relocation names the target bank and this instruction is reachable in the bounded estimate. Source: [eu/src/overlays/ov052/calls/RunVolumeHitScan.c](../src/overlays/ov052/calls/RunVolumeHitScan.c).
-- `ov053:020d26be` in `UpdateModelBlinkEffect`: `bl #0x20a9d24`; configured relocation names the target bank and this instruction is reachable in the bounded estimate. Source: [eu/src/overlays/ov053/calls/UpdateModelBlinkEffect.c](../src/overlays/ov053/calls/UpdateModelBlinkEffect.c).
-- `ov053:020d26e6` in `UpdateModelBlinkEffect`: `bl #0x20a9d24`; configured relocation names the target bank and this instruction is reachable in the bounded estimate. Source: [eu/src/overlays/ov053/calls/UpdateModelBlinkEffect.c](../src/overlays/ov053/calls/UpdateModelBlinkEffect.c).
-- `ov053:020d27a0` in `UpdateModelBlinkEffect`: `bl #0x20a9d24`; configured relocation names the target bank and this instruction is reachable in the bounded estimate. Source: [eu/src/overlays/ov053/calls/UpdateModelBlinkEffect.c](../src/overlays/ov053/calls/UpdateModelBlinkEffect.c).
-- `ov059:020c76cc` in `UpdateToggleEffectTimer`: `blx #0x20a9d24`; configured relocation names the target bank and this instruction is reachable in the bounded estimate. Source: [eu/src/overlays/ov059/calls/UpdateToggleEffectTimer.c](../src/overlays/ov059/calls/UpdateToggleEffectTimer.c).
-- `ov059:020c7700` in `UpdateToggleEffectTimer`: `blx #0x20a9d24`; configured relocation names the target bank and this instruction is reachable in the bounded estimate. Source: [eu/src/overlays/ov059/calls/UpdateToggleEffectTimer.c](../src/overlays/ov059/calls/UpdateToggleEffectTimer.c).
-- `ov059:020c7814` in `UpdateToggleEffectTimer`: `blx #0x20a9d24`; configured relocation names the target bank and this instruction is reachable in the bounded estimate. Source: [eu/src/overlays/ov059/calls/UpdateToggleEffectTimer.c](../src/overlays/ov059/calls/UpdateToggleEffectTimer.c).
-- `ov059:020cd158` in `Actor_AnyAnimSlotBusy`: `bl #0x20a9d24`; configured relocation names the target bank and this instruction is reachable in the bounded estimate. Source: [eu/src/overlays/ov059/calls/Actor_AnyAnimSlotBusy.c](../src/overlays/ov059/calls/Actor_AnyAnimSlotBusy.c).
-
-### Writers and related source evidence
-
-[eu/src/overlays/ov052/calls/BuildActorStatusFlags.c](../src/overlays/ov052/calls/BuildActorStatusFlags.c), [src/ov052/unclassified_helpers/BuildActorStatusFlags_020ce5d4.c](../../src/ov052/unclassified_helpers/BuildActorStatusFlags_020ce5d4.c), [eu/src/overlays/ov053/calls/UpdateModelBlinkEffect.c](../src/overlays/ov053/calls/UpdateModelBlinkEffect.c), [src/ov053/unclassified_helpers/UpdateModelBlinkEffect_020d265c.c](../../src/ov053/unclassified_helpers/UpdateModelBlinkEffect_020d265c.c), [eu/src/overlays/ov059/calls/UpdateToggleEffectTimer.c](../src/overlays/ov059/calls/UpdateToggleEffectTimer.c).
-
-### Established limit
-
-The concrete owners in overlays052/053/059 differ. Their two bits are not established as generic active/visible/busy flags. Bit-1 toggling conditional on bit 0 does not identify the constructor meaning of either bit.
-
-### Searches already performed and next proof
-
-New Ghidra references identify eleven uses across concrete052/053/059 owners. UpdateModelBlinkEffect and UpdateToggleEffectTimer toggle bit1 conditionally on bit0, while BuildActorStatusFlags compares the result against an owner state bit. Neither construction nor both flag meanings is established; late reviewer confirmed no stronger contract.
-
-Next proof: Find writes that establish bit0 and bit1 on the exact flag subobjects, then match each reader to those writers. Do not equate them with TaskObject flags or EntryPool.state.
-
-## func_ov021_020b0ad4
-
-Identity: `ov021:020b0ad4`, THUMB, configured native extent 28 bytes (including any pool). Source: [eu/src/overlays/ov021/calls/func_ov021_020b0ad4.c](../src/overlays/ov021/calls/func_ov021_020b0ad4.c).
-
-```c
-u32 func_ov021_020b0ad4(int self);
-```
-
-- Inputs: Stage-script context. Obtain the current stage manager through GetStageManager.
-- Mechanical effects: Write tag 1 at context +0x2c and copy the raw word at manager +0x18e7c to context +0x30.
-- Result/lifetime: Return opcode status 0. The copied integer word is not normalized or converted.
-
-### Callers, registration and ROM references
-
-- `ov021:020b55e4` contains `020b0ad5`, `gScriptQueryHandlers[163]` (173 entries). The configured relocation records this target bank. Storage: [eu/src/overlays/ov021/data/tables/PointerTables_ov021_020b52d4.c](../src/overlays/ov021/data/tables/PointerTables_ov021_020b52d4.c).
-- `ScriptOp_DispatchIndexedCommand` resolves the selector, initializes the tagged result to integer zero, indexes this array and invokes the nonnull handler. The helper's return is discarded and the dispatcher returns 0. Source: [eu/src/overlays/ov021/calls/ScriptOp_DispatchIndexedCommand.c](../src/overlays/ov021/calls/ScriptOp_DispatchIndexedCommand.c).
-
-### Writers and related source evidence
-
-[eu/src/overlays/ov021/calls/ScriptCmd_SetProperty.c](../src/overlays/ov021/calls/ScriptCmd_SetProperty.c), [src/ov021/script_ops/ScriptOp_SetStageMarker_020b2f58.c](../../src/ov021/script_ops/ScriptOp_SetStageMarker_020b2f58.c), [src/ov021/script_ops/ScriptOp_SpawnLinkedWalkers_020b3114.c](../../src/ov021/script_ops/ScriptOp_SpawnLinkedWalkers_020b3114.c).
-
-### Established limit
-
-This offset is an X component in one spawn/marker layout, while other stage-cue code reuses the workspace with a different view. A universal position or spawn-offset name would hide the required last-writer/context proof.
-
-### Searches already performed and next proof
-
-Revisited ScriptCmd_SetProperty SpawnPoint view and ScriptOp_SetStageMarker/SpawnLinkedWalkers. They model the shared18e78 workspace as flags plus offset/radius, but earlier ProcessStageCues also writes a hit-point vector at that base. The scalar18e7c read therefore remains command-context dependent.
-
-Next proof: Trace bytecode expression identity and last writer for this specific expression path; establish whether the workspace is a union and which view is active.
-
-## func_ov021_020b0af0
-
-Identity: `ov021:020b0af0`, THUMB, configured native extent 28 bytes (including any pool). Source: [eu/src/overlays/ov021/calls/func_ov021_020b0af0.c](../src/overlays/ov021/calls/func_ov021_020b0af0.c).
-
-```c
-u32 func_ov021_020b0af0(int self);
-```
-
-- Inputs: Stage-script context and the stage-manager global obtained by GetStageManager.
-- Mechanical effects: Write tag 1 at context +0x2c and copy the raw word at manager +0x18e78 to context +0x30.
-- Result/lifetime: Return opcode status 0; no allocation or pointer lifetime change.
-
-### Callers, registration and ROM references
-
-- `ov021:020b55e0` contains `020b0af1`, `gScriptQueryHandlers[162]` (173 entries). The configured relocation records this target bank. Storage: [eu/src/overlays/ov021/data/tables/PointerTables_ov021_020b52d4.c](../src/overlays/ov021/data/tables/PointerTables_ov021_020b52d4.c).
-- `ScriptOp_DispatchIndexedCommand` resolves the selector, initializes the tagged result to integer zero, indexes this array and invokes the nonnull handler. The helper's return is discarded and the dispatcher returns 0. Source: [eu/src/overlays/ov021/calls/ScriptOp_DispatchIndexedCommand.c](../src/overlays/ov021/calls/ScriptOp_DispatchIndexedCommand.c).
-
-### Writers and related source evidence
-
-[eu/src/overlays/ov021/calls/ScriptCmd_SetProperty.c](../src/overlays/ov021/calls/ScriptCmd_SetProperty.c), [src/ov021/script_ops/ScriptOp_SetStageMarker_020b2f58.c](../../src/ov021/script_ops/ScriptOp_SetStageMarker_020b2f58.c), [src/ov021/script_ops/ScriptOp_SpawnLinkedWalkers_020b3114.c](../../src/ov021/script_ops/ScriptOp_SpawnLinkedWalkers_020b3114.c).
-
-### Established limit
-
-The marker/spawn view calls this word flags, but an earlier cue path writes a hit-point vector beginning at this address. Neither view alone establishes the expression's universal property.
-
-### Searches already performed and next proof
-
-Same workspace audit as0ad4:18e78 is flags in the marker/spawn layout, but the cue path uses it as vector storage. Raw integer tagging is proven, a universal field meaning is not.
-
-Next proof: Recover last-writer/consumer order in the owning script command stream and document the workspace lifetime before naming the value.
-
 ## func_ov021_020b0edc
 
 Identity: `ov021:020b0edc`, THUMB, configured native extent 48 bytes (including any pool). Source: [eu/src/overlays/ov021/calls/func_ov021_020b0edc.c](../src/overlays/ov021/calls/func_ov021_020b0edc.c).
@@ -187,100 +85,6 @@ GetStageMotionRecord resolves records used through several motion/grid/slot view
 Getter uses active event.motionId+16 to obtain a polymorphic stage record and copies record+18 as tagged integer; both missing-event and missing-record paths retain prior result. The record schema remains unresolved.
 
 Next proof: Correlate record kind/loader at GetStageMotionRecord with this expression entry, rather than exporting a generic motion/grid/slot field.
-
-## func_ov021_020b2044
-
-Identity: `ov021:020b2044`, THUMB, configured native extent 44 bytes (including any pool). Source: [eu/src/overlays/ov021/calls/func_ov021_020b2044.c](../src/overlays/ov021/calls/func_ov021_020b2044.c).
-
-```c
-u32 func_ov021_020b2044(u32 self, int args);
-```
-
-- Inputs: Stage-script context and three tagged operands at offsets 0, 8 and 0x10. The first old-style C call relies on the incoming native registers.
-- Mechanical effects: Resolve all three operands in order. Using the first resolved value, call ResolveStageScriptCommandDataOffset. Discard the returned address. The native instructions contain no direct stores in this command.
-- Result/lifetime: Opcode status 0. Resolver/expression side effects are retained; this is not safely replaceable by an empty function.
-
-### Callers, registration and ROM references
-
-- `ov021:020b4a94` contains `020b2045`. The configured relocation records this target bank. Storage: [eu/src/overlays/ov021/calls/InitScriptHandlerTable.c](../src/overlays/ov021/calls/InitScriptHandlerTable.c).
-- Reachable literal load `ov021:020b4982` in `InitScriptHandlerTable` reads pointer pool `020b4a94`: `ldr r0, [pc, #0x110]`.
-- The initializer installs this pointer in runtime stage command handler slot 60; its shared source and EU aliases establish the registration.
-
-### Writers and related source evidence
-
-[eu/src/overlays/ov021/calls/InitScriptHandlerTable.c](../src/overlays/ov021/calls/InitScriptHandlerTable.c), [src/ov021/script_ops/InitScriptHandlerTable_020b4884.c](../../src/ov021/script_ops/InitScriptHandlerTable_020b4884.c).
-
-### Established limit
-
-The native listing confirms the discarded calculation, so an omitted store in the recovered C is not the current explanation. Its intended command/bytecode role remains unknown; no memory-copy, decode or other operation is invented.
-
-### Searches already performed and next proof
-
-Compared EU native instructions: BL ResolveTaggedValueRef at204a,2056,2060; BL data-offset helper at2068; MOVr0,0 at206c. The calculated address is indeed discarded and there are no direct stores. The three evaluations may have expression side effects, so replacing this by a no-op is invalid.
-
-Next proof: Recover opcode/bytecode identity or original command contract. An operational evaluate-only description is possible, but no memory-transfer or other intended role is claimed.
-
-## func_ov021_020b2fec
-
-Identity: `ov021:020b2fec`, THUMB, configured native extent 100 bytes (including any pool). Source: [eu/src/overlays/ov021/calls/func_ov021_020b2fec.c](../src/overlays/ov021/calls/func_ov021_020b2fec.c).
-
-```c
-u32 func_ov021_020b2fec(u32 context, s32 operands);
-```
-
-- Inputs: Stage-script context and four tagged operands: an index followed by three values. Preserve evaluation order and native first-call register forwarding.
-- Mechanical effects: Copy the three raw value words to stage manager + index*0x20 + 0x18e8c/0x18e90/0x18e94.
-- Result/lifetime: Opcode status 0. There is no index check, conversion, allocation or result-vector write.
-
-### Callers, registration and ROM references
-
-- `ov021:020b4a5c` contains `020b2fed`. The configured relocation records this target bank. Storage: [eu/src/overlays/ov021/calls/InitScriptHandlerTable.c](../src/overlays/ov021/calls/InitScriptHandlerTable.c).
-- Reachable literal load `ov021:020b4948` in `InitScriptHandlerTable` reads pointer pool `020b4a5c`: `ldr r0, [pc, #0x110]`.
-- The initializer installs this pointer in runtime stage command handler slot 53; its shared source and EU aliases establish the registration.
-
-### Writers and related source evidence
-
-[eu/src/overlays/ov021/calls/InitScriptHandlerTable.c](../src/overlays/ov021/calls/InitScriptHandlerTable.c), [src/ov021/script_ops/InitScriptHandlerTable_020b4884.c](../../src/ov021/script_ops/InitScriptHandlerTable_020b4884.c), [src/ov021/script_ops/ScriptOp_SetStageMarker_020b2f58.c](../../src/ov021/script_ops/ScriptOp_SetStageMarker_020b2f58.c), [src/ov021/script_ops/ScriptOp_SpawnLinkedWalkers_020b3114.c](../../src/ov021/script_ops/ScriptOp_SpawnLinkedWalkers_020b3114.c).
-
-### Established limit
-
-These are the trailing three words in the reviewed 32-byte marker/spawn layout, not its VecFx32 offset. Their readers and individual meanings remain unproven.
-
-### Searches already performed and next proof
-
-SetStageMarker and SpawnLinkedWalkers place32-byte records at18e78; this helper writes at18e8c/90/94, corresponding to the trailing three words of that layout, not its VecFx32 offset. The vector hypothesis is disproven for that view.
-
-Next proof: Find exact readers of those three trailing words per indexed record; do not name them a position or vector.
-
-## func_ov030_020bcec0
-
-Identity: `ov030:020bcec0`, THUMB, configured native extent 130 bytes (including any pool). Source: [eu/src/overlays/ov030/calls/func_ov030_020bcec0.c](../src/overlays/ov030/calls/func_ov030_020bcec0.c).
-
-```c
-void func_ov030_020bcec0(u32 base, u32 source, u32 record);
-```
-
-- Inputs: Unit/base pointer, a slot input passed to ActivateSpawnUnit, and a descriptor pointer. Resolve the actor owner from signed byte base +0x3c.
-- Mechanical effects: If active count +0x3f is zero, clear byte +0x40. Always activate/place the spawn unit and obtain its VecFx32 position. If signed active count +0x3f is below limit +0x3e, set byte +0x1b0 to 1; clear +0x1a0, +0x1a4 and +0x1b4; copy descriptor bytes +4/+5 to +0x1a8/+0x1a9 and descriptor word +8 to +0x1ac; store placement minus actor position +0xbc into base +0x194; increment active count.
-- Result/lifetime: void. ActivateSpawnUnit uses a native hidden composite-return destination; the C VecFx32 return view preserves that operation.
-
-### Callers, registration and ROM references
-
-- `ov056:020d811c` contains `020bcec1`, `data_ov056_020d80d0[19]`. The configured relocation admits overlays(30,38); this does not uniquely prove the runtime bank. Storage: [eu/src/ov056/data/Data_ov056_020d80d0.c](../src/ov056/data/Data_ov056_020d80d0.c).
-
-### Writers and related source evidence
-
-[eu/src/ov056/data/Data_ov056_020d80d0.c](../src/ov056/data/Data_ov056_020d80d0.c), [src/ov056/unclassified_helpers/DispatchSourceKindEvent_020d7db4.c](../../src/ov056/unclassified_helpers/DispatchSourceKindEvent_020d7db4.c), [eu/src/overlays/ov021/calls/ActivateSpawnUnit.c](../src/overlays/ov021/calls/ActivateSpawnUnit.c), [src/ov030/shared_engine/UpdateCarriedLauncher_020bc900.c](../../src/ov030/shared_engine/UpdateCarriedLauncher_020bc900.c).
-
-### Established limit
-
-The indirect table is indexed by source.kind +0x3d. Its raw pointer is real, but the configured relocation allows overlays30 and38 at the same numeric address. The callback's exact factory/updater linkage and descriptor fields still require bank/lifetime proof. Hitting the count limit does not suppress the earlier placement call.
-
-### Searches already performed and next proof
-
-Located indirect registration at data_ov056_020d80d0[19]; DispatchSourceKindEvent selects it from source.kind+3d with(source,arg1,arg2). Native ASM confirms the hidden composite-return output pointer used for ActivateSpawnUnit, then a bounded active-count increment and owner-relative vector. UpdateCarriedLauncher shares mode1b0 but its duration/interval fields differ from descriptor writes here; exact owner/factory link still needed.
-
-Next proof: Prove source kind19 factory/updater identity and each descriptor field. Then determine whether this begins a burst/launcher action; do not name it from similar actor callbacks.
 
 ## Closed board-node getter
 

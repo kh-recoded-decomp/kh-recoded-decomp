@@ -1,3 +1,4 @@
+#define func_ov001_020644b0 GetCurrentFieldStageCode
 #define data_0205fe0c gSaveIoStateDataTail
 #define func_ov001_020645c8 IsSessionFlagSet
 #define AddRecordItem_02029240 AddRecordItem

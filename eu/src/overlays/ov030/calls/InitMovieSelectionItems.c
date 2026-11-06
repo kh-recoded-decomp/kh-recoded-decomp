@@ -1,3 +1,4 @@
+#define func_ov001_02064784 GetScriptHandlerSlot7Index
 #define InitMovieSelectionItems_020bc424 InitMovieSelectionItems
 #define data_ov030_020bcf4c gDragSceneDefaultSelectionItems
 #define data_ov030_020bd004 gMarkerReset

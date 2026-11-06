@@ -2,6 +2,6 @@
 
 extern u32 gFieldSessionWork;
 
-int func_ov001_02064784(void) {
+int GetScriptHandlerSlot7Index(void) {
   return (int)*(char *)(gFieldSessionWork + 0x18);
 }

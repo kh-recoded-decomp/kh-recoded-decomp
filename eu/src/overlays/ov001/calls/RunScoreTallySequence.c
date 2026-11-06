@@ -1,3 +1,4 @@
+#define func_ov001_02064784 GetScriptHandlerSlot7Index
 #define data_02060500 gPadPressedStorage
 #define func_ov001_02063b68 GetSessionCounter
 #define func_ov001_02063d4c UpdateFieldTimer

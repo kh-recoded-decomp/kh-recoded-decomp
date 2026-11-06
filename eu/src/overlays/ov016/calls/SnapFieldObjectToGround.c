@@ -1,3 +1,4 @@
+#define func_ov001_020644b0 GetCurrentFieldStageCode
 #define SnapFieldObjectToGround_020a27ac SnapFieldObjectToGround
 #define addScaledVector_020301ac AddScaledVector
 #define data_ov016_020a6e10 gFieldObjectGroundProbeVector

@@ -4,7 +4,7 @@ extern u32 GetStageManager();
 extern u32 ResolveTaggedValueRef();
 
 /* Leaf script command: writes indexed table entry. */
-u32 func_ov021_020b2fec(u32 context, s32 operands)
+u32 StageScriptCmd_SetStageMarkerAuxiliaryWords(u32 context, s32 operands)
 {
     s32 indexOperand;
     s32 value1Operand;
