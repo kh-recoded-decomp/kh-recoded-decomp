@@ -1,3 +1,4 @@
+#define func_ov001_0206e31c IsSlot7HandlerIndex6Flag3715Set
 #define data_020608c8 gSelectionRuntimeHeader
 #define func_ov001_02063a38 GetFieldSessionState
 #define QueueGroupSounds_020ad84c QueueGroupSounds

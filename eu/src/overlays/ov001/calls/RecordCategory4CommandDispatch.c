@@ -6,7 +6,7 @@ extern void AddSessionCounter(int category, int amount);
 extern u32 ReadSessionPackedBits(u32 category, u32 index);
 extern void WriteSessionPackedBits(u32 category, u32 index, u32 value);
 
-void func_ov001_0206df78(void)
+void RecordCategory4CommandDispatch(void)
 {
     int flagSet;
     u32 count;

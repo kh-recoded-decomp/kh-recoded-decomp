@@ -3,7 +3,7 @@
 extern unsigned int g_stageEventsState;
 extern unsigned int GetStageObjectHandle();
 
-u16 func_ov001_02087784(int objectIndex,u32 entryIndex) {
+u16 ReadStageObjectEventHeaderValuePlusOne(int objectIndex,u32 entryIndex) {
   void *object;
 
   if ((g_stageEventsState != -1) &&

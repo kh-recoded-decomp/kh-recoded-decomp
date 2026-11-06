@@ -1,3 +1,5 @@
+#define func_ov001_0206e2b0 IsSlot7HandlerIndex7Flag370dSet
+#define func_ov001_0206e31c IsSlot7HandlerIndex6Flag3715Set
 #define func_ov001_02063a38 GetFieldSessionState
 #define func_ov001_020645c8 IsSessionFlagSet
 #define AcquireSharedRecordState_020a9054 AcquireSharedRecordState

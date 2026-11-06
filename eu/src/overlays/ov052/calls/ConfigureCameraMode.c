@@ -1,3 +1,4 @@
+#define func_ov001_0206e2b0 IsSlot7HandlerIndex7Flag370dSet
 #define AddSessionCounter_02063a80 AddSessionCounter
 #define ConfigureCameraMode_020c9fb4 ConfigureCameraMode
 #define GetPlayerEntryCount_02050050 GetPlayerEntryCount

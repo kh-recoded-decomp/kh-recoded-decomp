@@ -3,7 +3,7 @@
 extern BOOL IsSessionFlagSet(u32 flag);
 extern int GetScriptHandlerSlot7Index(void);
 extern int GetManagedActorCount(void);
-extern BOOL func_ov001_0206e2b0(void);
+extern BOOL IsSlot7HandlerIndex7Flag370dSet(void);
 
 BOOL IsPartyGaugeGainAllowed(void)
 {
@@ -19,7 +19,7 @@ BOOL IsPartyGaugeGainAllowed(void)
         if (GetScriptHandlerSlot7Index() == 7 && IsSessionFlagSet(0x370c) != 0) {
             result = FALSE;
         }
-        if (func_ov001_0206e2b0() != 0) {
+        if (IsSlot7HandlerIndex7Flag370dSet() != 0) {
             result = FALSE;
         }
     }

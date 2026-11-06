@@ -958,3 +958,7 @@ The former gNearestEntrySyncHandlers is gDefaultStageActorDescriptor: one 52-byt
 ## Scene policy, results handoff and camera behavior
 
 Thirteen numeric functions now follow exact scene-entry readers, menu auto-advance consumers, results/session transitions, collider-offset writers and stage-local brightness state. [The system index](README.md) links the complete contracts. Camera waiting ends when state 4 no longer applies even if displacement remains, and its HP-zero effects stay inside the wait path. Camera snapping and stage-local brightness are separate native owners. All 22 affected official function checks and 23 complete-object comparisons pass, with every hash unchanged in a fresh 108-module gate.
+
+## Managed-actor and patrol policy contracts
+
+Six numeric identities now describe cursor reset, command bookkeeping, exact binding-index/flag predicates, patrol phase-4 pause and raw event-header halfword-plus-one access. [The contract](FIELD_ACTOR_EVENT_POLICY.md) preserves the instance/class allocation distinction, logical versus packed saved bits and the non-enumerating general header API. [The callback-bank correction](NATIVE_CALLBACK_BANK_BINDING.md) resolves the old overlay053 annotation from the actual loader and invocation chain. All 28 official checks and 28 complete-object comparisons pass, with every module hash unchanged in a fresh 108-module gate; no baseline waiver, source-body change or verifier change is used.

@@ -73,7 +73,7 @@ extern const VecFx32 gZeroVecFx32;
 extern BOOL GetSessionFlagsMask20(void);
 extern void UpdateEventTargetMode(WanderObject *object);
 extern BOOL StageEvents_CheckEvent(u16 eventIndex);
-extern int func_ov001_02087784(int objectIndex, u32 entryIndex);
+extern int ReadStageObjectEventHeaderValuePlusOne(int objectIndex, u32 entryIndex);
 extern BOOL GetStageEventTargetInfo(u16 id, EventTargetInfo *out);
 extern int GetAreaObjectListId(void);
 extern StageObject *GetFieldEntryByPoolAndIndex(u32 group, u32 index);
@@ -133,7 +133,7 @@ BOOL UpdateWanderActor(WanderObject *object)
                 dest = object->motion[0].origin;
                 found = TRUE;
             } else {
-                GetStageEventTargetInfo(func_ov001_02087784(object->waitId, 0), &info);
+                GetStageEventTargetInfo(ReadStageObjectEventHeaderValuePlusOne(object->waitId, 0), &info);
                 object->motion[0].origin = info.position;
                 object->motion[0].origin.y += 0x800;
             }

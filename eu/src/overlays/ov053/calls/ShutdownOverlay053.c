@@ -1,3 +1,4 @@
+#define func_ov001_0206e31c IsSlot7HandlerIndex6Flag3715Set
 #define func_ov001_02063a38 GetFieldSessionState
 #define FreeCueTable_020bdfec FreeCueTable_020be00c
 #define ShutdownOverlay053_020d2628 ShutdownOverlay053

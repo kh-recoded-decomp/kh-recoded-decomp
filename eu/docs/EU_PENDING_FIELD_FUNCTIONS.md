@@ -1,6 +1,6 @@
 # Overlay 001 functions retained for further evidence
 
-These 16 native EU functions retain address-based names. The available evidence
+These 10 native EU functions retain address-based names. The available evidence
 establishes the mechanics listed here but does not yet justify a stable semantic
 name or a complete public type contract. Each entry identifies the actual EU
 source, the precise unresolved point and the next useful proof. This ledger is
@@ -42,10 +42,6 @@ keeps those distinctions concrete.
 
 | EU identity and native size | Current EU source | Observed mechanical contract | Semantic blocker | Next proof |
 |---|---|---|---|---|
-| ov001:0x0206dc98 (Thumb, 0x14 bytes) | `eu/src/overlays/ov001/calls/func_ov001_0206dc98.c` | Clears event work +0xf8 when the owner exists; invoked by RefreshStageEntriesIfLoaded only with its manager present. | No writer or consumer establishes the meaning of event-work +0xf8. | Trace all native reads/writes of event work +0xf8 and their initialization; do not borrow the caller name as a field role. |
-| ov001:0x0206df78 (Thumb, 0x44 bytes) | `eu/src/overlays/ov001/calls/func_ov001_0206df78.c` | Conditionally sets session flag 0x3707, increments counter category 6, then increments packed save field 0xb26/17 bits with cap 99999. Used by HandleRewardActorCommand and SelectMenuMember. | Neither numeric stat category nor saved field has a proven localized/stat consumer. | Trace save field 0xb26 and category 6 to displayed stat or command case/assets before naming a gameplay event. |
-| ov001:0x0206e2b0 (Thumb, 0x20 bytes) | `eu/src/overlays/ov001/calls/func_ov001_0206e2b0.c` | True precisely for session-kind byte 7 and session flag 0x370d. Consumers include ledge/glide, model and action paths. | Kind 7 and flag 0x370d have no semantic enum/writer proof. | Resolve their constructors and flag setters against assets or mode dispatch; do not guess a character/form label. |
-| ov001:0x0206e31c (Thumb, 0x20 bytes) | `eu/src/overlays/ov001/calls/func_ov001_0206e31c.c` | True precisely for session-kind byte 6 and session flag 0x3715. Actor 053 resource, animation and music consumers test it. | The mode/flag combination is observed but its named gameplay role is not proved. | Link kind 6 and flag 0x3715 writers to selected resources/assets before assigning a character or form name. |
 
 ## Menu, notice and panel callback states
 
@@ -57,9 +53,7 @@ keeps those distinctions concrete.
 
 | EU identity and native size | Current EU source | Observed mechanical contract | Semantic blocker | Next proof |
 |---|---|---|---|---|
-| ov001:0x020846b8 (Thumb, 0x14 bytes) | `eu/src/overlays/ov001/calls/func_ov001_020846b8.c` | Type9 class hook14 calls SetPackedStateLowBit(actor,1), writes actor +0x82=1, returns 0. | Hook14 callback purpose and actor byte 0x82 have no consumer proof. | Trace actual hook14 dispatcher and byte 0x82 reader in PatrolObject update before labeling activation/state transition. |
 | ov001:0x020876d4 (Thumb, 0x2 bytes) | `eu/src/overlays/ov001/auto/func_ov001_020876d4.c` | Empty operation called by five scene draw/leave callbacks, guarded by scene flags 10 in ov035. | Shared draw-stage purpose not established, nor whether flag 10 is a complete contract. | Trace scene draw flag 10 descriptor and corresponding other scene calls; do not infer rendering work from empty body. |
-| ov001:0x02087784 (Thumb, 0x4c bytes) | `eu/src/overlays/ov001/calls/func_ov001_02087784.c` | Guard active stage service, fetch object(index+1 narrowed16), bound entryIndex by signed 16-bit range(end-start+1), return stored halfword at +0xa+2index plus1; else0. | Storage looks like adjacent bound fields for large index, and actual stage-record lookup semantics remain unproved. | Compare native GetStageObjectHandle record layout and all entryIndex callers (observed0) to prove whether API enumerates IDs or only accesses boundary fields. |
 
 ## Actor scene, animation and script callbacks
 

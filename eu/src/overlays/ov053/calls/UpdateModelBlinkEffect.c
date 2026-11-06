@@ -1,3 +1,4 @@
+#define func_ov001_0206e31c IsSlot7HandlerIndex6Flag3715Set
 #define func_ov001_020645c8 IsSessionFlagSet
 #define Entity_UpdateEventEffect_020a18ac Entity_UpdateEventEffect
 #define IsBit0Set_020a9d1c IsBit0Set

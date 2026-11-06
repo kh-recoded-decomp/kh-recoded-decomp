@@ -35,7 +35,7 @@ typedef struct Entity {
 
 extern void InstallActorCallbacks(Entity *entity);
 extern int GetFieldSessionState(void);
-extern BOOL func_ov001_0206e31c(void);
+extern BOOL IsSlot7HandlerIndex6Flag3715Set(void);
 extern void ShutdownOverlay053(void);
 extern void RequestOverlay053ActorState(void);
 extern void SetEntityModeHideSubModels(void);
@@ -74,7 +74,7 @@ void InitOverlay053Entity(Entity *entity, u8 kind)
     }
     entity->actionCallback = LoadOverlay053EntityResources;
     entity->thinkCallback = UpdateModelBlinkEffect;
-    if (func_ov001_0206e31c()) {
+    if (IsSlot7HandlerIndex6Flag3715Set()) {
         entity->handleCallback = Entity_HandleSpecialAction;
         entity->specialCallback = Entity_ChangeSpecialState;
     }

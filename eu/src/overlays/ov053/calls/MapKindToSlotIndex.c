@@ -1,2 +1,3 @@
+#define func_ov001_0206e31c IsSlot7HandlerIndex6Flag3715Set
 #define MapKindToSlotIndex_020d2a40 MapKindToSlotIndex
 #include "src/ov053/unclassified_helpers/MapKindToSlotIndex_020d2a40.c"

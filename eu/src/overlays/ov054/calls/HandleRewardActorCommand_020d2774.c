@@ -1,3 +1,4 @@
+#define func_ov001_0206df78 RecordCategory4CommandDispatch
 #define func_ov001_0206dc38 GetManagedActorCount
 #define AddSessionCounter_02063a80 AddSessionCounter
 #define EnterActorState_020cd338 EnterActorState

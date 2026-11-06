@@ -43,7 +43,7 @@ extern void RollRewardOrbDrop(int effectId, VecFx32 *position);
 extern void ResetStageGroupRowsAndRestoreDefaultIfActive(u16 eventId);
 extern void ReleaseOrDisableStageEvent(u32 value, s32 hasValue, s32 flag);
 extern void SetStageObjectPosition(u16 eventId, VecFx32 *position);
-extern u16 func_ov001_02087784(int objectIndex, u32 entryIndex);
+extern u16 ReadStageObjectEventHeaderValuePlusOne(int objectIndex, u32 entryIndex);
 extern StageEventRecord *GetStageEventRecord(u32 id);
 extern void *GetStageActor(int id);
 extern void WarpWalkerTo(void *actor, VecFx32 *position);
@@ -86,7 +86,7 @@ void RunSpawnCommand(SpawnCommand *command, SpawnOwner *owner)
         ReleaseOrDisableStageEvent(command->target.eventId, 1, 0);
         position = owner->position;
         SetStageObjectPosition(command->target.eventId, &position);
-        record = GetStageEventRecord(func_ov001_02087784(command->target.eventId, 0));
+        record = GetStageEventRecord(ReadStageObjectEventHeaderValuePlusOne(command->target.eventId, 0));
         if (record->actorId != 0) {
             actor = GetStageActor((s16)record->actorId);
             position = owner->position;

@@ -1,3 +1,4 @@
+#define func_ov001_0206e2b0 IsSlot7HandlerIndex7Flag370dSet
 #define func_ov001_02072040 InvokeFieldMinigameActiveCallback
 #define func_ov001_0206db78 GetPlayerControlState
 #define GetPlayerEntryCount_02050050 GetPlayerEntryCount

@@ -1,3 +1,4 @@
+#define func_ov001_0206dc98 ResetManagedActorOverlapCursor
 #define RefreshStageEntriesIfLoaded_020992cc RefreshStageEntriesIfLoaded
 #define g_stageManager_020a0508 gStageManager
 #include "src/ov001/shared_engine/RefreshStageEntriesIfLoaded_020992cc.c"

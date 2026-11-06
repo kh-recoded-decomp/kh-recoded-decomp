@@ -136,7 +136,7 @@ extern void CollisionQuery_Init(CollisionQuery *query, u16 id, void *actor, u8 k
 extern SweepHit *SweepWorldCollision(CollisionQuery *query);
 extern void CheckLinkedTargetClearance(void);
 extern BOOL IsPlayerEntryFlagSet(int player, u32 id);
-extern BOOL func_ov001_0206e2b0(void);
+extern BOOL IsSlot7HandlerIndex7Flag370dSet(void);
 
 BOOL TryLedgeClimb(Actor *actor, ClimbState *state)
 {
@@ -349,7 +349,7 @@ BOOL TryLedgeClimb(Actor *actor, ClimbState *state)
         }
         maxRise = 0x3800;
         specialRise = 0x2666;
-        if (IsPlayerEntryFlagSet(0, 0xc) && !func_ov001_0206e2b0()) {
+        if (IsPlayerEntryFlagSet(0, 0xc) && !IsSlot7HandlerIndex7Flag370dSet()) {
             specialRise = 0x3e66;
             maxRise = 0x5000;
         }
@@ -408,7 +408,7 @@ BOOL TryLedgeClimb(Actor *actor, ClimbState *state)
             }
         }
         height = top - pos.y;
-        if (!IsPlayerEntryFlagSet(0, 0xc) || func_ov001_0206e2b0()) {
+        if (!IsPlayerEntryFlagSet(0, 0xc) || IsSlot7HandlerIndex7Flag370dSet()) {
             if (height <= 0x14cd) {
                 state->speed = 0x3000;
             } else if (height <= 0x1b33) {

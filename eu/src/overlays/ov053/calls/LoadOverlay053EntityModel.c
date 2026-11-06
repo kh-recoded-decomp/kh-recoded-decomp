@@ -1,3 +1,5 @@
+#define func_ov001_0206e2b0 IsSlot7HandlerIndex7Flag370dSet
+#define func_ov001_0206e31c IsSlot7HandlerIndex6Flag3715Set
 #define func_ov001_020645c8 IsSessionFlagSet
 #define ClearPendingWord_020a95b4 ClearPendingWord
 #define InitUnitResources_020aa264 InitUnitResources

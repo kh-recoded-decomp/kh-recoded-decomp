@@ -3,7 +3,7 @@
 extern int IsSessionFlagSet(u32 flag);
 extern int GetScriptHandlerSlot7Index(void);
 
-BOOL func_ov001_0206e31c(void)
+BOOL IsSlot7HandlerIndex6Flag3715Set(void)
 {
     int value;
 

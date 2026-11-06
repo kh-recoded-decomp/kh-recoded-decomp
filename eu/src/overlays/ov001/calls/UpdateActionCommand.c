@@ -1,3 +1,4 @@
+#define func_ov001_0206e31c IsSlot7HandlerIndex6Flag3715Set
 #define func_ov001_020644b0 GetCurrentFieldStageCode
 #define func_ov001_02064784 GetScriptHandlerSlot7Index
 #define func_ov001_02077bcc GetFieldMenuMode

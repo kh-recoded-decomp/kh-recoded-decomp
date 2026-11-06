@@ -1,3 +1,4 @@
+#define func_ov001_0206e31c IsSlot7HandlerIndex6Flag3715Set
 #define func_ov001_02063a38 GetFieldSessionState
 #define FindSlotRecordById_020a9124 FindSlotRecordById
 #define SelectSlotAnimation_020cfb88 SelectSlotAnimation
