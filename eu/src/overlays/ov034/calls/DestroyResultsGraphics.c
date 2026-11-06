@@ -1,5 +1,8 @@
 #include "nitro/types.h"
 
+/* The native 16-byte registration key is borrowed for channel 0 removal. */
+extern char sOv034_SYSAREAMENU_020c0f10[16];
+
 extern u32 gResultsScreenPointersPrefix[2];
 #define resultsWork ((int)gResultsScreenPointersPrefix[1])
 extern u32 DestroyFndObjectList();
@@ -12,7 +15,7 @@ extern u32 DestroyObjectsAndRelease();
 
 void DestroyResultsGraphics(void)
 {
-    NotifyBothOrOne(1, 0x020c0f10, 0);
+    NotifyBothOrOne(1, (u32)sOv034_SYSAREAMENU_020c0f10, 0);
     ReleaseRecordSlot(0);
     FreePointerIfSet((void *)(resultsWork + 0x6b3c));
     DestroyFndObjectList(resultsWork + 0x6b60);

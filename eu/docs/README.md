@@ -120,8 +120,9 @@ These are limits on recovered meaning. Full-module matching and reconstructed
 DATA coverage are separate measurements. The
 [standalone relocation discrepancies](DATA_NATIVE_RELOCATION_BASELINE.md)
 also have their original-versus-renamed controls and exact offsets documented. The
-[native metadata refresh](NATIVE_RELOCATION_METADATA.md) resolves eight cases
-while preserving the remaining historical source-cleanup records.
+[native metadata refresh](NATIVE_RELOCATION_METADATA.md) and
+[named callback/key references](NATIVE_CALLBACK_REFERENCE_CONTRACTS.md) resolve
+all 21 recorded standalone cases while preserving their historical controls.
 
 ## Reading native types for a port
 

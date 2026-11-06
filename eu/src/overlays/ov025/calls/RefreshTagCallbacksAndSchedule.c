@@ -1,5 +1,9 @@
 #include "nitro/types.h"
 
+/* Native callbacks retain the 32-bit word ABI; channelWord 0xffffffff selects both channels. */
+extern void ApplySubBgScroll(void);
+extern int UpdateMenuScreen(void);
+
 extern u32 gMenuListWorkStorage;
 extern char sOv025_Ocuitask_020b775c[];
 
@@ -8,7 +12,7 @@ extern void LoadTagTrackerResourceFile(u32 ctx, u32 id);
 extern u32 FindActiveRecordById(u32 ctx, u32 id);
 extern void TagTracker_InvokeCallback(int *tracker, int arg);
 extern void AdvanceMenuDelayCounter(u32 ctx);
-extern void InvokeForChannelOrBoth(int kind, void *data, u32 handler, u32 duration);
+extern void InvokeForChannelOrBoth(int kind, void *data, u32 handler, u32 channelWord);
 extern void SetWidgetRootTouchEnabled(u32 ctx, u32 enable);
 
 u32 RefreshTagCallbacksAndSchedule(void)
@@ -23,7 +27,7 @@ u32 RefreshTagCallbacksAndSchedule(void)
     tag = FindActiveRecordById(ctx, 1);
     TagTracker_InvokeCallback((int *)ctx, tag);
     AdvanceMenuDelayCounter(ctx);
-    InvokeForChannelOrBoth(1, sOv025_Ocuitask_020b775c, 0x020b5821, 0xffffffff);
+    InvokeForChannelOrBoth(1, sOv025_Ocuitask_020b775c, (u32)ApplySubBgScroll, 0xffffffff);
     SetWidgetRootTouchEnabled(ctx + 0x4c, 1);
-    return 0x020b5f29;
+    return (u32)UpdateMenuScreen;
 }

@@ -865,3 +865,12 @@ direct comparison. [NATIVE_RELOCATION_METADATA.md](NATIVE_RELOCATION_METADATA.md
 records ROM-derived scope, the selected refresh mode and 37 regression tests.
 All native instruction bytes, production objects and 108 module hashes remain
 unchanged; no comparator tolerance is modified.
+
+## Named native callback and key references
+
+Thirteen EU bodies now express 17 native callback/descriptor/key words through
+real symbols. [NATIVE_CALLBACK_REFERENCE_CONTRACTS.md](NATIVE_CALLBACK_REFERENCE_CONTRACTS.md)
+records task continuation, channel and key semantics and preservation of the
+original ROOT type context. All 13 fresh checks pass; all 21 previously recorded
+baseline cases now pass. Every other instruction/common relocation, native DATA
+allocation and all 108 linked module hashes are unchanged.

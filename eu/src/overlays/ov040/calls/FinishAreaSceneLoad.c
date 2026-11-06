@@ -1,6 +1,9 @@
 #include "nitro/types.h"
 #include "nitro/fx_types.h"
 
+/* Overlay 035 owns this descriptor during its overlay 040 child lifetime. */
+extern void *gBarGaugeClassDescriptor[6];
+
 typedef struct {
     u8 pad_00[0xa4];
     VecFx32 cameraOffset;
@@ -19,7 +22,7 @@ typedef struct {
     void *handle;
 } SharedScene;
 
-#define AREA_SCENE_DESCRIPTOR ((void *)0x020bc4e8)
+#define AREA_SCENE_DESCRIPTOR ((void *)gBarGaugeClassDescriptor)
 
 extern SceneState *gAreaRewardSceneWork;
 extern SharedScene *gMovieContextState;

@@ -2,17 +2,20 @@
 
 ## Current validation state
 
-Eight metadata cases below are now resolved through native ROM/config evidence
-and pass fresh official checks: SpawnStageEntryActor, ModelRenderCallbackKindC,
-RefreshStatusMenuData, HandleResultsInput, RefreshResultsScreen,
-DrawMatrixCellGlyph, DrawMatrixMenu and UpdateMatrixEventAnimation.
-[NATIVE_RELOCATION_METADATA.md](NATIVE_RELOCATION_METADATA.md) records the exact
-scope and explicit refresh procedure. All original instruction bytes remain
-unchanged; seventeen internal BL words are now compared directly.
+All 21 standalone cases recorded below now pass fresh official checks. Eight
+native metadata corrections and thirteen C reference cleanups preserve every
+original instruction and linked word. The final gate passes all 108 modules
+with identical hashes.
 
-The thirteen raw callback/descriptor/key C references documented below remain
-a separate source cleanup. Historical block counts and original-source control
-verdicts are preserved here rather than retroactively reported as passes.
+[NATIVE_RELOCATION_METADATA.md](NATIVE_RELOCATION_METADATA.md) documents the
+ROM-derived metadata scope and explicit builder mode.
+[NATIVE_CALLBACK_REFERENCE_CONTRACTS.md](NATIVE_CALLBACK_REFERENCE_CONTRACTS.md)
+records the real callback, descriptor and key identities and the strict
+seventeen-word equivalence proof. No comparator tolerance is changed.
+
+The following sections retain historical block counts and original-source
+control verdicts; they describe the former baseline, not unresolved current
+standalone failures.
 
 
 The 64-symbol scene/menu DATA block checked all 443 affected production
